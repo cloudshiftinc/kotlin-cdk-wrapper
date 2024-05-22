@@ -50,8 +50,8 @@ public open class CfnVolumeAttachment(
     id: String,
     props: CfnVolumeAttachmentProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnVolumeAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVolumeAttachmentProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnVolumeAttachment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVolumeAttachmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -79,7 +79,7 @@ public open class CfnVolumeAttachment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

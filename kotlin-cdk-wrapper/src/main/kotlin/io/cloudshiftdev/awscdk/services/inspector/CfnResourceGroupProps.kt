@@ -86,7 +86,7 @@ public interface CfnResourceGroupProps {
      * .
      */
     override fun resourceGroupTags(resourceGroupTags: IResolvable) {
-      cdkBuilder.resourceGroupTags(resourceGroupTags.let(IResolvable::unwrap))
+      cdkBuilder.resourceGroupTags(resourceGroupTags.let(IResolvable.Companion::unwrap))
     }
 
     /**

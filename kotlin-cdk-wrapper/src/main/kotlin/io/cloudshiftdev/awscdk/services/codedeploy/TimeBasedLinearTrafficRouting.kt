@@ -24,7 +24,7 @@ public open class TimeBasedLinearTrafficRouting(
   cdkObject: software.amazon.awscdk.services.codedeploy.TimeBasedLinearTrafficRouting,
 ) : TrafficRouting(cdkObject) {
   public constructor(props: TimeBasedLinearTrafficRoutingProps) :
-      this(software.amazon.awscdk.services.codedeploy.TimeBasedLinearTrafficRouting(props.let(TimeBasedLinearTrafficRoutingProps::unwrap))
+      this(software.amazon.awscdk.services.codedeploy.TimeBasedLinearTrafficRouting(props.let(TimeBasedLinearTrafficRoutingProps.Companion::unwrap))
   )
 
   public constructor(props: TimeBasedLinearTrafficRoutingProps.Builder.() -> Unit) :
@@ -37,7 +37,7 @@ public open class TimeBasedLinearTrafficRouting(
    * @param _scope 
    */
   public override fun bind(scope: Construct): TrafficRoutingConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(TrafficRoutingConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(TrafficRoutingConfig::wrap)
 
   /**
    * The amount of time between additional traffic shifts.
@@ -81,7 +81,7 @@ public open class TimeBasedLinearTrafficRouting(
      * @param interval The amount of time between traffic shifts. 
      */
     override fun interval(interval: Duration) {
-      cdkBuilder.interval(interval.let(Duration::unwrap))
+      cdkBuilder.interval(interval.let(Duration.Companion::unwrap))
     }
 
     /**

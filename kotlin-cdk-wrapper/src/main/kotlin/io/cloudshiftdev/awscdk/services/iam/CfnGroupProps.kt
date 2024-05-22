@@ -321,7 +321,7 @@ public interface CfnGroupProps {
      * *IAM User Guide* .
      */
     override fun policies(policies: IResolvable) {
-      cdkBuilder.policies(policies.let(IResolvable::unwrap))
+      cdkBuilder.policies(policies.let(IResolvable.Companion::unwrap))
     }
 
     /**

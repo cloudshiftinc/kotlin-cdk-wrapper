@@ -146,7 +146,7 @@ public interface S3ArtifactsProps : ArtifactsProps {
      * @param bucket The name of the output bucket. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**

@@ -28,7 +28,7 @@ public open class Fail(
   cdkObject: software.amazon.awscdk.services.stepfunctions.Fail,
 ) : State(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.stepfunctions.Fail(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.stepfunctions.Fail(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -37,8 +37,8 @@ public open class Fail(
     id: String,
     props: FailProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.Fail(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(FailProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.Fail(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(FailProps.Companion::unwrap))
   )
 
   public constructor(

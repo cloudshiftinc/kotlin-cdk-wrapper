@@ -92,7 +92,7 @@ public interface FirelensOptions {
      * to define a custom configuration source.
      */
     override fun configFileType(configFileType: FirelensConfigFileType) {
-      cdkBuilder.configFileType(configFileType.let(FirelensConfigFileType::unwrap))
+      cdkBuilder.configFileType(configFileType.let(FirelensConfigFileType.Companion::unwrap))
     }
 
     /**

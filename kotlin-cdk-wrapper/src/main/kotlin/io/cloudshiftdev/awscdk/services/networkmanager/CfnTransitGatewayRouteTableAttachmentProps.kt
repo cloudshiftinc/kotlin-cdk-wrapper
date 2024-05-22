@@ -148,7 +148,7 @@ public interface CfnTransitGatewayRouteTableAttachmentProps {
      * Values can't be assigned to it.
      */
     override fun proposedSegmentChange(proposedSegmentChange: IResolvable) {
-      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(IResolvable::unwrap))
+      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -157,7 +157,7 @@ public interface CfnTransitGatewayRouteTableAttachmentProps {
      */
     override
         fun proposedSegmentChange(proposedSegmentChange: CfnTransitGatewayRouteTableAttachment.ProposedSegmentChangeProperty) {
-      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(CfnTransitGatewayRouteTableAttachment.ProposedSegmentChangeProperty::unwrap))
+      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(CfnTransitGatewayRouteTableAttachment.ProposedSegmentChangeProperty.Companion::unwrap))
     }
 
     /**
@@ -176,7 +176,7 @@ public interface CfnTransitGatewayRouteTableAttachmentProps {
      * attachment.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

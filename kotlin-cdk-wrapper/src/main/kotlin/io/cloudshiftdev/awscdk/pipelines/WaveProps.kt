@@ -73,7 +73,7 @@ public interface WaveProps {
      * @param post Additional steps to run after all of the stages in the wave.
      */
     override fun post(post: List<Step>) {
-      cdkBuilder.post(post.map(Step::unwrap))
+      cdkBuilder.post(post.map(Step.Companion::unwrap))
     }
 
     /**
@@ -85,7 +85,7 @@ public interface WaveProps {
      * @param pre Additional steps to run before any of the stages in the wave.
      */
     override fun pre(pre: List<Step>) {
-      cdkBuilder.pre(pre.map(Step::unwrap))
+      cdkBuilder.pre(pre.map(Step.Companion::unwrap))
     }
 
     /**

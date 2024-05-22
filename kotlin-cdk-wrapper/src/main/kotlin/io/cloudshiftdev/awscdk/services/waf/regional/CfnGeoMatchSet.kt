@@ -57,8 +57,8 @@ public open class CfnGeoMatchSet(
     id: String,
     props: CfnGeoMatchSetProps,
   ) :
-      this(software.amazon.awscdk.services.waf.regional.CfnGeoMatchSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGeoMatchSetProps::unwrap))
+      this(software.amazon.awscdk.services.waf.regional.CfnGeoMatchSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGeoMatchSetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -84,7 +84,7 @@ public open class CfnGeoMatchSet(
    * search for.
    */
   public open fun geoMatchConstraints(`value`: IResolvable) {
-    unwrap(this).setGeoMatchConstraints(`value`.let(IResolvable::unwrap))
+    unwrap(this).setGeoMatchConstraints(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -108,7 +108,7 @@ public open class CfnGeoMatchSet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -185,7 +185,7 @@ public open class CfnGeoMatchSet(
      * country that you want AWS WAF to search for. 
      */
     override fun geoMatchConstraints(geoMatchConstraints: IResolvable) {
-      cdkBuilder.geoMatchConstraints(geoMatchConstraints.let(IResolvable::unwrap))
+      cdkBuilder.geoMatchConstraints(geoMatchConstraints.let(IResolvable.Companion::unwrap))
     }
 
     /**

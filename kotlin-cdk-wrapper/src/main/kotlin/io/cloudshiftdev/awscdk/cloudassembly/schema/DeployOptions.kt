@@ -571,7 +571,7 @@ public interface DeployOptions : DefaultCdkOptions {
      * @param requireApproval What kind of security changes require approval.
      */
     override fun requireApproval(requireApproval: RequireApproval) {
-      cdkBuilder.requireApproval(requireApproval.let(RequireApproval::unwrap))
+      cdkBuilder.requireApproval(requireApproval.let(RequireApproval.Companion::unwrap))
     }
 
     /**

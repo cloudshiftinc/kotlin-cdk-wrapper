@@ -85,7 +85,7 @@ public interface EncryptionAtRestOptions {
      * @param kmsKey Supply if using KMS key for encryption at rest.
      */
     override fun kmsKey(kmsKey: IKey) {
-      cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.opensearchservice.EncryptionAtRestOptions =

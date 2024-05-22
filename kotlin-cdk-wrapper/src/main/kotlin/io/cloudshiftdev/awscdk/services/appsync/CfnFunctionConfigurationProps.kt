@@ -399,7 +399,7 @@ public interface CfnFunctionConfigurationProps {
      * code must also be specified.
      */
     override fun runtime(runtime: IResolvable) {
-      cdkBuilder.runtime(runtime.let(IResolvable::unwrap))
+      cdkBuilder.runtime(runtime.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -408,7 +408,7 @@ public interface CfnFunctionConfigurationProps {
      * code must also be specified.
      */
     override fun runtime(runtime: CfnFunctionConfiguration.AppSyncRuntimeProperty) {
-      cdkBuilder.runtime(runtime.let(CfnFunctionConfiguration.AppSyncRuntimeProperty::unwrap))
+      cdkBuilder.runtime(runtime.let(CfnFunctionConfiguration.AppSyncRuntimeProperty.Companion::unwrap))
     }
 
     /**
@@ -428,7 +428,7 @@ public interface CfnFunctionConfigurationProps {
      * is invoked.
      */
     override fun syncConfig(syncConfig: IResolvable) {
-      cdkBuilder.syncConfig(syncConfig.let(IResolvable::unwrap))
+      cdkBuilder.syncConfig(syncConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -437,7 +437,7 @@ public interface CfnFunctionConfigurationProps {
      * is invoked.
      */
     override fun syncConfig(syncConfig: CfnFunctionConfiguration.SyncConfigProperty) {
-      cdkBuilder.syncConfig(syncConfig.let(CfnFunctionConfiguration.SyncConfigProperty::unwrap))
+      cdkBuilder.syncConfig(syncConfig.let(CfnFunctionConfiguration.SyncConfigProperty.Companion::unwrap))
     }
 
     /**

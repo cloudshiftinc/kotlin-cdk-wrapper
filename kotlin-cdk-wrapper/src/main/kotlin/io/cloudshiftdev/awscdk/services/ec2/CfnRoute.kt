@@ -62,8 +62,8 @@ public open class CfnRoute(
     id: String,
     props: CfnRouteProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnRoute(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRouteProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnRoute(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRouteProps.Companion::unwrap))
   )
 
   public constructor(
@@ -169,7 +169,7 @@ public open class CfnRoute(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

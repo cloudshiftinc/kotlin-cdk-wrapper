@@ -156,7 +156,7 @@ public interface CfnFunctionDefinitionVersionProps {
      * Individual Lambda functions can override these settings.
      */
     override fun defaultConfig(defaultConfig: IResolvable) {
-      cdkBuilder.defaultConfig(defaultConfig.let(IResolvable::unwrap))
+      cdkBuilder.defaultConfig(defaultConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -165,7 +165,7 @@ public interface CfnFunctionDefinitionVersionProps {
      * Individual Lambda functions can override these settings.
      */
     override fun defaultConfig(defaultConfig: CfnFunctionDefinitionVersion.DefaultConfigProperty) {
-      cdkBuilder.defaultConfig(defaultConfig.let(CfnFunctionDefinitionVersion.DefaultConfigProperty::unwrap))
+      cdkBuilder.defaultConfig(defaultConfig.let(CfnFunctionDefinitionVersion.DefaultConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -191,7 +191,7 @@ public interface CfnFunctionDefinitionVersionProps {
      * @param functions The functions in this version. 
      */
     override fun functions(functions: IResolvable) {
-      cdkBuilder.functions(functions.let(IResolvable::unwrap))
+      cdkBuilder.functions(functions.let(IResolvable.Companion::unwrap))
     }
 
     /**

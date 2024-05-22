@@ -134,7 +134,7 @@ public interface Http2GatewayListenerOptions {
      * @param connectionPool Connection pool for http listeners.
      */
     override fun connectionPool(connectionPool: Http2ConnectionPool) {
-      cdkBuilder.connectionPool(connectionPool.let(Http2ConnectionPool::unwrap))
+      cdkBuilder.connectionPool(connectionPool.let(Http2ConnectionPool.Companion::unwrap))
     }
 
     /**
@@ -149,7 +149,7 @@ public interface Http2GatewayListenerOptions {
      * @param healthCheck The health check information for the listener.
      */
     override fun healthCheck(healthCheck: HealthCheck) {
-      cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
     }
 
     /**
@@ -163,7 +163,7 @@ public interface Http2GatewayListenerOptions {
      * @param tls Represents the configuration for enabling TLS on a listener.
      */
     override fun tls(tls: ListenerTlsOptions) {
-      cdkBuilder.tls(tls.let(ListenerTlsOptions::unwrap))
+      cdkBuilder.tls(tls.let(ListenerTlsOptions.Companion::unwrap))
     }
 
     /**

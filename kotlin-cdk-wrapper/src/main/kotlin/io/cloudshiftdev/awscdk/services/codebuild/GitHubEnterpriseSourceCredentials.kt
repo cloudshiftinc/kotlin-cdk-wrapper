@@ -39,8 +39,8 @@ public open class GitHubEnterpriseSourceCredentials(
     id: String,
     props: GitHubEnterpriseSourceCredentialsProps,
   ) :
-      this(software.amazon.awscdk.services.codebuild.GitHubEnterpriseSourceCredentials(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(GitHubEnterpriseSourceCredentialsProps::unwrap))
+      this(software.amazon.awscdk.services.codebuild.GitHubEnterpriseSourceCredentials(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(GitHubEnterpriseSourceCredentialsProps.Companion::unwrap))
   )
 
   public constructor(
@@ -81,7 +81,7 @@ public open class GitHubEnterpriseSourceCredentials(
      * GitHub Enterprise API. 
      */
     override fun accessToken(accessToken: SecretValue) {
-      cdkBuilder.accessToken(accessToken.let(SecretValue::unwrap))
+      cdkBuilder.accessToken(accessToken.let(SecretValue.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codebuild.GitHubEnterpriseSourceCredentials

@@ -131,14 +131,14 @@ public interface CommonNetworkAclEntryOptions {
      * @param cidr The CIDR range to allow or deny. 
      */
     override fun cidr(cidr: AclCidr) {
-      cdkBuilder.cidr(cidr.let(AclCidr::unwrap))
+      cdkBuilder.cidr(cidr.let(AclCidr.Companion::unwrap))
     }
 
     /**
      * @param direction Traffic direction, with respect to the subnet, this rule applies to.
      */
     override fun direction(direction: TrafficDirection) {
-      cdkBuilder.direction(direction.let(TrafficDirection::unwrap))
+      cdkBuilder.direction(direction.let(TrafficDirection.Companion::unwrap))
     }
 
     /**
@@ -156,7 +156,7 @@ public interface CommonNetworkAclEntryOptions {
      * ACL, all traffic is automatically allowed in a default ACL.
      */
     override fun ruleAction(ruleAction: Action) {
-      cdkBuilder.ruleAction(ruleAction.let(Action::unwrap))
+      cdkBuilder.ruleAction(ruleAction.let(Action.Companion::unwrap))
     }
 
     /**
@@ -173,7 +173,7 @@ public interface CommonNetworkAclEntryOptions {
      * @param traffic What kind of traffic this ACL rule applies to. 
      */
     override fun traffic(traffic: AclTraffic) {
-      cdkBuilder.traffic(traffic.let(AclTraffic::unwrap))
+      cdkBuilder.traffic(traffic.let(AclTraffic.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.CommonNetworkAclEntryOptions =

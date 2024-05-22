@@ -33,7 +33,7 @@ public abstract class QueueBase(
    * @param statement 
    */
   public override fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
-      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement::unwrap)).let(AddToResourcePolicyResult::wrap)
+      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
 
   /**
    * Adds a statement to the IAM resource policy associated with this queue.
@@ -76,8 +76,8 @@ public abstract class QueueBase(
    * @param actions The actions to grant. 
    */
   public override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
-      as String}.toTypedArray()).let(Grant::wrap)
+      unwrap(this).grant(grantee.let(IGrantable.Companion::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Grant permissions to consume messages from a queue.
@@ -100,7 +100,7 @@ public abstract class QueueBase(
    * @param grantee Principal to grant consume rights to. 
    */
   public override fun grantConsumeMessages(grantee: IGrantable): Grant =
-      unwrap(this).grantConsumeMessages(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantConsumeMessages(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant an IAM principal permissions to purge all messages from the queue.
@@ -114,7 +114,7 @@ public abstract class QueueBase(
    * @param grantee Principal to grant send rights to. 
    */
   public override fun grantPurge(grantee: IGrantable): Grant =
-      unwrap(this).grantPurge(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantPurge(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant access to send messages to a queue to the given identity.
@@ -138,7 +138,7 @@ public abstract class QueueBase(
    * @param grantee Principal to grant send rights to. 
    */
   public override fun grantSendMessages(grantee: IGrantable): Grant =
-      unwrap(this).grantSendMessages(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantSendMessages(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Return the given named metric for this Queue.
@@ -156,7 +156,7 @@ public abstract class QueueBase(
    * @param props
    */
   public override fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Return the given named metric for this Queue.
@@ -187,7 +187,7 @@ public abstract class QueueBase(
    * @param props
    */
   public override fun metricApproximateAgeOfOldestMessage(props: MetricOptions): Metric =
-      unwrap(this).metricApproximateAgeOfOldestMessage(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricApproximateAgeOfOldestMessage(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The approximate age of the oldest non-deleted message in the queue.
@@ -219,7 +219,7 @@ public abstract class QueueBase(
    * @param props
    */
   public override fun metricApproximateNumberOfMessagesDelayed(props: MetricOptions): Metric =
-      unwrap(this).metricApproximateNumberOfMessagesDelayed(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricApproximateNumberOfMessagesDelayed(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of messages in the queue that are delayed and not available for reading immediately.
@@ -252,7 +252,7 @@ public abstract class QueueBase(
    * @param props
    */
   public override fun metricApproximateNumberOfMessagesNotVisible(props: MetricOptions): Metric =
-      unwrap(this).metricApproximateNumberOfMessagesNotVisible(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricApproximateNumberOfMessagesNotVisible(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of messages that are in flight.
@@ -285,7 +285,7 @@ public abstract class QueueBase(
    * @param props
    */
   public override fun metricApproximateNumberOfMessagesVisible(props: MetricOptions): Metric =
-      unwrap(this).metricApproximateNumberOfMessagesVisible(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricApproximateNumberOfMessagesVisible(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of messages available for retrieval from the queue.
@@ -318,7 +318,7 @@ public abstract class QueueBase(
    * @param props
    */
   public override fun metricNumberOfEmptyReceives(props: MetricOptions): Metric =
-      unwrap(this).metricNumberOfEmptyReceives(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricNumberOfEmptyReceives(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of ReceiveMessage API calls that did not return a message.
@@ -350,7 +350,7 @@ public abstract class QueueBase(
    * @param props
    */
   public override fun metricNumberOfMessagesDeleted(props: MetricOptions): Metric =
-      unwrap(this).metricNumberOfMessagesDeleted(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricNumberOfMessagesDeleted(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of messages deleted from the queue.
@@ -382,7 +382,7 @@ public abstract class QueueBase(
    * @param props
    */
   public override fun metricNumberOfMessagesReceived(props: MetricOptions): Metric =
-      unwrap(this).metricNumberOfMessagesReceived(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricNumberOfMessagesReceived(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of messages returned by calls to the ReceiveMessage action.
@@ -414,7 +414,7 @@ public abstract class QueueBase(
    * @param props
    */
   public override fun metricNumberOfMessagesSent(props: MetricOptions): Metric =
-      unwrap(this).metricNumberOfMessagesSent(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricNumberOfMessagesSent(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of messages added to a queue.
@@ -446,7 +446,7 @@ public abstract class QueueBase(
    * @param props
    */
   public override fun metricSentMessageSize(props: MetricOptions): Metric =
-      unwrap(this).metricSentMessageSize(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricSentMessageSize(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The size of messages added to a queue.

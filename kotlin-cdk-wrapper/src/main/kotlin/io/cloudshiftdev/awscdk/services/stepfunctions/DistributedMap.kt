@@ -45,7 +45,7 @@ public open class DistributedMap(
   cdkObject: software.amazon.awscdk.services.stepfunctions.DistributedMap,
 ) : MapBase(cdkObject), INextable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.stepfunctions.DistributedMap(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.stepfunctions.DistributedMap(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -54,8 +54,8 @@ public open class DistributedMap(
     id: String,
     props: DistributedMapProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.DistributedMap(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DistributedMapProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.DistributedMap(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DistributedMapProps.Companion::unwrap))
   )
 
   public constructor(
@@ -75,7 +75,7 @@ public open class DistributedMap(
    * @param props
    */
   public open fun addCatch(handler: IChainable): DistributedMap =
-      unwrap(this).addCatch(handler.let(IChainable::unwrap)).let(DistributedMap::wrap)
+      unwrap(this).addCatch(handler.let(IChainable.Companion::unwrap)).let(DistributedMap::wrap)
 
   /**
    * Add a recovery handler for this state.
@@ -87,8 +87,8 @@ public open class DistributedMap(
    * @param props
    */
   public open fun addCatch(handler: IChainable, props: CatchProps): DistributedMap =
-      unwrap(this).addCatch(handler.let(IChainable::unwrap),
-      props.let(CatchProps::unwrap)).let(DistributedMap::wrap)
+      unwrap(this).addCatch(handler.let(IChainable.Companion::unwrap),
+      props.let(CatchProps.Companion::unwrap)).let(DistributedMap::wrap)
 
   /**
    * Add a recovery handler for this state.
@@ -123,7 +123,7 @@ public open class DistributedMap(
    * @param props
    */
   public open fun addRetry(props: RetryProps): DistributedMap =
-      unwrap(this).addRetry(props.let(RetryProps::unwrap)).let(DistributedMap::wrap)
+      unwrap(this).addRetry(props.let(RetryProps.Companion::unwrap)).let(DistributedMap::wrap)
 
   /**
    * Add retry configuration for this state.
@@ -147,7 +147,7 @@ public open class DistributedMap(
    * @param config
    */
   public open fun itemProcessor(processor: IChainable): DistributedMap =
-      unwrap(this).itemProcessor(processor.let(IChainable::unwrap)).let(DistributedMap::wrap)
+      unwrap(this).itemProcessor(processor.let(IChainable.Companion::unwrap)).let(DistributedMap::wrap)
 
   /**
    * Define item processor in a Distributed Map.
@@ -158,8 +158,8 @@ public open class DistributedMap(
    * @param config
    */
   public open fun itemProcessor(processor: IChainable, config: ProcessorConfig): DistributedMap =
-      unwrap(this).itemProcessor(processor.let(IChainable::unwrap),
-      config.let(ProcessorConfig::unwrap)).let(DistributedMap::wrap)
+      unwrap(this).itemProcessor(processor.let(IChainable.Companion::unwrap),
+      config.let(ProcessorConfig.Companion::unwrap)).let(DistributedMap::wrap)
 
   /**
    * Define item processor in a Distributed Map.
@@ -462,7 +462,7 @@ public open class DistributedMap(
      * execution. 
      */
     override fun itemBatcher(itemBatcher: ItemBatcher) {
-      cdkBuilder.itemBatcher(itemBatcher.let(ItemBatcher::unwrap))
+      cdkBuilder.itemBatcher(itemBatcher.let(ItemBatcher.Companion::unwrap))
     }
 
     /**
@@ -488,7 +488,7 @@ public open class DistributedMap(
      * @param itemReader ItemReader. 
      */
     override fun itemReader(itemReader: IItemReader) {
-      cdkBuilder.itemReader(itemReader.let(IItemReader::unwrap))
+      cdkBuilder.itemReader(itemReader.let(IItemReader.Companion::unwrap))
     }
 
     /**
@@ -539,7 +539,7 @@ public open class DistributedMap(
      * @param mapExecutionType MapExecutionType. 
      */
     override fun mapExecutionType(mapExecutionType: StateMachineType) {
-      cdkBuilder.mapExecutionType(mapExecutionType.let(StateMachineType::unwrap))
+      cdkBuilder.mapExecutionType(mapExecutionType.let(StateMachineType.Companion::unwrap))
     }
 
     /**
@@ -624,7 +624,7 @@ public open class DistributedMap(
      * @param resultWriter Configuration for S3 location in which to save Map Run results. 
      */
     override fun resultWriter(resultWriter: ResultWriter) {
-      cdkBuilder.resultWriter(resultWriter.let(ResultWriter::unwrap))
+      cdkBuilder.resultWriter(resultWriter.let(ResultWriter.Companion::unwrap))
     }
 
     /**

@@ -173,14 +173,14 @@ public interface CfnVerifiedAccessGroupProps {
      * @param policyEnabled The status of the Verified Access policy.
      */
     override fun policyEnabled(policyEnabled: IResolvable) {
-      cdkBuilder.policyEnabled(policyEnabled.let(IResolvable::unwrap))
+      cdkBuilder.policyEnabled(policyEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param sseSpecification The options for additional server side encryption.
      */
     override fun sseSpecification(sseSpecification: IResolvable) {
-      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -188,7 +188,7 @@ public interface CfnVerifiedAccessGroupProps {
      */
     override
         fun sseSpecification(sseSpecification: CfnVerifiedAccessGroup.SseSpecificationProperty) {
-      cdkBuilder.sseSpecification(sseSpecification.let(CfnVerifiedAccessGroup.SseSpecificationProperty::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(CfnVerifiedAccessGroup.SseSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -204,7 +204,7 @@ public interface CfnVerifiedAccessGroupProps {
      * @param tags The tags.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -46,8 +46,8 @@ public open class CfnLocalGatewayRouteTable(
     id: String,
     props: CfnLocalGatewayRouteTableProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTable(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLocalGatewayRouteTableProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnLocalGatewayRouteTable(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLocalGatewayRouteTableProps.Companion::unwrap))
   )
 
   public constructor(
@@ -90,7 +90,7 @@ public open class CfnLocalGatewayRouteTable(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -132,7 +132,7 @@ public open class CfnLocalGatewayRouteTable(
    * The tags assigned to the local gateway route table.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -212,7 +212,7 @@ public open class CfnLocalGatewayRouteTable(
      * @param tags The tags assigned to the local gateway route table. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

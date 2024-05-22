@@ -92,8 +92,8 @@ public open class CfnResolver(
     id: String,
     props: CfnResolverProps,
   ) :
-      this(software.amazon.awscdk.services.appsync.CfnResolver(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnResolverProps::unwrap))
+      this(software.amazon.awscdk.services.appsync.CfnResolver(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnResolverProps.Companion::unwrap))
   )
 
   public constructor(
@@ -140,14 +140,14 @@ public open class CfnResolver(
    * The caching configuration for the resolver.
    */
   public open fun cachingConfig(`value`: IResolvable) {
-    unwrap(this).setCachingConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCachingConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The caching configuration for the resolver.
    */
   public open fun cachingConfig(`value`: CachingConfigProperty) {
-    unwrap(this).setCachingConfig(`value`.let(CachingConfigProperty::unwrap))
+    unwrap(this).setCachingConfig(`value`.let(CachingConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -212,7 +212,7 @@ public open class CfnResolver(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -262,14 +262,14 @@ public open class CfnResolver(
    * Functions linked with the pipeline resolver.
    */
   public open fun pipelineConfig(`value`: IResolvable) {
-    unwrap(this).setPipelineConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPipelineConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Functions linked with the pipeline resolver.
    */
   public open fun pipelineConfig(`value`: PipelineConfigProperty) {
-    unwrap(this).setPipelineConfig(`value`.let(PipelineConfigProperty::unwrap))
+    unwrap(this).setPipelineConfig(`value`.let(PipelineConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -339,14 +339,14 @@ public open class CfnResolver(
    * Describes a runtime used by an AWS AppSync resolver or AWS AppSync function.
    */
   public open fun runtime(`value`: IResolvable) {
-    unwrap(this).setRuntime(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRuntime(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Describes a runtime used by an AWS AppSync resolver or AWS AppSync function.
    */
   public open fun runtime(`value`: AppSyncRuntimeProperty) {
-    unwrap(this).setRuntime(`value`.let(AppSyncRuntimeProperty::unwrap))
+    unwrap(this).setRuntime(`value`.let(AppSyncRuntimeProperty.Companion::unwrap))
   }
 
   /**
@@ -366,14 +366,14 @@ public open class CfnResolver(
    * The `SyncConfig` for a resolver attached to a versioned data source.
    */
   public open fun syncConfig(`value`: IResolvable) {
-    unwrap(this).setSyncConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSyncConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The `SyncConfig` for a resolver attached to a versioned data source.
    */
   public open fun syncConfig(`value`: SyncConfigProperty) {
-    unwrap(this).setSyncConfig(`value`.let(SyncConfigProperty::unwrap))
+    unwrap(this).setSyncConfig(`value`.let(SyncConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -669,7 +669,7 @@ public open class CfnResolver(
      * @param cachingConfig The caching configuration for the resolver. 
      */
     override fun cachingConfig(cachingConfig: IResolvable) {
-      cdkBuilder.cachingConfig(cachingConfig.let(IResolvable::unwrap))
+      cdkBuilder.cachingConfig(cachingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -679,7 +679,7 @@ public open class CfnResolver(
      * @param cachingConfig The caching configuration for the resolver. 
      */
     override fun cachingConfig(cachingConfig: CachingConfigProperty) {
-      cdkBuilder.cachingConfig(cachingConfig.let(CachingConfigProperty::unwrap))
+      cdkBuilder.cachingConfig(cachingConfig.let(CachingConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -785,7 +785,7 @@ public open class CfnResolver(
      * @param pipelineConfig Functions linked with the pipeline resolver. 
      */
     override fun pipelineConfig(pipelineConfig: IResolvable) {
-      cdkBuilder.pipelineConfig(pipelineConfig.let(IResolvable::unwrap))
+      cdkBuilder.pipelineConfig(pipelineConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -795,7 +795,7 @@ public open class CfnResolver(
      * @param pipelineConfig Functions linked with the pipeline resolver. 
      */
     override fun pipelineConfig(pipelineConfig: PipelineConfigProperty) {
-      cdkBuilder.pipelineConfig(pipelineConfig.let(PipelineConfigProperty::unwrap))
+      cdkBuilder.pipelineConfig(pipelineConfig.let(PipelineConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -870,7 +870,7 @@ public open class CfnResolver(
      * @param runtime Describes a runtime used by an AWS AppSync resolver or AWS AppSync function. 
      */
     override fun runtime(runtime: IResolvable) {
-      cdkBuilder.runtime(runtime.let(IResolvable::unwrap))
+      cdkBuilder.runtime(runtime.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -883,7 +883,7 @@ public open class CfnResolver(
      * @param runtime Describes a runtime used by an AWS AppSync resolver or AWS AppSync function. 
      */
     override fun runtime(runtime: AppSyncRuntimeProperty) {
-      cdkBuilder.runtime(runtime.let(AppSyncRuntimeProperty::unwrap))
+      cdkBuilder.runtime(runtime.let(AppSyncRuntimeProperty.Companion::unwrap))
     }
 
     /**
@@ -907,7 +907,7 @@ public open class CfnResolver(
      * @param syncConfig The `SyncConfig` for a resolver attached to a versioned data source. 
      */
     override fun syncConfig(syncConfig: IResolvable) {
-      cdkBuilder.syncConfig(syncConfig.let(IResolvable::unwrap))
+      cdkBuilder.syncConfig(syncConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -917,7 +917,7 @@ public open class CfnResolver(
      * @param syncConfig The `SyncConfig` for a resolver attached to a versioned data source. 
      */
     override fun syncConfig(syncConfig: SyncConfigProperty) {
-      cdkBuilder.syncConfig(syncConfig.let(SyncConfigProperty::unwrap))
+      cdkBuilder.syncConfig(syncConfig.let(SyncConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1537,7 +1537,7 @@ public open class CfnResolver(
        * `LAMBDA` as the Conflict Handler.
        */
       override fun lambdaConflictHandlerConfig(lambdaConflictHandlerConfig: IResolvable) {
-        cdkBuilder.lambdaConflictHandlerConfig(lambdaConflictHandlerConfig.let(IResolvable::unwrap))
+        cdkBuilder.lambdaConflictHandlerConfig(lambdaConflictHandlerConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1546,7 +1546,7 @@ public open class CfnResolver(
        */
       override
           fun lambdaConflictHandlerConfig(lambdaConflictHandlerConfig: LambdaConflictHandlerConfigProperty) {
-        cdkBuilder.lambdaConflictHandlerConfig(lambdaConflictHandlerConfig.let(LambdaConflictHandlerConfigProperty::unwrap))
+        cdkBuilder.lambdaConflictHandlerConfig(lambdaConflictHandlerConfig.let(LambdaConflictHandlerConfigProperty.Companion::unwrap))
       }
 
       /**

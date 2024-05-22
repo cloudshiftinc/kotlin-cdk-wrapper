@@ -63,7 +63,7 @@ public interface CodeConfig {
      * @param code represents the underlying code structure. 
      */
     override fun code(code: CfnRepository.CodeProperty) {
-      cdkBuilder.code(code.let(CfnRepository.CodeProperty::unwrap))
+      cdkBuilder.code(code.let(CfnRepository.CodeProperty.Companion::unwrap))
     }
 
     /**

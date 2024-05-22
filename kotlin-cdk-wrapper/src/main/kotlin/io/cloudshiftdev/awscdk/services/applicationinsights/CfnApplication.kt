@@ -209,8 +209,8 @@ public open class CfnApplication(
     id: String,
     props: CfnApplicationProps,
   ) :
-      this(software.amazon.awscdk.services.applicationinsights.CfnApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApplicationProps::unwrap))
+      this(software.amazon.awscdk.services.applicationinsights.CfnApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApplicationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -239,7 +239,7 @@ public open class CfnApplication(
    * they are missing.
    */
   public open fun attachMissingPermission(`value`: IResolvable) {
-    unwrap(this).setAttachMissingPermission(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAttachMissingPermission(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -268,7 +268,7 @@ public open class CfnApplication(
    * configuration recommended by Application Insights.
    */
   public open fun autoConfigurationEnabled(`value`: IResolvable) {
-    unwrap(this).setAutoConfigurationEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoConfigurationEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -281,7 +281,7 @@ public open class CfnApplication(
    * The monitoring settings of the components.
    */
   public open fun componentMonitoringSettings(`value`: IResolvable) {
-    unwrap(this).setComponentMonitoringSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setComponentMonitoringSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -306,7 +306,7 @@ public open class CfnApplication(
    * Describes a custom component by grouping similar standalone instances to monitor.
    */
   public open fun customComponents(`value`: IResolvable) {
-    unwrap(this).setCustomComponents(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCustomComponents(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -340,7 +340,7 @@ public open class CfnApplication(
    * resources, such as `instance terminated` , `failed deployment` , and others.
    */
   public open fun cweMonitorEnabled(`value`: IResolvable) {
-    unwrap(this).setCweMonitorEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCweMonitorEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -361,7 +361,7 @@ public open class CfnApplication(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -373,7 +373,7 @@ public open class CfnApplication(
    * The log pattern sets.
    */
   public open fun logPatternSets(`value`: IResolvable) {
-    unwrap(this).setLogPatternSets(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLogPatternSets(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -407,7 +407,7 @@ public open class CfnApplication(
    * Application Insights for an application.
    */
   public open fun opsCenterEnabled(`value`: IResolvable) {
-    unwrap(this).setOpsCenterEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOpsCenterEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -451,7 +451,7 @@ public open class CfnApplication(
    * An array of `Tags` .
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -697,7 +697,7 @@ public open class CfnApplication(
      * attached to the instance roles if they are missing. 
      */
     override fun attachMissingPermission(attachMissingPermission: IResolvable) {
-      cdkBuilder.attachMissingPermission(attachMissingPermission.let(IResolvable::unwrap))
+      cdkBuilder.attachMissingPermission(attachMissingPermission.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -721,7 +721,7 @@ public open class CfnApplication(
      * configured with the monitoring configuration recommended by Application Insights. 
      */
     override fun autoConfigurationEnabled(autoConfigurationEnabled: IResolvable) {
-      cdkBuilder.autoConfigurationEnabled(autoConfigurationEnabled.let(IResolvable::unwrap))
+      cdkBuilder.autoConfigurationEnabled(autoConfigurationEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -731,7 +731,7 @@ public open class CfnApplication(
      * @param componentMonitoringSettings The monitoring settings of the components. 
      */
     override fun componentMonitoringSettings(componentMonitoringSettings: IResolvable) {
-      cdkBuilder.componentMonitoringSettings(componentMonitoringSettings.let(IResolvable::unwrap))
+      cdkBuilder.componentMonitoringSettings(componentMonitoringSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -761,7 +761,7 @@ public open class CfnApplication(
      * to monitor. 
      */
     override fun customComponents(customComponents: IResolvable) {
-      cdkBuilder.customComponents(customComponents.let(IResolvable::unwrap))
+      cdkBuilder.customComponents(customComponents.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -808,7 +808,7 @@ public open class CfnApplication(
      * others. 
      */
     override fun cweMonitorEnabled(cweMonitorEnabled: IResolvable) {
-      cdkBuilder.cweMonitorEnabled(cweMonitorEnabled.let(IResolvable::unwrap))
+      cdkBuilder.cweMonitorEnabled(cweMonitorEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -832,7 +832,7 @@ public open class CfnApplication(
      * @param logPatternSets The log pattern sets. 
      */
     override fun logPatternSets(logPatternSets: IResolvable) {
-      cdkBuilder.logPatternSets(logPatternSets.let(IResolvable::unwrap))
+      cdkBuilder.logPatternSets(logPatternSets.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -875,7 +875,7 @@ public open class CfnApplication(
      * problem that is detected by Application Insights for an application. 
      */
     override fun opsCenterEnabled(opsCenterEnabled: IResolvable) {
-      cdkBuilder.opsCenterEnabled(opsCenterEnabled.let(IResolvable::unwrap))
+      cdkBuilder.opsCenterEnabled(opsCenterEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -907,7 +907,7 @@ public open class CfnApplication(
      * @param tags An array of `Tags` . 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1300,14 +1300,14 @@ public open class CfnApplication(
        * @param configurationDetails The configuration settings.
        */
       override fun configurationDetails(configurationDetails: IResolvable) {
-        cdkBuilder.configurationDetails(configurationDetails.let(IResolvable::unwrap))
+        cdkBuilder.configurationDetails(configurationDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param configurationDetails The configuration settings.
        */
       override fun configurationDetails(configurationDetails: ConfigurationDetailsProperty) {
-        cdkBuilder.configurationDetails(configurationDetails.let(ConfigurationDetailsProperty::unwrap))
+        cdkBuilder.configurationDetails(configurationDetails.let(ConfigurationDetailsProperty.Companion::unwrap))
       }
 
       /**
@@ -1323,7 +1323,7 @@ public open class CfnApplication(
        * @param subComponentTypeConfigurations Sub-component configurations of the component.
        */
       override fun subComponentTypeConfigurations(subComponentTypeConfigurations: IResolvable) {
-        cdkBuilder.subComponentTypeConfigurations(subComponentTypeConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.subComponentTypeConfigurations(subComponentTypeConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1725,7 +1725,7 @@ public open class CfnApplication(
        * Required if CUSTOM mode is configured in `ComponentConfigurationMode` .
        */
       override fun customComponentConfiguration(customComponentConfiguration: IResolvable) {
-        cdkBuilder.customComponentConfiguration(customComponentConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.customComponentConfiguration(customComponentConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1734,7 +1734,7 @@ public open class CfnApplication(
        */
       override
           fun customComponentConfiguration(customComponentConfiguration: ComponentConfigurationProperty) {
-        cdkBuilder.customComponentConfiguration(customComponentConfiguration.let(ComponentConfigurationProperty::unwrap))
+        cdkBuilder.customComponentConfiguration(customComponentConfiguration.let(ComponentConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1754,7 +1754,7 @@ public open class CfnApplication(
        */
       override
           fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: IResolvable) {
-        cdkBuilder.defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1763,7 +1763,7 @@ public open class CfnApplication(
        */
       override
           fun defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration: ComponentConfigurationProperty) {
-        cdkBuilder.defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration.let(ComponentConfigurationProperty::unwrap))
+        cdkBuilder.defaultOverwriteComponentConfiguration(defaultOverwriteComponentConfiguration.let(ComponentConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2138,7 +2138,7 @@ public open class CfnApplication(
        * All component types can use `AlarmMetrics` .
        */
       override fun alarmMetrics(alarmMetrics: IResolvable) {
-        cdkBuilder.alarmMetrics(alarmMetrics.let(IResolvable::unwrap))
+        cdkBuilder.alarmMetrics(alarmMetrics.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2161,7 +2161,7 @@ public open class CfnApplication(
        * All component types can use `Alarm` .
        */
       override fun alarms(alarms: IResolvable) {
-        cdkBuilder.alarms(alarms.let(IResolvable::unwrap))
+        cdkBuilder.alarms(alarms.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2182,7 +2182,7 @@ public open class CfnApplication(
        * @param haClusterPrometheusExporter The HA cluster Prometheus Exporter settings.
        */
       override fun haClusterPrometheusExporter(haClusterPrometheusExporter: IResolvable) {
-        cdkBuilder.haClusterPrometheusExporter(haClusterPrometheusExporter.let(IResolvable::unwrap))
+        cdkBuilder.haClusterPrometheusExporter(haClusterPrometheusExporter.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2190,7 +2190,7 @@ public open class CfnApplication(
        */
       override
           fun haClusterPrometheusExporter(haClusterPrometheusExporter: HAClusterPrometheusExporterProperty) {
-        cdkBuilder.haClusterPrometheusExporter(haClusterPrometheusExporter.let(HAClusterPrometheusExporterProperty::unwrap))
+        cdkBuilder.haClusterPrometheusExporter(haClusterPrometheusExporter.let(HAClusterPrometheusExporterProperty.Companion::unwrap))
       }
 
       /**
@@ -2207,14 +2207,14 @@ public open class CfnApplication(
        * @param hanaPrometheusExporter The HANA DB Prometheus Exporter settings.
        */
       override fun hanaPrometheusExporter(hanaPrometheusExporter: IResolvable) {
-        cdkBuilder.hanaPrometheusExporter(hanaPrometheusExporter.let(IResolvable::unwrap))
+        cdkBuilder.hanaPrometheusExporter(hanaPrometheusExporter.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param hanaPrometheusExporter The HANA DB Prometheus Exporter settings.
        */
       override fun hanaPrometheusExporter(hanaPrometheusExporter: HANAPrometheusExporterProperty) {
-        cdkBuilder.hanaPrometheusExporter(hanaPrometheusExporter.let(HANAPrometheusExporterProperty::unwrap))
+        cdkBuilder.hanaPrometheusExporter(hanaPrometheusExporter.let(HANAPrometheusExporterProperty.Companion::unwrap))
       }
 
       /**
@@ -2230,14 +2230,14 @@ public open class CfnApplication(
        * @param jmxPrometheusExporter A list of Java metrics to monitor for the component.
        */
       override fun jmxPrometheusExporter(jmxPrometheusExporter: IResolvable) {
-        cdkBuilder.jmxPrometheusExporter(jmxPrometheusExporter.let(IResolvable::unwrap))
+        cdkBuilder.jmxPrometheusExporter(jmxPrometheusExporter.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param jmxPrometheusExporter A list of Java metrics to monitor for the component.
        */
       override fun jmxPrometheusExporter(jmxPrometheusExporter: JMXPrometheusExporterProperty) {
-        cdkBuilder.jmxPrometheusExporter(jmxPrometheusExporter.let(JMXPrometheusExporterProperty::unwrap))
+        cdkBuilder.jmxPrometheusExporter(jmxPrometheusExporter.let(JMXPrometheusExporterProperty.Companion::unwrap))
       }
 
       /**
@@ -2254,7 +2254,7 @@ public open class CfnApplication(
        * Only Amazon EC2 instances can use `Logs` .
        */
       override fun logs(logs: IResolvable) {
-        cdkBuilder.logs(logs.let(IResolvable::unwrap))
+        cdkBuilder.logs(logs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2276,7 +2276,7 @@ public open class CfnApplication(
        * Only Amazon EC2 instances running on Windows can use `WindowsEvents` .
        */
       override fun windowsEvents(windowsEvents: IResolvable) {
-        cdkBuilder.windowsEvents(windowsEvents.let(IResolvable::unwrap))
+        cdkBuilder.windowsEvents(windowsEvents.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2724,7 +2724,7 @@ public open class CfnApplication(
        * client. 
        */
       override fun agreeToInstallHanadbClient(agreeToInstallHanadbClient: IResolvable) {
-        cdkBuilder.agreeToInstallHanadbClient(agreeToInstallHanadbClient.let(IResolvable::unwrap))
+        cdkBuilder.agreeToInstallHanadbClient(agreeToInstallHanadbClient.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3215,7 +3215,7 @@ public open class CfnApplication(
        * `LogPatternSet` . 
        */
       override fun logPatterns(logPatterns: IResolvable) {
-        cdkBuilder.logPatterns(logPatterns.let(IResolvable::unwrap))
+        cdkBuilder.logPatterns(logPatterns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3689,7 +3689,7 @@ public open class CfnApplication(
        * All component types can use `AlarmMetrics` .
        */
       override fun alarmMetrics(alarmMetrics: IResolvable) {
-        cdkBuilder.alarmMetrics(alarmMetrics.let(IResolvable::unwrap))
+        cdkBuilder.alarmMetrics(alarmMetrics.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3712,7 +3712,7 @@ public open class CfnApplication(
        * Only Amazon EC2 instances can use `Logs` .
        */
       override fun logs(logs: IResolvable) {
-        cdkBuilder.logs(logs.let(IResolvable::unwrap))
+        cdkBuilder.logs(logs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3734,7 +3734,7 @@ public open class CfnApplication(
        * Only Amazon EC2 instances running on Windows can use `WindowsEvents` .
        */
       override fun windowsEvents(windowsEvents: IResolvable) {
-        cdkBuilder.windowsEvents(windowsEvents.let(IResolvable::unwrap))
+        cdkBuilder.windowsEvents(windowsEvents.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3900,7 +3900,7 @@ public open class CfnApplication(
        * @param subComponentConfigurationDetails The configuration settings of the sub-components. 
        */
       override fun subComponentConfigurationDetails(subComponentConfigurationDetails: IResolvable) {
-        cdkBuilder.subComponentConfigurationDetails(subComponentConfigurationDetails.let(IResolvable::unwrap))
+        cdkBuilder.subComponentConfigurationDetails(subComponentConfigurationDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3908,7 +3908,7 @@ public open class CfnApplication(
        */
       override
           fun subComponentConfigurationDetails(subComponentConfigurationDetails: SubComponentConfigurationDetailsProperty) {
-        cdkBuilder.subComponentConfigurationDetails(subComponentConfigurationDetails.let(SubComponentConfigurationDetailsProperty::unwrap))
+        cdkBuilder.subComponentConfigurationDetails(subComponentConfigurationDetails.let(SubComponentConfigurationDetailsProperty.Companion::unwrap))
       }
 
       /**

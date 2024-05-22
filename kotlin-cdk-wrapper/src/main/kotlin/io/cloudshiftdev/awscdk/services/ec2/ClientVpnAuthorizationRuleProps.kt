@@ -82,7 +82,7 @@ public interface ClientVpnAuthorizationRuleProps : ClientVpnAuthorizationRuleOpt
      * @param clientVpnEndpoint The client VPN endpoint to which to add the rule.
      */
     override fun clientVpnEndpoint(clientVpnEndpoint: IClientVpnEndpoint) {
-      cdkBuilder.clientVpnEndpoint(clientVpnEndpoint.let(IClientVpnEndpoint::unwrap))
+      cdkBuilder.clientVpnEndpoint(clientVpnEndpoint.let(IClientVpnEndpoint.Companion::unwrap))
     }
 
     /**

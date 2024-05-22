@@ -70,14 +70,14 @@ public interface CfnKeyGroupProps {
      * @param keyGroupConfig The key group configuration. 
      */
     override fun keyGroupConfig(keyGroupConfig: IResolvable) {
-      cdkBuilder.keyGroupConfig(keyGroupConfig.let(IResolvable::unwrap))
+      cdkBuilder.keyGroupConfig(keyGroupConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param keyGroupConfig The key group configuration. 
      */
     override fun keyGroupConfig(keyGroupConfig: CfnKeyGroup.KeyGroupConfigProperty) {
-      cdkBuilder.keyGroupConfig(keyGroupConfig.let(CfnKeyGroup.KeyGroupConfigProperty::unwrap))
+      cdkBuilder.keyGroupConfig(keyGroupConfig.let(CfnKeyGroup.KeyGroupConfigProperty.Companion::unwrap))
     }
 
     /**

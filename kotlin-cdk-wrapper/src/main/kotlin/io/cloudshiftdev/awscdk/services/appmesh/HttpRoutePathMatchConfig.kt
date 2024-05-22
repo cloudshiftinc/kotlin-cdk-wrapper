@@ -86,7 +86,7 @@ public interface HttpRoutePathMatchConfig {
      * request.
      */
     override fun wholePathMatch(wholePathMatch: CfnRoute.HttpPathMatchProperty) {
-      cdkBuilder.wholePathMatch(wholePathMatch.let(CfnRoute.HttpPathMatchProperty::unwrap))
+      cdkBuilder.wholePathMatch(wholePathMatch.let(CfnRoute.HttpPathMatchProperty.Companion::unwrap))
     }
 
     /**

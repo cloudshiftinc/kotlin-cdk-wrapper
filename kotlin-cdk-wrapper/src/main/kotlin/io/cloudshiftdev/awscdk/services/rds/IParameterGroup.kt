@@ -102,7 +102,7 @@ public interface IParameterGroup : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -112,7 +112,7 @@ public interface IParameterGroup : IResource {
      */
     override fun bindToCluster(options: ParameterGroupClusterBindOptions):
         ParameterGroupClusterConfig =
-        unwrap(this).bindToCluster(options.let(ParameterGroupClusterBindOptions::unwrap)).let(ParameterGroupClusterConfig::wrap)
+        unwrap(this).bindToCluster(options.let(ParameterGroupClusterBindOptions.Companion::unwrap)).let(ParameterGroupClusterConfig::wrap)
 
     /**
      * Method called when this Parameter Group is used when defining a database cluster.
@@ -131,7 +131,7 @@ public interface IParameterGroup : IResource {
      */
     override fun bindToInstance(options: ParameterGroupInstanceBindOptions):
         ParameterGroupInstanceConfig =
-        unwrap(this).bindToInstance(options.let(ParameterGroupInstanceBindOptions::unwrap)).let(ParameterGroupInstanceConfig::wrap)
+        unwrap(this).bindToInstance(options.let(ParameterGroupInstanceBindOptions.Companion::unwrap)).let(ParameterGroupInstanceConfig::wrap)
 
     /**
      * Method called when this Parameter Group is used when defining a database instance.

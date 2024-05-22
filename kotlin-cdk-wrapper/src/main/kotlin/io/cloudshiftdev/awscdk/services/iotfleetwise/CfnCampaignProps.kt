@@ -513,7 +513,7 @@ public interface CfnCampaignProps {
      * You can specify a scheme that collects data based on time or an event.
      */
     override fun collectionScheme(collectionScheme: IResolvable) {
-      cdkBuilder.collectionScheme(collectionScheme.let(IResolvable::unwrap))
+      cdkBuilder.collectionScheme(collectionScheme.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -521,7 +521,7 @@ public interface CfnCampaignProps {
      * You can specify a scheme that collects data based on time or an event.
      */
     override fun collectionScheme(collectionScheme: CfnCampaign.CollectionSchemeProperty) {
-      cdkBuilder.collectionScheme(collectionScheme.let(CfnCampaign.CollectionSchemeProperty::unwrap))
+      cdkBuilder.collectionScheme(collectionScheme.let(CfnCampaign.CollectionSchemeProperty.Companion::unwrap))
     }
 
     /**
@@ -559,7 +559,7 @@ public interface CfnCampaignProps {
      * vehicle data so that you can identify trends and patterns.
      */
     override fun dataDestinationConfigs(dataDestinationConfigs: IResolvable) {
-      cdkBuilder.dataDestinationConfigs(dataDestinationConfigs.let(IResolvable::unwrap))
+      cdkBuilder.dataDestinationConfigs(dataDestinationConfigs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -690,7 +690,7 @@ public interface CfnCampaignProps {
      * @param signalsToCollect (Optional) A list of information about signals to collect.
      */
     override fun signalsToCollect(signalsToCollect: IResolvable) {
-      cdkBuilder.signalsToCollect(signalsToCollect.let(IResolvable::unwrap))
+      cdkBuilder.signalsToCollect(signalsToCollect.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -734,7 +734,7 @@ public interface CfnCampaignProps {
      * @param tags (Optional) Metadata that can be used to manage the campaign.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

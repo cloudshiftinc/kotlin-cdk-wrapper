@@ -283,7 +283,7 @@ public interface StreamEventSourceProps : BaseStreamEventSourceProps {
      * Maximum of Duration.minutes(5).
      */
     override fun maxBatchingWindow(maxBatchingWindow: Duration) {
-      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration::unwrap))
+      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -299,14 +299,14 @@ public interface StreamEventSourceProps : BaseStreamEventSourceProps {
      * Record are valid until it expires in the event source.
      */
     override fun maxRecordAge(maxRecordAge: Duration) {
-      cdkBuilder.maxRecordAge(maxRecordAge.let(Duration::unwrap))
+      cdkBuilder.maxRecordAge(maxRecordAge.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param onFailure An Amazon SQS queue or Amazon SNS topic destination for discarded records.
      */
     override fun onFailure(onFailure: IEventSourceDlq) {
-      cdkBuilder.onFailure(onFailure.let(IEventSourceDlq::unwrap))
+      cdkBuilder.onFailure(onFailure.let(IEventSourceDlq.Companion::unwrap))
     }
 
     /**
@@ -343,7 +343,7 @@ public interface StreamEventSourceProps : BaseStreamEventSourceProps {
      * @param startingPosition Where to begin consuming the stream. 
      */
     override fun startingPosition(startingPosition: StartingPosition) {
-      cdkBuilder.startingPosition(startingPosition.let(StartingPosition::unwrap))
+      cdkBuilder.startingPosition(startingPosition.let(StartingPosition.Companion::unwrap))
     }
 
     /**
@@ -351,7 +351,7 @@ public interface StreamEventSourceProps : BaseStreamEventSourceProps {
      * Kinesis Valid Range: 0 - 15 minutes.
      */
     override fun tumblingWindow(tumblingWindow: Duration) {
-      cdkBuilder.tumblingWindow(tumblingWindow.let(Duration::unwrap))
+      cdkBuilder.tumblingWindow(tumblingWindow.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lambda.eventsources.StreamEventSourceProps =

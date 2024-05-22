@@ -310,7 +310,7 @@ public interface SourceConfiguration {
      * At least one (default) behavior must be included.
      */
     override fun behaviors(behaviors: List<Behavior>) {
-      cdkBuilder.behaviors(behaviors.map(Behavior::unwrap))
+      cdkBuilder.behaviors(behaviors.map(Behavior.Companion::unwrap))
     }
 
     /**
@@ -334,14 +334,14 @@ public interface SourceConfiguration {
      * You can specify a number of seconds between 1 and 10 (inclusive).
      */
     override fun connectionTimeout(connectionTimeout: Duration) {
-      cdkBuilder.connectionTimeout(connectionTimeout.let(Duration::unwrap))
+      cdkBuilder.connectionTimeout(connectionTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param customOriginSource A custom origin source - for all non-s3 sources.
      */
     override fun customOriginSource(customOriginSource: CustomOriginConfig) {
-      cdkBuilder.customOriginSource(customOriginSource.let(CustomOriginConfig::unwrap))
+      cdkBuilder.customOriginSource(customOriginSource.let(CustomOriginConfig.Companion::unwrap))
     }
 
     /**
@@ -357,7 +357,7 @@ public interface SourceConfiguration {
      */
     override
         fun failoverCriteriaStatusCodes(failoverCriteriaStatusCodes: List<FailoverStatusCode>) {
-      cdkBuilder.failoverCriteriaStatusCodes(failoverCriteriaStatusCodes.map(FailoverStatusCode::unwrap))
+      cdkBuilder.failoverCriteriaStatusCodes(failoverCriteriaStatusCodes.map(FailoverStatusCode.Companion::unwrap))
     }
 
     /**
@@ -372,7 +372,7 @@ public interface SourceConfiguration {
      * s3OriginSource returns invalid status code.
      */
     override fun failoverCustomOriginSource(failoverCustomOriginSource: CustomOriginConfig) {
-      cdkBuilder.failoverCustomOriginSource(failoverCustomOriginSource.let(CustomOriginConfig::unwrap))
+      cdkBuilder.failoverCustomOriginSource(failoverCustomOriginSource.let(CustomOriginConfig.Companion::unwrap))
     }
 
     /**
@@ -390,7 +390,7 @@ public interface SourceConfiguration {
      * returns invalid status code.
      */
     override fun failoverS3OriginSource(failoverS3OriginSource: S3OriginConfig) {
-      cdkBuilder.failoverS3OriginSource(failoverS3OriginSource.let(S3OriginConfig::unwrap))
+      cdkBuilder.failoverS3OriginSource(failoverS3OriginSource.let(S3OriginConfig.Companion::unwrap))
     }
 
     /**
@@ -414,7 +414,7 @@ public interface SourceConfiguration {
      * @param s3OriginSource An s3 origin source - if you're using s3 for your assets.
      */
     override fun s3OriginSource(s3OriginSource: S3OriginConfig) {
-      cdkBuilder.s3OriginSource(s3OriginSource.let(S3OriginConfig::unwrap))
+      cdkBuilder.s3OriginSource(s3OriginSource.let(S3OriginConfig.Companion::unwrap))
     }
 
     /**

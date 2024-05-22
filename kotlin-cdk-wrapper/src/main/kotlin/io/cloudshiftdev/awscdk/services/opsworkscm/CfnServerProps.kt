@@ -648,7 +648,7 @@ public interface CfnServerProps {
      * Valid values are `true` or `false` . The default value is `true` .
      */
     override fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
-      cdkBuilder.associatePublicIpAddress(associatePublicIpAddress.let(IResolvable::unwrap))
+      cdkBuilder.associatePublicIpAddress(associatePublicIpAddress.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -722,7 +722,7 @@ public interface CfnServerProps {
      * Valid values are `true` or `false` . The default value is `true` .
      */
     override fun disableAutomatedBackup(disableAutomatedBackup: IResolvable) {
-      cdkBuilder.disableAutomatedBackup(disableAutomatedBackup.let(IResolvable::unwrap))
+      cdkBuilder.disableAutomatedBackup(disableAutomatedBackup.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -759,7 +759,7 @@ public interface CfnServerProps {
      * PUPPET_R10K_PRIVATE_KEY to specify a PEM-encoded private SSH key.
      */
     override fun engineAttributes(engineAttributes: IResolvable) {
-      cdkBuilder.engineAttributes(engineAttributes.let(IResolvable::unwrap))
+      cdkBuilder.engineAttributes(engineAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -978,7 +978,7 @@ public interface CfnServerProps {
      * or separators, or the following special characters: `+ - = . _ : /
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

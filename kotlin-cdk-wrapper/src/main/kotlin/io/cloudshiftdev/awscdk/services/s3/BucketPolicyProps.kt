@@ -62,14 +62,14 @@ public interface BucketPolicyProps {
      * @param bucket The Amazon S3 bucket that the policy applies to. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**
      * @param removalPolicy Policy to apply when the policy is removed from this stack.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.s3.BucketPolicyProps = cdkBuilder.build()

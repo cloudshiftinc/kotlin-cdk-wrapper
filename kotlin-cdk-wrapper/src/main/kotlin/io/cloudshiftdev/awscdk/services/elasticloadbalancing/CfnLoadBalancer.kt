@@ -110,8 +110,8 @@ public open class CfnLoadBalancer(
     id: String,
     props: CfnLoadBalancerProps,
   ) :
-      this(software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLoadBalancerProps::unwrap))
+      this(software.amazon.awscdk.services.elasticloadbalancing.CfnLoadBalancer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLoadBalancerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -130,14 +130,14 @@ public open class CfnLoadBalancer(
    * Information about where and how access logs are stored for the load balancer.
    */
   public open fun accessLoggingPolicy(`value`: IResolvable) {
-    unwrap(this).setAccessLoggingPolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccessLoggingPolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information about where and how access logs are stored for the load balancer.
    */
   public open fun accessLoggingPolicy(`value`: AccessLoggingPolicyProperty) {
-    unwrap(this).setAccessLoggingPolicy(`value`.let(AccessLoggingPolicyProperty::unwrap))
+    unwrap(this).setAccessLoggingPolicy(`value`.let(AccessLoggingPolicyProperty.Companion::unwrap))
   }
 
   /**
@@ -157,7 +157,7 @@ public open class CfnLoadBalancer(
    * Information about a policy for application-controlled session stickiness.
    */
   public open fun appCookieStickinessPolicy(`value`: IResolvable) {
-    unwrap(this).setAppCookieStickinessPolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAppCookieStickinessPolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -240,7 +240,7 @@ public open class CfnLoadBalancer(
    * shifts traffic away from a deregistered or unhealthy instance.
    */
   public open fun connectionDrainingPolicy(`value`: IResolvable) {
-    unwrap(this).setConnectionDrainingPolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConnectionDrainingPolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -248,7 +248,7 @@ public open class CfnLoadBalancer(
    * shifts traffic away from a deregistered or unhealthy instance.
    */
   public open fun connectionDrainingPolicy(`value`: ConnectionDrainingPolicyProperty) {
-    unwrap(this).setConnectionDrainingPolicy(`value`.let(ConnectionDrainingPolicyProperty::unwrap))
+    unwrap(this).setConnectionDrainingPolicy(`value`.let(ConnectionDrainingPolicyProperty.Companion::unwrap))
   }
 
   /**
@@ -272,7 +272,7 @@ public open class CfnLoadBalancer(
    * connection) for the specified duration.
    */
   public open fun connectionSettings(`value`: IResolvable) {
-    unwrap(this).setConnectionSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConnectionSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -280,7 +280,7 @@ public open class CfnLoadBalancer(
    * connection) for the specified duration.
    */
   public open fun connectionSettings(`value`: ConnectionSettingsProperty) {
-    unwrap(this).setConnectionSettings(`value`.let(ConnectionSettingsProperty::unwrap))
+    unwrap(this).setConnectionSettings(`value`.let(ConnectionSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -311,7 +311,7 @@ public open class CfnLoadBalancer(
    * of the Availability Zones.
    */
   public open fun crossZone(`value`: IResolvable) {
-    unwrap(this).setCrossZone(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCrossZone(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -323,14 +323,14 @@ public open class CfnLoadBalancer(
    * The health check settings to use when evaluating the health of your EC2 instances.
    */
   public open fun healthCheck(`value`: IResolvable) {
-    unwrap(this).setHealthCheck(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHealthCheck(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The health check settings to use when evaluating the health of your EC2 instances.
    */
   public open fun healthCheck(`value`: HealthCheckProperty) {
-    unwrap(this).setHealthCheck(`value`.let(HealthCheckProperty::unwrap))
+    unwrap(this).setHealthCheck(`value`.let(HealthCheckProperty.Companion::unwrap))
   }
 
   /**
@@ -347,7 +347,7 @@ public open class CfnLoadBalancer(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -376,7 +376,7 @@ public open class CfnLoadBalancer(
    * Information about a policy for duration-based session stickiness.
    */
   public open fun lbCookieStickinessPolicy(`value`: IResolvable) {
-    unwrap(this).setLbCookieStickinessPolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLbCookieStickinessPolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -405,7 +405,7 @@ public open class CfnLoadBalancer(
    * You can specify at most one listener per port.
    */
   public open fun listeners(`value`: IResolvable) {
-    unwrap(this).setListeners(`value`.let(IResolvable::unwrap))
+    unwrap(this).setListeners(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -445,7 +445,7 @@ public open class CfnLoadBalancer(
    * The policies defined for your Classic Load Balancer.
    */
   public open fun policies(`value`: IResolvable) {
-    unwrap(this).setPolicies(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPolicies(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -531,7 +531,7 @@ public open class CfnLoadBalancer(
    * The tags associated with a load balancer.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -1017,7 +1017,7 @@ public open class CfnLoadBalancer(
      * load balancer. 
      */
     override fun accessLoggingPolicy(accessLoggingPolicy: IResolvable) {
-      cdkBuilder.accessLoggingPolicy(accessLoggingPolicy.let(IResolvable::unwrap))
+      cdkBuilder.accessLoggingPolicy(accessLoggingPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1028,7 +1028,7 @@ public open class CfnLoadBalancer(
      * load balancer. 
      */
     override fun accessLoggingPolicy(accessLoggingPolicy: AccessLoggingPolicyProperty) {
-      cdkBuilder.accessLoggingPolicy(accessLoggingPolicy.let(AccessLoggingPolicyProperty::unwrap))
+      cdkBuilder.accessLoggingPolicy(accessLoggingPolicy.let(AccessLoggingPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -1052,7 +1052,7 @@ public open class CfnLoadBalancer(
      * session stickiness. 
      */
     override fun appCookieStickinessPolicy(appCookieStickinessPolicy: IResolvable) {
-      cdkBuilder.appCookieStickinessPolicy(appCookieStickinessPolicy.let(IResolvable::unwrap))
+      cdkBuilder.appCookieStickinessPolicy(appCookieStickinessPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1119,7 +1119,7 @@ public open class CfnLoadBalancer(
      * 
      */
     override fun connectionDrainingPolicy(connectionDrainingPolicy: IResolvable) {
-      cdkBuilder.connectionDrainingPolicy(connectionDrainingPolicy.let(IResolvable::unwrap))
+      cdkBuilder.connectionDrainingPolicy(connectionDrainingPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1137,7 +1137,7 @@ public open class CfnLoadBalancer(
      */
     override
         fun connectionDrainingPolicy(connectionDrainingPolicy: ConnectionDrainingPolicyProperty) {
-      cdkBuilder.connectionDrainingPolicy(connectionDrainingPolicy.let(ConnectionDrainingPolicyProperty::unwrap))
+      cdkBuilder.connectionDrainingPolicy(connectionDrainingPolicy.let(ConnectionDrainingPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -1174,7 +1174,7 @@ public open class CfnLoadBalancer(
      * (no data is sent over the connection) for the specified duration. 
      */
     override fun connectionSettings(connectionSettings: IResolvable) {
-      cdkBuilder.connectionSettings(connectionSettings.let(IResolvable::unwrap))
+      cdkBuilder.connectionSettings(connectionSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1192,7 +1192,7 @@ public open class CfnLoadBalancer(
      * (no data is sent over the connection) for the specified duration. 
      */
     override fun connectionSettings(connectionSettings: ConnectionSettingsProperty) {
-      cdkBuilder.connectionSettings(connectionSettings.let(ConnectionSettingsProperty::unwrap))
+      cdkBuilder.connectionSettings(connectionSettings.let(ConnectionSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -1244,7 +1244,7 @@ public open class CfnLoadBalancer(
      * instances regardless of the Availability Zones. 
      */
     override fun crossZone(crossZone: IResolvable) {
-      cdkBuilder.crossZone(crossZone.let(IResolvable::unwrap))
+      cdkBuilder.crossZone(crossZone.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1258,7 +1258,7 @@ public open class CfnLoadBalancer(
      * instances. 
      */
     override fun healthCheck(healthCheck: IResolvable) {
-      cdkBuilder.healthCheck(healthCheck.let(IResolvable::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1272,7 +1272,7 @@ public open class CfnLoadBalancer(
      * instances. 
      */
     override fun healthCheck(healthCheck: HealthCheckProperty) {
-      cdkBuilder.healthCheck(healthCheck.let(HealthCheckProperty::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(HealthCheckProperty.Companion::unwrap))
     }
 
     /**
@@ -1316,7 +1316,7 @@ public open class CfnLoadBalancer(
      * stickiness. 
      */
     override fun lbCookieStickinessPolicy(lbCookieStickinessPolicy: IResolvable) {
-      cdkBuilder.lbCookieStickinessPolicy(lbCookieStickinessPolicy.let(IResolvable::unwrap))
+      cdkBuilder.lbCookieStickinessPolicy(lbCookieStickinessPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1352,7 +1352,7 @@ public open class CfnLoadBalancer(
      * per port. 
      */
     override fun listeners(listeners: IResolvable) {
-      cdkBuilder.listeners(listeners.let(IResolvable::unwrap))
+      cdkBuilder.listeners(listeners.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1410,7 +1410,7 @@ public open class CfnLoadBalancer(
      * @param policies The policies defined for your Classic Load Balancer. 
      */
     override fun policies(policies: IResolvable) {
-      cdkBuilder.policies(policies.let(IResolvable::unwrap))
+      cdkBuilder.policies(policies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1513,7 +1513,7 @@ public open class CfnLoadBalancer(
      * @param tags The tags associated with a load balancer. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1666,7 +1666,7 @@ public open class CfnLoadBalancer(
        * @param enabled Specifies whether access logs are enabled for the load balancer. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1942,7 +1942,7 @@ public open class CfnLoadBalancer(
        * @param enabled Specifies whether connection draining is enabled for the load balancer. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2905,7 +2905,7 @@ public open class CfnLoadBalancer(
        * @param attributes The policy attributes. 
        */
       override fun attributes(attributes: IResolvable) {
-        cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
       }
 
       /**

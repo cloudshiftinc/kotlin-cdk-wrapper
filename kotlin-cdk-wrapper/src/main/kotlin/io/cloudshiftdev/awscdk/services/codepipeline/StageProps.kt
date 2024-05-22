@@ -103,7 +103,7 @@ public interface StageProps {
      * You can always add more Actions later by calling `IStage#addAction`.
      */
     override fun actions(actions: List<IAction>) {
-      cdkBuilder.actions(actions.map(IAction::unwrap))
+      cdkBuilder.actions(actions.map(IAction.Companion::unwrap))
     }
 
     /**

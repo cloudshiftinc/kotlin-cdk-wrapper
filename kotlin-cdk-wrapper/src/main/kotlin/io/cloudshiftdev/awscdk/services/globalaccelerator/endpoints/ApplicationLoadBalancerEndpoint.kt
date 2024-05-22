@@ -36,14 +36,14 @@ public open class ApplicationLoadBalancerEndpoint(
   public
       constructor(loadBalancer: CloudshiftdevAwscdkServicesElasticloadbalancingv2IApplicationLoadBalancer)
       :
-      this(software.amazon.awscdk.services.globalaccelerator.endpoints.ApplicationLoadBalancerEndpoint(loadBalancer.let(CloudshiftdevAwscdkServicesElasticloadbalancingv2IApplicationLoadBalancer::unwrap))
+      this(software.amazon.awscdk.services.globalaccelerator.endpoints.ApplicationLoadBalancerEndpoint(loadBalancer.let(CloudshiftdevAwscdkServicesElasticloadbalancingv2IApplicationLoadBalancer.Companion::unwrap))
   )
 
   public
       constructor(loadBalancer: CloudshiftdevAwscdkServicesElasticloadbalancingv2IApplicationLoadBalancer,
       options: ApplicationLoadBalancerEndpointOptions) :
-      this(software.amazon.awscdk.services.globalaccelerator.endpoints.ApplicationLoadBalancerEndpoint(loadBalancer.let(CloudshiftdevAwscdkServicesElasticloadbalancingv2IApplicationLoadBalancer::unwrap),
-      options.let(ApplicationLoadBalancerEndpointOptions::unwrap))
+      this(software.amazon.awscdk.services.globalaccelerator.endpoints.ApplicationLoadBalancerEndpoint(loadBalancer.let(CloudshiftdevAwscdkServicesElasticloadbalancingv2IApplicationLoadBalancer.Companion::unwrap),
+      options.let(ApplicationLoadBalancerEndpointOptions.Companion::unwrap))
   )
 
   public

@@ -43,8 +43,8 @@ public open class SecretTargetAttachment(
     id: String,
     props: SecretTargetAttachmentProps,
   ) :
-      this(software.amazon.awscdk.services.secretsmanager.SecretTargetAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SecretTargetAttachmentProps::unwrap))
+      this(software.amazon.awscdk.services.secretsmanager.SecretTargetAttachment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SecretTargetAttachmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -62,7 +62,7 @@ public open class SecretTargetAttachment(
    */
   public override fun addRotationSchedule(id: String, options: RotationScheduleOptions):
       RotationSchedule = unwrap(this).addRotationSchedule(id,
-      options.let(RotationScheduleOptions::unwrap)).let(RotationSchedule::wrap)
+      options.let(RotationScheduleOptions.Companion::unwrap)).let(RotationSchedule::wrap)
 
   /**
    * Adds a rotation schedule to the secret.
@@ -87,7 +87,7 @@ public open class SecretTargetAttachment(
    * @param statement 
    */
   public override fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
-      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement::unwrap)).let(AddToResourcePolicyResult::wrap)
+      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
 
   /**
    * Forward any additions to the resource policy to the original secret.
@@ -111,7 +111,7 @@ public open class SecretTargetAttachment(
    * @param target The target to attach. 
    */
   public override fun attach(target: ISecretAttachmentTarget): ISecret =
-      unwrap(this).attach(target.let(ISecretAttachmentTarget::unwrap)).let(ISecret::wrap)
+      unwrap(this).attach(target.let(ISecretAttachmentTarget.Companion::unwrap)).let(ISecret::wrap)
 
   /**
    * Denies the `DeleteSecret` action to all principals within the current account.
@@ -135,7 +135,7 @@ public open class SecretTargetAttachment(
    * @param versionStages
    */
   public override fun grantRead(grantee: IGrantable): Grant =
-      unwrap(this).grantRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grants reading the secret value to some role.
@@ -144,7 +144,8 @@ public open class SecretTargetAttachment(
    * @param versionStages
    */
   public override fun grantRead(grantee: IGrantable, versionStages: List<String>): Grant =
-      unwrap(this).grantRead(grantee.let(IGrantable::unwrap), versionStages).let(Grant::wrap)
+      unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap),
+      versionStages).let(Grant::wrap)
 
   /**
    * Grants writing and updating the secret value to some role.
@@ -152,7 +153,7 @@ public open class SecretTargetAttachment(
    * @param grantee 
    */
   public override fun grantWrite(grantee: IGrantable): Grant =
-      unwrap(this).grantWrite(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantWrite(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The ARN of the secret in AWS Secrets Manager.
@@ -234,7 +235,7 @@ public open class SecretTargetAttachment(
      * @param secret The secret to attach to the target. 
      */
     override fun secret(secret: ISecret) {
-      cdkBuilder.secret(secret.let(ISecret::unwrap))
+      cdkBuilder.secret(secret.let(ISecret.Companion::unwrap))
     }
 
     /**
@@ -243,7 +244,7 @@ public open class SecretTargetAttachment(
      * @param target The target to attach the secret to. 
      */
     override fun target(target: ISecretAttachmentTarget) {
-      cdkBuilder.target(target.let(ISecretAttachmentTarget::unwrap))
+      cdkBuilder.target(target.let(ISecretAttachmentTarget.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.secretsmanager.SecretTargetAttachment =
@@ -256,7 +257,7 @@ public open class SecretTargetAttachment(
       id: String,
       secretTargetAttachmentSecretArn: String,
     ): ISecretTargetAttachment =
-        software.amazon.awscdk.services.secretsmanager.SecretTargetAttachment.fromSecretTargetAttachmentSecretArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.secretsmanager.SecretTargetAttachment.fromSecretTargetAttachmentSecretArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, secretTargetAttachmentSecretArn).let(ISecretTargetAttachment::wrap)
 
     public operator fun invoke(

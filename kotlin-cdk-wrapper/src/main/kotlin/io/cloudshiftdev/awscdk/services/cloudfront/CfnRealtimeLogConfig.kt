@@ -52,8 +52,8 @@ public open class CfnRealtimeLogConfig(
     id: String,
     props: CfnRealtimeLogConfigProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRealtimeLogConfigProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.CfnRealtimeLogConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRealtimeLogConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -82,7 +82,7 @@ public open class CfnRealtimeLogConfig(
    * data for this real-time log configuration.
    */
   public open fun endPoints(`value`: IResolvable) {
-    unwrap(this).setEndPoints(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEndPoints(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -122,7 +122,7 @@ public open class CfnRealtimeLogConfig(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -250,7 +250,7 @@ public open class CfnRealtimeLogConfig(
      * sending real-time log data for this real-time log configuration. 
      */
     override fun endPoints(endPoints: IResolvable) {
-      cdkBuilder.endPoints(endPoints.let(IResolvable::unwrap))
+      cdkBuilder.endPoints(endPoints.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -437,7 +437,7 @@ public open class CfnRealtimeLogConfig(
        * you are sending real-time log data. 
        */
       override fun kinesisStreamConfig(kinesisStreamConfig: IResolvable) {
-        cdkBuilder.kinesisStreamConfig(kinesisStreamConfig.let(IResolvable::unwrap))
+        cdkBuilder.kinesisStreamConfig(kinesisStreamConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -445,7 +445,7 @@ public open class CfnRealtimeLogConfig(
        * you are sending real-time log data. 
        */
       override fun kinesisStreamConfig(kinesisStreamConfig: KinesisStreamConfigProperty) {
-        cdkBuilder.kinesisStreamConfig(kinesisStreamConfig.let(KinesisStreamConfigProperty::unwrap))
+        cdkBuilder.kinesisStreamConfig(kinesisStreamConfig.let(KinesisStreamConfigProperty.Companion::unwrap))
       }
 
       /**

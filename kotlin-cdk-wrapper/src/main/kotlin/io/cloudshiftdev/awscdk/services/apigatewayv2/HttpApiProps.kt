@@ -207,7 +207,7 @@ public interface HttpApiProps {
      * @param corsPreflight Specifies a CORS configuration for an API.
      */
     override fun corsPreflight(corsPreflight: CorsPreflightOptions) {
-      cdkBuilder.corsPreflight(corsPreflight.let(CorsPreflightOptions::unwrap))
+      cdkBuilder.corsPreflight(corsPreflight.let(CorsPreflightOptions.Companion::unwrap))
     }
 
     /**
@@ -247,7 +247,7 @@ public interface HttpApiProps {
      * @param defaultAuthorizer Default Authorizer applied to all routes in the gateway.
      */
     override fun defaultAuthorizer(defaultAuthorizer: IHttpRouteAuthorizer) {
-      cdkBuilder.defaultAuthorizer(defaultAuthorizer.let(IHttpRouteAuthorizer::unwrap))
+      cdkBuilder.defaultAuthorizer(defaultAuthorizer.let(IHttpRouteAuthorizer.Companion::unwrap))
     }
 
     /**
@@ -255,7 +255,7 @@ public interface HttpApiProps {
      * HTTP API.
      */
     override fun defaultDomainMapping(defaultDomainMapping: DomainMappingOptions) {
-      cdkBuilder.defaultDomainMapping(defaultDomainMapping.let(DomainMappingOptions::unwrap))
+      cdkBuilder.defaultDomainMapping(defaultDomainMapping.let(DomainMappingOptions.Companion::unwrap))
     }
 
     /**
@@ -273,7 +273,7 @@ public interface HttpApiProps {
      * ($default).
      */
     override fun defaultIntegration(defaultIntegration: HttpRouteIntegration) {
-      cdkBuilder.defaultIntegration(defaultIntegration.let(HttpRouteIntegration::unwrap))
+      cdkBuilder.defaultIntegration(defaultIntegration.let(HttpRouteIntegration.Companion::unwrap))
     }
 
     /**

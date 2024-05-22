@@ -75,6 +75,10 @@ public interface CfnGeofenceCollectionProps {
   public fun pricingPlan(): String? = unwrap(this).getPricingPlan()
 
   /**
+   * (deprecated) This shape is deprecated since 2022-02-01: Deprecated.
+   *
+   * No longer allowed.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-geofencecollection.html#cfn-location-geofencecollection-pricingplandatasource)
    * @deprecated this property has been deprecated
    */
@@ -137,7 +141,8 @@ public interface CfnGeofenceCollectionProps {
     public fun pricingPlan(pricingPlan: String)
 
     /**
-     * @param pricingPlanDataSource the value to be set.
+     * @param pricingPlanDataSource This shape is deprecated since 2022-02-01: Deprecated.
+     * No longer allowed.
      * @deprecated this property has been deprecated
      */
     @Deprecated(message = "deprecated in CDK")
@@ -224,7 +229,8 @@ public interface CfnGeofenceCollectionProps {
     }
 
     /**
-     * @param pricingPlanDataSource the value to be set.
+     * @param pricingPlanDataSource This shape is deprecated since 2022-02-01: Deprecated.
+     * No longer allowed.
      * @deprecated this property has been deprecated
      */
     @Deprecated(message = "deprecated in CDK")
@@ -249,7 +255,7 @@ public interface CfnGeofenceCollectionProps {
      * /
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -315,6 +321,10 @@ public interface CfnGeofenceCollectionProps {
     override fun pricingPlan(): String? = unwrap(this).getPricingPlan()
 
     /**
+     * (deprecated) This shape is deprecated since 2022-02-01: Deprecated.
+     *
+     * No longer allowed.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-geofencecollection.html#cfn-location-geofencecollection-pricingplandatasource)
      * @deprecated this property has been deprecated
      */

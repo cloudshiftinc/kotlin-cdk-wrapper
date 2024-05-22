@@ -367,7 +367,7 @@ public interface CfnStackProps {
      * Users of the stack can connect to AppStream 2.0 only through the specified endpoints.
      */
     override fun accessEndpoints(accessEndpoints: IResolvable) {
-      cdkBuilder.accessEndpoints(accessEndpoints.let(IResolvable::unwrap))
+      cdkBuilder.accessEndpoints(accessEndpoints.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -391,7 +391,7 @@ public interface CfnStackProps {
      * are automatically saved after each session and applied to the next session.
      */
     override fun applicationSettings(applicationSettings: IResolvable) {
-      cdkBuilder.applicationSettings(applicationSettings.let(IResolvable::unwrap))
+      cdkBuilder.applicationSettings(applicationSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -400,7 +400,7 @@ public interface CfnStackProps {
      * are automatically saved after each session and applied to the next session.
      */
     override fun applicationSettings(applicationSettings: CfnStack.ApplicationSettingsProperty) {
-      cdkBuilder.applicationSettings(applicationSettings.let(CfnStack.ApplicationSettingsProperty::unwrap))
+      cdkBuilder.applicationSettings(applicationSettings.let(CfnStack.ApplicationSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -440,7 +440,7 @@ public interface CfnStackProps {
      * Deletes the storage connectors currently enabled for the stack.
      */
     override fun deleteStorageConnectors(deleteStorageConnectors: IResolvable) {
-      cdkBuilder.deleteStorageConnectors(deleteStorageConnectors.let(IResolvable::unwrap))
+      cdkBuilder.deleteStorageConnectors(deleteStorageConnectors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -501,7 +501,7 @@ public interface CfnStackProps {
      * @param storageConnectors The storage connectors to enable.
      */
     override fun storageConnectors(storageConnectors: IResolvable) {
-      cdkBuilder.storageConnectors(storageConnectors.let(IResolvable::unwrap))
+      cdkBuilder.storageConnectors(storageConnectors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -522,7 +522,7 @@ public interface CfnStackProps {
      * This can be UDP or TCP. Currently, UDP is only supported in the Windows native client.
      */
     override fun streamingExperienceSettings(streamingExperienceSettings: IResolvable) {
-      cdkBuilder.streamingExperienceSettings(streamingExperienceSettings.let(IResolvable::unwrap))
+      cdkBuilder.streamingExperienceSettings(streamingExperienceSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -531,7 +531,7 @@ public interface CfnStackProps {
      */
     override
         fun streamingExperienceSettings(streamingExperienceSettings: CfnStack.StreamingExperienceSettingsProperty) {
-      cdkBuilder.streamingExperienceSettings(streamingExperienceSettings.let(CfnStack.StreamingExperienceSettingsProperty::unwrap))
+      cdkBuilder.streamingExperienceSettings(streamingExperienceSettings.let(CfnStack.StreamingExperienceSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -549,7 +549,7 @@ public interface CfnStackProps {
      * @param tags An array of key-value pairs.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -563,7 +563,7 @@ public interface CfnStackProps {
      * By default, these actions are enabled.
      */
     override fun userSettings(userSettings: IResolvable) {
-      cdkBuilder.userSettings(userSettings.let(IResolvable::unwrap))
+      cdkBuilder.userSettings(userSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**

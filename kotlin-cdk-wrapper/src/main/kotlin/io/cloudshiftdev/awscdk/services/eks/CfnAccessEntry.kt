@@ -74,8 +74,8 @@ public open class CfnAccessEntry(
     id: String,
     props: CfnAccessEntryProps,
   ) :
-      this(software.amazon.awscdk.services.eks.CfnAccessEntry(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAccessEntryProps::unwrap))
+      this(software.amazon.awscdk.services.eks.CfnAccessEntry(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAccessEntryProps.Companion::unwrap))
   )
 
   public constructor(
@@ -94,7 +94,7 @@ public open class CfnAccessEntry(
    * The access policies to associate to the access entry.
    */
   public open fun accessPolicies(`value`: IResolvable) {
-    unwrap(this).setAccessPolicies(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccessPolicies(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -138,7 +138,7 @@ public open class CfnAccessEntry(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -184,7 +184,7 @@ public open class CfnAccessEntry(
    * Metadata that assists with categorization and organization.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -405,7 +405,7 @@ public open class CfnAccessEntry(
      * @param accessPolicies The access policies to associate to the access entry. 
      */
     override fun accessPolicies(accessPolicies: IResolvable) {
-      cdkBuilder.accessPolicies(accessPolicies.let(IResolvable::unwrap))
+      cdkBuilder.accessPolicies(accessPolicies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -528,7 +528,7 @@ public open class CfnAccessEntry(
      * @param tags Metadata that assists with categorization and organization. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -687,14 +687,14 @@ public open class CfnAccessEntry(
        * @param accessScope The scope of an `AccessPolicy` that's associated to an `AccessEntry` . 
        */
       override fun accessScope(accessScope: IResolvable) {
-        cdkBuilder.accessScope(accessScope.let(IResolvable::unwrap))
+        cdkBuilder.accessScope(accessScope.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param accessScope The scope of an `AccessPolicy` that's associated to an `AccessEntry` . 
        */
       override fun accessScope(accessScope: AccessScopeProperty) {
-        cdkBuilder.accessScope(accessScope.let(AccessScopeProperty::unwrap))
+        cdkBuilder.accessScope(accessScope.let(AccessScopeProperty.Companion::unwrap))
       }
 
       /**

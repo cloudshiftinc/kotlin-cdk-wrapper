@@ -152,14 +152,14 @@ public interface CfnBudgetProps {
      * @param budget The budget object that you want to create. 
      */
     override fun budget(budget: IResolvable) {
-      cdkBuilder.budget(budget.let(IResolvable::unwrap))
+      cdkBuilder.budget(budget.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param budget The budget object that you want to create. 
      */
     override fun budget(budget: CfnBudget.BudgetDataProperty) {
-      cdkBuilder.budget(budget.let(CfnBudget.BudgetDataProperty::unwrap))
+      cdkBuilder.budget(budget.let(CfnBudget.BudgetDataProperty.Companion::unwrap))
     }
 
     /**
@@ -177,7 +177,7 @@ public interface CfnBudgetProps {
      * `CreateBudget` call, AWS creates the notifications and subscribers for you.
      */
     override fun notificationsWithSubscribers(notificationsWithSubscribers: IResolvable) {
-      cdkBuilder.notificationsWithSubscribers(notificationsWithSubscribers.let(IResolvable::unwrap))
+      cdkBuilder.notificationsWithSubscribers(notificationsWithSubscribers.let(IResolvable.Companion::unwrap))
     }
 
     /**

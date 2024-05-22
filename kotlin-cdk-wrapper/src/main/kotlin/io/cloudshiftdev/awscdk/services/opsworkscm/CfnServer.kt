@@ -81,8 +81,8 @@ public open class CfnServer(
     id: String,
     props: CfnServerProps,
   ) :
-      this(software.amazon.awscdk.services.opsworkscm.CfnServer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnServerProps::unwrap))
+      this(software.amazon.awscdk.services.opsworkscm.CfnServer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnServerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -108,7 +108,7 @@ public open class CfnServer(
    * Associate a public IP address with a server that you are launching.
    */
   public open fun associatePublicIpAddress(`value`: IResolvable) {
-    unwrap(this).setAssociatePublicIpAddress(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAssociatePublicIpAddress(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -229,7 +229,7 @@ public open class CfnServer(
    * Enable or disable scheduled backups.
    */
   public open fun disableAutomatedBackup(`value`: IResolvable) {
-    unwrap(this).setDisableAutomatedBackup(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDisableAutomatedBackup(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -253,7 +253,7 @@ public open class CfnServer(
    * Optional engine attributes on a specified server.
    */
   public open fun engineAttributes(`value`: IResolvable) {
-    unwrap(this).setEngineAttributes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEngineAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -298,7 +298,7 @@ public open class CfnServer(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -443,7 +443,7 @@ public open class CfnServer(
    * OpsWorks for Puppet Enterprise server.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -917,7 +917,7 @@ public open class CfnServer(
      * launching. 
      */
     override fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
-      cdkBuilder.associatePublicIpAddress(associatePublicIpAddress.let(IResolvable::unwrap))
+      cdkBuilder.associatePublicIpAddress(associatePublicIpAddress.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1029,7 +1029,7 @@ public open class CfnServer(
      * @param disableAutomatedBackup Enable or disable scheduled backups. 
      */
     override fun disableAutomatedBackup(disableAutomatedBackup: IResolvable) {
-      cdkBuilder.disableAutomatedBackup(disableAutomatedBackup.let(IResolvable::unwrap))
+      cdkBuilder.disableAutomatedBackup(disableAutomatedBackup.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1074,7 +1074,7 @@ public open class CfnServer(
      * @param engineAttributes Optional engine attributes on a specified server. 
      */
     override fun engineAttributes(engineAttributes: IResolvable) {
-      cdkBuilder.engineAttributes(engineAttributes.let(IResolvable::unwrap))
+      cdkBuilder.engineAttributes(engineAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1356,7 +1356,7 @@ public open class CfnServer(
      * Automate or OpsWorks for Puppet Enterprise server. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

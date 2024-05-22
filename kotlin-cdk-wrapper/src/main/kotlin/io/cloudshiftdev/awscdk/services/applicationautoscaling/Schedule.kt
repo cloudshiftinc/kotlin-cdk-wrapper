@@ -51,7 +51,7 @@ public abstract class Schedule(
         software.amazon.awscdk.services.applicationautoscaling.Schedule.at(moment).let(Schedule::wrap)
 
     public fun cron(options: CronOptions): Schedule =
-        software.amazon.awscdk.services.applicationautoscaling.Schedule.cron(options.let(CronOptions::unwrap)).let(Schedule::wrap)
+        software.amazon.awscdk.services.applicationautoscaling.Schedule.cron(options.let(CronOptions.Companion::unwrap)).let(Schedule::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cc37d243eb40a26b390350f82df5c8784ed9081b5ef885cdfd0f5184b3fc1407")
@@ -61,7 +61,7 @@ public abstract class Schedule(
         software.amazon.awscdk.services.applicationautoscaling.Schedule.expression(expression).let(Schedule::wrap)
 
     public fun rate(duration: Duration): Schedule =
-        software.amazon.awscdk.services.applicationautoscaling.Schedule.rate(duration.let(Duration::unwrap)).let(Schedule::wrap)
+        software.amazon.awscdk.services.applicationautoscaling.Schedule.rate(duration.let(Duration.Companion::unwrap)).let(Schedule::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.applicationautoscaling.Schedule):
         Schedule = CdkObjectWrappers.wrap(cdkObject) as? Schedule ?: Wrapper(cdkObject)

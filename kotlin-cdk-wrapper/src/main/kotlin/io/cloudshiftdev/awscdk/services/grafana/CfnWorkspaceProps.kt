@@ -581,7 +581,7 @@ public interface CfnWorkspaceProps {
      * @param networkAccessControl The configuration settings for network access to your workspace.
      */
     override fun networkAccessControl(networkAccessControl: IResolvable) {
-      cdkBuilder.networkAccessControl(networkAccessControl.let(IResolvable::unwrap))
+      cdkBuilder.networkAccessControl(networkAccessControl.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -589,7 +589,7 @@ public interface CfnWorkspaceProps {
      */
     override
         fun networkAccessControl(networkAccessControl: CfnWorkspace.NetworkAccessControlProperty) {
-      cdkBuilder.networkAccessControl(networkAccessControl.let(CfnWorkspace.NetworkAccessControlProperty::unwrap))
+      cdkBuilder.networkAccessControl(networkAccessControl.let(CfnWorkspace.NetworkAccessControlProperty.Companion::unwrap))
     }
 
     /**
@@ -685,7 +685,7 @@ public interface CfnWorkspaceProps {
      * This option is only valid for workspaces that support Grafana version 9 or newer.
      */
     override fun pluginAdminEnabled(pluginAdminEnabled: IResolvable) {
-      cdkBuilder.pluginAdminEnabled(pluginAdminEnabled.let(IResolvable::unwrap))
+      cdkBuilder.pluginAdminEnabled(pluginAdminEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -703,7 +703,7 @@ public interface CfnWorkspaceProps {
      * to have the `Admin` and `Editor` roles in the workspace.
      */
     override fun samlConfiguration(samlConfiguration: IResolvable) {
-      cdkBuilder.samlConfiguration(samlConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.samlConfiguration(samlConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -712,7 +712,7 @@ public interface CfnWorkspaceProps {
      * to have the `Admin` and `Editor` roles in the workspace.
      */
     override fun samlConfiguration(samlConfiguration: CfnWorkspace.SamlConfigurationProperty) {
-      cdkBuilder.samlConfiguration(samlConfiguration.let(CfnWorkspace.SamlConfigurationProperty::unwrap))
+      cdkBuilder.samlConfiguration(samlConfiguration.let(CfnWorkspace.SamlConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -742,7 +742,7 @@ public interface CfnWorkspaceProps {
      * (ap-northeast-2).
      */
     override fun vpcConfiguration(vpcConfiguration: IResolvable) {
-      cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -753,7 +753,7 @@ public interface CfnWorkspaceProps {
      * (ap-northeast-2).
      */
     override fun vpcConfiguration(vpcConfiguration: CfnWorkspace.VpcConfigurationProperty) {
-      cdkBuilder.vpcConfiguration(vpcConfiguration.let(CfnWorkspace.VpcConfigurationProperty::unwrap))
+      cdkBuilder.vpcConfiguration(vpcConfiguration.let(CfnWorkspace.VpcConfigurationProperty.Companion::unwrap))
     }
 
     /**

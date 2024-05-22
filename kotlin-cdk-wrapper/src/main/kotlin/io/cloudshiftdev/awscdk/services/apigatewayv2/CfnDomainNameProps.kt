@@ -144,7 +144,7 @@ public interface CfnDomainNameProps {
      * @param domainNameConfigurations The domain name configurations.
      */
     override fun domainNameConfigurations(domainNameConfigurations: IResolvable) {
-      cdkBuilder.domainNameConfigurations(domainNameConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.domainNameConfigurations(domainNameConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -165,7 +165,7 @@ public interface CfnDomainNameProps {
      * domain name.
      */
     override fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable) {
-      cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(IResolvable::unwrap))
+      cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -174,7 +174,7 @@ public interface CfnDomainNameProps {
      */
     override
         fun mutualTlsAuthentication(mutualTlsAuthentication: CfnDomainName.MutualTlsAuthenticationProperty) {
-      cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(CfnDomainName.MutualTlsAuthenticationProperty::unwrap))
+      cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(CfnDomainName.MutualTlsAuthenticationProperty.Companion::unwrap))
     }
 
     /**

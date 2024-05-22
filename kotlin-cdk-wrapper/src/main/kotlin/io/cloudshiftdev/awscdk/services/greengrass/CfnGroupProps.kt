@@ -192,7 +192,7 @@ public interface CfnGroupProps {
      * resource and specify the ID of this group.
      */
     override fun initialVersion(initialVersion: IResolvable) {
-      cdkBuilder.initialVersion(initialVersion.let(IResolvable::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -208,7 +208,7 @@ public interface CfnGroupProps {
      * resource and specify the ID of this group.
      */
     override fun initialVersion(initialVersion: CfnGroup.GroupVersionProperty) {
-      cdkBuilder.initialVersion(initialVersion.let(CfnGroup.GroupVersionProperty::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(CfnGroup.GroupVersionProperty.Companion::unwrap))
     }
 
     /**

@@ -272,7 +272,7 @@ public interface CodeBuildOptions {
      * environments that apply.
      */
     override fun buildEnvironment(buildEnvironment: BuildEnvironment) {
-      cdkBuilder.buildEnvironment(buildEnvironment.let(BuildEnvironment::unwrap))
+      cdkBuilder.buildEnvironment(buildEnvironment.let(BuildEnvironment.Companion::unwrap))
     }
 
     /**
@@ -288,7 +288,7 @@ public interface CodeBuildOptions {
      * @param cache Caching strategy to use.
      */
     override fun cache(cache: Cache) {
-      cdkBuilder.cache(cache.let(Cache::unwrap))
+      cdkBuilder.cache(cache.let(Cache.Companion::unwrap))
     }
 
     /**
@@ -299,7 +299,7 @@ public interface CodeBuildOptions {
      * Requires a vpc to be set and privileged to be set to true.
      */
     override fun fileSystemLocations(fileSystemLocations: List<IFileSystemLocation>) {
-      cdkBuilder.fileSystemLocations(fileSystemLocations.map(IFileSystemLocation::unwrap))
+      cdkBuilder.fileSystemLocations(fileSystemLocations.map(IFileSystemLocation.Companion::unwrap))
     }
 
     /**
@@ -317,7 +317,7 @@ public interface CodeBuildOptions {
      * A CodeBuild project can create logs in Amazon CloudWatch Logs, an S3 bucket, or both.
      */
     override fun logging(logging: LoggingOptions) {
-      cdkBuilder.logging(logging.let(LoggingOptions::unwrap))
+      cdkBuilder.logging(logging.let(LoggingOptions.Companion::unwrap))
     }
 
     /**
@@ -335,14 +335,14 @@ public interface CodeBuildOptions {
      * on disk.
      */
     override fun partialBuildSpec(partialBuildSpec: BuildSpec) {
-      cdkBuilder.partialBuildSpec(partialBuildSpec.let(BuildSpec::unwrap))
+      cdkBuilder.partialBuildSpec(partialBuildSpec.let(BuildSpec.Companion::unwrap))
     }
 
     /**
      * @param rolePolicy Policy statements to add to role.
      */
     override fun rolePolicy(rolePolicy: List<PolicyStatement>) {
-      cdkBuilder.rolePolicy(rolePolicy.map(PolicyStatement::unwrap))
+      cdkBuilder.rolePolicy(rolePolicy.map(PolicyStatement.Companion::unwrap))
     }
 
     /**
@@ -357,7 +357,7 @@ public interface CodeBuildOptions {
      * Only used if 'vpc' is supplied.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -373,7 +373,7 @@ public interface CodeBuildOptions {
      * Only used if 'vpc' is supplied.
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -392,14 +392,14 @@ public interface CodeBuildOptions {
      * CodeBuild User Guide.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param vpc The VPC where to create the CodeBuild network interfaces in.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.pipelines.CodeBuildOptions = cdkBuilder.build()

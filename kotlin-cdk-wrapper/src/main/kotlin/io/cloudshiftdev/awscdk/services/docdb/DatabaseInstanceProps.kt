@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.InstanceType
+import io.cloudshiftdev.awscdk.services.rds.CaCertificate
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -22,6 +23,8 @@ import kotlin.Unit
  * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.docdb.*;
  * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * import io.cloudshiftdev.awscdk.services.rds.*;
+ * CaCertificate caCertificate;
  * DatabaseCluster databaseCluster;
  * InstanceType instanceType;
  * DatabaseInstanceProps databaseInstanceProps = DatabaseInstanceProps.builder()
@@ -30,6 +33,7 @@ import kotlin.Unit
  * // the properties below are optional
  * .autoMinorVersionUpgrade(false)
  * .availabilityZone("availabilityZone")
+ * .caCertificate(caCertificate)
  * .dbInstanceName("dbInstanceName")
  * .enablePerformanceInsights(false)
  * .preferredMaintenanceWindow("preferredMaintenanceWindow")
@@ -52,6 +56,18 @@ public interface DatabaseInstanceProps {
    * Default: - no preference
    */
   public fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+
+  /**
+   * The identifier of the CA certificate for this DB instance.
+   *
+   * Specifying or updating this property triggers a reboot.
+   *
+   * Default: - DocumentDB will choose a certificate authority
+   *
+   * [Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/ca_cert_rotation.html)
+   */
+  public fun caCertificate(): CaCertificate? =
+      unwrap(this).getCaCertificate()?.let(CaCertificate::wrap)
 
   /**
    * The DocumentDB database cluster the instance should launch into.
@@ -120,6 +136,12 @@ public interface DatabaseInstanceProps {
     public fun availabilityZone(availabilityZone: String)
 
     /**
+     * @param caCertificate The identifier of the CA certificate for this DB instance.
+     * Specifying or updating this property triggers a reboot.
+     */
+    public fun caCertificate(caCertificate: CaCertificate)
+
+    /**
      * @param cluster The DocumentDB database cluster the instance should launch into. 
      */
     public fun cluster(cluster: IDatabaseCluster)
@@ -178,10 +200,18 @@ public interface DatabaseInstanceProps {
     }
 
     /**
+     * @param caCertificate The identifier of the CA certificate for this DB instance.
+     * Specifying or updating this property triggers a reboot.
+     */
+    override fun caCertificate(caCertificate: CaCertificate) {
+      cdkBuilder.caCertificate(caCertificate.let(CaCertificate.Companion::unwrap))
+    }
+
+    /**
      * @param cluster The DocumentDB database cluster the instance should launch into. 
      */
     override fun cluster(cluster: IDatabaseCluster) {
-      cdkBuilder.cluster(cluster.let(IDatabaseCluster::unwrap))
+      cdkBuilder.cluster(cluster.let(IDatabaseCluster.Companion::unwrap))
     }
 
     /**
@@ -205,7 +235,7 @@ public interface DatabaseInstanceProps {
      * @param instanceType The name of the compute and memory capacity classes. 
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -223,7 +253,7 @@ public interface DatabaseInstanceProps {
      * stack or replaced during an update.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.docdb.DatabaseInstanceProps =
@@ -247,6 +277,18 @@ public interface DatabaseInstanceProps {
      * Default: - no preference
      */
     override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+
+    /**
+     * The identifier of the CA certificate for this DB instance.
+     *
+     * Specifying or updating this property triggers a reboot.
+     *
+     * Default: - DocumentDB will choose a certificate authority
+     *
+     * [Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/ca_cert_rotation.html)
+     */
+    override fun caCertificate(): CaCertificate? =
+        unwrap(this).getCaCertificate()?.let(CaCertificate::wrap)
 
     /**
      * The DocumentDB database cluster the instance should launch into.

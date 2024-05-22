@@ -95,7 +95,7 @@ public interface CfnInputSecurityGroupProps {
      * as "allowed" addresses.
      */
     override fun whitelistRules(whitelistRules: IResolvable) {
-      cdkBuilder.whitelistRules(whitelistRules.let(IResolvable::unwrap))
+      cdkBuilder.whitelistRules(whitelistRules.let(IResolvable.Companion::unwrap))
     }
 
     /**

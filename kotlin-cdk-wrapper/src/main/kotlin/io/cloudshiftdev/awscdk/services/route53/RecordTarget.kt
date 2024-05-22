@@ -37,7 +37,7 @@ public open class RecordTarget(
 
   public companion object {
     public fun fromAlias(aliasTarget: IAliasRecordTarget): RecordTarget =
-        software.amazon.awscdk.services.route53.RecordTarget.fromAlias(aliasTarget.let(IAliasRecordTarget::unwrap)).let(RecordTarget::wrap)
+        software.amazon.awscdk.services.route53.RecordTarget.fromAlias(aliasTarget.let(IAliasRecordTarget.Companion::unwrap)).let(RecordTarget::wrap)
 
     public fun fromIpAddresses(ipAddresses: String): RecordTarget =
         software.amazon.awscdk.services.route53.RecordTarget.fromIpAddresses(ipAddresses).let(RecordTarget::wrap)

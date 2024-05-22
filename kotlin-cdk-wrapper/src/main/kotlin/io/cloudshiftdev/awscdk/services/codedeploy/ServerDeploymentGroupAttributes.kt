@@ -79,14 +79,14 @@ public interface ServerDeploymentGroupAttributes {
      * Deployment Group belongs to. 
      */
     override fun application(application: IServerApplication) {
-      cdkBuilder.application(application.let(IServerApplication::unwrap))
+      cdkBuilder.application(application.let(IServerApplication.Companion::unwrap))
     }
 
     /**
      * @param deploymentConfig The Deployment Configuration this Deployment Group uses.
      */
     override fun deploymentConfig(deploymentConfig: IServerDeploymentConfig) {
-      cdkBuilder.deploymentConfig(deploymentConfig.let(IServerDeploymentConfig::unwrap))
+      cdkBuilder.deploymentConfig(deploymentConfig.let(IServerDeploymentConfig.Companion::unwrap))
     }
 
     /**

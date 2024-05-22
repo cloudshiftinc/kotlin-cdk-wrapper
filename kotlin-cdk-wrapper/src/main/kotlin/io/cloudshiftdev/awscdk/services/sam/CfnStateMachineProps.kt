@@ -282,7 +282,7 @@ public interface CfnStateMachineProps {
      * @param definitionSubstitutions the value to be set.
      */
     override fun definitionSubstitutions(definitionSubstitutions: IResolvable) {
-      cdkBuilder.definitionSubstitutions(definitionSubstitutions.let(IResolvable::unwrap))
+      cdkBuilder.definitionSubstitutions(definitionSubstitutions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -303,14 +303,14 @@ public interface CfnStateMachineProps {
      * @param definitionUri the value to be set.
      */
     override fun definitionUri(definitionUri: IResolvable) {
-      cdkBuilder.definitionUri(definitionUri.let(IResolvable::unwrap))
+      cdkBuilder.definitionUri(definitionUri.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param definitionUri the value to be set.
      */
     override fun definitionUri(definitionUri: CfnStateMachine.S3LocationProperty) {
-      cdkBuilder.definitionUri(definitionUri.let(CfnStateMachine.S3LocationProperty::unwrap))
+      cdkBuilder.definitionUri(definitionUri.let(CfnStateMachine.S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -326,7 +326,7 @@ public interface CfnStateMachineProps {
      * @param events the value to be set.
      */
     override fun events(events: IResolvable) {
-      cdkBuilder.events(events.let(IResolvable::unwrap))
+      cdkBuilder.events(events.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -340,14 +340,14 @@ public interface CfnStateMachineProps {
      * @param logging the value to be set.
      */
     override fun logging(logging: IResolvable) {
-      cdkBuilder.logging(logging.let(IResolvable::unwrap))
+      cdkBuilder.logging(logging.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param logging the value to be set.
      */
     override fun logging(logging: CfnStateMachine.LoggingConfigurationProperty) {
-      cdkBuilder.logging(logging.let(CfnStateMachine.LoggingConfigurationProperty::unwrap))
+      cdkBuilder.logging(logging.let(CfnStateMachine.LoggingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -383,14 +383,14 @@ public interface CfnStateMachineProps {
      * @param policies the value to be set.
      */
     override fun policies(policies: IResolvable) {
-      cdkBuilder.policies(policies.let(IResolvable::unwrap))
+      cdkBuilder.policies(policies.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param policies the value to be set.
      */
     override fun policies(policies: CfnStateMachine.IAMPolicyDocumentProperty) {
-      cdkBuilder.policies(policies.let(CfnStateMachine.IAMPolicyDocumentProperty::unwrap))
+      cdkBuilder.policies(policies.let(CfnStateMachine.IAMPolicyDocumentProperty.Companion::unwrap))
     }
 
     /**
@@ -431,14 +431,14 @@ public interface CfnStateMachineProps {
      * @param tracing the value to be set.
      */
     override fun tracing(tracing: IResolvable) {
-      cdkBuilder.tracing(tracing.let(IResolvable::unwrap))
+      cdkBuilder.tracing(tracing.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param tracing the value to be set.
      */
     override fun tracing(tracing: CfnStateMachine.TracingConfigurationProperty) {
-      cdkBuilder.tracing(tracing.let(CfnStateMachine.TracingConfigurationProperty::unwrap))
+      cdkBuilder.tracing(tracing.let(CfnStateMachine.TracingConfigurationProperty.Companion::unwrap))
     }
 
     /**

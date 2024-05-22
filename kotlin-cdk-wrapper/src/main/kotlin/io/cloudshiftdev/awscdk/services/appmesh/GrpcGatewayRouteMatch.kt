@@ -120,7 +120,7 @@ public interface GrpcGatewayRouteMatch {
      * @param hostname Create host name based gRPC gateway route match.
      */
     override fun hostname(hostname: GatewayRouteHostnameMatch) {
-      cdkBuilder.hostname(hostname.let(GatewayRouteHostnameMatch::unwrap))
+      cdkBuilder.hostname(hostname.let(GatewayRouteHostnameMatch.Companion::unwrap))
     }
 
     /**
@@ -128,7 +128,7 @@ public interface GrpcGatewayRouteMatch {
      * All specified metadata must match for the route to match.
      */
     override fun metadata(metadata: List<HeaderMatch>) {
-      cdkBuilder.metadata(metadata.map(HeaderMatch::unwrap))
+      cdkBuilder.metadata(metadata.map(HeaderMatch.Companion::unwrap))
     }
 
     /**

@@ -134,7 +134,7 @@ public interface StackSetsConstraintOptions : CommonConstraintOptions {
      * @param adminRole IAM role used to administer the StackSets configuration. 
      */
     override fun adminRole(adminRole: IRole) {
-      cdkBuilder.adminRole(adminRole.let(IRole::unwrap))
+      cdkBuilder.adminRole(adminRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -164,7 +164,7 @@ public interface StackSetsConstraintOptions : CommonConstraintOptions {
      * Configures the language for error messages from service catalog.
      */
     override fun messageLanguage(messageLanguage: MessageLanguage) {
-      cdkBuilder.messageLanguage(messageLanguage.let(MessageLanguage::unwrap))
+      cdkBuilder.messageLanguage(messageLanguage.let(MessageLanguage.Companion::unwrap))
     }
 
     /**

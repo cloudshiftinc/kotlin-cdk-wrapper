@@ -130,14 +130,14 @@ public interface CfnInputProps {
      * @param inputDefinition The definition of the input. 
      */
     override fun inputDefinition(inputDefinition: IResolvable) {
-      cdkBuilder.inputDefinition(inputDefinition.let(IResolvable::unwrap))
+      cdkBuilder.inputDefinition(inputDefinition.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param inputDefinition The definition of the input. 
      */
     override fun inputDefinition(inputDefinition: CfnInput.InputDefinitionProperty) {
-      cdkBuilder.inputDefinition(inputDefinition.let(CfnInput.InputDefinitionProperty::unwrap))
+      cdkBuilder.inputDefinition(inputDefinition.let(CfnInput.InputDefinitionProperty.Companion::unwrap))
     }
 
     /**
@@ -170,7 +170,7 @@ public interface CfnInputProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

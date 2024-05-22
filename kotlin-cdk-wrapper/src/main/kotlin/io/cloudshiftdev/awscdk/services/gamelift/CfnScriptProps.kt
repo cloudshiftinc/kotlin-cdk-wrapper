@@ -186,7 +186,7 @@ public interface CfnScriptProps {
      * you can use the `ObjectVersion` parameter to specify an earlier version.
      */
     override fun storageLocation(storageLocation: IResolvable) {
-      cdkBuilder.storageLocation(storageLocation.let(IResolvable::unwrap))
+      cdkBuilder.storageLocation(storageLocation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -199,7 +199,7 @@ public interface CfnScriptProps {
      * you can use the `ObjectVersion` parameter to specify an earlier version.
      */
     override fun storageLocation(storageLocation: CfnScript.S3LocationProperty) {
-      cdkBuilder.storageLocation(storageLocation.let(CfnScript.S3LocationProperty::unwrap))
+      cdkBuilder.storageLocation(storageLocation.let(CfnScript.S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -226,7 +226,7 @@ public interface CfnScriptProps {
      * stated. See the AWS General Reference for actual tagging limits.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

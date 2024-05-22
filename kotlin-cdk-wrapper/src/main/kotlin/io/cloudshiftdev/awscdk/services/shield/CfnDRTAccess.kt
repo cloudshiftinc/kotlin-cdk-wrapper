@@ -63,8 +63,8 @@ public open class CfnDRTAccess(
     id: String,
     props: CfnDRTAccessProps,
   ) :
-      this(software.amazon.awscdk.services.shield.CfnDRTAccess(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDRTAccessProps::unwrap))
+      this(software.amazon.awscdk.services.shield.CfnDRTAccess(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDRTAccessProps.Companion::unwrap))
   )
 
   public constructor(
@@ -85,7 +85,7 @@ public open class CfnDRTAccess(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

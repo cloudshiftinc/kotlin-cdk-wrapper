@@ -90,7 +90,7 @@ public interface CfnDeviceProps {
      * `false` ). 
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.iot1click.CfnDeviceProps =

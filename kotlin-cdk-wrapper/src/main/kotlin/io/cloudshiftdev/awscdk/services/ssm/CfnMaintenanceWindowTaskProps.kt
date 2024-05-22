@@ -504,7 +504,7 @@ public interface CfnMaintenanceWindowTaskProps {
      * .
      */
     override fun loggingInfo(loggingInfo: IResolvable) {
-      cdkBuilder.loggingInfo(loggingInfo.let(IResolvable::unwrap))
+      cdkBuilder.loggingInfo(loggingInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -519,7 +519,7 @@ public interface CfnMaintenanceWindowTaskProps {
      * .
      */
     override fun loggingInfo(loggingInfo: CfnMaintenanceWindowTask.LoggingInfoProperty) {
-      cdkBuilder.loggingInfo(loggingInfo.let(CfnMaintenanceWindowTask.LoggingInfoProperty::unwrap))
+      cdkBuilder.loggingInfo(loggingInfo.let(CfnMaintenanceWindowTask.LoggingInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -603,7 +603,7 @@ public interface CfnMaintenanceWindowTaskProps {
      * *window-target-id-2*` .
      */
     override fun targets(targets: IResolvable) {
-      cdkBuilder.targets(targets.let(IResolvable::unwrap))
+      cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -651,7 +651,7 @@ public interface CfnMaintenanceWindowTaskProps {
      * and `NotificationConfig` are removed.
      */
     override fun taskInvocationParameters(taskInvocationParameters: IResolvable) {
-      cdkBuilder.taskInvocationParameters(taskInvocationParameters.let(IResolvable::unwrap))
+      cdkBuilder.taskInvocationParameters(taskInvocationParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -669,7 +669,7 @@ public interface CfnMaintenanceWindowTaskProps {
      */
     override
         fun taskInvocationParameters(taskInvocationParameters: CfnMaintenanceWindowTask.TaskInvocationParametersProperty) {
-      cdkBuilder.taskInvocationParameters(taskInvocationParameters.let(CfnMaintenanceWindowTask.TaskInvocationParametersProperty::unwrap))
+      cdkBuilder.taskInvocationParameters(taskInvocationParameters.let(CfnMaintenanceWindowTask.TaskInvocationParametersProperty.Companion::unwrap))
     }
 
     /**

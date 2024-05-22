@@ -81,7 +81,8 @@ public interface IReceiptRuleSet : IResource {
      * @param options
      */
     override fun addRule(id: String, options: ReceiptRuleOptions): ReceiptRule =
-        unwrap(this).addRule(id, options.let(ReceiptRuleOptions::unwrap)).let(ReceiptRule::wrap)
+        unwrap(this).addRule(id,
+        options.let(ReceiptRuleOptions.Companion::unwrap)).let(ReceiptRule::wrap)
 
     /**
      * Adds a new receipt rule in this rule set.
@@ -111,7 +112,7 @@ public interface IReceiptRuleSet : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**

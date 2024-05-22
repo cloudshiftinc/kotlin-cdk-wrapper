@@ -29,7 +29,7 @@ public interface ILoadBalancerTarget : IConnectable {
      * target to. 
      */
     override fun attachToClassicLB(loadBalancer: LoadBalancer) {
-      unwrap(this).attachToClassicLB(loadBalancer.let(LoadBalancer::unwrap))
+      unwrap(this).attachToClassicLB(loadBalancer.let(LoadBalancer.Companion::unwrap))
     }
 
     /**

@@ -76,8 +76,8 @@ public open class CfnCollaboration(
     id: String,
     props: CfnCollaborationProps,
   ) :
-      this(software.amazon.awscdk.services.cleanrooms.CfnCollaboration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCollaborationProps::unwrap))
+      this(software.amazon.awscdk.services.cleanrooms.CfnCollaboration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCollaborationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -151,7 +151,7 @@ public open class CfnCollaboration(
    * collaboration creator.
    */
   public open fun creatorPaymentConfiguration(`value`: IResolvable) {
-    unwrap(this).setCreatorPaymentConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCreatorPaymentConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -159,7 +159,7 @@ public open class CfnCollaboration(
    * collaboration creator.
    */
   public open fun creatorPaymentConfiguration(`value`: PaymentConfigurationProperty) {
-    unwrap(this).setCreatorPaymentConfiguration(`value`.let(PaymentConfigurationProperty::unwrap))
+    unwrap(this).setCreatorPaymentConfiguration(`value`.let(PaymentConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -181,14 +181,14 @@ public open class CfnCollaboration(
    * The settings for client-side encryption for cryptographic computing.
    */
   public open fun dataEncryptionMetadata(`value`: IResolvable) {
-    unwrap(this).setDataEncryptionMetadata(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataEncryptionMetadata(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The settings for client-side encryption for cryptographic computing.
    */
   public open fun dataEncryptionMetadata(`value`: DataEncryptionMetadataProperty) {
-    unwrap(this).setDataEncryptionMetadata(`value`.let(DataEncryptionMetadataProperty::unwrap))
+    unwrap(this).setDataEncryptionMetadata(`value`.let(DataEncryptionMetadataProperty.Companion::unwrap))
   }
 
   /**
@@ -218,7 +218,7 @@ public open class CfnCollaboration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -230,7 +230,7 @@ public open class CfnCollaboration(
    * A list of initial members, not including the creator.
    */
   public open fun members(`value`: IResolvable) {
-    unwrap(this).setMembers(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMembers(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -278,7 +278,7 @@ public open class CfnCollaboration(
    * An optional label that you can assign to a resource when you create it.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -514,7 +514,7 @@ public open class CfnCollaboration(
      * responsibilities set by the collaboration creator. 
      */
     override fun creatorPaymentConfiguration(creatorPaymentConfiguration: IResolvable) {
-      cdkBuilder.creatorPaymentConfiguration(creatorPaymentConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.creatorPaymentConfiguration(creatorPaymentConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -527,7 +527,7 @@ public open class CfnCollaboration(
      */
     override
         fun creatorPaymentConfiguration(creatorPaymentConfiguration: PaymentConfigurationProperty) {
-      cdkBuilder.creatorPaymentConfiguration(creatorPaymentConfiguration.let(PaymentConfigurationProperty::unwrap))
+      cdkBuilder.creatorPaymentConfiguration(creatorPaymentConfiguration.let(PaymentConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -553,7 +553,7 @@ public open class CfnCollaboration(
      * computing. 
      */
     override fun dataEncryptionMetadata(dataEncryptionMetadata: IResolvable) {
-      cdkBuilder.dataEncryptionMetadata(dataEncryptionMetadata.let(IResolvable::unwrap))
+      cdkBuilder.dataEncryptionMetadata(dataEncryptionMetadata.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -564,7 +564,7 @@ public open class CfnCollaboration(
      * computing. 
      */
     override fun dataEncryptionMetadata(dataEncryptionMetadata: DataEncryptionMetadataProperty) {
-      cdkBuilder.dataEncryptionMetadata(dataEncryptionMetadata.let(DataEncryptionMetadataProperty::unwrap))
+      cdkBuilder.dataEncryptionMetadata(dataEncryptionMetadata.let(DataEncryptionMetadataProperty.Companion::unwrap))
     }
 
     /**
@@ -599,7 +599,7 @@ public open class CfnCollaboration(
      * @param members A list of initial members, not including the creator. 
      */
     override fun members(members: IResolvable) {
-      cdkBuilder.members(members.let(IResolvable::unwrap))
+      cdkBuilder.members(members.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -658,7 +658,7 @@ public open class CfnCollaboration(
      * @param tags An optional label that you can assign to a resource when you create it. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -829,7 +829,7 @@ public open class CfnCollaboration(
        * `TRUE` ) or are to cryptographically process every column ( `FALSE` ). 
        */
       override fun allowCleartext(allowCleartext: IResolvable) {
-        cdkBuilder.allowCleartext(allowCleartext.let(IResolvable::unwrap))
+        cdkBuilder.allowCleartext(allowCleartext.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -845,7 +845,7 @@ public open class CfnCollaboration(
        * ( `TRUE` ) or are to contain only non-repeated values ( `FALSE` ). 
        */
       override fun allowDuplicates(allowDuplicates: IResolvable) {
-        cdkBuilder.allowDuplicates(allowDuplicates.let(IResolvable::unwrap))
+        cdkBuilder.allowDuplicates(allowDuplicates.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -865,7 +865,7 @@ public open class CfnCollaboration(
        */
       override
           fun allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames: IResolvable) {
-        cdkBuilder.allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames.let(IResolvable::unwrap))
+        cdkBuilder.allowJoinsOnColumnsWithDifferentNames(allowJoinsOnColumnsWithDifferentNames.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -881,7 +881,7 @@ public open class CfnCollaboration(
        * tables ( `TRUE` ) or cryptographically processed ( `FALSE` ). 
        */
       override fun preserveNulls(preserveNulls: IResolvable) {
-        cdkBuilder.preserveNulls(preserveNulls.let(IResolvable::unwrap))
+        cdkBuilder.preserveNulls(preserveNulls.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1104,7 +1104,7 @@ public open class CfnCollaboration(
        * costs, then the member who can query is the default payer.
        */
       override fun paymentConfiguration(paymentConfiguration: IResolvable) {
-        cdkBuilder.paymentConfiguration(paymentConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.paymentConfiguration(paymentConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1114,7 +1114,7 @@ public open class CfnCollaboration(
        * costs, then the member who can query is the default payer.
        */
       override fun paymentConfiguration(paymentConfiguration: PaymentConfigurationProperty) {
-        cdkBuilder.paymentConfiguration(paymentConfiguration.let(PaymentConfigurationProperty::unwrap))
+        cdkBuilder.paymentConfiguration(paymentConfiguration.let(PaymentConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1257,7 +1257,7 @@ public open class CfnCollaboration(
        * collaboration creator for query compute costs. 
        */
       override fun queryCompute(queryCompute: IResolvable) {
-        cdkBuilder.queryCompute(queryCompute.let(IResolvable::unwrap))
+        cdkBuilder.queryCompute(queryCompute.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1265,7 +1265,7 @@ public open class CfnCollaboration(
        * collaboration creator for query compute costs. 
        */
       override fun queryCompute(queryCompute: QueryComputePaymentConfigProperty) {
-        cdkBuilder.queryCompute(queryCompute.let(QueryComputePaymentConfigProperty::unwrap))
+        cdkBuilder.queryCompute(queryCompute.let(QueryComputePaymentConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1416,7 +1416,7 @@ public open class CfnCollaboration(
        * collaboration creator sets a `FALSE` value for the member who can query.
        */
       override fun isResponsible(isResponsible: IResolvable) {
-        cdkBuilder.isResponsible(isResponsible.let(IResolvable::unwrap))
+        cdkBuilder.isResponsible(isResponsible.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

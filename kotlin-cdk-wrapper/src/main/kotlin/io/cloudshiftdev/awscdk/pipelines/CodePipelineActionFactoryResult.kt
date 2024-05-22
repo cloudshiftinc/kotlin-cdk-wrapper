@@ -68,7 +68,7 @@ public interface CodePipelineActionFactoryResult {
      * @param project If a CodeBuild project got created, the project.
      */
     override fun project(project: IProject) {
-      cdkBuilder.project(project.let(IProject::unwrap))
+      cdkBuilder.project(project.let(IProject.Companion::unwrap))
     }
 
     /**

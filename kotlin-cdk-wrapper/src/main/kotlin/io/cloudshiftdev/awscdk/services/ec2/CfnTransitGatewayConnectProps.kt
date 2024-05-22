@@ -115,7 +115,7 @@ public interface CfnTransitGatewayConnectProps {
      * * protocol (gre)
      */
     override fun options(options: IResolvable) {
-      cdkBuilder.options(options.let(IResolvable::unwrap))
+      cdkBuilder.options(options.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -123,7 +123,7 @@ public interface CfnTransitGatewayConnectProps {
      * * protocol (gre)
      */
     override fun options(options: CfnTransitGatewayConnect.TransitGatewayConnectOptionsProperty) {
-      cdkBuilder.options(options.let(CfnTransitGatewayConnect.TransitGatewayConnectOptionsProperty::unwrap))
+      cdkBuilder.options(options.let(CfnTransitGatewayConnect.TransitGatewayConnectOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -140,7 +140,7 @@ public interface CfnTransitGatewayConnectProps {
      * @param tags The tags for the attachment.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

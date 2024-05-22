@@ -45,6 +45,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .s3Configuration(S3DataSourceConfigurationProperty.builder()
  * .bucketArn("bucketArn")
  * // the properties below are optional
+ * .bucketOwnerAccountId("bucketOwnerAccountId")
  * .inclusionPrefixes(List.of("inclusionPrefixes"))
  * .build())
  * .type("type")
@@ -52,6 +53,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .knowledgeBaseId("knowledgeBaseId")
  * .name("name")
  * // the properties below are optional
+ * .dataDeletionPolicy("dataDeletionPolicy")
  * .description("description")
  * .serverSideEncryptionConfiguration(ServerSideEncryptionConfigurationProperty.builder()
  * .kmsKeyArn("kmsKeyArn")
@@ -79,8 +81,8 @@ public open class CfnDataSource(
     id: String,
     props: CfnDataSourceProps,
   ) :
-      this(software.amazon.awscdk.services.bedrock.CfnDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDataSourceProps::unwrap))
+      this(software.amazon.awscdk.services.bedrock.CfnDataSource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDataSourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -110,9 +112,26 @@ public open class CfnDataSource(
   public open fun attrDataSourceStatus(): String = unwrap(this).getAttrDataSourceStatus()
 
   /**
+   * The detailed reasons on the failure to delete a data source.
+   */
+  public open fun attrFailureReasons(): List<String> = unwrap(this).getAttrFailureReasons()
+
+  /**
    * The time at which the data source was last updated.
    */
   public open fun attrUpdatedAt(): String = unwrap(this).getAttrUpdatedAt()
+
+  /**
+   * The data deletion policy for a data source.
+   */
+  public open fun dataDeletionPolicy(): String? = unwrap(this).getDataDeletionPolicy()
+
+  /**
+   * The data deletion policy for a data source.
+   */
+  public open fun dataDeletionPolicy(`value`: String) {
+    unwrap(this).setDataDeletionPolicy(`value`)
+  }
 
   /**
    * Contains details about how the data source is stored.
@@ -123,14 +142,14 @@ public open class CfnDataSource(
    * Contains details about how the data source is stored.
    */
   public open fun dataSourceConfiguration(`value`: IResolvable) {
-    unwrap(this).setDataSourceConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataSourceConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Contains details about how the data source is stored.
    */
   public open fun dataSourceConfiguration(`value`: DataSourceConfigurationProperty) {
-    unwrap(this).setDataSourceConfiguration(`value`.let(DataSourceConfigurationProperty::unwrap))
+    unwrap(this).setDataSourceConfiguration(`value`.let(DataSourceConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -160,7 +179,7 @@ public open class CfnDataSource(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -197,7 +216,7 @@ public open class CfnDataSource(
    * Contains details about the configuration of the server-side encryption.
    */
   public open fun serverSideEncryptionConfiguration(`value`: IResolvable) {
-    unwrap(this).setServerSideEncryptionConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setServerSideEncryptionConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -205,7 +224,7 @@ public open class CfnDataSource(
    */
   public open
       fun serverSideEncryptionConfiguration(`value`: ServerSideEncryptionConfigurationProperty) {
-    unwrap(this).setServerSideEncryptionConfiguration(`value`.let(ServerSideEncryptionConfigurationProperty::unwrap))
+    unwrap(this).setServerSideEncryptionConfiguration(`value`.let(ServerSideEncryptionConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -227,14 +246,14 @@ public open class CfnDataSource(
    * Contains details about how to ingest the documents in the data source.
    */
   public open fun vectorIngestionConfiguration(`value`: IResolvable) {
-    unwrap(this).setVectorIngestionConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVectorIngestionConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Contains details about how to ingest the documents in the data source.
    */
   public open fun vectorIngestionConfiguration(`value`: VectorIngestionConfigurationProperty) {
-    unwrap(this).setVectorIngestionConfiguration(`value`.let(VectorIngestionConfigurationProperty::unwrap))
+    unwrap(this).setVectorIngestionConfiguration(`value`.let(VectorIngestionConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -251,6 +270,14 @@ public open class CfnDataSource(
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The data deletion policy for a data source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-datasource.html#cfn-bedrock-datasource-datadeletionpolicy)
+     * @param dataDeletionPolicy The data deletion policy for a data source. 
+     */
+    public fun dataDeletionPolicy(dataDeletionPolicy: String)
+
     /**
      * Contains details about how the data source is stored.
      *
@@ -374,13 +401,23 @@ public open class CfnDataSource(
         software.amazon.awscdk.services.bedrock.CfnDataSource.Builder.create(scope, id)
 
     /**
+     * The data deletion policy for a data source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-datasource.html#cfn-bedrock-datasource-datadeletionpolicy)
+     * @param dataDeletionPolicy The data deletion policy for a data source. 
+     */
+    override fun dataDeletionPolicy(dataDeletionPolicy: String) {
+      cdkBuilder.dataDeletionPolicy(dataDeletionPolicy)
+    }
+
+    /**
      * Contains details about how the data source is stored.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-datasource.html#cfn-bedrock-datasource-datasourceconfiguration)
      * @param dataSourceConfiguration Contains details about how the data source is stored. 
      */
     override fun dataSourceConfiguration(dataSourceConfiguration: IResolvable) {
-      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -390,7 +427,7 @@ public open class CfnDataSource(
      * @param dataSourceConfiguration Contains details about how the data source is stored. 
      */
     override fun dataSourceConfiguration(dataSourceConfiguration: DataSourceConfigurationProperty) {
-      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(DataSourceConfigurationProperty::unwrap))
+      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(DataSourceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -444,7 +481,7 @@ public open class CfnDataSource(
      * server-side encryption. 
      */
     override fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
-      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -456,7 +493,7 @@ public open class CfnDataSource(
      */
     override
         fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty) {
-      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(ServerSideEncryptionConfigurationProperty::unwrap))
+      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(ServerSideEncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -481,7 +518,7 @@ public open class CfnDataSource(
      * data source. 
      */
     override fun vectorIngestionConfiguration(vectorIngestionConfiguration: IResolvable) {
-      cdkBuilder.vectorIngestionConfiguration(vectorIngestionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.vectorIngestionConfiguration(vectorIngestionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -493,7 +530,7 @@ public open class CfnDataSource(
      */
     override
         fun vectorIngestionConfiguration(vectorIngestionConfiguration: VectorIngestionConfigurationProperty) {
-      cdkBuilder.vectorIngestionConfiguration(vectorIngestionConfiguration.let(VectorIngestionConfigurationProperty::unwrap))
+      cdkBuilder.vectorIngestionConfiguration(vectorIngestionConfiguration.let(VectorIngestionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -660,7 +697,7 @@ public open class CfnDataSource(
        * If you set the `chunkingStrategy` as `NONE` , exclude this field.
        */
       override fun fixedSizeChunkingConfiguration(fixedSizeChunkingConfiguration: IResolvable) {
-        cdkBuilder.fixedSizeChunkingConfiguration(fixedSizeChunkingConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.fixedSizeChunkingConfiguration(fixedSizeChunkingConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -670,7 +707,7 @@ public open class CfnDataSource(
        */
       override
           fun fixedSizeChunkingConfiguration(fixedSizeChunkingConfiguration: FixedSizeChunkingConfigurationProperty) {
-        cdkBuilder.fixedSizeChunkingConfiguration(fixedSizeChunkingConfiguration.let(FixedSizeChunkingConfigurationProperty::unwrap))
+        cdkBuilder.fixedSizeChunkingConfiguration(fixedSizeChunkingConfiguration.let(FixedSizeChunkingConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -753,6 +790,7 @@ public open class CfnDataSource(
    * .s3Configuration(S3DataSourceConfigurationProperty.builder()
    * .bucketArn("bucketArn")
    * // the properties below are optional
+   * .bucketOwnerAccountId("bucketOwnerAccountId")
    * .inclusionPrefixes(List.of("inclusionPrefixes"))
    * .build())
    * .type("type")
@@ -819,7 +857,7 @@ public open class CfnDataSource(
        * the data source. 
        */
       override fun s3Configuration(s3Configuration: IResolvable) {
-        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -827,7 +865,7 @@ public open class CfnDataSource(
        * the data source. 
        */
       override fun s3Configuration(s3Configuration: S3DataSourceConfigurationProperty) {
-        cdkBuilder.s3Configuration(s3Configuration.let(S3DataSourceConfigurationProperty::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(S3DataSourceConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1016,6 +1054,7 @@ public open class CfnDataSource(
    * S3DataSourceConfigurationProperty.builder()
    * .bucketArn("bucketArn")
    * // the properties below are optional
+   * .bucketOwnerAccountId("bucketOwnerAccountId")
    * .inclusionPrefixes(List.of("inclusionPrefixes"))
    * .build();
    * ```
@@ -1029,6 +1068,13 @@ public open class CfnDataSource(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-s3datasourceconfiguration.html#cfn-bedrock-datasource-s3datasourceconfiguration-bucketarn)
      */
     public fun bucketArn(): String
+
+    /**
+     * The bucket account owner ID for the S3 bucket.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-s3datasourceconfiguration.html#cfn-bedrock-datasource-s3datasourceconfiguration-bucketowneraccountid)
+     */
+    public fun bucketOwnerAccountId(): String? = unwrap(this).getBucketOwnerAccountId()
 
     /**
      * A list of S3 prefixes that define the object containing the data sources.
@@ -1051,6 +1097,11 @@ public open class CfnDataSource(
        * source. 
        */
       public fun bucketArn(bucketArn: String)
+
+      /**
+       * @param bucketOwnerAccountId The bucket account owner ID for the S3 bucket.
+       */
+      public fun bucketOwnerAccountId(bucketOwnerAccountId: String)
 
       /**
        * @param inclusionPrefixes A list of S3 prefixes that define the object containing the data
@@ -1081,6 +1132,13 @@ public open class CfnDataSource(
        */
       override fun bucketArn(bucketArn: String) {
         cdkBuilder.bucketArn(bucketArn)
+      }
+
+      /**
+       * @param bucketOwnerAccountId The bucket account owner ID for the S3 bucket.
+       */
+      override fun bucketOwnerAccountId(bucketOwnerAccountId: String) {
+        cdkBuilder.bucketOwnerAccountId(bucketOwnerAccountId)
       }
 
       /**
@@ -1116,6 +1174,13 @@ public open class CfnDataSource(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-s3datasourceconfiguration.html#cfn-bedrock-datasource-s3datasourceconfiguration-bucketarn)
        */
       override fun bucketArn(): String = unwrap(this).getBucketArn()
+
+      /**
+       * The bucket account owner ID for the S3 bucket.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-datasource-s3datasourceconfiguration.html#cfn-bedrock-datasource-s3datasourceconfiguration-bucketowneraccountid)
+       */
+      override fun bucketOwnerAccountId(): String? = unwrap(this).getBucketOwnerAccountId()
 
       /**
        * A list of S3 prefixes that define the object containing the data sources.
@@ -1311,7 +1376,7 @@ public open class CfnDataSource(
        * that it belongs to is queried.
        */
       override fun chunkingConfiguration(chunkingConfiguration: IResolvable) {
-        cdkBuilder.chunkingConfiguration(chunkingConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.chunkingConfiguration(chunkingConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1320,7 +1385,7 @@ public open class CfnDataSource(
        * that it belongs to is queried.
        */
       override fun chunkingConfiguration(chunkingConfiguration: ChunkingConfigurationProperty) {
-        cdkBuilder.chunkingConfiguration(chunkingConfiguration.let(ChunkingConfigurationProperty::unwrap))
+        cdkBuilder.chunkingConfiguration(chunkingConfiguration.let(ChunkingConfigurationProperty.Companion::unwrap))
       }
 
       /**

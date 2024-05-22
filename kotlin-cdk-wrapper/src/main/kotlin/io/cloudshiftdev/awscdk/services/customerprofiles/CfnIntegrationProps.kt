@@ -236,7 +236,7 @@ public interface CfnIntegrationProps {
      * from the source.
      */
     override fun flowDefinition(flowDefinition: IResolvable) {
-      cdkBuilder.flowDefinition(flowDefinition.let(IResolvable::unwrap))
+      cdkBuilder.flowDefinition(flowDefinition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -244,7 +244,7 @@ public interface CfnIntegrationProps {
      * from the source.
      */
     override fun flowDefinition(flowDefinition: CfnIntegration.FlowDefinitionProperty) {
-      cdkBuilder.flowDefinition(flowDefinition.let(CfnIntegration.FlowDefinitionProperty::unwrap))
+      cdkBuilder.flowDefinition(flowDefinition.let(CfnIntegration.FlowDefinitionProperty.Companion::unwrap))
     }
 
     /**
@@ -268,7 +268,7 @@ public interface CfnIntegrationProps {
      * @param objectTypeNames The object type mapping.
      */
     override fun objectTypeNames(objectTypeNames: IResolvable) {
-      cdkBuilder.objectTypeNames(objectTypeNames.let(IResolvable::unwrap))
+      cdkBuilder.objectTypeNames(objectTypeNames.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -288,7 +288,7 @@ public interface CfnIntegrationProps {
      * @param tags The tags used to organize, track, or control access for this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -576,7 +576,7 @@ public interface CfnLoadBalancerProps {
      * load balancer.
      */
     override fun accessLoggingPolicy(accessLoggingPolicy: IResolvable) {
-      cdkBuilder.accessLoggingPolicy(accessLoggingPolicy.let(IResolvable::unwrap))
+      cdkBuilder.accessLoggingPolicy(accessLoggingPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -585,7 +585,7 @@ public interface CfnLoadBalancerProps {
      */
     override
         fun accessLoggingPolicy(accessLoggingPolicy: CfnLoadBalancer.AccessLoggingPolicyProperty) {
-      cdkBuilder.accessLoggingPolicy(accessLoggingPolicy.let(CfnLoadBalancer.AccessLoggingPolicyProperty::unwrap))
+      cdkBuilder.accessLoggingPolicy(accessLoggingPolicy.let(CfnLoadBalancer.AccessLoggingPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -603,7 +603,7 @@ public interface CfnLoadBalancerProps {
      * session stickiness.
      */
     override fun appCookieStickinessPolicy(appCookieStickinessPolicy: IResolvable) {
-      cdkBuilder.appCookieStickinessPolicy(appCookieStickinessPolicy.let(IResolvable::unwrap))
+      cdkBuilder.appCookieStickinessPolicy(appCookieStickinessPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -650,7 +650,7 @@ public interface CfnLoadBalancerProps {
      * in the *User Guide for Classic Load Balancers* .
      */
     override fun connectionDrainingPolicy(connectionDrainingPolicy: IResolvable) {
-      cdkBuilder.connectionDrainingPolicy(connectionDrainingPolicy.let(IResolvable::unwrap))
+      cdkBuilder.connectionDrainingPolicy(connectionDrainingPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -662,7 +662,7 @@ public interface CfnLoadBalancerProps {
      */
     override
         fun connectionDrainingPolicy(connectionDrainingPolicy: CfnLoadBalancer.ConnectionDrainingPolicyProperty) {
-      cdkBuilder.connectionDrainingPolicy(connectionDrainingPolicy.let(CfnLoadBalancer.ConnectionDrainingPolicyProperty::unwrap))
+      cdkBuilder.connectionDrainingPolicy(connectionDrainingPolicy.let(CfnLoadBalancer.ConnectionDrainingPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -689,7 +689,7 @@ public interface CfnLoadBalancerProps {
      * in the *User Guide for Classic Load Balancers* .
      */
     override fun connectionSettings(connectionSettings: IResolvable) {
-      cdkBuilder.connectionSettings(connectionSettings.let(IResolvable::unwrap))
+      cdkBuilder.connectionSettings(connectionSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -703,7 +703,7 @@ public interface CfnLoadBalancerProps {
      */
     override
         fun connectionSettings(connectionSettings: CfnLoadBalancer.ConnectionSettingsProperty) {
-      cdkBuilder.connectionSettings(connectionSettings.let(CfnLoadBalancer.ConnectionSettingsProperty::unwrap))
+      cdkBuilder.connectionSettings(connectionSettings.let(CfnLoadBalancer.ConnectionSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -740,7 +740,7 @@ public interface CfnLoadBalancerProps {
      * in the *User Guide for Classic Load Balancers* .
      */
     override fun crossZone(crossZone: IResolvable) {
-      cdkBuilder.crossZone(crossZone.let(IResolvable::unwrap))
+      cdkBuilder.crossZone(crossZone.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -750,7 +750,7 @@ public interface CfnLoadBalancerProps {
      * are removing the health check settings. Otherwise, update requires no interruption.
      */
     override fun healthCheck(healthCheck: IResolvable) {
-      cdkBuilder.healthCheck(healthCheck.let(IResolvable::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -760,7 +760,7 @@ public interface CfnLoadBalancerProps {
      * are removing the health check settings. Otherwise, update requires no interruption.
      */
     override fun healthCheck(healthCheck: CfnLoadBalancer.HealthCheckProperty) {
-      cdkBuilder.healthCheck(healthCheck.let(CfnLoadBalancer.HealthCheckProperty::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(CfnLoadBalancer.HealthCheckProperty.Companion::unwrap))
     }
 
     /**
@@ -791,7 +791,7 @@ public interface CfnLoadBalancerProps {
      * stickiness.
      */
     override fun lbCookieStickinessPolicy(lbCookieStickinessPolicy: IResolvable) {
-      cdkBuilder.lbCookieStickinessPolicy(lbCookieStickinessPolicy.let(IResolvable::unwrap))
+      cdkBuilder.lbCookieStickinessPolicy(lbCookieStickinessPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -817,7 +817,7 @@ public interface CfnLoadBalancerProps {
      * clients cannot connect to the load balancer.
      */
     override fun listeners(listeners: IResolvable) {
-      cdkBuilder.listeners(listeners.let(IResolvable::unwrap))
+      cdkBuilder.listeners(listeners.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -859,7 +859,7 @@ public interface CfnLoadBalancerProps {
      * Specify only back-end server policies.
      */
     override fun policies(policies: IResolvable) {
-      cdkBuilder.policies(policies.let(IResolvable::unwrap))
+      cdkBuilder.policies(policies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -929,7 +929,7 @@ public interface CfnLoadBalancerProps {
      * @param tags The tags associated with a load balancer.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

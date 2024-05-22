@@ -36,7 +36,7 @@ public open class StateTransitionMetric(
 
     public fun metric(metricName: String, props: MetricOptions): Metric =
         software.amazon.awscdk.services.stepfunctions.StateTransitionMetric.metric(metricName,
-        props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("629ccc2b9ed0d0686ac72be3c432836a76a92f56ab45dae83dc2e318f17ba80c")
@@ -47,7 +47,7 @@ public open class StateTransitionMetric(
         software.amazon.awscdk.services.stepfunctions.StateTransitionMetric.metricConsumedCapacity().let(Metric::wrap)
 
     public fun metricConsumedCapacity(props: MetricOptions): Metric =
-        software.amazon.awscdk.services.stepfunctions.StateTransitionMetric.metricConsumedCapacity(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        software.amazon.awscdk.services.stepfunctions.StateTransitionMetric.metricConsumedCapacity(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a24b0a1e90d6383c997fbcc91c6d768b82e55f29a8b958f852f38de84668a803")
@@ -58,7 +58,7 @@ public open class StateTransitionMetric(
         software.amazon.awscdk.services.stepfunctions.StateTransitionMetric.metricProvisionedBucketSize().let(Metric::wrap)
 
     public fun metricProvisionedBucketSize(props: MetricOptions): Metric =
-        software.amazon.awscdk.services.stepfunctions.StateTransitionMetric.metricProvisionedBucketSize(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        software.amazon.awscdk.services.stepfunctions.StateTransitionMetric.metricProvisionedBucketSize(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5cf77589ea092cd6affcb5f58c9461bc0a8960cc7a2c47bad5397852bd5b154b")
@@ -69,7 +69,7 @@ public open class StateTransitionMetric(
         software.amazon.awscdk.services.stepfunctions.StateTransitionMetric.metricProvisionedRefillRate().let(Metric::wrap)
 
     public fun metricProvisionedRefillRate(props: MetricOptions): Metric =
-        software.amazon.awscdk.services.stepfunctions.StateTransitionMetric.metricProvisionedRefillRate(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        software.amazon.awscdk.services.stepfunctions.StateTransitionMetric.metricProvisionedRefillRate(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8ed127511213c6c3de46a18992a2b191c66c096631d5668dc770856ded83e615")
@@ -80,7 +80,7 @@ public open class StateTransitionMetric(
         software.amazon.awscdk.services.stepfunctions.StateTransitionMetric.metricThrottledEvents().let(Metric::wrap)
 
     public fun metricThrottledEvents(props: MetricOptions): Metric =
-        software.amazon.awscdk.services.stepfunctions.StateTransitionMetric.metricThrottledEvents(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        software.amazon.awscdk.services.stepfunctions.StateTransitionMetric.metricThrottledEvents(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5fa6a79f5f7330212dfd53424b8e73b9b873dcb5eb4ef176f5a1c996a8fd1822")

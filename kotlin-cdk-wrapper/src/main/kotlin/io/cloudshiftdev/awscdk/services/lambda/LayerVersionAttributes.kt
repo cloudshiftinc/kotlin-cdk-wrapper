@@ -67,7 +67,7 @@ public interface LayerVersionAttributes {
      * @param compatibleRuntimes The list of compatible runtimes with this Layer.
      */
     override fun compatibleRuntimes(compatibleRuntimes: List<Runtime>) {
-      cdkBuilder.compatibleRuntimes(compatibleRuntimes.map(Runtime::unwrap))
+      cdkBuilder.compatibleRuntimes(compatibleRuntimes.map(Runtime.Companion::unwrap))
     }
 
     /**

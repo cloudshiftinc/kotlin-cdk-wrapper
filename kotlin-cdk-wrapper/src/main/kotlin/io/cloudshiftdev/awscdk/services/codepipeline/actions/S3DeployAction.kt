@@ -45,7 +45,7 @@ public open class S3DeployAction(
   cdkObject: software.amazon.awscdk.services.codepipeline.actions.S3DeployAction,
 ) : Action(cdkObject) {
   public constructor(props: S3DeployActionProps) :
-      this(software.amazon.awscdk.services.codepipeline.actions.S3DeployAction(props.let(S3DeployActionProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.actions.S3DeployAction(props.let(S3DeployActionProps.Companion::unwrap))
   )
 
   public constructor(props: S3DeployActionProps.Builder.() -> Unit) :
@@ -201,7 +201,7 @@ public open class S3DeployAction(
      * @param accessControl The specified canned ACL to objects deployed to Amazon S3. 
      */
     override fun accessControl(accessControl: BucketAccessControl) {
-      cdkBuilder.accessControl(accessControl.let(BucketAccessControl::unwrap))
+      cdkBuilder.accessControl(accessControl.let(BucketAccessControl.Companion::unwrap))
     }
 
     /**
@@ -221,7 +221,7 @@ public open class S3DeployAction(
      * @param bucket The Amazon S3 bucket that is the deploy target. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -236,7 +236,7 @@ public open class S3DeployAction(
      * @param cacheControl The caching behavior for requests/responses for objects in the bucket. 
      */
     override fun cacheControl(cacheControl: List<CacheControl>) {
-      cdkBuilder.cacheControl(cacheControl.map(CacheControl::unwrap))
+      cdkBuilder.cacheControl(cacheControl.map(CacheControl.Companion::unwrap))
     }
 
     /**
@@ -263,7 +263,7 @@ public open class S3DeployAction(
      * @param encryptionKey The AWS KMS encryption key for the host bucket. 
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -283,7 +283,7 @@ public open class S3DeployAction(
      * @param input The input Artifact to deploy to Amazon S3. 
      */
     override fun input(input: Artifact) {
-      cdkBuilder.input(input.let(Artifact::unwrap))
+      cdkBuilder.input(input.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -311,7 +311,7 @@ public open class S3DeployAction(
      * @param role The Role in which context's this Action will be executing in. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**

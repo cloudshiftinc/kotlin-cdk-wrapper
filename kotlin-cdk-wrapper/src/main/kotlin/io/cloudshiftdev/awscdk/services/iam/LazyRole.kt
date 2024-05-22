@@ -57,8 +57,8 @@ public open class LazyRole(
     id: String,
     props: LazyRoleProps,
   ) :
-      this(software.amazon.awscdk.services.iam.LazyRole(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(LazyRoleProps::unwrap))
+      this(software.amazon.awscdk.services.iam.LazyRole(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(LazyRoleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -74,7 +74,7 @@ public open class LazyRole(
    * @param policy The managed policy to attach. 
    */
   public override fun addManagedPolicy(policy: IManagedPolicy) {
-    unwrap(this).addManagedPolicy(policy.let(IManagedPolicy::unwrap))
+    unwrap(this).addManagedPolicy(policy.let(IManagedPolicy.Companion::unwrap))
   }
 
   /**
@@ -83,7 +83,7 @@ public open class LazyRole(
    * @param statement 
    */
   public open fun addToPolicy(statement: PolicyStatement): Boolean =
-      unwrap(this).addToPolicy(statement.let(PolicyStatement::unwrap))
+      unwrap(this).addToPolicy(statement.let(PolicyStatement.Companion::unwrap))
 
   /**
    * Add to the policy of this principal.
@@ -103,7 +103,7 @@ public open class LazyRole(
    * @param statement The permission statement to add to the policy document. 
    */
   public override fun addToPrincipalPolicy(statement: PolicyStatement): AddToPrincipalPolicyResult =
-      unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement::unwrap)).let(AddToPrincipalPolicyResult::wrap)
+      unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToPrincipalPolicyResult::wrap)
 
   /**
    * Adds a permission to the role's default policy document.
@@ -128,7 +128,7 @@ public open class LazyRole(
    * @param policy The policy to attach. 
    */
   public override fun attachInlinePolicy(policy: Policy) {
-    unwrap(this).attachInlinePolicy(policy.let(Policy::unwrap))
+    unwrap(this).attachInlinePolicy(policy.let(Policy.Companion::unwrap))
   }
 
   /**
@@ -138,8 +138,8 @@ public open class LazyRole(
    * @param actions 
    */
   public override fun grant(identity: IPrincipal, vararg actions: String): Grant =
-      unwrap(this).grant(identity.let(IPrincipal::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
-      as String}.toTypedArray()).let(Grant::wrap)
+      unwrap(this).grant(identity.let(IPrincipal.Companion::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Grant permissions to the given principal to assume this role.
@@ -147,7 +147,7 @@ public open class LazyRole(
    * @param identity 
    */
   public override fun grantAssumeRole(identity: IPrincipal): Grant =
-      unwrap(this).grantAssumeRole(identity.let(IPrincipal::unwrap)).let(Grant::wrap)
+      unwrap(this).grantAssumeRole(identity.let(IPrincipal.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant permissions to the given principal to pass this role.
@@ -155,7 +155,7 @@ public open class LazyRole(
    * @param identity 
    */
   public override fun grantPassRole(identity: IPrincipal): Grant =
-      unwrap(this).grantPassRole(identity.let(IPrincipal::unwrap)).let(Grant::wrap)
+      unwrap(this).grantPassRole(identity.let(IPrincipal.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The principal to grant permissions to.
@@ -377,7 +377,7 @@ public open class LazyRole(
      * can assume this role. 
      */
     override fun assumedBy(assumedBy: IPrincipal) {
-      cdkBuilder.assumedBy(assumedBy.let(IPrincipal::unwrap))
+      cdkBuilder.assumedBy(assumedBy.let(IPrincipal.Companion::unwrap))
     }
 
     /**
@@ -448,7 +448,7 @@ public open class LazyRole(
      * @param managedPolicies A list of managed policies associated with this role. 
      */
     override fun managedPolicies(managedPolicies: List<IManagedPolicy>) {
-      cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy::unwrap))
+      cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy.Companion::unwrap))
     }
 
     /**
@@ -486,7 +486,7 @@ public open class LazyRole(
      * role. 
      */
     override fun maxSessionDuration(maxSessionDuration: Duration) {
-      cdkBuilder.maxSessionDuration(maxSessionDuration.let(Duration::unwrap))
+      cdkBuilder.maxSessionDuration(maxSessionDuration.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -518,7 +518,7 @@ public open class LazyRole(
      * roles). 
      */
     override fun permissionsBoundary(permissionsBoundary: IManagedPolicy) {
-      cdkBuilder.permissionsBoundary(permissionsBoundary.let(IManagedPolicy::unwrap))
+      cdkBuilder.permissionsBoundary(permissionsBoundary.let(IManagedPolicy.Companion::unwrap))
     }
 
     /**

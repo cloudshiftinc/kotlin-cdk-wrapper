@@ -46,9 +46,9 @@ public open class ClusterInstance(
     scope: Construct,
     cluster: IDatabaseCluster,
     props: ClusterInstanceBindOptions,
-  ): IAuroraClusterInstance = unwrap(this).bind(scope.let(Construct::unwrap),
-      cluster.let(IDatabaseCluster::unwrap),
-      props.let(ClusterInstanceBindOptions::unwrap)).let(IAuroraClusterInstance::wrap)
+  ): IAuroraClusterInstance = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      cluster.let(IDatabaseCluster.Companion::unwrap),
+      props.let(ClusterInstanceBindOptions.Companion::unwrap)).let(IAuroraClusterInstance::wrap)
 
   /**
    * Add the ClusterInstance to the cluster.
@@ -71,7 +71,7 @@ public open class ClusterInstance(
 
     public fun provisioned(id: String, props: ProvisionedClusterInstanceProps): IClusterInstance =
         software.amazon.awscdk.services.rds.ClusterInstance.provisioned(id,
-        props.let(ProvisionedClusterInstanceProps::unwrap)).let(IClusterInstance::wrap)
+        props.let(ProvisionedClusterInstanceProps.Companion::unwrap)).let(IClusterInstance::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d781f29fad51f76e0bd5fa96d5869cf89788dae13f9423dd8350045fd31dd643")
@@ -83,7 +83,7 @@ public open class ClusterInstance(
 
     public fun serverlessV2(id: String, props: ServerlessV2ClusterInstanceProps): IClusterInstance =
         software.amazon.awscdk.services.rds.ClusterInstance.serverlessV2(id,
-        props.let(ServerlessV2ClusterInstanceProps::unwrap)).let(IClusterInstance::wrap)
+        props.let(ServerlessV2ClusterInstanceProps.Companion::unwrap)).let(IClusterInstance::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("73be7bc5cb344f273c10e948ec127924955eca80caa2aa170c4b72f334319798")

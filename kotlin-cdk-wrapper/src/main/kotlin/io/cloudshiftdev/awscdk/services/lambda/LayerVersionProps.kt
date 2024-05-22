@@ -107,14 +107,14 @@ public interface LayerVersionProps : LayerVersionOptions {
      * Using `Code.fromInline` is not supported.
      */
     override fun code(code: Code) {
-      cdkBuilder.code(code.let(Code::unwrap))
+      cdkBuilder.code(code.let(Code.Companion::unwrap))
     }
 
     /**
      * @param compatibleArchitectures The system architectures compatible with this layer.
      */
     override fun compatibleArchitectures(compatibleArchitectures: List<Architecture>) {
-      cdkBuilder.compatibleArchitectures(compatibleArchitectures.map(Architecture::unwrap))
+      cdkBuilder.compatibleArchitectures(compatibleArchitectures.map(Architecture.Companion::unwrap))
     }
 
     /**
@@ -127,7 +127,7 @@ public interface LayerVersionProps : LayerVersionOptions {
      * @param compatibleRuntimes The runtimes compatible with this Layer.
      */
     override fun compatibleRuntimes(compatibleRuntimes: List<Runtime>) {
-      cdkBuilder.compatibleRuntimes(compatibleRuntimes.map(Runtime::unwrap))
+      cdkBuilder.compatibleRuntimes(compatibleRuntimes.map(Runtime.Companion::unwrap))
     }
 
     /**
@@ -162,7 +162,7 @@ public interface LayerVersionProps : LayerVersionOptions {
      * or when the stack is deleted.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lambda.LayerVersionProps =

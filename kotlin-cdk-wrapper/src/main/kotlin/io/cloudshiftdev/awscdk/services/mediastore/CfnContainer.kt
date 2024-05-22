@@ -75,8 +75,8 @@ public open class CfnContainer(
     id: String,
     props: CfnContainerProps,
   ) :
-      this(software.amazon.awscdk.services.mediastore.CfnContainer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnContainerProps::unwrap))
+      this(software.amazon.awscdk.services.mediastore.CfnContainer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnContainerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -102,7 +102,7 @@ public open class CfnContainer(
    * The state of access logging on the container.
    */
   public open fun accessLoggingEnabled(`value`: IResolvable) {
-    unwrap(this).setAccessLoggingEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccessLoggingEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -142,7 +142,7 @@ public open class CfnContainer(
    * container can service cross-origin requests.
    */
   public open fun corsPolicy(`value`: IResolvable) {
-    unwrap(this).setCorsPolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCorsPolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -165,7 +165,7 @@ public open class CfnContainer(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -189,14 +189,14 @@ public open class CfnContainer(
    * The metric policy that is associated with the container.
    */
   public open fun metricPolicy(`value`: IResolvable) {
-    unwrap(this).setMetricPolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMetricPolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The metric policy that is associated with the container.
    */
   public open fun metricPolicy(`value`: MetricPolicyProperty) {
-    unwrap(this).setMetricPolicy(`value`.let(MetricPolicyProperty::unwrap))
+    unwrap(this).setMetricPolicy(`value`.let(MetricPolicyProperty.Companion::unwrap))
   }
 
   /**
@@ -236,7 +236,7 @@ public open class CfnContainer(
    *
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -482,7 +482,7 @@ public open class CfnContainer(
      * @param accessLoggingEnabled The state of access logging on the container. 
      */
     override fun accessLoggingEnabled(accessLoggingEnabled: IResolvable) {
-      cdkBuilder.accessLoggingEnabled(accessLoggingEnabled.let(IResolvable::unwrap))
+      cdkBuilder.accessLoggingEnabled(accessLoggingEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -520,7 +520,7 @@ public open class CfnContainer(
      * so that the container can service cross-origin requests. 
      */
     override fun corsPolicy(corsPolicy: IResolvable) {
-      cdkBuilder.corsPolicy(corsPolicy.let(IResolvable::unwrap))
+      cdkBuilder.corsPolicy(corsPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -602,7 +602,7 @@ public open class CfnContainer(
      * @param metricPolicy The metric policy that is associated with the container. 
      */
     override fun metricPolicy(metricPolicy: IResolvable) {
-      cdkBuilder.metricPolicy(metricPolicy.let(IResolvable::unwrap))
+      cdkBuilder.metricPolicy(metricPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -620,7 +620,7 @@ public open class CfnContainer(
      * @param metricPolicy The metric policy that is associated with the container. 
      */
     override fun metricPolicy(metricPolicy: MetricPolicyProperty) {
-      cdkBuilder.metricPolicy(metricPolicy.let(MetricPolicyProperty::unwrap))
+      cdkBuilder.metricPolicy(metricPolicy.let(MetricPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -665,7 +665,7 @@ public open class CfnContainer(
      * @param tags 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1142,7 +1142,7 @@ public open class CfnContainer(
        * to allow up to 300 rules per policy.
        */
       override fun metricPolicyRules(metricPolicyRules: IResolvable) {
-        cdkBuilder.metricPolicyRules(metricPolicyRules.let(IResolvable::unwrap))
+        cdkBuilder.metricPolicyRules(metricPolicyRules.let(IResolvable.Companion::unwrap))
       }
 
       /**

@@ -49,7 +49,7 @@ public interface MariaDbInstanceEngineProps {
      * @param version The exact version of the engine to use. 
      */
     override fun version(version: MariaDbEngineVersion) {
-      cdkBuilder.version(version.let(MariaDbEngineVersion::unwrap))
+      cdkBuilder.version(version.let(MariaDbEngineVersion.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.MariaDbInstanceEngineProps =

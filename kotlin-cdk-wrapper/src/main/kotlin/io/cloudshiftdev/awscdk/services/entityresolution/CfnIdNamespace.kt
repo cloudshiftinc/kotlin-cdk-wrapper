@@ -72,8 +72,8 @@ public open class CfnIdNamespace(
     id: String,
     props: CfnIdNamespaceProps,
   ) :
-      this(software.amazon.awscdk.services.entityresolution.CfnIdNamespace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnIdNamespaceProps::unwrap))
+      this(software.amazon.awscdk.services.entityresolution.CfnIdNamespace(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnIdNamespaceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -128,7 +128,7 @@ public open class CfnIdNamespace(
    * `Source` or a `Target` .
    */
   public open fun idMappingWorkflowProperties(`value`: IResolvable) {
-    unwrap(this).setIdMappingWorkflowProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIdMappingWorkflowProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -167,7 +167,7 @@ public open class CfnIdNamespace(
    * A list of `InputSource` objects, which have the fields `InputSourceARN` and `SchemaName` .
    */
   public open fun inputSourceConfig(`value`: IResolvable) {
-    unwrap(this).setInputSourceConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInputSourceConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -188,7 +188,7 @@ public open class CfnIdNamespace(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -212,7 +212,7 @@ public open class CfnIdNamespace(
    * The tags used to organize, track, or control access for this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -381,7 +381,7 @@ public open class CfnIdNamespace(
      * `IdNamespace` can be used as a `Source` or a `Target` . 
      */
     override fun idMappingWorkflowProperties(idMappingWorkflowProperties: IResolvable) {
-      cdkBuilder.idMappingWorkflowProperties(idMappingWorkflowProperties.let(IResolvable::unwrap))
+      cdkBuilder.idMappingWorkflowProperties(idMappingWorkflowProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -425,7 +425,7 @@ public open class CfnIdNamespace(
      * `InputSourceARN` and `SchemaName` . 
      */
     override fun inputSourceConfig(inputSourceConfig: IResolvable) {
-      cdkBuilder.inputSourceConfig(inputSourceConfig.let(IResolvable::unwrap))
+      cdkBuilder.inputSourceConfig(inputSourceConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -469,7 +469,7 @@ public open class CfnIdNamespace(
      * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -609,7 +609,7 @@ public open class CfnIdNamespace(
        * the provider service.
        */
       override fun providerProperties(providerProperties: IResolvable) {
-        cdkBuilder.providerProperties(providerProperties.let(IResolvable::unwrap))
+        cdkBuilder.providerProperties(providerProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -617,7 +617,7 @@ public open class CfnIdNamespace(
        * the provider service.
        */
       override fun providerProperties(providerProperties: NamespaceProviderPropertiesProperty) {
-        cdkBuilder.providerProperties(providerProperties.let(NamespaceProviderPropertiesProperty::unwrap))
+        cdkBuilder.providerProperties(providerProperties.let(NamespaceProviderPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -852,7 +852,7 @@ public open class CfnIdNamespace(
        * by the provider service.
        */
       override fun providerConfiguration(providerConfiguration: IResolvable) {
-        cdkBuilder.providerConfiguration(providerConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.providerConfiguration(providerConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**

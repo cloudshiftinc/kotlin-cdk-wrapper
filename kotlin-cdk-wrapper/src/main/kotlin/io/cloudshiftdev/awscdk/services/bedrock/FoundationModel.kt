@@ -44,8 +44,9 @@ public open class FoundationModel(
       id: String,
       foundationModelId: FoundationModelIdentifier,
     ): FoundationModel =
-        software.amazon.awscdk.services.bedrock.FoundationModel.fromFoundationModelId(scope.let(Construct::unwrap),
-        id, foundationModelId.let(FoundationModelIdentifier::unwrap)).let(FoundationModel::wrap)
+        software.amazon.awscdk.services.bedrock.FoundationModel.fromFoundationModelId(scope.let(Construct.Companion::unwrap),
+        id,
+        foundationModelId.let(FoundationModelIdentifier.Companion::unwrap)).let(FoundationModel::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.FoundationModel):
         FoundationModel = FoundationModel(cdkObject)

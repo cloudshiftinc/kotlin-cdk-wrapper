@@ -168,14 +168,14 @@ public interface CfnIdentityProviderConfigProps {
      * @param oidc An object representing an OpenID Connect (OIDC) identity provider configuration.
      */
     override fun oidc(oidc: IResolvable) {
-      cdkBuilder.oidc(oidc.let(IResolvable::unwrap))
+      cdkBuilder.oidc(oidc.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param oidc An object representing an OpenID Connect (OIDC) identity provider configuration.
      */
     override fun oidc(oidc: CfnIdentityProviderConfig.OidcIdentityProviderConfigProperty) {
-      cdkBuilder.oidc(oidc.let(CfnIdentityProviderConfig.OidcIdentityProviderConfigProperty::unwrap))
+      cdkBuilder.oidc(oidc.let(CfnIdentityProviderConfig.OidcIdentityProviderConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -193,7 +193,7 @@ public interface CfnIdentityProviderConfigProps {
      * any other cluster or AWS resources.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

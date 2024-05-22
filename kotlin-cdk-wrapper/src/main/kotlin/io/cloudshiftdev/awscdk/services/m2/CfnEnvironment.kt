@@ -71,8 +71,8 @@ public open class CfnEnvironment(
     id: String,
     props: CfnEnvironmentProps,
   ) :
-      this(software.amazon.awscdk.services.m2.CfnEnvironment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEnvironmentProps::unwrap))
+      this(software.amazon.awscdk.services.m2.CfnEnvironment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEnvironmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -137,14 +137,14 @@ public open class CfnEnvironment(
    * Defines the details of a high availability configuration.
    */
   public open fun highAvailabilityConfig(`value`: IResolvable) {
-    unwrap(this).setHighAvailabilityConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHighAvailabilityConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Defines the details of a high availability configuration.
    */
   public open fun highAvailabilityConfig(`value`: HighAvailabilityConfigProperty) {
-    unwrap(this).setHighAvailabilityConfig(`value`.let(HighAvailabilityConfigProperty::unwrap))
+    unwrap(this).setHighAvailabilityConfig(`value`.let(HighAvailabilityConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -162,7 +162,7 @@ public open class CfnEnvironment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -230,7 +230,7 @@ public open class CfnEnvironment(
    * Specifies whether the runtime environment is publicly accessible.
    */
   public open fun publiclyAccessible(`value`: IResolvable) {
-    unwrap(this).setPubliclyAccessible(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPubliclyAccessible(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -261,7 +261,7 @@ public open class CfnEnvironment(
    * Defines the storage configuration for a runtime environment.
    */
   public open fun storageConfigurations(`value`: IResolvable) {
-    unwrap(this).setStorageConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStorageConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -537,7 +537,7 @@ public open class CfnEnvironment(
      * @param highAvailabilityConfig Defines the details of a high availability configuration. 
      */
     override fun highAvailabilityConfig(highAvailabilityConfig: IResolvable) {
-      cdkBuilder.highAvailabilityConfig(highAvailabilityConfig.let(IResolvable::unwrap))
+      cdkBuilder.highAvailabilityConfig(highAvailabilityConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -547,7 +547,7 @@ public open class CfnEnvironment(
      * @param highAvailabilityConfig Defines the details of a high availability configuration. 
      */
     override fun highAvailabilityConfig(highAvailabilityConfig: HighAvailabilityConfigProperty) {
-      cdkBuilder.highAvailabilityConfig(highAvailabilityConfig.let(HighAvailabilityConfigProperty::unwrap))
+      cdkBuilder.highAvailabilityConfig(highAvailabilityConfig.let(HighAvailabilityConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -626,7 +626,7 @@ public open class CfnEnvironment(
      * @param publiclyAccessible Specifies whether the runtime environment is publicly accessible. 
      */
     override fun publiclyAccessible(publiclyAccessible: IResolvable) {
-      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
+      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -657,7 +657,7 @@ public open class CfnEnvironment(
      * @param storageConfigurations Defines the storage configuration for a runtime environment. 
      */
     override fun storageConfigurations(storageConfigurations: IResolvable) {
-      cdkBuilder.storageConfigurations(storageConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.storageConfigurations(storageConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1130,14 +1130,14 @@ public open class CfnEnvironment(
        * @param efs Defines the storage configuration for an Amazon EFS file system.
        */
       override fun efs(efs: IResolvable) {
-        cdkBuilder.efs(efs.let(IResolvable::unwrap))
+        cdkBuilder.efs(efs.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param efs Defines the storage configuration for an Amazon EFS file system.
        */
       override fun efs(efs: EfsStorageConfigurationProperty) {
-        cdkBuilder.efs(efs.let(EfsStorageConfigurationProperty::unwrap))
+        cdkBuilder.efs(efs.let(EfsStorageConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1152,14 +1152,14 @@ public open class CfnEnvironment(
        * @param fsx Defines the storage configuration for an Amazon FSx file system.
        */
       override fun fsx(fsx: IResolvable) {
-        cdkBuilder.fsx(fsx.let(IResolvable::unwrap))
+        cdkBuilder.fsx(fsx.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param fsx Defines the storage configuration for an Amazon FSx file system.
        */
       override fun fsx(fsx: FsxStorageConfigurationProperty) {
-        cdkBuilder.fsx(fsx.let(FsxStorageConfigurationProperty::unwrap))
+        cdkBuilder.fsx(fsx.let(FsxStorageConfigurationProperty.Companion::unwrap))
       }
 
       /**

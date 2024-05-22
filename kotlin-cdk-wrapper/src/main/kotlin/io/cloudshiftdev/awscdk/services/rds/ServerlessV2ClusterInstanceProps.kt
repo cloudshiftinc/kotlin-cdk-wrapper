@@ -21,7 +21,7 @@ import kotlin.collections.Map
  * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
  * .engine(DatabaseClusterEngine.auroraMysql(AuroraMysqlClusterEngineProps.builder().version(AuroraMysqlEngineVersion.VER_3_01_0).build()))
  * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
- * .caCertificate(CaCertificate.RDS_CA_RDS2048_G1)
+ * .caCertificate(CaCertificate.RDS_CA_RSA2048_G1)
  * .build()))
  * .readers(List.of(ClusterInstance.serverlessV2("reader",
  * ServerlessV2ClusterInstanceProps.builder()
@@ -173,7 +173,7 @@ public interface ServerlessV2ClusterInstanceProps : ClusterInstanceOptions {
      * For RDS DB engines:
      */
     override fun caCertificate(caCertificate: CaCertificate) {
-      cdkBuilder.caCertificate(caCertificate.let(CaCertificate::unwrap))
+      cdkBuilder.caCertificate(caCertificate.let(CaCertificate.Companion::unwrap))
     }
 
     /**
@@ -205,7 +205,7 @@ public interface ServerlessV2ClusterInstanceProps : ClusterInstanceOptions {
      * provide this and just use the cluster parameter group
      */
     override fun parameterGroup(parameterGroup: IParameterGroup) {
-      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup::unwrap))
+      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup.Companion::unwrap))
     }
 
     /**
@@ -222,7 +222,7 @@ public interface ServerlessV2ClusterInstanceProps : ClusterInstanceOptions {
      * data.
      */
     override fun performanceInsightEncryptionKey(performanceInsightEncryptionKey: IKey) {
-      cdkBuilder.performanceInsightEncryptionKey(performanceInsightEncryptionKey.let(IKey::unwrap))
+      cdkBuilder.performanceInsightEncryptionKey(performanceInsightEncryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -231,7 +231,7 @@ public interface ServerlessV2ClusterInstanceProps : ClusterInstanceOptions {
      */
     override
         fun performanceInsightRetention(performanceInsightRetention: PerformanceInsightRetention) {
-      cdkBuilder.performanceInsightRetention(performanceInsightRetention.let(PerformanceInsightRetention::unwrap))
+      cdkBuilder.performanceInsightRetention(performanceInsightRetention.let(PerformanceInsightRetention.Companion::unwrap))
     }
 
     /**

@@ -78,7 +78,7 @@ public interface GrpcGatewayRouteSpecOptions : CommonGatewayRouteSpecOptions {
      * @param match The criterion for determining a request match for this GatewayRoute. 
      */
     override fun match(match: GrpcGatewayRouteMatch) {
-      cdkBuilder.match(match.let(GrpcGatewayRouteMatch::unwrap))
+      cdkBuilder.match(match.let(GrpcGatewayRouteMatch.Companion::unwrap))
     }
 
     /**
@@ -103,7 +103,7 @@ public interface GrpcGatewayRouteSpecOptions : CommonGatewayRouteSpecOptions {
      * @param routeTarget The VirtualService this GatewayRoute directs traffic to. 
      */
     override fun routeTarget(routeTarget: IVirtualService) {
-      cdkBuilder.routeTarget(routeTarget.let(IVirtualService::unwrap))
+      cdkBuilder.routeTarget(routeTarget.let(IVirtualService.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appmesh.GrpcGatewayRouteSpecOptions =

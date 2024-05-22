@@ -207,7 +207,7 @@ public interface CfnPartnerAccountProps {
      * @param accountLinked Whether the partner account is linked to the AWS account.
      */
     override fun accountLinked(accountLinked: IResolvable) {
-      cdkBuilder.accountLinked(accountLinked.let(IResolvable::unwrap))
+      cdkBuilder.accountLinked(accountLinked.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -228,14 +228,14 @@ public interface CfnPartnerAccountProps {
      * @param sidewalk The Sidewalk account credentials.
      */
     override fun sidewalk(sidewalk: IResolvable) {
-      cdkBuilder.sidewalk(sidewalk.let(IResolvable::unwrap))
+      cdkBuilder.sidewalk(sidewalk.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param sidewalk The Sidewalk account credentials.
      */
     override fun sidewalk(sidewalk: CfnPartnerAccount.SidewalkAccountInfoProperty) {
-      cdkBuilder.sidewalk(sidewalk.let(CfnPartnerAccount.SidewalkAccountInfoProperty::unwrap))
+      cdkBuilder.sidewalk(sidewalk.let(CfnPartnerAccount.SidewalkAccountInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -251,7 +251,7 @@ public interface CfnPartnerAccountProps {
      * @param sidewalkResponse Information about a Sidewalk account.
      */
     override fun sidewalkResponse(sidewalkResponse: IResolvable) {
-      cdkBuilder.sidewalkResponse(sidewalkResponse.let(IResolvable::unwrap))
+      cdkBuilder.sidewalkResponse(sidewalkResponse.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -259,7 +259,7 @@ public interface CfnPartnerAccountProps {
      */
     override
         fun sidewalkResponse(sidewalkResponse: CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty) {
-      cdkBuilder.sidewalkResponse(sidewalkResponse.let(CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty::unwrap))
+      cdkBuilder.sidewalkResponse(sidewalkResponse.let(CfnPartnerAccount.SidewalkAccountInfoWithFingerprintProperty.Companion::unwrap))
     }
 
     /**
@@ -276,14 +276,14 @@ public interface CfnPartnerAccountProps {
      * @param sidewalkUpdate Sidewalk update.
      */
     override fun sidewalkUpdate(sidewalkUpdate: IResolvable) {
-      cdkBuilder.sidewalkUpdate(sidewalkUpdate.let(IResolvable::unwrap))
+      cdkBuilder.sidewalkUpdate(sidewalkUpdate.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param sidewalkUpdate Sidewalk update.
      */
     override fun sidewalkUpdate(sidewalkUpdate: CfnPartnerAccount.SidewalkUpdateAccountProperty) {
-      cdkBuilder.sidewalkUpdate(sidewalkUpdate.let(CfnPartnerAccount.SidewalkUpdateAccountProperty::unwrap))
+      cdkBuilder.sidewalkUpdate(sidewalkUpdate.let(CfnPartnerAccount.SidewalkUpdateAccountProperty.Companion::unwrap))
     }
 
     /**
@@ -300,7 +300,7 @@ public interface CfnPartnerAccountProps {
      * Tags can have a minimum of 0 and a maximum of 50 items.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

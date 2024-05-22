@@ -38,8 +38,8 @@ public open class CfnUserToGroupAddition(
     id: String,
     props: CfnUserToGroupAdditionProps,
   ) :
-      this(software.amazon.awscdk.services.iam.CfnUserToGroupAddition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnUserToGroupAdditionProps::unwrap))
+      this(software.amazon.awscdk.services.iam.CfnUserToGroupAddition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnUserToGroupAdditionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -72,7 +72,7 @@ public open class CfnUserToGroupAddition(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

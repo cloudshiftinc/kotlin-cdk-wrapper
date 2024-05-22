@@ -472,7 +472,7 @@ public interface CfnApplicationProps {
      * job submission.
      */
     override fun autoStartConfiguration(autoStartConfiguration: IResolvable) {
-      cdkBuilder.autoStartConfiguration(autoStartConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.autoStartConfiguration(autoStartConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -481,7 +481,7 @@ public interface CfnApplicationProps {
      */
     override
         fun autoStartConfiguration(autoStartConfiguration: CfnApplication.AutoStartConfigurationProperty) {
-      cdkBuilder.autoStartConfiguration(autoStartConfiguration.let(CfnApplication.AutoStartConfigurationProperty::unwrap))
+      cdkBuilder.autoStartConfiguration(autoStartConfiguration.let(CfnApplication.AutoStartConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -500,7 +500,7 @@ public interface CfnApplicationProps {
      * a certain amount of time being idle.
      */
     override fun autoStopConfiguration(autoStopConfiguration: IResolvable) {
-      cdkBuilder.autoStopConfiguration(autoStopConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.autoStopConfiguration(autoStopConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -509,7 +509,7 @@ public interface CfnApplicationProps {
      */
     override
         fun autoStopConfiguration(autoStopConfiguration: CfnApplication.AutoStopConfigurationProperty) {
-      cdkBuilder.autoStopConfiguration(autoStopConfiguration.let(CfnApplication.AutoStopConfigurationProperty::unwrap))
+      cdkBuilder.autoStopConfiguration(autoStopConfiguration.let(CfnApplication.AutoStopConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -527,7 +527,7 @@ public interface CfnApplicationProps {
      * @param imageConfiguration The image configuration applied to all worker types.
      */
     override fun imageConfiguration(imageConfiguration: IResolvable) {
-      cdkBuilder.imageConfiguration(imageConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.imageConfiguration(imageConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -535,7 +535,7 @@ public interface CfnApplicationProps {
      */
     override
         fun imageConfiguration(imageConfiguration: CfnApplication.ImageConfigurationInputProperty) {
-      cdkBuilder.imageConfiguration(imageConfiguration.let(CfnApplication.ImageConfigurationInputProperty::unwrap))
+      cdkBuilder.imageConfiguration(imageConfiguration.let(CfnApplication.ImageConfigurationInputProperty.Companion::unwrap))
     }
 
     /**
@@ -552,7 +552,7 @@ public interface CfnApplicationProps {
      * @param initialCapacity The initial capacity of the application.
      */
     override fun initialCapacity(initialCapacity: IResolvable) {
-      cdkBuilder.initialCapacity(initialCapacity.let(IResolvable::unwrap))
+      cdkBuilder.initialCapacity(initialCapacity.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -575,7 +575,7 @@ public interface CfnApplicationProps {
      * hit.
      */
     override fun maximumCapacity(maximumCapacity: IResolvable) {
-      cdkBuilder.maximumCapacity(maximumCapacity.let(IResolvable::unwrap))
+      cdkBuilder.maximumCapacity(maximumCapacity.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -585,7 +585,7 @@ public interface CfnApplicationProps {
      * hit.
      */
     override fun maximumCapacity(maximumCapacity: CfnApplication.MaximumAllowedResourcesProperty) {
-      cdkBuilder.maximumCapacity(maximumCapacity.let(CfnApplication.MaximumAllowedResourcesProperty::unwrap))
+      cdkBuilder.maximumCapacity(maximumCapacity.let(CfnApplication.MaximumAllowedResourcesProperty.Companion::unwrap))
     }
 
     /**
@@ -608,7 +608,7 @@ public interface CfnApplicationProps {
      * settings you want to change in that file.
      */
     override fun monitoringConfiguration(monitoringConfiguration: IResolvable) {
-      cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -620,7 +620,7 @@ public interface CfnApplicationProps {
      */
     override
         fun monitoringConfiguration(monitoringConfiguration: CfnApplication.MonitoringConfigurationProperty) {
-      cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(CfnApplication.MonitoringConfigurationProperty::unwrap))
+      cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(CfnApplication.MonitoringConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -649,7 +649,7 @@ public interface CfnApplicationProps {
      * application.
      */
     override fun networkConfiguration(networkConfiguration: IResolvable) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -658,7 +658,7 @@ public interface CfnApplicationProps {
      */
     override
         fun networkConfiguration(networkConfiguration: CfnApplication.NetworkConfigurationProperty) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(CfnApplication.NetworkConfigurationProperty::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(CfnApplication.NetworkConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -689,7 +689,7 @@ public interface CfnApplicationProps {
      * API operation.
      */
     override fun runtimeConfiguration(runtimeConfiguration: IResolvable) {
-      cdkBuilder.runtimeConfiguration(runtimeConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.runtimeConfiguration(runtimeConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -721,7 +721,7 @@ public interface CfnApplicationProps {
      * @param tags The tags assigned to the application.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -740,7 +740,7 @@ public interface CfnApplicationProps {
      * @param workerTypeSpecifications The specification applied to each worker type.
      */
     override fun workerTypeSpecifications(workerTypeSpecifications: IResolvable) {
-      cdkBuilder.workerTypeSpecifications(workerTypeSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.workerTypeSpecifications(workerTypeSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**

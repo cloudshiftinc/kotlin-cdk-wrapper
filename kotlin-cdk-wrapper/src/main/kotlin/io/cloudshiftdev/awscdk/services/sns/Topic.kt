@@ -35,7 +35,7 @@ public open class Topic(
   cdkObject: software.amazon.awscdk.services.sns.Topic,
 ) : TopicBase(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.sns.Topic(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.sns.Topic(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -44,8 +44,8 @@ public open class Topic(
     id: String,
     props: TopicProps,
   ) :
-      this(software.amazon.awscdk.services.sns.Topic(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(TopicProps::unwrap))
+      this(software.amazon.awscdk.services.sns.Topic(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(TopicProps.Companion::unwrap))
   )
 
   public constructor(
@@ -61,7 +61,7 @@ public open class Topic(
    * @param config 
    */
   public open fun addLoggingConfig(config: LoggingConfig) {
-    unwrap(this).addLoggingConfig(config.let(LoggingConfig::unwrap))
+    unwrap(this).addLoggingConfig(config.let(LoggingConfig.Companion::unwrap))
   }
 
   /**
@@ -281,7 +281,7 @@ public open class Topic(
      * @param loggingConfigs The list of delivery status logging configurations for the topic. 
      */
     override fun loggingConfigs(loggingConfigs: List<LoggingConfig>) {
-      cdkBuilder.loggingConfigs(loggingConfigs.map(LoggingConfig::unwrap))
+      cdkBuilder.loggingConfigs(loggingConfigs.map(LoggingConfig.Companion::unwrap))
     }
 
     /**
@@ -303,7 +303,7 @@ public open class Topic(
      * @param masterKey A KMS Key, either managed by this CDK app, or imported. 
      */
     override fun masterKey(masterKey: IKey) {
-      cdkBuilder.masterKey(masterKey.let(IKey::unwrap))
+      cdkBuilder.masterKey(masterKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -360,7 +360,7 @@ public open class Topic(
      * @param tracingConfig Tracing mode of an Amazon SNS topic. 
      */
     override fun tracingConfig(tracingConfig: TracingConfig) {
-      cdkBuilder.tracingConfig(tracingConfig.let(TracingConfig::unwrap))
+      cdkBuilder.tracingConfig(tracingConfig.let(TracingConfig.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.sns.Topic = cdkBuilder.build()
@@ -372,7 +372,7 @@ public open class Topic(
       id: String,
       topicArn: String,
     ): ITopic =
-        software.amazon.awscdk.services.sns.Topic.fromTopicArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.sns.Topic.fromTopicArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, topicArn).let(ITopic::wrap)
 
     public fun fromTopicAttributes(
@@ -380,8 +380,8 @@ public open class Topic(
       id: String,
       attrs: TopicAttributes,
     ): ITopic =
-        software.amazon.awscdk.services.sns.Topic.fromTopicAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(TopicAttributes::unwrap)).let(ITopic::wrap)
+        software.amazon.awscdk.services.sns.Topic.fromTopicAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(TopicAttributes.Companion::unwrap)).let(ITopic::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ccd4be93940ed2899f3dbe3eb0d040594d23421d53c58464b3e85aa9c615c625")

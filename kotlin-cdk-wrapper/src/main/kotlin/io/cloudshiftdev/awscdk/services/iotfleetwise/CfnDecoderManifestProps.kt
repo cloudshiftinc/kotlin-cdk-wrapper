@@ -242,7 +242,7 @@ public interface CfnDecoderManifestProps {
      * @param networkInterfaces (Optional) A list of information about available network interfaces.
      */
     override fun networkInterfaces(networkInterfaces: IResolvable) {
-      cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable::unwrap))
+      cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -262,7 +262,7 @@ public interface CfnDecoderManifestProps {
      * @param signalDecoders (Optional) A list of information about signal decoders.
      */
     override fun signalDecoders(signalDecoders: IResolvable) {
-      cdkBuilder.signalDecoders(signalDecoders.let(IResolvable::unwrap))
+      cdkBuilder.signalDecoders(signalDecoders.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -291,7 +291,7 @@ public interface CfnDecoderManifestProps {
      * @param tags (Optional) Metadata that can be used to manage the decoder manifest.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

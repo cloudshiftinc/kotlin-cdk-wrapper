@@ -57,8 +57,8 @@ public open class CfnLocationSMB(
     id: String,
     props: CfnLocationSMBProps,
   ) :
-      this(software.amazon.awscdk.services.datasync.CfnLocationSMB(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLocationSMBProps::unwrap))
+      this(software.amazon.awscdk.services.datasync.CfnLocationSMB(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLocationSMBProps.Companion::unwrap))
   )
 
   public constructor(
@@ -113,7 +113,7 @@ public open class CfnLocationSMB(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -125,14 +125,14 @@ public open class CfnLocationSMB(
    * Specifies the version of the SMB protocol that DataSync uses to access your SMB file server.
    */
   public open fun mountOptions(`value`: IResolvable) {
-    unwrap(this).setMountOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMountOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the version of the SMB protocol that DataSync uses to access your SMB file server.
    */
   public open fun mountOptions(`value`: MountOptionsProperty) {
-    unwrap(this).setMountOptions(`value`.let(MountOptionsProperty::unwrap))
+    unwrap(this).setMountOptions(`value`.let(MountOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -200,7 +200,7 @@ public open class CfnLocationSMB(
    * Specifies labels that help you categorize, filter, and search for your AWS resources.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -421,7 +421,7 @@ public open class CfnLocationSMB(
      * your SMB file server. 
      */
     override fun mountOptions(mountOptions: IResolvable) {
-      cdkBuilder.mountOptions(mountOptions.let(IResolvable::unwrap))
+      cdkBuilder.mountOptions(mountOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -432,7 +432,7 @@ public open class CfnLocationSMB(
      * your SMB file server. 
      */
     override fun mountOptions(mountOptions: MountOptionsProperty) {
-      cdkBuilder.mountOptions(mountOptions.let(MountOptionsProperty::unwrap))
+      cdkBuilder.mountOptions(mountOptions.let(MountOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -512,7 +512,7 @@ public open class CfnLocationSMB(
      * resources. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

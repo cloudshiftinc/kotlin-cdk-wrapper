@@ -18,7 +18,7 @@ public open class Arn(
         software.amazon.awscdk.Arn.extractResourceName(arn, resourceType)
 
     public fun format(components: ArnComponents): String =
-        software.amazon.awscdk.Arn.format(components.let(ArnComponents::unwrap))
+        software.amazon.awscdk.Arn.format(components.let(ArnComponents.Companion::unwrap))
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("83161df07d376e5b5e803618627b191a1ad135e49cc4e2242ec6d546f408d688")
@@ -26,12 +26,12 @@ public open class Arn(
         format(ArnComponents(components))
 
     public fun format(components: ArnComponents, stack: Stack): String =
-        software.amazon.awscdk.Arn.format(components.let(ArnComponents::unwrap),
-        stack.let(Stack::unwrap))
+        software.amazon.awscdk.Arn.format(components.let(ArnComponents.Companion::unwrap),
+        stack.let(Stack.Companion::unwrap))
 
     public fun split(arn: String, arnFormat: ArnFormat): ArnComponents =
         software.amazon.awscdk.Arn.split(arn,
-        arnFormat.let(ArnFormat::unwrap)).let(ArnComponents::wrap)
+        arnFormat.let(ArnFormat.Companion::unwrap)).let(ArnComponents::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.Arn): Arn = Arn(cdkObject)
 

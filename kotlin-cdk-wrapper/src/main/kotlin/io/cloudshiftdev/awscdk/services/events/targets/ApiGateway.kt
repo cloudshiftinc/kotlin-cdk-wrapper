@@ -57,13 +57,13 @@ public open class ApiGateway(
   cdkObject: software.amazon.awscdk.services.events.targets.ApiGateway,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(restApi: CloudshiftdevAwscdkServicesApigatewayIRestApi) :
-      this(software.amazon.awscdk.services.events.targets.ApiGateway(restApi.let(CloudshiftdevAwscdkServicesApigatewayIRestApi::unwrap))
+      this(software.amazon.awscdk.services.events.targets.ApiGateway(restApi.let(CloudshiftdevAwscdkServicesApigatewayIRestApi.Companion::unwrap))
   )
 
   public constructor(restApi: CloudshiftdevAwscdkServicesApigatewayIRestApi, props: ApiGatewayProps)
       :
-      this(software.amazon.awscdk.services.events.targets.ApiGateway(restApi.let(CloudshiftdevAwscdkServicesApigatewayIRestApi::unwrap),
-      props.let(ApiGatewayProps::unwrap))
+      this(software.amazon.awscdk.services.events.targets.ApiGateway(restApi.let(CloudshiftdevAwscdkServicesApigatewayIRestApi.Companion::unwrap),
+      props.let(ApiGatewayProps.Companion::unwrap))
   )
 
   public constructor(restApi: CloudshiftdevAwscdkServicesApigatewayIRestApi,
@@ -79,7 +79,7 @@ public open class ApiGateway(
    * @param _id
    */
   public override fun bind(rule: IRule): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap)).let(RuleTargetConfig::wrap)
 
   /**
    * Returns a RuleTarget that can be used to trigger this API Gateway REST APIs as a result from an
@@ -90,7 +90,7 @@ public open class ApiGateway(
    * @param _id
    */
   public override fun bind(rule: IRule, id: String): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap), id).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap), id).let(RuleTargetConfig::wrap)
 
   /**
    * Returns the target IRestApi.
@@ -269,7 +269,7 @@ public open class ApiGateway(
      * 
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -282,7 +282,7 @@ public open class ApiGateway(
      * given rule is triggered. 
      */
     override fun eventRole(eventRole: IRole) {
-      cdkBuilder.eventRole(eventRole.let(IRole::unwrap))
+      cdkBuilder.eventRole(eventRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -308,7 +308,7 @@ public open class ApiGateway(
      * processing. 
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -367,7 +367,7 @@ public open class ApiGateway(
      * @param postBody This will be the post request body send to the API. 
      */
     override fun postBody(postBody: RuleTargetInput) {
-      cdkBuilder.postBody(postBody.let(RuleTargetInput::unwrap))
+      cdkBuilder.postBody(postBody.let(RuleTargetInput.Companion::unwrap))
     }
 
     /**

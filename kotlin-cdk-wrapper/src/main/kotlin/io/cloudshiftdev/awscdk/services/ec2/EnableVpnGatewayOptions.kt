@@ -96,7 +96,7 @@ public interface EnableVpnGatewayOptions : VpnGatewayProps {
      * added.
      */
     override fun vpnRoutePropagation(vpnRoutePropagation: List<SubnetSelection>) {
-      cdkBuilder.vpnRoutePropagation(vpnRoutePropagation.map(SubnetSelection::unwrap))
+      cdkBuilder.vpnRoutePropagation(vpnRoutePropagation.map(SubnetSelection.Companion::unwrap))
     }
 
     /**

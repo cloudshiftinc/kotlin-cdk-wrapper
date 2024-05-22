@@ -48,7 +48,7 @@ public open class ManagedKafkaEventSource(
   cdkObject: software.amazon.awscdk.services.lambda.eventsources.ManagedKafkaEventSource,
 ) : StreamEventSource(cdkObject) {
   public constructor(props: ManagedKafkaEventSourceProps) :
-      this(software.amazon.awscdk.services.lambda.eventsources.ManagedKafkaEventSource(props.let(ManagedKafkaEventSourceProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.eventsources.ManagedKafkaEventSource(props.let(ManagedKafkaEventSourceProps.Companion::unwrap))
   )
 
   public constructor(props: ManagedKafkaEventSourceProps.Builder.() -> Unit) :
@@ -61,7 +61,7 @@ public open class ManagedKafkaEventSource(
    * @param target 
    */
   public override fun bind(target: IFunction) {
-    unwrap(this).bind(target.let(IFunction::unwrap))
+    unwrap(this).bind(target.let(IFunction.Companion::unwrap))
   }
 
   /**
@@ -309,7 +309,7 @@ public open class ManagedKafkaEventSource(
      * function. 
      */
     override fun maxBatchingWindow(maxBatchingWindow: Duration) {
-      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration::unwrap))
+      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -322,7 +322,7 @@ public open class ManagedKafkaEventSource(
      * @param onFailure Add an on Failure Destination for this Kafka event. 
      */
     override fun onFailure(onFailure: IEventSourceDlq) {
-      cdkBuilder.onFailure(onFailure.let(IEventSourceDlq::unwrap))
+      cdkBuilder.onFailure(onFailure.let(IEventSourceDlq.Companion::unwrap))
     }
 
     /**
@@ -337,7 +337,7 @@ public open class ManagedKafkaEventSource(
      * is required if your Kafka brokers are accessed over the Internet. 
      */
     override fun secret(secret: ISecret) {
-      cdkBuilder.secret(secret.let(ISecret::unwrap))
+      cdkBuilder.secret(secret.let(ISecret.Companion::unwrap))
     }
 
     /**
@@ -346,7 +346,7 @@ public open class ManagedKafkaEventSource(
      * @param startingPosition Where to begin consuming the stream. 
      */
     override fun startingPosition(startingPosition: StartingPosition) {
-      cdkBuilder.startingPosition(startingPosition.let(StartingPosition::unwrap))
+      cdkBuilder.startingPosition(startingPosition.let(StartingPosition.Companion::unwrap))
     }
 
     /**

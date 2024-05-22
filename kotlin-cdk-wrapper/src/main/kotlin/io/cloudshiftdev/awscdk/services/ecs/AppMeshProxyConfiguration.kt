@@ -48,7 +48,7 @@ public open class AppMeshProxyConfiguration(
   cdkObject: software.amazon.awscdk.services.ecs.AppMeshProxyConfiguration,
 ) : ProxyConfiguration(cdkObject) {
   public constructor(props: AppMeshProxyConfigurationConfigProps) :
-      this(software.amazon.awscdk.services.ecs.AppMeshProxyConfiguration(props.let(AppMeshProxyConfigurationConfigProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.AppMeshProxyConfiguration(props.let(AppMeshProxyConfigurationConfigProps.Companion::unwrap))
   )
 
   public constructor(props: AppMeshProxyConfigurationConfigProps.Builder.() -> Unit) :
@@ -62,8 +62,9 @@ public open class AppMeshProxyConfiguration(
    * @param _taskDefinition 
    */
   public override fun bind(scope: Construct, taskDefinition: TaskDefinition):
-      CfnTaskDefinition.ProxyConfigurationProperty = unwrap(this).bind(scope.let(Construct::unwrap),
-      taskDefinition.let(TaskDefinition::unwrap)).let(CfnTaskDefinition.ProxyConfigurationProperty::wrap)
+      CfnTaskDefinition.ProxyConfigurationProperty =
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      taskDefinition.let(TaskDefinition.Companion::unwrap)).let(CfnTaskDefinition.ProxyConfigurationProperty::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.AppMeshProxyConfiguration].
@@ -119,7 +120,7 @@ public open class AppMeshProxyConfiguration(
      * Network Interface (CNI) plugin. 
      */
     override fun properties(properties: AppMeshProxyConfigurationProps) {
-      cdkBuilder.properties(properties.let(AppMeshProxyConfigurationProps::unwrap))
+      cdkBuilder.properties(properties.let(AppMeshProxyConfigurationProps.Companion::unwrap))
     }
 
     /**

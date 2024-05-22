@@ -118,7 +118,7 @@ public interface HttpIntegrationProps {
      * @param options Integration options, such as request/resopnse mapping, content handling, etc.
      */
     override fun options(options: IntegrationOptions) {
-      cdkBuilder.options(options.let(IntegrationOptions::unwrap))
+      cdkBuilder.options(options.let(IntegrationOptions.Companion::unwrap))
     }
 
     /**

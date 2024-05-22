@@ -84,7 +84,7 @@ public interface GatewayResponseProps : GatewayResponseOptions {
      * @param restApi Rest api resource to target. 
      */
     override fun restApi(restApi: IRestApi) {
-      cdkBuilder.restApi(restApi.let(IRestApi::unwrap))
+      cdkBuilder.restApi(restApi.let(IRestApi.Companion::unwrap))
     }
 
     /**
@@ -105,7 +105,7 @@ public interface GatewayResponseProps : GatewayResponseOptions {
      * @param type Response type to associate with gateway response. 
      */
     override fun type(type: ResponseType) {
-      cdkBuilder.type(type.let(ResponseType::unwrap))
+      cdkBuilder.type(type.let(ResponseType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.GatewayResponseProps =

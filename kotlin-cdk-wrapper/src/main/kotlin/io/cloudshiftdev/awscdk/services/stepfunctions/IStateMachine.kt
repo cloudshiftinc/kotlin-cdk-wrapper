@@ -326,7 +326,7 @@ public interface IStateMachine : IResource, IGrantable {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -348,7 +348,7 @@ public interface IStateMachine : IResource, IGrantable {
      * @param actions The list of desired actions. 
      */
     override fun grant(identity: IGrantable, vararg actions: String): Grant =
-        unwrap(this).grant(identity.let(IGrantable::unwrap),
+        unwrap(this).grant(identity.let(IGrantable.Companion::unwrap),
         *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
     /**
@@ -358,7 +358,7 @@ public interface IStateMachine : IResource, IGrantable {
      * @param actions The list of desired actions. 
      */
     override fun grantExecution(identity: IGrantable, vararg actions: String): Grant =
-        unwrap(this).grantExecution(identity.let(IGrantable::unwrap),
+        unwrap(this).grantExecution(identity.let(IGrantable.Companion::unwrap),
         *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
     /**
@@ -373,7 +373,7 @@ public interface IStateMachine : IResource, IGrantable {
      * @param identity The principal. 
      */
     override fun grantRead(identity: IGrantable): Grant =
-        unwrap(this).grantRead(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantRead(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grant the given identity permissions to start an execution of this state machine.
@@ -381,7 +381,7 @@ public interface IStateMachine : IResource, IGrantable {
      * @param identity The principal. 
      */
     override fun grantStartExecution(identity: IGrantable): Grant =
-        unwrap(this).grantStartExecution(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantStartExecution(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grant the given identity permissions to start a synchronous execution of this state machine.
@@ -389,7 +389,7 @@ public interface IStateMachine : IResource, IGrantable {
      * @param identity The principal. 
      */
     override fun grantStartSyncExecution(identity: IGrantable): Grant =
-        unwrap(this).grantStartSyncExecution(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantStartSyncExecution(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grant the given identity read permissions for this state machine.
@@ -397,7 +397,7 @@ public interface IStateMachine : IResource, IGrantable {
      * @param identity The principal. 
      */
     override fun grantTaskResponse(identity: IGrantable): Grant =
-        unwrap(this).grantTaskResponse(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantTaskResponse(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Return the given named metric for this State Machine's executions.
@@ -419,7 +419,8 @@ public interface IStateMachine : IResource, IGrantable {
      * @param props
      */
     override fun metric(metricName: String, props: MetricOptions): Metric =
-        unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metric(metricName,
+        props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Return the given named metric for this State Machine's executions.
@@ -451,7 +452,7 @@ public interface IStateMachine : IResource, IGrantable {
      * @param props
      */
     override fun metricAborted(props: MetricOptions): Metric =
-        unwrap(this).metricAborted(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricAborted(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the number of executions that were aborted.
@@ -482,7 +483,7 @@ public interface IStateMachine : IResource, IGrantable {
      * @param props
      */
     override fun metricFailed(props: MetricOptions): Metric =
-        unwrap(this).metricFailed(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricFailed(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the number of executions that failed.
@@ -513,7 +514,7 @@ public interface IStateMachine : IResource, IGrantable {
      * @param props
      */
     override fun metricStarted(props: MetricOptions): Metric =
-        unwrap(this).metricStarted(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricStarted(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the number of executions that were started.
@@ -544,7 +545,7 @@ public interface IStateMachine : IResource, IGrantable {
      * @param props
      */
     override fun metricSucceeded(props: MetricOptions): Metric =
-        unwrap(this).metricSucceeded(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricSucceeded(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the number of executions that succeeded.
@@ -575,7 +576,7 @@ public interface IStateMachine : IResource, IGrantable {
      * @param props
      */
     override fun metricThrottled(props: MetricOptions): Metric =
-        unwrap(this).metricThrottled(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricThrottled(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the number of executions that were throttled.
@@ -608,7 +609,7 @@ public interface IStateMachine : IResource, IGrantable {
      * @param props
      */
     override fun metricTime(props: MetricOptions): Metric =
-        unwrap(this).metricTime(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricTime(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the interval, in milliseconds, between the time the execution starts and the time
@@ -640,7 +641,7 @@ public interface IStateMachine : IResource, IGrantable {
      * @param props
      */
     override fun metricTimedOut(props: MetricOptions): Metric =
-        unwrap(this).metricTimedOut(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricTimedOut(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the number of executions that timed out.

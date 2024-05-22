@@ -163,7 +163,7 @@ public interface LoadBalancerListenerContextQuery : LoadBalancerFilter {
      * @param listenerProtocol Filter by listener protocol.
      */
     override fun listenerProtocol(listenerProtocol: LoadBalancerListenerProtocol) {
-      cdkBuilder.listenerProtocol(listenerProtocol.let(LoadBalancerListenerProtocol::unwrap))
+      cdkBuilder.listenerProtocol(listenerProtocol.let(LoadBalancerListenerProtocol.Companion::unwrap))
     }
 
     /**
@@ -177,7 +177,7 @@ public interface LoadBalancerListenerContextQuery : LoadBalancerFilter {
      * @param loadBalancerTags Match load balancer tags.
      */
     override fun loadBalancerTags(loadBalancerTags: List<Tag>) {
-      cdkBuilder.loadBalancerTags(loadBalancerTags.map(Tag::unwrap))
+      cdkBuilder.loadBalancerTags(loadBalancerTags.map(Tag.Companion::unwrap))
     }
 
     /**
@@ -190,7 +190,7 @@ public interface LoadBalancerListenerContextQuery : LoadBalancerFilter {
      * @param loadBalancerType Filter load balancers by their type. 
      */
     override fun loadBalancerType(loadBalancerType: LoadBalancerType) {
-      cdkBuilder.loadBalancerType(loadBalancerType.let(LoadBalancerType::unwrap))
+      cdkBuilder.loadBalancerType(loadBalancerType.let(LoadBalancerType.Companion::unwrap))
     }
 
     /**

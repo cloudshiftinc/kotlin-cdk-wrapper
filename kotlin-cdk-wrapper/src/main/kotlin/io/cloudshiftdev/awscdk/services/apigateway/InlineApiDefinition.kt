@@ -32,7 +32,7 @@ public open class InlineApiDefinition(
    * @param _scope 
    */
   public override fun bind(scope: Construct): ApiDefinitionConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(ApiDefinitionConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(ApiDefinitionConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.InlineApiDefinition):

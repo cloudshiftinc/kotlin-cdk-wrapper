@@ -22,46 +22,19 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.*;
- * import io.cloudshiftdev.awscdk.services.apigateway.*;
- * import io.cloudshiftdev.awscdk.services.iam.*;
- * DockerImage dockerImage;
- * IGrantable grantable;
- * ILocalBundling localBundling;
- * AssetApiDefinition assetApiDefinition = AssetApiDefinition.Builder.create("path")
- * .assetHash("assetHash")
- * .assetHashType(AssetHashType.SOURCE)
- * .bundling(BundlingOptions.builder()
- * .image(dockerImage)
- * // the properties below are optional
- * .bundlingFileAccess(BundlingFileAccess.VOLUME_COPY)
- * .command(List.of("command"))
- * .entrypoint(List.of("entrypoint"))
- * .environment(Map.of(
- * "environmentKey", "environment"))
- * .local(localBundling)
- * .network("network")
- * .outputType(BundlingOutput.ARCHIVED)
- * .platform("platform")
- * .securityOpt("securityOpt")
- * .user("user")
- * .volumes(List.of(DockerVolume.builder()
- * .containerPath("containerPath")
- * .hostPath("hostPath")
- * // the properties below are optional
- * .consistency(DockerVolumeConsistency.CONSISTENT)
- * .build()))
- * .volumesFrom(List.of("volumesFrom"))
- * .workingDirectory("workingDirectory")
- * .build())
- * .deployTime(false)
- * .exclude(List.of("exclude"))
- * .followSymlinks(SymlinkFollowMode.NEVER)
- * .ignoreMode(IgnoreMode.GLOB)
- * .readers(List.of(grantable))
+ * AssetApiDefinition myApiDefinition = ApiDefinition.fromAsset("path-to-file.json");
+ * SpecRestApi specRestApi = SpecRestApi.Builder.create(this, "my-specrest-api")
+ * .deploy(false)
+ * .apiDefinition(myApiDefinition)
  * .build();
+ * // Use `stageName` to deploy to an existing stage
+ * Deployment deployment = Deployment.Builder.create(this, "my-deployment")
+ * .api(specRestApi)
+ * .stageName("dev")
+ * .retainDeployments(true)
+ * .build();
+ * // Trigger a new deployment on OpenAPI definition updates
+ * deployment.addToLogicalId(myApiDefinition);
  * ```
  */
 public open class AssetApiDefinition(
@@ -73,7 +46,7 @@ public open class AssetApiDefinition(
 
   public constructor(path: String, options: AssetOptions) :
       this(software.amazon.awscdk.services.apigateway.AssetApiDefinition(path,
-      options.let(AssetOptions::unwrap))
+      options.let(AssetOptions.Companion::unwrap))
   )
 
   public constructor(path: String, options: AssetOptions.Builder.() -> Unit) : this(path,
@@ -87,7 +60,7 @@ public open class AssetApiDefinition(
    * @param scope 
    */
   public override fun bind(scope: Construct): ApiDefinitionConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(ApiDefinitionConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(ApiDefinitionConfig::wrap)
 
   /**
    * Called after the CFN RestApi resource has been created to allow the Api Definition to bind to
@@ -100,7 +73,8 @@ public open class AssetApiDefinition(
    * @param restApi 
    */
   public override fun bindAfterCreate(scope: Construct, restApi: IRestApi) {
-    unwrap(this).bindAfterCreate(scope.let(Construct::unwrap), restApi.let(IRestApi::unwrap))
+    unwrap(this).bindAfterCreate(scope.let(Construct.Companion::unwrap),
+        restApi.let(IRestApi.Companion::unwrap))
   }
 
   /**
@@ -299,7 +273,7 @@ public open class AssetApiDefinition(
      * @param assetHashType Specifies the type of hash to calculate for this asset. 
      */
     override fun assetHashType(assetHashType: AssetHashType) {
-      cdkBuilder.assetHashType(assetHashType.let(AssetHashType::unwrap))
+      cdkBuilder.assetHashType(assetHashType.let(AssetHashType.Companion::unwrap))
     }
 
     /**
@@ -317,7 +291,7 @@ public open class AssetApiDefinition(
      * bundling provider. 
      */
     override fun bundling(bundling: BundlingOptions) {
-      cdkBuilder.bundling(bundling.let(BundlingOptions::unwrap))
+      cdkBuilder.bundling(bundling.let(BundlingOptions.Companion::unwrap))
     }
 
     /**
@@ -394,7 +368,7 @@ public open class AssetApiDefinition(
      * @param followSymlinks A strategy for how to handle symlinks. 
      */
     override fun followSymlinks(followSymlinks: SymlinkFollowMode) {
-      cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode::unwrap))
+      cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode.Companion::unwrap))
     }
 
     /**
@@ -405,7 +379,7 @@ public open class AssetApiDefinition(
      * @param ignoreMode The ignore behavior to use for `exclude` patterns. 
      */
     override fun ignoreMode(ignoreMode: IgnoreMode) {
-      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode::unwrap))
+      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode.Companion::unwrap))
     }
 
     /**
@@ -418,7 +392,7 @@ public open class AssetApiDefinition(
      * @param readers A list of principals that should be able to read this asset from S3. 
      */
     override fun readers(readers: List<IGrantable>) {
-      cdkBuilder.readers(readers.map(IGrantable::unwrap))
+      cdkBuilder.readers(readers.map(IGrantable.Companion::unwrap))
     }
 
     /**

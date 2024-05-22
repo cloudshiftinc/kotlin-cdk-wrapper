@@ -84,7 +84,7 @@ public interface ConfigurationSetEventDestinationProps : ConfigurationSetEventDe
      * @param configurationSet The configuration set that contains the event destination. 
      */
     override fun configurationSet(configurationSet: IConfigurationSet) {
-      cdkBuilder.configurationSet(configurationSet.let(IConfigurationSet::unwrap))
+      cdkBuilder.configurationSet(configurationSet.let(IConfigurationSet.Companion::unwrap))
     }
 
     /**
@@ -100,7 +100,7 @@ public interface ConfigurationSetEventDestinationProps : ConfigurationSetEventDe
      * @param destination The event destination. 
      */
     override fun destination(destination: EventDestination) {
-      cdkBuilder.destination(destination.let(EventDestination::unwrap))
+      cdkBuilder.destination(destination.let(EventDestination.Companion::unwrap))
     }
 
     /**
@@ -114,7 +114,7 @@ public interface ConfigurationSetEventDestinationProps : ConfigurationSetEventDe
      * @param events The type of email sending events to publish to the event destination.
      */
     override fun events(events: List<EmailSendingEvent>) {
-      cdkBuilder.events(events.map(EmailSendingEvent::unwrap))
+      cdkBuilder.events(events.map(EmailSendingEvent.Companion::unwrap))
     }
 
     /**

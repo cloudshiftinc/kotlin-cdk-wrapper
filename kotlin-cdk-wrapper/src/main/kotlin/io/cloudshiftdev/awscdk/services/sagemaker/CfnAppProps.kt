@@ -182,7 +182,7 @@ public interface CfnAppProps {
      * the instance type that the version runs on.
      */
     override fun resourceSpec(resourceSpec: IResolvable) {
-      cdkBuilder.resourceSpec(resourceSpec.let(IResolvable::unwrap))
+      cdkBuilder.resourceSpec(resourceSpec.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -190,7 +190,7 @@ public interface CfnAppProps {
      * the instance type that the version runs on.
      */
     override fun resourceSpec(resourceSpec: CfnApp.ResourceSpecProperty) {
-      cdkBuilder.resourceSpec(resourceSpec.let(CfnApp.ResourceSpecProperty::unwrap))
+      cdkBuilder.resourceSpec(resourceSpec.let(CfnApp.ResourceSpecProperty.Companion::unwrap))
     }
 
     /**
@@ -209,7 +209,7 @@ public interface CfnAppProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

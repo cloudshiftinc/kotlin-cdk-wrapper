@@ -40,7 +40,7 @@ public open class EcrSourceAction(
   cdkObject: software.amazon.awscdk.services.codepipeline.actions.EcrSourceAction,
 ) : Action(cdkObject) {
   public constructor(props: EcrSourceActionProps) :
-      this(software.amazon.awscdk.services.codepipeline.actions.EcrSourceAction(props.let(EcrSourceActionProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.actions.EcrSourceAction(props.let(EcrSourceActionProps.Companion::unwrap))
   )
 
   public constructor(props: EcrSourceActionProps.Builder.() -> Unit) :
@@ -163,7 +163,7 @@ public open class EcrSourceAction(
      * @param output 
      */
     override fun output(output: Artifact) {
-      cdkBuilder.output(output.let(Artifact::unwrap))
+      cdkBuilder.output(output.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -172,7 +172,7 @@ public open class EcrSourceAction(
      * @param repository The repository that will be watched for changes. 
      */
     override fun repository(repository: IRepository) {
-      cdkBuilder.repository(repository.let(IRepository::unwrap))
+      cdkBuilder.repository(repository.let(IRepository.Companion::unwrap))
     }
 
     /**
@@ -189,7 +189,7 @@ public open class EcrSourceAction(
      * @param role The Role in which context's this Action will be executing in. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**

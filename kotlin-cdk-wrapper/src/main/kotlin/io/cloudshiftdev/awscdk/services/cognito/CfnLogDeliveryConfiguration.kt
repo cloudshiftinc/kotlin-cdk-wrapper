@@ -50,8 +50,8 @@ public open class CfnLogDeliveryConfiguration(
     id: String,
     props: CfnLogDeliveryConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLogDeliveryConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.cognito.CfnLogDeliveryConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLogDeliveryConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -72,7 +72,7 @@ public open class CfnLogDeliveryConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -84,7 +84,7 @@ public open class CfnLogDeliveryConfiguration(
    * The detailed activity logging destination of a user pool.
    */
   public open fun logConfigurations(`value`: IResolvable) {
-    unwrap(this).setLogConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLogConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -165,7 +165,7 @@ public open class CfnLogDeliveryConfiguration(
      * @param logConfigurations The detailed activity logging destination of a user pool. 
      */
     override fun logConfigurations(logConfigurations: IResolvable) {
-      cdkBuilder.logConfigurations(logConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.logConfigurations(logConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -438,7 +438,7 @@ public open class CfnLogDeliveryConfiguration(
        * detailed activity logging configuration.
        */
       override fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: IResolvable) {
-        cdkBuilder.cloudWatchLogsConfiguration(cloudWatchLogsConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchLogsConfiguration(cloudWatchLogsConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -447,7 +447,7 @@ public open class CfnLogDeliveryConfiguration(
        */
       override
           fun cloudWatchLogsConfiguration(cloudWatchLogsConfiguration: CloudWatchLogsConfigurationProperty) {
-        cdkBuilder.cloudWatchLogsConfiguration(cloudWatchLogsConfiguration.let(CloudWatchLogsConfigurationProperty::unwrap))
+        cdkBuilder.cloudWatchLogsConfiguration(cloudWatchLogsConfiguration.let(CloudWatchLogsConfigurationProperty.Companion::unwrap))
       }
 
       /**

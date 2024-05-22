@@ -102,7 +102,7 @@ public interface ConfigurationSetEventDestinationOptions {
      * @param destination The event destination. 
      */
     override fun destination(destination: EventDestination) {
-      cdkBuilder.destination(destination.let(EventDestination::unwrap))
+      cdkBuilder.destination(destination.let(EventDestination.Companion::unwrap))
     }
 
     /**
@@ -116,7 +116,7 @@ public interface ConfigurationSetEventDestinationOptions {
      * @param events The type of email sending events to publish to the event destination.
      */
     override fun events(events: List<EmailSendingEvent>) {
-      cdkBuilder.events(events.map(EmailSendingEvent::unwrap))
+      cdkBuilder.events(events.map(EmailSendingEvent.Companion::unwrap))
     }
 
     /**

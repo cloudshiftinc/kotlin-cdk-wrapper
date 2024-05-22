@@ -50,7 +50,7 @@ public open class CfnSoftwarePackage(
   cdkObject: software.amazon.awscdk.services.iot.CfnSoftwarePackage,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.iot.CfnSoftwarePackage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.iot.CfnSoftwarePackage(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -59,8 +59,8 @@ public open class CfnSoftwarePackage(
     id: String,
     props: CfnSoftwarePackageProps,
   ) :
-      this(software.amazon.awscdk.services.iot.CfnSoftwarePackage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSoftwarePackageProps::unwrap))
+      this(software.amazon.awscdk.services.iot.CfnSoftwarePackage(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSoftwarePackageProps.Companion::unwrap))
   )
 
   public constructor(
@@ -99,7 +99,7 @@ public open class CfnSoftwarePackage(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -123,7 +123,7 @@ public open class CfnSoftwarePackage(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -195,7 +195,7 @@ public open class CfnSoftwarePackage(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

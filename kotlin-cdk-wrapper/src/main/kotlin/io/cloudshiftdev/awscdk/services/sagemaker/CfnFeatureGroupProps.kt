@@ -328,7 +328,7 @@ public interface CfnFeatureGroupProps {
      * You can create up to 2,500 `FeatureDefinition` s per `FeatureGroup` .
      */
     override fun featureDefinitions(featureDefinitions: IResolvable) {
-      cdkBuilder.featureDefinitions(featureDefinitions.let(IResolvable::unwrap))
+      cdkBuilder.featureDefinitions(featureDefinitions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -399,7 +399,7 @@ public interface CfnFeatureGroupProps {
      * @param tags Tags used to define a `FeatureGroup` .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -423,7 +423,7 @@ public interface CfnFeatureGroupProps {
      * tier online store.
      */
     override fun throughputConfig(throughputConfig: IResolvable) {
-      cdkBuilder.throughputConfig(throughputConfig.let(IResolvable::unwrap))
+      cdkBuilder.throughputConfig(throughputConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -442,7 +442,7 @@ public interface CfnFeatureGroupProps {
      * tier online store.
      */
     override fun throughputConfig(throughputConfig: CfnFeatureGroup.ThroughputConfigProperty) {
-      cdkBuilder.throughputConfig(throughputConfig.let(CfnFeatureGroup.ThroughputConfigProperty::unwrap))
+      cdkBuilder.throughputConfig(throughputConfig.let(CfnFeatureGroup.ThroughputConfigProperty.Companion::unwrap))
     }
 
     /**

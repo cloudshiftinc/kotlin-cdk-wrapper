@@ -1096,7 +1096,7 @@ public interface CfnClusterProps {
      * Oozie, Zeppelin, and so on.
      */
     override fun applications(applications: IResolvable) {
-      cdkBuilder.applications(applications.let(IResolvable::unwrap))
+      cdkBuilder.applications(applications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1130,7 +1130,7 @@ public interface CfnClusterProps {
      * termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
      */
     override fun autoTerminationPolicy(autoTerminationPolicy: IResolvable) {
-      cdkBuilder.autoTerminationPolicy(autoTerminationPolicy.let(IResolvable::unwrap))
+      cdkBuilder.autoTerminationPolicy(autoTerminationPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1141,7 +1141,7 @@ public interface CfnClusterProps {
      */
     override
         fun autoTerminationPolicy(autoTerminationPolicy: CfnCluster.AutoTerminationPolicyProperty) {
-      cdkBuilder.autoTerminationPolicy(autoTerminationPolicy.let(CfnCluster.AutoTerminationPolicyProperty::unwrap))
+      cdkBuilder.autoTerminationPolicy(autoTerminationPolicy.let(CfnCluster.AutoTerminationPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -1162,7 +1162,7 @@ public interface CfnClusterProps {
      * cluster nodes.
      */
     override fun bootstrapActions(bootstrapActions: IResolvable) {
-      cdkBuilder.bootstrapActions(bootstrapActions.let(IResolvable::unwrap))
+      cdkBuilder.bootstrapActions(bootstrapActions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1185,7 +1185,7 @@ public interface CfnClusterProps {
      * configurations that are supplied to the Amazon EMR cluster.
      */
     override fun configurations(configurations: IResolvable) {
-      cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
+      cdkBuilder.configurations(configurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1242,14 +1242,14 @@ public interface CfnClusterProps {
      * @param instances A specification of the number and type of Amazon EC2 instances. 
      */
     override fun instances(instances: IResolvable) {
-      cdkBuilder.instances(instances.let(IResolvable::unwrap))
+      cdkBuilder.instances(instances.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param instances A specification of the number and type of Amazon EC2 instances. 
      */
     override fun instances(instances: CfnCluster.JobFlowInstancesConfigProperty) {
-      cdkBuilder.instances(instances.let(CfnCluster.JobFlowInstancesConfigProperty::unwrap))
+      cdkBuilder.instances(instances.let(CfnCluster.JobFlowInstancesConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1278,7 +1278,7 @@ public interface CfnClusterProps {
      * *Amazon EMR Management Guide* .
      */
     override fun kerberosAttributes(kerberosAttributes: IResolvable) {
-      cdkBuilder.kerberosAttributes(kerberosAttributes.let(IResolvable::unwrap))
+      cdkBuilder.kerberosAttributes(kerberosAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1289,7 +1289,7 @@ public interface CfnClusterProps {
      * *Amazon EMR Management Guide* .
      */
     override fun kerberosAttributes(kerberosAttributes: CfnCluster.KerberosAttributesProperty) {
-      cdkBuilder.kerberosAttributes(kerberosAttributes.let(CfnCluster.KerberosAttributesProperty::unwrap))
+      cdkBuilder.kerberosAttributes(kerberosAttributes.let(CfnCluster.KerberosAttributesProperty.Companion::unwrap))
     }
 
     /**
@@ -1329,7 +1329,7 @@ public interface CfnClusterProps {
      * nodes. The master node cannot be scaled after initial configuration.
      */
     override fun managedScalingPolicy(managedScalingPolicy: IResolvable) {
-      cdkBuilder.managedScalingPolicy(managedScalingPolicy.let(IResolvable::unwrap))
+      cdkBuilder.managedScalingPolicy(managedScalingPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1341,7 +1341,7 @@ public interface CfnClusterProps {
      */
     override
         fun managedScalingPolicy(managedScalingPolicy: CfnCluster.ManagedScalingPolicyProperty) {
-      cdkBuilder.managedScalingPolicy(managedScalingPolicy.let(CfnCluster.ManagedScalingPolicyProperty::unwrap))
+      cdkBuilder.managedScalingPolicy(managedScalingPolicy.let(CfnCluster.ManagedScalingPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -1379,7 +1379,7 @@ public interface CfnClusterProps {
      * @param placementGroupConfigs the value to be set.
      */
     override fun placementGroupConfigs(placementGroupConfigs: IResolvable) {
-      cdkBuilder.placementGroupConfigs(placementGroupConfigs.let(IResolvable::unwrap))
+      cdkBuilder.placementGroupConfigs(placementGroupConfigs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1452,7 +1452,7 @@ public interface CfnClusterProps {
      * @param steps A list of steps to run.
      */
     override fun steps(steps: IResolvable) {
-      cdkBuilder.steps(steps.let(IResolvable::unwrap))
+      cdkBuilder.steps(steps.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1471,7 +1471,7 @@ public interface CfnClusterProps {
      * @param tags A list of tags associated with a cluster.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1510,7 +1510,7 @@ public interface CfnClusterProps {
      * .
      */
     override fun visibleToAllUsers(visibleToAllUsers: IResolvable) {
-      cdkBuilder.visibleToAllUsers(visibleToAllUsers.let(IResolvable::unwrap))
+      cdkBuilder.visibleToAllUsers(visibleToAllUsers.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.emr.CfnClusterProps = cdkBuilder.build()

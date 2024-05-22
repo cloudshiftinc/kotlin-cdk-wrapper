@@ -37,7 +37,7 @@ public open class WebSocketApi(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.WebSocketApi,
 ) : Resource(cdkObject), IWebSocketApi, IApi {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.apigatewayv2.WebSocketApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.apigatewayv2.WebSocketApi(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -46,8 +46,8 @@ public open class WebSocketApi(
     id: String,
     props: WebSocketApiProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.WebSocketApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(WebSocketApiProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.WebSocketApi(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(WebSocketApiProps.Companion::unwrap))
   )
 
   public constructor(
@@ -65,7 +65,7 @@ public open class WebSocketApi(
    */
   public open fun addRoute(routeKey: String, options: WebSocketRouteOptions): WebSocketRoute =
       unwrap(this).addRoute(routeKey,
-      options.let(WebSocketRouteOptions::unwrap)).let(WebSocketRoute::wrap)
+      options.let(WebSocketRouteOptions.Companion::unwrap)).let(WebSocketRoute::wrap)
 
   /**
    * Add a new route.
@@ -168,7 +168,7 @@ public open class WebSocketApi(
    * @param identity The principal. 
    */
   public open fun grantManageConnections(identity: IGrantable): Grant =
-      unwrap(this).grantManageConnections(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantManageConnections(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Return the given named metric for this Api Gateway.
@@ -186,7 +186,7 @@ public open class WebSocketApi(
    * @param props
    */
   public override fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Return the given named metric for this Api Gateway.
@@ -330,7 +330,7 @@ public open class WebSocketApi(
      */
     override
         fun apiKeySelectionExpression(apiKeySelectionExpression: WebSocketApiKeySelectionExpression) {
-      cdkBuilder.apiKeySelectionExpression(apiKeySelectionExpression.let(WebSocketApiKeySelectionExpression::unwrap))
+      cdkBuilder.apiKeySelectionExpression(apiKeySelectionExpression.let(WebSocketApiKeySelectionExpression.Companion::unwrap))
     }
 
     /**
@@ -352,7 +352,7 @@ public open class WebSocketApi(
      * @param connectRouteOptions Options to configure a '$connect' route. 
      */
     override fun connectRouteOptions(connectRouteOptions: WebSocketRouteOptions) {
-      cdkBuilder.connectRouteOptions(connectRouteOptions.let(WebSocketRouteOptions::unwrap))
+      cdkBuilder.connectRouteOptions(connectRouteOptions.let(WebSocketRouteOptions.Companion::unwrap))
     }
 
     /**
@@ -375,7 +375,7 @@ public open class WebSocketApi(
      * @param defaultRouteOptions Options to configure a '$default' route. 
      */
     override fun defaultRouteOptions(defaultRouteOptions: WebSocketRouteOptions) {
-      cdkBuilder.defaultRouteOptions(defaultRouteOptions.let(WebSocketRouteOptions::unwrap))
+      cdkBuilder.defaultRouteOptions(defaultRouteOptions.let(WebSocketRouteOptions.Companion::unwrap))
     }
 
     /**
@@ -409,7 +409,7 @@ public open class WebSocketApi(
      * @param disconnectRouteOptions Options to configure a '$disconnect' route. 
      */
     override fun disconnectRouteOptions(disconnectRouteOptions: WebSocketRouteOptions) {
-      cdkBuilder.disconnectRouteOptions(disconnectRouteOptions.let(WebSocketRouteOptions::unwrap))
+      cdkBuilder.disconnectRouteOptions(disconnectRouteOptions.let(WebSocketRouteOptions.Companion::unwrap))
     }
 
     /**
@@ -446,8 +446,8 @@ public open class WebSocketApi(
       id: String,
       attrs: WebSocketApiAttributes,
     ): IWebSocketApi =
-        software.amazon.awscdk.services.apigatewayv2.WebSocketApi.fromWebSocketApiAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(WebSocketApiAttributes::unwrap)).let(IWebSocketApi::wrap)
+        software.amazon.awscdk.services.apigatewayv2.WebSocketApi.fromWebSocketApiAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(WebSocketApiAttributes.Companion::unwrap)).let(IWebSocketApi::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b3b4ff8d6a572553fb0ef997552ba49de004a4b3b49f79a1b12b23cfab1c4e7c")

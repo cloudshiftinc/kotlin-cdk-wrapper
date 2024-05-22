@@ -44,7 +44,7 @@ public open class HttpIntegration(
 
   public constructor(url: String, props: HttpIntegrationProps) :
       this(software.amazon.awscdk.services.apigateway.HttpIntegration(url,
-      props.let(HttpIntegrationProps::unwrap))
+      props.let(HttpIntegrationProps.Companion::unwrap))
   )
 
   public constructor(url: String, props: HttpIntegrationProps.Builder.() -> Unit) : this(url,
@@ -120,7 +120,7 @@ public open class HttpIntegration(
      * @param options Integration options, such as request/resopnse mapping, content handling, etc. 
      */
     override fun options(options: IntegrationOptions) {
-      cdkBuilder.options(options.let(IntegrationOptions::unwrap))
+      cdkBuilder.options(options.let(IntegrationOptions.Companion::unwrap))
     }
 
     /**

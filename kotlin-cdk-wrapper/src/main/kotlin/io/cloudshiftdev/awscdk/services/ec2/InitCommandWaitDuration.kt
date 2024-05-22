@@ -33,7 +33,7 @@ public abstract class InitCommandWaitDuration(
         software.amazon.awscdk.services.ec2.InitCommandWaitDuration.none().let(InitCommandWaitDuration::wrap)
 
     public fun of(duration: Duration): InitCommandWaitDuration =
-        software.amazon.awscdk.services.ec2.InitCommandWaitDuration.of(duration.let(Duration::unwrap)).let(InitCommandWaitDuration::wrap)
+        software.amazon.awscdk.services.ec2.InitCommandWaitDuration.of(duration.let(Duration.Companion::unwrap)).let(InitCommandWaitDuration::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.InitCommandWaitDuration):
         InitCommandWaitDuration = CdkObjectWrappers.wrap(cdkObject) as? InitCommandWaitDuration ?:

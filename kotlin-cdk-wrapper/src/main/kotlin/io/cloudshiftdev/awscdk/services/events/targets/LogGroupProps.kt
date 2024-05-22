@@ -128,7 +128,7 @@ public interface LogGroupProps : TargetBaseProps {
      * dead letter queue.
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -138,7 +138,7 @@ public interface LogGroupProps : TargetBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun event(event: RuleTargetInput) {
-      cdkBuilder.event(event.let(RuleTargetInput::unwrap))
+      cdkBuilder.event(event.let(RuleTargetInput.Companion::unwrap))
     }
 
     /**
@@ -154,7 +154,7 @@ public interface LogGroupProps : TargetBaseProps {
      * This will be the event logged into the CloudWatch LogGroup
      */
     override fun logEvent(logEvent: LogGroupTargetInput) {
-      cdkBuilder.logEvent(logEvent.let(LogGroupTargetInput::unwrap))
+      cdkBuilder.logEvent(logEvent.let(LogGroupTargetInput.Companion::unwrap))
     }
 
     /**
@@ -164,7 +164,7 @@ public interface LogGroupProps : TargetBaseProps {
      * Maximum value of 86400.
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**

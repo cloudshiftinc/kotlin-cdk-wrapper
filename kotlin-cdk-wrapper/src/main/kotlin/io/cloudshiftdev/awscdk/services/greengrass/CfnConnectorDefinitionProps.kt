@@ -181,7 +181,7 @@ public interface CfnConnectorDefinitionProps {
      * resource and specify the ID of this connector definition.
      */
     override fun initialVersion(initialVersion: IResolvable) {
-      cdkBuilder.initialVersion(initialVersion.let(IResolvable::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -199,7 +199,7 @@ public interface CfnConnectorDefinitionProps {
      */
     override
         fun initialVersion(initialVersion: CfnConnectorDefinition.ConnectorDefinitionVersionProperty) {
-      cdkBuilder.initialVersion(initialVersion.let(CfnConnectorDefinition.ConnectorDefinitionVersionProperty::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(CfnConnectorDefinition.ConnectorDefinitionVersionProperty.Companion::unwrap))
     }
 
     /**

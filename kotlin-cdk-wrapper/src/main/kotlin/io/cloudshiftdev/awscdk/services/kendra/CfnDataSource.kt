@@ -439,8 +439,8 @@ public open class CfnDataSource(
     id: String,
     props: CfnDataSourceProps,
   ) :
-      this(software.amazon.awscdk.services.kendra.CfnDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDataSourceProps::unwrap))
+      this(software.amazon.awscdk.services.kendra.CfnDataSource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDataSourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -476,7 +476,7 @@ public open class CfnDataSource(
    * ingestion process.
    */
   public open fun customDocumentEnrichmentConfiguration(`value`: IResolvable) {
-    unwrap(this).setCustomDocumentEnrichmentConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCustomDocumentEnrichmentConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -485,7 +485,7 @@ public open class CfnDataSource(
    */
   public open
       fun customDocumentEnrichmentConfiguration(`value`: CustomDocumentEnrichmentConfigurationProperty) {
-    unwrap(this).setCustomDocumentEnrichmentConfiguration(`value`.let(CustomDocumentEnrichmentConfigurationProperty::unwrap))
+    unwrap(this).setCustomDocumentEnrichmentConfiguration(`value`.let(CustomDocumentEnrichmentConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -508,14 +508,14 @@ public open class CfnDataSource(
    * Configuration information for an Amazon Kendra data source.
    */
   public open fun dataSourceConfiguration(`value`: IResolvable) {
-    unwrap(this).setDataSourceConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataSourceConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration information for an Amazon Kendra data source.
    */
   public open fun dataSourceConfiguration(`value`: DataSourceConfigurationProperty) {
-    unwrap(this).setDataSourceConfiguration(`value`.let(DataSourceConfigurationProperty::unwrap))
+    unwrap(this).setDataSourceConfiguration(`value`.let(DataSourceConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -557,7 +557,7 @@ public open class CfnDataSource(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -625,7 +625,7 @@ public open class CfnDataSource(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -848,7 +848,7 @@ public open class CfnDataSource(
      */
     override
         fun customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration: IResolvable) {
-      cdkBuilder.customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -861,7 +861,7 @@ public open class CfnDataSource(
      */
     override
         fun customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration: CustomDocumentEnrichmentConfigurationProperty) {
-      cdkBuilder.customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration.let(CustomDocumentEnrichmentConfigurationProperty::unwrap))
+      cdkBuilder.customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration.let(CustomDocumentEnrichmentConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -894,7 +894,7 @@ public open class CfnDataSource(
      * @param dataSourceConfiguration Configuration information for an Amazon Kendra data source. 
      */
     override fun dataSourceConfiguration(dataSourceConfiguration: IResolvable) {
-      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -912,7 +912,7 @@ public open class CfnDataSource(
      * @param dataSourceConfiguration Configuration information for an Amazon Kendra data source. 
      */
     override fun dataSourceConfiguration(dataSourceConfiguration: DataSourceConfigurationProperty) {
-      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(DataSourceConfigurationProperty::unwrap))
+      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(DataSourceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1020,7 +1020,7 @@ public open class CfnDataSource(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1423,7 +1423,7 @@ public open class CfnDataSource(
        * [UpdateIndex](https://docs.aws.amazon.com/kendra/latest/dg/API_UpdateIndex.html) operation.
        */
       override fun fieldMappings(fieldMappings: IResolvable) {
-        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
+        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1632,7 +1632,7 @@ public open class CfnDataSource(
        * mapping.
        */
       override fun attachmentFieldMappings(attachmentFieldMappings: IResolvable) {
-        cdkBuilder.attachmentFieldMappings(attachmentFieldMappings.let(IResolvable::unwrap))
+        cdkBuilder.attachmentFieldMappings(attachmentFieldMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1675,7 +1675,7 @@ public open class CfnDataSource(
        * @param crawlAttachments `TRUE` to index attachments of pages and blogs in Confluence.
        */
       override fun crawlAttachments(crawlAttachments: IResolvable) {
-        cdkBuilder.crawlAttachments(crawlAttachments.let(IResolvable::unwrap))
+        cdkBuilder.crawlAttachments(crawlAttachments.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2001,7 +2001,7 @@ public open class CfnDataSource(
        * mapping.
        */
       override fun blogFieldMappings(blogFieldMappings: IResolvable) {
-        cdkBuilder.blogFieldMappings(blogFieldMappings.let(IResolvable::unwrap))
+        cdkBuilder.blogFieldMappings(blogFieldMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2576,7 +2576,7 @@ public open class CfnDataSource(
        * Confluence blogs and pages.
        */
       override fun attachmentConfiguration(attachmentConfiguration: IResolvable) {
-        cdkBuilder.attachmentConfiguration(attachmentConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.attachmentConfiguration(attachmentConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2585,7 +2585,7 @@ public open class CfnDataSource(
        */
       override
           fun attachmentConfiguration(attachmentConfiguration: ConfluenceAttachmentConfigurationProperty) {
-        cdkBuilder.attachmentConfiguration(attachmentConfiguration.let(ConfluenceAttachmentConfigurationProperty::unwrap))
+        cdkBuilder.attachmentConfiguration(attachmentConfiguration.let(ConfluenceAttachmentConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2603,14 +2603,14 @@ public open class CfnDataSource(
        * @param blogConfiguration Configuration information for indexing Confluence blogs.
        */
       override fun blogConfiguration(blogConfiguration: IResolvable) {
-        cdkBuilder.blogConfiguration(blogConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.blogConfiguration(blogConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param blogConfiguration Configuration information for indexing Confluence blogs.
        */
       override fun blogConfiguration(blogConfiguration: ConfluenceBlogConfigurationProperty) {
-        cdkBuilder.blogConfiguration(blogConfiguration.let(ConfluenceBlogConfigurationProperty::unwrap))
+        cdkBuilder.blogConfiguration(blogConfiguration.let(ConfluenceBlogConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2668,14 +2668,14 @@ public open class CfnDataSource(
        * @param pageConfiguration Configuration information for indexing Confluence pages.
        */
       override fun pageConfiguration(pageConfiguration: IResolvable) {
-        cdkBuilder.pageConfiguration(pageConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.pageConfiguration(pageConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param pageConfiguration Configuration information for indexing Confluence pages.
        */
       override fun pageConfiguration(pageConfiguration: ConfluencePageConfigurationProperty) {
-        cdkBuilder.pageConfiguration(pageConfiguration.let(ConfluencePageConfigurationProperty::unwrap))
+        cdkBuilder.pageConfiguration(pageConfiguration.let(ConfluencePageConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2713,14 +2713,14 @@ public open class CfnDataSource(
        * @param spaceConfiguration Configuration information for indexing Confluence spaces.
        */
       override fun spaceConfiguration(spaceConfiguration: IResolvable) {
-        cdkBuilder.spaceConfiguration(spaceConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.spaceConfiguration(spaceConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param spaceConfiguration Configuration information for indexing Confluence spaces.
        */
       override fun spaceConfiguration(spaceConfiguration: ConfluenceSpaceConfigurationProperty) {
-        cdkBuilder.spaceConfiguration(spaceConfiguration.let(ConfluenceSpaceConfigurationProperty::unwrap))
+        cdkBuilder.spaceConfiguration(spaceConfiguration.let(ConfluenceSpaceConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2746,7 +2746,7 @@ public open class CfnDataSource(
        * VPC](https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html) .
        */
       override fun vpcConfiguration(vpcConfiguration: IResolvable) {
-        cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2756,7 +2756,7 @@ public open class CfnDataSource(
        * VPC](https://docs.aws.amazon.com/kendra/latest/dg/vpc-configuration.html) .
        */
       override fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty) {
-        cdkBuilder.vpcConfiguration(vpcConfiguration.let(DataSourceVpcConfigurationProperty::unwrap))
+        cdkBuilder.vpcConfiguration(vpcConfiguration.let(DataSourceVpcConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2995,7 +2995,7 @@ public open class CfnDataSource(
        * mapping.
        */
       override fun pageFieldMappings(pageFieldMappings: IResolvable) {
-        cdkBuilder.pageFieldMappings(pageFieldMappings.let(IResolvable::unwrap))
+        cdkBuilder.pageFieldMappings(pageFieldMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3437,7 +3437,7 @@ public open class CfnDataSource(
        * @param crawlArchivedSpaces `TRUE` to index archived spaces.
        */
       override fun crawlArchivedSpaces(crawlArchivedSpaces: IResolvable) {
-        cdkBuilder.crawlArchivedSpaces(crawlArchivedSpaces.let(IResolvable::unwrap))
+        cdkBuilder.crawlArchivedSpaces(crawlArchivedSpaces.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3459,7 +3459,7 @@ public open class CfnDataSource(
        * context](https://docs.aws.amazon.com/kendra/latest/dg/user-context-filter.html) .
        */
       override fun crawlPersonalSpaces(crawlPersonalSpaces: IResolvable) {
-        cdkBuilder.crawlPersonalSpaces(crawlPersonalSpaces.let(IResolvable::unwrap))
+        cdkBuilder.crawlPersonalSpaces(crawlPersonalSpaces.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3512,7 +3512,7 @@ public open class CfnDataSource(
        * mapping.
        */
       override fun spaceFieldMappings(spaceFieldMappings: IResolvable) {
-        cdkBuilder.spaceFieldMappings(spaceFieldMappings.let(IResolvable::unwrap))
+        cdkBuilder.spaceFieldMappings(spaceFieldMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4254,7 +4254,7 @@ public open class CfnDataSource(
        * metadata fields and content when ingesting documents into Amazon Kendra.
        */
       override fun inlineConfigurations(inlineConfigurations: IResolvable) {
-        cdkBuilder.inlineConfigurations(inlineConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.inlineConfigurations(inlineConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4281,7 +4281,7 @@ public open class CfnDataSource(
        * .
        */
       override fun postExtractionHookConfiguration(postExtractionHookConfiguration: IResolvable) {
-        cdkBuilder.postExtractionHookConfiguration(postExtractionHookConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.postExtractionHookConfiguration(postExtractionHookConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4294,7 +4294,7 @@ public open class CfnDataSource(
        */
       override
           fun postExtractionHookConfiguration(postExtractionHookConfiguration: HookConfigurationProperty) {
-        cdkBuilder.postExtractionHookConfiguration(postExtractionHookConfiguration.let(HookConfigurationProperty::unwrap))
+        cdkBuilder.postExtractionHookConfiguration(postExtractionHookConfiguration.let(HookConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -4322,7 +4322,7 @@ public open class CfnDataSource(
        * .
        */
       override fun preExtractionHookConfiguration(preExtractionHookConfiguration: IResolvable) {
-        cdkBuilder.preExtractionHookConfiguration(preExtractionHookConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.preExtractionHookConfiguration(preExtractionHookConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4336,7 +4336,7 @@ public open class CfnDataSource(
        */
       override
           fun preExtractionHookConfiguration(preExtractionHookConfiguration: HookConfigurationProperty) {
-        cdkBuilder.preExtractionHookConfiguration(preExtractionHookConfiguration.let(HookConfigurationProperty::unwrap))
+        cdkBuilder.preExtractionHookConfiguration(preExtractionHookConfiguration.let(HookConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -5146,7 +5146,7 @@ public open class CfnDataSource(
        * Confluence as your data source.
        */
       override fun confluenceConfiguration(confluenceConfiguration: IResolvable) {
-        cdkBuilder.confluenceConfiguration(confluenceConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.confluenceConfiguration(confluenceConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5155,7 +5155,7 @@ public open class CfnDataSource(
        */
       override
           fun confluenceConfiguration(confluenceConfiguration: ConfluenceConfigurationProperty) {
-        cdkBuilder.confluenceConfiguration(confluenceConfiguration.let(ConfluenceConfigurationProperty::unwrap))
+        cdkBuilder.confluenceConfiguration(confluenceConfiguration.let(ConfluenceConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -5173,7 +5173,7 @@ public open class CfnDataSource(
        * database as your data source.
        */
       override fun databaseConfiguration(databaseConfiguration: IResolvable) {
-        cdkBuilder.databaseConfiguration(databaseConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.databaseConfiguration(databaseConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5181,7 +5181,7 @@ public open class CfnDataSource(
        * database as your data source.
        */
       override fun databaseConfiguration(databaseConfiguration: DatabaseConfigurationProperty) {
-        cdkBuilder.databaseConfiguration(databaseConfiguration.let(DatabaseConfigurationProperty::unwrap))
+        cdkBuilder.databaseConfiguration(databaseConfiguration.let(DatabaseConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -5199,7 +5199,7 @@ public open class CfnDataSource(
        * Drive as your data source.
        */
       override fun googleDriveConfiguration(googleDriveConfiguration: IResolvable) {
-        cdkBuilder.googleDriveConfiguration(googleDriveConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.googleDriveConfiguration(googleDriveConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5208,7 +5208,7 @@ public open class CfnDataSource(
        */
       override
           fun googleDriveConfiguration(googleDriveConfiguration: GoogleDriveConfigurationProperty) {
-        cdkBuilder.googleDriveConfiguration(googleDriveConfiguration.let(GoogleDriveConfigurationProperty::unwrap))
+        cdkBuilder.googleDriveConfiguration(googleDriveConfiguration.let(GoogleDriveConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -5227,7 +5227,7 @@ public open class CfnDataSource(
        * OneDrive as your data source.
        */
       override fun oneDriveConfiguration(oneDriveConfiguration: IResolvable) {
-        cdkBuilder.oneDriveConfiguration(oneDriveConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.oneDriveConfiguration(oneDriveConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5235,7 +5235,7 @@ public open class CfnDataSource(
        * OneDrive as your data source.
        */
       override fun oneDriveConfiguration(oneDriveConfiguration: OneDriveConfigurationProperty) {
-        cdkBuilder.oneDriveConfiguration(oneDriveConfiguration.let(OneDriveConfigurationProperty::unwrap))
+        cdkBuilder.oneDriveConfiguration(oneDriveConfiguration.let(OneDriveConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -5266,7 +5266,7 @@ public open class CfnDataSource(
        * connectors configured using the older architecture is scheduled to end by June 2024.
        */
       override fun s3Configuration(s3Configuration: IResolvable) {
-        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5287,7 +5287,7 @@ public open class CfnDataSource(
        * connectors configured using the older architecture is scheduled to end by June 2024.
        */
       override fun s3Configuration(s3Configuration: S3DataSourceConfigurationProperty) {
-        cdkBuilder.s3Configuration(s3Configuration.let(S3DataSourceConfigurationProperty::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(S3DataSourceConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -5318,7 +5318,7 @@ public open class CfnDataSource(
        * Salesforce as your data source.
        */
       override fun salesforceConfiguration(salesforceConfiguration: IResolvable) {
-        cdkBuilder.salesforceConfiguration(salesforceConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.salesforceConfiguration(salesforceConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5327,7 +5327,7 @@ public open class CfnDataSource(
        */
       override
           fun salesforceConfiguration(salesforceConfiguration: SalesforceConfigurationProperty) {
-        cdkBuilder.salesforceConfiguration(salesforceConfiguration.let(SalesforceConfigurationProperty::unwrap))
+        cdkBuilder.salesforceConfiguration(salesforceConfiguration.let(SalesforceConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -5345,7 +5345,7 @@ public open class CfnDataSource(
        * ServiceNow as your data source.
        */
       override fun serviceNowConfiguration(serviceNowConfiguration: IResolvable) {
-        cdkBuilder.serviceNowConfiguration(serviceNowConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.serviceNowConfiguration(serviceNowConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5354,7 +5354,7 @@ public open class CfnDataSource(
        */
       override
           fun serviceNowConfiguration(serviceNowConfiguration: ServiceNowConfigurationProperty) {
-        cdkBuilder.serviceNowConfiguration(serviceNowConfiguration.let(ServiceNowConfigurationProperty::unwrap))
+        cdkBuilder.serviceNowConfiguration(serviceNowConfiguration.let(ServiceNowConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -5372,7 +5372,7 @@ public open class CfnDataSource(
        * Microsoft SharePoint as your data source.
        */
       override fun sharePointConfiguration(sharePointConfiguration: IResolvable) {
-        cdkBuilder.sharePointConfiguration(sharePointConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.sharePointConfiguration(sharePointConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5381,7 +5381,7 @@ public open class CfnDataSource(
        */
       override
           fun sharePointConfiguration(sharePointConfiguration: SharePointConfigurationProperty) {
-        cdkBuilder.sharePointConfiguration(sharePointConfiguration.let(SharePointConfigurationProperty::unwrap))
+        cdkBuilder.sharePointConfiguration(sharePointConfiguration.let(SharePointConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -5398,14 +5398,14 @@ public open class CfnDataSource(
        * @param templateConfiguration the value to be set.
        */
       override fun templateConfiguration(templateConfiguration: IResolvable) {
-        cdkBuilder.templateConfiguration(templateConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.templateConfiguration(templateConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param templateConfiguration the value to be set.
        */
       override fun templateConfiguration(templateConfiguration: TemplateConfigurationProperty) {
-        cdkBuilder.templateConfiguration(templateConfiguration.let(TemplateConfigurationProperty::unwrap))
+        cdkBuilder.templateConfiguration(templateConfiguration.let(TemplateConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -5422,7 +5422,7 @@ public open class CfnDataSource(
        * Kendra Web Crawler.
        */
       override fun webCrawlerConfiguration(webCrawlerConfiguration: IResolvable) {
-        cdkBuilder.webCrawlerConfiguration(webCrawlerConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.webCrawlerConfiguration(webCrawlerConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5431,7 +5431,7 @@ public open class CfnDataSource(
        */
       override
           fun webCrawlerConfiguration(webCrawlerConfiguration: WebCrawlerConfigurationProperty) {
-        cdkBuilder.webCrawlerConfiguration(webCrawlerConfiguration.let(WebCrawlerConfigurationProperty::unwrap))
+        cdkBuilder.webCrawlerConfiguration(webCrawlerConfiguration.let(WebCrawlerConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -5449,7 +5449,7 @@ public open class CfnDataSource(
        * WorkDocs as your data source.
        */
       override fun workDocsConfiguration(workDocsConfiguration: IResolvable) {
-        cdkBuilder.workDocsConfiguration(workDocsConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.workDocsConfiguration(workDocsConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5457,7 +5457,7 @@ public open class CfnDataSource(
        * WorkDocs as your data source.
        */
       override fun workDocsConfiguration(workDocsConfiguration: WorkDocsConfigurationProperty) {
-        cdkBuilder.workDocsConfiguration(workDocsConfiguration.let(WorkDocsConfigurationProperty::unwrap))
+        cdkBuilder.workDocsConfiguration(workDocsConfiguration.let(WorkDocsConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -6123,7 +6123,7 @@ public open class CfnDataSource(
        * user context filtering.
        */
       override fun aclConfiguration(aclConfiguration: IResolvable) {
-        cdkBuilder.aclConfiguration(aclConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.aclConfiguration(aclConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6131,7 +6131,7 @@ public open class CfnDataSource(
        * user context filtering.
        */
       override fun aclConfiguration(aclConfiguration: AclConfigurationProperty) {
-        cdkBuilder.aclConfiguration(aclConfiguration.let(AclConfigurationProperty::unwrap))
+        cdkBuilder.aclConfiguration(aclConfiguration.let(AclConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -6148,7 +6148,7 @@ public open class CfnDataSource(
        * information from the database. 
        */
       override fun columnConfiguration(columnConfiguration: IResolvable) {
-        cdkBuilder.columnConfiguration(columnConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.columnConfiguration(columnConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6156,7 +6156,7 @@ public open class CfnDataSource(
        * information from the database. 
        */
       override fun columnConfiguration(columnConfiguration: ColumnConfigurationProperty) {
-        cdkBuilder.columnConfiguration(columnConfiguration.let(ColumnConfigurationProperty::unwrap))
+        cdkBuilder.columnConfiguration(columnConfiguration.let(ColumnConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -6174,7 +6174,7 @@ public open class CfnDataSource(
        * database. 
        */
       override fun connectionConfiguration(connectionConfiguration: IResolvable) {
-        cdkBuilder.connectionConfiguration(connectionConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.connectionConfiguration(connectionConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6183,7 +6183,7 @@ public open class CfnDataSource(
        */
       override
           fun connectionConfiguration(connectionConfiguration: ConnectionConfigurationProperty) {
-        cdkBuilder.connectionConfiguration(connectionConfiguration.let(ConnectionConfigurationProperty::unwrap))
+        cdkBuilder.connectionConfiguration(connectionConfiguration.let(ConnectionConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -6208,7 +6208,7 @@ public open class CfnDataSource(
        * around SQL identifiers when querying a database data source.
        */
       override fun sqlConfiguration(sqlConfiguration: IResolvable) {
-        cdkBuilder.sqlConfiguration(sqlConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.sqlConfiguration(sqlConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6216,7 +6216,7 @@ public open class CfnDataSource(
        * around SQL identifiers when querying a database data source.
        */
       override fun sqlConfiguration(sqlConfiguration: SqlConfigurationProperty) {
-        cdkBuilder.sqlConfiguration(sqlConfiguration.let(SqlConfigurationProperty::unwrap))
+        cdkBuilder.sqlConfiguration(sqlConfiguration.let(SqlConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -6232,14 +6232,14 @@ public open class CfnDataSource(
        * @param vpcConfiguration Provides information for connecting to an Amazon VPC.
        */
       override fun vpcConfiguration(vpcConfiguration: IResolvable) {
-        cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param vpcConfiguration Provides information for connecting to an Amazon VPC.
        */
       override fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty) {
-        cdkBuilder.vpcConfiguration(vpcConfiguration.let(DataSourceVpcConfigurationProperty::unwrap))
+        cdkBuilder.vpcConfiguration(vpcConfiguration.let(DataSourceVpcConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -6465,7 +6465,7 @@ public open class CfnDataSource(
        * that partially match or contain this value.
        */
       override fun conditionOnValue(conditionOnValue: IResolvable) {
-        cdkBuilder.conditionOnValue(conditionOnValue.let(IResolvable::unwrap))
+        cdkBuilder.conditionOnValue(conditionOnValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6474,7 +6474,7 @@ public open class CfnDataSource(
        * that partially match or contain this value.
        */
       override fun conditionOnValue(conditionOnValue: DocumentAttributeValueProperty) {
-        cdkBuilder.conditionOnValue(conditionOnValue.let(DocumentAttributeValueProperty::unwrap))
+        cdkBuilder.conditionOnValue(conditionOnValue.let(DocumentAttributeValueProperty.Companion::unwrap))
       }
 
       /**
@@ -6706,7 +6706,7 @@ public open class CfnDataSource(
        * For example, 'Finance' could be the target value for the target attribute key 'Department'.
        */
       override fun targetDocumentAttributeValue(targetDocumentAttributeValue: IResolvable) {
-        cdkBuilder.targetDocumentAttributeValue(targetDocumentAttributeValue.let(IResolvable::unwrap))
+        cdkBuilder.targetDocumentAttributeValue(targetDocumentAttributeValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6716,7 +6716,7 @@ public open class CfnDataSource(
        */
       override
           fun targetDocumentAttributeValue(targetDocumentAttributeValue: DocumentAttributeValueProperty) {
-        cdkBuilder.targetDocumentAttributeValue(targetDocumentAttributeValue.let(DocumentAttributeValueProperty::unwrap))
+        cdkBuilder.targetDocumentAttributeValue(targetDocumentAttributeValue.let(DocumentAttributeValueProperty.Companion::unwrap))
       }
 
       /**
@@ -6750,7 +6750,7 @@ public open class CfnDataSource(
        */
       override
           fun targetDocumentAttributeValueDeletion(targetDocumentAttributeValueDeletion: IResolvable) {
-        cdkBuilder.targetDocumentAttributeValueDeletion(targetDocumentAttributeValueDeletion.let(IResolvable::unwrap))
+        cdkBuilder.targetDocumentAttributeValueDeletion(targetDocumentAttributeValueDeletion.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -7433,7 +7433,7 @@ public open class CfnDataSource(
        * data source field names must exist in your Google Drive custom metadata.
        */
       override fun fieldMappings(fieldMappings: IResolvable) {
-        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
+        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7733,7 +7733,7 @@ public open class CfnDataSource(
        * Amazon Kendra should invoke a function that inserts the current date-time.
        */
       override fun invocationCondition(invocationCondition: IResolvable) {
-        cdkBuilder.invocationCondition(invocationCondition.let(IResolvable::unwrap))
+        cdkBuilder.invocationCondition(invocationCondition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7742,7 +7742,7 @@ public open class CfnDataSource(
        * Amazon Kendra should invoke a function that inserts the current date-time.
        */
       override fun invocationCondition(invocationCondition: DocumentAttributeConditionProperty) {
-        cdkBuilder.invocationCondition(invocationCondition.let(DocumentAttributeConditionProperty::unwrap))
+        cdkBuilder.invocationCondition(invocationCondition.let(DocumentAttributeConditionProperty.Companion::unwrap))
       }
 
       /**
@@ -7982,7 +7982,7 @@ public open class CfnDataSource(
        * metadata field when ingesting documents into Amazon Kendra.
        */
       override fun condition(condition: IResolvable) {
-        cdkBuilder.condition(condition.let(IResolvable::unwrap))
+        cdkBuilder.condition(condition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7990,7 +7990,7 @@ public open class CfnDataSource(
        * metadata field when ingesting documents into Amazon Kendra.
        */
       override fun condition(condition: DocumentAttributeConditionProperty) {
-        cdkBuilder.condition(condition.let(DocumentAttributeConditionProperty::unwrap))
+        cdkBuilder.condition(condition.let(DocumentAttributeConditionProperty.Companion::unwrap))
       }
 
       /**
@@ -8015,7 +8015,7 @@ public open class CfnDataSource(
        * target attribute is met.
        */
       override fun documentContentDeletion(documentContentDeletion: IResolvable) {
-        cdkBuilder.documentContentDeletion(documentContentDeletion.let(IResolvable::unwrap))
+        cdkBuilder.documentContentDeletion(documentContentDeletion.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8024,7 +8024,7 @@ public open class CfnDataSource(
        * You can also include a value.
        */
       override fun target(target: IResolvable) {
-        cdkBuilder.target(target.let(IResolvable::unwrap))
+        cdkBuilder.target(target.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8033,7 +8033,7 @@ public open class CfnDataSource(
        * You can also include a value.
        */
       override fun target(target: DocumentAttributeTargetProperty) {
-        cdkBuilder.target(target.let(DocumentAttributeTargetProperty::unwrap))
+        cdkBuilder.target(target.let(DocumentAttributeTargetProperty.Companion::unwrap))
       }
 
       /**
@@ -8345,7 +8345,7 @@ public open class CfnDataSource(
        * @param disableLocalGroups `TRUE` to disable local groups information.
        */
       override fun disableLocalGroups(disableLocalGroups: IResolvable) {
-        cdkBuilder.disableLocalGroups(disableLocalGroups.let(IResolvable::unwrap))
+        cdkBuilder.disableLocalGroups(disableLocalGroups.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8382,7 +8382,7 @@ public open class CfnDataSource(
        * source field names must exist in your OneDrive custom metadata.
        */
       override fun fieldMappings(fieldMappings: IResolvable) {
-        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
+        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8437,14 +8437,14 @@ public open class CfnDataSource(
        * @param oneDriveUsers A list of user accounts whose documents should be indexed. 
        */
       override fun oneDriveUsers(oneDriveUsers: IResolvable) {
-        cdkBuilder.oneDriveUsers(oneDriveUsers.let(IResolvable::unwrap))
+        cdkBuilder.oneDriveUsers(oneDriveUsers.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param oneDriveUsers A list of user accounts whose documents should be indexed. 
        */
       override fun oneDriveUsers(oneDriveUsers: OneDriveUsersProperty) {
-        cdkBuilder.oneDriveUsers(oneDriveUsers.let(OneDriveUsersProperty::unwrap))
+        cdkBuilder.oneDriveUsers(oneDriveUsers.let(OneDriveUsersProperty.Companion::unwrap))
       }
 
       /**
@@ -8683,7 +8683,7 @@ public open class CfnDataSource(
        * documents should be indexed.
        */
       override fun oneDriveUserS3Path(oneDriveUserS3Path: IResolvable) {
-        cdkBuilder.oneDriveUserS3Path(oneDriveUserS3Path.let(IResolvable::unwrap))
+        cdkBuilder.oneDriveUserS3Path(oneDriveUserS3Path.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8691,7 +8691,7 @@ public open class CfnDataSource(
        * documents should be indexed.
        */
       override fun oneDriveUserS3Path(oneDriveUserS3Path: S3PathProperty) {
-        cdkBuilder.oneDriveUserS3Path(oneDriveUserS3Path.let(S3PathProperty::unwrap))
+        cdkBuilder.oneDriveUserS3Path(oneDriveUserS3Path.let(S3PathProperty.Companion::unwrap))
       }
 
       /**
@@ -9278,7 +9278,7 @@ public open class CfnDataSource(
        * sources](https://docs.aws.amazon.com/kendra/latest/dg/s3-acl.html) .
        */
       override fun accessControlListConfiguration(accessControlListConfiguration: IResolvable) {
-        cdkBuilder.accessControlListConfiguration(accessControlListConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.accessControlListConfiguration(accessControlListConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9289,7 +9289,7 @@ public open class CfnDataSource(
        */
       override
           fun accessControlListConfiguration(accessControlListConfiguration: AccessControlListConfigurationProperty) {
-        cdkBuilder.accessControlListConfiguration(accessControlListConfiguration.let(AccessControlListConfigurationProperty::unwrap))
+        cdkBuilder.accessControlListConfiguration(accessControlListConfiguration.let(AccessControlListConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -9319,7 +9319,7 @@ public open class CfnDataSource(
        * Each metadata file contains metadata about a single document.
        */
       override fun documentsMetadataConfiguration(documentsMetadataConfiguration: IResolvable) {
-        cdkBuilder.documentsMetadataConfiguration(documentsMetadataConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.documentsMetadataConfiguration(documentsMetadataConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9330,7 +9330,7 @@ public open class CfnDataSource(
        */
       override
           fun documentsMetadataConfiguration(documentsMetadataConfiguration: DocumentsMetadataConfigurationProperty) {
-        cdkBuilder.documentsMetadataConfiguration(documentsMetadataConfiguration.let(DocumentsMetadataConfigurationProperty::unwrap))
+        cdkBuilder.documentsMetadataConfiguration(documentsMetadataConfiguration.let(DocumentsMetadataConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -9866,7 +9866,7 @@ public open class CfnDataSource(
        * fields.
        */
       override fun fieldMappings(fieldMappings: IResolvable) {
-        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
+        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10327,7 +10327,7 @@ public open class CfnDataSource(
        * @param chatterFeedConfiguration Configuration information for Salesforce chatter feeds.
        */
       override fun chatterFeedConfiguration(chatterFeedConfiguration: IResolvable) {
-        cdkBuilder.chatterFeedConfiguration(chatterFeedConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.chatterFeedConfiguration(chatterFeedConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10335,7 +10335,7 @@ public open class CfnDataSource(
        */
       override
           fun chatterFeedConfiguration(chatterFeedConfiguration: SalesforceChatterFeedConfigurationProperty) {
-        cdkBuilder.chatterFeedConfiguration(chatterFeedConfiguration.let(SalesforceChatterFeedConfigurationProperty::unwrap))
+        cdkBuilder.chatterFeedConfiguration(chatterFeedConfiguration.let(SalesforceChatterFeedConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -10361,7 +10361,7 @@ public open class CfnDataSource(
        * Salesforce objects.
        */
       override fun crawlAttachments(crawlAttachments: IResolvable) {
-        cdkBuilder.crawlAttachments(crawlAttachments.let(IResolvable::unwrap))
+        cdkBuilder.crawlAttachments(crawlAttachments.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10421,7 +10421,7 @@ public open class CfnDataSource(
        * articles, or the custom fields of custom knowledge articles, but not both.
        */
       override fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: IResolvable) {
-        cdkBuilder.knowledgeArticleConfiguration(knowledgeArticleConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.knowledgeArticleConfiguration(knowledgeArticleConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10432,7 +10432,7 @@ public open class CfnDataSource(
        */
       override
           fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: SalesforceKnowledgeArticleConfigurationProperty) {
-        cdkBuilder.knowledgeArticleConfiguration(knowledgeArticleConfiguration.let(SalesforceKnowledgeArticleConfigurationProperty::unwrap))
+        cdkBuilder.knowledgeArticleConfiguration(knowledgeArticleConfiguration.let(SalesforceKnowledgeArticleConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -10479,7 +10479,7 @@ public open class CfnDataSource(
        */
       override
           fun standardObjectAttachmentConfiguration(standardObjectAttachmentConfiguration: IResolvable) {
-        cdkBuilder.standardObjectAttachmentConfiguration(standardObjectAttachmentConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.standardObjectAttachmentConfiguration(standardObjectAttachmentConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10488,7 +10488,7 @@ public open class CfnDataSource(
        */
       override
           fun standardObjectAttachmentConfiguration(standardObjectAttachmentConfiguration: SalesforceStandardObjectAttachmentConfigurationProperty) {
-        cdkBuilder.standardObjectAttachmentConfiguration(standardObjectAttachmentConfiguration.let(SalesforceStandardObjectAttachmentConfigurationProperty::unwrap))
+        cdkBuilder.standardObjectAttachmentConfiguration(standardObjectAttachmentConfiguration.let(SalesforceStandardObjectAttachmentConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -10507,7 +10507,7 @@ public open class CfnDataSource(
        * Amazon Kendra indexes.
        */
       override fun standardObjectConfigurations(standardObjectConfigurations: IResolvable) {
-        cdkBuilder.standardObjectConfigurations(standardObjectConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.standardObjectConfigurations(standardObjectConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10794,7 +10794,7 @@ public open class CfnDataSource(
        * source field names must exist in your Salesforce custom metadata.
        */
       override fun fieldMappings(fieldMappings: IResolvable) {
-        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
+        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11039,7 +11039,7 @@ public open class CfnDataSource(
        */
       override
           fun customKnowledgeArticleTypeConfigurations(customKnowledgeArticleTypeConfigurations: IResolvable) {
-        cdkBuilder.customKnowledgeArticleTypeConfigurations(customKnowledgeArticleTypeConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.customKnowledgeArticleTypeConfigurations(customKnowledgeArticleTypeConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11082,7 +11082,7 @@ public open class CfnDataSource(
        */
       override
           fun standardKnowledgeArticleTypeConfiguration(standardKnowledgeArticleTypeConfiguration: IResolvable) {
-        cdkBuilder.standardKnowledgeArticleTypeConfiguration(standardKnowledgeArticleTypeConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.standardKnowledgeArticleTypeConfiguration(standardKnowledgeArticleTypeConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11091,7 +11091,7 @@ public open class CfnDataSource(
        */
       override
           fun standardKnowledgeArticleTypeConfiguration(standardKnowledgeArticleTypeConfiguration: SalesforceStandardKnowledgeArticleTypeConfigurationProperty) {
-        cdkBuilder.standardKnowledgeArticleTypeConfiguration(standardKnowledgeArticleTypeConfiguration.let(SalesforceStandardKnowledgeArticleTypeConfigurationProperty::unwrap))
+        cdkBuilder.standardKnowledgeArticleTypeConfiguration(standardKnowledgeArticleTypeConfiguration.let(SalesforceStandardKnowledgeArticleTypeConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -11289,7 +11289,7 @@ public open class CfnDataSource(
        * source field names must exist in your Salesforce custom metadata.
        */
       override fun fieldMappings(fieldMappings: IResolvable) {
-        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
+        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11457,7 +11457,7 @@ public open class CfnDataSource(
        * index fields.
        */
       override fun fieldMappings(fieldMappings: IResolvable) {
-        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
+        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11662,7 +11662,7 @@ public open class CfnDataSource(
        * source field names must exist in your Salesforce custom metadata.
        */
       override fun fieldMappings(fieldMappings: IResolvable) {
-        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
+        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11989,7 +11989,7 @@ public open class CfnDataSource(
        * articles in the ServiceNow site.
        */
       override fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: IResolvable) {
-        cdkBuilder.knowledgeArticleConfiguration(knowledgeArticleConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.knowledgeArticleConfiguration(knowledgeArticleConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11998,7 +11998,7 @@ public open class CfnDataSource(
        */
       override
           fun knowledgeArticleConfiguration(knowledgeArticleConfiguration: ServiceNowKnowledgeArticleConfigurationProperty) {
-        cdkBuilder.knowledgeArticleConfiguration(knowledgeArticleConfiguration.let(ServiceNowKnowledgeArticleConfigurationProperty::unwrap))
+        cdkBuilder.knowledgeArticleConfiguration(knowledgeArticleConfiguration.let(ServiceNowKnowledgeArticleConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -12028,7 +12028,7 @@ public open class CfnDataSource(
        * in the ServiceNow site.
        */
       override fun serviceCatalogConfiguration(serviceCatalogConfiguration: IResolvable) {
-        cdkBuilder.serviceCatalogConfiguration(serviceCatalogConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.serviceCatalogConfiguration(serviceCatalogConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12037,7 +12037,7 @@ public open class CfnDataSource(
        */
       override
           fun serviceCatalogConfiguration(serviceCatalogConfiguration: ServiceNowServiceCatalogConfigurationProperty) {
-        cdkBuilder.serviceCatalogConfiguration(serviceCatalogConfiguration.let(ServiceNowServiceCatalogConfigurationProperty::unwrap))
+        cdkBuilder.serviceCatalogConfiguration(serviceCatalogConfiguration.let(ServiceNowServiceCatalogConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -12374,7 +12374,7 @@ public open class CfnDataSource(
        * @param crawlAttachments `TRUE` to index attachments to knowledge articles.
        */
       override fun crawlAttachments(crawlAttachments: IResolvable) {
-        cdkBuilder.crawlAttachments(crawlAttachments.let(IResolvable::unwrap))
+        cdkBuilder.crawlAttachments(crawlAttachments.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12423,7 +12423,7 @@ public open class CfnDataSource(
        * source field names must exist in your ServiceNow custom metadata.
        */
       override fun fieldMappings(fieldMappings: IResolvable) {
-        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
+        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12797,7 +12797,7 @@ public open class CfnDataSource(
        * @param crawlAttachments `TRUE` to index attachments to service catalog items.
        */
       override fun crawlAttachments(crawlAttachments: IResolvable) {
-        cdkBuilder.crawlAttachments(crawlAttachments.let(IResolvable::unwrap))
+        cdkBuilder.crawlAttachments(crawlAttachments.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12850,7 +12850,7 @@ public open class CfnDataSource(
        * source field names must exist in your ServiceNow custom metadata.
        */
       override fun fieldMappings(fieldMappings: IResolvable) {
-        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
+        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13344,7 +13344,7 @@ public open class CfnDataSource(
        * @param crawlAttachments `TRUE` to index document attachments.
        */
       override fun crawlAttachments(crawlAttachments: IResolvable) {
-        cdkBuilder.crawlAttachments(crawlAttachments.let(IResolvable::unwrap))
+        cdkBuilder.crawlAttachments(crawlAttachments.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13358,7 +13358,7 @@ public open class CfnDataSource(
        * @param disableLocalGroups `TRUE` to disable local groups information.
        */
       override fun disableLocalGroups(disableLocalGroups: IResolvable) {
-        cdkBuilder.disableLocalGroups(disableLocalGroups.let(IResolvable::unwrap))
+        cdkBuilder.disableLocalGroups(disableLocalGroups.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13401,7 +13401,7 @@ public open class CfnDataSource(
        * Fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html) .
        */
       override fun fieldMappings(fieldMappings: IResolvable) {
-        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
+        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13474,7 +13474,7 @@ public open class CfnDataSource(
        * bucket.
        */
       override fun sslCertificateS3Path(sslCertificateS3Path: IResolvable) {
-        cdkBuilder.sslCertificateS3Path(sslCertificateS3Path.let(IResolvable::unwrap))
+        cdkBuilder.sslCertificateS3Path(sslCertificateS3Path.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13482,7 +13482,7 @@ public open class CfnDataSource(
        * bucket.
        */
       override fun sslCertificateS3Path(sslCertificateS3Path: S3PathProperty) {
-        cdkBuilder.sslCertificateS3Path(sslCertificateS3Path.let(S3PathProperty::unwrap))
+        cdkBuilder.sslCertificateS3Path(sslCertificateS3Path.let(S3PathProperty.Companion::unwrap))
       }
 
       /**
@@ -13523,21 +13523,21 @@ public open class CfnDataSource(
        * log than to scan all of your documents in SharePoint.
        */
       override fun useChangeLog(useChangeLog: IResolvable) {
-        cdkBuilder.useChangeLog(useChangeLog.let(IResolvable::unwrap))
+        cdkBuilder.useChangeLog(useChangeLog.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param vpcConfiguration Provides information for connecting to an Amazon VPC.
        */
       override fun vpcConfiguration(vpcConfiguration: IResolvable) {
-        cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param vpcConfiguration Provides information for connecting to an Amazon VPC.
        */
       override fun vpcConfiguration(vpcConfiguration: DataSourceVpcConfigurationProperty) {
-        cdkBuilder.vpcConfiguration(vpcConfiguration.let(DataSourceVpcConfigurationProperty::unwrap))
+        cdkBuilder.vpcConfiguration(vpcConfiguration.let(DataSourceVpcConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -13972,7 +13972,7 @@ public open class CfnDataSource(
        * The list includes the name and port number of the website host.
        */
       override fun basicAuthentication(basicAuthentication: IResolvable) {
-        cdkBuilder.basicAuthentication(basicAuthentication.let(IResolvable::unwrap))
+        cdkBuilder.basicAuthentication(basicAuthentication.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14620,7 +14620,7 @@ public open class CfnDataSource(
        * HTTPS.
        */
       override fun authenticationConfiguration(authenticationConfiguration: IResolvable) {
-        cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14637,7 +14637,7 @@ public open class CfnDataSource(
        */
       override
           fun authenticationConfiguration(authenticationConfiguration: WebCrawlerAuthenticationConfigurationProperty) {
-        cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(WebCrawlerAuthenticationConfigurationProperty::unwrap))
+        cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(WebCrawlerAuthenticationConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -14716,7 +14716,7 @@ public open class CfnDataSource(
        * Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) .
        */
       override fun proxyConfiguration(proxyConfiguration: IResolvable) {
-        cdkBuilder.proxyConfiguration(proxyConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.proxyConfiguration(proxyConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14731,7 +14731,7 @@ public open class CfnDataSource(
        * Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) .
        */
       override fun proxyConfiguration(proxyConfiguration: ProxyConfigurationProperty) {
-        cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfigurationProperty::unwrap))
+        cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -14809,7 +14809,7 @@ public open class CfnDataSource(
        * authorization to index.*
        */
       override fun urls(urls: IResolvable) {
-        cdkBuilder.urls(urls.let(IResolvable::unwrap))
+        cdkBuilder.urls(urls.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14828,7 +14828,7 @@ public open class CfnDataSource(
        * authorization to index.*
        */
       override fun urls(urls: WebCrawlerUrlsProperty) {
-        cdkBuilder.urls(urls.let(WebCrawlerUrlsProperty::unwrap))
+        cdkBuilder.urls(urls.let(WebCrawlerUrlsProperty.Companion::unwrap))
       }
 
       /**
@@ -15423,7 +15423,7 @@ public open class CfnDataSource(
        * You can list up to 100 seed URLs.
        */
       override fun seedUrlConfiguration(seedUrlConfiguration: IResolvable) {
-        cdkBuilder.seedUrlConfiguration(seedUrlConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.seedUrlConfiguration(seedUrlConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -15437,7 +15437,7 @@ public open class CfnDataSource(
        */
       override
           fun seedUrlConfiguration(seedUrlConfiguration: WebCrawlerSeedUrlConfigurationProperty) {
-        cdkBuilder.seedUrlConfiguration(seedUrlConfiguration.let(WebCrawlerSeedUrlConfigurationProperty::unwrap))
+        cdkBuilder.seedUrlConfiguration(seedUrlConfiguration.let(WebCrawlerSeedUrlConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -15462,7 +15462,7 @@ public open class CfnDataSource(
        * sitemap URLs.
        */
       override fun siteMapsConfiguration(siteMapsConfiguration: IResolvable) {
-        cdkBuilder.siteMapsConfiguration(siteMapsConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.siteMapsConfiguration(siteMapsConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -15473,7 +15473,7 @@ public open class CfnDataSource(
        */
       override
           fun siteMapsConfiguration(siteMapsConfiguration: WebCrawlerSiteMapsConfigurationProperty) {
-        cdkBuilder.siteMapsConfiguration(siteMapsConfiguration.let(WebCrawlerSiteMapsConfigurationProperty::unwrap))
+        cdkBuilder.siteMapsConfiguration(siteMapsConfiguration.let(WebCrawlerSiteMapsConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -15783,7 +15783,7 @@ public open class CfnDataSource(
        * The default is set to `FALSE` .
        */
       override fun crawlComments(crawlComments: IResolvable) {
-        cdkBuilder.crawlComments(crawlComments.let(IResolvable::unwrap))
+        cdkBuilder.crawlComments(crawlComments.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -15816,7 +15816,7 @@ public open class CfnDataSource(
        * data source field names must exist in your Amazon WorkDocs custom metadata.
        */
       override fun fieldMappings(fieldMappings: IResolvable) {
-        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable::unwrap))
+        cdkBuilder.fieldMappings(fieldMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -15893,7 +15893,7 @@ public open class CfnDataSource(
        * log than to scan all of your documents in Amazon WorkDocs.
        */
       override fun useChangeLog(useChangeLog: IResolvable) {
-        cdkBuilder.useChangeLog(useChangeLog.let(IResolvable::unwrap))
+        cdkBuilder.useChangeLog(useChangeLog.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

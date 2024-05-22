@@ -90,7 +90,7 @@ public interface CloudWatchDimension {
      * CloudWatch. 
      */
     override fun source(source: CloudWatchDimensionSource) {
-      cdkBuilder.source(source.let(CloudWatchDimensionSource::unwrap))
+      cdkBuilder.source(source.let(CloudWatchDimensionSource.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ses.CloudWatchDimension = cdkBuilder.build()

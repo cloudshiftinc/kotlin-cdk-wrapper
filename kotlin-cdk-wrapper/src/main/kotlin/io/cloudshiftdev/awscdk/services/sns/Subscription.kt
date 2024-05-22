@@ -40,8 +40,8 @@ public open class Subscription(
     id: String,
     props: SubscriptionProps,
   ) :
-      this(software.amazon.awscdk.services.sns.Subscription(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SubscriptionProps::unwrap))
+      this(software.amazon.awscdk.services.sns.Subscription(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SubscriptionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -168,7 +168,7 @@ public open class Subscription(
      * @param deadLetterQueue Queue to be used as dead letter queue. 
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -214,7 +214,7 @@ public open class Subscription(
      * @param protocol What type of subscription to add. 
      */
     override fun protocol(protocol: SubscriptionProtocol) {
-      cdkBuilder.protocol(protocol.let(SubscriptionProtocol::unwrap))
+      cdkBuilder.protocol(protocol.let(SubscriptionProtocol.Companion::unwrap))
     }
 
     /**
@@ -263,7 +263,7 @@ public open class Subscription(
      * @param topic The topic to subscribe to. 
      */
     override fun topic(topic: ITopic) {
-      cdkBuilder.topic(topic.let(ITopic::unwrap))
+      cdkBuilder.topic(topic.let(ITopic.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.sns.Subscription = cdkBuilder.build()

@@ -89,7 +89,7 @@ public interface MessageAttribute {
      * @param dataType The data type for the attribute.
      */
     override fun dataType(dataType: MessageAttributeDataType) {
-      cdkBuilder.dataType(dataType.let(MessageAttributeDataType::unwrap))
+      cdkBuilder.dataType(dataType.let(MessageAttributeDataType.Companion::unwrap))
     }
 
     /**

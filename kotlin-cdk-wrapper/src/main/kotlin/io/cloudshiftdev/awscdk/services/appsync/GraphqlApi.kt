@@ -45,8 +45,8 @@ public open class GraphqlApi(
     id: String,
     props: GraphqlApiProps,
   ) :
-      this(software.amazon.awscdk.services.appsync.GraphqlApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(GraphqlApiProps::unwrap))
+      this(software.amazon.awscdk.services.appsync.GraphqlApi(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(GraphqlApiProps.Companion::unwrap))
   )
 
   public constructor(
@@ -72,7 +72,7 @@ public open class GraphqlApi(
    * @param construct the dependee. 
    */
   public override fun addSchemaDependency(construct: CfnResource): Boolean =
-      unwrap(this).addSchemaDependency(construct.let(CfnResource::unwrap))
+      unwrap(this).addSchemaDependency(construct.let(CfnResource.Companion::unwrap))
 
   /**
    * an unique AWS AppSync GraphQL API identifier i.e. 'lxz775lwdrgcndgz3nurvac7oa'.
@@ -97,6 +97,11 @@ public open class GraphqlApi(
   public override fun arn(): String = unwrap(this).getArn()
 
   /**
+   * The GraphQL endpoint ARN.
+   */
+  public override fun graphQLEndpointArn(): String = unwrap(this).getGraphQLEndpointArn()
+
+  /**
    * the URL of the endpoint created by AppSync.
    */
   public open fun graphqlUrl(): String = unwrap(this).getGraphqlUrl()
@@ -109,7 +114,7 @@ public open class GraphqlApi(
   /**
    * The Authorization Types for this GraphQL Api.
    */
-  public open fun modes(): List<AuthorizationType> =
+  public override fun modes(): List<AuthorizationType> =
       unwrap(this).getModes().map(AuthorizationType::wrap)
 
   /**
@@ -122,6 +127,11 @@ public open class GraphqlApi(
    * APIs).
    */
   public open fun schema(): ISchema = unwrap(this).getSchema().let(ISchema::wrap)
+
+  /**
+   * the visibility of the API.
+   */
+  public override fun visibility(): Visibility = unwrap(this).getVisibility().let(Visibility::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.appsync.GraphqlApi].
@@ -313,7 +323,7 @@ public open class GraphqlApi(
      * @param authorizationConfig Optional authorization configuration. 
      */
     override fun authorizationConfig(authorizationConfig: AuthorizationConfig) {
-      cdkBuilder.authorizationConfig(authorizationConfig.let(AuthorizationConfig::unwrap))
+      cdkBuilder.authorizationConfig(authorizationConfig.let(AuthorizationConfig.Companion::unwrap))
     }
 
     /**
@@ -334,7 +344,7 @@ public open class GraphqlApi(
      * @param definition Definition (schema file or source APIs) for this GraphQL Api. 
      */
     override fun definition(definition: Definition) {
-      cdkBuilder.definition(definition.let(Definition::unwrap))
+      cdkBuilder.definition(definition.let(Definition.Companion::unwrap))
     }
 
     /**
@@ -349,7 +359,7 @@ public open class GraphqlApi(
      * @param domainName The domain name configuration for the GraphQL API. 
      */
     override fun domainName(domainName: DomainOptions) {
-      cdkBuilder.domainName(domainName.let(DomainOptions::unwrap))
+      cdkBuilder.domainName(domainName.let(DomainOptions.Companion::unwrap))
     }
 
     /**
@@ -397,7 +407,7 @@ public open class GraphqlApi(
      * (DISABLED) introspection. 
      */
     override fun introspectionConfig(introspectionConfig: IntrospectionConfig) {
-      cdkBuilder.introspectionConfig(introspectionConfig.let(IntrospectionConfig::unwrap))
+      cdkBuilder.introspectionConfig(introspectionConfig.let(IntrospectionConfig.Companion::unwrap))
     }
 
     /**
@@ -408,7 +418,7 @@ public open class GraphqlApi(
      * @param logConfig Logging configuration for this api. 
      */
     override fun logConfig(logConfig: LogConfig) {
-      cdkBuilder.logConfig(logConfig.let(LogConfig::unwrap))
+      cdkBuilder.logConfig(logConfig.let(LogConfig.Companion::unwrap))
     }
 
     /**
@@ -473,7 +483,7 @@ public open class GraphqlApi(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun schema(schema: ISchema) {
-      cdkBuilder.schema(schema.let(ISchema::unwrap))
+      cdkBuilder.schema(schema.let(ISchema.Companion::unwrap))
     }
 
     /**
@@ -486,7 +496,7 @@ public open class GraphqlApi(
      * can only be access from a VPC (PRIVATE). 
      */
     override fun visibility(visibility: Visibility) {
-      cdkBuilder.visibility(visibility.let(Visibility::unwrap))
+      cdkBuilder.visibility(visibility.let(Visibility.Companion::unwrap))
     }
 
     /**
@@ -510,8 +520,8 @@ public open class GraphqlApi(
       id: String,
       attrs: GraphqlApiAttributes,
     ): IGraphqlApi =
-        software.amazon.awscdk.services.appsync.GraphqlApi.fromGraphqlApiAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(GraphqlApiAttributes::unwrap)).let(IGraphqlApi::wrap)
+        software.amazon.awscdk.services.appsync.GraphqlApi.fromGraphqlApiAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(GraphqlApiAttributes.Companion::unwrap)).let(IGraphqlApi::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2a7a086d289e85cbe58a544f38e35ac10906749dadb33dde67fec9359500d7f3")

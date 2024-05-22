@@ -64,7 +64,7 @@ public open class CfnServiceNetworkServiceAssociation(
   cdkObject: software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -73,8 +73,8 @@ public open class CfnServiceNetworkServiceAssociation(
     id: String,
     props: CfnServiceNetworkServiceAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnServiceNetworkServiceAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.vpclattice.CfnServiceNetworkServiceAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnServiceNetworkServiceAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -153,14 +153,14 @@ public open class CfnServiceNetworkServiceAssociation(
    * The DNS information of the service.
    */
   public open fun dnsEntry(`value`: IResolvable) {
-    unwrap(this).setDnsEntry(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDnsEntry(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The DNS information of the service.
    */
   public open fun dnsEntry(`value`: DnsEntryProperty) {
-    unwrap(this).setDnsEntry(`value`.let(DnsEntryProperty::unwrap))
+    unwrap(this).setDnsEntry(`value`.let(DnsEntryProperty.Companion::unwrap))
   }
 
   /**
@@ -177,7 +177,7 @@ public open class CfnServiceNetworkServiceAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -219,7 +219,7 @@ public open class CfnServiceNetworkServiceAssociation(
    * The tags for the association.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -310,7 +310,7 @@ public open class CfnServiceNetworkServiceAssociation(
      * @param dnsEntry The DNS information of the service. 
      */
     override fun dnsEntry(dnsEntry: IResolvable) {
-      cdkBuilder.dnsEntry(dnsEntry.let(IResolvable::unwrap))
+      cdkBuilder.dnsEntry(dnsEntry.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -320,7 +320,7 @@ public open class CfnServiceNetworkServiceAssociation(
      * @param dnsEntry The DNS information of the service. 
      */
     override fun dnsEntry(dnsEntry: DnsEntryProperty) {
-      cdkBuilder.dnsEntry(dnsEntry.let(DnsEntryProperty::unwrap))
+      cdkBuilder.dnsEntry(dnsEntry.let(DnsEntryProperty.Companion::unwrap))
     }
 
     /**
@@ -363,7 +363,7 @@ public open class CfnServiceNetworkServiceAssociation(
      * @param tags The tags for the association. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

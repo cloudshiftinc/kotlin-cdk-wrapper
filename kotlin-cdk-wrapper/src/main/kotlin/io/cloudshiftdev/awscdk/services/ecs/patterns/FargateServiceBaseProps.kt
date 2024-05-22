@@ -314,14 +314,14 @@ public interface FargateServiceBaseProps {
      * in the Amazon Elastic Container Service Developer Guide.
      */
     override fun platformVersion(platformVersion: FargatePlatformVersion) {
-      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion::unwrap))
+      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion.Companion::unwrap))
     }
 
     /**
      * @param runtimePlatform The runtime platform of the task definition.
      */
     override fun runtimePlatform(runtimePlatform: RuntimePlatform) {
-      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform::unwrap))
+      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform.Companion::unwrap))
     }
 
     /**
@@ -338,7 +338,7 @@ public interface FargateServiceBaseProps {
      * [disable-awslint:ref-via-interface]
      */
     override fun taskDefinition(taskDefinition: FargateTaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.patterns.FargateServiceBaseProps =

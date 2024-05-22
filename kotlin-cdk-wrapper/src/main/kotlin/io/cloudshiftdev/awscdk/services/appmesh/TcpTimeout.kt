@@ -54,7 +54,7 @@ public interface TcpTimeout {
      * The amount of time that a connection may be idle.
      */
     override fun idle(idle: Duration) {
-      cdkBuilder.idle(idle.let(Duration::unwrap))
+      cdkBuilder.idle(idle.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appmesh.TcpTimeout = cdkBuilder.build()

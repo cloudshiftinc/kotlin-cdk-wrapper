@@ -83,7 +83,7 @@ public interface CodeConfig {
      * @param s3Location The location of the code in S3 (mutually exclusive with `inlineCode`).
      */
     override fun s3Location(s3Location: Location) {
-      cdkBuilder.s3Location(s3Location.let(Location::unwrap))
+      cdkBuilder.s3Location(s3Location.let(Location.Companion::unwrap))
     }
 
     /**

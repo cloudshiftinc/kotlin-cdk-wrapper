@@ -93,8 +93,8 @@ public open class CfnDistribution(
     id: String,
     props: CfnDistributionProps,
   ) :
-      this(software.amazon.awscdk.services.lightsail.CfnDistribution(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDistributionProps::unwrap))
+      this(software.amazon.awscdk.services.lightsail.CfnDistribution(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDistributionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -141,14 +141,14 @@ public open class CfnDistribution(
    * An object that describes the cache behavior settings of the distribution.
    */
   public open fun cacheBehaviorSettings(`value`: IResolvable) {
-    unwrap(this).setCacheBehaviorSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCacheBehaviorSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An object that describes the cache behavior settings of the distribution.
    */
   public open fun cacheBehaviorSettings(`value`: CacheSettingsProperty) {
-    unwrap(this).setCacheBehaviorSettings(`value`.let(CacheSettingsProperty::unwrap))
+    unwrap(this).setCacheBehaviorSettings(`value`.let(CacheSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -168,7 +168,7 @@ public open class CfnDistribution(
    * An array of objects that describe the per-path cache behavior of the distribution.
    */
   public open fun cacheBehaviors(`value`: IResolvable) {
-    unwrap(this).setCacheBehaviors(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCacheBehaviors(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -204,14 +204,14 @@ public open class CfnDistribution(
    * An object that describes the default cache behavior of the distribution.
    */
   public open fun defaultCacheBehavior(`value`: IResolvable) {
-    unwrap(this).setDefaultCacheBehavior(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefaultCacheBehavior(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An object that describes the default cache behavior of the distribution.
    */
   public open fun defaultCacheBehavior(`value`: CacheBehaviorProperty) {
-    unwrap(this).setDefaultCacheBehavior(`value`.let(CacheBehaviorProperty::unwrap))
+    unwrap(this).setDefaultCacheBehavior(`value`.let(CacheBehaviorProperty.Companion::unwrap))
   }
 
   /**
@@ -240,7 +240,7 @@ public open class CfnDistribution(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -271,7 +271,7 @@ public open class CfnDistribution(
    * A Boolean value indicating whether the distribution is enabled.
    */
   public open fun isEnabled(`value`: IResolvable) {
-    unwrap(this).setIsEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIsEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -285,7 +285,7 @@ public open class CfnDistribution(
    * bucket, or load balancer.
    */
   public open fun origin(`value`: IResolvable) {
-    unwrap(this).setOrigin(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOrigin(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -293,7 +293,7 @@ public open class CfnDistribution(
    * bucket, or load balancer.
    */
   public open fun origin(`value`: InputOriginProperty) {
-    unwrap(this).setOrigin(`value`.let(InputOriginProperty::unwrap))
+    unwrap(this).setOrigin(`value`.let(InputOriginProperty.Companion::unwrap))
   }
 
   /**
@@ -320,7 +320,7 @@ public open class CfnDistribution(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -565,7 +565,7 @@ public open class CfnDistribution(
      * distribution. 
      */
     override fun cacheBehaviorSettings(cacheBehaviorSettings: IResolvable) {
-      cdkBuilder.cacheBehaviorSettings(cacheBehaviorSettings.let(IResolvable::unwrap))
+      cdkBuilder.cacheBehaviorSettings(cacheBehaviorSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -576,7 +576,7 @@ public open class CfnDistribution(
      * distribution. 
      */
     override fun cacheBehaviorSettings(cacheBehaviorSettings: CacheSettingsProperty) {
-      cdkBuilder.cacheBehaviorSettings(cacheBehaviorSettings.let(CacheSettingsProperty::unwrap))
+      cdkBuilder.cacheBehaviorSettings(cacheBehaviorSettings.let(CacheSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -600,7 +600,7 @@ public open class CfnDistribution(
      * distribution. 
      */
     override fun cacheBehaviors(cacheBehaviors: IResolvable) {
-      cdkBuilder.cacheBehaviors(cacheBehaviors.let(IResolvable::unwrap))
+      cdkBuilder.cacheBehaviors(cacheBehaviors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -642,7 +642,7 @@ public open class CfnDistribution(
      * distribution. 
      */
     override fun defaultCacheBehavior(defaultCacheBehavior: IResolvable) {
-      cdkBuilder.defaultCacheBehavior(defaultCacheBehavior.let(IResolvable::unwrap))
+      cdkBuilder.defaultCacheBehavior(defaultCacheBehavior.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -653,7 +653,7 @@ public open class CfnDistribution(
      * distribution. 
      */
     override fun defaultCacheBehavior(defaultCacheBehavior: CacheBehaviorProperty) {
-      cdkBuilder.defaultCacheBehavior(defaultCacheBehavior.let(CacheBehaviorProperty::unwrap))
+      cdkBuilder.defaultCacheBehavior(defaultCacheBehavior.let(CacheBehaviorProperty.Companion::unwrap))
     }
 
     /**
@@ -708,7 +708,7 @@ public open class CfnDistribution(
      * @param isEnabled A Boolean value indicating whether the distribution is enabled. 
      */
     override fun isEnabled(isEnabled: IResolvable) {
-      cdkBuilder.isEnabled(isEnabled.let(IResolvable::unwrap))
+      cdkBuilder.isEnabled(isEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -722,7 +722,7 @@ public open class CfnDistribution(
      * Lightsail instance, bucket, or load balancer. 
      */
     override fun origin(origin: IResolvable) {
-      cdkBuilder.origin(origin.let(IResolvable::unwrap))
+      cdkBuilder.origin(origin.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -736,7 +736,7 @@ public open class CfnDistribution(
      * Lightsail instance, bucket, or load balancer. 
      */
     override fun origin(origin: InputOriginProperty) {
-      cdkBuilder.origin(origin.let(InputOriginProperty::unwrap))
+      cdkBuilder.origin(origin.let(InputOriginProperty.Companion::unwrap))
     }
 
     /**
@@ -769,7 +769,7 @@ public open class CfnDistribution(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1534,7 +1534,7 @@ public open class CfnDistribution(
        * Your content is cached based on the cookies that are forwarded.
        */
       override fun forwardedCookies(forwardedCookies: IResolvable) {
-        cdkBuilder.forwardedCookies(forwardedCookies.let(IResolvable::unwrap))
+        cdkBuilder.forwardedCookies(forwardedCookies.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1543,7 +1543,7 @@ public open class CfnDistribution(
        * Your content is cached based on the cookies that are forwarded.
        */
       override fun forwardedCookies(forwardedCookies: CookieObjectProperty) {
-        cdkBuilder.forwardedCookies(forwardedCookies.let(CookieObjectProperty::unwrap))
+        cdkBuilder.forwardedCookies(forwardedCookies.let(CookieObjectProperty.Companion::unwrap))
       }
 
       /**
@@ -1562,7 +1562,7 @@ public open class CfnDistribution(
        * Your content is cached based on the headers that are forwarded.
        */
       override fun forwardedHeaders(forwardedHeaders: IResolvable) {
-        cdkBuilder.forwardedHeaders(forwardedHeaders.let(IResolvable::unwrap))
+        cdkBuilder.forwardedHeaders(forwardedHeaders.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1571,7 +1571,7 @@ public open class CfnDistribution(
        * Your content is cached based on the headers that are forwarded.
        */
       override fun forwardedHeaders(forwardedHeaders: HeaderObjectProperty) {
-        cdkBuilder.forwardedHeaders(forwardedHeaders.let(HeaderObjectProperty::unwrap))
+        cdkBuilder.forwardedHeaders(forwardedHeaders.let(HeaderObjectProperty.Companion::unwrap))
       }
 
       /**
@@ -1590,7 +1590,7 @@ public open class CfnDistribution(
        * Your content is cached based on the query strings that are forwarded.
        */
       override fun forwardedQueryStrings(forwardedQueryStrings: IResolvable) {
-        cdkBuilder.forwardedQueryStrings(forwardedQueryStrings.let(IResolvable::unwrap))
+        cdkBuilder.forwardedQueryStrings(forwardedQueryStrings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1599,7 +1599,7 @@ public open class CfnDistribution(
        * Your content is cached based on the query strings that are forwarded.
        */
       override fun forwardedQueryStrings(forwardedQueryStrings: QueryStringObjectProperty) {
-        cdkBuilder.forwardedQueryStrings(forwardedQueryStrings.let(QueryStringObjectProperty::unwrap))
+        cdkBuilder.forwardedQueryStrings(forwardedQueryStrings.let(QueryStringObjectProperty.Companion::unwrap))
       }
 
       /**
@@ -2323,7 +2323,7 @@ public open class CfnDistribution(
        * strings.
        */
       override fun option(option: IResolvable) {
-        cdkBuilder.option(option.let(IResolvable::unwrap))
+        cdkBuilder.option(option.let(IResolvable.Companion::unwrap))
       }
 
       /**

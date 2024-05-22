@@ -169,7 +169,7 @@ public interface VirtualNodeListenerConfig {
      * @param listener Single listener config for a VirtualNode. 
      */
     override fun listener(listener: CfnVirtualNode.ListenerProperty) {
-      cdkBuilder.listener(listener.let(CfnVirtualNode.ListenerProperty::unwrap))
+      cdkBuilder.listener(listener.let(CfnVirtualNode.ListenerProperty.Companion::unwrap))
     }
 
     /**

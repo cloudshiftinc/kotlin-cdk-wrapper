@@ -83,7 +83,7 @@ public interface IResolveContext {
      * @param postProcessor 
      */
     override fun registerPostProcessor(postProcessor: IPostProcessor) {
-      unwrap(this).registerPostProcessor(postProcessor.let(IPostProcessor::unwrap))
+      unwrap(this).registerPostProcessor(postProcessor.let(IPostProcessor.Companion::unwrap))
     }
 
     /**
@@ -101,7 +101,7 @@ public interface IResolveContext {
      * @param options
      */
     override fun resolve(x: Any, options: ResolveChangeContextOptions): Any =
-        unwrap(this).resolve(x, options.let(ResolveChangeContextOptions::unwrap))
+        unwrap(this).resolve(x, options.let(ResolveChangeContextOptions.Companion::unwrap))
 
     /**
      * Resolve an inner object.

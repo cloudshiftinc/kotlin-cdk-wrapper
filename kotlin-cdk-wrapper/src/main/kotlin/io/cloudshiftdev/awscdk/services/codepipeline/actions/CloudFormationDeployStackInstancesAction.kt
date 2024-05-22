@@ -56,7 +56,7 @@ public open class CloudFormationDeployStackInstancesAction(
   cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeployStackInstancesAction,
 ) : Action(cdkObject) {
   public constructor(props: CloudFormationDeployStackInstancesActionProps) :
-      this(software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeployStackInstancesAction(props.let(CloudFormationDeployStackInstancesActionProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeployStackInstancesAction(props.let(CloudFormationDeployStackInstancesActionProps.Companion::unwrap))
   )
 
   public constructor(props: CloudFormationDeployStackInstancesActionProps.Builder.() -> Unit) :
@@ -259,7 +259,7 @@ public open class CloudFormationDeployStackInstancesAction(
      * @param parameterOverrides Parameter values that only apply to the current Stack Instances. 
      */
     override fun parameterOverrides(parameterOverrides: StackSetParameters) {
-      cdkBuilder.parameterOverrides(parameterOverrides.let(StackSetParameters::unwrap))
+      cdkBuilder.parameterOverrides(parameterOverrides.let(StackSetParameters.Companion::unwrap))
     }
 
     /**
@@ -276,7 +276,7 @@ public open class CloudFormationDeployStackInstancesAction(
      * @param role The Role in which context's this Action will be executing in. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -301,7 +301,7 @@ public open class CloudFormationDeployStackInstancesAction(
      * @param stackInstances Specify where to create or update Stack Instances. 
      */
     override fun stackInstances(stackInstances: StackInstances) {
-      cdkBuilder.stackInstances(stackInstances.let(StackInstances::unwrap))
+      cdkBuilder.stackInstances(stackInstances.let(StackInstances.Companion::unwrap))
     }
 
     /**

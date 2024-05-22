@@ -146,14 +146,14 @@ public interface AlexaSkillDeployActionProps : CommonActionProps {
      * @param clientSecret The client secret of the developer console token. 
      */
     override fun clientSecret(clientSecret: SecretValue) {
-      cdkBuilder.clientSecret(clientSecret.let(SecretValue::unwrap))
+      cdkBuilder.clientSecret(clientSecret.let(SecretValue.Companion::unwrap))
     }
 
     /**
      * @param input The source artifact containing the voice model and skill manifest. 
      */
     override fun input(input: Artifact) {
-      cdkBuilder.input(input.let(Artifact::unwrap))
+      cdkBuilder.input(input.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -161,14 +161,14 @@ public interface AlexaSkillDeployActionProps : CommonActionProps {
      * manifest.
      */
     override fun parameterOverridesArtifact(parameterOverridesArtifact: Artifact) {
-      cdkBuilder.parameterOverridesArtifact(parameterOverridesArtifact.let(Artifact::unwrap))
+      cdkBuilder.parameterOverridesArtifact(parameterOverridesArtifact.let(Artifact.Companion::unwrap))
     }
 
     /**
      * @param refreshToken The refresh token of the developer console token. 
      */
     override fun refreshToken(refreshToken: SecretValue) {
-      cdkBuilder.refreshToken(refreshToken.let(SecretValue::unwrap))
+      cdkBuilder.refreshToken(refreshToken.let(SecretValue.Companion::unwrap))
     }
 
     /**

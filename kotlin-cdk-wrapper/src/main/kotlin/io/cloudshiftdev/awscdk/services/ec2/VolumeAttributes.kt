@@ -84,7 +84,7 @@ public interface VolumeAttributes {
      * @param encryptionKey The customer-managed encryption key that is used to encrypt the Volume.
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**

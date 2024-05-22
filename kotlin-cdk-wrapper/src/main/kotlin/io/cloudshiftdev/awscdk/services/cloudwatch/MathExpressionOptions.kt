@@ -198,7 +198,7 @@ public interface MathExpressionOptions {
      * math expression.
      */
     override fun period(period: Duration) {
-      cdkBuilder.period(period.let(Duration::unwrap))
+      cdkBuilder.period(period.let(Duration.Companion::unwrap))
     }
 
     /**

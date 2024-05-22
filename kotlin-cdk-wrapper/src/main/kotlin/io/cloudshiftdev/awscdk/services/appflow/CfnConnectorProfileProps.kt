@@ -399,7 +399,7 @@ public interface CfnConnectorProfileProps {
      * @param connectorProfileConfig Defines the connector-specific configuration and credentials.
      */
     override fun connectorProfileConfig(connectorProfileConfig: IResolvable) {
-      cdkBuilder.connectorProfileConfig(connectorProfileConfig.let(IResolvable::unwrap))
+      cdkBuilder.connectorProfileConfig(connectorProfileConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -407,7 +407,7 @@ public interface CfnConnectorProfileProps {
      */
     override
         fun connectorProfileConfig(connectorProfileConfig: CfnConnectorProfile.ConnectorProfileConfigProperty) {
-      cdkBuilder.connectorProfileConfig(connectorProfileConfig.let(CfnConnectorProfile.ConnectorProfileConfigProperty::unwrap))
+      cdkBuilder.connectorProfileConfig(connectorProfileConfig.let(CfnConnectorProfile.ConnectorProfileConfigProperty.Companion::unwrap))
     }
 
     /**

@@ -125,7 +125,7 @@ public interface CfnUserProfileProps {
      * .
      */
     override fun allowSelfManagement(allowSelfManagement: IResolvable) {
-      cdkBuilder.allowSelfManagement(allowSelfManagement.let(IResolvable::unwrap))
+      cdkBuilder.allowSelfManagement(allowSelfManagement.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -171,14 +171,14 @@ public interface ScheduledEc2TaskImageOptions : ScheduledTaskImageProps {
      * Image or taskDefinition must be specified, but not both.
      */
     override fun image(image: ContainerImage) {
-      cdkBuilder.image(image.let(ContainerImage::unwrap))
+      cdkBuilder.image(image.let(ContainerImage.Companion::unwrap))
     }
 
     /**
      * @param logDriver The log driver to use.
      */
     override fun logDriver(logDriver: LogDriver) {
-      cdkBuilder.logDriver(logDriver.let(LogDriver::unwrap))
+      cdkBuilder.logDriver(logDriver.let(LogDriver.Companion::unwrap))
     }
 
     /**

@@ -57,7 +57,7 @@ public interface PostgresInstanceEngineProps {
      * @param version The exact version of the engine to use. 
      */
     override fun version(version: PostgresEngineVersion) {
-      cdkBuilder.version(version.let(PostgresEngineVersion::unwrap))
+      cdkBuilder.version(version.let(PostgresEngineVersion.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.PostgresInstanceEngineProps =

@@ -49,8 +49,8 @@ public open class BedrockInvokeModel(
     id: String,
     props: BedrockInvokeModelProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(BedrockInvokeModelProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(BedrockInvokeModelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -366,7 +366,7 @@ public open class BedrockInvokeModel(
      * @param body The input data for the Bedrock model invocation. 
      */
     override fun body(body: TaskInput) {
-      cdkBuilder.body(body.let(TaskInput::unwrap))
+      cdkBuilder.body(body.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -404,7 +404,7 @@ public open class BedrockInvokeModel(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -433,7 +433,7 @@ public open class BedrockInvokeModel(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -447,7 +447,7 @@ public open class BedrockInvokeModel(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -458,7 +458,7 @@ public open class BedrockInvokeModel(
      * @param input The source location to retrieve the input data from. 
      */
     override fun input(input: BedrockInvokeModelInputProps) {
-      cdkBuilder.input(input.let(BedrockInvokeModelInputProps::unwrap))
+      cdkBuilder.input(input.let(BedrockInvokeModelInputProps.Companion::unwrap))
     }
 
     /**
@@ -505,7 +505,7 @@ public open class BedrockInvokeModel(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -515,7 +515,7 @@ public open class BedrockInvokeModel(
      * @param model The Bedrock model that the task will invoke. 
      */
     override fun model(model: IModel) {
-      cdkBuilder.model(model.let(IModel::unwrap))
+      cdkBuilder.model(model.let(IModel.Companion::unwrap))
     }
 
     /**
@@ -529,7 +529,7 @@ public open class BedrockInvokeModel(
      * @param output The destination location where the API response is written. 
      */
     override fun output(output: BedrockInvokeModelOutputProps) {
-      cdkBuilder.output(output.let(BedrockInvokeModelOutputProps::unwrap))
+      cdkBuilder.output(output.let(BedrockInvokeModelOutputProps.Companion::unwrap))
     }
 
     /**
@@ -616,7 +616,7 @@ public open class BedrockInvokeModel(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -629,7 +629,7 @@ public open class BedrockInvokeModel(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModel =

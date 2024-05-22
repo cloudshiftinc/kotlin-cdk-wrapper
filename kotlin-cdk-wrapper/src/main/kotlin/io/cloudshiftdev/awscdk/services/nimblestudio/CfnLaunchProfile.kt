@@ -83,8 +83,8 @@ public open class CfnLaunchProfile(
     id: String,
     props: CfnLaunchProfileProps,
   ) :
-      this(software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLaunchProfileProps::unwrap))
+      this(software.amazon.awscdk.services.nimblestudio.CfnLaunchProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLaunchProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -134,7 +134,7 @@ public open class CfnLaunchProfile(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -177,14 +177,14 @@ public open class CfnLaunchProfile(
    * A configuration for a streaming session.
    */
   public open fun streamConfiguration(`value`: IResolvable) {
-    unwrap(this).setStreamConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStreamConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A configuration for a streaming session.
    */
   public open fun streamConfiguration(`value`: StreamConfigurationProperty) {
-    unwrap(this).setStreamConfiguration(`value`.let(StreamConfigurationProperty::unwrap))
+    unwrap(this).setStreamConfiguration(`value`.let(StreamConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -452,7 +452,7 @@ public open class CfnLaunchProfile(
      * @param streamConfiguration A configuration for a streaming session. 
      */
     override fun streamConfiguration(streamConfiguration: IResolvable) {
-      cdkBuilder.streamConfiguration(streamConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.streamConfiguration(streamConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -462,7 +462,7 @@ public open class CfnLaunchProfile(
      * @param streamConfiguration A configuration for a streaming session. 
      */
     override fun streamConfiguration(streamConfiguration: StreamConfigurationProperty) {
-      cdkBuilder.streamConfiguration(streamConfiguration.let(StreamConfigurationProperty::unwrap))
+      cdkBuilder.streamConfiguration(streamConfiguration.let(StreamConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -929,14 +929,14 @@ public open class CfnLaunchProfile(
        * @param sessionBackup Information about the streaming session backup.
        */
       override fun sessionBackup(sessionBackup: IResolvable) {
-        cdkBuilder.sessionBackup(sessionBackup.let(IResolvable::unwrap))
+        cdkBuilder.sessionBackup(sessionBackup.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sessionBackup Information about the streaming session backup.
        */
       override fun sessionBackup(sessionBackup: StreamConfigurationSessionBackupProperty) {
-        cdkBuilder.sessionBackup(sessionBackup.let(StreamConfigurationSessionBackupProperty::unwrap))
+        cdkBuilder.sessionBackup(sessionBackup.let(StreamConfigurationSessionBackupProperty.Companion::unwrap))
       }
 
       /**
@@ -961,14 +961,14 @@ public open class CfnLaunchProfile(
        * @param sessionStorage The upload storage for a streaming session.
        */
       override fun sessionStorage(sessionStorage: IResolvable) {
-        cdkBuilder.sessionStorage(sessionStorage.let(IResolvable::unwrap))
+        cdkBuilder.sessionStorage(sessionStorage.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sessionStorage The upload storage for a streaming session.
        */
       override fun sessionStorage(sessionStorage: StreamConfigurationSessionStorageProperty) {
-        cdkBuilder.sessionStorage(sessionStorage.let(StreamConfigurationSessionStorageProperty::unwrap))
+        cdkBuilder.sessionStorage(sessionStorage.let(StreamConfigurationSessionStorageProperty.Companion::unwrap))
       }
 
       /**
@@ -1001,7 +1001,7 @@ public open class CfnLaunchProfile(
        * This parameter is only allowed when `sessionPersistenceMode` is `ACTIVATED` .
        */
       override fun volumeConfiguration(volumeConfiguration: IResolvable) {
-        cdkBuilder.volumeConfiguration(volumeConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.volumeConfiguration(volumeConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1010,7 +1010,7 @@ public open class CfnLaunchProfile(
        * This parameter is only allowed when `sessionPersistenceMode` is `ACTIVATED` .
        */
       override fun volumeConfiguration(volumeConfiguration: VolumeConfigurationProperty) {
-        cdkBuilder.volumeConfiguration(volumeConfiguration.let(VolumeConfigurationProperty::unwrap))
+        cdkBuilder.volumeConfiguration(volumeConfiguration.let(VolumeConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1395,14 +1395,14 @@ public open class CfnLaunchProfile(
        * @param root The configuration for the upload storage root of the streaming session.
        */
       override fun root(root: IResolvable) {
-        cdkBuilder.root(root.let(IResolvable::unwrap))
+        cdkBuilder.root(root.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param root The configuration for the upload storage root of the streaming session.
        */
       override fun root(root: StreamingSessionStorageRootProperty) {
-        cdkBuilder.root(root.let(StreamingSessionStorageRootProperty::unwrap))
+        cdkBuilder.root(root.let(StreamingSessionStorageRootProperty.Companion::unwrap))
       }
 
       /**

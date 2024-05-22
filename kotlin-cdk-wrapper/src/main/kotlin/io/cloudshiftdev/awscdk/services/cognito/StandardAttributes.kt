@@ -390,7 +390,7 @@ public interface StandardAttributes {
      * @param address The user's postal address.
      */
     override fun address(address: StandardAttribute) {
-      cdkBuilder.address(address.let(StandardAttribute::unwrap))
+      cdkBuilder.address(address.let(StandardAttribute.Companion::unwrap))
     }
 
     /**
@@ -405,7 +405,7 @@ public interface StandardAttributes {
      * @param birthdate The user's birthday, represented as an ISO 8601:2004 format.
      */
     override fun birthdate(birthdate: StandardAttribute) {
-      cdkBuilder.birthdate(birthdate.let(StandardAttribute::unwrap))
+      cdkBuilder.birthdate(birthdate.let(StandardAttribute.Companion::unwrap))
     }
 
     /**
@@ -420,7 +420,7 @@ public interface StandardAttributes {
      * @param email The user's e-mail address, represented as an RFC 5322 [RFC5322] addr-spec.
      */
     override fun email(email: StandardAttribute) {
-      cdkBuilder.email(email.let(StandardAttribute::unwrap))
+      cdkBuilder.email(email.let(StandardAttribute.Companion::unwrap))
     }
 
     /**
@@ -435,7 +435,7 @@ public interface StandardAttributes {
      * @param familyName The surname or last name of the user.
      */
     override fun familyName(familyName: StandardAttribute) {
-      cdkBuilder.familyName(familyName.let(StandardAttribute::unwrap))
+      cdkBuilder.familyName(familyName.let(StandardAttribute.Companion::unwrap))
     }
 
     /**
@@ -451,7 +451,7 @@ public interface StandardAttributes {
      * and suffixes.
      */
     override fun fullname(fullname: StandardAttribute) {
-      cdkBuilder.fullname(fullname.let(StandardAttribute::unwrap))
+      cdkBuilder.fullname(fullname.let(StandardAttribute.Companion::unwrap))
     }
 
     /**
@@ -467,7 +467,7 @@ public interface StandardAttributes {
      * @param gender The user's gender.
      */
     override fun gender(gender: StandardAttribute) {
-      cdkBuilder.gender(gender.let(StandardAttribute::unwrap))
+      cdkBuilder.gender(gender.let(StandardAttribute.Companion::unwrap))
     }
 
     /**
@@ -482,7 +482,7 @@ public interface StandardAttributes {
      * @param givenName The user's first name or give name.
      */
     override fun givenName(givenName: StandardAttribute) {
-      cdkBuilder.givenName(givenName.let(StandardAttribute::unwrap))
+      cdkBuilder.givenName(givenName.let(StandardAttribute.Companion::unwrap))
     }
 
     /**
@@ -497,7 +497,7 @@ public interface StandardAttributes {
      * @param lastUpdateTime The time, the user's information was last updated.
      */
     override fun lastUpdateTime(lastUpdateTime: StandardAttribute) {
-      cdkBuilder.lastUpdateTime(lastUpdateTime.let(StandardAttribute::unwrap))
+      cdkBuilder.lastUpdateTime(lastUpdateTime.let(StandardAttribute.Companion::unwrap))
     }
 
     /**
@@ -512,7 +512,7 @@ public interface StandardAttributes {
      * @param locale The user's locale, represented as a BCP47 [RFC5646] language tag.
      */
     override fun locale(locale: StandardAttribute) {
-      cdkBuilder.locale(locale.let(StandardAttribute::unwrap))
+      cdkBuilder.locale(locale.let(StandardAttribute.Companion::unwrap))
     }
 
     /**
@@ -527,7 +527,7 @@ public interface StandardAttributes {
      * @param middleName The user's middle name.
      */
     override fun middleName(middleName: StandardAttribute) {
-      cdkBuilder.middleName(middleName.let(StandardAttribute::unwrap))
+      cdkBuilder.middleName(middleName.let(StandardAttribute.Companion::unwrap))
     }
 
     /**
@@ -542,7 +542,7 @@ public interface StandardAttributes {
      * @param nickname The user's nickname or casual name.
      */
     override fun nickname(nickname: StandardAttribute) {
-      cdkBuilder.nickname(nickname.let(StandardAttribute::unwrap))
+      cdkBuilder.nickname(nickname.let(StandardAttribute.Companion::unwrap))
     }
 
     /**
@@ -557,7 +557,7 @@ public interface StandardAttributes {
      * @param phoneNumber The user's telephone number.
      */
     override fun phoneNumber(phoneNumber: StandardAttribute) {
-      cdkBuilder.phoneNumber(phoneNumber.let(StandardAttribute::unwrap))
+      cdkBuilder.phoneNumber(phoneNumber.let(StandardAttribute.Companion::unwrap))
     }
 
     /**
@@ -573,7 +573,7 @@ public interface StandardAttributes {
      * name.
      */
     override fun preferredUsername(preferredUsername: StandardAttribute) {
-      cdkBuilder.preferredUsername(preferredUsername.let(StandardAttribute::unwrap))
+      cdkBuilder.preferredUsername(preferredUsername.let(StandardAttribute.Companion::unwrap))
     }
 
     /**
@@ -589,7 +589,7 @@ public interface StandardAttributes {
      * @param profilePage The URL to the user's profile page.
      */
     override fun profilePage(profilePage: StandardAttribute) {
-      cdkBuilder.profilePage(profilePage.let(StandardAttribute::unwrap))
+      cdkBuilder.profilePage(profilePage.let(StandardAttribute.Companion::unwrap))
     }
 
     /**
@@ -604,7 +604,7 @@ public interface StandardAttributes {
      * @param profilePicture The URL to the user's profile picture.
      */
     override fun profilePicture(profilePicture: StandardAttribute) {
-      cdkBuilder.profilePicture(profilePicture.let(StandardAttribute::unwrap))
+      cdkBuilder.profilePicture(profilePicture.let(StandardAttribute.Companion::unwrap))
     }
 
     /**
@@ -619,7 +619,7 @@ public interface StandardAttributes {
      * @param timezone The user's time zone.
      */
     override fun timezone(timezone: StandardAttribute) {
-      cdkBuilder.timezone(timezone.let(StandardAttribute::unwrap))
+      cdkBuilder.timezone(timezone.let(StandardAttribute.Companion::unwrap))
     }
 
     /**
@@ -634,7 +634,7 @@ public interface StandardAttributes {
      * @param website The URL to the user's web page or blog.
      */
     override fun website(website: StandardAttribute) {
-      cdkBuilder.website(website.let(StandardAttribute::unwrap))
+      cdkBuilder.website(website.let(StandardAttribute.Companion::unwrap))
     }
 
     /**

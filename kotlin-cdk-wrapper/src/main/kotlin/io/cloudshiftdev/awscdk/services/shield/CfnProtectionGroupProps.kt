@@ -251,7 +251,7 @@ public interface CfnProtectionGroupProps {
      * as "test," "development," or "production"). You can add up to 50 tags to each AWS resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -63,8 +63,8 @@ public open class CfnWorkgroup(
     id: String,
     props: CfnWorkgroupProps,
   ) :
-      this(software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnWorkgroupProps::unwrap))
+      this(software.amazon.awscdk.services.redshiftserverless.CfnWorkgroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnWorkgroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -200,7 +200,7 @@ public open class CfnWorkgroup(
    * A list of parameters to set for finer control over a database.
    */
   public open fun configParameters(`value`: IResolvable) {
-    unwrap(this).setConfigParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfigParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -234,7 +234,7 @@ public open class CfnWorkgroup(
    * forces Amazon Redshift Serverless to route traffic through your VPC.
    */
   public open fun enhancedVpcRouting(`value`: IResolvable) {
-    unwrap(this).setEnhancedVpcRouting(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnhancedVpcRouting(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -243,7 +243,7 @@ public open class CfnWorkgroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -298,7 +298,7 @@ public open class CfnWorkgroup(
    * A value that specifies whether the workgroup can be accessible from a public network.
    */
   public open fun publiclyAccessible(`value`: IResolvable) {
-    unwrap(this).setPubliclyAccessible(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPubliclyAccessible(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -352,7 +352,7 @@ public open class CfnWorkgroup(
    * The map of the key-value pairs used to tag the workgroup.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -579,7 +579,7 @@ public open class CfnWorkgroup(
      * @param configParameters A list of parameters to set for finer control over a database. 
      */
     override fun configParameters(configParameters: IResolvable) {
-      cdkBuilder.configParameters(configParameters.let(IResolvable::unwrap))
+      cdkBuilder.configParameters(configParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -632,7 +632,7 @@ public open class CfnWorkgroup(
      * cloud (VPC) routing, which forces Amazon Redshift Serverless to route traffic through your VPC. 
      */
     override fun enhancedVpcRouting(enhancedVpcRouting: IResolvable) {
-      cdkBuilder.enhancedVpcRouting(enhancedVpcRouting.let(IResolvable::unwrap))
+      cdkBuilder.enhancedVpcRouting(enhancedVpcRouting.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -693,7 +693,7 @@ public open class CfnWorkgroup(
      * a public network. 
      */
     override fun publiclyAccessible(publiclyAccessible: IResolvable) {
-      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
+      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -740,7 +740,7 @@ public open class CfnWorkgroup(
      * @param tags The map of the key-value pairs used to tag the workgroup. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1008,7 +1008,7 @@ public open class CfnWorkgroup(
        * @param vpcEndpoints An array of `VpcEndpoint` objects.
        */
       override fun vpcEndpoints(vpcEndpoints: IResolvable) {
-        cdkBuilder.vpcEndpoints(vpcEndpoints.let(IResolvable::unwrap))
+        cdkBuilder.vpcEndpoints(vpcEndpoints.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1329,7 +1329,7 @@ public open class CfnWorkgroup(
        * Also known as an interface endpoint.
        */
       override fun networkInterfaces(networkInterfaces: IResolvable) {
-        cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable::unwrap))
+        cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1469,9 +1469,10 @@ public open class CfnWorkgroup(
      * An array of parameters to set for advanced control over a database.
      *
      * The options are `auto_mv` , `datestyle` , `enable_case_sensitive_identifier` ,
-     * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` , and query
-     * monitoring metrics that let you define performance boundaries. For more information about query
-     * monitoring rules and available metrics, see [Query monitoring metrics for Amazon Redshift
+     * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` , `use_fips_ssl`
+     * , and query monitoring metrics that let you define performance boundaries. For more information
+     * about query monitoring rules and available metrics, see [Query monitoring metrics for Amazon
+     * Redshift
      * Serverless](https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless)
      * .
      *
@@ -1580,10 +1581,10 @@ public open class CfnWorkgroup(
       /**
        * @param configParameters An array of parameters to set for advanced control over a database.
        * The options are `auto_mv` , `datestyle` , `enable_case_sensitive_identifier` ,
-       * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` , and query
-       * monitoring metrics that let you define performance boundaries. For more information about
-       * query monitoring rules and available metrics, see [Query monitoring metrics for Amazon
-       * Redshift
+       * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` ,
+       * `use_fips_ssl` , and query monitoring metrics that let you define performance boundaries. For
+       * more information about query monitoring rules and available metrics, see [Query monitoring
+       * metrics for Amazon Redshift
        * Serverless](https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless)
        * .
        */
@@ -1592,10 +1593,10 @@ public open class CfnWorkgroup(
       /**
        * @param configParameters An array of parameters to set for advanced control over a database.
        * The options are `auto_mv` , `datestyle` , `enable_case_sensitive_identifier` ,
-       * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` , and query
-       * monitoring metrics that let you define performance boundaries. For more information about
-       * query monitoring rules and available metrics, see [Query monitoring metrics for Amazon
-       * Redshift
+       * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` ,
+       * `use_fips_ssl` , and query monitoring metrics that let you define performance boundaries. For
+       * more information about query monitoring rules and available metrics, see [Query monitoring
+       * metrics for Amazon Redshift
        * Serverless](https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless)
        * .
        */
@@ -1604,10 +1605,10 @@ public open class CfnWorkgroup(
       /**
        * @param configParameters An array of parameters to set for advanced control over a database.
        * The options are `auto_mv` , `datestyle` , `enable_case_sensitive_identifier` ,
-       * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` , and query
-       * monitoring metrics that let you define performance boundaries. For more information about
-       * query monitoring rules and available metrics, see [Query monitoring metrics for Amazon
-       * Redshift
+       * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` ,
+       * `use_fips_ssl` , and query monitoring metrics that let you define performance boundaries. For
+       * more information about query monitoring rules and available metrics, see [Query monitoring
+       * metrics for Amazon Redshift
        * Serverless](https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless)
        * .
        */
@@ -1731,24 +1732,24 @@ public open class CfnWorkgroup(
       /**
        * @param configParameters An array of parameters to set for advanced control over a database.
        * The options are `auto_mv` , `datestyle` , `enable_case_sensitive_identifier` ,
-       * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` , and query
-       * monitoring metrics that let you define performance boundaries. For more information about
-       * query monitoring rules and available metrics, see [Query monitoring metrics for Amazon
-       * Redshift
+       * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` ,
+       * `use_fips_ssl` , and query monitoring metrics that let you define performance boundaries. For
+       * more information about query monitoring rules and available metrics, see [Query monitoring
+       * metrics for Amazon Redshift
        * Serverless](https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless)
        * .
        */
       override fun configParameters(configParameters: IResolvable) {
-        cdkBuilder.configParameters(configParameters.let(IResolvable::unwrap))
+        cdkBuilder.configParameters(configParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param configParameters An array of parameters to set for advanced control over a database.
        * The options are `auto_mv` , `datestyle` , `enable_case_sensitive_identifier` ,
-       * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` , and query
-       * monitoring metrics that let you define performance boundaries. For more information about
-       * query monitoring rules and available metrics, see [Query monitoring metrics for Amazon
-       * Redshift
+       * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` ,
+       * `use_fips_ssl` , and query monitoring metrics that let you define performance boundaries. For
+       * more information about query monitoring rules and available metrics, see [Query monitoring
+       * metrics for Amazon Redshift
        * Serverless](https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless)
        * .
        */
@@ -1759,10 +1760,10 @@ public open class CfnWorkgroup(
       /**
        * @param configParameters An array of parameters to set for advanced control over a database.
        * The options are `auto_mv` , `datestyle` , `enable_case_sensitive_identifier` ,
-       * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` , and query
-       * monitoring metrics that let you define performance boundaries. For more information about
-       * query monitoring rules and available metrics, see [Query monitoring metrics for Amazon
-       * Redshift
+       * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` ,
+       * `use_fips_ssl` , and query monitoring metrics that let you define performance boundaries. For
+       * more information about query monitoring rules and available metrics, see [Query monitoring
+       * metrics for Amazon Redshift
        * Serverless](https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless)
        * .
        */
@@ -1780,14 +1781,14 @@ public open class CfnWorkgroup(
        * @param endpoint The endpoint that is created from the workgroup.
        */
       override fun endpoint(endpoint: IResolvable) {
-        cdkBuilder.endpoint(endpoint.let(IResolvable::unwrap))
+        cdkBuilder.endpoint(endpoint.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param endpoint The endpoint that is created from the workgroup.
        */
       override fun endpoint(endpoint: EndpointProperty) {
-        cdkBuilder.endpoint(endpoint.let(EndpointProperty::unwrap))
+        cdkBuilder.endpoint(endpoint.let(EndpointProperty.Companion::unwrap))
       }
 
       /**
@@ -1813,7 +1814,7 @@ public open class CfnWorkgroup(
        * your VPC.
        */
       override fun enhancedVpcRouting(enhancedVpcRouting: IResolvable) {
-        cdkBuilder.enhancedVpcRouting(enhancedVpcRouting.let(IResolvable::unwrap))
+        cdkBuilder.enhancedVpcRouting(enhancedVpcRouting.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1845,7 +1846,7 @@ public open class CfnWorkgroup(
        * from a public network.
        */
       override fun publiclyAccessible(publiclyAccessible: IResolvable) {
-        cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
+        cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1920,10 +1921,10 @@ public open class CfnWorkgroup(
        * An array of parameters to set for advanced control over a database.
        *
        * The options are `auto_mv` , `datestyle` , `enable_case_sensitive_identifier` ,
-       * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` , and query
-       * monitoring metrics that let you define performance boundaries. For more information about
-       * query monitoring rules and available metrics, see [Query monitoring metrics for Amazon
-       * Redshift
+       * `enable_user_activity_logging` , `query_group` , `search_path` , `require_ssl` ,
+       * `use_fips_ssl` , and query monitoring metrics that let you define performance boundaries. For
+       * more information about query monitoring rules and available metrics, see [Query monitoring
+       * metrics for Amazon Redshift
        * Serverless](https://docs.aws.amazon.com/redshift/latest/dg/cm-c-wlm-query-monitoring-rules.html#cm-c-wlm-query-monitoring-metrics-serverless)
        * .
        *

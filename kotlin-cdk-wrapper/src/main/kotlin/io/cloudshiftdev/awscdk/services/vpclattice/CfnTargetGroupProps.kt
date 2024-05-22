@@ -175,14 +175,14 @@ public interface CfnTargetGroupProps {
      * @param config The target group configuration.
      */
     override fun config(config: IResolvable) {
-      cdkBuilder.config(config.let(IResolvable::unwrap))
+      cdkBuilder.config(config.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param config The target group configuration.
      */
     override fun config(config: CfnTargetGroup.TargetGroupConfigProperty) {
-      cdkBuilder.config(config.let(CfnTargetGroup.TargetGroupConfigProperty::unwrap))
+      cdkBuilder.config(config.let(CfnTargetGroup.TargetGroupConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -209,7 +209,7 @@ public interface CfnTargetGroupProps {
      * @param tags The tags for the target group.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -221,7 +221,7 @@ public interface CfnTargetGroupProps {
      * @param targets Describes a target.
      */
     override fun targets(targets: IResolvable) {
-      cdkBuilder.targets(targets.let(IResolvable::unwrap))
+      cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
     }
 
     /**

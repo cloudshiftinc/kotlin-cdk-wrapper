@@ -487,7 +487,7 @@ public interface CfnPipelineProps {
      * use both. If you create a cross-region action in your pipeline, you must use `artifactStores` .
      */
     override fun artifactStore(artifactStore: IResolvable) {
-      cdkBuilder.artifactStore(artifactStore.let(IResolvable::unwrap))
+      cdkBuilder.artifactStore(artifactStore.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -497,7 +497,7 @@ public interface CfnPipelineProps {
      * use both. If you create a cross-region action in your pipeline, you must use `artifactStores` .
      */
     override fun artifactStore(artifactStore: CfnPipeline.ArtifactStoreProperty) {
-      cdkBuilder.artifactStore(artifactStore.let(CfnPipeline.ArtifactStoreProperty::unwrap))
+      cdkBuilder.artifactStore(artifactStore.let(CfnPipeline.ArtifactStoreProperty.Companion::unwrap))
     }
 
     /**
@@ -522,7 +522,7 @@ public interface CfnPipelineProps {
      * use both. If you create a cross-region action in your pipeline, you must use `artifactStores` .
      */
     override fun artifactStores(artifactStores: IResolvable) {
-      cdkBuilder.artifactStores(artifactStores.let(IResolvable::unwrap))
+      cdkBuilder.artifactStores(artifactStores.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -557,7 +557,7 @@ public interface CfnPipelineProps {
      * action.
      */
     override fun disableInboundStageTransitions(disableInboundStageTransitions: IResolvable) {
-      cdkBuilder.disableInboundStageTransitions(disableInboundStageTransitions.let(IResolvable::unwrap))
+      cdkBuilder.disableInboundStageTransitions(disableInboundStageTransitions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -629,7 +629,7 @@ public interface CfnPipelineProps {
      * you update it.
      */
     override fun restartExecutionOnUpdate(restartExecutionOnUpdate: IResolvable) {
-      cdkBuilder.restartExecutionOnUpdate(restartExecutionOnUpdate.let(IResolvable::unwrap))
+      cdkBuilder.restartExecutionOnUpdate(restartExecutionOnUpdate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -645,7 +645,7 @@ public interface CfnPipelineProps {
      * @param stages Represents information about a stage and its definition. 
      */
     override fun stages(stages: IResolvable) {
-      cdkBuilder.stages(stages.let(IResolvable::unwrap))
+      cdkBuilder.stages(stages.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -664,7 +664,7 @@ public interface CfnPipelineProps {
      * @param tags Specifies the tags applied to the pipeline.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -680,7 +680,7 @@ public interface CfnPipelineProps {
      * commits is disabled.
      */
     override fun triggers(triggers: IResolvable) {
-      cdkBuilder.triggers(triggers.let(IResolvable::unwrap))
+      cdkBuilder.triggers(triggers.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -709,7 +709,7 @@ public interface CfnPipelineProps {
      * `[A-Za-z0-9&#64;\-_]+` .
      */
     override fun variables(variables: IResolvable) {
-      cdkBuilder.variables(variables.let(IResolvable::unwrap))
+      cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -261,8 +261,8 @@ public open class CfnRoute(
     id: String,
     props: CfnRouteProps,
   ) :
-      this(software.amazon.awscdk.services.appmesh.CfnRoute(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRouteProps::unwrap))
+      this(software.amazon.awscdk.services.appmesh.CfnRoute(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRouteProps.Companion::unwrap))
   )
 
   public constructor(
@@ -326,7 +326,7 @@ public open class CfnRoute(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -374,14 +374,14 @@ public open class CfnRoute(
    * The route specification to apply.
    */
   public open fun spec(`value`: IResolvable) {
-    unwrap(this).setSpec(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSpec(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The route specification to apply.
    */
   public open fun spec(`value`: RouteSpecProperty) {
-    unwrap(this).setSpec(`value`.let(RouteSpecProperty::unwrap))
+    unwrap(this).setSpec(`value`.let(RouteSpecProperty.Companion::unwrap))
   }
 
   /**
@@ -409,7 +409,7 @@ public open class CfnRoute(
    * organization.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -579,7 +579,7 @@ public open class CfnRoute(
      * @param spec The route specification to apply. 
      */
     override fun spec(spec: IResolvable) {
-      cdkBuilder.spec(spec.let(IResolvable::unwrap))
+      cdkBuilder.spec(spec.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -589,7 +589,7 @@ public open class CfnRoute(
      * @param spec The route specification to apply. 
      */
     override fun spec(spec: RouteSpecProperty) {
-      cdkBuilder.spec(spec.let(RouteSpecProperty::unwrap))
+      cdkBuilder.spec(spec.let(RouteSpecProperty.Companion::unwrap))
     }
 
     /**
@@ -616,7 +616,7 @@ public open class CfnRoute(
      * and organization. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -975,14 +975,14 @@ public open class CfnRoute(
        * @param perRetryTimeout The timeout for each retry attempt. 
        */
       override fun perRetryTimeout(perRetryTimeout: IResolvable) {
-        cdkBuilder.perRetryTimeout(perRetryTimeout.let(IResolvable::unwrap))
+        cdkBuilder.perRetryTimeout(perRetryTimeout.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param perRetryTimeout The timeout for each retry attempt. 
        */
       override fun perRetryTimeout(perRetryTimeout: DurationProperty) {
-        cdkBuilder.perRetryTimeout(perRetryTimeout.let(DurationProperty::unwrap))
+        cdkBuilder.perRetryTimeout(perRetryTimeout.let(DurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1146,7 +1146,7 @@ public open class CfnRoute(
        * a request matches the route. 
        */
       override fun weightedTargets(weightedTargets: IResolvable) {
-        cdkBuilder.weightedTargets(weightedTargets.let(IResolvable::unwrap))
+        cdkBuilder.weightedTargets(weightedTargets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1309,7 +1309,7 @@ public open class CfnRoute(
        * @param metadata An object that represents the data to match from the request.
        */
       override fun metadata(metadata: IResolvable) {
-        cdkBuilder.metadata(metadata.let(IResolvable::unwrap))
+        cdkBuilder.metadata(metadata.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1532,14 +1532,14 @@ public open class CfnRoute(
        * @param range An object that represents the range of values to match on.
        */
       override fun range(range: IResolvable) {
-        cdkBuilder.range(range.let(IResolvable::unwrap))
+        cdkBuilder.range(range.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param range An object that represents the range of values to match on.
        */
       override fun range(range: MatchRangeProperty) {
-        cdkBuilder.range(range.let(MatchRangeProperty::unwrap))
+        cdkBuilder.range(range.let(MatchRangeProperty.Companion::unwrap))
       }
 
       /**
@@ -1737,21 +1737,21 @@ public open class CfnRoute(
        * The default value is `False` .
        */
       override fun invert(invert: IResolvable) {
-        cdkBuilder.invert(invert.let(IResolvable::unwrap))
+        cdkBuilder.invert(invert.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param match An object that represents the data to match from the request.
        */
       override fun match(match: IResolvable) {
-        cdkBuilder.match(match.let(IResolvable::unwrap))
+        cdkBuilder.match(match.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param match An object that represents the data to match from the request.
        */
       override fun match(match: GrpcRouteMetadataMatchMethodProperty) {
-        cdkBuilder.match(match.let(GrpcRouteMetadataMatchMethodProperty::unwrap))
+        cdkBuilder.match(match.let(GrpcRouteMetadataMatchMethodProperty.Companion::unwrap))
       }
 
       /**
@@ -1995,14 +1995,14 @@ public open class CfnRoute(
        * @param action An object that represents the action to take if a match is determined. 
        */
       override fun action(action: IResolvable) {
-        cdkBuilder.action(action.let(IResolvable::unwrap))
+        cdkBuilder.action(action.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param action An object that represents the action to take if a match is determined. 
        */
       override fun action(action: GrpcRouteActionProperty) {
-        cdkBuilder.action(action.let(GrpcRouteActionProperty::unwrap))
+        cdkBuilder.action(action.let(GrpcRouteActionProperty.Companion::unwrap))
       }
 
       /**
@@ -2017,14 +2017,14 @@ public open class CfnRoute(
        * @param match An object that represents the criteria for determining a request match. 
        */
       override fun match(match: IResolvable) {
-        cdkBuilder.match(match.let(IResolvable::unwrap))
+        cdkBuilder.match(match.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param match An object that represents the criteria for determining a request match. 
        */
       override fun match(match: GrpcRouteMatchProperty) {
-        cdkBuilder.match(match.let(GrpcRouteMatchProperty::unwrap))
+        cdkBuilder.match(match.let(GrpcRouteMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -2039,14 +2039,14 @@ public open class CfnRoute(
        * @param retryPolicy An object that represents a retry policy.
        */
       override fun retryPolicy(retryPolicy: IResolvable) {
-        cdkBuilder.retryPolicy(retryPolicy.let(IResolvable::unwrap))
+        cdkBuilder.retryPolicy(retryPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param retryPolicy An object that represents a retry policy.
        */
       override fun retryPolicy(retryPolicy: GrpcRetryPolicyProperty) {
-        cdkBuilder.retryPolicy(retryPolicy.let(GrpcRetryPolicyProperty::unwrap))
+        cdkBuilder.retryPolicy(retryPolicy.let(GrpcRetryPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -2061,14 +2061,14 @@ public open class CfnRoute(
        * @param timeout An object that represents types of timeouts.
        */
       override fun timeout(timeout: IResolvable) {
-        cdkBuilder.timeout(timeout.let(IResolvable::unwrap))
+        cdkBuilder.timeout(timeout.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param timeout An object that represents types of timeouts.
        */
       override fun timeout(timeout: GrpcTimeoutProperty) {
-        cdkBuilder.timeout(timeout.let(GrpcTimeoutProperty::unwrap))
+        cdkBuilder.timeout(timeout.let(GrpcTimeoutProperty.Companion::unwrap))
       }
 
       /**
@@ -2247,7 +2247,7 @@ public open class CfnRoute(
        * is none.
        */
       override fun idle(idle: IResolvable) {
-        cdkBuilder.idle(idle.let(IResolvable::unwrap))
+        cdkBuilder.idle(idle.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2256,7 +2256,7 @@ public open class CfnRoute(
        * is none.
        */
       override fun idle(idle: DurationProperty) {
-        cdkBuilder.idle(idle.let(DurationProperty::unwrap))
+        cdkBuilder.idle(idle.let(DurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2277,7 +2277,7 @@ public open class CfnRoute(
        * should be greater than 15 seconds for the source and destination virtual node and the route.
        */
       override fun perRequest(perRequest: IResolvable) {
-        cdkBuilder.perRequest(perRequest.let(IResolvable::unwrap))
+        cdkBuilder.perRequest(perRequest.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2288,7 +2288,7 @@ public open class CfnRoute(
        * should be greater than 15 seconds for the source and destination virtual node and the route.
        */
       override fun perRequest(perRequest: DurationProperty) {
-        cdkBuilder.perRequest(perRequest.let(DurationProperty::unwrap))
+        cdkBuilder.perRequest(perRequest.let(DurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2479,14 +2479,14 @@ public open class CfnRoute(
        * @param range An object that represents the range of values to match on.
        */
       override fun range(range: IResolvable) {
-        cdkBuilder.range(range.let(IResolvable::unwrap))
+        cdkBuilder.range(range.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param range An object that represents the range of values to match on.
        */
       override fun range(range: MatchRangeProperty) {
-        cdkBuilder.range(range.let(MatchRangeProperty::unwrap))
+        cdkBuilder.range(range.let(MatchRangeProperty.Companion::unwrap))
       }
 
       /**
@@ -2930,14 +2930,14 @@ public open class CfnRoute(
        * @param perRetryTimeout The timeout for each retry attempt. 
        */
       override fun perRetryTimeout(perRetryTimeout: IResolvable) {
-        cdkBuilder.perRetryTimeout(perRetryTimeout.let(IResolvable::unwrap))
+        cdkBuilder.perRetryTimeout(perRetryTimeout.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param perRetryTimeout The timeout for each retry attempt. 
        */
       override fun perRetryTimeout(perRetryTimeout: DurationProperty) {
-        cdkBuilder.perRetryTimeout(perRetryTimeout.let(DurationProperty::unwrap))
+        cdkBuilder.perRetryTimeout(perRetryTimeout.let(DurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3093,7 +3093,7 @@ public open class CfnRoute(
        * a request matches the route. 
        */
       override fun weightedTargets(weightedTargets: IResolvable) {
-        cdkBuilder.weightedTargets(weightedTargets.let(IResolvable::unwrap))
+        cdkBuilder.weightedTargets(weightedTargets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3255,21 +3255,21 @@ public open class CfnRoute(
        * The default value is `False` .
        */
       override fun invert(invert: IResolvable) {
-        cdkBuilder.invert(invert.let(IResolvable::unwrap))
+        cdkBuilder.invert(invert.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param match The `HeaderMatchMethod` object.
        */
       override fun match(match: IResolvable) {
-        cdkBuilder.match(match.let(IResolvable::unwrap))
+        cdkBuilder.match(match.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param match The `HeaderMatchMethod` object.
        */
       override fun match(match: HeaderMatchMethodProperty) {
-        cdkBuilder.match(match.let(HeaderMatchMethodProperty::unwrap))
+        cdkBuilder.match(match.let(HeaderMatchMethodProperty.Companion::unwrap))
       }
 
       /**
@@ -3529,7 +3529,7 @@ public open class CfnRoute(
        * @param headers The client request headers to match on.
        */
       override fun headers(headers: IResolvable) {
-        cdkBuilder.headers(headers.let(IResolvable::unwrap))
+        cdkBuilder.headers(headers.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3556,14 +3556,14 @@ public open class CfnRoute(
        * @param path The client request path to match on.
        */
       override fun path(path: IResolvable) {
-        cdkBuilder.path(path.let(IResolvable::unwrap))
+        cdkBuilder.path(path.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param path The client request path to match on.
        */
       override fun path(path: HttpPathMatchProperty) {
-        cdkBuilder.path(path.let(HttpPathMatchProperty::unwrap))
+        cdkBuilder.path(path.let(HttpPathMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -3596,7 +3596,7 @@ public open class CfnRoute(
        * @param queryParameters The client request query parameters to match on.
        */
       override fun queryParameters(queryParameters: IResolvable) {
-        cdkBuilder.queryParameters(queryParameters.let(IResolvable::unwrap))
+        cdkBuilder.queryParameters(queryParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3892,14 +3892,14 @@ public open class CfnRoute(
        * @param action An object that represents the action to take if a match is determined. 
        */
       override fun action(action: IResolvable) {
-        cdkBuilder.action(action.let(IResolvable::unwrap))
+        cdkBuilder.action(action.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param action An object that represents the action to take if a match is determined. 
        */
       override fun action(action: HttpRouteActionProperty) {
-        cdkBuilder.action(action.let(HttpRouteActionProperty::unwrap))
+        cdkBuilder.action(action.let(HttpRouteActionProperty.Companion::unwrap))
       }
 
       /**
@@ -3914,14 +3914,14 @@ public open class CfnRoute(
        * @param match An object that represents the criteria for determining a request match. 
        */
       override fun match(match: IResolvable) {
-        cdkBuilder.match(match.let(IResolvable::unwrap))
+        cdkBuilder.match(match.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param match An object that represents the criteria for determining a request match. 
        */
       override fun match(match: HttpRouteMatchProperty) {
-        cdkBuilder.match(match.let(HttpRouteMatchProperty::unwrap))
+        cdkBuilder.match(match.let(HttpRouteMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -3936,14 +3936,14 @@ public open class CfnRoute(
        * @param retryPolicy An object that represents a retry policy.
        */
       override fun retryPolicy(retryPolicy: IResolvable) {
-        cdkBuilder.retryPolicy(retryPolicy.let(IResolvable::unwrap))
+        cdkBuilder.retryPolicy(retryPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param retryPolicy An object that represents a retry policy.
        */
       override fun retryPolicy(retryPolicy: HttpRetryPolicyProperty) {
-        cdkBuilder.retryPolicy(retryPolicy.let(HttpRetryPolicyProperty::unwrap))
+        cdkBuilder.retryPolicy(retryPolicy.let(HttpRetryPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -3958,14 +3958,14 @@ public open class CfnRoute(
        * @param timeout An object that represents types of timeouts.
        */
       override fun timeout(timeout: IResolvable) {
-        cdkBuilder.timeout(timeout.let(IResolvable::unwrap))
+        cdkBuilder.timeout(timeout.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param timeout An object that represents types of timeouts.
        */
       override fun timeout(timeout: HttpTimeoutProperty) {
-        cdkBuilder.timeout(timeout.let(HttpTimeoutProperty::unwrap))
+        cdkBuilder.timeout(timeout.let(HttpTimeoutProperty.Companion::unwrap))
       }
 
       /**
@@ -4144,7 +4144,7 @@ public open class CfnRoute(
        * is none.
        */
       override fun idle(idle: IResolvable) {
-        cdkBuilder.idle(idle.let(IResolvable::unwrap))
+        cdkBuilder.idle(idle.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4153,7 +4153,7 @@ public open class CfnRoute(
        * is none.
        */
       override fun idle(idle: DurationProperty) {
-        cdkBuilder.idle(idle.let(DurationProperty::unwrap))
+        cdkBuilder.idle(idle.let(DurationProperty.Companion::unwrap))
       }
 
       /**
@@ -4174,7 +4174,7 @@ public open class CfnRoute(
        * should be greater than 15 seconds for the source and destination virtual node and the route.
        */
       override fun perRequest(perRequest: IResolvable) {
-        cdkBuilder.perRequest(perRequest.let(IResolvable::unwrap))
+        cdkBuilder.perRequest(perRequest.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4185,7 +4185,7 @@ public open class CfnRoute(
        * should be greater than 15 seconds for the source and destination virtual node and the route.
        */
       override fun perRequest(perRequest: DurationProperty) {
-        cdkBuilder.perRequest(perRequest.let(DurationProperty::unwrap))
+        cdkBuilder.perRequest(perRequest.let(DurationProperty.Companion::unwrap))
       }
 
       /**
@@ -4430,14 +4430,14 @@ public open class CfnRoute(
        * @param match The query parameter to match on.
        */
       override fun match(match: IResolvable) {
-        cdkBuilder.match(match.let(IResolvable::unwrap))
+        cdkBuilder.match(match.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param match The query parameter to match on.
        */
       override fun match(match: HttpQueryParameterMatchProperty) {
-        cdkBuilder.match(match.let(HttpQueryParameterMatchProperty::unwrap))
+        cdkBuilder.match(match.let(HttpQueryParameterMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -4838,14 +4838,14 @@ public open class CfnRoute(
        * @param grpcRoute An object that represents the specification of a gRPC route.
        */
       override fun grpcRoute(grpcRoute: IResolvable) {
-        cdkBuilder.grpcRoute(grpcRoute.let(IResolvable::unwrap))
+        cdkBuilder.grpcRoute(grpcRoute.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param grpcRoute An object that represents the specification of a gRPC route.
        */
       override fun grpcRoute(grpcRoute: GrpcRouteProperty) {
-        cdkBuilder.grpcRoute(grpcRoute.let(GrpcRouteProperty::unwrap))
+        cdkBuilder.grpcRoute(grpcRoute.let(GrpcRouteProperty.Companion::unwrap))
       }
 
       /**
@@ -4860,14 +4860,14 @@ public open class CfnRoute(
        * @param http2Route An object that represents the specification of an HTTP/2 route.
        */
       override fun http2Route(http2Route: IResolvable) {
-        cdkBuilder.http2Route(http2Route.let(IResolvable::unwrap))
+        cdkBuilder.http2Route(http2Route.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param http2Route An object that represents the specification of an HTTP/2 route.
        */
       override fun http2Route(http2Route: HttpRouteProperty) {
-        cdkBuilder.http2Route(http2Route.let(HttpRouteProperty::unwrap))
+        cdkBuilder.http2Route(http2Route.let(HttpRouteProperty.Companion::unwrap))
       }
 
       /**
@@ -4882,14 +4882,14 @@ public open class CfnRoute(
        * @param httpRoute An object that represents the specification of an HTTP route.
        */
       override fun httpRoute(httpRoute: IResolvable) {
-        cdkBuilder.httpRoute(httpRoute.let(IResolvable::unwrap))
+        cdkBuilder.httpRoute(httpRoute.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param httpRoute An object that represents the specification of an HTTP route.
        */
       override fun httpRoute(httpRoute: HttpRouteProperty) {
-        cdkBuilder.httpRoute(httpRoute.let(HttpRouteProperty::unwrap))
+        cdkBuilder.httpRoute(httpRoute.let(HttpRouteProperty.Companion::unwrap))
       }
 
       /**
@@ -4912,14 +4912,14 @@ public open class CfnRoute(
        * @param tcpRoute An object that represents the specification of a TCP route.
        */
       override fun tcpRoute(tcpRoute: IResolvable) {
-        cdkBuilder.tcpRoute(tcpRoute.let(IResolvable::unwrap))
+        cdkBuilder.tcpRoute(tcpRoute.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param tcpRoute An object that represents the specification of a TCP route.
        */
       override fun tcpRoute(tcpRoute: TcpRouteProperty) {
-        cdkBuilder.tcpRoute(tcpRoute.let(TcpRouteProperty::unwrap))
+        cdkBuilder.tcpRoute(tcpRoute.let(TcpRouteProperty.Companion::unwrap))
       }
 
       /**
@@ -5056,7 +5056,7 @@ public open class CfnRoute(
        * a request matches the route. 
        */
       override fun weightedTargets(weightedTargets: IResolvable) {
-        cdkBuilder.weightedTargets(weightedTargets.let(IResolvable::unwrap))
+        cdkBuilder.weightedTargets(weightedTargets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5309,14 +5309,14 @@ public open class CfnRoute(
        * @param action The action to take if a match is determined. 
        */
       override fun action(action: IResolvable) {
-        cdkBuilder.action(action.let(IResolvable::unwrap))
+        cdkBuilder.action(action.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param action The action to take if a match is determined. 
        */
       override fun action(action: TcpRouteActionProperty) {
-        cdkBuilder.action(action.let(TcpRouteActionProperty::unwrap))
+        cdkBuilder.action(action.let(TcpRouteActionProperty.Companion::unwrap))
       }
 
       /**
@@ -5331,14 +5331,14 @@ public open class CfnRoute(
        * @param match An object that represents the criteria for determining a request match.
        */
       override fun match(match: IResolvable) {
-        cdkBuilder.match(match.let(IResolvable::unwrap))
+        cdkBuilder.match(match.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param match An object that represents the criteria for determining a request match.
        */
       override fun match(match: TcpRouteMatchProperty) {
-        cdkBuilder.match(match.let(TcpRouteMatchProperty::unwrap))
+        cdkBuilder.match(match.let(TcpRouteMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -5353,14 +5353,14 @@ public open class CfnRoute(
        * @param timeout An object that represents types of timeouts.
        */
       override fun timeout(timeout: IResolvable) {
-        cdkBuilder.timeout(timeout.let(IResolvable::unwrap))
+        cdkBuilder.timeout(timeout.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param timeout An object that represents types of timeouts.
        */
       override fun timeout(timeout: TcpTimeoutProperty) {
-        cdkBuilder.timeout(timeout.let(TcpTimeoutProperty::unwrap))
+        cdkBuilder.timeout(timeout.let(TcpTimeoutProperty.Companion::unwrap))
       }
 
       /**
@@ -5487,7 +5487,7 @@ public open class CfnRoute(
        * is none.
        */
       override fun idle(idle: IResolvable) {
-        cdkBuilder.idle(idle.let(IResolvable::unwrap))
+        cdkBuilder.idle(idle.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5496,7 +5496,7 @@ public open class CfnRoute(
        * is none.
        */
       override fun idle(idle: DurationProperty) {
-        cdkBuilder.idle(idle.let(DurationProperty::unwrap))
+        cdkBuilder.idle(idle.let(DurationProperty.Companion::unwrap))
       }
 
       /**

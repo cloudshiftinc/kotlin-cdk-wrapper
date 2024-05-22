@@ -261,7 +261,7 @@ public interface CfnResponsePlanProps {
      * @param actions The actions that the response plan starts at the beginning of an incident.
      */
     override fun actions(actions: IResolvable) {
-      cdkBuilder.actions(actions.let(IResolvable::unwrap))
+      cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -280,14 +280,14 @@ public interface CfnResponsePlanProps {
      * @param chatChannel The AWS Chatbot chat channel used for collaboration during an incident.
      */
     override fun chatChannel(chatChannel: IResolvable) {
-      cdkBuilder.chatChannel(chatChannel.let(IResolvable::unwrap))
+      cdkBuilder.chatChannel(chatChannel.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param chatChannel The AWS Chatbot chat channel used for collaboration during an incident.
      */
     override fun chatChannel(chatChannel: CfnResponsePlan.ChatChannelProperty) {
-      cdkBuilder.chatChannel(chatChannel.let(CfnResponsePlan.ChatChannelProperty::unwrap))
+      cdkBuilder.chatChannel(chatChannel.let(CfnResponsePlan.ChatChannelProperty.Companion::unwrap))
     }
 
     /**
@@ -323,14 +323,14 @@ public interface CfnResponsePlanProps {
      * @param incidentTemplate Details used to create an incident when using this response plan. 
      */
     override fun incidentTemplate(incidentTemplate: IResolvable) {
-      cdkBuilder.incidentTemplate(incidentTemplate.let(IResolvable::unwrap))
+      cdkBuilder.incidentTemplate(incidentTemplate.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param incidentTemplate Details used to create an incident when using this response plan. 
      */
     override fun incidentTemplate(incidentTemplate: CfnResponsePlan.IncidentTemplateProperty) {
-      cdkBuilder.incidentTemplate(incidentTemplate.let(CfnResponsePlan.IncidentTemplateProperty::unwrap))
+      cdkBuilder.incidentTemplate(incidentTemplate.let(CfnResponsePlan.IncidentTemplateProperty.Companion::unwrap))
     }
 
     /**
@@ -346,7 +346,7 @@ public interface CfnResponsePlanProps {
      * @param integrations Information about third-party services integrated into the response plan.
      */
     override fun integrations(integrations: IResolvable) {
-      cdkBuilder.integrations(integrations.let(IResolvable::unwrap))
+      cdkBuilder.integrations(integrations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -375,7 +375,7 @@ public interface CfnResponsePlanProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

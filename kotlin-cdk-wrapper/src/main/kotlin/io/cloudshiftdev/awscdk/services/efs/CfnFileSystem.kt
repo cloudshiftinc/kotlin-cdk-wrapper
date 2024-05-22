@@ -77,7 +77,7 @@ public open class CfnFileSystem(
   cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.efs.CfnFileSystem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.efs.CfnFileSystem(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -86,8 +86,8 @@ public open class CfnFileSystem(
     id: String,
     props: CfnFileSystemProps,
   ) :
-      this(software.amazon.awscdk.services.efs.CfnFileSystem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFileSystemProps::unwrap))
+      this(software.amazon.awscdk.services.efs.CfnFileSystem(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFileSystemProps.Companion::unwrap))
   )
 
   public constructor(
@@ -135,14 +135,14 @@ public open class CfnFileSystem(
    * Use the `BackupPolicy` to turn automatic backups on or off for the file system.
    */
   public open fun backupPolicy(`value`: IResolvable) {
-    unwrap(this).setBackupPolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBackupPolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Use the `BackupPolicy` to turn automatic backups on or off for the file system.
    */
   public open fun backupPolicy(`value`: BackupPolicyProperty) {
-    unwrap(this).setBackupPolicy(`value`.let(BackupPolicyProperty::unwrap))
+    unwrap(this).setBackupPolicy(`value`.let(BackupPolicyProperty.Companion::unwrap))
   }
 
   /**
@@ -173,7 +173,7 @@ public open class CfnFileSystem(
    * safety check.
    */
   public open fun bypassPolicyLockoutSafetyCheck(`value`: IResolvable) {
-    unwrap(this).setBypassPolicyLockoutSafetyCheck(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBypassPolicyLockoutSafetyCheck(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -192,7 +192,7 @@ public open class CfnFileSystem(
    * A Boolean value that, if true, creates an encrypted file system.
    */
   public open fun encrypted(`value`: IResolvable) {
-    unwrap(this).setEncrypted(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEncrypted(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -216,14 +216,14 @@ public open class CfnFileSystem(
    * Describes the protection on the file system.
    */
   public open fun fileSystemProtection(`value`: IResolvable) {
-    unwrap(this).setFileSystemProtection(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFileSystemProtection(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Describes the protection on the file system.
    */
   public open fun fileSystemProtection(`value`: FileSystemProtectionProperty) {
-    unwrap(this).setFileSystemProtection(`value`.let(FileSystemProtectionProperty::unwrap))
+    unwrap(this).setFileSystemProtection(`value`.let(FileSystemProtectionProperty.Companion::unwrap))
   }
 
   /**
@@ -244,7 +244,7 @@ public open class CfnFileSystem(
    * Use to create one or more tags associated with the file system.
    */
   public open fun fileSystemTagsRaw(`value`: List<ElasticFileSystemTagProperty>) {
-    unwrap(this).setFileSystemTagsRaw(`value`.map(ElasticFileSystemTagProperty::unwrap))
+    unwrap(this).setFileSystemTagsRaw(`value`.map(ElasticFileSystemTagProperty.Companion::unwrap))
   }
 
   /**
@@ -259,7 +259,7 @@ public open class CfnFileSystem(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -285,7 +285,7 @@ public open class CfnFileSystem(
    * object.
    */
   public open fun lifecyclePolicies(`value`: IResolvable) {
-    unwrap(this).setLifecyclePolicies(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLifecyclePolicies(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -338,14 +338,14 @@ public open class CfnFileSystem(
    * Describes the replication configuration for a specific file system.
    */
   public open fun replicationConfiguration(`value`: IResolvable) {
-    unwrap(this).setReplicationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setReplicationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Describes the replication configuration for a specific file system.
    */
   public open fun replicationConfiguration(`value`: ReplicationConfigurationProperty) {
-    unwrap(this).setReplicationConfiguration(`value`.let(ReplicationConfigurationProperty::unwrap))
+    unwrap(this).setReplicationConfiguration(`value`.let(ReplicationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -770,7 +770,7 @@ public open class CfnFileSystem(
      * system. 
      */
     override fun backupPolicy(backupPolicy: IResolvable) {
-      cdkBuilder.backupPolicy(backupPolicy.let(IResolvable::unwrap))
+      cdkBuilder.backupPolicy(backupPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -781,7 +781,7 @@ public open class CfnFileSystem(
      * system. 
      */
     override fun backupPolicy(backupPolicy: BackupPolicyProperty) {
-      cdkBuilder.backupPolicy(backupPolicy.let(BackupPolicyProperty::unwrap))
+      cdkBuilder.backupPolicy(backupPolicy.let(BackupPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -829,7 +829,7 @@ public open class CfnFileSystem(
      * bypass the `FileSystemPolicy` lockout safety check. 
      */
     override fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: IResolvable) {
-      cdkBuilder.bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck.let(IResolvable::unwrap))
+      cdkBuilder.bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -857,7 +857,7 @@ public open class CfnFileSystem(
      * @param encrypted A Boolean value that, if true, creates an encrypted file system. 
      */
     override fun encrypted(encrypted: IResolvable) {
-      cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
+      cdkBuilder.encrypted(encrypted.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -882,7 +882,7 @@ public open class CfnFileSystem(
      * @param fileSystemProtection Describes the protection on the file system. 
      */
     override fun fileSystemProtection(fileSystemProtection: IResolvable) {
-      cdkBuilder.fileSystemProtection(fileSystemProtection.let(IResolvable::unwrap))
+      cdkBuilder.fileSystemProtection(fileSystemProtection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -892,7 +892,7 @@ public open class CfnFileSystem(
      * @param fileSystemProtection Describes the protection on the file system. 
      */
     override fun fileSystemProtection(fileSystemProtection: FileSystemProtectionProperty) {
-      cdkBuilder.fileSystemProtection(fileSystemProtection.let(FileSystemProtectionProperty::unwrap))
+      cdkBuilder.fileSystemProtection(fileSystemProtection.let(FileSystemProtectionProperty.Companion::unwrap))
     }
 
     /**
@@ -919,7 +919,7 @@ public open class CfnFileSystem(
      * @param fileSystemTags Use to create one or more tags associated with the file system. 
      */
     override fun fileSystemTags(fileSystemTags: List<ElasticFileSystemTagProperty>) {
-      cdkBuilder.fileSystemTags(fileSystemTags.map(ElasticFileSystemTagProperty::unwrap))
+      cdkBuilder.fileSystemTags(fileSystemTags.map(ElasticFileSystemTagProperty.Companion::unwrap))
     }
 
     /**
@@ -984,7 +984,7 @@ public open class CfnFileSystem(
      * `LifecycleConfiguration` object. 
      */
     override fun lifecyclePolicies(lifecyclePolicies: IResolvable) {
-      cdkBuilder.lifecyclePolicies(lifecyclePolicies.let(IResolvable::unwrap))
+      cdkBuilder.lifecyclePolicies(lifecyclePolicies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1089,7 +1089,7 @@ public open class CfnFileSystem(
      * system. 
      */
     override fun replicationConfiguration(replicationConfiguration: IResolvable) {
-      cdkBuilder.replicationConfiguration(replicationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.replicationConfiguration(replicationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1101,7 +1101,7 @@ public open class CfnFileSystem(
      */
     override
         fun replicationConfiguration(replicationConfiguration: ReplicationConfigurationProperty) {
-      cdkBuilder.replicationConfiguration(replicationConfiguration.let(ReplicationConfigurationProperty::unwrap))
+      cdkBuilder.replicationConfiguration(replicationConfiguration.let(ReplicationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1758,7 +1758,7 @@ public open class CfnFileSystem(
        * Only one destination object is supported.
        */
       override fun destinations(destinations: IResolvable) {
-        cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
+        cdkBuilder.destinations(destinations.let(IResolvable.Companion::unwrap))
       }
 
       /**

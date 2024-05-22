@@ -126,7 +126,7 @@ public interface CfnClusterCapacityProviderAssociationsProps {
      * with the cluster. 
      */
     override fun defaultCapacityProviderStrategy(defaultCapacityProviderStrategy: IResolvable) {
-      cdkBuilder.defaultCapacityProviderStrategy(defaultCapacityProviderStrategy.let(IResolvable::unwrap))
+      cdkBuilder.defaultCapacityProviderStrategy(defaultCapacityProviderStrategy.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -36,8 +36,8 @@ public open class ApplicationListenerCertificate(
     id: String,
     props: ApplicationListenerCertificateProps,
   ) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ApplicationListenerCertificateProps::unwrap))
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerCertificate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ApplicationListenerCertificateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -103,7 +103,7 @@ public open class ApplicationListenerCertificate(
      * @param certificates Certificates to attach. 
      */
     override fun certificates(certificates: List<IListenerCertificate>) {
-      cdkBuilder.certificates(certificates.map(IListenerCertificate::unwrap))
+      cdkBuilder.certificates(certificates.map(IListenerCertificate.Companion::unwrap))
     }
 
     /**
@@ -124,7 +124,7 @@ public open class ApplicationListenerCertificate(
      * @param listener The listener to attach the rule to. 
      */
     override fun listener(listener: IApplicationListener) {
-      cdkBuilder.listener(listener.let(IApplicationListener::unwrap))
+      cdkBuilder.listener(listener.let(IApplicationListener.Companion::unwrap))
     }
 
     public fun build():

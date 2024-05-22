@@ -68,8 +68,8 @@ public open class CfnInstanceStorageConfig(
     id: String,
     props: CfnInstanceStorageConfigProps,
   ) :
-      this(software.amazon.awscdk.services.connect.CfnInstanceStorageConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInstanceStorageConfigProps::unwrap))
+      this(software.amazon.awscdk.services.connect.CfnInstanceStorageConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInstanceStorageConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -91,7 +91,7 @@ public open class CfnInstanceStorageConfig(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -115,14 +115,14 @@ public open class CfnInstanceStorageConfig(
    * The configuration of the Kinesis Firehose delivery stream.
    */
   public open fun kinesisFirehoseConfig(`value`: IResolvable) {
-    unwrap(this).setKinesisFirehoseConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKinesisFirehoseConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration of the Kinesis Firehose delivery stream.
    */
   public open fun kinesisFirehoseConfig(`value`: KinesisFirehoseConfigProperty) {
-    unwrap(this).setKinesisFirehoseConfig(`value`.let(KinesisFirehoseConfigProperty::unwrap))
+    unwrap(this).setKinesisFirehoseConfig(`value`.let(KinesisFirehoseConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -142,14 +142,14 @@ public open class CfnInstanceStorageConfig(
    * The configuration of the Kinesis data stream.
    */
   public open fun kinesisStreamConfig(`value`: IResolvable) {
-    unwrap(this).setKinesisStreamConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKinesisStreamConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration of the Kinesis data stream.
    */
   public open fun kinesisStreamConfig(`value`: KinesisStreamConfigProperty) {
-    unwrap(this).setKinesisStreamConfig(`value`.let(KinesisStreamConfigProperty::unwrap))
+    unwrap(this).setKinesisStreamConfig(`value`.let(KinesisStreamConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -169,14 +169,14 @@ public open class CfnInstanceStorageConfig(
    * The configuration of the Kinesis video stream.
    */
   public open fun kinesisVideoStreamConfig(`value`: IResolvable) {
-    unwrap(this).setKinesisVideoStreamConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKinesisVideoStreamConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration of the Kinesis video stream.
    */
   public open fun kinesisVideoStreamConfig(`value`: KinesisVideoStreamConfigProperty) {
-    unwrap(this).setKinesisVideoStreamConfig(`value`.let(KinesisVideoStreamConfigProperty::unwrap))
+    unwrap(this).setKinesisVideoStreamConfig(`value`.let(KinesisVideoStreamConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -209,14 +209,14 @@ public open class CfnInstanceStorageConfig(
    * The S3 bucket configuration.
    */
   public open fun s3Config(`value`: IResolvable) {
-    unwrap(this).setS3Config(`value`.let(IResolvable::unwrap))
+    unwrap(this).setS3Config(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The S3 bucket configuration.
    */
   public open fun s3Config(`value`: S3ConfigProperty) {
-    unwrap(this).setS3Config(`value`.let(S3ConfigProperty::unwrap))
+    unwrap(this).setS3Config(`value`.let(S3ConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -403,7 +403,7 @@ public open class CfnInstanceStorageConfig(
      * @param kinesisFirehoseConfig The configuration of the Kinesis Firehose delivery stream. 
      */
     override fun kinesisFirehoseConfig(kinesisFirehoseConfig: IResolvable) {
-      cdkBuilder.kinesisFirehoseConfig(kinesisFirehoseConfig.let(IResolvable::unwrap))
+      cdkBuilder.kinesisFirehoseConfig(kinesisFirehoseConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -413,7 +413,7 @@ public open class CfnInstanceStorageConfig(
      * @param kinesisFirehoseConfig The configuration of the Kinesis Firehose delivery stream. 
      */
     override fun kinesisFirehoseConfig(kinesisFirehoseConfig: KinesisFirehoseConfigProperty) {
-      cdkBuilder.kinesisFirehoseConfig(kinesisFirehoseConfig.let(KinesisFirehoseConfigProperty::unwrap))
+      cdkBuilder.kinesisFirehoseConfig(kinesisFirehoseConfig.let(KinesisFirehoseConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -435,7 +435,7 @@ public open class CfnInstanceStorageConfig(
      * @param kinesisStreamConfig The configuration of the Kinesis data stream. 
      */
     override fun kinesisStreamConfig(kinesisStreamConfig: IResolvable) {
-      cdkBuilder.kinesisStreamConfig(kinesisStreamConfig.let(IResolvable::unwrap))
+      cdkBuilder.kinesisStreamConfig(kinesisStreamConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -445,7 +445,7 @@ public open class CfnInstanceStorageConfig(
      * @param kinesisStreamConfig The configuration of the Kinesis data stream. 
      */
     override fun kinesisStreamConfig(kinesisStreamConfig: KinesisStreamConfigProperty) {
-      cdkBuilder.kinesisStreamConfig(kinesisStreamConfig.let(KinesisStreamConfigProperty::unwrap))
+      cdkBuilder.kinesisStreamConfig(kinesisStreamConfig.let(KinesisStreamConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -467,7 +467,7 @@ public open class CfnInstanceStorageConfig(
      * @param kinesisVideoStreamConfig The configuration of the Kinesis video stream. 
      */
     override fun kinesisVideoStreamConfig(kinesisVideoStreamConfig: IResolvable) {
-      cdkBuilder.kinesisVideoStreamConfig(kinesisVideoStreamConfig.let(IResolvable::unwrap))
+      cdkBuilder.kinesisVideoStreamConfig(kinesisVideoStreamConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -478,7 +478,7 @@ public open class CfnInstanceStorageConfig(
      */
     override
         fun kinesisVideoStreamConfig(kinesisVideoStreamConfig: KinesisVideoStreamConfigProperty) {
-      cdkBuilder.kinesisVideoStreamConfig(kinesisVideoStreamConfig.let(KinesisVideoStreamConfigProperty::unwrap))
+      cdkBuilder.kinesisVideoStreamConfig(kinesisVideoStreamConfig.let(KinesisVideoStreamConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -513,7 +513,7 @@ public open class CfnInstanceStorageConfig(
      * @param s3Config The S3 bucket configuration. 
      */
     override fun s3Config(s3Config: IResolvable) {
-      cdkBuilder.s3Config(s3Config.let(IResolvable::unwrap))
+      cdkBuilder.s3Config(s3Config.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -523,7 +523,7 @@ public open class CfnInstanceStorageConfig(
      * @param s3Config The S3 bucket configuration. 
      */
     override fun s3Config(s3Config: S3ConfigProperty) {
-      cdkBuilder.s3Config(s3Config.let(S3ConfigProperty::unwrap))
+      cdkBuilder.s3Config(s3Config.let(S3ConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -968,14 +968,14 @@ public open class CfnInstanceStorageConfig(
        * @param encryptionConfig The encryption configuration. 
        */
       override fun encryptionConfig(encryptionConfig: IResolvable) {
-        cdkBuilder.encryptionConfig(encryptionConfig.let(IResolvable::unwrap))
+        cdkBuilder.encryptionConfig(encryptionConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param encryptionConfig The encryption configuration. 
        */
       override fun encryptionConfig(encryptionConfig: EncryptionConfigProperty) {
-        cdkBuilder.encryptionConfig(encryptionConfig.let(EncryptionConfigProperty::unwrap))
+        cdkBuilder.encryptionConfig(encryptionConfig.let(EncryptionConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1156,14 +1156,14 @@ public open class CfnInstanceStorageConfig(
        * @param encryptionConfig The Amazon S3 encryption configuration.
        */
       override fun encryptionConfig(encryptionConfig: IResolvable) {
-        cdkBuilder.encryptionConfig(encryptionConfig.let(IResolvable::unwrap))
+        cdkBuilder.encryptionConfig(encryptionConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param encryptionConfig The Amazon S3 encryption configuration.
        */
       override fun encryptionConfig(encryptionConfig: EncryptionConfigProperty) {
-        cdkBuilder.encryptionConfig(encryptionConfig.let(EncryptionConfigProperty::unwrap))
+        cdkBuilder.encryptionConfig(encryptionConfig.let(EncryptionConfigProperty.Companion::unwrap))
       }
 
       /**

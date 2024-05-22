@@ -117,14 +117,14 @@ public interface CfnConnectionProps {
      * @param connectionInput The connection that you want to create. 
      */
     override fun connectionInput(connectionInput: IResolvable) {
-      cdkBuilder.connectionInput(connectionInput.let(IResolvable::unwrap))
+      cdkBuilder.connectionInput(connectionInput.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param connectionInput The connection that you want to create. 
      */
     override fun connectionInput(connectionInput: CfnConnection.ConnectionInputProperty) {
-      cdkBuilder.connectionInput(connectionInput.let(CfnConnection.ConnectionInputProperty::unwrap))
+      cdkBuilder.connectionInput(connectionInput.let(CfnConnection.ConnectionInputProperty.Companion::unwrap))
     }
 
     /**

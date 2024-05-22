@@ -234,14 +234,14 @@ public interface CfnSamplingRuleProps {
      * @param samplingRule The sampling rule to be created or updated.
      */
     override fun samplingRule(samplingRule: IResolvable) {
-      cdkBuilder.samplingRule(samplingRule.let(IResolvable::unwrap))
+      cdkBuilder.samplingRule(samplingRule.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param samplingRule The sampling rule to be created or updated.
      */
     override fun samplingRule(samplingRule: CfnSamplingRule.SamplingRuleProperty) {
-      cdkBuilder.samplingRule(samplingRule.let(CfnSamplingRule.SamplingRuleProperty::unwrap))
+      cdkBuilder.samplingRule(samplingRule.let(CfnSamplingRule.SamplingRuleProperty.Companion::unwrap))
     }
 
     /**
@@ -259,7 +259,7 @@ public interface CfnSamplingRuleProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun samplingRuleRecord(samplingRuleRecord: IResolvable) {
-      cdkBuilder.samplingRuleRecord(samplingRuleRecord.let(IResolvable::unwrap))
+      cdkBuilder.samplingRuleRecord(samplingRuleRecord.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -269,7 +269,7 @@ public interface CfnSamplingRuleProps {
     @Deprecated(message = "deprecated in CDK")
     override
         fun samplingRuleRecord(samplingRuleRecord: CfnSamplingRule.SamplingRuleRecordProperty) {
-      cdkBuilder.samplingRuleRecord(samplingRuleRecord.let(CfnSamplingRule.SamplingRuleRecordProperty::unwrap))
+      cdkBuilder.samplingRuleRecord(samplingRuleRecord.let(CfnSamplingRule.SamplingRuleRecordProperty.Companion::unwrap))
     }
 
     /**
@@ -289,7 +289,7 @@ public interface CfnSamplingRuleProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun samplingRuleUpdate(samplingRuleUpdate: IResolvable) {
-      cdkBuilder.samplingRuleUpdate(samplingRuleUpdate.let(IResolvable::unwrap))
+      cdkBuilder.samplingRuleUpdate(samplingRuleUpdate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -299,7 +299,7 @@ public interface CfnSamplingRuleProps {
     @Deprecated(message = "deprecated in CDK")
     override
         fun samplingRuleUpdate(samplingRuleUpdate: CfnSamplingRule.SamplingRuleUpdateProperty) {
-      cdkBuilder.samplingRuleUpdate(samplingRuleUpdate.let(CfnSamplingRule.SamplingRuleUpdateProperty::unwrap))
+      cdkBuilder.samplingRuleUpdate(samplingRuleUpdate.let(CfnSamplingRule.SamplingRuleUpdateProperty.Companion::unwrap))
     }
 
     /**
@@ -317,7 +317,7 @@ public interface CfnSamplingRuleProps {
      * @param tags An array of key-value pairs to apply to this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

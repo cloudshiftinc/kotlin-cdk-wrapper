@@ -223,7 +223,7 @@ public interface CfnInferenceComponentProps {
      * @param runtimeConfig The runtime config for the inference component. 
      */
     override fun runtimeConfig(runtimeConfig: IResolvable) {
-      cdkBuilder.runtimeConfig(runtimeConfig.let(IResolvable::unwrap))
+      cdkBuilder.runtimeConfig(runtimeConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -231,7 +231,7 @@ public interface CfnInferenceComponentProps {
      */
     override
         fun runtimeConfig(runtimeConfig: CfnInferenceComponent.InferenceComponentRuntimeConfigProperty) {
-      cdkBuilder.runtimeConfig(runtimeConfig.let(CfnInferenceComponent.InferenceComponentRuntimeConfigProperty::unwrap))
+      cdkBuilder.runtimeConfig(runtimeConfig.let(CfnInferenceComponent.InferenceComponentRuntimeConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -248,7 +248,7 @@ public interface CfnInferenceComponentProps {
      * @param specification The specification for the inference component. 
      */
     override fun specification(specification: IResolvable) {
-      cdkBuilder.specification(specification.let(IResolvable::unwrap))
+      cdkBuilder.specification(specification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -256,7 +256,7 @@ public interface CfnInferenceComponentProps {
      */
     override
         fun specification(specification: CfnInferenceComponent.InferenceComponentSpecificationProperty) {
-      cdkBuilder.specification(specification.let(CfnInferenceComponent.InferenceComponentSpecificationProperty::unwrap))
+      cdkBuilder.specification(specification.let(CfnInferenceComponent.InferenceComponentSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -273,7 +273,7 @@ public interface CfnInferenceComponentProps {
      * @param tags An array of tags to apply to the resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -75,8 +75,8 @@ public open class CfnMember(
     id: String,
     props: CfnMemberProps,
   ) :
-      this(software.amazon.awscdk.services.managedblockchain.CfnMember(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMemberProps::unwrap))
+      this(software.amazon.awscdk.services.managedblockchain.CfnMember(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMemberProps.Companion::unwrap))
   )
 
   public constructor(
@@ -102,7 +102,7 @@ public open class CfnMember(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -128,14 +128,14 @@ public open class CfnMember(
    * Configuration properties of the member.
    */
   public open fun memberConfiguration(`value`: IResolvable) {
-    unwrap(this).setMemberConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMemberConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration properties of the member.
    */
   public open fun memberConfiguration(`value`: MemberConfigurationProperty) {
-    unwrap(this).setMemberConfiguration(`value`.let(MemberConfigurationProperty::unwrap))
+    unwrap(this).setMemberConfiguration(`value`.let(MemberConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -155,14 +155,14 @@ public open class CfnMember(
    * Configuration properties of the network to which the member belongs.
    */
   public open fun networkConfiguration(`value`: IResolvable) {
-    unwrap(this).setNetworkConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNetworkConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration properties of the network to which the member belongs.
    */
   public open fun networkConfiguration(`value`: NetworkConfigurationProperty) {
-    unwrap(this).setNetworkConfiguration(`value`.let(NetworkConfigurationProperty::unwrap))
+    unwrap(this).setNetworkConfiguration(`value`.let(NetworkConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -292,7 +292,7 @@ public open class CfnMember(
      * @param memberConfiguration Configuration properties of the member. 
      */
     override fun memberConfiguration(memberConfiguration: IResolvable) {
-      cdkBuilder.memberConfiguration(memberConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.memberConfiguration(memberConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -302,7 +302,7 @@ public open class CfnMember(
      * @param memberConfiguration Configuration properties of the member. 
      */
     override fun memberConfiguration(memberConfiguration: MemberConfigurationProperty) {
-      cdkBuilder.memberConfiguration(memberConfiguration.let(MemberConfigurationProperty::unwrap))
+      cdkBuilder.memberConfiguration(memberConfiguration.let(MemberConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -325,7 +325,7 @@ public open class CfnMember(
      * belongs. 
      */
     override fun networkConfiguration(networkConfiguration: IResolvable) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -336,7 +336,7 @@ public open class CfnMember(
      * belongs. 
      */
     override fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -676,7 +676,7 @@ public open class CfnMember(
        * relevant to the member.
        */
       override fun memberFrameworkConfiguration(memberFrameworkConfiguration: IResolvable) {
-        cdkBuilder.memberFrameworkConfiguration(memberFrameworkConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.memberFrameworkConfiguration(memberFrameworkConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -685,7 +685,7 @@ public open class CfnMember(
        */
       override
           fun memberFrameworkConfiguration(memberFrameworkConfiguration: MemberFrameworkConfigurationProperty) {
-        cdkBuilder.memberFrameworkConfiguration(memberFrameworkConfiguration.let(MemberFrameworkConfigurationProperty::unwrap))
+        cdkBuilder.memberFrameworkConfiguration(memberFrameworkConfiguration.let(MemberFrameworkConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -949,7 +949,7 @@ public open class CfnMember(
        * @param memberFabricConfiguration Configuration properties for Hyperledger Fabric.
        */
       override fun memberFabricConfiguration(memberFabricConfiguration: IResolvable) {
-        cdkBuilder.memberFabricConfiguration(memberFabricConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.memberFabricConfiguration(memberFabricConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -957,7 +957,7 @@ public open class CfnMember(
        */
       override
           fun memberFabricConfiguration(memberFabricConfiguration: MemberFabricConfigurationProperty) {
-        cdkBuilder.memberFabricConfiguration(memberFabricConfiguration.let(MemberFabricConfigurationProperty::unwrap))
+        cdkBuilder.memberFabricConfiguration(memberFabricConfiguration.let(MemberFabricConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1190,7 +1190,7 @@ public open class CfnMember(
        * the blockchain framework that the network uses.
        */
       override fun networkFrameworkConfiguration(networkFrameworkConfiguration: IResolvable) {
-        cdkBuilder.networkFrameworkConfiguration(networkFrameworkConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.networkFrameworkConfiguration(networkFrameworkConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1199,7 +1199,7 @@ public open class CfnMember(
        */
       override
           fun networkFrameworkConfiguration(networkFrameworkConfiguration: NetworkFrameworkConfigurationProperty) {
-        cdkBuilder.networkFrameworkConfiguration(networkFrameworkConfiguration.let(NetworkFrameworkConfigurationProperty::unwrap))
+        cdkBuilder.networkFrameworkConfiguration(networkFrameworkConfiguration.let(NetworkFrameworkConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1218,7 +1218,7 @@ public open class CfnMember(
        * accepted. 
        */
       override fun votingPolicy(votingPolicy: IResolvable) {
-        cdkBuilder.votingPolicy(votingPolicy.let(IResolvable::unwrap))
+        cdkBuilder.votingPolicy(votingPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1226,7 +1226,7 @@ public open class CfnMember(
        * accepted. 
        */
       override fun votingPolicy(votingPolicy: VotingPolicyProperty) {
-        cdkBuilder.votingPolicy(votingPolicy.let(VotingPolicyProperty::unwrap))
+        cdkBuilder.votingPolicy(votingPolicy.let(VotingPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -1471,7 +1471,7 @@ public open class CfnMember(
        * member in a Managed Blockchain network that is using the Hyperledger Fabric framework.
        */
       override fun networkFabricConfiguration(networkFabricConfiguration: IResolvable) {
-        cdkBuilder.networkFabricConfiguration(networkFabricConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.networkFabricConfiguration(networkFabricConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1480,7 +1480,7 @@ public open class CfnMember(
        */
       override
           fun networkFabricConfiguration(networkFabricConfiguration: NetworkFabricConfigurationProperty) {
-        cdkBuilder.networkFabricConfiguration(networkFabricConfiguration.let(NetworkFabricConfigurationProperty::unwrap))
+        cdkBuilder.networkFabricConfiguration(networkFabricConfiguration.let(NetworkFabricConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1608,7 +1608,7 @@ public open class CfnMember(
        * The policy applies to all proposals and is specified when the network is created.
        */
       override fun approvalThresholdPolicy(approvalThresholdPolicy: IResolvable) {
-        cdkBuilder.approvalThresholdPolicy(approvalThresholdPolicy.let(IResolvable::unwrap))
+        cdkBuilder.approvalThresholdPolicy(approvalThresholdPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1619,7 +1619,7 @@ public open class CfnMember(
        */
       override
           fun approvalThresholdPolicy(approvalThresholdPolicy: ApprovalThresholdPolicyProperty) {
-        cdkBuilder.approvalThresholdPolicy(approvalThresholdPolicy.let(ApprovalThresholdPolicyProperty::unwrap))
+        cdkBuilder.approvalThresholdPolicy(approvalThresholdPolicy.let(ApprovalThresholdPolicyProperty.Companion::unwrap))
       }
 
       /**

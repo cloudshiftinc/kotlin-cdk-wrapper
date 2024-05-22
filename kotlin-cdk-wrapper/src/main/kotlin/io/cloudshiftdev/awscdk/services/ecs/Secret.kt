@@ -49,7 +49,7 @@ public abstract class Secret(
    * @param grantee 
    */
   public open fun grantRead(grantee: IGrantable): Grant =
-      unwrap(this).grantRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Whether this secret uses a specific JSON field.
@@ -62,15 +62,15 @@ public abstract class Secret(
 
   public companion object {
     public fun fromSecretsManager(secret: ISecret): Secret =
-        software.amazon.awscdk.services.ecs.Secret.fromSecretsManager(secret.let(ISecret::unwrap)).let(Secret::wrap)
+        software.amazon.awscdk.services.ecs.Secret.fromSecretsManager(secret.let(ISecret.Companion::unwrap)).let(Secret::wrap)
 
     public fun fromSecretsManager(secret: ISecret, `field`: String): Secret =
-        software.amazon.awscdk.services.ecs.Secret.fromSecretsManager(secret.let(ISecret::unwrap),
+        software.amazon.awscdk.services.ecs.Secret.fromSecretsManager(secret.let(ISecret.Companion::unwrap),
         `field`).let(Secret::wrap)
 
     public fun fromSecretsManagerVersion(secret: ISecret, versionInfo: SecretVersionInfo): Secret =
-        software.amazon.awscdk.services.ecs.Secret.fromSecretsManagerVersion(secret.let(ISecret::unwrap),
-        versionInfo.let(SecretVersionInfo::unwrap)).let(Secret::wrap)
+        software.amazon.awscdk.services.ecs.Secret.fromSecretsManagerVersion(secret.let(ISecret.Companion::unwrap),
+        versionInfo.let(SecretVersionInfo.Companion::unwrap)).let(Secret::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("920c861858a2d3dfda5936da694fb8ff6329cc08a1fb9d3f2bdebc5f069220cb")
@@ -83,11 +83,11 @@ public abstract class Secret(
       versionInfo: SecretVersionInfo,
       `field`: String,
     ): Secret =
-        software.amazon.awscdk.services.ecs.Secret.fromSecretsManagerVersion(secret.let(ISecret::unwrap),
-        versionInfo.let(SecretVersionInfo::unwrap), `field`).let(Secret::wrap)
+        software.amazon.awscdk.services.ecs.Secret.fromSecretsManagerVersion(secret.let(ISecret.Companion::unwrap),
+        versionInfo.let(SecretVersionInfo.Companion::unwrap), `field`).let(Secret::wrap)
 
     public fun fromSsmParameter(parameter: IParameter): Secret =
-        software.amazon.awscdk.services.ecs.Secret.fromSsmParameter(parameter.let(IParameter::unwrap)).let(Secret::wrap)
+        software.amazon.awscdk.services.ecs.Secret.fromSsmParameter(parameter.let(IParameter.Companion::unwrap)).let(Secret::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.Secret): Secret =
         CdkObjectWrappers.wrap(cdkObject) as? Secret ?: Wrapper(cdkObject)

@@ -252,7 +252,7 @@ public interface CfnResourceShareProps {
      * Organization. The default value is `true` .
      */
     override fun allowExternalPrincipals(allowExternalPrincipals: IResolvable) {
-      cdkBuilder.allowExternalPrincipals(allowExternalPrincipals.let(IResolvable::unwrap))
+      cdkBuilder.allowExternalPrincipals(allowExternalPrincipals.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -353,7 +353,7 @@ public interface CfnResourceShareProps {
      * It doesn't attach the tags to the resources associated with the resource share.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

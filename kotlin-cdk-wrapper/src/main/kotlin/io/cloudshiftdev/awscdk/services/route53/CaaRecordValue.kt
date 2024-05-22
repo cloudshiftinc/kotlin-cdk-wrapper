@@ -77,7 +77,7 @@ public interface CaaRecordValue {
      * @param tag The tag. 
      */
     override fun tag(tag: CaaTag) {
-      cdkBuilder.tag(tag.let(CaaTag::unwrap))
+      cdkBuilder.tag(tag.let(CaaTag.Companion::unwrap))
     }
 
     /**

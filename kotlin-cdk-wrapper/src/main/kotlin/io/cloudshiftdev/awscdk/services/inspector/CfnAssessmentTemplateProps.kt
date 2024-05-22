@@ -187,7 +187,7 @@ public interface CfnAssessmentTemplateProps {
      * Within an assessment template, each key must be unique.
      */
     override fun userAttributesForFindings(userAttributesForFindings: IResolvable) {
-      cdkBuilder.userAttributesForFindings(userAttributesForFindings.let(IResolvable::unwrap))
+      cdkBuilder.userAttributesForFindings(userAttributesForFindings.let(IResolvable.Companion::unwrap))
     }
 
     /**

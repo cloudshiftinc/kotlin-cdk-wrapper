@@ -149,7 +149,7 @@ public interface CfnEventBusProps {
      * @param tags Tags to associate with the event bus.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

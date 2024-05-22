@@ -70,8 +70,8 @@ public open class CfnDeploymentStrategy(
     id: String,
     props: CfnDeploymentStrategyProps,
   ) :
-      this(software.amazon.awscdk.services.appconfig.CfnDeploymentStrategy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDeploymentStrategyProps::unwrap))
+      this(software.amazon.awscdk.services.appconfig.CfnDeploymentStrategy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDeploymentStrategyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -167,7 +167,7 @@ public open class CfnDeploymentStrategy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -203,7 +203,7 @@ public open class CfnDeploymentStrategy(
    * Assigns metadata to an AWS AppConfig resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -453,7 +453,7 @@ public open class CfnDeploymentStrategy(
      * @param tags Assigns metadata to an AWS AppConfig resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

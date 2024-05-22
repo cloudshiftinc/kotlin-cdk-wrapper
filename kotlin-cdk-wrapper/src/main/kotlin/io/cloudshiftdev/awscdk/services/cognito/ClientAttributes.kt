@@ -54,7 +54,7 @@ public open class ClientAttributes(
    * @param attributes a list of standard attributes to add to the set. 
    */
   public open fun withStandardAttributes(attributes: StandardAttributesMask): ClientAttributes =
-      unwrap(this).withStandardAttributes(attributes.let(StandardAttributesMask::unwrap)).let(ClientAttributes::wrap)
+      unwrap(this).withStandardAttributes(attributes.let(StandardAttributesMask.Companion::unwrap)).let(ClientAttributes::wrap)
 
   /**
    * Creates a custom ClientAttributes with the specified attributes.

@@ -221,8 +221,8 @@ public open class CfnGatewayRoute(
     id: String,
     props: CfnGatewayRouteProps,
   ) :
-      this(software.amazon.awscdk.services.appmesh.CfnGatewayRoute(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGatewayRouteProps::unwrap))
+      this(software.amazon.awscdk.services.appmesh.CfnGatewayRoute(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGatewayRouteProps.Companion::unwrap))
   )
 
   public constructor(
@@ -298,7 +298,7 @@ public open class CfnGatewayRoute(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -334,14 +334,14 @@ public open class CfnGatewayRoute(
    * The specifications of the gateway route.
    */
   public open fun spec(`value`: IResolvable) {
-    unwrap(this).setSpec(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSpec(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The specifications of the gateway route.
    */
   public open fun spec(`value`: GatewayRouteSpecProperty) {
-    unwrap(this).setSpec(`value`.let(GatewayRouteSpecProperty::unwrap))
+    unwrap(this).setSpec(`value`.let(GatewayRouteSpecProperty.Companion::unwrap))
   }
 
   /**
@@ -369,7 +369,7 @@ public open class CfnGatewayRoute(
    * organization.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -534,7 +534,7 @@ public open class CfnGatewayRoute(
      * @param spec The specifications of the gateway route. 
      */
     override fun spec(spec: IResolvable) {
-      cdkBuilder.spec(spec.let(IResolvable::unwrap))
+      cdkBuilder.spec(spec.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -544,7 +544,7 @@ public open class CfnGatewayRoute(
      * @param spec The specifications of the gateway route. 
      */
     override fun spec(spec: GatewayRouteSpecProperty) {
-      cdkBuilder.spec(spec.let(GatewayRouteSpecProperty::unwrap))
+      cdkBuilder.spec(spec.let(GatewayRouteSpecProperty.Companion::unwrap))
     }
 
     /**
@@ -571,7 +571,7 @@ public open class CfnGatewayRoute(
      * categorization and organization. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -944,14 +944,14 @@ public open class CfnGatewayRoute(
        * @param range An object that represents the range of values to match on.
        */
       override fun range(range: IResolvable) {
-        cdkBuilder.range(range.let(IResolvable::unwrap))
+        cdkBuilder.range(range.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param range An object that represents the range of values to match on.
        */
       override fun range(range: GatewayRouteRangeMatchProperty) {
-        cdkBuilder.range(range.let(GatewayRouteRangeMatchProperty::unwrap))
+        cdkBuilder.range(range.let(GatewayRouteRangeMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -1428,14 +1428,14 @@ public open class CfnGatewayRoute(
        * @param grpcRoute An object that represents the specification of a gRPC gateway route.
        */
       override fun grpcRoute(grpcRoute: IResolvable) {
-        cdkBuilder.grpcRoute(grpcRoute.let(IResolvable::unwrap))
+        cdkBuilder.grpcRoute(grpcRoute.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param grpcRoute An object that represents the specification of a gRPC gateway route.
        */
       override fun grpcRoute(grpcRoute: GrpcGatewayRouteProperty) {
-        cdkBuilder.grpcRoute(grpcRoute.let(GrpcGatewayRouteProperty::unwrap))
+        cdkBuilder.grpcRoute(grpcRoute.let(GrpcGatewayRouteProperty.Companion::unwrap))
       }
 
       /**
@@ -1450,14 +1450,14 @@ public open class CfnGatewayRoute(
        * @param http2Route An object that represents the specification of an HTTP/2 gateway route.
        */
       override fun http2Route(http2Route: IResolvable) {
-        cdkBuilder.http2Route(http2Route.let(IResolvable::unwrap))
+        cdkBuilder.http2Route(http2Route.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param http2Route An object that represents the specification of an HTTP/2 gateway route.
        */
       override fun http2Route(http2Route: HttpGatewayRouteProperty) {
-        cdkBuilder.http2Route(http2Route.let(HttpGatewayRouteProperty::unwrap))
+        cdkBuilder.http2Route(http2Route.let(HttpGatewayRouteProperty.Companion::unwrap))
       }
 
       /**
@@ -1472,14 +1472,14 @@ public open class CfnGatewayRoute(
        * @param httpRoute An object that represents the specification of an HTTP gateway route.
        */
       override fun httpRoute(httpRoute: IResolvable) {
-        cdkBuilder.httpRoute(httpRoute.let(IResolvable::unwrap))
+        cdkBuilder.httpRoute(httpRoute.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param httpRoute An object that represents the specification of an HTTP gateway route.
        */
       override fun httpRoute(httpRoute: HttpGatewayRouteProperty) {
-        cdkBuilder.httpRoute(httpRoute.let(HttpGatewayRouteProperty::unwrap))
+        cdkBuilder.httpRoute(httpRoute.let(HttpGatewayRouteProperty.Companion::unwrap))
       }
 
       /**
@@ -1633,14 +1633,14 @@ public open class CfnGatewayRoute(
        * @param virtualService An object that represents a virtual service gateway route target. 
        */
       override fun virtualService(virtualService: IResolvable) {
-        cdkBuilder.virtualService(virtualService.let(IResolvable::unwrap))
+        cdkBuilder.virtualService(virtualService.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param virtualService An object that represents a virtual service gateway route target. 
        */
       override fun virtualService(virtualService: GatewayRouteVirtualServiceProperty) {
-        cdkBuilder.virtualService(virtualService.let(GatewayRouteVirtualServiceProperty::unwrap))
+        cdkBuilder.virtualService(virtualService.let(GatewayRouteVirtualServiceProperty.Companion::unwrap))
       }
 
       /**
@@ -1875,14 +1875,14 @@ public open class CfnGatewayRoute(
        * @param rewrite The gateway route action to rewrite.
        */
       override fun rewrite(rewrite: IResolvable) {
-        cdkBuilder.rewrite(rewrite.let(IResolvable::unwrap))
+        cdkBuilder.rewrite(rewrite.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param rewrite The gateway route action to rewrite.
        */
       override fun rewrite(rewrite: GrpcGatewayRouteRewriteProperty) {
-        cdkBuilder.rewrite(rewrite.let(GrpcGatewayRouteRewriteProperty::unwrap))
+        cdkBuilder.rewrite(rewrite.let(GrpcGatewayRouteRewriteProperty.Companion::unwrap))
       }
 
       /**
@@ -1898,7 +1898,7 @@ public open class CfnGatewayRoute(
        * matches the gateway route. 
        */
       override fun target(target: IResolvable) {
-        cdkBuilder.target(target.let(IResolvable::unwrap))
+        cdkBuilder.target(target.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1906,7 +1906,7 @@ public open class CfnGatewayRoute(
        * matches the gateway route. 
        */
       override fun target(target: GatewayRouteTargetProperty) {
-        cdkBuilder.target(target.let(GatewayRouteTargetProperty::unwrap))
+        cdkBuilder.target(target.let(GatewayRouteTargetProperty.Companion::unwrap))
       }
 
       /**
@@ -2085,14 +2085,14 @@ public open class CfnGatewayRoute(
        * @param hostname The gateway route host name to be matched on.
        */
       override fun hostname(hostname: IResolvable) {
-        cdkBuilder.hostname(hostname.let(IResolvable::unwrap))
+        cdkBuilder.hostname(hostname.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param hostname The gateway route host name to be matched on.
        */
       override fun hostname(hostname: GatewayRouteHostnameMatchProperty) {
-        cdkBuilder.hostname(hostname.let(GatewayRouteHostnameMatchProperty::unwrap))
+        cdkBuilder.hostname(hostname.let(GatewayRouteHostnameMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -2107,7 +2107,7 @@ public open class CfnGatewayRoute(
        * @param metadata The gateway route metadata to be matched on.
        */
       override fun metadata(metadata: IResolvable) {
-        cdkBuilder.metadata(metadata.let(IResolvable::unwrap))
+        cdkBuilder.metadata(metadata.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2304,21 +2304,21 @@ public open class CfnGatewayRoute(
        * The default value is `False` .
        */
       override fun invert(invert: IResolvable) {
-        cdkBuilder.invert(invert.let(IResolvable::unwrap))
+        cdkBuilder.invert(invert.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param match The criteria for determining a metadata match.
        */
       override fun match(match: IResolvable) {
-        cdkBuilder.match(match.let(IResolvable::unwrap))
+        cdkBuilder.match(match.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param match The criteria for determining a metadata match.
        */
       override fun match(match: GatewayRouteMetadataMatchProperty) {
-        cdkBuilder.match(match.let(GatewayRouteMetadataMatchProperty::unwrap))
+        cdkBuilder.match(match.let(GatewayRouteMetadataMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -2503,14 +2503,14 @@ public open class CfnGatewayRoute(
        * @param action An object that represents the action to take if a match is determined. 
        */
       override fun action(action: IResolvable) {
-        cdkBuilder.action(action.let(IResolvable::unwrap))
+        cdkBuilder.action(action.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param action An object that represents the action to take if a match is determined. 
        */
       override fun action(action: GrpcGatewayRouteActionProperty) {
-        cdkBuilder.action(action.let(GrpcGatewayRouteActionProperty::unwrap))
+        cdkBuilder.action(action.let(GrpcGatewayRouteActionProperty.Companion::unwrap))
       }
 
       /**
@@ -2525,14 +2525,14 @@ public open class CfnGatewayRoute(
        * @param match An object that represents the criteria for determining a request match. 
        */
       override fun match(match: IResolvable) {
-        cdkBuilder.match(match.let(IResolvable::unwrap))
+        cdkBuilder.match(match.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param match An object that represents the criteria for determining a request match. 
        */
       override fun match(match: GrpcGatewayRouteMatchProperty) {
-        cdkBuilder.match(match.let(GrpcGatewayRouteMatchProperty::unwrap))
+        cdkBuilder.match(match.let(GrpcGatewayRouteMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -2644,14 +2644,14 @@ public open class CfnGatewayRoute(
        * @param hostname The host name of the gateway route to rewrite.
        */
       override fun hostname(hostname: IResolvable) {
-        cdkBuilder.hostname(hostname.let(IResolvable::unwrap))
+        cdkBuilder.hostname(hostname.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param hostname The host name of the gateway route to rewrite.
        */
       override fun hostname(hostname: GatewayRouteHostnameRewriteProperty) {
-        cdkBuilder.hostname(hostname.let(GatewayRouteHostnameRewriteProperty::unwrap))
+        cdkBuilder.hostname(hostname.let(GatewayRouteHostnameRewriteProperty.Companion::unwrap))
       }
 
       /**
@@ -2801,14 +2801,14 @@ public open class CfnGatewayRoute(
        * @param rewrite The gateway route action to rewrite.
        */
       override fun rewrite(rewrite: IResolvable) {
-        cdkBuilder.rewrite(rewrite.let(IResolvable::unwrap))
+        cdkBuilder.rewrite(rewrite.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param rewrite The gateway route action to rewrite.
        */
       override fun rewrite(rewrite: HttpGatewayRouteRewriteProperty) {
-        cdkBuilder.rewrite(rewrite.let(HttpGatewayRouteRewriteProperty::unwrap))
+        cdkBuilder.rewrite(rewrite.let(HttpGatewayRouteRewriteProperty.Companion::unwrap))
       }
 
       /**
@@ -2824,7 +2824,7 @@ public open class CfnGatewayRoute(
        * matches the gateway route. 
        */
       override fun target(target: IResolvable) {
-        cdkBuilder.target(target.let(IResolvable::unwrap))
+        cdkBuilder.target(target.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2832,7 +2832,7 @@ public open class CfnGatewayRoute(
        * matches the gateway route. 
        */
       override fun target(target: GatewayRouteTargetProperty) {
-        cdkBuilder.target(target.let(GatewayRouteTargetProperty::unwrap))
+        cdkBuilder.target(target.let(GatewayRouteTargetProperty.Companion::unwrap))
       }
 
       /**
@@ -3016,14 +3016,14 @@ public open class CfnGatewayRoute(
        * @param range An object that represents the range of values to match on.
        */
       override fun range(range: IResolvable) {
-        cdkBuilder.range(range.let(IResolvable::unwrap))
+        cdkBuilder.range(range.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param range An object that represents the range of values to match on.
        */
       override fun range(range: GatewayRouteRangeMatchProperty) {
-        cdkBuilder.range(range.let(GatewayRouteRangeMatchProperty::unwrap))
+        cdkBuilder.range(range.let(GatewayRouteRangeMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -3232,7 +3232,7 @@ public open class CfnGatewayRoute(
        * The default value is `False` .
        */
       override fun invert(invert: IResolvable) {
-        cdkBuilder.invert(invert.let(IResolvable::unwrap))
+        cdkBuilder.invert(invert.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3241,7 +3241,7 @@ public open class CfnGatewayRoute(
        * Specify one match method.
        */
       override fun match(match: IResolvable) {
-        cdkBuilder.match(match.let(IResolvable::unwrap))
+        cdkBuilder.match(match.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3250,7 +3250,7 @@ public open class CfnGatewayRoute(
        * Specify one match method.
        */
       override fun match(match: HttpGatewayRouteHeaderMatchProperty) {
-        cdkBuilder.match(match.let(HttpGatewayRouteHeaderMatchProperty::unwrap))
+        cdkBuilder.match(match.let(HttpGatewayRouteHeaderMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -3526,7 +3526,7 @@ public open class CfnGatewayRoute(
        * @param headers The client request headers to match on.
        */
       override fun headers(headers: IResolvable) {
-        cdkBuilder.headers(headers.let(IResolvable::unwrap))
+        cdkBuilder.headers(headers.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3545,14 +3545,14 @@ public open class CfnGatewayRoute(
        * @param hostname The host name to match on.
        */
       override fun hostname(hostname: IResolvable) {
-        cdkBuilder.hostname(hostname.let(IResolvable::unwrap))
+        cdkBuilder.hostname(hostname.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param hostname The host name to match on.
        */
       override fun hostname(hostname: GatewayRouteHostnameMatchProperty) {
-        cdkBuilder.hostname(hostname.let(GatewayRouteHostnameMatchProperty::unwrap))
+        cdkBuilder.hostname(hostname.let(GatewayRouteHostnameMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -3574,14 +3574,14 @@ public open class CfnGatewayRoute(
        * @param path The path to match on.
        */
       override fun path(path: IResolvable) {
-        cdkBuilder.path(path.let(IResolvable::unwrap))
+        cdkBuilder.path(path.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param path The path to match on.
        */
       override fun path(path: HttpPathMatchProperty) {
-        cdkBuilder.path(path.let(HttpPathMatchProperty::unwrap))
+        cdkBuilder.path(path.let(HttpPathMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -3614,7 +3614,7 @@ public open class CfnGatewayRoute(
        * @param queryParameters The query parameter to match on.
        */
       override fun queryParameters(queryParameters: IResolvable) {
-        cdkBuilder.queryParameters(queryParameters.let(IResolvable::unwrap))
+        cdkBuilder.queryParameters(queryParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4044,14 +4044,14 @@ public open class CfnGatewayRoute(
        * @param action An object that represents the action to take if a match is determined. 
        */
       override fun action(action: IResolvable) {
-        cdkBuilder.action(action.let(IResolvable::unwrap))
+        cdkBuilder.action(action.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param action An object that represents the action to take if a match is determined. 
        */
       override fun action(action: HttpGatewayRouteActionProperty) {
-        cdkBuilder.action(action.let(HttpGatewayRouteActionProperty::unwrap))
+        cdkBuilder.action(action.let(HttpGatewayRouteActionProperty.Companion::unwrap))
       }
 
       /**
@@ -4066,14 +4066,14 @@ public open class CfnGatewayRoute(
        * @param match An object that represents the criteria for determining a request match. 
        */
       override fun match(match: IResolvable) {
-        cdkBuilder.match(match.let(IResolvable::unwrap))
+        cdkBuilder.match(match.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param match An object that represents the criteria for determining a request match. 
        */
       override fun match(match: HttpGatewayRouteMatchProperty) {
-        cdkBuilder.match(match.let(HttpGatewayRouteMatchProperty::unwrap))
+        cdkBuilder.match(match.let(HttpGatewayRouteMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -4240,14 +4240,14 @@ public open class CfnGatewayRoute(
        * @param hostname The host name to rewrite.
        */
       override fun hostname(hostname: IResolvable) {
-        cdkBuilder.hostname(hostname.let(IResolvable::unwrap))
+        cdkBuilder.hostname(hostname.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param hostname The host name to rewrite.
        */
       override fun hostname(hostname: GatewayRouteHostnameRewriteProperty) {
-        cdkBuilder.hostname(hostname.let(GatewayRouteHostnameRewriteProperty::unwrap))
+        cdkBuilder.hostname(hostname.let(GatewayRouteHostnameRewriteProperty.Companion::unwrap))
       }
 
       /**
@@ -4262,14 +4262,14 @@ public open class CfnGatewayRoute(
        * @param path The path to rewrite.
        */
       override fun path(path: IResolvable) {
-        cdkBuilder.path(path.let(IResolvable::unwrap))
+        cdkBuilder.path(path.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param path The path to rewrite.
        */
       override fun path(path: HttpGatewayRoutePathRewriteProperty) {
-        cdkBuilder.path(path.let(HttpGatewayRoutePathRewriteProperty::unwrap))
+        cdkBuilder.path(path.let(HttpGatewayRoutePathRewriteProperty.Companion::unwrap))
       }
 
       /**
@@ -4284,14 +4284,14 @@ public open class CfnGatewayRoute(
        * @param prefix The specified beginning characters to rewrite.
        */
       override fun prefix(prefix: IResolvable) {
-        cdkBuilder.prefix(prefix.let(IResolvable::unwrap))
+        cdkBuilder.prefix(prefix.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param prefix The specified beginning characters to rewrite.
        */
       override fun prefix(prefix: HttpGatewayRoutePrefixRewriteProperty) {
-        cdkBuilder.prefix(prefix.let(HttpGatewayRoutePrefixRewriteProperty::unwrap))
+        cdkBuilder.prefix(prefix.let(HttpGatewayRoutePrefixRewriteProperty.Companion::unwrap))
       }
 
       /**
@@ -4613,14 +4613,14 @@ public open class CfnGatewayRoute(
        * @param match The query parameter to match on.
        */
       override fun match(match: IResolvable) {
-        cdkBuilder.match(match.let(IResolvable::unwrap))
+        cdkBuilder.match(match.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param match The query parameter to match on.
        */
       override fun match(match: HttpQueryParameterMatchProperty) {
-        cdkBuilder.match(match.let(HttpQueryParameterMatchProperty::unwrap))
+        cdkBuilder.match(match.let(HttpQueryParameterMatchProperty.Companion::unwrap))
       }
 
       /**

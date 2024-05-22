@@ -212,7 +212,7 @@ public interface CfnSourceLocationProps {
      * @param accessConfiguration The access configuration for the source location.
      */
     override fun accessConfiguration(accessConfiguration: IResolvable) {
-      cdkBuilder.accessConfiguration(accessConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.accessConfiguration(accessConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -220,7 +220,7 @@ public interface CfnSourceLocationProps {
      */
     override
         fun accessConfiguration(accessConfiguration: CfnSourceLocation.AccessConfigurationProperty) {
-      cdkBuilder.accessConfiguration(accessConfiguration.let(CfnSourceLocation.AccessConfigurationProperty::unwrap))
+      cdkBuilder.accessConfiguration(accessConfiguration.let(CfnSourceLocation.AccessConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -238,7 +238,7 @@ public interface CfnSourceLocationProps {
      */
     override
         fun defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration: IResolvable) {
-      cdkBuilder.defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -246,7 +246,7 @@ public interface CfnSourceLocationProps {
      */
     override
         fun defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration: CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty) {
-      cdkBuilder.defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration.let(CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty::unwrap))
+      cdkBuilder.defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration.let(CfnSourceLocation.DefaultSegmentDeliveryConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -263,14 +263,14 @@ public interface CfnSourceLocationProps {
      * @param httpConfiguration The HTTP configuration for the source location. 
      */
     override fun httpConfiguration(httpConfiguration: IResolvable) {
-      cdkBuilder.httpConfiguration(httpConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.httpConfiguration(httpConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param httpConfiguration The HTTP configuration for the source location. 
      */
     override fun httpConfiguration(httpConfiguration: CfnSourceLocation.HttpConfigurationProperty) {
-      cdkBuilder.httpConfiguration(httpConfiguration.let(CfnSourceLocation.HttpConfigurationProperty::unwrap))
+      cdkBuilder.httpConfiguration(httpConfiguration.let(CfnSourceLocation.HttpConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -287,7 +287,7 @@ public interface CfnSourceLocationProps {
      * location.
      */
     override fun segmentDeliveryConfigurations(segmentDeliveryConfigurations: IResolvable) {
-      cdkBuilder.segmentDeliveryConfigurations(segmentDeliveryConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.segmentDeliveryConfigurations(segmentDeliveryConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -320,7 +320,7 @@ public interface CfnSourceLocationProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

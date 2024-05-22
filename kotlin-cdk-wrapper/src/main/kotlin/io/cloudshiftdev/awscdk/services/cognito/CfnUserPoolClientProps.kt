@@ -1002,7 +1002,7 @@ public interface CfnUserPoolClientProps {
      * .
      */
     override fun allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient: IResolvable) {
-      cdkBuilder.allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient.let(IResolvable::unwrap))
+      cdkBuilder.allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1034,7 +1034,7 @@ public interface CfnUserPoolClientProps {
      * Region.
      */
     override fun analyticsConfiguration(analyticsConfiguration: IResolvable) {
-      cdkBuilder.analyticsConfiguration(analyticsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.analyticsConfiguration(analyticsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1048,7 +1048,7 @@ public interface CfnUserPoolClientProps {
      */
     override
         fun analyticsConfiguration(analyticsConfiguration: CfnUserPoolClient.AnalyticsConfigurationProperty) {
-      cdkBuilder.analyticsConfiguration(analyticsConfiguration.let(CfnUserPoolClient.AnalyticsConfigurationProperty::unwrap))
+      cdkBuilder.analyticsConfiguration(analyticsConfiguration.let(CfnUserPoolClient.AnalyticsConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1170,7 +1170,7 @@ public interface CfnUserPoolClientProps {
      */
     override
         fun enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData: IResolvable) {
-      cdkBuilder.enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData.let(IResolvable::unwrap))
+      cdkBuilder.enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1194,7 +1194,7 @@ public interface CfnUserPoolClientProps {
      * user pool client.
      */
     override fun enableTokenRevocation(enableTokenRevocation: IResolvable) {
-      cdkBuilder.enableTokenRevocation(enableTokenRevocation.let(IResolvable::unwrap))
+      cdkBuilder.enableTokenRevocation(enableTokenRevocation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1277,7 +1277,7 @@ public interface CfnUserPoolClientProps {
      * pool client being created.
      */
     override fun generateSecret(generateSecret: IResolvable) {
-      cdkBuilder.generateSecret(generateSecret.let(IResolvable::unwrap))
+      cdkBuilder.generateSecret(generateSecret.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1401,7 +1401,7 @@ public interface CfnUserPoolClientProps {
      * The default unit for RefreshToken is days, and default for ID and access tokens are hours.
      */
     override fun tokenValidityUnits(tokenValidityUnits: IResolvable) {
-      cdkBuilder.tokenValidityUnits(tokenValidityUnits.let(IResolvable::unwrap))
+      cdkBuilder.tokenValidityUnits(tokenValidityUnits.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1410,7 +1410,7 @@ public interface CfnUserPoolClientProps {
      */
     override
         fun tokenValidityUnits(tokenValidityUnits: CfnUserPoolClient.TokenValidityUnitsProperty) {
-      cdkBuilder.tokenValidityUnits(tokenValidityUnits.let(CfnUserPoolClient.TokenValidityUnitsProperty::unwrap))
+      cdkBuilder.tokenValidityUnits(tokenValidityUnits.let(CfnUserPoolClient.TokenValidityUnitsProperty.Companion::unwrap))
     }
 
     /**

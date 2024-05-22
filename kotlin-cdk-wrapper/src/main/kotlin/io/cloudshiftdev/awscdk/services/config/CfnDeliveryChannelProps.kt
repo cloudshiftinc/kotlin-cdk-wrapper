@@ -182,7 +182,7 @@ public interface CfnDeliveryChannelProps {
      * configuration snapshots to the Amazon S3 bucket.
      */
     override fun configSnapshotDeliveryProperties(configSnapshotDeliveryProperties: IResolvable) {
-      cdkBuilder.configSnapshotDeliveryProperties(configSnapshotDeliveryProperties.let(IResolvable::unwrap))
+      cdkBuilder.configSnapshotDeliveryProperties(configSnapshotDeliveryProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -191,7 +191,7 @@ public interface CfnDeliveryChannelProps {
      */
     override
         fun configSnapshotDeliveryProperties(configSnapshotDeliveryProperties: CfnDeliveryChannel.ConfigSnapshotDeliveryPropertiesProperty) {
-      cdkBuilder.configSnapshotDeliveryProperties(configSnapshotDeliveryProperties.let(CfnDeliveryChannel.ConfigSnapshotDeliveryPropertiesProperty::unwrap))
+      cdkBuilder.configSnapshotDeliveryProperties(configSnapshotDeliveryProperties.let(CfnDeliveryChannel.ConfigSnapshotDeliveryPropertiesProperty.Companion::unwrap))
     }
 
     /**

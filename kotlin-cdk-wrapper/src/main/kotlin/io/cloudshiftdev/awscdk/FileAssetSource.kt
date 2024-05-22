@@ -184,7 +184,7 @@ public interface FileAssetSource {
      * @param packaging Which type of packaging to perform.
      */
     override fun packaging(packaging: FileAssetPackaging) {
-      cdkBuilder.packaging(packaging.let(FileAssetPackaging::unwrap))
+      cdkBuilder.packaging(packaging.let(FileAssetPackaging.Companion::unwrap))
     }
 
     /**

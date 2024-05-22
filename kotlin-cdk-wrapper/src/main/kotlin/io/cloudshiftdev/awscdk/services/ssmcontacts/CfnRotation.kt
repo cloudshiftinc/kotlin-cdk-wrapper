@@ -74,8 +74,8 @@ public open class CfnRotation(
     id: String,
     props: CfnRotationProps,
   ) :
-      this(software.amazon.awscdk.services.ssmcontacts.CfnRotation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRotationProps::unwrap))
+      this(software.amazon.awscdk.services.ssmcontacts.CfnRotation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRotationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -113,7 +113,7 @@ public open class CfnRotation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -137,14 +137,14 @@ public open class CfnRotation(
    * Information about the rule that specifies when shift team members rotate.
    */
   public open fun recurrence(`value`: IResolvable) {
-    unwrap(this).setRecurrence(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRecurrence(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information about the rule that specifies when shift team members rotate.
    */
   public open fun recurrence(`value`: RecurrenceSettingsProperty) {
-    unwrap(this).setRecurrence(`value`.let(RecurrenceSettingsProperty::unwrap))
+    unwrap(this).setRecurrence(`value`.let(RecurrenceSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -182,7 +182,7 @@ public open class CfnRotation(
    * Optional metadata to assign to the rotation.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -383,7 +383,7 @@ public open class CfnRotation(
      * @param recurrence Information about the rule that specifies when shift team members rotate. 
      */
     override fun recurrence(recurrence: IResolvable) {
-      cdkBuilder.recurrence(recurrence.let(IResolvable::unwrap))
+      cdkBuilder.recurrence(recurrence.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -393,7 +393,7 @@ public open class CfnRotation(
      * @param recurrence Information about the rule that specifies when shift team members rotate. 
      */
     override fun recurrence(recurrence: RecurrenceSettingsProperty) {
-      cdkBuilder.recurrence(recurrence.let(RecurrenceSettingsProperty::unwrap))
+      cdkBuilder.recurrence(recurrence.let(RecurrenceSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -429,7 +429,7 @@ public open class CfnRotation(
      * @param tags Optional metadata to assign to the rotation. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -887,7 +887,7 @@ public open class CfnRotation(
        * @param monthlySettings Information about on-call rotations that recur monthly.
        */
       override fun monthlySettings(monthlySettings: IResolvable) {
-        cdkBuilder.monthlySettings(monthlySettings.let(IResolvable::unwrap))
+        cdkBuilder.monthlySettings(monthlySettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -925,7 +925,7 @@ public open class CfnRotation(
        * coverage.
        */
       override fun shiftCoverages(shiftCoverages: IResolvable) {
-        cdkBuilder.shiftCoverages(shiftCoverages.let(IResolvable::unwrap))
+        cdkBuilder.shiftCoverages(shiftCoverages.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -947,7 +947,7 @@ public open class CfnRotation(
        * @param weeklySettings Information about on-call rotations that recur weekly.
        */
       override fun weeklySettings(weeklySettings: IResolvable) {
-        cdkBuilder.weeklySettings(weeklySettings.let(IResolvable::unwrap))
+        cdkBuilder.weeklySettings(weeklySettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1106,7 +1106,7 @@ public open class CfnRotation(
        * @param coverageTimes The start and end times of the shift. 
        */
       override fun coverageTimes(coverageTimes: IResolvable) {
-        cdkBuilder.coverageTimes(coverageTimes.let(IResolvable::unwrap))
+        cdkBuilder.coverageTimes(coverageTimes.let(IResolvable.Companion::unwrap))
       }
 
       /**

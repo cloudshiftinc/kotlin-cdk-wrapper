@@ -425,7 +425,7 @@ public interface ClusterAttributes {
      * ```
      */
     override fun awscliLayer(awscliLayer: ILayerVersion) {
-      cdkBuilder.awscliLayer(awscliLayer.let(ILayerVersion::unwrap))
+      cdkBuilder.awscliLayer(awscliLayer.let(ILayerVersion.Companion::unwrap))
     }
 
     /**
@@ -479,7 +479,7 @@ public interface ClusterAttributes {
      * addresses.
      */
     override fun ipFamily(ipFamily: IpFamily) {
-      cdkBuilder.ipFamily(ipFamily.let(IpFamily::unwrap))
+      cdkBuilder.ipFamily(ipFamily.let(IpFamily.Companion::unwrap))
     }
 
     /**
@@ -499,7 +499,7 @@ public interface ClusterAttributes {
      * to the cluster.
      */
     override fun kubectlLambdaRole(kubectlLambdaRole: IRole) {
-      cdkBuilder.kubectlLambdaRole(kubectlLambdaRole.let(IRole::unwrap))
+      cdkBuilder.kubectlLambdaRole(kubectlLambdaRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -518,14 +518,14 @@ public interface ClusterAttributes {
      * ```
      */
     override fun kubectlLayer(kubectlLayer: ILayerVersion) {
-      cdkBuilder.kubectlLayer(kubectlLayer.let(ILayerVersion::unwrap))
+      cdkBuilder.kubectlLayer(kubectlLayer.let(ILayerVersion.Companion::unwrap))
     }
 
     /**
      * @param kubectlMemory Amount of memory to allocate to the provider's lambda function.
      */
     override fun kubectlMemory(kubectlMemory: Size) {
-      cdkBuilder.kubectlMemory(kubectlMemory.let(Size::unwrap))
+      cdkBuilder.kubectlMemory(kubectlMemory.let(Size.Companion::unwrap))
     }
 
     /**
@@ -549,7 +549,7 @@ public interface ClusterAttributes {
      * @param kubectlProvider KubectlProvider for issuing kubectl commands.
      */
     override fun kubectlProvider(kubectlProvider: IKubectlProvider) {
-      cdkBuilder.kubectlProvider(kubectlProvider.let(IKubectlProvider::unwrap))
+      cdkBuilder.kubectlProvider(kubectlProvider.let(IKubectlProvider.Companion::unwrap))
     }
 
     /**
@@ -579,7 +579,7 @@ public interface ClusterAttributes {
      * proxy-agent
      */
     override fun onEventLayer(onEventLayer: ILayerVersion) {
-      cdkBuilder.onEventLayer(onEventLayer.let(ILayerVersion::unwrap))
+      cdkBuilder.onEventLayer(onEventLayer.let(ILayerVersion.Companion::unwrap))
     }
 
     /**
@@ -589,7 +589,7 @@ public interface ClusterAttributes {
      * or create a new provider using `new eks.OpenIdConnectProvider`
      */
     override fun openIdConnectProvider(openIdConnectProvider: IOpenIdConnectProvider) {
-      cdkBuilder.openIdConnectProvider(openIdConnectProvider.let(IOpenIdConnectProvider::unwrap))
+      cdkBuilder.openIdConnectProvider(openIdConnectProvider.let(IOpenIdConnectProvider.Companion::unwrap))
     }
 
     /**
@@ -620,7 +620,7 @@ public interface ClusterAttributes {
      * @param vpc The VPC in which this Cluster was created.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.eks.ClusterAttributes = cdkBuilder.build()

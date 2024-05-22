@@ -37,7 +37,7 @@ public open class FileSystem(
       options: CopyOptions,
     ) {
       software.amazon.awscdk.FileSystem.copyDirectory(srcDir, destDir,
-          options.let(CopyOptions::unwrap))
+          options.let(CopyOptions.Companion::unwrap))
     }
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -55,7 +55,7 @@ public open class FileSystem(
       rootDir: String,
     ) {
       software.amazon.awscdk.FileSystem.copyDirectory(srcDir, destDir,
-          options.let(CopyOptions::unwrap), rootDir)
+          options.let(CopyOptions.Companion::unwrap), rootDir)
     }
 
     public fun fingerprint(fileOrDirectory: String): String =
@@ -63,7 +63,7 @@ public open class FileSystem(
 
     public fun fingerprint(fileOrDirectory: String, options: FingerprintOptions): String =
         software.amazon.awscdk.FileSystem.fingerprint(fileOrDirectory,
-        options.let(FingerprintOptions::unwrap))
+        options.let(FingerprintOptions.Companion::unwrap))
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("de2955931eb6d6b92d49ef9f643588fb8b50ae2584a69980054ed7a635971f4f")

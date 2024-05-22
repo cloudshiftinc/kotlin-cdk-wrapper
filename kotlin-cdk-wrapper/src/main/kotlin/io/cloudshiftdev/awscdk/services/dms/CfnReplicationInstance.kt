@@ -65,8 +65,8 @@ public open class CfnReplicationInstance(
     id: String,
     props: CfnReplicationInstanceProps,
   ) :
-      this(software.amazon.awscdk.services.dms.CfnReplicationInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnReplicationInstanceProps::unwrap))
+      this(software.amazon.awscdk.services.dms.CfnReplicationInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnReplicationInstanceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -104,7 +104,7 @@ public open class CfnReplicationInstance(
    * Indicates that major version upgrades are allowed.
    */
   public open fun allowMajorVersionUpgrade(`value`: IResolvable) {
-    unwrap(this).setAllowMajorVersionUpgrade(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAllowMajorVersionUpgrade(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -143,7 +143,7 @@ public open class CfnReplicationInstance(
    * replication instance during the maintenance window.
    */
   public open fun autoMinorVersionUpgrade(`value`: IResolvable) {
-    unwrap(this).setAutoMinorVersionUpgrade(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoMinorVersionUpgrade(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -176,7 +176,7 @@ public open class CfnReplicationInstance(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -207,7 +207,7 @@ public open class CfnReplicationInstance(
    * Specifies whether the replication instance is a Multi-AZ deployment.
    */
   public open fun multiAz(`value`: IResolvable) {
-    unwrap(this).setMultiAz(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMultiAz(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -239,7 +239,7 @@ public open class CfnReplicationInstance(
    * Specifies the accessibility options for the replication instance.
    */
   public open fun publiclyAccessible(`value`: IResolvable) {
-    unwrap(this).setPubliclyAccessible(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPubliclyAccessible(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -315,7 +315,7 @@ public open class CfnReplicationInstance(
    * One or more tags to be assigned to the replication instance.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -660,7 +660,7 @@ public open class CfnReplicationInstance(
      * @param allowMajorVersionUpgrade Indicates that major version upgrades are allowed. 
      */
     override fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: IResolvable) {
-      cdkBuilder.allowMajorVersionUpgrade(allowMajorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.allowMajorVersionUpgrade(allowMajorVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -692,7 +692,7 @@ public open class CfnReplicationInstance(
      * applied automatically to the replication instance during the maintenance window. 
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -760,7 +760,7 @@ public open class CfnReplicationInstance(
      * @param multiAz Specifies whether the replication instance is a Multi-AZ deployment. 
      */
     override fun multiAz(multiAz: IResolvable) {
-      cdkBuilder.multiAz(multiAz.let(IResolvable::unwrap))
+      cdkBuilder.multiAz(multiAz.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -806,7 +806,7 @@ public open class CfnReplicationInstance(
      * @param publiclyAccessible Specifies the accessibility options for the replication instance. 
      */
     override fun publiclyAccessible(publiclyAccessible: IResolvable) {
-      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
+      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -883,7 +883,7 @@ public open class CfnReplicationInstance(
      * @param tags One or more tags to be assigned to the replication instance. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

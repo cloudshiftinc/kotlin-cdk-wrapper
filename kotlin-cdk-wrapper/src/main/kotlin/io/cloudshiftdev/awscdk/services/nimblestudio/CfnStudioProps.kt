@@ -169,7 +169,7 @@ public interface CfnStudioProps {
      * the studio.
      */
     override fun studioEncryptionConfiguration(studioEncryptionConfiguration: IResolvable) {
-      cdkBuilder.studioEncryptionConfiguration(studioEncryptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.studioEncryptionConfiguration(studioEncryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -178,7 +178,7 @@ public interface CfnStudioProps {
      */
     override
         fun studioEncryptionConfiguration(studioEncryptionConfiguration: CfnStudio.StudioEncryptionConfigurationProperty) {
-      cdkBuilder.studioEncryptionConfiguration(studioEncryptionConfiguration.let(CfnStudio.StudioEncryptionConfigurationProperty::unwrap))
+      cdkBuilder.studioEncryptionConfiguration(studioEncryptionConfiguration.let(CfnStudio.StudioEncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**

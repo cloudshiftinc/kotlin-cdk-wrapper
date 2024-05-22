@@ -54,8 +54,8 @@ public open class CfnEntitlement(
     id: String,
     props: CfnEntitlementProps,
   ) :
-      this(software.amazon.awscdk.services.appstream.CfnEntitlement(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEntitlementProps::unwrap))
+      this(software.amazon.awscdk.services.appstream.CfnEntitlement(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEntitlementProps.Companion::unwrap))
   )
 
   public constructor(
@@ -96,7 +96,7 @@ public open class CfnEntitlement(
    * The attributes of the entitlement.
    */
   public open fun attributes(`value`: IResolvable) {
-    unwrap(this).setAttributes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -129,7 +129,7 @@ public open class CfnEntitlement(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -242,7 +242,7 @@ public open class CfnEntitlement(
      * @param attributes The attributes of the entitlement. 
      */
     override fun attributes(attributes: IResolvable) {
-      cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+      cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
     }
 
     /**

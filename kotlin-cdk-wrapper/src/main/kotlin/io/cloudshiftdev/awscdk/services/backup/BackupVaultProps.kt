@@ -186,7 +186,7 @@ public interface BackupVaultProps {
      * backup vault.
      */
     override fun accessPolicy(accessPolicy: PolicyDocument) {
-      cdkBuilder.accessPolicy(accessPolicy.let(PolicyDocument::unwrap))
+      cdkBuilder.accessPolicy(accessPolicy.let(PolicyDocument.Companion::unwrap))
     }
 
     /**
@@ -220,14 +220,14 @@ public interface BackupVaultProps {
      * @param encryptionKey The server-side encryption key to use to protect your backups.
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
      * @param lockConfiguration Configuration for AWS Backup Vault Lock.
      */
     override fun lockConfiguration(lockConfiguration: LockConfiguration) {
-      cdkBuilder.lockConfiguration(lockConfiguration.let(LockConfiguration::unwrap))
+      cdkBuilder.lockConfiguration(lockConfiguration.let(LockConfiguration.Companion::unwrap))
     }
 
     /**
@@ -242,7 +242,7 @@ public interface BackupVaultProps {
      * @param notificationEvents The vault events to send.
      */
     override fun notificationEvents(notificationEvents: List<BackupVaultEvents>) {
-      cdkBuilder.notificationEvents(notificationEvents.map(BackupVaultEvents::unwrap))
+      cdkBuilder.notificationEvents(notificationEvents.map(BackupVaultEvents.Companion::unwrap))
     }
 
     /**
@@ -255,7 +255,7 @@ public interface BackupVaultProps {
      * @param notificationTopic A SNS topic to send vault events to.
      */
     override fun notificationTopic(notificationTopic: ITopic) {
-      cdkBuilder.notificationTopic(notificationTopic.let(ITopic::unwrap))
+      cdkBuilder.notificationTopic(notificationTopic.let(ITopic.Companion::unwrap))
     }
 
     /**
@@ -264,7 +264,7 @@ public interface BackupVaultProps {
      * that contains recovery points will fail.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.backup.BackupVaultProps = cdkBuilder.build()

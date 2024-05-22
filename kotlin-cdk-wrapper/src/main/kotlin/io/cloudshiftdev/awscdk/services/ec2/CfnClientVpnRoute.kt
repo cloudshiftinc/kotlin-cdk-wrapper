@@ -49,8 +49,8 @@ public open class CfnClientVpnRoute(
     id: String,
     props: CfnClientVpnRouteProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnClientVpnRoute(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnClientVpnRouteProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnClientVpnRoute(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnClientVpnRouteProps.Companion::unwrap))
   )
 
   public constructor(
@@ -111,7 +111,7 @@ public open class CfnClientVpnRoute(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

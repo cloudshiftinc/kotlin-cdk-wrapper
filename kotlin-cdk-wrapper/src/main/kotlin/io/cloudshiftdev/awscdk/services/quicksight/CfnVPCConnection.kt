@@ -49,7 +49,7 @@ public open class CfnVPCConnection(
   cdkObject: software.amazon.awscdk.services.quicksight.CfnVPCConnection,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.quicksight.CfnVPCConnection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.quicksight.CfnVPCConnection(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -58,8 +58,8 @@ public open class CfnVPCConnection(
     id: String,
     props: CfnVPCConnectionProps,
   ) :
-      this(software.amazon.awscdk.services.quicksight.CfnVPCConnection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVPCConnectionProps::unwrap))
+      this(software.amazon.awscdk.services.quicksight.CfnVPCConnection(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVPCConnectionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -147,7 +147,7 @@ public open class CfnVPCConnection(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -225,7 +225,7 @@ public open class CfnVPCConnection(
    * A map of the key-value pairs for the resource tag or tags assigned to the VPC connection.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -476,7 +476,7 @@ public open class CfnVPCConnection(
      * connection. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

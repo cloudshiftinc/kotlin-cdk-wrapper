@@ -118,14 +118,14 @@ public interface CfnDatabaseProps {
      * @param databaseInput The metadata for the database. 
      */
     override fun databaseInput(databaseInput: IResolvable) {
-      cdkBuilder.databaseInput(databaseInput.let(IResolvable::unwrap))
+      cdkBuilder.databaseInput(databaseInput.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param databaseInput The metadata for the database. 
      */
     override fun databaseInput(databaseInput: CfnDatabase.DatabaseInputProperty) {
-      cdkBuilder.databaseInput(databaseInput.let(CfnDatabase.DatabaseInputProperty::unwrap))
+      cdkBuilder.databaseInput(databaseInput.let(CfnDatabase.DatabaseInputProperty.Companion::unwrap))
     }
 
     /**

@@ -53,8 +53,8 @@ public open class CfnDirectoryConfig(
     id: String,
     props: CfnDirectoryConfigProps,
   ) :
-      this(software.amazon.awscdk.services.appstream.CfnDirectoryConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDirectoryConfigProps::unwrap))
+      this(software.amazon.awscdk.services.appstream.CfnDirectoryConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDirectoryConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -76,7 +76,7 @@ public open class CfnDirectoryConfig(
    * (IdP) user identities to Active Directory domain-joined streaming instances.
    */
   public open fun certificateBasedAuthProperties(`value`: IResolvable) {
-    unwrap(this).setCertificateBasedAuthProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCertificateBasedAuthProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -84,7 +84,7 @@ public open class CfnDirectoryConfig(
    * (IdP) user identities to Active Directory domain-joined streaming instances.
    */
   public open fun certificateBasedAuthProperties(`value`: CertificateBasedAuthPropertiesProperty) {
-    unwrap(this).setCertificateBasedAuthProperties(`value`.let(CertificateBasedAuthPropertiesProperty::unwrap))
+    unwrap(this).setCertificateBasedAuthProperties(`value`.let(CertificateBasedAuthPropertiesProperty.Companion::unwrap))
   }
 
   /**
@@ -115,7 +115,7 @@ public open class CfnDirectoryConfig(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -148,7 +148,7 @@ public open class CfnDirectoryConfig(
    * directory.
    */
   public open fun serviceAccountCredentials(`value`: IResolvable) {
-    unwrap(this).setServiceAccountCredentials(`value`.let(IResolvable::unwrap))
+    unwrap(this).setServiceAccountCredentials(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -156,7 +156,7 @@ public open class CfnDirectoryConfig(
    * directory.
    */
   public open fun serviceAccountCredentials(`value`: ServiceAccountCredentialsProperty) {
-    unwrap(this).setServiceAccountCredentials(`value`.let(ServiceAccountCredentialsProperty::unwrap))
+    unwrap(this).setServiceAccountCredentials(`value`.let(ServiceAccountCredentialsProperty.Companion::unwrap))
   }
 
   /**
@@ -313,7 +313,7 @@ public open class CfnDirectoryConfig(
      * streaming instances. 
      */
     override fun certificateBasedAuthProperties(certificateBasedAuthProperties: IResolvable) {
-      cdkBuilder.certificateBasedAuthProperties(certificateBasedAuthProperties.let(IResolvable::unwrap))
+      cdkBuilder.certificateBasedAuthProperties(certificateBasedAuthProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -327,7 +327,7 @@ public open class CfnDirectoryConfig(
      */
     override
         fun certificateBasedAuthProperties(certificateBasedAuthProperties: CertificateBasedAuthPropertiesProperty) {
-      cdkBuilder.certificateBasedAuthProperties(certificateBasedAuthProperties.let(CertificateBasedAuthPropertiesProperty::unwrap))
+      cdkBuilder.certificateBasedAuthProperties(certificateBasedAuthProperties.let(CertificateBasedAuthPropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -396,7 +396,7 @@ public open class CfnDirectoryConfig(
      * streaming instance to connect to the directory. 
      */
     override fun serviceAccountCredentials(serviceAccountCredentials: IResolvable) {
-      cdkBuilder.serviceAccountCredentials(serviceAccountCredentials.let(IResolvable::unwrap))
+      cdkBuilder.serviceAccountCredentials(serviceAccountCredentials.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -416,7 +416,7 @@ public open class CfnDirectoryConfig(
      */
     override
         fun serviceAccountCredentials(serviceAccountCredentials: ServiceAccountCredentialsProperty) {
-      cdkBuilder.serviceAccountCredentials(serviceAccountCredentials.let(ServiceAccountCredentialsProperty::unwrap))
+      cdkBuilder.serviceAccountCredentials(serviceAccountCredentials.let(ServiceAccountCredentialsProperty.Companion::unwrap))
     }
 
     /**

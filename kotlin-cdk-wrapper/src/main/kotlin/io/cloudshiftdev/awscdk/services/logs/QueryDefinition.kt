@@ -39,8 +39,8 @@ public open class QueryDefinition(
     id: String,
     props: QueryDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.logs.QueryDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(QueryDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.logs.QueryDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(QueryDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -117,7 +117,7 @@ public open class QueryDefinition(
      * @param logGroups Specify certain log groups for the query definition. 
      */
     override fun logGroups(logGroups: List<ILogGroup>) {
-      cdkBuilder.logGroups(logGroups.map(ILogGroup::unwrap))
+      cdkBuilder.logGroups(logGroups.map(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -144,7 +144,7 @@ public open class QueryDefinition(
      * @param queryString The query string to use for this query definition. 
      */
     override fun queryString(queryString: QueryString) {
-      cdkBuilder.queryString(queryString.let(QueryString::unwrap))
+      cdkBuilder.queryString(queryString.let(QueryString.Companion::unwrap))
     }
 
     /**

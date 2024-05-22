@@ -98,8 +98,8 @@ public open class CfnResponsePlan(
     id: String,
     props: CfnResponsePlanProps,
   ) :
-      this(software.amazon.awscdk.services.ssmincidents.CfnResponsePlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnResponsePlanProps::unwrap))
+      this(software.amazon.awscdk.services.ssmincidents.CfnResponsePlan(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnResponsePlanProps.Companion::unwrap))
   )
 
   public constructor(
@@ -118,7 +118,7 @@ public open class CfnResponsePlan(
    * The actions that the response plan starts at the beginning of an incident.
    */
   public open fun actions(`value`: IResolvable) {
-    unwrap(this).setActions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setActions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -147,14 +147,14 @@ public open class CfnResponsePlan(
    * The AWS Chatbot chat channel used for collaboration during an incident.
    */
   public open fun chatChannel(`value`: IResolvable) {
-    unwrap(this).setChatChannel(`value`.let(IResolvable::unwrap))
+    unwrap(this).setChatChannel(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The AWS Chatbot chat channel used for collaboration during an incident.
    */
   public open fun chatChannel(`value`: ChatChannelProperty) {
-    unwrap(this).setChatChannel(`value`.let(ChatChannelProperty::unwrap))
+    unwrap(this).setChatChannel(`value`.let(ChatChannelProperty.Companion::unwrap))
   }
 
   /**
@@ -206,14 +206,14 @@ public open class CfnResponsePlan(
    * Details used to create an incident when using this response plan.
    */
   public open fun incidentTemplate(`value`: IResolvable) {
-    unwrap(this).setIncidentTemplate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIncidentTemplate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Details used to create an incident when using this response plan.
    */
   public open fun incidentTemplate(`value`: IncidentTemplateProperty) {
-    unwrap(this).setIncidentTemplate(`value`.let(IncidentTemplateProperty::unwrap))
+    unwrap(this).setIncidentTemplate(`value`.let(IncidentTemplateProperty.Companion::unwrap))
   }
 
   /**
@@ -230,7 +230,7 @@ public open class CfnResponsePlan(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -242,7 +242,7 @@ public open class CfnResponsePlan(
    * Information about third-party services integrated into the response plan.
    */
   public open fun integrations(`value`: IResolvable) {
-    unwrap(this).setIntegrations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIntegrations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -284,7 +284,7 @@ public open class CfnResponsePlan(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -475,7 +475,7 @@ public open class CfnResponsePlan(
      * @param actions The actions that the response plan starts at the beginning of an incident. 
      */
     override fun actions(actions: IResolvable) {
-      cdkBuilder.actions(actions.let(IResolvable::unwrap))
+      cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -503,7 +503,7 @@ public open class CfnResponsePlan(
      * @param chatChannel The AWS Chatbot chat channel used for collaboration during an incident. 
      */
     override fun chatChannel(chatChannel: IResolvable) {
-      cdkBuilder.chatChannel(chatChannel.let(IResolvable::unwrap))
+      cdkBuilder.chatChannel(chatChannel.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -513,7 +513,7 @@ public open class CfnResponsePlan(
      * @param chatChannel The AWS Chatbot chat channel used for collaboration during an incident. 
      */
     override fun chatChannel(chatChannel: ChatChannelProperty) {
-      cdkBuilder.chatChannel(chatChannel.let(ChatChannelProperty::unwrap))
+      cdkBuilder.chatChannel(chatChannel.let(ChatChannelProperty.Companion::unwrap))
     }
 
     /**
@@ -566,7 +566,7 @@ public open class CfnResponsePlan(
      * @param incidentTemplate Details used to create an incident when using this response plan. 
      */
     override fun incidentTemplate(incidentTemplate: IResolvable) {
-      cdkBuilder.incidentTemplate(incidentTemplate.let(IResolvable::unwrap))
+      cdkBuilder.incidentTemplate(incidentTemplate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -576,7 +576,7 @@ public open class CfnResponsePlan(
      * @param incidentTemplate Details used to create an incident when using this response plan. 
      */
     override fun incidentTemplate(incidentTemplate: IncidentTemplateProperty) {
-      cdkBuilder.incidentTemplate(incidentTemplate.let(IncidentTemplateProperty::unwrap))
+      cdkBuilder.incidentTemplate(incidentTemplate.let(IncidentTemplateProperty.Companion::unwrap))
     }
 
     /**
@@ -598,7 +598,7 @@ public open class CfnResponsePlan(
      * 
      */
     override fun integrations(integrations: IResolvable) {
-      cdkBuilder.integrations(integrations.let(IResolvable::unwrap))
+      cdkBuilder.integrations(integrations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -642,7 +642,7 @@ public open class CfnResponsePlan(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -759,7 +759,7 @@ public open class CfnResponsePlan(
        * used as a runbook during an incident.
        */
       override fun ssmAutomation(ssmAutomation: IResolvable) {
-        cdkBuilder.ssmAutomation(ssmAutomation.let(IResolvable::unwrap))
+        cdkBuilder.ssmAutomation(ssmAutomation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -767,7 +767,7 @@ public open class CfnResponsePlan(
        * used as a runbook during an incident.
        */
       override fun ssmAutomation(ssmAutomation: SsmAutomationProperty) {
-        cdkBuilder.ssmAutomation(ssmAutomation.let(SsmAutomationProperty::unwrap))
+        cdkBuilder.ssmAutomation(ssmAutomation.let(SsmAutomationProperty.Companion::unwrap))
       }
 
       /**
@@ -1030,14 +1030,14 @@ public open class CfnResponsePlan(
        * @param value The dynamic parameter value. 
        */
       override fun `value`(`value`: IResolvable) {
-        cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
+        cdkBuilder.`value`(`value`.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param value The dynamic parameter value. 
        */
       override fun `value`(`value`: DynamicSsmParameterValueProperty) {
-        cdkBuilder.`value`(`value`.let(DynamicSsmParameterValueProperty::unwrap))
+        cdkBuilder.`value`(`value`.let(DynamicSsmParameterValueProperty.Companion::unwrap))
       }
 
       /**
@@ -1381,7 +1381,7 @@ public open class CfnResponsePlan(
        * in the template to the incident.
        */
       override fun incidentTags(incidentTags: IResolvable) {
-        cdkBuilder.incidentTags(incidentTags.let(IResolvable::unwrap))
+        cdkBuilder.incidentTags(incidentTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1408,7 +1408,7 @@ public open class CfnResponsePlan(
        * topics.
        */
       override fun notificationTargets(notificationTargets: IResolvable) {
-        cdkBuilder.notificationTargets(notificationTargets.let(IResolvable::unwrap))
+        cdkBuilder.notificationTargets(notificationTargets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1597,7 +1597,7 @@ public open class CfnResponsePlan(
        * plan creates an incident. 
        */
       override fun pagerDutyConfiguration(pagerDutyConfiguration: IResolvable) {
-        cdkBuilder.pagerDutyConfiguration(pagerDutyConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.pagerDutyConfiguration(pagerDutyConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1605,7 +1605,7 @@ public open class CfnResponsePlan(
        * plan creates an incident. 
        */
       override fun pagerDutyConfiguration(pagerDutyConfiguration: PagerDutyConfigurationProperty) {
-        cdkBuilder.pagerDutyConfiguration(pagerDutyConfiguration.let(PagerDutyConfigurationProperty::unwrap))
+        cdkBuilder.pagerDutyConfiguration(pagerDutyConfiguration.let(PagerDutyConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1836,7 +1836,7 @@ public open class CfnResponsePlan(
        * the configuration. 
        */
       override fun pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration: IResolvable) {
-        cdkBuilder.pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1845,7 +1845,7 @@ public open class CfnResponsePlan(
        */
       override
           fun pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration: PagerDutyIncidentConfigurationProperty) {
-        cdkBuilder.pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration.let(PagerDutyIncidentConfigurationProperty::unwrap))
+        cdkBuilder.pagerDutyIncidentConfiguration(pagerDutyIncidentConfiguration.let(PagerDutyIncidentConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2169,7 +2169,7 @@ public open class CfnResponsePlan(
        * processing a Systems Manager Automation runbook.
        */
       override fun dynamicParameters(dynamicParameters: IResolvable) {
-        cdkBuilder.dynamicParameters(dynamicParameters.let(IResolvable::unwrap))
+        cdkBuilder.dynamicParameters(dynamicParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2191,7 +2191,7 @@ public open class CfnResponsePlan(
        * @param parameters The key-value pair parameters to use when running the runbook.
        */
       override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**

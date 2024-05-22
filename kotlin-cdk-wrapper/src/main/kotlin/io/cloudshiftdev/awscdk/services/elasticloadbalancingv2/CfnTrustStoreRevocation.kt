@@ -46,7 +46,7 @@ public open class CfnTrustStoreRevocation(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -55,8 +55,8 @@ public open class CfnTrustStoreRevocation(
     id: String,
     props: CfnTrustStoreRevocationProps,
   ) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTrustStoreRevocationProps::unwrap))
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnTrustStoreRevocation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTrustStoreRevocationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -83,7 +83,7 @@ public open class CfnTrustStoreRevocation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -95,7 +95,7 @@ public open class CfnTrustStoreRevocation(
    * The revocation file to add.
    */
   public open fun revocationContents(`value`: IResolvable) {
-    unwrap(this).setRevocationContents(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRevocationContents(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -178,7 +178,7 @@ public open class CfnTrustStoreRevocation(
      * @param revocationContents The revocation file to add. 
      */
     override fun revocationContents(revocationContents: IResolvable) {
-      cdkBuilder.revocationContents(revocationContents.let(IResolvable::unwrap))
+      cdkBuilder.revocationContents(revocationContents.let(IResolvable.Companion::unwrap))
     }
 
     /**

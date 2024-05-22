@@ -82,8 +82,8 @@ public open class CfnFlowSource(
     id: String,
     props: CfnFlowSourceProps,
   ) :
-      this(software.amazon.awscdk.services.mediaconnect.CfnFlowSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFlowSourceProps::unwrap))
+      this(software.amazon.awscdk.services.mediaconnect.CfnFlowSource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFlowSourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -119,14 +119,14 @@ public open class CfnFlowSource(
    * The type of encryption that is used on the content ingested from the source.
    */
   public open fun decryption(`value`: IResolvable) {
-    unwrap(this).setDecryption(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDecryption(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The type of encryption that is used on the content ingested from the source.
    */
   public open fun decryption(`value`: EncryptionProperty) {
-    unwrap(this).setDecryption(`value`.let(EncryptionProperty::unwrap))
+    unwrap(this).setDecryption(`value`.let(EncryptionProperty.Companion::unwrap))
   }
 
   /**
@@ -182,14 +182,14 @@ public open class CfnFlowSource(
    * The source configuration for cloud flows receiving a stream from a bridge.
    */
   public open fun gatewayBridgeSource(`value`: IResolvable) {
-    unwrap(this).setGatewayBridgeSource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setGatewayBridgeSource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The source configuration for cloud flows receiving a stream from a bridge.
    */
   public open fun gatewayBridgeSource(`value`: GatewayBridgeSourceProperty) {
-    unwrap(this).setGatewayBridgeSource(`value`.let(GatewayBridgeSourceProperty::unwrap))
+    unwrap(this).setGatewayBridgeSource(`value`.let(GatewayBridgeSourceProperty.Companion::unwrap))
   }
 
   /**
@@ -218,7 +218,7 @@ public open class CfnFlowSource(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -610,7 +610,7 @@ public open class CfnFlowSource(
      * source. 
      */
     override fun decryption(decryption: IResolvable) {
-      cdkBuilder.decryption(decryption.let(IResolvable::unwrap))
+      cdkBuilder.decryption(decryption.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -621,7 +621,7 @@ public open class CfnFlowSource(
      * source. 
      */
     override fun decryption(decryption: EncryptionProperty) {
-      cdkBuilder.decryption(decryption.let(EncryptionProperty::unwrap))
+      cdkBuilder.decryption(decryption.let(EncryptionProperty.Companion::unwrap))
     }
 
     /**
@@ -681,7 +681,7 @@ public open class CfnFlowSource(
      * bridge. 
      */
     override fun gatewayBridgeSource(gatewayBridgeSource: IResolvable) {
-      cdkBuilder.gatewayBridgeSource(gatewayBridgeSource.let(IResolvable::unwrap))
+      cdkBuilder.gatewayBridgeSource(gatewayBridgeSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -692,7 +692,7 @@ public open class CfnFlowSource(
      * bridge. 
      */
     override fun gatewayBridgeSource(gatewayBridgeSource: GatewayBridgeSourceProperty) {
-      cdkBuilder.gatewayBridgeSource(gatewayBridgeSource.let(GatewayBridgeSourceProperty::unwrap))
+      cdkBuilder.gatewayBridgeSource(gatewayBridgeSource.let(GatewayBridgeSourceProperty.Companion::unwrap))
     }
 
     /**
@@ -1354,7 +1354,7 @@ public open class CfnFlowSource(
        * bridge source.
        */
       override fun vpcInterfaceAttachment(vpcInterfaceAttachment: IResolvable) {
-        cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(IResolvable::unwrap))
+        cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1362,7 +1362,7 @@ public open class CfnFlowSource(
        * bridge source.
        */
       override fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty) {
-        cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(VpcInterfaceAttachmentProperty::unwrap))
+        cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(VpcInterfaceAttachmentProperty.Companion::unwrap))
       }
 
       /**

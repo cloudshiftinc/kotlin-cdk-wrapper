@@ -60,8 +60,8 @@ public open class CfnIndex(
     id: String,
     props: CfnIndexProps,
   ) :
-      this(software.amazon.awscdk.services.resourceexplorer2.CfnIndex(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnIndexProps::unwrap))
+      this(software.amazon.awscdk.services.resourceexplorer2.CfnIndex(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnIndexProps.Companion::unwrap))
   )
 
   public constructor(
@@ -91,7 +91,7 @@ public open class CfnIndex(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

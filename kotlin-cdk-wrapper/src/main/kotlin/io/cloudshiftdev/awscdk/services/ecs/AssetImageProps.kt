@@ -261,7 +261,7 @@ public interface AssetImageProps : DockerImageAssetOptions {
      * @param cacheFrom Cache from options to pass to the `docker build` command.
      */
     override fun cacheFrom(cacheFrom: List<DockerCacheOption>) {
-      cdkBuilder.cacheFrom(cacheFrom.map(DockerCacheOption::unwrap))
+      cdkBuilder.cacheFrom(cacheFrom.map(DockerCacheOption.Companion::unwrap))
     }
 
     /**
@@ -274,7 +274,7 @@ public interface AssetImageProps : DockerImageAssetOptions {
      * @param cacheTo Cache to options to pass to the `docker build` command.
      */
     override fun cacheTo(cacheTo: DockerCacheOption) {
-      cdkBuilder.cacheTo(cacheTo.let(DockerCacheOption::unwrap))
+      cdkBuilder.cacheTo(cacheTo.let(DockerCacheOption.Companion::unwrap))
     }
 
     /**
@@ -320,14 +320,14 @@ public interface AssetImageProps : DockerImageAssetOptions {
      * @param followSymlinks A strategy for how to handle symlinks.
      */
     override fun followSymlinks(followSymlinks: SymlinkFollowMode) {
-      cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode::unwrap))
+      cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode.Companion::unwrap))
     }
 
     /**
      * @param ignoreMode The ignore behavior to use for `exclude` patterns.
      */
     override fun ignoreMode(ignoreMode: IgnoreMode) {
-      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode::unwrap))
+      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode.Companion::unwrap))
     }
 
     /**
@@ -335,7 +335,7 @@ public interface AssetImageProps : DockerImageAssetOptions {
      * hash.
      */
     override fun invalidation(invalidation: DockerImageAssetInvalidationOptions) {
-      cdkBuilder.invalidation(invalidation.let(DockerImageAssetInvalidationOptions::unwrap))
+      cdkBuilder.invalidation(invalidation.let(DockerImageAssetInvalidationOptions.Companion::unwrap))
     }
 
     /**
@@ -352,7 +352,7 @@ public interface AssetImageProps : DockerImageAssetOptions {
      * Support docker API 1.25+.
      */
     override fun networkMode(networkMode: NetworkMode) {
-      cdkBuilder.networkMode(networkMode.let(NetworkMode::unwrap))
+      cdkBuilder.networkMode(networkMode.let(NetworkMode.Companion::unwrap))
     }
 
     /**
@@ -372,7 +372,7 @@ public interface AssetImageProps : DockerImageAssetOptions {
      * *Requires Docker Buildx*.
      */
     override fun platform(platform: Platform) {
-      cdkBuilder.platform(platform.let(Platform::unwrap))
+      cdkBuilder.platform(platform.let(Platform.Companion::unwrap))
     }
 
     /**

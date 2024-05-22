@@ -213,7 +213,7 @@ public interface CfnEnvironmentProfileProps {
      * @param userParameters The user parameters of this Amazon DataZone environment profile.
      */
     override fun userParameters(userParameters: IResolvable) {
-      cdkBuilder.userParameters(userParameters.let(IResolvable::unwrap))
+      cdkBuilder.userParameters(userParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**

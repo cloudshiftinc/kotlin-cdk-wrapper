@@ -117,8 +117,8 @@ public open class FirelensLogRouter(
     id: String,
     props: FirelensLogRouterProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.FirelensLogRouter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(FirelensLogRouterProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.FirelensLogRouter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(FirelensLogRouterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -149,7 +149,7 @@ public open class FirelensLogRouter(
    */
   public override fun renderContainerDefinition(taskDefinition: TaskDefinition):
       CfnTaskDefinition.ContainerDefinitionProperty =
-      unwrap(this).renderContainerDefinition(taskDefinition.let(TaskDefinition::unwrap)).let(CfnTaskDefinition.ContainerDefinitionProperty::wrap)
+      unwrap(this).renderContainerDefinition(taskDefinition.let(TaskDefinition.Companion::unwrap)).let(CfnTaskDefinition.ContainerDefinitionProperty::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.FirelensLogRouter].
@@ -752,7 +752,7 @@ public open class FirelensLogRouter(
      * file that configures the container for Active Directory authentication. 
      */
     override fun credentialSpecs(credentialSpecs: List<CredentialSpec>) {
-      cdkBuilder.credentialSpecs(credentialSpecs.map(CredentialSpec::unwrap))
+      cdkBuilder.credentialSpecs(credentialSpecs.map(CredentialSpec.Companion::unwrap))
     }
 
     /**
@@ -903,7 +903,7 @@ public open class FirelensLogRouter(
      * @param environmentFiles The environment files to pass to the container. 
      */
     override fun environmentFiles(environmentFiles: List<EnvironmentFile>) {
-      cdkBuilder.environmentFiles(environmentFiles.map(EnvironmentFile::unwrap))
+      cdkBuilder.environmentFiles(environmentFiles.map(EnvironmentFile.Companion::unwrap))
     }
 
     /**
@@ -955,7 +955,7 @@ public open class FirelensLogRouter(
      * @param firelensConfig Firelens configuration. 
      */
     override fun firelensConfig(firelensConfig: FirelensConfig) {
-      cdkBuilder.firelensConfig(firelensConfig.let(FirelensConfig::unwrap))
+      cdkBuilder.firelensConfig(firelensConfig.let(FirelensConfig.Companion::unwrap))
     }
 
     /**
@@ -988,7 +988,7 @@ public open class FirelensLogRouter(
      * container. 
      */
     override fun healthCheck(healthCheck: HealthCheck) {
-      cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
     }
 
     /**
@@ -1027,7 +1027,7 @@ public open class FirelensLogRouter(
      * @param image The image used to start a container. 
      */
     override fun image(image: ContainerImage) {
-      cdkBuilder.image(image.let(ContainerImage::unwrap))
+      cdkBuilder.image(image.let(ContainerImage.Companion::unwrap))
     }
 
     /**
@@ -1078,7 +1078,7 @@ public open class FirelensLogRouter(
      * as Linux kernel capabilities. 
      */
     override fun linuxParameters(linuxParameters: LinuxParameters) {
-      cdkBuilder.linuxParameters(linuxParameters.let(LinuxParameters::unwrap))
+      cdkBuilder.linuxParameters(linuxParameters.let(LinuxParameters.Companion::unwrap))
     }
 
     /**
@@ -1089,7 +1089,7 @@ public open class FirelensLogRouter(
      * @param logging The log configuration specification for the container. 
      */
     override fun logging(logging: LogDriver) {
-      cdkBuilder.logging(logging.let(LogDriver::unwrap))
+      cdkBuilder.logging(logging.let(LogDriver.Companion::unwrap))
     }
 
     /**
@@ -1135,7 +1135,7 @@ public open class FirelensLogRouter(
      * @param portMappings The port mappings to add to the container definition. 
      */
     override fun portMappings(portMappings: List<PortMapping>) {
-      cdkBuilder.portMappings(portMappings.map(PortMapping::unwrap))
+      cdkBuilder.portMappings(portMappings.map(PortMapping.Companion::unwrap))
     }
 
     /**
@@ -1210,7 +1210,7 @@ public open class FirelensLogRouter(
      * dependencies for a container. 
      */
     override fun startTimeout(startTimeout: Duration) {
-      cdkBuilder.startTimeout(startTimeout.let(Duration::unwrap))
+      cdkBuilder.startTimeout(startTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -1223,7 +1223,7 @@ public open class FirelensLogRouter(
      * killed if it doesn't exit normally on its own. 
      */
     override fun stopTimeout(stopTimeout: Duration) {
-      cdkBuilder.stopTimeout(stopTimeout.let(Duration::unwrap))
+      cdkBuilder.stopTimeout(stopTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -1235,7 +1235,7 @@ public open class FirelensLogRouter(
      * @param systemControls A list of namespaced kernel parameters to set in the container. 
      */
     override fun systemControls(systemControls: List<SystemControl>) {
-      cdkBuilder.systemControls(systemControls.map(SystemControl::unwrap))
+      cdkBuilder.systemControls(systemControls.map(SystemControl.Companion::unwrap))
     }
 
     /**
@@ -1258,7 +1258,7 @@ public open class FirelensLogRouter(
      * definition. 
      */
     override fun taskDefinition(taskDefinition: TaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(TaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(TaskDefinition.Companion::unwrap))
     }
 
     /**
@@ -1267,7 +1267,7 @@ public open class FirelensLogRouter(
      * @param ulimits An array of ulimits to set in the container. 
      */
     override fun ulimits(ulimits: List<Ulimit>) {
-      cdkBuilder.ulimits(ulimits.map(Ulimit::unwrap))
+      cdkBuilder.ulimits(ulimits.map(Ulimit.Companion::unwrap))
     }
 
     /**

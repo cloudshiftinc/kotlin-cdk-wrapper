@@ -144,7 +144,7 @@ public interface DashboardVariableOptions {
      * @param defaultValue Optional default value.
      */
     override fun defaultValue(defaultValue: DefaultValue) {
-      cdkBuilder.defaultValue(defaultValue.let(DefaultValue::unwrap))
+      cdkBuilder.defaultValue(defaultValue.let(DefaultValue.Companion::unwrap))
     }
 
     /**
@@ -158,7 +158,7 @@ public interface DashboardVariableOptions {
      * @param inputType The way the variable value is selected. 
      */
     override fun inputType(inputType: VariableInputType) {
-      cdkBuilder.inputType(inputType.let(VariableInputType::unwrap))
+      cdkBuilder.inputType(inputType.let(VariableInputType.Companion::unwrap))
     }
 
     /**
@@ -172,7 +172,7 @@ public interface DashboardVariableOptions {
      * @param type Type of the variable. 
      */
     override fun type(type: VariableType) {
-      cdkBuilder.type(type.let(VariableType::unwrap))
+      cdkBuilder.type(type.let(VariableType.Companion::unwrap))
     }
 
     /**
@@ -187,7 +187,7 @@ public interface DashboardVariableOptions {
      * [VariableInputType.SELECT] dashboard variables).
      */
     override fun values(values: Values) {
-      cdkBuilder.values(values.let(Values::unwrap))
+      cdkBuilder.values(values.let(Values.Companion::unwrap))
     }
 
     /**

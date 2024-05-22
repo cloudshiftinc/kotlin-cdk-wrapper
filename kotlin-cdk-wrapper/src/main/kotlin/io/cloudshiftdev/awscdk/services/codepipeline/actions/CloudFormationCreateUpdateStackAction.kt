@@ -58,7 +58,7 @@ public open class CloudFormationCreateUpdateStackAction(
   cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateUpdateStackAction,
 ) : Action(cdkObject) {
   public constructor(props: CloudFormationCreateUpdateStackActionProps) :
-      this(software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateUpdateStackAction(props.let(CloudFormationCreateUpdateStackActionProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.actions.CloudFormationCreateUpdateStackAction(props.let(CloudFormationCreateUpdateStackActionProps.Companion::unwrap))
   )
 
   public constructor(props: CloudFormationCreateUpdateStackActionProps.Builder.() -> Unit) :
@@ -71,7 +71,7 @@ public open class CloudFormationCreateUpdateStackAction(
    * @param statement 
    */
   public open fun addToDeploymentRolePolicy(statement: PolicyStatement): Boolean =
-      unwrap(this).addToDeploymentRolePolicy(statement.let(PolicyStatement::unwrap))
+      unwrap(this).addToDeploymentRolePolicy(statement.let(PolicyStatement.Companion::unwrap))
 
   /**
    * Add statement to the service role assumed by CloudFormation while executing this action.
@@ -447,7 +447,7 @@ public open class CloudFormationCreateUpdateStackAction(
      * @param cfnCapabilities Acknowledge certain changes made as part of deployment. 
      */
     override fun cfnCapabilities(cfnCapabilities: List<CfnCapabilities>) {
-      cdkBuilder.cfnCapabilities(cfnCapabilities.map(CfnCapabilities::unwrap))
+      cdkBuilder.cfnCapabilities(cfnCapabilities.map(CfnCapabilities.Companion::unwrap))
     }
 
     /**
@@ -482,7 +482,7 @@ public open class CloudFormationCreateUpdateStackAction(
      * @param deploymentRole IAM role to assume when deploying changes. 
      */
     override fun deploymentRole(deploymentRole: IRole) {
-      cdkBuilder.deploymentRole(deploymentRole.let(IRole::unwrap))
+      cdkBuilder.deploymentRole(deploymentRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -504,7 +504,7 @@ public open class CloudFormationCreateUpdateStackAction(
      * @param extraInputs The list of additional input Artifacts for this Action. 
      */
     override fun extraInputs(extraInputs: List<Artifact>) {
-      cdkBuilder.extraInputs(extraInputs.map(Artifact::unwrap))
+      cdkBuilder.extraInputs(extraInputs.map(Artifact.Companion::unwrap))
     }
 
     /**
@@ -537,7 +537,7 @@ public open class CloudFormationCreateUpdateStackAction(
      * @param output The name of the output artifact to generate. 
      */
     override fun output(output: Artifact) {
-      cdkBuilder.output(output.let(Artifact::unwrap))
+      cdkBuilder.output(output.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -631,7 +631,7 @@ public open class CloudFormationCreateUpdateStackAction(
      * @param role The Role in which context's this Action will be executing in. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -674,7 +674,7 @@ public open class CloudFormationCreateUpdateStackAction(
      * policy. 
      */
     override fun templateConfiguration(templateConfiguration: ArtifactPath) {
-      cdkBuilder.templateConfiguration(templateConfiguration.let(ArtifactPath::unwrap))
+      cdkBuilder.templateConfiguration(templateConfiguration.let(ArtifactPath.Companion::unwrap))
     }
 
     /**
@@ -683,7 +683,7 @@ public open class CloudFormationCreateUpdateStackAction(
      * @param templatePath Input artifact with the CloudFormation template to deploy. 
      */
     override fun templatePath(templatePath: ArtifactPath) {
-      cdkBuilder.templatePath(templatePath.let(ArtifactPath::unwrap))
+      cdkBuilder.templatePath(templatePath.let(ArtifactPath.Companion::unwrap))
     }
 
     /**

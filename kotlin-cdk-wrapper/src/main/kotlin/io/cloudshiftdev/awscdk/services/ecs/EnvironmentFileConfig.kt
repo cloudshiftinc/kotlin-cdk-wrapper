@@ -71,14 +71,14 @@ public interface EnvironmentFileConfig {
      * @param fileType The type of environment file. 
      */
     override fun fileType(fileType: EnvironmentFileType) {
-      cdkBuilder.fileType(fileType.let(EnvironmentFileType::unwrap))
+      cdkBuilder.fileType(fileType.let(EnvironmentFileType.Companion::unwrap))
     }
 
     /**
      * @param s3Location The location of the environment file in S3. 
      */
     override fun s3Location(s3Location: Location) {
-      cdkBuilder.s3Location(s3Location.let(Location::unwrap))
+      cdkBuilder.s3Location(s3Location.let(Location.Companion::unwrap))
     }
 
     /**

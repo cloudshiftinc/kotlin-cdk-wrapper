@@ -82,8 +82,8 @@ public open class CfnFunctionConfiguration(
     id: String,
     props: CfnFunctionConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.appsync.CfnFunctionConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFunctionConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.appsync.CfnFunctionConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFunctionConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -192,7 +192,7 @@ public open class CfnFunctionConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -280,14 +280,14 @@ public open class CfnFunctionConfiguration(
    * Describes a runtime used by an AWS AppSync resolver or AWS AppSync function.
    */
   public open fun runtime(`value`: IResolvable) {
-    unwrap(this).setRuntime(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRuntime(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Describes a runtime used by an AWS AppSync resolver or AWS AppSync function.
    */
   public open fun runtime(`value`: AppSyncRuntimeProperty) {
-    unwrap(this).setRuntime(`value`.let(AppSyncRuntimeProperty::unwrap))
+    unwrap(this).setRuntime(`value`.let(AppSyncRuntimeProperty.Companion::unwrap))
   }
 
   /**
@@ -307,14 +307,14 @@ public open class CfnFunctionConfiguration(
    * Describes a Sync configuration for a resolver.
    */
   public open fun syncConfig(`value`: IResolvable) {
-    unwrap(this).setSyncConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSyncConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Describes a Sync configuration for a resolver.
    */
   public open fun syncConfig(`value`: SyncConfigProperty) {
-    unwrap(this).setSyncConfig(`value`.let(SyncConfigProperty::unwrap))
+    unwrap(this).setSyncConfig(`value`.let(SyncConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -664,7 +664,7 @@ public open class CfnFunctionConfiguration(
      * @param runtime Describes a runtime used by an AWS AppSync resolver or AWS AppSync function. 
      */
     override fun runtime(runtime: IResolvable) {
-      cdkBuilder.runtime(runtime.let(IResolvable::unwrap))
+      cdkBuilder.runtime(runtime.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -677,7 +677,7 @@ public open class CfnFunctionConfiguration(
      * @param runtime Describes a runtime used by an AWS AppSync resolver or AWS AppSync function. 
      */
     override fun runtime(runtime: AppSyncRuntimeProperty) {
-      cdkBuilder.runtime(runtime.let(AppSyncRuntimeProperty::unwrap))
+      cdkBuilder.runtime(runtime.let(AppSyncRuntimeProperty.Companion::unwrap))
     }
 
     /**
@@ -704,7 +704,7 @@ public open class CfnFunctionConfiguration(
      * @param syncConfig Describes a Sync configuration for a resolver. 
      */
     override fun syncConfig(syncConfig: IResolvable) {
-      cdkBuilder.syncConfig(syncConfig.let(IResolvable::unwrap))
+      cdkBuilder.syncConfig(syncConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -717,7 +717,7 @@ public open class CfnFunctionConfiguration(
      * @param syncConfig Describes a Sync configuration for a resolver. 
      */
     override fun syncConfig(syncConfig: SyncConfigProperty) {
-      cdkBuilder.syncConfig(syncConfig.let(SyncConfigProperty::unwrap))
+      cdkBuilder.syncConfig(syncConfig.let(SyncConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1103,7 +1103,7 @@ public open class CfnFunctionConfiguration(
        * `LAMBDA` as the Conflict Handler.
        */
       override fun lambdaConflictHandlerConfig(lambdaConflictHandlerConfig: IResolvable) {
-        cdkBuilder.lambdaConflictHandlerConfig(lambdaConflictHandlerConfig.let(IResolvable::unwrap))
+        cdkBuilder.lambdaConflictHandlerConfig(lambdaConflictHandlerConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1112,7 +1112,7 @@ public open class CfnFunctionConfiguration(
        */
       override
           fun lambdaConflictHandlerConfig(lambdaConflictHandlerConfig: LambdaConflictHandlerConfigProperty) {
-        cdkBuilder.lambdaConflictHandlerConfig(lambdaConflictHandlerConfig.let(LambdaConflictHandlerConfigProperty::unwrap))
+        cdkBuilder.lambdaConflictHandlerConfig(lambdaConflictHandlerConfig.let(LambdaConflictHandlerConfigProperty.Companion::unwrap))
       }
 
       /**

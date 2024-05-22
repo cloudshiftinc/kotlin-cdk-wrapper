@@ -177,7 +177,7 @@ public interface ScalingSchedule {
      * @param schedule When to perform this action. 
      */
     override fun schedule(schedule: Schedule) {
-      cdkBuilder.schedule(schedule.let(Schedule::unwrap))
+      cdkBuilder.schedule(schedule.let(Schedule.Companion::unwrap))
     }
 
     /**
@@ -192,7 +192,7 @@ public interface ScalingSchedule {
      * when the scheduled action uses an at or cron expression.
      */
     override fun timeZone(timeZone: TimeZone) {
-      cdkBuilder.timeZone(timeZone.let(TimeZone::unwrap))
+      cdkBuilder.timeZone(timeZone.let(TimeZone.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.applicationautoscaling.ScalingSchedule =

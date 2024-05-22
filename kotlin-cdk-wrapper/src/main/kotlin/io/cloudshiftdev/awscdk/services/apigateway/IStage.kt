@@ -71,7 +71,7 @@ public interface IStage : IResource {
      * @param options
      */
     override fun addApiKey(id: String, options: ApiKeyOptions): IApiKey = unwrap(this).addApiKey(id,
-        options.let(ApiKeyOptions::unwrap)).let(IApiKey::wrap)
+        options.let(ApiKeyOptions.Companion::unwrap)).let(IApiKey::wrap)
 
     /**
      * Add an ApiKey to this Stage.
@@ -98,7 +98,7 @@ public interface IStage : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**

@@ -129,8 +129,8 @@ public open class CfnReplicationGroup(
     id: String,
     props: CfnReplicationGroupProps,
   ) :
-      this(software.amazon.awscdk.services.elasticache.CfnReplicationGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnReplicationGroupProps::unwrap))
+      this(software.amazon.awscdk.services.elasticache.CfnReplicationGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnReplicationGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -156,7 +156,7 @@ public open class CfnReplicationGroup(
    * A flag that enables encryption at rest when set to `true` .
    */
   public open fun atRestEncryptionEnabled(`value`: IResolvable) {
-    unwrap(this).setAtRestEncryptionEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAtRestEncryptionEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -266,7 +266,7 @@ public open class CfnReplicationGroup(
    * versions.
    */
   public open fun autoMinorVersionUpgrade(`value`: IResolvable) {
-    unwrap(this).setAutoMinorVersionUpgrade(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoMinorVersionUpgrade(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -288,7 +288,7 @@ public open class CfnReplicationGroup(
    * existing primary fails.
    */
   public open fun automaticFailoverEnabled(`value`: IResolvable) {
-    unwrap(this).setAutomaticFailoverEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutomaticFailoverEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -374,7 +374,7 @@ public open class CfnReplicationGroup(
    * Enables data tiering.
    */
   public open fun dataTieringEnabled(`value`: IResolvable) {
-    unwrap(this).setDataTieringEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataTieringEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -419,7 +419,7 @@ public open class CfnReplicationGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -455,7 +455,7 @@ public open class CfnReplicationGroup(
    * Specifies the destination, format and type of the logs.
    */
   public open fun logDeliveryConfigurations(`value`: IResolvable) {
-    unwrap(this).setLogDeliveryConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLogDeliveryConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -487,7 +487,7 @@ public open class CfnReplicationGroup(
    * A flag indicating if you have Multi-AZ enabled to enhance fault tolerance.
    */
   public open fun multiAzEnabled(`value`: IResolvable) {
-    unwrap(this).setMultiAzEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMultiAzEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -513,7 +513,7 @@ public open class CfnReplicationGroup(
    * that configures an Amazon ElastiCache (ElastiCache) Redis cluster node group.
    */
   public open fun nodeGroupConfiguration(`value`: IResolvable) {
-    unwrap(this).setNodeGroupConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNodeGroupConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -768,7 +768,7 @@ public open class CfnReplicationGroup(
    * A list of tags to be added to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -792,7 +792,7 @@ public open class CfnReplicationGroup(
    * A flag that enables in-transit encryption when set to `true` .
    */
   public open fun transitEncryptionEnabled(`value`: IResolvable) {
-    unwrap(this).setTransitEncryptionEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTransitEncryptionEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -1736,7 +1736,7 @@ public open class CfnReplicationGroup(
      * @param atRestEncryptionEnabled A flag that enables encryption at rest when set to `true` . 
      */
     override fun atRestEncryptionEnabled(atRestEncryptionEnabled: IResolvable) {
-      cdkBuilder.atRestEncryptionEnabled(atRestEncryptionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.atRestEncryptionEnabled(atRestEncryptionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1800,7 +1800,7 @@ public open class CfnReplicationGroup(
      * parameter is disabled for previous versions. 
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1834,7 +1834,7 @@ public open class CfnReplicationGroup(
      * promoted to read/write primary if the existing primary fails. 
      */
     override fun automaticFailoverEnabled(automaticFailoverEnabled: IResolvable) {
-      cdkBuilder.automaticFailoverEnabled(automaticFailoverEnabled.let(IResolvable::unwrap))
+      cdkBuilder.automaticFailoverEnabled(automaticFailoverEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2017,7 +2017,7 @@ public open class CfnReplicationGroup(
      * @param dataTieringEnabled Enables data tiering. 
      */
     override fun dataTieringEnabled(dataTieringEnabled: IResolvable) {
-      cdkBuilder.dataTieringEnabled(dataTieringEnabled.let(IResolvable::unwrap))
+      cdkBuilder.dataTieringEnabled(dataTieringEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2094,7 +2094,7 @@ public open class CfnReplicationGroup(
      * @param logDeliveryConfigurations Specifies the destination, format and type of the logs. 
      */
     override fun logDeliveryConfigurations(logDeliveryConfigurations: IResolvable) {
-      cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2141,7 +2141,7 @@ public open class CfnReplicationGroup(
      * tolerance. 
      */
     override fun multiAzEnabled(multiAzEnabled: IResolvable) {
-      cdkBuilder.multiAzEnabled(multiAzEnabled.let(IResolvable::unwrap))
+      cdkBuilder.multiAzEnabled(multiAzEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2176,7 +2176,7 @@ public open class CfnReplicationGroup(
      * (ElastiCache) Redis cluster node group. 
      */
     override fun nodeGroupConfiguration(nodeGroupConfiguration: IResolvable) {
-      cdkBuilder.nodeGroupConfiguration(nodeGroupConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.nodeGroupConfiguration(nodeGroupConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2547,7 +2547,7 @@ public open class CfnReplicationGroup(
      * @param tags A list of tags to be added to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -2619,7 +2619,7 @@ public open class CfnReplicationGroup(
      * . 
      */
     override fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable) {
-      cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2890,7 +2890,7 @@ public open class CfnReplicationGroup(
        * destination.
        */
       override fun cloudWatchLogsDetails(cloudWatchLogsDetails: IResolvable) {
-        cdkBuilder.cloudWatchLogsDetails(cloudWatchLogsDetails.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchLogsDetails(cloudWatchLogsDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2900,7 +2900,7 @@ public open class CfnReplicationGroup(
        */
       override
           fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty) {
-        cdkBuilder.cloudWatchLogsDetails(cloudWatchLogsDetails.let(CloudWatchLogsDestinationDetailsProperty::unwrap))
+        cdkBuilder.cloudWatchLogsDetails(cloudWatchLogsDetails.let(CloudWatchLogsDestinationDetailsProperty.Companion::unwrap))
       }
 
       /**
@@ -2922,7 +2922,7 @@ public open class CfnReplicationGroup(
        * the destination.
        */
       override fun kinesisFirehoseDetails(kinesisFirehoseDetails: IResolvable) {
-        cdkBuilder.kinesisFirehoseDetails(kinesisFirehoseDetails.let(IResolvable::unwrap))
+        cdkBuilder.kinesisFirehoseDetails(kinesisFirehoseDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2933,7 +2933,7 @@ public open class CfnReplicationGroup(
        */
       override
           fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty) {
-        cdkBuilder.kinesisFirehoseDetails(kinesisFirehoseDetails.let(KinesisFirehoseDestinationDetailsProperty::unwrap))
+        cdkBuilder.kinesisFirehoseDetails(kinesisFirehoseDetails.let(KinesisFirehoseDestinationDetailsProperty.Companion::unwrap))
       }
 
       /**
@@ -3199,7 +3199,7 @@ public open class CfnReplicationGroup(
        * Kinesis Data Firehose destination. 
        */
       override fun destinationDetails(destinationDetails: IResolvable) {
-        cdkBuilder.destinationDetails(destinationDetails.let(IResolvable::unwrap))
+        cdkBuilder.destinationDetails(destinationDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3207,7 +3207,7 @@ public open class CfnReplicationGroup(
        * Kinesis Data Firehose destination. 
        */
       override fun destinationDetails(destinationDetails: DestinationDetailsProperty) {
-        cdkBuilder.destinationDetails(destinationDetails.let(DestinationDetailsProperty::unwrap))
+        cdkBuilder.destinationDetails(destinationDetails.let(DestinationDetailsProperty.Companion::unwrap))
       }
 
       /**

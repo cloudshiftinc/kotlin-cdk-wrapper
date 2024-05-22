@@ -43,8 +43,8 @@ public open class CfnVPCDHCPOptionsAssociation(
     id: String,
     props: CfnVPCDHCPOptionsAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnVPCDHCPOptionsAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVPCDHCPOptionsAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnVPCDHCPOptionsAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVPCDHCPOptionsAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -72,7 +72,7 @@ public open class CfnVPCDHCPOptionsAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

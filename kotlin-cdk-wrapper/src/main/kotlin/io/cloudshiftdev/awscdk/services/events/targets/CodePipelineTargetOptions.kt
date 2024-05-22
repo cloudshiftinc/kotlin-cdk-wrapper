@@ -97,7 +97,7 @@ public interface CodePipelineTargetOptions : TargetBaseProps {
      * dead letter queue.
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -105,7 +105,7 @@ public interface CodePipelineTargetOptions : TargetBaseProps {
      * given rule is triggered.
      */
     override fun eventRole(eventRole: IRole) {
-      cdkBuilder.eventRole(eventRole.let(IRole::unwrap))
+      cdkBuilder.eventRole(eventRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -115,7 +115,7 @@ public interface CodePipelineTargetOptions : TargetBaseProps {
      * Maximum value of 86400.
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**

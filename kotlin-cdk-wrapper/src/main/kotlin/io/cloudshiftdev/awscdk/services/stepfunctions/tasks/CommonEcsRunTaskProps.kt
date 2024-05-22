@@ -132,7 +132,7 @@ public interface CommonEcsRunTaskProps {
      * @param cluster The topic to run the task on. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -141,7 +141,7 @@ public interface CommonEcsRunTaskProps {
      * values you want to override.
      */
     override fun containerOverrides(containerOverrides: List<ContainerOverride>) {
-      cdkBuilder.containerOverrides(containerOverrides.map(ContainerOverride::unwrap))
+      cdkBuilder.containerOverrides(containerOverrides.map(ContainerOverride.Companion::unwrap))
     }
 
     /**
@@ -158,7 +158,7 @@ public interface CommonEcsRunTaskProps {
      * The valid value for Lambda is FIRE_AND_FORGET, SYNC and WAIT_FOR_TASK_TOKEN.
      */
     override fun integrationPattern(integrationPattern: ServiceIntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(ServiceIntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(ServiceIntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -169,7 +169,7 @@ public interface CommonEcsRunTaskProps {
      * consider using CustomState
      */
     override fun taskDefinition(taskDefinition: TaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(TaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(TaskDefinition.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.CommonEcsRunTaskProps =

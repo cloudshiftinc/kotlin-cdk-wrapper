@@ -44,8 +44,8 @@ public open class EndpointGroup(
     id: String,
     props: EndpointGroupProps,
   ) :
-      this(software.amazon.awscdk.services.globalaccelerator.EndpointGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EndpointGroupProps::unwrap))
+      this(software.amazon.awscdk.services.globalaccelerator.EndpointGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EndpointGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -61,7 +61,7 @@ public open class EndpointGroup(
    * @param endpoint 
    */
   public open fun addEndpoint(endpoint: IEndpoint) {
-    unwrap(this).addEndpoint(endpoint.let(IEndpoint::unwrap))
+    unwrap(this).addEndpoint(endpoint.let(IEndpoint.Companion::unwrap))
   }
 
   /**
@@ -81,7 +81,7 @@ public open class EndpointGroup(
    * @param vpc 
    */
   public open fun connectionsPeer(id: String, vpc: IVpc): IPeer = unwrap(this).connectionsPeer(id,
-      vpc.let(IVpc::unwrap)).let(IPeer::wrap)
+      vpc.let(IVpc.Companion::unwrap)).let(IPeer::wrap)
 
   /**
    * EndpointGroup ARN.
@@ -255,7 +255,7 @@ public open class EndpointGroup(
      * @param endpoints Initial list of endpoints for this group. 
      */
     override fun endpoints(endpoints: List<IEndpoint>) {
-      cdkBuilder.endpoints(endpoints.map(IEndpoint::unwrap))
+      cdkBuilder.endpoints(endpoints.map(IEndpoint.Companion::unwrap))
     }
 
     /**
@@ -277,7 +277,7 @@ public open class EndpointGroup(
      * @param healthCheckInterval The time between health checks for each endpoint. 
      */
     override fun healthCheckInterval(healthCheckInterval: Duration) {
-      cdkBuilder.healthCheckInterval(healthCheckInterval.let(Duration::unwrap))
+      cdkBuilder.healthCheckInterval(healthCheckInterval.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -310,7 +310,7 @@ public open class EndpointGroup(
      * @param healthCheckProtocol The protocol used to perform health checks. 
      */
     override fun healthCheckProtocol(healthCheckProtocol: HealthCheckProtocol) {
-      cdkBuilder.healthCheckProtocol(healthCheckProtocol.let(HealthCheckProtocol::unwrap))
+      cdkBuilder.healthCheckProtocol(healthCheckProtocol.let(HealthCheckProtocol.Companion::unwrap))
     }
 
     /**
@@ -332,7 +332,7 @@ public open class EndpointGroup(
      * @param listener The Amazon Resource Name (ARN) of the listener. 
      */
     override fun listener(listener: IListener) {
-      cdkBuilder.listener(listener.let(IListener::unwrap))
+      cdkBuilder.listener(listener.let(IListener.Companion::unwrap))
     }
 
     /**
@@ -346,7 +346,7 @@ public open class EndpointGroup(
      * @param portOverrides Override the destination ports used to route traffic to an endpoint. 
      */
     override fun portOverrides(portOverrides: List<PortOverride>) {
-      cdkBuilder.portOverrides(portOverrides.map(PortOverride::unwrap))
+      cdkBuilder.portOverrides(portOverrides.map(PortOverride.Companion::unwrap))
     }
 
     /**
@@ -399,7 +399,7 @@ public open class EndpointGroup(
       id: String,
       endpointGroupArn: String,
     ): IEndpointGroup =
-        software.amazon.awscdk.services.globalaccelerator.EndpointGroup.fromEndpointGroupArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.globalaccelerator.EndpointGroup.fromEndpointGroupArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, endpointGroupArn).let(IEndpointGroup::wrap)
 
     public operator fun invoke(

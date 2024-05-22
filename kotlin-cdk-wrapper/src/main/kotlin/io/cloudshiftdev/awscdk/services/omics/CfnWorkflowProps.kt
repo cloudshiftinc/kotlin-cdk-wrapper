@@ -90,7 +90,7 @@ public interface CfnWorkflowProps {
   public fun parameterTemplate(): Any? = unwrap(this).getParameterTemplate()
 
   /**
-   * A storage capacity for the workflow in gibibytes.
+   * The default storage capacity for the workflow runs, in gibibytes.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-storagecapacity)
    */
@@ -149,7 +149,7 @@ public interface CfnWorkflowProps {
     public fun parameterTemplate(parameterTemplate: Map<String, Any>)
 
     /**
-     * @param storageCapacity A storage capacity for the workflow in gibibytes.
+     * @param storageCapacity The default storage capacity for the workflow runs, in gibibytes.
      */
     public fun storageCapacity(storageCapacity: Number)
 
@@ -209,7 +209,7 @@ public interface CfnWorkflowProps {
      * @param parameterTemplate The workflow's parameter template.
      */
     override fun parameterTemplate(parameterTemplate: IResolvable) {
-      cdkBuilder.parameterTemplate(parameterTemplate.let(IResolvable::unwrap))
+      cdkBuilder.parameterTemplate(parameterTemplate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -220,7 +220,7 @@ public interface CfnWorkflowProps {
     }
 
     /**
-     * @param storageCapacity A storage capacity for the workflow in gibibytes.
+     * @param storageCapacity The default storage capacity for the workflow runs, in gibibytes.
      */
     override fun storageCapacity(storageCapacity: Number) {
       cdkBuilder.storageCapacity(storageCapacity)
@@ -287,7 +287,7 @@ public interface CfnWorkflowProps {
     override fun parameterTemplate(): Any? = unwrap(this).getParameterTemplate()
 
     /**
-     * A storage capacity for the workflow in gibibytes.
+     * The default storage capacity for the workflow runs, in gibibytes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-storagecapacity)
      */

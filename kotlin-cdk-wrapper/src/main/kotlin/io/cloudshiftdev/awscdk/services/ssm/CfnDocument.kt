@@ -50,8 +50,8 @@ public open class CfnDocument(
     id: String,
     props: CfnDocumentProps,
   ) :
-      this(software.amazon.awscdk.services.ssm.CfnDocument(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDocumentProps::unwrap))
+      this(software.amazon.awscdk.services.ssm.CfnDocument(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDocumentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -70,7 +70,7 @@ public open class CfnDocument(
    * A list of key-value pairs that describe attachments to a version of a document.
    */
   public open fun attachments(`value`: IResolvable) {
-    unwrap(this).setAttachments(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAttachments(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -127,7 +127,7 @@ public open class CfnDocument(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -151,7 +151,7 @@ public open class CfnDocument(
    * A list of SSM documents required by a document.
    */
   public open fun requires(`value`: IResolvable) {
-    unwrap(this).setRequires(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRequires(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -181,7 +181,7 @@ public open class CfnDocument(
    * AWS CloudFormation resource tags to apply to the document.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -447,7 +447,7 @@ public open class CfnDocument(
      * document. 
      */
     override fun attachments(attachments: IResolvable) {
-      cdkBuilder.attachments(attachments.let(IResolvable::unwrap))
+      cdkBuilder.attachments(attachments.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -550,7 +550,7 @@ public open class CfnDocument(
      * @param requires A list of SSM documents required by a document. 
      */
     override fun requires(requires: IResolvable) {
-      cdkBuilder.requires(requires.let(IResolvable::unwrap))
+      cdkBuilder.requires(requires.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -596,7 +596,7 @@ public open class CfnDocument(
      * @param tags AWS CloudFormation resource tags to apply to the document. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

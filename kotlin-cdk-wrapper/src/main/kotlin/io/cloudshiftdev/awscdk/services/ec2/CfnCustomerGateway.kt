@@ -31,7 +31,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .type("type")
  * // the properties below are optional
  * .bgpAsn(123)
- * .bgpAsnExtended(123)
  * .certificateArn("certificateArn")
  * .deviceName("deviceName")
  * .tags(List.of(CfnTag.builder()
@@ -51,8 +50,8 @@ public open class CfnCustomerGateway(
     id: String,
     props: CfnCustomerGatewayProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnCustomerGateway(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCustomerGatewayProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnCustomerGateway(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCustomerGatewayProps.Companion::unwrap))
   )
 
   public constructor(
@@ -77,18 +76,6 @@ public open class CfnCustomerGateway(
    */
   public open fun bgpAsn(`value`: Number) {
     unwrap(this).setBgpAsn(`value`)
-  }
-
-  /**
-   *
-   */
-  public open fun bgpAsnExtended(): Number? = unwrap(this).getBgpAsnExtended()
-
-  /**
-   *
-   */
-  public open fun bgpAsnExtended(`value`: Number) {
-    unwrap(this).setBgpAsnExtended(`value`)
   }
 
   /**
@@ -121,7 +108,7 @@ public open class CfnCustomerGateway(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -151,7 +138,7 @@ public open class CfnCustomerGateway(
    * One or more tags for the customer gateway.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -187,12 +174,6 @@ public open class CfnCustomerGateway(
      * @param bgpAsn For devices that support BGP, the customer gateway's BGP ASN. 
      */
     public fun bgpAsn(bgpAsn: Number)
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-bgpasnextended)
-     * @param bgpAsnExtended 
-     */
-    public fun bgpAsnExtended(bgpAsnExtended: Number)
 
     /**
      * The Amazon Resource Name (ARN) for the customer gateway certificate.
@@ -267,14 +248,6 @@ public open class CfnCustomerGateway(
     }
 
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-bgpasnextended)
-     * @param bgpAsnExtended 
-     */
-    override fun bgpAsnExtended(bgpAsnExtended: Number) {
-      cdkBuilder.bgpAsnExtended(bgpAsnExtended)
-    }
-
-    /**
      * The Amazon Resource Name (ARN) for the customer gateway certificate.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-certificatearn)
@@ -313,7 +286,7 @@ public open class CfnCustomerGateway(
      * @param tags One or more tags for the customer gateway. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

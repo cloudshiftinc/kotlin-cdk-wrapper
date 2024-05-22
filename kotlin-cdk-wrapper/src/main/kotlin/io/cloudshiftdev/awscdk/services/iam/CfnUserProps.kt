@@ -446,7 +446,7 @@ public interface CfnUserProps {
      * *IAM User Guide* .
      */
     override fun loginProfile(loginProfile: IResolvable) {
-      cdkBuilder.loginProfile(loginProfile.let(IResolvable::unwrap))
+      cdkBuilder.loginProfile(loginProfile.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -464,7 +464,7 @@ public interface CfnUserProps {
      * *IAM User Guide* .
      */
     override fun loginProfile(loginProfile: CfnUser.LoginProfileProperty) {
-      cdkBuilder.loginProfile(loginProfile.let(CfnUser.LoginProfileProperty::unwrap))
+      cdkBuilder.loginProfile(loginProfile.let(CfnUser.LoginProfileProperty.Companion::unwrap))
     }
 
     /**
@@ -562,7 +562,7 @@ public interface CfnUserProps {
      * *IAM User Guide* .
      */
     override fun policies(policies: IResolvable) {
-      cdkBuilder.policies(policies.let(IResolvable::unwrap))
+      cdkBuilder.policies(policies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -616,7 +616,7 @@ public interface CfnUserProps {
      * the entire request fails and the resource is not created.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

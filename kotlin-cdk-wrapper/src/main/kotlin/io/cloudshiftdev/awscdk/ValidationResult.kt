@@ -34,7 +34,7 @@ public open class ValidationResult(
 
   public constructor(errorMessage: String, results: ValidationResults) :
       this(software.amazon.awscdk.ValidationResult(errorMessage,
-      results.let(ValidationResults::unwrap))
+      results.let(ValidationResults.Companion::unwrap))
   )
 
   /**

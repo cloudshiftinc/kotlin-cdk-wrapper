@@ -140,7 +140,7 @@ public interface CfnApplicationProps {
      * @param tags A set of key/value pairs that you can use to manage the web application resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

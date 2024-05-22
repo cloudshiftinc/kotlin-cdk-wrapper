@@ -94,8 +94,8 @@ public open class CfnMethod(
     id: String,
     props: CfnMethodProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.CfnMethod(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMethodProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.CfnMethod(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMethodProps.Companion::unwrap))
   )
 
   public constructor(
@@ -121,7 +121,7 @@ public open class CfnMethod(
    * A boolean flag specifying whether a valid ApiKey is required to invoke this method.
    */
   public open fun apiKeyRequired(`value`: IResolvable) {
-    unwrap(this).setApiKeyRequired(`value`.let(IResolvable::unwrap))
+    unwrap(this).setApiKeyRequired(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -185,7 +185,7 @@ public open class CfnMethod(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -197,14 +197,14 @@ public open class CfnMethod(
    * Represents an `HTTP` , `HTTP_PROXY` , `AWS` , `AWS_PROXY` , or Mock integration.
    */
   public open fun integration(`value`: IResolvable) {
-    unwrap(this).setIntegration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIntegration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Represents an `HTTP` , `HTTP_PROXY` , `AWS` , `AWS_PROXY` , or Mock integration.
    */
   public open fun integration(`value`: IntegrationProperty) {
-    unwrap(this).setIntegration(`value`.let(IntegrationProperty::unwrap))
+    unwrap(this).setIntegration(`value`.let(IntegrationProperty.Companion::unwrap))
   }
 
   /**
@@ -224,7 +224,7 @@ public open class CfnMethod(
    * Gets a method response associated with a given HTTP status code.
    */
   public open fun methodResponses(`value`: IResolvable) {
-    unwrap(this).setMethodResponses(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMethodResponses(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -262,7 +262,7 @@ public open class CfnMethod(
    * of the request payloads of given content types (as the mapping key).
    */
   public open fun requestModels(`value`: IResolvable) {
-    unwrap(this).setRequestModels(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRequestModels(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -284,7 +284,7 @@ public open class CfnMethod(
    * API Gateway.
    */
   public open fun requestParameters(`value`: IResolvable) {
-    unwrap(this).setRequestParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRequestParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -588,7 +588,7 @@ public open class CfnMethod(
      * this method. 
      */
     override fun apiKeyRequired(apiKeyRequired: IResolvable) {
-      cdkBuilder.apiKeyRequired(apiKeyRequired.let(IResolvable::unwrap))
+      cdkBuilder.apiKeyRequired(apiKeyRequired.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -673,7 +673,7 @@ public open class CfnMethod(
      * integration. 
      */
     override fun integration(integration: IResolvable) {
-      cdkBuilder.integration(integration.let(IResolvable::unwrap))
+      cdkBuilder.integration(integration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -684,7 +684,7 @@ public open class CfnMethod(
      * integration. 
      */
     override fun integration(integration: IntegrationProperty) {
-      cdkBuilder.integration(integration.let(IntegrationProperty::unwrap))
+      cdkBuilder.integration(integration.let(IntegrationProperty.Companion::unwrap))
     }
 
     /**
@@ -706,7 +706,7 @@ public open class CfnMethod(
      * @param methodResponses Gets a method response associated with a given HTTP status code. 
      */
     override fun methodResponses(methodResponses: IResolvable) {
-      cdkBuilder.methodResponses(methodResponses.let(IResolvable::unwrap))
+      cdkBuilder.methodResponses(methodResponses.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -750,7 +750,7 @@ public open class CfnMethod(
      * (as the mapped value) of the request payloads of given content types (as the mapping key). 
      */
     override fun requestModels(requestModels: IResolvable) {
-      cdkBuilder.requestModels(requestModels.let(IResolvable::unwrap))
+      cdkBuilder.requestModels(requestModels.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -781,7 +781,7 @@ public open class CfnMethod(
      * parameters that can be accepted by API Gateway. 
      */
     override fun requestParameters(requestParameters: IResolvable) {
-      cdkBuilder.requestParameters(requestParameters.let(IResolvable::unwrap))
+      cdkBuilder.requestParameters(requestParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1341,7 +1341,7 @@ public open class CfnMethod(
        * @param integrationResponses Specifies the integration's responses.
        */
       override fun integrationResponses(integrationResponses: IResolvable) {
-        cdkBuilder.integrationResponses(integrationResponses.let(IResolvable::unwrap))
+        cdkBuilder.integrationResponses(integrationResponses.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1388,7 +1388,7 @@ public open class CfnMethod(
        * or `header` and `name` must be a valid and unique method request parameter name.
        */
       override fun requestParameters(requestParameters: IResolvable) {
-        cdkBuilder.requestParameters(requestParameters.let(IResolvable::unwrap))
+        cdkBuilder.requestParameters(requestParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1410,7 +1410,7 @@ public open class CfnMethod(
        * The content type value is the key in this map, and the template (as a String) is the value.
        */
       override fun requestTemplates(requestTemplates: IResolvable) {
-        cdkBuilder.requestTemplates(requestTemplates.let(IResolvable::unwrap))
+        cdkBuilder.requestTemplates(requestTemplates.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1859,7 +1859,7 @@ public open class CfnMethod(
        * header name and `JSON-expression` is a valid JSON expression without the `$` prefix.
        */
       override fun responseParameters(responseParameters: IResolvable) {
-        cdkBuilder.responseParameters(responseParameters.let(IResolvable::unwrap))
+        cdkBuilder.responseParameters(responseParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1884,7 +1884,7 @@ public open class CfnMethod(
        * template as the value.
        */
       override fun responseTemplates(responseTemplates: IResolvable) {
-        cdkBuilder.responseTemplates(responseTemplates.let(IResolvable::unwrap))
+        cdkBuilder.responseTemplates(responseTemplates.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2135,7 +2135,7 @@ public open class CfnMethod(
        * Model name as the value.
        */
       override fun responseModels(responseModels: IResolvable) {
-        cdkBuilder.responseModels(responseModels.let(IResolvable::unwrap))
+        cdkBuilder.responseModels(responseModels.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2162,7 +2162,7 @@ public open class CfnMethod(
        * JSON expression without the `$` prefix.)
        */
       override fun responseParameters(responseParameters: IResolvable) {
-        cdkBuilder.responseParameters(responseParameters.let(IResolvable::unwrap))
+        cdkBuilder.responseParameters(responseParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**

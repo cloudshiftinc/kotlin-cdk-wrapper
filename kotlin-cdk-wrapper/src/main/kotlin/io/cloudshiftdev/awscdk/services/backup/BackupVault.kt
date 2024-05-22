@@ -36,7 +36,7 @@ public open class BackupVault(
   cdkObject: software.amazon.awscdk.services.backup.BackupVault,
 ) : Resource(cdkObject), IBackupVault {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.backup.BackupVault(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.backup.BackupVault(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -45,8 +45,8 @@ public open class BackupVault(
     id: String,
     props: BackupVaultProps,
   ) :
-      this(software.amazon.awscdk.services.backup.BackupVault(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(BackupVaultProps::unwrap))
+      this(software.amazon.awscdk.services.backup.BackupVault(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(BackupVaultProps.Companion::unwrap))
   )
 
   public constructor(
@@ -62,7 +62,7 @@ public open class BackupVault(
    * @param statement 
    */
   public open fun addToAccessPolicy(statement: PolicyStatement) {
-    unwrap(this).addToAccessPolicy(statement.let(PolicyStatement::unwrap))
+    unwrap(this).addToAccessPolicy(statement.let(PolicyStatement.Companion::unwrap))
   }
 
   /**
@@ -100,8 +100,8 @@ public open class BackupVault(
    * @param actions The actions to grant. 
    */
   public override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
-      as String}.toTypedArray()).let(Grant::wrap)
+      unwrap(this).grant(grantee.let(IGrantable.Companion::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.backup.BackupVault].
@@ -244,7 +244,7 @@ public open class BackupVault(
      * backup vault. 
      */
     override fun accessPolicy(accessPolicy: PolicyDocument) {
-      cdkBuilder.accessPolicy(accessPolicy.let(PolicyDocument::unwrap))
+      cdkBuilder.accessPolicy(accessPolicy.let(PolicyDocument.Companion::unwrap))
     }
 
     /**
@@ -296,7 +296,7 @@ public open class BackupVault(
      * @param encryptionKey The server-side encryption key to use to protect your backups. 
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -308,7 +308,7 @@ public open class BackupVault(
      * @param lockConfiguration Configuration for AWS Backup Vault Lock. 
      */
     override fun lockConfiguration(lockConfiguration: LockConfiguration) {
-      cdkBuilder.lockConfiguration(lockConfiguration.let(LockConfiguration::unwrap))
+      cdkBuilder.lockConfiguration(lockConfiguration.let(LockConfiguration.Companion::unwrap))
     }
 
     /**
@@ -333,7 +333,7 @@ public open class BackupVault(
      * @param notificationEvents The vault events to send. 
      */
     override fun notificationEvents(notificationEvents: List<BackupVaultEvents>) {
-      cdkBuilder.notificationEvents(notificationEvents.map(BackupVaultEvents::unwrap))
+      cdkBuilder.notificationEvents(notificationEvents.map(BackupVaultEvents.Companion::unwrap))
     }
 
     /**
@@ -356,7 +356,7 @@ public open class BackupVault(
      * @param notificationTopic A SNS topic to send vault events to. 
      */
     override fun notificationTopic(notificationTopic: ITopic) {
-      cdkBuilder.notificationTopic(notificationTopic.let(ITopic::unwrap))
+      cdkBuilder.notificationTopic(notificationTopic.let(ITopic.Companion::unwrap))
     }
 
     /**
@@ -370,7 +370,7 @@ public open class BackupVault(
      * @param removalPolicy The removal policy to apply to the vault. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.backup.BackupVault = cdkBuilder.build()
@@ -382,7 +382,7 @@ public open class BackupVault(
       id: String,
       backupVaultArn: String,
     ): IBackupVault =
-        software.amazon.awscdk.services.backup.BackupVault.fromBackupVaultArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.backup.BackupVault.fromBackupVaultArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, backupVaultArn).let(IBackupVault::wrap)
 
     public fun fromBackupVaultName(
@@ -390,7 +390,7 @@ public open class BackupVault(
       id: String,
       backupVaultName: String,
     ): IBackupVault =
-        software.amazon.awscdk.services.backup.BackupVault.fromBackupVaultName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.backup.BackupVault.fromBackupVaultName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, backupVaultName).let(IBackupVault::wrap)
 
     public operator fun invoke(

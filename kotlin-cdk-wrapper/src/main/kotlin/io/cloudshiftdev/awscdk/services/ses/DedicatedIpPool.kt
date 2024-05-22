@@ -25,7 +25,7 @@ public open class DedicatedIpPool(
   cdkObject: software.amazon.awscdk.services.ses.DedicatedIpPool,
 ) : Resource(cdkObject), IDedicatedIpPool {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ses.DedicatedIpPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ses.DedicatedIpPool(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -34,8 +34,8 @@ public open class DedicatedIpPool(
     id: String,
     props: DedicatedIpPoolProps,
   ) :
-      this(software.amazon.awscdk.services.ses.DedicatedIpPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DedicatedIpPoolProps::unwrap))
+      this(software.amazon.awscdk.services.ses.DedicatedIpPool(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DedicatedIpPoolProps.Companion::unwrap))
   )
 
   public constructor(
@@ -116,7 +116,7 @@ public open class DedicatedIpPool(
      * @param scalingMode The type of scailing mode to use for this IP pool. 
      */
     override fun scalingMode(scalingMode: ScalingMode) {
-      cdkBuilder.scalingMode(scalingMode.let(ScalingMode::unwrap))
+      cdkBuilder.scalingMode(scalingMode.let(ScalingMode.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ses.DedicatedIpPool = cdkBuilder.build()
@@ -128,7 +128,7 @@ public open class DedicatedIpPool(
       id: String,
       dedicatedIpPoolName: String,
     ): IDedicatedIpPool =
-        software.amazon.awscdk.services.ses.DedicatedIpPool.fromDedicatedIpPoolName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ses.DedicatedIpPool.fromDedicatedIpPoolName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, dedicatedIpPoolName).let(IDedicatedIpPool::wrap)
 
     public operator fun invoke(

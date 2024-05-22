@@ -63,7 +63,7 @@ public open class Size(
    * @param opts the conversion options.
    */
   public open fun toBytes(opts: SizeConversionOptions): Number =
-      unwrap(this).toBytes(opts.let(SizeConversionOptions::unwrap))
+      unwrap(this).toBytes(opts.let(SizeConversionOptions.Companion::unwrap))
 
   /**
    * Return this storage as a total number of bytes.
@@ -91,7 +91,7 @@ public open class Size(
    * @param opts the conversion options.
    */
   public open fun toGibibytes(opts: SizeConversionOptions): Number =
-      unwrap(this).toGibibytes(opts.let(SizeConversionOptions::unwrap))
+      unwrap(this).toGibibytes(opts.let(SizeConversionOptions.Companion::unwrap))
 
   /**
    * Return this storage as a total number of gibibytes.
@@ -119,7 +119,7 @@ public open class Size(
    * @param opts the conversion options.
    */
   public open fun toKibibytes(opts: SizeConversionOptions): Number =
-      unwrap(this).toKibibytes(opts.let(SizeConversionOptions::unwrap))
+      unwrap(this).toKibibytes(opts.let(SizeConversionOptions.Companion::unwrap))
 
   /**
    * Return this storage as a total number of kibibytes.
@@ -147,7 +147,7 @@ public open class Size(
    * @param opts the conversion options.
    */
   public open fun toMebibytes(opts: SizeConversionOptions): Number =
-      unwrap(this).toMebibytes(opts.let(SizeConversionOptions::unwrap))
+      unwrap(this).toMebibytes(opts.let(SizeConversionOptions.Companion::unwrap))
 
   /**
    * Return this storage as a total number of mebibytes.
@@ -175,7 +175,7 @@ public open class Size(
    * @param opts the conversion options.
    */
   public open fun toPebibytes(opts: SizeConversionOptions): Number =
-      unwrap(this).toPebibytes(opts.let(SizeConversionOptions::unwrap))
+      unwrap(this).toPebibytes(opts.let(SizeConversionOptions.Companion::unwrap))
 
   /**
    * Return this storage as a total number of pebibytes.
@@ -203,7 +203,7 @@ public open class Size(
    * @param opts the conversion options.
    */
   public open fun toTebibytes(opts: SizeConversionOptions): Number =
-      unwrap(this).toTebibytes(opts.let(SizeConversionOptions::unwrap))
+      unwrap(this).toTebibytes(opts.let(SizeConversionOptions.Companion::unwrap))
 
   /**
    * Return this storage as a total number of tebibytes.

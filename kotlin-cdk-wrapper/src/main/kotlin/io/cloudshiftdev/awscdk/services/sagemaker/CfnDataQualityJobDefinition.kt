@@ -136,8 +136,8 @@ public open class CfnDataQualityJobDefinition(
     id: String,
     props: CfnDataQualityJobDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDataQualityJobDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnDataQualityJobDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDataQualityJobDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -166,14 +166,14 @@ public open class CfnDataQualityJobDefinition(
    * Specifies the container that runs the monitoring job.
    */
   public open fun dataQualityAppSpecification(`value`: IResolvable) {
-    unwrap(this).setDataQualityAppSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataQualityAppSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the container that runs the monitoring job.
    */
   public open fun dataQualityAppSpecification(`value`: DataQualityAppSpecificationProperty) {
-    unwrap(this).setDataQualityAppSpecification(`value`.let(DataQualityAppSpecificationProperty::unwrap))
+    unwrap(this).setDataQualityAppSpecification(`value`.let(DataQualityAppSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -194,14 +194,14 @@ public open class CfnDataQualityJobDefinition(
    * Configures the constraints and baselines for the monitoring job.
    */
   public open fun dataQualityBaselineConfig(`value`: IResolvable) {
-    unwrap(this).setDataQualityBaselineConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataQualityBaselineConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configures the constraints and baselines for the monitoring job.
    */
   public open fun dataQualityBaselineConfig(`value`: DataQualityBaselineConfigProperty) {
-    unwrap(this).setDataQualityBaselineConfig(`value`.let(DataQualityBaselineConfigProperty::unwrap))
+    unwrap(this).setDataQualityBaselineConfig(`value`.let(DataQualityBaselineConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -222,14 +222,14 @@ public open class CfnDataQualityJobDefinition(
    * A list of inputs for the monitoring job.
    */
   public open fun dataQualityJobInput(`value`: IResolvable) {
-    unwrap(this).setDataQualityJobInput(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataQualityJobInput(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A list of inputs for the monitoring job.
    */
   public open fun dataQualityJobInput(`value`: DataQualityJobInputProperty) {
-    unwrap(this).setDataQualityJobInput(`value`.let(DataQualityJobInputProperty::unwrap))
+    unwrap(this).setDataQualityJobInput(`value`.let(DataQualityJobInputProperty.Companion::unwrap))
   }
 
   /**
@@ -249,14 +249,14 @@ public open class CfnDataQualityJobDefinition(
    * The output configuration for monitoring jobs.
    */
   public open fun dataQualityJobOutputConfig(`value`: IResolvable) {
-    unwrap(this).setDataQualityJobOutputConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataQualityJobOutputConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The output configuration for monitoring jobs.
    */
   public open fun dataQualityJobOutputConfig(`value`: MonitoringOutputConfigProperty) {
-    unwrap(this).setDataQualityJobOutputConfig(`value`.let(MonitoringOutputConfigProperty::unwrap))
+    unwrap(this).setDataQualityJobOutputConfig(`value`.let(MonitoringOutputConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -286,7 +286,7 @@ public open class CfnDataQualityJobDefinition(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -310,14 +310,14 @@ public open class CfnDataQualityJobDefinition(
    * Identifies the resources to deploy for a monitoring job.
    */
   public open fun jobResources(`value`: IResolvable) {
-    unwrap(this).setJobResources(`value`.let(IResolvable::unwrap))
+    unwrap(this).setJobResources(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Identifies the resources to deploy for a monitoring job.
    */
   public open fun jobResources(`value`: MonitoringResourcesProperty) {
-    unwrap(this).setJobResources(`value`.let(MonitoringResourcesProperty::unwrap))
+    unwrap(this).setJobResources(`value`.let(MonitoringResourcesProperty.Companion::unwrap))
   }
 
   /**
@@ -337,14 +337,14 @@ public open class CfnDataQualityJobDefinition(
    * Specifies networking configuration for the monitoring job.
    */
   public open fun networkConfig(`value`: IResolvable) {
-    unwrap(this).setNetworkConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNetworkConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies networking configuration for the monitoring job.
    */
   public open fun networkConfig(`value`: NetworkConfigProperty) {
-    unwrap(this).setNetworkConfig(`value`.let(NetworkConfigProperty::unwrap))
+    unwrap(this).setNetworkConfig(`value`.let(NetworkConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -378,14 +378,14 @@ public open class CfnDataQualityJobDefinition(
    * A time limit for how long the monitoring job is allowed to run before stopping.
    */
   public open fun stoppingCondition(`value`: IResolvable) {
-    unwrap(this).setStoppingCondition(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStoppingCondition(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A time limit for how long the monitoring job is allowed to run before stopping.
    */
   public open fun stoppingCondition(`value`: StoppingConditionProperty) {
-    unwrap(this).setStoppingCondition(`value`.let(StoppingConditionProperty::unwrap))
+    unwrap(this).setStoppingCondition(`value`.let(StoppingConditionProperty.Companion::unwrap))
   }
 
   /**
@@ -411,7 +411,7 @@ public open class CfnDataQualityJobDefinition(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -692,7 +692,7 @@ public open class CfnDataQualityJobDefinition(
      * @param dataQualityAppSpecification Specifies the container that runs the monitoring job. 
      */
     override fun dataQualityAppSpecification(dataQualityAppSpecification: IResolvable) {
-      cdkBuilder.dataQualityAppSpecification(dataQualityAppSpecification.let(IResolvable::unwrap))
+      cdkBuilder.dataQualityAppSpecification(dataQualityAppSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -703,7 +703,7 @@ public open class CfnDataQualityJobDefinition(
      */
     override
         fun dataQualityAppSpecification(dataQualityAppSpecification: DataQualityAppSpecificationProperty) {
-      cdkBuilder.dataQualityAppSpecification(dataQualityAppSpecification.let(DataQualityAppSpecificationProperty::unwrap))
+      cdkBuilder.dataQualityAppSpecification(dataQualityAppSpecification.let(DataQualityAppSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -727,7 +727,7 @@ public open class CfnDataQualityJobDefinition(
      * job. 
      */
     override fun dataQualityBaselineConfig(dataQualityBaselineConfig: IResolvable) {
-      cdkBuilder.dataQualityBaselineConfig(dataQualityBaselineConfig.let(IResolvable::unwrap))
+      cdkBuilder.dataQualityBaselineConfig(dataQualityBaselineConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -739,7 +739,7 @@ public open class CfnDataQualityJobDefinition(
      */
     override
         fun dataQualityBaselineConfig(dataQualityBaselineConfig: DataQualityBaselineConfigProperty) {
-      cdkBuilder.dataQualityBaselineConfig(dataQualityBaselineConfig.let(DataQualityBaselineConfigProperty::unwrap))
+      cdkBuilder.dataQualityBaselineConfig(dataQualityBaselineConfig.let(DataQualityBaselineConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -765,7 +765,7 @@ public open class CfnDataQualityJobDefinition(
      * @param dataQualityJobInput A list of inputs for the monitoring job. 
      */
     override fun dataQualityJobInput(dataQualityJobInput: IResolvable) {
-      cdkBuilder.dataQualityJobInput(dataQualityJobInput.let(IResolvable::unwrap))
+      cdkBuilder.dataQualityJobInput(dataQualityJobInput.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -777,7 +777,7 @@ public open class CfnDataQualityJobDefinition(
      * @param dataQualityJobInput A list of inputs for the monitoring job. 
      */
     override fun dataQualityJobInput(dataQualityJobInput: DataQualityJobInputProperty) {
-      cdkBuilder.dataQualityJobInput(dataQualityJobInput.let(DataQualityJobInputProperty::unwrap))
+      cdkBuilder.dataQualityJobInput(dataQualityJobInput.let(DataQualityJobInputProperty.Companion::unwrap))
     }
 
     /**
@@ -801,7 +801,7 @@ public open class CfnDataQualityJobDefinition(
      * @param dataQualityJobOutputConfig The output configuration for monitoring jobs. 
      */
     override fun dataQualityJobOutputConfig(dataQualityJobOutputConfig: IResolvable) {
-      cdkBuilder.dataQualityJobOutputConfig(dataQualityJobOutputConfig.let(IResolvable::unwrap))
+      cdkBuilder.dataQualityJobOutputConfig(dataQualityJobOutputConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -812,7 +812,7 @@ public open class CfnDataQualityJobDefinition(
      */
     override
         fun dataQualityJobOutputConfig(dataQualityJobOutputConfig: MonitoringOutputConfigProperty) {
-      cdkBuilder.dataQualityJobOutputConfig(dataQualityJobOutputConfig.let(MonitoringOutputConfigProperty::unwrap))
+      cdkBuilder.dataQualityJobOutputConfig(dataQualityJobOutputConfig.let(MonitoringOutputConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -855,7 +855,7 @@ public open class CfnDataQualityJobDefinition(
      * @param jobResources Identifies the resources to deploy for a monitoring job. 
      */
     override fun jobResources(jobResources: IResolvable) {
-      cdkBuilder.jobResources(jobResources.let(IResolvable::unwrap))
+      cdkBuilder.jobResources(jobResources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -865,7 +865,7 @@ public open class CfnDataQualityJobDefinition(
      * @param jobResources Identifies the resources to deploy for a monitoring job. 
      */
     override fun jobResources(jobResources: MonitoringResourcesProperty) {
-      cdkBuilder.jobResources(jobResources.let(MonitoringResourcesProperty::unwrap))
+      cdkBuilder.jobResources(jobResources.let(MonitoringResourcesProperty.Companion::unwrap))
     }
 
     /**
@@ -886,7 +886,7 @@ public open class CfnDataQualityJobDefinition(
      * @param networkConfig Specifies networking configuration for the monitoring job. 
      */
     override fun networkConfig(networkConfig: IResolvable) {
-      cdkBuilder.networkConfig(networkConfig.let(IResolvable::unwrap))
+      cdkBuilder.networkConfig(networkConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -896,7 +896,7 @@ public open class CfnDataQualityJobDefinition(
      * @param networkConfig Specifies networking configuration for the monitoring job. 
      */
     override fun networkConfig(networkConfig: NetworkConfigProperty) {
-      cdkBuilder.networkConfig(networkConfig.let(NetworkConfigProperty::unwrap))
+      cdkBuilder.networkConfig(networkConfig.let(NetworkConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -930,7 +930,7 @@ public open class CfnDataQualityJobDefinition(
      * before stopping. 
      */
     override fun stoppingCondition(stoppingCondition: IResolvable) {
-      cdkBuilder.stoppingCondition(stoppingCondition.let(IResolvable::unwrap))
+      cdkBuilder.stoppingCondition(stoppingCondition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -941,7 +941,7 @@ public open class CfnDataQualityJobDefinition(
      * before stopping. 
      */
     override fun stoppingCondition(stoppingCondition: StoppingConditionProperty) {
-      cdkBuilder.stoppingCondition(stoppingCondition.let(StoppingConditionProperty::unwrap))
+      cdkBuilder.stoppingCondition(stoppingCondition.let(StoppingConditionProperty.Companion::unwrap))
     }
 
     /**
@@ -967,7 +967,7 @@ public open class CfnDataQualityJobDefinition(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1159,14 +1159,14 @@ public open class CfnDataQualityJobDefinition(
        * @param datasetFormat The dataset format for your batch transform job. 
        */
       override fun datasetFormat(datasetFormat: IResolvable) {
-        cdkBuilder.datasetFormat(datasetFormat.let(IResolvable::unwrap))
+        cdkBuilder.datasetFormat(datasetFormat.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param datasetFormat The dataset format for your batch transform job. 
        */
       override fun datasetFormat(datasetFormat: DatasetFormatProperty) {
-        cdkBuilder.datasetFormat(datasetFormat.let(DatasetFormatProperty::unwrap))
+        cdkBuilder.datasetFormat(datasetFormat.let(DatasetFormatProperty.Companion::unwrap))
       }
 
       /**
@@ -1613,7 +1613,7 @@ public open class CfnDataQualityJobDefinition(
        * @param header A boolean flag indicating if given CSV has header.
        */
       override fun `header`(`header`: IResolvable) {
-        cdkBuilder.`header`(`header`.let(IResolvable::unwrap))
+        cdkBuilder.`header`(`header`.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1825,7 +1825,7 @@ public open class CfnDataQualityJobDefinition(
        * runs.
        */
       override fun environment(environment: IResolvable) {
-        cdkBuilder.environment(environment.let(IResolvable::unwrap))
+        cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2069,14 +2069,14 @@ public open class CfnDataQualityJobDefinition(
        * @param constraintsResource The constraints resource for a monitoring job.
        */
       override fun constraintsResource(constraintsResource: IResolvable) {
-        cdkBuilder.constraintsResource(constraintsResource.let(IResolvable::unwrap))
+        cdkBuilder.constraintsResource(constraintsResource.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param constraintsResource The constraints resource for a monitoring job.
        */
       override fun constraintsResource(constraintsResource: ConstraintsResourceProperty) {
-        cdkBuilder.constraintsResource(constraintsResource.let(ConstraintsResourceProperty::unwrap))
+        cdkBuilder.constraintsResource(constraintsResource.let(ConstraintsResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -2095,7 +2095,7 @@ public open class CfnDataQualityJobDefinition(
        * series of jobs scheduled to collect data periodically.
        */
       override fun statisticsResource(statisticsResource: IResolvable) {
-        cdkBuilder.statisticsResource(statisticsResource.let(IResolvable::unwrap))
+        cdkBuilder.statisticsResource(statisticsResource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2105,7 +2105,7 @@ public open class CfnDataQualityJobDefinition(
        * series of jobs scheduled to collect data periodically.
        */
       override fun statisticsResource(statisticsResource: StatisticsResourceProperty) {
-        cdkBuilder.statisticsResource(statisticsResource.let(StatisticsResourceProperty::unwrap))
+        cdkBuilder.statisticsResource(statisticsResource.let(StatisticsResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -2280,14 +2280,14 @@ public open class CfnDataQualityJobDefinition(
        * @param batchTransformInput Input object for the batch transform job.
        */
       override fun batchTransformInput(batchTransformInput: IResolvable) {
-        cdkBuilder.batchTransformInput(batchTransformInput.let(IResolvable::unwrap))
+        cdkBuilder.batchTransformInput(batchTransformInput.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param batchTransformInput Input object for the batch transform job.
        */
       override fun batchTransformInput(batchTransformInput: BatchTransformInputProperty) {
-        cdkBuilder.batchTransformInput(batchTransformInput.let(BatchTransformInputProperty::unwrap))
+        cdkBuilder.batchTransformInput(batchTransformInput.let(BatchTransformInputProperty.Companion::unwrap))
       }
 
       /**
@@ -2303,14 +2303,14 @@ public open class CfnDataQualityJobDefinition(
        * @param endpointInput Input object for the endpoint.
        */
       override fun endpointInput(endpointInput: IResolvable) {
-        cdkBuilder.endpointInput(endpointInput.let(IResolvable::unwrap))
+        cdkBuilder.endpointInput(endpointInput.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param endpointInput Input object for the endpoint.
        */
       override fun endpointInput(endpointInput: EndpointInputProperty) {
-        cdkBuilder.endpointInput(endpointInput.let(EndpointInputProperty::unwrap))
+        cdkBuilder.endpointInput(endpointInput.let(EndpointInputProperty.Companion::unwrap))
       }
 
       /**
@@ -2466,14 +2466,14 @@ public open class CfnDataQualityJobDefinition(
        * @param csv The CSV format.
        */
       override fun csv(csv: IResolvable) {
-        cdkBuilder.csv(csv.let(IResolvable::unwrap))
+        cdkBuilder.csv(csv.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param csv The CSV format.
        */
       override fun csv(csv: CsvProperty) {
-        cdkBuilder.csv(csv.let(CsvProperty::unwrap))
+        cdkBuilder.csv(csv.let(CsvProperty.Companion::unwrap))
       }
 
       /**
@@ -2487,14 +2487,14 @@ public open class CfnDataQualityJobDefinition(
        * @param json The Json format.
        */
       override fun json(json: IResolvable) {
-        cdkBuilder.json(json.let(IResolvable::unwrap))
+        cdkBuilder.json(json.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param json The Json format.
        */
       override fun json(json: JsonProperty) {
-        cdkBuilder.json(json.let(JsonProperty::unwrap))
+        cdkBuilder.json(json.let(JsonProperty.Companion::unwrap))
       }
 
       /**
@@ -2515,7 +2515,7 @@ public open class CfnDataQualityJobDefinition(
        * @param parquet A flag indicate if the dataset format is Parquet.
        */
       override fun parquet(parquet: IResolvable) {
-        cdkBuilder.parquet(parquet.let(IResolvable::unwrap))
+        cdkBuilder.parquet(parquet.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2844,7 +2844,7 @@ public open class CfnDataQualityJobDefinition(
        * @param line A boolean flag indicating if it is JSON line format.
        */
       override fun line(line: IResolvable) {
-        cdkBuilder.line(line.let(IResolvable::unwrap))
+        cdkBuilder.line(line.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2973,7 +2973,7 @@ public open class CfnDataQualityJobDefinition(
        * This is where the output of the periodic monitoring jobs is uploaded.
        */
       override fun monitoringOutputs(monitoringOutputs: IResolvable) {
-        cdkBuilder.monitoringOutputs(monitoringOutputs.let(IResolvable::unwrap))
+        cdkBuilder.monitoringOutputs(monitoringOutputs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3101,7 +3101,7 @@ public open class CfnDataQualityJobDefinition(
        * saved. 
        */
       override fun s3Output(s3Output: IResolvable) {
-        cdkBuilder.s3Output(s3Output.let(IResolvable::unwrap))
+        cdkBuilder.s3Output(s3Output.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3109,7 +3109,7 @@ public open class CfnDataQualityJobDefinition(
        * saved. 
        */
       override fun s3Output(s3Output: S3OutputProperty) {
-        cdkBuilder.s3Output(s3Output.let(S3OutputProperty::unwrap))
+        cdkBuilder.s3Output(s3Output.let(S3OutputProperty.Companion::unwrap))
       }
 
       /**
@@ -3222,7 +3222,7 @@ public open class CfnDataQualityJobDefinition(
        * job. 
        */
       override fun clusterConfig(clusterConfig: IResolvable) {
-        cdkBuilder.clusterConfig(clusterConfig.let(IResolvable::unwrap))
+        cdkBuilder.clusterConfig(clusterConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3230,7 +3230,7 @@ public open class CfnDataQualityJobDefinition(
        * job. 
        */
       override fun clusterConfig(clusterConfig: ClusterConfigProperty) {
-        cdkBuilder.clusterConfig(clusterConfig.let(ClusterConfigProperty::unwrap))
+        cdkBuilder.clusterConfig(clusterConfig.let(ClusterConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -3409,7 +3409,7 @@ public open class CfnDataQualityJobDefinition(
        */
       override
           fun enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption: IResolvable) {
-        cdkBuilder.enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption.let(IResolvable::unwrap))
+        cdkBuilder.enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3425,7 +3425,7 @@ public open class CfnDataQualityJobDefinition(
        * from the containers used for the processing job.
        */
       override fun enableNetworkIsolation(enableNetworkIsolation: IResolvable) {
-        cdkBuilder.enableNetworkIsolation(enableNetworkIsolation.let(IResolvable::unwrap))
+        cdkBuilder.enableNetworkIsolation(enableNetworkIsolation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3433,7 +3433,7 @@ public open class CfnDataQualityJobDefinition(
        * Control access to and from your training and model containers by configuring the VPC.
        */
       override fun vpcConfig(vpcConfig: IResolvable) {
-        cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+        cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3441,7 +3441,7 @@ public open class CfnDataQualityJobDefinition(
        * Control access to and from your training and model containers by configuring the VPC.
        */
       override fun vpcConfig(vpcConfig: VpcConfigProperty) {
-        cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
+        cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty.Companion::unwrap))
       }
 
       /**

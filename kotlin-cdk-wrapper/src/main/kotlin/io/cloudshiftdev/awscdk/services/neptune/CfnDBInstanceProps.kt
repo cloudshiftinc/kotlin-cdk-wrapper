@@ -286,7 +286,7 @@ public interface CfnDBInstanceProps {
      * existing DB cluster with a new, empty one that uses the engine version you specified.
      */
     override fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: IResolvable) {
-      cdkBuilder.allowMajorVersionUpgrade(allowMajorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.allowMajorVersionUpgrade(allowMajorVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -304,7 +304,7 @@ public interface CfnDBInstanceProps {
      * When updating this property, some interruptions may occur.
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -382,7 +382,7 @@ public interface CfnDBInstanceProps {
      * @param tags An arbitrary set of tags (key-value pairs) for this DB instance.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

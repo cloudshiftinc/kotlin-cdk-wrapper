@@ -178,7 +178,7 @@ public interface CfnOrganizationConformancePackProps {
      * @param conformancePackInputParameters A list of `ConformancePackInputParameter` objects.
      */
     override fun conformancePackInputParameters(conformancePackInputParameters: IResolvable) {
-      cdkBuilder.conformancePackInputParameters(conformancePackInputParameters.let(IResolvable::unwrap))
+      cdkBuilder.conformancePackInputParameters(conformancePackInputParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**

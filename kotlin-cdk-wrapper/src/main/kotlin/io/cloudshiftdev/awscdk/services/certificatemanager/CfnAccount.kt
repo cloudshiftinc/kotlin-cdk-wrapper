@@ -44,8 +44,8 @@ public open class CfnAccount(
     id: String,
     props: CfnAccountProps,
   ) :
-      this(software.amazon.awscdk.services.certificatemanager.CfnAccount(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAccountProps::unwrap))
+      this(software.amazon.awscdk.services.certificatemanager.CfnAccount(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAccountProps.Companion::unwrap))
   )
 
   public constructor(
@@ -69,14 +69,14 @@ public open class CfnAccount(
    * Object containing expiration events options associated with an AWS account .
    */
   public open fun expiryEventsConfiguration(`value`: IResolvable) {
-    unwrap(this).setExpiryEventsConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setExpiryEventsConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Object containing expiration events options associated with an AWS account .
    */
   public open fun expiryEventsConfiguration(`value`: ExpiryEventsConfigurationProperty) {
-    unwrap(this).setExpiryEventsConfiguration(`value`.let(ExpiryEventsConfigurationProperty::unwrap))
+    unwrap(this).setExpiryEventsConfiguration(`value`.let(ExpiryEventsConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -94,7 +94,7 @@ public open class CfnAccount(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -165,7 +165,7 @@ public open class CfnAccount(
      * an AWS account . 
      */
     override fun expiryEventsConfiguration(expiryEventsConfiguration: IResolvable) {
-      cdkBuilder.expiryEventsConfiguration(expiryEventsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.expiryEventsConfiguration(expiryEventsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -181,7 +181,7 @@ public open class CfnAccount(
      */
     override
         fun expiryEventsConfiguration(expiryEventsConfiguration: ExpiryEventsConfigurationProperty) {
-      cdkBuilder.expiryEventsConfiguration(expiryEventsConfiguration.let(ExpiryEventsConfigurationProperty::unwrap))
+      cdkBuilder.expiryEventsConfiguration(expiryEventsConfiguration.let(ExpiryEventsConfigurationProperty.Companion::unwrap))
     }
 
     /**

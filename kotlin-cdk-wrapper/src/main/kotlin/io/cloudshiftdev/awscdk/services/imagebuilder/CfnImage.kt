@@ -78,8 +78,8 @@ public open class CfnImage(
     id: String,
     props: CfnImageProps,
   ) :
-      this(software.amazon.awscdk.services.imagebuilder.CfnImage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnImageProps::unwrap))
+      this(software.amazon.awscdk.services.imagebuilder.CfnImage(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnImageProps.Companion::unwrap))
   )
 
   public constructor(
@@ -164,7 +164,7 @@ public open class CfnImage(
    * (OS) version and package list.
    */
   public open fun enhancedImageMetadataEnabled(`value`: IResolvable) {
-    unwrap(this).setEnhancedImageMetadataEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnhancedImageMetadataEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -204,14 +204,14 @@ public open class CfnImage(
    * Contains settings for vulnerability scans.
    */
   public open fun imageScanningConfiguration(`value`: IResolvable) {
-    unwrap(this).setImageScanningConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setImageScanningConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Contains settings for vulnerability scans.
    */
   public open fun imageScanningConfiguration(`value`: ImageScanningConfigurationProperty) {
-    unwrap(this).setImageScanningConfiguration(`value`.let(ImageScanningConfigurationProperty::unwrap))
+    unwrap(this).setImageScanningConfiguration(`value`.let(ImageScanningConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -232,14 +232,14 @@ public open class CfnImage(
    * The image tests configuration of the image.
    */
   public open fun imageTestsConfiguration(`value`: IResolvable) {
-    unwrap(this).setImageTestsConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setImageTestsConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The image tests configuration of the image.
    */
   public open fun imageTestsConfiguration(`value`: ImageTestsConfigurationProperty) {
-    unwrap(this).setImageTestsConfiguration(`value`.let(ImageTestsConfigurationProperty::unwrap))
+    unwrap(this).setImageTestsConfiguration(`value`.let(ImageTestsConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -272,7 +272,7 @@ public open class CfnImage(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -301,7 +301,7 @@ public open class CfnImage(
    * Contains an array of workflow configuration objects.
    */
   public open fun workflows(`value`: IResolvable) {
-    unwrap(this).setWorkflows(`value`.let(IResolvable::unwrap))
+    unwrap(this).setWorkflows(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -543,7 +543,7 @@ public open class CfnImage(
      * created, including the operating system (OS) version and package list. 
      */
     override fun enhancedImageMetadataEnabled(enhancedImageMetadataEnabled: IResolvable) {
-      cdkBuilder.enhancedImageMetadataEnabled(enhancedImageMetadataEnabled.let(IResolvable::unwrap))
+      cdkBuilder.enhancedImageMetadataEnabled(enhancedImageMetadataEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -577,7 +577,7 @@ public open class CfnImage(
      * @param imageScanningConfiguration Contains settings for vulnerability scans. 
      */
     override fun imageScanningConfiguration(imageScanningConfiguration: IResolvable) {
-      cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -588,7 +588,7 @@ public open class CfnImage(
      */
     override
         fun imageScanningConfiguration(imageScanningConfiguration: ImageScanningConfigurationProperty) {
-      cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(ImageScanningConfigurationProperty::unwrap))
+      cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(ImageScanningConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -611,7 +611,7 @@ public open class CfnImage(
      * @param imageTestsConfiguration The image tests configuration of the image. 
      */
     override fun imageTestsConfiguration(imageTestsConfiguration: IResolvable) {
-      cdkBuilder.imageTestsConfiguration(imageTestsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.imageTestsConfiguration(imageTestsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -621,7 +621,7 @@ public open class CfnImage(
      * @param imageTestsConfiguration The image tests configuration of the image. 
      */
     override fun imageTestsConfiguration(imageTestsConfiguration: ImageTestsConfigurationProperty) {
-      cdkBuilder.imageTestsConfiguration(imageTestsConfiguration.let(ImageTestsConfigurationProperty::unwrap))
+      cdkBuilder.imageTestsConfiguration(imageTestsConfiguration.let(ImageTestsConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -665,7 +665,7 @@ public open class CfnImage(
      * @param workflows Contains an array of workflow configuration objects. 
      */
     override fun workflows(workflows: IResolvable) {
-      cdkBuilder.workflows(workflows.let(IResolvable::unwrap))
+      cdkBuilder.workflows(workflows.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -947,14 +947,14 @@ public open class CfnImage(
        * @param ecrConfiguration Contains Amazon ECR settings for vulnerability scans.
        */
       override fun ecrConfiguration(ecrConfiguration: IResolvable) {
-        cdkBuilder.ecrConfiguration(ecrConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.ecrConfiguration(ecrConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param ecrConfiguration Contains Amazon ECR settings for vulnerability scans.
        */
       override fun ecrConfiguration(ecrConfiguration: EcrConfigurationProperty) {
-        cdkBuilder.ecrConfiguration(ecrConfiguration.let(EcrConfigurationProperty::unwrap))
+        cdkBuilder.ecrConfiguration(ecrConfiguration.let(EcrConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -980,7 +980,7 @@ public open class CfnImage(
        * create a new image.
        */
       override fun imageScanningEnabled(imageScanningEnabled: IResolvable) {
-        cdkBuilder.imageScanningEnabled(imageScanningEnabled.let(IResolvable::unwrap))
+        cdkBuilder.imageScanningEnabled(imageScanningEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1119,7 +1119,7 @@ public open class CfnImage(
        * distribution.
        */
       override fun imageTestsEnabled(imageTestsEnabled: IResolvable) {
-        cdkBuilder.imageTestsEnabled(imageTestsEnabled.let(IResolvable::unwrap))
+        cdkBuilder.imageTestsEnabled(imageTestsEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1311,7 +1311,7 @@ public open class CfnImage(
        * document defined for the workflow resource.
        */
       override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**

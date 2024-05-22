@@ -204,14 +204,14 @@ public interface CfnVPNConnectionProps {
      * Protocol (BGP), you must specify `true` .
      */
     override fun staticRoutesOnly(staticRoutesOnly: IResolvable) {
-      cdkBuilder.staticRoutesOnly(staticRoutesOnly.let(IResolvable::unwrap))
+      cdkBuilder.staticRoutesOnly(staticRoutesOnly.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param tags Any tags assigned to the VPN connection.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -247,7 +247,7 @@ public interface CfnVPNConnectionProps {
      * @param vpnTunnelOptionsSpecifications The tunnel options for the VPN connection.
      */
     override fun vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications: IResolvable) {
-      cdkBuilder.vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**

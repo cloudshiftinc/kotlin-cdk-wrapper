@@ -56,8 +56,8 @@ public open class CfnActivity(
     id: String,
     props: CfnActivityProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.CfnActivity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnActivityProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.CfnActivity(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnActivityProps.Companion::unwrap))
   )
 
   public constructor(
@@ -93,7 +93,7 @@ public open class CfnActivity(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -123,7 +123,7 @@ public open class CfnActivity(
    * The list of tags to add to a resource.
    */
   public open fun tagsRaw(`value`: List<TagsEntryProperty>) {
-    unwrap(this).setTagsRaw(`value`.map(TagsEntryProperty::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(TagsEntryProperty.Companion::unwrap))
   }
 
   /**
@@ -211,7 +211,7 @@ public open class CfnActivity(
      * @param tags The list of tags to add to a resource. 
      */
     override fun tags(tags: List<TagsEntryProperty>) {
-      cdkBuilder.tags(tags.map(TagsEntryProperty::unwrap))
+      cdkBuilder.tags(tags.map(TagsEntryProperty.Companion::unwrap))
     }
 
     /**

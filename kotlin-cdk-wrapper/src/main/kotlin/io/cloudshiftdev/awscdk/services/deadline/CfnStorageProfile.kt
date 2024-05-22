@@ -50,8 +50,8 @@ public open class CfnStorageProfile(
     id: String,
     props: CfnStorageProfileProps,
   ) :
-      this(software.amazon.awscdk.services.deadline.CfnStorageProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStorageProfileProps::unwrap))
+      this(software.amazon.awscdk.services.deadline.CfnStorageProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStorageProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -99,7 +99,7 @@ public open class CfnStorageProfile(
    * Operating system specific file system path to the storage location.
    */
   public open fun fileSystemLocations(`value`: IResolvable) {
-    unwrap(this).setFileSystemLocations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFileSystemLocations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -121,7 +121,7 @@ public open class CfnStorageProfile(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -228,7 +228,7 @@ public open class CfnStorageProfile(
      * location. 
      */
     override fun fileSystemLocations(fileSystemLocations: IResolvable) {
-      cdkBuilder.fileSystemLocations(fileSystemLocations.let(IResolvable::unwrap))
+      cdkBuilder.fileSystemLocations(fileSystemLocations.let(IResolvable.Companion::unwrap))
     }
 
     /**

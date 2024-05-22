@@ -344,7 +344,7 @@ public interface CfnCertificateProps {
      * else this parameter is ignored.
      */
     override fun apiPassthrough(apiPassthrough: IResolvable) {
-      cdkBuilder.apiPassthrough(apiPassthrough.let(IResolvable::unwrap))
+      cdkBuilder.apiPassthrough(apiPassthrough.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -353,7 +353,7 @@ public interface CfnCertificateProps {
      * else this parameter is ignored.
      */
     override fun apiPassthrough(apiPassthrough: CfnCertificate.ApiPassthroughProperty) {
-      cdkBuilder.apiPassthrough(apiPassthrough.let(CfnCertificate.ApiPassthroughProperty::unwrap))
+      cdkBuilder.apiPassthrough(apiPassthrough.let(CfnCertificate.ApiPassthroughProperty.Companion::unwrap))
     }
 
     /**
@@ -411,14 +411,14 @@ public interface CfnCertificateProps {
      * @param validity The period of time during which the certificate will be valid. 
      */
     override fun validity(validity: IResolvable) {
-      cdkBuilder.validity(validity.let(IResolvable::unwrap))
+      cdkBuilder.validity(validity.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param validity The period of time during which the certificate will be valid. 
      */
     override fun validity(validity: CfnCertificate.ValidityProperty) {
-      cdkBuilder.validity(validity.let(CfnCertificate.ValidityProperty::unwrap))
+      cdkBuilder.validity(validity.let(CfnCertificate.ValidityProperty.Companion::unwrap))
     }
 
     /**
@@ -444,7 +444,7 @@ public interface CfnCertificateProps {
      * type value `ABSOLUTE` .
      */
     override fun validityNotBefore(validityNotBefore: IResolvable) {
-      cdkBuilder.validityNotBefore(validityNotBefore.let(IResolvable::unwrap))
+      cdkBuilder.validityNotBefore(validityNotBefore.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -462,7 +462,7 @@ public interface CfnCertificateProps {
      * type value `ABSOLUTE` .
      */
     override fun validityNotBefore(validityNotBefore: CfnCertificate.ValidityProperty) {
-      cdkBuilder.validityNotBefore(validityNotBefore.let(CfnCertificate.ValidityProperty::unwrap))
+      cdkBuilder.validityNotBefore(validityNotBefore.let(CfnCertificate.ValidityProperty.Companion::unwrap))
     }
 
     /**

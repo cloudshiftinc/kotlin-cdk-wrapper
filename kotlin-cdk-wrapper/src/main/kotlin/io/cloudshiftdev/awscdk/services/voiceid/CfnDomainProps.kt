@@ -139,7 +139,7 @@ public interface CfnDomainProps {
      * the KMS key identifier you want Voice ID to use to encrypt your data. 
      */
     override fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
-      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -148,7 +148,7 @@ public interface CfnDomainProps {
      */
     override
         fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: CfnDomain.ServerSideEncryptionConfigurationProperty) {
-      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(CfnDomain.ServerSideEncryptionConfigurationProperty::unwrap))
+      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(CfnDomain.ServerSideEncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -166,7 +166,7 @@ public interface CfnDomainProps {
      * @param tags The tags used to organize, track, or control access for this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

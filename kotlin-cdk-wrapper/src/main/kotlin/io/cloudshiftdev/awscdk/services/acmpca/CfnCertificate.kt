@@ -150,8 +150,8 @@ public open class CfnCertificate(
     id: String,
     props: CfnCertificateProps,
   ) :
-      this(software.amazon.awscdk.services.acmpca.CfnCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCertificateProps::unwrap))
+      this(software.amazon.awscdk.services.acmpca.CfnCertificate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCertificateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -174,7 +174,7 @@ public open class CfnCertificate(
    * is ignored.
    */
   public open fun apiPassthrough(`value`: IResolvable) {
-    unwrap(this).setApiPassthrough(`value`.let(IResolvable::unwrap))
+    unwrap(this).setApiPassthrough(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -183,7 +183,7 @@ public open class CfnCertificate(
    * is ignored.
    */
   public open fun apiPassthrough(`value`: ApiPassthroughProperty) {
-    unwrap(this).setApiPassthrough(`value`.let(ApiPassthroughProperty::unwrap))
+    unwrap(this).setApiPassthrough(`value`.let(ApiPassthroughProperty.Companion::unwrap))
   }
 
   /**
@@ -236,7 +236,7 @@ public open class CfnCertificate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -272,14 +272,14 @@ public open class CfnCertificate(
    * The period of time during which the certificate will be valid.
    */
   public open fun validity(`value`: IResolvable) {
-    unwrap(this).setValidity(`value`.let(IResolvable::unwrap))
+    unwrap(this).setValidity(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The period of time during which the certificate will be valid.
    */
   public open fun validity(`value`: ValidityProperty) {
-    unwrap(this).setValidity(`value`.let(ValidityProperty::unwrap))
+    unwrap(this).setValidity(`value`.let(ValidityProperty.Companion::unwrap))
   }
 
   /**
@@ -299,14 +299,14 @@ public open class CfnCertificate(
    * Information describing the start of the validity period of the certificate.
    */
   public open fun validityNotBefore(`value`: IResolvable) {
-    unwrap(this).setValidityNotBefore(`value`.let(IResolvable::unwrap))
+    unwrap(this).setValidityNotBefore(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information describing the start of the validity period of the certificate.
    */
   public open fun validityNotBefore(`value`: ValidityProperty) {
-    unwrap(this).setValidityNotBefore(`value`.let(ValidityProperty::unwrap))
+    unwrap(this).setValidityNotBefore(`value`.let(ValidityProperty.Companion::unwrap))
   }
 
   /**
@@ -514,7 +514,7 @@ public open class CfnCertificate(
      * else this parameter is ignored. 
      */
     override fun apiPassthrough(apiPassthrough: IResolvable) {
-      cdkBuilder.apiPassthrough(apiPassthrough.let(IResolvable::unwrap))
+      cdkBuilder.apiPassthrough(apiPassthrough.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -528,7 +528,7 @@ public open class CfnCertificate(
      * else this parameter is ignored. 
      */
     override fun apiPassthrough(apiPassthrough: ApiPassthroughProperty) {
-      cdkBuilder.apiPassthrough(apiPassthrough.let(ApiPassthroughProperty::unwrap))
+      cdkBuilder.apiPassthrough(apiPassthrough.let(ApiPassthroughProperty.Companion::unwrap))
     }
 
     /**
@@ -608,7 +608,7 @@ public open class CfnCertificate(
      * @param validity The period of time during which the certificate will be valid. 
      */
     override fun validity(validity: IResolvable) {
-      cdkBuilder.validity(validity.let(IResolvable::unwrap))
+      cdkBuilder.validity(validity.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -618,7 +618,7 @@ public open class CfnCertificate(
      * @param validity The period of time during which the certificate will be valid. 
      */
     override fun validity(validity: ValidityProperty) {
-      cdkBuilder.validity(validity.let(ValidityProperty::unwrap))
+      cdkBuilder.validity(validity.let(ValidityProperty.Companion::unwrap))
     }
 
     /**
@@ -651,7 +651,7 @@ public open class CfnCertificate(
      * certificate. 
      */
     override fun validityNotBefore(validityNotBefore: IResolvable) {
-      cdkBuilder.validityNotBefore(validityNotBefore.let(IResolvable::unwrap))
+      cdkBuilder.validityNotBefore(validityNotBefore.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -673,7 +673,7 @@ public open class CfnCertificate(
      * certificate. 
      */
     override fun validityNotBefore(validityNotBefore: ValidityProperty) {
-      cdkBuilder.validityNotBefore(validityNotBefore.let(ValidityProperty::unwrap))
+      cdkBuilder.validityNotBefore(validityNotBefore.let(ValidityProperty.Companion::unwrap))
     }
 
     /**
@@ -914,14 +914,14 @@ public open class CfnCertificate(
        * @param extensions Specifies X.509 extension information for a certificate.
        */
       override fun extensions(extensions: IResolvable) {
-        cdkBuilder.extensions(extensions.let(IResolvable::unwrap))
+        cdkBuilder.extensions(extensions.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param extensions Specifies X.509 extension information for a certificate.
        */
       override fun extensions(extensions: ExtensionsProperty) {
-        cdkBuilder.extensions(extensions.let(ExtensionsProperty::unwrap))
+        cdkBuilder.extensions(extensions.let(ExtensionsProperty.Companion::unwrap))
       }
 
       /**
@@ -940,7 +940,7 @@ public open class CfnCertificate(
        * names (RDNs). The RDNs are separated by commas in the certificate.
        */
       override fun subject(subject: IResolvable) {
-        cdkBuilder.subject(subject.let(IResolvable::unwrap))
+        cdkBuilder.subject(subject.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -951,7 +951,7 @@ public open class CfnCertificate(
        * names (RDNs). The RDNs are separated by commas in the certificate.
        */
       override fun subject(subject: SubjectProperty) {
-        cdkBuilder.subject(subject.let(SubjectProperty::unwrap))
+        cdkBuilder.subject(subject.let(SubjectProperty.Companion::unwrap))
       }
 
       /**
@@ -1214,7 +1214,7 @@ public open class CfnCertificate(
        * @param critical Specifies the critical flag of the X.509 extension.
        */
       override fun critical(critical: IResolvable) {
-        cdkBuilder.critical(critical.let(IResolvable::unwrap))
+        cdkBuilder.critical(critical.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1793,7 +1793,7 @@ public open class CfnCertificate(
        * the set of policies for certification paths that include this certificate.
        */
       override fun certificatePolicies(certificatePolicies: IResolvable) {
-        cdkBuilder.certificatePolicies(certificatePolicies.let(IResolvable::unwrap))
+        cdkBuilder.certificatePolicies(certificatePolicies.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1830,7 +1830,7 @@ public open class CfnCertificate(
        * database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
        */
       override fun customExtensions(customExtensions: IResolvable) {
-        cdkBuilder.customExtensions(customExtensions.let(IResolvable::unwrap))
+        cdkBuilder.customExtensions(customExtensions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1857,7 +1857,7 @@ public open class CfnCertificate(
        * may be used other than basic purposes indicated in the `KeyUsage` extension.
        */
       override fun extendedKeyUsage(extendedKeyUsage: IResolvable) {
-        cdkBuilder.extendedKeyUsage(extendedKeyUsage.let(IResolvable::unwrap))
+        cdkBuilder.extendedKeyUsage(extendedKeyUsage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1881,7 +1881,7 @@ public open class CfnCertificate(
        * Default value for each option is false.
        */
       override fun keyUsage(keyUsage: IResolvable) {
-        cdkBuilder.keyUsage(keyUsage.let(IResolvable::unwrap))
+        cdkBuilder.keyUsage(keyUsage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1890,7 +1890,7 @@ public open class CfnCertificate(
        * Default value for each option is false.
        */
       override fun keyUsage(keyUsage: KeyUsageProperty) {
-        cdkBuilder.keyUsage(keyUsage.let(KeyUsageProperty::unwrap))
+        cdkBuilder.keyUsage(keyUsage.let(KeyUsageProperty.Companion::unwrap))
       }
 
       /**
@@ -1910,7 +1910,7 @@ public open class CfnCertificate(
        * field of the certificate.
        */
       override fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
-        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(IResolvable::unwrap))
+        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2247,7 +2247,7 @@ public open class CfnCertificate(
        * one certificate with the same DN to the same entity.
        */
       override fun directoryName(directoryName: IResolvable) {
-        cdkBuilder.directoryName(directoryName.let(IResolvable::unwrap))
+        cdkBuilder.directoryName(directoryName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2261,7 +2261,7 @@ public open class CfnCertificate(
        * one certificate with the same DN to the same entity.
        */
       override fun directoryName(directoryName: SubjectProperty) {
-        cdkBuilder.directoryName(directoryName.let(SubjectProperty::unwrap))
+        cdkBuilder.directoryName(directoryName.let(SubjectProperty.Companion::unwrap))
       }
 
       /**
@@ -2290,14 +2290,14 @@ public open class CfnCertificate(
        * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
        */
       override fun ediPartyName(ediPartyName: IResolvable) {
-        cdkBuilder.ediPartyName(ediPartyName.let(IResolvable::unwrap))
+        cdkBuilder.ediPartyName(ediPartyName.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
        */
       override fun ediPartyName(ediPartyName: EdiPartyNameProperty) {
-        cdkBuilder.ediPartyName(ediPartyName.let(EdiPartyNameProperty::unwrap))
+        cdkBuilder.ediPartyName(ediPartyName.let(EdiPartyNameProperty.Companion::unwrap))
       }
 
       /**
@@ -2319,14 +2319,14 @@ public open class CfnCertificate(
        * @param otherName Represents `GeneralName` using an `OtherName` object.
        */
       override fun otherName(otherName: IResolvable) {
-        cdkBuilder.otherName(otherName.let(IResolvable::unwrap))
+        cdkBuilder.otherName(otherName.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param otherName Represents `GeneralName` using an `OtherName` object.
        */
       override fun otherName(otherName: OtherNameProperty) {
-        cdkBuilder.otherName(otherName.let(OtherNameProperty::unwrap))
+        cdkBuilder.otherName(otherName.let(OtherNameProperty.Companion::unwrap))
       }
 
       /**
@@ -2671,7 +2671,7 @@ public open class CfnCertificate(
        * @param crlSign Key can be used to sign CRLs.
        */
       override fun crlSign(crlSign: IResolvable) {
-        cdkBuilder.crlSign(crlSign.let(IResolvable::unwrap))
+        cdkBuilder.crlSign(crlSign.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2685,7 +2685,7 @@ public open class CfnCertificate(
        * @param dataEncipherment Key can be used to decipher data.
        */
       override fun dataEncipherment(dataEncipherment: IResolvable) {
-        cdkBuilder.dataEncipherment(dataEncipherment.let(IResolvable::unwrap))
+        cdkBuilder.dataEncipherment(dataEncipherment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2699,7 +2699,7 @@ public open class CfnCertificate(
        * @param decipherOnly Key can be used only to decipher data.
        */
       override fun decipherOnly(decipherOnly: IResolvable) {
-        cdkBuilder.decipherOnly(decipherOnly.let(IResolvable::unwrap))
+        cdkBuilder.decipherOnly(decipherOnly.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2713,7 +2713,7 @@ public open class CfnCertificate(
        * @param digitalSignature Key can be used for digital signing.
        */
       override fun digitalSignature(digitalSignature: IResolvable) {
-        cdkBuilder.digitalSignature(digitalSignature.let(IResolvable::unwrap))
+        cdkBuilder.digitalSignature(digitalSignature.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2727,7 +2727,7 @@ public open class CfnCertificate(
        * @param encipherOnly Key can be used only to encipher data.
        */
       override fun encipherOnly(encipherOnly: IResolvable) {
-        cdkBuilder.encipherOnly(encipherOnly.let(IResolvable::unwrap))
+        cdkBuilder.encipherOnly(encipherOnly.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2741,7 +2741,7 @@ public open class CfnCertificate(
        * @param keyAgreement Key can be used in a key-agreement protocol.
        */
       override fun keyAgreement(keyAgreement: IResolvable) {
-        cdkBuilder.keyAgreement(keyAgreement.let(IResolvable::unwrap))
+        cdkBuilder.keyAgreement(keyAgreement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2755,7 +2755,7 @@ public open class CfnCertificate(
        * @param keyCertSign Key can be used to sign certificates.
        */
       override fun keyCertSign(keyCertSign: IResolvable) {
-        cdkBuilder.keyCertSign(keyCertSign.let(IResolvable::unwrap))
+        cdkBuilder.keyCertSign(keyCertSign.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2769,7 +2769,7 @@ public open class CfnCertificate(
        * @param keyEncipherment Key can be used to encipher data.
        */
       override fun keyEncipherment(keyEncipherment: IResolvable) {
-        cdkBuilder.keyEncipherment(keyEncipherment.let(IResolvable::unwrap))
+        cdkBuilder.keyEncipherment(keyEncipherment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2783,7 +2783,7 @@ public open class CfnCertificate(
        * @param nonRepudiation Key can be used for non-repudiation.
        */
       override fun nonRepudiation(nonRepudiation: IResolvable) {
-        cdkBuilder.nonRepudiation(nonRepudiation.let(IResolvable::unwrap))
+        cdkBuilder.nonRepudiation(nonRepudiation.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.acmpca.CfnCertificate.KeyUsageProperty =
@@ -3099,7 +3099,7 @@ public open class CfnCertificate(
        * AWS Private CA supports the certification practice statement (CPS) qualifier.
        */
       override fun policyQualifiers(policyQualifiers: IResolvable) {
-        cdkBuilder.policyQualifiers(policyQualifiers.let(IResolvable::unwrap))
+        cdkBuilder.policyQualifiers(policyQualifiers.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3251,7 +3251,7 @@ public open class CfnCertificate(
        * AWS Private CA supports the use of a URI for a CPS qualifier in this field.
        */
       override fun qualifier(qualifier: IResolvable) {
-        cdkBuilder.qualifier(qualifier.let(IResolvable::unwrap))
+        cdkBuilder.qualifier(qualifier.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3259,7 +3259,7 @@ public open class CfnCertificate(
        * AWS Private CA supports the use of a URI for a CPS qualifier in this field.
        */
       override fun qualifier(qualifier: QualifierProperty) {
-        cdkBuilder.qualifier(qualifier.let(QualifierProperty::unwrap))
+        cdkBuilder.qualifier(qualifier.let(QualifierProperty.Companion::unwrap))
       }
 
       /**
@@ -3719,7 +3719,7 @@ public open class CfnCertificate(
        * Custom attributes cannot be used in combination with standard attributes.
        */
       override fun customAttributes(customAttributes: IResolvable) {
-        cdkBuilder.customAttributes(customAttributes.let(IResolvable::unwrap))
+        cdkBuilder.customAttributes(customAttributes.let(IResolvable.Companion::unwrap))
       }
 
       /**

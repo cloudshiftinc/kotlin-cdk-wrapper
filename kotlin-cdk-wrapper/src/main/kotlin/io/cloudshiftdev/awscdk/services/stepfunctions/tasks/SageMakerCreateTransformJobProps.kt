@@ -340,7 +340,7 @@ public interface SageMakerCreateTransformJobProps : TaskStateBaseProps {
      * request.
      */
     override fun batchStrategy(batchStrategy: BatchStrategy) {
-      cdkBuilder.batchStrategy(batchStrategy.let(BatchStrategy::unwrap))
+      cdkBuilder.batchStrategy(batchStrategy.let(BatchStrategy.Companion::unwrap))
     }
 
     /**
@@ -356,7 +356,7 @@ public interface SageMakerCreateTransformJobProps : TaskStateBaseProps {
      * This enables cross-account resource invocations.
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -382,7 +382,7 @@ public interface SageMakerCreateTransformJobProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -391,7 +391,7 @@ public interface SageMakerCreateTransformJobProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -412,7 +412,7 @@ public interface SageMakerCreateTransformJobProps : TaskStateBaseProps {
      * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -427,7 +427,7 @@ public interface SageMakerCreateTransformJobProps : TaskStateBaseProps {
      * @param maxPayload Maximum allowed size of the payload, in MB.
      */
     override fun maxPayload(maxPayload: Size) {
-      cdkBuilder.maxPayload(maxPayload.let(Size::unwrap))
+      cdkBuilder.maxPayload(maxPayload.let(Size.Companion::unwrap))
     }
 
     /**
@@ -435,7 +435,7 @@ public interface SageMakerCreateTransformJobProps : TaskStateBaseProps {
      * a transform job invocation.
      */
     override fun modelClientOptions(modelClientOptions: ModelClientOptions) {
-      cdkBuilder.modelClientOptions(modelClientOptions.let(ModelClientOptions::unwrap))
+      cdkBuilder.modelClientOptions(modelClientOptions.let(ModelClientOptions.Companion::unwrap))
     }
 
     /**
@@ -487,7 +487,7 @@ public interface SageMakerCreateTransformJobProps : TaskStateBaseProps {
      * @param role Role for the Transform Job.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -510,7 +510,7 @@ public interface SageMakerCreateTransformJobProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -519,7 +519,7 @@ public interface SageMakerCreateTransformJobProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -527,7 +527,7 @@ public interface SageMakerCreateTransformJobProps : TaskStateBaseProps {
      * stored. 
      */
     override fun transformInput(transformInput: TransformInput) {
-      cdkBuilder.transformInput(transformInput.let(TransformInput::unwrap))
+      cdkBuilder.transformInput(transformInput.let(TransformInput.Companion::unwrap))
     }
 
     /**
@@ -551,7 +551,7 @@ public interface SageMakerCreateTransformJobProps : TaskStateBaseProps {
      * the transform job. 
      */
     override fun transformOutput(transformOutput: TransformOutput) {
-      cdkBuilder.transformOutput(transformOutput.let(TransformOutput::unwrap))
+      cdkBuilder.transformOutput(transformOutput.let(TransformOutput.Companion::unwrap))
     }
 
     /**
@@ -567,7 +567,7 @@ public interface SageMakerCreateTransformJobProps : TaskStateBaseProps {
      * @param transformResources ML compute instances for the transform job.
      */
     override fun transformResources(transformResources: TransformResources) {
-      cdkBuilder.transformResources(transformResources.let(TransformResources::unwrap))
+      cdkBuilder.transformResources(transformResources.let(TransformResources.Companion::unwrap))
     }
 
     /**

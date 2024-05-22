@@ -99,7 +99,7 @@ public interface RotationMultiUserOptions {
      * Secrets Manager triggers the next automatic rotation.
      */
     override fun automaticallyAfter(automaticallyAfter: Duration) {
-      cdkBuilder.automaticallyAfter(automaticallyAfter.let(Duration::unwrap))
+      cdkBuilder.automaticallyAfter(automaticallyAfter.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -123,7 +123,7 @@ public interface RotationMultiUserOptions {
      * ```
      */
     override fun secret(secret: ISecret) {
-      cdkBuilder.secret(secret.let(ISecret::unwrap))
+      cdkBuilder.secret(secret.let(ISecret.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.docdb.RotationMultiUserOptions =

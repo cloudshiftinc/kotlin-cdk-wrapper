@@ -120,7 +120,7 @@ public interface TriggerOptions {
      * You can also use `trigger.executeAfter()` to add additional dependencies.
      */
     override fun executeAfter(executeAfter: List<Construct>) {
-      cdkBuilder.executeAfter(executeAfter.map(Construct::unwrap))
+      cdkBuilder.executeAfter(executeAfter.map(Construct.Companion::unwrap))
     }
 
     /**
@@ -139,7 +139,7 @@ public interface TriggerOptions {
      * You can also use `trigger.executeBefore()` to add additional dependants.
      */
     override fun executeBefore(executeBefore: List<Construct>) {
-      cdkBuilder.executeBefore(executeBefore.map(Construct::unwrap))
+      cdkBuilder.executeBefore(executeBefore.map(Construct.Companion::unwrap))
     }
 
     /**

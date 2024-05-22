@@ -655,7 +655,7 @@ public interface CfnEnvironmentProps {
      * `DagProcessingLogs` , `SchedulerLogs` , `TaskLogs` , `WebserverLogs` , `WorkerLogs` .
      */
     override fun loggingConfiguration(loggingConfiguration: IResolvable) {
-      cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -664,7 +664,7 @@ public interface CfnEnvironmentProps {
      */
     override
         fun loggingConfiguration(loggingConfiguration: CfnEnvironment.LoggingConfigurationProperty) {
-      cdkBuilder.loggingConfiguration(loggingConfiguration.let(CfnEnvironment.LoggingConfigurationProperty::unwrap))
+      cdkBuilder.loggingConfiguration(loggingConfiguration.let(CfnEnvironment.LoggingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -714,7 +714,7 @@ public interface CfnEnvironmentProps {
      * MWAA](https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html) .
      */
     override fun networkConfiguration(networkConfiguration: IResolvable) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -725,7 +725,7 @@ public interface CfnEnvironmentProps {
      */
     override
         fun networkConfiguration(networkConfiguration: CfnEnvironment.NetworkConfigurationProperty) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(CfnEnvironment.NetworkConfigurationProperty::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(CfnEnvironment.NetworkConfigurationProperty.Companion::unwrap))
     }
 
     /**

@@ -72,8 +72,8 @@ public open class CfnService(
     id: String,
     props: CfnServiceProps,
   ) :
-      this(software.amazon.awscdk.services.refactorspaces.CfnService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnServiceProps::unwrap))
+      this(software.amazon.awscdk.services.refactorspaces.CfnService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnServiceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -147,7 +147,7 @@ public open class CfnService(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -159,14 +159,14 @@ public open class CfnService(
    * A summary of the configuration for the AWS Lambda endpoint type.
    */
   public open fun lambdaEndpoint(`value`: IResolvable) {
-    unwrap(this).setLambdaEndpoint(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLambdaEndpoint(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A summary of the configuration for the AWS Lambda endpoint type.
    */
   public open fun lambdaEndpoint(`value`: LambdaEndpointInputProperty) {
-    unwrap(this).setLambdaEndpoint(`value`.let(LambdaEndpointInputProperty::unwrap))
+    unwrap(this).setLambdaEndpoint(`value`.let(LambdaEndpointInputProperty.Companion::unwrap))
   }
 
   /**
@@ -204,7 +204,7 @@ public open class CfnService(
    * The tags assigned to the service.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -221,14 +221,14 @@ public open class CfnService(
    * The summary of the configuration for the URL endpoint type.
    */
   public open fun urlEndpoint(`value`: IResolvable) {
-    unwrap(this).setUrlEndpoint(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUrlEndpoint(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The summary of the configuration for the URL endpoint type.
    */
   public open fun urlEndpoint(`value`: UrlEndpointInputProperty) {
-    unwrap(this).setUrlEndpoint(`value`.let(UrlEndpointInputProperty::unwrap))
+    unwrap(this).setUrlEndpoint(`value`.let(UrlEndpointInputProperty.Companion::unwrap))
   }
 
   /**
@@ -427,7 +427,7 @@ public open class CfnService(
      * @param lambdaEndpoint A summary of the configuration for the AWS Lambda endpoint type. 
      */
     override fun lambdaEndpoint(lambdaEndpoint: IResolvable) {
-      cdkBuilder.lambdaEndpoint(lambdaEndpoint.let(IResolvable::unwrap))
+      cdkBuilder.lambdaEndpoint(lambdaEndpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -437,7 +437,7 @@ public open class CfnService(
      * @param lambdaEndpoint A summary of the configuration for the AWS Lambda endpoint type. 
      */
     override fun lambdaEndpoint(lambdaEndpoint: LambdaEndpointInputProperty) {
-      cdkBuilder.lambdaEndpoint(lambdaEndpoint.let(LambdaEndpointInputProperty::unwrap))
+      cdkBuilder.lambdaEndpoint(lambdaEndpoint.let(LambdaEndpointInputProperty.Companion::unwrap))
     }
 
     /**
@@ -468,7 +468,7 @@ public open class CfnService(
      * @param tags The tags assigned to the service. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -486,7 +486,7 @@ public open class CfnService(
      * @param urlEndpoint The summary of the configuration for the URL endpoint type. 
      */
     override fun urlEndpoint(urlEndpoint: IResolvable) {
-      cdkBuilder.urlEndpoint(urlEndpoint.let(IResolvable::unwrap))
+      cdkBuilder.urlEndpoint(urlEndpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -496,7 +496,7 @@ public open class CfnService(
      * @param urlEndpoint The summary of the configuration for the URL endpoint type. 
      */
     override fun urlEndpoint(urlEndpoint: UrlEndpointInputProperty) {
-      cdkBuilder.urlEndpoint(urlEndpoint.let(UrlEndpointInputProperty::unwrap))
+      cdkBuilder.urlEndpoint(urlEndpoint.let(UrlEndpointInputProperty.Companion::unwrap))
     }
 
     /**

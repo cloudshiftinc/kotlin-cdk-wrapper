@@ -290,7 +290,7 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
      * The valid range is 60 to 604800 seconds (1 minute to 7 days).
      */
     override fun clientKeepAlive(clientKeepAlive: Duration) {
-      cdkBuilder.clientKeepAlive(clientKeepAlive.let(Duration::unwrap))
+      cdkBuilder.clientKeepAlive(clientKeepAlive.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -320,7 +320,7 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
      * a security risk to your application.
      */
     override fun desyncMitigationMode(desyncMitigationMode: DesyncMitigationMode) {
-      cdkBuilder.desyncMitigationMode(desyncMitigationMode.let(DesyncMitigationMode::unwrap))
+      cdkBuilder.desyncMitigationMode(desyncMitigationMode.let(DesyncMitigationMode.Companion::unwrap))
     }
 
     /**
@@ -342,7 +342,7 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
      * @param idleTimeout The load balancer idle timeout, in seconds.
      */
     override fun idleTimeout(idleTimeout: Duration) {
-      cdkBuilder.idleTimeout(idleTimeout.let(Duration::unwrap))
+      cdkBuilder.idleTimeout(idleTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -356,7 +356,7 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
      * @param ipAddressType The type of IP addresses to use.
      */
     override fun ipAddressType(ipAddressType: IpAddressType) {
-      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType::unwrap))
+      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType.Companion::unwrap))
     }
 
     /**
@@ -386,21 +386,21 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
      * @param securityGroup Security group to associate with this load balancer.
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
      * @param vpc The VPC network to place the load balancer in. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
      * @param vpcSubnets Which subnets place the load balancer in.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -440,7 +440,7 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
      * header in the HTTP request before the Application Load Balancer sends the request to the target.
      */
     override fun xffHeaderProcessingMode(xffHeaderProcessingMode: XffHeaderProcessingMode) {
-      cdkBuilder.xffHeaderProcessingMode(xffHeaderProcessingMode.let(XffHeaderProcessingMode::unwrap))
+      cdkBuilder.xffHeaderProcessingMode(xffHeaderProcessingMode.let(XffHeaderProcessingMode.Companion::unwrap))
     }
 
     public fun build():

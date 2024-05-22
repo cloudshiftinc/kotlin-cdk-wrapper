@@ -98,11 +98,11 @@ public open class StageDeployment(
 
   public companion object {
     public fun fromStage(stage: Stage): StageDeployment =
-        software.amazon.awscdk.pipelines.StageDeployment.fromStage(stage.let(Stage::unwrap)).let(StageDeployment::wrap)
+        software.amazon.awscdk.pipelines.StageDeployment.fromStage(stage.let(Stage.Companion::unwrap)).let(StageDeployment::wrap)
 
     public fun fromStage(stage: Stage, props: StageDeploymentProps): StageDeployment =
-        software.amazon.awscdk.pipelines.StageDeployment.fromStage(stage.let(Stage::unwrap),
-        props.let(StageDeploymentProps::unwrap)).let(StageDeployment::wrap)
+        software.amazon.awscdk.pipelines.StageDeployment.fromStage(stage.let(Stage.Companion::unwrap),
+        props.let(StageDeploymentProps.Companion::unwrap)).let(StageDeployment::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("adb8fe8c01a9d24e17c91b23a2bc3be56f27bbe509b2b6180d823ec436303095")

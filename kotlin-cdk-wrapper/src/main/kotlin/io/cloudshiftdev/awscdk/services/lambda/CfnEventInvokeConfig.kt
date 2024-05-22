@@ -60,8 +60,8 @@ public open class CfnEventInvokeConfig(
     id: String,
     props: CfnEventInvokeConfigProps,
   ) :
-      this(software.amazon.awscdk.services.lambda.CfnEventInvokeConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEventInvokeConfigProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.CfnEventInvokeConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEventInvokeConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -80,14 +80,14 @@ public open class CfnEventInvokeConfig(
    * A destination for events after they have been sent to a function for processing.
    */
   public open fun destinationConfig(`value`: IResolvable) {
-    unwrap(this).setDestinationConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDestinationConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A destination for events after they have been sent to a function for processing.
    */
   public open fun destinationConfig(`value`: DestinationConfigProperty) {
-    unwrap(this).setDestinationConfig(`value`.let(DestinationConfigProperty::unwrap))
+    unwrap(this).setDestinationConfig(`value`.let(DestinationConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -116,7 +116,7 @@ public open class CfnEventInvokeConfig(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -273,7 +273,7 @@ public open class CfnEventInvokeConfig(
      * processing. 
      */
     override fun destinationConfig(destinationConfig: IResolvable) {
-      cdkBuilder.destinationConfig(destinationConfig.let(IResolvable::unwrap))
+      cdkBuilder.destinationConfig(destinationConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -290,7 +290,7 @@ public open class CfnEventInvokeConfig(
      * processing. 
      */
     override fun destinationConfig(destinationConfig: DestinationConfigProperty) {
-      cdkBuilder.destinationConfig(destinationConfig.let(DestinationConfigProperty::unwrap))
+      cdkBuilder.destinationConfig(destinationConfig.let(DestinationConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -474,14 +474,14 @@ public open class CfnEventInvokeConfig(
        * @param onFailure The destination configuration for failed invocations.
        */
       override fun onFailure(onFailure: IResolvable) {
-        cdkBuilder.onFailure(onFailure.let(IResolvable::unwrap))
+        cdkBuilder.onFailure(onFailure.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param onFailure The destination configuration for failed invocations.
        */
       override fun onFailure(onFailure: OnFailureProperty) {
-        cdkBuilder.onFailure(onFailure.let(OnFailureProperty::unwrap))
+        cdkBuilder.onFailure(onFailure.let(OnFailureProperty.Companion::unwrap))
       }
 
       /**
@@ -496,14 +496,14 @@ public open class CfnEventInvokeConfig(
        * @param onSuccess The destination configuration for successful invocations.
        */
       override fun onSuccess(onSuccess: IResolvable) {
-        cdkBuilder.onSuccess(onSuccess.let(IResolvable::unwrap))
+        cdkBuilder.onSuccess(onSuccess.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param onSuccess The destination configuration for successful invocations.
        */
       override fun onSuccess(onSuccess: OnSuccessProperty) {
-        cdkBuilder.onSuccess(onSuccess.let(OnSuccessProperty::unwrap))
+        cdkBuilder.onSuccess(onSuccess.let(OnSuccessProperty.Companion::unwrap))
       }
 
       /**

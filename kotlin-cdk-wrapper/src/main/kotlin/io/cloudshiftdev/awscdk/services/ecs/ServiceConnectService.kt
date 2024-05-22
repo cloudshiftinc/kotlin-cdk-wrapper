@@ -195,7 +195,7 @@ public interface ServiceConnectService {
      * when the `idleTimeout` is reached and not the `perRequestTimeout`.
      */
     override fun idleTimeout(idleTimeout: Duration) {
-      cdkBuilder.idleTimeout(idleTimeout.let(Duration::unwrap))
+      cdkBuilder.idleTimeout(idleTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -217,7 +217,7 @@ public interface ServiceConnectService {
      * when the `idleTimeout` is reached and not the `perRequestTimeout`.
      */
     override fun perRequestTimeout(perRequestTimeout: Duration) {
-      cdkBuilder.perRequestTimeout(perRequestTimeout.let(Duration::unwrap))
+      cdkBuilder.perRequestTimeout(perRequestTimeout.let(Duration.Companion::unwrap))
     }
 
     /**

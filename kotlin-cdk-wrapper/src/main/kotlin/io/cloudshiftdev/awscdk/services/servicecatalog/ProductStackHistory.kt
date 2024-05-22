@@ -43,8 +43,8 @@ public open class ProductStackHistory(
     id: String,
     props: ProductStackHistoryProps,
   ) :
-      this(software.amazon.awscdk.services.servicecatalog.ProductStackHistory(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ProductStackHistoryProps::unwrap))
+      this(software.amazon.awscdk.services.servicecatalog.ProductStackHistory(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ProductStackHistoryProps.Companion::unwrap))
   )
 
   public constructor(
@@ -184,7 +184,7 @@ public open class ProductStackHistory(
      * @param productStack The ProductStack whose history will be retained as a snapshot. 
      */
     override fun productStack(productStack: ProductStack) {
-      cdkBuilder.productStack(productStack.let(ProductStack::unwrap))
+      cdkBuilder.productStack(productStack.let(ProductStack.Companion::unwrap))
     }
 
     /**

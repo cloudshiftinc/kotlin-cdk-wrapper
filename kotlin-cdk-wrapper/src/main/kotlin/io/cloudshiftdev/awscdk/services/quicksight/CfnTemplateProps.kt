@@ -279,14 +279,14 @@ public interface CfnTemplateProps {
      * @param definition the value to be set.
      */
     override fun definition(definition: IResolvable) {
-      cdkBuilder.definition(definition.let(IResolvable::unwrap))
+      cdkBuilder.definition(definition.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param definition the value to be set.
      */
     override fun definition(definition: CfnTemplate.TemplateVersionDefinitionProperty) {
-      cdkBuilder.definition(definition.let(CfnTemplate.TemplateVersionDefinitionProperty::unwrap))
+      cdkBuilder.definition(definition.let(CfnTemplate.TemplateVersionDefinitionProperty.Companion::unwrap))
     }
 
     /**
@@ -309,7 +309,7 @@ public interface CfnTemplateProps {
      * @param permissions A list of resource permissions to be set on the template.
      */
     override fun permissions(permissions: IResolvable) {
-      cdkBuilder.permissions(permissions.let(IResolvable::unwrap))
+      cdkBuilder.permissions(permissions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -340,7 +340,7 @@ public interface CfnTemplateProps {
      * valid.
      */
     override fun sourceEntity(sourceEntity: IResolvable) {
-      cdkBuilder.sourceEntity(sourceEntity.let(IResolvable::unwrap))
+      cdkBuilder.sourceEntity(sourceEntity.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -359,7 +359,7 @@ public interface CfnTemplateProps {
      * valid.
      */
     override fun sourceEntity(sourceEntity: CfnTemplate.TemplateSourceEntityProperty) {
-      cdkBuilder.sourceEntity(sourceEntity.let(CfnTemplate.TemplateSourceEntityProperty::unwrap))
+      cdkBuilder.sourceEntity(sourceEntity.let(CfnTemplate.TemplateSourceEntityProperty.Companion::unwrap))
     }
 
     /**
@@ -388,7 +388,7 @@ public interface CfnTemplateProps {
      * the resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -411,7 +411,7 @@ public interface CfnTemplateProps {
      * When you set this value to `LENIENT` , validation is skipped for specific errors.
      */
     override fun validationStrategy(validationStrategy: IResolvable) {
-      cdkBuilder.validationStrategy(validationStrategy.let(IResolvable::unwrap))
+      cdkBuilder.validationStrategy(validationStrategy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -420,7 +420,7 @@ public interface CfnTemplateProps {
      * When you set this value to `LENIENT` , validation is skipped for specific errors.
      */
     override fun validationStrategy(validationStrategy: CfnTemplate.ValidationStrategyProperty) {
-      cdkBuilder.validationStrategy(validationStrategy.let(CfnTemplate.ValidationStrategyProperty::unwrap))
+      cdkBuilder.validationStrategy(validationStrategy.let(CfnTemplate.ValidationStrategyProperty.Companion::unwrap))
     }
 
     /**

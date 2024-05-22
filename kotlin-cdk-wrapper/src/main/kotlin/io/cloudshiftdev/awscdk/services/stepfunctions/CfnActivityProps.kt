@@ -115,7 +115,7 @@ public interface CfnActivityProps {
      * Tags may only contain Unicode letters, digits, white space, or these symbols: `_ . : / = + -
      */
     override fun tags(tags: List<CfnActivity.TagsEntryProperty>) {
-      cdkBuilder.tags(tags.map(CfnActivity.TagsEntryProperty::unwrap))
+      cdkBuilder.tags(tags.map(CfnActivity.TagsEntryProperty.Companion::unwrap))
     }
 
     /**

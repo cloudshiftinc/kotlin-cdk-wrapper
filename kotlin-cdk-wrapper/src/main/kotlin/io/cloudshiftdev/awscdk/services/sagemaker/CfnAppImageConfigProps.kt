@@ -222,7 +222,7 @@ public interface CfnAppImageConfigProps {
      * as the environment variables and entry point.
      */
     override fun codeEditorAppImageConfig(codeEditorAppImageConfig: IResolvable) {
-      cdkBuilder.codeEditorAppImageConfig(codeEditorAppImageConfig.let(IResolvable::unwrap))
+      cdkBuilder.codeEditorAppImageConfig(codeEditorAppImageConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -231,7 +231,7 @@ public interface CfnAppImageConfigProps {
      */
     override
         fun codeEditorAppImageConfig(codeEditorAppImageConfig: CfnAppImageConfig.CodeEditorAppImageConfigProperty) {
-      cdkBuilder.codeEditorAppImageConfig(codeEditorAppImageConfig.let(CfnAppImageConfig.CodeEditorAppImageConfigProperty::unwrap))
+      cdkBuilder.codeEditorAppImageConfig(codeEditorAppImageConfig.let(CfnAppImageConfig.CodeEditorAppImageConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -250,7 +250,7 @@ public interface CfnAppImageConfigProps {
      * as the environment variables and entry point.
      */
     override fun jupyterLabAppImageConfig(jupyterLabAppImageConfig: IResolvable) {
-      cdkBuilder.jupyterLabAppImageConfig(jupyterLabAppImageConfig.let(IResolvable::unwrap))
+      cdkBuilder.jupyterLabAppImageConfig(jupyterLabAppImageConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -259,7 +259,7 @@ public interface CfnAppImageConfigProps {
      */
     override
         fun jupyterLabAppImageConfig(jupyterLabAppImageConfig: CfnAppImageConfig.JupyterLabAppImageConfigProperty) {
-      cdkBuilder.jupyterLabAppImageConfig(jupyterLabAppImageConfig.let(CfnAppImageConfig.JupyterLabAppImageConfigProperty::unwrap))
+      cdkBuilder.jupyterLabAppImageConfig(jupyterLabAppImageConfig.let(CfnAppImageConfig.JupyterLabAppImageConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -278,7 +278,7 @@ public interface CfnAppImageConfigProps {
      * SageMaker image.
      */
     override fun kernelGatewayImageConfig(kernelGatewayImageConfig: IResolvable) {
-      cdkBuilder.kernelGatewayImageConfig(kernelGatewayImageConfig.let(IResolvable::unwrap))
+      cdkBuilder.kernelGatewayImageConfig(kernelGatewayImageConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -287,7 +287,7 @@ public interface CfnAppImageConfigProps {
      */
     override
         fun kernelGatewayImageConfig(kernelGatewayImageConfig: CfnAppImageConfig.KernelGatewayImageConfigProperty) {
-      cdkBuilder.kernelGatewayImageConfig(kernelGatewayImageConfig.let(CfnAppImageConfig.KernelGatewayImageConfigProperty::unwrap))
+      cdkBuilder.kernelGatewayImageConfig(kernelGatewayImageConfig.let(CfnAppImageConfig.KernelGatewayImageConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -308,7 +308,7 @@ public interface CfnAppImageConfigProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

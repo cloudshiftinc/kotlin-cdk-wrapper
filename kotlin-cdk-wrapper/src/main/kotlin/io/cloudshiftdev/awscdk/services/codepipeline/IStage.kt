@@ -86,7 +86,7 @@ public interface IStage {
      * @param action 
      */
     override fun addAction(action: IAction) {
-      unwrap(this).addAction(action.let(IAction::unwrap))
+      unwrap(this).addAction(action.let(IAction.Companion::unwrap))
     }
 
     /**
@@ -103,7 +103,7 @@ public interface IStage {
      * @param options
      */
     override fun onStateChange(name: String, target: IRuleTarget): Rule =
-        unwrap(this).onStateChange(name, target.let(IRuleTarget::unwrap)).let(Rule::wrap)
+        unwrap(this).onStateChange(name, target.let(IRuleTarget.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * @param name 
@@ -114,8 +114,8 @@ public interface IStage {
       name: String,
       target: IRuleTarget,
       options: RuleProps,
-    ): Rule = unwrap(this).onStateChange(name, target.let(IRuleTarget::unwrap),
-        options.let(RuleProps::unwrap)).let(Rule::wrap)
+    ): Rule = unwrap(this).onStateChange(name, target.let(IRuleTarget.Companion::unwrap),
+        options.let(RuleProps.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * @param name 

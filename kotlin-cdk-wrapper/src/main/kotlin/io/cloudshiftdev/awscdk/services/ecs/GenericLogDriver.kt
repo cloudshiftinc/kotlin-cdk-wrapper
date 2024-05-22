@@ -31,7 +31,7 @@ public open class GenericLogDriver(
   cdkObject: software.amazon.awscdk.services.ecs.GenericLogDriver,
 ) : LogDriver(cdkObject) {
   public constructor(props: GenericLogDriverProps) :
-      this(software.amazon.awscdk.services.ecs.GenericLogDriver(props.let(GenericLogDriverProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.GenericLogDriver(props.let(GenericLogDriverProps.Companion::unwrap))
   )
 
   public constructor(props: GenericLogDriverProps.Builder.() -> Unit) :
@@ -45,8 +45,8 @@ public open class GenericLogDriver(
    * @param _containerDefinition 
    */
   public override fun bind(scope: Construct, containerDefinition: ContainerDefinition):
-      LogDriverConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      containerDefinition.let(ContainerDefinition::unwrap)).let(LogDriverConfig::wrap)
+      LogDriverConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      containerDefinition.let(ContainerDefinition.Companion::unwrap)).let(LogDriverConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.GenericLogDriver].

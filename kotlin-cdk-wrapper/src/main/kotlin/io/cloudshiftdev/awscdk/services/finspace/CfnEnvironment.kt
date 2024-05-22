@@ -70,8 +70,8 @@ public open class CfnEnvironment(
     id: String,
     props: CfnEnvironmentProps,
   ) :
-      this(software.amazon.awscdk.services.finspace.CfnEnvironment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEnvironmentProps::unwrap))
+      this(software.amazon.awscdk.services.finspace.CfnEnvironment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEnvironmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -177,14 +177,14 @@ public open class CfnEnvironment(
    * Configuration information when authentication mode is FEDERATED.
    */
   public open fun federationParameters(`value`: IResolvable) {
-    unwrap(this).setFederationParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFederationParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration information when authentication mode is FEDERATED.
    */
   public open fun federationParameters(`value`: FederationParametersProperty) {
-    unwrap(this).setFederationParameters(`value`.let(FederationParametersProperty::unwrap))
+    unwrap(this).setFederationParameters(`value`.let(FederationParametersProperty.Companion::unwrap))
   }
 
   /**
@@ -201,7 +201,7 @@ public open class CfnEnvironment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -237,14 +237,14 @@ public open class CfnEnvironment(
    * Configuration information for the superuser.
    */
   public open fun superuserParameters(`value`: IResolvable) {
-    unwrap(this).setSuperuserParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSuperuserParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration information for the superuser.
    */
   public open fun superuserParameters(`value`: SuperuserParametersProperty) {
-    unwrap(this).setSuperuserParameters(`value`.let(SuperuserParametersProperty::unwrap))
+    unwrap(this).setSuperuserParameters(`value`.let(SuperuserParametersProperty.Companion::unwrap))
   }
 
   /**
@@ -270,7 +270,7 @@ public open class CfnEnvironment(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -462,7 +462,7 @@ public open class CfnEnvironment(
      * @param federationParameters Configuration information when authentication mode is FEDERATED. 
      */
     override fun federationParameters(federationParameters: IResolvable) {
-      cdkBuilder.federationParameters(federationParameters.let(IResolvable::unwrap))
+      cdkBuilder.federationParameters(federationParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -472,7 +472,7 @@ public open class CfnEnvironment(
      * @param federationParameters Configuration information when authentication mode is FEDERATED. 
      */
     override fun federationParameters(federationParameters: FederationParametersProperty) {
-      cdkBuilder.federationParameters(federationParameters.let(FederationParametersProperty::unwrap))
+      cdkBuilder.federationParameters(federationParameters.let(FederationParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -514,7 +514,7 @@ public open class CfnEnvironment(
      * @param superuserParameters Configuration information for the superuser. 
      */
     override fun superuserParameters(superuserParameters: IResolvable) {
-      cdkBuilder.superuserParameters(superuserParameters.let(IResolvable::unwrap))
+      cdkBuilder.superuserParameters(superuserParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -524,7 +524,7 @@ public open class CfnEnvironment(
      * @param superuserParameters Configuration information for the superuser. 
      */
     override fun superuserParameters(superuserParameters: SuperuserParametersProperty) {
-      cdkBuilder.superuserParameters(superuserParameters.let(SuperuserParametersProperty::unwrap))
+      cdkBuilder.superuserParameters(superuserParameters.let(SuperuserParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -546,7 +546,7 @@ public open class CfnEnvironment(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -875,7 +875,7 @@ public open class CfnEnvironment(
        * 2.0 compliant identity provider (IdP) documentation for details.
        */
       override fun attributeMap(attributeMap: IResolvable) {
-        cdkBuilder.attributeMap(attributeMap.let(IResolvable::unwrap))
+        cdkBuilder.attributeMap(attributeMap.let(IResolvable.Companion::unwrap))
       }
 
       /**

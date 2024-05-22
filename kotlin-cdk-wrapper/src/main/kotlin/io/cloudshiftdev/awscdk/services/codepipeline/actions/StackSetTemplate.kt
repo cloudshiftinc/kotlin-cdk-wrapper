@@ -49,7 +49,7 @@ public abstract class StackSetTemplate(
 
   public companion object {
     public fun fromArtifactPath(artifactPath: ArtifactPath): StackSetTemplate =
-        software.amazon.awscdk.services.codepipeline.actions.StackSetTemplate.fromArtifactPath(artifactPath.let(ArtifactPath::unwrap)).let(StackSetTemplate::wrap)
+        software.amazon.awscdk.services.codepipeline.actions.StackSetTemplate.fromArtifactPath(artifactPath.let(ArtifactPath.Companion::unwrap)).let(StackSetTemplate::wrap)
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.actions.StackSetTemplate):

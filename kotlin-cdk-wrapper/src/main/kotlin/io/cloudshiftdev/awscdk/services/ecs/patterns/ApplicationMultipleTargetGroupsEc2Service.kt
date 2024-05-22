@@ -52,7 +52,7 @@ public open class ApplicationMultipleTargetGroupsEc2Service(
   cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsEc2Service,
 ) : ApplicationMultipleTargetGroupsServiceBase(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsEc2Service(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsEc2Service(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -61,8 +61,8 @@ public open class ApplicationMultipleTargetGroupsEc2Service(
     id: String,
     props: ApplicationMultipleTargetGroupsEc2ServiceProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsEc2Service(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ApplicationMultipleTargetGroupsEc2ServiceProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsEc2Service(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ApplicationMultipleTargetGroupsEc2ServiceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -409,7 +409,7 @@ public open class ApplicationMultipleTargetGroupsEc2Service(
      * discovery. 
      */
     override fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
-      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions::unwrap))
+      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions.Companion::unwrap))
     }
 
     /**
@@ -437,7 +437,7 @@ public open class ApplicationMultipleTargetGroupsEc2Service(
      * @param cluster The name of the cluster that hosts the service. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -506,7 +506,7 @@ public open class ApplicationMultipleTargetGroupsEc2Service(
      * started. 
      */
     override fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
-      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration::unwrap))
+      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -517,7 +517,7 @@ public open class ApplicationMultipleTargetGroupsEc2Service(
      * @param loadBalancers The application load balancer that will serve traffic to the service. 
      */
     override fun loadBalancers(loadBalancers: List<ApplicationLoadBalancerProps>) {
-      cdkBuilder.loadBalancers(loadBalancers.map(ApplicationLoadBalancerProps::unwrap))
+      cdkBuilder.loadBalancers(loadBalancers.map(ApplicationLoadBalancerProps.Companion::unwrap))
     }
 
     /**
@@ -579,7 +579,7 @@ public open class ApplicationMultipleTargetGroupsEc2Service(
      * @param placementConstraints The placement constraints to use for tasks in the service. 
      */
     override fun placementConstraints(placementConstraints: List<PlacementConstraint>) {
-      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint::unwrap))
+      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint.Companion::unwrap))
     }
 
     /**
@@ -608,7 +608,7 @@ public open class ApplicationMultipleTargetGroupsEc2Service(
      * @param placementStrategies The placement strategies to use for tasks in the service. 
      */
     override fun placementStrategies(placementStrategies: List<PlacementStrategy>) {
-      cdkBuilder.placementStrategies(placementStrategies.map(PlacementStrategy::unwrap))
+      cdkBuilder.placementStrategies(placementStrategies.map(PlacementStrategy.Companion::unwrap))
     }
 
     /**
@@ -637,7 +637,7 @@ public open class ApplicationMultipleTargetGroupsEc2Service(
      * service to the tasks in the service. 
      */
     override fun propagateTags(propagateTags: PropagatedTagSource) {
-      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource.Companion::unwrap))
     }
 
     /**
@@ -660,7 +660,7 @@ public open class ApplicationMultipleTargetGroupsEc2Service(
      * @param targetGroups Properties to specify ALB target groups. 
      */
     override fun targetGroups(targetGroups: List<ApplicationTargetProps>) {
-      cdkBuilder.targetGroups(targetGroups.map(ApplicationTargetProps::unwrap))
+      cdkBuilder.targetGroups(targetGroups.map(ApplicationTargetProps.Companion::unwrap))
     }
 
     /**
@@ -686,7 +686,7 @@ public open class ApplicationMultipleTargetGroupsEc2Service(
      * TaskDefinition or TaskImageOptions must be specified. 
      */
     override fun taskDefinition(taskDefinition: Ec2TaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(Ec2TaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(Ec2TaskDefinition.Companion::unwrap))
     }
 
     /**
@@ -699,7 +699,7 @@ public open class ApplicationMultipleTargetGroupsEc2Service(
      * @param taskImageOptions The properties required to create a new task definition. 
      */
     override fun taskImageOptions(taskImageOptions: ApplicationLoadBalancedTaskImageProps) {
-      cdkBuilder.taskImageOptions(taskImageOptions.let(ApplicationLoadBalancedTaskImageProps::unwrap))
+      cdkBuilder.taskImageOptions(taskImageOptions.let(ApplicationLoadBalancedTaskImageProps.Companion::unwrap))
     }
 
     /**
@@ -730,7 +730,7 @@ public open class ApplicationMultipleTargetGroupsEc2Service(
      * interfaces (ENIs) will be deployed. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build():

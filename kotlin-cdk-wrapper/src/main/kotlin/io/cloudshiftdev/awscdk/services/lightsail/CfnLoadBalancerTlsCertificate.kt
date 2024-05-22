@@ -47,8 +47,8 @@ public open class CfnLoadBalancerTlsCertificate(
     id: String,
     props: CfnLoadBalancerTlsCertificateProps,
   ) :
-      this(software.amazon.awscdk.services.lightsail.CfnLoadBalancerTlsCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLoadBalancerTlsCertificateProps::unwrap))
+      this(software.amazon.awscdk.services.lightsail.CfnLoadBalancerTlsCertificate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLoadBalancerTlsCertificateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -134,7 +134,7 @@ public open class CfnLoadBalancerTlsCertificate(
    * TLS certificate is attached to.
    */
   public open fun httpsRedirectionEnabled(`value`: IResolvable) {
-    unwrap(this).setHttpsRedirectionEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHttpsRedirectionEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -143,7 +143,7 @@ public open class CfnLoadBalancerTlsCertificate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -165,7 +165,7 @@ public open class CfnLoadBalancerTlsCertificate(
    * balancer.
    */
   public open fun isAttached(`value`: IResolvable) {
-    unwrap(this).setIsAttached(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIsAttached(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -357,7 +357,7 @@ public open class CfnLoadBalancerTlsCertificate(
      * enabled for the load balancer that the TLS certificate is attached to. 
      */
     override fun httpsRedirectionEnabled(httpsRedirectionEnabled: IResolvable) {
-      cdkBuilder.httpsRedirectionEnabled(httpsRedirectionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.httpsRedirectionEnabled(httpsRedirectionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -381,7 +381,7 @@ public open class CfnLoadBalancerTlsCertificate(
      * Lightsail load balancer. 
      */
     override fun isAttached(isAttached: IResolvable) {
-      cdkBuilder.isAttached(isAttached.let(IResolvable::unwrap))
+      cdkBuilder.isAttached(isAttached.let(IResolvable.Companion::unwrap))
     }
 
     /**

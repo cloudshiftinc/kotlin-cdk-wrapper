@@ -39,8 +39,8 @@ public open class CfnServiceActionAssociation(
     id: String,
     props: CfnServiceActionAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.servicecatalog.CfnServiceActionAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnServiceActionAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.servicecatalog.CfnServiceActionAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnServiceActionAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -56,7 +56,7 @@ public open class CfnServiceActionAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

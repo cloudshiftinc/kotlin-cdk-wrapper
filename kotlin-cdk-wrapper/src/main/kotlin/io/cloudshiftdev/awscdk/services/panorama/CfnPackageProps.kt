@@ -117,14 +117,14 @@ public interface CfnPackageProps {
      * @param storageLocation A storage location.
      */
     override fun storageLocation(storageLocation: IResolvable) {
-      cdkBuilder.storageLocation(storageLocation.let(IResolvable::unwrap))
+      cdkBuilder.storageLocation(storageLocation.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param storageLocation A storage location.
      */
     override fun storageLocation(storageLocation: CfnPackage.StorageLocationProperty) {
-      cdkBuilder.storageLocation(storageLocation.let(CfnPackage.StorageLocationProperty::unwrap))
+      cdkBuilder.storageLocation(storageLocation.let(CfnPackage.StorageLocationProperty.Companion::unwrap))
     }
 
     /**
@@ -140,7 +140,7 @@ public interface CfnPackageProps {
      * @param tags Tags for the package.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

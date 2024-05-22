@@ -46,7 +46,7 @@ public abstract class Signals(
    * @param renderOptions 
    */
   public open fun renderCreationPolicy(renderOptions: RenderSignalsOptions): CfnCreationPolicy =
-      unwrap(this).renderCreationPolicy(renderOptions.let(RenderSignalsOptions::unwrap)).let(CfnCreationPolicy::wrap)
+      unwrap(this).renderCreationPolicy(renderOptions.let(RenderSignalsOptions.Companion::unwrap)).let(CfnCreationPolicy::wrap)
 
   /**
    * Render the ASG's CreationPolicy.
@@ -67,7 +67,7 @@ public abstract class Signals(
         software.amazon.awscdk.services.autoscaling.Signals.waitForAll().let(Signals::wrap)
 
     public fun waitForAll(options: SignalsOptions): Signals =
-        software.amazon.awscdk.services.autoscaling.Signals.waitForAll(options.let(SignalsOptions::unwrap)).let(Signals::wrap)
+        software.amazon.awscdk.services.autoscaling.Signals.waitForAll(options.let(SignalsOptions.Companion::unwrap)).let(Signals::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2fe2212c2d0f76a2e61d2f4cdb806b6da61fbceaa5c17d715c6dcf2dd2a14e06")
@@ -79,7 +79,7 @@ public abstract class Signals(
 
     public fun waitForCount(count: Number, options: SignalsOptions): Signals =
         software.amazon.awscdk.services.autoscaling.Signals.waitForCount(count,
-        options.let(SignalsOptions::unwrap)).let(Signals::wrap)
+        options.let(SignalsOptions.Companion::unwrap)).let(Signals::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2d3874b7973774c5fe1fc1f212989f1c0a1acacdd92a717ab56c79309941861a")
@@ -90,7 +90,7 @@ public abstract class Signals(
         software.amazon.awscdk.services.autoscaling.Signals.waitForMinCapacity().let(Signals::wrap)
 
     public fun waitForMinCapacity(options: SignalsOptions): Signals =
-        software.amazon.awscdk.services.autoscaling.Signals.waitForMinCapacity(options.let(SignalsOptions::unwrap)).let(Signals::wrap)
+        software.amazon.awscdk.services.autoscaling.Signals.waitForMinCapacity(options.let(SignalsOptions.Companion::unwrap)).let(Signals::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6e6b98b3471adb47ede929262fc35c345ebc9dd3ca20226e3b327ba411315586")

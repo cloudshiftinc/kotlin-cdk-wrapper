@@ -139,7 +139,7 @@ public interface RepositoryTriggerOptions {
      * for all repository events.
      */
     override fun events(events: List<RepositoryEventTrigger>) {
-      cdkBuilder.events(events.map(RepositoryEventTrigger::unwrap))
+      cdkBuilder.events(events.map(RepositoryEventTrigger.Companion::unwrap))
     }
 
     /**

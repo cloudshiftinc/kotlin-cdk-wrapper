@@ -60,8 +60,8 @@ public open class EmrContainersStartJobRun(
     id: String,
     props: EmrContainersStartJobRunProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersStartJobRun(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EmrContainersStartJobRunProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersStartJobRun(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EmrContainersStartJobRunProps.Companion::unwrap))
   )
 
   public constructor(
@@ -380,7 +380,7 @@ public open class EmrContainersStartJobRun(
      * @param applicationConfig The configurations for the application running in the job run. 
      */
     override fun applicationConfig(applicationConfig: List<ApplicationConfiguration>) {
-      cdkBuilder.applicationConfig(applicationConfig.map(ApplicationConfiguration::unwrap))
+      cdkBuilder.applicationConfig(applicationConfig.map(ApplicationConfiguration.Companion::unwrap))
     }
 
     /**
@@ -419,7 +419,7 @@ public open class EmrContainersStartJobRun(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -451,7 +451,7 @@ public open class EmrContainersStartJobRun(
      * @param executionRole The execution role for the job run. 
      */
     override fun executionRole(executionRole: IRole) {
-      cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
+      cdkBuilder.executionRole(executionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -464,7 +464,7 @@ public open class EmrContainersStartJobRun(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -478,7 +478,7 @@ public open class EmrContainersStartJobRun(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -513,7 +513,7 @@ public open class EmrContainersStartJobRun(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -523,7 +523,7 @@ public open class EmrContainersStartJobRun(
      * @param jobDriver The job driver for the job run. 
      */
     override fun jobDriver(jobDriver: JobDriver) {
-      cdkBuilder.jobDriver(jobDriver.let(JobDriver::unwrap))
+      cdkBuilder.jobDriver(jobDriver.let(JobDriver.Companion::unwrap))
     }
 
     /**
@@ -558,7 +558,7 @@ public open class EmrContainersStartJobRun(
      * @param monitoring Configuration for monitoring the job run. 
      */
     override fun monitoring(monitoring: Monitoring) {
-      cdkBuilder.monitoring(monitoring.let(Monitoring::unwrap))
+      cdkBuilder.monitoring(monitoring.let(Monitoring.Companion::unwrap))
     }
 
     /**
@@ -597,7 +597,7 @@ public open class EmrContainersStartJobRun(
      * @param releaseLabel The Amazon EMR release version to use for the job run. 
      */
     override fun releaseLabel(releaseLabel: ReleaseLabel) {
-      cdkBuilder.releaseLabel(releaseLabel.let(ReleaseLabel::unwrap))
+      cdkBuilder.releaseLabel(releaseLabel.let(ReleaseLabel.Companion::unwrap))
     }
 
     /**
@@ -664,7 +664,7 @@ public open class EmrContainersStartJobRun(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -677,7 +677,7 @@ public open class EmrContainersStartJobRun(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -686,7 +686,7 @@ public open class EmrContainersStartJobRun(
      * @param virtualCluster The ID of the virtual cluster where the job will be run. 
      */
     override fun virtualCluster(virtualCluster: VirtualClusterInput) {
-      cdkBuilder.virtualCluster(virtualCluster.let(VirtualClusterInput::unwrap))
+      cdkBuilder.virtualCluster(virtualCluster.let(VirtualClusterInput.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersStartJobRun

@@ -44,7 +44,8 @@ public open class NetworkListenerAction(
    * @param listener 
    */
   public open fun bind(scope: Construct, listener: INetworkListener) {
-    unwrap(this).bind(scope.let(Construct::unwrap), listener.let(INetworkListener::unwrap))
+    unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+        listener.let(INetworkListener.Companion::unwrap))
   }
 
   /**
@@ -61,15 +62,15 @@ public open class NetworkListenerAction(
 
   public companion object {
     public fun forward(targetGroups: List<INetworkTargetGroup>): NetworkListenerAction =
-        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction.forward(targetGroups.map(INetworkTargetGroup::unwrap)).let(NetworkListenerAction::wrap)
+        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction.forward(targetGroups.map(INetworkTargetGroup.Companion::unwrap)).let(NetworkListenerAction::wrap)
 
     public fun forward(vararg targetGroups: INetworkTargetGroup): NetworkListenerAction =
         forward(targetGroups.toList())
 
     public fun forward(targetGroups: List<INetworkTargetGroup>, options: NetworkForwardOptions):
         NetworkListenerAction =
-        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction.forward(targetGroups.map(INetworkTargetGroup::unwrap),
-        options.let(NetworkForwardOptions::unwrap)).let(NetworkListenerAction::wrap)
+        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction.forward(targetGroups.map(INetworkTargetGroup.Companion::unwrap),
+        options.let(NetworkForwardOptions.Companion::unwrap)).let(NetworkListenerAction::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b8de02d392eea3480b5baa6fa25dc414abfe95b01e64827e0f129d8d217b140d")
@@ -79,15 +80,15 @@ public open class NetworkListenerAction(
 
     public fun weightedForward(targetGroups: List<NetworkWeightedTargetGroup>):
         NetworkListenerAction =
-        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction.weightedForward(targetGroups.map(NetworkWeightedTargetGroup::unwrap)).let(NetworkListenerAction::wrap)
+        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction.weightedForward(targetGroups.map(NetworkWeightedTargetGroup.Companion::unwrap)).let(NetworkListenerAction::wrap)
 
     public fun weightedForward(vararg targetGroups: NetworkWeightedTargetGroup):
         NetworkListenerAction = weightedForward(targetGroups.toList())
 
     public fun weightedForward(targetGroups: List<NetworkWeightedTargetGroup>,
         options: NetworkForwardOptions): NetworkListenerAction =
-        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction.weightedForward(targetGroups.map(NetworkWeightedTargetGroup::unwrap),
-        options.let(NetworkForwardOptions::unwrap)).let(NetworkListenerAction::wrap)
+        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerAction.weightedForward(targetGroups.map(NetworkWeightedTargetGroup.Companion::unwrap),
+        options.let(NetworkForwardOptions.Companion::unwrap)).let(NetworkListenerAction::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2a81ee2c40d375f94fdb3a1bab176498ab7876003dd1c156f2df5db10392ac1b")

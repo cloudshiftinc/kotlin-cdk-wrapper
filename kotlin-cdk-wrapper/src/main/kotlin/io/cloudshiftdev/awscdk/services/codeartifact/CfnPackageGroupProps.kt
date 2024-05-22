@@ -210,7 +210,7 @@ public interface CfnPackageGroupProps {
      * @param originConfiguration Details about the package origin configuration of a package group.
      */
     override fun originConfiguration(originConfiguration: IResolvable) {
-      cdkBuilder.originConfiguration(originConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.originConfiguration(originConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -218,7 +218,7 @@ public interface CfnPackageGroupProps {
      */
     override
         fun originConfiguration(originConfiguration: CfnPackageGroup.OriginConfigurationProperty) {
-      cdkBuilder.originConfiguration(originConfiguration.let(CfnPackageGroup.OriginConfigurationProperty::unwrap))
+      cdkBuilder.originConfiguration(originConfiguration.let(CfnPackageGroup.OriginConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -242,7 +242,7 @@ public interface CfnPackageGroupProps {
      * @param tags A list of tags to be applied to the package group.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

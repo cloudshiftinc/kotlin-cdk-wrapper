@@ -161,7 +161,7 @@ public interface FunctionUrlOriginProps : OriginProps {
      * Valid values are 1-10 seconds, inclusive.
      */
     override fun connectionTimeout(connectionTimeout: Duration) {
-      cdkBuilder.connectionTimeout(connectionTimeout.let(Duration::unwrap))
+      cdkBuilder.connectionTimeout(connectionTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -183,7 +183,7 @@ public interface FunctionUrlOriginProps : OriginProps {
      * error at deploy time.
      */
     override fun keepaliveTimeout(keepaliveTimeout: Duration) {
-      cdkBuilder.keepaliveTimeout(keepaliveTimeout.let(Duration::unwrap))
+      cdkBuilder.keepaliveTimeout(keepaliveTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -230,7 +230,7 @@ public interface FunctionUrlOriginProps : OriginProps {
      * error at deploy time.
      */
     override fun readTimeout(readTimeout: Duration) {
-      cdkBuilder.readTimeout(readTimeout.let(Duration::unwrap))
+      cdkBuilder.readTimeout(readTimeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOriginProps =

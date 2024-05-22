@@ -283,7 +283,7 @@ public interface EmrContainersStartJobRunProps : TaskStateBaseProps {
      * Maximum of 100 items
      */
     override fun applicationConfig(applicationConfig: List<ApplicationConfiguration>) {
-      cdkBuilder.applicationConfig(applicationConfig.map(ApplicationConfiguration::unwrap))
+      cdkBuilder.applicationConfig(applicationConfig.map(ApplicationConfiguration.Companion::unwrap))
     }
 
     /**
@@ -306,7 +306,7 @@ public interface EmrContainersStartJobRunProps : TaskStateBaseProps {
      * This enables cross-account resource invocations.
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -325,7 +325,7 @@ public interface EmrContainersStartJobRunProps : TaskStateBaseProps {
      * If an execution role is provided, follow the documentation to update the role trust policy.
      */
     override fun executionRole(executionRole: IRole) {
-      cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
+      cdkBuilder.executionRole(executionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -334,7 +334,7 @@ public interface EmrContainersStartJobRunProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -343,7 +343,7 @@ public interface EmrContainersStartJobRunProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -364,14 +364,14 @@ public interface EmrContainersStartJobRunProps : TaskStateBaseProps {
      * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
      * @param jobDriver The job driver for the job run. 
      */
     override fun jobDriver(jobDriver: JobDriver) {
-      cdkBuilder.jobDriver(jobDriver.let(JobDriver::unwrap))
+      cdkBuilder.jobDriver(jobDriver.let(JobDriver.Companion::unwrap))
     }
 
     /**
@@ -393,7 +393,7 @@ public interface EmrContainersStartJobRunProps : TaskStateBaseProps {
      * @param monitoring Configuration for monitoring the job run.
      */
     override fun monitoring(monitoring: Monitoring) {
-      cdkBuilder.monitoring(monitoring.let(Monitoring::unwrap))
+      cdkBuilder.monitoring(monitoring.let(Monitoring.Companion::unwrap))
     }
 
     /**
@@ -418,7 +418,7 @@ public interface EmrContainersStartJobRunProps : TaskStateBaseProps {
      * @param releaseLabel The Amazon EMR release version to use for the job run. 
      */
     override fun releaseLabel(releaseLabel: ReleaseLabel) {
-      cdkBuilder.releaseLabel(releaseLabel.let(ReleaseLabel::unwrap))
+      cdkBuilder.releaseLabel(releaseLabel.let(ReleaseLabel.Companion::unwrap))
     }
 
     /**
@@ -460,7 +460,7 @@ public interface EmrContainersStartJobRunProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -469,14 +469,14 @@ public interface EmrContainersStartJobRunProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param virtualCluster The ID of the virtual cluster where the job will be run. 
      */
     override fun virtualCluster(virtualCluster: VirtualClusterInput) {
-      cdkBuilder.virtualCluster(virtualCluster.let(VirtualClusterInput::unwrap))
+      cdkBuilder.virtualCluster(virtualCluster.let(VirtualClusterInput.Companion::unwrap))
     }
 
     public fun build():

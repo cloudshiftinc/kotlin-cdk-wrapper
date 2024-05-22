@@ -470,8 +470,8 @@ public open class CfnCampaign(
     id: String,
     props: CfnCampaignProps,
   ) :
-      this(software.amazon.awscdk.services.pinpoint.CfnCampaign(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCampaignProps::unwrap))
+      this(software.amazon.awscdk.services.pinpoint.CfnCampaign(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCampaignProps.Companion::unwrap))
   )
 
   public constructor(
@@ -492,7 +492,7 @@ public open class CfnCampaign(
    * default treatment for the campaign.
    */
   public open fun additionalTreatments(`value`: IResolvable) {
-    unwrap(this).setAdditionalTreatments(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAdditionalTreatments(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -541,14 +541,14 @@ public open class CfnCampaign(
    * Specifies the Lambda function to use as a code hook for a campaign.
    */
   public open fun campaignHook(`value`: IResolvable) {
-    unwrap(this).setCampaignHook(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCampaignHook(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the Lambda function to use as a code hook for a campaign.
    */
   public open fun campaignHook(`value`: CampaignHookProperty) {
-    unwrap(this).setCampaignHook(`value`.let(CampaignHookProperty::unwrap))
+    unwrap(this).setCampaignHook(`value`.let(CampaignHookProperty.Companion::unwrap))
   }
 
   /**
@@ -569,14 +569,14 @@ public open class CfnCampaign(
    * The delivery configuration settings for sending the treatment through a custom channel.
    */
   public open fun customDeliveryConfiguration(`value`: IResolvable) {
-    unwrap(this).setCustomDeliveryConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCustomDeliveryConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The delivery configuration settings for sending the treatment through a custom channel.
    */
   public open fun customDeliveryConfiguration(`value`: CustomDeliveryConfigurationProperty) {
-    unwrap(this).setCustomDeliveryConfiguration(`value`.let(CustomDeliveryConfigurationProperty::unwrap))
+    unwrap(this).setCustomDeliveryConfiguration(`value`.let(CustomDeliveryConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -620,7 +620,7 @@ public open class CfnCampaign(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -639,7 +639,7 @@ public open class CfnCampaign(
    * Specifies whether to pause the campaign.
    */
   public open fun isPaused(`value`: IResolvable) {
-    unwrap(this).setIsPaused(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIsPaused(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -651,14 +651,14 @@ public open class CfnCampaign(
    * The messaging limits for the campaign.
    */
   public open fun limits(`value`: IResolvable) {
-    unwrap(this).setLimits(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLimits(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The messaging limits for the campaign.
    */
   public open fun limits(`value`: LimitsProperty) {
-    unwrap(this).setLimits(`value`.let(LimitsProperty::unwrap))
+    unwrap(this).setLimits(`value`.let(LimitsProperty.Companion::unwrap))
   }
 
   /**
@@ -678,14 +678,14 @@ public open class CfnCampaign(
    * The message configuration settings for the treatment.
    */
   public open fun messageConfiguration(`value`: IResolvable) {
-    unwrap(this).setMessageConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMessageConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The message configuration settings for the treatment.
    */
   public open fun messageConfiguration(`value`: MessageConfigurationProperty) {
-    unwrap(this).setMessageConfiguration(`value`.let(MessageConfigurationProperty::unwrap))
+    unwrap(this).setMessageConfiguration(`value`.let(MessageConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -731,14 +731,14 @@ public open class CfnCampaign(
    * The schedule settings for the treatment.
    */
   public open fun schedule(`value`: IResolvable) {
-    unwrap(this).setSchedule(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSchedule(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The schedule settings for the treatment.
    */
   public open fun schedule(`value`: ScheduleProperty) {
-    unwrap(this).setSchedule(`value`.let(ScheduleProperty::unwrap))
+    unwrap(this).setSchedule(`value`.let(ScheduleProperty.Companion::unwrap))
   }
 
   /**
@@ -799,14 +799,14 @@ public open class CfnCampaign(
    * The message template to use for the treatment.
    */
   public open fun templateConfiguration(`value`: IResolvable) {
-    unwrap(this).setTemplateConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTemplateConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The message template to use for the treatment.
    */
   public open fun templateConfiguration(`value`: TemplateConfigurationProperty) {
-    unwrap(this).setTemplateConfiguration(`value`.let(TemplateConfigurationProperty::unwrap))
+    unwrap(this).setTemplateConfiguration(`value`.let(TemplateConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -1186,7 +1186,7 @@ public open class CfnCampaign(
      * campaign, in addition to the default treatment for the campaign. 
      */
     override fun additionalTreatments(additionalTreatments: IResolvable) {
-      cdkBuilder.additionalTreatments(additionalTreatments.let(IResolvable::unwrap))
+      cdkBuilder.additionalTreatments(additionalTreatments.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1231,7 +1231,7 @@ public open class CfnCampaign(
      * @param campaignHook Specifies the Lambda function to use as a code hook for a campaign. 
      */
     override fun campaignHook(campaignHook: IResolvable) {
-      cdkBuilder.campaignHook(campaignHook.let(IResolvable::unwrap))
+      cdkBuilder.campaignHook(campaignHook.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1241,7 +1241,7 @@ public open class CfnCampaign(
      * @param campaignHook Specifies the Lambda function to use as a code hook for a campaign. 
      */
     override fun campaignHook(campaignHook: CampaignHookProperty) {
-      cdkBuilder.campaignHook(campaignHook.let(CampaignHookProperty::unwrap))
+      cdkBuilder.campaignHook(campaignHook.let(CampaignHookProperty.Companion::unwrap))
     }
 
     /**
@@ -1266,7 +1266,7 @@ public open class CfnCampaign(
      * treatment through a custom channel. 
      */
     override fun customDeliveryConfiguration(customDeliveryConfiguration: IResolvable) {
-      cdkBuilder.customDeliveryConfiguration(customDeliveryConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.customDeliveryConfiguration(customDeliveryConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1281,7 +1281,7 @@ public open class CfnCampaign(
      */
     override
         fun customDeliveryConfiguration(customDeliveryConfiguration: CustomDeliveryConfigurationProperty) {
-      cdkBuilder.customDeliveryConfiguration(customDeliveryConfiguration.let(CustomDeliveryConfigurationProperty::unwrap))
+      cdkBuilder.customDeliveryConfiguration(customDeliveryConfiguration.let(CustomDeliveryConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1352,7 +1352,7 @@ public open class CfnCampaign(
      * @param isPaused Specifies whether to pause the campaign. 
      */
     override fun isPaused(isPaused: IResolvable) {
-      cdkBuilder.isPaused(isPaused.let(IResolvable::unwrap))
+      cdkBuilder.isPaused(isPaused.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1362,7 +1362,7 @@ public open class CfnCampaign(
      * @param limits The messaging limits for the campaign. 
      */
     override fun limits(limits: IResolvable) {
-      cdkBuilder.limits(limits.let(IResolvable::unwrap))
+      cdkBuilder.limits(limits.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1372,7 +1372,7 @@ public open class CfnCampaign(
      * @param limits The messaging limits for the campaign. 
      */
     override fun limits(limits: LimitsProperty) {
-      cdkBuilder.limits(limits.let(LimitsProperty::unwrap))
+      cdkBuilder.limits(limits.let(LimitsProperty.Companion::unwrap))
     }
 
     /**
@@ -1393,7 +1393,7 @@ public open class CfnCampaign(
      * @param messageConfiguration The message configuration settings for the treatment. 
      */
     override fun messageConfiguration(messageConfiguration: IResolvable) {
-      cdkBuilder.messageConfiguration(messageConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.messageConfiguration(messageConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1403,7 +1403,7 @@ public open class CfnCampaign(
      * @param messageConfiguration The message configuration settings for the treatment. 
      */
     override fun messageConfiguration(messageConfiguration: MessageConfigurationProperty) {
-      cdkBuilder.messageConfiguration(messageConfiguration.let(MessageConfigurationProperty::unwrap))
+      cdkBuilder.messageConfiguration(messageConfiguration.let(MessageConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1450,7 +1450,7 @@ public open class CfnCampaign(
      * @param schedule The schedule settings for the treatment. 
      */
     override fun schedule(schedule: IResolvable) {
-      cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
+      cdkBuilder.schedule(schedule.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1460,7 +1460,7 @@ public open class CfnCampaign(
      * @param schedule The schedule settings for the treatment. 
      */
     override fun schedule(schedule: ScheduleProperty) {
-      cdkBuilder.schedule(schedule.let(ScheduleProperty::unwrap))
+      cdkBuilder.schedule(schedule.let(ScheduleProperty.Companion::unwrap))
     }
 
     /**
@@ -1515,7 +1515,7 @@ public open class CfnCampaign(
      * @param templateConfiguration The message template to use for the treatment. 
      */
     override fun templateConfiguration(templateConfiguration: IResolvable) {
-      cdkBuilder.templateConfiguration(templateConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.templateConfiguration(templateConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1525,7 +1525,7 @@ public open class CfnCampaign(
      * @param templateConfiguration The message template to use for the treatment. 
      */
     override fun templateConfiguration(templateConfiguration: TemplateConfigurationProperty) {
-      cdkBuilder.templateConfiguration(templateConfiguration.let(TemplateConfigurationProperty::unwrap))
+      cdkBuilder.templateConfiguration(templateConfiguration.let(TemplateConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -2044,14 +2044,14 @@ public open class CfnCampaign(
        * @param dimensions The dimension settings of the event filter for the campaign.
        */
       override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+        cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dimensions The dimension settings of the event filter for the campaign.
        */
       override fun dimensions(dimensions: EventDimensionsProperty) {
-        cdkBuilder.dimensions(dimensions.let(EventDimensionsProperty::unwrap))
+        cdkBuilder.dimensions(dimensions.let(EventDimensionsProperty.Companion::unwrap))
       }
 
       /**
@@ -2446,7 +2446,7 @@ public open class CfnCampaign(
        * button configurations.
        */
       override fun content(content: IResolvable) {
-        cdkBuilder.content(content.let(IResolvable::unwrap))
+        cdkBuilder.content(content.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3367,7 +3367,7 @@ public open class CfnCampaign(
        * *Amazon Pinpoint Developer Guide* .
        */
       override fun eventType(eventType: IResolvable) {
-        cdkBuilder.eventType(eventType.let(IResolvable::unwrap))
+        cdkBuilder.eventType(eventType.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3380,7 +3380,7 @@ public open class CfnCampaign(
        * *Amazon Pinpoint Developer Guide* .
        */
       override fun eventType(eventType: SetDimensionProperty) {
-        cdkBuilder.eventType(eventType.let(SetDimensionProperty::unwrap))
+        cdkBuilder.eventType(eventType.let(SetDimensionProperty.Companion::unwrap))
       }
 
       /**
@@ -3774,7 +3774,7 @@ public open class CfnCampaign(
        * sent to Android.
        */
       override fun android(android: IResolvable) {
-        cdkBuilder.android(android.let(IResolvable::unwrap))
+        cdkBuilder.android(android.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3782,7 +3782,7 @@ public open class CfnCampaign(
        * sent to Android.
        */
       override fun android(android: OverrideButtonConfigurationProperty) {
-        cdkBuilder.android(android.let(OverrideButtonConfigurationProperty::unwrap))
+        cdkBuilder.android(android.let(OverrideButtonConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3799,7 +3799,7 @@ public open class CfnCampaign(
        * message.
        */
       override fun defaultConfig(defaultConfig: IResolvable) {
-        cdkBuilder.defaultConfig(defaultConfig.let(IResolvable::unwrap))
+        cdkBuilder.defaultConfig(defaultConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3807,7 +3807,7 @@ public open class CfnCampaign(
        * message.
        */
       override fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty) {
-        cdkBuilder.defaultConfig(defaultConfig.let(DefaultButtonConfigurationProperty::unwrap))
+        cdkBuilder.defaultConfig(defaultConfig.let(DefaultButtonConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3825,7 +3825,7 @@ public open class CfnCampaign(
        * to iOS devices.
        */
       override fun ios(ios: IResolvable) {
-        cdkBuilder.ios(ios.let(IResolvable::unwrap))
+        cdkBuilder.ios(ios.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3833,7 +3833,7 @@ public open class CfnCampaign(
        * to iOS devices.
        */
       override fun ios(ios: OverrideButtonConfigurationProperty) {
-        cdkBuilder.ios(ios.let(OverrideButtonConfigurationProperty::unwrap))
+        cdkBuilder.ios(ios.let(OverrideButtonConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3850,7 +3850,7 @@ public open class CfnCampaign(
        * web applications.
        */
       override fun web(web: IResolvable) {
-        cdkBuilder.web(web.let(IResolvable::unwrap))
+        cdkBuilder.web(web.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3858,7 +3858,7 @@ public open class CfnCampaign(
        * web applications.
        */
       override fun web(web: OverrideButtonConfigurationProperty) {
-        cdkBuilder.web(web.let(OverrideButtonConfigurationProperty::unwrap))
+        cdkBuilder.web(web.let(OverrideButtonConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -4160,7 +4160,7 @@ public open class CfnCampaign(
        * template.
        */
       override fun bodyConfig(bodyConfig: IResolvable) {
-        cdkBuilder.bodyConfig(bodyConfig.let(IResolvable::unwrap))
+        cdkBuilder.bodyConfig(bodyConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4168,7 +4168,7 @@ public open class CfnCampaign(
        * template.
        */
       override fun bodyConfig(bodyConfig: InAppMessageBodyConfigProperty) {
-        cdkBuilder.bodyConfig(bodyConfig.let(InAppMessageBodyConfigProperty::unwrap))
+        cdkBuilder.bodyConfig(bodyConfig.let(InAppMessageBodyConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -4185,7 +4185,7 @@ public open class CfnCampaign(
        * the in-app message.
        */
       override fun headerConfig(headerConfig: IResolvable) {
-        cdkBuilder.headerConfig(headerConfig.let(IResolvable::unwrap))
+        cdkBuilder.headerConfig(headerConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4193,7 +4193,7 @@ public open class CfnCampaign(
        * the in-app message.
        */
       override fun headerConfig(headerConfig: InAppMessageHeaderConfigProperty) {
-        cdkBuilder.headerConfig(headerConfig.let(InAppMessageHeaderConfigProperty::unwrap))
+        cdkBuilder.headerConfig(headerConfig.let(InAppMessageHeaderConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -4217,7 +4217,7 @@ public open class CfnCampaign(
        * button in an in-app message.
        */
       override fun primaryBtn(primaryBtn: IResolvable) {
-        cdkBuilder.primaryBtn(primaryBtn.let(IResolvable::unwrap))
+        cdkBuilder.primaryBtn(primaryBtn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4225,7 +4225,7 @@ public open class CfnCampaign(
        * button in an in-app message.
        */
       override fun primaryBtn(primaryBtn: InAppMessageButtonProperty) {
-        cdkBuilder.primaryBtn(primaryBtn.let(InAppMessageButtonProperty::unwrap))
+        cdkBuilder.primaryBtn(primaryBtn.let(InAppMessageButtonProperty.Companion::unwrap))
       }
 
       /**
@@ -4242,7 +4242,7 @@ public open class CfnCampaign(
        * button in an in-app message.
        */
       override fun secondaryBtn(secondaryBtn: IResolvable) {
-        cdkBuilder.secondaryBtn(secondaryBtn.let(IResolvable::unwrap))
+        cdkBuilder.secondaryBtn(secondaryBtn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4250,7 +4250,7 @@ public open class CfnCampaign(
        * button in an in-app message.
        */
       override fun secondaryBtn(secondaryBtn: InAppMessageButtonProperty) {
-        cdkBuilder.secondaryBtn(secondaryBtn.let(InAppMessageButtonProperty::unwrap))
+        cdkBuilder.secondaryBtn(secondaryBtn.let(InAppMessageButtonProperty.Companion::unwrap))
       }
 
       /**
@@ -4925,7 +4925,7 @@ public open class CfnCampaign(
      * overrides the default message.
      *
      *
-     * The maximum email message size is 200KB. You can use email templates to send larger email
+     * The maximum email message size is 200 KB. You can use email templates to send larger email
      * messages.
      *
      *
@@ -5086,7 +5086,7 @@ public open class CfnCampaign(
        * @param emailMessage The message that the campaign sends through the email channel. If
        * specified, this message overrides the default message.
        *
-       * The maximum email message size is 200KB. You can use email templates to send larger email
+       * The maximum email message size is 200 KB. You can use email templates to send larger email
        * messages.
        */
       public fun emailMessage(emailMessage: IResolvable)
@@ -5095,7 +5095,7 @@ public open class CfnCampaign(
        * @param emailMessage The message that the campaign sends through the email channel. If
        * specified, this message overrides the default message.
        *
-       * The maximum email message size is 200KB. You can use email templates to send larger email
+       * The maximum email message size is 200 KB. You can use email templates to send larger email
        * messages.
        */
       public fun emailMessage(emailMessage: CampaignEmailMessageProperty)
@@ -5104,7 +5104,7 @@ public open class CfnCampaign(
        * @param emailMessage The message that the campaign sends through the email channel. If
        * specified, this message overrides the default message.
        *
-       * The maximum email message size is 200KB. You can use email templates to send larger email
+       * The maximum email message size is 200 KB. You can use email templates to send larger email
        * messages.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -5190,7 +5190,7 @@ public open class CfnCampaign(
        * If specified, this message overrides the default message.
        */
       override fun admMessage(admMessage: IResolvable) {
-        cdkBuilder.admMessage(admMessage.let(IResolvable::unwrap))
+        cdkBuilder.admMessage(admMessage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5199,7 +5199,7 @@ public open class CfnCampaign(
        * If specified, this message overrides the default message.
        */
       override fun admMessage(admMessage: MessageProperty) {
-        cdkBuilder.admMessage(admMessage.let(MessageProperty::unwrap))
+        cdkBuilder.admMessage(admMessage.let(MessageProperty.Companion::unwrap))
       }
 
       /**
@@ -5218,7 +5218,7 @@ public open class CfnCampaign(
        * If specified, this message overrides the default message.
        */
       override fun apnsMessage(apnsMessage: IResolvable) {
-        cdkBuilder.apnsMessage(apnsMessage.let(IResolvable::unwrap))
+        cdkBuilder.apnsMessage(apnsMessage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5227,7 +5227,7 @@ public open class CfnCampaign(
        * If specified, this message overrides the default message.
        */
       override fun apnsMessage(apnsMessage: MessageProperty) {
-        cdkBuilder.apnsMessage(apnsMessage.let(MessageProperty::unwrap))
+        cdkBuilder.apnsMessage(apnsMessage.let(MessageProperty.Companion::unwrap))
       }
 
       /**
@@ -5246,7 +5246,7 @@ public open class CfnCampaign(
        * If specified, this message overrides the default message.
        */
       override fun baiduMessage(baiduMessage: IResolvable) {
-        cdkBuilder.baiduMessage(baiduMessage.let(IResolvable::unwrap))
+        cdkBuilder.baiduMessage(baiduMessage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5255,7 +5255,7 @@ public open class CfnCampaign(
        * If specified, this message overrides the default message.
        */
       override fun baiduMessage(baiduMessage: MessageProperty) {
-        cdkBuilder.baiduMessage(baiduMessage.let(MessageProperty::unwrap))
+        cdkBuilder.baiduMessage(baiduMessage.let(MessageProperty.Companion::unwrap))
       }
 
       /**
@@ -5275,7 +5275,7 @@ public open class CfnCampaign(
        * If specified, this message overrides the default message.
        */
       override fun customMessage(customMessage: IResolvable) {
-        cdkBuilder.customMessage(customMessage.let(IResolvable::unwrap))
+        cdkBuilder.customMessage(customMessage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5285,7 +5285,7 @@ public open class CfnCampaign(
        * If specified, this message overrides the default message.
        */
       override fun customMessage(customMessage: CampaignCustomMessageProperty) {
-        cdkBuilder.customMessage(customMessage.let(CampaignCustomMessageProperty::unwrap))
+        cdkBuilder.customMessage(customMessage.let(CampaignCustomMessageProperty.Companion::unwrap))
       }
 
       /**
@@ -5304,7 +5304,7 @@ public open class CfnCampaign(
        * that are configured for the campaign.
        */
       override fun defaultMessage(defaultMessage: IResolvable) {
-        cdkBuilder.defaultMessage(defaultMessage.let(IResolvable::unwrap))
+        cdkBuilder.defaultMessage(defaultMessage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5312,7 +5312,7 @@ public open class CfnCampaign(
        * that are configured for the campaign.
        */
       override fun defaultMessage(defaultMessage: MessageProperty) {
-        cdkBuilder.defaultMessage(defaultMessage.let(MessageProperty::unwrap))
+        cdkBuilder.defaultMessage(defaultMessage.let(MessageProperty.Companion::unwrap))
       }
 
       /**
@@ -5328,29 +5328,29 @@ public open class CfnCampaign(
        * @param emailMessage The message that the campaign sends through the email channel. If
        * specified, this message overrides the default message.
        *
-       * The maximum email message size is 200KB. You can use email templates to send larger email
+       * The maximum email message size is 200 KB. You can use email templates to send larger email
        * messages.
        */
       override fun emailMessage(emailMessage: IResolvable) {
-        cdkBuilder.emailMessage(emailMessage.let(IResolvable::unwrap))
+        cdkBuilder.emailMessage(emailMessage.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param emailMessage The message that the campaign sends through the email channel. If
        * specified, this message overrides the default message.
        *
-       * The maximum email message size is 200KB. You can use email templates to send larger email
+       * The maximum email message size is 200 KB. You can use email templates to send larger email
        * messages.
        */
       override fun emailMessage(emailMessage: CampaignEmailMessageProperty) {
-        cdkBuilder.emailMessage(emailMessage.let(CampaignEmailMessageProperty::unwrap))
+        cdkBuilder.emailMessage(emailMessage.let(CampaignEmailMessageProperty.Companion::unwrap))
       }
 
       /**
        * @param emailMessage The message that the campaign sends through the email channel. If
        * specified, this message overrides the default message.
        *
-       * The maximum email message size is 200KB. You can use email templates to send larger email
+       * The maximum email message size is 200 KB. You can use email templates to send larger email
        * messages.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -5365,7 +5365,7 @@ public open class CfnCampaign(
        * If specified, this message overrides the default message.
        */
       override fun gcmMessage(gcmMessage: IResolvable) {
-        cdkBuilder.gcmMessage(gcmMessage.let(IResolvable::unwrap))
+        cdkBuilder.gcmMessage(gcmMessage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5375,7 +5375,7 @@ public open class CfnCampaign(
        * If specified, this message overrides the default message.
        */
       override fun gcmMessage(gcmMessage: MessageProperty) {
-        cdkBuilder.gcmMessage(gcmMessage.let(MessageProperty::unwrap))
+        cdkBuilder.gcmMessage(gcmMessage.let(MessageProperty.Companion::unwrap))
       }
 
       /**
@@ -5394,7 +5394,7 @@ public open class CfnCampaign(
        * This message overrides the default message ( `DefaultMessage` ).
        */
       override fun inAppMessage(inAppMessage: IResolvable) {
-        cdkBuilder.inAppMessage(inAppMessage.let(IResolvable::unwrap))
+        cdkBuilder.inAppMessage(inAppMessage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5402,7 +5402,7 @@ public open class CfnCampaign(
        * This message overrides the default message ( `DefaultMessage` ).
        */
       override fun inAppMessage(inAppMessage: CampaignInAppMessageProperty) {
-        cdkBuilder.inAppMessage(inAppMessage.let(CampaignInAppMessageProperty::unwrap))
+        cdkBuilder.inAppMessage(inAppMessage.let(CampaignInAppMessageProperty.Companion::unwrap))
       }
 
       /**
@@ -5419,7 +5419,7 @@ public open class CfnCampaign(
        * If specified, this message overrides the default message.
        */
       override fun smsMessage(smsMessage: IResolvable) {
-        cdkBuilder.smsMessage(smsMessage.let(IResolvable::unwrap))
+        cdkBuilder.smsMessage(smsMessage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5427,7 +5427,7 @@ public open class CfnCampaign(
        * If specified, this message overrides the default message.
        */
       override fun smsMessage(smsMessage: CampaignSmsMessageProperty) {
-        cdkBuilder.smsMessage(smsMessage.let(CampaignSmsMessageProperty::unwrap))
+        cdkBuilder.smsMessage(smsMessage.let(CampaignSmsMessageProperty.Companion::unwrap))
       }
 
       /**
@@ -5498,7 +5498,7 @@ public open class CfnCampaign(
        * overrides the default message.
        *
        *
-       * The maximum email message size is 200KB. You can use email templates to send larger email
+       * The maximum email message size is 200 KB. You can use email templates to send larger email
        * messages.
        *
        *
@@ -5879,7 +5879,7 @@ public open class CfnCampaign(
        * displaying messages in an in-app message center, or supporting phone home functionality.
        */
       override fun silentPush(silentPush: IResolvable) {
-        cdkBuilder.silentPush(silentPush.let(IResolvable::unwrap))
+        cdkBuilder.silentPush(silentPush.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6665,7 +6665,7 @@ public open class CfnCampaign(
        * the `Frequency` property is `EVENT` .
        */
       override fun eventFilter(eventFilter: IResolvable) {
-        cdkBuilder.eventFilter(eventFilter.let(IResolvable::unwrap))
+        cdkBuilder.eventFilter(eventFilter.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6673,7 +6673,7 @@ public open class CfnCampaign(
        * the `Frequency` property is `EVENT` .
        */
       override fun eventFilter(eventFilter: CampaignEventFilterProperty) {
-        cdkBuilder.eventFilter(eventFilter.let(CampaignEventFilterProperty::unwrap))
+        cdkBuilder.eventFilter(eventFilter.let(CampaignEventFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -6708,7 +6708,7 @@ public open class CfnCampaign(
        * To base the schedule on each recipient's local time, set this value to `true` .
        */
       override fun isLocalTime(isLocalTime: IResolvable) {
-        cdkBuilder.isLocalTime(isLocalTime.let(IResolvable::unwrap))
+        cdkBuilder.isLocalTime(isLocalTime.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6726,7 +6726,7 @@ public open class CfnCampaign(
        * campaign, even if quiet time is enabled.
        */
       override fun quietTime(quietTime: IResolvable) {
-        cdkBuilder.quietTime(quietTime.let(IResolvable::unwrap))
+        cdkBuilder.quietTime(quietTime.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6744,7 +6744,7 @@ public open class CfnCampaign(
        * campaign, even if quiet time is enabled.
        */
       override fun quietTime(quietTime: QuietTimeProperty) {
-        cdkBuilder.quietTime(quietTime.let(QuietTimeProperty::unwrap))
+        cdkBuilder.quietTime(quietTime.let(QuietTimeProperty.Companion::unwrap))
       }
 
       /**
@@ -7179,14 +7179,14 @@ public open class CfnCampaign(
        * @param emailTemplate The email template to use for the message.
        */
       override fun emailTemplate(emailTemplate: IResolvable) {
-        cdkBuilder.emailTemplate(emailTemplate.let(IResolvable::unwrap))
+        cdkBuilder.emailTemplate(emailTemplate.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param emailTemplate The email template to use for the message.
        */
       override fun emailTemplate(emailTemplate: TemplateProperty) {
-        cdkBuilder.emailTemplate(emailTemplate.let(TemplateProperty::unwrap))
+        cdkBuilder.emailTemplate(emailTemplate.let(TemplateProperty.Companion::unwrap))
       }
 
       /**
@@ -7201,14 +7201,14 @@ public open class CfnCampaign(
        * @param pushTemplate The push notification template to use for the message.
        */
       override fun pushTemplate(pushTemplate: IResolvable) {
-        cdkBuilder.pushTemplate(pushTemplate.let(IResolvable::unwrap))
+        cdkBuilder.pushTemplate(pushTemplate.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param pushTemplate The push notification template to use for the message.
        */
       override fun pushTemplate(pushTemplate: TemplateProperty) {
-        cdkBuilder.pushTemplate(pushTemplate.let(TemplateProperty::unwrap))
+        cdkBuilder.pushTemplate(pushTemplate.let(TemplateProperty.Companion::unwrap))
       }
 
       /**
@@ -7223,14 +7223,14 @@ public open class CfnCampaign(
        * @param smsTemplate The SMS template to use for the message.
        */
       override fun smsTemplate(smsTemplate: IResolvable) {
-        cdkBuilder.smsTemplate(smsTemplate.let(IResolvable::unwrap))
+        cdkBuilder.smsTemplate(smsTemplate.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param smsTemplate The SMS template to use for the message.
        */
       override fun smsTemplate(smsTemplate: TemplateProperty) {
-        cdkBuilder.smsTemplate(smsTemplate.let(TemplateProperty::unwrap))
+        cdkBuilder.smsTemplate(smsTemplate.let(TemplateProperty.Companion::unwrap))
       }
 
       /**
@@ -7246,7 +7246,7 @@ public open class CfnCampaign(
        * This object isn't supported for campaigns.
        */
       override fun voiceTemplate(voiceTemplate: IResolvable) {
-        cdkBuilder.voiceTemplate(voiceTemplate.let(IResolvable::unwrap))
+        cdkBuilder.voiceTemplate(voiceTemplate.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7254,7 +7254,7 @@ public open class CfnCampaign(
        * This object isn't supported for campaigns.
        */
       override fun voiceTemplate(voiceTemplate: TemplateProperty) {
-        cdkBuilder.voiceTemplate(voiceTemplate.let(TemplateProperty::unwrap))
+        cdkBuilder.voiceTemplate(voiceTemplate.let(TemplateProperty.Companion::unwrap))
       }
 
       /**
@@ -7864,7 +7864,7 @@ public open class CfnCampaign(
        * `CustomMessage` object.
        */
       override fun customDeliveryConfiguration(customDeliveryConfiguration: IResolvable) {
-        cdkBuilder.customDeliveryConfiguration(customDeliveryConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.customDeliveryConfiguration(customDeliveryConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7875,7 +7875,7 @@ public open class CfnCampaign(
        */
       override
           fun customDeliveryConfiguration(customDeliveryConfiguration: CustomDeliveryConfigurationProperty) {
-        cdkBuilder.customDeliveryConfiguration(customDeliveryConfiguration.let(CustomDeliveryConfigurationProperty::unwrap))
+        cdkBuilder.customDeliveryConfiguration(customDeliveryConfiguration.let(CustomDeliveryConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -7895,14 +7895,14 @@ public open class CfnCampaign(
        * @param messageConfiguration The message configuration settings for the treatment.
        */
       override fun messageConfiguration(messageConfiguration: IResolvable) {
-        cdkBuilder.messageConfiguration(messageConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.messageConfiguration(messageConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param messageConfiguration The message configuration settings for the treatment.
        */
       override fun messageConfiguration(messageConfiguration: MessageConfigurationProperty) {
-        cdkBuilder.messageConfiguration(messageConfiguration.let(MessageConfigurationProperty::unwrap))
+        cdkBuilder.messageConfiguration(messageConfiguration.let(MessageConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -7918,14 +7918,14 @@ public open class CfnCampaign(
        * @param schedule The schedule settings for the treatment.
        */
       override fun schedule(schedule: IResolvable) {
-        cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
+        cdkBuilder.schedule(schedule.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param schedule The schedule settings for the treatment.
        */
       override fun schedule(schedule: ScheduleProperty) {
-        cdkBuilder.schedule(schedule.let(ScheduleProperty::unwrap))
+        cdkBuilder.schedule(schedule.let(ScheduleProperty.Companion::unwrap))
       }
 
       /**
@@ -7948,14 +7948,14 @@ public open class CfnCampaign(
        * @param templateConfiguration The message template to use for the treatment.
        */
       override fun templateConfiguration(templateConfiguration: IResolvable) {
-        cdkBuilder.templateConfiguration(templateConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.templateConfiguration(templateConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param templateConfiguration The message template to use for the treatment.
        */
       override fun templateConfiguration(templateConfiguration: TemplateConfigurationProperty) {
-        cdkBuilder.templateConfiguration(templateConfiguration.let(TemplateConfigurationProperty::unwrap))
+        cdkBuilder.templateConfiguration(templateConfiguration.let(TemplateConfigurationProperty.Companion::unwrap))
       }
 
       /**

@@ -59,7 +59,7 @@ public open class LinuxLambdaBuildImage(
    * @param buildEnvironment 
    */
   public override fun validate(buildEnvironment: BuildEnvironment): List<String> =
-      unwrap(this).validate(buildEnvironment.let(BuildEnvironment::unwrap))
+      unwrap(this).validate(buildEnvironment.let(BuildEnvironment.Companion::unwrap))
 
   /**
    * Allows the image a chance to validate whether the passed configuration is correct.

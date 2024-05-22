@@ -237,14 +237,14 @@ public interface ScheduledFargateTaskImageOptions : ScheduledTaskImageProps, Far
      * Image or taskDefinition must be specified, but not both.
      */
     override fun image(image: ContainerImage) {
-      cdkBuilder.image(image.let(ContainerImage::unwrap))
+      cdkBuilder.image(image.let(ContainerImage.Companion::unwrap))
     }
 
     /**
      * @param logDriver The log driver to use.
      */
     override fun logDriver(logDriver: LogDriver) {
-      cdkBuilder.logDriver(logDriver.let(LogDriver::unwrap))
+      cdkBuilder.logDriver(logDriver.let(LogDriver.Companion::unwrap))
     }
 
     /**
@@ -287,14 +287,14 @@ public interface ScheduledFargateTaskImageOptions : ScheduledTaskImageProps, Far
      * in the Amazon Elastic Container Service Developer Guide.
      */
     override fun platformVersion(platformVersion: FargatePlatformVersion) {
-      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion::unwrap))
+      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion.Companion::unwrap))
     }
 
     /**
      * @param runtimePlatform The runtime platform of the task definition.
      */
     override fun runtimePlatform(runtimePlatform: RuntimePlatform) {
-      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform::unwrap))
+      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform.Companion::unwrap))
     }
 
     /**
@@ -318,7 +318,7 @@ public interface ScheduledFargateTaskImageOptions : ScheduledTaskImageProps, Far
      * [disable-awslint:ref-via-interface]
      */
     override fun taskDefinition(taskDefinition: FargateTaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition.Companion::unwrap))
     }
 
     public fun build():

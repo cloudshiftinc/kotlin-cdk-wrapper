@@ -44,7 +44,7 @@ public open class CfnRegistry(
   cdkObject: software.amazon.awscdk.services.eventschemas.CfnRegistry,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.eventschemas.CfnRegistry(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.eventschemas.CfnRegistry(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -53,8 +53,8 @@ public open class CfnRegistry(
     id: String,
     props: CfnRegistryProps,
   ) :
-      this(software.amazon.awscdk.services.eventschemas.CfnRegistry(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRegistryProps::unwrap))
+      this(software.amazon.awscdk.services.eventschemas.CfnRegistry(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRegistryProps.Companion::unwrap))
   )
 
   public constructor(
@@ -92,7 +92,7 @@ public open class CfnRegistry(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -122,7 +122,7 @@ public open class CfnRegistry(
    * Tags to associate with the registry.
    */
   public open fun tagsRaw(`value`: List<TagsEntryProperty>) {
-    unwrap(this).setTagsRaw(`value`.map(TagsEntryProperty::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(TagsEntryProperty.Companion::unwrap))
   }
 
   /**
@@ -202,7 +202,7 @@ public open class CfnRegistry(
      * @param tags Tags to associate with the registry. 
      */
     override fun tags(tags: List<TagsEntryProperty>) {
-      cdkBuilder.tags(tags.map(TagsEntryProperty::unwrap))
+      cdkBuilder.tags(tags.map(TagsEntryProperty.Companion::unwrap))
     }
 
     /**

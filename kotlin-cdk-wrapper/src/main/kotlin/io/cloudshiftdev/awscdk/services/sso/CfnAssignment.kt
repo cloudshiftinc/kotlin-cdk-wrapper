@@ -44,8 +44,8 @@ public open class CfnAssignment(
     id: String,
     props: CfnAssignmentProps,
   ) :
-      this(software.amazon.awscdk.services.sso.CfnAssignment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAssignmentProps::unwrap))
+      this(software.amazon.awscdk.services.sso.CfnAssignment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAssignmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -61,7 +61,7 @@ public open class CfnAssignment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

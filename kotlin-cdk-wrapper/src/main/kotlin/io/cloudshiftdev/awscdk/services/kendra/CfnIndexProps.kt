@@ -349,7 +349,7 @@ public interface CfnIndexProps {
      * You can add and remove capacity units to fit your usage requirements.
      */
     override fun capacityUnits(capacityUnits: IResolvable) {
-      cdkBuilder.capacityUnits(capacityUnits.let(IResolvable::unwrap))
+      cdkBuilder.capacityUnits(capacityUnits.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -358,7 +358,7 @@ public interface CfnIndexProps {
      * You can add and remove capacity units to fit your usage requirements.
      */
     override fun capacityUnits(capacityUnits: CfnIndex.CapacityUnitsConfigurationProperty) {
-      cdkBuilder.capacityUnits(capacityUnits.let(CfnIndex.CapacityUnitsConfigurationProperty::unwrap))
+      cdkBuilder.capacityUnits(capacityUnits.let(CfnIndex.CapacityUnitsConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -386,7 +386,7 @@ public interface CfnIndexProps {
      * field. Custom fields can't be removed from an index after they are added.
      */
     override fun documentMetadataConfigurations(documentMetadataConfigurations: IResolvable) {
-      cdkBuilder.documentMetadataConfigurations(documentMetadataConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.documentMetadataConfigurations(documentMetadataConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -441,7 +441,7 @@ public interface CfnIndexProps {
      * Amazon Kendra doesn't support asymmetric CMKs.
      */
     override fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
-      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -451,7 +451,7 @@ public interface CfnIndexProps {
      */
     override
         fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: CfnIndex.ServerSideEncryptionConfigurationProperty) {
-      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(CfnIndex.ServerSideEncryptionConfigurationProperty::unwrap))
+      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(CfnIndex.ServerSideEncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -473,7 +473,7 @@ public interface CfnIndexProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -506,7 +506,7 @@ public interface CfnIndexProps {
      * @param userTokenConfigurations Defines the type of user token used for the index.
      */
     override fun userTokenConfigurations(userTokenConfigurations: IResolvable) {
-      cdkBuilder.userTokenConfigurations(userTokenConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.userTokenConfigurations(userTokenConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**

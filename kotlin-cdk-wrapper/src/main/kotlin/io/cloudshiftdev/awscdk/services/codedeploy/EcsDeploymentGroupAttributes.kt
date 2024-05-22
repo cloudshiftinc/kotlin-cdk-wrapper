@@ -77,14 +77,14 @@ public interface EcsDeploymentGroupAttributes {
      * belongs to. 
      */
     override fun application(application: IEcsApplication) {
-      cdkBuilder.application(application.let(IEcsApplication::unwrap))
+      cdkBuilder.application(application.let(IEcsApplication.Companion::unwrap))
     }
 
     /**
      * @param deploymentConfig The Deployment Configuration this Deployment Group uses.
      */
     override fun deploymentConfig(deploymentConfig: IEcsDeploymentConfig) {
-      cdkBuilder.deploymentConfig(deploymentConfig.let(IEcsDeploymentConfig::unwrap))
+      cdkBuilder.deploymentConfig(deploymentConfig.let(IEcsDeploymentConfig.Companion::unwrap))
     }
 
     /**

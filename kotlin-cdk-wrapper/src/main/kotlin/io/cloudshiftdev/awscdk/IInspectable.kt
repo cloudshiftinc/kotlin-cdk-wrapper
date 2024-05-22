@@ -25,7 +25,7 @@ public interface IInspectable {
      * @param inspector * tree inspector to collect and process attributes. 
      */
     override fun inspect(inspector: TreeInspector) {
-      unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+      unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
     }
   }
 

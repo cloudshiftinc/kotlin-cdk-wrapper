@@ -84,8 +84,8 @@ public open class CfnMLTransform(
     id: String,
     props: CfnMLTransformProps,
   ) :
-      this(software.amazon.awscdk.services.glue.CfnMLTransform(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMLTransformProps::unwrap))
+      this(software.amazon.awscdk.services.glue.CfnMLTransform(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMLTransformProps.Companion::unwrap))
   )
 
   public constructor(
@@ -135,14 +135,14 @@ public open class CfnMLTransform(
    * A list of AWS Glue table definitions used by the transform.
    */
   public open fun inputRecordTables(`value`: IResolvable) {
-    unwrap(this).setInputRecordTables(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInputRecordTables(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A list of AWS Glue table definitions used by the transform.
    */
   public open fun inputRecordTables(`value`: InputRecordTablesProperty) {
-    unwrap(this).setInputRecordTables(`value`.let(InputRecordTablesProperty::unwrap))
+    unwrap(this).setInputRecordTables(`value`.let(InputRecordTablesProperty.Companion::unwrap))
   }
 
   /**
@@ -159,7 +159,7 @@ public open class CfnMLTransform(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -270,14 +270,14 @@ public open class CfnMLTransform(
    * The encryption-at-rest settings of the transform that apply to accessing user data.
    */
   public open fun transformEncryption(`value`: IResolvable) {
-    unwrap(this).setTransformEncryption(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTransformEncryption(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The encryption-at-rest settings of the transform that apply to accessing user data.
    */
   public open fun transformEncryption(`value`: TransformEncryptionProperty) {
-    unwrap(this).setTransformEncryption(`value`.let(TransformEncryptionProperty::unwrap))
+    unwrap(this).setTransformEncryption(`value`.let(TransformEncryptionProperty.Companion::unwrap))
   }
 
   /**
@@ -297,14 +297,14 @@ public open class CfnMLTransform(
    * The algorithm-specific parameters that are associated with the machine learning transform.
    */
   public open fun transformParameters(`value`: IResolvable) {
-    unwrap(this).setTransformParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTransformParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The algorithm-specific parameters that are associated with the machine learning transform.
    */
   public open fun transformParameters(`value`: TransformParametersProperty) {
-    unwrap(this).setTransformParameters(`value`.let(TransformParametersProperty::unwrap))
+    unwrap(this).setTransformParameters(`value`.let(TransformParametersProperty.Companion::unwrap))
   }
 
   /**
@@ -629,7 +629,7 @@ public open class CfnMLTransform(
      * @param inputRecordTables A list of AWS Glue table definitions used by the transform. 
      */
     override fun inputRecordTables(inputRecordTables: IResolvable) {
-      cdkBuilder.inputRecordTables(inputRecordTables.let(IResolvable::unwrap))
+      cdkBuilder.inputRecordTables(inputRecordTables.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -639,7 +639,7 @@ public open class CfnMLTransform(
      * @param inputRecordTables A list of AWS Glue table definitions used by the transform. 
      */
     override fun inputRecordTables(inputRecordTables: InputRecordTablesProperty) {
-      cdkBuilder.inputRecordTables(inputRecordTables.let(InputRecordTablesProperty::unwrap))
+      cdkBuilder.inputRecordTables(inputRecordTables.let(InputRecordTablesProperty.Companion::unwrap))
     }
 
     /**
@@ -780,7 +780,7 @@ public open class CfnMLTransform(
      * accessing user data. 
      */
     override fun transformEncryption(transformEncryption: IResolvable) {
-      cdkBuilder.transformEncryption(transformEncryption.let(IResolvable::unwrap))
+      cdkBuilder.transformEncryption(transformEncryption.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -798,7 +798,7 @@ public open class CfnMLTransform(
      * accessing user data. 
      */
     override fun transformEncryption(transformEncryption: TransformEncryptionProperty) {
-      cdkBuilder.transformEncryption(transformEncryption.let(TransformEncryptionProperty::unwrap))
+      cdkBuilder.transformEncryption(transformEncryption.let(TransformEncryptionProperty.Companion::unwrap))
     }
 
     /**
@@ -829,7 +829,7 @@ public open class CfnMLTransform(
      * machine learning transform. 
      */
     override fun transformParameters(transformParameters: IResolvable) {
-      cdkBuilder.transformParameters(transformParameters.let(IResolvable::unwrap))
+      cdkBuilder.transformParameters(transformParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -840,7 +840,7 @@ public open class CfnMLTransform(
      * machine learning transform. 
      */
     override fun transformParameters(transformParameters: TransformParametersProperty) {
-      cdkBuilder.transformParameters(transformParameters.let(TransformParametersProperty::unwrap))
+      cdkBuilder.transformParameters(transformParameters.let(TransformParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -1104,7 +1104,7 @@ public open class CfnMLTransform(
        * Note that setting this value to true may increase the conflation execution time.
        */
       override fun enforceProvidedLabels(enforceProvidedLabels: IResolvable) {
-        cdkBuilder.enforceProvidedLabels(enforceProvidedLabels.let(IResolvable::unwrap))
+        cdkBuilder.enforceProvidedLabels(enforceProvidedLabels.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1444,7 +1444,7 @@ public open class CfnMLTransform(
        * input or output data.
        */
       override fun glueTables(glueTables: IResolvable) {
-        cdkBuilder.glueTables(glueTables.let(IResolvable::unwrap))
+        cdkBuilder.glueTables(glueTables.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1711,7 +1711,7 @@ public open class CfnMLTransform(
        * accessing user data.
        */
       override fun mlUserDataEncryption(mlUserDataEncryption: IResolvable) {
-        cdkBuilder.mlUserDataEncryption(mlUserDataEncryption.let(IResolvable::unwrap))
+        cdkBuilder.mlUserDataEncryption(mlUserDataEncryption.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1719,7 +1719,7 @@ public open class CfnMLTransform(
        * accessing user data.
        */
       override fun mlUserDataEncryption(mlUserDataEncryption: MLUserDataEncryptionProperty) {
-        cdkBuilder.mlUserDataEncryption(mlUserDataEncryption.let(MLUserDataEncryptionProperty::unwrap))
+        cdkBuilder.mlUserDataEncryption(mlUserDataEncryption.let(MLUserDataEncryptionProperty.Companion::unwrap))
       }
 
       /**
@@ -1868,14 +1868,14 @@ public open class CfnMLTransform(
        * @param findMatchesParameters The parameters for the find matches algorithm.
        */
       override fun findMatchesParameters(findMatchesParameters: IResolvable) {
-        cdkBuilder.findMatchesParameters(findMatchesParameters.let(IResolvable::unwrap))
+        cdkBuilder.findMatchesParameters(findMatchesParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param findMatchesParameters The parameters for the find matches algorithm.
        */
       override fun findMatchesParameters(findMatchesParameters: FindMatchesParametersProperty) {
-        cdkBuilder.findMatchesParameters(findMatchesParameters.let(FindMatchesParametersProperty::unwrap))
+        cdkBuilder.findMatchesParameters(findMatchesParameters.let(FindMatchesParametersProperty.Companion::unwrap))
       }
 
       /**

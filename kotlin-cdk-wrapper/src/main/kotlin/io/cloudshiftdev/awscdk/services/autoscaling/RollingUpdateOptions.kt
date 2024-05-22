@@ -167,7 +167,7 @@ public interface RollingUpdateOptions {
      * @param pauseTime The pause time after making a change to a batch of instances.
      */
     override fun pauseTime(pauseTime: Duration) {
-      cdkBuilder.pauseTime(pauseTime.let(Duration::unwrap))
+      cdkBuilder.pauseTime(pauseTime.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -177,7 +177,7 @@ public interface RollingUpdateOptions {
      * update.
      */
     override fun suspendProcesses(suspendProcesses: List<ScalingProcess>) {
-      cdkBuilder.suspendProcesses(suspendProcesses.map(ScalingProcess::unwrap))
+      cdkBuilder.suspendProcesses(suspendProcesses.map(ScalingProcess.Companion::unwrap))
     }
 
     /**

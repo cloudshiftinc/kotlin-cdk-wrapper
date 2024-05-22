@@ -60,7 +60,7 @@ public open class CfnMesh(
   cdkObject: software.amazon.awscdk.services.appmesh.CfnMesh,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.appmesh.CfnMesh(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.appmesh.CfnMesh(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -69,8 +69,8 @@ public open class CfnMesh(
     id: String,
     props: CfnMeshProps,
   ) :
-      this(software.amazon.awscdk.services.appmesh.CfnMesh(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMeshProps::unwrap))
+      this(software.amazon.awscdk.services.appmesh.CfnMesh(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMeshProps.Companion::unwrap))
   )
 
   public constructor(
@@ -124,7 +124,7 @@ public open class CfnMesh(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -148,14 +148,14 @@ public open class CfnMesh(
    * The service mesh specification to apply.
    */
   public open fun spec(`value`: IResolvable) {
-    unwrap(this).setSpec(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSpec(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The service mesh specification to apply.
    */
   public open fun spec(`value`: MeshSpecProperty) {
-    unwrap(this).setSpec(`value`.let(MeshSpecProperty::unwrap))
+    unwrap(this).setSpec(`value`.let(MeshSpecProperty.Companion::unwrap))
   }
 
   /**
@@ -183,7 +183,7 @@ public open class CfnMesh(
    * organization.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -284,7 +284,7 @@ public open class CfnMesh(
      * @param spec The service mesh specification to apply. 
      */
     override fun spec(spec: IResolvable) {
-      cdkBuilder.spec(spec.let(IResolvable::unwrap))
+      cdkBuilder.spec(spec.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -294,7 +294,7 @@ public open class CfnMesh(
      * @param spec The service mesh specification to apply. 
      */
     override fun spec(spec: MeshSpecProperty) {
-      cdkBuilder.spec(spec.let(MeshSpecProperty::unwrap))
+      cdkBuilder.spec(spec.let(MeshSpecProperty.Companion::unwrap))
     }
 
     /**
@@ -321,7 +321,7 @@ public open class CfnMesh(
      * categorization and organization. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -651,14 +651,14 @@ public open class CfnMesh(
        * @param egressFilter The egress filter rules for the service mesh.
        */
       override fun egressFilter(egressFilter: IResolvable) {
-        cdkBuilder.egressFilter(egressFilter.let(IResolvable::unwrap))
+        cdkBuilder.egressFilter(egressFilter.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param egressFilter The egress filter rules for the service mesh.
        */
       override fun egressFilter(egressFilter: EgressFilterProperty) {
-        cdkBuilder.egressFilter(egressFilter.let(EgressFilterProperty::unwrap))
+        cdkBuilder.egressFilter(egressFilter.let(EgressFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -674,7 +674,7 @@ public open class CfnMesh(
        * service mesh.
        */
       override fun serviceDiscovery(serviceDiscovery: IResolvable) {
-        cdkBuilder.serviceDiscovery(serviceDiscovery.let(IResolvable::unwrap))
+        cdkBuilder.serviceDiscovery(serviceDiscovery.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -682,7 +682,7 @@ public open class CfnMesh(
        * service mesh.
        */
       override fun serviceDiscovery(serviceDiscovery: MeshServiceDiscoveryProperty) {
-        cdkBuilder.serviceDiscovery(serviceDiscovery.let(MeshServiceDiscoveryProperty::unwrap))
+        cdkBuilder.serviceDiscovery(serviceDiscovery.let(MeshServiceDiscoveryProperty.Companion::unwrap))
       }
 
       /**

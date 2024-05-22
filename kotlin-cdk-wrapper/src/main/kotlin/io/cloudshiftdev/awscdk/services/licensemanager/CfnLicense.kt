@@ -87,8 +87,8 @@ public open class CfnLicense(
     id: String,
     props: CfnLicenseProps,
   ) :
-      this(software.amazon.awscdk.services.licensemanager.CfnLicense(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLicenseProps::unwrap))
+      this(software.amazon.awscdk.services.licensemanager.CfnLicense(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLicenseProps.Companion::unwrap))
   )
 
   public constructor(
@@ -129,14 +129,14 @@ public open class CfnLicense(
    * Configuration for consumption of the license.
    */
   public open fun consumptionConfiguration(`value`: IResolvable) {
-    unwrap(this).setConsumptionConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConsumptionConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration for consumption of the license.
    */
   public open fun consumptionConfiguration(`value`: ConsumptionConfigurationProperty) {
-    unwrap(this).setConsumptionConfiguration(`value`.let(ConsumptionConfigurationProperty::unwrap))
+    unwrap(this).setConsumptionConfiguration(`value`.let(ConsumptionConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -157,7 +157,7 @@ public open class CfnLicense(
    * License entitlements.
    */
   public open fun entitlements(`value`: IResolvable) {
-    unwrap(this).setEntitlements(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEntitlements(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -190,7 +190,7 @@ public open class CfnLicense(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -202,14 +202,14 @@ public open class CfnLicense(
    * License issuer.
    */
   public open fun issuer(`value`: IResolvable) {
-    unwrap(this).setIssuer(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIssuer(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * License issuer.
    */
   public open fun issuer(`value`: IssuerDataProperty) {
-    unwrap(this).setIssuer(`value`.let(IssuerDataProperty::unwrap))
+    unwrap(this).setIssuer(`value`.let(IssuerDataProperty.Companion::unwrap))
   }
 
   /**
@@ -229,7 +229,7 @@ public open class CfnLicense(
    * License metadata.
    */
   public open fun licenseMetadata(`value`: IResolvable) {
-    unwrap(this).setLicenseMetadata(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLicenseMetadata(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -301,14 +301,14 @@ public open class CfnLicense(
    * Date and time range during which the license is valid, in ISO8601-UTC format.
    */
   public open fun validity(`value`: IResolvable) {
-    unwrap(this).setValidity(`value`.let(IResolvable::unwrap))
+    unwrap(this).setValidity(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Date and time range during which the license is valid, in ISO8601-UTC format.
    */
   public open fun validity(`value`: ValidityDateFormatProperty) {
-    unwrap(this).setValidity(`value`.let(ValidityDateFormatProperty::unwrap))
+    unwrap(this).setValidity(`value`.let(ValidityDateFormatProperty.Companion::unwrap))
   }
 
   /**
@@ -527,7 +527,7 @@ public open class CfnLicense(
      * @param consumptionConfiguration Configuration for consumption of the license. 
      */
     override fun consumptionConfiguration(consumptionConfiguration: IResolvable) {
-      cdkBuilder.consumptionConfiguration(consumptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.consumptionConfiguration(consumptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -538,7 +538,7 @@ public open class CfnLicense(
      */
     override
         fun consumptionConfiguration(consumptionConfiguration: ConsumptionConfigurationProperty) {
-      cdkBuilder.consumptionConfiguration(consumptionConfiguration.let(ConsumptionConfigurationProperty::unwrap))
+      cdkBuilder.consumptionConfiguration(consumptionConfiguration.let(ConsumptionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -560,7 +560,7 @@ public open class CfnLicense(
      * @param entitlements License entitlements. 
      */
     override fun entitlements(entitlements: IResolvable) {
-      cdkBuilder.entitlements(entitlements.let(IResolvable::unwrap))
+      cdkBuilder.entitlements(entitlements.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -598,7 +598,7 @@ public open class CfnLicense(
      * @param issuer License issuer. 
      */
     override fun issuer(issuer: IResolvable) {
-      cdkBuilder.issuer(issuer.let(IResolvable::unwrap))
+      cdkBuilder.issuer(issuer.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -608,7 +608,7 @@ public open class CfnLicense(
      * @param issuer License issuer. 
      */
     override fun issuer(issuer: IssuerDataProperty) {
-      cdkBuilder.issuer(issuer.let(IssuerDataProperty::unwrap))
+      cdkBuilder.issuer(issuer.let(IssuerDataProperty.Companion::unwrap))
     }
 
     /**
@@ -629,7 +629,7 @@ public open class CfnLicense(
      * @param licenseMetadata License metadata. 
      */
     override fun licenseMetadata(licenseMetadata: IResolvable) {
-      cdkBuilder.licenseMetadata(licenseMetadata.let(IResolvable::unwrap))
+      cdkBuilder.licenseMetadata(licenseMetadata.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -699,7 +699,7 @@ public open class CfnLicense(
      * 
      */
     override fun validity(validity: IResolvable) {
-      cdkBuilder.validity(validity.let(IResolvable::unwrap))
+      cdkBuilder.validity(validity.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -710,7 +710,7 @@ public open class CfnLicense(
      * 
      */
     override fun validity(validity: ValidityDateFormatProperty) {
-      cdkBuilder.validity(validity.let(ValidityDateFormatProperty::unwrap))
+      cdkBuilder.validity(validity.let(ValidityDateFormatProperty.Companion::unwrap))
     }
 
     /**
@@ -820,7 +820,7 @@ public open class CfnLicense(
        * @param allowEarlyCheckIn Indicates whether early check-ins are allowed. 
        */
       override fun allowEarlyCheckIn(allowEarlyCheckIn: IResolvable) {
-        cdkBuilder.allowEarlyCheckIn(allowEarlyCheckIn.let(IResolvable::unwrap))
+        cdkBuilder.allowEarlyCheckIn(allowEarlyCheckIn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -975,14 +975,14 @@ public open class CfnLicense(
        * @param borrowConfiguration Details about a borrow configuration.
        */
       override fun borrowConfiguration(borrowConfiguration: IResolvable) {
-        cdkBuilder.borrowConfiguration(borrowConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.borrowConfiguration(borrowConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param borrowConfiguration Details about a borrow configuration.
        */
       override fun borrowConfiguration(borrowConfiguration: BorrowConfigurationProperty) {
-        cdkBuilder.borrowConfiguration(borrowConfiguration.let(BorrowConfigurationProperty::unwrap))
+        cdkBuilder.borrowConfiguration(borrowConfiguration.let(BorrowConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -998,7 +998,7 @@ public open class CfnLicense(
        * @param provisionalConfiguration Details about a provisional configuration.
        */
       override fun provisionalConfiguration(provisionalConfiguration: IResolvable) {
-        cdkBuilder.provisionalConfiguration(provisionalConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.provisionalConfiguration(provisionalConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1006,7 +1006,7 @@ public open class CfnLicense(
        */
       override
           fun provisionalConfiguration(provisionalConfiguration: ProvisionalConfigurationProperty) {
-        cdkBuilder.provisionalConfiguration(provisionalConfiguration.let(ProvisionalConfigurationProperty::unwrap))
+        cdkBuilder.provisionalConfiguration(provisionalConfiguration.let(ProvisionalConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1207,7 +1207,7 @@ public open class CfnLicense(
        * @param allowCheckIn Indicates whether check-ins are allowed.
        */
       override fun allowCheckIn(allowCheckIn: IResolvable) {
-        cdkBuilder.allowCheckIn(allowCheckIn.let(IResolvable::unwrap))
+        cdkBuilder.allowCheckIn(allowCheckIn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1236,7 +1236,7 @@ public open class CfnLicense(
        * @param overage Indicates whether overages are allowed.
        */
       override fun overage(overage: IResolvable) {
-        cdkBuilder.overage(overage.let(IResolvable::unwrap))
+        cdkBuilder.overage(overage.let(IResolvable.Companion::unwrap))
       }
 
       /**

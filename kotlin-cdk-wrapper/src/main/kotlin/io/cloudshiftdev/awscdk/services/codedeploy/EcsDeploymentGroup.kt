@@ -53,8 +53,8 @@ public open class EcsDeploymentGroup(
     id: String,
     props: EcsDeploymentGroupProps,
   ) :
-      this(software.amazon.awscdk.services.codedeploy.EcsDeploymentGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EcsDeploymentGroupProps::unwrap))
+      this(software.amazon.awscdk.services.codedeploy.EcsDeploymentGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EcsDeploymentGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -70,7 +70,7 @@ public open class EcsDeploymentGroup(
    * @param alarm the alarm to associate with this Deployment Group. 
    */
   public open fun addAlarm(alarm: IAlarm) {
-    unwrap(this).addAlarm(alarm.let(IAlarm::unwrap))
+    unwrap(this).addAlarm(alarm.let(IAlarm.Companion::unwrap))
   }
 
   /**
@@ -259,7 +259,7 @@ public open class EcsDeploymentGroup(
      * @param alarms The CloudWatch alarms associated with this Deployment Group. 
      */
     override fun alarms(alarms: List<IAlarm>) {
-      cdkBuilder.alarms(alarms.map(IAlarm::unwrap))
+      cdkBuilder.alarms(alarms.map(IAlarm.Companion::unwrap))
     }
 
     /**
@@ -286,7 +286,7 @@ public open class EcsDeploymentGroup(
      * belongs to. 
      */
     override fun application(application: IEcsApplication) {
-      cdkBuilder.application(application.let(IEcsApplication::unwrap))
+      cdkBuilder.application(application.let(IEcsApplication.Companion::unwrap))
     }
 
     /**
@@ -297,7 +297,7 @@ public open class EcsDeploymentGroup(
      * @param autoRollback The auto-rollback configuration for this Deployment Group. 
      */
     override fun autoRollback(autoRollback: AutoRollbackConfig) {
-      cdkBuilder.autoRollback(autoRollback.let(AutoRollbackConfig::unwrap))
+      cdkBuilder.autoRollback(autoRollback.let(AutoRollbackConfig.Companion::unwrap))
     }
 
     /**
@@ -319,7 +319,7 @@ public open class EcsDeploymentGroup(
      */
     override
         fun blueGreenDeploymentConfig(blueGreenDeploymentConfig: EcsBlueGreenDeploymentConfig) {
-      cdkBuilder.blueGreenDeploymentConfig(blueGreenDeploymentConfig.let(EcsBlueGreenDeploymentConfig::unwrap))
+      cdkBuilder.blueGreenDeploymentConfig(blueGreenDeploymentConfig.let(EcsBlueGreenDeploymentConfig.Companion::unwrap))
     }
 
     /**
@@ -341,7 +341,7 @@ public open class EcsDeploymentGroup(
      * @param deploymentConfig The Deployment Configuration this Deployment Group uses. 
      */
     override fun deploymentConfig(deploymentConfig: IEcsDeploymentConfig) {
-      cdkBuilder.deploymentConfig(deploymentConfig.let(IEcsDeploymentConfig::unwrap))
+      cdkBuilder.deploymentConfig(deploymentConfig.let(IEcsDeploymentConfig.Companion::unwrap))
     }
 
     /**
@@ -388,7 +388,7 @@ public open class EcsDeploymentGroup(
      * @param role The service Role of this Deployment Group. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -397,7 +397,7 @@ public open class EcsDeploymentGroup(
      * @param service The ECS service to deploy with this Deployment Group. 
      */
     override fun service(service: IBaseService) {
-      cdkBuilder.service(service.let(IBaseService::unwrap))
+      cdkBuilder.service(service.let(IBaseService.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codedeploy.EcsDeploymentGroup =
@@ -410,8 +410,9 @@ public open class EcsDeploymentGroup(
       id: String,
       attrs: EcsDeploymentGroupAttributes,
     ): IEcsDeploymentGroup =
-        software.amazon.awscdk.services.codedeploy.EcsDeploymentGroup.fromEcsDeploymentGroupAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(EcsDeploymentGroupAttributes::unwrap)).let(IEcsDeploymentGroup::wrap)
+        software.amazon.awscdk.services.codedeploy.EcsDeploymentGroup.fromEcsDeploymentGroupAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        attrs.let(EcsDeploymentGroupAttributes.Companion::unwrap)).let(IEcsDeploymentGroup::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("55f54f3ab136e14f21febc737b810d5691fddec931eb5f14c49b389f9d8cfc8c")

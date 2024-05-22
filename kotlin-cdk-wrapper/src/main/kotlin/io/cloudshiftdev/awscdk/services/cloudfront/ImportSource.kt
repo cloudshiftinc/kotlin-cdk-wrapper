@@ -44,7 +44,7 @@ public abstract class ImportSource(
 
     public fun fromAsset(path: String, options: AssetOptions): ImportSource =
         software.amazon.awscdk.services.cloudfront.ImportSource.fromAsset(path,
-        options.let(AssetOptions::unwrap)).let(ImportSource::wrap)
+        options.let(AssetOptions.Companion::unwrap)).let(ImportSource::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f124ce3ae32c31d3514a4d8c0a2163847255a9bb91b1e1eb8db2fc74831f451f")
@@ -52,7 +52,7 @@ public abstract class ImportSource(
         fromAsset(path, AssetOptions(options))
 
     public fun fromBucket(bucket: IBucket, key: String): ImportSource =
-        software.amazon.awscdk.services.cloudfront.ImportSource.fromBucket(bucket.let(IBucket::unwrap),
+        software.amazon.awscdk.services.cloudfront.ImportSource.fromBucket(bucket.let(IBucket.Companion::unwrap),
         key).let(ImportSource::wrap)
 
     public fun fromInline(`data`: String): ImportSource =

@@ -312,14 +312,14 @@ public interface CfnPackagingConfigurationProps {
      * @param cmafPackage Parameters for CMAF packaging.
      */
     override fun cmafPackage(cmafPackage: IResolvable) {
-      cdkBuilder.cmafPackage(cmafPackage.let(IResolvable::unwrap))
+      cdkBuilder.cmafPackage(cmafPackage.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param cmafPackage Parameters for CMAF packaging.
      */
     override fun cmafPackage(cmafPackage: CfnPackagingConfiguration.CmafPackageProperty) {
-      cdkBuilder.cmafPackage(cmafPackage.let(CfnPackagingConfiguration.CmafPackageProperty::unwrap))
+      cdkBuilder.cmafPackage(cmafPackage.let(CfnPackagingConfiguration.CmafPackageProperty.Companion::unwrap))
     }
 
     /**
@@ -335,14 +335,14 @@ public interface CfnPackagingConfigurationProps {
      * @param dashPackage Parameters for DASH-ISO packaging.
      */
     override fun dashPackage(dashPackage: IResolvable) {
-      cdkBuilder.dashPackage(dashPackage.let(IResolvable::unwrap))
+      cdkBuilder.dashPackage(dashPackage.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param dashPackage Parameters for DASH-ISO packaging.
      */
     override fun dashPackage(dashPackage: CfnPackagingConfiguration.DashPackageProperty) {
-      cdkBuilder.dashPackage(dashPackage.let(CfnPackagingConfiguration.DashPackageProperty::unwrap))
+      cdkBuilder.dashPackage(dashPackage.let(CfnPackagingConfiguration.DashPackageProperty.Companion::unwrap))
     }
 
     /**
@@ -358,14 +358,14 @@ public interface CfnPackagingConfigurationProps {
      * @param hlsPackage Parameters for Apple HLS packaging.
      */
     override fun hlsPackage(hlsPackage: IResolvable) {
-      cdkBuilder.hlsPackage(hlsPackage.let(IResolvable::unwrap))
+      cdkBuilder.hlsPackage(hlsPackage.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param hlsPackage Parameters for Apple HLS packaging.
      */
     override fun hlsPackage(hlsPackage: CfnPackagingConfiguration.HlsPackageProperty) {
-      cdkBuilder.hlsPackage(hlsPackage.let(CfnPackagingConfiguration.HlsPackageProperty::unwrap))
+      cdkBuilder.hlsPackage(hlsPackage.let(CfnPackagingConfiguration.HlsPackageProperty.Companion::unwrap))
     }
 
     /**
@@ -388,14 +388,14 @@ public interface CfnPackagingConfigurationProps {
      * @param mssPackage Parameters for Microsoft Smooth Streaming packaging.
      */
     override fun mssPackage(mssPackage: IResolvable) {
-      cdkBuilder.mssPackage(mssPackage.let(IResolvable::unwrap))
+      cdkBuilder.mssPackage(mssPackage.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param mssPackage Parameters for Microsoft Smooth Streaming packaging.
      */
     override fun mssPackage(mssPackage: CfnPackagingConfiguration.MssPackageProperty) {
-      cdkBuilder.mssPackage(mssPackage.let(CfnPackagingConfiguration.MssPackageProperty::unwrap))
+      cdkBuilder.mssPackage(mssPackage.let(CfnPackagingConfiguration.MssPackageProperty.Companion::unwrap))
     }
 
     /**
@@ -419,7 +419,7 @@ public interface CfnPackagingConfigurationProps {
      * @param tags The tags to assign to the packaging configuration.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

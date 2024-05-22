@@ -51,8 +51,8 @@ public open class CfnEmailChannel(
     id: String,
     props: CfnEmailChannelProps,
   ) :
-      this(software.amazon.awscdk.services.pinpoint.CfnEmailChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEmailChannelProps::unwrap))
+      this(software.amazon.awscdk.services.pinpoint.CfnEmailChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEmailChannelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -115,7 +115,7 @@ public open class CfnEmailChannel(
    * Specifies whether to enable the email channel for the application.
    */
   public open fun enabled(`value`: IResolvable) {
-    unwrap(this).setEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -152,17 +152,19 @@ public open class CfnEmailChannel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
-   *
+   * The ARN of an IAM role for Amazon Pinpoint to use to send email from your campaigns or journeys
+   * through Amazon SES .
    */
   public open fun orchestrationSendingRoleArn(): String? =
       unwrap(this).getOrchestrationSendingRoleArn()
 
   /**
-   *
+   * The ARN of an IAM role for Amazon Pinpoint to use to send email from your campaigns or journeys
+   * through Amazon SES .
    */
   public open fun orchestrationSendingRoleArn(`value`: String) {
     unwrap(this).setOrchestrationSendingRoleArn(`value`)
@@ -246,8 +248,12 @@ public open class CfnEmailChannel(
     public fun identity(identity: String)
 
     /**
+     * The ARN of an IAM role for Amazon Pinpoint to use to send email from your campaigns or
+     * journeys through Amazon SES .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailchannel.html#cfn-pinpoint-emailchannel-orchestrationsendingrolearn)
-     * @param orchestrationSendingRoleArn 
+     * @param orchestrationSendingRoleArn The ARN of an IAM role for Amazon Pinpoint to use to send
+     * email from your campaigns or journeys through Amazon SES . 
      */
     public fun orchestrationSendingRoleArn(orchestrationSendingRoleArn: String)
 
@@ -312,7 +318,7 @@ public open class CfnEmailChannel(
      * @param enabled Specifies whether to enable the email channel for the application. 
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -340,8 +346,12 @@ public open class CfnEmailChannel(
     }
 
     /**
+     * The ARN of an IAM role for Amazon Pinpoint to use to send email from your campaigns or
+     * journeys through Amazon SES .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailchannel.html#cfn-pinpoint-emailchannel-orchestrationsendingrolearn)
-     * @param orchestrationSendingRoleArn 
+     * @param orchestrationSendingRoleArn The ARN of an IAM role for Amazon Pinpoint to use to send
+     * email from your campaigns or journeys through Amazon SES . 
      */
     override fun orchestrationSendingRoleArn(orchestrationSendingRoleArn: String) {
       cdkBuilder.orchestrationSendingRoleArn(orchestrationSendingRoleArn)

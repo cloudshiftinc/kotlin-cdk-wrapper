@@ -411,14 +411,14 @@ public interface CfnPatchBaselineProps {
      * @param approvalRules A set of rules used to include patches in the baseline.
      */
     override fun approvalRules(approvalRules: IResolvable) {
-      cdkBuilder.approvalRules(approvalRules.let(IResolvable::unwrap))
+      cdkBuilder.approvalRules(approvalRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param approvalRules A set of rules used to include patches in the baseline.
      */
     override fun approvalRules(approvalRules: CfnPatchBaseline.RuleGroupProperty) {
-      cdkBuilder.approvalRules(approvalRules.let(CfnPatchBaseline.RuleGroupProperty::unwrap))
+      cdkBuilder.approvalRules(approvalRules.let(CfnPatchBaseline.RuleGroupProperty.Companion::unwrap))
     }
 
     /**
@@ -475,7 +475,7 @@ public interface CfnPatchBaselineProps {
      * The default value is `false` . Applies to Linux managed nodes only.
      */
     override fun approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity: IResolvable) {
-      cdkBuilder.approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity.let(IResolvable::unwrap))
+      cdkBuilder.approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -491,7 +491,7 @@ public interface CfnPatchBaselineProps {
      * Only registering to default patch baseline is allowed.
      */
     override fun defaultBaseline(defaultBaseline: IResolvable) {
-      cdkBuilder.defaultBaseline(defaultBaseline.let(IResolvable::unwrap))
+      cdkBuilder.defaultBaseline(defaultBaseline.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -505,14 +505,14 @@ public interface CfnPatchBaselineProps {
      * @param globalFilters A set of global filters used to include patches in the baseline.
      */
     override fun globalFilters(globalFilters: IResolvable) {
-      cdkBuilder.globalFilters(globalFilters.let(IResolvable::unwrap))
+      cdkBuilder.globalFilters(globalFilters.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param globalFilters A set of global filters used to include patches in the baseline.
      */
     override fun globalFilters(globalFilters: CfnPatchBaseline.PatchFilterGroupProperty) {
-      cdkBuilder.globalFilters(globalFilters.let(CfnPatchBaseline.PatchFilterGroupProperty::unwrap))
+      cdkBuilder.globalFilters(globalFilters.let(CfnPatchBaseline.PatchFilterGroupProperty.Companion::unwrap))
     }
 
     /**
@@ -594,7 +594,7 @@ public interface CfnPatchBaselineProps {
      * Applies to Linux managed nodes only.
      */
     override fun sources(sources: IResolvable) {
-      cdkBuilder.sources(sources.let(IResolvable::unwrap))
+      cdkBuilder.sources(sources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -620,7 +620,7 @@ public interface CfnPatchBaselineProps {
      * of patches it specifies and the operating system family it applies to.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

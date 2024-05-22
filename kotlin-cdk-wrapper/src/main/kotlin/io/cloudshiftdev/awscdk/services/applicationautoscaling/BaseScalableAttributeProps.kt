@@ -126,14 +126,14 @@ public interface BaseScalableAttributeProps : EnableScalingProps {
      * @param role Role to use for scaling. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param serviceNamespace Service namespace of the scalable attribute. 
      */
     override fun serviceNamespace(serviceNamespace: ServiceNamespace) {
-      cdkBuilder.serviceNamespace(serviceNamespace.let(ServiceNamespace::unwrap))
+      cdkBuilder.serviceNamespace(serviceNamespace.let(ServiceNamespace.Companion::unwrap))
     }
 
     public fun build():

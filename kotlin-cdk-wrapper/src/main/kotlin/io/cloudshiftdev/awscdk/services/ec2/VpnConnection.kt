@@ -36,8 +36,8 @@ public open class VpnConnection(
     id: String,
     props: VpnConnectionProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.VpnConnection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(VpnConnectionProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.VpnConnection(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(VpnConnectionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -201,7 +201,7 @@ public open class VpnConnection(
      * @param tunnelOptions The tunnel options for the VPN connection. 
      */
     override fun tunnelOptions(tunnelOptions: List<VpnTunnelOption>) {
-      cdkBuilder.tunnelOptions(tunnelOptions.map(VpnTunnelOption::unwrap))
+      cdkBuilder.tunnelOptions(tunnelOptions.map(VpnTunnelOption.Companion::unwrap))
     }
 
     /**
@@ -223,7 +223,7 @@ public open class VpnConnection(
      * @param vpc The VPC to connect to. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.VpnConnection = cdkBuilder.build()
@@ -235,8 +235,8 @@ public open class VpnConnection(
       id: String,
       attrs: VpnConnectionAttributes,
     ): IVpnConnection =
-        software.amazon.awscdk.services.ec2.VpnConnection.fromVpnConnectionAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(VpnConnectionAttributes::unwrap)).let(IVpnConnection::wrap)
+        software.amazon.awscdk.services.ec2.VpnConnection.fromVpnConnectionAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(VpnConnectionAttributes.Companion::unwrap)).let(IVpnConnection::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6bc1baf4cdaedeaa5eecd9cc606061ad7873b1bb912d32ae93071272f83b8bb2")
@@ -251,7 +251,7 @@ public open class VpnConnection(
 
     public fun metricAll(metricName: String, props: MetricOptions): Metric =
         software.amazon.awscdk.services.ec2.VpnConnection.metricAll(metricName,
-        props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("dc2edb7e8860d33b2c02a5d62b7557e31ca2fd399a100f3532bebaf81fa8a856")
@@ -262,7 +262,7 @@ public open class VpnConnection(
         software.amazon.awscdk.services.ec2.VpnConnection.metricAllTunnelDataIn().let(Metric::wrap)
 
     public fun metricAllTunnelDataIn(props: MetricOptions): Metric =
-        software.amazon.awscdk.services.ec2.VpnConnection.metricAllTunnelDataIn(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        software.amazon.awscdk.services.ec2.VpnConnection.metricAllTunnelDataIn(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a092407d130c7cab3d0974bfeb2b4910d4ae00e1d8a67aa74bc33aa6d4216a62")
@@ -273,7 +273,7 @@ public open class VpnConnection(
         software.amazon.awscdk.services.ec2.VpnConnection.metricAllTunnelDataOut().let(Metric::wrap)
 
     public fun metricAllTunnelDataOut(props: MetricOptions): Metric =
-        software.amazon.awscdk.services.ec2.VpnConnection.metricAllTunnelDataOut(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        software.amazon.awscdk.services.ec2.VpnConnection.metricAllTunnelDataOut(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("93ffe4727bd68275e3dd616f9b320e41ab2c62ee36cf60b54423d2d721bef296")
@@ -284,7 +284,7 @@ public open class VpnConnection(
         software.amazon.awscdk.services.ec2.VpnConnection.metricAllTunnelState().let(Metric::wrap)
 
     public fun metricAllTunnelState(props: MetricOptions): Metric =
-        software.amazon.awscdk.services.ec2.VpnConnection.metricAllTunnelState(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        software.amazon.awscdk.services.ec2.VpnConnection.metricAllTunnelState(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ea74a84f08419b85cbe4425224a306285099aa8445f837f5f4a51cdaa7021385")

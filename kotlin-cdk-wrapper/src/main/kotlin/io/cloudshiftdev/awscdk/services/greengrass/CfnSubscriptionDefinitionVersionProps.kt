@@ -97,7 +97,7 @@ public interface CfnSubscriptionDefinitionVersionProps {
      * @param subscriptions The subscriptions in this version. 
      */
     override fun subscriptions(subscriptions: IResolvable) {
-      cdkBuilder.subscriptions(subscriptions.let(IResolvable::unwrap))
+      cdkBuilder.subscriptions(subscriptions.let(IResolvable.Companion::unwrap))
     }
 
     /**

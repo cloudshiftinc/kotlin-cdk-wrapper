@@ -100,7 +100,7 @@ public interface DeploymentStrategyProps {
      * or RolloutStrategy.CANARY_10_PERCENT_20_MINUTES.
      */
     override fun rolloutStrategy(rolloutStrategy: RolloutStrategy) {
-      cdkBuilder.rolloutStrategy(rolloutStrategy.let(RolloutStrategy::unwrap))
+      cdkBuilder.rolloutStrategy(rolloutStrategy.let(RolloutStrategy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appconfig.DeploymentStrategyProps =

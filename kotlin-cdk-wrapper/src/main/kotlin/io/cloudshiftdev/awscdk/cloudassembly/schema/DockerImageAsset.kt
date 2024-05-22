@@ -108,7 +108,7 @@ public interface DockerImageAsset {
      * @param source Source description for file assets. 
      */
     override fun source(source: DockerImageSource) {
-      cdkBuilder.source(source.let(DockerImageSource::unwrap))
+      cdkBuilder.source(source.let(DockerImageSource.Companion::unwrap))
     }
 
     /**

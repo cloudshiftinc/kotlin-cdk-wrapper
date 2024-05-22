@@ -32,7 +32,12 @@ public open class OperatingSystemFamily(
   cdkObject: software.amazon.awscdk.services.ecs.OperatingSystemFamily,
 ) : CdkObject(cdkObject) {
   /**
-   * Returns true if the operating system family is Windows.
+   * Indicates whether the operating system family is Linux.
+   */
+  public open fun isLinux(): Boolean = unwrap(this).isLinux()
+
+  /**
+   * Indicates whether the operating system family is Windows.
    */
   public open fun isWindows(): Boolean = unwrap(this).isWindows()
 

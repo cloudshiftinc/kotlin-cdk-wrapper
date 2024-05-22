@@ -48,8 +48,8 @@ public open class WebSocketStage(
     id: String,
     props: WebSocketStageProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.WebSocketStage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(WebSocketStageProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.WebSocketStage(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(WebSocketStageProps.Companion::unwrap))
   )
 
   public constructor(
@@ -76,7 +76,7 @@ public open class WebSocketStage(
    * @param identity The principal. 
    */
   public open fun grantManagementApiAccess(identity: IGrantable): Grant =
-      unwrap(this).grantManagementApiAccess(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantManagementApiAccess(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Return the given named metric for this HTTP Api Gateway Stage.
@@ -94,7 +94,7 @@ public open class WebSocketStage(
    * @param props
    */
   public override fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Return the given named metric for this HTTP Api Gateway Stage.
@@ -214,7 +214,7 @@ public open class WebSocketStage(
      * @param domainMapping The options for custom domain and api mapping. 
      */
     override fun domainMapping(domainMapping: DomainMappingOptions) {
-      cdkBuilder.domainMapping(domainMapping.let(DomainMappingOptions::unwrap))
+      cdkBuilder.domainMapping(domainMapping.let(DomainMappingOptions.Companion::unwrap))
     }
 
     /**
@@ -246,7 +246,7 @@ public open class WebSocketStage(
      * @param throttle Throttle settings for the routes of this stage. 
      */
     override fun throttle(throttle: ThrottleSettings) {
-      cdkBuilder.throttle(throttle.let(ThrottleSettings::unwrap))
+      cdkBuilder.throttle(throttle.let(ThrottleSettings.Companion::unwrap))
     }
 
     /**
@@ -267,7 +267,7 @@ public open class WebSocketStage(
      * @param webSocketApi The WebSocket API to which this stage is associated. 
      */
     override fun webSocketApi(webSocketApi: IWebSocketApi) {
-      cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi::unwrap))
+      cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.WebSocketStage =
@@ -280,8 +280,8 @@ public open class WebSocketStage(
       id: String,
       attrs: WebSocketStageAttributes,
     ): IWebSocketStage =
-        software.amazon.awscdk.services.apigatewayv2.WebSocketStage.fromWebSocketStageAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(WebSocketStageAttributes::unwrap)).let(IWebSocketStage::wrap)
+        software.amazon.awscdk.services.apigatewayv2.WebSocketStage.fromWebSocketStageAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(WebSocketStageAttributes.Companion::unwrap)).let(IWebSocketStage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c320f7b4d1d5bee302dc541be02f23840ba27f0abd2928c85a7bfccdb92aa57d")

@@ -169,7 +169,7 @@ public interface CfnSiteProps {
      * * `Longitude` : The longitude of the site.
      */
     override fun location(location: IResolvable) {
-      cdkBuilder.location(location.let(IResolvable::unwrap))
+      cdkBuilder.location(location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -182,7 +182,7 @@ public interface CfnSiteProps {
      * * `Longitude` : The longitude of the site.
      */
     override fun location(location: CfnSite.LocationProperty) {
-      cdkBuilder.location(location.let(CfnSite.LocationProperty::unwrap))
+      cdkBuilder.location(location.let(CfnSite.LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -203,7 +203,7 @@ public interface CfnSiteProps {
      * @param tags The tags for the site.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

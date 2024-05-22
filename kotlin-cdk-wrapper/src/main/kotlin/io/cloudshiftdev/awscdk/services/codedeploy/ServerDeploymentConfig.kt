@@ -28,8 +28,8 @@ public open class ServerDeploymentConfig(
     id: String,
     props: ServerDeploymentConfigProps,
   ) :
-      this(software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ServerDeploymentConfigProps::unwrap))
+      this(software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ServerDeploymentConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -88,7 +88,7 @@ public open class ServerDeploymentConfig(
      * @param minimumHealthyHosts Minimum number of healthy hosts. 
      */
     override fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHosts) {
-      cdkBuilder.minimumHealthyHosts(minimumHealthyHosts.let(MinimumHealthyHosts::unwrap))
+      cdkBuilder.minimumHealthyHosts(minimumHealthyHosts.let(MinimumHealthyHosts.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig =
@@ -110,7 +110,7 @@ public open class ServerDeploymentConfig(
       id: String,
       serverDeploymentConfigName: String,
     ): IServerDeploymentConfig =
-        software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig.fromServerDeploymentConfigName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig.fromServerDeploymentConfigName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, serverDeploymentConfigName).let(IServerDeploymentConfig::wrap)
 
     public operator fun invoke(

@@ -641,7 +641,7 @@ public interface CfnScalingPolicyProps {
      * Required if the policy type is `PredictiveScaling` .
      */
     override fun predictiveScalingConfiguration(predictiveScalingConfiguration: IResolvable) {
-      cdkBuilder.predictiveScalingConfiguration(predictiveScalingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.predictiveScalingConfiguration(predictiveScalingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -654,7 +654,7 @@ public interface CfnScalingPolicyProps {
      */
     override
         fun predictiveScalingConfiguration(predictiveScalingConfiguration: CfnScalingPolicy.PredictiveScalingConfigurationProperty) {
-      cdkBuilder.predictiveScalingConfiguration(predictiveScalingConfiguration.let(CfnScalingPolicy.PredictiveScalingConfigurationProperty::unwrap))
+      cdkBuilder.predictiveScalingConfiguration(predictiveScalingConfiguration.let(CfnScalingPolicy.PredictiveScalingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -690,7 +690,7 @@ public interface CfnScalingPolicyProps {
      * Required if the policy type is `StepScaling` . (Not used with any other policy type.)
      */
     override fun stepAdjustments(stepAdjustments: IResolvable) {
-      cdkBuilder.stepAdjustments(stepAdjustments.let(IResolvable::unwrap))
+      cdkBuilder.stepAdjustments(stepAdjustments.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -726,7 +726,7 @@ public interface CfnScalingPolicyProps {
      * Required if the policy type is `TargetTrackingScaling` .
      */
     override fun targetTrackingConfiguration(targetTrackingConfiguration: IResolvable) {
-      cdkBuilder.targetTrackingConfiguration(targetTrackingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.targetTrackingConfiguration(targetTrackingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -746,7 +746,7 @@ public interface CfnScalingPolicyProps {
      */
     override
         fun targetTrackingConfiguration(targetTrackingConfiguration: CfnScalingPolicy.TargetTrackingConfigurationProperty) {
-      cdkBuilder.targetTrackingConfiguration(targetTrackingConfiguration.let(CfnScalingPolicy.TargetTrackingConfigurationProperty::unwrap))
+      cdkBuilder.targetTrackingConfiguration(targetTrackingConfiguration.let(CfnScalingPolicy.TargetTrackingConfigurationProperty.Companion::unwrap))
     }
 
     /**

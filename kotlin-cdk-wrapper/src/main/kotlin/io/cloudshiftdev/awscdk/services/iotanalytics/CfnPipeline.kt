@@ -125,8 +125,8 @@ public open class CfnPipeline(
     id: String,
     props: CfnPipelineProps,
   ) :
-      this(software.amazon.awscdk.services.iotanalytics.CfnPipeline(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPipelineProps::unwrap))
+      this(software.amazon.awscdk.services.iotanalytics.CfnPipeline(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPipelineProps.Companion::unwrap))
   )
 
   public constructor(
@@ -147,7 +147,7 @@ public open class CfnPipeline(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -159,7 +159,7 @@ public open class CfnPipeline(
    * A list of "PipelineActivity" objects.
    */
   public open fun pipelineActivities(`value`: IResolvable) {
-    unwrap(this).setPipelineActivities(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPipelineActivities(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -202,7 +202,7 @@ public open class CfnPipeline(
    * Metadata which can be used to manage the pipeline.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -326,7 +326,7 @@ public open class CfnPipeline(
      * @param pipelineActivities A list of "PipelineActivity" objects. 
      */
     override fun pipelineActivities(pipelineActivities: IResolvable) {
-      cdkBuilder.pipelineActivities(pipelineActivities.let(IResolvable::unwrap))
+      cdkBuilder.pipelineActivities(pipelineActivities.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -389,7 +389,7 @@ public open class CfnPipeline(
      * @param tags Metadata which can be used to manage the pipeline. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -776,14 +776,14 @@ public open class CfnPipeline(
        * @param addAttributes Adds other attributes based on existing attributes in the message.
        */
       override fun addAttributes(addAttributes: IResolvable) {
-        cdkBuilder.addAttributes(addAttributes.let(IResolvable::unwrap))
+        cdkBuilder.addAttributes(addAttributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param addAttributes Adds other attributes based on existing attributes in the message.
        */
       override fun addAttributes(addAttributes: AddAttributesProperty) {
-        cdkBuilder.addAttributes(addAttributes.let(AddAttributesProperty::unwrap))
+        cdkBuilder.addAttributes(addAttributes.let(AddAttributesProperty.Companion::unwrap))
       }
 
       /**
@@ -798,14 +798,14 @@ public open class CfnPipeline(
        * @param channel Determines the source of the messages to be processed.
        */
       override fun channel(channel: IResolvable) {
-        cdkBuilder.channel(channel.let(IResolvable::unwrap))
+        cdkBuilder.channel(channel.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param channel Determines the source of the messages to be processed.
        */
       override fun channel(channel: ChannelProperty) {
-        cdkBuilder.channel(channel.let(ChannelProperty::unwrap))
+        cdkBuilder.channel(channel.let(ChannelProperty.Companion::unwrap))
       }
 
       /**
@@ -820,14 +820,14 @@ public open class CfnPipeline(
        * @param datastore Specifies where to store the processed message data.
        */
       override fun datastore(datastore: IResolvable) {
-        cdkBuilder.datastore(datastore.let(IResolvable::unwrap))
+        cdkBuilder.datastore(datastore.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param datastore Specifies where to store the processed message data.
        */
       override fun datastore(datastore: DatastoreProperty) {
-        cdkBuilder.datastore(datastore.let(DatastoreProperty::unwrap))
+        cdkBuilder.datastore(datastore.let(DatastoreProperty.Companion::unwrap))
       }
 
       /**
@@ -842,14 +842,14 @@ public open class CfnPipeline(
        * @param deviceRegistryEnrich Adds data from the AWS IoT device registry to your message.
        */
       override fun deviceRegistryEnrich(deviceRegistryEnrich: IResolvable) {
-        cdkBuilder.deviceRegistryEnrich(deviceRegistryEnrich.let(IResolvable::unwrap))
+        cdkBuilder.deviceRegistryEnrich(deviceRegistryEnrich.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param deviceRegistryEnrich Adds data from the AWS IoT device registry to your message.
        */
       override fun deviceRegistryEnrich(deviceRegistryEnrich: DeviceRegistryEnrichProperty) {
-        cdkBuilder.deviceRegistryEnrich(deviceRegistryEnrich.let(DeviceRegistryEnrichProperty::unwrap))
+        cdkBuilder.deviceRegistryEnrich(deviceRegistryEnrich.let(DeviceRegistryEnrichProperty.Companion::unwrap))
       }
 
       /**
@@ -866,7 +866,7 @@ public open class CfnPipeline(
        * message.
        */
       override fun deviceShadowEnrich(deviceShadowEnrich: IResolvable) {
-        cdkBuilder.deviceShadowEnrich(deviceShadowEnrich.let(IResolvable::unwrap))
+        cdkBuilder.deviceShadowEnrich(deviceShadowEnrich.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -874,7 +874,7 @@ public open class CfnPipeline(
        * message.
        */
       override fun deviceShadowEnrich(deviceShadowEnrich: DeviceShadowEnrichProperty) {
-        cdkBuilder.deviceShadowEnrich(deviceShadowEnrich.let(DeviceShadowEnrichProperty::unwrap))
+        cdkBuilder.deviceShadowEnrich(deviceShadowEnrich.let(DeviceShadowEnrichProperty.Companion::unwrap))
       }
 
       /**
@@ -891,14 +891,14 @@ public open class CfnPipeline(
        * @param filter Filters a message based on its attributes.
        */
       override fun filter(filter: IResolvable) {
-        cdkBuilder.filter(filter.let(IResolvable::unwrap))
+        cdkBuilder.filter(filter.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param filter Filters a message based on its attributes.
        */
       override fun filter(filter: FilterProperty) {
-        cdkBuilder.filter(filter.let(FilterProperty::unwrap))
+        cdkBuilder.filter(filter.let(FilterProperty.Companion::unwrap))
       }
 
       /**
@@ -913,14 +913,14 @@ public open class CfnPipeline(
        * @param lambda Runs a Lambda function to modify the message.
        */
       override fun lambda(lambda: IResolvable) {
-        cdkBuilder.lambda(lambda.let(IResolvable::unwrap))
+        cdkBuilder.lambda(lambda.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param lambda Runs a Lambda function to modify the message.
        */
       override fun lambda(lambda: LambdaProperty) {
-        cdkBuilder.lambda(lambda.let(LambdaProperty::unwrap))
+        cdkBuilder.lambda(lambda.let(LambdaProperty.Companion::unwrap))
       }
 
       /**
@@ -936,7 +936,7 @@ public open class CfnPipeline(
        * the message.
        */
       override fun math(math: IResolvable) {
-        cdkBuilder.math(math.let(IResolvable::unwrap))
+        cdkBuilder.math(math.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -944,7 +944,7 @@ public open class CfnPipeline(
        * the message.
        */
       override fun math(math: MathProperty) {
-        cdkBuilder.math(math.let(MathProperty::unwrap))
+        cdkBuilder.math(math.let(MathProperty.Companion::unwrap))
       }
 
       /**
@@ -959,14 +959,14 @@ public open class CfnPipeline(
        * @param removeAttributes Removes attributes from a message.
        */
       override fun removeAttributes(removeAttributes: IResolvable) {
-        cdkBuilder.removeAttributes(removeAttributes.let(IResolvable::unwrap))
+        cdkBuilder.removeAttributes(removeAttributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param removeAttributes Removes attributes from a message.
        */
       override fun removeAttributes(removeAttributes: RemoveAttributesProperty) {
-        cdkBuilder.removeAttributes(removeAttributes.let(RemoveAttributesProperty::unwrap))
+        cdkBuilder.removeAttributes(removeAttributes.let(RemoveAttributesProperty.Companion::unwrap))
       }
 
       /**
@@ -982,7 +982,7 @@ public open class CfnPipeline(
        * original message.
        */
       override fun selectAttributes(selectAttributes: IResolvable) {
-        cdkBuilder.selectAttributes(selectAttributes.let(IResolvable::unwrap))
+        cdkBuilder.selectAttributes(selectAttributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -990,7 +990,7 @@ public open class CfnPipeline(
        * original message.
        */
       override fun selectAttributes(selectAttributes: SelectAttributesProperty) {
-        cdkBuilder.selectAttributes(selectAttributes.let(SelectAttributesProperty::unwrap))
+        cdkBuilder.selectAttributes(selectAttributes.let(SelectAttributesProperty.Companion::unwrap))
       }
 
       /**
@@ -1194,7 +1194,7 @@ public open class CfnPipeline(
        * "RemoveAttributeActivity".
        */
       override fun attributes(attributes: IResolvable) {
-        cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
       }
 
       /**

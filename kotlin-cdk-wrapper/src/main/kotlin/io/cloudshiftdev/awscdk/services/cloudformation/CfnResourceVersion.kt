@@ -63,8 +63,8 @@ public open class CfnResourceVersion(
     id: String,
     props: CfnResourceVersionProps,
   ) :
-      this(software.amazon.awscdk.services.cloudformation.CfnResourceVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnResourceVersionProps::unwrap))
+      this(software.amazon.awscdk.services.cloudformation.CfnResourceVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnResourceVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -156,7 +156,7 @@ public open class CfnResourceVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -168,14 +168,14 @@ public open class CfnResourceVersion(
    * Logging configuration information for a resource.
    */
   public open fun loggingConfig(`value`: IResolvable) {
-    unwrap(this).setLoggingConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoggingConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Logging configuration information for a resource.
    */
   public open fun loggingConfig(`value`: LoggingConfigProperty) {
-    unwrap(this).setLoggingConfig(`value`.let(LoggingConfigProperty::unwrap))
+    unwrap(this).setLoggingConfig(`value`.let(LoggingConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -341,7 +341,7 @@ public open class CfnResourceVersion(
      * @param loggingConfig Logging configuration information for a resource. 
      */
     override fun loggingConfig(loggingConfig: IResolvable) {
-      cdkBuilder.loggingConfig(loggingConfig.let(IResolvable::unwrap))
+      cdkBuilder.loggingConfig(loggingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -351,7 +351,7 @@ public open class CfnResourceVersion(
      * @param loggingConfig Logging configuration information for a resource. 
      */
     override fun loggingConfig(loggingConfig: LoggingConfigProperty) {
-      cdkBuilder.loggingConfig(loggingConfig.let(LoggingConfigProperty::unwrap))
+      cdkBuilder.loggingConfig(loggingConfig.let(LoggingConfigProperty.Companion::unwrap))
     }
 
     /**

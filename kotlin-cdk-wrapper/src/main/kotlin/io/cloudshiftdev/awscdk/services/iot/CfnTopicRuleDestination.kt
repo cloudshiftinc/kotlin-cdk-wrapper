@@ -47,7 +47,7 @@ public open class CfnTopicRuleDestination(
   cdkObject: software.amazon.awscdk.services.iot.CfnTopicRuleDestination,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.iot.CfnTopicRuleDestination(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.iot.CfnTopicRuleDestination(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -56,8 +56,8 @@ public open class CfnTopicRuleDestination(
     id: String,
     props: CfnTopicRuleDestinationProps,
   ) :
-      this(software.amazon.awscdk.services.iot.CfnTopicRuleDestination(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTopicRuleDestinationProps::unwrap))
+      this(software.amazon.awscdk.services.iot.CfnTopicRuleDestination(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTopicRuleDestinationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -86,14 +86,14 @@ public open class CfnTopicRuleDestination(
    * Properties of the HTTP URL.
    */
   public open fun httpUrlProperties(`value`: IResolvable) {
-    unwrap(this).setHttpUrlProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHttpUrlProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Properties of the HTTP URL.
    */
   public open fun httpUrlProperties(`value`: HttpUrlDestinationSummaryProperty) {
-    unwrap(this).setHttpUrlProperties(`value`.let(HttpUrlDestinationSummaryProperty::unwrap))
+    unwrap(this).setHttpUrlProperties(`value`.let(HttpUrlDestinationSummaryProperty.Companion::unwrap))
   }
 
   /**
@@ -110,7 +110,7 @@ public open class CfnTopicRuleDestination(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -134,14 +134,14 @@ public open class CfnTopicRuleDestination(
    * Properties of the virtual private cloud (VPC) connection.
    */
   public open fun vpcProperties(`value`: IResolvable) {
-    unwrap(this).setVpcProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Properties of the virtual private cloud (VPC) connection.
    */
   public open fun vpcProperties(`value`: VpcDestinationPropertiesProperty) {
-    unwrap(this).setVpcProperties(`value`.let(VpcDestinationPropertiesProperty::unwrap))
+    unwrap(this).setVpcProperties(`value`.let(VpcDestinationPropertiesProperty.Companion::unwrap))
   }
 
   /**
@@ -247,7 +247,7 @@ public open class CfnTopicRuleDestination(
      * @param httpUrlProperties Properties of the HTTP URL. 
      */
     override fun httpUrlProperties(httpUrlProperties: IResolvable) {
-      cdkBuilder.httpUrlProperties(httpUrlProperties.let(IResolvable::unwrap))
+      cdkBuilder.httpUrlProperties(httpUrlProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -257,7 +257,7 @@ public open class CfnTopicRuleDestination(
      * @param httpUrlProperties Properties of the HTTP URL. 
      */
     override fun httpUrlProperties(httpUrlProperties: HttpUrlDestinationSummaryProperty) {
-      cdkBuilder.httpUrlProperties(httpUrlProperties.let(HttpUrlDestinationSummaryProperty::unwrap))
+      cdkBuilder.httpUrlProperties(httpUrlProperties.let(HttpUrlDestinationSummaryProperty.Companion::unwrap))
     }
 
     /**
@@ -303,7 +303,7 @@ public open class CfnTopicRuleDestination(
      * @param vpcProperties Properties of the virtual private cloud (VPC) connection. 
      */
     override fun vpcProperties(vpcProperties: IResolvable) {
-      cdkBuilder.vpcProperties(vpcProperties.let(IResolvable::unwrap))
+      cdkBuilder.vpcProperties(vpcProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -313,7 +313,7 @@ public open class CfnTopicRuleDestination(
      * @param vpcProperties Properties of the virtual private cloud (VPC) connection. 
      */
     override fun vpcProperties(vpcProperties: VpcDestinationPropertiesProperty) {
-      cdkBuilder.vpcProperties(vpcProperties.let(VpcDestinationPropertiesProperty::unwrap))
+      cdkBuilder.vpcProperties(vpcProperties.let(VpcDestinationPropertiesProperty.Companion::unwrap))
     }
 
     /**

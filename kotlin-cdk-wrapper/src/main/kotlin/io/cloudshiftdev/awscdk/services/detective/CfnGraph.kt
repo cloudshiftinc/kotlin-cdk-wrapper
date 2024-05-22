@@ -45,7 +45,7 @@ public open class CfnGraph(
   cdkObject: software.amazon.awscdk.services.detective.CfnGraph,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.detective.CfnGraph(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.detective.CfnGraph(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -54,8 +54,8 @@ public open class CfnGraph(
     id: String,
     props: CfnGraphProps,
   ) :
-      this(software.amazon.awscdk.services.detective.CfnGraph(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGraphProps::unwrap))
+      this(software.amazon.awscdk.services.detective.CfnGraph(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGraphProps.Companion::unwrap))
   )
 
   public constructor(
@@ -89,7 +89,7 @@ public open class CfnGraph(
    * organization behavior graph.
    */
   public open fun autoEnableMembers(`value`: IResolvable) {
-    unwrap(this).setAutoEnableMembers(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoEnableMembers(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -98,7 +98,7 @@ public open class CfnGraph(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -116,7 +116,7 @@ public open class CfnGraph(
    * The tag values to assign to the new behavior graph.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -222,7 +222,7 @@ public open class CfnGraph(
      * as member accounts in the organization behavior graph. 
      */
     override fun autoEnableMembers(autoEnableMembers: IResolvable) {
-      cdkBuilder.autoEnableMembers(autoEnableMembers.let(IResolvable::unwrap))
+      cdkBuilder.autoEnableMembers(autoEnableMembers.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -232,7 +232,7 @@ public open class CfnGraph(
      * @param tags The tag values to assign to the new behavior graph. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

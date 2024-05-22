@@ -554,7 +554,7 @@ public interface CfnAssociationProps {
      * This parameter is not supported for rate expressions.
      */
     override fun applyOnlyAtCronInterval(applyOnlyAtCronInterval: IResolvable) {
-      cdkBuilder.applyOnlyAtCronInterval(applyOnlyAtCronInterval.let(IResolvable::unwrap))
+      cdkBuilder.applyOnlyAtCronInterval(applyOnlyAtCronInterval.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -694,7 +694,7 @@ public interface CfnAssociationProps {
      * store the output details of the request.
      */
     override fun outputLocation(outputLocation: IResolvable) {
-      cdkBuilder.outputLocation(outputLocation.let(IResolvable::unwrap))
+      cdkBuilder.outputLocation(outputLocation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -703,7 +703,7 @@ public interface CfnAssociationProps {
      */
     override
         fun outputLocation(outputLocation: CfnAssociation.InstanceAssociationOutputLocationProperty) {
-      cdkBuilder.outputLocation(outputLocation.let(CfnAssociation.InstanceAssociationOutputLocationProperty::unwrap))
+      cdkBuilder.outputLocation(outputLocation.let(CfnAssociation.InstanceAssociationOutputLocationProperty.Companion::unwrap))
     }
 
     /**
@@ -771,7 +771,7 @@ public interface CfnAssociationProps {
      * all managed instances in an AWS account " on the Examples page.
      */
     override fun targets(targets: IResolvable) {
-      cdkBuilder.targets(targets.let(IResolvable::unwrap))
+      cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
     }
 
     /**

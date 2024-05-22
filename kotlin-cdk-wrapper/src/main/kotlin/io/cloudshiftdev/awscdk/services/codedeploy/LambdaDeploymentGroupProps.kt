@@ -227,7 +227,7 @@ public interface LambdaDeploymentGroupProps {
      * Alarms can also be added after the Deployment Group is created using the `#addAlarm` method.
      */
     override fun alarms(alarms: List<IAlarm>) {
-      cdkBuilder.alarms(alarms.map(IAlarm::unwrap))
+      cdkBuilder.alarms(alarms.map(IAlarm.Companion::unwrap))
     }
 
     /**
@@ -246,7 +246,7 @@ public interface LambdaDeploymentGroupProps {
      * policy
      */
     override fun alias(alias: Alias) {
-      cdkBuilder.alias(alias.let(Alias::unwrap))
+      cdkBuilder.alias(alias.let(Alias.Companion::unwrap))
     }
 
     /**
@@ -254,14 +254,14 @@ public interface LambdaDeploymentGroupProps {
      * Group belongs to.
      */
     override fun application(application: ILambdaApplication) {
-      cdkBuilder.application(application.let(ILambdaApplication::unwrap))
+      cdkBuilder.application(application.let(ILambdaApplication.Companion::unwrap))
     }
 
     /**
      * @param autoRollback The auto-rollback configuration for this Deployment Group.
      */
     override fun autoRollback(autoRollback: AutoRollbackConfig) {
-      cdkBuilder.autoRollback(autoRollback.let(AutoRollbackConfig::unwrap))
+      cdkBuilder.autoRollback(autoRollback.let(AutoRollbackConfig.Companion::unwrap))
     }
 
     /**
@@ -276,7 +276,7 @@ public interface LambdaDeploymentGroupProps {
      * @param deploymentConfig The Deployment Configuration this Deployment Group uses.
      */
     override fun deploymentConfig(deploymentConfig: ILambdaDeploymentConfig) {
-      cdkBuilder.deploymentConfig(deploymentConfig.let(ILambdaDeploymentConfig::unwrap))
+      cdkBuilder.deploymentConfig(deploymentConfig.let(ILambdaDeploymentConfig.Companion::unwrap))
     }
 
     /**
@@ -307,21 +307,21 @@ public interface LambdaDeploymentGroupProps {
      * @param postHook The Lambda function to run after traffic routing starts.
      */
     override fun postHook(postHook: IFunction) {
-      cdkBuilder.postHook(postHook.let(IFunction::unwrap))
+      cdkBuilder.postHook(postHook.let(IFunction.Companion::unwrap))
     }
 
     /**
      * @param preHook The Lambda function to run before traffic routing starts.
      */
     override fun preHook(preHook: IFunction) {
-      cdkBuilder.preHook(preHook.let(IFunction::unwrap))
+      cdkBuilder.preHook(preHook.let(IFunction.Companion::unwrap))
     }
 
     /**
      * @param role The service Role of this Deployment Group.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroupProps =

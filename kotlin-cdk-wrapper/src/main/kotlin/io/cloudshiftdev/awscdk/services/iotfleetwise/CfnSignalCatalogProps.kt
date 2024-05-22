@@ -205,7 +205,7 @@ public interface CfnSignalCatalogProps {
      * vehicle network.
      */
     override fun nodeCounts(nodeCounts: IResolvable) {
-      cdkBuilder.nodeCounts(nodeCounts.let(IResolvable::unwrap))
+      cdkBuilder.nodeCounts(nodeCounts.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -213,7 +213,7 @@ public interface CfnSignalCatalogProps {
      * vehicle network.
      */
     override fun nodeCounts(nodeCounts: CfnSignalCatalog.NodeCountsProperty) {
-      cdkBuilder.nodeCounts(nodeCounts.let(CfnSignalCatalog.NodeCountsProperty::unwrap))
+      cdkBuilder.nodeCounts(nodeCounts.let(CfnSignalCatalog.NodeCountsProperty.Companion::unwrap))
     }
 
     /**
@@ -230,7 +230,7 @@ public interface CfnSignalCatalogProps {
      * signals.
      */
     override fun nodes(nodes: IResolvable) {
-      cdkBuilder.nodes(nodes.let(IResolvable::unwrap))
+      cdkBuilder.nodes(nodes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -251,7 +251,7 @@ public interface CfnSignalCatalogProps {
      * @param tags (Optional) Metadata that can be used to manage the signal catalog.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

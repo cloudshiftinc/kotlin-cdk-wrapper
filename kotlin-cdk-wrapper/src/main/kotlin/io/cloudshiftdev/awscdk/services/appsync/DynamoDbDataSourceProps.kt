@@ -108,7 +108,7 @@ public interface DynamoDbDataSourceProps : BackedDataSourceProps {
      * @param api The API to attach this data source to. 
      */
     override fun api(api: IGraphqlApi) {
-      cdkBuilder.api(api.let(IGraphqlApi::unwrap))
+      cdkBuilder.api(api.let(IGraphqlApi.Companion::unwrap))
     }
 
     /**
@@ -138,14 +138,14 @@ public interface DynamoDbDataSourceProps : BackedDataSourceProps {
      * source.
      */
     override fun serviceRole(serviceRole: IRole) {
-      cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
+      cdkBuilder.serviceRole(serviceRole.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param table The DynamoDB table backing this data source. 
      */
     override fun table(table: ITable) {
-      cdkBuilder.table(table.let(ITable::unwrap))
+      cdkBuilder.table(table.let(ITable.Companion::unwrap))
     }
 
     /**

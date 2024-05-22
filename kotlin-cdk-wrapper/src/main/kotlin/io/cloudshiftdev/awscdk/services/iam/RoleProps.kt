@@ -17,15 +17,18 @@ import kotlin.collections.Map
  * Example:
  *
  * ```
- * IChainable definition;
- * Role role = Role.Builder.create(this, "Role")
- * .assumedBy(new ServicePrincipal("lambda.amazonaws.com"))
+ * // Option 3: Create a new role that allows the account root principal to assume. Add this role in
+ * the `system:masters` and witch to this role from the AWS console.
+ * Cluster cluster;
+ * Role consoleReadOnlyRole = Role.Builder.create(this, "ConsoleReadOnlyRole")
+ * .assumedBy(new ArnPrincipal("arn_for_trusted_principal"))
  * .build();
- * StateMachine stateMachine = StateMachine.Builder.create(this, "StateMachine")
- * .definitionBody(DefinitionBody.fromChainable(definition))
- * .build();
- * // Give role permission to get execution history of ALL executions for the state machine
- * stateMachine.grantExecution(role, "states:GetExecutionHistory");
+ * consoleReadOnlyRole.addToPolicy(PolicyStatement.Builder.create()
+ * .actions(List.of("eks:AccessKubernetesApi", "eks:Describe*", "eks:List*"))
+ * .resources(List.of(cluster.getClusterArn()))
+ * .build());
+ * // Add this role to system:masters RBAC group
+ * cluster.awsAuth.addMastersRole(consoleReadOnlyRole);
  * ```
  */
 public interface RoleProps {
@@ -266,7 +269,7 @@ public interface RoleProps {
      * the `assumeRolePolicy` property.
      */
     override fun assumedBy(assumedBy: IPrincipal) {
-      cdkBuilder.assumedBy(assumedBy.let(IPrincipal::unwrap))
+      cdkBuilder.assumedBy(assumedBy.let(IPrincipal.Companion::unwrap))
     }
 
     /**
@@ -312,7 +315,7 @@ public interface RoleProps {
      * `addManagedPolicy(ManagedPolicy.fromAwsManagedPolicyName(policyName))`.
      */
     override fun managedPolicies(managedPolicies: List<IManagedPolicy>) {
-      cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy::unwrap))
+      cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy.Companion::unwrap))
     }
 
     /**
@@ -340,7 +343,7 @@ public interface RoleProps {
      * but does not apply when you use those operations to create a console URL.
      */
     override fun maxSessionDuration(maxSessionDuration: Duration) {
-      cdkBuilder.maxSessionDuration(maxSessionDuration.let(Duration::unwrap))
+      cdkBuilder.maxSessionDuration(maxSessionDuration.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -362,7 +365,7 @@ public interface RoleProps {
      * permissions boundaries.
      */
     override fun permissionsBoundary(permissionsBoundary: IManagedPolicy) {
-      cdkBuilder.permissionsBoundary(permissionsBoundary.let(IManagedPolicy::unwrap))
+      cdkBuilder.permissionsBoundary(permissionsBoundary.let(IManagedPolicy.Companion::unwrap))
     }
 
     /**

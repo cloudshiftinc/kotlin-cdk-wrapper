@@ -34,7 +34,7 @@ public open class SnsDestination(
   cdkObject: software.amazon.awscdk.services.lambda.destinations.SnsDestination,
 ) : CdkObject(cdkObject), IDestination {
   public constructor(topic: ITopic) :
-      this(software.amazon.awscdk.services.lambda.destinations.SnsDestination(topic.let(ITopic::unwrap))
+      this(software.amazon.awscdk.services.lambda.destinations.SnsDestination(topic.let(ITopic.Companion::unwrap))
   )
 
   /**
@@ -45,8 +45,8 @@ public open class SnsDestination(
    * @param _options
    */
   public override fun bind(scope: Construct, fn: IFunction): DestinationConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap),
-      fn.let(IFunction::unwrap)).let(DestinationConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      fn.let(IFunction.Companion::unwrap)).let(DestinationConfig::wrap)
 
   /**
    * Returns a destination configuration.
@@ -59,8 +59,9 @@ public open class SnsDestination(
     scope: Construct,
     fn: IFunction,
     options: DestinationOptions,
-  ): DestinationConfig = unwrap(this).bind(scope.let(Construct::unwrap), fn.let(IFunction::unwrap),
-      options.let(DestinationOptions::unwrap)).let(DestinationConfig::wrap)
+  ): DestinationConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      fn.let(IFunction.Companion::unwrap),
+      options.let(DestinationOptions.Companion::unwrap)).let(DestinationConfig::wrap)
 
   /**
    * Returns a destination configuration.

@@ -53,8 +53,8 @@ public open class Stage(
     id: String,
     props: StageProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.Stage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(StageProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.Stage(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(StageProps.Companion::unwrap))
   )
 
   public constructor(
@@ -314,7 +314,7 @@ public open class Stage(
      * to write access logs. 
      */
     override fun accessLogDestination(accessLogDestination: IAccessLogDestination) {
-      cdkBuilder.accessLogDestination(accessLogDestination.let(IAccessLogDestination::unwrap))
+      cdkBuilder.accessLogDestination(accessLogDestination.let(IAccessLogDestination.Companion::unwrap))
     }
 
     /**
@@ -330,7 +330,7 @@ public open class Stage(
      * $content variables. 
      */
     override fun accessLogFormat(accessLogFormat: AccessLogFormat) {
-      cdkBuilder.accessLogFormat(accessLogFormat.let(AccessLogFormat::unwrap))
+      cdkBuilder.accessLogFormat(accessLogFormat.let(AccessLogFormat.Companion::unwrap))
     }
 
     /**
@@ -378,7 +378,7 @@ public open class Stage(
      * @param cacheTtl Specifies the time to live (TTL), in seconds, for cached responses. 
      */
     override fun cacheTtl(cacheTtl: Duration) {
-      cdkBuilder.cacheTtl(cacheTtl.let(Duration::unwrap))
+      cdkBuilder.cacheTtl(cacheTtl.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -431,7 +431,7 @@ public open class Stage(
      * [disable-awslint:ref-via-interface]. 
      */
     override fun deployment(deployment: Deployment) {
-      cdkBuilder.deployment(deployment.let(Deployment::unwrap))
+      cdkBuilder.deployment(deployment.let(Deployment.Companion::unwrap))
     }
 
     /**
@@ -466,7 +466,7 @@ public open class Stage(
      * entries pushed to Amazon CloudWatch Logs. 
      */
     override fun loggingLevel(loggingLevel: MethodLoggingLevel) {
-      cdkBuilder.loggingLevel(loggingLevel.let(MethodLoggingLevel::unwrap))
+      cdkBuilder.loggingLevel(loggingLevel.let(MethodLoggingLevel.Companion::unwrap))
     }
 
     /**
@@ -572,8 +572,8 @@ public open class Stage(
       id: String,
       attrs: StageAttributes,
     ): IStage =
-        software.amazon.awscdk.services.apigateway.Stage.fromStageAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(StageAttributes::unwrap)).let(IStage::wrap)
+        software.amazon.awscdk.services.apigateway.Stage.fromStageAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(StageAttributes.Companion::unwrap)).let(IStage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("26f85f62b6b121d2eb080deabbc661cdeca521904896bc79d1304ec45a54aa08")

@@ -39,8 +39,8 @@ public open class GatewayRoute(
     id: String,
     props: GatewayRouteProps,
   ) :
-      this(software.amazon.awscdk.services.appmesh.GatewayRoute(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(GatewayRouteProps::unwrap))
+      this(software.amazon.awscdk.services.appmesh.GatewayRoute(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(GatewayRouteProps.Companion::unwrap))
   )
 
   public constructor(
@@ -119,7 +119,7 @@ public open class GatewayRoute(
      * @param routeSpec What protocol the route uses. 
      */
     override fun routeSpec(routeSpec: GatewayRouteSpec) {
-      cdkBuilder.routeSpec(routeSpec.let(GatewayRouteSpec::unwrap))
+      cdkBuilder.routeSpec(routeSpec.let(GatewayRouteSpec.Companion::unwrap))
     }
 
     /**
@@ -128,7 +128,7 @@ public open class GatewayRoute(
      * @param virtualGateway The VirtualGateway this GatewayRoute is associated with. 
      */
     override fun virtualGateway(virtualGateway: IVirtualGateway) {
-      cdkBuilder.virtualGateway(virtualGateway.let(IVirtualGateway::unwrap))
+      cdkBuilder.virtualGateway(virtualGateway.let(IVirtualGateway.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appmesh.GatewayRoute = cdkBuilder.build()
@@ -140,7 +140,7 @@ public open class GatewayRoute(
       id: String,
       gatewayRouteArn: String,
     ): IGatewayRoute =
-        software.amazon.awscdk.services.appmesh.GatewayRoute.fromGatewayRouteArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.appmesh.GatewayRoute.fromGatewayRouteArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, gatewayRouteArn).let(IGatewayRoute::wrap)
 
     public fun fromGatewayRouteAttributes(
@@ -148,8 +148,8 @@ public open class GatewayRoute(
       id: String,
       attrs: GatewayRouteAttributes,
     ): IGatewayRoute =
-        software.amazon.awscdk.services.appmesh.GatewayRoute.fromGatewayRouteAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(GatewayRouteAttributes::unwrap)).let(IGatewayRoute::wrap)
+        software.amazon.awscdk.services.appmesh.GatewayRoute.fromGatewayRouteAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(GatewayRouteAttributes.Companion::unwrap)).let(IGatewayRoute::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f71dbbf43002918748ca9a53d66214e1ac13030048b1218765fc33ac163c70a9")

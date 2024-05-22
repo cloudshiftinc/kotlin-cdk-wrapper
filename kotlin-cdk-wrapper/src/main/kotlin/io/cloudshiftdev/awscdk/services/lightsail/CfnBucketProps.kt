@@ -224,14 +224,14 @@ public interface CfnBucketProps {
      * @param accessRules An object that describes the access rules for the bucket.
      */
     override fun accessRules(accessRules: IResolvable) {
-      cdkBuilder.accessRules(accessRules.let(IResolvable::unwrap))
+      cdkBuilder.accessRules(accessRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param accessRules An object that describes the access rules for the bucket.
      */
     override fun accessRules(accessRules: CfnBucket.AccessRulesProperty) {
-      cdkBuilder.accessRules(accessRules.let(CfnBucket.AccessRulesProperty::unwrap))
+      cdkBuilder.accessRules(accessRules.let(CfnBucket.AccessRulesProperty.Companion::unwrap))
     }
 
     /**
@@ -281,7 +281,7 @@ public interface CfnBucketProps {
      * * `NeverEnabled` - Object versioning has never been enabled.
      */
     override fun objectVersioning(objectVersioning: IResolvable) {
-      cdkBuilder.objectVersioning(objectVersioning.let(IResolvable::unwrap))
+      cdkBuilder.objectVersioning(objectVersioning.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -324,7 +324,7 @@ public interface CfnBucketProps {
      * The `Value` of `Tags` is optional for Lightsail resources.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

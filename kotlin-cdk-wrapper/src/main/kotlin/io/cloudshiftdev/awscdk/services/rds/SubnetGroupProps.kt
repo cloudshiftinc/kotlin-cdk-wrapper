@@ -133,7 +133,7 @@ public interface SubnetGroupProps {
      * stack or replaced during an update.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -147,14 +147,14 @@ public interface SubnetGroupProps {
      * @param vpc The VPC to place the subnet group in. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
      * @param vpcSubnets Which subnets within the VPC to associate with this group.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

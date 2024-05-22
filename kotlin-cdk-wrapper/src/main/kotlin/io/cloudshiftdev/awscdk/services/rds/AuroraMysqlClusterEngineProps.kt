@@ -56,7 +56,7 @@ public interface AuroraMysqlClusterEngineProps {
      * @param version The version of the Aurora MySQL cluster engine. 
      */
     override fun version(version: AuroraMysqlEngineVersion) {
-      cdkBuilder.version(version.let(AuroraMysqlEngineVersion::unwrap))
+      cdkBuilder.version(version.let(AuroraMysqlEngineVersion.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.AuroraMysqlClusterEngineProps =

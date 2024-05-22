@@ -64,7 +64,7 @@ public open class CfnWaitCondition(
   cdkObject: software.amazon.awscdk.services.cloudformation.CfnWaitCondition,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.cloudformation.CfnWaitCondition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.cloudformation.CfnWaitCondition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -73,8 +73,8 @@ public open class CfnWaitCondition(
     id: String,
     props: CfnWaitConditionProps,
   ) :
-      this(software.amazon.awscdk.services.cloudformation.CfnWaitCondition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnWaitConditionProps::unwrap))
+      this(software.amazon.awscdk.services.cloudformation.CfnWaitCondition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnWaitConditionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -126,7 +126,7 @@ public open class CfnWaitCondition(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

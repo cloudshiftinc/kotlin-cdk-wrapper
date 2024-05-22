@@ -124,8 +124,8 @@ public open class CfnAnomalyDetector(
     id: String,
     props: CfnAnomalyDetectorProps,
   ) :
-      this(software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAnomalyDetectorProps::unwrap))
+      this(software.amazon.awscdk.services.lookoutmetrics.CfnAnomalyDetector(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAnomalyDetectorProps.Companion::unwrap))
   )
 
   public constructor(
@@ -144,14 +144,14 @@ public open class CfnAnomalyDetector(
    * Contains information about the configuration of the anomaly detector.
    */
   public open fun anomalyDetectorConfig(`value`: IResolvable) {
-    unwrap(this).setAnomalyDetectorConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAnomalyDetectorConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Contains information about the configuration of the anomaly detector.
    */
   public open fun anomalyDetectorConfig(`value`: AnomalyDetectorConfigProperty) {
-    unwrap(this).setAnomalyDetectorConfig(`value`.let(AnomalyDetectorConfigProperty::unwrap))
+    unwrap(this).setAnomalyDetectorConfig(`value`.let(AnomalyDetectorConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -200,7 +200,7 @@ public open class CfnAnomalyDetector(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -224,7 +224,7 @@ public open class CfnAnomalyDetector(
    * The detector's dataset.
    */
   public open fun metricSetList(`value`: IResolvable) {
-    unwrap(this).setMetricSetList(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMetricSetList(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -339,7 +339,7 @@ public open class CfnAnomalyDetector(
      * detector. 
      */
     override fun anomalyDetectorConfig(anomalyDetectorConfig: IResolvable) {
-      cdkBuilder.anomalyDetectorConfig(anomalyDetectorConfig.let(IResolvable::unwrap))
+      cdkBuilder.anomalyDetectorConfig(anomalyDetectorConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -350,7 +350,7 @@ public open class CfnAnomalyDetector(
      * detector. 
      */
     override fun anomalyDetectorConfig(anomalyDetectorConfig: AnomalyDetectorConfigProperty) {
-      cdkBuilder.anomalyDetectorConfig(anomalyDetectorConfig.let(AnomalyDetectorConfigProperty::unwrap))
+      cdkBuilder.anomalyDetectorConfig(anomalyDetectorConfig.let(AnomalyDetectorConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -403,7 +403,7 @@ public open class CfnAnomalyDetector(
      * @param metricSetList The detector's dataset. 
      */
     override fun metricSetList(metricSetList: IResolvable) {
-      cdkBuilder.metricSetList(metricSetList.let(IResolvable::unwrap))
+      cdkBuilder.metricSetList(metricSetList.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -866,7 +866,7 @@ public open class CfnAnomalyDetector(
        * @param containsHeader Whether or not the source CSV file contains a header.
        */
       override fun containsHeader(containsHeader: IResolvable) {
-        cdkBuilder.containsHeader(containsHeader.let(IResolvable::unwrap))
+        cdkBuilder.containsHeader(containsHeader.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1073,7 +1073,7 @@ public open class CfnAnomalyDetector(
        * analyzed.
        */
       override fun csvFormatDescriptor(csvFormatDescriptor: IResolvable) {
-        cdkBuilder.csvFormatDescriptor(csvFormatDescriptor.let(IResolvable::unwrap))
+        cdkBuilder.csvFormatDescriptor(csvFormatDescriptor.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1081,7 +1081,7 @@ public open class CfnAnomalyDetector(
        * analyzed.
        */
       override fun csvFormatDescriptor(csvFormatDescriptor: CsvFormatDescriptorProperty) {
-        cdkBuilder.csvFormatDescriptor(csvFormatDescriptor.let(CsvFormatDescriptorProperty::unwrap))
+        cdkBuilder.csvFormatDescriptor(csvFormatDescriptor.let(CsvFormatDescriptorProperty.Companion::unwrap))
       }
 
       /**
@@ -1099,7 +1099,7 @@ public open class CfnAnomalyDetector(
        * be analyzed.
        */
       override fun jsonFormatDescriptor(jsonFormatDescriptor: IResolvable) {
-        cdkBuilder.jsonFormatDescriptor(jsonFormatDescriptor.let(IResolvable::unwrap))
+        cdkBuilder.jsonFormatDescriptor(jsonFormatDescriptor.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1107,7 +1107,7 @@ public open class CfnAnomalyDetector(
        * be analyzed.
        */
       override fun jsonFormatDescriptor(jsonFormatDescriptor: JsonFormatDescriptorProperty) {
-        cdkBuilder.jsonFormatDescriptor(jsonFormatDescriptor.let(JsonFormatDescriptorProperty::unwrap))
+        cdkBuilder.jsonFormatDescriptor(jsonFormatDescriptor.let(JsonFormatDescriptorProperty.Companion::unwrap))
       }
 
       /**
@@ -1679,7 +1679,7 @@ public open class CfnAnomalyDetector(
        * @param metricList A list of metrics that the dataset will contain. 
        */
       override fun metricList(metricList: IResolvable) {
-        cdkBuilder.metricList(metricList.let(IResolvable::unwrap))
+        cdkBuilder.metricList(metricList.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1720,14 +1720,14 @@ public open class CfnAnomalyDetector(
        * @param metricSource Contains information about how the source data should be interpreted. 
        */
       override fun metricSource(metricSource: IResolvable) {
-        cdkBuilder.metricSource(metricSource.let(IResolvable::unwrap))
+        cdkBuilder.metricSource(metricSource.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param metricSource Contains information about how the source data should be interpreted. 
        */
       override fun metricSource(metricSource: MetricSourceProperty) {
-        cdkBuilder.metricSource(metricSource.let(MetricSourceProperty::unwrap))
+        cdkBuilder.metricSource(metricSource.let(MetricSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -1752,7 +1752,7 @@ public open class CfnAnomalyDetector(
        * source data.
        */
       override fun timestampColumn(timestampColumn: IResolvable) {
-        cdkBuilder.timestampColumn(timestampColumn.let(IResolvable::unwrap))
+        cdkBuilder.timestampColumn(timestampColumn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1760,7 +1760,7 @@ public open class CfnAnomalyDetector(
        * source data.
        */
       override fun timestampColumn(timestampColumn: TimestampColumnProperty) {
-        cdkBuilder.timestampColumn(timestampColumn.let(TimestampColumnProperty::unwrap))
+        cdkBuilder.timestampColumn(timestampColumn.let(TimestampColumnProperty.Companion::unwrap))
       }
 
       /**
@@ -2084,14 +2084,14 @@ public open class CfnAnomalyDetector(
        * @param appFlowConfig Details about an AppFlow datasource.
        */
       override fun appFlowConfig(appFlowConfig: IResolvable) {
-        cdkBuilder.appFlowConfig(appFlowConfig.let(IResolvable::unwrap))
+        cdkBuilder.appFlowConfig(appFlowConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param appFlowConfig Details about an AppFlow datasource.
        */
       override fun appFlowConfig(appFlowConfig: AppFlowConfigProperty) {
-        cdkBuilder.appFlowConfig(appFlowConfig.let(AppFlowConfigProperty::unwrap))
+        cdkBuilder.appFlowConfig(appFlowConfig.let(AppFlowConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2106,14 +2106,14 @@ public open class CfnAnomalyDetector(
        * @param cloudwatchConfig Details about an Amazon CloudWatch monitoring datasource.
        */
       override fun cloudwatchConfig(cloudwatchConfig: IResolvable) {
-        cdkBuilder.cloudwatchConfig(cloudwatchConfig.let(IResolvable::unwrap))
+        cdkBuilder.cloudwatchConfig(cloudwatchConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param cloudwatchConfig Details about an Amazon CloudWatch monitoring datasource.
        */
       override fun cloudwatchConfig(cloudwatchConfig: CloudwatchConfigProperty) {
-        cdkBuilder.cloudwatchConfig(cloudwatchConfig.let(CloudwatchConfigProperty::unwrap))
+        cdkBuilder.cloudwatchConfig(cloudwatchConfig.let(CloudwatchConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2129,7 +2129,7 @@ public open class CfnAnomalyDetector(
        * datasource.
        */
       override fun rdsSourceConfig(rdsSourceConfig: IResolvable) {
-        cdkBuilder.rdsSourceConfig(rdsSourceConfig.let(IResolvable::unwrap))
+        cdkBuilder.rdsSourceConfig(rdsSourceConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2137,7 +2137,7 @@ public open class CfnAnomalyDetector(
        * datasource.
        */
       override fun rdsSourceConfig(rdsSourceConfig: RDSSourceConfigProperty) {
-        cdkBuilder.rdsSourceConfig(rdsSourceConfig.let(RDSSourceConfigProperty::unwrap))
+        cdkBuilder.rdsSourceConfig(rdsSourceConfig.let(RDSSourceConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2153,14 +2153,14 @@ public open class CfnAnomalyDetector(
        * @param redshiftSourceConfig Details about an Amazon Redshift database datasource.
        */
       override fun redshiftSourceConfig(redshiftSourceConfig: IResolvable) {
-        cdkBuilder.redshiftSourceConfig(redshiftSourceConfig.let(IResolvable::unwrap))
+        cdkBuilder.redshiftSourceConfig(redshiftSourceConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param redshiftSourceConfig Details about an Amazon Redshift database datasource.
        */
       override fun redshiftSourceConfig(redshiftSourceConfig: RedshiftSourceConfigProperty) {
-        cdkBuilder.redshiftSourceConfig(redshiftSourceConfig.let(RedshiftSourceConfigProperty::unwrap))
+        cdkBuilder.redshiftSourceConfig(redshiftSourceConfig.let(RedshiftSourceConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2177,7 +2177,7 @@ public open class CfnAnomalyDetector(
        * contains source files.
        */
       override fun s3SourceConfig(s3SourceConfig: IResolvable) {
-        cdkBuilder.s3SourceConfig(s3SourceConfig.let(IResolvable::unwrap))
+        cdkBuilder.s3SourceConfig(s3SourceConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2185,7 +2185,7 @@ public open class CfnAnomalyDetector(
        * contains source files.
        */
       override fun s3SourceConfig(s3SourceConfig: S3SourceConfigProperty) {
-        cdkBuilder.s3SourceConfig(s3SourceConfig.let(S3SourceConfigProperty::unwrap))
+        cdkBuilder.s3SourceConfig(s3SourceConfig.let(S3SourceConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2463,7 +2463,7 @@ public open class CfnAnomalyDetector(
        * Cloud (VPC) configuration. 
        */
       override fun vpcConfiguration(vpcConfiguration: IResolvable) {
-        cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2471,7 +2471,7 @@ public open class CfnAnomalyDetector(
        * Cloud (VPC) configuration. 
        */
       override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
-        cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty::unwrap))
+        cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2774,7 +2774,7 @@ public open class CfnAnomalyDetector(
        * configuration. 
        */
       override fun vpcConfiguration(vpcConfiguration: IResolvable) {
-        cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2782,7 +2782,7 @@ public open class CfnAnomalyDetector(
        * configuration. 
        */
       override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
-        cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty::unwrap))
+        cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3001,14 +3001,14 @@ public open class CfnAnomalyDetector(
        * @param fileFormatDescriptor Contains information about a source file's formatting. 
        */
       override fun fileFormatDescriptor(fileFormatDescriptor: IResolvable) {
-        cdkBuilder.fileFormatDescriptor(fileFormatDescriptor.let(IResolvable::unwrap))
+        cdkBuilder.fileFormatDescriptor(fileFormatDescriptor.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param fileFormatDescriptor Contains information about a source file's formatting. 
        */
       override fun fileFormatDescriptor(fileFormatDescriptor: FileFormatDescriptorProperty) {
-        cdkBuilder.fileFormatDescriptor(fileFormatDescriptor.let(FileFormatDescriptorProperty::unwrap))
+        cdkBuilder.fileFormatDescriptor(fileFormatDescriptor.let(FileFormatDescriptorProperty.Companion::unwrap))
       }
 
       /**

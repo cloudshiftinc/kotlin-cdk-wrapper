@@ -20,7 +20,7 @@ public open class Manifest(
     public fun loadAssemblyManifest(filePath: String, options: LoadManifestOptions):
         AssemblyManifest =
         software.amazon.awscdk.cloudassembly.schema.Manifest.loadAssemblyManifest(filePath,
-        options.let(LoadManifestOptions::unwrap)).let(AssemblyManifest::wrap)
+        options.let(LoadManifestOptions.Companion::unwrap)).let(AssemblyManifest::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1575cc5d564d7ee8a1e46bf56062264175e0f212de5913b209ebf22d560edb8b")
@@ -35,17 +35,17 @@ public open class Manifest(
         software.amazon.awscdk.cloudassembly.schema.Manifest.loadIntegManifest(filePath).let(IntegManifest::wrap)
 
     public fun saveAssemblyManifest(manifest: AssemblyManifest, filePath: String) {
-      software.amazon.awscdk.cloudassembly.schema.Manifest.saveAssemblyManifest(manifest.let(AssemblyManifest::unwrap),
+      software.amazon.awscdk.cloudassembly.schema.Manifest.saveAssemblyManifest(manifest.let(AssemblyManifest.Companion::unwrap),
           filePath)
     }
 
     public fun saveAssetManifest(manifest: AssetManifest, filePath: String) {
-      software.amazon.awscdk.cloudassembly.schema.Manifest.saveAssetManifest(manifest.let(AssetManifest::unwrap),
+      software.amazon.awscdk.cloudassembly.schema.Manifest.saveAssetManifest(manifest.let(AssetManifest.Companion::unwrap),
           filePath)
     }
 
     public fun saveIntegManifest(manifest: IntegManifest, filePath: String) {
-      software.amazon.awscdk.cloudassembly.schema.Manifest.saveIntegManifest(manifest.let(IntegManifest::unwrap),
+      software.amazon.awscdk.cloudassembly.schema.Manifest.saveIntegManifest(manifest.let(IntegManifest.Companion::unwrap),
           filePath)
     }
 

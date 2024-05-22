@@ -95,7 +95,7 @@ public interface CustomEndpointOptions {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun certificate(certificate: ICertificate) {
-      cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
+      cdkBuilder.certificate(certificate.let(ICertificate.Companion::unwrap))
     }
 
     /**
@@ -113,7 +113,7 @@ public interface CustomEndpointOptions {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun hostedZone(hostedZone: IHostedZone) {
-      cdkBuilder.hostedZone(hostedZone.let(IHostedZone::unwrap))
+      cdkBuilder.hostedZone(hostedZone.let(IHostedZone.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.elasticsearch.CustomEndpointOptions =

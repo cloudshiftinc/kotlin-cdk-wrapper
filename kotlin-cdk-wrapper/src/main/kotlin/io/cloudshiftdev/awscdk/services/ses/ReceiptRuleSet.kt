@@ -28,7 +28,7 @@ public open class ReceiptRuleSet(
   cdkObject: software.amazon.awscdk.services.ses.ReceiptRuleSet,
 ) : Resource(cdkObject), IReceiptRuleSet {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ses.ReceiptRuleSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ses.ReceiptRuleSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -37,8 +37,8 @@ public open class ReceiptRuleSet(
     id: String,
     props: ReceiptRuleSetProps,
   ) :
-      this(software.amazon.awscdk.services.ses.ReceiptRuleSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ReceiptRuleSetProps::unwrap))
+      this(software.amazon.awscdk.services.ses.ReceiptRuleSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ReceiptRuleSetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -70,7 +70,8 @@ public open class ReceiptRuleSet(
    * @param options
    */
   public override fun addRule(id: String, options: ReceiptRuleOptions): ReceiptRule =
-      unwrap(this).addRule(id, options.let(ReceiptRuleOptions::unwrap)).let(ReceiptRule::wrap)
+      unwrap(this).addRule(id,
+      options.let(ReceiptRuleOptions.Companion::unwrap)).let(ReceiptRule::wrap)
 
   /**
    * Adds a new receipt rule in this rule set.
@@ -183,7 +184,7 @@ public open class ReceiptRuleSet(
      * @param rules The list of rules to add to this rule set. 
      */
     override fun rules(rules: List<ReceiptRuleOptions>) {
-      cdkBuilder.rules(rules.map(ReceiptRuleOptions::unwrap))
+      cdkBuilder.rules(rules.map(ReceiptRuleOptions.Companion::unwrap))
     }
 
     /**
@@ -207,7 +208,7 @@ public open class ReceiptRuleSet(
       id: String,
       receiptRuleSetName: String,
     ): IReceiptRuleSet =
-        software.amazon.awscdk.services.ses.ReceiptRuleSet.fromReceiptRuleSetName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ses.ReceiptRuleSet.fromReceiptRuleSetName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, receiptRuleSetName).let(IReceiptRuleSet::wrap)
 
     public operator fun invoke(

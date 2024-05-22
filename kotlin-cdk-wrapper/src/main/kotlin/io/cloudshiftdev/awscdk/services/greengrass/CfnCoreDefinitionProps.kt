@@ -175,7 +175,7 @@ public interface CfnCoreDefinitionProps {
      * resource and specify the ID of this core definition.
      */
     override fun initialVersion(initialVersion: IResolvable) {
-      cdkBuilder.initialVersion(initialVersion.let(IResolvable::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -191,7 +191,7 @@ public interface CfnCoreDefinitionProps {
      * resource and specify the ID of this core definition.
      */
     override fun initialVersion(initialVersion: CfnCoreDefinition.CoreDefinitionVersionProperty) {
-      cdkBuilder.initialVersion(initialVersion.let(CfnCoreDefinition.CoreDefinitionVersionProperty::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(CfnCoreDefinition.CoreDefinitionVersionProperty.Companion::unwrap))
     }
 
     /**

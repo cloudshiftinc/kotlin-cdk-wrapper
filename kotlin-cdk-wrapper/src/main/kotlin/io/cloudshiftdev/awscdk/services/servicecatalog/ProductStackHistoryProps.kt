@@ -151,7 +151,7 @@ public interface ProductStackHistoryProps {
      * @param productStack The ProductStack whose history will be retained as a snapshot. 
      */
     override fun productStack(productStack: ProductStack) {
-      cdkBuilder.productStack(productStack.let(ProductStack::unwrap))
+      cdkBuilder.productStack(productStack.let(ProductStack.Companion::unwrap))
     }
 
     /**

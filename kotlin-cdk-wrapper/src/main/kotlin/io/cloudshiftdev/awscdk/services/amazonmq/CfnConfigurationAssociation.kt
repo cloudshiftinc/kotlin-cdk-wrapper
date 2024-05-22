@@ -54,8 +54,8 @@ public open class CfnConfigurationAssociation(
     id: String,
     props: CfnConfigurationAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConfigurationAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConfigurationAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -91,14 +91,14 @@ public open class CfnConfigurationAssociation(
    * The configuration to associate with a broker.
    */
   public open fun configuration(`value`: IResolvable) {
-    unwrap(this).setConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration to associate with a broker.
    */
   public open fun configuration(`value`: ConfigurationIdProperty) {
-    unwrap(this).setConfiguration(`value`.let(ConfigurationIdProperty::unwrap))
+    unwrap(this).setConfiguration(`value`.let(ConfigurationIdProperty.Companion::unwrap))
   }
 
   /**
@@ -115,7 +115,7 @@ public open class CfnConfigurationAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -184,7 +184,7 @@ public open class CfnConfigurationAssociation(
      * @param configuration The configuration to associate with a broker. 
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -194,7 +194,7 @@ public open class CfnConfigurationAssociation(
      * @param configuration The configuration to associate with a broker. 
      */
     override fun configuration(configuration: ConfigurationIdProperty) {
-      cdkBuilder.configuration(configuration.let(ConfigurationIdProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(ConfigurationIdProperty.Companion::unwrap))
     }
 
     /**

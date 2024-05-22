@@ -177,7 +177,7 @@ public interface CfnSegmentProps {
      * resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

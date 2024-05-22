@@ -98,7 +98,7 @@ public open class CfnHostedZone(
   cdkObject: software.amazon.awscdk.services.route53.CfnHostedZone,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.route53.CfnHostedZone(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.route53.CfnHostedZone(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -107,8 +107,8 @@ public open class CfnHostedZone(
     id: String,
     props: CfnHostedZoneProps,
   ) :
-      this(software.amazon.awscdk.services.route53.CfnHostedZone(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnHostedZoneProps::unwrap))
+      this(software.amazon.awscdk.services.route53.CfnHostedZone(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnHostedZoneProps.Companion::unwrap))
   )
 
   public constructor(
@@ -139,14 +139,14 @@ public open class CfnHostedZone(
    * A complex type that contains an optional comment.
    */
   public open fun hostedZoneConfig(`value`: IResolvable) {
-    unwrap(this).setHostedZoneConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHostedZoneConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A complex type that contains an optional comment.
    */
   public open fun hostedZoneConfig(`value`: HostedZoneConfigProperty) {
-    unwrap(this).setHostedZoneConfig(`value`.let(HostedZoneConfigProperty::unwrap))
+    unwrap(this).setHostedZoneConfig(`value`.let(HostedZoneConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -167,7 +167,7 @@ public open class CfnHostedZone(
    * Adds, edits, or deletes tags for a health check or a hosted zone.
    */
   public open fun hostedZoneTagsRaw(`value`: List<HostedZoneTagProperty>) {
-    unwrap(this).setHostedZoneTagsRaw(`value`.map(HostedZoneTagProperty::unwrap))
+    unwrap(this).setHostedZoneTagsRaw(`value`.map(HostedZoneTagProperty.Companion::unwrap))
   }
 
   /**
@@ -182,7 +182,7 @@ public open class CfnHostedZone(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -206,14 +206,14 @@ public open class CfnHostedZone(
    * Creates a configuration for DNS query logging.
    */
   public open fun queryLoggingConfig(`value`: IResolvable) {
-    unwrap(this).setQueryLoggingConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setQueryLoggingConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Creates a configuration for DNS query logging.
    */
   public open fun queryLoggingConfig(`value`: QueryLoggingConfigProperty) {
-    unwrap(this).setQueryLoggingConfig(`value`.let(QueryLoggingConfigProperty::unwrap))
+    unwrap(this).setQueryLoggingConfig(`value`.let(QueryLoggingConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -240,7 +240,7 @@ public open class CfnHostedZone(
    * associated with the specified hosted zone.
    */
   public open fun vpcs(`value`: IResolvable) {
-    unwrap(this).setVpcs(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcs(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -724,7 +724,7 @@ public open class CfnHostedZone(
      * @param hostedZoneConfig A complex type that contains an optional comment. 
      */
     override fun hostedZoneConfig(hostedZoneConfig: IResolvable) {
-      cdkBuilder.hostedZoneConfig(hostedZoneConfig.let(IResolvable::unwrap))
+      cdkBuilder.hostedZoneConfig(hostedZoneConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -736,7 +736,7 @@ public open class CfnHostedZone(
      * @param hostedZoneConfig A complex type that contains an optional comment. 
      */
     override fun hostedZoneConfig(hostedZoneConfig: HostedZoneConfigProperty) {
-      cdkBuilder.hostedZoneConfig(hostedZoneConfig.let(HostedZoneConfigProperty::unwrap))
+      cdkBuilder.hostedZoneConfig(hostedZoneConfig.let(HostedZoneConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -763,7 +763,7 @@ public open class CfnHostedZone(
      * @param hostedZoneTags Adds, edits, or deletes tags for a health check or a hosted zone. 
      */
     override fun hostedZoneTags(hostedZoneTags: List<HostedZoneTagProperty>) {
-      cdkBuilder.hostedZoneTags(hostedZoneTags.map(HostedZoneTagProperty::unwrap))
+      cdkBuilder.hostedZoneTags(hostedZoneTags.map(HostedZoneTagProperty.Companion::unwrap))
     }
 
     /**
@@ -907,7 +907,7 @@ public open class CfnHostedZone(
      * @param queryLoggingConfig Creates a configuration for DNS query logging. 
      */
     override fun queryLoggingConfig(queryLoggingConfig: IResolvable) {
-      cdkBuilder.queryLoggingConfig(queryLoggingConfig.let(IResolvable::unwrap))
+      cdkBuilder.queryLoggingConfig(queryLoggingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1018,7 +1018,7 @@ public open class CfnHostedZone(
      * @param queryLoggingConfig Creates a configuration for DNS query logging. 
      */
     override fun queryLoggingConfig(queryLoggingConfig: QueryLoggingConfigProperty) {
-      cdkBuilder.queryLoggingConfig(queryLoggingConfig.let(QueryLoggingConfigProperty::unwrap))
+      cdkBuilder.queryLoggingConfig(queryLoggingConfig.let(QueryLoggingConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1147,7 +1147,7 @@ public open class CfnHostedZone(
      * that are associated with the specified hosted zone. 
      */
     override fun vpcs(vpcs: IResolvable) {
-      cdkBuilder.vpcs(vpcs.let(IResolvable::unwrap))
+      cdkBuilder.vpcs(vpcs.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -670,14 +670,14 @@ public interface EksContainerDefinitionProps {
      * @param image The image that this container will run. 
      */
     override fun image(image: ContainerImage) {
-      cdkBuilder.image(image.let(ContainerImage::unwrap))
+      cdkBuilder.image(image.let(ContainerImage.Companion::unwrap))
     }
 
     /**
      * @param imagePullPolicy The image pull policy for this container.
      */
     override fun imagePullPolicy(imagePullPolicy: ImagePullPolicy) {
-      cdkBuilder.imagePullPolicy(imagePullPolicy.let(ImagePullPolicy::unwrap))
+      cdkBuilder.imagePullPolicy(imagePullPolicy.let(ImagePullPolicy.Companion::unwrap))
     }
 
     /**
@@ -693,7 +693,7 @@ public interface EksContainerDefinitionProps {
      * for the specific instance type that you are using.
      */
     override fun memoryLimit(memoryLimit: Size) {
-      cdkBuilder.memoryLimit(memoryLimit.let(Size::unwrap))
+      cdkBuilder.memoryLimit(memoryLimit.let(Size.Companion::unwrap))
     }
 
     /**
@@ -716,7 +716,7 @@ public interface EksContainerDefinitionProps {
      * for the specific instance type that you are using.
      */
     override fun memoryReservation(memoryReservation: Size) {
-      cdkBuilder.memoryReservation(memoryReservation.let(Size::unwrap))
+      cdkBuilder.memoryReservation(memoryReservation.let(Size.Companion::unwrap))
     }
 
     /**
@@ -793,7 +793,7 @@ public interface EksContainerDefinitionProps {
      * Automatically added to the Pod.
      */
     override fun volumes(volumes: List<EksVolume>) {
-      cdkBuilder.volumes(volumes.map(EksVolume::unwrap))
+      cdkBuilder.volumes(volumes.map(EksVolume.Companion::unwrap))
     }
 
     /**

@@ -82,8 +82,8 @@ public open class CfnConfigurationProfile(
     id: String,
     props: CfnConfigurationProfileProps,
   ) :
-      this(software.amazon.awscdk.services.appconfig.CfnConfigurationProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConfigurationProfileProps::unwrap))
+      this(software.amazon.awscdk.services.appconfig.CfnConfigurationProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConfigurationProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -145,7 +145,7 @@ public open class CfnConfigurationProfile(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -213,7 +213,7 @@ public open class CfnConfigurationProfile(
    * Metadata to assign to the configuration profile.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -242,7 +242,7 @@ public open class CfnConfigurationProfile(
    * A list of methods for validating the configuration.
    */
   public open fun validators(`value`: IResolvable) {
-    unwrap(this).setValidators(`value`.let(IResolvable::unwrap))
+    unwrap(this).setValidators(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -496,7 +496,7 @@ public open class CfnConfigurationProfile(
      * @param tags Metadata to assign to the configuration profile. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -536,7 +536,7 @@ public open class CfnConfigurationProfile(
      * @param validators A list of methods for validating the configuration. 
      */
     override fun validators(validators: IResolvable) {
-      cdkBuilder.validators(validators.let(IResolvable::unwrap))
+      cdkBuilder.validators(validators.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -61,7 +61,7 @@ public interface OrganizationsDeploymentProps {
      * organizational unit (OU).
      */
     override fun autoDeployment(autoDeployment: StackSetOrganizationsAutoDeployment) {
-      cdkBuilder.autoDeployment(autoDeployment.let(StackSetOrganizationsAutoDeployment::unwrap))
+      cdkBuilder.autoDeployment(autoDeployment.let(StackSetOrganizationsAutoDeployment.Companion::unwrap))
     }
 
     public fun build():

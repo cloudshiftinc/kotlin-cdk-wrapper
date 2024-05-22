@@ -53,7 +53,7 @@ public open class CfnKeyspace(
   cdkObject: software.amazon.awscdk.services.cassandra.CfnKeyspace,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.cassandra.CfnKeyspace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.cassandra.CfnKeyspace(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -62,8 +62,8 @@ public open class CfnKeyspace(
     id: String,
     props: CfnKeyspaceProps,
   ) :
-      this(software.amazon.awscdk.services.cassandra.CfnKeyspace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnKeyspaceProps::unwrap))
+      this(software.amazon.awscdk.services.cassandra.CfnKeyspace(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnKeyspaceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -79,7 +79,7 @@ public open class CfnKeyspace(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -107,7 +107,7 @@ public open class CfnKeyspace(
    * The options are:.
    */
   public open fun replicationSpecification(`value`: IResolvable) {
-    unwrap(this).setReplicationSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setReplicationSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -116,7 +116,7 @@ public open class CfnKeyspace(
    * The options are:.
    */
   public open fun replicationSpecification(`value`: ReplicationSpecificationProperty) {
-    unwrap(this).setReplicationSpecification(`value`.let(ReplicationSpecificationProperty::unwrap))
+    unwrap(this).setReplicationSpecification(`value`.let(ReplicationSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -145,7 +145,7 @@ public open class CfnKeyspace(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -290,7 +290,7 @@ public open class CfnKeyspace(
      * options are:. 
      */
     override fun replicationSpecification(replicationSpecification: IResolvable) {
-      cdkBuilder.replicationSpecification(replicationSpecification.let(IResolvable::unwrap))
+      cdkBuilder.replicationSpecification(replicationSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -309,7 +309,7 @@ public open class CfnKeyspace(
      */
     override
         fun replicationSpecification(replicationSpecification: ReplicationSpecificationProperty) {
-      cdkBuilder.replicationSpecification(replicationSpecification.let(ReplicationSpecificationProperty::unwrap))
+      cdkBuilder.replicationSpecification(replicationSpecification.let(ReplicationSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -343,7 +343,7 @@ public open class CfnKeyspace(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

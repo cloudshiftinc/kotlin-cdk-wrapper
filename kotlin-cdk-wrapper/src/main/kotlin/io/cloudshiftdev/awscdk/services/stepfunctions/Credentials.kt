@@ -56,7 +56,7 @@ public interface Credentials {
      * @param role The role to be assumed for executing the Task. 
      */
     override fun role(role: TaskRole) {
-      cdkBuilder.role(role.let(TaskRole::unwrap))
+      cdkBuilder.role(role.let(TaskRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.Credentials =

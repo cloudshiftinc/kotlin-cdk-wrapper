@@ -37,8 +37,8 @@ public open class CfnElasticLoadBalancerAttachment(
     id: String,
     props: CfnElasticLoadBalancerAttachmentProps,
   ) :
-      this(software.amazon.awscdk.services.opsworks.CfnElasticLoadBalancerAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnElasticLoadBalancerAttachmentProps::unwrap))
+      this(software.amazon.awscdk.services.opsworks.CfnElasticLoadBalancerAttachment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnElasticLoadBalancerAttachmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -71,7 +71,7 @@ public open class CfnElasticLoadBalancerAttachment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

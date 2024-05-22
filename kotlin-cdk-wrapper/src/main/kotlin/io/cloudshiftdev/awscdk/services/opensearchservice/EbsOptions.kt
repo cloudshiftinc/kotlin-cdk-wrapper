@@ -174,7 +174,7 @@ public interface EbsOptions {
      * as standard, gp2, io1.
      */
     override fun volumeType(volumeType: EbsDeviceVolumeType) {
-      cdkBuilder.volumeType(volumeType.let(EbsDeviceVolumeType::unwrap))
+      cdkBuilder.volumeType(volumeType.let(EbsDeviceVolumeType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.opensearchservice.EbsOptions =

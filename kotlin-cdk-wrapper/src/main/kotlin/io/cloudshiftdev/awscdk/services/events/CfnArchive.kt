@@ -48,8 +48,8 @@ public open class CfnArchive(
     id: String,
     props: CfnArchiveProps,
   ) :
-      this(software.amazon.awscdk.services.events.CfnArchive(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnArchiveProps::unwrap))
+      this(software.amazon.awscdk.services.events.CfnArchive(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnArchiveProps.Companion::unwrap))
   )
 
   public constructor(
@@ -106,7 +106,7 @@ public open class CfnArchive(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

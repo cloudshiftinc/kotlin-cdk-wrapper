@@ -26,7 +26,7 @@ public open class PrefixList(
   cdkObject: software.amazon.awscdk.services.ec2.PrefixList,
 ) : Resource(cdkObject), IPrefixList {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ec2.PrefixList(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ec2.PrefixList(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -35,8 +35,8 @@ public open class PrefixList(
     id: String,
     props: PrefixListProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.PrefixList(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(PrefixListProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.PrefixList(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(PrefixListProps.Companion::unwrap))
   )
 
   public constructor(
@@ -142,7 +142,7 @@ public open class PrefixList(
      * @param addressFamily The address family of the prefix list. 
      */
     override fun addressFamily(addressFamily: AddressFamily) {
-      cdkBuilder.addressFamily(addressFamily.let(AddressFamily::unwrap))
+      cdkBuilder.addressFamily(addressFamily.let(AddressFamily.Companion::unwrap))
     }
 
     /**
@@ -153,7 +153,7 @@ public open class PrefixList(
      * @param entries The list of entries for the prefix list. 
      */
     override fun entries(entries: List<CfnPrefixList.EntryProperty>) {
-      cdkBuilder.entries(entries.map(CfnPrefixList.EntryProperty::unwrap))
+      cdkBuilder.entries(entries.map(CfnPrefixList.EntryProperty.Companion::unwrap))
     }
 
     /**
@@ -197,7 +197,7 @@ public open class PrefixList(
       id: String,
       prefixListId: String,
     ): IPrefixList =
-        software.amazon.awscdk.services.ec2.PrefixList.fromPrefixListId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ec2.PrefixList.fromPrefixListId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, prefixListId).let(IPrefixList::wrap)
 
     public operator fun invoke(

@@ -69,8 +69,8 @@ public open class CloudFrontWebDistribution(
     id: String,
     props: CloudFrontWebDistributionProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.CloudFrontWebDistribution(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CloudFrontWebDistributionProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.CloudFrontWebDistribution(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CloudFrontWebDistributionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -101,8 +101,8 @@ public open class CloudFrontWebDistribution(
    * @param actions The set of actions to allow (i.e. "cloudfront:ListInvalidations"). 
    */
   public override fun grant(identity: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(identity.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
-      as String}.toTypedArray()).let(Grant::wrap)
+      unwrap(this).grant(identity.let(IGrantable.Companion::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Grant to create invalidations for this bucket to an IAM principal (Role/Group/User).
@@ -110,7 +110,7 @@ public open class CloudFrontWebDistribution(
    * @param identity The principal. 
    */
   public override fun grantCreateInvalidation(identity: IGrantable): Grant =
-      unwrap(this).grantCreateInvalidation(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantCreateInvalidation(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The logging bucket for this CloudFront distribution.
@@ -370,7 +370,7 @@ public open class CloudFrontWebDistribution(
      */
     override
         fun errorConfigurations(errorConfigurations: List<CfnDistribution.CustomErrorResponseProperty>) {
-      cdkBuilder.errorConfigurations(errorConfigurations.map(CfnDistribution.CustomErrorResponseProperty::unwrap))
+      cdkBuilder.errorConfigurations(errorConfigurations.map(CfnDistribution.CustomErrorResponseProperty.Companion::unwrap))
     }
 
     /**
@@ -396,7 +396,7 @@ public open class CloudFrontWebDistribution(
      * @param geoRestriction Controls the countries in which your content is distributed. 
      */
     override fun geoRestriction(geoRestriction: GeoRestriction) {
-      cdkBuilder.geoRestriction(geoRestriction.let(GeoRestriction::unwrap))
+      cdkBuilder.geoRestriction(geoRestriction.let(GeoRestriction.Companion::unwrap))
     }
 
     /**
@@ -407,7 +407,7 @@ public open class CloudFrontWebDistribution(
      * @param httpVersion The max supported HTTP Versions. 
      */
     override fun httpVersion(httpVersion: HttpVersion) {
-      cdkBuilder.httpVersion(httpVersion.let(HttpVersion::unwrap))
+      cdkBuilder.httpVersion(httpVersion.let(HttpVersion.Companion::unwrap))
     }
 
     /**
@@ -421,7 +421,7 @@ public open class CloudFrontWebDistribution(
      * @param loggingConfig Optional - if we should enable logging. 
      */
     override fun loggingConfig(loggingConfig: LoggingConfiguration) {
-      cdkBuilder.loggingConfig(loggingConfig.let(LoggingConfiguration::unwrap))
+      cdkBuilder.loggingConfig(loggingConfig.let(LoggingConfiguration.Companion::unwrap))
     }
 
     /**
@@ -447,7 +447,7 @@ public open class CloudFrontWebDistribution(
      * @param originConfigs The origin configurations for this distribution. 
      */
     override fun originConfigs(originConfigs: List<SourceConfiguration>) {
-      cdkBuilder.originConfigs(originConfigs.map(SourceConfiguration::unwrap))
+      cdkBuilder.originConfigs(originConfigs.map(SourceConfiguration.Companion::unwrap))
     }
 
     /**
@@ -470,7 +470,7 @@ public open class CloudFrontWebDistribution(
      * CloudFront uses for your distribution, and billing). 
      */
     override fun priceClass(priceClass: PriceClass) {
-      cdkBuilder.priceClass(priceClass.let(PriceClass::unwrap))
+      cdkBuilder.priceClass(priceClass.let(PriceClass.Companion::unwrap))
     }
 
     /**
@@ -486,7 +486,7 @@ public open class CloudFrontWebDistribution(
      * using AWS Certificate Manager (ACM) or a third-party certificate authority. 
      */
     override fun viewerCertificate(viewerCertificate: ViewerCertificate) {
-      cdkBuilder.viewerCertificate(viewerCertificate.let(ViewerCertificate::unwrap))
+      cdkBuilder.viewerCertificate(viewerCertificate.let(ViewerCertificate.Companion::unwrap))
     }
 
     /**
@@ -497,7 +497,7 @@ public open class CloudFrontWebDistribution(
      * @param viewerProtocolPolicy The default viewer policy for incoming clients. 
      */
     override fun viewerProtocolPolicy(viewerProtocolPolicy: ViewerProtocolPolicy) {
-      cdkBuilder.viewerProtocolPolicy(viewerProtocolPolicy.let(ViewerProtocolPolicy::unwrap))
+      cdkBuilder.viewerProtocolPolicy(viewerProtocolPolicy.let(ViewerProtocolPolicy.Companion::unwrap))
     }
 
     /**
@@ -531,8 +531,9 @@ public open class CloudFrontWebDistribution(
       id: String,
       attrs: CloudFrontWebDistributionAttributes,
     ): IDistribution =
-        software.amazon.awscdk.services.cloudfront.CloudFrontWebDistribution.fromDistributionAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(CloudFrontWebDistributionAttributes::unwrap)).let(IDistribution::wrap)
+        software.amazon.awscdk.services.cloudfront.CloudFrontWebDistribution.fromDistributionAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        attrs.let(CloudFrontWebDistributionAttributes.Companion::unwrap)).let(IDistribution::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("80a9b75be6523c2010178c9d6779ba47e3ed66833189966b4162046ea7b0dfc4")

@@ -115,7 +115,7 @@ public interface S3OriginProps : OriginProps {
      * Valid values are 1-10 seconds, inclusive.
      */
     override fun connectionTimeout(connectionTimeout: Duration) {
-      cdkBuilder.connectionTimeout(connectionTimeout.let(Duration::unwrap))
+      cdkBuilder.connectionTimeout(connectionTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -131,7 +131,7 @@ public interface S3OriginProps : OriginProps {
      * cloudfront will use when calling your s3 bucket.
      */
     override fun originAccessIdentity(originAccessIdentity: IOriginAccessIdentity) {
-      cdkBuilder.originAccessIdentity(originAccessIdentity.let(IOriginAccessIdentity::unwrap))
+      cdkBuilder.originAccessIdentity(originAccessIdentity.let(IOriginAccessIdentity.Companion::unwrap))
     }
 
     /**

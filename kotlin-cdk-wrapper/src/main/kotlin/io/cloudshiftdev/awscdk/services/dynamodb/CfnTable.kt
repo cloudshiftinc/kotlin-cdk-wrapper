@@ -81,6 +81,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .contributorInsightsSpecification(ContributorInsightsSpecificationProperty.builder()
  * .enabled(false)
  * .build())
+ * .onDemandThroughput(OnDemandThroughputProperty.builder()
+ * .maxReadRequestUnits(123)
+ * .maxWriteRequestUnits(123)
+ * .build())
  * .provisionedThroughput(ProvisionedThroughputProperty.builder()
  * .readCapacityUnits(123)
  * .writeCapacityUnits(123)
@@ -119,6 +123,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .projectionType("projectionType")
  * .build())
  * .build()))
+ * .onDemandThroughput(OnDemandThroughputProperty.builder()
+ * .maxReadRequestUnits(123)
+ * .maxWriteRequestUnits(123)
+ * .build())
  * .pointInTimeRecoverySpecification(PointInTimeRecoverySpecificationProperty.builder()
  * .pointInTimeRecoveryEnabled(false)
  * .build())
@@ -166,8 +174,8 @@ public open class CfnTable(
     id: String,
     props: CfnTableProps,
   ) :
-      this(software.amazon.awscdk.services.dynamodb.CfnTable(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTableProps::unwrap))
+      this(software.amazon.awscdk.services.dynamodb.CfnTable(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTableProps.Companion::unwrap))
   )
 
   public constructor(
@@ -202,7 +210,7 @@ public open class CfnTable(
    * A list of attributes that describe the key schema for the table and indexes.
    */
   public open fun attributeDefinitions(`value`: IResolvable) {
-    unwrap(this).setAttributeDefinitions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAttributeDefinitions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -240,7 +248,7 @@ public open class CfnTable(
    * The settings used to enable or disable CloudWatch Contributor Insights for the specified table.
    */
   public open fun contributorInsightsSpecification(`value`: IResolvable) {
-    unwrap(this).setContributorInsightsSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setContributorInsightsSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -248,7 +256,7 @@ public open class CfnTable(
    */
   public open
       fun contributorInsightsSpecification(`value`: ContributorInsightsSpecificationProperty) {
-    unwrap(this).setContributorInsightsSpecification(`value`.let(ContributorInsightsSpecificationProperty::unwrap))
+    unwrap(this).setContributorInsightsSpecification(`value`.let(ContributorInsightsSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -276,7 +284,7 @@ public open class CfnTable(
    * Determines if a table is protected from deletion.
    */
   public open fun deletionProtectionEnabled(`value`: IResolvable) {
-    unwrap(this).setDeletionProtectionEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeletionProtectionEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -292,7 +300,7 @@ public open class CfnTable(
    * You can create up to 20 global secondary indexes.
    */
   public open fun globalSecondaryIndexes(`value`: IResolvable) {
-    unwrap(this).setGlobalSecondaryIndexes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setGlobalSecondaryIndexes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -321,14 +329,14 @@ public open class CfnTable(
    * Specifies the properties of data being imported from the S3 bucket source to the table.
    */
   public open fun importSourceSpecification(`value`: IResolvable) {
-    unwrap(this).setImportSourceSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setImportSourceSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the properties of data being imported from the S3 bucket source to the table.
    */
   public open fun importSourceSpecification(`value`: ImportSourceSpecificationProperty) {
-    unwrap(this).setImportSourceSpecification(`value`.let(ImportSourceSpecificationProperty::unwrap))
+    unwrap(this).setImportSourceSpecification(`value`.let(ImportSourceSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -346,7 +354,7 @@ public open class CfnTable(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -358,7 +366,7 @@ public open class CfnTable(
    * Specifies the attributes that make up the primary key for the table.
    */
   public open fun keySchema(`value`: IResolvable) {
-    unwrap(this).setKeySchema(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKeySchema(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -382,14 +390,14 @@ public open class CfnTable(
    * The Kinesis Data Streams configuration for the specified table.
    */
   public open fun kinesisStreamSpecification(`value`: IResolvable) {
-    unwrap(this).setKinesisStreamSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKinesisStreamSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The Kinesis Data Streams configuration for the specified table.
    */
   public open fun kinesisStreamSpecification(`value`: KinesisStreamSpecificationProperty) {
-    unwrap(this).setKinesisStreamSpecification(`value`.let(KinesisStreamSpecificationProperty::unwrap))
+    unwrap(this).setKinesisStreamSpecification(`value`.let(KinesisStreamSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -410,7 +418,7 @@ public open class CfnTable(
    * Local secondary indexes to be created on the table.
    */
   public open fun localSecondaryIndexes(`value`: IResolvable) {
-    unwrap(this).setLocalSecondaryIndexes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLocalSecondaryIndexes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -427,6 +435,33 @@ public open class CfnTable(
       localSecondaryIndexes(`value`.toList())
 
   /**
+   *
+   */
+  public open fun onDemandThroughput(): Any? = unwrap(this).getOnDemandThroughput()
+
+  /**
+   *
+   */
+  public open fun onDemandThroughput(`value`: IResolvable) {
+    unwrap(this).setOnDemandThroughput(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  public open fun onDemandThroughput(`value`: OnDemandThroughputProperty) {
+    unwrap(this).setOnDemandThroughput(`value`.let(OnDemandThroughputProperty.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("c93adda1db198600681d4d1f3eccea6b279138abfc98c48df8f9700db8fe154c")
+  public open fun onDemandThroughput(`value`: OnDemandThroughputProperty.Builder.() -> Unit): Unit =
+      onDemandThroughput(OnDemandThroughputProperty(`value`))
+
+  /**
    * The settings used to enable point in time recovery.
    */
   public open fun pointInTimeRecoverySpecification(): Any? =
@@ -436,7 +471,7 @@ public open class CfnTable(
    * The settings used to enable point in time recovery.
    */
   public open fun pointInTimeRecoverySpecification(`value`: IResolvable) {
-    unwrap(this).setPointInTimeRecoverySpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPointInTimeRecoverySpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -444,7 +479,7 @@ public open class CfnTable(
    */
   public open
       fun pointInTimeRecoverySpecification(`value`: PointInTimeRecoverySpecificationProperty) {
-    unwrap(this).setPointInTimeRecoverySpecification(`value`.let(PointInTimeRecoverySpecificationProperty::unwrap))
+    unwrap(this).setPointInTimeRecoverySpecification(`value`.let(PointInTimeRecoverySpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -467,7 +502,7 @@ public open class CfnTable(
    * `WriteCapacityUnits` .
    */
   public open fun provisionedThroughput(`value`: IResolvable) {
-    unwrap(this).setProvisionedThroughput(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProvisionedThroughput(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -475,7 +510,7 @@ public open class CfnTable(
    * `WriteCapacityUnits` .
    */
   public open fun provisionedThroughput(`value`: ProvisionedThroughputProperty) {
-    unwrap(this).setProvisionedThroughput(`value`.let(ProvisionedThroughputProperty::unwrap))
+    unwrap(this).setProvisionedThroughput(`value`.let(ProvisionedThroughputProperty.Companion::unwrap))
   }
 
   /**
@@ -496,14 +531,14 @@ public open class CfnTable(
    * A resource-based policy document that contains permissions to add to the specified table.
    */
   public open fun resourcePolicy(`value`: IResolvable) {
-    unwrap(this).setResourcePolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResourcePolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A resource-based policy document that contains permissions to add to the specified table.
    */
   public open fun resourcePolicy(`value`: ResourcePolicyProperty) {
-    unwrap(this).setResourcePolicy(`value`.let(ResourcePolicyProperty::unwrap))
+    unwrap(this).setResourcePolicy(`value`.let(ResourcePolicyProperty.Companion::unwrap))
   }
 
   /**
@@ -523,14 +558,14 @@ public open class CfnTable(
    * Specifies the settings to enable server-side encryption.
    */
   public open fun sseSpecification(`value`: IResolvable) {
-    unwrap(this).setSseSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSseSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the settings to enable server-side encryption.
    */
   public open fun sseSpecification(`value`: SSESpecificationProperty) {
-    unwrap(this).setSseSpecification(`value`.let(SSESpecificationProperty::unwrap))
+    unwrap(this).setSseSpecification(`value`.let(SSESpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -550,14 +585,14 @@ public open class CfnTable(
    * The settings for the DynamoDB table stream, which capture changes to items stored in the table.
    */
   public open fun streamSpecification(`value`: IResolvable) {
-    unwrap(this).setStreamSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStreamSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The settings for the DynamoDB table stream, which capture changes to items stored in the table.
    */
   public open fun streamSpecification(`value`: StreamSpecificationProperty) {
-    unwrap(this).setStreamSpecification(`value`.let(StreamSpecificationProperty::unwrap))
+    unwrap(this).setStreamSpecification(`value`.let(StreamSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -607,7 +642,7 @@ public open class CfnTable(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -624,14 +659,14 @@ public open class CfnTable(
    * Specifies the Time to Live (TTL) settings for the table.
    */
   public open fun timeToLiveSpecification(`value`: IResolvable) {
-    unwrap(this).setTimeToLiveSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTimeToLiveSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the Time to Live (TTL) settings for the table.
    */
   public open fun timeToLiveSpecification(`value`: TimeToLiveSpecificationProperty) {
-    unwrap(this).setTimeToLiveSpecification(`value`.let(TimeToLiveSpecificationProperty::unwrap))
+    unwrap(this).setTimeToLiveSpecification(`value`.let(TimeToLiveSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -1015,6 +1050,26 @@ public open class CfnTable(
     public fun localSecondaryIndexes(vararg localSecondaryIndexes: Any)
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-ondemandthroughput)
+     * @param onDemandThroughput 
+     */
+    public fun onDemandThroughput(onDemandThroughput: IResolvable)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-ondemandthroughput)
+     * @param onDemandThroughput 
+     */
+    public fun onDemandThroughput(onDemandThroughput: OnDemandThroughputProperty)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-ondemandthroughput)
+     * @param onDemandThroughput 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c6881b07c0f5d8cd3d66f6ea81853d9f53c08aefb6c5ca373298c0dee1bf8c5d")
+    public fun onDemandThroughput(onDemandThroughput: OnDemandThroughputProperty.Builder.() -> Unit)
+
+    /**
      * The settings used to enable point in time recovery.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-pointintimerecoveryspecification)
@@ -1345,7 +1400,7 @@ public open class CfnTable(
      * and indexes. 
      */
     override fun attributeDefinitions(attributeDefinitions: IResolvable) {
-      cdkBuilder.attributeDefinitions(attributeDefinitions.let(IResolvable::unwrap))
+      cdkBuilder.attributeDefinitions(attributeDefinitions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1414,7 +1469,7 @@ public open class CfnTable(
      * Contributor Insights for the specified table. 
      */
     override fun contributorInsightsSpecification(contributorInsightsSpecification: IResolvable) {
-      cdkBuilder.contributorInsightsSpecification(contributorInsightsSpecification.let(IResolvable::unwrap))
+      cdkBuilder.contributorInsightsSpecification(contributorInsightsSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1427,7 +1482,7 @@ public open class CfnTable(
      */
     override
         fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty) {
-      cdkBuilder.contributorInsightsSpecification(contributorInsightsSpecification.let(ContributorInsightsSpecificationProperty::unwrap))
+      cdkBuilder.contributorInsightsSpecification(contributorInsightsSpecification.let(ContributorInsightsSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -1472,7 +1527,7 @@ public open class CfnTable(
      * @param deletionProtectionEnabled Determines if a table is protected from deletion. 
      */
     override fun deletionProtectionEnabled(deletionProtectionEnabled: IResolvable) {
-      cdkBuilder.deletionProtectionEnabled(deletionProtectionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.deletionProtectionEnabled(deletionProtectionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1505,7 +1560,7 @@ public open class CfnTable(
      * create up to 20 global secondary indexes. 
      */
     override fun globalSecondaryIndexes(globalSecondaryIndexes: IResolvable) {
-      cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes.let(IResolvable::unwrap))
+      cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1587,7 +1642,7 @@ public open class CfnTable(
      * bucket source to the table. 
      */
     override fun importSourceSpecification(importSourceSpecification: IResolvable) {
-      cdkBuilder.importSourceSpecification(importSourceSpecification.let(IResolvable::unwrap))
+      cdkBuilder.importSourceSpecification(importSourceSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1605,7 +1660,7 @@ public open class CfnTable(
      */
     override
         fun importSourceSpecification(importSourceSpecification: ImportSourceSpecificationProperty) {
-      cdkBuilder.importSourceSpecification(importSourceSpecification.let(ImportSourceSpecificationProperty::unwrap))
+      cdkBuilder.importSourceSpecification(importSourceSpecification.let(ImportSourceSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -1638,7 +1693,7 @@ public open class CfnTable(
      * @param keySchema Specifies the attributes that make up the primary key for the table. 
      */
     override fun keySchema(keySchema: IResolvable) {
-      cdkBuilder.keySchema(keySchema.let(IResolvable::unwrap))
+      cdkBuilder.keySchema(keySchema.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1673,7 +1728,7 @@ public open class CfnTable(
      * table. 
      */
     override fun kinesisStreamSpecification(kinesisStreamSpecification: IResolvable) {
-      cdkBuilder.kinesisStreamSpecification(kinesisStreamSpecification.let(IResolvable::unwrap))
+      cdkBuilder.kinesisStreamSpecification(kinesisStreamSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1685,7 +1740,7 @@ public open class CfnTable(
      */
     override
         fun kinesisStreamSpecification(kinesisStreamSpecification: KinesisStreamSpecificationProperty) {
-      cdkBuilder.kinesisStreamSpecification(kinesisStreamSpecification.let(KinesisStreamSpecificationProperty::unwrap))
+      cdkBuilder.kinesisStreamSpecification(kinesisStreamSpecification.let(KinesisStreamSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -1712,7 +1767,7 @@ public open class CfnTable(
      * @param localSecondaryIndexes Local secondary indexes to be created on the table. 
      */
     override fun localSecondaryIndexes(localSecondaryIndexes: IResolvable) {
-      cdkBuilder.localSecondaryIndexes(localSecondaryIndexes.let(IResolvable::unwrap))
+      cdkBuilder.localSecondaryIndexes(localSecondaryIndexes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1741,13 +1796,39 @@ public open class CfnTable(
         localSecondaryIndexes(localSecondaryIndexes.toList())
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-ondemandthroughput)
+     * @param onDemandThroughput 
+     */
+    override fun onDemandThroughput(onDemandThroughput: IResolvable) {
+      cdkBuilder.onDemandThroughput(onDemandThroughput.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-ondemandthroughput)
+     * @param onDemandThroughput 
+     */
+    override fun onDemandThroughput(onDemandThroughput: OnDemandThroughputProperty) {
+      cdkBuilder.onDemandThroughput(onDemandThroughput.let(OnDemandThroughputProperty.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-ondemandthroughput)
+     * @param onDemandThroughput 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c6881b07c0f5d8cd3d66f6ea81853d9f53c08aefb6c5ca373298c0dee1bf8c5d")
+    override
+        fun onDemandThroughput(onDemandThroughput: OnDemandThroughputProperty.Builder.() -> Unit):
+        Unit = onDemandThroughput(OnDemandThroughputProperty(onDemandThroughput))
+
+    /**
      * The settings used to enable point in time recovery.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-pointintimerecoveryspecification)
      * @param pointInTimeRecoverySpecification The settings used to enable point in time recovery. 
      */
     override fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: IResolvable) {
-      cdkBuilder.pointInTimeRecoverySpecification(pointInTimeRecoverySpecification.let(IResolvable::unwrap))
+      cdkBuilder.pointInTimeRecoverySpecification(pointInTimeRecoverySpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1758,7 +1839,7 @@ public open class CfnTable(
      */
     override
         fun pointInTimeRecoverySpecification(pointInTimeRecoverySpecification: PointInTimeRecoverySpecificationProperty) {
-      cdkBuilder.pointInTimeRecoverySpecification(pointInTimeRecoverySpecification.let(PointInTimeRecoverySpecificationProperty::unwrap))
+      cdkBuilder.pointInTimeRecoverySpecification(pointInTimeRecoverySpecification.let(PointInTimeRecoverySpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -1791,7 +1872,7 @@ public open class CfnTable(
      * `ReadCapacityUnits` and `WriteCapacityUnits` . 
      */
     override fun provisionedThroughput(provisionedThroughput: IResolvable) {
-      cdkBuilder.provisionedThroughput(provisionedThroughput.let(IResolvable::unwrap))
+      cdkBuilder.provisionedThroughput(provisionedThroughput.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1811,7 +1892,7 @@ public open class CfnTable(
      * `ReadCapacityUnits` and `WriteCapacityUnits` . 
      */
     override fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty) {
-      cdkBuilder.provisionedThroughput(provisionedThroughput.let(ProvisionedThroughputProperty::unwrap))
+      cdkBuilder.provisionedThroughput(provisionedThroughput.let(ProvisionedThroughputProperty.Companion::unwrap))
     }
 
     /**
@@ -1857,7 +1938,7 @@ public open class CfnTable(
      * the specified table. 
      */
     override fun resourcePolicy(resourcePolicy: IResolvable) {
-      cdkBuilder.resourcePolicy(resourcePolicy.let(IResolvable::unwrap))
+      cdkBuilder.resourcePolicy(resourcePolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1881,7 +1962,7 @@ public open class CfnTable(
      * the specified table. 
      */
     override fun resourcePolicy(resourcePolicy: ResourcePolicyProperty) {
-      cdkBuilder.resourcePolicy(resourcePolicy.let(ResourcePolicyProperty::unwrap))
+      cdkBuilder.resourcePolicy(resourcePolicy.let(ResourcePolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -1916,7 +1997,7 @@ public open class CfnTable(
      * @param sseSpecification Specifies the settings to enable server-side encryption. 
      */
     override fun sseSpecification(sseSpecification: IResolvable) {
-      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1926,7 +2007,7 @@ public open class CfnTable(
      * @param sseSpecification Specifies the settings to enable server-side encryption. 
      */
     override fun sseSpecification(sseSpecification: SSESpecificationProperty) {
-      cdkBuilder.sseSpecification(sseSpecification.let(SSESpecificationProperty::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(SSESpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -1949,7 +2030,7 @@ public open class CfnTable(
      * to items stored in the table. 
      */
     override fun streamSpecification(streamSpecification: IResolvable) {
-      cdkBuilder.streamSpecification(streamSpecification.let(IResolvable::unwrap))
+      cdkBuilder.streamSpecification(streamSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1961,7 +2042,7 @@ public open class CfnTable(
      * to items stored in the table. 
      */
     override fun streamSpecification(streamSpecification: StreamSpecificationProperty) {
-      cdkBuilder.streamSpecification(streamSpecification.let(StreamSpecificationProperty::unwrap))
+      cdkBuilder.streamSpecification(streamSpecification.let(StreamSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -2021,7 +2102,7 @@ public open class CfnTable(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -2049,7 +2130,7 @@ public open class CfnTable(
      * @param timeToLiveSpecification Specifies the Time to Live (TTL) settings for the table. 
      */
     override fun timeToLiveSpecification(timeToLiveSpecification: IResolvable) {
-      cdkBuilder.timeToLiveSpecification(timeToLiveSpecification.let(IResolvable::unwrap))
+      cdkBuilder.timeToLiveSpecification(timeToLiveSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2065,7 +2146,7 @@ public open class CfnTable(
      * @param timeToLiveSpecification Specifies the Time to Live (TTL) settings for the table. 
      */
     override fun timeToLiveSpecification(timeToLiveSpecification: TimeToLiveSpecificationProperty) {
-      cdkBuilder.timeToLiveSpecification(timeToLiveSpecification.let(TimeToLiveSpecificationProperty::unwrap))
+      cdkBuilder.timeToLiveSpecification(timeToLiveSpecification.let(TimeToLiveSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -2294,7 +2375,7 @@ public open class CfnTable(
        * or disabled (false). 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2497,6 +2578,10 @@ public open class CfnTable(
    * .contributorInsightsSpecification(ContributorInsightsSpecificationProperty.builder()
    * .enabled(false)
    * .build())
+   * .onDemandThroughput(OnDemandThroughputProperty.builder()
+   * .maxReadRequestUnits(123)
+   * .maxWriteRequestUnits(123)
+   * .build())
    * .provisionedThroughput(ProvisionedThroughputProperty.builder()
    * .readCapacityUnits(123)
    * .writeCapacityUnits(123)
@@ -2542,6 +2627,11 @@ public open class CfnTable(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-globalsecondaryindex.html#cfn-dynamodb-table-globalsecondaryindex-keyschema)
      */
     public fun keySchema(): Any
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-globalsecondaryindex.html#cfn-dynamodb-table-globalsecondaryindex-ondemandthroughput)
+     */
+    public fun onDemandThroughput(): Any? = unwrap(this).getOnDemandThroughput()
 
     /**
      * Represents attributes that are copied (projected) from the table into the global secondary
@@ -2641,6 +2731,24 @@ public open class CfnTable(
       public fun keySchema(vararg keySchema: Any)
 
       /**
+       * @param onDemandThroughput the value to be set.
+       */
+      public fun onDemandThroughput(onDemandThroughput: IResolvable)
+
+      /**
+       * @param onDemandThroughput the value to be set.
+       */
+      public fun onDemandThroughput(onDemandThroughput: OnDemandThroughputProperty)
+
+      /**
+       * @param onDemandThroughput the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("cae04943fcb210d89eebb92f56cb35dc3b451709e92e9481802f625359c0f6ef")
+      public
+          fun onDemandThroughput(onDemandThroughput: OnDemandThroughputProperty.Builder.() -> Unit)
+
+      /**
        * @param projection Represents attributes that are copied (projected) from the table into the
        * global secondary index. 
        * These are in addition to the primary key attributes and index key attributes, which are
@@ -2707,7 +2815,7 @@ public open class CfnTable(
        * Contributor Insights for the specified global secondary index.
        */
       override fun contributorInsightsSpecification(contributorInsightsSpecification: IResolvable) {
-        cdkBuilder.contributorInsightsSpecification(contributorInsightsSpecification.let(IResolvable::unwrap))
+        cdkBuilder.contributorInsightsSpecification(contributorInsightsSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2716,7 +2824,7 @@ public open class CfnTable(
        */
       override
           fun contributorInsightsSpecification(contributorInsightsSpecification: ContributorInsightsSpecificationProperty) {
-        cdkBuilder.contributorInsightsSpecification(contributorInsightsSpecification.let(ContributorInsightsSpecificationProperty::unwrap))
+        cdkBuilder.contributorInsightsSpecification(contributorInsightsSpecification.let(ContributorInsightsSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -2751,7 +2859,7 @@ public open class CfnTable(
        * together, in sorted order by the sort key value.
        */
       override fun keySchema(keySchema: IResolvable) {
-        cdkBuilder.keySchema(keySchema.let(IResolvable::unwrap))
+        cdkBuilder.keySchema(keySchema.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2785,13 +2893,36 @@ public open class CfnTable(
       override fun keySchema(vararg keySchema: Any): Unit = keySchema(keySchema.toList())
 
       /**
+       * @param onDemandThroughput the value to be set.
+       */
+      override fun onDemandThroughput(onDemandThroughput: IResolvable) {
+        cdkBuilder.onDemandThroughput(onDemandThroughput.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param onDemandThroughput the value to be set.
+       */
+      override fun onDemandThroughput(onDemandThroughput: OnDemandThroughputProperty) {
+        cdkBuilder.onDemandThroughput(onDemandThroughput.let(OnDemandThroughputProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param onDemandThroughput the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("cae04943fcb210d89eebb92f56cb35dc3b451709e92e9481802f625359c0f6ef")
+      override
+          fun onDemandThroughput(onDemandThroughput: OnDemandThroughputProperty.Builder.() -> Unit):
+          Unit = onDemandThroughput(OnDemandThroughputProperty(onDemandThroughput))
+
+      /**
        * @param projection Represents attributes that are copied (projected) from the table into the
        * global secondary index. 
        * These are in addition to the primary key attributes and index key attributes, which are
        * automatically projected.
        */
       override fun projection(projection: IResolvable) {
-        cdkBuilder.projection(projection.let(IResolvable::unwrap))
+        cdkBuilder.projection(projection.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2801,7 +2932,7 @@ public open class CfnTable(
        * automatically projected.
        */
       override fun projection(projection: ProjectionProperty) {
-        cdkBuilder.projection(projection.let(ProjectionProperty::unwrap))
+        cdkBuilder.projection(projection.let(ProjectionProperty.Companion::unwrap))
       }
 
       /**
@@ -2823,7 +2954,7 @@ public open class CfnTable(
        * the *Amazon DynamoDB Developer Guide* .
        */
       override fun provisionedThroughput(provisionedThroughput: IResolvable) {
-        cdkBuilder.provisionedThroughput(provisionedThroughput.let(IResolvable::unwrap))
+        cdkBuilder.provisionedThroughput(provisionedThroughput.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2834,7 +2965,7 @@ public open class CfnTable(
        * the *Amazon DynamoDB Developer Guide* .
        */
       override fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty) {
-        cdkBuilder.provisionedThroughput(provisionedThroughput.let(ProvisionedThroughputProperty::unwrap))
+        cdkBuilder.provisionedThroughput(provisionedThroughput.let(ProvisionedThroughputProperty.Companion::unwrap))
       }
 
       /**
@@ -2893,6 +3024,11 @@ public open class CfnTable(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-globalsecondaryindex.html#cfn-dynamodb-table-globalsecondaryindex-keyschema)
        */
       override fun keySchema(): Any = unwrap(this).getKeySchema()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-globalsecondaryindex.html#cfn-dynamodb-table-globalsecondaryindex-ondemandthroughput)
+       */
+      override fun onDemandThroughput(): Any? = unwrap(this).getOnDemandThroughput()
 
       /**
        * Represents attributes that are copied (projected) from the table into the global secondary
@@ -3076,14 +3212,14 @@ public open class CfnTable(
        * @param inputFormatOptions Additional properties that specify how the input is formatted,.
        */
       override fun inputFormatOptions(inputFormatOptions: IResolvable) {
-        cdkBuilder.inputFormatOptions(inputFormatOptions.let(IResolvable::unwrap))
+        cdkBuilder.inputFormatOptions(inputFormatOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param inputFormatOptions Additional properties that specify how the input is formatted,.
        */
       override fun inputFormatOptions(inputFormatOptions: InputFormatOptionsProperty) {
-        cdkBuilder.inputFormatOptions(inputFormatOptions.let(InputFormatOptionsProperty::unwrap))
+        cdkBuilder.inputFormatOptions(inputFormatOptions.let(InputFormatOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -3099,14 +3235,14 @@ public open class CfnTable(
        * @param s3BucketSource The S3 bucket that provides the source for the import. 
        */
       override fun s3BucketSource(s3BucketSource: IResolvable) {
-        cdkBuilder.s3BucketSource(s3BucketSource.let(IResolvable::unwrap))
+        cdkBuilder.s3BucketSource(s3BucketSource.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3BucketSource The S3 bucket that provides the source for the import. 
        */
       override fun s3BucketSource(s3BucketSource: S3BucketSourceProperty) {
-        cdkBuilder.s3BucketSource(s3BucketSource.let(S3BucketSourceProperty::unwrap))
+        cdkBuilder.s3BucketSource(s3BucketSource.let(S3BucketSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -3242,7 +3378,7 @@ public open class CfnTable(
        * The values are Delimiter and HeaderList.
        */
       override fun csv(csv: IResolvable) {
-        cdkBuilder.csv(csv.let(IResolvable::unwrap))
+        cdkBuilder.csv(csv.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3250,7 +3386,7 @@ public open class CfnTable(
        * The values are Delimiter and HeaderList.
        */
       override fun csv(csv: CsvProperty) {
-        cdkBuilder.csv(csv.let(CsvProperty::unwrap))
+        cdkBuilder.csv(csv.let(CsvProperty.Companion::unwrap))
       }
 
       /**
@@ -3758,7 +3894,7 @@ public open class CfnTable(
        * together, in sorted order by the sort key value.
        */
       override fun keySchema(keySchema: IResolvable) {
-        cdkBuilder.keySchema(keySchema.let(IResolvable::unwrap))
+        cdkBuilder.keySchema(keySchema.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3798,7 +3934,7 @@ public open class CfnTable(
        * automatically projected.
        */
       override fun projection(projection: IResolvable) {
-        cdkBuilder.projection(projection.let(IResolvable::unwrap))
+        cdkBuilder.projection(projection.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3808,7 +3944,7 @@ public open class CfnTable(
        * automatically projected.
        */
       override fun projection(projection: ProjectionProperty) {
-        cdkBuilder.projection(projection.let(ProjectionProperty::unwrap))
+        cdkBuilder.projection(projection.let(ProjectionProperty.Companion::unwrap))
       }
 
       /**
@@ -3888,6 +4024,104 @@ public open class CfnTable(
   }
 
   /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+   * OnDemandThroughputProperty onDemandThroughputProperty = OnDemandThroughputProperty.builder()
+   * .maxReadRequestUnits(123)
+   * .maxWriteRequestUnits(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ondemandthroughput.html)
+   */
+  public interface OnDemandThroughputProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ondemandthroughput.html#cfn-dynamodb-table-ondemandthroughput-maxreadrequestunits)
+     */
+    public fun maxReadRequestUnits(): Number? = unwrap(this).getMaxReadRequestUnits()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ondemandthroughput.html#cfn-dynamodb-table-ondemandthroughput-maxwriterequestunits)
+     */
+    public fun maxWriteRequestUnits(): Number? = unwrap(this).getMaxWriteRequestUnits()
+
+    /**
+     * A builder for [OnDemandThroughputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxReadRequestUnits the value to be set.
+       */
+      public fun maxReadRequestUnits(maxReadRequestUnits: Number)
+
+      /**
+       * @param maxWriteRequestUnits the value to be set.
+       */
+      public fun maxWriteRequestUnits(maxWriteRequestUnits: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dynamodb.CfnTable.OnDemandThroughputProperty.Builder =
+          software.amazon.awscdk.services.dynamodb.CfnTable.OnDemandThroughputProperty.builder()
+
+      /**
+       * @param maxReadRequestUnits the value to be set.
+       */
+      override fun maxReadRequestUnits(maxReadRequestUnits: Number) {
+        cdkBuilder.maxReadRequestUnits(maxReadRequestUnits)
+      }
+
+      /**
+       * @param maxWriteRequestUnits the value to be set.
+       */
+      override fun maxWriteRequestUnits(maxWriteRequestUnits: Number) {
+        cdkBuilder.maxWriteRequestUnits(maxWriteRequestUnits)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.dynamodb.CfnTable.OnDemandThroughputProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.OnDemandThroughputProperty,
+    ) : CdkObject(cdkObject), OnDemandThroughputProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ondemandthroughput.html#cfn-dynamodb-table-ondemandthroughput-maxreadrequestunits)
+       */
+      override fun maxReadRequestUnits(): Number? = unwrap(this).getMaxReadRequestUnits()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ondemandthroughput.html#cfn-dynamodb-table-ondemandthroughput-maxwriterequestunits)
+       */
+      override fun maxWriteRequestUnits(): Number? = unwrap(this).getMaxWriteRequestUnits()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OnDemandThroughputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.OnDemandThroughputProperty):
+          OnDemandThroughputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OnDemandThroughputProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OnDemandThroughputProperty):
+          software.amazon.awscdk.services.dynamodb.CfnTable.OnDemandThroughputProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.dynamodb.CfnTable.OnDemandThroughputProperty
+    }
+  }
+
+  /**
    * The settings used to enable point in time recovery.
    *
    * Example:
@@ -3949,7 +4183,7 @@ public open class CfnTable(
        * (true) or disabled (false) on the table.
        */
       override fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: IResolvable) {
-        cdkBuilder.pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled.let(IResolvable::unwrap))
+        cdkBuilder.pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -4745,7 +4979,7 @@ public open class CfnTable(
        * set to AWS owned key.
        */
       override fun sseEnabled(sseEnabled: IResolvable) {
-        cdkBuilder.sseEnabled(sseEnabled.let(IResolvable::unwrap))
+        cdkBuilder.sseEnabled(sseEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4965,7 +5199,7 @@ public open class CfnTable(
        * .
        */
       override fun resourcePolicy(resourcePolicy: IResolvable) {
-        cdkBuilder.resourcePolicy(resourcePolicy.let(IResolvable::unwrap))
+        cdkBuilder.resourcePolicy(resourcePolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4983,7 +5217,7 @@ public open class CfnTable(
        * .
        */
       override fun resourcePolicy(resourcePolicy: ResourcePolicyProperty) {
-        cdkBuilder.resourcePolicy(resourcePolicy.let(ResourcePolicyProperty::unwrap))
+        cdkBuilder.resourcePolicy(resourcePolicy.let(ResourcePolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -5188,7 +5422,7 @@ public open class CfnTable(
        * table. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

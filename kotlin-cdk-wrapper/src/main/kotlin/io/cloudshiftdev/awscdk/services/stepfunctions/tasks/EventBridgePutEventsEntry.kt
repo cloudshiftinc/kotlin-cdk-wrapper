@@ -116,7 +116,7 @@ public interface EventBridgePutEventsEntry {
      * Can either be provided as an object or as a JSON-serialized string
      */
     override fun detail(detail: TaskInput) {
-      cdkBuilder.detail(detail.let(TaskInput::unwrap))
+      cdkBuilder.detail(detail.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -132,7 +132,7 @@ public interface EventBridgePutEventsEntry {
      * @param eventBus The event bus the entry will be sent to.
      */
     override fun eventBus(eventBus: IEventBus) {
-      cdkBuilder.eventBus(eventBus.let(IEventBus::unwrap))
+      cdkBuilder.eventBus(eventBus.let(IEventBus.Companion::unwrap))
     }
 
     /**

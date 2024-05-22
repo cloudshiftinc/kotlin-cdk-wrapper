@@ -93,8 +93,8 @@ public open class CfnBotAlias(
     id: String,
     props: CfnBotAliasProps,
   ) :
-      this(software.amazon.awscdk.services.lex.CfnBotAlias(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnBotAliasProps::unwrap))
+      this(software.amazon.awscdk.services.lex.CfnBotAlias(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnBotAliasProps.Companion::unwrap))
   )
 
   public constructor(
@@ -130,7 +130,7 @@ public open class CfnBotAlias(
    * Specifies settings that are unique to a locale.
    */
   public open fun botAliasLocaleSettings(`value`: IResolvable) {
-    unwrap(this).setBotAliasLocaleSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBotAliasLocaleSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -167,7 +167,7 @@ public open class CfnBotAlias(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun botAliasTags(`value`: IResolvable) {
-    unwrap(this).setBotAliasTags(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBotAliasTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -215,14 +215,14 @@ public open class CfnBotAlias(
    * Specifies whether Amazon Lex logs text and audio for conversations with the bot.
    */
   public open fun conversationLogSettings(`value`: IResolvable) {
-    unwrap(this).setConversationLogSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConversationLogSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies whether Amazon Lex logs text and audio for conversations with the bot.
    */
   public open fun conversationLogSettings(`value`: ConversationLogSettingsProperty) {
-    unwrap(this).setConversationLogSettings(`value`.let(ConversationLogSettingsProperty::unwrap))
+    unwrap(this).setConversationLogSettings(`value`.let(ConversationLogSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -252,7 +252,7 @@ public open class CfnBotAlias(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -444,7 +444,7 @@ public open class CfnBotAlias(
      * @param botAliasLocaleSettings Specifies settings that are unique to a locale. 
      */
     override fun botAliasLocaleSettings(botAliasLocaleSettings: IResolvable) {
-      cdkBuilder.botAliasLocaleSettings(botAliasLocaleSettings.let(IResolvable::unwrap))
+      cdkBuilder.botAliasLocaleSettings(botAliasLocaleSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -493,7 +493,7 @@ public open class CfnBotAlias(
      * @param botAliasTags An array of key-value pairs to apply to this resource. 
      */
     override fun botAliasTags(botAliasTags: IResolvable) {
-      cdkBuilder.botAliasTags(botAliasTags.let(IResolvable::unwrap))
+      cdkBuilder.botAliasTags(botAliasTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -557,7 +557,7 @@ public open class CfnBotAlias(
      * conversations with the bot. 
      */
     override fun conversationLogSettings(conversationLogSettings: IResolvable) {
-      cdkBuilder.conversationLogSettings(conversationLogSettings.let(IResolvable::unwrap))
+      cdkBuilder.conversationLogSettings(conversationLogSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -571,7 +571,7 @@ public open class CfnBotAlias(
      * conversations with the bot. 
      */
     override fun conversationLogSettings(conversationLogSettings: ConversationLogSettingsProperty) {
-      cdkBuilder.conversationLogSettings(conversationLogSettings.let(ConversationLogSettingsProperty::unwrap))
+      cdkBuilder.conversationLogSettings(conversationLogSettings.let(ConversationLogSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -696,14 +696,14 @@ public open class CfnBotAlias(
        * @param s3Bucket The S3 bucket location where audio logs are stored. 
        */
       override fun s3Bucket(s3Bucket: IResolvable) {
-        cdkBuilder.s3Bucket(s3Bucket.let(IResolvable::unwrap))
+        cdkBuilder.s3Bucket(s3Bucket.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3Bucket The S3 bucket location where audio logs are stored. 
        */
       override fun s3Bucket(s3Bucket: S3BucketLogDestinationProperty) {
-        cdkBuilder.s3Bucket(s3Bucket.let(S3BucketLogDestinationProperty::unwrap))
+        cdkBuilder.s3Bucket(s3Bucket.let(S3BucketLogDestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -835,7 +835,7 @@ public open class CfnBotAlias(
        * enabled for a bot. 
        */
       override fun destination(destination: IResolvable) {
-        cdkBuilder.destination(destination.let(IResolvable::unwrap))
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -843,7 +843,7 @@ public open class CfnBotAlias(
        * enabled for a bot. 
        */
       override fun destination(destination: AudioLogDestinationProperty) {
-        cdkBuilder.destination(destination.let(AudioLogDestinationProperty::unwrap))
+        cdkBuilder.destination(destination.let(AudioLogDestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -866,7 +866,7 @@ public open class CfnBotAlias(
        * @param enabled Determines whether audio logging in enabled for the bot. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.lex.CfnBotAlias.AudioLogSettingProperty =
@@ -992,14 +992,14 @@ public open class CfnBotAlias(
        * @param botAliasLocaleSetting Specifies settings that are unique to a locale. 
        */
       override fun botAliasLocaleSetting(botAliasLocaleSetting: IResolvable) {
-        cdkBuilder.botAliasLocaleSetting(botAliasLocaleSetting.let(IResolvable::unwrap))
+        cdkBuilder.botAliasLocaleSetting(botAliasLocaleSetting.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param botAliasLocaleSetting Specifies settings that are unique to a locale. 
        */
       override fun botAliasLocaleSetting(botAliasLocaleSetting: BotAliasLocaleSettingsProperty) {
-        cdkBuilder.botAliasLocaleSetting(botAliasLocaleSetting.let(BotAliasLocaleSettingsProperty::unwrap))
+        cdkBuilder.botAliasLocaleSetting(botAliasLocaleSetting.let(BotAliasLocaleSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -1152,7 +1152,7 @@ public open class CfnBotAlias(
        * locale.
        */
       override fun codeHookSpecification(codeHookSpecification: IResolvable) {
-        cdkBuilder.codeHookSpecification(codeHookSpecification.let(IResolvable::unwrap))
+        cdkBuilder.codeHookSpecification(codeHookSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1160,7 +1160,7 @@ public open class CfnBotAlias(
        * locale.
        */
       override fun codeHookSpecification(codeHookSpecification: CodeHookSpecificationProperty) {
-        cdkBuilder.codeHookSpecification(codeHookSpecification.let(CodeHookSpecificationProperty::unwrap))
+        cdkBuilder.codeHookSpecification(codeHookSpecification.let(CodeHookSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -1186,7 +1186,7 @@ public open class CfnBotAlias(
        * If the value is `false` , the locale isn't available for use.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1414,7 +1414,7 @@ public open class CfnBotAlias(
        * fulfills the user's request to a bot. 
        */
       override fun lambdaCodeHook(lambdaCodeHook: IResolvable) {
-        cdkBuilder.lambdaCodeHook(lambdaCodeHook.let(IResolvable::unwrap))
+        cdkBuilder.lambdaCodeHook(lambdaCodeHook.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1422,7 +1422,7 @@ public open class CfnBotAlias(
        * fulfills the user's request to a bot. 
        */
       override fun lambdaCodeHook(lambdaCodeHook: LambdaCodeHookProperty) {
-        cdkBuilder.lambdaCodeHook(lambdaCodeHook.let(LambdaCodeHookProperty::unwrap))
+        cdkBuilder.lambdaCodeHook(lambdaCodeHook.let(LambdaCodeHookProperty.Companion::unwrap))
       }
 
       /**
@@ -1566,7 +1566,7 @@ public open class CfnBotAlias(
        * @param audioLogSettings The Amazon S3 settings for logging audio to an S3 bucket.
        */
       override fun audioLogSettings(audioLogSettings: IResolvable) {
-        cdkBuilder.audioLogSettings(audioLogSettings.let(IResolvable::unwrap))
+        cdkBuilder.audioLogSettings(audioLogSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1586,7 +1586,7 @@ public open class CfnBotAlias(
        * @param textLogSettings The Amazon CloudWatch Logs settings for logging text and metadata.
        */
       override fun textLogSettings(textLogSettings: IResolvable) {
-        cdkBuilder.textLogSettings(textLogSettings.let(IResolvable::unwrap))
+        cdkBuilder.textLogSettings(textLogSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1961,7 +1961,7 @@ public open class CfnBotAlias(
        * sentiment of user utterances. 
        */
       override fun detectSentiment(detectSentiment: IResolvable) {
-        cdkBuilder.detectSentiment(detectSentiment.let(IResolvable::unwrap))
+        cdkBuilder.detectSentiment(detectSentiment.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2062,7 +2062,7 @@ public open class CfnBotAlias(
        * are delivered. 
        */
       override fun cloudWatch(cloudWatch: IResolvable) {
-        cdkBuilder.cloudWatch(cloudWatch.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatch(cloudWatch.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2070,7 +2070,7 @@ public open class CfnBotAlias(
        * are delivered. 
        */
       override fun cloudWatch(cloudWatch: CloudWatchLogGroupLogDestinationProperty) {
-        cdkBuilder.cloudWatch(cloudWatch.let(CloudWatchLogGroupLogDestinationProperty::unwrap))
+        cdkBuilder.cloudWatch(cloudWatch.let(CloudWatchLogGroupLogDestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -2199,7 +2199,7 @@ public open class CfnBotAlias(
        * conversation text logs. 
        */
       override fun destination(destination: IResolvable) {
-        cdkBuilder.destination(destination.let(IResolvable::unwrap))
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2207,7 +2207,7 @@ public open class CfnBotAlias(
        * conversation text logs. 
        */
       override fun destination(destination: TextLogDestinationProperty) {
-        cdkBuilder.destination(destination.let(TextLogDestinationProperty::unwrap))
+        cdkBuilder.destination(destination.let(TextLogDestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -2230,7 +2230,7 @@ public open class CfnBotAlias(
        * @param enabled Determines whether conversation logs should be stored for an alias. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.lex.CfnBotAlias.TextLogSettingProperty =

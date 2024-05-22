@@ -70,8 +70,8 @@ public open class CfnAsset(
     id: String,
     props: CfnAssetProps,
   ) :
-      this(software.amazon.awscdk.services.iotsitewise.CfnAsset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAssetProps::unwrap))
+      this(software.amazon.awscdk.services.iotsitewise.CfnAsset(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAssetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -114,7 +114,7 @@ public open class CfnAsset(
    * A list of asset hierarchies that each contain a `hierarchyId` .
    */
   public open fun assetHierarchies(`value`: IResolvable) {
-    unwrap(this).setAssetHierarchies(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAssetHierarchies(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -162,7 +162,7 @@ public open class CfnAsset(
    * The list of asset properties for the asset.
    */
   public open fun assetProperties(`value`: IResolvable) {
-    unwrap(this).setAssetProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAssetProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -193,7 +193,7 @@ public open class CfnAsset(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -211,7 +211,7 @@ public open class CfnAsset(
    * A list of key-value pairs that contain metadata for the asset.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -393,7 +393,7 @@ public open class CfnAsset(
      * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyId` . 
      */
     override fun assetHierarchies(assetHierarchies: IResolvable) {
-      cdkBuilder.assetHierarchies(assetHierarchies.let(IResolvable::unwrap))
+      cdkBuilder.assetHierarchies(assetHierarchies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -454,7 +454,7 @@ public open class CfnAsset(
      * @param assetProperties The list of asset properties for the asset. 
      */
     override fun assetProperties(assetProperties: IResolvable) {
-      cdkBuilder.assetProperties(assetProperties.let(IResolvable::unwrap))
+      cdkBuilder.assetProperties(assetProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -493,7 +493,7 @@ public open class CfnAsset(
      * @param tags A list of key-value pairs that contain metadata for the asset. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

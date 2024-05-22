@@ -159,7 +159,7 @@ public interface ServiceCatalogDeployActionBeta1Props : CommonAwsActionProps {
      * method in the `ActionBindOptions.role` property.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -174,7 +174,7 @@ public interface ServiceCatalogDeployActionBeta1Props : CommonAwsActionProps {
      * @param templatePath The path to the cloudformation artifact. 
      */
     override fun templatePath(templatePath: ArtifactPath) {
-      cdkBuilder.templatePath(templatePath.let(ArtifactPath::unwrap))
+      cdkBuilder.templatePath(templatePath.let(ArtifactPath.Companion::unwrap))
     }
 
     /**

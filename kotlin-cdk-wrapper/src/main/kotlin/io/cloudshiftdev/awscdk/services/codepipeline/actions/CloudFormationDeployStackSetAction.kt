@@ -73,7 +73,7 @@ public open class CloudFormationDeployStackSetAction(
   cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeployStackSetAction,
 ) : Action(cdkObject) {
   public constructor(props: CloudFormationDeployStackSetActionProps) :
-      this(software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeployStackSetAction(props.let(CloudFormationDeployStackSetActionProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeployStackSetAction(props.let(CloudFormationDeployStackSetActionProps.Companion::unwrap))
   )
 
   public constructor(props: CloudFormationDeployStackSetActionProps.Builder.() -> Unit) :
@@ -322,7 +322,7 @@ public open class CloudFormationDeployStackSetAction(
      * on the types of resources in the template. 
      */
     override fun cfnCapabilities(cfnCapabilities: List<CfnCapabilities>) {
-      cdkBuilder.cfnCapabilities(cfnCapabilities.map(CfnCapabilities::unwrap))
+      cdkBuilder.cfnCapabilities(cfnCapabilities.map(CfnCapabilities.Companion::unwrap))
     }
 
     /**
@@ -363,7 +363,7 @@ public open class CloudFormationDeployStackSetAction(
      * @param deploymentModel Determines how IAM roles are created and managed. 
      */
     override fun deploymentModel(deploymentModel: StackSetDeploymentModel) {
-      cdkBuilder.deploymentModel(deploymentModel.let(StackSetDeploymentModel::unwrap))
+      cdkBuilder.deploymentModel(deploymentModel.let(StackSetDeploymentModel.Companion::unwrap))
     }
 
     /**
@@ -427,7 +427,7 @@ public open class CloudFormationDeployStackSetAction(
      * @param parameters The template parameters for your stack set. 
      */
     override fun parameters(parameters: StackSetParameters) {
-      cdkBuilder.parameters(parameters.let(StackSetParameters::unwrap))
+      cdkBuilder.parameters(parameters.let(StackSetParameters.Companion::unwrap))
     }
 
     /**
@@ -444,7 +444,7 @@ public open class CloudFormationDeployStackSetAction(
      * @param role The Role in which context's this Action will be executing in. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -471,7 +471,7 @@ public open class CloudFormationDeployStackSetAction(
      * @param stackInstances Specify where to create or update Stack Instances. 
      */
     override fun stackInstances(stackInstances: StackInstances) {
-      cdkBuilder.stackInstances(stackInstances.let(StackInstances::unwrap))
+      cdkBuilder.stackInstances(stackInstances.let(StackInstances.Companion::unwrap))
     }
 
     /**
@@ -515,7 +515,7 @@ public open class CloudFormationDeployStackSetAction(
      * @param template The location of the template that defines the resources in the stack set. 
      */
     override fun template(template: StackSetTemplate) {
-      cdkBuilder.template(template.let(StackSetTemplate::unwrap))
+      cdkBuilder.template(template.let(StackSetTemplate.Companion::unwrap))
     }
 
     /**

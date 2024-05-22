@@ -142,7 +142,7 @@ public interface CfnScheduleProps {
      * @param tags Metadata tags that have been applied to the schedule.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

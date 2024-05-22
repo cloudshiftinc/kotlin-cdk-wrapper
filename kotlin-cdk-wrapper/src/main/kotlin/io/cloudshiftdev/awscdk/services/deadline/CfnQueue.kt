@@ -66,8 +66,8 @@ public open class CfnQueue(
     id: String,
     props: CfnQueueProps,
   ) :
-      this(software.amazon.awscdk.services.deadline.CfnQueue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnQueueProps::unwrap))
+      this(software.amazon.awscdk.services.deadline.CfnQueue(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnQueueProps.Companion::unwrap))
   )
 
   public constructor(
@@ -163,7 +163,7 @@ public open class CfnQueue(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -175,14 +175,14 @@ public open class CfnQueue(
    * The job attachment settings.
    */
   public open fun jobAttachmentSettings(`value`: IResolvable) {
-    unwrap(this).setJobAttachmentSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setJobAttachmentSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The job attachment settings.
    */
   public open fun jobAttachmentSettings(`value`: JobAttachmentSettingsProperty) {
-    unwrap(this).setJobAttachmentSettings(`value`.let(JobAttachmentSettingsProperty::unwrap))
+    unwrap(this).setJobAttachmentSettings(`value`.let(JobAttachmentSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -202,14 +202,14 @@ public open class CfnQueue(
    * Identifies the user for a job.
    */
   public open fun jobRunAsUser(`value`: IResolvable) {
-    unwrap(this).setJobRunAsUser(`value`.let(IResolvable::unwrap))
+    unwrap(this).setJobRunAsUser(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Identifies the user for a job.
    */
   public open fun jobRunAsUser(`value`: JobRunAsUserProperty) {
-    unwrap(this).setJobRunAsUser(`value`.let(JobRunAsUserProperty::unwrap))
+    unwrap(this).setJobRunAsUser(`value`.let(JobRunAsUserProperty.Companion::unwrap))
   }
 
   /**
@@ -487,7 +487,7 @@ public open class CfnQueue(
      * @param jobAttachmentSettings The job attachment settings. 
      */
     override fun jobAttachmentSettings(jobAttachmentSettings: IResolvable) {
-      cdkBuilder.jobAttachmentSettings(jobAttachmentSettings.let(IResolvable::unwrap))
+      cdkBuilder.jobAttachmentSettings(jobAttachmentSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -499,7 +499,7 @@ public open class CfnQueue(
      * @param jobAttachmentSettings The job attachment settings. 
      */
     override fun jobAttachmentSettings(jobAttachmentSettings: JobAttachmentSettingsProperty) {
-      cdkBuilder.jobAttachmentSettings(jobAttachmentSettings.let(JobAttachmentSettingsProperty::unwrap))
+      cdkBuilder.jobAttachmentSettings(jobAttachmentSettings.let(JobAttachmentSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -523,7 +523,7 @@ public open class CfnQueue(
      * @param jobRunAsUser Identifies the user for a job. 
      */
     override fun jobRunAsUser(jobRunAsUser: IResolvable) {
-      cdkBuilder.jobRunAsUser(jobRunAsUser.let(IResolvable::unwrap))
+      cdkBuilder.jobRunAsUser(jobRunAsUser.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -533,7 +533,7 @@ public open class CfnQueue(
      * @param jobRunAsUser Identifies the user for a job. 
      */
     override fun jobRunAsUser(jobRunAsUser: JobRunAsUserProperty) {
-      cdkBuilder.jobRunAsUser(jobRunAsUser.let(JobRunAsUserProperty::unwrap))
+      cdkBuilder.jobRunAsUser(jobRunAsUser.let(JobRunAsUserProperty.Companion::unwrap))
     }
 
     /**
@@ -815,14 +815,14 @@ public open class CfnQueue(
        * @param posix The user and group that the jobs in the queue run as.
        */
       override fun posix(posix: IResolvable) {
-        cdkBuilder.posix(posix.let(IResolvable::unwrap))
+        cdkBuilder.posix(posix.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param posix The user and group that the jobs in the queue run as.
        */
       override fun posix(posix: PosixUserProperty) {
-        cdkBuilder.posix(posix.let(PosixUserProperty::unwrap))
+        cdkBuilder.posix(posix.let(PosixUserProperty.Companion::unwrap))
       }
 
       /**
@@ -845,14 +845,14 @@ public open class CfnQueue(
        * @param windows Identifies a Microsoft Windows user.
        */
       override fun windows(windows: IResolvable) {
-        cdkBuilder.windows(windows.let(IResolvable::unwrap))
+        cdkBuilder.windows(windows.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param windows Identifies a Microsoft Windows user.
        */
       override fun windows(windows: WindowsUserProperty) {
-        cdkBuilder.windows(windows.let(WindowsUserProperty::unwrap))
+        cdkBuilder.windows(windows.let(WindowsUserProperty.Companion::unwrap))
       }
 
       /**

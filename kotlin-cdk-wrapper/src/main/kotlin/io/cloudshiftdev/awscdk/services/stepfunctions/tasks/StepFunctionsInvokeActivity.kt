@@ -41,8 +41,8 @@ public open class StepFunctionsInvokeActivity(
     id: String,
     props: StepFunctionsInvokeActivityProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.StepFunctionsInvokeActivity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(StepFunctionsInvokeActivityProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.StepFunctionsInvokeActivity(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(StepFunctionsInvokeActivityProps.Companion::unwrap))
   )
 
   public constructor(
@@ -257,7 +257,7 @@ public open class StepFunctionsInvokeActivity(
      * @param activity Step Functions Activity to invoke. 
      */
     override fun activity(activity: IActivity) {
-      cdkBuilder.activity(activity.let(IActivity::unwrap))
+      cdkBuilder.activity(activity.let(IActivity.Companion::unwrap))
     }
 
     /**
@@ -283,7 +283,7 @@ public open class StepFunctionsInvokeActivity(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -312,7 +312,7 @@ public open class StepFunctionsInvokeActivity(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -326,7 +326,7 @@ public open class StepFunctionsInvokeActivity(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -361,7 +361,7 @@ public open class StepFunctionsInvokeActivity(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -447,7 +447,7 @@ public open class StepFunctionsInvokeActivity(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -460,7 +460,7 @@ public open class StepFunctionsInvokeActivity(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build():

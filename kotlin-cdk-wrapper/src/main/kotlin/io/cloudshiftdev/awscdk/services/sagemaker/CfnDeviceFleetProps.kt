@@ -156,14 +156,14 @@ public interface CfnDeviceFleetProps {
      * @param outputConfig The output configuration for storing sample data collected by the fleet. 
      */
     override fun outputConfig(outputConfig: IResolvable) {
-      cdkBuilder.outputConfig(outputConfig.let(IResolvable::unwrap))
+      cdkBuilder.outputConfig(outputConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param outputConfig The output configuration for storing sample data collected by the fleet. 
      */
     override fun outputConfig(outputConfig: CfnDeviceFleet.EdgeOutputConfigProperty) {
-      cdkBuilder.outputConfig(outputConfig.let(CfnDeviceFleet.EdgeOutputConfigProperty::unwrap))
+      cdkBuilder.outputConfig(outputConfig.let(CfnDeviceFleet.EdgeOutputConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -189,7 +189,7 @@ public interface CfnDeviceFleetProps {
      * Each tag consists of a key and a value, both of which you define.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

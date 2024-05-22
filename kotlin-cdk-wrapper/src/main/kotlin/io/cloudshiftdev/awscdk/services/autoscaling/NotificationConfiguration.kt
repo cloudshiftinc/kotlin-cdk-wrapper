@@ -69,14 +69,14 @@ public interface NotificationConfiguration {
      * @param scalingEvents Which fleet scaling events triggers a notification.
      */
     override fun scalingEvents(scalingEvents: ScalingEvents) {
-      cdkBuilder.scalingEvents(scalingEvents.let(ScalingEvents::unwrap))
+      cdkBuilder.scalingEvents(scalingEvents.let(ScalingEvents.Companion::unwrap))
     }
 
     /**
      * @param topic SNS topic to send notifications about fleet scaling events. 
      */
     override fun topic(topic: ITopic) {
-      cdkBuilder.topic(topic.let(ITopic::unwrap))
+      cdkBuilder.topic(topic.let(ITopic.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.autoscaling.NotificationConfiguration =

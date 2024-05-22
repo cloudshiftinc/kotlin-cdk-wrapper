@@ -112,7 +112,7 @@ public interface TargetBaseProps {
      * dead letter queue.
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -122,7 +122,7 @@ public interface TargetBaseProps {
      * Maximum value of 86400.
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**

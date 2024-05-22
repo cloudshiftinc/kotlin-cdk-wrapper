@@ -183,7 +183,7 @@ public interface CfnPolicyStoreProps {
      * If you later update a policy, then it is evaluated against the new schema at that time.
      */
     override fun schema(schema: IResolvable) {
-      cdkBuilder.schema(schema.let(IResolvable::unwrap))
+      cdkBuilder.schema(schema.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -194,7 +194,7 @@ public interface CfnPolicyStoreProps {
      * If you later update a policy, then it is evaluated against the new schema at that time.
      */
     override fun schema(schema: CfnPolicyStore.SchemaDefinitionProperty) {
-      cdkBuilder.schema(schema.let(CfnPolicyStore.SchemaDefinitionProperty::unwrap))
+      cdkBuilder.schema(schema.let(CfnPolicyStore.SchemaDefinitionProperty.Companion::unwrap))
     }
 
     /**
@@ -223,7 +223,7 @@ public interface CfnPolicyStoreProps {
      * again to turn validation back on.
      */
     override fun validationSettings(validationSettings: IResolvable) {
-      cdkBuilder.validationSettings(validationSettings.let(IResolvable::unwrap))
+      cdkBuilder.validationSettings(validationSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -240,7 +240,7 @@ public interface CfnPolicyStoreProps {
      * again to turn validation back on.
      */
     override fun validationSettings(validationSettings: CfnPolicyStore.ValidationSettingsProperty) {
-      cdkBuilder.validationSettings(validationSettings.let(CfnPolicyStore.ValidationSettingsProperty::unwrap))
+      cdkBuilder.validationSettings(validationSettings.let(CfnPolicyStore.ValidationSettingsProperty.Companion::unwrap))
     }
 
     /**

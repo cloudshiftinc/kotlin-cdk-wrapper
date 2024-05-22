@@ -66,8 +66,8 @@ public open class CfnStream(
     id: String,
     props: CfnStreamProps,
   ) :
-      this(software.amazon.awscdk.services.qldb.CfnStream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStreamProps::unwrap))
+      this(software.amazon.awscdk.services.qldb.CfnStream(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStreamProps.Companion::unwrap))
   )
 
   public constructor(
@@ -122,7 +122,7 @@ public open class CfnStream(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -134,14 +134,14 @@ public open class CfnStream(
    * The configuration settings of the Kinesis Data Streams destination for your stream request.
    */
   public open fun kinesisConfiguration(`value`: IResolvable) {
-    unwrap(this).setKinesisConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKinesisConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration settings of the Kinesis Data Streams destination for your stream request.
    */
   public open fun kinesisConfiguration(`value`: KinesisConfigurationProperty) {
-    unwrap(this).setKinesisConfiguration(`value`.let(KinesisConfigurationProperty::unwrap))
+    unwrap(this).setKinesisConfiguration(`value`.let(KinesisConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -205,7 +205,7 @@ public open class CfnStream(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -389,7 +389,7 @@ public open class CfnStream(
      * destination for your stream request. 
      */
     override fun kinesisConfiguration(kinesisConfiguration: IResolvable) {
-      cdkBuilder.kinesisConfiguration(kinesisConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.kinesisConfiguration(kinesisConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -400,7 +400,7 @@ public open class CfnStream(
      * destination for your stream request. 
      */
     override fun kinesisConfiguration(kinesisConfiguration: KinesisConfigurationProperty) {
-      cdkBuilder.kinesisConfiguration(kinesisConfiguration.let(KinesisConfigurationProperty::unwrap))
+      cdkBuilder.kinesisConfiguration(kinesisConfiguration.let(KinesisConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -470,7 +470,7 @@ public open class CfnStream(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -631,7 +631,7 @@ public open class CfnStream(
        * in the *Amazon Kinesis Data Streams Developer Guide* .
        */
       override fun aggregationEnabled(aggregationEnabled: IResolvable) {
-        cdkBuilder.aggregationEnabled(aggregationEnabled.let(IResolvable::unwrap))
+        cdkBuilder.aggregationEnabled(aggregationEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**

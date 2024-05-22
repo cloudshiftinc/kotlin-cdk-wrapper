@@ -60,7 +60,7 @@ public open class CfnEnvironmentTemplate(
   cdkObject: software.amazon.awscdk.services.proton.CfnEnvironmentTemplate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.proton.CfnEnvironmentTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.proton.CfnEnvironmentTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -69,8 +69,8 @@ public open class CfnEnvironmentTemplate(
     id: String,
     props: CfnEnvironmentTemplateProps,
   ) :
-      this(software.amazon.awscdk.services.proton.CfnEnvironmentTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEnvironmentTemplateProps::unwrap))
+      this(software.amazon.awscdk.services.proton.CfnEnvironmentTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEnvironmentTemplateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -127,7 +127,7 @@ public open class CfnEnvironmentTemplate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -173,7 +173,7 @@ public open class CfnEnvironmentTemplate(
    * template.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -338,7 +338,7 @@ public open class CfnEnvironmentTemplate(
      * environment template. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

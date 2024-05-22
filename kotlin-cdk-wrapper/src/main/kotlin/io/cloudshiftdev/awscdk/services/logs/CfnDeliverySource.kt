@@ -78,8 +78,8 @@ public open class CfnDeliverySource(
     id: String,
     props: CfnDeliverySourceProps,
   ) :
-      this(software.amazon.awscdk.services.logs.CfnDeliverySource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDeliverySourceProps::unwrap))
+      this(software.amazon.awscdk.services.logs.CfnDeliverySource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDeliverySourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -119,7 +119,7 @@ public open class CfnDeliverySource(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -167,7 +167,7 @@ public open class CfnDeliverySource(
    * The tags that have been assigned to this delivery source.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -271,7 +271,7 @@ public open class CfnDeliverySource(
      * @param tags The tags that have been assigned to this delivery source. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -36,8 +36,8 @@ public interface IBucketNotificationDestination {
      * @param bucket The bucket object to bind to. 
      */
     override fun bind(scope: Construct, bucket: IBucket): BucketNotificationDestinationConfig =
-        unwrap(this).bind(scope.let(Construct::unwrap),
-        bucket.let(IBucket::unwrap)).let(BucketNotificationDestinationConfig::wrap)
+        unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+        bucket.let(IBucket.Companion::unwrap)).let(BucketNotificationDestinationConfig::wrap)
   }
 
   public companion object {

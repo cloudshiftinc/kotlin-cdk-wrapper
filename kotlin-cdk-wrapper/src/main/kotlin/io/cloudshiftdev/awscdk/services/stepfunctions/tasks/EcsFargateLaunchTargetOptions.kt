@@ -58,7 +58,7 @@ public interface EcsFargateLaunchTargetOptions {
      * Fargate platform version is a combination of the kernel and container runtime versions.
      */
     override fun platformVersion(platformVersion: FargatePlatformVersion) {
-      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion::unwrap))
+      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion.Companion::unwrap))
     }
 
     public fun build():

@@ -44,8 +44,8 @@ public open class Environment(
     id: String,
     props: EnvironmentProps,
   ) :
-      this(software.amazon.awscdk.services.appconfig.Environment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EnvironmentProps::unwrap))
+      this(software.amazon.awscdk.services.appconfig.Environment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EnvironmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -66,7 +66,7 @@ public open class Environment(
    * @param configuration 
    */
   public override fun addDeployment(configuration: IConfiguration) {
-    unwrap(this).addDeployment(configuration.let(IConfiguration::unwrap))
+    unwrap(this).addDeployment(configuration.let(IConfiguration.Companion::unwrap))
   }
 
   /**
@@ -87,7 +87,7 @@ public open class Environment(
    * @param extension 
    */
   public override fun addExtension(extension: IExtension) {
-    unwrap(this).addExtension(extension.let(IExtension::unwrap))
+    unwrap(this).addExtension(extension.let(IExtension.Companion::unwrap))
   }
 
   /**
@@ -136,8 +136,8 @@ public open class Environment(
    * @param options
    */
   public override fun on(actionPoint: ActionPoint, eventDestination: IEventDestination) {
-    unwrap(this).on(actionPoint.let(ActionPoint::unwrap),
-        eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).on(actionPoint.let(ActionPoint.Companion::unwrap),
+        eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -153,8 +153,9 @@ public open class Environment(
     eventDestination: IEventDestination,
     options: ExtensionOptions,
   ) {
-    unwrap(this).on(actionPoint.let(ActionPoint::unwrap),
-        eventDestination.let(IEventDestination::unwrap), options.let(ExtensionOptions::unwrap))
+    unwrap(this).on(actionPoint.let(ActionPoint.Companion::unwrap),
+        eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -181,7 +182,7 @@ public open class Environment(
    * @param options
    */
   public override fun onDeploymentBaking(eventDestination: IEventDestination) {
-    unwrap(this).onDeploymentBaking(eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).onDeploymentBaking(eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -193,8 +194,8 @@ public open class Environment(
    */
   public override fun onDeploymentBaking(eventDestination: IEventDestination,
       options: ExtensionOptions) {
-    unwrap(this).onDeploymentBaking(eventDestination.let(IEventDestination::unwrap),
-        options.let(ExtensionOptions::unwrap))
+    unwrap(this).onDeploymentBaking(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -218,7 +219,7 @@ public open class Environment(
    * @param options
    */
   public override fun onDeploymentComplete(eventDestination: IEventDestination) {
-    unwrap(this).onDeploymentComplete(eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).onDeploymentComplete(eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -230,8 +231,8 @@ public open class Environment(
    */
   public override fun onDeploymentComplete(eventDestination: IEventDestination,
       options: ExtensionOptions) {
-    unwrap(this).onDeploymentComplete(eventDestination.let(IEventDestination::unwrap),
-        options.let(ExtensionOptions::unwrap))
+    unwrap(this).onDeploymentComplete(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -255,7 +256,7 @@ public open class Environment(
    * @param options
    */
   public override fun onDeploymentRolledBack(eventDestination: IEventDestination) {
-    unwrap(this).onDeploymentRolledBack(eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).onDeploymentRolledBack(eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -267,8 +268,8 @@ public open class Environment(
    */
   public override fun onDeploymentRolledBack(eventDestination: IEventDestination,
       options: ExtensionOptions) {
-    unwrap(this).onDeploymentRolledBack(eventDestination.let(IEventDestination::unwrap),
-        options.let(ExtensionOptions::unwrap))
+    unwrap(this).onDeploymentRolledBack(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -292,7 +293,7 @@ public open class Environment(
    * @param options
    */
   public override fun onDeploymentStart(eventDestination: IEventDestination) {
-    unwrap(this).onDeploymentStart(eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).onDeploymentStart(eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -304,8 +305,8 @@ public open class Environment(
    */
   public override fun onDeploymentStart(eventDestination: IEventDestination,
       options: ExtensionOptions) {
-    unwrap(this).onDeploymentStart(eventDestination.let(IEventDestination::unwrap),
-        options.let(ExtensionOptions::unwrap))
+    unwrap(this).onDeploymentStart(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -329,7 +330,7 @@ public open class Environment(
    * @param options
    */
   public override fun onDeploymentStep(eventDestination: IEventDestination) {
-    unwrap(this).onDeploymentStep(eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).onDeploymentStep(eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -341,8 +342,8 @@ public open class Environment(
    */
   public override fun onDeploymentStep(eventDestination: IEventDestination,
       options: ExtensionOptions) {
-    unwrap(this).onDeploymentStep(eventDestination.let(IEventDestination::unwrap),
-        options.let(ExtensionOptions::unwrap))
+    unwrap(this).onDeploymentStep(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -366,7 +367,7 @@ public open class Environment(
    * @param options
    */
   public override fun preCreateHostedConfigurationVersion(eventDestination: IEventDestination) {
-    unwrap(this).preCreateHostedConfigurationVersion(eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).preCreateHostedConfigurationVersion(eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -378,8 +379,8 @@ public open class Environment(
    */
   public override fun preCreateHostedConfigurationVersion(eventDestination: IEventDestination,
       options: ExtensionOptions) {
-    unwrap(this).preCreateHostedConfigurationVersion(eventDestination.let(IEventDestination::unwrap),
-        options.let(ExtensionOptions::unwrap))
+    unwrap(this).preCreateHostedConfigurationVersion(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -403,7 +404,7 @@ public open class Environment(
    * @param options
    */
   public override fun preStartDeployment(eventDestination: IEventDestination) {
-    unwrap(this).preStartDeployment(eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).preStartDeployment(eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -415,8 +416,8 @@ public open class Environment(
    */
   public override fun preStartDeployment(eventDestination: IEventDestination,
       options: ExtensionOptions) {
-    unwrap(this).preStartDeployment(eventDestination.let(IEventDestination::unwrap),
-        options.let(ExtensionOptions::unwrap))
+    unwrap(this).preStartDeployment(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -494,7 +495,7 @@ public open class Environment(
      * @param application The application to be associated with the environment. 
      */
     override fun application(application: IApplication) {
-      cdkBuilder.application(application.let(IApplication::unwrap))
+      cdkBuilder.application(application.let(IApplication.Companion::unwrap))
     }
 
     /**
@@ -527,7 +528,7 @@ public open class Environment(
      * @param monitors The monitors for the environment. 
      */
     override fun monitors(monitors: List<Monitor>) {
-      cdkBuilder.monitors(monitors.map(Monitor::unwrap))
+      cdkBuilder.monitors(monitors.map(Monitor.Companion::unwrap))
     }
 
     /**
@@ -548,7 +549,7 @@ public open class Environment(
       id: String,
       environmentArn: String,
     ): IEnvironment =
-        software.amazon.awscdk.services.appconfig.Environment.fromEnvironmentArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.appconfig.Environment.fromEnvironmentArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, environmentArn).let(IEnvironment::wrap)
 
     public fun fromEnvironmentAttributes(
@@ -556,8 +557,8 @@ public open class Environment(
       id: String,
       attrs: EnvironmentAttributes,
     ): IEnvironment =
-        software.amazon.awscdk.services.appconfig.Environment.fromEnvironmentAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(EnvironmentAttributes::unwrap)).let(IEnvironment::wrap)
+        software.amazon.awscdk.services.appconfig.Environment.fromEnvironmentAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(EnvironmentAttributes.Companion::unwrap)).let(IEnvironment::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cd908126f7f1a01009a6c6b7024c7d97a46bc780f4d581f0e786cd5e2abdccc2")

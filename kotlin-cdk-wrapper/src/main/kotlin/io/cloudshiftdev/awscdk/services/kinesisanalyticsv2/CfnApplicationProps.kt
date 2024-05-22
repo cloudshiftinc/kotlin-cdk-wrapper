@@ -370,7 +370,7 @@ public interface CfnApplicationProps {
      * @param applicationConfiguration Use this parameter to configure the application.
      */
     override fun applicationConfiguration(applicationConfiguration: IResolvable) {
-      cdkBuilder.applicationConfiguration(applicationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.applicationConfiguration(applicationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -378,7 +378,7 @@ public interface CfnApplicationProps {
      */
     override
         fun applicationConfiguration(applicationConfiguration: CfnApplication.ApplicationConfigurationProperty) {
-      cdkBuilder.applicationConfiguration(applicationConfiguration.let(CfnApplication.ApplicationConfigurationProperty::unwrap))
+      cdkBuilder.applicationConfiguration(applicationConfiguration.let(CfnApplication.ApplicationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -404,7 +404,7 @@ public interface CfnApplicationProps {
      */
     override
         fun applicationMaintenanceConfiguration(applicationMaintenanceConfiguration: IResolvable) {
-      cdkBuilder.applicationMaintenanceConfiguration(applicationMaintenanceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.applicationMaintenanceConfiguration(applicationMaintenanceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -413,7 +413,7 @@ public interface CfnApplicationProps {
      */
     override
         fun applicationMaintenanceConfiguration(applicationMaintenanceConfiguration: CfnApplication.ApplicationMaintenanceConfigurationProperty) {
-      cdkBuilder.applicationMaintenanceConfiguration(applicationMaintenanceConfiguration.let(CfnApplication.ApplicationMaintenanceConfigurationProperty::unwrap))
+      cdkBuilder.applicationMaintenanceConfiguration(applicationMaintenanceConfiguration.let(CfnApplication.ApplicationMaintenanceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -448,7 +448,7 @@ public interface CfnApplicationProps {
      * Flink application.
      */
     override fun runConfiguration(runConfiguration: IResolvable) {
-      cdkBuilder.runConfiguration(runConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.runConfiguration(runConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -456,7 +456,7 @@ public interface CfnApplicationProps {
      * Flink application.
      */
     override fun runConfiguration(runConfiguration: CfnApplication.RunConfigurationProperty) {
-      cdkBuilder.runConfiguration(runConfiguration.let(CfnApplication.RunConfigurationProperty::unwrap))
+      cdkBuilder.runConfiguration(runConfiguration.let(CfnApplication.RunConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -491,7 +491,7 @@ public interface CfnApplicationProps {
      * 50.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

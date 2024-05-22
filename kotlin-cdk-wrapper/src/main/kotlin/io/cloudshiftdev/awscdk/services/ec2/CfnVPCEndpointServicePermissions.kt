@@ -44,8 +44,8 @@ public open class CfnVPCEndpointServicePermissions(
     id: String,
     props: CfnVPCEndpointServicePermissionsProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnVPCEndpointServicePermissions(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVPCEndpointServicePermissionsProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnVPCEndpointServicePermissions(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVPCEndpointServicePermissionsProps.Companion::unwrap))
   )
 
   public constructor(
@@ -83,7 +83,7 @@ public open class CfnVPCEndpointServicePermissions(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

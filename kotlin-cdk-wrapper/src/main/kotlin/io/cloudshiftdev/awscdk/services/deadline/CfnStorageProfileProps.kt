@@ -126,7 +126,7 @@ public interface CfnStorageProfileProps {
      * location.
      */
     override fun fileSystemLocations(fileSystemLocations: IResolvable) {
-      cdkBuilder.fileSystemLocations(fileSystemLocations.let(IResolvable::unwrap))
+      cdkBuilder.fileSystemLocations(fileSystemLocations.let(IResolvable.Companion::unwrap))
     }
 
     /**

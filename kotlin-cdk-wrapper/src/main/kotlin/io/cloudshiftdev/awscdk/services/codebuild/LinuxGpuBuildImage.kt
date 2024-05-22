@@ -42,9 +42,9 @@ public open class LinuxGpuBuildImage(
     scope: Construct,
     project: IProject,
     options: BuildImageBindOptions,
-  ): BuildImageConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      project.let(IProject::unwrap),
-      options.let(BuildImageBindOptions::unwrap)).let(BuildImageConfig::wrap)
+  ): BuildImageConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      project.let(IProject.Companion::unwrap),
+      options.let(BuildImageBindOptions.Companion::unwrap)).let(BuildImageConfig::wrap)
 
   /**
    * Function that allows the build image access to the construct tree.
@@ -98,7 +98,7 @@ public open class LinuxGpuBuildImage(
    * @param buildEnvironment 
    */
   public override fun validate(buildEnvironment: BuildEnvironment): List<String> =
-      unwrap(this).validate(buildEnvironment.let(BuildEnvironment::unwrap))
+      unwrap(this).validate(buildEnvironment.let(BuildEnvironment.Companion::unwrap))
 
   /**
    * Allows the image a chance to validate whether the passed configuration is correct.
@@ -175,10 +175,10 @@ public open class LinuxGpuBuildImage(
         tag, account).let(IBuildImage::wrap)
 
     public fun fromEcrRepository(repository: IRepository): IBuildImage =
-        software.amazon.awscdk.services.codebuild.LinuxGpuBuildImage.fromEcrRepository(repository.let(IRepository::unwrap)).let(IBuildImage::wrap)
+        software.amazon.awscdk.services.codebuild.LinuxGpuBuildImage.fromEcrRepository(repository.let(IRepository.Companion::unwrap)).let(IBuildImage::wrap)
 
     public fun fromEcrRepository(repository: IRepository, tag: String): IBuildImage =
-        software.amazon.awscdk.services.codebuild.LinuxGpuBuildImage.fromEcrRepository(repository.let(IRepository::unwrap),
+        software.amazon.awscdk.services.codebuild.LinuxGpuBuildImage.fromEcrRepository(repository.let(IRepository.Companion::unwrap),
         tag).let(IBuildImage::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.LinuxGpuBuildImage):

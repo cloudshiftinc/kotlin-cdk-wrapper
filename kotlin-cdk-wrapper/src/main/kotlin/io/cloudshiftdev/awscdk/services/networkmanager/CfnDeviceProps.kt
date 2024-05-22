@@ -225,14 +225,14 @@ public interface CfnDeviceProps {
      * @param awsLocation The AWS location of the device.
      */
     override fun awsLocation(awsLocation: IResolvable) {
-      cdkBuilder.awsLocation(awsLocation.let(IResolvable::unwrap))
+      cdkBuilder.awsLocation(awsLocation.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param awsLocation The AWS location of the device.
      */
     override fun awsLocation(awsLocation: CfnDevice.AWSLocationProperty) {
-      cdkBuilder.awsLocation(awsLocation.let(CfnDevice.AWSLocationProperty::unwrap))
+      cdkBuilder.awsLocation(awsLocation.let(CfnDevice.AWSLocationProperty.Companion::unwrap))
     }
 
     /**
@@ -262,14 +262,14 @@ public interface CfnDeviceProps {
      * @param location The site location.
      */
     override fun location(location: IResolvable) {
-      cdkBuilder.location(location.let(IResolvable::unwrap))
+      cdkBuilder.location(location.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param location The site location.
      */
     override fun location(location: CfnDevice.LocationProperty) {
-      cdkBuilder.location(location.let(CfnDevice.LocationProperty::unwrap))
+      cdkBuilder.location(location.let(CfnDevice.LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -307,7 +307,7 @@ public interface CfnDeviceProps {
      * @param tags The tags for the device.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

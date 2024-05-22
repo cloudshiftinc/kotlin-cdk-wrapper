@@ -39,8 +39,8 @@ public open class CfnQueueInlinePolicy(
     id: String,
     props: CfnQueueInlinePolicyProps,
   ) :
-      this(software.amazon.awscdk.services.sqs.CfnQueueInlinePolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnQueueInlinePolicyProps::unwrap))
+      this(software.amazon.awscdk.services.sqs.CfnQueueInlinePolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnQueueInlinePolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -56,7 +56,7 @@ public open class CfnQueueInlinePolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

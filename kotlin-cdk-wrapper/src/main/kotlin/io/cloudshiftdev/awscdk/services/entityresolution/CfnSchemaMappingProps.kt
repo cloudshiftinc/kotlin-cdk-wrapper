@@ -142,7 +142,7 @@ public interface CfnSchemaMappingProps {
      * name plus additional information that AWS Entity Resolution uses for matching.
      */
     override fun mappedInputFields(mappedInputFields: IResolvable) {
-      cdkBuilder.mappedInputFields(mappedInputFields.let(IResolvable::unwrap))
+      cdkBuilder.mappedInputFields(mappedInputFields.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -174,7 +174,7 @@ public interface CfnSchemaMappingProps {
      * @param tags The tags used to organize, track, or control access for this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -1330,7 +1330,7 @@ public interface CfnReplicationGroupProps {
      * Default: `false`
      */
     override fun atRestEncryptionEnabled(atRestEncryptionEnabled: IResolvable) {
-      cdkBuilder.atRestEncryptionEnabled(atRestEncryptionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.atRestEncryptionEnabled(atRestEncryptionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1379,7 +1379,7 @@ public interface CfnReplicationGroupProps {
      * parameter is disabled for previous versions.
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1403,7 +1403,7 @@ public interface CfnReplicationGroupProps {
      * Default: false
      */
     override fun automaticFailoverEnabled(automaticFailoverEnabled: IResolvable) {
-      cdkBuilder.automaticFailoverEnabled(automaticFailoverEnabled.let(IResolvable::unwrap))
+      cdkBuilder.automaticFailoverEnabled(automaticFailoverEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1555,7 +1555,7 @@ public interface CfnReplicationGroupProps {
      * tiering](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html) .
      */
     override fun dataTieringEnabled(dataTieringEnabled: IResolvable) {
-      cdkBuilder.dataTieringEnabled(dataTieringEnabled.let(IResolvable::unwrap))
+      cdkBuilder.dataTieringEnabled(dataTieringEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1611,7 +1611,7 @@ public interface CfnReplicationGroupProps {
      * @param logDeliveryConfigurations Specifies the destination, format and type of the logs.
      */
     override fun logDeliveryConfigurations(logDeliveryConfigurations: IResolvable) {
-      cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1644,7 +1644,7 @@ public interface CfnReplicationGroupProps {
      * Multi-AZ](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/AutoFailover.html) .
      */
     override fun multiAzEnabled(multiAzEnabled: IResolvable) {
-      cdkBuilder.multiAzEnabled(multiAzEnabled.let(IResolvable::unwrap))
+      cdkBuilder.multiAzEnabled(multiAzEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1670,7 +1670,7 @@ public interface CfnReplicationGroupProps {
      * .
      */
     override fun nodeGroupConfiguration(nodeGroupConfiguration: IResolvable) {
-      cdkBuilder.nodeGroupConfiguration(nodeGroupConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.nodeGroupConfiguration(nodeGroupConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1950,7 +1950,7 @@ public interface CfnReplicationGroupProps {
      * , Value= `mySecondKeyValue` . Tags on replication groups will be replicated to all nodes.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -2008,7 +2008,7 @@ public interface CfnReplicationGroupProps {
      * , and a `CacheSubnetGroup` .
      */
     override fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable) {
-      cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**

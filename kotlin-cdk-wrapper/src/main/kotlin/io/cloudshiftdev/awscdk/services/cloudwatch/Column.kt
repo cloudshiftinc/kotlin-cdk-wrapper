@@ -24,7 +24,7 @@ public open class Column(
   cdkObject: software.amazon.awscdk.services.cloudwatch.Column,
 ) : CdkObject(cdkObject), IWidget {
   public constructor(widgets: IWidget) :
-      this(software.amazon.awscdk.services.cloudwatch.Column(widgets.let(IWidget::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.Column(widgets.let(IWidget.Companion::unwrap))
   )
 
   /**
@@ -33,7 +33,7 @@ public open class Column(
    * @param w 
    */
   public open fun addWidget(w: IWidget) {
-    unwrap(this).addWidget(w.let(IWidget::unwrap))
+    unwrap(this).addWidget(w.let(IWidget.Companion::unwrap))
   }
 
   /**

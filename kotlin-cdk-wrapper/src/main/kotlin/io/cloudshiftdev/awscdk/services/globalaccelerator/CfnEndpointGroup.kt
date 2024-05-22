@@ -64,8 +64,8 @@ public open class CfnEndpointGroup(
     id: String,
     props: CfnEndpointGroupProps,
   ) :
-      this(software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEndpointGroupProps::unwrap))
+      this(software.amazon.awscdk.services.globalaccelerator.CfnEndpointGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEndpointGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -91,7 +91,7 @@ public open class CfnEndpointGroup(
    * The list of endpoint objects.
    */
   public open fun endpointConfigurations(`value`: IResolvable) {
-    unwrap(this).setEndpointConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEndpointConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -180,7 +180,7 @@ public open class CfnEndpointGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -204,7 +204,7 @@ public open class CfnEndpointGroup(
    * Allows you to override the destination ports used to route traffic to an endpoint.
    */
   public open fun portOverrides(`value`: IResolvable) {
-    unwrap(this).setPortOverrides(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPortOverrides(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -434,7 +434,7 @@ public open class CfnEndpointGroup(
      * @param endpointConfigurations The list of endpoint objects. 
      */
     override fun endpointConfigurations(endpointConfigurations: IResolvable) {
-      cdkBuilder.endpointConfigurations(endpointConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.endpointConfigurations(endpointConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -553,7 +553,7 @@ public open class CfnEndpointGroup(
      * endpoint. 
      */
     override fun portOverrides(portOverrides: IResolvable) {
-      cdkBuilder.portOverrides(portOverrides.let(IResolvable::unwrap))
+      cdkBuilder.portOverrides(portOverrides.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -843,7 +843,7 @@ public open class CfnEndpointGroup(
        * in the *AWS Global Accelerator Developer Guide* .
        */
       override fun clientIpPreservationEnabled(clientIpPreservationEnabled: IResolvable) {
-        cdkBuilder.clientIpPreservationEnabled(clientIpPreservationEnabled.let(IResolvable::unwrap))
+        cdkBuilder.clientIpPreservationEnabled(clientIpPreservationEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**

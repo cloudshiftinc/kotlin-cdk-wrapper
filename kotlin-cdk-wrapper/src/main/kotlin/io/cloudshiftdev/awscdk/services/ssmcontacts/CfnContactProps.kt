@@ -149,7 +149,7 @@ public interface CfnContactProps {
      * escalation plan uses stages that contact specified contacts.
      */
     override fun plan(plan: IResolvable) {
-      cdkBuilder.plan(plan.let(IResolvable::unwrap))
+      cdkBuilder.plan(plan.let(IResolvable.Companion::unwrap))
     }
 
     /**

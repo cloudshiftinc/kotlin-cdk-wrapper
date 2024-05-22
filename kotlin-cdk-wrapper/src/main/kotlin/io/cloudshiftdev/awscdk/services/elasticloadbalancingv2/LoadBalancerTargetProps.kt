@@ -72,7 +72,7 @@ public interface LoadBalancerTargetProps {
      * @param targetType What kind of target this is. 
      */
     override fun targetType(targetType: TargetType) {
-      cdkBuilder.targetType(targetType.let(TargetType::unwrap))
+      cdkBuilder.targetType(targetType.let(TargetType.Companion::unwrap))
     }
 
     public fun build():

@@ -50,7 +50,7 @@ public open class CliCredentialsStackSynthesizer(
   )
 
   public constructor(props: CliCredentialsStackSynthesizerProps) :
-      this(software.amazon.awscdk.CliCredentialsStackSynthesizer(props.let(CliCredentialsStackSynthesizerProps::unwrap))
+      this(software.amazon.awscdk.CliCredentialsStackSynthesizer(props.let(CliCredentialsStackSynthesizerProps.Companion::unwrap))
   )
 
   public constructor(props: CliCredentialsStackSynthesizerProps.Builder.() -> Unit) :
@@ -71,7 +71,7 @@ public open class CliCredentialsStackSynthesizer(
    * @param asset 
    */
   public override fun addDockerImageAsset(asset: DockerImageAssetSource): DockerImageAssetLocation =
-      unwrap(this).addDockerImageAsset(asset.let(DockerImageAssetSource::unwrap)).let(DockerImageAssetLocation::wrap)
+      unwrap(this).addDockerImageAsset(asset.let(DockerImageAssetSource.Companion::unwrap)).let(DockerImageAssetLocation::wrap)
 
   /**
    * Register a Docker Image Asset.
@@ -105,7 +105,7 @@ public open class CliCredentialsStackSynthesizer(
    * @param asset 
    */
   public override fun addFileAsset(asset: FileAssetSource): FileAssetLocation =
-      unwrap(this).addFileAsset(asset.let(FileAssetSource::unwrap)).let(FileAssetLocation::wrap)
+      unwrap(this).addFileAsset(asset.let(FileAssetSource.Companion::unwrap)).let(FileAssetLocation::wrap)
 
   /**
    * Register a File Asset.
@@ -133,7 +133,7 @@ public open class CliCredentialsStackSynthesizer(
    * @param stack 
    */
   public override fun bind(stack: Stack) {
-    unwrap(this).bind(stack.let(Stack::unwrap))
+    unwrap(this).bind(stack.let(Stack.Companion::unwrap))
   }
 
   /**
@@ -149,7 +149,7 @@ public open class CliCredentialsStackSynthesizer(
    * @param stack 
    */
   public override fun reusableBind(stack: Stack): IBoundStackSynthesizer =
-      unwrap(this).reusableBind(stack.let(Stack::unwrap)).let(IBoundStackSynthesizer::wrap)
+      unwrap(this).reusableBind(stack.let(Stack.Companion::unwrap)).let(IBoundStackSynthesizer::wrap)
 
   /**
    * Synthesize the associated stack to the session.
@@ -157,7 +157,7 @@ public open class CliCredentialsStackSynthesizer(
    * @param session 
    */
   public override fun synthesize(session: ISynthesisSession) {
-    unwrap(this).synthesize(session.let(ISynthesisSession::unwrap))
+    unwrap(this).synthesize(session.let(ISynthesisSession.Companion::unwrap))
   }
 
   /**

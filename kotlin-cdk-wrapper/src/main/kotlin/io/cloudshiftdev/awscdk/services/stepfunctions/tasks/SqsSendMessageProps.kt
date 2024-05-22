@@ -233,7 +233,7 @@ public interface SqsSendMessageProps : TaskStateBaseProps {
      * This enables cross-account resource invocations.
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -252,7 +252,7 @@ public interface SqsSendMessageProps : TaskStateBaseProps {
      * of the delay period. The maximum allowed delay is 15 minutes.
      */
     override fun delay(delay: Duration) {
-      cdkBuilder.delay(delay.let(Duration::unwrap))
+      cdkBuilder.delay(delay.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -261,7 +261,7 @@ public interface SqsSendMessageProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -270,7 +270,7 @@ public interface SqsSendMessageProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -291,14 +291,14 @@ public interface SqsSendMessageProps : TaskStateBaseProps {
      * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
      * @param messageBody The text message to send to the queue. 
      */
     override fun messageBody(messageBody: TaskInput) {
-      cdkBuilder.messageBody(messageBody.let(TaskInput::unwrap))
+      cdkBuilder.messageBody(messageBody.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -334,7 +334,7 @@ public interface SqsSendMessageProps : TaskStateBaseProps {
      * @param queue The SQS queue that messages will be sent to. 
      */
     override fun queue(queue: IQueue) {
-      cdkBuilder.queue(queue.let(IQueue::unwrap))
+      cdkBuilder.queue(queue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -369,7 +369,7 @@ public interface SqsSendMessageProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -378,7 +378,7 @@ public interface SqsSendMessageProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.SqsSendMessageProps =

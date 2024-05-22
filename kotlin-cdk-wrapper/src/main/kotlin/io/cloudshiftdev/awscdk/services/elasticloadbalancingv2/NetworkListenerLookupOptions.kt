@@ -76,7 +76,7 @@ public interface NetworkListenerLookupOptions : BaseListenerLookupOptions {
      * @param listenerProtocol Protocol of the listener port.
      */
     override fun listenerProtocol(listenerProtocol: Protocol) {
-      cdkBuilder.listenerProtocol(listenerProtocol.let(Protocol::unwrap))
+      cdkBuilder.listenerProtocol(listenerProtocol.let(Protocol.Companion::unwrap))
     }
 
     /**

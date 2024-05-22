@@ -91,8 +91,8 @@ public open class CfnContainerRecipe(
     id: String,
     props: CfnContainerRecipeProps,
   ) :
-      this(software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnContainerRecipeProps::unwrap))
+      this(software.amazon.awscdk.services.imagebuilder.CfnContainerRecipe(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnContainerRecipeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -124,7 +124,7 @@ public open class CfnContainerRecipe(
    * Build and test components that are included in the container recipe.
    */
   public open fun components(`value`: IResolvable) {
-    unwrap(this).setComponents(`value`.let(IResolvable::unwrap))
+    unwrap(this).setComponents(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -207,7 +207,7 @@ public open class CfnContainerRecipe(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -221,7 +221,7 @@ public open class CfnContainerRecipe(
    * images.
    */
   public open fun instanceConfiguration(`value`: IResolvable) {
-    unwrap(this).setInstanceConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInstanceConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -229,7 +229,7 @@ public open class CfnContainerRecipe(
    * images.
    */
   public open fun instanceConfiguration(`value`: InstanceConfigurationProperty) {
-    unwrap(this).setInstanceConfiguration(`value`.let(InstanceConfigurationProperty::unwrap))
+    unwrap(this).setInstanceConfiguration(`value`.let(InstanceConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -317,14 +317,14 @@ public open class CfnContainerRecipe(
    * The destination repository for the container image.
    */
   public open fun targetRepository(`value`: IResolvable) {
-    unwrap(this).setTargetRepository(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTargetRepository(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The destination repository for the container image.
    */
   public open fun targetRepository(`value`: TargetContainerRepositoryProperty) {
-    unwrap(this).setTargetRepository(`value`.let(TargetContainerRepositoryProperty::unwrap))
+    unwrap(this).setTargetRepository(`value`.let(TargetContainerRepositoryProperty.Companion::unwrap))
   }
 
   /**
@@ -599,7 +599,7 @@ public open class CfnContainerRecipe(
      * @param components Build and test components that are included in the container recipe. 
      */
     override fun components(components: IResolvable) {
-      cdkBuilder.components(components.let(IResolvable::unwrap))
+      cdkBuilder.components(components.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -692,7 +692,7 @@ public open class CfnContainerRecipe(
      * building and testing container images. 
      */
     override fun instanceConfiguration(instanceConfiguration: IResolvable) {
-      cdkBuilder.instanceConfiguration(instanceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.instanceConfiguration(instanceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -704,7 +704,7 @@ public open class CfnContainerRecipe(
      * building and testing container images. 
      */
     override fun instanceConfiguration(instanceConfiguration: InstanceConfigurationProperty) {
-      cdkBuilder.instanceConfiguration(instanceConfiguration.let(InstanceConfigurationProperty::unwrap))
+      cdkBuilder.instanceConfiguration(instanceConfiguration.let(InstanceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -781,7 +781,7 @@ public open class CfnContainerRecipe(
      * @param targetRepository The destination repository for the container image. 
      */
     override fun targetRepository(targetRepository: IResolvable) {
-      cdkBuilder.targetRepository(targetRepository.let(IResolvable::unwrap))
+      cdkBuilder.targetRepository(targetRepository.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -791,7 +791,7 @@ public open class CfnContainerRecipe(
      * @param targetRepository The destination repository for the container image. 
      */
     override fun targetRepository(targetRepository: TargetContainerRepositoryProperty) {
-      cdkBuilder.targetRepository(targetRepository.let(TargetContainerRepositoryProperty::unwrap))
+      cdkBuilder.targetRepository(targetRepository.let(TargetContainerRepositoryProperty.Companion::unwrap))
     }
 
     /**
@@ -953,7 +953,7 @@ public open class CfnContainerRecipe(
        * component for a specific recipe.
        */
       override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1286,7 +1286,7 @@ public open class CfnContainerRecipe(
        * @param deleteOnTermination Use to configure delete on termination of the associated device.
        */
       override fun deleteOnTermination(deleteOnTermination: IResolvable) {
-        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
+        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1300,7 +1300,7 @@ public open class CfnContainerRecipe(
        * @param encrypted Use to configure device encryption.
        */
       override fun encrypted(encrypted: IResolvable) {
-        cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
+        cdkBuilder.encrypted(encrypted.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1543,14 +1543,14 @@ public open class CfnContainerRecipe(
        * @param ebs Use to manage Amazon EBS-specific configuration for this mapping.
        */
       override fun ebs(ebs: IResolvable) {
-        cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
+        cdkBuilder.ebs(ebs.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param ebs Use to manage Amazon EBS-specific configuration for this mapping.
        */
       override fun ebs(ebs: EbsInstanceBlockDeviceSpecificationProperty) {
-        cdkBuilder.ebs(ebs.let(EbsInstanceBlockDeviceSpecificationProperty::unwrap))
+        cdkBuilder.ebs(ebs.let(EbsInstanceBlockDeviceSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -1722,7 +1722,7 @@ public open class CfnContainerRecipe(
        * from this Image Builder AMI.
        */
       override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
-        cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable::unwrap))
+        cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**

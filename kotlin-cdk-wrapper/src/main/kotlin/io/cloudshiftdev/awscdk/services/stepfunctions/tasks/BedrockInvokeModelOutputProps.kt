@@ -75,7 +75,7 @@ public interface BedrockInvokeModelOutputProps {
      * a reference to the Amazon S3 location of the original output.
      */
     override fun s3Location(s3Location: Location) {
-      cdkBuilder.s3Location(s3Location.let(Location::unwrap))
+      cdkBuilder.s3Location(s3Location.let(Location.Companion::unwrap))
     }
 
     /**

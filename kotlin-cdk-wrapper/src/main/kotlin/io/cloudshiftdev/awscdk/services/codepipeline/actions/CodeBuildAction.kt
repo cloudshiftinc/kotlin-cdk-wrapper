@@ -70,7 +70,7 @@ public open class CodeBuildAction(
   cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeBuildAction,
 ) : Action(cdkObject) {
   public constructor(props: CodeBuildActionProps) :
-      this(software.amazon.awscdk.services.codepipeline.actions.CodeBuildAction(props.let(CodeBuildActionProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.actions.CodeBuildAction(props.let(CodeBuildActionProps.Companion::unwrap))
   )
 
   public constructor(props: CodeBuildActionProps.Builder.() -> Unit) :
@@ -373,7 +373,7 @@ public open class CodeBuildAction(
      * @param extraInputs The list of additional input Artifacts for this action. 
      */
     override fun extraInputs(extraInputs: List<Artifact>) {
-      cdkBuilder.extraInputs(extraInputs.map(Artifact::unwrap))
+      cdkBuilder.extraInputs(extraInputs.map(Artifact.Companion::unwrap))
     }
 
     /**
@@ -397,7 +397,7 @@ public open class CodeBuildAction(
      * @param input The source to use as input for this action. 
      */
     override fun input(input: Artifact) {
-      cdkBuilder.input(input.let(Artifact::unwrap))
+      cdkBuilder.input(input.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -414,7 +414,7 @@ public open class CodeBuildAction(
      * @param outputs The list of output Artifacts for this action. 
      */
     override fun outputs(outputs: List<Artifact>) {
-      cdkBuilder.outputs(outputs.map(Artifact::unwrap))
+      cdkBuilder.outputs(outputs.map(Artifact.Companion::unwrap))
     }
 
     /**
@@ -438,7 +438,7 @@ public open class CodeBuildAction(
      * @param project The action's Project. 
      */
     override fun project(project: IProject) {
-      cdkBuilder.project(project.let(IProject::unwrap))
+      cdkBuilder.project(project.let(IProject.Companion::unwrap))
     }
 
     /**
@@ -455,7 +455,7 @@ public open class CodeBuildAction(
      * @param role The Role in which context's this Action will be executing in. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -481,7 +481,7 @@ public open class CodeBuildAction(
      * Test. 
      */
     override fun type(type: CodeBuildActionType) {
-      cdkBuilder.type(type.let(CodeBuildActionType::unwrap))
+      cdkBuilder.type(type.let(CodeBuildActionType.Companion::unwrap))
     }
 
     /**

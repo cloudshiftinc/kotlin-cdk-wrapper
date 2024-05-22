@@ -33,8 +33,8 @@ public open class S3EventSourceV2(
   cdkObject: software.amazon.awscdk.services.lambda.eventsources.S3EventSourceV2,
 ) : CdkObject(cdkObject), IEventSource {
   public constructor(bucket: CloudshiftdevAwscdkServicesS3IBucket, props: S3EventSourceProps) :
-      this(software.amazon.awscdk.services.lambda.eventsources.S3EventSourceV2(bucket.let(CloudshiftdevAwscdkServicesS3IBucket::unwrap),
-      props.let(S3EventSourceProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.eventsources.S3EventSourceV2(bucket.let(CloudshiftdevAwscdkServicesS3IBucket.Companion::unwrap),
+      props.let(S3EventSourceProps.Companion::unwrap))
   )
 
   public constructor(bucket: CloudshiftdevAwscdkServicesS3IBucket,
@@ -47,7 +47,7 @@ public open class S3EventSourceV2(
    * @param target 
    */
   public override fun bind(target: IFunction) {
-    unwrap(this).bind(target.let(IFunction::unwrap))
+    unwrap(this).bind(target.let(IFunction.Companion::unwrap))
   }
 
   /**
@@ -105,7 +105,7 @@ public open class S3EventSourceV2(
      * @param events The s3 event types that will trigger the notification. 
      */
     override fun events(events: List<EventType>) {
-      cdkBuilder.events(events.map(EventType::unwrap))
+      cdkBuilder.events(events.map(EventType.Companion::unwrap))
     }
 
     /**
@@ -125,7 +125,7 @@ public open class S3EventSourceV2(
      * @param filters S3 object key filter rules to determine which objects trigger this event. 
      */
     override fun filters(filters: List<NotificationKeyFilter>) {
-      cdkBuilder.filters(filters.map(NotificationKeyFilter::unwrap))
+      cdkBuilder.filters(filters.map(NotificationKeyFilter.Companion::unwrap))
     }
 
     /**

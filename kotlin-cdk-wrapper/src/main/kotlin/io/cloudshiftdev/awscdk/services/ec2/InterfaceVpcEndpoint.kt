@@ -38,8 +38,8 @@ public open class InterfaceVpcEndpoint(
     id: String,
     props: InterfaceVpcEndpointProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(InterfaceVpcEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(InterfaceVpcEndpointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -253,7 +253,7 @@ public open class InterfaceVpcEndpoint(
      * @param securityGroups The security groups to associate with this interface VPC endpoint. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -272,7 +272,7 @@ public open class InterfaceVpcEndpoint(
      * @param service The service to use for this interface VPC endpoint. 
      */
     override fun service(service: IInterfaceVpcEndpointService) {
-      cdkBuilder.service(service.let(IInterfaceVpcEndpointService::unwrap))
+      cdkBuilder.service(service.let(IInterfaceVpcEndpointService.Companion::unwrap))
     }
 
     /**
@@ -286,7 +286,7 @@ public open class InterfaceVpcEndpoint(
      * @param subnets The subnets in which to create an endpoint network interface. 
      */
     override fun subnets(subnets: SubnetSelection) {
-      cdkBuilder.subnets(subnets.let(SubnetSelection::unwrap))
+      cdkBuilder.subnets(subnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -310,7 +310,7 @@ public open class InterfaceVpcEndpoint(
      * @param vpc The VPC network in which the interface endpoint will be used. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint =
@@ -323,8 +323,9 @@ public open class InterfaceVpcEndpoint(
       id: String,
       attrs: InterfaceVpcEndpointAttributes,
     ): IInterfaceVpcEndpoint =
-        software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint.fromInterfaceVpcEndpointAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(InterfaceVpcEndpointAttributes::unwrap)).let(IInterfaceVpcEndpoint::wrap)
+        software.amazon.awscdk.services.ec2.InterfaceVpcEndpoint.fromInterfaceVpcEndpointAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        attrs.let(InterfaceVpcEndpointAttributes.Companion::unwrap)).let(IInterfaceVpcEndpoint::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("043f62487a2a59022231e31cd1d63b4fdc03fcd7d42e156db33883fa2f60c551")

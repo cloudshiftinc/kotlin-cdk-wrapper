@@ -68,7 +68,7 @@ public interface WebSocketRouteIntegrationBindOptions {
      * @param route The route to which this is being bound. 
      */
     override fun route(route: IWebSocketRoute) {
-      cdkBuilder.route(route.let(IWebSocketRoute::unwrap))
+      cdkBuilder.route(route.let(IWebSocketRoute.Companion::unwrap))
     }
 
     /**
@@ -77,7 +77,7 @@ public interface WebSocketRouteIntegrationBindOptions {
      * this will be used as their parent scope.
      */
     override fun scope(scope: Construct) {
-      cdkBuilder.scope(scope.let(Construct::unwrap))
+      cdkBuilder.scope(scope.let(Construct.Companion::unwrap))
     }
 
     public fun build():

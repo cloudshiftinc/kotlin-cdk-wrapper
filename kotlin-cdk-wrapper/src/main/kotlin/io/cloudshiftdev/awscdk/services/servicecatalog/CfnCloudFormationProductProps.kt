@@ -370,7 +370,7 @@ public interface CfnCloudFormationProductProps {
      * known as a version).
      */
     override fun provisioningArtifactParameters(provisioningArtifactParameters: IResolvable) {
-      cdkBuilder.provisioningArtifactParameters(provisioningArtifactParameters.let(IResolvable::unwrap))
+      cdkBuilder.provisioningArtifactParameters(provisioningArtifactParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -417,7 +417,7 @@ public interface CfnCloudFormationProductProps {
      * the product or provisioning artifacts.
      */
     override fun replaceProvisioningArtifacts(replaceProvisioningArtifacts: IResolvable) {
-      cdkBuilder.replaceProvisioningArtifacts(replaceProvisioningArtifacts.let(IResolvable::unwrap))
+      cdkBuilder.replaceProvisioningArtifacts(replaceProvisioningArtifacts.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -428,7 +428,7 @@ public interface CfnCloudFormationProductProps {
      * fields as the `ConnectionParameters` request, with the addition of the `LastSync` response.
      */
     override fun sourceConnection(sourceConnection: IResolvable) {
-      cdkBuilder.sourceConnection(sourceConnection.let(IResolvable::unwrap))
+      cdkBuilder.sourceConnection(sourceConnection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -440,7 +440,7 @@ public interface CfnCloudFormationProductProps {
      */
     override
         fun sourceConnection(sourceConnection: CfnCloudFormationProduct.SourceConnectionProperty) {
-      cdkBuilder.sourceConnection(sourceConnection.let(CfnCloudFormationProduct.SourceConnectionProperty::unwrap))
+      cdkBuilder.sourceConnection(sourceConnection.let(CfnCloudFormationProduct.SourceConnectionProperty.Companion::unwrap))
     }
 
     /**
@@ -482,7 +482,7 @@ public interface CfnCloudFormationProductProps {
      * @param tags One or more tags.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

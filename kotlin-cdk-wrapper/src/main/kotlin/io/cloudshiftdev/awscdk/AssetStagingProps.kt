@@ -174,7 +174,7 @@ public interface AssetStagingProps : FingerprintOptions, AssetOptions {
      * `AssetHashType.CUSTOM`.
      */
     override fun assetHashType(assetHashType: AssetHashType) {
-      cdkBuilder.assetHashType(assetHashType.let(AssetHashType::unwrap))
+      cdkBuilder.assetHashType(assetHashType.let(AssetHashType.Companion::unwrap))
     }
 
     /**
@@ -186,7 +186,7 @@ public interface AssetStagingProps : FingerprintOptions, AssetOptions {
      * final asset.
      */
     override fun bundling(bundling: BundlingOptions) {
-      cdkBuilder.bundling(bundling.let(BundlingOptions::unwrap))
+      cdkBuilder.bundling(bundling.let(BundlingOptions.Companion::unwrap))
     }
 
     /**
@@ -230,14 +230,14 @@ public interface AssetStagingProps : FingerprintOptions, AssetOptions {
      * @param follow A strategy for how to handle symlinks.
      */
     override fun follow(follow: SymlinkFollowMode) {
-      cdkBuilder.follow(follow.let(SymlinkFollowMode::unwrap))
+      cdkBuilder.follow(follow.let(SymlinkFollowMode.Companion::unwrap))
     }
 
     /**
      * @param ignoreMode The ignore behavior to use for `exclude` patterns.
      */
     override fun ignoreMode(ignoreMode: IgnoreMode) {
-      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode::unwrap))
+      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode.Companion::unwrap))
     }
 
     /**

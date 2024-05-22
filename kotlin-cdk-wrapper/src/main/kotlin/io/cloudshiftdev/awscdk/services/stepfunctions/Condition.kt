@@ -48,7 +48,7 @@ public abstract class Condition(
 
   public companion object {
     public fun and(conditions: Condition): Condition =
-        software.amazon.awscdk.services.stepfunctions.Condition.and(conditions.let(Condition::unwrap)).let(Condition::wrap)
+        software.amazon.awscdk.services.stepfunctions.Condition.and(conditions.let(Condition.Companion::unwrap)).let(Condition::wrap)
 
     public fun booleanEquals(variable: String, `value`: Boolean): Condition =
         software.amazon.awscdk.services.stepfunctions.Condition.booleanEquals(variable,
@@ -95,7 +95,7 @@ public abstract class Condition(
         software.amazon.awscdk.services.stepfunctions.Condition.isTimestamp(variable).let(Condition::wrap)
 
     public fun not(condition: Condition): Condition =
-        software.amazon.awscdk.services.stepfunctions.Condition.not(condition.let(Condition::unwrap)).let(Condition::wrap)
+        software.amazon.awscdk.services.stepfunctions.Condition.not(condition.let(Condition.Companion::unwrap)).let(Condition::wrap)
 
     public fun numberEquals(variable: String, `value`: Number): Condition =
         software.amazon.awscdk.services.stepfunctions.Condition.numberEquals(variable,
@@ -138,7 +138,7 @@ public abstract class Condition(
         `value`).let(Condition::wrap)
 
     public fun or(conditions: Condition): Condition =
-        software.amazon.awscdk.services.stepfunctions.Condition.or(conditions.let(Condition::unwrap)).let(Condition::wrap)
+        software.amazon.awscdk.services.stepfunctions.Condition.or(conditions.let(Condition.Companion::unwrap)).let(Condition::wrap)
 
     public fun stringEquals(variable: String, `value`: String): Condition =
         software.amazon.awscdk.services.stepfunctions.Condition.stringEquals(variable,

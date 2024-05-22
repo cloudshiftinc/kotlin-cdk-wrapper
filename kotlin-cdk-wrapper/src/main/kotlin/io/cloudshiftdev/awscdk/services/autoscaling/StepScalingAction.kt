@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -48,8 +49,8 @@ public open class StepScalingAction(
     id: String,
     props: StepScalingActionProps,
   ) :
-      this(software.amazon.awscdk.services.autoscaling.StepScalingAction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(StepScalingActionProps::unwrap))
+      this(software.amazon.awscdk.services.autoscaling.StepScalingAction(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(StepScalingActionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -65,7 +66,7 @@ public open class StepScalingAction(
    * @param adjustment 
    */
   public open fun addAdjustment(adjustment: AdjustmentTier) {
-    unwrap(this).addAdjustment(adjustment.let(AdjustmentTier::unwrap))
+    unwrap(this).addAdjustment(adjustment.let(AdjustmentTier.Companion::unwrap))
   }
 
   /**
@@ -105,12 +106,14 @@ public open class StepScalingAction(
     public fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup)
 
     /**
-     * Period after a scaling completes before another scaling activity can start.
+     * (deprecated) Period after a scaling completes before another scaling activity can start.
      *
      * Default: The default cooldown configured on the AutoScalingGroup
      *
+     * @deprecated cooldown is not valid with step scaling action
      * @param cooldown Period after a scaling completes before another scaling activity can start. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun cooldown(cooldown: Duration)
 
     /**
@@ -161,7 +164,7 @@ public open class StepScalingAction(
      * @param adjustmentType How the adjustment numbers are interpreted. 
      */
     override fun adjustmentType(adjustmentType: AdjustmentType) {
-      cdkBuilder.adjustmentType(adjustmentType.let(AdjustmentType::unwrap))
+      cdkBuilder.adjustmentType(adjustmentType.let(AdjustmentType.Companion::unwrap))
     }
 
     /**
@@ -170,18 +173,20 @@ public open class StepScalingAction(
      * @param autoScalingGroup The auto scaling group. 
      */
     override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
-      cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup::unwrap))
+      cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup.Companion::unwrap))
     }
 
     /**
-     * Period after a scaling completes before another scaling activity can start.
+     * (deprecated) Period after a scaling completes before another scaling activity can start.
      *
      * Default: The default cooldown configured on the AutoScalingGroup
      *
+     * @deprecated cooldown is not valid with step scaling action
      * @param cooldown Period after a scaling completes before another scaling activity can start. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun cooldown(cooldown: Duration) {
-      cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
+      cdkBuilder.cooldown(cooldown.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -193,7 +198,7 @@ public open class StepScalingAction(
      * metrics to CloudWatch. 
      */
     override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
-      cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup.let(Duration::unwrap))
+      cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -204,7 +209,7 @@ public open class StepScalingAction(
      * @param metricAggregationType The aggregation type for the CloudWatch metrics. 
      */
     override fun metricAggregationType(metricAggregationType: MetricAggregationType) {
-      cdkBuilder.metricAggregationType(metricAggregationType.let(MetricAggregationType::unwrap))
+      cdkBuilder.metricAggregationType(metricAggregationType.let(MetricAggregationType.Companion::unwrap))
     }
 
     /**

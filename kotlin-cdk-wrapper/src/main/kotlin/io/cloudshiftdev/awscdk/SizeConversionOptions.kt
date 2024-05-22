@@ -45,7 +45,7 @@ public interface SizeConversionOptions {
      * @param rounding How conversions should behave when it encounters a non-integer result.
      */
     override fun rounding(rounding: SizeRoundingBehavior) {
-      cdkBuilder.rounding(rounding.let(SizeRoundingBehavior::unwrap))
+      cdkBuilder.rounding(rounding.let(SizeRoundingBehavior.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.SizeConversionOptions = cdkBuilder.build()

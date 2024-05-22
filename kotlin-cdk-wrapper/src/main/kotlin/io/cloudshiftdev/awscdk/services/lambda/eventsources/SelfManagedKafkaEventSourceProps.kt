@@ -238,7 +238,7 @@ public interface SelfManagedKafkaEventSourceProps : KafkaEventSourceProps {
      * @param authenticationMethod The authentication method for your Kafka cluster.
      */
     override fun authenticationMethod(authenticationMethod: AuthenticationMethod) {
-      cdkBuilder.authenticationMethod(authenticationMethod.let(AuthenticationMethod::unwrap))
+      cdkBuilder.authenticationMethod(authenticationMethod.let(AuthenticationMethod.Companion::unwrap))
     }
 
     /**
@@ -314,7 +314,7 @@ public interface SelfManagedKafkaEventSourceProps : KafkaEventSourceProps {
      * Maximum of Duration.minutes(5).
      */
     override fun maxBatchingWindow(maxBatchingWindow: Duration) {
-      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration::unwrap))
+      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -322,7 +322,7 @@ public interface SelfManagedKafkaEventSourceProps : KafkaEventSourceProps {
      * SNS/SQS/S3 are supported
      */
     override fun onFailure(onFailure: IEventSourceDlq) {
-      cdkBuilder.onFailure(onFailure.let(IEventSourceDlq::unwrap))
+      cdkBuilder.onFailure(onFailure.let(IEventSourceDlq.Companion::unwrap))
     }
 
     /**
@@ -331,7 +331,7 @@ public interface SelfManagedKafkaEventSourceProps : KafkaEventSourceProps {
      * private CA.
      */
     override fun rootCaCertificate(rootCaCertificate: ISecret) {
-      cdkBuilder.rootCaCertificate(rootCaCertificate.let(ISecret::unwrap))
+      cdkBuilder.rootCaCertificate(rootCaCertificate.let(ISecret.Companion::unwrap))
     }
 
     /**
@@ -340,7 +340,7 @@ public interface SelfManagedKafkaEventSourceProps : KafkaEventSourceProps {
      * is required if your Kafka brokers are accessed over the Internet.
      */
     override fun secret(secret: ISecret) {
-      cdkBuilder.secret(secret.let(ISecret::unwrap))
+      cdkBuilder.secret(secret.let(ISecret.Companion::unwrap))
     }
 
     /**
@@ -348,14 +348,14 @@ public interface SelfManagedKafkaEventSourceProps : KafkaEventSourceProps {
      * group here.
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
      * @param startingPosition Where to begin consuming the stream. 
      */
     override fun startingPosition(startingPosition: StartingPosition) {
-      cdkBuilder.startingPosition(startingPosition.let(StartingPosition::unwrap))
+      cdkBuilder.startingPosition(startingPosition.let(StartingPosition.Companion::unwrap))
     }
 
     /**
@@ -369,7 +369,7 @@ public interface SelfManagedKafkaEventSourceProps : KafkaEventSourceProps {
      * @param vpc If your Kafka brokers are only reachable via VPC provide the VPC here.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -377,7 +377,7 @@ public interface SelfManagedKafkaEventSourceProps : KafkaEventSourceProps {
      * selection here.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

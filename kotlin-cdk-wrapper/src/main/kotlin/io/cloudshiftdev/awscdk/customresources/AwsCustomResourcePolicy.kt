@@ -50,7 +50,7 @@ public open class AwsCustomResourcePolicy(
         software.amazon.awscdk.customresources.AwsCustomResourcePolicy.ANY_RESOURCE
 
     public fun fromSdkCalls(options: SdkCallsPolicyOptions): AwsCustomResourcePolicy =
-        software.amazon.awscdk.customresources.AwsCustomResourcePolicy.fromSdkCalls(options.let(SdkCallsPolicyOptions::unwrap)).let(AwsCustomResourcePolicy::wrap)
+        software.amazon.awscdk.customresources.AwsCustomResourcePolicy.fromSdkCalls(options.let(SdkCallsPolicyOptions.Companion::unwrap)).let(AwsCustomResourcePolicy::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0941a10126c1569cb9626dfcc4e5dff6b1db29239307e7105ea475cbb57b3db3")
@@ -58,7 +58,7 @@ public open class AwsCustomResourcePolicy(
         AwsCustomResourcePolicy = fromSdkCalls(SdkCallsPolicyOptions(options))
 
     public fun fromStatements(statements: List<PolicyStatement>): AwsCustomResourcePolicy =
-        software.amazon.awscdk.customresources.AwsCustomResourcePolicy.fromStatements(statements.map(PolicyStatement::unwrap)).let(AwsCustomResourcePolicy::wrap)
+        software.amazon.awscdk.customresources.AwsCustomResourcePolicy.fromStatements(statements.map(PolicyStatement.Companion::unwrap)).let(AwsCustomResourcePolicy::wrap)
 
     public fun fromStatements(vararg statements: PolicyStatement): AwsCustomResourcePolicy =
         fromStatements(statements.toList())

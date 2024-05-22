@@ -85,14 +85,14 @@ public interface BackupPlanCopyActionProps {
      * Must be at least 90 days greater than `moveToColdStorageAfter`, if specified.
      */
     override fun deleteAfter(deleteAfter: Duration) {
-      cdkBuilder.deleteAfter(deleteAfter.let(Duration::unwrap))
+      cdkBuilder.deleteAfter(deleteAfter.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param destinationBackupVault Destination Vault for recovery points to be copied into. 
      */
     override fun destinationBackupVault(destinationBackupVault: IBackupVault) {
-      cdkBuilder.destinationBackupVault(destinationBackupVault.let(IBackupVault::unwrap))
+      cdkBuilder.destinationBackupVault(destinationBackupVault.let(IBackupVault.Companion::unwrap))
     }
 
     /**
@@ -100,7 +100,7 @@ public interface BackupPlanCopyActionProps {
      * point is moved to cold storage.
      */
     override fun moveToColdStorageAfter(moveToColdStorageAfter: Duration) {
-      cdkBuilder.moveToColdStorageAfter(moveToColdStorageAfter.let(Duration::unwrap))
+      cdkBuilder.moveToColdStorageAfter(moveToColdStorageAfter.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.backup.BackupPlanCopyActionProps =

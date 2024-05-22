@@ -61,7 +61,7 @@ public interface AllocateVpcIpv6CidrRequest {
      * @param scope The VPC construct to attach to. 
      */
     override fun scope(scope: Construct) {
-      cdkBuilder.scope(scope.let(Construct::unwrap))
+      cdkBuilder.scope(scope.let(Construct.Companion::unwrap))
     }
 
     /**

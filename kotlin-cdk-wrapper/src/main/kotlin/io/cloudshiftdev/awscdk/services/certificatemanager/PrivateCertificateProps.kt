@@ -112,7 +112,7 @@ public interface PrivateCertificateProps {
      * certificate. 
      */
     override fun certificateAuthority(certificateAuthority: ICertificateAuthority) {
-      cdkBuilder.certificateAuthority(certificateAuthority.let(ICertificateAuthority::unwrap))
+      cdkBuilder.certificateAuthority(certificateAuthority.let(ICertificateAuthority.Companion::unwrap))
     }
 
     /**
@@ -131,7 +131,7 @@ public interface PrivateCertificateProps {
      * (RSA or ECDSA) must match the algorithm family of the CA's secret key.
      */
     override fun keyAlgorithm(keyAlgorithm: KeyAlgorithm) {
-      cdkBuilder.keyAlgorithm(keyAlgorithm.let(KeyAlgorithm::unwrap))
+      cdkBuilder.keyAlgorithm(keyAlgorithm.let(KeyAlgorithm.Companion::unwrap))
     }
 
     /**

@@ -68,7 +68,7 @@ public interface EcsDeploymentConfigProps : BaseDeploymentConfigOptions {
      * target group to the 'green' target group during a deployment.
      */
     override fun trafficRouting(trafficRouting: TrafficRouting) {
-      cdkBuilder.trafficRouting(trafficRouting.let(TrafficRouting::unwrap))
+      cdkBuilder.trafficRouting(trafficRouting.let(TrafficRouting.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codedeploy.EcsDeploymentConfigProps =

@@ -167,7 +167,7 @@ public interface CfnViewProps {
      * @param tags The tags associated with the view resource (not specific to view version).
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

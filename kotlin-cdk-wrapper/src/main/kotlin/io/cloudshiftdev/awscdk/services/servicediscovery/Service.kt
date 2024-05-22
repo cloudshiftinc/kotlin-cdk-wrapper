@@ -52,8 +52,8 @@ public open class Service(
     id: String,
     props: ServiceProps,
   ) :
-      this(software.amazon.awscdk.services.servicediscovery.Service(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ServiceProps::unwrap))
+      this(software.amazon.awscdk.services.servicediscovery.Service(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ServiceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -88,7 +88,7 @@ public open class Service(
    */
   public open fun registerCnameInstance(id: String, props: CnameInstanceBaseProps): IInstance =
       unwrap(this).registerCnameInstance(id,
-      props.let(CnameInstanceBaseProps::unwrap)).let(IInstance::wrap)
+      props.let(CnameInstanceBaseProps.Companion::unwrap)).let(IInstance::wrap)
 
   /**
    * Registers a resource that is accessible using a CNAME.
@@ -110,7 +110,7 @@ public open class Service(
    */
   public open fun registerIpInstance(id: String, props: IpInstanceBaseProps): IInstance =
       unwrap(this).registerIpInstance(id,
-      props.let(IpInstanceBaseProps::unwrap)).let(IInstance::wrap)
+      props.let(IpInstanceBaseProps.Companion::unwrap)).let(IInstance::wrap)
 
   /**
    * Registers a resource that is accessible using an IP address.
@@ -132,7 +132,7 @@ public open class Service(
    */
   public open fun registerLoadBalancer(id: String, loadBalancer: ILoadBalancerV2): IInstance =
       unwrap(this).registerLoadBalancer(id,
-      loadBalancer.let(ILoadBalancerV2::unwrap)).let(IInstance::wrap)
+      loadBalancer.let(ILoadBalancerV2.Companion::unwrap)).let(IInstance::wrap)
 
   /**
    * Registers an ELB as a new instance with unique name instanceId in this service.
@@ -145,8 +145,8 @@ public open class Service(
     id: String,
     loadBalancer: ILoadBalancerV2,
     customAttributes: Map<String, String>,
-  ): IInstance = unwrap(this).registerLoadBalancer(id, loadBalancer.let(ILoadBalancerV2::unwrap),
-      customAttributes).let(IInstance::wrap)
+  ): IInstance = unwrap(this).registerLoadBalancer(id,
+      loadBalancer.let(ILoadBalancerV2.Companion::unwrap), customAttributes).let(IInstance::wrap)
 
   /**
    * Registers a resource that is accessible using values other than an IP address or a domain name
@@ -157,7 +157,7 @@ public open class Service(
    */
   public open fun registerNonIpInstance(id: String, props: NonIpInstanceBaseProps): IInstance =
       unwrap(this).registerNonIpInstance(id,
-      props.let(NonIpInstanceBaseProps::unwrap)).let(IInstance::wrap)
+      props.let(NonIpInstanceBaseProps.Companion::unwrap)).let(IInstance::wrap)
 
   /**
    * Registers a resource that is accessible using values other than an IP address or a domain name
@@ -359,7 +359,7 @@ public open class Service(
      * @param customHealthCheck Structure containing failure threshold for a custom health checker. 
      */
     override fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig) {
-      cdkBuilder.customHealthCheck(customHealthCheck.let(HealthCheckCustomConfig::unwrap))
+      cdkBuilder.customHealthCheck(customHealthCheck.let(HealthCheckCustomConfig.Companion::unwrap))
     }
 
     /**
@@ -396,7 +396,7 @@ public open class Service(
      * @param discoveryType Controls how instances within this service can be discovered. 
      */
     override fun discoveryType(discoveryType: DiscoveryType) {
-      cdkBuilder.discoveryType(discoveryType.let(DiscoveryType::unwrap))
+      cdkBuilder.discoveryType(discoveryType.let(DiscoveryType.Companion::unwrap))
     }
 
     /**
@@ -410,7 +410,7 @@ public open class Service(
      * @param dnsRecordType The DNS type of the record that you want AWS Cloud Map to create. 
      */
     override fun dnsRecordType(dnsRecordType: DnsRecordType) {
-      cdkBuilder.dnsRecordType(dnsRecordType.let(DnsRecordType::unwrap))
+      cdkBuilder.dnsRecordType(dnsRecordType.let(DnsRecordType.Companion::unwrap))
     }
 
     /**
@@ -423,7 +423,7 @@ public open class Service(
      * settings for this record. 
      */
     override fun dnsTtl(dnsTtl: Duration) {
-      cdkBuilder.dnsTtl(dnsTtl.let(Duration::unwrap))
+      cdkBuilder.dnsTtl(dnsTtl.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -441,7 +441,7 @@ public open class Service(
      * @param healthCheck Settings for an optional health check. 
      */
     override fun healthCheck(healthCheck: HealthCheckConfig) {
-      cdkBuilder.healthCheck(healthCheck.let(HealthCheckConfig::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(HealthCheckConfig.Companion::unwrap))
     }
 
     /**
@@ -496,7 +496,7 @@ public open class Service(
      * @param namespace The namespace that you want to use for DNS configuration. 
      */
     override fun namespace(namespace: INamespace) {
-      cdkBuilder.namespace(namespace.let(INamespace::unwrap))
+      cdkBuilder.namespace(namespace.let(INamespace.Companion::unwrap))
     }
 
     /**
@@ -509,7 +509,7 @@ public open class Service(
      * Cloud Map creates when you register an instance and specify this service. 
      */
     override fun routingPolicy(routingPolicy: RoutingPolicy) {
-      cdkBuilder.routingPolicy(routingPolicy.let(RoutingPolicy::unwrap))
+      cdkBuilder.routingPolicy(routingPolicy.let(RoutingPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.servicediscovery.Service =
@@ -522,8 +522,8 @@ public open class Service(
       id: String,
       attrs: ServiceAttributes,
     ): IService =
-        software.amazon.awscdk.services.servicediscovery.Service.fromServiceAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(ServiceAttributes::unwrap)).let(IService::wrap)
+        software.amazon.awscdk.services.servicediscovery.Service.fromServiceAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(ServiceAttributes.Companion::unwrap)).let(IService::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a843f03cb9f8cbd3c1cb9455ee3379fcaccbd31428da3ee426b5d1c759a129d0")

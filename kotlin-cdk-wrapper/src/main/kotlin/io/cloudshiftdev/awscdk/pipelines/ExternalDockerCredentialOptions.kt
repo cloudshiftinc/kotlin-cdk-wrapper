@@ -95,7 +95,7 @@ public interface ExternalDockerCredentialOptions {
      * @param assumeRole An IAM role to assume prior to accessing the secret.
      */
     override fun assumeRole(assumeRole: IRole) {
-      cdkBuilder.assumeRole(assumeRole.let(IRole::unwrap))
+      cdkBuilder.assumeRole(assumeRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -119,7 +119,7 @@ public interface ExternalDockerCredentialOptions {
      * credentials.
      */
     override fun usages(usages: List<DockerCredentialUsage>) {
-      cdkBuilder.usages(usages.map(DockerCredentialUsage::unwrap))
+      cdkBuilder.usages(usages.map(DockerCredentialUsage.Companion::unwrap))
     }
 
     /**

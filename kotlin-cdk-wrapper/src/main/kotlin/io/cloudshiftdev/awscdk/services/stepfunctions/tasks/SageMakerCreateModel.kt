@@ -55,8 +55,8 @@ public open class SageMakerCreateModel(
     id: String,
     props: SageMakerCreateModelProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateModel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SageMakerCreateModelProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateModel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SageMakerCreateModelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -72,7 +72,7 @@ public open class SageMakerCreateModel(
    * @param securityGroup : The security group to add. 
    */
   public open fun addSecurityGroup(securityGroup: ISecurityGroup) {
-    unwrap(this).addSecurityGroup(securityGroup.let(ISecurityGroup::unwrap))
+    unwrap(this).addSecurityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
   }
 
   /**
@@ -389,7 +389,7 @@ public open class SageMakerCreateModel(
      * @param containers Specifies the containers in the inference pipeline. 
      */
     override fun containers(containers: List<IContainerDefinition>) {
-      cdkBuilder.containers(containers.map(IContainerDefinition::unwrap))
+      cdkBuilder.containers(containers.map(IContainerDefinition.Companion::unwrap))
     }
 
     /**
@@ -414,7 +414,7 @@ public open class SageMakerCreateModel(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -456,7 +456,7 @@ public open class SageMakerCreateModel(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -470,7 +470,7 @@ public open class SageMakerCreateModel(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -505,7 +505,7 @@ public open class SageMakerCreateModel(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -543,7 +543,7 @@ public open class SageMakerCreateModel(
      * deployed for predictions. 
      */
     override fun primaryContainer(primaryContainer: IContainerDefinition) {
-      cdkBuilder.primaryContainer(primaryContainer.let(IContainerDefinition::unwrap))
+      cdkBuilder.primaryContainer(primaryContainer.let(IContainerDefinition.Companion::unwrap))
     }
 
     /**
@@ -585,7 +585,7 @@ public open class SageMakerCreateModel(
      * @param role An execution role that you can pass in a CreateModel API request. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -609,7 +609,7 @@ public open class SageMakerCreateModel(
      * this parameter is only used when VPC is provided). 
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -634,7 +634,7 @@ public open class SageMakerCreateModel(
      * @param tags Tags to be applied to the model. 
      */
     override fun tags(tags: TaskInput) {
-      cdkBuilder.tags(tags.let(TaskInput::unwrap))
+      cdkBuilder.tags(tags.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -648,7 +648,7 @@ public open class SageMakerCreateModel(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -661,7 +661,7 @@ public open class SageMakerCreateModel(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -672,7 +672,7 @@ public open class SageMakerCreateModel(
      * @param vpc The VPC that is accessible by the hosted model. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateModel =

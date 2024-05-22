@@ -33,7 +33,7 @@ public open class ManualApprovalAction(
   cdkObject: software.amazon.awscdk.services.codepipeline.actions.ManualApprovalAction,
 ) : Action(cdkObject) {
   public constructor(props: ManualApprovalActionProps) :
-      this(software.amazon.awscdk.services.codepipeline.actions.ManualApprovalAction(props.let(ManualApprovalActionProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.actions.ManualApprovalAction(props.let(ManualApprovalActionProps.Companion::unwrap))
   )
 
   public constructor(props: ManualApprovalActionProps.Builder.() -> Unit) :
@@ -49,7 +49,7 @@ public open class ManualApprovalAction(
    * @param grantable the grantable to attach the permissions to. 
    */
   public open fun grantManualApproval(grantable: IGrantable) {
-    unwrap(this).grantManualApproval(grantable.let(IGrantable::unwrap))
+    unwrap(this).grantManualApproval(grantable.let(IGrantable.Companion::unwrap))
   }
 
   /**
@@ -206,7 +206,7 @@ public open class ManualApprovalAction(
      * pending. 
      */
     override fun notificationTopic(notificationTopic: ITopic) {
-      cdkBuilder.notificationTopic(notificationTopic.let(ITopic::unwrap))
+      cdkBuilder.notificationTopic(notificationTopic.let(ITopic.Companion::unwrap))
     }
 
     /**
@@ -248,7 +248,7 @@ public open class ManualApprovalAction(
      * @param role The Role in which context's this Action will be executing in. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**

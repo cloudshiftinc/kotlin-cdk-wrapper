@@ -44,8 +44,8 @@ public open class DomainName(
     id: String,
     props: DomainNameProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.DomainName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DomainNameProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.DomainName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DomainNameProps.Companion::unwrap))
   )
 
   public constructor(
@@ -61,7 +61,7 @@ public open class DomainName(
    * @param options domain name endpoint properties to be set. 
    */
   public open fun addEndpoint(options: EndpointOptions) {
-    unwrap(this).addEndpoint(options.let(EndpointOptions::unwrap))
+    unwrap(this).addEndpoint(options.let(EndpointOptions.Companion::unwrap))
   }
 
   /**
@@ -192,7 +192,7 @@ public open class DomainName(
      * @param certificate The ACM certificate for this domain name. 
      */
     override fun certificate(certificate: ICertificate) {
-      cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
+      cdkBuilder.certificate(certificate.let(ICertificate.Companion::unwrap))
     }
 
     /**
@@ -225,7 +225,7 @@ public open class DomainName(
      * @param endpointType The type of endpoint for this DomainName. 
      */
     override fun endpointType(endpointType: EndpointType) {
-      cdkBuilder.endpointType(endpointType.let(EndpointType::unwrap))
+      cdkBuilder.endpointType(endpointType.let(EndpointType.Companion::unwrap))
     }
 
     /**
@@ -236,7 +236,7 @@ public open class DomainName(
      * @param mtls The mutual TLS authentication configuration for a custom domain name. 
      */
     override fun mtls(mtls: MTLSConfig) {
-      cdkBuilder.mtls(mtls.let(MTLSConfig::unwrap))
+      cdkBuilder.mtls(mtls.let(MTLSConfig.Companion::unwrap))
     }
 
     /**
@@ -265,7 +265,7 @@ public open class DomainName(
      * custom domain. 
      */
     override fun ownershipCertificate(ownershipCertificate: ICertificate) {
-      cdkBuilder.ownershipCertificate(ownershipCertificate.let(ICertificate::unwrap))
+      cdkBuilder.ownershipCertificate(ownershipCertificate.let(ICertificate.Companion::unwrap))
     }
 
     /**
@@ -277,7 +277,7 @@ public open class DomainName(
      * domain name. 
      */
     override fun securityPolicy(securityPolicy: SecurityPolicy) {
-      cdkBuilder.securityPolicy(securityPolicy.let(SecurityPolicy::unwrap))
+      cdkBuilder.securityPolicy(securityPolicy.let(SecurityPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.DomainName = cdkBuilder.build()
@@ -289,8 +289,8 @@ public open class DomainName(
       id: String,
       attrs: DomainNameAttributes,
     ): IDomainName =
-        software.amazon.awscdk.services.apigatewayv2.DomainName.fromDomainNameAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(DomainNameAttributes::unwrap)).let(IDomainName::wrap)
+        software.amazon.awscdk.services.apigatewayv2.DomainName.fromDomainNameAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(DomainNameAttributes.Companion::unwrap)).let(IDomainName::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1c56095f22c2c0873774339a1b537e195551eeb9d2e33592f72cef7d78b8bc1b")

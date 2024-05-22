@@ -43,7 +43,7 @@ public open class UserPool(
   cdkObject: software.amazon.awscdk.services.cognito.UserPool,
 ) : Resource(cdkObject), IUserPool {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.cognito.UserPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.cognito.UserPool(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -52,8 +52,8 @@ public open class UserPool(
     id: String,
     props: UserPoolProps,
   ) :
-      this(software.amazon.awscdk.services.cognito.UserPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(UserPoolProps::unwrap))
+      this(software.amazon.awscdk.services.cognito.UserPool(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(UserPoolProps.Companion::unwrap))
   )
 
   public constructor(
@@ -80,7 +80,7 @@ public open class UserPool(
    */
   public override fun addClient(id: String, options: UserPoolClientOptions): UserPoolClient =
       unwrap(this).addClient(id,
-      options.let(UserPoolClientOptions::unwrap)).let(UserPoolClient::wrap)
+      options.let(UserPoolClientOptions.Companion::unwrap)).let(UserPoolClient::wrap)
 
   /**
    * Add a new app client to this user pool.
@@ -101,7 +101,7 @@ public open class UserPool(
    */
   public override fun addDomain(id: String, options: UserPoolDomainOptions): UserPoolDomain =
       unwrap(this).addDomain(id,
-      options.let(UserPoolDomainOptions::unwrap)).let(UserPoolDomain::wrap)
+      options.let(UserPoolDomainOptions.Companion::unwrap)).let(UserPoolDomain::wrap)
 
   /**
    * Associate a domain to this user pool.
@@ -122,7 +122,7 @@ public open class UserPool(
    */
   public override fun addResourceServer(id: String, options: UserPoolResourceServerOptions):
       UserPoolResourceServer = unwrap(this).addResourceServer(id,
-      options.let(UserPoolResourceServerOptions::unwrap)).let(UserPoolResourceServer::wrap)
+      options.let(UserPoolResourceServerOptions.Companion::unwrap)).let(UserPoolResourceServer::wrap)
 
   /**
    * Add a new resource server to this user pool.
@@ -145,7 +145,8 @@ public open class UserPool(
    * @param lambdaVersion
    */
   public open fun addTrigger(operation: UserPoolOperation, fn: IFunction) {
-    unwrap(this).addTrigger(operation.let(UserPoolOperation::unwrap), fn.let(IFunction::unwrap))
+    unwrap(this).addTrigger(operation.let(UserPoolOperation.Companion::unwrap),
+        fn.let(IFunction.Companion::unwrap))
   }
 
   /**
@@ -161,8 +162,8 @@ public open class UserPool(
     fn: IFunction,
     lambdaVersion: LambdaVersion,
   ) {
-    unwrap(this).addTrigger(operation.let(UserPoolOperation::unwrap), fn.let(IFunction::unwrap),
-        lambdaVersion.let(LambdaVersion::unwrap))
+    unwrap(this).addTrigger(operation.let(UserPoolOperation.Companion::unwrap),
+        fn.let(IFunction.Companion::unwrap), lambdaVersion.let(LambdaVersion.Companion::unwrap))
   }
 
   /**
@@ -172,8 +173,8 @@ public open class UserPool(
    * @param actions 
    */
   public override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
-      as String}.toTypedArray()).let(Grant::wrap)
+      unwrap(this).grant(grantee.let(IGrantable.Companion::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Get all identity providers registered with this user pool.
@@ -187,7 +188,7 @@ public open class UserPool(
    * @param provider 
    */
   public override fun registerIdentityProvider(provider: IUserPoolIdentityProvider) {
-    unwrap(this).registerIdentityProvider(provider.let(IUserPoolIdentityProvider::unwrap))
+    unwrap(this).registerIdentityProvider(provider.let(IUserPoolIdentityProvider.Companion::unwrap))
   }
 
   /**
@@ -662,7 +663,7 @@ public open class UserPool(
      * @param accountRecovery How will a user be able to recover their account?. 
      */
     override fun accountRecovery(accountRecovery: AccountRecovery) {
-      cdkBuilder.accountRecovery(accountRecovery.let(AccountRecovery::unwrap))
+      cdkBuilder.accountRecovery(accountRecovery.let(AccountRecovery.Companion::unwrap))
     }
 
     /**
@@ -673,7 +674,7 @@ public open class UserPool(
      * @param advancedSecurityMode The user pool's Advanced Security Mode. 
      */
     override fun advancedSecurityMode(advancedSecurityMode: AdvancedSecurityMode) {
-      cdkBuilder.advancedSecurityMode(advancedSecurityMode.let(AdvancedSecurityMode::unwrap))
+      cdkBuilder.advancedSecurityMode(advancedSecurityMode.let(AdvancedSecurityMode.Companion::unwrap))
     }
 
     /**
@@ -689,7 +690,7 @@ public open class UserPool(
      * up. 
      */
     override fun autoVerify(autoVerify: AutoVerifiedAttrs) {
-      cdkBuilder.autoVerify(autoVerify.let(AutoVerifiedAttrs::unwrap))
+      cdkBuilder.autoVerify(autoVerify.let(AutoVerifiedAttrs.Companion::unwrap))
     }
 
     /**
@@ -732,7 +733,7 @@ public open class UserPool(
      * authorization codes that Amazon Cognito generates. 
      */
     override fun customSenderKmsKey(customSenderKmsKey: IKey) {
-      cdkBuilder.customSenderKmsKey(customSenderKmsKey.let(IKey::unwrap))
+      cdkBuilder.customSenderKmsKey(customSenderKmsKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -755,7 +756,7 @@ public open class UserPool(
      * @param deviceTracking Device tracking settings. 
      */
     override fun deviceTracking(deviceTracking: DeviceTracking) {
-      cdkBuilder.deviceTracking(deviceTracking.let(DeviceTracking::unwrap))
+      cdkBuilder.deviceTracking(deviceTracking.let(DeviceTracking.Companion::unwrap))
     }
 
     /**
@@ -778,7 +779,7 @@ public open class UserPool(
      * @param email Email settings for a user pool. 
      */
     override fun email(email: UserPoolEmail) {
-      cdkBuilder.email(email.let(UserPoolEmail::unwrap))
+      cdkBuilder.email(email.let(UserPoolEmail.Companion::unwrap))
     }
 
     /**
@@ -808,7 +809,7 @@ public open class UserPool(
      * users' email address and phone number attributes. 
      */
     override fun keepOriginal(keepOriginal: KeepOriginalAttrs) {
-      cdkBuilder.keepOriginal(keepOriginal.let(KeepOriginalAttrs::unwrap))
+      cdkBuilder.keepOriginal(keepOriginal.let(KeepOriginalAttrs.Companion::unwrap))
     }
 
     /**
@@ -836,7 +837,7 @@ public open class UserPool(
      * @param lambdaTriggers Lambda functions to use for supported Cognito triggers. 
      */
     override fun lambdaTriggers(lambdaTriggers: UserPoolTriggers) {
-      cdkBuilder.lambdaTriggers(lambdaTriggers.let(UserPoolTriggers::unwrap))
+      cdkBuilder.lambdaTriggers(lambdaTriggers.let(UserPoolTriggers.Companion::unwrap))
     }
 
     /**
@@ -860,7 +861,7 @@ public open class UserPool(
      * @param mfa Configure whether users of this user pool can or are required use MFA to sign in. 
      */
     override fun mfa(mfa: Mfa) {
-      cdkBuilder.mfa(mfa.let(Mfa::unwrap))
+      cdkBuilder.mfa(mfa.let(Mfa.Companion::unwrap))
     }
 
     /**
@@ -887,7 +888,7 @@ public open class UserPool(
      * @param mfaSecondFactor Configure the MFA types that users can use in this user pool. 
      */
     override fun mfaSecondFactor(mfaSecondFactor: MfaSecondFactor) {
-      cdkBuilder.mfaSecondFactor(mfaSecondFactor.let(MfaSecondFactor::unwrap))
+      cdkBuilder.mfaSecondFactor(mfaSecondFactor.let(MfaSecondFactor.Companion::unwrap))
     }
 
     /**
@@ -913,7 +914,7 @@ public open class UserPool(
      * @param passwordPolicy Password policy for this user pool. 
      */
     override fun passwordPolicy(passwordPolicy: PasswordPolicy) {
-      cdkBuilder.passwordPolicy(passwordPolicy.let(PasswordPolicy::unwrap))
+      cdkBuilder.passwordPolicy(passwordPolicy.let(PasswordPolicy.Companion::unwrap))
     }
 
     /**
@@ -936,7 +937,7 @@ public open class UserPool(
      * @param removalPolicy Policy to apply when the user pool is removed from the stack. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -971,7 +972,7 @@ public open class UserPool(
      * @param signInAliases Methods in which a user registers or signs in to a user pool. 
      */
     override fun signInAliases(signInAliases: SignInAliases) {
-      cdkBuilder.signInAliases(signInAliases.let(SignInAliases::unwrap))
+      cdkBuilder.signInAliases(signInAliases.let(SignInAliases.Companion::unwrap))
     }
 
     /**
@@ -1020,7 +1021,7 @@ public open class UserPool(
      * @param smsRole The IAM role that Cognito will assume while sending SMS messages. 
      */
     override fun smsRole(smsRole: IRole) {
-      cdkBuilder.smsRole(smsRole.let(IRole::unwrap))
+      cdkBuilder.smsRole(smsRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -1067,7 +1068,7 @@ public open class UserPool(
      * pool. 
      */
     override fun standardAttributes(standardAttributes: StandardAttributes) {
-      cdkBuilder.standardAttributes(standardAttributes.let(StandardAttributes::unwrap))
+      cdkBuilder.standardAttributes(standardAttributes.let(StandardAttributes.Companion::unwrap))
     }
 
     /**
@@ -1094,7 +1095,7 @@ public open class UserPool(
      * @param userInvitation Configuration around admins signing up users into a user pool. 
      */
     override fun userInvitation(userInvitation: UserInvitationConfig) {
-      cdkBuilder.userInvitation(userInvitation.let(UserInvitationConfig::unwrap))
+      cdkBuilder.userInvitation(userInvitation.let(UserInvitationConfig.Companion::unwrap))
     }
 
     /**
@@ -1130,7 +1131,7 @@ public open class UserPool(
      * @param userVerification Configuration around users signing themselves up to the user pool. 
      */
     override fun userVerification(userVerification: UserVerificationConfig) {
-      cdkBuilder.userVerification(userVerification.let(UserVerificationConfig::unwrap))
+      cdkBuilder.userVerification(userVerification.let(UserVerificationConfig.Companion::unwrap))
     }
 
     /**
@@ -1156,7 +1157,7 @@ public open class UserPool(
       id: String,
       userPoolArn: String,
     ): IUserPool =
-        software.amazon.awscdk.services.cognito.UserPool.fromUserPoolArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.cognito.UserPool.fromUserPoolArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, userPoolArn).let(IUserPool::wrap)
 
     public fun fromUserPoolId(
@@ -1164,7 +1165,7 @@ public open class UserPool(
       id: String,
       userPoolId: String,
     ): IUserPool =
-        software.amazon.awscdk.services.cognito.UserPool.fromUserPoolId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.cognito.UserPool.fromUserPoolId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, userPoolId).let(IUserPool::wrap)
 
     public operator fun invoke(

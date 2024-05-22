@@ -41,7 +41,7 @@ public abstract class BaseDataSource(
    */
   public open fun createFunction(id: String, props: BaseAppsyncFunctionProps): AppsyncFunction =
       unwrap(this).createFunction(id,
-      props.let(BaseAppsyncFunctionProps::unwrap)).let(AppsyncFunction::wrap)
+      props.let(BaseAppsyncFunctionProps.Companion::unwrap)).let(AppsyncFunction::wrap)
 
   /**
    * creates a new appsync function for this datasource and API using the given properties.
@@ -61,7 +61,8 @@ public abstract class BaseDataSource(
    * @param props 
    */
   public open fun createResolver(id: String, props: BaseResolverProps): Resolver =
-      unwrap(this).createResolver(id, props.let(BaseResolverProps::unwrap)).let(Resolver::wrap)
+      unwrap(this).createResolver(id,
+      props.let(BaseResolverProps.Companion::unwrap)).let(Resolver::wrap)
 
   /**
    * creates a new resolver for this datasource and API using the given properties.

@@ -62,8 +62,8 @@ public open class CfnIdentityPoolRoleAttachment(
     id: String,
     props: CfnIdentityPoolRoleAttachmentProps,
   ) :
-      this(software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnIdentityPoolRoleAttachmentProps::unwrap))
+      this(software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnIdentityPoolRoleAttachmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -96,7 +96,7 @@ public open class CfnIdentityPoolRoleAttachment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -108,7 +108,7 @@ public open class CfnIdentityPoolRoleAttachment(
    * How users for a specific identity provider are mapped to roles.
    */
   public open fun roleMappings(`value`: IResolvable) {
-    unwrap(this).setRoleMappings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRoleMappings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -230,7 +230,7 @@ public open class CfnIdentityPoolRoleAttachment(
      * @param roleMappings How users for a specific identity provider are mapped to roles. 
      */
     override fun roleMappings(roleMappings: IResolvable) {
-      cdkBuilder.roleMappings(roleMappings.let(IResolvable::unwrap))
+      cdkBuilder.roleMappings(roleMappings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -646,7 +646,7 @@ public open class CfnIdentityPoolRoleAttachment(
        * If you specify "Rules" as the role-mapping type, RulesConfiguration is required.
        */
       override fun rulesConfiguration(rulesConfiguration: IResolvable) {
-        cdkBuilder.rulesConfiguration(rulesConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.rulesConfiguration(rulesConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -654,7 +654,7 @@ public open class CfnIdentityPoolRoleAttachment(
        * If you specify "Rules" as the role-mapping type, RulesConfiguration is required.
        */
       override fun rulesConfiguration(rulesConfiguration: RulesConfigurationTypeProperty) {
-        cdkBuilder.rulesConfiguration(rulesConfiguration.let(RulesConfigurationTypeProperty::unwrap))
+        cdkBuilder.rulesConfiguration(rulesConfiguration.let(RulesConfigurationTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -819,7 +819,7 @@ public open class CfnIdentityPoolRoleAttachment(
        * You can specify up to 25 rules per identity provider.
        */
       override fun rules(rules: IResolvable) {
-        cdkBuilder.rules(rules.let(IResolvable::unwrap))
+        cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
       }
 
       /**

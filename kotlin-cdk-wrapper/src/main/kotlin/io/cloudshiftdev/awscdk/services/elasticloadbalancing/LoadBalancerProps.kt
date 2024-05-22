@@ -215,7 +215,7 @@ public interface LoadBalancerProps {
      */
     override
         fun accessLoggingPolicy(accessLoggingPolicy: CfnLoadBalancer.AccessLoggingPolicyProperty) {
-      cdkBuilder.accessLoggingPolicy(accessLoggingPolicy.let(CfnLoadBalancer.AccessLoggingPolicyProperty::unwrap))
+      cdkBuilder.accessLoggingPolicy(accessLoggingPolicy.let(CfnLoadBalancer.AccessLoggingPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -243,7 +243,7 @@ public interface LoadBalancerProps {
      * Not required but recommended.
      */
     override fun healthCheck(healthCheck: HealthCheck) {
-      cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
     }
 
     /**
@@ -269,7 +269,7 @@ public interface LoadBalancerProps {
      * Can also be added by .addListener()
      */
     override fun listeners(listeners: List<LoadBalancerListener>) {
-      cdkBuilder.listeners(listeners.map(LoadBalancerListener::unwrap))
+      cdkBuilder.listeners(listeners.map(LoadBalancerListener.Companion::unwrap))
     }
 
     /**
@@ -285,7 +285,7 @@ public interface LoadBalancerProps {
      * Useful multiple public or private subnets are covering the same availability zone.
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -303,7 +303,7 @@ public interface LoadBalancerProps {
      * Can also be added by .addTarget()
      */
     override fun targets(targets: List<ILoadBalancerTarget>) {
-      cdkBuilder.targets(targets.map(ILoadBalancerTarget::unwrap))
+      cdkBuilder.targets(targets.map(ILoadBalancerTarget.Companion::unwrap))
     }
 
     /**
@@ -316,7 +316,7 @@ public interface LoadBalancerProps {
      * @param vpc VPC network of the fleet instances. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.elasticloadbalancing.LoadBalancerProps =

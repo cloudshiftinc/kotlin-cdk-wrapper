@@ -104,8 +104,8 @@ public open class CfnAlarm(
     id: String,
     props: CfnAlarmProps,
   ) :
-      this(software.amazon.awscdk.services.cloudwatch.CfnAlarm(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAlarmProps::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.CfnAlarm(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAlarmProps.Companion::unwrap))
   )
 
   public constructor(
@@ -131,7 +131,7 @@ public open class CfnAlarm(
    * Indicates whether actions should be executed during any changes to the alarm state.
    */
   public open fun actionsEnabled(`value`: IResolvable) {
-    unwrap(this).setActionsEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setActionsEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -223,7 +223,7 @@ public open class CfnAlarm(
    * The dimensions for the metric associated with the alarm.
    */
   public open fun dimensions(`value`: IResolvable) {
-    unwrap(this).setDimensions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDimensions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -285,7 +285,7 @@ public open class CfnAlarm(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -331,7 +331,7 @@ public open class CfnAlarm(
    * An array that enables you to create an alarm based on the result of a metric math expression.
    */
   public open fun metrics(`value`: IResolvable) {
-    unwrap(this).setMetrics(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMetrics(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -412,7 +412,7 @@ public open class CfnAlarm(
    * A list of key-value pairs to associate with the alarm.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -925,7 +925,7 @@ public open class CfnAlarm(
      * alarm state. 
      */
     override fun actionsEnabled(actionsEnabled: IResolvable) {
-      cdkBuilder.actionsEnabled(actionsEnabled.let(IResolvable::unwrap))
+      cdkBuilder.actionsEnabled(actionsEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1034,7 +1034,7 @@ public open class CfnAlarm(
      * @param dimensions The dimensions for the metric associated with the alarm. 
      */
     override fun dimensions(dimensions: IResolvable) {
-      cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+      cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1165,7 +1165,7 @@ public open class CfnAlarm(
      * math expression. 
      */
     override fun metrics(metrics: IResolvable) {
-      cdkBuilder.metrics(metrics.let(IResolvable::unwrap))
+      cdkBuilder.metrics(metrics.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1289,7 +1289,7 @@ public open class CfnAlarm(
      * @param tags A list of key-value pairs to associate with the alarm. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1800,7 +1800,7 @@ public open class CfnAlarm(
        * not both.
        */
       override fun metricStat(metricStat: IResolvable) {
-        cdkBuilder.metricStat(metricStat.let(IResolvable::unwrap))
+        cdkBuilder.metricStat(metricStat.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1812,7 +1812,7 @@ public open class CfnAlarm(
        * not both.
        */
       override fun metricStat(metricStat: MetricStatProperty) {
-        cdkBuilder.metricStat(metricStat.let(MetricStatProperty::unwrap))
+        cdkBuilder.metricStat(metricStat.let(MetricStatProperty.Companion::unwrap))
       }
 
       /**
@@ -1863,7 +1863,7 @@ public open class CfnAlarm(
        * This field is required.
        */
       override fun returnData(returnData: IResolvable) {
-        cdkBuilder.returnData(returnData.let(IResolvable::unwrap))
+        cdkBuilder.returnData(returnData.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2073,7 +2073,7 @@ public open class CfnAlarm(
        * alarm will watch.
        */
       override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+        cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2305,14 +2305,14 @@ public open class CfnAlarm(
        * @param metric The metric to return, including the metric name, namespace, and dimensions. 
        */
       override fun metric(metric: IResolvable) {
-        cdkBuilder.metric(metric.let(IResolvable::unwrap))
+        cdkBuilder.metric(metric.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param metric The metric to return, including the metric name, namespace, and dimensions. 
        */
       override fun metric(metric: MetricProperty) {
-        cdkBuilder.metric(metric.let(MetricProperty::unwrap))
+        cdkBuilder.metric(metric.let(MetricProperty.Companion::unwrap))
       }
 
       /**

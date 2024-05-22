@@ -52,8 +52,8 @@ public open class NetworkTargetGroup(
     id: String,
     props: NetworkTargetGroupProps,
   ) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.NetworkTargetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(NetworkTargetGroupProps::unwrap))
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.NetworkTargetGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(NetworkTargetGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -101,7 +101,7 @@ public open class NetworkTargetGroup(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricHealthyHostCount(props: MetricOptions): Metric =
-      unwrap(this).metricHealthyHostCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricHealthyHostCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The number of targets that are considered healthy.
@@ -139,7 +139,7 @@ public open class NetworkTargetGroup(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricUnHealthyHostCount(props: MetricOptions): Metric =
-      unwrap(this).metricUnHealthyHostCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricUnHealthyHostCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The number of targets that are considered unhealthy.
@@ -169,7 +169,7 @@ public open class NetworkTargetGroup(
    * @param listener 
    */
   public override fun registerListener(listener: INetworkListener) {
-    unwrap(this).registerListener(listener.let(INetworkListener::unwrap))
+    unwrap(this).registerListener(listener.let(INetworkListener.Companion::unwrap))
   }
 
   /**
@@ -357,7 +357,7 @@ public open class NetworkTargetGroup(
      * deregistering a target. 
      */
     override fun deregistrationDelay(deregistrationDelay: Duration) {
-      cdkBuilder.deregistrationDelay(deregistrationDelay.let(Duration::unwrap))
+      cdkBuilder.deregistrationDelay(deregistrationDelay.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -370,7 +370,7 @@ public open class NetworkTargetGroup(
      * @param healthCheck Health check configuration. 
      */
     override fun healthCheck(healthCheck: HealthCheck) {
-      cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
     }
 
     /**
@@ -416,7 +416,7 @@ public open class NetworkTargetGroup(
      * @param protocol Protocol for target group, expects TCP, TLS, UDP, or TCP_UDP. 
      */
     override fun protocol(protocol: Protocol) {
-      cdkBuilder.protocol(protocol.let(Protocol::unwrap))
+      cdkBuilder.protocol(protocol.let(Protocol.Companion::unwrap))
     }
 
     /**
@@ -457,7 +457,7 @@ public open class NetworkTargetGroup(
      * @param targetType The type of targets registered to this TargetGroup, either IP or Instance. 
      */
     override fun targetType(targetType: TargetType) {
-      cdkBuilder.targetType(targetType.let(TargetType::unwrap))
+      cdkBuilder.targetType(targetType.let(TargetType.Companion::unwrap))
     }
 
     /**
@@ -472,7 +472,7 @@ public open class NetworkTargetGroup(
      * @param targets The targets to add to this target group. 
      */
     override fun targets(targets: List<INetworkLoadBalancerTarget>) {
-      cdkBuilder.targets(targets.map(INetworkLoadBalancerTarget::unwrap))
+      cdkBuilder.targets(targets.map(INetworkLoadBalancerTarget.Companion::unwrap))
     }
 
     /**
@@ -499,7 +499,7 @@ public open class NetworkTargetGroup(
      * @param vpc The virtual private cloud (VPC). 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.elasticloadbalancingv2.NetworkTargetGroup =
@@ -512,8 +512,8 @@ public open class NetworkTargetGroup(
       id: String,
       attrs: TargetGroupAttributes,
     ): INetworkTargetGroup =
-        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkTargetGroup.fromTargetGroupAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(TargetGroupAttributes::unwrap)).let(INetworkTargetGroup::wrap)
+        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkTargetGroup.fromTargetGroupAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(TargetGroupAttributes.Companion::unwrap)).let(INetworkTargetGroup::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9e8569f93dff0c1e3a15c44bddcebbe3a3c3a3ab105f2a53138bf6a5aedbeaca")

@@ -51,7 +51,7 @@ public interface OracleSe2CdbInstanceEngineProps {
      * @param version The exact version of the engine to use. 
      */
     override fun version(version: OracleEngineVersion) {
-      cdkBuilder.version(version.let(OracleEngineVersion::unwrap))
+      cdkBuilder.version(version.let(OracleEngineVersion.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.OracleSe2CdbInstanceEngineProps =

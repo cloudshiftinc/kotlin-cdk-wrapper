@@ -74,8 +74,8 @@ public open class CfnEnvironment(
     id: String,
     props: CfnEnvironmentProps,
   ) :
-      this(software.amazon.awscdk.services.appconfig.CfnEnvironment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEnvironmentProps::unwrap))
+      this(software.amazon.awscdk.services.appconfig.CfnEnvironment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEnvironmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -126,7 +126,7 @@ public open class CfnEnvironment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -138,7 +138,7 @@ public open class CfnEnvironment(
    * Amazon CloudWatch alarms to monitor during the deployment process.
    */
   public open fun monitors(`value`: IResolvable) {
-    unwrap(this).setMonitors(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMonitors(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -174,7 +174,7 @@ public open class CfnEnvironment(
    * Metadata to assign to the environment.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -292,7 +292,7 @@ public open class CfnEnvironment(
      * @param monitors Amazon CloudWatch alarms to monitor during the deployment process. 
      */
     override fun monitors(monitors: IResolvable) {
-      cdkBuilder.monitors(monitors.let(IResolvable::unwrap))
+      cdkBuilder.monitors(monitors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -333,7 +333,7 @@ public open class CfnEnvironment(
      * @param tags Metadata to assign to the environment. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

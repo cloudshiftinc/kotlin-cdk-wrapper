@@ -74,8 +74,8 @@ public open class CfnInferenceScheduler(
     id: String,
     props: CfnInferenceSchedulerProps,
   ) :
-      this(software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInferenceSchedulerProps::unwrap))
+      this(software.amazon.awscdk.services.lookoutequipment.CfnInferenceScheduler(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInferenceSchedulerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -160,7 +160,7 @@ public open class CfnInferenceScheduler(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -218,7 +218,7 @@ public open class CfnInferenceScheduler(
    * Any tags associated with the inference scheduler.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -466,7 +466,7 @@ public open class CfnInferenceScheduler(
      * @param tags Any tags associated with the inference scheduler. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -626,7 +626,7 @@ public open class CfnInferenceScheduler(
        * data for the inference, including timestamp format and delimiter.
        */
       override fun inferenceInputNameConfiguration(inferenceInputNameConfiguration: IResolvable) {
-        cdkBuilder.inferenceInputNameConfiguration(inferenceInputNameConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.inferenceInputNameConfiguration(inferenceInputNameConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -635,7 +635,7 @@ public open class CfnInferenceScheduler(
        */
       override
           fun inferenceInputNameConfiguration(inferenceInputNameConfiguration: InputNameConfigurationProperty) {
-        cdkBuilder.inferenceInputNameConfiguration(inferenceInputNameConfiguration.let(InputNameConfigurationProperty::unwrap))
+        cdkBuilder.inferenceInputNameConfiguration(inferenceInputNameConfiguration.let(InputNameConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -662,7 +662,7 @@ public open class CfnInferenceScheduler(
        * inference, including input data S3 location. 
        */
       override fun s3InputConfiguration(s3InputConfiguration: IResolvable) {
-        cdkBuilder.s3InputConfiguration(s3InputConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.s3InputConfiguration(s3InputConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -670,7 +670,7 @@ public open class CfnInferenceScheduler(
        * inference, including input data S3 location. 
        */
       override fun s3InputConfiguration(s3InputConfiguration: S3InputConfigurationProperty) {
-        cdkBuilder.s3InputConfiguration(s3InputConfiguration.let(S3InputConfigurationProperty::unwrap))
+        cdkBuilder.s3InputConfiguration(s3InputConfiguration.let(S3InputConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -824,7 +824,7 @@ public open class CfnInferenceScheduler(
        * from the inference, including output S3 location. 
        */
       override fun s3OutputConfiguration(s3OutputConfiguration: IResolvable) {
-        cdkBuilder.s3OutputConfiguration(s3OutputConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.s3OutputConfiguration(s3OutputConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -832,7 +832,7 @@ public open class CfnInferenceScheduler(
        * from the inference, including output S3 location. 
        */
       override fun s3OutputConfiguration(s3OutputConfiguration: S3OutputConfigurationProperty) {
-        cdkBuilder.s3OutputConfiguration(s3OutputConfiguration.let(S3OutputConfigurationProperty::unwrap))
+        cdkBuilder.s3OutputConfiguration(s3OutputConfiguration.let(S3OutputConfigurationProperty.Companion::unwrap))
       }
 
       /**

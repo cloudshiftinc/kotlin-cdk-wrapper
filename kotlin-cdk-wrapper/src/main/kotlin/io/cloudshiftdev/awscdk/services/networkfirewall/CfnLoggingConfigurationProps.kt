@@ -135,7 +135,7 @@ public interface CfnLoggingConfigurationProps {
      * `Firewall` . 
      */
     override fun loggingConfiguration(loggingConfiguration: IResolvable) {
-      cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -144,7 +144,7 @@ public interface CfnLoggingConfigurationProps {
      */
     override
         fun loggingConfiguration(loggingConfiguration: CfnLoggingConfiguration.LoggingConfigurationProperty) {
-      cdkBuilder.loggingConfiguration(loggingConfiguration.let(CfnLoggingConfiguration.LoggingConfigurationProperty::unwrap))
+      cdkBuilder.loggingConfiguration(loggingConfiguration.let(CfnLoggingConfiguration.LoggingConfigurationProperty.Companion::unwrap))
     }
 
     /**

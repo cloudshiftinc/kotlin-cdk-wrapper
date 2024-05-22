@@ -211,7 +211,7 @@ public interface ResponseHeadersPolicyProps {
      * cross-origin resource sharing (CORS).
      */
     override fun corsBehavior(corsBehavior: ResponseHeadersCorsBehavior) {
-      cdkBuilder.corsBehavior(corsBehavior.let(ResponseHeadersCorsBehavior::unwrap))
+      cdkBuilder.corsBehavior(corsBehavior.let(ResponseHeadersCorsBehavior.Companion::unwrap))
     }
 
     /**
@@ -227,7 +227,7 @@ public interface ResponseHeadersPolicyProps {
      * @param customHeadersBehavior A configuration for a set of custom HTTP response headers.
      */
     override fun customHeadersBehavior(customHeadersBehavior: ResponseCustomHeadersBehavior) {
-      cdkBuilder.customHeadersBehavior(customHeadersBehavior.let(ResponseCustomHeadersBehavior::unwrap))
+      cdkBuilder.customHeadersBehavior(customHeadersBehavior.let(ResponseCustomHeadersBehavior.Companion::unwrap))
     }
 
     /**
@@ -266,7 +266,7 @@ public interface ResponseHeadersPolicyProps {
      * headers.
      */
     override fun securityHeadersBehavior(securityHeadersBehavior: ResponseSecurityHeadersBehavior) {
-      cdkBuilder.securityHeadersBehavior(securityHeadersBehavior.let(ResponseSecurityHeadersBehavior::unwrap))
+      cdkBuilder.securityHeadersBehavior(securityHeadersBehavior.let(ResponseSecurityHeadersBehavior.Companion::unwrap))
     }
 
     /**

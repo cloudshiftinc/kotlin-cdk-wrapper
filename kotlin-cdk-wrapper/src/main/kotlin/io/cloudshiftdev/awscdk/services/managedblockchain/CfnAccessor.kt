@@ -48,8 +48,8 @@ public open class CfnAccessor(
     id: String,
     props: CfnAccessorProps,
   ) :
-      this(software.amazon.awscdk.services.managedblockchain.CfnAccessor(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAccessorProps::unwrap))
+      this(software.amazon.awscdk.services.managedblockchain.CfnAccessor(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAccessorProps.Companion::unwrap))
   )
 
   public constructor(
@@ -109,7 +109,7 @@ public open class CfnAccessor(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -139,7 +139,7 @@ public open class CfnAccessor(
    * The tags assigned to the Accessor.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -269,7 +269,7 @@ public open class CfnAccessor(
      * @param tags The tags assigned to the Accessor. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

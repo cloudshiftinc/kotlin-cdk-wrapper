@@ -54,8 +54,8 @@ public open class PublicHostedZone(
     id: String,
     props: PublicHostedZoneProps,
   ) :
-      this(software.amazon.awscdk.services.route53.PublicHostedZone(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(PublicHostedZoneProps::unwrap))
+      this(software.amazon.awscdk.services.route53.PublicHostedZone(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(PublicHostedZoneProps.Companion::unwrap))
   )
 
   public constructor(
@@ -72,7 +72,7 @@ public open class PublicHostedZone(
    * @param opts options for creating the DNS record, if any.
    */
   public open fun addDelegation(`delegate`: IPublicHostedZone) {
-    unwrap(this).addDelegation(`delegate`.let(IPublicHostedZone::unwrap))
+    unwrap(this).addDelegation(`delegate`.let(IPublicHostedZone.Companion::unwrap))
   }
 
   /**
@@ -82,8 +82,8 @@ public open class PublicHostedZone(
    * @param opts options for creating the DNS record, if any.
    */
   public open fun addDelegation(`delegate`: IPublicHostedZone, opts: ZoneDelegationOptions) {
-    unwrap(this).addDelegation(`delegate`.let(IPublicHostedZone::unwrap),
-        opts.let(ZoneDelegationOptions::unwrap))
+    unwrap(this).addDelegation(`delegate`.let(IPublicHostedZone.Companion::unwrap),
+        opts.let(ZoneDelegationOptions.Companion::unwrap))
   }
 
   /**
@@ -104,7 +104,7 @@ public open class PublicHostedZone(
    * @param _vpc 
    */
   public override fun addVpc(vpc: IVpc) {
-    unwrap(this).addVpc(vpc.let(IVpc::unwrap))
+    unwrap(this).addVpc(vpc.let(IVpc.Companion::unwrap))
   }
 
   /**
@@ -271,7 +271,7 @@ public open class PublicHostedZone(
     @Deprecated(message = "deprecated in CDK")
     override
         fun crossAccountZoneDelegationPrincipal(crossAccountZoneDelegationPrincipal: IPrincipal) {
-      cdkBuilder.crossAccountZoneDelegationPrincipal(crossAccountZoneDelegationPrincipal.let(IPrincipal::unwrap))
+      cdkBuilder.crossAccountZoneDelegationPrincipal(crossAccountZoneDelegationPrincipal.let(IPrincipal.Companion::unwrap))
     }
 
     /**
@@ -323,8 +323,8 @@ public open class PublicHostedZone(
       id: String,
       attrs: PublicHostedZoneAttributes,
     ): IPublicHostedZone =
-        software.amazon.awscdk.services.route53.PublicHostedZone.fromPublicHostedZoneAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(PublicHostedZoneAttributes::unwrap)).let(IPublicHostedZone::wrap)
+        software.amazon.awscdk.services.route53.PublicHostedZone.fromPublicHostedZoneAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(PublicHostedZoneAttributes.Companion::unwrap)).let(IPublicHostedZone::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("06cb4baac981ad1dbf446227d98c9cfd34ba1dbb37d9b99936ef13730db60f6b")
@@ -340,7 +340,7 @@ public open class PublicHostedZone(
       id: String,
       publicHostedZoneId: String,
     ): IPublicHostedZone =
-        software.amazon.awscdk.services.route53.PublicHostedZone.fromPublicHostedZoneId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.route53.PublicHostedZone.fromPublicHostedZoneId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, publicHostedZoneId).let(IPublicHostedZone::wrap)
 
     public operator fun invoke(

@@ -87,7 +87,7 @@ public interface ApiDefinitionConfig {
      * `inlineDefinition`).
      */
     override fun s3Location(s3Location: ApiDefinitionS3Location) {
-      cdkBuilder.s3Location(s3Location.let(ApiDefinitionS3Location::unwrap))
+      cdkBuilder.s3Location(s3Location.let(ApiDefinitionS3Location.Companion::unwrap))
     }
 
     /**

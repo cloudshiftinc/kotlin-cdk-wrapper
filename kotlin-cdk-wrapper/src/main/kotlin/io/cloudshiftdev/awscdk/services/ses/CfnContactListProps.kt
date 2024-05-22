@@ -137,7 +137,7 @@ public interface CfnContactListProps {
      * @param tags The tags associated with a contact list.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -150,7 +150,7 @@ public interface CfnContactListProps {
      * A contact list can have multiple topics.
      */
     override fun topics(topics: IResolvable) {
-      cdkBuilder.topics(topics.let(IResolvable::unwrap))
+      cdkBuilder.topics(topics.let(IResolvable.Companion::unwrap))
     }
 
     /**

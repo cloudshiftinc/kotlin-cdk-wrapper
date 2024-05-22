@@ -40,8 +40,8 @@ public open class Connection(
     id: String,
     props: ConnectionProps,
   ) :
-      this(software.amazon.awscdk.services.events.Connection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ConnectionProps::unwrap))
+      this(software.amazon.awscdk.services.events.Connection(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ConnectionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -138,7 +138,7 @@ public open class Connection(
      * @param authorization The authorization type for the connection. 
      */
     override fun authorization(authorization: Authorization) {
-      cdkBuilder.authorization(authorization.let(Authorization::unwrap))
+      cdkBuilder.authorization(authorization.let(Authorization.Companion::unwrap))
     }
 
     /**
@@ -206,8 +206,8 @@ public open class Connection(
       id: String,
       attrs: ConnectionAttributes,
     ): IConnection =
-        software.amazon.awscdk.services.events.Connection.fromConnectionAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(ConnectionAttributes::unwrap)).let(IConnection::wrap)
+        software.amazon.awscdk.services.events.Connection.fromConnectionAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(ConnectionAttributes.Companion::unwrap)).let(IConnection::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f720ca07b7b29643172a6bb242b98f4a00be144d44284f8fa5b19b4a62c17a3c")
@@ -223,7 +223,7 @@ public open class Connection(
       connectionArn: String,
       connectionSecretArn: String,
     ): IConnection =
-        software.amazon.awscdk.services.events.Connection.fromEventBusArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.events.Connection.fromEventBusArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, connectionArn, connectionSecretArn).let(IConnection::wrap)
 
     public operator fun invoke(

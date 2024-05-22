@@ -353,7 +353,7 @@ public interface GraphWidgetProps : MetricWidgetProps {
      * @param left Metrics to display on left Y axis.
      */
     override fun left(left: List<IMetric>) {
-      cdkBuilder.left(left.map(IMetric::unwrap))
+      cdkBuilder.left(left.map(IMetric.Companion::unwrap))
     }
 
     /**
@@ -365,7 +365,7 @@ public interface GraphWidgetProps : MetricWidgetProps {
      * @param leftAnnotations Annotations for the left Y axis.
      */
     override fun leftAnnotations(leftAnnotations: List<HorizontalAnnotation>) {
-      cdkBuilder.leftAnnotations(leftAnnotations.map(HorizontalAnnotation::unwrap))
+      cdkBuilder.leftAnnotations(leftAnnotations.map(HorizontalAnnotation.Companion::unwrap))
     }
 
     /**
@@ -378,7 +378,7 @@ public interface GraphWidgetProps : MetricWidgetProps {
      * @param leftYAxis Left Y axis.
      */
     override fun leftYAxis(leftYAxis: YAxisProps) {
-      cdkBuilder.leftYAxis(leftYAxis.let(YAxisProps::unwrap))
+      cdkBuilder.leftYAxis(leftYAxis.let(YAxisProps.Companion::unwrap))
     }
 
     /**
@@ -393,7 +393,7 @@ public interface GraphWidgetProps : MetricWidgetProps {
      * @param legendPosition Position of the legend.
      */
     override fun legendPosition(legendPosition: LegendPosition) {
-      cdkBuilder.legendPosition(legendPosition.let(LegendPosition::unwrap))
+      cdkBuilder.legendPosition(legendPosition.let(LegendPosition.Companion::unwrap))
     }
 
     /**
@@ -409,7 +409,7 @@ public interface GraphWidgetProps : MetricWidgetProps {
      * This default can be overridden within each metric definition.
      */
     override fun period(period: Duration) {
-      cdkBuilder.period(period.let(Duration::unwrap))
+      cdkBuilder.period(period.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -433,7 +433,7 @@ public interface GraphWidgetProps : MetricWidgetProps {
      * @param right Metrics to display on right Y axis.
      */
     override fun right(right: List<IMetric>) {
-      cdkBuilder.right(right.map(IMetric::unwrap))
+      cdkBuilder.right(right.map(IMetric.Companion::unwrap))
     }
 
     /**
@@ -445,7 +445,7 @@ public interface GraphWidgetProps : MetricWidgetProps {
      * @param rightAnnotations Annotations for the right Y axis.
      */
     override fun rightAnnotations(rightAnnotations: List<HorizontalAnnotation>) {
-      cdkBuilder.rightAnnotations(rightAnnotations.map(HorizontalAnnotation::unwrap))
+      cdkBuilder.rightAnnotations(rightAnnotations.map(HorizontalAnnotation.Companion::unwrap))
     }
 
     /**
@@ -458,7 +458,7 @@ public interface GraphWidgetProps : MetricWidgetProps {
      * @param rightYAxis Right Y axis.
      */
     override fun rightYAxis(rightYAxis: YAxisProps) {
-      cdkBuilder.rightYAxis(rightYAxis.let(YAxisProps::unwrap))
+      cdkBuilder.rightYAxis(rightYAxis.let(YAxisProps.Companion::unwrap))
     }
 
     /**
@@ -512,7 +512,7 @@ public interface GraphWidgetProps : MetricWidgetProps {
      * @param verticalAnnotations Annotations for the X axis.
      */
     override fun verticalAnnotations(verticalAnnotations: List<VerticalAnnotation>) {
-      cdkBuilder.verticalAnnotations(verticalAnnotations.map(VerticalAnnotation::unwrap))
+      cdkBuilder.verticalAnnotations(verticalAnnotations.map(VerticalAnnotation.Companion::unwrap))
     }
 
     /**
@@ -525,7 +525,7 @@ public interface GraphWidgetProps : MetricWidgetProps {
      * @param view Display this metric.
      */
     override fun view(view: GraphWidgetView) {
-      cdkBuilder.view(view.let(GraphWidgetView::unwrap))
+      cdkBuilder.view(view.let(GraphWidgetView.Companion::unwrap))
     }
 
     /**

@@ -33,7 +33,7 @@ public interface ICfnResourceOptions {
    * there is no need to use it in CDK projects.
    */
   public fun condition(`value`: CfnCondition) {
-    unwrap(this).setCondition(`value`.let(CfnCondition::unwrap))
+    unwrap(this).setCondition(`value`.let(CfnCondition.Companion::unwrap))
   }
 
   /**
@@ -60,7 +60,7 @@ public interface ICfnResourceOptions {
    * to the stack events so that you track the number of signals sent.
    */
   public fun creationPolicy(`value`: CfnCreationPolicy) {
-    unwrap(this).setCreationPolicy(`value`.let(CfnCreationPolicy::unwrap))
+    unwrap(this).setCreationPolicy(`value`.let(CfnCreationPolicy.Companion::unwrap))
   }
 
   /**
@@ -102,7 +102,7 @@ public interface ICfnResourceOptions {
    * that lead to resources being removed.
    */
   public fun deletionPolicy(`value`: CfnDeletionPolicy) {
-    unwrap(this).setDeletionPolicy(`value`.let(CfnDeletionPolicy::unwrap))
+    unwrap(this).setDeletionPolicy(`value`.let(CfnDeletionPolicy.Companion::unwrap))
   }
 
   /**
@@ -165,7 +165,7 @@ public interface ICfnResourceOptions {
    * scheduled action is associated with the Auto Scaling group.
    */
   public fun updatePolicy(`value`: CfnUpdatePolicy) {
-    unwrap(this).setUpdatePolicy(`value`.let(CfnUpdatePolicy::unwrap))
+    unwrap(this).setUpdatePolicy(`value`.let(CfnUpdatePolicy.Companion::unwrap))
   }
 
   /**
@@ -193,7 +193,7 @@ public interface ICfnResourceOptions {
    * instance of a resource when it is replaced during a stack update operation.
    */
   public fun updateReplacePolicy(`value`: CfnDeletionPolicy) {
-    unwrap(this).setUpdateReplacePolicy(`value`.let(CfnDeletionPolicy::unwrap))
+    unwrap(this).setUpdateReplacePolicy(`value`.let(CfnDeletionPolicy.Companion::unwrap))
   }
 
   /**
@@ -238,7 +238,7 @@ public interface ICfnResourceOptions {
      * there is no need to use it in CDK projects.
      */
     override fun condition(`value`: CfnCondition) {
-      unwrap(this).setCondition(`value`.let(CfnCondition::unwrap))
+      unwrap(this).setCondition(`value`.let(CfnCondition.Companion::unwrap))
     }
 
     /**
@@ -265,7 +265,7 @@ public interface ICfnResourceOptions {
      * to the stack events so that you track the number of signals sent.
      */
     override fun creationPolicy(`value`: CfnCreationPolicy) {
-      unwrap(this).setCreationPolicy(`value`.let(CfnCreationPolicy::unwrap))
+      unwrap(this).setCreationPolicy(`value`.let(CfnCreationPolicy.Companion::unwrap))
     }
 
     /**
@@ -307,7 +307,7 @@ public interface ICfnResourceOptions {
      * that lead to resources being removed.
      */
     override fun deletionPolicy(`value`: CfnDeletionPolicy) {
-      unwrap(this).setDeletionPolicy(`value`.let(CfnDeletionPolicy::unwrap))
+      unwrap(this).setDeletionPolicy(`value`.let(CfnDeletionPolicy.Companion::unwrap))
     }
 
     /**
@@ -370,7 +370,7 @@ public interface ICfnResourceOptions {
      * scheduled action is associated with the Auto Scaling group.
      */
     override fun updatePolicy(`value`: CfnUpdatePolicy) {
-      unwrap(this).setUpdatePolicy(`value`.let(CfnUpdatePolicy::unwrap))
+      unwrap(this).setUpdatePolicy(`value`.let(CfnUpdatePolicy.Companion::unwrap))
     }
 
     /**
@@ -398,7 +398,7 @@ public interface ICfnResourceOptions {
      * physical instance of a resource when it is replaced during a stack update operation.
      */
     override fun updateReplacePolicy(`value`: CfnDeletionPolicy) {
-      unwrap(this).setUpdateReplacePolicy(`value`.let(CfnDeletionPolicy::unwrap))
+      unwrap(this).setUpdateReplacePolicy(`value`.let(CfnDeletionPolicy.Companion::unwrap))
     }
 
     /**

@@ -118,7 +118,7 @@ public interface FargateProfileProps : FargateProfileOptions {
      * [disable-awslint:ref-via-interface]
      */
     override fun cluster(cluster: Cluster) {
-      cdkBuilder.cluster(cluster.let(Cluster::unwrap))
+      cdkBuilder.cluster(cluster.let(Cluster.Companion::unwrap))
     }
 
     /**
@@ -136,7 +136,7 @@ public interface FargateProfileProps : FargateProfileOptions {
      * ECR image repositories.
      */
     override fun podExecutionRole(podExecutionRole: IRole) {
-      cdkBuilder.podExecutionRole(podExecutionRole.let(IRole::unwrap))
+      cdkBuilder.podExecutionRole(podExecutionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -148,7 +148,7 @@ public interface FargateProfileProps : FargateProfileOptions {
      * At least one selector is required and you may specify up to five selectors.
      */
     override fun selectors(selectors: List<Selector>) {
-      cdkBuilder.selectors(selectors.map(Selector::unwrap))
+      cdkBuilder.selectors(selectors.map(Selector.Companion::unwrap))
     }
 
     /**
@@ -170,7 +170,7 @@ public interface FargateProfileProps : FargateProfileOptions {
      * You must specify the VPC to customize the subnet selection
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -192,7 +192,7 @@ public interface FargateProfileProps : FargateProfileOptions {
      * `subnetSelection`.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.eks.FargateProfileProps = cdkBuilder.build()

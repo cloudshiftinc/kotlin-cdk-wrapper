@@ -50,8 +50,8 @@ public open class CfnPolicyStore(
     id: String,
     props: CfnPolicyStoreProps,
   ) :
-      this(software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPolicyStoreProps::unwrap))
+      this(software.amazon.awscdk.services.verifiedpermissions.CfnPolicyStore(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPolicyStoreProps.Companion::unwrap))
   )
 
   public constructor(
@@ -91,7 +91,7 @@ public open class CfnPolicyStore(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -103,14 +103,14 @@ public open class CfnPolicyStore(
    * Creates or updates the policy schema in a policy store.
    */
   public open fun schema(`value`: IResolvable) {
-    unwrap(this).setSchema(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSchema(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Creates or updates the policy schema in a policy store.
    */
   public open fun schema(`value`: SchemaDefinitionProperty) {
-    unwrap(this).setSchema(`value`.let(SchemaDefinitionProperty::unwrap))
+    unwrap(this).setSchema(`value`.let(SchemaDefinitionProperty.Companion::unwrap))
   }
 
   /**
@@ -130,14 +130,14 @@ public open class CfnPolicyStore(
    * Specifies the validation setting for this policy store.
    */
   public open fun validationSettings(`value`: IResolvable) {
-    unwrap(this).setValidationSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setValidationSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the validation setting for this policy store.
    */
   public open fun validationSettings(`value`: ValidationSettingsProperty) {
-    unwrap(this).setValidationSettings(`value`.let(ValidationSettingsProperty::unwrap))
+    unwrap(this).setValidationSettings(`value`.let(ValidationSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -299,7 +299,7 @@ public open class CfnPolicyStore(
      * @param schema Creates or updates the policy schema in a policy store. 
      */
     override fun schema(schema: IResolvable) {
-      cdkBuilder.schema(schema.let(IResolvable::unwrap))
+      cdkBuilder.schema(schema.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -314,7 +314,7 @@ public open class CfnPolicyStore(
      * @param schema Creates or updates the policy schema in a policy store. 
      */
     override fun schema(schema: SchemaDefinitionProperty) {
-      cdkBuilder.schema(schema.let(SchemaDefinitionProperty::unwrap))
+      cdkBuilder.schema(schema.let(SchemaDefinitionProperty.Companion::unwrap))
     }
 
     /**
@@ -352,7 +352,7 @@ public open class CfnPolicyStore(
      * @param validationSettings Specifies the validation setting for this policy store. 
      */
     override fun validationSettings(validationSettings: IResolvable) {
-      cdkBuilder.validationSettings(validationSettings.let(IResolvable::unwrap))
+      cdkBuilder.validationSettings(validationSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -374,7 +374,7 @@ public open class CfnPolicyStore(
      * @param validationSettings Specifies the validation setting for this policy store. 
      */
     override fun validationSettings(validationSettings: ValidationSettingsProperty) {
-      cdkBuilder.validationSettings(validationSettings.let(ValidationSettingsProperty::unwrap))
+      cdkBuilder.validationSettings(validationSettings.let(ValidationSettingsProperty.Companion::unwrap))
     }
 
     /**

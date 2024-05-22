@@ -66,7 +66,7 @@ public interface VirtualRouterBaseProps {
      * @param listeners Listener specification for the VirtualRouter.
      */
     override fun listeners(listeners: List<VirtualRouterListener>) {
-      cdkBuilder.listeners(listeners.map(VirtualRouterListener::unwrap))
+      cdkBuilder.listeners(listeners.map(VirtualRouterListener.Companion::unwrap))
     }
 
     /**

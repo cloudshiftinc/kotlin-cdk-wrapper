@@ -44,8 +44,8 @@ public open class CfnMountTarget(
     id: String,
     props: CfnMountTargetProps,
   ) :
-      this(software.amazon.awscdk.services.efs.CfnMountTarget(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMountTargetProps::unwrap))
+      this(software.amazon.awscdk.services.efs.CfnMountTarget(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMountTargetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -87,7 +87,7 @@ public open class CfnMountTarget(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

@@ -49,7 +49,7 @@ public interface CfnConditionProps {
      * @param expression The expression that the condition will evaluate.
      */
     override fun expression(expression: ICfnConditionExpression) {
-      cdkBuilder.expression(expression.let(ICfnConditionExpression::unwrap))
+      cdkBuilder.expression(expression.let(ICfnConditionExpression.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.CfnConditionProps = cdkBuilder.build()

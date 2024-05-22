@@ -38,7 +38,7 @@ public open class Tag(
     key: String,
     `value`: String,
     props: TagProps,
-  ) : this(software.amazon.awscdk.Tag(key, `value`, props.let(TagProps::unwrap))
+  ) : this(software.amazon.awscdk.Tag(key, `value`, props.let(TagProps.Companion::unwrap))
   )
 
   public constructor(
@@ -64,7 +64,7 @@ public open class Tag(
    * @param construct 
    */
   public override fun visit(construct: IConstruct) {
-    unwrap(this).visit(construct.let(IConstruct::unwrap))
+    unwrap(this).visit(construct.let(IConstruct.Companion::unwrap))
   }
 
   /**

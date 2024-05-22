@@ -59,8 +59,8 @@ public open class StepScalingPolicy(
     id: String,
     props: StepScalingPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.autoscaling.StepScalingPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(StepScalingPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.autoscaling.StepScalingPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(StepScalingPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -236,7 +236,7 @@ public open class StepScalingPolicy(
      * @param adjustmentType How the adjustment numbers inside 'intervals' are interpreted. 
      */
     override fun adjustmentType(adjustmentType: AdjustmentType) {
-      cdkBuilder.adjustmentType(adjustmentType.let(AdjustmentType::unwrap))
+      cdkBuilder.adjustmentType(adjustmentType.let(AdjustmentType.Companion::unwrap))
     }
 
     /**
@@ -245,7 +245,7 @@ public open class StepScalingPolicy(
      * @param autoScalingGroup The auto scaling group. 
      */
     override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
-      cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup::unwrap))
+      cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup.Companion::unwrap))
     }
 
     /**
@@ -256,7 +256,7 @@ public open class StepScalingPolicy(
      * @param cooldown Grace period after scaling activity. 
      */
     override fun cooldown(cooldown: Duration) {
-      cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
+      cdkBuilder.cooldown(cooldown.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -287,7 +287,7 @@ public open class StepScalingPolicy(
      * metrics to CloudWatch. 
      */
     override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
-      cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup.let(Duration::unwrap))
+      cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -314,7 +314,7 @@ public open class StepScalingPolicy(
      * @param metric Metric to scale on. 
      */
     override fun metric(metric: IMetric) {
-      cdkBuilder.metric(metric.let(IMetric::unwrap))
+      cdkBuilder.metric(metric.let(IMetric.Companion::unwrap))
     }
 
     /**
@@ -329,7 +329,7 @@ public open class StepScalingPolicy(
      * periods. 
      */
     override fun metricAggregationType(metricAggregationType: MetricAggregationType) {
-      cdkBuilder.metricAggregationType(metricAggregationType.let(MetricAggregationType::unwrap))
+      cdkBuilder.metricAggregationType(metricAggregationType.let(MetricAggregationType.Companion::unwrap))
     }
 
     /**
@@ -357,7 +357,7 @@ public open class StepScalingPolicy(
      * @param scalingSteps The intervals for scaling. 
      */
     override fun scalingSteps(scalingSteps: List<ScalingInterval>) {
-      cdkBuilder.scalingSteps(scalingSteps.map(ScalingInterval::unwrap))
+      cdkBuilder.scalingSteps(scalingSteps.map(ScalingInterval.Companion::unwrap))
     }
 
     /**

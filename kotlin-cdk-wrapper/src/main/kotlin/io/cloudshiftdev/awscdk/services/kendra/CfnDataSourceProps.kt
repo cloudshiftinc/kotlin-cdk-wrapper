@@ -649,7 +649,7 @@ public interface CfnDataSourceProps {
      */
     override
         fun customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration: IResolvable) {
-      cdkBuilder.customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -658,7 +658,7 @@ public interface CfnDataSourceProps {
      */
     override
         fun customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration: CfnDataSource.CustomDocumentEnrichmentConfigurationProperty) {
-      cdkBuilder.customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration.let(CfnDataSource.CustomDocumentEnrichmentConfigurationProperty::unwrap))
+      cdkBuilder.customDocumentEnrichmentConfiguration(customDocumentEnrichmentConfiguration.let(CfnDataSource.CustomDocumentEnrichmentConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -683,7 +683,7 @@ public interface CfnDataSourceProps {
      * The `Configuration` parameter is required for all other data sources.
      */
     override fun dataSourceConfiguration(dataSourceConfiguration: IResolvable) {
-      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -698,7 +698,7 @@ public interface CfnDataSourceProps {
      */
     override
         fun dataSourceConfiguration(dataSourceConfiguration: CfnDataSource.DataSourceConfigurationProperty) {
-      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(CfnDataSource.DataSourceConfigurationProperty::unwrap))
+      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(CfnDataSource.DataSourceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -777,7 +777,7 @@ public interface CfnDataSourceProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

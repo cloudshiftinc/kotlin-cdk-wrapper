@@ -242,7 +242,7 @@ public interface CfnListenerRuleProps {
      * is for an HTTPS listener, it can also optionally include an authentication action.
      */
     override fun actions(actions: IResolvable) {
-      cdkBuilder.actions(actions.let(IResolvable::unwrap))
+      cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -271,7 +271,7 @@ public interface CfnListenerRuleProps {
      * `query-string` .
      */
     override fun conditions(conditions: IResolvable) {
-      cdkBuilder.conditions(conditions.let(IResolvable::unwrap))
+      cdkBuilder.conditions(conditions.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -89,21 +89,21 @@ public interface AppsyncFunctionProps : BaseAppsyncFunctionProps {
      * @param api the GraphQL Api linked to this AppSync Function. 
      */
     override fun api(api: IGraphqlApi) {
-      cdkBuilder.api(api.let(IGraphqlApi::unwrap))
+      cdkBuilder.api(api.let(IGraphqlApi.Companion::unwrap))
     }
 
     /**
      * @param code The function code.
      */
     override fun code(code: Code) {
-      cdkBuilder.code(code.let(Code::unwrap))
+      cdkBuilder.code(code.let(Code.Companion::unwrap))
     }
 
     /**
      * @param dataSource the data source linked to this AppSync Function. 
      */
     override fun dataSource(dataSource: BaseDataSource) {
-      cdkBuilder.dataSource(dataSource.let(BaseDataSource::unwrap))
+      cdkBuilder.dataSource(dataSource.let(BaseDataSource.Companion::unwrap))
     }
 
     /**
@@ -124,21 +124,21 @@ public interface AppsyncFunctionProps : BaseAppsyncFunctionProps {
      * @param requestMappingTemplate the request mapping template for the AppSync Function.
      */
     override fun requestMappingTemplate(requestMappingTemplate: MappingTemplate) {
-      cdkBuilder.requestMappingTemplate(requestMappingTemplate.let(MappingTemplate::unwrap))
+      cdkBuilder.requestMappingTemplate(requestMappingTemplate.let(MappingTemplate.Companion::unwrap))
     }
 
     /**
      * @param responseMappingTemplate the response mapping template for the AppSync Function.
      */
     override fun responseMappingTemplate(responseMappingTemplate: MappingTemplate) {
-      cdkBuilder.responseMappingTemplate(responseMappingTemplate.let(MappingTemplate::unwrap))
+      cdkBuilder.responseMappingTemplate(responseMappingTemplate.let(MappingTemplate.Companion::unwrap))
     }
 
     /**
      * @param runtime The functions runtime.
      */
     override fun runtime(runtime: FunctionRuntime) {
-      cdkBuilder.runtime(runtime.let(FunctionRuntime::unwrap))
+      cdkBuilder.runtime(runtime.let(FunctionRuntime.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appsync.AppsyncFunctionProps =

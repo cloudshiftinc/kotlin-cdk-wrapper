@@ -164,7 +164,7 @@ public interface CfnDatasetProps {
      * required.
      */
     override fun datasetImportJob(datasetImportJob: IResolvable) {
-      cdkBuilder.datasetImportJob(datasetImportJob.let(IResolvable::unwrap))
+      cdkBuilder.datasetImportJob(datasetImportJob.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -174,7 +174,7 @@ public interface CfnDatasetProps {
      * required.
      */
     override fun datasetImportJob(datasetImportJob: CfnDataset.DatasetImportJobProperty) {
-      cdkBuilder.datasetImportJob(datasetImportJob.let(CfnDataset.DatasetImportJobProperty::unwrap))
+      cdkBuilder.datasetImportJob(datasetImportJob.let(CfnDataset.DatasetImportJobProperty.Companion::unwrap))
     }
 
     /**

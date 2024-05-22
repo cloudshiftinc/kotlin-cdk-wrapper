@@ -11,7 +11,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Virtual Deliverablity Manager (VDM) attributes.
+ * Virtual Deliverability Manager (VDM) attributes.
  *
  * Example:
  *
@@ -25,7 +25,7 @@ public open class VdmAttributes(
   cdkObject: software.amazon.awscdk.services.ses.VdmAttributes,
 ) : Resource(cdkObject), IVdmAttributes {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ses.VdmAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ses.VdmAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -34,8 +34,8 @@ public open class VdmAttributes(
     id: String,
     props: VdmAttributesProps,
   ) :
-      this(software.amazon.awscdk.services.ses.VdmAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(VdmAttributesProps::unwrap))
+      this(software.amazon.awscdk.services.ses.VdmAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(VdmAttributesProps.Companion::unwrap))
   )
 
   public constructor(
@@ -46,12 +46,12 @@ public open class VdmAttributes(
   )
 
   /**
-   * The name of the resource behind the Virtual Deliverablity Manager attributes.
+   * The name of the resource behind the Virtual Deliverability Manager attributes.
    */
   public override fun vdmAttributesName(): String = unwrap(this).getVdmAttributesName()
 
   /**
-   * Resource ID for the Virtual Deliverablity Manager attributes.
+   * Resource ID for the Virtual Deliverability Manager attributes.
    */
   public open fun vdmAttributesResourceId(): String = unwrap(this).getVdmAttributesResourceId()
 
@@ -119,7 +119,7 @@ public open class VdmAttributes(
       id: String,
       vdmAttributesName: String,
     ): IVdmAttributes =
-        software.amazon.awscdk.services.ses.VdmAttributes.fromVdmAttributesName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ses.VdmAttributes.fromVdmAttributesName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, vdmAttributesName).let(IVdmAttributes::wrap)
 
     public operator fun invoke(

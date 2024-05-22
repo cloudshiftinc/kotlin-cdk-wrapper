@@ -284,7 +284,7 @@ public interface ResponseHeadersCorsBehavior {
      * Access-Control-Max-Age HTTP response header.
      */
     override fun accessControlMaxAge(accessControlMaxAge: Duration) {
-      cdkBuilder.accessControlMaxAge(accessControlMaxAge.let(Duration::unwrap))
+      cdkBuilder.accessControlMaxAge(accessControlMaxAge.let(Duration.Companion::unwrap))
     }
 
     /**

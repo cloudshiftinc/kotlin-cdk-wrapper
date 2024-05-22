@@ -108,7 +108,7 @@ public interface TrafficRoutingConfig {
      * function or ECS task set to another in two increments.
      */
     override fun timeBasedCanary(timeBasedCanary: CanaryTrafficRoutingConfig) {
-      cdkBuilder.timeBasedCanary(timeBasedCanary.let(CanaryTrafficRoutingConfig::unwrap))
+      cdkBuilder.timeBasedCanary(timeBasedCanary.let(CanaryTrafficRoutingConfig.Companion::unwrap))
     }
 
     /**
@@ -126,7 +126,7 @@ public interface TrafficRoutingConfig {
      * between each increment.
      */
     override fun timeBasedLinear(timeBasedLinear: LinearTrafficRoutingConfig) {
-      cdkBuilder.timeBasedLinear(timeBasedLinear.let(LinearTrafficRoutingConfig::unwrap))
+      cdkBuilder.timeBasedLinear(timeBasedLinear.let(LinearTrafficRoutingConfig.Companion::unwrap))
     }
 
     /**

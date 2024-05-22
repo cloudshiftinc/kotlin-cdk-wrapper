@@ -41,7 +41,7 @@ public open class EfsVolume(
   cdkObject: software.amazon.awscdk.services.batch.EfsVolume,
 ) : EcsVolume(cdkObject) {
   public constructor(options: EfsVolumeOptions) :
-      this(software.amazon.awscdk.services.batch.EfsVolume(options.let(EfsVolumeOptions::unwrap))
+      this(software.amazon.awscdk.services.batch.EfsVolume(options.let(EfsVolumeOptions.Companion::unwrap))
   )
 
   public constructor(options: EfsVolumeOptions.Builder.() -> Unit) : this(EfsVolumeOptions(options)
@@ -264,7 +264,7 @@ public open class EfsVolume(
      * @param fileSystem The EFS File System that supports this volume. 
      */
     override fun fileSystem(fileSystem: IFileSystem) {
-      cdkBuilder.fileSystem(fileSystem.let(IFileSystem::unwrap))
+      cdkBuilder.fileSystem(fileSystem.let(IFileSystem.Companion::unwrap))
     }
 
     /**

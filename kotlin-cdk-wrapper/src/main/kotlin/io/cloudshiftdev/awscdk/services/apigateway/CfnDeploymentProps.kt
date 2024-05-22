@@ -190,7 +190,7 @@ public interface CfnDeploymentProps {
      * @param deploymentCanarySettings The input configuration for a canary deployment.
      */
     override fun deploymentCanarySettings(deploymentCanarySettings: IResolvable) {
-      cdkBuilder.deploymentCanarySettings(deploymentCanarySettings.let(IResolvable::unwrap))
+      cdkBuilder.deploymentCanarySettings(deploymentCanarySettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -198,7 +198,7 @@ public interface CfnDeploymentProps {
      */
     override
         fun deploymentCanarySettings(deploymentCanarySettings: CfnDeployment.DeploymentCanarySettingsProperty) {
-      cdkBuilder.deploymentCanarySettings(deploymentCanarySettings.let(CfnDeployment.DeploymentCanarySettingsProperty::unwrap))
+      cdkBuilder.deploymentCanarySettings(deploymentCanarySettings.let(CfnDeployment.DeploymentCanarySettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -231,7 +231,7 @@ public interface CfnDeploymentProps {
      * To specify a stage description, you must also provide a stage name.
      */
     override fun stageDescription(stageDescription: IResolvable) {
-      cdkBuilder.stageDescription(stageDescription.let(IResolvable::unwrap))
+      cdkBuilder.stageDescription(stageDescription.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -240,7 +240,7 @@ public interface CfnDeploymentProps {
      * To specify a stage description, you must also provide a stage name.
      */
     override fun stageDescription(stageDescription: CfnDeployment.StageDescriptionProperty) {
-      cdkBuilder.stageDescription(stageDescription.let(CfnDeployment.StageDescriptionProperty::unwrap))
+      cdkBuilder.stageDescription(stageDescription.let(CfnDeployment.StageDescriptionProperty.Companion::unwrap))
     }
 
     /**

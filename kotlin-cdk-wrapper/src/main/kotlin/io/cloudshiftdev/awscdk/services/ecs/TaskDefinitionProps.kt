@@ -155,8 +155,12 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
    * The process namespace to use for the containers in the task.
    *
    * Only supported for tasks that are hosted on AWS Fargate if the tasks
-   * are using platform version 1.4.0 or later (Linux).
-   * Not supported in Windows containers.
+   * are using platform version 1.4.0 or later (Linux). Only the TASK option
+   * is supported for Linux-based Fargate containers. Not supported in Windows
+   * containers. If pidMode is specified for a Fargate task, then
+   * runtimePlatform.operatingSystemFamily must also be specified.  For more
+   * information, see [Task Definition
+   * Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_definition_pidmode).
    *
    * Default: - PidMode used by the task is not specified
    */
@@ -300,8 +304,12 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
     /**
      * @param pidMode The process namespace to use for the containers in the task.
      * Only supported for tasks that are hosted on AWS Fargate if the tasks
-     * are using platform version 1.4.0 or later (Linux).
-     * Not supported in Windows containers.
+     * are using platform version 1.4.0 or later (Linux). Only the TASK option
+     * is supported for Linux-based Fargate containers. Not supported in Windows
+     * containers. If pidMode is specified for a Fargate task, then
+     * runtimePlatform.operatingSystemFamily must also be specified.  For more
+     * information, see [Task Definition
+     * Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_definition_pidmode).
      */
     public fun pidMode(pidMode: PidMode)
 
@@ -373,7 +381,7 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
      * @param compatibility The task launch type compatiblity requirement. 
      */
     override fun compatibility(compatibility: Compatibility) {
-      cdkBuilder.compatibility(compatibility.let(Compatibility::unwrap))
+      cdkBuilder.compatibility(compatibility.let(Compatibility.Companion::unwrap))
     }
 
     /**
@@ -421,7 +429,7 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
      * The role will be used to retrieve container images from ECR and create CloudWatch log groups.
      */
     override fun executionRole(executionRole: IRole) {
-      cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
+      cdkBuilder.executionRole(executionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -438,7 +446,7 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
      * Not supported in Fargate.
      */
     override fun inferenceAccelerators(inferenceAccelerators: List<InferenceAccelerator>) {
-      cdkBuilder.inferenceAccelerators(inferenceAccelerators.map(InferenceAccelerator::unwrap))
+      cdkBuilder.inferenceAccelerators(inferenceAccelerators.map(InferenceAccelerator.Companion::unwrap))
     }
 
     /**
@@ -454,7 +462,7 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
      * Not supported in Fargate and Windows containers.
      */
     override fun ipcMode(ipcMode: IpcMode) {
-      cdkBuilder.ipcMode(ipcMode.let(IpcMode::unwrap))
+      cdkBuilder.ipcMode(ipcMode.let(IpcMode.Companion::unwrap))
     }
 
     /**
@@ -492,17 +500,21 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
      * On Fargate, the only supported networking mode is AwsVpc.
      */
     override fun networkMode(networkMode: NetworkMode) {
-      cdkBuilder.networkMode(networkMode.let(NetworkMode::unwrap))
+      cdkBuilder.networkMode(networkMode.let(NetworkMode.Companion::unwrap))
     }
 
     /**
      * @param pidMode The process namespace to use for the containers in the task.
      * Only supported for tasks that are hosted on AWS Fargate if the tasks
-     * are using platform version 1.4.0 or later (Linux).
-     * Not supported in Windows containers.
+     * are using platform version 1.4.0 or later (Linux). Only the TASK option
+     * is supported for Linux-based Fargate containers. Not supported in Windows
+     * containers. If pidMode is specified for a Fargate task, then
+     * runtimePlatform.operatingSystemFamily must also be specified.  For more
+     * information, see [Task Definition
+     * Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_definition_pidmode).
      */
     override fun pidMode(pidMode: PidMode) {
-      cdkBuilder.pidMode(pidMode.let(PidMode::unwrap))
+      cdkBuilder.pidMode(pidMode.let(PidMode.Companion::unwrap))
     }
 
     /**
@@ -513,7 +525,7 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
      * Not supported in Fargate.
      */
     override fun placementConstraints(placementConstraints: List<PlacementConstraint>) {
-      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint::unwrap))
+      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint.Companion::unwrap))
     }
 
     /**
@@ -530,7 +542,7 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
      * @param proxyConfiguration The configuration details for the App Mesh proxy.
      */
     override fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
-      cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfiguration::unwrap))
+      cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfiguration.Companion::unwrap))
     }
 
     /**
@@ -538,7 +550,7 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
      * A runtimePlatform is supported only for tasks using the Fargate launch type.
      */
     override fun runtimePlatform(runtimePlatform: RuntimePlatform) {
-      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform::unwrap))
+      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform.Companion::unwrap))
     }
 
     /**
@@ -555,7 +567,7 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
      * call AWS APIs on your behalf.
      */
     override fun taskRole(taskRole: IRole) {
-      cdkBuilder.taskRole(taskRole.let(IRole::unwrap))
+      cdkBuilder.taskRole(taskRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -565,7 +577,7 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
      * Volumes](https://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html#volumes).
      */
     override fun volumes(volumes: List<Volume>) {
-      cdkBuilder.volumes(volumes.map(Volume::unwrap))
+      cdkBuilder.volumes(volumes.map(Volume.Companion::unwrap))
     }
 
     /**
@@ -711,8 +723,12 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
      * The process namespace to use for the containers in the task.
      *
      * Only supported for tasks that are hosted on AWS Fargate if the tasks
-     * are using platform version 1.4.0 or later (Linux).
-     * Not supported in Windows containers.
+     * are using platform version 1.4.0 or later (Linux). Only the TASK option
+     * is supported for Linux-based Fargate containers. Not supported in Windows
+     * containers. If pidMode is specified for a Fargate task, then
+     * runtimePlatform.operatingSystemFamily must also be specified.  For more
+     * information, see [Task Definition
+     * Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_definition_pidmode).
      *
      * Default: - PidMode used by the task is not specified
      */

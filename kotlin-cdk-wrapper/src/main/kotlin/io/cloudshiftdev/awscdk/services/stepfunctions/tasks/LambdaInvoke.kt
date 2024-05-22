@@ -50,8 +50,8 @@ public open class LambdaInvoke(
     id: String,
     props: LambdaInvokeProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvoke(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(LambdaInvokeProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvoke(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(LambdaInvokeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -267,8 +267,9 @@ public open class LambdaInvoke(
     /**
      * Whether to retry on Lambda service exceptions.
      *
-     * This handles `Lambda.ServiceException`, `Lambda.AWSLambdaException` and
-     * `Lambda.SdkClientException` with an interval of 2 seconds, a back-off rate
+     * This handles `Lambda.ServiceException`, `Lambda.AWSLambdaException`,
+     * `Lambda.SdkClientException`, and `Lambda.ClientExecutionTimeoutException`
+     * with an interval of 2 seconds, a back-off rate
      * of 2 and 6 maximum attempts.
      *
      * Default: true
@@ -353,7 +354,7 @@ public open class LambdaInvoke(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -382,7 +383,7 @@ public open class LambdaInvoke(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -396,7 +397,7 @@ public open class LambdaInvoke(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -431,7 +432,7 @@ public open class LambdaInvoke(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -442,7 +443,7 @@ public open class LambdaInvoke(
      * @param invocationType Invocation type of the Lambda function. 
      */
     override fun invocationType(invocationType: LambdaInvocationType) {
-      cdkBuilder.invocationType(invocationType.let(LambdaInvocationType::unwrap))
+      cdkBuilder.invocationType(invocationType.let(LambdaInvocationType.Companion::unwrap))
     }
 
     /**
@@ -451,7 +452,7 @@ public open class LambdaInvoke(
      * @param lambdaFunction Lambda function to invoke. 
      */
     override fun lambdaFunction(lambdaFunction: IFunction) {
-      cdkBuilder.lambdaFunction(lambdaFunction.let(IFunction::unwrap))
+      cdkBuilder.lambdaFunction(lambdaFunction.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -478,7 +479,7 @@ public open class LambdaInvoke(
      * @param payload The JSON that will be supplied as input to the Lambda function. 
      */
     override fun payload(payload: TaskInput) {
-      cdkBuilder.payload(payload.let(TaskInput::unwrap))
+      cdkBuilder.payload(payload.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -550,8 +551,9 @@ public open class LambdaInvoke(
     /**
      * Whether to retry on Lambda service exceptions.
      *
-     * This handles `Lambda.ServiceException`, `Lambda.AWSLambdaException` and
-     * `Lambda.SdkClientException` with an interval of 2 seconds, a back-off rate
+     * This handles `Lambda.ServiceException`, `Lambda.AWSLambdaException`,
+     * `Lambda.SdkClientException`, and `Lambda.ClientExecutionTimeoutException`
+     * with an interval of 2 seconds, a back-off rate
      * of 2 and 6 maximum attempts.
      *
      * Default: true
@@ -585,7 +587,7 @@ public open class LambdaInvoke(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -598,7 +600,7 @@ public open class LambdaInvoke(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.LambdaInvoke =

@@ -126,7 +126,7 @@ public interface VpcEndpointServiceProps {
      * list of one or more ArnPrincipal.
      */
     override fun allowedPrincipals(allowedPrincipals: List<ArnPrincipal>) {
-      cdkBuilder.allowedPrincipals(allowedPrincipals.map(ArnPrincipal::unwrap))
+      cdkBuilder.allowedPrincipals(allowedPrincipals.map(ArnPrincipal.Companion::unwrap))
     }
 
     /**
@@ -152,7 +152,7 @@ public interface VpcEndpointServiceProps {
      */
     override
         fun vpcEndpointServiceLoadBalancers(vpcEndpointServiceLoadBalancers: List<IVpcEndpointServiceLoadBalancer>) {
-      cdkBuilder.vpcEndpointServiceLoadBalancers(vpcEndpointServiceLoadBalancers.map(IVpcEndpointServiceLoadBalancer::unwrap))
+      cdkBuilder.vpcEndpointServiceLoadBalancers(vpcEndpointServiceLoadBalancers.map(IVpcEndpointServiceLoadBalancer.Companion::unwrap))
     }
 
     /**

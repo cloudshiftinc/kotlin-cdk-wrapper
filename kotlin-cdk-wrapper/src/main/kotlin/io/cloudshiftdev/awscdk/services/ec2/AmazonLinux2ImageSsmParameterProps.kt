@@ -157,42 +157,42 @@ public interface AmazonLinux2ImageSsmParameterProps : AmazonLinuxImageSsmParamet
      * @param cpuType CPU Type.
      */
     override fun cpuType(cpuType: AmazonLinuxCpuType) {
-      cdkBuilder.cpuType(cpuType.let(AmazonLinuxCpuType::unwrap))
+      cdkBuilder.cpuType(cpuType.let(AmazonLinuxCpuType.Companion::unwrap))
     }
 
     /**
      * @param edition What edition of Amazon Linux to use.
      */
     override fun edition(edition: AmazonLinuxEdition) {
-      cdkBuilder.edition(edition.let(AmazonLinuxEdition::unwrap))
+      cdkBuilder.edition(edition.let(AmazonLinuxEdition.Companion::unwrap))
     }
 
     /**
      * @param kernel What kernel version of Amazon Linux to use.
      */
     override fun kernel(kernel: AmazonLinux2Kernel) {
-      cdkBuilder.kernel(kernel.let(AmazonLinux2Kernel::unwrap))
+      cdkBuilder.kernel(kernel.let(AmazonLinux2Kernel.Companion::unwrap))
     }
 
     /**
      * @param storage What storage backed image to use.
      */
     override fun storage(storage: AmazonLinuxStorage) {
-      cdkBuilder.storage(storage.let(AmazonLinuxStorage::unwrap))
+      cdkBuilder.storage(storage.let(AmazonLinuxStorage.Companion::unwrap))
     }
 
     /**
      * @param userData Initial user data.
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     /**
      * @param virtualization Virtualization type.
      */
     override fun virtualization(virtualization: AmazonLinuxVirt) {
-      cdkBuilder.virtualization(virtualization.let(AmazonLinuxVirt::unwrap))
+      cdkBuilder.virtualization(virtualization.let(AmazonLinuxVirt.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.AmazonLinux2ImageSsmParameterProps =

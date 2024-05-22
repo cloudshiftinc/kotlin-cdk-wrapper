@@ -56,7 +56,7 @@ public interface SubnetIpamOptions {
      * @param allocatedSubnets CIDR Allocations for Subnets. 
      */
     override fun allocatedSubnets(allocatedSubnets: List<AllocatedSubnet>) {
-      cdkBuilder.allocatedSubnets(allocatedSubnets.map(AllocatedSubnet::unwrap))
+      cdkBuilder.allocatedSubnets(allocatedSubnets.map(AllocatedSubnet.Companion::unwrap))
     }
 
     /**

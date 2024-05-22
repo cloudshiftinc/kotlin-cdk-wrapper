@@ -221,7 +221,7 @@ public interface CfnInAppTemplateProps {
      * behaviors.
      */
     override fun content(content: IResolvable) {
-      cdkBuilder.content(content.let(IResolvable::unwrap))
+      cdkBuilder.content(content.let(IResolvable.Companion::unwrap))
     }
 
     /**

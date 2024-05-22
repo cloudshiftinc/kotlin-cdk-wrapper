@@ -44,8 +44,8 @@ public open class CfnIdentityPoolPrincipalTag(
     id: String,
     props: CfnIdentityPoolPrincipalTagProps,
   ) :
-      this(software.amazon.awscdk.services.cognito.CfnIdentityPoolPrincipalTag(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnIdentityPoolPrincipalTagProps::unwrap))
+      this(software.amazon.awscdk.services.cognito.CfnIdentityPoolPrincipalTag(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnIdentityPoolPrincipalTagProps.Companion::unwrap))
   )
 
   public constructor(
@@ -87,7 +87,7 @@ public open class CfnIdentityPoolPrincipalTag(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -123,7 +123,7 @@ public open class CfnIdentityPoolPrincipalTag(
    * map.
    */
   public open fun useDefaults(`value`: IResolvable) {
-    unwrap(this).setUseDefaults(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUseDefaults(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -252,7 +252,7 @@ public open class CfnIdentityPoolPrincipalTag(
      * instead of a custom map. 
      */
     override fun useDefaults(useDefaults: IResolvable) {
-      cdkBuilder.useDefaults(useDefaults.let(IResolvable::unwrap))
+      cdkBuilder.useDefaults(useDefaults.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cognito.CfnIdentityPoolPrincipalTag =

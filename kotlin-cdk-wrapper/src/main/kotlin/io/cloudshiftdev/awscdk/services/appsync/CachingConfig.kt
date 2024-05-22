@@ -96,7 +96,7 @@ public interface CachingConfig {
      * Valid values are between 1 and 3600 seconds.
      */
     override fun ttl(ttl: Duration) {
-      cdkBuilder.ttl(ttl.let(Duration::unwrap))
+      cdkBuilder.ttl(ttl.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appsync.CachingConfig = cdkBuilder.build()

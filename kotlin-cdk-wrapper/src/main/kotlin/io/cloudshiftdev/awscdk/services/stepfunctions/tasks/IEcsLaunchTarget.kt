@@ -44,8 +44,8 @@ public interface IEcsLaunchTarget {
      * @param launchTargetOptions 
      */
     override fun bind(task: EcsRunTask, launchTargetOptions: LaunchTargetBindOptions):
-        EcsLaunchTargetConfig = unwrap(this).bind(task.let(EcsRunTask::unwrap),
-        launchTargetOptions.let(LaunchTargetBindOptions::unwrap)).let(EcsLaunchTargetConfig::wrap)
+        EcsLaunchTargetConfig = unwrap(this).bind(task.let(EcsRunTask.Companion::unwrap),
+        launchTargetOptions.let(LaunchTargetBindOptions.Companion::unwrap)).let(EcsLaunchTargetConfig::wrap)
 
     /**
      * called when the ECS launch target is configured on RunTask.

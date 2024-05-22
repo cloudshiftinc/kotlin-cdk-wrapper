@@ -129,8 +129,8 @@ public open class CfnVolume(
     id: String,
     props: CfnVolumeProps,
   ) :
-      this(software.amazon.awscdk.services.fsx.CfnVolume(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVolumeProps::unwrap))
+      this(software.amazon.awscdk.services.fsx.CfnVolume(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVolumeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -180,7 +180,7 @@ public open class CfnVolume(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -204,14 +204,14 @@ public open class CfnVolume(
    * The configuration of an Amazon FSx for NetApp ONTAP volume.
    */
   public open fun ontapConfiguration(`value`: IResolvable) {
-    unwrap(this).setOntapConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOntapConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration of an Amazon FSx for NetApp ONTAP volume.
    */
   public open fun ontapConfiguration(`value`: OntapConfigurationProperty) {
-    unwrap(this).setOntapConfiguration(`value`.let(OntapConfigurationProperty::unwrap))
+    unwrap(this).setOntapConfiguration(`value`.let(OntapConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -231,14 +231,14 @@ public open class CfnVolume(
    * The configuration of an Amazon FSx for OpenZFS volume.
    */
   public open fun openZfsConfiguration(`value`: IResolvable) {
-    unwrap(this).setOpenZfsConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOpenZfsConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration of an Amazon FSx for OpenZFS volume.
    */
   public open fun openZfsConfiguration(`value`: OpenZFSConfigurationProperty) {
-    unwrap(this).setOpenZfsConfiguration(`value`.let(OpenZFSConfigurationProperty::unwrap))
+    unwrap(this).setOpenZfsConfiguration(`value`.let(OpenZFSConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -264,7 +264,7 @@ public open class CfnVolume(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -425,7 +425,7 @@ public open class CfnVolume(
      * @param ontapConfiguration The configuration of an Amazon FSx for NetApp ONTAP volume. 
      */
     override fun ontapConfiguration(ontapConfiguration: IResolvable) {
-      cdkBuilder.ontapConfiguration(ontapConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.ontapConfiguration(ontapConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -435,7 +435,7 @@ public open class CfnVolume(
      * @param ontapConfiguration The configuration of an Amazon FSx for NetApp ONTAP volume. 
      */
     override fun ontapConfiguration(ontapConfiguration: OntapConfigurationProperty) {
-      cdkBuilder.ontapConfiguration(ontapConfiguration.let(OntapConfigurationProperty::unwrap))
+      cdkBuilder.ontapConfiguration(ontapConfiguration.let(OntapConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -457,7 +457,7 @@ public open class CfnVolume(
      * @param openZfsConfiguration The configuration of an Amazon FSx for OpenZFS volume. 
      */
     override fun openZfsConfiguration(openZfsConfiguration: IResolvable) {
-      cdkBuilder.openZfsConfiguration(openZfsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.openZfsConfiguration(openZfsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -467,7 +467,7 @@ public open class CfnVolume(
      * @param openZfsConfiguration The configuration of an Amazon FSx for OpenZFS volume. 
      */
     override fun openZfsConfiguration(openZfsConfiguration: OpenZFSConfigurationProperty) {
-      cdkBuilder.openZfsConfiguration(openZfsConfiguration.let(OpenZFSConfigurationProperty::unwrap))
+      cdkBuilder.openZfsConfiguration(openZfsConfiguration.let(OpenZFSConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -493,7 +493,7 @@ public open class CfnVolume(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1166,7 +1166,7 @@ public open class CfnVolume(
        * options for mounting the OpenZFS file system. 
        */
       override fun clientConfigurations(clientConfigurations: IResolvable) {
-        cdkBuilder.clientConfigurations(clientConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.clientConfigurations(clientConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1672,7 +1672,7 @@ public open class CfnVolume(
        * ONTAP volume's storage aggregate or aggregates.
        */
       override fun aggregateConfiguration(aggregateConfiguration: IResolvable) {
-        cdkBuilder.aggregateConfiguration(aggregateConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.aggregateConfiguration(aggregateConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1680,7 +1680,7 @@ public open class CfnVolume(
        * ONTAP volume's storage aggregate or aggregates.
        */
       override fun aggregateConfiguration(aggregateConfiguration: AggregateConfigurationProperty) {
-        cdkBuilder.aggregateConfiguration(aggregateConfiguration.let(AggregateConfigurationProperty::unwrap))
+        cdkBuilder.aggregateConfiguration(aggregateConfiguration.let(AggregateConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1776,7 +1776,7 @@ public open class CfnVolume(
        * SnapLock volume.
        */
       override fun snaplockConfiguration(snaplockConfiguration: IResolvable) {
-        cdkBuilder.snaplockConfiguration(snaplockConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.snaplockConfiguration(snaplockConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1784,7 +1784,7 @@ public open class CfnVolume(
        * SnapLock volume.
        */
       override fun snaplockConfiguration(snaplockConfiguration: SnaplockConfigurationProperty) {
-        cdkBuilder.snaplockConfiguration(snaplockConfiguration.let(SnaplockConfigurationProperty::unwrap))
+        cdkBuilder.snaplockConfiguration(snaplockConfiguration.let(SnaplockConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1854,7 +1854,7 @@ public open class CfnVolume(
        * moved to the capacity pool tier.
        */
       override fun tieringPolicy(tieringPolicy: IResolvable) {
-        cdkBuilder.tieringPolicy(tieringPolicy.let(IResolvable::unwrap))
+        cdkBuilder.tieringPolicy(tieringPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1874,7 +1874,7 @@ public open class CfnVolume(
        * moved to the capacity pool tier.
        */
       override fun tieringPolicy(tieringPolicy: TieringPolicyProperty) {
-        cdkBuilder.tieringPolicy(tieringPolicy.let(TieringPolicyProperty::unwrap))
+        cdkBuilder.tieringPolicy(tieringPolicy.let(TieringPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -2451,7 +2451,7 @@ public open class CfnVolume(
        * tags when creating the snapshot, no tags are copied from the volume, regardless of this value.
        */
       override fun copyTagsToSnapshots(copyTagsToSnapshots: IResolvable) {
-        cdkBuilder.copyTagsToSnapshots(copyTagsToSnapshots.let(IResolvable::unwrap))
+        cdkBuilder.copyTagsToSnapshots(copyTagsToSnapshots.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2473,7 +2473,7 @@ public open class CfnVolume(
        * system.
        */
       override fun nfsExports(nfsExports: IResolvable) {
-        cdkBuilder.nfsExports(nfsExports.let(IResolvable::unwrap))
+        cdkBuilder.nfsExports(nfsExports.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2509,7 +2509,7 @@ public open class CfnVolume(
        * origin of the data for the volume.
        */
       override fun originSnapshot(originSnapshot: IResolvable) {
-        cdkBuilder.originSnapshot(originSnapshot.let(IResolvable::unwrap))
+        cdkBuilder.originSnapshot(originSnapshot.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2517,7 +2517,7 @@ public open class CfnVolume(
        * origin of the data for the volume.
        */
       override fun originSnapshot(originSnapshot: OriginSnapshotProperty) {
-        cdkBuilder.originSnapshot(originSnapshot.let(OriginSnapshotProperty::unwrap))
+        cdkBuilder.originSnapshot(originSnapshot.let(OriginSnapshotProperty.Companion::unwrap))
       }
 
       /**
@@ -2548,7 +2548,7 @@ public open class CfnVolume(
        * @param readOnly A Boolean value indicating whether the volume is read-only.
        */
       override fun readOnly(readOnly: IResolvable) {
-        cdkBuilder.readOnly(readOnly.let(IResolvable::unwrap))
+        cdkBuilder.readOnly(readOnly.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2602,7 +2602,7 @@ public open class CfnVolume(
        * volume.
        */
       override fun userAndGroupQuotas(userAndGroupQuotas: IResolvable) {
-        cdkBuilder.userAndGroupQuotas(userAndGroupQuotas.let(IResolvable::unwrap))
+        cdkBuilder.userAndGroupQuotas(userAndGroupQuotas.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3353,7 +3353,7 @@ public open class CfnVolume(
        * in an FSx for ONTAP SnapLock volume.
        */
       override fun autocommitPeriod(autocommitPeriod: IResolvable) {
-        cdkBuilder.autocommitPeriod(autocommitPeriod.let(IResolvable::unwrap))
+        cdkBuilder.autocommitPeriod(autocommitPeriod.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3361,7 +3361,7 @@ public open class CfnVolume(
        * in an FSx for ONTAP SnapLock volume.
        */
       override fun autocommitPeriod(autocommitPeriod: AutocommitPeriodProperty) {
-        cdkBuilder.autocommitPeriod(autocommitPeriod.let(AutocommitPeriodProperty::unwrap))
+        cdkBuilder.autocommitPeriod(autocommitPeriod.let(AutocommitPeriodProperty.Companion::unwrap))
       }
 
       /**
@@ -3393,14 +3393,14 @@ public open class CfnVolume(
        * @param retentionPeriod Specifies the retention period of an FSx for ONTAP SnapLock volume.
        */
       override fun retentionPeriod(retentionPeriod: IResolvable) {
-        cdkBuilder.retentionPeriod(retentionPeriod.let(IResolvable::unwrap))
+        cdkBuilder.retentionPeriod(retentionPeriod.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param retentionPeriod Specifies the retention period of an FSx for ONTAP SnapLock volume.
        */
       override fun retentionPeriod(retentionPeriod: SnaplockRetentionPeriodProperty) {
-        cdkBuilder.retentionPeriod(retentionPeriod.let(SnaplockRetentionPeriodProperty::unwrap))
+        cdkBuilder.retentionPeriod(retentionPeriod.let(SnaplockRetentionPeriodProperty.Companion::unwrap))
       }
 
       /**
@@ -3702,7 +3702,7 @@ public open class CfnVolume(
        * and less than or equal to the maximum retention period.
        */
       override fun defaultRetention(defaultRetention: IResolvable) {
-        cdkBuilder.defaultRetention(defaultRetention.let(IResolvable::unwrap))
+        cdkBuilder.defaultRetention(defaultRetention.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3713,7 +3713,7 @@ public open class CfnVolume(
        * and less than or equal to the maximum retention period.
        */
       override fun defaultRetention(defaultRetention: RetentionPeriodProperty) {
-        cdkBuilder.defaultRetention(defaultRetention.let(RetentionPeriodProperty::unwrap))
+        cdkBuilder.defaultRetention(defaultRetention.let(RetentionPeriodProperty.Companion::unwrap))
       }
 
       /**
@@ -3733,7 +3733,7 @@ public open class CfnVolume(
        * an FSx for ONTAP SnapLock volume. 
        */
       override fun maximumRetention(maximumRetention: IResolvable) {
-        cdkBuilder.maximumRetention(maximumRetention.let(IResolvable::unwrap))
+        cdkBuilder.maximumRetention(maximumRetention.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3741,7 +3741,7 @@ public open class CfnVolume(
        * an FSx for ONTAP SnapLock volume. 
        */
       override fun maximumRetention(maximumRetention: RetentionPeriodProperty) {
-        cdkBuilder.maximumRetention(maximumRetention.let(RetentionPeriodProperty::unwrap))
+        cdkBuilder.maximumRetention(maximumRetention.let(RetentionPeriodProperty.Companion::unwrap))
       }
 
       /**
@@ -3758,7 +3758,7 @@ public open class CfnVolume(
        * on an FSx for ONTAP SnapLock volume. 
        */
       override fun minimumRetention(minimumRetention: IResolvable) {
-        cdkBuilder.minimumRetention(minimumRetention.let(IResolvable::unwrap))
+        cdkBuilder.minimumRetention(minimumRetention.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3766,7 +3766,7 @@ public open class CfnVolume(
        * on an FSx for ONTAP SnapLock volume. 
        */
       override fun minimumRetention(minimumRetention: RetentionPeriodProperty) {
-        cdkBuilder.minimumRetention(minimumRetention.let(RetentionPeriodProperty::unwrap))
+        cdkBuilder.minimumRetention(minimumRetention.let(RetentionPeriodProperty.Companion::unwrap))
       }
 
       /**

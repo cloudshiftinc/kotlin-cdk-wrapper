@@ -72,8 +72,8 @@ public open class CfnResolverEndpoint(
     id: String,
     props: CfnResolverEndpointProps,
   ) :
-      this(software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnResolverEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.route53resolver.CfnResolverEndpoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnResolverEndpointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -147,7 +147,7 @@ public open class CfnResolverEndpoint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -161,7 +161,7 @@ public open class CfnResolverEndpoint(
    * endpoints) or that you forward DNS queries to (for inbound endpoints).
    */
   public open fun ipAddresses(`value`: IResolvable) {
-    unwrap(this).setIpAddresses(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIpAddresses(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -284,7 +284,7 @@ public open class CfnResolverEndpoint(
    * Route 53 Resolver doesn't support updating tags through CloudFormation.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -524,7 +524,7 @@ public open class CfnResolverEndpoint(
      * (for outbound endpoints) or that you forward DNS queries to (for inbound endpoints). 
      */
     override fun ipAddresses(ipAddresses: IResolvable) {
-      cdkBuilder.ipAddresses(ipAddresses.let(IResolvable::unwrap))
+      cdkBuilder.ipAddresses(ipAddresses.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -693,7 +693,7 @@ public open class CfnResolverEndpoint(
      * @param tags Route 53 Resolver doesn't support updating tags through CloudFormation. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

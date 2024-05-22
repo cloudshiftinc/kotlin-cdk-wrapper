@@ -44,7 +44,7 @@ public open class Connections(
   )
 
   public constructor(props: ConnectionsProps) :
-      this(software.amazon.awscdk.services.ec2.Connections(props.let(ConnectionsProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.Connections(props.let(ConnectionsProps.Companion::unwrap))
   )
 
   public constructor(props: ConnectionsProps.Builder.() -> Unit) : this(ConnectionsProps(props)
@@ -69,7 +69,7 @@ public open class Connections(
    * @param description
    */
   public open fun allowDefaultPortFrom(other: IConnectable) {
-    unwrap(this).allowDefaultPortFrom(other.let(IConnectable::unwrap))
+    unwrap(this).allowDefaultPortFrom(other.let(IConnectable.Companion::unwrap))
   }
 
   /**
@@ -81,7 +81,7 @@ public open class Connections(
    * @param description
    */
   public open fun allowDefaultPortFrom(other: IConnectable, description: String) {
-    unwrap(this).allowDefaultPortFrom(other.let(IConnectable::unwrap), description)
+    unwrap(this).allowDefaultPortFrom(other.let(IConnectable.Companion::unwrap), description)
   }
 
   /**
@@ -129,7 +129,7 @@ public open class Connections(
    * @param description
    */
   public open fun allowDefaultPortTo(other: IConnectable) {
-    unwrap(this).allowDefaultPortTo(other.let(IConnectable::unwrap))
+    unwrap(this).allowDefaultPortTo(other.let(IConnectable.Companion::unwrap))
   }
 
   /**
@@ -141,7 +141,7 @@ public open class Connections(
    * @param description
    */
   public open fun allowDefaultPortTo(other: IConnectable, description: String) {
-    unwrap(this).allowDefaultPortTo(other.let(IConnectable::unwrap), description)
+    unwrap(this).allowDefaultPortTo(other.let(IConnectable.Companion::unwrap), description)
   }
 
   /**
@@ -152,7 +152,8 @@ public open class Connections(
    * @param description
    */
   public open fun allowFrom(other: IConnectable, portRange: Port) {
-    unwrap(this).allowFrom(other.let(IConnectable::unwrap), portRange.let(Port::unwrap))
+    unwrap(this).allowFrom(other.let(IConnectable.Companion::unwrap),
+        portRange.let(Port.Companion::unwrap))
   }
 
   /**
@@ -179,8 +180,8 @@ public open class Connections(
     portRange: Port,
     description: String,
   ) {
-    unwrap(this).allowFrom(other.let(IConnectable::unwrap), portRange.let(Port::unwrap),
-        description)
+    unwrap(this).allowFrom(other.let(IConnectable.Companion::unwrap),
+        portRange.let(Port.Companion::unwrap), description)
   }
 
   /**
@@ -190,7 +191,7 @@ public open class Connections(
    * @param description
    */
   public open fun allowFromAnyIpv4(portRange: Port) {
-    unwrap(this).allowFromAnyIpv4(portRange.let(Port::unwrap))
+    unwrap(this).allowFromAnyIpv4(portRange.let(Port.Companion::unwrap))
   }
 
   /**
@@ -211,7 +212,7 @@ public open class Connections(
    * @param description
    */
   public open fun allowFromAnyIpv4(portRange: Port, description: String) {
-    unwrap(this).allowFromAnyIpv4(portRange.let(Port::unwrap), description)
+    unwrap(this).allowFromAnyIpv4(portRange.let(Port.Companion::unwrap), description)
   }
 
   /**
@@ -221,7 +222,7 @@ public open class Connections(
    * @param description
    */
   public open fun allowInternally(portRange: Port) {
-    unwrap(this).allowInternally(portRange.let(Port::unwrap))
+    unwrap(this).allowInternally(portRange.let(Port.Companion::unwrap))
   }
 
   /**
@@ -242,7 +243,7 @@ public open class Connections(
    * @param description
    */
   public open fun allowInternally(portRange: Port, description: String) {
-    unwrap(this).allowInternally(portRange.let(Port::unwrap), description)
+    unwrap(this).allowInternally(portRange.let(Port.Companion::unwrap), description)
   }
 
   /**
@@ -253,7 +254,8 @@ public open class Connections(
    * @param description
    */
   public open fun allowTo(other: IConnectable, portRange: Port) {
-    unwrap(this).allowTo(other.let(IConnectable::unwrap), portRange.let(Port::unwrap))
+    unwrap(this).allowTo(other.let(IConnectable.Companion::unwrap),
+        portRange.let(Port.Companion::unwrap))
   }
 
   /**
@@ -280,7 +282,8 @@ public open class Connections(
     portRange: Port,
     description: String,
   ) {
-    unwrap(this).allowTo(other.let(IConnectable::unwrap), portRange.let(Port::unwrap), description)
+    unwrap(this).allowTo(other.let(IConnectable.Companion::unwrap),
+        portRange.let(Port.Companion::unwrap), description)
   }
 
   /**
@@ -290,7 +293,7 @@ public open class Connections(
    * @param description
    */
   public open fun allowToAnyIpv4(portRange: Port) {
-    unwrap(this).allowToAnyIpv4(portRange.let(Port::unwrap))
+    unwrap(this).allowToAnyIpv4(portRange.let(Port.Companion::unwrap))
   }
 
   /**
@@ -311,7 +314,7 @@ public open class Connections(
    * @param description
    */
   public open fun allowToAnyIpv4(portRange: Port, description: String) {
-    unwrap(this).allowToAnyIpv4(portRange.let(Port::unwrap), description)
+    unwrap(this).allowToAnyIpv4(portRange.let(Port.Companion::unwrap), description)
   }
 
   /**
@@ -321,7 +324,7 @@ public open class Connections(
    * @param description
    */
   public open fun allowToDefaultPort(other: IConnectable) {
-    unwrap(this).allowToDefaultPort(other.let(IConnectable::unwrap))
+    unwrap(this).allowToDefaultPort(other.let(IConnectable.Companion::unwrap))
   }
 
   /**
@@ -331,7 +334,7 @@ public open class Connections(
    * @param description
    */
   public open fun allowToDefaultPort(other: IConnectable, description: String) {
-    unwrap(this).allowToDefaultPort(other.let(IConnectable::unwrap), description)
+    unwrap(this).allowToDefaultPort(other.let(IConnectable.Companion::unwrap), description)
   }
 
   /**
@@ -418,7 +421,7 @@ public open class Connections(
      * @param defaultPort Default port range for initiating connections to and from this object. 
      */
     override fun defaultPort(defaultPort: Port) {
-      cdkBuilder.defaultPort(defaultPort.let(Port::unwrap))
+      cdkBuilder.defaultPort(defaultPort.let(Port.Companion::unwrap))
     }
 
     /**
@@ -443,7 +446,7 @@ public open class Connections(
      * @param peer Class that represents the rule by which others can connect to this connectable. 
      */
     override fun peer(peer: IPeer) {
-      cdkBuilder.peer(peer.let(IPeer::unwrap))
+      cdkBuilder.peer(peer.let(IPeer.Companion::unwrap))
     }
 
     /**
@@ -454,7 +457,7 @@ public open class Connections(
      * @param securityGroups What securityGroup(s) this object is managing connections for. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**

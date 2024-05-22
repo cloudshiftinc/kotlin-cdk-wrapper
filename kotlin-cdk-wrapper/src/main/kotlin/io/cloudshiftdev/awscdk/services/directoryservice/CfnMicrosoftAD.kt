@@ -58,8 +58,8 @@ public open class CfnMicrosoftAD(
     id: String,
     props: CfnMicrosoftADProps,
   ) :
-      this(software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMicrosoftADProps::unwrap))
+      this(software.amazon.awscdk.services.directoryservice.CfnMicrosoftAD(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMicrosoftADProps.Companion::unwrap))
   )
 
   public constructor(
@@ -103,7 +103,7 @@ public open class CfnMicrosoftAD(
    * Specifies an alias for a directory and assigns the alias to the directory.
    */
   public open fun createAlias(`value`: IResolvable) {
-    unwrap(this).setCreateAlias(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCreateAlias(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -134,7 +134,7 @@ public open class CfnMicrosoftAD(
    * Whether to enable single sign-on for a Microsoft Active Directory in AWS .
    */
   public open fun enableSso(`value`: IResolvable) {
-    unwrap(this).setEnableSso(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableSso(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -143,7 +143,7 @@ public open class CfnMicrosoftAD(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -195,14 +195,14 @@ public open class CfnMicrosoftAD(
    * Specifies the VPC settings of the Microsoft AD directory server in AWS .
    */
   public open fun vpcSettings(`value`: IResolvable) {
-    unwrap(this).setVpcSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the VPC settings of the Microsoft AD directory server in AWS .
    */
   public open fun vpcSettings(`value`: VpcSettingsProperty) {
-    unwrap(this).setVpcSettings(`value`.let(VpcSettingsProperty::unwrap))
+    unwrap(this).setVpcSettings(`value`.let(VpcSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -391,7 +391,7 @@ public open class CfnMicrosoftAD(
      * 
      */
     override fun createAlias(createAlias: IResolvable) {
-      cdkBuilder.createAlias(createAlias.let(IResolvable::unwrap))
+      cdkBuilder.createAlias(createAlias.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -432,7 +432,7 @@ public open class CfnMicrosoftAD(
      * @param enableSso Whether to enable single sign-on for a Microsoft Active Directory in AWS . 
      */
     override fun enableSso(enableSso: IResolvable) {
-      cdkBuilder.enableSso(enableSso.let(IResolvable::unwrap))
+      cdkBuilder.enableSso(enableSso.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -483,7 +483,7 @@ public open class CfnMicrosoftAD(
      * @param vpcSettings Specifies the VPC settings of the Microsoft AD directory server in AWS . 
      */
     override fun vpcSettings(vpcSettings: IResolvable) {
-      cdkBuilder.vpcSettings(vpcSettings.let(IResolvable::unwrap))
+      cdkBuilder.vpcSettings(vpcSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -493,7 +493,7 @@ public open class CfnMicrosoftAD(
      * @param vpcSettings Specifies the VPC settings of the Microsoft AD directory server in AWS . 
      */
     override fun vpcSettings(vpcSettings: VpcSettingsProperty) {
-      cdkBuilder.vpcSettings(vpcSettings.let(VpcSettingsProperty::unwrap))
+      cdkBuilder.vpcSettings(vpcSettings.let(VpcSettingsProperty.Companion::unwrap))
     }
 
     /**

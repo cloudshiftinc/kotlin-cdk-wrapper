@@ -79,7 +79,7 @@ public interface TagUpdateConstraintOptions : CommonConstraintOptions {
      * Configures the language for error messages from service catalog.
      */
     override fun messageLanguage(messageLanguage: MessageLanguage) {
-      cdkBuilder.messageLanguage(messageLanguage.let(MessageLanguage::unwrap))
+      cdkBuilder.messageLanguage(messageLanguage.let(MessageLanguage.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.servicecatalog.TagUpdateConstraintOptions =

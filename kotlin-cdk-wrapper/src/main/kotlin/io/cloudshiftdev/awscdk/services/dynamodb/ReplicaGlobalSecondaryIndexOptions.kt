@@ -107,7 +107,7 @@ public interface ReplicaGlobalSecondaryIndexOptions {
      * Note: This can only be configured if primary table billing is provisioned.
      */
     override fun readCapacity(readCapacity: Capacity) {
-      cdkBuilder.readCapacity(readCapacity.let(Capacity::unwrap))
+      cdkBuilder.readCapacity(readCapacity.let(Capacity.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.dynamodb.ReplicaGlobalSecondaryIndexOptions

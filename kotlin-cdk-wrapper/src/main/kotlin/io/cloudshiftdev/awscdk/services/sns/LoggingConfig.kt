@@ -96,14 +96,14 @@ public interface LoggingConfig {
      * Amazon CloudWatch.
      */
     override fun failureFeedbackRole(failureFeedbackRole: IRole) {
-      cdkBuilder.failureFeedbackRole(failureFeedbackRole.let(IRole::unwrap))
+      cdkBuilder.failureFeedbackRole(failureFeedbackRole.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param protocol Indicates one of the supported protocols for the SNS topic. 
      */
     override fun protocol(protocol: LoggingProtocol) {
-      cdkBuilder.protocol(protocol.let(LoggingProtocol::unwrap))
+      cdkBuilder.protocol(protocol.let(LoggingProtocol.Companion::unwrap))
     }
 
     /**
@@ -111,7 +111,7 @@ public interface LoggingConfig {
      * in Amazon CloudWatch.
      */
     override fun successFeedbackRole(successFeedbackRole: IRole) {
-      cdkBuilder.successFeedbackRole(successFeedbackRole.let(IRole::unwrap))
+      cdkBuilder.successFeedbackRole(successFeedbackRole.let(IRole.Companion::unwrap))
     }
 
     /**

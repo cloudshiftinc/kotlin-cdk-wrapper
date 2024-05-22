@@ -53,7 +53,7 @@ public interface ISchema {
      * @param options configuration for bind behavior.
      */
     override fun bind(api: IGraphqlApi): ISchemaConfig =
-        unwrap(this).bind(api.let(IGraphqlApi::unwrap)).let(ISchemaConfig::wrap)
+        unwrap(this).bind(api.let(IGraphqlApi.Companion::unwrap)).let(ISchemaConfig::wrap)
 
     /**
      * Binds a schema string to a GraphQlApi.
@@ -63,8 +63,8 @@ public interface ISchema {
      * @param options configuration for bind behavior.
      */
     override fun bind(api: IGraphqlApi, options: SchemaBindOptions): ISchemaConfig =
-        unwrap(this).bind(api.let(IGraphqlApi::unwrap),
-        options.let(SchemaBindOptions::unwrap)).let(ISchemaConfig::wrap)
+        unwrap(this).bind(api.let(IGraphqlApi.Companion::unwrap),
+        options.let(SchemaBindOptions.Companion::unwrap)).let(ISchemaConfig::wrap)
 
     /**
      * Binds a schema string to a GraphQlApi.

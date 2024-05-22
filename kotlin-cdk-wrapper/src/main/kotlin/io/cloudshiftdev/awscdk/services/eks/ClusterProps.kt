@@ -339,7 +339,7 @@ public interface ClusterProps : ClusterOptions {
      * @param albController Install the AWS Load Balancer Controller onto the cluster.
      */
     override fun albController(albController: AlbControllerOptions) {
-      cdkBuilder.albController(albController.let(AlbControllerOptions::unwrap))
+      cdkBuilder.albController(albController.let(AlbControllerOptions.Companion::unwrap))
     }
 
     /**
@@ -359,7 +359,7 @@ public interface ClusterProps : ClusterOptions {
      * ```
      */
     override fun awscliLayer(awscliLayer: ILayerVersion) {
-      cdkBuilder.awscliLayer(awscliLayer.let(ILayerVersion::unwrap))
+      cdkBuilder.awscliLayer(awscliLayer.let(ILayerVersion.Companion::unwrap))
     }
 
     /**
@@ -378,14 +378,14 @@ public interface ClusterProps : ClusterOptions {
      * Requires `placeClusterHandlerInVpc` to be set to true.
      */
     override fun clusterHandlerSecurityGroup(clusterHandlerSecurityGroup: ISecurityGroup) {
-      cdkBuilder.clusterHandlerSecurityGroup(clusterHandlerSecurityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.clusterHandlerSecurityGroup(clusterHandlerSecurityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
      * @param clusterLogging The cluster log types which you want to enable.
      */
     override fun clusterLogging(clusterLogging: List<ClusterLoggingTypes>) {
-      cdkBuilder.clusterLogging(clusterLogging.map(ClusterLoggingTypes::unwrap))
+      cdkBuilder.clusterLogging(clusterLogging.map(ClusterLoggingTypes.Companion::unwrap))
     }
 
     /**
@@ -406,7 +406,7 @@ public interface ClusterProps : ClusterOptions {
      * CoreDNS configuration on your cluster to determine which compute type to use for CoreDNS.
      */
     override fun coreDnsComputeType(coreDnsComputeType: CoreDnsComputeType) {
-      cdkBuilder.coreDnsComputeType(coreDnsComputeType.let(CoreDnsComputeType::unwrap))
+      cdkBuilder.coreDnsComputeType(coreDnsComputeType.let(CoreDnsComputeType.Companion::unwrap))
     }
 
     /**
@@ -428,21 +428,21 @@ public interface ClusterProps : ClusterOptions {
      * into account if `defaultCapacity` is &gt; 0.
      */
     override fun defaultCapacityInstance(defaultCapacityInstance: InstanceType) {
-      cdkBuilder.defaultCapacityInstance(defaultCapacityInstance.let(InstanceType::unwrap))
+      cdkBuilder.defaultCapacityInstance(defaultCapacityInstance.let(InstanceType.Companion::unwrap))
     }
 
     /**
      * @param defaultCapacityType The default capacity type for the cluster.
      */
     override fun defaultCapacityType(defaultCapacityType: DefaultCapacityType) {
-      cdkBuilder.defaultCapacityType(defaultCapacityType.let(DefaultCapacityType::unwrap))
+      cdkBuilder.defaultCapacityType(defaultCapacityType.let(DefaultCapacityType.Companion::unwrap))
     }
 
     /**
      * @param endpointAccess Configure access to the Kubernetes API server endpoint..
      */
     override fun endpointAccess(endpointAccess: EndpointAccess) {
-      cdkBuilder.endpointAccess(endpointAccess.let(EndpointAccess::unwrap))
+      cdkBuilder.endpointAccess(endpointAccess.let(EndpointAccess.Companion::unwrap))
     }
 
     /**
@@ -450,7 +450,7 @@ public interface ClusterProps : ClusterOptions {
      * addresses.
      */
     override fun ipFamily(ipFamily: IpFamily) {
-      cdkBuilder.ipFamily(ipFamily.let(IpFamily::unwrap))
+      cdkBuilder.ipFamily(ipFamily.let(IpFamily.Companion::unwrap))
     }
 
     /**
@@ -465,7 +465,7 @@ public interface ClusterProps : ClusterOptions {
      * @param kubectlLambdaRole The IAM role to pass to the Kubectl Lambda Handler.
      */
     override fun kubectlLambdaRole(kubectlLambdaRole: IRole) {
-      cdkBuilder.kubectlLambdaRole(kubectlLambdaRole.let(IRole::unwrap))
+      cdkBuilder.kubectlLambdaRole(kubectlLambdaRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -484,14 +484,14 @@ public interface ClusterProps : ClusterOptions {
      * ```
      */
     override fun kubectlLayer(kubectlLayer: ILayerVersion) {
-      cdkBuilder.kubectlLayer(kubectlLayer.let(ILayerVersion::unwrap))
+      cdkBuilder.kubectlLayer(kubectlLayer.let(ILayerVersion.Companion::unwrap))
     }
 
     /**
      * @param kubectlMemory Amount of memory to allocate to the provider's lambda function.
      */
     override fun kubectlMemory(kubectlMemory: Size) {
-      cdkBuilder.kubectlMemory(kubectlMemory.let(Size::unwrap))
+      cdkBuilder.kubectlMemory(kubectlMemory.let(Size.Companion::unwrap))
     }
 
     /**
@@ -499,7 +499,7 @@ public interface ClusterProps : ClusterOptions {
      * group.
      */
     override fun mastersRole(mastersRole: IRole) {
-      cdkBuilder.mastersRole(mastersRole.let(IRole::unwrap))
+      cdkBuilder.mastersRole(mastersRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -521,7 +521,7 @@ public interface ClusterProps : ClusterOptions {
      * ```
      */
     override fun onEventLayer(onEventLayer: ILayerVersion) {
-      cdkBuilder.onEventLayer(onEventLayer.let(ILayerVersion::unwrap))
+      cdkBuilder.onEventLayer(onEventLayer.let(ILayerVersion.Companion::unwrap))
     }
 
     /**
@@ -574,21 +574,21 @@ public interface ClusterProps : ClusterOptions {
      * AWS API operations on your behalf.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param secretsEncryptionKey KMS secret for envelope encryption for Kubernetes secrets.
      */
     override fun secretsEncryptionKey(secretsEncryptionKey: IKey) {
-      cdkBuilder.secretsEncryptionKey(secretsEncryptionKey.let(IKey::unwrap))
+      cdkBuilder.secretsEncryptionKey(secretsEncryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
      * @param securityGroup Security Group to use for Control Plane ENIs.
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -609,14 +609,14 @@ public interface ClusterProps : ClusterOptions {
      * @param version The Kubernetes version to run in the cluster. 
      */
     override fun version(version: KubernetesVersion) {
-      cdkBuilder.version(version.let(KubernetesVersion::unwrap))
+      cdkBuilder.version(version.let(KubernetesVersion.Companion::unwrap))
     }
 
     /**
      * @param vpc The VPC in which to create the Cluster.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -626,7 +626,7 @@ public interface ClusterProps : ClusterOptions {
      * `vpcSubnets: [{ subnetType: ec2.SubnetType.PRIVATE_WITH_EGRESS }]`
      */
     override fun vpcSubnets(vpcSubnets: List<SubnetSelection>) {
-      cdkBuilder.vpcSubnets(vpcSubnets.map(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.map(SubnetSelection.Companion::unwrap))
     }
 
     /**

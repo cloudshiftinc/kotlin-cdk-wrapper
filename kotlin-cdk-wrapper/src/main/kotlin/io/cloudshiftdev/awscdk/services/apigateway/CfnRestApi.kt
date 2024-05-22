@@ -81,7 +81,7 @@ public open class CfnRestApi(
   cdkObject: software.amazon.awscdk.services.apigateway.CfnRestApi,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.apigateway.CfnRestApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.apigateway.CfnRestApi(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -90,8 +90,8 @@ public open class CfnRestApi(
     id: String,
     props: CfnRestApiProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.CfnRestApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRestApiProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.CfnRestApi(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRestApiProps.Companion::unwrap))
   )
 
   public constructor(
@@ -165,7 +165,7 @@ public open class CfnRestApi(
    * defines a set of RESTful APIs in JSON or YAML format.
    */
   public open fun bodyS3Location(`value`: IResolvable) {
-    unwrap(this).setBodyS3Location(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBodyS3Location(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -173,7 +173,7 @@ public open class CfnRestApi(
    * defines a set of RESTful APIs in JSON or YAML format.
    */
   public open fun bodyS3Location(`value`: S3LocationProperty) {
-    unwrap(this).setBodyS3Location(`value`.let(S3LocationProperty::unwrap))
+    unwrap(this).setBodyS3Location(`value`.let(S3LocationProperty.Companion::unwrap))
   }
 
   /**
@@ -225,7 +225,7 @@ public open class CfnRestApi(
    * Specifies whether clients can invoke your API by using the default `execute-api` endpoint.
    */
   public open fun disableExecuteApiEndpoint(`value`: IResolvable) {
-    unwrap(this).setDisableExecuteApiEndpoint(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDisableExecuteApiEndpoint(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -237,14 +237,14 @@ public open class CfnRestApi(
    * A list of the endpoint types of the API.
    */
   public open fun endpointConfiguration(`value`: IResolvable) {
-    unwrap(this).setEndpointConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEndpointConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A list of the endpoint types of the API.
    */
   public open fun endpointConfiguration(`value`: EndpointConfigurationProperty) {
-    unwrap(this).setEndpointConfiguration(`value`.let(EndpointConfigurationProperty::unwrap))
+    unwrap(this).setEndpointConfiguration(`value`.let(EndpointConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -274,7 +274,7 @@ public open class CfnRestApi(
    * when a warning is encountered.
    */
   public open fun failOnWarnings(`value`: IResolvable) {
-    unwrap(this).setFailOnWarnings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFailOnWarnings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -283,7 +283,7 @@ public open class CfnRestApi(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -333,7 +333,7 @@ public open class CfnRestApi(
    * Custom header parameters as part of the request.
    */
   public open fun parameters(`value`: IResolvable) {
-    unwrap(this).setParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -370,7 +370,7 @@ public open class CfnRestApi(
    * The key-value map of strings.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -734,7 +734,7 @@ public open class CfnRestApi(
      * an OpenAPI file, which defines a set of RESTful APIs in JSON or YAML format. 
      */
     override fun bodyS3Location(bodyS3Location: IResolvable) {
-      cdkBuilder.bodyS3Location(bodyS3Location.let(IResolvable::unwrap))
+      cdkBuilder.bodyS3Location(bodyS3Location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -746,7 +746,7 @@ public open class CfnRestApi(
      * an OpenAPI file, which defines a set of RESTful APIs in JSON or YAML format. 
      */
     override fun bodyS3Location(bodyS3Location: S3LocationProperty) {
-      cdkBuilder.bodyS3Location(bodyS3Location.let(S3LocationProperty::unwrap))
+      cdkBuilder.bodyS3Location(bodyS3Location.let(S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -809,7 +809,7 @@ public open class CfnRestApi(
      * default `execute-api` endpoint. 
      */
     override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable) {
-      cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint.let(IResolvable::unwrap))
+      cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -822,7 +822,7 @@ public open class CfnRestApi(
      * @param endpointConfiguration A list of the endpoint types of the API. 
      */
     override fun endpointConfiguration(endpointConfiguration: IResolvable) {
-      cdkBuilder.endpointConfiguration(endpointConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.endpointConfiguration(endpointConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -835,7 +835,7 @@ public open class CfnRestApi(
      * @param endpointConfiguration A list of the endpoint types of the API. 
      */
     override fun endpointConfiguration(endpointConfiguration: EndpointConfigurationProperty) {
-      cdkBuilder.endpointConfiguration(endpointConfiguration.let(EndpointConfigurationProperty::unwrap))
+      cdkBuilder.endpointConfiguration(endpointConfiguration.let(EndpointConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -878,7 +878,7 @@ public open class CfnRestApi(
      * `true` ) or not ( `false` ) when a warning is encountered. 
      */
     override fun failOnWarnings(failOnWarnings: IResolvable) {
-      cdkBuilder.failOnWarnings(failOnWarnings.let(IResolvable::unwrap))
+      cdkBuilder.failOnWarnings(failOnWarnings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -949,7 +949,7 @@ public open class CfnRestApi(
      * @param parameters Custom header parameters as part of the request. 
      */
     override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -990,7 +990,7 @@ public open class CfnRestApi(
      * @param tags The key-value map of strings. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

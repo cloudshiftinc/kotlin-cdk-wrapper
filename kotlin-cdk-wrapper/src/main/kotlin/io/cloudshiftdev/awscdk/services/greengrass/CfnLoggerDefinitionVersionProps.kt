@@ -97,7 +97,7 @@ public interface CfnLoggerDefinitionVersionProps {
      * @param loggers The loggers in this version. 
      */
     override fun loggers(loggers: IResolvable) {
-      cdkBuilder.loggers(loggers.let(IResolvable::unwrap))
+      cdkBuilder.loggers(loggers.let(IResolvable.Companion::unwrap))
     }
 
     /**

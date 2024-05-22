@@ -71,8 +71,8 @@ public open class CfnTable(
     id: String,
     props: CfnTableProps,
   ) :
-      this(software.amazon.awscdk.services.timestream.CfnTable(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTableProps::unwrap))
+      this(software.amazon.awscdk.services.timestream.CfnTable(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTableProps.Companion::unwrap))
   )
 
   public constructor(
@@ -110,7 +110,7 @@ public open class CfnTable(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -151,14 +151,14 @@ public open class CfnTable(
    * The schema of the table.
    */
   public open fun schema(`value`: IResolvable) {
-    unwrap(this).setSchema(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSchema(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The schema of the table.
    */
   public open fun schema(`value`: SchemaProperty) {
-    unwrap(this).setSchema(`value`.let(SchemaProperty::unwrap))
+    unwrap(this).setSchema(`value`.let(SchemaProperty.Companion::unwrap))
   }
 
   /**
@@ -196,7 +196,7 @@ public open class CfnTable(
    * The tags to add to the table.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -472,7 +472,7 @@ public open class CfnTable(
      * @param schema The schema of the table. 
      */
     override fun schema(schema: IResolvable) {
-      cdkBuilder.schema(schema.let(IResolvable::unwrap))
+      cdkBuilder.schema(schema.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -482,7 +482,7 @@ public open class CfnTable(
      * @param schema The schema of the table. 
      */
     override fun schema(schema: SchemaProperty) {
-      cdkBuilder.schema(schema.let(SchemaProperty::unwrap))
+      cdkBuilder.schema(schema.let(SchemaProperty.Companion::unwrap))
     }
 
     /**
@@ -515,7 +515,7 @@ public open class CfnTable(
      * @param tags The tags to add to the table. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -619,7 +619,7 @@ public open class CfnTable(
        * rejected, asynchronously, during magnetic store writes.
        */
       override fun s3Configuration(s3Configuration: IResolvable) {
-        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -627,7 +627,7 @@ public open class CfnTable(
        * rejected, asynchronously, during magnetic store writes.
        */
       override fun s3Configuration(s3Configuration: S3ConfigurationProperty) {
-        cdkBuilder.s3Configuration(s3Configuration.let(S3ConfigurationProperty::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(S3ConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -774,7 +774,7 @@ public open class CfnTable(
        * @param enableMagneticStoreWrites A flag to enable magnetic store writes. 
        */
       override fun enableMagneticStoreWrites(enableMagneticStoreWrites: IResolvable) {
-        cdkBuilder.enableMagneticStoreWrites(enableMagneticStoreWrites.let(IResolvable::unwrap))
+        cdkBuilder.enableMagneticStoreWrites(enableMagneticStoreWrites.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -783,7 +783,7 @@ public open class CfnTable(
        */
       override
           fun magneticStoreRejectedDataLocation(magneticStoreRejectedDataLocation: IResolvable) {
-        cdkBuilder.magneticStoreRejectedDataLocation(magneticStoreRejectedDataLocation.let(IResolvable::unwrap))
+        cdkBuilder.magneticStoreRejectedDataLocation(magneticStoreRejectedDataLocation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -792,7 +792,7 @@ public open class CfnTable(
        */
       override
           fun magneticStoreRejectedDataLocation(magneticStoreRejectedDataLocation: MagneticStoreRejectedDataLocationProperty) {
-        cdkBuilder.magneticStoreRejectedDataLocation(magneticStoreRejectedDataLocation.let(MagneticStoreRejectedDataLocationProperty::unwrap))
+        cdkBuilder.magneticStoreRejectedDataLocation(magneticStoreRejectedDataLocation.let(MagneticStoreRejectedDataLocationProperty.Companion::unwrap))
       }
 
       /**
@@ -1374,7 +1374,7 @@ public open class CfnTable(
        * However, the enforcement level of each partition key can be changed.
        */
       override fun compositePartitionKey(compositePartitionKey: IResolvable) {
-        cdkBuilder.compositePartitionKey(compositePartitionKey.let(IResolvable::unwrap))
+        cdkBuilder.compositePartitionKey(compositePartitionKey.let(IResolvable.Companion::unwrap))
       }
 
       /**

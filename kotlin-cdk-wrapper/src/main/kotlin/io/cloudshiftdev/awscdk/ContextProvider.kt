@@ -21,8 +21,8 @@ public open class ContextProvider(
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun key(scope: Construct, options: GetContextKeyOptions): GetContextKeyResult =
-        software.amazon.awscdk.ContextProvider.getKey(scope.let(Construct::unwrap),
-        options.let(GetContextKeyOptions::unwrap)).let(GetContextKeyResult::wrap)
+        software.amazon.awscdk.ContextProvider.getKey(scope.let(Construct.Companion::unwrap),
+        options.let(GetContextKeyOptions.Companion::unwrap)).let(GetContextKeyResult::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d496bb868e70dcad2a53237cef63aa8154067471be32c59fb83f455da6964d14")
@@ -30,8 +30,8 @@ public open class ContextProvider(
         GetContextKeyResult = key(scope, GetContextKeyOptions(options))
 
     public fun `value`(scope: Construct, options: GetContextValueOptions): GetContextValueResult =
-        software.amazon.awscdk.ContextProvider.getValue(scope.let(Construct::unwrap),
-        options.let(GetContextValueOptions::unwrap)).let(GetContextValueResult::wrap)
+        software.amazon.awscdk.ContextProvider.getValue(scope.let(Construct.Companion::unwrap),
+        options.let(GetContextValueOptions.Companion::unwrap)).let(GetContextValueResult::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("955804e5b028c434617788cb209425e3eb3abe8900e9dfbc4368a300a0e9fc20")

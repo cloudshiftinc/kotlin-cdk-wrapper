@@ -67,8 +67,8 @@ public open class CfnGateway(
     id: String,
     props: CfnGatewayProps,
   ) :
-      this(software.amazon.awscdk.services.iotsitewise.CfnGateway(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGatewayProps::unwrap))
+      this(software.amazon.awscdk.services.iotsitewise.CfnGateway(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGatewayProps.Companion::unwrap))
   )
 
   public constructor(
@@ -92,7 +92,7 @@ public open class CfnGateway(
    * A list of gateway capability summaries that each contain a namespace and status.
    */
   public open fun gatewayCapabilitySummaries(`value`: IResolvable) {
-    unwrap(this).setGatewayCapabilitySummaries(`value`.let(IResolvable::unwrap))
+    unwrap(this).setGatewayCapabilitySummaries(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -129,14 +129,14 @@ public open class CfnGateway(
    * The gateway's platform.
    */
   public open fun gatewayPlatform(`value`: IResolvable) {
-    unwrap(this).setGatewayPlatform(`value`.let(IResolvable::unwrap))
+    unwrap(this).setGatewayPlatform(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The gateway's platform.
    */
   public open fun gatewayPlatform(`value`: GatewayPlatformProperty) {
-    unwrap(this).setGatewayPlatform(`value`.let(GatewayPlatformProperty::unwrap))
+    unwrap(this).setGatewayPlatform(`value`.let(GatewayPlatformProperty.Companion::unwrap))
   }
 
   /**
@@ -153,7 +153,7 @@ public open class CfnGateway(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -171,7 +171,7 @@ public open class CfnGateway(
    * A list of key-value pairs that contain metadata for the gateway.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -311,7 +311,7 @@ public open class CfnGateway(
      * namespace and status. 
      */
     override fun gatewayCapabilitySummaries(gatewayCapabilitySummaries: IResolvable) {
-      cdkBuilder.gatewayCapabilitySummaries(gatewayCapabilitySummaries.let(IResolvable::unwrap))
+      cdkBuilder.gatewayCapabilitySummaries(gatewayCapabilitySummaries.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -364,7 +364,7 @@ public open class CfnGateway(
      * @param gatewayPlatform The gateway's platform. 
      */
     override fun gatewayPlatform(gatewayPlatform: IResolvable) {
-      cdkBuilder.gatewayPlatform(gatewayPlatform.let(IResolvable::unwrap))
+      cdkBuilder.gatewayPlatform(gatewayPlatform.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -376,7 +376,7 @@ public open class CfnGateway(
      * @param gatewayPlatform The gateway's platform. 
      */
     override fun gatewayPlatform(gatewayPlatform: GatewayPlatformProperty) {
-      cdkBuilder.gatewayPlatform(gatewayPlatform.let(GatewayPlatformProperty::unwrap))
+      cdkBuilder.gatewayPlatform(gatewayPlatform.let(GatewayPlatformProperty.Companion::unwrap))
     }
 
     /**
@@ -403,7 +403,7 @@ public open class CfnGateway(
      * @param tags A list of key-value pairs that contain metadata for the gateway. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -667,14 +667,14 @@ public open class CfnGateway(
        * @param greengrass A gateway that runs on AWS IoT Greengrass .
        */
       override fun greengrass(greengrass: IResolvable) {
-        cdkBuilder.greengrass(greengrass.let(IResolvable::unwrap))
+        cdkBuilder.greengrass(greengrass.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param greengrass A gateway that runs on AWS IoT Greengrass .
        */
       override fun greengrass(greengrass: GreengrassProperty) {
-        cdkBuilder.greengrass(greengrass.let(GreengrassProperty::unwrap))
+        cdkBuilder.greengrass(greengrass.let(GreengrassProperty.Companion::unwrap))
       }
 
       /**
@@ -689,14 +689,14 @@ public open class CfnGateway(
        * @param greengrassV2 A gateway that runs on AWS IoT Greengrass V2 .
        */
       override fun greengrassV2(greengrassV2: IResolvable) {
-        cdkBuilder.greengrassV2(greengrassV2.let(IResolvable::unwrap))
+        cdkBuilder.greengrassV2(greengrassV2.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param greengrassV2 A gateway that runs on AWS IoT Greengrass V2 .
        */
       override fun greengrassV2(greengrassV2: GreengrassV2Property) {
-        cdkBuilder.greengrassV2(greengrassV2.let(GreengrassV2Property::unwrap))
+        cdkBuilder.greengrassV2(greengrassV2.let(GreengrassV2Property.Companion::unwrap))
       }
 
       /**

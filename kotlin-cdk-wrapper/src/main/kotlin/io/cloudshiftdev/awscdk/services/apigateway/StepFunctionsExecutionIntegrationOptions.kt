@@ -431,14 +431,14 @@ public interface StepFunctionsExecutionIntegrationOptions : IntegrationOptions {
      * @param connectionType The type of network connection to the integration endpoint.
      */
     override fun connectionType(connectionType: ConnectionType) {
-      cdkBuilder.connectionType(connectionType.let(ConnectionType::unwrap))
+      cdkBuilder.connectionType(connectionType.let(ConnectionType.Companion::unwrap))
     }
 
     /**
      * @param contentHandling Specifies how to handle request payload content type conversions.
      */
     override fun contentHandling(contentHandling: ContentHandling) {
-      cdkBuilder.contentHandling(contentHandling.let(ContentHandling::unwrap))
+      cdkBuilder.contentHandling(contentHandling.let(ContentHandling.Companion::unwrap))
     }
 
     /**
@@ -454,7 +454,7 @@ public interface StepFunctionsExecutionIntegrationOptions : IntegrationOptions {
      * Mutually exclusive with `credentialsPassThrough`.
      */
     override fun credentialsRole(credentialsRole: IRole) {
-      cdkBuilder.credentialsRole(credentialsRole.let(IRole::unwrap))
+      cdkBuilder.credentialsRole(credentialsRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -482,7 +482,7 @@ public interface StepFunctionsExecutionIntegrationOptions : IntegrationOptions {
      * that you define.
      */
     override fun integrationResponses(integrationResponses: List<IntegrationResponse>) {
-      cdkBuilder.integrationResponses(integrationResponses.map(IntegrationResponse::unwrap))
+      cdkBuilder.integrationResponses(integrationResponses.map(IntegrationResponse.Companion::unwrap))
     }
 
     /**
@@ -504,7 +504,7 @@ public interface StepFunctionsExecutionIntegrationOptions : IntegrationOptions {
      * NEVER.
      */
     override fun passthroughBehavior(passthroughBehavior: PassthroughBehavior) {
-      cdkBuilder.passthroughBehavior(passthroughBehavior.let(PassthroughBehavior::unwrap))
+      cdkBuilder.passthroughBehavior(passthroughBehavior.let(PassthroughBehavior.Companion::unwrap))
     }
 
     /**
@@ -550,7 +550,7 @@ public interface StepFunctionsExecutionIntegrationOptions : IntegrationOptions {
      * }
      */
     override fun requestContext(requestContext: RequestContext) {
-      cdkBuilder.requestContext(requestContext.let(RequestContext::unwrap))
+      cdkBuilder.requestContext(requestContext.let(RequestContext.Companion::unwrap))
     }
 
     /**
@@ -610,7 +610,7 @@ public interface StepFunctionsExecutionIntegrationOptions : IntegrationOptions {
      * Must be between 50 milliseconds and 29 seconds.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -626,7 +626,7 @@ public interface StepFunctionsExecutionIntegrationOptions : IntegrationOptions {
      * Required if connectionType is VPC_LINK
      */
     override fun vpcLink(vpcLink: IVpcLink) {
-      cdkBuilder.vpcLink(vpcLink.let(IVpcLink::unwrap))
+      cdkBuilder.vpcLink(vpcLink.let(IVpcLink.Companion::unwrap))
     }
 
     public fun build():

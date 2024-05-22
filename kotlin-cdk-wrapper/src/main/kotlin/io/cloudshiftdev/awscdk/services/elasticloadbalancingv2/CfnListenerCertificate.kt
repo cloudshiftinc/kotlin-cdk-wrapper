@@ -44,8 +44,8 @@ public open class CfnListenerCertificate(
     id: String,
     props: CfnListenerCertificateProps,
   ) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnListenerCertificateProps::unwrap))
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnListenerCertificate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnListenerCertificateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -69,7 +69,7 @@ public open class CfnListenerCertificate(
    * The certificate.
    */
   public open fun certificates(`value`: IResolvable) {
-    unwrap(this).setCertificates(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCertificates(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -90,7 +90,7 @@ public open class CfnListenerCertificate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -168,7 +168,7 @@ public open class CfnListenerCertificate(
      * @param certificates The certificate. 
      */
     override fun certificates(certificates: IResolvable) {
-      cdkBuilder.certificates(certificates.let(IResolvable::unwrap))
+      cdkBuilder.certificates(certificates.let(IResolvable.Companion::unwrap))
     }
 
     /**

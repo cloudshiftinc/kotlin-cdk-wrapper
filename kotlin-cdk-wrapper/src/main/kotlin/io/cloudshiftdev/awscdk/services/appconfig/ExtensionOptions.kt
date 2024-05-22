@@ -128,7 +128,7 @@ public interface ExtensionOptions {
      * @param parameters The parameters accepted for the extension.
      */
     override fun parameters(parameters: List<Parameter>) {
-      cdkBuilder.parameters(parameters.map(Parameter::unwrap))
+      cdkBuilder.parameters(parameters.map(Parameter.Companion::unwrap))
     }
 
     /**

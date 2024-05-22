@@ -50,8 +50,8 @@ public open class ManagedEc2EcsComputeEnvironment(
     id: String,
     props: ManagedEc2EcsComputeEnvironmentProps,
   ) :
-      this(software.amazon.awscdk.services.batch.ManagedEc2EcsComputeEnvironment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ManagedEc2EcsComputeEnvironmentProps::unwrap))
+      this(software.amazon.awscdk.services.batch.ManagedEc2EcsComputeEnvironment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ManagedEc2EcsComputeEnvironmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -67,7 +67,7 @@ public open class ManagedEc2EcsComputeEnvironment(
    * @param instanceClass 
    */
   public override fun addInstanceClass(instanceClass: InstanceClass) {
-    unwrap(this).addInstanceClass(instanceClass.let(InstanceClass::unwrap))
+    unwrap(this).addInstanceClass(instanceClass.let(InstanceClass.Companion::unwrap))
   }
 
   /**
@@ -76,7 +76,7 @@ public open class ManagedEc2EcsComputeEnvironment(
    * @param instanceType 
    */
   public override fun addInstanceType(instanceType: InstanceType) {
-    unwrap(this).addInstanceType(instanceType.let(InstanceType::unwrap))
+    unwrap(this).addInstanceType(instanceType.let(InstanceType.Companion::unwrap))
   }
 
   /**
@@ -674,7 +674,7 @@ public open class ManagedEc2EcsComputeEnvironment(
      * fitting instance type can be allocated. 
      */
     override fun allocationStrategy(allocationStrategy: AllocationStrategy) {
-      cdkBuilder.allocationStrategy(allocationStrategy.let(AllocationStrategy::unwrap))
+      cdkBuilder.allocationStrategy(allocationStrategy.let(AllocationStrategy.Companion::unwrap))
     }
 
     /**
@@ -724,7 +724,7 @@ public open class ManagedEc2EcsComputeEnvironment(
      * @param images Configure which AMIs this Compute Environment can launch. 
      */
     override fun images(images: List<EcsMachineImage>) {
-      cdkBuilder.images(images.map(EcsMachineImage::unwrap))
+      cdkBuilder.images(images.map(EcsMachineImage.Companion::unwrap))
     }
 
     /**
@@ -752,7 +752,7 @@ public open class ManagedEc2EcsComputeEnvironment(
      * @param instanceClasses The instance classes that this Compute Environment can launch. 
      */
     override fun instanceClasses(instanceClasses: List<InstanceClass>) {
-      cdkBuilder.instanceClasses(instanceClasses.map(InstanceClass::unwrap))
+      cdkBuilder.instanceClasses(instanceClasses.map(InstanceClass.Companion::unwrap))
     }
 
     /**
@@ -777,7 +777,7 @@ public open class ManagedEc2EcsComputeEnvironment(
      * will use. 
      */
     override fun instanceRole(instanceRole: IRole) {
-      cdkBuilder.instanceRole(instanceRole.let(IRole::unwrap))
+      cdkBuilder.instanceRole(instanceRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -790,7 +790,7 @@ public open class ManagedEc2EcsComputeEnvironment(
      * @param instanceTypes The instance types that this Compute Environment can launch. 
      */
     override fun instanceTypes(instanceTypes: List<InstanceType>) {
-      cdkBuilder.instanceTypes(instanceTypes.map(InstanceType::unwrap))
+      cdkBuilder.instanceTypes(instanceTypes.map(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -819,7 +819,7 @@ public open class ManagedEc2EcsComputeEnvironment(
      * EC2 Instances. 
      */
     override fun launchTemplate(launchTemplate: ILaunchTemplate) {
-      cdkBuilder.launchTemplate(launchTemplate.let(ILaunchTemplate::unwrap))
+      cdkBuilder.launchTemplate(launchTemplate.let(ILaunchTemplate.Companion::unwrap))
     }
 
     /**
@@ -871,7 +871,7 @@ public open class ManagedEc2EcsComputeEnvironment(
      * @param placementGroup The EC2 placement group to associate with your compute resources. 
      */
     override fun placementGroup(placementGroup: IPlacementGroup) {
-      cdkBuilder.placementGroup(placementGroup.let(IPlacementGroup::unwrap))
+      cdkBuilder.placementGroup(placementGroup.let(IPlacementGroup.Companion::unwrap))
     }
 
     /**
@@ -908,7 +908,7 @@ public open class ManagedEc2EcsComputeEnvironment(
      * @param securityGroups The security groups this Compute Environment will launch instances in. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -931,7 +931,7 @@ public open class ManagedEc2EcsComputeEnvironment(
      * such as provision instances to run your jobs. 
      */
     override fun serviceRole(serviceRole: IRole) {
-      cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
+      cdkBuilder.serviceRole(serviceRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -979,7 +979,7 @@ public open class ManagedEc2EcsComputeEnvironment(
      * your behalf. 
      */
     override fun spotFleetRole(spotFleetRole: IRole) {
-      cdkBuilder.spotFleetRole(spotFleetRole.let(IRole::unwrap))
+      cdkBuilder.spotFleetRole(spotFleetRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -1012,7 +1012,7 @@ public open class ManagedEc2EcsComputeEnvironment(
      * @param updateTimeout Only meaningful if `terminateOnUpdate` is `false`. 
      */
     override fun updateTimeout(updateTimeout: Duration) {
-      cdkBuilder.updateTimeout(updateTimeout.let(Duration::unwrap))
+      cdkBuilder.updateTimeout(updateTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -1051,7 +1051,7 @@ public open class ManagedEc2EcsComputeEnvironment(
      * @param vpc VPC in which this Compute Environment will launch Instances. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -1062,7 +1062,7 @@ public open class ManagedEc2EcsComputeEnvironment(
      * @param vpcSubnets The VPC Subnets this Compute Environment will launch instances in. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -1087,7 +1087,7 @@ public open class ManagedEc2EcsComputeEnvironment(
       id: String,
       managedEc2EcsComputeEnvironmentArn: String,
     ): IManagedEc2EcsComputeEnvironment =
-        software.amazon.awscdk.services.batch.ManagedEc2EcsComputeEnvironment.fromManagedEc2EcsComputeEnvironmentArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.batch.ManagedEc2EcsComputeEnvironment.fromManagedEc2EcsComputeEnvironmentArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, managedEc2EcsComputeEnvironmentArn).let(IManagedEc2EcsComputeEnvironment::wrap)
 
     public operator fun invoke(

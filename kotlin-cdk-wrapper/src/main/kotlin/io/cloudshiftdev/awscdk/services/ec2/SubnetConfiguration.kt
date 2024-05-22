@@ -210,7 +210,7 @@ public interface SubnetConfiguration {
      * Internet.
      */
     override fun subnetType(subnetType: SubnetType) {
-      cdkBuilder.subnetType(subnetType.let(SubnetType::unwrap))
+      cdkBuilder.subnetType(subnetType.let(SubnetType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.SubnetConfiguration = cdkBuilder.build()

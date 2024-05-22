@@ -38,8 +38,8 @@ public open class ListenerPort(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancing.ListenerPort,
 ) : CdkObject(cdkObject), IConnectable {
   public constructor(securityGroup: ISecurityGroup, defaultPort: Port) :
-      this(software.amazon.awscdk.services.elasticloadbalancing.ListenerPort(securityGroup.let(ISecurityGroup::unwrap),
-      defaultPort.let(Port::unwrap))
+      this(software.amazon.awscdk.services.elasticloadbalancing.ListenerPort(securityGroup.let(ISecurityGroup.Companion::unwrap),
+      defaultPort.let(Port.Companion::unwrap))
   )
 
   public constructor(securityGroup: ISecurityGroup, defaultPort: Port.Builder.() -> Unit) :

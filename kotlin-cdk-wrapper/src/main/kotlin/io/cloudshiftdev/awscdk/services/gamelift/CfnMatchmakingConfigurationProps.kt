@@ -468,7 +468,7 @@ public interface CfnMatchmakingConfigurationProps {
      * acceptance.
      */
     override fun acceptanceRequired(acceptanceRequired: IResolvable) {
-      cdkBuilder.acceptanceRequired(acceptanceRequired.let(IResolvable::unwrap))
+      cdkBuilder.acceptanceRequired(acceptanceRequired.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -551,7 +551,7 @@ public interface CfnMatchmakingConfigurationProps {
      * . This parameter is not used if `FlexMatchMode` is set to `STANDALONE` .
      */
     override fun gameProperties(gameProperties: IResolvable) {
-      cdkBuilder.gameProperties(gameProperties.let(IResolvable::unwrap))
+      cdkBuilder.gameProperties(gameProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -672,7 +672,7 @@ public interface CfnMatchmakingConfigurationProps {
      * stated. See the AWS General Reference for actual tagging limits.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

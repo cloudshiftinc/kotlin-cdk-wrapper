@@ -27,7 +27,7 @@ public open class SqsDestination(
   cdkObject: software.amazon.awscdk.services.appconfig.SqsDestination,
 ) : CdkObject(cdkObject), IEventDestination {
   public constructor(queue: IQueue) :
-      this(software.amazon.awscdk.services.appconfig.SqsDestination(queue.let(IQueue::unwrap))
+      this(software.amazon.awscdk.services.appconfig.SqsDestination(queue.let(IQueue.Companion::unwrap))
   )
 
   /**

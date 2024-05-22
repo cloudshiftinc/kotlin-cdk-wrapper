@@ -58,8 +58,8 @@ public open class CfnWirelessGateway(
     id: String,
     props: CfnWirelessGatewayProps,
   ) :
-      this(software.amazon.awscdk.services.iotwireless.CfnWirelessGateway(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnWirelessGatewayProps::unwrap))
+      this(software.amazon.awscdk.services.iotwireless.CfnWirelessGateway(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnWirelessGatewayProps.Companion::unwrap))
   )
 
   public constructor(
@@ -97,7 +97,7 @@ public open class CfnWirelessGateway(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -121,14 +121,14 @@ public open class CfnWirelessGateway(
    * The gateway configuration information to use to create the wireless gateway.
    */
   public open fun loRaWan(`value`: IResolvable) {
-    unwrap(this).setLoRaWan(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoRaWan(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The gateway configuration information to use to create the wireless gateway.
    */
   public open fun loRaWan(`value`: LoRaWANGatewayProperty) {
-    unwrap(this).setLoRaWan(`value`.let(LoRaWANGatewayProperty::unwrap))
+    unwrap(this).setLoRaWan(`value`.let(LoRaWANGatewayProperty.Companion::unwrap))
   }
 
   /**
@@ -166,7 +166,7 @@ public open class CfnWirelessGateway(
    * The tags are an array of key-value pairs to attach to the specified resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -330,7 +330,7 @@ public open class CfnWirelessGateway(
      * @param loRaWan The gateway configuration information to use to create the wireless gateway. 
      */
     override fun loRaWan(loRaWan: IResolvable) {
-      cdkBuilder.loRaWan(loRaWan.let(IResolvable::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -340,7 +340,7 @@ public open class CfnWirelessGateway(
      * @param loRaWan The gateway configuration information to use to create the wireless gateway. 
      */
     override fun loRaWan(loRaWan: LoRaWANGatewayProperty) {
-      cdkBuilder.loRaWan(loRaWan.let(LoRaWANGatewayProperty::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(LoRaWANGatewayProperty.Companion::unwrap))
     }
 
     /**
@@ -373,7 +373,7 @@ public open class CfnWirelessGateway(
      * @param tags The tags are an array of key-value pairs to attach to the specified resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

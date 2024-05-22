@@ -134,14 +134,14 @@ public interface CfnConnectorProps {
      * @param vpcInformation Information of the VPC and security group(s) used with the connector. 
      */
     override fun vpcInformation(vpcInformation: IResolvable) {
-      cdkBuilder.vpcInformation(vpcInformation.let(IResolvable::unwrap))
+      cdkBuilder.vpcInformation(vpcInformation.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param vpcInformation Information of the VPC and security group(s) used with the connector. 
      */
     override fun vpcInformation(vpcInformation: CfnConnector.VpcInformationProperty) {
-      cdkBuilder.vpcInformation(vpcInformation.let(CfnConnector.VpcInformationProperty::unwrap))
+      cdkBuilder.vpcInformation(vpcInformation.let(CfnConnector.VpcInformationProperty.Companion::unwrap))
     }
 
     /**

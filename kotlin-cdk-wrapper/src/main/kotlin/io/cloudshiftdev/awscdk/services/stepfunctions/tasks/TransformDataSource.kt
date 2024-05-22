@@ -72,7 +72,7 @@ public interface TransformDataSource {
      * @param s3DataSource S3 location of the input data. 
      */
     override fun s3DataSource(s3DataSource: TransformS3DataSource) {
-      cdkBuilder.s3DataSource(s3DataSource.let(TransformS3DataSource::unwrap))
+      cdkBuilder.s3DataSource(s3DataSource.let(TransformS3DataSource.Companion::unwrap))
     }
 
     /**

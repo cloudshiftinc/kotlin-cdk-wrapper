@@ -236,7 +236,7 @@ public interface IHttpStage : IStage {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -276,7 +276,8 @@ public interface IHttpStage : IStage {
      * @param props
      */
     override fun metric(metricName: String, props: MetricOptions): Metric =
-        unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metric(metricName,
+        props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Return the given named metric for this HTTP Api Gateway Stage.
@@ -308,7 +309,7 @@ public interface IHttpStage : IStage {
      * @param props
      */
     override fun metricClientError(props: MetricOptions): Metric =
-        unwrap(this).metricClientError(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricClientError(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the number of client-side errors captured in a given period.
@@ -339,7 +340,7 @@ public interface IHttpStage : IStage {
      * @param props
      */
     override fun metricCount(props: MetricOptions): Metric =
-        unwrap(this).metricCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the total number API requests in a given period.
@@ -371,7 +372,7 @@ public interface IHttpStage : IStage {
      * @param props
      */
     override fun metricDataProcessed(props: MetricOptions): Metric =
-        unwrap(this).metricDataProcessed(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricDataProcessed(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the amount of data processed in bytes.
@@ -405,7 +406,7 @@ public interface IHttpStage : IStage {
      * @param props
      */
     override fun metricIntegrationLatency(props: MetricOptions): Metric =
-        unwrap(this).metricIntegrationLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricIntegrationLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the time between when API Gateway relays a request to the backend and when it
@@ -443,7 +444,7 @@ public interface IHttpStage : IStage {
      * @param props
      */
     override fun metricLatency(props: MetricOptions): Metric =
-        unwrap(this).metricLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The time between when API Gateway receives a request from a client and when it returns a
@@ -477,7 +478,7 @@ public interface IHttpStage : IStage {
      * @param props
      */
     override fun metricServerError(props: MetricOptions): Metric =
-        unwrap(this).metricServerError(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricServerError(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the number of server-side errors captured in a given period.

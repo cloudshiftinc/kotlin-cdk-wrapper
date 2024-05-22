@@ -59,8 +59,8 @@ public open class CustomActionRegistration(
     id: String,
     props: CustomActionRegistrationProps,
   ) :
-      this(software.amazon.awscdk.services.codepipeline.CustomActionRegistration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CustomActionRegistrationProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.CustomActionRegistration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CustomActionRegistrationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -171,7 +171,7 @@ public open class CustomActionRegistration(
      * @param actionProperties The properties used for customizing the instance of your Action. 
      */
     override fun actionProperties(actionProperties: List<CustomActionProperty>) {
-      cdkBuilder.actionProperties(actionProperties.map(CustomActionProperty::unwrap))
+      cdkBuilder.actionProperties(actionProperties.map(CustomActionProperty.Companion::unwrap))
     }
 
     /**
@@ -190,7 +190,7 @@ public open class CustomActionRegistration(
      * @param artifactBounds The artifact bounds of the Action. 
      */
     override fun artifactBounds(artifactBounds: ActionArtifactBounds) {
-      cdkBuilder.artifactBounds(artifactBounds.let(ActionArtifactBounds::unwrap))
+      cdkBuilder.artifactBounds(artifactBounds.let(ActionArtifactBounds.Companion::unwrap))
     }
 
     /**
@@ -209,7 +209,7 @@ public open class CustomActionRegistration(
      * @param category The category of the Action. 
      */
     override fun category(category: ActionCategory) {
-      cdkBuilder.category(category.let(ActionCategory::unwrap))
+      cdkBuilder.category(category.let(ActionCategory.Companion::unwrap))
     }
 
     /**

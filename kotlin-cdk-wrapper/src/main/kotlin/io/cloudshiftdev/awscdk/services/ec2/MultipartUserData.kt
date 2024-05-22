@@ -45,7 +45,7 @@ public open class MultipartUserData(
   )
 
   public constructor(opts: MultipartUserDataOptions) :
-      this(software.amazon.awscdk.services.ec2.MultipartUserData(opts.let(MultipartUserDataOptions::unwrap))
+      this(software.amazon.awscdk.services.ec2.MultipartUserData(opts.let(MultipartUserDataOptions.Companion::unwrap))
   )
 
   public constructor(opts: MultipartUserDataOptions.Builder.() -> Unit) :
@@ -67,7 +67,7 @@ public open class MultipartUserData(
    * @param params 
    */
   public override fun addExecuteFileCommand(params: ExecuteFileOptions) {
-    unwrap(this).addExecuteFileCommand(params.let(ExecuteFileOptions::unwrap))
+    unwrap(this).addExecuteFileCommand(params.let(ExecuteFileOptions.Companion::unwrap))
   }
 
   /**
@@ -96,7 +96,7 @@ public open class MultipartUserData(
    * @param part 
    */
   public open fun addPart(part: MultipartBody) {
-    unwrap(this).addPart(part.let(MultipartBody::unwrap))
+    unwrap(this).addPart(part.let(MultipartBody.Companion::unwrap))
   }
 
   /**
@@ -105,7 +105,7 @@ public open class MultipartUserData(
    * @param params 
    */
   public override fun addS3DownloadCommand(params: S3DownloadOptions): String =
-      unwrap(this).addS3DownloadCommand(params.let(S3DownloadOptions::unwrap))
+      unwrap(this).addS3DownloadCommand(params.let(S3DownloadOptions.Companion::unwrap))
 
   /**
    * Adds commands to download a file from S3.
@@ -123,7 +123,7 @@ public open class MultipartUserData(
    * @param resource 
    */
   public override fun addSignalOnExitCommand(resource: Resource) {
-    unwrap(this).addSignalOnExitCommand(resource.let(Resource::unwrap))
+    unwrap(this).addSignalOnExitCommand(resource.let(Resource.Companion::unwrap))
   }
 
   /**
@@ -152,7 +152,7 @@ public open class MultipartUserData(
    * @param makeDefault
    */
   public open fun addUserDataPart(userData: UserData) {
-    unwrap(this).addUserDataPart(userData.let(UserData::unwrap))
+    unwrap(this).addUserDataPart(userData.let(UserData.Companion::unwrap))
   }
 
   /**
@@ -181,7 +181,7 @@ public open class MultipartUserData(
    * @param makeDefault
    */
   public open fun addUserDataPart(userData: UserData, contentType: String) {
-    unwrap(this).addUserDataPart(userData.let(UserData::unwrap), contentType)
+    unwrap(this).addUserDataPart(userData.let(UserData.Companion::unwrap), contentType)
   }
 
   /**
@@ -214,7 +214,7 @@ public open class MultipartUserData(
     contentType: String,
     makeDefault: Boolean,
   ) {
-    unwrap(this).addUserDataPart(userData.let(UserData::unwrap), contentType, makeDefault)
+    unwrap(this).addUserDataPart(userData.let(UserData.Companion::unwrap), contentType, makeDefault)
   }
 
   /**

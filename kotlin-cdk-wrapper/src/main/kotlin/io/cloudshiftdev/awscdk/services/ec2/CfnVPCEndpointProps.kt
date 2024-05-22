@@ -292,7 +292,7 @@ public interface CfnVPCEndpointProps {
      * Default: `false`
      */
     override fun privateDnsEnabled(privateDnsEnabled: IResolvable) {
-      cdkBuilder.privateDnsEnabled(privateDnsEnabled.let(IResolvable::unwrap))
+      cdkBuilder.privateDnsEnabled(privateDnsEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**

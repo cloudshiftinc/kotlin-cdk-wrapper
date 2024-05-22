@@ -78,8 +78,8 @@ public open class NestedCloudAssemblyArtifact(
     name: String,
     artifact: ArtifactManifest,
   ) :
-      this(software.amazon.awscdk.cxapi.NestedCloudAssemblyArtifact(assembly.let(CloudAssembly::unwrap),
-      name, artifact.let(ArtifactManifest::unwrap))
+      this(software.amazon.awscdk.cxapi.NestedCloudAssemblyArtifact(assembly.let(CloudAssembly.Companion::unwrap),
+      name, artifact.let(ArtifactManifest.Companion::unwrap))
   )
 
   public constructor(
@@ -310,7 +310,7 @@ public open class NestedCloudAssemblyArtifact(
      * @param metadata Associated metadata. 
      */
     override fun metadata(metadata: Map<String, List<MetadataEntry>>) {
-      cdkBuilder.metadata(metadata.mapValues{it.value.map(MetadataEntry::unwrap) })
+      cdkBuilder.metadata(metadata.mapValues{it.value.map(MetadataEntry.Companion::unwrap) })
     }
 
     /**
@@ -321,7 +321,7 @@ public open class NestedCloudAssemblyArtifact(
      * @param properties The set of properties for this artifact (depends on type). 
      */
     override fun properties(properties: AwsCloudFormationStackProperties) {
-      cdkBuilder.properties(properties.let(AwsCloudFormationStackProperties::unwrap))
+      cdkBuilder.properties(properties.let(AwsCloudFormationStackProperties.Companion::unwrap))
     }
 
     /**
@@ -344,7 +344,7 @@ public open class NestedCloudAssemblyArtifact(
      * @param properties The set of properties for this artifact (depends on type). 
      */
     override fun properties(properties: AssetManifestProperties) {
-      cdkBuilder.properties(properties.let(AssetManifestProperties::unwrap))
+      cdkBuilder.properties(properties.let(AssetManifestProperties.Companion::unwrap))
     }
 
     /**
@@ -367,7 +367,7 @@ public open class NestedCloudAssemblyArtifact(
      * @param properties The set of properties for this artifact (depends on type). 
      */
     override fun properties(properties: TreeArtifactProperties) {
-      cdkBuilder.properties(properties.let(TreeArtifactProperties::unwrap))
+      cdkBuilder.properties(properties.let(TreeArtifactProperties.Companion::unwrap))
     }
 
     /**
@@ -390,7 +390,7 @@ public open class NestedCloudAssemblyArtifact(
      * @param properties The set of properties for this artifact (depends on type). 
      */
     override fun properties(properties: NestedCloudAssemblyProperties) {
-      cdkBuilder.properties(properties.let(NestedCloudAssemblyProperties::unwrap))
+      cdkBuilder.properties(properties.let(NestedCloudAssemblyProperties.Companion::unwrap))
     }
 
     /**
@@ -411,7 +411,7 @@ public open class NestedCloudAssemblyArtifact(
      * @param type The type of artifact. 
      */
     override fun type(type: ArtifactType) {
-      cdkBuilder.type(type.let(ArtifactType::unwrap))
+      cdkBuilder.type(type.let(ArtifactType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.cxapi.NestedCloudAssemblyArtifact =

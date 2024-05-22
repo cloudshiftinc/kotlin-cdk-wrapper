@@ -141,14 +141,14 @@ public interface CfnBridgeSourceProps {
      * @param flowSource Add a flow source to an existing bridge.
      */
     override fun flowSource(flowSource: IResolvable) {
-      cdkBuilder.flowSource(flowSource.let(IResolvable::unwrap))
+      cdkBuilder.flowSource(flowSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param flowSource Add a flow source to an existing bridge.
      */
     override fun flowSource(flowSource: CfnBridgeSource.BridgeFlowSourceProperty) {
-      cdkBuilder.flowSource(flowSource.let(CfnBridgeSource.BridgeFlowSourceProperty::unwrap))
+      cdkBuilder.flowSource(flowSource.let(CfnBridgeSource.BridgeFlowSourceProperty.Companion::unwrap))
     }
 
     /**
@@ -172,14 +172,14 @@ public interface CfnBridgeSourceProps {
      * @param networkSource Add a network source to an existing bridge.
      */
     override fun networkSource(networkSource: IResolvable) {
-      cdkBuilder.networkSource(networkSource.let(IResolvable::unwrap))
+      cdkBuilder.networkSource(networkSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param networkSource Add a network source to an existing bridge.
      */
     override fun networkSource(networkSource: CfnBridgeSource.BridgeNetworkSourceProperty) {
-      cdkBuilder.networkSource(networkSource.let(CfnBridgeSource.BridgeNetworkSourceProperty::unwrap))
+      cdkBuilder.networkSource(networkSource.let(CfnBridgeSource.BridgeNetworkSourceProperty.Companion::unwrap))
     }
 
     /**

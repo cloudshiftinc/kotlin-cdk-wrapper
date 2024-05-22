@@ -47,8 +47,8 @@ public open class CfnSmsTemplate(
     id: String,
     props: CfnSmsTemplateProps,
   ) :
-      this(software.amazon.awscdk.services.pinpoint.CfnSmsTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSmsTemplateProps::unwrap))
+      this(software.amazon.awscdk.services.pinpoint.CfnSmsTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSmsTemplateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -100,7 +100,7 @@ public open class CfnSmsTemplate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

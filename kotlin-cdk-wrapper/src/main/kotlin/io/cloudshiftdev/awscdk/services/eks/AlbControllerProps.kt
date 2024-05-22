@@ -78,7 +78,7 @@ public interface AlbControllerProps : AlbControllerOptions {
      * @param cluster [disable-awslint:ref-via-interface] Cluster to install the controller onto. 
      */
     override fun cluster(cluster: Cluster) {
-      cdkBuilder.cluster(cluster.let(Cluster::unwrap))
+      cdkBuilder.cluster(cluster.let(Cluster.Companion::unwrap))
     }
 
     /**
@@ -107,7 +107,7 @@ public interface AlbControllerProps : AlbControllerOptions {
      * @param version Version of the controller. 
      */
     override fun version(version: AlbControllerVersion) {
-      cdkBuilder.version(version.let(AlbControllerVersion::unwrap))
+      cdkBuilder.version(version.let(AlbControllerVersion.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.eks.AlbControllerProps = cdkBuilder.build()

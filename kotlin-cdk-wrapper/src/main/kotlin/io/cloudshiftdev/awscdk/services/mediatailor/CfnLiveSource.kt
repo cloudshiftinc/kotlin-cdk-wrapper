@@ -54,8 +54,8 @@ public open class CfnLiveSource(
     id: String,
     props: CfnLiveSourceProps,
   ) :
-      this(software.amazon.awscdk.services.mediatailor.CfnLiveSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLiveSourceProps::unwrap))
+      this(software.amazon.awscdk.services.mediatailor.CfnLiveSource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLiveSourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -85,7 +85,7 @@ public open class CfnLiveSource(
    * The HTTP package configurations for the live source.
    */
   public open fun httpPackageConfigurations(`value`: IResolvable) {
-    unwrap(this).setHttpPackageConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHttpPackageConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -107,7 +107,7 @@ public open class CfnLiveSource(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -143,7 +143,7 @@ public open class CfnLiveSource(
    * The tags assigned to the live source.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -237,7 +237,7 @@ public open class CfnLiveSource(
      * @param httpPackageConfigurations The HTTP package configurations for the live source. 
      */
     override fun httpPackageConfigurations(httpPackageConfigurations: IResolvable) {
-      cdkBuilder.httpPackageConfigurations(httpPackageConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.httpPackageConfigurations(httpPackageConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -291,7 +291,7 @@ public open class CfnLiveSource(
      * @param tags The tags assigned to the live source. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

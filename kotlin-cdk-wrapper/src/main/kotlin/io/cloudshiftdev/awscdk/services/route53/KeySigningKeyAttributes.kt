@@ -59,7 +59,7 @@ public interface KeySigningKeyAttributes {
      * @param hostedZone The hosted zone that the key signing key signs. 
      */
     override fun hostedZone(hostedZone: IHostedZone) {
-      cdkBuilder.hostedZone(hostedZone.let(IHostedZone::unwrap))
+      cdkBuilder.hostedZone(hostedZone.let(IHostedZone.Companion::unwrap))
     }
 
     /**

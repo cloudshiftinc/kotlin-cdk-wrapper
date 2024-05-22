@@ -96,7 +96,7 @@ public interface EcsEc2LaunchTargetOptions {
      * @param placementConstraints Placement constraints.
      */
     override fun placementConstraints(placementConstraints: List<PlacementConstraint>) {
-      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint::unwrap))
+      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint.Companion::unwrap))
     }
 
     /**
@@ -109,7 +109,7 @@ public interface EcsEc2LaunchTargetOptions {
      * @param placementStrategies Placement strategies.
      */
     override fun placementStrategies(placementStrategies: List<PlacementStrategy>) {
-      cdkBuilder.placementStrategies(placementStrategies.map(PlacementStrategy::unwrap))
+      cdkBuilder.placementStrategies(placementStrategies.map(PlacementStrategy.Companion::unwrap))
     }
 
     /**

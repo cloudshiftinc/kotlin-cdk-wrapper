@@ -473,7 +473,7 @@ public interface CfnClientVpnEndpointProps {
      * authenticate clients. 
      */
     override fun authenticationOptions(authenticationOptions: IResolvable) {
-      cdkBuilder.authenticationOptions(authenticationOptions.let(IResolvable::unwrap))
+      cdkBuilder.authenticationOptions(authenticationOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -508,7 +508,7 @@ public interface CfnClientVpnEndpointProps {
      * connections.
      */
     override fun clientConnectOptions(clientConnectOptions: IResolvable) {
-      cdkBuilder.clientConnectOptions(clientConnectOptions.let(IResolvable::unwrap))
+      cdkBuilder.clientConnectOptions(clientConnectOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -517,7 +517,7 @@ public interface CfnClientVpnEndpointProps {
      */
     override
         fun clientConnectOptions(clientConnectOptions: CfnClientVpnEndpoint.ClientConnectOptionsProperty) {
-      cdkBuilder.clientConnectOptions(clientConnectOptions.let(CfnClientVpnEndpoint.ClientConnectOptionsProperty::unwrap))
+      cdkBuilder.clientConnectOptions(clientConnectOptions.let(CfnClientVpnEndpoint.ClientConnectOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -536,7 +536,7 @@ public interface CfnClientVpnEndpointProps {
      * displayed on AWS provided clients when a VPN session is established.
      */
     override fun clientLoginBannerOptions(clientLoginBannerOptions: IResolvable) {
-      cdkBuilder.clientLoginBannerOptions(clientLoginBannerOptions.let(IResolvable::unwrap))
+      cdkBuilder.clientLoginBannerOptions(clientLoginBannerOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -545,7 +545,7 @@ public interface CfnClientVpnEndpointProps {
      */
     override
         fun clientLoginBannerOptions(clientLoginBannerOptions: CfnClientVpnEndpoint.ClientLoginBannerOptionsProperty) {
-      cdkBuilder.clientLoginBannerOptions(clientLoginBannerOptions.let(CfnClientVpnEndpoint.ClientLoginBannerOptionsProperty::unwrap))
+      cdkBuilder.clientLoginBannerOptions(clientLoginBannerOptions.let(CfnClientVpnEndpoint.ClientLoginBannerOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -570,7 +570,7 @@ public interface CfnClientVpnEndpointProps {
      * * Client connection termination time
      */
     override fun connectionLogOptions(connectionLogOptions: IResolvable) {
-      cdkBuilder.connectionLogOptions(connectionLogOptions.let(IResolvable::unwrap))
+      cdkBuilder.connectionLogOptions(connectionLogOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -585,7 +585,7 @@ public interface CfnClientVpnEndpointProps {
      */
     override
         fun connectionLogOptions(connectionLogOptions: CfnClientVpnEndpoint.ConnectionLogOptionsProperty) {
-      cdkBuilder.connectionLogOptions(connectionLogOptions.let(CfnClientVpnEndpoint.ConnectionLogOptionsProperty::unwrap))
+      cdkBuilder.connectionLogOptions(connectionLogOptions.let(CfnClientVpnEndpoint.ConnectionLogOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -694,14 +694,14 @@ public interface CfnClientVpnEndpointProps {
      * *AWS Client VPN Administrator Guide* .
      */
     override fun splitTunnel(splitTunnel: IResolvable) {
-      cdkBuilder.splitTunnel(splitTunnel.let(IResolvable::unwrap))
+      cdkBuilder.splitTunnel(splitTunnel.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param tagSpecifications The tags to apply to the Client VPN endpoint during creation.
      */
     override fun tagSpecifications(tagSpecifications: IResolvable) {
-      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**

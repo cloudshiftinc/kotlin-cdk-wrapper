@@ -54,8 +54,8 @@ public open class CfnDiscoverer(
     id: String,
     props: CfnDiscovererProps,
   ) :
-      this(software.amazon.awscdk.services.eventschemas.CfnDiscoverer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDiscovererProps::unwrap))
+      this(software.amazon.awscdk.services.eventschemas.CfnDiscoverer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDiscovererProps.Companion::unwrap))
   )
 
   public constructor(
@@ -105,7 +105,7 @@ public open class CfnDiscoverer(
    * account.
    */
   public open fun crossAccount(`value`: IResolvable) {
-    unwrap(this).setCrossAccount(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCrossAccount(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -126,7 +126,7 @@ public open class CfnDiscoverer(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -156,7 +156,7 @@ public open class CfnDiscoverer(
    * Tags associated with the resource.
    */
   public open fun tagsRaw(`value`: List<TagsEntryProperty>) {
-    unwrap(this).setTagsRaw(`value`.map(TagsEntryProperty::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(TagsEntryProperty.Companion::unwrap))
   }
 
   /**
@@ -258,7 +258,7 @@ public open class CfnDiscoverer(
      * bus from another account. 
      */
     override fun crossAccount(crossAccount: IResolvable) {
-      cdkBuilder.crossAccount(crossAccount.let(IResolvable::unwrap))
+      cdkBuilder.crossAccount(crossAccount.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -288,7 +288,7 @@ public open class CfnDiscoverer(
      * @param tags Tags associated with the resource. 
      */
     override fun tags(tags: List<TagsEntryProperty>) {
-      cdkBuilder.tags(tags.map(TagsEntryProperty::unwrap))
+      cdkBuilder.tags(tags.map(TagsEntryProperty.Companion::unwrap))
     }
 
     /**

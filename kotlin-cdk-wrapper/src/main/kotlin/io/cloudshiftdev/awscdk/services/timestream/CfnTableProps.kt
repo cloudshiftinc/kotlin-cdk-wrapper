@@ -378,14 +378,14 @@ public interface CfnTableProps {
      * @param schema The schema of the table.
      */
     override fun schema(schema: IResolvable) {
-      cdkBuilder.schema(schema.let(IResolvable::unwrap))
+      cdkBuilder.schema(schema.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param schema The schema of the table.
      */
     override fun schema(schema: CfnTable.SchemaProperty) {
-      cdkBuilder.schema(schema.let(CfnTable.SchemaProperty::unwrap))
+      cdkBuilder.schema(schema.let(CfnTable.SchemaProperty.Companion::unwrap))
     }
 
     /**
@@ -408,7 +408,7 @@ public interface CfnTableProps {
      * @param tags The tags to add to the table.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

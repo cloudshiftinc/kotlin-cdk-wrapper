@@ -241,14 +241,14 @@ public interface CfnPrincipalPermissionsProps {
      * @param principal The principal to be granted a permission. 
      */
     override fun principal(principal: IResolvable) {
-      cdkBuilder.principal(principal.let(IResolvable::unwrap))
+      cdkBuilder.principal(principal.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param principal The principal to be granted a permission. 
      */
     override fun principal(principal: CfnPrincipalPermissions.DataLakePrincipalProperty) {
-      cdkBuilder.principal(principal.let(CfnPrincipalPermissions.DataLakePrincipalProperty::unwrap))
+      cdkBuilder.principal(principal.let(CfnPrincipalPermissions.DataLakePrincipalProperty.Companion::unwrap))
     }
 
     /**
@@ -264,14 +264,14 @@ public interface CfnPrincipalPermissionsProps {
      * @param resource The resource to be granted or revoked permissions. 
      */
     override fun resource(resource: IResolvable) {
-      cdkBuilder.resource(resource.let(IResolvable::unwrap))
+      cdkBuilder.resource(resource.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param resource The resource to be granted or revoked permissions. 
      */
     override fun resource(resource: CfnPrincipalPermissions.ResourceProperty) {
-      cdkBuilder.resource(resource.let(CfnPrincipalPermissions.ResourceProperty::unwrap))
+      cdkBuilder.resource(resource.let(CfnPrincipalPermissions.ResourceProperty.Companion::unwrap))
     }
 
     /**

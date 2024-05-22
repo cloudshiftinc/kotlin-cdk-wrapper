@@ -169,7 +169,7 @@ public interface MetricStatConfig {
      * @param dimensions The dimensions to apply to the alarm.
      */
     override fun dimensions(dimensions: List<Dimension>) {
-      cdkBuilder.dimensions(dimensions.map(Dimension::unwrap))
+      cdkBuilder.dimensions(dimensions.map(Dimension.Companion::unwrap))
     }
 
     /**
@@ -196,7 +196,7 @@ public interface MetricStatConfig {
      * @param period How many seconds to aggregate over. 
      */
     override fun period(period: Duration) {
-      cdkBuilder.period(period.let(Duration::unwrap))
+      cdkBuilder.period(period.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -223,7 +223,7 @@ public interface MetricStatConfig {
      * its purpose.
      */
     override fun unitFilter(unitFilter: Unit) {
-      cdkBuilder.unitFilter(unitFilter.let(Unit::unwrap))
+      cdkBuilder.unitFilter(unitFilter.let(Unit.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudwatch.MetricStatConfig =

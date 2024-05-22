@@ -15,20 +15,23 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.lambda.*;
- * Function authFunction;
- * GraphqlApi.Builder.create(this, "api")
+ * import io.cloudshiftdev.awscdk.services.appsync.*;
+ * GraphqlApi api = GraphqlApi.Builder.create(this, "api")
  * .name("api")
- * .definition(Definition.fromFile(join(__dirname, "appsync.test.graphql")))
+ * .definition(Definition.fromFile("schema.graphql"))
  * .authorizationConfig(AuthorizationConfig.builder()
- * .defaultAuthorization(AuthorizationMode.builder()
- * .authorizationType(AuthorizationType.LAMBDA)
- * .lambdaAuthorizerConfig(LambdaAuthorizerConfig.builder()
- * .handler(authFunction)
- * .build())
- * .build())
+ * .defaultAuthorization(AuthorizationMode.builder().authorizationType(AuthorizationType.IAM).build())
  * .build())
  * .build();
+ * Rule rule = Rule.Builder.create(this, "Rule")
+ * .schedule(Schedule.rate(Duration.hours(1)))
+ * .build();
+ * rule.addTarget(AppSync.Builder.create(api)
+ * .graphQLOperation("mutation Publish($message: String!){ publish(message: $message) { message }
+ * }")
+ * .variables(RuleTargetInput.fromObject(Map.of(
+ * "message", "hello world")))
+ * .build());
  * ```
  */
 public interface AuthorizationConfig {
@@ -85,7 +88,7 @@ public interface AuthorizationConfig {
      */
     override
         fun additionalAuthorizationModes(additionalAuthorizationModes: List<AuthorizationMode>) {
-      cdkBuilder.additionalAuthorizationModes(additionalAuthorizationModes.map(AuthorizationMode::unwrap))
+      cdkBuilder.additionalAuthorizationModes(additionalAuthorizationModes.map(AuthorizationMode.Companion::unwrap))
     }
 
     /**
@@ -99,7 +102,7 @@ public interface AuthorizationConfig {
      * @param defaultAuthorization Optional authorization configuration.
      */
     override fun defaultAuthorization(defaultAuthorization: AuthorizationMode) {
-      cdkBuilder.defaultAuthorization(defaultAuthorization.let(AuthorizationMode::unwrap))
+      cdkBuilder.defaultAuthorization(defaultAuthorization.let(AuthorizationMode.Companion::unwrap))
     }
 
     /**

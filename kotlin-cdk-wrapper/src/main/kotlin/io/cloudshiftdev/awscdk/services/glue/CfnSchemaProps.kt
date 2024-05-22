@@ -208,7 +208,7 @@ public interface CfnSchemaProps {
      * This is only required for updating a checkpoint.
      */
     override fun checkpointVersion(checkpointVersion: IResolvable) {
-      cdkBuilder.checkpointVersion(checkpointVersion.let(IResolvable::unwrap))
+      cdkBuilder.checkpointVersion(checkpointVersion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -217,7 +217,7 @@ public interface CfnSchemaProps {
      * This is only required for updating a checkpoint.
      */
     override fun checkpointVersion(checkpointVersion: CfnSchema.SchemaVersionProperty) {
-      cdkBuilder.checkpointVersion(checkpointVersion.let(CfnSchema.SchemaVersionProperty::unwrap))
+      cdkBuilder.checkpointVersion(checkpointVersion.let(CfnSchema.SchemaVersionProperty.Companion::unwrap))
     }
 
     /**
@@ -266,14 +266,14 @@ public interface CfnSchemaProps {
      * @param registry The registry where a schema is stored.
      */
     override fun registry(registry: IResolvable) {
-      cdkBuilder.registry(registry.let(IResolvable::unwrap))
+      cdkBuilder.registry(registry.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param registry The registry where a schema is stored.
      */
     override fun registry(registry: CfnSchema.RegistryProperty) {
-      cdkBuilder.registry(registry.let(CfnSchema.RegistryProperty::unwrap))
+      cdkBuilder.registry(registry.let(CfnSchema.RegistryProperty.Companion::unwrap))
     }
 
     /**
@@ -297,7 +297,7 @@ public interface CfnSchemaProps {
      * line, or API.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

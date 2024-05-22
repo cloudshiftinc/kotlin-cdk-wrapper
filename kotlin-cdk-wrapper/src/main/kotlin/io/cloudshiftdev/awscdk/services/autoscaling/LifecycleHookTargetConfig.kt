@@ -62,7 +62,7 @@ public interface LifecycleHookTargetConfig {
      * @param createdRole The IRole that was used to bind the lifecycle hook to the target. 
      */
     override fun createdRole(createdRole: IRole) {
-      cdkBuilder.createdRole(createdRole.let(IRole::unwrap))
+      cdkBuilder.createdRole(createdRole.let(IRole.Companion::unwrap))
     }
 
     /**

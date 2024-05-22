@@ -93,8 +93,8 @@ public open class CfnMetricStream(
     id: String,
     props: CfnMetricStreamProps,
   ) :
-      this(software.amazon.awscdk.services.cloudwatch.CfnMetricStream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMetricStreamProps::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.CfnMetricStream(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMetricStreamProps.Companion::unwrap))
   )
 
   public constructor(
@@ -135,7 +135,7 @@ public open class CfnMetricStream(
    * the namespaces that you specify here.
    */
   public open fun excludeFilters(`value`: IResolvable) {
-    unwrap(this).setExcludeFilters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setExcludeFilters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -175,7 +175,7 @@ public open class CfnMetricStream(
    * that you specify here.
    */
   public open fun includeFilters(`value`: IResolvable) {
-    unwrap(this).setIncludeFilters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIncludeFilters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -212,7 +212,7 @@ public open class CfnMetricStream(
    * from source accounts that are linked to this monitoring account, in the metric stream.
    */
   public open fun includeLinkedAccountsMetrics(`value`: IResolvable) {
-    unwrap(this).setIncludeLinkedAccountsMetrics(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIncludeLinkedAccountsMetrics(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -221,7 +221,7 @@ public open class CfnMetricStream(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -273,7 +273,7 @@ public open class CfnMetricStream(
    * metric that is streamed.
    */
   public open fun statisticsConfigurations(`value`: IResolvable) {
-    unwrap(this).setStatisticsConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStatisticsConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -306,7 +306,7 @@ public open class CfnMetricStream(
    * An array of key-value pairs to apply to the metric stream.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -606,7 +606,7 @@ public open class CfnMetricStream(
      * namespaces except for the namespaces that you specify here. 
      */
     override fun excludeFilters(excludeFilters: IResolvable) {
-      cdkBuilder.excludeFilters(excludeFilters.let(IResolvable::unwrap))
+      cdkBuilder.excludeFilters(excludeFilters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -673,7 +673,7 @@ public open class CfnMetricStream(
      * the metric namespaces that you specify here. 
      */
     override fun includeFilters(includeFilters: IResolvable) {
-      cdkBuilder.includeFilters(includeFilters.let(IResolvable::unwrap))
+      cdkBuilder.includeFilters(includeFilters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -744,7 +744,7 @@ public open class CfnMetricStream(
      * monitoring account, in the metric stream. 
      */
     override fun includeLinkedAccountsMetrics(includeLinkedAccountsMetrics: IResolvable) {
-      cdkBuilder.includeLinkedAccountsMetrics(includeLinkedAccountsMetrics.let(IResolvable::unwrap))
+      cdkBuilder.includeLinkedAccountsMetrics(includeLinkedAccountsMetrics.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -812,7 +812,7 @@ public open class CfnMetricStream(
      * and SAMPLECOUNT statistics for each metric that is streamed. 
      */
     override fun statisticsConfigurations(statisticsConfigurations: IResolvable) {
-      cdkBuilder.statisticsConfigurations(statisticsConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.statisticsConfigurations(statisticsConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -869,7 +869,7 @@ public open class CfnMetricStream(
      * @param tags An array of key-value pairs to apply to the metric stream. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1183,7 +1183,7 @@ public open class CfnMetricStream(
        * statistics streamed. 
        */
       override fun includeMetrics(includeMetrics: IResolvable) {
-        cdkBuilder.includeMetrics(includeMetrics.let(IResolvable::unwrap))
+        cdkBuilder.includeMetrics(includeMetrics.let(IResolvable.Companion::unwrap))
       }
 
       /**

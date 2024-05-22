@@ -59,8 +59,8 @@ public open class CfnSkill(
     id: String,
     props: CfnSkillProps,
   ) :
-      this(software.amazon.awscdk.alexa.ask.CfnSkill(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSkillProps::unwrap))
+      this(software.amazon.awscdk.alexa.ask.CfnSkill(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSkillProps.Companion::unwrap))
   )
 
   public constructor(
@@ -84,14 +84,14 @@ public open class CfnSkill(
    * Login with Amazon (LWA) configuration used to authenticate with the Alexa service.
    */
   public open fun authenticationConfiguration(`value`: IResolvable) {
-    unwrap(this).setAuthenticationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAuthenticationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Login with Amazon (LWA) configuration used to authenticate with the Alexa service.
    */
   public open fun authenticationConfiguration(`value`: AuthenticationConfigurationProperty) {
-    unwrap(this).setAuthenticationConfiguration(`value`.let(AuthenticationConfigurationProperty::unwrap))
+    unwrap(this).setAuthenticationConfiguration(`value`.let(AuthenticationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -109,7 +109,7 @@ public open class CfnSkill(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -121,14 +121,14 @@ public open class CfnSkill(
    * Configuration for the skill package that contains the components of the Alexa skill.
    */
   public open fun skillPackage(`value`: IResolvable) {
-    unwrap(this).setSkillPackage(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSkillPackage(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration for the skill package that contains the components of the Alexa skill.
    */
   public open fun skillPackage(`value`: SkillPackageProperty) {
-    unwrap(this).setSkillPackage(`value`.let(SkillPackageProperty::unwrap))
+    unwrap(this).setSkillPackage(`value`.let(SkillPackageProperty.Companion::unwrap))
   }
 
   /**
@@ -265,7 +265,7 @@ public open class CfnSkill(
      * with the Alexa service. 
      */
     override fun authenticationConfiguration(authenticationConfiguration: IResolvable) {
-      cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -280,7 +280,7 @@ public open class CfnSkill(
      */
     override
         fun authenticationConfiguration(authenticationConfiguration: AuthenticationConfigurationProperty) {
-      cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(AuthenticationConfigurationProperty::unwrap))
+      cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(AuthenticationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -311,7 +311,7 @@ public open class CfnSkill(
      * Alexa skill. 
      */
     override fun skillPackage(skillPackage: IResolvable) {
-      cdkBuilder.skillPackage(skillPackage.let(IResolvable::unwrap))
+      cdkBuilder.skillPackage(skillPackage.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -325,7 +325,7 @@ public open class CfnSkill(
      * Alexa skill. 
      */
     override fun skillPackage(skillPackage: SkillPackageProperty) {
-      cdkBuilder.skillPackage(skillPackage.let(SkillPackageProperty::unwrap))
+      cdkBuilder.skillPackage(skillPackage.let(SkillPackageProperty.Companion::unwrap))
     }
 
     /**
@@ -764,7 +764,7 @@ public open class CfnSkill(
        * only overriding values inside of the skill manifest component of the package is supported.
        */
       override fun overrides(overrides: IResolvable) {
-        cdkBuilder.overrides(overrides.let(IResolvable::unwrap))
+        cdkBuilder.overrides(overrides.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -774,7 +774,7 @@ public open class CfnSkill(
        * only overriding values inside of the skill manifest component of the package is supported.
        */
       override fun overrides(overrides: OverridesProperty) {
-        cdkBuilder.overrides(overrides.let(OverridesProperty::unwrap))
+        cdkBuilder.overrides(overrides.let(OverridesProperty.Companion::unwrap))
       }
 
       /**

@@ -44,8 +44,8 @@ public open class ServerlessClusterFromSnapshot(
     id: String,
     props: ServerlessClusterFromSnapshotProps,
   ) :
-      this(software.amazon.awscdk.services.rds.ServerlessClusterFromSnapshot(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ServerlessClusterFromSnapshotProps::unwrap))
+      this(software.amazon.awscdk.services.rds.ServerlessClusterFromSnapshot(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ServerlessClusterFromSnapshotProps.Companion::unwrap))
   )
 
   public constructor(
@@ -96,7 +96,7 @@ public open class ServerlessClusterFromSnapshot(
    * @param grantee The principal to grant access to. 
    */
   public override fun grantDataApiAccess(grantee: IGrantable): Grant =
-      unwrap(this).grantDataApiAccess(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantDataApiAccess(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The secret attached to this cluster.
@@ -330,7 +330,7 @@ public open class ServerlessClusterFromSnapshot(
      * @param backupRetention The number of days during which automatic DB snapshots are retained. 
      */
     override fun backupRetention(backupRetention: Duration) {
-      cdkBuilder.backupRetention(backupRetention.let(Duration::unwrap))
+      cdkBuilder.backupRetention(backupRetention.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -366,7 +366,7 @@ public open class ServerlessClusterFromSnapshot(
      * @param credentials Master user credentials. 
      */
     override fun credentials(credentials: SnapshotCredentials) {
-      cdkBuilder.credentials(credentials.let(SnapshotCredentials::unwrap))
+      cdkBuilder.credentials(credentials.let(SnapshotCredentials.Companion::unwrap))
     }
 
     /**
@@ -411,7 +411,7 @@ public open class ServerlessClusterFromSnapshot(
      * @param engine What kind of database to start. 
      */
     override fun engine(engine: IClusterEngine) {
-      cdkBuilder.engine(engine.let(IClusterEngine::unwrap))
+      cdkBuilder.engine(engine.let(IClusterEngine.Companion::unwrap))
     }
 
     /**
@@ -422,7 +422,7 @@ public open class ServerlessClusterFromSnapshot(
      * @param parameterGroup Additional parameters to pass to the database engine. 
      */
     override fun parameterGroup(parameterGroup: IParameterGroup) {
-      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup::unwrap))
+      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup.Companion::unwrap))
     }
 
     /**
@@ -436,7 +436,7 @@ public open class ServerlessClusterFromSnapshot(
      * removed from the stack or replaced during an update. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -449,7 +449,7 @@ public open class ServerlessClusterFromSnapshot(
      * @param scaling Scaling configuration of an Aurora Serverless database cluster. 
      */
     override fun scaling(scaling: ServerlessScalingOptions) {
-      cdkBuilder.scaling(scaling.let(ServerlessScalingOptions::unwrap))
+      cdkBuilder.scaling(scaling.let(ServerlessScalingOptions.Companion::unwrap))
     }
 
     /**
@@ -476,7 +476,7 @@ public open class ServerlessClusterFromSnapshot(
      * @param securityGroups Security group. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -515,7 +515,7 @@ public open class ServerlessClusterFromSnapshot(
      * @param subnetGroup Existing subnet group for the cluster. 
      */
     override fun subnetGroup(subnetGroup: ISubnetGroup) {
-      cdkBuilder.subnetGroup(subnetGroup.let(ISubnetGroup::unwrap))
+      cdkBuilder.subnetGroup(subnetGroup.let(ISubnetGroup.Companion::unwrap))
     }
 
     /**
@@ -526,7 +526,7 @@ public open class ServerlessClusterFromSnapshot(
      * @param vpc The VPC that this Aurora Serverless cluster has been created in. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -539,7 +539,7 @@ public open class ServerlessClusterFromSnapshot(
      * @param vpcSubnets Where to place the instances within the VPC. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

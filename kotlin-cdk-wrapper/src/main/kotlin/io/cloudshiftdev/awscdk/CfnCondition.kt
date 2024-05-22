@@ -30,7 +30,7 @@ public open class CfnCondition(
   cdkObject: software.amazon.awscdk.CfnCondition,
 ) : CfnElement(cdkObject), ICfnConditionExpression, IResolvable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.CfnCondition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.CfnCondition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -38,8 +38,9 @@ public open class CfnCondition(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
     props: CfnConditionProps,
-  ) : this(software.amazon.awscdk.CfnCondition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConditionProps::unwrap))
+  ) :
+      this(software.amazon.awscdk.CfnCondition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConditionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -59,7 +60,7 @@ public open class CfnCondition(
    * The condition statement.
    */
   public open fun expression(`value`: ICfnConditionExpression) {
-    unwrap(this).setExpression(`value`.let(ICfnConditionExpression::unwrap))
+    unwrap(this).setExpression(`value`.let(ICfnConditionExpression.Companion::unwrap))
   }
 
   /**
@@ -68,7 +69,7 @@ public open class CfnCondition(
    * @param _context 
    */
   public override fun resolve(context: IResolveContext): Any =
-      unwrap(this).resolve(context.let(IResolveContext::unwrap))
+      unwrap(this).resolve(context.let(IResolveContext.Companion::unwrap))
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.CfnCondition].
@@ -100,7 +101,7 @@ public open class CfnCondition(
      * @param expression The expression that the condition will evaluate. 
      */
     override fun expression(expression: ICfnConditionExpression) {
-      cdkBuilder.expression(expression.let(ICfnConditionExpression::unwrap))
+      cdkBuilder.expression(expression.let(ICfnConditionExpression.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.CfnCondition = cdkBuilder.build()

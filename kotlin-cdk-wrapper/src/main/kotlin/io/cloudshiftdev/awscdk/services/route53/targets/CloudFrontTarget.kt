@@ -30,7 +30,7 @@ public open class CloudFrontTarget(
   cdkObject: software.amazon.awscdk.services.route53.targets.CloudFrontTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
   public constructor(distribution: IDistribution) :
-      this(software.amazon.awscdk.services.route53.targets.CloudFrontTarget(distribution.let(IDistribution::unwrap))
+      this(software.amazon.awscdk.services.route53.targets.CloudFrontTarget(distribution.let(IDistribution.Companion::unwrap))
   )
 
   /**
@@ -40,7 +40,7 @@ public open class CloudFrontTarget(
    * @param _zone
    */
   public override fun bind(record: IRecordSet): AliasRecordTargetConfig =
-      unwrap(this).bind(record.let(IRecordSet::unwrap)).let(AliasRecordTargetConfig::wrap)
+      unwrap(this).bind(record.let(IRecordSet.Companion::unwrap)).let(AliasRecordTargetConfig::wrap)
 
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
@@ -49,15 +49,15 @@ public open class CloudFrontTarget(
    * @param _zone
    */
   public override fun bind(record: IRecordSet, zone: IHostedZone): AliasRecordTargetConfig =
-      unwrap(this).bind(record.let(IRecordSet::unwrap),
-      zone.let(IHostedZone::unwrap)).let(AliasRecordTargetConfig::wrap)
+      unwrap(this).bind(record.let(IRecordSet.Companion::unwrap),
+      zone.let(IHostedZone.Companion::unwrap)).let(AliasRecordTargetConfig::wrap)
 
   public companion object {
     public val CLOUDFRONT_ZONE_ID: String =
         software.amazon.awscdk.services.route53.targets.CloudFrontTarget.CLOUDFRONT_ZONE_ID
 
     public fun hostedZoneId(scope: IConstruct): String =
-        software.amazon.awscdk.services.route53.targets.CloudFrontTarget.getHostedZoneId(scope.let(IConstruct::unwrap))
+        software.amazon.awscdk.services.route53.targets.CloudFrontTarget.getHostedZoneId(scope.let(IConstruct.Companion::unwrap))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.route53.targets.CloudFrontTarget):
         CloudFrontTarget = CloudFrontTarget(cdkObject)

@@ -44,7 +44,7 @@ public abstract class CloudFormationTemplate(
    * @param scope The binding scope. 
    */
   public open fun bind(scope: Construct): CloudFormationTemplateConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(CloudFormationTemplateConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(CloudFormationTemplateConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate,
@@ -56,7 +56,7 @@ public abstract class CloudFormationTemplate(
 
     public fun fromAsset(path: String, options: AssetOptions): CloudFormationTemplate =
         software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate.fromAsset(path,
-        options.let(AssetOptions::unwrap)).let(CloudFormationTemplate::wrap)
+        options.let(AssetOptions.Companion::unwrap)).let(CloudFormationTemplate::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c40d613b9b251d5ad7609ae25c41df88c1d5c450cd3ffe2fb4572e96fc442e95")
@@ -64,7 +64,7 @@ public abstract class CloudFormationTemplate(
         CloudFormationTemplate = fromAsset(path, AssetOptions(options))
 
     public fun fromProductStack(productStack: ProductStack): CloudFormationTemplate =
-        software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate.fromProductStack(productStack.let(ProductStack::unwrap)).let(CloudFormationTemplate::wrap)
+        software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate.fromProductStack(productStack.let(ProductStack.Companion::unwrap)).let(CloudFormationTemplate::wrap)
 
     public fun fromUrl(url: String): CloudFormationTemplate =
         software.amazon.awscdk.services.servicecatalog.CloudFormationTemplate.fromUrl(url).let(CloudFormationTemplate::wrap)

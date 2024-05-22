@@ -128,7 +128,7 @@ public interface GrpcRouteSpecOptions : RouteSpecOptionsBase {
      * @param match The criterion for determining a request match for this Route. 
      */
     override fun match(match: GrpcRouteMatch) {
-      cdkBuilder.match(match.let(GrpcRouteMatch::unwrap))
+      cdkBuilder.match(match.let(GrpcRouteMatch.Companion::unwrap))
     }
 
     /**
@@ -153,7 +153,7 @@ public interface GrpcRouteSpecOptions : RouteSpecOptionsBase {
      * @param retryPolicy The retry policy.
      */
     override fun retryPolicy(retryPolicy: GrpcRetryPolicy) {
-      cdkBuilder.retryPolicy(retryPolicy.let(GrpcRetryPolicy::unwrap))
+      cdkBuilder.retryPolicy(retryPolicy.let(GrpcRetryPolicy.Companion::unwrap))
     }
 
     /**
@@ -168,7 +168,7 @@ public interface GrpcRouteSpecOptions : RouteSpecOptionsBase {
      * @param timeout An object that represents a grpc timeout.
      */
     override fun timeout(timeout: GrpcTimeout) {
-      cdkBuilder.timeout(timeout.let(GrpcTimeout::unwrap))
+      cdkBuilder.timeout(timeout.let(GrpcTimeout.Companion::unwrap))
     }
 
     /**
@@ -184,7 +184,7 @@ public interface GrpcRouteSpecOptions : RouteSpecOptionsBase {
      * route. 
      */
     override fun weightedTargets(weightedTargets: List<WeightedTarget>) {
-      cdkBuilder.weightedTargets(weightedTargets.map(WeightedTarget::unwrap))
+      cdkBuilder.weightedTargets(weightedTargets.map(WeightedTarget.Companion::unwrap))
     }
 
     /**

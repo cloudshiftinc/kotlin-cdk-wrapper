@@ -8,6 +8,7 @@ import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -34,8 +35,8 @@ public open class ARecord(
     id: String,
     props: ARecordProps,
   ) :
-      this(software.amazon.awscdk.services.route53.ARecord(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ARecordProps::unwrap))
+      this(software.amazon.awscdk.services.route53.ARecord(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ARecordProps.Companion::unwrap))
   )
 
   public constructor(
@@ -242,7 +243,7 @@ public open class ARecord(
      * user's location. 
      */
     override fun geoLocation(geoLocation: GeoLocation) {
-      cdkBuilder.geoLocation(geoLocation.let(GeoLocation::unwrap))
+      cdkBuilder.geoLocation(geoLocation.let(GeoLocation.Companion::unwrap))
     }
 
     /**
@@ -321,7 +322,7 @@ public open class ARecord(
      * @param target The target. 
      */
     override fun target(target: RecordTarget) {
-      cdkBuilder.target(target.let(RecordTarget::unwrap))
+      cdkBuilder.target(target.let(RecordTarget.Companion::unwrap))
     }
 
     /**
@@ -332,7 +333,7 @@ public open class ARecord(
      * @param ttl The resource record cache time to live (TTL). 
      */
     override fun ttl(ttl: Duration) {
-      cdkBuilder.ttl(ttl.let(Duration::unwrap))
+      cdkBuilder.ttl(ttl.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -363,13 +364,29 @@ public open class ARecord(
      * @param zone The hosted zone in which to define the new record. 
      */
     override fun zone(zone: IHostedZone) {
-      cdkBuilder.zone(zone.let(IHostedZone::unwrap))
+      cdkBuilder.zone(zone.let(IHostedZone.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.route53.ARecord = cdkBuilder.build()
   }
 
   public companion object {
+    public fun fromARecordAttributes(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      attrs: ARecordAttrs,
+    ): ARecord =
+        software.amazon.awscdk.services.route53.ARecord.fromARecordAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(ARecordAttrs.Companion::unwrap)).let(ARecord::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("dfb74397583ea19fd99b28a04f32e76433a9ff9f1c6ae13b61258264ce797208")
+    public fun fromARecordAttributes(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      attrs: ARecordAttrs.Builder.() -> Unit,
+    ): ARecord = fromARecordAttributes(scope, id, ARecordAttrs(attrs))
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

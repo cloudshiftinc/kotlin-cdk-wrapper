@@ -49,8 +49,8 @@ public open class CfnLogStream(
     id: String,
     props: CfnLogStreamProps,
   ) :
-      this(software.amazon.awscdk.services.logs.CfnLogStream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLogStreamProps::unwrap))
+      this(software.amazon.awscdk.services.logs.CfnLogStream(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLogStreamProps.Companion::unwrap))
   )
 
   public constructor(
@@ -66,7 +66,7 @@ public open class CfnLogStream(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

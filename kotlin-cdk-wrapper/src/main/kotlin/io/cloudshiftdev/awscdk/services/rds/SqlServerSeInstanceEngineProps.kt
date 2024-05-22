@@ -51,7 +51,7 @@ public interface SqlServerSeInstanceEngineProps {
      * @param version The exact version of the engine to use. 
      */
     override fun version(version: SqlServerEngineVersion) {
-      cdkBuilder.version(version.let(SqlServerEngineVersion::unwrap))
+      cdkBuilder.version(version.let(SqlServerEngineVersion.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.SqlServerSeInstanceEngineProps =

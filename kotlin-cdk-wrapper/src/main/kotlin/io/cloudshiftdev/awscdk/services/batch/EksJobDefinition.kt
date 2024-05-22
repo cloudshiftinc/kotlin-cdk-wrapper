@@ -44,8 +44,8 @@ public open class EksJobDefinition(
     id: String,
     props: EksJobDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.batch.EksJobDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EksJobDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.batch.EksJobDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EksJobDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -61,7 +61,7 @@ public open class EksJobDefinition(
    * @param strategy 
    */
   public override fun addRetryStrategy(strategy: RetryStrategy) {
-    unwrap(this).addRetryStrategy(strategy.let(RetryStrategy::unwrap))
+    unwrap(this).addRetryStrategy(strategy.let(RetryStrategy.Companion::unwrap))
   }
 
   /**
@@ -277,7 +277,7 @@ public open class EksJobDefinition(
      * @param container The container this Job Definition will run. 
      */
     override fun container(container: EksContainerDefinition) {
-      cdkBuilder.container(container.let(EksContainerDefinition::unwrap))
+      cdkBuilder.container(container.let(EksContainerDefinition.Companion::unwrap))
     }
 
     /**
@@ -289,7 +289,7 @@ public open class EksJobDefinition(
      * @param dnsPolicy The DNS Policy of the pod used by this Job Definition. 
      */
     override fun dnsPolicy(dnsPolicy: DnsPolicy) {
-      cdkBuilder.dnsPolicy(dnsPolicy.let(DnsPolicy::unwrap))
+      cdkBuilder.dnsPolicy(dnsPolicy.let(DnsPolicy.Companion::unwrap))
     }
 
     /**
@@ -338,7 +338,7 @@ public open class EksJobDefinition(
      * @param retryStrategies Defines the retry behavior for this job. 
      */
     override fun retryStrategies(retryStrategies: List<RetryStrategy>) {
-      cdkBuilder.retryStrategies(retryStrategies.map(RetryStrategy::unwrap))
+      cdkBuilder.retryStrategies(retryStrategies.map(RetryStrategy.Companion::unwrap))
     }
 
     /**
@@ -392,7 +392,7 @@ public open class EksJobDefinition(
      * @param timeout The timeout time for jobs that are submitted with this job definition. 
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -421,7 +421,7 @@ public open class EksJobDefinition(
       id: String,
       eksJobDefinitionArn: String,
     ): IEksJobDefinition =
-        software.amazon.awscdk.services.batch.EksJobDefinition.fromEksJobDefinitionArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.batch.EksJobDefinition.fromEksJobDefinitionArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, eksJobDefinitionArn).let(IEksJobDefinition::wrap)
 
     public operator fun invoke(

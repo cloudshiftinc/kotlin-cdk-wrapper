@@ -35,7 +35,7 @@ public open class WebSocketMockIntegration(
    */
   public override fun bind(options: WebSocketRouteIntegrationBindOptions):
       WebSocketRouteIntegrationConfig =
-      unwrap(this).bind(options.let(WebSocketRouteIntegrationBindOptions::unwrap)).let(WebSocketRouteIntegrationConfig::wrap)
+      unwrap(this).bind(options.let(WebSocketRouteIntegrationBindOptions.Companion::unwrap)).let(WebSocketRouteIntegrationConfig::wrap)
 
   /**
    * Bind this integration to the route.

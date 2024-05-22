@@ -286,7 +286,7 @@ public interface CfnInfrastructureConfigurationProps {
      * configuration.
      */
     override fun instanceMetadataOptions(instanceMetadataOptions: IResolvable) {
-      cdkBuilder.instanceMetadataOptions(instanceMetadataOptions.let(IResolvable::unwrap))
+      cdkBuilder.instanceMetadataOptions(instanceMetadataOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -295,7 +295,7 @@ public interface CfnInfrastructureConfigurationProps {
      */
     override
         fun instanceMetadataOptions(instanceMetadataOptions: CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty) {
-      cdkBuilder.instanceMetadataOptions(instanceMetadataOptions.let(CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty::unwrap))
+      cdkBuilder.instanceMetadataOptions(instanceMetadataOptions.let(CfnInfrastructureConfiguration.InstanceMetadataOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -340,14 +340,14 @@ public interface CfnInfrastructureConfigurationProps {
      * @param logging The logging configuration defines where Image Builder uploads your logs.
      */
     override fun logging(logging: IResolvable) {
-      cdkBuilder.logging(logging.let(IResolvable::unwrap))
+      cdkBuilder.logging(logging.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param logging The logging configuration defines where Image Builder uploads your logs.
      */
     override fun logging(logging: CfnInfrastructureConfiguration.LoggingProperty) {
-      cdkBuilder.logging(logging.let(CfnInfrastructureConfiguration.LoggingProperty::unwrap))
+      cdkBuilder.logging(logging.let(CfnInfrastructureConfiguration.LoggingProperty.Companion::unwrap))
     }
 
     /**
@@ -370,7 +370,7 @@ public interface CfnInfrastructureConfigurationProps {
      * @param resourceTags The tags attached to the resource created by Image Builder.
      */
     override fun resourceTags(resourceTags: IResolvable) {
-      cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
+      cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -428,7 +428,7 @@ public interface CfnInfrastructureConfigurationProps {
      * infrastructure configuration.
      */
     override fun terminateInstanceOnFailure(terminateInstanceOnFailure: IResolvable) {
-      cdkBuilder.terminateInstanceOnFailure(terminateInstanceOnFailure.let(IResolvable::unwrap))
+      cdkBuilder.terminateInstanceOnFailure(terminateInstanceOnFailure.let(IResolvable.Companion::unwrap))
     }
 
     public fun build():

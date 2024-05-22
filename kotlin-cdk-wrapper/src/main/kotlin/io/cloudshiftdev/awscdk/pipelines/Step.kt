@@ -58,7 +58,7 @@ public abstract class Step(
    * @param step 
    */
   public open fun addStepDependency(step: Step) {
-    unwrap(this).addStepDependency(step.let(Step::unwrap))
+    unwrap(this).addStepDependency(step.let(Step.Companion::unwrap))
   }
 
   /**
@@ -105,7 +105,7 @@ public abstract class Step(
 
   public companion object {
     public fun sequence(steps: List<Step>): List<Step> =
-        software.amazon.awscdk.pipelines.Step.sequence(steps.map(Step::unwrap)).map(Step::wrap)
+        software.amazon.awscdk.pipelines.Step.sequence(steps.map(Step.Companion::unwrap)).map(Step::wrap)
 
     public fun sequence(vararg steps: Step): List<Step> = sequence(steps.toList())
 

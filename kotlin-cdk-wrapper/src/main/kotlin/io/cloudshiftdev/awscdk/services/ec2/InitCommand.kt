@@ -35,7 +35,7 @@ public open class InitCommand(
 
     public fun argvCommand(argv: List<String>, options: InitCommandOptions): InitCommand =
         software.amazon.awscdk.services.ec2.InitCommand.argvCommand(argv,
-        options.let(InitCommandOptions::unwrap)).let(InitCommand::wrap)
+        options.let(InitCommandOptions.Companion::unwrap)).let(InitCommand::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a0c19cbf9eb896fbd54ff7a0bd0819b6bb6ed28b35a7aed77ecdcaae3239f254")
@@ -47,7 +47,7 @@ public open class InitCommand(
 
     public fun shellCommand(shellCommand: String, options: InitCommandOptions): InitCommand =
         software.amazon.awscdk.services.ec2.InitCommand.shellCommand(shellCommand,
-        options.let(InitCommandOptions::unwrap)).let(InitCommand::wrap)
+        options.let(InitCommandOptions.Companion::unwrap)).let(InitCommand::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fb1d0fcbe5c0edf66553efc370b400bcec713ffa9e0140d8cfb97aabd109e1fb")

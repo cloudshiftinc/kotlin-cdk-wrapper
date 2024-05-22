@@ -51,7 +51,7 @@ public interface IIpAddresses {
      * @param input 
      */
     override fun allocateSubnetsCidr(input: AllocateCidrRequest): SubnetIpamOptions =
-        unwrap(this).allocateSubnetsCidr(input.let(AllocateCidrRequest::unwrap)).let(SubnetIpamOptions::wrap)
+        unwrap(this).allocateSubnetsCidr(input.let(AllocateCidrRequest.Companion::unwrap)).let(SubnetIpamOptions::wrap)
 
     /**
      * Called by the VPC to retrieve Subnet options from the Ipam.

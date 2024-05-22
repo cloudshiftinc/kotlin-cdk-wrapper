@@ -90,8 +90,8 @@ public open class CfnWorkspace(
     id: String,
     props: CfnWorkspaceProps,
   ) :
-      this(software.amazon.awscdk.services.grafana.CfnWorkspace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnWorkspaceProps::unwrap))
+      this(software.amazon.awscdk.services.grafana.CfnWorkspace(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnWorkspaceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -268,7 +268,7 @@ public open class CfnWorkspace(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -292,14 +292,14 @@ public open class CfnWorkspace(
    * The configuration settings for network access to your workspace.
    */
   public open fun networkAccessControl(`value`: IResolvable) {
-    unwrap(this).setNetworkAccessControl(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNetworkAccessControl(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration settings for network access to your workspace.
    */
   public open fun networkAccessControl(`value`: NetworkAccessControlProperty) {
-    unwrap(this).setNetworkAccessControl(`value`.let(NetworkAccessControlProperty::unwrap))
+    unwrap(this).setNetworkAccessControl(`value`.let(NetworkAccessControlProperty.Companion::unwrap))
   }
 
   /**
@@ -398,7 +398,7 @@ public open class CfnWorkspace(
    * Whether plugin administration is enabled in the workspace.
    */
   public open fun pluginAdminEnabled(`value`: IResolvable) {
-    unwrap(this).setPluginAdminEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPluginAdminEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -428,7 +428,7 @@ public open class CfnWorkspace(
    * `Editor` roles in the workspace.
    */
   public open fun samlConfiguration(`value`: IResolvable) {
-    unwrap(this).setSamlConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSamlConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -437,7 +437,7 @@ public open class CfnWorkspace(
    * `Editor` roles in the workspace.
    */
   public open fun samlConfiguration(`value`: SamlConfigurationProperty) {
-    unwrap(this).setSamlConfiguration(`value`.let(SamlConfigurationProperty::unwrap))
+    unwrap(this).setSamlConfiguration(`value`.let(SamlConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -475,7 +475,7 @@ public open class CfnWorkspace(
    * workspace to connect to.
    */
   public open fun vpcConfiguration(`value`: IResolvable) {
-    unwrap(this).setVpcConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -483,7 +483,7 @@ public open class CfnWorkspace(
    * workspace to connect to.
    */
   public open fun vpcConfiguration(`value`: VpcConfigurationProperty) {
-    unwrap(this).setVpcConfiguration(`value`.let(VpcConfigurationProperty::unwrap))
+    unwrap(this).setVpcConfiguration(`value`.let(VpcConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -994,7 +994,7 @@ public open class CfnWorkspace(
      * @param networkAccessControl The configuration settings for network access to your workspace. 
      */
     override fun networkAccessControl(networkAccessControl: IResolvable) {
-      cdkBuilder.networkAccessControl(networkAccessControl.let(IResolvable::unwrap))
+      cdkBuilder.networkAccessControl(networkAccessControl.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1004,7 +1004,7 @@ public open class CfnWorkspace(
      * @param networkAccessControl The configuration settings for network access to your workspace. 
      */
     override fun networkAccessControl(networkAccessControl: NetworkAccessControlProperty) {
-      cdkBuilder.networkAccessControl(networkAccessControl.let(NetworkAccessControlProperty::unwrap))
+      cdkBuilder.networkAccessControl(networkAccessControl.let(NetworkAccessControlProperty.Companion::unwrap))
     }
 
     /**
@@ -1138,7 +1138,7 @@ public open class CfnWorkspace(
      * @param pluginAdminEnabled Whether plugin administration is enabled in the workspace. 
      */
     override fun pluginAdminEnabled(pluginAdminEnabled: IResolvable) {
-      cdkBuilder.pluginAdminEnabled(pluginAdminEnabled.let(IResolvable::unwrap))
+      cdkBuilder.pluginAdminEnabled(pluginAdminEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1166,7 +1166,7 @@ public open class CfnWorkspace(
      * to have the `Admin` and `Editor` roles in the workspace. 
      */
     override fun samlConfiguration(samlConfiguration: IResolvable) {
-      cdkBuilder.samlConfiguration(samlConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.samlConfiguration(samlConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1180,7 +1180,7 @@ public open class CfnWorkspace(
      * to have the `Admin` and `Editor` roles in the workspace. 
      */
     override fun samlConfiguration(samlConfiguration: SamlConfigurationProperty) {
-      cdkBuilder.samlConfiguration(samlConfiguration.let(SamlConfigurationProperty::unwrap))
+      cdkBuilder.samlConfiguration(samlConfiguration.let(SamlConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1224,7 +1224,7 @@ public open class CfnWorkspace(
      * sources for your Grafana workspace to connect to. 
      */
     override fun vpcConfiguration(vpcConfiguration: IResolvable) {
-      cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1241,7 +1241,7 @@ public open class CfnWorkspace(
      * sources for your Grafana workspace to connect to. 
      */
     override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
-      cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty::unwrap))
+      cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -2270,7 +2270,7 @@ public open class CfnWorkspace(
        * workspace.
        */
       override fun assertionAttributes(assertionAttributes: IResolvable) {
-        cdkBuilder.assertionAttributes(assertionAttributes.let(IResolvable::unwrap))
+        cdkBuilder.assertionAttributes(assertionAttributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2279,7 +2279,7 @@ public open class CfnWorkspace(
        * workspace.
        */
       override fun assertionAttributes(assertionAttributes: AssertionAttributesProperty) {
-        cdkBuilder.assertionAttributes(assertionAttributes.let(AssertionAttributesProperty::unwrap))
+        cdkBuilder.assertionAttributes(assertionAttributes.let(AssertionAttributesProperty.Companion::unwrap))
       }
 
       /**
@@ -2298,7 +2298,7 @@ public open class CfnWorkspace(
        * integrate the identity provider with this workspace. 
        */
       override fun idpMetadata(idpMetadata: IResolvable) {
-        cdkBuilder.idpMetadata(idpMetadata.let(IResolvable::unwrap))
+        cdkBuilder.idpMetadata(idpMetadata.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2306,7 +2306,7 @@ public open class CfnWorkspace(
        * integrate the identity provider with this workspace. 
        */
       override fun idpMetadata(idpMetadata: IdpMetadataProperty) {
-        cdkBuilder.idpMetadata(idpMetadata.let(IdpMetadataProperty::unwrap))
+        cdkBuilder.idpMetadata(idpMetadata.let(IdpMetadataProperty.Companion::unwrap))
       }
 
       /**
@@ -2331,7 +2331,7 @@ public open class CfnWorkspace(
        * to the Grafana `Admin` and `Editor` roles in the workspace.
        */
       override fun roleValues(roleValues: IResolvable) {
-        cdkBuilder.roleValues(roleValues.let(IResolvable::unwrap))
+        cdkBuilder.roleValues(roleValues.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2339,7 +2339,7 @@ public open class CfnWorkspace(
        * to the Grafana `Admin` and `Editor` roles in the workspace.
        */
       override fun roleValues(roleValues: RoleValuesProperty) {
-        cdkBuilder.roleValues(roleValues.let(RoleValuesProperty::unwrap))
+        cdkBuilder.roleValues(roleValues.let(RoleValuesProperty.Companion::unwrap))
       }
 
       /**

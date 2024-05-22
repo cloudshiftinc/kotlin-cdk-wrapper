@@ -37,7 +37,7 @@ public abstract class DockerImage(
    * @param task 
    */
   public open fun bind(task: ISageMakerTask): DockerImageConfig =
-      unwrap(this).bind(task.let(ISageMakerTask::unwrap)).let(DockerImageConfig::wrap)
+      unwrap(this).bind(task.let(ISageMakerTask.Companion::unwrap)).let(DockerImageConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.DockerImage,
@@ -49,8 +49,8 @@ public abstract class DockerImage(
       id: String,
       props: DockerImageAssetProps,
     ): DockerImage =
-        software.amazon.awscdk.services.stepfunctions.tasks.DockerImage.fromAsset(scope.let(Construct::unwrap),
-        id, props.let(DockerImageAssetProps::unwrap)).let(DockerImage::wrap)
+        software.amazon.awscdk.services.stepfunctions.tasks.DockerImage.fromAsset(scope.let(Construct.Companion::unwrap),
+        id, props.let(DockerImageAssetProps.Companion::unwrap)).let(DockerImage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("eebac7cfc25e6943cb91fedd0dedf1c8ba2f29664fc592ed7c4d764bb1b13634")
@@ -61,10 +61,10 @@ public abstract class DockerImage(
     ): DockerImage = fromAsset(scope, id, DockerImageAssetProps(props))
 
     public fun fromEcrRepository(repository: IRepository): DockerImage =
-        software.amazon.awscdk.services.stepfunctions.tasks.DockerImage.fromEcrRepository(repository.let(IRepository::unwrap)).let(DockerImage::wrap)
+        software.amazon.awscdk.services.stepfunctions.tasks.DockerImage.fromEcrRepository(repository.let(IRepository.Companion::unwrap)).let(DockerImage::wrap)
 
     public fun fromEcrRepository(repository: IRepository, tagOrDigest: String): DockerImage =
-        software.amazon.awscdk.services.stepfunctions.tasks.DockerImage.fromEcrRepository(repository.let(IRepository::unwrap),
+        software.amazon.awscdk.services.stepfunctions.tasks.DockerImage.fromEcrRepository(repository.let(IRepository.Companion::unwrap),
         tagOrDigest).let(DockerImage::wrap)
 
     public fun fromJsonExpression(expression: String): DockerImage =

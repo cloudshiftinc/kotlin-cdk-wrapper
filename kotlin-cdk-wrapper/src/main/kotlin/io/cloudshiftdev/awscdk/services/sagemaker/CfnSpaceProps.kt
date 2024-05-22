@@ -251,14 +251,14 @@ public interface CfnSpaceProps {
      * @param ownershipSettings The collection of ownership settings for a space.
      */
     override fun ownershipSettings(ownershipSettings: IResolvable) {
-      cdkBuilder.ownershipSettings(ownershipSettings.let(IResolvable::unwrap))
+      cdkBuilder.ownershipSettings(ownershipSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param ownershipSettings The collection of ownership settings for a space.
      */
     override fun ownershipSettings(ownershipSettings: CfnSpace.OwnershipSettingsProperty) {
-      cdkBuilder.ownershipSettings(ownershipSettings.let(CfnSpace.OwnershipSettingsProperty::unwrap))
+      cdkBuilder.ownershipSettings(ownershipSettings.let(CfnSpace.OwnershipSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -288,14 +288,14 @@ public interface CfnSpaceProps {
      * @param spaceSettings A collection of space settings.
      */
     override fun spaceSettings(spaceSettings: IResolvable) {
-      cdkBuilder.spaceSettings(spaceSettings.let(IResolvable::unwrap))
+      cdkBuilder.spaceSettings(spaceSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param spaceSettings A collection of space settings.
      */
     override fun spaceSettings(spaceSettings: CfnSpace.SpaceSettingsProperty) {
-      cdkBuilder.spaceSettings(spaceSettings.let(CfnSpace.SpaceSettingsProperty::unwrap))
+      cdkBuilder.spaceSettings(spaceSettings.let(CfnSpace.SpaceSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -310,14 +310,14 @@ public interface CfnSpaceProps {
      * @param spaceSharingSettings A collection of space sharing settings.
      */
     override fun spaceSharingSettings(spaceSharingSettings: IResolvable) {
-      cdkBuilder.spaceSharingSettings(spaceSharingSettings.let(IResolvable::unwrap))
+      cdkBuilder.spaceSharingSettings(spaceSharingSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param spaceSharingSettings A collection of space sharing settings.
      */
     override fun spaceSharingSettings(spaceSharingSettings: CfnSpace.SpaceSharingSettingsProperty) {
-      cdkBuilder.spaceSharingSettings(spaceSharingSettings.let(CfnSpace.SpaceSharingSettingsProperty::unwrap))
+      cdkBuilder.spaceSharingSettings(spaceSharingSettings.let(CfnSpace.SpaceSharingSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -336,7 +336,7 @@ public interface CfnSpaceProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

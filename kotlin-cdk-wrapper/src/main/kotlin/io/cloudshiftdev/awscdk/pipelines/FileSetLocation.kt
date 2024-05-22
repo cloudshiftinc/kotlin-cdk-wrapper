@@ -66,7 +66,7 @@ public interface FileSetLocation {
      * @param fileSet The FileSet object. 
      */
     override fun fileSet(fileSet: FileSet) {
-      cdkBuilder.fileSet(fileSet.let(FileSet::unwrap))
+      cdkBuilder.fileSet(fileSet.let(FileSet.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.pipelines.FileSetLocation = cdkBuilder.build()

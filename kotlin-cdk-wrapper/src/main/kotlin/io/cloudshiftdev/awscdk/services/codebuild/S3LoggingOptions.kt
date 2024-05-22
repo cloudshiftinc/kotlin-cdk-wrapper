@@ -86,7 +86,7 @@ public interface S3LoggingOptions {
      * @param bucket The S3 Bucket to send logs to. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**

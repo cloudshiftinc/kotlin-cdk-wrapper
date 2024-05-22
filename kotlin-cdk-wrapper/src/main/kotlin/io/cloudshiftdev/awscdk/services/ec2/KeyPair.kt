@@ -28,7 +28,7 @@ public open class KeyPair(
   cdkObject: software.amazon.awscdk.services.ec2.KeyPair,
 ) : Resource(cdkObject), IKeyPair {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ec2.KeyPair(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ec2.KeyPair(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -37,8 +37,8 @@ public open class KeyPair(
     id: String,
     props: KeyPairProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.KeyPair(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(KeyPairProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.KeyPair(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(KeyPairProps.Companion::unwrap))
   )
 
   public constructor(
@@ -225,7 +225,7 @@ public open class KeyPair(
      * @param format The format of the key pair. 
      */
     override fun format(format: KeyPairFormat) {
-      cdkBuilder.format(format.let(KeyPairFormat::unwrap))
+      cdkBuilder.format(format.let(KeyPairFormat.Companion::unwrap))
     }
 
     /**
@@ -293,7 +293,7 @@ public open class KeyPair(
      * @param type The type of key pair. 
      */
     override fun type(type: KeyPairType) {
-      cdkBuilder.type(type.let(KeyPairType::unwrap))
+      cdkBuilder.type(type.let(KeyPairType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.KeyPair = cdkBuilder.build()
@@ -305,8 +305,8 @@ public open class KeyPair(
       id: String,
       attrs: KeyPairAttributes,
     ): IKeyPair =
-        software.amazon.awscdk.services.ec2.KeyPair.fromKeyPairAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(KeyPairAttributes::unwrap)).let(IKeyPair::wrap)
+        software.amazon.awscdk.services.ec2.KeyPair.fromKeyPairAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(KeyPairAttributes.Companion::unwrap)).let(IKeyPair::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bd9caf7b1f832116a7bd6fe64c987b52581abb0163ff41ed36b0abc60e006127")
@@ -321,7 +321,7 @@ public open class KeyPair(
       id: String,
       keyPairName: String,
     ): IKeyPair =
-        software.amazon.awscdk.services.ec2.KeyPair.fromKeyPairName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ec2.KeyPair.fromKeyPairName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, keyPairName).let(IKeyPair::wrap)
 
     public operator fun invoke(

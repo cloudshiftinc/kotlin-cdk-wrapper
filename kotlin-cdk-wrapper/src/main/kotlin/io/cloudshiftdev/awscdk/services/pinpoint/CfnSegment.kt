@@ -163,8 +163,8 @@ public open class CfnSegment(
     id: String,
     props: CfnSegmentProps,
   ) :
-      this(software.amazon.awscdk.services.pinpoint.CfnSegment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSegmentProps::unwrap))
+      this(software.amazon.awscdk.services.pinpoint.CfnSegment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSegmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -205,14 +205,14 @@ public open class CfnSegment(
    * An array that defines the dimensions for the segment.
    */
   public open fun dimensions(`value`: IResolvable) {
-    unwrap(this).setDimensions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDimensions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An array that defines the dimensions for the segment.
    */
   public open fun dimensions(`value`: SegmentDimensionsProperty) {
-    unwrap(this).setDimensions(`value`.let(SegmentDimensionsProperty::unwrap))
+    unwrap(this).setDimensions(`value`.let(SegmentDimensionsProperty.Companion::unwrap))
   }
 
   /**
@@ -229,7 +229,7 @@ public open class CfnSegment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -255,7 +255,7 @@ public open class CfnSegment(
    * build the segment.
    */
   public open fun segmentGroups(`value`: IResolvable) {
-    unwrap(this).setSegmentGroups(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSegmentGroups(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -263,7 +263,7 @@ public open class CfnSegment(
    * build the segment.
    */
   public open fun segmentGroups(`value`: SegmentGroupsProperty) {
-    unwrap(this).setSegmentGroups(`value`.let(SegmentGroupsProperty::unwrap))
+    unwrap(this).setSegmentGroups(`value`.let(SegmentGroupsProperty.Companion::unwrap))
   }
 
   /**
@@ -425,7 +425,7 @@ public open class CfnSegment(
      * @param dimensions An array that defines the dimensions for the segment. 
      */
     override fun dimensions(dimensions: IResolvable) {
-      cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+      cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -435,7 +435,7 @@ public open class CfnSegment(
      * @param dimensions An array that defines the dimensions for the segment. 
      */
     override fun dimensions(dimensions: SegmentDimensionsProperty) {
-      cdkBuilder.dimensions(dimensions.let(SegmentDimensionsProperty::unwrap))
+      cdkBuilder.dimensions(dimensions.let(SegmentDimensionsProperty.Companion::unwrap))
     }
 
     /**
@@ -475,7 +475,7 @@ public open class CfnSegment(
      * segments in order to build the segment. 
      */
     override fun segmentGroups(segmentGroups: IResolvable) {
-      cdkBuilder.segmentGroups(segmentGroups.let(IResolvable::unwrap))
+      cdkBuilder.segmentGroups(segmentGroups.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -490,7 +490,7 @@ public open class CfnSegment(
      * segments in order to build the segment. 
      */
     override fun segmentGroups(segmentGroups: SegmentGroupsProperty) {
-      cdkBuilder.segmentGroups(segmentGroups.let(SegmentGroupsProperty::unwrap))
+      cdkBuilder.segmentGroups(segmentGroups.let(SegmentGroupsProperty.Companion::unwrap))
     }
 
     /**
@@ -714,14 +714,14 @@ public open class CfnSegment(
        * @param recency Specifies how recently segment members were active.
        */
       override fun recency(recency: IResolvable) {
-        cdkBuilder.recency(recency.let(IResolvable::unwrap))
+        cdkBuilder.recency(recency.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param recency Specifies how recently segment members were active.
        */
       override fun recency(recency: RecencyProperty) {
-        cdkBuilder.recency(recency.let(RecencyProperty::unwrap))
+        cdkBuilder.recency(recency.let(RecencyProperty.Companion::unwrap))
       }
 
       /**
@@ -1071,14 +1071,14 @@ public open class CfnSegment(
        * @param appVersion The app version criteria for the segment.
        */
       override fun appVersion(appVersion: IResolvable) {
-        cdkBuilder.appVersion(appVersion.let(IResolvable::unwrap))
+        cdkBuilder.appVersion(appVersion.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param appVersion The app version criteria for the segment.
        */
       override fun appVersion(appVersion: SetDimensionProperty) {
-        cdkBuilder.appVersion(appVersion.let(SetDimensionProperty::unwrap))
+        cdkBuilder.appVersion(appVersion.let(SetDimensionProperty.Companion::unwrap))
       }
 
       /**
@@ -1093,14 +1093,14 @@ public open class CfnSegment(
        * @param channel The channel criteria for the segment.
        */
       override fun channel(channel: IResolvable) {
-        cdkBuilder.channel(channel.let(IResolvable::unwrap))
+        cdkBuilder.channel(channel.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param channel The channel criteria for the segment.
        */
       override fun channel(channel: SetDimensionProperty) {
-        cdkBuilder.channel(channel.let(SetDimensionProperty::unwrap))
+        cdkBuilder.channel(channel.let(SetDimensionProperty.Companion::unwrap))
       }
 
       /**
@@ -1115,14 +1115,14 @@ public open class CfnSegment(
        * @param deviceType The device type criteria for the segment.
        */
       override fun deviceType(deviceType: IResolvable) {
-        cdkBuilder.deviceType(deviceType.let(IResolvable::unwrap))
+        cdkBuilder.deviceType(deviceType.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param deviceType The device type criteria for the segment.
        */
       override fun deviceType(deviceType: SetDimensionProperty) {
-        cdkBuilder.deviceType(deviceType.let(SetDimensionProperty::unwrap))
+        cdkBuilder.deviceType(deviceType.let(SetDimensionProperty.Companion::unwrap))
       }
 
       /**
@@ -1137,14 +1137,14 @@ public open class CfnSegment(
        * @param make The device make criteria for the segment.
        */
       override fun make(make: IResolvable) {
-        cdkBuilder.make(make.let(IResolvable::unwrap))
+        cdkBuilder.make(make.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param make The device make criteria for the segment.
        */
       override fun make(make: SetDimensionProperty) {
-        cdkBuilder.make(make.let(SetDimensionProperty::unwrap))
+        cdkBuilder.make(make.let(SetDimensionProperty.Companion::unwrap))
       }
 
       /**
@@ -1159,14 +1159,14 @@ public open class CfnSegment(
        * @param model The device model criteria for the segment.
        */
       override fun model(model: IResolvable) {
-        cdkBuilder.model(model.let(IResolvable::unwrap))
+        cdkBuilder.model(model.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param model The device model criteria for the segment.
        */
       override fun model(model: SetDimensionProperty) {
-        cdkBuilder.model(model.let(SetDimensionProperty::unwrap))
+        cdkBuilder.model(model.let(SetDimensionProperty.Companion::unwrap))
       }
 
       /**
@@ -1181,14 +1181,14 @@ public open class CfnSegment(
        * @param platform The device platform criteria for the segment.
        */
       override fun platform(platform: IResolvable) {
-        cdkBuilder.platform(platform.let(IResolvable::unwrap))
+        cdkBuilder.platform(platform.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param platform The device platform criteria for the segment.
        */
       override fun platform(platform: SetDimensionProperty) {
-        cdkBuilder.platform(platform.let(SetDimensionProperty::unwrap))
+        cdkBuilder.platform(platform.let(SetDimensionProperty.Companion::unwrap))
       }
 
       /**
@@ -1339,14 +1339,14 @@ public open class CfnSegment(
        * @param coordinates The GPS coordinates to measure distance from. 
        */
       override fun coordinates(coordinates: IResolvable) {
-        cdkBuilder.coordinates(coordinates.let(IResolvable::unwrap))
+        cdkBuilder.coordinates(coordinates.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param coordinates The GPS coordinates to measure distance from. 
        */
       override fun coordinates(coordinates: CoordinatesProperty) {
-        cdkBuilder.coordinates(coordinates.let(CoordinatesProperty::unwrap))
+        cdkBuilder.coordinates(coordinates.let(CoordinatesProperty.Companion::unwrap))
       }
 
       /**
@@ -1607,7 +1607,7 @@ public open class CfnSegment(
        * segment.
        */
       override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+        cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1635,7 +1635,7 @@ public open class CfnSegment(
        * console indicates the size of the imported segment without any filters applied to it.
        */
       override fun sourceSegments(sourceSegments: IResolvable) {
-        cdkBuilder.sourceSegments(sourceSegments.let(IResolvable::unwrap))
+        cdkBuilder.sourceSegments(sourceSegments.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1840,14 +1840,14 @@ public open class CfnSegment(
        * @param country The country or region code, in ISO 3166-1 alpha-2 format, for the segment.
        */
       override fun country(country: IResolvable) {
-        cdkBuilder.country(country.let(IResolvable::unwrap))
+        cdkBuilder.country(country.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param country The country or region code, in ISO 3166-1 alpha-2 format, for the segment.
        */
       override fun country(country: SetDimensionProperty) {
-        cdkBuilder.country(country.let(SetDimensionProperty::unwrap))
+        cdkBuilder.country(country.let(SetDimensionProperty.Companion::unwrap))
       }
 
       /**
@@ -1862,14 +1862,14 @@ public open class CfnSegment(
        * @param gpsPoint The GPS point dimension for the segment.
        */
       override fun gpsPoint(gpsPoint: IResolvable) {
-        cdkBuilder.gpsPoint(gpsPoint.let(IResolvable::unwrap))
+        cdkBuilder.gpsPoint(gpsPoint.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param gpsPoint The GPS point dimension for the segment.
        */
       override fun gpsPoint(gpsPoint: GPSPointProperty) {
-        cdkBuilder.gpsPoint(gpsPoint.let(GPSPointProperty::unwrap))
+        cdkBuilder.gpsPoint(gpsPoint.let(GPSPointProperty.Companion::unwrap))
       }
 
       /**
@@ -2269,7 +2269,7 @@ public open class CfnSegment(
        * for the segment.
        */
       override fun behavior(behavior: IResolvable) {
-        cdkBuilder.behavior(behavior.let(IResolvable::unwrap))
+        cdkBuilder.behavior(behavior.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2277,7 +2277,7 @@ public open class CfnSegment(
        * for the segment.
        */
       override fun behavior(behavior: BehaviorProperty) {
-        cdkBuilder.behavior(behavior.let(BehaviorProperty::unwrap))
+        cdkBuilder.behavior(behavior.let(BehaviorProperty.Companion::unwrap))
       }
 
       /**
@@ -2294,7 +2294,7 @@ public open class CfnSegment(
        * segment.
        */
       override fun demographic(demographic: IResolvable) {
-        cdkBuilder.demographic(demographic.let(IResolvable::unwrap))
+        cdkBuilder.demographic(demographic.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2302,7 +2302,7 @@ public open class CfnSegment(
        * segment.
        */
       override fun demographic(demographic: DemographicProperty) {
-        cdkBuilder.demographic(demographic.let(DemographicProperty::unwrap))
+        cdkBuilder.demographic(demographic.let(DemographicProperty.Companion::unwrap))
       }
 
       /**
@@ -2319,7 +2319,7 @@ public open class CfnSegment(
        * segment.
        */
       override fun location(location: IResolvable) {
-        cdkBuilder.location(location.let(IResolvable::unwrap))
+        cdkBuilder.location(location.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2327,7 +2327,7 @@ public open class CfnSegment(
        * segment.
        */
       override fun location(location: LocationProperty) {
-        cdkBuilder.location(location.let(LocationProperty::unwrap))
+        cdkBuilder.location(location.let(LocationProperty.Companion::unwrap))
       }
 
       /**
@@ -2565,7 +2565,7 @@ public open class CfnSegment(
        * groups for the segment.
        */
       override fun groups(groups: IResolvable) {
-        cdkBuilder.groups(groups.let(IResolvable::unwrap))
+        cdkBuilder.groups(groups.let(IResolvable.Companion::unwrap))
       }
 
       /**

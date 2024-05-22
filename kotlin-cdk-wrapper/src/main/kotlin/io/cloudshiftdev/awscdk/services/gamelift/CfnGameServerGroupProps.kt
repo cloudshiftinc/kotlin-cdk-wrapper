@@ -459,7 +459,7 @@ public interface CfnGameServerGroupProps {
      * APIs.
      */
     override fun autoScalingPolicy(autoScalingPolicy: IResolvable) {
-      cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(IResolvable::unwrap))
+      cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -472,7 +472,7 @@ public interface CfnGameServerGroupProps {
      */
     override
         fun autoScalingPolicy(autoScalingPolicy: CfnGameServerGroup.AutoScalingPolicyProperty) {
-      cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(CfnGameServerGroup.AutoScalingPolicyProperty::unwrap))
+      cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(CfnGameServerGroup.AutoScalingPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -552,7 +552,7 @@ public interface CfnGameServerGroupProps {
      * group. 
      */
     override fun instanceDefinitions(instanceDefinitions: IResolvable) {
-      cdkBuilder.instanceDefinitions(instanceDefinitions.let(IResolvable::unwrap))
+      cdkBuilder.instanceDefinitions(instanceDefinitions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -587,7 +587,7 @@ public interface CfnGameServerGroupProps {
      * launch template, Amazon GameLift FleetIQ uses your account's default VPC.
      */
     override fun launchTemplate(launchTemplate: IResolvable) {
-      cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
+      cdkBuilder.launchTemplate(launchTemplate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -605,7 +605,7 @@ public interface CfnGameServerGroupProps {
      * launch template, Amazon GameLift FleetIQ uses your account's default VPC.
      */
     override fun launchTemplate(launchTemplate: CfnGameServerGroup.LaunchTemplateProperty) {
-      cdkBuilder.launchTemplate(launchTemplate.let(CfnGameServerGroup.LaunchTemplateProperty::unwrap))
+      cdkBuilder.launchTemplate(launchTemplate.let(CfnGameServerGroup.LaunchTemplateProperty.Companion::unwrap))
     }
 
     /**
@@ -668,7 +668,7 @@ public interface CfnGameServerGroupProps {
      * lower than stated. See the AWS General Reference for actual tagging limits.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

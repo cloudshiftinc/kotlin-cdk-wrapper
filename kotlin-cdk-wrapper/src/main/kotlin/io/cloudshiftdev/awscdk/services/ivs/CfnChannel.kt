@@ -58,7 +58,7 @@ public open class CfnChannel(
   cdkObject: software.amazon.awscdk.services.ivs.CfnChannel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ivs.CfnChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ivs.CfnChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -67,8 +67,8 @@ public open class CfnChannel(
     id: String,
     props: CfnChannelProps,
   ) :
-      this(software.amazon.awscdk.services.ivs.CfnChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnChannelProps::unwrap))
+      this(software.amazon.awscdk.services.ivs.CfnChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnChannelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -117,7 +117,7 @@ public open class CfnChannel(
    * Whether the channel is authorized.
    */
   public open fun authorized(`value`: IResolvable) {
-    unwrap(this).setAuthorized(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAuthorized(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -136,7 +136,7 @@ public open class CfnChannel(
    * Whether the channel allows insecure RTMP ingest.
    */
   public open fun insecureIngest(`value`: IResolvable) {
-    unwrap(this).setInsecureIngest(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInsecureIngest(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -145,7 +145,7 @@ public open class CfnChannel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -215,7 +215,7 @@ public open class CfnChannel(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -449,7 +449,7 @@ public open class CfnChannel(
      * @param authorized Whether the channel is authorized. 
      */
     override fun authorized(authorized: IResolvable) {
-      cdkBuilder.authorized(authorized.let(IResolvable::unwrap))
+      cdkBuilder.authorized(authorized.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -477,7 +477,7 @@ public open class CfnChannel(
      * @param insecureIngest Whether the channel allows insecure RTMP ingest. 
      */
     override fun insecureIngest(insecureIngest: IResolvable) {
-      cdkBuilder.insecureIngest(insecureIngest.let(IResolvable::unwrap))
+      cdkBuilder.insecureIngest(insecureIngest.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -558,7 +558,7 @@ public open class CfnChannel(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

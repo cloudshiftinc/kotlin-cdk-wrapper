@@ -201,7 +201,7 @@ public interface CfnProfileProps {
      * @param enabled The enabled status of the resource.
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -239,7 +239,7 @@ public interface CfnProfileProps {
      * CreateSession requests with this profile.
      */
     override fun requireInstanceProperties(requireInstanceProperties: IResolvable) {
-      cdkBuilder.requireInstanceProperties(requireInstanceProperties.let(IResolvable::unwrap))
+      cdkBuilder.requireInstanceProperties(requireInstanceProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -268,7 +268,7 @@ public interface CfnProfileProps {
      * @param tags A list of Tags.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

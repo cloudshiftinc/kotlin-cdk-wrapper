@@ -89,7 +89,7 @@ public interface LambdaAuthorizerConfig {
      * @param handler The authorizer lambda function. 
      */
     override fun handler(handler: IFunction) {
-      cdkBuilder.handler(handler.let(IFunction::unwrap))
+      cdkBuilder.handler(handler.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -97,7 +97,7 @@ public interface LambdaAuthorizerConfig {
      * Disable caching by setting this to 0.
      */
     override fun resultsCacheTtl(resultsCacheTtl: Duration) {
-      cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration::unwrap))
+      cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration.Companion::unwrap))
     }
 
     /**

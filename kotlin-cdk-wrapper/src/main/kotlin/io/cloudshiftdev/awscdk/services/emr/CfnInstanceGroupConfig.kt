@@ -129,8 +129,8 @@ public open class CfnInstanceGroupConfig(
     id: String,
     props: CfnInstanceGroupConfigProps,
   ) :
-      this(software.amazon.awscdk.services.emr.CfnInstanceGroupConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInstanceGroupConfigProps::unwrap))
+      this(software.amazon.awscdk.services.emr.CfnInstanceGroupConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInstanceGroupConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -154,14 +154,14 @@ public open class CfnInstanceGroupConfig(
    * `AutoScalingPolicy` is a subproperty of `InstanceGroupConfig` .
    */
   public open fun autoScalingPolicy(`value`: IResolvable) {
-    unwrap(this).setAutoScalingPolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoScalingPolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * `AutoScalingPolicy` is a subproperty of `InstanceGroupConfig` .
    */
   public open fun autoScalingPolicy(`value`: AutoScalingPolicyProperty) {
-    unwrap(this).setAutoScalingPolicy(`value`.let(AutoScalingPolicyProperty::unwrap))
+    unwrap(this).setAutoScalingPolicy(`value`.let(AutoScalingPolicyProperty.Companion::unwrap))
   }
 
   /**
@@ -193,7 +193,7 @@ public open class CfnInstanceGroupConfig(
    * Amazon EMR releases 4.x or later.
    */
   public open fun configurations(`value`: IResolvable) {
-    unwrap(this).setConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -229,14 +229,14 @@ public open class CfnInstanceGroupConfig(
    * `EbsConfiguration` determines the EBS volumes to attach to EMR cluster instances.
    */
   public open fun ebsConfiguration(`value`: IResolvable) {
-    unwrap(this).setEbsConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEbsConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * `EbsConfiguration` determines the EBS volumes to attach to EMR cluster instances.
    */
   public open fun ebsConfiguration(`value`: EbsConfigurationProperty) {
-    unwrap(this).setEbsConfiguration(`value`.let(EbsConfigurationProperty::unwrap))
+    unwrap(this).setEbsConfiguration(`value`.let(EbsConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -253,7 +253,7 @@ public open class CfnInstanceGroupConfig(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -530,7 +530,7 @@ public open class CfnInstanceGroupConfig(
      * @param autoScalingPolicy `AutoScalingPolicy` is a subproperty of `InstanceGroupConfig` . 
      */
     override fun autoScalingPolicy(autoScalingPolicy: IResolvable) {
-      cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(IResolvable::unwrap))
+      cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -546,7 +546,7 @@ public open class CfnInstanceGroupConfig(
      * @param autoScalingPolicy `AutoScalingPolicy` is a subproperty of `InstanceGroupConfig` . 
      */
     override fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty) {
-      cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(AutoScalingPolicyProperty::unwrap))
+      cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(AutoScalingPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -589,7 +589,7 @@ public open class CfnInstanceGroupConfig(
      * @param configurations Amazon EMR releases 4.x or later. 
      */
     override fun configurations(configurations: IResolvable) {
-      cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
+      cdkBuilder.configurations(configurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -635,7 +635,7 @@ public open class CfnInstanceGroupConfig(
      * cluster instances. 
      */
     override fun ebsConfiguration(ebsConfiguration: IResolvable) {
-      cdkBuilder.ebsConfiguration(ebsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.ebsConfiguration(ebsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -646,7 +646,7 @@ public open class CfnInstanceGroupConfig(
      * cluster instances. 
      */
     override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
-      cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty::unwrap))
+      cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -883,7 +883,7 @@ public open class CfnInstanceGroupConfig(
        * limits.
        */
       override fun constraints(constraints: IResolvable) {
-        cdkBuilder.constraints(constraints.let(IResolvable::unwrap))
+        cdkBuilder.constraints(constraints.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -893,7 +893,7 @@ public open class CfnInstanceGroupConfig(
        * limits.
        */
       override fun constraints(constraints: ScalingConstraintsProperty) {
-        cdkBuilder.constraints(constraints.let(ScalingConstraintsProperty::unwrap))
+        cdkBuilder.constraints(constraints.let(ScalingConstraintsProperty.Companion::unwrap))
       }
 
       /**
@@ -911,7 +911,7 @@ public open class CfnInstanceGroupConfig(
        * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
        */
       override fun rules(rules: IResolvable) {
-        cdkBuilder.rules(rules.let(IResolvable::unwrap))
+        cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1169,7 +1169,7 @@ public open class CfnInstanceGroupConfig(
        * @param dimensions A CloudWatch metric dimension.
        */
       override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+        cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1465,7 +1465,7 @@ public open class CfnInstanceGroupConfig(
        * Duplicates not allowed.
        */
       override fun configurationProperties(configurationProperties: IResolvable) {
-        cdkBuilder.configurationProperties(configurationProperties.let(IResolvable::unwrap))
+        cdkBuilder.configurationProperties(configurationProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1482,7 +1482,7 @@ public open class CfnInstanceGroupConfig(
        * object.
        */
       override fun configurations(configurations: IResolvable) {
-        cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
+        cdkBuilder.configurations(configurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1642,7 +1642,7 @@ public open class CfnInstanceGroupConfig(
        * instance in the cluster. 
        */
       override fun volumeSpecification(volumeSpecification: IResolvable) {
-        cdkBuilder.volumeSpecification(volumeSpecification.let(IResolvable::unwrap))
+        cdkBuilder.volumeSpecification(volumeSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1651,7 +1651,7 @@ public open class CfnInstanceGroupConfig(
        * instance in the cluster. 
        */
       override fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty) {
-        cdkBuilder.volumeSpecification(volumeSpecification.let(VolumeSpecificationProperty::unwrap))
+        cdkBuilder.volumeSpecification(volumeSpecification.let(VolumeSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -1803,7 +1803,7 @@ public open class CfnInstanceGroupConfig(
        * cluster instance.
        */
       override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: IResolvable) {
-        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.let(IResolvable::unwrap))
+        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1832,7 +1832,7 @@ public open class CfnInstanceGroupConfig(
        * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
        */
       override fun ebsOptimized(ebsOptimized: IResolvable) {
-        cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
+        cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2087,7 +2087,7 @@ public open class CfnInstanceGroupConfig(
        * activity makes when triggered, and the periodicity of the adjustment. 
        */
       override fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: IResolvable) {
-        cdkBuilder.simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2096,7 +2096,7 @@ public open class CfnInstanceGroupConfig(
        */
       override
           fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty) {
-        cdkBuilder.simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration.let(SimpleScalingPolicyConfigurationProperty::unwrap))
+        cdkBuilder.simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration.let(SimpleScalingPolicyConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2432,14 +2432,14 @@ public open class CfnInstanceGroupConfig(
        * @param action The conditions that trigger an automatic scaling activity. 
        */
       override fun action(action: IResolvable) {
-        cdkBuilder.action(action.let(IResolvable::unwrap))
+        cdkBuilder.action(action.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param action The conditions that trigger an automatic scaling activity. 
        */
       override fun action(action: ScalingActionProperty) {
-        cdkBuilder.action(action.let(ScalingActionProperty::unwrap))
+        cdkBuilder.action(action.let(ScalingActionProperty.Companion::unwrap))
       }
 
       /**
@@ -2470,7 +2470,7 @@ public open class CfnInstanceGroupConfig(
        * activity is triggered. 
        */
       override fun trigger(trigger: IResolvable) {
-        cdkBuilder.trigger(trigger.let(IResolvable::unwrap))
+        cdkBuilder.trigger(trigger.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2478,7 +2478,7 @@ public open class CfnInstanceGroupConfig(
        * activity is triggered. 
        */
       override fun trigger(trigger: ScalingTriggerProperty) {
-        cdkBuilder.trigger(trigger.let(ScalingTriggerProperty::unwrap))
+        cdkBuilder.trigger(trigger.let(ScalingTriggerProperty.Companion::unwrap))
       }
 
       /**
@@ -2634,7 +2634,7 @@ public open class CfnInstanceGroupConfig(
        * activity begins.
        */
       override fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: IResolvable) {
-        cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2644,7 +2644,7 @@ public open class CfnInstanceGroupConfig(
        */
       override
           fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty) {
-        cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition.let(CloudWatchAlarmDefinitionProperty::unwrap))
+        cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition.let(CloudWatchAlarmDefinitionProperty.Companion::unwrap))
       }
 
       /**

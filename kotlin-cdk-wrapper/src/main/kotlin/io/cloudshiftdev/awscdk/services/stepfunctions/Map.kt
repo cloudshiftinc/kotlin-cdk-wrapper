@@ -51,7 +51,7 @@ public open class Map(
   cdkObject: software.amazon.awscdk.services.stepfunctions.Map,
 ) : MapBase(cdkObject), INextable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.stepfunctions.Map(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.stepfunctions.Map(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -60,8 +60,8 @@ public open class Map(
     id: String,
     props: MapProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.Map(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(MapProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.Map(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(MapProps.Companion::unwrap))
   )
 
   public constructor(
@@ -81,7 +81,7 @@ public open class Map(
    * @param props
    */
   public open fun addCatch(handler: IChainable): Map =
-      unwrap(this).addCatch(handler.let(IChainable::unwrap)).let(Map::wrap)
+      unwrap(this).addCatch(handler.let(IChainable.Companion::unwrap)).let(Map::wrap)
 
   /**
    * Add a recovery handler for this state.
@@ -93,8 +93,8 @@ public open class Map(
    * @param props
    */
   public open fun addCatch(handler: IChainable, props: CatchProps): Map =
-      unwrap(this).addCatch(handler.let(IChainable::unwrap),
-      props.let(CatchProps::unwrap)).let(Map::wrap)
+      unwrap(this).addCatch(handler.let(IChainable.Companion::unwrap),
+      props.let(CatchProps.Companion::unwrap)).let(Map::wrap)
 
   /**
    * Add a recovery handler for this state.
@@ -129,7 +129,7 @@ public open class Map(
    * @param props
    */
   public open fun addRetry(props: RetryProps): Map =
-      unwrap(this).addRetry(props.let(RetryProps::unwrap)).let(Map::wrap)
+      unwrap(this).addRetry(props.let(RetryProps.Companion::unwrap)).let(Map::wrap)
 
   /**
    * Add retry configuration for this state.
@@ -153,7 +153,7 @@ public open class Map(
    * @param config
    */
   public open fun itemProcessor(processor: IChainable): Map =
-      unwrap(this).itemProcessor(processor.let(IChainable::unwrap)).let(Map::wrap)
+      unwrap(this).itemProcessor(processor.let(IChainable.Companion::unwrap)).let(Map::wrap)
 
   /**
    * Define item processor in Map.
@@ -165,8 +165,8 @@ public open class Map(
    * @param config
    */
   public open fun itemProcessor(processor: IChainable, config: ProcessorConfig): Map =
-      unwrap(this).itemProcessor(processor.let(IChainable::unwrap),
-      config.let(ProcessorConfig::unwrap)).let(Map::wrap)
+      unwrap(this).itemProcessor(processor.let(IChainable.Companion::unwrap),
+      config.let(ProcessorConfig.Companion::unwrap)).let(Map::wrap)
 
   /**
    * Define item processor in Map.
@@ -193,7 +193,7 @@ public open class Map(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun iterator(iterator: IChainable): Map =
-      unwrap(this).iterator(iterator.let(IChainable::unwrap)).let(Map::wrap)
+      unwrap(this).iterator(iterator.let(IChainable.Companion::unwrap)).let(Map::wrap)
 
   /**
    * Return the Amazon States Language object for this state.

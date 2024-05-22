@@ -39,8 +39,8 @@ public open class OpenIdConnectProvider(
     id: String,
     props: OpenIdConnectProviderProps,
   ) :
-      this(software.amazon.awscdk.services.iam.OpenIdConnectProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(OpenIdConnectProviderProps::unwrap))
+      this(software.amazon.awscdk.services.iam.OpenIdConnectProvider(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(OpenIdConnectProviderProps.Companion::unwrap))
   )
 
   public constructor(
@@ -327,7 +327,7 @@ public open class OpenIdConnectProvider(
       id: String,
       openIdConnectProviderArn: String,
     ): IOpenIdConnectProvider =
-        software.amazon.awscdk.services.iam.OpenIdConnectProvider.fromOpenIdConnectProviderArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.iam.OpenIdConnectProvider.fromOpenIdConnectProviderArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, openIdConnectProviderArn).let(IOpenIdConnectProvider::wrap)
 
     public operator fun invoke(

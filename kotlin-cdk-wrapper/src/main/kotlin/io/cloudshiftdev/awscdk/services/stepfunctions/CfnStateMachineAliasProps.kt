@@ -384,7 +384,7 @@ public interface CfnStateMachineAliasProps {
      * time interval.
      */
     override fun deploymentPreference(deploymentPreference: IResolvable) {
-      cdkBuilder.deploymentPreference(deploymentPreference.let(IResolvable::unwrap))
+      cdkBuilder.deploymentPreference(deploymentPreference.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -433,7 +433,7 @@ public interface CfnStateMachineAliasProps {
      */
     override
         fun deploymentPreference(deploymentPreference: CfnStateMachineAlias.DeploymentPreferenceProperty) {
-      cdkBuilder.deploymentPreference(deploymentPreference.let(CfnStateMachineAlias.DeploymentPreferenceProperty::unwrap))
+      cdkBuilder.deploymentPreference(deploymentPreference.let(CfnStateMachineAlias.DeploymentPreferenceProperty.Companion::unwrap))
     }
 
     /**
@@ -517,7 +517,7 @@ public interface CfnStateMachineAliasProps {
      * define only one of these properties.
      */
     override fun routingConfiguration(routingConfiguration: IResolvable) {
-      cdkBuilder.routingConfiguration(routingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.routingConfiguration(routingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**

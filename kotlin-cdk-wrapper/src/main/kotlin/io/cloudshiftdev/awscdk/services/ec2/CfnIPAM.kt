@@ -59,7 +59,7 @@ public open class CfnIPAM(
   cdkObject: software.amazon.awscdk.services.ec2.CfnIPAM,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ec2.CfnIPAM(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ec2.CfnIPAM(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -68,8 +68,8 @@ public open class CfnIPAM(
     id: String,
     props: CfnIPAMProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnIPAM(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnIPAMProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnIPAM(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnIPAMProps.Companion::unwrap))
   )
 
   public constructor(
@@ -140,7 +140,7 @@ public open class CfnIPAM(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -152,7 +152,7 @@ public open class CfnIPAM(
    * The operating Regions for an IPAM.
    */
   public open fun operatingRegions(`value`: IResolvable) {
-    unwrap(this).setOperatingRegions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOperatingRegions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -182,7 +182,7 @@ public open class CfnIPAM(
    * The key/value combination of a tag assigned to the resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -327,7 +327,7 @@ public open class CfnIPAM(
      * @param operatingRegions The operating Regions for an IPAM. 
      */
     override fun operatingRegions(operatingRegions: IResolvable) {
-      cdkBuilder.operatingRegions(operatingRegions.let(IResolvable::unwrap))
+      cdkBuilder.operatingRegions(operatingRegions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -374,7 +374,7 @@ public open class CfnIPAM(
      * @param tags The key/value combination of a tag assigned to the resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

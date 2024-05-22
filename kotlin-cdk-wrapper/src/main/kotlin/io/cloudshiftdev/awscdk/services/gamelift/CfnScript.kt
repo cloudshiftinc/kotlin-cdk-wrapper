@@ -63,8 +63,8 @@ public open class CfnScript(
     id: String,
     props: CfnScriptProps,
   ) :
-      this(software.amazon.awscdk.services.gamelift.CfnScript(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnScriptProps::unwrap))
+      this(software.amazon.awscdk.services.gamelift.CfnScript(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnScriptProps.Companion::unwrap))
   )
 
   public constructor(
@@ -104,7 +104,7 @@ public open class CfnScript(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -130,7 +130,7 @@ public open class CfnScript(
    * stored.
    */
   public open fun storageLocation(`value`: IResolvable) {
-    unwrap(this).setStorageLocation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStorageLocation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -138,7 +138,7 @@ public open class CfnScript(
    * stored.
    */
   public open fun storageLocation(`value`: S3LocationProperty) {
-    unwrap(this).setStorageLocation(`value`.let(S3LocationProperty::unwrap))
+    unwrap(this).setStorageLocation(`value`.let(S3LocationProperty.Companion::unwrap))
   }
 
   /**
@@ -165,7 +165,7 @@ public open class CfnScript(
    * A list of labels to assign to the new script resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -325,7 +325,7 @@ public open class CfnScript(
      * your Realtime scripts is stored. 
      */
     override fun storageLocation(storageLocation: IResolvable) {
-      cdkBuilder.storageLocation(storageLocation.let(IResolvable::unwrap))
+      cdkBuilder.storageLocation(storageLocation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -343,7 +343,7 @@ public open class CfnScript(
      * your Realtime scripts is stored. 
      */
     override fun storageLocation(storageLocation: S3LocationProperty) {
-      cdkBuilder.storageLocation(storageLocation.let(S3LocationProperty::unwrap))
+      cdkBuilder.storageLocation(storageLocation.let(S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -379,7 +379,7 @@ public open class CfnScript(
      * @param tags A list of labels to assign to the new script resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

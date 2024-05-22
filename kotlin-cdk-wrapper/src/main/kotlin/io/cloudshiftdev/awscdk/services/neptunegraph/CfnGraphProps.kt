@@ -255,7 +255,7 @@ public interface CfnGraphProps {
      * The graph can't be deleted when deletion protection is enabled.
      */
     override fun deletionProtection(deletionProtection: IResolvable) {
-      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable::unwrap))
+      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -312,7 +312,7 @@ public interface CfnGraphProps {
      * enabled.
      */
     override fun publicConnectivity(publicConnectivity: IResolvable) {
-      cdkBuilder.publicConnectivity(publicConnectivity.let(IResolvable::unwrap))
+      cdkBuilder.publicConnectivity(publicConnectivity.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -329,7 +329,7 @@ public interface CfnGraphProps {
      * in an IAM policy.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -345,7 +345,7 @@ public interface CfnGraphProps {
      * The value is specified as `dimension=` value. Max = 65,535
      */
     override fun vectorSearchConfiguration(vectorSearchConfiguration: IResolvable) {
-      cdkBuilder.vectorSearchConfiguration(vectorSearchConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.vectorSearchConfiguration(vectorSearchConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -355,7 +355,7 @@ public interface CfnGraphProps {
      */
     override
         fun vectorSearchConfiguration(vectorSearchConfiguration: CfnGraph.VectorSearchConfigurationProperty) {
-      cdkBuilder.vectorSearchConfiguration(vectorSearchConfiguration.let(CfnGraph.VectorSearchConfigurationProperty::unwrap))
+      cdkBuilder.vectorSearchConfiguration(vectorSearchConfiguration.let(CfnGraph.VectorSearchConfigurationProperty.Companion::unwrap))
     }
 
     /**

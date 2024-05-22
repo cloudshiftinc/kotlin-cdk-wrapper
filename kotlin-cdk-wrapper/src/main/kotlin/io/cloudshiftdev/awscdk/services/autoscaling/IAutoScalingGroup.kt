@@ -218,7 +218,7 @@ public interface IAutoScalingGroup : IResource, IGrantable {
      */
     override fun addLifecycleHook(id: String, props: BasicLifecycleHookProps): LifecycleHook =
         unwrap(this).addLifecycleHook(id,
-        props.let(BasicLifecycleHookProps::unwrap)).let(LifecycleHook::wrap)
+        props.let(BasicLifecycleHookProps.Companion::unwrap)).let(LifecycleHook::wrap)
 
     /**
      * Send a message to either an SQS queue or SNS topic when instances launch or terminate.
@@ -257,7 +257,7 @@ public interface IAutoScalingGroup : IResource, IGrantable {
      * @param options
      */
     override fun addWarmPool(options: WarmPoolOptions): WarmPool =
-        unwrap(this).addWarmPool(options.let(WarmPoolOptions::unwrap)).let(WarmPool::wrap)
+        unwrap(this).addWarmPool(options.let(WarmPoolOptions.Companion::unwrap)).let(WarmPool::wrap)
 
     /**
      * Add a pool of pre-initialized EC2 instances that sits alongside an Auto Scaling group.
@@ -283,7 +283,7 @@ public interface IAutoScalingGroup : IResource, IGrantable {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -332,7 +332,7 @@ public interface IAutoScalingGroup : IResource, IGrantable {
      */
     override fun scaleOnCpuUtilization(id: String, props: CpuUtilizationScalingProps):
         TargetTrackingScalingPolicy = unwrap(this).scaleOnCpuUtilization(id,
-        props.let(CpuUtilizationScalingProps::unwrap)).let(TargetTrackingScalingPolicy::wrap)
+        props.let(CpuUtilizationScalingProps.Companion::unwrap)).let(TargetTrackingScalingPolicy::wrap)
 
     /**
      * Scale out or in to achieve a target CPU utilization.
@@ -354,7 +354,7 @@ public interface IAutoScalingGroup : IResource, IGrantable {
      */
     override fun scaleOnIncomingBytes(id: String, props: NetworkUtilizationScalingProps):
         TargetTrackingScalingPolicy = unwrap(this).scaleOnIncomingBytes(id,
-        props.let(NetworkUtilizationScalingProps::unwrap)).let(TargetTrackingScalingPolicy::wrap)
+        props.let(NetworkUtilizationScalingProps.Companion::unwrap)).let(TargetTrackingScalingPolicy::wrap)
 
     /**
      * Scale out or in to achieve a target network ingress rate.
@@ -376,7 +376,7 @@ public interface IAutoScalingGroup : IResource, IGrantable {
      */
     override fun scaleOnMetric(id: String, props: BasicStepScalingPolicyProps): StepScalingPolicy =
         unwrap(this).scaleOnMetric(id,
-        props.let(BasicStepScalingPolicyProps::unwrap)).let(StepScalingPolicy::wrap)
+        props.let(BasicStepScalingPolicyProps.Companion::unwrap)).let(StepScalingPolicy::wrap)
 
     /**
      * Scale out or in, in response to a metric.
@@ -397,7 +397,7 @@ public interface IAutoScalingGroup : IResource, IGrantable {
      */
     override fun scaleOnOutgoingBytes(id: String, props: NetworkUtilizationScalingProps):
         TargetTrackingScalingPolicy = unwrap(this).scaleOnOutgoingBytes(id,
-        props.let(NetworkUtilizationScalingProps::unwrap)).let(TargetTrackingScalingPolicy::wrap)
+        props.let(NetworkUtilizationScalingProps.Companion::unwrap)).let(TargetTrackingScalingPolicy::wrap)
 
     /**
      * Scale out or in to achieve a target network egress rate.
@@ -419,7 +419,7 @@ public interface IAutoScalingGroup : IResource, IGrantable {
      */
     override fun scaleOnSchedule(id: String, props: BasicScheduledActionProps): ScheduledAction =
         unwrap(this).scaleOnSchedule(id,
-        props.let(BasicScheduledActionProps::unwrap)).let(ScheduledAction::wrap)
+        props.let(BasicScheduledActionProps.Companion::unwrap)).let(ScheduledAction::wrap)
 
     /**
      * Scale out or in based on time.
@@ -440,7 +440,7 @@ public interface IAutoScalingGroup : IResource, IGrantable {
      */
     override fun scaleToTrackMetric(id: String, props: MetricTargetTrackingProps):
         TargetTrackingScalingPolicy = unwrap(this).scaleToTrackMetric(id,
-        props.let(MetricTargetTrackingProps::unwrap)).let(TargetTrackingScalingPolicy::wrap)
+        props.let(MetricTargetTrackingProps.Companion::unwrap)).let(TargetTrackingScalingPolicy::wrap)
 
     /**
      * Scale out or in in order to keep a metric around a target value.

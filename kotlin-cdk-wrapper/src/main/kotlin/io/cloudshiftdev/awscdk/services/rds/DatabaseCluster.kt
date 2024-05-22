@@ -59,8 +59,8 @@ public open class DatabaseCluster(
     id: String,
     props: DatabaseClusterProps,
   ) :
-      this(software.amazon.awscdk.services.rds.DatabaseCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DatabaseClusterProps::unwrap))
+      this(software.amazon.awscdk.services.rds.DatabaseCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DatabaseClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -81,7 +81,7 @@ public open class DatabaseCluster(
    */
   public open fun addRotationMultiUser(id: String, options: RotationMultiUserOptions):
       SecretRotation = unwrap(this).addRotationMultiUser(id,
-      options.let(RotationMultiUserOptions::unwrap)).let(SecretRotation::wrap)
+      options.let(RotationMultiUserOptions.Companion::unwrap)).let(SecretRotation::wrap)
 
   /**
    * Adds the multi user rotation to this cluster.
@@ -118,7 +118,7 @@ public open class DatabaseCluster(
    * @param options
    */
   public open fun addRotationSingleUser(options: RotationSingleUserOptions): SecretRotation =
-      unwrap(this).addRotationSingleUser(options.let(RotationSingleUserOptions::unwrap)).let(SecretRotation::wrap)
+      unwrap(this).addRotationSingleUser(options.let(RotationSingleUserOptions.Companion::unwrap)).let(SecretRotation::wrap)
 
   /**
    * Adds the single user rotation of the master password to this cluster.
@@ -217,7 +217,7 @@ public open class DatabaseCluster(
    * @param props
    */
   public open fun metricACUUtilization(props: MetricOptions): Metric =
-      unwrap(this).metricACUUtilization(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricACUUtilization(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * This value is represented as a percentage.
@@ -251,7 +251,7 @@ public open class DatabaseCluster(
    * @param props
    */
   public open fun metricServerlessDatabaseCapacity(props: MetricOptions): Metric =
-      unwrap(this).metricServerlessDatabaseCapacity(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricServerlessDatabaseCapacity(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * As a cluster-level metric, it represents the average of the ServerlessDatabaseCapacity values
@@ -886,7 +886,7 @@ public open class DatabaseCluster(
      * @param backtrackWindow The number of seconds to set a cluster's target backtrack window to. 
      */
     override fun backtrackWindow(backtrackWindow: Duration) {
-      cdkBuilder.backtrackWindow(backtrackWindow.let(Duration::unwrap))
+      cdkBuilder.backtrackWindow(backtrackWindow.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -900,7 +900,7 @@ public open class DatabaseCluster(
      * @param backup Backup settings. 
      */
     override fun backup(backup: BackupProps) {
-      cdkBuilder.backup(backup.let(BackupProps::unwrap))
+      cdkBuilder.backup(backup.let(BackupProps.Companion::unwrap))
     }
 
     /**
@@ -952,7 +952,7 @@ public open class DatabaseCluster(
      * @param cloudwatchLogsRetention The number of days log events are kept in CloudWatch Logs. 
      */
     override fun cloudwatchLogsRetention(cloudwatchLogsRetention: RetentionDays) {
-      cdkBuilder.cloudwatchLogsRetention(cloudwatchLogsRetention.let(RetentionDays::unwrap))
+      cdkBuilder.cloudwatchLogsRetention(cloudwatchLogsRetention.let(RetentionDays.Companion::unwrap))
     }
 
     /**
@@ -965,7 +965,7 @@ public open class DatabaseCluster(
      * custom resource that sets the retention policy. 
      */
     override fun cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole: IRole) {
-      cdkBuilder.cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole.let(IRole::unwrap))
+      cdkBuilder.cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -999,7 +999,7 @@ public open class DatabaseCluster(
      * @param credentials Credentials for the administrative user. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -1058,7 +1058,7 @@ public open class DatabaseCluster(
      * @param domainRole The IAM role to be used when making API calls to the Directory Service. 
      */
     override fun domainRole(domainRole: IRole) {
-      cdkBuilder.domainRole(domainRole.let(IRole::unwrap))
+      cdkBuilder.domainRole(domainRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -1078,7 +1078,7 @@ public open class DatabaseCluster(
      * @param engine What kind of database to start. 
      */
     override fun engine(engine: IClusterEngine) {
-      cdkBuilder.engine(engine.let(IClusterEngine::unwrap))
+      cdkBuilder.engine(engine.let(IClusterEngine.Companion::unwrap))
     }
 
     /**
@@ -1116,7 +1116,7 @@ public open class DatabaseCluster(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun instanceProps(instanceProps: InstanceProps) {
-      cdkBuilder.instanceProps(instanceProps.let(InstanceProps::unwrap))
+      cdkBuilder.instanceProps(instanceProps.let(InstanceProps.Companion::unwrap))
     }
 
     /**
@@ -1139,7 +1139,7 @@ public open class DatabaseCluster(
      * @param instanceUpdateBehaviour The ordering of updates for instances. 
      */
     override fun instanceUpdateBehaviour(instanceUpdateBehaviour: InstanceUpdateBehaviour) {
-      cdkBuilder.instanceUpdateBehaviour(instanceUpdateBehaviour.let(InstanceUpdateBehaviour::unwrap))
+      cdkBuilder.instanceUpdateBehaviour(instanceUpdateBehaviour.let(InstanceUpdateBehaviour.Companion::unwrap))
     }
 
     /**
@@ -1167,7 +1167,7 @@ public open class DatabaseCluster(
      * enhanced monitoring metrics for the DB instances. 
      */
     override fun monitoringInterval(monitoringInterval: Duration) {
-      cdkBuilder.monitoringInterval(monitoringInterval.let(Duration::unwrap))
+      cdkBuilder.monitoringInterval(monitoringInterval.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -1178,7 +1178,7 @@ public open class DatabaseCluster(
      * @param monitoringRole Role that will be used to manage DB instances monitoring. 
      */
     override fun monitoringRole(monitoringRole: IRole) {
-      cdkBuilder.monitoringRole(monitoringRole.let(IRole::unwrap))
+      cdkBuilder.monitoringRole(monitoringRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -1189,7 +1189,7 @@ public open class DatabaseCluster(
      * @param networkType The network type of the DB instance. 
      */
     override fun networkType(networkType: NetworkType) {
-      cdkBuilder.networkType(networkType.let(NetworkType::unwrap))
+      cdkBuilder.networkType(networkType.let(NetworkType.Companion::unwrap))
     }
 
     /**
@@ -1200,7 +1200,7 @@ public open class DatabaseCluster(
      * @param parameterGroup Additional parameters to pass to the database engine. 
      */
     override fun parameterGroup(parameterGroup: IParameterGroup) {
-      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup::unwrap))
+      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup.Companion::unwrap))
     }
 
     /**
@@ -1253,7 +1253,7 @@ public open class DatabaseCluster(
      * @param readers A list of instances to create as cluster reader instances. 
      */
     override fun readers(readers: List<IClusterInstance>) {
-      cdkBuilder.readers(readers.map(IClusterInstance::unwrap))
+      cdkBuilder.readers(readers.map(IClusterInstance.Companion::unwrap))
     }
 
     /**
@@ -1276,7 +1276,7 @@ public open class DatabaseCluster(
      * removed from the stack or replaced during an update. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -1294,7 +1294,7 @@ public open class DatabaseCluster(
      * supported by the Aurora database engine. 
      */
     override fun s3ExportBuckets(s3ExportBuckets: List<IBucket>) {
-      cdkBuilder.s3ExportBuckets(s3ExportBuckets.map(IBucket::unwrap))
+      cdkBuilder.s3ExportBuckets(s3ExportBuckets.map(IBucket.Companion::unwrap))
     }
 
     /**
@@ -1329,7 +1329,7 @@ public open class DatabaseCluster(
      * @param s3ExportRole Role that will be associated with this DB cluster to enable S3 export. 
      */
     override fun s3ExportRole(s3ExportRole: IRole) {
-      cdkBuilder.s3ExportRole(s3ExportRole.let(IRole::unwrap))
+      cdkBuilder.s3ExportRole(s3ExportRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -1347,7 +1347,7 @@ public open class DatabaseCluster(
      * supported by the Aurora database engine. 
      */
     override fun s3ImportBuckets(s3ImportBuckets: List<IBucket>) {
-      cdkBuilder.s3ImportBuckets(s3ImportBuckets.map(IBucket::unwrap))
+      cdkBuilder.s3ImportBuckets(s3ImportBuckets.map(IBucket.Companion::unwrap))
     }
 
     /**
@@ -1382,7 +1382,7 @@ public open class DatabaseCluster(
      * @param s3ImportRole Role that will be associated with this DB cluster to enable S3 import. 
      */
     override fun s3ImportRole(s3ImportRole: IRole) {
-      cdkBuilder.s3ImportRole(s3ImportRole.let(IRole::unwrap))
+      cdkBuilder.s3ImportRole(s3ImportRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -1393,7 +1393,7 @@ public open class DatabaseCluster(
      * @param securityGroups Security group. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -1463,7 +1463,7 @@ public open class DatabaseCluster(
      * @param storageEncryptionKey The KMS key for storage encryption. 
      */
     override fun storageEncryptionKey(storageEncryptionKey: IKey) {
-      cdkBuilder.storageEncryptionKey(storageEncryptionKey.let(IKey::unwrap))
+      cdkBuilder.storageEncryptionKey(storageEncryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -1474,7 +1474,7 @@ public open class DatabaseCluster(
      * @param storageType The storage type to be associated with the DB cluster. 
      */
     override fun storageType(storageType: DBClusterStorageType) {
-      cdkBuilder.storageType(storageType.let(DBClusterStorageType::unwrap))
+      cdkBuilder.storageType(storageType.let(DBClusterStorageType.Companion::unwrap))
     }
 
     /**
@@ -1485,7 +1485,7 @@ public open class DatabaseCluster(
      * @param subnetGroup Existing subnet group for the cluster. 
      */
     override fun subnetGroup(subnetGroup: ISubnetGroup) {
-      cdkBuilder.subnetGroup(subnetGroup.let(ISubnetGroup::unwrap))
+      cdkBuilder.subnetGroup(subnetGroup.let(ISubnetGroup.Companion::unwrap))
     }
 
     /**
@@ -1496,7 +1496,7 @@ public open class DatabaseCluster(
      * @param vpc What subnets to run the RDS instances in. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -1507,7 +1507,7 @@ public open class DatabaseCluster(
      * @param vpcSubnets Where to place the instances within the VPC. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -1530,7 +1530,7 @@ public open class DatabaseCluster(
      * @param writer The instance to use for the cluster writer. 
      */
     override fun writer(writer: IClusterInstance) {
-      cdkBuilder.writer(writer.let(IClusterInstance::unwrap))
+      cdkBuilder.writer(writer.let(IClusterInstance.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.DatabaseCluster = cdkBuilder.build()
@@ -1542,8 +1542,8 @@ public open class DatabaseCluster(
       id: String,
       attrs: DatabaseClusterAttributes,
     ): IDatabaseCluster =
-        software.amazon.awscdk.services.rds.DatabaseCluster.fromDatabaseClusterAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(DatabaseClusterAttributes::unwrap)).let(IDatabaseCluster::wrap)
+        software.amazon.awscdk.services.rds.DatabaseCluster.fromDatabaseClusterAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(DatabaseClusterAttributes.Companion::unwrap)).let(IDatabaseCluster::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c2468a7dfbcae4e10b5b8acc2d69102604d71bdbc433551e1bb4c7e17788a73f")

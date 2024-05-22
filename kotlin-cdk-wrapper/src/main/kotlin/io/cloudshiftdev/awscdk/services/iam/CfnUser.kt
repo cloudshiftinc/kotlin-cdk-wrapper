@@ -63,7 +63,7 @@ public open class CfnUser(
   cdkObject: software.amazon.awscdk.services.iam.CfnUser,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.iam.CfnUser(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.iam.CfnUser(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -72,8 +72,8 @@ public open class CfnUser(
     id: String,
     props: CfnUserProps,
   ) :
-      this(software.amazon.awscdk.services.iam.CfnUser(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnUserProps::unwrap))
+      this(software.amazon.awscdk.services.iam.CfnUser(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnUserProps.Companion::unwrap))
   )
 
   public constructor(
@@ -113,7 +113,7 @@ public open class CfnUser(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -125,14 +125,14 @@ public open class CfnUser(
    * Creates a password for the specified IAM user.
    */
   public open fun loginProfile(`value`: IResolvable) {
-    unwrap(this).setLoginProfile(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoginProfile(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Creates a password for the specified IAM user.
    */
   public open fun loginProfile(`value`: LoginProfileProperty) {
-    unwrap(this).setLoginProfile(`value`.let(LoginProfileProperty::unwrap))
+    unwrap(this).setLoginProfile(`value`.let(LoginProfileProperty.Companion::unwrap))
   }
 
   /**
@@ -198,7 +198,7 @@ public open class CfnUser(
    * Adds or updates an inline policy document that is embedded in the specified IAM user.
    */
   public open fun policies(`value`: IResolvable) {
-    unwrap(this).setPolicies(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPolicies(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -228,7 +228,7 @@ public open class CfnUser(
    * A list of tags that you want to attach to the new user.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -583,7 +583,7 @@ public open class CfnUser(
      * @param loginProfile Creates a password for the specified IAM user. 
      */
     override fun loginProfile(loginProfile: IResolvable) {
-      cdkBuilder.loginProfile(loginProfile.let(IResolvable::unwrap))
+      cdkBuilder.loginProfile(loginProfile.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -605,7 +605,7 @@ public open class CfnUser(
      * @param loginProfile Creates a password for the specified IAM user. 
      */
     override fun loginProfile(loginProfile: LoginProfileProperty) {
-      cdkBuilder.loginProfile(loginProfile.let(LoginProfileProperty::unwrap))
+      cdkBuilder.loginProfile(loginProfile.let(LoginProfileProperty.Companion::unwrap))
     }
 
     /**
@@ -729,7 +729,7 @@ public open class CfnUser(
      * IAM user. 
      */
     override fun policies(policies: IResolvable) {
-      cdkBuilder.policies(policies.let(IResolvable::unwrap))
+      cdkBuilder.policies(policies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -796,7 +796,7 @@ public open class CfnUser(
      * @param tags A list of tags that you want to attach to the new user. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -958,7 +958,7 @@ public open class CfnUser(
        * on next sign-in.
        */
       override fun passwordResetRequired(passwordResetRequired: IResolvable) {
-        cdkBuilder.passwordResetRequired(passwordResetRequired.let(IResolvable::unwrap))
+        cdkBuilder.passwordResetRequired(passwordResetRequired.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.iam.CfnUser.LoginProfileProperty =

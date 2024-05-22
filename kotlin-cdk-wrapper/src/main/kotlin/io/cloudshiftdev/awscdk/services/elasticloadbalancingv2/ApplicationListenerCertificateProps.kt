@@ -77,7 +77,7 @@ public interface ApplicationListenerCertificateProps {
      * Duplicates are not allowed.
      */
     override fun certificates(certificates: List<IListenerCertificate>) {
-      cdkBuilder.certificates(certificates.map(IListenerCertificate::unwrap))
+      cdkBuilder.certificates(certificates.map(IListenerCertificate.Companion::unwrap))
     }
 
     /**
@@ -91,7 +91,7 @@ public interface ApplicationListenerCertificateProps {
      * @param listener The listener to attach the rule to. 
      */
     override fun listener(listener: IApplicationListener) {
-      cdkBuilder.listener(listener.let(IApplicationListener::unwrap))
+      cdkBuilder.listener(listener.let(IApplicationListener.Companion::unwrap))
     }
 
     public fun build():

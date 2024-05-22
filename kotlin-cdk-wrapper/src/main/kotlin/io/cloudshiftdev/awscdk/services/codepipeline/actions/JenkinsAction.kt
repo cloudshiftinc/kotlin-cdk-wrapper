@@ -30,7 +30,7 @@ public open class JenkinsAction(
   cdkObject: software.amazon.awscdk.services.codepipeline.actions.JenkinsAction,
 ) : Action(cdkObject) {
   public constructor(props: JenkinsActionProps) :
-      this(software.amazon.awscdk.services.codepipeline.actions.JenkinsAction(props.let(JenkinsActionProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.actions.JenkinsAction(props.let(JenkinsActionProps.Companion::unwrap))
   )
 
   public constructor(props: JenkinsActionProps.Builder.() -> Unit) : this(JenkinsActionProps(props)
@@ -150,7 +150,7 @@ public open class JenkinsAction(
      * @param inputs The source to use as input for this build. 
      */
     override fun inputs(inputs: List<Artifact>) {
-      cdkBuilder.inputs(inputs.map(Artifact::unwrap))
+      cdkBuilder.inputs(inputs.map(Artifact.Companion::unwrap))
     }
 
     /**
@@ -166,14 +166,14 @@ public open class JenkinsAction(
      * @param jenkinsProvider The Jenkins Provider for this Action. 
      */
     override fun jenkinsProvider(jenkinsProvider: IJenkinsProvider) {
-      cdkBuilder.jenkinsProvider(jenkinsProvider.let(IJenkinsProvider::unwrap))
+      cdkBuilder.jenkinsProvider(jenkinsProvider.let(IJenkinsProvider.Companion::unwrap))
     }
 
     /**
      * @param outputs 
      */
     override fun outputs(outputs: List<Artifact>) {
-      cdkBuilder.outputs(outputs.map(Artifact::unwrap))
+      cdkBuilder.outputs(outputs.map(Artifact.Companion::unwrap))
     }
 
     /**
@@ -218,7 +218,7 @@ public open class JenkinsAction(
      * @param type The type of the Action - Build, or Test. 
      */
     override fun type(type: JenkinsActionType) {
-      cdkBuilder.type(type.let(JenkinsActionType::unwrap))
+      cdkBuilder.type(type.let(JenkinsActionType.Companion::unwrap))
     }
 
     /**

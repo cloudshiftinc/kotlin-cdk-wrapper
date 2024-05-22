@@ -50,7 +50,7 @@ public open class Accelerator(
   cdkObject: software.amazon.awscdk.services.globalaccelerator.Accelerator,
 ) : Resource(cdkObject), IAccelerator {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.globalaccelerator.Accelerator(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.globalaccelerator.Accelerator(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -59,8 +59,8 @@ public open class Accelerator(
     id: String,
     props: AcceleratorProps,
   ) :
-      this(software.amazon.awscdk.services.globalaccelerator.Accelerator(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(AcceleratorProps::unwrap))
+      this(software.amazon.awscdk.services.globalaccelerator.Accelerator(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(AcceleratorProps.Companion::unwrap))
   )
 
   public constructor(
@@ -82,7 +82,8 @@ public open class Accelerator(
    * @param options 
    */
   public open fun addListener(id: String, options: ListenerOptions): Listener =
-      unwrap(this).addListener(id, options.let(ListenerOptions::unwrap)).let(Listener::wrap)
+      unwrap(this).addListener(id,
+      options.let(ListenerOptions.Companion::unwrap)).let(Listener::wrap)
 
   /**
    * Add a listener to the accelerator.
@@ -241,7 +242,7 @@ public open class Accelerator(
      * @param ipAddressType The IP address type that an accelerator supports. 
      */
     override fun ipAddressType(ipAddressType: IpAddressType) {
-      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType::unwrap))
+      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType.Companion::unwrap))
     }
 
     /**
@@ -306,8 +307,8 @@ public open class Accelerator(
       id: String,
       attrs: AcceleratorAttributes,
     ): IAccelerator =
-        software.amazon.awscdk.services.globalaccelerator.Accelerator.fromAcceleratorAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(AcceleratorAttributes::unwrap)).let(IAccelerator::wrap)
+        software.amazon.awscdk.services.globalaccelerator.Accelerator.fromAcceleratorAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(AcceleratorAttributes.Companion::unwrap)).let(IAccelerator::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8baed08c541ab0b2afcc742de4fe7296b53dea3fc9b6ce5fdfb9dc99c2a62385")

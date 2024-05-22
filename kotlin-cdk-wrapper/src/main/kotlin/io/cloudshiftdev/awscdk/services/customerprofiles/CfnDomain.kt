@@ -111,8 +111,8 @@ public open class CfnDomain(
     id: String,
     props: CfnDomainProps,
   ) :
-      this(software.amazon.awscdk.services.customerprofiles.CfnDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDomainProps::unwrap))
+      this(software.amazon.awscdk.services.customerprofiles.CfnDomain(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDomainProps.Companion::unwrap))
   )
 
   public constructor(
@@ -201,7 +201,7 @@ public open class CfnDomain(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -213,14 +213,14 @@ public open class CfnDomain(
    * The process of matching duplicate profiles.
    */
   public open fun matching(`value`: IResolvable) {
-    unwrap(this).setMatching(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMatching(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The process of matching duplicate profiles.
    */
   public open fun matching(`value`: MatchingProperty) {
-    unwrap(this).setMatching(`value`.let(MatchingProperty::unwrap))
+    unwrap(this).setMatching(`value`.let(MatchingProperty.Companion::unwrap))
   }
 
   /**
@@ -240,14 +240,14 @@ public open class CfnDomain(
    * The process of matching duplicate profiles using Rule-Based matching.
    */
   public open fun ruleBasedMatching(`value`: IResolvable) {
-    unwrap(this).setRuleBasedMatching(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRuleBasedMatching(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The process of matching duplicate profiles using Rule-Based matching.
    */
   public open fun ruleBasedMatching(`value`: RuleBasedMatchingProperty) {
-    unwrap(this).setRuleBasedMatching(`value`.let(RuleBasedMatchingProperty::unwrap))
+    unwrap(this).setRuleBasedMatching(`value`.let(RuleBasedMatchingProperty.Companion::unwrap))
   }
 
   /**
@@ -273,7 +273,7 @@ public open class CfnDomain(
    * The tags used to organize, track, or control access for this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -464,7 +464,7 @@ public open class CfnDomain(
      * @param matching The process of matching duplicate profiles. 
      */
     override fun matching(matching: IResolvable) {
-      cdkBuilder.matching(matching.let(IResolvable::unwrap))
+      cdkBuilder.matching(matching.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -474,7 +474,7 @@ public open class CfnDomain(
      * @param matching The process of matching duplicate profiles. 
      */
     override fun matching(matching: MatchingProperty) {
-      cdkBuilder.matching(matching.let(MatchingProperty::unwrap))
+      cdkBuilder.matching(matching.let(MatchingProperty.Companion::unwrap))
     }
 
     /**
@@ -496,7 +496,7 @@ public open class CfnDomain(
      * matching. 
      */
     override fun ruleBasedMatching(ruleBasedMatching: IResolvable) {
-      cdkBuilder.ruleBasedMatching(ruleBasedMatching.let(IResolvable::unwrap))
+      cdkBuilder.ruleBasedMatching(ruleBasedMatching.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -507,7 +507,7 @@ public open class CfnDomain(
      * matching. 
      */
     override fun ruleBasedMatching(ruleBasedMatching: RuleBasedMatchingProperty) {
-      cdkBuilder.ruleBasedMatching(ruleBasedMatching.let(RuleBasedMatchingProperty::unwrap))
+      cdkBuilder.ruleBasedMatching(ruleBasedMatching.let(RuleBasedMatchingProperty.Companion::unwrap))
     }
 
     /**
@@ -529,7 +529,7 @@ public open class CfnDomain(
      * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1007,7 +1007,7 @@ public open class CfnDomain(
        * `ConflictResolution` specifies which `EmailAddress` should be used.
        */
       override fun conflictResolution(conflictResolution: IResolvable) {
-        cdkBuilder.conflictResolution(conflictResolution.let(IResolvable::unwrap))
+        cdkBuilder.conflictResolution(conflictResolution.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1017,7 +1017,7 @@ public open class CfnDomain(
        * `ConflictResolution` specifies which `EmailAddress` should be used.
        */
       override fun conflictResolution(conflictResolution: ConflictResolutionProperty) {
-        cdkBuilder.conflictResolution(conflictResolution.let(ConflictResolutionProperty::unwrap))
+        cdkBuilder.conflictResolution(conflictResolution.let(ConflictResolutionProperty.Companion::unwrap))
       }
 
       /**
@@ -1038,7 +1038,7 @@ public open class CfnDomain(
        * will be merged.
        */
       override fun consolidation(consolidation: IResolvable) {
-        cdkBuilder.consolidation(consolidation.let(IResolvable::unwrap))
+        cdkBuilder.consolidation(consolidation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1047,7 +1047,7 @@ public open class CfnDomain(
        * will be merged.
        */
       override fun consolidation(consolidation: ConsolidationProperty) {
-        cdkBuilder.consolidation(consolidation.let(ConsolidationProperty::unwrap))
+        cdkBuilder.consolidation(consolidation.let(ConsolidationProperty.Companion::unwrap))
       }
 
       /**
@@ -1071,7 +1071,7 @@ public open class CfnDomain(
        * @param enabled The flag that enables the auto-merging of duplicate profiles. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1327,7 +1327,7 @@ public open class CfnDomain(
        * @param matchingAttributesList A list of matching criteria. 
        */
       override fun matchingAttributesList(matchingAttributesList: IResolvable) {
-        cdkBuilder.matchingAttributesList(matchingAttributesList.let(IResolvable::unwrap))
+        cdkBuilder.matchingAttributesList(matchingAttributesList.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1613,14 +1613,14 @@ public open class CfnDomain(
        * @param s3Exporting The S3 location where Identity Resolution Jobs write result files.
        */
       override fun s3Exporting(s3Exporting: IResolvable) {
-        cdkBuilder.s3Exporting(s3Exporting.let(IResolvable::unwrap))
+        cdkBuilder.s3Exporting(s3Exporting.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3Exporting The S3 location where Identity Resolution Jobs write result files.
        */
       override fun s3Exporting(s3Exporting: S3ExportingConfigProperty) {
-        cdkBuilder.s3Exporting(s3Exporting.let(S3ExportingConfigProperty::unwrap))
+        cdkBuilder.s3Exporting(s3Exporting.let(S3ExportingConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1929,14 +1929,14 @@ public open class CfnDomain(
        * @param autoMerging Configuration information about the auto-merging process.
        */
       override fun autoMerging(autoMerging: IResolvable) {
-        cdkBuilder.autoMerging(autoMerging.let(IResolvable::unwrap))
+        cdkBuilder.autoMerging(autoMerging.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param autoMerging Configuration information about the auto-merging process.
        */
       override fun autoMerging(autoMerging: AutoMergingProperty) {
-        cdkBuilder.autoMerging(autoMerging.let(AutoMergingProperty::unwrap))
+        cdkBuilder.autoMerging(autoMerging.let(AutoMergingProperty.Companion::unwrap))
       }
 
       /**
@@ -1958,21 +1958,21 @@ public open class CfnDomain(
        * @param enabled The flag that enables the matching process of duplicate profiles. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param exportingConfig The S3 location where Identity Resolution Jobs write result files.
        */
       override fun exportingConfig(exportingConfig: IResolvable) {
-        cdkBuilder.exportingConfig(exportingConfig.let(IResolvable::unwrap))
+        cdkBuilder.exportingConfig(exportingConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param exportingConfig The S3 location where Identity Resolution Jobs write result files.
        */
       override fun exportingConfig(exportingConfig: ExportingConfigProperty) {
-        cdkBuilder.exportingConfig(exportingConfig.let(ExportingConfigProperty::unwrap))
+        cdkBuilder.exportingConfig(exportingConfig.let(ExportingConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1988,7 +1988,7 @@ public open class CfnDomain(
        * every week.
        */
       override fun jobSchedule(jobSchedule: IResolvable) {
-        cdkBuilder.jobSchedule(jobSchedule.let(IResolvable::unwrap))
+        cdkBuilder.jobSchedule(jobSchedule.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1996,7 +1996,7 @@ public open class CfnDomain(
        * every week.
        */
       override fun jobSchedule(jobSchedule: JobScheduleProperty) {
-        cdkBuilder.jobSchedule(jobSchedule.let(JobScheduleProperty::unwrap))
+        cdkBuilder.jobSchedule(jobSchedule.let(JobScheduleProperty.Companion::unwrap))
       }
 
       /**
@@ -2401,7 +2401,7 @@ public open class CfnDomain(
        * where the rule-based identity resolution uses to match profiles.
        */
       override fun attributeTypesSelector(attributeTypesSelector: IResolvable) {
-        cdkBuilder.attributeTypesSelector(attributeTypesSelector.let(IResolvable::unwrap))
+        cdkBuilder.attributeTypesSelector(attributeTypesSelector.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2409,7 +2409,7 @@ public open class CfnDomain(
        * where the rule-based identity resolution uses to match profiles.
        */
       override fun attributeTypesSelector(attributeTypesSelector: AttributeTypesSelectorProperty) {
-        cdkBuilder.attributeTypesSelector(attributeTypesSelector.let(AttributeTypesSelectorProperty::unwrap))
+        cdkBuilder.attributeTypesSelector(attributeTypesSelector.let(AttributeTypesSelectorProperty.Companion::unwrap))
       }
 
       /**
@@ -2429,7 +2429,7 @@ public open class CfnDomain(
        * `ConflictResolution` specifies which `EmailAddress` should be used.
        */
       override fun conflictResolution(conflictResolution: IResolvable) {
-        cdkBuilder.conflictResolution(conflictResolution.let(IResolvable::unwrap))
+        cdkBuilder.conflictResolution(conflictResolution.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2439,7 +2439,7 @@ public open class CfnDomain(
        * `ConflictResolution` specifies which `EmailAddress` should be used.
        */
       override fun conflictResolution(conflictResolution: ConflictResolutionProperty) {
-        cdkBuilder.conflictResolution(conflictResolution.let(ConflictResolutionProperty::unwrap))
+        cdkBuilder.conflictResolution(conflictResolution.let(ConflictResolutionProperty.Companion::unwrap))
       }
 
       /**
@@ -2465,21 +2465,21 @@ public open class CfnDomain(
        * @param enabled The flag that enables the matching process of duplicate profiles. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param exportingConfig The S3 location where Identity Resolution Jobs write result files.
        */
       override fun exportingConfig(exportingConfig: IResolvable) {
-        cdkBuilder.exportingConfig(exportingConfig.let(IResolvable::unwrap))
+        cdkBuilder.exportingConfig(exportingConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param exportingConfig The S3 location where Identity Resolution Jobs write result files.
        */
       override fun exportingConfig(exportingConfig: ExportingConfigProperty) {
-        cdkBuilder.exportingConfig(exportingConfig.let(ExportingConfigProperty::unwrap))
+        cdkBuilder.exportingConfig(exportingConfig.let(ExportingConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2495,7 +2495,7 @@ public open class CfnDomain(
        * You can have up to 15 `MatchingRule` in the `MatchingRules` .
        */
       override fun matchingRules(matchingRules: IResolvable) {
-        cdkBuilder.matchingRules(matchingRules.let(IResolvable::unwrap))
+        cdkBuilder.matchingRules(matchingRules.let(IResolvable.Companion::unwrap))
       }
 
       /**

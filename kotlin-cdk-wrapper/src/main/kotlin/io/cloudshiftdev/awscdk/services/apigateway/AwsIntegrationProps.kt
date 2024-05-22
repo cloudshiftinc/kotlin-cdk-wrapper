@@ -190,7 +190,7 @@ public interface AwsIntegrationProps {
      * @param options Integration options, such as content handling, request/response mapping, etc.
      */
     override fun options(options: IntegrationOptions) {
-      cdkBuilder.options(options.let(IntegrationOptions::unwrap))
+      cdkBuilder.options(options.let(IntegrationOptions.Companion::unwrap))
     }
 
     /**

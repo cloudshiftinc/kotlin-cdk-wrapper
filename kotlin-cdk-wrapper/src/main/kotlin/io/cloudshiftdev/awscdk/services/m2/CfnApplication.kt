@@ -58,8 +58,8 @@ public open class CfnApplication(
     id: String,
     props: CfnApplicationProps,
   ) :
-      this(software.amazon.awscdk.services.m2.CfnApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApplicationProps::unwrap))
+      this(software.amazon.awscdk.services.m2.CfnApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApplicationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -92,7 +92,7 @@ public open class CfnApplication(
    * You can specify either inline JSON or an Amazon S3 bucket location.
    */
   public open fun definition(`value`: IResolvable) {
-    unwrap(this).setDefinition(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefinition(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -101,7 +101,7 @@ public open class CfnApplication(
    * You can specify either inline JSON or an Amazon S3 bucket location.
    */
   public open fun definition(`value`: DefinitionProperty) {
-    unwrap(this).setDefinition(`value`.let(DefinitionProperty::unwrap))
+    unwrap(this).setDefinition(`value`.let(DefinitionProperty.Companion::unwrap))
   }
 
   /**
@@ -144,7 +144,7 @@ public open class CfnApplication(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -318,7 +318,7 @@ public open class CfnApplication(
      * either inline JSON or an Amazon S3 bucket location. 
      */
     override fun definition(definition: IResolvable) {
-      cdkBuilder.definition(definition.let(IResolvable::unwrap))
+      cdkBuilder.definition(definition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -333,7 +333,7 @@ public open class CfnApplication(
      * either inline JSON or an Amazon S3 bucket location. 
      */
     override fun definition(definition: DefinitionProperty) {
-      cdkBuilder.definition(definition.let(DefinitionProperty::unwrap))
+      cdkBuilder.definition(definition.let(DefinitionProperty.Companion::unwrap))
     }
 
     /**

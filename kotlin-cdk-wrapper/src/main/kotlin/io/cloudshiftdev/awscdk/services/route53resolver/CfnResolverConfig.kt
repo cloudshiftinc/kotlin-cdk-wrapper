@@ -37,8 +37,8 @@ public open class CfnResolverConfig(
     id: String,
     props: CfnResolverConfigProps,
   ) :
-      this(software.amazon.awscdk.services.route53resolver.CfnResolverConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnResolverConfigProps::unwrap))
+      this(software.amazon.awscdk.services.route53resolver.CfnResolverConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnResolverConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -84,7 +84,7 @@ public open class CfnResolverConfig(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

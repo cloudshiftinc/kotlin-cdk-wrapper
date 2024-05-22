@@ -191,7 +191,7 @@ public interface CreateAlarmOptions {
      * @param comparisonOperator Comparison to use to check if metric is breaching.
      */
     override fun comparisonOperator(comparisonOperator: ComparisonOperator) {
-      cdkBuilder.comparisonOperator(comparisonOperator.let(ComparisonOperator::unwrap))
+      cdkBuilder.comparisonOperator(comparisonOperator.let(ComparisonOperator.Companion::unwrap))
     }
 
     /**
@@ -235,7 +235,7 @@ public interface CreateAlarmOptions {
      * @param treatMissingData Sets how this alarm is to handle missing data points.
      */
     override fun treatMissingData(treatMissingData: TreatMissingData) {
-      cdkBuilder.treatMissingData(treatMissingData.let(TreatMissingData::unwrap))
+      cdkBuilder.treatMissingData(treatMissingData.let(TreatMissingData.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudwatch.CreateAlarmOptions =

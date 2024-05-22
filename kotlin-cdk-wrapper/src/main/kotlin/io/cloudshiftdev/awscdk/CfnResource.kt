@@ -42,8 +42,9 @@ public open class CfnResource(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
     props: CfnResourceProps,
-  ) : this(software.amazon.awscdk.CfnResource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnResourceProps::unwrap))
+  ) :
+      this(software.amazon.awscdk.CfnResource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnResourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -72,7 +73,7 @@ public open class CfnResource(
    * @param target 
    */
   public open fun addDependency(target: CfnResource) {
-    unwrap(this).addDependency(target.let(CfnResource::unwrap))
+    unwrap(this).addDependency(target.let(CfnResource.Companion::unwrap))
   }
 
   /**
@@ -84,7 +85,7 @@ public open class CfnResource(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun addDependsOn(target: CfnResource) {
-    unwrap(this).addDependsOn(target.let(CfnResource::unwrap))
+    unwrap(this).addDependsOn(target.let(CfnResource.Companion::unwrap))
   }
 
   /**
@@ -225,7 +226,7 @@ public open class CfnResource(
    * @param options
    */
   public open fun applyRemovalPolicy(policy: RemovalPolicy) {
-    unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+    unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
   }
 
   /**
@@ -247,8 +248,8 @@ public open class CfnResource(
    * @param options
    */
   public open fun applyRemovalPolicy(policy: RemovalPolicy, options: RemovalPolicyOptions) {
-    unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap),
-        options.let(RemovalPolicyOptions::unwrap))
+    unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap),
+        options.let(RemovalPolicyOptions.Companion::unwrap))
   }
 
   /**
@@ -300,7 +301,7 @@ public open class CfnResource(
    */
   public open fun att(attributeName: String, typeHint: ResolutionTypeHint): Reference =
       unwrap(this).getAtt(attributeName,
-      typeHint.let(ResolutionTypeHint::unwrap)).let(Reference::wrap)
+      typeHint.let(ResolutionTypeHint.Companion::unwrap)).let(Reference::wrap)
 
   /**
    * Options for this resource, such as condition, update policy etc.
@@ -352,7 +353,7 @@ public open class CfnResource(
    * @param target 
    */
   public open fun removeDependency(target: CfnResource) {
-    unwrap(this).removeDependency(target.let(CfnResource::unwrap))
+    unwrap(this).removeDependency(target.let(CfnResource.Companion::unwrap))
   }
 
   /**
@@ -362,8 +363,8 @@ public open class CfnResource(
    * @param newTarget The new dependency to add. 
    */
   public open fun replaceDependency(target: CfnResource, newTarget: CfnResource) {
-    unwrap(this).replaceDependency(target.let(CfnResource::unwrap),
-        newTarget.let(CfnResource::unwrap))
+    unwrap(this).replaceDependency(target.let(CfnResource.Companion::unwrap),
+        newTarget.let(CfnResource.Companion::unwrap))
   }
 
   /**

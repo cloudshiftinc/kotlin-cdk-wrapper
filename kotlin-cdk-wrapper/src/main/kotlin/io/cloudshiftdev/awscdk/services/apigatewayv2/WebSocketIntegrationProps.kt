@@ -216,14 +216,14 @@ public interface WebSocketIntegrationProps {
      * @param contentHandling Specifies how to handle response payload content type conversions.
      */
     override fun contentHandling(contentHandling: ContentHandling) {
-      cdkBuilder.contentHandling(contentHandling.let(ContentHandling::unwrap))
+      cdkBuilder.contentHandling(contentHandling.let(ContentHandling.Companion::unwrap))
     }
 
     /**
      * @param credentialsRole Specifies the IAM role required for the integration.
      */
     override fun credentialsRole(credentialsRole: IRole) {
-      cdkBuilder.credentialsRole(credentialsRole.let(IRole::unwrap))
+      cdkBuilder.credentialsRole(credentialsRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -237,7 +237,7 @@ public interface WebSocketIntegrationProps {
      * @param integrationType Integration type. 
      */
     override fun integrationType(integrationType: WebSocketIntegrationType) {
-      cdkBuilder.integrationType(integrationType.let(WebSocketIntegrationType::unwrap))
+      cdkBuilder.integrationType(integrationType.let(WebSocketIntegrationType.Companion::unwrap))
     }
 
     /**
@@ -255,7 +255,7 @@ public interface WebSocketIntegrationProps {
      * NEVER.
      */
     override fun passthroughBehavior(passthroughBehavior: PassthroughBehavior) {
-      cdkBuilder.passthroughBehavior(passthroughBehavior.let(PassthroughBehavior::unwrap))
+      cdkBuilder.passthroughBehavior(passthroughBehavior.let(PassthroughBehavior.Companion::unwrap))
     }
 
     /**
@@ -292,14 +292,14 @@ public interface WebSocketIntegrationProps {
      * Must be between 50 milliseconds and 29 seconds.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param webSocketApi The WebSocket API to which this integration should be bound. 
      */
     override fun webSocketApi(webSocketApi: IWebSocketApi) {
-      cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi::unwrap))
+      cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.WebSocketIntegrationProps =

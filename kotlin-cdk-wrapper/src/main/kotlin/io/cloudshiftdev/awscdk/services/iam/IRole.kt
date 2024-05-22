@@ -57,7 +57,7 @@ public interface IRole : IIdentity {
      * @param policy The managed policy. 
      */
     override fun addManagedPolicy(policy: IManagedPolicy) {
-      unwrap(this).addManagedPolicy(policy.let(IManagedPolicy::unwrap))
+      unwrap(this).addManagedPolicy(policy.let(IManagedPolicy.Companion::unwrap))
     }
 
     /**
@@ -66,7 +66,7 @@ public interface IRole : IIdentity {
      * @param statement 
      */
     override fun addToPrincipalPolicy(statement: PolicyStatement): AddToPrincipalPolicyResult =
-        unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement::unwrap)).let(AddToPrincipalPolicyResult::wrap)
+        unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToPrincipalPolicyResult::wrap)
 
     /**
      * Add to the policy of this principal.
@@ -92,7 +92,7 @@ public interface IRole : IIdentity {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -109,7 +109,7 @@ public interface IRole : IIdentity {
      * [disable-awslint:ref-via-interface]. 
      */
     override fun attachInlinePolicy(policy: Policy) {
-      unwrap(this).attachInlinePolicy(policy.let(Policy::unwrap))
+      unwrap(this).attachInlinePolicy(policy.let(Policy.Companion::unwrap))
     }
 
     /**
@@ -131,7 +131,7 @@ public interface IRole : IIdentity {
      * @param actions 
      */
     override fun grant(grantee: IPrincipal, vararg actions: String): Grant =
-        unwrap(this).grant(grantee.let(IPrincipal::unwrap),
+        unwrap(this).grant(grantee.let(IPrincipal.Companion::unwrap),
         *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
     /**
@@ -140,7 +140,7 @@ public interface IRole : IIdentity {
      * @param grantee 
      */
     override fun grantAssumeRole(grantee: IPrincipal): Grant =
-        unwrap(this).grantAssumeRole(grantee.let(IPrincipal::unwrap)).let(Grant::wrap)
+        unwrap(this).grantAssumeRole(grantee.let(IPrincipal.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grant permissions to the given principal to pass this role.
@@ -148,7 +148,7 @@ public interface IRole : IIdentity {
      * @param grantee 
      */
     override fun grantPassRole(grantee: IPrincipal): Grant =
-        unwrap(this).grantPassRole(grantee.let(IPrincipal::unwrap)).let(Grant::wrap)
+        unwrap(this).grantPassRole(grantee.let(IPrincipal.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * The principal to grant permissions to.

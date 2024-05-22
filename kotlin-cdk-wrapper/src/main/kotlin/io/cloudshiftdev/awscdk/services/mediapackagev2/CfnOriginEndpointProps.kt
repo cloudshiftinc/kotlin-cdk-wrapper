@@ -315,7 +315,7 @@ public interface CfnOriginEndpointProps {
      * @param hlsManifests The HLS manfiests associated with the origin endpoint configuration.
      */
     override fun hlsManifests(hlsManifests: IResolvable) {
-      cdkBuilder.hlsManifests(hlsManifests.let(IResolvable::unwrap))
+      cdkBuilder.hlsManifests(hlsManifests.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -335,7 +335,7 @@ public interface CfnOriginEndpointProps {
      * origin endpoint.
      */
     override fun lowLatencyHlsManifests(lowLatencyHlsManifests: IResolvable) {
-      cdkBuilder.lowLatencyHlsManifests(lowLatencyHlsManifests.let(IResolvable::unwrap))
+      cdkBuilder.lowLatencyHlsManifests(lowLatencyHlsManifests.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -365,14 +365,14 @@ public interface CfnOriginEndpointProps {
      * @param segment The segment associated with the origin endpoint.
      */
     override fun segment(segment: IResolvable) {
-      cdkBuilder.segment(segment.let(IResolvable::unwrap))
+      cdkBuilder.segment(segment.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param segment The segment associated with the origin endpoint.
      */
     override fun segment(segment: CfnOriginEndpoint.SegmentProperty) {
-      cdkBuilder.segment(segment.let(CfnOriginEndpoint.SegmentProperty::unwrap))
+      cdkBuilder.segment(segment.let(CfnOriginEndpoint.SegmentProperty.Companion::unwrap))
     }
 
     /**
@@ -396,7 +396,7 @@ public interface CfnOriginEndpointProps {
      * @param tags The tags associated with the origin endpoint.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

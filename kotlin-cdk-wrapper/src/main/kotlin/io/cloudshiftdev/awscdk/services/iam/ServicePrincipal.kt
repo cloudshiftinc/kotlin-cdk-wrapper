@@ -35,7 +35,7 @@ public open class ServicePrincipal(
 
   public constructor(service: String, opts: ServicePrincipalOpts) :
       this(software.amazon.awscdk.services.iam.ServicePrincipal(service,
-      opts.let(ServicePrincipalOpts::unwrap))
+      opts.let(ServicePrincipalOpts.Companion::unwrap))
   )
 
   public constructor(service: String, opts: ServicePrincipalOpts.Builder.() -> Unit) : this(service,

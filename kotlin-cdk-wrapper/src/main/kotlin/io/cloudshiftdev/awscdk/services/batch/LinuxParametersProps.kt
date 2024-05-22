@@ -137,14 +137,14 @@ public interface LinuxParametersProps {
      * Accepted values are positive integers.
      */
     override fun maxSwap(maxSwap: Size) {
-      cdkBuilder.maxSwap(maxSwap.let(Size::unwrap))
+      cdkBuilder.maxSwap(maxSwap.let(Size.Companion::unwrap))
     }
 
     /**
      * @param sharedMemorySize The value for the size of the /dev/shm volume.
      */
     override fun sharedMemorySize(sharedMemorySize: Size) {
-      cdkBuilder.sharedMemorySize(sharedMemorySize.let(Size::unwrap))
+      cdkBuilder.sharedMemorySize(sharedMemorySize.let(Size.Companion::unwrap))
     }
 
     /**

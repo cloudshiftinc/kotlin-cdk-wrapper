@@ -61,8 +61,8 @@ public open class CfnInput(
     id: String,
     props: CfnInputProps,
   ) :
-      this(software.amazon.awscdk.services.iotevents.CfnInput(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInputProps::unwrap))
+      this(software.amazon.awscdk.services.iotevents.CfnInput(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInputProps.Companion::unwrap))
   )
 
   public constructor(
@@ -81,14 +81,14 @@ public open class CfnInput(
    * The definition of the input.
    */
   public open fun inputDefinition(`value`: IResolvable) {
-    unwrap(this).setInputDefinition(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInputDefinition(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The definition of the input.
    */
   public open fun inputDefinition(`value`: InputDefinitionProperty) {
-    unwrap(this).setInputDefinition(`value`.let(InputDefinitionProperty::unwrap))
+    unwrap(this).setInputDefinition(`value`.let(InputDefinitionProperty.Companion::unwrap))
   }
 
   /**
@@ -129,7 +129,7 @@ public open class CfnInput(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -147,7 +147,7 @@ public open class CfnInput(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -241,7 +241,7 @@ public open class CfnInput(
      * @param inputDefinition The definition of the input. 
      */
     override fun inputDefinition(inputDefinition: IResolvable) {
-      cdkBuilder.inputDefinition(inputDefinition.let(IResolvable::unwrap))
+      cdkBuilder.inputDefinition(inputDefinition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -251,7 +251,7 @@ public open class CfnInput(
      * @param inputDefinition The definition of the input. 
      */
     override fun inputDefinition(inputDefinition: InputDefinitionProperty) {
-      cdkBuilder.inputDefinition(inputDefinition.let(InputDefinitionProperty::unwrap))
+      cdkBuilder.inputDefinition(inputDefinition.let(InputDefinitionProperty.Companion::unwrap))
     }
 
     /**
@@ -296,7 +296,7 @@ public open class CfnInput(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -525,7 +525,7 @@ public open class CfnInput(
        * monitor this input.
        */
       override fun attributes(attributes: IResolvable) {
-        cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
       }
 
       /**

@@ -204,7 +204,7 @@ public interface CfnCertificateProps {
      * @param tags Key-value pairs that can be used to group and search for certificates.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

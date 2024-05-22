@@ -27,7 +27,7 @@ public open class ReceiptFilter(
   cdkObject: software.amazon.awscdk.services.ses.ReceiptFilter,
 ) : Resource(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ses.ReceiptFilter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ses.ReceiptFilter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -36,8 +36,8 @@ public open class ReceiptFilter(
     id: String,
     props: ReceiptFilterProps,
   ) :
-      this(software.amazon.awscdk.services.ses.ReceiptFilter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ReceiptFilterProps::unwrap))
+      this(software.amazon.awscdk.services.ses.ReceiptFilter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ReceiptFilterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -106,7 +106,7 @@ public open class ReceiptFilter(
      * @param policy The policy for the filter. 
      */
     override fun policy(policy: ReceiptFilterPolicy) {
-      cdkBuilder.policy(policy.let(ReceiptFilterPolicy::unwrap))
+      cdkBuilder.policy(policy.let(ReceiptFilterPolicy.Companion::unwrap))
     }
 
     /**

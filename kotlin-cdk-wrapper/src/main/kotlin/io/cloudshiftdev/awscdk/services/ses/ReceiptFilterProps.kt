@@ -78,7 +78,7 @@ public interface ReceiptFilterProps {
      * @param policy The policy for the filter.
      */
     override fun policy(policy: ReceiptFilterPolicy) {
-      cdkBuilder.policy(policy.let(ReceiptFilterPolicy::unwrap))
+      cdkBuilder.policy(policy.let(ReceiptFilterPolicy.Companion::unwrap))
     }
 
     /**

@@ -22,7 +22,8 @@ public open class Tokenization(
         software.amazon.awscdk.Tokenization.isResolvable(obj)
 
     public fun resolve(obj: Any, options: ResolveOptions): Any =
-        software.amazon.awscdk.Tokenization.resolve(obj, options.let(ResolveOptions::unwrap))
+        software.amazon.awscdk.Tokenization.resolve(obj,
+        options.let(ResolveOptions.Companion::unwrap))
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9841a8d2bb08e26698ea12389362f3d4bba05a9b20c9f5fbb7b0a96c44839e52")
@@ -34,7 +35,7 @@ public open class Tokenization(
 
     public fun reverse(x: Any, options: ReverseOptions): IResolvable? =
         software.amazon.awscdk.Tokenization.reverse(x,
-        options.let(ReverseOptions::unwrap))?.let(IResolvable::wrap)
+        options.let(ReverseOptions.Companion::unwrap))?.let(IResolvable::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("11ed19a149174895c95c012a07fbd639e4a0f73c9514089a707b827a640f59d7")

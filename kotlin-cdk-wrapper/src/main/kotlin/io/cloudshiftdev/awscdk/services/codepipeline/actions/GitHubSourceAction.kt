@@ -36,7 +36,7 @@ public open class GitHubSourceAction(
   cdkObject: software.amazon.awscdk.services.codepipeline.actions.GitHubSourceAction,
 ) : Action(cdkObject) {
   public constructor(props: GitHubSourceActionProps) :
-      this(software.amazon.awscdk.services.codepipeline.actions.GitHubSourceAction(props.let(GitHubSourceActionProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.actions.GitHubSourceAction(props.let(GitHubSourceActionProps.Companion::unwrap))
   )
 
   public constructor(props: GitHubSourceActionProps.Builder.() -> Unit) :
@@ -201,14 +201,14 @@ public open class GitHubSourceAction(
      * @param oauthToken A GitHub OAuth token to use for authentication. 
      */
     override fun oauthToken(oauthToken: SecretValue) {
-      cdkBuilder.oauthToken(oauthToken.let(SecretValue::unwrap))
+      cdkBuilder.oauthToken(oauthToken.let(SecretValue.Companion::unwrap))
     }
 
     /**
      * @param output 
      */
     override fun output(output: Artifact) {
-      cdkBuilder.output(output.let(Artifact::unwrap))
+      cdkBuilder.output(output.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -258,7 +258,7 @@ public open class GitHubSourceAction(
      * @param trigger How AWS CodePipeline should be triggered. 
      */
     override fun trigger(trigger: GitHubTrigger) {
-      cdkBuilder.trigger(trigger.let(GitHubTrigger::unwrap))
+      cdkBuilder.trigger(trigger.let(GitHubTrigger.Companion::unwrap))
     }
 
     /**

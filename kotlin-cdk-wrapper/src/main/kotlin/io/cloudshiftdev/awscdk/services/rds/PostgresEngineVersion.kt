@@ -353,7 +353,7 @@ public open class PostgresEngineVersion(
     ): PostgresEngineVersion =
         software.amazon.awscdk.services.rds.PostgresEngineVersion.of(postgresFullVersion,
         postgresMajorVersion,
-        postgresFeatures.let(PostgresEngineFeatures::unwrap)).let(PostgresEngineVersion::wrap)
+        postgresFeatures.let(PostgresEngineFeatures.Companion::unwrap)).let(PostgresEngineVersion::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ee8c7d83cbe96c20fac33281ba2719b124d62487aa6178e50b7f21f67e3984a8")

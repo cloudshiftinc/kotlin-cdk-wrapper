@@ -303,7 +303,7 @@ public interface CfnBotProps {
      * locales for the bot after a change.
      */
     override fun autoBuildBotLocales(autoBuildBotLocales: IResolvable) {
-      cdkBuilder.autoBuildBotLocales(autoBuildBotLocales.let(IResolvable::unwrap))
+      cdkBuilder.autoBuildBotLocales(autoBuildBotLocales.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -313,7 +313,7 @@ public interface CfnBotProps {
      * Lex developer guide.*
      */
     override fun botFileS3Location(botFileS3Location: IResolvable) {
-      cdkBuilder.botFileS3Location(botFileS3Location.let(IResolvable::unwrap))
+      cdkBuilder.botFileS3Location(botFileS3Location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -323,7 +323,7 @@ public interface CfnBotProps {
      * Lex developer guide.*
      */
     override fun botFileS3Location(botFileS3Location: CfnBot.S3LocationProperty) {
-      cdkBuilder.botFileS3Location(botFileS3Location.let(CfnBot.S3LocationProperty::unwrap))
+      cdkBuilder.botFileS3Location(botFileS3Location.let(CfnBot.S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -341,7 +341,7 @@ public interface CfnBotProps {
      * @param botLocales A list of locales for the bot.
      */
     override fun botLocales(botLocales: IResolvable) {
-      cdkBuilder.botLocales(botLocales.let(IResolvable::unwrap))
+      cdkBuilder.botLocales(botLocales.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -362,7 +362,7 @@ public interface CfnBotProps {
      * update tags. To update tags, use the `TagResource` operation.
      */
     override fun botTags(botTags: IResolvable) {
-      cdkBuilder.botTags(botTags.let(IResolvable::unwrap))
+      cdkBuilder.botTags(botTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -431,7 +431,7 @@ public interface CfnBotProps {
      * default values.
      */
     override fun testBotAliasSettings(testBotAliasSettings: IResolvable) {
-      cdkBuilder.testBotAliasSettings(testBotAliasSettings.let(IResolvable::unwrap))
+      cdkBuilder.testBotAliasSettings(testBotAliasSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -441,7 +441,7 @@ public interface CfnBotProps {
      * default values.
      */
     override fun testBotAliasSettings(testBotAliasSettings: CfnBot.TestBotAliasSettingsProperty) {
-      cdkBuilder.testBotAliasSettings(testBotAliasSettings.let(CfnBot.TestBotAliasSettingsProperty::unwrap))
+      cdkBuilder.testBotAliasSettings(testBotAliasSettings.let(CfnBot.TestBotAliasSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -462,7 +462,7 @@ public interface CfnBotProps {
      * update tags. To update tags on the test alias, use the `TagResource` operation.
      */
     override fun testBotAliasTags(testBotAliasTags: IResolvable) {
-      cdkBuilder.testBotAliasTags(testBotAliasTags.let(IResolvable::unwrap))
+      cdkBuilder.testBotAliasTags(testBotAliasTags.let(IResolvable.Companion::unwrap))
     }
 
     /**

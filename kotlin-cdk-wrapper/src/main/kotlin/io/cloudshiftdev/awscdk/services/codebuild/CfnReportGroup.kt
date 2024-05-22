@@ -67,8 +67,8 @@ public open class CfnReportGroup(
     id: String,
     props: CfnReportGroupProps,
   ) :
-      this(software.amazon.awscdk.services.codebuild.CfnReportGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnReportGroupProps::unwrap))
+      this(software.amazon.awscdk.services.codebuild.CfnReportGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnReportGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -105,7 +105,7 @@ public open class CfnReportGroup(
    * When deleting a report group, specifies if reports within the report group should be deleted.
    */
   public open fun deleteReports(`value`: IResolvable) {
-    unwrap(this).setDeleteReports(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeleteReports(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -117,14 +117,14 @@ public open class CfnReportGroup(
    * Information about the destination where the raw data of this `ReportGroup` is exported.
    */
   public open fun exportConfig(`value`: IResolvable) {
-    unwrap(this).setExportConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setExportConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information about the destination where the raw data of this `ReportGroup` is exported.
    */
   public open fun exportConfig(`value`: ReportExportConfigProperty) {
-    unwrap(this).setExportConfig(`value`.let(ReportExportConfigProperty::unwrap))
+    unwrap(this).setExportConfig(`value`.let(ReportExportConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -141,7 +141,7 @@ public open class CfnReportGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -171,7 +171,7 @@ public open class CfnReportGroup(
    * A list of tag key and value pairs associated with this report group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -335,7 +335,7 @@ public open class CfnReportGroup(
      * group should be deleted. 
      */
     override fun deleteReports(deleteReports: IResolvable) {
-      cdkBuilder.deleteReports(deleteReports.let(IResolvable::unwrap))
+      cdkBuilder.deleteReports(deleteReports.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -346,7 +346,7 @@ public open class CfnReportGroup(
      * `ReportGroup` is exported. 
      */
     override fun exportConfig(exportConfig: IResolvable) {
-      cdkBuilder.exportConfig(exportConfig.let(IResolvable::unwrap))
+      cdkBuilder.exportConfig(exportConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -357,7 +357,7 @@ public open class CfnReportGroup(
      * `ReportGroup` is exported. 
      */
     override fun exportConfig(exportConfig: ReportExportConfigProperty) {
-      cdkBuilder.exportConfig(exportConfig.let(ReportExportConfigProperty::unwrap))
+      cdkBuilder.exportConfig(exportConfig.let(ReportExportConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -392,7 +392,7 @@ public open class CfnReportGroup(
      * @param tags A list of tag key and value pairs associated with this report group. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -542,7 +542,7 @@ public open class CfnReportGroup(
        * bucket where the run of a report is exported.
        */
       override fun s3Destination(s3Destination: IResolvable) {
-        cdkBuilder.s3Destination(s3Destination.let(IResolvable::unwrap))
+        cdkBuilder.s3Destination(s3Destination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -550,7 +550,7 @@ public open class CfnReportGroup(
        * bucket where the run of a report is exported.
        */
       override fun s3Destination(s3Destination: S3ReportExportConfigProperty) {
-        cdkBuilder.s3Destination(s3Destination.let(S3ReportExportConfigProperty::unwrap))
+        cdkBuilder.s3Destination(s3Destination.let(S3ReportExportConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -763,7 +763,7 @@ public open class CfnReportGroup(
        * encrypted.
        */
       override fun encryptionDisabled(encryptionDisabled: IResolvable) {
-        cdkBuilder.encryptionDisabled(encryptionDisabled.let(IResolvable::unwrap))
+        cdkBuilder.encryptionDisabled(encryptionDisabled.let(IResolvable.Companion::unwrap))
       }
 
       /**

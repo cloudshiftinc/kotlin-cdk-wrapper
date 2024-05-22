@@ -100,7 +100,7 @@ public interface PrivateHostedZoneProps : CommonHostedZoneProps {
      * associated additional VPCs using `addVpc(vpc)`.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**

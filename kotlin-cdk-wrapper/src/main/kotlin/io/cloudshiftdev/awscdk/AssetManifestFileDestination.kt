@@ -101,7 +101,7 @@ public interface AssetManifestFileDestination {
      * @param role Role to use for uploading.
      */
     override fun role(role: RoleOptions) {
-      cdkBuilder.role(role.let(RoleOptions::unwrap))
+      cdkBuilder.role(role.let(RoleOptions.Companion::unwrap))
     }
 
     /**

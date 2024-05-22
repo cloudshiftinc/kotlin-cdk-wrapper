@@ -34,8 +34,8 @@ public open class VpcEndpointServiceDomainName(
     id: String,
     props: VpcEndpointServiceDomainNameProps,
   ) :
-      this(software.amazon.awscdk.services.route53.VpcEndpointServiceDomainName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(VpcEndpointServiceDomainNameProps::unwrap))
+      this(software.amazon.awscdk.services.route53.VpcEndpointServiceDomainName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(VpcEndpointServiceDomainNameProps.Companion::unwrap))
   )
 
   public constructor(
@@ -118,7 +118,7 @@ public open class VpcEndpointServiceDomainName(
      * @param endpointService The VPC Endpoint Service to configure Private DNS for. 
      */
     override fun endpointService(endpointService: IVpcEndpointService) {
-      cdkBuilder.endpointService(endpointService.let(IVpcEndpointService::unwrap))
+      cdkBuilder.endpointService(endpointService.let(IVpcEndpointService.Companion::unwrap))
     }
 
     /**
@@ -127,7 +127,7 @@ public open class VpcEndpointServiceDomainName(
      * @param publicHostedZone The public hosted zone to use for the domain. 
      */
     override fun publicHostedZone(publicHostedZone: IPublicHostedZone) {
-      cdkBuilder.publicHostedZone(publicHostedZone.let(IPublicHostedZone::unwrap))
+      cdkBuilder.publicHostedZone(publicHostedZone.let(IPublicHostedZone.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.route53.VpcEndpointServiceDomainName =

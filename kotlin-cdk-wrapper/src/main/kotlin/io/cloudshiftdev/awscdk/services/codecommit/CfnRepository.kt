@@ -69,8 +69,8 @@ public open class CfnRepository(
     id: String,
     props: CfnRepositoryProps,
   ) :
-      this(software.amazon.awscdk.services.codecommit.CfnRepository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRepositoryProps::unwrap))
+      this(software.amazon.awscdk.services.codecommit.CfnRepository(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRepositoryProps.Companion::unwrap))
   )
 
   public constructor(
@@ -119,7 +119,7 @@ public open class CfnRepository(
    * CloudFormation stack.
    */
   public open fun code(`value`: IResolvable) {
-    unwrap(this).setCode(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCode(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -127,7 +127,7 @@ public open class CfnRepository(
    * CloudFormation stack.
    */
   public open fun code(`value`: CodeProperty) {
-    unwrap(this).setCode(`value`.let(CodeProperty::unwrap))
+    unwrap(this).setCode(`value`.let(CodeProperty.Companion::unwrap))
   }
 
   /**
@@ -144,7 +144,7 @@ public open class CfnRepository(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -200,7 +200,7 @@ public open class CfnRepository(
    * One or more tag key-value pairs to use when tagging this repository.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -217,7 +217,7 @@ public open class CfnRepository(
    * The JSON block of configuration information for each trigger.
    */
   public open fun triggers(`value`: IResolvable) {
-    unwrap(this).setTriggers(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTriggers(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -409,7 +409,7 @@ public open class CfnRepository(
      * AWS CloudFormation stack. 
      */
     override fun code(code: IResolvable) {
-      cdkBuilder.code(code.let(IResolvable::unwrap))
+      cdkBuilder.code(code.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -430,7 +430,7 @@ public open class CfnRepository(
      * AWS CloudFormation stack. 
      */
     override fun code(code: CodeProperty) {
-      cdkBuilder.code(code.let(CodeProperty::unwrap))
+      cdkBuilder.code(code.let(CodeProperty.Companion::unwrap))
     }
 
     /**
@@ -514,7 +514,7 @@ public open class CfnRepository(
      * @param tags One or more tag key-value pairs to use when tagging this repository. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -532,7 +532,7 @@ public open class CfnRepository(
      * @param triggers The JSON block of configuration information for each trigger. 
      */
     override fun triggers(triggers: IResolvable) {
-      cdkBuilder.triggers(triggers.let(IResolvable::unwrap))
+      cdkBuilder.triggers(triggers.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -687,7 +687,7 @@ public open class CfnRepository(
        * Changes to this property are ignored after initial resource creation.
        */
       override fun s3(s3: IResolvable) {
-        cdkBuilder.s3(s3.let(IResolvable::unwrap))
+        cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -696,7 +696,7 @@ public open class CfnRepository(
        * Changes to this property are ignored after initial resource creation.
        */
       override fun s3(s3: S3Property) {
-        cdkBuilder.s3(s3.let(S3Property::unwrap))
+        cdkBuilder.s3(s3.let(S3Property.Companion::unwrap))
       }
 
       /**

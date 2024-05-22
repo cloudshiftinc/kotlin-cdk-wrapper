@@ -124,14 +124,14 @@ public interface CfnWirelessDeviceImportTaskProps {
      * @param sidewalk The Sidewalk-related information of the wireless device import task. 
      */
     override fun sidewalk(sidewalk: IResolvable) {
-      cdkBuilder.sidewalk(sidewalk.let(IResolvable::unwrap))
+      cdkBuilder.sidewalk(sidewalk.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param sidewalk The Sidewalk-related information of the wireless device import task. 
      */
     override fun sidewalk(sidewalk: CfnWirelessDeviceImportTask.SidewalkProperty) {
-      cdkBuilder.sidewalk(sidewalk.let(CfnWirelessDeviceImportTask.SidewalkProperty::unwrap))
+      cdkBuilder.sidewalk(sidewalk.let(CfnWirelessDeviceImportTask.SidewalkProperty.Companion::unwrap))
     }
 
     /**
@@ -148,7 +148,7 @@ public interface CfnWirelessDeviceImportTaskProps {
      * Tags are metadata that you can use to manage a resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -46,8 +46,8 @@ public open class CfnGroupMembership(
     id: String,
     props: CfnGroupMembershipProps,
   ) :
-      this(software.amazon.awscdk.services.identitystore.CfnGroupMembership(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGroupMembershipProps::unwrap))
+      this(software.amazon.awscdk.services.identitystore.CfnGroupMembership(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGroupMembershipProps.Companion::unwrap))
   )
 
   public constructor(
@@ -92,7 +92,7 @@ public open class CfnGroupMembership(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -104,14 +104,14 @@ public open class CfnGroupMembership(
    * An object containing the identifier of a group member.
    */
   public open fun memberId(`value`: IResolvable) {
-    unwrap(this).setMemberId(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMemberId(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An object containing the identifier of a group member.
    */
   public open fun memberId(`value`: MemberIdProperty) {
-    unwrap(this).setMemberId(`value`.let(MemberIdProperty::unwrap))
+    unwrap(this).setMemberId(`value`.let(MemberIdProperty.Companion::unwrap))
   }
 
   /**
@@ -216,7 +216,7 @@ public open class CfnGroupMembership(
      * @param memberId An object containing the identifier of a group member. 
      */
     override fun memberId(memberId: IResolvable) {
-      cdkBuilder.memberId(memberId.let(IResolvable::unwrap))
+      cdkBuilder.memberId(memberId.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -229,7 +229,7 @@ public open class CfnGroupMembership(
      * @param memberId An object containing the identifier of a group member. 
      */
     override fun memberId(memberId: MemberIdProperty) {
-      cdkBuilder.memberId(memberId.let(MemberIdProperty::unwrap))
+      cdkBuilder.memberId(memberId.let(MemberIdProperty.Companion::unwrap))
     }
 
     /**

@@ -43,8 +43,8 @@ public open class DeployTimeSubstitutedFile(
     id: String,
     props: DeployTimeSubstitutedFileProps,
   ) :
-      this(software.amazon.awscdk.services.s3.deployment.DeployTimeSubstitutedFile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DeployTimeSubstitutedFileProps::unwrap))
+      this(software.amazon.awscdk.services.s3.deployment.DeployTimeSubstitutedFile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DeployTimeSubstitutedFileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -131,7 +131,7 @@ public open class DeployTimeSubstitutedFile(
      * @param destinationBucket The S3 bucket to sync the contents of the zip file to. 
      */
     override fun destinationBucket(destinationBucket: IBucket) {
-      cdkBuilder.destinationBucket(destinationBucket.let(IBucket::unwrap))
+      cdkBuilder.destinationBucket(destinationBucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -154,7 +154,7 @@ public open class DeployTimeSubstitutedFile(
      * @param role Execution role associated with this function. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**

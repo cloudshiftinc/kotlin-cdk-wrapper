@@ -166,7 +166,7 @@ public interface CfnApplicationProps {
      * from. 
      */
     override fun applicationSourceConfig(applicationSourceConfig: IResolvable) {
-      cdkBuilder.applicationSourceConfig(applicationSourceConfig.let(IResolvable::unwrap))
+      cdkBuilder.applicationSourceConfig(applicationSourceConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -175,7 +175,7 @@ public interface CfnApplicationProps {
      */
     override
         fun applicationSourceConfig(applicationSourceConfig: CfnApplication.ApplicationSourceConfigProperty) {
-      cdkBuilder.applicationSourceConfig(applicationSourceConfig.let(CfnApplication.ApplicationSourceConfigProperty::unwrap))
+      cdkBuilder.applicationSourceConfig(applicationSourceConfig.let(CfnApplication.ApplicationSourceConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -229,7 +229,7 @@ public interface CfnApplicationProps {
      * For example, { "tags": {"key1":"value1", "key2":"value2"} }.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

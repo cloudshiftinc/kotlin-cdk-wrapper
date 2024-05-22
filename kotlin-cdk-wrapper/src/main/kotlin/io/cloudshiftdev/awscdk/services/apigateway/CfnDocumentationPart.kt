@@ -53,8 +53,8 @@ public open class CfnDocumentationPart(
     id: String,
     props: CfnDocumentationPartProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.CfnDocumentationPart(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDocumentationPartProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.CfnDocumentationPart(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDocumentationPartProps.Companion::unwrap))
   )
 
   public constructor(
@@ -75,7 +75,7 @@ public open class CfnDocumentationPart(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -87,14 +87,14 @@ public open class CfnDocumentationPart(
    * The location of the targeted API entity of the to-be-created documentation part.
    */
   public open fun location(`value`: IResolvable) {
-    unwrap(this).setLocation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLocation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The location of the targeted API entity of the to-be-created documentation part.
    */
   public open fun location(`value`: LocationProperty) {
-    unwrap(this).setLocation(`value`.let(LocationProperty::unwrap))
+    unwrap(this).setLocation(`value`.let(LocationProperty.Companion::unwrap))
   }
 
   /**
@@ -198,7 +198,7 @@ public open class CfnDocumentationPart(
      * part. 
      */
     override fun location(location: IResolvable) {
-      cdkBuilder.location(location.let(IResolvable::unwrap))
+      cdkBuilder.location(location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -209,7 +209,7 @@ public open class CfnDocumentationPart(
      * part. 
      */
     override fun location(location: LocationProperty) {
-      cdkBuilder.location(location.let(LocationProperty::unwrap))
+      cdkBuilder.location(location.let(LocationProperty.Companion::unwrap))
     }
 
     /**

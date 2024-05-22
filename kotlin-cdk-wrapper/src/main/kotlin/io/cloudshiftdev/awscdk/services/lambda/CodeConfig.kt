@@ -107,7 +107,7 @@ public interface CodeConfig {
      * `inlineCode`).
      */
     override fun image(image: CodeImageConfig) {
-      cdkBuilder.image(image.let(CodeImageConfig::unwrap))
+      cdkBuilder.image(image.let(CodeImageConfig.Companion::unwrap))
     }
 
     /**
@@ -131,7 +131,7 @@ public interface CodeConfig {
      * `image`).
      */
     override fun s3Location(s3Location: Location) {
-      cdkBuilder.s3Location(s3Location.let(Location::unwrap))
+      cdkBuilder.s3Location(s3Location.let(Location.Companion::unwrap))
     }
 
     /**

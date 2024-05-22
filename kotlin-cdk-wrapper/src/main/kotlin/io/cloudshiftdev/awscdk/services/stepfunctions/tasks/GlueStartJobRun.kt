@@ -46,8 +46,8 @@ public open class GlueStartJobRun(
     id: String,
     props: GlueStartJobRunProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.GlueStartJobRun(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(GlueStartJobRunProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.GlueStartJobRun(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(GlueStartJobRunProps.Companion::unwrap))
   )
 
   public constructor(
@@ -292,7 +292,7 @@ public open class GlueStartJobRun(
      * @param arguments The job arguments specifically for this run. 
      */
     override fun arguments(arguments: TaskInput) {
-      cdkBuilder.arguments(arguments.let(TaskInput::unwrap))
+      cdkBuilder.arguments(arguments.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -318,7 +318,7 @@ public open class GlueStartJobRun(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -356,7 +356,7 @@ public open class GlueStartJobRun(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -370,7 +370,7 @@ public open class GlueStartJobRun(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -405,7 +405,7 @@ public open class GlueStartJobRun(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -420,7 +420,7 @@ public open class GlueStartJobRun(
      * a job run delay notification. 
      */
     override fun notifyDelayAfter(notifyDelayAfter: Duration) {
-      cdkBuilder.notifyDelayAfter(notifyDelayAfter.let(Duration::unwrap))
+      cdkBuilder.notifyDelayAfter(notifyDelayAfter.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -507,7 +507,7 @@ public open class GlueStartJobRun(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -520,7 +520,7 @@ public open class GlueStartJobRun(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.GlueStartJobRun =

@@ -50,8 +50,8 @@ public open class CfnRouteTable(
     id: String,
     props: CfnRouteTableProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnRouteTable(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRouteTableProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnRouteTable(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRouteTableProps.Companion::unwrap))
   )
 
   public constructor(
@@ -72,7 +72,7 @@ public open class CfnRouteTable(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -90,7 +90,7 @@ public open class CfnRouteTable(
    * Any tags assigned to the route table.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -154,7 +154,7 @@ public open class CfnRouteTable(
      * @param tags Any tags assigned to the route table. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

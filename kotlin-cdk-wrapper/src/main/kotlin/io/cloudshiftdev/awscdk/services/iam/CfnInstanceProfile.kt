@@ -46,8 +46,8 @@ public open class CfnInstanceProfile(
     id: String,
     props: CfnInstanceProfileProps,
   ) :
-      this(software.amazon.awscdk.services.iam.CfnInstanceProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInstanceProfileProps::unwrap))
+      this(software.amazon.awscdk.services.iam.CfnInstanceProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInstanceProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -72,7 +72,7 @@ public open class CfnInstanceProfile(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

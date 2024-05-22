@@ -287,7 +287,7 @@ public interface TableWidgetProps : MetricWidgetProps {
      * @param layout Table layout.
      */
     override fun layout(layout: TableLayout) {
-      cdkBuilder.layout(layout.let(TableLayout::unwrap))
+      cdkBuilder.layout(layout.let(TableLayout.Companion::unwrap))
     }
 
     /**
@@ -301,7 +301,7 @@ public interface TableWidgetProps : MetricWidgetProps {
      * @param metrics Metrics to display in the table.
      */
     override fun metrics(metrics: List<IMetric>) {
-      cdkBuilder.metrics(metrics.map(IMetric::unwrap))
+      cdkBuilder.metrics(metrics.map(IMetric.Companion::unwrap))
     }
 
     /**
@@ -315,7 +315,7 @@ public interface TableWidgetProps : MetricWidgetProps {
      * This default can be overridden within each metric definition.
      */
     override fun period(period: Duration) {
-      cdkBuilder.period(period.let(Duration::unwrap))
+      cdkBuilder.period(period.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -371,7 +371,7 @@ public interface TableWidgetProps : MetricWidgetProps {
      * @param summary Properties for displaying summary columns.
      */
     override fun summary(summary: TableSummaryProps) {
-      cdkBuilder.summary(summary.let(TableSummaryProps::unwrap))
+      cdkBuilder.summary(summary.let(TableSummaryProps.Companion::unwrap))
     }
 
     /**
@@ -386,7 +386,7 @@ public interface TableWidgetProps : MetricWidgetProps {
      * @param thresholds Thresholds for highlighting table cells.
      */
     override fun thresholds(thresholds: List<TableThreshold>) {
-      cdkBuilder.thresholds(thresholds.map(TableThreshold::unwrap))
+      cdkBuilder.thresholds(thresholds.map(TableThreshold.Companion::unwrap))
     }
 
     /**

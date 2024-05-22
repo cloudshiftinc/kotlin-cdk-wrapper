@@ -401,7 +401,7 @@ public interface QueueProps {
      * hours). The default is 300 (5 minutes).
      */
     override fun dataKeyReuse(dataKeyReuse: Duration) {
-      cdkBuilder.dataKeyReuse(dataKeyReuse.let(Duration::unwrap))
+      cdkBuilder.dataKeyReuse(dataKeyReuse.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -409,7 +409,7 @@ public interface QueueProps {
      * number of times.
      */
     override fun deadLetterQueue(deadLetterQueue: DeadLetterQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(DeadLetterQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(DeadLetterQueue.Companion::unwrap))
     }
 
     /**
@@ -427,7 +427,7 @@ public interface QueueProps {
      * (Only applies to FIFO queues.)
      */
     override fun deduplicationScope(deduplicationScope: DeduplicationScope) {
-      cdkBuilder.deduplicationScope(deduplicationScope.let(DeduplicationScope::unwrap))
+      cdkBuilder.deduplicationScope(deduplicationScope.let(DeduplicationScope.Companion::unwrap))
     }
 
     /**
@@ -437,7 +437,7 @@ public interface QueueProps {
      * value is 0.
      */
     override fun deliveryDelay(deliveryDelay: Duration) {
-      cdkBuilder.deliveryDelay(deliveryDelay.let(Duration::unwrap))
+      cdkBuilder.deliveryDelay(deliveryDelay.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -446,7 +446,7 @@ public interface QueueProps {
      * for current availability details.
      */
     override fun encryption(encryption: QueueEncryption) {
-      cdkBuilder.encryption(encryption.let(QueueEncryption::unwrap))
+      cdkBuilder.encryption(encryption.let(QueueEncryption.Companion::unwrap))
     }
 
     /**
@@ -459,7 +459,7 @@ public interface QueueProps {
      * implicitly set to "KMS".
      */
     override fun encryptionMasterKey(encryptionMasterKey: IKey) {
-      cdkBuilder.encryptionMasterKey(encryptionMasterKey.let(IKey::unwrap))
+      cdkBuilder.encryptionMasterKey(encryptionMasterKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -482,7 +482,7 @@ public interface QueueProps {
      * (Only applies to FIFO queues.)
      */
     override fun fifoThroughputLimit(fifoThroughputLimit: FifoThroughputLimit) {
-      cdkBuilder.fifoThroughputLimit(fifoThroughputLimit.let(FifoThroughputLimit::unwrap))
+      cdkBuilder.fifoThroughputLimit(fifoThroughputLimit.let(FifoThroughputLimit.Companion::unwrap))
     }
 
     /**
@@ -511,7 +511,7 @@ public interface QueueProps {
      * For more information, see Amazon SQS Long Poll.
      */
     override fun receiveMessageWaitTime(receiveMessageWaitTime: Duration) {
-      cdkBuilder.receiveMessageWaitTime(receiveMessageWaitTime.let(Duration::unwrap))
+      cdkBuilder.receiveMessageWaitTime(receiveMessageWaitTime.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -519,7 +519,7 @@ public interface QueueProps {
      * dead-letter queue redrive permission and which source queues can specify dead-letter queues.
      */
     override fun redriveAllowPolicy(redriveAllowPolicy: RedriveAllowPolicy) {
-      cdkBuilder.redriveAllowPolicy(redriveAllowPolicy.let(RedriveAllowPolicy::unwrap))
+      cdkBuilder.redriveAllowPolicy(redriveAllowPolicy.let(RedriveAllowPolicy.Companion::unwrap))
     }
 
     /**
@@ -539,7 +539,7 @@ public interface QueueProps {
      * valuable that accidentally losing them would be unacceptable.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -548,7 +548,7 @@ public interface QueueProps {
      * seconds (14 days). The default value is 345600 seconds (4 days).
      */
     override fun retentionPeriod(retentionPeriod: Duration) {
-      cdkBuilder.retentionPeriod(retentionPeriod.let(Duration::unwrap))
+      cdkBuilder.retentionPeriod(retentionPeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -561,7 +561,7 @@ public interface QueueProps {
      * a value, AWS CloudFormation uses the default value of 30 seconds.
      */
     override fun visibilityTimeout(visibilityTimeout: Duration) {
-      cdkBuilder.visibilityTimeout(visibilityTimeout.let(Duration::unwrap))
+      cdkBuilder.visibilityTimeout(visibilityTimeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.sqs.QueueProps = cdkBuilder.build()

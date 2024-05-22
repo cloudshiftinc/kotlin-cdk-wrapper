@@ -123,7 +123,7 @@ public open class CfnComponentVersion(
   cdkObject: software.amazon.awscdk.services.greengrassv2.CfnComponentVersion,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.greengrassv2.CfnComponentVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.greengrassv2.CfnComponentVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -132,8 +132,8 @@ public open class CfnComponentVersion(
     id: String,
     props: CfnComponentVersionProps,
   ) :
-      this(software.amazon.awscdk.services.greengrassv2.CfnComponentVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnComponentVersionProps::unwrap))
+      this(software.amazon.awscdk.services.greengrassv2.CfnComponentVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnComponentVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -176,7 +176,7 @@ public open class CfnComponentVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -188,14 +188,14 @@ public open class CfnComponentVersion(
    * The parameters to create a component from a Lambda function.
    */
   public open fun lambdaFunction(`value`: IResolvable) {
-    unwrap(this).setLambdaFunction(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLambdaFunction(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The parameters to create a component from a Lambda function.
    */
   public open fun lambdaFunction(`value`: LambdaFunctionRecipeSourceProperty) {
-    unwrap(this).setLambdaFunction(`value`.let(LambdaFunctionRecipeSourceProperty::unwrap))
+    unwrap(this).setLambdaFunction(`value`.let(LambdaFunctionRecipeSourceProperty.Companion::unwrap))
   }
 
   /**
@@ -327,7 +327,7 @@ public open class CfnComponentVersion(
      * @param lambdaFunction The parameters to create a component from a Lambda function. 
      */
     override fun lambdaFunction(lambdaFunction: IResolvable) {
-      cdkBuilder.lambdaFunction(lambdaFunction.let(IResolvable::unwrap))
+      cdkBuilder.lambdaFunction(lambdaFunction.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -339,7 +339,7 @@ public open class CfnComponentVersion(
      * @param lambdaFunction The parameters to create a component from a Lambda function. 
      */
     override fun lambdaFunction(lambdaFunction: LambdaFunctionRecipeSourceProperty) {
-      cdkBuilder.lambdaFunction(lambdaFunction.let(LambdaFunctionRecipeSourceProperty::unwrap))
+      cdkBuilder.lambdaFunction(lambdaFunction.let(LambdaFunctionRecipeSourceProperty.Companion::unwrap))
     }
 
     /**
@@ -634,7 +634,7 @@ public open class CfnComponentVersion(
        * in the *AWS IoT Greengrass V2 Developer Guide* .
        */
       override fun attributes(attributes: IResolvable) {
-        cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -837,7 +837,7 @@ public open class CfnComponentVersion(
        * @param devices The list of system devices that the container can access.
        */
       override fun devices(devices: IResolvable) {
-        cdkBuilder.devices(devices.let(IResolvable::unwrap))
+        cdkBuilder.devices(devices.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -875,14 +875,14 @@ public open class CfnComponentVersion(
        * Default: `false`
        */
       override fun mountRoSysfs(mountRoSysfs: IResolvable) {
-        cdkBuilder.mountRoSysfs(mountRoSysfs.let(IResolvable::unwrap))
+        cdkBuilder.mountRoSysfs(mountRoSysfs.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param volumes The list of volumes that the container can access.
        */
       override fun volumes(volumes: IResolvable) {
-        cdkBuilder.volumes(volumes.let(IResolvable::unwrap))
+        cdkBuilder.volumes(volumes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1053,7 +1053,7 @@ public open class CfnComponentVersion(
        * Default: `false`
        */
       override fun addGroupOwner(addGroupOwner: IResolvable) {
-        cdkBuilder.addGroupOwner(addGroupOwner.let(IResolvable::unwrap))
+        cdkBuilder.addGroupOwner(addGroupOwner.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1544,7 +1544,7 @@ public open class CfnComponentVersion(
        * Lambda function when it runs.
        */
       override fun environmentVariables(environmentVariables: IResolvable) {
-        cdkBuilder.environmentVariables(environmentVariables.let(IResolvable::unwrap))
+        cdkBuilder.environmentVariables(environmentVariables.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1562,7 +1562,7 @@ public open class CfnComponentVersion(
        * this function to local publish/subscribe messages and AWS IoT Core MQTT messages.
        */
       override fun eventSources(eventSources: IResolvable) {
-        cdkBuilder.eventSources(eventSources.let(IResolvable::unwrap))
+        cdkBuilder.eventSources(eventSources.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1609,7 +1609,7 @@ public open class CfnComponentVersion(
        * function.
        */
       override fun linuxProcessParams(linuxProcessParams: IResolvable) {
-        cdkBuilder.linuxProcessParams(linuxProcessParams.let(IResolvable::unwrap))
+        cdkBuilder.linuxProcessParams(linuxProcessParams.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1617,7 +1617,7 @@ public open class CfnComponentVersion(
        * function.
        */
       override fun linuxProcessParams(linuxProcessParams: LambdaLinuxProcessParamsProperty) {
-        cdkBuilder.linuxProcessParams(linuxProcessParams.let(LambdaLinuxProcessParamsProperty::unwrap))
+        cdkBuilder.linuxProcessParams(linuxProcessParams.let(LambdaLinuxProcessParamsProperty.Companion::unwrap))
       }
 
       /**
@@ -1681,7 +1681,7 @@ public open class CfnComponentVersion(
        * Default: `true`
        */
       override fun pinned(pinned: IResolvable) {
-        cdkBuilder.pinned(pinned.let(IResolvable::unwrap))
+        cdkBuilder.pinned(pinned.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2024,7 +2024,7 @@ public open class CfnComponentVersion(
        * depends.
        */
       override fun componentDependencies(componentDependencies: IResolvable) {
-        cdkBuilder.componentDependencies(componentDependencies.let(IResolvable::unwrap))
+        cdkBuilder.componentDependencies(componentDependencies.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2040,7 +2040,7 @@ public open class CfnComponentVersion(
        * as it runs on the AWS IoT Greengrass core device.
        */
       override fun componentLambdaParameters(componentLambdaParameters: IResolvable) {
-        cdkBuilder.componentLambdaParameters(componentLambdaParameters.let(IResolvable::unwrap))
+        cdkBuilder.componentLambdaParameters(componentLambdaParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2049,7 +2049,7 @@ public open class CfnComponentVersion(
        */
       override
           fun componentLambdaParameters(componentLambdaParameters: LambdaExecutionParametersProperty) {
-        cdkBuilder.componentLambdaParameters(componentLambdaParameters.let(LambdaExecutionParametersProperty::unwrap))
+        cdkBuilder.componentLambdaParameters(componentLambdaParameters.let(LambdaExecutionParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -2075,7 +2075,7 @@ public open class CfnComponentVersion(
        * @param componentPlatforms The platforms that the component version supports.
        */
       override fun componentPlatforms(componentPlatforms: IResolvable) {
-        cdkBuilder.componentPlatforms(componentPlatforms.let(IResolvable::unwrap))
+        cdkBuilder.componentPlatforms(componentPlatforms.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2282,14 +2282,14 @@ public open class CfnComponentVersion(
        * @param containerParams The parameters for the container in which the Lambda function runs.
        */
       override fun containerParams(containerParams: IResolvable) {
-        cdkBuilder.containerParams(containerParams.let(IResolvable::unwrap))
+        cdkBuilder.containerParams(containerParams.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param containerParams The parameters for the container in which the Lambda function runs.
        */
       override fun containerParams(containerParams: LambdaContainerParamsProperty) {
-        cdkBuilder.containerParams(containerParams.let(LambdaContainerParamsProperty::unwrap))
+        cdkBuilder.containerParams(containerParams.let(LambdaContainerParamsProperty.Companion::unwrap))
       }
 
       /**
@@ -2471,7 +2471,7 @@ public open class CfnComponentVersion(
        * Default: `false`
        */
       override fun addGroupOwner(addGroupOwner: IResolvable) {
-        cdkBuilder.addGroupOwner(addGroupOwner.let(IResolvable::unwrap))
+        cdkBuilder.addGroupOwner(addGroupOwner.let(IResolvable.Companion::unwrap))
       }
 
       /**

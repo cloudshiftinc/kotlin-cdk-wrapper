@@ -399,14 +399,14 @@ public interface CfnConnectorProps {
      * @param capacity The connector's compute capacity settings. 
      */
     override fun capacity(capacity: IResolvable) {
-      cdkBuilder.capacity(capacity.let(IResolvable::unwrap))
+      cdkBuilder.capacity(capacity.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param capacity The connector's compute capacity settings. 
      */
     override fun capacity(capacity: CfnConnector.CapacityProperty) {
-      cdkBuilder.capacity(capacity.let(CfnConnector.CapacityProperty::unwrap))
+      cdkBuilder.capacity(capacity.let(CfnConnector.CapacityProperty.Companion::unwrap))
     }
 
     /**
@@ -421,7 +421,7 @@ public interface CfnConnectorProps {
      * @param connectorConfiguration The configuration of the connector. 
      */
     override fun connectorConfiguration(connectorConfiguration: IResolvable) {
-      cdkBuilder.connectorConfiguration(connectorConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.connectorConfiguration(connectorConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -450,7 +450,7 @@ public interface CfnConnectorProps {
      * connected. 
      */
     override fun kafkaCluster(kafkaCluster: IResolvable) {
-      cdkBuilder.kafkaCluster(kafkaCluster.let(IResolvable::unwrap))
+      cdkBuilder.kafkaCluster(kafkaCluster.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -458,7 +458,7 @@ public interface CfnConnectorProps {
      * connected. 
      */
     override fun kafkaCluster(kafkaCluster: CfnConnector.KafkaClusterProperty) {
-      cdkBuilder.kafkaCluster(kafkaCluster.let(CfnConnector.KafkaClusterProperty::unwrap))
+      cdkBuilder.kafkaCluster(kafkaCluster.let(CfnConnector.KafkaClusterProperty.Companion::unwrap))
     }
 
     /**
@@ -476,7 +476,7 @@ public interface CfnConnectorProps {
      * The value is NONE when no client authentication is used.
      */
     override fun kafkaClusterClientAuthentication(kafkaClusterClientAuthentication: IResolvable) {
-      cdkBuilder.kafkaClusterClientAuthentication(kafkaClusterClientAuthentication.let(IResolvable::unwrap))
+      cdkBuilder.kafkaClusterClientAuthentication(kafkaClusterClientAuthentication.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -486,7 +486,7 @@ public interface CfnConnectorProps {
      */
     override
         fun kafkaClusterClientAuthentication(kafkaClusterClientAuthentication: CfnConnector.KafkaClusterClientAuthenticationProperty) {
-      cdkBuilder.kafkaClusterClientAuthentication(kafkaClusterClientAuthentication.let(CfnConnector.KafkaClusterClientAuthenticationProperty::unwrap))
+      cdkBuilder.kafkaClusterClientAuthentication(kafkaClusterClientAuthentication.let(CfnConnector.KafkaClusterClientAuthenticationProperty.Companion::unwrap))
     }
 
     /**
@@ -506,7 +506,7 @@ public interface CfnConnectorProps {
      * cluster. 
      */
     override fun kafkaClusterEncryptionInTransit(kafkaClusterEncryptionInTransit: IResolvable) {
-      cdkBuilder.kafkaClusterEncryptionInTransit(kafkaClusterEncryptionInTransit.let(IResolvable::unwrap))
+      cdkBuilder.kafkaClusterEncryptionInTransit(kafkaClusterEncryptionInTransit.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -515,7 +515,7 @@ public interface CfnConnectorProps {
      */
     override
         fun kafkaClusterEncryptionInTransit(kafkaClusterEncryptionInTransit: CfnConnector.KafkaClusterEncryptionInTransitProperty) {
-      cdkBuilder.kafkaClusterEncryptionInTransit(kafkaClusterEncryptionInTransit.let(CfnConnector.KafkaClusterEncryptionInTransitProperty::unwrap))
+      cdkBuilder.kafkaClusterEncryptionInTransit(kafkaClusterEncryptionInTransit.let(CfnConnector.KafkaClusterEncryptionInTransitProperty.Companion::unwrap))
     }
 
     /**
@@ -541,14 +541,14 @@ public interface CfnConnectorProps {
      * @param logDelivery The settings for delivering connector logs to Amazon CloudWatch Logs.
      */
     override fun logDelivery(logDelivery: IResolvable) {
-      cdkBuilder.logDelivery(logDelivery.let(IResolvable::unwrap))
+      cdkBuilder.logDelivery(logDelivery.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param logDelivery The settings for delivering connector logs to Amazon CloudWatch Logs.
      */
     override fun logDelivery(logDelivery: CfnConnector.LogDeliveryProperty) {
-      cdkBuilder.logDelivery(logDelivery.let(CfnConnector.LogDeliveryProperty::unwrap))
+      cdkBuilder.logDelivery(logDelivery.let(CfnConnector.LogDeliveryProperty.Companion::unwrap))
     }
 
     /**
@@ -565,7 +565,7 @@ public interface CfnConnectorProps {
      * specifying multiple plugins.
      */
     override fun plugins(plugins: IResolvable) {
-      cdkBuilder.plugins(plugins.let(IResolvable::unwrap))
+      cdkBuilder.plugins(plugins.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -596,7 +596,7 @@ public interface CfnConnectorProps {
      * @param tags A collection of tags associated with a resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -608,7 +608,7 @@ public interface CfnConnectorProps {
      * @param workerConfiguration The worker configurations that are in use with the connector.
      */
     override fun workerConfiguration(workerConfiguration: IResolvable) {
-      cdkBuilder.workerConfiguration(workerConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.workerConfiguration(workerConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -616,7 +616,7 @@ public interface CfnConnectorProps {
      */
     override
         fun workerConfiguration(workerConfiguration: CfnConnector.WorkerConfigurationProperty) {
-      cdkBuilder.workerConfiguration(workerConfiguration.let(CfnConnector.WorkerConfigurationProperty::unwrap))
+      cdkBuilder.workerConfiguration(workerConfiguration.let(CfnConnector.WorkerConfigurationProperty.Companion::unwrap))
     }
 
     /**

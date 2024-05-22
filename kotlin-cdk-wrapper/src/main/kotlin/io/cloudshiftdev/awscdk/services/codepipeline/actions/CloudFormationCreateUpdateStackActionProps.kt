@@ -471,7 +471,7 @@ public interface CloudFormationCreateUpdateStackActionProps : CommonAwsActionPro
      * For more information, see the link below.
      */
     override fun cfnCapabilities(cfnCapabilities: List<CfnCapabilities>) {
-      cdkBuilder.cfnCapabilities(cfnCapabilities.map(CfnCapabilities::unwrap))
+      cdkBuilder.cfnCapabilities(cfnCapabilities.map(CfnCapabilities.Companion::unwrap))
     }
 
     /**
@@ -494,7 +494,7 @@ public interface CloudFormationCreateUpdateStackActionProps : CommonAwsActionPro
      * full permissions.
      */
     override fun deploymentRole(deploymentRole: IRole) {
-      cdkBuilder.deploymentRole(deploymentRole.let(IRole::unwrap))
+      cdkBuilder.deploymentRole(deploymentRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -513,7 +513,7 @@ public interface CloudFormationCreateUpdateStackActionProps : CommonAwsActionPro
      * otherwise, you'll get an "unrecognized Artifact" error during your Pipeline's execution.
      */
     override fun extraInputs(extraInputs: List<Artifact>) {
-      cdkBuilder.extraInputs(extraInputs.map(Artifact::unwrap))
+      cdkBuilder.extraInputs(extraInputs.map(Artifact.Companion::unwrap))
     }
 
     /**
@@ -538,7 +538,7 @@ public interface CloudFormationCreateUpdateStackActionProps : CommonAwsActionPro
      * Only applied if `outputFileName` is set as well.
      */
     override fun output(output: Artifact) {
-      cdkBuilder.output(output.let(Artifact::unwrap))
+      cdkBuilder.output(output.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -607,7 +607,7 @@ public interface CloudFormationCreateUpdateStackActionProps : CommonAwsActionPro
      * method in the `ActionBindOptions.role` property.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -637,14 +637,14 @@ public interface CloudFormationCreateUpdateStackActionProps : CommonAwsActionPro
      * file.
      */
     override fun templateConfiguration(templateConfiguration: ArtifactPath) {
-      cdkBuilder.templateConfiguration(templateConfiguration.let(ArtifactPath::unwrap))
+      cdkBuilder.templateConfiguration(templateConfiguration.let(ArtifactPath.Companion::unwrap))
     }
 
     /**
      * @param templatePath Input artifact with the CloudFormation template to deploy. 
      */
     override fun templatePath(templatePath: ArtifactPath) {
-      cdkBuilder.templatePath(templatePath.let(ArtifactPath::unwrap))
+      cdkBuilder.templatePath(templatePath.let(ArtifactPath.Companion::unwrap))
     }
 
     /**

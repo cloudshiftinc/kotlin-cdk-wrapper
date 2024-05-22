@@ -78,8 +78,8 @@ public open class CfnUserSettings(
     id: String,
     props: CfnUserSettingsProps,
   ) :
-      this(software.amazon.awscdk.services.workspacesweb.CfnUserSettings(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnUserSettingsProps::unwrap))
+      this(software.amazon.awscdk.services.workspacesweb.CfnUserSettings(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnUserSettingsProps.Companion::unwrap))
   )
 
   public constructor(
@@ -90,20 +90,20 @@ public open class CfnUserSettings(
   )
 
   /**
-   *
+   * The additional encryption context of the user settings.
    */
   public open fun additionalEncryptionContext(): Any? =
       unwrap(this).getAdditionalEncryptionContext()
 
   /**
-   *
+   * The additional encryption context of the user settings.
    */
   public open fun additionalEncryptionContext(`value`: IResolvable) {
-    unwrap(this).setAdditionalEncryptionContext(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAdditionalEncryptionContext(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   *
+   * The additional encryption context of the user settings.
    */
   public open fun additionalEncryptionContext(`value`: Map<String, String>) {
     unwrap(this).setAdditionalEncryptionContext(`value`)
@@ -138,7 +138,7 @@ public open class CfnUserSettings(
    * browser to the remote browser.
    */
   public open fun cookieSynchronizationConfiguration(`value`: IResolvable) {
-    unwrap(this).setCookieSynchronizationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCookieSynchronizationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -147,7 +147,7 @@ public open class CfnUserSettings(
    */
   public open
       fun cookieSynchronizationConfiguration(`value`: CookieSynchronizationConfigurationProperty) {
-    unwrap(this).setCookieSynchronizationConfiguration(`value`.let(CookieSynchronizationConfigurationProperty::unwrap))
+    unwrap(this).setCookieSynchronizationConfiguration(`value`.let(CookieSynchronizationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -173,12 +173,12 @@ public open class CfnUserSettings(
   }
 
   /**
-   *
+   * The customer managed key used to encrypt sensitive information in the user settings.
    */
   public open fun customerManagedKey(): String? = unwrap(this).getCustomerManagedKey()
 
   /**
-   *
+   * The customer managed key used to encrypt sensitive information in the user settings.
    */
   public open fun customerManagedKey(`value`: String) {
     unwrap(this).setCustomerManagedKey(`value`)
@@ -230,7 +230,7 @@ public open class CfnUserSettings(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -266,7 +266,7 @@ public open class CfnUserSettings(
    * The tags to add to the user settings resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -292,14 +292,18 @@ public open class CfnUserSettings(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The additional encryption context of the user settings.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-additionalencryptioncontext)
-     * @param additionalEncryptionContext 
+     * @param additionalEncryptionContext The additional encryption context of the user settings. 
      */
     public fun additionalEncryptionContext(additionalEncryptionContext: IResolvable)
 
     /**
+     * The additional encryption context of the user settings.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-additionalencryptioncontext)
-     * @param additionalEncryptionContext 
+     * @param additionalEncryptionContext The additional encryption context of the user settings. 
      */
     public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
 
@@ -347,8 +351,11 @@ public open class CfnUserSettings(
     public fun copyAllowed(copyAllowed: String)
 
     /**
+     * The customer managed key used to encrypt sensitive information in the user settings.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-customermanagedkey)
-     * @param customerManagedKey 
+     * @param customerManagedKey The customer managed key used to encrypt sensitive information in
+     * the user settings. 
      */
     public fun customerManagedKey(customerManagedKey: String)
 
@@ -436,16 +443,20 @@ public open class CfnUserSettings(
         software.amazon.awscdk.services.workspacesweb.CfnUserSettings.Builder.create(scope, id)
 
     /**
+     * The additional encryption context of the user settings.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-additionalencryptioncontext)
-     * @param additionalEncryptionContext 
+     * @param additionalEncryptionContext The additional encryption context of the user settings. 
      */
     override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable::unwrap))
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
     }
 
     /**
+     * The additional encryption context of the user settings.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-additionalencryptioncontext)
-     * @param additionalEncryptionContext 
+     * @param additionalEncryptionContext The additional encryption context of the user settings. 
      */
     override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
       cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
@@ -461,7 +472,7 @@ public open class CfnUserSettings(
      */
     override
         fun cookieSynchronizationConfiguration(cookieSynchronizationConfiguration: IResolvable) {
-      cdkBuilder.cookieSynchronizationConfiguration(cookieSynchronizationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.cookieSynchronizationConfiguration(cookieSynchronizationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -474,7 +485,7 @@ public open class CfnUserSettings(
      */
     override
         fun cookieSynchronizationConfiguration(cookieSynchronizationConfiguration: CookieSynchronizationConfigurationProperty) {
-      cdkBuilder.cookieSynchronizationConfiguration(cookieSynchronizationConfiguration.let(CookieSynchronizationConfigurationProperty::unwrap))
+      cdkBuilder.cookieSynchronizationConfiguration(cookieSynchronizationConfiguration.let(CookieSynchronizationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -504,8 +515,11 @@ public open class CfnUserSettings(
     }
 
     /**
+     * The customer managed key used to encrypt sensitive information in the user settings.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-usersettings.html#cfn-workspacesweb-usersettings-customermanagedkey)
-     * @param customerManagedKey 
+     * @param customerManagedKey The customer managed key used to encrypt sensitive information in
+     * the user settings. 
      */
     override fun customerManagedKey(customerManagedKey: String) {
       cdkBuilder.customerManagedKey(customerManagedKey)
@@ -576,7 +590,7 @@ public open class CfnUserSettings(
      * @param tags The tags to add to the user settings resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -861,7 +875,7 @@ public open class CfnUserSettings(
        * the remote browser. 
        */
       override fun allowlist(allowlist: IResolvable) {
-        cdkBuilder.allowlist(allowlist.let(IResolvable::unwrap))
+        cdkBuilder.allowlist(allowlist.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -883,7 +897,7 @@ public open class CfnUserSettings(
        * to the remote browser.
        */
       override fun blocklist(blocklist: IResolvable) {
-        cdkBuilder.blocklist(blocklist.let(IResolvable::unwrap))
+        cdkBuilder.blocklist(blocklist.let(IResolvable.Companion::unwrap))
       }
 
       /**

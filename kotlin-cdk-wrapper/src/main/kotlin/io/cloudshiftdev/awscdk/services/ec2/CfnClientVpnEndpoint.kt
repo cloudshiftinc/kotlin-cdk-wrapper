@@ -97,8 +97,8 @@ public open class CfnClientVpnEndpoint(
     id: String,
     props: CfnClientVpnEndpointProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnClientVpnEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnClientVpnEndpoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnClientVpnEndpointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -122,7 +122,7 @@ public open class CfnClientVpnEndpoint(
    * Information about the authentication method to be used to authenticate clients.
    */
   public open fun authenticationOptions(`value`: IResolvable) {
-    unwrap(this).setAuthenticationOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAuthenticationOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -159,14 +159,14 @@ public open class CfnClientVpnEndpoint(
    * The options for managing connection authorization for new client connections.
    */
   public open fun clientConnectOptions(`value`: IResolvable) {
-    unwrap(this).setClientConnectOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setClientConnectOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The options for managing connection authorization for new client connections.
    */
   public open fun clientConnectOptions(`value`: ClientConnectOptionsProperty) {
-    unwrap(this).setClientConnectOptions(`value`.let(ClientConnectOptionsProperty::unwrap))
+    unwrap(this).setClientConnectOptions(`value`.let(ClientConnectOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -188,7 +188,7 @@ public open class CfnClientVpnEndpoint(
    * when a VPN session is established.
    */
   public open fun clientLoginBannerOptions(`value`: IResolvable) {
-    unwrap(this).setClientLoginBannerOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setClientLoginBannerOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -196,7 +196,7 @@ public open class CfnClientVpnEndpoint(
    * when a VPN session is established.
    */
   public open fun clientLoginBannerOptions(`value`: ClientLoginBannerOptionsProperty) {
-    unwrap(this).setClientLoginBannerOptions(`value`.let(ClientLoginBannerOptionsProperty::unwrap))
+    unwrap(this).setClientLoginBannerOptions(`value`.let(ClientLoginBannerOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -218,14 +218,14 @@ public open class CfnClientVpnEndpoint(
    * Information about the client connection logging options.
    */
   public open fun connectionLogOptions(`value`: IResolvable) {
-    unwrap(this).setConnectionLogOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConnectionLogOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information about the client connection logging options.
    */
   public open fun connectionLogOptions(`value`: ConnectionLogOptionsProperty) {
-    unwrap(this).setConnectionLogOptions(`value`.let(ConnectionLogOptionsProperty::unwrap))
+    unwrap(this).setConnectionLogOptions(`value`.let(ConnectionLogOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -271,7 +271,7 @@ public open class CfnClientVpnEndpoint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -345,7 +345,7 @@ public open class CfnClientVpnEndpoint(
    * Indicates whether split-tunnel is enabled on the AWS Client VPN endpoint.
    */
   public open fun splitTunnel(`value`: IResolvable) {
-    unwrap(this).setSplitTunnel(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSplitTunnel(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -357,7 +357,7 @@ public open class CfnClientVpnEndpoint(
    * The tags to apply to the Client VPN endpoint during creation.
    */
   public open fun tagSpecifications(`value`: IResolvable) {
-    unwrap(this).setTagSpecifications(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTagSpecifications(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -755,7 +755,7 @@ public open class CfnClientVpnEndpoint(
      * authenticate clients. 
      */
     override fun authenticationOptions(authenticationOptions: IResolvable) {
-      cdkBuilder.authenticationOptions(authenticationOptions.let(IResolvable::unwrap))
+      cdkBuilder.authenticationOptions(authenticationOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -803,7 +803,7 @@ public open class CfnClientVpnEndpoint(
      * connections. 
      */
     override fun clientConnectOptions(clientConnectOptions: IResolvable) {
-      cdkBuilder.clientConnectOptions(clientConnectOptions.let(IResolvable::unwrap))
+      cdkBuilder.clientConnectOptions(clientConnectOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -814,7 +814,7 @@ public open class CfnClientVpnEndpoint(
      * connections. 
      */
     override fun clientConnectOptions(clientConnectOptions: ClientConnectOptionsProperty) {
-      cdkBuilder.clientConnectOptions(clientConnectOptions.let(ClientConnectOptionsProperty::unwrap))
+      cdkBuilder.clientConnectOptions(clientConnectOptions.let(ClientConnectOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -839,7 +839,7 @@ public open class CfnClientVpnEndpoint(
      * displayed on AWS provided clients when a VPN session is established. 
      */
     override fun clientLoginBannerOptions(clientLoginBannerOptions: IResolvable) {
-      cdkBuilder.clientLoginBannerOptions(clientLoginBannerOptions.let(IResolvable::unwrap))
+      cdkBuilder.clientLoginBannerOptions(clientLoginBannerOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -852,7 +852,7 @@ public open class CfnClientVpnEndpoint(
      */
     override
         fun clientLoginBannerOptions(clientLoginBannerOptions: ClientLoginBannerOptionsProperty) {
-      cdkBuilder.clientLoginBannerOptions(clientLoginBannerOptions.let(ClientLoginBannerOptionsProperty::unwrap))
+      cdkBuilder.clientLoginBannerOptions(clientLoginBannerOptions.let(ClientLoginBannerOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -884,7 +884,7 @@ public open class CfnClientVpnEndpoint(
      * @param connectionLogOptions Information about the client connection logging options. 
      */
     override fun connectionLogOptions(connectionLogOptions: IResolvable) {
-      cdkBuilder.connectionLogOptions(connectionLogOptions.let(IResolvable::unwrap))
+      cdkBuilder.connectionLogOptions(connectionLogOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -902,7 +902,7 @@ public open class CfnClientVpnEndpoint(
      * @param connectionLogOptions Information about the client connection logging options. 
      */
     override fun connectionLogOptions(connectionLogOptions: ConnectionLogOptionsProperty) {
-      cdkBuilder.connectionLogOptions(connectionLogOptions.let(ConnectionLogOptionsProperty::unwrap))
+      cdkBuilder.connectionLogOptions(connectionLogOptions.let(ConnectionLogOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -1053,7 +1053,7 @@ public open class CfnClientVpnEndpoint(
      * @param splitTunnel Indicates whether split-tunnel is enabled on the AWS Client VPN endpoint. 
      */
     override fun splitTunnel(splitTunnel: IResolvable) {
-      cdkBuilder.splitTunnel(splitTunnel.let(IResolvable::unwrap))
+      cdkBuilder.splitTunnel(splitTunnel.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1063,7 +1063,7 @@ public open class CfnClientVpnEndpoint(
      * @param tagSpecifications The tags to apply to the Client VPN endpoint during creation. 
      */
     override fun tagSpecifications(tagSpecifications: IResolvable) {
-      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1400,7 +1400,7 @@ public open class CfnClientVpnEndpoint(
        * You must provide this information if *Type* is `directory-service-authentication` .
        */
       override fun activeDirectory(activeDirectory: IResolvable) {
-        cdkBuilder.activeDirectory(activeDirectory.let(IResolvable::unwrap))
+        cdkBuilder.activeDirectory(activeDirectory.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1408,7 +1408,7 @@ public open class CfnClientVpnEndpoint(
        * You must provide this information if *Type* is `directory-service-authentication` .
        */
       override fun activeDirectory(activeDirectory: DirectoryServiceAuthenticationRequestProperty) {
-        cdkBuilder.activeDirectory(activeDirectory.let(DirectoryServiceAuthenticationRequestProperty::unwrap))
+        cdkBuilder.activeDirectory(activeDirectory.let(DirectoryServiceAuthenticationRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -1426,7 +1426,7 @@ public open class CfnClientVpnEndpoint(
        * applicable.
        */
       override fun federatedAuthentication(federatedAuthentication: IResolvable) {
-        cdkBuilder.federatedAuthentication(federatedAuthentication.let(IResolvable::unwrap))
+        cdkBuilder.federatedAuthentication(federatedAuthentication.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1435,7 +1435,7 @@ public open class CfnClientVpnEndpoint(
        */
       override
           fun federatedAuthentication(federatedAuthentication: FederatedAuthenticationRequestProperty) {
-        cdkBuilder.federatedAuthentication(federatedAuthentication.let(FederatedAuthenticationRequestProperty::unwrap))
+        cdkBuilder.federatedAuthentication(federatedAuthentication.let(FederatedAuthenticationRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -1455,7 +1455,7 @@ public open class CfnClientVpnEndpoint(
        * You must provide this information if *Type* is `certificate-authentication` .
        */
       override fun mutualAuthentication(mutualAuthentication: IResolvable) {
-        cdkBuilder.mutualAuthentication(mutualAuthentication.let(IResolvable::unwrap))
+        cdkBuilder.mutualAuthentication(mutualAuthentication.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1465,7 +1465,7 @@ public open class CfnClientVpnEndpoint(
        */
       override
           fun mutualAuthentication(mutualAuthentication: CertificateAuthenticationRequestProperty) {
-        cdkBuilder.mutualAuthentication(mutualAuthentication.let(CertificateAuthenticationRequestProperty::unwrap))
+        cdkBuilder.mutualAuthentication(mutualAuthentication.let(CertificateAuthenticationRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -1628,7 +1628,7 @@ public open class CfnClientVpnEndpoint(
        * The default is `false` (not enabled).
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1791,7 +1791,7 @@ public open class CfnClientVpnEndpoint(
        * Default value: `false`
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1948,7 +1948,7 @@ public open class CfnClientVpnEndpoint(
        * @param enabled Indicates whether connection logging is enabled. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2283,7 +2283,7 @@ public open class CfnClientVpnEndpoint(
        * @param tags The tags to apply to the resource. 
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**

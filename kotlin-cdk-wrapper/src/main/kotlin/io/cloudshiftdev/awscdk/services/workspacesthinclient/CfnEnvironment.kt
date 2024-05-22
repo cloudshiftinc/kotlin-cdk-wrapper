@@ -66,8 +66,8 @@ public open class CfnEnvironment(
     id: String,
     props: CfnEnvironmentProps,
   ) :
-      this(software.amazon.awscdk.services.workspacesthinclient.CfnEnvironment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEnvironmentProps::unwrap))
+      this(software.amazon.awscdk.services.workspacesthinclient.CfnEnvironment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEnvironmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -181,7 +181,7 @@ public open class CfnEnvironment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -207,14 +207,14 @@ public open class CfnEnvironment(
    * A specification for a time window to apply software updates.
    */
   public open fun maintenanceWindow(`value`: IResolvable) {
-    unwrap(this).setMaintenanceWindow(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMaintenanceWindow(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A specification for a time window to apply software updates.
    */
   public open fun maintenanceWindow(`value`: MaintenanceWindowProperty) {
-    unwrap(this).setMaintenanceWindow(`value`.let(MaintenanceWindowProperty::unwrap))
+    unwrap(this).setMaintenanceWindow(`value`.let(MaintenanceWindowProperty.Companion::unwrap))
   }
 
   /**
@@ -270,7 +270,7 @@ public open class CfnEnvironment(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -457,7 +457,7 @@ public open class CfnEnvironment(
      * @param maintenanceWindow A specification for a time window to apply software updates. 
      */
     override fun maintenanceWindow(maintenanceWindow: IResolvable) {
-      cdkBuilder.maintenanceWindow(maintenanceWindow.let(IResolvable::unwrap))
+      cdkBuilder.maintenanceWindow(maintenanceWindow.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -467,7 +467,7 @@ public open class CfnEnvironment(
      * @param maintenanceWindow A specification for a time window to apply software updates. 
      */
     override fun maintenanceWindow(maintenanceWindow: MaintenanceWindowProperty) {
-      cdkBuilder.maintenanceWindow(maintenanceWindow.let(MaintenanceWindowProperty::unwrap))
+      cdkBuilder.maintenanceWindow(maintenanceWindow.let(MaintenanceWindowProperty.Companion::unwrap))
     }
 
     /**
@@ -523,7 +523,7 @@ public open class CfnEnvironment(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

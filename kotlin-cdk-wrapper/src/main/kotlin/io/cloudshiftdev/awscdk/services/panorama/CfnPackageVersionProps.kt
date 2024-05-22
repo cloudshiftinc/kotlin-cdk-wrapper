@@ -133,7 +133,7 @@ public interface CfnPackageVersionProps {
      * @param markLatest Whether to mark the new version as the latest version.
      */
     override fun markLatest(markLatest: IResolvable) {
-      cdkBuilder.markLatest(markLatest.let(IResolvable::unwrap))
+      cdkBuilder.markLatest(markLatest.let(IResolvable.Companion::unwrap))
     }
 
     /**

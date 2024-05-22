@@ -95,8 +95,8 @@ public open class CfnAllowList(
     id: String,
     props: CfnAllowListProps,
   ) :
-      this(software.amazon.awscdk.services.macie.CfnAllowList(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAllowListProps::unwrap))
+      this(software.amazon.awscdk.services.macie.CfnAllowList(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAllowListProps.Companion::unwrap))
   )
 
   public constructor(
@@ -165,14 +165,14 @@ public open class CfnAllowList(
    * The criteria that specify the text or text pattern to ignore.
    */
   public open fun criteria(`value`: IResolvable) {
-    unwrap(this).setCriteria(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCriteria(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The criteria that specify the text or text pattern to ignore.
    */
   public open fun criteria(`value`: CriteriaProperty) {
-    unwrap(this).setCriteria(`value`.let(CriteriaProperty::unwrap))
+    unwrap(this).setCriteria(`value`.let(CriteriaProperty.Companion::unwrap))
   }
 
   /**
@@ -201,7 +201,7 @@ public open class CfnAllowList(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -231,7 +231,7 @@ public open class CfnAllowList(
    * An array of key-value pairs to apply to the allow list.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -345,7 +345,7 @@ public open class CfnAllowList(
      * @param criteria The criteria that specify the text or text pattern to ignore. 
      */
     override fun criteria(criteria: IResolvable) {
-      cdkBuilder.criteria(criteria.let(IResolvable::unwrap))
+      cdkBuilder.criteria(criteria.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -359,7 +359,7 @@ public open class CfnAllowList(
      * @param criteria The criteria that specify the text or text pattern to ignore. 
      */
     override fun criteria(criteria: CriteriaProperty) {
-      cdkBuilder.criteria(criteria.let(CriteriaProperty::unwrap))
+      cdkBuilder.criteria(criteria.let(CriteriaProperty.Companion::unwrap))
     }
 
     /**
@@ -412,7 +412,7 @@ public open class CfnAllowList(
      * @param tags An array of key-value pairs to apply to the allow list. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -546,7 +546,7 @@ public open class CfnAllowList(
        * ignore.
        */
       override fun s3WordsList(s3WordsList: IResolvable) {
-        cdkBuilder.s3WordsList(s3WordsList.let(IResolvable::unwrap))
+        cdkBuilder.s3WordsList(s3WordsList.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -554,7 +554,7 @@ public open class CfnAllowList(
        * ignore.
        */
       override fun s3WordsList(s3WordsList: S3WordsListProperty) {
-        cdkBuilder.s3WordsList(s3WordsList.let(S3WordsListProperty::unwrap))
+        cdkBuilder.s3WordsList(s3WordsList.let(S3WordsListProperty.Companion::unwrap))
       }
 
       /**

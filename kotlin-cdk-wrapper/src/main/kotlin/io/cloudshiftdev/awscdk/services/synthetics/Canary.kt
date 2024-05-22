@@ -50,8 +50,8 @@ public open class Canary(
     id: String,
     props: CanaryProps,
   ) :
-      this(software.amazon.awscdk.services.synthetics.Canary(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CanaryProps::unwrap))
+      this(software.amazon.awscdk.services.synthetics.Canary(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CanaryProps.Companion::unwrap))
   )
 
   public constructor(
@@ -108,7 +108,7 @@ public open class Canary(
    * @param options * configuration options for the metric.
    */
   public open fun metricDuration(options: MetricOptions): Metric =
-      unwrap(this).metricDuration(options.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricDuration(options.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Measure the Duration of a single canary run, in seconds.
@@ -139,7 +139,7 @@ public open class Canary(
    * @param options * configuration options for the metric.
    */
   public open fun metricFailed(options: MetricOptions): Metric =
-      unwrap(this).metricFailed(options.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricFailed(options.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Measure the number of failed canary runs over a given time period.
@@ -171,7 +171,7 @@ public open class Canary(
    * @param options * configuration options for the metric.
    */
   public open fun metricSuccessPercent(options: MetricOptions): Metric =
-      unwrap(this).metricSuccessPercent(options.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricSuccessPercent(options.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Measure the percentage of successful canary runs.
@@ -460,7 +460,7 @@ public open class Canary(
      * bucket. 
      */
     override fun artifactsBucketLifecycleRules(artifactsBucketLifecycleRules: List<LifecycleRule>) {
-      cdkBuilder.artifactsBucketLifecycleRules(artifactsBucketLifecycleRules.map(LifecycleRule::unwrap))
+      cdkBuilder.artifactsBucketLifecycleRules(artifactsBucketLifecycleRules.map(LifecycleRule.Companion::unwrap))
     }
 
     /**
@@ -487,7 +487,7 @@ public open class Canary(
      * @param artifactsBucketLocation The s3 location that stores the data of the canary runs. 
      */
     override fun artifactsBucketLocation(artifactsBucketLocation: ArtifactsBucketLocation) {
-      cdkBuilder.artifactsBucketLocation(artifactsBucketLocation.let(ArtifactsBucketLocation::unwrap))
+      cdkBuilder.artifactsBucketLocation(artifactsBucketLocation.let(ArtifactsBucketLocation.Companion::unwrap))
     }
 
     /**
@@ -531,7 +531,7 @@ public open class Canary(
      * @param cleanup Specify the underlying resources to be cleaned up when the canary is deleted. 
      */
     override fun cleanup(cleanup: Cleanup) {
-      cdkBuilder.cleanup(cleanup.let(Cleanup::unwrap))
+      cdkBuilder.cleanup(cleanup.let(Cleanup.Companion::unwrap))
     }
 
     /**
@@ -559,7 +559,7 @@ public open class Canary(
      * @param failureRetentionPeriod How many days should failed runs be retained. 
      */
     override fun failureRetentionPeriod(failureRetentionPeriod: Duration) {
-      cdkBuilder.failureRetentionPeriod(failureRetentionPeriod.let(Duration::unwrap))
+      cdkBuilder.failureRetentionPeriod(failureRetentionPeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -580,7 +580,7 @@ public open class Canary(
      * @param role Canary execution role. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -590,7 +590,7 @@ public open class Canary(
      * @param runtime Specify the runtime version to use for the canary. 
      */
     override fun runtime(runtime: Runtime) {
-      cdkBuilder.runtime(runtime.let(Runtime::unwrap))
+      cdkBuilder.runtime(runtime.let(Runtime.Companion::unwrap))
     }
 
     /**
@@ -606,7 +606,7 @@ public open class Canary(
      * @param schedule Specify the schedule for how often the canary runs. 
      */
     override fun schedule(schedule: Schedule) {
-      cdkBuilder.schedule(schedule.let(Schedule::unwrap))
+      cdkBuilder.schedule(schedule.let(Schedule.Companion::unwrap))
     }
 
     /**
@@ -621,7 +621,7 @@ public open class Canary(
      * interfaces. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -657,7 +657,7 @@ public open class Canary(
      * @param successRetentionPeriod How many days should successful runs be retained. 
      */
     override fun successRetentionPeriod(successRetentionPeriod: Duration) {
-      cdkBuilder.successRetentionPeriod(successRetentionPeriod.let(Duration::unwrap))
+      cdkBuilder.successRetentionPeriod(successRetentionPeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -668,7 +668,7 @@ public open class Canary(
      * @param test The type of test that you want your canary to run. 
      */
     override fun test(test: Test) {
-      cdkBuilder.test(test.let(Test::unwrap))
+      cdkBuilder.test(test.let(Test.Companion::unwrap))
     }
 
     /**
@@ -682,7 +682,7 @@ public open class Canary(
      * @param timeToLive How long the canary will be in a 'RUNNING' state. 
      */
     override fun timeToLive(timeToLive: Duration) {
-      cdkBuilder.timeToLive(timeToLive.let(Duration::unwrap))
+      cdkBuilder.timeToLive(timeToLive.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -695,7 +695,7 @@ public open class Canary(
      * @param vpc The VPC where this canary is run. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -708,7 +708,7 @@ public open class Canary(
      * @param vpcSubnets Where to place the network interfaces within the VPC. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

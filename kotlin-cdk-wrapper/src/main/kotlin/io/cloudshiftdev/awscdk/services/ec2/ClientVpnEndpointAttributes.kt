@@ -72,7 +72,7 @@ public interface ClientVpnEndpointAttributes {
      * @param securityGroups The security groups associated with the endpoint. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**

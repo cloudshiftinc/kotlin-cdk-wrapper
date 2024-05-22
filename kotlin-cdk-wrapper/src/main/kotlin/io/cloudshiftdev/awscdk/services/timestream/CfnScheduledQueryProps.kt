@@ -366,7 +366,7 @@ public interface CfnScheduledQueryProps {
      * Error reports will be generated when a problem is encountered when writing the query results.
      */
     override fun errorReportConfiguration(errorReportConfiguration: IResolvable) {
-      cdkBuilder.errorReportConfiguration(errorReportConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.errorReportConfiguration(errorReportConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -375,7 +375,7 @@ public interface CfnScheduledQueryProps {
      */
     override
         fun errorReportConfiguration(errorReportConfiguration: CfnScheduledQuery.ErrorReportConfigurationProperty) {
-      cdkBuilder.errorReportConfiguration(errorReportConfiguration.let(CfnScheduledQuery.ErrorReportConfigurationProperty::unwrap))
+      cdkBuilder.errorReportConfiguration(errorReportConfiguration.let(CfnScheduledQuery.ErrorReportConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -408,7 +408,7 @@ public interface CfnScheduledQueryProps {
      * when you delete it.
      */
     override fun notificationConfiguration(notificationConfiguration: IResolvable) {
-      cdkBuilder.notificationConfiguration(notificationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.notificationConfiguration(notificationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -418,7 +418,7 @@ public interface CfnScheduledQueryProps {
      */
     override
         fun notificationConfiguration(notificationConfiguration: CfnScheduledQuery.NotificationConfigurationProperty) {
-      cdkBuilder.notificationConfiguration(notificationConfiguration.let(CfnScheduledQuery.NotificationConfigurationProperty::unwrap))
+      cdkBuilder.notificationConfiguration(notificationConfiguration.let(CfnScheduledQuery.NotificationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -453,7 +453,7 @@ public interface CfnScheduledQueryProps {
      * @param scheduleConfiguration Schedule configuration. 
      */
     override fun scheduleConfiguration(scheduleConfiguration: IResolvable) {
-      cdkBuilder.scheduleConfiguration(scheduleConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.scheduleConfiguration(scheduleConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -461,7 +461,7 @@ public interface CfnScheduledQueryProps {
      */
     override
         fun scheduleConfiguration(scheduleConfiguration: CfnScheduledQuery.ScheduleConfigurationProperty) {
-      cdkBuilder.scheduleConfiguration(scheduleConfiguration.let(CfnScheduledQuery.ScheduleConfigurationProperty::unwrap))
+      cdkBuilder.scheduleConfiguration(scheduleConfiguration.let(CfnScheduledQuery.ScheduleConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -494,7 +494,7 @@ public interface CfnScheduledQueryProps {
      * @param tags A list of key-value pairs to label the scheduled query.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -506,7 +506,7 @@ public interface CfnScheduledQueryProps {
      * @param targetConfiguration Scheduled query target store configuration.
      */
     override fun targetConfiguration(targetConfiguration: IResolvable) {
-      cdkBuilder.targetConfiguration(targetConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.targetConfiguration(targetConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -514,7 +514,7 @@ public interface CfnScheduledQueryProps {
      */
     override
         fun targetConfiguration(targetConfiguration: CfnScheduledQuery.TargetConfigurationProperty) {
-      cdkBuilder.targetConfiguration(targetConfiguration.let(CfnScheduledQuery.TargetConfigurationProperty::unwrap))
+      cdkBuilder.targetConfiguration(targetConfiguration.let(CfnScheduledQuery.TargetConfigurationProperty.Companion::unwrap))
     }
 
     /**

@@ -46,8 +46,8 @@ public open class CfnModel(
     id: String,
     props: CfnModelProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.CfnModel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnModelProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.CfnModel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnModelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -104,7 +104,7 @@ public open class CfnModel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

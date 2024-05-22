@@ -94,8 +94,8 @@ public open class CfnLifecyclePolicy(
     id: String,
     props: CfnLifecyclePolicyProps,
   ) :
-      this(software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLifecyclePolicyProps::unwrap))
+      this(software.amazon.awscdk.services.imagebuilder.CfnLifecyclePolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLifecyclePolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -142,7 +142,7 @@ public open class CfnLifecyclePolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -166,7 +166,7 @@ public open class CfnLifecyclePolicy(
    * Configuration details for the lifecycle policy rules.
    */
   public open fun policyDetails(`value`: IResolvable) {
-    unwrap(this).setPolicyDetails(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPolicyDetails(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -190,14 +190,14 @@ public open class CfnLifecyclePolicy(
    * Selection criteria for the resources that the lifecycle policy applies to.
    */
   public open fun resourceSelection(`value`: IResolvable) {
-    unwrap(this).setResourceSelection(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResourceSelection(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Selection criteria for the resources that the lifecycle policy applies to.
    */
   public open fun resourceSelection(`value`: ResourceSelectionProperty) {
-    unwrap(this).setResourceSelection(`value`.let(ResourceSelectionProperty::unwrap))
+    unwrap(this).setResourceSelection(`value`.let(ResourceSelectionProperty.Companion::unwrap))
   }
 
   /**
@@ -399,7 +399,7 @@ public open class CfnLifecyclePolicy(
      * @param policyDetails Configuration details for the lifecycle policy rules. 
      */
     override fun policyDetails(policyDetails: IResolvable) {
-      cdkBuilder.policyDetails(policyDetails.let(IResolvable::unwrap))
+      cdkBuilder.policyDetails(policyDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -429,7 +429,7 @@ public open class CfnLifecyclePolicy(
      * applies to. 
      */
     override fun resourceSelection(resourceSelection: IResolvable) {
-      cdkBuilder.resourceSelection(resourceSelection.let(IResolvable::unwrap))
+      cdkBuilder.resourceSelection(resourceSelection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -440,7 +440,7 @@ public open class CfnLifecyclePolicy(
      * applies to. 
      */
     override fun resourceSelection(resourceSelection: ResourceSelectionProperty) {
-      cdkBuilder.resourceSelection(resourceSelection.let(ResourceSelectionProperty::unwrap))
+      cdkBuilder.resourceSelection(resourceSelection.let(ResourceSelectionProperty.Companion::unwrap))
     }
 
     /**
@@ -584,14 +584,14 @@ public open class CfnLifecyclePolicy(
        * @param includeResources Specifies the resources that the lifecycle policy applies to.
        */
       override fun includeResources(includeResources: IResolvable) {
-        cdkBuilder.includeResources(includeResources.let(IResolvable::unwrap))
+        cdkBuilder.includeResources(includeResources.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param includeResources Specifies the resources that the lifecycle policy applies to.
        */
       override fun includeResources(includeResources: IncludeResourcesProperty) {
-        cdkBuilder.includeResources(includeResources.let(IncludeResourcesProperty::unwrap))
+        cdkBuilder.includeResources(includeResources.let(IncludeResourcesProperty.Companion::unwrap))
       }
 
       /**
@@ -798,7 +798,7 @@ public open class CfnLifecyclePolicy(
        * @param isPublic Configures whether public AMIs are excluded from the lifecycle action.
        */
       override fun isPublic(isPublic: IResolvable) {
-        cdkBuilder.isPublic(isPublic.let(IResolvable::unwrap))
+        cdkBuilder.isPublic(isPublic.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -806,7 +806,7 @@ public open class CfnLifecyclePolicy(
        * recent resources from lifecycle actions.
        */
       override fun lastLaunched(lastLaunched: IResolvable) {
-        cdkBuilder.lastLaunched(lastLaunched.let(IResolvable::unwrap))
+        cdkBuilder.lastLaunched(lastLaunched.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -814,7 +814,7 @@ public open class CfnLifecyclePolicy(
        * recent resources from lifecycle actions.
        */
       override fun lastLaunched(lastLaunched: LastLaunchedProperty) {
-        cdkBuilder.lastLaunched(lastLaunched.let(LastLaunchedProperty::unwrap))
+        cdkBuilder.lastLaunched(lastLaunched.let(LastLaunchedProperty.Companion::unwrap))
       }
 
       /**
@@ -858,7 +858,7 @@ public open class CfnLifecyclePolicy(
        * have them.
        */
       override fun tagMap(tagMap: IResolvable) {
-        cdkBuilder.tagMap(tagMap.let(IResolvable::unwrap))
+        cdkBuilder.tagMap(tagMap.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1026,7 +1026,7 @@ public open class CfnLifecyclePolicy(
        * from the lifecycle action.
        */
       override fun amis(amis: IResolvable) {
-        cdkBuilder.amis(amis.let(IResolvable::unwrap))
+        cdkBuilder.amis(amis.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1034,7 +1034,7 @@ public open class CfnLifecyclePolicy(
        * from the lifecycle action.
        */
       override fun amis(amis: AmiExclusionRulesProperty) {
-        cdkBuilder.amis(amis.let(AmiExclusionRulesProperty::unwrap))
+        cdkBuilder.amis(amis.let(AmiExclusionRulesProperty.Companion::unwrap))
       }
 
       /**
@@ -1051,7 +1051,7 @@ public open class CfnLifecyclePolicy(
        * Image Builder image resources that have them.
        */
       override fun tagMap(tagMap: IResolvable) {
-        cdkBuilder.tagMap(tagMap.let(IResolvable::unwrap))
+        cdkBuilder.tagMap(tagMap.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1416,7 +1416,7 @@ public open class CfnLifecyclePolicy(
        * @param amis Specifies whether the lifecycle action should apply to distributed AMIs.
        */
       override fun amis(amis: IResolvable) {
-        cdkBuilder.amis(amis.let(IResolvable::unwrap))
+        cdkBuilder.amis(amis.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1432,7 +1432,7 @@ public open class CfnLifecyclePolicy(
        * containers.
        */
       override fun containers(containers: IResolvable) {
-        cdkBuilder.containers(containers.let(IResolvable::unwrap))
+        cdkBuilder.containers(containers.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1448,7 +1448,7 @@ public open class CfnLifecyclePolicy(
        * associated with distributed AMIs.
        */
       override fun snapshots(snapshots: IResolvable) {
-        cdkBuilder.snapshots(snapshots.let(IResolvable::unwrap))
+        cdkBuilder.snapshots(snapshots.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1765,14 +1765,14 @@ public open class CfnLifecyclePolicy(
        * @param action Configuration details for the policy action. 
        */
       override fun action(action: IResolvable) {
-        cdkBuilder.action(action.let(IResolvable::unwrap))
+        cdkBuilder.action(action.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param action Configuration details for the policy action. 
        */
       override fun action(action: ActionProperty) {
-        cdkBuilder.action(action.let(ActionProperty::unwrap))
+        cdkBuilder.action(action.let(ActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1788,7 +1788,7 @@ public open class CfnLifecyclePolicy(
        * policy actions.
        */
       override fun exclusionRules(exclusionRules: IResolvable) {
-        cdkBuilder.exclusionRules(exclusionRules.let(IResolvable::unwrap))
+        cdkBuilder.exclusionRules(exclusionRules.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1796,7 +1796,7 @@ public open class CfnLifecyclePolicy(
        * policy actions.
        */
       override fun exclusionRules(exclusionRules: ExclusionRulesProperty) {
-        cdkBuilder.exclusionRules(exclusionRules.let(ExclusionRulesProperty::unwrap))
+        cdkBuilder.exclusionRules(exclusionRules.let(ExclusionRulesProperty.Companion::unwrap))
       }
 
       /**
@@ -1812,14 +1812,14 @@ public open class CfnLifecyclePolicy(
        * @param filter Specifies the resources that the lifecycle policy applies to. 
        */
       override fun filter(filter: IResolvable) {
-        cdkBuilder.filter(filter.let(IResolvable::unwrap))
+        cdkBuilder.filter(filter.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param filter Specifies the resources that the lifecycle policy applies to. 
        */
       override fun filter(filter: FilterProperty) {
-        cdkBuilder.filter(filter.let(FilterProperty::unwrap))
+        cdkBuilder.filter(filter.let(FilterProperty.Companion::unwrap))
       }
 
       /**
@@ -2076,7 +2076,7 @@ public open class CfnLifecyclePolicy(
        * that the lifecycle policy applies to.
        */
       override fun recipes(recipes: IResolvable) {
-        cdkBuilder.recipes(recipes.let(IResolvable::unwrap))
+        cdkBuilder.recipes(recipes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2098,7 +2098,7 @@ public open class CfnLifecyclePolicy(
        * image resources that the lifecycle policy applies to.
        */
       override fun tagMap(tagMap: IResolvable) {
-        cdkBuilder.tagMap(tagMap.let(IResolvable::unwrap))
+        cdkBuilder.tagMap(tagMap.let(IResolvable.Companion::unwrap))
       }
 
       /**

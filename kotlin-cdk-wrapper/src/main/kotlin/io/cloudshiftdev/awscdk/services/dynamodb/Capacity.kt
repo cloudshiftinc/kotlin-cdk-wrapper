@@ -47,7 +47,7 @@ public abstract class Capacity(
 
   public companion object {
     public fun autoscaled(options: AutoscaledCapacityOptions): Capacity =
-        software.amazon.awscdk.services.dynamodb.Capacity.autoscaled(options.let(AutoscaledCapacityOptions::unwrap)).let(Capacity::wrap)
+        software.amazon.awscdk.services.dynamodb.Capacity.autoscaled(options.let(AutoscaledCapacityOptions.Companion::unwrap)).let(Capacity::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("96f6dbb03cf6826a48596492729e14be59467cc53d33e92c46267f599b4579ad")

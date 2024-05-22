@@ -320,7 +320,7 @@ public interface NetworkMultipleTargetGroupsEc2ServiceProps :
      * discovery.
      */
     override fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
-      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions::unwrap))
+      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions.Companion::unwrap))
     }
 
     /**
@@ -338,7 +338,7 @@ public interface NetworkMultipleTargetGroupsEc2ServiceProps :
      * both cluster and vpc.
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -382,14 +382,14 @@ public interface NetworkMultipleTargetGroupsEc2ServiceProps :
      * started.
      */
     override fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
-      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration::unwrap))
+      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param loadBalancers The network load balancer that will serve traffic to the service.
      */
     override fun loadBalancers(loadBalancers: List<NetworkLoadBalancerProps>) {
-      cdkBuilder.loadBalancers(loadBalancers.map(NetworkLoadBalancerProps::unwrap))
+      cdkBuilder.loadBalancers(loadBalancers.map(NetworkLoadBalancerProps.Companion::unwrap))
     }
 
     /**
@@ -432,7 +432,7 @@ public interface NetworkMultipleTargetGroupsEc2ServiceProps :
      * Constraints](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html).
      */
     override fun placementConstraints(placementConstraints: List<PlacementConstraint>) {
-      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint::unwrap))
+      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint.Companion::unwrap))
     }
 
     /**
@@ -451,7 +451,7 @@ public interface NetworkMultipleTargetGroupsEc2ServiceProps :
      * Strategies](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-strategies.html).
      */
     override fun placementStrategies(placementStrategies: List<PlacementStrategy>) {
-      cdkBuilder.placementStrategies(placementStrategies.map(PlacementStrategy::unwrap))
+      cdkBuilder.placementStrategies(placementStrategies.map(PlacementStrategy.Companion::unwrap))
     }
 
     /**
@@ -469,7 +469,7 @@ public interface NetworkMultipleTargetGroupsEc2ServiceProps :
      * Tags can only be propagated to the tasks within the service during service creation.
      */
     override fun propagateTags(propagateTags: PropagatedTagSource) {
-      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource.Companion::unwrap))
     }
 
     /**
@@ -483,7 +483,7 @@ public interface NetworkMultipleTargetGroupsEc2ServiceProps :
      * @param targetGroups Properties to specify NLB target groups.
      */
     override fun targetGroups(targetGroups: List<NetworkTargetProps>) {
-      cdkBuilder.targetGroups(targetGroups.map(NetworkTargetProps::unwrap))
+      cdkBuilder.targetGroups(targetGroups.map(NetworkTargetProps.Companion::unwrap))
     }
 
     /**
@@ -498,7 +498,7 @@ public interface NetworkMultipleTargetGroupsEc2ServiceProps :
      * [disable-awslint:ref-via-interface]
      */
     override fun taskDefinition(taskDefinition: Ec2TaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(Ec2TaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(Ec2TaskDefinition.Companion::unwrap))
     }
 
     /**
@@ -506,7 +506,7 @@ public interface NetworkMultipleTargetGroupsEc2ServiceProps :
      * Only one of TaskDefinition or TaskImageOptions must be specified.
      */
     override fun taskImageOptions(taskImageOptions: NetworkLoadBalancedTaskImageProps) {
-      cdkBuilder.taskImageOptions(taskImageOptions.let(NetworkLoadBalancedTaskImageProps::unwrap))
+      cdkBuilder.taskImageOptions(taskImageOptions.let(NetworkLoadBalancedTaskImageProps.Companion::unwrap))
     }
 
     /**
@@ -526,7 +526,7 @@ public interface NetworkMultipleTargetGroupsEc2ServiceProps :
      * both vpc and cluster.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build():

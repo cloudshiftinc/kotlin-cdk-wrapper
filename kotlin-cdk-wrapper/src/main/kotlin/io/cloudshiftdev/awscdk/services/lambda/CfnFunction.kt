@@ -147,8 +147,8 @@ public open class CfnFunction(
     id: String,
     props: CfnFunctionProps,
   ) :
-      this(software.amazon.awscdk.services.lambda.CfnFunction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFunctionProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.CfnFunction(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFunctionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -211,14 +211,14 @@ public open class CfnFunction(
    * The code for the function.
    */
   public open fun code(`value`: IResolvable) {
-    unwrap(this).setCode(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCode(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The code for the function.
    */
   public open fun code(`value`: CodeProperty) {
-    unwrap(this).setCode(`value`.let(CodeProperty::unwrap))
+    unwrap(this).setCode(`value`.let(CodeProperty.Companion::unwrap))
   }
 
   /**
@@ -251,7 +251,7 @@ public open class CfnFunction(
    * asynchronous events when they fail processing.
    */
   public open fun deadLetterConfig(`value`: IResolvable) {
-    unwrap(this).setDeadLetterConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeadLetterConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -259,7 +259,7 @@ public open class CfnFunction(
    * asynchronous events when they fail processing.
    */
   public open fun deadLetterConfig(`value`: DeadLetterConfigProperty) {
-    unwrap(this).setDeadLetterConfig(`value`.let(DeadLetterConfigProperty::unwrap))
+    unwrap(this).setDeadLetterConfig(`value`.let(DeadLetterConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -292,14 +292,14 @@ public open class CfnFunction(
    * Environment variables that are accessible from function code during execution.
    */
   public open fun environment(`value`: IResolvable) {
-    unwrap(this).setEnvironment(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnvironment(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Environment variables that are accessible from function code during execution.
    */
   public open fun environment(`value`: EnvironmentProperty) {
-    unwrap(this).setEnvironment(`value`.let(EnvironmentProperty::unwrap))
+    unwrap(this).setEnvironment(`value`.let(EnvironmentProperty.Companion::unwrap))
   }
 
   /**
@@ -319,14 +319,14 @@ public open class CfnFunction(
    * The size of the function's `/tmp` directory in MB.
    */
   public open fun ephemeralStorage(`value`: IResolvable) {
-    unwrap(this).setEphemeralStorage(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEphemeralStorage(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The size of the function's `/tmp` directory in MB.
    */
   public open fun ephemeralStorage(`value`: EphemeralStorageProperty) {
-    unwrap(this).setEphemeralStorage(`value`.let(EphemeralStorageProperty::unwrap))
+    unwrap(this).setEphemeralStorage(`value`.let(EphemeralStorageProperty.Companion::unwrap))
   }
 
   /**
@@ -346,7 +346,7 @@ public open class CfnFunction(
    * Connection settings for an Amazon EFS file system.
    */
   public open fun fileSystemConfigs(`value`: IResolvable) {
-    unwrap(this).setFileSystemConfigs(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFileSystemConfigs(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -394,14 +394,14 @@ public open class CfnFunction(
    * Configuration values that override the container image Dockerfile settings.
    */
   public open fun imageConfig(`value`: IResolvable) {
-    unwrap(this).setImageConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setImageConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration values that override the container image Dockerfile settings.
    */
   public open fun imageConfig(`value`: ImageConfigProperty) {
-    unwrap(this).setImageConfig(`value`.let(ImageConfigProperty::unwrap))
+    unwrap(this).setImageConfig(`value`.let(ImageConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -418,7 +418,7 @@ public open class CfnFunction(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -481,14 +481,14 @@ public open class CfnFunction(
    * The function's Amazon CloudWatch Logs configuration settings.
    */
   public open fun loggingConfig(`value`: IResolvable) {
-    unwrap(this).setLoggingConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoggingConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The function's Amazon CloudWatch Logs configuration settings.
    */
   public open fun loggingConfig(`value`: LoggingConfigProperty) {
-    unwrap(this).setLoggingConfig(`value`.let(LoggingConfigProperty::unwrap))
+    unwrap(this).setLoggingConfig(`value`.let(LoggingConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -583,14 +583,14 @@ public open class CfnFunction(
    * Sets the runtime management configuration for a function's version.
    */
   public open fun runtimeManagementConfig(`value`: IResolvable) {
-    unwrap(this).setRuntimeManagementConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRuntimeManagementConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Sets the runtime management configuration for a function's version.
    */
   public open fun runtimeManagementConfig(`value`: RuntimeManagementConfigProperty) {
-    unwrap(this).setRuntimeManagementConfig(`value`.let(RuntimeManagementConfigProperty::unwrap))
+    unwrap(this).setRuntimeManagementConfig(`value`.let(RuntimeManagementConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -613,7 +613,7 @@ public open class CfnFunction(
    * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting.
    */
   public open fun snapStart(`value`: IResolvable) {
-    unwrap(this).setSnapStart(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSnapStart(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -621,7 +621,7 @@ public open class CfnFunction(
    * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting.
    */
   public open fun snapStart(`value`: SnapStartProperty) {
-    unwrap(this).setSnapStart(`value`.let(SnapStartProperty::unwrap))
+    unwrap(this).setSnapStart(`value`.let(SnapStartProperty.Companion::unwrap))
   }
 
   /**
@@ -650,7 +650,7 @@ public open class CfnFunction(
    * function.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -682,7 +682,7 @@ public open class CfnFunction(
    * [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) .
    */
   public open fun tracingConfig(`value`: IResolvable) {
-    unwrap(this).setTracingConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTracingConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -690,7 +690,7 @@ public open class CfnFunction(
    * [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) .
    */
   public open fun tracingConfig(`value`: TracingConfigProperty) {
-    unwrap(this).setTracingConfig(`value`.let(TracingConfigProperty::unwrap))
+    unwrap(this).setTracingConfig(`value`.let(TracingConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -713,7 +713,7 @@ public open class CfnFunction(
    * subnets in the VPC.
    */
   public open fun vpcConfig(`value`: IResolvable) {
-    unwrap(this).setVpcConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -721,7 +721,7 @@ public open class CfnFunction(
    * subnets in the VPC.
    */
   public open fun vpcConfig(`value`: VpcConfigProperty) {
-    unwrap(this).setVpcConfig(`value`.let(VpcConfigProperty::unwrap))
+    unwrap(this).setVpcConfig(`value`.let(VpcConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -1384,7 +1384,7 @@ public open class CfnFunction(
      * @param code The code for the function. 
      */
     override fun code(code: IResolvable) {
-      cdkBuilder.code(code.let(IResolvable::unwrap))
+      cdkBuilder.code(code.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1394,7 +1394,7 @@ public open class CfnFunction(
      * @param code The code for the function. 
      */
     override fun code(code: CodeProperty) {
-      cdkBuilder.code(code.let(CodeProperty::unwrap))
+      cdkBuilder.code(code.let(CodeProperty.Companion::unwrap))
     }
 
     /**
@@ -1433,7 +1433,7 @@ public open class CfnFunction(
      * where Lambda sends asynchronous events when they fail processing. 
      */
     override fun deadLetterConfig(deadLetterConfig: IResolvable) {
-      cdkBuilder.deadLetterConfig(deadLetterConfig.let(IResolvable::unwrap))
+      cdkBuilder.deadLetterConfig(deadLetterConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1448,7 +1448,7 @@ public open class CfnFunction(
      * where Lambda sends asynchronous events when they fail processing. 
      */
     override fun deadLetterConfig(deadLetterConfig: DeadLetterConfigProperty) {
-      cdkBuilder.deadLetterConfig(deadLetterConfig.let(DeadLetterConfigProperty::unwrap))
+      cdkBuilder.deadLetterConfig(deadLetterConfig.let(DeadLetterConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1485,7 +1485,7 @@ public open class CfnFunction(
      * execution. 
      */
     override fun environment(environment: IResolvable) {
-      cdkBuilder.environment(environment.let(IResolvable::unwrap))
+      cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1496,7 +1496,7 @@ public open class CfnFunction(
      * execution. 
      */
     override fun environment(environment: EnvironmentProperty) {
-      cdkBuilder.environment(environment.let(EnvironmentProperty::unwrap))
+      cdkBuilder.environment(environment.let(EnvironmentProperty.Companion::unwrap))
     }
 
     /**
@@ -1520,7 +1520,7 @@ public open class CfnFunction(
      * @param ephemeralStorage The size of the function's `/tmp` directory in MB. 
      */
     override fun ephemeralStorage(ephemeralStorage: IResolvable) {
-      cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable::unwrap))
+      cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1532,7 +1532,7 @@ public open class CfnFunction(
      * @param ephemeralStorage The size of the function's `/tmp` directory in MB. 
      */
     override fun ephemeralStorage(ephemeralStorage: EphemeralStorageProperty) {
-      cdkBuilder.ephemeralStorage(ephemeralStorage.let(EphemeralStorageProperty::unwrap))
+      cdkBuilder.ephemeralStorage(ephemeralStorage.let(EphemeralStorageProperty.Companion::unwrap))
     }
 
     /**
@@ -1565,7 +1565,7 @@ public open class CfnFunction(
      * @param fileSystemConfigs Connection settings for an Amazon EFS file system. 
      */
     override fun fileSystemConfigs(fileSystemConfigs: IResolvable) {
-      cdkBuilder.fileSystemConfigs(fileSystemConfigs.let(IResolvable::unwrap))
+      cdkBuilder.fileSystemConfigs(fileSystemConfigs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1650,7 +1650,7 @@ public open class CfnFunction(
      * settings. 
      */
     override fun imageConfig(imageConfig: IResolvable) {
-      cdkBuilder.imageConfig(imageConfig.let(IResolvable::unwrap))
+      cdkBuilder.imageConfig(imageConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1664,7 +1664,7 @@ public open class CfnFunction(
      * settings. 
      */
     override fun imageConfig(imageConfig: ImageConfigProperty) {
-      cdkBuilder.imageConfig(imageConfig.let(ImageConfigProperty::unwrap))
+      cdkBuilder.imageConfig(imageConfig.let(ImageConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1741,7 +1741,7 @@ public open class CfnFunction(
      * @param loggingConfig The function's Amazon CloudWatch Logs configuration settings. 
      */
     override fun loggingConfig(loggingConfig: IResolvable) {
-      cdkBuilder.loggingConfig(loggingConfig.let(IResolvable::unwrap))
+      cdkBuilder.loggingConfig(loggingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1751,7 +1751,7 @@ public open class CfnFunction(
      * @param loggingConfig The function's Amazon CloudWatch Logs configuration settings. 
      */
     override fun loggingConfig(loggingConfig: LoggingConfigProperty) {
-      cdkBuilder.loggingConfig(loggingConfig.let(LoggingConfigProperty::unwrap))
+      cdkBuilder.loggingConfig(loggingConfig.let(LoggingConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1848,7 +1848,7 @@ public open class CfnFunction(
      * version. 
      */
     override fun runtimeManagementConfig(runtimeManagementConfig: IResolvable) {
-      cdkBuilder.runtimeManagementConfig(runtimeManagementConfig.let(IResolvable::unwrap))
+      cdkBuilder.runtimeManagementConfig(runtimeManagementConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1862,7 +1862,7 @@ public open class CfnFunction(
      * version. 
      */
     override fun runtimeManagementConfig(runtimeManagementConfig: RuntimeManagementConfigProperty) {
-      cdkBuilder.runtimeManagementConfig(runtimeManagementConfig.let(RuntimeManagementConfigProperty::unwrap))
+      cdkBuilder.runtimeManagementConfig(runtimeManagementConfig.let(RuntimeManagementConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1890,7 +1890,7 @@ public open class CfnFunction(
      * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting. 
      */
     override fun snapStart(snapStart: IResolvable) {
-      cdkBuilder.snapStart(snapStart.let(IResolvable::unwrap))
+      cdkBuilder.snapStart(snapStart.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1902,7 +1902,7 @@ public open class CfnFunction(
      * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting. 
      */
     override fun snapStart(snapStart: SnapStartProperty) {
-      cdkBuilder.snapStart(snapStart.let(SnapStartProperty::unwrap))
+      cdkBuilder.snapStart(snapStart.let(SnapStartProperty.Companion::unwrap))
     }
 
     /**
@@ -1927,7 +1927,7 @@ public open class CfnFunction(
      * apply to the function. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1964,7 +1964,7 @@ public open class CfnFunction(
      * with [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) . 
      */
     override fun tracingConfig(tracingConfig: IResolvable) {
-      cdkBuilder.tracingConfig(tracingConfig.let(IResolvable::unwrap))
+      cdkBuilder.tracingConfig(tracingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1976,7 +1976,7 @@ public open class CfnFunction(
      * with [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) . 
      */
     override fun tracingConfig(tracingConfig: TracingConfigProperty) {
-      cdkBuilder.tracingConfig(tracingConfig.let(TracingConfigProperty::unwrap))
+      cdkBuilder.tracingConfig(tracingConfig.let(TracingConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -2005,7 +2005,7 @@ public open class CfnFunction(
      * security groups and subnets in the VPC. 
      */
     override fun vpcConfig(vpcConfig: IResolvable) {
-      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2021,7 +2021,7 @@ public open class CfnFunction(
      * security groups and subnets in the VPC. 
      */
     override fun vpcConfig(vpcConfig: VpcConfigProperty) {
-      cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -2479,7 +2479,7 @@ public open class CfnFunction(
        * variables](https://docs.aws.amazon.com/lambda/latest/dg/configuration-envvars.html) .
        */
       override fun variables(variables: IResolvable) {
-        cdkBuilder.variables(variables.let(IResolvable::unwrap))
+        cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3726,7 +3726,7 @@ public open class CfnFunction(
        * connected to dual-stack subnets.
        */
       override fun ipv6AllowedForDualStack(ipv6AllowedForDualStack: IResolvable) {
-        cdkBuilder.ipv6AllowedForDualStack(ipv6AllowedForDualStack.let(IResolvable::unwrap))
+        cdkBuilder.ipv6AllowedForDualStack(ipv6AllowedForDualStack.let(IResolvable.Companion::unwrap))
       }
 
       /**

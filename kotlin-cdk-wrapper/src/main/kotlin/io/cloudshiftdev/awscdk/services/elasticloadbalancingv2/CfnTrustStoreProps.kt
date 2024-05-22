@@ -150,7 +150,7 @@ public interface CfnTrustStoreProps {
      * @param tags The tags to assign to the trust store.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

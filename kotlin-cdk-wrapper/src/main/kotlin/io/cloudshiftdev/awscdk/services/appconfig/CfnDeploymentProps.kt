@@ -240,7 +240,7 @@ public interface CfnDeploymentProps {
      * pass to associated extensions with `PRE_START_DEPLOYMENT` actions.
      */
     override fun dynamicExtensionParameters(dynamicExtensionParameters: IResolvable) {
-      cdkBuilder.dynamicExtensionParameters(dynamicExtensionParameters.let(IResolvable::unwrap))
+      cdkBuilder.dynamicExtensionParameters(dynamicExtensionParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -279,7 +279,7 @@ public interface CfnDeploymentProps {
      * and an optional value, both of which you define.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

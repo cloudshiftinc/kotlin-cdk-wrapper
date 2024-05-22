@@ -255,7 +255,7 @@ public interface CfnRemediationConfigurationProps {
      * @param automatic The remediation is triggered automatically.
      */
     override fun automatic(automatic: IResolvable) {
-      cdkBuilder.automatic(automatic.let(IResolvable::unwrap))
+      cdkBuilder.automatic(automatic.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -269,7 +269,7 @@ public interface CfnRemediationConfigurationProps {
      * @param executionControls An ExecutionControls object.
      */
     override fun executionControls(executionControls: IResolvable) {
-      cdkBuilder.executionControls(executionControls.let(IResolvable::unwrap))
+      cdkBuilder.executionControls(executionControls.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -277,7 +277,7 @@ public interface CfnRemediationConfigurationProps {
      */
     override
         fun executionControls(executionControls: CfnRemediationConfiguration.ExecutionControlsProperty) {
-      cdkBuilder.executionControls(executionControls.let(CfnRemediationConfiguration.ExecutionControlsProperty::unwrap))
+      cdkBuilder.executionControls(executionControls.let(CfnRemediationConfiguration.ExecutionControlsProperty.Companion::unwrap))
     }
 
     /**

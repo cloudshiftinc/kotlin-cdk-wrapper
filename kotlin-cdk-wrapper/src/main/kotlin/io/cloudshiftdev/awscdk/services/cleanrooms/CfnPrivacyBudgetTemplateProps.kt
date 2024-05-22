@@ -175,7 +175,7 @@ public interface CfnPrivacyBudgetTemplateProps {
      * 
      */
     override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -183,7 +183,7 @@ public interface CfnPrivacyBudgetTemplateProps {
      * 
      */
     override fun parameters(parameters: CfnPrivacyBudgetTemplate.ParametersProperty) {
-      cdkBuilder.parameters(parameters.let(CfnPrivacyBudgetTemplate.ParametersProperty::unwrap))
+      cdkBuilder.parameters(parameters.let(CfnPrivacyBudgetTemplate.ParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -208,7 +208,7 @@ public interface CfnPrivacyBudgetTemplateProps {
      * template.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

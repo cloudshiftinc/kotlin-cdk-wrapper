@@ -85,8 +85,8 @@ public open class CfnScraper(
     id: String,
     props: CfnScraperProps,
   ) :
-      this(software.amazon.awscdk.services.aps.CfnScraper(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnScraperProps::unwrap))
+      this(software.amazon.awscdk.services.aps.CfnScraper(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnScraperProps.Companion::unwrap))
   )
 
   public constructor(
@@ -146,14 +146,14 @@ public open class CfnScraper(
    * The Amazon Managed Service for Prometheus workspace the scraper sends metrics to.
    */
   public open fun destination(`value`: IResolvable) {
-    unwrap(this).setDestination(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDestination(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The Amazon Managed Service for Prometheus workspace the scraper sends metrics to.
    */
   public open fun destination(`value`: DestinationProperty) {
-    unwrap(this).setDestination(`value`.let(DestinationProperty::unwrap))
+    unwrap(this).setDestination(`value`.let(DestinationProperty.Companion::unwrap))
   }
 
   /**
@@ -170,7 +170,7 @@ public open class CfnScraper(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -182,14 +182,14 @@ public open class CfnScraper(
    * The configuration in use by the scraper.
    */
   public open fun scrapeConfiguration(`value`: IResolvable) {
-    unwrap(this).setScrapeConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setScrapeConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration in use by the scraper.
    */
   public open fun scrapeConfiguration(`value`: ScrapeConfigurationProperty) {
-    unwrap(this).setScrapeConfiguration(`value`.let(ScrapeConfigurationProperty::unwrap))
+    unwrap(this).setScrapeConfiguration(`value`.let(ScrapeConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -209,14 +209,14 @@ public open class CfnScraper(
    * The Amazon EKS cluster from which the scraper collects metrics.
    */
   public open fun source(`value`: IResolvable) {
-    unwrap(this).setSource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The Amazon EKS cluster from which the scraper collects metrics.
    */
   public open fun source(`value`: SourceProperty) {
-    unwrap(this).setSource(`value`.let(SourceProperty::unwrap))
+    unwrap(this).setSource(`value`.let(SourceProperty.Companion::unwrap))
   }
 
   /**
@@ -236,7 +236,7 @@ public open class CfnScraper(
    * (Optional) The list of tag keys and values associated with the scraper.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -381,7 +381,7 @@ public open class CfnScraper(
      * metrics to. 
      */
     override fun destination(destination: IResolvable) {
-      cdkBuilder.destination(destination.let(IResolvable::unwrap))
+      cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -392,7 +392,7 @@ public open class CfnScraper(
      * metrics to. 
      */
     override fun destination(destination: DestinationProperty) {
-      cdkBuilder.destination(destination.let(DestinationProperty::unwrap))
+      cdkBuilder.destination(destination.let(DestinationProperty.Companion::unwrap))
     }
 
     /**
@@ -414,7 +414,7 @@ public open class CfnScraper(
      * @param scrapeConfiguration The configuration in use by the scraper. 
      */
     override fun scrapeConfiguration(scrapeConfiguration: IResolvable) {
-      cdkBuilder.scrapeConfiguration(scrapeConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.scrapeConfiguration(scrapeConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -424,7 +424,7 @@ public open class CfnScraper(
      * @param scrapeConfiguration The configuration in use by the scraper. 
      */
     override fun scrapeConfiguration(scrapeConfiguration: ScrapeConfigurationProperty) {
-      cdkBuilder.scrapeConfiguration(scrapeConfiguration.let(ScrapeConfigurationProperty::unwrap))
+      cdkBuilder.scrapeConfiguration(scrapeConfiguration.let(ScrapeConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -446,7 +446,7 @@ public open class CfnScraper(
      * @param source The Amazon EKS cluster from which the scraper collects metrics. 
      */
     override fun source(source: IResolvable) {
-      cdkBuilder.source(source.let(IResolvable::unwrap))
+      cdkBuilder.source(source.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -456,7 +456,7 @@ public open class CfnScraper(
      * @param source The Amazon EKS cluster from which the scraper collects metrics. 
      */
     override fun source(source: SourceProperty) {
-      cdkBuilder.source(source.let(SourceProperty::unwrap))
+      cdkBuilder.source(source.let(SourceProperty.Companion::unwrap))
     }
 
     /**
@@ -477,7 +477,7 @@ public open class CfnScraper(
      * @param tags (Optional) The list of tag keys and values associated with the scraper. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -654,7 +654,7 @@ public open class CfnScraper(
        * to. 
        */
       override fun ampConfiguration(ampConfiguration: IResolvable) {
-        cdkBuilder.ampConfiguration(ampConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.ampConfiguration(ampConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -662,7 +662,7 @@ public open class CfnScraper(
        * to. 
        */
       override fun ampConfiguration(ampConfiguration: AmpConfigurationProperty) {
-        cdkBuilder.ampConfiguration(ampConfiguration.let(AmpConfigurationProperty::unwrap))
+        cdkBuilder.ampConfiguration(ampConfiguration.let(AmpConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1012,14 +1012,14 @@ public open class CfnScraper(
        * @param eksConfiguration The Amazon EKS cluster from which a scraper collects metrics. 
        */
       override fun eksConfiguration(eksConfiguration: IResolvable) {
-        cdkBuilder.eksConfiguration(eksConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.eksConfiguration(eksConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param eksConfiguration The Amazon EKS cluster from which a scraper collects metrics. 
        */
       override fun eksConfiguration(eksConfiguration: EksConfigurationProperty) {
-        cdkBuilder.eksConfiguration(eksConfiguration.let(EksConfigurationProperty::unwrap))
+        cdkBuilder.eksConfiguration(eksConfiguration.let(EksConfigurationProperty.Companion::unwrap))
       }
 
       /**

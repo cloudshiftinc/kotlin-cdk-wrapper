@@ -76,7 +76,7 @@ public interface IEcsFargateContainerDefinition : IEcsContainerDefinition {
      * @param volume 
      */
     override fun addVolume(volume: EcsVolume) {
-      unwrap(this).addVolume(volume.let(EcsVolume::unwrap))
+      unwrap(this).addVolume(volume.let(EcsVolume.Companion::unwrap))
     }
 
     /**

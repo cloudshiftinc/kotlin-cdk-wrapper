@@ -173,7 +173,7 @@ public interface CfnBillingGroupProps {
      * The set of accounts resemble the linked accounts in a consolidated billing family.
      */
     override fun accountGrouping(accountGrouping: IResolvable) {
-      cdkBuilder.accountGrouping(accountGrouping.let(IResolvable::unwrap))
+      cdkBuilder.accountGrouping(accountGrouping.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -181,7 +181,7 @@ public interface CfnBillingGroupProps {
      * The set of accounts resemble the linked accounts in a consolidated billing family.
      */
     override fun accountGrouping(accountGrouping: CfnBillingGroup.AccountGroupingProperty) {
-      cdkBuilder.accountGrouping(accountGrouping.let(CfnBillingGroup.AccountGroupingProperty::unwrap))
+      cdkBuilder.accountGrouping(accountGrouping.let(CfnBillingGroup.AccountGroupingProperty.Companion::unwrap))
     }
 
     /**
@@ -199,7 +199,7 @@ public interface CfnBillingGroupProps {
      * AWS charges for a billing group. 
      */
     override fun computationPreference(computationPreference: IResolvable) {
-      cdkBuilder.computationPreference(computationPreference.let(IResolvable::unwrap))
+      cdkBuilder.computationPreference(computationPreference.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -208,7 +208,7 @@ public interface CfnBillingGroupProps {
      */
     override
         fun computationPreference(computationPreference: CfnBillingGroup.ComputationPreferenceProperty) {
-      cdkBuilder.computationPreference(computationPreference.let(CfnBillingGroup.ComputationPreferenceProperty::unwrap))
+      cdkBuilder.computationPreference(computationPreference.let(CfnBillingGroup.ComputationPreferenceProperty.Companion::unwrap))
     }
 
     /**
@@ -247,7 +247,7 @@ public interface CfnBillingGroupProps {
      * @param tags A map that contains tag keys and tag values that are attached to a billing group.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

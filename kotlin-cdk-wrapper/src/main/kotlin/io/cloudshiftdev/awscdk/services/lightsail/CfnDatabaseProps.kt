@@ -505,7 +505,7 @@ public interface CfnDatabaseProps {
      * `BackupRetention` is set to `true` .
      */
     override fun backupRetention(backupRetention: IResolvable) {
-      cdkBuilder.backupRetention(backupRetention.let(IResolvable::unwrap))
+      cdkBuilder.backupRetention(backupRetention.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -640,7 +640,7 @@ public interface CfnDatabaseProps {
      * anyone on the internet.
      */
     override fun publiclyAccessible(publiclyAccessible: IResolvable) {
-      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
+      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -670,7 +670,7 @@ public interface CfnDatabaseProps {
      * @param relationalDatabaseParameters An array of parameters for the database.
      */
     override fun relationalDatabaseParameters(relationalDatabaseParameters: IResolvable) {
-      cdkBuilder.relationalDatabaseParameters(relationalDatabaseParameters.let(IResolvable::unwrap))
+      cdkBuilder.relationalDatabaseParameters(relationalDatabaseParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -705,7 +705,7 @@ public interface CfnDatabaseProps {
      * the same template.
      */
     override fun rotateMasterUserPassword(rotateMasterUserPassword: IResolvable) {
-      cdkBuilder.rotateMasterUserPassword(rotateMasterUserPassword.let(IResolvable::unwrap))
+      cdkBuilder.rotateMasterUserPassword(rotateMasterUserPassword.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -718,7 +718,7 @@ public interface CfnDatabaseProps {
      * The `Value` of `Tags` is optional for Lightsail resources.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

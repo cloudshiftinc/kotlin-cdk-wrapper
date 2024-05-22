@@ -58,8 +58,8 @@ public open class CfnStorageConfiguration(
     id: String,
     props: CfnStorageConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.ivs.CfnStorageConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStorageConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.ivs.CfnStorageConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStorageConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -88,7 +88,7 @@ public open class CfnStorageConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -112,14 +112,14 @@ public open class CfnStorageConfiguration(
    * An S3 storage configuration contains information about where recorded video will be stored.
    */
   public open fun s3(`value`: IResolvable) {
-    unwrap(this).setS3(`value`.let(IResolvable::unwrap))
+    unwrap(this).setS3(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An S3 storage configuration contains information about where recorded video will be stored.
    */
   public open fun s3(`value`: S3StorageConfigurationProperty) {
-    unwrap(this).setS3(`value`.let(S3StorageConfigurationProperty::unwrap))
+    unwrap(this).setS3(`value`.let(S3StorageConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -139,7 +139,7 @@ public open class CfnStorageConfiguration(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -255,7 +255,7 @@ public open class CfnStorageConfiguration(
      * stored. 
      */
     override fun s3(s3: IResolvable) {
-      cdkBuilder.s3(s3.let(IResolvable::unwrap))
+      cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -270,7 +270,7 @@ public open class CfnStorageConfiguration(
      * stored. 
      */
     override fun s3(s3: S3StorageConfigurationProperty) {
-      cdkBuilder.s3(s3.let(S3StorageConfigurationProperty::unwrap))
+      cdkBuilder.s3(s3.let(S3StorageConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -300,7 +300,7 @@ public open class CfnStorageConfiguration(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

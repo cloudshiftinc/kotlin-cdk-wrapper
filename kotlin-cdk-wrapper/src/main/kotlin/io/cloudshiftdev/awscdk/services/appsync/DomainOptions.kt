@@ -85,7 +85,7 @@ public interface DomainOptions {
      * @param certificate The certificate to use with the domain name. 
      */
     override fun certificate(certificate: ICertificate) {
-      cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
+      cdkBuilder.certificate(certificate.let(ICertificate.Companion::unwrap))
     }
 
     /**

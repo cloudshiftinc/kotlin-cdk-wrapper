@@ -102,7 +102,7 @@ public interface ServiceConnectProps {
      * @param logDriver The log driver configuration to use for the Service Connect agent logs.
      */
     override fun logDriver(logDriver: LogDriver) {
-      cdkBuilder.logDriver(logDriver.let(LogDriver::unwrap))
+      cdkBuilder.logDriver(logDriver.let(LogDriver.Companion::unwrap))
     }
 
     /**
@@ -119,7 +119,7 @@ public interface ServiceConnectProps {
      * ports via Service Connect.
      */
     override fun services(services: List<ServiceConnectService>) {
-      cdkBuilder.services(services.map(ServiceConnectService::unwrap))
+      cdkBuilder.services(services.map(ServiceConnectService.Companion::unwrap))
     }
 
     /**

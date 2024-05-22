@@ -378,7 +378,7 @@ public interface CfnImageBuilderProps {
      * Administrators can connect to the image builder only through the specified endpoints.
      */
     override fun accessEndpoints(accessEndpoints: IResolvable) {
-      cdkBuilder.accessEndpoints(accessEndpoints.let(IResolvable::unwrap))
+      cdkBuilder.accessEndpoints(accessEndpoints.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -423,7 +423,7 @@ public interface CfnImageBuilderProps {
      * the image builder to a Microsoft Active Directory domain.
      */
     override fun domainJoinInfo(domainJoinInfo: IResolvable) {
-      cdkBuilder.domainJoinInfo(domainJoinInfo.let(IResolvable::unwrap))
+      cdkBuilder.domainJoinInfo(domainJoinInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -431,7 +431,7 @@ public interface CfnImageBuilderProps {
      * the image builder to a Microsoft Active Directory domain.
      */
     override fun domainJoinInfo(domainJoinInfo: CfnImageBuilder.DomainJoinInfoProperty) {
-      cdkBuilder.domainJoinInfo(domainJoinInfo.let(CfnImageBuilder.DomainJoinInfoProperty::unwrap))
+      cdkBuilder.domainJoinInfo(domainJoinInfo.let(CfnImageBuilder.DomainJoinInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -457,7 +457,7 @@ public interface CfnImageBuilderProps {
      * builder.
      */
     override fun enableDefaultInternetAccess(enableDefaultInternetAccess: IResolvable) {
-      cdkBuilder.enableDefaultInternetAccess(enableDefaultInternetAccess.let(IResolvable::unwrap))
+      cdkBuilder.enableDefaultInternetAccess(enableDefaultInternetAccess.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -542,7 +542,7 @@ public interface CfnImageBuilderProps {
      * @param tags An array of key-value pairs.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -555,7 +555,7 @@ public interface CfnImageBuilderProps {
      * You can specify only one subnet.
      */
     override fun vpcConfig(vpcConfig: IResolvable) {
-      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -563,7 +563,7 @@ public interface CfnImageBuilderProps {
      * You can specify only one subnet.
      */
     override fun vpcConfig(vpcConfig: CfnImageBuilder.VpcConfigProperty) {
-      cdkBuilder.vpcConfig(vpcConfig.let(CfnImageBuilder.VpcConfigProperty::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(CfnImageBuilder.VpcConfigProperty.Companion::unwrap))
     }
 
     /**

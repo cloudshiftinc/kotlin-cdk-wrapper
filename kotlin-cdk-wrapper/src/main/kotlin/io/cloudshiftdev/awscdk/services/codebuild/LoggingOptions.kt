@@ -79,7 +79,7 @@ public interface LoggingOptions {
      * @param cloudWatch Information about Amazon CloudWatch Logs for a build project.
      */
     override fun cloudWatch(cloudWatch: CloudWatchLoggingOptions) {
-      cdkBuilder.cloudWatch(cloudWatch.let(CloudWatchLoggingOptions::unwrap))
+      cdkBuilder.cloudWatch(cloudWatch.let(CloudWatchLoggingOptions.Companion::unwrap))
     }
 
     /**
@@ -94,7 +94,7 @@ public interface LoggingOptions {
      * @param s3 Information about logs built to an S3 bucket for a build project.
      */
     override fun s3(s3: S3LoggingOptions) {
-      cdkBuilder.s3(s3.let(S3LoggingOptions::unwrap))
+      cdkBuilder.s3(s3.let(S3LoggingOptions.Companion::unwrap))
     }
 
     /**

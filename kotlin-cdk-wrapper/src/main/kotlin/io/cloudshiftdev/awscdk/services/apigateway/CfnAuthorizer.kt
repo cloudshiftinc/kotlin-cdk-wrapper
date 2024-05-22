@@ -50,8 +50,8 @@ public open class CfnAuthorizer(
     id: String,
     props: CfnAuthorizerProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.CfnAuthorizer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAuthorizerProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.CfnAuthorizer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAuthorizerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -148,7 +148,7 @@ public open class CfnAuthorizer(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

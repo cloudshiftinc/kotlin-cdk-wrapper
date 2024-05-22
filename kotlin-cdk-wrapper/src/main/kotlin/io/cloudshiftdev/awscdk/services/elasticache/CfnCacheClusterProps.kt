@@ -883,7 +883,7 @@ public interface CfnCacheClusterProps {
      * parameter is disabled for previous versions.
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1075,7 +1075,7 @@ public interface CfnCacheClusterProps {
      * @param logDeliveryConfigurations Specifies the destination, format and type of the logs.
      */
     override fun logDeliveryConfigurations(logDeliveryConfigurations: IResolvable) {
-      cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1286,7 +1286,7 @@ public interface CfnCacheClusterProps {
      * @param tags A list of tags to be added to this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1305,7 +1305,7 @@ public interface CfnCacheClusterProps {
      * @param transitEncryptionEnabled A flag that enables in-transit encryption when set to true.
      */
     override fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable) {
-      cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -182,7 +182,7 @@ public interface CfnMaintenanceWindowTargetProps {
      * You must specify targets by using the `WindowTargetIds` parameter.
      */
     override fun targets(targets: IResolvable) {
-      cdkBuilder.targets(targets.let(IResolvable::unwrap))
+      cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
     }
 
     /**

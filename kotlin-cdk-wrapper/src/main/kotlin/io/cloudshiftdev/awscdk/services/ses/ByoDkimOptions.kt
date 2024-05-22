@@ -77,7 +77,7 @@ public interface ByoDkimOptions {
      * @param privateKey The private key that's used to generate a DKIM signature. 
      */
     override fun privateKey(privateKey: SecretValue) {
-      cdkBuilder.privateKey(privateKey.let(SecretValue::unwrap))
+      cdkBuilder.privateKey(privateKey.let(SecretValue.Companion::unwrap))
     }
 
     /**

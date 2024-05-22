@@ -58,7 +58,7 @@ public interface DestinationOptions : S3DestinationOptions {
      * @param fileFormat The format for the flow log.
      */
     override fun fileFormat(fileFormat: FlowLogFileFormat) {
-      cdkBuilder.fileFormat(fileFormat.let(FlowLogFileFormat::unwrap))
+      cdkBuilder.fileFormat(fileFormat.let(FlowLogFileFormat.Companion::unwrap))
     }
 
     /**

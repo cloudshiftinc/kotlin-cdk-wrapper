@@ -39,8 +39,8 @@ public abstract class FlowLogDestination(
    * @param flowLog 
    */
   public open fun bind(scope: Construct, flowLog: FlowLog): FlowLogDestinationConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap),
-      flowLog.let(FlowLog::unwrap)).let(FlowLogDestinationConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      flowLog.let(FlowLog.Companion::unwrap)).let(FlowLogDestinationConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.FlowLogDestination,
@@ -51,11 +51,11 @@ public abstract class FlowLogDestination(
         software.amazon.awscdk.services.ec2.FlowLogDestination.toCloudWatchLogs().let(FlowLogDestination::wrap)
 
     public fun toCloudWatchLogs(logGroup: ILogGroup): FlowLogDestination =
-        software.amazon.awscdk.services.ec2.FlowLogDestination.toCloudWatchLogs(logGroup.let(ILogGroup::unwrap)).let(FlowLogDestination::wrap)
+        software.amazon.awscdk.services.ec2.FlowLogDestination.toCloudWatchLogs(logGroup.let(ILogGroup.Companion::unwrap)).let(FlowLogDestination::wrap)
 
     public fun toCloudWatchLogs(logGroup: ILogGroup, iamRole: IRole): FlowLogDestination =
-        software.amazon.awscdk.services.ec2.FlowLogDestination.toCloudWatchLogs(logGroup.let(ILogGroup::unwrap),
-        iamRole.let(IRole::unwrap)).let(FlowLogDestination::wrap)
+        software.amazon.awscdk.services.ec2.FlowLogDestination.toCloudWatchLogs(logGroup.let(ILogGroup.Companion::unwrap),
+        iamRole.let(IRole.Companion::unwrap)).let(FlowLogDestination::wrap)
 
     public fun toKinesisDataFirehoseDestination(deliveryStreamArn: String): FlowLogDestination =
         software.amazon.awscdk.services.ec2.FlowLogDestination.toKinesisDataFirehoseDestination(deliveryStreamArn).let(FlowLogDestination::wrap)
@@ -64,10 +64,10 @@ public abstract class FlowLogDestination(
         software.amazon.awscdk.services.ec2.FlowLogDestination.toS3().let(FlowLogDestination::wrap)
 
     public fun toS3(bucket: IBucket): FlowLogDestination =
-        software.amazon.awscdk.services.ec2.FlowLogDestination.toS3(bucket.let(IBucket::unwrap)).let(FlowLogDestination::wrap)
+        software.amazon.awscdk.services.ec2.FlowLogDestination.toS3(bucket.let(IBucket.Companion::unwrap)).let(FlowLogDestination::wrap)
 
     public fun toS3(bucket: IBucket, keyPrefix: String): FlowLogDestination =
-        software.amazon.awscdk.services.ec2.FlowLogDestination.toS3(bucket.let(IBucket::unwrap),
+        software.amazon.awscdk.services.ec2.FlowLogDestination.toS3(bucket.let(IBucket.Companion::unwrap),
         keyPrefix).let(FlowLogDestination::wrap)
 
     public fun toS3(
@@ -75,8 +75,9 @@ public abstract class FlowLogDestination(
       keyPrefix: String,
       options: S3DestinationOptions,
     ): FlowLogDestination =
-        software.amazon.awscdk.services.ec2.FlowLogDestination.toS3(bucket.let(IBucket::unwrap),
-        keyPrefix, options.let(S3DestinationOptions::unwrap)).let(FlowLogDestination::wrap)
+        software.amazon.awscdk.services.ec2.FlowLogDestination.toS3(bucket.let(IBucket.Companion::unwrap),
+        keyPrefix,
+        options.let(S3DestinationOptions.Companion::unwrap)).let(FlowLogDestination::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("69da5a41e3236503effbe0827193df601789cf0de6500d681257d51ba7c16be2")

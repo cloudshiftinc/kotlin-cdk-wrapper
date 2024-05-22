@@ -87,14 +87,14 @@ public interface CfnFlowTemplateProps {
      * @param definition the value to be set. 
      */
     override fun definition(definition: IResolvable) {
-      cdkBuilder.definition(definition.let(IResolvable::unwrap))
+      cdkBuilder.definition(definition.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param definition the value to be set. 
      */
     override fun definition(definition: CfnFlowTemplate.DefinitionDocumentProperty) {
-      cdkBuilder.definition(definition.let(CfnFlowTemplate.DefinitionDocumentProperty::unwrap))
+      cdkBuilder.definition(definition.let(CfnFlowTemplate.DefinitionDocumentProperty.Companion::unwrap))
     }
 
     /**

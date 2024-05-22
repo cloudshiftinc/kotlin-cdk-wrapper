@@ -300,14 +300,14 @@ public interface InstanceProps {
      * @param instanceType What type of instance to start for the replicas.
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**
      * @param parameterGroup The DB parameter group to associate with the instance.
      */
     override fun parameterGroup(parameterGroup: IParameterGroup) {
-      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup::unwrap))
+      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup.Companion::unwrap))
     }
 
     /**
@@ -324,7 +324,7 @@ public interface InstanceProps {
      * data.
      */
     override fun performanceInsightEncryptionKey(performanceInsightEncryptionKey: IKey) {
-      cdkBuilder.performanceInsightEncryptionKey(performanceInsightEncryptionKey.let(IKey::unwrap))
+      cdkBuilder.performanceInsightEncryptionKey(performanceInsightEncryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -333,7 +333,7 @@ public interface InstanceProps {
      */
     override
         fun performanceInsightRetention(performanceInsightRetention: PerformanceInsightRetention) {
-      cdkBuilder.performanceInsightRetention(performanceInsightRetention.let(PerformanceInsightRetention::unwrap))
+      cdkBuilder.performanceInsightRetention(performanceInsightRetention.let(PerformanceInsightRetention.Companion::unwrap))
     }
 
     /**
@@ -356,7 +356,7 @@ public interface InstanceProps {
      * @param securityGroups Security group.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -370,14 +370,14 @@ public interface InstanceProps {
      * Must be at least 2 subnets in two different AZs.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
      * @param vpcSubnets Where to place the instances within the VPC.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

@@ -68,8 +68,8 @@ public open class CfnVirtualRouter(
     id: String,
     props: CfnVirtualRouterProps,
   ) :
-      this(software.amazon.awscdk.services.appmesh.CfnVirtualRouter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVirtualRouterProps::unwrap))
+      this(software.amazon.awscdk.services.appmesh.CfnVirtualRouter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVirtualRouterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -128,7 +128,7 @@ public open class CfnVirtualRouter(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -164,14 +164,14 @@ public open class CfnVirtualRouter(
    * The virtual router specification to apply.
    */
   public open fun spec(`value`: IResolvable) {
-    unwrap(this).setSpec(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSpec(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The virtual router specification to apply.
    */
   public open fun spec(`value`: VirtualRouterSpecProperty) {
-    unwrap(this).setSpec(`value`.let(VirtualRouterSpecProperty::unwrap))
+    unwrap(this).setSpec(`value`.let(VirtualRouterSpecProperty.Companion::unwrap))
   }
 
   /**
@@ -199,7 +199,7 @@ public open class CfnVirtualRouter(
    * organization.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -348,7 +348,7 @@ public open class CfnVirtualRouter(
      * @param spec The virtual router specification to apply. 
      */
     override fun spec(spec: IResolvable) {
-      cdkBuilder.spec(spec.let(IResolvable::unwrap))
+      cdkBuilder.spec(spec.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -358,7 +358,7 @@ public open class CfnVirtualRouter(
      * @param spec The virtual router specification to apply. 
      */
     override fun spec(spec: VirtualRouterSpecProperty) {
-      cdkBuilder.spec(spec.let(VirtualRouterSpecProperty::unwrap))
+      cdkBuilder.spec(spec.let(VirtualRouterSpecProperty.Companion::unwrap))
     }
 
     /**
@@ -385,7 +385,7 @@ public open class CfnVirtualRouter(
      * categorization and organization. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -612,14 +612,14 @@ public open class CfnVirtualRouter(
        * @param portMapping The port mapping information for the listener. 
        */
       override fun portMapping(portMapping: IResolvable) {
-        cdkBuilder.portMapping(portMapping.let(IResolvable::unwrap))
+        cdkBuilder.portMapping(portMapping.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param portMapping The port mapping information for the listener. 
        */
       override fun portMapping(portMapping: PortMappingProperty) {
-        cdkBuilder.portMapping(portMapping.let(PortMappingProperty::unwrap))
+        cdkBuilder.portMapping(portMapping.let(PortMappingProperty.Companion::unwrap))
       }
 
       /**
@@ -728,7 +728,7 @@ public open class CfnVirtualRouter(
        * traffic from. 
        */
       override fun listeners(listeners: IResolvable) {
-        cdkBuilder.listeners(listeners.let(IResolvable::unwrap))
+        cdkBuilder.listeners(listeners.let(IResolvable.Companion::unwrap))
       }
 
       /**

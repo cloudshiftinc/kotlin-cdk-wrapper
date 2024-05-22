@@ -33,7 +33,7 @@ public abstract class TargetObjectKeyFormat(
         software.amazon.awscdk.services.s3.TargetObjectKeyFormat.partitionedPrefix().let(TargetObjectKeyFormat::wrap)
 
     public fun partitionedPrefix(dateSource: PartitionDateSource): TargetObjectKeyFormat =
-        software.amazon.awscdk.services.s3.TargetObjectKeyFormat.partitionedPrefix(dateSource.let(PartitionDateSource::unwrap)).let(TargetObjectKeyFormat::wrap)
+        software.amazon.awscdk.services.s3.TargetObjectKeyFormat.partitionedPrefix(dateSource.let(PartitionDateSource.Companion::unwrap)).let(TargetObjectKeyFormat::wrap)
 
     public fun simplePrefix(): TargetObjectKeyFormat =
         software.amazon.awscdk.services.s3.TargetObjectKeyFormat.simplePrefix().let(TargetObjectKeyFormat::wrap)

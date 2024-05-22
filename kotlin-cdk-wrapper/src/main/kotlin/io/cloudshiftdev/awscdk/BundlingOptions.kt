@@ -267,7 +267,7 @@ public interface BundlingOptions {
      * bundling container and to return the bundling output back to the host.
      */
     override fun bundlingFileAccess(bundlingFileAccess: BundlingFileAccess) {
-      cdkBuilder.bundlingFileAccess(bundlingFileAccess.let(BundlingFileAccess::unwrap))
+      cdkBuilder.bundlingFileAccess(bundlingFileAccess.let(BundlingFileAccess.Companion::unwrap))
     }
 
     /**
@@ -309,7 +309,7 @@ public interface BundlingOptions {
      * @param image The Docker image where the command will run. 
      */
     override fun image(image: DockerImage) {
-      cdkBuilder.image(image.let(DockerImage::unwrap))
+      cdkBuilder.image(image.let(DockerImage.Companion::unwrap))
     }
 
     /**
@@ -319,7 +319,7 @@ public interface BundlingOptions {
      * will be done.
      */
     override fun local(local: ILocalBundling) {
-      cdkBuilder.local(local.let(ILocalBundling::unwrap))
+      cdkBuilder.local(local.let(ILocalBundling.Companion::unwrap))
     }
 
     /**
@@ -334,7 +334,7 @@ public interface BundlingOptions {
      * @param outputType The type of output that this bundling operation is producing.
      */
     override fun outputType(outputType: BundlingOutput) {
-      cdkBuilder.outputType(outputType.let(BundlingOutput::unwrap))
+      cdkBuilder.outputType(outputType.let(BundlingOutput.Companion::unwrap))
     }
 
     /**
@@ -366,7 +366,7 @@ public interface BundlingOptions {
      * @param volumes Additional Docker volumes to mount.
      */
     override fun volumes(volumes: List<DockerVolume>) {
-      cdkBuilder.volumes(volumes.map(DockerVolume::unwrap))
+      cdkBuilder.volumes(volumes.map(DockerVolume.Companion::unwrap))
     }
 
     /**

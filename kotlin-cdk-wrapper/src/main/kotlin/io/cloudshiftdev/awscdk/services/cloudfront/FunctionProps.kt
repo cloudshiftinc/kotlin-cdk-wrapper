@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 
@@ -14,24 +15,24 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * Bucket s3Bucket;
- * // Add a cloudfront Function to a Distribution
- * Function cfFunction = Function.Builder.create(this, "Function")
+ * KeyValueStore store = new KeyValueStore(this, "KeyValueStore");
+ * Function.Builder.create(this, "Function")
  * .code(FunctionCode.fromInline("function handler(event) { return event.request }"))
+ * // Note that JS_2_0 must be used for Key Value Store support
  * .runtime(FunctionRuntime.JS_2_0)
- * .build();
- * Distribution.Builder.create(this, "distro")
- * .defaultBehavior(BehaviorOptions.builder()
- * .origin(new S3Origin(s3Bucket))
- * .functionAssociations(List.of(FunctionAssociation.builder()
- * .function(cfFunction)
- * .eventType(FunctionEventType.VIEWER_REQUEST)
- * .build()))
- * .build())
+ * .keyValueStore(store)
  * .build();
  * ```
  */
 public interface FunctionProps {
+  /**
+   * A flag that determines whether to automatically publish the function to the LIVE stage when
+   * it’s created.
+   *
+   * Default: - true
+   */
+  public fun autoPublish(): Boolean? = unwrap(this).getAutoPublish()
+
   /**
    * The source code of the function.
    */
@@ -76,6 +77,12 @@ public interface FunctionProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param autoPublish A flag that determines whether to automatically publish the function to
+     * the LIVE stage when it’s created.
+     */
+    public fun autoPublish(autoPublish: Boolean)
+
+    /**
      * @param code The source code of the function. 
      */
     public fun code(code: FunctionCode)
@@ -108,10 +115,18 @@ public interface FunctionProps {
         software.amazon.awscdk.services.cloudfront.FunctionProps.builder()
 
     /**
+     * @param autoPublish A flag that determines whether to automatically publish the function to
+     * the LIVE stage when it’s created.
+     */
+    override fun autoPublish(autoPublish: Boolean) {
+      cdkBuilder.autoPublish(autoPublish)
+    }
+
+    /**
      * @param code The source code of the function. 
      */
     override fun code(code: FunctionCode) {
-      cdkBuilder.code(code.let(FunctionCode::unwrap))
+      cdkBuilder.code(code.let(FunctionCode.Companion::unwrap))
     }
 
     /**
@@ -134,14 +149,14 @@ public interface FunctionProps {
      * `cloudfront-js-2.0` or newer.
      */
     override fun keyValueStore(keyValueStore: IKeyValueStore) {
-      cdkBuilder.keyValueStore(keyValueStore.let(IKeyValueStore::unwrap))
+      cdkBuilder.keyValueStore(keyValueStore.let(IKeyValueStore.Companion::unwrap))
     }
 
     /**
      * @param runtime The runtime environment for the function.
      */
     override fun runtime(runtime: FunctionRuntime) {
-      cdkBuilder.runtime(runtime.let(FunctionRuntime::unwrap))
+      cdkBuilder.runtime(runtime.let(FunctionRuntime.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.FunctionProps =
@@ -151,6 +166,14 @@ public interface FunctionProps {
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.cloudfront.FunctionProps,
   ) : CdkObject(cdkObject), FunctionProps {
+    /**
+     * A flag that determines whether to automatically publish the function to the LIVE stage when
+     * it’s created.
+     *
+     * Default: - true
+     */
+    override fun autoPublish(): Boolean? = unwrap(this).getAutoPublish()
+
     /**
      * The source code of the function.
      */

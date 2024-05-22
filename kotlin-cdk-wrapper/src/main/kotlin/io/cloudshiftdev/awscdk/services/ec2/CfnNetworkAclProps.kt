@@ -75,7 +75,7 @@ public interface CfnNetworkAclProps {
      * @param tags The tags for the network ACL.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

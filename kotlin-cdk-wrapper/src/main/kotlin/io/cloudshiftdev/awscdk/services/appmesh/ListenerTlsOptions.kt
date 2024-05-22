@@ -113,14 +113,14 @@ public interface ListenerTlsOptions {
      * @param certificate Represents TLS certificate. 
      */
     override fun certificate(certificate: TlsCertificate) {
-      cdkBuilder.certificate(certificate.let(TlsCertificate::unwrap))
+      cdkBuilder.certificate(certificate.let(TlsCertificate.Companion::unwrap))
     }
 
     /**
      * @param mode The TLS mode. 
      */
     override fun mode(mode: TlsMode) {
-      cdkBuilder.mode(mode.let(TlsMode::unwrap))
+      cdkBuilder.mode(mode.let(TlsMode.Companion::unwrap))
     }
 
     /**
@@ -128,7 +128,7 @@ public interface ListenerTlsOptions {
      * The client certificate will only be validated if the client provides it, enabling mutual TLS.
      */
     override fun mutualTlsValidation(mutualTlsValidation: MutualTlsValidation) {
-      cdkBuilder.mutualTlsValidation(mutualTlsValidation.let(MutualTlsValidation::unwrap))
+      cdkBuilder.mutualTlsValidation(mutualTlsValidation.let(MutualTlsValidation.Companion::unwrap))
     }
 
     /**

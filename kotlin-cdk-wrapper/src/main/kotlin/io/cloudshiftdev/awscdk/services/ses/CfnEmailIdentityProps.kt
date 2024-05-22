@@ -221,7 +221,7 @@ public interface CfnEmailIdentityProps {
      * identity.
      */
     override fun configurationSetAttributes(configurationSetAttributes: IResolvable) {
-      cdkBuilder.configurationSetAttributes(configurationSetAttributes.let(IResolvable::unwrap))
+      cdkBuilder.configurationSetAttributes(configurationSetAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -230,7 +230,7 @@ public interface CfnEmailIdentityProps {
      */
     override
         fun configurationSetAttributes(configurationSetAttributes: CfnEmailIdentity.ConfigurationSetAttributesProperty) {
-      cdkBuilder.configurationSetAttributes(configurationSetAttributes.let(CfnEmailIdentity.ConfigurationSetAttributesProperty::unwrap))
+      cdkBuilder.configurationSetAttributes(configurationSetAttributes.let(CfnEmailIdentity.ConfigurationSetAttributesProperty.Companion::unwrap))
     }
 
     /**
@@ -249,7 +249,7 @@ public interface CfnEmailIdentityProps {
      * identity.
      */
     override fun dkimAttributes(dkimAttributes: IResolvable) {
-      cdkBuilder.dkimAttributes(dkimAttributes.let(IResolvable::unwrap))
+      cdkBuilder.dkimAttributes(dkimAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -257,7 +257,7 @@ public interface CfnEmailIdentityProps {
      * identity.
      */
     override fun dkimAttributes(dkimAttributes: CfnEmailIdentity.DkimAttributesProperty) {
-      cdkBuilder.dkimAttributes(dkimAttributes.let(CfnEmailIdentity.DkimAttributesProperty::unwrap))
+      cdkBuilder.dkimAttributes(dkimAttributes.let(CfnEmailIdentity.DkimAttributesProperty.Companion::unwrap))
     }
 
     /**
@@ -277,7 +277,7 @@ public interface CfnEmailIdentityProps {
      * DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) .
      */
     override fun dkimSigningAttributes(dkimSigningAttributes: IResolvable) {
-      cdkBuilder.dkimSigningAttributes(dkimSigningAttributes.let(IResolvable::unwrap))
+      cdkBuilder.dkimSigningAttributes(dkimSigningAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -288,7 +288,7 @@ public interface CfnEmailIdentityProps {
      */
     override
         fun dkimSigningAttributes(dkimSigningAttributes: CfnEmailIdentity.DkimSigningAttributesProperty) {
-      cdkBuilder.dkimSigningAttributes(dkimSigningAttributes.let(CfnEmailIdentity.DkimSigningAttributesProperty::unwrap))
+      cdkBuilder.dkimSigningAttributes(dkimSigningAttributes.let(CfnEmailIdentity.DkimSigningAttributesProperty.Companion::unwrap))
     }
 
     /**
@@ -315,7 +315,7 @@ public interface CfnEmailIdentityProps {
      * @param feedbackAttributes Used to enable or disable feedback forwarding for an identity.
      */
     override fun feedbackAttributes(feedbackAttributes: IResolvable) {
-      cdkBuilder.feedbackAttributes(feedbackAttributes.let(IResolvable::unwrap))
+      cdkBuilder.feedbackAttributes(feedbackAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -323,7 +323,7 @@ public interface CfnEmailIdentityProps {
      */
     override
         fun feedbackAttributes(feedbackAttributes: CfnEmailIdentity.FeedbackAttributesProperty) {
-      cdkBuilder.feedbackAttributes(feedbackAttributes.let(CfnEmailIdentity.FeedbackAttributesProperty::unwrap))
+      cdkBuilder.feedbackAttributes(feedbackAttributes.let(CfnEmailIdentity.FeedbackAttributesProperty.Companion::unwrap))
     }
 
     /**
@@ -340,7 +340,7 @@ public interface CfnEmailIdentityProps {
      * for an email identity.
      */
     override fun mailFromAttributes(mailFromAttributes: IResolvable) {
-      cdkBuilder.mailFromAttributes(mailFromAttributes.let(IResolvable::unwrap))
+      cdkBuilder.mailFromAttributes(mailFromAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -349,7 +349,7 @@ public interface CfnEmailIdentityProps {
      */
     override
         fun mailFromAttributes(mailFromAttributes: CfnEmailIdentity.MailFromAttributesProperty) {
-      cdkBuilder.mailFromAttributes(mailFromAttributes.let(CfnEmailIdentity.MailFromAttributesProperty::unwrap))
+      cdkBuilder.mailFromAttributes(mailFromAttributes.let(CfnEmailIdentity.MailFromAttributesProperty.Companion::unwrap))
     }
 
     /**

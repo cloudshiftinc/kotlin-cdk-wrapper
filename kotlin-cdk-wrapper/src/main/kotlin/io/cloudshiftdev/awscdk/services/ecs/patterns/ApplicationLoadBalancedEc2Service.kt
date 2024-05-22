@@ -57,7 +57,7 @@ public open class ApplicationLoadBalancedEc2Service(
   cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedEc2Service,
 ) : ApplicationLoadBalancedServiceBase(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedEc2Service(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedEc2Service(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -66,8 +66,8 @@ public open class ApplicationLoadBalancedEc2Service(
     id: String,
     props: ApplicationLoadBalancedEc2ServiceProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedEc2Service(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ApplicationLoadBalancedEc2ServiceProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.patterns.ApplicationLoadBalancedEc2Service(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ApplicationLoadBalancedEc2ServiceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -645,7 +645,7 @@ public open class ApplicationLoadBalancedEc2Service(
      */
     override
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>) {
-      cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy::unwrap))
+      cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy.Companion::unwrap))
     }
 
     /**
@@ -673,7 +673,7 @@ public open class ApplicationLoadBalancedEc2Service(
      * @param certificate Certificate Manager certificate to associate with the load balancer. 
      */
     override fun certificate(certificate: ICertificate) {
-      cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
+      cdkBuilder.certificate(certificate.let(ICertificate.Companion::unwrap))
     }
 
     /**
@@ -687,7 +687,7 @@ public open class ApplicationLoadBalancedEc2Service(
      * @param circuitBreaker Whether to enable the deployment circuit breaker. 
      */
     override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
-      cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker::unwrap))
+      cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker.Companion::unwrap))
     }
 
     /**
@@ -714,7 +714,7 @@ public open class ApplicationLoadBalancedEc2Service(
      * discovery. 
      */
     override fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
-      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions::unwrap))
+      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions.Companion::unwrap))
     }
 
     /**
@@ -742,7 +742,7 @@ public open class ApplicationLoadBalancedEc2Service(
      * @param cluster The name of the cluster that hosts the service. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -782,7 +782,7 @@ public open class ApplicationLoadBalancedEc2Service(
      * @param deploymentController Specifies which deployment controller to use for the service. 
      */
     override fun deploymentController(deploymentController: DeploymentController) {
-      cdkBuilder.deploymentController(deploymentController.let(DeploymentController::unwrap))
+      cdkBuilder.deploymentController(deploymentController.let(DeploymentController.Companion::unwrap))
     }
 
     /**
@@ -837,7 +837,7 @@ public open class ApplicationLoadBalancedEc2Service(
      * @param domainZone The Route53 hosted zone for the domain, e.g. "example.com.". 
      */
     override fun domainZone(domainZone: IHostedZone) {
-      cdkBuilder.domainZone(domainZone.let(IHostedZone::unwrap))
+      cdkBuilder.domainZone(domainZone.let(IHostedZone.Companion::unwrap))
     }
 
     /**
@@ -879,7 +879,7 @@ public open class ApplicationLoadBalancedEc2Service(
      * started. 
      */
     override fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
-      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration::unwrap))
+      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -892,7 +892,7 @@ public open class ApplicationLoadBalancedEc2Service(
      * @param idleTimeout The load balancer idle timeout, in seconds. 
      */
     override fun idleTimeout(idleTimeout: Duration) {
-      cdkBuilder.idleTimeout(idleTimeout.let(Duration::unwrap))
+      cdkBuilder.idleTimeout(idleTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -921,7 +921,7 @@ public open class ApplicationLoadBalancedEc2Service(
      * @param loadBalancer The application load balancer that will serve traffic to the service. 
      */
     override fun loadBalancer(loadBalancer: IApplicationLoadBalancer) {
-      cdkBuilder.loadBalancer(loadBalancer.let(IApplicationLoadBalancer::unwrap))
+      cdkBuilder.loadBalancer(loadBalancer.let(IApplicationLoadBalancer.Companion::unwrap))
     }
 
     /**
@@ -1021,7 +1021,7 @@ public open class ApplicationLoadBalancedEc2Service(
      * @param placementConstraints The placement constraints to use for tasks in the service. 
      */
     override fun placementConstraints(placementConstraints: List<PlacementConstraint>) {
-      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint::unwrap))
+      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint.Companion::unwrap))
     }
 
     /**
@@ -1050,7 +1050,7 @@ public open class ApplicationLoadBalancedEc2Service(
      * @param placementStrategies The placement strategies to use for tasks in the service. 
      */
     override fun placementStrategies(placementStrategies: List<PlacementStrategy>) {
-      cdkBuilder.placementStrategies(placementStrategies.map(PlacementStrategy::unwrap))
+      cdkBuilder.placementStrategies(placementStrategies.map(PlacementStrategy.Companion::unwrap))
     }
 
     /**
@@ -1079,7 +1079,7 @@ public open class ApplicationLoadBalancedEc2Service(
      * service to the tasks in the service. 
      */
     override fun propagateTags(propagateTags: PropagatedTagSource) {
-      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource.Companion::unwrap))
     }
 
     /**
@@ -1095,7 +1095,7 @@ public open class ApplicationLoadBalancedEc2Service(
      * @param protocol The protocol for connections from clients to the load balancer. 
      */
     override fun protocol(protocol: ApplicationProtocol) {
-      cdkBuilder.protocol(protocol.let(ApplicationProtocol::unwrap))
+      cdkBuilder.protocol(protocol.let(ApplicationProtocol.Companion::unwrap))
     }
 
     /**
@@ -1106,7 +1106,7 @@ public open class ApplicationLoadBalancedEc2Service(
      * @param protocolVersion The protocol version to use. 
      */
     override fun protocolVersion(protocolVersion: ApplicationProtocolVersion) {
-      cdkBuilder.protocolVersion(protocolVersion.let(ApplicationProtocolVersion::unwrap))
+      cdkBuilder.protocolVersion(protocolVersion.let(ApplicationProtocolVersion.Companion::unwrap))
     }
 
     /**
@@ -1132,7 +1132,7 @@ public open class ApplicationLoadBalancedEc2Service(
      * the Alias feature or no record at all. 
      */
     override fun recordType(recordType: ApplicationLoadBalancedServiceRecordType) {
-      cdkBuilder.recordType(recordType.let(ApplicationLoadBalancedServiceRecordType::unwrap))
+      cdkBuilder.recordType(recordType.let(ApplicationLoadBalancedServiceRecordType.Companion::unwrap))
     }
 
     /**
@@ -1170,7 +1170,7 @@ public open class ApplicationLoadBalancedEc2Service(
      * by the ALB Listener. 
      */
     override fun sslPolicy(sslPolicy: SslPolicy) {
-      cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy::unwrap))
+      cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy.Companion::unwrap))
     }
 
     /**
@@ -1184,7 +1184,7 @@ public open class ApplicationLoadBalancedEc2Service(
      * @param targetProtocol The protocol for connections from the load balancer to the ECS tasks. 
      */
     override fun targetProtocol(targetProtocol: ApplicationProtocol) {
-      cdkBuilder.targetProtocol(targetProtocol.let(ApplicationProtocol::unwrap))
+      cdkBuilder.targetProtocol(targetProtocol.let(ApplicationProtocol.Companion::unwrap))
     }
 
     /**
@@ -1199,7 +1199,7 @@ public open class ApplicationLoadBalancedEc2Service(
      * TaskImageOptions must be specified, but not both.. 
      */
     override fun taskDefinition(taskDefinition: Ec2TaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(Ec2TaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(Ec2TaskDefinition.Companion::unwrap))
     }
 
     /**
@@ -1212,7 +1212,7 @@ public open class ApplicationLoadBalancedEc2Service(
      * @param taskImageOptions The properties required to create a new task definition. 
      */
     override fun taskImageOptions(taskImageOptions: ApplicationLoadBalancedTaskImageOptions) {
-      cdkBuilder.taskImageOptions(taskImageOptions.let(ApplicationLoadBalancedTaskImageOptions::unwrap))
+      cdkBuilder.taskImageOptions(taskImageOptions.let(ApplicationLoadBalancedTaskImageOptions.Companion::unwrap))
     }
 
     /**
@@ -1243,7 +1243,7 @@ public open class ApplicationLoadBalancedEc2Service(
      * interfaces (ENIs) will be deployed. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build():

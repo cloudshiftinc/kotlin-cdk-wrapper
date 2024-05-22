@@ -139,7 +139,7 @@ public interface AdvancedSecurityOptions {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun masterUserPassword(masterUserPassword: SecretValue) {
-      cdkBuilder.masterUserPassword(masterUserPassword.let(SecretValue::unwrap))
+      cdkBuilder.masterUserPassword(masterUserPassword.let(SecretValue.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.elasticsearch.AdvancedSecurityOptions =

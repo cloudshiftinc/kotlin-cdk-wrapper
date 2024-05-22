@@ -101,7 +101,7 @@ public interface InstanceProfileProps {
      * The role must be assumable by the service principal `ec2.amazonaws.com`:
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.iam.InstanceProfileProps =

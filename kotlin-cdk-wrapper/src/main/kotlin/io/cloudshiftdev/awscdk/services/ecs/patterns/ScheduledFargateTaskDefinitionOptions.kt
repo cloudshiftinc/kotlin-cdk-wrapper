@@ -60,7 +60,7 @@ public interface ScheduledFargateTaskDefinitionOptions {
      * [disable-awslint:ref-via-interface]
      */
     override fun taskDefinition(taskDefinition: FargateTaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition.Companion::unwrap))
     }
 
     public fun build():

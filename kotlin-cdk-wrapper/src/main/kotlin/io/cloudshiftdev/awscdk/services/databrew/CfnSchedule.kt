@@ -48,8 +48,8 @@ public open class CfnSchedule(
     id: String,
     props: CfnScheduleProps,
   ) :
-      this(software.amazon.awscdk.services.databrew.CfnSchedule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnScheduleProps::unwrap))
+      this(software.amazon.awscdk.services.databrew.CfnSchedule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnScheduleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -77,7 +77,7 @@ public open class CfnSchedule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -124,7 +124,7 @@ public open class CfnSchedule(
    * Metadata tags that have been applied to the schedule.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -246,7 +246,7 @@ public open class CfnSchedule(
      * @param tags Metadata tags that have been applied to the schedule. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

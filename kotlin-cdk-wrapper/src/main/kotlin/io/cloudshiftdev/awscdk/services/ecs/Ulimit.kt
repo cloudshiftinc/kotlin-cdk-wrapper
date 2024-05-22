@@ -85,7 +85,7 @@ public interface Ulimit {
      * [UlimitName](https://docs.aws.amazon.com/cdk/api/latest/typescript/api/aws-ecs/ulimitname.html#aws_ecs_UlimitName).
      */
     override fun name(name: UlimitName) {
-      cdkBuilder.name(name.let(UlimitName::unwrap))
+      cdkBuilder.name(name.let(UlimitName.Companion::unwrap))
     }
 
     /**

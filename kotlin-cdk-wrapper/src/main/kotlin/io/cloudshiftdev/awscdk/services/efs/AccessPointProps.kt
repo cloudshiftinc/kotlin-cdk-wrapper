@@ -116,7 +116,7 @@ public interface AccessPointProps : AccessPointOptions {
      * `createAcl`.
      */
     override fun createAcl(createAcl: Acl) {
-      cdkBuilder.createAcl(createAcl.let(Acl::unwrap))
+      cdkBuilder.createAcl(createAcl.let(Acl.Companion::unwrap))
     }
 
     /**
@@ -136,7 +136,7 @@ public interface AccessPointProps : AccessPointOptions {
      * @param fileSystem The efs filesystem. 
      */
     override fun fileSystem(fileSystem: IFileSystem) {
-      cdkBuilder.fileSystem(fileSystem.let(IFileSystem::unwrap))
+      cdkBuilder.fileSystem(fileSystem.let(IFileSystem.Companion::unwrap))
     }
 
     /**
@@ -154,7 +154,7 @@ public interface AccessPointProps : AccessPointOptions {
      * Specify this to enforce a user identity using an access point.
      */
     override fun posixUser(posixUser: PosixUser) {
-      cdkBuilder.posixUser(posixUser.let(PosixUser::unwrap))
+      cdkBuilder.posixUser(posixUser.let(PosixUser.Companion::unwrap))
     }
 
     /**

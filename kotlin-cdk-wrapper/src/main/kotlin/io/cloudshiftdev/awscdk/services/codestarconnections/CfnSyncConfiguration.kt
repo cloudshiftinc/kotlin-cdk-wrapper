@@ -45,8 +45,8 @@ public open class CfnSyncConfiguration(
     id: String,
     props: CfnSyncConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.codestarconnections.CfnSyncConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSyncConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.codestarconnections.CfnSyncConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSyncConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -102,7 +102,7 @@ public open class CfnSyncConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

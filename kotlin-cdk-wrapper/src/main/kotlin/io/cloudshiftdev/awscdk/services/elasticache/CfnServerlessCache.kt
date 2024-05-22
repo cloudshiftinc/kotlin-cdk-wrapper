@@ -82,8 +82,8 @@ public open class CfnServerlessCache(
     id: String,
     props: CfnServerlessCacheProps,
   ) :
-      this(software.amazon.awscdk.services.elasticache.CfnServerlessCache(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnServerlessCacheProps::unwrap))
+      this(software.amazon.awscdk.services.elasticache.CfnServerlessCache(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnServerlessCacheProps.Companion::unwrap))
   )
 
   public constructor(
@@ -144,14 +144,14 @@ public open class CfnServerlessCache(
    * The cache usage limit for the serverless cache.
    */
   public open fun cacheUsageLimits(`value`: IResolvable) {
-    unwrap(this).setCacheUsageLimits(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCacheUsageLimits(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The cache usage limit for the serverless cache.
    */
   public open fun cacheUsageLimits(`value`: CacheUsageLimitsProperty) {
-    unwrap(this).setCacheUsageLimits(`value`.let(CacheUsageLimitsProperty::unwrap))
+    unwrap(this).setCacheUsageLimits(`value`.let(CacheUsageLimitsProperty.Companion::unwrap))
   }
 
   /**
@@ -201,14 +201,14 @@ public open class CfnServerlessCache(
    * Represents the information required for client programs to connect to a cache node.
    */
   public open fun endpoint(`value`: IResolvable) {
-    unwrap(this).setEndpoint(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEndpoint(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Represents the information required for client programs to connect to a cache node.
    */
   public open fun endpoint(`value`: EndpointProperty) {
-    unwrap(this).setEndpoint(`value`.let(EndpointProperty::unwrap))
+    unwrap(this).setEndpoint(`value`.let(EndpointProperty.Companion::unwrap))
   }
 
   /**
@@ -249,7 +249,7 @@ public open class CfnServerlessCache(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -287,14 +287,14 @@ public open class CfnServerlessCache(
    * Represents the information required for client programs to connect to a cache node.
    */
   public open fun readerEndpoint(`value`: IResolvable) {
-    unwrap(this).setReaderEndpoint(`value`.let(IResolvable::unwrap))
+    unwrap(this).setReaderEndpoint(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Represents the information required for client programs to connect to a cache node.
    */
   public open fun readerEndpoint(`value`: EndpointProperty) {
-    unwrap(this).setReaderEndpoint(`value`.let(EndpointProperty::unwrap))
+    unwrap(this).setReaderEndpoint(`value`.let(EndpointProperty.Companion::unwrap))
   }
 
   /**
@@ -396,7 +396,7 @@ public open class CfnServerlessCache(
    * A list of tags to be added to this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -694,7 +694,7 @@ public open class CfnServerlessCache(
      * @param cacheUsageLimits The cache usage limit for the serverless cache. 
      */
     override fun cacheUsageLimits(cacheUsageLimits: IResolvable) {
-      cdkBuilder.cacheUsageLimits(cacheUsageLimits.let(IResolvable::unwrap))
+      cdkBuilder.cacheUsageLimits(cacheUsageLimits.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -704,7 +704,7 @@ public open class CfnServerlessCache(
      * @param cacheUsageLimits The cache usage limit for the serverless cache. 
      */
     override fun cacheUsageLimits(cacheUsageLimits: CacheUsageLimitsProperty) {
-      cdkBuilder.cacheUsageLimits(cacheUsageLimits.let(CacheUsageLimitsProperty::unwrap))
+      cdkBuilder.cacheUsageLimits(cacheUsageLimits.let(CacheUsageLimitsProperty.Companion::unwrap))
     }
 
     /**
@@ -751,7 +751,7 @@ public open class CfnServerlessCache(
      * node. 
      */
     override fun endpoint(endpoint: IResolvable) {
-      cdkBuilder.endpoint(endpoint.let(IResolvable::unwrap))
+      cdkBuilder.endpoint(endpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -764,7 +764,7 @@ public open class CfnServerlessCache(
      * node. 
      */
     override fun endpoint(endpoint: EndpointProperty) {
-      cdkBuilder.endpoint(endpoint.let(EndpointProperty::unwrap))
+      cdkBuilder.endpoint(endpoint.let(EndpointProperty.Companion::unwrap))
     }
 
     /**
@@ -835,7 +835,7 @@ public open class CfnServerlessCache(
      * cache node. 
      */
     override fun readerEndpoint(readerEndpoint: IResolvable) {
-      cdkBuilder.readerEndpoint(readerEndpoint.let(IResolvable::unwrap))
+      cdkBuilder.readerEndpoint(readerEndpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -848,7 +848,7 @@ public open class CfnServerlessCache(
      * cache node. 
      */
     override fun readerEndpoint(readerEndpoint: EndpointProperty) {
-      cdkBuilder.readerEndpoint(readerEndpoint.let(EndpointProperty::unwrap))
+      cdkBuilder.readerEndpoint(readerEndpoint.let(EndpointProperty.Companion::unwrap))
     }
 
     /**
@@ -965,7 +965,7 @@ public open class CfnServerlessCache(
      * @param tags A list of tags to be added to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1106,14 +1106,14 @@ public open class CfnServerlessCache(
        * @param dataStorage The maximum data storage limit in the cache, expressed in Gigabytes.
        */
       override fun dataStorage(dataStorage: IResolvable) {
-        cdkBuilder.dataStorage(dataStorage.let(IResolvable::unwrap))
+        cdkBuilder.dataStorage(dataStorage.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dataStorage The maximum data storage limit in the cache, expressed in Gigabytes.
        */
       override fun dataStorage(dataStorage: DataStorageProperty) {
-        cdkBuilder.dataStorage(dataStorage.let(DataStorageProperty::unwrap))
+        cdkBuilder.dataStorage(dataStorage.let(DataStorageProperty.Companion::unwrap))
       }
 
       /**
@@ -1129,7 +1129,7 @@ public open class CfnServerlessCache(
        * consume per second.
        */
       override fun ecpuPerSecond(ecpuPerSecond: IResolvable) {
-        cdkBuilder.ecpuPerSecond(ecpuPerSecond.let(IResolvable::unwrap))
+        cdkBuilder.ecpuPerSecond(ecpuPerSecond.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1137,7 +1137,7 @@ public open class CfnServerlessCache(
        * consume per second.
        */
       override fun ecpuPerSecond(ecpuPerSecond: ECPUPerSecondProperty) {
-        cdkBuilder.ecpuPerSecond(ecpuPerSecond.let(ECPUPerSecondProperty::unwrap))
+        cdkBuilder.ecpuPerSecond(ecpuPerSecond.let(ECPUPerSecondProperty.Companion::unwrap))
       }
 
       /**

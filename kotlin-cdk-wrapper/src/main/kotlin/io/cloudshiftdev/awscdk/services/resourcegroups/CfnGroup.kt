@@ -82,8 +82,8 @@ public open class CfnGroup(
     id: String,
     props: CfnGroupProps,
   ) :
-      this(software.amazon.awscdk.services.resourcegroups.CfnGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGroupProps::unwrap))
+      this(software.amazon.awscdk.services.resourcegroups.CfnGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -109,7 +109,7 @@ public open class CfnGroup(
    * members of the resource group.
    */
   public open fun configuration(`value`: IResolvable) {
-    unwrap(this).setConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -144,7 +144,7 @@ public open class CfnGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -170,7 +170,7 @@ public open class CfnGroup(
    * members of the associated resource group.
    */
   public open fun resourceQuery(`value`: IResolvable) {
-    unwrap(this).setResourceQuery(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResourceQuery(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -178,7 +178,7 @@ public open class CfnGroup(
    * members of the associated resource group.
    */
   public open fun resourceQuery(`value`: ResourceQueryProperty) {
-    unwrap(this).setResourceQuery(`value`.let(ResourceQueryProperty::unwrap))
+    unwrap(this).setResourceQuery(`value`.let(ResourceQueryProperty.Companion::unwrap))
   }
 
   /**
@@ -225,7 +225,7 @@ public open class CfnGroup(
    * The tag key and value pairs that are attached to the resource group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -458,7 +458,7 @@ public open class CfnGroup(
      * and in effect for the members of the resource group. 
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -548,7 +548,7 @@ public open class CfnGroup(
      * AWS resources are members of the associated resource group. 
      */
     override fun resourceQuery(resourceQuery: IResolvable) {
-      cdkBuilder.resourceQuery(resourceQuery.let(IResolvable::unwrap))
+      cdkBuilder.resourceQuery(resourceQuery.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -571,7 +571,7 @@ public open class CfnGroup(
      * AWS resources are members of the associated resource group. 
      */
     override fun resourceQuery(resourceQuery: ResourceQueryProperty) {
-      cdkBuilder.resourceQuery(resourceQuery.let(ResourceQueryProperty::unwrap))
+      cdkBuilder.resourceQuery(resourceQuery.let(ResourceQueryProperty.Companion::unwrap))
     }
 
     /**
@@ -639,7 +639,7 @@ public open class CfnGroup(
      * @param tags The tag key and value pairs that are attached to the resource group. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -779,7 +779,7 @@ public open class CfnGroup(
        * in the *AWS Resource Groups User Guide* .
        */
       override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1204,7 +1204,7 @@ public open class CfnGroup(
        * list.
        */
       override fun tagFilters(tagFilters: IResolvable) {
-        cdkBuilder.tagFilters(tagFilters.let(IResolvable::unwrap))
+        cdkBuilder.tagFilters(tagFilters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1450,7 +1450,7 @@ public open class CfnGroup(
        * CloudFormation stack that you're currently constructing.
        */
       override fun query(query: IResolvable) {
-        cdkBuilder.query(query.let(IResolvable::unwrap))
+        cdkBuilder.query(query.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1469,7 +1469,7 @@ public open class CfnGroup(
        * CloudFormation stack that you're currently constructing.
        */
       override fun query(query: QueryProperty) {
-        cdkBuilder.query(query.let(QueryProperty::unwrap))
+        cdkBuilder.query(query.let(QueryProperty.Companion::unwrap))
       }
 
       /**

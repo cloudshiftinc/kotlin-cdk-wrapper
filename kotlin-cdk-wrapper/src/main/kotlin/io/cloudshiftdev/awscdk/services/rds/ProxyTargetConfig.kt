@@ -99,7 +99,7 @@ public interface ProxyTargetConfig {
      * Either this or `dbInstances` will be set and the other `undefined`.
      */
     override fun dbClusters(dbClusters: List<IDatabaseCluster>) {
-      cdkBuilder.dbClusters(dbClusters.map(IDatabaseCluster::unwrap))
+      cdkBuilder.dbClusters(dbClusters.map(IDatabaseCluster.Companion::unwrap))
     }
 
     /**
@@ -114,7 +114,7 @@ public interface ProxyTargetConfig {
      * Either this or `dbClusters` will be set and the other `undefined`.
      */
     override fun dbInstances(dbInstances: List<IDatabaseInstance>) {
-      cdkBuilder.dbInstances(dbInstances.map(IDatabaseInstance::unwrap))
+      cdkBuilder.dbInstances(dbInstances.map(IDatabaseInstance.Companion::unwrap))
     }
 
     /**

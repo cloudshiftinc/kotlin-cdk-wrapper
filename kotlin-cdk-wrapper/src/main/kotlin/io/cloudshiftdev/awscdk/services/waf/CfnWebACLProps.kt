@@ -151,7 +151,7 @@ public interface CfnWebACLProps {
      * The action is specified by the `WafAction` object.
      */
     override fun defaultAction(defaultAction: IResolvable) {
-      cdkBuilder.defaultAction(defaultAction.let(IResolvable::unwrap))
+      cdkBuilder.defaultAction(defaultAction.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -160,7 +160,7 @@ public interface CfnWebACLProps {
      * The action is specified by the `WafAction` object.
      */
     override fun defaultAction(defaultAction: CfnWebACL.WafActionProperty) {
-      cdkBuilder.defaultAction(defaultAction.let(CfnWebACL.WafActionProperty::unwrap))
+      cdkBuilder.defaultAction(defaultAction.let(CfnWebACL.WafActionProperty.Companion::unwrap))
     }
 
     /**
@@ -197,7 +197,7 @@ public interface CfnWebACLProps {
      * of the `Rule` , and the ID of the `Rule` .
      */
     override fun rules(rules: IResolvable) {
-      cdkBuilder.rules(rules.let(IResolvable::unwrap))
+      cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
     }
 
     /**

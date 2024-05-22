@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.awscdk.services.s3.deployment.ServerSideEncryption
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
@@ -47,7 +48,7 @@ public open class ProductStack(
   cdkObject: software.amazon.awscdk.services.servicecatalog.ProductStack,
 ) : Stack(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.servicecatalog.ProductStack(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.servicecatalog.ProductStack(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -56,8 +57,8 @@ public open class ProductStack(
     id: String,
     props: ProductStackProps,
   ) :
-      this(software.amazon.awscdk.services.servicecatalog.ProductStack(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ProductStackProps::unwrap))
+      this(software.amazon.awscdk.services.servicecatalog.ProductStack(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ProductStackProps.Companion::unwrap))
   )
 
   public constructor(
@@ -88,6 +89,20 @@ public open class ProductStack(
      * support. 
      */
     public fun assetBucket(assetBucket: IBucket)
+
+    /**
+     * The amount of memory (in MiB) to allocate to the AWS Lambda function which replicates the
+     * files from the CDK bucket to the destination bucket.
+     *
+     * If you are deploying large files, you will need to increase this number
+     * accordingly.
+     *
+     * Default: 128
+     *
+     * @param memoryLimit The amount of memory (in MiB) to allocate to the AWS Lambda function which
+     * replicates the files from the CDK bucket to the destination bucket. 
+     */
+    public fun memoryLimit(memoryLimit: Number)
 
     /**
      * A ServerSideEncryption can be enabled to encrypt assets that are put into assetBucket.
@@ -127,7 +142,23 @@ public open class ProductStack(
      * support. 
      */
     override fun assetBucket(assetBucket: IBucket) {
-      cdkBuilder.assetBucket(assetBucket.let(IBucket::unwrap))
+      cdkBuilder.assetBucket(assetBucket.let(IBucket.Companion::unwrap))
+    }
+
+    /**
+     * The amount of memory (in MiB) to allocate to the AWS Lambda function which replicates the
+     * files from the CDK bucket to the destination bucket.
+     *
+     * If you are deploying large files, you will need to increase this number
+     * accordingly.
+     *
+     * Default: 128
+     *
+     * @param memoryLimit The amount of memory (in MiB) to allocate to the AWS Lambda function which
+     * replicates the files from the CDK bucket to the destination bucket. 
+     */
+    override fun memoryLimit(memoryLimit: Number) {
+      cdkBuilder.memoryLimit(memoryLimit)
     }
 
     /**
@@ -139,7 +170,7 @@ public open class ProductStack(
      * put into assetBucket. 
      */
     override fun serverSideEncryption(serverSideEncryption: ServerSideEncryption) {
-      cdkBuilder.serverSideEncryption(serverSideEncryption.let(ServerSideEncryption::unwrap))
+      cdkBuilder.serverSideEncryption(serverSideEncryption.let(ServerSideEncryption.Companion::unwrap))
     }
 
     /**

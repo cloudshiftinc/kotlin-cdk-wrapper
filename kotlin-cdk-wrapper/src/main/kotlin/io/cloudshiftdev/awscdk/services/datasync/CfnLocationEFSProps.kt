@@ -203,7 +203,7 @@ public interface CfnLocationEFSProps {
      * EFS file system. 
      */
     override fun ec2Config(ec2Config: IResolvable) {
-      cdkBuilder.ec2Config(ec2Config.let(IResolvable::unwrap))
+      cdkBuilder.ec2Config(ec2Config.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -211,7 +211,7 @@ public interface CfnLocationEFSProps {
      * EFS file system. 
      */
     override fun ec2Config(ec2Config: CfnLocationEFS.Ec2ConfigProperty) {
-      cdkBuilder.ec2Config(ec2Config.let(CfnLocationEFS.Ec2ConfigProperty::unwrap))
+      cdkBuilder.ec2Config(ec2Config.let(CfnLocationEFS.Ec2ConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -268,7 +268,7 @@ public interface CfnLocationEFSProps {
      * resources. We recommend that you create a name tag for your location.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

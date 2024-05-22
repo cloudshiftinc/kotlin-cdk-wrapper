@@ -53,8 +53,8 @@ public open class CfnLayerVersion(
     id: String,
     props: CfnLayerVersionProps,
   ) :
-      this(software.amazon.awscdk.services.lambda.CfnLayerVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLayerVersionProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.CfnLayerVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLayerVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -128,14 +128,14 @@ public open class CfnLayerVersion(
    * The function layer archive.
    */
   public open fun content(`value`: IResolvable) {
-    unwrap(this).setContent(`value`.let(IResolvable::unwrap))
+    unwrap(this).setContent(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The function layer archive.
    */
   public open fun content(`value`: ContentProperty) {
-    unwrap(this).setContent(`value`.let(ContentProperty::unwrap))
+    unwrap(this).setContent(`value`.let(ContentProperty.Companion::unwrap))
   }
 
   /**
@@ -164,7 +164,7 @@ public open class CfnLayerVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -381,7 +381,7 @@ public open class CfnLayerVersion(
      * @param content The function layer archive. 
      */
     override fun content(content: IResolvable) {
-      cdkBuilder.content(content.let(IResolvable::unwrap))
+      cdkBuilder.content(content.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -391,7 +391,7 @@ public open class CfnLayerVersion(
      * @param content The function layer archive. 
      */
     override fun content(content: ContentProperty) {
-      cdkBuilder.content(content.let(ContentProperty::unwrap))
+      cdkBuilder.content(content.let(ContentProperty.Companion::unwrap))
     }
 
     /**

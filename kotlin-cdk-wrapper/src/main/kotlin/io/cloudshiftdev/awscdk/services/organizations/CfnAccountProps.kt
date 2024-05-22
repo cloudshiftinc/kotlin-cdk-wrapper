@@ -328,7 +328,7 @@ public interface CfnAccountProps {
      * an account, then the entire request fails and the account is not created.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

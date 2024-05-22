@@ -44,8 +44,8 @@ public open class CustomLambdaDeploymentConfig(
     id: String,
     props: CustomLambdaDeploymentConfigProps,
   ) :
-      this(software.amazon.awscdk.services.codedeploy.CustomLambdaDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CustomLambdaDeploymentConfigProps::unwrap))
+      this(software.amazon.awscdk.services.codedeploy.CustomLambdaDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CustomLambdaDeploymentConfigProps.Companion::unwrap))
   )
 
   @Deprecated(message = "deprecated in CDK")
@@ -162,7 +162,7 @@ public open class CustomLambdaDeploymentConfig(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun interval(interval: Duration) {
-      cdkBuilder.interval(interval.let(Duration::unwrap))
+      cdkBuilder.interval(interval.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -188,7 +188,7 @@ public open class CustomLambdaDeploymentConfig(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun type(type: CustomLambdaDeploymentConfigType) {
-      cdkBuilder.type(type.let(CustomLambdaDeploymentConfigType::unwrap))
+      cdkBuilder.type(type.let(CustomLambdaDeploymentConfigType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codedeploy.CustomLambdaDeploymentConfig =

@@ -180,7 +180,7 @@ public interface CfnFirewallPolicyProps {
      * collection of stateless and stateful rule groups and other settings. 
      */
     override fun firewallPolicy(firewallPolicy: IResolvable) {
-      cdkBuilder.firewallPolicy(firewallPolicy.let(IResolvable::unwrap))
+      cdkBuilder.firewallPolicy(firewallPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -188,7 +188,7 @@ public interface CfnFirewallPolicyProps {
      * collection of stateless and stateful rule groups and other settings. 
      */
     override fun firewallPolicy(firewallPolicy: CfnFirewallPolicy.FirewallPolicyProperty) {
-      cdkBuilder.firewallPolicy(firewallPolicy.let(CfnFirewallPolicy.FirewallPolicyProperty::unwrap))
+      cdkBuilder.firewallPolicy(firewallPolicy.let(CfnFirewallPolicy.FirewallPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -216,7 +216,7 @@ public interface CfnFirewallPolicyProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

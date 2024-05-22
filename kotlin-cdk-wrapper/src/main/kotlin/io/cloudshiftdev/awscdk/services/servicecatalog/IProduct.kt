@@ -59,7 +59,7 @@ public interface IProduct : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -77,7 +77,7 @@ public interface IProduct : IResource {
      * @param tagOptions 
      */
     override fun associateTagOptions(tagOptions: TagOptions) {
-      unwrap(this).associateTagOptions(tagOptions.let(TagOptions::unwrap))
+      unwrap(this).associateTagOptions(tagOptions.let(TagOptions.Companion::unwrap))
     }
 
     /**

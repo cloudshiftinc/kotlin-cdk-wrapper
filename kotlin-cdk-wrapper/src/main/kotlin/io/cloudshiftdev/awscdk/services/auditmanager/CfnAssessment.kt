@@ -87,7 +87,7 @@ public open class CfnAssessment(
   cdkObject: software.amazon.awscdk.services.auditmanager.CfnAssessment,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.auditmanager.CfnAssessment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.auditmanager.CfnAssessment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -96,8 +96,8 @@ public open class CfnAssessment(
     id: String,
     props: CfnAssessmentProps,
   ) :
-      this(software.amazon.awscdk.services.auditmanager.CfnAssessment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAssessmentProps::unwrap))
+      this(software.amazon.awscdk.services.auditmanager.CfnAssessment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAssessmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -117,14 +117,14 @@ public open class CfnAssessment(
    * The destination that evidence reports are stored in for the assessment.
    */
   public open fun assessmentReportsDestination(`value`: IResolvable) {
-    unwrap(this).setAssessmentReportsDestination(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAssessmentReportsDestination(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The destination that evidence reports are stored in for the assessment.
    */
   public open fun assessmentReportsDestination(`value`: AssessmentReportsDestinationProperty) {
-    unwrap(this).setAssessmentReportsDestination(`value`.let(AssessmentReportsDestinationProperty::unwrap))
+    unwrap(this).setAssessmentReportsDestination(`value`.let(AssessmentReportsDestinationProperty.Companion::unwrap))
   }
 
   /**
@@ -161,14 +161,14 @@ public open class CfnAssessment(
    * The AWS account that's associated with the assessment.
    */
   public open fun awsAccount(`value`: IResolvable) {
-    unwrap(this).setAwsAccount(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAwsAccount(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The AWS account that's associated with the assessment.
    */
   public open fun awsAccount(`value`: AWSAccountProperty) {
-    unwrap(this).setAwsAccount(`value`.let(AWSAccountProperty::unwrap))
+    unwrap(this).setAwsAccount(`value`.let(AWSAccountProperty.Companion::unwrap))
   }
 
   /**
@@ -188,7 +188,7 @@ public open class CfnAssessment(
    * The delegations that are associated with the assessment.
    */
   public open fun delegations(`value`: IResolvable) {
-    unwrap(this).setDelegations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDelegations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -233,7 +233,7 @@ public open class CfnAssessment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -257,7 +257,7 @@ public open class CfnAssessment(
    * The roles that are associated with the assessment.
    */
   public open fun roles(`value`: IResolvable) {
-    unwrap(this).setRoles(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRoles(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -281,14 +281,14 @@ public open class CfnAssessment(
    * The wrapper of AWS accounts and services that are in scope for the assessment.
    */
   public open fun scope(`value`: IResolvable) {
-    unwrap(this).setScope(`value`.let(IResolvable::unwrap))
+    unwrap(this).setScope(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The wrapper of AWS accounts and services that are in scope for the assessment.
    */
   public open fun scope(`value`: ScopeProperty) {
-    unwrap(this).setScope(`value`.let(ScopeProperty::unwrap))
+    unwrap(this).setScope(`value`.let(ScopeProperty.Companion::unwrap))
   }
 
   /**
@@ -326,7 +326,7 @@ public open class CfnAssessment(
    * The tags that are associated with the assessment.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -542,7 +542,7 @@ public open class CfnAssessment(
      * the assessment. 
      */
     override fun assessmentReportsDestination(assessmentReportsDestination: IResolvable) {
-      cdkBuilder.assessmentReportsDestination(assessmentReportsDestination.let(IResolvable::unwrap))
+      cdkBuilder.assessmentReportsDestination(assessmentReportsDestination.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -554,7 +554,7 @@ public open class CfnAssessment(
      */
     override
         fun assessmentReportsDestination(assessmentReportsDestination: AssessmentReportsDestinationProperty) {
-      cdkBuilder.assessmentReportsDestination(assessmentReportsDestination.let(AssessmentReportsDestinationProperty::unwrap))
+      cdkBuilder.assessmentReportsDestination(assessmentReportsDestination.let(AssessmentReportsDestinationProperty.Companion::unwrap))
     }
 
     /**
@@ -578,7 +578,7 @@ public open class CfnAssessment(
      * @param awsAccount The AWS account that's associated with the assessment. 
      */
     override fun awsAccount(awsAccount: IResolvable) {
-      cdkBuilder.awsAccount(awsAccount.let(IResolvable::unwrap))
+      cdkBuilder.awsAccount(awsAccount.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -588,7 +588,7 @@ public open class CfnAssessment(
      * @param awsAccount The AWS account that's associated with the assessment. 
      */
     override fun awsAccount(awsAccount: AWSAccountProperty) {
-      cdkBuilder.awsAccount(awsAccount.let(AWSAccountProperty::unwrap))
+      cdkBuilder.awsAccount(awsAccount.let(AWSAccountProperty.Companion::unwrap))
     }
 
     /**
@@ -609,7 +609,7 @@ public open class CfnAssessment(
      * @param delegations The delegations that are associated with the assessment. 
      */
     override fun delegations(delegations: IResolvable) {
-      cdkBuilder.delegations(delegations.let(IResolvable::unwrap))
+      cdkBuilder.delegations(delegations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -667,7 +667,7 @@ public open class CfnAssessment(
      * @param roles The roles that are associated with the assessment. 
      */
     override fun roles(roles: IResolvable) {
-      cdkBuilder.roles(roles.let(IResolvable::unwrap))
+      cdkBuilder.roles(roles.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -695,7 +695,7 @@ public open class CfnAssessment(
      * @param scope The wrapper of AWS accounts and services that are in scope for the assessment. 
      */
     override fun scope(scope: IResolvable) {
-      cdkBuilder.scope(scope.let(IResolvable::unwrap))
+      cdkBuilder.scope(scope.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -705,7 +705,7 @@ public open class CfnAssessment(
      * @param scope The wrapper of AWS accounts and services that are in scope for the assessment. 
      */
     override fun scope(scope: ScopeProperty) {
-      cdkBuilder.scope(scope.let(ScopeProperty::unwrap))
+      cdkBuilder.scope(scope.let(ScopeProperty.Companion::unwrap))
     }
 
     /**
@@ -743,7 +743,7 @@ public open class CfnAssessment(
      * @param tags The tags that are associated with the assessment. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1734,7 +1734,7 @@ public open class CfnAssessment(
        * @param awsAccounts The AWS accounts that are included in the scope of the assessment.
        */
       override fun awsAccounts(awsAccounts: IResolvable) {
-        cdkBuilder.awsAccounts(awsAccounts.let(IResolvable::unwrap))
+        cdkBuilder.awsAccounts(awsAccounts.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1753,7 +1753,7 @@ public open class CfnAssessment(
        * @param awsServices The AWS services that are included in the scope of the assessment.
        */
       override fun awsServices(awsServices: IResolvable) {
-        cdkBuilder.awsServices(awsServices.let(IResolvable::unwrap))
+        cdkBuilder.awsServices(awsServices.let(IResolvable.Companion::unwrap))
       }
 
       /**

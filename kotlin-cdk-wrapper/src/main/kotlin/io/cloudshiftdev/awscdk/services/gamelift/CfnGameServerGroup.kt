@@ -109,8 +109,8 @@ public open class CfnGameServerGroup(
     id: String,
     props: CfnGameServerGroupProps,
   ) :
-      this(software.amazon.awscdk.services.gamelift.CfnGameServerGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGameServerGroupProps::unwrap))
+      this(software.amazon.awscdk.services.gamelift.CfnGameServerGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGameServerGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -141,7 +141,7 @@ public open class CfnGameServerGroup(
    * for game hosting.
    */
   public open fun autoScalingPolicy(`value`: IResolvable) {
-    unwrap(this).setAutoScalingPolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoScalingPolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -149,7 +149,7 @@ public open class CfnGameServerGroup(
    * for game hosting.
    */
   public open fun autoScalingPolicy(`value`: AutoScalingPolicyProperty) {
-    unwrap(this).setAutoScalingPolicy(`value`.let(AutoScalingPolicyProperty::unwrap))
+    unwrap(this).setAutoScalingPolicy(`value`.let(AutoScalingPolicyProperty.Companion::unwrap))
   }
 
   /**
@@ -220,7 +220,7 @@ public open class CfnGameServerGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -234,7 +234,7 @@ public open class CfnGameServerGroup(
    * automatically scaling instances in the corresponding Auto Scaling group.
    */
   public open fun instanceDefinitions(`value`: IResolvable) {
-    unwrap(this).setInstanceDefinitions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInstanceDefinitions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -263,7 +263,7 @@ public open class CfnGameServerGroup(
    * deployed to all instances in the game server group.
    */
   public open fun launchTemplate(`value`: IResolvable) {
-    unwrap(this).setLaunchTemplate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLaunchTemplate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -271,7 +271,7 @@ public open class CfnGameServerGroup(
    * deployed to all instances in the game server group.
    */
   public open fun launchTemplate(`value`: LaunchTemplateProperty) {
-    unwrap(this).setLaunchTemplate(`value`.let(LaunchTemplateProperty::unwrap))
+    unwrap(this).setLaunchTemplate(`value`.let(LaunchTemplateProperty.Companion::unwrap))
   }
 
   /**
@@ -338,7 +338,7 @@ public open class CfnGameServerGroup(
    * A list of labels to assign to the new game server group resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -702,7 +702,7 @@ public open class CfnGameServerGroup(
      * Scaling group that is optimized for game hosting. 
      */
     override fun autoScalingPolicy(autoScalingPolicy: IResolvable) {
-      cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(IResolvable::unwrap))
+      cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -719,7 +719,7 @@ public open class CfnGameServerGroup(
      * Scaling group that is optimized for game hosting. 
      */
     override fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty) {
-      cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(AutoScalingPolicyProperty::unwrap))
+      cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(AutoScalingPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -825,7 +825,7 @@ public open class CfnGameServerGroup(
      * group. 
      */
     override fun instanceDefinitions(instanceDefinitions: IResolvable) {
-      cdkBuilder.instanceDefinitions(instanceDefinitions.let(IResolvable::unwrap))
+      cdkBuilder.instanceDefinitions(instanceDefinitions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -874,7 +874,7 @@ public open class CfnGameServerGroup(
      * game server code to be deployed to all instances in the game server group. 
      */
     override fun launchTemplate(launchTemplate: IResolvable) {
-      cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
+      cdkBuilder.launchTemplate(launchTemplate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -898,7 +898,7 @@ public open class CfnGameServerGroup(
      * game server code to be deployed to all instances in the game server group. 
      */
     override fun launchTemplate(launchTemplate: LaunchTemplateProperty) {
-      cdkBuilder.launchTemplate(launchTemplate.let(LaunchTemplateProperty::unwrap))
+      cdkBuilder.launchTemplate(launchTemplate.let(LaunchTemplateProperty.Companion::unwrap))
     }
 
     /**
@@ -983,7 +983,7 @@ public open class CfnGameServerGroup(
      * @param tags A list of labels to assign to the new game server group resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1179,7 +1179,7 @@ public open class CfnGameServerGroup(
        * returns to the target value.
        */
       override fun targetTrackingConfiguration(targetTrackingConfiguration: IResolvable) {
-        cdkBuilder.targetTrackingConfiguration(targetTrackingConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.targetTrackingConfiguration(targetTrackingConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1192,7 +1192,7 @@ public open class CfnGameServerGroup(
        */
       override
           fun targetTrackingConfiguration(targetTrackingConfiguration: TargetTrackingConfigurationProperty) {
-        cdkBuilder.targetTrackingConfiguration(targetTrackingConfiguration.let(TargetTrackingConfigurationProperty::unwrap))
+        cdkBuilder.targetTrackingConfiguration(targetTrackingConfiguration.let(TargetTrackingConfigurationProperty.Companion::unwrap))
       }
 
       /**

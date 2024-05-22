@@ -54,7 +54,7 @@ public open class CfnVPCEndpointService(
   cdkObject: software.amazon.awscdk.services.ec2.CfnVPCEndpointService,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ec2.CfnVPCEndpointService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ec2.CfnVPCEndpointService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -63,8 +63,8 @@ public open class CfnVPCEndpointService(
     id: String,
     props: CfnVPCEndpointServiceProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnVPCEndpointService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVPCEndpointServiceProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnVPCEndpointService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVPCEndpointServiceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -93,7 +93,7 @@ public open class CfnVPCEndpointService(
    * accepted.
    */
   public open fun acceptanceRequired(`value`: IResolvable) {
-    unwrap(this).setAcceptanceRequired(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAcceptanceRequired(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -120,7 +120,7 @@ public open class CfnVPCEndpointService(
    * .
    */
   public open fun contributorInsightsEnabled(`value`: IResolvable) {
-    unwrap(this).setContributorInsightsEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setContributorInsightsEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -148,7 +148,7 @@ public open class CfnVPCEndpointService(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -303,7 +303,7 @@ public open class CfnVPCEndpointService(
      * endpoint to your service must be accepted. 
      */
     override fun acceptanceRequired(acceptanceRequired: IResolvable) {
-      cdkBuilder.acceptanceRequired(acceptanceRequired.let(IResolvable::unwrap))
+      cdkBuilder.acceptanceRequired(acceptanceRequired.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -327,7 +327,7 @@ public open class CfnVPCEndpointService(
      * Insights rules provided by AWS PrivateLink . 
      */
     override fun contributorInsightsEnabled(contributorInsightsEnabled: IResolvable) {
-      cdkBuilder.contributorInsightsEnabled(contributorInsightsEnabled.let(IResolvable::unwrap))
+      cdkBuilder.contributorInsightsEnabled(contributorInsightsEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -247,7 +247,7 @@ public interface CfnDomainNameProps {
      * endpoint types of the domain name.
      */
     override fun endpointConfiguration(endpointConfiguration: IResolvable) {
-      cdkBuilder.endpointConfiguration(endpointConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.endpointConfiguration(endpointConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -256,7 +256,7 @@ public interface CfnDomainNameProps {
      */
     override
         fun endpointConfiguration(endpointConfiguration: CfnDomainName.EndpointConfigurationProperty) {
-      cdkBuilder.endpointConfiguration(endpointConfiguration.let(CfnDomainName.EndpointConfigurationProperty::unwrap))
+      cdkBuilder.endpointConfiguration(endpointConfiguration.let(CfnDomainName.EndpointConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -277,7 +277,7 @@ public interface CfnDomainNameProps {
      * Clients must present a trusted certificate to access your API.
      */
     override fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable) {
-      cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(IResolvable::unwrap))
+      cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -288,7 +288,7 @@ public interface CfnDomainNameProps {
      */
     override
         fun mutualTlsAuthentication(mutualTlsAuthentication: CfnDomainName.MutualTlsAuthenticationProperty) {
-      cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(CfnDomainName.MutualTlsAuthenticationProperty::unwrap))
+      cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(CfnDomainName.MutualTlsAuthenticationProperty.Companion::unwrap))
     }
 
     /**
@@ -337,7 +337,7 @@ public interface CfnDomainNameProps {
      * Each tag element is associated with a given resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -876,7 +876,7 @@ public interface CfnRuleProps {
      * provides the ID of the failed target and the error code.
      */
     override fun targets(targets: IResolvable) {
-      cdkBuilder.targets(targets.let(IResolvable::unwrap))
+      cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
     }
 
     /**

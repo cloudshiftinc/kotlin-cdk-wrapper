@@ -256,7 +256,7 @@ public interface CfnStreamProps {
      * Removing this property from your stack template and updating your stack disables encryption.
      */
     override fun streamEncryption(streamEncryption: IResolvable) {
-      cdkBuilder.streamEncryption(streamEncryption.let(IResolvable::unwrap))
+      cdkBuilder.streamEncryption(streamEncryption.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -265,7 +265,7 @@ public interface CfnStreamProps {
      * Removing this property from your stack template and updating your stack disables encryption.
      */
     override fun streamEncryption(streamEncryption: CfnStream.StreamEncryptionProperty) {
-      cdkBuilder.streamEncryption(streamEncryption.let(CfnStream.StreamEncryptionProperty::unwrap))
+      cdkBuilder.streamEncryption(streamEncryption.let(CfnStream.StreamEncryptionProperty.Companion::unwrap))
     }
 
     /**
@@ -286,7 +286,7 @@ public interface CfnStreamProps {
      * *provisioned* capacity mode for your data streams.
      */
     override fun streamModeDetails(streamModeDetails: IResolvable) {
-      cdkBuilder.streamModeDetails(streamModeDetails.let(IResolvable::unwrap))
+      cdkBuilder.streamModeDetails(streamModeDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -296,7 +296,7 @@ public interface CfnStreamProps {
      * *provisioned* capacity mode for your data streams.
      */
     override fun streamModeDetails(streamModeDetails: CfnStream.StreamModeDetailsProperty) {
-      cdkBuilder.streamModeDetails(streamModeDetails.let(CfnStream.StreamModeDetailsProperty::unwrap))
+      cdkBuilder.streamModeDetails(streamModeDetails.let(CfnStream.StreamModeDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -318,7 +318,7 @@ public interface CfnStreamProps {
      * in the *Amazon Kinesis Developer Guide* .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

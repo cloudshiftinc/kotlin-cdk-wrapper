@@ -59,8 +59,8 @@ public open class CfnResolverRule(
     id: String,
     props: CfnResolverRuleProps,
   ) :
-      this(software.amazon.awscdk.services.route53resolver.CfnResolverRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnResolverRuleProps::unwrap))
+      this(software.amazon.awscdk.services.route53resolver.CfnResolverRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnResolverRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -134,7 +134,7 @@ public open class CfnResolverRule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -190,7 +190,7 @@ public open class CfnResolverRule(
    * Tags help organize and categorize your Resolver rules.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -209,7 +209,7 @@ public open class CfnResolverRule(
    * queries to.
    */
   public open fun targetIps(`value`: IResolvable) {
-    unwrap(this).setTargetIps(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTargetIps(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -410,7 +410,7 @@ public open class CfnResolverRule(
      * @param tags Tags help organize and categorize your Resolver rules. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -434,7 +434,7 @@ public open class CfnResolverRule(
      * forwards DNS queries to. 
      */
     override fun targetIps(targetIps: IResolvable) {
-      cdkBuilder.targetIps(targetIps.let(IResolvable::unwrap))
+      cdkBuilder.targetIps(targetIps.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -46,8 +46,8 @@ public open class LambdaDeploymentGroup(
     id: String,
     props: LambdaDeploymentGroupProps,
   ) :
-      this(software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(LambdaDeploymentGroupProps::unwrap))
+      this(software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(LambdaDeploymentGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -63,7 +63,7 @@ public open class LambdaDeploymentGroup(
    * @param alarm the alarm to associate with this Deployment Group. 
    */
   public open fun addAlarm(alarm: IAlarm) {
-    unwrap(this).addAlarm(alarm.let(IAlarm::unwrap))
+    unwrap(this).addAlarm(alarm.let(IAlarm.Companion::unwrap))
   }
 
   /**
@@ -72,7 +72,7 @@ public open class LambdaDeploymentGroup(
    * @param postHook function to run after deployment completes. 
    */
   public open fun addPostHook(postHook: IFunction) {
-    unwrap(this).addPostHook(postHook.let(IFunction::unwrap))
+    unwrap(this).addPostHook(postHook.let(IFunction.Companion::unwrap))
   }
 
   /**
@@ -81,7 +81,7 @@ public open class LambdaDeploymentGroup(
    * @param preHook function to run before deployment beings. 
    */
   public open fun addPreHook(preHook: IFunction) {
-    unwrap(this).addPreHook(preHook.let(IFunction::unwrap))
+    unwrap(this).addPreHook(preHook.let(IFunction.Companion::unwrap))
   }
 
   /**
@@ -113,7 +113,7 @@ public open class LambdaDeploymentGroup(
    * @param grantee to grant permission to. 
    */
   public open fun grantPutLifecycleEventHookExecutionStatus(grantee: IGrantable): Grant =
-      unwrap(this).grantPutLifecycleEventHookExecutionStatus(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantPutLifecycleEventHookExecutionStatus(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The service Role of this Deployment Group.
@@ -285,7 +285,7 @@ public open class LambdaDeploymentGroup(
      * @param alarms The CloudWatch alarms associated with this Deployment Group. 
      */
     override fun alarms(alarms: List<IAlarm>) {
-      cdkBuilder.alarms(alarms.map(IAlarm::unwrap))
+      cdkBuilder.alarms(alarms.map(IAlarm.Companion::unwrap))
     }
 
     /**
@@ -314,7 +314,7 @@ public open class LambdaDeploymentGroup(
      * CodeDeploy deployment. 
      */
     override fun alias(alias: Alias) {
-      cdkBuilder.alias(alias.let(Alias::unwrap))
+      cdkBuilder.alias(alias.let(Alias.Companion::unwrap))
     }
 
     /**
@@ -326,7 +326,7 @@ public open class LambdaDeploymentGroup(
      * Group belongs to. 
      */
     override fun application(application: ILambdaApplication) {
-      cdkBuilder.application(application.let(ILambdaApplication::unwrap))
+      cdkBuilder.application(application.let(ILambdaApplication.Companion::unwrap))
     }
 
     /**
@@ -337,7 +337,7 @@ public open class LambdaDeploymentGroup(
      * @param autoRollback The auto-rollback configuration for this Deployment Group. 
      */
     override fun autoRollback(autoRollback: AutoRollbackConfig) {
-      cdkBuilder.autoRollback(autoRollback.let(AutoRollbackConfig::unwrap))
+      cdkBuilder.autoRollback(autoRollback.let(AutoRollbackConfig.Companion::unwrap))
     }
 
     /**
@@ -360,7 +360,7 @@ public open class LambdaDeploymentGroup(
      * @param deploymentConfig The Deployment Configuration this Deployment Group uses. 
      */
     override fun deploymentConfig(deploymentConfig: ILambdaDeploymentConfig) {
-      cdkBuilder.deploymentConfig(deploymentConfig.let(ILambdaDeploymentConfig::unwrap))
+      cdkBuilder.deploymentConfig(deploymentConfig.let(ILambdaDeploymentConfig.Companion::unwrap))
     }
 
     /**
@@ -407,7 +407,7 @@ public open class LambdaDeploymentGroup(
      * @param postHook The Lambda function to run after traffic routing starts. 
      */
     override fun postHook(postHook: IFunction) {
-      cdkBuilder.postHook(postHook.let(IFunction::unwrap))
+      cdkBuilder.postHook(postHook.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -418,7 +418,7 @@ public open class LambdaDeploymentGroup(
      * @param preHook The Lambda function to run before traffic routing starts. 
      */
     override fun preHook(preHook: IFunction) {
-      cdkBuilder.preHook(preHook.let(IFunction::unwrap))
+      cdkBuilder.preHook(preHook.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -429,7 +429,7 @@ public open class LambdaDeploymentGroup(
      * @param role The service Role of this Deployment Group. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroup =
@@ -442,8 +442,9 @@ public open class LambdaDeploymentGroup(
       id: String,
       attrs: LambdaDeploymentGroupAttributes,
     ): ILambdaDeploymentGroup =
-        software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroup.fromLambdaDeploymentGroupAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(LambdaDeploymentGroupAttributes::unwrap)).let(ILambdaDeploymentGroup::wrap)
+        software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroup.fromLambdaDeploymentGroupAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        attrs.let(LambdaDeploymentGroupAttributes.Companion::unwrap)).let(ILambdaDeploymentGroup::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4ea77b497b67174b52d295c255acd7df97982b2c72bd6820660d6ee02f5380f9")

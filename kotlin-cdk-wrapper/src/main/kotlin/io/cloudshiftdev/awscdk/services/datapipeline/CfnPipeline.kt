@@ -95,8 +95,8 @@ public open class CfnPipeline(
     id: String,
     props: CfnPipelineProps,
   ) :
-      this(software.amazon.awscdk.services.datapipeline.CfnPipeline(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPipelineProps::unwrap))
+      this(software.amazon.awscdk.services.datapipeline.CfnPipeline(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPipelineProps.Companion::unwrap))
   )
 
   public constructor(
@@ -122,7 +122,7 @@ public open class CfnPipeline(
    * Indicates whether to validate and start the pipeline or stop an active pipeline.
    */
   public open fun activate(`value`: IResolvable) {
-    unwrap(this).setActivate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setActivate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -159,7 +159,7 @@ public open class CfnPipeline(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -183,7 +183,7 @@ public open class CfnPipeline(
    * The parameter objects used with the pipeline.
    */
   public open fun parameterObjects(`value`: IResolvable) {
-    unwrap(this).setParameterObjects(`value`.let(IResolvable::unwrap))
+    unwrap(this).setParameterObjects(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -207,7 +207,7 @@ public open class CfnPipeline(
    * The parameter values used with the pipeline.
    */
   public open fun parameterValues(`value`: IResolvable) {
-    unwrap(this).setParameterValues(`value`.let(IResolvable::unwrap))
+    unwrap(this).setParameterValues(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -231,7 +231,7 @@ public open class CfnPipeline(
    * The objects that define the pipeline.
    */
   public open fun pipelineObjects(`value`: IResolvable) {
-    unwrap(this).setPipelineObjects(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPipelineObjects(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -258,7 +258,7 @@ public open class CfnPipeline(
    * control permissions.
    */
   public open fun pipelineTags(`value`: List<PipelineTagProperty>) {
-    unwrap(this).setPipelineTags(`value`.map(PipelineTagProperty::unwrap))
+    unwrap(this).setPipelineTags(`value`.map(PipelineTagProperty.Companion::unwrap))
   }
 
   /**
@@ -457,7 +457,7 @@ public open class CfnPipeline(
      * pipeline. 
      */
     override fun activate(activate: IResolvable) {
-      cdkBuilder.activate(activate.let(IResolvable::unwrap))
+      cdkBuilder.activate(activate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -487,7 +487,7 @@ public open class CfnPipeline(
      * @param parameterObjects The parameter objects used with the pipeline. 
      */
     override fun parameterObjects(parameterObjects: IResolvable) {
-      cdkBuilder.parameterObjects(parameterObjects.let(IResolvable::unwrap))
+      cdkBuilder.parameterObjects(parameterObjects.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -516,7 +516,7 @@ public open class CfnPipeline(
      * @param parameterValues The parameter values used with the pipeline. 
      */
     override fun parameterValues(parameterValues: IResolvable) {
-      cdkBuilder.parameterValues(parameterValues.let(IResolvable::unwrap))
+      cdkBuilder.parameterValues(parameterValues.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -550,7 +550,7 @@ public open class CfnPipeline(
      * @param pipelineObjects The objects that define the pipeline. 
      */
     override fun pipelineObjects(pipelineObjects: IResolvable) {
-      cdkBuilder.pipelineObjects(pipelineObjects.let(IResolvable::unwrap))
+      cdkBuilder.pipelineObjects(pipelineObjects.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -595,7 +595,7 @@ public open class CfnPipeline(
      * pipeline, which you can use to control permissions. 
      */
     override fun pipelineTags(pipelineTags: List<PipelineTagProperty>) {
-      cdkBuilder.pipelineTags(pipelineTags.map(PipelineTagProperty::unwrap))
+      cdkBuilder.pipelineTags(pipelineTags.map(PipelineTagProperty.Companion::unwrap))
     }
 
     /**
@@ -1044,7 +1044,7 @@ public open class CfnPipeline(
        * @param attributes The attributes of the parameter object. 
        */
       override fun attributes(attributes: IResolvable) {
-        cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1304,7 +1304,7 @@ public open class CfnPipeline(
        * @param fields Key-value pairs that define the properties of the object. 
        */
       override fun fields(fields: IResolvable) {
-        cdkBuilder.fields(fields.let(IResolvable::unwrap))
+        cdkBuilder.fields(fields.let(IResolvable.Companion::unwrap))
       }
 
       /**

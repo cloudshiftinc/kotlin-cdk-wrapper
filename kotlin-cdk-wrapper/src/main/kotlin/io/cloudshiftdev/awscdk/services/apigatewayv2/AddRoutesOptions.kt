@@ -142,21 +142,21 @@ public interface AddRoutesOptions : BatchHttpRouteOptions {
      * Use NoneAuthorizer to remove the default authorizer for the api
      */
     override fun authorizer(authorizer: IHttpRouteAuthorizer) {
-      cdkBuilder.authorizer(authorizer.let(IHttpRouteAuthorizer::unwrap))
+      cdkBuilder.authorizer(authorizer.let(IHttpRouteAuthorizer.Companion::unwrap))
     }
 
     /**
      * @param integration The integration to be configured on this route. 
      */
     override fun integration(integration: HttpRouteIntegration) {
-      cdkBuilder.integration(integration.let(HttpRouteIntegration::unwrap))
+      cdkBuilder.integration(integration.let(HttpRouteIntegration.Companion::unwrap))
     }
 
     /**
      * @param methods The HTTP methods to be configured.
      */
     override fun methods(methods: List<HttpMethod>) {
-      cdkBuilder.methods(methods.map(HttpMethod::unwrap))
+      cdkBuilder.methods(methods.map(HttpMethod.Companion::unwrap))
     }
 
     /**

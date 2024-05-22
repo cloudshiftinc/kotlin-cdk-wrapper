@@ -38,7 +38,7 @@ public open class ProvisionedModel(
       id: String,
       provisionedModelArn: String,
     ): IModel =
-        software.amazon.awscdk.services.bedrock.ProvisionedModel.fromProvisionedModelArn(scope.let(Construct::unwrap),
+        software.amazon.awscdk.services.bedrock.ProvisionedModel.fromProvisionedModelArn(scope.let(Construct.Companion::unwrap),
         id, provisionedModelArn).let(IModel::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.ProvisionedModel):

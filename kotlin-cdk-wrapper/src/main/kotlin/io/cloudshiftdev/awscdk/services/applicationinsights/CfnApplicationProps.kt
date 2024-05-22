@@ -428,7 +428,7 @@ public interface CfnApplicationProps {
      * attached to the instance roles if they are missing.
      */
     override fun attachMissingPermission(attachMissingPermission: IResolvable) {
-      cdkBuilder.attachMissingPermission(attachMissingPermission.let(IResolvable::unwrap))
+      cdkBuilder.attachMissingPermission(attachMissingPermission.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -444,14 +444,14 @@ public interface CfnApplicationProps {
      * configured with the monitoring configuration recommended by Application Insights.
      */
     override fun autoConfigurationEnabled(autoConfigurationEnabled: IResolvable) {
-      cdkBuilder.autoConfigurationEnabled(autoConfigurationEnabled.let(IResolvable::unwrap))
+      cdkBuilder.autoConfigurationEnabled(autoConfigurationEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param componentMonitoringSettings The monitoring settings of the components.
      */
     override fun componentMonitoringSettings(componentMonitoringSettings: IResolvable) {
-      cdkBuilder.componentMonitoringSettings(componentMonitoringSettings.let(IResolvable::unwrap))
+      cdkBuilder.componentMonitoringSettings(componentMonitoringSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -472,7 +472,7 @@ public interface CfnApplicationProps {
      * to monitor.
      */
     override fun customComponents(customComponents: IResolvable) {
-      cdkBuilder.customComponents(customComponents.let(IResolvable::unwrap))
+      cdkBuilder.customComponents(customComponents.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -505,7 +505,7 @@ public interface CfnApplicationProps {
      * others.
      */
     override fun cweMonitorEnabled(cweMonitorEnabled: IResolvable) {
-      cdkBuilder.cweMonitorEnabled(cweMonitorEnabled.let(IResolvable::unwrap))
+      cdkBuilder.cweMonitorEnabled(cweMonitorEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -522,7 +522,7 @@ public interface CfnApplicationProps {
      * @param logPatternSets The log pattern sets.
      */
     override fun logPatternSets(logPatternSets: IResolvable) {
-      cdkBuilder.logPatternSets(logPatternSets.let(IResolvable::unwrap))
+      cdkBuilder.logPatternSets(logPatternSets.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -551,7 +551,7 @@ public interface CfnApplicationProps {
      * problem that is detected by Application Insights for an application.
      */
     override fun opsCenterEnabled(opsCenterEnabled: IResolvable) {
-      cdkBuilder.opsCenterEnabled(opsCenterEnabled.let(IResolvable::unwrap))
+      cdkBuilder.opsCenterEnabled(opsCenterEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -573,7 +573,7 @@ public interface CfnApplicationProps {
      * @param tags An array of `Tags` .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

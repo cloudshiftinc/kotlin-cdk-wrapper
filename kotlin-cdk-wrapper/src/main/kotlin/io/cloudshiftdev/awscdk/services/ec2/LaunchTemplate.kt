@@ -44,7 +44,7 @@ public open class LaunchTemplate(
   cdkObject: software.amazon.awscdk.services.ec2.LaunchTemplate,
 ) : Resource(cdkObject), ILaunchTemplate, IGrantable, IConnectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ec2.LaunchTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ec2.LaunchTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -53,8 +53,8 @@ public open class LaunchTemplate(
     id: String,
     props: LaunchTemplateProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.LaunchTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(LaunchTemplateProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.LaunchTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(LaunchTemplateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -70,7 +70,7 @@ public open class LaunchTemplate(
    * @param securityGroup : The security group to add. 
    */
   public open fun addSecurityGroup(securityGroup: ISecurityGroup) {
-    unwrap(this).addSecurityGroup(securityGroup.let(ISecurityGroup::unwrap))
+    unwrap(this).addSecurityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
   }
 
   /**
@@ -507,7 +507,7 @@ public open class LaunchTemplate(
      * virtual devices and EBS volumes. 
      */
     override fun blockDevices(blockDevices: List<BlockDevice>) {
-      cdkBuilder.blockDevices(blockDevices.map(BlockDevice::unwrap))
+      cdkBuilder.blockDevices(blockDevices.map(BlockDevice.Companion::unwrap))
     }
 
     /**
@@ -537,7 +537,7 @@ public open class LaunchTemplate(
      * @param cpuCredits CPU credit type for burstable EC2 instance types. 
      */
     override fun cpuCredits(cpuCredits: CpuCredits) {
-      cdkBuilder.cpuCredits(cpuCredits.let(CpuCredits::unwrap))
+      cdkBuilder.cpuCredits(cpuCredits.let(CpuCredits.Companion::unwrap))
     }
 
     /**
@@ -651,7 +651,7 @@ public open class LaunchTemplate(
      * @param httpTokens The state of token usage for your instance metadata requests. 
      */
     override fun httpTokens(httpTokens: LaunchTemplateHttpTokens) {
-      cdkBuilder.httpTokens(httpTokens.let(LaunchTemplateHttpTokens::unwrap))
+      cdkBuilder.httpTokens(httpTokens.let(LaunchTemplateHttpTokens.Companion::unwrap))
     }
 
     /**
@@ -667,7 +667,7 @@ public open class LaunchTemplate(
      */
     override
         fun instanceInitiatedShutdownBehavior(instanceInitiatedShutdownBehavior: InstanceInitiatedShutdownBehavior) {
-      cdkBuilder.instanceInitiatedShutdownBehavior(instanceInitiatedShutdownBehavior.let(InstanceInitiatedShutdownBehavior::unwrap))
+      cdkBuilder.instanceInitiatedShutdownBehavior(instanceInitiatedShutdownBehavior.let(InstanceInitiatedShutdownBehavior.Companion::unwrap))
     }
 
     /**
@@ -695,7 +695,7 @@ public open class LaunchTemplate(
      * @param instanceProfile The instance profile used to pass role information to EC2 instances. 
      */
     override fun instanceProfile(instanceProfile: IInstanceProfile) {
-      cdkBuilder.instanceProfile(instanceProfile.let(IInstanceProfile::unwrap))
+      cdkBuilder.instanceProfile(instanceProfile.let(IInstanceProfile.Companion::unwrap))
     }
 
     /**
@@ -706,7 +706,7 @@ public open class LaunchTemplate(
      * @param instanceType Type of instance to launch. 
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -731,7 +731,7 @@ public open class LaunchTemplate(
      * @param keyPair The SSH keypair to grant access to the instance. 
      */
     override fun keyPair(keyPair: IKeyPair) {
-      cdkBuilder.keyPair(keyPair.let(IKeyPair::unwrap))
+      cdkBuilder.keyPair(keyPair.let(IKeyPair.Companion::unwrap))
     }
 
     /**
@@ -753,7 +753,7 @@ public open class LaunchTemplate(
      * @param machineImage The AMI that will be used by instances. 
      */
     override fun machineImage(machineImage: IMachineImage) {
-      cdkBuilder.machineImage(machineImage.let(IMachineImage::unwrap))
+      cdkBuilder.machineImage(machineImage.let(IMachineImage.Companion::unwrap))
     }
 
     /**
@@ -801,7 +801,7 @@ public open class LaunchTemplate(
      * @param role An IAM role to associate with the instance profile that is used by instances. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -812,7 +812,7 @@ public open class LaunchTemplate(
      * @param securityGroup Security group to assign to instances created with the launch template. 
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -826,7 +826,7 @@ public open class LaunchTemplate(
      * will be as defined. 
      */
     override fun spotOptions(spotOptions: LaunchTemplateSpotOptions) {
-      cdkBuilder.spotOptions(spotOptions.let(LaunchTemplateSpotOptions::unwrap))
+      cdkBuilder.spotOptions(spotOptions.let(LaunchTemplateSpotOptions.Companion::unwrap))
     }
 
     /**
@@ -853,7 +853,7 @@ public open class LaunchTemplate(
      * @param userData The AMI that will be used by instances. 
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.LaunchTemplate = cdkBuilder.build()
@@ -865,8 +865,8 @@ public open class LaunchTemplate(
       id: String,
       attrs: LaunchTemplateAttributes,
     ): ILaunchTemplate =
-        software.amazon.awscdk.services.ec2.LaunchTemplate.fromLaunchTemplateAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(LaunchTemplateAttributes::unwrap)).let(ILaunchTemplate::wrap)
+        software.amazon.awscdk.services.ec2.LaunchTemplate.fromLaunchTemplateAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(LaunchTemplateAttributes.Companion::unwrap)).let(ILaunchTemplate::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("057cd63217e551e0bd19d10f532f79a21856bfe1557c66c09debaa22e75ea62c")

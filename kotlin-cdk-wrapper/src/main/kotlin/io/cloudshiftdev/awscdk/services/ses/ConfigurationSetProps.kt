@@ -150,7 +150,7 @@ public interface ConfigurationSetProps {
      * @param dedicatedIpPool The dedicated IP pool to associate with the configuration set.
      */
     override fun dedicatedIpPool(dedicatedIpPool: IDedicatedIpPool) {
-      cdkBuilder.dedicatedIpPool(dedicatedIpPool.let(IDedicatedIpPool::unwrap))
+      cdkBuilder.dedicatedIpPool(dedicatedIpPool.let(IDedicatedIpPool.Companion::unwrap))
     }
 
     /**
@@ -173,7 +173,7 @@ public interface ConfigurationSetProps {
      * automatically added to your account's suppression list.
      */
     override fun suppressionReasons(suppressionReasons: SuppressionReasons) {
-      cdkBuilder.suppressionReasons(suppressionReasons.let(SuppressionReasons::unwrap))
+      cdkBuilder.suppressionReasons(suppressionReasons.let(SuppressionReasons.Companion::unwrap))
     }
 
     /**
@@ -181,7 +181,7 @@ public interface ConfigurationSetProps {
      * use Transport Layer Security (TLS).
      */
     override fun tlsPolicy(tlsPolicy: ConfigurationSetTlsPolicy) {
-      cdkBuilder.tlsPolicy(tlsPolicy.let(ConfigurationSetTlsPolicy::unwrap))
+      cdkBuilder.tlsPolicy(tlsPolicy.let(ConfigurationSetTlsPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ses.ConfigurationSetProps =

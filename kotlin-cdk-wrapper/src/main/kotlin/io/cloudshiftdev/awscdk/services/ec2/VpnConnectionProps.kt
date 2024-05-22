@@ -126,7 +126,7 @@ public interface VpnConnectionProps : VpnConnectionOptions {
      * Duplicates not allowed.
      */
     override fun tunnelOptions(tunnelOptions: List<VpnTunnelOption>) {
-      cdkBuilder.tunnelOptions(tunnelOptions.map(VpnTunnelOption::unwrap))
+      cdkBuilder.tunnelOptions(tunnelOptions.map(VpnTunnelOption.Companion::unwrap))
     }
 
     /**
@@ -141,7 +141,7 @@ public interface VpnConnectionProps : VpnConnectionOptions {
      * @param vpc The VPC to connect to. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.VpnConnectionProps = cdkBuilder.build()

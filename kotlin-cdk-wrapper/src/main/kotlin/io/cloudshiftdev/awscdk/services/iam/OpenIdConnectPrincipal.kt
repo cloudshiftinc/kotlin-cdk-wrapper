@@ -24,11 +24,11 @@ public open class OpenIdConnectPrincipal(
   cdkObject: software.amazon.awscdk.services.iam.OpenIdConnectPrincipal,
 ) : WebIdentityPrincipal(cdkObject) {
   public constructor(openIdConnectProvider: IOpenIdConnectProvider) :
-      this(software.amazon.awscdk.services.iam.OpenIdConnectPrincipal(openIdConnectProvider.let(IOpenIdConnectProvider::unwrap))
+      this(software.amazon.awscdk.services.iam.OpenIdConnectPrincipal(openIdConnectProvider.let(IOpenIdConnectProvider.Companion::unwrap))
   )
 
   public constructor(openIdConnectProvider: IOpenIdConnectProvider, conditions: Map<String, Any>) :
-      this(software.amazon.awscdk.services.iam.OpenIdConnectPrincipal(openIdConnectProvider.let(IOpenIdConnectProvider::unwrap),
+      this(software.amazon.awscdk.services.iam.OpenIdConnectPrincipal(openIdConnectProvider.let(IOpenIdConnectProvider.Companion::unwrap),
       conditions.mapValues{CdkObjectWrappers.unwrap(it.value)})
   )
 

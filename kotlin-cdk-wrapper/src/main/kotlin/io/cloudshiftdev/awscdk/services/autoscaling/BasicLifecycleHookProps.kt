@@ -143,7 +143,7 @@ public interface BasicLifecycleHookProps {
      * elapses or if an unexpected failure occurs.
      */
     override fun defaultResult(defaultResult: DefaultResult) {
-      cdkBuilder.defaultResult(defaultResult.let(DefaultResult::unwrap))
+      cdkBuilder.defaultResult(defaultResult.let(DefaultResult.Companion::unwrap))
     }
 
     /**
@@ -152,7 +152,7 @@ public interface BasicLifecycleHookProps {
      * If the lifecycle hook times out, perform the action in DefaultResult.
      */
     override fun heartbeatTimeout(heartbeatTimeout: Duration) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Duration::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -167,7 +167,7 @@ public interface BasicLifecycleHookProps {
      * the lifecycle hook. 
      */
     override fun lifecycleTransition(lifecycleTransition: LifecycleTransition) {
-      cdkBuilder.lifecycleTransition(lifecycleTransition.let(LifecycleTransition::unwrap))
+      cdkBuilder.lifecycleTransition(lifecycleTransition.let(LifecycleTransition.Companion::unwrap))
     }
 
     /**
@@ -181,14 +181,14 @@ public interface BasicLifecycleHookProps {
      * @param notificationTarget The target of the lifecycle hook.
      */
     override fun notificationTarget(notificationTarget: ILifecycleHookTarget) {
-      cdkBuilder.notificationTarget(notificationTarget.let(ILifecycleHookTarget::unwrap))
+      cdkBuilder.notificationTarget(notificationTarget.let(ILifecycleHookTarget.Companion::unwrap))
     }
 
     /**
      * @param role The role that allows publishing to the notification target.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.autoscaling.BasicLifecycleHookProps =

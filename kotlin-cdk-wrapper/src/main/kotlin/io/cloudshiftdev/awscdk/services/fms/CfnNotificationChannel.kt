@@ -44,8 +44,8 @@ public open class CfnNotificationChannel(
     id: String,
     props: CfnNotificationChannelProps,
   ) :
-      this(software.amazon.awscdk.services.fms.CfnNotificationChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnNotificationChannelProps::unwrap))
+      this(software.amazon.awscdk.services.fms.CfnNotificationChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnNotificationChannelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -61,7 +61,7 @@ public open class CfnNotificationChannel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

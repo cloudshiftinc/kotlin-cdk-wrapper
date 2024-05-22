@@ -66,8 +66,8 @@ public open class CfnAppBlockBuilder(
     id: String,
     props: CfnAppBlockBuilderProps,
   ) :
-      this(software.amazon.awscdk.services.appstream.CfnAppBlockBuilder(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAppBlockBuilderProps::unwrap))
+      this(software.amazon.awscdk.services.appstream.CfnAppBlockBuilder(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAppBlockBuilderProps.Companion::unwrap))
   )
 
   public constructor(
@@ -86,7 +86,7 @@ public open class CfnAppBlockBuilder(
    * The access endpoints of the app block builder.
    */
   public open fun accessEndpoints(`value`: IResolvable) {
-    unwrap(this).setAccessEndpoints(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccessEndpoints(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -175,7 +175,7 @@ public open class CfnAppBlockBuilder(
    * Indicates whether default internet access is enabled for the app block builder.
    */
   public open fun enableDefaultInternetAccess(`value`: IResolvable) {
-    unwrap(this).setEnableDefaultInternetAccess(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableDefaultInternetAccess(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -196,7 +196,7 @@ public open class CfnAppBlockBuilder(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -244,7 +244,7 @@ public open class CfnAppBlockBuilder(
    * The tags of the app block builder.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -261,14 +261,14 @@ public open class CfnAppBlockBuilder(
    * The VPC configuration for the app block builder.
    */
   public open fun vpcConfig(`value`: IResolvable) {
-    unwrap(this).setVpcConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The VPC configuration for the app block builder.
    */
   public open fun vpcConfig(`value`: VpcConfigProperty) {
-    unwrap(this).setVpcConfig(`value`.let(VpcConfigProperty::unwrap))
+    unwrap(this).setVpcConfig(`value`.let(VpcConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -453,7 +453,7 @@ public open class CfnAppBlockBuilder(
      * @param accessEndpoints The access endpoints of the app block builder. 
      */
     override fun accessEndpoints(accessEndpoints: IResolvable) {
-      cdkBuilder.accessEndpoints(accessEndpoints.let(IResolvable::unwrap))
+      cdkBuilder.accessEndpoints(accessEndpoints.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -537,7 +537,7 @@ public open class CfnAppBlockBuilder(
      * the app block builder. 
      */
     override fun enableDefaultInternetAccess(enableDefaultInternetAccess: IResolvable) {
-      cdkBuilder.enableDefaultInternetAccess(enableDefaultInternetAccess.let(IResolvable::unwrap))
+      cdkBuilder.enableDefaultInternetAccess(enableDefaultInternetAccess.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -589,7 +589,7 @@ public open class CfnAppBlockBuilder(
      * @param tags The tags of the app block builder. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -607,7 +607,7 @@ public open class CfnAppBlockBuilder(
      * @param vpcConfig The VPC configuration for the app block builder. 
      */
     override fun vpcConfig(vpcConfig: IResolvable) {
-      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -617,7 +617,7 @@ public open class CfnAppBlockBuilder(
      * @param vpcConfig The VPC configuration for the app block builder. 
      */
     override fun vpcConfig(vpcConfig: VpcConfigProperty) {
-      cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty.Companion::unwrap))
     }
 
     /**

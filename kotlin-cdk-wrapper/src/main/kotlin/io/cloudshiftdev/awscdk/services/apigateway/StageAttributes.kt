@@ -58,7 +58,7 @@ public interface StageAttributes {
      * @param restApi The RestApi that the stage belongs to. 
      */
     override fun restApi(restApi: IRestApi) {
-      cdkBuilder.restApi(restApi.let(IRestApi::unwrap))
+      cdkBuilder.restApi(restApi.let(IRestApi.Companion::unwrap))
     }
 
     /**

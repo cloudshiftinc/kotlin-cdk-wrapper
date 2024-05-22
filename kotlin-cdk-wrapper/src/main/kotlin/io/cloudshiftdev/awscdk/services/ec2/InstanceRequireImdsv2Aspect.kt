@@ -33,7 +33,7 @@ public open class InstanceRequireImdsv2Aspect(
   )
 
   public constructor(props: InstanceRequireImdsv2AspectProps) :
-      this(software.amazon.awscdk.services.ec2.InstanceRequireImdsv2Aspect(props.let(InstanceRequireImdsv2AspectProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.InstanceRequireImdsv2Aspect(props.let(InstanceRequireImdsv2AspectProps.Companion::unwrap))
   )
 
   public constructor(props: InstanceRequireImdsv2AspectProps.Builder.() -> Unit) :
@@ -46,7 +46,7 @@ public open class InstanceRequireImdsv2Aspect(
    * @param node 
    */
   public override fun visit(node: IConstruct) {
-    unwrap(this).visit(node.let(IConstruct::unwrap))
+    unwrap(this).visit(node.let(IConstruct.Companion::unwrap))
   }
 
   /**

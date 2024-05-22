@@ -68,7 +68,7 @@ public interface PortfolioShareOptions {
      * Controls status and error message language for share.
      */
     override fun messageLanguage(messageLanguage: MessageLanguage) {
-      cdkBuilder.messageLanguage(messageLanguage.let(MessageLanguage::unwrap))
+      cdkBuilder.messageLanguage(messageLanguage.let(MessageLanguage.Companion::unwrap))
     }
 
     /**

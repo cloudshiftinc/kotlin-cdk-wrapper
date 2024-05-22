@@ -74,8 +74,8 @@ public open class CfnUser(
     id: String,
     props: CfnUserProps,
   ) :
-      this(software.amazon.awscdk.services.transfer.CfnUser(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnUserProps::unwrap))
+      this(software.amazon.awscdk.services.transfer.CfnUser(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnUserProps.Companion::unwrap))
   )
 
   public constructor(
@@ -135,7 +135,7 @@ public open class CfnUser(
    * visible to your user and how you want to make them visible.
    */
   public open fun homeDirectoryMappings(`value`: IResolvable) {
-    unwrap(this).setHomeDirectoryMappings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHomeDirectoryMappings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -173,7 +173,7 @@ public open class CfnUser(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -201,7 +201,7 @@ public open class CfnUser(
    * File System (Amazon EFS) file systems.
    */
   public open fun posixProfile(`value`: IResolvable) {
-    unwrap(this).setPosixProfile(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPosixProfile(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -210,7 +210,7 @@ public open class CfnUser(
    * File System (Amazon EFS) file systems.
    */
   public open fun posixProfile(`value`: PosixProfileProperty) {
-    unwrap(this).setPosixProfile(`value`.let(PosixProfileProperty::unwrap))
+    unwrap(this).setPosixProfile(`value`.let(PosixProfileProperty.Companion::unwrap))
   }
 
   /**
@@ -281,7 +281,7 @@ public open class CfnUser(
    * Key-value pairs that can be used to group and search for users.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -632,7 +632,7 @@ public open class CfnUser(
      * EFS paths and keys should be visible to your user and how you want to make them visible. 
      */
     override fun homeDirectoryMappings(homeDirectoryMappings: IResolvable) {
-      cdkBuilder.homeDirectoryMappings(homeDirectoryMappings.let(IResolvable::unwrap))
+      cdkBuilder.homeDirectoryMappings(homeDirectoryMappings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -761,7 +761,7 @@ public open class CfnUser(
      * your Amazon Elastic File System (Amazon EFS) file systems. 
      */
     override fun posixProfile(posixProfile: IResolvable) {
-      cdkBuilder.posixProfile(posixProfile.let(IResolvable::unwrap))
+      cdkBuilder.posixProfile(posixProfile.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -779,7 +779,7 @@ public open class CfnUser(
      * your Amazon Elastic File System (Amazon EFS) file systems. 
      */
     override fun posixProfile(posixProfile: PosixProfileProperty) {
-      cdkBuilder.posixProfile(posixProfile.let(PosixProfileProperty::unwrap))
+      cdkBuilder.posixProfile(posixProfile.let(PosixProfileProperty.Companion::unwrap))
     }
 
     /**
@@ -862,7 +862,7 @@ public open class CfnUser(
      * @param tags Key-value pairs that can be used to group and search for users. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1178,7 +1178,7 @@ public open class CfnUser(
        * user.
        */
       override fun secondaryGids(secondaryGids: IResolvable) {
-        cdkBuilder.secondaryGids(secondaryGids.let(IResolvable::unwrap))
+        cdkBuilder.secondaryGids(secondaryGids.let(IResolvable.Companion::unwrap))
       }
 
       /**

@@ -68,8 +68,8 @@ public open class CfnConfigurationSetEventDestination(
     id: String,
     props: CfnConfigurationSetEventDestinationProps,
   ) :
-      this(software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConfigurationSetEventDestinationProps::unwrap))
+      this(software.amazon.awscdk.services.ses.CfnConfigurationSetEventDestination(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConfigurationSetEventDestinationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -105,14 +105,14 @@ public open class CfnConfigurationSetEventDestination(
    * The event destination object.
    */
   public open fun eventDestination(`value`: IResolvable) {
-    unwrap(this).setEventDestination(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEventDestination(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The event destination object.
    */
   public open fun eventDestination(`value`: EventDestinationProperty) {
-    unwrap(this).setEventDestination(`value`.let(EventDestinationProperty::unwrap))
+    unwrap(this).setEventDestination(`value`.let(EventDestinationProperty.Companion::unwrap))
   }
 
   /**
@@ -129,7 +129,7 @@ public open class CfnConfigurationSetEventDestination(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -201,7 +201,7 @@ public open class CfnConfigurationSetEventDestination(
      * @param eventDestination The event destination object. 
      */
     override fun eventDestination(eventDestination: IResolvable) {
-      cdkBuilder.eventDestination(eventDestination.let(IResolvable::unwrap))
+      cdkBuilder.eventDestination(eventDestination.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -211,7 +211,7 @@ public open class CfnConfigurationSetEventDestination(
      * @param eventDestination The event destination object. 
      */
     override fun eventDestination(eventDestination: EventDestinationProperty) {
-      cdkBuilder.eventDestination(eventDestination.let(EventDestinationProperty::unwrap))
+      cdkBuilder.eventDestination(eventDestination.let(EventDestinationProperty.Companion::unwrap))
     }
 
     /**
@@ -322,7 +322,7 @@ public open class CfnConfigurationSetEventDestination(
        * when you publish email sending events to Amazon CloudWatch.
        */
       override fun dimensionConfigurations(dimensionConfigurations: IResolvable) {
-        cdkBuilder.dimensionConfigurations(dimensionConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.dimensionConfigurations(dimensionConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -881,7 +881,7 @@ public open class CfnConfigurationSetEventDestination(
        * of the dimensions associated with an Amazon CloudWatch event destination.
        */
       override fun cloudWatchDestination(cloudWatchDestination: IResolvable) {
-        cdkBuilder.cloudWatchDestination(cloudWatchDestination.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchDestination(cloudWatchDestination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -889,7 +889,7 @@ public open class CfnConfigurationSetEventDestination(
        * of the dimensions associated with an Amazon CloudWatch event destination.
        */
       override fun cloudWatchDestination(cloudWatchDestination: CloudWatchDestinationProperty) {
-        cdkBuilder.cloudWatchDestination(cloudWatchDestination.let(CloudWatchDestinationProperty::unwrap))
+        cdkBuilder.cloudWatchDestination(cloudWatchDestination.let(CloudWatchDestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -919,7 +919,7 @@ public open class CfnConfigurationSetEventDestination(
        * publishing to this destination. The default value is `false` .
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -927,7 +927,7 @@ public open class CfnConfigurationSetEventDestination(
        * IAM role ARN associated with an Amazon Kinesis Firehose event destination.
        */
       override fun kinesisFirehoseDestination(kinesisFirehoseDestination: IResolvable) {
-        cdkBuilder.kinesisFirehoseDestination(kinesisFirehoseDestination.let(IResolvable::unwrap))
+        cdkBuilder.kinesisFirehoseDestination(kinesisFirehoseDestination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -936,7 +936,7 @@ public open class CfnConfigurationSetEventDestination(
        */
       override
           fun kinesisFirehoseDestination(kinesisFirehoseDestination: KinesisFirehoseDestinationProperty) {
-        cdkBuilder.kinesisFirehoseDestination(kinesisFirehoseDestination.let(KinesisFirehoseDestinationProperty::unwrap))
+        cdkBuilder.kinesisFirehoseDestination(kinesisFirehoseDestination.let(KinesisFirehoseDestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -1034,7 +1034,7 @@ public open class CfnConfigurationSetEventDestination(
        * Simple Notification Service (Amazon SNS) event destination.
        */
       override fun snsDestination(snsDestination: IResolvable) {
-        cdkBuilder.snsDestination(snsDestination.let(IResolvable::unwrap))
+        cdkBuilder.snsDestination(snsDestination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1042,7 +1042,7 @@ public open class CfnConfigurationSetEventDestination(
        * Simple Notification Service (Amazon SNS) event destination.
        */
       override fun snsDestination(snsDestination: SnsDestinationProperty) {
-        cdkBuilder.snsDestination(snsDestination.let(SnsDestinationProperty::unwrap))
+        cdkBuilder.snsDestination(snsDestination.let(SnsDestinationProperty.Companion::unwrap))
       }
 
       /**

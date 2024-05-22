@@ -147,14 +147,14 @@ public interface CfnSimpleTableProps {
      * @param primaryKey the value to be set.
      */
     override fun primaryKey(primaryKey: IResolvable) {
-      cdkBuilder.primaryKey(primaryKey.let(IResolvable::unwrap))
+      cdkBuilder.primaryKey(primaryKey.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param primaryKey the value to be set.
      */
     override fun primaryKey(primaryKey: CfnSimpleTable.PrimaryKeyProperty) {
-      cdkBuilder.primaryKey(primaryKey.let(CfnSimpleTable.PrimaryKeyProperty::unwrap))
+      cdkBuilder.primaryKey(primaryKey.let(CfnSimpleTable.PrimaryKeyProperty.Companion::unwrap))
     }
 
     /**
@@ -169,7 +169,7 @@ public interface CfnSimpleTableProps {
      * @param provisionedThroughput the value to be set.
      */
     override fun provisionedThroughput(provisionedThroughput: IResolvable) {
-      cdkBuilder.provisionedThroughput(provisionedThroughput.let(IResolvable::unwrap))
+      cdkBuilder.provisionedThroughput(provisionedThroughput.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -177,7 +177,7 @@ public interface CfnSimpleTableProps {
      */
     override
         fun provisionedThroughput(provisionedThroughput: CfnSimpleTable.ProvisionedThroughputProperty) {
-      cdkBuilder.provisionedThroughput(provisionedThroughput.let(CfnSimpleTable.ProvisionedThroughputProperty::unwrap))
+      cdkBuilder.provisionedThroughput(provisionedThroughput.let(CfnSimpleTable.ProvisionedThroughputProperty.Companion::unwrap))
     }
 
     /**
@@ -194,14 +194,14 @@ public interface CfnSimpleTableProps {
      * @param sseSpecification the value to be set.
      */
     override fun sseSpecification(sseSpecification: IResolvable) {
-      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param sseSpecification the value to be set.
      */
     override fun sseSpecification(sseSpecification: CfnSimpleTable.SSESpecificationProperty) {
-      cdkBuilder.sseSpecification(sseSpecification.let(CfnSimpleTable.SSESpecificationProperty::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(CfnSimpleTable.SSESpecificationProperty.Companion::unwrap))
     }
 
     /**

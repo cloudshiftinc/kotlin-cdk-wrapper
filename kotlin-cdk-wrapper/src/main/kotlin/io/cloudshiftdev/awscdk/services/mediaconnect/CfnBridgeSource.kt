@@ -56,8 +56,8 @@ public open class CfnBridgeSource(
     id: String,
     props: CfnBridgeSourceProps,
   ) :
-      this(software.amazon.awscdk.services.mediaconnect.CfnBridgeSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnBridgeSourceProps::unwrap))
+      this(software.amazon.awscdk.services.mediaconnect.CfnBridgeSource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnBridgeSourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -88,14 +88,14 @@ public open class CfnBridgeSource(
    * Add a flow source to an existing bridge.
    */
   public open fun flowSource(`value`: IResolvable) {
-    unwrap(this).setFlowSource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFlowSource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Add a flow source to an existing bridge.
    */
   public open fun flowSource(`value`: BridgeFlowSourceProperty) {
-    unwrap(this).setFlowSource(`value`.let(BridgeFlowSourceProperty::unwrap))
+    unwrap(this).setFlowSource(`value`.let(BridgeFlowSourceProperty.Companion::unwrap))
   }
 
   /**
@@ -112,7 +112,7 @@ public open class CfnBridgeSource(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -136,14 +136,14 @@ public open class CfnBridgeSource(
    * Add a network source to an existing bridge.
    */
   public open fun networkSource(`value`: IResolvable) {
-    unwrap(this).setNetworkSource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNetworkSource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Add a network source to an existing bridge.
    */
   public open fun networkSource(`value`: BridgeNetworkSourceProperty) {
-    unwrap(this).setNetworkSource(`value`.let(BridgeNetworkSourceProperty::unwrap))
+    unwrap(this).setNetworkSource(`value`.let(BridgeNetworkSourceProperty.Companion::unwrap))
   }
 
   /**
@@ -254,7 +254,7 @@ public open class CfnBridgeSource(
      * @param flowSource Add a flow source to an existing bridge. 
      */
     override fun flowSource(flowSource: IResolvable) {
-      cdkBuilder.flowSource(flowSource.let(IResolvable::unwrap))
+      cdkBuilder.flowSource(flowSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -264,7 +264,7 @@ public open class CfnBridgeSource(
      * @param flowSource Add a flow source to an existing bridge. 
      */
     override fun flowSource(flowSource: BridgeFlowSourceProperty) {
-      cdkBuilder.flowSource(flowSource.let(BridgeFlowSourceProperty::unwrap))
+      cdkBuilder.flowSource(flowSource.let(BridgeFlowSourceProperty.Companion::unwrap))
     }
 
     /**
@@ -297,7 +297,7 @@ public open class CfnBridgeSource(
      * @param networkSource Add a network source to an existing bridge. 
      */
     override fun networkSource(networkSource: IResolvable) {
-      cdkBuilder.networkSource(networkSource.let(IResolvable::unwrap))
+      cdkBuilder.networkSource(networkSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -307,7 +307,7 @@ public open class CfnBridgeSource(
      * @param networkSource Add a network source to an existing bridge. 
      */
     override fun networkSource(networkSource: BridgeNetworkSourceProperty) {
-      cdkBuilder.networkSource(networkSource.let(BridgeNetworkSourceProperty::unwrap))
+      cdkBuilder.networkSource(networkSource.let(BridgeNetworkSourceProperty.Companion::unwrap))
     }
 
     /**
@@ -434,7 +434,7 @@ public open class CfnBridgeSource(
        * source.
        */
       override fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: IResolvable) {
-        cdkBuilder.flowVpcInterfaceAttachment(flowVpcInterfaceAttachment.let(IResolvable::unwrap))
+        cdkBuilder.flowVpcInterfaceAttachment(flowVpcInterfaceAttachment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -443,7 +443,7 @@ public open class CfnBridgeSource(
        */
       override
           fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty) {
-        cdkBuilder.flowVpcInterfaceAttachment(flowVpcInterfaceAttachment.let(VpcInterfaceAttachmentProperty::unwrap))
+        cdkBuilder.flowVpcInterfaceAttachment(flowVpcInterfaceAttachment.let(VpcInterfaceAttachmentProperty.Companion::unwrap))
       }
 
       /**

@@ -209,7 +209,7 @@ public interface ApiGatewayProps : TargetBaseProps {
      * dead letter queue.
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -217,7 +217,7 @@ public interface ApiGatewayProps : TargetBaseProps {
      * given rule is triggered.
      */
     override fun eventRole(eventRole: IRole) {
-      cdkBuilder.eventRole(eventRole.let(IRole::unwrap))
+      cdkBuilder.eventRole(eventRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -234,7 +234,7 @@ public interface ApiGatewayProps : TargetBaseProps {
      * Maximum value of 86400.
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -272,7 +272,7 @@ public interface ApiGatewayProps : TargetBaseProps {
      * @param postBody This will be the post request body send to the API.
      */
     override fun postBody(postBody: RuleTargetInput) {
-      cdkBuilder.postBody(postBody.let(RuleTargetInput::unwrap))
+      cdkBuilder.postBody(postBody.let(RuleTargetInput.Companion::unwrap))
     }
 
     /**

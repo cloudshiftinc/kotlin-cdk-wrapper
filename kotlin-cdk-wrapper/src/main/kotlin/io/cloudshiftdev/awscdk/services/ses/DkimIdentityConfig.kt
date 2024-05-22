@@ -99,7 +99,7 @@ public interface DkimIdentityConfig {
      * at most once per day.
      */
     override fun nextSigningKeyLength(nextSigningKeyLength: EasyDkimSigningKeyLength) {
-      cdkBuilder.nextSigningKeyLength(nextSigningKeyLength.let(EasyDkimSigningKeyLength::unwrap))
+      cdkBuilder.nextSigningKeyLength(nextSigningKeyLength.let(EasyDkimSigningKeyLength.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ses.DkimIdentityConfig = cdkBuilder.build()

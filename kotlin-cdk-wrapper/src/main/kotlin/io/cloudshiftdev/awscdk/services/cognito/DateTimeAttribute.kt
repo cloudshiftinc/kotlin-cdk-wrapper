@@ -40,7 +40,7 @@ public open class DateTimeAttribute(
   )
 
   public constructor(props: CustomAttributeProps) :
-      this(software.amazon.awscdk.services.cognito.DateTimeAttribute(props.let(CustomAttributeProps::unwrap))
+      this(software.amazon.awscdk.services.cognito.DateTimeAttribute(props.let(CustomAttributeProps.Companion::unwrap))
   )
 
   public constructor(props: CustomAttributeProps.Builder.() -> Unit) :

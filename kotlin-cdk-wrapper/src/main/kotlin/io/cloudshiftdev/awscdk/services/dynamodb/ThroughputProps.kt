@@ -67,14 +67,14 @@ public interface ThroughputProps {
      * @param readCapacity The read capacity. 
      */
     override fun readCapacity(readCapacity: Capacity) {
-      cdkBuilder.readCapacity(readCapacity.let(Capacity::unwrap))
+      cdkBuilder.readCapacity(readCapacity.let(Capacity.Companion::unwrap))
     }
 
     /**
      * @param writeCapacity The write capacity. 
      */
     override fun writeCapacity(writeCapacity: Capacity) {
-      cdkBuilder.writeCapacity(writeCapacity.let(Capacity::unwrap))
+      cdkBuilder.writeCapacity(writeCapacity.let(Capacity.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.dynamodb.ThroughputProps =

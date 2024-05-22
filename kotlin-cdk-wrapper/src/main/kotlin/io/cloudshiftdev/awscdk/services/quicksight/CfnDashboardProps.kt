@@ -453,7 +453,7 @@ public interface CfnDashboardProps {
      * `COLLAPSED` or `EXPANDED` . This option is `COLLAPSED` by default.
      */
     override fun dashboardPublishOptions(dashboardPublishOptions: IResolvable) {
-      cdkBuilder.dashboardPublishOptions(dashboardPublishOptions.let(IResolvable::unwrap))
+      cdkBuilder.dashboardPublishOptions(dashboardPublishOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -470,7 +470,7 @@ public interface CfnDashboardProps {
      */
     override
         fun dashboardPublishOptions(dashboardPublishOptions: CfnDashboard.DashboardPublishOptionsProperty) {
-      cdkBuilder.dashboardPublishOptions(dashboardPublishOptions.let(CfnDashboard.DashboardPublishOptionsProperty::unwrap))
+      cdkBuilder.dashboardPublishOptions(dashboardPublishOptions.let(CfnDashboard.DashboardPublishOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -496,14 +496,14 @@ public interface CfnDashboardProps {
      * @param definition the value to be set.
      */
     override fun definition(definition: IResolvable) {
-      cdkBuilder.definition(definition.let(IResolvable::unwrap))
+      cdkBuilder.definition(definition.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param definition the value to be set.
      */
     override fun definition(definition: CfnDashboard.DashboardVersionDefinitionProperty) {
-      cdkBuilder.definition(definition.let(CfnDashboard.DashboardVersionDefinitionProperty::unwrap))
+      cdkBuilder.definition(definition.let(CfnDashboard.DashboardVersionDefinitionProperty.Companion::unwrap))
     }
 
     /**
@@ -535,7 +535,7 @@ public interface CfnDashboardProps {
      * that you want to apply overrides to.
      */
     override fun linkSharingConfiguration(linkSharingConfiguration: IResolvable) {
-      cdkBuilder.linkSharingConfiguration(linkSharingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.linkSharingConfiguration(linkSharingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -544,7 +544,7 @@ public interface CfnDashboardProps {
      */
     override
         fun linkSharingConfiguration(linkSharingConfiguration: CfnDashboard.LinkSharingConfigurationProperty) {
-      cdkBuilder.linkSharingConfiguration(linkSharingConfiguration.let(CfnDashboard.LinkSharingConfigurationProperty::unwrap))
+      cdkBuilder.linkSharingConfiguration(linkSharingConfiguration.let(CfnDashboard.LinkSharingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -572,7 +572,7 @@ public interface CfnDashboardProps {
      * values.
      */
     override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -582,7 +582,7 @@ public interface CfnDashboardProps {
      * values.
      */
     override fun parameters(parameters: CfnDashboard.ParametersProperty) {
-      cdkBuilder.parameters(parameters.let(CfnDashboard.ParametersProperty::unwrap))
+      cdkBuilder.parameters(parameters.let(CfnDashboard.ParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -604,7 +604,7 @@ public interface CfnDashboardProps {
      * To specify no permissions, omit the permissions list.
      */
     override fun permissions(permissions: IResolvable) {
-      cdkBuilder.permissions(permissions.let(IResolvable::unwrap))
+      cdkBuilder.permissions(permissions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -641,7 +641,7 @@ public interface CfnDashboardProps {
      * placeholder.
      */
     override fun sourceEntity(sourceEntity: IResolvable) {
-      cdkBuilder.sourceEntity(sourceEntity.let(IResolvable::unwrap))
+      cdkBuilder.sourceEntity(sourceEntity.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -658,7 +658,7 @@ public interface CfnDashboardProps {
      * placeholder.
      */
     override fun sourceEntity(sourceEntity: CfnDashboard.DashboardSourceEntityProperty) {
-      cdkBuilder.sourceEntity(sourceEntity.let(CfnDashboard.DashboardSourceEntityProperty::unwrap))
+      cdkBuilder.sourceEntity(sourceEntity.let(CfnDashboard.DashboardSourceEntityProperty.Companion::unwrap))
     }
 
     /**
@@ -685,7 +685,7 @@ public interface CfnDashboardProps {
      * the dashboard.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -710,7 +710,7 @@ public interface CfnDashboardProps {
      * When you set this value to `LENIENT` , validation is skipped for specific errors.
      */
     override fun validationStrategy(validationStrategy: IResolvable) {
-      cdkBuilder.validationStrategy(validationStrategy.let(IResolvable::unwrap))
+      cdkBuilder.validationStrategy(validationStrategy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -719,7 +719,7 @@ public interface CfnDashboardProps {
      * When you set this value to `LENIENT` , validation is skipped for specific errors.
      */
     override fun validationStrategy(validationStrategy: CfnDashboard.ValidationStrategyProperty) {
-      cdkBuilder.validationStrategy(validationStrategy.let(CfnDashboard.ValidationStrategyProperty::unwrap))
+      cdkBuilder.validationStrategy(validationStrategy.let(CfnDashboard.ValidationStrategyProperty.Companion::unwrap))
     }
 
     /**

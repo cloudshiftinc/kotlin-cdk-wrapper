@@ -80,7 +80,7 @@ public interface CfnNotificationChannelProps {
      * notification channels. 
      */
     override fun config(config: IResolvable) {
-      cdkBuilder.config(config.let(IResolvable::unwrap))
+      cdkBuilder.config(config.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -88,7 +88,7 @@ public interface CfnNotificationChannelProps {
      * notification channels. 
      */
     override fun config(config: CfnNotificationChannel.NotificationChannelConfigProperty) {
-      cdkBuilder.config(config.let(CfnNotificationChannel.NotificationChannelConfigProperty::unwrap))
+      cdkBuilder.config(config.let(CfnNotificationChannel.NotificationChannelConfigProperty.Companion::unwrap))
     }
 
     /**

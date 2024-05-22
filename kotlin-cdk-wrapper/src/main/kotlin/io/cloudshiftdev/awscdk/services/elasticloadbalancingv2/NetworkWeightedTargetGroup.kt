@@ -66,7 +66,7 @@ public interface NetworkWeightedTargetGroup {
      * @param targetGroup The target group. 
      */
     override fun targetGroup(targetGroup: INetworkTargetGroup) {
-      cdkBuilder.targetGroup(targetGroup.let(INetworkTargetGroup::unwrap))
+      cdkBuilder.targetGroup(targetGroup.let(INetworkTargetGroup.Companion::unwrap))
     }
 
     /**

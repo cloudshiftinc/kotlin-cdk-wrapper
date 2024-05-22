@@ -64,8 +64,8 @@ public open class CfnStorageVirtualMachine(
     id: String,
     props: CfnStorageVirtualMachineProps,
   ) :
-      this(software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStorageVirtualMachineProps::unwrap))
+      this(software.amazon.awscdk.services.fsx.CfnStorageVirtualMachine(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStorageVirtualMachineProps.Companion::unwrap))
   )
 
   public constructor(
@@ -87,7 +87,7 @@ public open class CfnStorageVirtualMachine(
    * applicable.
    */
   public open fun activeDirectoryConfiguration(`value`: IResolvable) {
-    unwrap(this).setActiveDirectoryConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setActiveDirectoryConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -95,7 +95,7 @@ public open class CfnStorageVirtualMachine(
    * applicable.
    */
   public open fun activeDirectoryConfiguration(`value`: ActiveDirectoryConfigurationProperty) {
-    unwrap(this).setActiveDirectoryConfiguration(`value`.let(ActiveDirectoryConfigurationProperty::unwrap))
+    unwrap(this).setActiveDirectoryConfiguration(`value`.let(ActiveDirectoryConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -149,7 +149,7 @@ public open class CfnStorageVirtualMachine(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -209,7 +209,7 @@ public open class CfnStorageVirtualMachine(
    * A list of `Tag` values, with a maximum of 50 elements.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -339,7 +339,7 @@ public open class CfnStorageVirtualMachine(
      * which the SVM is joined, if applicable. 
      */
     override fun activeDirectoryConfiguration(activeDirectoryConfiguration: IResolvable) {
-      cdkBuilder.activeDirectoryConfiguration(activeDirectoryConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.activeDirectoryConfiguration(activeDirectoryConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -352,7 +352,7 @@ public open class CfnStorageVirtualMachine(
      */
     override
         fun activeDirectoryConfiguration(activeDirectoryConfiguration: ActiveDirectoryConfigurationProperty) {
-      cdkBuilder.activeDirectoryConfiguration(activeDirectoryConfiguration.let(ActiveDirectoryConfigurationProperty::unwrap))
+      cdkBuilder.activeDirectoryConfiguration(activeDirectoryConfiguration.let(ActiveDirectoryConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -435,7 +435,7 @@ public open class CfnStorageVirtualMachine(
      * @param tags A list of `Tag` values, with a maximum of 50 elements. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -575,7 +575,7 @@ public open class CfnStorageVirtualMachine(
        */
       override
           fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: IResolvable) {
-        cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -585,7 +585,7 @@ public open class CfnStorageVirtualMachine(
        */
       override
           fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty) {
-        cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration.let(SelfManagedActiveDirectoryConfigurationProperty::unwrap))
+        cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration.let(SelfManagedActiveDirectoryConfigurationProperty.Companion::unwrap))
       }
 
       /**

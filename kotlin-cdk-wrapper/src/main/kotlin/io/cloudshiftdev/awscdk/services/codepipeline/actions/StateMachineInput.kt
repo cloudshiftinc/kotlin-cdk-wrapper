@@ -69,7 +69,7 @@ public open class StateMachineInput(
 
   public companion object {
     public fun filePath(inputFile: ArtifactPath): StateMachineInput =
-        software.amazon.awscdk.services.codepipeline.actions.StateMachineInput.filePath(inputFile.let(ArtifactPath::unwrap)).let(StateMachineInput::wrap)
+        software.amazon.awscdk.services.codepipeline.actions.StateMachineInput.filePath(inputFile.let(ArtifactPath.Companion::unwrap)).let(StateMachineInput::wrap)
 
     public fun literal(`object`: ObjectNode): StateMachineInput =
         software.amazon.awscdk.services.codepipeline.actions.StateMachineInput.literal(`object`).let(StateMachineInput::wrap)

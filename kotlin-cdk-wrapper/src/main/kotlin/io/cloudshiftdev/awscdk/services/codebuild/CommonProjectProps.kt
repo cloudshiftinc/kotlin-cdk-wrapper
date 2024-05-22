@@ -607,14 +607,14 @@ public interface CommonProjectProps {
      * @param buildSpec Filename or contents of buildspec in JSON format.
      */
     override fun buildSpec(buildSpec: BuildSpec) {
-      cdkBuilder.buildSpec(buildSpec.let(BuildSpec::unwrap))
+      cdkBuilder.buildSpec(buildSpec.let(BuildSpec.Companion::unwrap))
     }
 
     /**
      * @param cache Caching strategy to use.
      */
     override fun cache(cache: Cache) {
-      cdkBuilder.cache(cache.let(Cache::unwrap))
+      cdkBuilder.cache(cache.let(Cache.Companion::unwrap))
     }
 
     /**
@@ -650,14 +650,14 @@ public interface CommonProjectProps {
      * @param encryptionKey Encryption key to use to read and write artifacts.
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
      * @param environment Build environment to use for the build.
      */
     override fun environment(environment: BuildEnvironment) {
-      cdkBuilder.environment(environment.let(BuildEnvironment::unwrap))
+      cdkBuilder.environment(environment.let(BuildEnvironment.Companion::unwrap))
     }
 
     /**
@@ -683,7 +683,7 @@ public interface CommonProjectProps {
      * and type of a file system created using Amazon Elastic File System.
      */
     override fun fileSystemLocations(fileSystemLocations: List<IFileSystemLocation>) {
-      cdkBuilder.fileSystemLocations(fileSystemLocations.map(IFileSystemLocation::unwrap))
+      cdkBuilder.fileSystemLocations(fileSystemLocations.map(IFileSystemLocation.Companion::unwrap))
     }
 
     /**
@@ -714,7 +714,7 @@ public interface CommonProjectProps {
      * A project can create logs in Amazon CloudWatch Logs, an S3 bucket, or both.
      */
     override fun logging(logging: LoggingOptions) {
-      cdkBuilder.logging(logging.let(LoggingOptions::unwrap))
+      cdkBuilder.logging(logging.let(LoggingOptions.Companion::unwrap))
     }
 
     /**
@@ -740,14 +740,14 @@ public interface CommonProjectProps {
      * CodeBuild User Guide.
      */
     override fun queuedTimeout(queuedTimeout: Duration) {
-      cdkBuilder.queuedTimeout(queuedTimeout.let(Duration::unwrap))
+      cdkBuilder.queuedTimeout(queuedTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param role Service Role to assume while running the build.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -758,7 +758,7 @@ public interface CommonProjectProps {
      * Only used if 'vpc' is supplied.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -811,7 +811,7 @@ public interface CommonProjectProps {
      * AWS service access, add VPC Endpoints to your private subnets.
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -844,7 +844,7 @@ public interface CommonProjectProps {
      * CodeBuild User Guide.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -852,7 +852,7 @@ public interface CommonProjectProps {
      * Specify this if the codebuild project needs to access resources in a VPC.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codebuild.CommonProjectProps =

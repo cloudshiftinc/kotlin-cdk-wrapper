@@ -193,7 +193,7 @@ public interface S3DeployActionProps : CommonAwsActionProps {
      * This overwrites any existing ACL that was applied to the object.
      */
     override fun accessControl(accessControl: BucketAccessControl) {
-      cdkBuilder.accessControl(accessControl.let(BucketAccessControl::unwrap))
+      cdkBuilder.accessControl(accessControl.let(BucketAccessControl.Companion::unwrap))
     }
 
     /**
@@ -208,7 +208,7 @@ public interface S3DeployActionProps : CommonAwsActionProps {
      * @param bucket The Amazon S3 bucket that is the deploy target. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -218,7 +218,7 @@ public interface S3DeployActionProps : CommonAwsActionProps {
      * (plus a space after the comma).
      */
     override fun cacheControl(cacheControl: List<CacheControl>) {
-      cdkBuilder.cacheControl(cacheControl.map(CacheControl::unwrap))
+      cdkBuilder.cacheControl(cacheControl.map(CacheControl.Companion::unwrap))
     }
 
     /**
@@ -235,7 +235,7 @@ public interface S3DeployActionProps : CommonAwsActionProps {
      * The encryptionKey parameter encrypts uploaded artifacts with the provided AWS KMS key.
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -249,7 +249,7 @@ public interface S3DeployActionProps : CommonAwsActionProps {
      * @param input The input Artifact to deploy to Amazon S3. 
      */
     override fun input(input: Artifact) {
-      cdkBuilder.input(input.let(Artifact::unwrap))
+      cdkBuilder.input(input.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -269,7 +269,7 @@ public interface S3DeployActionProps : CommonAwsActionProps {
      * method in the `ActionBindOptions.role` property.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**

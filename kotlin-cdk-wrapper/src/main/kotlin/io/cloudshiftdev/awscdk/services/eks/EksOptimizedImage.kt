@@ -33,7 +33,7 @@ public open class EksOptimizedImage(
   )
 
   public constructor(props: EksOptimizedImageProps) :
-      this(software.amazon.awscdk.services.eks.EksOptimizedImage(props.let(EksOptimizedImageProps::unwrap))
+      this(software.amazon.awscdk.services.eks.EksOptimizedImage(props.let(EksOptimizedImageProps.Companion::unwrap))
   )
 
   public constructor(props: EksOptimizedImageProps.Builder.() -> Unit) :
@@ -46,7 +46,7 @@ public open class EksOptimizedImage(
    * @param scope 
    */
   public override fun image(scope: Construct): MachineImageConfig =
-      unwrap(this).getImage(scope.let(Construct::unwrap)).let(MachineImageConfig::wrap)
+      unwrap(this).getImage(scope.let(Construct.Companion::unwrap)).let(MachineImageConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.eks.EksOptimizedImage].
@@ -93,7 +93,7 @@ public open class EksOptimizedImage(
      * @param cpuArch What cpu architecture to retrieve the image for (arm64 or x86_64). 
      */
     override fun cpuArch(cpuArch: CpuArch) {
-      cdkBuilder.cpuArch(cpuArch.let(CpuArch::unwrap))
+      cdkBuilder.cpuArch(cpuArch.let(CpuArch.Companion::unwrap))
     }
 
     /**
@@ -115,7 +115,7 @@ public open class EksOptimizedImage(
      * @param nodeType What instance type to retrieve the image for (standard or GPU-optimized). 
      */
     override fun nodeType(nodeType: NodeType) {
-      cdkBuilder.nodeType(nodeType.let(NodeType::unwrap))
+      cdkBuilder.nodeType(nodeType.let(NodeType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.eks.EksOptimizedImage = cdkBuilder.build()

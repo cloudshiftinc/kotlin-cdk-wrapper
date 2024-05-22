@@ -264,7 +264,7 @@ public interface FluentdLogDriverProps : BaseLogDriverProps {
      * @param retryWait How long to wait between retries.
      */
     override fun retryWait(retryWait: Duration) {
-      cdkBuilder.retryWait(retryWait.let(Duration::unwrap))
+      cdkBuilder.retryWait(retryWait.let(Duration.Companion::unwrap))
     }
 
     /**

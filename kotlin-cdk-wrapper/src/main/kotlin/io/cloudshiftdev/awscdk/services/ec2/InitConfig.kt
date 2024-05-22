@@ -54,7 +54,7 @@ public open class InitConfig(
   cdkObject: software.amazon.awscdk.services.ec2.InitConfig,
 ) : CdkObject(cdkObject) {
   public constructor(elements: List<InitElement>) :
-      this(software.amazon.awscdk.services.ec2.InitConfig(elements.map(InitElement::unwrap))
+      this(software.amazon.awscdk.services.ec2.InitConfig(elements.map(InitElement.Companion::unwrap))
   )
 
   public constructor(vararg elements: InitElement) : this(elements.toList()

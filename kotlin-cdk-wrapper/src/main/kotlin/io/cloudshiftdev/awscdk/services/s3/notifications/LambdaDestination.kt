@@ -30,7 +30,7 @@ public open class LambdaDestination(
   cdkObject: software.amazon.awscdk.services.s3.notifications.LambdaDestination,
 ) : CdkObject(cdkObject), IBucketNotificationDestination {
   public constructor(fn: IFunction) :
-      this(software.amazon.awscdk.services.s3.notifications.LambdaDestination(fn.let(IFunction::unwrap))
+      this(software.amazon.awscdk.services.s3.notifications.LambdaDestination(fn.let(IFunction.Companion::unwrap))
   )
 
   /**
@@ -44,8 +44,8 @@ public open class LambdaDestination(
    * @param bucket 
    */
   public override fun bind(scope: Construct, bucket: IBucket): BucketNotificationDestinationConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap),
-      bucket.let(IBucket::unwrap)).let(BucketNotificationDestinationConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      bucket.let(IBucket.Companion::unwrap)).let(BucketNotificationDestinationConfig::wrap)
 
   public companion object {
     internal

@@ -200,7 +200,7 @@ public interface LifecycleRule {
      * Specify exactly one of maxImageCount and maxImageAge.
      */
     override fun maxImageAge(maxImageAge: Duration) {
-      cdkBuilder.maxImageAge(maxImageAge.let(Duration::unwrap))
+      cdkBuilder.maxImageAge(maxImageAge.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -282,7 +282,7 @@ public interface LifecycleRule {
      * have the highest rulePriority.
      */
     override fun tagStatus(tagStatus: TagStatus) {
-      cdkBuilder.tagStatus(tagStatus.let(TagStatus::unwrap))
+      cdkBuilder.tagStatus(tagStatus.let(TagStatus.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecr.LifecycleRule = cdkBuilder.build()

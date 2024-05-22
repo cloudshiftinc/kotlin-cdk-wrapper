@@ -64,8 +64,8 @@ public open class CfnCoreDefinitionVersion(
     id: String,
     props: CfnCoreDefinitionVersionProps,
   ) :
-      this(software.amazon.awscdk.services.greengrass.CfnCoreDefinitionVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCoreDefinitionVersionProps::unwrap))
+      this(software.amazon.awscdk.services.greengrass.CfnCoreDefinitionVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCoreDefinitionVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -101,7 +101,7 @@ public open class CfnCoreDefinitionVersion(
    * The Greengrass core in this version.
    */
   public open fun cores(`value`: IResolvable) {
-    unwrap(this).setCores(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCores(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -122,7 +122,7 @@ public open class CfnCoreDefinitionVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -201,7 +201,7 @@ public open class CfnCoreDefinitionVersion(
      * @param cores The Greengrass core in this version. 
      */
     override fun cores(cores: IResolvable) {
-      cdkBuilder.cores(cores.let(IResolvable::unwrap))
+      cdkBuilder.cores(cores.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -396,7 +396,7 @@ public open class CfnCoreDefinitionVersion(
        * The default is false.
        */
       override fun syncShadow(syncShadow: IResolvable) {
-        cdkBuilder.syncShadow(syncShadow.let(IResolvable::unwrap))
+        cdkBuilder.syncShadow(syncShadow.let(IResolvable.Companion::unwrap))
       }
 
       /**

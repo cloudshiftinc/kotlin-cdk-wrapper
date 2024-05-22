@@ -156,7 +156,7 @@ public interface ContainerOverride {
      * @param containerDefinition Name of the container inside the task definition. 
      */
     override fun containerDefinition(containerDefinition: ContainerDefinition) {
-      cdkBuilder.containerDefinition(containerDefinition.let(ContainerDefinition::unwrap))
+      cdkBuilder.containerDefinition(containerDefinition.let(ContainerDefinition.Companion::unwrap))
     }
 
     /**
@@ -173,7 +173,7 @@ public interface ContainerOverride {
      * definition.
      */
     override fun environment(environment: List<TaskEnvironmentVariable>) {
-      cdkBuilder.environment(environment.map(TaskEnvironmentVariable::unwrap))
+      cdkBuilder.environment(environment.map(TaskEnvironmentVariable.Companion::unwrap))
     }
 
     /**

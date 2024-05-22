@@ -394,7 +394,7 @@ public interface IFunction : IResource, IConnectable, IGrantable {
      * @param source 
      */
     override fun addEventSource(source: IEventSource) {
-      unwrap(this).addEventSource(source.let(IEventSource::unwrap))
+      unwrap(this).addEventSource(source.let(IEventSource.Companion::unwrap))
     }
 
     /**
@@ -405,7 +405,7 @@ public interface IFunction : IResource, IConnectable, IGrantable {
      */
     override fun addEventSourceMapping(id: String, options: EventSourceMappingOptions):
         EventSourceMapping = unwrap(this).addEventSourceMapping(id,
-        options.let(EventSourceMappingOptions::unwrap)).let(EventSourceMapping::wrap)
+        options.let(EventSourceMappingOptions.Companion::unwrap)).let(EventSourceMapping::wrap)
 
     /**
      * Adds an event source that maps to this AWS Lambda function.
@@ -433,7 +433,7 @@ public interface IFunction : IResource, IConnectable, IGrantable {
      * @param options
      */
     override fun addFunctionUrl(options: FunctionUrlOptions): FunctionUrl =
-        unwrap(this).addFunctionUrl(options.let(FunctionUrlOptions::unwrap)).let(FunctionUrl::wrap)
+        unwrap(this).addFunctionUrl(options.let(FunctionUrlOptions.Companion::unwrap)).let(FunctionUrl::wrap)
 
     /**
      * Adds a url to this lambda function.
@@ -453,7 +453,7 @@ public interface IFunction : IResource, IConnectable, IGrantable {
      * @param permission The permission to grant to this Lambda function. 
      */
     override fun addPermission(id: String, permission: Permission) {
-      unwrap(this).addPermission(id, permission.let(Permission::unwrap))
+      unwrap(this).addPermission(id, permission.let(Permission.Companion::unwrap))
     }
 
     /**
@@ -474,7 +474,7 @@ public interface IFunction : IResource, IConnectable, IGrantable {
      * @param statement 
      */
     override fun addToRolePolicy(statement: PolicyStatement) {
-      unwrap(this).addToRolePolicy(statement.let(PolicyStatement::unwrap))
+      unwrap(this).addToRolePolicy(statement.let(PolicyStatement.Companion::unwrap))
     }
 
     /**
@@ -501,7 +501,7 @@ public interface IFunction : IResource, IConnectable, IGrantable {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -516,7 +516,7 @@ public interface IFunction : IResource, IConnectable, IGrantable {
      * @param options 
      */
     override fun configureAsyncInvoke(options: EventInvokeConfigOptions) {
-      unwrap(this).configureAsyncInvoke(options.let(EventInvokeConfigOptions::unwrap))
+      unwrap(this).configureAsyncInvoke(options.let(EventInvokeConfigOptions.Companion::unwrap))
     }
 
     /**
@@ -562,7 +562,7 @@ public interface IFunction : IResource, IConnectable, IGrantable {
      * @param identity 
      */
     override fun grantInvoke(identity: IGrantable): Grant =
-        unwrap(this).grantInvoke(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantInvoke(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grant multiple principals the ability to invoke this Lambda via CompositePrincipal.
@@ -571,7 +571,7 @@ public interface IFunction : IResource, IConnectable, IGrantable {
      */
     override fun grantInvokeCompositePrincipal(compositePrincipal: CompositePrincipal): List<Grant>
         =
-        unwrap(this).grantInvokeCompositePrincipal(compositePrincipal.let(CompositePrincipal::unwrap)).map(Grant::wrap)
+        unwrap(this).grantInvokeCompositePrincipal(compositePrincipal.let(CompositePrincipal.Companion::unwrap)).map(Grant::wrap)
 
     /**
      * Grant the given identity permissions to invoke this Lambda Function URL.
@@ -579,7 +579,7 @@ public interface IFunction : IResource, IConnectable, IGrantable {
      * @param identity 
      */
     override fun grantInvokeUrl(identity: IGrantable): Grant =
-        unwrap(this).grantInvokeUrl(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantInvokeUrl(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * The principal to grant permissions to.
@@ -624,7 +624,8 @@ public interface IFunction : IResource, IConnectable, IGrantable {
      * @param props
      */
     override fun metric(metricName: String, props: MetricOptions): Metric =
-        unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metric(metricName,
+        props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Return the given named metric for this Lambda Return the given named metric for this
@@ -659,7 +660,7 @@ public interface IFunction : IResource, IConnectable, IGrantable {
      * @param props
      */
     override fun metricDuration(props: MetricOptions): Metric =
-        unwrap(this).metricDuration(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricDuration(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the Duration of this Lambda How long execution of this Lambda takes.
@@ -692,7 +693,7 @@ public interface IFunction : IResource, IConnectable, IGrantable {
      * @param props
      */
     override fun metricErrors(props: MetricOptions): Metric =
-        unwrap(this).metricErrors(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricErrors(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * How many invocations of this Lambda fail.
@@ -727,7 +728,7 @@ public interface IFunction : IResource, IConnectable, IGrantable {
      * @param props
      */
     override fun metricInvocations(props: MetricOptions): Metric =
-        unwrap(this).metricInvocations(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricInvocations(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the number of invocations of this Lambda How often this Lambda is invoked.
@@ -766,7 +767,7 @@ public interface IFunction : IResource, IConnectable, IGrantable {
      * @param props
      */
     override fun metricThrottles(props: MetricOptions): Metric =
-        unwrap(this).metricThrottles(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricThrottles(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the number of throttled invocations of this Lambda How often this Lambda is

@@ -177,7 +177,7 @@ public interface CfnConfigProps {
      * of each config subtype.
      */
     override fun configData(configData: IResolvable) {
-      cdkBuilder.configData(configData.let(IResolvable::unwrap))
+      cdkBuilder.configData(configData.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -186,7 +186,7 @@ public interface CfnConfigProps {
      * of each config subtype.
      */
     override fun configData(configData: CfnConfig.ConfigDataProperty) {
-      cdkBuilder.configData(configData.let(CfnConfig.ConfigDataProperty::unwrap))
+      cdkBuilder.configData(configData.let(CfnConfig.ConfigDataProperty.Companion::unwrap))
     }
 
     /**
@@ -210,7 +210,7 @@ public interface CfnConfigProps {
      * @param tags Tags assigned to a resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

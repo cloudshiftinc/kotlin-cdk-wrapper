@@ -131,7 +131,7 @@ public interface OptionGroupProps {
      * @param configurations The configurations for this option group. 
      */
     override fun configurations(configurations: List<OptionConfiguration>) {
-      cdkBuilder.configurations(configurations.map(OptionConfiguration::unwrap))
+      cdkBuilder.configurations(configurations.map(OptionConfiguration.Companion::unwrap))
     }
 
     /**
@@ -151,7 +151,7 @@ public interface OptionGroupProps {
      * @param engine The database engine that this option group is associated with. 
      */
     override fun engine(engine: IInstanceEngine) {
-      cdkBuilder.engine(engine.let(IInstanceEngine::unwrap))
+      cdkBuilder.engine(engine.let(IInstanceEngine.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.OptionGroupProps = cdkBuilder.build()

@@ -79,7 +79,7 @@ public open class CfnStack(
   cdkObject: software.amazon.awscdk.services.appstream.CfnStack,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.appstream.CfnStack(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.appstream.CfnStack(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -88,8 +88,8 @@ public open class CfnStack(
     id: String,
     props: CfnStackProps,
   ) :
-      this(software.amazon.awscdk.services.appstream.CfnStack(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStackProps::unwrap))
+      this(software.amazon.awscdk.services.appstream.CfnStack(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStackProps.Companion::unwrap))
   )
 
   public constructor(
@@ -108,7 +108,7 @@ public open class CfnStack(
    * The list of virtual private cloud (VPC) interface endpoint objects.
    */
   public open fun accessEndpoints(`value`: IResolvable) {
-    unwrap(this).setAccessEndpoints(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccessEndpoints(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -132,14 +132,14 @@ public open class CfnStack(
    * The persistent application settings for users of the stack.
    */
   public open fun applicationSettings(`value`: IResolvable) {
-    unwrap(this).setApplicationSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setApplicationSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The persistent application settings for users of the stack.
    */
   public open fun applicationSettings(`value`: ApplicationSettingsProperty) {
-    unwrap(this).setApplicationSettings(`value`.let(ApplicationSettingsProperty::unwrap))
+    unwrap(this).setApplicationSettings(`value`.let(ApplicationSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -190,7 +190,7 @@ public open class CfnStack(
    * *This parameter has been deprecated.*.
    */
   public open fun deleteStorageConnectors(`value`: IResolvable) {
-    unwrap(this).setDeleteStorageConnectors(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeleteStorageConnectors(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -257,7 +257,7 @@ public open class CfnStack(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -293,7 +293,7 @@ public open class CfnStack(
    * The storage connectors to enable.
    */
   public open fun storageConnectors(`value`: IResolvable) {
-    unwrap(this).setStorageConnectors(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStorageConnectors(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -318,14 +318,14 @@ public open class CfnStack(
    * The streaming protocol that you want your stack to prefer.
    */
   public open fun streamingExperienceSettings(`value`: IResolvable) {
-    unwrap(this).setStreamingExperienceSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStreamingExperienceSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The streaming protocol that you want your stack to prefer.
    */
   public open fun streamingExperienceSettings(`value`: StreamingExperienceSettingsProperty) {
-    unwrap(this).setStreamingExperienceSettings(`value`.let(StreamingExperienceSettingsProperty::unwrap))
+    unwrap(this).setStreamingExperienceSettings(`value`.let(StreamingExperienceSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -352,7 +352,7 @@ public open class CfnStack(
    * An array of key-value pairs.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -369,7 +369,7 @@ public open class CfnStack(
    * The actions that are enabled or disabled for users during their streaming sessions.
    */
   public open fun userSettings(`value`: IResolvable) {
-    unwrap(this).setUserSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUserSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -683,7 +683,7 @@ public open class CfnStack(
      * @param accessEndpoints The list of virtual private cloud (VPC) interface endpoint objects. 
      */
     override fun accessEndpoints(accessEndpoints: IResolvable) {
-      cdkBuilder.accessEndpoints(accessEndpoints.let(IResolvable::unwrap))
+      cdkBuilder.accessEndpoints(accessEndpoints.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -719,7 +719,7 @@ public open class CfnStack(
      * @param applicationSettings The persistent application settings for users of the stack. 
      */
     override fun applicationSettings(applicationSettings: IResolvable) {
-      cdkBuilder.applicationSettings(applicationSettings.let(IResolvable::unwrap))
+      cdkBuilder.applicationSettings(applicationSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -732,7 +732,7 @@ public open class CfnStack(
      * @param applicationSettings The persistent application settings for users of the stack. 
      */
     override fun applicationSettings(applicationSettings: ApplicationSettingsProperty) {
-      cdkBuilder.applicationSettings(applicationSettings.let(ApplicationSettingsProperty::unwrap))
+      cdkBuilder.applicationSettings(applicationSettings.let(ApplicationSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -790,7 +790,7 @@ public open class CfnStack(
      * @param deleteStorageConnectors *This parameter has been deprecated.*. 
      */
     override fun deleteStorageConnectors(deleteStorageConnectors: IResolvable) {
-      cdkBuilder.deleteStorageConnectors(deleteStorageConnectors.let(IResolvable::unwrap))
+      cdkBuilder.deleteStorageConnectors(deleteStorageConnectors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -878,7 +878,7 @@ public open class CfnStack(
      * @param storageConnectors The storage connectors to enable. 
      */
     override fun storageConnectors(storageConnectors: IResolvable) {
-      cdkBuilder.storageConnectors(storageConnectors.let(IResolvable::unwrap))
+      cdkBuilder.storageConnectors(storageConnectors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -910,7 +910,7 @@ public open class CfnStack(
      * 
      */
     override fun streamingExperienceSettings(streamingExperienceSettings: IResolvable) {
-      cdkBuilder.streamingExperienceSettings(streamingExperienceSettings.let(IResolvable::unwrap))
+      cdkBuilder.streamingExperienceSettings(streamingExperienceSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -924,7 +924,7 @@ public open class CfnStack(
      */
     override
         fun streamingExperienceSettings(streamingExperienceSettings: StreamingExperienceSettingsProperty) {
-      cdkBuilder.streamingExperienceSettings(streamingExperienceSettings.let(StreamingExperienceSettingsProperty::unwrap))
+      cdkBuilder.streamingExperienceSettings(streamingExperienceSettings.let(StreamingExperienceSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -950,7 +950,7 @@ public open class CfnStack(
      * @param tags An array of key-value pairs. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -971,7 +971,7 @@ public open class CfnStack(
      * sessions. 
      */
     override fun userSettings(userSettings: IResolvable) {
-      cdkBuilder.userSettings(userSettings.let(IResolvable::unwrap))
+      cdkBuilder.userSettings(userSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1213,7 +1213,7 @@ public open class CfnStack(
        * streaming sessions. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**

@@ -178,14 +178,14 @@ public interface CfnDataQualityRulesetProps {
      * @param targetTable An object representing an AWS Glue table.
      */
     override fun targetTable(targetTable: IResolvable) {
-      cdkBuilder.targetTable(targetTable.let(IResolvable::unwrap))
+      cdkBuilder.targetTable(targetTable.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param targetTable An object representing an AWS Glue table.
      */
     override fun targetTable(targetTable: CfnDataQualityRuleset.DataQualityTargetTableProperty) {
-      cdkBuilder.targetTable(targetTable.let(CfnDataQualityRuleset.DataQualityTargetTableProperty::unwrap))
+      cdkBuilder.targetTable(targetTable.let(CfnDataQualityRuleset.DataQualityTargetTableProperty.Companion::unwrap))
     }
 
     /**

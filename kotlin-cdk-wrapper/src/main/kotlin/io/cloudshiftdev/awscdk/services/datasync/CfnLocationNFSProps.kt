@@ -180,7 +180,7 @@ public interface CfnLocationNFSProps {
      * server.
      */
     override fun mountOptions(mountOptions: IResolvable) {
-      cdkBuilder.mountOptions(mountOptions.let(IResolvable::unwrap))
+      cdkBuilder.mountOptions(mountOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -188,7 +188,7 @@ public interface CfnLocationNFSProps {
      * server.
      */
     override fun mountOptions(mountOptions: CfnLocationNFS.MountOptionsProperty) {
-      cdkBuilder.mountOptions(mountOptions.let(CfnLocationNFS.MountOptionsProperty::unwrap))
+      cdkBuilder.mountOptions(mountOptions.let(CfnLocationNFS.MountOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -207,7 +207,7 @@ public interface CfnLocationNFSProps {
      * transfers](https://docs.aws.amazon.com/datasync/latest/userguide/multiple-agents.html) .
      */
     override fun onPremConfig(onPremConfig: IResolvable) {
-      cdkBuilder.onPremConfig(onPremConfig.let(IResolvable::unwrap))
+      cdkBuilder.onPremConfig(onPremConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -217,7 +217,7 @@ public interface CfnLocationNFSProps {
      * transfers](https://docs.aws.amazon.com/datasync/latest/userguide/multiple-agents.html) .
      */
     override fun onPremConfig(onPremConfig: CfnLocationNFS.OnPremConfigProperty) {
-      cdkBuilder.onPremConfig(onPremConfig.let(CfnLocationNFS.OnPremConfigProperty::unwrap))
+      cdkBuilder.onPremConfig(onPremConfig.let(CfnLocationNFS.OnPremConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -257,7 +257,7 @@ public interface CfnLocationNFSProps {
      * We recommend creating at least a name tag for your location.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

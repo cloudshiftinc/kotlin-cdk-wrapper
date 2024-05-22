@@ -261,7 +261,7 @@ public interface CfnRotationScheduleProps {
      * .
      */
     override fun hostedRotationLambda(hostedRotationLambda: IResolvable) {
-      cdkBuilder.hostedRotationLambda(hostedRotationLambda.let(IResolvable::unwrap))
+      cdkBuilder.hostedRotationLambda(hostedRotationLambda.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -275,7 +275,7 @@ public interface CfnRotationScheduleProps {
      */
     override
         fun hostedRotationLambda(hostedRotationLambda: CfnRotationSchedule.HostedRotationLambdaProperty) {
-      cdkBuilder.hostedRotationLambda(hostedRotationLambda.let(CfnRotationSchedule.HostedRotationLambdaProperty::unwrap))
+      cdkBuilder.hostedRotationLambda(hostedRotationLambda.let(CfnRotationSchedule.HostedRotationLambdaProperty.Companion::unwrap))
     }
 
     /**
@@ -333,7 +333,7 @@ public interface CfnRotationScheduleProps {
      * works](https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html) .
      */
     override fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: IResolvable) {
-      cdkBuilder.rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate.let(IResolvable::unwrap))
+      cdkBuilder.rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -358,14 +358,14 @@ public interface CfnRotationScheduleProps {
      * @param rotationRules A structure that defines the rotation configuration for this secret.
      */
     override fun rotationRules(rotationRules: IResolvable) {
-      cdkBuilder.rotationRules(rotationRules.let(IResolvable::unwrap))
+      cdkBuilder.rotationRules(rotationRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param rotationRules A structure that defines the rotation configuration for this secret.
      */
     override fun rotationRules(rotationRules: CfnRotationSchedule.RotationRulesProperty) {
-      cdkBuilder.rotationRules(rotationRules.let(CfnRotationSchedule.RotationRulesProperty::unwrap))
+      cdkBuilder.rotationRules(rotationRules.let(CfnRotationSchedule.RotationRulesProperty.Companion::unwrap))
     }
 
     /**

@@ -47,7 +47,7 @@ public open class StackDeployment(
    * @param stackDeployment 
    */
   public open fun addStackDependency(stackDeployment: StackDeployment) {
-    unwrap(this).addStackDependency(stackDeployment.let(StackDeployment::unwrap))
+    unwrap(this).addStackDependency(stackDeployment.let(StackDeployment.Companion::unwrap))
   }
 
   /**
@@ -62,8 +62,8 @@ public open class StackDeployment(
     changeSet: List<Step>,
     post: List<Step>,
   ) {
-    unwrap(this).addStackSteps(pre.map(Step::unwrap), changeSet.map(Step::unwrap),
-        post.map(Step::unwrap))
+    unwrap(this).addStackSteps(pre.map(Step.Companion::unwrap),
+        changeSet.map(Step.Companion::unwrap), post.map(Step.Companion::unwrap))
   }
 
   /**
@@ -155,7 +155,7 @@ public open class StackDeployment(
 
   public companion object {
     public fun fromArtifact(stackArtifact: CloudFormationStackArtifact): StackDeployment =
-        software.amazon.awscdk.pipelines.StackDeployment.fromArtifact(stackArtifact.let(CloudFormationStackArtifact::unwrap)).let(StackDeployment::wrap)
+        software.amazon.awscdk.pipelines.StackDeployment.fromArtifact(stackArtifact.let(CloudFormationStackArtifact.Companion::unwrap)).let(StackDeployment::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.StackDeployment): StackDeployment
         = StackDeployment(cdkObject)

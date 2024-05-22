@@ -70,8 +70,8 @@ public open class CfnFlowOutput(
     id: String,
     props: CfnFlowOutputProps,
   ) :
-      this(software.amazon.awscdk.services.mediaconnect.CfnFlowOutput(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFlowOutputProps::unwrap))
+      this(software.amazon.awscdk.services.mediaconnect.CfnFlowOutput(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFlowOutputProps.Companion::unwrap))
   )
 
   public constructor(
@@ -136,14 +136,14 @@ public open class CfnFlowOutput(
    * The encryption credentials that you want to use for the output.
    */
   public open fun encryption(`value`: IResolvable) {
-    unwrap(this).setEncryption(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEncryption(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The encryption credentials that you want to use for the output.
    */
   public open fun encryption(`value`: EncryptionProperty) {
-    unwrap(this).setEncryption(`value`.let(EncryptionProperty::unwrap))
+    unwrap(this).setEncryption(`value`.let(EncryptionProperty.Companion::unwrap))
   }
 
   /**
@@ -172,7 +172,7 @@ public open class CfnFlowOutput(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -280,14 +280,14 @@ public open class CfnFlowOutput(
    * The VPC interface that you want to send your output to.
    */
   public open fun vpcInterfaceAttachment(`value`: IResolvable) {
-    unwrap(this).setVpcInterfaceAttachment(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcInterfaceAttachment(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The VPC interface that you want to send your output to.
    */
   public open fun vpcInterfaceAttachment(`value`: VpcInterfaceAttachmentProperty) {
-    unwrap(this).setVpcInterfaceAttachment(`value`.let(VpcInterfaceAttachmentProperty::unwrap))
+    unwrap(this).setVpcInterfaceAttachment(`value`.let(VpcInterfaceAttachmentProperty.Companion::unwrap))
   }
 
   /**
@@ -551,7 +551,7 @@ public open class CfnFlowOutput(
      * @param encryption The encryption credentials that you want to use for the output. 
      */
     override fun encryption(encryption: IResolvable) {
-      cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
+      cdkBuilder.encryption(encryption.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -561,7 +561,7 @@ public open class CfnFlowOutput(
      * @param encryption The encryption credentials that you want to use for the output. 
      */
     override fun encryption(encryption: EncryptionProperty) {
-      cdkBuilder.encryption(encryption.let(EncryptionProperty::unwrap))
+      cdkBuilder.encryption(encryption.let(EncryptionProperty.Companion::unwrap))
     }
 
     /**
@@ -686,7 +686,7 @@ public open class CfnFlowOutput(
      * @param vpcInterfaceAttachment The VPC interface that you want to send your output to. 
      */
     override fun vpcInterfaceAttachment(vpcInterfaceAttachment: IResolvable) {
-      cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(IResolvable::unwrap))
+      cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -696,7 +696,7 @@ public open class CfnFlowOutput(
      * @param vpcInterfaceAttachment The VPC interface that you want to send your output to. 
      */
     override fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty) {
-      cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(VpcInterfaceAttachmentProperty::unwrap))
+      cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(VpcInterfaceAttachmentProperty.Companion::unwrap))
     }
 
     /**

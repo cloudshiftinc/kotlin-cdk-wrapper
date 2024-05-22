@@ -62,8 +62,8 @@ public open class CfnVpcIngressConnection(
     id: String,
     props: CfnVpcIngressConnectionProps,
   ) :
-      this(software.amazon.awscdk.services.apprunner.CfnVpcIngressConnection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVpcIngressConnectionProps::unwrap))
+      this(software.amazon.awscdk.services.apprunner.CfnVpcIngressConnection(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVpcIngressConnectionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -104,7 +104,7 @@ public open class CfnVpcIngressConnection(
    * are used to create the VPC Ingress Connection resource.
    */
   public open fun ingressVpcConfiguration(`value`: IResolvable) {
-    unwrap(this).setIngressVpcConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIngressVpcConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -112,7 +112,7 @@ public open class CfnVpcIngressConnection(
    * are used to create the VPC Ingress Connection resource.
    */
   public open fun ingressVpcConfiguration(`value`: IngressVpcConfigurationProperty) {
-    unwrap(this).setIngressVpcConfiguration(`value`.let(IngressVpcConfigurationProperty::unwrap))
+    unwrap(this).setIngressVpcConfiguration(`value`.let(IngressVpcConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -131,7 +131,7 @@ public open class CfnVpcIngressConnection(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -165,7 +165,7 @@ public open class CfnVpcIngressConnection(
    * resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -284,7 +284,7 @@ public open class CfnVpcIngressConnection(
      * AWS PrivateLink VPC endpoint that are used to create the VPC Ingress Connection resource. 
      */
     override fun ingressVpcConfiguration(ingressVpcConfiguration: IResolvable) {
-      cdkBuilder.ingressVpcConfiguration(ingressVpcConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.ingressVpcConfiguration(ingressVpcConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -296,7 +296,7 @@ public open class CfnVpcIngressConnection(
      * AWS PrivateLink VPC endpoint that are used to create the VPC Ingress Connection resource. 
      */
     override fun ingressVpcConfiguration(ingressVpcConfiguration: IngressVpcConfigurationProperty) {
-      cdkBuilder.ingressVpcConfiguration(ingressVpcConfiguration.let(IngressVpcConfigurationProperty::unwrap))
+      cdkBuilder.ingressVpcConfiguration(ingressVpcConfiguration.let(IngressVpcConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -336,7 +336,7 @@ public open class CfnVpcIngressConnection(
      * Connection resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

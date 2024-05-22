@@ -134,7 +134,7 @@ public interface CfnRequestValidatorProps {
      * according to the configured Model schema.
      */
     override fun validateRequestBody(validateRequestBody: IResolvable) {
-      cdkBuilder.validateRequestBody(validateRequestBody.let(IResolvable::unwrap))
+      cdkBuilder.validateRequestBody(validateRequestBody.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -150,7 +150,7 @@ public interface CfnRequestValidatorProps {
      * parameters ( `true` ) or not ( `false` ).
      */
     override fun validateRequestParameters(validateRequestParameters: IResolvable) {
-      cdkBuilder.validateRequestParameters(validateRequestParameters.let(IResolvable::unwrap))
+      cdkBuilder.validateRequestParameters(validateRequestParameters.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.CfnRequestValidatorProps =

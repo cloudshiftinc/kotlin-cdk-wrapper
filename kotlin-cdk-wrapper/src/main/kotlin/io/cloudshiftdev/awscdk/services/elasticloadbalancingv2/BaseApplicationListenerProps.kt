@@ -199,7 +199,7 @@ public interface BaseApplicationListenerProps {
      * You must provide exactly one certificate if the listener protocol is HTTPS or TLS.
      */
     override fun certificates(certificates: List<IListenerCertificate>) {
-      cdkBuilder.certificates(certificates.map(IListenerCertificate::unwrap))
+      cdkBuilder.certificates(certificates.map(IListenerCertificate.Companion::unwrap))
     }
 
     /**
@@ -219,7 +219,7 @@ public interface BaseApplicationListenerProps {
      * Cannot be specified together with `defaultTargetGroups`.
      */
     override fun defaultAction(defaultAction: ListenerAction) {
-      cdkBuilder.defaultAction(defaultAction.let(ListenerAction::unwrap))
+      cdkBuilder.defaultAction(defaultAction.let(ListenerAction.Companion::unwrap))
     }
 
     /**
@@ -231,7 +231,7 @@ public interface BaseApplicationListenerProps {
      * Cannot be specified together with `defaultAction`.
      */
     override fun defaultTargetGroups(defaultTargetGroups: List<IApplicationTargetGroup>) {
-      cdkBuilder.defaultTargetGroups(defaultTargetGroups.map(IApplicationTargetGroup::unwrap))
+      cdkBuilder.defaultTargetGroups(defaultTargetGroups.map(IApplicationTargetGroup.Companion::unwrap))
     }
 
     /**
@@ -270,14 +270,14 @@ public interface BaseApplicationListenerProps {
      * @param protocol The protocol to use.
      */
     override fun protocol(protocol: ApplicationProtocol) {
-      cdkBuilder.protocol(protocol.let(ApplicationProtocol::unwrap))
+      cdkBuilder.protocol(protocol.let(ApplicationProtocol.Companion::unwrap))
     }
 
     /**
      * @param sslPolicy The security policy that defines which ciphers and protocols are supported.
      */
     override fun sslPolicy(sslPolicy: SslPolicy) {
-      cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy::unwrap))
+      cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy.Companion::unwrap))
     }
 
     public fun build():

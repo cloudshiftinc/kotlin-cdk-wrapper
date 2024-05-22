@@ -115,8 +115,8 @@ public open class CfnCluster(
     id: String,
     props: CfnClusterProps,
   ) :
-      this(software.amazon.awscdk.services.redshift.CfnCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnClusterProps::unwrap))
+      this(software.amazon.awscdk.services.redshift.CfnCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -145,7 +145,7 @@ public open class CfnCluster(
    * Redshift engine that is running on the cluster.
    */
   public open fun allowVersionUpgrade(`value`: IResolvable) {
-    unwrap(this).setAllowVersionUpgrade(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAllowVersionUpgrade(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -240,7 +240,7 @@ public open class CfnCluster(
    * the cluster is created.
    */
   public open fun availabilityZoneRelocation(`value`: IResolvable) {
-    unwrap(this).setAvailabilityZoneRelocation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAvailabilityZoneRelocation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -272,7 +272,7 @@ public open class CfnCluster(
    * A boolean value indicating whether the resize operation is using the classic resize process.
    */
   public open fun classic(`value`: IResolvable) {
-    unwrap(this).setClassic(`value`.let(IResolvable::unwrap))
+    unwrap(this).setClassic(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -386,7 +386,7 @@ public open class CfnCluster(
    * A Boolean indicating whether to enable the deferred maintenance window.
    */
   public open fun deferMaintenance(`value`: IResolvable) {
-    unwrap(this).setDeferMaintenance(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeferMaintenance(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -467,7 +467,7 @@ public open class CfnCluster(
    * If `true` , the data in the cluster is encrypted at rest.
    */
   public open fun encrypted(`value`: IResolvable) {
-    unwrap(this).setEncrypted(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEncrypted(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -479,14 +479,14 @@ public open class CfnCluster(
    * The connection endpoint.
    */
   public open fun endpoint(`value`: IResolvable) {
-    unwrap(this).setEndpoint(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEndpoint(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The connection endpoint.
    */
   public open fun endpoint(`value`: EndpointProperty) {
-    unwrap(this).setEndpoint(`value`.let(EndpointProperty::unwrap))
+    unwrap(this).setEndpoint(`value`.let(EndpointProperty.Companion::unwrap))
   }
 
   /**
@@ -513,7 +513,7 @@ public open class CfnCluster(
    * An option that specifies whether to create the cluster with enhanced VPC routing enabled.
    */
   public open fun enhancedVpcRouting(`value`: IResolvable) {
-    unwrap(this).setEnhancedVpcRouting(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnhancedVpcRouting(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -572,7 +572,7 @@ public open class CfnCluster(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -600,7 +600,7 @@ public open class CfnCluster(
    * Amazon Redshift cluster.
    */
   public open fun loggingProperties(`value`: IResolvable) {
-    unwrap(this).setLoggingProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoggingProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -608,7 +608,7 @@ public open class CfnCluster(
    * Amazon Redshift cluster.
    */
   public open fun loggingProperties(`value`: LoggingPropertiesProperty) {
-    unwrap(this).setLoggingProperties(`value`.let(LoggingPropertiesProperty::unwrap))
+    unwrap(this).setLoggingProperties(`value`.let(LoggingPropertiesProperty.Companion::unwrap))
   }
 
   /**
@@ -651,7 +651,7 @@ public open class CfnCluster(
    * credentials.
    */
   public open fun manageMasterPassword(`value`: IResolvable) {
-    unwrap(this).setManageMasterPassword(`value`.let(IResolvable::unwrap))
+    unwrap(this).setManageMasterPassword(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -725,7 +725,7 @@ public open class CfnCluster(
    * Zones.
    */
   public open fun multiAz(`value`: IResolvable) {
-    unwrap(this).setMultiAz(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMultiAz(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -817,7 +817,7 @@ public open class CfnCluster(
    * If `true` , the cluster can be accessed from a public network.
    */
   public open fun publiclyAccessible(`value`: IResolvable) {
-    unwrap(this).setPubliclyAccessible(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPubliclyAccessible(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -860,7 +860,7 @@ public open class CfnCluster(
    * Rotates the encryption keys for a cluster.
    */
   public open fun rotateEncryptionKey(`value`: IResolvable) {
-    unwrap(this).setRotateEncryptionKey(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRotateEncryptionKey(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -906,7 +906,7 @@ public open class CfnCluster(
    * instead of automated snapshots.
    */
   public open fun snapshotCopyManual(`value`: IResolvable) {
-    unwrap(this).setSnapshotCopyManual(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSnapshotCopyManual(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -951,7 +951,7 @@ public open class CfnCluster(
    * A list of tag instances.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -1925,7 +1925,7 @@ public open class CfnCluster(
      * maintenance window to the Amazon Redshift engine that is running on the cluster. 
      */
     override fun allowVersionUpgrade(allowVersionUpgrade: IResolvable) {
-      cdkBuilder.allowVersionUpgrade(allowVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.allowVersionUpgrade(allowVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2005,7 +2005,7 @@ public open class CfnCluster(
      * cluster between Availability Zones after the cluster is created. 
      */
     override fun availabilityZoneRelocation(availabilityZoneRelocation: IResolvable) {
-      cdkBuilder.availabilityZoneRelocation(availabilityZoneRelocation.let(IResolvable::unwrap))
+      cdkBuilder.availabilityZoneRelocation(availabilityZoneRelocation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2042,7 +2042,7 @@ public open class CfnCluster(
      * resize process. 
      */
     override fun classic(classic: IResolvable) {
-      cdkBuilder.classic(classic.let(IResolvable::unwrap))
+      cdkBuilder.classic(classic.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2204,7 +2204,7 @@ public open class CfnCluster(
      * window. 
      */
     override fun deferMaintenance(deferMaintenance: IResolvable) {
-      cdkBuilder.deferMaintenance(deferMaintenance.let(IResolvable::unwrap))
+      cdkBuilder.deferMaintenance(deferMaintenance.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2293,7 +2293,7 @@ public open class CfnCluster(
      * @param encrypted If `true` , the data in the cluster is encrypted at rest. 
      */
     override fun encrypted(encrypted: IResolvable) {
-      cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
+      cdkBuilder.encrypted(encrypted.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2303,7 +2303,7 @@ public open class CfnCluster(
      * @param endpoint The connection endpoint. 
      */
     override fun endpoint(endpoint: IResolvable) {
-      cdkBuilder.endpoint(endpoint.let(IResolvable::unwrap))
+      cdkBuilder.endpoint(endpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2313,7 +2313,7 @@ public open class CfnCluster(
      * @param endpoint The connection endpoint. 
      */
     override fun endpoint(endpoint: EndpointProperty) {
-      cdkBuilder.endpoint(endpoint.let(EndpointProperty::unwrap))
+      cdkBuilder.endpoint(endpoint.let(EndpointProperty.Companion::unwrap))
     }
 
     /**
@@ -2364,7 +2364,7 @@ public open class CfnCluster(
      * enhanced VPC routing enabled. 
      */
     override fun enhancedVpcRouting(enhancedVpcRouting: IResolvable) {
-      cdkBuilder.enhancedVpcRouting(enhancedVpcRouting.let(IResolvable::unwrap))
+      cdkBuilder.enhancedVpcRouting(enhancedVpcRouting.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2448,7 +2448,7 @@ public open class CfnCluster(
      * attempts, for the specified Amazon Redshift cluster. 
      */
     override fun loggingProperties(loggingProperties: IResolvable) {
-      cdkBuilder.loggingProperties(loggingProperties.let(IResolvable::unwrap))
+      cdkBuilder.loggingProperties(loggingProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2460,7 +2460,7 @@ public open class CfnCluster(
      * attempts, for the specified Amazon Redshift cluster. 
      */
     override fun loggingProperties(loggingProperties: LoggingPropertiesProperty) {
-      cdkBuilder.loggingProperties(loggingProperties.let(LoggingPropertiesProperty::unwrap))
+      cdkBuilder.loggingProperties(loggingProperties.let(LoggingPropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -2519,7 +2519,7 @@ public open class CfnCluster(
      * this cluster's admin credentials. 
      */
     override fun manageMasterPassword(manageMasterPassword: IResolvable) {
-      cdkBuilder.manageMasterPassword(manageMasterPassword.let(IResolvable::unwrap))
+      cdkBuilder.manageMasterPassword(manageMasterPassword.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2620,7 +2620,7 @@ public open class CfnCluster(
      * Availability Zones. 
      */
     override fun multiAz(multiAz: IResolvable) {
-      cdkBuilder.multiAz(multiAz.let(IResolvable::unwrap))
+      cdkBuilder.multiAz(multiAz.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2747,7 +2747,7 @@ public open class CfnCluster(
      * @param publiclyAccessible If `true` , the cluster can be accessed from a public network. 
      */
     override fun publiclyAccessible(publiclyAccessible: IResolvable) {
-      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
+      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2790,7 +2790,7 @@ public open class CfnCluster(
      * @param rotateEncryptionKey Rotates the encryption keys for a cluster. 
      */
     override fun rotateEncryptionKey(rotateEncryptionKey: IResolvable) {
-      cdkBuilder.rotateEncryptionKey(rotateEncryptionKey.let(IResolvable::unwrap))
+      cdkBuilder.rotateEncryptionKey(rotateEncryptionKey.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2838,7 +2838,7 @@ public open class CfnCluster(
      * copied manual snapshots instead of automated snapshots. 
      */
     override fun snapshotCopyManual(snapshotCopyManual: IResolvable) {
-      cdkBuilder.snapshotCopyManual(snapshotCopyManual.let(IResolvable::unwrap))
+      cdkBuilder.snapshotCopyManual(snapshotCopyManual.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2891,7 +2891,7 @@ public open class CfnCluster(
      * @param tags A list of tag instances. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

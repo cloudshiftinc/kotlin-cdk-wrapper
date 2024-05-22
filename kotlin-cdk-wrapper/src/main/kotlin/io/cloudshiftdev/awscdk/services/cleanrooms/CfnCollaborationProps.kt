@@ -284,7 +284,7 @@ public interface CfnCollaborationProps {
      * responsibilities set by the collaboration creator.
      */
     override fun creatorPaymentConfiguration(creatorPaymentConfiguration: IResolvable) {
-      cdkBuilder.creatorPaymentConfiguration(creatorPaymentConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.creatorPaymentConfiguration(creatorPaymentConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -293,7 +293,7 @@ public interface CfnCollaborationProps {
      */
     override
         fun creatorPaymentConfiguration(creatorPaymentConfiguration: CfnCollaboration.PaymentConfigurationProperty) {
-      cdkBuilder.creatorPaymentConfiguration(creatorPaymentConfiguration.let(CfnCollaboration.PaymentConfigurationProperty::unwrap))
+      cdkBuilder.creatorPaymentConfiguration(creatorPaymentConfiguration.let(CfnCollaboration.PaymentConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -312,7 +312,7 @@ public interface CfnCollaborationProps {
      * computing.
      */
     override fun dataEncryptionMetadata(dataEncryptionMetadata: IResolvable) {
-      cdkBuilder.dataEncryptionMetadata(dataEncryptionMetadata.let(IResolvable::unwrap))
+      cdkBuilder.dataEncryptionMetadata(dataEncryptionMetadata.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -321,7 +321,7 @@ public interface CfnCollaborationProps {
      */
     override
         fun dataEncryptionMetadata(dataEncryptionMetadata: CfnCollaboration.DataEncryptionMetadataProperty) {
-      cdkBuilder.dataEncryptionMetadata(dataEncryptionMetadata.let(CfnCollaboration.DataEncryptionMetadataProperty::unwrap))
+      cdkBuilder.dataEncryptionMetadata(dataEncryptionMetadata.let(CfnCollaboration.DataEncryptionMetadataProperty.Companion::unwrap))
     }
 
     /**
@@ -347,7 +347,7 @@ public interface CfnCollaborationProps {
      * This list is immutable.
      */
     override fun members(members: IResolvable) {
-      cdkBuilder.members(members.let(IResolvable::unwrap))
+      cdkBuilder.members(members.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -387,7 +387,7 @@ public interface CfnCollaborationProps {
      * resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

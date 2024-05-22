@@ -177,7 +177,7 @@ public interface CustomResourceProviderOptions {
      * function's memory also increases its CPU allocation.
      */
     override fun memorySize(memorySize: Size) {
-      cdkBuilder.memorySize(memorySize.let(Size::unwrap))
+      cdkBuilder.memorySize(memorySize.let(Size.Companion::unwrap))
     }
 
     /**
@@ -203,7 +203,7 @@ public interface CustomResourceProviderOptions {
      * @param timeout AWS Lambda timeout for the provider.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**

@@ -31,7 +31,7 @@ public open class ApiKey(
   cdkObject: software.amazon.awscdk.services.apigateway.ApiKey,
 ) : Resource(cdkObject), IApiKey {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.apigateway.ApiKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.apigateway.ApiKey(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -40,8 +40,8 @@ public open class ApiKey(
     id: String,
     props: ApiKeyProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.ApiKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ApiKeyProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.ApiKey(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ApiKeyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -57,7 +57,7 @@ public open class ApiKey(
    * @param grantee The principal to grant access to. 
    */
   public open fun grantRead(grantee: IGrantable): Grant =
-      unwrap(this).grantRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Permits the IAM principal all read and write operations through this key.
@@ -65,7 +65,7 @@ public open class ApiKey(
    * @param grantee The principal to grant access to. 
    */
   public open fun grantReadWrite(grantee: IGrantable): Grant =
-      unwrap(this).grantReadWrite(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantReadWrite(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Permits the IAM principal all write operations through this key.
@@ -73,7 +73,7 @@ public open class ApiKey(
    * @param grantee The principal to grant access to. 
    */
   public open fun grantWrite(grantee: IGrantable): Grant =
-      unwrap(this).grantWrite(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantWrite(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The API key ARN.
@@ -311,7 +311,7 @@ public open class ApiKey(
      * all child resources. 
      */
     override fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions) {
-      cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions::unwrap))
+      cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions.Companion::unwrap))
     }
 
     /**
@@ -340,7 +340,7 @@ public open class ApiKey(
      * this API unless an integration is specified. 
      */
     override fun defaultIntegration(defaultIntegration: Integration) {
-      cdkBuilder.defaultIntegration(defaultIntegration.let(Integration::unwrap))
+      cdkBuilder.defaultIntegration(defaultIntegration.let(Integration.Companion::unwrap))
     }
 
     /**
@@ -367,7 +367,7 @@ public open class ApiKey(
      * this API unless custom options are specified. 
      */
     override fun defaultMethodOptions(defaultMethodOptions: MethodOptions) {
-      cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions::unwrap))
+      cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions.Companion::unwrap))
     }
 
     /**
@@ -428,7 +428,7 @@ public open class ApiKey(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun resources(resources: List<IRestApi>) {
-      cdkBuilder.resources(resources.map(IRestApi::unwrap))
+      cdkBuilder.resources(resources.map(IRestApi.Companion::unwrap))
     }
 
     /**
@@ -450,7 +450,7 @@ public open class ApiKey(
      * @param stages A list of Stages this api key is associated with. 
      */
     override fun stages(stages: List<IStage>) {
-      cdkBuilder.stages(stages.map(IStage::unwrap))
+      cdkBuilder.stages(stages.map(IStage.Companion::unwrap))
     }
 
     /**
@@ -484,7 +484,7 @@ public open class ApiKey(
       id: String,
       apiKeyId: String,
     ): IApiKey =
-        software.amazon.awscdk.services.apigateway.ApiKey.fromApiKeyId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.apigateway.ApiKey.fromApiKeyId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, apiKeyId).let(IApiKey::wrap)
 
     public operator fun invoke(

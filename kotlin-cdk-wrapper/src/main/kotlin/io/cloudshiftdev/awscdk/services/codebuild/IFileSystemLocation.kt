@@ -32,8 +32,8 @@ public interface IFileSystemLocation {
      * @param project 
      */
     override fun bind(scope: Construct, project: IProject): FileSystemConfig =
-        unwrap(this).bind(scope.let(Construct::unwrap),
-        project.let(IProject::unwrap)).let(FileSystemConfig::wrap)
+        unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+        project.let(IProject.Companion::unwrap)).let(FileSystemConfig::wrap)
   }
 
   public companion object {

@@ -89,8 +89,8 @@ public open class CfnVolume(
     id: String,
     props: CfnVolumeProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnVolume(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVolumeProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnVolume(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVolumeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -121,7 +121,7 @@ public open class CfnVolume(
    * Indicates whether the volume is auto-enabled for I/O operations.
    */
   public open fun autoEnableIo(`value`: IResolvable) {
-    unwrap(this).setAutoEnableIo(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoEnableIo(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -152,7 +152,7 @@ public open class CfnVolume(
    * Indicates whether the volume should be encrypted.
    */
   public open fun encrypted(`value`: IResolvable) {
-    unwrap(this).setEncrypted(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEncrypted(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -161,7 +161,7 @@ public open class CfnVolume(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -204,7 +204,7 @@ public open class CfnVolume(
    * Indicates whether Amazon EBS Multi-Attach is enabled.
    */
   public open fun multiAttachEnabled(`value`: IResolvable) {
-    unwrap(this).setMultiAttachEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMultiAttachEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -258,7 +258,7 @@ public open class CfnVolume(
    * The tags to apply to the volume during creation.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -567,7 +567,7 @@ public open class CfnVolume(
      * @param autoEnableIo Indicates whether the volume is auto-enabled for I/O operations. 
      */
     override fun autoEnableIo(autoEnableIo: IResolvable) {
-      cdkBuilder.autoEnableIo(autoEnableIo.let(IResolvable::unwrap))
+      cdkBuilder.autoEnableIo(autoEnableIo.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -621,7 +621,7 @@ public open class CfnVolume(
      * @param encrypted Indicates whether the volume should be encrypted. 
      */
     override fun encrypted(encrypted: IResolvable) {
-      cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
+      cdkBuilder.encrypted(encrypted.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -703,7 +703,7 @@ public open class CfnVolume(
      * @param multiAttachEnabled Indicates whether Amazon EBS Multi-Attach is enabled. 
      */
     override fun multiAttachEnabled(multiAttachEnabled: IResolvable) {
-      cdkBuilder.multiAttachEnabled(multiAttachEnabled.let(IResolvable::unwrap))
+      cdkBuilder.multiAttachEnabled(multiAttachEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -757,7 +757,7 @@ public open class CfnVolume(
      * @param tags The tags to apply to the volume during creation. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

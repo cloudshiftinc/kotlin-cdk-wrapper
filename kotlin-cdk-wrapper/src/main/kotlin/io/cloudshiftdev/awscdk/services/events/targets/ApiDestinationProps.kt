@@ -188,21 +188,21 @@ public interface ApiDestinationProps : TargetBaseProps {
      * dead letter queue.
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
      * @param event The event to send.
      */
     override fun event(event: RuleTargetInput) {
-      cdkBuilder.event(event.let(RuleTargetInput::unwrap))
+      cdkBuilder.event(event.let(RuleTargetInput.Companion::unwrap))
     }
 
     /**
      * @param eventRole The role to assume before invoking the target.
      */
     override fun eventRole(eventRole: IRole) {
-      cdkBuilder.eventRole(eventRole.let(IRole::unwrap))
+      cdkBuilder.eventRole(eventRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -223,7 +223,7 @@ public interface ApiDestinationProps : TargetBaseProps {
      * Maximum value of 86400.
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**

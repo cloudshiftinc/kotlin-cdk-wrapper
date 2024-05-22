@@ -27,7 +27,8 @@ public interface ITokenMapper {
      *
      * @param t 
      */
-    override fun mapToken(t: IResolvable): Any = unwrap(this).mapToken(t.let(IResolvable::unwrap))
+    override fun mapToken(t: IResolvable): Any =
+        unwrap(this).mapToken(t.let(IResolvable.Companion::unwrap))
   }
 
   public companion object {

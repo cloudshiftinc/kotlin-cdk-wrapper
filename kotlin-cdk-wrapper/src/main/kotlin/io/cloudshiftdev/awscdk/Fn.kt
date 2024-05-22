@@ -50,7 +50,7 @@ public open class Fn(
     ): List<String> = software.amazon.awscdk.Fn.cidr(ipBlock, count, sizeMask)
 
     public fun conditionAnd(conditions: ICfnConditionExpression): ICfnRuleConditionExpression =
-        software.amazon.awscdk.Fn.conditionAnd(conditions.let(ICfnConditionExpression::unwrap)).let(ICfnRuleConditionExpression::wrap)
+        software.amazon.awscdk.Fn.conditionAnd(conditions.let(ICfnConditionExpression.Companion::unwrap)).let(ICfnRuleConditionExpression::wrap)
 
     public fun conditionContains(listOfStrings: List<String>, `value`: String):
         ICfnRuleConditionExpression = software.amazon.awscdk.Fn.conditionContains(listOfStrings,
@@ -77,10 +77,10 @@ public open class Fn(
         valueIfFalse).let(ICfnRuleConditionExpression::wrap)
 
     public fun conditionNot(condition: ICfnConditionExpression): ICfnRuleConditionExpression =
-        software.amazon.awscdk.Fn.conditionNot(condition.let(ICfnConditionExpression::unwrap)).let(ICfnRuleConditionExpression::wrap)
+        software.amazon.awscdk.Fn.conditionNot(condition.let(ICfnConditionExpression.Companion::unwrap)).let(ICfnRuleConditionExpression::wrap)
 
     public fun conditionOr(conditions: ICfnConditionExpression): ICfnRuleConditionExpression =
-        software.amazon.awscdk.Fn.conditionOr(conditions.let(ICfnConditionExpression::unwrap)).let(ICfnRuleConditionExpression::wrap)
+        software.amazon.awscdk.Fn.conditionOr(conditions.let(ICfnConditionExpression.Companion::unwrap)).let(ICfnRuleConditionExpression::wrap)
 
     public fun findInMap(
       mapName: String,

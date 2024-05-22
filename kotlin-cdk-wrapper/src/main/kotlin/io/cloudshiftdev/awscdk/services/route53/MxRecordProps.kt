@@ -186,7 +186,7 @@ public interface MxRecordProps : RecordSetOptions {
      * user's location.
      */
     override fun geoLocation(geoLocation: GeoLocation) {
-      cdkBuilder.geoLocation(geoLocation.let(GeoLocation::unwrap))
+      cdkBuilder.geoLocation(geoLocation.let(GeoLocation.Companion::unwrap))
     }
 
     /**
@@ -241,14 +241,14 @@ public interface MxRecordProps : RecordSetOptions {
      * @param ttl The resource record cache time to live (TTL).
      */
     override fun ttl(ttl: Duration) {
-      cdkBuilder.ttl(ttl.let(Duration::unwrap))
+      cdkBuilder.ttl(ttl.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param values The values. 
      */
     override fun values(values: List<MxRecordValue>) {
-      cdkBuilder.values(values.map(MxRecordValue::unwrap))
+      cdkBuilder.values(values.map(MxRecordValue.Companion::unwrap))
     }
 
     /**
@@ -274,7 +274,7 @@ public interface MxRecordProps : RecordSetOptions {
      * @param zone The hosted zone in which to define the new record. 
      */
     override fun zone(zone: IHostedZone) {
-      cdkBuilder.zone(zone.let(IHostedZone::unwrap))
+      cdkBuilder.zone(zone.let(IHostedZone.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.route53.MxRecordProps = cdkBuilder.build()

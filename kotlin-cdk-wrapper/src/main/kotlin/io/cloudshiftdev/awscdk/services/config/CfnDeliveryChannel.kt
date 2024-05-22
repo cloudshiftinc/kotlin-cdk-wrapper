@@ -94,8 +94,8 @@ public open class CfnDeliveryChannel(
     id: String,
     props: CfnDeliveryChannelProps,
   ) :
-      this(software.amazon.awscdk.services.config.CfnDeliveryChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDeliveryChannelProps::unwrap))
+      this(software.amazon.awscdk.services.config.CfnDeliveryChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDeliveryChannelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -120,7 +120,7 @@ public open class CfnDeliveryChannel(
    * The options for how often AWS Config delivers configuration snapshots to the Amazon S3 bucket.
    */
   public open fun configSnapshotDeliveryProperties(`value`: IResolvable) {
-    unwrap(this).setConfigSnapshotDeliveryProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfigSnapshotDeliveryProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -128,7 +128,7 @@ public open class CfnDeliveryChannel(
    */
   public open
       fun configSnapshotDeliveryProperties(`value`: ConfigSnapshotDeliveryPropertiesProperty) {
-    unwrap(this).setConfigSnapshotDeliveryProperties(`value`.let(ConfigSnapshotDeliveryPropertiesProperty::unwrap))
+    unwrap(this).setConfigSnapshotDeliveryProperties(`value`.let(ConfigSnapshotDeliveryPropertiesProperty.Companion::unwrap))
   }
 
   /**
@@ -146,7 +146,7 @@ public open class CfnDeliveryChannel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -337,7 +337,7 @@ public open class CfnDeliveryChannel(
      * configuration snapshots to the Amazon S3 bucket. 
      */
     override fun configSnapshotDeliveryProperties(configSnapshotDeliveryProperties: IResolvable) {
-      cdkBuilder.configSnapshotDeliveryProperties(configSnapshotDeliveryProperties.let(IResolvable::unwrap))
+      cdkBuilder.configSnapshotDeliveryProperties(configSnapshotDeliveryProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -350,7 +350,7 @@ public open class CfnDeliveryChannel(
      */
     override
         fun configSnapshotDeliveryProperties(configSnapshotDeliveryProperties: ConfigSnapshotDeliveryPropertiesProperty) {
-      cdkBuilder.configSnapshotDeliveryProperties(configSnapshotDeliveryProperties.let(ConfigSnapshotDeliveryPropertiesProperty::unwrap))
+      cdkBuilder.configSnapshotDeliveryProperties(configSnapshotDeliveryProperties.let(ConfigSnapshotDeliveryPropertiesProperty.Companion::unwrap))
     }
 
     /**

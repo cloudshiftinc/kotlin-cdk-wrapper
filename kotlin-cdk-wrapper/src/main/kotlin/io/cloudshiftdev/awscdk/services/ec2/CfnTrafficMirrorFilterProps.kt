@@ -122,7 +122,7 @@ public interface CfnTrafficMirrorFilterProps {
      * @param tags The tags to assign to a Traffic Mirror filter.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

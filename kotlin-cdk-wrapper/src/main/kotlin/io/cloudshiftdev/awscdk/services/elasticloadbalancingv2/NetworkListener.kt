@@ -49,8 +49,8 @@ public open class NetworkListener(
     id: String,
     props: NetworkListenerProps,
   ) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListener(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(NetworkListenerProps::unwrap))
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListener(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(NetworkListenerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -71,7 +71,7 @@ public open class NetworkListener(
    * @param props 
    */
   public open fun addAction(id: String, props: AddNetworkActionProps) {
-    unwrap(this).addAction(id, props.let(AddNetworkActionProps::unwrap))
+    unwrap(this).addAction(id, props.let(AddNetworkActionProps.Companion::unwrap))
   }
 
   /**
@@ -100,7 +100,7 @@ public open class NetworkListener(
    * @param certificates 
    */
   public open fun addCertificates(id: String, certificates: List<IListenerCertificate>) {
-    unwrap(this).addCertificates(id, certificates.map(IListenerCertificate::unwrap))
+    unwrap(this).addCertificates(id, certificates.map(IListenerCertificate.Companion::unwrap))
   }
 
   /**
@@ -135,7 +135,7 @@ public open class NetworkListener(
    */
   public open fun addTargets(id: String, props: AddNetworkTargetsProps): NetworkTargetGroup =
       unwrap(this).addTargets(id,
-      props.let(AddNetworkTargetsProps::unwrap)).let(NetworkTargetGroup::wrap)
+      props.let(AddNetworkTargetsProps.Companion::unwrap)).let(NetworkTargetGroup::wrap)
 
   /**
    * Load balance incoming requests to the given load balancing targets.
@@ -309,7 +309,7 @@ public open class NetworkListener(
      * sent on the initial TLS handshake hello messages. 
      */
     override fun alpnPolicy(alpnPolicy: AlpnPolicy) {
-      cdkBuilder.alpnPolicy(alpnPolicy.let(AlpnPolicy::unwrap))
+      cdkBuilder.alpnPolicy(alpnPolicy.let(AlpnPolicy.Companion::unwrap))
     }
 
     /**
@@ -322,7 +322,7 @@ public open class NetworkListener(
      * @param certificates Certificate list of ACM cert ARNs. 
      */
     override fun certificates(certificates: List<IListenerCertificate>) {
-      cdkBuilder.certificates(certificates.map(IListenerCertificate::unwrap))
+      cdkBuilder.certificates(certificates.map(IListenerCertificate.Companion::unwrap))
     }
 
     /**
@@ -351,7 +351,7 @@ public open class NetworkListener(
      * @param defaultAction Default action to take for requests to this listener. 
      */
     override fun defaultAction(defaultAction: NetworkListenerAction) {
-      cdkBuilder.defaultAction(defaultAction.let(NetworkListenerAction::unwrap))
+      cdkBuilder.defaultAction(defaultAction.let(NetworkListenerAction.Companion::unwrap))
     }
 
     /**
@@ -368,7 +368,7 @@ public open class NetworkListener(
      * @param defaultTargetGroups Default target groups to load balance to. 
      */
     override fun defaultTargetGroups(defaultTargetGroups: List<INetworkTargetGroup>) {
-      cdkBuilder.defaultTargetGroups(defaultTargetGroups.map(INetworkTargetGroup::unwrap))
+      cdkBuilder.defaultTargetGroups(defaultTargetGroups.map(INetworkTargetGroup.Companion::unwrap))
     }
 
     /**
@@ -393,7 +393,7 @@ public open class NetworkListener(
      * @param loadBalancer The load balancer to attach this listener to. 
      */
     override fun loadBalancer(loadBalancer: INetworkLoadBalancer) {
-      cdkBuilder.loadBalancer(loadBalancer.let(INetworkLoadBalancer::unwrap))
+      cdkBuilder.loadBalancer(loadBalancer.let(INetworkLoadBalancer.Companion::unwrap))
     }
 
     /**
@@ -413,7 +413,7 @@ public open class NetworkListener(
      * @param protocol Protocol for listener, expects TCP, TLS, UDP, or TCP_UDP. 
      */
     override fun protocol(protocol: Protocol) {
-      cdkBuilder.protocol(protocol.let(Protocol::unwrap))
+      cdkBuilder.protocol(protocol.let(Protocol.Companion::unwrap))
     }
 
     /**
@@ -424,7 +424,7 @@ public open class NetworkListener(
      * @param sslPolicy SSL Policy. 
      */
     override fun sslPolicy(sslPolicy: SslPolicy) {
-      cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy::unwrap))
+      cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListener =
@@ -437,8 +437,8 @@ public open class NetworkListener(
       id: String,
       options: NetworkListenerLookupOptions,
     ): INetworkListener =
-        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListener.fromLookup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, options.let(NetworkListenerLookupOptions::unwrap)).let(INetworkListener::wrap)
+        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListener.fromLookup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, options.let(NetworkListenerLookupOptions.Companion::unwrap)).let(INetworkListener::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("abba836d5b64859eb292993f79e315fb864ac07f994e22ba71ba4c2aa5303a97")
@@ -453,7 +453,7 @@ public open class NetworkListener(
       id: String,
       networkListenerArn: String,
     ): INetworkListener =
-        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListener.fromNetworkListenerArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListener.fromNetworkListenerArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, networkListenerArn).let(INetworkListener::wrap)
 
     public operator fun invoke(

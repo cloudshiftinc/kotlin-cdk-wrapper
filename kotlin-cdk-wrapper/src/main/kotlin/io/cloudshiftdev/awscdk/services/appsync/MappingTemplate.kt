@@ -82,14 +82,14 @@ public abstract class MappingTemplate(
         consistentRead).let(MappingTemplate::wrap)
 
     public fun dynamoDbPutItem(key: PrimaryKey, values: AttributeValues): MappingTemplate =
-        software.amazon.awscdk.services.appsync.MappingTemplate.dynamoDbPutItem(key.let(PrimaryKey::unwrap),
-        values.let(AttributeValues::unwrap)).let(MappingTemplate::wrap)
+        software.amazon.awscdk.services.appsync.MappingTemplate.dynamoDbPutItem(key.let(PrimaryKey.Companion::unwrap),
+        values.let(AttributeValues.Companion::unwrap)).let(MappingTemplate::wrap)
 
     public fun dynamoDbQuery(cond: KeyCondition): MappingTemplate =
-        software.amazon.awscdk.services.appsync.MappingTemplate.dynamoDbQuery(cond.let(KeyCondition::unwrap)).let(MappingTemplate::wrap)
+        software.amazon.awscdk.services.appsync.MappingTemplate.dynamoDbQuery(cond.let(KeyCondition.Companion::unwrap)).let(MappingTemplate::wrap)
 
     public fun dynamoDbQuery(cond: KeyCondition, indexName: String): MappingTemplate =
-        software.amazon.awscdk.services.appsync.MappingTemplate.dynamoDbQuery(cond.let(KeyCondition::unwrap),
+        software.amazon.awscdk.services.appsync.MappingTemplate.dynamoDbQuery(cond.let(KeyCondition.Companion::unwrap),
         indexName).let(MappingTemplate::wrap)
 
     public fun dynamoDbQuery(
@@ -97,7 +97,7 @@ public abstract class MappingTemplate(
       indexName: String,
       consistentRead: Boolean,
     ): MappingTemplate =
-        software.amazon.awscdk.services.appsync.MappingTemplate.dynamoDbQuery(cond.let(KeyCondition::unwrap),
+        software.amazon.awscdk.services.appsync.MappingTemplate.dynamoDbQuery(cond.let(KeyCondition.Companion::unwrap),
         indexName, consistentRead).let(MappingTemplate::wrap)
 
     public fun dynamoDbResultItem(): MappingTemplate =

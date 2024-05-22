@@ -73,8 +73,8 @@ public open class CfnWebACL(
     id: String,
     props: CfnWebACLProps,
   ) :
-      this(software.amazon.awscdk.services.waf.regional.CfnWebACL(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnWebACLProps::unwrap))
+      this(software.amazon.awscdk.services.waf.regional.CfnWebACL(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnWebACLProps.Companion::unwrap))
   )
 
   public constructor(
@@ -98,14 +98,14 @@ public open class CfnWebACL(
    * The action to perform if none of the `Rules` contained in the `WebACL` match.
    */
   public open fun defaultAction(`value`: IResolvable) {
-    unwrap(this).setDefaultAction(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefaultAction(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The action to perform if none of the `Rules` contained in the `WebACL` match.
    */
   public open fun defaultAction(`value`: ActionProperty) {
-    unwrap(this).setDefaultAction(`value`.let(ActionProperty::unwrap))
+    unwrap(this).setDefaultAction(`value`.let(ActionProperty.Companion::unwrap))
   }
 
   /**
@@ -122,7 +122,7 @@ public open class CfnWebACL(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -160,7 +160,7 @@ public open class CfnWebACL(
    * and the ID of the `Rule` .
    */
   public open fun rules(`value`: IResolvable) {
-    unwrap(this).setRules(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRules(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -288,7 +288,7 @@ public open class CfnWebACL(
      * match. 
      */
     override fun defaultAction(defaultAction: IResolvable) {
-      cdkBuilder.defaultAction(defaultAction.let(IResolvable::unwrap))
+      cdkBuilder.defaultAction(defaultAction.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -301,7 +301,7 @@ public open class CfnWebACL(
      * match. 
      */
     override fun defaultAction(defaultAction: ActionProperty) {
-      cdkBuilder.defaultAction(defaultAction.let(ActionProperty::unwrap))
+      cdkBuilder.defaultAction(defaultAction.let(ActionProperty.Companion::unwrap))
     }
 
     /**
@@ -354,7 +354,7 @@ public open class CfnWebACL(
      * of the `Rule` , and the ID of the `Rule` . 
      */
     override fun rules(rules: IResolvable) {
-      cdkBuilder.rules(rules.let(IResolvable::unwrap))
+      cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -636,7 +636,7 @@ public open class CfnWebACL(
        * the rule, such as allow, block, or count the request. 
        */
       override fun action(action: IResolvable) {
-        cdkBuilder.action(action.let(IResolvable::unwrap))
+        cdkBuilder.action(action.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -644,7 +644,7 @@ public open class CfnWebACL(
        * the rule, such as allow, block, or count the request. 
        */
       override fun action(action: ActionProperty) {
-        cdkBuilder.action(action.let(ActionProperty::unwrap))
+        cdkBuilder.action(action.let(ActionProperty.Companion::unwrap))
       }
 
       /**

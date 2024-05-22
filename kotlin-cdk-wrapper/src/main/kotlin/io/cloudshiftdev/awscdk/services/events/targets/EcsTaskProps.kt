@@ -312,7 +312,7 @@ public interface EcsTaskProps : TargetBaseProps {
      * @param cluster Cluster where service will be deployed. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -321,7 +321,7 @@ public interface EcsTaskProps : TargetBaseProps {
      * values you want to override.
      */
     override fun containerOverrides(containerOverrides: List<ContainerOverride>) {
-      cdkBuilder.containerOverrides(containerOverrides.map(ContainerOverride::unwrap))
+      cdkBuilder.containerOverrides(containerOverrides.map(ContainerOverride.Companion::unwrap))
     }
 
     /**
@@ -343,7 +343,7 @@ public interface EcsTaskProps : TargetBaseProps {
      * dead letter queue.
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -361,7 +361,7 @@ public interface EcsTaskProps : TargetBaseProps {
      * must match one of the launch type (compatibilities) of the target task.
      */
     override fun launchType(launchType: LaunchType) {
-      cdkBuilder.launchType(launchType.let(LaunchType::unwrap))
+      cdkBuilder.launchType(launchType.let(LaunchType.Companion::unwrap))
     }
 
     /**
@@ -371,7 +371,7 @@ public interface EcsTaskProps : TargetBaseProps {
      * Maximum value of 86400.
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -379,7 +379,7 @@ public interface EcsTaskProps : TargetBaseProps {
      * Unless you have specific compatibility requirements, you don't need to specify this.
      */
     override fun platformVersion(platformVersion: FargatePlatformVersion) {
-      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion::unwrap))
+      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion.Companion::unwrap))
     }
 
     /**
@@ -388,7 +388,7 @@ public interface EcsTaskProps : TargetBaseProps {
      * If no value is specified, the tags are not propagated.
      */
     override fun propagateTags(propagateTags: PropagatedTagSource) {
-      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource.Companion::unwrap))
     }
 
     /**
@@ -404,7 +404,7 @@ public interface EcsTaskProps : TargetBaseProps {
      * @param role Existing IAM role to run the ECS task.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -412,7 +412,7 @@ public interface EcsTaskProps : TargetBaseProps {
      * (Only applicable in case the TaskDefinition is configured for AwsVpc networking)
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -427,7 +427,7 @@ public interface EcsTaskProps : TargetBaseProps {
      * (Only applicable in case the TaskDefinition is configured for AwsVpc networking)
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -444,7 +444,7 @@ public interface EcsTaskProps : TargetBaseProps {
      * Each tag consists of a key and an optional value, both of which you define.
      */
     override fun tags(tags: List<Tag>) {
-      cdkBuilder.tags(tags.map(Tag::unwrap))
+      cdkBuilder.tags(tags.map(Tag.Companion::unwrap))
     }
 
     /**
@@ -464,7 +464,7 @@ public interface EcsTaskProps : TargetBaseProps {
      * @param taskDefinition Task Definition of the task that should be started. 
      */
     override fun taskDefinition(taskDefinition: ITaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(ITaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(ITaskDefinition.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.events.targets.EcsTaskProps =

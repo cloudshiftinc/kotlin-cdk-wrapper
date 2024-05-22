@@ -36,7 +36,7 @@ public open class Mesh(
   cdkObject: software.amazon.awscdk.services.appmesh.Mesh,
 ) : Resource(cdkObject), IMesh {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.appmesh.Mesh(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.appmesh.Mesh(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -45,8 +45,8 @@ public open class Mesh(
     id: String,
     props: MeshProps,
   ) :
-      this(software.amazon.awscdk.services.appmesh.Mesh(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(MeshProps::unwrap))
+      this(software.amazon.awscdk.services.appmesh.Mesh(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(MeshProps.Companion::unwrap))
   )
 
   public constructor(
@@ -73,7 +73,7 @@ public open class Mesh(
    */
   public override fun addVirtualGateway(id: String, props: VirtualGatewayBaseProps): VirtualGateway
       = unwrap(this).addVirtualGateway(id,
-      props.let(VirtualGatewayBaseProps::unwrap)).let(VirtualGateway::wrap)
+      props.let(VirtualGatewayBaseProps.Companion::unwrap)).let(VirtualGateway::wrap)
 
   /**
    * Adds a VirtualGateway to the Mesh.
@@ -104,7 +104,7 @@ public open class Mesh(
    */
   public override fun addVirtualNode(id: String, props: VirtualNodeBaseProps): VirtualNode =
       unwrap(this).addVirtualNode(id,
-      props.let(VirtualNodeBaseProps::unwrap)).let(VirtualNode::wrap)
+      props.let(VirtualNodeBaseProps.Companion::unwrap)).let(VirtualNode::wrap)
 
   /**
    * Adds a VirtualNode to the Mesh.
@@ -134,7 +134,7 @@ public open class Mesh(
    */
   public override fun addVirtualRouter(id: String, props: VirtualRouterBaseProps): VirtualRouter =
       unwrap(this).addVirtualRouter(id,
-      props.let(VirtualRouterBaseProps::unwrap)).let(VirtualRouter::wrap)
+      props.let(VirtualRouterBaseProps.Companion::unwrap)).let(VirtualRouter::wrap)
 
   /**
    * Adds a VirtualRouter to the Mesh with the given id and props.
@@ -217,7 +217,7 @@ public open class Mesh(
      * @param egressFilter Egress filter to be applied to the Mesh. 
      */
     override fun egressFilter(egressFilter: MeshFilterType) {
-      cdkBuilder.egressFilter(egressFilter.let(MeshFilterType::unwrap))
+      cdkBuilder.egressFilter(egressFilter.let(MeshFilterType.Companion::unwrap))
     }
 
     /**
@@ -239,7 +239,7 @@ public open class Mesh(
      * @param serviceDiscovery Defines how upstream clients will discover VirtualNodes in the Mesh. 
      */
     override fun serviceDiscovery(serviceDiscovery: MeshServiceDiscovery) {
-      cdkBuilder.serviceDiscovery(serviceDiscovery.let(MeshServiceDiscovery::unwrap))
+      cdkBuilder.serviceDiscovery(serviceDiscovery.let(MeshServiceDiscovery.Companion::unwrap))
     }
 
     /**
@@ -263,7 +263,7 @@ public open class Mesh(
       id: String,
       meshArn: String,
     ): IMesh =
-        software.amazon.awscdk.services.appmesh.Mesh.fromMeshArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.appmesh.Mesh.fromMeshArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, meshArn).let(IMesh::wrap)
 
     public fun fromMeshName(
@@ -271,7 +271,7 @@ public open class Mesh(
       id: String,
       meshName: String,
     ): IMesh =
-        software.amazon.awscdk.services.appmesh.Mesh.fromMeshName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.appmesh.Mesh.fromMeshName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, meshName).let(IMesh::wrap)
 
     public operator fun invoke(

@@ -182,7 +182,7 @@ public interface MethodDeploymentOptions {
      * higher the TTL, the longer the response will be cached.
      */
     override fun cacheTtl(cacheTtl: Duration) {
-      cdkBuilder.cacheTtl(cacheTtl.let(Duration::unwrap))
+      cdkBuilder.cacheTtl(cacheTtl.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -209,7 +209,7 @@ public interface MethodDeploymentOptions {
      * entries pushed to Amazon CloudWatch Logs.
      */
     override fun loggingLevel(loggingLevel: MethodLoggingLevel) {
-      cdkBuilder.loggingLevel(loggingLevel.let(MethodLoggingLevel::unwrap))
+      cdkBuilder.loggingLevel(loggingLevel.let(MethodLoggingLevel.Companion::unwrap))
     }
 
     /**

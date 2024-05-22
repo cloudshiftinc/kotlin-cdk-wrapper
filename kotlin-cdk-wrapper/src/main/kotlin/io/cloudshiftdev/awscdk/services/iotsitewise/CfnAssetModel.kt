@@ -200,8 +200,8 @@ public open class CfnAssetModel(
     id: String,
     props: CfnAssetModelProps,
   ) :
-      this(software.amazon.awscdk.services.iotsitewise.CfnAssetModel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAssetModelProps::unwrap))
+      this(software.amazon.awscdk.services.iotsitewise.CfnAssetModel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAssetModelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -220,7 +220,7 @@ public open class CfnAssetModel(
    * The composite models that are part of this asset model.
    */
   public open fun assetModelCompositeModels(`value`: IResolvable) {
-    unwrap(this).setAssetModelCompositeModels(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAssetModelCompositeModels(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -269,7 +269,7 @@ public open class CfnAssetModel(
    * The hierarchy definitions of the asset model.
    */
   public open fun assetModelHierarchies(`value`: IResolvable) {
-    unwrap(this).setAssetModelHierarchies(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAssetModelHierarchies(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -306,7 +306,7 @@ public open class CfnAssetModel(
    * The property definitions of the asset model.
    */
   public open fun assetModelProperties(`value`: IResolvable) {
-    unwrap(this).setAssetModelProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAssetModelProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -350,7 +350,7 @@ public open class CfnAssetModel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -368,7 +368,7 @@ public open class CfnAssetModel(
    * A list of key-value pairs that contain metadata for the asset.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -636,7 +636,7 @@ public open class CfnAssetModel(
      * @param assetModelCompositeModels The composite models that are part of this asset model. 
      */
     override fun assetModelCompositeModels(assetModelCompositeModels: IResolvable) {
-      cdkBuilder.assetModelCompositeModels(assetModelCompositeModels.let(IResolvable::unwrap))
+      cdkBuilder.assetModelCompositeModels(assetModelCompositeModels.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -724,7 +724,7 @@ public open class CfnAssetModel(
      * @param assetModelHierarchies The hierarchy definitions of the asset model. 
      */
     override fun assetModelHierarchies(assetModelHierarchies: IResolvable) {
-      cdkBuilder.assetModelHierarchies(assetModelHierarchies.let(IResolvable::unwrap))
+      cdkBuilder.assetModelHierarchies(assetModelHierarchies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -789,7 +789,7 @@ public open class CfnAssetModel(
      * @param assetModelProperties The property definitions of the asset model. 
      */
     override fun assetModelProperties(assetModelProperties: IResolvable) {
-      cdkBuilder.assetModelProperties(assetModelProperties.let(IResolvable::unwrap))
+      cdkBuilder.assetModelProperties(assetModelProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -853,7 +853,7 @@ public open class CfnAssetModel(
      * @param tags A list of key-value pairs that contain metadata for the asset. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1184,7 +1184,7 @@ public open class CfnAssetModel(
        * @param compositeModelProperties The asset property definitions for this composite model.
        */
       override fun compositeModelProperties(compositeModelProperties: IResolvable) {
-        cdkBuilder.compositeModelProperties(compositeModelProperties.let(IResolvable::unwrap))
+        cdkBuilder.compositeModelProperties(compositeModelProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2050,7 +2050,7 @@ public open class CfnAssetModel(
        * `metric` , or `transform` . 
        */
       override fun type(type: IResolvable) {
-        cdkBuilder.type(type.let(IResolvable::unwrap))
+        cdkBuilder.type(type.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2058,7 +2058,7 @@ public open class CfnAssetModel(
        * `metric` , or `transform` . 
        */
       override fun type(type: PropertyTypeProperty) {
-        cdkBuilder.type(type.let(PropertyTypeProperty::unwrap))
+        cdkBuilder.type(type.let(PropertyTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -2372,14 +2372,14 @@ public open class CfnAssetModel(
        * @param value The variable that identifies an asset property from which to use values. 
        */
       override fun `value`(`value`: IResolvable) {
-        cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
+        cdkBuilder.`value`(`value`.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param value The variable that identifies an asset property from which to use values. 
        */
       override fun `value`(`value`: VariableValueProperty) {
-        cdkBuilder.`value`(`value`.let(VariableValueProperty::unwrap))
+        cdkBuilder.`value`(`value`.let(VariableValueProperty.Companion::unwrap))
       }
 
       /**
@@ -2592,7 +2592,7 @@ public open class CfnAssetModel(
        * @param variables The list of variables used in the expression. 
        */
       override fun variables(variables: IResolvable) {
-        cdkBuilder.variables(variables.let(IResolvable::unwrap))
+        cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2613,7 +2613,7 @@ public open class CfnAssetModel(
        * AWS IoT SiteWise computes one data point per `window` .
        */
       override fun window(window: IResolvable) {
-        cdkBuilder.window(window.let(IResolvable::unwrap))
+        cdkBuilder.window(window.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2622,7 +2622,7 @@ public open class CfnAssetModel(
        * AWS IoT SiteWise computes one data point per `window` .
        */
       override fun window(window: MetricWindowProperty) {
-        cdkBuilder.window(window.let(MetricWindowProperty::unwrap))
+        cdkBuilder.window(window.let(MetricWindowProperty.Companion::unwrap))
       }
 
       /**
@@ -2753,14 +2753,14 @@ public open class CfnAssetModel(
        * @param tumbling The tumbling time interval window.
        */
       override fun tumbling(tumbling: IResolvable) {
-        cdkBuilder.tumbling(tumbling.let(IResolvable::unwrap))
+        cdkBuilder.tumbling(tumbling.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param tumbling The tumbling time interval window.
        */
       override fun tumbling(tumbling: TumblingWindowProperty) {
-        cdkBuilder.tumbling(tumbling.let(TumblingWindowProperty::unwrap))
+        cdkBuilder.tumbling(tumbling.let(TumblingWindowProperty.Companion::unwrap))
       }
 
       /**
@@ -3090,7 +3090,7 @@ public open class CfnAssetModel(
        * wind turbine.
        */
       override fun attribute(attribute: IResolvable) {
-        cdkBuilder.attribute(attribute.let(IResolvable::unwrap))
+        cdkBuilder.attribute(attribute.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3100,7 +3100,7 @@ public open class CfnAssetModel(
        * wind turbine.
        */
       override fun attribute(attribute: AttributeProperty) {
-        cdkBuilder.attribute(attribute.let(AttributeProperty::unwrap))
+        cdkBuilder.attribute(attribute.let(AttributeProperty.Companion::unwrap))
       }
 
       /**
@@ -3121,7 +3121,7 @@ public open class CfnAssetModel(
        * the average hourly temperature.
        */
       override fun metric(metric: IResolvable) {
-        cdkBuilder.metric(metric.let(IResolvable::unwrap))
+        cdkBuilder.metric(metric.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3131,7 +3131,7 @@ public open class CfnAssetModel(
        * the average hourly temperature.
        */
       override fun metric(metric: MetricProperty) {
-        cdkBuilder.metric(metric.let(MetricProperty::unwrap))
+        cdkBuilder.metric(metric.let(MetricProperty.Companion::unwrap))
       }
 
       /**
@@ -3151,7 +3151,7 @@ public open class CfnAssetModel(
        * form to another, such as a unit conversion from Celsius to Fahrenheit.
        */
       override fun transform(transform: IResolvable) {
-        cdkBuilder.transform(transform.let(IResolvable::unwrap))
+        cdkBuilder.transform(transform.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3160,7 +3160,7 @@ public open class CfnAssetModel(
        * form to another, such as a unit conversion from Celsius to Fahrenheit.
        */
       override fun transform(transform: TransformProperty) {
-        cdkBuilder.transform(transform.let(TransformProperty::unwrap))
+        cdkBuilder.transform(transform.let(TransformProperty.Companion::unwrap))
       }
 
       /**
@@ -3363,7 +3363,7 @@ public open class CfnAssetModel(
        * @param variables The list of variables used in the expression. 
        */
       override fun variables(variables: IResolvable) {
-        cdkBuilder.variables(variables.let(IResolvable::unwrap))
+        cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4009,7 +4009,7 @@ public open class CfnAssetModel(
        * `PropertyPath: Name: AssetModelName Name: Composite1 Name: NestedComposite`
        */
       override fun propertyPath(propertyPath: IResolvable) {
-        cdkBuilder.propertyPath(propertyPath.let(IResolvable::unwrap))
+        cdkBuilder.propertyPath(propertyPath.let(IResolvable.Companion::unwrap))
       }
 
       /**

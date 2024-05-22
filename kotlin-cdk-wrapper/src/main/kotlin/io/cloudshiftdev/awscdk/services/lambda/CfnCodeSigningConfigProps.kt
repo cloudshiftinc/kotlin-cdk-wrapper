@@ -116,7 +116,7 @@ public interface CfnCodeSigningConfigProps {
      * @param allowedPublishers List of allowed publishers. 
      */
     override fun allowedPublishers(allowedPublishers: IResolvable) {
-      cdkBuilder.allowedPublishers(allowedPublishers.let(IResolvable::unwrap))
+      cdkBuilder.allowedPublishers(allowedPublishers.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -124,7 +124,7 @@ public interface CfnCodeSigningConfigProps {
      */
     override
         fun allowedPublishers(allowedPublishers: CfnCodeSigningConfig.AllowedPublishersProperty) {
-      cdkBuilder.allowedPublishers(allowedPublishers.let(CfnCodeSigningConfig.AllowedPublishersProperty::unwrap))
+      cdkBuilder.allowedPublishers(allowedPublishers.let(CfnCodeSigningConfig.AllowedPublishersProperty.Companion::unwrap))
     }
 
     /**
@@ -141,7 +141,7 @@ public interface CfnCodeSigningConfigProps {
      * signature mismatch or expiry.
      */
     override fun codeSigningPolicies(codeSigningPolicies: IResolvable) {
-      cdkBuilder.codeSigningPolicies(codeSigningPolicies.let(IResolvable::unwrap))
+      cdkBuilder.codeSigningPolicies(codeSigningPolicies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -150,7 +150,7 @@ public interface CfnCodeSigningConfigProps {
      */
     override
         fun codeSigningPolicies(codeSigningPolicies: CfnCodeSigningConfig.CodeSigningPoliciesProperty) {
-      cdkBuilder.codeSigningPolicies(codeSigningPolicies.let(CfnCodeSigningConfig.CodeSigningPoliciesProperty::unwrap))
+      cdkBuilder.codeSigningPolicies(codeSigningPolicies.let(CfnCodeSigningConfig.CodeSigningPoliciesProperty.Companion::unwrap))
     }
 
     /**

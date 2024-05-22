@@ -42,8 +42,8 @@ public interface ILogSubscriptionDestination {
      * @param sourceLogGroup 
      */
     override fun bind(scope: Construct, sourceLogGroup: ILogGroup): LogSubscriptionDestinationConfig
-        = unwrap(this).bind(scope.let(Construct::unwrap),
-        sourceLogGroup.let(ILogGroup::unwrap)).let(LogSubscriptionDestinationConfig::wrap)
+        = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+        sourceLogGroup.let(ILogGroup.Companion::unwrap)).let(LogSubscriptionDestinationConfig::wrap)
   }
 
   public companion object {

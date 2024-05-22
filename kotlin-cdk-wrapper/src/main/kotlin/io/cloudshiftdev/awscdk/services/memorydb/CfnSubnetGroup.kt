@@ -52,8 +52,8 @@ public open class CfnSubnetGroup(
     id: String,
     props: CfnSubnetGroupProps,
   ) :
-      this(software.amazon.awscdk.services.memorydb.CfnSubnetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSubnetGroupProps::unwrap))
+      this(software.amazon.awscdk.services.memorydb.CfnSubnetGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSubnetGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -88,7 +88,7 @@ public open class CfnSubnetGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -135,7 +135,7 @@ public open class CfnSubnetGroup(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -261,7 +261,7 @@ public open class CfnSubnetGroup(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

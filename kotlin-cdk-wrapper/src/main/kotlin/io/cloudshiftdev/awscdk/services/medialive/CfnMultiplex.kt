@@ -63,8 +63,8 @@ public open class CfnMultiplex(
     id: String,
     props: CfnMultiplexProps,
   ) :
-      this(software.amazon.awscdk.services.medialive.CfnMultiplex(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMultiplexProps::unwrap))
+      this(software.amazon.awscdk.services.medialive.CfnMultiplex(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMultiplexProps.Companion::unwrap))
   )
 
   public constructor(
@@ -132,7 +132,7 @@ public open class CfnMultiplex(
    * A list of the multiplex output destinations.
    */
   public open fun destinations(`value`: IResolvable) {
-    unwrap(this).setDestinations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDestinations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -153,7 +153,7 @@ public open class CfnMultiplex(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -165,14 +165,14 @@ public open class CfnMultiplex(
    * Configuration for a multiplex event.
    */
   public open fun multiplexSettings(`value`: IResolvable) {
-    unwrap(this).setMultiplexSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMultiplexSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration for a multiplex event.
    */
   public open fun multiplexSettings(`value`: MultiplexSettingsProperty) {
-    unwrap(this).setMultiplexSettings(`value`.let(MultiplexSettingsProperty::unwrap))
+    unwrap(this).setMultiplexSettings(`value`.let(MultiplexSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -204,7 +204,7 @@ public open class CfnMultiplex(
    * A collection of key-value pairs.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -341,7 +341,7 @@ public open class CfnMultiplex(
      * @param destinations A list of the multiplex output destinations. 
      */
     override fun destinations(destinations: IResolvable) {
-      cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
+      cdkBuilder.destinations(destinations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -369,7 +369,7 @@ public open class CfnMultiplex(
      * @param multiplexSettings Configuration for a multiplex event. 
      */
     override fun multiplexSettings(multiplexSettings: IResolvable) {
-      cdkBuilder.multiplexSettings(multiplexSettings.let(IResolvable::unwrap))
+      cdkBuilder.multiplexSettings(multiplexSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -379,7 +379,7 @@ public open class CfnMultiplex(
      * @param multiplexSettings Configuration for a multiplex event. 
      */
     override fun multiplexSettings(multiplexSettings: MultiplexSettingsProperty) {
-      cdkBuilder.multiplexSettings(multiplexSettings.let(MultiplexSettingsProperty::unwrap))
+      cdkBuilder.multiplexSettings(multiplexSettings.let(MultiplexSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -410,7 +410,7 @@ public open class CfnMultiplex(
      * @param tags A collection of key-value pairs. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -599,7 +599,7 @@ public open class CfnMultiplex(
        */
       override
           fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: IResolvable) {
-        cdkBuilder.multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings.let(IResolvable::unwrap))
+        cdkBuilder.multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -608,7 +608,7 @@ public open class CfnMultiplex(
        */
       override
           fun multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings: MultiplexMediaConnectOutputDestinationSettingsProperty) {
-        cdkBuilder.multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings.let(MultiplexMediaConnectOutputDestinationSettingsProperty::unwrap))
+        cdkBuilder.multiplexMediaConnectOutputDestinationSettings(multiplexMediaConnectOutputDestinationSettings.let(MultiplexMediaConnectOutputDestinationSettingsProperty.Companion::unwrap))
       }
 
       /**

@@ -23,15 +23,15 @@ import kotlin.jvm.JvmName
  * Rule rule = Rule.Builder.create(this, "Rule")
  * .schedule(Schedule.rate(Duration.hours(1)))
  * .build();
- * rule.addTarget(EcsTask.Builder.create()
+ * rule.addTarget(
+ * EcsTask.Builder.create()
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
- * .taskCount(1)
- * .containerOverrides(List.of(ContainerOverride.builder()
- * .containerName("TheContainer")
- * .command(List.of("echo", EventField.fromPath("$.detail.event")))
+ * .propagateTags(PropagatedTagSource.TASK_DEFINITION)
+ * .tags(List.of(Tag.builder()
+ * .key("my-tag")
+ * .value("my-tag-value")
  * .build()))
- * .enableExecuteCommand(true)
  * .build());
  * ```
  *
@@ -51,7 +51,7 @@ public abstract class Schedule(
 
   public companion object {
     public fun cron(options: CronOptions): Schedule =
-        software.amazon.awscdk.services.events.Schedule.cron(options.let(CronOptions::unwrap)).let(Schedule::wrap)
+        software.amazon.awscdk.services.events.Schedule.cron(options.let(CronOptions.Companion::unwrap)).let(Schedule::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0c121adce7fd50c39a14d31e74ad5f9f0fca810eb9b218b8452715471f9ee1b8")
@@ -61,7 +61,7 @@ public abstract class Schedule(
         software.amazon.awscdk.services.events.Schedule.expression(expression).let(Schedule::wrap)
 
     public fun rate(duration: Duration): Schedule =
-        software.amazon.awscdk.services.events.Schedule.rate(duration.let(Duration::unwrap)).let(Schedule::wrap)
+        software.amazon.awscdk.services.events.Schedule.rate(duration.let(Duration.Companion::unwrap)).let(Schedule::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.Schedule): Schedule =
         CdkObjectWrappers.wrap(cdkObject) as? Schedule ?: Wrapper(cdkObject)

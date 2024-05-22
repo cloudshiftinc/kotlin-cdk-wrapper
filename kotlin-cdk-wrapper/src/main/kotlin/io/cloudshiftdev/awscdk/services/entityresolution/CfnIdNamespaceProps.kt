@@ -205,7 +205,7 @@ public interface CfnIdNamespaceProps {
      * `IdNamespace` can be used as a `Source` or a `Target` .
      */
     override fun idMappingWorkflowProperties(idMappingWorkflowProperties: IResolvable) {
-      cdkBuilder.idMappingWorkflowProperties(idMappingWorkflowProperties.let(IResolvable::unwrap))
+      cdkBuilder.idMappingWorkflowProperties(idMappingWorkflowProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -235,7 +235,7 @@ public interface CfnIdNamespaceProps {
      * `InputSourceARN` and `SchemaName` .
      */
     override fun inputSourceConfig(inputSourceConfig: IResolvable) {
-      cdkBuilder.inputSourceConfig(inputSourceConfig.let(IResolvable::unwrap))
+      cdkBuilder.inputSourceConfig(inputSourceConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -266,7 +266,7 @@ public interface CfnIdNamespaceProps {
      * @param tags The tags used to organize, track, or control access for this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

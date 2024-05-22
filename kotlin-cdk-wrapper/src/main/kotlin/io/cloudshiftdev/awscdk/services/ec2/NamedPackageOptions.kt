@@ -75,7 +75,7 @@ public interface NamedPackageOptions {
      * @param serviceRestartHandles Restart the given services after this command has run.
      */
     override fun serviceRestartHandles(serviceRestartHandles: List<InitServiceRestartHandle>) {
-      cdkBuilder.serviceRestartHandles(serviceRestartHandles.map(InitServiceRestartHandle::unwrap))
+      cdkBuilder.serviceRestartHandles(serviceRestartHandles.map(InitServiceRestartHandle.Companion::unwrap))
     }
 
     /**

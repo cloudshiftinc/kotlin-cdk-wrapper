@@ -38,7 +38,7 @@ public open class GelfLogDriver(
   cdkObject: software.amazon.awscdk.services.ecs.GelfLogDriver,
 ) : LogDriver(cdkObject) {
   public constructor(props: GelfLogDriverProps) :
-      this(software.amazon.awscdk.services.ecs.GelfLogDriver(props.let(GelfLogDriverProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.GelfLogDriver(props.let(GelfLogDriverProps.Companion::unwrap))
   )
 
   public constructor(props: GelfLogDriverProps.Builder.() -> Unit) : this(GelfLogDriverProps(props)
@@ -51,8 +51,8 @@ public open class GelfLogDriver(
    * @param _containerDefinition 
    */
   public override fun bind(scope: Construct, containerDefinition: ContainerDefinition):
-      LogDriverConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      containerDefinition.let(ContainerDefinition::unwrap)).let(LogDriverConfig::wrap)
+      LogDriverConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      containerDefinition.let(ContainerDefinition.Companion::unwrap)).let(LogDriverConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.GelfLogDriver].
@@ -239,7 +239,7 @@ public open class GelfLogDriver(
      * log message. 
      */
     override fun compressionType(compressionType: GelfCompressionType) {
-      cdkBuilder.compressionType(compressionType.let(GelfCompressionType::unwrap))
+      cdkBuilder.compressionType(compressionType.let(GelfCompressionType.Companion::unwrap))
     }
 
     /**
@@ -353,7 +353,7 @@ public open class GelfLogDriver(
      * attempts. 
      */
     override fun tcpReconnectDelay(tcpReconnectDelay: Duration) {
-      cdkBuilder.tcpReconnectDelay(tcpReconnectDelay.let(Duration::unwrap))
+      cdkBuilder.tcpReconnectDelay(tcpReconnectDelay.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.GelfLogDriver = cdkBuilder.build()

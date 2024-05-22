@@ -52,14 +52,14 @@ public open class RuleScope(
 
   public companion object {
     public fun fromResource(resourceType: ResourceType): RuleScope =
-        software.amazon.awscdk.services.config.RuleScope.fromResource(resourceType.let(ResourceType::unwrap)).let(RuleScope::wrap)
+        software.amazon.awscdk.services.config.RuleScope.fromResource(resourceType.let(ResourceType.Companion::unwrap)).let(RuleScope::wrap)
 
     public fun fromResource(resourceType: ResourceType, resourceId: String): RuleScope =
-        software.amazon.awscdk.services.config.RuleScope.fromResource(resourceType.let(ResourceType::unwrap),
+        software.amazon.awscdk.services.config.RuleScope.fromResource(resourceType.let(ResourceType.Companion::unwrap),
         resourceId).let(RuleScope::wrap)
 
     public fun fromResources(resourceTypes: List<ResourceType>): RuleScope =
-        software.amazon.awscdk.services.config.RuleScope.fromResources(resourceTypes.map(ResourceType::unwrap)).let(RuleScope::wrap)
+        software.amazon.awscdk.services.config.RuleScope.fromResources(resourceTypes.map(ResourceType.Companion::unwrap)).let(RuleScope::wrap)
 
     public fun fromResources(vararg resourceTypes: ResourceType): RuleScope =
         fromResources(resourceTypes.toList())

@@ -288,7 +288,7 @@ public interface CfnPricingRuleProps {
      * @param tags A map that contains tag keys and tag values that are attached to a pricing rule.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -300,14 +300,14 @@ public interface CfnPricingRuleProps {
      * @param tiering The set of tiering configurations for the pricing rule.
      */
     override fun tiering(tiering: IResolvable) {
-      cdkBuilder.tiering(tiering.let(IResolvable::unwrap))
+      cdkBuilder.tiering(tiering.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param tiering The set of tiering configurations for the pricing rule.
      */
     override fun tiering(tiering: CfnPricingRule.TieringProperty) {
-      cdkBuilder.tiering(tiering.let(CfnPricingRule.TieringProperty::unwrap))
+      cdkBuilder.tiering(tiering.let(CfnPricingRule.TieringProperty.Companion::unwrap))
     }
 
     /**

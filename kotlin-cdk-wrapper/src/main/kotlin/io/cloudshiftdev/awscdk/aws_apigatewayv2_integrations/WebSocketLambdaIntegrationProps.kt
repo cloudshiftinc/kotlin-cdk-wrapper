@@ -74,7 +74,7 @@ public interface WebSocketLambdaIntegrationProps {
      * @param contentHandling Specifies how to handle response payload content type conversions.
      */
     override fun contentHandling(contentHandling: ContentHandling) {
-      cdkBuilder.contentHandling(contentHandling.let(ContentHandling::unwrap))
+      cdkBuilder.contentHandling(contentHandling.let(ContentHandling.Companion::unwrap))
     }
 
     /**
@@ -83,7 +83,7 @@ public interface WebSocketLambdaIntegrationProps {
      * Must be between 50 milliseconds and 29 seconds.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build():

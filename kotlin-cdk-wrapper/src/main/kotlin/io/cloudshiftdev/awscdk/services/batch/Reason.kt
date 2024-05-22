@@ -46,7 +46,7 @@ public open class Reason(
         Reason.wrap(software.amazon.awscdk.services.batch.Reason.SPOT_INSTANCE_RECLAIMED)
 
     public fun custom(customReasonProps: CustomReason): Reason =
-        software.amazon.awscdk.services.batch.Reason.custom(customReasonProps.let(CustomReason::unwrap)).let(Reason::wrap)
+        software.amazon.awscdk.services.batch.Reason.custom(customReasonProps.let(CustomReason.Companion::unwrap)).let(Reason::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0480ecfc6e4061fd4538b746d5169cbfc3fa6a0d7d9393c764aba66b5778a9ba")

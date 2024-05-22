@@ -47,13 +47,13 @@ public open class SfnStateMachine(
   cdkObject: software.amazon.awscdk.services.events.targets.SfnStateMachine,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(machine: CloudshiftdevAwscdkServicesStepfunctionsIStateMachine) :
-      this(software.amazon.awscdk.services.events.targets.SfnStateMachine(machine.let(CloudshiftdevAwscdkServicesStepfunctionsIStateMachine::unwrap))
+      this(software.amazon.awscdk.services.events.targets.SfnStateMachine(machine.let(CloudshiftdevAwscdkServicesStepfunctionsIStateMachine.Companion::unwrap))
   )
 
   public constructor(machine: CloudshiftdevAwscdkServicesStepfunctionsIStateMachine,
       props: SfnStateMachineProps) :
-      this(software.amazon.awscdk.services.events.targets.SfnStateMachine(machine.let(CloudshiftdevAwscdkServicesStepfunctionsIStateMachine::unwrap),
-      props.let(SfnStateMachineProps::unwrap))
+      this(software.amazon.awscdk.services.events.targets.SfnStateMachine(machine.let(CloudshiftdevAwscdkServicesStepfunctionsIStateMachine.Companion::unwrap),
+      props.let(SfnStateMachineProps.Companion::unwrap))
   )
 
   public constructor(machine: CloudshiftdevAwscdkServicesStepfunctionsIStateMachine,
@@ -68,7 +68,7 @@ public open class SfnStateMachine(
    * @param _id
    */
   public override fun bind(rule: IRule): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap)).let(RuleTargetConfig::wrap)
 
   /**
    * Returns a properties that are used in an Rule to trigger this State Machine.
@@ -78,7 +78,7 @@ public open class SfnStateMachine(
    * @param _id
    */
   public override fun bind(rule: IRule, id: String): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap), id).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap), id).let(RuleTargetConfig::wrap)
 
   /**
    *
@@ -181,7 +181,7 @@ public open class SfnStateMachine(
      * 
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -192,7 +192,7 @@ public open class SfnStateMachine(
      * @param input The input to the state machine execution. 
      */
     override fun input(input: RuleTargetInput) {
-      cdkBuilder.input(input.let(RuleTargetInput::unwrap))
+      cdkBuilder.input(input.let(RuleTargetInput.Companion::unwrap))
     }
 
     /**
@@ -207,7 +207,7 @@ public open class SfnStateMachine(
      * processing. 
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -233,7 +233,7 @@ public open class SfnStateMachine(
      * @param role The IAM role to be assumed to execute the State Machine. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.events.targets.SfnStateMachine =

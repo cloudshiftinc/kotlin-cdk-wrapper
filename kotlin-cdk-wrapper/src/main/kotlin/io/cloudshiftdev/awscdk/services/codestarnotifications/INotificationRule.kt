@@ -40,7 +40,7 @@ public interface INotificationRule : IResource {
      * @param target The SNS topic or AWS Chatbot Slack target. 
      */
     override fun addTarget(target: INotificationRuleTarget): Boolean =
-        unwrap(this).addTarget(target.let(INotificationRuleTarget::unwrap))
+        unwrap(this).addTarget(target.let(INotificationRuleTarget.Companion::unwrap))
 
     /**
      * Apply the given removal policy to this resource.
@@ -56,7 +56,7 @@ public interface INotificationRule : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**

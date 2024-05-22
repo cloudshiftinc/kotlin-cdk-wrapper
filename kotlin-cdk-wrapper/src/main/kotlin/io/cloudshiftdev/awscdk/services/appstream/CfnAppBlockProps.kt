@@ -250,14 +250,14 @@ public interface CfnAppBlockProps {
      * @param postSetupScriptDetails The post setup script details of the app block.
      */
     override fun postSetupScriptDetails(postSetupScriptDetails: IResolvable) {
-      cdkBuilder.postSetupScriptDetails(postSetupScriptDetails.let(IResolvable::unwrap))
+      cdkBuilder.postSetupScriptDetails(postSetupScriptDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param postSetupScriptDetails The post setup script details of the app block.
      */
     override fun postSetupScriptDetails(postSetupScriptDetails: CfnAppBlock.ScriptDetailsProperty) {
-      cdkBuilder.postSetupScriptDetails(postSetupScriptDetails.let(CfnAppBlock.ScriptDetailsProperty::unwrap))
+      cdkBuilder.postSetupScriptDetails(postSetupScriptDetails.let(CfnAppBlock.ScriptDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -273,14 +273,14 @@ public interface CfnAppBlockProps {
      * @param setupScriptDetails The setup script details of the app block.
      */
     override fun setupScriptDetails(setupScriptDetails: IResolvable) {
-      cdkBuilder.setupScriptDetails(setupScriptDetails.let(IResolvable::unwrap))
+      cdkBuilder.setupScriptDetails(setupScriptDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param setupScriptDetails The setup script details of the app block.
      */
     override fun setupScriptDetails(setupScriptDetails: CfnAppBlock.ScriptDetailsProperty) {
-      cdkBuilder.setupScriptDetails(setupScriptDetails.let(CfnAppBlock.ScriptDetailsProperty::unwrap))
+      cdkBuilder.setupScriptDetails(setupScriptDetails.let(CfnAppBlock.ScriptDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -296,14 +296,14 @@ public interface CfnAppBlockProps {
      * @param sourceS3Location The source S3 location of the app block. 
      */
     override fun sourceS3Location(sourceS3Location: IResolvable) {
-      cdkBuilder.sourceS3Location(sourceS3Location.let(IResolvable::unwrap))
+      cdkBuilder.sourceS3Location(sourceS3Location.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param sourceS3Location The source S3 location of the app block. 
      */
     override fun sourceS3Location(sourceS3Location: CfnAppBlock.S3LocationProperty) {
-      cdkBuilder.sourceS3Location(sourceS3Location.let(CfnAppBlock.S3LocationProperty::unwrap))
+      cdkBuilder.sourceS3Location(sourceS3Location.let(CfnAppBlock.S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -319,7 +319,7 @@ public interface CfnAppBlockProps {
      * @param tags The tags of the app block.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

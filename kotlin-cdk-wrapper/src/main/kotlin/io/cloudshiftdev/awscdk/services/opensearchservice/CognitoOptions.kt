@@ -93,7 +93,7 @@ public interface CognitoOptions {
      * It must have the `AmazonESCognitoAccess` policy attached to it.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**

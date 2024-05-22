@@ -52,8 +52,8 @@ public open class EcsJobDefinition(
     id: String,
     props: EcsJobDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.batch.EcsJobDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EcsJobDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.batch.EcsJobDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EcsJobDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -69,7 +69,7 @@ public open class EcsJobDefinition(
    * @param strategy 
    */
   public override fun addRetryStrategy(strategy: RetryStrategy) {
-    unwrap(this).addRetryStrategy(strategy.let(RetryStrategy::unwrap))
+    unwrap(this).addRetryStrategy(strategy.let(RetryStrategy.Companion::unwrap))
   }
 
   /**
@@ -86,7 +86,8 @@ public open class EcsJobDefinition(
    * @param queue 
    */
   public open fun grantSubmitJob(identity: IGrantable, queue: IJobQueue) {
-    unwrap(this).grantSubmitJob(identity.let(IGrantable::unwrap), queue.let(IJobQueue::unwrap))
+    unwrap(this).grantSubmitJob(identity.let(IGrantable.Companion::unwrap),
+        queue.let(IJobQueue.Companion::unwrap))
   }
 
   /**
@@ -251,7 +252,7 @@ public open class EcsJobDefinition(
      * @param container The container that this job will run. 
      */
     override fun container(container: IEcsContainerDefinition) {
-      cdkBuilder.container(container.let(IEcsContainerDefinition::unwrap))
+      cdkBuilder.container(container.let(IEcsContainerDefinition.Companion::unwrap))
     }
 
     /**
@@ -312,7 +313,7 @@ public open class EcsJobDefinition(
      * @param retryStrategies Defines the retry behavior for this job. 
      */
     override fun retryStrategies(retryStrategies: List<RetryStrategy>) {
-      cdkBuilder.retryStrategies(retryStrategies.map(RetryStrategy::unwrap))
+      cdkBuilder.retryStrategies(retryStrategies.map(RetryStrategy.Companion::unwrap))
     }
 
     /**
@@ -351,7 +352,7 @@ public open class EcsJobDefinition(
      * @param timeout The timeout time for jobs that are submitted with this job definition. 
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.batch.EcsJobDefinition = cdkBuilder.build()
@@ -363,7 +364,7 @@ public open class EcsJobDefinition(
       id: String,
       jobDefinitionArn: String,
     ): IJobDefinition =
-        software.amazon.awscdk.services.batch.EcsJobDefinition.fromJobDefinitionArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.batch.EcsJobDefinition.fromJobDefinitionArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, jobDefinitionArn).let(IJobDefinition::wrap)
 
     public operator fun invoke(

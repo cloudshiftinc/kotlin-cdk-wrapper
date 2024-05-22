@@ -71,7 +71,7 @@ public interface ZoneDelegationOptions {
      * @param ttl The TTL (Time To Live) of the DNS delegation record in DNS caches.
      */
     override fun ttl(ttl: Duration) {
-      cdkBuilder.ttl(ttl.let(Duration::unwrap))
+      cdkBuilder.ttl(ttl.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.route53.ZoneDelegationOptions =

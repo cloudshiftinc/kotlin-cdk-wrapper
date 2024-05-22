@@ -135,7 +135,7 @@ public interface ListenerOptions {
      * a single client to the same endpoint.
      */
     override fun clientAffinity(clientAffinity: ClientAffinity) {
-      cdkBuilder.clientAffinity(clientAffinity.let(ClientAffinity::unwrap))
+      cdkBuilder.clientAffinity(clientAffinity.let(ClientAffinity.Companion::unwrap))
     }
 
     /**
@@ -150,7 +150,7 @@ public interface ListenerOptions {
      * accelerator. 
      */
     override fun portRanges(portRanges: List<PortRange>) {
-      cdkBuilder.portRanges(portRanges.map(PortRange::unwrap))
+      cdkBuilder.portRanges(portRanges.map(PortRange.Companion::unwrap))
     }
 
     /**
@@ -163,7 +163,7 @@ public interface ListenerOptions {
      * @param protocol The protocol for the connections from clients to the accelerator.
      */
     override fun protocol(protocol: ConnectionProtocol) {
-      cdkBuilder.protocol(protocol.let(ConnectionProtocol::unwrap))
+      cdkBuilder.protocol(protocol.let(ConnectionProtocol.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.globalaccelerator.ListenerOptions =

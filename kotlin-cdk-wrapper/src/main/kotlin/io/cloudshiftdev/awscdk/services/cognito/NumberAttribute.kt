@@ -41,7 +41,7 @@ public open class NumberAttribute(
   )
 
   public constructor(props: NumberAttributeProps) :
-      this(software.amazon.awscdk.services.cognito.NumberAttribute(props.let(NumberAttributeProps::unwrap))
+      this(software.amazon.awscdk.services.cognito.NumberAttribute(props.let(NumberAttributeProps.Companion::unwrap))
   )
 
   public constructor(props: NumberAttributeProps.Builder.() -> Unit) :

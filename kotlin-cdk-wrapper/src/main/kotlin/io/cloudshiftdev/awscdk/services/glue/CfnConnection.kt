@@ -60,8 +60,8 @@ public open class CfnConnection(
     id: String,
     props: CfnConnectionProps,
   ) :
-      this(software.amazon.awscdk.services.glue.CfnConnection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConnectionProps::unwrap))
+      this(software.amazon.awscdk.services.glue.CfnConnection(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConnectionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -97,14 +97,14 @@ public open class CfnConnection(
    * The connection that you want to create.
    */
   public open fun connectionInput(`value`: IResolvable) {
-    unwrap(this).setConnectionInput(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConnectionInput(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The connection that you want to create.
    */
   public open fun connectionInput(`value`: ConnectionInputProperty) {
-    unwrap(this).setConnectionInput(`value`.let(ConnectionInputProperty::unwrap))
+    unwrap(this).setConnectionInput(`value`.let(ConnectionInputProperty.Companion::unwrap))
   }
 
   /**
@@ -121,7 +121,7 @@ public open class CfnConnection(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -202,7 +202,7 @@ public open class CfnConnection(
      * @param connectionInput The connection that you want to create. 
      */
     override fun connectionInput(connectionInput: IResolvable) {
-      cdkBuilder.connectionInput(connectionInput.let(IResolvable::unwrap))
+      cdkBuilder.connectionInput(connectionInput.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -212,7 +212,7 @@ public open class CfnConnection(
      * @param connectionInput The connection that you want to create. 
      */
     override fun connectionInput(connectionInput: ConnectionInputProperty) {
-      cdkBuilder.connectionInput(connectionInput.let(ConnectionInputProperty::unwrap))
+      cdkBuilder.connectionInput(connectionInput.let(ConnectionInputProperty.Companion::unwrap))
     }
 
     /**
@@ -620,7 +620,7 @@ public open class CfnConnection(
        * connection.
        */
       override fun physicalConnectionRequirements(physicalConnectionRequirements: IResolvable) {
-        cdkBuilder.physicalConnectionRequirements(physicalConnectionRequirements.let(IResolvable::unwrap))
+        cdkBuilder.physicalConnectionRequirements(physicalConnectionRequirements.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -630,7 +630,7 @@ public open class CfnConnection(
        */
       override
           fun physicalConnectionRequirements(physicalConnectionRequirements: PhysicalConnectionRequirementsProperty) {
-        cdkBuilder.physicalConnectionRequirements(physicalConnectionRequirements.let(PhysicalConnectionRequirementsProperty::unwrap))
+        cdkBuilder.physicalConnectionRequirements(physicalConnectionRequirements.let(PhysicalConnectionRequirementsProperty.Companion::unwrap))
       }
 
       /**

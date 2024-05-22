@@ -60,8 +60,8 @@ public open class CfnConnectPeer(
     id: String,
     props: CfnConnectPeerProps,
   ) :
-      this(software.amazon.awscdk.services.networkmanager.CfnConnectPeer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConnectPeerProps::unwrap))
+      this(software.amazon.awscdk.services.networkmanager.CfnConnectPeer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConnectPeerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -143,14 +143,14 @@ public open class CfnConnectPeer(
    * Describes the BGP options.
    */
   public open fun bgpOptions(`value`: IResolvable) {
-    unwrap(this).setBgpOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBgpOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Describes the BGP options.
    */
   public open fun bgpOptions(`value`: BgpOptionsProperty) {
-    unwrap(this).setBgpOptions(`value`.let(BgpOptionsProperty::unwrap))
+    unwrap(this).setBgpOptions(`value`.let(BgpOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -210,7 +210,7 @@ public open class CfnConnectPeer(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -252,7 +252,7 @@ public open class CfnConnectPeer(
    * The list of key-value tags associated with the Connect peer.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -370,7 +370,7 @@ public open class CfnConnectPeer(
      * @param bgpOptions Describes the BGP options. 
      */
     override fun bgpOptions(bgpOptions: IResolvable) {
-      cdkBuilder.bgpOptions(bgpOptions.let(IResolvable::unwrap))
+      cdkBuilder.bgpOptions(bgpOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -380,7 +380,7 @@ public open class CfnConnectPeer(
      * @param bgpOptions Describes the BGP options. 
      */
     override fun bgpOptions(bgpOptions: BgpOptionsProperty) {
-      cdkBuilder.bgpOptions(bgpOptions.let(BgpOptionsProperty::unwrap))
+      cdkBuilder.bgpOptions(bgpOptions.let(BgpOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -460,7 +460,7 @@ public open class CfnConnectPeer(
      * @param tags The list of key-value tags associated with the Connect peer. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -860,7 +860,7 @@ public open class CfnConnectPeer(
        * @param bgpConfigurations The Connect peer BGP configurations.
        */
       override fun bgpConfigurations(bgpConfigurations: IResolvable) {
-        cdkBuilder.bgpConfigurations(bgpConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.bgpConfigurations(bgpConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**

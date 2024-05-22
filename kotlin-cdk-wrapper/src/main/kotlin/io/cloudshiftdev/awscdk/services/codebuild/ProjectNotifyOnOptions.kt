@@ -95,7 +95,7 @@ public interface ProjectNotifyOnOptions : NotificationRuleOptions {
      * the service for the resource for which the notification is created.
      */
     override fun detailType(detailType: DetailType) {
-      cdkBuilder.detailType(detailType.let(DetailType::unwrap))
+      cdkBuilder.detailType(detailType.let(DetailType.Companion::unwrap))
     }
 
     /**
@@ -113,7 +113,7 @@ public interface ProjectNotifyOnOptions : NotificationRuleOptions {
      * Console User Guide.
      */
     override fun events(events: List<ProjectNotificationEvents>) {
-      cdkBuilder.events(events.map(ProjectNotificationEvents::unwrap))
+      cdkBuilder.events(events.map(ProjectNotificationEvents.Companion::unwrap))
     }
 
     /**

@@ -62,8 +62,8 @@ public open class CfnLoadBalancer(
     id: String,
     props: CfnLoadBalancerProps,
   ) :
-      this(software.amazon.awscdk.services.lightsail.CfnLoadBalancer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLoadBalancerProps::unwrap))
+      this(software.amazon.awscdk.services.lightsail.CfnLoadBalancer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLoadBalancerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -115,7 +115,7 @@ public open class CfnLoadBalancer(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -170,7 +170,7 @@ public open class CfnLoadBalancer(
    * A Boolean value indicating whether session stickiness is enabled.
    */
   public open fun sessionStickinessEnabled(`value`: IResolvable) {
-    unwrap(this).setSessionStickinessEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSessionStickinessEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -203,7 +203,7 @@ public open class CfnLoadBalancer(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -468,7 +468,7 @@ public open class CfnLoadBalancer(
      * enabled. 
      */
     override fun sessionStickinessEnabled(sessionStickinessEnabled: IResolvable) {
-      cdkBuilder.sessionStickinessEnabled(sessionStickinessEnabled.let(IResolvable::unwrap))
+      cdkBuilder.sessionStickinessEnabled(sessionStickinessEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -502,7 +502,7 @@ public open class CfnLoadBalancer(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

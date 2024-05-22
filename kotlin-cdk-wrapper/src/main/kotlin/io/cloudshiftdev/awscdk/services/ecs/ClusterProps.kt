@@ -178,7 +178,7 @@ public interface ClusterProps {
      * @param capacity The ec2 capacity to add to the cluster.
      */
     override fun capacity(capacity: AddCapacityOptions) {
-      cdkBuilder.capacity(capacity.let(AddCapacityOptions::unwrap))
+      cdkBuilder.capacity(capacity.let(AddCapacityOptions.Companion::unwrap))
     }
 
     /**
@@ -208,7 +208,7 @@ public interface ClusterProps {
      * @param defaultCloudMapNamespace The service discovery namespace created in this cluster.
      */
     override fun defaultCloudMapNamespace(defaultCloudMapNamespace: CloudMapNamespaceOptions) {
-      cdkBuilder.defaultCloudMapNamespace(defaultCloudMapNamespace.let(CloudMapNamespaceOptions::unwrap))
+      cdkBuilder.defaultCloudMapNamespace(defaultCloudMapNamespace.let(CloudMapNamespaceOptions.Companion::unwrap))
     }
 
     /**
@@ -232,7 +232,7 @@ public interface ClusterProps {
      */
     override
         fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfiguration) {
-      cdkBuilder.executeCommandConfiguration(executeCommandConfiguration.let(ExecuteCommandConfiguration::unwrap))
+      cdkBuilder.executeCommandConfiguration(executeCommandConfiguration.let(ExecuteCommandConfiguration.Companion::unwrap))
     }
 
     /**
@@ -248,7 +248,7 @@ public interface ClusterProps {
      * @param vpc The VPC where your ECS instances will be running or your ENIs will be deployed.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.ClusterProps = cdkBuilder.build()

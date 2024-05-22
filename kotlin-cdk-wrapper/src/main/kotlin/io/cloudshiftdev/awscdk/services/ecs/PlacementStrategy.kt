@@ -55,7 +55,7 @@ public open class PlacementStrategy(
 
   public companion object {
     public fun packedBy(resource: BinPackResource): PlacementStrategy =
-        software.amazon.awscdk.services.ecs.PlacementStrategy.packedBy(resource.let(BinPackResource::unwrap)).let(PlacementStrategy::wrap)
+        software.amazon.awscdk.services.ecs.PlacementStrategy.packedBy(resource.let(BinPackResource.Companion::unwrap)).let(PlacementStrategy::wrap)
 
     public fun packedByCpu(): PlacementStrategy =
         software.amazon.awscdk.services.ecs.PlacementStrategy.packedByCpu().let(PlacementStrategy::wrap)

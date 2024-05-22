@@ -88,7 +88,7 @@ public interface CfnIPSetProps {
      * CIDR notation) that web requests originate from.
      */
     override fun ipSetDescriptors(ipSetDescriptors: IResolvable) {
-      cdkBuilder.ipSetDescriptors(ipSetDescriptors.let(IResolvable::unwrap))
+      cdkBuilder.ipSetDescriptors(ipSetDescriptors.let(IResolvable.Companion::unwrap))
     }
 
     /**

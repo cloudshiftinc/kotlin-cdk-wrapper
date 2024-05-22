@@ -48,8 +48,8 @@ public open class LustreFileSystem(
     id: String,
     props: LustreFileSystemProps,
   ) :
-      this(software.amazon.awscdk.services.fsx.LustreFileSystem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(LustreFileSystemProps::unwrap))
+      this(software.amazon.awscdk.services.fsx.LustreFileSystem(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(LustreFileSystemProps.Companion::unwrap))
   )
 
   public constructor(
@@ -195,7 +195,7 @@ public open class LustreFileSystem(
      * @param kmsKey The KMS key used for encryption to protect your data at rest. 
      */
     override fun kmsKey(kmsKey: IKey) {
-      cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -204,7 +204,7 @@ public open class LustreFileSystem(
      * @param lustreConfiguration Additional configuration for FSx specific to Lustre. 
      */
     override fun lustreConfiguration(lustreConfiguration: LustreConfiguration) {
-      cdkBuilder.lustreConfiguration(lustreConfiguration.let(LustreConfiguration::unwrap))
+      cdkBuilder.lustreConfiguration(lustreConfiguration.let(LustreConfiguration.Companion::unwrap))
     }
 
     /**
@@ -225,7 +225,7 @@ public open class LustreFileSystem(
      * @param removalPolicy Policy to apply when the file system is removed from the stack. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -236,7 +236,7 @@ public open class LustreFileSystem(
      * @param securityGroup Security Group to assign to this file system. 
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -260,7 +260,7 @@ public open class LustreFileSystem(
      * @param vpc The VPC to launch the file system in. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -269,7 +269,7 @@ public open class LustreFileSystem(
      * @param vpcSubnet The subnet that the file system will be accessible from. 
      */
     override fun vpcSubnet(vpcSubnet: ISubnet) {
-      cdkBuilder.vpcSubnet(vpcSubnet.let(ISubnet::unwrap))
+      cdkBuilder.vpcSubnet(vpcSubnet.let(ISubnet.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.fsx.LustreFileSystem = cdkBuilder.build()
@@ -281,8 +281,8 @@ public open class LustreFileSystem(
       id: String,
       attrs: FileSystemAttributes,
     ): IFileSystem =
-        software.amazon.awscdk.services.fsx.LustreFileSystem.fromLustreFileSystemAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(FileSystemAttributes::unwrap)).let(IFileSystem::wrap)
+        software.amazon.awscdk.services.fsx.LustreFileSystem.fromLustreFileSystemAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(FileSystemAttributes.Companion::unwrap)).let(IFileSystem::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cebd825229cf3b382afac49973d6ddd64b711e5f0ef72f664a1a0aaf4ef0bd42")

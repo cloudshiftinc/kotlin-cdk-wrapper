@@ -29,7 +29,7 @@ public open class QueueHook(
   cdkObject: software.amazon.awscdk.services.autoscaling.hooktargets.QueueHook,
 ) : CdkObject(cdkObject), ILifecycleHookTarget {
   public constructor(queue: IQueue) :
-      this(software.amazon.awscdk.services.autoscaling.hooktargets.QueueHook(queue.let(IQueue::unwrap))
+      this(software.amazon.awscdk.services.autoscaling.hooktargets.QueueHook(queue.let(IQueue.Companion::unwrap))
   )
 
   /**
@@ -43,8 +43,8 @@ public open class QueueHook(
    * @param options 
    */
   public override fun bind(scope: Construct, options: BindHookTargetOptions):
-      LifecycleHookTargetConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      options.let(BindHookTargetOptions::unwrap)).let(LifecycleHookTargetConfig::wrap)
+      LifecycleHookTargetConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      options.let(BindHookTargetOptions.Companion::unwrap)).let(LifecycleHookTargetConfig::wrap)
 
   /**
    * If an `IRole` is found in `options`, grant it access to send messages.

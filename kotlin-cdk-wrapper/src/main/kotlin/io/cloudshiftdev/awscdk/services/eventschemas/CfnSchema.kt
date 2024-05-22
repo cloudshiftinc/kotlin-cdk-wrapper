@@ -49,8 +49,8 @@ public open class CfnSchema(
     id: String,
     props: CfnSchemaProps,
   ) :
-      this(software.amazon.awscdk.services.eventschemas.CfnSchema(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSchemaProps::unwrap))
+      this(software.amazon.awscdk.services.eventschemas.CfnSchema(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSchemaProps.Companion::unwrap))
   )
 
   public constructor(
@@ -115,7 +115,7 @@ public open class CfnSchema(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -157,7 +157,7 @@ public open class CfnSchema(
    * Tags associated with the schema.
    */
   public open fun tagsRaw(`value`: List<TagsEntryProperty>) {
-    unwrap(this).setTagsRaw(`value`.map(TagsEntryProperty::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(TagsEntryProperty.Companion::unwrap))
   }
 
   /**
@@ -295,7 +295,7 @@ public open class CfnSchema(
      * @param tags Tags associated with the schema. 
      */
     override fun tags(tags: List<TagsEntryProperty>) {
-      cdkBuilder.tags(tags.map(TagsEntryProperty::unwrap))
+      cdkBuilder.tags(tags.map(TagsEntryProperty.Companion::unwrap))
     }
 
     /**

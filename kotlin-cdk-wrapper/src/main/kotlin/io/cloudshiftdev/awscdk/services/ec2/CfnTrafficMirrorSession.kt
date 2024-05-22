@@ -63,8 +63,8 @@ public open class CfnTrafficMirrorSession(
     id: String,
     props: CfnTrafficMirrorSessionProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnTrafficMirrorSession(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTrafficMirrorSessionProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnTrafficMirrorSession(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTrafficMirrorSessionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -97,7 +97,7 @@ public open class CfnTrafficMirrorSession(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -153,7 +153,7 @@ public open class CfnTrafficMirrorSession(
    * The tags to assign to a Traffic Mirror session.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -369,7 +369,7 @@ public open class CfnTrafficMirrorSession(
      * @param tags The tags to assign to a Traffic Mirror session. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

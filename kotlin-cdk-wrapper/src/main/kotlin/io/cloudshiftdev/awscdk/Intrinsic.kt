@@ -38,7 +38,7 @@ public open class Intrinsic(
   )
 
   public constructor(`value`: Any, options: IntrinsicProps) :
-      this(software.amazon.awscdk.Intrinsic(`value`, options.let(IntrinsicProps::unwrap))
+      this(software.amazon.awscdk.Intrinsic(`value`, options.let(IntrinsicProps.Companion::unwrap))
   )
 
   public constructor(`value`: Any, options: IntrinsicProps.Builder.() -> Unit) : this(`value`,
@@ -56,7 +56,7 @@ public open class Intrinsic(
    * @param _context 
    */
   public override fun resolve(context: IResolveContext): Any =
-      unwrap(this).resolve(context.let(IResolveContext::unwrap))
+      unwrap(this).resolve(context.let(IResolveContext.Companion::unwrap))
 
   /**
    * Turn this Token into JSON.
@@ -129,7 +129,7 @@ public open class Intrinsic(
      * @param typeHint Type that this token is expected to evaluate to. 
      */
     override fun typeHint(typeHint: ResolutionTypeHint) {
-      cdkBuilder.typeHint(typeHint.let(ResolutionTypeHint::unwrap))
+      cdkBuilder.typeHint(typeHint.let(ResolutionTypeHint.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.Intrinsic = cdkBuilder.build()

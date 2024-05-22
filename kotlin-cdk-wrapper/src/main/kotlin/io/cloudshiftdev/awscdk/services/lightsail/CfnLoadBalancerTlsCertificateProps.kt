@@ -201,7 +201,7 @@ public interface CfnLoadBalancerTlsCertificateProps {
      * enabled for the load balancer that the TLS certificate is attached to.
      */
     override fun httpsRedirectionEnabled(httpsRedirectionEnabled: IResolvable) {
-      cdkBuilder.httpsRedirectionEnabled(httpsRedirectionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.httpsRedirectionEnabled(httpsRedirectionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -217,7 +217,7 @@ public interface CfnLoadBalancerTlsCertificateProps {
      * Lightsail load balancer.
      */
     override fun isAttached(isAttached: IResolvable) {
-      cdkBuilder.isAttached(isAttached.let(IResolvable::unwrap))
+      cdkBuilder.isAttached(isAttached.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -71,8 +71,8 @@ public open class CfnInstanceAccessControlAttributeConfiguration(
     id: String,
     props: CfnInstanceAccessControlAttributeConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInstanceAccessControlAttributeConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.sso.CfnInstanceAccessControlAttributeConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInstanceAccessControlAttributeConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -93,7 +93,7 @@ public open class CfnInstanceAccessControlAttributeConfiguration(
    * instance.
    */
   public open fun accessControlAttributes(`value`: IResolvable) {
-    unwrap(this).setAccessControlAttributes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccessControlAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -117,7 +117,7 @@ public open class CfnInstanceAccessControlAttributeConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -138,7 +138,7 @@ public open class CfnInstanceAccessControlAttributeConfiguration(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun instanceAccessControlAttributeConfiguration(`value`: IResolvable) {
-    unwrap(this).setInstanceAccessControlAttributeConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInstanceAccessControlAttributeConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -150,7 +150,7 @@ public open class CfnInstanceAccessControlAttributeConfiguration(
   @Deprecated(message = "deprecated in CDK")
   public open
       fun instanceAccessControlAttributeConfiguration(`value`: InstanceAccessControlAttributeConfigurationProperty) {
-    unwrap(this).setInstanceAccessControlAttributeConfiguration(`value`.let(InstanceAccessControlAttributeConfigurationProperty::unwrap))
+    unwrap(this).setInstanceAccessControlAttributeConfiguration(`value`.let(InstanceAccessControlAttributeConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -293,7 +293,7 @@ public open class CfnInstanceAccessControlAttributeConfiguration(
      * specified IAM Identity Center instance. 
      */
     override fun accessControlAttributes(accessControlAttributes: IResolvable) {
-      cdkBuilder.accessControlAttributes(accessControlAttributes.let(IResolvable::unwrap))
+      cdkBuilder.accessControlAttributes(accessControlAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -334,7 +334,7 @@ public open class CfnInstanceAccessControlAttributeConfiguration(
     @Deprecated(message = "deprecated in CDK")
     override
         fun instanceAccessControlAttributeConfiguration(instanceAccessControlAttributeConfiguration: IResolvable) {
-      cdkBuilder.instanceAccessControlAttributeConfiguration(instanceAccessControlAttributeConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.instanceAccessControlAttributeConfiguration(instanceAccessControlAttributeConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -352,7 +352,7 @@ public open class CfnInstanceAccessControlAttributeConfiguration(
     @Deprecated(message = "deprecated in CDK")
     override
         fun instanceAccessControlAttributeConfiguration(instanceAccessControlAttributeConfiguration: InstanceAccessControlAttributeConfigurationProperty) {
-      cdkBuilder.instanceAccessControlAttributeConfiguration(instanceAccessControlAttributeConfiguration.let(InstanceAccessControlAttributeConfigurationProperty::unwrap))
+      cdkBuilder.instanceAccessControlAttributeConfiguration(instanceAccessControlAttributeConfiguration.let(InstanceAccessControlAttributeConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -510,14 +510,14 @@ public open class CfnInstanceAccessControlAttributeConfiguration(
        * @param value The value used for mapping a specified attribute to an identity source. 
        */
       override fun `value`(`value`: IResolvable) {
-        cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
+        cdkBuilder.`value`(`value`.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param value The value used for mapping a specified attribute to an identity source. 
        */
       override fun `value`(`value`: AccessControlAttributeValueProperty) {
-        cdkBuilder.`value`(`value`.let(AccessControlAttributeValueProperty::unwrap))
+        cdkBuilder.`value`(`value`.let(AccessControlAttributeValueProperty.Companion::unwrap))
       }
 
       /**
@@ -733,7 +733,7 @@ public open class CfnInstanceAccessControlAttributeConfiguration(
        * @param accessControlAttributes the value to be set. 
        */
       override fun accessControlAttributes(accessControlAttributes: IResolvable) {
-        cdkBuilder.accessControlAttributes(accessControlAttributes.let(IResolvable::unwrap))
+        cdkBuilder.accessControlAttributes(accessControlAttributes.let(IResolvable.Companion::unwrap))
       }
 
       /**

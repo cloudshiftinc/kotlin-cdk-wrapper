@@ -40,14 +40,14 @@ public abstract class Authorization(
   public companion object {
     public fun apiKey(apiKeyName: String, apiKeyValue: SecretValue): Authorization =
         software.amazon.awscdk.services.events.Authorization.apiKey(apiKeyName,
-        apiKeyValue.let(SecretValue::unwrap)).let(Authorization::wrap)
+        apiKeyValue.let(SecretValue.Companion::unwrap)).let(Authorization::wrap)
 
     public fun basic(username: String, password: SecretValue): Authorization =
         software.amazon.awscdk.services.events.Authorization.basic(username,
-        password.let(SecretValue::unwrap)).let(Authorization::wrap)
+        password.let(SecretValue.Companion::unwrap)).let(Authorization::wrap)
 
     public fun oauth(props: OAuthAuthorizationProps): Authorization =
-        software.amazon.awscdk.services.events.Authorization.oauth(props.let(OAuthAuthorizationProps::unwrap)).let(Authorization::wrap)
+        software.amazon.awscdk.services.events.Authorization.oauth(props.let(OAuthAuthorizationProps.Companion::unwrap)).let(Authorization::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("44cf2a39827872cbac58a8e44ba686c1673ce7401835019919d576c9e95ec701")

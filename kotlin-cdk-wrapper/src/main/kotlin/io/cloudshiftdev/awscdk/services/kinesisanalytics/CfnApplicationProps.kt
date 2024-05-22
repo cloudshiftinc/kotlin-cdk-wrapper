@@ -274,7 +274,7 @@ public interface CfnApplicationProps {
      * elements in the streaming source to record columns in the in-app stream.
      */
     override fun inputs(inputs: IResolvable) {
-      cdkBuilder.inputs(inputs.let(IResolvable::unwrap))
+      cdkBuilder.inputs(inputs.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -122,8 +122,8 @@ public open class CfnEvaluationForm(
     id: String,
     props: CfnEvaluationFormProps,
   ) :
-      this(software.amazon.awscdk.services.connect.CfnEvaluationForm(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEvaluationFormProps::unwrap))
+      this(software.amazon.awscdk.services.connect.CfnEvaluationForm(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEvaluationFormProps.Companion::unwrap))
   )
 
   public constructor(
@@ -156,7 +156,7 @@ public open class CfnEvaluationForm(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -180,7 +180,7 @@ public open class CfnEvaluationForm(
    * Items that are part of the evaluation form.
    */
   public open fun items(`value`: IResolvable) {
-    unwrap(this).setItems(`value`.let(IResolvable::unwrap))
+    unwrap(this).setItems(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -204,14 +204,14 @@ public open class CfnEvaluationForm(
    * A scoring strategy of the evaluation form.
    */
   public open fun scoringStrategy(`value`: IResolvable) {
-    unwrap(this).setScoringStrategy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setScoringStrategy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A scoring strategy of the evaluation form.
    */
   public open fun scoringStrategy(`value`: ScoringStrategyProperty) {
-    unwrap(this).setScoringStrategy(`value`.let(ScoringStrategyProperty::unwrap))
+    unwrap(this).setScoringStrategy(`value`.let(ScoringStrategyProperty.Companion::unwrap))
   }
 
   /**
@@ -249,7 +249,7 @@ public open class CfnEvaluationForm(
    * The tags used to organize, track, or control access for this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -447,7 +447,7 @@ public open class CfnEvaluationForm(
      * @param items Items that are part of the evaluation form. 
      */
     override fun items(items: IResolvable) {
-      cdkBuilder.items(items.let(IResolvable::unwrap))
+      cdkBuilder.items(items.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -489,7 +489,7 @@ public open class CfnEvaluationForm(
      * @param scoringStrategy A scoring strategy of the evaluation form. 
      */
     override fun scoringStrategy(scoringStrategy: IResolvable) {
-      cdkBuilder.scoringStrategy(scoringStrategy.let(IResolvable::unwrap))
+      cdkBuilder.scoringStrategy(scoringStrategy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -499,7 +499,7 @@ public open class CfnEvaluationForm(
      * @param scoringStrategy A scoring strategy of the evaluation form. 
      */
     override fun scoringStrategy(scoringStrategy: ScoringStrategyProperty) {
-      cdkBuilder.scoringStrategy(scoringStrategy.let(ScoringStrategyProperty::unwrap))
+      cdkBuilder.scoringStrategy(scoringStrategy.let(ScoringStrategyProperty.Companion::unwrap))
     }
 
     /**
@@ -536,7 +536,7 @@ public open class CfnEvaluationForm(
      * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -704,14 +704,14 @@ public open class CfnEvaluationForm(
        * @param section A subsection or inner section of an item. 
        */
       override fun section(section: IResolvable) {
-        cdkBuilder.section(section.let(IResolvable::unwrap))
+        cdkBuilder.section(section.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param section A subsection or inner section of an item. 
        */
       override fun section(section: EvaluationFormSectionProperty) {
-        cdkBuilder.section(section.let(EvaluationFormSectionProperty::unwrap))
+        cdkBuilder.section(section.let(EvaluationFormSectionProperty.Companion::unwrap))
       }
 
       /**
@@ -898,14 +898,14 @@ public open class CfnEvaluationForm(
        * @param question The information of the question.
        */
       override fun question(question: IResolvable) {
-        cdkBuilder.question(question.let(IResolvable::unwrap))
+        cdkBuilder.question(question.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param question The information of the question.
        */
       override fun question(question: EvaluationFormQuestionProperty) {
-        cdkBuilder.question(question.let(EvaluationFormQuestionProperty::unwrap))
+        cdkBuilder.question(question.let(EvaluationFormQuestionProperty.Companion::unwrap))
       }
 
       /**
@@ -920,14 +920,14 @@ public open class CfnEvaluationForm(
        * @param section The information of the section.
        */
       override fun section(section: IResolvable) {
-        cdkBuilder.section(section.let(IResolvable::unwrap))
+        cdkBuilder.section(section.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param section The information of the section.
        */
       override fun section(section: EvaluationFormSectionProperty) {
-        cdkBuilder.section(section.let(EvaluationFormSectionProperty::unwrap))
+        cdkBuilder.section(section.let(EvaluationFormSectionProperty.Companion::unwrap))
       }
 
       /**
@@ -1040,14 +1040,14 @@ public open class CfnEvaluationForm(
        * @param propertyValue The property value of the automation. 
        */
       override fun propertyValue(propertyValue: IResolvable) {
-        cdkBuilder.propertyValue(propertyValue.let(IResolvable::unwrap))
+        cdkBuilder.propertyValue(propertyValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param propertyValue The property value of the automation. 
        */
       override fun propertyValue(propertyValue: NumericQuestionPropertyValueAutomationProperty) {
-        cdkBuilder.propertyValue(propertyValue.let(NumericQuestionPropertyValueAutomationProperty::unwrap))
+        cdkBuilder.propertyValue(propertyValue.let(NumericQuestionPropertyValueAutomationProperty.Companion::unwrap))
       }
 
       /**
@@ -1205,7 +1205,7 @@ public open class CfnEvaluationForm(
        * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
        */
       override fun automaticFail(automaticFail: IResolvable) {
-        cdkBuilder.automaticFail(automaticFail.let(IResolvable::unwrap))
+        cdkBuilder.automaticFail(automaticFail.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1413,14 +1413,14 @@ public open class CfnEvaluationForm(
        * @param automation The automation properties of the numeric question.
        */
       override fun automation(automation: IResolvable) {
-        cdkBuilder.automation(automation.let(IResolvable::unwrap))
+        cdkBuilder.automation(automation.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param automation The automation properties of the numeric question.
        */
       override fun automation(automation: EvaluationFormNumericQuestionAutomationProperty) {
-        cdkBuilder.automation(automation.let(EvaluationFormNumericQuestionAutomationProperty::unwrap))
+        cdkBuilder.automation(automation.let(EvaluationFormNumericQuestionAutomationProperty.Companion::unwrap))
       }
 
       /**
@@ -1450,7 +1450,7 @@ public open class CfnEvaluationForm(
        * @param options The scoring options of the numeric question.
        */
       override fun options(options: IResolvable) {
-        cdkBuilder.options(options.let(IResolvable::unwrap))
+        cdkBuilder.options(options.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1745,7 +1745,7 @@ public open class CfnEvaluationForm(
        * @param notApplicableEnabled The flag to enable not applicable answers to the question.
        */
       override fun notApplicableEnabled(notApplicableEnabled: IResolvable) {
-        cdkBuilder.notApplicableEnabled(notApplicableEnabled.let(IResolvable::unwrap))
+        cdkBuilder.notApplicableEnabled(notApplicableEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1761,7 +1761,7 @@ public open class CfnEvaluationForm(
        * Text questions do not have to define question type properties.
        */
       override fun questionTypeProperties(questionTypeProperties: IResolvable) {
-        cdkBuilder.questionTypeProperties(questionTypeProperties.let(IResolvable::unwrap))
+        cdkBuilder.questionTypeProperties(questionTypeProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1770,7 +1770,7 @@ public open class CfnEvaluationForm(
        */
       override
           fun questionTypeProperties(questionTypeProperties: EvaluationFormQuestionTypePropertiesProperty) {
-        cdkBuilder.questionTypeProperties(questionTypeProperties.let(EvaluationFormQuestionTypePropertiesProperty::unwrap))
+        cdkBuilder.questionTypeProperties(questionTypeProperties.let(EvaluationFormQuestionTypePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -2025,14 +2025,14 @@ public open class CfnEvaluationForm(
        * @param numeric The properties of the numeric question.
        */
       override fun numeric(numeric: IResolvable) {
-        cdkBuilder.numeric(numeric.let(IResolvable::unwrap))
+        cdkBuilder.numeric(numeric.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param numeric The properties of the numeric question.
        */
       override fun numeric(numeric: EvaluationFormNumericQuestionPropertiesProperty) {
-        cdkBuilder.numeric(numeric.let(EvaluationFormNumericQuestionPropertiesProperty::unwrap))
+        cdkBuilder.numeric(numeric.let(EvaluationFormNumericQuestionPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -2048,7 +2048,7 @@ public open class CfnEvaluationForm(
        * @param singleSelect The properties of the numeric question.
        */
       override fun singleSelect(singleSelect: IResolvable) {
-        cdkBuilder.singleSelect(singleSelect.let(IResolvable::unwrap))
+        cdkBuilder.singleSelect(singleSelect.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2056,7 +2056,7 @@ public open class CfnEvaluationForm(
        */
       override
           fun singleSelect(singleSelect: EvaluationFormSingleSelectQuestionPropertiesProperty) {
-        cdkBuilder.singleSelect(singleSelect.let(EvaluationFormSingleSelectQuestionPropertiesProperty::unwrap))
+        cdkBuilder.singleSelect(singleSelect.let(EvaluationFormSingleSelectQuestionPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -2302,7 +2302,7 @@ public open class CfnEvaluationForm(
        * *Minimum* : 1
        */
       override fun items(items: IResolvable) {
-        cdkBuilder.items(items.let(IResolvable::unwrap))
+        cdkBuilder.items(items.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2486,7 +2486,7 @@ public open class CfnEvaluationForm(
        * question. 
        */
       override fun ruleCategory(ruleCategory: IResolvable) {
-        cdkBuilder.ruleCategory(ruleCategory.let(IResolvable::unwrap))
+        cdkBuilder.ruleCategory(ruleCategory.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2494,7 +2494,7 @@ public open class CfnEvaluationForm(
        * question. 
        */
       override fun ruleCategory(ruleCategory: SingleSelectQuestionRuleCategoryAutomationProperty) {
-        cdkBuilder.ruleCategory(ruleCategory.let(SingleSelectQuestionRuleCategoryAutomationProperty::unwrap))
+        cdkBuilder.ruleCategory(ruleCategory.let(SingleSelectQuestionRuleCategoryAutomationProperty.Companion::unwrap))
       }
 
       /**
@@ -2653,7 +2653,7 @@ public open class CfnEvaluationForm(
        * *Maximum* : 20
        */
       override fun options(options: IResolvable) {
-        cdkBuilder.options(options.let(IResolvable::unwrap))
+        cdkBuilder.options(options.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2842,7 +2842,7 @@ public open class CfnEvaluationForm(
        * If an automatic fail answer is provided, the overall evaluation gets a score of 0.
        */
       override fun automaticFail(automaticFail: IResolvable) {
-        cdkBuilder.automaticFail(automaticFail.let(IResolvable::unwrap))
+        cdkBuilder.automaticFail(automaticFail.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3067,14 +3067,14 @@ public open class CfnEvaluationForm(
        * @param automation The display mode of the single select question.
        */
       override fun automation(automation: IResolvable) {
-        cdkBuilder.automation(automation.let(IResolvable::unwrap))
+        cdkBuilder.automation(automation.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param automation The display mode of the single select question.
        */
       override fun automation(automation: EvaluationFormSingleSelectQuestionAutomationProperty) {
-        cdkBuilder.automation(automation.let(EvaluationFormSingleSelectQuestionAutomationProperty::unwrap))
+        cdkBuilder.automation(automation.let(EvaluationFormSingleSelectQuestionAutomationProperty.Companion::unwrap))
       }
 
       /**
@@ -3101,7 +3101,7 @@ public open class CfnEvaluationForm(
        * *Maximum* : 256
        */
       override fun options(options: IResolvable) {
-        cdkBuilder.options(options.let(IResolvable::unwrap))
+        cdkBuilder.options(options.let(IResolvable.Companion::unwrap))
       }
 
       /**

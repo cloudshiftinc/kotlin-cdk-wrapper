@@ -50,8 +50,8 @@ public open class CfnIPAMResourceDiscoveryAssociation(
     id: String,
     props: CfnIPAMResourceDiscoveryAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnIPAMResourceDiscoveryAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnIPAMResourceDiscoveryAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnIPAMResourceDiscoveryAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -132,7 +132,7 @@ public open class CfnIPAMResourceDiscoveryAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -174,7 +174,7 @@ public open class CfnIPAMResourceDiscoveryAssociation(
    * A tag is a label that you assign to an AWS resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -266,7 +266,7 @@ public open class CfnIPAMResourceDiscoveryAssociation(
      * @param tags A tag is a label that you assign to an AWS resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

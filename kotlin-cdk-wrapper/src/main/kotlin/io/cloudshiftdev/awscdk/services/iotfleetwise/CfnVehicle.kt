@@ -64,8 +64,8 @@ public open class CfnVehicle(
     id: String,
     props: CfnVehicleProps,
   ) :
-      this(software.amazon.awscdk.services.iotfleetwise.CfnVehicle(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVehicleProps::unwrap))
+      this(software.amazon.awscdk.services.iotfleetwise.CfnVehicle(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVehicleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -114,7 +114,7 @@ public open class CfnVehicle(
    * (Optional) Static information about a vehicle in a key-value pair.
    */
   public open fun attributes(`value`: IResolvable) {
-    unwrap(this).setAttributes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -142,7 +142,7 @@ public open class CfnVehicle(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -186,7 +186,7 @@ public open class CfnVehicle(
    * (Optional) Metadata which can be used to manage the vehicle.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -301,7 +301,7 @@ public open class CfnVehicle(
      * @param attributes (Optional) Static information about a vehicle in a key-value pair. 
      */
     override fun attributes(attributes: IResolvable) {
-      cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+      cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -356,7 +356,7 @@ public open class CfnVehicle(
      * @param tags (Optional) Metadata which can be used to manage the vehicle. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

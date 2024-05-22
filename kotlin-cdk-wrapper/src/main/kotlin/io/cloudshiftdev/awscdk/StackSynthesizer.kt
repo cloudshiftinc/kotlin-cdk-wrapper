@@ -32,7 +32,7 @@ public abstract class StackSynthesizer(
    * @param asset 
    */
   public override fun addDockerImageAsset(asset: DockerImageAssetSource): DockerImageAssetLocation =
-      unwrap(this).addDockerImageAsset(asset.let(DockerImageAssetSource::unwrap)).let(DockerImageAssetLocation::wrap)
+      unwrap(this).addDockerImageAsset(asset.let(DockerImageAssetSource.Companion::unwrap)).let(DockerImageAssetLocation::wrap)
 
   /**
    * Register a Docker Image Asset.
@@ -66,7 +66,7 @@ public abstract class StackSynthesizer(
    * @param asset 
    */
   public override fun addFileAsset(asset: FileAssetSource): FileAssetLocation =
-      unwrap(this).addFileAsset(asset.let(FileAssetSource::unwrap)).let(FileAssetLocation::wrap)
+      unwrap(this).addFileAsset(asset.let(FileAssetSource.Companion::unwrap)).let(FileAssetLocation::wrap)
 
   /**
    * Register a File Asset.
@@ -94,7 +94,7 @@ public abstract class StackSynthesizer(
    * @param stack 
    */
   public override fun bind(stack: Stack) {
-    unwrap(this).bind(stack.let(Stack::unwrap))
+    unwrap(this).bind(stack.let(Stack.Companion::unwrap))
   }
 
   /**
@@ -113,7 +113,7 @@ public abstract class StackSynthesizer(
    * @param session 
    */
   public override fun synthesize(session: ISynthesisSession) {
-    unwrap(this).synthesize(session.let(ISynthesisSession::unwrap))
+    unwrap(this).synthesize(session.let(ISynthesisSession.Companion::unwrap))
   }
 
   private class Wrapper(

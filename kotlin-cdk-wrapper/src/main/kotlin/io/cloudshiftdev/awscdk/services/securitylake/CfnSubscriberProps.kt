@@ -253,7 +253,7 @@ public interface CfnSubscriberProps {
      * Guide](https://docs.aws.amazon.com//security-lake/latest/userguide/source-management.html) .
      */
     override fun sources(sources: IResolvable) {
-      cdkBuilder.sources(sources.let(IResolvable::unwrap))
+      cdkBuilder.sources(sources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -287,14 +287,14 @@ public interface CfnSubscriberProps {
      * @param subscriberIdentity The AWS identity used to access your data. 
      */
     override fun subscriberIdentity(subscriberIdentity: IResolvable) {
-      cdkBuilder.subscriberIdentity(subscriberIdentity.let(IResolvable::unwrap))
+      cdkBuilder.subscriberIdentity(subscriberIdentity.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param subscriberIdentity The AWS identity used to access your data. 
      */
     override fun subscriberIdentity(subscriberIdentity: CfnSubscriber.SubscriberIdentityProperty) {
-      cdkBuilder.subscriberIdentity(subscriberIdentity.let(CfnSubscriber.SubscriberIdentityProperty::unwrap))
+      cdkBuilder.subscriberIdentity(subscriberIdentity.let(CfnSubscriber.SubscriberIdentityProperty.Companion::unwrap))
     }
 
     /**
@@ -319,7 +319,7 @@ public interface CfnSubscriberProps {
      * but it can be an empty string.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -45,7 +45,7 @@ public interface ITableV2 : ITable {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -76,7 +76,7 @@ public interface ITableV2 : ITable {
      * ...). 
      */
     override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-        unwrap(this).grant(grantee.let(IGrantable::unwrap),
+        unwrap(this).grant(grantee.let(IGrantable.Companion::unwrap),
         *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
     /**
@@ -88,7 +88,7 @@ public interface ITableV2 : ITable {
      * @param grantee The principal to grant access to. 
      */
     override fun grantFullAccess(grantee: IGrantable): Grant =
-        unwrap(this).grantFullAccess(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantFullAccess(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Permits an IAM principal all data read operations from this table: BatchGetItem, GetRecords,
@@ -100,7 +100,7 @@ public interface ITableV2 : ITable {
      * @param grantee The principal to grant access to. 
      */
     override fun grantReadData(grantee: IGrantable): Grant =
-        unwrap(this).grantReadData(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantReadData(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Permits an IAM principal to all data read/write operations to this table.
@@ -114,7 +114,7 @@ public interface ITableV2 : ITable {
      * @param grantee The principal to grant access to. 
      */
     override fun grantReadWriteData(grantee: IGrantable): Grant =
-        unwrap(this).grantReadWriteData(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantReadWriteData(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Adds an IAM policy statement associated with this table's stream to an IAM principal's
@@ -128,7 +128,7 @@ public interface ITableV2 : ITable {
      * "dynamodb:GetRecords", ...). 
      */
     override fun grantStream(grantee: IGrantable, vararg actions: String): Grant =
-        unwrap(this).grantStream(grantee.let(IGrantable::unwrap),
+        unwrap(this).grantStream(grantee.let(IGrantable.Companion::unwrap),
         *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
     /**
@@ -141,7 +141,7 @@ public interface ITableV2 : ITable {
      * @param grantee The principal to grant access to. 
      */
     override fun grantStreamRead(grantee: IGrantable): Grant =
-        unwrap(this).grantStreamRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantStreamRead(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Permits an IAM Principal to list streams attached to current dynamodb table.
@@ -149,7 +149,7 @@ public interface ITableV2 : ITable {
      * @param grantee The principal (no-op if undefined). 
      */
     override fun grantTableListStreams(grantee: IGrantable): Grant =
-        unwrap(this).grantTableListStreams(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantTableListStreams(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Permits an IAM principal all data write operations to this table: BatchWriteItem, PutItem,
@@ -161,7 +161,7 @@ public interface ITableV2 : ITable {
      * @param grantee The principal to grant access to. 
      */
     override fun grantWriteData(grantee: IGrantable): Grant =
-        unwrap(this).grantWriteData(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantWriteData(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Metric for the number of Errors executing all Lambdas.
@@ -179,7 +179,8 @@ public interface ITableV2 : ITable {
      * @param props
      */
     override fun metric(metricName: String, props: MetricOptions): Metric =
-        unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metric(metricName,
+        props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the number of Errors executing all Lambdas.
@@ -206,7 +207,7 @@ public interface ITableV2 : ITable {
      * @param props properties of a metric.
      */
     override fun metricConditionalCheckFailedRequests(props: MetricOptions): Metric =
-        unwrap(this).metricConditionalCheckFailedRequests(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricConditionalCheckFailedRequests(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the conditional check failed requests.
@@ -232,7 +233,7 @@ public interface ITableV2 : ITable {
      * @param props properties of a metric.
      */
     override fun metricConsumedReadCapacityUnits(props: MetricOptions): Metric =
-        unwrap(this).metricConsumedReadCapacityUnits(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricConsumedReadCapacityUnits(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the consumed read capacity units.
@@ -258,7 +259,7 @@ public interface ITableV2 : ITable {
      * @param props properties of a metric.
      */
     override fun metricConsumedWriteCapacityUnits(props: MetricOptions): Metric =
-        unwrap(this).metricConsumedWriteCapacityUnits(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricConsumedWriteCapacityUnits(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the consumed write capacity units.
@@ -284,7 +285,7 @@ public interface ITableV2 : ITable {
      * @param props properties of a metric.
      */
     override fun metricSuccessfulRequestLatency(props: MetricOptions): Metric =
-        unwrap(this).metricSuccessfulRequestLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricSuccessfulRequestLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the successful request latency.
@@ -311,7 +312,7 @@ public interface ITableV2 : ITable {
      */
     override fun metricSystemErrorsForOperations(props: SystemErrorsForOperationsMetricOptions):
         IMetric =
-        unwrap(this).metricSystemErrorsForOperations(props.let(SystemErrorsForOperationsMetricOptions::unwrap)).let(IMetric::wrap)
+        unwrap(this).metricSystemErrorsForOperations(props.let(SystemErrorsForOperationsMetricOptions.Companion::unwrap)).let(IMetric::wrap)
 
     /**
      * Metric for the system errors this table.
@@ -342,7 +343,7 @@ public interface ITableV2 : ITable {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun metricThrottledRequests(props: MetricOptions): Metric =
-        unwrap(this).metricThrottledRequests(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricThrottledRequests(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * (deprecated) Metric for throttled requests.
@@ -370,7 +371,7 @@ public interface ITableV2 : ITable {
      * @param props properties of a metric.
      */
     override fun metricThrottledRequestsForOperations(props: OperationsMetricOptions): IMetric =
-        unwrap(this).metricThrottledRequestsForOperations(props.let(OperationsMetricOptions::unwrap)).let(IMetric::wrap)
+        unwrap(this).metricThrottledRequestsForOperations(props.let(OperationsMetricOptions.Companion::unwrap)).let(IMetric::wrap)
 
     /**
      * Metric for throttled requests.
@@ -396,7 +397,7 @@ public interface ITableV2 : ITable {
      * @param props properties of a metric.
      */
     override fun metricUserErrors(props: MetricOptions): Metric =
-        unwrap(this).metricUserErrors(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricUserErrors(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the user errors.

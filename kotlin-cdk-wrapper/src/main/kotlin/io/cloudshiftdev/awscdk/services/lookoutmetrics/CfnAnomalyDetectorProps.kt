@@ -212,7 +212,7 @@ public interface CfnAnomalyDetectorProps {
      * detector. 
      */
     override fun anomalyDetectorConfig(anomalyDetectorConfig: IResolvable) {
-      cdkBuilder.anomalyDetectorConfig(anomalyDetectorConfig.let(IResolvable::unwrap))
+      cdkBuilder.anomalyDetectorConfig(anomalyDetectorConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -221,7 +221,7 @@ public interface CfnAnomalyDetectorProps {
      */
     override
         fun anomalyDetectorConfig(anomalyDetectorConfig: CfnAnomalyDetector.AnomalyDetectorConfigProperty) {
-      cdkBuilder.anomalyDetectorConfig(anomalyDetectorConfig.let(CfnAnomalyDetector.AnomalyDetectorConfigProperty::unwrap))
+      cdkBuilder.anomalyDetectorConfig(anomalyDetectorConfig.let(CfnAnomalyDetector.AnomalyDetectorConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -260,7 +260,7 @@ public interface CfnAnomalyDetectorProps {
      * @param metricSetList The detector's dataset. 
      */
     override fun metricSetList(metricSetList: IResolvable) {
-      cdkBuilder.metricSetList(metricSetList.let(IResolvable::unwrap))
+      cdkBuilder.metricSetList(metricSetList.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -568,7 +568,7 @@ public interface CfnJobProps {
      * output from running the job.
      */
     override fun dataCatalogOutputs(dataCatalogOutputs: IResolvable) {
-      cdkBuilder.dataCatalogOutputs(dataCatalogOutputs.let(IResolvable::unwrap))
+      cdkBuilder.dataCatalogOutputs(dataCatalogOutputs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -591,7 +591,7 @@ public interface CfnJobProps {
      * output destination for a DataBrew recipe job to write into.
      */
     override fun databaseOutputs(databaseOutputs: IResolvable) {
-      cdkBuilder.databaseOutputs(databaseOutputs.let(IResolvable::unwrap))
+      cdkBuilder.databaseOutputs(databaseOutputs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -642,7 +642,7 @@ public interface CfnJobProps {
      * CUSTOM_ROWS for the mode parameter and 20,000 for the size parameter.
      */
     override fun jobSample(jobSample: IResolvable) {
-      cdkBuilder.jobSample(jobSample.let(IResolvable::unwrap))
+      cdkBuilder.jobSample(jobSample.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -652,7 +652,7 @@ public interface CfnJobProps {
      * CUSTOM_ROWS for the mode parameter and 20,000 for the size parameter.
      */
     override fun jobSample(jobSample: CfnJob.JobSampleProperty) {
-      cdkBuilder.jobSample(jobSample.let(CfnJob.JobSampleProperty::unwrap))
+      cdkBuilder.jobSample(jobSample.let(CfnJob.JobSampleProperty.Companion::unwrap))
     }
 
     /**
@@ -699,14 +699,14 @@ public interface CfnJobProps {
      * @param outputLocation The location in Amazon S3 where the job writes its output.
      */
     override fun outputLocation(outputLocation: IResolvable) {
-      cdkBuilder.outputLocation(outputLocation.let(IResolvable::unwrap))
+      cdkBuilder.outputLocation(outputLocation.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param outputLocation The location in Amazon S3 where the job writes its output.
      */
     override fun outputLocation(outputLocation: CfnJob.OutputLocationProperty) {
-      cdkBuilder.outputLocation(outputLocation.let(CfnJob.OutputLocationProperty::unwrap))
+      cdkBuilder.outputLocation(outputLocation.let(CfnJob.OutputLocationProperty.Companion::unwrap))
     }
 
     /**
@@ -721,7 +721,7 @@ public interface CfnJobProps {
      * @param outputs One or more artifacts that represent output from running the job.
      */
     override fun outputs(outputs: IResolvable) {
-      cdkBuilder.outputs(outputs.let(IResolvable::unwrap))
+      cdkBuilder.outputs(outputs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -743,7 +743,7 @@ public interface CfnJobProps {
      * all supported columns.
      */
     override fun profileConfiguration(profileConfiguration: IResolvable) {
-      cdkBuilder.profileConfiguration(profileConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.profileConfiguration(profileConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -753,7 +753,7 @@ public interface CfnJobProps {
      * all supported columns.
      */
     override fun profileConfiguration(profileConfiguration: CfnJob.ProfileConfigurationProperty) {
-      cdkBuilder.profileConfiguration(profileConfiguration.let(CfnJob.ProfileConfigurationProperty::unwrap))
+      cdkBuilder.profileConfiguration(profileConfiguration.let(CfnJob.ProfileConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -779,14 +779,14 @@ public interface CfnJobProps {
      * @param recipe A series of data transformation steps that the job runs.
      */
     override fun recipe(recipe: IResolvable) {
-      cdkBuilder.recipe(recipe.let(IResolvable::unwrap))
+      cdkBuilder.recipe(recipe.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param recipe A series of data transformation steps that the job runs.
      */
     override fun recipe(recipe: CfnJob.RecipeProperty) {
-      cdkBuilder.recipe(recipe.let(CfnJob.RecipeProperty::unwrap))
+      cdkBuilder.recipe(recipe.let(CfnJob.RecipeProperty.Companion::unwrap))
     }
 
     /**
@@ -808,7 +808,7 @@ public interface CfnJobProps {
      * @param tags Metadata tags that have been applied to the job.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -839,7 +839,7 @@ public interface CfnJobProps {
      * profile job.
      */
     override fun validationConfigurations(validationConfigurations: IResolvable) {
-      cdkBuilder.validationConfigurations(validationConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.validationConfigurations(validationConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**

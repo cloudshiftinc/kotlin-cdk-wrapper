@@ -90,7 +90,7 @@ public interface IEventBus : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -104,7 +104,7 @@ public interface IEventBus : IResource {
      * @param props Properties of the archive. 
      */
     override fun archive(id: String, props: BaseArchiveProps): Archive = unwrap(this).archive(id,
-        props.let(BaseArchiveProps::unwrap)).let(Archive::wrap)
+        props.let(BaseArchiveProps.Companion::unwrap)).let(Archive::wrap)
 
     /**
      * Create an EventBridge archive to send events to.
@@ -160,7 +160,7 @@ public interface IEventBus : IResource {
      * @param grantee The principal (no-op if undefined). 
      */
     override fun grantPutEventsTo(grantee: IGrantable): Grant =
-        unwrap(this).grantPutEventsTo(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantPutEventsTo(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 

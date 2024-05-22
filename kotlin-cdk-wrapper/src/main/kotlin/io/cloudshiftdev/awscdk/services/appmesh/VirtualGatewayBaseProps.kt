@@ -112,7 +112,7 @@ public interface VirtualGatewayBaseProps {
      * @param accessLog Access Logging Configuration for the VirtualGateway.
      */
     override fun accessLog(accessLog: AccessLog) {
-      cdkBuilder.accessLog(accessLog.let(AccessLog::unwrap))
+      cdkBuilder.accessLog(accessLog.let(AccessLog.Companion::unwrap))
     }
 
     /**
@@ -120,7 +120,7 @@ public interface VirtualGatewayBaseProps {
      * Service.
      */
     override fun backendDefaults(backendDefaults: BackendDefaults) {
-      cdkBuilder.backendDefaults(backendDefaults.let(BackendDefaults::unwrap))
+      cdkBuilder.backendDefaults(backendDefaults.let(BackendDefaults.Companion::unwrap))
     }
 
     /**
@@ -137,7 +137,7 @@ public interface VirtualGatewayBaseProps {
      * Only one is supported.
      */
     override fun listeners(listeners: List<VirtualGatewayListener>) {
-      cdkBuilder.listeners(listeners.map(VirtualGatewayListener::unwrap))
+      cdkBuilder.listeners(listeners.map(VirtualGatewayListener.Companion::unwrap))
     }
 
     /**

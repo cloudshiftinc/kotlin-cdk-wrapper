@@ -131,8 +131,8 @@ public open class CfnFleet(
     id: String,
     props: CfnFleetProps,
   ) :
-      this(software.amazon.awscdk.services.deadline.CfnFleet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFleetProps::unwrap))
+      this(software.amazon.awscdk.services.deadline.CfnFleet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFleetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -177,14 +177,14 @@ public open class CfnFleet(
    * The configuration details for the fleet.
    */
   public open fun configuration(`value`: IResolvable) {
-    unwrap(this).setConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration details for the fleet.
    */
   public open fun configuration(`value`: FleetConfigurationProperty) {
-    unwrap(this).setConfiguration(`value`.let(FleetConfigurationProperty::unwrap))
+    unwrap(this).setConfiguration(`value`.let(FleetConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -237,7 +237,7 @@ public open class CfnFleet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -374,7 +374,7 @@ public open class CfnFleet(
      * @param configuration The configuration details for the fleet. 
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -384,7 +384,7 @@ public open class CfnFleet(
      * @param configuration The configuration details for the fleet. 
      */
     override fun configuration(configuration: FleetConfigurationProperty) {
-      cdkBuilder.configuration(configuration.let(FleetConfigurationProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(FleetConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -846,7 +846,7 @@ public open class CfnFleet(
        * configuration. 
        */
       override fun workerCapabilities(workerCapabilities: IResolvable) {
-        cdkBuilder.workerCapabilities(workerCapabilities.let(IResolvable::unwrap))
+        cdkBuilder.workerCapabilities(workerCapabilities.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -855,7 +855,7 @@ public open class CfnFleet(
        */
       override
           fun workerCapabilities(workerCapabilities: CustomerManagedWorkerCapabilitiesProperty) {
-        cdkBuilder.workerCapabilities(workerCapabilities.let(CustomerManagedWorkerCapabilitiesProperty::unwrap))
+        cdkBuilder.workerCapabilities(workerCapabilities.let(CustomerManagedWorkerCapabilitiesProperty.Companion::unwrap))
       }
 
       /**
@@ -1172,14 +1172,14 @@ public open class CfnFleet(
        * @param acceleratorCount The range of the accelerator.
        */
       override fun acceleratorCount(acceleratorCount: IResolvable) {
-        cdkBuilder.acceleratorCount(acceleratorCount.let(IResolvable::unwrap))
+        cdkBuilder.acceleratorCount(acceleratorCount.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param acceleratorCount The range of the accelerator.
        */
       override fun acceleratorCount(acceleratorCount: AcceleratorCountRangeProperty) {
-        cdkBuilder.acceleratorCount(acceleratorCount.let(AcceleratorCountRangeProperty::unwrap))
+        cdkBuilder.acceleratorCount(acceleratorCount.let(AcceleratorCountRangeProperty.Companion::unwrap))
       }
 
       /**
@@ -1196,7 +1196,7 @@ public open class CfnFleet(
        * capabilities.
        */
       override fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable) {
-        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(IResolvable::unwrap))
+        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1205,7 +1205,7 @@ public open class CfnFleet(
        */
       override
           fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBRangeProperty) {
-        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(AcceleratorTotalMemoryMiBRangeProperty::unwrap))
+        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(AcceleratorTotalMemoryMiBRangeProperty.Companion::unwrap))
       }
 
       /**
@@ -1244,7 +1244,7 @@ public open class CfnFleet(
        * @param customAmounts Custom requirement ranges for customer managed worker capabilities.
        */
       override fun customAmounts(customAmounts: IResolvable) {
-        cdkBuilder.customAmounts(customAmounts.let(IResolvable::unwrap))
+        cdkBuilder.customAmounts(customAmounts.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1264,7 +1264,7 @@ public open class CfnFleet(
        * @param customAttributes Custom attributes for the customer manged worker capabilities.
        */
       override fun customAttributes(customAttributes: IResolvable) {
-        cdkBuilder.customAttributes(customAttributes.let(IResolvable::unwrap))
+        cdkBuilder.customAttributes(customAttributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1284,14 +1284,14 @@ public open class CfnFleet(
        * @param memoryMiB The memory (MiB). 
        */
       override fun memoryMiB(memoryMiB: IResolvable) {
-        cdkBuilder.memoryMiB(memoryMiB.let(IResolvable::unwrap))
+        cdkBuilder.memoryMiB(memoryMiB.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param memoryMiB The memory (MiB). 
        */
       override fun memoryMiB(memoryMiB: MemoryMiBRangeProperty) {
-        cdkBuilder.memoryMiB(memoryMiB.let(MemoryMiBRangeProperty::unwrap))
+        cdkBuilder.memoryMiB(memoryMiB.let(MemoryMiBRangeProperty.Companion::unwrap))
       }
 
       /**
@@ -1313,14 +1313,14 @@ public open class CfnFleet(
        * @param vCpuCount The vCPU count for the customer manged worker capabilities. 
        */
       override fun vCpuCount(vCpuCount: IResolvable) {
-        cdkBuilder.vCpuCount(vCpuCount.let(IResolvable::unwrap))
+        cdkBuilder.vCpuCount(vCpuCount.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param vCpuCount The vCPU count for the customer manged worker capabilities. 
        */
       override fun vCpuCount(vCpuCount: VCpuCountRangeProperty) {
-        cdkBuilder.vCpuCount(vCpuCount.let(VCpuCountRangeProperty::unwrap))
+        cdkBuilder.vCpuCount(vCpuCount.let(VCpuCountRangeProperty.Companion::unwrap))
       }
 
       /**
@@ -1911,7 +1911,7 @@ public open class CfnFleet(
        * @param amounts Amount capabilities of the fleet.
        */
       override fun amounts(amounts: IResolvable) {
-        cdkBuilder.amounts(amounts.let(IResolvable::unwrap))
+        cdkBuilder.amounts(amounts.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1930,7 +1930,7 @@ public open class CfnFleet(
        * @param attributes Attribute capabilities of the fleet.
        */
       override fun attributes(attributes: IResolvable) {
-        cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2148,14 +2148,14 @@ public open class CfnFleet(
        * @param customerManaged The customer managed fleets within a fleet configuration.
        */
       override fun customerManaged(customerManaged: IResolvable) {
-        cdkBuilder.customerManaged(customerManaged.let(IResolvable::unwrap))
+        cdkBuilder.customerManaged(customerManaged.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param customerManaged The customer managed fleets within a fleet configuration.
        */
       override fun customerManaged(customerManaged: CustomerManagedFleetConfigurationProperty) {
-        cdkBuilder.customerManaged(customerManaged.let(CustomerManagedFleetConfigurationProperty::unwrap))
+        cdkBuilder.customerManaged(customerManaged.let(CustomerManagedFleetConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2172,7 +2172,7 @@ public open class CfnFleet(
        * configuration.
        */
       override fun serviceManagedEc2(serviceManagedEc2: IResolvable) {
-        cdkBuilder.serviceManagedEc2(serviceManagedEc2.let(IResolvable::unwrap))
+        cdkBuilder.serviceManagedEc2(serviceManagedEc2.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2181,7 +2181,7 @@ public open class CfnFleet(
        */
       override
           fun serviceManagedEc2(serviceManagedEc2: ServiceManagedEc2FleetConfigurationProperty) {
-        cdkBuilder.serviceManagedEc2(serviceManagedEc2.let(ServiceManagedEc2FleetConfigurationProperty::unwrap))
+        cdkBuilder.serviceManagedEc2(serviceManagedEc2.let(ServiceManagedEc2FleetConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2463,7 +2463,7 @@ public open class CfnFleet(
        * @param instanceCapabilities The Amazon EC2 instance capabilities. 
        */
       override fun instanceCapabilities(instanceCapabilities: IResolvable) {
-        cdkBuilder.instanceCapabilities(instanceCapabilities.let(IResolvable::unwrap))
+        cdkBuilder.instanceCapabilities(instanceCapabilities.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2471,7 +2471,7 @@ public open class CfnFleet(
        */
       override
           fun instanceCapabilities(instanceCapabilities: ServiceManagedEc2InstanceCapabilitiesProperty) {
-        cdkBuilder.instanceCapabilities(instanceCapabilities.let(ServiceManagedEc2InstanceCapabilitiesProperty::unwrap))
+        cdkBuilder.instanceCapabilities(instanceCapabilities.let(ServiceManagedEc2InstanceCapabilitiesProperty.Companion::unwrap))
       }
 
       /**
@@ -2488,7 +2488,7 @@ public open class CfnFleet(
        * @param instanceMarketOptions The Amazon EC2 market type. 
        */
       override fun instanceMarketOptions(instanceMarketOptions: IResolvable) {
-        cdkBuilder.instanceMarketOptions(instanceMarketOptions.let(IResolvable::unwrap))
+        cdkBuilder.instanceMarketOptions(instanceMarketOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2496,7 +2496,7 @@ public open class CfnFleet(
        */
       override
           fun instanceMarketOptions(instanceMarketOptions: ServiceManagedEc2InstanceMarketOptionsProperty) {
-        cdkBuilder.instanceMarketOptions(instanceMarketOptions.let(ServiceManagedEc2InstanceMarketOptionsProperty::unwrap))
+        cdkBuilder.instanceMarketOptions(instanceMarketOptions.let(ServiceManagedEc2InstanceMarketOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -2813,7 +2813,7 @@ public open class CfnFleet(
        * @param customAmounts The custom capability amounts to require for instances in this fleet.
        */
       override fun customAmounts(customAmounts: IResolvable) {
-        cdkBuilder.customAmounts(customAmounts.let(IResolvable::unwrap))
+        cdkBuilder.customAmounts(customAmounts.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2834,7 +2834,7 @@ public open class CfnFleet(
        * fleet.
        */
       override fun customAttributes(customAttributes: IResolvable) {
-        cdkBuilder.customAttributes(customAttributes.let(IResolvable::unwrap))
+        cdkBuilder.customAttributes(customAttributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2869,14 +2869,14 @@ public open class CfnFleet(
        * @param memoryMiB The memory, as MiB, for the Amazon EC2 instance type. 
        */
       override fun memoryMiB(memoryMiB: IResolvable) {
-        cdkBuilder.memoryMiB(memoryMiB.let(IResolvable::unwrap))
+        cdkBuilder.memoryMiB(memoryMiB.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param memoryMiB The memory, as MiB, for the Amazon EC2 instance type. 
        */
       override fun memoryMiB(memoryMiB: MemoryMiBRangeProperty) {
-        cdkBuilder.memoryMiB(memoryMiB.let(MemoryMiBRangeProperty::unwrap))
+        cdkBuilder.memoryMiB(memoryMiB.let(MemoryMiBRangeProperty.Companion::unwrap))
       }
 
       /**
@@ -2898,14 +2898,14 @@ public open class CfnFleet(
        * @param rootEbsVolume The root EBS volume.
        */
       override fun rootEbsVolume(rootEbsVolume: IResolvable) {
-        cdkBuilder.rootEbsVolume(rootEbsVolume.let(IResolvable::unwrap))
+        cdkBuilder.rootEbsVolume(rootEbsVolume.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param rootEbsVolume The root EBS volume.
        */
       override fun rootEbsVolume(rootEbsVolume: Ec2EbsVolumeProperty) {
-        cdkBuilder.rootEbsVolume(rootEbsVolume.let(Ec2EbsVolumeProperty::unwrap))
+        cdkBuilder.rootEbsVolume(rootEbsVolume.let(Ec2EbsVolumeProperty.Companion::unwrap))
       }
 
       /**
@@ -2920,14 +2920,14 @@ public open class CfnFleet(
        * @param vCpuCount The amount of vCPU to require for instances in this fleet. 
        */
       override fun vCpuCount(vCpuCount: IResolvable) {
-        cdkBuilder.vCpuCount(vCpuCount.let(IResolvable::unwrap))
+        cdkBuilder.vCpuCount(vCpuCount.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param vCpuCount The amount of vCPU to require for instances in this fleet. 
        */
       override fun vCpuCount(vCpuCount: VCpuCountRangeProperty) {
-        cdkBuilder.vCpuCount(vCpuCount.let(VCpuCountRangeProperty::unwrap))
+        cdkBuilder.vCpuCount(vCpuCount.let(VCpuCountRangeProperty.Companion::unwrap))
       }
 
       /**

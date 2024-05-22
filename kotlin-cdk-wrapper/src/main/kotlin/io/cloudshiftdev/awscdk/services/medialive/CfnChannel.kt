@@ -37,7 +37,7 @@ public open class CfnChannel(
   cdkObject: software.amazon.awscdk.services.medialive.CfnChannel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.medialive.CfnChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.medialive.CfnChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -46,8 +46,8 @@ public open class CfnChannel(
     id: String,
     props: CfnChannelProps,
   ) :
-      this(software.amazon.awscdk.services.medialive.CfnChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnChannelProps::unwrap))
+      this(software.amazon.awscdk.services.medialive.CfnChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnChannelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -87,14 +87,14 @@ public open class CfnChannel(
    * Specification of CDI inputs for this channel.
    */
   public open fun cdiInputSpecification(`value`: IResolvable) {
-    unwrap(this).setCdiInputSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCdiInputSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specification of CDI inputs for this channel.
    */
   public open fun cdiInputSpecification(`value`: CdiInputSpecificationProperty) {
-    unwrap(this).setCdiInputSpecification(`value`.let(CdiInputSpecificationProperty::unwrap))
+    unwrap(this).setCdiInputSpecification(`value`.let(CdiInputSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -126,7 +126,7 @@ public open class CfnChannel(
    * The settings that identify the destination for the outputs in this MediaLive output package.
    */
   public open fun destinations(`value`: IResolvable) {
-    unwrap(this).setDestinations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDestinations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -150,14 +150,14 @@ public open class CfnChannel(
    * The encoding configuration for the output content.
    */
   public open fun encoderSettings(`value`: IResolvable) {
-    unwrap(this).setEncoderSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEncoderSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The encoding configuration for the output content.
    */
   public open fun encoderSettings(`value`: EncoderSettingsProperty) {
-    unwrap(this).setEncoderSettings(`value`.let(EncoderSettingsProperty::unwrap))
+    unwrap(this).setEncoderSettings(`value`.let(EncoderSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -177,7 +177,7 @@ public open class CfnChannel(
    * The list of input attachments for the channel.
    */
   public open fun inputAttachments(`value`: IResolvable) {
-    unwrap(this).setInputAttachments(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInputAttachments(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -201,14 +201,14 @@ public open class CfnChannel(
    * The input specification for this channel.
    */
   public open fun inputSpecification(`value`: IResolvable) {
-    unwrap(this).setInputSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInputSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The input specification for this channel.
    */
   public open fun inputSpecification(`value`: InputSpecificationProperty) {
-    unwrap(this).setInputSpecification(`value`.let(InputSpecificationProperty::unwrap))
+    unwrap(this).setInputSpecification(`value`.let(InputSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -225,7 +225,7 @@ public open class CfnChannel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -249,14 +249,14 @@ public open class CfnChannel(
    * Maintenance settings for this channel.
    */
   public open fun maintenance(`value`: IResolvable) {
-    unwrap(this).setMaintenance(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMaintenance(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Maintenance settings for this channel.
    */
   public open fun maintenance(`value`: MaintenanceCreateSettingsProperty) {
-    unwrap(this).setMaintenance(`value`.let(MaintenanceCreateSettingsProperty::unwrap))
+    unwrap(this).setMaintenance(`value`.let(MaintenanceCreateSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -319,7 +319,7 @@ public open class CfnChannel(
    * VPC.
    */
   public open fun vpc(`value`: IResolvable) {
-    unwrap(this).setVpc(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpc(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -327,7 +327,7 @@ public open class CfnChannel(
    * VPC.
    */
   public open fun vpc(`value`: VpcOutputSettingsProperty) {
-    unwrap(this).setVpc(`value`.let(VpcOutputSettingsProperty::unwrap))
+    unwrap(this).setVpc(`value`.let(VpcOutputSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -609,7 +609,7 @@ public open class CfnChannel(
      * @param cdiInputSpecification Specification of CDI inputs for this channel. 
      */
     override fun cdiInputSpecification(cdiInputSpecification: IResolvable) {
-      cdkBuilder.cdiInputSpecification(cdiInputSpecification.let(IResolvable::unwrap))
+      cdkBuilder.cdiInputSpecification(cdiInputSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -619,7 +619,7 @@ public open class CfnChannel(
      * @param cdiInputSpecification Specification of CDI inputs for this channel. 
      */
     override fun cdiInputSpecification(cdiInputSpecification: CdiInputSpecificationProperty) {
-      cdkBuilder.cdiInputSpecification(cdiInputSpecification.let(CdiInputSpecificationProperty::unwrap))
+      cdkBuilder.cdiInputSpecification(cdiInputSpecification.let(CdiInputSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -655,7 +655,7 @@ public open class CfnChannel(
      * MediaLive output package. 
      */
     override fun destinations(destinations: IResolvable) {
-      cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
+      cdkBuilder.destinations(destinations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -685,7 +685,7 @@ public open class CfnChannel(
      * @param encoderSettings The encoding configuration for the output content. 
      */
     override fun encoderSettings(encoderSettings: IResolvable) {
-      cdkBuilder.encoderSettings(encoderSettings.let(IResolvable::unwrap))
+      cdkBuilder.encoderSettings(encoderSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -695,7 +695,7 @@ public open class CfnChannel(
      * @param encoderSettings The encoding configuration for the output content. 
      */
     override fun encoderSettings(encoderSettings: EncoderSettingsProperty) {
-      cdkBuilder.encoderSettings(encoderSettings.let(EncoderSettingsProperty::unwrap))
+      cdkBuilder.encoderSettings(encoderSettings.let(EncoderSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -716,7 +716,7 @@ public open class CfnChannel(
      * @param inputAttachments The list of input attachments for the channel. 
      */
     override fun inputAttachments(inputAttachments: IResolvable) {
-      cdkBuilder.inputAttachments(inputAttachments.let(IResolvable::unwrap))
+      cdkBuilder.inputAttachments(inputAttachments.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -748,7 +748,7 @@ public open class CfnChannel(
      * @param inputSpecification The input specification for this channel. 
      */
     override fun inputSpecification(inputSpecification: IResolvable) {
-      cdkBuilder.inputSpecification(inputSpecification.let(IResolvable::unwrap))
+      cdkBuilder.inputSpecification(inputSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -761,7 +761,7 @@ public open class CfnChannel(
      * @param inputSpecification The input specification for this channel. 
      */
     override fun inputSpecification(inputSpecification: InputSpecificationProperty) {
-      cdkBuilder.inputSpecification(inputSpecification.let(InputSpecificationProperty::unwrap))
+      cdkBuilder.inputSpecification(inputSpecification.let(InputSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -799,7 +799,7 @@ public open class CfnChannel(
      * @param maintenance Maintenance settings for this channel. 
      */
     override fun maintenance(maintenance: IResolvable) {
-      cdkBuilder.maintenance(maintenance.let(IResolvable::unwrap))
+      cdkBuilder.maintenance(maintenance.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -809,7 +809,7 @@ public open class CfnChannel(
      * @param maintenance Maintenance settings for this channel. 
      */
     override fun maintenance(maintenance: MaintenanceCreateSettingsProperty) {
-      cdkBuilder.maintenance(maintenance.let(MaintenanceCreateSettingsProperty::unwrap))
+      cdkBuilder.maintenance(maintenance.let(MaintenanceCreateSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -869,7 +869,7 @@ public open class CfnChannel(
      * are in your VPC. 
      */
     override fun vpc(vpc: IResolvable) {
-      cdkBuilder.vpc(vpc.let(IResolvable::unwrap))
+      cdkBuilder.vpc(vpc.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -881,7 +881,7 @@ public open class CfnChannel(
      * are in your VPC. 
      */
     override fun vpc(vpc: VpcOutputSettingsProperty) {
-      cdkBuilder.vpc(vpc.let(VpcOutputSettingsProperty::unwrap))
+      cdkBuilder.vpc(vpc.let(VpcOutputSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -1759,14 +1759,14 @@ public open class CfnChannel(
        * @param archiveS3Settings Sets up Amazon S3 as the destination for this Archive output.
        */
       override fun archiveS3Settings(archiveS3Settings: IResolvable) {
-        cdkBuilder.archiveS3Settings(archiveS3Settings.let(IResolvable::unwrap))
+        cdkBuilder.archiveS3Settings(archiveS3Settings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param archiveS3Settings Sets up Amazon S3 as the destination for this Archive output.
        */
       override fun archiveS3Settings(archiveS3Settings: ArchiveS3SettingsProperty) {
-        cdkBuilder.archiveS3Settings(archiveS3Settings.let(ArchiveS3SettingsProperty::unwrap))
+        cdkBuilder.archiveS3Settings(archiveS3Settings.let(ArchiveS3SettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -1957,14 +1957,14 @@ public open class CfnChannel(
        * @param m2TsSettings The settings for the M2TS in the archive output.
        */
       override fun m2TsSettings(m2TsSettings: IResolvable) {
-        cdkBuilder.m2TsSettings(m2TsSettings.let(IResolvable::unwrap))
+        cdkBuilder.m2TsSettings(m2TsSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param m2TsSettings The settings for the M2TS in the archive output.
        */
       override fun m2TsSettings(m2TsSettings: M2tsSettingsProperty) {
-        cdkBuilder.m2TsSettings(m2TsSettings.let(M2tsSettingsProperty::unwrap))
+        cdkBuilder.m2TsSettings(m2TsSettings.let(M2tsSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -1979,14 +1979,14 @@ public open class CfnChannel(
        * @param rawSettings The settings for Raw archive output type.
        */
       override fun rawSettings(rawSettings: IResolvable) {
-        cdkBuilder.rawSettings(rawSettings.let(IResolvable::unwrap))
+        cdkBuilder.rawSettings(rawSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param rawSettings The settings for Raw archive output type.
        */
       override fun rawSettings(rawSettings: RawSettingsProperty) {
-        cdkBuilder.rawSettings(rawSettings.let(RawSettingsProperty::unwrap))
+        cdkBuilder.rawSettings(rawSettings.let(RawSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -2144,14 +2144,14 @@ public open class CfnChannel(
        * @param archiveCdnSettings Settings to configure the destination of an Archive output.
        */
       override fun archiveCdnSettings(archiveCdnSettings: IResolvable) {
-        cdkBuilder.archiveCdnSettings(archiveCdnSettings.let(IResolvable::unwrap))
+        cdkBuilder.archiveCdnSettings(archiveCdnSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param archiveCdnSettings Settings to configure the destination of an Archive output.
        */
       override fun archiveCdnSettings(archiveCdnSettings: ArchiveCdnSettingsProperty) {
-        cdkBuilder.archiveCdnSettings(archiveCdnSettings.let(ArchiveCdnSettingsProperty::unwrap))
+        cdkBuilder.archiveCdnSettings(archiveCdnSettings.let(ArchiveCdnSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -2167,14 +2167,14 @@ public open class CfnChannel(
        * @param destination A directory and base file name where archive files should be written.
        */
       override fun destination(destination: IResolvable) {
-        cdkBuilder.destination(destination.let(IResolvable::unwrap))
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param destination A directory and base file name where archive files should be written.
        */
       override fun destination(destination: OutputLocationRefProperty) {
-        cdkBuilder.destination(destination.let(OutputLocationRefProperty::unwrap))
+        cdkBuilder.destination(destination.let(OutputLocationRefProperty.Companion::unwrap))
       }
 
       /**
@@ -2397,14 +2397,14 @@ public open class CfnChannel(
        * @param containerSettings The settings that are specific to the container type of the file.
        */
       override fun containerSettings(containerSettings: IResolvable) {
-        cdkBuilder.containerSettings(containerSettings.let(IResolvable::unwrap))
+        cdkBuilder.containerSettings(containerSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param containerSettings The settings that are specific to the container type of the file.
        */
       override fun containerSettings(containerSettings: ArchiveContainerSettingsProperty) {
-        cdkBuilder.containerSettings(containerSettings.let(ArchiveContainerSettingsProperty::unwrap))
+        cdkBuilder.containerSettings(containerSettings.let(ArchiveContainerSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -2755,7 +2755,7 @@ public open class CfnChannel(
        * remixed into this output channel.
        */
       override fun inputChannelLevels(inputChannelLevels: IResolvable) {
-        cdkBuilder.inputChannelLevels(inputChannelLevels.let(IResolvable::unwrap))
+        cdkBuilder.inputChannelLevels(inputChannelLevels.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3085,14 +3085,14 @@ public open class CfnChannel(
        * @param aacSettings The setup of the AAC audio codec in the output.
        */
       override fun aacSettings(aacSettings: IResolvable) {
-        cdkBuilder.aacSettings(aacSettings.let(IResolvable::unwrap))
+        cdkBuilder.aacSettings(aacSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param aacSettings The setup of the AAC audio codec in the output.
        */
       override fun aacSettings(aacSettings: AacSettingsProperty) {
-        cdkBuilder.aacSettings(aacSettings.let(AacSettingsProperty::unwrap))
+        cdkBuilder.aacSettings(aacSettings.let(AacSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -3107,14 +3107,14 @@ public open class CfnChannel(
        * @param ac3Settings The setup of an AC3 audio codec in the output.
        */
       override fun ac3Settings(ac3Settings: IResolvable) {
-        cdkBuilder.ac3Settings(ac3Settings.let(IResolvable::unwrap))
+        cdkBuilder.ac3Settings(ac3Settings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param ac3Settings The setup of an AC3 audio codec in the output.
        */
       override fun ac3Settings(ac3Settings: Ac3SettingsProperty) {
-        cdkBuilder.ac3Settings(ac3Settings.let(Ac3SettingsProperty::unwrap))
+        cdkBuilder.ac3Settings(ac3Settings.let(Ac3SettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -3129,14 +3129,14 @@ public open class CfnChannel(
        * @param eac3AtmosSettings the value to be set.
        */
       override fun eac3AtmosSettings(eac3AtmosSettings: IResolvable) {
-        cdkBuilder.eac3AtmosSettings(eac3AtmosSettings.let(IResolvable::unwrap))
+        cdkBuilder.eac3AtmosSettings(eac3AtmosSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param eac3AtmosSettings the value to be set.
        */
       override fun eac3AtmosSettings(eac3AtmosSettings: Eac3AtmosSettingsProperty) {
-        cdkBuilder.eac3AtmosSettings(eac3AtmosSettings.let(Eac3AtmosSettingsProperty::unwrap))
+        cdkBuilder.eac3AtmosSettings(eac3AtmosSettings.let(Eac3AtmosSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -3152,14 +3152,14 @@ public open class CfnChannel(
        * @param eac3Settings The setup of an EAC3 audio codec in the output.
        */
       override fun eac3Settings(eac3Settings: IResolvable) {
-        cdkBuilder.eac3Settings(eac3Settings.let(IResolvable::unwrap))
+        cdkBuilder.eac3Settings(eac3Settings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param eac3Settings The setup of an EAC3 audio codec in the output.
        */
       override fun eac3Settings(eac3Settings: Eac3SettingsProperty) {
-        cdkBuilder.eac3Settings(eac3Settings.let(Eac3SettingsProperty::unwrap))
+        cdkBuilder.eac3Settings(eac3Settings.let(Eac3SettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -3174,14 +3174,14 @@ public open class CfnChannel(
        * @param mp2Settings The setup of an MP2 audio codec in the output.
        */
       override fun mp2Settings(mp2Settings: IResolvable) {
-        cdkBuilder.mp2Settings(mp2Settings.let(IResolvable::unwrap))
+        cdkBuilder.mp2Settings(mp2Settings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param mp2Settings The setup of an MP2 audio codec in the output.
        */
       override fun mp2Settings(mp2Settings: Mp2SettingsProperty) {
-        cdkBuilder.mp2Settings(mp2Settings.let(Mp2SettingsProperty::unwrap))
+        cdkBuilder.mp2Settings(mp2Settings.let(Mp2SettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -3196,14 +3196,14 @@ public open class CfnChannel(
        * @param passThroughSettings The setup to pass through the Dolby audio codec to the output.
        */
       override fun passThroughSettings(passThroughSettings: IResolvable) {
-        cdkBuilder.passThroughSettings(passThroughSettings.let(IResolvable::unwrap))
+        cdkBuilder.passThroughSettings(passThroughSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param passThroughSettings The setup to pass through the Dolby audio codec to the output.
        */
       override fun passThroughSettings(passThroughSettings: PassThroughSettingsProperty) {
-        cdkBuilder.passThroughSettings(passThroughSettings.let(PassThroughSettingsProperty::unwrap))
+        cdkBuilder.passThroughSettings(passThroughSettings.let(PassThroughSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -3219,14 +3219,14 @@ public open class CfnChannel(
        * @param wavSettings Settings for audio encoded with the WAV codec.
        */
       override fun wavSettings(wavSettings: IResolvable) {
-        cdkBuilder.wavSettings(wavSettings.let(IResolvable::unwrap))
+        cdkBuilder.wavSettings(wavSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param wavSettings Settings for audio encoded with the WAV codec.
        */
       override fun wavSettings(wavSettings: WavSettingsProperty) {
-        cdkBuilder.wavSettings(wavSettings.let(WavSettingsProperty::unwrap))
+        cdkBuilder.wavSettings(wavSettings.let(WavSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -3323,6 +3323,7 @@ public open class CfnChannel(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.medialive.*;
    * AudioDescriptionProperty audioDescriptionProperty = AudioDescriptionProperty.builder()
+   * .audioDashRoles(List.of("audioDashRoles"))
    * .audioNormalizationSettings(AudioNormalizationSettingsProperty.builder()
    * .algorithm("algorithm")
    * .algorithmControl("algorithmControl")
@@ -3411,6 +3412,7 @@ public open class CfnChannel(
    * .sampleRate(123)
    * .build())
    * .build())
+   * .dvbDashAccessibility("dvbDashAccessibility")
    * .languageCode("languageCode")
    * .languageCodeControl("languageCodeControl")
    * .name("name")
@@ -3432,6 +3434,11 @@ public open class CfnChannel(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiodescription.html)
    */
   public interface AudioDescriptionProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiodescription.html#cfn-medialive-channel-audiodescription-audiodashroles)
+     */
+    public fun audioDashRoles(): List<String> = unwrap(this).getAudioDashRoles() ?: emptyList()
+
     /**
      * The advanced audio normalization settings.
      *
@@ -3480,6 +3487,11 @@ public open class CfnChannel(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiodescription.html#cfn-medialive-channel-audiodescription-codecsettings)
      */
     public fun codecSettings(): Any? = unwrap(this).getCodecSettings()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiodescription.html#cfn-medialive-channel-audiodescription-dvbdashaccessibility)
+     */
+    public fun dvbDashAccessibility(): String? = unwrap(this).getDvbDashAccessibility()
 
     /**
      * Indicates the language of the audio output track.
@@ -3534,6 +3546,16 @@ public open class CfnChannel(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param audioDashRoles the value to be set.
+       */
+      public fun audioDashRoles(audioDashRoles: List<String>)
+
+      /**
+       * @param audioDashRoles the value to be set.
+       */
+      public fun audioDashRoles(vararg audioDashRoles: String)
+
       /**
        * @param audioNormalizationSettings The advanced audio normalization settings.
        */
@@ -3614,6 +3636,11 @@ public open class CfnChannel(
       public fun codecSettings(codecSettings: AudioCodecSettingsProperty.Builder.() -> Unit)
 
       /**
+       * @param dvbDashAccessibility the value to be set.
+       */
+      public fun dvbDashAccessibility(dvbDashAccessibility: String)
+
+      /**
        * @param languageCode Indicates the language of the audio output track.
        * Used only if languageControlMode is useConfigured, or there is no ISO 639 language code
        * specified in the input.
@@ -3668,10 +3695,23 @@ public open class CfnChannel(
           software.amazon.awscdk.services.medialive.CfnChannel.AudioDescriptionProperty.builder()
 
       /**
+       * @param audioDashRoles the value to be set.
+       */
+      override fun audioDashRoles(audioDashRoles: List<String>) {
+        cdkBuilder.audioDashRoles(audioDashRoles)
+      }
+
+      /**
+       * @param audioDashRoles the value to be set.
+       */
+      override fun audioDashRoles(vararg audioDashRoles: String): Unit =
+          audioDashRoles(audioDashRoles.toList())
+
+      /**
        * @param audioNormalizationSettings The advanced audio normalization settings.
        */
       override fun audioNormalizationSettings(audioNormalizationSettings: IResolvable) {
-        cdkBuilder.audioNormalizationSettings(audioNormalizationSettings.let(IResolvable::unwrap))
+        cdkBuilder.audioNormalizationSettings(audioNormalizationSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3679,7 +3719,7 @@ public open class CfnChannel(
        */
       override
           fun audioNormalizationSettings(audioNormalizationSettings: AudioNormalizationSettingsProperty) {
-        cdkBuilder.audioNormalizationSettings(audioNormalizationSettings.let(AudioNormalizationSettingsProperty::unwrap))
+        cdkBuilder.audioNormalizationSettings(audioNormalizationSettings.let(AudioNormalizationSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -3724,7 +3764,7 @@ public open class CfnChannel(
        * audio watermarks in the audio encode.
        */
       override fun audioWatermarkingSettings(audioWatermarkingSettings: IResolvable) {
-        cdkBuilder.audioWatermarkingSettings(audioWatermarkingSettings.let(IResolvable::unwrap))
+        cdkBuilder.audioWatermarkingSettings(audioWatermarkingSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3733,7 +3773,7 @@ public open class CfnChannel(
        */
       override
           fun audioWatermarkingSettings(audioWatermarkingSettings: AudioWatermarkSettingsProperty) {
-        cdkBuilder.audioWatermarkingSettings(audioWatermarkingSettings.let(AudioWatermarkSettingsProperty::unwrap))
+        cdkBuilder.audioWatermarkingSettings(audioWatermarkingSettings.let(AudioWatermarkSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -3751,14 +3791,14 @@ public open class CfnChannel(
        * @param codecSettings The audio codec settings.
        */
       override fun codecSettings(codecSettings: IResolvable) {
-        cdkBuilder.codecSettings(codecSettings.let(IResolvable::unwrap))
+        cdkBuilder.codecSettings(codecSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param codecSettings The audio codec settings.
        */
       override fun codecSettings(codecSettings: AudioCodecSettingsProperty) {
-        cdkBuilder.codecSettings(codecSettings.let(AudioCodecSettingsProperty::unwrap))
+        cdkBuilder.codecSettings(codecSettings.let(AudioCodecSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -3768,6 +3808,13 @@ public open class CfnChannel(
       @JvmName("32c42506e665d5fcf25b8618524c3292f798a8472eb4f40265596a7a76145f57")
       override fun codecSettings(codecSettings: AudioCodecSettingsProperty.Builder.() -> Unit): Unit
           = codecSettings(AudioCodecSettingsProperty(codecSettings))
+
+      /**
+       * @param dvbDashAccessibility the value to be set.
+       */
+      override fun dvbDashAccessibility(dvbDashAccessibility: String) {
+        cdkBuilder.dvbDashAccessibility(dvbDashAccessibility)
+      }
 
       /**
        * @param languageCode Indicates the language of the audio output track.
@@ -3802,7 +3849,7 @@ public open class CfnChannel(
        * the output audio channels.
        */
       override fun remixSettings(remixSettings: IResolvable) {
-        cdkBuilder.remixSettings(remixSettings.let(IResolvable::unwrap))
+        cdkBuilder.remixSettings(remixSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3810,7 +3857,7 @@ public open class CfnChannel(
        * the output audio channels.
        */
       override fun remixSettings(remixSettings: RemixSettingsProperty) {
-        cdkBuilder.remixSettings(remixSettings.let(RemixSettingsProperty::unwrap))
+        cdkBuilder.remixSettings(remixSettings.let(RemixSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -3838,6 +3885,11 @@ public open class CfnChannel(
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AudioDescriptionProperty,
     ) : CdkObject(cdkObject), AudioDescriptionProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiodescription.html#cfn-medialive-channel-audiodescription-audiodashroles)
+       */
+      override fun audioDashRoles(): List<String> = unwrap(this).getAudioDashRoles() ?: emptyList()
+
       /**
        * The advanced audio normalization settings.
        *
@@ -3887,6 +3939,11 @@ public open class CfnChannel(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiodescription.html#cfn-medialive-channel-audiodescription-codecsettings)
        */
       override fun codecSettings(): Any? = unwrap(this).getCodecSettings()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-audiodescription.html#cfn-medialive-channel-audiodescription-dvbdashaccessibility)
+       */
+      override fun dvbDashAccessibility(): String? = unwrap(this).getDvbDashAccessibility()
 
       /**
        * Indicates the language of the audio output track.
@@ -4607,7 +4664,7 @@ public open class CfnChannel(
        * file, so it increases bandwidth by {image file size} * {segment count} * {user count.}.
        */
       override fun audioOnlyImage(audioOnlyImage: IResolvable) {
-        cdkBuilder.audioOnlyImage(audioOnlyImage.let(IResolvable::unwrap))
+        cdkBuilder.audioOnlyImage(audioOnlyImage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4619,7 +4676,7 @@ public open class CfnChannel(
        * file, so it increases bandwidth by {image file size} * {segment count} * {user count.}.
        */
       override fun audioOnlyImage(audioOnlyImage: InputLocationProperty) {
-        cdkBuilder.audioOnlyImage(audioOnlyImage.let(InputLocationProperty::unwrap))
+        cdkBuilder.audioOnlyImage(audioOnlyImage.let(InputLocationProperty.Companion::unwrap))
       }
 
       /**
@@ -4910,14 +4967,14 @@ public open class CfnChannel(
        * @param selectorSettings Information about the specific audio to extract from the input.
        */
       override fun selectorSettings(selectorSettings: IResolvable) {
-        cdkBuilder.selectorSettings(selectorSettings.let(IResolvable::unwrap))
+        cdkBuilder.selectorSettings(selectorSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param selectorSettings Information about the specific audio to extract from the input.
        */
       override fun selectorSettings(selectorSettings: AudioSelectorSettingsProperty) {
-        cdkBuilder.selectorSettings(selectorSettings.let(AudioSelectorSettingsProperty::unwrap))
+        cdkBuilder.selectorSettings(selectorSettings.let(AudioSelectorSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -5123,7 +5180,7 @@ public open class CfnChannel(
        * @param audioHlsRenditionSelection Selector for HLS audio rendition.
        */
       override fun audioHlsRenditionSelection(audioHlsRenditionSelection: IResolvable) {
-        cdkBuilder.audioHlsRenditionSelection(audioHlsRenditionSelection.let(IResolvable::unwrap))
+        cdkBuilder.audioHlsRenditionSelection(audioHlsRenditionSelection.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5131,7 +5188,7 @@ public open class CfnChannel(
        */
       override
           fun audioHlsRenditionSelection(audioHlsRenditionSelection: AudioHlsRenditionSelectionProperty) {
-        cdkBuilder.audioHlsRenditionSelection(audioHlsRenditionSelection.let(AudioHlsRenditionSelectionProperty::unwrap))
+        cdkBuilder.audioHlsRenditionSelection(audioHlsRenditionSelection.let(AudioHlsRenditionSelectionProperty.Companion::unwrap))
       }
 
       /**
@@ -5148,14 +5205,14 @@ public open class CfnChannel(
        * @param audioLanguageSelection The language code of the audio to select.
        */
       override fun audioLanguageSelection(audioLanguageSelection: IResolvable) {
-        cdkBuilder.audioLanguageSelection(audioLanguageSelection.let(IResolvable::unwrap))
+        cdkBuilder.audioLanguageSelection(audioLanguageSelection.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param audioLanguageSelection The language code of the audio to select.
        */
       override fun audioLanguageSelection(audioLanguageSelection: AudioLanguageSelectionProperty) {
-        cdkBuilder.audioLanguageSelection(audioLanguageSelection.let(AudioLanguageSelectionProperty::unwrap))
+        cdkBuilder.audioLanguageSelection(audioLanguageSelection.let(AudioLanguageSelectionProperty.Companion::unwrap))
       }
 
       /**
@@ -5171,14 +5228,14 @@ public open class CfnChannel(
        * @param audioPidSelection The PID of the audio to select.
        */
       override fun audioPidSelection(audioPidSelection: IResolvable) {
-        cdkBuilder.audioPidSelection(audioPidSelection.let(IResolvable::unwrap))
+        cdkBuilder.audioPidSelection(audioPidSelection.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param audioPidSelection The PID of the audio to select.
        */
       override fun audioPidSelection(audioPidSelection: AudioPidSelectionProperty) {
-        cdkBuilder.audioPidSelection(audioPidSelection.let(AudioPidSelectionProperty::unwrap))
+        cdkBuilder.audioPidSelection(audioPidSelection.let(AudioPidSelectionProperty.Companion::unwrap))
       }
 
       /**
@@ -5194,14 +5251,14 @@ public open class CfnChannel(
        * @param audioTrackSelection Information about the audio track to extract.
        */
       override fun audioTrackSelection(audioTrackSelection: IResolvable) {
-        cdkBuilder.audioTrackSelection(audioTrackSelection.let(IResolvable::unwrap))
+        cdkBuilder.audioTrackSelection(audioTrackSelection.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param audioTrackSelection Information about the audio track to extract.
        */
       override fun audioTrackSelection(audioTrackSelection: AudioTrackSelectionProperty) {
-        cdkBuilder.audioTrackSelection(audioTrackSelection.let(AudioTrackSelectionProperty::unwrap))
+        cdkBuilder.audioTrackSelection(audioTrackSelection.let(AudioTrackSelectionProperty.Companion::unwrap))
       }
 
       /**
@@ -5571,14 +5628,14 @@ public open class CfnChannel(
        * @param dolbyEDecode the value to be set.
        */
       override fun dolbyEDecode(dolbyEDecode: IResolvable) {
-        cdkBuilder.dolbyEDecode(dolbyEDecode.let(IResolvable::unwrap))
+        cdkBuilder.dolbyEDecode(dolbyEDecode.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dolbyEDecode the value to be set.
        */
       override fun dolbyEDecode(dolbyEDecode: AudioDolbyEDecodeProperty) {
-        cdkBuilder.dolbyEDecode(dolbyEDecode.let(AudioDolbyEDecodeProperty::unwrap))
+        cdkBuilder.dolbyEDecode(dolbyEDecode.let(AudioDolbyEDecodeProperty.Companion::unwrap))
       }
 
       /**
@@ -5593,7 +5650,7 @@ public open class CfnChannel(
        * @param tracks Selects one or more unique audio tracks from within a source.
        */
       override fun tracks(tracks: IResolvable) {
-        cdkBuilder.tracks(tracks.let(IResolvable::unwrap))
+        cdkBuilder.tracks(tracks.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5725,7 +5782,7 @@ public open class CfnChannel(
        * encode.
        */
       override fun nielsenWatermarksSettings(nielsenWatermarksSettings: IResolvable) {
-        cdkBuilder.nielsenWatermarksSettings(nielsenWatermarksSettings.let(IResolvable::unwrap))
+        cdkBuilder.nielsenWatermarksSettings(nielsenWatermarksSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5734,7 +5791,7 @@ public open class CfnChannel(
        */
       override
           fun nielsenWatermarksSettings(nielsenWatermarksSettings: NielsenWatermarksSettingsProperty) {
-        cdkBuilder.nielsenWatermarksSettings(nielsenWatermarksSettings.let(NielsenWatermarksSettingsProperty::unwrap))
+        cdkBuilder.nielsenWatermarksSettings(nielsenWatermarksSettings.let(NielsenWatermarksSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -5925,7 +5982,7 @@ public open class CfnChannel(
        * If any of these conditions occur, MediaLive will perform a failover to the other input.
        */
       override fun failoverConditions(failoverConditions: IResolvable) {
-        cdkBuilder.failoverConditions(failoverConditions.let(IResolvable::unwrap))
+        cdkBuilder.failoverConditions(failoverConditions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6107,7 +6164,7 @@ public open class CfnChannel(
        * Keep empty for solid black. Only .bmp and .png images are supported.
        */
       override fun availBlankingImage(availBlankingImage: IResolvable) {
-        cdkBuilder.availBlankingImage(availBlankingImage.let(IResolvable::unwrap))
+        cdkBuilder.availBlankingImage(availBlankingImage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6115,7 +6172,7 @@ public open class CfnChannel(
        * Keep empty for solid black. Only .bmp and .png images are supported.
        */
       override fun availBlankingImage(availBlankingImage: InputLocationProperty) {
-        cdkBuilder.availBlankingImage(availBlankingImage.let(InputLocationProperty::unwrap))
+        cdkBuilder.availBlankingImage(availBlankingImage.let(InputLocationProperty.Companion::unwrap))
       }
 
       /**
@@ -6255,14 +6312,14 @@ public open class CfnChannel(
        * @param availSettings The setup of ad avail handling in the output.
        */
       override fun availSettings(availSettings: IResolvable) {
-        cdkBuilder.availSettings(availSettings.let(IResolvable::unwrap))
+        cdkBuilder.availSettings(availSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param availSettings The setup of ad avail handling in the output.
        */
       override fun availSettings(availSettings: AvailSettingsProperty) {
-        cdkBuilder.availSettings(availSettings.let(AvailSettingsProperty::unwrap))
+        cdkBuilder.availSettings(availSettings.let(AvailSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -6430,14 +6487,14 @@ public open class CfnChannel(
        * @param esam the value to be set.
        */
       override fun esam(esam: IResolvable) {
-        cdkBuilder.esam(esam.let(IResolvable::unwrap))
+        cdkBuilder.esam(esam.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param esam the value to be set.
        */
       override fun esam(esam: EsamProperty) {
-        cdkBuilder.esam(esam.let(EsamProperty::unwrap))
+        cdkBuilder.esam(esam.let(EsamProperty.Companion::unwrap))
       }
 
       /**
@@ -6451,14 +6508,14 @@ public open class CfnChannel(
        * @param scte35SpliceInsert The setup for SCTE-35 splice insert handling.
        */
       override fun scte35SpliceInsert(scte35SpliceInsert: IResolvable) {
-        cdkBuilder.scte35SpliceInsert(scte35SpliceInsert.let(IResolvable::unwrap))
+        cdkBuilder.scte35SpliceInsert(scte35SpliceInsert.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param scte35SpliceInsert The setup for SCTE-35 splice insert handling.
        */
       override fun scte35SpliceInsert(scte35SpliceInsert: Scte35SpliceInsertProperty) {
-        cdkBuilder.scte35SpliceInsert(scte35SpliceInsert.let(Scte35SpliceInsertProperty::unwrap))
+        cdkBuilder.scte35SpliceInsert(scte35SpliceInsert.let(Scte35SpliceInsertProperty.Companion::unwrap))
       }
 
       /**
@@ -6474,14 +6531,14 @@ public open class CfnChannel(
        * @param scte35TimeSignalApos The setup for SCTE-35 time signal APOS handling.
        */
       override fun scte35TimeSignalApos(scte35TimeSignalApos: IResolvable) {
-        cdkBuilder.scte35TimeSignalApos(scte35TimeSignalApos.let(IResolvable::unwrap))
+        cdkBuilder.scte35TimeSignalApos(scte35TimeSignalApos.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param scte35TimeSignalApos The setup for SCTE-35 time signal APOS handling.
        */
       override fun scte35TimeSignalApos(scte35TimeSignalApos: Scte35TimeSignalAposProperty) {
-        cdkBuilder.scte35TimeSignalApos(scte35TimeSignalApos.let(Scte35TimeSignalAposProperty::unwrap))
+        cdkBuilder.scte35TimeSignalApos(scte35TimeSignalApos.let(Scte35TimeSignalAposProperty.Companion::unwrap))
       }
 
       /**
@@ -6698,7 +6755,7 @@ public open class CfnChannel(
        * Keep empty for solid black. Only .bmp and .png images are supported.
        */
       override fun blackoutSlateImage(blackoutSlateImage: IResolvable) {
-        cdkBuilder.blackoutSlateImage(blackoutSlateImage.let(IResolvable::unwrap))
+        cdkBuilder.blackoutSlateImage(blackoutSlateImage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6706,7 +6763,7 @@ public open class CfnChannel(
        * Keep empty for solid black. Only .bmp and .png images are supported.
        */
       override fun blackoutSlateImage(blackoutSlateImage: InputLocationProperty) {
-        cdkBuilder.blackoutSlateImage(blackoutSlateImage.let(InputLocationProperty::unwrap))
+        cdkBuilder.blackoutSlateImage(blackoutSlateImage.let(InputLocationProperty.Companion::unwrap))
       }
 
       /**
@@ -6736,7 +6793,7 @@ public open class CfnChannel(
        * The image is scaled to fill the entire output raster.
        */
       override fun networkEndBlackoutImage(networkEndBlackoutImage: IResolvable) {
-        cdkBuilder.networkEndBlackoutImage(networkEndBlackoutImage.let(IResolvable::unwrap))
+        cdkBuilder.networkEndBlackoutImage(networkEndBlackoutImage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6745,7 +6802,7 @@ public open class CfnChannel(
        * The image is scaled to fill the entire output raster.
        */
       override fun networkEndBlackoutImage(networkEndBlackoutImage: InputLocationProperty) {
-        cdkBuilder.networkEndBlackoutImage(networkEndBlackoutImage.let(InputLocationProperty::unwrap))
+        cdkBuilder.networkEndBlackoutImage(networkEndBlackoutImage.let(InputLocationProperty.Companion::unwrap))
       }
 
       /**
@@ -7265,7 +7322,7 @@ public open class CfnChannel(
        * proportional fonts. All burn-in and DVB-Sub font settings must match.
        */
       override fun font(font: IResolvable) {
-        cdkBuilder.font(font.let(IResolvable::unwrap))
+        cdkBuilder.font(font.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7276,7 +7333,7 @@ public open class CfnChannel(
        * proportional fonts. All burn-in and DVB-Sub font settings must match.
        */
       override fun font(font: InputLocationProperty) {
-        cdkBuilder.font(font.let(InputLocationProperty::unwrap))
+        cdkBuilder.font(font.let(InputLocationProperty.Companion::unwrap))
       }
 
       /**
@@ -7633,6 +7690,7 @@ public open class CfnChannel(
    * import io.cloudshiftdev.awscdk.services.medialive.*;
    * CaptionDescriptionProperty captionDescriptionProperty = CaptionDescriptionProperty.builder()
    * .accessibility("accessibility")
+   * .captionDashRoles(List.of("captionDashRoles"))
    * .captionSelectorName("captionSelectorName")
    * .destinationSettings(CaptionDestinationSettingsProperty.builder()
    * .aribDestinationSettings(AribDestinationSettingsProperty.builder().build())
@@ -7702,6 +7760,7 @@ public open class CfnChannel(
    * .styleControl("styleControl")
    * .build())
    * .build())
+   * .dvbDashAccessibility("dvbDashAccessibility")
    * .languageCode("languageCode")
    * .languageDescription("languageDescription")
    * .name("name")
@@ -7715,6 +7774,11 @@ public open class CfnChannel(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captiondescription.html#cfn-medialive-channel-captiondescription-accessibility)
      */
     public fun accessibility(): String? = unwrap(this).getAccessibility()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captiondescription.html#cfn-medialive-channel-captiondescription-captiondashroles)
+     */
+    public fun captionDashRoles(): List<String> = unwrap(this).getCaptionDashRoles() ?: emptyList()
 
     /**
      * Specifies which input captions selector to use as a captions source when generating output
@@ -7732,6 +7796,11 @@ public open class CfnChannel(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captiondescription.html#cfn-medialive-channel-captiondescription-destinationsettings)
      */
     public fun destinationSettings(): Any? = unwrap(this).getDestinationSettings()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captiondescription.html#cfn-medialive-channel-captiondescription-dvbdashaccessibility)
+     */
+    public fun dvbDashAccessibility(): String? = unwrap(this).getDvbDashAccessibility()
 
     /**
      * An ISO 639-2 three-digit code.
@@ -7771,6 +7840,16 @@ public open class CfnChannel(
       public fun accessibility(accessibility: String)
 
       /**
+       * @param captionDashRoles the value to be set.
+       */
+      public fun captionDashRoles(captionDashRoles: List<String>)
+
+      /**
+       * @param captionDashRoles the value to be set.
+       */
+      public fun captionDashRoles(vararg captionDashRoles: String)
+
+      /**
        * @param captionSelectorName Specifies which input captions selector to use as a captions
        * source when generating output captions.
        * This field should match a captionSelector name.
@@ -7797,6 +7876,11 @@ public open class CfnChannel(
       @JvmName("0f1770abcbc58775ad8bd56af514fbcdc88ca0b96ef4da293ace57be6c40f7e2")
       public
           fun destinationSettings(destinationSettings: CaptionDestinationSettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param dvbDashAccessibility the value to be set.
+       */
+      public fun dvbDashAccessibility(dvbDashAccessibility: String)
 
       /**
        * @param languageCode An ISO 639-2 three-digit code.
@@ -7831,6 +7915,19 @@ public open class CfnChannel(
       }
 
       /**
+       * @param captionDashRoles the value to be set.
+       */
+      override fun captionDashRoles(captionDashRoles: List<String>) {
+        cdkBuilder.captionDashRoles(captionDashRoles)
+      }
+
+      /**
+       * @param captionDashRoles the value to be set.
+       */
+      override fun captionDashRoles(vararg captionDashRoles: String): Unit =
+          captionDashRoles(captionDashRoles.toList())
+
+      /**
        * @param captionSelectorName Specifies which input captions selector to use as a captions
        * source when generating output captions.
        * This field should match a captionSelector name.
@@ -7844,7 +7941,7 @@ public open class CfnChannel(
        * the destination type.
        */
       override fun destinationSettings(destinationSettings: IResolvable) {
-        cdkBuilder.destinationSettings(destinationSettings.let(IResolvable::unwrap))
+        cdkBuilder.destinationSettings(destinationSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7852,7 +7949,7 @@ public open class CfnChannel(
        * the destination type.
        */
       override fun destinationSettings(destinationSettings: CaptionDestinationSettingsProperty) {
-        cdkBuilder.destinationSettings(destinationSettings.let(CaptionDestinationSettingsProperty::unwrap))
+        cdkBuilder.destinationSettings(destinationSettings.let(CaptionDestinationSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -7864,6 +7961,13 @@ public open class CfnChannel(
       override
           fun destinationSettings(destinationSettings: CaptionDestinationSettingsProperty.Builder.() -> Unit):
           Unit = destinationSettings(CaptionDestinationSettingsProperty(destinationSettings))
+
+      /**
+       * @param dvbDashAccessibility the value to be set.
+       */
+      override fun dvbDashAccessibility(dvbDashAccessibility: String) {
+        cdkBuilder.dvbDashAccessibility(dvbDashAccessibility)
+      }
 
       /**
        * @param languageCode An ISO 639-2 three-digit code.
@@ -7904,6 +8008,12 @@ public open class CfnChannel(
       override fun accessibility(): String? = unwrap(this).getAccessibility()
 
       /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captiondescription.html#cfn-medialive-channel-captiondescription-captiondashroles)
+       */
+      override fun captionDashRoles(): List<String> = unwrap(this).getCaptionDashRoles() ?:
+          emptyList()
+
+      /**
        * Specifies which input captions selector to use as a captions source when generating output
        * captions.
        *
@@ -7919,6 +8029,11 @@ public open class CfnChannel(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captiondescription.html#cfn-medialive-channel-captiondescription-destinationsettings)
        */
       override fun destinationSettings(): Any? = unwrap(this).getDestinationSettings()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-captiondescription.html#cfn-medialive-channel-captiondescription-dvbdashaccessibility)
+       */
+      override fun dvbDashAccessibility(): String? = unwrap(this).getDvbDashAccessibility()
 
       /**
        * An ISO 639-2 three-digit code.
@@ -8438,7 +8553,7 @@ public open class CfnChannel(
        * @param aribDestinationSettings The configuration of one ARIB captions encode in the output.
        */
       override fun aribDestinationSettings(aribDestinationSettings: IResolvable) {
-        cdkBuilder.aribDestinationSettings(aribDestinationSettings.let(IResolvable::unwrap))
+        cdkBuilder.aribDestinationSettings(aribDestinationSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8446,7 +8561,7 @@ public open class CfnChannel(
        */
       override
           fun aribDestinationSettings(aribDestinationSettings: AribDestinationSettingsProperty) {
-        cdkBuilder.aribDestinationSettings(aribDestinationSettings.let(AribDestinationSettingsProperty::unwrap))
+        cdkBuilder.aribDestinationSettings(aribDestinationSettings.let(AribDestinationSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -8463,7 +8578,7 @@ public open class CfnChannel(
        * output.
        */
       override fun burnInDestinationSettings(burnInDestinationSettings: IResolvable) {
-        cdkBuilder.burnInDestinationSettings(burnInDestinationSettings.let(IResolvable::unwrap))
+        cdkBuilder.burnInDestinationSettings(burnInDestinationSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8472,7 +8587,7 @@ public open class CfnChannel(
        */
       override
           fun burnInDestinationSettings(burnInDestinationSettings: BurnInDestinationSettingsProperty) {
-        cdkBuilder.burnInDestinationSettings(burnInDestinationSettings.let(BurnInDestinationSettingsProperty::unwrap))
+        cdkBuilder.burnInDestinationSettings(burnInDestinationSettings.let(BurnInDestinationSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -8491,7 +8606,7 @@ public open class CfnChannel(
        * output.
        */
       override fun dvbSubDestinationSettings(dvbSubDestinationSettings: IResolvable) {
-        cdkBuilder.dvbSubDestinationSettings(dvbSubDestinationSettings.let(IResolvable::unwrap))
+        cdkBuilder.dvbSubDestinationSettings(dvbSubDestinationSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8500,7 +8615,7 @@ public open class CfnChannel(
        */
       override
           fun dvbSubDestinationSettings(dvbSubDestinationSettings: DvbSubDestinationSettingsProperty) {
-        cdkBuilder.dvbSubDestinationSettings(dvbSubDestinationSettings.let(DvbSubDestinationSettingsProperty::unwrap))
+        cdkBuilder.dvbSubDestinationSettings(dvbSubDestinationSettings.let(DvbSubDestinationSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -8518,7 +8633,7 @@ public open class CfnChannel(
        * @param ebuTtDDestinationSettings Settings for EBU-TT captions in the output.
        */
       override fun ebuTtDDestinationSettings(ebuTtDDestinationSettings: IResolvable) {
-        cdkBuilder.ebuTtDDestinationSettings(ebuTtDDestinationSettings.let(IResolvable::unwrap))
+        cdkBuilder.ebuTtDDestinationSettings(ebuTtDDestinationSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8526,7 +8641,7 @@ public open class CfnChannel(
        */
       override
           fun ebuTtDDestinationSettings(ebuTtDDestinationSettings: EbuTtDDestinationSettingsProperty) {
-        cdkBuilder.ebuTtDDestinationSettings(ebuTtDDestinationSettings.let(EbuTtDDestinationSettingsProperty::unwrap))
+        cdkBuilder.ebuTtDDestinationSettings(ebuTtDDestinationSettings.let(EbuTtDDestinationSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -8544,7 +8659,7 @@ public open class CfnChannel(
        * output.
        */
       override fun embeddedDestinationSettings(embeddedDestinationSettings: IResolvable) {
-        cdkBuilder.embeddedDestinationSettings(embeddedDestinationSettings.let(IResolvable::unwrap))
+        cdkBuilder.embeddedDestinationSettings(embeddedDestinationSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8553,7 +8668,7 @@ public open class CfnChannel(
        */
       override
           fun embeddedDestinationSettings(embeddedDestinationSettings: EmbeddedDestinationSettingsProperty) {
-        cdkBuilder.embeddedDestinationSettings(embeddedDestinationSettings.let(EmbeddedDestinationSettingsProperty::unwrap))
+        cdkBuilder.embeddedDestinationSettings(embeddedDestinationSettings.let(EmbeddedDestinationSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -8573,7 +8688,7 @@ public open class CfnChannel(
        */
       override
           fun embeddedPlusScte20DestinationSettings(embeddedPlusScte20DestinationSettings: IResolvable) {
-        cdkBuilder.embeddedPlusScte20DestinationSettings(embeddedPlusScte20DestinationSettings.let(IResolvable::unwrap))
+        cdkBuilder.embeddedPlusScte20DestinationSettings(embeddedPlusScte20DestinationSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8582,7 +8697,7 @@ public open class CfnChannel(
        */
       override
           fun embeddedPlusScte20DestinationSettings(embeddedPlusScte20DestinationSettings: EmbeddedPlusScte20DestinationSettingsProperty) {
-        cdkBuilder.embeddedPlusScte20DestinationSettings(embeddedPlusScte20DestinationSettings.let(EmbeddedPlusScte20DestinationSettingsProperty::unwrap))
+        cdkBuilder.embeddedPlusScte20DestinationSettings(embeddedPlusScte20DestinationSettings.let(EmbeddedPlusScte20DestinationSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -8602,7 +8717,7 @@ public open class CfnChannel(
        */
       override
           fun rtmpCaptionInfoDestinationSettings(rtmpCaptionInfoDestinationSettings: IResolvable) {
-        cdkBuilder.rtmpCaptionInfoDestinationSettings(rtmpCaptionInfoDestinationSettings.let(IResolvable::unwrap))
+        cdkBuilder.rtmpCaptionInfoDestinationSettings(rtmpCaptionInfoDestinationSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8611,7 +8726,7 @@ public open class CfnChannel(
        */
       override
           fun rtmpCaptionInfoDestinationSettings(rtmpCaptionInfoDestinationSettings: RtmpCaptionInfoDestinationSettingsProperty) {
-        cdkBuilder.rtmpCaptionInfoDestinationSettings(rtmpCaptionInfoDestinationSettings.let(RtmpCaptionInfoDestinationSettingsProperty::unwrap))
+        cdkBuilder.rtmpCaptionInfoDestinationSettings(rtmpCaptionInfoDestinationSettings.let(RtmpCaptionInfoDestinationSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -8631,7 +8746,7 @@ public open class CfnChannel(
        */
       override
           fun scte20PlusEmbeddedDestinationSettings(scte20PlusEmbeddedDestinationSettings: IResolvable) {
-        cdkBuilder.scte20PlusEmbeddedDestinationSettings(scte20PlusEmbeddedDestinationSettings.let(IResolvable::unwrap))
+        cdkBuilder.scte20PlusEmbeddedDestinationSettings(scte20PlusEmbeddedDestinationSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8640,7 +8755,7 @@ public open class CfnChannel(
        */
       override
           fun scte20PlusEmbeddedDestinationSettings(scte20PlusEmbeddedDestinationSettings: Scte20PlusEmbeddedDestinationSettingsProperty) {
-        cdkBuilder.scte20PlusEmbeddedDestinationSettings(scte20PlusEmbeddedDestinationSettings.let(Scte20PlusEmbeddedDestinationSettingsProperty::unwrap))
+        cdkBuilder.scte20PlusEmbeddedDestinationSettings(scte20PlusEmbeddedDestinationSettings.let(Scte20PlusEmbeddedDestinationSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -8659,7 +8774,7 @@ public open class CfnChannel(
        * output.
        */
       override fun scte27DestinationSettings(scte27DestinationSettings: IResolvable) {
-        cdkBuilder.scte27DestinationSettings(scte27DestinationSettings.let(IResolvable::unwrap))
+        cdkBuilder.scte27DestinationSettings(scte27DestinationSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8668,7 +8783,7 @@ public open class CfnChannel(
        */
       override
           fun scte27DestinationSettings(scte27DestinationSettings: Scte27DestinationSettingsProperty) {
-        cdkBuilder.scte27DestinationSettings(scte27DestinationSettings.let(Scte27DestinationSettingsProperty::unwrap))
+        cdkBuilder.scte27DestinationSettings(scte27DestinationSettings.let(Scte27DestinationSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -8687,7 +8802,7 @@ public open class CfnChannel(
        * output.
        */
       override fun smpteTtDestinationSettings(smpteTtDestinationSettings: IResolvable) {
-        cdkBuilder.smpteTtDestinationSettings(smpteTtDestinationSettings.let(IResolvable::unwrap))
+        cdkBuilder.smpteTtDestinationSettings(smpteTtDestinationSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8696,7 +8811,7 @@ public open class CfnChannel(
        */
       override
           fun smpteTtDestinationSettings(smpteTtDestinationSettings: SmpteTtDestinationSettingsProperty) {
-        cdkBuilder.smpteTtDestinationSettings(smpteTtDestinationSettings.let(SmpteTtDestinationSettingsProperty::unwrap))
+        cdkBuilder.smpteTtDestinationSettings(smpteTtDestinationSettings.let(SmpteTtDestinationSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -8715,7 +8830,7 @@ public open class CfnChannel(
        * output.
        */
       override fun teletextDestinationSettings(teletextDestinationSettings: IResolvable) {
-        cdkBuilder.teletextDestinationSettings(teletextDestinationSettings.let(IResolvable::unwrap))
+        cdkBuilder.teletextDestinationSettings(teletextDestinationSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8724,7 +8839,7 @@ public open class CfnChannel(
        */
       override
           fun teletextDestinationSettings(teletextDestinationSettings: TeletextDestinationSettingsProperty) {
-        cdkBuilder.teletextDestinationSettings(teletextDestinationSettings.let(TeletextDestinationSettingsProperty::unwrap))
+        cdkBuilder.teletextDestinationSettings(teletextDestinationSettings.let(TeletextDestinationSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -8742,7 +8857,7 @@ public open class CfnChannel(
        * @param ttmlDestinationSettings The configuration of one TTML captions encode in the output.
        */
       override fun ttmlDestinationSettings(ttmlDestinationSettings: IResolvable) {
-        cdkBuilder.ttmlDestinationSettings(ttmlDestinationSettings.let(IResolvable::unwrap))
+        cdkBuilder.ttmlDestinationSettings(ttmlDestinationSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8750,7 +8865,7 @@ public open class CfnChannel(
        */
       override
           fun ttmlDestinationSettings(ttmlDestinationSettings: TtmlDestinationSettingsProperty) {
-        cdkBuilder.ttmlDestinationSettings(ttmlDestinationSettings.let(TtmlDestinationSettingsProperty::unwrap))
+        cdkBuilder.ttmlDestinationSettings(ttmlDestinationSettings.let(TtmlDestinationSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -8767,7 +8882,7 @@ public open class CfnChannel(
        * output.
        */
       override fun webvttDestinationSettings(webvttDestinationSettings: IResolvable) {
-        cdkBuilder.webvttDestinationSettings(webvttDestinationSettings.let(IResolvable::unwrap))
+        cdkBuilder.webvttDestinationSettings(webvttDestinationSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8776,7 +8891,7 @@ public open class CfnChannel(
        */
       override
           fun webvttDestinationSettings(webvttDestinationSettings: WebvttDestinationSettingsProperty) {
-        cdkBuilder.webvttDestinationSettings(webvttDestinationSettings.let(WebvttDestinationSettingsProperty::unwrap))
+        cdkBuilder.webvttDestinationSettings(webvttDestinationSettings.let(WebvttDestinationSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -9480,14 +9595,14 @@ public open class CfnChannel(
        * @param selectorSettings Information about the specific audio to extract from the input.
        */
       override fun selectorSettings(selectorSettings: IResolvable) {
-        cdkBuilder.selectorSettings(selectorSettings.let(IResolvable::unwrap))
+        cdkBuilder.selectorSettings(selectorSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param selectorSettings Information about the specific audio to extract from the input.
        */
       override fun selectorSettings(selectorSettings: CaptionSelectorSettingsProperty) {
-        cdkBuilder.selectorSettings(selectorSettings.let(CaptionSelectorSettingsProperty::unwrap))
+        cdkBuilder.selectorSettings(selectorSettings.let(CaptionSelectorSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -9811,7 +9926,7 @@ public open class CfnChannel(
        * input.
        */
       override fun ancillarySourceSettings(ancillarySourceSettings: IResolvable) {
-        cdkBuilder.ancillarySourceSettings(ancillarySourceSettings.let(IResolvable::unwrap))
+        cdkBuilder.ancillarySourceSettings(ancillarySourceSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9820,7 +9935,7 @@ public open class CfnChannel(
        */
       override
           fun ancillarySourceSettings(ancillarySourceSettings: AncillarySourceSettingsProperty) {
-        cdkBuilder.ancillarySourceSettings(ancillarySourceSettings.let(AncillarySourceSettingsProperty::unwrap))
+        cdkBuilder.ancillarySourceSettings(ancillarySourceSettings.let(AncillarySourceSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -9837,14 +9952,14 @@ public open class CfnChannel(
        * @param aribSourceSettings Information about the ARIB captions to extract from the input.
        */
       override fun aribSourceSettings(aribSourceSettings: IResolvable) {
-        cdkBuilder.aribSourceSettings(aribSourceSettings.let(IResolvable::unwrap))
+        cdkBuilder.aribSourceSettings(aribSourceSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param aribSourceSettings Information about the ARIB captions to extract from the input.
        */
       override fun aribSourceSettings(aribSourceSettings: AribSourceSettingsProperty) {
-        cdkBuilder.aribSourceSettings(aribSourceSettings.let(AribSourceSettingsProperty::unwrap))
+        cdkBuilder.aribSourceSettings(aribSourceSettings.let(AribSourceSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -9861,7 +9976,7 @@ public open class CfnChannel(
        * input.
        */
       override fun dvbSubSourceSettings(dvbSubSourceSettings: IResolvable) {
-        cdkBuilder.dvbSubSourceSettings(dvbSubSourceSettings.let(IResolvable::unwrap))
+        cdkBuilder.dvbSubSourceSettings(dvbSubSourceSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9869,7 +9984,7 @@ public open class CfnChannel(
        * input.
        */
       override fun dvbSubSourceSettings(dvbSubSourceSettings: DvbSubSourceSettingsProperty) {
-        cdkBuilder.dvbSubSourceSettings(dvbSubSourceSettings.let(DvbSubSourceSettingsProperty::unwrap))
+        cdkBuilder.dvbSubSourceSettings(dvbSubSourceSettings.let(DvbSubSourceSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -9887,7 +10002,7 @@ public open class CfnChannel(
        * input.
        */
       override fun embeddedSourceSettings(embeddedSourceSettings: IResolvable) {
-        cdkBuilder.embeddedSourceSettings(embeddedSourceSettings.let(IResolvable::unwrap))
+        cdkBuilder.embeddedSourceSettings(embeddedSourceSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9895,7 +10010,7 @@ public open class CfnChannel(
        * input.
        */
       override fun embeddedSourceSettings(embeddedSourceSettings: EmbeddedSourceSettingsProperty) {
-        cdkBuilder.embeddedSourceSettings(embeddedSourceSettings.let(EmbeddedSourceSettingsProperty::unwrap))
+        cdkBuilder.embeddedSourceSettings(embeddedSourceSettings.let(EmbeddedSourceSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -9913,7 +10028,7 @@ public open class CfnChannel(
        * input.
        */
       override fun scte20SourceSettings(scte20SourceSettings: IResolvable) {
-        cdkBuilder.scte20SourceSettings(scte20SourceSettings.let(IResolvable::unwrap))
+        cdkBuilder.scte20SourceSettings(scte20SourceSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9921,7 +10036,7 @@ public open class CfnChannel(
        * input.
        */
       override fun scte20SourceSettings(scte20SourceSettings: Scte20SourceSettingsProperty) {
-        cdkBuilder.scte20SourceSettings(scte20SourceSettings.let(Scte20SourceSettingsProperty::unwrap))
+        cdkBuilder.scte20SourceSettings(scte20SourceSettings.let(Scte20SourceSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -9939,7 +10054,7 @@ public open class CfnChannel(
        * input.
        */
       override fun scte27SourceSettings(scte27SourceSettings: IResolvable) {
-        cdkBuilder.scte27SourceSettings(scte27SourceSettings.let(IResolvable::unwrap))
+        cdkBuilder.scte27SourceSettings(scte27SourceSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9947,7 +10062,7 @@ public open class CfnChannel(
        * input.
        */
       override fun scte27SourceSettings(scte27SourceSettings: Scte27SourceSettingsProperty) {
-        cdkBuilder.scte27SourceSettings(scte27SourceSettings.let(Scte27SourceSettingsProperty::unwrap))
+        cdkBuilder.scte27SourceSettings(scte27SourceSettings.let(Scte27SourceSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -9965,7 +10080,7 @@ public open class CfnChannel(
        * input.
        */
       override fun teletextSourceSettings(teletextSourceSettings: IResolvable) {
-        cdkBuilder.teletextSourceSettings(teletextSourceSettings.let(IResolvable::unwrap))
+        cdkBuilder.teletextSourceSettings(teletextSourceSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9973,7 +10088,7 @@ public open class CfnChannel(
        * input.
        */
       override fun teletextSourceSettings(teletextSourceSettings: TeletextSourceSettingsProperty) {
-        cdkBuilder.teletextSourceSettings(teletextSourceSettings.let(TeletextSourceSettingsProperty::unwrap))
+        cdkBuilder.teletextSourceSettings(teletextSourceSettings.let(TeletextSourceSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -10157,6 +10272,304 @@ public open class CfnChannel(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * CmafIngestGroupSettingsProperty cmafIngestGroupSettingsProperty =
+   * CmafIngestGroupSettingsProperty.builder()
+   * .destination(OutputLocationRefProperty.builder()
+   * .destinationRefId("destinationRefId")
+   * .build())
+   * .nielsenId3Behavior("nielsenId3Behavior")
+   * .scte35Type("scte35Type")
+   * .segmentLength(123)
+   * .segmentLengthUnits("segmentLengthUnits")
+   * .sendDelayMs(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-cmafingestgroupsettings.html)
+   */
+  public interface CmafIngestGroupSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-cmafingestgroupsettings.html#cfn-medialive-channel-cmafingestgroupsettings-destination)
+     */
+    public fun destination(): Any? = unwrap(this).getDestination()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-cmafingestgroupsettings.html#cfn-medialive-channel-cmafingestgroupsettings-nielsenid3behavior)
+     */
+    public fun nielsenId3Behavior(): String? = unwrap(this).getNielsenId3Behavior()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-cmafingestgroupsettings.html#cfn-medialive-channel-cmafingestgroupsettings-scte35type)
+     */
+    public fun scte35Type(): String? = unwrap(this).getScte35Type()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-cmafingestgroupsettings.html#cfn-medialive-channel-cmafingestgroupsettings-segmentlength)
+     */
+    public fun segmentLength(): Number? = unwrap(this).getSegmentLength()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-cmafingestgroupsettings.html#cfn-medialive-channel-cmafingestgroupsettings-segmentlengthunits)
+     */
+    public fun segmentLengthUnits(): String? = unwrap(this).getSegmentLengthUnits()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-cmafingestgroupsettings.html#cfn-medialive-channel-cmafingestgroupsettings-senddelayms)
+     */
+    public fun sendDelayMs(): Number? = unwrap(this).getSendDelayMs()
+
+    /**
+     * A builder for [CmafIngestGroupSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param destination the value to be set.
+       */
+      public fun destination(destination: IResolvable)
+
+      /**
+       * @param destination the value to be set.
+       */
+      public fun destination(destination: OutputLocationRefProperty)
+
+      /**
+       * @param destination the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f0cc3521bd9c322b62fa4f4ac2fcb90ec21589f994980940ddb23e8c1f1e3f24")
+      public fun destination(destination: OutputLocationRefProperty.Builder.() -> Unit)
+
+      /**
+       * @param nielsenId3Behavior the value to be set.
+       */
+      public fun nielsenId3Behavior(nielsenId3Behavior: String)
+
+      /**
+       * @param scte35Type the value to be set.
+       */
+      public fun scte35Type(scte35Type: String)
+
+      /**
+       * @param segmentLength the value to be set.
+       */
+      public fun segmentLength(segmentLength: Number)
+
+      /**
+       * @param segmentLengthUnits the value to be set.
+       */
+      public fun segmentLengthUnits(segmentLengthUnits: String)
+
+      /**
+       * @param sendDelayMs the value to be set.
+       */
+      public fun sendDelayMs(sendDelayMs: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnChannel.CmafIngestGroupSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.medialive.CfnChannel.CmafIngestGroupSettingsProperty.builder()
+
+      /**
+       * @param destination the value to be set.
+       */
+      override fun destination(destination: IResolvable) {
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param destination the value to be set.
+       */
+      override fun destination(destination: OutputLocationRefProperty) {
+        cdkBuilder.destination(destination.let(OutputLocationRefProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param destination the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f0cc3521bd9c322b62fa4f4ac2fcb90ec21589f994980940ddb23e8c1f1e3f24")
+      override fun destination(destination: OutputLocationRefProperty.Builder.() -> Unit): Unit =
+          destination(OutputLocationRefProperty(destination))
+
+      /**
+       * @param nielsenId3Behavior the value to be set.
+       */
+      override fun nielsenId3Behavior(nielsenId3Behavior: String) {
+        cdkBuilder.nielsenId3Behavior(nielsenId3Behavior)
+      }
+
+      /**
+       * @param scte35Type the value to be set.
+       */
+      override fun scte35Type(scte35Type: String) {
+        cdkBuilder.scte35Type(scte35Type)
+      }
+
+      /**
+       * @param segmentLength the value to be set.
+       */
+      override fun segmentLength(segmentLength: Number) {
+        cdkBuilder.segmentLength(segmentLength)
+      }
+
+      /**
+       * @param segmentLengthUnits the value to be set.
+       */
+      override fun segmentLengthUnits(segmentLengthUnits: String) {
+        cdkBuilder.segmentLengthUnits(segmentLengthUnits)
+      }
+
+      /**
+       * @param sendDelayMs the value to be set.
+       */
+      override fun sendDelayMs(sendDelayMs: Number) {
+        cdkBuilder.sendDelayMs(sendDelayMs)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnChannel.CmafIngestGroupSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.CmafIngestGroupSettingsProperty,
+    ) : CdkObject(cdkObject), CmafIngestGroupSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-cmafingestgroupsettings.html#cfn-medialive-channel-cmafingestgroupsettings-destination)
+       */
+      override fun destination(): Any? = unwrap(this).getDestination()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-cmafingestgroupsettings.html#cfn-medialive-channel-cmafingestgroupsettings-nielsenid3behavior)
+       */
+      override fun nielsenId3Behavior(): String? = unwrap(this).getNielsenId3Behavior()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-cmafingestgroupsettings.html#cfn-medialive-channel-cmafingestgroupsettings-scte35type)
+       */
+      override fun scte35Type(): String? = unwrap(this).getScte35Type()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-cmafingestgroupsettings.html#cfn-medialive-channel-cmafingestgroupsettings-segmentlength)
+       */
+      override fun segmentLength(): Number? = unwrap(this).getSegmentLength()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-cmafingestgroupsettings.html#cfn-medialive-channel-cmafingestgroupsettings-segmentlengthunits)
+       */
+      override fun segmentLengthUnits(): String? = unwrap(this).getSegmentLengthUnits()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-cmafingestgroupsettings.html#cfn-medialive-channel-cmafingestgroupsettings-senddelayms)
+       */
+      override fun sendDelayMs(): Number? = unwrap(this).getSendDelayMs()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CmafIngestGroupSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.CmafIngestGroupSettingsProperty):
+          CmafIngestGroupSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CmafIngestGroupSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CmafIngestGroupSettingsProperty):
+          software.amazon.awscdk.services.medialive.CfnChannel.CmafIngestGroupSettingsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnChannel.CmafIngestGroupSettingsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * CmafIngestOutputSettingsProperty cmafIngestOutputSettingsProperty =
+   * CmafIngestOutputSettingsProperty.builder()
+   * .nameModifier("nameModifier")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-cmafingestoutputsettings.html)
+   */
+  public interface CmafIngestOutputSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-cmafingestoutputsettings.html#cfn-medialive-channel-cmafingestoutputsettings-namemodifier)
+     */
+    public fun nameModifier(): String? = unwrap(this).getNameModifier()
+
+    /**
+     * A builder for [CmafIngestOutputSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param nameModifier the value to be set.
+       */
+      public fun nameModifier(nameModifier: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnChannel.CmafIngestOutputSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.medialive.CfnChannel.CmafIngestOutputSettingsProperty.builder()
+
+      /**
+       * @param nameModifier the value to be set.
+       */
+      override fun nameModifier(nameModifier: String) {
+        cdkBuilder.nameModifier(nameModifier)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnChannel.CmafIngestOutputSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.CmafIngestOutputSettingsProperty,
+    ) : CdkObject(cdkObject), CmafIngestOutputSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-cmafingestoutputsettings.html#cfn-medialive-channel-cmafingestoutputsettings-namemodifier)
+       */
+      override fun nameModifier(): String? = unwrap(this).getNameModifier()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CmafIngestOutputSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.CmafIngestOutputSettingsProperty):
+          CmafIngestOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CmafIngestOutputSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CmafIngestOutputSettingsProperty):
+          software.amazon.awscdk.services.medialive.CfnChannel.CmafIngestOutputSettingsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnChannel.CmafIngestOutputSettingsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
    * ColorCorrectionProperty colorCorrectionProperty = ColorCorrectionProperty.builder()
    * .inputColorSpace("inputColorSpace")
    * .outputColorSpace("outputColorSpace")
@@ -10327,7 +10740,7 @@ public open class CfnChannel(
        * @param globalColorCorrections the value to be set.
        */
       override fun globalColorCorrections(globalColorCorrections: IResolvable) {
-        cdkBuilder.globalColorCorrections(globalColorCorrections.let(IResolvable::unwrap))
+        cdkBuilder.globalColorCorrections(globalColorCorrections.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11267,7 +11680,7 @@ public open class CfnChannel(
        * proportional fonts. All burn-in and DVB-Sub font settings must match.
        */
       override fun font(font: IResolvable) {
-        cdkBuilder.font(font.let(IResolvable::unwrap))
+        cdkBuilder.font(font.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11278,7 +11691,7 @@ public open class CfnChannel(
        * proportional fonts. All burn-in and DVB-Sub font settings must match.
        */
       override fun font(font: InputLocationProperty) {
-        cdkBuilder.font(font.let(InputLocationProperty::unwrap))
+        cdkBuilder.font(font.let(InputLocationProperty.Companion::unwrap))
       }
 
       /**
@@ -13700,7 +14113,7 @@ public open class CfnChannel(
        * @param audioDescriptions The encoding information for output audio.
        */
       override fun audioDescriptions(audioDescriptions: IResolvable) {
-        cdkBuilder.audioDescriptions(audioDescriptions.let(IResolvable::unwrap))
+        cdkBuilder.audioDescriptions(audioDescriptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13720,14 +14133,14 @@ public open class CfnChannel(
        * @param availBlanking The settings for ad avail blanking.
        */
       override fun availBlanking(availBlanking: IResolvable) {
-        cdkBuilder.availBlanking(availBlanking.let(IResolvable::unwrap))
+        cdkBuilder.availBlanking(availBlanking.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param availBlanking The settings for ad avail blanking.
        */
       override fun availBlanking(availBlanking: AvailBlankingProperty) {
-        cdkBuilder.availBlanking(availBlanking.let(AvailBlankingProperty::unwrap))
+        cdkBuilder.availBlanking(availBlanking.let(AvailBlankingProperty.Companion::unwrap))
       }
 
       /**
@@ -13742,14 +14155,14 @@ public open class CfnChannel(
        * @param availConfiguration The configuration settings for the ad avail handling.
        */
       override fun availConfiguration(availConfiguration: IResolvable) {
-        cdkBuilder.availConfiguration(availConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.availConfiguration(availConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param availConfiguration The configuration settings for the ad avail handling.
        */
       override fun availConfiguration(availConfiguration: AvailConfigurationProperty) {
-        cdkBuilder.availConfiguration(availConfiguration.let(AvailConfigurationProperty::unwrap))
+        cdkBuilder.availConfiguration(availConfiguration.let(AvailConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -13765,14 +14178,14 @@ public open class CfnChannel(
        * @param blackoutSlate The settings for the blackout slate.
        */
       override fun blackoutSlate(blackoutSlate: IResolvable) {
-        cdkBuilder.blackoutSlate(blackoutSlate.let(IResolvable::unwrap))
+        cdkBuilder.blackoutSlate(blackoutSlate.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param blackoutSlate The settings for the blackout slate.
        */
       override fun blackoutSlate(blackoutSlate: BlackoutSlateProperty) {
-        cdkBuilder.blackoutSlate(blackoutSlate.let(BlackoutSlateProperty::unwrap))
+        cdkBuilder.blackoutSlate(blackoutSlate.let(BlackoutSlateProperty.Companion::unwrap))
       }
 
       /**
@@ -13787,7 +14200,7 @@ public open class CfnChannel(
        * @param captionDescriptions The encoding information for output captions.
        */
       override fun captionDescriptions(captionDescriptions: IResolvable) {
-        cdkBuilder.captionDescriptions(captionDescriptions.let(IResolvable::unwrap))
+        cdkBuilder.captionDescriptions(captionDescriptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13807,7 +14220,7 @@ public open class CfnChannel(
        * @param colorCorrectionSettings the value to be set.
        */
       override fun colorCorrectionSettings(colorCorrectionSettings: IResolvable) {
-        cdkBuilder.colorCorrectionSettings(colorCorrectionSettings.let(IResolvable::unwrap))
+        cdkBuilder.colorCorrectionSettings(colorCorrectionSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13815,7 +14228,7 @@ public open class CfnChannel(
        */
       override
           fun colorCorrectionSettings(colorCorrectionSettings: ColorCorrectionSettingsProperty) {
-        cdkBuilder.colorCorrectionSettings(colorCorrectionSettings.let(ColorCorrectionSettingsProperty::unwrap))
+        cdkBuilder.colorCorrectionSettings(colorCorrectionSettings.let(ColorCorrectionSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -13831,14 +14244,14 @@ public open class CfnChannel(
        * @param featureActivations Settings to enable specific features.
        */
       override fun featureActivations(featureActivations: IResolvable) {
-        cdkBuilder.featureActivations(featureActivations.let(IResolvable::unwrap))
+        cdkBuilder.featureActivations(featureActivations.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param featureActivations Settings to enable specific features.
        */
       override fun featureActivations(featureActivations: FeatureActivationsProperty) {
-        cdkBuilder.featureActivations(featureActivations.let(FeatureActivationsProperty::unwrap))
+        cdkBuilder.featureActivations(featureActivations.let(FeatureActivationsProperty.Companion::unwrap))
       }
 
       /**
@@ -13854,14 +14267,14 @@ public open class CfnChannel(
        * @param globalConfiguration The configuration settings that apply to the entire channel.
        */
       override fun globalConfiguration(globalConfiguration: IResolvable) {
-        cdkBuilder.globalConfiguration(globalConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.globalConfiguration(globalConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param globalConfiguration The configuration settings that apply to the entire channel.
        */
       override fun globalConfiguration(globalConfiguration: GlobalConfigurationProperty) {
-        cdkBuilder.globalConfiguration(globalConfiguration.let(GlobalConfigurationProperty::unwrap))
+        cdkBuilder.globalConfiguration(globalConfiguration.let(GlobalConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -13878,7 +14291,7 @@ public open class CfnChannel(
        * overlay feature in the channel.
        */
       override fun motionGraphicsConfiguration(motionGraphicsConfiguration: IResolvable) {
-        cdkBuilder.motionGraphicsConfiguration(motionGraphicsConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.motionGraphicsConfiguration(motionGraphicsConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13887,7 +14300,7 @@ public open class CfnChannel(
        */
       override
           fun motionGraphicsConfiguration(motionGraphicsConfiguration: MotionGraphicsConfigurationProperty) {
-        cdkBuilder.motionGraphicsConfiguration(motionGraphicsConfiguration.let(MotionGraphicsConfigurationProperty::unwrap))
+        cdkBuilder.motionGraphicsConfiguration(motionGraphicsConfiguration.let(MotionGraphicsConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -13905,14 +14318,14 @@ public open class CfnChannel(
        * @param nielsenConfiguration The settings to configure Nielsen watermarks.
        */
       override fun nielsenConfiguration(nielsenConfiguration: IResolvable) {
-        cdkBuilder.nielsenConfiguration(nielsenConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.nielsenConfiguration(nielsenConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param nielsenConfiguration The settings to configure Nielsen watermarks.
        */
       override fun nielsenConfiguration(nielsenConfiguration: NielsenConfigurationProperty) {
-        cdkBuilder.nielsenConfiguration(nielsenConfiguration.let(NielsenConfigurationProperty::unwrap))
+        cdkBuilder.nielsenConfiguration(nielsenConfiguration.let(NielsenConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -13928,7 +14341,7 @@ public open class CfnChannel(
        * @param outputGroups The settings for the output groups in the channel.
        */
       override fun outputGroups(outputGroups: IResolvable) {
-        cdkBuilder.outputGroups(outputGroups.let(IResolvable::unwrap))
+        cdkBuilder.outputGroups(outputGroups.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13948,14 +14361,14 @@ public open class CfnChannel(
        * @param thumbnailConfiguration the value to be set.
        */
       override fun thumbnailConfiguration(thumbnailConfiguration: IResolvable) {
-        cdkBuilder.thumbnailConfiguration(thumbnailConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.thumbnailConfiguration(thumbnailConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param thumbnailConfiguration the value to be set.
        */
       override fun thumbnailConfiguration(thumbnailConfiguration: ThumbnailConfigurationProperty) {
-        cdkBuilder.thumbnailConfiguration(thumbnailConfiguration.let(ThumbnailConfigurationProperty::unwrap))
+        cdkBuilder.thumbnailConfiguration(thumbnailConfiguration.let(ThumbnailConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -13972,7 +14385,7 @@ public open class CfnChannel(
        * from the inputs.
        */
       override fun timecodeConfig(timecodeConfig: IResolvable) {
-        cdkBuilder.timecodeConfig(timecodeConfig.let(IResolvable::unwrap))
+        cdkBuilder.timecodeConfig(timecodeConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13980,7 +14393,7 @@ public open class CfnChannel(
        * from the inputs.
        */
       override fun timecodeConfig(timecodeConfig: TimecodeConfigProperty) {
-        cdkBuilder.timecodeConfig(timecodeConfig.let(TimecodeConfigProperty::unwrap))
+        cdkBuilder.timecodeConfig(timecodeConfig.let(TimecodeConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -13996,7 +14409,7 @@ public open class CfnChannel(
        * @param videoDescriptions The encoding information for output videos.
        */
       override fun videoDescriptions(videoDescriptions: IResolvable) {
-        cdkBuilder.videoDescriptions(videoDescriptions.let(IResolvable::unwrap))
+        cdkBuilder.videoDescriptions(videoDescriptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14494,7 +14907,7 @@ public open class CfnChannel(
        * @param failoverConditionSettings Settings for a specific failover condition.
        */
       override fun failoverConditionSettings(failoverConditionSettings: IResolvable) {
-        cdkBuilder.failoverConditionSettings(failoverConditionSettings.let(IResolvable::unwrap))
+        cdkBuilder.failoverConditionSettings(failoverConditionSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14502,7 +14915,7 @@ public open class CfnChannel(
        */
       override
           fun failoverConditionSettings(failoverConditionSettings: FailoverConditionSettingsProperty) {
-        cdkBuilder.failoverConditionSettings(failoverConditionSettings.let(FailoverConditionSettingsProperty::unwrap))
+        cdkBuilder.failoverConditionSettings(failoverConditionSettings.let(FailoverConditionSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -14682,7 +15095,7 @@ public open class CfnChannel(
        * selector is silent for the specified period.
        */
       override fun audioSilenceSettings(audioSilenceSettings: IResolvable) {
-        cdkBuilder.audioSilenceSettings(audioSilenceSettings.let(IResolvable::unwrap))
+        cdkBuilder.audioSilenceSettings(audioSilenceSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14691,7 +15104,7 @@ public open class CfnChannel(
        */
       override
           fun audioSilenceSettings(audioSilenceSettings: AudioSilenceFailoverSettingsProperty) {
-        cdkBuilder.audioSilenceSettings(audioSilenceSettings.let(AudioSilenceFailoverSettingsProperty::unwrap))
+        cdkBuilder.audioSilenceSettings(audioSilenceSettings.let(AudioSilenceFailoverSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -14709,7 +15122,7 @@ public open class CfnChannel(
        * this input for the specified period.
        */
       override fun inputLossSettings(inputLossSettings: IResolvable) {
-        cdkBuilder.inputLossSettings(inputLossSettings.let(IResolvable::unwrap))
+        cdkBuilder.inputLossSettings(inputLossSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14717,7 +15130,7 @@ public open class CfnChannel(
        * this input for the specified period.
        */
       override fun inputLossSettings(inputLossSettings: InputLossFailoverSettingsProperty) {
-        cdkBuilder.inputLossSettings(inputLossSettings.let(InputLossFailoverSettingsProperty::unwrap))
+        cdkBuilder.inputLossSettings(inputLossSettings.let(InputLossFailoverSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -14735,7 +15148,7 @@ public open class CfnChannel(
        * for the specified period.
        */
       override fun videoBlackSettings(videoBlackSettings: IResolvable) {
-        cdkBuilder.videoBlackSettings(videoBlackSettings.let(IResolvable::unwrap))
+        cdkBuilder.videoBlackSettings(videoBlackSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14743,7 +15156,7 @@ public open class CfnChannel(
        * for the specified period.
        */
       override fun videoBlackSettings(videoBlackSettings: VideoBlackFailoverSettingsProperty) {
-        cdkBuilder.videoBlackSettings(videoBlackSettings.let(VideoBlackFailoverSettingsProperty::unwrap))
+        cdkBuilder.videoBlackSettings(videoBlackSettings.let(VideoBlackFailoverSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -15321,7 +15734,7 @@ public open class CfnChannel(
        * output.
        */
       override fun frameCaptureS3Settings(frameCaptureS3Settings: IResolvable) {
-        cdkBuilder.frameCaptureS3Settings(frameCaptureS3Settings.let(IResolvable::unwrap))
+        cdkBuilder.frameCaptureS3Settings(frameCaptureS3Settings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -15329,7 +15742,7 @@ public open class CfnChannel(
        * output.
        */
       override fun frameCaptureS3Settings(frameCaptureS3Settings: FrameCaptureS3SettingsProperty) {
-        cdkBuilder.frameCaptureS3Settings(frameCaptureS3Settings.let(FrameCaptureS3SettingsProperty::unwrap))
+        cdkBuilder.frameCaptureS3Settings(frameCaptureS3Settings.let(FrameCaptureS3SettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -15502,7 +15915,7 @@ public open class CfnChannel(
        * starting from 00001) + extension (which is always .jpg). For example, curlingLow.00001.jpg.
        */
       override fun destination(destination: IResolvable) {
-        cdkBuilder.destination(destination.let(IResolvable::unwrap))
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -15515,7 +15928,7 @@ public open class CfnChannel(
        * starting from 00001) + extension (which is always .jpg). For example, curlingLow.00001.jpg.
        */
       override fun destination(destination: OutputLocationRefProperty) {
-        cdkBuilder.destination(destination.let(OutputLocationRefProperty::unwrap))
+        cdkBuilder.destination(destination.let(OutputLocationRefProperty.Companion::unwrap))
       }
 
       /**
@@ -15537,7 +15950,7 @@ public open class CfnChannel(
        * output.
        */
       override fun frameCaptureCdnSettings(frameCaptureCdnSettings: IResolvable) {
-        cdkBuilder.frameCaptureCdnSettings(frameCaptureCdnSettings.let(IResolvable::unwrap))
+        cdkBuilder.frameCaptureCdnSettings(frameCaptureCdnSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -15546,7 +15959,7 @@ public open class CfnChannel(
        */
       override
           fun frameCaptureCdnSettings(frameCaptureCdnSettings: FrameCaptureCdnSettingsProperty) {
-        cdkBuilder.frameCaptureCdnSettings(frameCaptureCdnSettings.let(FrameCaptureCdnSettingsProperty::unwrap))
+        cdkBuilder.frameCaptureCdnSettings(frameCaptureCdnSettings.let(FrameCaptureCdnSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -15953,14 +16366,14 @@ public open class CfnChannel(
        * @param timecodeBurninSettings the value to be set.
        */
       override fun timecodeBurninSettings(timecodeBurninSettings: IResolvable) {
-        cdkBuilder.timecodeBurninSettings(timecodeBurninSettings.let(IResolvable::unwrap))
+        cdkBuilder.timecodeBurninSettings(timecodeBurninSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param timecodeBurninSettings the value to be set.
        */
       override fun timecodeBurninSettings(timecodeBurninSettings: TimecodeBurninSettingsProperty) {
-        cdkBuilder.timecodeBurninSettings(timecodeBurninSettings.let(TimecodeBurninSettingsProperty::unwrap))
+        cdkBuilder.timecodeBurninSettings(timecodeBurninSettings.let(TimecodeBurninSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -16229,14 +16642,14 @@ public open class CfnChannel(
        * @param inputLossBehavior The settings for system actions when the input is lost.
        */
       override fun inputLossBehavior(inputLossBehavior: IResolvable) {
-        cdkBuilder.inputLossBehavior(inputLossBehavior.let(IResolvable::unwrap))
+        cdkBuilder.inputLossBehavior(inputLossBehavior.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param inputLossBehavior The settings for system actions when the input is lost.
        */
       override fun inputLossBehavior(inputLossBehavior: InputLossBehaviorProperty) {
-        cdkBuilder.inputLossBehavior(inputLossBehavior.let(InputLossBehaviorProperty::unwrap))
+        cdkBuilder.inputLossBehavior(inputLossBehavior.let(InputLossBehaviorProperty.Companion::unwrap))
       }
 
       /**
@@ -16262,14 +16675,14 @@ public open class CfnChannel(
        * @param outputLockingSettings the value to be set.
        */
       override fun outputLockingSettings(outputLockingSettings: IResolvable) {
-        cdkBuilder.outputLockingSettings(outputLockingSettings.let(IResolvable::unwrap))
+        cdkBuilder.outputLockingSettings(outputLockingSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param outputLockingSettings the value to be set.
        */
       override fun outputLockingSettings(outputLockingSettings: OutputLockingSettingsProperty) {
-        cdkBuilder.outputLockingSettings(outputLockingSettings.let(OutputLockingSettingsProperty::unwrap))
+        cdkBuilder.outputLockingSettings(outputLockingSettings.let(OutputLockingSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -16507,7 +16920,7 @@ public open class CfnChannel(
        * output.
        */
       override fun colorSpacePassthroughSettings(colorSpacePassthroughSettings: IResolvable) {
-        cdkBuilder.colorSpacePassthroughSettings(colorSpacePassthroughSettings.let(IResolvable::unwrap))
+        cdkBuilder.colorSpacePassthroughSettings(colorSpacePassthroughSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16516,7 +16929,7 @@ public open class CfnChannel(
        */
       override
           fun colorSpacePassthroughSettings(colorSpacePassthroughSettings: ColorSpacePassthroughSettingsProperty) {
-        cdkBuilder.colorSpacePassthroughSettings(colorSpacePassthroughSettings.let(ColorSpacePassthroughSettingsProperty::unwrap))
+        cdkBuilder.colorSpacePassthroughSettings(colorSpacePassthroughSettings.let(ColorSpacePassthroughSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -16534,14 +16947,14 @@ public open class CfnChannel(
        * @param rec601Settings Settings to configure the handling of Rec601 color space.
        */
       override fun rec601Settings(rec601Settings: IResolvable) {
-        cdkBuilder.rec601Settings(rec601Settings.let(IResolvable::unwrap))
+        cdkBuilder.rec601Settings(rec601Settings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param rec601Settings Settings to configure the handling of Rec601 color space.
        */
       override fun rec601Settings(rec601Settings: Rec601SettingsProperty) {
-        cdkBuilder.rec601Settings(rec601Settings.let(Rec601SettingsProperty::unwrap))
+        cdkBuilder.rec601Settings(rec601Settings.let(Rec601SettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -16556,14 +16969,14 @@ public open class CfnChannel(
        * @param rec709Settings Settings to configure the handling of Rec709 color space.
        */
       override fun rec709Settings(rec709Settings: IResolvable) {
-        cdkBuilder.rec709Settings(rec709Settings.let(IResolvable::unwrap))
+        cdkBuilder.rec709Settings(rec709Settings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param rec709Settings Settings to configure the handling of Rec709 color space.
        */
       override fun rec709Settings(rec709Settings: Rec709SettingsProperty) {
-        cdkBuilder.rec709Settings(rec709Settings.let(Rec709SettingsProperty::unwrap))
+        cdkBuilder.rec709Settings(rec709Settings.let(Rec709SettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -16685,14 +17098,14 @@ public open class CfnChannel(
        * @param temporalFilterSettings Settings for applying the temporal filter to the video.
        */
       override fun temporalFilterSettings(temporalFilterSettings: IResolvable) {
-        cdkBuilder.temporalFilterSettings(temporalFilterSettings.let(IResolvable::unwrap))
+        cdkBuilder.temporalFilterSettings(temporalFilterSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param temporalFilterSettings Settings for applying the temporal filter to the video.
        */
       override fun temporalFilterSettings(temporalFilterSettings: TemporalFilterSettingsProperty) {
-        cdkBuilder.temporalFilterSettings(temporalFilterSettings.let(TemporalFilterSettingsProperty::unwrap))
+        cdkBuilder.temporalFilterSettings(temporalFilterSettings.let(TemporalFilterSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -17575,14 +17988,14 @@ public open class CfnChannel(
        * @param colorSpaceSettings Settings to configure the color space handling for the video.
        */
       override fun colorSpaceSettings(colorSpaceSettings: IResolvable) {
-        cdkBuilder.colorSpaceSettings(colorSpaceSettings.let(IResolvable::unwrap))
+        cdkBuilder.colorSpaceSettings(colorSpaceSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param colorSpaceSettings Settings to configure the color space handling for the video.
        */
       override fun colorSpaceSettings(colorSpaceSettings: H264ColorSpaceSettingsProperty) {
-        cdkBuilder.colorSpaceSettings(colorSpaceSettings.let(H264ColorSpaceSettingsProperty::unwrap))
+        cdkBuilder.colorSpaceSettings(colorSpaceSettings.let(H264ColorSpaceSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -17606,14 +18019,14 @@ public open class CfnChannel(
        * @param filterSettings Optional filters that you can apply to an encode.
        */
       override fun filterSettings(filterSettings: IResolvable) {
-        cdkBuilder.filterSettings(filterSettings.let(IResolvable::unwrap))
+        cdkBuilder.filterSettings(filterSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param filterSettings Optional filters that you can apply to an encode.
        */
       override fun filterSettings(filterSettings: H264FilterSettingsProperty) {
-        cdkBuilder.filterSettings(filterSettings.let(H264FilterSettingsProperty::unwrap))
+        cdkBuilder.filterSettings(filterSettings.let(H264FilterSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -17904,14 +18317,14 @@ public open class CfnChannel(
        * @param timecodeBurninSettings the value to be set.
        */
       override fun timecodeBurninSettings(timecodeBurninSettings: IResolvable) {
-        cdkBuilder.timecodeBurninSettings(timecodeBurninSettings.let(IResolvable::unwrap))
+        cdkBuilder.timecodeBurninSettings(timecodeBurninSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param timecodeBurninSettings the value to be set.
        */
       override fun timecodeBurninSettings(timecodeBurninSettings: TimecodeBurninSettingsProperty) {
-        cdkBuilder.timecodeBurninSettings(timecodeBurninSettings.let(TimecodeBurninSettingsProperty::unwrap))
+        cdkBuilder.timecodeBurninSettings(timecodeBurninSettings.let(TimecodeBurninSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -18509,7 +18922,7 @@ public open class CfnChannel(
        * output.
        */
       override fun colorSpacePassthroughSettings(colorSpacePassthroughSettings: IResolvable) {
-        cdkBuilder.colorSpacePassthroughSettings(colorSpacePassthroughSettings.let(IResolvable::unwrap))
+        cdkBuilder.colorSpacePassthroughSettings(colorSpacePassthroughSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -18518,7 +18931,7 @@ public open class CfnChannel(
        */
       override
           fun colorSpacePassthroughSettings(colorSpacePassthroughSettings: ColorSpacePassthroughSettingsProperty) {
-        cdkBuilder.colorSpacePassthroughSettings(colorSpacePassthroughSettings.let(ColorSpacePassthroughSettingsProperty::unwrap))
+        cdkBuilder.colorSpacePassthroughSettings(colorSpacePassthroughSettings.let(ColorSpacePassthroughSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -18536,14 +18949,14 @@ public open class CfnChannel(
        * @param dolbyVision81Settings the value to be set.
        */
       override fun dolbyVision81Settings(dolbyVision81Settings: IResolvable) {
-        cdkBuilder.dolbyVision81Settings(dolbyVision81Settings.let(IResolvable::unwrap))
+        cdkBuilder.dolbyVision81Settings(dolbyVision81Settings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dolbyVision81Settings the value to be set.
        */
       override fun dolbyVision81Settings(dolbyVision81Settings: DolbyVision81SettingsProperty) {
-        cdkBuilder.dolbyVision81Settings(dolbyVision81Settings.let(DolbyVision81SettingsProperty::unwrap))
+        cdkBuilder.dolbyVision81Settings(dolbyVision81Settings.let(DolbyVision81SettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -18559,14 +18972,14 @@ public open class CfnChannel(
        * @param hdr10Settings Settings to configure the handling of HDR10 color space.
        */
       override fun hdr10Settings(hdr10Settings: IResolvable) {
-        cdkBuilder.hdr10Settings(hdr10Settings.let(IResolvable::unwrap))
+        cdkBuilder.hdr10Settings(hdr10Settings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param hdr10Settings Settings to configure the handling of HDR10 color space.
        */
       override fun hdr10Settings(hdr10Settings: Hdr10SettingsProperty) {
-        cdkBuilder.hdr10Settings(hdr10Settings.let(Hdr10SettingsProperty::unwrap))
+        cdkBuilder.hdr10Settings(hdr10Settings.let(Hdr10SettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -18581,14 +18994,14 @@ public open class CfnChannel(
        * @param rec601Settings Settings to configure the handling of Rec601 color space.
        */
       override fun rec601Settings(rec601Settings: IResolvable) {
-        cdkBuilder.rec601Settings(rec601Settings.let(IResolvable::unwrap))
+        cdkBuilder.rec601Settings(rec601Settings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param rec601Settings Settings to configure the handling of Rec601 color space.
        */
       override fun rec601Settings(rec601Settings: Rec601SettingsProperty) {
-        cdkBuilder.rec601Settings(rec601Settings.let(Rec601SettingsProperty::unwrap))
+        cdkBuilder.rec601Settings(rec601Settings.let(Rec601SettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -18603,14 +19016,14 @@ public open class CfnChannel(
        * @param rec709Settings Settings to configure the handling of Rec709 color space.
        */
       override fun rec709Settings(rec709Settings: IResolvable) {
-        cdkBuilder.rec709Settings(rec709Settings.let(IResolvable::unwrap))
+        cdkBuilder.rec709Settings(rec709Settings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param rec709Settings Settings to configure the handling of Rec709 color space.
        */
       override fun rec709Settings(rec709Settings: Rec709SettingsProperty) {
-        cdkBuilder.rec709Settings(rec709Settings.let(Rec709SettingsProperty::unwrap))
+        cdkBuilder.rec709Settings(rec709Settings.let(Rec709SettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -18744,14 +19157,14 @@ public open class CfnChannel(
        * @param temporalFilterSettings Settings for applying the temporal filter to the video.
        */
       override fun temporalFilterSettings(temporalFilterSettings: IResolvable) {
-        cdkBuilder.temporalFilterSettings(temporalFilterSettings.let(IResolvable::unwrap))
+        cdkBuilder.temporalFilterSettings(temporalFilterSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param temporalFilterSettings Settings for applying the temporal filter to the video.
        */
       override fun temporalFilterSettings(temporalFilterSettings: TemporalFilterSettingsProperty) {
-        cdkBuilder.temporalFilterSettings(temporalFilterSettings.let(TemporalFilterSettingsProperty::unwrap))
+        cdkBuilder.temporalFilterSettings(temporalFilterSettings.let(TemporalFilterSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -18842,6 +19255,8 @@ public open class CfnChannel(
    * .lookAheadRateControl("lookAheadRateControl")
    * .maxBitrate(123)
    * .minIInterval(123)
+   * .mvOverPictureBoundaries("mvOverPictureBoundaries")
+   * .mvTemporalPredictor("mvTemporalPredictor")
    * .parDenominator(123)
    * .parNumerator(123)
    * .profile("profile")
@@ -18851,12 +19266,16 @@ public open class CfnChannel(
    * .sceneChangeDetect("sceneChangeDetect")
    * .slices(123)
    * .tier("tier")
+   * .tileHeight(123)
+   * .tilePadding("tilePadding")
+   * .tileWidth(123)
    * .timecodeBurninSettings(TimecodeBurninSettingsProperty.builder()
    * .fontSize("fontSize")
    * .position("position")
    * .prefix("prefix")
    * .build())
    * .timecodeInsertion("timecodeInsertion")
+   * .treeblockSize("treeblockSize")
    * .build();
    * ```
    *
@@ -19031,6 +19450,16 @@ public open class CfnChannel(
     public fun minIInterval(): Number? = unwrap(this).getMinIInterval()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-mvoverpictureboundaries)
+     */
+    public fun mvOverPictureBoundaries(): String? = unwrap(this).getMvOverPictureBoundaries()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-mvtemporalpredictor)
+     */
+    public fun mvTemporalPredictor(): String? = unwrap(this).getMvTemporalPredictor()
+
+    /**
      * Pixel Aspect Ratio denominator.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-pardenominator)
@@ -19114,6 +19543,21 @@ public open class CfnChannel(
     public fun tier(): String? = unwrap(this).getTier()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-tileheight)
+     */
+    public fun tileHeight(): Number? = unwrap(this).getTileHeight()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-tilepadding)
+     */
+    public fun tilePadding(): String? = unwrap(this).getTilePadding()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-tilewidth)
+     */
+    public fun tileWidth(): Number? = unwrap(this).getTileWidth()
+
+    /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-timecodeburninsettings)
      */
     public fun timecodeBurninSettings(): Any? = unwrap(this).getTimecodeBurninSettings()
@@ -19128,6 +19572,11 @@ public open class CfnChannel(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-timecodeinsertion)
      */
     public fun timecodeInsertion(): String? = unwrap(this).getTimecodeInsertion()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-treeblocksize)
+     */
+    public fun treeblockSize(): String? = unwrap(this).getTreeblockSize()
 
     /**
      * A builder for [H265SettingsProperty]
@@ -19282,6 +19731,16 @@ public open class CfnChannel(
       public fun minIInterval(minIInterval: Number)
 
       /**
+       * @param mvOverPictureBoundaries the value to be set.
+       */
+      public fun mvOverPictureBoundaries(mvOverPictureBoundaries: String)
+
+      /**
+       * @param mvTemporalPredictor the value to be set.
+       */
+      public fun mvTemporalPredictor(mvTemporalPredictor: String)
+
+      /**
        * @param parDenominator Pixel Aspect Ratio denominator.
        */
       public fun parDenominator(parDenominator: Number)
@@ -19347,6 +19806,21 @@ public open class CfnChannel(
       public fun tier(tier: String)
 
       /**
+       * @param tileHeight the value to be set.
+       */
+      public fun tileHeight(tileHeight: Number)
+
+      /**
+       * @param tilePadding the value to be set.
+       */
+      public fun tilePadding(tilePadding: String)
+
+      /**
+       * @param tileWidth the value to be set.
+       */
+      public fun tileWidth(tileWidth: Number)
+
+      /**
        * @param timecodeBurninSettings the value to be set.
        */
       public fun timecodeBurninSettings(timecodeBurninSettings: IResolvable)
@@ -19372,6 +19846,11 @@ public open class CfnChannel(
        * Timecode Config
        */
       public fun timecodeInsertion(timecodeInsertion: String)
+
+      /**
+       * @param treeblockSize the value to be set.
+       */
+      public fun treeblockSize(treeblockSize: String)
     }
 
     private class BuilderImpl : Builder {
@@ -19433,14 +19912,14 @@ public open class CfnChannel(
        * @param colorSpaceSettings Color Space settings.
        */
       override fun colorSpaceSettings(colorSpaceSettings: IResolvable) {
-        cdkBuilder.colorSpaceSettings(colorSpaceSettings.let(IResolvable::unwrap))
+        cdkBuilder.colorSpaceSettings(colorSpaceSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param colorSpaceSettings Color Space settings.
        */
       override fun colorSpaceSettings(colorSpaceSettings: H265ColorSpaceSettingsProperty) {
-        cdkBuilder.colorSpaceSettings(colorSpaceSettings.let(H265ColorSpaceSettingsProperty::unwrap))
+        cdkBuilder.colorSpaceSettings(colorSpaceSettings.let(H265ColorSpaceSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -19456,14 +19935,14 @@ public open class CfnChannel(
        * @param filterSettings Optional filters that you can apply to an encode.
        */
       override fun filterSettings(filterSettings: IResolvable) {
-        cdkBuilder.filterSettings(filterSettings.let(IResolvable::unwrap))
+        cdkBuilder.filterSettings(filterSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param filterSettings Optional filters that you can apply to an encode.
        */
       override fun filterSettings(filterSettings: H265FilterSettingsProperty) {
-        cdkBuilder.filterSettings(filterSettings.let(H265FilterSettingsProperty::unwrap))
+        cdkBuilder.filterSettings(filterSettings.let(H265FilterSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -19571,6 +20050,20 @@ public open class CfnChannel(
       }
 
       /**
+       * @param mvOverPictureBoundaries the value to be set.
+       */
+      override fun mvOverPictureBoundaries(mvOverPictureBoundaries: String) {
+        cdkBuilder.mvOverPictureBoundaries(mvOverPictureBoundaries)
+      }
+
+      /**
+       * @param mvTemporalPredictor the value to be set.
+       */
+      override fun mvTemporalPredictor(mvTemporalPredictor: String) {
+        cdkBuilder.mvTemporalPredictor(mvTemporalPredictor)
+      }
+
+      /**
        * @param parDenominator Pixel Aspect Ratio denominator.
        */
       override fun parDenominator(parDenominator: Number) {
@@ -19654,17 +20147,38 @@ public open class CfnChannel(
       }
 
       /**
+       * @param tileHeight the value to be set.
+       */
+      override fun tileHeight(tileHeight: Number) {
+        cdkBuilder.tileHeight(tileHeight)
+      }
+
+      /**
+       * @param tilePadding the value to be set.
+       */
+      override fun tilePadding(tilePadding: String) {
+        cdkBuilder.tilePadding(tilePadding)
+      }
+
+      /**
+       * @param tileWidth the value to be set.
+       */
+      override fun tileWidth(tileWidth: Number) {
+        cdkBuilder.tileWidth(tileWidth)
+      }
+
+      /**
        * @param timecodeBurninSettings the value to be set.
        */
       override fun timecodeBurninSettings(timecodeBurninSettings: IResolvable) {
-        cdkBuilder.timecodeBurninSettings(timecodeBurninSettings.let(IResolvable::unwrap))
+        cdkBuilder.timecodeBurninSettings(timecodeBurninSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param timecodeBurninSettings the value to be set.
        */
       override fun timecodeBurninSettings(timecodeBurninSettings: TimecodeBurninSettingsProperty) {
-        cdkBuilder.timecodeBurninSettings(timecodeBurninSettings.let(TimecodeBurninSettingsProperty::unwrap))
+        cdkBuilder.timecodeBurninSettings(timecodeBurninSettings.let(TimecodeBurninSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -19685,6 +20199,13 @@ public open class CfnChannel(
        */
       override fun timecodeInsertion(timecodeInsertion: String) {
         cdkBuilder.timecodeInsertion(timecodeInsertion)
+      }
+
+      /**
+       * @param treeblockSize the value to be set.
+       */
+      override fun treeblockSize(treeblockSize: String) {
+        cdkBuilder.treeblockSize(treeblockSize)
       }
 
       public fun build(): software.amazon.awscdk.services.medialive.CfnChannel.H265SettingsProperty
@@ -19863,6 +20384,16 @@ public open class CfnChannel(
       override fun minIInterval(): Number? = unwrap(this).getMinIInterval()
 
       /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-mvoverpictureboundaries)
+       */
+      override fun mvOverPictureBoundaries(): String? = unwrap(this).getMvOverPictureBoundaries()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-mvtemporalpredictor)
+       */
+      override fun mvTemporalPredictor(): String? = unwrap(this).getMvTemporalPredictor()
+
+      /**
        * Pixel Aspect Ratio denominator.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-pardenominator)
@@ -19948,6 +20479,21 @@ public open class CfnChannel(
       override fun tier(): String? = unwrap(this).getTier()
 
       /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-tileheight)
+       */
+      override fun tileHeight(): Number? = unwrap(this).getTileHeight()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-tilepadding)
+       */
+      override fun tilePadding(): String? = unwrap(this).getTilePadding()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-tilewidth)
+       */
+      override fun tileWidth(): Number? = unwrap(this).getTileWidth()
+
+      /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-timecodeburninsettings)
        */
       override fun timecodeBurninSettings(): Any? = unwrap(this).getTimecodeBurninSettings()
@@ -19962,6 +20508,11 @@ public open class CfnChannel(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-timecodeinsertion)
        */
       override fun timecodeInsertion(): String? = unwrap(this).getTimecodeInsertion()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-treeblocksize)
+       */
+      override fun treeblockSize(): String? = unwrap(this).getTreeblockSize()
     }
 
     public companion object {
@@ -20746,14 +21297,14 @@ public open class CfnChannel(
        * @param hlsAkamaiSettings Sets up Akamai as the downstream system for the HLS output group.
        */
       override fun hlsAkamaiSettings(hlsAkamaiSettings: IResolvable) {
-        cdkBuilder.hlsAkamaiSettings(hlsAkamaiSettings.let(IResolvable::unwrap))
+        cdkBuilder.hlsAkamaiSettings(hlsAkamaiSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param hlsAkamaiSettings Sets up Akamai as the downstream system for the HLS output group.
        */
       override fun hlsAkamaiSettings(hlsAkamaiSettings: HlsAkamaiSettingsProperty) {
-        cdkBuilder.hlsAkamaiSettings(hlsAkamaiSettings.let(HlsAkamaiSettingsProperty::unwrap))
+        cdkBuilder.hlsAkamaiSettings(hlsAkamaiSettings.let(HlsAkamaiSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -20769,14 +21320,14 @@ public open class CfnChannel(
        * @param hlsBasicPutSettings The settings for Basic Put for the HLS output.
        */
       override fun hlsBasicPutSettings(hlsBasicPutSettings: IResolvable) {
-        cdkBuilder.hlsBasicPutSettings(hlsBasicPutSettings.let(IResolvable::unwrap))
+        cdkBuilder.hlsBasicPutSettings(hlsBasicPutSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param hlsBasicPutSettings The settings for Basic Put for the HLS output.
        */
       override fun hlsBasicPutSettings(hlsBasicPutSettings: HlsBasicPutSettingsProperty) {
-        cdkBuilder.hlsBasicPutSettings(hlsBasicPutSettings.let(HlsBasicPutSettingsProperty::unwrap))
+        cdkBuilder.hlsBasicPutSettings(hlsBasicPutSettings.let(HlsBasicPutSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -20792,14 +21343,14 @@ public open class CfnChannel(
        * @param hlsMediaStoreSettings Sets up MediaStore as the destination for the HLS output.
        */
       override fun hlsMediaStoreSettings(hlsMediaStoreSettings: IResolvable) {
-        cdkBuilder.hlsMediaStoreSettings(hlsMediaStoreSettings.let(IResolvable::unwrap))
+        cdkBuilder.hlsMediaStoreSettings(hlsMediaStoreSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param hlsMediaStoreSettings Sets up MediaStore as the destination for the HLS output.
        */
       override fun hlsMediaStoreSettings(hlsMediaStoreSettings: HlsMediaStoreSettingsProperty) {
-        cdkBuilder.hlsMediaStoreSettings(hlsMediaStoreSettings.let(HlsMediaStoreSettingsProperty::unwrap))
+        cdkBuilder.hlsMediaStoreSettings(hlsMediaStoreSettings.let(HlsMediaStoreSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -20815,14 +21366,14 @@ public open class CfnChannel(
        * @param hlsS3Settings Sets up Amazon S3 as the destination for this HLS output.
        */
       override fun hlsS3Settings(hlsS3Settings: IResolvable) {
-        cdkBuilder.hlsS3Settings(hlsS3Settings.let(IResolvable::unwrap))
+        cdkBuilder.hlsS3Settings(hlsS3Settings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param hlsS3Settings Sets up Amazon S3 as the destination for this HLS output.
        */
       override fun hlsS3Settings(hlsS3Settings: HlsS3SettingsProperty) {
-        cdkBuilder.hlsS3Settings(hlsS3Settings.let(HlsS3SettingsProperty::unwrap))
+        cdkBuilder.hlsS3Settings(hlsS3Settings.let(HlsS3SettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -20838,7 +21389,7 @@ public open class CfnChannel(
        * The parent of this entity is HlsGroupSettings.
        */
       override fun hlsWebdavSettings(hlsWebdavSettings: IResolvable) {
-        cdkBuilder.hlsWebdavSettings(hlsWebdavSettings.let(IResolvable::unwrap))
+        cdkBuilder.hlsWebdavSettings(hlsWebdavSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -20846,7 +21397,7 @@ public open class CfnChannel(
        * The parent of this entity is HlsGroupSettings.
        */
       override fun hlsWebdavSettings(hlsWebdavSettings: HlsWebdavSettingsProperty) {
-        cdkBuilder.hlsWebdavSettings(hlsWebdavSettings.let(HlsWebdavSettingsProperty::unwrap))
+        cdkBuilder.hlsWebdavSettings(hlsWebdavSettings.let(HlsWebdavSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -21886,7 +22437,7 @@ public open class CfnChannel(
        * This is meaningful only if captionLanguageSetting is set to "insert."
        */
       override fun captionLanguageMappings(captionLanguageMappings: IResolvable) {
-        cdkBuilder.captionLanguageMappings(captionLanguageMappings.let(IResolvable::unwrap))
+        cdkBuilder.captionLanguageMappings(captionLanguageMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -21951,7 +22502,7 @@ public open class CfnChannel(
        * and encryption keys (if enabled).
        */
       override fun destination(destination: IResolvable) {
-        cdkBuilder.destination(destination.let(IResolvable::unwrap))
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -21959,7 +22510,7 @@ public open class CfnChannel(
        * and encryption keys (if enabled).
        */
       override fun destination(destination: OutputLocationRefProperty) {
-        cdkBuilder.destination(destination.let(OutputLocationRefProperty::unwrap))
+        cdkBuilder.destination(destination.let(OutputLocationRefProperty.Companion::unwrap))
       }
 
       /**
@@ -22003,14 +22554,14 @@ public open class CfnChannel(
        * @param hlsCdnSettings The parameters that control interactions with the CDN.
        */
       override fun hlsCdnSettings(hlsCdnSettings: IResolvable) {
-        cdkBuilder.hlsCdnSettings(hlsCdnSettings.let(IResolvable::unwrap))
+        cdkBuilder.hlsCdnSettings(hlsCdnSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param hlsCdnSettings The parameters that control interactions with the CDN.
        */
       override fun hlsCdnSettings(hlsCdnSettings: HlsCdnSettingsProperty) {
-        cdkBuilder.hlsCdnSettings(hlsCdnSettings.let(HlsCdnSettingsProperty::unwrap))
+        cdkBuilder.hlsCdnSettings(hlsCdnSettings.let(HlsCdnSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -22121,14 +22672,14 @@ public open class CfnChannel(
        * @param keyProviderSettings The key provider settings.
        */
       override fun keyProviderSettings(keyProviderSettings: IResolvable) {
-        cdkBuilder.keyProviderSettings(keyProviderSettings.let(IResolvable::unwrap))
+        cdkBuilder.keyProviderSettings(keyProviderSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param keyProviderSettings The key provider settings.
        */
       override fun keyProviderSettings(keyProviderSettings: KeyProviderSettingsProperty) {
-        cdkBuilder.keyProviderSettings(keyProviderSettings.let(KeyProviderSettingsProperty::unwrap))
+        cdkBuilder.keyProviderSettings(keyProviderSettings.let(KeyProviderSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -23347,7 +23898,7 @@ public open class CfnChannel(
        * These settings are different for audio-only outputs.
        */
       override fun hlsSettings(hlsSettings: IResolvable) {
-        cdkBuilder.hlsSettings(hlsSettings.let(IResolvable::unwrap))
+        cdkBuilder.hlsSettings(hlsSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -23355,7 +23906,7 @@ public open class CfnChannel(
        * These settings are different for audio-only outputs.
        */
       override fun hlsSettings(hlsSettings: HlsSettingsProperty) {
-        cdkBuilder.hlsSettings(hlsSettings.let(HlsSettingsProperty::unwrap))
+        cdkBuilder.hlsSettings(hlsSettings.let(HlsSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -23705,14 +24256,14 @@ public open class CfnChannel(
        * @param audioOnlyHlsSettings The settings for an audio-only output.
        */
       override fun audioOnlyHlsSettings(audioOnlyHlsSettings: IResolvable) {
-        cdkBuilder.audioOnlyHlsSettings(audioOnlyHlsSettings.let(IResolvable::unwrap))
+        cdkBuilder.audioOnlyHlsSettings(audioOnlyHlsSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param audioOnlyHlsSettings The settings for an audio-only output.
        */
       override fun audioOnlyHlsSettings(audioOnlyHlsSettings: AudioOnlyHlsSettingsProperty) {
-        cdkBuilder.audioOnlyHlsSettings(audioOnlyHlsSettings.let(AudioOnlyHlsSettingsProperty::unwrap))
+        cdkBuilder.audioOnlyHlsSettings(audioOnlyHlsSettings.let(AudioOnlyHlsSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -23728,14 +24279,14 @@ public open class CfnChannel(
        * @param fmp4HlsSettings The settings for an fMP4 container.
        */
       override fun fmp4HlsSettings(fmp4HlsSettings: IResolvable) {
-        cdkBuilder.fmp4HlsSettings(fmp4HlsSettings.let(IResolvable::unwrap))
+        cdkBuilder.fmp4HlsSettings(fmp4HlsSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param fmp4HlsSettings The settings for an fMP4 container.
        */
       override fun fmp4HlsSettings(fmp4HlsSettings: Fmp4HlsSettingsProperty) {
-        cdkBuilder.fmp4HlsSettings(fmp4HlsSettings.let(Fmp4HlsSettingsProperty::unwrap))
+        cdkBuilder.fmp4HlsSettings(fmp4HlsSettings.let(Fmp4HlsSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -23750,7 +24301,7 @@ public open class CfnChannel(
        * @param frameCaptureHlsSettings Settings for a frame capture output in an HLS output group.
        */
       override fun frameCaptureHlsSettings(frameCaptureHlsSettings: IResolvable) {
-        cdkBuilder.frameCaptureHlsSettings(frameCaptureHlsSettings.let(IResolvable::unwrap))
+        cdkBuilder.frameCaptureHlsSettings(frameCaptureHlsSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -23758,7 +24309,7 @@ public open class CfnChannel(
        */
       override
           fun frameCaptureHlsSettings(frameCaptureHlsSettings: FrameCaptureHlsSettingsProperty) {
-        cdkBuilder.frameCaptureHlsSettings(frameCaptureHlsSettings.let(FrameCaptureHlsSettingsProperty::unwrap))
+        cdkBuilder.frameCaptureHlsSettings(frameCaptureHlsSettings.let(FrameCaptureHlsSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -23775,7 +24326,7 @@ public open class CfnChannel(
        * audio-only).
        */
       override fun standardHlsSettings(standardHlsSettings: IResolvable) {
-        cdkBuilder.standardHlsSettings(standardHlsSettings.let(IResolvable::unwrap))
+        cdkBuilder.standardHlsSettings(standardHlsSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -23783,7 +24334,7 @@ public open class CfnChannel(
        * audio-only).
        */
       override fun standardHlsSettings(standardHlsSettings: StandardHlsSettingsProperty) {
-        cdkBuilder.standardHlsSettings(standardHlsSettings.let(StandardHlsSettingsProperty::unwrap))
+        cdkBuilder.standardHlsSettings(standardHlsSettings.let(StandardHlsSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -24348,7 +24899,7 @@ public open class CfnChannel(
        * this input.
        */
       override fun automaticInputFailoverSettings(automaticInputFailoverSettings: IResolvable) {
-        cdkBuilder.automaticInputFailoverSettings(automaticInputFailoverSettings.let(IResolvable::unwrap))
+        cdkBuilder.automaticInputFailoverSettings(automaticInputFailoverSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -24357,7 +24908,7 @@ public open class CfnChannel(
        */
       override
           fun automaticInputFailoverSettings(automaticInputFailoverSettings: AutomaticInputFailoverSettingsProperty) {
-        cdkBuilder.automaticInputFailoverSettings(automaticInputFailoverSettings.let(AutomaticInputFailoverSettingsProperty::unwrap))
+        cdkBuilder.automaticInputFailoverSettings(automaticInputFailoverSettings.let(AutomaticInputFailoverSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -24391,7 +24942,7 @@ public open class CfnChannel(
        * general handling of the content.
        */
       override fun inputSettings(inputSettings: IResolvable) {
-        cdkBuilder.inputSettings(inputSettings.let(IResolvable::unwrap))
+        cdkBuilder.inputSettings(inputSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -24399,7 +24950,7 @@ public open class CfnChannel(
        * general handling of the content.
        */
       override fun inputSettings(inputSettings: InputSettingsProperty) {
-        cdkBuilder.inputSettings(inputSettings.let(InputSettingsProperty::unwrap))
+        cdkBuilder.inputSettings(inputSettings.let(InputSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -24904,7 +25455,7 @@ public open class CfnChannel(
        * the parameters for accessing the slate.
        */
       override fun inputLossImageSlate(inputLossImageSlate: IResolvable) {
-        cdkBuilder.inputLossImageSlate(inputLossImageSlate.let(IResolvable::unwrap))
+        cdkBuilder.inputLossImageSlate(inputLossImageSlate.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -24912,7 +25463,7 @@ public open class CfnChannel(
        * the parameters for accessing the slate.
        */
       override fun inputLossImageSlate(inputLossImageSlate: InputLocationProperty) {
-        cdkBuilder.inputLossImageSlate(inputLossImageSlate.let(InputLocationProperty::unwrap))
+        cdkBuilder.inputLossImageSlate(inputLossImageSlate.let(InputLocationProperty.Companion::unwrap))
       }
 
       /**
@@ -25442,7 +25993,7 @@ public open class CfnChannel(
        * The parent of this entity is InputSettings.
        */
       override fun audioSelectors(audioSelectors: IResolvable) {
-        cdkBuilder.audioSelectors(audioSelectors.let(IResolvable::unwrap))
+        cdkBuilder.audioSelectors(audioSelectors.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -25464,7 +26015,7 @@ public open class CfnChannel(
        * @param captionSelectors Information about the specific captions to extract from the input.
        */
       override fun captionSelectors(captionSelectors: IResolvable) {
-        cdkBuilder.captionSelectors(captionSelectors.let(IResolvable::unwrap))
+        cdkBuilder.captionSelectors(captionSelectors.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -25515,14 +26066,14 @@ public open class CfnChannel(
        * @param networkInputSettings Information about how to connect to the upstream system.
        */
       override fun networkInputSettings(networkInputSettings: IResolvable) {
-        cdkBuilder.networkInputSettings(networkInputSettings.let(IResolvable::unwrap))
+        cdkBuilder.networkInputSettings(networkInputSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param networkInputSettings Information about how to connect to the upstream system.
        */
       override fun networkInputSettings(networkInputSettings: NetworkInputSettingsProperty) {
-        cdkBuilder.networkInputSettings(networkInputSettings.let(NetworkInputSettingsProperty::unwrap))
+        cdkBuilder.networkInputSettings(networkInputSettings.let(NetworkInputSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -25565,14 +26116,14 @@ public open class CfnChannel(
        * @param videoSelector Information about one video to extract from the input.
        */
       override fun videoSelector(videoSelector: IResolvable) {
-        cdkBuilder.videoSelector(videoSelector.let(IResolvable::unwrap))
+        cdkBuilder.videoSelector(videoSelector.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param videoSelector Information about one video to extract from the input.
        */
       override fun videoSelector(videoSelector: VideoSelectorProperty) {
-        cdkBuilder.videoSelector(videoSelector.let(VideoSelectorProperty::unwrap))
+        cdkBuilder.videoSelector(videoSelector.let(VideoSelectorProperty.Companion::unwrap))
       }
 
       /**
@@ -25902,14 +26453,14 @@ public open class CfnChannel(
        * @param staticKeySettings The configuration of static key settings.
        */
       override fun staticKeySettings(staticKeySettings: IResolvable) {
-        cdkBuilder.staticKeySettings(staticKeySettings.let(IResolvable::unwrap))
+        cdkBuilder.staticKeySettings(staticKeySettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param staticKeySettings The configuration of static key settings.
        */
       override fun staticKeySettings(staticKeySettings: StaticKeySettingsProperty) {
-        cdkBuilder.staticKeySettings(staticKeySettings.let(StaticKeySettingsProperty::unwrap))
+        cdkBuilder.staticKeySettings(staticKeySettings.let(StaticKeySettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -26959,7 +27510,7 @@ public open class CfnChannel(
        * repetition interval.
        */
       override fun dvbNitSettings(dvbNitSettings: IResolvable) {
-        cdkBuilder.dvbNitSettings(dvbNitSettings.let(IResolvable::unwrap))
+        cdkBuilder.dvbNitSettings(dvbNitSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -26967,7 +27518,7 @@ public open class CfnChannel(
        * repetition interval.
        */
       override fun dvbNitSettings(dvbNitSettings: DvbNitSettingsProperty) {
-        cdkBuilder.dvbNitSettings(dvbNitSettings.let(DvbNitSettingsProperty::unwrap))
+        cdkBuilder.dvbNitSettings(dvbNitSettings.let(DvbNitSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -26984,7 +27535,7 @@ public open class CfnChannel(
        * repetition interval.
        */
       override fun dvbSdtSettings(dvbSdtSettings: IResolvable) {
-        cdkBuilder.dvbSdtSettings(dvbSdtSettings.let(IResolvable::unwrap))
+        cdkBuilder.dvbSdtSettings(dvbSdtSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -26992,7 +27543,7 @@ public open class CfnChannel(
        * repetition interval.
        */
       override fun dvbSdtSettings(dvbSdtSettings: DvbSdtSettingsProperty) {
-        cdkBuilder.dvbSdtSettings(dvbSdtSettings.let(DvbSdtSettingsProperty::unwrap))
+        cdkBuilder.dvbSdtSettings(dvbSdtSettings.let(DvbSdtSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -27019,7 +27570,7 @@ public open class CfnChannel(
        * repetition interval.
        */
       override fun dvbTdtSettings(dvbTdtSettings: IResolvable) {
-        cdkBuilder.dvbTdtSettings(dvbTdtSettings.let(IResolvable::unwrap))
+        cdkBuilder.dvbTdtSettings(dvbTdtSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -27027,7 +27578,7 @@ public open class CfnChannel(
        * repetition interval.
        */
       override fun dvbTdtSettings(dvbTdtSettings: DvbTdtSettingsProperty) {
-        cdkBuilder.dvbTdtSettings(dvbTdtSettings.let(DvbTdtSettingsProperty::unwrap))
+        cdkBuilder.dvbTdtSettings(dvbTdtSettings.let(DvbTdtSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -28764,14 +29315,14 @@ public open class CfnChannel(
        * @param destination The MediaPackage channel destination.
        */
       override fun destination(destination: IResolvable) {
-        cdkBuilder.destination(destination.let(IResolvable::unwrap))
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param destination The MediaPackage channel destination.
        */
       override fun destination(destination: OutputLocationRefProperty) {
-        cdkBuilder.destination(destination.let(OutputLocationRefProperty::unwrap))
+        cdkBuilder.destination(destination.let(OutputLocationRefProperty.Companion::unwrap))
       }
 
       /**
@@ -29062,7 +29613,7 @@ public open class CfnChannel(
        * feature in the channel.
        */
       override fun motionGraphicsSettings(motionGraphicsSettings: IResolvable) {
-        cdkBuilder.motionGraphicsSettings(motionGraphicsSettings.let(IResolvable::unwrap))
+        cdkBuilder.motionGraphicsSettings(motionGraphicsSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -29070,7 +29621,7 @@ public open class CfnChannel(
        * feature in the channel.
        */
       override fun motionGraphicsSettings(motionGraphicsSettings: MotionGraphicsSettingsProperty) {
-        cdkBuilder.motionGraphicsSettings(motionGraphicsSettings.let(MotionGraphicsSettingsProperty::unwrap))
+        cdkBuilder.motionGraphicsSettings(motionGraphicsSettings.let(MotionGraphicsSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -29191,7 +29742,7 @@ public open class CfnChannel(
        * an HTML asset.
        */
       override fun htmlMotionGraphicsSettings(htmlMotionGraphicsSettings: IResolvable) {
-        cdkBuilder.htmlMotionGraphicsSettings(htmlMotionGraphicsSettings.let(IResolvable::unwrap))
+        cdkBuilder.htmlMotionGraphicsSettings(htmlMotionGraphicsSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -29200,7 +29751,7 @@ public open class CfnChannel(
        */
       override
           fun htmlMotionGraphicsSettings(htmlMotionGraphicsSettings: HtmlMotionGraphicsSettingsProperty) {
-        cdkBuilder.htmlMotionGraphicsSettings(htmlMotionGraphicsSettings.let(HtmlMotionGraphicsSettingsProperty::unwrap))
+        cdkBuilder.htmlMotionGraphicsSettings(htmlMotionGraphicsSettings.let(HtmlMotionGraphicsSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -29452,14 +30003,14 @@ public open class CfnChannel(
        * @param temporalFilterSettings Settings for applying the temporal filter to the video.
        */
       override fun temporalFilterSettings(temporalFilterSettings: IResolvable) {
-        cdkBuilder.temporalFilterSettings(temporalFilterSettings.let(IResolvable::unwrap))
+        cdkBuilder.temporalFilterSettings(temporalFilterSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param temporalFilterSettings Settings for applying the temporal filter to the video.
        */
       override fun temporalFilterSettings(temporalFilterSettings: TemporalFilterSettingsProperty) {
-        cdkBuilder.temporalFilterSettings(temporalFilterSettings.let(TemporalFilterSettingsProperty::unwrap))
+        cdkBuilder.temporalFilterSettings(temporalFilterSettings.let(TemporalFilterSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -29982,7 +30533,7 @@ public open class CfnChannel(
        * When the content is reasonably clean, the filter tends to decrease the bitrate.
        */
       override fun filterSettings(filterSettings: IResolvable) {
-        cdkBuilder.filterSettings(filterSettings.let(IResolvable::unwrap))
+        cdkBuilder.filterSettings(filterSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -29998,7 +30549,7 @@ public open class CfnChannel(
        * When the content is reasonably clean, the filter tends to decrease the bitrate.
        */
       override fun filterSettings(filterSettings: Mpeg2FilterSettingsProperty) {
-        cdkBuilder.filterSettings(filterSettings.let(Mpeg2FilterSettingsProperty::unwrap))
+        cdkBuilder.filterSettings(filterSettings.let(Mpeg2FilterSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -30106,14 +30657,14 @@ public open class CfnChannel(
        * @param timecodeBurninSettings the value to be set.
        */
       override fun timecodeBurninSettings(timecodeBurninSettings: IResolvable) {
-        cdkBuilder.timecodeBurninSettings(timecodeBurninSettings.let(IResolvable::unwrap))
+        cdkBuilder.timecodeBurninSettings(timecodeBurninSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param timecodeBurninSettings the value to be set.
        */
       override fun timecodeBurninSettings(timecodeBurninSettings: TimecodeBurninSettingsProperty) {
-        cdkBuilder.timecodeBurninSettings(timecodeBurninSettings.let(TimecodeBurninSettingsProperty::unwrap))
+        cdkBuilder.timecodeBurninSettings(timecodeBurninSettings.let(TimecodeBurninSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -30735,7 +31286,7 @@ public open class CfnChannel(
        * MediaLive acts as a "Push" encoder to IIS.
        */
       override fun destination(destination: IResolvable) {
-        cdkBuilder.destination(destination.let(IResolvable::unwrap))
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -30743,7 +31294,7 @@ public open class CfnChannel(
        * MediaLive acts as a "Push" encoder to IIS.
        */
       override fun destination(destination: OutputLocationRefProperty) {
-        cdkBuilder.destination(destination.let(OutputLocationRefProperty::unwrap))
+        cdkBuilder.destination(destination.let(OutputLocationRefProperty.Companion::unwrap))
       }
 
       /**
@@ -31298,14 +31849,14 @@ public open class CfnChannel(
        * @param destination Destination is a Multiplex.
        */
       override fun destination(destination: IResolvable) {
-        cdkBuilder.destination(destination.let(IResolvable::unwrap))
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param destination Destination is a Multiplex.
        */
       override fun destination(destination: OutputLocationRefProperty) {
-        cdkBuilder.destination(destination.let(OutputLocationRefProperty::unwrap))
+        cdkBuilder.destination(destination.let(OutputLocationRefProperty.Companion::unwrap))
       }
 
       /**
@@ -31568,14 +32119,14 @@ public open class CfnChannel(
        * @param hlsInputSettings Information about how to connect to the upstream system.
        */
       override fun hlsInputSettings(hlsInputSettings: IResolvable) {
-        cdkBuilder.hlsInputSettings(hlsInputSettings.let(IResolvable::unwrap))
+        cdkBuilder.hlsInputSettings(hlsInputSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param hlsInputSettings Information about how to connect to the upstream system.
        */
       override fun hlsInputSettings(hlsInputSettings: HlsInputSettingsProperty) {
-        cdkBuilder.hlsInputSettings(hlsInputSettings.let(HlsInputSettingsProperty::unwrap))
+        cdkBuilder.hlsInputSettings(hlsInputSettings.let(HlsInputSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -32146,7 +32697,7 @@ public open class CfnChannel(
        * type Nielsen CBET.
        */
       override fun nielsenCbetSettings(nielsenCbetSettings: IResolvable) {
-        cdkBuilder.nielsenCbetSettings(nielsenCbetSettings.let(IResolvable::unwrap))
+        cdkBuilder.nielsenCbetSettings(nielsenCbetSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -32154,7 +32705,7 @@ public open class CfnChannel(
        * type Nielsen CBET.
        */
       override fun nielsenCbetSettings(nielsenCbetSettings: NielsenCBETProperty) {
-        cdkBuilder.nielsenCbetSettings(nielsenCbetSettings.let(NielsenCBETProperty::unwrap))
+        cdkBuilder.nielsenCbetSettings(nielsenCbetSettings.let(NielsenCBETProperty.Companion::unwrap))
       }
 
       /**
@@ -32179,7 +32730,7 @@ public open class CfnChannel(
        * of type Nielsen NAES II (N2) and Nielsen NAES VI (NW).
        */
       override fun nielsenNaesIiNwSettings(nielsenNaesIiNwSettings: IResolvable) {
-        cdkBuilder.nielsenNaesIiNwSettings(nielsenNaesIiNwSettings.let(IResolvable::unwrap))
+        cdkBuilder.nielsenNaesIiNwSettings(nielsenNaesIiNwSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -32187,7 +32738,7 @@ public open class CfnChannel(
        * of type Nielsen NAES II (N2) and Nielsen NAES VI (NW).
        */
       override fun nielsenNaesIiNwSettings(nielsenNaesIiNwSettings: NielsenNaesIiNwProperty) {
-        cdkBuilder.nielsenNaesIiNwSettings(nielsenNaesIiNwSettings.let(NielsenNaesIiNwProperty::unwrap))
+        cdkBuilder.nielsenNaesIiNwSettings(nielsenNaesIiNwSettings.let(NielsenNaesIiNwProperty.Companion::unwrap))
       }
 
       /**
@@ -32392,7 +32943,7 @@ public open class CfnChannel(
        * @param mediaPackageSettings The destination settings for a MediaPackage output.
        */
       override fun mediaPackageSettings(mediaPackageSettings: IResolvable) {
-        cdkBuilder.mediaPackageSettings(mediaPackageSettings.let(IResolvable::unwrap))
+        cdkBuilder.mediaPackageSettings(mediaPackageSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -32413,7 +32964,7 @@ public open class CfnChannel(
        * one destination for both encoders.
        */
       override fun multiplexSettings(multiplexSettings: IResolvable) {
-        cdkBuilder.multiplexSettings(multiplexSettings.let(IResolvable::unwrap))
+        cdkBuilder.multiplexSettings(multiplexSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -32422,7 +32973,7 @@ public open class CfnChannel(
        */
       override
           fun multiplexSettings(multiplexSettings: MultiplexProgramChannelDestinationSettingsProperty) {
-        cdkBuilder.multiplexSettings(multiplexSettings.let(MultiplexProgramChannelDestinationSettingsProperty::unwrap))
+        cdkBuilder.multiplexSettings(multiplexSettings.let(MultiplexProgramChannelDestinationSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -32440,7 +32991,7 @@ public open class CfnChannel(
        * @param settings The destination settings for an output.
        */
       override fun settings(settings: IResolvable) {
-        cdkBuilder.settings(settings.let(IResolvable::unwrap))
+        cdkBuilder.settings(settings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -32724,6 +33275,16 @@ public open class CfnChannel(
    * .build())
    * .rolloverInterval(123)
    * .build())
+   * .cmafIngestGroupSettings(CmafIngestGroupSettingsProperty.builder()
+   * .destination(OutputLocationRefProperty.builder()
+   * .destinationRefId("destinationRefId")
+   * .build())
+   * .nielsenId3Behavior("nielsenId3Behavior")
+   * .scte35Type("scte35Type")
+   * .segmentLength(123)
+   * .segmentLengthUnits("segmentLengthUnits")
+   * .sendDelayMs(123)
+   * .build())
    * .frameCaptureGroupSettings(FrameCaptureGroupSettingsProperty.builder()
    * .destination(OutputLocationRefProperty.builder()
    * .destinationRefId("destinationRefId")
@@ -32943,6 +33504,9 @@ public open class CfnChannel(
    * .rawSettings(RawSettingsProperty.builder().build())
    * .build())
    * .extension("extension")
+   * .nameModifier("nameModifier")
+   * .build())
+   * .cmafIngestOutputSettings(CmafIngestOutputSettingsProperty.builder()
    * .nameModifier("nameModifier")
    * .build())
    * .frameCaptureOutputSettings(FrameCaptureOutputSettingsProperty.builder()
@@ -33184,14 +33748,14 @@ public open class CfnChannel(
        * @param outputGroupSettings The settings associated with the output group.
        */
       override fun outputGroupSettings(outputGroupSettings: IResolvable) {
-        cdkBuilder.outputGroupSettings(outputGroupSettings.let(IResolvable::unwrap))
+        cdkBuilder.outputGroupSettings(outputGroupSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param outputGroupSettings The settings associated with the output group.
        */
       override fun outputGroupSettings(outputGroupSettings: OutputGroupSettingsProperty) {
-        cdkBuilder.outputGroupSettings(outputGroupSettings.let(OutputGroupSettingsProperty::unwrap))
+        cdkBuilder.outputGroupSettings(outputGroupSettings.let(OutputGroupSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -33207,7 +33771,7 @@ public open class CfnChannel(
        * @param outputs The settings for the outputs in the output group.
        */
       override fun outputs(outputs: IResolvable) {
-        cdkBuilder.outputs(outputs.let(IResolvable::unwrap))
+        cdkBuilder.outputs(outputs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -33294,6 +33858,16 @@ public open class CfnChannel(
    * .destinationRefId("destinationRefId")
    * .build())
    * .rolloverInterval(123)
+   * .build())
+   * .cmafIngestGroupSettings(CmafIngestGroupSettingsProperty.builder()
+   * .destination(OutputLocationRefProperty.builder()
+   * .destinationRefId("destinationRefId")
+   * .build())
+   * .nielsenId3Behavior("nielsenId3Behavior")
+   * .scte35Type("scte35Type")
+   * .segmentLength(123)
+   * .segmentLengthUnits("segmentLengthUnits")
+   * .sendDelayMs(123)
    * .build())
    * .frameCaptureGroupSettings(FrameCaptureGroupSettingsProperty.builder()
    * .destination(OutputLocationRefProperty.builder()
@@ -33458,6 +34032,11 @@ public open class CfnChannel(
     public fun archiveGroupSettings(): Any? = unwrap(this).getArchiveGroupSettings()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputgroupsettings.html#cfn-medialive-channel-outputgroupsettings-cmafingestgroupsettings)
+     */
+    public fun cmafIngestGroupSettings(): Any? = unwrap(this).getCmafIngestGroupSettings()
+
+    /**
      * The configuration of a frame capture output group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputgroupsettings.html#cfn-medialive-channel-outputgroupsettings-framecapturegroupsettings)
@@ -33531,6 +34110,24 @@ public open class CfnChannel(
       @JvmName("b4974113d5d2cba0b7423c1d194d0262eb916d552b8af23daefcea844afe0a39")
       public
           fun archiveGroupSettings(archiveGroupSettings: ArchiveGroupSettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param cmafIngestGroupSettings the value to be set.
+       */
+      public fun cmafIngestGroupSettings(cmafIngestGroupSettings: IResolvable)
+
+      /**
+       * @param cmafIngestGroupSettings the value to be set.
+       */
+      public fun cmafIngestGroupSettings(cmafIngestGroupSettings: CmafIngestGroupSettingsProperty)
+
+      /**
+       * @param cmafIngestGroupSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ed1fcca4d5bce59158ca5e9d344572b61dc04d5e1fff0d71c13a4287bc436f65")
+      public
+          fun cmafIngestGroupSettings(cmafIngestGroupSettings: CmafIngestGroupSettingsProperty.Builder.() -> Unit)
 
       /**
        * @param frameCaptureGroupSettings The configuration of a frame capture output group.
@@ -33668,7 +34265,7 @@ public open class CfnChannel(
        * The parent of this entity is OutputGroupSettings.
        */
       override fun archiveGroupSettings(archiveGroupSettings: IResolvable) {
-        cdkBuilder.archiveGroupSettings(archiveGroupSettings.let(IResolvable::unwrap))
+        cdkBuilder.archiveGroupSettings(archiveGroupSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -33676,7 +34273,7 @@ public open class CfnChannel(
        * The parent of this entity is OutputGroupSettings.
        */
       override fun archiveGroupSettings(archiveGroupSettings: ArchiveGroupSettingsProperty) {
-        cdkBuilder.archiveGroupSettings(archiveGroupSettings.let(ArchiveGroupSettingsProperty::unwrap))
+        cdkBuilder.archiveGroupSettings(archiveGroupSettings.let(ArchiveGroupSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -33690,10 +34287,34 @@ public open class CfnChannel(
           Unit = archiveGroupSettings(ArchiveGroupSettingsProperty(archiveGroupSettings))
 
       /**
+       * @param cmafIngestGroupSettings the value to be set.
+       */
+      override fun cmafIngestGroupSettings(cmafIngestGroupSettings: IResolvable) {
+        cdkBuilder.cmafIngestGroupSettings(cmafIngestGroupSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param cmafIngestGroupSettings the value to be set.
+       */
+      override
+          fun cmafIngestGroupSettings(cmafIngestGroupSettings: CmafIngestGroupSettingsProperty) {
+        cdkBuilder.cmafIngestGroupSettings(cmafIngestGroupSettings.let(CmafIngestGroupSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param cmafIngestGroupSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ed1fcca4d5bce59158ca5e9d344572b61dc04d5e1fff0d71c13a4287bc436f65")
+      override
+          fun cmafIngestGroupSettings(cmafIngestGroupSettings: CmafIngestGroupSettingsProperty.Builder.() -> Unit):
+          Unit = cmafIngestGroupSettings(CmafIngestGroupSettingsProperty(cmafIngestGroupSettings))
+
+      /**
        * @param frameCaptureGroupSettings The configuration of a frame capture output group.
        */
       override fun frameCaptureGroupSettings(frameCaptureGroupSettings: IResolvable) {
-        cdkBuilder.frameCaptureGroupSettings(frameCaptureGroupSettings.let(IResolvable::unwrap))
+        cdkBuilder.frameCaptureGroupSettings(frameCaptureGroupSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -33701,7 +34322,7 @@ public open class CfnChannel(
        */
       override
           fun frameCaptureGroupSettings(frameCaptureGroupSettings: FrameCaptureGroupSettingsProperty) {
-        cdkBuilder.frameCaptureGroupSettings(frameCaptureGroupSettings.let(FrameCaptureGroupSettingsProperty::unwrap))
+        cdkBuilder.frameCaptureGroupSettings(frameCaptureGroupSettings.let(FrameCaptureGroupSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -33718,14 +34339,14 @@ public open class CfnChannel(
        * @param hlsGroupSettings The configuration of an HLS output group.
        */
       override fun hlsGroupSettings(hlsGroupSettings: IResolvable) {
-        cdkBuilder.hlsGroupSettings(hlsGroupSettings.let(IResolvable::unwrap))
+        cdkBuilder.hlsGroupSettings(hlsGroupSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param hlsGroupSettings The configuration of an HLS output group.
        */
       override fun hlsGroupSettings(hlsGroupSettings: HlsGroupSettingsProperty) {
-        cdkBuilder.hlsGroupSettings(hlsGroupSettings.let(HlsGroupSettingsProperty::unwrap))
+        cdkBuilder.hlsGroupSettings(hlsGroupSettings.let(HlsGroupSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -33740,7 +34361,7 @@ public open class CfnChannel(
        * @param mediaPackageGroupSettings The configuration of a MediaPackage output group.
        */
       override fun mediaPackageGroupSettings(mediaPackageGroupSettings: IResolvable) {
-        cdkBuilder.mediaPackageGroupSettings(mediaPackageGroupSettings.let(IResolvable::unwrap))
+        cdkBuilder.mediaPackageGroupSettings(mediaPackageGroupSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -33748,7 +34369,7 @@ public open class CfnChannel(
        */
       override
           fun mediaPackageGroupSettings(mediaPackageGroupSettings: MediaPackageGroupSettingsProperty) {
-        cdkBuilder.mediaPackageGroupSettings(mediaPackageGroupSettings.let(MediaPackageGroupSettingsProperty::unwrap))
+        cdkBuilder.mediaPackageGroupSettings(mediaPackageGroupSettings.let(MediaPackageGroupSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -33765,14 +34386,14 @@ public open class CfnChannel(
        * @param msSmoothGroupSettings The configuration of a Microsoft Smooth output group.
        */
       override fun msSmoothGroupSettings(msSmoothGroupSettings: IResolvable) {
-        cdkBuilder.msSmoothGroupSettings(msSmoothGroupSettings.let(IResolvable::unwrap))
+        cdkBuilder.msSmoothGroupSettings(msSmoothGroupSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param msSmoothGroupSettings The configuration of a Microsoft Smooth output group.
        */
       override fun msSmoothGroupSettings(msSmoothGroupSettings: MsSmoothGroupSettingsProperty) {
-        cdkBuilder.msSmoothGroupSettings(msSmoothGroupSettings.let(MsSmoothGroupSettingsProperty::unwrap))
+        cdkBuilder.msSmoothGroupSettings(msSmoothGroupSettings.let(MsSmoothGroupSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -33788,14 +34409,14 @@ public open class CfnChannel(
        * @param multiplexGroupSettings The settings for a Multiplex output group.
        */
       override fun multiplexGroupSettings(multiplexGroupSettings: IResolvable) {
-        cdkBuilder.multiplexGroupSettings(multiplexGroupSettings.let(IResolvable::unwrap))
+        cdkBuilder.multiplexGroupSettings(multiplexGroupSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param multiplexGroupSettings The settings for a Multiplex output group.
        */
       override fun multiplexGroupSettings(multiplexGroupSettings: MultiplexGroupSettingsProperty) {
-        cdkBuilder.multiplexGroupSettings(multiplexGroupSettings.let(MultiplexGroupSettingsProperty::unwrap))
+        cdkBuilder.multiplexGroupSettings(multiplexGroupSettings.let(MultiplexGroupSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -33811,14 +34432,14 @@ public open class CfnChannel(
        * @param rtmpGroupSettings The configuration of an RTMP output group.
        */
       override fun rtmpGroupSettings(rtmpGroupSettings: IResolvable) {
-        cdkBuilder.rtmpGroupSettings(rtmpGroupSettings.let(IResolvable::unwrap))
+        cdkBuilder.rtmpGroupSettings(rtmpGroupSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param rtmpGroupSettings The configuration of an RTMP output group.
        */
       override fun rtmpGroupSettings(rtmpGroupSettings: RtmpGroupSettingsProperty) {
-        cdkBuilder.rtmpGroupSettings(rtmpGroupSettings.let(RtmpGroupSettingsProperty::unwrap))
+        cdkBuilder.rtmpGroupSettings(rtmpGroupSettings.let(RtmpGroupSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -33834,14 +34455,14 @@ public open class CfnChannel(
        * @param udpGroupSettings The configuration of a UDP output group.
        */
       override fun udpGroupSettings(udpGroupSettings: IResolvable) {
-        cdkBuilder.udpGroupSettings(udpGroupSettings.let(IResolvable::unwrap))
+        cdkBuilder.udpGroupSettings(udpGroupSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param udpGroupSettings The configuration of a UDP output group.
        */
       override fun udpGroupSettings(udpGroupSettings: UdpGroupSettingsProperty) {
-        cdkBuilder.udpGroupSettings(udpGroupSettings.let(UdpGroupSettingsProperty::unwrap))
+        cdkBuilder.udpGroupSettings(udpGroupSettings.let(UdpGroupSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -33868,6 +34489,11 @@ public open class CfnChannel(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputgroupsettings.html#cfn-medialive-channel-outputgroupsettings-archivegroupsettings)
        */
       override fun archiveGroupSettings(): Any? = unwrap(this).getArchiveGroupSettings()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputgroupsettings.html#cfn-medialive-channel-outputgroupsettings-cmafingestgroupsettings)
+       */
+      override fun cmafIngestGroupSettings(): Any? = unwrap(this).getCmafIngestGroupSettings()
 
       /**
        * The configuration of a frame capture output group.
@@ -34091,14 +34717,14 @@ public open class CfnChannel(
        * @param epochLockingSettings the value to be set.
        */
       override fun epochLockingSettings(epochLockingSettings: IResolvable) {
-        cdkBuilder.epochLockingSettings(epochLockingSettings.let(IResolvable::unwrap))
+        cdkBuilder.epochLockingSettings(epochLockingSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param epochLockingSettings the value to be set.
        */
       override fun epochLockingSettings(epochLockingSettings: EpochLockingSettingsProperty) {
-        cdkBuilder.epochLockingSettings(epochLockingSettings.let(EpochLockingSettingsProperty::unwrap))
+        cdkBuilder.epochLockingSettings(epochLockingSettings.let(EpochLockingSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -34236,6 +34862,9 @@ public open class CfnChannel(
    * .rawSettings(RawSettingsProperty.builder().build())
    * .build())
    * .extension("extension")
+   * .nameModifier("nameModifier")
+   * .build())
+   * .cmafIngestOutputSettings(CmafIngestOutputSettingsProperty.builder()
    * .nameModifier("nameModifier")
    * .build())
    * .frameCaptureOutputSettings(FrameCaptureOutputSettingsProperty.builder()
@@ -34529,14 +35158,14 @@ public open class CfnChannel(
        * @param outputSettings The output type-specific settings.
        */
       override fun outputSettings(outputSettings: IResolvable) {
-        cdkBuilder.outputSettings(outputSettings.let(IResolvable::unwrap))
+        cdkBuilder.outputSettings(outputSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param outputSettings The output type-specific settings.
        */
       override fun outputSettings(outputSettings: OutputSettingsProperty) {
-        cdkBuilder.outputSettings(outputSettings.let(OutputSettingsProperty::unwrap))
+        cdkBuilder.outputSettings(outputSettings.let(OutputSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -34698,6 +35327,9 @@ public open class CfnChannel(
    * .extension("extension")
    * .nameModifier("nameModifier")
    * .build())
+   * .cmafIngestOutputSettings(CmafIngestOutputSettingsProperty.builder()
+   * .nameModifier("nameModifier")
+   * .build())
    * .frameCaptureOutputSettings(FrameCaptureOutputSettingsProperty.builder()
    * .nameModifier("nameModifier")
    * .build())
@@ -34854,6 +35486,11 @@ public open class CfnChannel(
     public fun archiveOutputSettings(): Any? = unwrap(this).getArchiveOutputSettings()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputsettings.html#cfn-medialive-channel-outputsettings-cmafingestoutputsettings)
+     */
+    public fun cmafIngestOutputSettings(): Any? = unwrap(this).getCmafIngestOutputSettings()
+
+    /**
      * The settings for a frame capture output.
      *
      * The parent of this entity is OutputGroupSettings.
@@ -34934,6 +35571,25 @@ public open class CfnChannel(
       @JvmName("96508601faf036961ed97cb0f41f5db79d1f5f5f32121ddf0d39ebdd9a28397f")
       public
           fun archiveOutputSettings(archiveOutputSettings: ArchiveOutputSettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param cmafIngestOutputSettings the value to be set.
+       */
+      public fun cmafIngestOutputSettings(cmafIngestOutputSettings: IResolvable)
+
+      /**
+       * @param cmafIngestOutputSettings the value to be set.
+       */
+      public
+          fun cmafIngestOutputSettings(cmafIngestOutputSettings: CmafIngestOutputSettingsProperty)
+
+      /**
+       * @param cmafIngestOutputSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("adc0d5774e5ba0100a685f267f424733105a44676b86764bce028fe3f11dfdbf")
+      public
+          fun cmafIngestOutputSettings(cmafIngestOutputSettings: CmafIngestOutputSettingsProperty.Builder.() -> Unit)
 
       /**
        * @param frameCaptureOutputSettings The settings for a frame capture output.
@@ -35086,14 +35742,14 @@ public open class CfnChannel(
        * @param archiveOutputSettings The settings for an archive output.
        */
       override fun archiveOutputSettings(archiveOutputSettings: IResolvable) {
-        cdkBuilder.archiveOutputSettings(archiveOutputSettings.let(IResolvable::unwrap))
+        cdkBuilder.archiveOutputSettings(archiveOutputSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param archiveOutputSettings The settings for an archive output.
        */
       override fun archiveOutputSettings(archiveOutputSettings: ArchiveOutputSettingsProperty) {
-        cdkBuilder.archiveOutputSettings(archiveOutputSettings.let(ArchiveOutputSettingsProperty::unwrap))
+        cdkBuilder.archiveOutputSettings(archiveOutputSettings.let(ArchiveOutputSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -35106,11 +35762,36 @@ public open class CfnChannel(
           Unit = archiveOutputSettings(ArchiveOutputSettingsProperty(archiveOutputSettings))
 
       /**
+       * @param cmafIngestOutputSettings the value to be set.
+       */
+      override fun cmafIngestOutputSettings(cmafIngestOutputSettings: IResolvable) {
+        cdkBuilder.cmafIngestOutputSettings(cmafIngestOutputSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param cmafIngestOutputSettings the value to be set.
+       */
+      override
+          fun cmafIngestOutputSettings(cmafIngestOutputSettings: CmafIngestOutputSettingsProperty) {
+        cdkBuilder.cmafIngestOutputSettings(cmafIngestOutputSettings.let(CmafIngestOutputSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param cmafIngestOutputSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("adc0d5774e5ba0100a685f267f424733105a44676b86764bce028fe3f11dfdbf")
+      override
+          fun cmafIngestOutputSettings(cmafIngestOutputSettings: CmafIngestOutputSettingsProperty.Builder.() -> Unit):
+          Unit =
+          cmafIngestOutputSettings(CmafIngestOutputSettingsProperty(cmafIngestOutputSettings))
+
+      /**
        * @param frameCaptureOutputSettings The settings for a frame capture output.
        * The parent of this entity is OutputGroupSettings.
        */
       override fun frameCaptureOutputSettings(frameCaptureOutputSettings: IResolvable) {
-        cdkBuilder.frameCaptureOutputSettings(frameCaptureOutputSettings.let(IResolvable::unwrap))
+        cdkBuilder.frameCaptureOutputSettings(frameCaptureOutputSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -35119,7 +35800,7 @@ public open class CfnChannel(
        */
       override
           fun frameCaptureOutputSettings(frameCaptureOutputSettings: FrameCaptureOutputSettingsProperty) {
-        cdkBuilder.frameCaptureOutputSettings(frameCaptureOutputSettings.let(FrameCaptureOutputSettingsProperty::unwrap))
+        cdkBuilder.frameCaptureOutputSettings(frameCaptureOutputSettings.let(FrameCaptureOutputSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -35138,7 +35819,7 @@ public open class CfnChannel(
        * The parent of this entity is OutputGroupSettings.
        */
       override fun hlsOutputSettings(hlsOutputSettings: IResolvable) {
-        cdkBuilder.hlsOutputSettings(hlsOutputSettings.let(IResolvable::unwrap))
+        cdkBuilder.hlsOutputSettings(hlsOutputSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -35146,7 +35827,7 @@ public open class CfnChannel(
        * The parent of this entity is OutputGroupSettings.
        */
       override fun hlsOutputSettings(hlsOutputSettings: HlsOutputSettingsProperty) {
-        cdkBuilder.hlsOutputSettings(hlsOutputSettings.let(HlsOutputSettingsProperty::unwrap))
+        cdkBuilder.hlsOutputSettings(hlsOutputSettings.let(HlsOutputSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -35164,7 +35845,7 @@ public open class CfnChannel(
        * The parent of this entity is OutputGroupSettings.
        */
       override fun mediaPackageOutputSettings(mediaPackageOutputSettings: IResolvable) {
-        cdkBuilder.mediaPackageOutputSettings(mediaPackageOutputSettings.let(IResolvable::unwrap))
+        cdkBuilder.mediaPackageOutputSettings(mediaPackageOutputSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -35173,7 +35854,7 @@ public open class CfnChannel(
        */
       override
           fun mediaPackageOutputSettings(mediaPackageOutputSettings: MediaPackageOutputSettingsProperty) {
-        cdkBuilder.mediaPackageOutputSettings(mediaPackageOutputSettings.let(MediaPackageOutputSettingsProperty::unwrap))
+        cdkBuilder.mediaPackageOutputSettings(mediaPackageOutputSettings.let(MediaPackageOutputSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -35191,14 +35872,14 @@ public open class CfnChannel(
        * @param msSmoothOutputSettings The settings for a Microsoft Smooth output.
        */
       override fun msSmoothOutputSettings(msSmoothOutputSettings: IResolvable) {
-        cdkBuilder.msSmoothOutputSettings(msSmoothOutputSettings.let(IResolvable::unwrap))
+        cdkBuilder.msSmoothOutputSettings(msSmoothOutputSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param msSmoothOutputSettings The settings for a Microsoft Smooth output.
        */
       override fun msSmoothOutputSettings(msSmoothOutputSettings: MsSmoothOutputSettingsProperty) {
-        cdkBuilder.msSmoothOutputSettings(msSmoothOutputSettings.let(MsSmoothOutputSettingsProperty::unwrap))
+        cdkBuilder.msSmoothOutputSettings(msSmoothOutputSettings.let(MsSmoothOutputSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -35214,7 +35895,7 @@ public open class CfnChannel(
        * @param multiplexOutputSettings Configuration of a Multiplex output.
        */
       override fun multiplexOutputSettings(multiplexOutputSettings: IResolvable) {
-        cdkBuilder.multiplexOutputSettings(multiplexOutputSettings.let(IResolvable::unwrap))
+        cdkBuilder.multiplexOutputSettings(multiplexOutputSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -35222,7 +35903,7 @@ public open class CfnChannel(
        */
       override
           fun multiplexOutputSettings(multiplexOutputSettings: MultiplexOutputSettingsProperty) {
-        cdkBuilder.multiplexOutputSettings(multiplexOutputSettings.let(MultiplexOutputSettingsProperty::unwrap))
+        cdkBuilder.multiplexOutputSettings(multiplexOutputSettings.let(MultiplexOutputSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -35239,7 +35920,7 @@ public open class CfnChannel(
        * The parent of this entity is OutputGroupSettings.
        */
       override fun rtmpOutputSettings(rtmpOutputSettings: IResolvable) {
-        cdkBuilder.rtmpOutputSettings(rtmpOutputSettings.let(IResolvable::unwrap))
+        cdkBuilder.rtmpOutputSettings(rtmpOutputSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -35247,7 +35928,7 @@ public open class CfnChannel(
        * The parent of this entity is OutputGroupSettings.
        */
       override fun rtmpOutputSettings(rtmpOutputSettings: RtmpOutputSettingsProperty) {
-        cdkBuilder.rtmpOutputSettings(rtmpOutputSettings.let(RtmpOutputSettingsProperty::unwrap))
+        cdkBuilder.rtmpOutputSettings(rtmpOutputSettings.let(RtmpOutputSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -35265,7 +35946,7 @@ public open class CfnChannel(
        * The parent of this entity is OutputGroupSettings.
        */
       override fun udpOutputSettings(udpOutputSettings: IResolvable) {
-        cdkBuilder.udpOutputSettings(udpOutputSettings.let(IResolvable::unwrap))
+        cdkBuilder.udpOutputSettings(udpOutputSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -35273,7 +35954,7 @@ public open class CfnChannel(
        * The parent of this entity is OutputGroupSettings.
        */
       override fun udpOutputSettings(udpOutputSettings: UdpOutputSettingsProperty) {
-        cdkBuilder.udpOutputSettings(udpOutputSettings.let(UdpOutputSettingsProperty::unwrap))
+        cdkBuilder.udpOutputSettings(udpOutputSettings.let(UdpOutputSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -35300,6 +35981,11 @@ public open class CfnChannel(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputsettings.html#cfn-medialive-channel-outputsettings-archiveoutputsettings)
        */
       override fun archiveOutputSettings(): Any? = unwrap(this).getArchiveOutputSettings()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputsettings.html#cfn-medialive-channel-outputsettings-cmafingestoutputsettings)
+       */
+      override fun cmafIngestOutputSettings(): Any? = unwrap(this).getCmafIngestOutputSettings()
 
       /**
        * The settings for a frame capture output.
@@ -35678,7 +36364,7 @@ public open class CfnChannel(
        * gain adjustments.
        */
       override fun channelMappings(channelMappings: IResolvable) {
-        cdkBuilder.channelMappings(channelMappings.let(IResolvable::unwrap))
+        cdkBuilder.channelMappings(channelMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -36293,7 +36979,7 @@ public open class CfnChannel(
        * rtmp://host/appname).
        */
       override fun destination(destination: IResolvable) {
-        cdkBuilder.destination(destination.let(IResolvable::unwrap))
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -36301,7 +36987,7 @@ public open class CfnChannel(
        * rtmp://host/appname).
        */
       override fun destination(destination: OutputLocationRefProperty) {
-        cdkBuilder.destination(destination.let(OutputLocationRefProperty::unwrap))
+        cdkBuilder.destination(destination.let(OutputLocationRefProperty.Companion::unwrap))
       }
 
       /**
@@ -37221,14 +37907,14 @@ public open class CfnChannel(
        * @param m3U8Settings Settings for the M3U8 container.
        */
       override fun m3U8Settings(m3U8Settings: IResolvable) {
-        cdkBuilder.m3U8Settings(m3U8Settings.let(IResolvable::unwrap))
+        cdkBuilder.m3U8Settings(m3U8Settings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param m3U8Settings Settings for the M3U8 container.
        */
       override fun m3U8Settings(m3U8Settings: M3u8SettingsProperty) {
-        cdkBuilder.m3U8Settings(m3U8Settings.let(M3u8SettingsProperty::unwrap))
+        cdkBuilder.m3U8Settings(m3U8Settings.let(M3u8SettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -37358,14 +38044,14 @@ public open class CfnChannel(
        * @param keyProviderServer The URL of the license server that is used for protecting content.
        */
       override fun keyProviderServer(keyProviderServer: IResolvable) {
-        cdkBuilder.keyProviderServer(keyProviderServer.let(IResolvable::unwrap))
+        cdkBuilder.keyProviderServer(keyProviderServer.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param keyProviderServer The URL of the license server that is used for protecting content.
        */
       override fun keyProviderServer(keyProviderServer: InputLocationProperty) {
-        cdkBuilder.keyProviderServer(keyProviderServer.let(InputLocationProperty::unwrap))
+        cdkBuilder.keyProviderServer(keyProviderServer.let(InputLocationProperty.Companion::unwrap))
       }
 
       /**
@@ -37567,7 +38253,7 @@ public open class CfnChannel(
        * that will be created using this Teletext source captions.
        */
       override fun outputRectangle(outputRectangle: IResolvable) {
-        cdkBuilder.outputRectangle(outputRectangle.let(IResolvable::unwrap))
+        cdkBuilder.outputRectangle(outputRectangle.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -37575,7 +38261,7 @@ public open class CfnChannel(
        * that will be created using this Teletext source captions.
        */
       override fun outputRectangle(outputRectangle: CaptionRectangleProperty) {
-        cdkBuilder.outputRectangle(outputRectangle.let(CaptionRectangleProperty::unwrap))
+        cdkBuilder.outputRectangle(outputRectangle.let(CaptionRectangleProperty.Companion::unwrap))
       }
 
       /**
@@ -38332,14 +39018,14 @@ public open class CfnChannel(
        * @param m2TsSettings The M2TS configuration for this UDP output.
        */
       override fun m2TsSettings(m2TsSettings: IResolvable) {
-        cdkBuilder.m2TsSettings(m2TsSettings.let(IResolvable::unwrap))
+        cdkBuilder.m2TsSettings(m2TsSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param m2TsSettings The M2TS configuration for this UDP output.
        */
       override fun m2TsSettings(m2TsSettings: M2tsSettingsProperty) {
-        cdkBuilder.m2TsSettings(m2TsSettings.let(M2tsSettingsProperty::unwrap))
+        cdkBuilder.m2TsSettings(m2TsSettings.let(M2tsSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -38766,14 +39452,14 @@ public open class CfnChannel(
        * @param containerSettings The settings for the UDP output.
        */
       override fun containerSettings(containerSettings: IResolvable) {
-        cdkBuilder.containerSettings(containerSettings.let(IResolvable::unwrap))
+        cdkBuilder.containerSettings(containerSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param containerSettings The settings for the UDP output.
        */
       override fun containerSettings(containerSettings: UdpContainerSettingsProperty) {
-        cdkBuilder.containerSettings(containerSettings.let(UdpContainerSettingsProperty::unwrap))
+        cdkBuilder.containerSettings(containerSettings.let(UdpContainerSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -38791,7 +39477,7 @@ public open class CfnChannel(
        * udp://10.100.100.100:5002).
        */
       override fun destination(destination: IResolvable) {
-        cdkBuilder.destination(destination.let(IResolvable::unwrap))
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -38800,7 +39486,7 @@ public open class CfnChannel(
        * udp://10.100.100.100:5002).
        */
       override fun destination(destination: OutputLocationRefProperty) {
-        cdkBuilder.destination(destination.let(OutputLocationRefProperty::unwrap))
+        cdkBuilder.destination(destination.let(OutputLocationRefProperty.Companion::unwrap))
       }
 
       /**
@@ -38818,7 +39504,7 @@ public open class CfnChannel(
        * on UDP outputs.
        */
       override fun fecOutputSettings(fecOutputSettings: IResolvable) {
-        cdkBuilder.fecOutputSettings(fecOutputSettings.let(IResolvable::unwrap))
+        cdkBuilder.fecOutputSettings(fecOutputSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -38826,7 +39512,7 @@ public open class CfnChannel(
        * on UDP outputs.
        */
       override fun fecOutputSettings(fecOutputSettings: FecOutputSettingsProperty) {
-        cdkBuilder.fecOutputSettings(fecOutputSettings.let(FecOutputSettingsProperty::unwrap))
+        cdkBuilder.fecOutputSettings(fecOutputSettings.let(FecOutputSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -39164,6 +39850,8 @@ public open class CfnChannel(
    * .lookAheadRateControl("lookAheadRateControl")
    * .maxBitrate(123)
    * .minIInterval(123)
+   * .mvOverPictureBoundaries("mvOverPictureBoundaries")
+   * .mvTemporalPredictor("mvTemporalPredictor")
    * .parDenominator(123)
    * .parNumerator(123)
    * .profile("profile")
@@ -39173,12 +39861,16 @@ public open class CfnChannel(
    * .sceneChangeDetect("sceneChangeDetect")
    * .slices(123)
    * .tier("tier")
+   * .tileHeight(123)
+   * .tilePadding("tilePadding")
+   * .tileWidth(123)
    * .timecodeBurninSettings(TimecodeBurninSettingsProperty.builder()
    * .fontSize("fontSize")
    * .position("position")
    * .prefix("prefix")
    * .build())
    * .timecodeInsertion("timecodeInsertion")
+   * .treeblockSize("treeblockSize")
    * .build())
    * .mpeg2Settings(Mpeg2SettingsProperty.builder()
    * .adaptiveQuantization("adaptiveQuantization")
@@ -39326,14 +40018,14 @@ public open class CfnChannel(
        * @param frameCaptureSettings The settings for the video codec in a frame capture output.
        */
       override fun frameCaptureSettings(frameCaptureSettings: IResolvable) {
-        cdkBuilder.frameCaptureSettings(frameCaptureSettings.let(IResolvable::unwrap))
+        cdkBuilder.frameCaptureSettings(frameCaptureSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param frameCaptureSettings The settings for the video codec in a frame capture output.
        */
       override fun frameCaptureSettings(frameCaptureSettings: FrameCaptureSettingsProperty) {
-        cdkBuilder.frameCaptureSettings(frameCaptureSettings.let(FrameCaptureSettingsProperty::unwrap))
+        cdkBuilder.frameCaptureSettings(frameCaptureSettings.let(FrameCaptureSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -39349,14 +40041,14 @@ public open class CfnChannel(
        * @param h264Settings The settings for the H.264 codec in the output.
        */
       override fun h264Settings(h264Settings: IResolvable) {
-        cdkBuilder.h264Settings(h264Settings.let(IResolvable::unwrap))
+        cdkBuilder.h264Settings(h264Settings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param h264Settings The settings for the H.264 codec in the output.
        */
       override fun h264Settings(h264Settings: H264SettingsProperty) {
-        cdkBuilder.h264Settings(h264Settings.let(H264SettingsProperty::unwrap))
+        cdkBuilder.h264Settings(h264Settings.let(H264SettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -39371,14 +40063,14 @@ public open class CfnChannel(
        * @param h265Settings Settings for video encoded with the H265 codec.
        */
       override fun h265Settings(h265Settings: IResolvable) {
-        cdkBuilder.h265Settings(h265Settings.let(IResolvable::unwrap))
+        cdkBuilder.h265Settings(h265Settings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param h265Settings Settings for video encoded with the H265 codec.
        */
       override fun h265Settings(h265Settings: H265SettingsProperty) {
-        cdkBuilder.h265Settings(h265Settings.let(H265SettingsProperty::unwrap))
+        cdkBuilder.h265Settings(h265Settings.let(H265SettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -39393,14 +40085,14 @@ public open class CfnChannel(
        * @param mpeg2Settings Settings for video encoded with the MPEG-2 codec.
        */
       override fun mpeg2Settings(mpeg2Settings: IResolvable) {
-        cdkBuilder.mpeg2Settings(mpeg2Settings.let(IResolvable::unwrap))
+        cdkBuilder.mpeg2Settings(mpeg2Settings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param mpeg2Settings Settings for video encoded with the MPEG-2 codec.
        */
       override fun mpeg2Settings(mpeg2Settings: Mpeg2SettingsProperty) {
-        cdkBuilder.mpeg2Settings(mpeg2Settings.let(Mpeg2SettingsProperty::unwrap))
+        cdkBuilder.mpeg2Settings(mpeg2Settings.let(Mpeg2SettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -39579,6 +40271,8 @@ public open class CfnChannel(
    * .lookAheadRateControl("lookAheadRateControl")
    * .maxBitrate(123)
    * .minIInterval(123)
+   * .mvOverPictureBoundaries("mvOverPictureBoundaries")
+   * .mvTemporalPredictor("mvTemporalPredictor")
    * .parDenominator(123)
    * .parNumerator(123)
    * .profile("profile")
@@ -39588,12 +40282,16 @@ public open class CfnChannel(
    * .sceneChangeDetect("sceneChangeDetect")
    * .slices(123)
    * .tier("tier")
+   * .tileHeight(123)
+   * .tilePadding("tilePadding")
+   * .tileWidth(123)
    * .timecodeBurninSettings(TimecodeBurninSettingsProperty.builder()
    * .fontSize("fontSize")
    * .position("position")
    * .prefix("prefix")
    * .build())
    * .timecodeInsertion("timecodeInsertion")
+   * .treeblockSize("treeblockSize")
    * .build())
    * .mpeg2Settings(Mpeg2SettingsProperty.builder()
    * .adaptiveQuantization("adaptiveQuantization")
@@ -39790,14 +40488,14 @@ public open class CfnChannel(
        * @param codecSettings The video codec settings.
        */
       override fun codecSettings(codecSettings: IResolvable) {
-        cdkBuilder.codecSettings(codecSettings.let(IResolvable::unwrap))
+        cdkBuilder.codecSettings(codecSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param codecSettings The video codec settings.
        */
       override fun codecSettings(codecSettings: VideoCodecSettingsProperty) {
-        cdkBuilder.codecSettings(codecSettings.let(VideoCodecSettingsProperty::unwrap))
+        cdkBuilder.codecSettings(codecSettings.let(VideoCodecSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -40033,14 +40731,14 @@ public open class CfnChannel(
        * @param hdr10Settings Settings to configure color space settings in the incoming video.
        */
       override fun hdr10Settings(hdr10Settings: IResolvable) {
-        cdkBuilder.hdr10Settings(hdr10Settings.let(IResolvable::unwrap))
+        cdkBuilder.hdr10Settings(hdr10Settings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param hdr10Settings Settings to configure color space settings in the incoming video.
        */
       override fun hdr10Settings(hdr10Settings: Hdr10SettingsProperty) {
-        cdkBuilder.hdr10Settings(hdr10Settings.let(Hdr10SettingsProperty::unwrap))
+        cdkBuilder.hdr10Settings(hdr10Settings.let(Hdr10SettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -40415,14 +41113,14 @@ public open class CfnChannel(
        * @param colorSpaceSettings Settings to configure color space settings in the incoming video.
        */
       override fun colorSpaceSettings(colorSpaceSettings: IResolvable) {
-        cdkBuilder.colorSpaceSettings(colorSpaceSettings.let(IResolvable::unwrap))
+        cdkBuilder.colorSpaceSettings(colorSpaceSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param colorSpaceSettings Settings to configure color space settings in the incoming video.
        */
       override fun colorSpaceSettings(colorSpaceSettings: VideoSelectorColorSpaceSettingsProperty) {
-        cdkBuilder.colorSpaceSettings(colorSpaceSettings.let(VideoSelectorColorSpaceSettingsProperty::unwrap))
+        cdkBuilder.colorSpaceSettings(colorSpaceSettings.let(VideoSelectorColorSpaceSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -40451,14 +41149,14 @@ public open class CfnChannel(
        * @param selectorSettings Information about the video to select from the content.
        */
       override fun selectorSettings(selectorSettings: IResolvable) {
-        cdkBuilder.selectorSettings(selectorSettings.let(IResolvable::unwrap))
+        cdkBuilder.selectorSettings(selectorSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param selectorSettings Information about the video to select from the content.
        */
       override fun selectorSettings(selectorSettings: VideoSelectorSettingsProperty) {
-        cdkBuilder.selectorSettings(selectorSettings.let(VideoSelectorSettingsProperty::unwrap))
+        cdkBuilder.selectorSettings(selectorSettings.let(VideoSelectorSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -40624,14 +41322,14 @@ public open class CfnChannel(
        * @param videoSelectorPid Used to extract video by PID.
        */
       override fun videoSelectorPid(videoSelectorPid: IResolvable) {
-        cdkBuilder.videoSelectorPid(videoSelectorPid.let(IResolvable::unwrap))
+        cdkBuilder.videoSelectorPid(videoSelectorPid.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param videoSelectorPid Used to extract video by PID.
        */
       override fun videoSelectorPid(videoSelectorPid: VideoSelectorPidProperty) {
-        cdkBuilder.videoSelectorPid(videoSelectorPid.let(VideoSelectorPidProperty::unwrap))
+        cdkBuilder.videoSelectorPid(videoSelectorPid.let(VideoSelectorPidProperty.Companion::unwrap))
       }
 
       /**
@@ -40646,14 +41344,14 @@ public open class CfnChannel(
        * @param videoSelectorProgramId Used to extract video by program ID.
        */
       override fun videoSelectorProgramId(videoSelectorProgramId: IResolvable) {
-        cdkBuilder.videoSelectorProgramId(videoSelectorProgramId.let(IResolvable::unwrap))
+        cdkBuilder.videoSelectorProgramId(videoSelectorProgramId.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param videoSelectorProgramId Used to extract video by program ID.
        */
       override fun videoSelectorProgramId(videoSelectorProgramId: VideoSelectorProgramIdProperty) {
-        cdkBuilder.videoSelectorProgramId(videoSelectorProgramId.let(VideoSelectorProgramIdProperty::unwrap))
+        cdkBuilder.videoSelectorProgramId(videoSelectorProgramId.let(VideoSelectorProgramIdProperty.Companion::unwrap))
       }
 
       /**

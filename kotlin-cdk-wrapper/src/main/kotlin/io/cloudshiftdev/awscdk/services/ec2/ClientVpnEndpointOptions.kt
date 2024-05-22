@@ -368,7 +368,7 @@ public interface ClientVpnEndpointOptions {
      * The name of the Lambda function must begin with the `AWSClientVPN-` prefix
      */
     override fun clientConnectionHandler(clientConnectionHandler: IClientVpnConnectionHandler) {
-      cdkBuilder.clientConnectionHandler(clientConnectionHandler.let(IClientVpnConnectionHandler::unwrap))
+      cdkBuilder.clientConnectionHandler(clientConnectionHandler.let(IClientVpnConnectionHandler.Companion::unwrap))
     }
 
     /**
@@ -405,14 +405,14 @@ public interface ClientVpnEndpointOptions {
      * @param logGroup A CloudWatch Logs log group for connection logging.
      */
     override fun logGroup(logGroup: ILogGroup) {
-      cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
+      cdkBuilder.logGroup(logGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
      * @param logStream A CloudWatch Logs log stream for connection logging.
      */
     override fun logStream(logStream: ILogStream) {
-      cdkBuilder.logStream(logStream.let(ILogStream::unwrap))
+      cdkBuilder.logStream(logStream.let(ILogStream.Companion::unwrap))
     }
 
     /**
@@ -426,14 +426,14 @@ public interface ClientVpnEndpointOptions {
      * @param port The port number to assign to the Client VPN endpoint for TCP and UDP traffic.
      */
     override fun port(port: VpnPort) {
-      cdkBuilder.port(port.let(VpnPort::unwrap))
+      cdkBuilder.port(port.let(VpnPort.Companion::unwrap))
     }
 
     /**
      * @param securityGroups The security groups to apply to the target network.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -461,7 +461,7 @@ public interface ClientVpnEndpointOptions {
      * @param sessionTimeout The maximum VPN session duration time.
      */
     override fun sessionTimeout(sessionTimeout: ClientVpnSessionTimeout) {
-      cdkBuilder.sessionTimeout(sessionTimeout.let(ClientVpnSessionTimeout::unwrap))
+      cdkBuilder.sessionTimeout(sessionTimeout.let(ClientVpnSessionTimeout.Companion::unwrap))
     }
 
     /**
@@ -475,7 +475,7 @@ public interface ClientVpnEndpointOptions {
      * @param transportProtocol The transport protocol to be used by the VPN session.
      */
     override fun transportProtocol(transportProtocol: TransportProtocol) {
-      cdkBuilder.transportProtocol(transportProtocol.let(TransportProtocol::unwrap))
+      cdkBuilder.transportProtocol(transportProtocol.let(TransportProtocol.Companion::unwrap))
     }
 
     /**
@@ -483,14 +483,14 @@ public interface ClientVpnEndpointOptions {
      */
     override
         fun userBasedAuthentication(userBasedAuthentication: ClientVpnUserBasedAuthentication) {
-      cdkBuilder.userBasedAuthentication(userBasedAuthentication.let(ClientVpnUserBasedAuthentication::unwrap))
+      cdkBuilder.userBasedAuthentication(userBasedAuthentication.let(ClientVpnUserBasedAuthentication.Companion::unwrap))
     }
 
     /**
      * @param vpcSubnets Subnets to associate to the client VPN endpoint.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

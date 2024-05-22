@@ -207,7 +207,7 @@ public interface CfnVersionProps {
      * Updates are not supported for this property.
      */
     override fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: IResolvable) {
-      cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(IResolvable::unwrap))
+      cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -217,7 +217,7 @@ public interface CfnVersionProps {
      */
     override
         fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: CfnVersion.ProvisionedConcurrencyConfigurationProperty) {
-      cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(CfnVersion.ProvisionedConcurrencyConfigurationProperty::unwrap))
+      cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(CfnVersion.ProvisionedConcurrencyConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -236,14 +236,14 @@ public interface CfnVersionProps {
      * @param runtimePolicy Runtime Management Config of a function.
      */
     override fun runtimePolicy(runtimePolicy: IResolvable) {
-      cdkBuilder.runtimePolicy(runtimePolicy.let(IResolvable::unwrap))
+      cdkBuilder.runtimePolicy(runtimePolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param runtimePolicy Runtime Management Config of a function.
      */
     override fun runtimePolicy(runtimePolicy: CfnVersion.RuntimePolicyProperty) {
-      cdkBuilder.runtimePolicy(runtimePolicy.let(CfnVersion.RuntimePolicyProperty::unwrap))
+      cdkBuilder.runtimePolicy(runtimePolicy.let(CfnVersion.RuntimePolicyProperty.Companion::unwrap))
     }
 
     /**

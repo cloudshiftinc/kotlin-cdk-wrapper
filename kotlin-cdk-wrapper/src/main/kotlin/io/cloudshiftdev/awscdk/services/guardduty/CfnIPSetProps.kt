@@ -162,7 +162,7 @@ public interface CfnIPSetProps {
      * @param activate Indicates whether or not GuardDuty uses the `IPSet` .
      */
     override fun activate(activate: IResolvable) {
-      cdkBuilder.activate(activate.let(IResolvable::unwrap))
+      cdkBuilder.activate(activate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -204,7 +204,7 @@ public interface CfnIPSetProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

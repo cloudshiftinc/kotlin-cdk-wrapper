@@ -339,7 +339,7 @@ public interface CfnDeploymentConfigProps {
      * AWS CodeDeploy User Guide.
      */
     override fun minimumHealthyHosts(minimumHealthyHosts: IResolvable) {
-      cdkBuilder.minimumHealthyHosts(minimumHealthyHosts.let(IResolvable::unwrap))
+      cdkBuilder.minimumHealthyHosts(minimumHealthyHosts.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -367,7 +367,7 @@ public interface CfnDeploymentConfigProps {
      */
     override
         fun minimumHealthyHosts(minimumHealthyHosts: CfnDeploymentConfig.MinimumHealthyHostsProperty) {
-      cdkBuilder.minimumHealthyHosts(minimumHealthyHosts.let(CfnDeploymentConfig.MinimumHealthyHostsProperty::unwrap))
+      cdkBuilder.minimumHealthyHosts(minimumHealthyHosts.let(CfnDeploymentConfig.MinimumHealthyHostsProperty.Companion::unwrap))
     }
 
     /**
@@ -405,7 +405,7 @@ public interface CfnDeploymentConfigProps {
      * routed.
      */
     override fun trafficRoutingConfig(trafficRoutingConfig: IResolvable) {
-      cdkBuilder.trafficRoutingConfig(trafficRoutingConfig.let(IResolvable::unwrap))
+      cdkBuilder.trafficRoutingConfig(trafficRoutingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -414,7 +414,7 @@ public interface CfnDeploymentConfigProps {
      */
     override
         fun trafficRoutingConfig(trafficRoutingConfig: CfnDeploymentConfig.TrafficRoutingConfigProperty) {
-      cdkBuilder.trafficRoutingConfig(trafficRoutingConfig.let(CfnDeploymentConfig.TrafficRoutingConfigProperty::unwrap))
+      cdkBuilder.trafficRoutingConfig(trafficRoutingConfig.let(CfnDeploymentConfig.TrafficRoutingConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -438,7 +438,7 @@ public interface CfnDeploymentConfigProps {
      * in the *CodeDeploy User Guide* .
      */
     override fun zonalConfig(zonalConfig: IResolvable) {
-      cdkBuilder.zonalConfig(zonalConfig.let(IResolvable::unwrap))
+      cdkBuilder.zonalConfig(zonalConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -451,7 +451,7 @@ public interface CfnDeploymentConfigProps {
      * in the *CodeDeploy User Guide* .
      */
     override fun zonalConfig(zonalConfig: CfnDeploymentConfig.ZonalConfigProperty) {
-      cdkBuilder.zonalConfig(zonalConfig.let(CfnDeploymentConfig.ZonalConfigProperty::unwrap))
+      cdkBuilder.zonalConfig(zonalConfig.let(CfnDeploymentConfig.ZonalConfigProperty.Companion::unwrap))
     }
 
     /**

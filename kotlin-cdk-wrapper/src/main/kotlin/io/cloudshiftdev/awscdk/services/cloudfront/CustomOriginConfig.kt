@@ -184,7 +184,7 @@ public interface CustomOriginConfig {
      * @param allowedOriginSslVersions The SSL versions to use when interacting with the origin.
      */
     override fun allowedOriginSslVersions(allowedOriginSslVersions: List<OriginSslPolicy>) {
-      cdkBuilder.allowedOriginSslVersions(allowedOriginSslVersions.map(OriginSslPolicy::unwrap))
+      cdkBuilder.allowedOriginSslVersions(allowedOriginSslVersions.map(OriginSslPolicy.Companion::unwrap))
     }
 
     /**
@@ -226,7 +226,7 @@ public interface CustomOriginConfig {
      * @param originKeepaliveTimeout The keep alive timeout when making calls in seconds.
      */
     override fun originKeepaliveTimeout(originKeepaliveTimeout: Duration) {
-      cdkBuilder.originKeepaliveTimeout(originKeepaliveTimeout.let(Duration::unwrap))
+      cdkBuilder.originKeepaliveTimeout(originKeepaliveTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -241,14 +241,14 @@ public interface CustomOriginConfig {
      * the origin.
      */
     override fun originProtocolPolicy(originProtocolPolicy: OriginProtocolPolicy) {
-      cdkBuilder.originProtocolPolicy(originProtocolPolicy.let(OriginProtocolPolicy::unwrap))
+      cdkBuilder.originProtocolPolicy(originProtocolPolicy.let(OriginProtocolPolicy.Companion::unwrap))
     }
 
     /**
      * @param originReadTimeout The read timeout when calling the origin in seconds.
      */
     override fun originReadTimeout(originReadTimeout: Duration) {
-      cdkBuilder.originReadTimeout(originReadTimeout.let(Duration::unwrap))
+      cdkBuilder.originReadTimeout(originReadTimeout.let(Duration.Companion::unwrap))
     }
 
     /**

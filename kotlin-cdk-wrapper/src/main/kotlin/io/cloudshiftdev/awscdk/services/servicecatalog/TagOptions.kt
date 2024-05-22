@@ -43,8 +43,8 @@ public open class TagOptions(
     id: String,
     props: TagOptionsProps,
   ) :
-      this(software.amazon.awscdk.services.servicecatalog.TagOptions(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(TagOptionsProps::unwrap))
+      this(software.amazon.awscdk.services.servicecatalog.TagOptions(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(TagOptionsProps.Companion::unwrap))
   )
 
   public constructor(

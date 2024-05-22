@@ -80,7 +80,7 @@ public interface ILayerVersion : IResource {
      * @param permission the identification of the grantee. 
      */
     override fun addPermission(id: String, permission: LayerVersionPermission) {
-      unwrap(this).addPermission(id, permission.let(LayerVersionPermission::unwrap))
+      unwrap(this).addPermission(id, permission.let(LayerVersionPermission.Companion::unwrap))
     }
 
     /**
@@ -115,7 +115,7 @@ public interface ILayerVersion : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**

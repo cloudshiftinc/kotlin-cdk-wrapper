@@ -40,8 +40,8 @@ public open class CfnPortfolioPrincipalAssociation(
     id: String,
     props: CfnPortfolioPrincipalAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.servicecatalog.CfnPortfolioPrincipalAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPortfolioPrincipalAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.servicecatalog.CfnPortfolioPrincipalAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPortfolioPrincipalAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -74,7 +74,7 @@ public open class CfnPortfolioPrincipalAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

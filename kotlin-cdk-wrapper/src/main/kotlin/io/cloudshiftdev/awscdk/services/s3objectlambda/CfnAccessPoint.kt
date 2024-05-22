@@ -55,8 +55,8 @@ public open class CfnAccessPoint(
     id: String,
     props: CfnAccessPointProps,
   ) :
-      this(software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAccessPointProps::unwrap))
+      this(software.amazon.awscdk.services.s3objectlambda.CfnAccessPoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAccessPointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -150,7 +150,7 @@ public open class CfnAccessPoint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -174,14 +174,14 @@ public open class CfnAccessPoint(
    * A configuration used when creating an Object Lambda Access Point.
    */
   public open fun objectLambdaConfiguration(`value`: IResolvable) {
-    unwrap(this).setObjectLambdaConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setObjectLambdaConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A configuration used when creating an Object Lambda Access Point.
    */
   public open fun objectLambdaConfiguration(`value`: ObjectLambdaConfigurationProperty) {
-    unwrap(this).setObjectLambdaConfiguration(`value`.let(ObjectLambdaConfigurationProperty::unwrap))
+    unwrap(this).setObjectLambdaConfiguration(`value`.let(ObjectLambdaConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -263,7 +263,7 @@ public open class CfnAccessPoint(
      * Point. 
      */
     override fun objectLambdaConfiguration(objectLambdaConfiguration: IResolvable) {
-      cdkBuilder.objectLambdaConfiguration(objectLambdaConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.objectLambdaConfiguration(objectLambdaConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -275,7 +275,7 @@ public open class CfnAccessPoint(
      */
     override
         fun objectLambdaConfiguration(objectLambdaConfiguration: ObjectLambdaConfigurationProperty) {
-      cdkBuilder.objectLambdaConfiguration(objectLambdaConfiguration.let(ObjectLambdaConfigurationProperty::unwrap))
+      cdkBuilder.objectLambdaConfiguration(objectLambdaConfiguration.let(ObjectLambdaConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -601,14 +601,14 @@ public open class CfnAccessPoint(
        * @param awsLambda the value to be set. 
        */
       override fun awsLambda(awsLambda: IResolvable) {
-        cdkBuilder.awsLambda(awsLambda.let(IResolvable::unwrap))
+        cdkBuilder.awsLambda(awsLambda.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param awsLambda the value to be set. 
        */
       override fun awsLambda(awsLambda: AwsLambdaProperty) {
-        cdkBuilder.awsLambda(awsLambda.let(AwsLambdaProperty::unwrap))
+        cdkBuilder.awsLambda(awsLambda.let(AwsLambdaProperty.Companion::unwrap))
       }
 
       /**
@@ -800,7 +800,7 @@ public open class CfnAccessPoint(
        * configuration is enabled.
        */
       override fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable) {
-        cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -816,7 +816,7 @@ public open class CfnAccessPoint(
        * Object Lambda Access Point. 
        */
       override fun transformationConfigurations(transformationConfigurations: IResolvable) {
-        cdkBuilder.transformationConfigurations(transformationConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.transformationConfigurations(transformationConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -956,7 +956,7 @@ public open class CfnAccessPoint(
        * Object lambda Access Points are private by default.
        */
       override fun isPublic(isPublic: IResolvable) {
-        cdkBuilder.isPublic(isPublic.let(IResolvable::unwrap))
+        cdkBuilder.isPublic(isPublic.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1238,7 +1238,7 @@ public open class CfnAccessPoint(
        * This property is not supported for Amazon S3 on Outposts.
        */
       override fun blockPublicAcls(blockPublicAcls: IResolvable) {
-        cdkBuilder.blockPublicAcls(blockPublicAcls.let(IResolvable::unwrap))
+        cdkBuilder.blockPublicAcls(blockPublicAcls.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1266,7 +1266,7 @@ public open class CfnAccessPoint(
        * This property is not supported for Amazon S3 on Outposts.
        */
       override fun blockPublicPolicy(blockPublicPolicy: IResolvable) {
-        cdkBuilder.blockPublicPolicy(blockPublicPolicy.let(IResolvable::unwrap))
+        cdkBuilder.blockPublicPolicy(blockPublicPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1296,7 +1296,7 @@ public open class CfnAccessPoint(
        * This property is not supported for Amazon S3 on Outposts.
        */
       override fun ignorePublicAcls(ignorePublicAcls: IResolvable) {
-        cdkBuilder.ignorePublicAcls(ignorePublicAcls.let(IResolvable::unwrap))
+        cdkBuilder.ignorePublicAcls(ignorePublicAcls.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1328,7 +1328,7 @@ public open class CfnAccessPoint(
        * This property is not supported for Amazon S3 on Outposts.
        */
       override fun restrictPublicBuckets(restrictPublicBuckets: IResolvable) {
-        cdkBuilder.restrictPublicBuckets(restrictPublicBuckets.let(IResolvable::unwrap))
+        cdkBuilder.restrictPublicBuckets(restrictPublicBuckets.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

@@ -71,7 +71,7 @@ public open class CfnTopic(
   cdkObject: software.amazon.awscdk.services.sns.CfnTopic,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.sns.CfnTopic(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.sns.CfnTopic(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -80,8 +80,8 @@ public open class CfnTopic(
     id: String,
     props: CfnTopicProps,
   ) :
-      this(software.amazon.awscdk.services.sns.CfnTopic(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTopicProps::unwrap))
+      this(software.amazon.awscdk.services.sns.CfnTopic(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTopicProps.Companion::unwrap))
   )
 
   public constructor(
@@ -129,7 +129,7 @@ public open class CfnTopic(
    * Enables content-based deduplication for FIFO topics.
    */
   public open fun contentBasedDeduplication(`value`: IResolvable) {
-    unwrap(this).setContentBasedDeduplication(`value`.let(IResolvable::unwrap))
+    unwrap(this).setContentBasedDeduplication(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -157,7 +157,7 @@ public open class CfnTopic(
    * protocols:.
    */
   public open fun deliveryStatusLogging(`value`: IResolvable) {
-    unwrap(this).setDeliveryStatusLogging(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeliveryStatusLogging(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -205,7 +205,7 @@ public open class CfnTopic(
    * Set to true to create a FIFO topic.
    */
   public open fun fifoTopic(`value`: IResolvable) {
-    unwrap(this).setFifoTopic(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFifoTopic(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -214,7 +214,7 @@ public open class CfnTopic(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -254,7 +254,7 @@ public open class CfnTopic(
    * The Amazon SNS subscriptions (endpoints) for this topic.
    */
   public open fun subscription(`value`: IResolvable) {
-    unwrap(this).setSubscription(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSubscription(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -284,7 +284,7 @@ public open class CfnTopic(
    * The list of tags to add to a new topic.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -663,7 +663,7 @@ public open class CfnTopic(
      * @param contentBasedDeduplication Enables content-based deduplication for FIFO topics. 
      */
     override fun contentBasedDeduplication(contentBasedDeduplication: IResolvable) {
-      cdkBuilder.contentBasedDeduplication(contentBasedDeduplication.let(IResolvable::unwrap))
+      cdkBuilder.contentBasedDeduplication(contentBasedDeduplication.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -701,7 +701,7 @@ public open class CfnTopic(
      * following supported delivery protocols:. 
      */
     override fun deliveryStatusLogging(deliveryStatusLogging: IResolvable) {
-      cdkBuilder.deliveryStatusLogging(deliveryStatusLogging.let(IResolvable::unwrap))
+      cdkBuilder.deliveryStatusLogging(deliveryStatusLogging.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -777,7 +777,7 @@ public open class CfnTopic(
      * @param fifoTopic Set to true to create a FIFO topic. 
      */
     override fun fifoTopic(fifoTopic: IResolvable) {
-      cdkBuilder.fifoTopic(fifoTopic.let(IResolvable::unwrap))
+      cdkBuilder.fifoTopic(fifoTopic.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -830,7 +830,7 @@ public open class CfnTopic(
      * @param subscription The Amazon SNS subscriptions (endpoints) for this topic. 
      */
     override fun subscription(subscription: IResolvable) {
-      cdkBuilder.subscription(subscription.let(IResolvable::unwrap))
+      cdkBuilder.subscription(subscription.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -875,7 +875,7 @@ public open class CfnTopic(
      * @param tags The list of tags to add to a new topic. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

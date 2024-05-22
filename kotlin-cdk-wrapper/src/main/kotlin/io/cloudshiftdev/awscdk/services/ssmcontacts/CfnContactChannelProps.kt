@@ -174,7 +174,7 @@ public interface CfnContactChannelProps {
      * Incident Manager can't engage your contact channel until it has been activated.
      */
     override fun deferActivation(deferActivation: IResolvable) {
-      cdkBuilder.deferActivation(deferActivation.let(IResolvable::unwrap))
+      cdkBuilder.deferActivation(deferActivation.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ssmcontacts.CfnContactChannelProps =

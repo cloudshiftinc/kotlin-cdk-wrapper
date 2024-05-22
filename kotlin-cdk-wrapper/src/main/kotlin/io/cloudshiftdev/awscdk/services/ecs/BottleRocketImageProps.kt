@@ -104,7 +104,7 @@ public interface BottleRocketImageProps {
      * @param architecture The CPU architecture.
      */
     override fun architecture(architecture: InstanceArchitecture) {
-      cdkBuilder.architecture(architecture.let(InstanceArchitecture::unwrap))
+      cdkBuilder.architecture(architecture.let(InstanceArchitecture.Companion::unwrap))
     }
 
     /**
@@ -131,7 +131,7 @@ public interface BottleRocketImageProps {
      * @param variant The Amazon ECS variant to use.
      */
     override fun variant(variant: BottlerocketEcsVariant) {
-      cdkBuilder.variant(variant.let(BottlerocketEcsVariant::unwrap))
+      cdkBuilder.variant(variant.let(BottlerocketEcsVariant.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.BottleRocketImageProps =

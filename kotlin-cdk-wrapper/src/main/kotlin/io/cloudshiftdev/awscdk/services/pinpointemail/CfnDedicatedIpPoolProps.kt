@@ -86,7 +86,7 @@ public interface CfnDedicatedIpPoolProps {
      * the dedicated IP pool.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

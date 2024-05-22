@@ -52,7 +52,7 @@ public open class SelfManagedKafkaEventSource(
   cdkObject: software.amazon.awscdk.services.lambda.eventsources.SelfManagedKafkaEventSource,
 ) : StreamEventSource(cdkObject) {
   public constructor(props: SelfManagedKafkaEventSourceProps) :
-      this(software.amazon.awscdk.services.lambda.eventsources.SelfManagedKafkaEventSource(props.let(SelfManagedKafkaEventSourceProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.eventsources.SelfManagedKafkaEventSource(props.let(SelfManagedKafkaEventSourceProps.Companion::unwrap))
   )
 
   public constructor(props: SelfManagedKafkaEventSourceProps.Builder.() -> Unit) :
@@ -65,7 +65,7 @@ public open class SelfManagedKafkaEventSource(
    * @param target 
    */
   public override fun bind(target: IFunction) {
-    unwrap(this).bind(target.let(IFunction::unwrap))
+    unwrap(this).bind(target.let(IFunction.Companion::unwrap))
   }
 
   /**
@@ -293,7 +293,7 @@ public open class SelfManagedKafkaEventSource(
      * @param authenticationMethod The authentication method for your Kafka cluster. 
      */
     override fun authenticationMethod(authenticationMethod: AuthenticationMethod) {
-      cdkBuilder.authenticationMethod(authenticationMethod.let(AuthenticationMethod::unwrap))
+      cdkBuilder.authenticationMethod(authenticationMethod.let(AuthenticationMethod.Companion::unwrap))
     }
 
     /**
@@ -411,7 +411,7 @@ public open class SelfManagedKafkaEventSource(
      * function. 
      */
     override fun maxBatchingWindow(maxBatchingWindow: Duration) {
-      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration::unwrap))
+      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -424,7 +424,7 @@ public open class SelfManagedKafkaEventSource(
      * @param onFailure Add an on Failure Destination for this Kafka event. 
      */
     override fun onFailure(onFailure: IEventSourceDlq) {
-      cdkBuilder.onFailure(onFailure.let(IEventSourceDlq::unwrap))
+      cdkBuilder.onFailure(onFailure.let(IEventSourceDlq.Companion::unwrap))
     }
 
     /**
@@ -438,7 +438,7 @@ public open class SelfManagedKafkaEventSource(
      * private CA. 
      */
     override fun rootCaCertificate(rootCaCertificate: ISecret) {
-      cdkBuilder.rootCaCertificate(rootCaCertificate.let(ISecret::unwrap))
+      cdkBuilder.rootCaCertificate(rootCaCertificate.let(ISecret.Companion::unwrap))
     }
 
     /**
@@ -453,7 +453,7 @@ public open class SelfManagedKafkaEventSource(
      * is required if your Kafka brokers are accessed over the Internet. 
      */
     override fun secret(secret: ISecret) {
-      cdkBuilder.secret(secret.let(ISecret::unwrap))
+      cdkBuilder.secret(secret.let(ISecret.Companion::unwrap))
     }
 
     /**
@@ -465,7 +465,7 @@ public open class SelfManagedKafkaEventSource(
      * group here. 
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -474,7 +474,7 @@ public open class SelfManagedKafkaEventSource(
      * @param startingPosition Where to begin consuming the stream. 
      */
     override fun startingPosition(startingPosition: StartingPosition) {
-      cdkBuilder.startingPosition(startingPosition.let(StartingPosition::unwrap))
+      cdkBuilder.startingPosition(startingPosition.let(StartingPosition.Companion::unwrap))
     }
 
     /**
@@ -494,7 +494,7 @@ public open class SelfManagedKafkaEventSource(
      * @param vpc If your Kafka brokers are only reachable via VPC provide the VPC here. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -506,7 +506,7 @@ public open class SelfManagedKafkaEventSource(
      * selection here. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

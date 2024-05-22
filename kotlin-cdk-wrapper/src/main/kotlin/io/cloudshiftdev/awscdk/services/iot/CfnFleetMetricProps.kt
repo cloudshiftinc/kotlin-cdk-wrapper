@@ -212,14 +212,14 @@ public interface CfnFleetMetricProps {
      * @param aggregationType The type of the aggregation query.
      */
     override fun aggregationType(aggregationType: IResolvable) {
-      cdkBuilder.aggregationType(aggregationType.let(IResolvable::unwrap))
+      cdkBuilder.aggregationType(aggregationType.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param aggregationType The type of the aggregation query.
      */
     override fun aggregationType(aggregationType: CfnFleetMetric.AggregationTypeProperty) {
-      cdkBuilder.aggregationType(aggregationType.let(CfnFleetMetric.AggregationTypeProperty::unwrap))
+      cdkBuilder.aggregationType(aggregationType.let(CfnFleetMetric.AggregationTypeProperty.Companion::unwrap))
     }
 
     /**
@@ -278,7 +278,7 @@ public interface CfnFleetMetricProps {
      * @param tags Metadata which can be used to manage the fleet metric.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

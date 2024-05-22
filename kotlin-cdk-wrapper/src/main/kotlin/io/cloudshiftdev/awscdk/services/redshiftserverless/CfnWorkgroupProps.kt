@@ -266,7 +266,7 @@ public interface CfnWorkgroupProps {
      * `search_path` , `max_query_execution_time` , and `require_ssl` .
      */
     override fun configParameters(configParameters: IResolvable) {
-      cdkBuilder.configParameters(configParameters.let(IResolvable::unwrap))
+      cdkBuilder.configParameters(configParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -299,7 +299,7 @@ public interface CfnWorkgroupProps {
      * cloud (VPC) routing, which forces Amazon Redshift Serverless to route traffic through your VPC.
      */
     override fun enhancedVpcRouting(enhancedVpcRouting: IResolvable) {
-      cdkBuilder.enhancedVpcRouting(enhancedVpcRouting.let(IResolvable::unwrap))
+      cdkBuilder.enhancedVpcRouting(enhancedVpcRouting.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -339,7 +339,7 @@ public interface CfnWorkgroupProps {
      * a public network.
      */
     override fun publiclyAccessible(publiclyAccessible: IResolvable) {
-      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
+      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -371,7 +371,7 @@ public interface CfnWorkgroupProps {
      * @param tags The map of the key-value pairs used to tag the workgroup.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

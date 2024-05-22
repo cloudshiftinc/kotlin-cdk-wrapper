@@ -58,8 +58,8 @@ public open class CfnLocationS3(
     id: String,
     props: CfnLocationS3Props,
   ) :
-      this(software.amazon.awscdk.services.datasync.CfnLocationS3(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLocationS3Props::unwrap))
+      this(software.amazon.awscdk.services.datasync.CfnLocationS3(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLocationS3Props.Companion::unwrap))
   )
 
   public constructor(
@@ -85,7 +85,7 @@ public open class CfnLocationS3(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -111,7 +111,7 @@ public open class CfnLocationS3(
    * used to access an Amazon S3 bucket.
    */
   public open fun s3Config(`value`: IResolvable) {
-    unwrap(this).setS3Config(`value`.let(IResolvable::unwrap))
+    unwrap(this).setS3Config(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -119,7 +119,7 @@ public open class CfnLocationS3(
    * used to access an Amazon S3 bucket.
    */
   public open fun s3Config(`value`: S3ConfigProperty) {
-    unwrap(this).setS3Config(`value`.let(S3ConfigProperty::unwrap))
+    unwrap(this).setS3Config(`value`.let(S3ConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -174,7 +174,7 @@ public open class CfnLocationS3(
    * Specifies labels that help you categorize, filter, and search for your AWS resources.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -333,7 +333,7 @@ public open class CfnLocationS3(
      * (IAM) role that is used to access an Amazon S3 bucket. 
      */
     override fun s3Config(s3Config: IResolvable) {
-      cdkBuilder.s3Config(s3Config.let(IResolvable::unwrap))
+      cdkBuilder.s3Config(s3Config.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -349,7 +349,7 @@ public open class CfnLocationS3(
      * (IAM) role that is used to access an Amazon S3 bucket. 
      */
     override fun s3Config(s3Config: S3ConfigProperty) {
-      cdkBuilder.s3Config(s3Config.let(S3ConfigProperty::unwrap))
+      cdkBuilder.s3Config(s3Config.let(S3ConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -424,7 +424,7 @@ public open class CfnLocationS3(
      * resources. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

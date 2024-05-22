@@ -25,8 +25,7 @@ import kotlin.String
  * .subnetType(SubnetType.PUBLIC)
  * .build())
  * .vpc(vpc)
- * .removalPolicy(RemovalPolicy.SNAPSHOT)
- * .instanceRemovalPolicy(RemovalPolicy.RETAIN)
+ * .caCertificate(CaCertificate.RDS_CA_RSA4096_G1)
  * .build();
  * ```
  */
@@ -52,12 +51,12 @@ public open class InstanceType(
    * @param other 
    */
   public open fun sameInstanceClassAs(other: InstanceType): Boolean =
-      unwrap(this).sameInstanceClassAs(other.let(InstanceType::unwrap))
+      unwrap(this).sameInstanceClassAs(other.let(InstanceType.Companion::unwrap))
 
   public companion object {
     public fun of(instanceClass: InstanceClass, instanceSize: InstanceSize): InstanceType =
-        software.amazon.awscdk.services.ec2.InstanceType.of(instanceClass.let(InstanceClass::unwrap),
-        instanceSize.let(InstanceSize::unwrap)).let(InstanceType::wrap)
+        software.amazon.awscdk.services.ec2.InstanceType.of(instanceClass.let(InstanceClass.Companion::unwrap),
+        instanceSize.let(InstanceSize.Companion::unwrap)).let(InstanceType::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.InstanceType): InstanceType =
         InstanceType(cdkObject)

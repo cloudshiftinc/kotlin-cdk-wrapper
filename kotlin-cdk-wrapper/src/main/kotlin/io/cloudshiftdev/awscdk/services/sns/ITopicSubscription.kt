@@ -25,7 +25,7 @@ public interface ITopicSubscription {
      * @param topic topic for which subscription will be configured. 
      */
     override fun bind(topic: ITopic): TopicSubscriptionConfig =
-        unwrap(this).bind(topic.let(ITopic::unwrap)).let(TopicSubscriptionConfig::wrap)
+        unwrap(this).bind(topic.let(ITopic.Companion::unwrap)).let(TopicSubscriptionConfig::wrap)
   }
 
   public companion object {

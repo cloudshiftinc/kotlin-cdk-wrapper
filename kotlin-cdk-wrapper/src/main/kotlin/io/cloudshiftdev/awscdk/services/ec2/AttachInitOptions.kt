@@ -271,14 +271,14 @@ public interface AttachInitOptions {
      * @param instanceRole Instance role of the consuming instance or fleet. 
      */
     override fun instanceRole(instanceRole: IRole) {
-      cdkBuilder.instanceRole(instanceRole.let(IRole::unwrap))
+      cdkBuilder.instanceRole(instanceRole.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param platform OS Platform the init config will be used for. 
      */
     override fun platform(platform: OperatingSystemType) {
-      cdkBuilder.platform(platform.let(OperatingSystemType::unwrap))
+      cdkBuilder.platform(platform.let(OperatingSystemType.Companion::unwrap))
     }
 
     /**
@@ -300,14 +300,14 @@ public interface AttachInitOptions {
      * You can use this to support signaling LaunchTemplate while attaching AutoScalingGroup
      */
     override fun signalResource(signalResource: CfnResource) {
-      cdkBuilder.signalResource(signalResource.let(CfnResource::unwrap))
+      cdkBuilder.signalResource(signalResource.let(CfnResource.Companion::unwrap))
     }
 
     /**
      * @param userData UserData to add commands to. 
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.AttachInitOptions = cdkBuilder.build()

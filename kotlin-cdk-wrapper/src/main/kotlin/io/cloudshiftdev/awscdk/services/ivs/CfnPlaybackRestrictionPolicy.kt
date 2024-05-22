@@ -56,8 +56,8 @@ public open class CfnPlaybackRestrictionPolicy(
     id: String,
     props: CfnPlaybackRestrictionPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.ivs.CfnPlaybackRestrictionPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPlaybackRestrictionPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.ivs.CfnPlaybackRestrictionPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPlaybackRestrictionPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -132,7 +132,7 @@ public open class CfnPlaybackRestrictionPolicy(
    * Whether channel playback is constrained by the origin site.
    */
   public open fun enableStrictOriginEnforcement(`value`: IResolvable) {
-    unwrap(this).setEnableStrictOriginEnforcement(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableStrictOriginEnforcement(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -141,7 +141,7 @@ public open class CfnPlaybackRestrictionPolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -165,7 +165,7 @@ public open class CfnPlaybackRestrictionPolicy(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -357,7 +357,7 @@ public open class CfnPlaybackRestrictionPolicy(
      * site. 
      */
     override fun enableStrictOriginEnforcement(enableStrictOriginEnforcement: IResolvable) {
-      cdkBuilder.enableStrictOriginEnforcement(enableStrictOriginEnforcement.let(IResolvable::unwrap))
+      cdkBuilder.enableStrictOriginEnforcement(enableStrictOriginEnforcement.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -381,7 +381,7 @@ public open class CfnPlaybackRestrictionPolicy(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

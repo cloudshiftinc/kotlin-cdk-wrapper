@@ -74,7 +74,7 @@ public interface RouteProps : RouteBaseProps {
      * @param mesh The service mesh to define the route in. 
      */
     override fun mesh(mesh: IMesh) {
-      cdkBuilder.mesh(mesh.let(IMesh::unwrap))
+      cdkBuilder.mesh(mesh.let(IMesh.Companion::unwrap))
     }
 
     /**
@@ -88,14 +88,14 @@ public interface RouteProps : RouteBaseProps {
      * @param routeSpec Protocol specific spec. 
      */
     override fun routeSpec(routeSpec: RouteSpec) {
-      cdkBuilder.routeSpec(routeSpec.let(RouteSpec::unwrap))
+      cdkBuilder.routeSpec(routeSpec.let(RouteSpec.Companion::unwrap))
     }
 
     /**
      * @param virtualRouter The VirtualRouter the Route belongs to. 
      */
     override fun virtualRouter(virtualRouter: IVirtualRouter) {
-      cdkBuilder.virtualRouter(virtualRouter.let(IVirtualRouter::unwrap))
+      cdkBuilder.virtualRouter(virtualRouter.let(IVirtualRouter.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appmesh.RouteProps = cdkBuilder.build()

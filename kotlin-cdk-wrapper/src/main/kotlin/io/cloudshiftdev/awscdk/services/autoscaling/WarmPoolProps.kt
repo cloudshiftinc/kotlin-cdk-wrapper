@@ -81,7 +81,7 @@ public interface WarmPoolProps : WarmPoolOptions {
      * @param autoScalingGroup The Auto Scaling group to add the warm pool to. 
      */
     override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
-      cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup::unwrap))
+      cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup.Companion::unwrap))
     }
 
     /**
@@ -106,7 +106,7 @@ public interface WarmPoolProps : WarmPoolOptions {
      * complete.
      */
     override fun poolState(poolState: PoolState) {
-      cdkBuilder.poolState(poolState.let(PoolState::unwrap))
+      cdkBuilder.poolState(poolState.let(PoolState.Companion::unwrap))
     }
 
     /**

@@ -103,14 +103,14 @@ public interface CfnKeyValueStoreProps {
      * @param importSource The import source for the key value store.
      */
     override fun importSource(importSource: IResolvable) {
-      cdkBuilder.importSource(importSource.let(IResolvable::unwrap))
+      cdkBuilder.importSource(importSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param importSource The import source for the key value store.
      */
     override fun importSource(importSource: CfnKeyValueStore.ImportSourceProperty) {
-      cdkBuilder.importSource(importSource.let(CfnKeyValueStore.ImportSourceProperty::unwrap))
+      cdkBuilder.importSource(importSource.let(CfnKeyValueStore.ImportSourceProperty.Companion::unwrap))
     }
 
     /**

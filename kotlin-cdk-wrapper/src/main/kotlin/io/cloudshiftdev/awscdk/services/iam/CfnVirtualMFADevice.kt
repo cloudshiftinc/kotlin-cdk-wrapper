@@ -65,8 +65,8 @@ public open class CfnVirtualMFADevice(
     id: String,
     props: CfnVirtualMFADeviceProps,
   ) :
-      this(software.amazon.awscdk.services.iam.CfnVirtualMFADevice(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVirtualMFADeviceProps::unwrap))
+      this(software.amazon.awscdk.services.iam.CfnVirtualMFADevice(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVirtualMFADeviceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -87,7 +87,7 @@ public open class CfnVirtualMFADevice(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -117,7 +117,7 @@ public open class CfnVirtualMFADevice(
    * A list of tags that you want to attach to the new IAM virtual MFA device.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -292,7 +292,7 @@ public open class CfnVirtualMFADevice(
      * @param tags A list of tags that you want to attach to the new IAM virtual MFA device. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

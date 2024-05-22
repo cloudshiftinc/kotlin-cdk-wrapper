@@ -35,8 +35,8 @@ public open class RequestValidator(
     id: String,
     props: RequestValidatorProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.RequestValidator(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(RequestValidatorProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.RequestValidator(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(RequestValidatorProps.Companion::unwrap))
   )
 
   public constructor(
@@ -127,7 +127,7 @@ public open class RequestValidator(
      * @param restApi The rest API that this model is part of. 
      */
     override fun restApi(restApi: IRestApi) {
-      cdkBuilder.restApi(restApi.let(IRestApi::unwrap))
+      cdkBuilder.restApi(restApi.let(IRestApi.Companion::unwrap))
     }
 
     /**
@@ -164,7 +164,7 @@ public open class RequestValidator(
       id: String,
       requestValidatorId: String,
     ): IRequestValidator =
-        software.amazon.awscdk.services.apigateway.RequestValidator.fromRequestValidatorId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.apigateway.RequestValidator.fromRequestValidatorId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, requestValidatorId).let(IRequestValidator::wrap)
 
     public operator fun invoke(

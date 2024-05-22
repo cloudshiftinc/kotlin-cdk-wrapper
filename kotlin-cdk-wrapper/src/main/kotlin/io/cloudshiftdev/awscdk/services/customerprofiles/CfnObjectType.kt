@@ -73,8 +73,8 @@ public open class CfnObjectType(
     id: String,
     props: CfnObjectTypeProps,
   ) :
-      this(software.amazon.awscdk.services.customerprofiles.CfnObjectType(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnObjectTypeProps::unwrap))
+      this(software.amazon.awscdk.services.customerprofiles.CfnObjectType(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnObjectTypeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -103,7 +103,7 @@ public open class CfnObjectType(
    * object of this type.
    */
   public open fun allowProfileCreation(`value`: IResolvable) {
-    unwrap(this).setAllowProfileCreation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAllowProfileCreation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -175,7 +175,7 @@ public open class CfnObjectType(
    * A list of field definitions for the object type mapping.
    */
   public open fun fields(`value`: IResolvable) {
-    unwrap(this).setFields(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFields(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -196,7 +196,7 @@ public open class CfnObjectType(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -208,7 +208,7 @@ public open class CfnObjectType(
    * A list of keys that can be used to map data to the profile or search for the profile.
    */
   public open fun keys(`value`: IResolvable) {
-    unwrap(this).setKeys(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKeys(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -263,7 +263,7 @@ public open class CfnObjectType(
    * The tags used to organize, track, or control access for this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -483,7 +483,7 @@ public open class CfnObjectType(
      * received if one doesn’t exist for an object of this type. 
      */
     override fun allowProfileCreation(allowProfileCreation: IResolvable) {
-      cdkBuilder.allowProfileCreation(allowProfileCreation.let(IResolvable::unwrap))
+      cdkBuilder.allowProfileCreation(allowProfileCreation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -537,7 +537,7 @@ public open class CfnObjectType(
      * @param fields A list of field definitions for the object type mapping. 
      */
     override fun fields(fields: IResolvable) {
-      cdkBuilder.fields(fields.let(IResolvable::unwrap))
+      cdkBuilder.fields(fields.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -566,7 +566,7 @@ public open class CfnObjectType(
      * profile. 
      */
     override fun keys(keys: IResolvable) {
-      cdkBuilder.keys(keys.let(IResolvable::unwrap))
+      cdkBuilder.keys(keys.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -617,7 +617,7 @@ public open class CfnObjectType(
      * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -745,14 +745,14 @@ public open class CfnObjectType(
        * @param objectTypeField Represents a field in a ProfileObjectType.
        */
       override fun objectTypeField(objectTypeField: IResolvable) {
-        cdkBuilder.objectTypeField(objectTypeField.let(IResolvable::unwrap))
+        cdkBuilder.objectTypeField(objectTypeField.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param objectTypeField Represents a field in a ProfileObjectType.
        */
       override fun objectTypeField(objectTypeField: ObjectTypeFieldProperty) {
-        cdkBuilder.objectTypeField(objectTypeField.let(ObjectTypeFieldProperty::unwrap))
+        cdkBuilder.objectTypeField(objectTypeField.let(ObjectTypeFieldProperty.Companion::unwrap))
       }
 
       /**
@@ -881,7 +881,7 @@ public open class CfnObjectType(
        * @param objectTypeKeyList A list of ObjectTypeKey.
        */
       override fun objectTypeKeyList(objectTypeKeyList: IResolvable) {
-        cdkBuilder.objectTypeKeyList(objectTypeKeyList.let(IResolvable::unwrap))
+        cdkBuilder.objectTypeKeyList(objectTypeKeyList.let(IResolvable.Companion::unwrap))
       }
 
       /**

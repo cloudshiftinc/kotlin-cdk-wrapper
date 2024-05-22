@@ -45,8 +45,8 @@ public open class CfnPolicyStatement(
     id: String,
     props: CfnPolicyStatementProps,
   ) :
-      this(software.amazon.awscdk.services.entityresolution.CfnPolicyStatement(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPolicyStatementProps::unwrap))
+      this(software.amazon.awscdk.services.entityresolution.CfnPolicyStatement(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPolicyStatementProps.Companion::unwrap))
   )
 
   public constructor(
@@ -117,7 +117,7 @@ public open class CfnPolicyStatement(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -194,6 +194,12 @@ public open class CfnPolicyStatement(
     /**
      * Determines whether the permissions specified in the policy are to be allowed ( `Allow` ) or
      * denied ( `Deny` ).
+     *
+     *
+     * If you set the value of the `effect` parameter to `Deny` for the `AddPolicyStatement`
+     * operation, you must also set the value of the `effect` parameter in the `policy` to `Deny` for
+     * the `PutPolicy` operation.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-policystatement.html#cfn-entityresolution-policystatement-effect)
      * @param effect Determines whether the permissions specified in the policy are to be allowed (
@@ -282,6 +288,12 @@ public open class CfnPolicyStatement(
     /**
      * Determines whether the permissions specified in the policy are to be allowed ( `Allow` ) or
      * denied ( `Deny` ).
+     *
+     *
+     * If you set the value of the `effect` parameter to `Deny` for the `AddPolicyStatement`
+     * operation, you must also set the value of the `effect` parameter in the `policy` to `Deny` for
+     * the `PutPolicy` operation.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-policystatement.html#cfn-entityresolution-policystatement-effect)
      * @param effect Determines whether the permissions specified in the policy are to be allowed (

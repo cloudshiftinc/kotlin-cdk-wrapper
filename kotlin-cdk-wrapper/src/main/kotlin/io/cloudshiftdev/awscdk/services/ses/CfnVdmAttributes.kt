@@ -41,7 +41,7 @@ public open class CfnVdmAttributes(
   cdkObject: software.amazon.awscdk.services.ses.CfnVdmAttributes,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ses.CfnVdmAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ses.CfnVdmAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -50,8 +50,8 @@ public open class CfnVdmAttributes(
     id: String,
     props: CfnVdmAttributesProps,
   ) :
-      this(software.amazon.awscdk.services.ses.CfnVdmAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVdmAttributesProps::unwrap))
+      this(software.amazon.awscdk.services.ses.CfnVdmAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVdmAttributesProps.Companion::unwrap))
   )
 
   public constructor(
@@ -76,14 +76,14 @@ public open class CfnVdmAttributes(
    * Specifies additional settings for your VDM configuration as applicable to the Dashboard.
    */
   public open fun dashboardAttributes(`value`: IResolvable) {
-    unwrap(this).setDashboardAttributes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDashboardAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies additional settings for your VDM configuration as applicable to the Dashboard.
    */
   public open fun dashboardAttributes(`value`: DashboardAttributesProperty) {
-    unwrap(this).setDashboardAttributes(`value`.let(DashboardAttributesProperty::unwrap))
+    unwrap(this).setDashboardAttributes(`value`.let(DashboardAttributesProperty.Companion::unwrap))
   }
 
   /**
@@ -103,14 +103,14 @@ public open class CfnVdmAttributes(
    * Specifies additional settings for your VDM configuration as applicable to the Guardian.
    */
   public open fun guardianAttributes(`value`: IResolvable) {
-    unwrap(this).setGuardianAttributes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setGuardianAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies additional settings for your VDM configuration as applicable to the Guardian.
    */
   public open fun guardianAttributes(`value`: GuardianAttributesProperty) {
-    unwrap(this).setGuardianAttributes(`value`.let(GuardianAttributesProperty::unwrap))
+    unwrap(this).setGuardianAttributes(`value`.let(GuardianAttributesProperty.Companion::unwrap))
   }
 
   /**
@@ -127,7 +127,7 @@ public open class CfnVdmAttributes(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -210,7 +210,7 @@ public open class CfnVdmAttributes(
      * applicable to the Dashboard. 
      */
     override fun dashboardAttributes(dashboardAttributes: IResolvable) {
-      cdkBuilder.dashboardAttributes(dashboardAttributes.let(IResolvable::unwrap))
+      cdkBuilder.dashboardAttributes(dashboardAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -221,7 +221,7 @@ public open class CfnVdmAttributes(
      * applicable to the Dashboard. 
      */
     override fun dashboardAttributes(dashboardAttributes: DashboardAttributesProperty) {
-      cdkBuilder.dashboardAttributes(dashboardAttributes.let(DashboardAttributesProperty::unwrap))
+      cdkBuilder.dashboardAttributes(dashboardAttributes.let(DashboardAttributesProperty.Companion::unwrap))
     }
 
     /**
@@ -245,7 +245,7 @@ public open class CfnVdmAttributes(
      * applicable to the Guardian. 
      */
     override fun guardianAttributes(guardianAttributes: IResolvable) {
-      cdkBuilder.guardianAttributes(guardianAttributes.let(IResolvable::unwrap))
+      cdkBuilder.guardianAttributes(guardianAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -256,7 +256,7 @@ public open class CfnVdmAttributes(
      * applicable to the Guardian. 
      */
     override fun guardianAttributes(guardianAttributes: GuardianAttributesProperty) {
-      cdkBuilder.guardianAttributes(guardianAttributes.let(GuardianAttributesProperty::unwrap))
+      cdkBuilder.guardianAttributes(guardianAttributes.let(GuardianAttributesProperty.Companion::unwrap))
     }
 
     /**

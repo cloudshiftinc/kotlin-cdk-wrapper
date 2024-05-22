@@ -51,19 +51,21 @@ public open class Stack(
   )
 
   public constructor(scope: CloudshiftdevConstructsConstruct) :
-      this(software.amazon.awscdk.Stack(scope.let(CloudshiftdevConstructsConstruct::unwrap))
+      this(software.amazon.awscdk.Stack(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap))
   )
 
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.Stack(scope.let(CloudshiftdevConstructsConstruct::unwrap), id)
+      this(software.amazon.awscdk.Stack(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id)
   )
 
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
     props: StackProps,
-  ) : this(software.amazon.awscdk.Stack(scope.let(CloudshiftdevConstructsConstruct::unwrap), id,
-      props.let(StackProps::unwrap))
+  ) :
+      this(software.amazon.awscdk.Stack(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(StackProps.Companion::unwrap))
   )
 
   public constructor(
@@ -107,7 +109,7 @@ public open class Stack(
    * @param reason
    */
   public open fun addDependency(target: Stack) {
-    unwrap(this).addDependency(target.let(Stack::unwrap))
+    unwrap(this).addDependency(target.let(Stack.Companion::unwrap))
   }
 
   /**
@@ -120,7 +122,7 @@ public open class Stack(
    * @param reason
    */
   public open fun addDependency(target: Stack, reason: String) {
-    unwrap(this).addDependency(target.let(Stack::unwrap), reason)
+    unwrap(this).addDependency(target.let(Stack.Companion::unwrap), reason)
   }
 
   /**
@@ -258,7 +260,7 @@ public open class Stack(
    */
   public open fun exportStringListValue(exportedValue: Any, options: ExportValueOptions):
       List<String> = unwrap(this).exportStringListValue(exportedValue,
-      options.let(ExportValueOptions::unwrap))
+      options.let(ExportValueOptions.Companion::unwrap))
 
   /**
    * Create a CloudFormation Export for a string list value.
@@ -393,7 +395,7 @@ public open class Stack(
    * @param options
    */
   public open fun exportValue(exportedValue: Any, options: ExportValueOptions): String =
-      unwrap(this).exportValue(exportedValue, options.let(ExportValueOptions::unwrap))
+      unwrap(this).exportValue(exportedValue, options.let(ExportValueOptions.Companion::unwrap))
 
   /**
    * Create a CloudFormation Export for a string value.
@@ -470,7 +472,7 @@ public open class Stack(
    * @param components 
    */
   public open fun formatArn(components: ArnComponents): String =
-      unwrap(this).formatArn(components.let(ArnComponents::unwrap))
+      unwrap(this).formatArn(components.let(ArnComponents.Companion::unwrap))
 
   /**
    * Creates an ARN from components.
@@ -510,7 +512,7 @@ public open class Stack(
    * @param element The CloudFormation element for which a logical identity is needed. 
    */
   public open fun logicalId(element: CfnElement): String =
-      unwrap(this).getLogicalId(element.let(CfnElement::unwrap))
+      unwrap(this).getLogicalId(element.let(CfnElement.Companion::unwrap))
 
   /**
    * Indicates if this is a nested stack, in which case `parentStack` will include a reference to
@@ -637,7 +639,7 @@ public open class Stack(
    * @param report The set of parameters needed to obtain the context. 
    */
   public open fun reportMissingContextKey(report: MissingContext) {
-    unwrap(this).reportMissingContextKey(report.let(MissingContext::unwrap))
+    unwrap(this).reportMissingContextKey(report.let(MissingContext.Companion::unwrap))
   }
 
   /**
@@ -673,7 +675,8 @@ public open class Stack(
    * represents uses. 
    */
   public open fun splitArn(arn: String, arnFormat: ArnFormat): ArnComponents =
-      unwrap(this).splitArn(arn, arnFormat.let(ArnFormat::unwrap)).let(ArnComponents::wrap)
+      unwrap(this).splitArn(arn,
+      arnFormat.let(ArnFormat.Companion::unwrap)).let(ArnComponents::wrap)
 
   /**
    * The ID of the stack.
@@ -1159,7 +1162,7 @@ public open class Stack(
      * @param env The AWS environment (account/region) where this stack will be deployed. 
      */
     override fun env(env: Environment) {
-      cdkBuilder.env(env.let(Environment::unwrap))
+      cdkBuilder.env(env.let(Environment.Companion::unwrap))
     }
 
     /**
@@ -1252,7 +1255,7 @@ public open class Stack(
      * Users created within this Stage. 
      */
     override fun permissionsBoundary(permissionsBoundary: PermissionsBoundary) {
-      cdkBuilder.permissionsBoundary(permissionsBoundary.let(PermissionsBoundary::unwrap))
+      cdkBuilder.permissionsBoundary(permissionsBoundary.let(PermissionsBoundary.Companion::unwrap))
     }
 
     /**
@@ -1301,7 +1304,7 @@ public open class Stack(
      * @param synthesizer Synthesis method to use while deploying this stack. 
      */
     override fun synthesizer(synthesizer: IStackSynthesizer) {
-      cdkBuilder.synthesizer(synthesizer.let(IStackSynthesizer::unwrap))
+      cdkBuilder.synthesizer(synthesizer.let(IStackSynthesizer.Companion::unwrap))
     }
 
     /**
@@ -1334,7 +1337,7 @@ public open class Stack(
     public fun isStack(x: Any): Boolean = software.amazon.awscdk.Stack.isStack(x)
 
     public fun of(construct: IConstruct): Stack =
-        software.amazon.awscdk.Stack.of(construct.let(IConstruct::unwrap)).let(Stack::wrap)
+        software.amazon.awscdk.Stack.of(construct.let(IConstruct.Companion::unwrap)).let(Stack::wrap)
 
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,

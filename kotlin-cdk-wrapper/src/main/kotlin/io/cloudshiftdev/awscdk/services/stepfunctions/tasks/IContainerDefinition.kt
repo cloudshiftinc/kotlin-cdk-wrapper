@@ -27,7 +27,7 @@ public interface IContainerDefinition {
      * @param task 
      */
     override fun bind(task: ISageMakerTask): ContainerDefinitionConfig =
-        unwrap(this).bind(task.let(ISageMakerTask::unwrap)).let(ContainerDefinitionConfig::wrap)
+        unwrap(this).bind(task.let(ISageMakerTask.Companion::unwrap)).let(ContainerDefinitionConfig::wrap)
   }
 
   public companion object {

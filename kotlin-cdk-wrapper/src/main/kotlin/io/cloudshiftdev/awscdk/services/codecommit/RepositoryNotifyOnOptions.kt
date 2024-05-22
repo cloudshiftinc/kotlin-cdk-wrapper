@@ -96,7 +96,7 @@ public interface RepositoryNotifyOnOptions : NotificationRuleOptions {
      * the service for the resource for which the notification is created.
      */
     override fun detailType(detailType: DetailType) {
-      cdkBuilder.detailType(detailType.let(DetailType::unwrap))
+      cdkBuilder.detailType(detailType.let(DetailType.Companion::unwrap))
     }
 
     /**
@@ -114,7 +114,7 @@ public interface RepositoryNotifyOnOptions : NotificationRuleOptions {
      * Console User Guide.
      */
     override fun events(events: List<RepositoryNotificationEvents>) {
-      cdkBuilder.events(events.map(RepositoryNotificationEvents::unwrap))
+      cdkBuilder.events(events.map(RepositoryNotificationEvents.Companion::unwrap))
     }
 
     /**

@@ -69,8 +69,8 @@ public open class CfnImageVersion(
     id: String,
     props: CfnImageVersionProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnImageVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnImageVersionProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnImageVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnImageVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -164,7 +164,7 @@ public open class CfnImageVersion(
    * Indicates Horovod compatibility.
    */
   public open fun horovod(`value`: IResolvable) {
-    unwrap(this).setHorovod(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHorovod(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -185,7 +185,7 @@ public open class CfnImageVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -436,7 +436,7 @@ public open class CfnImageVersion(
      * @param horovod Indicates Horovod compatibility. 
      */
     override fun horovod(horovod: IResolvable) {
-      cdkBuilder.horovod(horovod.let(IResolvable::unwrap))
+      cdkBuilder.horovod(horovod.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -383,7 +383,7 @@ public interface CfnFlowSourceProps {
      * source.
      */
     override fun decryption(decryption: IResolvable) {
-      cdkBuilder.decryption(decryption.let(IResolvable::unwrap))
+      cdkBuilder.decryption(decryption.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -391,7 +391,7 @@ public interface CfnFlowSourceProps {
      * source.
      */
     override fun decryption(decryption: CfnFlowSource.EncryptionProperty) {
-      cdkBuilder.decryption(decryption.let(CfnFlowSource.EncryptionProperty::unwrap))
+      cdkBuilder.decryption(decryption.let(CfnFlowSource.EncryptionProperty.Companion::unwrap))
     }
 
     /**
@@ -433,7 +433,7 @@ public interface CfnFlowSourceProps {
      * bridge.
      */
     override fun gatewayBridgeSource(gatewayBridgeSource: IResolvable) {
-      cdkBuilder.gatewayBridgeSource(gatewayBridgeSource.let(IResolvable::unwrap))
+      cdkBuilder.gatewayBridgeSource(gatewayBridgeSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -442,7 +442,7 @@ public interface CfnFlowSourceProps {
      */
     override
         fun gatewayBridgeSource(gatewayBridgeSource: CfnFlowSource.GatewayBridgeSourceProperty) {
-      cdkBuilder.gatewayBridgeSource(gatewayBridgeSource.let(CfnFlowSource.GatewayBridgeSourceProperty::unwrap))
+      cdkBuilder.gatewayBridgeSource(gatewayBridgeSource.let(CfnFlowSource.GatewayBridgeSourceProperty.Companion::unwrap))
     }
 
     /**

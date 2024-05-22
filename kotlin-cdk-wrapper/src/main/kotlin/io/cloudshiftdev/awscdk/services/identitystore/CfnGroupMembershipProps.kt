@@ -120,7 +120,7 @@ public interface CfnGroupMembershipProps {
      * that User as a group member.
      */
     override fun memberId(memberId: IResolvable) {
-      cdkBuilder.memberId(memberId.let(IResolvable::unwrap))
+      cdkBuilder.memberId(memberId.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -129,7 +129,7 @@ public interface CfnGroupMembershipProps {
      * that User as a group member.
      */
     override fun memberId(memberId: CfnGroupMembership.MemberIdProperty) {
-      cdkBuilder.memberId(memberId.let(CfnGroupMembership.MemberIdProperty::unwrap))
+      cdkBuilder.memberId(memberId.let(CfnGroupMembership.MemberIdProperty.Companion::unwrap))
     }
 
     /**

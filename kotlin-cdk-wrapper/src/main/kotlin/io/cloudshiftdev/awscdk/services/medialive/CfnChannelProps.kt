@@ -303,7 +303,7 @@ public interface CfnChannelProps {
      * @param cdiInputSpecification Specification of CDI inputs for this channel.
      */
     override fun cdiInputSpecification(cdiInputSpecification: IResolvable) {
-      cdkBuilder.cdiInputSpecification(cdiInputSpecification.let(IResolvable::unwrap))
+      cdkBuilder.cdiInputSpecification(cdiInputSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -311,7 +311,7 @@ public interface CfnChannelProps {
      */
     override
         fun cdiInputSpecification(cdiInputSpecification: CfnChannel.CdiInputSpecificationProperty) {
-      cdkBuilder.cdiInputSpecification(cdiInputSpecification.let(CfnChannel.CdiInputSpecificationProperty::unwrap))
+      cdkBuilder.cdiInputSpecification(cdiInputSpecification.let(CfnChannel.CdiInputSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -338,7 +338,7 @@ public interface CfnChannelProps {
      * MediaLive output package.
      */
     override fun destinations(destinations: IResolvable) {
-      cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
+      cdkBuilder.destinations(destinations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -359,14 +359,14 @@ public interface CfnChannelProps {
      * @param encoderSettings The encoding configuration for the output content.
      */
     override fun encoderSettings(encoderSettings: IResolvable) {
-      cdkBuilder.encoderSettings(encoderSettings.let(IResolvable::unwrap))
+      cdkBuilder.encoderSettings(encoderSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param encoderSettings The encoding configuration for the output content.
      */
     override fun encoderSettings(encoderSettings: CfnChannel.EncoderSettingsProperty) {
-      cdkBuilder.encoderSettings(encoderSettings.let(CfnChannel.EncoderSettingsProperty::unwrap))
+      cdkBuilder.encoderSettings(encoderSettings.let(CfnChannel.EncoderSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -382,7 +382,7 @@ public interface CfnChannelProps {
      * @param inputAttachments The list of input attachments for the channel.
      */
     override fun inputAttachments(inputAttachments: IResolvable) {
-      cdkBuilder.inputAttachments(inputAttachments.let(IResolvable::unwrap))
+      cdkBuilder.inputAttachments(inputAttachments.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -404,7 +404,7 @@ public interface CfnChannelProps {
      * resolution, and the codec.
      */
     override fun inputSpecification(inputSpecification: IResolvable) {
-      cdkBuilder.inputSpecification(inputSpecification.let(IResolvable::unwrap))
+      cdkBuilder.inputSpecification(inputSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -413,7 +413,7 @@ public interface CfnChannelProps {
      * resolution, and the codec.
      */
     override fun inputSpecification(inputSpecification: CfnChannel.InputSpecificationProperty) {
-      cdkBuilder.inputSpecification(inputSpecification.let(CfnChannel.InputSpecificationProperty::unwrap))
+      cdkBuilder.inputSpecification(inputSpecification.let(CfnChannel.InputSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -440,14 +440,14 @@ public interface CfnChannelProps {
      * @param maintenance Maintenance settings for this channel.
      */
     override fun maintenance(maintenance: IResolvable) {
-      cdkBuilder.maintenance(maintenance.let(IResolvable::unwrap))
+      cdkBuilder.maintenance(maintenance.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param maintenance Maintenance settings for this channel.
      */
     override fun maintenance(maintenance: CfnChannel.MaintenanceCreateSettingsProperty) {
-      cdkBuilder.maintenance(maintenance.let(CfnChannel.MaintenanceCreateSettingsProperty::unwrap))
+      cdkBuilder.maintenance(maintenance.let(CfnChannel.MaintenanceCreateSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -489,7 +489,7 @@ public interface CfnChannelProps {
      * are in your VPC.
      */
     override fun vpc(vpc: IResolvable) {
-      cdkBuilder.vpc(vpc.let(IResolvable::unwrap))
+      cdkBuilder.vpc(vpc.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -497,7 +497,7 @@ public interface CfnChannelProps {
      * are in your VPC.
      */
     override fun vpc(vpc: CfnChannel.VpcOutputSettingsProperty) {
-      cdkBuilder.vpc(vpc.let(CfnChannel.VpcOutputSettingsProperty::unwrap))
+      cdkBuilder.vpc(vpc.let(CfnChannel.VpcOutputSettingsProperty.Companion::unwrap))
     }
 
     /**

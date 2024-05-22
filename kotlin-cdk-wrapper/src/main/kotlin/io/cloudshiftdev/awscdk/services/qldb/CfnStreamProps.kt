@@ -246,7 +246,7 @@ public interface CfnStreamProps {
      * destination for your stream request. 
      */
     override fun kinesisConfiguration(kinesisConfiguration: IResolvable) {
-      cdkBuilder.kinesisConfiguration(kinesisConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.kinesisConfiguration(kinesisConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -255,7 +255,7 @@ public interface CfnStreamProps {
      */
     override
         fun kinesisConfiguration(kinesisConfiguration: CfnStream.KinesisConfigurationProperty) {
-      cdkBuilder.kinesisConfiguration(kinesisConfiguration.let(CfnStream.KinesisConfigurationProperty::unwrap))
+      cdkBuilder.kinesisConfiguration(kinesisConfiguration.let(CfnStream.KinesisConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -306,7 +306,7 @@ public interface CfnStreamProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

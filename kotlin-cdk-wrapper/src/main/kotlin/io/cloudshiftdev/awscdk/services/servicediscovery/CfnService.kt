@@ -76,7 +76,7 @@ public open class CfnService(
   cdkObject: software.amazon.awscdk.services.servicediscovery.CfnService,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.servicediscovery.CfnService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.servicediscovery.CfnService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -85,8 +85,8 @@ public open class CfnService(
     id: String,
     props: CfnServiceProps,
   ) :
-      this(software.amazon.awscdk.services.servicediscovery.CfnService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnServiceProps::unwrap))
+      this(software.amazon.awscdk.services.servicediscovery.CfnService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnServiceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -134,7 +134,7 @@ public open class CfnService(
    * Map to create when you register an instance.
    */
   public open fun dnsConfig(`value`: IResolvable) {
-    unwrap(this).setDnsConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDnsConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -142,7 +142,7 @@ public open class CfnService(
    * Map to create when you register an instance.
    */
   public open fun dnsConfig(`value`: DnsConfigProperty) {
-    unwrap(this).setDnsConfig(`value`.let(DnsConfigProperty::unwrap))
+    unwrap(this).setDnsConfig(`value`.let(DnsConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -167,7 +167,7 @@ public open class CfnService(
    * check with the records that you specify in `DnsConfig` .
    */
   public open fun healthCheckConfig(`value`: IResolvable) {
-    unwrap(this).setHealthCheckConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHealthCheckConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -176,7 +176,7 @@ public open class CfnService(
    * check with the records that you specify in `DnsConfig` .
    */
   public open fun healthCheckConfig(`value`: HealthCheckConfigProperty) {
-    unwrap(this).setHealthCheckConfig(`value`.let(HealthCheckConfigProperty::unwrap))
+    unwrap(this).setHealthCheckConfig(`value`.let(HealthCheckConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -198,14 +198,14 @@ public open class CfnService(
    * A complex type that contains information about an optional custom health check.
    */
   public open fun healthCheckCustomConfig(`value`: IResolvable) {
-    unwrap(this).setHealthCheckCustomConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHealthCheckCustomConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A complex type that contains information about an optional custom health check.
    */
   public open fun healthCheckCustomConfig(`value`: HealthCheckCustomConfigProperty) {
-    unwrap(this).setHealthCheckCustomConfig(`value`.let(HealthCheckCustomConfigProperty::unwrap))
+    unwrap(this).setHealthCheckCustomConfig(`value`.let(HealthCheckCustomConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -223,7 +223,7 @@ public open class CfnService(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -265,7 +265,7 @@ public open class CfnService(
    * The tags for the service.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -529,7 +529,7 @@ public open class CfnService(
      * you want AWS Cloud Map to create when you register an instance. 
      */
     override fun dnsConfig(dnsConfig: IResolvable) {
-      cdkBuilder.dnsConfig(dnsConfig.let(IResolvable::unwrap))
+      cdkBuilder.dnsConfig(dnsConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -546,7 +546,7 @@ public open class CfnService(
      * you want AWS Cloud Map to create when you register an instance. 
      */
     override fun dnsConfig(dnsConfig: DnsConfigProperty) {
-      cdkBuilder.dnsConfig(dnsConfig.let(DnsConfigProperty::unwrap))
+      cdkBuilder.dnsConfig(dnsConfig.let(DnsConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -581,7 +581,7 @@ public open class CfnService(
      * associates the health check with the records that you specify in `DnsConfig` . 
      */
     override fun healthCheckConfig(healthCheckConfig: IResolvable) {
-      cdkBuilder.healthCheckConfig(healthCheckConfig.let(IResolvable::unwrap))
+      cdkBuilder.healthCheckConfig(healthCheckConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -598,7 +598,7 @@ public open class CfnService(
      * associates the health check with the records that you specify in `DnsConfig` . 
      */
     override fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty) {
-      cdkBuilder.healthCheckConfig(healthCheckConfig.let(HealthCheckConfigProperty::unwrap))
+      cdkBuilder.healthCheckConfig(healthCheckConfig.let(HealthCheckConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -632,7 +632,7 @@ public open class CfnService(
      * custom health check. 
      */
     override fun healthCheckCustomConfig(healthCheckCustomConfig: IResolvable) {
-      cdkBuilder.healthCheckCustomConfig(healthCheckCustomConfig.let(IResolvable::unwrap))
+      cdkBuilder.healthCheckCustomConfig(healthCheckCustomConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -648,7 +648,7 @@ public open class CfnService(
      * custom health check. 
      */
     override fun healthCheckCustomConfig(healthCheckCustomConfig: HealthCheckCustomConfigProperty) {
-      cdkBuilder.healthCheckCustomConfig(healthCheckCustomConfig.let(HealthCheckCustomConfigProperty::unwrap))
+      cdkBuilder.healthCheckCustomConfig(healthCheckCustomConfig.let(HealthCheckCustomConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -706,7 +706,7 @@ public open class CfnService(
      * @param tags The tags for the service. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -944,7 +944,7 @@ public open class CfnService(
        * record that you want AWS Cloud Map to create when you register an instance. 
        */
       override fun dnsRecords(dnsRecords: IResolvable) {
-        cdkBuilder.dnsRecords(dnsRecords.let(IResolvable::unwrap))
+        cdkBuilder.dnsRecords(dnsRecords.let(IResolvable.Companion::unwrap))
       }
 
       /**

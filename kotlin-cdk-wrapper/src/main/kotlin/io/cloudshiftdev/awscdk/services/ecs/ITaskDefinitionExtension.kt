@@ -31,7 +31,7 @@ public interface ITaskDefinitionExtension {
      * @param taskDefinition [disable-awslint:ref-via-interface]. 
      */
     override fun extend(taskDefinition: TaskDefinition) {
-      unwrap(this).extend(taskDefinition.let(TaskDefinition::unwrap))
+      unwrap(this).extend(taskDefinition.let(TaskDefinition.Companion::unwrap))
     }
   }
 

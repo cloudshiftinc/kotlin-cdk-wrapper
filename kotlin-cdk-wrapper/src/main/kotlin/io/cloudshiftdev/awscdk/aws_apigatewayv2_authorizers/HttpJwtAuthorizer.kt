@@ -41,7 +41,7 @@ public open class HttpJwtAuthorizer(
     jwtIssuer: String,
     props: HttpJwtAuthorizerProps,
   ) : this(software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpJwtAuthorizer(id, jwtIssuer,
-      props.let(HttpJwtAuthorizerProps::unwrap))
+      props.let(HttpJwtAuthorizerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -57,7 +57,7 @@ public open class HttpJwtAuthorizer(
    * @param options 
    */
   public override fun bind(options: HttpRouteAuthorizerBindOptions): HttpRouteAuthorizerConfig =
-      unwrap(this).bind(options.let(HttpRouteAuthorizerBindOptions::unwrap)).let(HttpRouteAuthorizerConfig::wrap)
+      unwrap(this).bind(options.let(HttpRouteAuthorizerBindOptions.Companion::unwrap)).let(HttpRouteAuthorizerConfig::wrap)
 
   /**
    * Bind this authorizer to a specified Http route.

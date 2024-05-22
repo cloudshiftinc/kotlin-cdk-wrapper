@@ -83,8 +83,8 @@ public open class CfnCachePolicy(
     id: String,
     props: CfnCachePolicyProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.CfnCachePolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCachePolicyProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.CfnCachePolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCachePolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -115,14 +115,14 @@ public open class CfnCachePolicy(
    * The cache policy configuration.
    */
   public open fun cachePolicyConfig(`value`: IResolvable) {
-    unwrap(this).setCachePolicyConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCachePolicyConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The cache policy configuration.
    */
   public open fun cachePolicyConfig(`value`: CachePolicyConfigProperty) {
-    unwrap(this).setCachePolicyConfig(`value`.let(CachePolicyConfigProperty::unwrap))
+    unwrap(this).setCachePolicyConfig(`value`.let(CachePolicyConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -139,7 +139,7 @@ public open class CfnCachePolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -188,7 +188,7 @@ public open class CfnCachePolicy(
      * @param cachePolicyConfig The cache policy configuration. 
      */
     override fun cachePolicyConfig(cachePolicyConfig: IResolvable) {
-      cdkBuilder.cachePolicyConfig(cachePolicyConfig.let(IResolvable::unwrap))
+      cdkBuilder.cachePolicyConfig(cachePolicyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -198,7 +198,7 @@ public open class CfnCachePolicy(
      * @param cachePolicyConfig The cache policy configuration. 
      */
     override fun cachePolicyConfig(cachePolicyConfig: CachePolicyConfigProperty) {
-      cdkBuilder.cachePolicyConfig(cachePolicyConfig.let(CachePolicyConfigProperty::unwrap))
+      cdkBuilder.cachePolicyConfig(cachePolicyConfig.let(CachePolicyConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -527,7 +527,7 @@ public open class CfnCachePolicy(
        */
       override
           fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: IResolvable) {
-        cdkBuilder.parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin.let(IResolvable::unwrap))
+        cdkBuilder.parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -538,7 +538,7 @@ public open class CfnCachePolicy(
        */
       override
           fun parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin: ParametersInCacheKeyAndForwardedToOriginProperty) {
-        cdkBuilder.parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin.let(ParametersInCacheKeyAndForwardedToOriginProperty::unwrap))
+        cdkBuilder.parametersInCacheKeyAndForwardedToOrigin(parametersInCacheKeyAndForwardedToOrigin.let(ParametersInCacheKeyAndForwardedToOriginProperty.Companion::unwrap))
       }
 
       /**
@@ -1311,7 +1311,7 @@ public open class CfnCachePolicy(
        * the origin. 
        */
       override fun cookiesConfig(cookiesConfig: IResolvable) {
-        cdkBuilder.cookiesConfig(cookiesConfig.let(IResolvable::unwrap))
+        cdkBuilder.cookiesConfig(cookiesConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1320,7 +1320,7 @@ public open class CfnCachePolicy(
        * the origin. 
        */
       override fun cookiesConfig(cookiesConfig: CookiesConfigProperty) {
-        cdkBuilder.cookiesConfig(cookiesConfig.let(CookiesConfigProperty::unwrap))
+        cdkBuilder.cookiesConfig(cookiesConfig.let(CookiesConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1390,7 +1390,7 @@ public open class CfnCachePolicy(
        * `Accept-Encoding` to the headers whitelist like any other HTTP header.
        */
       override fun enableAcceptEncodingBrotli(enableAcceptEncodingBrotli: IResolvable) {
-        cdkBuilder.enableAcceptEncodingBrotli(enableAcceptEncodingBrotli.let(IResolvable::unwrap))
+        cdkBuilder.enableAcceptEncodingBrotli(enableAcceptEncodingBrotli.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1450,7 +1450,7 @@ public open class CfnCachePolicy(
        * `Accept-Encoding` to the headers whitelist like any other HTTP header.
        */
       override fun enableAcceptEncodingGzip(enableAcceptEncodingGzip: IResolvable) {
-        cdkBuilder.enableAcceptEncodingGzip(enableAcceptEncodingGzip.let(IResolvable::unwrap))
+        cdkBuilder.enableAcceptEncodingGzip(enableAcceptEncodingGzip.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1458,7 +1458,7 @@ public open class CfnCachePolicy(
        * headers) are included in the cache key and in requests that CloudFront sends to the origin. 
        */
       override fun headersConfig(headersConfig: IResolvable) {
-        cdkBuilder.headersConfig(headersConfig.let(IResolvable::unwrap))
+        cdkBuilder.headersConfig(headersConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1466,7 +1466,7 @@ public open class CfnCachePolicy(
        * headers) are included in the cache key and in requests that CloudFront sends to the origin. 
        */
       override fun headersConfig(headersConfig: HeadersConfigProperty) {
-        cdkBuilder.headersConfig(headersConfig.let(HeadersConfigProperty::unwrap))
+        cdkBuilder.headersConfig(headersConfig.let(HeadersConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1484,7 +1484,7 @@ public open class CfnCachePolicy(
        * CloudFront sends to the origin. 
        */
       override fun queryStringsConfig(queryStringsConfig: IResolvable) {
-        cdkBuilder.queryStringsConfig(queryStringsConfig.let(IResolvable::unwrap))
+        cdkBuilder.queryStringsConfig(queryStringsConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1493,7 +1493,7 @@ public open class CfnCachePolicy(
        * CloudFront sends to the origin. 
        */
       override fun queryStringsConfig(queryStringsConfig: QueryStringsConfigProperty) {
-        cdkBuilder.queryStringsConfig(queryStringsConfig.let(QueryStringsConfigProperty::unwrap))
+        cdkBuilder.queryStringsConfig(queryStringsConfig.let(QueryStringsConfigProperty.Companion::unwrap))
       }
 
       /**

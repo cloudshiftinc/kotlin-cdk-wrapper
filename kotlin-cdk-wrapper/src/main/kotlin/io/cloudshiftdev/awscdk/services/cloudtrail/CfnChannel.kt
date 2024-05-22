@@ -48,7 +48,7 @@ public open class CfnChannel(
   cdkObject: software.amazon.awscdk.services.cloudtrail.CfnChannel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.cloudtrail.CfnChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.cloudtrail.CfnChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -57,8 +57,8 @@ public open class CfnChannel(
     id: String,
     props: CfnChannelProps,
   ) :
-      this(software.amazon.awscdk.services.cloudtrail.CfnChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnChannelProps::unwrap))
+      this(software.amazon.awscdk.services.cloudtrail.CfnChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnChannelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -83,7 +83,7 @@ public open class CfnChannel(
    * One or more event data stores to which events arriving through a channel will be logged.
    */
   public open fun destinations(`value`: IResolvable) {
-    unwrap(this).setDestinations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDestinations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -104,7 +104,7 @@ public open class CfnChannel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -146,7 +146,7 @@ public open class CfnChannel(
    * A list of tags.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -243,7 +243,7 @@ public open class CfnChannel(
      * will be logged. 
      */
     override fun destinations(destinations: IResolvable) {
-      cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
+      cdkBuilder.destinations(destinations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -302,7 +302,7 @@ public open class CfnChannel(
      * @param tags A list of tags. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

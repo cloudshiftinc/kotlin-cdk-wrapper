@@ -168,7 +168,7 @@ public interface DockerBuildOptions {
      * @param cacheFrom Cache from options to pass to the `docker build` command.
      */
     override fun cacheFrom(cacheFrom: List<DockerCacheOption>) {
-      cdkBuilder.cacheFrom(cacheFrom.map(DockerCacheOption::unwrap))
+      cdkBuilder.cacheFrom(cacheFrom.map(DockerCacheOption.Companion::unwrap))
     }
 
     /**
@@ -181,7 +181,7 @@ public interface DockerBuildOptions {
      * @param cacheTo Cache to options to pass to the `docker build` command.
      */
     override fun cacheTo(cacheTo: DockerCacheOption) {
-      cdkBuilder.cacheTo(cacheTo.let(DockerCacheOption::unwrap))
+      cdkBuilder.cacheTo(cacheTo.let(DockerCacheOption.Companion::unwrap))
     }
 
     /**

@@ -73,8 +73,8 @@ public open class CfnIdentityProviderConfig(
     id: String,
     props: CfnIdentityProviderConfigProps,
   ) :
-      this(software.amazon.awscdk.services.eks.CfnIdentityProviderConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnIdentityProviderConfigProps::unwrap))
+      this(software.amazon.awscdk.services.eks.CfnIdentityProviderConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnIdentityProviderConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -121,7 +121,7 @@ public open class CfnIdentityProviderConfig(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -133,14 +133,14 @@ public open class CfnIdentityProviderConfig(
    * An object representing an OpenID Connect (OIDC) identity provider configuration.
    */
   public open fun oidc(`value`: IResolvable) {
-    unwrap(this).setOidc(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOidc(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An object representing an OpenID Connect (OIDC) identity provider configuration.
    */
   public open fun oidc(`value`: OidcIdentityProviderConfigProperty) {
-    unwrap(this).setOidc(`value`.let(OidcIdentityProviderConfigProperty::unwrap))
+    unwrap(this).setOidc(`value`.let(OidcIdentityProviderConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -166,7 +166,7 @@ public open class CfnIdentityProviderConfig(
    * Metadata that assists with categorization and organization.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -300,7 +300,7 @@ public open class CfnIdentityProviderConfig(
      * @param oidc An object representing an OpenID Connect (OIDC) identity provider configuration. 
      */
     override fun oidc(oidc: IResolvable) {
-      cdkBuilder.oidc(oidc.let(IResolvable::unwrap))
+      cdkBuilder.oidc(oidc.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -310,7 +310,7 @@ public open class CfnIdentityProviderConfig(
      * @param oidc An object representing an OpenID Connect (OIDC) identity provider configuration. 
      */
     override fun oidc(oidc: OidcIdentityProviderConfigProperty) {
-      cdkBuilder.oidc(oidc.let(OidcIdentityProviderConfigProperty::unwrap))
+      cdkBuilder.oidc(oidc.let(OidcIdentityProviderConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -334,7 +334,7 @@ public open class CfnIdentityProviderConfig(
      * @param tags Metadata that assists with categorization and organization. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -587,7 +587,7 @@ public open class CfnIdentityProviderConfig(
        * If set, each claim is verified to be present in the token with a matching value.
        */
       override fun requiredClaims(requiredClaims: IResolvable) {
-        cdkBuilder.requiredClaims(requiredClaims.let(IResolvable::unwrap))
+        cdkBuilder.requiredClaims(requiredClaims.let(IResolvable.Companion::unwrap))
       }
 
       /**

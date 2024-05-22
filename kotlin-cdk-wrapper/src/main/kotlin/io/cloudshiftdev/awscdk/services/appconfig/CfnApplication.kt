@@ -63,8 +63,8 @@ public open class CfnApplication(
     id: String,
     props: CfnApplicationProps,
   ) :
-      this(software.amazon.awscdk.services.appconfig.CfnApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApplicationProps::unwrap))
+      this(software.amazon.awscdk.services.appconfig.CfnApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApplicationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -103,7 +103,7 @@ public open class CfnApplication(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -127,7 +127,7 @@ public open class CfnApplication(
    * Metadata to assign to the application.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -216,7 +216,7 @@ public open class CfnApplication(
      * @param tags Metadata to assign to the application. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

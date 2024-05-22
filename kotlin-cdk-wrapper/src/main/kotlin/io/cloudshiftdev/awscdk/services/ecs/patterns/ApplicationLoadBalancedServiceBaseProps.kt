@@ -663,7 +663,7 @@ public interface ApplicationLoadBalancedServiceBaseProps {
      */
     override
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>) {
-      cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy::unwrap))
+      cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy.Companion::unwrap))
     }
 
     /**
@@ -679,7 +679,7 @@ public interface ApplicationLoadBalancedServiceBaseProps {
      * Setting this option will set the load balancer protocol to HTTPS.
      */
     override fun certificate(certificate: ICertificate) {
-      cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
+      cdkBuilder.certificate(certificate.let(ICertificate.Companion::unwrap))
     }
 
     /**
@@ -688,7 +688,7 @@ public interface ApplicationLoadBalancedServiceBaseProps {
      * enabled.
      */
     override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
-      cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker::unwrap))
+      cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker.Companion::unwrap))
     }
 
     /**
@@ -706,7 +706,7 @@ public interface ApplicationLoadBalancedServiceBaseProps {
      * discovery.
      */
     override fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
-      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions::unwrap))
+      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions.Companion::unwrap))
     }
 
     /**
@@ -724,7 +724,7 @@ public interface ApplicationLoadBalancedServiceBaseProps {
      * both cluster and vpc.
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -734,7 +734,7 @@ public interface ApplicationLoadBalancedServiceBaseProps {
      * Types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html)
      */
     override fun deploymentController(deploymentController: DeploymentController) {
-      cdkBuilder.deploymentController(deploymentController.let(DeploymentController::unwrap))
+      cdkBuilder.deploymentController(deploymentController.let(DeploymentController.Companion::unwrap))
     }
 
     /**
@@ -769,7 +769,7 @@ public interface ApplicationLoadBalancedServiceBaseProps {
      * @param domainZone The Route53 hosted zone for the domain, e.g. "example.com.".
      */
     override fun domainZone(domainZone: IHostedZone) {
-      cdkBuilder.domainZone(domainZone.let(IHostedZone::unwrap))
+      cdkBuilder.domainZone(domainZone.let(IHostedZone.Companion::unwrap))
     }
 
     /**
@@ -796,7 +796,7 @@ public interface ApplicationLoadBalancedServiceBaseProps {
      * started.
      */
     override fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
-      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration::unwrap))
+      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -804,7 +804,7 @@ public interface ApplicationLoadBalancedServiceBaseProps {
      * Can be between 1 and 4000 seconds
      */
     override fun idleTimeout(idleTimeout: Duration) {
-      cdkBuilder.idleTimeout(idleTimeout.let(Duration::unwrap))
+      cdkBuilder.idleTimeout(idleTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -823,7 +823,7 @@ public interface ApplicationLoadBalancedServiceBaseProps {
      * [disable-awslint:ref-via-interface]
      */
     override fun loadBalancer(loadBalancer: IApplicationLoadBalancer) {
-      cdkBuilder.loadBalancer(loadBalancer.let(IApplicationLoadBalancer::unwrap))
+      cdkBuilder.loadBalancer(loadBalancer.let(IApplicationLoadBalancer.Companion::unwrap))
     }
 
     /**
@@ -864,7 +864,7 @@ public interface ApplicationLoadBalancedServiceBaseProps {
      * Tags can only be propagated to the tasks within the service during service creation.
      */
     override fun propagateTags(propagateTags: PropagatedTagSource) {
-      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource.Companion::unwrap))
     }
 
     /**
@@ -874,14 +874,14 @@ public interface ApplicationLoadBalancedServiceBaseProps {
      * name and domain zone must also be specified.
      */
     override fun protocol(protocol: ApplicationProtocol) {
-      cdkBuilder.protocol(protocol.let(ApplicationProtocol::unwrap))
+      cdkBuilder.protocol(protocol.let(ApplicationProtocol.Companion::unwrap))
     }
 
     /**
      * @param protocolVersion The protocol version to use.
      */
     override fun protocolVersion(protocolVersion: ApplicationProtocolVersion) {
-      cdkBuilder.protocolVersion(protocolVersion.let(ApplicationProtocolVersion::unwrap))
+      cdkBuilder.protocolVersion(protocolVersion.let(ApplicationProtocolVersion.Companion::unwrap))
     }
 
     /**
@@ -897,7 +897,7 @@ public interface ApplicationLoadBalancedServiceBaseProps {
      * This is useful if you need to work with DNS systems that do not support alias records.
      */
     override fun recordType(recordType: ApplicationLoadBalancedServiceRecordType) {
-      cdkBuilder.recordType(recordType.let(ApplicationLoadBalancedServiceRecordType::unwrap))
+      cdkBuilder.recordType(recordType.let(ApplicationLoadBalancedServiceRecordType.Companion::unwrap))
     }
 
     /**
@@ -921,7 +921,7 @@ public interface ApplicationLoadBalancedServiceBaseProps {
      * by the ALB Listener.
      */
     override fun sslPolicy(sslPolicy: SslPolicy) {
-      cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy::unwrap))
+      cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy.Companion::unwrap))
     }
 
     /**
@@ -930,7 +930,7 @@ public interface ApplicationLoadBalancedServiceBaseProps {
      * HTTP, port 443 for HTTPS).
      */
     override fun targetProtocol(targetProtocol: ApplicationProtocol) {
-      cdkBuilder.targetProtocol(targetProtocol.let(ApplicationProtocol::unwrap))
+      cdkBuilder.targetProtocol(targetProtocol.let(ApplicationProtocol.Companion::unwrap))
     }
 
     /**
@@ -938,7 +938,7 @@ public interface ApplicationLoadBalancedServiceBaseProps {
      * TaskDefinition or TaskImageOptions must be specified, but not both.
      */
     override fun taskImageOptions(taskImageOptions: ApplicationLoadBalancedTaskImageOptions) {
-      cdkBuilder.taskImageOptions(taskImageOptions.let(ApplicationLoadBalancedTaskImageOptions::unwrap))
+      cdkBuilder.taskImageOptions(taskImageOptions.let(ApplicationLoadBalancedTaskImageOptions.Companion::unwrap))
     }
 
     /**
@@ -958,7 +958,7 @@ public interface ApplicationLoadBalancedServiceBaseProps {
      * both vpc and cluster.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build():

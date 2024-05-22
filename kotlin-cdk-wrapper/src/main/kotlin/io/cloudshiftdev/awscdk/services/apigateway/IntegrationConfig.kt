@@ -170,7 +170,7 @@ public interface IntegrationConfig {
      * @param options Integration options.
      */
     override fun options(options: IntegrationOptions) {
-      cdkBuilder.options(options.let(IntegrationOptions::unwrap))
+      cdkBuilder.options(options.let(IntegrationOptions.Companion::unwrap))
     }
 
     /**
@@ -185,7 +185,7 @@ public interface IntegrationConfig {
      * @param type Specifies an API method integration type. 
      */
     override fun type(type: IntegrationType) {
-      cdkBuilder.type(type.let(IntegrationType::unwrap))
+      cdkBuilder.type(type.let(IntegrationType.Companion::unwrap))
     }
 
     /**

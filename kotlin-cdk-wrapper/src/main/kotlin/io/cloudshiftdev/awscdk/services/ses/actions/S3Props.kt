@@ -106,7 +106,7 @@ public interface S3Props {
      * @param bucket The S3 bucket that incoming email will be saved to. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -114,7 +114,7 @@ public interface S3Props {
      * the S3 bucket.
      */
     override fun kmsKey(kmsKey: IKey) {
-      cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -128,7 +128,7 @@ public interface S3Props {
      * @param topic The SNS topic to notify when the S3 action is taken.
      */
     override fun topic(topic: ITopic) {
-      cdkBuilder.topic(topic.let(ITopic::unwrap))
+      cdkBuilder.topic(topic.let(ITopic.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ses.actions.S3Props = cdkBuilder.build()

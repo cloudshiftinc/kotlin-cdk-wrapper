@@ -235,7 +235,7 @@ public interface CfnExperimentTemplateProps {
      * @param actions The actions for the experiment.
      */
     override fun actions(actions: IResolvable) {
-      cdkBuilder.actions(actions.let(IResolvable::unwrap))
+      cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -256,7 +256,7 @@ public interface CfnExperimentTemplateProps {
      * @param experimentOptions The experiment options for an experiment template.
      */
     override fun experimentOptions(experimentOptions: IResolvable) {
-      cdkBuilder.experimentOptions(experimentOptions.let(IResolvable::unwrap))
+      cdkBuilder.experimentOptions(experimentOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -264,7 +264,7 @@ public interface CfnExperimentTemplateProps {
      */
     override
         fun experimentOptions(experimentOptions: CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty) {
-      cdkBuilder.experimentOptions(experimentOptions.let(CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty::unwrap))
+      cdkBuilder.experimentOptions(experimentOptions.let(CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -281,7 +281,7 @@ public interface CfnExperimentTemplateProps {
      * @param logConfiguration The configuration for experiment logging.
      */
     override fun logConfiguration(logConfiguration: IResolvable) {
-      cdkBuilder.logConfiguration(logConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.logConfiguration(logConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -289,7 +289,7 @@ public interface CfnExperimentTemplateProps {
      */
     override
         fun logConfiguration(logConfiguration: CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty) {
-      cdkBuilder.logConfiguration(logConfiguration.let(CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty::unwrap))
+      cdkBuilder.logConfiguration(logConfiguration.let(CfnExperimentTemplate.ExperimentTemplateLogConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -313,7 +313,7 @@ public interface CfnExperimentTemplateProps {
      * @param stopConditions The stop conditions for the experiment. 
      */
     override fun stopConditions(stopConditions: IResolvable) {
-      cdkBuilder.stopConditions(stopConditions.let(IResolvable::unwrap))
+      cdkBuilder.stopConditions(stopConditions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -340,7 +340,7 @@ public interface CfnExperimentTemplateProps {
      * @param targets The targets for the experiment. 
      */
     override fun targets(targets: IResolvable) {
-      cdkBuilder.targets(targets.let(IResolvable::unwrap))
+      cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -75,8 +75,8 @@ public open class CfnConnectorDefinition(
     id: String,
     props: CfnConnectorDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.greengrass.CfnConnectorDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConnectorDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.greengrass.CfnConnectorDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConnectorDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -120,14 +120,14 @@ public open class CfnConnectorDefinition(
    * The connector definition version to include when the connector definition is created.
    */
   public open fun initialVersion(`value`: IResolvable) {
-    unwrap(this).setInitialVersion(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInitialVersion(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The connector definition version to include when the connector definition is created.
    */
   public open fun initialVersion(`value`: ConnectorDefinitionVersionProperty) {
-    unwrap(this).setInitialVersion(`value`.let(ConnectorDefinitionVersionProperty::unwrap))
+    unwrap(this).setInitialVersion(`value`.let(ConnectorDefinitionVersionProperty.Companion::unwrap))
   }
 
   /**
@@ -144,7 +144,7 @@ public open class CfnConnectorDefinition(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -300,7 +300,7 @@ public open class CfnConnectorDefinition(
      * definition is created. 
      */
     override fun initialVersion(initialVersion: IResolvable) {
-      cdkBuilder.initialVersion(initialVersion.let(IResolvable::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -322,7 +322,7 @@ public open class CfnConnectorDefinition(
      * definition is created. 
      */
     override fun initialVersion(initialVersion: ConnectorDefinitionVersionProperty) {
-      cdkBuilder.initialVersion(initialVersion.let(ConnectorDefinitionVersionProperty::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(ConnectorDefinitionVersionProperty.Companion::unwrap))
     }
 
     /**
@@ -492,7 +492,7 @@ public open class CfnConnectorDefinition(
        * time.
        */
       override fun connectors(connectors: IResolvable) {
-        cdkBuilder.connectors(connectors.let(IResolvable::unwrap))
+        cdkBuilder.connectors(connectors.let(IResolvable.Companion::unwrap))
       }
 
       /**

@@ -33,7 +33,7 @@ public open class BottleRocketImage(
   )
 
   public constructor(props: BottleRocketImageProps) :
-      this(software.amazon.awscdk.services.ecs.BottleRocketImage(props.let(BottleRocketImageProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.BottleRocketImage(props.let(BottleRocketImageProps.Companion::unwrap))
   )
 
   public constructor(props: BottleRocketImageProps.Builder.() -> Unit) :
@@ -46,7 +46,7 @@ public open class BottleRocketImage(
    * @param scope 
    */
   public override fun image(scope: Construct): MachineImageConfig =
-      unwrap(this).getImage(scope.let(Construct::unwrap)).let(MachineImageConfig::wrap)
+      unwrap(this).getImage(scope.let(Construct.Companion::unwrap)).let(MachineImageConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.BottleRocketImage].
@@ -107,7 +107,7 @@ public open class BottleRocketImage(
      * @param architecture The CPU architecture. 
      */
     override fun architecture(architecture: InstanceArchitecture) {
-      cdkBuilder.architecture(architecture.let(InstanceArchitecture::unwrap))
+      cdkBuilder.architecture(architecture.let(InstanceArchitecture.Companion::unwrap))
     }
 
     /**
@@ -143,7 +143,7 @@ public open class BottleRocketImage(
      * @param variant The Amazon ECS variant to use. 
      */
     override fun variant(variant: BottlerocketEcsVariant) {
-      cdkBuilder.variant(variant.let(BottlerocketEcsVariant::unwrap))
+      cdkBuilder.variant(variant.let(BottlerocketEcsVariant.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.BottleRocketImage = cdkBuilder.build()

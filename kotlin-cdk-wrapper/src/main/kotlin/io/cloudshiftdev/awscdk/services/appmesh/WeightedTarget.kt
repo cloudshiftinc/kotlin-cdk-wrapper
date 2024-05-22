@@ -82,7 +82,7 @@ public interface WeightedTarget {
      * @param virtualNode The VirtualNode the route points to. 
      */
     override fun virtualNode(virtualNode: IVirtualNode) {
-      cdkBuilder.virtualNode(virtualNode.let(IVirtualNode::unwrap))
+      cdkBuilder.virtualNode(virtualNode.let(IVirtualNode.Companion::unwrap))
     }
 
     /**

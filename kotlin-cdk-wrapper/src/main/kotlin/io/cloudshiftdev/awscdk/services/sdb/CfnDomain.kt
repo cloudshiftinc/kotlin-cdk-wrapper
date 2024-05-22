@@ -38,7 +38,7 @@ public open class CfnDomain(
   cdkObject: software.amazon.awscdk.services.sdb.CfnDomain,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.sdb.CfnDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.sdb.CfnDomain(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -47,8 +47,8 @@ public open class CfnDomain(
     id: String,
     props: CfnDomainProps,
   ) :
-      this(software.amazon.awscdk.services.sdb.CfnDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDomainProps::unwrap))
+      this(software.amazon.awscdk.services.sdb.CfnDomain(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDomainProps.Companion::unwrap))
   )
 
   public constructor(
@@ -81,7 +81,7 @@ public open class CfnDomain(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

@@ -231,7 +231,7 @@ public interface CfnLoggingConfigurationProps {
      * visibility configuration.
      */
     override fun redactedFields(redactedFields: IResolvable) {
-      cdkBuilder.redactedFields(redactedFields.let(IResolvable::unwrap))
+      cdkBuilder.redactedFields(redactedFields.let(IResolvable.Companion::unwrap))
     }
 
     /**

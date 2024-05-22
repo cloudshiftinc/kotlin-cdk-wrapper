@@ -176,7 +176,7 @@ public interface CfnPartnershipProps {
      * Tags are metadata that you can use to search for and group capabilities for various purposes.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

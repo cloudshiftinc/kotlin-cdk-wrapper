@@ -64,8 +64,8 @@ public open class CfnSchema(
     id: String,
     props: CfnSchemaProps,
   ) :
-      this(software.amazon.awscdk.services.glue.CfnSchema(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSchemaProps::unwrap))
+      this(software.amazon.awscdk.services.glue.CfnSchema(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSchemaProps.Companion::unwrap))
   )
 
   public constructor(
@@ -95,14 +95,14 @@ public open class CfnSchema(
    * Specify the `VersionNumber` or the `IsLatest` for setting the checkpoint for the schema.
    */
   public open fun checkpointVersion(`value`: IResolvable) {
-    unwrap(this).setCheckpointVersion(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCheckpointVersion(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specify the `VersionNumber` or the `IsLatest` for setting the checkpoint for the schema.
    */
   public open fun checkpointVersion(`value`: SchemaVersionProperty) {
-    unwrap(this).setCheckpointVersion(`value`.let(SchemaVersionProperty::unwrap))
+    unwrap(this).setCheckpointVersion(`value`.let(SchemaVersionProperty.Companion::unwrap))
   }
 
   /**
@@ -155,7 +155,7 @@ public open class CfnSchema(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -181,14 +181,14 @@ public open class CfnSchema(
    * The registry where a schema is stored.
    */
   public open fun registry(`value`: IResolvable) {
-    unwrap(this).setRegistry(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRegistry(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The registry where a schema is stored.
    */
   public open fun registry(`value`: RegistryProperty) {
-    unwrap(this).setRegistry(`value`.let(RegistryProperty::unwrap))
+    unwrap(this).setRegistry(`value`.let(RegistryProperty.Companion::unwrap))
   }
 
   /**
@@ -226,7 +226,7 @@ public open class CfnSchema(
    * AWS tags that contain a key value pair and may be searched by console, command line, or API.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -383,7 +383,7 @@ public open class CfnSchema(
      * checkpoint for the schema. 
      */
     override fun checkpointVersion(checkpointVersion: IResolvable) {
-      cdkBuilder.checkpointVersion(checkpointVersion.let(IResolvable::unwrap))
+      cdkBuilder.checkpointVersion(checkpointVersion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -396,7 +396,7 @@ public open class CfnSchema(
      * checkpoint for the schema. 
      */
     override fun checkpointVersion(checkpointVersion: SchemaVersionProperty) {
-      cdkBuilder.checkpointVersion(checkpointVersion.let(SchemaVersionProperty::unwrap))
+      cdkBuilder.checkpointVersion(checkpointVersion.let(SchemaVersionProperty.Companion::unwrap))
     }
 
     /**
@@ -466,7 +466,7 @@ public open class CfnSchema(
      * @param registry The registry where a schema is stored. 
      */
     override fun registry(registry: IResolvable) {
-      cdkBuilder.registry(registry.let(IResolvable::unwrap))
+      cdkBuilder.registry(registry.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -476,7 +476,7 @@ public open class CfnSchema(
      * @param registry The registry where a schema is stored. 
      */
     override fun registry(registry: RegistryProperty) {
-      cdkBuilder.registry(registry.let(RegistryProperty::unwrap))
+      cdkBuilder.registry(registry.let(RegistryProperty.Companion::unwrap))
     }
 
     /**
@@ -509,7 +509,7 @@ public open class CfnSchema(
      * line, or API. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -718,7 +718,7 @@ public open class CfnSchema(
        * @param isLatest Indicates if this version is the latest version of the schema.
        */
       override fun isLatest(isLatest: IResolvable) {
-        cdkBuilder.isLatest(isLatest.let(IResolvable::unwrap))
+        cdkBuilder.isLatest(isLatest.let(IResolvable.Companion::unwrap))
       }
 
       /**

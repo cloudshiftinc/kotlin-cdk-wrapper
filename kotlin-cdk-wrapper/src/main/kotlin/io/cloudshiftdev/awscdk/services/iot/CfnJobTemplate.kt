@@ -73,8 +73,8 @@ public open class CfnJobTemplate(
     id: String,
     props: CfnJobTemplateProps,
   ) :
-      this(software.amazon.awscdk.services.iot.CfnJobTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnJobTemplateProps::unwrap))
+      this(software.amazon.awscdk.services.iot.CfnJobTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnJobTemplateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -165,7 +165,7 @@ public open class CfnJobTemplate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -189,14 +189,14 @@ public open class CfnJobTemplate(
    * Allows you to create the criteria to retry a job.
    */
   public open fun jobExecutionsRetryConfig(`value`: IResolvable) {
-    unwrap(this).setJobExecutionsRetryConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setJobExecutionsRetryConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Allows you to create the criteria to retry a job.
    */
   public open fun jobExecutionsRetryConfig(`value`: JobExecutionsRetryConfigProperty) {
-    unwrap(this).setJobExecutionsRetryConfig(`value`.let(JobExecutionsRetryConfigProperty::unwrap))
+    unwrap(this).setJobExecutionsRetryConfig(`value`.let(JobExecutionsRetryConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -245,7 +245,7 @@ public open class CfnJobTemplate(
    * target group for a job.
    */
   public open fun maintenanceWindows(`value`: IResolvable) {
-    unwrap(this).setMaintenanceWindows(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMaintenanceWindows(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -292,7 +292,7 @@ public open class CfnJobTemplate(
    * Metadata that can be used to manage the job template.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -617,7 +617,7 @@ public open class CfnJobTemplate(
      * @param jobExecutionsRetryConfig Allows you to create the criteria to retry a job. 
      */
     override fun jobExecutionsRetryConfig(jobExecutionsRetryConfig: IResolvable) {
-      cdkBuilder.jobExecutionsRetryConfig(jobExecutionsRetryConfig.let(IResolvable::unwrap))
+      cdkBuilder.jobExecutionsRetryConfig(jobExecutionsRetryConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -628,7 +628,7 @@ public open class CfnJobTemplate(
      */
     override
         fun jobExecutionsRetryConfig(jobExecutionsRetryConfig: JobExecutionsRetryConfigProperty) {
-      cdkBuilder.jobExecutionsRetryConfig(jobExecutionsRetryConfig.let(JobExecutionsRetryConfigProperty::unwrap))
+      cdkBuilder.jobExecutionsRetryConfig(jobExecutionsRetryConfig.let(JobExecutionsRetryConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -676,7 +676,7 @@ public open class CfnJobTemplate(
      * job document to all devices in a target group for a job. 
      */
     override fun maintenanceWindows(maintenanceWindows: IResolvable) {
-      cdkBuilder.maintenanceWindows(maintenanceWindows.let(IResolvable::unwrap))
+      cdkBuilder.maintenanceWindows(maintenanceWindows.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -723,7 +723,7 @@ public open class CfnJobTemplate(
      * @param tags Metadata that can be used to manage the job template. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -831,7 +831,7 @@ public open class CfnJobTemplate(
        * @param criteriaList The list of criteria that determine when and how to abort the job. 
        */
       override fun criteriaList(criteriaList: IResolvable) {
-        cdkBuilder.criteriaList(criteriaList.let(IResolvable::unwrap))
+        cdkBuilder.criteriaList(criteriaList.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1174,7 +1174,7 @@ public open class CfnJobTemplate(
        * job. 
        */
       override fun rateIncreaseCriteria(rateIncreaseCriteria: IResolvable) {
-        cdkBuilder.rateIncreaseCriteria(rateIncreaseCriteria.let(IResolvable::unwrap))
+        cdkBuilder.rateIncreaseCriteria(rateIncreaseCriteria.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1182,7 +1182,7 @@ public open class CfnJobTemplate(
        * job. 
        */
       override fun rateIncreaseCriteria(rateIncreaseCriteria: RateIncreaseCriteriaProperty) {
-        cdkBuilder.rateIncreaseCriteria(rateIncreaseCriteria.let(RateIncreaseCriteriaProperty::unwrap))
+        cdkBuilder.rateIncreaseCriteria(rateIncreaseCriteria.let(RateIncreaseCriteriaProperty.Companion::unwrap))
       }
 
       /**
@@ -1312,7 +1312,7 @@ public open class CfnJobTemplate(
        * for each failure type for a job.
        */
       override fun retryCriteriaList(retryCriteriaList: IResolvable) {
-        cdkBuilder.retryCriteriaList(retryCriteriaList.let(IResolvable::unwrap))
+        cdkBuilder.retryCriteriaList(retryCriteriaList.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1454,7 +1454,7 @@ public open class CfnJobTemplate(
        * This parameter allows you to define an exponential rate for a job rollout.
        */
       override fun exponentialRolloutRate(exponentialRolloutRate: IResolvable) {
-        cdkBuilder.exponentialRolloutRate(exponentialRolloutRate.let(IResolvable::unwrap))
+        cdkBuilder.exponentialRolloutRate(exponentialRolloutRate.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1462,7 +1462,7 @@ public open class CfnJobTemplate(
        * This parameter allows you to define an exponential rate for a job rollout.
        */
       override fun exponentialRolloutRate(exponentialRolloutRate: ExponentialRolloutRateProperty) {
-        cdkBuilder.exponentialRolloutRate(exponentialRolloutRate.let(ExponentialRolloutRateProperty::unwrap))
+        cdkBuilder.exponentialRolloutRate(exponentialRolloutRate.let(ExponentialRolloutRateProperty.Companion::unwrap))
       }
 
       /**

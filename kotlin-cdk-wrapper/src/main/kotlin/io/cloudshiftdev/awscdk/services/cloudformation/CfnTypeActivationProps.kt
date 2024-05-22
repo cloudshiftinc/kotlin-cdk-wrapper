@@ -273,7 +273,7 @@ public interface CfnTypeActivationProps {
      * The default is `true` .
      */
     override fun autoUpdate(autoUpdate: IResolvable) {
-      cdkBuilder.autoUpdate(autoUpdate.let(IResolvable::unwrap))
+      cdkBuilder.autoUpdate(autoUpdate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -287,14 +287,14 @@ public interface CfnTypeActivationProps {
      * @param loggingConfig Specifies logging configuration information for an extension.
      */
     override fun loggingConfig(loggingConfig: IResolvable) {
-      cdkBuilder.loggingConfig(loggingConfig.let(IResolvable::unwrap))
+      cdkBuilder.loggingConfig(loggingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param loggingConfig Specifies logging configuration information for an extension.
      */
     override fun loggingConfig(loggingConfig: CfnTypeActivation.LoggingConfigProperty) {
-      cdkBuilder.loggingConfig(loggingConfig.let(CfnTypeActivation.LoggingConfigProperty::unwrap))
+      cdkBuilder.loggingConfig(loggingConfig.let(CfnTypeActivation.LoggingConfigProperty.Companion::unwrap))
     }
 
     /**

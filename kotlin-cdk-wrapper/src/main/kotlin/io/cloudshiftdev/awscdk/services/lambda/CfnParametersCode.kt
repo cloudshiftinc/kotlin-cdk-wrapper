@@ -133,7 +133,7 @@ public open class CfnParametersCode(
   )
 
   public constructor(props: CfnParametersCodeProps) :
-      this(software.amazon.awscdk.services.lambda.CfnParametersCode(props.let(CfnParametersCodeProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.CfnParametersCode(props.let(CfnParametersCodeProps.Companion::unwrap))
   )
 
   public constructor(props: CfnParametersCodeProps.Builder.() -> Unit) :
@@ -155,7 +155,7 @@ public open class CfnParametersCode(
    * @param location the location of the object in S3 that represents the Lambda code. 
    */
   public open fun assign(location: Location): Map<String, Any> =
-      unwrap(this).assign(location.let(Location::unwrap)) ?: emptyMap()
+      unwrap(this).assign(location.let(Location.Companion::unwrap)) ?: emptyMap()
 
   /**
    * Create a parameters map from this instance's CloudFormation parameters.
@@ -183,7 +183,7 @@ public open class CfnParametersCode(
    * @param scope 
    */
   public override fun bind(scope: Construct): CodeConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(CodeConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(CodeConfig::wrap)
 
   /**
    *
@@ -248,7 +248,7 @@ public open class CfnParametersCode(
      * where the Lambda code will be located in. 
      */
     override fun bucketNameParam(bucketNameParam: CfnParameter) {
-      cdkBuilder.bucketNameParam(bucketNameParam.let(CfnParameter::unwrap))
+      cdkBuilder.bucketNameParam(bucketNameParam.let(CfnParameter.Companion::unwrap))
     }
 
     /**
@@ -263,7 +263,7 @@ public open class CfnParametersCode(
      * Bucket where the Lambda code will be located at. 
      */
     override fun objectKeyParam(objectKeyParam: CfnParameter) {
-      cdkBuilder.objectKeyParam(objectKeyParam.let(CfnParameter::unwrap))
+      cdkBuilder.objectKeyParam(objectKeyParam.let(CfnParameter.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lambda.CfnParametersCode =

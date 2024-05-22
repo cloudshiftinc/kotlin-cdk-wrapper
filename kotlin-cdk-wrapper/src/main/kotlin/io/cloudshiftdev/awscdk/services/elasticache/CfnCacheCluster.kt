@@ -86,8 +86,8 @@ public open class CfnCacheCluster(
     id: String,
     props: CfnCacheClusterProps,
   ) :
-      this(software.amazon.awscdk.services.elasticache.CfnCacheCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCacheClusterProps::unwrap))
+      this(software.amazon.awscdk.services.elasticache.CfnCacheCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCacheClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -156,7 +156,7 @@ public open class CfnCacheCluster(
    * versions.
    */
   public open fun autoMinorVersionUpgrade(`value`: IResolvable) {
-    unwrap(this).setAutoMinorVersionUpgrade(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoMinorVersionUpgrade(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -270,7 +270,7 @@ public open class CfnCacheCluster(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -294,7 +294,7 @@ public open class CfnCacheCluster(
    * Specifies the destination, format and type of the logs.
    */
   public open fun logDeliveryConfigurations(`value`: IResolvable) {
-    unwrap(this).setLogDeliveryConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLogDeliveryConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -477,7 +477,7 @@ public open class CfnCacheCluster(
    * A list of tags to be added to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -501,7 +501,7 @@ public open class CfnCacheCluster(
    * A flag that enables in-transit encryption when set to true.
    */
   public open fun transitEncryptionEnabled(`value`: IResolvable) {
-    unwrap(this).setTransitEncryptionEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTransitEncryptionEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -1099,7 +1099,7 @@ public open class CfnCacheCluster(
      * parameter is disabled for previous versions. 
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1338,7 +1338,7 @@ public open class CfnCacheCluster(
      * @param logDeliveryConfigurations Specifies the destination, format and type of the logs. 
      */
     override fun logDeliveryConfigurations(logDeliveryConfigurations: IResolvable) {
-      cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1617,7 +1617,7 @@ public open class CfnCacheCluster(
      * @param tags A list of tags to be added to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1645,7 +1645,7 @@ public open class CfnCacheCluster(
      * @param transitEncryptionEnabled A flag that enables in-transit encryption when set to true. 
      */
     override fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable) {
-      cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1899,7 +1899,7 @@ public open class CfnCacheCluster(
        * destination.
        */
       override fun cloudWatchLogsDetails(cloudWatchLogsDetails: IResolvable) {
-        cdkBuilder.cloudWatchLogsDetails(cloudWatchLogsDetails.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchLogsDetails(cloudWatchLogsDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1909,7 +1909,7 @@ public open class CfnCacheCluster(
        */
       override
           fun cloudWatchLogsDetails(cloudWatchLogsDetails: CloudWatchLogsDestinationDetailsProperty) {
-        cdkBuilder.cloudWatchLogsDetails(cloudWatchLogsDetails.let(CloudWatchLogsDestinationDetailsProperty::unwrap))
+        cdkBuilder.cloudWatchLogsDetails(cloudWatchLogsDetails.let(CloudWatchLogsDestinationDetailsProperty.Companion::unwrap))
       }
 
       /**
@@ -1931,7 +1931,7 @@ public open class CfnCacheCluster(
        * the destination.
        */
       override fun kinesisFirehoseDetails(kinesisFirehoseDetails: IResolvable) {
-        cdkBuilder.kinesisFirehoseDetails(kinesisFirehoseDetails.let(IResolvable::unwrap))
+        cdkBuilder.kinesisFirehoseDetails(kinesisFirehoseDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1942,7 +1942,7 @@ public open class CfnCacheCluster(
        */
       override
           fun kinesisFirehoseDetails(kinesisFirehoseDetails: KinesisFirehoseDestinationDetailsProperty) {
-        cdkBuilder.kinesisFirehoseDetails(kinesisFirehoseDetails.let(KinesisFirehoseDestinationDetailsProperty::unwrap))
+        cdkBuilder.kinesisFirehoseDetails(kinesisFirehoseDetails.let(KinesisFirehoseDestinationDetailsProperty.Companion::unwrap))
       }
 
       /**
@@ -2208,7 +2208,7 @@ public open class CfnCacheCluster(
        * Kinesis Data Firehose destination. 
        */
       override fun destinationDetails(destinationDetails: IResolvable) {
-        cdkBuilder.destinationDetails(destinationDetails.let(IResolvable::unwrap))
+        cdkBuilder.destinationDetails(destinationDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2216,7 +2216,7 @@ public open class CfnCacheCluster(
        * Kinesis Data Firehose destination. 
        */
       override fun destinationDetails(destinationDetails: DestinationDetailsProperty) {
-        cdkBuilder.destinationDetails(destinationDetails.let(DestinationDetailsProperty::unwrap))
+        cdkBuilder.destinationDetails(destinationDetails.let(DestinationDetailsProperty.Companion::unwrap))
       }
 
       /**

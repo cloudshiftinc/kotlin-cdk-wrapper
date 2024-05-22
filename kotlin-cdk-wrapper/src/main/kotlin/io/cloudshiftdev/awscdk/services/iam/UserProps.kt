@@ -206,7 +206,7 @@ public interface UserProps {
      * user to a group.
      */
     override fun groups(groups: List<IGroup>) {
-      cdkBuilder.groups(groups.map(IGroup::unwrap))
+      cdkBuilder.groups(groups.map(IGroup.Companion::unwrap))
     }
 
     /**
@@ -222,7 +222,7 @@ public interface UserProps {
      * `addManagedPolicy(ManagedPolicy.fromAwsManagedPolicyName(policyName))`.
      */
     override fun managedPolicies(managedPolicies: List<IManagedPolicy>) {
-      cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy::unwrap))
+      cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy.Companion::unwrap))
     }
 
     /**
@@ -241,7 +241,7 @@ public interface UserProps {
      * Secrets Manager.
      */
     override fun password(password: SecretValue) {
-      cdkBuilder.password(password.let(SecretValue::unwrap))
+      cdkBuilder.password(password.let(SecretValue.Companion::unwrap))
     }
 
     /**
@@ -272,7 +272,7 @@ public interface UserProps {
      * permissions boundaries.
      */
     override fun permissionsBoundary(permissionsBoundary: IManagedPolicy) {
-      cdkBuilder.permissionsBoundary(permissionsBoundary.let(IManagedPolicy::unwrap))
+      cdkBuilder.permissionsBoundary(permissionsBoundary.let(IManagedPolicy.Companion::unwrap))
     }
 
     /**

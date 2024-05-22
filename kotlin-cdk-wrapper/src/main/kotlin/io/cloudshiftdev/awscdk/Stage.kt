@@ -46,15 +46,17 @@ public open class Stage(
   cdkObject: software.amazon.awscdk.Stage,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.Stage(scope.let(CloudshiftdevConstructsConstruct::unwrap), id)
+      this(software.amazon.awscdk.Stage(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id)
   )
 
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
     props: StageProps,
-  ) : this(software.amazon.awscdk.Stage(scope.let(CloudshiftdevConstructsConstruct::unwrap), id,
-      props.let(StageProps::unwrap))
+  ) :
+      this(software.amazon.awscdk.Stage(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(StageProps.Companion::unwrap))
   )
 
   public constructor(
@@ -137,7 +139,7 @@ public open class Stage(
    * @param options
    */
   public open fun synth(options: StageSynthesisOptions): CloudAssembly =
-      unwrap(this).synth(options.let(StageSynthesisOptions::unwrap)).let(CloudAssembly::wrap)
+      unwrap(this).synth(options.let(StageSynthesisOptions.Companion::unwrap)).let(CloudAssembly::wrap)
 
   /**
    * Synthesize this stage into a cloud assembly.
@@ -336,7 +338,7 @@ public open class Stage(
      * @param env Default AWS environment (account/region) for `Stack`s in this `Stage`. 
      */
     override fun env(env: Environment) {
-      cdkBuilder.env(env.let(Environment::unwrap))
+      cdkBuilder.env(env.let(Environment.Companion::unwrap))
     }
 
     /**
@@ -405,7 +407,7 @@ public open class Stage(
      * Users created within this Stage. 
      */
     override fun permissionsBoundary(permissionsBoundary: PermissionsBoundary) {
-      cdkBuilder.permissionsBoundary(permissionsBoundary.let(PermissionsBoundary::unwrap))
+      cdkBuilder.permissionsBoundary(permissionsBoundary.let(PermissionsBoundary.Companion::unwrap))
     }
 
     /**
@@ -419,7 +421,7 @@ public open class Stage(
      * @param policyValidationBeta1 Validation plugins to run during synthesis. 
      */
     override fun policyValidationBeta1(policyValidationBeta1: List<IPolicyValidationPluginBeta1>) {
-      cdkBuilder.policyValidationBeta1(policyValidationBeta1.map(IPolicyValidationPluginBeta1::unwrap))
+      cdkBuilder.policyValidationBeta1(policyValidationBeta1.map(IPolicyValidationPluginBeta1.Companion::unwrap))
     }
 
     /**
@@ -453,7 +455,7 @@ public open class Stage(
     public fun isStage(x: Any): Boolean = software.amazon.awscdk.Stage.isStage(x)
 
     public fun of(construct: IConstruct): Stage? =
-        software.amazon.awscdk.Stage.of(construct.let(IConstruct::unwrap))?.let(Stage::wrap)
+        software.amazon.awscdk.Stage.of(construct.let(IConstruct.Companion::unwrap))?.let(Stage::wrap)
 
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,

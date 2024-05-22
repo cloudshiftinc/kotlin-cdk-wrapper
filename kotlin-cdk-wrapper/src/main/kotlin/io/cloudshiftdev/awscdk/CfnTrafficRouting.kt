@@ -104,7 +104,7 @@ public interface CfnTrafficRouting {
      * your target groups. 
      */
     override fun prodTrafficRoute(prodTrafficRoute: CfnTrafficRoute) {
-      cdkBuilder.prodTrafficRoute(prodTrafficRoute.let(CfnTrafficRoute::unwrap))
+      cdkBuilder.prodTrafficRoute(prodTrafficRoute.let(CfnTrafficRoute.Companion::unwrap))
     }
 
     /**
@@ -136,7 +136,7 @@ public interface CfnTrafficRouting {
      * your target groups. 
      */
     override fun testTrafficRoute(testTrafficRoute: CfnTrafficRoute) {
-      cdkBuilder.testTrafficRoute(testTrafficRoute.let(CfnTrafficRoute::unwrap))
+      cdkBuilder.testTrafficRoute(testTrafficRoute.let(CfnTrafficRoute.Companion::unwrap))
     }
 
     /**

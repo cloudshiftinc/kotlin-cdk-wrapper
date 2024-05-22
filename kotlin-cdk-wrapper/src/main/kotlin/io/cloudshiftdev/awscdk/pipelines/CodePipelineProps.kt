@@ -509,7 +509,7 @@ public interface CodePipelineProps {
      * @param artifactBucket An existing S3 Bucket to use for storing the pipeline's artifact.
      */
     override fun artifactBucket(artifactBucket: IBucket) {
-      cdkBuilder.artifactBucket(artifactBucket.let(IBucket::unwrap))
+      cdkBuilder.artifactBucket(artifactBucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -518,7 +518,7 @@ public interface CodePipelineProps {
      */
     override
         fun assetPublishingCodeBuildDefaults(assetPublishingCodeBuildDefaults: CodeBuildOptions) {
-      cdkBuilder.assetPublishingCodeBuildDefaults(assetPublishingCodeBuildDefaults.let(CodeBuildOptions::unwrap))
+      cdkBuilder.assetPublishingCodeBuildDefaults(assetPublishingCodeBuildDefaults.let(CodeBuildOptions.Companion::unwrap))
     }
 
     /**
@@ -557,7 +557,7 @@ public interface CodePipelineProps {
      * @param codeBuildDefaults Customize the CodeBuild projects created for this pipeline.
      */
     override fun codeBuildDefaults(codeBuildDefaults: CodeBuildOptions) {
-      cdkBuilder.codeBuildDefaults(codeBuildDefaults.let(CodeBuildOptions::unwrap))
+      cdkBuilder.codeBuildDefaults(codeBuildDefaults.let(CodeBuildOptions.Companion::unwrap))
     }
 
     /**
@@ -573,7 +573,7 @@ public interface CodePipelineProps {
      * [disable-awslint:ref-via-interface]
      */
     override fun codePipeline(codePipeline: Pipeline) {
-      cdkBuilder.codePipeline(codePipeline.let(Pipeline::unwrap))
+      cdkBuilder.codePipeline(codePipeline.let(Pipeline.Companion::unwrap))
     }
 
     /**
@@ -608,7 +608,7 @@ public interface CodePipelineProps {
      * assets.
      */
     override fun dockerCredentials(dockerCredentials: List<DockerCredential>) {
-      cdkBuilder.dockerCredentials(dockerCredentials.map(DockerCredential::unwrap))
+      cdkBuilder.dockerCredentials(dockerCredentials.map(DockerCredential.Companion::unwrap))
     }
 
     /**
@@ -701,7 +701,7 @@ public interface CodePipelineProps {
      * @param role The IAM role to be assumed by this Pipeline.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -722,7 +722,7 @@ public interface CodePipelineProps {
      * CodeBuild projects.
      */
     override fun selfMutationCodeBuildDefaults(selfMutationCodeBuildDefaults: CodeBuildOptions) {
-      cdkBuilder.selfMutationCodeBuildDefaults(selfMutationCodeBuildDefaults.let(CodeBuildOptions::unwrap))
+      cdkBuilder.selfMutationCodeBuildDefaults(selfMutationCodeBuildDefaults.let(CodeBuildOptions.Companion::unwrap))
     }
 
     /**
@@ -744,7 +744,7 @@ public interface CodePipelineProps {
      * the output directory will automatically be assumed to be `cdk.out`.
      */
     override fun synth(synth: IFileSetProducer) {
-      cdkBuilder.synth(synth.let(IFileSetProducer::unwrap))
+      cdkBuilder.synth(synth.let(IFileSetProducer.Companion::unwrap))
     }
 
     /**
@@ -752,7 +752,7 @@ public interface CodePipelineProps {
      * projects.
      */
     override fun synthCodeBuildDefaults(synthCodeBuildDefaults: CodeBuildOptions) {
-      cdkBuilder.synthCodeBuildDefaults(synthCodeBuildDefaults.let(CodeBuildOptions::unwrap))
+      cdkBuilder.synthCodeBuildDefaults(synthCodeBuildDefaults.let(CodeBuildOptions.Companion::unwrap))
     }
 
     /**

@@ -99,8 +99,8 @@ public open class CfnSecurityGroup(
     id: String,
     props: CfnSecurityGroupProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnSecurityGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSecurityGroupProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnSecurityGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSecurityGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -159,7 +159,7 @@ public open class CfnSecurityGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -171,7 +171,7 @@ public open class CfnSecurityGroup(
    * The outbound rules associated with the security group.
    */
   public open fun securityGroupEgress(`value`: IResolvable) {
-    unwrap(this).setSecurityGroupEgress(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSecurityGroupEgress(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -196,7 +196,7 @@ public open class CfnSecurityGroup(
    * The inbound rules associated with the security group.
    */
   public open fun securityGroupIngress(`value`: IResolvable) {
-    unwrap(this).setSecurityGroupIngress(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSecurityGroupIngress(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -227,7 +227,7 @@ public open class CfnSecurityGroup(
    * Any tags assigned to the security group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -408,7 +408,7 @@ public open class CfnSecurityGroup(
      * @param securityGroupEgress The outbound rules associated with the security group. 
      */
     override fun securityGroupEgress(securityGroupEgress: IResolvable) {
-      cdkBuilder.securityGroupEgress(securityGroupEgress.let(IResolvable::unwrap))
+      cdkBuilder.securityGroupEgress(securityGroupEgress.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -443,7 +443,7 @@ public open class CfnSecurityGroup(
      * @param securityGroupIngress The inbound rules associated with the security group. 
      */
     override fun securityGroupIngress(securityGroupIngress: IResolvable) {
-      cdkBuilder.securityGroupIngress(securityGroupIngress.let(IResolvable::unwrap))
+      cdkBuilder.securityGroupIngress(securityGroupIngress.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -476,7 +476,7 @@ public open class CfnSecurityGroup(
      * @param tags Any tags assigned to the security group. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

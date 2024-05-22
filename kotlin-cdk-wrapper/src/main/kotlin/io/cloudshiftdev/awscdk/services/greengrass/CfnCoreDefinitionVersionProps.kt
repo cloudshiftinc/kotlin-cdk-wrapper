@@ -102,7 +102,7 @@ public interface CfnCoreDefinitionVersionProps {
      * Currently, the `Cores` property for a core definition version can contain only one core.
      */
     override fun cores(cores: IResolvable) {
-      cdkBuilder.cores(cores.let(IResolvable::unwrap))
+      cdkBuilder.cores(cores.let(IResolvable.Companion::unwrap))
     }
 
     /**

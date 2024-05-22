@@ -87,7 +87,7 @@ public interface CfnOriginRequestPolicyProps {
      * @param originRequestPolicyConfig The origin request policy configuration. 
      */
     override fun originRequestPolicyConfig(originRequestPolicyConfig: IResolvable) {
-      cdkBuilder.originRequestPolicyConfig(originRequestPolicyConfig.let(IResolvable::unwrap))
+      cdkBuilder.originRequestPolicyConfig(originRequestPolicyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -95,7 +95,7 @@ public interface CfnOriginRequestPolicyProps {
      */
     override
         fun originRequestPolicyConfig(originRequestPolicyConfig: CfnOriginRequestPolicy.OriginRequestPolicyConfigProperty) {
-      cdkBuilder.originRequestPolicyConfig(originRequestPolicyConfig.let(CfnOriginRequestPolicy.OriginRequestPolicyConfigProperty::unwrap))
+      cdkBuilder.originRequestPolicyConfig(originRequestPolicyConfig.let(CfnOriginRequestPolicy.OriginRequestPolicyConfigProperty.Companion::unwrap))
     }
 
     /**

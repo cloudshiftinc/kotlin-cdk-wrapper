@@ -50,8 +50,8 @@ public open class CfnKeyGroup(
     id: String,
     props: CfnKeyGroupProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.CfnKeyGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnKeyGroupProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.CfnKeyGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnKeyGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -77,7 +77,7 @@ public open class CfnKeyGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -89,14 +89,14 @@ public open class CfnKeyGroup(
    * The key group configuration.
    */
   public open fun keyGroupConfig(`value`: IResolvable) {
-    unwrap(this).setKeyGroupConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKeyGroupConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The key group configuration.
    */
   public open fun keyGroupConfig(`value`: KeyGroupConfigProperty) {
-    unwrap(this).setKeyGroupConfig(`value`.let(KeyGroupConfigProperty::unwrap))
+    unwrap(this).setKeyGroupConfig(`value`.let(KeyGroupConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -153,7 +153,7 @@ public open class CfnKeyGroup(
      * @param keyGroupConfig The key group configuration. 
      */
     override fun keyGroupConfig(keyGroupConfig: IResolvable) {
-      cdkBuilder.keyGroupConfig(keyGroupConfig.let(IResolvable::unwrap))
+      cdkBuilder.keyGroupConfig(keyGroupConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -163,7 +163,7 @@ public open class CfnKeyGroup(
      * @param keyGroupConfig The key group configuration. 
      */
     override fun keyGroupConfig(keyGroupConfig: KeyGroupConfigProperty) {
-      cdkBuilder.keyGroupConfig(keyGroupConfig.let(KeyGroupConfigProperty::unwrap))
+      cdkBuilder.keyGroupConfig(keyGroupConfig.let(KeyGroupConfigProperty.Companion::unwrap))
     }
 
     /**

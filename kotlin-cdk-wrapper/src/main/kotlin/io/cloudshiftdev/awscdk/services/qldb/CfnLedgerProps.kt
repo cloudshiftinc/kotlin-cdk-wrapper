@@ -288,7 +288,7 @@ public interface CfnLedgerProps {
      * `false` .
      */
     override fun deletionProtection(deletionProtection: IResolvable) {
-      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable::unwrap))
+      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -378,7 +378,7 @@ public interface CfnLedgerProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

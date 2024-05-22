@@ -123,7 +123,7 @@ public interface CfnBotVersionProps {
      * version.
      */
     override fun botVersionLocaleSpecification(botVersionLocaleSpecification: IResolvable) {
-      cdkBuilder.botVersionLocaleSpecification(botVersionLocaleSpecification.let(IResolvable::unwrap))
+      cdkBuilder.botVersionLocaleSpecification(botVersionLocaleSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**

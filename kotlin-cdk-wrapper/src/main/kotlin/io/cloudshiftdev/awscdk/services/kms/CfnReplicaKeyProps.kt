@@ -463,7 +463,7 @@ public interface CfnReplicaKeyProps {
      * Management Service Developer Guide* .
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -590,7 +590,7 @@ public interface CfnReplicaKeyProps {
      * see [Tagging keys](https://docs.aws.amazon.com/kms/latest/developerguide/tagging-keys.html) .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

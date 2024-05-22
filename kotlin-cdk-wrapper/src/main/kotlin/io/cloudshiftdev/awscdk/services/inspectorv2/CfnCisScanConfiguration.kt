@@ -74,7 +74,7 @@ public open class CfnCisScanConfiguration(
   cdkObject: software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -83,8 +83,8 @@ public open class CfnCisScanConfiguration(
     id: String,
     props: CfnCisScanConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCisScanConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.inspectorv2.CfnCisScanConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCisScanConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -111,7 +111,7 @@ public open class CfnCisScanConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -135,14 +135,14 @@ public open class CfnCisScanConfiguration(
    * The CIS scan configuration's schedule.
    */
   public open fun schedule(`value`: IResolvable) {
-    unwrap(this).setSchedule(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSchedule(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The CIS scan configuration's schedule.
    */
   public open fun schedule(`value`: ScheduleProperty) {
-    unwrap(this).setSchedule(`value`.let(ScheduleProperty::unwrap))
+    unwrap(this).setSchedule(`value`.let(ScheduleProperty.Companion::unwrap))
   }
 
   /**
@@ -186,14 +186,14 @@ public open class CfnCisScanConfiguration(
    * The CIS scan configuration's targets.
    */
   public open fun targets(`value`: IResolvable) {
-    unwrap(this).setTargets(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTargets(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The CIS scan configuration's targets.
    */
   public open fun targets(`value`: CisTargetsProperty) {
-    unwrap(this).setTargets(`value`.let(CisTargetsProperty::unwrap))
+    unwrap(this).setTargets(`value`.let(CisTargetsProperty.Companion::unwrap))
   }
 
   /**
@@ -312,7 +312,7 @@ public open class CfnCisScanConfiguration(
      * @param schedule The CIS scan configuration's schedule. 
      */
     override fun schedule(schedule: IResolvable) {
-      cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
+      cdkBuilder.schedule(schedule.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -322,7 +322,7 @@ public open class CfnCisScanConfiguration(
      * @param schedule The CIS scan configuration's schedule. 
      */
     override fun schedule(schedule: ScheduleProperty) {
-      cdkBuilder.schedule(schedule.let(ScheduleProperty::unwrap))
+      cdkBuilder.schedule(schedule.let(ScheduleProperty.Companion::unwrap))
     }
 
     /**
@@ -363,7 +363,7 @@ public open class CfnCisScanConfiguration(
      * @param targets The CIS scan configuration's targets. 
      */
     override fun targets(targets: IResolvable) {
-      cdkBuilder.targets(targets.let(IResolvable::unwrap))
+      cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -373,7 +373,7 @@ public open class CfnCisScanConfiguration(
      * @param targets The CIS scan configuration's targets. 
      */
     override fun targets(targets: CisTargetsProperty) {
-      cdkBuilder.targets(targets.let(CisTargetsProperty::unwrap))
+      cdkBuilder.targets(targets.let(CisTargetsProperty.Companion::unwrap))
     }
 
     /**
@@ -495,7 +495,7 @@ public open class CfnCisScanConfiguration(
        * @param targetResourceTags The CIS target resource tags.
        */
       override fun targetResourceTags(targetResourceTags: IResolvable) {
-        cdkBuilder.targetResourceTags(targetResourceTags.let(IResolvable::unwrap))
+        cdkBuilder.targetResourceTags(targetResourceTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -606,14 +606,14 @@ public open class CfnCisScanConfiguration(
        * @param startTime The schedule start time. 
        */
       override fun startTime(startTime: IResolvable) {
-        cdkBuilder.startTime(startTime.let(IResolvable::unwrap))
+        cdkBuilder.startTime(startTime.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param startTime The schedule start time. 
        */
       override fun startTime(startTime: TimeProperty) {
-        cdkBuilder.startTime(startTime.let(TimeProperty::unwrap))
+        cdkBuilder.startTime(startTime.let(TimeProperty.Companion::unwrap))
       }
 
       /**
@@ -738,14 +738,14 @@ public open class CfnCisScanConfiguration(
        * @param startTime The monthly schedule's start time. 
        */
       override fun startTime(startTime: IResolvable) {
-        cdkBuilder.startTime(startTime.let(IResolvable::unwrap))
+        cdkBuilder.startTime(startTime.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param startTime The monthly schedule's start time. 
        */
       override fun startTime(startTime: TimeProperty) {
-        cdkBuilder.startTime(startTime.let(TimeProperty::unwrap))
+        cdkBuilder.startTime(startTime.let(TimeProperty.Companion::unwrap))
       }
 
       /**
@@ -937,14 +937,14 @@ public open class CfnCisScanConfiguration(
        * @param daily A daily schedule.
        */
       override fun daily(daily: IResolvable) {
-        cdkBuilder.daily(daily.let(IResolvable::unwrap))
+        cdkBuilder.daily(daily.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param daily A daily schedule.
        */
       override fun daily(daily: DailyScheduleProperty) {
-        cdkBuilder.daily(daily.let(DailyScheduleProperty::unwrap))
+        cdkBuilder.daily(daily.let(DailyScheduleProperty.Companion::unwrap))
       }
 
       /**
@@ -959,14 +959,14 @@ public open class CfnCisScanConfiguration(
        * @param monthly A monthly schedule.
        */
       override fun monthly(monthly: IResolvable) {
-        cdkBuilder.monthly(monthly.let(IResolvable::unwrap))
+        cdkBuilder.monthly(monthly.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param monthly A monthly schedule.
        */
       override fun monthly(monthly: MonthlyScheduleProperty) {
-        cdkBuilder.monthly(monthly.let(MonthlyScheduleProperty::unwrap))
+        cdkBuilder.monthly(monthly.let(MonthlyScheduleProperty.Companion::unwrap))
       }
 
       /**
@@ -988,14 +988,14 @@ public open class CfnCisScanConfiguration(
        * @param weekly A weekly schedule.
        */
       override fun weekly(weekly: IResolvable) {
-        cdkBuilder.weekly(weekly.let(IResolvable::unwrap))
+        cdkBuilder.weekly(weekly.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param weekly A weekly schedule.
        */
       override fun weekly(weekly: WeeklyScheduleProperty) {
-        cdkBuilder.weekly(weekly.let(WeeklyScheduleProperty::unwrap))
+        cdkBuilder.weekly(weekly.let(WeeklyScheduleProperty.Companion::unwrap))
       }
 
       /**
@@ -1258,14 +1258,14 @@ public open class CfnCisScanConfiguration(
        * @param startTime The weekly schedule's start time. 
        */
       override fun startTime(startTime: IResolvable) {
-        cdkBuilder.startTime(startTime.let(IResolvable::unwrap))
+        cdkBuilder.startTime(startTime.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param startTime The weekly schedule's start time. 
        */
       override fun startTime(startTime: TimeProperty) {
-        cdkBuilder.startTime(startTime.let(TimeProperty::unwrap))
+        cdkBuilder.startTime(startTime.let(TimeProperty.Companion::unwrap))
       }
 
       /**

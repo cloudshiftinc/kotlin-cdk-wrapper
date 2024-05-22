@@ -608,7 +608,7 @@ public interface CfnHostedZoneProps {
      * If you don't want to specify a comment, omit the `HostedZoneConfig` and `Comment` elements.
      */
     override fun hostedZoneConfig(hostedZoneConfig: IResolvable) {
-      cdkBuilder.hostedZoneConfig(hostedZoneConfig.let(IResolvable::unwrap))
+      cdkBuilder.hostedZoneConfig(hostedZoneConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -616,7 +616,7 @@ public interface CfnHostedZoneProps {
      * If you don't want to specify a comment, omit the `HostedZoneConfig` and `Comment` elements.
      */
     override fun hostedZoneConfig(hostedZoneConfig: CfnHostedZone.HostedZoneConfigProperty) {
-      cdkBuilder.hostedZoneConfig(hostedZoneConfig.let(CfnHostedZone.HostedZoneConfigProperty::unwrap))
+      cdkBuilder.hostedZoneConfig(hostedZoneConfig.let(CfnHostedZone.HostedZoneConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -636,7 +636,7 @@ public interface CfnHostedZoneProps {
      * *AWS Billing and Cost Management User Guide* .
      */
     override fun hostedZoneTags(hostedZoneTags: List<CfnHostedZone.HostedZoneTagProperty>) {
-      cdkBuilder.hostedZoneTags(hostedZoneTags.map(CfnHostedZone.HostedZoneTagProperty::unwrap))
+      cdkBuilder.hostedZoneTags(hostedZoneTags.map(CfnHostedZone.HostedZoneTagProperty.Companion::unwrap))
     }
 
     /**
@@ -768,7 +768,7 @@ public interface CfnHostedZoneProps {
      * .
      */
     override fun queryLoggingConfig(queryLoggingConfig: IResolvable) {
-      cdkBuilder.queryLoggingConfig(queryLoggingConfig.let(IResolvable::unwrap))
+      cdkBuilder.queryLoggingConfig(queryLoggingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -875,7 +875,7 @@ public interface CfnHostedZoneProps {
      * .
      */
     override fun queryLoggingConfig(queryLoggingConfig: CfnHostedZone.QueryLoggingConfigProperty) {
-      cdkBuilder.queryLoggingConfig(queryLoggingConfig.let(CfnHostedZone.QueryLoggingConfigProperty::unwrap))
+      cdkBuilder.queryLoggingConfig(queryLoggingConfig.let(CfnHostedZone.QueryLoggingConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -994,7 +994,7 @@ public interface CfnHostedZoneProps {
      * For public hosted zones, omit `VPCs` , `VPCId` , and `VPCRegion` .
      */
     override fun vpcs(vpcs: IResolvable) {
-      cdkBuilder.vpcs(vpcs.let(IResolvable::unwrap))
+      cdkBuilder.vpcs(vpcs.let(IResolvable.Companion::unwrap))
     }
 
     /**

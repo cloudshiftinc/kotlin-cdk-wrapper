@@ -67,8 +67,8 @@ public open class CfnRole(
     id: String,
     props: CfnRoleProps,
   ) :
-      this(software.amazon.awscdk.services.iam.CfnRole(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRoleProps::unwrap))
+      this(software.amazon.awscdk.services.iam.CfnRole(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRoleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -127,7 +127,7 @@ public open class CfnRole(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -205,7 +205,7 @@ public open class CfnRole(
    * Adds or updates an inline policy document that is embedded in the specified IAM role.
    */
   public open fun policies(`value`: IResolvable) {
-    unwrap(this).setPolicies(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPolicies(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -247,7 +247,7 @@ public open class CfnRole(
    * A list of tags that are attached to the role.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -699,7 +699,7 @@ public open class CfnRole(
      * IAM role. 
      */
     override fun policies(policies: IResolvable) {
-      cdkBuilder.policies(policies.let(IResolvable::unwrap))
+      cdkBuilder.policies(policies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -822,7 +822,7 @@ public open class CfnRole(
      * @param tags A list of tags that are attached to the role. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

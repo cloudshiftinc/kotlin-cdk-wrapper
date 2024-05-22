@@ -145,7 +145,7 @@ public interface CfnMetricFilterProps {
      * @param metricTransformations The metric transformations. 
      */
     override fun metricTransformations(metricTransformations: IResolvable) {
-      cdkBuilder.metricTransformations(metricTransformations.let(IResolvable::unwrap))
+      cdkBuilder.metricTransformations(metricTransformations.let(IResolvable.Companion::unwrap))
     }
 
     /**

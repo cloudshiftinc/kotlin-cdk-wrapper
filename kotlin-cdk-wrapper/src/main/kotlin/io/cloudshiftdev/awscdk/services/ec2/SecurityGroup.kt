@@ -72,8 +72,8 @@ public open class SecurityGroup(
     id: String,
     props: SecurityGroupProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.SecurityGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SecurityGroupProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.SecurityGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SecurityGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -98,7 +98,8 @@ public open class SecurityGroup(
    * @param remoteRule
    */
   public override fun addEgressRule(peer: IPeer, connection: Port) {
-    unwrap(this).addEgressRule(peer.let(IPeer::unwrap), connection.let(Port::unwrap))
+    unwrap(this).addEgressRule(peer.let(IPeer.Companion::unwrap),
+        connection.let(Port.Companion::unwrap))
   }
 
   /**
@@ -139,7 +140,8 @@ public open class SecurityGroup(
     connection: Port,
     description: String,
   ) {
-    unwrap(this).addEgressRule(peer.let(IPeer::unwrap), connection.let(Port::unwrap), description)
+    unwrap(this).addEgressRule(peer.let(IPeer.Companion::unwrap),
+        connection.let(Port.Companion::unwrap), description)
   }
 
   /**
@@ -162,8 +164,8 @@ public open class SecurityGroup(
     description: String,
     remoteRule: Boolean,
   ) {
-    unwrap(this).addEgressRule(peer.let(IPeer::unwrap), connection.let(Port::unwrap), description,
-        remoteRule)
+    unwrap(this).addEgressRule(peer.let(IPeer.Companion::unwrap),
+        connection.let(Port.Companion::unwrap), description, remoteRule)
   }
 
   /**
@@ -181,7 +183,8 @@ public open class SecurityGroup(
    * @param remoteRule
    */
   public override fun addIngressRule(peer: IPeer, connection: Port) {
-    unwrap(this).addIngressRule(peer.let(IPeer::unwrap), connection.let(Port::unwrap))
+    unwrap(this).addIngressRule(peer.let(IPeer.Companion::unwrap),
+        connection.let(Port.Companion::unwrap))
   }
 
   /**
@@ -222,7 +225,8 @@ public open class SecurityGroup(
     connection: Port,
     description: String,
   ) {
-    unwrap(this).addIngressRule(peer.let(IPeer::unwrap), connection.let(Port::unwrap), description)
+    unwrap(this).addIngressRule(peer.let(IPeer.Companion::unwrap),
+        connection.let(Port.Companion::unwrap), description)
   }
 
   /**
@@ -245,8 +249,8 @@ public open class SecurityGroup(
     description: String,
     remoteRule: Boolean,
   ) {
-    unwrap(this).addIngressRule(peer.let(IPeer::unwrap), connection.let(Port::unwrap), description,
-        remoteRule)
+    unwrap(this).addIngressRule(peer.let(IPeer.Companion::unwrap),
+        connection.let(Port.Companion::unwrap), description, remoteRule)
   }
 
   /**
@@ -482,7 +486,7 @@ public open class SecurityGroup(
      * @param vpc The VPC in which to create the security group. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.SecurityGroup = cdkBuilder.build()
@@ -494,7 +498,7 @@ public open class SecurityGroup(
       id: String,
       securityGroupId: String,
     ): ISecurityGroup =
-        software.amazon.awscdk.services.ec2.SecurityGroup.fromLookupById(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ec2.SecurityGroup.fromLookupById(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, securityGroupId).let(ISecurityGroup::wrap)
 
     public fun fromLookupByName(
@@ -503,15 +507,15 @@ public open class SecurityGroup(
       securityGroupName: String,
       vpc: IVpc,
     ): ISecurityGroup =
-        software.amazon.awscdk.services.ec2.SecurityGroup.fromLookupByName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, securityGroupName, vpc.let(IVpc::unwrap)).let(ISecurityGroup::wrap)
+        software.amazon.awscdk.services.ec2.SecurityGroup.fromLookupByName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, securityGroupName, vpc.let(IVpc.Companion::unwrap)).let(ISecurityGroup::wrap)
 
     public fun fromSecurityGroupId(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
       securityGroupId: String,
     ): ISecurityGroup =
-        software.amazon.awscdk.services.ec2.SecurityGroup.fromSecurityGroupId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ec2.SecurityGroup.fromSecurityGroupId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, securityGroupId).let(ISecurityGroup::wrap)
 
     public fun fromSecurityGroupId(
@@ -520,9 +524,9 @@ public open class SecurityGroup(
       securityGroupId: String,
       options: SecurityGroupImportOptions,
     ): ISecurityGroup =
-        software.amazon.awscdk.services.ec2.SecurityGroup.fromSecurityGroupId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ec2.SecurityGroup.fromSecurityGroupId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, securityGroupId,
-        options.let(SecurityGroupImportOptions::unwrap)).let(ISecurityGroup::wrap)
+        options.let(SecurityGroupImportOptions.Companion::unwrap)).let(ISecurityGroup::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b1c6c1dacaf5bb3e730a1c0404aa31a8e76593f9a43e6f9d87dabffb2d41cee7")

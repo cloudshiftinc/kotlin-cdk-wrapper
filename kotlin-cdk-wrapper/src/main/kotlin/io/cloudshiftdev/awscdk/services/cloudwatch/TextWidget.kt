@@ -25,7 +25,7 @@ public open class TextWidget(
   cdkObject: software.amazon.awscdk.services.cloudwatch.TextWidget,
 ) : ConcreteWidget(cdkObject) {
   public constructor(props: TextWidgetProps) :
-      this(software.amazon.awscdk.services.cloudwatch.TextWidget(props.let(TextWidgetProps::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.TextWidget(props.let(TextWidgetProps.Companion::unwrap))
   )
 
   public constructor(props: TextWidgetProps.Builder.() -> Unit) : this(TextWidgetProps(props)
@@ -98,7 +98,7 @@ public open class TextWidget(
      * @param background Background for the widget. 
      */
     override fun background(background: TextWidgetBackground) {
-      cdkBuilder.background(background.let(TextWidgetBackground::unwrap))
+      cdkBuilder.background(background.let(TextWidgetBackground.Companion::unwrap))
     }
 
     /**

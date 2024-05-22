@@ -65,7 +65,7 @@ public open class CfnInput(
   cdkObject: software.amazon.awscdk.services.medialive.CfnInput,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.medialive.CfnInput(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.medialive.CfnInput(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -74,8 +74,8 @@ public open class CfnInput(
     id: String,
     props: CfnInputProps,
   ) :
-      this(software.amazon.awscdk.services.medialive.CfnInput(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInputProps::unwrap))
+      this(software.amazon.awscdk.services.medialive.CfnInput(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInputProps.Companion::unwrap))
   )
 
   public constructor(
@@ -123,7 +123,7 @@ public open class CfnInput(
    * Settings that apply only if the input is a push type of input.
    */
   public open fun destinations(`value`: IResolvable) {
-    unwrap(this).setDestinations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDestinations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -147,7 +147,7 @@ public open class CfnInput(
    * Settings that apply only if the input is an Elemental Link input.
    */
   public open fun inputDevices(`value`: IResolvable) {
-    unwrap(this).setInputDevices(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInputDevices(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -190,7 +190,7 @@ public open class CfnInput(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -202,7 +202,7 @@ public open class CfnInput(
    * Settings that apply only if the input is a MediaConnect input.
    */
   public open fun mediaConnectFlows(`value`: IResolvable) {
-    unwrap(this).setMediaConnectFlows(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMediaConnectFlows(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -250,7 +250,7 @@ public open class CfnInput(
    * Settings that apply only if the input is a pull type of input.
    */
   public open fun sources(`value`: IResolvable) {
-    unwrap(this).setSources(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSources(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -303,14 +303,14 @@ public open class CfnInput(
    * Settings that apply only if the input is an push input where the source is on Amazon VPC.
    */
   public open fun vpc(`value`: IResolvable) {
-    unwrap(this).setVpc(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpc(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Settings that apply only if the input is an push input where the source is on Amazon VPC.
    */
   public open fun vpc(`value`: InputVpcRequestProperty) {
-    unwrap(this).setVpc(`value`.let(InputVpcRequestProperty::unwrap))
+    unwrap(this).setVpc(`value`.let(InputVpcRequestProperty.Companion::unwrap))
   }
 
   /**
@@ -523,7 +523,7 @@ public open class CfnInput(
      * @param destinations Settings that apply only if the input is a push type of input. 
      */
     override fun destinations(destinations: IResolvable) {
-      cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
+      cdkBuilder.destinations(destinations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -551,7 +551,7 @@ public open class CfnInput(
      * @param inputDevices Settings that apply only if the input is an Elemental Link input. 
      */
     override fun inputDevices(inputDevices: IResolvable) {
-      cdkBuilder.inputDevices(inputDevices.let(IResolvable::unwrap))
+      cdkBuilder.inputDevices(inputDevices.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -602,7 +602,7 @@ public open class CfnInput(
      * @param mediaConnectFlows Settings that apply only if the input is a MediaConnect input. 
      */
     override fun mediaConnectFlows(mediaConnectFlows: IResolvable) {
-      cdkBuilder.mediaConnectFlows(mediaConnectFlows.let(IResolvable::unwrap))
+      cdkBuilder.mediaConnectFlows(mediaConnectFlows.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -654,7 +654,7 @@ public open class CfnInput(
      * @param sources Settings that apply only if the input is a pull type of input. 
      */
     override fun sources(sources: IResolvable) {
-      cdkBuilder.sources(sources.let(IResolvable::unwrap))
+      cdkBuilder.sources(sources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -705,7 +705,7 @@ public open class CfnInput(
      * Amazon VPC. 
      */
     override fun vpc(vpc: IResolvable) {
-      cdkBuilder.vpc(vpc.let(IResolvable::unwrap))
+      cdkBuilder.vpc(vpc.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -716,7 +716,7 @@ public open class CfnInput(
      * Amazon VPC. 
      */
     override fun vpc(vpc: InputVpcRequestProperty) {
-      cdkBuilder.vpc(vpc.let(InputVpcRequestProperty::unwrap))
+      cdkBuilder.vpc(vpc.let(InputVpcRequestProperty.Companion::unwrap))
     }
 
     /**

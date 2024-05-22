@@ -315,7 +315,7 @@ public interface ApplicationMultipleTargetGroupsFargateServiceProps :
      * discovery.
      */
     override fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
-      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions::unwrap))
+      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions.Companion::unwrap))
     }
 
     /**
@@ -333,7 +333,7 @@ public interface ApplicationMultipleTargetGroupsFargateServiceProps :
      * both cluster and vpc.
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -403,14 +403,14 @@ public interface ApplicationMultipleTargetGroupsFargateServiceProps :
      * started.
      */
     override fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
-      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration::unwrap))
+      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param loadBalancers The application load balancer that will serve traffic to the service.
      */
     override fun loadBalancers(loadBalancers: List<ApplicationLoadBalancerProps>) {
-      cdkBuilder.loadBalancers(loadBalancers.map(ApplicationLoadBalancerProps::unwrap))
+      cdkBuilder.loadBalancers(loadBalancers.map(ApplicationLoadBalancerProps.Companion::unwrap))
     }
 
     /**
@@ -459,7 +459,7 @@ public interface ApplicationMultipleTargetGroupsFargateServiceProps :
      * in the Amazon Elastic Container Service Developer Guide.
      */
     override fun platformVersion(platformVersion: FargatePlatformVersion) {
-      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion::unwrap))
+      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion.Companion::unwrap))
     }
 
     /**
@@ -468,14 +468,14 @@ public interface ApplicationMultipleTargetGroupsFargateServiceProps :
      * Tags can only be propagated to the tasks within the service during service creation.
      */
     override fun propagateTags(propagateTags: PropagatedTagSource) {
-      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource.Companion::unwrap))
     }
 
     /**
      * @param runtimePlatform The runtime platform of the task definition.
      */
     override fun runtimePlatform(runtimePlatform: RuntimePlatform) {
-      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform::unwrap))
+      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform.Companion::unwrap))
     }
 
     /**
@@ -497,7 +497,7 @@ public interface ApplicationMultipleTargetGroupsFargateServiceProps :
      * @param targetGroups Properties to specify ALB target groups.
      */
     override fun targetGroups(targetGroups: List<ApplicationTargetProps>) {
-      cdkBuilder.targetGroups(targetGroups.map(ApplicationTargetProps::unwrap))
+      cdkBuilder.targetGroups(targetGroups.map(ApplicationTargetProps.Companion::unwrap))
     }
 
     /**
@@ -512,7 +512,7 @@ public interface ApplicationMultipleTargetGroupsFargateServiceProps :
      * [disable-awslint:ref-via-interface]
      */
     override fun taskDefinition(taskDefinition: FargateTaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition.Companion::unwrap))
     }
 
     /**
@@ -520,7 +520,7 @@ public interface ApplicationMultipleTargetGroupsFargateServiceProps :
      * Only one of TaskDefinition or TaskImageOptions must be specified.
      */
     override fun taskImageOptions(taskImageOptions: ApplicationLoadBalancedTaskImageProps) {
-      cdkBuilder.taskImageOptions(taskImageOptions.let(ApplicationLoadBalancedTaskImageProps::unwrap))
+      cdkBuilder.taskImageOptions(taskImageOptions.let(ApplicationLoadBalancedTaskImageProps.Companion::unwrap))
     }
 
     /**
@@ -540,7 +540,7 @@ public interface ApplicationMultipleTargetGroupsFargateServiceProps :
      * both vpc and cluster.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build():

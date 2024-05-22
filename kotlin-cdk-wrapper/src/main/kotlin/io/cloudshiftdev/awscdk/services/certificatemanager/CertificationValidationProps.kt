@@ -98,7 +98,7 @@ public interface CertificationValidationProps {
      * @param hostedZone Hosted zone to use for DNS validation.
      */
     override fun hostedZone(hostedZone: IHostedZone) {
-      cdkBuilder.hostedZone(hostedZone.let(IHostedZone::unwrap))
+      cdkBuilder.hostedZone(hostedZone.let(IHostedZone.Companion::unwrap))
     }
 
     /**
@@ -112,7 +112,7 @@ public interface CertificationValidationProps {
      * @param method Validation method.
      */
     override fun method(method: ValidationMethod) {
-      cdkBuilder.method(method.let(ValidationMethod::unwrap))
+      cdkBuilder.method(method.let(ValidationMethod.Companion::unwrap))
     }
 
     /**

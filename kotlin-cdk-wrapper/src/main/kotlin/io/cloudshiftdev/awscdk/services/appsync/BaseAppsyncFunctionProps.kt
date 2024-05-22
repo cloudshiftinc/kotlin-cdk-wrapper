@@ -118,7 +118,7 @@ public interface BaseAppsyncFunctionProps {
      * @param code The function code.
      */
     override fun code(code: Code) {
-      cdkBuilder.code(code.let(Code::unwrap))
+      cdkBuilder.code(code.let(Code.Companion::unwrap))
     }
 
     /**
@@ -139,21 +139,21 @@ public interface BaseAppsyncFunctionProps {
      * @param requestMappingTemplate the request mapping template for the AppSync Function.
      */
     override fun requestMappingTemplate(requestMappingTemplate: MappingTemplate) {
-      cdkBuilder.requestMappingTemplate(requestMappingTemplate.let(MappingTemplate::unwrap))
+      cdkBuilder.requestMappingTemplate(requestMappingTemplate.let(MappingTemplate.Companion::unwrap))
     }
 
     /**
      * @param responseMappingTemplate the response mapping template for the AppSync Function.
      */
     override fun responseMappingTemplate(responseMappingTemplate: MappingTemplate) {
-      cdkBuilder.responseMappingTemplate(responseMappingTemplate.let(MappingTemplate::unwrap))
+      cdkBuilder.responseMappingTemplate(responseMappingTemplate.let(MappingTemplate.Companion::unwrap))
     }
 
     /**
      * @param runtime The functions runtime.
      */
     override fun runtime(runtime: FunctionRuntime) {
-      cdkBuilder.runtime(runtime.let(FunctionRuntime::unwrap))
+      cdkBuilder.runtime(runtime.let(FunctionRuntime.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appsync.BaseAppsyncFunctionProps =

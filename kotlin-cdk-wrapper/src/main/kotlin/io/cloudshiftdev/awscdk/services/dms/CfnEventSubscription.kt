@@ -58,8 +58,8 @@ public open class CfnEventSubscription(
     id: String,
     props: CfnEventSubscriptionProps,
   ) :
-      this(software.amazon.awscdk.services.dms.CfnEventSubscription(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEventSubscriptionProps::unwrap))
+      this(software.amazon.awscdk.services.dms.CfnEventSubscription(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEventSubscriptionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -90,7 +90,7 @@ public open class CfnEventSubscription(
    * Indicates whether to activate the subscription.
    */
   public open fun enabled(`value`: IResolvable) {
-    unwrap(this).setEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -116,7 +116,7 @@ public open class CfnEventSubscription(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -187,7 +187,7 @@ public open class CfnEventSubscription(
    * One or more tags to be assigned to the event subscription.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -354,7 +354,7 @@ public open class CfnEventSubscription(
      * @param enabled Indicates whether to activate the subscription. 
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -464,7 +464,7 @@ public open class CfnEventSubscription(
      * @param tags One or more tags to be assigned to the event subscription. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

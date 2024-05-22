@@ -153,14 +153,14 @@ public interface BaseTargetGroupProps {
      * The range is 0-3600 seconds.
      */
     override fun deregistrationDelay(deregistrationDelay: Duration) {
-      cdkBuilder.deregistrationDelay(deregistrationDelay.let(Duration::unwrap))
+      cdkBuilder.deregistrationDelay(deregistrationDelay.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param healthCheck Health check configuration.
      */
     override fun healthCheck(healthCheck: HealthCheck) {
-      cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
     }
 
     /**
@@ -188,7 +188,7 @@ public interface BaseTargetGroupProps {
      * determined automatically.
      */
     override fun targetType(targetType: TargetType) {
-      cdkBuilder.targetType(targetType.let(TargetType::unwrap))
+      cdkBuilder.targetType(targetType.let(TargetType.Companion::unwrap))
     }
 
     /**
@@ -196,7 +196,7 @@ public interface BaseTargetGroupProps {
      * only if `TargetType` is `Ip` or `InstanceId`
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.elasticloadbalancingv2.BaseTargetGroupProps

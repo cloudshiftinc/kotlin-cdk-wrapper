@@ -83,7 +83,7 @@ public interface ZoneSigningOptions {
      * KMS key must be an asymetric customer-managed key using the ECC_NIST_P256 algorithm.
      */
     override fun kmsKey(kmsKey: IKey) {
-      cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.route53.ZoneSigningOptions =

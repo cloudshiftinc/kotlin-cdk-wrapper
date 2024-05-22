@@ -229,7 +229,7 @@ public interface CfnBuildProps {
      * bucket. Amazon GameLift will report a `SizeOnDisk` of 0.
      */
     override fun storageLocation(storageLocation: IResolvable) {
-      cdkBuilder.storageLocation(storageLocation.let(IResolvable::unwrap))
+      cdkBuilder.storageLocation(storageLocation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -243,7 +243,7 @@ public interface CfnBuildProps {
      * bucket. Amazon GameLift will report a `SizeOnDisk` of 0.
      */
     override fun storageLocation(storageLocation: CfnBuild.StorageLocationProperty) {
-      cdkBuilder.storageLocation(storageLocation.let(CfnBuild.StorageLocationProperty::unwrap))
+      cdkBuilder.storageLocation(storageLocation.let(CfnBuild.StorageLocationProperty.Companion::unwrap))
     }
 
     /**

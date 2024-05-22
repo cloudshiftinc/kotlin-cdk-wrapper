@@ -72,8 +72,8 @@ public open class CfnStudio(
     id: String,
     props: CfnStudioProps,
   ) :
-      this(software.amazon.awscdk.services.nimblestudio.CfnStudio(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStudioProps::unwrap))
+      this(software.amazon.awscdk.services.nimblestudio.CfnStudio(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStudioProps.Companion::unwrap))
   )
 
   public constructor(
@@ -136,7 +136,7 @@ public open class CfnStudio(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -149,14 +149,14 @@ public open class CfnStudio(
    * Configuration of the encryption method that is used for the studio.
    */
   public open fun studioEncryptionConfiguration(`value`: IResolvable) {
-    unwrap(this).setStudioEncryptionConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStudioEncryptionConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration of the encryption method that is used for the studio.
    */
   public open fun studioEncryptionConfiguration(`value`: StudioEncryptionConfigurationProperty) {
-    unwrap(this).setStudioEncryptionConfiguration(`value`.let(StudioEncryptionConfigurationProperty::unwrap))
+    unwrap(this).setStudioEncryptionConfiguration(`value`.let(StudioEncryptionConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -329,7 +329,7 @@ public open class CfnStudio(
      * the studio. 
      */
     override fun studioEncryptionConfiguration(studioEncryptionConfiguration: IResolvable) {
-      cdkBuilder.studioEncryptionConfiguration(studioEncryptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.studioEncryptionConfiguration(studioEncryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -341,7 +341,7 @@ public open class CfnStudio(
      */
     override
         fun studioEncryptionConfiguration(studioEncryptionConfiguration: StudioEncryptionConfigurationProperty) {
-      cdkBuilder.studioEncryptionConfiguration(studioEncryptionConfiguration.let(StudioEncryptionConfigurationProperty::unwrap))
+      cdkBuilder.studioEncryptionConfiguration(studioEncryptionConfiguration.let(StudioEncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**

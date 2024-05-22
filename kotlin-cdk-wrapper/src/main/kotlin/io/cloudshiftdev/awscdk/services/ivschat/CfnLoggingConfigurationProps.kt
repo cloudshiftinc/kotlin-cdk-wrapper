@@ -135,7 +135,7 @@ public interface CfnLoggingConfigurationProps {
      * information about where chat content will be logged. 
      */
     override fun destinationConfiguration(destinationConfiguration: IResolvable) {
-      cdkBuilder.destinationConfiguration(destinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.destinationConfiguration(destinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -144,7 +144,7 @@ public interface CfnLoggingConfigurationProps {
      */
     override
         fun destinationConfiguration(destinationConfiguration: CfnLoggingConfiguration.DestinationConfigurationProperty) {
-      cdkBuilder.destinationConfiguration(destinationConfiguration.let(CfnLoggingConfiguration.DestinationConfigurationProperty::unwrap))
+      cdkBuilder.destinationConfiguration(destinationConfiguration.let(CfnLoggingConfiguration.DestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -173,7 +173,7 @@ public interface CfnLoggingConfigurationProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

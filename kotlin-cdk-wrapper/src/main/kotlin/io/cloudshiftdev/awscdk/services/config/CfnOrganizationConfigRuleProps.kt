@@ -240,7 +240,7 @@ public interface CfnOrganizationConfigRuleProps {
      */
     override
         fun organizationCustomPolicyRuleMetadata(organizationCustomPolicyRuleMetadata: IResolvable) {
-      cdkBuilder.organizationCustomPolicyRuleMetadata(organizationCustomPolicyRuleMetadata.let(IResolvable::unwrap))
+      cdkBuilder.organizationCustomPolicyRuleMetadata(organizationCustomPolicyRuleMetadata.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -252,7 +252,7 @@ public interface CfnOrganizationConfigRuleProps {
      */
     override
         fun organizationCustomPolicyRuleMetadata(organizationCustomPolicyRuleMetadata: CfnOrganizationConfigRule.OrganizationCustomPolicyRuleMetadataProperty) {
-      cdkBuilder.organizationCustomPolicyRuleMetadata(organizationCustomPolicyRuleMetadata.let(CfnOrganizationConfigRule.OrganizationCustomPolicyRuleMetadataProperty::unwrap))
+      cdkBuilder.organizationCustomPolicyRuleMetadata(organizationCustomPolicyRuleMetadata.let(CfnOrganizationConfigRule.OrganizationCustomPolicyRuleMetadataProperty.Companion::unwrap))
     }
 
     /**
@@ -273,7 +273,7 @@ public interface CfnOrganizationConfigRuleProps {
      * @param organizationCustomRuleMetadata An `OrganizationCustomRuleMetadata` object.
      */
     override fun organizationCustomRuleMetadata(organizationCustomRuleMetadata: IResolvable) {
-      cdkBuilder.organizationCustomRuleMetadata(organizationCustomRuleMetadata.let(IResolvable::unwrap))
+      cdkBuilder.organizationCustomRuleMetadata(organizationCustomRuleMetadata.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -281,7 +281,7 @@ public interface CfnOrganizationConfigRuleProps {
      */
     override
         fun organizationCustomRuleMetadata(organizationCustomRuleMetadata: CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty) {
-      cdkBuilder.organizationCustomRuleMetadata(organizationCustomRuleMetadata.let(CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty::unwrap))
+      cdkBuilder.organizationCustomRuleMetadata(organizationCustomRuleMetadata.let(CfnOrganizationConfigRule.OrganizationCustomRuleMetadataProperty.Companion::unwrap))
     }
 
     /**
@@ -298,7 +298,7 @@ public interface CfnOrganizationConfigRuleProps {
      * @param organizationManagedRuleMetadata An `OrganizationManagedRuleMetadata` object.
      */
     override fun organizationManagedRuleMetadata(organizationManagedRuleMetadata: IResolvable) {
-      cdkBuilder.organizationManagedRuleMetadata(organizationManagedRuleMetadata.let(IResolvable::unwrap))
+      cdkBuilder.organizationManagedRuleMetadata(organizationManagedRuleMetadata.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -306,7 +306,7 @@ public interface CfnOrganizationConfigRuleProps {
      */
     override
         fun organizationManagedRuleMetadata(organizationManagedRuleMetadata: CfnOrganizationConfigRule.OrganizationManagedRuleMetadataProperty) {
-      cdkBuilder.organizationManagedRuleMetadata(organizationManagedRuleMetadata.let(CfnOrganizationConfigRule.OrganizationManagedRuleMetadataProperty::unwrap))
+      cdkBuilder.organizationManagedRuleMetadata(organizationManagedRuleMetadata.let(CfnOrganizationConfigRule.OrganizationManagedRuleMetadataProperty.Companion::unwrap))
     }
 
     /**

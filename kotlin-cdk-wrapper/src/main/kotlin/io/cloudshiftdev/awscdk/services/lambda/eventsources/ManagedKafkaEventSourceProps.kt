@@ -198,7 +198,7 @@ public interface ManagedKafkaEventSourceProps : KafkaEventSourceProps {
      * Maximum of Duration.minutes(5).
      */
     override fun maxBatchingWindow(maxBatchingWindow: Duration) {
-      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration::unwrap))
+      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -206,7 +206,7 @@ public interface ManagedKafkaEventSourceProps : KafkaEventSourceProps {
      * SNS/SQS/S3 are supported
      */
     override fun onFailure(onFailure: IEventSourceDlq) {
-      cdkBuilder.onFailure(onFailure.let(IEventSourceDlq::unwrap))
+      cdkBuilder.onFailure(onFailure.let(IEventSourceDlq.Companion::unwrap))
     }
 
     /**
@@ -215,14 +215,14 @@ public interface ManagedKafkaEventSourceProps : KafkaEventSourceProps {
      * is required if your Kafka brokers are accessed over the Internet.
      */
     override fun secret(secret: ISecret) {
-      cdkBuilder.secret(secret.let(ISecret::unwrap))
+      cdkBuilder.secret(secret.let(ISecret.Companion::unwrap))
     }
 
     /**
      * @param startingPosition Where to begin consuming the stream. 
      */
     override fun startingPosition(startingPosition: StartingPosition) {
-      cdkBuilder.startingPosition(startingPosition.let(StartingPosition::unwrap))
+      cdkBuilder.startingPosition(startingPosition.let(StartingPosition.Companion::unwrap))
     }
 
     /**

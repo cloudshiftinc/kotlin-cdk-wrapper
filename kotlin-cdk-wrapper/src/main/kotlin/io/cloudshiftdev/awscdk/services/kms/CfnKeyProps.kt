@@ -367,9 +367,22 @@ public interface CfnKeyProps {
   public fun pendingWindowInDays(): Number? = unwrap(this).getPendingWindowInDays()
 
   /**
-   * The number of days between each automatic rotation.
+   * Specifies a custom period of time between each rotation date.
    *
-   * The default value is 365 days.
+   * If no value is specified, the default value is 365 days.
+   *
+   * The rotation period defines the number of days after you enable automatic key rotation that AWS
+   * KMS will rotate your key material, and the number of days between each automatic rotation
+   * thereafter.
+   *
+   * You can use the
+   * [`kms:RotationPeriodInDays`](https://docs.aws.amazon.com/kms/latest/developerguide/conditions-kms.html#conditions-kms-rotation-period-in-days)
+   * condition key to further constrain the values that principals can specify in the
+   * `RotationPeriodInDays` parameter.
+   *
+   * For more information about rotating KMS keys and automatic rotation, see [Rotating
+   * keys](https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) in the *AWS Key
+   * Management Service Developer Guide* .
    *
    * Default: - 365
    *
@@ -788,8 +801,21 @@ public interface CfnKeyProps {
     public fun pendingWindowInDays(pendingWindowInDays: Number)
 
     /**
-     * @param rotationPeriodInDays The number of days between each automatic rotation.
-     * The default value is 365 days.
+     * @param rotationPeriodInDays Specifies a custom period of time between each rotation date.
+     * If no value is specified, the default value is 365 days.
+     *
+     * The rotation period defines the number of days after you enable automatic key rotation that
+     * AWS KMS will rotate your key material, and the number of days between each automatic rotation
+     * thereafter.
+     *
+     * You can use the
+     * [`kms:RotationPeriodInDays`](https://docs.aws.amazon.com/kms/latest/developerguide/conditions-kms.html#conditions-kms-rotation-period-in-days)
+     * condition key to further constrain the values that principals can specify in the
+     * `RotationPeriodInDays` parameter.
+     *
+     * For more information about rotating KMS keys and automatic rotation, see [Rotating
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) in the *AWS Key
+     * Management Service Developer Guide* .
      */
     public fun rotationPeriodInDays(rotationPeriodInDays: Number)
 
@@ -869,7 +895,7 @@ public interface CfnKeyProps {
      * request on the KMS key.
      */
     override fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: IResolvable) {
-      cdkBuilder.bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck.let(IResolvable::unwrap))
+      cdkBuilder.bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -928,7 +954,7 @@ public interface CfnKeyProps {
      * in the *AWS Key Management Service Developer Guide* .
      */
     override fun enableKeyRotation(enableKeyRotation: IResolvable) {
-      cdkBuilder.enableKeyRotation(enableKeyRotation.let(IResolvable::unwrap))
+      cdkBuilder.enableKeyRotation(enableKeyRotation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -970,7 +996,7 @@ public interface CfnKeyProps {
      * Management Service Developer Guide* .
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1173,7 +1199,7 @@ public interface CfnKeyProps {
      * key.
      */
     override fun multiRegion(multiRegion: IResolvable) {
-      cdkBuilder.multiRegion(multiRegion.let(IResolvable::unwrap))
+      cdkBuilder.multiRegion(multiRegion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1245,8 +1271,21 @@ public interface CfnKeyProps {
     }
 
     /**
-     * @param rotationPeriodInDays The number of days between each automatic rotation.
-     * The default value is 365 days.
+     * @param rotationPeriodInDays Specifies a custom period of time between each rotation date.
+     * If no value is specified, the default value is 365 days.
+     *
+     * The rotation period defines the number of days after you enable automatic key rotation that
+     * AWS KMS will rotate your key material, and the number of days between each automatic rotation
+     * thereafter.
+     *
+     * You can use the
+     * [`kms:RotationPeriodInDays`](https://docs.aws.amazon.com/kms/latest/developerguide/conditions-kms.html#conditions-kms-rotation-period-in-days)
+     * condition key to further constrain the values that principals can specify in the
+     * `RotationPeriodInDays` parameter.
+     *
+     * For more information about rotating KMS keys and automatic rotation, see [Rotating
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) in the *AWS Key
+     * Management Service Developer Guide* .
      */
     override fun rotationPeriodInDays(rotationPeriodInDays: Number) {
       cdkBuilder.rotationPeriodInDays(rotationPeriodInDays)
@@ -1267,7 +1306,7 @@ public interface CfnKeyProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1618,9 +1657,22 @@ public interface CfnKeyProps {
     override fun pendingWindowInDays(): Number? = unwrap(this).getPendingWindowInDays()
 
     /**
-     * The number of days between each automatic rotation.
+     * Specifies a custom period of time between each rotation date.
      *
-     * The default value is 365 days.
+     * If no value is specified, the default value is 365 days.
+     *
+     * The rotation period defines the number of days after you enable automatic key rotation that
+     * AWS KMS will rotate your key material, and the number of days between each automatic rotation
+     * thereafter.
+     *
+     * You can use the
+     * [`kms:RotationPeriodInDays`](https://docs.aws.amazon.com/kms/latest/developerguide/conditions-kms.html#conditions-kms-rotation-period-in-days)
+     * condition key to further constrain the values that principals can specify in the
+     * `RotationPeriodInDays` parameter.
+     *
+     * For more information about rotating KMS keys and automatic rotation, see [Rotating
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) in the *AWS Key
+     * Management Service Developer Guide* .
      *
      * Default: - 365
      *

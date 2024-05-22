@@ -136,7 +136,7 @@ public interface TlsClientPolicy {
      * The certificate will be sent only if the server requests it, enabling mutual TLS.
      */
     override fun mutualTlsCertificate(mutualTlsCertificate: MutualTlsCertificate) {
-      cdkBuilder.mutualTlsCertificate(mutualTlsCertificate.let(MutualTlsCertificate::unwrap))
+      cdkBuilder.mutualTlsCertificate(mutualTlsCertificate.let(MutualTlsCertificate.Companion::unwrap))
     }
 
     /**
@@ -157,7 +157,7 @@ public interface TlsClientPolicy {
      * @param validation Represents the object for TLS validation context. 
      */
     override fun validation(validation: TlsValidation) {
-      cdkBuilder.validation(validation.let(TlsValidation::unwrap))
+      cdkBuilder.validation(validation.let(TlsValidation.Companion::unwrap))
     }
 
     /**

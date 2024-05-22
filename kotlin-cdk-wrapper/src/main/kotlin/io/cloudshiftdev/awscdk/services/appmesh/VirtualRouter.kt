@@ -29,8 +29,8 @@ public open class VirtualRouter(
     id: String,
     props: VirtualRouterProps,
   ) :
-      this(software.amazon.awscdk.services.appmesh.VirtualRouter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(VirtualRouterProps::unwrap))
+      this(software.amazon.awscdk.services.appmesh.VirtualRouter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(VirtualRouterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -47,7 +47,7 @@ public open class VirtualRouter(
    * @param props 
    */
   public override fun addRoute(id: String, props: RouteBaseProps): Route = unwrap(this).addRoute(id,
-      props.let(RouteBaseProps::unwrap)).let(Route::wrap)
+      props.let(RouteBaseProps.Companion::unwrap)).let(Route::wrap)
 
   /**
    * Add a single route to the router.
@@ -130,7 +130,7 @@ public open class VirtualRouter(
      * @param listeners Listener specification for the VirtualRouter. 
      */
     override fun listeners(listeners: List<VirtualRouterListener>) {
-      cdkBuilder.listeners(listeners.map(VirtualRouterListener::unwrap))
+      cdkBuilder.listeners(listeners.map(VirtualRouterListener.Companion::unwrap))
     }
 
     /**
@@ -149,7 +149,7 @@ public open class VirtualRouter(
      * @param mesh The Mesh which the VirtualRouter belongs to. 
      */
     override fun mesh(mesh: IMesh) {
-      cdkBuilder.mesh(mesh.let(IMesh::unwrap))
+      cdkBuilder.mesh(mesh.let(IMesh.Companion::unwrap))
     }
 
     /**
@@ -172,7 +172,7 @@ public open class VirtualRouter(
       id: String,
       virtualRouterArn: String,
     ): IVirtualRouter =
-        software.amazon.awscdk.services.appmesh.VirtualRouter.fromVirtualRouterArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.appmesh.VirtualRouter.fromVirtualRouterArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, virtualRouterArn).let(IVirtualRouter::wrap)
 
     public fun fromVirtualRouterAttributes(
@@ -180,8 +180,8 @@ public open class VirtualRouter(
       id: String,
       attrs: VirtualRouterAttributes,
     ): IVirtualRouter =
-        software.amazon.awscdk.services.appmesh.VirtualRouter.fromVirtualRouterAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(VirtualRouterAttributes::unwrap)).let(IVirtualRouter::wrap)
+        software.amazon.awscdk.services.appmesh.VirtualRouter.fromVirtualRouterAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(VirtualRouterAttributes.Companion::unwrap)).let(IVirtualRouter::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7b0ffc42719cfeee629cfc702d5a9516d44a89a160dbb40ee3f6edb4dba5c1fa")

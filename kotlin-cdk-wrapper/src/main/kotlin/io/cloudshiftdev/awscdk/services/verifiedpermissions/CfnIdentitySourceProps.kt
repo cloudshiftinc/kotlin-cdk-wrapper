@@ -112,7 +112,7 @@ public interface CfnIdentitySourceProps {
      * @param configuration Contains configuration information about an identity source. 
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -120,7 +120,7 @@ public interface CfnIdentitySourceProps {
      */
     override
         fun configuration(configuration: CfnIdentitySource.IdentitySourceConfigurationProperty) {
-      cdkBuilder.configuration(configuration.let(CfnIdentitySource.IdentitySourceConfigurationProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(CfnIdentitySource.IdentitySourceConfigurationProperty.Companion::unwrap))
     }
 
     /**

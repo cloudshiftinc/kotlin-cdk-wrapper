@@ -90,7 +90,7 @@ public interface Ulimit {
      * @param name The resource to limit. 
      */
     override fun name(name: UlimitName) {
-      cdkBuilder.name(name.let(UlimitName::unwrap))
+      cdkBuilder.name(name.let(UlimitName.Companion::unwrap))
     }
 
     /**

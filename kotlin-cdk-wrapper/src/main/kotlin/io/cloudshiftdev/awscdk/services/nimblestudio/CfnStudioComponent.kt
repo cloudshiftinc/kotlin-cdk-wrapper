@@ -101,8 +101,8 @@ public open class CfnStudioComponent(
     id: String,
     props: CfnStudioComponentProps,
   ) :
-      this(software.amazon.awscdk.services.nimblestudio.CfnStudioComponent(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStudioComponentProps::unwrap))
+      this(software.amazon.awscdk.services.nimblestudio.CfnStudioComponent(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStudioComponentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -126,14 +126,14 @@ public open class CfnStudioComponent(
    * The configuration of the studio component, based on component type.
    */
   public open fun configuration(`value`: IResolvable) {
-    unwrap(this).setConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration of the studio component, based on component type.
    */
   public open fun configuration(`value`: StudioComponentConfigurationProperty) {
-    unwrap(this).setConfiguration(`value`.let(StudioComponentConfigurationProperty::unwrap))
+    unwrap(this).setConfiguration(`value`.let(StudioComponentConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -184,7 +184,7 @@ public open class CfnStudioComponent(
    * Initialization scripts for studio components.
    */
   public open fun initializationScripts(`value`: IResolvable) {
-    unwrap(this).setInitializationScripts(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInitializationScripts(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -206,7 +206,7 @@ public open class CfnStudioComponent(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -244,7 +244,7 @@ public open class CfnStudioComponent(
    * Parameters for the studio component scripts.
    */
   public open fun scriptParameters(`value`: IResolvable) {
-    unwrap(this).setScriptParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setScriptParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -514,7 +514,7 @@ public open class CfnStudioComponent(
      * @param configuration The configuration of the studio component, based on component type. 
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -524,7 +524,7 @@ public open class CfnStudioComponent(
      * @param configuration The configuration of the studio component, based on component type. 
      */
     override fun configuration(configuration: StudioComponentConfigurationProperty) {
-      cdkBuilder.configuration(configuration.let(StudioComponentConfigurationProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(StudioComponentConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -577,7 +577,7 @@ public open class CfnStudioComponent(
      * @param initializationScripts Initialization scripts for studio components. 
      */
     override fun initializationScripts(initializationScripts: IResolvable) {
-      cdkBuilder.initializationScripts(initializationScripts.let(IResolvable::unwrap))
+      cdkBuilder.initializationScripts(initializationScripts.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -628,7 +628,7 @@ public open class CfnStudioComponent(
      * @param scriptParameters Parameters for the studio component scripts. 
      */
     override fun scriptParameters(scriptParameters: IResolvable) {
-      cdkBuilder.scriptParameters(scriptParameters.let(IResolvable::unwrap))
+      cdkBuilder.scriptParameters(scriptParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -938,7 +938,7 @@ public open class CfnStudioComponent(
        * computer.
        */
       override fun computerAttributes(computerAttributes: IResolvable) {
-        cdkBuilder.computerAttributes(computerAttributes.let(IResolvable::unwrap))
+        cdkBuilder.computerAttributes(computerAttributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1705,7 +1705,7 @@ public open class CfnStudioComponent(
        * Microsoft Active Directory studio resource.
        */
       override fun activeDirectoryConfiguration(activeDirectoryConfiguration: IResolvable) {
-        cdkBuilder.activeDirectoryConfiguration(activeDirectoryConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.activeDirectoryConfiguration(activeDirectoryConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1714,7 +1714,7 @@ public open class CfnStudioComponent(
        */
       override
           fun activeDirectoryConfiguration(activeDirectoryConfiguration: ActiveDirectoryConfigurationProperty) {
-        cdkBuilder.activeDirectoryConfiguration(activeDirectoryConfiguration.let(ActiveDirectoryConfigurationProperty::unwrap))
+        cdkBuilder.activeDirectoryConfiguration(activeDirectoryConfiguration.let(ActiveDirectoryConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1733,7 +1733,7 @@ public open class CfnStudioComponent(
        * a studio resource.
        */
       override fun computeFarmConfiguration(computeFarmConfiguration: IResolvable) {
-        cdkBuilder.computeFarmConfiguration(computeFarmConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.computeFarmConfiguration(computeFarmConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1742,7 +1742,7 @@ public open class CfnStudioComponent(
        */
       override
           fun computeFarmConfiguration(computeFarmConfiguration: ComputeFarmConfigurationProperty) {
-        cdkBuilder.computeFarmConfiguration(computeFarmConfiguration.let(ComputeFarmConfigurationProperty::unwrap))
+        cdkBuilder.computeFarmConfiguration(computeFarmConfiguration.let(ComputeFarmConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1761,7 +1761,7 @@ public open class CfnStudioComponent(
        * associated with a studio resource.
        */
       override fun licenseServiceConfiguration(licenseServiceConfiguration: IResolvable) {
-        cdkBuilder.licenseServiceConfiguration(licenseServiceConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.licenseServiceConfiguration(licenseServiceConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1770,7 +1770,7 @@ public open class CfnStudioComponent(
        */
       override
           fun licenseServiceConfiguration(licenseServiceConfiguration: LicenseServiceConfigurationProperty) {
-        cdkBuilder.licenseServiceConfiguration(licenseServiceConfiguration.let(LicenseServiceConfigurationProperty::unwrap))
+        cdkBuilder.licenseServiceConfiguration(licenseServiceConfiguration.let(LicenseServiceConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1789,7 +1789,7 @@ public open class CfnStudioComponent(
        * that is associated with a studio resource.
        */
       override fun sharedFileSystemConfiguration(sharedFileSystemConfiguration: IResolvable) {
-        cdkBuilder.sharedFileSystemConfiguration(sharedFileSystemConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.sharedFileSystemConfiguration(sharedFileSystemConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1798,7 +1798,7 @@ public open class CfnStudioComponent(
        */
       override
           fun sharedFileSystemConfiguration(sharedFileSystemConfiguration: SharedFileSystemConfigurationProperty) {
-        cdkBuilder.sharedFileSystemConfiguration(sharedFileSystemConfiguration.let(SharedFileSystemConfigurationProperty::unwrap))
+        cdkBuilder.sharedFileSystemConfiguration(sharedFileSystemConfiguration.let(SharedFileSystemConfigurationProperty.Companion::unwrap))
       }
 
       /**

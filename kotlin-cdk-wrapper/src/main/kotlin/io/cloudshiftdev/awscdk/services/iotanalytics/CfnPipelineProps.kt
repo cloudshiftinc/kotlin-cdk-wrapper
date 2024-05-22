@@ -222,7 +222,7 @@ public interface CfnPipelineProps {
      * `pipelineActivities = [ { "channel": { ... } }, { "lambda": { ... } }, ... ]`
      */
     override fun pipelineActivities(pipelineActivities: IResolvable) {
-      cdkBuilder.pipelineActivities(pipelineActivities.let(IResolvable::unwrap))
+      cdkBuilder.pipelineActivities(pipelineActivities.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -270,7 +270,7 @@ public interface CfnPipelineProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

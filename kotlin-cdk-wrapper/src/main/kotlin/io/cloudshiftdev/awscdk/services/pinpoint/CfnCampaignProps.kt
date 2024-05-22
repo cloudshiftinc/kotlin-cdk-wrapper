@@ -824,7 +824,7 @@ public interface CfnCampaignProps {
      * campaign, in addition to the default treatment for the campaign.
      */
     override fun additionalTreatments(additionalTreatments: IResolvable) {
-      cdkBuilder.additionalTreatments(additionalTreatments.let(IResolvable::unwrap))
+      cdkBuilder.additionalTreatments(additionalTreatments.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -854,14 +854,14 @@ public interface CfnCampaignProps {
      * @param campaignHook Specifies the Lambda function to use as a code hook for a campaign.
      */
     override fun campaignHook(campaignHook: IResolvable) {
-      cdkBuilder.campaignHook(campaignHook.let(IResolvable::unwrap))
+      cdkBuilder.campaignHook(campaignHook.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param campaignHook Specifies the Lambda function to use as a code hook for a campaign.
      */
     override fun campaignHook(campaignHook: CfnCampaign.CampaignHookProperty) {
-      cdkBuilder.campaignHook(campaignHook.let(CfnCampaign.CampaignHookProperty::unwrap))
+      cdkBuilder.campaignHook(campaignHook.let(CfnCampaign.CampaignHookProperty.Companion::unwrap))
     }
 
     /**
@@ -879,7 +879,7 @@ public interface CfnCampaignProps {
      * `CustomMessage` object.
      */
     override fun customDeliveryConfiguration(customDeliveryConfiguration: IResolvable) {
-      cdkBuilder.customDeliveryConfiguration(customDeliveryConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.customDeliveryConfiguration(customDeliveryConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -890,7 +890,7 @@ public interface CfnCampaignProps {
      */
     override
         fun customDeliveryConfiguration(customDeliveryConfiguration: CfnCampaign.CustomDeliveryConfigurationProperty) {
-      cdkBuilder.customDeliveryConfiguration(customDeliveryConfiguration.let(CfnCampaign.CustomDeliveryConfigurationProperty::unwrap))
+      cdkBuilder.customDeliveryConfiguration(customDeliveryConfiguration.let(CfnCampaign.CustomDeliveryConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -942,21 +942,21 @@ public interface CfnCampaignProps {
      * paused.
      */
     override fun isPaused(isPaused: IResolvable) {
-      cdkBuilder.isPaused(isPaused.let(IResolvable::unwrap))
+      cdkBuilder.isPaused(isPaused.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param limits The messaging limits for the campaign.
      */
     override fun limits(limits: IResolvable) {
-      cdkBuilder.limits(limits.let(IResolvable::unwrap))
+      cdkBuilder.limits(limits.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param limits The messaging limits for the campaign.
      */
     override fun limits(limits: CfnCampaign.LimitsProperty) {
-      cdkBuilder.limits(limits.let(CfnCampaign.LimitsProperty::unwrap))
+      cdkBuilder.limits(limits.let(CfnCampaign.LimitsProperty.Companion::unwrap))
     }
 
     /**
@@ -971,7 +971,7 @@ public interface CfnCampaignProps {
      * @param messageConfiguration The message configuration settings for the treatment.
      */
     override fun messageConfiguration(messageConfiguration: IResolvable) {
-      cdkBuilder.messageConfiguration(messageConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.messageConfiguration(messageConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -979,7 +979,7 @@ public interface CfnCampaignProps {
      */
     override
         fun messageConfiguration(messageConfiguration: CfnCampaign.MessageConfigurationProperty) {
-      cdkBuilder.messageConfiguration(messageConfiguration.let(CfnCampaign.MessageConfigurationProperty::unwrap))
+      cdkBuilder.messageConfiguration(messageConfiguration.let(CfnCampaign.MessageConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1012,14 +1012,14 @@ public interface CfnCampaignProps {
      * @param schedule The schedule settings for the treatment. 
      */
     override fun schedule(schedule: IResolvable) {
-      cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
+      cdkBuilder.schedule(schedule.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param schedule The schedule settings for the treatment. 
      */
     override fun schedule(schedule: CfnCampaign.ScheduleProperty) {
-      cdkBuilder.schedule(schedule.let(CfnCampaign.ScheduleProperty::unwrap))
+      cdkBuilder.schedule(schedule.let(CfnCampaign.ScheduleProperty.Companion::unwrap))
     }
 
     /**
@@ -1058,7 +1058,7 @@ public interface CfnCampaignProps {
      * @param templateConfiguration The message template to use for the treatment.
      */
     override fun templateConfiguration(templateConfiguration: IResolvable) {
-      cdkBuilder.templateConfiguration(templateConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.templateConfiguration(templateConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1066,7 +1066,7 @@ public interface CfnCampaignProps {
      */
     override
         fun templateConfiguration(templateConfiguration: CfnCampaign.TemplateConfigurationProperty) {
-      cdkBuilder.templateConfiguration(templateConfiguration.let(CfnCampaign.TemplateConfigurationProperty::unwrap))
+      cdkBuilder.templateConfiguration(templateConfiguration.let(CfnCampaign.TemplateConfigurationProperty.Companion::unwrap))
     }
 
     /**

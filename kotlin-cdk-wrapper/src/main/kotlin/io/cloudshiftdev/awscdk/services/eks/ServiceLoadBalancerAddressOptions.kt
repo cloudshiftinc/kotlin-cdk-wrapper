@@ -73,7 +73,7 @@ public interface ServiceLoadBalancerAddressOptions {
      * @param timeout Timeout for waiting on the load balancer address.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.eks.ServiceLoadBalancerAddressOptions =

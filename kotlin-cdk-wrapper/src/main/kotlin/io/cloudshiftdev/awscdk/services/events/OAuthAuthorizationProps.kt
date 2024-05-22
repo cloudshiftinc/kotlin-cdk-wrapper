@@ -159,7 +159,7 @@ public interface OAuthAuthorizationProps {
      * authorization for the connection. 
      */
     override fun clientSecret(clientSecret: SecretValue) {
-      cdkBuilder.clientSecret(clientSecret.let(SecretValue::unwrap))
+      cdkBuilder.clientSecret(clientSecret.let(SecretValue.Companion::unwrap))
     }
 
     /**
@@ -174,7 +174,7 @@ public interface OAuthAuthorizationProps {
      * (Can only choose POST, GET or PUT).
      */
     override fun httpMethod(httpMethod: HttpMethod) {
-      cdkBuilder.httpMethod(httpMethod.let(HttpMethod::unwrap))
+      cdkBuilder.httpMethod(httpMethod.let(HttpMethod.Companion::unwrap))
     }
 
     /**

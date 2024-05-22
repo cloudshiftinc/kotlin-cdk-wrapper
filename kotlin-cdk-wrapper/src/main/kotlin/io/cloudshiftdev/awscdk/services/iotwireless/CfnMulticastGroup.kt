@@ -61,8 +61,8 @@ public open class CfnMulticastGroup(
     id: String,
     props: CfnMulticastGroupProps,
   ) :
-      this(software.amazon.awscdk.services.iotwireless.CfnMulticastGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMulticastGroupProps::unwrap))
+      this(software.amazon.awscdk.services.iotwireless.CfnMulticastGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMulticastGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -142,7 +142,7 @@ public open class CfnMulticastGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -154,14 +154,14 @@ public open class CfnMulticastGroup(
    * The LoRaWAN information that is to be used with the multicast group.
    */
   public open fun loRaWan(`value`: IResolvable) {
-    unwrap(this).setLoRaWan(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoRaWan(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The LoRaWAN information that is to be used with the multicast group.
    */
   public open fun loRaWan(`value`: LoRaWANProperty) {
-    unwrap(this).setLoRaWan(`value`.let(LoRaWANProperty::unwrap))
+    unwrap(this).setLoRaWan(`value`.let(LoRaWANProperty.Companion::unwrap))
   }
 
   /**
@@ -199,7 +199,7 @@ public open class CfnMulticastGroup(
    * The tags are an array of key-value pairs to attach to the specified resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -339,7 +339,7 @@ public open class CfnMulticastGroup(
      * @param loRaWan The LoRaWAN information that is to be used with the multicast group. 
      */
     override fun loRaWan(loRaWan: IResolvable) {
-      cdkBuilder.loRaWan(loRaWan.let(IResolvable::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -349,7 +349,7 @@ public open class CfnMulticastGroup(
      * @param loRaWan The LoRaWAN information that is to be used with the multicast group. 
      */
     override fun loRaWan(loRaWan: LoRaWANProperty) {
-      cdkBuilder.loRaWan(loRaWan.let(LoRaWANProperty::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(LoRaWANProperty.Companion::unwrap))
     }
 
     /**
@@ -382,7 +382,7 @@ public open class CfnMulticastGroup(
      * @param tags The tags are an array of key-value pairs to attach to the specified resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

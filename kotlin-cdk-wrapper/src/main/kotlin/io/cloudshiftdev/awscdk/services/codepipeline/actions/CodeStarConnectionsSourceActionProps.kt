@@ -227,7 +227,7 @@ public interface CodeStarConnectionsSourceActionProps : CommonAwsActionProps {
      * Can be used as input for further pipeline actions.
      */
     override fun output(output: Artifact) {
-      cdkBuilder.output(output.let(Artifact::unwrap))
+      cdkBuilder.output(output.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -253,7 +253,7 @@ public interface CodeStarConnectionsSourceActionProps : CommonAwsActionProps {
      * method in the `ActionBindOptions.role` property.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**

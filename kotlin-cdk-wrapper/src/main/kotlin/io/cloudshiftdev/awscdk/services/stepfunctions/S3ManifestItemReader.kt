@@ -35,7 +35,7 @@ public open class S3ManifestItemReader(
   cdkObject: software.amazon.awscdk.services.stepfunctions.S3ManifestItemReader,
 ) : CdkObject(cdkObject), IItemReader {
   public constructor(props: S3FileItemReaderProps) :
-      this(software.amazon.awscdk.services.stepfunctions.S3ManifestItemReader(props.let(S3FileItemReaderProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.S3ManifestItemReader(props.let(S3FileItemReaderProps.Companion::unwrap))
   )
 
   public constructor(props: S3FileItemReaderProps.Builder.() -> Unit) :
@@ -121,7 +121,7 @@ public open class S3ManifestItemReader(
      * over. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**

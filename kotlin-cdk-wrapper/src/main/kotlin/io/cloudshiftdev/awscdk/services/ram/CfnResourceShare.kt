@@ -62,8 +62,8 @@ public open class CfnResourceShare(
     id: String,
     props: CfnResourceShareProps,
   ) :
-      this(software.amazon.awscdk.services.ram.CfnResourceShare(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnResourceShareProps::unwrap))
+      this(software.amazon.awscdk.services.ram.CfnResourceShare(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnResourceShareProps.Companion::unwrap))
   )
 
   public constructor(
@@ -92,7 +92,7 @@ public open class CfnResourceShare(
    * with a resource share.
    */
   public open fun allowExternalPrincipals(`value`: IResolvable) {
-    unwrap(this).setAllowExternalPrincipals(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAllowExternalPrincipals(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -111,7 +111,7 @@ public open class CfnResourceShare(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -230,7 +230,7 @@ public open class CfnResourceShare(
    * Specifies one or more tags to attach to the resource share itself.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -446,7 +446,7 @@ public open class CfnResourceShare(
      * Organizations can be associated with a resource share. 
      */
     override fun allowExternalPrincipals(allowExternalPrincipals: IResolvable) {
-      cdkBuilder.allowExternalPrincipals(allowExternalPrincipals.let(IResolvable::unwrap))
+      cdkBuilder.allowExternalPrincipals(allowExternalPrincipals.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -588,7 +588,7 @@ public open class CfnResourceShare(
      * @param tags Specifies one or more tags to attach to the resource share itself. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -47,7 +47,7 @@ public open class CfnGroup(
   cdkObject: software.amazon.awscdk.services.iam.CfnGroup,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.iam.CfnGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.iam.CfnGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -56,8 +56,8 @@ public open class CfnGroup(
     id: String,
     props: CfnGroupProps,
   ) :
-      this(software.amazon.awscdk.services.iam.CfnGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGroupProps::unwrap))
+      this(software.amazon.awscdk.services.iam.CfnGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -96,7 +96,7 @@ public open class CfnGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -147,7 +147,7 @@ public open class CfnGroup(
    * Adds or updates an inline policy document that is embedded in the specified IAM group.
    */
   public open fun policies(`value`: IResolvable) {
-    unwrap(this).setPolicies(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPolicies(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -429,7 +429,7 @@ public open class CfnGroup(
      * IAM group. 
      */
     override fun policies(policies: IResolvable) {
-      cdkBuilder.policies(policies.let(IResolvable::unwrap))
+      cdkBuilder.policies(policies.let(IResolvable.Companion::unwrap))
     }
 
     /**

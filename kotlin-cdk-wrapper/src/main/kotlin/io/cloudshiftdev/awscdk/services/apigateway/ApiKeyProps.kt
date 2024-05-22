@@ -254,7 +254,7 @@ public interface ApiKeyProps : ApiKeyOptions {
      * You can add CORS at the resource-level using `addCorsPreflight`.
      */
     override fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions) {
-      cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions::unwrap))
+      cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions.Companion::unwrap))
     }
 
     /**
@@ -273,7 +273,7 @@ public interface ApiKeyProps : ApiKeyOptions {
      * this API unless an integration is specified.
      */
     override fun defaultIntegration(defaultIntegration: Integration) {
-      cdkBuilder.defaultIntegration(defaultIntegration.let(Integration::unwrap))
+      cdkBuilder.defaultIntegration(defaultIntegration.let(Integration.Companion::unwrap))
     }
 
     /**
@@ -290,7 +290,7 @@ public interface ApiKeyProps : ApiKeyOptions {
      * this API unless custom options are specified.
      */
     override fun defaultMethodOptions(defaultMethodOptions: MethodOptions) {
-      cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions::unwrap))
+      cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions.Companion::unwrap))
     }
 
     /**
@@ -330,7 +330,7 @@ public interface ApiKeyProps : ApiKeyOptions {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun resources(resources: List<IRestApi>) {
-      cdkBuilder.resources(resources.map(IRestApi::unwrap))
+      cdkBuilder.resources(resources.map(IRestApi.Companion::unwrap))
     }
 
     /**
@@ -344,7 +344,7 @@ public interface ApiKeyProps : ApiKeyOptions {
      * @param stages A list of Stages this api key is associated with.
      */
     override fun stages(stages: List<IStage>) {
-      cdkBuilder.stages(stages.map(IStage::unwrap))
+      cdkBuilder.stages(stages.map(IStage.Companion::unwrap))
     }
 
     /**

@@ -427,7 +427,7 @@ public interface CfnAuthorizerProps {
      * .
      */
     override fun enableSimpleResponses(enableSimpleResponses: IResolvable) {
-      cdkBuilder.enableSimpleResponses(enableSimpleResponses.let(IResolvable::unwrap))
+      cdkBuilder.enableSimpleResponses(enableSimpleResponses.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -492,7 +492,7 @@ public interface CfnAuthorizerProps {
      * Required for the `JWT` authorizer type. Supported only for HTTP APIs.
      */
     override fun jwtConfiguration(jwtConfiguration: IResolvable) {
-      cdkBuilder.jwtConfiguration(jwtConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.jwtConfiguration(jwtConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -501,7 +501,7 @@ public interface CfnAuthorizerProps {
      * Required for the `JWT` authorizer type. Supported only for HTTP APIs.
      */
     override fun jwtConfiguration(jwtConfiguration: CfnAuthorizer.JWTConfigurationProperty) {
-      cdkBuilder.jwtConfiguration(jwtConfiguration.let(CfnAuthorizer.JWTConfigurationProperty::unwrap))
+      cdkBuilder.jwtConfiguration(jwtConfiguration.let(CfnAuthorizer.JWTConfigurationProperty.Companion::unwrap))
     }
 
     /**

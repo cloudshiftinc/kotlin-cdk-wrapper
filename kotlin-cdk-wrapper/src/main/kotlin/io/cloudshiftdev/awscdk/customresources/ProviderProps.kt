@@ -342,7 +342,7 @@ public interface ProviderProps {
      * passed, the operation will fail.
      */
     override fun isCompleteHandler(isCompleteHandler: IFunction) {
-      cdkBuilder.isCompleteHandler(isCompleteHandler.let(IFunction::unwrap))
+      cdkBuilder.isCompleteHandler(isCompleteHandler.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -352,7 +352,7 @@ public interface ProviderProps {
      * If you are deploying to another type of region, please check regional availability first.
      */
     override fun logGroup(logGroup: ILogGroup) {
-      cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
+      cdkBuilder.logGroup(logGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -366,7 +366,7 @@ public interface ProviderProps {
      * function to send logs to it.
      */
     override fun logRetention(logRetention: RetentionDays) {
-      cdkBuilder.logRetention(logRetention.let(RetentionDays::unwrap))
+      cdkBuilder.logRetention(logRetention.let(RetentionDays.Companion::unwrap))
     }
 
     /**
@@ -378,7 +378,7 @@ public interface ProviderProps {
      * property must be included in the response.
      */
     override fun onEventHandler(onEventHandler: IFunction) {
-      cdkBuilder.onEventHandler(onEventHandler.let(IFunction::unwrap))
+      cdkBuilder.onEventHandler(onEventHandler.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -386,7 +386,7 @@ public interface ProviderProps {
      * environment variables.
      */
     override fun providerFunctionEnvEncryption(providerFunctionEnvEncryption: IKey) {
-      cdkBuilder.providerFunctionEnvEncryption(providerFunctionEnvEncryption.let(IKey::unwrap))
+      cdkBuilder.providerFunctionEnvEncryption(providerFunctionEnvEncryption.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -405,7 +405,7 @@ public interface ProviderProps {
      * `isComplete` returns `true`.
      */
     override fun queryInterval(queryInterval: Duration) {
-      cdkBuilder.queryInterval(queryInterval.let(Duration::unwrap))
+      cdkBuilder.queryInterval(queryInterval.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -414,7 +414,7 @@ public interface ProviderProps {
      * Must be assumable by the 'lambda.amazonaws.com' service principal.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -422,7 +422,7 @@ public interface ProviderProps {
      * Only used if 'vpc' is supplied
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -437,14 +437,14 @@ public interface ProviderProps {
      * The maximum timeout is 1 hour (yes, it can exceed the AWS Lambda 15 minutes)
      */
     override fun totalTimeout(totalTimeout: Duration) {
-      cdkBuilder.totalTimeout(totalTimeout.let(Duration::unwrap))
+      cdkBuilder.totalTimeout(totalTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param vpc The vpc to provision the lambda functions in.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -453,7 +453,7 @@ public interface ProviderProps {
      * requires a NAT gateway, so picking Public subnets is not allowed.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -471,7 +471,7 @@ public interface ProviderProps {
      * machine are logged and where they are logged.
      */
     override fun waiterStateMachineLogOptions(waiterStateMachineLogOptions: LogOptions) {
-      cdkBuilder.waiterStateMachineLogOptions(waiterStateMachineLogOptions.let(LogOptions::unwrap))
+      cdkBuilder.waiterStateMachineLogOptions(waiterStateMachineLogOptions.let(LogOptions.Companion::unwrap))
     }
 
     /**

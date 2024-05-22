@@ -36,7 +36,7 @@ public open class CloudAssembly(
 
   public constructor(directory: String, loadOptions: LoadManifestOptions) :
       this(software.amazon.awscdk.cxapi.CloudAssembly(directory,
-      loadOptions.let(LoadManifestOptions::unwrap))
+      loadOptions.let(LoadManifestOptions.Companion::unwrap))
   )
 
   public constructor(directory: String, loadOptions: LoadManifestOptions.Builder.() -> Unit) :

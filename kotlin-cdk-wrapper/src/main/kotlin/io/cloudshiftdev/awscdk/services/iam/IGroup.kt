@@ -37,7 +37,7 @@ public interface IGroup : IIdentity {
      * @param policy The managed policy. 
      */
     override fun addManagedPolicy(policy: IManagedPolicy) {
-      unwrap(this).addManagedPolicy(policy.let(IManagedPolicy::unwrap))
+      unwrap(this).addManagedPolicy(policy.let(IManagedPolicy.Companion::unwrap))
     }
 
     /**
@@ -46,7 +46,7 @@ public interface IGroup : IIdentity {
      * @param statement 
      */
     override fun addToPrincipalPolicy(statement: PolicyStatement): AddToPrincipalPolicyResult =
-        unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement::unwrap)).let(AddToPrincipalPolicyResult::wrap)
+        unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToPrincipalPolicyResult::wrap)
 
     /**
      * Add to the policy of this principal.
@@ -72,7 +72,7 @@ public interface IGroup : IIdentity {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -89,7 +89,7 @@ public interface IGroup : IIdentity {
      * [disable-awslint:ref-via-interface]. 
      */
     override fun attachInlinePolicy(policy: Policy) {
-      unwrap(this).attachInlinePolicy(policy.let(Policy::unwrap))
+      unwrap(this).attachInlinePolicy(policy.let(Policy.Companion::unwrap))
     }
 
     /**

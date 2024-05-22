@@ -85,14 +85,14 @@ public interface UserPoolConfig {
      * @param defaultAction Default auth action.
      */
     override fun defaultAction(defaultAction: UserPoolDefaultAction) {
-      cdkBuilder.defaultAction(defaultAction.let(UserPoolDefaultAction::unwrap))
+      cdkBuilder.defaultAction(defaultAction.let(UserPoolDefaultAction.Companion::unwrap))
     }
 
     /**
      * @param userPool The Cognito user pool to use as identity source. 
      */
     override fun userPool(userPool: IUserPool) {
-      cdkBuilder.userPool(userPool.let(IUserPool::unwrap))
+      cdkBuilder.userPool(userPool.let(IUserPool.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appsync.UserPoolConfig = cdkBuilder.build()

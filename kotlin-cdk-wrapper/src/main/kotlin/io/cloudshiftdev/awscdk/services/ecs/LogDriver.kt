@@ -37,8 +37,8 @@ public abstract class LogDriver(
    * @param containerDefinition 
    */
   public open fun bind(scope: Construct, containerDefinition: ContainerDefinition): LogDriverConfig
-      = unwrap(this).bind(scope.let(Construct::unwrap),
-      containerDefinition.let(ContainerDefinition::unwrap)).let(LogDriverConfig::wrap)
+      = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      containerDefinition.let(ContainerDefinition.Companion::unwrap)).let(LogDriverConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.LogDriver,
@@ -46,7 +46,7 @@ public abstract class LogDriver(
 
   public companion object {
     public fun awsLogs(props: AwsLogDriverProps): LogDriver =
-        software.amazon.awscdk.services.ecs.LogDriver.awsLogs(props.let(AwsLogDriverProps::unwrap)).let(LogDriver::wrap)
+        software.amazon.awscdk.services.ecs.LogDriver.awsLogs(props.let(AwsLogDriverProps.Companion::unwrap)).let(LogDriver::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c2d0d9a506ce9f0fb5ba45e5e4ad84bbef85836d2019566b9bd522ad46b3e85e")

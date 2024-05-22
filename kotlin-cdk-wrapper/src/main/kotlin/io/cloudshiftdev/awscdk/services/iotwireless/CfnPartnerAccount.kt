@@ -61,7 +61,7 @@ public open class CfnPartnerAccount(
   cdkObject: software.amazon.awscdk.services.iotwireless.CfnPartnerAccount,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.iotwireless.CfnPartnerAccount(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.iotwireless.CfnPartnerAccount(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -70,8 +70,8 @@ public open class CfnPartnerAccount(
     id: String,
     props: CfnPartnerAccountProps,
   ) :
-      this(software.amazon.awscdk.services.iotwireless.CfnPartnerAccount(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPartnerAccountProps::unwrap))
+      this(software.amazon.awscdk.services.iotwireless.CfnPartnerAccount(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPartnerAccountProps.Companion::unwrap))
   )
 
   public constructor(
@@ -97,7 +97,7 @@ public open class CfnPartnerAccount(
    * Whether the partner account is linked to the AWS account.
    */
   public open fun accountLinked(`value`: IResolvable) {
-    unwrap(this).setAccountLinked(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccountLinked(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -116,7 +116,7 @@ public open class CfnPartnerAccount(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -152,14 +152,14 @@ public open class CfnPartnerAccount(
    * The Sidewalk account credentials.
    */
   public open fun sidewalk(`value`: IResolvable) {
-    unwrap(this).setSidewalk(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSidewalk(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The Sidewalk account credentials.
    */
   public open fun sidewalk(`value`: SidewalkAccountInfoProperty) {
-    unwrap(this).setSidewalk(`value`.let(SidewalkAccountInfoProperty::unwrap))
+    unwrap(this).setSidewalk(`value`.let(SidewalkAccountInfoProperty.Companion::unwrap))
   }
 
   /**
@@ -179,14 +179,14 @@ public open class CfnPartnerAccount(
    * Information about a Sidewalk account.
    */
   public open fun sidewalkResponse(`value`: IResolvable) {
-    unwrap(this).setSidewalkResponse(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSidewalkResponse(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information about a Sidewalk account.
    */
   public open fun sidewalkResponse(`value`: SidewalkAccountInfoWithFingerprintProperty) {
-    unwrap(this).setSidewalkResponse(`value`.let(SidewalkAccountInfoWithFingerprintProperty::unwrap))
+    unwrap(this).setSidewalkResponse(`value`.let(SidewalkAccountInfoWithFingerprintProperty.Companion::unwrap))
   }
 
   /**
@@ -207,14 +207,14 @@ public open class CfnPartnerAccount(
    * Sidewalk update.
    */
   public open fun sidewalkUpdate(`value`: IResolvable) {
-    unwrap(this).setSidewalkUpdate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSidewalkUpdate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Sidewalk update.
    */
   public open fun sidewalkUpdate(`value`: SidewalkUpdateAccountProperty) {
-    unwrap(this).setSidewalkUpdate(`value`.let(SidewalkUpdateAccountProperty::unwrap))
+    unwrap(this).setSidewalkUpdate(`value`.let(SidewalkUpdateAccountProperty.Companion::unwrap))
   }
 
   /**
@@ -240,7 +240,7 @@ public open class CfnPartnerAccount(
    * The tags are an array of key-value pairs to attach to the specified resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -409,7 +409,7 @@ public open class CfnPartnerAccount(
      * @param accountLinked Whether the partner account is linked to the AWS account. 
      */
     override fun accountLinked(accountLinked: IResolvable) {
-      cdkBuilder.accountLinked(accountLinked.let(IResolvable::unwrap))
+      cdkBuilder.accountLinked(accountLinked.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -439,7 +439,7 @@ public open class CfnPartnerAccount(
      * @param sidewalk The Sidewalk account credentials. 
      */
     override fun sidewalk(sidewalk: IResolvable) {
-      cdkBuilder.sidewalk(sidewalk.let(IResolvable::unwrap))
+      cdkBuilder.sidewalk(sidewalk.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -449,7 +449,7 @@ public open class CfnPartnerAccount(
      * @param sidewalk The Sidewalk account credentials. 
      */
     override fun sidewalk(sidewalk: SidewalkAccountInfoProperty) {
-      cdkBuilder.sidewalk(sidewalk.let(SidewalkAccountInfoProperty::unwrap))
+      cdkBuilder.sidewalk(sidewalk.let(SidewalkAccountInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -470,7 +470,7 @@ public open class CfnPartnerAccount(
      * @param sidewalkResponse Information about a Sidewalk account. 
      */
     override fun sidewalkResponse(sidewalkResponse: IResolvable) {
-      cdkBuilder.sidewalkResponse(sidewalkResponse.let(IResolvable::unwrap))
+      cdkBuilder.sidewalkResponse(sidewalkResponse.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -480,7 +480,7 @@ public open class CfnPartnerAccount(
      * @param sidewalkResponse Information about a Sidewalk account. 
      */
     override fun sidewalkResponse(sidewalkResponse: SidewalkAccountInfoWithFingerprintProperty) {
-      cdkBuilder.sidewalkResponse(sidewalkResponse.let(SidewalkAccountInfoWithFingerprintProperty::unwrap))
+      cdkBuilder.sidewalkResponse(sidewalkResponse.let(SidewalkAccountInfoWithFingerprintProperty.Companion::unwrap))
     }
 
     /**
@@ -502,7 +502,7 @@ public open class CfnPartnerAccount(
      * @param sidewalkUpdate Sidewalk update. 
      */
     override fun sidewalkUpdate(sidewalkUpdate: IResolvable) {
-      cdkBuilder.sidewalkUpdate(sidewalkUpdate.let(IResolvable::unwrap))
+      cdkBuilder.sidewalkUpdate(sidewalkUpdate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -512,7 +512,7 @@ public open class CfnPartnerAccount(
      * @param sidewalkUpdate Sidewalk update. 
      */
     override fun sidewalkUpdate(sidewalkUpdate: SidewalkUpdateAccountProperty) {
-      cdkBuilder.sidewalkUpdate(sidewalkUpdate.let(SidewalkUpdateAccountProperty::unwrap))
+      cdkBuilder.sidewalkUpdate(sidewalkUpdate.let(SidewalkUpdateAccountProperty.Companion::unwrap))
     }
 
     /**
@@ -535,7 +535,7 @@ public open class CfnPartnerAccount(
      * @param tags The tags are an array of key-value pairs to attach to the specified resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

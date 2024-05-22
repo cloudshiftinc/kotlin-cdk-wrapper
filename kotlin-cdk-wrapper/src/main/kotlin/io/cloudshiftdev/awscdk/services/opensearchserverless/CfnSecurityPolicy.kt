@@ -52,8 +52,8 @@ public open class CfnSecurityPolicy(
     id: String,
     props: CfnSecurityPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.opensearchserverless.CfnSecurityPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSecurityPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.opensearchserverless.CfnSecurityPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSecurityPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -81,7 +81,7 @@ public open class CfnSecurityPolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

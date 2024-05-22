@@ -8,11 +8,11 @@ public open class DependencyGroup(
   cdkObject: software.constructs.DependencyGroup,
 ) : CdkObject(cdkObject), IDependable {
   public constructor(deps: IDependable) :
-      this(software.constructs.DependencyGroup(deps.let(IDependable::unwrap))
+      this(software.constructs.DependencyGroup(deps.let(IDependable.Companion::unwrap))
   )
 
   public open fun add(scopes: IDependable) {
-    unwrap(this).add(scopes.let(IDependable::unwrap))
+    unwrap(this).add(scopes.let(IDependable.Companion::unwrap))
   }
 
   public companion object {

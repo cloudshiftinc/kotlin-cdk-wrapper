@@ -248,7 +248,7 @@ public interface CfnSolutionProps {
      * false (the default), Amazon Personalize uses `recipeArn` for training.
      */
     override fun performAutoMl(performAutoMl: IResolvable) {
-      cdkBuilder.performAutoMl(performAutoMl.let(IResolvable::unwrap))
+      cdkBuilder.performAutoMl(performAutoMl.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -264,7 +264,7 @@ public interface CfnSolutionProps {
      * The default is `false` .
      */
     override fun performHpo(performHpo: IResolvable) {
-      cdkBuilder.performHpo(performHpo.let(IResolvable::unwrap))
+      cdkBuilder.performHpo(performHpo.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -279,14 +279,14 @@ public interface CfnSolutionProps {
      * @param solutionConfig Describes the configuration properties for the solution.
      */
     override fun solutionConfig(solutionConfig: IResolvable) {
-      cdkBuilder.solutionConfig(solutionConfig.let(IResolvable::unwrap))
+      cdkBuilder.solutionConfig(solutionConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param solutionConfig Describes the configuration properties for the solution.
      */
     override fun solutionConfig(solutionConfig: CfnSolution.SolutionConfigProperty) {
-      cdkBuilder.solutionConfig(solutionConfig.let(CfnSolution.SolutionConfigProperty::unwrap))
+      cdkBuilder.solutionConfig(solutionConfig.let(CfnSolution.SolutionConfigProperty.Companion::unwrap))
     }
 
     /**

@@ -48,8 +48,8 @@ public open class BucketPolicy(
     id: String,
     props: BucketPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.s3.BucketPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(BucketPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.s3.BucketPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(BucketPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -65,7 +65,7 @@ public open class BucketPolicy(
    * @param removalPolicy the RemovalPolicy to set. 
    */
   public override fun applyRemovalPolicy(removalPolicy: RemovalPolicy) {
-    unwrap(this).applyRemovalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+    unwrap(this).applyRemovalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
   }
 
   /**
@@ -116,7 +116,7 @@ public open class BucketPolicy(
      * @param bucket The Amazon S3 bucket that the policy applies to. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -127,7 +127,7 @@ public open class BucketPolicy(
      * @param removalPolicy Policy to apply when the policy is removed from this stack. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.s3.BucketPolicy = cdkBuilder.build()
@@ -135,7 +135,7 @@ public open class BucketPolicy(
 
   public companion object {
     public fun fromCfnBucketPolicy(cfnBucketPolicy: CfnBucketPolicy): BucketPolicy =
-        software.amazon.awscdk.services.s3.BucketPolicy.fromCfnBucketPolicy(cfnBucketPolicy.let(CfnBucketPolicy::unwrap)).let(BucketPolicy::wrap)
+        software.amazon.awscdk.services.s3.BucketPolicy.fromCfnBucketPolicy(cfnBucketPolicy.let(CfnBucketPolicy.Companion::unwrap)).let(BucketPolicy::wrap)
 
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,

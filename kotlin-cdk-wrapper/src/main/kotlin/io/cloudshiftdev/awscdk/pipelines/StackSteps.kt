@@ -106,7 +106,7 @@ public interface StackSteps {
      * @param changeSet Steps that execute after stack is prepared but before stack is deployed.
      */
     override fun changeSet(changeSet: List<Step>) {
-      cdkBuilder.changeSet(changeSet.map(Step::unwrap))
+      cdkBuilder.changeSet(changeSet.map(Step.Companion::unwrap))
     }
 
     /**
@@ -118,7 +118,7 @@ public interface StackSteps {
      * @param post Steps that execute after stack is deployed.
      */
     override fun post(post: List<Step>) {
-      cdkBuilder.post(post.map(Step::unwrap))
+      cdkBuilder.post(post.map(Step.Companion::unwrap))
     }
 
     /**
@@ -130,7 +130,7 @@ public interface StackSteps {
      * @param pre Steps that execute before stack is prepared.
      */
     override fun pre(pre: List<Step>) {
-      cdkBuilder.pre(pre.map(Step::unwrap))
+      cdkBuilder.pre(pre.map(Step.Companion::unwrap))
     }
 
     /**
@@ -142,7 +142,7 @@ public interface StackSteps {
      * @param stack The stack you want the steps to run in. 
      */
     override fun stack(stack: Stack) {
-      cdkBuilder.stack(stack.let(Stack::unwrap))
+      cdkBuilder.stack(stack.let(Stack.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.pipelines.StackSteps = cdkBuilder.build()

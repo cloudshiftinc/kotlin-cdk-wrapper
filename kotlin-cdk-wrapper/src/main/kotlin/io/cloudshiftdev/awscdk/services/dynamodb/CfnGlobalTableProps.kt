@@ -44,6 +44,9 @@ import kotlin.jvm.JvmName
  * .contributorInsightsSpecification(ContributorInsightsSpecificationProperty.builder()
  * .enabled(false)
  * .build())
+ * .readOnDemandThroughputSettings(ReadOnDemandThroughputSettingsProperty.builder()
+ * .maxReadRequestUnits(123)
+ * .build())
  * .readProvisionedThroughputSettings(ReadProvisionedThroughputSettingsProperty.builder()
  * .readCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty.builder()
  * .maxCapacity(123)
@@ -68,6 +71,9 @@ import kotlin.jvm.JvmName
  * .build())
  * .pointInTimeRecoverySpecification(PointInTimeRecoverySpecificationProperty.builder()
  * .pointInTimeRecoveryEnabled(false)
+ * .build())
+ * .readOnDemandThroughputSettings(ReadOnDemandThroughputSettingsProperty.builder()
+ * .maxReadRequestUnits(123)
  * .build())
  * .readProvisionedThroughputSettings(ReadProvisionedThroughputSettingsProperty.builder()
  * .readCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty.builder()
@@ -115,6 +121,9 @@ import kotlin.jvm.JvmName
  * .projectionType("projectionType")
  * .build())
  * // the properties below are optional
+ * .writeOnDemandThroughputSettings(WriteOnDemandThroughputSettingsProperty.builder()
+ * .maxWriteRequestUnits(123)
+ * .build())
  * .writeProvisionedThroughputSettings(WriteProvisionedThroughputSettingsProperty.builder()
  * .writeCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty.builder()
  * .maxCapacity(123)
@@ -155,6 +164,9 @@ import kotlin.jvm.JvmName
  * .enabled(false)
  * // the properties below are optional
  * .attributeName("attributeName")
+ * .build())
+ * .writeOnDemandThroughputSettings(WriteOnDemandThroughputSettingsProperty.builder()
+ * .maxWriteRequestUnits(123)
  * .build())
  * .writeProvisionedThroughputSettings(WriteProvisionedThroughputSettingsProperty.builder()
  * .writeCapacityAutoScalingSettings(CapacityAutoScalingSettingsProperty.builder()
@@ -307,6 +319,12 @@ public interface CfnGlobalTableProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-timetolivespecification)
    */
   public fun timeToLiveSpecification(): Any? = unwrap(this).getTimeToLiveSpecification()
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-writeondemandthroughputsettings)
+   */
+  public fun writeOnDemandThroughputSettings(): Any? =
+      unwrap(this).getWriteOnDemandThroughputSettings()
 
   /**
    * Specifies an auto scaling policy for write capacity.
@@ -589,6 +607,25 @@ public interface CfnGlobalTableProps {
         fun timeToLiveSpecification(timeToLiveSpecification: CfnGlobalTable.TimeToLiveSpecificationProperty.Builder.() -> Unit)
 
     /**
+     * @param writeOnDemandThroughputSettings the value to be set.
+     */
+    public fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: IResolvable)
+
+    /**
+     * @param writeOnDemandThroughputSettings the value to be set.
+     */
+    public
+        fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: CfnGlobalTable.WriteOnDemandThroughputSettingsProperty)
+
+    /**
+     * @param writeOnDemandThroughputSettings the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("03ff940b187afcc4d415dbd175d3418a96cc698bd2755a5821b65ea8f65b9834")
+    public
+        fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: CfnGlobalTable.WriteOnDemandThroughputSettingsProperty.Builder.() -> Unit)
+
+    /**
      * @param writeProvisionedThroughputSettings Specifies an auto scaling policy for write
      * capacity.
      * This policy will be applied to all replicas. This setting must be specified if `BillingMode`
@@ -626,7 +663,7 @@ public interface CfnGlobalTableProps {
      * table and indexes. 
      */
     override fun attributeDefinitions(attributeDefinitions: IResolvable) {
-      cdkBuilder.attributeDefinitions(attributeDefinitions.let(IResolvable::unwrap))
+      cdkBuilder.attributeDefinitions(attributeDefinitions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -670,7 +707,7 @@ public interface CfnGlobalTableProps {
      * index that has been added. In that case, you will need to delete the index manually.
      */
     override fun globalSecondaryIndexes(globalSecondaryIndexes: IResolvable) {
-      cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes.let(IResolvable::unwrap))
+      cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -706,7 +743,7 @@ public interface CfnGlobalTableProps {
      * property.
      */
     override fun keySchema(keySchema: IResolvable) {
-      cdkBuilder.keySchema(keySchema.let(IResolvable::unwrap))
+      cdkBuilder.keySchema(keySchema.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -732,7 +769,7 @@ public interface CfnGlobalTableProps {
      * will have the same local secondary index settings.
      */
     override fun localSecondaryIndexes(localSecondaryIndexes: IResolvable) {
-      cdkBuilder.localSecondaryIndexes(localSecondaryIndexes.let(IResolvable::unwrap))
+      cdkBuilder.localSecondaryIndexes(localSecondaryIndexes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -775,7 +812,7 @@ public interface CfnGlobalTableProps {
      * replicas after table creation, but you can only add or remove a single replica in each update.
      */
     override fun replicas(replicas: IResolvable) {
-      cdkBuilder.replicas(replicas.let(IResolvable::unwrap))
+      cdkBuilder.replicas(replicas.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -831,7 +868,7 @@ public interface CfnGlobalTableProps {
      * property.
      */
     override fun sseSpecification(sseSpecification: IResolvable) {
-      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -841,7 +878,7 @@ public interface CfnGlobalTableProps {
      * property.
      */
     override fun sseSpecification(sseSpecification: CfnGlobalTable.SSESpecificationProperty) {
-      cdkBuilder.sseSpecification(sseSpecification.let(CfnGlobalTable.SSESpecificationProperty::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(CfnGlobalTable.SSESpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -862,7 +899,7 @@ public interface CfnGlobalTableProps {
      * replica. You can only change the streams settings if your global table has only one replica.
      */
     override fun streamSpecification(streamSpecification: IResolvable) {
-      cdkBuilder.streamSpecification(streamSpecification.let(IResolvable::unwrap))
+      cdkBuilder.streamSpecification(streamSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -872,7 +909,7 @@ public interface CfnGlobalTableProps {
      */
     override
         fun streamSpecification(streamSpecification: CfnGlobalTable.StreamSpecificationProperty) {
-      cdkBuilder.streamSpecification(streamSpecification.let(CfnGlobalTable.StreamSpecificationProperty::unwrap))
+      cdkBuilder.streamSpecification(streamSpecification.let(CfnGlobalTable.StreamSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -906,7 +943,7 @@ public interface CfnGlobalTableProps {
      * This setting will be applied to all replicas.
      */
     override fun timeToLiveSpecification(timeToLiveSpecification: IResolvable) {
-      cdkBuilder.timeToLiveSpecification(timeToLiveSpecification.let(IResolvable::unwrap))
+      cdkBuilder.timeToLiveSpecification(timeToLiveSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -915,7 +952,7 @@ public interface CfnGlobalTableProps {
      */
     override
         fun timeToLiveSpecification(timeToLiveSpecification: CfnGlobalTable.TimeToLiveSpecificationProperty) {
-      cdkBuilder.timeToLiveSpecification(timeToLiveSpecification.let(CfnGlobalTable.TimeToLiveSpecificationProperty::unwrap))
+      cdkBuilder.timeToLiveSpecification(timeToLiveSpecification.let(CfnGlobalTable.TimeToLiveSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -930,6 +967,31 @@ public interface CfnGlobalTableProps {
         timeToLiveSpecification(CfnGlobalTable.TimeToLiveSpecificationProperty(timeToLiveSpecification))
 
     /**
+     * @param writeOnDemandThroughputSettings the value to be set.
+     */
+    override fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: IResolvable) {
+      cdkBuilder.writeOnDemandThroughputSettings(writeOnDemandThroughputSettings.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param writeOnDemandThroughputSettings the value to be set.
+     */
+    override
+        fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: CfnGlobalTable.WriteOnDemandThroughputSettingsProperty) {
+      cdkBuilder.writeOnDemandThroughputSettings(writeOnDemandThroughputSettings.let(CfnGlobalTable.WriteOnDemandThroughputSettingsProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param writeOnDemandThroughputSettings the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("03ff940b187afcc4d415dbd175d3418a96cc698bd2755a5821b65ea8f65b9834")
+    override
+        fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: CfnGlobalTable.WriteOnDemandThroughputSettingsProperty.Builder.() -> Unit):
+        Unit =
+        writeOnDemandThroughputSettings(CfnGlobalTable.WriteOnDemandThroughputSettingsProperty(writeOnDemandThroughputSettings))
+
+    /**
      * @param writeProvisionedThroughputSettings Specifies an auto scaling policy for write
      * capacity.
      * This policy will be applied to all replicas. This setting must be specified if `BillingMode`
@@ -937,7 +999,7 @@ public interface CfnGlobalTableProps {
      */
     override
         fun writeProvisionedThroughputSettings(writeProvisionedThroughputSettings: IResolvable) {
-      cdkBuilder.writeProvisionedThroughputSettings(writeProvisionedThroughputSettings.let(IResolvable::unwrap))
+      cdkBuilder.writeProvisionedThroughputSettings(writeProvisionedThroughputSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -948,7 +1010,7 @@ public interface CfnGlobalTableProps {
      */
     override
         fun writeProvisionedThroughputSettings(writeProvisionedThroughputSettings: CfnGlobalTable.WriteProvisionedThroughputSettingsProperty) {
-      cdkBuilder.writeProvisionedThroughputSettings(writeProvisionedThroughputSettings.let(CfnGlobalTable.WriteProvisionedThroughputSettingsProperty::unwrap))
+      cdkBuilder.writeProvisionedThroughputSettings(writeProvisionedThroughputSettings.let(CfnGlobalTable.WriteProvisionedThroughputSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -1101,6 +1163,12 @@ public interface CfnGlobalTableProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-timetolivespecification)
      */
     override fun timeToLiveSpecification(): Any? = unwrap(this).getTimeToLiveSpecification()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-writeondemandthroughputsettings)
+     */
+    override fun writeOnDemandThroughputSettings(): Any? =
+        unwrap(this).getWriteOnDemandThroughputSettings()
 
     /**
      * Specifies an auto scaling policy for write capacity.

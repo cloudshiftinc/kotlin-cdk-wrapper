@@ -145,7 +145,7 @@ public interface IUserPool : IResource {
      */
     override fun addClient(id: String, options: UserPoolClientOptions): UserPoolClient =
         unwrap(this).addClient(id,
-        options.let(UserPoolClientOptions::unwrap)).let(UserPoolClient::wrap)
+        options.let(UserPoolClientOptions.Companion::unwrap)).let(UserPoolClient::wrap)
 
     /**
      * Add a new app client to this user pool.
@@ -168,7 +168,7 @@ public interface IUserPool : IResource {
      */
     override fun addDomain(id: String, options: UserPoolDomainOptions): UserPoolDomain =
         unwrap(this).addDomain(id,
-        options.let(UserPoolDomainOptions::unwrap)).let(UserPoolDomain::wrap)
+        options.let(UserPoolDomainOptions.Companion::unwrap)).let(UserPoolDomain::wrap)
 
     /**
      * Associate a domain to this user pool.
@@ -191,7 +191,7 @@ public interface IUserPool : IResource {
      */
     override fun addResourceServer(id: String, options: UserPoolResourceServerOptions):
         UserPoolResourceServer = unwrap(this).addResourceServer(id,
-        options.let(UserPoolResourceServerOptions::unwrap)).let(UserPoolResourceServer::wrap)
+        options.let(UserPoolResourceServerOptions.Companion::unwrap)).let(UserPoolResourceServer::wrap)
 
     /**
      * Add a new resource server to this user pool.
@@ -220,7 +220,7 @@ public interface IUserPool : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -242,7 +242,7 @@ public interface IUserPool : IResource {
      * @param actions 
      */
     override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-        unwrap(this).grant(grantee.let(IGrantable::unwrap),
+        unwrap(this).grant(grantee.let(IGrantable.Companion::unwrap),
         *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
     /**
@@ -259,7 +259,7 @@ public interface IUserPool : IResource {
      * @param provider 
      */
     override fun registerIdentityProvider(provider: IUserPoolIdentityProvider) {
-      unwrap(this).registerIdentityProvider(provider.let(IUserPoolIdentityProvider::unwrap))
+      unwrap(this).registerIdentityProvider(provider.let(IUserPoolIdentityProvider.Companion::unwrap))
     }
 
     /**

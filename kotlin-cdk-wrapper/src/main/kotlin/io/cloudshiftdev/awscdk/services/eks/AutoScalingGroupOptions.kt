@@ -131,7 +131,7 @@ public interface AutoScalingGroupOptions {
      * @param bootstrapOptions Allows options for node bootstrapping through EC2 user data.
      */
     override fun bootstrapOptions(bootstrapOptions: BootstrapOptions) {
-      cdkBuilder.bootstrapOptions(bootstrapOptions.let(BootstrapOptions::unwrap))
+      cdkBuilder.bootstrapOptions(bootstrapOptions.let(BootstrapOptions.Companion::unwrap))
     }
 
     /**
@@ -146,7 +146,7 @@ public interface AutoScalingGroupOptions {
      * @param machineImageType Allow options to specify different machine image type.
      */
     override fun machineImageType(machineImageType: MachineImageType) {
-      cdkBuilder.machineImageType(machineImageType.let(MachineImageType::unwrap))
+      cdkBuilder.machineImageType(machineImageType.let(MachineImageType.Companion::unwrap))
     }
 
     /**

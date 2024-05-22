@@ -22,7 +22,7 @@ public open class NodeProxyAgentLayer(
   cdkObject: software.amazon.awscdk.lambda.layer.node.proxy.agent.NodeProxyAgentLayer,
 ) : LayerVersion(cdkObject) {
   public constructor(scope: Construct, id: String) :
-      this(software.amazon.awscdk.lambda.layer.node.proxy.agent.NodeProxyAgentLayer(scope.let(Construct::unwrap),
+      this(software.amazon.awscdk.lambda.layer.node.proxy.agent.NodeProxyAgentLayer(scope.let(Construct.Companion::unwrap),
       id)
   )
 

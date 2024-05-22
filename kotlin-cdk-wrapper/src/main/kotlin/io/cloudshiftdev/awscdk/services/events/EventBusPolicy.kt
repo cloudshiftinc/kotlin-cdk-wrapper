@@ -49,8 +49,8 @@ public open class EventBusPolicy(
     id: String,
     props: EventBusPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.events.EventBusPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EventBusPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.events.EventBusPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EventBusPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -110,7 +110,7 @@ public open class EventBusPolicy(
      * @param eventBus The event bus to which the policy applies. 
      */
     override fun eventBus(eventBus: IEventBus) {
-      cdkBuilder.eventBus(eventBus.let(IEventBus::unwrap))
+      cdkBuilder.eventBus(eventBus.let(IEventBus.Companion::unwrap))
     }
 
     /**
@@ -119,7 +119,7 @@ public open class EventBusPolicy(
      * @param statement An IAM Policy Statement to apply to the Event Bus. 
      */
     override fun statement(statement: PolicyStatement) {
-      cdkBuilder.statement(statement.let(PolicyStatement::unwrap))
+      cdkBuilder.statement(statement.let(PolicyStatement.Companion::unwrap))
     }
 
     /**

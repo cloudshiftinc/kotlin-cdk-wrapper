@@ -264,7 +264,7 @@ public interface CfnSecurityProfileProps {
      * access to resources in Amazon Connect.
      */
     override fun allowedAccessControlTags(allowedAccessControlTags: IResolvable) {
-      cdkBuilder.allowedAccessControlTags(allowedAccessControlTags.let(IResolvable::unwrap))
+      cdkBuilder.allowedAccessControlTags(allowedAccessControlTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -287,7 +287,7 @@ public interface CfnSecurityProfileProps {
      * access to.
      */
     override fun applications(applications: IResolvable) {
-      cdkBuilder.applications(applications.let(IResolvable::unwrap))
+      cdkBuilder.applications(applications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -378,7 +378,7 @@ public interface CfnSecurityProfileProps {
      * For example, { "Tags": {"key1":"value1", "key2":"value2"} }.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

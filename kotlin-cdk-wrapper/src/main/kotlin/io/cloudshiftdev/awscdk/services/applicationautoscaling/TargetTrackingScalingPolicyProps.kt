@@ -131,7 +131,7 @@ public interface TargetTrackingScalingPolicyProps : BasicTargetTrackingScalingPo
      * Exactly one of customMetric or predefinedMetric must be specified.
      */
     override fun customMetric(customMetric: IMetric) {
-      cdkBuilder.customMetric(customMetric.let(IMetric::unwrap))
+      cdkBuilder.customMetric(customMetric.let(IMetric.Companion::unwrap))
     }
 
     /**
@@ -160,7 +160,7 @@ public interface TargetTrackingScalingPolicyProps : BasicTargetTrackingScalingPo
      * Exactly one of customMetric or predefinedMetric must be specified.
      */
     override fun predefinedMetric(predefinedMetric: PredefinedMetric) {
-      cdkBuilder.predefinedMetric(predefinedMetric.let(PredefinedMetric::unwrap))
+      cdkBuilder.predefinedMetric(predefinedMetric.let(PredefinedMetric.Companion::unwrap))
     }
 
     /**
@@ -179,7 +179,7 @@ public interface TargetTrackingScalingPolicyProps : BasicTargetTrackingScalingPo
      * activity can start.
      */
     override fun scaleInCooldown(scaleInCooldown: Duration) {
-      cdkBuilder.scaleInCooldown(scaleInCooldown.let(Duration::unwrap))
+      cdkBuilder.scaleInCooldown(scaleInCooldown.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -187,14 +187,14 @@ public interface TargetTrackingScalingPolicyProps : BasicTargetTrackingScalingPo
      * activity can start.
      */
     override fun scaleOutCooldown(scaleOutCooldown: Duration) {
-      cdkBuilder.scaleOutCooldown(scaleOutCooldown.let(Duration::unwrap))
+      cdkBuilder.scaleOutCooldown(scaleOutCooldown.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param scalingTarget the value to be set. 
      */
     override fun scalingTarget(scalingTarget: IScalableTarget) {
-      cdkBuilder.scalingTarget(scalingTarget.let(IScalableTarget::unwrap))
+      cdkBuilder.scalingTarget(scalingTarget.let(IScalableTarget.Companion::unwrap))
     }
 
     /**

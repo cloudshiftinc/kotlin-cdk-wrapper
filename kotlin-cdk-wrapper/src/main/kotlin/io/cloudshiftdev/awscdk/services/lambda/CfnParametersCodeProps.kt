@@ -78,7 +78,7 @@ public interface CfnParametersCodeProps {
      * Must be of type 'String'.
      */
     override fun bucketNameParam(bucketNameParam: CfnParameter) {
-      cdkBuilder.bucketNameParam(bucketNameParam.let(CfnParameter::unwrap))
+      cdkBuilder.bucketNameParam(bucketNameParam.let(CfnParameter.Companion::unwrap))
     }
 
     /**
@@ -87,7 +87,7 @@ public interface CfnParametersCodeProps {
      * Must be of type 'String'.
      */
     override fun objectKeyParam(objectKeyParam: CfnParameter) {
-      cdkBuilder.objectKeyParam(objectKeyParam.let(CfnParameter::unwrap))
+      cdkBuilder.objectKeyParam(objectKeyParam.let(CfnParameter.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lambda.CfnParametersCodeProps =

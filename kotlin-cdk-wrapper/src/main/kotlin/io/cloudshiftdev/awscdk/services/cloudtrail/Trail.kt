@@ -42,7 +42,7 @@ public open class Trail(
   cdkObject: software.amazon.awscdk.services.cloudtrail.Trail,
 ) : Resource(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.cloudtrail.Trail(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.cloudtrail.Trail(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -51,8 +51,8 @@ public open class Trail(
     id: String,
     props: TrailProps,
   ) :
-      this(software.amazon.awscdk.services.cloudtrail.Trail(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(TrailProps::unwrap))
+      this(software.amazon.awscdk.services.cloudtrail.Trail(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(TrailProps.Companion::unwrap))
   )
 
   public constructor(
@@ -83,7 +83,7 @@ public open class Trail(
    */
   public open fun addEventSelector(dataResourceType: DataResourceType,
       dataResourceValues: List<String>) {
-    unwrap(this).addEventSelector(dataResourceType.let(DataResourceType::unwrap),
+    unwrap(this).addEventSelector(dataResourceType.let(DataResourceType.Companion::unwrap),
         dataResourceValues)
   }
 
@@ -111,8 +111,8 @@ public open class Trail(
     dataResourceValues: List<String>,
     options: AddEventSelectorOptions,
   ) {
-    unwrap(this).addEventSelector(dataResourceType.let(DataResourceType::unwrap),
-        dataResourceValues, options.let(AddEventSelectorOptions::unwrap))
+    unwrap(this).addEventSelector(dataResourceType.let(DataResourceType.Companion::unwrap),
+        dataResourceValues, options.let(AddEventSelectorOptions.Companion::unwrap))
   }
 
   /**
@@ -161,7 +161,7 @@ public open class Trail(
    * @param options the options to configure logging of management and data events.
    */
   public open fun addLambdaEventSelector(handlers: List<IFunction>) {
-    unwrap(this).addLambdaEventSelector(handlers.map(IFunction::unwrap))
+    unwrap(this).addLambdaEventSelector(handlers.map(IFunction.Companion::unwrap))
   }
 
   /**
@@ -205,8 +205,8 @@ public open class Trail(
    */
   public open fun addLambdaEventSelector(handlers: List<IFunction>,
       options: AddEventSelectorOptions) {
-    unwrap(this).addLambdaEventSelector(handlers.map(IFunction::unwrap),
-        options.let(AddEventSelectorOptions::unwrap))
+    unwrap(this).addLambdaEventSelector(handlers.map(IFunction.Companion::unwrap),
+        options.let(AddEventSelectorOptions.Companion::unwrap))
   }
 
   /**
@@ -251,7 +251,7 @@ public open class Trail(
    * @param options the options to configure logging of management and data events.
    */
   public open fun addS3EventSelector(s3Selector: List<S3EventSelector>) {
-    unwrap(this).addS3EventSelector(s3Selector.map(S3EventSelector::unwrap))
+    unwrap(this).addS3EventSelector(s3Selector.map(S3EventSelector.Companion::unwrap))
   }
 
   /**
@@ -293,8 +293,8 @@ public open class Trail(
    */
   public open fun addS3EventSelector(s3Selector: List<S3EventSelector>,
       options: AddEventSelectorOptions) {
-    unwrap(this).addS3EventSelector(s3Selector.map(S3EventSelector::unwrap),
-        options.let(AddEventSelectorOptions::unwrap))
+    unwrap(this).addS3EventSelector(s3Selector.map(S3EventSelector.Companion::unwrap),
+        options.let(AddEventSelectorOptions.Companion::unwrap))
   }
 
   /**
@@ -341,7 +341,7 @@ public open class Trail(
    * @param options
    */
   public open fun logAllLambdaDataEvents(options: AddEventSelectorOptions) {
-    unwrap(this).logAllLambdaDataEvents(options.let(AddEventSelectorOptions::unwrap))
+    unwrap(this).logAllLambdaDataEvents(options.let(AddEventSelectorOptions.Companion::unwrap))
   }
 
   /**
@@ -378,7 +378,7 @@ public open class Trail(
    * @param options
    */
   public open fun logAllS3DataEvents(options: AddEventSelectorOptions) {
-    unwrap(this).logAllS3DataEvents(options.let(AddEventSelectorOptions::unwrap))
+    unwrap(this).logAllS3DataEvents(options.let(AddEventSelectorOptions.Companion::unwrap))
   }
 
   /**
@@ -632,7 +632,7 @@ public open class Trail(
      * @param bucket The Amazon S3 bucket. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -645,7 +645,7 @@ public open class Trail(
      * @param cloudWatchLogGroup Log Group to which CloudTrail to push logs to. 
      */
     override fun cloudWatchLogGroup(cloudWatchLogGroup: ILogGroup) {
-      cdkBuilder.cloudWatchLogGroup(cloudWatchLogGroup.let(ILogGroup::unwrap))
+      cdkBuilder.cloudWatchLogGroup(cloudWatchLogGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -658,7 +658,7 @@ public open class Trail(
      * @param cloudWatchLogsRetention How long to retain logs in CloudWatchLogs. 
      */
     override fun cloudWatchLogsRetention(cloudWatchLogsRetention: RetentionDays) {
-      cdkBuilder.cloudWatchLogsRetention(cloudWatchLogsRetention.let(RetentionDays::unwrap))
+      cdkBuilder.cloudWatchLogsRetention(cloudWatchLogsRetention.let(RetentionDays.Companion::unwrap))
     }
 
     /**
@@ -691,7 +691,7 @@ public open class Trail(
      * encrypt CloudTrail logs. 
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -720,7 +720,7 @@ public open class Trail(
      * 
      */
     override fun insightTypes(insightTypes: List<InsightType>) {
-      cdkBuilder.insightTypes(insightTypes.map(InsightType::unwrap))
+      cdkBuilder.insightTypes(insightTypes.map(InsightType.Companion::unwrap))
     }
 
     /**
@@ -790,7 +790,7 @@ public open class Trail(
      * the event matches the settings for your trails. 
      */
     override fun managementEvents(managementEvents: ReadWriteType) {
-      cdkBuilder.managementEvents(managementEvents.let(ReadWriteType::unwrap))
+      cdkBuilder.managementEvents(managementEvents.let(ReadWriteType.Companion::unwrap))
     }
 
     /**
@@ -838,7 +838,7 @@ public open class Trail(
      * @param snsTopic SNS topic that is notified when new log files are published. 
      */
     override fun snsTopic(snsTopic: ITopic) {
-      cdkBuilder.snsTopic(snsTopic.let(ITopic::unwrap))
+      cdkBuilder.snsTopic(snsTopic.let(ITopic.Companion::unwrap))
     }
 
     /**
@@ -859,7 +859,7 @@ public open class Trail(
 
   public companion object {
     public fun onEvent(scope: CloudshiftdevConstructsConstruct, id: String): Rule =
-        software.amazon.awscdk.services.cloudtrail.Trail.onEvent(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.cloudtrail.Trail.onEvent(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id).let(Rule::wrap)
 
     public fun onEvent(
@@ -867,8 +867,8 @@ public open class Trail(
       id: String,
       options: OnEventOptions,
     ): Rule =
-        software.amazon.awscdk.services.cloudtrail.Trail.onEvent(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+        software.amazon.awscdk.services.cloudtrail.Trail.onEvent(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("26c33828bad440bb6093f1c6eb92bb2fa047f5f02f6285543bf3c089a35c49d5")

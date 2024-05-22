@@ -239,7 +239,7 @@ public interface CfnRecordingConfigurationProps {
      * See the DestinationConfiguration property type for more information.
      */
     override fun destinationConfiguration(destinationConfiguration: IResolvable) {
-      cdkBuilder.destinationConfiguration(destinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.destinationConfiguration(destinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -249,7 +249,7 @@ public interface CfnRecordingConfigurationProps {
      */
     override
         fun destinationConfiguration(destinationConfiguration: CfnRecordingConfiguration.DestinationConfigurationProperty) {
-      cdkBuilder.destinationConfiguration(destinationConfiguration.let(CfnRecordingConfiguration.DestinationConfigurationProperty::unwrap))
+      cdkBuilder.destinationConfiguration(destinationConfiguration.let(CfnRecordingConfiguration.DestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -288,7 +288,7 @@ public interface CfnRecordingConfigurationProps {
      * See the RenditionConfiguration property type for more information.
      */
     override fun renditionConfiguration(renditionConfiguration: IResolvable) {
-      cdkBuilder.renditionConfiguration(renditionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.renditionConfiguration(renditionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -298,7 +298,7 @@ public interface CfnRecordingConfigurationProps {
      */
     override
         fun renditionConfiguration(renditionConfiguration: CfnRecordingConfiguration.RenditionConfigurationProperty) {
-      cdkBuilder.renditionConfiguration(renditionConfiguration.let(CfnRecordingConfiguration.RenditionConfigurationProperty::unwrap))
+      cdkBuilder.renditionConfiguration(renditionConfiguration.let(CfnRecordingConfiguration.RenditionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -320,7 +320,7 @@ public interface CfnRecordingConfigurationProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -338,7 +338,7 @@ public interface CfnRecordingConfigurationProps {
      * See the ThumbnailConfiguration property type for more information.
      */
     override fun thumbnailConfiguration(thumbnailConfiguration: IResolvable) {
-      cdkBuilder.thumbnailConfiguration(thumbnailConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.thumbnailConfiguration(thumbnailConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -349,7 +349,7 @@ public interface CfnRecordingConfigurationProps {
      */
     override
         fun thumbnailConfiguration(thumbnailConfiguration: CfnRecordingConfiguration.ThumbnailConfigurationProperty) {
-      cdkBuilder.thumbnailConfiguration(thumbnailConfiguration.let(CfnRecordingConfiguration.ThumbnailConfigurationProperty::unwrap))
+      cdkBuilder.thumbnailConfiguration(thumbnailConfiguration.let(CfnRecordingConfiguration.ThumbnailConfigurationProperty.Companion::unwrap))
     }
 
     /**

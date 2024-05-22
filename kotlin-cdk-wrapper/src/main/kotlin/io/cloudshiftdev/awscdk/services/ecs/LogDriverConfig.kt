@@ -153,7 +153,7 @@ public interface LogDriverConfig {
      * @param secretOptions The secrets to pass to the log configuration.
      */
     override fun secretOptions(secretOptions: List<CfnTaskDefinition.SecretProperty>) {
-      cdkBuilder.secretOptions(secretOptions.map(CfnTaskDefinition.SecretProperty::unwrap))
+      cdkBuilder.secretOptions(secretOptions.map(CfnTaskDefinition.SecretProperty.Companion::unwrap))
     }
 
     /**

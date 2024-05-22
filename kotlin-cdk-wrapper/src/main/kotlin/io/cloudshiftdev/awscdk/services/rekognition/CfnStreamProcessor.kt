@@ -113,8 +113,8 @@ public open class CfnStreamProcessor(
     id: String,
     props: CfnStreamProcessorProps,
   ) :
-      this(software.amazon.awscdk.services.rekognition.CfnStreamProcessor(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStreamProcessorProps::unwrap))
+      this(software.amazon.awscdk.services.rekognition.CfnStreamProcessor(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStreamProcessorProps.Companion::unwrap))
   )
 
   public constructor(
@@ -149,7 +149,7 @@ public open class CfnStreamProcessor(
    * List of BoundingBox objects, each of which denotes a region of interest on screen.
    */
   public open fun boundingBoxRegionsOfInterest(`value`: IResolvable) {
-    unwrap(this).setBoundingBoxRegionsOfInterest(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBoundingBoxRegionsOfInterest(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -174,14 +174,14 @@ public open class CfnStreamProcessor(
    * Connected home settings to use on a streaming video.
    */
   public open fun connectedHomeSettings(`value`: IResolvable) {
-    unwrap(this).setConnectedHomeSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConnectedHomeSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Connected home settings to use on a streaming video.
    */
   public open fun connectedHomeSettings(`value`: ConnectedHomeSettingsProperty) {
-    unwrap(this).setConnectedHomeSettings(`value`.let(ConnectedHomeSettingsProperty::unwrap))
+    unwrap(this).setConnectedHomeSettings(`value`.let(ConnectedHomeSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -201,14 +201,14 @@ public open class CfnStreamProcessor(
    * Allows you to opt in or opt out to share data with Rekognition to improve model performance.
    */
   public open fun dataSharingPreference(`value`: IResolvable) {
-    unwrap(this).setDataSharingPreference(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataSharingPreference(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Allows you to opt in or opt out to share data with Rekognition to improve model performance.
    */
   public open fun dataSharingPreference(`value`: DataSharingPreferenceProperty) {
-    unwrap(this).setDataSharingPreference(`value`.let(DataSharingPreferenceProperty::unwrap))
+    unwrap(this).setDataSharingPreference(`value`.let(DataSharingPreferenceProperty.Companion::unwrap))
   }
 
   /**
@@ -230,7 +230,7 @@ public open class CfnStreamProcessor(
    * Rekognition stream processor.
    */
   public open fun faceSearchSettings(`value`: IResolvable) {
-    unwrap(this).setFaceSearchSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFaceSearchSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -238,7 +238,7 @@ public open class CfnStreamProcessor(
    * Rekognition stream processor.
    */
   public open fun faceSearchSettings(`value`: FaceSearchSettingsProperty) {
-    unwrap(this).setFaceSearchSettings(`value`.let(FaceSearchSettingsProperty::unwrap))
+    unwrap(this).setFaceSearchSettings(`value`.let(FaceSearchSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -256,7 +256,7 @@ public open class CfnStreamProcessor(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -268,14 +268,14 @@ public open class CfnStreamProcessor(
    * Amazon Rekognition's Video Stream Processor takes a Kinesis video stream as input.
    */
   public open fun kinesisDataStream(`value`: IResolvable) {
-    unwrap(this).setKinesisDataStream(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKinesisDataStream(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Amazon Rekognition's Video Stream Processor takes a Kinesis video stream as input.
    */
   public open fun kinesisDataStream(`value`: KinesisDataStreamProperty) {
-    unwrap(this).setKinesisDataStream(`value`.let(KinesisDataStreamProperty::unwrap))
+    unwrap(this).setKinesisDataStream(`value`.let(KinesisDataStreamProperty.Companion::unwrap))
   }
 
   /**
@@ -297,7 +297,7 @@ public open class CfnStreamProcessor(
    * Rekognition Video stream processor.
    */
   public open fun kinesisVideoStream(`value`: IResolvable) {
-    unwrap(this).setKinesisVideoStream(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKinesisVideoStream(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -305,7 +305,7 @@ public open class CfnStreamProcessor(
    * Rekognition Video stream processor.
    */
   public open fun kinesisVideoStream(`value`: KinesisVideoStreamProperty) {
-    unwrap(this).setKinesisVideoStream(`value`.let(KinesisVideoStreamProperty::unwrap))
+    unwrap(this).setKinesisVideoStream(`value`.let(KinesisVideoStreamProperty.Companion::unwrap))
   }
 
   /**
@@ -360,7 +360,7 @@ public open class CfnStreamProcessor(
    * detection results and completion status of a video analysis operation.
    */
   public open fun notificationChannel(`value`: IResolvable) {
-    unwrap(this).setNotificationChannel(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNotificationChannel(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -368,7 +368,7 @@ public open class CfnStreamProcessor(
    * detection results and completion status of a video analysis operation.
    */
   public open fun notificationChannel(`value`: NotificationChannelProperty) {
-    unwrap(this).setNotificationChannel(`value`.let(NotificationChannelProperty::unwrap))
+    unwrap(this).setNotificationChannel(`value`.let(NotificationChannelProperty.Companion::unwrap))
   }
 
   /**
@@ -427,7 +427,7 @@ public open class CfnStreamProcessor(
    * results of a video analysis operation.
    */
   public open fun s3Destination(`value`: IResolvable) {
-    unwrap(this).setS3Destination(`value`.let(IResolvable::unwrap))
+    unwrap(this).setS3Destination(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -435,7 +435,7 @@ public open class CfnStreamProcessor(
    * results of a video analysis operation.
    */
   public open fun s3Destination(`value`: S3DestinationProperty) {
-    unwrap(this).setS3Destination(`value`.let(S3DestinationProperty::unwrap))
+    unwrap(this).setS3Destination(`value`.let(S3DestinationProperty.Companion::unwrap))
   }
 
   /**
@@ -462,7 +462,7 @@ public open class CfnStreamProcessor(
    * A set of tags (key-value pairs) that you want to attach to the stream processor.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -953,7 +953,7 @@ public open class CfnStreamProcessor(
      * region of interest on screen. 
      */
     override fun boundingBoxRegionsOfInterest(boundingBoxRegionsOfInterest: IResolvable) {
-      cdkBuilder.boundingBoxRegionsOfInterest(boundingBoxRegionsOfInterest.let(IResolvable::unwrap))
+      cdkBuilder.boundingBoxRegionsOfInterest(boundingBoxRegionsOfInterest.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -999,7 +999,7 @@ public open class CfnStreamProcessor(
      * @param connectedHomeSettings Connected home settings to use on a streaming video. 
      */
     override fun connectedHomeSettings(connectedHomeSettings: IResolvable) {
-      cdkBuilder.connectedHomeSettings(connectedHomeSettings.let(IResolvable::unwrap))
+      cdkBuilder.connectedHomeSettings(connectedHomeSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1016,7 +1016,7 @@ public open class CfnStreamProcessor(
      * @param connectedHomeSettings Connected home settings to use on a streaming video. 
      */
     override fun connectedHomeSettings(connectedHomeSettings: ConnectedHomeSettingsProperty) {
-      cdkBuilder.connectedHomeSettings(connectedHomeSettings.let(ConnectedHomeSettingsProperty::unwrap))
+      cdkBuilder.connectedHomeSettings(connectedHomeSettings.let(ConnectedHomeSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -1052,7 +1052,7 @@ public open class CfnStreamProcessor(
      * to improve model performance. 
      */
     override fun dataSharingPreference(dataSharingPreference: IResolvable) {
-      cdkBuilder.dataSharingPreference(dataSharingPreference.let(IResolvable::unwrap))
+      cdkBuilder.dataSharingPreference(dataSharingPreference.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1069,7 +1069,7 @@ public open class CfnStreamProcessor(
      * to improve model performance. 
      */
     override fun dataSharingPreference(dataSharingPreference: DataSharingPreferenceProperty) {
-      cdkBuilder.dataSharingPreference(dataSharingPreference.let(DataSharingPreferenceProperty::unwrap))
+      cdkBuilder.dataSharingPreference(dataSharingPreference.let(DataSharingPreferenceProperty.Companion::unwrap))
     }
 
     /**
@@ -1104,7 +1104,7 @@ public open class CfnStreamProcessor(
      * analyzed by an Amazon Rekognition stream processor. 
      */
     override fun faceSearchSettings(faceSearchSettings: IResolvable) {
-      cdkBuilder.faceSearchSettings(faceSearchSettings.let(IResolvable::unwrap))
+      cdkBuilder.faceSearchSettings(faceSearchSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1120,7 +1120,7 @@ public open class CfnStreamProcessor(
      * analyzed by an Amazon Rekognition stream processor. 
      */
     override fun faceSearchSettings(faceSearchSettings: FaceSearchSettingsProperty) {
-      cdkBuilder.faceSearchSettings(faceSearchSettings.let(FaceSearchSettingsProperty::unwrap))
+      cdkBuilder.faceSearchSettings(faceSearchSettings.let(FaceSearchSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -1154,7 +1154,7 @@ public open class CfnStreamProcessor(
      * stream as input. 
      */
     override fun kinesisDataStream(kinesisDataStream: IResolvable) {
-      cdkBuilder.kinesisDataStream(kinesisDataStream.let(IResolvable::unwrap))
+      cdkBuilder.kinesisDataStream(kinesisDataStream.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1170,7 +1170,7 @@ public open class CfnStreamProcessor(
      * stream as input. 
      */
     override fun kinesisDataStream(kinesisDataStream: KinesisDataStreamProperty) {
-      cdkBuilder.kinesisDataStream(kinesisDataStream.let(KinesisDataStreamProperty::unwrap))
+      cdkBuilder.kinesisDataStream(kinesisDataStream.let(KinesisDataStreamProperty.Companion::unwrap))
     }
 
     /**
@@ -1203,7 +1203,7 @@ public open class CfnStreamProcessor(
      * video for an Amazon Rekognition Video stream processor. 
      */
     override fun kinesisVideoStream(kinesisVideoStream: IResolvable) {
-      cdkBuilder.kinesisVideoStream(kinesisVideoStream.let(IResolvable::unwrap))
+      cdkBuilder.kinesisVideoStream(kinesisVideoStream.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1219,7 +1219,7 @@ public open class CfnStreamProcessor(
      * video for an Amazon Rekognition Video stream processor. 
      */
     override fun kinesisVideoStream(kinesisVideoStream: KinesisVideoStreamProperty) {
-      cdkBuilder.kinesisVideoStream(kinesisVideoStream.let(KinesisVideoStreamProperty::unwrap))
+      cdkBuilder.kinesisVideoStream(kinesisVideoStream.let(KinesisVideoStreamProperty.Companion::unwrap))
     }
 
     /**
@@ -1290,7 +1290,7 @@ public open class CfnStreamProcessor(
      * operation. 
      */
     override fun notificationChannel(notificationChannel: IResolvable) {
-      cdkBuilder.notificationChannel(notificationChannel.let(IResolvable::unwrap))
+      cdkBuilder.notificationChannel(notificationChannel.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1310,7 +1310,7 @@ public open class CfnStreamProcessor(
      * operation. 
      */
     override fun notificationChannel(notificationChannel: NotificationChannelProperty) {
-      cdkBuilder.notificationChannel(notificationChannel.let(NotificationChannelProperty::unwrap))
+      cdkBuilder.notificationChannel(notificationChannel.let(NotificationChannelProperty.Companion::unwrap))
     }
 
     /**
@@ -1389,7 +1389,7 @@ public open class CfnStreamProcessor(
      * detailed inference results of a video analysis operation. 
      */
     override fun s3Destination(s3Destination: IResolvable) {
-      cdkBuilder.s3Destination(s3Destination.let(IResolvable::unwrap))
+      cdkBuilder.s3Destination(s3Destination.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1405,7 +1405,7 @@ public open class CfnStreamProcessor(
      * detailed inference results of a video analysis operation. 
      */
     override fun s3Destination(s3Destination: S3DestinationProperty) {
-      cdkBuilder.s3Destination(s3Destination.let(S3DestinationProperty::unwrap))
+      cdkBuilder.s3Destination(s3Destination.let(S3DestinationProperty.Companion::unwrap))
     }
 
     /**
@@ -1436,7 +1436,7 @@ public open class CfnStreamProcessor(
      * @param tags A set of tags (key-value pairs) that you want to attach to the stream processor. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1877,7 +1877,7 @@ public open class CfnStreamProcessor(
        * policy. 
        */
       override fun optIn(optIn: IResolvable) {
-        cdkBuilder.optIn(optIn.let(IResolvable::unwrap))
+        cdkBuilder.optIn(optIn.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

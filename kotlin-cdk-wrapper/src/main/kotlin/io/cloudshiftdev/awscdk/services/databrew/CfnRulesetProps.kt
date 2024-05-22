@@ -170,7 +170,7 @@ public interface CfnRulesetProps {
      * @param rules Contains metadata about the ruleset. 
      */
     override fun rules(rules: IResolvable) {
-      cdkBuilder.rules(rules.let(IResolvable::unwrap))
+      cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -192,7 +192,7 @@ public interface CfnRulesetProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

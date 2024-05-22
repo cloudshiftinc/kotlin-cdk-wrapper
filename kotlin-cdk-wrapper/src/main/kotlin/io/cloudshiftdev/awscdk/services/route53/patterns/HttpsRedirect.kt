@@ -37,8 +37,8 @@ public open class HttpsRedirect(
     id: String,
     props: HttpsRedirectProps,
   ) :
-      this(software.amazon.awscdk.services.route53.patterns.HttpsRedirect(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(HttpsRedirectProps::unwrap))
+      this(software.amazon.awscdk.services.route53.patterns.HttpsRedirect(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(HttpsRedirectProps.Companion::unwrap))
   )
 
   public constructor(
@@ -133,7 +133,7 @@ public open class HttpsRedirect(
      * the CloudFront distribution that will be created. 
      */
     override fun certificate(certificate: ICertificate) {
-      cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
+      cdkBuilder.certificate(certificate.let(ICertificate.Companion::unwrap))
     }
 
     /**
@@ -184,7 +184,7 @@ public open class HttpsRedirect(
      * domain names in the hosted zone to the target domain. 
      */
     override fun zone(zone: IHostedZone) {
-      cdkBuilder.zone(zone.let(IHostedZone::unwrap))
+      cdkBuilder.zone(zone.let(IHostedZone.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.route53.patterns.HttpsRedirect =

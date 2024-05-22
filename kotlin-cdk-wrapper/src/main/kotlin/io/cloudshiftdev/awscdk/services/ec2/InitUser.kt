@@ -68,7 +68,7 @@ public open class InitUser(
 
     public fun fromName(userName: String, options: InitUserOptions): InitUser =
         software.amazon.awscdk.services.ec2.InitUser.fromName(userName,
-        options.let(InitUserOptions::unwrap)).let(InitUser::wrap)
+        options.let(InitUserOptions.Companion::unwrap)).let(InitUser::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0a26924dae7a8166afd97f6d7679d8e626cdef31a879e208222d57659d8c37f9")

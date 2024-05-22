@@ -43,13 +43,13 @@ public open class CodeBuildProject(
   cdkObject: software.amazon.awscdk.services.events.targets.CodeBuildProject,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(project: CloudshiftdevAwscdkServicesCodebuildIProject) :
-      this(software.amazon.awscdk.services.events.targets.CodeBuildProject(project.let(CloudshiftdevAwscdkServicesCodebuildIProject::unwrap))
+      this(software.amazon.awscdk.services.events.targets.CodeBuildProject(project.let(CloudshiftdevAwscdkServicesCodebuildIProject.Companion::unwrap))
   )
 
   public constructor(project: CloudshiftdevAwscdkServicesCodebuildIProject,
       props: CodeBuildProjectProps) :
-      this(software.amazon.awscdk.services.events.targets.CodeBuildProject(project.let(CloudshiftdevAwscdkServicesCodebuildIProject::unwrap),
-      props.let(CodeBuildProjectProps::unwrap))
+      this(software.amazon.awscdk.services.events.targets.CodeBuildProject(project.let(CloudshiftdevAwscdkServicesCodebuildIProject.Companion::unwrap),
+      props.let(CodeBuildProjectProps.Companion::unwrap))
   )
 
   public constructor(project: CloudshiftdevAwscdkServicesCodebuildIProject,
@@ -63,7 +63,7 @@ public open class CodeBuildProject(
    * @param _id
    */
   public override fun bind(rule: IRule): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap)).let(RuleTargetConfig::wrap)
 
   /**
    * Allows using build projects as event rule targets.
@@ -72,7 +72,7 @@ public open class CodeBuildProject(
    * @param _id
    */
   public override fun bind(rule: IRule, id: String): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap), id).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap), id).let(RuleTargetConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.events.targets.CodeBuildProject].
@@ -173,7 +173,7 @@ public open class CodeBuildProject(
      * 
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -186,7 +186,7 @@ public open class CodeBuildProject(
      * @param event The event to send to CodeBuild. 
      */
     override fun event(event: RuleTargetInput) {
-      cdkBuilder.event(event.let(RuleTargetInput::unwrap))
+      cdkBuilder.event(event.let(RuleTargetInput.Companion::unwrap))
     }
 
     /**
@@ -199,7 +199,7 @@ public open class CodeBuildProject(
      * given rule is triggered. 
      */
     override fun eventRole(eventRole: IRole) {
-      cdkBuilder.eventRole(eventRole.let(IRole::unwrap))
+      cdkBuilder.eventRole(eventRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -214,7 +214,7 @@ public open class CodeBuildProject(
      * processing. 
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**

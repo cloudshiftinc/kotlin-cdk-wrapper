@@ -193,7 +193,7 @@ public interface CfnVirtualMFADeviceProps {
      * the entire request fails and the resource is not created.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

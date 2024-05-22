@@ -95,7 +95,7 @@ public interface BaseDeploymentConfigProps : BaseDeploymentConfigOptions {
      * @param computePlatform The destination compute platform for the deployment.
      */
     override fun computePlatform(computePlatform: ComputePlatform) {
-      cdkBuilder.computePlatform(computePlatform.let(ComputePlatform::unwrap))
+      cdkBuilder.computePlatform(computePlatform.let(ComputePlatform.Companion::unwrap))
     }
 
     /**
@@ -110,7 +110,7 @@ public interface BaseDeploymentConfigProps : BaseDeploymentConfigOptions {
      * @param minimumHealthyHosts Minimum number of healthy hosts.
      */
     override fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHosts) {
-      cdkBuilder.minimumHealthyHosts(minimumHealthyHosts.let(MinimumHealthyHosts::unwrap))
+      cdkBuilder.minimumHealthyHosts(minimumHealthyHosts.let(MinimumHealthyHosts.Companion::unwrap))
     }
 
     /**
@@ -120,7 +120,7 @@ public interface BaseDeploymentConfigProps : BaseDeploymentConfigOptions {
      * deployments.
      */
     override fun trafficRouting(trafficRouting: TrafficRouting) {
-      cdkBuilder.trafficRouting(trafficRouting.let(TrafficRouting::unwrap))
+      cdkBuilder.trafficRouting(trafficRouting.let(TrafficRouting.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codedeploy.BaseDeploymentConfigProps =

@@ -283,7 +283,7 @@ public interface CfnAnomalyDetectorProps {
      * The configuration can also include the time zone to use for the metric.
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -292,7 +292,7 @@ public interface CfnAnomalyDetectorProps {
      * The configuration can also include the time zone to use for the metric.
      */
     override fun configuration(configuration: CfnAnomalyDetector.ConfigurationProperty) {
-      cdkBuilder.configuration(configuration.let(CfnAnomalyDetector.ConfigurationProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(CfnAnomalyDetector.ConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -310,7 +310,7 @@ public interface CfnAnomalyDetectorProps {
      * @param dimensions The dimensions of the metric associated with the anomaly detection band.
      */
     override fun dimensions(dimensions: IResolvable) {
-      cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+      cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -331,7 +331,7 @@ public interface CfnAnomalyDetectorProps {
      * Currently, it includes the `PeriodicSpikes` parameter.
      */
     override fun metricCharacteristics(metricCharacteristics: IResolvable) {
-      cdkBuilder.metricCharacteristics(metricCharacteristics.let(IResolvable::unwrap))
+      cdkBuilder.metricCharacteristics(metricCharacteristics.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -341,7 +341,7 @@ public interface CfnAnomalyDetectorProps {
      */
     override
         fun metricCharacteristics(metricCharacteristics: CfnAnomalyDetector.MetricCharacteristicsProperty) {
-      cdkBuilder.metricCharacteristics(metricCharacteristics.let(CfnAnomalyDetector.MetricCharacteristicsProperty::unwrap))
+      cdkBuilder.metricCharacteristics(metricCharacteristics.let(CfnAnomalyDetector.MetricCharacteristicsProperty.Companion::unwrap))
     }
 
     /**
@@ -361,7 +361,7 @@ public interface CfnAnomalyDetectorProps {
      * detector.
      */
     override fun metricMathAnomalyDetector(metricMathAnomalyDetector: IResolvable) {
-      cdkBuilder.metricMathAnomalyDetector(metricMathAnomalyDetector.let(IResolvable::unwrap))
+      cdkBuilder.metricMathAnomalyDetector(metricMathAnomalyDetector.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -370,7 +370,7 @@ public interface CfnAnomalyDetectorProps {
      */
     override
         fun metricMathAnomalyDetector(metricMathAnomalyDetector: CfnAnomalyDetector.MetricMathAnomalyDetectorProperty) {
-      cdkBuilder.metricMathAnomalyDetector(metricMathAnomalyDetector.let(CfnAnomalyDetector.MetricMathAnomalyDetectorProperty::unwrap))
+      cdkBuilder.metricMathAnomalyDetector(metricMathAnomalyDetector.let(CfnAnomalyDetector.MetricMathAnomalyDetectorProperty.Companion::unwrap))
     }
 
     /**
@@ -403,7 +403,7 @@ public interface CfnAnomalyDetectorProps {
      * detector.
      */
     override fun singleMetricAnomalyDetector(singleMetricAnomalyDetector: IResolvable) {
-      cdkBuilder.singleMetricAnomalyDetector(singleMetricAnomalyDetector.let(IResolvable::unwrap))
+      cdkBuilder.singleMetricAnomalyDetector(singleMetricAnomalyDetector.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -412,7 +412,7 @@ public interface CfnAnomalyDetectorProps {
      */
     override
         fun singleMetricAnomalyDetector(singleMetricAnomalyDetector: CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty) {
-      cdkBuilder.singleMetricAnomalyDetector(singleMetricAnomalyDetector.let(CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty::unwrap))
+      cdkBuilder.singleMetricAnomalyDetector(singleMetricAnomalyDetector.let(CfnAnomalyDetector.SingleMetricAnomalyDetectorProperty.Companion::unwrap))
     }
 
     /**

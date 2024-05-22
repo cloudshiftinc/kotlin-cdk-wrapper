@@ -62,8 +62,8 @@ public interface IInstanceEngine : IEngine {
      * @param options 
      */
     override fun bindToInstance(scope: Construct, options: InstanceEngineBindOptions):
-        InstanceEngineConfig = unwrap(this).bindToInstance(scope.let(Construct::unwrap),
-        options.let(InstanceEngineBindOptions::unwrap)).let(InstanceEngineConfig::wrap)
+        InstanceEngineConfig = unwrap(this).bindToInstance(scope.let(Construct.Companion::unwrap),
+        options.let(InstanceEngineBindOptions.Companion::unwrap)).let(InstanceEngineConfig::wrap)
 
     /**
      * Method called when the engine is used to create a new instance.

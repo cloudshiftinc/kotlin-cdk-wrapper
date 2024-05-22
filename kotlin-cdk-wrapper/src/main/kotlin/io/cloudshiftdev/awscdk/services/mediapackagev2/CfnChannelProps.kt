@@ -124,7 +124,7 @@ public interface CfnChannelProps {
      * @param tags The tags associated with the channel.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

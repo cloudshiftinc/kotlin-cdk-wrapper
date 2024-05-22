@@ -116,14 +116,14 @@ public interface CfnGraphProps {
      * [AWS::Detective::OrganizationAdmin](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-detective-organizationadmin.html)
      */
     override fun autoEnableMembers(autoEnableMembers: IResolvable) {
-      cdkBuilder.autoEnableMembers(autoEnableMembers.let(IResolvable::unwrap))
+      cdkBuilder.autoEnableMembers(autoEnableMembers.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param tags The tag values to assign to the new behavior graph.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -387,7 +387,7 @@ public interface CfnDataQualityJobDefinitionProps {
      * @param dataQualityAppSpecification Specifies the container that runs the monitoring job. 
      */
     override fun dataQualityAppSpecification(dataQualityAppSpecification: IResolvable) {
-      cdkBuilder.dataQualityAppSpecification(dataQualityAppSpecification.let(IResolvable::unwrap))
+      cdkBuilder.dataQualityAppSpecification(dataQualityAppSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -395,7 +395,7 @@ public interface CfnDataQualityJobDefinitionProps {
      */
     override
         fun dataQualityAppSpecification(dataQualityAppSpecification: CfnDataQualityJobDefinition.DataQualityAppSpecificationProperty) {
-      cdkBuilder.dataQualityAppSpecification(dataQualityAppSpecification.let(CfnDataQualityJobDefinition.DataQualityAppSpecificationProperty::unwrap))
+      cdkBuilder.dataQualityAppSpecification(dataQualityAppSpecification.let(CfnDataQualityJobDefinition.DataQualityAppSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -413,7 +413,7 @@ public interface CfnDataQualityJobDefinitionProps {
      * job.
      */
     override fun dataQualityBaselineConfig(dataQualityBaselineConfig: IResolvable) {
-      cdkBuilder.dataQualityBaselineConfig(dataQualityBaselineConfig.let(IResolvable::unwrap))
+      cdkBuilder.dataQualityBaselineConfig(dataQualityBaselineConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -422,7 +422,7 @@ public interface CfnDataQualityJobDefinitionProps {
      */
     override
         fun dataQualityBaselineConfig(dataQualityBaselineConfig: CfnDataQualityJobDefinition.DataQualityBaselineConfigProperty) {
-      cdkBuilder.dataQualityBaselineConfig(dataQualityBaselineConfig.let(CfnDataQualityJobDefinition.DataQualityBaselineConfigProperty::unwrap))
+      cdkBuilder.dataQualityBaselineConfig(dataQualityBaselineConfig.let(CfnDataQualityJobDefinition.DataQualityBaselineConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -441,7 +441,7 @@ public interface CfnDataQualityJobDefinitionProps {
      * Currently endpoints are supported as monitoring inputs.
      */
     override fun dataQualityJobInput(dataQualityJobInput: IResolvable) {
-      cdkBuilder.dataQualityJobInput(dataQualityJobInput.let(IResolvable::unwrap))
+      cdkBuilder.dataQualityJobInput(dataQualityJobInput.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -450,7 +450,7 @@ public interface CfnDataQualityJobDefinitionProps {
      */
     override
         fun dataQualityJobInput(dataQualityJobInput: CfnDataQualityJobDefinition.DataQualityJobInputProperty) {
-      cdkBuilder.dataQualityJobInput(dataQualityJobInput.let(CfnDataQualityJobDefinition.DataQualityJobInputProperty::unwrap))
+      cdkBuilder.dataQualityJobInput(dataQualityJobInput.let(CfnDataQualityJobDefinition.DataQualityJobInputProperty.Companion::unwrap))
     }
 
     /**
@@ -468,7 +468,7 @@ public interface CfnDataQualityJobDefinitionProps {
      * @param dataQualityJobOutputConfig The output configuration for monitoring jobs. 
      */
     override fun dataQualityJobOutputConfig(dataQualityJobOutputConfig: IResolvable) {
-      cdkBuilder.dataQualityJobOutputConfig(dataQualityJobOutputConfig.let(IResolvable::unwrap))
+      cdkBuilder.dataQualityJobOutputConfig(dataQualityJobOutputConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -476,7 +476,7 @@ public interface CfnDataQualityJobDefinitionProps {
      */
     override
         fun dataQualityJobOutputConfig(dataQualityJobOutputConfig: CfnDataQualityJobDefinition.MonitoringOutputConfigProperty) {
-      cdkBuilder.dataQualityJobOutputConfig(dataQualityJobOutputConfig.let(CfnDataQualityJobDefinition.MonitoringOutputConfigProperty::unwrap))
+      cdkBuilder.dataQualityJobOutputConfig(dataQualityJobOutputConfig.let(CfnDataQualityJobDefinition.MonitoringOutputConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -507,7 +507,7 @@ public interface CfnDataQualityJobDefinitionProps {
      * @param jobResources Identifies the resources to deploy for a monitoring job. 
      */
     override fun jobResources(jobResources: IResolvable) {
-      cdkBuilder.jobResources(jobResources.let(IResolvable::unwrap))
+      cdkBuilder.jobResources(jobResources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -515,7 +515,7 @@ public interface CfnDataQualityJobDefinitionProps {
      */
     override
         fun jobResources(jobResources: CfnDataQualityJobDefinition.MonitoringResourcesProperty) {
-      cdkBuilder.jobResources(jobResources.let(CfnDataQualityJobDefinition.MonitoringResourcesProperty::unwrap))
+      cdkBuilder.jobResources(jobResources.let(CfnDataQualityJobDefinition.MonitoringResourcesProperty.Companion::unwrap))
     }
 
     /**
@@ -531,14 +531,14 @@ public interface CfnDataQualityJobDefinitionProps {
      * @param networkConfig Specifies networking configuration for the monitoring job.
      */
     override fun networkConfig(networkConfig: IResolvable) {
-      cdkBuilder.networkConfig(networkConfig.let(IResolvable::unwrap))
+      cdkBuilder.networkConfig(networkConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param networkConfig Specifies networking configuration for the monitoring job.
      */
     override fun networkConfig(networkConfig: CfnDataQualityJobDefinition.NetworkConfigProperty) {
-      cdkBuilder.networkConfig(networkConfig.let(CfnDataQualityJobDefinition.NetworkConfigProperty::unwrap))
+      cdkBuilder.networkConfig(networkConfig.let(CfnDataQualityJobDefinition.NetworkConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -563,7 +563,7 @@ public interface CfnDataQualityJobDefinitionProps {
      * before stopping.
      */
     override fun stoppingCondition(stoppingCondition: IResolvable) {
-      cdkBuilder.stoppingCondition(stoppingCondition.let(IResolvable::unwrap))
+      cdkBuilder.stoppingCondition(stoppingCondition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -572,7 +572,7 @@ public interface CfnDataQualityJobDefinitionProps {
      */
     override
         fun stoppingCondition(stoppingCondition: CfnDataQualityJobDefinition.StoppingConditionProperty) {
-      cdkBuilder.stoppingCondition(stoppingCondition.let(CfnDataQualityJobDefinition.StoppingConditionProperty::unwrap))
+      cdkBuilder.stoppingCondition(stoppingCondition.let(CfnDataQualityJobDefinition.StoppingConditionProperty.Companion::unwrap))
     }
 
     /**
@@ -593,7 +593,7 @@ public interface CfnDataQualityJobDefinitionProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

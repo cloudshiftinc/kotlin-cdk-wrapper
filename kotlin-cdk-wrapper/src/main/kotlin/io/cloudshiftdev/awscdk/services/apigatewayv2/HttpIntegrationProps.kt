@@ -213,21 +213,21 @@ public interface HttpIntegrationProps {
      * @param connectionType The type of the network connection to the integration endpoint.
      */
     override fun connectionType(connectionType: HttpConnectionType) {
-      cdkBuilder.connectionType(connectionType.let(HttpConnectionType::unwrap))
+      cdkBuilder.connectionType(connectionType.let(HttpConnectionType.Companion::unwrap))
     }
 
     /**
      * @param credentials The credentials with which to invoke the integration.
      */
     override fun credentials(credentials: IntegrationCredentials) {
-      cdkBuilder.credentials(credentials.let(IntegrationCredentials::unwrap))
+      cdkBuilder.credentials(credentials.let(IntegrationCredentials.Companion::unwrap))
     }
 
     /**
      * @param httpApi The HTTP API to which this integration should be bound. 
      */
     override fun httpApi(httpApi: IHttpApi) {
-      cdkBuilder.httpApi(httpApi.let(IHttpApi::unwrap))
+      cdkBuilder.httpApi(httpApi.let(IHttpApi.Companion::unwrap))
     }
 
     /**
@@ -235,14 +235,14 @@ public interface HttpIntegrationProps {
      * Used for AWS Service integrations, specifies the target of the integration.
      */
     override fun integrationSubtype(integrationSubtype: HttpIntegrationSubtype) {
-      cdkBuilder.integrationSubtype(integrationSubtype.let(HttpIntegrationSubtype::unwrap))
+      cdkBuilder.integrationSubtype(integrationSubtype.let(HttpIntegrationSubtype.Companion::unwrap))
     }
 
     /**
      * @param integrationType Integration type. 
      */
     override fun integrationType(integrationType: HttpIntegrationType) {
-      cdkBuilder.integrationType(integrationType.let(HttpIntegrationType::unwrap))
+      cdkBuilder.integrationType(integrationType.let(HttpIntegrationType.Companion::unwrap))
     }
 
     /**
@@ -258,7 +258,7 @@ public interface HttpIntegrationProps {
      * @param method The HTTP method to use when calling the underlying HTTP proxy.
      */
     override fun method(method: HttpMethod) {
-      cdkBuilder.method(method.let(HttpMethod::unwrap))
+      cdkBuilder.method(method.let(HttpMethod.Companion::unwrap))
     }
 
     /**
@@ -266,14 +266,14 @@ public interface HttpIntegrationProps {
      * backend.
      */
     override fun parameterMapping(parameterMapping: ParameterMapping) {
-      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping::unwrap))
+      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping.Companion::unwrap))
     }
 
     /**
      * @param payloadFormatVersion The version of the payload format.
      */
     override fun payloadFormatVersion(payloadFormatVersion: PayloadFormatVersion) {
-      cdkBuilder.payloadFormatVersion(payloadFormatVersion.let(PayloadFormatVersion::unwrap))
+      cdkBuilder.payloadFormatVersion(payloadFormatVersion.let(PayloadFormatVersion.Companion::unwrap))
     }
 
     /**

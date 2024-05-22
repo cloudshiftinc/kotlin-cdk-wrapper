@@ -49,8 +49,8 @@ public open class EksCall(
     id: String,
     props: EksCallProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.EksCall(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EksCallProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EksCall(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EksCallProps.Companion::unwrap))
   )
 
   public constructor(
@@ -283,7 +283,7 @@ public open class EksCall(
      * @param cluster The EKS cluster. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -309,7 +309,7 @@ public open class EksCall(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -338,7 +338,7 @@ public open class EksCall(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -352,7 +352,7 @@ public open class EksCall(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -361,7 +361,7 @@ public open class EksCall(
      * @param httpMethod HTTP method ("GET", "POST", "PUT", ...) part of HTTP request. 
      */
     override fun httpMethod(httpMethod: HttpMethods) {
-      cdkBuilder.httpMethod(httpMethod.let(HttpMethods::unwrap))
+      cdkBuilder.httpMethod(httpMethod.let(HttpMethods.Companion::unwrap))
     }
 
     /**
@@ -406,7 +406,7 @@ public open class EksCall(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -444,7 +444,7 @@ public open class EksCall(
      * @param requestBody Request body part of HTTP request. 
      */
     override fun requestBody(requestBody: TaskInput) {
-      cdkBuilder.requestBody(requestBody.let(TaskInput::unwrap))
+      cdkBuilder.requestBody(requestBody.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -500,7 +500,7 @@ public open class EksCall(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -513,7 +513,7 @@ public open class EksCall(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.EksCall =

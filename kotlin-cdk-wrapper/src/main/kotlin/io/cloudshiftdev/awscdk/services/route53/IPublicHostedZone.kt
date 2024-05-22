@@ -34,7 +34,7 @@ public interface IPublicHostedZone : IHostedZone {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -55,7 +55,7 @@ public interface IPublicHostedZone : IHostedZone {
      * @param grantee 
      */
     override fun grantDelegation(grantee: IGrantable): Grant =
-        unwrap(this).grantDelegation(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantDelegation(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * ARN of this hosted zone, such as arn:${Partition}:route53:::hostedzone/${Id}.

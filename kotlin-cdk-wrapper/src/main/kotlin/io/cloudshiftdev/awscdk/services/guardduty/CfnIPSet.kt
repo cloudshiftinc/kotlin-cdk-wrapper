@@ -54,8 +54,8 @@ public open class CfnIPSet(
     id: String,
     props: CfnIPSetProps,
   ) :
-      this(software.amazon.awscdk.services.guardduty.CfnIPSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnIPSetProps::unwrap))
+      this(software.amazon.awscdk.services.guardduty.CfnIPSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnIPSetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -81,7 +81,7 @@ public open class CfnIPSet(
    * Indicates whether or not GuardDuty uses the `IPSet` .
    */
   public open fun activate(`value`: IResolvable) {
-    unwrap(this).setActivate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setActivate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -119,7 +119,7 @@ public open class CfnIPSet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -161,7 +161,7 @@ public open class CfnIPSet(
    * The tags to be added to a new IP set resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -278,7 +278,7 @@ public open class CfnIPSet(
      * @param activate Indicates whether or not GuardDuty uses the `IPSet` . 
      */
     override fun activate(activate: IResolvable) {
-      cdkBuilder.activate(activate.let(IResolvable::unwrap))
+      cdkBuilder.activate(activate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -337,7 +337,7 @@ public open class CfnIPSet(
      * @param tags The tags to be added to a new IP set resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

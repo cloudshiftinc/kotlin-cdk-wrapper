@@ -43,8 +43,8 @@ public open class Method(
     id: String,
     props: MethodProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.Method(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(MethodProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.Method(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(MethodProps.Companion::unwrap))
   )
 
   public constructor(
@@ -64,7 +64,7 @@ public open class Method(
    * @param methodResponse 
    */
   public open fun addMethodResponse(methodResponse: MethodResponse) {
-    unwrap(this).addMethodResponse(methodResponse.let(MethodResponse::unwrap))
+    unwrap(this).addMethodResponse(methodResponse.let(MethodResponse.Companion::unwrap))
   }
 
   /**
@@ -92,7 +92,7 @@ public open class Method(
    * @param grantee the principal. 
    */
   public open fun grantExecute(grantee: IGrantable): Grant =
-      unwrap(this).grantExecute(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantExecute(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    *
@@ -123,7 +123,7 @@ public open class Method(
    * @param props
    */
   public open fun metric(metricName: String, stage: IStage): Metric =
-      unwrap(this).metric(metricName, stage.let(IStage::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, stage.let(IStage.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Returns the given named metric for this API method.
@@ -136,8 +136,8 @@ public open class Method(
     metricName: String,
     stage: IStage,
     props: MetricOptions,
-  ): Metric = unwrap(this).metric(metricName, stage.let(IStage::unwrap),
-      props.let(MetricOptions::unwrap)).let(Metric::wrap)
+  ): Metric = unwrap(this).metric(metricName, stage.let(IStage.Companion::unwrap),
+      props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Returns the given named metric for this API method.
@@ -163,7 +163,7 @@ public open class Method(
    * @param props
    */
   public open fun metricCacheHitCount(stage: IStage): Metric =
-      unwrap(this).metricCacheHitCount(stage.let(IStage::unwrap)).let(Metric::wrap)
+      unwrap(this).metricCacheHitCount(stage.let(IStage.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of requests served from the API cache in a given period.
@@ -174,8 +174,8 @@ public open class Method(
    * @param props
    */
   public open fun metricCacheHitCount(stage: IStage, props: MetricOptions): Metric =
-      unwrap(this).metricCacheHitCount(stage.let(IStage::unwrap),
-      props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricCacheHitCount(stage.let(IStage.Companion::unwrap),
+      props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of requests served from the API cache in a given period.
@@ -200,7 +200,7 @@ public open class Method(
    * @param props
    */
   public open fun metricCacheMissCount(stage: IStage): Metric =
-      unwrap(this).metricCacheMissCount(stage.let(IStage::unwrap)).let(Metric::wrap)
+      unwrap(this).metricCacheMissCount(stage.let(IStage.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of requests served from the backend in a given period, when API caching
@@ -212,8 +212,8 @@ public open class Method(
    * @param props
    */
   public open fun metricCacheMissCount(stage: IStage, props: MetricOptions): Metric =
-      unwrap(this).metricCacheMissCount(stage.let(IStage::unwrap),
-      props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricCacheMissCount(stage.let(IStage.Companion::unwrap),
+      props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of requests served from the backend in a given period, when API caching
@@ -238,7 +238,7 @@ public open class Method(
    * @param props
    */
   public open fun metricClientError(stage: IStage): Metric =
-      unwrap(this).metricClientError(stage.let(IStage::unwrap)).let(Metric::wrap)
+      unwrap(this).metricClientError(stage.let(IStage.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of client-side errors captured in a given period.
@@ -249,8 +249,8 @@ public open class Method(
    * @param props
    */
   public open fun metricClientError(stage: IStage, props: MetricOptions): Metric =
-      unwrap(this).metricClientError(stage.let(IStage::unwrap),
-      props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricClientError(stage.let(IStage.Companion::unwrap),
+      props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of client-side errors captured in a given period.
@@ -274,7 +274,7 @@ public open class Method(
    * @param props
    */
   public open fun metricCount(stage: IStage): Metric =
-      unwrap(this).metricCount(stage.let(IStage::unwrap)).let(Metric::wrap)
+      unwrap(this).metricCount(stage.let(IStage.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the total number API requests in a given period.
@@ -285,8 +285,8 @@ public open class Method(
    * @param props
    */
   public open fun metricCount(stage: IStage, props: MetricOptions): Metric =
-      unwrap(this).metricCount(stage.let(IStage::unwrap),
-      props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricCount(stage.let(IStage.Companion::unwrap),
+      props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the total number API requests in a given period.
@@ -311,7 +311,7 @@ public open class Method(
    * @param props
    */
   public open fun metricIntegrationLatency(stage: IStage): Metric =
-      unwrap(this).metricIntegrationLatency(stage.let(IStage::unwrap)).let(Metric::wrap)
+      unwrap(this).metricIntegrationLatency(stage.let(IStage.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the time between when API Gateway relays a request to the backend and when it
@@ -323,8 +323,8 @@ public open class Method(
    * @param props
    */
   public open fun metricIntegrationLatency(stage: IStage, props: MetricOptions): Metric =
-      unwrap(this).metricIntegrationLatency(stage.let(IStage::unwrap),
-      props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricIntegrationLatency(stage.let(IStage.Companion::unwrap),
+      props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the time between when API Gateway relays a request to the backend and when it
@@ -352,7 +352,7 @@ public open class Method(
    * @param props
    */
   public open fun metricLatency(stage: IStage): Metric =
-      unwrap(this).metricLatency(stage.let(IStage::unwrap)).let(Metric::wrap)
+      unwrap(this).metricLatency(stage.let(IStage.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The time between when API Gateway receives a request from a client and when it returns a
@@ -366,8 +366,8 @@ public open class Method(
    * @param props
    */
   public open fun metricLatency(stage: IStage, props: MetricOptions): Metric =
-      unwrap(this).metricLatency(stage.let(IStage::unwrap),
-      props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricLatency(stage.let(IStage.Companion::unwrap),
+      props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The time between when API Gateway receives a request from a client and when it returns a
@@ -394,7 +394,7 @@ public open class Method(
    * @param props
    */
   public open fun metricServerError(stage: IStage): Metric =
-      unwrap(this).metricServerError(stage.let(IStage::unwrap)).let(Metric::wrap)
+      unwrap(this).metricServerError(stage.let(IStage.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of server-side errors captured in a given period.
@@ -405,8 +405,8 @@ public open class Method(
    * @param props
    */
   public open fun metricServerError(stage: IStage, props: MetricOptions): Metric =
-      unwrap(this).metricServerError(stage.let(IStage::unwrap),
-      props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricServerError(stage.let(IStage.Companion::unwrap),
+      props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of server-side errors captured in a given period.
@@ -522,7 +522,7 @@ public open class Method(
      * @param integration The backend system that the method calls when it receives a request. 
      */
     override fun integration(integration: Integration) {
-      cdkBuilder.integration(integration.let(Integration::unwrap))
+      cdkBuilder.integration(integration.let(Integration.Companion::unwrap))
     }
 
     /**
@@ -545,7 +545,7 @@ public open class Method(
      * @param options Method options. 
      */
     override fun options(options: MethodOptions) {
-      cdkBuilder.options(options.let(MethodOptions::unwrap))
+      cdkBuilder.options(options.let(MethodOptions.Companion::unwrap))
     }
 
     /**
@@ -569,7 +569,7 @@ public open class Method(
      * @param resource The resource this method is associated with. 
      */
     override fun resource(resource: IResource) {
-      cdkBuilder.resource(resource.let(IResource::unwrap))
+      cdkBuilder.resource(resource.let(IResource.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.Method = cdkBuilder.build()

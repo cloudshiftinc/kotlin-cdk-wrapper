@@ -196,7 +196,7 @@ public interface JobQueueProps {
      * queue.
      */
     override fun computeEnvironments(computeEnvironments: List<OrderedComputeEnvironment>) {
-      cdkBuilder.computeEnvironments(computeEnvironments.map(OrderedComputeEnvironment::unwrap))
+      cdkBuilder.computeEnvironments(computeEnvironments.map(OrderedComputeEnvironment.Companion::unwrap))
     }
 
     /**
@@ -253,7 +253,7 @@ public interface JobQueueProps {
      * Instructs the Scheduler how to schedule different jobs.
      */
     override fun schedulingPolicy(schedulingPolicy: ISchedulingPolicy) {
-      cdkBuilder.schedulingPolicy(schedulingPolicy.let(ISchedulingPolicy::unwrap))
+      cdkBuilder.schedulingPolicy(schedulingPolicy.let(ISchedulingPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.batch.JobQueueProps = cdkBuilder.build()

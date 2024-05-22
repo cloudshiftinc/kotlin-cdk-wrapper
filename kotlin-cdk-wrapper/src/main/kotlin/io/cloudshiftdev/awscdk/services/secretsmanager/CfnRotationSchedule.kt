@@ -84,8 +84,8 @@ public open class CfnRotationSchedule(
     id: String,
     props: CfnRotationScheduleProps,
   ) :
-      this(software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRotationScheduleProps::unwrap))
+      this(software.amazon.awscdk.services.secretsmanager.CfnRotationSchedule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRotationScheduleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -113,7 +113,7 @@ public open class CfnRotationSchedule(
    * . To use a rotation function that already exists, specify `RotationLambdaARN` instead.
    */
   public open fun hostedRotationLambda(`value`: IResolvable) {
-    unwrap(this).setHostedRotationLambda(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHostedRotationLambda(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -122,7 +122,7 @@ public open class CfnRotationSchedule(
    * . To use a rotation function that already exists, specify `RotationLambdaARN` instead.
    */
   public open fun hostedRotationLambda(`value`: HostedRotationLambdaProperty) {
-    unwrap(this).setHostedRotationLambda(`value`.let(HostedRotationLambdaProperty::unwrap))
+    unwrap(this).setHostedRotationLambda(`value`.let(HostedRotationLambdaProperty.Companion::unwrap))
   }
 
   /**
@@ -141,7 +141,7 @@ public open class CfnRotationSchedule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -163,7 +163,7 @@ public open class CfnRotationSchedule(
    * window.
    */
   public open fun rotateImmediatelyOnUpdate(`value`: IResolvable) {
-    unwrap(this).setRotateImmediatelyOnUpdate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRotateImmediatelyOnUpdate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -187,14 +187,14 @@ public open class CfnRotationSchedule(
    * A structure that defines the rotation configuration for this secret.
    */
   public open fun rotationRules(`value`: IResolvable) {
-    unwrap(this).setRotationRules(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRotationRules(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A structure that defines the rotation configuration for this secret.
    */
   public open fun rotationRules(`value`: RotationRulesProperty) {
-    unwrap(this).setRotationRules(`value`.let(RotationRulesProperty::unwrap))
+    unwrap(this).setRotationRules(`value`.let(RotationRulesProperty.Companion::unwrap))
   }
 
   /**
@@ -407,7 +407,7 @@ public open class CfnRotationSchedule(
      * . To use a rotation function that already exists, specify `RotationLambdaARN` instead. 
      */
     override fun hostedRotationLambda(hostedRotationLambda: IResolvable) {
-      cdkBuilder.hostedRotationLambda(hostedRotationLambda.let(IResolvable::unwrap))
+      cdkBuilder.hostedRotationLambda(hostedRotationLambda.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -426,7 +426,7 @@ public open class CfnRotationSchedule(
      * . To use a rotation function that already exists, specify `RotationLambdaARN` instead. 
      */
     override fun hostedRotationLambda(hostedRotationLambda: HostedRotationLambdaProperty) {
-      cdkBuilder.hostedRotationLambda(hostedRotationLambda.let(HostedRotationLambdaProperty::unwrap))
+      cdkBuilder.hostedRotationLambda(hostedRotationLambda.let(HostedRotationLambdaProperty.Companion::unwrap))
     }
 
     /**
@@ -499,7 +499,7 @@ public open class CfnRotationSchedule(
      * until the next scheduled rotation window. 
      */
     override fun rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate: IResolvable) {
-      cdkBuilder.rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate.let(IResolvable::unwrap))
+      cdkBuilder.rotateImmediatelyOnUpdate(rotateImmediatelyOnUpdate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -531,7 +531,7 @@ public open class CfnRotationSchedule(
      * @param rotationRules A structure that defines the rotation configuration for this secret. 
      */
     override fun rotationRules(rotationRules: IResolvable) {
-      cdkBuilder.rotationRules(rotationRules.let(IResolvable::unwrap))
+      cdkBuilder.rotationRules(rotationRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -541,7 +541,7 @@ public open class CfnRotationSchedule(
      * @param rotationRules A structure that defines the rotation configuration for this secret. 
      */
     override fun rotationRules(rotationRules: RotationRulesProperty) {
-      cdkBuilder.rotationRules(rotationRules.let(RotationRulesProperty::unwrap))
+      cdkBuilder.rotationRules(rotationRules.let(RotationRulesProperty.Companion::unwrap))
     }
 
     /**

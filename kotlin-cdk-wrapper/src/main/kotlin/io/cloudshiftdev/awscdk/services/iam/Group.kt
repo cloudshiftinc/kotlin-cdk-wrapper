@@ -33,7 +33,7 @@ public open class Group(
   cdkObject: software.amazon.awscdk.services.iam.Group,
 ) : Resource(cdkObject), IGroup {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.iam.Group(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.iam.Group(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -42,8 +42,8 @@ public open class Group(
     id: String,
     props: GroupProps,
   ) :
-      this(software.amazon.awscdk.services.iam.Group(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(GroupProps::unwrap))
+      this(software.amazon.awscdk.services.iam.Group(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(GroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -63,7 +63,7 @@ public open class Group(
    * @param policy The managed policy to attach. 
    */
   public override fun addManagedPolicy(policy: IManagedPolicy) {
-    unwrap(this).addManagedPolicy(policy.let(IManagedPolicy::unwrap))
+    unwrap(this).addManagedPolicy(policy.let(IManagedPolicy.Companion::unwrap))
   }
 
   /**
@@ -72,7 +72,7 @@ public open class Group(
    * @param statement 
    */
   public open fun addToPolicy(statement: PolicyStatement): Boolean =
-      unwrap(this).addToPolicy(statement.let(PolicyStatement::unwrap))
+      unwrap(this).addToPolicy(statement.let(PolicyStatement.Companion::unwrap))
 
   /**
    * Add to the policy of this principal.
@@ -90,7 +90,7 @@ public open class Group(
    * @param statement 
    */
   public override fun addToPrincipalPolicy(statement: PolicyStatement): AddToPrincipalPolicyResult =
-      unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement::unwrap)).let(AddToPrincipalPolicyResult::wrap)
+      unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToPrincipalPolicyResult::wrap)
 
   /**
    * Adds an IAM statement to the default policy.
@@ -108,7 +108,7 @@ public open class Group(
    * @param user 
    */
   public open fun addUser(user: IUser) {
-    unwrap(this).addUser(user.let(IUser::unwrap))
+    unwrap(this).addUser(user.let(IUser.Companion::unwrap))
   }
 
   /**
@@ -122,7 +122,7 @@ public open class Group(
    * @param policy The policy to attach. 
    */
   public override fun attachInlinePolicy(policy: Policy) {
-    unwrap(this).attachInlinePolicy(policy.let(Policy::unwrap))
+    unwrap(this).attachInlinePolicy(policy.let(Policy.Companion::unwrap))
   }
 
   /**
@@ -257,7 +257,7 @@ public open class Group(
      * @param managedPolicies A list of managed policies associated with this role. 
      */
     override fun managedPolicies(managedPolicies: List<IManagedPolicy>) {
-      cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy::unwrap))
+      cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy.Companion::unwrap))
     }
 
     /**
@@ -298,7 +298,7 @@ public open class Group(
       id: String,
       groupArn: String,
     ): IGroup =
-        software.amazon.awscdk.services.iam.Group.fromGroupArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.iam.Group.fromGroupArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, groupArn).let(IGroup::wrap)
 
     public fun fromGroupName(
@@ -306,7 +306,7 @@ public open class Group(
       id: String,
       groupName: String,
     ): IGroup =
-        software.amazon.awscdk.services.iam.Group.fromGroupName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.iam.Group.fromGroupName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, groupName).let(IGroup::wrap)
 
     public operator fun invoke(

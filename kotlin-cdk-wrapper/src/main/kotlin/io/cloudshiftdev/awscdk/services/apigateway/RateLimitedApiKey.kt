@@ -36,7 +36,7 @@ public open class RateLimitedApiKey(
   cdkObject: software.amazon.awscdk.services.apigateway.RateLimitedApiKey,
 ) : Resource(cdkObject), IApiKey {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.apigateway.RateLimitedApiKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.apigateway.RateLimitedApiKey(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -45,8 +45,8 @@ public open class RateLimitedApiKey(
     id: String,
     props: RateLimitedApiKeyProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.RateLimitedApiKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(RateLimitedApiKeyProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.RateLimitedApiKey(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(RateLimitedApiKeyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -62,7 +62,7 @@ public open class RateLimitedApiKey(
    * @param grantee The principal to grant access to. 
    */
   public open fun grantRead(grantee: IGrantable): Grant =
-      unwrap(this).grantRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Permits the IAM principal all read and write operations through this key.
@@ -70,7 +70,7 @@ public open class RateLimitedApiKey(
    * @param grantee The principal to grant access to. 
    */
   public open fun grantReadWrite(grantee: IGrantable): Grant =
-      unwrap(this).grantReadWrite(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantReadWrite(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Permits the IAM principal all write operations through this key.
@@ -78,7 +78,7 @@ public open class RateLimitedApiKey(
    * @param grantee The principal to grant access to. 
    */
   public open fun grantWrite(grantee: IGrantable): Grant =
-      unwrap(this).grantWrite(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantWrite(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The API key ARN.
@@ -359,7 +359,7 @@ public open class RateLimitedApiKey(
      * @param apiStages API Stages to be associated with the RateLimitedApiKey. 
      */
     override fun apiStages(apiStages: List<UsagePlanPerApiStage>) {
-      cdkBuilder.apiStages(apiStages.map(UsagePlanPerApiStage::unwrap))
+      cdkBuilder.apiStages(apiStages.map(UsagePlanPerApiStage.Companion::unwrap))
     }
 
     /**
@@ -395,7 +395,7 @@ public open class RateLimitedApiKey(
      * all child resources. 
      */
     override fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions) {
-      cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions::unwrap))
+      cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions.Companion::unwrap))
     }
 
     /**
@@ -424,7 +424,7 @@ public open class RateLimitedApiKey(
      * this API unless an integration is specified. 
      */
     override fun defaultIntegration(defaultIntegration: Integration) {
-      cdkBuilder.defaultIntegration(defaultIntegration.let(Integration::unwrap))
+      cdkBuilder.defaultIntegration(defaultIntegration.let(Integration.Companion::unwrap))
     }
 
     /**
@@ -451,7 +451,7 @@ public open class RateLimitedApiKey(
      * this API unless custom options are specified. 
      */
     override fun defaultMethodOptions(defaultMethodOptions: MethodOptions) {
-      cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions::unwrap))
+      cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions.Companion::unwrap))
     }
 
     /**
@@ -510,7 +510,7 @@ public open class RateLimitedApiKey(
      * @param quota Number of requests clients can make in a given time period. 
      */
     override fun quota(quota: QuotaSettings) {
-      cdkBuilder.quota(quota.let(QuotaSettings::unwrap))
+      cdkBuilder.quota(quota.let(QuotaSettings.Companion::unwrap))
     }
 
     /**
@@ -534,7 +534,7 @@ public open class RateLimitedApiKey(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun resources(resources: List<IRestApi>) {
-      cdkBuilder.resources(resources.map(IRestApi::unwrap))
+      cdkBuilder.resources(resources.map(IRestApi.Companion::unwrap))
     }
 
     /**
@@ -556,7 +556,7 @@ public open class RateLimitedApiKey(
      * @param stages A list of Stages this api key is associated with. 
      */
     override fun stages(stages: List<IStage>) {
-      cdkBuilder.stages(stages.map(IStage::unwrap))
+      cdkBuilder.stages(stages.map(IStage.Companion::unwrap))
     }
 
     /**
@@ -576,7 +576,7 @@ public open class RateLimitedApiKey(
      * @param throttle Overall throttle settings for the API. 
      */
     override fun throttle(throttle: ThrottleSettings) {
-      cdkBuilder.throttle(throttle.let(ThrottleSettings::unwrap))
+      cdkBuilder.throttle(throttle.let(ThrottleSettings.Companion::unwrap))
     }
 
     /**

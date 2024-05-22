@@ -154,7 +154,7 @@ public interface WaiterStateMachineProps {
      * @param interval The interval to wait between attempts. 
      */
     override fun interval(interval: Duration) {
-      cdkBuilder.interval(interval.let(Duration::unwrap))
+      cdkBuilder.interval(interval.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -162,14 +162,14 @@ public interface WaiterStateMachineProps {
      * 'incomplete'. 
      */
     override fun isCompleteHandler(isCompleteHandler: IFunction) {
-      cdkBuilder.isCompleteHandler(isCompleteHandler.let(IFunction::unwrap))
+      cdkBuilder.isCompleteHandler(isCompleteHandler.let(IFunction.Companion::unwrap))
     }
 
     /**
      * @param logOptions Defines what execution history events are logged and where they are logged.
      */
     override fun logOptions(logOptions: LogOptions) {
-      cdkBuilder.logOptions(logOptions.let(LogOptions::unwrap))
+      cdkBuilder.logOptions(logOptions.let(LogOptions.Companion::unwrap))
     }
 
     /**
@@ -191,7 +191,7 @@ public interface WaiterStateMachineProps {
      * @param timeoutHandler The handler to call if the waiter times out and is incomplete. 
      */
     override fun timeoutHandler(timeoutHandler: IFunction) {
-      cdkBuilder.timeoutHandler(timeoutHandler.let(IFunction::unwrap))
+      cdkBuilder.timeoutHandler(timeoutHandler.let(IFunction.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.customresources.WaiterStateMachineProps =

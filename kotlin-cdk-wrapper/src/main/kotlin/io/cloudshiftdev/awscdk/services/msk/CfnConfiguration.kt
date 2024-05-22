@@ -69,8 +69,8 @@ public open class CfnConfiguration(
     id: String,
     props: CfnConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.msk.CfnConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.msk.CfnConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -121,7 +121,7 @@ public open class CfnConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -152,14 +152,14 @@ public open class CfnConfiguration(
    * Latest revision of the configuration.
    */
   public open fun latestRevision(`value`: IResolvable) {
-    unwrap(this).setLatestRevision(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLatestRevision(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Latest revision of the configuration.
    */
   public open fun latestRevision(`value`: LatestRevisionProperty) {
-    unwrap(this).setLatestRevision(`value`.let(LatestRevisionProperty::unwrap))
+    unwrap(this).setLatestRevision(`value`.let(LatestRevisionProperty.Companion::unwrap))
   }
 
   /**
@@ -311,7 +311,7 @@ public open class CfnConfiguration(
      * @param latestRevision Latest revision of the configuration. 
      */
     override fun latestRevision(latestRevision: IResolvable) {
-      cdkBuilder.latestRevision(latestRevision.let(IResolvable::unwrap))
+      cdkBuilder.latestRevision(latestRevision.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -321,7 +321,7 @@ public open class CfnConfiguration(
      * @param latestRevision Latest revision of the configuration. 
      */
     override fun latestRevision(latestRevision: LatestRevisionProperty) {
-      cdkBuilder.latestRevision(latestRevision.let(LatestRevisionProperty::unwrap))
+      cdkBuilder.latestRevision(latestRevision.let(LatestRevisionProperty.Companion::unwrap))
     }
 
     /**

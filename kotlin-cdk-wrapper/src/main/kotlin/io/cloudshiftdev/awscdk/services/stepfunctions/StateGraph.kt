@@ -47,7 +47,7 @@ public open class StateGraph(
   cdkObject: software.amazon.awscdk.services.stepfunctions.StateGraph,
 ) : CdkObject(cdkObject) {
   public constructor(startState: State, graphDescription: String) :
-      this(software.amazon.awscdk.services.stepfunctions.StateGraph(startState.let(State::unwrap),
+      this(software.amazon.awscdk.services.stepfunctions.StateGraph(startState.let(State.Companion::unwrap),
       graphDescription)
   )
 
@@ -57,7 +57,7 @@ public open class StateGraph(
    * @param stateMachine 
    */
   public open fun bind(stateMachine: StateMachine) {
-    unwrap(this).bind(stateMachine.let(StateMachine::unwrap))
+    unwrap(this).bind(stateMachine.let(StateMachine.Companion::unwrap))
   }
 
   /**
@@ -72,7 +72,7 @@ public open class StateGraph(
    * @param statement 
    */
   public open fun registerPolicyStatement(statement: PolicyStatement) {
-    unwrap(this).registerPolicyStatement(statement.let(PolicyStatement::unwrap))
+    unwrap(this).registerPolicyStatement(statement.let(PolicyStatement.Companion::unwrap))
   }
 
   /**
@@ -93,7 +93,7 @@ public open class StateGraph(
    * @param state 
    */
   public open fun registerState(state: State) {
-    unwrap(this).registerState(state.let(State::unwrap))
+    unwrap(this).registerState(state.let(State.Companion::unwrap))
   }
 
   /**
@@ -104,7 +104,7 @@ public open class StateGraph(
    * @param graph 
    */
   public open fun registerSuperGraph(graph: StateGraph) {
-    unwrap(this).registerSuperGraph(graph.let(StateGraph::unwrap))
+    unwrap(this).registerSuperGraph(graph.let(StateGraph.Companion::unwrap))
   }
 
   /**
@@ -131,7 +131,7 @@ public open class StateGraph(
    * Default: No timeout
    */
   public open fun timeout(`value`: Duration) {
-    unwrap(this).setTimeout(`value`.let(Duration::unwrap))
+    unwrap(this).setTimeout(`value`.let(Duration.Companion::unwrap))
   }
 
   /**

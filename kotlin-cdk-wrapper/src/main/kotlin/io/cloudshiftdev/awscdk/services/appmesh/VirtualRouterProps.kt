@@ -70,7 +70,7 @@ public interface VirtualRouterProps : VirtualRouterBaseProps {
      * @param listeners Listener specification for the VirtualRouter.
      */
     override fun listeners(listeners: List<VirtualRouterListener>) {
-      cdkBuilder.listeners(listeners.map(VirtualRouterListener::unwrap))
+      cdkBuilder.listeners(listeners.map(VirtualRouterListener.Companion::unwrap))
     }
 
     /**
@@ -83,7 +83,7 @@ public interface VirtualRouterProps : VirtualRouterBaseProps {
      * @param mesh The Mesh which the VirtualRouter belongs to. 
      */
     override fun mesh(mesh: IMesh) {
-      cdkBuilder.mesh(mesh.let(IMesh::unwrap))
+      cdkBuilder.mesh(mesh.let(IMesh.Companion::unwrap))
     }
 
     /**

@@ -47,7 +47,7 @@ public open class ResolveSsmParameterAtLaunchImage(
 
   public constructor(parameterName: String, props: SsmParameterImageOptions) :
       this(software.amazon.awscdk.services.ec2.ResolveSsmParameterAtLaunchImage(parameterName,
-      props.let(SsmParameterImageOptions::unwrap))
+      props.let(SsmParameterImageOptions.Companion::unwrap))
   )
 
   public constructor(parameterName: String, props: SsmParameterImageOptions.Builder.() -> Unit) :
@@ -60,7 +60,7 @@ public open class ResolveSsmParameterAtLaunchImage(
    * @param _ 
    */
   public override fun image(`_`: Construct): MachineImageConfig =
-      unwrap(this).getImage(`_`.let(Construct::unwrap)).let(MachineImageConfig::wrap)
+      unwrap(this).getImage(`_`.let(Construct.Companion::unwrap)).let(MachineImageConfig::wrap)
 
   /**
    * Name of the SSM parameter we're looking up.
@@ -163,7 +163,7 @@ public open class ResolveSsmParameterAtLaunchImage(
      * @param os Operating system. 
      */
     override fun os(os: OperatingSystemType) {
-      cdkBuilder.os(os.let(OperatingSystemType::unwrap))
+      cdkBuilder.os(os.let(OperatingSystemType.Companion::unwrap))
     }
 
     /**
@@ -185,7 +185,7 @@ public open class ResolveSsmParameterAtLaunchImage(
      * @param userData Custom UserData. 
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.ResolveSsmParameterAtLaunchImage =

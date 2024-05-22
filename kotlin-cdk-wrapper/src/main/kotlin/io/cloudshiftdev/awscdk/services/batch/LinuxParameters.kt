@@ -36,7 +36,7 @@ public open class LinuxParameters(
   cdkObject: software.amazon.awscdk.services.batch.LinuxParameters,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.batch.LinuxParameters(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.batch.LinuxParameters(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -45,8 +45,8 @@ public open class LinuxParameters(
     id: String,
     props: LinuxParametersProps,
   ) :
-      this(software.amazon.awscdk.services.batch.LinuxParameters(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(LinuxParametersProps::unwrap))
+      this(software.amazon.awscdk.services.batch.LinuxParameters(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(LinuxParametersProps.Companion::unwrap))
   )
 
   public constructor(
@@ -201,7 +201,7 @@ public open class LinuxParameters(
      * @param maxSwap The total amount of swap memory a container can use. 
      */
     override fun maxSwap(maxSwap: Size) {
-      cdkBuilder.maxSwap(maxSwap.let(Size::unwrap))
+      cdkBuilder.maxSwap(maxSwap.let(Size.Companion::unwrap))
     }
 
     /**
@@ -212,7 +212,7 @@ public open class LinuxParameters(
      * @param sharedMemorySize The value for the size of the /dev/shm volume. 
      */
     override fun sharedMemorySize(sharedMemorySize: Size) {
-      cdkBuilder.sharedMemorySize(sharedMemorySize.let(Size::unwrap))
+      cdkBuilder.sharedMemorySize(sharedMemorySize.let(Size.Companion::unwrap))
     }
 
     /**

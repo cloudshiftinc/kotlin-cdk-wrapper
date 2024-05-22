@@ -405,7 +405,7 @@ public interface NetworkLoadBalancedEc2ServiceProps : NetworkLoadBalancedService
      */
     override
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>) {
-      cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy::unwrap))
+      cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy.Companion::unwrap))
     }
 
     /**
@@ -422,7 +422,7 @@ public interface NetworkLoadBalancedEc2ServiceProps : NetworkLoadBalancedService
      * enabled.
      */
     override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
-      cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker::unwrap))
+      cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker.Companion::unwrap))
     }
 
     /**
@@ -440,7 +440,7 @@ public interface NetworkLoadBalancedEc2ServiceProps : NetworkLoadBalancedService
      * discovery.
      */
     override fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
-      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions::unwrap))
+      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions.Companion::unwrap))
     }
 
     /**
@@ -458,7 +458,7 @@ public interface NetworkLoadBalancedEc2ServiceProps : NetworkLoadBalancedService
      * both cluster and vpc.
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -488,7 +488,7 @@ public interface NetworkLoadBalancedEc2ServiceProps : NetworkLoadBalancedService
      * Types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html)
      */
     override fun deploymentController(deploymentController: DeploymentController) {
-      cdkBuilder.deploymentController(deploymentController.let(DeploymentController::unwrap))
+      cdkBuilder.deploymentController(deploymentController.let(DeploymentController.Companion::unwrap))
     }
 
     /**
@@ -523,7 +523,7 @@ public interface NetworkLoadBalancedEc2ServiceProps : NetworkLoadBalancedService
      * @param domainZone The Route53 hosted zone for the domain, e.g. "example.com.".
      */
     override fun domainZone(domainZone: IHostedZone) {
-      cdkBuilder.domainZone(domainZone.let(IHostedZone::unwrap))
+      cdkBuilder.domainZone(domainZone.let(IHostedZone.Companion::unwrap))
     }
 
     /**
@@ -550,7 +550,7 @@ public interface NetworkLoadBalancedEc2ServiceProps : NetworkLoadBalancedService
      * started.
      */
     override fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
-      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration::unwrap))
+      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -569,7 +569,7 @@ public interface NetworkLoadBalancedEc2ServiceProps : NetworkLoadBalancedService
      * [disable-awslint:ref-via-interface]
      */
     override fun loadBalancer(loadBalancer: INetworkLoadBalancer) {
-      cdkBuilder.loadBalancer(loadBalancer.let(INetworkLoadBalancer::unwrap))
+      cdkBuilder.loadBalancer(loadBalancer.let(INetworkLoadBalancer.Companion::unwrap))
     }
 
     /**
@@ -620,7 +620,7 @@ public interface NetworkLoadBalancedEc2ServiceProps : NetworkLoadBalancedService
      * Constraints](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-constraints.html).
      */
     override fun placementConstraints(placementConstraints: List<PlacementConstraint>) {
-      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint::unwrap))
+      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint.Companion::unwrap))
     }
 
     /**
@@ -639,7 +639,7 @@ public interface NetworkLoadBalancedEc2ServiceProps : NetworkLoadBalancedService
      * Strategies](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-placement-strategies.html).
      */
     override fun placementStrategies(placementStrategies: List<PlacementStrategy>) {
-      cdkBuilder.placementStrategies(placementStrategies.map(PlacementStrategy::unwrap))
+      cdkBuilder.placementStrategies(placementStrategies.map(PlacementStrategy.Companion::unwrap))
     }
 
     /**
@@ -657,7 +657,7 @@ public interface NetworkLoadBalancedEc2ServiceProps : NetworkLoadBalancedService
      * Tags can only be propagated to the tasks within the service during service creation.
      */
     override fun propagateTags(propagateTags: PropagatedTagSource) {
-      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource.Companion::unwrap))
     }
 
     /**
@@ -673,7 +673,7 @@ public interface NetworkLoadBalancedEc2ServiceProps : NetworkLoadBalancedService
      * This is useful if you need to work with DNS systems that do not support alias records.
      */
     override fun recordType(recordType: NetworkLoadBalancedServiceRecordType) {
-      cdkBuilder.recordType(recordType.let(NetworkLoadBalancedServiceRecordType::unwrap))
+      cdkBuilder.recordType(recordType.let(NetworkLoadBalancedServiceRecordType.Companion::unwrap))
     }
 
     /**
@@ -689,7 +689,7 @@ public interface NetworkLoadBalancedEc2ServiceProps : NetworkLoadBalancedService
      * [disable-awslint:ref-via-interface]
      */
     override fun taskDefinition(taskDefinition: Ec2TaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(Ec2TaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(Ec2TaskDefinition.Companion::unwrap))
     }
 
     /**
@@ -697,7 +697,7 @@ public interface NetworkLoadBalancedEc2ServiceProps : NetworkLoadBalancedService
      * One of taskImageOptions or taskDefinition must be specified.
      */
     override fun taskImageOptions(taskImageOptions: NetworkLoadBalancedTaskImageOptions) {
-      cdkBuilder.taskImageOptions(taskImageOptions.let(NetworkLoadBalancedTaskImageOptions::unwrap))
+      cdkBuilder.taskImageOptions(taskImageOptions.let(NetworkLoadBalancedTaskImageOptions.Companion::unwrap))
     }
 
     /**
@@ -717,7 +717,7 @@ public interface NetworkLoadBalancedEc2ServiceProps : NetworkLoadBalancedService
      * both vpc and cluster.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build():

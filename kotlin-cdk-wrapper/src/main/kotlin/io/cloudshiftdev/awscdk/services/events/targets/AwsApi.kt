@@ -41,7 +41,7 @@ public open class AwsApi(
   cdkObject: software.amazon.awscdk.services.events.targets.AwsApi,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(props: AwsApiProps) :
-      this(software.amazon.awscdk.services.events.targets.AwsApi(props.let(AwsApiProps::unwrap))
+      this(software.amazon.awscdk.services.events.targets.AwsApi(props.let(AwsApiProps.Companion::unwrap))
   )
 
   public constructor(props: AwsApiProps.Builder.() -> Unit) : this(AwsApiProps(props)
@@ -55,7 +55,7 @@ public open class AwsApi(
    * @param id
    */
   public override fun bind(rule: IRule): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap)).let(RuleTargetConfig::wrap)
 
   /**
    * Returns a RuleTarget that can be used to trigger this AwsApi as a result from an EventBridge
@@ -65,7 +65,7 @@ public open class AwsApi(
    * @param id
    */
   public override fun bind(rule: IRule, id: String): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap), id).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap), id).let(RuleTargetConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.events.targets.AwsApi].
@@ -212,7 +212,7 @@ public open class AwsApi(
      * @param policyStatement The IAM policy statement to allow the API call. 
      */
     override fun policyStatement(policyStatement: PolicyStatement) {
-      cdkBuilder.policyStatement(policyStatement.let(PolicyStatement::unwrap))
+      cdkBuilder.policyStatement(policyStatement.let(PolicyStatement.Companion::unwrap))
     }
 
     /**

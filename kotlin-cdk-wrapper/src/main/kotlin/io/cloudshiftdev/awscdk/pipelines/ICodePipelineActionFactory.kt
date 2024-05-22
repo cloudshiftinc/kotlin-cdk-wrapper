@@ -50,8 +50,9 @@ public interface ICodePipelineActionFactory {
      * @param options 
      */
     override fun produceAction(stage: IStage, options: ProduceActionOptions):
-        CodePipelineActionFactoryResult = unwrap(this).produceAction(stage.let(IStage::unwrap),
-        options.let(ProduceActionOptions::unwrap)).let(CodePipelineActionFactoryResult::wrap)
+        CodePipelineActionFactoryResult =
+        unwrap(this).produceAction(stage.let(IStage.Companion::unwrap),
+        options.let(ProduceActionOptions.Companion::unwrap)).let(CodePipelineActionFactoryResult::wrap)
 
     /**
      * Create the desired Action and add it to the pipeline.

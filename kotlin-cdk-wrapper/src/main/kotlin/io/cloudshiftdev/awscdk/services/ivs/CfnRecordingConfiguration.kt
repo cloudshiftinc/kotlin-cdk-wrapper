@@ -72,8 +72,8 @@ public open class CfnRecordingConfiguration(
     id: String,
     props: CfnRecordingConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.ivs.CfnRecordingConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRecordingConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.ivs.CfnRecordingConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRecordingConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -107,14 +107,14 @@ public open class CfnRecordingConfiguration(
    * A destination configuration describes an S3 bucket where recorded video will be stored.
    */
   public open fun destinationConfiguration(`value`: IResolvable) {
-    unwrap(this).setDestinationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDestinationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A destination configuration describes an S3 bucket where recorded video will be stored.
    */
   public open fun destinationConfiguration(`value`: DestinationConfigurationProperty) {
-    unwrap(this).setDestinationConfiguration(`value`.let(DestinationConfigurationProperty::unwrap))
+    unwrap(this).setDestinationConfiguration(`value`.let(DestinationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -132,7 +132,7 @@ public open class CfnRecordingConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -171,14 +171,14 @@ public open class CfnRecordingConfiguration(
    * A rendition configuration describes which renditions should be recorded for a stream.
    */
   public open fun renditionConfiguration(`value`: IResolvable) {
-    unwrap(this).setRenditionConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRenditionConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A rendition configuration describes which renditions should be recorded for a stream.
    */
   public open fun renditionConfiguration(`value`: RenditionConfigurationProperty) {
-    unwrap(this).setRenditionConfiguration(`value`.let(RenditionConfigurationProperty::unwrap))
+    unwrap(this).setRenditionConfiguration(`value`.let(RenditionConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -205,7 +205,7 @@ public open class CfnRecordingConfiguration(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -224,7 +224,7 @@ public open class CfnRecordingConfiguration(
    * controls the interval at which thumbnails are generated for the live session.
    */
   public open fun thumbnailConfiguration(`value`: IResolvable) {
-    unwrap(this).setThumbnailConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setThumbnailConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -232,7 +232,7 @@ public open class CfnRecordingConfiguration(
    * controls the interval at which thumbnails are generated for the live session.
    */
   public open fun thumbnailConfiguration(`value`: ThumbnailConfigurationProperty) {
-    unwrap(this).setThumbnailConfiguration(`value`.let(ThumbnailConfigurationProperty::unwrap))
+    unwrap(this).setThumbnailConfiguration(`value`.let(ThumbnailConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -431,7 +431,7 @@ public open class CfnRecordingConfiguration(
      * recorded video will be stored. 
      */
     override fun destinationConfiguration(destinationConfiguration: IResolvable) {
-      cdkBuilder.destinationConfiguration(destinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.destinationConfiguration(destinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -445,7 +445,7 @@ public open class CfnRecordingConfiguration(
      */
     override
         fun destinationConfiguration(destinationConfiguration: DestinationConfigurationProperty) {
-      cdkBuilder.destinationConfiguration(destinationConfiguration.let(DestinationConfigurationProperty::unwrap))
+      cdkBuilder.destinationConfiguration(destinationConfiguration.let(DestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -502,7 +502,7 @@ public open class CfnRecordingConfiguration(
      * recorded for a stream. 
      */
     override fun renditionConfiguration(renditionConfiguration: IResolvable) {
-      cdkBuilder.renditionConfiguration(renditionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.renditionConfiguration(renditionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -515,7 +515,7 @@ public open class CfnRecordingConfiguration(
      * recorded for a stream. 
      */
     override fun renditionConfiguration(renditionConfiguration: RenditionConfigurationProperty) {
-      cdkBuilder.renditionConfiguration(renditionConfiguration.let(RenditionConfigurationProperty::unwrap))
+      cdkBuilder.renditionConfiguration(renditionConfiguration.let(RenditionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -544,7 +544,7 @@ public open class CfnRecordingConfiguration(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -571,7 +571,7 @@ public open class CfnRecordingConfiguration(
      * the live session. 
      */
     override fun thumbnailConfiguration(thumbnailConfiguration: IResolvable) {
-      cdkBuilder.thumbnailConfiguration(thumbnailConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.thumbnailConfiguration(thumbnailConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -586,7 +586,7 @@ public open class CfnRecordingConfiguration(
      * the live session. 
      */
     override fun thumbnailConfiguration(thumbnailConfiguration: ThumbnailConfigurationProperty) {
-      cdkBuilder.thumbnailConfiguration(thumbnailConfiguration.let(ThumbnailConfigurationProperty::unwrap))
+      cdkBuilder.thumbnailConfiguration(thumbnailConfiguration.let(ThumbnailConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -711,7 +711,7 @@ public open class CfnRecordingConfiguration(
        * property type for more information.
        */
       override fun s3(s3: IResolvable) {
-        cdkBuilder.s3(s3.let(IResolvable::unwrap))
+        cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -721,7 +721,7 @@ public open class CfnRecordingConfiguration(
        * property type for more information.
        */
       override fun s3(s3: S3DestinationConfigurationProperty) {
-        cdkBuilder.s3(s3.let(S3DestinationConfigurationProperty::unwrap))
+        cdkBuilder.s3(s3.let(S3DestinationConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1110,8 +1110,6 @@ public open class CfnRecordingConfiguration(
      *
      * *Default* : 60
      *
-     * *Valid Range* : Minumum value of 1. Maximum value of 60.
-     *
      * Default: - 60
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ivs-recordingconfiguration-thumbnailconfiguration.html#cfn-ivs-recordingconfiguration-thumbnailconfiguration-targetintervalseconds)
@@ -1178,8 +1176,6 @@ public open class CfnRecordingConfiguration(
        *
        *
        * *Default* : 60
-       *
-       * *Valid Range* : Minumum value of 1. Maximum value of 60.
        */
       public fun targetIntervalSeconds(targetIntervalSeconds: Number)
     }
@@ -1251,8 +1247,6 @@ public open class CfnRecordingConfiguration(
        *
        *
        * *Default* : 60
-       *
-       * *Valid Range* : Minumum value of 1. Maximum value of 60.
        */
       override fun targetIntervalSeconds(targetIntervalSeconds: Number) {
         cdkBuilder.targetIntervalSeconds(targetIntervalSeconds)
@@ -1324,8 +1318,6 @@ public open class CfnRecordingConfiguration(
        *
        *
        * *Default* : 60
-       *
-       * *Valid Range* : Minumum value of 1. Maximum value of 60.
        *
        * Default: - 60
        *

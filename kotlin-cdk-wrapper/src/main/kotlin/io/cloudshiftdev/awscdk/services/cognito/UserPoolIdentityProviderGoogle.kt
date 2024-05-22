@@ -40,8 +40,8 @@ public open class UserPoolIdentityProviderGoogle(
     id: String,
     props: UserPoolIdentityProviderGoogleProps,
   ) :
-      this(software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogle(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(UserPoolIdentityProviderGoogleProps::unwrap))
+      this(software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogle(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(UserPoolIdentityProviderGoogleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -168,7 +168,7 @@ public open class UserPoolIdentityProviderGoogle(
      * attributes of the user pool. 
      */
     override fun attributeMapping(attributeMapping: AttributeMapping) {
-      cdkBuilder.attributeMapping(attributeMapping.let(AttributeMapping::unwrap))
+      cdkBuilder.attributeMapping(attributeMapping.let(AttributeMapping.Companion::unwrap))
     }
 
     /**
@@ -222,7 +222,7 @@ public open class UserPoolIdentityProviderGoogle(
      * authenticate the client as SecretValue. 
      */
     override fun clientSecretValue(clientSecretValue: SecretValue) {
-      cdkBuilder.clientSecretValue(clientSecretValue.let(SecretValue::unwrap))
+      cdkBuilder.clientSecretValue(clientSecretValue.let(SecretValue.Companion::unwrap))
     }
 
     /**
@@ -255,7 +255,7 @@ public open class UserPoolIdentityProviderGoogle(
      * @param userPool The user pool to which this construct provides identities. 
      */
     override fun userPool(userPool: IUserPool) {
-      cdkBuilder.userPool(userPool.let(IUserPool::unwrap))
+      cdkBuilder.userPool(userPool.let(IUserPool.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogle =

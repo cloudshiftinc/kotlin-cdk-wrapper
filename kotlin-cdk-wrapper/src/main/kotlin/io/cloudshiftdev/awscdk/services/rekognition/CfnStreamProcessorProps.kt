@@ -575,7 +575,7 @@ public interface CfnStreamProcessorProps {
      * .
      */
     override fun boundingBoxRegionsOfInterest(boundingBoxRegionsOfInterest: IResolvable) {
-      cdkBuilder.boundingBoxRegionsOfInterest(boundingBoxRegionsOfInterest.let(IResolvable::unwrap))
+      cdkBuilder.boundingBoxRegionsOfInterest(boundingBoxRegionsOfInterest.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -609,7 +609,7 @@ public interface CfnStreamProcessorProps {
      * .
      */
     override fun connectedHomeSettings(connectedHomeSettings: IResolvable) {
-      cdkBuilder.connectedHomeSettings(connectedHomeSettings.let(IResolvable::unwrap))
+      cdkBuilder.connectedHomeSettings(connectedHomeSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -623,7 +623,7 @@ public interface CfnStreamProcessorProps {
      */
     override
         fun connectedHomeSettings(connectedHomeSettings: CfnStreamProcessor.ConnectedHomeSettingsProperty) {
-      cdkBuilder.connectedHomeSettings(connectedHomeSettings.let(CfnStreamProcessor.ConnectedHomeSettingsProperty::unwrap))
+      cdkBuilder.connectedHomeSettings(connectedHomeSettings.let(CfnStreamProcessor.ConnectedHomeSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -652,7 +652,7 @@ public interface CfnStreamProcessorProps {
      * .
      */
     override fun dataSharingPreference(dataSharingPreference: IResolvable) {
-      cdkBuilder.dataSharingPreference(dataSharingPreference.let(IResolvable::unwrap))
+      cdkBuilder.dataSharingPreference(dataSharingPreference.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -666,7 +666,7 @@ public interface CfnStreamProcessorProps {
      */
     override
         fun dataSharingPreference(dataSharingPreference: CfnStreamProcessor.DataSharingPreferenceProperty) {
-      cdkBuilder.dataSharingPreference(dataSharingPreference.let(CfnStreamProcessor.DataSharingPreferenceProperty::unwrap))
+      cdkBuilder.dataSharingPreference(dataSharingPreference.let(CfnStreamProcessor.DataSharingPreferenceProperty.Companion::unwrap))
     }
 
     /**
@@ -693,7 +693,7 @@ public interface CfnStreamProcessorProps {
      * .
      */
     override fun faceSearchSettings(faceSearchSettings: IResolvable) {
-      cdkBuilder.faceSearchSettings(faceSearchSettings.let(IResolvable::unwrap))
+      cdkBuilder.faceSearchSettings(faceSearchSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -705,7 +705,7 @@ public interface CfnStreamProcessorProps {
      */
     override
         fun faceSearchSettings(faceSearchSettings: CfnStreamProcessor.FaceSearchSettingsProperty) {
-      cdkBuilder.faceSearchSettings(faceSearchSettings.let(CfnStreamProcessor.FaceSearchSettingsProperty::unwrap))
+      cdkBuilder.faceSearchSettings(faceSearchSettings.let(CfnStreamProcessor.FaceSearchSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -730,7 +730,7 @@ public interface CfnStreamProcessorProps {
      * .
      */
     override fun kinesisDataStream(kinesisDataStream: IResolvable) {
-      cdkBuilder.kinesisDataStream(kinesisDataStream.let(IResolvable::unwrap))
+      cdkBuilder.kinesisDataStream(kinesisDataStream.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -743,7 +743,7 @@ public interface CfnStreamProcessorProps {
      */
     override
         fun kinesisDataStream(kinesisDataStream: CfnStreamProcessor.KinesisDataStreamProperty) {
-      cdkBuilder.kinesisDataStream(kinesisDataStream.let(CfnStreamProcessor.KinesisDataStreamProperty::unwrap))
+      cdkBuilder.kinesisDataStream(kinesisDataStream.let(CfnStreamProcessor.KinesisDataStreamProperty.Companion::unwrap))
     }
 
     /**
@@ -768,7 +768,7 @@ public interface CfnStreamProcessorProps {
      * .
      */
     override fun kinesisVideoStream(kinesisVideoStream: IResolvable) {
-      cdkBuilder.kinesisVideoStream(kinesisVideoStream.let(IResolvable::unwrap))
+      cdkBuilder.kinesisVideoStream(kinesisVideoStream.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -780,7 +780,7 @@ public interface CfnStreamProcessorProps {
      */
     override
         fun kinesisVideoStream(kinesisVideoStream: CfnStreamProcessor.KinesisVideoStreamProperty) {
-      cdkBuilder.kinesisVideoStream(kinesisVideoStream.let(CfnStreamProcessor.KinesisVideoStreamProperty::unwrap))
+      cdkBuilder.kinesisVideoStream(kinesisVideoStream.let(CfnStreamProcessor.KinesisVideoStreamProperty.Companion::unwrap))
     }
 
     /**
@@ -830,7 +830,7 @@ public interface CfnStreamProcessorProps {
      * .
      */
     override fun notificationChannel(notificationChannel: IResolvable) {
-      cdkBuilder.notificationChannel(notificationChannel.let(IResolvable::unwrap))
+      cdkBuilder.notificationChannel(notificationChannel.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -846,7 +846,7 @@ public interface CfnStreamProcessorProps {
      */
     override
         fun notificationChannel(notificationChannel: CfnStreamProcessor.NotificationChannelProperty) {
-      cdkBuilder.notificationChannel(notificationChannel.let(CfnStreamProcessor.NotificationChannelProperty::unwrap))
+      cdkBuilder.notificationChannel(notificationChannel.let(CfnStreamProcessor.NotificationChannelProperty.Companion::unwrap))
     }
 
     /**
@@ -902,7 +902,7 @@ public interface CfnStreamProcessorProps {
      * .
      */
     override fun s3Destination(s3Destination: IResolvable) {
-      cdkBuilder.s3Destination(s3Destination.let(IResolvable::unwrap))
+      cdkBuilder.s3Destination(s3Destination.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -913,7 +913,7 @@ public interface CfnStreamProcessorProps {
      * .
      */
     override fun s3Destination(s3Destination: CfnStreamProcessor.S3DestinationProperty) {
-      cdkBuilder.s3Destination(s3Destination.let(CfnStreamProcessor.S3DestinationProperty::unwrap))
+      cdkBuilder.s3Destination(s3Destination.let(CfnStreamProcessor.S3DestinationProperty.Companion::unwrap))
     }
 
     /**
@@ -936,7 +936,7 @@ public interface CfnStreamProcessorProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

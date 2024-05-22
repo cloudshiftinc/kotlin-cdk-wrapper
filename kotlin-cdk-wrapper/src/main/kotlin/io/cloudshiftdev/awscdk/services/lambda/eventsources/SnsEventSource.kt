@@ -36,12 +36,12 @@ public open class SnsEventSource(
   cdkObject: software.amazon.awscdk.services.lambda.eventsources.SnsEventSource,
 ) : CdkObject(cdkObject), IEventSource {
   public constructor(topic: CloudshiftdevAwscdkServicesSnsITopic) :
-      this(software.amazon.awscdk.services.lambda.eventsources.SnsEventSource(topic.let(CloudshiftdevAwscdkServicesSnsITopic::unwrap))
+      this(software.amazon.awscdk.services.lambda.eventsources.SnsEventSource(topic.let(CloudshiftdevAwscdkServicesSnsITopic.Companion::unwrap))
   )
 
   public constructor(topic: CloudshiftdevAwscdkServicesSnsITopic, props: SnsEventSourceProps) :
-      this(software.amazon.awscdk.services.lambda.eventsources.SnsEventSource(topic.let(CloudshiftdevAwscdkServicesSnsITopic::unwrap),
-      props.let(SnsEventSourceProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.eventsources.SnsEventSource(topic.let(CloudshiftdevAwscdkServicesSnsITopic.Companion::unwrap),
+      props.let(SnsEventSourceProps.Companion::unwrap))
   )
 
   public constructor(topic: CloudshiftdevAwscdkServicesSnsITopic,
@@ -54,7 +54,7 @@ public open class SnsEventSource(
    * @param target 
    */
   public override fun bind(target: IFunction) {
-    unwrap(this).bind(target.let(IFunction::unwrap))
+    unwrap(this).bind(target.let(IFunction.Companion::unwrap))
   }
 
   /**
@@ -118,7 +118,7 @@ public open class SnsEventSource(
      * @param deadLetterQueue Queue to be used as dead letter queue. 
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**

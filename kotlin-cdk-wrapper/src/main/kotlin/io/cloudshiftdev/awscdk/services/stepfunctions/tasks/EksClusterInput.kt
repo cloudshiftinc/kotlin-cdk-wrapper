@@ -29,10 +29,10 @@ public open class EksClusterInput(
 
   public companion object {
     public fun fromCluster(cluster: ICluster): EksClusterInput =
-        software.amazon.awscdk.services.stepfunctions.tasks.EksClusterInput.fromCluster(cluster.let(ICluster::unwrap)).let(EksClusterInput::wrap)
+        software.amazon.awscdk.services.stepfunctions.tasks.EksClusterInput.fromCluster(cluster.let(ICluster.Companion::unwrap)).let(EksClusterInput::wrap)
 
     public fun fromTaskInput(taskInput: TaskInput): EksClusterInput =
-        software.amazon.awscdk.services.stepfunctions.tasks.EksClusterInput.fromTaskInput(taskInput.let(TaskInput::unwrap)).let(EksClusterInput::wrap)
+        software.amazon.awscdk.services.stepfunctions.tasks.EksClusterInput.fromTaskInput(taskInput.let(TaskInput.Companion::unwrap)).let(EksClusterInput::wrap)
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.EksClusterInput):

@@ -82,7 +82,7 @@ public interface UserPoolResourceServerProps : UserPoolResourceServerOptions {
      * @param scopes Oauth scopes.
      */
     override fun scopes(scopes: List<ResourceServerScope>) {
-      cdkBuilder.scopes(scopes.map(ResourceServerScope::unwrap))
+      cdkBuilder.scopes(scopes.map(ResourceServerScope.Companion::unwrap))
     }
 
     /**
@@ -94,7 +94,7 @@ public interface UserPoolResourceServerProps : UserPoolResourceServerOptions {
      * @param userPool The user pool to add this resource server to. 
      */
     override fun userPool(userPool: IUserPool) {
-      cdkBuilder.userPool(userPool.let(IUserPool::unwrap))
+      cdkBuilder.userPool(userPool.let(IUserPool.Companion::unwrap))
     }
 
     /**

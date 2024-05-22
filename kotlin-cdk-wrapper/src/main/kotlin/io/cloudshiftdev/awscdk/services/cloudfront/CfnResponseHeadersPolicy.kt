@@ -126,8 +126,8 @@ public open class CfnResponseHeadersPolicy(
     id: String,
     props: CfnResponseHeadersPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnResponseHeadersPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.CfnResponseHeadersPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnResponseHeadersPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -155,7 +155,7 @@ public open class CfnResponseHeadersPolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -167,14 +167,14 @@ public open class CfnResponseHeadersPolicy(
    * A response headers policy configuration.
    */
   public open fun responseHeadersPolicyConfig(`value`: IResolvable) {
-    unwrap(this).setResponseHeadersPolicyConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResponseHeadersPolicyConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A response headers policy configuration.
    */
   public open fun responseHeadersPolicyConfig(`value`: ResponseHeadersPolicyConfigProperty) {
-    unwrap(this).setResponseHeadersPolicyConfig(`value`.let(ResponseHeadersPolicyConfigProperty::unwrap))
+    unwrap(this).setResponseHeadersPolicyConfig(`value`.let(ResponseHeadersPolicyConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -236,7 +236,7 @@ public open class CfnResponseHeadersPolicy(
      * @param responseHeadersPolicyConfig A response headers policy configuration. 
      */
     override fun responseHeadersPolicyConfig(responseHeadersPolicyConfig: IResolvable) {
-      cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig.let(IResolvable::unwrap))
+      cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -247,7 +247,7 @@ public open class CfnResponseHeadersPolicy(
      */
     override
         fun responseHeadersPolicyConfig(responseHeadersPolicyConfig: ResponseHeadersPolicyConfigProperty) {
-      cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig.let(ResponseHeadersPolicyConfigProperty::unwrap))
+      cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig.let(ResponseHeadersPolicyConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -866,7 +866,7 @@ public open class CfnResponseHeadersPolicy(
        * in this response headers policy. 
        */
       override fun `override`(`override`: IResolvable) {
-        cdkBuilder.`override`(`override`.let(IResolvable::unwrap))
+        cdkBuilder.`override`(`override`.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -984,7 +984,7 @@ public open class CfnResponseHeadersPolicy(
        * in this response headers policy. 
        */
       override fun `override`(`override`: IResolvable) {
-        cdkBuilder.`override`(`override`.let(IResolvable::unwrap))
+        cdkBuilder.`override`(`override`.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1337,7 +1337,7 @@ public open class CfnResponseHeadersPolicy(
        * in the MDN Web Docs.
        */
       override fun accessControlAllowCredentials(accessControlAllowCredentials: IResolvable) {
-        cdkBuilder.accessControlAllowCredentials(accessControlAllowCredentials.let(IResolvable::unwrap))
+        cdkBuilder.accessControlAllowCredentials(accessControlAllowCredentials.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1348,7 +1348,7 @@ public open class CfnResponseHeadersPolicy(
        * in the MDN Web Docs.
        */
       override fun accessControlAllowHeaders(accessControlAllowHeaders: IResolvable) {
-        cdkBuilder.accessControlAllowHeaders(accessControlAllowHeaders.let(IResolvable::unwrap))
+        cdkBuilder.accessControlAllowHeaders(accessControlAllowHeaders.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1360,7 +1360,7 @@ public open class CfnResponseHeadersPolicy(
        */
       override
           fun accessControlAllowHeaders(accessControlAllowHeaders: AccessControlAllowHeadersProperty) {
-        cdkBuilder.accessControlAllowHeaders(accessControlAllowHeaders.let(AccessControlAllowHeadersProperty::unwrap))
+        cdkBuilder.accessControlAllowHeaders(accessControlAllowHeaders.let(AccessControlAllowHeadersProperty.Companion::unwrap))
       }
 
       /**
@@ -1385,7 +1385,7 @@ public open class CfnResponseHeadersPolicy(
        * in the MDN Web Docs.
        */
       override fun accessControlAllowMethods(accessControlAllowMethods: IResolvable) {
-        cdkBuilder.accessControlAllowMethods(accessControlAllowMethods.let(IResolvable::unwrap))
+        cdkBuilder.accessControlAllowMethods(accessControlAllowMethods.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1397,7 +1397,7 @@ public open class CfnResponseHeadersPolicy(
        */
       override
           fun accessControlAllowMethods(accessControlAllowMethods: AccessControlAllowMethodsProperty) {
-        cdkBuilder.accessControlAllowMethods(accessControlAllowMethods.let(AccessControlAllowMethodsProperty::unwrap))
+        cdkBuilder.accessControlAllowMethods(accessControlAllowMethods.let(AccessControlAllowMethodsProperty.Companion::unwrap))
       }
 
       /**
@@ -1422,7 +1422,7 @@ public open class CfnResponseHeadersPolicy(
        * in the MDN Web Docs.
        */
       override fun accessControlAllowOrigins(accessControlAllowOrigins: IResolvable) {
-        cdkBuilder.accessControlAllowOrigins(accessControlAllowOrigins.let(IResolvable::unwrap))
+        cdkBuilder.accessControlAllowOrigins(accessControlAllowOrigins.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1434,7 +1434,7 @@ public open class CfnResponseHeadersPolicy(
        */
       override
           fun accessControlAllowOrigins(accessControlAllowOrigins: AccessControlAllowOriginsProperty) {
-        cdkBuilder.accessControlAllowOrigins(accessControlAllowOrigins.let(AccessControlAllowOriginsProperty::unwrap))
+        cdkBuilder.accessControlAllowOrigins(accessControlAllowOrigins.let(AccessControlAllowOriginsProperty.Companion::unwrap))
       }
 
       /**
@@ -1459,7 +1459,7 @@ public open class CfnResponseHeadersPolicy(
        * in the MDN Web Docs.
        */
       override fun accessControlExposeHeaders(accessControlExposeHeaders: IResolvable) {
-        cdkBuilder.accessControlExposeHeaders(accessControlExposeHeaders.let(IResolvable::unwrap))
+        cdkBuilder.accessControlExposeHeaders(accessControlExposeHeaders.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1471,7 +1471,7 @@ public open class CfnResponseHeadersPolicy(
        */
       override
           fun accessControlExposeHeaders(accessControlExposeHeaders: AccessControlExposeHeadersProperty) {
-        cdkBuilder.accessControlExposeHeaders(accessControlExposeHeaders.let(AccessControlExposeHeadersProperty::unwrap))
+        cdkBuilder.accessControlExposeHeaders(accessControlExposeHeaders.let(AccessControlExposeHeadersProperty.Companion::unwrap))
       }
 
       /**
@@ -1512,7 +1512,7 @@ public open class CfnResponseHeadersPolicy(
        * headers received from the origin with the ones specified in this response headers policy. 
        */
       override fun originOverride(originOverride: IResolvable) {
-        cdkBuilder.originOverride(originOverride.let(IResolvable::unwrap))
+        cdkBuilder.originOverride(originOverride.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1721,7 +1721,7 @@ public open class CfnResponseHeadersPolicy(
        * with the same name received from the origin with the header specified here. 
        */
       override fun `override`(`override`: IResolvable) {
-        cdkBuilder.`override`(`override`.let(IResolvable::unwrap))
+        cdkBuilder.`override`(`override`.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1842,7 +1842,7 @@ public open class CfnResponseHeadersPolicy(
        * @param items The list of HTTP response headers and their values. 
        */
       override fun items(items: IResolvable) {
-        cdkBuilder.items(items.let(IResolvable::unwrap))
+        cdkBuilder.items(items.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1995,7 +1995,7 @@ public open class CfnResponseHeadersPolicy(
        * response headers policy. 
        */
       override fun `override`(`override`: IResolvable) {
-        cdkBuilder.`override`(`override`.let(IResolvable::unwrap))
+        cdkBuilder.`override`(`override`.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2155,7 +2155,7 @@ public open class CfnResponseHeadersPolicy(
        * response headers policy. 
        */
       override fun `override`(`override`: IResolvable) {
-        cdkBuilder.`override`(`override`.let(IResolvable::unwrap))
+        cdkBuilder.`override`(`override`.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2374,7 +2374,7 @@ public open class CfnResponseHeadersPolicy(
        * @param items The list of HTTP header names. 
        */
       override fun items(items: IResolvable) {
-        cdkBuilder.items(items.let(IResolvable::unwrap))
+        cdkBuilder.items(items.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2706,7 +2706,7 @@ public open class CfnResponseHeadersPolicy(
        * cross-origin resource sharing (CORS).
        */
       override fun corsConfig(corsConfig: IResolvable) {
-        cdkBuilder.corsConfig(corsConfig.let(IResolvable::unwrap))
+        cdkBuilder.corsConfig(corsConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2714,7 +2714,7 @@ public open class CfnResponseHeadersPolicy(
        * cross-origin resource sharing (CORS).
        */
       override fun corsConfig(corsConfig: CorsConfigProperty) {
-        cdkBuilder.corsConfig(corsConfig.let(CorsConfigProperty::unwrap))
+        cdkBuilder.corsConfig(corsConfig.let(CorsConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2730,14 +2730,14 @@ public open class CfnResponseHeadersPolicy(
        * @param customHeadersConfig A configuration for a set of custom HTTP response headers.
        */
       override fun customHeadersConfig(customHeadersConfig: IResolvable) {
-        cdkBuilder.customHeadersConfig(customHeadersConfig.let(IResolvable::unwrap))
+        cdkBuilder.customHeadersConfig(customHeadersConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param customHeadersConfig A configuration for a set of custom HTTP response headers.
        */
       override fun customHeadersConfig(customHeadersConfig: CustomHeadersConfigProperty) {
-        cdkBuilder.customHeadersConfig(customHeadersConfig.let(CustomHeadersConfigProperty::unwrap))
+        cdkBuilder.customHeadersConfig(customHeadersConfig.let(CustomHeadersConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2762,7 +2762,7 @@ public open class CfnResponseHeadersPolicy(
        * HTTP response.
        */
       override fun removeHeadersConfig(removeHeadersConfig: IResolvable) {
-        cdkBuilder.removeHeadersConfig(removeHeadersConfig.let(IResolvable::unwrap))
+        cdkBuilder.removeHeadersConfig(removeHeadersConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2770,7 +2770,7 @@ public open class CfnResponseHeadersPolicy(
        * HTTP response.
        */
       override fun removeHeadersConfig(removeHeadersConfig: RemoveHeadersConfigProperty) {
-        cdkBuilder.removeHeadersConfig(removeHeadersConfig.let(RemoveHeadersConfigProperty::unwrap))
+        cdkBuilder.removeHeadersConfig(removeHeadersConfig.let(RemoveHeadersConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2788,7 +2788,7 @@ public open class CfnResponseHeadersPolicy(
        * headers.
        */
       override fun securityHeadersConfig(securityHeadersConfig: IResolvable) {
-        cdkBuilder.securityHeadersConfig(securityHeadersConfig.let(IResolvable::unwrap))
+        cdkBuilder.securityHeadersConfig(securityHeadersConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2796,7 +2796,7 @@ public open class CfnResponseHeadersPolicy(
        * headers.
        */
       override fun securityHeadersConfig(securityHeadersConfig: SecurityHeadersConfigProperty) {
-        cdkBuilder.securityHeadersConfig(securityHeadersConfig.let(SecurityHeadersConfigProperty::unwrap))
+        cdkBuilder.securityHeadersConfig(securityHeadersConfig.let(SecurityHeadersConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2814,7 +2814,7 @@ public open class CfnResponseHeadersPolicy(
        * HTTP responses sent from CloudFront.
        */
       override fun serverTimingHeadersConfig(serverTimingHeadersConfig: IResolvable) {
-        cdkBuilder.serverTimingHeadersConfig(serverTimingHeadersConfig.let(IResolvable::unwrap))
+        cdkBuilder.serverTimingHeadersConfig(serverTimingHeadersConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2823,7 +2823,7 @@ public open class CfnResponseHeadersPolicy(
        */
       override
           fun serverTimingHeadersConfig(serverTimingHeadersConfig: ServerTimingHeadersConfigProperty) {
-        cdkBuilder.serverTimingHeadersConfig(serverTimingHeadersConfig.let(ServerTimingHeadersConfigProperty::unwrap))
+        cdkBuilder.serverTimingHeadersConfig(serverTimingHeadersConfig.let(ServerTimingHeadersConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -3250,7 +3250,7 @@ public open class CfnResponseHeadersPolicy(
        * in the MDN Web Docs.
        */
       override fun contentSecurityPolicy(contentSecurityPolicy: IResolvable) {
-        cdkBuilder.contentSecurityPolicy(contentSecurityPolicy.let(IResolvable::unwrap))
+        cdkBuilder.contentSecurityPolicy(contentSecurityPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3261,7 +3261,7 @@ public open class CfnResponseHeadersPolicy(
        * in the MDN Web Docs.
        */
       override fun contentSecurityPolicy(contentSecurityPolicy: ContentSecurityPolicyProperty) {
-        cdkBuilder.contentSecurityPolicy(contentSecurityPolicy.let(ContentSecurityPolicyProperty::unwrap))
+        cdkBuilder.contentSecurityPolicy(contentSecurityPolicy.let(ContentSecurityPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -3285,7 +3285,7 @@ public open class CfnResponseHeadersPolicy(
        * in the MDN Web Docs.
        */
       override fun contentTypeOptions(contentTypeOptions: IResolvable) {
-        cdkBuilder.contentTypeOptions(contentTypeOptions.let(IResolvable::unwrap))
+        cdkBuilder.contentTypeOptions(contentTypeOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3296,7 +3296,7 @@ public open class CfnResponseHeadersPolicy(
        * in the MDN Web Docs.
        */
       override fun contentTypeOptions(contentTypeOptions: ContentTypeOptionsProperty) {
-        cdkBuilder.contentTypeOptions(contentTypeOptions.let(ContentTypeOptionsProperty::unwrap))
+        cdkBuilder.contentTypeOptions(contentTypeOptions.let(ContentTypeOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -3320,7 +3320,7 @@ public open class CfnResponseHeadersPolicy(
        * in the MDN Web Docs.
        */
       override fun frameOptions(frameOptions: IResolvable) {
-        cdkBuilder.frameOptions(frameOptions.let(IResolvable::unwrap))
+        cdkBuilder.frameOptions(frameOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3331,7 +3331,7 @@ public open class CfnResponseHeadersPolicy(
        * in the MDN Web Docs.
        */
       override fun frameOptions(frameOptions: FrameOptionsProperty) {
-        cdkBuilder.frameOptions(frameOptions.let(FrameOptionsProperty::unwrap))
+        cdkBuilder.frameOptions(frameOptions.let(FrameOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -3354,7 +3354,7 @@ public open class CfnResponseHeadersPolicy(
        * in the MDN Web Docs.
        */
       override fun referrerPolicy(referrerPolicy: IResolvable) {
-        cdkBuilder.referrerPolicy(referrerPolicy.let(IResolvable::unwrap))
+        cdkBuilder.referrerPolicy(referrerPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3365,7 +3365,7 @@ public open class CfnResponseHeadersPolicy(
        * in the MDN Web Docs.
        */
       override fun referrerPolicy(referrerPolicy: ReferrerPolicyProperty) {
-        cdkBuilder.referrerPolicy(referrerPolicy.let(ReferrerPolicyProperty::unwrap))
+        cdkBuilder.referrerPolicy(referrerPolicy.let(ReferrerPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -3391,7 +3391,7 @@ public open class CfnResponseHeadersPolicy(
        * in the MDN Web Docs.
        */
       override fun strictTransportSecurity(strictTransportSecurity: IResolvable) {
-        cdkBuilder.strictTransportSecurity(strictTransportSecurity.let(IResolvable::unwrap))
+        cdkBuilder.strictTransportSecurity(strictTransportSecurity.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3406,7 +3406,7 @@ public open class CfnResponseHeadersPolicy(
        */
       override
           fun strictTransportSecurity(strictTransportSecurity: StrictTransportSecurityProperty) {
-        cdkBuilder.strictTransportSecurity(strictTransportSecurity.let(StrictTransportSecurityProperty::unwrap))
+        cdkBuilder.strictTransportSecurity(strictTransportSecurity.let(StrictTransportSecurityProperty.Companion::unwrap))
       }
 
       /**
@@ -3433,7 +3433,7 @@ public open class CfnResponseHeadersPolicy(
        * in the MDN Web Docs.
        */
       override fun xssProtection(xssProtection: IResolvable) {
-        cdkBuilder.xssProtection(xssProtection.let(IResolvable::unwrap))
+        cdkBuilder.xssProtection(xssProtection.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3444,7 +3444,7 @@ public open class CfnResponseHeadersPolicy(
        * in the MDN Web Docs.
        */
       override fun xssProtection(xssProtection: XSSProtectionProperty) {
-        cdkBuilder.xssProtection(xssProtection.let(XSSProtectionProperty::unwrap))
+        cdkBuilder.xssProtection(xssProtection.let(XSSProtectionProperty.Companion::unwrap))
       }
 
       /**
@@ -3656,7 +3656,7 @@ public open class CfnResponseHeadersPolicy(
        * associated with this response headers policy. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3859,7 +3859,7 @@ public open class CfnResponseHeadersPolicy(
        * `includeSubDomains` directive in the `Strict-Transport-Security` HTTP response header.
        */
       override fun includeSubdomains(includeSubdomains: IResolvable) {
-        cdkBuilder.includeSubdomains(includeSubdomains.let(IResolvable::unwrap))
+        cdkBuilder.includeSubdomains(includeSubdomains.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3877,7 +3877,7 @@ public open class CfnResponseHeadersPolicy(
        * specified in this response headers policy. 
        */
       override fun `override`(`override`: IResolvable) {
-        cdkBuilder.`override`(`override`.let(IResolvable::unwrap))
+        cdkBuilder.`override`(`override`.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3893,7 +3893,7 @@ public open class CfnResponseHeadersPolicy(
        * directive in the `Strict-Transport-Security` HTTP response header.
        */
       override fun preload(preload: IResolvable) {
-        cdkBuilder.preload(preload.let(IResolvable::unwrap))
+        cdkBuilder.preload(preload.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -4128,7 +4128,7 @@ public open class CfnResponseHeadersPolicy(
        * in the MDN Web Docs.
        */
       override fun modeBlock(modeBlock: IResolvable) {
-        cdkBuilder.modeBlock(modeBlock.let(IResolvable::unwrap))
+        cdkBuilder.modeBlock(modeBlock.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4146,7 +4146,7 @@ public open class CfnResponseHeadersPolicy(
        * this response headers policy. 
        */
       override fun `override`(`override`: IResolvable) {
-        cdkBuilder.`override`(`override`.let(IResolvable::unwrap))
+        cdkBuilder.`override`(`override`.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4174,7 +4174,7 @@ public open class CfnResponseHeadersPolicy(
        * in the MDN Web Docs.
        */
       override fun protection(protection: IResolvable) {
-        cdkBuilder.protection(protection.let(IResolvable::unwrap))
+        cdkBuilder.protection(protection.let(IResolvable.Companion::unwrap))
       }
 
       /**

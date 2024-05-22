@@ -270,14 +270,14 @@ public interface CfnUserProps {
      * @param identityInfo Information about the user identity.
      */
     override fun identityInfo(identityInfo: IResolvable) {
-      cdkBuilder.identityInfo(identityInfo.let(IResolvable::unwrap))
+      cdkBuilder.identityInfo(identityInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param identityInfo Information about the user identity.
      */
     override fun identityInfo(identityInfo: CfnUser.UserIdentityInfoProperty) {
-      cdkBuilder.identityInfo(identityInfo.let(CfnUser.UserIdentityInfoProperty::unwrap))
+      cdkBuilder.identityInfo(identityInfo.let(CfnUser.UserIdentityInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -306,14 +306,14 @@ public interface CfnUserProps {
      * @param phoneConfig Information about the phone configuration for the user. 
      */
     override fun phoneConfig(phoneConfig: IResolvable) {
-      cdkBuilder.phoneConfig(phoneConfig.let(IResolvable::unwrap))
+      cdkBuilder.phoneConfig(phoneConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param phoneConfig Information about the phone configuration for the user. 
      */
     override fun phoneConfig(phoneConfig: CfnUser.UserPhoneConfigProperty) {
-      cdkBuilder.phoneConfig(phoneConfig.let(CfnUser.UserPhoneConfigProperty::unwrap))
+      cdkBuilder.phoneConfig(phoneConfig.let(CfnUser.UserPhoneConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -348,7 +348,7 @@ public interface CfnUserProps {
      * @param tags The tags.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -361,7 +361,7 @@ public interface CfnUserProps {
      * value that indicates how their level of skill in a specified area.
      */
     override fun userProficiencies(userProficiencies: IResolvable) {
-      cdkBuilder.userProficiencies(userProficiencies.let(IResolvable::unwrap))
+      cdkBuilder.userProficiencies(userProficiencies.let(IResolvable.Companion::unwrap))
     }
 
     /**

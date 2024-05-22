@@ -34,7 +34,7 @@ public open class Stop(
   )
 
   public constructor(props: StopProps) :
-      this(software.amazon.awscdk.services.ses.actions.Stop(props.let(StopProps::unwrap))
+      this(software.amazon.awscdk.services.ses.actions.Stop(props.let(StopProps.Companion::unwrap))
   )
 
   public constructor(props: StopProps.Builder.() -> Unit) : this(StopProps(props)
@@ -46,7 +46,7 @@ public open class Stop(
    * @param _rule 
    */
   public override fun bind(rule: IReceiptRule): ReceiptRuleActionConfig =
-      unwrap(this).bind(rule.let(IReceiptRule::unwrap)).let(ReceiptRuleActionConfig::wrap)
+      unwrap(this).bind(rule.let(IReceiptRule.Companion::unwrap)).let(ReceiptRuleActionConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ses.actions.Stop].
@@ -71,7 +71,7 @@ public open class Stop(
      * @param topic The SNS topic to notify when the stop action is taken. 
      */
     override fun topic(topic: ITopic) {
-      cdkBuilder.topic(topic.let(ITopic::unwrap))
+      cdkBuilder.topic(topic.let(ITopic.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ses.actions.Stop = cdkBuilder.build()

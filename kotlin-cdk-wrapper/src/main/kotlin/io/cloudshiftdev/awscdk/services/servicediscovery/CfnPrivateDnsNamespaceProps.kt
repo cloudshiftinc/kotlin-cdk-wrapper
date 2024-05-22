@@ -167,14 +167,14 @@ public interface CfnPrivateDnsNamespaceProps {
      * @param properties Properties for the private DNS namespace.
      */
     override fun properties(properties: IResolvable) {
-      cdkBuilder.properties(properties.let(IResolvable::unwrap))
+      cdkBuilder.properties(properties.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param properties Properties for the private DNS namespace.
      */
     override fun properties(properties: CfnPrivateDnsNamespace.PropertiesProperty) {
-      cdkBuilder.properties(properties.let(CfnPrivateDnsNamespace.PropertiesProperty::unwrap))
+      cdkBuilder.properties(properties.let(CfnPrivateDnsNamespace.PropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -193,7 +193,7 @@ public interface CfnPrivateDnsNamespaceProps {
      * characters.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

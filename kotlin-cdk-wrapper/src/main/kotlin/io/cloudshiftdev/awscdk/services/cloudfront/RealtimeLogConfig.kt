@@ -42,8 +42,8 @@ public open class RealtimeLogConfig(
     id: String,
     props: RealtimeLogConfigProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.RealtimeLogConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(RealtimeLogConfigProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.RealtimeLogConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(RealtimeLogConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -134,7 +134,7 @@ public open class RealtimeLogConfig(
      * sending real-time log data for this real-time log configuration. 
      */
     override fun endPoints(endPoints: List<Endpoint>) {
-      cdkBuilder.endPoints(endPoints.map(Endpoint::unwrap))
+      cdkBuilder.endPoints(endPoints.map(Endpoint.Companion::unwrap))
     }
 
     /**

@@ -65,7 +65,7 @@ public interface IServerlessCluster : IResource, IConnectable, ISecretAttachment
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -118,7 +118,7 @@ public interface IServerlessCluster : IResource, IConnectable, ISecretAttachment
      * @param grantee The principal to grant access to. 
      */
     override fun grantDataApiAccess(grantee: IGrantable): Grant =
-        unwrap(this).grantDataApiAccess(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantDataApiAccess(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 

@@ -42,8 +42,8 @@ public open class KubectlProvider(
     id: String,
     props: KubectlProviderProps,
   ) :
-      this(software.amazon.awscdk.services.eks.KubectlProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(KubectlProviderProps::unwrap))
+      this(software.amazon.awscdk.services.eks.KubectlProvider(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(KubectlProviderProps.Companion::unwrap))
   )
 
   public constructor(
@@ -94,7 +94,7 @@ public open class KubectlProvider(
      * @param cluster The cluster to control. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.eks.KubectlProvider = cdkBuilder.build()
@@ -106,8 +106,8 @@ public open class KubectlProvider(
       id: String,
       attrs: KubectlProviderAttributes,
     ): IKubectlProvider =
-        software.amazon.awscdk.services.eks.KubectlProvider.fromKubectlProviderAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(KubectlProviderAttributes::unwrap)).let(IKubectlProvider::wrap)
+        software.amazon.awscdk.services.eks.KubectlProvider.fromKubectlProviderAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(KubectlProviderAttributes.Companion::unwrap)).let(IKubectlProvider::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("db3b6a08bf06eba23b6ec28a610bdedc6e2fd17a1c14d9dab34c23095ae0324d")
@@ -119,8 +119,8 @@ public open class KubectlProvider(
 
     public fun orCreate(scope: CloudshiftdevConstructsConstruct, cluster: ICluster):
         IKubectlProvider =
-        software.amazon.awscdk.services.eks.KubectlProvider.getOrCreate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        cluster.let(ICluster::unwrap)).let(IKubectlProvider::wrap)
+        software.amazon.awscdk.services.eks.KubectlProvider.getOrCreate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        cluster.let(ICluster.Companion::unwrap)).let(IKubectlProvider::wrap)
 
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,

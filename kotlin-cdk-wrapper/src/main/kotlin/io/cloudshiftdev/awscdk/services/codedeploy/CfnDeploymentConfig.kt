@@ -67,7 +67,7 @@ public open class CfnDeploymentConfig(
   cdkObject: software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -76,8 +76,8 @@ public open class CfnDeploymentConfig(
     id: String,
     props: CfnDeploymentConfigProps,
   ) :
-      this(software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDeploymentConfigProps::unwrap))
+      this(software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDeploymentConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -117,7 +117,7 @@ public open class CfnDeploymentConfig(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -131,7 +131,7 @@ public open class CfnDeploymentConfig(
    * deployment.
    */
   public open fun minimumHealthyHosts(`value`: IResolvable) {
-    unwrap(this).setMinimumHealthyHosts(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMinimumHealthyHosts(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -139,7 +139,7 @@ public open class CfnDeploymentConfig(
    * deployment.
    */
   public open fun minimumHealthyHosts(`value`: MinimumHealthyHostsProperty) {
-    unwrap(this).setMinimumHealthyHosts(`value`.let(MinimumHealthyHostsProperty::unwrap))
+    unwrap(this).setMinimumHealthyHosts(`value`.let(MinimumHealthyHostsProperty.Companion::unwrap))
   }
 
   /**
@@ -160,14 +160,14 @@ public open class CfnDeploymentConfig(
    * The configuration that specifies how the deployment traffic is routed.
    */
   public open fun trafficRoutingConfig(`value`: IResolvable) {
-    unwrap(this).setTrafficRoutingConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTrafficRoutingConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration that specifies how the deployment traffic is routed.
    */
   public open fun trafficRoutingConfig(`value`: TrafficRoutingConfigProperty) {
-    unwrap(this).setTrafficRoutingConfig(`value`.let(TrafficRoutingConfigProperty::unwrap))
+    unwrap(this).setTrafficRoutingConfig(`value`.let(TrafficRoutingConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -193,7 +193,7 @@ public open class CfnDeploymentConfig(
    * at a time, within an AWS Region.
    */
   public open fun zonalConfig(`value`: IResolvable) {
-    unwrap(this).setZonalConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setZonalConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -203,7 +203,7 @@ public open class CfnDeploymentConfig(
    * at a time, within an AWS Region.
    */
   public open fun zonalConfig(`value`: ZonalConfigProperty) {
-    unwrap(this).setZonalConfig(`value`.let(ZonalConfigProperty::unwrap))
+    unwrap(this).setZonalConfig(`value`.let(ZonalConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -496,7 +496,7 @@ public open class CfnDeploymentConfig(
      * at any time during the deployment. 
      */
     override fun minimumHealthyHosts(minimumHealthyHosts: IResolvable) {
-      cdkBuilder.minimumHealthyHosts(minimumHealthyHosts.let(IResolvable::unwrap))
+      cdkBuilder.minimumHealthyHosts(minimumHealthyHosts.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -528,7 +528,7 @@ public open class CfnDeploymentConfig(
      * at any time during the deployment. 
      */
     override fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHostsProperty) {
-      cdkBuilder.minimumHealthyHosts(minimumHealthyHosts.let(MinimumHealthyHostsProperty::unwrap))
+      cdkBuilder.minimumHealthyHosts(minimumHealthyHosts.let(MinimumHealthyHostsProperty.Companion::unwrap))
     }
 
     /**
@@ -573,7 +573,7 @@ public open class CfnDeploymentConfig(
      * routed. 
      */
     override fun trafficRoutingConfig(trafficRoutingConfig: IResolvable) {
-      cdkBuilder.trafficRoutingConfig(trafficRoutingConfig.let(IResolvable::unwrap))
+      cdkBuilder.trafficRoutingConfig(trafficRoutingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -584,7 +584,7 @@ public open class CfnDeploymentConfig(
      * routed. 
      */
     override fun trafficRoutingConfig(trafficRoutingConfig: TrafficRoutingConfigProperty) {
-      cdkBuilder.trafficRoutingConfig(trafficRoutingConfig.let(TrafficRoutingConfigProperty::unwrap))
+      cdkBuilder.trafficRoutingConfig(trafficRoutingConfig.let(TrafficRoutingConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -617,7 +617,7 @@ public open class CfnDeploymentConfig(
      * at a time, within an AWS Region. 
      */
     override fun zonalConfig(zonalConfig: IResolvable) {
-      cdkBuilder.zonalConfig(zonalConfig.let(IResolvable::unwrap))
+      cdkBuilder.zonalConfig(zonalConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -637,7 +637,7 @@ public open class CfnDeploymentConfig(
      * at a time, within an AWS Region. 
      */
     override fun zonalConfig(zonalConfig: ZonalConfigProperty) {
-      cdkBuilder.zonalConfig(zonalConfig.let(ZonalConfigProperty::unwrap))
+      cdkBuilder.zonalConfig(zonalConfig.let(ZonalConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1382,7 +1382,7 @@ public open class CfnDeploymentConfig(
        * deployment's AppSpec file.
        */
       override fun timeBasedCanary(timeBasedCanary: IResolvable) {
-        cdkBuilder.timeBasedCanary(timeBasedCanary.let(IResolvable::unwrap))
+        cdkBuilder.timeBasedCanary(timeBasedCanary.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1392,7 +1392,7 @@ public open class CfnDeploymentConfig(
        * deployment's AppSpec file.
        */
       override fun timeBasedCanary(timeBasedCanary: TimeBasedCanaryProperty) {
-        cdkBuilder.timeBasedCanary(timeBasedCanary.let(TimeBasedCanaryProperty::unwrap))
+        cdkBuilder.timeBasedCanary(timeBasedCanary.let(TimeBasedCanaryProperty.Companion::unwrap))
       }
 
       /**
@@ -1414,7 +1414,7 @@ public open class CfnDeploymentConfig(
        * the deployment's AppSpec file.
        */
       override fun timeBasedLinear(timeBasedLinear: IResolvable) {
-        cdkBuilder.timeBasedLinear(timeBasedLinear.let(IResolvable::unwrap))
+        cdkBuilder.timeBasedLinear(timeBasedLinear.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1425,7 +1425,7 @@ public open class CfnDeploymentConfig(
        * the deployment's AppSpec file.
        */
       override fun timeBasedLinear(timeBasedLinear: TimeBasedLinearProperty) {
-        cdkBuilder.timeBasedLinear(timeBasedLinear.let(TimeBasedLinearProperty::unwrap))
+        cdkBuilder.timeBasedLinear(timeBasedLinear.let(TimeBasedLinearProperty.Companion::unwrap))
       }
 
       /**
@@ -1722,7 +1722,7 @@ public open class CfnDeploymentConfig(
        * in the *CodeDeploy User Guide* .
        */
       override fun minimumHealthyHostsPerZone(minimumHealthyHostsPerZone: IResolvable) {
-        cdkBuilder.minimumHealthyHostsPerZone(minimumHealthyHostsPerZone.let(IResolvable::unwrap))
+        cdkBuilder.minimumHealthyHostsPerZone(minimumHealthyHostsPerZone.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1742,7 +1742,7 @@ public open class CfnDeploymentConfig(
        */
       override
           fun minimumHealthyHostsPerZone(minimumHealthyHostsPerZone: MinimumHealthyHostsPerZoneProperty) {
-        cdkBuilder.minimumHealthyHostsPerZone(minimumHealthyHostsPerZone.let(MinimumHealthyHostsPerZoneProperty::unwrap))
+        cdkBuilder.minimumHealthyHostsPerZone(minimumHealthyHostsPerZone.let(MinimumHealthyHostsPerZoneProperty.Companion::unwrap))
       }
 
       /**

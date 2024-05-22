@@ -592,7 +592,7 @@ public interface CfnScalableTargetProps {
      * Duplicates aren't allowed.
      */
     override fun scheduledActions(scheduledActions: IResolvable) {
-      cdkBuilder.scheduledActions(scheduledActions.let(IResolvable::unwrap))
+      cdkBuilder.scheduledActions(scheduledActions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -634,7 +634,7 @@ public interface CfnScalableTargetProps {
      * that involve scheduled actions are suspended.
      */
     override fun suspendedState(suspendedState: IResolvable) {
-      cdkBuilder.suspendedState(suspendedState.let(IResolvable::unwrap))
+      cdkBuilder.suspendedState(suspendedState.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -653,7 +653,7 @@ public interface CfnScalableTargetProps {
      * that involve scheduled actions are suspended.
      */
     override fun suspendedState(suspendedState: CfnScalableTarget.SuspendedStateProperty) {
-      cdkBuilder.suspendedState(suspendedState.let(CfnScalableTarget.SuspendedStateProperty::unwrap))
+      cdkBuilder.suspendedState(suspendedState.let(CfnScalableTarget.SuspendedStateProperty.Companion::unwrap))
     }
 
     /**

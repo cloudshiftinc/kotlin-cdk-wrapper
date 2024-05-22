@@ -81,7 +81,7 @@ public interface CfnReplicationConfigurationProps {
      * @param replicationConfiguration The replication configuration for a registry. 
      */
     override fun replicationConfiguration(replicationConfiguration: IResolvable) {
-      cdkBuilder.replicationConfiguration(replicationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.replicationConfiguration(replicationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -89,7 +89,7 @@ public interface CfnReplicationConfigurationProps {
      */
     override
         fun replicationConfiguration(replicationConfiguration: CfnReplicationConfiguration.ReplicationConfigurationProperty) {
-      cdkBuilder.replicationConfiguration(replicationConfiguration.let(CfnReplicationConfiguration.ReplicationConfigurationProperty::unwrap))
+      cdkBuilder.replicationConfiguration(replicationConfiguration.let(CfnReplicationConfiguration.ReplicationConfigurationProperty.Companion::unwrap))
     }
 
     /**

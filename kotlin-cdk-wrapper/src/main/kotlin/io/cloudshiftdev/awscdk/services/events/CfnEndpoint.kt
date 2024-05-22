@@ -66,8 +66,8 @@ public open class CfnEndpoint(
     id: String,
     props: CfnEndpointProps,
   ) :
-      this(software.amazon.awscdk.services.events.CfnEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.events.CfnEndpoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEndpointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -123,7 +123,7 @@ public open class CfnEndpoint(
    * The event buses being used by the endpoint.
    */
   public open fun eventBuses(`value`: IResolvable) {
-    unwrap(this).setEventBuses(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEventBuses(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -144,7 +144,7 @@ public open class CfnEndpoint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -168,14 +168,14 @@ public open class CfnEndpoint(
    * Whether event replication was enabled or disabled for this endpoint.
    */
   public open fun replicationConfig(`value`: IResolvable) {
-    unwrap(this).setReplicationConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setReplicationConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Whether event replication was enabled or disabled for this endpoint.
    */
   public open fun replicationConfig(`value`: ReplicationConfigProperty) {
-    unwrap(this).setReplicationConfig(`value`.let(ReplicationConfigProperty::unwrap))
+    unwrap(this).setReplicationConfig(`value`.let(ReplicationConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -207,14 +207,14 @@ public open class CfnEndpoint(
    * The routing configuration of the endpoint.
    */
   public open fun routingConfig(`value`: IResolvable) {
-    unwrap(this).setRoutingConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRoutingConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The routing configuration of the endpoint.
    */
   public open fun routingConfig(`value`: RoutingConfigProperty) {
-    unwrap(this).setRoutingConfig(`value`.let(RoutingConfigProperty::unwrap))
+    unwrap(this).setRoutingConfig(`value`.let(RoutingConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -375,7 +375,7 @@ public open class CfnEndpoint(
      * @param eventBuses The event buses being used by the endpoint. 
      */
     override fun eventBuses(eventBuses: IResolvable) {
-      cdkBuilder.eventBuses(eventBuses.let(IResolvable::unwrap))
+      cdkBuilder.eventBuses(eventBuses.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -421,7 +421,7 @@ public open class CfnEndpoint(
      * 
      */
     override fun replicationConfig(replicationConfig: IResolvable) {
-      cdkBuilder.replicationConfig(replicationConfig.let(IResolvable::unwrap))
+      cdkBuilder.replicationConfig(replicationConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -435,7 +435,7 @@ public open class CfnEndpoint(
      * 
      */
     override fun replicationConfig(replicationConfig: ReplicationConfigProperty) {
-      cdkBuilder.replicationConfig(replicationConfig.let(ReplicationConfigProperty::unwrap))
+      cdkBuilder.replicationConfig(replicationConfig.let(ReplicationConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -470,7 +470,7 @@ public open class CfnEndpoint(
      * @param routingConfig The routing configuration of the endpoint. 
      */
     override fun routingConfig(routingConfig: IResolvable) {
-      cdkBuilder.routingConfig(routingConfig.let(IResolvable::unwrap))
+      cdkBuilder.routingConfig(routingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -480,7 +480,7 @@ public open class CfnEndpoint(
      * @param routingConfig The routing configuration of the endpoint. 
      */
     override fun routingConfig(routingConfig: RoutingConfigProperty) {
-      cdkBuilder.routingConfig(routingConfig.let(RoutingConfigProperty::unwrap))
+      cdkBuilder.routingConfig(routingConfig.let(RoutingConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -689,14 +689,14 @@ public open class CfnEndpoint(
        * @param primary The main Region of the endpoint. 
        */
       override fun primary(primary: IResolvable) {
-        cdkBuilder.primary(primary.let(IResolvable::unwrap))
+        cdkBuilder.primary(primary.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param primary The main Region of the endpoint. 
        */
       override fun primary(primary: PrimaryProperty) {
-        cdkBuilder.primary(primary.let(PrimaryProperty::unwrap))
+        cdkBuilder.primary(primary.let(PrimaryProperty.Companion::unwrap))
       }
 
       /**
@@ -712,7 +712,7 @@ public open class CfnEndpoint(
        * replication is enabled. 
        */
       override fun secondary(secondary: IResolvable) {
-        cdkBuilder.secondary(secondary.let(IResolvable::unwrap))
+        cdkBuilder.secondary(secondary.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -720,7 +720,7 @@ public open class CfnEndpoint(
        * replication is enabled. 
        */
       override fun secondary(secondary: SecondaryProperty) {
-        cdkBuilder.secondary(secondary.let(SecondaryProperty::unwrap))
+        cdkBuilder.secondary(secondary.let(SecondaryProperty.Companion::unwrap))
       }
 
       /**
@@ -1005,7 +1005,7 @@ public open class CfnEndpoint(
        * This includes what triggers failover and what happens when it's triggered.
        */
       override fun failoverConfig(failoverConfig: IResolvable) {
-        cdkBuilder.failoverConfig(failoverConfig.let(IResolvable::unwrap))
+        cdkBuilder.failoverConfig(failoverConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1013,7 +1013,7 @@ public open class CfnEndpoint(
        * This includes what triggers failover and what happens when it's triggered.
        */
       override fun failoverConfig(failoverConfig: FailoverConfigProperty) {
-        cdkBuilder.failoverConfig(failoverConfig.let(FailoverConfigProperty::unwrap))
+        cdkBuilder.failoverConfig(failoverConfig.let(FailoverConfigProperty.Companion::unwrap))
       }
 
       /**

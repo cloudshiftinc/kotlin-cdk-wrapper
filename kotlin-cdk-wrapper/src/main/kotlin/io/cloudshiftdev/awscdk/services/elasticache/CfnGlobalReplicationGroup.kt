@@ -70,8 +70,8 @@ public open class CfnGlobalReplicationGroup(
     id: String,
     props: CfnGlobalReplicationGroupProps,
   ) :
-      this(software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGlobalReplicationGroupProps::unwrap))
+      this(software.amazon.awscdk.services.elasticache.CfnGlobalReplicationGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGlobalReplicationGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -115,7 +115,7 @@ public open class CfnGlobalReplicationGroup(
    * existing primary fails.
    */
   public open fun automaticFailoverEnabled(`value`: IResolvable) {
-    unwrap(this).setAutomaticFailoverEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutomaticFailoverEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -198,7 +198,7 @@ public open class CfnGlobalReplicationGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -210,7 +210,7 @@ public open class CfnGlobalReplicationGroup(
    * The replication groups that comprise the Global datastore.
    */
   public open fun members(`value`: IResolvable) {
-    unwrap(this).setMembers(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMembers(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -234,7 +234,7 @@ public open class CfnGlobalReplicationGroup(
    * The Regions that comprise the Global Datastore.
    */
   public open fun regionalConfigurations(`value`: IResolvable) {
-    unwrap(this).setRegionalConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRegionalConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -419,7 +419,7 @@ public open class CfnGlobalReplicationGroup(
      * promoted to read/write primary if the existing primary fails. 
      */
     override fun automaticFailoverEnabled(automaticFailoverEnabled: IResolvable) {
-      cdkBuilder.automaticFailoverEnabled(automaticFailoverEnabled.let(IResolvable::unwrap))
+      cdkBuilder.automaticFailoverEnabled(automaticFailoverEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -494,7 +494,7 @@ public open class CfnGlobalReplicationGroup(
      * @param members The replication groups that comprise the Global datastore. 
      */
     override fun members(members: IResolvable) {
-      cdkBuilder.members(members.let(IResolvable::unwrap))
+      cdkBuilder.members(members.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -522,7 +522,7 @@ public open class CfnGlobalReplicationGroup(
      * @param regionalConfigurations The Regions that comprise the Global Datastore. 
      */
     override fun regionalConfigurations(regionalConfigurations: IResolvable) {
-      cdkBuilder.regionalConfigurations(regionalConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.regionalConfigurations(regionalConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -814,7 +814,7 @@ public open class CfnGlobalReplicationGroup(
        * the configuration of a node group in the resharded cluster.
        */
       override fun reshardingConfigurations(reshardingConfigurations: IResolvable) {
-        cdkBuilder.reshardingConfigurations(reshardingConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.reshardingConfigurations(reshardingConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**

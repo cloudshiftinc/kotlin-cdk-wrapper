@@ -45,7 +45,7 @@ public open class PolicyDocument(
   )
 
   public constructor(props: PolicyDocumentProps) :
-      this(software.amazon.awscdk.services.iam.PolicyDocument(props.let(PolicyDocumentProps::unwrap))
+      this(software.amazon.awscdk.services.iam.PolicyDocument(props.let(PolicyDocumentProps.Companion::unwrap))
   )
 
   public constructor(props: PolicyDocumentProps.Builder.() -> Unit) :
@@ -92,7 +92,7 @@ public open class PolicyDocument(
    * @param context 
    */
   public override fun resolve(context: IResolveContext): Any =
-      unwrap(this).resolve(context.let(IResolveContext::unwrap))
+      unwrap(this).resolve(context.let(IResolveContext.Companion::unwrap))
 
   /**
    * The number of statements already added to this policy.
@@ -235,7 +235,7 @@ public open class PolicyDocument(
      * @param statements Initial statements to add to the policy document. 
      */
     override fun statements(statements: List<PolicyStatement>) {
-      cdkBuilder.statements(statements.map(PolicyStatement::unwrap))
+      cdkBuilder.statements(statements.map(PolicyStatement.Companion::unwrap))
     }
 
     /**

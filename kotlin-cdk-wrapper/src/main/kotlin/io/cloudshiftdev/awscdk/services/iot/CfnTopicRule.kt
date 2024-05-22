@@ -477,8 +477,8 @@ public open class CfnTopicRule(
     id: String,
     props: CfnTopicRuleProps,
   ) :
-      this(software.amazon.awscdk.services.iot.CfnTopicRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTopicRuleProps::unwrap))
+      this(software.amazon.awscdk.services.iot.CfnTopicRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTopicRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -500,7 +500,7 @@ public open class CfnTopicRule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -530,7 +530,7 @@ public open class CfnTopicRule(
    * Metadata which can be used to manage the topic rule.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -547,14 +547,14 @@ public open class CfnTopicRule(
    * The rule payload.
    */
   public open fun topicRulePayload(`value`: IResolvable) {
-    unwrap(this).setTopicRulePayload(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTopicRulePayload(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The rule payload.
    */
   public open fun topicRulePayload(`value`: TopicRulePayloadProperty) {
-    unwrap(this).setTopicRulePayload(`value`.let(TopicRulePayloadProperty::unwrap))
+    unwrap(this).setTopicRulePayload(`value`.let(TopicRulePayloadProperty.Companion::unwrap))
   }
 
   /**
@@ -673,7 +673,7 @@ public open class CfnTopicRule(
      * @param tags Metadata which can be used to manage the topic rule. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -699,7 +699,7 @@ public open class CfnTopicRule(
      * @param topicRulePayload The rule payload. 
      */
     override fun topicRulePayload(topicRulePayload: IResolvable) {
-      cdkBuilder.topicRulePayload(topicRulePayload.let(IResolvable::unwrap))
+      cdkBuilder.topicRulePayload(topicRulePayload.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -709,7 +709,7 @@ public open class CfnTopicRule(
      * @param topicRulePayload The rule payload. 
      */
     override fun topicRulePayload(topicRulePayload: TopicRulePayloadProperty) {
-      cdkBuilder.topicRulePayload(topicRulePayload.let(TopicRulePayloadProperty::unwrap))
+      cdkBuilder.topicRulePayload(topicRulePayload.let(TopicRulePayloadProperty.Companion::unwrap))
     }
 
     /**
@@ -1558,14 +1558,14 @@ public open class CfnTopicRule(
        * @param cloudwatchAlarm Change the state of a CloudWatch alarm.
        */
       override fun cloudwatchAlarm(cloudwatchAlarm: IResolvable) {
-        cdkBuilder.cloudwatchAlarm(cloudwatchAlarm.let(IResolvable::unwrap))
+        cdkBuilder.cloudwatchAlarm(cloudwatchAlarm.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param cloudwatchAlarm Change the state of a CloudWatch alarm.
        */
       override fun cloudwatchAlarm(cloudwatchAlarm: CloudwatchAlarmActionProperty) {
-        cdkBuilder.cloudwatchAlarm(cloudwatchAlarm.let(CloudwatchAlarmActionProperty::unwrap))
+        cdkBuilder.cloudwatchAlarm(cloudwatchAlarm.let(CloudwatchAlarmActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1581,14 +1581,14 @@ public open class CfnTopicRule(
        * @param cloudwatchLogs Sends data to CloudWatch.
        */
       override fun cloudwatchLogs(cloudwatchLogs: IResolvable) {
-        cdkBuilder.cloudwatchLogs(cloudwatchLogs.let(IResolvable::unwrap))
+        cdkBuilder.cloudwatchLogs(cloudwatchLogs.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param cloudwatchLogs Sends data to CloudWatch.
        */
       override fun cloudwatchLogs(cloudwatchLogs: CloudwatchLogsActionProperty) {
-        cdkBuilder.cloudwatchLogs(cloudwatchLogs.let(CloudwatchLogsActionProperty::unwrap))
+        cdkBuilder.cloudwatchLogs(cloudwatchLogs.let(CloudwatchLogsActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1603,14 +1603,14 @@ public open class CfnTopicRule(
        * @param cloudwatchMetric Capture a CloudWatch metric.
        */
       override fun cloudwatchMetric(cloudwatchMetric: IResolvable) {
-        cdkBuilder.cloudwatchMetric(cloudwatchMetric.let(IResolvable::unwrap))
+        cdkBuilder.cloudwatchMetric(cloudwatchMetric.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param cloudwatchMetric Capture a CloudWatch metric.
        */
       override fun cloudwatchMetric(cloudwatchMetric: CloudwatchMetricActionProperty) {
-        cdkBuilder.cloudwatchMetric(cloudwatchMetric.let(CloudwatchMetricActionProperty::unwrap))
+        cdkBuilder.cloudwatchMetric(cloudwatchMetric.let(CloudwatchMetricActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1628,7 +1628,7 @@ public open class CfnTopicRule(
        * MQTT message payload into a separate DynamoDB column.
        */
       override fun dynamoDBv2(dynamoDBv2: IResolvable) {
-        cdkBuilder.dynamoDBv2(dynamoDBv2.let(IResolvable::unwrap))
+        cdkBuilder.dynamoDBv2(dynamoDBv2.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1637,7 +1637,7 @@ public open class CfnTopicRule(
        * MQTT message payload into a separate DynamoDB column.
        */
       override fun dynamoDBv2(dynamoDBv2: DynamoDBv2ActionProperty) {
-        cdkBuilder.dynamoDBv2(dynamoDBv2.let(DynamoDBv2ActionProperty::unwrap))
+        cdkBuilder.dynamoDBv2(dynamoDBv2.let(DynamoDBv2ActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1654,14 +1654,14 @@ public open class CfnTopicRule(
        * @param dynamoDb Write to a DynamoDB table.
        */
       override fun dynamoDb(dynamoDb: IResolvable) {
-        cdkBuilder.dynamoDb(dynamoDb.let(IResolvable::unwrap))
+        cdkBuilder.dynamoDb(dynamoDb.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dynamoDb Write to a DynamoDB table.
        */
       override fun dynamoDb(dynamoDb: DynamoDBActionProperty) {
-        cdkBuilder.dynamoDb(dynamoDb.let(DynamoDBActionProperty::unwrap))
+        cdkBuilder.dynamoDb(dynamoDb.let(DynamoDBActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1682,7 +1682,7 @@ public open class CfnTopicRule(
        * .
        */
       override fun elasticsearch(elasticsearch: IResolvable) {
-        cdkBuilder.elasticsearch(elasticsearch.let(IResolvable::unwrap))
+        cdkBuilder.elasticsearch(elasticsearch.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1695,7 +1695,7 @@ public open class CfnTopicRule(
        * .
        */
       override fun elasticsearch(elasticsearch: ElasticsearchActionProperty) {
-        cdkBuilder.elasticsearch(elasticsearch.let(ElasticsearchActionProperty::unwrap))
+        cdkBuilder.elasticsearch(elasticsearch.let(ElasticsearchActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1716,14 +1716,14 @@ public open class CfnTopicRule(
        * @param firehose Write to an Amazon Kinesis Firehose stream.
        */
       override fun firehose(firehose: IResolvable) {
-        cdkBuilder.firehose(firehose.let(IResolvable::unwrap))
+        cdkBuilder.firehose(firehose.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param firehose Write to an Amazon Kinesis Firehose stream.
        */
       override fun firehose(firehose: FirehoseActionProperty) {
-        cdkBuilder.firehose(firehose.let(FirehoseActionProperty::unwrap))
+        cdkBuilder.firehose(firehose.let(FirehoseActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1738,14 +1738,14 @@ public open class CfnTopicRule(
        * @param http Send data to an HTTPS endpoint.
        */
       override fun http(http: IResolvable) {
-        cdkBuilder.http(http.let(IResolvable::unwrap))
+        cdkBuilder.http(http.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param http Send data to an HTTPS endpoint.
        */
       override fun http(http: HttpActionProperty) {
-        cdkBuilder.http(http.let(HttpActionProperty::unwrap))
+        cdkBuilder.http(http.let(HttpActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1760,14 +1760,14 @@ public open class CfnTopicRule(
        * @param iotAnalytics Sends message data to an AWS IoT Analytics channel.
        */
       override fun iotAnalytics(iotAnalytics: IResolvable) {
-        cdkBuilder.iotAnalytics(iotAnalytics.let(IResolvable::unwrap))
+        cdkBuilder.iotAnalytics(iotAnalytics.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param iotAnalytics Sends message data to an AWS IoT Analytics channel.
        */
       override fun iotAnalytics(iotAnalytics: IotAnalyticsActionProperty) {
-        cdkBuilder.iotAnalytics(iotAnalytics.let(IotAnalyticsActionProperty::unwrap))
+        cdkBuilder.iotAnalytics(iotAnalytics.let(IotAnalyticsActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1782,14 +1782,14 @@ public open class CfnTopicRule(
        * @param iotEvents Sends an input to an AWS IoT Events detector.
        */
       override fun iotEvents(iotEvents: IResolvable) {
-        cdkBuilder.iotEvents(iotEvents.let(IResolvable::unwrap))
+        cdkBuilder.iotEvents(iotEvents.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param iotEvents Sends an input to an AWS IoT Events detector.
        */
       override fun iotEvents(iotEvents: IotEventsActionProperty) {
-        cdkBuilder.iotEvents(iotEvents.let(IotEventsActionProperty::unwrap))
+        cdkBuilder.iotEvents(iotEvents.let(IotEventsActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1805,7 +1805,7 @@ public open class CfnTopicRule(
        * SiteWise asset properties.
        */
       override fun iotSiteWise(iotSiteWise: IResolvable) {
-        cdkBuilder.iotSiteWise(iotSiteWise.let(IResolvable::unwrap))
+        cdkBuilder.iotSiteWise(iotSiteWise.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1813,7 +1813,7 @@ public open class CfnTopicRule(
        * SiteWise asset properties.
        */
       override fun iotSiteWise(iotSiteWise: IotSiteWiseActionProperty) {
-        cdkBuilder.iotSiteWise(iotSiteWise.let(IotSiteWiseActionProperty::unwrap))
+        cdkBuilder.iotSiteWise(iotSiteWise.let(IotSiteWiseActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1830,7 +1830,7 @@ public open class CfnTopicRule(
        * self-managed Apache Kafka cluster.
        */
       override fun kafka(kafka: IResolvable) {
-        cdkBuilder.kafka(kafka.let(IResolvable::unwrap))
+        cdkBuilder.kafka(kafka.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1838,7 +1838,7 @@ public open class CfnTopicRule(
        * self-managed Apache Kafka cluster.
        */
       override fun kafka(kafka: KafkaActionProperty) {
-        cdkBuilder.kafka(kafka.let(KafkaActionProperty::unwrap))
+        cdkBuilder.kafka(kafka.let(KafkaActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1854,14 +1854,14 @@ public open class CfnTopicRule(
        * @param kinesis Write data to an Amazon Kinesis stream.
        */
       override fun kinesis(kinesis: IResolvable) {
-        cdkBuilder.kinesis(kinesis.let(IResolvable::unwrap))
+        cdkBuilder.kinesis(kinesis.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param kinesis Write data to an Amazon Kinesis stream.
        */
       override fun kinesis(kinesis: KinesisActionProperty) {
-        cdkBuilder.kinesis(kinesis.let(KinesisActionProperty::unwrap))
+        cdkBuilder.kinesis(kinesis.let(KinesisActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1876,14 +1876,14 @@ public open class CfnTopicRule(
        * @param lambda Invoke a Lambda function.
        */
       override fun lambda(lambda: IResolvable) {
-        cdkBuilder.lambda(lambda.let(IResolvable::unwrap))
+        cdkBuilder.lambda(lambda.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param lambda Invoke a Lambda function.
        */
       override fun lambda(lambda: LambdaActionProperty) {
-        cdkBuilder.lambda(lambda.let(LambdaActionProperty::unwrap))
+        cdkBuilder.lambda(lambda.let(LambdaActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1899,7 +1899,7 @@ public open class CfnTopicRule(
        * Service](https://docs.aws.amazon.com//location/latest/developerguide/welcome.html) .
        */
       override fun location(location: IResolvable) {
-        cdkBuilder.location(location.let(IResolvable::unwrap))
+        cdkBuilder.location(location.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1907,7 +1907,7 @@ public open class CfnTopicRule(
        * Service](https://docs.aws.amazon.com//location/latest/developerguide/welcome.html) .
        */
       override fun location(location: LocationActionProperty) {
-        cdkBuilder.location(location.let(LocationActionProperty::unwrap))
+        cdkBuilder.location(location.let(LocationActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1923,14 +1923,14 @@ public open class CfnTopicRule(
        * @param openSearch Write data to an Amazon OpenSearch Service domain.
        */
       override fun openSearch(openSearch: IResolvable) {
-        cdkBuilder.openSearch(openSearch.let(IResolvable::unwrap))
+        cdkBuilder.openSearch(openSearch.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param openSearch Write data to an Amazon OpenSearch Service domain.
        */
       override fun openSearch(openSearch: OpenSearchActionProperty) {
-        cdkBuilder.openSearch(openSearch.let(OpenSearchActionProperty::unwrap))
+        cdkBuilder.openSearch(openSearch.let(OpenSearchActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1945,14 +1945,14 @@ public open class CfnTopicRule(
        * @param republish Publish to another MQTT topic.
        */
       override fun republish(republish: IResolvable) {
-        cdkBuilder.republish(republish.let(IResolvable::unwrap))
+        cdkBuilder.republish(republish.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param republish Publish to another MQTT topic.
        */
       override fun republish(republish: RepublishActionProperty) {
-        cdkBuilder.republish(republish.let(RepublishActionProperty::unwrap))
+        cdkBuilder.republish(republish.let(RepublishActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1967,14 +1967,14 @@ public open class CfnTopicRule(
        * @param s3 Write to an Amazon S3 bucket.
        */
       override fun s3(s3: IResolvable) {
-        cdkBuilder.s3(s3.let(IResolvable::unwrap))
+        cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3 Write to an Amazon S3 bucket.
        */
       override fun s3(s3: S3ActionProperty) {
-        cdkBuilder.s3(s3.let(S3ActionProperty::unwrap))
+        cdkBuilder.s3(s3.let(S3ActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1988,14 +1988,14 @@ public open class CfnTopicRule(
        * @param sns Publish to an Amazon SNS topic.
        */
       override fun sns(sns: IResolvable) {
-        cdkBuilder.sns(sns.let(IResolvable::unwrap))
+        cdkBuilder.sns(sns.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sns Publish to an Amazon SNS topic.
        */
       override fun sns(sns: SnsActionProperty) {
-        cdkBuilder.sns(sns.let(SnsActionProperty::unwrap))
+        cdkBuilder.sns(sns.let(SnsActionProperty.Companion::unwrap))
       }
 
       /**
@@ -2010,14 +2010,14 @@ public open class CfnTopicRule(
        * @param sqs Publish to an Amazon SQS queue.
        */
       override fun sqs(sqs: IResolvable) {
-        cdkBuilder.sqs(sqs.let(IResolvable::unwrap))
+        cdkBuilder.sqs(sqs.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sqs Publish to an Amazon SQS queue.
        */
       override fun sqs(sqs: SqsActionProperty) {
-        cdkBuilder.sqs(sqs.let(SqsActionProperty::unwrap))
+        cdkBuilder.sqs(sqs.let(SqsActionProperty.Companion::unwrap))
       }
 
       /**
@@ -2032,14 +2032,14 @@ public open class CfnTopicRule(
        * @param stepFunctions Starts execution of a Step Functions state machine.
        */
       override fun stepFunctions(stepFunctions: IResolvable) {
-        cdkBuilder.stepFunctions(stepFunctions.let(IResolvable::unwrap))
+        cdkBuilder.stepFunctions(stepFunctions.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param stepFunctions Starts execution of a Step Functions state machine.
        */
       override fun stepFunctions(stepFunctions: StepFunctionsActionProperty) {
-        cdkBuilder.stepFunctions(stepFunctions.let(StepFunctionsActionProperty::unwrap))
+        cdkBuilder.stepFunctions(stepFunctions.let(StepFunctionsActionProperty.Companion::unwrap))
       }
 
       /**
@@ -2054,14 +2054,14 @@ public open class CfnTopicRule(
        * @param timestream Writes attributes from an MQTT message.
        */
       override fun timestream(timestream: IResolvable) {
-        cdkBuilder.timestream(timestream.let(IResolvable::unwrap))
+        cdkBuilder.timestream(timestream.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param timestream Writes attributes from an MQTT message.
        */
       override fun timestream(timestream: TimestreamActionProperty) {
-        cdkBuilder.timestream(timestream.let(TimestreamActionProperty::unwrap))
+        cdkBuilder.timestream(timestream.let(TimestreamActionProperty.Companion::unwrap))
       }
 
       /**
@@ -2504,14 +2504,14 @@ public open class CfnTopicRule(
        * @param timestamp The asset property value timestamp. 
        */
       override fun timestamp(timestamp: IResolvable) {
-        cdkBuilder.timestamp(timestamp.let(IResolvable::unwrap))
+        cdkBuilder.timestamp(timestamp.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param timestamp The asset property value timestamp. 
        */
       override fun timestamp(timestamp: AssetPropertyTimestampProperty) {
-        cdkBuilder.timestamp(timestamp.let(AssetPropertyTimestampProperty::unwrap))
+        cdkBuilder.timestamp(timestamp.let(AssetPropertyTimestampProperty.Companion::unwrap))
       }
 
       /**
@@ -2526,14 +2526,14 @@ public open class CfnTopicRule(
        * @param value The value of the asset property. 
        */
       override fun `value`(`value`: IResolvable) {
-        cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
+        cdkBuilder.`value`(`value`.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param value The value of the asset property. 
        */
       override fun `value`(`value`: AssetPropertyVariantProperty) {
-        cdkBuilder.`value`(`value`.let(AssetPropertyVariantProperty::unwrap))
+        cdkBuilder.`value`(`value`.let(AssetPropertyVariantProperty.Companion::unwrap))
       }
 
       /**
@@ -3046,7 +3046,7 @@ public open class CfnTopicRule(
        * into CloudWatch.
        */
       override fun batchMode(batchMode: IResolvable) {
-        cdkBuilder.batchMode(batchMode.let(IResolvable::unwrap))
+        cdkBuilder.batchMode(batchMode.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3784,7 +3784,7 @@ public open class CfnTopicRule(
        * database.
        */
       override fun putItem(putItem: IResolvable) {
-        cdkBuilder.putItem(putItem.let(IResolvable::unwrap))
+        cdkBuilder.putItem(putItem.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3797,7 +3797,7 @@ public open class CfnTopicRule(
        * database.
        */
       override fun putItem(putItem: PutItemInputProperty) {
-        cdkBuilder.putItem(putItem.let(PutItemInputProperty::unwrap))
+        cdkBuilder.putItem(putItem.let(PutItemInputProperty.Companion::unwrap))
       }
 
       /**
@@ -4195,7 +4195,7 @@ public open class CfnTopicRule(
        * request. The resulting array can't have more than 500 records.
        */
       override fun batchMode(batchMode: IResolvable) {
-        cdkBuilder.batchMode(batchMode.let(IResolvable::unwrap))
+        cdkBuilder.batchMode(batchMode.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4528,14 +4528,14 @@ public open class CfnTopicRule(
        * @param auth The authentication method to use when sending data to an HTTPS endpoint.
        */
       override fun auth(auth: IResolvable) {
-        cdkBuilder.auth(auth.let(IResolvable::unwrap))
+        cdkBuilder.auth(auth.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param auth The authentication method to use when sending data to an HTTPS endpoint.
        */
       override fun auth(auth: HttpAuthorizationProperty) {
-        cdkBuilder.auth(auth.let(HttpAuthorizationProperty::unwrap))
+        cdkBuilder.auth(auth.let(HttpAuthorizationProperty.Companion::unwrap))
       }
 
       /**
@@ -4562,7 +4562,7 @@ public open class CfnTopicRule(
        * @param headers The HTTP headers to send with the message data.
        */
       override fun headers(headers: IResolvable) {
-        cdkBuilder.headers(headers.let(IResolvable::unwrap))
+        cdkBuilder.headers(headers.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4720,7 +4720,7 @@ public open class CfnTopicRule(
        * Process](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) .
        */
       override fun sigv4(sigv4: IResolvable) {
-        cdkBuilder.sigv4(sigv4.let(IResolvable::unwrap))
+        cdkBuilder.sigv4(sigv4.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4729,7 +4729,7 @@ public open class CfnTopicRule(
        * Process](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html) .
        */
       override fun sigv4(sigv4: SigV4AuthorizationProperty) {
-        cdkBuilder.sigv4(sigv4.let(SigV4AuthorizationProperty::unwrap))
+        cdkBuilder.sigv4(sigv4.let(SigV4AuthorizationProperty.Companion::unwrap))
       }
 
       /**
@@ -4885,7 +4885,7 @@ public open class CfnTopicRule(
        * The resulting array can't have more than 100 messages.
        */
       override fun batchMode(batchMode: IResolvable) {
-        cdkBuilder.batchMode(batchMode.let(IResolvable::unwrap))
+        cdkBuilder.batchMode(batchMode.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5105,7 +5105,7 @@ public open class CfnTopicRule(
        * . The resulting array can't have more than 10 messages.
        */
       override fun batchMode(batchMode: IResolvable) {
-        cdkBuilder.batchMode(batchMode.let(IResolvable::unwrap))
+        cdkBuilder.batchMode(batchMode.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5302,7 +5302,7 @@ public open class CfnTopicRule(
        * @param putAssetPropertyValueEntries A list of asset property value entries. 
        */
       override fun putAssetPropertyValueEntries(putAssetPropertyValueEntries: IResolvable) {
-        cdkBuilder.putAssetPropertyValueEntries(putAssetPropertyValueEntries.let(IResolvable::unwrap))
+        cdkBuilder.putAssetPropertyValueEntries(putAssetPropertyValueEntries.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5613,7 +5613,7 @@ public open class CfnTopicRule(
        * @param clientProperties Properties of the Apache Kafka producer client. 
        */
       override fun clientProperties(clientProperties: IResolvable) {
-        cdkBuilder.clientProperties(clientProperties.let(IResolvable::unwrap))
+        cdkBuilder.clientProperties(clientProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5634,7 +5634,7 @@ public open class CfnTopicRule(
        * @param headers The list of Kafka headers that you specify.
        */
       override fun headers(headers: IResolvable) {
-        cdkBuilder.headers(headers.let(IResolvable::unwrap))
+        cdkBuilder.headers(headers.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6123,7 +6123,7 @@ public open class CfnTopicRule(
        * The default value is the time the MQTT message was processed.
        */
       override fun timestamp(timestamp: IResolvable) {
-        cdkBuilder.timestamp(timestamp.let(IResolvable::unwrap))
+        cdkBuilder.timestamp(timestamp.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6131,7 +6131,7 @@ public open class CfnTopicRule(
        * The default value is the time the MQTT message was processed.
        */
       override fun timestamp(timestamp: TimestampProperty) {
-        cdkBuilder.timestamp(timestamp.let(TimestampProperty::unwrap))
+        cdkBuilder.timestamp(timestamp.let(TimestampProperty.Companion::unwrap))
       }
 
       /**
@@ -6595,7 +6595,7 @@ public open class CfnTopicRule(
        * quality, and value (TQV) information. 
        */
       override fun propertyValues(propertyValues: IResolvable) {
-        cdkBuilder.propertyValues(propertyValues.let(IResolvable::unwrap))
+        cdkBuilder.propertyValues(propertyValues.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7085,7 +7085,7 @@ public open class CfnTopicRule(
        * @param userProperties An array of key-value pairs that you define in the MQTT5 header.
        */
       override fun userProperties(userProperties: IResolvable) {
-        cdkBuilder.userProperties(userProperties.let(IResolvable::unwrap))
+        cdkBuilder.userProperties(userProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7342,7 +7342,7 @@ public open class CfnTopicRule(
        * Developer Guide.
        */
       override fun headers(headers: IResolvable) {
-        cdkBuilder.headers(headers.let(IResolvable::unwrap))
+        cdkBuilder.headers(headers.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7351,7 +7351,7 @@ public open class CfnTopicRule(
        * Developer Guide.
        */
       override fun headers(headers: RepublishActionHeadersProperty) {
-        cdkBuilder.headers(headers.let(RepublishActionHeadersProperty::unwrap))
+        cdkBuilder.headers(headers.let(RepublishActionHeadersProperty.Companion::unwrap))
       }
 
       /**
@@ -8016,7 +8016,7 @@ public open class CfnTopicRule(
        * @param useBase64 Specifies whether to use Base64 encoding.
        */
       override fun useBase64(useBase64: IResolvable) {
-        cdkBuilder.useBase64(useBase64.let(IResolvable::unwrap))
+        cdkBuilder.useBase64(useBase64.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.iot.CfnTopicRule.SqsActionProperty =
@@ -8477,7 +8477,7 @@ public open class CfnTopicRule(
        * record. 
        */
       override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+        cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8514,7 +8514,7 @@ public open class CfnTopicRule(
        * If blank, the time that the entry was processed is used.
        */
       override fun timestamp(timestamp: IResolvable) {
-        cdkBuilder.timestamp(timestamp.let(IResolvable::unwrap))
+        cdkBuilder.timestamp(timestamp.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8522,7 +8522,7 @@ public open class CfnTopicRule(
        * If blank, the time that the entry was processed is used.
        */
       override fun timestamp(timestamp: TimestreamTimestampProperty) {
-        cdkBuilder.timestamp(timestamp.let(TimestreamTimestampProperty::unwrap))
+        cdkBuilder.timestamp(timestamp.let(TimestreamTimestampProperty.Companion::unwrap))
       }
 
       /**
@@ -9385,7 +9385,7 @@ public open class CfnTopicRule(
        * @param actions The actions associated with the rule. 
        */
       override fun actions(actions: IResolvable) {
-        cdkBuilder.actions(actions.let(IResolvable::unwrap))
+        cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9420,14 +9420,14 @@ public open class CfnTopicRule(
        * @param errorAction The action to take when an error occurs.
        */
       override fun errorAction(errorAction: IResolvable) {
-        cdkBuilder.errorAction(errorAction.let(IResolvable::unwrap))
+        cdkBuilder.errorAction(errorAction.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param errorAction The action to take when an error occurs.
        */
       override fun errorAction(errorAction: ActionProperty) {
-        cdkBuilder.errorAction(errorAction.let(ActionProperty::unwrap))
+        cdkBuilder.errorAction(errorAction.let(ActionProperty.Companion::unwrap))
       }
 
       /**
@@ -9449,7 +9449,7 @@ public open class CfnTopicRule(
        * @param ruleDisabled Specifies whether the rule is disabled.
        */
       override fun ruleDisabled(ruleDisabled: IResolvable) {
-        cdkBuilder.ruleDisabled(ruleDisabled.let(IResolvable::unwrap))
+        cdkBuilder.ruleDisabled(ruleDisabled.let(IResolvable.Companion::unwrap))
       }
 
       /**

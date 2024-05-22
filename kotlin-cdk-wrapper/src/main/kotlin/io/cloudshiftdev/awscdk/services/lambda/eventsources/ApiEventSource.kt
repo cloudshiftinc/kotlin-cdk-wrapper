@@ -70,7 +70,7 @@ public open class ApiEventSource(
     path: String,
     options: MethodOptions,
   ) : this(software.amazon.awscdk.services.lambda.eventsources.ApiEventSource(method, path,
-      options.let(MethodOptions::unwrap))
+      options.let(MethodOptions.Companion::unwrap))
   )
 
   public constructor(
@@ -86,7 +86,7 @@ public open class ApiEventSource(
    * @param target 
    */
   public override fun bind(target: IFunction) {
-    unwrap(this).bind(target.let(IFunction::unwrap))
+    unwrap(this).bind(target.let(IFunction.Companion::unwrap))
   }
 
   /**
@@ -363,7 +363,7 @@ public open class ApiEventSource(
      * `authorizer` must also be specified. 
      */
     override fun authorizationType(authorizationType: AuthorizationType) {
-      cdkBuilder.authorizationType(authorizationType.let(AuthorizationType::unwrap))
+      cdkBuilder.authorizationType(authorizationType.let(AuthorizationType.Companion::unwrap))
     }
 
     /**
@@ -375,7 +375,7 @@ public open class ApiEventSource(
      * authorizer resource. 
      */
     override fun authorizer(authorizer: IAuthorizer) {
-      cdkBuilder.authorizer(authorizer.let(IAuthorizer::unwrap))
+      cdkBuilder.authorizer(authorizer.let(IAuthorizer.Companion::unwrap))
     }
 
     /**
@@ -390,7 +390,7 @@ public open class ApiEventSource(
      * @param methodResponses The responses that can be sent to the client who calls the method. 
      */
     override fun methodResponses(methodResponses: List<MethodResponse>) {
-      cdkBuilder.methodResponses(methodResponses.map(MethodResponse::unwrap))
+      cdkBuilder.methodResponses(methodResponses.map(MethodResponse.Companion::unwrap))
     }
 
     /**
@@ -490,7 +490,7 @@ public open class ApiEventSource(
      * @param requestValidator The ID of the associated request validator. 
      */
     override fun requestValidator(requestValidator: IRequestValidator) {
-      cdkBuilder.requestValidator(requestValidator.let(IRequestValidator::unwrap))
+      cdkBuilder.requestValidator(requestValidator.let(IRequestValidator.Companion::unwrap))
     }
 
     /**
@@ -506,7 +506,7 @@ public open class ApiEventSource(
      * `requestValidator` or `requestValidatorOptions` must be specified. 
      */
     override fun requestValidatorOptions(requestValidatorOptions: RequestValidatorOptions) {
-      cdkBuilder.requestValidatorOptions(requestValidatorOptions.let(RequestValidatorOptions::unwrap))
+      cdkBuilder.requestValidatorOptions(requestValidatorOptions.let(RequestValidatorOptions.Companion::unwrap))
     }
 
     /**

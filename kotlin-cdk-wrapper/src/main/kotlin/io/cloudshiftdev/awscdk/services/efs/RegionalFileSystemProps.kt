@@ -65,7 +65,7 @@ public interface RegionalFileSystemProps {
      * @param kmsKey AWS KMS key used to protect the encrypted file system.
      */
     override fun kmsKey(kmsKey: IKey) {
-      cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     /**

@@ -34,8 +34,8 @@ public open class VpnGateway(
     id: String,
     props: VpnGatewayProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.VpnGateway(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(VpnGatewayProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.VpnGateway(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(VpnGatewayProps.Companion::unwrap))
   )
 
   public constructor(

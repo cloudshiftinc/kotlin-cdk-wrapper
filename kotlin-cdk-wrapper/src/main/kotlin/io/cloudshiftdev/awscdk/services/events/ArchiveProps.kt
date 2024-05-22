@@ -110,7 +110,7 @@ public interface ArchiveProps : BaseArchiveProps {
      * @param eventPattern An event pattern to use to filter events sent to the archive. 
      */
     override fun eventPattern(eventPattern: EventPattern) {
-      cdkBuilder.eventPattern(eventPattern.let(EventPattern::unwrap))
+      cdkBuilder.eventPattern(eventPattern.let(EventPattern.Companion::unwrap))
     }
 
     /**
@@ -126,14 +126,14 @@ public interface ArchiveProps : BaseArchiveProps {
      * Default value is 0. If set to 0, events are retained indefinitely.
      */
     override fun retention(retention: Duration) {
-      cdkBuilder.retention(retention.let(Duration::unwrap))
+      cdkBuilder.retention(retention.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param sourceEventBus The event source associated with the archive. 
      */
     override fun sourceEventBus(sourceEventBus: IEventBus) {
-      cdkBuilder.sourceEventBus(sourceEventBus.let(IEventBus::unwrap))
+      cdkBuilder.sourceEventBus(sourceEventBus.let(IEventBus.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.events.ArchiveProps = cdkBuilder.build()

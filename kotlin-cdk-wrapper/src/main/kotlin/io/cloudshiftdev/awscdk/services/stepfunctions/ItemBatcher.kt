@@ -34,7 +34,7 @@ public open class ItemBatcher(
   cdkObject: software.amazon.awscdk.services.stepfunctions.ItemBatcher,
 ) : CdkObject(cdkObject) {
   public constructor(props: ItemBatcherProps) :
-      this(software.amazon.awscdk.services.stepfunctions.ItemBatcher(props.let(ItemBatcherProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.ItemBatcher(props.let(ItemBatcherProps.Companion::unwrap))
   )
 
   public constructor(props: ItemBatcherProps.Builder.() -> Unit) : this(ItemBatcherProps(props)

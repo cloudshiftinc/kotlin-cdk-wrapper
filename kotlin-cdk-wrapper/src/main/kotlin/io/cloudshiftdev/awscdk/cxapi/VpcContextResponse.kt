@@ -509,7 +509,7 @@ public interface VpcContextResponse {
      * is true.
      */
     override fun subnetGroups(subnetGroups: List<VpcSubnetGroup>) {
-      cdkBuilder.subnetGroups(subnetGroups.map(VpcSubnetGroup::unwrap))
+      cdkBuilder.subnetGroups(subnetGroups.map(VpcSubnetGroup.Companion::unwrap))
     }
 
     /**

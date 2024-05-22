@@ -289,7 +289,7 @@ public interface CfnEvaluationFormProps {
      * *Maximum size* : 100
      */
     override fun items(items: IResolvable) {
-      cdkBuilder.items(items.let(IResolvable::unwrap))
+      cdkBuilder.items(items.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -320,14 +320,14 @@ public interface CfnEvaluationFormProps {
      * @param scoringStrategy A scoring strategy of the evaluation form.
      */
     override fun scoringStrategy(scoringStrategy: IResolvable) {
-      cdkBuilder.scoringStrategy(scoringStrategy.let(IResolvable::unwrap))
+      cdkBuilder.scoringStrategy(scoringStrategy.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param scoringStrategy A scoring strategy of the evaluation form.
      */
     override fun scoringStrategy(scoringStrategy: CfnEvaluationForm.ScoringStrategyProperty) {
-      cdkBuilder.scoringStrategy(scoringStrategy.let(CfnEvaluationForm.ScoringStrategyProperty::unwrap))
+      cdkBuilder.scoringStrategy(scoringStrategy.let(CfnEvaluationForm.ScoringStrategyProperty.Companion::unwrap))
     }
 
     /**
@@ -352,7 +352,7 @@ public interface CfnEvaluationFormProps {
      * For example, { "tags": {"key1":"value1", "key2":"value2"} }.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

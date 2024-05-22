@@ -65,8 +65,8 @@ public open class CfnDisk(
     id: String,
     props: CfnDiskProps,
   ) :
-      this(software.amazon.awscdk.services.lightsail.CfnDisk(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDiskProps::unwrap))
+      this(software.amazon.awscdk.services.lightsail.CfnDisk(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDiskProps.Companion::unwrap))
   )
 
   public constructor(
@@ -85,7 +85,7 @@ public open class CfnDisk(
    * An array of add-ons for the disk.
    */
   public open fun addOns(`value`: IResolvable) {
-    unwrap(this).setAddOns(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAddOns(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -195,7 +195,7 @@ public open class CfnDisk(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -207,14 +207,14 @@ public open class CfnDisk(
    * The AWS Region and Availability Zone where the disk is located.
    */
   public open fun location(`value`: IResolvable) {
-    unwrap(this).setLocation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLocation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The AWS Region and Availability Zone where the disk is located.
    */
   public open fun location(`value`: LocationProperty) {
-    unwrap(this).setLocation(`value`.let(LocationProperty::unwrap))
+    unwrap(this).setLocation(`value`.let(LocationProperty.Companion::unwrap))
   }
 
   /**
@@ -252,7 +252,7 @@ public open class CfnDisk(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -407,7 +407,7 @@ public open class CfnDisk(
      * @param addOns An array of add-ons for the disk. 
      */
     override fun addOns(addOns: IResolvable) {
-      cdkBuilder.addOns(addOns.let(IResolvable::unwrap))
+      cdkBuilder.addOns(addOns.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -466,7 +466,7 @@ public open class CfnDisk(
      * @param location The AWS Region and Availability Zone where the disk is located. 
      */
     override fun location(location: IResolvable) {
-      cdkBuilder.location(location.let(IResolvable::unwrap))
+      cdkBuilder.location(location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -476,7 +476,7 @@ public open class CfnDisk(
      * @param location The AWS Region and Availability Zone where the disk is located. 
      */
     override fun location(location: LocationProperty) {
-      cdkBuilder.location(location.let(LocationProperty::unwrap))
+      cdkBuilder.location(location.let(LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -515,7 +515,7 @@ public open class CfnDisk(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -668,7 +668,7 @@ public open class CfnDisk(
        * the daily time when an automatic snapshot will be created.
        */
       override fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: IResolvable) {
-        cdkBuilder.autoSnapshotAddOnRequest(autoSnapshotAddOnRequest.let(IResolvable::unwrap))
+        cdkBuilder.autoSnapshotAddOnRequest(autoSnapshotAddOnRequest.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -676,7 +676,7 @@ public open class CfnDisk(
        * the daily time when an automatic snapshot will be created.
        */
       override fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty) {
-        cdkBuilder.autoSnapshotAddOnRequest(autoSnapshotAddOnRequest.let(AutoSnapshotAddOnProperty::unwrap))
+        cdkBuilder.autoSnapshotAddOnRequest(autoSnapshotAddOnRequest.let(AutoSnapshotAddOnProperty.Companion::unwrap))
       }
 
       /**

@@ -288,14 +288,14 @@ public interface ExtendedDataSourceProps {
      * @param dynamoDbConfig configuration for DynamoDB Datasource.
      */
     override fun dynamoDbConfig(dynamoDbConfig: IResolvable) {
-      cdkBuilder.dynamoDbConfig(dynamoDbConfig.let(IResolvable::unwrap))
+      cdkBuilder.dynamoDbConfig(dynamoDbConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param dynamoDbConfig configuration for DynamoDB Datasource.
      */
     override fun dynamoDbConfig(dynamoDbConfig: CfnDataSource.DynamoDBConfigProperty) {
-      cdkBuilder.dynamoDbConfig(dynamoDbConfig.let(CfnDataSource.DynamoDBConfigProperty::unwrap))
+      cdkBuilder.dynamoDbConfig(dynamoDbConfig.let(CfnDataSource.DynamoDBConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -313,7 +313,7 @@ public interface ExtendedDataSourceProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun elasticsearchConfig(elasticsearchConfig: IResolvable) {
-      cdkBuilder.elasticsearchConfig(elasticsearchConfig.let(IResolvable::unwrap))
+      cdkBuilder.elasticsearchConfig(elasticsearchConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -323,7 +323,7 @@ public interface ExtendedDataSourceProps {
     @Deprecated(message = "deprecated in CDK")
     override
         fun elasticsearchConfig(elasticsearchConfig: CfnDataSource.ElasticsearchConfigProperty) {
-      cdkBuilder.elasticsearchConfig(elasticsearchConfig.let(CfnDataSource.ElasticsearchConfigProperty::unwrap))
+      cdkBuilder.elasticsearchConfig(elasticsearchConfig.let(CfnDataSource.ElasticsearchConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -341,14 +341,14 @@ public interface ExtendedDataSourceProps {
      * @param eventBridgeConfig configuration for EventBridge Datasource.
      */
     override fun eventBridgeConfig(eventBridgeConfig: IResolvable) {
-      cdkBuilder.eventBridgeConfig(eventBridgeConfig.let(IResolvable::unwrap))
+      cdkBuilder.eventBridgeConfig(eventBridgeConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param eventBridgeConfig configuration for EventBridge Datasource.
      */
     override fun eventBridgeConfig(eventBridgeConfig: CfnDataSource.EventBridgeConfigProperty) {
-      cdkBuilder.eventBridgeConfig(eventBridgeConfig.let(CfnDataSource.EventBridgeConfigProperty::unwrap))
+      cdkBuilder.eventBridgeConfig(eventBridgeConfig.let(CfnDataSource.EventBridgeConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -364,14 +364,14 @@ public interface ExtendedDataSourceProps {
      * @param httpConfig configuration for HTTP Datasource.
      */
     override fun httpConfig(httpConfig: IResolvable) {
-      cdkBuilder.httpConfig(httpConfig.let(IResolvable::unwrap))
+      cdkBuilder.httpConfig(httpConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param httpConfig configuration for HTTP Datasource.
      */
     override fun httpConfig(httpConfig: CfnDataSource.HttpConfigProperty) {
-      cdkBuilder.httpConfig(httpConfig.let(CfnDataSource.HttpConfigProperty::unwrap))
+      cdkBuilder.httpConfig(httpConfig.let(CfnDataSource.HttpConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -386,14 +386,14 @@ public interface ExtendedDataSourceProps {
      * @param lambdaConfig configuration for Lambda Datasource.
      */
     override fun lambdaConfig(lambdaConfig: IResolvable) {
-      cdkBuilder.lambdaConfig(lambdaConfig.let(IResolvable::unwrap))
+      cdkBuilder.lambdaConfig(lambdaConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param lambdaConfig configuration for Lambda Datasource.
      */
     override fun lambdaConfig(lambdaConfig: CfnDataSource.LambdaConfigProperty) {
-      cdkBuilder.lambdaConfig(lambdaConfig.let(CfnDataSource.LambdaConfigProperty::unwrap))
+      cdkBuilder.lambdaConfig(lambdaConfig.let(CfnDataSource.LambdaConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -408,7 +408,7 @@ public interface ExtendedDataSourceProps {
      * @param openSearchServiceConfig configuration for OpenSearch data source.
      */
     override fun openSearchServiceConfig(openSearchServiceConfig: IResolvable) {
-      cdkBuilder.openSearchServiceConfig(openSearchServiceConfig.let(IResolvable::unwrap))
+      cdkBuilder.openSearchServiceConfig(openSearchServiceConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -416,7 +416,7 @@ public interface ExtendedDataSourceProps {
      */
     override
         fun openSearchServiceConfig(openSearchServiceConfig: CfnDataSource.OpenSearchServiceConfigProperty) {
-      cdkBuilder.openSearchServiceConfig(openSearchServiceConfig.let(CfnDataSource.OpenSearchServiceConfigProperty::unwrap))
+      cdkBuilder.openSearchServiceConfig(openSearchServiceConfig.let(CfnDataSource.OpenSearchServiceConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -433,7 +433,7 @@ public interface ExtendedDataSourceProps {
      * @param relationalDatabaseConfig configuration for RDS Datasource.
      */
     override fun relationalDatabaseConfig(relationalDatabaseConfig: IResolvable) {
-      cdkBuilder.relationalDatabaseConfig(relationalDatabaseConfig.let(IResolvable::unwrap))
+      cdkBuilder.relationalDatabaseConfig(relationalDatabaseConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -441,7 +441,7 @@ public interface ExtendedDataSourceProps {
      */
     override
         fun relationalDatabaseConfig(relationalDatabaseConfig: CfnDataSource.RelationalDatabaseConfigProperty) {
-      cdkBuilder.relationalDatabaseConfig(relationalDatabaseConfig.let(CfnDataSource.RelationalDatabaseConfigProperty::unwrap))
+      cdkBuilder.relationalDatabaseConfig(relationalDatabaseConfig.let(CfnDataSource.RelationalDatabaseConfigProperty.Companion::unwrap))
     }
 
     /**

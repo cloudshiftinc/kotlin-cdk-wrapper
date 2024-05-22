@@ -145,7 +145,7 @@ public interface HealthCheck {
      * @param interval Number of seconds between health checks.
      */
     override fun interval(interval: Duration) {
-      cdkBuilder.interval(interval.let(Duration::unwrap))
+      cdkBuilder.interval(interval.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -169,14 +169,14 @@ public interface HealthCheck {
      * The protocol is automatically determined from the port if it's not supplied.
      */
     override fun protocol(protocol: LoadBalancingProtocol) {
-      cdkBuilder.protocol(protocol.let(LoadBalancingProtocol::unwrap))
+      cdkBuilder.protocol(protocol.let(LoadBalancingProtocol.Companion::unwrap))
     }
 
     /**
      * @param timeout Health check timeout.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**

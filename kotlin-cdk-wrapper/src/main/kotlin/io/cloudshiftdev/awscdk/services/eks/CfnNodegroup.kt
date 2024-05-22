@@ -101,8 +101,8 @@ public open class CfnNodegroup(
     id: String,
     props: CfnNodegroupProps,
   ) :
-      this(software.amazon.awscdk.services.eks.CfnNodegroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnNodegroupProps::unwrap))
+      this(software.amazon.awscdk.services.eks.CfnNodegroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnNodegroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -199,7 +199,7 @@ public open class CfnNodegroup(
    * disruption budget issue.
    */
   public open fun forceUpdateEnabled(`value`: IResolvable) {
-    unwrap(this).setForceUpdateEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setForceUpdateEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -208,7 +208,7 @@ public open class CfnNodegroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -237,7 +237,7 @@ public open class CfnNodegroup(
    * The Kubernetes `labels` applied to the nodes in the node group.
    */
   public open fun labels(`value`: IResolvable) {
-    unwrap(this).setLabels(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLabels(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -256,14 +256,14 @@ public open class CfnNodegroup(
    * An object representing a node group's launch template specification.
    */
   public open fun launchTemplate(`value`: IResolvable) {
-    unwrap(this).setLaunchTemplate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLaunchTemplate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An object representing a node group's launch template specification.
    */
   public open fun launchTemplate(`value`: LaunchTemplateSpecificationProperty) {
-    unwrap(this).setLaunchTemplate(`value`.let(LaunchTemplateSpecificationProperty::unwrap))
+    unwrap(this).setLaunchTemplate(`value`.let(LaunchTemplateSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -327,14 +327,14 @@ public open class CfnNodegroup(
    * The remote access configuration to use with your node group.
    */
   public open fun remoteAccess(`value`: IResolvable) {
-    unwrap(this).setRemoteAccess(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRemoteAccess(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The remote access configuration to use with your node group.
    */
   public open fun remoteAccess(`value`: RemoteAccessProperty) {
-    unwrap(this).setRemoteAccess(`value`.let(RemoteAccessProperty::unwrap))
+    unwrap(this).setRemoteAccess(`value`.let(RemoteAccessProperty.Companion::unwrap))
   }
 
   /**
@@ -356,7 +356,7 @@ public open class CfnNodegroup(
    * group.
    */
   public open fun scalingConfig(`value`: IResolvable) {
-    unwrap(this).setScalingConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setScalingConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -364,7 +364,7 @@ public open class CfnNodegroup(
    * group.
    */
   public open fun scalingConfig(`value`: ScalingConfigProperty) {
-    unwrap(this).setScalingConfig(`value`.let(ScalingConfigProperty::unwrap))
+    unwrap(this).setScalingConfig(`value`.let(ScalingConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -419,7 +419,7 @@ public open class CfnNodegroup(
    * The Kubernetes taints to be applied to the nodes in the node group when they are created.
    */
   public open fun taints(`value`: IResolvable) {
-    unwrap(this).setTaints(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTaints(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -443,14 +443,14 @@ public open class CfnNodegroup(
    * The node group update configuration.
    */
   public open fun updateConfig(`value`: IResolvable) {
-    unwrap(this).setUpdateConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUpdateConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The node group update configuration.
    */
   public open fun updateConfig(`value`: UpdateConfigProperty) {
-    unwrap(this).setUpdateConfig(`value`.let(UpdateConfigProperty::unwrap))
+    unwrap(this).setUpdateConfig(`value`.let(UpdateConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -1022,7 +1022,7 @@ public open class CfnNodegroup(
      * drained due to a `Pod` disruption budget issue. 
      */
     override fun forceUpdateEnabled(forceUpdateEnabled: IResolvable) {
-      cdkBuilder.forceUpdateEnabled(forceUpdateEnabled.let(IResolvable::unwrap))
+      cdkBuilder.forceUpdateEnabled(forceUpdateEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1082,7 +1082,7 @@ public open class CfnNodegroup(
      * @param labels The Kubernetes `labels` applied to the nodes in the node group. 
      */
     override fun labels(labels: IResolvable) {
-      cdkBuilder.labels(labels.let(IResolvable::unwrap))
+      cdkBuilder.labels(labels.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1113,7 +1113,7 @@ public open class CfnNodegroup(
      * @param launchTemplate An object representing a node group's launch template specification. 
      */
     override fun launchTemplate(launchTemplate: IResolvable) {
-      cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
+      cdkBuilder.launchTemplate(launchTemplate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1129,7 +1129,7 @@ public open class CfnNodegroup(
      * @param launchTemplate An object representing a node group's launch template specification. 
      */
     override fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty) {
-      cdkBuilder.launchTemplate(launchTemplate.let(LaunchTemplateSpecificationProperty::unwrap))
+      cdkBuilder.launchTemplate(launchTemplate.let(LaunchTemplateSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -1221,7 +1221,7 @@ public open class CfnNodegroup(
      * @param remoteAccess The remote access configuration to use with your node group. 
      */
     override fun remoteAccess(remoteAccess: IResolvable) {
-      cdkBuilder.remoteAccess(remoteAccess.let(IResolvable::unwrap))
+      cdkBuilder.remoteAccess(remoteAccess.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1238,7 +1238,7 @@ public open class CfnNodegroup(
      * @param remoteAccess The remote access configuration to use with your node group. 
      */
     override fun remoteAccess(remoteAccess: RemoteAccessProperty) {
-      cdkBuilder.remoteAccess(remoteAccess.let(RemoteAccessProperty::unwrap))
+      cdkBuilder.remoteAccess(remoteAccess.let(RemoteAccessProperty.Companion::unwrap))
     }
 
     /**
@@ -1268,7 +1268,7 @@ public open class CfnNodegroup(
      * created for your node group. 
      */
     override fun scalingConfig(scalingConfig: IResolvable) {
-      cdkBuilder.scalingConfig(scalingConfig.let(IResolvable::unwrap))
+      cdkBuilder.scalingConfig(scalingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1280,7 +1280,7 @@ public open class CfnNodegroup(
      * created for your node group. 
      */
     override fun scalingConfig(scalingConfig: ScalingConfigProperty) {
-      cdkBuilder.scalingConfig(scalingConfig.let(ScalingConfigProperty::unwrap))
+      cdkBuilder.scalingConfig(scalingConfig.let(ScalingConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1356,7 +1356,7 @@ public open class CfnNodegroup(
      * are created. 
      */
     override fun taints(taints: IResolvable) {
-      cdkBuilder.taints(taints.let(IResolvable::unwrap))
+      cdkBuilder.taints(taints.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1396,7 +1396,7 @@ public open class CfnNodegroup(
      * @param updateConfig The node group update configuration. 
      */
     override fun updateConfig(updateConfig: IResolvable) {
-      cdkBuilder.updateConfig(updateConfig.let(IResolvable::unwrap))
+      cdkBuilder.updateConfig(updateConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1406,7 +1406,7 @@ public open class CfnNodegroup(
      * @param updateConfig The node group update configuration. 
      */
     override fun updateConfig(updateConfig: UpdateConfigProperty) {
-      cdkBuilder.updateConfig(updateConfig.let(UpdateConfigProperty::unwrap))
+      cdkBuilder.updateConfig(updateConfig.let(UpdateConfigProperty.Companion::unwrap))
     }
 
     /**

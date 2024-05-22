@@ -52,8 +52,8 @@ public open class WebSocketIntegration(
     id: String,
     props: WebSocketIntegrationProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.WebSocketIntegration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(WebSocketIntegrationProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.WebSocketIntegration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(WebSocketIntegrationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -210,7 +210,7 @@ public open class WebSocketIntegration(
      * @param contentHandling Specifies how to handle response payload content type conversions. 
      */
     override fun contentHandling(contentHandling: ContentHandling) {
-      cdkBuilder.contentHandling(contentHandling.let(ContentHandling::unwrap))
+      cdkBuilder.contentHandling(contentHandling.let(ContentHandling.Companion::unwrap))
     }
 
     /**
@@ -221,7 +221,7 @@ public open class WebSocketIntegration(
      * @param credentialsRole Specifies the IAM role required for the integration. 
      */
     override fun credentialsRole(credentialsRole: IRole) {
-      cdkBuilder.credentialsRole(credentialsRole.let(IRole::unwrap))
+      cdkBuilder.credentialsRole(credentialsRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -241,7 +241,7 @@ public open class WebSocketIntegration(
      * @param integrationType Integration type. 
      */
     override fun integrationType(integrationType: WebSocketIntegrationType) {
-      cdkBuilder.integrationType(integrationType.let(WebSocketIntegrationType::unwrap))
+      cdkBuilder.integrationType(integrationType.let(WebSocketIntegrationType.Companion::unwrap))
     }
 
     /**
@@ -268,7 +268,7 @@ public open class WebSocketIntegration(
      * requestTemplates property on the Integration resource. 
      */
     override fun passthroughBehavior(passthroughBehavior: PassthroughBehavior) {
-      cdkBuilder.passthroughBehavior(passthroughBehavior.let(PassthroughBehavior::unwrap))
+      cdkBuilder.passthroughBehavior(passthroughBehavior.let(PassthroughBehavior.Companion::unwrap))
     }
 
     /**
@@ -324,7 +324,7 @@ public open class WebSocketIntegration(
      * response. 
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -333,7 +333,7 @@ public open class WebSocketIntegration(
      * @param webSocketApi The WebSocket API to which this integration should be bound. 
      */
     override fun webSocketApi(webSocketApi: IWebSocketApi) {
-      cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi::unwrap))
+      cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.WebSocketIntegration =

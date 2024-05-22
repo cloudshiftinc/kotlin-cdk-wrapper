@@ -241,7 +241,7 @@ public interface CfnCACertificateProps {
      * @param registrationConfig Information about the registration configuration.
      */
     override fun registrationConfig(registrationConfig: IResolvable) {
-      cdkBuilder.registrationConfig(registrationConfig.let(IResolvable::unwrap))
+      cdkBuilder.registrationConfig(registrationConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -249,7 +249,7 @@ public interface CfnCACertificateProps {
      */
     override
         fun registrationConfig(registrationConfig: CfnCACertificate.RegistrationConfigProperty) {
-      cdkBuilder.registrationConfig(registrationConfig.let(CfnCACertificate.RegistrationConfigProperty::unwrap))
+      cdkBuilder.registrationConfig(registrationConfig.let(CfnCACertificate.RegistrationConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -272,7 +272,7 @@ public interface CfnCACertificateProps {
      * @param removeAutoRegistration If true, removes auto registration.
      */
     override fun removeAutoRegistration(removeAutoRegistration: IResolvable) {
-      cdkBuilder.removeAutoRegistration(removeAutoRegistration.let(IResolvable::unwrap))
+      cdkBuilder.removeAutoRegistration(removeAutoRegistration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -290,7 +290,7 @@ public interface CfnCACertificateProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

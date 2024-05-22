@@ -47,7 +47,7 @@ public open class Sns(
   cdkObject: software.amazon.awscdk.services.ses.actions.Sns,
 ) : CdkObject(cdkObject), IReceiptRuleAction {
   public constructor(props: SnsProps) :
-      this(software.amazon.awscdk.services.ses.actions.Sns(props.let(SnsProps::unwrap))
+      this(software.amazon.awscdk.services.ses.actions.Sns(props.let(SnsProps.Companion::unwrap))
   )
 
   public constructor(props: SnsProps.Builder.() -> Unit) : this(SnsProps(props)
@@ -59,7 +59,7 @@ public open class Sns(
    * @param _rule 
    */
   public override fun bind(rule: IReceiptRule): ReceiptRuleActionConfig =
-      unwrap(this).bind(rule.let(IReceiptRule::unwrap)).let(ReceiptRuleActionConfig::wrap)
+      unwrap(this).bind(rule.let(IReceiptRule.Companion::unwrap)).let(ReceiptRuleActionConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ses.actions.Sns].
@@ -95,7 +95,7 @@ public open class Sns(
      * @param encoding The encoding to use for the email within the Amazon SNS notification. 
      */
     override fun encoding(encoding: EmailEncoding) {
-      cdkBuilder.encoding(encoding.let(EmailEncoding::unwrap))
+      cdkBuilder.encoding(encoding.let(EmailEncoding.Companion::unwrap))
     }
 
     /**
@@ -104,7 +104,7 @@ public open class Sns(
      * @param topic The SNS topic to notify. 
      */
     override fun topic(topic: ITopic) {
-      cdkBuilder.topic(topic.let(ITopic::unwrap))
+      cdkBuilder.topic(topic.let(ITopic.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ses.actions.Sns = cdkBuilder.build()

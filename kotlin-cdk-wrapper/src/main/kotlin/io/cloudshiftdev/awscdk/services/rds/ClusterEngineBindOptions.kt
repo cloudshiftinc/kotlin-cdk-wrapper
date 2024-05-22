@@ -79,21 +79,21 @@ public interface ClusterEngineBindOptions {
      * @param parameterGroup The customer-provided ParameterGroup.
      */
     override fun parameterGroup(parameterGroup: IParameterGroup) {
-      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup::unwrap))
+      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup.Companion::unwrap))
     }
 
     /**
      * @param s3ExportRole The role used for S3 exporting.
      */
     override fun s3ExportRole(s3ExportRole: IRole) {
-      cdkBuilder.s3ExportRole(s3ExportRole.let(IRole::unwrap))
+      cdkBuilder.s3ExportRole(s3ExportRole.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param s3ImportRole The role used for S3 importing.
      */
     override fun s3ImportRole(s3ImportRole: IRole) {
-      cdkBuilder.s3ImportRole(s3ImportRole.let(IRole::unwrap))
+      cdkBuilder.s3ImportRole(s3ImportRole.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.ClusterEngineBindOptions =

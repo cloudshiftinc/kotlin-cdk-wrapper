@@ -141,7 +141,7 @@ public interface CfnServiceActionProps {
      * @param definition A map that defines the self-service action. 
      */
     override fun definition(definition: IResolvable) {
-      cdkBuilder.definition(definition.let(IResolvable::unwrap))
+      cdkBuilder.definition(definition.let(IResolvable.Companion::unwrap))
     }
 
     /**

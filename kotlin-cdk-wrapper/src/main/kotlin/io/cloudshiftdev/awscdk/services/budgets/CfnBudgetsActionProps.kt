@@ -216,14 +216,14 @@ public interface CfnBudgetsActionProps {
      * @param actionThreshold The trigger threshold of the action. 
      */
     override fun actionThreshold(actionThreshold: IResolvable) {
-      cdkBuilder.actionThreshold(actionThreshold.let(IResolvable::unwrap))
+      cdkBuilder.actionThreshold(actionThreshold.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param actionThreshold The trigger threshold of the action. 
      */
     override fun actionThreshold(actionThreshold: CfnBudgetsAction.ActionThresholdProperty) {
-      cdkBuilder.actionThreshold(actionThreshold.let(CfnBudgetsAction.ActionThresholdProperty::unwrap))
+      cdkBuilder.actionThreshold(actionThreshold.let(CfnBudgetsAction.ActionThresholdProperty.Companion::unwrap))
     }
 
     /**
@@ -263,14 +263,14 @@ public interface CfnBudgetsActionProps {
      * @param definition Specifies all of the type-specific parameters. 
      */
     override fun definition(definition: IResolvable) {
-      cdkBuilder.definition(definition.let(IResolvable::unwrap))
+      cdkBuilder.definition(definition.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param definition Specifies all of the type-specific parameters. 
      */
     override fun definition(definition: CfnBudgetsAction.DefinitionProperty) {
-      cdkBuilder.definition(definition.let(CfnBudgetsAction.DefinitionProperty::unwrap))
+      cdkBuilder.definition(definition.let(CfnBudgetsAction.DefinitionProperty.Companion::unwrap))
     }
 
     /**
@@ -300,7 +300,7 @@ public interface CfnBudgetsActionProps {
      * @param subscribers A list of subscribers. 
      */
     override fun subscribers(subscribers: IResolvable) {
-      cdkBuilder.subscribers(subscribers.let(IResolvable::unwrap))
+      cdkBuilder.subscribers(subscribers.let(IResolvable.Companion::unwrap))
     }
 
     /**

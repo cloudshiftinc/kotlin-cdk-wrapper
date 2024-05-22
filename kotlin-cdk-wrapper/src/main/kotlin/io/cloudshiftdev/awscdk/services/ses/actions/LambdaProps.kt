@@ -80,21 +80,21 @@ public interface LambdaProps {
      * @param function The Lambda function to invoke. 
      */
     override fun function(function: IFunction) {
-      cdkBuilder.function(function.let(IFunction::unwrap))
+      cdkBuilder.function(function.let(IFunction.Companion::unwrap))
     }
 
     /**
      * @param invocationType The invocation type of the Lambda function.
      */
     override fun invocationType(invocationType: LambdaInvocationType) {
-      cdkBuilder.invocationType(invocationType.let(LambdaInvocationType::unwrap))
+      cdkBuilder.invocationType(invocationType.let(LambdaInvocationType.Companion::unwrap))
     }
 
     /**
      * @param topic The SNS topic to notify when the Lambda action is taken.
      */
     override fun topic(topic: ITopic) {
-      cdkBuilder.topic(topic.let(ITopic::unwrap))
+      cdkBuilder.topic(topic.let(ITopic.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ses.actions.LambdaProps = cdkBuilder.build()

@@ -175,14 +175,14 @@ public interface CfnLocationFSxOpenZFSProps {
      * @param protocol The type of protocol that AWS DataSync uses to access your file system. 
      */
     override fun protocol(protocol: IResolvable) {
-      cdkBuilder.protocol(protocol.let(IResolvable::unwrap))
+      cdkBuilder.protocol(protocol.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param protocol The type of protocol that AWS DataSync uses to access your file system. 
      */
     override fun protocol(protocol: CfnLocationFSxOpenZFS.ProtocolProperty) {
-      cdkBuilder.protocol(protocol.let(CfnLocationFSxOpenZFS.ProtocolProperty::unwrap))
+      cdkBuilder.protocol(protocol.let(CfnLocationFSxOpenZFS.ProtocolProperty.Companion::unwrap))
     }
 
     /**
@@ -231,7 +231,7 @@ public interface CfnLocationFSxOpenZFSProps {
      * resources. We recommend that you create a name tag for your location.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

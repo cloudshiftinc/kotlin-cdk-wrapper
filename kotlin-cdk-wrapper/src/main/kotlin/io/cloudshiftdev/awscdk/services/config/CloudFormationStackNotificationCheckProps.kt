@@ -113,14 +113,14 @@ public interface CloudFormationStackNotificationCheckProps : RuleProps {
      * evaluations.
      */
     override fun maximumExecutionFrequency(maximumExecutionFrequency: MaximumExecutionFrequency) {
-      cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency.let(MaximumExecutionFrequency::unwrap))
+      cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency.let(MaximumExecutionFrequency.Companion::unwrap))
     }
 
     /**
      * @param ruleScope Defines which resources trigger an evaluation for an AWS Config rule.
      */
     override fun ruleScope(ruleScope: RuleScope) {
-      cdkBuilder.ruleScope(ruleScope.let(RuleScope::unwrap))
+      cdkBuilder.ruleScope(ruleScope.let(RuleScope.Companion::unwrap))
     }
 
     /**
@@ -128,7 +128,7 @@ public interface CloudFormationStackNotificationCheckProps : RuleProps {
      * At most 5 topics.
      */
     override fun topics(topics: List<ITopic>) {
-      cdkBuilder.topics(topics.map(ITopic::unwrap))
+      cdkBuilder.topics(topics.map(ITopic.Companion::unwrap))
     }
 
     /**

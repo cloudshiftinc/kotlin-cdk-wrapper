@@ -115,7 +115,7 @@ public interface DomainNameProps : DomainNameOptions {
      * needs to be in the US East (N. Virginia) region.
      */
     override fun certificate(certificate: ICertificate) {
-      cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
+      cdkBuilder.certificate(certificate.let(ICertificate.Companion::unwrap))
     }
 
     /**
@@ -130,7 +130,7 @@ public interface DomainNameProps : DomainNameOptions {
      * @param endpointType The type of endpoint for this DomainName.
      */
     override fun endpointType(endpointType: EndpointType) {
-      cdkBuilder.endpointType(endpointType.let(EndpointType::unwrap))
+      cdkBuilder.endpointType(endpointType.let(EndpointType.Companion::unwrap))
     }
 
     /**
@@ -140,14 +140,14 @@ public interface DomainNameProps : DomainNameOptions {
      * with different base paths, use `addBasePathMapping` or `addApiMapping`.
      */
     override fun mapping(mapping: IRestApi) {
-      cdkBuilder.mapping(mapping.let(IRestApi::unwrap))
+      cdkBuilder.mapping(mapping.let(IRestApi.Companion::unwrap))
     }
 
     /**
      * @param mtls The mutual TLS authentication configuration for a custom domain name.
      */
     override fun mtls(mtls: MTLSConfig) {
-      cdkBuilder.mtls(mtls.let(MTLSConfig::unwrap))
+      cdkBuilder.mtls(mtls.let(MTLSConfig.Companion::unwrap))
     }
 
     /**
@@ -162,7 +162,7 @@ public interface DomainNameProps : DomainNameOptions {
      * domain name.
      */
     override fun securityPolicy(securityPolicy: SecurityPolicy) {
-      cdkBuilder.securityPolicy(securityPolicy.let(SecurityPolicy::unwrap))
+      cdkBuilder.securityPolicy(securityPolicy.let(SecurityPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.DomainNameProps =

@@ -340,7 +340,7 @@ public interface CfnListenerProps {
      * .
      */
     override fun certificates(certificates: IResolvable) {
-      cdkBuilder.certificates(certificates.let(IResolvable::unwrap))
+      cdkBuilder.certificates(certificates.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -373,7 +373,7 @@ public interface CfnListenerProps {
      * .
      */
     override fun defaultActions(defaultActions: IResolvable) {
-      cdkBuilder.defaultActions(defaultActions.let(IResolvable::unwrap))
+      cdkBuilder.defaultActions(defaultActions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -408,7 +408,7 @@ public interface CfnListenerProps {
      * @param mutualAuthentication The mutual authentication configuration information.
      */
     override fun mutualAuthentication(mutualAuthentication: IResolvable) {
-      cdkBuilder.mutualAuthentication(mutualAuthentication.let(IResolvable::unwrap))
+      cdkBuilder.mutualAuthentication(mutualAuthentication.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -416,7 +416,7 @@ public interface CfnListenerProps {
      */
     override
         fun mutualAuthentication(mutualAuthentication: CfnListener.MutualAuthenticationProperty) {
-      cdkBuilder.mutualAuthentication(mutualAuthentication.let(CfnListener.MutualAuthenticationProperty::unwrap))
+      cdkBuilder.mutualAuthentication(mutualAuthentication.let(CfnListener.MutualAuthenticationProperty.Companion::unwrap))
     }
 
     /**

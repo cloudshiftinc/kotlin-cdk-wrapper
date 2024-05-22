@@ -117,7 +117,7 @@ public interface CfnStreamingDistributionProps {
      * distribution. 
      */
     override fun streamingDistributionConfig(streamingDistributionConfig: IResolvable) {
-      cdkBuilder.streamingDistributionConfig(streamingDistributionConfig.let(IResolvable::unwrap))
+      cdkBuilder.streamingDistributionConfig(streamingDistributionConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -126,7 +126,7 @@ public interface CfnStreamingDistributionProps {
      */
     override
         fun streamingDistributionConfig(streamingDistributionConfig: CfnStreamingDistribution.StreamingDistributionConfigProperty) {
-      cdkBuilder.streamingDistributionConfig(streamingDistributionConfig.let(CfnStreamingDistribution.StreamingDistributionConfigProperty::unwrap))
+      cdkBuilder.streamingDistributionConfig(streamingDistributionConfig.let(CfnStreamingDistribution.StreamingDistributionConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -144,7 +144,7 @@ public interface CfnStreamingDistributionProps {
      * @param tags A complex type that contains zero or more `Tag` elements.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

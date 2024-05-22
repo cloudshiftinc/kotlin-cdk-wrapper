@@ -98,7 +98,7 @@ public interface CfnApplicationCloudWatchLoggingOptionProps {
      * including the log stream Amazon Resource Name (ARN). 
      */
     override fun cloudWatchLoggingOption(cloudWatchLoggingOption: IResolvable) {
-      cdkBuilder.cloudWatchLoggingOption(cloudWatchLoggingOption.let(IResolvable::unwrap))
+      cdkBuilder.cloudWatchLoggingOption(cloudWatchLoggingOption.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -107,7 +107,7 @@ public interface CfnApplicationCloudWatchLoggingOptionProps {
      */
     override
         fun cloudWatchLoggingOption(cloudWatchLoggingOption: CfnApplicationCloudWatchLoggingOption.CloudWatchLoggingOptionProperty) {
-      cdkBuilder.cloudWatchLoggingOption(cloudWatchLoggingOption.let(CfnApplicationCloudWatchLoggingOption.CloudWatchLoggingOptionProperty::unwrap))
+      cdkBuilder.cloudWatchLoggingOption(cloudWatchLoggingOption.let(CfnApplicationCloudWatchLoggingOption.CloudWatchLoggingOptionProperty.Companion::unwrap))
     }
 
     /**

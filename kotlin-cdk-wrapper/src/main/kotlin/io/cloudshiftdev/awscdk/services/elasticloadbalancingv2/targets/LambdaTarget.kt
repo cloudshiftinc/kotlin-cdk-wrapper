@@ -33,7 +33,7 @@ public open class LambdaTarget(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.targets.LambdaTarget,
 ) : CdkObject(cdkObject), IApplicationLoadBalancerTarget {
   public constructor(fn: IFunction) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.LambdaTarget(fn.let(IFunction::unwrap))
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.LambdaTarget(fn.let(IFunction.Companion::unwrap))
   )
 
   /**
@@ -46,7 +46,7 @@ public open class LambdaTarget(
    */
   public override fun attachToApplicationTargetGroup(targetGroup: IApplicationTargetGroup):
       LoadBalancerTargetProps =
-      unwrap(this).attachToApplicationTargetGroup(targetGroup.let(IApplicationTargetGroup::unwrap)).let(LoadBalancerTargetProps::wrap)
+      unwrap(this).attachToApplicationTargetGroup(targetGroup.let(IApplicationTargetGroup.Companion::unwrap)).let(LoadBalancerTargetProps::wrap)
 
   /**
    * Register this instance target with a load balancer.
@@ -58,7 +58,7 @@ public open class LambdaTarget(
    */
   public open fun attachToNetworkTargetGroup(targetGroup: INetworkTargetGroup):
       LoadBalancerTargetProps =
-      unwrap(this).attachToNetworkTargetGroup(targetGroup.let(INetworkTargetGroup::unwrap)).let(LoadBalancerTargetProps::wrap)
+      unwrap(this).attachToNetworkTargetGroup(targetGroup.let(INetworkTargetGroup.Companion::unwrap)).let(LoadBalancerTargetProps::wrap)
 
   public companion object {
     internal

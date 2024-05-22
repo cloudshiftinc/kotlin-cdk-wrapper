@@ -95,8 +95,8 @@ public open class CfnRule(
     id: String,
     props: CfnRuleProps,
   ) :
-      this(software.amazon.awscdk.services.vpclattice.CfnRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRuleProps::unwrap))
+      this(software.amazon.awscdk.services.vpclattice.CfnRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -115,14 +115,14 @@ public open class CfnRule(
    * Describes the action for a rule.
    */
   public open fun action(`value`: IResolvable) {
-    unwrap(this).setAction(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAction(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Describes the action for a rule.
    */
   public open fun action(`value`: ActionProperty) {
-    unwrap(this).setAction(`value`.let(ActionProperty::unwrap))
+    unwrap(this).setAction(`value`.let(ActionProperty.Companion::unwrap))
   }
 
   /**
@@ -149,7 +149,7 @@ public open class CfnRule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -173,14 +173,14 @@ public open class CfnRule(
    * The rule match.
    */
   public open fun match(`value`: IResolvable) {
-    unwrap(this).setMatch(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMatch(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The rule match.
    */
   public open fun match(`value`: MatchProperty) {
-    unwrap(this).setMatch(`value`.let(MatchProperty::unwrap))
+    unwrap(this).setMatch(`value`.let(MatchProperty.Companion::unwrap))
   }
 
   /**
@@ -242,7 +242,7 @@ public open class CfnRule(
    * The tags for the rule.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -379,7 +379,7 @@ public open class CfnRule(
      * @param action Describes the action for a rule. 
      */
     override fun action(action: IResolvable) {
-      cdkBuilder.action(action.let(IResolvable::unwrap))
+      cdkBuilder.action(action.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -389,7 +389,7 @@ public open class CfnRule(
      * @param action Describes the action for a rule. 
      */
     override fun action(action: ActionProperty) {
-      cdkBuilder.action(action.let(ActionProperty::unwrap))
+      cdkBuilder.action(action.let(ActionProperty.Companion::unwrap))
     }
 
     /**
@@ -420,7 +420,7 @@ public open class CfnRule(
      * @param match The rule match. 
      */
     override fun match(match: IResolvable) {
-      cdkBuilder.match(match.let(IResolvable::unwrap))
+      cdkBuilder.match(match.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -430,7 +430,7 @@ public open class CfnRule(
      * @param match The rule match. 
      */
     override fun match(match: MatchProperty) {
-      cdkBuilder.match(match.let(MatchProperty::unwrap))
+      cdkBuilder.match(match.let(MatchProperty.Companion::unwrap))
     }
 
     /**
@@ -489,7 +489,7 @@ public open class CfnRule(
      * @param tags The tags for the rule. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -623,7 +623,7 @@ public open class CfnRule(
        * The rule returns a custom HTTP response.
        */
       override fun fixedResponse(fixedResponse: IResolvable) {
-        cdkBuilder.fixedResponse(fixedResponse.let(IResolvable::unwrap))
+        cdkBuilder.fixedResponse(fixedResponse.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -631,7 +631,7 @@ public open class CfnRule(
        * The rule returns a custom HTTP response.
        */
       override fun fixedResponse(fixedResponse: FixedResponseProperty) {
-        cdkBuilder.fixedResponse(fixedResponse.let(FixedResponseProperty::unwrap))
+        cdkBuilder.fixedResponse(fixedResponse.let(FixedResponseProperty.Companion::unwrap))
       }
 
       /**
@@ -648,7 +648,7 @@ public open class CfnRule(
        * Traffic that matches the rule is forwarded to the specified target groups.
        */
       override fun forward(forward: IResolvable) {
-        cdkBuilder.forward(forward.let(IResolvable::unwrap))
+        cdkBuilder.forward(forward.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -656,7 +656,7 @@ public open class CfnRule(
        * Traffic that matches the rule is forwarded to the specified target groups.
        */
       override fun forward(forward: ForwardProperty) {
-        cdkBuilder.forward(forward.let(ForwardProperty::unwrap))
+        cdkBuilder.forward(forward.let(ForwardProperty.Companion::unwrap))
       }
 
       /**
@@ -892,7 +892,7 @@ public open class CfnRule(
        * need to set the weight; 100% of the traffic goes to that target group.
        */
       override fun targetGroups(targetGroups: IResolvable) {
-        cdkBuilder.targetGroups(targetGroups.let(IResolvable::unwrap))
+        cdkBuilder.targetGroups(targetGroups.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1068,21 +1068,21 @@ public open class CfnRule(
        * @param caseSensitive Indicates whether the match is case sensitive.
        */
       override fun caseSensitive(caseSensitive: IResolvable) {
-        cdkBuilder.caseSensitive(caseSensitive.let(IResolvable::unwrap))
+        cdkBuilder.caseSensitive(caseSensitive.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param match The header match type. 
        */
       override fun match(match: IResolvable) {
-        cdkBuilder.match(match.let(IResolvable::unwrap))
+        cdkBuilder.match(match.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param match The header match type. 
        */
       override fun match(match: HeaderMatchTypeProperty) {
-        cdkBuilder.match(match.let(HeaderMatchTypeProperty::unwrap))
+        cdkBuilder.match(match.let(HeaderMatchTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -1408,7 +1408,7 @@ public open class CfnRule(
        * action.
        */
       override fun headerMatches(headerMatches: IResolvable) {
-        cdkBuilder.headerMatches(headerMatches.let(IResolvable::unwrap))
+        cdkBuilder.headerMatches(headerMatches.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1439,14 +1439,14 @@ public open class CfnRule(
        * @param pathMatch The path match.
        */
       override fun pathMatch(pathMatch: IResolvable) {
-        cdkBuilder.pathMatch(pathMatch.let(IResolvable::unwrap))
+        cdkBuilder.pathMatch(pathMatch.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param pathMatch The path match.
        */
       override fun pathMatch(pathMatch: PathMatchProperty) {
-        cdkBuilder.pathMatch(pathMatch.let(PathMatchProperty::unwrap))
+        cdkBuilder.pathMatch(pathMatch.let(PathMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -1583,14 +1583,14 @@ public open class CfnRule(
        * @param httpMatch The HTTP criteria that a rule must match. 
        */
       override fun httpMatch(httpMatch: IResolvable) {
-        cdkBuilder.httpMatch(httpMatch.let(IResolvable::unwrap))
+        cdkBuilder.httpMatch(httpMatch.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param httpMatch The HTTP criteria that a rule must match. 
        */
       override fun httpMatch(httpMatch: HttpMatchProperty) {
-        cdkBuilder.httpMatch(httpMatch.let(HttpMatchProperty::unwrap))
+        cdkBuilder.httpMatch(httpMatch.let(HttpMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -1719,21 +1719,21 @@ public open class CfnRule(
        * @param caseSensitive Indicates whether the match is case sensitive.
        */
       override fun caseSensitive(caseSensitive: IResolvable) {
-        cdkBuilder.caseSensitive(caseSensitive.let(IResolvable::unwrap))
+        cdkBuilder.caseSensitive(caseSensitive.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param match The type of path match. 
        */
       override fun match(match: IResolvable) {
-        cdkBuilder.match(match.let(IResolvable::unwrap))
+        cdkBuilder.match(match.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param match The type of path match. 
        */
       override fun match(match: PathMatchTypeProperty) {
-        cdkBuilder.match(match.let(PathMatchTypeProperty::unwrap))
+        cdkBuilder.match(match.let(PathMatchTypeProperty.Companion::unwrap))
       }
 
       /**

@@ -59,7 +59,7 @@ public open class QueueProcessingFargateService(
   cdkObject: software.amazon.awscdk.services.ecs.patterns.QueueProcessingFargateService,
 ) : QueueProcessingServiceBase(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ecs.patterns.QueueProcessingFargateService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ecs.patterns.QueueProcessingFargateService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -68,8 +68,8 @@ public open class QueueProcessingFargateService(
     id: String,
     props: QueueProcessingFargateServiceProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.patterns.QueueProcessingFargateService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(QueueProcessingFargateServiceProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.patterns.QueueProcessingFargateService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(QueueProcessingFargateServiceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -735,7 +735,7 @@ public open class QueueProcessingFargateService(
      */
     override
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>) {
-      cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy::unwrap))
+      cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy.Companion::unwrap))
     }
 
     /**
@@ -761,7 +761,7 @@ public open class QueueProcessingFargateService(
      * @param circuitBreaker Whether to enable the deployment circuit breaker. 
      */
     override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
-      cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker::unwrap))
+      cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker.Companion::unwrap))
     }
 
     /**
@@ -791,7 +791,7 @@ public open class QueueProcessingFargateService(
      * @param cluster The name of the cluster that hosts the service. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -845,7 +845,7 @@ public open class QueueProcessingFargateService(
      * @param cooldown Grace period after scaling activity in seconds. 
      */
     override fun cooldown(cooldown: Duration) {
-      cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
+      cdkBuilder.cooldown(cooldown.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -901,7 +901,7 @@ public open class QueueProcessingFargateService(
      * @param deploymentController Specifies which deployment controller to use for the service. 
      */
     override fun deploymentController(deploymentController: DeploymentController) {
-      cdkBuilder.deploymentController(deploymentController.let(DeploymentController::unwrap))
+      cdkBuilder.deploymentController(deploymentController.let(DeploymentController.Companion::unwrap))
     }
 
     /**
@@ -1023,7 +1023,7 @@ public open class QueueProcessingFargateService(
      * container. 
      */
     override fun healthCheck(healthCheck: HealthCheck) {
-      cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
     }
 
     /**
@@ -1051,7 +1051,7 @@ public open class QueueProcessingFargateService(
      * @param image The image used to start a container. 
      */
     override fun image(image: ContainerImage) {
-      cdkBuilder.image(image.let(ContainerImage::unwrap))
+      cdkBuilder.image(image.let(ContainerImage.Companion::unwrap))
     }
 
     /**
@@ -1062,7 +1062,7 @@ public open class QueueProcessingFargateService(
      * @param logDriver The log driver to use. 
      */
     override fun logDriver(logDriver: LogDriver) {
-      cdkBuilder.logDriver(logDriver.let(LogDriver::unwrap))
+      cdkBuilder.logDriver(logDriver.let(LogDriver.Companion::unwrap))
     }
 
     /**
@@ -1181,7 +1181,7 @@ public open class QueueProcessingFargateService(
      * @param platformVersion The platform version on which to run your service. 
      */
     override fun platformVersion(platformVersion: FargatePlatformVersion) {
-      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion::unwrap))
+      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion.Companion::unwrap))
     }
 
     /**
@@ -1196,7 +1196,7 @@ public open class QueueProcessingFargateService(
      * service to the tasks in the service. 
      */
     override fun propagateTags(propagateTags: PropagatedTagSource) {
-      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource.Companion::unwrap))
     }
 
     /**
@@ -1210,7 +1210,7 @@ public open class QueueProcessingFargateService(
      * @param queue A queue for which to process items from. 
      */
     override fun queue(queue: IQueue) {
-      cdkBuilder.queue(queue.let(IQueue::unwrap))
+      cdkBuilder.queue(queue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -1223,7 +1223,7 @@ public open class QueueProcessingFargateService(
      * @param retentionPeriod The number of seconds that Dead Letter Queue retains a message. 
      */
     override fun retentionPeriod(retentionPeriod: Duration) {
-      cdkBuilder.retentionPeriod(retentionPeriod.let(Duration::unwrap))
+      cdkBuilder.retentionPeriod(retentionPeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -1235,7 +1235,7 @@ public open class QueueProcessingFargateService(
      * @param runtimePlatform The runtime platform of the task definition. 
      */
     override fun runtimePlatform(runtimePlatform: RuntimePlatform) {
-      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform::unwrap))
+      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform.Companion::unwrap))
     }
 
     /**
@@ -1264,7 +1264,7 @@ public open class QueueProcessingFargateService(
      * ApproximateNumberOfMessagesVisible metric. 
      */
     override fun scalingSteps(scalingSteps: List<ScalingInterval>) {
-      cdkBuilder.scalingSteps(scalingSteps.map(ScalingInterval::unwrap))
+      cdkBuilder.scalingSteps(scalingSteps.map(ScalingInterval.Companion::unwrap))
     }
 
     /**
@@ -1303,7 +1303,7 @@ public open class QueueProcessingFargateService(
      * @param securityGroups The security groups to associate with the service. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -1341,7 +1341,7 @@ public open class QueueProcessingFargateService(
      * TaskImageOptions must be specified, but not both. 
      */
     override fun taskDefinition(taskDefinition: FargateTaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition.Companion::unwrap))
     }
 
     /**
@@ -1353,7 +1353,7 @@ public open class QueueProcessingFargateService(
      * @param taskSubnets The subnets to associate with the service. 
      */
     override fun taskSubnets(taskSubnets: SubnetSelection) {
-      cdkBuilder.taskSubnets(taskSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.taskSubnets(taskSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -1384,7 +1384,7 @@ public open class QueueProcessingFargateService(
      * @param visibilityTimeout Timeout of processing a single message. 
      */
     override fun visibilityTimeout(visibilityTimeout: Duration) {
-      cdkBuilder.visibilityTimeout(visibilityTimeout.let(Duration::unwrap))
+      cdkBuilder.visibilityTimeout(visibilityTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -1400,7 +1400,7 @@ public open class QueueProcessingFargateService(
      * interfaces (ENIs) will be deployed. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.patterns.QueueProcessingFargateService =

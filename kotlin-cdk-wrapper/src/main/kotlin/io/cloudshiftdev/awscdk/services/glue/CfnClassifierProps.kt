@@ -167,14 +167,14 @@ public interface CfnClassifierProps {
      * @param csvClassifier A classifier for comma-separated values (CSV).
      */
     override fun csvClassifier(csvClassifier: IResolvable) {
-      cdkBuilder.csvClassifier(csvClassifier.let(IResolvable::unwrap))
+      cdkBuilder.csvClassifier(csvClassifier.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param csvClassifier A classifier for comma-separated values (CSV).
      */
     override fun csvClassifier(csvClassifier: CfnClassifier.CsvClassifierProperty) {
-      cdkBuilder.csvClassifier(csvClassifier.let(CfnClassifier.CsvClassifierProperty::unwrap))
+      cdkBuilder.csvClassifier(csvClassifier.let(CfnClassifier.CsvClassifierProperty.Companion::unwrap))
     }
 
     /**
@@ -190,14 +190,14 @@ public interface CfnClassifierProps {
      * @param grokClassifier A classifier that uses `grok` .
      */
     override fun grokClassifier(grokClassifier: IResolvable) {
-      cdkBuilder.grokClassifier(grokClassifier.let(IResolvable::unwrap))
+      cdkBuilder.grokClassifier(grokClassifier.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param grokClassifier A classifier that uses `grok` .
      */
     override fun grokClassifier(grokClassifier: CfnClassifier.GrokClassifierProperty) {
-      cdkBuilder.grokClassifier(grokClassifier.let(CfnClassifier.GrokClassifierProperty::unwrap))
+      cdkBuilder.grokClassifier(grokClassifier.let(CfnClassifier.GrokClassifierProperty.Companion::unwrap))
     }
 
     /**
@@ -213,14 +213,14 @@ public interface CfnClassifierProps {
      * @param jsonClassifier A classifier for JSON content.
      */
     override fun jsonClassifier(jsonClassifier: IResolvable) {
-      cdkBuilder.jsonClassifier(jsonClassifier.let(IResolvable::unwrap))
+      cdkBuilder.jsonClassifier(jsonClassifier.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param jsonClassifier A classifier for JSON content.
      */
     override fun jsonClassifier(jsonClassifier: CfnClassifier.JsonClassifierProperty) {
-      cdkBuilder.jsonClassifier(jsonClassifier.let(CfnClassifier.JsonClassifierProperty::unwrap))
+      cdkBuilder.jsonClassifier(jsonClassifier.let(CfnClassifier.JsonClassifierProperty.Companion::unwrap))
     }
 
     /**
@@ -236,14 +236,14 @@ public interface CfnClassifierProps {
      * @param xmlClassifier A classifier for XML content.
      */
     override fun xmlClassifier(xmlClassifier: IResolvable) {
-      cdkBuilder.xmlClassifier(xmlClassifier.let(IResolvable::unwrap))
+      cdkBuilder.xmlClassifier(xmlClassifier.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param xmlClassifier A classifier for XML content.
      */
     override fun xmlClassifier(xmlClassifier: CfnClassifier.XMLClassifierProperty) {
-      cdkBuilder.xmlClassifier(xmlClassifier.let(CfnClassifier.XMLClassifierProperty::unwrap))
+      cdkBuilder.xmlClassifier(xmlClassifier.let(CfnClassifier.XMLClassifierProperty.Companion::unwrap))
     }
 
     /**

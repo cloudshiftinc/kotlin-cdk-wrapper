@@ -45,8 +45,8 @@ public open class CfnOutcome(
     id: String,
     props: CfnOutcomeProps,
   ) :
-      this(software.amazon.awscdk.services.frauddetector.CfnOutcome(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnOutcomeProps::unwrap))
+      this(software.amazon.awscdk.services.frauddetector.CfnOutcome(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnOutcomeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -89,7 +89,7 @@ public open class CfnOutcome(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -119,7 +119,7 @@ public open class CfnOutcome(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -211,7 +211,7 @@ public open class CfnOutcome(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

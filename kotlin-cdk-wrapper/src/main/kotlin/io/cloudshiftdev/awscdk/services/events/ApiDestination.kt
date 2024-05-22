@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -39,8 +40,8 @@ public open class ApiDestination(
     id: String,
     props: ApiDestinationProps,
   ) :
-      this(software.amazon.awscdk.services.events.ApiDestination(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ApiDestinationProps::unwrap))
+      this(software.amazon.awscdk.services.events.ApiDestination(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ApiDestinationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -146,7 +147,7 @@ public open class ApiDestination(
      * @param connection The ARN of the connection to use for the API destination. 
      */
     override fun connection(connection: IConnection) {
-      cdkBuilder.connection(connection.let(IConnection::unwrap))
+      cdkBuilder.connection(connection.let(IConnection.Companion::unwrap))
     }
 
     /**
@@ -177,7 +178,7 @@ public open class ApiDestination(
      * @param httpMethod The method to use for the request to the HTTP invocation endpoint. 
      */
     override fun httpMethod(httpMethod: HttpMethod) {
-      cdkBuilder.httpMethod(httpMethod.let(HttpMethod::unwrap))
+      cdkBuilder.httpMethod(httpMethod.let(HttpMethod.Companion::unwrap))
     }
 
     /**
@@ -196,6 +197,22 @@ public open class ApiDestination(
   }
 
   public companion object {
+    public fun fromApiDestinationAttributes(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      attrs: ApiDestinationAttributes,
+    ): ApiDestination =
+        software.amazon.awscdk.services.events.ApiDestination.fromApiDestinationAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(ApiDestinationAttributes.Companion::unwrap)).let(ApiDestination::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("555db03fe6c1e0ea8e62fe11367c8590c1425c7d00d3e6b69c0db2fb4cdde494")
+    public fun fromApiDestinationAttributes(
+      scope: CloudshiftdevConstructsConstruct,
+      id: String,
+      attrs: ApiDestinationAttributes.Builder.() -> Unit,
+    ): ApiDestination = fromApiDestinationAttributes(scope, id, ApiDestinationAttributes(attrs))
+
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,
       id: String,

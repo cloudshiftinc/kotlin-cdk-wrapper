@@ -220,7 +220,7 @@ public interface TopicProps {
      * @param loggingConfigs The list of delivery status logging configurations for the topic.
      */
     override fun loggingConfigs(loggingConfigs: List<LoggingConfig>) {
-      cdkBuilder.loggingConfigs(loggingConfigs.map(LoggingConfig::unwrap))
+      cdkBuilder.loggingConfigs(loggingConfigs.map(LoggingConfig.Companion::unwrap))
     }
 
     /**
@@ -233,7 +233,7 @@ public interface TopicProps {
      * @param masterKey A KMS Key, either managed by this CDK app, or imported.
      */
     override fun masterKey(masterKey: IKey) {
-      cdkBuilder.masterKey(masterKey.let(IKey::unwrap))
+      cdkBuilder.masterKey(masterKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -267,7 +267,7 @@ public interface TopicProps {
      * @param tracingConfig Tracing mode of an Amazon SNS topic.
      */
     override fun tracingConfig(tracingConfig: TracingConfig) {
-      cdkBuilder.tracingConfig(tracingConfig.let(TracingConfig::unwrap))
+      cdkBuilder.tracingConfig(tracingConfig.let(TracingConfig.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.sns.TopicProps = cdkBuilder.build()

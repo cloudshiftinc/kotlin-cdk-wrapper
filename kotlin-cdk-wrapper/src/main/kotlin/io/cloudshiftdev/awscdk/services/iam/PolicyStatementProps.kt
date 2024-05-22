@@ -214,7 +214,7 @@ public interface PolicyStatementProps {
      * @param effect Whether to allow or deny the actions in this statement.
      */
     override fun effect(effect: Effect) {
-      cdkBuilder.effect(effect.let(Effect::unwrap))
+      cdkBuilder.effect(effect.let(Effect.Companion::unwrap))
     }
 
     /**
@@ -233,7 +233,7 @@ public interface PolicyStatementProps {
      * @param notPrincipals List of not principals to add to the statement.
      */
     override fun notPrincipals(notPrincipals: List<IPrincipal>) {
-      cdkBuilder.notPrincipals(notPrincipals.map(IPrincipal::unwrap))
+      cdkBuilder.notPrincipals(notPrincipals.map(IPrincipal.Companion::unwrap))
     }
 
     /**
@@ -259,7 +259,7 @@ public interface PolicyStatementProps {
      * @param principals List of principals to add to the statement.
      */
     override fun principals(principals: List<IPrincipal>) {
-      cdkBuilder.principals(principals.map(IPrincipal::unwrap))
+      cdkBuilder.principals(principals.map(IPrincipal.Companion::unwrap))
     }
 
     /**

@@ -36,8 +36,8 @@ public open class CompositeAlarm(
     id: String,
     props: CompositeAlarmProps,
   ) :
-      this(software.amazon.awscdk.services.cloudwatch.CompositeAlarm(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CompositeAlarmProps::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.CompositeAlarm(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CompositeAlarmProps.Companion::unwrap))
   )
 
   public constructor(
@@ -162,7 +162,7 @@ public open class CompositeAlarm(
      * state. 
      */
     override fun actionsSuppressor(actionsSuppressor: IAlarm) {
-      cdkBuilder.actionsSuppressor(actionsSuppressor.let(IAlarm::unwrap))
+      cdkBuilder.actionsSuppressor(actionsSuppressor.let(IAlarm.Companion::unwrap))
     }
 
     /**
@@ -177,7 +177,7 @@ public open class CompositeAlarm(
      * after suppressor alarm goes out of the ALARM state. 
      */
     override fun actionsSuppressorExtensionPeriod(actionsSuppressorExtensionPeriod: Duration) {
-      cdkBuilder.actionsSuppressorExtensionPeriod(actionsSuppressorExtensionPeriod.let(Duration::unwrap))
+      cdkBuilder.actionsSuppressorExtensionPeriod(actionsSuppressorExtensionPeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -192,7 +192,7 @@ public open class CompositeAlarm(
      * the suppressor alarm to go into the ALARM state. 
      */
     override fun actionsSuppressorWaitPeriod(actionsSuppressorWaitPeriod: Duration) {
-      cdkBuilder.actionsSuppressorWaitPeriod(actionsSuppressorWaitPeriod.let(Duration::unwrap))
+      cdkBuilder.actionsSuppressorWaitPeriod(actionsSuppressorWaitPeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -214,7 +214,7 @@ public open class CompositeAlarm(
      * determine this composite alarm's state. 
      */
     override fun alarmRule(alarmRule: IAlarmRule) {
-      cdkBuilder.alarmRule(alarmRule.let(IAlarmRule::unwrap))
+      cdkBuilder.alarmRule(alarmRule.let(IAlarmRule.Companion::unwrap))
     }
 
     /**
@@ -238,7 +238,7 @@ public open class CompositeAlarm(
       id: String,
       compositeAlarmArn: String,
     ): IAlarm =
-        software.amazon.awscdk.services.cloudwatch.CompositeAlarm.fromCompositeAlarmArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.cloudwatch.CompositeAlarm.fromCompositeAlarmArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, compositeAlarmArn).let(IAlarm::wrap)
 
     public fun fromCompositeAlarmName(
@@ -246,7 +246,7 @@ public open class CompositeAlarm(
       id: String,
       compositeAlarmName: String,
     ): IAlarm =
-        software.amazon.awscdk.services.cloudwatch.CompositeAlarm.fromCompositeAlarmName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.cloudwatch.CompositeAlarm.fromCompositeAlarmName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, compositeAlarmName).let(IAlarm::wrap)
 
     public operator fun invoke(

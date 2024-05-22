@@ -62,8 +62,8 @@ public open class CfnBillingGroup(
     id: String,
     props: CfnBillingGroupProps,
   ) :
-      this(software.amazon.awscdk.services.billingconductor.CfnBillingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnBillingGroupProps::unwrap))
+      this(software.amazon.awscdk.services.billingconductor.CfnBillingGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnBillingGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -82,14 +82,14 @@ public open class CfnBillingGroup(
    * The set of accounts that will be under the billing group.
    */
   public open fun accountGrouping(`value`: IResolvable) {
-    unwrap(this).setAccountGrouping(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccountGrouping(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The set of accounts that will be under the billing group.
    */
   public open fun accountGrouping(`value`: AccountGroupingProperty) {
-    unwrap(this).setAccountGrouping(`value`.let(AccountGroupingProperty::unwrap))
+    unwrap(this).setAccountGrouping(`value`.let(AccountGroupingProperty.Companion::unwrap))
   }
 
   /**
@@ -141,14 +141,14 @@ public open class CfnBillingGroup(
    * The preferences and settings that will be used to compute the AWS charges for a billing group.
    */
   public open fun computationPreference(`value`: IResolvable) {
-    unwrap(this).setComputationPreference(`value`.let(IResolvable::unwrap))
+    unwrap(this).setComputationPreference(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The preferences and settings that will be used to compute the AWS charges for a billing group.
    */
   public open fun computationPreference(`value`: ComputationPreferenceProperty) {
-    unwrap(this).setComputationPreference(`value`.let(ComputationPreferenceProperty::unwrap))
+    unwrap(this).setComputationPreference(`value`.let(ComputationPreferenceProperty.Companion::unwrap))
   }
 
   /**
@@ -177,7 +177,7 @@ public open class CfnBillingGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -219,7 +219,7 @@ public open class CfnBillingGroup(
    * A map that contains tag keys and tag values that are attached to a billing group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -356,7 +356,7 @@ public open class CfnBillingGroup(
      * @param accountGrouping The set of accounts that will be under the billing group. 
      */
     override fun accountGrouping(accountGrouping: IResolvable) {
-      cdkBuilder.accountGrouping(accountGrouping.let(IResolvable::unwrap))
+      cdkBuilder.accountGrouping(accountGrouping.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -368,7 +368,7 @@ public open class CfnBillingGroup(
      * @param accountGrouping The set of accounts that will be under the billing group. 
      */
     override fun accountGrouping(accountGrouping: AccountGroupingProperty) {
-      cdkBuilder.accountGrouping(accountGrouping.let(AccountGroupingProperty::unwrap))
+      cdkBuilder.accountGrouping(accountGrouping.let(AccountGroupingProperty.Companion::unwrap))
     }
 
     /**
@@ -393,7 +393,7 @@ public open class CfnBillingGroup(
      * AWS charges for a billing group. 
      */
     override fun computationPreference(computationPreference: IResolvable) {
-      cdkBuilder.computationPreference(computationPreference.let(IResolvable::unwrap))
+      cdkBuilder.computationPreference(computationPreference.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -405,7 +405,7 @@ public open class CfnBillingGroup(
      * AWS charges for a billing group. 
      */
     override fun computationPreference(computationPreference: ComputationPreferenceProperty) {
-      cdkBuilder.computationPreference(computationPreference.let(ComputationPreferenceProperty::unwrap))
+      cdkBuilder.computationPreference(computationPreference.let(ComputationPreferenceProperty.Companion::unwrap))
     }
 
     /**
@@ -460,7 +460,7 @@ public open class CfnBillingGroup(
      * 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -587,7 +587,7 @@ public open class CfnBillingGroup(
        * added AWS accounts that join your consolidated billing family.
        */
       override fun autoAssociate(autoAssociate: IResolvable) {
-        cdkBuilder.autoAssociate(autoAssociate.let(IResolvable::unwrap))
+        cdkBuilder.autoAssociate(autoAssociate.let(IResolvable.Companion::unwrap))
       }
 
       /**

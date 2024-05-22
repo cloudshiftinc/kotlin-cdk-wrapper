@@ -111,7 +111,7 @@ public interface OriginBindConfig {
      * @param failoverConfig The failover configuration for this Origin.
      */
     override fun failoverConfig(failoverConfig: OriginFailoverConfig) {
-      cdkBuilder.failoverConfig(failoverConfig.let(OriginFailoverConfig::unwrap))
+      cdkBuilder.failoverConfig(failoverConfig.let(OriginFailoverConfig.Companion::unwrap))
     }
 
     /**
@@ -126,7 +126,7 @@ public interface OriginBindConfig {
      * @param originProperty The CloudFormation OriginProperty configuration for this Origin.
      */
     override fun originProperty(originProperty: CfnDistribution.OriginProperty) {
-      cdkBuilder.originProperty(originProperty.let(CfnDistribution.OriginProperty::unwrap))
+      cdkBuilder.originProperty(originProperty.let(CfnDistribution.OriginProperty.Companion::unwrap))
     }
 
     /**

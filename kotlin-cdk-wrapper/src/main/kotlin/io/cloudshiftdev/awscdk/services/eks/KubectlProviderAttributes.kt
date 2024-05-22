@@ -89,7 +89,7 @@ public interface KubectlProviderAttributes {
      * This role must be able to assume kubectlRoleArn
      */
     override fun handlerRole(handlerRole: IRole) {
-      cdkBuilder.handlerRole(handlerRole.let(IRole::unwrap))
+      cdkBuilder.handlerRole(handlerRole.let(IRole.Companion::unwrap))
     }
 
     /**

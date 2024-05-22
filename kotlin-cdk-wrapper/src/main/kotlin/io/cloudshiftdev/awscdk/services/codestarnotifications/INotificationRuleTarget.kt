@@ -27,7 +27,7 @@ public interface INotificationRuleTarget {
      * @param scope 
      */
     override fun bindAsNotificationRuleTarget(scope: Construct): NotificationRuleTargetConfig =
-        unwrap(this).bindAsNotificationRuleTarget(scope.let(Construct::unwrap)).let(NotificationRuleTargetConfig::wrap)
+        unwrap(this).bindAsNotificationRuleTarget(scope.let(Construct.Companion::unwrap)).let(NotificationRuleTargetConfig::wrap)
   }
 
   public companion object {

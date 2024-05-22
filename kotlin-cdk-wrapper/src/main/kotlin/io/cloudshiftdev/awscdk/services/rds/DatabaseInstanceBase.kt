@@ -53,7 +53,8 @@ public abstract class DatabaseInstanceBase(
    * @param options 
    */
   public override fun addProxy(id: String, options: DatabaseProxyOptions): DatabaseProxy =
-      unwrap(this).addProxy(id, options.let(DatabaseProxyOptions::unwrap)).let(DatabaseProxy::wrap)
+      unwrap(this).addProxy(id,
+      options.let(DatabaseProxyOptions.Companion::unwrap)).let(DatabaseProxy::wrap)
 
   /**
    * Add a new db proxy to this instance.
@@ -105,7 +106,7 @@ public abstract class DatabaseInstanceBase(
    * @param dbUser
    */
   public override fun grantConnect(grantee: IGrantable): Grant =
-      unwrap(this).grantConnect(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantConnect(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant the given identity connection access to the database.
@@ -114,7 +115,7 @@ public abstract class DatabaseInstanceBase(
    * @param dbUser
    */
   public override fun grantConnect(grantee: IGrantable, dbUser: String): Grant =
-      unwrap(this).grantConnect(grantee.let(IGrantable::unwrap), dbUser).let(Grant::wrap)
+      unwrap(this).grantConnect(grantee.let(IGrantable.Companion::unwrap), dbUser).let(Grant::wrap)
 
   /**
    * The instance arn.
@@ -156,7 +157,7 @@ public abstract class DatabaseInstanceBase(
    * @param props
    */
   public override fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Return the given named metric for this DBInstance.
@@ -187,7 +188,7 @@ public abstract class DatabaseInstanceBase(
    * @param props
    */
   public override fun metricCPUUtilization(props: MetricOptions): Metric =
-      unwrap(this).metricCPUUtilization(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricCPUUtilization(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The percentage of CPU utilization.
@@ -219,7 +220,7 @@ public abstract class DatabaseInstanceBase(
    * @param props
    */
   public override fun metricDatabaseConnections(props: MetricOptions): Metric =
-      unwrap(this).metricDatabaseConnections(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricDatabaseConnections(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of database connections in use.
@@ -251,7 +252,7 @@ public abstract class DatabaseInstanceBase(
    * @param props
    */
   public override fun metricFreeStorageSpace(props: MetricOptions): Metric =
-      unwrap(this).metricFreeStorageSpace(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricFreeStorageSpace(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The amount of available storage space.
@@ -283,7 +284,7 @@ public abstract class DatabaseInstanceBase(
    * @param props
    */
   public override fun metricFreeableMemory(props: MetricOptions): Metric =
-      unwrap(this).metricFreeableMemory(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricFreeableMemory(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The amount of available random access memory.
@@ -314,7 +315,7 @@ public abstract class DatabaseInstanceBase(
    * @param props
    */
   public override fun metricReadIOPS(props: MetricOptions): Metric =
-      unwrap(this).metricReadIOPS(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricReadIOPS(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The average number of disk write I/O operations per second.
@@ -345,7 +346,7 @@ public abstract class DatabaseInstanceBase(
    * @param props
    */
   public override fun metricWriteIOPS(props: MetricOptions): Metric =
-      unwrap(this).metricWriteIOPS(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricWriteIOPS(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The average number of disk read I/O operations per second.
@@ -380,7 +381,7 @@ public abstract class DatabaseInstanceBase(
    * @param options
    */
   public override fun onEvent(id: String, options: OnEventOptions): Rule = unwrap(this).onEvent(id,
-      options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines a CloudWatch event rule which triggers for instance events.
@@ -406,8 +407,8 @@ public abstract class DatabaseInstanceBase(
       id: String,
       attrs: DatabaseInstanceAttributes,
     ): IDatabaseInstance =
-        software.amazon.awscdk.services.rds.DatabaseInstanceBase.fromDatabaseInstanceAttributes(scope.let(Construct::unwrap),
-        id, attrs.let(DatabaseInstanceAttributes::unwrap)).let(IDatabaseInstance::wrap)
+        software.amazon.awscdk.services.rds.DatabaseInstanceBase.fromDatabaseInstanceAttributes(scope.let(Construct.Companion::unwrap),
+        id, attrs.let(DatabaseInstanceAttributes.Companion::unwrap)).let(IDatabaseInstance::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("52b4f9d96e036ac67cd887860424c987385d8311ffaddd1b73e3d6d487335e3b")

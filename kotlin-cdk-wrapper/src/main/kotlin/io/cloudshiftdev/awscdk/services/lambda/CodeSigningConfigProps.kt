@@ -107,7 +107,7 @@ public interface CodeSigningConfigProps {
      * code package. 
      */
     override fun signingProfiles(signingProfiles: List<ISigningProfile>) {
-      cdkBuilder.signingProfiles(signingProfiles.map(ISigningProfile::unwrap))
+      cdkBuilder.signingProfiles(signingProfiles.map(ISigningProfile.Companion::unwrap))
     }
 
     /**
@@ -127,7 +127,7 @@ public interface CodeSigningConfigProps {
      */
     override
         fun untrustedArtifactOnDeployment(untrustedArtifactOnDeployment: UntrustedArtifactOnDeployment) {
-      cdkBuilder.untrustedArtifactOnDeployment(untrustedArtifactOnDeployment.let(UntrustedArtifactOnDeployment::unwrap))
+      cdkBuilder.untrustedArtifactOnDeployment(untrustedArtifactOnDeployment.let(UntrustedArtifactOnDeployment.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lambda.CodeSigningConfigProps =

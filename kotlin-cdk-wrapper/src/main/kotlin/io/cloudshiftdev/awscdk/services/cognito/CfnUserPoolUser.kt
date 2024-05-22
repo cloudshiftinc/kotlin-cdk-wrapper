@@ -57,8 +57,8 @@ public open class CfnUserPoolUser(
     id: String,
     props: CfnUserPoolUserProps,
   ) :
-      this(software.amazon.awscdk.services.cognito.CfnUserPoolUser(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnUserPoolUserProps::unwrap))
+      this(software.amazon.awscdk.services.cognito.CfnUserPoolUser(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnUserPoolUserProps.Companion::unwrap))
   )
 
   public constructor(
@@ -79,7 +79,7 @@ public open class CfnUserPoolUser(
    * this action triggers.
    */
   public open fun clientMetadata(`value`: IResolvable) {
-    unwrap(this).setClientMetadata(`value`.let(IResolvable::unwrap))
+    unwrap(this).setClientMetadata(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -128,7 +128,7 @@ public open class CfnUserPoolUser(
    * to `True` .
    */
   public open fun forceAliasCreation(`value`: IResolvable) {
-    unwrap(this).setForceAliasCreation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setForceAliasCreation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -137,7 +137,7 @@ public open class CfnUserPoolUser(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -163,7 +163,7 @@ public open class CfnUserPoolUser(
    * An array of name-value pairs that contain user attributes and attribute values.
    */
   public open fun userAttributes(`value`: IResolvable) {
-    unwrap(this).setUserAttributes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUserAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -211,7 +211,7 @@ public open class CfnUserPoolUser(
    * Temporary user attributes that contribute to the outcomes of your pre sign-up Lambda trigger.
    */
   public open fun validationData(`value`: IResolvable) {
-    unwrap(this).setValidationData(`value`.let(IResolvable::unwrap))
+    unwrap(this).setValidationData(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -532,7 +532,7 @@ public open class CfnUserPoolUser(
      * custom workflows that this action triggers. 
      */
     override fun clientMetadata(clientMetadata: IResolvable) {
-      cdkBuilder.clientMetadata(clientMetadata.let(IResolvable::unwrap))
+      cdkBuilder.clientMetadata(clientMetadata.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -639,7 +639,7 @@ public open class CfnUserPoolUser(
      * `email_verified` attribute is set to `True` . 
      */
     override fun forceAliasCreation(forceAliasCreation: IResolvable) {
-      cdkBuilder.forceAliasCreation(forceAliasCreation.let(IResolvable::unwrap))
+      cdkBuilder.forceAliasCreation(forceAliasCreation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -664,7 +664,7 @@ public open class CfnUserPoolUser(
      * values. 
      */
     override fun userAttributes(userAttributes: IResolvable) {
-      cdkBuilder.userAttributes(userAttributes.let(IResolvable::unwrap))
+      cdkBuilder.userAttributes(userAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -738,7 +738,7 @@ public open class CfnUserPoolUser(
      * sign-up Lambda trigger. 
      */
     override fun validationData(validationData: IResolvable) {
-      cdkBuilder.validationData(validationData.let(IResolvable::unwrap))
+      cdkBuilder.validationData(validationData.let(IResolvable.Companion::unwrap))
     }
 
     /**

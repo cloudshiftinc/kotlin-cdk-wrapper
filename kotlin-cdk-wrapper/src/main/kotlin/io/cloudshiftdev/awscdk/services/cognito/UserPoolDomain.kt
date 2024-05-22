@@ -40,8 +40,8 @@ public open class UserPoolDomain(
     id: String,
     props: UserPoolDomainProps,
   ) :
-      this(software.amazon.awscdk.services.cognito.UserPoolDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(UserPoolDomainProps::unwrap))
+      this(software.amazon.awscdk.services.cognito.UserPoolDomain(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(UserPoolDomainProps.Companion::unwrap))
   )
 
   public constructor(
@@ -64,7 +64,7 @@ public open class UserPoolDomain(
    * @param options options to customize baseUrl.
    */
   public open fun baseUrl(options: BaseUrlOptions): String =
-      unwrap(this).baseUrl(options.let(BaseUrlOptions::unwrap))
+      unwrap(this).baseUrl(options.let(BaseUrlOptions.Companion::unwrap))
 
   /**
    * The URL to the hosted UI associated with this domain.
@@ -97,8 +97,8 @@ public open class UserPoolDomain(
    * @param options options to customize signInUrl. 
    */
   public open fun signInUrl(client: UserPoolClient, options: SignInUrlOptions): String =
-      unwrap(this).signInUrl(client.let(UserPoolClient::unwrap),
-      options.let(SignInUrlOptions::unwrap))
+      unwrap(this).signInUrl(client.let(UserPoolClient.Companion::unwrap),
+      options.let(SignInUrlOptions.Companion::unwrap))
 
   /**
    * The URL to the sign in page in this domain using a specific UserPoolClient.
@@ -195,7 +195,7 @@ public open class UserPoolDomain(
      * `customDomain` or `cognitoDomain` must be specified. 
      */
     override fun cognitoDomain(cognitoDomain: CognitoDomainOptions) {
-      cdkBuilder.cognitoDomain(cognitoDomain.let(CognitoDomainOptions::unwrap))
+      cdkBuilder.cognitoDomain(cognitoDomain.let(CognitoDomainOptions.Companion::unwrap))
     }
 
     /**
@@ -224,7 +224,7 @@ public open class UserPoolDomain(
      * `cognitoDomain` must be specified. 
      */
     override fun customDomain(customDomain: CustomDomainOptions) {
-      cdkBuilder.customDomain(customDomain.let(CustomDomainOptions::unwrap))
+      cdkBuilder.customDomain(customDomain.let(CustomDomainOptions.Companion::unwrap))
     }
 
     /**
@@ -248,7 +248,7 @@ public open class UserPoolDomain(
      * @param userPool The user pool to which this domain should be associated. 
      */
     override fun userPool(userPool: IUserPool) {
-      cdkBuilder.userPool(userPool.let(IUserPool::unwrap))
+      cdkBuilder.userPool(userPool.let(IUserPool.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cognito.UserPoolDomain = cdkBuilder.build()
@@ -260,7 +260,7 @@ public open class UserPoolDomain(
       id: String,
       userPoolDomainName: String,
     ): IUserPoolDomain =
-        software.amazon.awscdk.services.cognito.UserPoolDomain.fromDomainName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.cognito.UserPoolDomain.fromDomainName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, userPoolDomainName).let(IUserPoolDomain::wrap)
 
     public operator fun invoke(

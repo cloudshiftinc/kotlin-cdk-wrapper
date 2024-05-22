@@ -208,7 +208,7 @@ public interface CfnTableProps {
      * open format table.
      */
     override fun openTableFormatInput(openTableFormatInput: IResolvable) {
-      cdkBuilder.openTableFormatInput(openTableFormatInput.let(IResolvable::unwrap))
+      cdkBuilder.openTableFormatInput(openTableFormatInput.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -216,7 +216,7 @@ public interface CfnTableProps {
      * open format table.
      */
     override fun openTableFormatInput(openTableFormatInput: CfnTable.OpenTableFormatInputProperty) {
-      cdkBuilder.openTableFormatInput(openTableFormatInput.let(CfnTable.OpenTableFormatInputProperty::unwrap))
+      cdkBuilder.openTableFormatInput(openTableFormatInput.let(CfnTable.OpenTableFormatInputProperty.Companion::unwrap))
     }
 
     /**
@@ -233,14 +233,14 @@ public interface CfnTableProps {
      * @param tableInput A structure used to define a table. 
      */
     override fun tableInput(tableInput: IResolvable) {
-      cdkBuilder.tableInput(tableInput.let(IResolvable::unwrap))
+      cdkBuilder.tableInput(tableInput.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param tableInput A structure used to define a table. 
      */
     override fun tableInput(tableInput: CfnTable.TableInputProperty) {
-      cdkBuilder.tableInput(tableInput.let(CfnTable.TableInputProperty::unwrap))
+      cdkBuilder.tableInput(tableInput.let(CfnTable.TableInputProperty.Companion::unwrap))
     }
 
     /**

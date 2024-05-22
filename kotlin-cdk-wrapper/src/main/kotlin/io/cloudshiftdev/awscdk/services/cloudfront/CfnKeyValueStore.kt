@@ -49,8 +49,8 @@ public open class CfnKeyValueStore(
     id: String,
     props: CfnKeyValueStoreProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.CfnKeyValueStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnKeyValueStoreProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.CfnKeyValueStore(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnKeyValueStoreProps.Companion::unwrap))
   )
 
   public constructor(
@@ -96,14 +96,14 @@ public open class CfnKeyValueStore(
    * The import source for the key value store.
    */
   public open fun importSource(`value`: IResolvable) {
-    unwrap(this).setImportSource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setImportSource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The import source for the key value store.
    */
   public open fun importSource(`value`: ImportSourceProperty) {
-    unwrap(this).setImportSource(`value`.let(ImportSourceProperty::unwrap))
+    unwrap(this).setImportSource(`value`.let(ImportSourceProperty.Companion::unwrap))
   }
 
   /**
@@ -120,7 +120,7 @@ public open class CfnKeyValueStore(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -207,7 +207,7 @@ public open class CfnKeyValueStore(
      * @param importSource The import source for the key value store. 
      */
     override fun importSource(importSource: IResolvable) {
-      cdkBuilder.importSource(importSource.let(IResolvable::unwrap))
+      cdkBuilder.importSource(importSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -217,7 +217,7 @@ public open class CfnKeyValueStore(
      * @param importSource The import source for the key value store. 
      */
     override fun importSource(importSource: ImportSourceProperty) {
-      cdkBuilder.importSource(importSource.let(ImportSourceProperty::unwrap))
+      cdkBuilder.importSource(importSource.let(ImportSourceProperty.Companion::unwrap))
     }
 
     /**

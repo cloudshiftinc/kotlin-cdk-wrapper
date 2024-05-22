@@ -36,7 +36,7 @@ public open class GenericWindowsImage(
 
   public constructor(amiMap: Map<String, String>, props: GenericWindowsImageProps) :
       this(software.amazon.awscdk.services.ec2.GenericWindowsImage(amiMap,
-      props.let(GenericWindowsImageProps::unwrap))
+      props.let(GenericWindowsImageProps.Companion::unwrap))
   )
 
   public constructor(amiMap: Map<String, String>,
@@ -50,7 +50,7 @@ public open class GenericWindowsImage(
    * @param scope 
    */
   public override fun image(scope: Construct): MachineImageConfig =
-      unwrap(this).getImage(scope.let(Construct::unwrap)).let(MachineImageConfig::wrap)
+      unwrap(this).getImage(scope.let(Construct.Companion::unwrap)).let(MachineImageConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.GenericWindowsImage].
@@ -81,7 +81,7 @@ public open class GenericWindowsImage(
      * @param userData Initial user data. 
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.GenericWindowsImage = cdkBuilder.build()

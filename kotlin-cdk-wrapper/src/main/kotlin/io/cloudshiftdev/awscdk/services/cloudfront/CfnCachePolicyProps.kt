@@ -93,14 +93,14 @@ public interface CfnCachePolicyProps {
      * @param cachePolicyConfig The cache policy configuration. 
      */
     override fun cachePolicyConfig(cachePolicyConfig: IResolvable) {
-      cdkBuilder.cachePolicyConfig(cachePolicyConfig.let(IResolvable::unwrap))
+      cdkBuilder.cachePolicyConfig(cachePolicyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param cachePolicyConfig The cache policy configuration. 
      */
     override fun cachePolicyConfig(cachePolicyConfig: CfnCachePolicy.CachePolicyConfigProperty) {
-      cdkBuilder.cachePolicyConfig(cachePolicyConfig.let(CfnCachePolicy.CachePolicyConfigProperty::unwrap))
+      cdkBuilder.cachePolicyConfig(cachePolicyConfig.let(CfnCachePolicy.CachePolicyConfigProperty.Companion::unwrap))
     }
 
     /**

@@ -28,7 +28,7 @@ public open class KeyValueStore(
   cdkObject: software.amazon.awscdk.services.cloudfront.KeyValueStore,
 ) : Resource(cdkObject), IKeyValueStore {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.cloudfront.KeyValueStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.cloudfront.KeyValueStore(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -37,8 +37,8 @@ public open class KeyValueStore(
     id: String,
     props: KeyValueStoreProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.KeyValueStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(KeyValueStoreProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.KeyValueStore(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(KeyValueStoreProps.Companion::unwrap))
   )
 
   public constructor(
@@ -139,7 +139,7 @@ public open class KeyValueStore(
      * @param source The import source for the Key Value Store. 
      */
     override fun source(source: ImportSource) {
-      cdkBuilder.source(source.let(ImportSource::unwrap))
+      cdkBuilder.source(source.let(ImportSource.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.KeyValueStore =
@@ -152,7 +152,7 @@ public open class KeyValueStore(
       id: String,
       keyValueStoreArn: String,
     ): IKeyValueStore =
-        software.amazon.awscdk.services.cloudfront.KeyValueStore.fromKeyValueStoreArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.cloudfront.KeyValueStore.fromKeyValueStoreArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, keyValueStoreArn).let(IKeyValueStore::wrap)
 
     public operator fun invoke(

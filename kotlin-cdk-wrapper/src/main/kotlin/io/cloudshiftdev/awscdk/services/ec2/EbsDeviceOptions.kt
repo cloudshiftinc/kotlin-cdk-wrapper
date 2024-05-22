@@ -127,14 +127,14 @@ public interface EbsDeviceOptions : EbsDeviceOptionsBase {
      * launching the ec2 instances.
      */
     override fun kmsKey(kmsKey: IKey) {
-      cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     /**
      * @param volumeType The EBS volume type.
      */
     override fun volumeType(volumeType: EbsDeviceVolumeType) {
-      cdkBuilder.volumeType(volumeType.let(EbsDeviceVolumeType::unwrap))
+      cdkBuilder.volumeType(volumeType.let(EbsDeviceVolumeType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.EbsDeviceOptions = cdkBuilder.build()
@@ -190,7 +190,9 @@ public interface EbsDeviceOptions : EbsDeviceOptionsBase {
     /**
      * The EBS volume type.
      *
-     * Default: `EbsDeviceVolumeType.GP2`
+     * Default: `EbsDeviceVolumeType.GENERAL_PURPOSE_SSD` or
+     * `EbsDeviceVolumeType.GENERAL_PURPOSE_SSD_GP3` if
+     * `@aws-cdk/aws-ec2:ebsDefaultGp3Volume` is enabled.
      *
      * [Documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html)
      */

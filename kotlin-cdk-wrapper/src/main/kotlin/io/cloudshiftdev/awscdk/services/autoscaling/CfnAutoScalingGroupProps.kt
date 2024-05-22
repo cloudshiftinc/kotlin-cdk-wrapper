@@ -1276,7 +1276,7 @@ public interface CfnAutoScalingGroupProps {
      * in the in the *Amazon EC2 Auto Scaling User Guide* .
      */
     override fun capacityRebalance(capacityRebalance: IResolvable) {
-      cdkBuilder.capacityRebalance(capacityRebalance.let(IResolvable::unwrap))
+      cdkBuilder.capacityRebalance(capacityRebalance.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1411,7 +1411,7 @@ public interface CfnAutoScalingGroupProps {
      * in the *Amazon EC2 Auto Scaling User Guide* .
      */
     override fun instanceMaintenancePolicy(instanceMaintenancePolicy: IResolvable) {
-      cdkBuilder.instanceMaintenancePolicy(instanceMaintenancePolicy.let(IResolvable::unwrap))
+      cdkBuilder.instanceMaintenancePolicy(instanceMaintenancePolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1422,7 +1422,7 @@ public interface CfnAutoScalingGroupProps {
      */
     override
         fun instanceMaintenancePolicy(instanceMaintenancePolicy: CfnAutoScalingGroup.InstanceMaintenancePolicyProperty) {
-      cdkBuilder.instanceMaintenancePolicy(instanceMaintenancePolicy.let(CfnAutoScalingGroup.InstanceMaintenancePolicyProperty::unwrap))
+      cdkBuilder.instanceMaintenancePolicy(instanceMaintenancePolicy.let(CfnAutoScalingGroup.InstanceMaintenancePolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -1461,7 +1461,7 @@ public interface CfnAutoScalingGroupProps {
      * `LaunchConfigurationName` , or `InstanceId` .
      */
     override fun launchTemplate(launchTemplate: IResolvable) {
-      cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
+      cdkBuilder.launchTemplate(launchTemplate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1478,7 +1478,7 @@ public interface CfnAutoScalingGroupProps {
      */
     override
         fun launchTemplate(launchTemplate: CfnAutoScalingGroup.LaunchTemplateSpecificationProperty) {
-      cdkBuilder.launchTemplate(launchTemplate.let(CfnAutoScalingGroup.LaunchTemplateSpecificationProperty::unwrap))
+      cdkBuilder.launchTemplate(launchTemplate.let(CfnAutoScalingGroup.LaunchTemplateSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -1505,7 +1505,7 @@ public interface CfnAutoScalingGroupProps {
      * group before instances are launched.
      */
     override fun lifecycleHookSpecificationList(lifecycleHookSpecificationList: IResolvable) {
-      cdkBuilder.lifecycleHookSpecificationList(lifecycleHookSpecificationList.let(IResolvable::unwrap))
+      cdkBuilder.lifecycleHookSpecificationList(lifecycleHookSpecificationList.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1572,7 +1572,7 @@ public interface CfnAutoScalingGroupProps {
      * By default, these metrics are disabled.
      */
     override fun metricsCollection(metricsCollection: IResolvable) {
-      cdkBuilder.metricsCollection(metricsCollection.let(IResolvable::unwrap))
+      cdkBuilder.metricsCollection(metricsCollection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1611,7 +1611,7 @@ public interface CfnAutoScalingGroupProps {
      * in the *Amazon EC2 Auto Scaling User Guide* .
      */
     override fun mixedInstancesPolicy(mixedInstancesPolicy: IResolvable) {
-      cdkBuilder.mixedInstancesPolicy(mixedInstancesPolicy.let(IResolvable::unwrap))
+      cdkBuilder.mixedInstancesPolicy(mixedInstancesPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1629,7 +1629,7 @@ public interface CfnAutoScalingGroupProps {
      */
     override
         fun mixedInstancesPolicy(mixedInstancesPolicy: CfnAutoScalingGroup.MixedInstancesPolicyProperty) {
-      cdkBuilder.mixedInstancesPolicy(mixedInstancesPolicy.let(CfnAutoScalingGroup.MixedInstancesPolicyProperty::unwrap))
+      cdkBuilder.mixedInstancesPolicy(mixedInstancesPolicy.let(CfnAutoScalingGroup.MixedInstancesPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -1673,7 +1673,7 @@ public interface CfnAutoScalingGroupProps {
      * in the *Amazon EC2 Auto Scaling User Guide* .
      */
     override fun newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn: IResolvable) {
-      cdkBuilder.newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn.let(IResolvable::unwrap))
+      cdkBuilder.newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1689,7 +1689,7 @@ public interface CfnAutoScalingGroupProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun notificationConfiguration(notificationConfiguration: IResolvable) {
-      cdkBuilder.notificationConfiguration(notificationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.notificationConfiguration(notificationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1706,7 +1706,7 @@ public interface CfnAutoScalingGroupProps {
     @Deprecated(message = "deprecated in CDK")
     override
         fun notificationConfiguration(notificationConfiguration: CfnAutoScalingGroup.NotificationConfigurationProperty) {
-      cdkBuilder.notificationConfiguration(notificationConfiguration.let(CfnAutoScalingGroup.NotificationConfigurationProperty::unwrap))
+      cdkBuilder.notificationConfiguration(notificationConfiguration.let(CfnAutoScalingGroup.NotificationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1733,7 +1733,7 @@ public interface CfnAutoScalingGroupProps {
      * specified events take place.
      */
     override fun notificationConfigurations(notificationConfigurations: IResolvable) {
-      cdkBuilder.notificationConfigurations(notificationConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.notificationConfigurations(notificationConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1790,7 +1790,7 @@ public interface CfnAutoScalingGroupProps {
      * in the *Amazon EC2 Auto Scaling User Guide* .
      */
     override fun tags(tags: List<CfnAutoScalingGroup.TagPropertyProperty>) {
-      cdkBuilder.tags(tags.map(CfnAutoScalingGroup.TagPropertyProperty::unwrap))
+      cdkBuilder.tags(tags.map(CfnAutoScalingGroup.TagPropertyProperty.Companion::unwrap))
     }
 
     /**

@@ -93,7 +93,7 @@ public open class CfnSignalCatalog(
   cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -102,8 +102,8 @@ public open class CfnSignalCatalog(
     id: String,
     props: CfnSignalCatalogProps,
   ) :
-      this(software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSignalCatalogProps::unwrap))
+      this(software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSignalCatalogProps.Companion::unwrap))
   )
 
   public constructor(
@@ -178,7 +178,7 @@ public open class CfnSignalCatalog(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -202,14 +202,14 @@ public open class CfnSignalCatalog(
    * (Optional) Information about the number of nodes and node types in a vehicle network.
    */
   public open fun nodeCounts(`value`: IResolvable) {
-    unwrap(this).setNodeCounts(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNodeCounts(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * (Optional) Information about the number of nodes and node types in a vehicle network.
    */
   public open fun nodeCounts(`value`: NodeCountsProperty) {
-    unwrap(this).setNodeCounts(`value`.let(NodeCountsProperty::unwrap))
+    unwrap(this).setNodeCounts(`value`.let(NodeCountsProperty.Companion::unwrap))
   }
 
   /**
@@ -229,7 +229,7 @@ public open class CfnSignalCatalog(
    * (Optional) A list of information about nodes, which are a general abstraction of signals.
    */
   public open fun nodes(`value`: IResolvable) {
-    unwrap(this).setNodes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNodes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -259,7 +259,7 @@ public open class CfnSignalCatalog(
    * (Optional) Metadata that can be used to manage the signal catalog.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -396,7 +396,7 @@ public open class CfnSignalCatalog(
      * vehicle network. 
      */
     override fun nodeCounts(nodeCounts: IResolvable) {
-      cdkBuilder.nodeCounts(nodeCounts.let(IResolvable::unwrap))
+      cdkBuilder.nodeCounts(nodeCounts.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -407,7 +407,7 @@ public open class CfnSignalCatalog(
      * vehicle network. 
      */
     override fun nodeCounts(nodeCounts: NodeCountsProperty) {
-      cdkBuilder.nodeCounts(nodeCounts.let(NodeCountsProperty::unwrap))
+      cdkBuilder.nodeCounts(nodeCounts.let(NodeCountsProperty.Companion::unwrap))
     }
 
     /**
@@ -430,7 +430,7 @@ public open class CfnSignalCatalog(
      * signals. 
      */
     override fun nodes(nodes: IResolvable) {
-      cdkBuilder.nodes(nodes.let(IResolvable::unwrap))
+      cdkBuilder.nodes(nodes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -460,7 +460,7 @@ public open class CfnSignalCatalog(
      * @param tags (Optional) Metadata that can be used to manage the signal catalog. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1639,7 +1639,7 @@ public open class CfnSignalCatalog(
        * An actuator is a digital representation of a vehicle device.
        */
       override fun actuator(actuator: IResolvable) {
-        cdkBuilder.actuator(actuator.let(IResolvable::unwrap))
+        cdkBuilder.actuator(actuator.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1648,7 +1648,7 @@ public open class CfnSignalCatalog(
        * An actuator is a digital representation of a vehicle device.
        */
       override fun actuator(actuator: ActuatorProperty) {
-        cdkBuilder.actuator(actuator.let(ActuatorProperty::unwrap))
+        cdkBuilder.actuator(actuator.let(ActuatorProperty.Companion::unwrap))
       }
 
       /**
@@ -1667,7 +1667,7 @@ public open class CfnSignalCatalog(
        * An attribute represents static information about a vehicle.
        */
       override fun attribute(attribute: IResolvable) {
-        cdkBuilder.attribute(attribute.let(IResolvable::unwrap))
+        cdkBuilder.attribute(attribute.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1676,7 +1676,7 @@ public open class CfnSignalCatalog(
        * An attribute represents static information about a vehicle.
        */
       override fun attribute(attribute: AttributeProperty) {
-        cdkBuilder.attribute(attribute.let(AttributeProperty::unwrap))
+        cdkBuilder.attribute(attribute.let(AttributeProperty.Companion::unwrap))
       }
 
       /**
@@ -1695,7 +1695,7 @@ public open class CfnSignalCatalog(
        * A group of signals that are defined in a hierarchical structure.
        */
       override fun branch(branch: IResolvable) {
-        cdkBuilder.branch(branch.let(IResolvable::unwrap))
+        cdkBuilder.branch(branch.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1704,7 +1704,7 @@ public open class CfnSignalCatalog(
        * A group of signals that are defined in a hierarchical structure.
        */
       override fun branch(branch: BranchProperty) {
-        cdkBuilder.branch(branch.let(BranchProperty::unwrap))
+        cdkBuilder.branch(branch.let(BranchProperty.Companion::unwrap))
       }
 
       /**
@@ -1725,7 +1725,7 @@ public open class CfnSignalCatalog(
        * sensors.
        */
       override fun sensor(sensor: IResolvable) {
-        cdkBuilder.sensor(sensor.let(IResolvable::unwrap))
+        cdkBuilder.sensor(sensor.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1736,7 +1736,7 @@ public open class CfnSignalCatalog(
        * sensors.
        */
       override fun sensor(sensor: SensorProperty) {
-        cdkBuilder.sensor(sensor.let(SensorProperty::unwrap))
+        cdkBuilder.sensor(sensor.let(SensorProperty.Companion::unwrap))
       }
 
       /**

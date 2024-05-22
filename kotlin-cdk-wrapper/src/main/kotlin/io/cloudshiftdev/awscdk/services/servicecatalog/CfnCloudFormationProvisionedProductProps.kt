@@ -465,7 +465,7 @@ public interface CfnCloudFormationProvisionedProductProps {
      * provisioning the product.
      */
     override fun provisioningParameters(provisioningParameters: IResolvable) {
-      cdkBuilder.provisioningParameters(provisioningParameters.let(IResolvable::unwrap))
+      cdkBuilder.provisioningParameters(provisioningParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -488,7 +488,7 @@ public interface CfnCloudFormationProvisionedProductProps {
      * product or updating a provisioned product.
      */
     override fun provisioningPreferences(provisioningPreferences: IResolvable) {
-      cdkBuilder.provisioningPreferences(provisioningPreferences.let(IResolvable::unwrap))
+      cdkBuilder.provisioningPreferences(provisioningPreferences.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -497,7 +497,7 @@ public interface CfnCloudFormationProvisionedProductProps {
      */
     override
         fun provisioningPreferences(provisioningPreferences: CfnCloudFormationProvisionedProduct.ProvisioningPreferencesProperty) {
-      cdkBuilder.provisioningPreferences(provisioningPreferences.let(CfnCloudFormationProvisionedProduct.ProvisioningPreferencesProperty::unwrap))
+      cdkBuilder.provisioningPreferences(provisioningPreferences.let(CfnCloudFormationProvisionedProduct.ProvisioningPreferencesProperty.Companion::unwrap))
     }
 
     /**
@@ -520,7 +520,7 @@ public interface CfnCloudFormationProvisionedProductProps {
      * `RESOURCE_UPDATE` constraint is not present, tags updates are ignored.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

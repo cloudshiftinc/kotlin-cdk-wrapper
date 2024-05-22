@@ -26,7 +26,7 @@ public open class KeyCondition(
    * @param keyCond 
    */
   public open fun and(keyCond: KeyCondition): KeyCondition =
-      unwrap(this).and(keyCond.let(KeyCondition::unwrap)).let(KeyCondition::wrap)
+      unwrap(this).and(keyCond.let(KeyCondition.Companion::unwrap)).let(KeyCondition::wrap)
 
   /**
    * Renders the key condition to a VTL string.

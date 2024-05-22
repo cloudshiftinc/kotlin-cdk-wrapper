@@ -302,7 +302,7 @@ public interface CloudFrontWebDistributionProps {
      */
     override
         fun errorConfigurations(errorConfigurations: List<CfnDistribution.CustomErrorResponseProperty>) {
-      cdkBuilder.errorConfigurations(errorConfigurations.map(CfnDistribution.CustomErrorResponseProperty::unwrap))
+      cdkBuilder.errorConfigurations(errorConfigurations.map(CfnDistribution.CustomErrorResponseProperty.Companion::unwrap))
     }
 
     /**
@@ -319,14 +319,14 @@ public interface CloudFrontWebDistributionProps {
      * @param geoRestriction Controls the countries in which your content is distributed.
      */
     override fun geoRestriction(geoRestriction: GeoRestriction) {
-      cdkBuilder.geoRestriction(geoRestriction.let(GeoRestriction::unwrap))
+      cdkBuilder.geoRestriction(geoRestriction.let(GeoRestriction.Companion::unwrap))
     }
 
     /**
      * @param httpVersion The max supported HTTP Versions.
      */
     override fun httpVersion(httpVersion: HttpVersion) {
-      cdkBuilder.httpVersion(httpVersion.let(HttpVersion::unwrap))
+      cdkBuilder.httpVersion(httpVersion.let(HttpVersion.Companion::unwrap))
     }
 
     /**
@@ -335,7 +335,7 @@ public interface CloudFrontWebDistributionProps {
      * Omission of this property indicates no logging is to be enabled.
      */
     override fun loggingConfig(loggingConfig: LoggingConfiguration) {
-      cdkBuilder.loggingConfig(loggingConfig.let(LoggingConfiguration::unwrap))
+      cdkBuilder.loggingConfig(loggingConfig.let(LoggingConfiguration.Companion::unwrap))
     }
 
     /**
@@ -353,7 +353,7 @@ public interface CloudFrontWebDistributionProps {
      * Behaviors are a part of the origin.
      */
     override fun originConfigs(originConfigs: List<SourceConfiguration>) {
-      cdkBuilder.originConfigs(originConfigs.map(SourceConfiguration::unwrap))
+      cdkBuilder.originConfigs(originConfigs.map(SourceConfiguration.Companion::unwrap))
     }
 
     /**
@@ -368,7 +368,7 @@ public interface CloudFrontWebDistributionProps {
      * CloudFront uses for your distribution, and billing).
      */
     override fun priceClass(priceClass: PriceClass) {
-      cdkBuilder.priceClass(priceClass.let(PriceClass::unwrap))
+      cdkBuilder.priceClass(priceClass.let(PriceClass.Companion::unwrap))
     }
 
     /**
@@ -377,14 +377,14 @@ public interface CloudFrontWebDistributionProps {
      * using AWS Certificate Manager (ACM) or a third-party certificate authority.
      */
     override fun viewerCertificate(viewerCertificate: ViewerCertificate) {
-      cdkBuilder.viewerCertificate(viewerCertificate.let(ViewerCertificate::unwrap))
+      cdkBuilder.viewerCertificate(viewerCertificate.let(ViewerCertificate.Companion::unwrap))
     }
 
     /**
      * @param viewerProtocolPolicy The default viewer policy for incoming clients.
      */
     override fun viewerProtocolPolicy(viewerProtocolPolicy: ViewerProtocolPolicy) {
-      cdkBuilder.viewerProtocolPolicy(viewerProtocolPolicy.let(ViewerProtocolPolicy::unwrap))
+      cdkBuilder.viewerProtocolPolicy(viewerProtocolPolicy.let(ViewerProtocolPolicy.Companion::unwrap))
     }
 
     /**

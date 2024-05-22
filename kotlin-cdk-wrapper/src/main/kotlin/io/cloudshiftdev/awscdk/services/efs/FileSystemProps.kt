@@ -373,7 +373,7 @@ public interface FileSystemProps {
      * access to an EFS file system.
      */
     override fun fileSystemPolicy(fileSystemPolicy: PolicyDocument) {
-      cdkBuilder.fileSystemPolicy(fileSystemPolicy.let(PolicyDocument::unwrap))
+      cdkBuilder.fileSystemPolicy(fileSystemPolicy.let(PolicyDocument.Companion::unwrap))
     }
 
     /**
@@ -390,7 +390,7 @@ public interface FileSystemProps {
      * This is required to encrypt the data at rest if
      */
     override fun kmsKey(kmsKey: IKey) {
-      cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -398,7 +398,7 @@ public interface FileSystemProps {
      * Infrequent Access (IA) storage class.
      */
     override fun lifecyclePolicy(lifecyclePolicy: LifecyclePolicy) {
-      cdkBuilder.lifecyclePolicy(lifecyclePolicy.let(LifecyclePolicy::unwrap))
+      cdkBuilder.lifecyclePolicy(lifecyclePolicy.let(LifecyclePolicy.Companion::unwrap))
     }
 
     /**
@@ -416,7 +416,7 @@ public interface FileSystemProps {
      */
     override
         fun outOfInfrequentAccessPolicy(outOfInfrequentAccessPolicy: OutOfInfrequentAccessPolicy) {
-      cdkBuilder.outOfInfrequentAccessPolicy(outOfInfrequentAccessPolicy.let(OutOfInfrequentAccessPolicy::unwrap))
+      cdkBuilder.outOfInfrequentAccessPolicy(outOfInfrequentAccessPolicy.let(OutOfInfrequentAccessPolicy.Companion::unwrap))
     }
 
     /**
@@ -426,7 +426,7 @@ public interface FileSystemProps {
      * Updating this property will replace the file system.
      */
     override fun performanceMode(performanceMode: PerformanceMode) {
-      cdkBuilder.performanceMode(performanceMode.let(PerformanceMode::unwrap))
+      cdkBuilder.performanceMode(performanceMode.let(PerformanceMode.Companion::unwrap))
     }
 
     /**
@@ -435,21 +435,21 @@ public interface FileSystemProps {
      * Must be at least 1MiB/s.
      */
     override fun provisionedThroughputPerSecond(provisionedThroughputPerSecond: Size) {
-      cdkBuilder.provisionedThroughputPerSecond(provisionedThroughputPerSecond.let(Size::unwrap))
+      cdkBuilder.provisionedThroughputPerSecond(provisionedThroughputPerSecond.let(Size.Companion::unwrap))
     }
 
     /**
      * @param removalPolicy The removal policy to apply to the file system.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
      * @param replicationConfiguration Replication configuration for the file system.
      */
     override fun replicationConfiguration(replicationConfiguration: ReplicationConfiguration) {
-      cdkBuilder.replicationConfiguration(replicationConfiguration.let(ReplicationConfiguration::unwrap))
+      cdkBuilder.replicationConfiguration(replicationConfiguration.let(ReplicationConfiguration.Companion::unwrap))
     }
 
     /**
@@ -459,21 +459,21 @@ public interface FileSystemProps {
      */
     override
         fun replicationOverwriteProtection(replicationOverwriteProtection: ReplicationOverwriteProtection) {
-      cdkBuilder.replicationOverwriteProtection(replicationOverwriteProtection.let(ReplicationOverwriteProtection::unwrap))
+      cdkBuilder.replicationOverwriteProtection(replicationOverwriteProtection.let(ReplicationOverwriteProtection.Companion::unwrap))
     }
 
     /**
      * @param securityGroup Security Group to assign to this file system.
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
      * @param throughputMode Enum to mention the throughput mode of the file system.
      */
     override fun throughputMode(throughputMode: ThroughputMode) {
-      cdkBuilder.throughputMode(throughputMode.let(ThroughputMode::unwrap))
+      cdkBuilder.throughputMode(throughputMode.let(ThroughputMode.Companion::unwrap))
     }
 
     /**
@@ -483,21 +483,21 @@ public interface FileSystemProps {
      * events.
      */
     override fun transitionToArchivePolicy(transitionToArchivePolicy: LifecyclePolicy) {
-      cdkBuilder.transitionToArchivePolicy(transitionToArchivePolicy.let(LifecyclePolicy::unwrap))
+      cdkBuilder.transitionToArchivePolicy(transitionToArchivePolicy.let(LifecyclePolicy.Companion::unwrap))
     }
 
     /**
      * @param vpc VPC to launch the file system in. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
      * @param vpcSubnets Which subnets to place the mount target in the VPC.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

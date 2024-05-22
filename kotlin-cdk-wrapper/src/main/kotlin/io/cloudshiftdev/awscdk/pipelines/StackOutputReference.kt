@@ -45,7 +45,7 @@ public open class StackOutputReference(
    * @param stack 
    */
   public open fun isProducedBy(stack: StackDeployment): Boolean =
-      unwrap(this).isProducedBy(stack.let(StackDeployment::unwrap))
+      unwrap(this).isProducedBy(stack.let(StackDeployment.Companion::unwrap))
 
   /**
    * Output name of the producing stack.
@@ -59,7 +59,7 @@ public open class StackOutputReference(
 
   public companion object {
     public fun fromCfnOutput(output: CfnOutput): StackOutputReference =
-        software.amazon.awscdk.pipelines.StackOutputReference.fromCfnOutput(output.let(CfnOutput::unwrap)).let(StackOutputReference::wrap)
+        software.amazon.awscdk.pipelines.StackOutputReference.fromCfnOutput(output.let(CfnOutput.Companion::unwrap)).let(StackOutputReference::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.StackOutputReference):
         StackOutputReference = StackOutputReference(cdkObject)

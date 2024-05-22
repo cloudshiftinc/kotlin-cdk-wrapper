@@ -44,8 +44,8 @@ public open class CfnNetworkAcl(
     id: String,
     props: CfnNetworkAclProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnNetworkAcl(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnNetworkAclProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnNetworkAcl(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnNetworkAclProps.Companion::unwrap))
   )
 
   public constructor(
@@ -66,7 +66,7 @@ public open class CfnNetworkAcl(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -84,7 +84,7 @@ public open class CfnNetworkAcl(
    * The tags for the network ACL.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -148,7 +148,7 @@ public open class CfnNetworkAcl(
      * @param tags The tags for the network ACL. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

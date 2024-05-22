@@ -54,8 +54,8 @@ public open class EcsEc2ContainerDefinition(
     id: String,
     props: EcsEc2ContainerDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.batch.EcsEc2ContainerDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EcsEc2ContainerDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.batch.EcsEc2ContainerDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EcsEc2ContainerDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -71,7 +71,7 @@ public open class EcsEc2ContainerDefinition(
    * @param ulimit 
    */
   public override fun addUlimit(ulimit: Ulimit) {
-    unwrap(this).addUlimit(ulimit.let(Ulimit::unwrap))
+    unwrap(this).addUlimit(ulimit.let(Ulimit.Companion::unwrap))
   }
 
   /**
@@ -89,7 +89,7 @@ public open class EcsEc2ContainerDefinition(
    * @param volume 
    */
   public override fun addVolume(volume: EcsVolume) {
-    unwrap(this).addVolume(volume.let(EcsVolume::unwrap))
+    unwrap(this).addVolume(volume.let(EcsVolume.Companion::unwrap))
   }
 
   /**
@@ -466,7 +466,7 @@ public open class EcsEc2ContainerDefinition(
      * API calls on your behalf. 
      */
     override fun executionRole(executionRole: IRole) {
-      cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
+      cdkBuilder.executionRole(executionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -489,7 +489,7 @@ public open class EcsEc2ContainerDefinition(
      * @param image The image that this container will run. 
      */
     override fun image(image: ContainerImage) {
-      cdkBuilder.image(image.let(ContainerImage::unwrap))
+      cdkBuilder.image(image.let(ContainerImage.Companion::unwrap))
     }
 
     /**
@@ -501,7 +501,7 @@ public open class EcsEc2ContainerDefinition(
      * @param jobRole The role that the container can assume. 
      */
     override fun jobRole(jobRole: IRole) {
-      cdkBuilder.jobRole(jobRole.let(IRole::unwrap))
+      cdkBuilder.jobRole(jobRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -514,7 +514,7 @@ public open class EcsEc2ContainerDefinition(
      * as details for device mappings. 
      */
     override fun linuxParameters(linuxParameters: LinuxParameters) {
-      cdkBuilder.linuxParameters(linuxParameters.let(LinuxParameters::unwrap))
+      cdkBuilder.linuxParameters(linuxParameters.let(LinuxParameters.Companion::unwrap))
     }
 
     /**
@@ -525,7 +525,7 @@ public open class EcsEc2ContainerDefinition(
      * @param logging The loging configuration for this Job. 
      */
     override fun logging(logging: LogDriver) {
-      cdkBuilder.logging(logging.let(LogDriver::unwrap))
+      cdkBuilder.logging(logging.let(LogDriver.Companion::unwrap))
     }
 
     /**
@@ -537,7 +537,7 @@ public open class EcsEc2ContainerDefinition(
      * @param memory The memory hard limit present to the container. 
      */
     override fun memory(memory: Size) {
-      cdkBuilder.memory(memory.let(Size::unwrap))
+      cdkBuilder.memory(memory.let(Size.Companion::unwrap))
     }
 
     /**
@@ -587,7 +587,7 @@ public open class EcsEc2ContainerDefinition(
      * @param ulimits Limits to set for the user this docker container will run as. 
      */
     override fun ulimits(ulimits: List<Ulimit>) {
-      cdkBuilder.ulimits(ulimits.map(Ulimit::unwrap))
+      cdkBuilder.ulimits(ulimits.map(Ulimit.Companion::unwrap))
     }
 
     /**
@@ -620,7 +620,7 @@ public open class EcsEc2ContainerDefinition(
      * @param volumes The volumes to mount to this container. 
      */
     override fun volumes(volumes: List<EcsVolume>) {
-      cdkBuilder.volumes(volumes.map(EcsVolume::unwrap))
+      cdkBuilder.volumes(volumes.map(EcsVolume.Companion::unwrap))
     }
 
     /**

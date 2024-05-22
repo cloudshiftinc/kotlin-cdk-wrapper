@@ -613,7 +613,7 @@ public interface CfnQueueProps {
      * action in the *Amazon SQS API Reference* .
      */
     override fun contentBasedDeduplication(contentBasedDeduplication: IResolvable) {
-      cdkBuilder.contentBasedDeduplication(contentBasedDeduplication.let(IResolvable::unwrap))
+      cdkBuilder.contentBasedDeduplication(contentBasedDeduplication.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -662,7 +662,7 @@ public interface CfnQueueProps {
      * in the *Amazon SQS Developer Guide* .
      */
     override fun fifoQueue(fifoQueue: IResolvable) {
-      cdkBuilder.fifoQueue(fifoQueue.let(IResolvable::unwrap))
+      cdkBuilder.fifoQueue(fifoQueue.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -851,7 +851,7 @@ public interface CfnQueueProps {
      * ). When `SqsManagedSseEnabled` is not defined, `SSE-SQS` encryption is enabled by default.
      */
     override fun sqsManagedSseEnabled(sqsManagedSseEnabled: IResolvable) {
-      cdkBuilder.sqsManagedSseEnabled(sqsManagedSseEnabled.let(IResolvable::unwrap))
+      cdkBuilder.sqsManagedSseEnabled(sqsManagedSseEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -861,7 +861,7 @@ public interface CfnQueueProps {
      * in the *AWS CloudFormation User Guide* .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

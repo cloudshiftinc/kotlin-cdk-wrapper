@@ -18,12 +18,19 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * Integration integration;
- * SpecRestApi api = SpecRestApi.Builder.create(this, "books-api")
- * .apiDefinition(ApiDefinition.fromAsset("path-to-file.json"))
+ * AssetApiDefinition myApiDefinition = ApiDefinition.fromAsset("path-to-file.json");
+ * SpecRestApi specRestApi = SpecRestApi.Builder.create(this, "my-specrest-api")
+ * .deploy(false)
+ * .apiDefinition(myApiDefinition)
  * .build();
- * Resource booksResource = api.root.addResource("books");
- * booksResource.addMethod("GET", integration);
+ * // Use `stageName` to deploy to an existing stage
+ * Deployment deployment = Deployment.Builder.create(this, "my-deployment")
+ * .api(specRestApi)
+ * .stageName("dev")
+ * .retainDeployments(true)
+ * .build();
+ * // Trigger a new deployment on OpenAPI definition updates
+ * deployment.addToLogicalId(myApiDefinition);
  * ```
  */
 public abstract class ApiDefinition(
@@ -36,7 +43,7 @@ public abstract class ApiDefinition(
    * @param scope The binding scope. 
    */
   public open fun bind(scope: Construct): ApiDefinitionConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(ApiDefinitionConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(ApiDefinitionConfig::wrap)
 
   /**
    * Called after the CFN RestApi resource has been created to allow the Api Definition to bind to
@@ -49,7 +56,8 @@ public abstract class ApiDefinition(
    * @param _restApi 
    */
   public open fun bindAfterCreate(scope: Construct, restApi: IRestApi) {
-    unwrap(this).bindAfterCreate(scope.let(Construct::unwrap), restApi.let(IRestApi::unwrap))
+    unwrap(this).bindAfterCreate(scope.let(Construct.Companion::unwrap),
+        restApi.let(IRestApi.Companion::unwrap))
   }
 
   private class Wrapper(
@@ -62,7 +70,7 @@ public abstract class ApiDefinition(
 
     public fun fromAsset(`file`: String, options: AssetOptions): AssetApiDefinition =
         software.amazon.awscdk.services.apigateway.ApiDefinition.fromAsset(`file`,
-        options.let(AssetOptions::unwrap)).let(AssetApiDefinition::wrap)
+        options.let(AssetOptions.Companion::unwrap)).let(AssetApiDefinition::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1fb7424fb7a8091c53e571077a35ba78a28ea3dcadc70091587f610eea2f9998")
@@ -70,7 +78,7 @@ public abstract class ApiDefinition(
         AssetApiDefinition = fromAsset(`file`, AssetOptions(options))
 
     public fun fromBucket(bucket: IBucket, key: String): S3ApiDefinition =
-        software.amazon.awscdk.services.apigateway.ApiDefinition.fromBucket(bucket.let(IBucket::unwrap),
+        software.amazon.awscdk.services.apigateway.ApiDefinition.fromBucket(bucket.let(IBucket.Companion::unwrap),
         key).let(S3ApiDefinition::wrap)
 
     public fun fromBucket(
@@ -78,7 +86,7 @@ public abstract class ApiDefinition(
       key: String,
       objectVersion: String,
     ): S3ApiDefinition =
-        software.amazon.awscdk.services.apigateway.ApiDefinition.fromBucket(bucket.let(IBucket::unwrap),
+        software.amazon.awscdk.services.apigateway.ApiDefinition.fromBucket(bucket.let(IBucket.Companion::unwrap),
         key, objectVersion).let(S3ApiDefinition::wrap)
 
     public fun fromInline(definition: Any): InlineApiDefinition =

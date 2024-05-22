@@ -79,8 +79,8 @@ public open class CfnCluster(
     id: String,
     props: CfnClusterProps,
   ) :
-      this(software.amazon.awscdk.services.memorydb.CfnCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnClusterProps::unwrap))
+      this(software.amazon.awscdk.services.memorydb.CfnCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -150,7 +150,7 @@ public open class CfnCluster(
    * launch.
    */
   public open fun autoMinorVersionUpgrade(`value`: IResolvable) {
-    unwrap(this).setAutoMinorVersionUpgrade(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoMinorVersionUpgrade(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -162,14 +162,14 @@ public open class CfnCluster(
    * The cluster 's configuration endpoint.
    */
   public open fun clusterEndpoint(`value`: IResolvable) {
-    unwrap(this).setClusterEndpoint(`value`.let(IResolvable::unwrap))
+    unwrap(this).setClusterEndpoint(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The cluster 's configuration endpoint.
    */
   public open fun clusterEndpoint(`value`: EndpointProperty) {
-    unwrap(this).setClusterEndpoint(`value`.let(EndpointProperty::unwrap))
+    unwrap(this).setClusterEndpoint(`value`.let(EndpointProperty.Companion::unwrap))
   }
 
   /**
@@ -246,7 +246,7 @@ public open class CfnCluster(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -463,7 +463,7 @@ public open class CfnCluster(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -487,7 +487,7 @@ public open class CfnCluster(
    * A flag to indicate if In-transit encryption is enabled.
    */
   public open fun tlsEnabled(`value`: IResolvable) {
-    unwrap(this).setTlsEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTlsEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -845,7 +845,7 @@ public open class CfnCluster(
      * engine version upgrades after launch. 
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -855,7 +855,7 @@ public open class CfnCluster(
      * @param clusterEndpoint The cluster 's configuration endpoint. 
      */
     override fun clusterEndpoint(clusterEndpoint: IResolvable) {
-      cdkBuilder.clusterEndpoint(clusterEndpoint.let(IResolvable::unwrap))
+      cdkBuilder.clusterEndpoint(clusterEndpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -865,7 +865,7 @@ public open class CfnCluster(
      * @param clusterEndpoint The cluster 's configuration endpoint. 
      */
     override fun clusterEndpoint(clusterEndpoint: EndpointProperty) {
-      cdkBuilder.clusterEndpoint(clusterEndpoint.let(EndpointProperty::unwrap))
+      cdkBuilder.clusterEndpoint(clusterEndpoint.let(EndpointProperty.Companion::unwrap))
     }
 
     /**
@@ -1149,7 +1149,7 @@ public open class CfnCluster(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1181,7 +1181,7 @@ public open class CfnCluster(
      * @param tlsEnabled A flag to indicate if In-transit encryption is enabled. 
      */
     override fun tlsEnabled(tlsEnabled: IResolvable) {
-      cdkBuilder.tlsEnabled(tlsEnabled.let(IResolvable::unwrap))
+      cdkBuilder.tlsEnabled(tlsEnabled.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.memorydb.CfnCluster = cdkBuilder.build()

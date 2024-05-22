@@ -68,7 +68,7 @@ public interface HeaderMatchConfig {
      * @param headerMatch Route CFN configuration for the route header match. 
      */
     override fun headerMatch(headerMatch: CfnRoute.HttpRouteHeaderProperty) {
-      cdkBuilder.headerMatch(headerMatch.let(CfnRoute.HttpRouteHeaderProperty::unwrap))
+      cdkBuilder.headerMatch(headerMatch.let(CfnRoute.HttpRouteHeaderProperty.Companion::unwrap))
     }
 
     /**

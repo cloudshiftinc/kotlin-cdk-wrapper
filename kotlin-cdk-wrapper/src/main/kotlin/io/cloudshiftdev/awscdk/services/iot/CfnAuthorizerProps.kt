@@ -244,7 +244,7 @@ public interface CfnAuthorizerProps {
      * connections.
      */
     override fun enableCachingForHttp(enableCachingForHttp: IResolvable) {
-      cdkBuilder.enableCachingForHttp(enableCachingForHttp.let(IResolvable::unwrap))
+      cdkBuilder.enableCachingForHttp(enableCachingForHttp.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -260,7 +260,7 @@ public interface CfnAuthorizerProps {
      * authorization request.
      */
     override fun signingDisabled(signingDisabled: IResolvable) {
-      cdkBuilder.signingDisabled(signingDisabled.let(IResolvable::unwrap))
+      cdkBuilder.signingDisabled(signingDisabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -282,7 +282,7 @@ public interface CfnAuthorizerProps {
      * For the cli-input-json file use format: "tags": "key1=value1&amp;key2=value2..."
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -309,7 +309,7 @@ public interface CfnAuthorizerProps {
      * by your custom authentication service.
      */
     override fun tokenSigningPublicKeys(tokenSigningPublicKeys: IResolvable) {
-      cdkBuilder.tokenSigningPublicKeys(tokenSigningPublicKeys.let(IResolvable::unwrap))
+      cdkBuilder.tokenSigningPublicKeys(tokenSigningPublicKeys.let(IResolvable.Companion::unwrap))
     }
 
     /**

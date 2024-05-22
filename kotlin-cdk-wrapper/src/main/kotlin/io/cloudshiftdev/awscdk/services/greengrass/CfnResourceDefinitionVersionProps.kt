@@ -137,7 +137,7 @@ public interface CfnResourceDefinitionVersionProps {
      * @param resources The resources in this version. 
      */
     override fun resources(resources: IResolvable) {
-      cdkBuilder.resources(resources.let(IResolvable::unwrap))
+      cdkBuilder.resources(resources.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -374,7 +374,7 @@ public interface StackProps {
      * environment's AWS partition, and other such enhancements.
      */
     override fun env(env: Environment) {
-      cdkBuilder.env(env.let(Environment::unwrap))
+      cdkBuilder.env(env.let(Environment.Companion::unwrap))
     }
 
     /**
@@ -407,7 +407,7 @@ public interface StackProps {
      * Users created within this Stage.
      */
     override fun permissionsBoundary(permissionsBoundary: PermissionsBoundary) {
-      cdkBuilder.permissionsBoundary(permissionsBoundary.let(PermissionsBoundary::unwrap))
+      cdkBuilder.permissionsBoundary(permissionsBoundary.let(PermissionsBoundary.Companion::unwrap))
     }
 
     /**
@@ -441,7 +441,7 @@ public interface StackProps {
      * other synthesizer is specified.
      */
     override fun synthesizer(synthesizer: IStackSynthesizer) {
-      cdkBuilder.synthesizer(synthesizer.let(IStackSynthesizer::unwrap))
+      cdkBuilder.synthesizer(synthesizer.let(IStackSynthesizer.Companion::unwrap))
     }
 
     /**

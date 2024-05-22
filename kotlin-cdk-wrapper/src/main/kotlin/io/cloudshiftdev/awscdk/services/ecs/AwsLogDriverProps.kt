@@ -185,7 +185,7 @@ public interface AwsLogDriverProps {
      * @param logGroup The log group to log to.
      */
     override fun logGroup(logGroup: ILogGroup) {
-      cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
+      cdkBuilder.logGroup(logGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -193,7 +193,7 @@ public interface AwsLogDriverProps {
      * group is automatically created by this construct.
      */
     override fun logRetention(logRetention: RetentionDays) {
-      cdkBuilder.logRetention(logRetention.let(RetentionDays::unwrap))
+      cdkBuilder.logRetention(logRetention.let(RetentionDays.Companion::unwrap))
     }
 
     /**
@@ -202,14 +202,14 @@ public interface AwsLogDriverProps {
      * is not valid with AwsLogDriverMode.BLOCKING.
      */
     override fun maxBufferSize(maxBufferSize: Size) {
-      cdkBuilder.maxBufferSize(maxBufferSize.let(Size::unwrap))
+      cdkBuilder.maxBufferSize(maxBufferSize.let(Size.Companion::unwrap))
     }
 
     /**
      * @param mode The delivery mode of log messages from the container to awslogs.
      */
     override fun mode(mode: AwsLogDriverMode) {
-      cdkBuilder.mode(mode.let(AwsLogDriverMode::unwrap))
+      cdkBuilder.mode(mode.let(AwsLogDriverMode.Companion::unwrap))
     }
 
     /**

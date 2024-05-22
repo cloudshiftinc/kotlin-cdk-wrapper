@@ -104,7 +104,7 @@ public interface CfnIPSetProps {
      * the CloudFront access logs.
      */
     override fun ipSetDescriptors(ipSetDescriptors: IResolvable) {
-      cdkBuilder.ipSetDescriptors(ipSetDescriptors.let(IResolvable::unwrap))
+      cdkBuilder.ipSetDescriptors(ipSetDescriptors.let(IResolvable.Companion::unwrap))
     }
 
     /**

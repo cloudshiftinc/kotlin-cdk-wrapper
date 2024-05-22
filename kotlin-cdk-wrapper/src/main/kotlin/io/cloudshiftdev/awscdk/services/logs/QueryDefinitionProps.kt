@@ -90,7 +90,7 @@ public interface QueryDefinitionProps {
      * @param logGroups Specify certain log groups for the query definition.
      */
     override fun logGroups(logGroups: List<ILogGroup>) {
-      cdkBuilder.logGroups(logGroups.map(ILogGroup::unwrap))
+      cdkBuilder.logGroups(logGroups.map(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -109,7 +109,7 @@ public interface QueryDefinitionProps {
      * @param queryString The query string to use for this query definition. 
      */
     override fun queryString(queryString: QueryString) {
-      cdkBuilder.queryString(queryString.let(QueryString::unwrap))
+      cdkBuilder.queryString(queryString.let(QueryString.Companion::unwrap))
     }
 
     /**

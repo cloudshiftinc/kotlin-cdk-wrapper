@@ -65,8 +65,8 @@ public open class CfnHoursOfOperation(
     id: String,
     props: CfnHoursOfOperationProps,
   ) :
-      this(software.amazon.awscdk.services.connect.CfnHoursOfOperation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnHoursOfOperationProps::unwrap))
+      this(software.amazon.awscdk.services.connect.CfnHoursOfOperation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnHoursOfOperationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -90,7 +90,7 @@ public open class CfnHoursOfOperation(
    * Configuration information for the hours of operation.
    */
   public open fun config(`value`: IResolvable) {
-    unwrap(this).setConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -123,7 +123,7 @@ public open class CfnHoursOfOperation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -165,7 +165,7 @@ public open class CfnHoursOfOperation(
    * The tags used to organize, track, or control access for this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -281,7 +281,7 @@ public open class CfnHoursOfOperation(
      * @param config Configuration information for the hours of operation. 
      */
     override fun config(config: IResolvable) {
-      cdkBuilder.config(config.let(IResolvable::unwrap))
+      cdkBuilder.config(config.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -341,7 +341,7 @@ public open class CfnHoursOfOperation(
      * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -498,14 +498,14 @@ public open class CfnHoursOfOperation(
        * @param endTime The end time that your contact center closes. 
        */
       override fun endTime(endTime: IResolvable) {
-        cdkBuilder.endTime(endTime.let(IResolvable::unwrap))
+        cdkBuilder.endTime(endTime.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param endTime The end time that your contact center closes. 
        */
       override fun endTime(endTime: HoursOfOperationTimeSliceProperty) {
-        cdkBuilder.endTime(endTime.let(HoursOfOperationTimeSliceProperty::unwrap))
+        cdkBuilder.endTime(endTime.let(HoursOfOperationTimeSliceProperty.Companion::unwrap))
       }
 
       /**
@@ -520,14 +520,14 @@ public open class CfnHoursOfOperation(
        * @param startTime The start time that your contact center opens. 
        */
       override fun startTime(startTime: IResolvable) {
-        cdkBuilder.startTime(startTime.let(IResolvable::unwrap))
+        cdkBuilder.startTime(startTime.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param startTime The start time that your contact center opens. 
        */
       override fun startTime(startTime: HoursOfOperationTimeSliceProperty) {
-        cdkBuilder.startTime(startTime.let(HoursOfOperationTimeSliceProperty::unwrap))
+        cdkBuilder.startTime(startTime.let(HoursOfOperationTimeSliceProperty.Companion::unwrap))
       }
 
       /**

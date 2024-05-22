@@ -284,7 +284,7 @@ public interface CfnGroupProps {
      * You can include either a `Configuration` or a `ResourceQuery` , but not both.
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -349,7 +349,7 @@ public interface CfnGroupProps {
      * of `Resources` , but not both.
      */
     override fun resourceQuery(resourceQuery: IResolvable) {
-      cdkBuilder.resourceQuery(resourceQuery.let(IResolvable::unwrap))
+      cdkBuilder.resourceQuery(resourceQuery.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -366,7 +366,7 @@ public interface CfnGroupProps {
      * of `Resources` , but not both.
      */
     override fun resourceQuery(resourceQuery: CfnGroup.ResourceQueryProperty) {
-      cdkBuilder.resourceQuery(resourceQuery.let(CfnGroup.ResourceQueryProperty::unwrap))
+      cdkBuilder.resourceQuery(resourceQuery.let(CfnGroup.ResourceQueryProperty.Companion::unwrap))
     }
 
     /**
@@ -413,7 +413,7 @@ public interface CfnGroupProps {
      * @param tags The tag key and value pairs that are attached to the resource group.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

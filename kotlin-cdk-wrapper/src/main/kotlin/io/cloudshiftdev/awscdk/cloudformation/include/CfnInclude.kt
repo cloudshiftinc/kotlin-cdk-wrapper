@@ -44,8 +44,8 @@ public open class CfnInclude(
     id: String,
     props: CfnIncludeProps,
   ) :
-      this(software.amazon.awscdk.cloudformation.include.CfnInclude(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnIncludeProps::unwrap))
+      this(software.amazon.awscdk.cloudformation.include.CfnInclude(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnIncludeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -99,7 +99,7 @@ public open class CfnInclude(
    */
   public open fun loadNestedStack(logicalId: String, nestedStackProps: CfnIncludeProps):
       IncludedNestedStack = unwrap(this).loadNestedStack(logicalId,
-      nestedStackProps.let(CfnIncludeProps::unwrap)).let(IncludedNestedStack::wrap)
+      nestedStackProps.let(CfnIncludeProps.Companion::unwrap)).let(IncludedNestedStack::wrap)
 
   /**
    * Includes a template for a child stack inside of this parent template.

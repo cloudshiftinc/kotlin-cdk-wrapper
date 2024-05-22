@@ -102,7 +102,7 @@ public interface UrlSubscriptionProps : SubscriptionProps {
      * If not passed no dead letter queue is enabled.
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -126,7 +126,7 @@ public interface UrlSubscriptionProps : SubscriptionProps {
      * @param protocol The subscription's protocol.
      */
     override fun protocol(protocol: SubscriptionProtocol) {
-      cdkBuilder.protocol(protocol.let(SubscriptionProtocol::unwrap))
+      cdkBuilder.protocol(protocol.let(SubscriptionProtocol.Companion::unwrap))
     }
 
     /**

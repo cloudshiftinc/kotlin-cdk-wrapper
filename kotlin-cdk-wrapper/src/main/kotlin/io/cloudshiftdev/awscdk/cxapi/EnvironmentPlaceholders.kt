@@ -41,7 +41,7 @@ public open class EnvironmentPlaceholders(
 
     public fun replace(`object`: Any, values: EnvironmentPlaceholderValues): Any =
         software.amazon.awscdk.cxapi.EnvironmentPlaceholders.replace(`object`,
-        values.let(EnvironmentPlaceholderValues::unwrap))
+        values.let(EnvironmentPlaceholderValues.Companion::unwrap))
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("785e3c820271672ee7ab806f3653d017d158b5caa7cafba34113e206fe0f8e00")
@@ -50,7 +50,7 @@ public open class EnvironmentPlaceholders(
 
     public fun replaceAsync(`object`: Any, provider: IEnvironmentPlaceholderProvider): Any =
         software.amazon.awscdk.cxapi.EnvironmentPlaceholders.replaceAsync(`object`,
-        provider.let(IEnvironmentPlaceholderProvider::unwrap))
+        provider.let(IEnvironmentPlaceholderProvider.Companion::unwrap))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.cxapi.EnvironmentPlaceholders):
         EnvironmentPlaceholders = EnvironmentPlaceholders(cdkObject)

@@ -24,7 +24,7 @@ public open class EcrImage(
   cdkObject: software.amazon.awscdk.services.ecs.EcrImage,
 ) : ContainerImage(cdkObject) {
   public constructor(repository: IRepository, tagOrDigest: String) :
-      this(software.amazon.awscdk.services.ecs.EcrImage(repository.let(IRepository::unwrap),
+      this(software.amazon.awscdk.services.ecs.EcrImage(repository.let(IRepository.Companion::unwrap),
       tagOrDigest)
   )
 
@@ -35,8 +35,8 @@ public open class EcrImage(
    * @param containerDefinition 
    */
   public override fun bind(scope: Construct, containerDefinition: ContainerDefinition):
-      ContainerImageConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      containerDefinition.let(ContainerDefinition::unwrap)).let(ContainerImageConfig::wrap)
+      ContainerImageConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      containerDefinition.let(ContainerDefinition.Companion::unwrap)).let(ContainerImageConfig::wrap)
 
   /**
    * The image name. Images in Amazon ECR repositories can be specified by either using the full

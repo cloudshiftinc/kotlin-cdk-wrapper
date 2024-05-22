@@ -120,7 +120,7 @@ public interface CfnResourcePolicyProps {
      * use a wildcard for the principal.
      */
     override fun blockPublicPolicy(blockPublicPolicy: IResolvable) {
-      cdkBuilder.blockPublicPolicy(blockPublicPolicy.let(IResolvable::unwrap))
+      cdkBuilder.blockPublicPolicy(blockPublicPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**

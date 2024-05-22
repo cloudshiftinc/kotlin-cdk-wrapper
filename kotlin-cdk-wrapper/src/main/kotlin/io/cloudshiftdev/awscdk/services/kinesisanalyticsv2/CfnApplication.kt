@@ -198,8 +198,8 @@ public open class CfnApplication(
     id: String,
     props: CfnApplicationProps,
   ) :
-      this(software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApplicationProps::unwrap))
+      this(software.amazon.awscdk.services.kinesisanalyticsv2.CfnApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApplicationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -218,14 +218,14 @@ public open class CfnApplication(
    * Use this parameter to configure the application.
    */
   public open fun applicationConfiguration(`value`: IResolvable) {
-    unwrap(this).setApplicationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setApplicationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Use this parameter to configure the application.
    */
   public open fun applicationConfiguration(`value`: ApplicationConfigurationProperty) {
-    unwrap(this).setApplicationConfiguration(`value`.let(ApplicationConfigurationProperty::unwrap))
+    unwrap(this).setApplicationConfiguration(`value`.let(ApplicationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -259,7 +259,7 @@ public open class CfnApplication(
    * Describes the maintenance configuration for the application.
    */
   public open fun applicationMaintenanceConfiguration(`value`: IResolvable) {
-    unwrap(this).setApplicationMaintenanceConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setApplicationMaintenanceConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -267,7 +267,7 @@ public open class CfnApplication(
    */
   public open
       fun applicationMaintenanceConfiguration(`value`: ApplicationMaintenanceConfigurationProperty) {
-    unwrap(this).setApplicationMaintenanceConfiguration(`value`.let(ApplicationMaintenanceConfigurationProperty::unwrap))
+    unwrap(this).setApplicationMaintenanceConfiguration(`value`.let(ApplicationMaintenanceConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -310,7 +310,7 @@ public open class CfnApplication(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -322,14 +322,14 @@ public open class CfnApplication(
    * Describes the starting parameters for an Managed Service for Apache Flink application.
    */
   public open fun runConfiguration(`value`: IResolvable) {
-    unwrap(this).setRunConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRunConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Describes the starting parameters for an Managed Service for Apache Flink application.
    */
   public open fun runConfiguration(`value`: RunConfigurationProperty) {
-    unwrap(this).setRunConfiguration(`value`.let(RunConfigurationProperty::unwrap))
+    unwrap(this).setRunConfiguration(`value`.let(RunConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -379,7 +379,7 @@ public open class CfnApplication(
    * A list of one or more tags to assign to the application.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -565,7 +565,7 @@ public open class CfnApplication(
      * @param applicationConfiguration Use this parameter to configure the application. 
      */
     override fun applicationConfiguration(applicationConfiguration: IResolvable) {
-      cdkBuilder.applicationConfiguration(applicationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.applicationConfiguration(applicationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -576,7 +576,7 @@ public open class CfnApplication(
      */
     override
         fun applicationConfiguration(applicationConfiguration: ApplicationConfigurationProperty) {
-      cdkBuilder.applicationConfiguration(applicationConfiguration.let(ApplicationConfigurationProperty::unwrap))
+      cdkBuilder.applicationConfiguration(applicationConfiguration.let(ApplicationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -612,7 +612,7 @@ public open class CfnApplication(
      */
     override
         fun applicationMaintenanceConfiguration(applicationMaintenanceConfiguration: IResolvable) {
-      cdkBuilder.applicationMaintenanceConfiguration(applicationMaintenanceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.applicationMaintenanceConfiguration(applicationMaintenanceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -624,7 +624,7 @@ public open class CfnApplication(
      */
     override
         fun applicationMaintenanceConfiguration(applicationMaintenanceConfiguration: ApplicationMaintenanceConfigurationProperty) {
-      cdkBuilder.applicationMaintenanceConfiguration(applicationMaintenanceConfiguration.let(ApplicationMaintenanceConfigurationProperty::unwrap))
+      cdkBuilder.applicationMaintenanceConfiguration(applicationMaintenanceConfiguration.let(ApplicationMaintenanceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -672,7 +672,7 @@ public open class CfnApplication(
      * Flink application. 
      */
     override fun runConfiguration(runConfiguration: IResolvable) {
-      cdkBuilder.runConfiguration(runConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.runConfiguration(runConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -683,7 +683,7 @@ public open class CfnApplication(
      * Flink application. 
      */
     override fun runConfiguration(runConfiguration: RunConfigurationProperty) {
-      cdkBuilder.runConfiguration(runConfiguration.let(RunConfigurationProperty::unwrap))
+      cdkBuilder.runConfiguration(runConfiguration.let(RunConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -730,7 +730,7 @@ public open class CfnApplication(
      * @param tags A list of one or more tags to assign to the application. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -850,14 +850,14 @@ public open class CfnApplication(
        * @param codeContent The location and type of the application code. 
        */
       override fun codeContent(codeContent: IResolvable) {
-        cdkBuilder.codeContent(codeContent.let(IResolvable::unwrap))
+        cdkBuilder.codeContent(codeContent.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param codeContent The location and type of the application code. 
        */
       override fun codeContent(codeContent: CodeContentProperty) {
-        cdkBuilder.codeContent(codeContent.let(CodeContentProperty::unwrap))
+        cdkBuilder.codeContent(codeContent.let(CodeContentProperty.Companion::unwrap))
       }
 
       /**
@@ -1276,7 +1276,7 @@ public open class CfnApplication(
        * Service for Apache Flink application.
        */
       override fun applicationCodeConfiguration(applicationCodeConfiguration: IResolvable) {
-        cdkBuilder.applicationCodeConfiguration(applicationCodeConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.applicationCodeConfiguration(applicationCodeConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1285,7 +1285,7 @@ public open class CfnApplication(
        */
       override
           fun applicationCodeConfiguration(applicationCodeConfiguration: ApplicationCodeConfigurationProperty) {
-        cdkBuilder.applicationCodeConfiguration(applicationCodeConfiguration.let(ApplicationCodeConfigurationProperty::unwrap))
+        cdkBuilder.applicationCodeConfiguration(applicationCodeConfiguration.let(ApplicationCodeConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1304,7 +1304,7 @@ public open class CfnApplication(
        * Managed Service for Apache Flink application.
        */
       override fun applicationSnapshotConfiguration(applicationSnapshotConfiguration: IResolvable) {
-        cdkBuilder.applicationSnapshotConfiguration(applicationSnapshotConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.applicationSnapshotConfiguration(applicationSnapshotConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1313,7 +1313,7 @@ public open class CfnApplication(
        */
       override
           fun applicationSnapshotConfiguration(applicationSnapshotConfiguration: ApplicationSnapshotConfigurationProperty) {
-        cdkBuilder.applicationSnapshotConfiguration(applicationSnapshotConfiguration.let(ApplicationSnapshotConfigurationProperty::unwrap))
+        cdkBuilder.applicationSnapshotConfiguration(applicationSnapshotConfiguration.let(ApplicationSnapshotConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1332,7 +1332,7 @@ public open class CfnApplication(
        * Apache Flink application.
        */
       override fun environmentProperties(environmentProperties: IResolvable) {
-        cdkBuilder.environmentProperties(environmentProperties.let(IResolvable::unwrap))
+        cdkBuilder.environmentProperties(environmentProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1340,7 +1340,7 @@ public open class CfnApplication(
        * Apache Flink application.
        */
       override fun environmentProperties(environmentProperties: EnvironmentPropertiesProperty) {
-        cdkBuilder.environmentProperties(environmentProperties.let(EnvironmentPropertiesProperty::unwrap))
+        cdkBuilder.environmentProperties(environmentProperties.let(EnvironmentPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -1358,7 +1358,7 @@ public open class CfnApplication(
        * Service for Apache Flink application.
        */
       override fun flinkApplicationConfiguration(flinkApplicationConfiguration: IResolvable) {
-        cdkBuilder.flinkApplicationConfiguration(flinkApplicationConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.flinkApplicationConfiguration(flinkApplicationConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1367,7 +1367,7 @@ public open class CfnApplication(
        */
       override
           fun flinkApplicationConfiguration(flinkApplicationConfiguration: FlinkApplicationConfigurationProperty) {
-        cdkBuilder.flinkApplicationConfiguration(flinkApplicationConfiguration.let(FlinkApplicationConfigurationProperty::unwrap))
+        cdkBuilder.flinkApplicationConfiguration(flinkApplicationConfiguration.let(FlinkApplicationConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1386,7 +1386,7 @@ public open class CfnApplication(
        * Kinesis Data Analytics application.
        */
       override fun sqlApplicationConfiguration(sqlApplicationConfiguration: IResolvable) {
-        cdkBuilder.sqlApplicationConfiguration(sqlApplicationConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.sqlApplicationConfiguration(sqlApplicationConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1395,7 +1395,7 @@ public open class CfnApplication(
        */
       override
           fun sqlApplicationConfiguration(sqlApplicationConfiguration: SqlApplicationConfigurationProperty) {
-        cdkBuilder.sqlApplicationConfiguration(sqlApplicationConfiguration.let(SqlApplicationConfigurationProperty::unwrap))
+        cdkBuilder.sqlApplicationConfiguration(sqlApplicationConfiguration.let(SqlApplicationConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1414,7 +1414,7 @@ public open class CfnApplication(
        * application.
        */
       override fun vpcConfigurations(vpcConfigurations: IResolvable) {
-        cdkBuilder.vpcConfigurations(vpcConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.vpcConfigurations(vpcConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1437,7 +1437,7 @@ public open class CfnApplication(
        * Analytics Studio notebook.
        */
       override fun zeppelinApplicationConfiguration(zeppelinApplicationConfiguration: IResolvable) {
-        cdkBuilder.zeppelinApplicationConfiguration(zeppelinApplicationConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.zeppelinApplicationConfiguration(zeppelinApplicationConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1446,7 +1446,7 @@ public open class CfnApplication(
        */
       override
           fun zeppelinApplicationConfiguration(zeppelinApplicationConfiguration: ZeppelinApplicationConfigurationProperty) {
-        cdkBuilder.zeppelinApplicationConfiguration(zeppelinApplicationConfiguration.let(ZeppelinApplicationConfigurationProperty::unwrap))
+        cdkBuilder.zeppelinApplicationConfiguration(zeppelinApplicationConfiguration.let(ZeppelinApplicationConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1818,7 +1818,7 @@ public open class CfnApplication(
        * Apache Flink application. 
        */
       override fun snapshotsEnabled(snapshotsEnabled: IResolvable) {
-        cdkBuilder.snapshotsEnabled(snapshotsEnabled.let(IResolvable::unwrap))
+        cdkBuilder.snapshotsEnabled(snapshotsEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2066,7 +2066,7 @@ public open class CfnApplication(
        * in a Kinesis Data Analytics Studio notebook.
        */
       override fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: IResolvable) {
-        cdkBuilder.glueDataCatalogConfiguration(glueDataCatalogConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.glueDataCatalogConfiguration(glueDataCatalogConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2077,7 +2077,7 @@ public open class CfnApplication(
        */
       override
           fun glueDataCatalogConfiguration(glueDataCatalogConfiguration: GlueDataCatalogConfigurationProperty) {
-        cdkBuilder.glueDataCatalogConfiguration(glueDataCatalogConfiguration.let(GlueDataCatalogConfigurationProperty::unwrap))
+        cdkBuilder.glueDataCatalogConfiguration(glueDataCatalogConfiguration.let(GlueDataCatalogConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2336,7 +2336,7 @@ public open class CfnApplication(
        * API or in application code.
        */
       override fun checkpointingEnabled(checkpointingEnabled: IResolvable) {
-        cdkBuilder.checkpointingEnabled(checkpointingEnabled.let(IResolvable::unwrap))
+        cdkBuilder.checkpointingEnabled(checkpointingEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2566,7 +2566,7 @@ public open class CfnApplication(
        * application code.
        */
       override fun s3ContentLocation(s3ContentLocation: IResolvable) {
-        cdkBuilder.s3ContentLocation(s3ContentLocation.let(IResolvable::unwrap))
+        cdkBuilder.s3ContentLocation(s3ContentLocation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2574,7 +2574,7 @@ public open class CfnApplication(
        * application code.
        */
       override fun s3ContentLocation(s3ContentLocation: S3ContentLocationProperty) {
-        cdkBuilder.s3ContentLocation(s3ContentLocation.let(S3ContentLocationProperty::unwrap))
+        cdkBuilder.s3ContentLocation(s3ContentLocation.let(S3ContentLocationProperty.Companion::unwrap))
       }
 
       /**
@@ -2770,14 +2770,14 @@ public open class CfnApplication(
        * @param mavenReference The parameters required to fully specify a Maven reference.
        */
       override fun mavenReference(mavenReference: IResolvable) {
-        cdkBuilder.mavenReference(mavenReference.let(IResolvable::unwrap))
+        cdkBuilder.mavenReference(mavenReference.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param mavenReference The parameters required to fully specify a Maven reference.
        */
       override fun mavenReference(mavenReference: MavenReferenceProperty) {
-        cdkBuilder.mavenReference(mavenReference.let(MavenReferenceProperty::unwrap))
+        cdkBuilder.mavenReference(mavenReference.let(MavenReferenceProperty.Companion::unwrap))
       }
 
       /**
@@ -2792,14 +2792,14 @@ public open class CfnApplication(
        * @param s3ContentLocation The location of the custom artifacts.
        */
       override fun s3ContentLocation(s3ContentLocation: IResolvable) {
-        cdkBuilder.s3ContentLocation(s3ContentLocation.let(IResolvable::unwrap))
+        cdkBuilder.s3ContentLocation(s3ContentLocation.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3ContentLocation The location of the custom artifacts.
        */
       override fun s3ContentLocation(s3ContentLocation: S3ContentLocationProperty) {
-        cdkBuilder.s3ContentLocation(s3ContentLocation.let(S3ContentLocationProperty::unwrap))
+        cdkBuilder.s3ContentLocation(s3ContentLocation.let(S3ContentLocationProperty.Companion::unwrap))
       }
 
       /**
@@ -2941,7 +2941,7 @@ public open class CfnApplication(
        * object that contains the data. 
        */
       override fun s3ContentLocation(s3ContentLocation: IResolvable) {
-        cdkBuilder.s3ContentLocation(s3ContentLocation.let(IResolvable::unwrap))
+        cdkBuilder.s3ContentLocation(s3ContentLocation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2951,7 +2951,7 @@ public open class CfnApplication(
        * object that contains the data. 
        */
       override fun s3ContentLocation(s3ContentLocation: S3ContentBaseLocationProperty) {
-        cdkBuilder.s3ContentLocation(s3ContentLocation.let(S3ContentBaseLocationProperty::unwrap))
+        cdkBuilder.s3ContentLocation(s3ContentLocation.let(S3ContentBaseLocationProperty.Companion::unwrap))
       }
 
       /**
@@ -3063,7 +3063,7 @@ public open class CfnApplication(
        * @param propertyGroups Describes the execution property groups.
        */
       override fun propertyGroups(propertyGroups: IResolvable) {
-        cdkBuilder.propertyGroups(propertyGroups.let(IResolvable::unwrap))
+        cdkBuilder.propertyGroups(propertyGroups.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3280,7 +3280,7 @@ public open class CfnApplication(
        * .
        */
       override fun checkpointConfiguration(checkpointConfiguration: IResolvable) {
-        cdkBuilder.checkpointConfiguration(checkpointConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.checkpointConfiguration(checkpointConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3294,7 +3294,7 @@ public open class CfnApplication(
        */
       override
           fun checkpointConfiguration(checkpointConfiguration: CheckpointConfigurationProperty) {
-        cdkBuilder.checkpointConfiguration(checkpointConfiguration.let(CheckpointConfigurationProperty::unwrap))
+        cdkBuilder.checkpointConfiguration(checkpointConfiguration.let(CheckpointConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3317,7 +3317,7 @@ public open class CfnApplication(
        * logging for an application.
        */
       override fun monitoringConfiguration(monitoringConfiguration: IResolvable) {
-        cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3326,7 +3326,7 @@ public open class CfnApplication(
        */
       override
           fun monitoringConfiguration(monitoringConfiguration: MonitoringConfigurationProperty) {
-        cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(MonitoringConfigurationProperty::unwrap))
+        cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(MonitoringConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3344,7 +3344,7 @@ public open class CfnApplication(
        * multiple tasks simultaneously.
        */
       override fun parallelismConfiguration(parallelismConfiguration: IResolvable) {
-        cdkBuilder.parallelismConfiguration(parallelismConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.parallelismConfiguration(parallelismConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3353,7 +3353,7 @@ public open class CfnApplication(
        */
       override
           fun parallelismConfiguration(parallelismConfiguration: ParallelismConfigurationProperty) {
-        cdkBuilder.parallelismConfiguration(parallelismConfiguration.let(ParallelismConfigurationProperty::unwrap))
+        cdkBuilder.parallelismConfiguration(parallelismConfiguration.let(ParallelismConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3548,7 +3548,7 @@ public open class CfnApplication(
        * `true` .
        */
       override fun allowNonRestoredState(allowNonRestoredState: IResolvable) {
-        cdkBuilder.allowNonRestoredState(allowNonRestoredState.let(IResolvable::unwrap))
+        cdkBuilder.allowNonRestoredState(allowNonRestoredState.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -3958,7 +3958,7 @@ public open class CfnApplication(
        * application code.
        */
       override fun inputLambdaProcessor(inputLambdaProcessor: IResolvable) {
-        cdkBuilder.inputLambdaProcessor(inputLambdaProcessor.let(IResolvable::unwrap))
+        cdkBuilder.inputLambdaProcessor(inputLambdaProcessor.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3968,7 +3968,7 @@ public open class CfnApplication(
        * application code.
        */
       override fun inputLambdaProcessor(inputLambdaProcessor: InputLambdaProcessorProperty) {
-        cdkBuilder.inputLambdaProcessor(inputLambdaProcessor.let(InputLambdaProcessorProperty::unwrap))
+        cdkBuilder.inputLambdaProcessor(inputLambdaProcessor.let(InputLambdaProcessorProperty.Companion::unwrap))
       }
 
       /**
@@ -4280,14 +4280,14 @@ public open class CfnApplication(
        * @param inputParallelism Describes the number of in-application streams to create.
        */
       override fun inputParallelism(inputParallelism: IResolvable) {
-        cdkBuilder.inputParallelism(inputParallelism.let(IResolvable::unwrap))
+        cdkBuilder.inputParallelism(inputParallelism.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param inputParallelism Describes the number of in-application streams to create.
        */
       override fun inputParallelism(inputParallelism: InputParallelismProperty) {
-        cdkBuilder.inputParallelism(inputParallelism.let(InputParallelismProperty::unwrap))
+        cdkBuilder.inputParallelism(inputParallelism.let(InputParallelismProperty.Companion::unwrap))
       }
 
       /**
@@ -4308,7 +4308,7 @@ public open class CfnApplication(
        * .
        */
       override fun inputProcessingConfiguration(inputProcessingConfiguration: IResolvable) {
-        cdkBuilder.inputProcessingConfiguration(inputProcessingConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.inputProcessingConfiguration(inputProcessingConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4322,7 +4322,7 @@ public open class CfnApplication(
        */
       override
           fun inputProcessingConfiguration(inputProcessingConfiguration: InputProcessingConfigurationProperty) {
-        cdkBuilder.inputProcessingConfiguration(inputProcessingConfiguration.let(InputProcessingConfigurationProperty::unwrap))
+        cdkBuilder.inputProcessingConfiguration(inputProcessingConfiguration.let(InputProcessingConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -4348,7 +4348,7 @@ public open class CfnApplication(
        * Also used to describe the format of the reference data source.
        */
       override fun inputSchema(inputSchema: IResolvable) {
-        cdkBuilder.inputSchema(inputSchema.let(IResolvable::unwrap))
+        cdkBuilder.inputSchema(inputSchema.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4358,7 +4358,7 @@ public open class CfnApplication(
        * Also used to describe the format of the reference data source.
        */
       override fun inputSchema(inputSchema: InputSchemaProperty) {
-        cdkBuilder.inputSchema(inputSchema.let(InputSchemaProperty::unwrap))
+        cdkBuilder.inputSchema(inputSchema.let(InputSchemaProperty.Companion::unwrap))
       }
 
       /**
@@ -4377,7 +4377,7 @@ public open class CfnApplication(
        * delivery stream, identifies the delivery stream's ARN.
        */
       override fun kinesisFirehoseInput(kinesisFirehoseInput: IResolvable) {
-        cdkBuilder.kinesisFirehoseInput(kinesisFirehoseInput.let(IResolvable::unwrap))
+        cdkBuilder.kinesisFirehoseInput(kinesisFirehoseInput.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4385,7 +4385,7 @@ public open class CfnApplication(
        * delivery stream, identifies the delivery stream's ARN.
        */
       override fun kinesisFirehoseInput(kinesisFirehoseInput: KinesisFirehoseInputProperty) {
-        cdkBuilder.kinesisFirehoseInput(kinesisFirehoseInput.let(KinesisFirehoseInputProperty::unwrap))
+        cdkBuilder.kinesisFirehoseInput(kinesisFirehoseInput.let(KinesisFirehoseInputProperty.Companion::unwrap))
       }
 
       /**
@@ -4403,7 +4403,7 @@ public open class CfnApplication(
        * identifies the stream's Amazon Resource Name (ARN).
        */
       override fun kinesisStreamsInput(kinesisStreamsInput: IResolvable) {
-        cdkBuilder.kinesisStreamsInput(kinesisStreamsInput.let(IResolvable::unwrap))
+        cdkBuilder.kinesisStreamsInput(kinesisStreamsInput.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4411,7 +4411,7 @@ public open class CfnApplication(
        * identifies the stream's Amazon Resource Name (ARN).
        */
       override fun kinesisStreamsInput(kinesisStreamsInput: KinesisStreamsInputProperty) {
-        cdkBuilder.kinesisStreamsInput(kinesisStreamsInput.let(KinesisStreamsInputProperty::unwrap))
+        cdkBuilder.kinesisStreamsInput(kinesisStreamsInput.let(KinesisStreamsInputProperty.Companion::unwrap))
       }
 
       /**
@@ -4634,7 +4634,7 @@ public open class CfnApplication(
        * @param recordColumns A list of `RecordColumn` objects. 
        */
       override fun recordColumns(recordColumns: IResolvable) {
-        cdkBuilder.recordColumns(recordColumns.let(IResolvable::unwrap))
+        cdkBuilder.recordColumns(recordColumns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4662,14 +4662,14 @@ public open class CfnApplication(
        * @param recordFormat Specifies the format of the records on the streaming source. 
        */
       override fun recordFormat(recordFormat: IResolvable) {
-        cdkBuilder.recordFormat(recordFormat.let(IResolvable::unwrap))
+        cdkBuilder.recordFormat(recordFormat.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param recordFormat Specifies the format of the records on the streaming source. 
        */
       override fun recordFormat(recordFormat: RecordFormatProperty) {
-        cdkBuilder.recordFormat(recordFormat.let(RecordFormatProperty::unwrap))
+        cdkBuilder.recordFormat(recordFormat.let(RecordFormatProperty.Companion::unwrap))
       }
 
       /**
@@ -5085,7 +5085,7 @@ public open class CfnApplication(
        * uses delimiters (for example, CSV).
        */
       override fun csvMappingParameters(csvMappingParameters: IResolvable) {
-        cdkBuilder.csvMappingParameters(csvMappingParameters.let(IResolvable::unwrap))
+        cdkBuilder.csvMappingParameters(csvMappingParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5093,7 +5093,7 @@ public open class CfnApplication(
        * uses delimiters (for example, CSV).
        */
       override fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty) {
-        cdkBuilder.csvMappingParameters(csvMappingParameters.let(CSVMappingParametersProperty::unwrap))
+        cdkBuilder.csvMappingParameters(csvMappingParameters.let(CSVMappingParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -5111,7 +5111,7 @@ public open class CfnApplication(
        * record format on the streaming source.
        */
       override fun jsonMappingParameters(jsonMappingParameters: IResolvable) {
-        cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(IResolvable::unwrap))
+        cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5119,7 +5119,7 @@ public open class CfnApplication(
        * record format on the streaming source.
        */
       override fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty) {
-        cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(JSONMappingParametersProperty::unwrap))
+        cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(JSONMappingParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -5611,7 +5611,7 @@ public open class CfnApplication(
        * can increase the parallelism of the application in response to increased throughput.
        */
       override fun autoScalingEnabled(autoScalingEnabled: IResolvable) {
-        cdkBuilder.autoScalingEnabled(autoScalingEnabled.let(IResolvable::unwrap))
+        cdkBuilder.autoScalingEnabled(autoScalingEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5788,7 +5788,7 @@ public open class CfnApplication(
        * @param propertyMap Describes the value of an application execution property key-value pair.
        */
       override fun propertyMap(propertyMap: IResolvable) {
-        cdkBuilder.propertyMap(propertyMap.let(IResolvable::unwrap))
+        cdkBuilder.propertyMap(propertyMap.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6076,7 +6076,7 @@ public open class CfnApplication(
        * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
        */
       override fun mappingParameters(mappingParameters: IResolvable) {
-        cdkBuilder.mappingParameters(mappingParameters.let(IResolvable::unwrap))
+        cdkBuilder.mappingParameters(mappingParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6085,7 +6085,7 @@ public open class CfnApplication(
        * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
        */
       override fun mappingParameters(mappingParameters: MappingParametersProperty) {
-        cdkBuilder.mappingParameters(mappingParameters.let(MappingParametersProperty::unwrap))
+        cdkBuilder.mappingParameters(mappingParameters.let(MappingParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -6248,7 +6248,7 @@ public open class CfnApplication(
        * application.
        */
       override fun applicationRestoreConfiguration(applicationRestoreConfiguration: IResolvable) {
-        cdkBuilder.applicationRestoreConfiguration(applicationRestoreConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.applicationRestoreConfiguration(applicationRestoreConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6257,7 +6257,7 @@ public open class CfnApplication(
        */
       override
           fun applicationRestoreConfiguration(applicationRestoreConfiguration: ApplicationRestoreConfigurationProperty) {
-        cdkBuilder.applicationRestoreConfiguration(applicationRestoreConfiguration.let(ApplicationRestoreConfigurationProperty::unwrap))
+        cdkBuilder.applicationRestoreConfiguration(applicationRestoreConfiguration.let(ApplicationRestoreConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -6276,7 +6276,7 @@ public open class CfnApplication(
        * Apache Flink application.
        */
       override fun flinkRunConfiguration(flinkRunConfiguration: IResolvable) {
-        cdkBuilder.flinkRunConfiguration(flinkRunConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.flinkRunConfiguration(flinkRunConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6284,7 +6284,7 @@ public open class CfnApplication(
        * Apache Flink application.
        */
       override fun flinkRunConfiguration(flinkRunConfiguration: FlinkRunConfigurationProperty) {
-        cdkBuilder.flinkRunConfiguration(flinkRunConfiguration.let(FlinkRunConfigurationProperty::unwrap))
+        cdkBuilder.flinkRunConfiguration(flinkRunConfiguration.let(FlinkRunConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -6695,7 +6695,7 @@ public open class CfnApplication(
        * describing the input streams used by the application.
        */
       override fun inputs(inputs: IResolvable) {
-        cdkBuilder.inputs(inputs.let(IResolvable::unwrap))
+        cdkBuilder.inputs(inputs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7078,7 +7078,7 @@ public open class CfnApplication(
        * Kinesis Data Analytics Studio notebook.
        */
       override fun catalogConfiguration(catalogConfiguration: IResolvable) {
-        cdkBuilder.catalogConfiguration(catalogConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.catalogConfiguration(catalogConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7086,7 +7086,7 @@ public open class CfnApplication(
        * Kinesis Data Analytics Studio notebook.
        */
       override fun catalogConfiguration(catalogConfiguration: CatalogConfigurationProperty) {
-        cdkBuilder.catalogConfiguration(catalogConfiguration.let(CatalogConfigurationProperty::unwrap))
+        cdkBuilder.catalogConfiguration(catalogConfiguration.let(CatalogConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -7103,7 +7103,7 @@ public open class CfnApplication(
        * @param customArtifactsConfiguration A list of `CustomArtifactConfiguration` objects.
        */
       override fun customArtifactsConfiguration(customArtifactsConfiguration: IResolvable) {
-        cdkBuilder.customArtifactsConfiguration(customArtifactsConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.customArtifactsConfiguration(customArtifactsConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7124,7 +7124,7 @@ public open class CfnApplication(
        * Analytics Studio notebook as an application with durable state.
        */
       override fun deployAsApplicationConfiguration(deployAsApplicationConfiguration: IResolvable) {
-        cdkBuilder.deployAsApplicationConfiguration(deployAsApplicationConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.deployAsApplicationConfiguration(deployAsApplicationConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7133,7 +7133,7 @@ public open class CfnApplication(
        */
       override
           fun deployAsApplicationConfiguration(deployAsApplicationConfiguration: DeployAsApplicationConfigurationProperty) {
-        cdkBuilder.deployAsApplicationConfiguration(deployAsApplicationConfiguration.let(DeployAsApplicationConfigurationProperty::unwrap))
+        cdkBuilder.deployAsApplicationConfiguration(deployAsApplicationConfiguration.let(DeployAsApplicationConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -7152,7 +7152,7 @@ public open class CfnApplication(
        * Studio notebook.
        */
       override fun monitoringConfiguration(monitoringConfiguration: IResolvable) {
-        cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7161,7 +7161,7 @@ public open class CfnApplication(
        */
       override
           fun monitoringConfiguration(monitoringConfiguration: ZeppelinMonitoringConfigurationProperty) {
-        cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(ZeppelinMonitoringConfigurationProperty::unwrap))
+        cdkBuilder.monitoringConfiguration(monitoringConfiguration.let(ZeppelinMonitoringConfigurationProperty.Companion::unwrap))
       }
 
       /**

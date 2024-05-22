@@ -41,7 +41,7 @@ public open class Rule(
   cdkObject: software.amazon.awscdk.services.events.Rule,
 ) : Resource(cdkObject), IRule {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.events.Rule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.events.Rule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -50,8 +50,8 @@ public open class Rule(
     id: String,
     props: RuleProps,
   ) :
-      this(software.amazon.awscdk.services.events.Rule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(RuleProps::unwrap))
+      this(software.amazon.awscdk.services.events.Rule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(RuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -138,7 +138,7 @@ public open class Rule(
    * @param eventPattern
    */
   public open fun addEventPattern(eventPattern: EventPattern) {
-    unwrap(this).addEventPattern(eventPattern.let(EventPattern::unwrap))
+    unwrap(this).addEventPattern(eventPattern.let(EventPattern.Companion::unwrap))
   }
 
   /**
@@ -201,7 +201,7 @@ public open class Rule(
    * @param target
    */
   public open fun addTarget(target: IRuleTarget) {
-    unwrap(this).addTarget(target.let(IRuleTarget::unwrap))
+    unwrap(this).addTarget(target.let(IRuleTarget.Companion::unwrap))
   }
 
   /**
@@ -359,7 +359,7 @@ public open class Rule(
      * different Stacks (but in the same account &amp; region). 
      */
     override fun crossStackScope(crossStackScope: CloudshiftdevConstructsConstruct) {
-      cdkBuilder.crossStackScope(crossStackScope.let(CloudshiftdevConstructsConstruct::unwrap))
+      cdkBuilder.crossStackScope(crossStackScope.let(CloudshiftdevConstructsConstruct.Companion::unwrap))
     }
 
     /**
@@ -392,7 +392,7 @@ public open class Rule(
      * @param eventBus The event bus to associate with this rule. 
      */
     override fun eventBus(eventBus: IEventBus) {
-      cdkBuilder.eventBus(eventBus.let(IEventBus::unwrap))
+      cdkBuilder.eventBus(eventBus.let(IEventBus.Companion::unwrap))
     }
 
     /**
@@ -408,7 +408,7 @@ public open class Rule(
      * @param eventPattern Additional restrictions for the event to route to the specified target. 
      */
     override fun eventPattern(eventPattern: EventPattern) {
-      cdkBuilder.eventPattern(eventPattern.let(EventPattern::unwrap))
+      cdkBuilder.eventPattern(eventPattern.let(EventPattern.Companion::unwrap))
     }
 
     /**
@@ -454,7 +454,7 @@ public open class Rule(
      * rule. 
      */
     override fun schedule(schedule: Schedule) {
-      cdkBuilder.schedule(schedule.let(Schedule::unwrap))
+      cdkBuilder.schedule(schedule.let(Schedule.Companion::unwrap))
     }
 
     /**
@@ -468,7 +468,7 @@ public open class Rule(
      * @param targets Targets to invoke when this rule matches an event. 
      */
     override fun targets(targets: List<IRuleTarget>) {
-      cdkBuilder.targets(targets.map(IRuleTarget::unwrap))
+      cdkBuilder.targets(targets.map(IRuleTarget.Companion::unwrap))
     }
 
     /**
@@ -492,7 +492,7 @@ public open class Rule(
       id: String,
       eventRuleArn: String,
     ): IRule =
-        software.amazon.awscdk.services.events.Rule.fromEventRuleArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.events.Rule.fromEventRuleArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, eventRuleArn).let(IRule::wrap)
 
     public operator fun invoke(

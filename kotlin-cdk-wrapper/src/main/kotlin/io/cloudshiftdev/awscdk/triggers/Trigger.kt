@@ -40,8 +40,8 @@ public open class Trigger(
     id: String,
     props: TriggerProps,
   ) :
-      this(software.amazon.awscdk.triggers.Trigger(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(TriggerProps::unwrap))
+      this(software.amazon.awscdk.triggers.Trigger(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(TriggerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -194,7 +194,7 @@ public open class Trigger(
      * construct scopes have been provisioned. 
      */
     override fun executeAfter(executeAfter: List<CloudshiftdevConstructsConstruct>) {
-      cdkBuilder.executeAfter(executeAfter.map(CloudshiftdevConstructsConstruct::unwrap))
+      cdkBuilder.executeAfter(executeAfter.map(CloudshiftdevConstructsConstruct.Companion::unwrap))
     }
 
     /**
@@ -224,7 +224,7 @@ public open class Trigger(
      * @param executeBefore Adds this trigger as a dependency on other constructs. 
      */
     override fun executeBefore(executeBefore: List<CloudshiftdevConstructsConstruct>) {
-      cdkBuilder.executeBefore(executeBefore.map(CloudshiftdevConstructsConstruct::unwrap))
+      cdkBuilder.executeBefore(executeBefore.map(CloudshiftdevConstructsConstruct.Companion::unwrap))
     }
 
     /**
@@ -263,7 +263,7 @@ public open class Trigger(
      * @param handler The AWS Lambda function of the handler to execute. 
      */
     override fun handler(handler: Function) {
-      cdkBuilder.handler(handler.let(Function::unwrap))
+      cdkBuilder.handler(handler.let(Function.Companion::unwrap))
     }
 
     /**
@@ -274,7 +274,7 @@ public open class Trigger(
      * @param invocationType The invocation type to invoke the Lambda function with. 
      */
     override fun invocationType(invocationType: InvocationType) {
-      cdkBuilder.invocationType(invocationType.let(InvocationType::unwrap))
+      cdkBuilder.invocationType(invocationType.let(InvocationType.Companion::unwrap))
     }
 
     /**
@@ -285,7 +285,7 @@ public open class Trigger(
      * @param timeout The timeout of the invocation call of the Lambda function to be triggered. 
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.triggers.Trigger = cdkBuilder.build()

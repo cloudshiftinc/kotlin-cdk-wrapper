@@ -571,7 +571,7 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      * database instance by setting the backup retention to a value other than zero.
      */
     override fun backupRetention(backupRetention: Duration) {
-      cdkBuilder.backupRetention(backupRetention.let(Duration::unwrap))
+      cdkBuilder.backupRetention(backupRetention.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -581,7 +581,7 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      * For RDS DB engines:
      */
     override fun caCertificate(caCertificate: CaCertificate) {
-      cdkBuilder.caCertificate(caCertificate.let(CaCertificate::unwrap))
+      cdkBuilder.caCertificate(caCertificate.let(CaCertificate.Companion::unwrap))
     }
 
     /**
@@ -606,7 +606,7 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      * remove the retention policy, set the value to `Infinity`.
      */
     override fun cloudwatchLogsRetention(cloudwatchLogsRetention: RetentionDays) {
-      cdkBuilder.cloudwatchLogsRetention(cloudwatchLogsRetention.let(RetentionDays::unwrap))
+      cdkBuilder.cloudwatchLogsRetention(cloudwatchLogsRetention.let(RetentionDays.Companion::unwrap))
     }
 
     /**
@@ -614,7 +614,7 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      * custom resource that sets the retention policy.
      */
     override fun cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole: IRole) {
-      cdkBuilder.cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole.let(IRole::unwrap))
+      cdkBuilder.cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -661,7 +661,7 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      * AmazonRDSDirectoryServiceAccess or equivalent.
      */
     override fun domainRole(domainRole: IRole) {
-      cdkBuilder.domainRole(domainRole.let(IRole::unwrap))
+      cdkBuilder.domainRole(domainRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -675,7 +675,7 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      * @param engine The database engine. 
      */
     override fun engine(engine: IInstanceEngine) {
-      cdkBuilder.engine(engine.let(IInstanceEngine::unwrap))
+      cdkBuilder.engine(engine.let(IInstanceEngine.Companion::unwrap))
     }
 
     /**
@@ -699,7 +699,7 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      * @param instanceType The name of the compute and memory capacity for the instance.
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -714,7 +714,7 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      * @param licenseModel The license model.
      */
     override fun licenseModel(licenseModel: LicenseModel) {
-      cdkBuilder.licenseModel(licenseModel.let(LicenseModel::unwrap))
+      cdkBuilder.licenseModel(licenseModel.let(LicenseModel.Companion::unwrap))
     }
 
     /**
@@ -729,14 +729,14 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      * enhanced monitoring metrics for the DB instance.
      */
     override fun monitoringInterval(monitoringInterval: Duration) {
-      cdkBuilder.monitoringInterval(monitoringInterval.let(Duration::unwrap))
+      cdkBuilder.monitoringInterval(monitoringInterval.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param monitoringRole Role that will be used to manage DB instance monitoring.
      */
     override fun monitoringRole(monitoringRole: IRole) {
-      cdkBuilder.monitoringRole(monitoringRole.let(IRole::unwrap))
+      cdkBuilder.monitoringRole(monitoringRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -750,21 +750,21 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      * @param networkType The network type of the DB instance.
      */
     override fun networkType(networkType: NetworkType) {
-      cdkBuilder.networkType(networkType.let(NetworkType::unwrap))
+      cdkBuilder.networkType(networkType.let(NetworkType.Companion::unwrap))
     }
 
     /**
      * @param optionGroup The option group to associate with the instance.
      */
     override fun optionGroup(optionGroup: IOptionGroup) {
-      cdkBuilder.optionGroup(optionGroup.let(IOptionGroup::unwrap))
+      cdkBuilder.optionGroup(optionGroup.let(IOptionGroup.Companion::unwrap))
     }
 
     /**
      * @param parameterGroup The DB parameter group to associate with the instance.
      */
     override fun parameterGroup(parameterGroup: IParameterGroup) {
-      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup::unwrap))
+      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup.Companion::unwrap))
     }
 
     /**
@@ -781,7 +781,7 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      * data.
      */
     override fun performanceInsightEncryptionKey(performanceInsightEncryptionKey: IKey) {
-      cdkBuilder.performanceInsightEncryptionKey(performanceInsightEncryptionKey.let(IKey::unwrap))
+      cdkBuilder.performanceInsightEncryptionKey(performanceInsightEncryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -790,7 +790,7 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      */
     override
         fun performanceInsightRetention(performanceInsightRetention: PerformanceInsightRetention) {
-      cdkBuilder.performanceInsightRetention(performanceInsightRetention.let(PerformanceInsightRetention::unwrap))
+      cdkBuilder.performanceInsightRetention(performanceInsightRetention.let(PerformanceInsightRetention.Companion::unwrap))
     }
 
     /**
@@ -828,7 +828,7 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      * @param processorFeatures The number of CPU cores and the number of threads per core.
      */
     override fun processorFeatures(processorFeatures: ProcessorFeatures) {
-      cdkBuilder.processorFeatures(processorFeatures.let(ProcessorFeatures::unwrap))
+      cdkBuilder.processorFeatures(processorFeatures.let(ProcessorFeatures.Companion::unwrap))
     }
 
     /**
@@ -854,7 +854,7 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      * stack or replaced during an update.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -864,7 +864,7 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      * For Microsoft SQL Server:
      */
     override fun s3ExportBuckets(s3ExportBuckets: List<IBucket>) {
-      cdkBuilder.s3ExportBuckets(s3ExportBuckets.map(IBucket::unwrap))
+      cdkBuilder.s3ExportBuckets(s3ExportBuckets.map(IBucket.Companion::unwrap))
     }
 
     /**
@@ -883,7 +883,7 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      * For Microsoft SQL Server:
      */
     override fun s3ExportRole(s3ExportRole: IRole) {
-      cdkBuilder.s3ExportRole(s3ExportRole.let(IRole::unwrap))
+      cdkBuilder.s3ExportRole(s3ExportRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -895,7 +895,7 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      * For Microsoft SQL Server:
      */
     override fun s3ImportBuckets(s3ImportBuckets: List<IBucket>) {
-      cdkBuilder.s3ImportBuckets(s3ImportBuckets.map(IBucket::unwrap))
+      cdkBuilder.s3ImportBuckets(s3ImportBuckets.map(IBucket.Companion::unwrap))
     }
 
     /**
@@ -918,14 +918,14 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      * For Microsoft SQL Server:
      */
     override fun s3ImportRole(s3ImportRole: IRole) {
-      cdkBuilder.s3ImportRole(s3ImportRole.let(IRole::unwrap))
+      cdkBuilder.s3ImportRole(s3ImportRole.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param securityGroups The security groups to assign to the DB instance.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -947,14 +947,14 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      * Storage types supported are gp2, io1, standard.
      */
     override fun storageType(storageType: StorageType) {
-      cdkBuilder.storageType(storageType.let(StorageType::unwrap))
+      cdkBuilder.storageType(storageType.let(StorageType.Companion::unwrap))
     }
 
     /**
      * @param subnetGroup Existing subnet group for the instance.
      */
     override fun subnetGroup(subnetGroup: ISubnetGroup) {
-      cdkBuilder.subnetGroup(subnetGroup.let(ISubnetGroup::unwrap))
+      cdkBuilder.subnetGroup(subnetGroup.let(ISubnetGroup.Companion::unwrap))
     }
 
     /**
@@ -969,14 +969,14 @@ public interface DatabaseInstanceSourceProps : DatabaseInstanceNewProps {
      * @param vpc The VPC network where the DB subnet group should be created. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
      * @param vpcSubnets The type of subnets to add to the created DB subnet group.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

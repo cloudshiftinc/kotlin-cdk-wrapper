@@ -187,7 +187,7 @@ public open class TagParameterContainerImage(
   cdkObject: software.amazon.awscdk.services.ecs.TagParameterContainerImage,
 ) : ContainerImage(cdkObject) {
   public constructor(repository: IRepository) :
-      this(software.amazon.awscdk.services.ecs.TagParameterContainerImage(repository.let(IRepository::unwrap))
+      this(software.amazon.awscdk.services.ecs.TagParameterContainerImage(repository.let(IRepository.Companion::unwrap))
   )
 
   /**
@@ -197,8 +197,8 @@ public open class TagParameterContainerImage(
    * @param containerDefinition 
    */
   public override fun bind(scope: Construct, containerDefinition: ContainerDefinition):
-      ContainerImageConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      containerDefinition.let(ContainerDefinition::unwrap)).let(ContainerImageConfig::wrap)
+      ContainerImageConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      containerDefinition.let(ContainerDefinition.Companion::unwrap)).let(ContainerImageConfig::wrap)
 
   /**
    * Returns the name of the CloudFormation Parameter that represents the tag of the image in the

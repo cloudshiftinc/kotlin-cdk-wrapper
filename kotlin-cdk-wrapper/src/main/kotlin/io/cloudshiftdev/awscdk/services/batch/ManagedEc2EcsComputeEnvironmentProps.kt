@@ -401,7 +401,7 @@ public interface ManagedEc2EcsComputeEnvironmentProps : ManagedComputeEnvironmen
      * fitting instance type can be allocated.
      */
     override fun allocationStrategy(allocationStrategy: AllocationStrategy) {
-      cdkBuilder.allocationStrategy(allocationStrategy.let(AllocationStrategy::unwrap))
+      cdkBuilder.allocationStrategy(allocationStrategy.let(AllocationStrategy.Companion::unwrap))
     }
 
     /**
@@ -437,7 +437,7 @@ public interface ManagedEc2EcsComputeEnvironmentProps : ManagedComputeEnvironmen
      * join the ComputeEnvironment*.
      */
     override fun images(images: List<EcsMachineImage>) {
-      cdkBuilder.images(images.map(EcsMachineImage::unwrap))
+      cdkBuilder.images(images.map(EcsMachineImage.Companion::unwrap))
     }
 
     /**
@@ -455,7 +455,7 @@ public interface ManagedEc2EcsComputeEnvironmentProps : ManagedComputeEnvironmen
      * Batch will automatically choose the instance size.
      */
     override fun instanceClasses(instanceClasses: List<InstanceClass>) {
-      cdkBuilder.instanceClasses(instanceClasses.map(InstanceClass::unwrap))
+      cdkBuilder.instanceClasses(instanceClasses.map(InstanceClass.Companion::unwrap))
     }
 
     /**
@@ -471,7 +471,7 @@ public interface ManagedEc2EcsComputeEnvironmentProps : ManagedComputeEnvironmen
      * will use.
      */
     override fun instanceRole(instanceRole: IRole) {
-      cdkBuilder.instanceRole(instanceRole.let(IRole::unwrap))
+      cdkBuilder.instanceRole(instanceRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -479,7 +479,7 @@ public interface ManagedEc2EcsComputeEnvironmentProps : ManagedComputeEnvironmen
      * Which one is chosen depends on the `AllocationStrategy` used.
      */
     override fun instanceTypes(instanceTypes: List<InstanceType>) {
-      cdkBuilder.instanceTypes(instanceTypes.map(InstanceType::unwrap))
+      cdkBuilder.instanceTypes(instanceTypes.map(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -498,7 +498,7 @@ public interface ManagedEc2EcsComputeEnvironmentProps : ManagedComputeEnvironmen
      * ones on the launch template.
      */
     override fun launchTemplate(launchTemplate: ILaunchTemplate) {
-      cdkBuilder.launchTemplate(launchTemplate.let(ILaunchTemplate::unwrap))
+      cdkBuilder.launchTemplate(launchTemplate.let(ILaunchTemplate.Companion::unwrap))
     }
 
     /**
@@ -533,7 +533,7 @@ public interface ManagedEc2EcsComputeEnvironmentProps : ManagedComputeEnvironmen
      * within a single Availability Zone with high network flow potential.
      */
     override fun placementGroup(placementGroup: IPlacementGroup) {
-      cdkBuilder.placementGroup(placementGroup.let(IPlacementGroup::unwrap))
+      cdkBuilder.placementGroup(placementGroup.let(IPlacementGroup.Companion::unwrap))
     }
 
     /**
@@ -559,7 +559,7 @@ public interface ManagedEc2EcsComputeEnvironmentProps : ManagedComputeEnvironmen
      * @param securityGroups The security groups this Compute Environment will launch instances in.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -573,7 +573,7 @@ public interface ManagedEc2EcsComputeEnvironmentProps : ManagedComputeEnvironmen
      * such as provision instances to run your jobs.
      */
     override fun serviceRole(serviceRole: IRole) {
-      cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
+      cdkBuilder.serviceRole(serviceRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -605,7 +605,7 @@ public interface ManagedEc2EcsComputeEnvironmentProps : ManagedComputeEnvironmen
      * your behalf.
      */
     override fun spotFleetRole(spotFleetRole: IRole) {
-      cdkBuilder.spotFleetRole(spotFleetRole.let(IRole::unwrap))
+      cdkBuilder.spotFleetRole(spotFleetRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -625,7 +625,7 @@ public interface ManagedEc2EcsComputeEnvironmentProps : ManagedComputeEnvironmen
      * will be allowed to run until `updateTimeout` has expired.
      */
     override fun updateTimeout(updateTimeout: Duration) {
-      cdkBuilder.updateTimeout(updateTimeout.let(Duration::unwrap))
+      cdkBuilder.updateTimeout(updateTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -651,14 +651,14 @@ public interface ManagedEc2EcsComputeEnvironmentProps : ManagedComputeEnvironmen
      * @param vpc VPC in which this Compute Environment will launch Instances. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
      * @param vpcSubnets The VPC Subnets this Compute Environment will launch instances in.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

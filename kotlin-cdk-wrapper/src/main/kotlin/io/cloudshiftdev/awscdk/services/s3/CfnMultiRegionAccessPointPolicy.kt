@@ -47,8 +47,8 @@ public open class CfnMultiRegionAccessPointPolicy(
     id: String,
     props: CfnMultiRegionAccessPointPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMultiRegionAccessPointPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.s3.CfnMultiRegionAccessPointPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMultiRegionAccessPointPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -75,7 +75,7 @@ public open class CfnMultiRegionAccessPointPolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

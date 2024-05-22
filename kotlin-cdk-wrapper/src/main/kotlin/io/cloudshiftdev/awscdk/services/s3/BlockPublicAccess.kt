@@ -20,7 +20,7 @@ public open class BlockPublicAccess(
   cdkObject: software.amazon.awscdk.services.s3.BlockPublicAccess,
 ) : CdkObject(cdkObject) {
   public constructor(options: BlockPublicAccessOptions) :
-      this(software.amazon.awscdk.services.s3.BlockPublicAccess(options.let(BlockPublicAccessOptions::unwrap))
+      this(software.amazon.awscdk.services.s3.BlockPublicAccess(options.let(BlockPublicAccessOptions.Companion::unwrap))
   )
 
   public constructor(options: BlockPublicAccessOptions.Builder.() -> Unit) :

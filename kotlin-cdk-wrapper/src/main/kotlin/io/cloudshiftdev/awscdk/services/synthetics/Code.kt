@@ -45,8 +45,8 @@ public abstract class Code(
     scope: Construct,
     handler: String,
     family: RuntimeFamily,
-  ): CodeConfig = unwrap(this).bind(scope.let(Construct::unwrap), handler,
-      family.let(RuntimeFamily::unwrap)).let(CodeConfig::wrap)
+  ): CodeConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap), handler,
+      family.let(RuntimeFamily.Companion::unwrap)).let(CodeConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.synthetics.Code,
@@ -58,7 +58,7 @@ public abstract class Code(
 
     public fun fromAsset(assetPath: String, options: AssetOptions): AssetCode =
         software.amazon.awscdk.services.synthetics.Code.fromAsset(assetPath,
-        options.let(AssetOptions::unwrap)).let(AssetCode::wrap)
+        options.let(AssetOptions.Companion::unwrap)).let(AssetCode::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8c5cc07349678d3efe0f26ff9e57f8d6a03858a592d9d2d949ef55416b24167c")
@@ -66,7 +66,7 @@ public abstract class Code(
         fromAsset(assetPath, AssetOptions(options))
 
     public fun fromBucket(bucket: IBucket, key: String): S3Code =
-        software.amazon.awscdk.services.synthetics.Code.fromBucket(bucket.let(IBucket::unwrap),
+        software.amazon.awscdk.services.synthetics.Code.fromBucket(bucket.let(IBucket.Companion::unwrap),
         key).let(S3Code::wrap)
 
     public fun fromBucket(
@@ -74,8 +74,8 @@ public abstract class Code(
       key: String,
       objectVersion: String,
     ): S3Code =
-        software.amazon.awscdk.services.synthetics.Code.fromBucket(bucket.let(IBucket::unwrap), key,
-        objectVersion).let(S3Code::wrap)
+        software.amazon.awscdk.services.synthetics.Code.fromBucket(bucket.let(IBucket.Companion::unwrap),
+        key, objectVersion).let(S3Code::wrap)
 
     public fun fromInline(code: String): InlineCode =
         software.amazon.awscdk.services.synthetics.Code.fromInline(code).let(InlineCode::wrap)

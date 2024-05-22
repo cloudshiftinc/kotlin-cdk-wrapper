@@ -43,8 +43,8 @@ public open class DynamoPutItem(
     id: String,
     props: DynamoPutItemProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.DynamoPutItem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DynamoPutItemProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.DynamoPutItem(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DynamoPutItemProps.Companion::unwrap))
   )
 
   public constructor(
@@ -354,7 +354,7 @@ public open class DynamoPutItem(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -410,7 +410,7 @@ public open class DynamoPutItem(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -424,7 +424,7 @@ public open class DynamoPutItem(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -459,7 +459,7 @@ public open class DynamoPutItem(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -533,7 +533,7 @@ public open class DynamoPutItem(
      * consumption that is returned in the response. 
      */
     override fun returnConsumedCapacity(returnConsumedCapacity: DynamoConsumedCapacity) {
-      cdkBuilder.returnConsumedCapacity(returnConsumedCapacity.let(DynamoConsumedCapacity::unwrap))
+      cdkBuilder.returnConsumedCapacity(returnConsumedCapacity.let(DynamoConsumedCapacity.Companion::unwrap))
     }
 
     /**
@@ -546,7 +546,7 @@ public open class DynamoPutItem(
      */
     override
         fun returnItemCollectionMetrics(returnItemCollectionMetrics: DynamoItemCollectionMetrics) {
-      cdkBuilder.returnItemCollectionMetrics(returnItemCollectionMetrics.let(DynamoItemCollectionMetrics::unwrap))
+      cdkBuilder.returnItemCollectionMetrics(returnItemCollectionMetrics.let(DynamoItemCollectionMetrics.Companion::unwrap))
     }
 
     /**
@@ -560,7 +560,7 @@ public open class DynamoPutItem(
      * before they were updated with the PutItem request. 
      */
     override fun returnValues(returnValues: DynamoReturnValues) {
-      cdkBuilder.returnValues(returnValues.let(DynamoReturnValues::unwrap))
+      cdkBuilder.returnValues(returnValues.let(DynamoReturnValues.Companion::unwrap))
     }
 
     /**
@@ -580,7 +580,7 @@ public open class DynamoPutItem(
      * @param table The name of the table where the item should be written . 
      */
     override fun table(table: ITable) {
-      cdkBuilder.table(table.let(ITable::unwrap))
+      cdkBuilder.table(table.let(ITable.Companion::unwrap))
     }
 
     /**
@@ -594,7 +594,7 @@ public open class DynamoPutItem(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -607,7 +607,7 @@ public open class DynamoPutItem(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.DynamoPutItem =

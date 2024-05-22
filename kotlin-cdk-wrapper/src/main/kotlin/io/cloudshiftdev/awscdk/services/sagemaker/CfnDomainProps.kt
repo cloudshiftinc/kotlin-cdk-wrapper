@@ -513,7 +513,7 @@ public interface CfnDomainProps {
      * domain.
      */
     override fun defaultSpaceSettings(defaultSpaceSettings: IResolvable) {
-      cdkBuilder.defaultSpaceSettings(defaultSpaceSettings.let(IResolvable::unwrap))
+      cdkBuilder.defaultSpaceSettings(defaultSpaceSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -522,7 +522,7 @@ public interface CfnDomainProps {
      */
     override
         fun defaultSpaceSettings(defaultSpaceSettings: CfnDomain.DefaultSpaceSettingsProperty) {
-      cdkBuilder.defaultSpaceSettings(defaultSpaceSettings.let(CfnDomain.DefaultSpaceSettingsProperty::unwrap))
+      cdkBuilder.defaultSpaceSettings(defaultSpaceSettings.let(CfnDomain.DefaultSpaceSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -539,14 +539,14 @@ public interface CfnDomainProps {
      * @param defaultUserSettings The default user settings. 
      */
     override fun defaultUserSettings(defaultUserSettings: IResolvable) {
-      cdkBuilder.defaultUserSettings(defaultUserSettings.let(IResolvable::unwrap))
+      cdkBuilder.defaultUserSettings(defaultUserSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param defaultUserSettings The default user settings. 
      */
     override fun defaultUserSettings(defaultUserSettings: CfnDomain.UserSettingsProperty) {
-      cdkBuilder.defaultUserSettings(defaultUserSettings.let(CfnDomain.UserSettingsProperty::unwrap))
+      cdkBuilder.defaultUserSettings(defaultUserSettings.let(CfnDomain.UserSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -570,7 +570,7 @@ public interface CfnDomainProps {
      * These settings are specified through the `CreateDomain` API call.
      */
     override fun domainSettings(domainSettings: IResolvable) {
-      cdkBuilder.domainSettings(domainSettings.let(IResolvable::unwrap))
+      cdkBuilder.domainSettings(domainSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -578,7 +578,7 @@ public interface CfnDomainProps {
      * These settings are specified through the `CreateDomain` API call.
      */
     override fun domainSettings(domainSettings: CfnDomain.DomainSettingsProperty) {
-      cdkBuilder.domainSettings(domainSettings.let(CfnDomain.DomainSettingsProperty::unwrap))
+      cdkBuilder.domainSettings(domainSettings.let(CfnDomain.DomainSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -637,7 +637,7 @@ public interface CfnDomainProps {
      * *Array members* : Minimum number of 0 items. Maximum number of 50 items.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

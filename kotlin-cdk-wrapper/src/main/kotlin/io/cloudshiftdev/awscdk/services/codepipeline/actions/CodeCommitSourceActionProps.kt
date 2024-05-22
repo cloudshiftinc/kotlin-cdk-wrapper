@@ -237,7 +237,7 @@ public interface CodeCommitSourceActionProps : CommonAwsActionProps {
      * https://docs.aws.amazon.com/codecommit/latest/userguide/monitoring-events.html
      */
     override fun customEventRule(customEventRule: ICustomEventRule) {
-      cdkBuilder.customEventRule(customEventRule.let(ICustomEventRule::unwrap))
+      cdkBuilder.customEventRule(customEventRule.let(ICustomEventRule.Companion::unwrap))
     }
 
     /**
@@ -245,21 +245,21 @@ public interface CodeCommitSourceActionProps : CommonAwsActionProps {
      * Used only when trigger value is CodeCommitTrigger.EVENTS.
      */
     override fun eventRole(eventRole: IRole) {
-      cdkBuilder.eventRole(eventRole.let(IRole::unwrap))
+      cdkBuilder.eventRole(eventRole.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param output the value to be set. 
      */
     override fun output(output: Artifact) {
-      cdkBuilder.output(output.let(Artifact::unwrap))
+      cdkBuilder.output(output.let(Artifact.Companion::unwrap))
     }
 
     /**
      * @param repository The CodeCommit repository. 
      */
     override fun repository(repository: IRepository) {
-      cdkBuilder.repository(repository.let(IRepository::unwrap))
+      cdkBuilder.repository(repository.let(IRepository.Companion::unwrap))
     }
 
     /**
@@ -271,7 +271,7 @@ public interface CodeCommitSourceActionProps : CommonAwsActionProps {
      * method in the `ActionBindOptions.role` property.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -286,7 +286,7 @@ public interface CodeCommitSourceActionProps : CommonAwsActionProps {
      * @param trigger How should CodePipeline detect source changes for this Action.
      */
     override fun trigger(trigger: CodeCommitTrigger) {
-      cdkBuilder.trigger(trigger.let(CodeCommitTrigger::unwrap))
+      cdkBuilder.trigger(trigger.let(CodeCommitTrigger.Companion::unwrap))
     }
 
     /**

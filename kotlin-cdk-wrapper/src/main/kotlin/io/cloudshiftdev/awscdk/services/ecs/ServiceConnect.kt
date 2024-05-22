@@ -34,8 +34,8 @@ public open class ServiceConnect(
   cdkObject: software.amazon.awscdk.services.ecs.ServiceConnect,
 ) : CdkObject(cdkObject) {
   public constructor(networkmode: NetworkMode, pm: PortMapping) :
-      this(software.amazon.awscdk.services.ecs.ServiceConnect(networkmode.let(NetworkMode::unwrap),
-      pm.let(PortMapping::unwrap))
+      this(software.amazon.awscdk.services.ecs.ServiceConnect(networkmode.let(NetworkMode.Companion::unwrap),
+      pm.let(PortMapping.Companion::unwrap))
   )
 
   public constructor(networkmode: NetworkMode, pm: PortMapping.Builder.() -> Unit) :
@@ -193,7 +193,7 @@ public open class ServiceConnect(
      * @param appProtocol The protocol used by Service Connect. 
      */
     override fun appProtocol(appProtocol: AppProtocol) {
-      cdkBuilder.appProtocol(appProtocol.let(AppProtocol::unwrap))
+      cdkBuilder.appProtocol(appProtocol.let(AppProtocol.Companion::unwrap))
     }
 
     /**
@@ -286,7 +286,7 @@ public open class ServiceConnect(
      * @param protocol The protocol used for the port mapping. 
      */
     override fun protocol(protocol: Protocol) {
-      cdkBuilder.protocol(protocol.let(Protocol::unwrap))
+      cdkBuilder.protocol(protocol.let(Protocol.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.ServiceConnect = cdkBuilder.build()

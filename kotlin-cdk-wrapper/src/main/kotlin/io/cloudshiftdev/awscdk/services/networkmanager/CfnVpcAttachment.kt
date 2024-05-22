@@ -65,8 +65,8 @@ public open class CfnVpcAttachment(
     id: String,
     props: CfnVpcAttachmentProps,
   ) :
-      this(software.amazon.awscdk.services.networkmanager.CfnVpcAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVpcAttachmentProps::unwrap))
+      this(software.amazon.awscdk.services.networkmanager.CfnVpcAttachment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVpcAttachmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -155,7 +155,7 @@ public open class CfnVpcAttachment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -167,14 +167,14 @@ public open class CfnVpcAttachment(
    * Options for creating the VPC attachment.
    */
   public open fun options(`value`: IResolvable) {
-    unwrap(this).setOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Options for creating the VPC attachment.
    */
   public open fun options(`value`: VpcOptionsProperty) {
-    unwrap(this).setOptions(`value`.let(VpcOptionsProperty::unwrap))
+    unwrap(this).setOptions(`value`.let(VpcOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -194,14 +194,14 @@ public open class CfnVpcAttachment(
    * Describes a proposed segment change.
    */
   public open fun proposedSegmentChange(`value`: IResolvable) {
-    unwrap(this).setProposedSegmentChange(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProposedSegmentChange(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Describes a proposed segment change.
    */
   public open fun proposedSegmentChange(`value`: ProposedSegmentChangeProperty) {
-    unwrap(this).setProposedSegmentChange(`value`.let(ProposedSegmentChangeProperty::unwrap))
+    unwrap(this).setProposedSegmentChange(`value`.let(ProposedSegmentChangeProperty.Companion::unwrap))
   }
 
   /**
@@ -244,7 +244,7 @@ public open class CfnVpcAttachment(
    * The tags associated with the VPC attachment.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -401,7 +401,7 @@ public open class CfnVpcAttachment(
      * @param options Options for creating the VPC attachment. 
      */
     override fun options(options: IResolvable) {
-      cdkBuilder.options(options.let(IResolvable::unwrap))
+      cdkBuilder.options(options.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -411,7 +411,7 @@ public open class CfnVpcAttachment(
      * @param options Options for creating the VPC attachment. 
      */
     override fun options(options: VpcOptionsProperty) {
-      cdkBuilder.options(options.let(VpcOptionsProperty::unwrap))
+      cdkBuilder.options(options.let(VpcOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -434,7 +434,7 @@ public open class CfnVpcAttachment(
      * @param proposedSegmentChange Describes a proposed segment change. 
      */
     override fun proposedSegmentChange(proposedSegmentChange: IResolvable) {
-      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(IResolvable::unwrap))
+      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -446,7 +446,7 @@ public open class CfnVpcAttachment(
      * @param proposedSegmentChange Describes a proposed segment change. 
      */
     override fun proposedSegmentChange(proposedSegmentChange: ProposedSegmentChangeProperty) {
-      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(ProposedSegmentChangeProperty::unwrap))
+      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(ProposedSegmentChangeProperty.Companion::unwrap))
     }
 
     /**
@@ -488,7 +488,7 @@ public open class CfnVpcAttachment(
      * @param tags The tags associated with the VPC attachment. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -632,7 +632,7 @@ public open class CfnVpcAttachment(
        * @param tags The list of key-value tags that changed for the segment.
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**
@@ -779,7 +779,7 @@ public open class CfnVpcAttachment(
        * for the VPC attachment for the lifetime of that flow. The default value is `false` .
        */
       override fun applianceModeSupport(applianceModeSupport: IResolvable) {
-        cdkBuilder.applianceModeSupport(applianceModeSupport.let(IResolvable::unwrap))
+        cdkBuilder.applianceModeSupport(applianceModeSupport.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -793,7 +793,7 @@ public open class CfnVpcAttachment(
        * @param ipv6Support Indicates whether IPv6 is supported.
        */
       override fun ipv6Support(ipv6Support: IResolvable) {
-        cdkBuilder.ipv6Support(ipv6Support.let(IResolvable::unwrap))
+        cdkBuilder.ipv6Support(ipv6Support.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

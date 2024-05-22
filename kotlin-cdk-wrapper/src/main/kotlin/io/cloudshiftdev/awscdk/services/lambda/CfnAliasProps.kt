@@ -222,7 +222,7 @@ public interface CfnAliasProps {
      * configuration for a function's alias.
      */
     override fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: IResolvable) {
-      cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(IResolvable::unwrap))
+      cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -232,7 +232,7 @@ public interface CfnAliasProps {
      */
     override
         fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: CfnAlias.ProvisionedConcurrencyConfigurationProperty) {
-      cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(CfnAlias.ProvisionedConcurrencyConfigurationProperty::unwrap))
+      cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(CfnAlias.ProvisionedConcurrencyConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -253,7 +253,7 @@ public interface CfnAliasProps {
      * of the alias.
      */
     override fun routingConfig(routingConfig: IResolvable) {
-      cdkBuilder.routingConfig(routingConfig.let(IResolvable::unwrap))
+      cdkBuilder.routingConfig(routingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -262,7 +262,7 @@ public interface CfnAliasProps {
      * of the alias.
      */
     override fun routingConfig(routingConfig: CfnAlias.AliasRoutingConfigurationProperty) {
-      cdkBuilder.routingConfig(routingConfig.let(CfnAlias.AliasRoutingConfigurationProperty::unwrap))
+      cdkBuilder.routingConfig(routingConfig.let(CfnAlias.AliasRoutingConfigurationProperty.Companion::unwrap))
     }
 
     /**

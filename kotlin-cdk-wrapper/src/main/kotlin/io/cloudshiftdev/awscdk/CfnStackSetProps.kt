@@ -552,7 +552,7 @@ public interface CfnStackSetProps {
      * organizational unit (OU).
      */
     override fun autoDeployment(autoDeployment: IResolvable) {
-      cdkBuilder.autoDeployment(autoDeployment.let(IResolvable::unwrap))
+      cdkBuilder.autoDeployment(autoDeployment.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -561,7 +561,7 @@ public interface CfnStackSetProps {
      * organizational unit (OU).
      */
     override fun autoDeployment(autoDeployment: CfnStackSet.AutoDeploymentProperty) {
-      cdkBuilder.autoDeployment(autoDeployment.let(CfnStackSet.AutoDeploymentProperty::unwrap))
+      cdkBuilder.autoDeployment(autoDeployment.let(CfnStackSet.AutoDeploymentProperty.Companion::unwrap))
     }
 
     /**
@@ -674,7 +674,7 @@ public interface CfnStackSetProps {
      * performs a stack set operation.
      */
     override fun operationPreferences(operationPreferences: IResolvable) {
-      cdkBuilder.operationPreferences(operationPreferences.let(IResolvable::unwrap))
+      cdkBuilder.operationPreferences(operationPreferences.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -683,7 +683,7 @@ public interface CfnStackSetProps {
      */
     override
         fun operationPreferences(operationPreferences: CfnStackSet.OperationPreferencesProperty) {
-      cdkBuilder.operationPreferences(operationPreferences.let(CfnStackSet.OperationPreferencesProperty::unwrap))
+      cdkBuilder.operationPreferences(operationPreferences.let(CfnStackSet.OperationPreferencesProperty.Companion::unwrap))
     }
 
     /**
@@ -700,7 +700,7 @@ public interface CfnStackSetProps {
      * @param parameters The input parameters for the stack set template.
      */
     override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -734,7 +734,7 @@ public interface CfnStackSetProps {
      * accounts and Regions.
      */
     override fun stackInstancesGroup(stackInstancesGroup: IResolvable) {
-      cdkBuilder.stackInstancesGroup(stackInstancesGroup.let(IResolvable::unwrap))
+      cdkBuilder.stackInstancesGroup(stackInstancesGroup.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -772,7 +772,7 @@ public interface CfnStackSetProps {
      * you specify an empty value, AWS CloudFormation removes all associated tags.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

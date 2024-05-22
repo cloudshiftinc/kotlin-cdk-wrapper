@@ -58,8 +58,8 @@ public open class CfnStandard(
     id: String,
     props: CfnStandardProps,
   ) :
-      this(software.amazon.awscdk.services.securityhub.CfnStandard(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStandardProps::unwrap))
+      this(software.amazon.awscdk.services.securityhub.CfnStandard(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStandardProps.Companion::unwrap))
   )
 
   public constructor(
@@ -84,7 +84,7 @@ public open class CfnStandard(
    * Specifies which controls are to be disabled in a standard.
    */
   public open fun disabledStandardsControls(`value`: IResolvable) {
-    unwrap(this).setDisabledStandardsControls(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDisabledStandardsControls(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -106,7 +106,7 @@ public open class CfnStandard(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -185,7 +185,7 @@ public open class CfnStandard(
      * @param disabledStandardsControls Specifies which controls are to be disabled in a standard. 
      */
     override fun disabledStandardsControls(disabledStandardsControls: IResolvable) {
-      cdkBuilder.disabledStandardsControls(disabledStandardsControls.let(IResolvable::unwrap))
+      cdkBuilder.disabledStandardsControls(disabledStandardsControls.let(IResolvable.Companion::unwrap))
     }
 
     /**

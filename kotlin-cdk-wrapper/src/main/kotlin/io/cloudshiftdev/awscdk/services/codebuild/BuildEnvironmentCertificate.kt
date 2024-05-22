@@ -65,7 +65,7 @@ public interface BuildEnvironmentCertificate {
      * @param bucket The bucket where the certificate is. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**

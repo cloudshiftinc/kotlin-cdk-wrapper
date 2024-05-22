@@ -130,14 +130,14 @@ public interface CodeCommitSourceOptions {
      * Used only when trigger value is CodeCommitTrigger.EVENTS.
      */
     override fun eventRole(eventRole: IRole) {
-      cdkBuilder.eventRole(eventRole.let(IRole::unwrap))
+      cdkBuilder.eventRole(eventRole.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param trigger How should CodePipeline detect source changes for this Action.
      */
     override fun trigger(trigger: CodeCommitTrigger) {
-      cdkBuilder.trigger(trigger.let(CodeCommitTrigger::unwrap))
+      cdkBuilder.trigger(trigger.let(CodeCommitTrigger.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.pipelines.CodeCommitSourceOptions =

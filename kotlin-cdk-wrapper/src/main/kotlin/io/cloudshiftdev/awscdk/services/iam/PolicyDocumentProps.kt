@@ -134,7 +134,7 @@ public interface PolicyDocumentProps {
      * @param statements Initial statements to add to the policy document.
      */
     override fun statements(statements: List<PolicyStatement>) {
-      cdkBuilder.statements(statements.map(PolicyStatement::unwrap))
+      cdkBuilder.statements(statements.map(PolicyStatement.Companion::unwrap))
     }
 
     /**

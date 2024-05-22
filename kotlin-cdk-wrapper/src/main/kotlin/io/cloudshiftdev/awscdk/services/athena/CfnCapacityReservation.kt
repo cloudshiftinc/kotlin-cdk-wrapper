@@ -58,8 +58,8 @@ public open class CfnCapacityReservation(
     id: String,
     props: CfnCapacityReservationProps,
   ) :
-      this(software.amazon.awscdk.services.athena.CfnCapacityReservation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCapacityReservationProps::unwrap))
+      this(software.amazon.awscdk.services.athena.CfnCapacityReservation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCapacityReservationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -105,7 +105,7 @@ public open class CfnCapacityReservation(
    * Assigns Athena workgroups (and hence their queries) to capacity reservations.
    */
   public open fun capacityAssignmentConfiguration(`value`: IResolvable) {
-    unwrap(this).setCapacityAssignmentConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCapacityAssignmentConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -113,7 +113,7 @@ public open class CfnCapacityReservation(
    */
   public open
       fun capacityAssignmentConfiguration(`value`: CapacityAssignmentConfigurationProperty) {
-    unwrap(this).setCapacityAssignmentConfiguration(`value`.let(CapacityAssignmentConfigurationProperty::unwrap))
+    unwrap(this).setCapacityAssignmentConfiguration(`value`.let(CapacityAssignmentConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -137,7 +137,7 @@ public open class CfnCapacityReservation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -161,7 +161,7 @@ public open class CfnCapacityReservation(
    * An array of key-value pairs to apply to the capacity reservation.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -293,7 +293,7 @@ public open class CfnCapacityReservation(
      * capacity reservations. 
      */
     override fun capacityAssignmentConfiguration(capacityAssignmentConfiguration: IResolvable) {
-      cdkBuilder.capacityAssignmentConfiguration(capacityAssignmentConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.capacityAssignmentConfiguration(capacityAssignmentConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -310,7 +310,7 @@ public open class CfnCapacityReservation(
      */
     override
         fun capacityAssignmentConfiguration(capacityAssignmentConfiguration: CapacityAssignmentConfigurationProperty) {
-      cdkBuilder.capacityAssignmentConfiguration(capacityAssignmentConfiguration.let(CapacityAssignmentConfigurationProperty::unwrap))
+      cdkBuilder.capacityAssignmentConfiguration(capacityAssignmentConfiguration.let(CapacityAssignmentConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -353,7 +353,7 @@ public open class CfnCapacityReservation(
      * @param tags An array of key-value pairs to apply to the capacity reservation. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -470,7 +470,7 @@ public open class CfnCapacityReservation(
        * configuration. 
        */
       override fun capacityAssignments(capacityAssignments: IResolvable) {
-        cdkBuilder.capacityAssignments(capacityAssignments.let(IResolvable::unwrap))
+        cdkBuilder.capacityAssignments(capacityAssignments.let(IResolvable.Companion::unwrap))
       }
 
       /**

@@ -64,8 +64,8 @@ public open class CfnKnowledgeBase(
     id: String,
     props: CfnKnowledgeBaseProps,
   ) :
-      this(software.amazon.awscdk.services.wisdom.CfnKnowledgeBase(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnKnowledgeBaseProps::unwrap))
+      this(software.amazon.awscdk.services.wisdom.CfnKnowledgeBase(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnKnowledgeBaseProps.Companion::unwrap))
   )
 
   public constructor(
@@ -103,7 +103,7 @@ public open class CfnKnowledgeBase(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -139,14 +139,14 @@ public open class CfnKnowledgeBase(
    * Information about how to render the content.
    */
   public open fun renderingConfiguration(`value`: IResolvable) {
-    unwrap(this).setRenderingConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRenderingConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information about how to render the content.
    */
   public open fun renderingConfiguration(`value`: RenderingConfigurationProperty) {
-    unwrap(this).setRenderingConfiguration(`value`.let(RenderingConfigurationProperty::unwrap))
+    unwrap(this).setRenderingConfiguration(`value`.let(RenderingConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -170,7 +170,7 @@ public open class CfnKnowledgeBase(
    * `kms:DescribeKey` permissions to the IAM identity using the key to invoke Wisdom.
    */
   public open fun serverSideEncryptionConfiguration(`value`: IResolvable) {
-    unwrap(this).setServerSideEncryptionConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setServerSideEncryptionConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -179,7 +179,7 @@ public open class CfnKnowledgeBase(
    */
   public open
       fun serverSideEncryptionConfiguration(`value`: ServerSideEncryptionConfigurationProperty) {
-    unwrap(this).setServerSideEncryptionConfiguration(`value`.let(ServerSideEncryptionConfigurationProperty::unwrap))
+    unwrap(this).setServerSideEncryptionConfiguration(`value`.let(ServerSideEncryptionConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -201,14 +201,14 @@ public open class CfnKnowledgeBase(
    * The source of the knowledge base content.
    */
   public open fun sourceConfiguration(`value`: IResolvable) {
-    unwrap(this).setSourceConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSourceConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The source of the knowledge base content.
    */
   public open fun sourceConfiguration(`value`: SourceConfigurationProperty) {
-    unwrap(this).setSourceConfiguration(`value`.let(SourceConfigurationProperty::unwrap))
+    unwrap(this).setSourceConfiguration(`value`.let(SourceConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -234,7 +234,7 @@ public open class CfnKnowledgeBase(
    * The tags used to organize, track, or control access for this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -456,7 +456,7 @@ public open class CfnKnowledgeBase(
      * @param renderingConfiguration Information about how to render the content. 
      */
     override fun renderingConfiguration(renderingConfiguration: IResolvable) {
-      cdkBuilder.renderingConfiguration(renderingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.renderingConfiguration(renderingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -466,7 +466,7 @@ public open class CfnKnowledgeBase(
      * @param renderingConfiguration Information about how to render the content. 
      */
     override fun renderingConfiguration(renderingConfiguration: RenderingConfigurationProperty) {
-      cdkBuilder.renderingConfiguration(renderingConfiguration.let(RenderingConfigurationProperty::unwrap))
+      cdkBuilder.renderingConfiguration(renderingConfiguration.let(RenderingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -498,7 +498,7 @@ public open class CfnKnowledgeBase(
      * invoke Wisdom. 
      */
     override fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
-      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -519,7 +519,7 @@ public open class CfnKnowledgeBase(
      */
     override
         fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty) {
-      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(ServerSideEncryptionConfigurationProperty::unwrap))
+      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(ServerSideEncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -554,7 +554,7 @@ public open class CfnKnowledgeBase(
      * @param sourceConfiguration The source of the knowledge base content. 
      */
     override fun sourceConfiguration(sourceConfiguration: IResolvable) {
-      cdkBuilder.sourceConfiguration(sourceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.sourceConfiguration(sourceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -566,7 +566,7 @@ public open class CfnKnowledgeBase(
      * @param sourceConfiguration The source of the knowledge base content. 
      */
     override fun sourceConfiguration(sourceConfiguration: SourceConfigurationProperty) {
-      cdkBuilder.sourceConfiguration(sourceConfiguration.let(SourceConfigurationProperty::unwrap))
+      cdkBuilder.sourceConfiguration(sourceConfiguration.let(SourceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -590,7 +590,7 @@ public open class CfnKnowledgeBase(
      * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1285,7 +1285,7 @@ public open class CfnKnowledgeBase(
        * automatically ingest content. 
        */
       override fun appIntegrations(appIntegrations: IResolvable) {
-        cdkBuilder.appIntegrations(appIntegrations.let(IResolvable::unwrap))
+        cdkBuilder.appIntegrations(appIntegrations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1293,7 +1293,7 @@ public open class CfnKnowledgeBase(
        * automatically ingest content. 
        */
       override fun appIntegrations(appIntegrations: AppIntegrationsConfigurationProperty) {
-        cdkBuilder.appIntegrations(appIntegrations.let(AppIntegrationsConfigurationProperty::unwrap))
+        cdkBuilder.appIntegrations(appIntegrations.let(AppIntegrationsConfigurationProperty.Companion::unwrap))
       }
 
       /**

@@ -146,7 +146,7 @@ public interface ContainerDefinitionOptions {
      * @param environmentVariables The environment variables to set in the Docker container.
      */
     override fun environmentVariables(environmentVariables: TaskInput) {
-      cdkBuilder.environmentVariables(environmentVariables.let(TaskInput::unwrap))
+      cdkBuilder.environmentVariables(environmentVariables.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -154,14 +154,14 @@ public interface ContainerDefinitionOptions {
      * stored.
      */
     override fun image(image: DockerImage) {
-      cdkBuilder.image(image.let(DockerImage::unwrap))
+      cdkBuilder.image(image.let(DockerImage.Companion::unwrap))
     }
 
     /**
      * @param mode Defines how many models the container hosts.
      */
     override fun mode(mode: Mode) {
-      cdkBuilder.mode(mode.let(Mode::unwrap))
+      cdkBuilder.mode(mode.let(Mode.Companion::unwrap))
     }
 
     /**
@@ -180,7 +180,7 @@ public interface ContainerDefinitionOptions {
      * algorithms.
      */
     override fun modelS3Location(modelS3Location: S3Location) {
-      cdkBuilder.modelS3Location(modelS3Location.let(S3Location::unwrap))
+      cdkBuilder.modelS3Location(modelS3Location.let(S3Location.Companion::unwrap))
     }
 
     public fun build():

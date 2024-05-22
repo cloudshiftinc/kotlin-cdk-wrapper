@@ -693,7 +693,7 @@ public interface ContainerDefinitionOptions {
      * Currently, only one credential spec is allowed per container definition.
      */
     override fun credentialSpecs(credentialSpecs: List<CredentialSpec>) {
-      cdkBuilder.credentialSpecs(credentialSpecs.map(CredentialSpec::unwrap))
+      cdkBuilder.credentialSpecs(credentialSpecs.map(CredentialSpec.Companion::unwrap))
     }
 
     /**
@@ -784,7 +784,7 @@ public interface ContainerDefinitionOptions {
      * @param environmentFiles The environment files to pass to the container.
      */
     override fun environmentFiles(environmentFiles: List<EnvironmentFile>) {
-      cdkBuilder.environmentFiles(environmentFiles.map(EnvironmentFile::unwrap))
+      cdkBuilder.environmentFiles(environmentFiles.map(EnvironmentFile.Companion::unwrap))
     }
 
     /**
@@ -827,7 +827,7 @@ public interface ContainerDefinitionOptions {
      * container.
      */
     override fun healthCheck(healthCheck: HealthCheck) {
-      cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
     }
 
     /**
@@ -855,7 +855,7 @@ public interface ContainerDefinitionOptions {
      * TODO: Update these to specify using classes of IContainerImage
      */
     override fun image(image: ContainerImage) {
-      cdkBuilder.image(image.let(ContainerImage::unwrap))
+      cdkBuilder.image(image.let(ContainerImage.Companion::unwrap))
     }
 
     /**
@@ -886,14 +886,14 @@ public interface ContainerDefinitionOptions {
      * [KernelCapabilities](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_KernelCapabilities.html).
      */
     override fun linuxParameters(linuxParameters: LinuxParameters) {
-      cdkBuilder.linuxParameters(linuxParameters.let(LinuxParameters::unwrap))
+      cdkBuilder.linuxParameters(linuxParameters.let(LinuxParameters.Companion::unwrap))
     }
 
     /**
      * @param logging The log configuration specification for the container.
      */
     override fun logging(logging: LogDriver) {
-      cdkBuilder.logging(logging.let(LogDriver::unwrap))
+      cdkBuilder.logging(logging.let(LogDriver.Companion::unwrap))
     }
 
     /**
@@ -925,7 +925,7 @@ public interface ContainerDefinitionOptions {
      * @param portMappings The port mappings to add to the container definition.
      */
     override fun portMappings(portMappings: List<PortMapping>) {
-      cdkBuilder.portMappings(portMappings.map(PortMapping::unwrap))
+      cdkBuilder.portMappings(portMappings.map(PortMapping.Companion::unwrap))
     }
 
     /**
@@ -972,7 +972,7 @@ public interface ContainerDefinitionOptions {
      * dependencies for a container.
      */
     override fun startTimeout(startTimeout: Duration) {
-      cdkBuilder.startTimeout(startTimeout.let(Duration::unwrap))
+      cdkBuilder.startTimeout(startTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -980,14 +980,14 @@ public interface ContainerDefinitionOptions {
      * killed if it doesn't exit normally on its own.
      */
     override fun stopTimeout(stopTimeout: Duration) {
-      cdkBuilder.stopTimeout(stopTimeout.let(Duration::unwrap))
+      cdkBuilder.stopTimeout(stopTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param systemControls A list of namespaced kernel parameters to set in the container.
      */
     override fun systemControls(systemControls: List<SystemControl>) {
-      cdkBuilder.systemControls(systemControls.map(SystemControl::unwrap))
+      cdkBuilder.systemControls(systemControls.map(SystemControl.Companion::unwrap))
     }
 
     /**
@@ -1000,7 +1000,7 @@ public interface ContainerDefinitionOptions {
      * @param ulimits An array of ulimits to set in the container.
      */
     override fun ulimits(ulimits: List<Ulimit>) {
-      cdkBuilder.ulimits(ulimits.map(Ulimit::unwrap))
+      cdkBuilder.ulimits(ulimits.map(Ulimit.Companion::unwrap))
     }
 
     /**

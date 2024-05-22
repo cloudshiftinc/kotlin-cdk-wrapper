@@ -58,8 +58,8 @@ public open class Alias(
     id: String,
     props: AliasProps,
   ) :
-      this(software.amazon.awscdk.services.kms.Alias(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(AliasProps::unwrap))
+      this(software.amazon.awscdk.services.kms.Alias(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(AliasProps.Companion::unwrap))
   )
 
   public constructor(
@@ -83,7 +83,7 @@ public open class Alias(
    * @param allowNoOp
    */
   public override fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
-      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement::unwrap)).let(AddToResourcePolicyResult::wrap)
+      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
 
   /**
    * Adds a statement to the KMS key resource policy.
@@ -104,7 +104,7 @@ public open class Alias(
    */
   public override fun addToResourcePolicy(statement: PolicyStatement, allowNoOp: Boolean):
       AddToResourcePolicyResult =
-      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement::unwrap),
+      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap),
       allowNoOp).let(AddToResourcePolicyResult::wrap)
 
   /**
@@ -129,8 +129,8 @@ public open class Alias(
    * @param actions 
    */
   public override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
-      as String}.toTypedArray()).let(Grant::wrap)
+      unwrap(this).grant(grantee.let(IGrantable.Companion::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Grant decryption permissions using this key to the given principal.
@@ -138,7 +138,7 @@ public open class Alias(
    * @param grantee 
    */
   public override fun grantDecrypt(grantee: IGrantable): Grant =
-      unwrap(this).grantDecrypt(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantDecrypt(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant encryption permissions using this key to the given principal.
@@ -146,7 +146,7 @@ public open class Alias(
    * @param grantee 
    */
   public override fun grantEncrypt(grantee: IGrantable): Grant =
-      unwrap(this).grantEncrypt(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantEncrypt(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant encryption and decryption permissions using this key to the given principal.
@@ -154,7 +154,7 @@ public open class Alias(
    * @param grantee 
    */
   public override fun grantEncryptDecrypt(grantee: IGrantable): Grant =
-      unwrap(this).grantEncryptDecrypt(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantEncryptDecrypt(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant permissions to generating MACs to the given principal.
@@ -162,7 +162,7 @@ public open class Alias(
    * @param grantee 
    */
   public override fun grantGenerateMac(grantee: IGrantable): Grant =
-      unwrap(this).grantGenerateMac(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantGenerateMac(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant permissions to verifying MACs to the given principal.
@@ -170,7 +170,7 @@ public open class Alias(
    * @param grantee 
    */
   public override fun grantVerifyMac(grantee: IGrantable): Grant =
-      unwrap(this).grantVerifyMac(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantVerifyMac(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * (deprecated) The ARN of the alias.
@@ -250,7 +250,7 @@ public open class Alias(
      * @param removalPolicy Policy to apply when the alias is removed from this stack. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -263,7 +263,7 @@ public open class Alias(
      * @param targetKey The ID of the key for which you are creating the alias. 
      */
     override fun targetKey(targetKey: IKey) {
-      cdkBuilder.targetKey(targetKey.let(IKey::unwrap))
+      cdkBuilder.targetKey(targetKey.let(IKey.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.kms.Alias = cdkBuilder.build()
@@ -275,8 +275,8 @@ public open class Alias(
       id: String,
       attrs: AliasAttributes,
     ): IAlias =
-        software.amazon.awscdk.services.kms.Alias.fromAliasAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(AliasAttributes::unwrap)).let(IAlias::wrap)
+        software.amazon.awscdk.services.kms.Alias.fromAliasAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(AliasAttributes.Companion::unwrap)).let(IAlias::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4f8a4f380057c7db5b4bb4a37859d5e4eb587ce5d28aeceaa398fb06fc738c1f")
@@ -291,7 +291,7 @@ public open class Alias(
       id: String,
       aliasName: String,
     ): IAlias =
-        software.amazon.awscdk.services.kms.Alias.fromAliasName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.kms.Alias.fromAliasName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, aliasName).let(IAlias::wrap)
 
     public operator fun invoke(

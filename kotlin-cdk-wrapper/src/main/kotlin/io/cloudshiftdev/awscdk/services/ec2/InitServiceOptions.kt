@@ -140,7 +140,7 @@ public interface InitServiceOptions {
      * For example, Amazon Linux 1 uses SysVinit, but Amazon Linux 2 uses Systemd.
      */
     override fun serviceManager(serviceManager: ServiceManager) {
-      cdkBuilder.serviceManager(serviceManager.let(ServiceManager::unwrap))
+      cdkBuilder.serviceManager(serviceManager.let(ServiceManager.Companion::unwrap))
     }
 
     /**
@@ -150,7 +150,7 @@ public interface InitServiceOptions {
      * `InitPackage` and `InitSource` objects.
      */
     override fun serviceRestartHandle(serviceRestartHandle: InitServiceRestartHandle) {
-      cdkBuilder.serviceRestartHandle(serviceRestartHandle.let(InitServiceRestartHandle::unwrap))
+      cdkBuilder.serviceRestartHandle(serviceRestartHandle.let(InitServiceRestartHandle.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.InitServiceOptions = cdkBuilder.build()

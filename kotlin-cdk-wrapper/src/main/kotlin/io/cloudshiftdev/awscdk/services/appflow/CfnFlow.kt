@@ -342,8 +342,8 @@ public open class CfnFlow(
     id: String,
     props: CfnFlowProps,
   ) :
-      this(software.amazon.awscdk.services.appflow.CfnFlow(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFlowProps::unwrap))
+      this(software.amazon.awscdk.services.appflow.CfnFlow(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFlowProps.Companion::unwrap))
   )
 
   public constructor(
@@ -379,7 +379,7 @@ public open class CfnFlow(
    * The configuration that controls how Amazon AppFlow places data in the destination connector.
    */
   public open fun destinationFlowConfigList(`value`: IResolvable) {
-    unwrap(this).setDestinationFlowConfigList(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDestinationFlowConfigList(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -429,7 +429,7 @@ public open class CfnFlow(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -455,14 +455,14 @@ public open class CfnFlow(
    * Specifies the configuration that Amazon AppFlow uses when it catalogs your data.
    */
   public open fun metadataCatalogConfig(`value`: IResolvable) {
-    unwrap(this).setMetadataCatalogConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMetadataCatalogConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the configuration that Amazon AppFlow uses when it catalogs your data.
    */
   public open fun metadataCatalogConfig(`value`: MetadataCatalogConfigProperty) {
-    unwrap(this).setMetadataCatalogConfig(`value`.let(MetadataCatalogConfigProperty::unwrap))
+    unwrap(this).setMetadataCatalogConfig(`value`.let(MetadataCatalogConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -482,14 +482,14 @@ public open class CfnFlow(
    * Contains information about the configuration of the source connector used in the flow.
    */
   public open fun sourceFlowConfig(`value`: IResolvable) {
-    unwrap(this).setSourceFlowConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSourceFlowConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Contains information about the configuration of the source connector used in the flow.
    */
   public open fun sourceFlowConfig(`value`: SourceFlowConfigProperty) {
-    unwrap(this).setSourceFlowConfig(`value`.let(SourceFlowConfigProperty::unwrap))
+    unwrap(this).setSourceFlowConfig(`value`.let(SourceFlowConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -515,7 +515,7 @@ public open class CfnFlow(
    * The tags used to organize, track, or control access for your flow.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -532,7 +532,7 @@ public open class CfnFlow(
    * A list of tasks that Amazon AppFlow performs while transferring the data in the flow run.
    */
   public open fun tasks(`value`: IResolvable) {
-    unwrap(this).setTasks(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTasks(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -556,14 +556,14 @@ public open class CfnFlow(
    * The trigger settings that determine how and when Amazon AppFlow runs the specified flow.
    */
   public open fun triggerConfig(`value`: IResolvable) {
-    unwrap(this).setTriggerConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTriggerConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The trigger settings that determine how and when Amazon AppFlow runs the specified flow.
    */
   public open fun triggerConfig(`value`: TriggerConfigProperty) {
-    unwrap(this).setTriggerConfig(`value`.let(TriggerConfigProperty::unwrap))
+    unwrap(this).setTriggerConfig(`value`.let(TriggerConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -820,7 +820,7 @@ public open class CfnFlow(
      * data in the destination connector. 
      */
     override fun destinationFlowConfigList(destinationFlowConfigList: IResolvable) {
-      cdkBuilder.destinationFlowConfigList(destinationFlowConfigList.let(IResolvable::unwrap))
+      cdkBuilder.destinationFlowConfigList(destinationFlowConfigList.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -903,7 +903,7 @@ public open class CfnFlow(
      * catalogs your data. 
      */
     override fun metadataCatalogConfig(metadataCatalogConfig: IResolvable) {
-      cdkBuilder.metadataCatalogConfig(metadataCatalogConfig.let(IResolvable::unwrap))
+      cdkBuilder.metadataCatalogConfig(metadataCatalogConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -916,7 +916,7 @@ public open class CfnFlow(
      * catalogs your data. 
      */
     override fun metadataCatalogConfig(metadataCatalogConfig: MetadataCatalogConfigProperty) {
-      cdkBuilder.metadataCatalogConfig(metadataCatalogConfig.let(MetadataCatalogConfigProperty::unwrap))
+      cdkBuilder.metadataCatalogConfig(metadataCatalogConfig.let(MetadataCatalogConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -942,7 +942,7 @@ public open class CfnFlow(
      * used in the flow. 
      */
     override fun sourceFlowConfig(sourceFlowConfig: IResolvable) {
-      cdkBuilder.sourceFlowConfig(sourceFlowConfig.let(IResolvable::unwrap))
+      cdkBuilder.sourceFlowConfig(sourceFlowConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -953,7 +953,7 @@ public open class CfnFlow(
      * used in the flow. 
      */
     override fun sourceFlowConfig(sourceFlowConfig: SourceFlowConfigProperty) {
-      cdkBuilder.sourceFlowConfig(sourceFlowConfig.let(SourceFlowConfigProperty::unwrap))
+      cdkBuilder.sourceFlowConfig(sourceFlowConfig.let(SourceFlowConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -975,7 +975,7 @@ public open class CfnFlow(
      * @param tags The tags used to organize, track, or control access for your flow. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -994,7 +994,7 @@ public open class CfnFlow(
      * flow run. 
      */
     override fun tasks(tasks: IResolvable) {
-      cdkBuilder.tasks(tasks.let(IResolvable::unwrap))
+      cdkBuilder.tasks(tasks.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1025,7 +1025,7 @@ public open class CfnFlow(
      * specified flow. 
      */
     override fun triggerConfig(triggerConfig: IResolvable) {
-      cdkBuilder.triggerConfig(triggerConfig.let(IResolvable::unwrap))
+      cdkBuilder.triggerConfig(triggerConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1036,7 +1036,7 @@ public open class CfnFlow(
      * specified flow. 
      */
     override fun triggerConfig(triggerConfig: TriggerConfigProperty) {
-      cdkBuilder.triggerConfig(triggerConfig.let(TriggerConfigProperty::unwrap))
+      cdkBuilder.triggerConfig(triggerConfig.let(TriggerConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1944,7 +1944,7 @@ public open class CfnFlow(
        * used as a destination in the flow.
        */
       override fun customProperties(customProperties: IResolvable) {
-        cdkBuilder.customProperties(customProperties.let(IResolvable::unwrap))
+        cdkBuilder.customProperties(customProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1968,7 +1968,7 @@ public open class CfnFlow(
        * when placing data in the custom connector as destination.
        */
       override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1976,7 +1976,7 @@ public open class CfnFlow(
        * when placing data in the custom connector as destination.
        */
       override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2179,7 +2179,7 @@ public open class CfnFlow(
        * a source.
        */
       override fun customProperties(customProperties: IResolvable) {
-        cdkBuilder.customProperties(customProperties.let(IResolvable::unwrap))
+        cdkBuilder.customProperties(customProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2195,7 +2195,7 @@ public open class CfnFlow(
        * transfer your data.
        */
       override fun dataTransferApi(dataTransferApi: IResolvable) {
-        cdkBuilder.dataTransferApi(dataTransferApi.let(IResolvable::unwrap))
+        cdkBuilder.dataTransferApi(dataTransferApi.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2203,7 +2203,7 @@ public open class CfnFlow(
        * transfer your data.
        */
       override fun dataTransferApi(dataTransferApi: DataTransferApiProperty) {
-        cdkBuilder.dataTransferApi(dataTransferApi.let(DataTransferApiProperty::unwrap))
+        cdkBuilder.dataTransferApi(dataTransferApi.let(DataTransferApiProperty.Companion::unwrap))
       }
 
       /**
@@ -2916,14 +2916,14 @@ public open class CfnFlow(
        * @param customConnector The properties that are required to query the custom Connector.
        */
       override fun customConnector(customConnector: IResolvable) {
-        cdkBuilder.customConnector(customConnector.let(IResolvable::unwrap))
+        cdkBuilder.customConnector(customConnector.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param customConnector The properties that are required to query the custom Connector.
        */
       override fun customConnector(customConnector: CustomConnectorDestinationPropertiesProperty) {
-        cdkBuilder.customConnector(customConnector.let(CustomConnectorDestinationPropertiesProperty::unwrap))
+        cdkBuilder.customConnector(customConnector.let(CustomConnectorDestinationPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -2939,14 +2939,14 @@ public open class CfnFlow(
        * @param eventBridge The properties required to query Amazon EventBridge.
        */
       override fun eventBridge(eventBridge: IResolvable) {
-        cdkBuilder.eventBridge(eventBridge.let(IResolvable::unwrap))
+        cdkBuilder.eventBridge(eventBridge.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param eventBridge The properties required to query Amazon EventBridge.
        */
       override fun eventBridge(eventBridge: EventBridgeDestinationPropertiesProperty) {
-        cdkBuilder.eventBridge(eventBridge.let(EventBridgeDestinationPropertiesProperty::unwrap))
+        cdkBuilder.eventBridge(eventBridge.let(EventBridgeDestinationPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -2962,14 +2962,14 @@ public open class CfnFlow(
        * @param lookoutMetrics The properties required to query Amazon Lookout for Metrics.
        */
       override fun lookoutMetrics(lookoutMetrics: IResolvable) {
-        cdkBuilder.lookoutMetrics(lookoutMetrics.let(IResolvable::unwrap))
+        cdkBuilder.lookoutMetrics(lookoutMetrics.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param lookoutMetrics The properties required to query Amazon Lookout for Metrics.
        */
       override fun lookoutMetrics(lookoutMetrics: LookoutMetricsDestinationPropertiesProperty) {
-        cdkBuilder.lookoutMetrics(lookoutMetrics.let(LookoutMetricsDestinationPropertiesProperty::unwrap))
+        cdkBuilder.lookoutMetrics(lookoutMetrics.let(LookoutMetricsDestinationPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -2985,14 +2985,14 @@ public open class CfnFlow(
        * @param marketo The properties required to query Marketo.
        */
       override fun marketo(marketo: IResolvable) {
-        cdkBuilder.marketo(marketo.let(IResolvable::unwrap))
+        cdkBuilder.marketo(marketo.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param marketo The properties required to query Marketo.
        */
       override fun marketo(marketo: MarketoDestinationPropertiesProperty) {
-        cdkBuilder.marketo(marketo.let(MarketoDestinationPropertiesProperty::unwrap))
+        cdkBuilder.marketo(marketo.let(MarketoDestinationPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3007,14 +3007,14 @@ public open class CfnFlow(
        * @param redshift The properties required to query Amazon Redshift.
        */
       override fun redshift(redshift: IResolvable) {
-        cdkBuilder.redshift(redshift.let(IResolvable::unwrap))
+        cdkBuilder.redshift(redshift.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param redshift The properties required to query Amazon Redshift.
        */
       override fun redshift(redshift: RedshiftDestinationPropertiesProperty) {
-        cdkBuilder.redshift(redshift.let(RedshiftDestinationPropertiesProperty::unwrap))
+        cdkBuilder.redshift(redshift.let(RedshiftDestinationPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3029,14 +3029,14 @@ public open class CfnFlow(
        * @param s3 The properties required to query Amazon S3.
        */
       override fun s3(s3: IResolvable) {
-        cdkBuilder.s3(s3.let(IResolvable::unwrap))
+        cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3 The properties required to query Amazon S3.
        */
       override fun s3(s3: S3DestinationPropertiesProperty) {
-        cdkBuilder.s3(s3.let(S3DestinationPropertiesProperty::unwrap))
+        cdkBuilder.s3(s3.let(S3DestinationPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3051,14 +3051,14 @@ public open class CfnFlow(
        * @param salesforce The properties required to query Salesforce.
        */
       override fun salesforce(salesforce: IResolvable) {
-        cdkBuilder.salesforce(salesforce.let(IResolvable::unwrap))
+        cdkBuilder.salesforce(salesforce.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param salesforce The properties required to query Salesforce.
        */
       override fun salesforce(salesforce: SalesforceDestinationPropertiesProperty) {
-        cdkBuilder.salesforce(salesforce.let(SalesforceDestinationPropertiesProperty::unwrap))
+        cdkBuilder.salesforce(salesforce.let(SalesforceDestinationPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3074,14 +3074,14 @@ public open class CfnFlow(
        * @param sapoData The properties required to query SAPOData.
        */
       override fun sapoData(sapoData: IResolvable) {
-        cdkBuilder.sapoData(sapoData.let(IResolvable::unwrap))
+        cdkBuilder.sapoData(sapoData.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sapoData The properties required to query SAPOData.
        */
       override fun sapoData(sapoData: SAPODataDestinationPropertiesProperty) {
-        cdkBuilder.sapoData(sapoData.let(SAPODataDestinationPropertiesProperty::unwrap))
+        cdkBuilder.sapoData(sapoData.let(SAPODataDestinationPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3096,14 +3096,14 @@ public open class CfnFlow(
        * @param snowflake The properties required to query Snowflake.
        */
       override fun snowflake(snowflake: IResolvable) {
-        cdkBuilder.snowflake(snowflake.let(IResolvable::unwrap))
+        cdkBuilder.snowflake(snowflake.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param snowflake The properties required to query Snowflake.
        */
       override fun snowflake(snowflake: SnowflakeDestinationPropertiesProperty) {
-        cdkBuilder.snowflake(snowflake.let(SnowflakeDestinationPropertiesProperty::unwrap))
+        cdkBuilder.snowflake(snowflake.let(SnowflakeDestinationPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3118,14 +3118,14 @@ public open class CfnFlow(
        * @param upsolver The properties required to query Upsolver.
        */
       override fun upsolver(upsolver: IResolvable) {
-        cdkBuilder.upsolver(upsolver.let(IResolvable::unwrap))
+        cdkBuilder.upsolver(upsolver.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param upsolver The properties required to query Upsolver.
        */
       override fun upsolver(upsolver: UpsolverDestinationPropertiesProperty) {
-        cdkBuilder.upsolver(upsolver.let(UpsolverDestinationPropertiesProperty::unwrap))
+        cdkBuilder.upsolver(upsolver.let(UpsolverDestinationPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3140,14 +3140,14 @@ public open class CfnFlow(
        * @param zendesk The properties required to query Zendesk.
        */
       override fun zendesk(zendesk: IResolvable) {
-        cdkBuilder.zendesk(zendesk.let(IResolvable::unwrap))
+        cdkBuilder.zendesk(zendesk.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param zendesk The properties required to query Zendesk.
        */
       override fun zendesk(zendesk: ZendeskDestinationPropertiesProperty) {
-        cdkBuilder.zendesk(zendesk.let(ZendeskDestinationPropertiesProperty::unwrap))
+        cdkBuilder.zendesk(zendesk.let(ZendeskDestinationPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3524,7 +3524,7 @@ public open class CfnFlow(
        * a particular connector. 
        */
       override fun destinationConnectorProperties(destinationConnectorProperties: IResolvable) {
-        cdkBuilder.destinationConnectorProperties(destinationConnectorProperties.let(IResolvable::unwrap))
+        cdkBuilder.destinationConnectorProperties(destinationConnectorProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3533,7 +3533,7 @@ public open class CfnFlow(
        */
       override
           fun destinationConnectorProperties(destinationConnectorProperties: DestinationConnectorPropertiesProperty) {
-        cdkBuilder.destinationConnectorProperties(destinationConnectorProperties.let(DestinationConnectorPropertiesProperty::unwrap))
+        cdkBuilder.destinationConnectorProperties(destinationConnectorProperties.let(DestinationConnectorPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3795,7 +3795,7 @@ public open class CfnFlow(
        * failure when attempting to place data in the destination.
        */
       override fun failOnFirstError(failOnFirstError: IResolvable) {
-        cdkBuilder.failOnFirstError(failOnFirstError.let(IResolvable::unwrap))
+        cdkBuilder.failOnFirstError(failOnFirstError.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -3924,14 +3924,14 @@ public open class CfnFlow(
        * @param errorHandlingConfig The object specified in the Amplitude flow source.
        */
       override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param errorHandlingConfig The object specified in the Amplitude flow source.
        */
       override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -4562,7 +4562,7 @@ public open class CfnFlow(
        * `ErrorHandlingConfig` is a part of the destination connector details.
        */
       override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4573,7 +4573,7 @@ public open class CfnFlow(
        * `ErrorHandlingConfig` is a part of the destination connector details.
        */
       override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -4793,7 +4793,7 @@ public open class CfnFlow(
        * catalogs your data with the AWS Glue Data Catalog .
        */
       override fun glueDataCatalog(glueDataCatalog: IResolvable) {
-        cdkBuilder.glueDataCatalog(glueDataCatalog.let(IResolvable::unwrap))
+        cdkBuilder.glueDataCatalog(glueDataCatalog.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4801,7 +4801,7 @@ public open class CfnFlow(
        * catalogs your data with the AWS Glue Data Catalog .
        */
       override fun glueDataCatalog(glueDataCatalog: GlueDataCatalogProperty) {
-        cdkBuilder.glueDataCatalog(glueDataCatalog.let(GlueDataCatalogProperty::unwrap))
+        cdkBuilder.glueDataCatalog(glueDataCatalog.let(GlueDataCatalogProperty.Companion::unwrap))
       }
 
       /**
@@ -5268,7 +5268,7 @@ public open class CfnFlow(
        * `ErrorHandlingConfig` is a part of the destination connector details.
        */
       override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5279,7 +5279,7 @@ public open class CfnFlow(
        * `ErrorHandlingConfig` is a part of the destination connector details.
        */
       override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -5491,7 +5491,7 @@ public open class CfnFlow(
        * format the flow output data when Amazon S3 is used as the destination.
        */
       override fun s3OutputFormatConfig(s3OutputFormatConfig: IResolvable) {
-        cdkBuilder.s3OutputFormatConfig(s3OutputFormatConfig.let(IResolvable::unwrap))
+        cdkBuilder.s3OutputFormatConfig(s3OutputFormatConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5499,7 +5499,7 @@ public open class CfnFlow(
        * format the flow output data when Amazon S3 is used as the destination.
        */
       override fun s3OutputFormatConfig(s3OutputFormatConfig: S3OutputFormatConfigProperty) {
-        cdkBuilder.s3OutputFormatConfig(s3OutputFormatConfig.let(S3OutputFormatConfigProperty::unwrap))
+        cdkBuilder.s3OutputFormatConfig(s3OutputFormatConfig.let(S3OutputFormatConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -5797,7 +5797,7 @@ public open class CfnFlow(
        * format of your flow data.
        */
       override fun aggregationConfig(aggregationConfig: IResolvable) {
-        cdkBuilder.aggregationConfig(aggregationConfig.let(IResolvable::unwrap))
+        cdkBuilder.aggregationConfig(aggregationConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5805,7 +5805,7 @@ public open class CfnFlow(
        * format of your flow data.
        */
       override fun aggregationConfig(aggregationConfig: AggregationConfigProperty) {
-        cdkBuilder.aggregationConfig(aggregationConfig.let(AggregationConfigProperty::unwrap))
+        cdkBuilder.aggregationConfig(aggregationConfig.let(AggregationConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -5831,7 +5831,7 @@ public open class CfnFlow(
        * You can name folders according to the flow frequency and date.
        */
       override fun prefixConfig(prefixConfig: IResolvable) {
-        cdkBuilder.prefixConfig(prefixConfig.let(IResolvable::unwrap))
+        cdkBuilder.prefixConfig(prefixConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5840,7 +5840,7 @@ public open class CfnFlow(
        * You can name folders according to the flow frequency and date.
        */
       override fun prefixConfig(prefixConfig: PrefixConfigProperty) {
-        cdkBuilder.prefixConfig(prefixConfig.let(PrefixConfigProperty::unwrap))
+        cdkBuilder.prefixConfig(prefixConfig.let(PrefixConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -5878,7 +5878,7 @@ public open class CfnFlow(
        * output.
        */
       override fun preserveSourceDataTyping(preserveSourceDataTyping: IResolvable) {
-        cdkBuilder.preserveSourceDataTyping(preserveSourceDataTyping.let(IResolvable::unwrap))
+        cdkBuilder.preserveSourceDataTyping(preserveSourceDataTyping.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -6053,7 +6053,7 @@ public open class CfnFlow(
        * that you provide the flow input data.
        */
       override fun s3InputFormatConfig(s3InputFormatConfig: IResolvable) {
-        cdkBuilder.s3InputFormatConfig(s3InputFormatConfig.let(IResolvable::unwrap))
+        cdkBuilder.s3InputFormatConfig(s3InputFormatConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6061,7 +6061,7 @@ public open class CfnFlow(
        * that you provide the flow input data.
        */
       override fun s3InputFormatConfig(s3InputFormatConfig: S3InputFormatConfigProperty) {
-        cdkBuilder.s3InputFormatConfig(s3InputFormatConfig.let(S3InputFormatConfigProperty::unwrap))
+        cdkBuilder.s3InputFormatConfig(s3InputFormatConfig.let(S3InputFormatConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -6300,7 +6300,7 @@ public open class CfnFlow(
        * `ErrorHandlingConfig` is a part of the destination connector details.
        */
       override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6311,7 +6311,7 @@ public open class CfnFlow(
        * `ErrorHandlingConfig` is a part of the destination connector details.
        */
       override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -6356,7 +6356,7 @@ public open class CfnFlow(
        * connector upon a successful insert operation.
        */
       override fun successResponseHandlingConfig(successResponseHandlingConfig: IResolvable) {
-        cdkBuilder.successResponseHandlingConfig(successResponseHandlingConfig.let(IResolvable::unwrap))
+        cdkBuilder.successResponseHandlingConfig(successResponseHandlingConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6367,7 +6367,7 @@ public open class CfnFlow(
        */
       override
           fun successResponseHandlingConfig(successResponseHandlingConfig: SuccessResponseHandlingConfigProperty) {
-        cdkBuilder.successResponseHandlingConfig(successResponseHandlingConfig.let(SuccessResponseHandlingConfigProperty::unwrap))
+        cdkBuilder.successResponseHandlingConfig(successResponseHandlingConfig.let(SuccessResponseHandlingConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -6733,14 +6733,14 @@ public open class CfnFlow(
        * @param paginationConfig SAP Source connector page size.
        */
       override fun paginationConfig(paginationConfig: IResolvable) {
-        cdkBuilder.paginationConfig(paginationConfig.let(IResolvable::unwrap))
+        cdkBuilder.paginationConfig(paginationConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param paginationConfig SAP Source connector page size.
        */
       override fun paginationConfig(paginationConfig: SAPODataPaginationConfigProperty) {
-        cdkBuilder.paginationConfig(paginationConfig.let(SAPODataPaginationConfigProperty::unwrap))
+        cdkBuilder.paginationConfig(paginationConfig.let(SAPODataPaginationConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -6756,14 +6756,14 @@ public open class CfnFlow(
        * @param parallelismConfig SAP Source connector parallelism factor.
        */
       override fun parallelismConfig(parallelismConfig: IResolvable) {
-        cdkBuilder.parallelismConfig(parallelismConfig.let(IResolvable::unwrap))
+        cdkBuilder.parallelismConfig(parallelismConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param parallelismConfig SAP Source connector parallelism factor.
        */
       override fun parallelismConfig(parallelismConfig: SAPODataParallelismConfigProperty) {
-        cdkBuilder.parallelismConfig(parallelismConfig.let(SAPODataParallelismConfigProperty::unwrap))
+        cdkBuilder.parallelismConfig(parallelismConfig.let(SAPODataParallelismConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -7064,7 +7064,7 @@ public open class CfnFlow(
        * `ErrorHandlingConfig` is a part of the destination connector details.
        */
       override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7075,7 +7075,7 @@ public open class CfnFlow(
        * `ErrorHandlingConfig` is a part of the destination connector details.
        */
       override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -7424,7 +7424,7 @@ public open class CfnFlow(
        * added) fields in the Salesforce objects while running a flow.
        */
       override fun enableDynamicFieldUpdate(enableDynamicFieldUpdate: IResolvable) {
-        cdkBuilder.enableDynamicFieldUpdate(enableDynamicFieldUpdate.let(IResolvable::unwrap))
+        cdkBuilder.enableDynamicFieldUpdate(enableDynamicFieldUpdate.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7440,7 +7440,7 @@ public open class CfnFlow(
        * flow run.
        */
       override fun includeDeletedRecords(includeDeletedRecords: IResolvable) {
-        cdkBuilder.includeDeletedRecords(includeDeletedRecords.let(IResolvable::unwrap))
+        cdkBuilder.includeDeletedRecords(includeDeletedRecords.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8265,7 +8265,7 @@ public open class CfnFlow(
        * `ErrorHandlingConfig` is a part of the destination connector details.
        */
       override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8276,7 +8276,7 @@ public open class CfnFlow(
        * `ErrorHandlingConfig` is a part of the destination connector details.
        */
       override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -8896,14 +8896,14 @@ public open class CfnFlow(
        * @param amplitude Specifies the information that is required for querying Amplitude.
        */
       override fun amplitude(amplitude: IResolvable) {
-        cdkBuilder.amplitude(amplitude.let(IResolvable::unwrap))
+        cdkBuilder.amplitude(amplitude.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param amplitude Specifies the information that is required for querying Amplitude.
        */
       override fun amplitude(amplitude: AmplitudeSourcePropertiesProperty) {
-        cdkBuilder.amplitude(amplitude.let(AmplitudeSourcePropertiesProperty::unwrap))
+        cdkBuilder.amplitude(amplitude.let(AmplitudeSourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -8919,7 +8919,7 @@ public open class CfnFlow(
        * used as a source.
        */
       override fun customConnector(customConnector: IResolvable) {
-        cdkBuilder.customConnector(customConnector.let(IResolvable::unwrap))
+        cdkBuilder.customConnector(customConnector.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8927,7 +8927,7 @@ public open class CfnFlow(
        * used as a source.
        */
       override fun customConnector(customConnector: CustomConnectorSourcePropertiesProperty) {
-        cdkBuilder.customConnector(customConnector.let(CustomConnectorSourcePropertiesProperty::unwrap))
+        cdkBuilder.customConnector(customConnector.let(CustomConnectorSourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -8944,14 +8944,14 @@ public open class CfnFlow(
        * @param datadog Specifies the information that is required for querying Datadog.
        */
       override fun datadog(datadog: IResolvable) {
-        cdkBuilder.datadog(datadog.let(IResolvable::unwrap))
+        cdkBuilder.datadog(datadog.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param datadog Specifies the information that is required for querying Datadog.
        */
       override fun datadog(datadog: DatadogSourcePropertiesProperty) {
-        cdkBuilder.datadog(datadog.let(DatadogSourcePropertiesProperty::unwrap))
+        cdkBuilder.datadog(datadog.let(DatadogSourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -8966,14 +8966,14 @@ public open class CfnFlow(
        * @param dynatrace Specifies the information that is required for querying Dynatrace.
        */
       override fun dynatrace(dynatrace: IResolvable) {
-        cdkBuilder.dynatrace(dynatrace.let(IResolvable::unwrap))
+        cdkBuilder.dynatrace(dynatrace.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dynatrace Specifies the information that is required for querying Dynatrace.
        */
       override fun dynatrace(dynatrace: DynatraceSourcePropertiesProperty) {
-        cdkBuilder.dynatrace(dynatrace.let(DynatraceSourcePropertiesProperty::unwrap))
+        cdkBuilder.dynatrace(dynatrace.let(DynatraceSourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -8989,7 +8989,7 @@ public open class CfnFlow(
        * Analytics.
        */
       override fun googleAnalytics(googleAnalytics: IResolvable) {
-        cdkBuilder.googleAnalytics(googleAnalytics.let(IResolvable::unwrap))
+        cdkBuilder.googleAnalytics(googleAnalytics.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8997,7 +8997,7 @@ public open class CfnFlow(
        * Analytics.
        */
       override fun googleAnalytics(googleAnalytics: GoogleAnalyticsSourcePropertiesProperty) {
-        cdkBuilder.googleAnalytics(googleAnalytics.let(GoogleAnalyticsSourcePropertiesProperty::unwrap))
+        cdkBuilder.googleAnalytics(googleAnalytics.let(GoogleAnalyticsSourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -9014,14 +9014,14 @@ public open class CfnFlow(
        * @param inforNexus Specifies the information that is required for querying Infor Nexus.
        */
       override fun inforNexus(inforNexus: IResolvable) {
-        cdkBuilder.inforNexus(inforNexus.let(IResolvable::unwrap))
+        cdkBuilder.inforNexus(inforNexus.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param inforNexus Specifies the information that is required for querying Infor Nexus.
        */
       override fun inforNexus(inforNexus: InforNexusSourcePropertiesProperty) {
-        cdkBuilder.inforNexus(inforNexus.let(InforNexusSourcePropertiesProperty::unwrap))
+        cdkBuilder.inforNexus(inforNexus.let(InforNexusSourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -9036,14 +9036,14 @@ public open class CfnFlow(
        * @param marketo Specifies the information that is required for querying Marketo.
        */
       override fun marketo(marketo: IResolvable) {
-        cdkBuilder.marketo(marketo.let(IResolvable::unwrap))
+        cdkBuilder.marketo(marketo.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param marketo Specifies the information that is required for querying Marketo.
        */
       override fun marketo(marketo: MarketoSourcePropertiesProperty) {
-        cdkBuilder.marketo(marketo.let(MarketoSourcePropertiesProperty::unwrap))
+        cdkBuilder.marketo(marketo.let(MarketoSourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -9058,14 +9058,14 @@ public open class CfnFlow(
        * @param pardot Specifies the information that is required for querying Salesforce Pardot.
        */
       override fun pardot(pardot: IResolvable) {
-        cdkBuilder.pardot(pardot.let(IResolvable::unwrap))
+        cdkBuilder.pardot(pardot.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param pardot Specifies the information that is required for querying Salesforce Pardot.
        */
       override fun pardot(pardot: PardotSourcePropertiesProperty) {
-        cdkBuilder.pardot(pardot.let(PardotSourcePropertiesProperty::unwrap))
+        cdkBuilder.pardot(pardot.let(PardotSourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -9080,14 +9080,14 @@ public open class CfnFlow(
        * @param s3 Specifies the information that is required for querying Amazon S3.
        */
       override fun s3(s3: IResolvable) {
-        cdkBuilder.s3(s3.let(IResolvable::unwrap))
+        cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3 Specifies the information that is required for querying Amazon S3.
        */
       override fun s3(s3: S3SourcePropertiesProperty) {
-        cdkBuilder.s3(s3.let(S3SourcePropertiesProperty::unwrap))
+        cdkBuilder.s3(s3.let(S3SourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -9102,14 +9102,14 @@ public open class CfnFlow(
        * @param salesforce Specifies the information that is required for querying Salesforce.
        */
       override fun salesforce(salesforce: IResolvable) {
-        cdkBuilder.salesforce(salesforce.let(IResolvable::unwrap))
+        cdkBuilder.salesforce(salesforce.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param salesforce Specifies the information that is required for querying Salesforce.
        */
       override fun salesforce(salesforce: SalesforceSourcePropertiesProperty) {
-        cdkBuilder.salesforce(salesforce.let(SalesforceSourcePropertiesProperty::unwrap))
+        cdkBuilder.salesforce(salesforce.let(SalesforceSourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -9124,14 +9124,14 @@ public open class CfnFlow(
        * @param sapoData The properties that are applied when using SAPOData as a flow source.
        */
       override fun sapoData(sapoData: IResolvable) {
-        cdkBuilder.sapoData(sapoData.let(IResolvable::unwrap))
+        cdkBuilder.sapoData(sapoData.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sapoData The properties that are applied when using SAPOData as a flow source.
        */
       override fun sapoData(sapoData: SAPODataSourcePropertiesProperty) {
-        cdkBuilder.sapoData(sapoData.let(SAPODataSourcePropertiesProperty::unwrap))
+        cdkBuilder.sapoData(sapoData.let(SAPODataSourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -9146,14 +9146,14 @@ public open class CfnFlow(
        * @param serviceNow Specifies the information that is required for querying ServiceNow.
        */
       override fun serviceNow(serviceNow: IResolvable) {
-        cdkBuilder.serviceNow(serviceNow.let(IResolvable::unwrap))
+        cdkBuilder.serviceNow(serviceNow.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param serviceNow Specifies the information that is required for querying ServiceNow.
        */
       override fun serviceNow(serviceNow: ServiceNowSourcePropertiesProperty) {
-        cdkBuilder.serviceNow(serviceNow.let(ServiceNowSourcePropertiesProperty::unwrap))
+        cdkBuilder.serviceNow(serviceNow.let(ServiceNowSourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -9168,14 +9168,14 @@ public open class CfnFlow(
        * @param singular Specifies the information that is required for querying Singular.
        */
       override fun singular(singular: IResolvable) {
-        cdkBuilder.singular(singular.let(IResolvable::unwrap))
+        cdkBuilder.singular(singular.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param singular Specifies the information that is required for querying Singular.
        */
       override fun singular(singular: SingularSourcePropertiesProperty) {
-        cdkBuilder.singular(singular.let(SingularSourcePropertiesProperty::unwrap))
+        cdkBuilder.singular(singular.let(SingularSourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -9190,14 +9190,14 @@ public open class CfnFlow(
        * @param slack Specifies the information that is required for querying Slack.
        */
       override fun slack(slack: IResolvable) {
-        cdkBuilder.slack(slack.let(IResolvable::unwrap))
+        cdkBuilder.slack(slack.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param slack Specifies the information that is required for querying Slack.
        */
       override fun slack(slack: SlackSourcePropertiesProperty) {
-        cdkBuilder.slack(slack.let(SlackSourcePropertiesProperty::unwrap))
+        cdkBuilder.slack(slack.let(SlackSourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -9212,14 +9212,14 @@ public open class CfnFlow(
        * @param trendmicro Specifies the information that is required for querying Trend Micro.
        */
       override fun trendmicro(trendmicro: IResolvable) {
-        cdkBuilder.trendmicro(trendmicro.let(IResolvable::unwrap))
+        cdkBuilder.trendmicro(trendmicro.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param trendmicro Specifies the information that is required for querying Trend Micro.
        */
       override fun trendmicro(trendmicro: TrendmicroSourcePropertiesProperty) {
-        cdkBuilder.trendmicro(trendmicro.let(TrendmicroSourcePropertiesProperty::unwrap))
+        cdkBuilder.trendmicro(trendmicro.let(TrendmicroSourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -9234,14 +9234,14 @@ public open class CfnFlow(
        * @param veeva Specifies the information that is required for querying Veeva.
        */
       override fun veeva(veeva: IResolvable) {
-        cdkBuilder.veeva(veeva.let(IResolvable::unwrap))
+        cdkBuilder.veeva(veeva.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param veeva Specifies the information that is required for querying Veeva.
        */
       override fun veeva(veeva: VeevaSourcePropertiesProperty) {
-        cdkBuilder.veeva(veeva.let(VeevaSourcePropertiesProperty::unwrap))
+        cdkBuilder.veeva(veeva.let(VeevaSourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -9256,14 +9256,14 @@ public open class CfnFlow(
        * @param zendesk Specifies the information that is required for querying Zendesk.
        */
       override fun zendesk(zendesk: IResolvable) {
-        cdkBuilder.zendesk(zendesk.let(IResolvable::unwrap))
+        cdkBuilder.zendesk(zendesk.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param zendesk Specifies the information that is required for querying Zendesk.
        */
       override fun zendesk(zendesk: ZendeskSourcePropertiesProperty) {
-        cdkBuilder.zendesk(zendesk.let(ZendeskSourcePropertiesProperty::unwrap))
+        cdkBuilder.zendesk(zendesk.let(ZendeskSourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -9670,7 +9670,7 @@ public open class CfnFlow(
        * when querying for the incremental data pull.
        */
       override fun incrementalPullConfig(incrementalPullConfig: IResolvable) {
-        cdkBuilder.incrementalPullConfig(incrementalPullConfig.let(IResolvable::unwrap))
+        cdkBuilder.incrementalPullConfig(incrementalPullConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9680,7 +9680,7 @@ public open class CfnFlow(
        * when querying for the incremental data pull.
        */
       override fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty) {
-        cdkBuilder.incrementalPullConfig(incrementalPullConfig.let(IncrementalPullConfigProperty::unwrap))
+        cdkBuilder.incrementalPullConfig(incrementalPullConfig.let(IncrementalPullConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -9700,7 +9700,7 @@ public open class CfnFlow(
        * particular source connector. 
        */
       override fun sourceConnectorProperties(sourceConnectorProperties: IResolvable) {
-        cdkBuilder.sourceConnectorProperties(sourceConnectorProperties.let(IResolvable::unwrap))
+        cdkBuilder.sourceConnectorProperties(sourceConnectorProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9709,7 +9709,7 @@ public open class CfnFlow(
        */
       override
           fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty) {
-        cdkBuilder.sourceConnectorProperties(sourceConnectorProperties.let(SourceConnectorPropertiesProperty::unwrap))
+        cdkBuilder.sourceConnectorProperties(sourceConnectorProperties.let(SourceConnectorPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -10173,14 +10173,14 @@ public open class CfnFlow(
        * @param connectorOperator The operation to be performed on the provided source fields.
        */
       override fun connectorOperator(connectorOperator: IResolvable) {
-        cdkBuilder.connectorOperator(connectorOperator.let(IResolvable::unwrap))
+        cdkBuilder.connectorOperator(connectorOperator.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param connectorOperator The operation to be performed on the provided source fields.
        */
       override fun connectorOperator(connectorOperator: ConnectorOperatorProperty) {
-        cdkBuilder.connectorOperator(connectorOperator.let(ConnectorOperatorProperty::unwrap))
+        cdkBuilder.connectorOperator(connectorOperator.let(ConnectorOperatorProperty.Companion::unwrap))
       }
 
       /**
@@ -10218,7 +10218,7 @@ public open class CfnFlow(
        * The execution service looks for particular information based on the `TaskType` .
        */
       override fun taskProperties(taskProperties: IResolvable) {
-        cdkBuilder.taskProperties(taskProperties.let(IResolvable::unwrap))
+        cdkBuilder.taskProperties(taskProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10487,7 +10487,7 @@ public open class CfnFlow(
        * Currently, these settings only apply to the `Scheduled` trigger type.
        */
       override fun triggerProperties(triggerProperties: IResolvable) {
-        cdkBuilder.triggerProperties(triggerProperties.let(IResolvable::unwrap))
+        cdkBuilder.triggerProperties(triggerProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10496,7 +10496,7 @@ public open class CfnFlow(
        * Currently, these settings only apply to the `Scheduled` trigger type.
        */
       override fun triggerProperties(triggerProperties: ScheduledTriggerPropertiesProperty) {
-        cdkBuilder.triggerProperties(triggerProperties.let(ScheduledTriggerPropertiesProperty::unwrap))
+        cdkBuilder.triggerProperties(triggerProperties.let(ScheduledTriggerPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -10684,7 +10684,7 @@ public open class CfnFlow(
        * Upsolver is used as the flow destination. 
        */
       override fun s3OutputFormatConfig(s3OutputFormatConfig: IResolvable) {
-        cdkBuilder.s3OutputFormatConfig(s3OutputFormatConfig.let(IResolvable::unwrap))
+        cdkBuilder.s3OutputFormatConfig(s3OutputFormatConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10693,7 +10693,7 @@ public open class CfnFlow(
        */
       override
           fun s3OutputFormatConfig(s3OutputFormatConfig: UpsolverS3OutputFormatConfigProperty) {
-        cdkBuilder.s3OutputFormatConfig(s3OutputFormatConfig.let(UpsolverS3OutputFormatConfigProperty::unwrap))
+        cdkBuilder.s3OutputFormatConfig(s3OutputFormatConfig.let(UpsolverS3OutputFormatConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -10871,7 +10871,7 @@ public open class CfnFlow(
        * format of your flow data.
        */
       override fun aggregationConfig(aggregationConfig: IResolvable) {
-        cdkBuilder.aggregationConfig(aggregationConfig.let(IResolvable::unwrap))
+        cdkBuilder.aggregationConfig(aggregationConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10879,7 +10879,7 @@ public open class CfnFlow(
        * format of your flow data.
        */
       override fun aggregationConfig(aggregationConfig: AggregationConfigProperty) {
-        cdkBuilder.aggregationConfig(aggregationConfig.let(AggregationConfigProperty::unwrap))
+        cdkBuilder.aggregationConfig(aggregationConfig.let(AggregationConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -10905,7 +10905,7 @@ public open class CfnFlow(
        * names in the flow destination. 
        */
       override fun prefixConfig(prefixConfig: IResolvable) {
-        cdkBuilder.prefixConfig(prefixConfig.let(IResolvable::unwrap))
+        cdkBuilder.prefixConfig(prefixConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10913,7 +10913,7 @@ public open class CfnFlow(
        * names in the flow destination. 
        */
       override fun prefixConfig(prefixConfig: PrefixConfigProperty) {
-        cdkBuilder.prefixConfig(prefixConfig.let(PrefixConfigProperty::unwrap))
+        cdkBuilder.prefixConfig(prefixConfig.let(PrefixConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -11110,7 +11110,7 @@ public open class CfnFlow(
        * extract flow.
        */
       override fun includeAllVersions(includeAllVersions: IResolvable) {
-        cdkBuilder.includeAllVersions(includeAllVersions.let(IResolvable::unwrap))
+        cdkBuilder.includeAllVersions(includeAllVersions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11126,7 +11126,7 @@ public open class CfnFlow(
        * flow.
        */
       override fun includeRenditions(includeRenditions: IResolvable) {
-        cdkBuilder.includeRenditions(includeRenditions.let(IResolvable::unwrap))
+        cdkBuilder.includeRenditions(includeRenditions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11142,7 +11142,7 @@ public open class CfnFlow(
        * flow.
        */
       override fun includeSourceFiles(includeSourceFiles: IResolvable) {
-        cdkBuilder.includeSourceFiles(includeSourceFiles.let(IResolvable::unwrap))
+        cdkBuilder.includeSourceFiles(includeSourceFiles.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11348,7 +11348,7 @@ public open class CfnFlow(
        * `ErrorHandlingConfig` is a part of the destination connector details.
        */
       override fun errorHandlingConfig(errorHandlingConfig: IResolvable) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable::unwrap))
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11359,7 +11359,7 @@ public open class CfnFlow(
        * `ErrorHandlingConfig` is a part of the destination connector details.
        */
       override fun errorHandlingConfig(errorHandlingConfig: ErrorHandlingConfigProperty) {
-        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty::unwrap))
+        cdkBuilder.errorHandlingConfig(errorHandlingConfig.let(ErrorHandlingConfigProperty.Companion::unwrap))
       }
 
       /**

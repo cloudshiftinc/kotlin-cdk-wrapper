@@ -134,7 +134,7 @@ public interface CfnPricingPlanProps {
      * @param tags A map that contains tag keys and tag values that are attached to a pricing plan.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

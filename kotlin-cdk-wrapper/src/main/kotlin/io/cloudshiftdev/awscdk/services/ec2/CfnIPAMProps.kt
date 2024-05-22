@@ -167,7 +167,7 @@ public interface CfnIPAMProps {
      * User Guide* .
      */
     override fun operatingRegions(operatingRegions: IResolvable) {
-      cdkBuilder.operatingRegions(operatingRegions.let(IResolvable::unwrap))
+      cdkBuilder.operatingRegions(operatingRegions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -202,7 +202,7 @@ public interface CfnIPAMProps {
      * `tag:Owner` for the filter name and `TeamA` for the filter value.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

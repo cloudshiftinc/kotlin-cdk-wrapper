@@ -311,7 +311,7 @@ public interface ServerDeploymentGroupProps {
      * Alarms can also be added after the Deployment Group is created using the `#addAlarm` method.
      */
     override fun alarms(alarms: List<IAlarm>) {
-      cdkBuilder.alarms(alarms.map(IAlarm::unwrap))
+      cdkBuilder.alarms(alarms.map(IAlarm.Companion::unwrap))
     }
 
     /**
@@ -328,14 +328,14 @@ public interface ServerDeploymentGroupProps {
      * to.
      */
     override fun application(application: IServerApplication) {
-      cdkBuilder.application(application.let(IServerApplication::unwrap))
+      cdkBuilder.application(application.let(IServerApplication.Companion::unwrap))
     }
 
     /**
      * @param autoRollback The auto-rollback configuration for this Deployment Group.
      */
     override fun autoRollback(autoRollback: AutoRollbackConfig) {
-      cdkBuilder.autoRollback(autoRollback.let(AutoRollbackConfig::unwrap))
+      cdkBuilder.autoRollback(autoRollback.let(AutoRollbackConfig.Companion::unwrap))
     }
 
     /**
@@ -355,7 +355,7 @@ public interface ServerDeploymentGroupProps {
      * for ASGs to install the codedeploy agent.
      */
     override fun autoScalingGroups(autoScalingGroups: List<IAutoScalingGroup>) {
-      cdkBuilder.autoScalingGroups(autoScalingGroups.map(IAutoScalingGroup::unwrap))
+      cdkBuilder.autoScalingGroups(autoScalingGroups.map(IAutoScalingGroup.Companion::unwrap))
     }
 
     /**
@@ -374,7 +374,7 @@ public interface ServerDeploymentGroupProps {
      * Deployment Group.
      */
     override fun deploymentConfig(deploymentConfig: IServerDeploymentConfig) {
-      cdkBuilder.deploymentConfig(deploymentConfig.let(IServerDeploymentConfig::unwrap))
+      cdkBuilder.deploymentConfig(deploymentConfig.let(IServerDeploymentConfig.Companion::unwrap))
     }
 
     /**
@@ -390,7 +390,7 @@ public interface ServerDeploymentGroupProps {
      * occurs will be added to this Deployment Group.
      */
     override fun ec2InstanceTags(ec2InstanceTags: InstanceTagSet) {
-      cdkBuilder.ec2InstanceTags(ec2InstanceTags.let(InstanceTagSet::unwrap))
+      cdkBuilder.ec2InstanceTags(ec2InstanceTags.let(InstanceTagSet.Companion::unwrap))
     }
 
     /**
@@ -426,7 +426,7 @@ public interface ServerDeploymentGroupProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun loadBalancer(loadBalancer: LoadBalancer) {
-      cdkBuilder.loadBalancer(loadBalancer.let(LoadBalancer::unwrap))
+      cdkBuilder.loadBalancer(loadBalancer.let(LoadBalancer.Companion::unwrap))
     }
 
     /**
@@ -435,7 +435,7 @@ public interface ServerDeploymentGroupProps {
      * Application Load Balancers / Network Load Balancers Target Groups.
      */
     override fun loadBalancers(loadBalancers: List<LoadBalancer>) {
-      cdkBuilder.loadBalancers(loadBalancers.map(LoadBalancer::unwrap))
+      cdkBuilder.loadBalancers(loadBalancers.map(LoadBalancer.Companion::unwrap))
     }
 
     /**
@@ -451,14 +451,14 @@ public interface ServerDeploymentGroupProps {
      * deployment occurs will be added to this Deployment Group.
      */
     override fun onPremiseInstanceTags(onPremiseInstanceTags: InstanceTagSet) {
-      cdkBuilder.onPremiseInstanceTags(onPremiseInstanceTags.let(InstanceTagSet::unwrap))
+      cdkBuilder.onPremiseInstanceTags(onPremiseInstanceTags.let(InstanceTagSet.Companion::unwrap))
     }
 
     /**
      * @param role The service Role of this Deployment Group.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codedeploy.ServerDeploymentGroupProps =

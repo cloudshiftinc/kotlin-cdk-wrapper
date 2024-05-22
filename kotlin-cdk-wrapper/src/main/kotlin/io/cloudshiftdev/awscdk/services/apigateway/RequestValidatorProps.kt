@@ -87,7 +87,7 @@ public interface RequestValidatorProps : RequestValidatorOptions {
      * the deployment when the model of the REST API changes.
      */
     override fun restApi(restApi: IRestApi) {
-      cdkBuilder.restApi(restApi.let(IRestApi::unwrap))
+      cdkBuilder.restApi(restApi.let(IRestApi.Companion::unwrap))
     }
 
     /**

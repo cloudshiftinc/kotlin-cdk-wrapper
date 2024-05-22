@@ -43,8 +43,8 @@ public open class CfnTransitGatewayRoute(
     id: String,
     props: CfnTransitGatewayRouteProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnTransitGatewayRoute(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTransitGatewayRouteProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnTransitGatewayRoute(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTransitGatewayRouteProps.Companion::unwrap))
   )
 
   public constructor(
@@ -75,7 +75,7 @@ public open class CfnTransitGatewayRoute(
    * Indicates whether to drop traffic that matches this route.
    */
   public open fun blackhole(`value`: IResolvable) {
-    unwrap(this).setBlackhole(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBlackhole(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -96,7 +96,7 @@ public open class CfnTransitGatewayRoute(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -195,7 +195,7 @@ public open class CfnTransitGatewayRoute(
      * @param blackhole Indicates whether to drop traffic that matches this route. 
      */
     override fun blackhole(blackhole: IResolvable) {
-      cdkBuilder.blackhole(blackhole.let(IResolvable::unwrap))
+      cdkBuilder.blackhole(blackhole.let(IResolvable.Companion::unwrap))
     }
 
     /**

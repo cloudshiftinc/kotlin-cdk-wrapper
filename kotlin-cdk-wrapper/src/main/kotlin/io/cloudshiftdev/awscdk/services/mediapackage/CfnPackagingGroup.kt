@@ -61,8 +61,8 @@ public open class CfnPackagingGroup(
     id: String,
     props: CfnPackagingGroupProps,
   ) :
-      this(software.amazon.awscdk.services.mediapackage.CfnPackagingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPackagingGroupProps::unwrap))
+      this(software.amazon.awscdk.services.mediapackage.CfnPackagingGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPackagingGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -93,14 +93,14 @@ public open class CfnPackagingGroup(
    * Parameters for CDN authorization.
    */
   public open fun authorization(`value`: IResolvable) {
-    unwrap(this).setAuthorization(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAuthorization(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Parameters for CDN authorization.
    */
   public open fun authorization(`value`: AuthorizationProperty) {
-    unwrap(this).setAuthorization(`value`.let(AuthorizationProperty::unwrap))
+    unwrap(this).setAuthorization(`value`.let(AuthorizationProperty.Companion::unwrap))
   }
 
   /**
@@ -120,14 +120,14 @@ public open class CfnPackagingGroup(
    * The configuration parameters for egress access logging.
    */
   public open fun egressAccessLogs(`value`: IResolvable) {
-    unwrap(this).setEgressAccessLogs(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEgressAccessLogs(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration parameters for egress access logging.
    */
   public open fun egressAccessLogs(`value`: LogConfigurationProperty) {
-    unwrap(this).setEgressAccessLogs(`value`.let(LogConfigurationProperty::unwrap))
+    unwrap(this).setEgressAccessLogs(`value`.let(LogConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -156,7 +156,7 @@ public open class CfnPackagingGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -174,7 +174,7 @@ public open class CfnPackagingGroup(
    * The tags to assign to the packaging group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -278,7 +278,7 @@ public open class CfnPackagingGroup(
      * @param authorization Parameters for CDN authorization. 
      */
     override fun authorization(authorization: IResolvable) {
-      cdkBuilder.authorization(authorization.let(IResolvable::unwrap))
+      cdkBuilder.authorization(authorization.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -288,7 +288,7 @@ public open class CfnPackagingGroup(
      * @param authorization Parameters for CDN authorization. 
      */
     override fun authorization(authorization: AuthorizationProperty) {
-      cdkBuilder.authorization(authorization.let(AuthorizationProperty::unwrap))
+      cdkBuilder.authorization(authorization.let(AuthorizationProperty.Companion::unwrap))
     }
 
     /**
@@ -309,7 +309,7 @@ public open class CfnPackagingGroup(
      * @param egressAccessLogs The configuration parameters for egress access logging. 
      */
     override fun egressAccessLogs(egressAccessLogs: IResolvable) {
-      cdkBuilder.egressAccessLogs(egressAccessLogs.let(IResolvable::unwrap))
+      cdkBuilder.egressAccessLogs(egressAccessLogs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -319,7 +319,7 @@ public open class CfnPackagingGroup(
      * @param egressAccessLogs The configuration parameters for egress access logging. 
      */
     override fun egressAccessLogs(egressAccessLogs: LogConfigurationProperty) {
-      cdkBuilder.egressAccessLogs(egressAccessLogs.let(LogConfigurationProperty::unwrap))
+      cdkBuilder.egressAccessLogs(egressAccessLogs.let(LogConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -350,7 +350,7 @@ public open class CfnPackagingGroup(
      * @param tags The tags to assign to the packaging group. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

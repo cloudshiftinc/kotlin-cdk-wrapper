@@ -41,8 +41,8 @@ public open class CfnUserPoolGroup(
     id: String,
     props: CfnUserPoolGroupProps,
   ) :
-      this(software.amazon.awscdk.services.cognito.CfnUserPoolGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnUserPoolGroupProps::unwrap))
+      this(software.amazon.awscdk.services.cognito.CfnUserPoolGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnUserPoolGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -82,7 +82,7 @@ public open class CfnUserPoolGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

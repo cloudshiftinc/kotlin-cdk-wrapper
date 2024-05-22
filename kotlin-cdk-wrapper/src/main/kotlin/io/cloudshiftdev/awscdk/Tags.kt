@@ -70,7 +70,7 @@ public open class Tags(
     `value`: String,
     props: TagProps,
   ) {
-    unwrap(this).add(key, `value`, props.let(TagProps::unwrap))
+    unwrap(this).add(key, `value`, props.let(TagProps.Companion::unwrap))
   }
 
   /**
@@ -105,7 +105,7 @@ public open class Tags(
    * @param props
    */
   public open fun remove(key: String, props: TagProps) {
-    unwrap(this).remove(key, props.let(TagProps::unwrap))
+    unwrap(this).remove(key, props.let(TagProps.Companion::unwrap))
   }
 
   /**
@@ -121,7 +121,7 @@ public open class Tags(
 
   public companion object {
     public fun of(scope: IConstruct): Tags =
-        software.amazon.awscdk.Tags.of(scope.let(IConstruct::unwrap)).let(Tags::wrap)
+        software.amazon.awscdk.Tags.of(scope.let(IConstruct.Companion::unwrap)).let(Tags::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.Tags): Tags = Tags(cdkObject)
 

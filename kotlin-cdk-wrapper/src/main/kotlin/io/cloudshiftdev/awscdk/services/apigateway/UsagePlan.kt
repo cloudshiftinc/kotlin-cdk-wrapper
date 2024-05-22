@@ -36,7 +36,7 @@ public open class UsagePlan(
   cdkObject: software.amazon.awscdk.services.apigateway.UsagePlan,
 ) : Resource(cdkObject), IUsagePlan {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.apigateway.UsagePlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.apigateway.UsagePlan(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -45,8 +45,8 @@ public open class UsagePlan(
     id: String,
     props: UsagePlanProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.UsagePlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(UsagePlanProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.UsagePlan(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(UsagePlanProps.Companion::unwrap))
   )
 
   public constructor(
@@ -63,7 +63,7 @@ public open class UsagePlan(
    * @param options options that control the behaviour of this method.
    */
   public override fun addApiKey(apiKey: IApiKey) {
-    unwrap(this).addApiKey(apiKey.let(IApiKey::unwrap))
+    unwrap(this).addApiKey(apiKey.let(IApiKey.Companion::unwrap))
   }
 
   /**
@@ -73,7 +73,8 @@ public open class UsagePlan(
    * @param options options that control the behaviour of this method.
    */
   public override fun addApiKey(apiKey: IApiKey, options: AddApiKeyOptions) {
-    unwrap(this).addApiKey(apiKey.let(IApiKey::unwrap), options.let(AddApiKeyOptions::unwrap))
+    unwrap(this).addApiKey(apiKey.let(IApiKey.Companion::unwrap),
+        options.let(AddApiKeyOptions.Companion::unwrap))
   }
 
   /**
@@ -93,7 +94,7 @@ public open class UsagePlan(
    * @param apiStage 
    */
   public open fun addApiStage(apiStage: UsagePlanPerApiStage) {
-    unwrap(this).addApiStage(apiStage.let(UsagePlanPerApiStage::unwrap))
+    unwrap(this).addApiStage(apiStage.let(UsagePlanPerApiStage.Companion::unwrap))
   }
 
   /**
@@ -208,7 +209,7 @@ public open class UsagePlan(
      * @param apiStages API Stages to be associated with the usage plan. 
      */
     override fun apiStages(apiStages: List<UsagePlanPerApiStage>) {
-      cdkBuilder.apiStages(apiStages.map(UsagePlanPerApiStage::unwrap))
+      cdkBuilder.apiStages(apiStages.map(UsagePlanPerApiStage.Companion::unwrap))
     }
 
     /**
@@ -251,7 +252,7 @@ public open class UsagePlan(
      * @param quota Number of requests clients can make in a given time period. 
      */
     override fun quota(quota: QuotaSettings) {
-      cdkBuilder.quota(quota.let(QuotaSettings::unwrap))
+      cdkBuilder.quota(quota.let(QuotaSettings.Companion::unwrap))
     }
 
     /**
@@ -273,7 +274,7 @@ public open class UsagePlan(
      * @param throttle Overall throttle settings for the API. 
      */
     override fun throttle(throttle: ThrottleSettings) {
-      cdkBuilder.throttle(throttle.let(ThrottleSettings::unwrap))
+      cdkBuilder.throttle(throttle.let(ThrottleSettings.Companion::unwrap))
     }
 
     /**
@@ -297,7 +298,7 @@ public open class UsagePlan(
       id: String,
       usagePlanId: String,
     ): IUsagePlan =
-        software.amazon.awscdk.services.apigateway.UsagePlan.fromUsagePlanId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.apigateway.UsagePlan.fromUsagePlanId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, usagePlanId).let(IUsagePlan::wrap)
 
     public operator fun invoke(

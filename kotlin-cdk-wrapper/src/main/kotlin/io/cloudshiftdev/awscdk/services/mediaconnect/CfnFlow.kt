@@ -97,8 +97,8 @@ public open class CfnFlow(
     id: String,
     props: CfnFlowProps,
   ) :
-      this(software.amazon.awscdk.services.mediaconnect.CfnFlow(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFlowProps::unwrap))
+      this(software.amazon.awscdk.services.mediaconnect.CfnFlow(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFlowProps.Companion::unwrap))
   )
 
   public constructor(
@@ -156,7 +156,7 @@ public open class CfnFlow(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -180,14 +180,14 @@ public open class CfnFlow(
    * The settings for the source that you want to use for the new flow.
    */
   public open fun source(`value`: IResolvable) {
-    unwrap(this).setSource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The settings for the source that you want to use for the new flow.
    */
   public open fun source(`value`: SourceProperty) {
-    unwrap(this).setSource(`value`.let(SourceProperty::unwrap))
+    unwrap(this).setSource(`value`.let(SourceProperty.Companion::unwrap))
   }
 
   /**
@@ -207,14 +207,14 @@ public open class CfnFlow(
    * The settings for source failover.
    */
   public open fun sourceFailoverConfig(`value`: IResolvable) {
-    unwrap(this).setSourceFailoverConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSourceFailoverConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The settings for source failover.
    */
   public open fun sourceFailoverConfig(`value`: FailoverConfigProperty) {
-    unwrap(this).setSourceFailoverConfig(`value`.let(FailoverConfigProperty::unwrap))
+    unwrap(this).setSourceFailoverConfig(`value`.let(FailoverConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -337,7 +337,7 @@ public open class CfnFlow(
      * @param source The settings for the source that you want to use for the new flow. 
      */
     override fun source(source: IResolvable) {
-      cdkBuilder.source(source.let(IResolvable::unwrap))
+      cdkBuilder.source(source.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -347,7 +347,7 @@ public open class CfnFlow(
      * @param source The settings for the source that you want to use for the new flow. 
      */
     override fun source(source: SourceProperty) {
-      cdkBuilder.source(source.let(SourceProperty::unwrap))
+      cdkBuilder.source(source.let(SourceProperty.Companion::unwrap))
     }
 
     /**
@@ -368,7 +368,7 @@ public open class CfnFlow(
      * @param sourceFailoverConfig The settings for source failover. 
      */
     override fun sourceFailoverConfig(sourceFailoverConfig: IResolvable) {
-      cdkBuilder.sourceFailoverConfig(sourceFailoverConfig.let(IResolvable::unwrap))
+      cdkBuilder.sourceFailoverConfig(sourceFailoverConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -378,7 +378,7 @@ public open class CfnFlow(
      * @param sourceFailoverConfig The settings for source failover. 
      */
     override fun sourceFailoverConfig(sourceFailoverConfig: FailoverConfigProperty) {
-      cdkBuilder.sourceFailoverConfig(sourceFailoverConfig.let(FailoverConfigProperty::unwrap))
+      cdkBuilder.sourceFailoverConfig(sourceFailoverConfig.let(FailoverConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -941,7 +941,7 @@ public open class CfnFlow(
        * setting only applies when Failover Mode is set to FAILOVER.
        */
       override fun sourcePriority(sourcePriority: IResolvable) {
-        cdkBuilder.sourcePriority(sourcePriority.let(IResolvable::unwrap))
+        cdkBuilder.sourcePriority(sourcePriority.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -950,7 +950,7 @@ public open class CfnFlow(
        * setting only applies when Failover Mode is set to FAILOVER.
        */
       override fun sourcePriority(sourcePriority: SourcePriorityProperty) {
-        cdkBuilder.sourcePriority(sourcePriority.let(SourcePriorityProperty::unwrap))
+        cdkBuilder.sourcePriority(sourcePriority.let(SourcePriorityProperty.Companion::unwrap))
       }
 
       /**
@@ -1126,7 +1126,7 @@ public open class CfnFlow(
        * bridge source.
        */
       override fun vpcInterfaceAttachment(vpcInterfaceAttachment: IResolvable) {
-        cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(IResolvable::unwrap))
+        cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1134,7 +1134,7 @@ public open class CfnFlow(
        * bridge source.
        */
       override fun vpcInterfaceAttachment(vpcInterfaceAttachment: VpcInterfaceAttachmentProperty) {
-        cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(VpcInterfaceAttachmentProperty::unwrap))
+        cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(VpcInterfaceAttachmentProperty.Companion::unwrap))
       }
 
       /**
@@ -1667,7 +1667,7 @@ public open class CfnFlow(
        * source.
        */
       override fun decryption(decryption: IResolvable) {
-        cdkBuilder.decryption(decryption.let(IResolvable::unwrap))
+        cdkBuilder.decryption(decryption.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1675,7 +1675,7 @@ public open class CfnFlow(
        * source.
        */
       override fun decryption(decryption: EncryptionProperty) {
-        cdkBuilder.decryption(decryption.let(EncryptionProperty::unwrap))
+        cdkBuilder.decryption(decryption.let(EncryptionProperty.Companion::unwrap))
       }
 
       /**
@@ -1710,7 +1710,7 @@ public open class CfnFlow(
        * a bridge.
        */
       override fun gatewayBridgeSource(gatewayBridgeSource: IResolvable) {
-        cdkBuilder.gatewayBridgeSource(gatewayBridgeSource.let(IResolvable::unwrap))
+        cdkBuilder.gatewayBridgeSource(gatewayBridgeSource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1718,7 +1718,7 @@ public open class CfnFlow(
        * a bridge.
        */
       override fun gatewayBridgeSource(gatewayBridgeSource: GatewayBridgeSourceProperty) {
-        cdkBuilder.gatewayBridgeSource(gatewayBridgeSource.let(GatewayBridgeSourceProperty::unwrap))
+        cdkBuilder.gatewayBridgeSource(gatewayBridgeSource.let(GatewayBridgeSourceProperty.Companion::unwrap))
       }
 
       /**

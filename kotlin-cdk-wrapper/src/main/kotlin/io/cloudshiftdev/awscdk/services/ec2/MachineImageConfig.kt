@@ -77,14 +77,14 @@ public interface MachineImageConfig {
      * @param osType Operating system type for this image. 
      */
     override fun osType(osType: OperatingSystemType) {
-      cdkBuilder.osType(osType.let(OperatingSystemType::unwrap))
+      cdkBuilder.osType(osType.let(OperatingSystemType.Companion::unwrap))
     }
 
     /**
      * @param userData Initial UserData for this image. 
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.MachineImageConfig = cdkBuilder.build()

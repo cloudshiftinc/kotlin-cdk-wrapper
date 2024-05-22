@@ -160,7 +160,7 @@ public interface CfnCapacityReservationProps {
      * workgroup is mapped to.
      */
     override fun capacityAssignmentConfiguration(capacityAssignmentConfiguration: IResolvable) {
-      cdkBuilder.capacityAssignmentConfiguration(capacityAssignmentConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.capacityAssignmentConfiguration(capacityAssignmentConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -173,7 +173,7 @@ public interface CfnCapacityReservationProps {
      */
     override
         fun capacityAssignmentConfiguration(capacityAssignmentConfiguration: CfnCapacityReservation.CapacityAssignmentConfigurationProperty) {
-      cdkBuilder.capacityAssignmentConfiguration(capacityAssignmentConfiguration.let(CfnCapacityReservation.CapacityAssignmentConfigurationProperty::unwrap))
+      cdkBuilder.capacityAssignmentConfiguration(capacityAssignmentConfiguration.let(CfnCapacityReservation.CapacityAssignmentConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -205,7 +205,7 @@ public interface CfnCapacityReservationProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

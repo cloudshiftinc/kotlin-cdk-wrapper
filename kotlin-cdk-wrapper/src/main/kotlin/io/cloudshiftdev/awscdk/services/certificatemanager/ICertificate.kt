@@ -79,7 +79,7 @@ public interface ICertificate : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -122,7 +122,7 @@ public interface ICertificate : IResource {
      * @param props
      */
     override fun metricDaysToExpiry(props: MetricOptions): Metric =
-        unwrap(this).metricDaysToExpiry(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricDaysToExpiry(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Return the DaysToExpiry metric for this AWS Certificate Manager Certificate. By default, this

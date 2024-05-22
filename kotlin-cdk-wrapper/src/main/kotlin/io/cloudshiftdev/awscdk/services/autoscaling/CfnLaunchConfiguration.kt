@@ -107,8 +107,8 @@ public open class CfnLaunchConfiguration(
     id: String,
     props: CfnLaunchConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLaunchConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.autoscaling.CfnLaunchConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLaunchConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -134,7 +134,7 @@ public open class CfnLaunchConfiguration(
    * Specifies whether to assign a public IPv4 address to the group's instances.
    */
   public open fun associatePublicIpAddress(`value`: IResolvable) {
-    unwrap(this).setAssociatePublicIpAddress(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAssociatePublicIpAddress(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -148,7 +148,7 @@ public open class CfnLaunchConfiguration(
    * launch.
    */
   public open fun blockDeviceMappings(`value`: IResolvable) {
-    unwrap(this).setBlockDeviceMappings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBlockDeviceMappings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -216,7 +216,7 @@ public open class CfnLaunchConfiguration(
    * ).
    */
   public open fun ebsOptimized(`value`: IResolvable) {
-    unwrap(this).setEbsOptimized(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEbsOptimized(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -251,7 +251,7 @@ public open class CfnLaunchConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -285,7 +285,7 @@ public open class CfnLaunchConfiguration(
    * `false` ) monitoring.
    */
   public open fun instanceMonitoring(`value`: IResolvable) {
-    unwrap(this).setInstanceMonitoring(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInstanceMonitoring(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -345,14 +345,14 @@ public open class CfnLaunchConfiguration(
    * The metadata options for the instances.
    */
   public open fun metadataOptions(`value`: IResolvable) {
-    unwrap(this).setMetadataOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMetadataOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The metadata options for the instances.
    */
   public open fun metadataOptions(`value`: MetadataOptionsProperty) {
-    unwrap(this).setMetadataOptions(`value`.let(MetadataOptionsProperty::unwrap))
+    unwrap(this).setMetadataOptions(`value`.let(MetadataOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -914,7 +914,7 @@ public open class CfnLaunchConfiguration(
      * group's instances. 
      */
     override fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
-      cdkBuilder.associatePublicIpAddress(associatePublicIpAddress.let(IResolvable::unwrap))
+      cdkBuilder.associatePublicIpAddress(associatePublicIpAddress.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -931,7 +931,7 @@ public open class CfnLaunchConfiguration(
      * attach to the instances at launch. 
      */
     override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
-      cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable::unwrap))
+      cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1035,7 +1035,7 @@ public open class CfnLaunchConfiguration(
      * `true` ) or not ( `false` ). 
      */
     override fun ebsOptimized(ebsOptimized: IResolvable) {
-      cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
+      cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1128,7 +1128,7 @@ public open class CfnLaunchConfiguration(
      * ( `true` ) or basic ( `false` ) monitoring. 
      */
     override fun instanceMonitoring(instanceMonitoring: IResolvable) {
-      cdkBuilder.instanceMonitoring(instanceMonitoring.let(IResolvable::unwrap))
+      cdkBuilder.instanceMonitoring(instanceMonitoring.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1201,7 +1201,7 @@ public open class CfnLaunchConfiguration(
      * @param metadataOptions The metadata options for the instances. 
      */
     override fun metadataOptions(metadataOptions: IResolvable) {
-      cdkBuilder.metadataOptions(metadataOptions.let(IResolvable::unwrap))
+      cdkBuilder.metadataOptions(metadataOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1215,7 +1215,7 @@ public open class CfnLaunchConfiguration(
      * @param metadataOptions The metadata options for the instances. 
      */
     override fun metadataOptions(metadataOptions: MetadataOptionsProperty) {
-      cdkBuilder.metadataOptions(metadataOptions.let(MetadataOptionsProperty::unwrap))
+      cdkBuilder.metadataOptions(metadataOptions.let(MetadataOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -1543,14 +1543,14 @@ public open class CfnLaunchConfiguration(
        * @param ebs Information to attach an EBS volume to an instance at launch.
        */
       override fun ebs(ebs: IResolvable) {
-        cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
+        cdkBuilder.ebs(ebs.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param ebs Information to attach an EBS volume to an instance at launch.
        */
       override fun ebs(ebs: BlockDeviceProperty) {
-        cdkBuilder.ebs(ebs.let(BlockDeviceProperty::unwrap))
+        cdkBuilder.ebs(ebs.let(BlockDeviceProperty.Companion::unwrap))
       }
 
       /**
@@ -1578,7 +1578,7 @@ public open class CfnLaunchConfiguration(
        * that case, Amazon EC2 Auto Scaling launches replacement instances.
        */
       override fun noDevice(noDevice: IResolvable) {
-        cdkBuilder.noDevice(noDevice.let(IResolvable::unwrap))
+        cdkBuilder.noDevice(noDevice.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1924,7 +1924,7 @@ public open class CfnLaunchConfiguration(
        * For Amazon EC2 Auto Scaling, the default value is `true` .
        */
       override fun deleteOnTermination(deleteOnTermination: IResolvable) {
-        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
+        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1974,7 +1974,7 @@ public open class CfnLaunchConfiguration(
        * in the *Amazon EC2 Auto Scaling User Guide* .
        */
       override fun encrypted(encrypted: IResolvable) {
-        cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
+        cdkBuilder.encrypted(encrypted.let(IResolvable.Companion::unwrap))
       }
 
       /**

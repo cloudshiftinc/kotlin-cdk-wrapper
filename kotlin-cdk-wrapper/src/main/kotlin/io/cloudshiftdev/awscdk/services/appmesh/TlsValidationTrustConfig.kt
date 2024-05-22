@@ -70,7 +70,7 @@ public interface TlsValidationTrustConfig {
      */
     override
         fun tlsValidationTrust(tlsValidationTrust: CfnVirtualNode.TlsValidationContextTrustProperty) {
-      cdkBuilder.tlsValidationTrust(tlsValidationTrust.let(CfnVirtualNode.TlsValidationContextTrustProperty::unwrap))
+      cdkBuilder.tlsValidationTrust(tlsValidationTrust.let(CfnVirtualNode.TlsValidationContextTrustProperty.Companion::unwrap))
     }
 
     /**

@@ -18,7 +18,7 @@ public open class UserPoolIdentityProvider(
       id: String,
       providerName: String,
     ): IUserPoolIdentityProvider =
-        software.amazon.awscdk.services.cognito.UserPoolIdentityProvider.fromProviderName(scope.let(Construct::unwrap),
+        software.amazon.awscdk.services.cognito.UserPoolIdentityProvider.fromProviderName(scope.let(Construct.Companion::unwrap),
         id, providerName).let(IUserPoolIdentityProvider::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserPoolIdentityProvider):

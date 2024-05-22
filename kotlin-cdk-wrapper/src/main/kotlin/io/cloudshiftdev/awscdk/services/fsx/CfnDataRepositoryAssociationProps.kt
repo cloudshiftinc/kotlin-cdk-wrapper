@@ -257,7 +257,7 @@ public interface CfnDataRepositoryAssociationProps {
      * The task runs if this flag is set to `true` .
      */
     override fun batchImportMetaDataOnCreate(batchImportMetaDataOnCreate: IResolvable) {
-      cdkBuilder.batchImportMetaDataOnCreate(batchImportMetaDataOnCreate.let(IResolvable::unwrap))
+      cdkBuilder.batchImportMetaDataOnCreate(batchImportMetaDataOnCreate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -321,7 +321,7 @@ public interface CfnDataRepositoryAssociationProps {
      * exported from the file system to the data repository.
      */
     override fun s3(s3: IResolvable) {
-      cdkBuilder.s3(s3.let(IResolvable::unwrap))
+      cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -332,7 +332,7 @@ public interface CfnDataRepositoryAssociationProps {
      * exported from the file system to the data repository.
      */
     override fun s3(s3: CfnDataRepositoryAssociation.S3Property) {
-      cdkBuilder.s3(s3.let(CfnDataRepositoryAssociation.S3Property::unwrap))
+      cdkBuilder.s3(s3.let(CfnDataRepositoryAssociation.S3Property.Companion::unwrap))
     }
 
     /**
@@ -351,7 +351,7 @@ public interface CfnDataRepositoryAssociationProps {
      * @param tags A list of `Tag` values, with a maximum of 50 elements.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

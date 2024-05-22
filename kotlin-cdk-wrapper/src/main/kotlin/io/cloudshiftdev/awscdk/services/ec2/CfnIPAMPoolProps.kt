@@ -466,7 +466,7 @@ public interface CfnIPAMPoolProps {
      * tagging requirements are changed on the pool, the resource may be marked as noncompliant.
      */
     override fun allocationResourceTags(allocationResourceTags: IResolvable) {
-      cdkBuilder.allocationResourceTags(allocationResourceTags.let(IResolvable::unwrap))
+      cdkBuilder.allocationResourceTags(allocationResourceTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -519,7 +519,7 @@ public interface CfnIPAMPoolProps {
      * A locale must be set on the pool for this feature to work.
      */
     override fun autoImport(autoImport: IResolvable) {
-      cdkBuilder.autoImport(autoImport.let(IResolvable::unwrap))
+      cdkBuilder.autoImport(autoImport.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -561,7 +561,7 @@ public interface CfnIPAMPoolProps {
      * @param provisionedCidrs Information about the CIDRs provisioned to an IPAM pool.
      */
     override fun provisionedCidrs(provisionedCidrs: IResolvable) {
-      cdkBuilder.provisionedCidrs(provisionedCidrs.let(IResolvable::unwrap))
+      cdkBuilder.provisionedCidrs(provisionedCidrs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -604,7 +604,7 @@ public interface CfnIPAMPoolProps {
      * This option is not available for pools with AddressFamily set to `ipv4` .
      */
     override fun publiclyAdvertisable(publiclyAdvertisable: IResolvable) {
-      cdkBuilder.publiclyAdvertisable(publiclyAdvertisable.let(IResolvable::unwrap))
+      cdkBuilder.publiclyAdvertisable(publiclyAdvertisable.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -619,14 +619,14 @@ public interface CfnIPAMPoolProps {
      * @param sourceResource The resource used to provision CIDRs to a resource planning pool.
      */
     override fun sourceResource(sourceResource: IResolvable) {
-      cdkBuilder.sourceResource(sourceResource.let(IResolvable::unwrap))
+      cdkBuilder.sourceResource(sourceResource.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param sourceResource The resource used to provision CIDRs to a resource planning pool.
      */
     override fun sourceResource(sourceResource: CfnIPAMPool.SourceResourceProperty) {
-      cdkBuilder.sourceResource(sourceResource.let(CfnIPAMPool.SourceResourceProperty::unwrap))
+      cdkBuilder.sourceResource(sourceResource.let(CfnIPAMPool.SourceResourceProperty.Companion::unwrap))
     }
 
     /**
@@ -645,7 +645,7 @@ public interface CfnIPAMPoolProps {
      * `tag:Owner` for the filter name and `TeamA` for the filter value.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

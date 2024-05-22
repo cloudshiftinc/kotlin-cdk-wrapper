@@ -282,7 +282,7 @@ public interface CfnReplicationConfigProps {
      * replication.
      */
     override fun computeConfig(computeConfig: IResolvable) {
-      cdkBuilder.computeConfig(computeConfig.let(IResolvable::unwrap))
+      cdkBuilder.computeConfig(computeConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -290,7 +290,7 @@ public interface CfnReplicationConfigProps {
      * replication.
      */
     override fun computeConfig(computeConfig: CfnReplicationConfig.ComputeConfigProperty) {
-      cdkBuilder.computeConfig(computeConfig.let(CfnReplicationConfig.ComputeConfigProperty::unwrap))
+      cdkBuilder.computeConfig(computeConfig.let(CfnReplicationConfig.ComputeConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -386,7 +386,7 @@ public interface CfnReplicationConfigProps {
      * Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tagging.html) .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

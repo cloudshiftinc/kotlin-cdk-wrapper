@@ -79,8 +79,8 @@ public open class CfnIPAMPool(
     id: String,
     props: CfnIPAMPoolProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnIPAMPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnIPAMPoolProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnIPAMPool(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnIPAMPoolProps.Companion::unwrap))
   )
 
   public constructor(
@@ -150,7 +150,7 @@ public open class CfnIPAMPool(
    * Tags that are required for resources that use CIDRs from this IPAM pool.
    */
   public open fun allocationResourceTags(`value`: IResolvable) {
-    unwrap(this).setAllocationResourceTags(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAllocationResourceTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -227,7 +227,7 @@ public open class CfnIPAMPool(
    * automatically import them as allocations into your IPAM.
    */
   public open fun autoImport(`value`: IResolvable) {
-    unwrap(this).setAutoImport(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoImport(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -260,7 +260,7 @@ public open class CfnIPAMPool(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -296,7 +296,7 @@ public open class CfnIPAMPool(
    * Information about the CIDRs provisioned to an IPAM pool.
    */
   public open fun provisionedCidrs(`value`: IResolvable) {
-    unwrap(this).setProvisionedCidrs(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProvisionedCidrs(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -339,7 +339,7 @@ public open class CfnIPAMPool(
    * Determines if a pool is publicly advertisable.
    */
   public open fun publiclyAdvertisable(`value`: IResolvable) {
-    unwrap(this).setPubliclyAdvertisable(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPubliclyAdvertisable(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -363,14 +363,14 @@ public open class CfnIPAMPool(
    * The resource used to provision CIDRs to a resource planning pool.
    */
   public open fun sourceResource(`value`: IResolvable) {
-    unwrap(this).setSourceResource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSourceResource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The resource used to provision CIDRs to a resource planning pool.
    */
   public open fun sourceResource(`value`: SourceResourceProperty) {
-    unwrap(this).setSourceResource(`value`.let(SourceResourceProperty::unwrap))
+    unwrap(this).setSourceResource(`value`.let(SourceResourceProperty.Companion::unwrap))
   }
 
   /**
@@ -396,7 +396,7 @@ public open class CfnIPAMPool(
    * The key/value combination of a tag assigned to the resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -763,7 +763,7 @@ public open class CfnIPAMPool(
      * IPAM pool. 
      */
     override fun allocationResourceTags(allocationResourceTags: IResolvable) {
-      cdkBuilder.allocationResourceTags(allocationResourceTags.let(IResolvable::unwrap))
+      cdkBuilder.allocationResourceTags(allocationResourceTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -834,7 +834,7 @@ public open class CfnIPAMPool(
      * range of this pool and automatically import them as allocations into your IPAM. 
      */
     override fun autoImport(autoImport: IResolvable) {
-      cdkBuilder.autoImport(autoImport.let(IResolvable::unwrap))
+      cdkBuilder.autoImport(autoImport.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -893,7 +893,7 @@ public open class CfnIPAMPool(
      * @param provisionedCidrs Information about the CIDRs provisioned to an IPAM pool. 
      */
     override fun provisionedCidrs(provisionedCidrs: IResolvable) {
-      cdkBuilder.provisionedCidrs(provisionedCidrs.let(IResolvable::unwrap))
+      cdkBuilder.provisionedCidrs(provisionedCidrs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -954,7 +954,7 @@ public open class CfnIPAMPool(
      * @param publiclyAdvertisable Determines if a pool is publicly advertisable. 
      */
     override fun publiclyAdvertisable(publiclyAdvertisable: IResolvable) {
-      cdkBuilder.publiclyAdvertisable(publiclyAdvertisable.let(IResolvable::unwrap))
+      cdkBuilder.publiclyAdvertisable(publiclyAdvertisable.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -976,7 +976,7 @@ public open class CfnIPAMPool(
      * @param sourceResource The resource used to provision CIDRs to a resource planning pool. 
      */
     override fun sourceResource(sourceResource: IResolvable) {
-      cdkBuilder.sourceResource(sourceResource.let(IResolvable::unwrap))
+      cdkBuilder.sourceResource(sourceResource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -986,7 +986,7 @@ public open class CfnIPAMPool(
      * @param sourceResource The resource used to provision CIDRs to a resource planning pool. 
      */
     override fun sourceResource(sourceResource: SourceResourceProperty) {
-      cdkBuilder.sourceResource(sourceResource.let(SourceResourceProperty::unwrap))
+      cdkBuilder.sourceResource(sourceResource.let(SourceResourceProperty.Companion::unwrap))
     }
 
     /**
@@ -1011,7 +1011,7 @@ public open class CfnIPAMPool(
      * @param tags The key/value combination of a tag assigned to the resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

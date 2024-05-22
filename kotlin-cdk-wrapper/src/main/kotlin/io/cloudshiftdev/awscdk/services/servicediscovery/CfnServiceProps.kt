@@ -297,7 +297,7 @@ public interface CfnServiceProps {
      * with a new `Dnsconfig` .
      */
     override fun dnsConfig(dnsConfig: IResolvable) {
-      cdkBuilder.dnsConfig(dnsConfig.let(IResolvable::unwrap))
+      cdkBuilder.dnsConfig(dnsConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -308,7 +308,7 @@ public interface CfnServiceProps {
      * with a new `Dnsconfig` .
      */
     override fun dnsConfig(dnsConfig: CfnService.DnsConfigProperty) {
-      cdkBuilder.dnsConfig(dnsConfig.let(CfnService.DnsConfigProperty::unwrap))
+      cdkBuilder.dnsConfig(dnsConfig.let(CfnService.DnsConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -331,7 +331,7 @@ public interface CfnServiceProps {
      * Pricing](https://docs.aws.amazon.com/route53/pricing/) .
      */
     override fun healthCheckConfig(healthCheckConfig: IResolvable) {
-      cdkBuilder.healthCheckConfig(healthCheckConfig.let(IResolvable::unwrap))
+      cdkBuilder.healthCheckConfig(healthCheckConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -342,7 +342,7 @@ public interface CfnServiceProps {
      * Pricing](https://docs.aws.amazon.com/route53/pricing/) .
      */
     override fun healthCheckConfig(healthCheckConfig: CfnService.HealthCheckConfigProperty) {
-      cdkBuilder.healthCheckConfig(healthCheckConfig.let(CfnService.HealthCheckConfigProperty::unwrap))
+      cdkBuilder.healthCheckConfig(healthCheckConfig.let(CfnService.HealthCheckConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -366,7 +366,7 @@ public interface CfnServiceProps {
      * or `HealthCheckConfig` but not both.
      */
     override fun healthCheckCustomConfig(healthCheckCustomConfig: IResolvable) {
-      cdkBuilder.healthCheckCustomConfig(healthCheckCustomConfig.let(IResolvable::unwrap))
+      cdkBuilder.healthCheckCustomConfig(healthCheckCustomConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -378,7 +378,7 @@ public interface CfnServiceProps {
      */
     override
         fun healthCheckCustomConfig(healthCheckCustomConfig: CfnService.HealthCheckCustomConfigProperty) {
-      cdkBuilder.healthCheckCustomConfig(healthCheckCustomConfig.let(CfnService.HealthCheckCustomConfigProperty::unwrap))
+      cdkBuilder.healthCheckCustomConfig(healthCheckCustomConfig.let(CfnService.HealthCheckCustomConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -420,7 +420,7 @@ public interface CfnServiceProps {
      * characters.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

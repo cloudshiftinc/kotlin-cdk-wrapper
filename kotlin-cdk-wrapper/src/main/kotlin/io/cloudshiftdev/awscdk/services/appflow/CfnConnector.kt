@@ -53,8 +53,8 @@ public open class CfnConnector(
     id: String,
     props: CfnConnectorProps,
   ) :
-      this(software.amazon.awscdk.services.appflow.CfnConnector(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConnectorProps::unwrap))
+      this(software.amazon.awscdk.services.appflow.CfnConnector(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConnectorProps.Companion::unwrap))
   )
 
   public constructor(
@@ -92,14 +92,14 @@ public open class CfnConnector(
    * The configuration required for registering the connector.
    */
   public open fun connectorProvisioningConfig(`value`: IResolvable) {
-    unwrap(this).setConnectorProvisioningConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConnectorProvisioningConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration required for registering the connector.
    */
   public open fun connectorProvisioningConfig(`value`: ConnectorProvisioningConfigProperty) {
-    unwrap(this).setConnectorProvisioningConfig(`value`.let(ConnectorProvisioningConfigProperty::unwrap))
+    unwrap(this).setConnectorProvisioningConfig(`value`.let(ConnectorProvisioningConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -141,7 +141,7 @@ public open class CfnConnector(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -226,7 +226,7 @@ public open class CfnConnector(
      * @param connectorProvisioningConfig The configuration required for registering the connector. 
      */
     override fun connectorProvisioningConfig(connectorProvisioningConfig: IResolvable) {
-      cdkBuilder.connectorProvisioningConfig(connectorProvisioningConfig.let(IResolvable::unwrap))
+      cdkBuilder.connectorProvisioningConfig(connectorProvisioningConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -237,7 +237,7 @@ public open class CfnConnector(
      */
     override
         fun connectorProvisioningConfig(connectorProvisioningConfig: ConnectorProvisioningConfigProperty) {
-      cdkBuilder.connectorProvisioningConfig(connectorProvisioningConfig.let(ConnectorProvisioningConfigProperty::unwrap))
+      cdkBuilder.connectorProvisioningConfig(connectorProvisioningConfig.let(ConnectorProvisioningConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -361,7 +361,7 @@ public open class CfnConnector(
        * registered as the connector.
        */
       override fun lambda(lambda: IResolvable) {
-        cdkBuilder.lambda(lambda.let(IResolvable::unwrap))
+        cdkBuilder.lambda(lambda.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -369,7 +369,7 @@ public open class CfnConnector(
        * registered as the connector.
        */
       override fun lambda(lambda: LambdaConnectorProvisioningConfigProperty) {
-        cdkBuilder.lambda(lambda.let(LambdaConnectorProvisioningConfigProperty::unwrap))
+        cdkBuilder.lambda(lambda.let(LambdaConnectorProvisioningConfigProperty.Companion::unwrap))
       }
 
       /**

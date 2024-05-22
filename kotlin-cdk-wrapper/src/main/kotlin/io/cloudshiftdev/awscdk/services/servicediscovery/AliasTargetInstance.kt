@@ -41,8 +41,8 @@ public open class AliasTargetInstance(
     id: String,
     props: AliasTargetInstanceProps,
   ) :
-      this(software.amazon.awscdk.services.servicediscovery.AliasTargetInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(AliasTargetInstanceProps::unwrap))
+      this(software.amazon.awscdk.services.servicediscovery.AliasTargetInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(AliasTargetInstanceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -151,7 +151,7 @@ public open class AliasTargetInstance(
      * @param service The Cloudmap service this resource is registered to. 
      */
     override fun service(service: IService) {
-      cdkBuilder.service(service.let(IService::unwrap))
+      cdkBuilder.service(service.let(IService.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.servicediscovery.AliasTargetInstance =

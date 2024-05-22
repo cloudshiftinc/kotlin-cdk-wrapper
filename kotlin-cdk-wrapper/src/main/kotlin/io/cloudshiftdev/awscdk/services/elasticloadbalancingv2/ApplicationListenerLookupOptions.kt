@@ -95,7 +95,7 @@ public interface ApplicationListenerLookupOptions : BaseListenerLookupOptions {
      * @param listenerProtocol Filter listeners by listener protocol.
      */
     override fun listenerProtocol(listenerProtocol: ApplicationProtocol) {
-      cdkBuilder.listenerProtocol(listenerProtocol.let(ApplicationProtocol::unwrap))
+      cdkBuilder.listenerProtocol(listenerProtocol.let(ApplicationProtocol.Companion::unwrap))
     }
 
     /**

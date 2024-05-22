@@ -142,8 +142,8 @@ public open class CfnRoute(
     id: String,
     props: CfnRouteProps,
   ) :
-      this(software.amazon.awscdk.services.refactorspaces.CfnRoute(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRouteProps::unwrap))
+      this(software.amazon.awscdk.services.refactorspaces.CfnRoute(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRouteProps.Companion::unwrap))
   )
 
   public constructor(
@@ -189,14 +189,14 @@ public open class CfnRoute(
    * Configuration for the default route type.
    */
   public open fun defaultRoute(`value`: IResolvable) {
-    unwrap(this).setDefaultRoute(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefaultRoute(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration for the default route type.
    */
   public open fun defaultRoute(`value`: DefaultRouteInputProperty) {
-    unwrap(this).setDefaultRoute(`value`.let(DefaultRouteInputProperty::unwrap))
+    unwrap(this).setDefaultRoute(`value`.let(DefaultRouteInputProperty.Companion::unwrap))
   }
 
   /**
@@ -225,7 +225,7 @@ public open class CfnRoute(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -267,7 +267,7 @@ public open class CfnRoute(
    * The tags assigned to the route.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -284,14 +284,14 @@ public open class CfnRoute(
    * The configuration for the URI path route type.
    */
   public open fun uriPathRoute(`value`: IResolvable) {
-    unwrap(this).setUriPathRoute(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUriPathRoute(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration for the URI path route type.
    */
   public open fun uriPathRoute(`value`: UriPathRouteInputProperty) {
-    unwrap(this).setUriPathRoute(`value`.let(UriPathRouteInputProperty::unwrap))
+    unwrap(this).setUriPathRoute(`value`.let(UriPathRouteInputProperty.Companion::unwrap))
   }
 
   /**
@@ -432,7 +432,7 @@ public open class CfnRoute(
      * @param defaultRoute Configuration for the default route type. 
      */
     override fun defaultRoute(defaultRoute: IResolvable) {
-      cdkBuilder.defaultRoute(defaultRoute.let(IResolvable::unwrap))
+      cdkBuilder.defaultRoute(defaultRoute.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -442,7 +442,7 @@ public open class CfnRoute(
      * @param defaultRoute Configuration for the default route type. 
      */
     override fun defaultRoute(defaultRoute: DefaultRouteInputProperty) {
-      cdkBuilder.defaultRoute(defaultRoute.let(DefaultRouteInputProperty::unwrap))
+      cdkBuilder.defaultRoute(defaultRoute.let(DefaultRouteInputProperty.Companion::unwrap))
     }
 
     /**
@@ -493,7 +493,7 @@ public open class CfnRoute(
      * @param tags The tags assigned to the route. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -511,7 +511,7 @@ public open class CfnRoute(
      * @param uriPathRoute The configuration for the URI path route type. 
      */
     override fun uriPathRoute(uriPathRoute: IResolvable) {
-      cdkBuilder.uriPathRoute(uriPathRoute.let(IResolvable::unwrap))
+      cdkBuilder.uriPathRoute(uriPathRoute.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -521,7 +521,7 @@ public open class CfnRoute(
      * @param uriPathRoute The configuration for the URI path route type. 
      */
     override fun uriPathRoute(uriPathRoute: UriPathRouteInputProperty) {
-      cdkBuilder.uriPathRoute(uriPathRoute.let(UriPathRouteInputProperty::unwrap))
+      cdkBuilder.uriPathRoute(uriPathRoute.let(UriPathRouteInputProperty.Companion::unwrap))
     }
 
     /**
@@ -797,7 +797,7 @@ public open class CfnRoute(
        * service URL endpoint.
        */
       override fun appendSourcePath(appendSourcePath: IResolvable) {
-        cdkBuilder.appendSourcePath(appendSourcePath.let(IResolvable::unwrap))
+        cdkBuilder.appendSourcePath(appendSourcePath.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -815,7 +815,7 @@ public open class CfnRoute(
        * forwarded to this route's service.
        */
       override fun includeChildPaths(includeChildPaths: IResolvable) {
-        cdkBuilder.includeChildPaths(includeChildPaths.let(IResolvable::unwrap))
+        cdkBuilder.includeChildPaths(includeChildPaths.let(IResolvable.Companion::unwrap))
       }
 
       /**

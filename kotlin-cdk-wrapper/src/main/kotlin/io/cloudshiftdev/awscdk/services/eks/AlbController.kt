@@ -43,8 +43,8 @@ public open class AlbController(
     id: String,
     props: AlbControllerProps,
   ) :
-      this(software.amazon.awscdk.services.eks.AlbController(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(AlbControllerProps::unwrap))
+      this(software.amazon.awscdk.services.eks.AlbController(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(AlbControllerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -115,7 +115,7 @@ public open class AlbController(
      * @param cluster [disable-awslint:ref-via-interface] Cluster to install the controller onto. 
      */
     override fun cluster(cluster: Cluster) {
-      cdkBuilder.cluster(cluster.let(Cluster::unwrap))
+      cdkBuilder.cluster(cluster.let(Cluster.Companion::unwrap))
     }
 
     /**
@@ -156,7 +156,7 @@ public open class AlbController(
      * @param version Version of the controller. 
      */
     override fun version(version: AlbControllerVersion) {
-      cdkBuilder.version(version.let(AlbControllerVersion::unwrap))
+      cdkBuilder.version(version.let(AlbControllerVersion.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.eks.AlbController = cdkBuilder.build()
@@ -165,8 +165,8 @@ public open class AlbController(
   public companion object {
     public fun create(scope: CloudshiftdevConstructsConstruct, props: AlbControllerProps):
         AlbController =
-        software.amazon.awscdk.services.eks.AlbController.create(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        props.let(AlbControllerProps::unwrap)).let(AlbController::wrap)
+        software.amazon.awscdk.services.eks.AlbController.create(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        props.let(AlbControllerProps.Companion::unwrap)).let(AlbController::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3abec2df923af4b086c4ed5b4438c030eef16ecfd9e5fa74e3b42aaa7207f58f")

@@ -130,7 +130,7 @@ public interface ComputeEnvironmentProps {
      * such as provision instances to run your jobs.
      */
     override fun serviceRole(serviceRole: IRole) {
-      cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
+      cdkBuilder.serviceRole(serviceRole.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.batch.ComputeEnvironmentProps =

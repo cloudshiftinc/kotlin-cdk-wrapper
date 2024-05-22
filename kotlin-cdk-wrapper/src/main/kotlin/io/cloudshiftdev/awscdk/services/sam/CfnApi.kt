@@ -109,8 +109,8 @@ public open class CfnApi(
     id: String,
     props: CfnApiProps,
   ) :
-      this(software.amazon.awscdk.services.sam.CfnApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApiProps::unwrap))
+      this(software.amazon.awscdk.services.sam.CfnApi(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApiProps.Companion::unwrap))
   )
 
   public constructor(
@@ -129,14 +129,14 @@ public open class CfnApi(
    *
    */
   public open fun accessLogSetting(`value`: IResolvable) {
-    unwrap(this).setAccessLogSetting(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccessLogSetting(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun accessLogSetting(`value`: AccessLogSettingProperty) {
-    unwrap(this).setAccessLogSetting(`value`.let(AccessLogSettingProperty::unwrap))
+    unwrap(this).setAccessLogSetting(`value`.let(AccessLogSettingProperty.Companion::unwrap))
   }
 
   /**
@@ -163,7 +163,7 @@ public open class CfnApi(
    *
    */
   public open fun alwaysDeploy(`value`: IResolvable) {
-    unwrap(this).setAlwaysDeploy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAlwaysDeploy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -175,14 +175,14 @@ public open class CfnApi(
    *
    */
   public open fun auth(`value`: IResolvable) {
-    unwrap(this).setAuth(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAuth(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun auth(`value`: AuthProperty) {
-    unwrap(this).setAuth(`value`.let(AuthProperty::unwrap))
+    unwrap(this).setAuth(`value`.let(AuthProperty.Companion::unwrap))
   }
 
   /**
@@ -227,7 +227,7 @@ public open class CfnApi(
    *
    */
   public open fun cacheClusterEnabled(`value`: IResolvable) {
-    unwrap(this).setCacheClusterEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCacheClusterEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -251,14 +251,14 @@ public open class CfnApi(
    *
    */
   public open fun canarySetting(`value`: IResolvable) {
-    unwrap(this).setCanarySetting(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCanarySetting(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun canarySetting(`value`: CanarySettingProperty) {
-    unwrap(this).setCanarySetting(`value`.let(CanarySettingProperty::unwrap))
+    unwrap(this).setCanarySetting(`value`.let(CanarySettingProperty.Companion::unwrap))
   }
 
   /**
@@ -285,14 +285,14 @@ public open class CfnApi(
    *
    */
   public open fun cors(`value`: IResolvable) {
-    unwrap(this).setCors(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCors(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun cors(`value`: CorsConfigurationProperty) {
-    unwrap(this).setCors(`value`.let(CorsConfigurationProperty::unwrap))
+    unwrap(this).setCors(`value`.let(CorsConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -331,14 +331,14 @@ public open class CfnApi(
    *
    */
   public open fun definitionUri(`value`: IResolvable) {
-    unwrap(this).setDefinitionUri(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefinitionUri(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun definitionUri(`value`: S3LocationProperty) {
-    unwrap(this).setDefinitionUri(`value`.let(S3LocationProperty::unwrap))
+    unwrap(this).setDefinitionUri(`value`.let(S3LocationProperty.Companion::unwrap))
   }
 
   /**
@@ -377,7 +377,7 @@ public open class CfnApi(
    *
    */
   public open fun disableExecuteApiEndpoint(`value`: IResolvable) {
-    unwrap(this).setDisableExecuteApiEndpoint(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDisableExecuteApiEndpoint(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -389,14 +389,14 @@ public open class CfnApi(
    *
    */
   public open fun domain(`value`: IResolvable) {
-    unwrap(this).setDomain(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDomain(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun domain(`value`: DomainConfigurationProperty) {
-    unwrap(this).setDomain(`value`.let(DomainConfigurationProperty::unwrap))
+    unwrap(this).setDomain(`value`.let(DomainConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -423,14 +423,14 @@ public open class CfnApi(
    *
    */
   public open fun endpointConfiguration(`value`: IResolvable) {
-    unwrap(this).setEndpointConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEndpointConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun endpointConfiguration(`value`: EndpointConfigurationProperty) {
-    unwrap(this).setEndpointConfiguration(`value`.let(EndpointConfigurationProperty::unwrap))
+    unwrap(this).setEndpointConfiguration(`value`.let(EndpointConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -459,7 +459,7 @@ public open class CfnApi(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -483,7 +483,7 @@ public open class CfnApi(
    *
    */
   public open fun methodSettings(`value`: IResolvable) {
-    unwrap(this).setMethodSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMethodSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -579,7 +579,7 @@ public open class CfnApi(
    *
    */
   public open fun tracingEnabled(`value`: IResolvable) {
-    unwrap(this).setTracingEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTracingEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -591,7 +591,7 @@ public open class CfnApi(
    *
    */
   public open fun variables(`value`: IResolvable) {
-    unwrap(this).setVariables(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVariables(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -928,7 +928,7 @@ public open class CfnApi(
      * @param accessLogSetting 
      */
     override fun accessLogSetting(accessLogSetting: IResolvable) {
-      cdkBuilder.accessLogSetting(accessLogSetting.let(IResolvable::unwrap))
+      cdkBuilder.accessLogSetting(accessLogSetting.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -936,7 +936,7 @@ public open class CfnApi(
      * @param accessLogSetting 
      */
     override fun accessLogSetting(accessLogSetting: AccessLogSettingProperty) {
-      cdkBuilder.accessLogSetting(accessLogSetting.let(AccessLogSettingProperty::unwrap))
+      cdkBuilder.accessLogSetting(accessLogSetting.let(AccessLogSettingProperty.Companion::unwrap))
     }
 
     /**
@@ -961,7 +961,7 @@ public open class CfnApi(
      * @param alwaysDeploy 
      */
     override fun alwaysDeploy(alwaysDeploy: IResolvable) {
-      cdkBuilder.alwaysDeploy(alwaysDeploy.let(IResolvable::unwrap))
+      cdkBuilder.alwaysDeploy(alwaysDeploy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -969,7 +969,7 @@ public open class CfnApi(
      * @param auth 
      */
     override fun auth(auth: IResolvable) {
-      cdkBuilder.auth(auth.let(IResolvable::unwrap))
+      cdkBuilder.auth(auth.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -977,7 +977,7 @@ public open class CfnApi(
      * @param auth 
      */
     override fun auth(auth: AuthProperty) {
-      cdkBuilder.auth(auth.let(AuthProperty::unwrap))
+      cdkBuilder.auth(auth.let(AuthProperty.Companion::unwrap))
     }
 
     /**
@@ -1016,7 +1016,7 @@ public open class CfnApi(
      * @param cacheClusterEnabled 
      */
     override fun cacheClusterEnabled(cacheClusterEnabled: IResolvable) {
-      cdkBuilder.cacheClusterEnabled(cacheClusterEnabled.let(IResolvable::unwrap))
+      cdkBuilder.cacheClusterEnabled(cacheClusterEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1032,7 +1032,7 @@ public open class CfnApi(
      * @param canarySetting 
      */
     override fun canarySetting(canarySetting: IResolvable) {
-      cdkBuilder.canarySetting(canarySetting.let(IResolvable::unwrap))
+      cdkBuilder.canarySetting(canarySetting.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1040,7 +1040,7 @@ public open class CfnApi(
      * @param canarySetting 
      */
     override fun canarySetting(canarySetting: CanarySettingProperty) {
-      cdkBuilder.canarySetting(canarySetting.let(CanarySettingProperty::unwrap))
+      cdkBuilder.canarySetting(canarySetting.let(CanarySettingProperty.Companion::unwrap))
     }
 
     /**
@@ -1065,7 +1065,7 @@ public open class CfnApi(
      * @param cors 
      */
     override fun cors(cors: IResolvable) {
-      cdkBuilder.cors(cors.let(IResolvable::unwrap))
+      cdkBuilder.cors(cors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1073,7 +1073,7 @@ public open class CfnApi(
      * @param cors 
      */
     override fun cors(cors: CorsConfigurationProperty) {
-      cdkBuilder.cors(cors.let(CorsConfigurationProperty::unwrap))
+      cdkBuilder.cors(cors.let(CorsConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1106,7 +1106,7 @@ public open class CfnApi(
      * @param definitionUri 
      */
     override fun definitionUri(definitionUri: IResolvable) {
-      cdkBuilder.definitionUri(definitionUri.let(IResolvable::unwrap))
+      cdkBuilder.definitionUri(definitionUri.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1114,7 +1114,7 @@ public open class CfnApi(
      * @param definitionUri 
      */
     override fun definitionUri(definitionUri: S3LocationProperty) {
-      cdkBuilder.definitionUri(definitionUri.let(S3LocationProperty::unwrap))
+      cdkBuilder.definitionUri(definitionUri.let(S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -1147,7 +1147,7 @@ public open class CfnApi(
      * @param disableExecuteApiEndpoint 
      */
     override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable) {
-      cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint.let(IResolvable::unwrap))
+      cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1155,7 +1155,7 @@ public open class CfnApi(
      * @param domain 
      */
     override fun domain(domain: IResolvable) {
-      cdkBuilder.domain(domain.let(IResolvable::unwrap))
+      cdkBuilder.domain(domain.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1163,7 +1163,7 @@ public open class CfnApi(
      * @param domain 
      */
     override fun domain(domain: DomainConfigurationProperty) {
-      cdkBuilder.domain(domain.let(DomainConfigurationProperty::unwrap))
+      cdkBuilder.domain(domain.let(DomainConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1188,7 +1188,7 @@ public open class CfnApi(
      * @param endpointConfiguration 
      */
     override fun endpointConfiguration(endpointConfiguration: IResolvable) {
-      cdkBuilder.endpointConfiguration(endpointConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.endpointConfiguration(endpointConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1196,7 +1196,7 @@ public open class CfnApi(
      * @param endpointConfiguration 
      */
     override fun endpointConfiguration(endpointConfiguration: EndpointConfigurationProperty) {
-      cdkBuilder.endpointConfiguration(endpointConfiguration.let(EndpointConfigurationProperty::unwrap))
+      cdkBuilder.endpointConfiguration(endpointConfiguration.let(EndpointConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1237,7 +1237,7 @@ public open class CfnApi(
      * @param methodSettings 
      */
     override fun methodSettings(methodSettings: IResolvable) {
-      cdkBuilder.methodSettings(methodSettings.let(IResolvable::unwrap))
+      cdkBuilder.methodSettings(methodSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1301,7 +1301,7 @@ public open class CfnApi(
      * @param tracingEnabled 
      */
     override fun tracingEnabled(tracingEnabled: IResolvable) {
-      cdkBuilder.tracingEnabled(tracingEnabled.let(IResolvable::unwrap))
+      cdkBuilder.tracingEnabled(tracingEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1309,7 +1309,7 @@ public open class CfnApi(
      * @param variables 
      */
     override fun variables(variables: IResolvable) {
-      cdkBuilder.variables(variables.let(IResolvable::unwrap))
+      cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1521,7 +1521,7 @@ public open class CfnApi(
        */
       override
           fun addDefaultAuthorizerToCorsPreflight(addDefaultAuthorizerToCorsPreflight: IResolvable) {
-        cdkBuilder.addDefaultAuthorizerToCorsPreflight(addDefaultAuthorizerToCorsPreflight.let(IResolvable::unwrap))
+        cdkBuilder.addDefaultAuthorizerToCorsPreflight(addDefaultAuthorizerToCorsPreflight.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1675,7 +1675,7 @@ public open class CfnApi(
        * @param stageVariableOverrides the value to be set.
        */
       override fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
-        cdkBuilder.stageVariableOverrides(stageVariableOverrides.let(IResolvable::unwrap))
+        cdkBuilder.stageVariableOverrides(stageVariableOverrides.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1696,7 +1696,7 @@ public open class CfnApi(
        * @param useStageCache the value to be set.
        */
       override fun useStageCache(useStageCache: IResolvable) {
-        cdkBuilder.useStageCache(useStageCache.let(IResolvable::unwrap))
+        cdkBuilder.useStageCache(useStageCache.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.sam.CfnApi.CanarySettingProperty =
@@ -1841,7 +1841,7 @@ public open class CfnApi(
        * @param allowCredentials the value to be set.
        */
       override fun allowCredentials(allowCredentials: IResolvable) {
-        cdkBuilder.allowCredentials(allowCredentials.let(IResolvable::unwrap))
+        cdkBuilder.allowCredentials(allowCredentials.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2114,7 +2114,7 @@ public open class CfnApi(
        * @param mutualTlsAuthentication the value to be set.
        */
       override fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable) {
-        cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(IResolvable::unwrap))
+        cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2122,7 +2122,7 @@ public open class CfnApi(
        */
       override
           fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty) {
-        cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(MutualTlsAuthenticationProperty::unwrap))
+        cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(MutualTlsAuthenticationProperty.Companion::unwrap))
       }
 
       /**
@@ -2146,14 +2146,14 @@ public open class CfnApi(
        * @param route53 the value to be set.
        */
       override fun route53(route53: IResolvable) {
-        cdkBuilder.route53(route53.let(IResolvable::unwrap))
+        cdkBuilder.route53(route53.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param route53 the value to be set.
        */
       override fun route53(route53: Route53ConfigurationProperty) {
-        cdkBuilder.route53(route53.let(Route53ConfigurationProperty::unwrap))
+        cdkBuilder.route53(route53.let(Route53ConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2554,7 +2554,7 @@ public open class CfnApi(
        * @param evaluateTargetHealth the value to be set.
        */
       override fun evaluateTargetHealth(evaluateTargetHealth: IResolvable) {
-        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth.let(IResolvable::unwrap))
+        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2582,7 +2582,7 @@ public open class CfnApi(
        * @param ipV6 the value to be set.
        */
       override fun ipV6(ipV6: IResolvable) {
-        cdkBuilder.ipV6(ipV6.let(IResolvable::unwrap))
+        cdkBuilder.ipV6(ipV6.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.sam.CfnApi.Route53ConfigurationProperty =

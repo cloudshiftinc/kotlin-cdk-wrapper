@@ -51,8 +51,8 @@ public open class CfnTemplateGroupAccessControlEntry(
     id: String,
     props: CfnTemplateGroupAccessControlEntryProps,
   ) :
-      this(software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntry(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTemplateGroupAccessControlEntryProps::unwrap))
+      this(software.amazon.awscdk.services.pcaconnectorad.CfnTemplateGroupAccessControlEntry(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTemplateGroupAccessControlEntryProps.Companion::unwrap))
   )
 
   public constructor(
@@ -73,7 +73,7 @@ public open class CfnTemplateGroupAccessControlEntry(
    * issued against a template.
    */
   public open fun accessRights(`value`: IResolvable) {
-    unwrap(this).setAccessRights(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccessRights(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -81,7 +81,7 @@ public open class CfnTemplateGroupAccessControlEntry(
    * issued against a template.
    */
   public open fun accessRights(`value`: AccessRightsProperty) {
-    unwrap(this).setAccessRights(`value`.let(AccessRightsProperty::unwrap))
+    unwrap(this).setAccessRights(`value`.let(AccessRightsProperty.Companion::unwrap))
   }
 
   /**
@@ -123,7 +123,7 @@ public open class CfnTemplateGroupAccessControlEntry(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -232,7 +232,7 @@ public open class CfnTemplateGroupAccessControlEntry(
      * autoenroll certificates issued against a template. 
      */
     override fun accessRights(accessRights: IResolvable) {
-      cdkBuilder.accessRights(accessRights.let(IResolvable::unwrap))
+      cdkBuilder.accessRights(accessRights.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -244,7 +244,7 @@ public open class CfnTemplateGroupAccessControlEntry(
      * autoenroll certificates issued against a template. 
      */
     override fun accessRights(accessRights: AccessRightsProperty) {
-      cdkBuilder.accessRights(accessRights.let(AccessRightsProperty::unwrap))
+      cdkBuilder.accessRights(accessRights.let(AccessRightsProperty.Companion::unwrap))
     }
 
     /**

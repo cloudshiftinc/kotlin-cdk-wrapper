@@ -39,8 +39,8 @@ public open class ApiMapping(
     id: String,
     props: ApiMappingProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.ApiMapping(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ApiMappingProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.ApiMapping(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ApiMappingProps.Companion::unwrap))
   )
 
   public constructor(
@@ -120,7 +120,7 @@ public open class ApiMapping(
      * @param api The Api to which this mapping is applied. 
      */
     override fun api(api: IApi) {
-      cdkBuilder.api(api.let(IApi::unwrap))
+      cdkBuilder.api(api.let(IApi.Companion::unwrap))
     }
 
     /**
@@ -142,7 +142,7 @@ public open class ApiMapping(
      * @param domainName custom domain name of the mapping target. 
      */
     override fun domainName(domainName: IDomainName) {
-      cdkBuilder.domainName(domainName.let(IDomainName::unwrap))
+      cdkBuilder.domainName(domainName.let(IDomainName.Companion::unwrap))
     }
 
     /**
@@ -155,7 +155,7 @@ public open class ApiMapping(
      * stage of an HTTP API. 
      */
     override fun stage(stage: IStage) {
-      cdkBuilder.stage(stage.let(IStage::unwrap))
+      cdkBuilder.stage(stage.let(IStage.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.ApiMapping = cdkBuilder.build()
@@ -167,8 +167,8 @@ public open class ApiMapping(
       id: String,
       attrs: ApiMappingAttributes,
     ): IApiMapping =
-        software.amazon.awscdk.services.apigatewayv2.ApiMapping.fromApiMappingAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(ApiMappingAttributes::unwrap)).let(IApiMapping::wrap)
+        software.amazon.awscdk.services.apigatewayv2.ApiMapping.fromApiMappingAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(ApiMappingAttributes.Companion::unwrap)).let(IApiMapping::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1e1c3b60e3420232e95ceb8ceace088a2b1d3dd92bc0ca138bdaccdfa392dd6e")

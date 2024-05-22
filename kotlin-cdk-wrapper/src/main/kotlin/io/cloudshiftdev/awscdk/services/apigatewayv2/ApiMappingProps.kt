@@ -93,7 +93,7 @@ public interface ApiMappingProps {
      * @param api The Api to which this mapping is applied. 
      */
     override fun api(api: IApi) {
-      cdkBuilder.api(api.let(IApi::unwrap))
+      cdkBuilder.api(api.let(IApi.Companion::unwrap))
     }
 
     /**
@@ -108,7 +108,7 @@ public interface ApiMappingProps {
      * @param domainName custom domain name of the mapping target. 
      */
     override fun domainName(domainName: IDomainName) {
-      cdkBuilder.domainName(domainName.let(IDomainName::unwrap))
+      cdkBuilder.domainName(domainName.let(IDomainName.Companion::unwrap))
     }
 
     /**
@@ -116,7 +116,7 @@ public interface ApiMappingProps {
      * stage of an HTTP API.
      */
     override fun stage(stage: IStage) {
-      cdkBuilder.stage(stage.let(IStage::unwrap))
+      cdkBuilder.stage(stage.let(IStage.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.ApiMappingProps =

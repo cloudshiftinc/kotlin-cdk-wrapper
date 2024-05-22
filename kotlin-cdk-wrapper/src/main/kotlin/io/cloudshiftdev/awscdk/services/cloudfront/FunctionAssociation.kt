@@ -60,14 +60,14 @@ public interface FunctionAssociation {
      * @param eventType The type of event which should invoke the function. 
      */
     override fun eventType(eventType: FunctionEventType) {
-      cdkBuilder.eventType(eventType.let(FunctionEventType::unwrap))
+      cdkBuilder.eventType(eventType.let(FunctionEventType.Companion::unwrap))
     }
 
     /**
      * @param function The CloudFront function that will be invoked. 
      */
     override fun function(function: IFunction) {
-      cdkBuilder.function(function.let(IFunction::unwrap))
+      cdkBuilder.function(function.let(IFunction.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.FunctionAssociation =

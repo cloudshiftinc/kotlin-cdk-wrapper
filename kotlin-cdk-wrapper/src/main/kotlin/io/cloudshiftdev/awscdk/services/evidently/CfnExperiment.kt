@@ -93,8 +93,8 @@ public open class CfnExperiment(
     id: String,
     props: CfnExperimentProps,
   ) :
-      this(software.amazon.awscdk.services.evidently.CfnExperiment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnExperimentProps::unwrap))
+      this(software.amazon.awscdk.services.evidently.CfnExperiment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnExperimentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -130,7 +130,7 @@ public open class CfnExperiment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -144,7 +144,7 @@ public open class CfnExperiment(
    * or lower value for each metric is the goal.
    */
   public open fun metricGoals(`value`: IResolvable) {
-    unwrap(this).setMetricGoals(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMetricGoals(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -182,14 +182,14 @@ public open class CfnExperiment(
    * A structure that contains the configuration of which variation to use as the "control" version.
    */
   public open fun onlineAbConfig(`value`: IResolvable) {
-    unwrap(this).setOnlineAbConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOnlineAbConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A structure that contains the configuration of which variation to use as the "control" version.
    */
   public open fun onlineAbConfig(`value`: OnlineAbConfigObjectProperty) {
-    unwrap(this).setOnlineAbConfig(`value`.let(OnlineAbConfigObjectProperty::unwrap))
+    unwrap(this).setOnlineAbConfig(`value`.let(OnlineAbConfigObjectProperty.Companion::unwrap))
   }
 
   /**
@@ -242,7 +242,7 @@ public open class CfnExperiment(
    * Set this to `true` to remove the segment that is associated with this experiment.
    */
   public open fun removeSegment(`value`: IResolvable) {
-    unwrap(this).setRemoveSegment(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRemoveSegment(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -254,14 +254,14 @@ public open class CfnExperiment(
    * A structure that you can use to start and stop the experiment.
    */
   public open fun runningStatus(`value`: IResolvable) {
-    unwrap(this).setRunningStatus(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRunningStatus(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A structure that you can use to start and stop the experiment.
    */
   public open fun runningStatus(`value`: RunningStatusObjectProperty) {
-    unwrap(this).setRunningStatus(`value`.let(RunningStatusObjectProperty::unwrap))
+    unwrap(this).setRunningStatus(`value`.let(RunningStatusObjectProperty.Companion::unwrap))
   }
 
   /**
@@ -313,7 +313,7 @@ public open class CfnExperiment(
    * Assigns one or more tags (key-value pairs) to the experiment.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -332,7 +332,7 @@ public open class CfnExperiment(
    * experiment.
    */
   public open fun treatments(`value`: IResolvable) {
-    unwrap(this).setTreatments(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTreatments(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -646,7 +646,7 @@ public open class CfnExperiment(
      * and whether a higher or lower value for each metric is the goal. 
      */
     override fun metricGoals(metricGoals: IResolvable) {
-      cdkBuilder.metricGoals(metricGoals.let(IResolvable::unwrap))
+      cdkBuilder.metricGoals(metricGoals.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -697,7 +697,7 @@ public open class CfnExperiment(
      * as the "control" version. 
      */
     override fun onlineAbConfig(onlineAbConfig: IResolvable) {
-      cdkBuilder.onlineAbConfig(onlineAbConfig.let(IResolvable::unwrap))
+      cdkBuilder.onlineAbConfig(onlineAbConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -712,7 +712,7 @@ public open class CfnExperiment(
      * as the "control" version. 
      */
     override fun onlineAbConfig(onlineAbConfig: OnlineAbConfigObjectProperty) {
-      cdkBuilder.onlineAbConfig(onlineAbConfig.let(OnlineAbConfigObjectProperty::unwrap))
+      cdkBuilder.onlineAbConfig(onlineAbConfig.let(OnlineAbConfigObjectProperty.Companion::unwrap))
     }
 
     /**
@@ -779,7 +779,7 @@ public open class CfnExperiment(
      * experiment. 
      */
     override fun removeSegment(removeSegment: IResolvable) {
-      cdkBuilder.removeSegment(removeSegment.let(IResolvable::unwrap))
+      cdkBuilder.removeSegment(removeSegment.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -789,7 +789,7 @@ public open class CfnExperiment(
      * @param runningStatus A structure that you can use to start and stop the experiment. 
      */
     override fun runningStatus(runningStatus: IResolvable) {
-      cdkBuilder.runningStatus(runningStatus.let(IResolvable::unwrap))
+      cdkBuilder.runningStatus(runningStatus.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -799,7 +799,7 @@ public open class CfnExperiment(
      * @param runningStatus A structure that you can use to start and stop the experiment. 
      */
     override fun runningStatus(runningStatus: RunningStatusObjectProperty) {
-      cdkBuilder.runningStatus(runningStatus.let(RunningStatusObjectProperty::unwrap))
+      cdkBuilder.runningStatus(runningStatus.let(RunningStatusObjectProperty.Companion::unwrap))
     }
 
     /**
@@ -867,7 +867,7 @@ public open class CfnExperiment(
      * @param tags Assigns one or more tags (key-value pairs) to the experiment. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -899,7 +899,7 @@ public open class CfnExperiment(
      * variation used in the experiment. 
      */
     override fun treatments(treatments: IResolvable) {
-      cdkBuilder.treatments(treatments.let(IResolvable::unwrap))
+      cdkBuilder.treatments(treatments.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1302,7 +1302,7 @@ public open class CfnExperiment(
        * for a variation would allocate 20% of the experiment traffic to that variation.
        */
       override fun treatmentWeights(treatmentWeights: IResolvable) {
-        cdkBuilder.treatmentWeights(treatmentWeights.let(IResolvable::unwrap))
+        cdkBuilder.treatmentWeights(treatmentWeights.let(IResolvable.Companion::unwrap))
       }
 
       /**

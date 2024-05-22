@@ -253,7 +253,7 @@ public interface CfnMaintenanceWindowProps {
      * register a task with the maintenance window.
      */
     override fun allowUnassociatedTargets(allowUnassociatedTargets: IResolvable) {
-      cdkBuilder.allowUnassociatedTargets(allowUnassociatedTargets.let(IResolvable::unwrap))
+      cdkBuilder.allowUnassociatedTargets(allowUnassociatedTargets.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -335,7 +335,7 @@ public interface CfnMaintenanceWindowProps {
      * tasks it will run, the types of targets, and the environment it will run in.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

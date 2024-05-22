@@ -85,8 +85,8 @@ public open class CfnCustomActionType(
     id: String,
     props: CfnCustomActionTypeProps,
   ) :
-      this(software.amazon.awscdk.services.codepipeline.CfnCustomActionType(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCustomActionTypeProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.CfnCustomActionType(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCustomActionTypeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -122,7 +122,7 @@ public open class CfnCustomActionType(
    * The configuration properties for the custom action.
    */
   public open fun configurationProperties(`value`: IResolvable) {
-    unwrap(this).setConfigurationProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfigurationProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -147,14 +147,14 @@ public open class CfnCustomActionType(
    * The details of the input artifact for the action, such as its commit ID.
    */
   public open fun inputArtifactDetails(`value`: IResolvable) {
-    unwrap(this).setInputArtifactDetails(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInputArtifactDetails(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The details of the input artifact for the action, such as its commit ID.
    */
   public open fun inputArtifactDetails(`value`: ArtifactDetailsProperty) {
-    unwrap(this).setInputArtifactDetails(`value`.let(ArtifactDetailsProperty::unwrap))
+    unwrap(this).setInputArtifactDetails(`value`.let(ArtifactDetailsProperty.Companion::unwrap))
   }
 
   /**
@@ -171,7 +171,7 @@ public open class CfnCustomActionType(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -183,14 +183,14 @@ public open class CfnCustomActionType(
    * The details of the output artifact of the action, such as its commit ID.
    */
   public open fun outputArtifactDetails(`value`: IResolvable) {
-    unwrap(this).setOutputArtifactDetails(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOutputArtifactDetails(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The details of the output artifact of the action, such as its commit ID.
    */
   public open fun outputArtifactDetails(`value`: ArtifactDetailsProperty) {
-    unwrap(this).setOutputArtifactDetails(`value`.let(ArtifactDetailsProperty::unwrap))
+    unwrap(this).setOutputArtifactDetails(`value`.let(ArtifactDetailsProperty.Companion::unwrap))
   }
 
   /**
@@ -222,14 +222,14 @@ public open class CfnCustomActionType(
    * URLs that provide users information about this custom action.
    */
   public open fun settings(`value`: IResolvable) {
-    unwrap(this).setSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * URLs that provide users information about this custom action.
    */
   public open fun settings(`value`: SettingsProperty) {
-    unwrap(this).setSettings(`value`.let(SettingsProperty::unwrap))
+    unwrap(this).setSettings(`value`.let(SettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -255,7 +255,7 @@ public open class CfnCustomActionType(
    * The tags for the custom action.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -487,7 +487,7 @@ public open class CfnCustomActionType(
      * @param configurationProperties The configuration properties for the custom action. 
      */
     override fun configurationProperties(configurationProperties: IResolvable) {
-      cdkBuilder.configurationProperties(configurationProperties.let(IResolvable::unwrap))
+      cdkBuilder.configurationProperties(configurationProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -533,7 +533,7 @@ public open class CfnCustomActionType(
      * commit ID. 
      */
     override fun inputArtifactDetails(inputArtifactDetails: IResolvable) {
-      cdkBuilder.inputArtifactDetails(inputArtifactDetails.let(IResolvable::unwrap))
+      cdkBuilder.inputArtifactDetails(inputArtifactDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -544,7 +544,7 @@ public open class CfnCustomActionType(
      * commit ID. 
      */
     override fun inputArtifactDetails(inputArtifactDetails: ArtifactDetailsProperty) {
-      cdkBuilder.inputArtifactDetails(inputArtifactDetails.let(ArtifactDetailsProperty::unwrap))
+      cdkBuilder.inputArtifactDetails(inputArtifactDetails.let(ArtifactDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -568,7 +568,7 @@ public open class CfnCustomActionType(
      * commit ID. 
      */
     override fun outputArtifactDetails(outputArtifactDetails: IResolvable) {
-      cdkBuilder.outputArtifactDetails(outputArtifactDetails.let(IResolvable::unwrap))
+      cdkBuilder.outputArtifactDetails(outputArtifactDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -579,7 +579,7 @@ public open class CfnCustomActionType(
      * commit ID. 
      */
     override fun outputArtifactDetails(outputArtifactDetails: ArtifactDetailsProperty) {
-      cdkBuilder.outputArtifactDetails(outputArtifactDetails.let(ArtifactDetailsProperty::unwrap))
+      cdkBuilder.outputArtifactDetails(outputArtifactDetails.let(ArtifactDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -612,7 +612,7 @@ public open class CfnCustomActionType(
      * @param settings URLs that provide users information about this custom action. 
      */
     override fun settings(settings: IResolvable) {
-      cdkBuilder.settings(settings.let(IResolvable::unwrap))
+      cdkBuilder.settings(settings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -622,7 +622,7 @@ public open class CfnCustomActionType(
      * @param settings URLs that provide users information about this custom action. 
      */
     override fun settings(settings: SettingsProperty) {
-      cdkBuilder.settings(settings.let(SettingsProperty::unwrap))
+      cdkBuilder.settings(settings.let(SettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -643,7 +643,7 @@ public open class CfnCustomActionType(
      * @param tags The tags for the custom action. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1005,7 +1005,7 @@ public open class CfnCustomActionType(
        * @param key Whether the configuration property is a key. 
        */
       override fun key(key: IResolvable) {
-        cdkBuilder.key(key.let(IResolvable::unwrap))
+        cdkBuilder.key(key.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1040,7 +1040,7 @@ public open class CfnCustomActionType(
        * contain only alphanumeric characters, underscores, and hyphens.
        */
       override fun queryable(queryable: IResolvable) {
-        cdkBuilder.queryable(queryable.let(IResolvable::unwrap))
+        cdkBuilder.queryable(queryable.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1054,7 +1054,7 @@ public open class CfnCustomActionType(
        * @param required Whether the configuration property is a required value. 
        */
       override fun required(required: IResolvable) {
-        cdkBuilder.required(required.let(IResolvable::unwrap))
+        cdkBuilder.required(required.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1078,7 +1078,7 @@ public open class CfnCustomActionType(
        * preserves the previous value of the secret.
        */
       override fun secret(secret: IResolvable) {
-        cdkBuilder.secret(secret.let(IResolvable::unwrap))
+        cdkBuilder.secret(secret.let(IResolvable.Companion::unwrap))
       }
 
       /**

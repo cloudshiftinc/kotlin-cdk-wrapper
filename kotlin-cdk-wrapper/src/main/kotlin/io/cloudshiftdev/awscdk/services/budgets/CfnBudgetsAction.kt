@@ -78,8 +78,8 @@ public open class CfnBudgetsAction(
     id: String,
     props: CfnBudgetsActionProps,
   ) :
-      this(software.amazon.awscdk.services.budgets.CfnBudgetsAction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnBudgetsActionProps::unwrap))
+      this(software.amazon.awscdk.services.budgets.CfnBudgetsAction(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnBudgetsActionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -98,14 +98,14 @@ public open class CfnBudgetsAction(
    * The trigger threshold of the action.
    */
   public open fun actionThreshold(`value`: IResolvable) {
-    unwrap(this).setActionThreshold(`value`.let(IResolvable::unwrap))
+    unwrap(this).setActionThreshold(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The trigger threshold of the action.
    */
   public open fun actionThreshold(`value`: ActionThresholdProperty) {
-    unwrap(this).setActionThreshold(`value`.let(ActionThresholdProperty::unwrap))
+    unwrap(this).setActionThreshold(`value`.let(ActionThresholdProperty.Companion::unwrap))
   }
 
   /**
@@ -166,14 +166,14 @@ public open class CfnBudgetsAction(
    * Specifies all of the type-specific parameters.
    */
   public open fun definition(`value`: IResolvable) {
-    unwrap(this).setDefinition(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefinition(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies all of the type-specific parameters.
    */
   public open fun definition(`value`: DefinitionProperty) {
-    unwrap(this).setDefinition(`value`.let(DefinitionProperty::unwrap))
+    unwrap(this).setDefinition(`value`.let(DefinitionProperty.Companion::unwrap))
   }
 
   /**
@@ -202,7 +202,7 @@ public open class CfnBudgetsAction(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -226,7 +226,7 @@ public open class CfnBudgetsAction(
    * A list of subscribers.
    */
   public open fun subscribers(`value`: IResolvable) {
-    unwrap(this).setSubscribers(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSubscribers(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -384,7 +384,7 @@ public open class CfnBudgetsAction(
      * @param actionThreshold The trigger threshold of the action. 
      */
     override fun actionThreshold(actionThreshold: IResolvable) {
-      cdkBuilder.actionThreshold(actionThreshold.let(IResolvable::unwrap))
+      cdkBuilder.actionThreshold(actionThreshold.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -394,7 +394,7 @@ public open class CfnBudgetsAction(
      * @param actionThreshold The trigger threshold of the action. 
      */
     override fun actionThreshold(actionThreshold: ActionThresholdProperty) {
-      cdkBuilder.actionThreshold(actionThreshold.let(ActionThresholdProperty::unwrap))
+      cdkBuilder.actionThreshold(actionThreshold.let(ActionThresholdProperty.Companion::unwrap))
     }
 
     /**
@@ -450,7 +450,7 @@ public open class CfnBudgetsAction(
      * @param definition Specifies all of the type-specific parameters. 
      */
     override fun definition(definition: IResolvable) {
-      cdkBuilder.definition(definition.let(IResolvable::unwrap))
+      cdkBuilder.definition(definition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -460,7 +460,7 @@ public open class CfnBudgetsAction(
      * @param definition Specifies all of the type-specific parameters. 
      */
     override fun definition(definition: DefinitionProperty) {
-      cdkBuilder.definition(definition.let(DefinitionProperty::unwrap))
+      cdkBuilder.definition(definition.let(DefinitionProperty.Companion::unwrap))
     }
 
     /**
@@ -503,7 +503,7 @@ public open class CfnBudgetsAction(
      * @param subscribers A list of subscribers. 
      */
     override fun subscribers(subscribers: IResolvable) {
-      cdkBuilder.subscribers(subscribers.let(IResolvable::unwrap))
+      cdkBuilder.subscribers(subscribers.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -786,7 +786,7 @@ public open class CfnBudgetsAction(
        * details.
        */
       override fun iamActionDefinition(iamActionDefinition: IResolvable) {
-        cdkBuilder.iamActionDefinition(iamActionDefinition.let(IResolvable::unwrap))
+        cdkBuilder.iamActionDefinition(iamActionDefinition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -794,7 +794,7 @@ public open class CfnBudgetsAction(
        * details.
        */
       override fun iamActionDefinition(iamActionDefinition: IamActionDefinitionProperty) {
-        cdkBuilder.iamActionDefinition(iamActionDefinition.let(IamActionDefinitionProperty::unwrap))
+        cdkBuilder.iamActionDefinition(iamActionDefinition.let(IamActionDefinitionProperty.Companion::unwrap))
       }
 
       /**
@@ -811,14 +811,14 @@ public open class CfnBudgetsAction(
        * @param scpActionDefinition The service control policies (SCP) action definition details.
        */
       override fun scpActionDefinition(scpActionDefinition: IResolvable) {
-        cdkBuilder.scpActionDefinition(scpActionDefinition.let(IResolvable::unwrap))
+        cdkBuilder.scpActionDefinition(scpActionDefinition.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param scpActionDefinition The service control policies (SCP) action definition details.
        */
       override fun scpActionDefinition(scpActionDefinition: ScpActionDefinitionProperty) {
-        cdkBuilder.scpActionDefinition(scpActionDefinition.let(ScpActionDefinitionProperty::unwrap))
+        cdkBuilder.scpActionDefinition(scpActionDefinition.let(ScpActionDefinitionProperty.Companion::unwrap))
       }
 
       /**
@@ -835,7 +835,7 @@ public open class CfnBudgetsAction(
        * details.
        */
       override fun ssmActionDefinition(ssmActionDefinition: IResolvable) {
-        cdkBuilder.ssmActionDefinition(ssmActionDefinition.let(IResolvable::unwrap))
+        cdkBuilder.ssmActionDefinition(ssmActionDefinition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -843,7 +843,7 @@ public open class CfnBudgetsAction(
        * details.
        */
       override fun ssmActionDefinition(ssmActionDefinition: SsmActionDefinitionProperty) {
-        cdkBuilder.ssmActionDefinition(ssmActionDefinition.let(SsmActionDefinitionProperty::unwrap))
+        cdkBuilder.ssmActionDefinition(ssmActionDefinition.let(SsmActionDefinitionProperty.Companion::unwrap))
       }
 
       /**

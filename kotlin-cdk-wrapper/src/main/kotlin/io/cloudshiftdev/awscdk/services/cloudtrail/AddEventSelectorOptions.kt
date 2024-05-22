@@ -104,7 +104,7 @@ public interface AddEventSelectorOptions {
      */
     override
         fun excludeManagementEventSources(excludeManagementEventSources: List<ManagementEventSources>) {
-      cdkBuilder.excludeManagementEventSources(excludeManagementEventSources.map(ManagementEventSources::unwrap))
+      cdkBuilder.excludeManagementEventSources(excludeManagementEventSources.map(ManagementEventSources.Companion::unwrap))
     }
 
     /**
@@ -128,7 +128,7 @@ public interface AddEventSelectorOptions {
      * events.
      */
     override fun readWriteType(readWriteType: ReadWriteType) {
-      cdkBuilder.readWriteType(readWriteType.let(ReadWriteType::unwrap))
+      cdkBuilder.readWriteType(readWriteType.let(ReadWriteType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudtrail.AddEventSelectorOptions =

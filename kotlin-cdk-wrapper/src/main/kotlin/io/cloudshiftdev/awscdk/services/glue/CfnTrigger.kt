@@ -84,8 +84,8 @@ public open class CfnTrigger(
     id: String,
     props: CfnTriggerProps,
   ) :
-      this(software.amazon.awscdk.services.glue.CfnTrigger(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTriggerProps::unwrap))
+      this(software.amazon.awscdk.services.glue.CfnTrigger(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTriggerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -104,7 +104,7 @@ public open class CfnTrigger(
    * The actions initiated by this trigger.
    */
   public open fun actions(`value`: IResolvable) {
-    unwrap(this).setActions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setActions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -147,7 +147,7 @@ public open class CfnTrigger(
    * expired) before EventBridge event trigger fires.
    */
   public open fun eventBatchingCondition(`value`: IResolvable) {
-    unwrap(this).setEventBatchingCondition(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEventBatchingCondition(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -155,7 +155,7 @@ public open class CfnTrigger(
    * expired) before EventBridge event trigger fires.
    */
   public open fun eventBatchingCondition(`value`: EventBatchingConditionProperty) {
-    unwrap(this).setEventBatchingCondition(`value`.let(EventBatchingConditionProperty::unwrap))
+    unwrap(this).setEventBatchingCondition(`value`.let(EventBatchingConditionProperty.Companion::unwrap))
   }
 
   /**
@@ -174,7 +174,7 @@ public open class CfnTrigger(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -198,14 +198,14 @@ public open class CfnTrigger(
    * The predicate of this trigger, which defines when it will fire.
    */
   public open fun predicate(`value`: IResolvable) {
-    unwrap(this).setPredicate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPredicate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The predicate of this trigger, which defines when it will fire.
    */
   public open fun predicate(`value`: PredicateProperty) {
-    unwrap(this).setPredicate(`value`.let(PredicateProperty::unwrap))
+    unwrap(this).setPredicate(`value`.let(PredicateProperty.Companion::unwrap))
   }
 
   /**
@@ -244,7 +244,7 @@ public open class CfnTrigger(
    * Set to true to start `SCHEDULED` and `CONDITIONAL` triggers when created.
    */
   public open fun startOnCreation(`value`: IResolvable) {
-    unwrap(this).setStartOnCreation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStartOnCreation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -466,7 +466,7 @@ public open class CfnTrigger(
      * @param actions The actions initiated by this trigger. 
      */
     override fun actions(actions: IResolvable) {
-      cdkBuilder.actions(actions.let(IResolvable::unwrap))
+      cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -506,7 +506,7 @@ public open class CfnTrigger(
      * received or batch time window expired) before EventBridge event trigger fires. 
      */
     override fun eventBatchingCondition(eventBatchingCondition: IResolvable) {
-      cdkBuilder.eventBatchingCondition(eventBatchingCondition.let(IResolvable::unwrap))
+      cdkBuilder.eventBatchingCondition(eventBatchingCondition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -518,7 +518,7 @@ public open class CfnTrigger(
      * received or batch time window expired) before EventBridge event trigger fires. 
      */
     override fun eventBatchingCondition(eventBatchingCondition: EventBatchingConditionProperty) {
-      cdkBuilder.eventBatchingCondition(eventBatchingCondition.let(EventBatchingConditionProperty::unwrap))
+      cdkBuilder.eventBatchingCondition(eventBatchingCondition.let(EventBatchingConditionProperty.Companion::unwrap))
     }
 
     /**
@@ -552,7 +552,7 @@ public open class CfnTrigger(
      * @param predicate The predicate of this trigger, which defines when it will fire. 
      */
     override fun predicate(predicate: IResolvable) {
-      cdkBuilder.predicate(predicate.let(IResolvable::unwrap))
+      cdkBuilder.predicate(predicate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -562,7 +562,7 @@ public open class CfnTrigger(
      * @param predicate The predicate of this trigger, which defines when it will fire. 
      */
     override fun predicate(predicate: PredicateProperty) {
-      cdkBuilder.predicate(predicate.let(PredicateProperty::unwrap))
+      cdkBuilder.predicate(predicate.let(PredicateProperty.Companion::unwrap))
     }
 
     /**
@@ -614,7 +614,7 @@ public open class CfnTrigger(
      * created. 
      */
     override fun startOnCreation(startOnCreation: IResolvable) {
-      cdkBuilder.startOnCreation(startOnCreation.let(IResolvable::unwrap))
+      cdkBuilder.startOnCreation(startOnCreation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -866,14 +866,14 @@ public open class CfnTrigger(
        * @param notificationProperty Specifies configuration properties of a job run notification.
        */
       override fun notificationProperty(notificationProperty: IResolvable) {
-        cdkBuilder.notificationProperty(notificationProperty.let(IResolvable::unwrap))
+        cdkBuilder.notificationProperty(notificationProperty.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param notificationProperty Specifies configuration properties of a job run notification.
        */
       override fun notificationProperty(notificationProperty: NotificationPropertyProperty) {
-        cdkBuilder.notificationProperty(notificationProperty.let(NotificationPropertyProperty::unwrap))
+        cdkBuilder.notificationProperty(notificationProperty.let(NotificationPropertyProperty.Companion::unwrap))
       }
 
       /**
@@ -1468,7 +1468,7 @@ public open class CfnTrigger(
        * @param conditions A list of the conditions that determine when the trigger will fire.
        */
       override fun conditions(conditions: IResolvable) {
-        cdkBuilder.conditions(conditions.let(IResolvable::unwrap))
+        cdkBuilder.conditions(conditions.let(IResolvable.Companion::unwrap))
       }
 
       /**

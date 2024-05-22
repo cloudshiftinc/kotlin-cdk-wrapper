@@ -274,14 +274,14 @@ public interface CfnDomainProps {
      * @param matching The process of matching duplicate profiles.
      */
     override fun matching(matching: IResolvable) {
-      cdkBuilder.matching(matching.let(IResolvable::unwrap))
+      cdkBuilder.matching(matching.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param matching The process of matching duplicate profiles.
      */
     override fun matching(matching: CfnDomain.MatchingProperty) {
-      cdkBuilder.matching(matching.let(CfnDomain.MatchingProperty::unwrap))
+      cdkBuilder.matching(matching.let(CfnDomain.MatchingProperty.Companion::unwrap))
     }
 
     /**
@@ -297,7 +297,7 @@ public interface CfnDomainProps {
      * matching.
      */
     override fun ruleBasedMatching(ruleBasedMatching: IResolvable) {
-      cdkBuilder.ruleBasedMatching(ruleBasedMatching.let(IResolvable::unwrap))
+      cdkBuilder.ruleBasedMatching(ruleBasedMatching.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -305,7 +305,7 @@ public interface CfnDomainProps {
      * matching.
      */
     override fun ruleBasedMatching(ruleBasedMatching: CfnDomain.RuleBasedMatchingProperty) {
-      cdkBuilder.ruleBasedMatching(ruleBasedMatching.let(CfnDomain.RuleBasedMatchingProperty::unwrap))
+      cdkBuilder.ruleBasedMatching(ruleBasedMatching.let(CfnDomain.RuleBasedMatchingProperty.Companion::unwrap))
     }
 
     /**
@@ -322,7 +322,7 @@ public interface CfnDomainProps {
      * @param tags The tags used to organize, track, or control access for this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

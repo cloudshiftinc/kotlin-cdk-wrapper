@@ -113,7 +113,7 @@ public interface PortfolioProps {
      * status logging and errors.
      */
     override fun messageLanguage(messageLanguage: MessageLanguage) {
-      cdkBuilder.messageLanguage(messageLanguage.let(MessageLanguage::unwrap))
+      cdkBuilder.messageLanguage(messageLanguage.let(MessageLanguage.Companion::unwrap))
     }
 
     /**
@@ -127,7 +127,7 @@ public interface PortfolioProps {
      * @param tagOptions TagOptions associated directly to a portfolio.
      */
     override fun tagOptions(tagOptions: TagOptions) {
-      cdkBuilder.tagOptions(tagOptions.let(TagOptions::unwrap))
+      cdkBuilder.tagOptions(tagOptions.let(TagOptions.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.servicecatalog.PortfolioProps =

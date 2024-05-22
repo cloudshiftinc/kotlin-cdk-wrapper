@@ -106,7 +106,7 @@ public interface AccessLogConfig {
      */
     override
         fun virtualGatewayAccessLog(virtualGatewayAccessLog: CfnVirtualGateway.VirtualGatewayAccessLogProperty) {
-      cdkBuilder.virtualGatewayAccessLog(virtualGatewayAccessLog.let(CfnVirtualGateway.VirtualGatewayAccessLogProperty::unwrap))
+      cdkBuilder.virtualGatewayAccessLog(virtualGatewayAccessLog.let(CfnVirtualGateway.VirtualGatewayAccessLogProperty.Companion::unwrap))
     }
 
     /**
@@ -123,7 +123,7 @@ public interface AccessLogConfig {
      * @param virtualNodeAccessLog VirtualNode CFN configuration for Access Logging.
      */
     override fun virtualNodeAccessLog(virtualNodeAccessLog: CfnVirtualNode.AccessLogProperty) {
-      cdkBuilder.virtualNodeAccessLog(virtualNodeAccessLog.let(CfnVirtualNode.AccessLogProperty::unwrap))
+      cdkBuilder.virtualNodeAccessLog(virtualNodeAccessLog.let(CfnVirtualNode.AccessLogProperty.Companion::unwrap))
     }
 
     /**

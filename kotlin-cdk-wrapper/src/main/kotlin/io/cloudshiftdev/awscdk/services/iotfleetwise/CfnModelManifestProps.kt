@@ -184,7 +184,7 @@ public interface CfnModelManifestProps {
      * @param tags (Optional) Metadata that can be used to manage the vehicle model.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

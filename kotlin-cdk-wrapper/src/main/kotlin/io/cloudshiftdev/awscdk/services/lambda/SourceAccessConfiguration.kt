@@ -71,7 +71,7 @@ public interface SourceAccessConfiguration {
      * For example: "SASL_SCRAM_512_AUTH".
      */
     override fun type(type: SourceAccessConfigurationType) {
-      cdkBuilder.type(type.let(SourceAccessConfigurationType::unwrap))
+      cdkBuilder.type(type.let(SourceAccessConfigurationType.Companion::unwrap))
     }
 
     /**

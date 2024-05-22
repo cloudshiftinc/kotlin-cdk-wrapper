@@ -470,14 +470,14 @@ public interface CfnOriginEndpointProps {
      * @param authorization Parameters for CDN authorization.
      */
     override fun authorization(authorization: IResolvable) {
-      cdkBuilder.authorization(authorization.let(IResolvable::unwrap))
+      cdkBuilder.authorization(authorization.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param authorization Parameters for CDN authorization.
      */
     override fun authorization(authorization: CfnOriginEndpoint.AuthorizationProperty) {
-      cdkBuilder.authorization(authorization.let(CfnOriginEndpoint.AuthorizationProperty::unwrap))
+      cdkBuilder.authorization(authorization.let(CfnOriginEndpoint.AuthorizationProperty.Companion::unwrap))
     }
 
     /**
@@ -500,14 +500,14 @@ public interface CfnOriginEndpointProps {
      * @param cmafPackage Parameters for Common Media Application Format (CMAF) packaging.
      */
     override fun cmafPackage(cmafPackage: IResolvable) {
-      cdkBuilder.cmafPackage(cmafPackage.let(IResolvable::unwrap))
+      cdkBuilder.cmafPackage(cmafPackage.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param cmafPackage Parameters for Common Media Application Format (CMAF) packaging.
      */
     override fun cmafPackage(cmafPackage: CfnOriginEndpoint.CmafPackageProperty) {
-      cdkBuilder.cmafPackage(cmafPackage.let(CfnOriginEndpoint.CmafPackageProperty::unwrap))
+      cdkBuilder.cmafPackage(cmafPackage.let(CfnOriginEndpoint.CmafPackageProperty.Companion::unwrap))
     }
 
     /**
@@ -522,14 +522,14 @@ public interface CfnOriginEndpointProps {
      * @param dashPackage Parameters for DASH packaging.
      */
     override fun dashPackage(dashPackage: IResolvable) {
-      cdkBuilder.dashPackage(dashPackage.let(IResolvable::unwrap))
+      cdkBuilder.dashPackage(dashPackage.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param dashPackage Parameters for DASH packaging.
      */
     override fun dashPackage(dashPackage: CfnOriginEndpoint.DashPackageProperty) {
-      cdkBuilder.dashPackage(dashPackage.let(CfnOriginEndpoint.DashPackageProperty::unwrap))
+      cdkBuilder.dashPackage(dashPackage.let(CfnOriginEndpoint.DashPackageProperty.Companion::unwrap))
     }
 
     /**
@@ -552,14 +552,14 @@ public interface CfnOriginEndpointProps {
      * @param hlsPackage Parameters for Apple HLS packaging.
      */
     override fun hlsPackage(hlsPackage: IResolvable) {
-      cdkBuilder.hlsPackage(hlsPackage.let(IResolvable::unwrap))
+      cdkBuilder.hlsPackage(hlsPackage.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param hlsPackage Parameters for Apple HLS packaging.
      */
     override fun hlsPackage(hlsPackage: CfnOriginEndpoint.HlsPackageProperty) {
-      cdkBuilder.hlsPackage(hlsPackage.let(CfnOriginEndpoint.HlsPackageProperty::unwrap))
+      cdkBuilder.hlsPackage(hlsPackage.let(CfnOriginEndpoint.HlsPackageProperty.Companion::unwrap))
     }
 
     /**
@@ -590,14 +590,14 @@ public interface CfnOriginEndpointProps {
      * @param mssPackage Parameters for Microsoft Smooth Streaming packaging.
      */
     override fun mssPackage(mssPackage: IResolvable) {
-      cdkBuilder.mssPackage(mssPackage.let(IResolvable::unwrap))
+      cdkBuilder.mssPackage(mssPackage.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param mssPackage Parameters for Microsoft Smooth Streaming packaging.
      */
     override fun mssPackage(mssPackage: CfnOriginEndpoint.MssPackageProperty) {
-      cdkBuilder.mssPackage(mssPackage.let(CfnOriginEndpoint.MssPackageProperty::unwrap))
+      cdkBuilder.mssPackage(mssPackage.let(CfnOriginEndpoint.MssPackageProperty.Companion::unwrap))
     }
 
     /**
@@ -636,7 +636,7 @@ public interface CfnOriginEndpointProps {
      * @param tags The tags to assign to the endpoint.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

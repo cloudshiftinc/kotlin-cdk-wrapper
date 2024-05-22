@@ -25,7 +25,6 @@ import kotlin.collections.List
  * .type("type")
  * // the properties below are optional
  * .bgpAsn(123)
- * .bgpAsnExtended(123)
  * .certificateArn("certificateArn")
  * .deviceName("deviceName")
  * .tags(List.of(CfnTag.builder()
@@ -48,11 +47,6 @@ public interface CfnCustomerGatewayProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-bgpasn)
    */
   public fun bgpAsn(): Number? = unwrap(this).getBgpAsn()
-
-  /**
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-bgpasnextended)
-   */
-  public fun bgpAsnExtended(): Number? = unwrap(this).getBgpAsnExtended()
 
   /**
    * The Amazon Resource Name (ARN) for the customer gateway certificate.
@@ -103,11 +97,6 @@ public interface CfnCustomerGatewayProps {
     public fun bgpAsn(bgpAsn: Number)
 
     /**
-     * @param bgpAsnExtended the value to be set.
-     */
-    public fun bgpAsnExtended(bgpAsnExtended: Number)
-
-    /**
      * @param certificateArn The Amazon Resource Name (ARN) for the customer gateway certificate.
      */
     public fun certificateArn(certificateArn: String)
@@ -152,13 +141,6 @@ public interface CfnCustomerGatewayProps {
     }
 
     /**
-     * @param bgpAsnExtended the value to be set.
-     */
-    override fun bgpAsnExtended(bgpAsnExtended: Number) {
-      cdkBuilder.bgpAsnExtended(bgpAsnExtended)
-    }
-
-    /**
      * @param certificateArn The Amazon Resource Name (ARN) for the customer gateway certificate.
      */
     override fun certificateArn(certificateArn: String) {
@@ -184,7 +166,7 @@ public interface CfnCustomerGatewayProps {
      * @param tags One or more tags for the customer gateway.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -216,11 +198,6 @@ public interface CfnCustomerGatewayProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-bgpasn)
      */
     override fun bgpAsn(): Number? = unwrap(this).getBgpAsn()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-bgpasnextended)
-     */
-    override fun bgpAsnExtended(): Number? = unwrap(this).getBgpAsnExtended()
 
     /**
      * The Amazon Resource Name (ARN) for the customer gateway certificate.

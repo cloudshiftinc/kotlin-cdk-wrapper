@@ -97,8 +97,8 @@ public open class CfnLaunch(
     id: String,
     props: CfnLaunchProps,
   ) :
-      this(software.amazon.awscdk.services.evidently.CfnLaunch(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLaunchProps::unwrap))
+      this(software.amazon.awscdk.services.evidently.CfnLaunch(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLaunchProps.Companion::unwrap))
   )
 
   public constructor(
@@ -136,14 +136,14 @@ public open class CfnLaunch(
    * A structure that you can use to start and stop the launch.
    */
   public open fun executionStatus(`value`: IResolvable) {
-    unwrap(this).setExecutionStatus(`value`.let(IResolvable::unwrap))
+    unwrap(this).setExecutionStatus(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A structure that you can use to start and stop the launch.
    */
   public open fun executionStatus(`value`: ExecutionStatusObjectProperty) {
-    unwrap(this).setExecutionStatus(`value`.let(ExecutionStatusObjectProperty::unwrap))
+    unwrap(this).setExecutionStatus(`value`.let(ExecutionStatusObjectProperty.Companion::unwrap))
   }
 
   /**
@@ -165,7 +165,7 @@ public open class CfnLaunch(
    * launch.
    */
   public open fun groups(`value`: IResolvable) {
-    unwrap(this).setGroups(`value`.let(IResolvable::unwrap))
+    unwrap(this).setGroups(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -188,7 +188,7 @@ public open class CfnLaunch(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -202,7 +202,7 @@ public open class CfnLaunch(
    * performance.
    */
   public open fun metricMonitors(`value`: IResolvable) {
-    unwrap(this).setMetricMonitors(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMetricMonitors(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -268,7 +268,7 @@ public open class CfnLaunch(
    * variations during each step of the launch.
    */
   public open fun scheduledSplitsConfig(`value`: IResolvable) {
-    unwrap(this).setScheduledSplitsConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setScheduledSplitsConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -301,7 +301,7 @@ public open class CfnLaunch(
    * Assigns one or more tags (key-value pairs) to the launch.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -546,7 +546,7 @@ public open class CfnLaunch(
      * @param executionStatus A structure that you can use to start and stop the launch. 
      */
     override fun executionStatus(executionStatus: IResolvable) {
-      cdkBuilder.executionStatus(executionStatus.let(IResolvable::unwrap))
+      cdkBuilder.executionStatus(executionStatus.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -556,7 +556,7 @@ public open class CfnLaunch(
      * @param executionStatus A structure that you can use to start and stop the launch. 
      */
     override fun executionStatus(executionStatus: ExecutionStatusObjectProperty) {
-      cdkBuilder.executionStatus(executionStatus.let(ExecutionStatusObjectProperty::unwrap))
+      cdkBuilder.executionStatus(executionStatus.let(ExecutionStatusObjectProperty.Companion::unwrap))
     }
 
     /**
@@ -581,7 +581,7 @@ public open class CfnLaunch(
      * used for the launch. 
      */
     override fun groups(groups: IResolvable) {
-      cdkBuilder.groups(groups.let(IResolvable::unwrap))
+      cdkBuilder.groups(groups.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -621,7 +621,7 @@ public open class CfnLaunch(
      * monitor the launch performance. 
      */
     override fun metricMonitors(metricMonitors: IResolvable) {
-      cdkBuilder.metricMonitors(metricMonitors.let(IResolvable::unwrap))
+      cdkBuilder.metricMonitors(metricMonitors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -697,7 +697,7 @@ public open class CfnLaunch(
      * percentages among the feature variations during each step of the launch. 
      */
     override fun scheduledSplitsConfig(scheduledSplitsConfig: IResolvable) {
-      cdkBuilder.scheduledSplitsConfig(scheduledSplitsConfig.let(IResolvable::unwrap))
+      cdkBuilder.scheduledSplitsConfig(scheduledSplitsConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -742,7 +742,7 @@ public open class CfnLaunch(
      * @param tags Assigns one or more tags (key-value pairs) to the launch. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1594,7 +1594,7 @@ public open class CfnLaunch(
        * thousandths of a percent, so a weight of 50000 represents 50% of traffic.
        */
       override fun weights(weights: IResolvable) {
-        cdkBuilder.weights(weights.let(IResolvable::unwrap))
+        cdkBuilder.weights(weights.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1815,7 +1815,7 @@ public open class CfnLaunch(
        * to each launch group during this step of the launch. 
        */
       override fun groupWeights(groupWeights: IResolvable) {
-        cdkBuilder.groupWeights(groupWeights.let(IResolvable::unwrap))
+        cdkBuilder.groupWeights(groupWeights.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1845,7 +1845,7 @@ public open class CfnLaunch(
        * .
        */
       override fun segmentOverrides(segmentOverrides: IResolvable) {
-        cdkBuilder.segmentOverrides(segmentOverrides.let(IResolvable::unwrap))
+        cdkBuilder.segmentOverrides(segmentOverrides.let(IResolvable.Companion::unwrap))
       }
 
       /**

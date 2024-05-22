@@ -135,7 +135,7 @@ public interface VpnConnectionOptions {
      * Duplicates not allowed.
      */
     override fun tunnelOptions(tunnelOptions: List<VpnTunnelOption>) {
-      cdkBuilder.tunnelOptions(tunnelOptions.map(VpnTunnelOption::unwrap))
+      cdkBuilder.tunnelOptions(tunnelOptions.map(VpnTunnelOption.Companion::unwrap))
     }
 
     /**

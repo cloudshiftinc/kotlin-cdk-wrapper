@@ -43,7 +43,7 @@ public open class RestApi(
   cdkObject: software.amazon.awscdk.services.apigateway.RestApi,
 ) : RestApiBase(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.apigateway.RestApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.apigateway.RestApi(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -52,8 +52,8 @@ public open class RestApi(
     id: String,
     props: RestApiProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.RestApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(RestApiProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.RestApi(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(RestApiProps.Companion::unwrap))
   )
 
   public constructor(
@@ -70,7 +70,7 @@ public open class RestApi(
    * @param props 
    */
   public open fun addModel(id: String, props: ModelOptions): Model = unwrap(this).addModel(id,
-      props.let(ModelOptions::unwrap)).let(Model::wrap)
+      props.let(ModelOptions.Companion::unwrap)).let(Model::wrap)
 
   /**
    * Adds a new model.
@@ -91,7 +91,7 @@ public open class RestApi(
    */
   public open fun addRequestValidator(id: String, props: RequestValidatorOptions): RequestValidator
       = unwrap(this).addRequestValidator(id,
-      props.let(RequestValidatorOptions::unwrap)).let(RequestValidator::wrap)
+      props.let(RequestValidatorOptions.Companion::unwrap)).let(RequestValidator::wrap)
 
   /**
    * Adds a new request validator.
@@ -545,7 +545,7 @@ public open class RestApi(
      * plan. 
      */
     override fun apiKeySourceType(apiKeySourceType: ApiKeySourceType) {
-      cdkBuilder.apiKeySourceType(apiKeySourceType.let(ApiKeySourceType::unwrap))
+      cdkBuilder.apiKeySourceType(apiKeySourceType.let(ApiKeySourceType.Companion::unwrap))
     }
 
     /**
@@ -581,7 +581,7 @@ public open class RestApi(
      * @param cloneFrom The ID of the API Gateway RestApi resource that you want to clone. 
      */
     override fun cloneFrom(cloneFrom: IRestApi) {
-      cdkBuilder.cloneFrom(cloneFrom.let(IRestApi::unwrap))
+      cdkBuilder.cloneFrom(cloneFrom.let(IRestApi.Companion::unwrap))
     }
 
     /**
@@ -608,7 +608,7 @@ public open class RestApi(
      * this resource is removed from the application. 
      */
     override fun cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy: RemovalPolicy) {
-      cdkBuilder.cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -622,7 +622,7 @@ public open class RestApi(
      * all child resources. 
      */
     override fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions) {
-      cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions::unwrap))
+      cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions.Companion::unwrap))
     }
 
     /**
@@ -651,7 +651,7 @@ public open class RestApi(
      * this API unless an integration is specified. 
      */
     override fun defaultIntegration(defaultIntegration: Integration) {
-      cdkBuilder.defaultIntegration(defaultIntegration.let(Integration::unwrap))
+      cdkBuilder.defaultIntegration(defaultIntegration.let(Integration.Companion::unwrap))
     }
 
     /**
@@ -678,7 +678,7 @@ public open class RestApi(
      * this API unless custom options are specified. 
      */
     override fun defaultMethodOptions(defaultMethodOptions: MethodOptions) {
-      cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions::unwrap))
+      cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions.Companion::unwrap))
     }
 
     /**
@@ -736,7 +736,7 @@ public open class RestApi(
      * deployment when `deploy` is enabled. 
      */
     override fun deployOptions(deployOptions: StageOptions) {
-      cdkBuilder.deployOptions(deployOptions.let(StageOptions::unwrap))
+      cdkBuilder.deployOptions(deployOptions.let(StageOptions.Companion::unwrap))
     }
 
     /**
@@ -791,7 +791,7 @@ public open class RestApi(
      * @param domainName Configure a custom domain name and map it to this API. 
      */
     override fun domainName(domainName: DomainNameOptions) {
-      cdkBuilder.domainName(domainName.let(DomainNameOptions::unwrap))
+      cdkBuilder.domainName(domainName.let(DomainNameOptions.Companion::unwrap))
     }
 
     /**
@@ -816,7 +816,7 @@ public open class RestApi(
      * types of a REST API. 
      */
     override fun endpointConfiguration(endpointConfiguration: EndpointConfiguration) {
-      cdkBuilder.endpointConfiguration(endpointConfiguration.let(EndpointConfiguration::unwrap))
+      cdkBuilder.endpointConfiguration(endpointConfiguration.let(EndpointConfiguration.Companion::unwrap))
     }
 
     /**
@@ -856,7 +856,7 @@ public open class RestApi(
      * @param endpointTypes A list of the endpoint types of the API. 
      */
     override fun endpointTypes(endpointTypes: List<EndpointType>) {
-      cdkBuilder.endpointTypes(endpointTypes.map(EndpointType::unwrap))
+      cdkBuilder.endpointTypes(endpointTypes.map(EndpointType.Companion::unwrap))
     }
 
     /**
@@ -902,7 +902,7 @@ public open class RestApi(
      * compression (when undefined) on an API. 
      */
     override fun minCompressionSize(minCompressionSize: Size) {
-      cdkBuilder.minCompressionSize(minCompressionSize.let(Size::unwrap))
+      cdkBuilder.minCompressionSize(minCompressionSize.let(Size.Companion::unwrap))
     }
 
     /**
@@ -946,7 +946,7 @@ public open class RestApi(
      * @param policy A policy document that contains the permissions for this RestApi. 
      */
     override fun policy(policy: PolicyDocument) {
-      cdkBuilder.policy(policy.let(PolicyDocument::unwrap))
+      cdkBuilder.policy(policy.let(PolicyDocument.Companion::unwrap))
     }
 
     /**
@@ -996,8 +996,8 @@ public open class RestApi(
       id: String,
       attrs: RestApiAttributes,
     ): IRestApi =
-        software.amazon.awscdk.services.apigateway.RestApi.fromRestApiAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(RestApiAttributes::unwrap)).let(IRestApi::wrap)
+        software.amazon.awscdk.services.apigateway.RestApi.fromRestApiAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(RestApiAttributes.Companion::unwrap)).let(IRestApi::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cb89db0f35408d8d66d6358e7a387ed7dc683f1c1676bfb2e8655d4fbc01224f")
@@ -1012,7 +1012,7 @@ public open class RestApi(
       id: String,
       restApiId: String,
     ): IRestApi =
-        software.amazon.awscdk.services.apigateway.RestApi.fromRestApiId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.apigateway.RestApi.fromRestApiId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, restApiId).let(IRestApi::wrap)
 
     public fun isRestApi(x: Any): Boolean =

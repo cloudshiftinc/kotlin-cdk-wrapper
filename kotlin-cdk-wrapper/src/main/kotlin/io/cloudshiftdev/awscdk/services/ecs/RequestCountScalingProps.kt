@@ -119,7 +119,7 @@ public interface RequestCountScalingProps : BaseTargetTrackingProps {
      * activity can start.
      */
     override fun scaleInCooldown(scaleInCooldown: Duration) {
-      cdkBuilder.scaleInCooldown(scaleInCooldown.let(Duration::unwrap))
+      cdkBuilder.scaleInCooldown(scaleInCooldown.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -127,14 +127,14 @@ public interface RequestCountScalingProps : BaseTargetTrackingProps {
      * activity can start.
      */
     override fun scaleOutCooldown(scaleOutCooldown: Duration) {
-      cdkBuilder.scaleOutCooldown(scaleOutCooldown.let(Duration::unwrap))
+      cdkBuilder.scaleOutCooldown(scaleOutCooldown.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param targetGroup The ALB target group name. 
      */
     override fun targetGroup(targetGroup: ApplicationTargetGroup) {
-      cdkBuilder.targetGroup(targetGroup.let(ApplicationTargetGroup::unwrap))
+      cdkBuilder.targetGroup(targetGroup.let(ApplicationTargetGroup.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.RequestCountScalingProps =

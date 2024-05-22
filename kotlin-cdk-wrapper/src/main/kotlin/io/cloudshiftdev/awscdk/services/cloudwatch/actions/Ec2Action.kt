@@ -25,7 +25,7 @@ public open class Ec2Action(
   cdkObject: software.amazon.awscdk.services.cloudwatch.actions.Ec2Action,
 ) : CdkObject(cdkObject), IAlarmAction {
   public constructor(instanceAction: Ec2InstanceAction) :
-      this(software.amazon.awscdk.services.cloudwatch.actions.Ec2Action(instanceAction.let(Ec2InstanceAction::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.actions.Ec2Action(instanceAction.let(Ec2InstanceAction.Companion::unwrap))
   )
 
   /**
@@ -35,8 +35,8 @@ public open class Ec2Action(
    * @param _alarm 
    */
   public override fun bind(scope: Construct, alarm: IAlarm): AlarmActionConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap),
-      alarm.let(IAlarm::unwrap)).let(AlarmActionConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      alarm.let(IAlarm.Companion::unwrap)).let(AlarmActionConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.actions.Ec2Action):

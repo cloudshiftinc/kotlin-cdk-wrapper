@@ -125,7 +125,7 @@ public interface ProductionVariant {
      * production variant.
      */
     override fun acceleratorType(acceleratorType: AcceleratorType) {
-      cdkBuilder.acceleratorType(acceleratorType.let(AcceleratorType::unwrap))
+      cdkBuilder.acceleratorType(acceleratorType.let(AcceleratorType.Companion::unwrap))
     }
 
     /**
@@ -147,7 +147,7 @@ public interface ProductionVariant {
      * @param instanceType The ML compute instance type. 
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**

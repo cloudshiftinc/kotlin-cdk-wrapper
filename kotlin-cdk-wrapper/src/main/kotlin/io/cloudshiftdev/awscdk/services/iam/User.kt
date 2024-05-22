@@ -32,7 +32,7 @@ public open class User(
   cdkObject: software.amazon.awscdk.services.iam.User,
 ) : Resource(cdkObject), IIdentity, IUser {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.iam.User(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.iam.User(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -41,8 +41,8 @@ public open class User(
     id: String,
     props: UserProps,
   ) :
-      this(software.amazon.awscdk.services.iam.User(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(UserProps::unwrap))
+      this(software.amazon.awscdk.services.iam.User(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(UserProps.Companion::unwrap))
   )
 
   public constructor(
@@ -58,7 +58,7 @@ public open class User(
    * @param policy The managed policy to attach. 
    */
   public override fun addManagedPolicy(policy: IManagedPolicy) {
-    unwrap(this).addManagedPolicy(policy.let(IManagedPolicy::unwrap))
+    unwrap(this).addManagedPolicy(policy.let(IManagedPolicy.Companion::unwrap))
   }
 
   /**
@@ -67,7 +67,7 @@ public open class User(
    * @param group 
    */
   public override fun addToGroup(group: IGroup) {
-    unwrap(this).addToGroup(group.let(IGroup::unwrap))
+    unwrap(this).addToGroup(group.let(IGroup.Companion::unwrap))
   }
 
   /**
@@ -76,7 +76,7 @@ public open class User(
    * @param statement 
    */
   public open fun addToPolicy(statement: PolicyStatement): Boolean =
-      unwrap(this).addToPolicy(statement.let(PolicyStatement::unwrap))
+      unwrap(this).addToPolicy(statement.let(PolicyStatement.Companion::unwrap))
 
   /**
    * Add to the policy of this principal.
@@ -95,7 +95,7 @@ public open class User(
    * @param statement 
    */
   public override fun addToPrincipalPolicy(statement: PolicyStatement): AddToPrincipalPolicyResult =
-      unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement::unwrap)).let(AddToPrincipalPolicyResult::wrap)
+      unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToPrincipalPolicyResult::wrap)
 
   /**
    * Adds an IAM statement to the default policy.
@@ -119,7 +119,7 @@ public open class User(
    * @param policy 
    */
   public override fun attachInlinePolicy(policy: Policy) {
-    unwrap(this).attachInlinePolicy(policy.let(Policy::unwrap))
+    unwrap(this).attachInlinePolicy(policy.let(Policy.Companion::unwrap))
   }
 
   /**
@@ -310,7 +310,7 @@ public open class User(
      * @param groups Groups to add this user to. 
      */
     override fun groups(groups: List<IGroup>) {
-      cdkBuilder.groups(groups.map(IGroup::unwrap))
+      cdkBuilder.groups(groups.map(IGroup.Companion::unwrap))
     }
 
     /**
@@ -336,7 +336,7 @@ public open class User(
      * @param managedPolicies A list of managed policies associated with this role. 
      */
     override fun managedPolicies(managedPolicies: List<IManagedPolicy>) {
-      cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy::unwrap))
+      cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy.Companion::unwrap))
     }
 
     /**
@@ -366,7 +366,7 @@ public open class User(
      * Management Console. 
      */
     override fun password(password: SecretValue) {
-      cdkBuilder.password(password.let(SecretValue::unwrap))
+      cdkBuilder.password(password.let(SecretValue.Companion::unwrap))
     }
 
     /**
@@ -413,7 +413,7 @@ public open class User(
      * roles). 
      */
     override fun permissionsBoundary(permissionsBoundary: IManagedPolicy) {
-      cdkBuilder.permissionsBoundary(permissionsBoundary.let(IManagedPolicy::unwrap))
+      cdkBuilder.permissionsBoundary(permissionsBoundary.let(IManagedPolicy.Companion::unwrap))
     }
 
     /**
@@ -449,7 +449,7 @@ public open class User(
       id: String,
       userArn: String,
     ): IUser =
-        software.amazon.awscdk.services.iam.User.fromUserArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.iam.User.fromUserArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, userArn).let(IUser::wrap)
 
     public fun fromUserAttributes(
@@ -457,8 +457,8 @@ public open class User(
       id: String,
       attrs: UserAttributes,
     ): IUser =
-        software.amazon.awscdk.services.iam.User.fromUserAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(UserAttributes::unwrap)).let(IUser::wrap)
+        software.amazon.awscdk.services.iam.User.fromUserAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(UserAttributes.Companion::unwrap)).let(IUser::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("321ebf0b48716f7490762a7ac1e1728ff5e7fb51d9ed53e20e99d0c80a46bc9d")
@@ -473,7 +473,7 @@ public open class User(
       id: String,
       userName: String,
     ): IUser =
-        software.amazon.awscdk.services.iam.User.fromUserName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.iam.User.fromUserName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, userName).let(IUser::wrap)
 
     public operator fun invoke(

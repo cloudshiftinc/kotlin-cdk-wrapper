@@ -49,8 +49,8 @@ public open class CfnAttributeGroup(
     id: String,
     props: CfnAttributeGroupProps,
   ) :
-      this(software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAttributeGroupProps::unwrap))
+      this(software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAttributeGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -100,7 +100,7 @@ public open class CfnAttributeGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

@@ -125,8 +125,8 @@ public open class CfnOrganizationConfigRule(
     id: String,
     props: CfnOrganizationConfigRuleProps,
   ) :
-      this(software.amazon.awscdk.services.config.CfnOrganizationConfigRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnOrganizationConfigRuleProps::unwrap))
+      this(software.amazon.awscdk.services.config.CfnOrganizationConfigRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnOrganizationConfigRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -166,7 +166,7 @@ public open class CfnOrganizationConfigRule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -192,7 +192,7 @@ public open class CfnOrganizationConfigRule(
    * An object that specifies metadata for your organization's AWS Config Custom Policy rule.
    */
   public open fun organizationCustomPolicyRuleMetadata(`value`: IResolvable) {
-    unwrap(this).setOrganizationCustomPolicyRuleMetadata(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOrganizationCustomPolicyRuleMetadata(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -200,7 +200,7 @@ public open class CfnOrganizationConfigRule(
    */
   public open
       fun organizationCustomPolicyRuleMetadata(`value`: OrganizationCustomPolicyRuleMetadataProperty) {
-    unwrap(this).setOrganizationCustomPolicyRuleMetadata(`value`.let(OrganizationCustomPolicyRuleMetadataProperty::unwrap))
+    unwrap(this).setOrganizationCustomPolicyRuleMetadata(`value`.let(OrganizationCustomPolicyRuleMetadataProperty.Companion::unwrap))
   }
 
   /**
@@ -223,14 +223,14 @@ public open class CfnOrganizationConfigRule(
    * An `OrganizationCustomRuleMetadata` object.
    */
   public open fun organizationCustomRuleMetadata(`value`: IResolvable) {
-    unwrap(this).setOrganizationCustomRuleMetadata(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOrganizationCustomRuleMetadata(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An `OrganizationCustomRuleMetadata` object.
    */
   public open fun organizationCustomRuleMetadata(`value`: OrganizationCustomRuleMetadataProperty) {
-    unwrap(this).setOrganizationCustomRuleMetadata(`value`.let(OrganizationCustomRuleMetadataProperty::unwrap))
+    unwrap(this).setOrganizationCustomRuleMetadata(`value`.let(OrganizationCustomRuleMetadataProperty.Companion::unwrap))
   }
 
   /**
@@ -252,7 +252,7 @@ public open class CfnOrganizationConfigRule(
    * An `OrganizationManagedRuleMetadata` object.
    */
   public open fun organizationManagedRuleMetadata(`value`: IResolvable) {
-    unwrap(this).setOrganizationManagedRuleMetadata(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOrganizationManagedRuleMetadata(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -260,7 +260,7 @@ public open class CfnOrganizationConfigRule(
    */
   public open
       fun organizationManagedRuleMetadata(`value`: OrganizationManagedRuleMetadataProperty) {
-    unwrap(this).setOrganizationManagedRuleMetadata(`value`.let(OrganizationManagedRuleMetadataProperty::unwrap))
+    unwrap(this).setOrganizationManagedRuleMetadata(`value`.let(OrganizationManagedRuleMetadataProperty.Companion::unwrap))
   }
 
   /**
@@ -455,7 +455,7 @@ public open class CfnOrganizationConfigRule(
      */
     override
         fun organizationCustomPolicyRuleMetadata(organizationCustomPolicyRuleMetadata: IResolvable) {
-      cdkBuilder.organizationCustomPolicyRuleMetadata(organizationCustomPolicyRuleMetadata.let(IResolvable::unwrap))
+      cdkBuilder.organizationCustomPolicyRuleMetadata(organizationCustomPolicyRuleMetadata.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -471,7 +471,7 @@ public open class CfnOrganizationConfigRule(
      */
     override
         fun organizationCustomPolicyRuleMetadata(organizationCustomPolicyRuleMetadata: OrganizationCustomPolicyRuleMetadataProperty) {
-      cdkBuilder.organizationCustomPolicyRuleMetadata(organizationCustomPolicyRuleMetadata.let(OrganizationCustomPolicyRuleMetadataProperty::unwrap))
+      cdkBuilder.organizationCustomPolicyRuleMetadata(organizationCustomPolicyRuleMetadata.let(OrganizationCustomPolicyRuleMetadataProperty.Companion::unwrap))
     }
 
     /**
@@ -499,7 +499,7 @@ public open class CfnOrganizationConfigRule(
      * @param organizationCustomRuleMetadata An `OrganizationCustomRuleMetadata` object. 
      */
     override fun organizationCustomRuleMetadata(organizationCustomRuleMetadata: IResolvable) {
-      cdkBuilder.organizationCustomRuleMetadata(organizationCustomRuleMetadata.let(IResolvable::unwrap))
+      cdkBuilder.organizationCustomRuleMetadata(organizationCustomRuleMetadata.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -510,7 +510,7 @@ public open class CfnOrganizationConfigRule(
      */
     override
         fun organizationCustomRuleMetadata(organizationCustomRuleMetadata: OrganizationCustomRuleMetadataProperty) {
-      cdkBuilder.organizationCustomRuleMetadata(organizationCustomRuleMetadata.let(OrganizationCustomRuleMetadataProperty::unwrap))
+      cdkBuilder.organizationCustomRuleMetadata(organizationCustomRuleMetadata.let(OrganizationCustomRuleMetadataProperty.Companion::unwrap))
     }
 
     /**
@@ -533,7 +533,7 @@ public open class CfnOrganizationConfigRule(
      * @param organizationManagedRuleMetadata An `OrganizationManagedRuleMetadata` object. 
      */
     override fun organizationManagedRuleMetadata(organizationManagedRuleMetadata: IResolvable) {
-      cdkBuilder.organizationManagedRuleMetadata(organizationManagedRuleMetadata.let(IResolvable::unwrap))
+      cdkBuilder.organizationManagedRuleMetadata(organizationManagedRuleMetadata.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -544,7 +544,7 @@ public open class CfnOrganizationConfigRule(
      */
     override
         fun organizationManagedRuleMetadata(organizationManagedRuleMetadata: OrganizationManagedRuleMetadataProperty) {
-      cdkBuilder.organizationManagedRuleMetadata(organizationManagedRuleMetadata.let(OrganizationManagedRuleMetadataProperty::unwrap))
+      cdkBuilder.organizationManagedRuleMetadata(organizationManagedRuleMetadata.let(OrganizationManagedRuleMetadataProperty.Companion::unwrap))
     }
 
     /**

@@ -386,7 +386,7 @@ public interface CfnSecretProps {
      * system you are generating a password for can support.
      */
     override fun generateSecretString(generateSecretString: IResolvable) {
-      cdkBuilder.generateSecretString(generateSecretString.let(IResolvable::unwrap))
+      cdkBuilder.generateSecretString(generateSecretString.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -401,7 +401,7 @@ public interface CfnSecretProps {
      */
     override
         fun generateSecretString(generateSecretString: CfnSecret.GenerateSecretStringProperty) {
-      cdkBuilder.generateSecretString(generateSecretString.let(CfnSecret.GenerateSecretStringProperty::unwrap))
+      cdkBuilder.generateSecretString(generateSecretString.let(CfnSecret.GenerateSecretStringProperty.Companion::unwrap))
     }
 
     /**
@@ -459,7 +459,7 @@ public interface CfnSecretProps {
      * replica secret.
      */
     override fun replicaRegions(replicaRegions: IResolvable) {
-      cdkBuilder.replicaRegions(replicaRegions.let(IResolvable::unwrap))
+      cdkBuilder.replicaRegions(replicaRegions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -529,7 +529,7 @@ public interface CfnSecretProps {
      * numbers representable in UTF-8, plus the following special characters: + - = . _ : /
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

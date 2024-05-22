@@ -294,7 +294,7 @@ public interface CfnRepositoryProps {
      * If false, the repository must be empty before attempting to delete it.
      */
     override fun emptyOnDelete(emptyOnDelete: IResolvable) {
-      cdkBuilder.emptyOnDelete(emptyOnDelete.let(IResolvable::unwrap))
+      cdkBuilder.emptyOnDelete(emptyOnDelete.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -302,7 +302,7 @@ public interface CfnRepositoryProps {
      * This determines how the contents of your repository are encrypted at rest.
      */
     override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -311,7 +311,7 @@ public interface CfnRepositoryProps {
      */
     override
         fun encryptionConfiguration(encryptionConfiguration: CfnRepository.EncryptionConfigurationProperty) {
-      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(CfnRepository.EncryptionConfigurationProperty::unwrap))
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(CfnRepository.EncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -331,7 +331,7 @@ public interface CfnRepositoryProps {
      * the repository.
      */
     override fun imageScanningConfiguration(imageScanningConfiguration: IResolvable) {
-      cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -341,7 +341,7 @@ public interface CfnRepositoryProps {
      */
     override
         fun imageScanningConfiguration(imageScanningConfiguration: CfnRepository.ImageScanningConfigurationProperty) {
-      cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(CfnRepository.ImageScanningConfigurationProperty::unwrap))
+      cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(CfnRepository.ImageScanningConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -372,7 +372,7 @@ public interface CfnRepositoryProps {
      * template](https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html) .
      */
     override fun lifecyclePolicy(lifecyclePolicy: IResolvable) {
-      cdkBuilder.lifecyclePolicy(lifecyclePolicy.let(IResolvable::unwrap))
+      cdkBuilder.lifecyclePolicy(lifecyclePolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -381,7 +381,7 @@ public interface CfnRepositoryProps {
      * template](https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html) .
      */
     override fun lifecyclePolicy(lifecyclePolicy: CfnRepository.LifecyclePolicyProperty) {
-      cdkBuilder.lifecyclePolicy(lifecyclePolicy.let(CfnRepository.LifecyclePolicyProperty::unwrap))
+      cdkBuilder.lifecyclePolicy(lifecyclePolicy.let(CfnRepository.LifecyclePolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -429,7 +429,7 @@ public interface CfnRepositoryProps {
      * @param tags An array of key-value pairs to apply to this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

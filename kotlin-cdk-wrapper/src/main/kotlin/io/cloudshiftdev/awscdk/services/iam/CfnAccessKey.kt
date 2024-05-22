@@ -52,8 +52,8 @@ public open class CfnAccessKey(
     id: String,
     props: CfnAccessKeyProps,
   ) :
-      this(software.amazon.awscdk.services.iam.CfnAccessKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAccessKeyProps::unwrap))
+      this(software.amazon.awscdk.services.iam.CfnAccessKey(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAccessKeyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -81,7 +81,7 @@ public open class CfnAccessKey(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

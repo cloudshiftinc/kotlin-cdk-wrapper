@@ -98,7 +98,7 @@ public interface EncryptionAtRestOptions {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun kmsKey(kmsKey: IKey) {
-      cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.elasticsearch.EncryptionAtRestOptions =

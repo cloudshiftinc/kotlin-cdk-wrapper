@@ -361,7 +361,7 @@ public interface CfnScheduleProps {
      * Scheduler invokes the schedule. 
      */
     override fun flexibleTimeWindow(flexibleTimeWindow: IResolvable) {
-      cdkBuilder.flexibleTimeWindow(flexibleTimeWindow.let(IResolvable::unwrap))
+      cdkBuilder.flexibleTimeWindow(flexibleTimeWindow.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -369,7 +369,7 @@ public interface CfnScheduleProps {
      * Scheduler invokes the schedule. 
      */
     override fun flexibleTimeWindow(flexibleTimeWindow: CfnSchedule.FlexibleTimeWindowProperty) {
-      cdkBuilder.flexibleTimeWindow(flexibleTimeWindow.let(CfnSchedule.FlexibleTimeWindowProperty::unwrap))
+      cdkBuilder.flexibleTimeWindow(flexibleTimeWindow.let(CfnSchedule.FlexibleTimeWindowProperty.Companion::unwrap))
     }
 
     /**
@@ -462,14 +462,14 @@ public interface CfnScheduleProps {
      * @param target The schedule's target details. 
      */
     override fun target(target: IResolvable) {
-      cdkBuilder.target(target.let(IResolvable::unwrap))
+      cdkBuilder.target(target.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param target The schedule's target details. 
      */
     override fun target(target: CfnSchedule.TargetProperty) {
-      cdkBuilder.target(target.let(CfnSchedule.TargetProperty::unwrap))
+      cdkBuilder.target(target.let(CfnSchedule.TargetProperty.Companion::unwrap))
     }
 
     /**

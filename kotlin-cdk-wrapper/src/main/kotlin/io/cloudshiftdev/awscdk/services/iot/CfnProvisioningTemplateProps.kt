@@ -198,14 +198,14 @@ public interface CfnProvisioningTemplateProps {
      * @param enabled True to enable the fleet provisioning template, otherwise false.
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param preProvisioningHook Creates a pre-provisioning hook template.
      */
     override fun preProvisioningHook(preProvisioningHook: IResolvable) {
-      cdkBuilder.preProvisioningHook(preProvisioningHook.let(IResolvable::unwrap))
+      cdkBuilder.preProvisioningHook(preProvisioningHook.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -213,7 +213,7 @@ public interface CfnProvisioningTemplateProps {
      */
     override
         fun preProvisioningHook(preProvisioningHook: CfnProvisioningTemplate.ProvisioningHookProperty) {
-      cdkBuilder.preProvisioningHook(preProvisioningHook.let(CfnProvisioningTemplate.ProvisioningHookProperty::unwrap))
+      cdkBuilder.preProvisioningHook(preProvisioningHook.let(CfnProvisioningTemplate.ProvisioningHookProperty.Companion::unwrap))
     }
 
     /**
@@ -239,7 +239,7 @@ public interface CfnProvisioningTemplateProps {
      * @param tags Metadata that can be used to manage the fleet provisioning template.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -113,14 +113,14 @@ public interface LogConfig {
      * @param excludeVerboseContent exclude verbose content.
      */
     override fun excludeVerboseContent(excludeVerboseContent: IResolvable) {
-      cdkBuilder.excludeVerboseContent(excludeVerboseContent.let(IResolvable::unwrap))
+      cdkBuilder.excludeVerboseContent(excludeVerboseContent.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param fieldLogLevel log level for fields.
      */
     override fun fieldLogLevel(fieldLogLevel: FieldLogLevel) {
-      cdkBuilder.fieldLogLevel(fieldLogLevel.let(FieldLogLevel::unwrap))
+      cdkBuilder.fieldLogLevel(fieldLogLevel.let(FieldLogLevel.Companion::unwrap))
     }
 
     /**
@@ -130,14 +130,14 @@ public interface LogConfig {
      * To remove the retention policy, set the value to `INFINITE`
      */
     override fun retention(retention: RetentionDays) {
-      cdkBuilder.retention(retention.let(RetentionDays::unwrap))
+      cdkBuilder.retention(retention.let(RetentionDays.Companion::unwrap))
     }
 
     /**
      * @param role The role for CloudWatch Logs.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appsync.LogConfig = cdkBuilder.build()

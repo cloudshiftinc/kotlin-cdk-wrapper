@@ -45,7 +45,7 @@ public open class CfnTemplate(
   cdkObject: software.amazon.awscdk.services.ses.CfnTemplate,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ses.CfnTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ses.CfnTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -54,8 +54,8 @@ public open class CfnTemplate(
     id: String,
     props: CfnTemplateProps,
   ) :
-      this(software.amazon.awscdk.services.ses.CfnTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTemplateProps::unwrap))
+      this(software.amazon.awscdk.services.ses.CfnTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTemplateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -76,7 +76,7 @@ public open class CfnTemplate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -90,7 +90,7 @@ public open class CfnTemplate(
    * part.
    */
   public open fun template(`value`: IResolvable) {
-    unwrap(this).setTemplate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTemplate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -98,7 +98,7 @@ public open class CfnTemplate(
    * part.
    */
   public open fun template(`value`: TemplateProperty) {
-    unwrap(this).setTemplate(`value`.let(TemplateProperty::unwrap))
+    unwrap(this).setTemplate(`value`.let(TemplateProperty.Companion::unwrap))
   }
 
   /**
@@ -164,7 +164,7 @@ public open class CfnTemplate(
      * or a text-only part. 
      */
     override fun template(template: IResolvable) {
-      cdkBuilder.template(template.let(IResolvable::unwrap))
+      cdkBuilder.template(template.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -176,7 +176,7 @@ public open class CfnTemplate(
      * or a text-only part. 
      */
     override fun template(template: TemplateProperty) {
-      cdkBuilder.template(template.let(TemplateProperty::unwrap))
+      cdkBuilder.template(template.let(TemplateProperty.Companion::unwrap))
     }
 
     /**

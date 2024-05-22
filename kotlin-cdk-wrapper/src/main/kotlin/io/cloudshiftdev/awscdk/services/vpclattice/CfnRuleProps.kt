@@ -217,14 +217,14 @@ public interface CfnRuleProps {
      * @param action Describes the action for a rule. 
      */
     override fun action(action: IResolvable) {
-      cdkBuilder.action(action.let(IResolvable::unwrap))
+      cdkBuilder.action(action.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param action Describes the action for a rule. 
      */
     override fun action(action: CfnRule.ActionProperty) {
-      cdkBuilder.action(action.let(CfnRule.ActionProperty::unwrap))
+      cdkBuilder.action(action.let(CfnRule.ActionProperty.Companion::unwrap))
     }
 
     /**
@@ -246,14 +246,14 @@ public interface CfnRuleProps {
      * @param match The rule match. 
      */
     override fun match(match: IResolvable) {
-      cdkBuilder.match(match.let(IResolvable::unwrap))
+      cdkBuilder.match(match.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param match The rule match. 
      */
     override fun match(match: CfnRule.MatchProperty) {
-      cdkBuilder.match(match.let(CfnRule.MatchProperty::unwrap))
+      cdkBuilder.match(match.let(CfnRule.MatchProperty.Companion::unwrap))
     }
 
     /**
@@ -296,7 +296,7 @@ public interface CfnRuleProps {
      * @param tags The tags for the rule.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

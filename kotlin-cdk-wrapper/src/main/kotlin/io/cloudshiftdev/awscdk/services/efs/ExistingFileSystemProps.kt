@@ -47,7 +47,7 @@ public interface ExistingFileSystemProps {
      * @param destinationFileSystem The existing destination file system for the replication. 
      */
     override fun destinationFileSystem(destinationFileSystem: IFileSystem) {
-      cdkBuilder.destinationFileSystem(destinationFileSystem.let(IFileSystem::unwrap))
+      cdkBuilder.destinationFileSystem(destinationFileSystem.let(IFileSystem.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.efs.ExistingFileSystemProps =

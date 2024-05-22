@@ -158,7 +158,7 @@ public interface CommonRotationUserOptions {
      * Secrets Manager triggers the next automatic rotation.
      */
     override fun automaticallyAfter(automaticallyAfter: Duration) {
-      cdkBuilder.automaticallyAfter(automaticallyAfter.let(Duration::unwrap))
+      cdkBuilder.automaticallyAfter(automaticallyAfter.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -169,7 +169,7 @@ public interface CommonRotationUserOptions {
      * resolves to your VPC endpoint.
      */
     override fun endpoint(endpoint: IInterfaceVpcEndpoint) {
-      cdkBuilder.endpoint(endpoint.let(IInterfaceVpcEndpoint::unwrap))
+      cdkBuilder.endpoint(endpoint.let(IInterfaceVpcEndpoint.Companion::unwrap))
     }
 
     /**
@@ -191,14 +191,14 @@ public interface CommonRotationUserOptions {
      * @param securityGroup The security group for the Lambda rotation function.
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
      * @param vpcSubnets Where to place the rotation Lambda function.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

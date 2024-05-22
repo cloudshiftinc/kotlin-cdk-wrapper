@@ -63,8 +63,8 @@ public open class VirtualGateway(
     id: String,
     props: VirtualGatewayProps,
   ) :
-      this(software.amazon.awscdk.services.appmesh.VirtualGateway(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(VirtualGatewayProps::unwrap))
+      this(software.amazon.awscdk.services.appmesh.VirtualGateway(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(VirtualGatewayProps.Companion::unwrap))
   )
 
   public constructor(
@@ -82,7 +82,7 @@ public open class VirtualGateway(
    */
   public override fun addGatewayRoute(id: String, props: GatewayRouteBaseProps): GatewayRoute =
       unwrap(this).addGatewayRoute(id,
-      props.let(GatewayRouteBaseProps::unwrap)).let(GatewayRoute::wrap)
+      props.let(GatewayRouteBaseProps.Companion::unwrap)).let(GatewayRoute::wrap)
 
   /**
    * Utility method to add a new GatewayRoute to the VirtualGateway.
@@ -101,7 +101,7 @@ public open class VirtualGateway(
    * @param identity 
    */
   public override fun grantStreamAggregatedResources(identity: IGrantable): Grant =
-      unwrap(this).grantStreamAggregatedResources(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantStreamAggregatedResources(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The Mesh that the VirtualGateway belongs to.
@@ -208,7 +208,7 @@ public open class VirtualGateway(
      * @param accessLog Access Logging Configuration for the VirtualGateway. 
      */
     override fun accessLog(accessLog: AccessLog) {
-      cdkBuilder.accessLog(accessLog.let(AccessLog::unwrap))
+      cdkBuilder.accessLog(accessLog.let(AccessLog.Companion::unwrap))
     }
 
     /**
@@ -220,7 +220,7 @@ public open class VirtualGateway(
      * Service. 
      */
     override fun backendDefaults(backendDefaults: BackendDefaults) {
-      cdkBuilder.backendDefaults(backendDefaults.let(BackendDefaults::unwrap))
+      cdkBuilder.backendDefaults(backendDefaults.let(BackendDefaults.Companion::unwrap))
     }
 
     /**
@@ -246,7 +246,7 @@ public open class VirtualGateway(
      * @param listeners Listeners for the VirtualGateway. 
      */
     override fun listeners(listeners: List<VirtualGatewayListener>) {
-      cdkBuilder.listeners(listeners.map(VirtualGatewayListener::unwrap))
+      cdkBuilder.listeners(listeners.map(VirtualGatewayListener.Companion::unwrap))
     }
 
     /**
@@ -267,7 +267,7 @@ public open class VirtualGateway(
      * @param mesh The Mesh which the VirtualGateway belongs to. 
      */
     override fun mesh(mesh: IMesh) {
-      cdkBuilder.mesh(mesh.let(IMesh::unwrap))
+      cdkBuilder.mesh(mesh.let(IMesh.Companion::unwrap))
     }
 
     /**
@@ -290,7 +290,7 @@ public open class VirtualGateway(
       id: String,
       virtualGatewayArn: String,
     ): IVirtualGateway =
-        software.amazon.awscdk.services.appmesh.VirtualGateway.fromVirtualGatewayArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.appmesh.VirtualGateway.fromVirtualGatewayArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, virtualGatewayArn).let(IVirtualGateway::wrap)
 
     public fun fromVirtualGatewayAttributes(
@@ -298,8 +298,8 @@ public open class VirtualGateway(
       id: String,
       attrs: VirtualGatewayAttributes,
     ): IVirtualGateway =
-        software.amazon.awscdk.services.appmesh.VirtualGateway.fromVirtualGatewayAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(VirtualGatewayAttributes::unwrap)).let(IVirtualGateway::wrap)
+        software.amazon.awscdk.services.appmesh.VirtualGateway.fromVirtualGatewayAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(VirtualGatewayAttributes.Companion::unwrap)).let(IVirtualGateway::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c9d9e9ae33c84cde6a971a8ce03c125e996430a025d7b52cf600b06241f9384f")

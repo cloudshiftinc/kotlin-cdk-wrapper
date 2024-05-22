@@ -202,7 +202,7 @@ public interface CloudFormationProductProps {
      * Controls language for logging and errors.
      */
     override fun messageLanguage(messageLanguage: MessageLanguage) {
-      cdkBuilder.messageLanguage(messageLanguage.let(MessageLanguage::unwrap))
+      cdkBuilder.messageLanguage(messageLanguage.let(MessageLanguage.Companion::unwrap))
     }
 
     /**
@@ -223,7 +223,7 @@ public interface CloudFormationProductProps {
      * @param productVersions The configuration of the product version. 
      */
     override fun productVersions(productVersions: List<CloudFormationProductVersion>) {
-      cdkBuilder.productVersions(productVersions.map(CloudFormationProductVersion::unwrap))
+      cdkBuilder.productVersions(productVersions.map(CloudFormationProductVersion.Companion::unwrap))
     }
 
     /**
@@ -265,7 +265,7 @@ public interface CloudFormationProductProps {
      * @param tagOptions TagOptions associated directly to a product.
      */
     override fun tagOptions(tagOptions: TagOptions) {
-      cdkBuilder.tagOptions(tagOptions.let(TagOptions::unwrap))
+      cdkBuilder.tagOptions(tagOptions.let(TagOptions.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.servicecatalog.CloudFormationProductProps =

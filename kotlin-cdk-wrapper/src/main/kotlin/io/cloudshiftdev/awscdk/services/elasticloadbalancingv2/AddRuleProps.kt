@@ -84,7 +84,7 @@ public interface AddRuleProps {
      * @param conditions Rule applies if matches the conditions.
      */
     override fun conditions(conditions: List<ListenerCondition>) {
-      cdkBuilder.conditions(conditions.map(ListenerCondition::unwrap))
+      cdkBuilder.conditions(conditions.map(ListenerCondition.Companion::unwrap))
     }
 
     /**

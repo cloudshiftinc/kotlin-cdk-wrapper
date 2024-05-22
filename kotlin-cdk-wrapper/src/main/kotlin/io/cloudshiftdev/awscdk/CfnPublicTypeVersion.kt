@@ -57,7 +57,7 @@ public open class CfnPublicTypeVersion(
   cdkObject: software.amazon.awscdk.CfnPublicTypeVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.CfnPublicTypeVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.CfnPublicTypeVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -66,8 +66,8 @@ public open class CfnPublicTypeVersion(
     id: String,
     props: CfnPublicTypeVersionProps,
   ) :
-      this(software.amazon.awscdk.CfnPublicTypeVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPublicTypeVersionProps::unwrap))
+      this(software.amazon.awscdk.CfnPublicTypeVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPublicTypeVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -113,7 +113,7 @@ public open class CfnPublicTypeVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

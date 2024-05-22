@@ -22,7 +22,8 @@ public open class KubectlLayer(
   cdkObject: software.amazon.awscdk.lambdalayer.kubectl.KubectlLayer,
 ) : LayerVersion(cdkObject) {
   public constructor(scope: Construct, id: String) :
-      this(software.amazon.awscdk.lambdalayer.kubectl.KubectlLayer(scope.let(Construct::unwrap), id)
+      this(software.amazon.awscdk.lambdalayer.kubectl.KubectlLayer(scope.let(Construct.Companion::unwrap),
+      id)
   )
 
   public companion object {

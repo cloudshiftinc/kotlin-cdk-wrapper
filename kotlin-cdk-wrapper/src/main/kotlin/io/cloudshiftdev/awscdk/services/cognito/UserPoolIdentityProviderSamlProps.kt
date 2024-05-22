@@ -173,7 +173,7 @@ public interface UserPoolIdentityProviderSamlProps : UserPoolIdentityProviderPro
      * attributes of the user pool.
      */
     override fun attributeMapping(attributeMapping: AttributeMapping) {
-      cdkBuilder.attributeMapping(attributeMapping.let(AttributeMapping::unwrap))
+      cdkBuilder.attributeMapping(attributeMapping.let(AttributeMapping.Companion::unwrap))
     }
 
     /**
@@ -224,7 +224,7 @@ public interface UserPoolIdentityProviderSamlProps : UserPoolIdentityProviderPro
      * @param metadata The SAML metadata. 
      */
     override fun metadata(metadata: UserPoolIdentityProviderSamlMetadata) {
-      cdkBuilder.metadata(metadata.let(UserPoolIdentityProviderSamlMetadata::unwrap))
+      cdkBuilder.metadata(metadata.let(UserPoolIdentityProviderSamlMetadata.Companion::unwrap))
     }
 
     /**
@@ -239,14 +239,14 @@ public interface UserPoolIdentityProviderSamlProps : UserPoolIdentityProviderPro
      * @param requestSigningAlgorithm The signing algorithm for SAML requests.
      */
     override fun requestSigningAlgorithm(requestSigningAlgorithm: SigningAlgorithm) {
-      cdkBuilder.requestSigningAlgorithm(requestSigningAlgorithm.let(SigningAlgorithm::unwrap))
+      cdkBuilder.requestSigningAlgorithm(requestSigningAlgorithm.let(SigningAlgorithm.Companion::unwrap))
     }
 
     /**
      * @param userPool The user pool to which this construct provides identities. 
      */
     override fun userPool(userPool: IUserPool) {
-      cdkBuilder.userPool(userPool.let(IUserPool::unwrap))
+      cdkBuilder.userPool(userPool.let(IUserPool.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cognito.UserPoolIdentityProviderSamlProps =

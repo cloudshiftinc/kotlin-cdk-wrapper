@@ -112,7 +112,7 @@ public interface ExecuteCommandConfiguration {
      * client and the container.
      */
     override fun kmsKey(kmsKey: IKey) {
-      cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -120,7 +120,7 @@ public interface ExecuteCommandConfiguration {
      * The logs can be sent to CloudWatch Logs or an Amazon S3 bucket.
      */
     override fun logConfiguration(logConfiguration: ExecuteCommandLogConfiguration) {
-      cdkBuilder.logConfiguration(logConfiguration.let(ExecuteCommandLogConfiguration::unwrap))
+      cdkBuilder.logConfiguration(logConfiguration.let(ExecuteCommandLogConfiguration.Companion::unwrap))
     }
 
     /**
@@ -137,7 +137,7 @@ public interface ExecuteCommandConfiguration {
      * @param logging The log settings to use for logging the execute command session.
      */
     override fun logging(logging: ExecuteCommandLogging) {
-      cdkBuilder.logging(logging.let(ExecuteCommandLogging::unwrap))
+      cdkBuilder.logging(logging.let(ExecuteCommandLogging.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.ExecuteCommandConfiguration =

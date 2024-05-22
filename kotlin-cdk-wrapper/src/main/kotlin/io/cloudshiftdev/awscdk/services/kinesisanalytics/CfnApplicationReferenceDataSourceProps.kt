@@ -147,7 +147,7 @@ public interface CfnApplicationReferenceDataSourceProps {
      * Amazon Kinesis Analytics can assume to read the object from your S3 bucket on your behalf.
      */
     override fun referenceDataSource(referenceDataSource: IResolvable) {
-      cdkBuilder.referenceDataSource(referenceDataSource.let(IResolvable::unwrap))
+      cdkBuilder.referenceDataSource(referenceDataSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -160,7 +160,7 @@ public interface CfnApplicationReferenceDataSourceProps {
      */
     override
         fun referenceDataSource(referenceDataSource: CfnApplicationReferenceDataSource.ReferenceDataSourceProperty) {
-      cdkBuilder.referenceDataSource(referenceDataSource.let(CfnApplicationReferenceDataSource.ReferenceDataSourceProperty::unwrap))
+      cdkBuilder.referenceDataSource(referenceDataSource.let(CfnApplicationReferenceDataSource.ReferenceDataSourceProperty.Companion::unwrap))
     }
 
     /**

@@ -80,8 +80,8 @@ public open class CfnIdMappingWorkflow(
     id: String,
     props: CfnIdMappingWorkflowProps,
   ) :
-      this(software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnIdMappingWorkflowProps::unwrap))
+      this(software.amazon.awscdk.services.entityresolution.CfnIdMappingWorkflow(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnIdMappingWorkflowProps.Companion::unwrap))
   )
 
   public constructor(
@@ -133,14 +133,14 @@ public open class CfnIdMappingWorkflow(
    * An object which defines the `idMappingType` and the `providerProperties` .
    */
   public open fun idMappingTechniques(`value`: IResolvable) {
-    unwrap(this).setIdMappingTechniques(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIdMappingTechniques(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An object which defines the `idMappingType` and the `providerProperties` .
    */
   public open fun idMappingTechniques(`value`: IdMappingTechniquesProperty) {
-    unwrap(this).setIdMappingTechniques(`value`.let(IdMappingTechniquesProperty::unwrap))
+    unwrap(this).setIdMappingTechniques(`value`.let(IdMappingTechniquesProperty.Companion::unwrap))
   }
 
   /**
@@ -160,7 +160,7 @@ public open class CfnIdMappingWorkflow(
    * A list of `InputSource` objects, which have the fields `InputSourceARN` and `SchemaName` .
    */
   public open fun inputSourceConfig(`value`: IResolvable) {
-    unwrap(this).setInputSourceConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInputSourceConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -181,7 +181,7 @@ public open class CfnIdMappingWorkflow(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -195,7 +195,7 @@ public open class CfnIdMappingWorkflow(
    * and `Output` .
    */
   public open fun outputSourceConfig(`value`: IResolvable) {
-    unwrap(this).setOutputSourceConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOutputSourceConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -234,7 +234,7 @@ public open class CfnIdMappingWorkflow(
    * The tags used to organize, track, or control access for this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -419,7 +419,7 @@ public open class CfnIdMappingWorkflow(
      * `providerProperties` . 
      */
     override fun idMappingTechniques(idMappingTechniques: IResolvable) {
-      cdkBuilder.idMappingTechniques(idMappingTechniques.let(IResolvable::unwrap))
+      cdkBuilder.idMappingTechniques(idMappingTechniques.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -430,7 +430,7 @@ public open class CfnIdMappingWorkflow(
      * `providerProperties` . 
      */
     override fun idMappingTechniques(idMappingTechniques: IdMappingTechniquesProperty) {
-      cdkBuilder.idMappingTechniques(idMappingTechniques.let(IdMappingTechniquesProperty::unwrap))
+      cdkBuilder.idMappingTechniques(idMappingTechniques.let(IdMappingTechniquesProperty.Companion::unwrap))
     }
 
     /**
@@ -454,7 +454,7 @@ public open class CfnIdMappingWorkflow(
      * `InputSourceARN` and `SchemaName` . 
      */
     override fun inputSourceConfig(inputSourceConfig: IResolvable) {
-      cdkBuilder.inputSourceConfig(inputSourceConfig.let(IResolvable::unwrap))
+      cdkBuilder.inputSourceConfig(inputSourceConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -487,7 +487,7 @@ public open class CfnIdMappingWorkflow(
      * contains fields `OutputS3Path` and `Output` . 
      */
     override fun outputSourceConfig(outputSourceConfig: IResolvable) {
-      cdkBuilder.outputSourceConfig(outputSourceConfig.let(IResolvable::unwrap))
+      cdkBuilder.outputSourceConfig(outputSourceConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -533,7 +533,7 @@ public open class CfnIdMappingWorkflow(
      * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -672,7 +672,7 @@ public open class CfnIdMappingWorkflow(
        * the provider service.
        */
       override fun providerProperties(providerProperties: IResolvable) {
-        cdkBuilder.providerProperties(providerProperties.let(IResolvable::unwrap))
+        cdkBuilder.providerProperties(providerProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -680,7 +680,7 @@ public open class CfnIdMappingWorkflow(
        * the provider service.
        */
       override fun providerProperties(providerProperties: ProviderPropertiesProperty) {
-        cdkBuilder.providerProperties(providerProperties.let(ProviderPropertiesProperty::unwrap))
+        cdkBuilder.providerProperties(providerProperties.let(ProviderPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -1218,7 +1218,7 @@ public open class CfnIdMappingWorkflow(
        * Your information won't be saved permanently.
        */
       override fun intermediateSourceConfiguration(intermediateSourceConfiguration: IResolvable) {
-        cdkBuilder.intermediateSourceConfiguration(intermediateSourceConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.intermediateSourceConfiguration(intermediateSourceConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1228,7 +1228,7 @@ public open class CfnIdMappingWorkflow(
        */
       override
           fun intermediateSourceConfiguration(intermediateSourceConfiguration: IntermediateSourceConfigurationProperty) {
-        cdkBuilder.intermediateSourceConfiguration(intermediateSourceConfiguration.let(IntermediateSourceConfigurationProperty::unwrap))
+        cdkBuilder.intermediateSourceConfiguration(intermediateSourceConfiguration.let(IntermediateSourceConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1248,7 +1248,7 @@ public open class CfnIdMappingWorkflow(
        * service.
        */
       override fun providerConfiguration(providerConfiguration: IResolvable) {
-        cdkBuilder.providerConfiguration(providerConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.providerConfiguration(providerConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**

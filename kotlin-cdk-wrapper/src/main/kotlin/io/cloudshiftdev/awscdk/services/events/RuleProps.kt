@@ -162,7 +162,7 @@ public interface RuleProps : EventCommonOptions {
      * This helps dealing with cycles that often arise in these situations.
      */
     override fun crossStackScope(crossStackScope: Construct) {
-      cdkBuilder.crossStackScope(crossStackScope.let(Construct::unwrap))
+      cdkBuilder.crossStackScope(crossStackScope.let(Construct.Companion::unwrap))
     }
 
     /**
@@ -183,7 +183,7 @@ public interface RuleProps : EventCommonOptions {
      * @param eventBus The event bus to associate with this rule.
      */
     override fun eventBus(eventBus: IEventBus) {
-      cdkBuilder.eventBus(eventBus.let(IEventBus::unwrap))
+      cdkBuilder.eventBus(eventBus.let(IEventBus.Companion::unwrap))
     }
 
     /**
@@ -193,7 +193,7 @@ public interface RuleProps : EventCommonOptions {
      * on top of that filtering.
      */
     override fun eventPattern(eventPattern: EventPattern) {
-      cdkBuilder.eventPattern(eventPattern.let(EventPattern::unwrap))
+      cdkBuilder.eventPattern(eventPattern.let(EventPattern.Companion::unwrap))
     }
 
     /**
@@ -223,7 +223,7 @@ public interface RuleProps : EventCommonOptions {
      * Rules in the Amazon EventBridge User Guide.
      */
     override fun schedule(schedule: Schedule) {
-      cdkBuilder.schedule(schedule.let(Schedule::unwrap))
+      cdkBuilder.schedule(schedule.let(Schedule.Companion::unwrap))
     }
 
     /**
@@ -232,7 +232,7 @@ public interface RuleProps : EventCommonOptions {
      * target input, use `addTarget(target[, inputOptions])`.
      */
     override fun targets(targets: List<IRuleTarget>) {
-      cdkBuilder.targets(targets.map(IRuleTarget::unwrap))
+      cdkBuilder.targets(targets.map(IRuleTarget.Companion::unwrap))
     }
 
     /**

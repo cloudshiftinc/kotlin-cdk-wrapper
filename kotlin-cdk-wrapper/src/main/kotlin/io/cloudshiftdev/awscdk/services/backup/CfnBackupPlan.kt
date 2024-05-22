@@ -91,8 +91,8 @@ public open class CfnBackupPlan(
     id: String,
     props: CfnBackupPlanProps,
   ) :
-      this(software.amazon.awscdk.services.backup.CfnBackupPlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnBackupPlanProps::unwrap))
+      this(software.amazon.awscdk.services.backup.CfnBackupPlan(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnBackupPlanProps.Companion::unwrap))
   )
 
   public constructor(
@@ -131,14 +131,14 @@ public open class CfnBackupPlan(
    * Uniquely identifies the backup plan to be associated with the selection of resources.
    */
   public open fun backupPlan(`value`: IResolvable) {
-    unwrap(this).setBackupPlan(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBackupPlan(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Uniquely identifies the backup plan to be associated with the selection of resources.
    */
   public open fun backupPlan(`value`: BackupPlanResourceTypeProperty) {
-    unwrap(this).setBackupPlan(`value`.let(BackupPlanResourceTypeProperty::unwrap))
+    unwrap(this).setBackupPlan(`value`.let(BackupPlanResourceTypeProperty.Companion::unwrap))
   }
 
   /**
@@ -174,7 +174,7 @@ public open class CfnBackupPlan(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -235,7 +235,7 @@ public open class CfnBackupPlan(
      * resources. 
      */
     override fun backupPlan(backupPlan: IResolvable) {
-      cdkBuilder.backupPlan(backupPlan.let(IResolvable::unwrap))
+      cdkBuilder.backupPlan(backupPlan.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -246,7 +246,7 @@ public open class CfnBackupPlan(
      * resources. 
      */
     override fun backupPlan(backupPlan: BackupPlanResourceTypeProperty) {
-      cdkBuilder.backupPlan(backupPlan.let(BackupPlanResourceTypeProperty::unwrap))
+      cdkBuilder.backupPlan(backupPlan.let(BackupPlanResourceTypeProperty.Companion::unwrap))
     }
 
     /**
@@ -599,7 +599,7 @@ public open class CfnBackupPlan(
        * @param advancedBackupSettings A list of backup options for each resource type.
        */
       override fun advancedBackupSettings(advancedBackupSettings: IResolvable) {
-        cdkBuilder.advancedBackupSettings(advancedBackupSettings.let(IResolvable::unwrap))
+        cdkBuilder.advancedBackupSettings(advancedBackupSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -627,7 +627,7 @@ public open class CfnBackupPlan(
        * task that is used to back up a selection of resources. 
        */
       override fun backupPlanRule(backupPlanRule: IResolvable) {
-        cdkBuilder.backupPlanRule(backupPlanRule.let(IResolvable::unwrap))
+        cdkBuilder.backupPlanRule(backupPlanRule.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -946,7 +946,7 @@ public open class CfnBackupPlan(
        * operation.
        */
       override fun copyActions(copyActions: IResolvable) {
-        cdkBuilder.copyActions(copyActions.let(IResolvable::unwrap))
+        cdkBuilder.copyActions(copyActions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -974,7 +974,7 @@ public open class CfnBackupPlan(
        * @param enableContinuousBackup Enables continuous backup and point-in-time restores (PITR).
        */
       override fun enableContinuousBackup(enableContinuousBackup: IResolvable) {
-        cdkBuilder.enableContinuousBackup(enableContinuousBackup.let(IResolvable::unwrap))
+        cdkBuilder.enableContinuousBackup(enableContinuousBackup.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -984,7 +984,7 @@ public open class CfnBackupPlan(
        * you define.
        */
       override fun lifecycle(lifecycle: IResolvable) {
-        cdkBuilder.lifecycle(lifecycle.let(IResolvable::unwrap))
+        cdkBuilder.lifecycle(lifecycle.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -994,7 +994,7 @@ public open class CfnBackupPlan(
        * you define.
        */
       override fun lifecycle(lifecycle: LifecycleResourceTypeProperty) {
-        cdkBuilder.lifecycle(lifecycle.let(LifecycleResourceTypeProperty::unwrap))
+        cdkBuilder.lifecycle(lifecycle.let(LifecycleResourceTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -1012,7 +1012,7 @@ public open class CfnBackupPlan(
        * @param recoveryPointTags The tags to assign to the resources.
        */
       override fun recoveryPointTags(recoveryPointTags: IResolvable) {
-        cdkBuilder.recoveryPointTags(recoveryPointTags.let(IResolvable::unwrap))
+        cdkBuilder.recoveryPointTags(recoveryPointTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1299,7 +1299,7 @@ public open class CfnBackupPlan(
        * days.
        */
       override fun lifecycle(lifecycle: IResolvable) {
-        cdkBuilder.lifecycle(lifecycle.let(IResolvable::unwrap))
+        cdkBuilder.lifecycle(lifecycle.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1313,7 +1313,7 @@ public open class CfnBackupPlan(
        * days.
        */
       override fun lifecycle(lifecycle: LifecycleResourceTypeProperty) {
-        cdkBuilder.lifecycle(lifecycle.let(LifecycleResourceTypeProperty::unwrap))
+        cdkBuilder.lifecycle(lifecycle.let(LifecycleResourceTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -1502,7 +1502,7 @@ public open class CfnBackupPlan(
        */
       override
           fun optInToArchiveForSupportedResources(optInToArchiveForSupportedResources: IResolvable) {
-        cdkBuilder.optInToArchiveForSupportedResources(optInToArchiveForSupportedResources.let(IResolvable::unwrap))
+        cdkBuilder.optInToArchiveForSupportedResources(optInToArchiveForSupportedResources.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

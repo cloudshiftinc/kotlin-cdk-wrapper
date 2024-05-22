@@ -1361,7 +1361,7 @@ public interface CfnClusterProps {
      * Default: `true`
      */
     override fun allowVersionUpgrade(allowVersionUpgrade: IResolvable) {
-      cdkBuilder.allowVersionUpgrade(allowVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.allowVersionUpgrade(allowVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1421,7 +1421,7 @@ public interface CfnClusterProps {
      * cluster between Availability Zones after the cluster is created.
      */
     override fun availabilityZoneRelocation(availabilityZoneRelocation: IResolvable) {
-      cdkBuilder.availabilityZoneRelocation(availabilityZoneRelocation.let(IResolvable::unwrap))
+      cdkBuilder.availabilityZoneRelocation(availabilityZoneRelocation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1447,7 +1447,7 @@ public interface CfnClusterProps {
      * If you don't provide this parameter or set the value to `false` , the resize type is elastic.
      */
     override fun classic(classic: IResolvable) {
-      cdkBuilder.classic(classic.let(IResolvable::unwrap))
+      cdkBuilder.classic(classic.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1571,7 +1571,7 @@ public interface CfnClusterProps {
      * window.
      */
     override fun deferMaintenance(deferMaintenance: IResolvable) {
-      cdkBuilder.deferMaintenance(deferMaintenance.let(IResolvable::unwrap))
+      cdkBuilder.deferMaintenance(deferMaintenance.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1634,21 +1634,21 @@ public interface CfnClusterProps {
      * Default: false
      */
     override fun encrypted(encrypted: IResolvable) {
-      cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
+      cdkBuilder.encrypted(encrypted.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param endpoint The connection endpoint.
      */
     override fun endpoint(endpoint: IResolvable) {
-      cdkBuilder.endpoint(endpoint.let(IResolvable::unwrap))
+      cdkBuilder.endpoint(endpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param endpoint The connection endpoint.
      */
     override fun endpoint(endpoint: CfnCluster.EndpointProperty) {
-      cdkBuilder.endpoint(endpoint.let(CfnCluster.EndpointProperty::unwrap))
+      cdkBuilder.endpoint(endpoint.let(CfnCluster.EndpointProperty.Companion::unwrap))
     }
 
     /**
@@ -1688,7 +1688,7 @@ public interface CfnClusterProps {
      * Default: false
      */
     override fun enhancedVpcRouting(enhancedVpcRouting: IResolvable) {
-      cdkBuilder.enhancedVpcRouting(enhancedVpcRouting.let(IResolvable::unwrap))
+      cdkBuilder.enhancedVpcRouting(enhancedVpcRouting.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1746,7 +1746,7 @@ public interface CfnClusterProps {
      * attempts, for the specified Amazon Redshift cluster.
      */
     override fun loggingProperties(loggingProperties: IResolvable) {
-      cdkBuilder.loggingProperties(loggingProperties.let(IResolvable::unwrap))
+      cdkBuilder.loggingProperties(loggingProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1754,7 +1754,7 @@ public interface CfnClusterProps {
      * attempts, for the specified Amazon Redshift cluster.
      */
     override fun loggingProperties(loggingProperties: CfnCluster.LoggingPropertiesProperty) {
-      cdkBuilder.loggingProperties(loggingProperties.let(CfnCluster.LoggingPropertiesProperty::unwrap))
+      cdkBuilder.loggingProperties(loggingProperties.let(CfnCluster.LoggingPropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -1796,7 +1796,7 @@ public interface CfnClusterProps {
      * admin user account's password.
      */
     override fun manageMasterPassword(manageMasterPassword: IResolvable) {
-      cdkBuilder.manageMasterPassword(manageMasterPassword.let(IResolvable::unwrap))
+      cdkBuilder.manageMasterPassword(manageMasterPassword.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1870,7 +1870,7 @@ public interface CfnClusterProps {
      * The default is false.
      */
     override fun multiAz(multiAz: IResolvable) {
-      cdkBuilder.multiAz(multiAz.let(IResolvable::unwrap))
+      cdkBuilder.multiAz(multiAz.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1968,7 +1968,7 @@ public interface CfnClusterProps {
      * @param publiclyAccessible If `true` , the cluster can be accessed from a public network.
      */
     override fun publiclyAccessible(publiclyAccessible: IResolvable) {
-      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
+      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1998,7 +1998,7 @@ public interface CfnClusterProps {
      * @param rotateEncryptionKey Rotates the encryption keys for a cluster.
      */
     override fun rotateEncryptionKey(rotateEncryptionKey: IResolvable) {
-      cdkBuilder.rotateEncryptionKey(rotateEncryptionKey.let(IResolvable::unwrap))
+      cdkBuilder.rotateEncryptionKey(rotateEncryptionKey.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2031,7 +2031,7 @@ public interface CfnClusterProps {
      * copied manual snapshots instead of automated snapshots.
      */
     override fun snapshotCopyManual(snapshotCopyManual: IResolvable) {
-      cdkBuilder.snapshotCopyManual(snapshotCopyManual.let(IResolvable::unwrap))
+      cdkBuilder.snapshotCopyManual(snapshotCopyManual.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2072,7 +2072,7 @@ public interface CfnClusterProps {
      * @param tags A list of tag instances.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

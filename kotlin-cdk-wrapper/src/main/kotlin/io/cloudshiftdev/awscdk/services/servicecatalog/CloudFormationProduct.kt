@@ -43,8 +43,8 @@ public open class CloudFormationProduct(
     id: String,
     props: CloudFormationProductProps,
   ) :
-      this(software.amazon.awscdk.services.servicecatalog.CloudFormationProduct(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CloudFormationProductProps::unwrap))
+      this(software.amazon.awscdk.services.servicecatalog.CloudFormationProduct(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CloudFormationProductProps.Companion::unwrap))
   )
 
   public constructor(
@@ -223,7 +223,7 @@ public open class CloudFormationProduct(
      * @param messageLanguage The language code. 
      */
     override fun messageLanguage(messageLanguage: MessageLanguage) {
-      cdkBuilder.messageLanguage(messageLanguage.let(MessageLanguage::unwrap))
+      cdkBuilder.messageLanguage(messageLanguage.let(MessageLanguage.Companion::unwrap))
     }
 
     /**
@@ -250,7 +250,7 @@ public open class CloudFormationProduct(
      * @param productVersions The configuration of the product version. 
      */
     override fun productVersions(productVersions: List<CloudFormationProductVersion>) {
-      cdkBuilder.productVersions(productVersions.map(CloudFormationProductVersion::unwrap))
+      cdkBuilder.productVersions(productVersions.map(CloudFormationProductVersion.Companion::unwrap))
     }
 
     /**
@@ -315,7 +315,7 @@ public open class CloudFormationProduct(
      * @param tagOptions TagOptions associated directly to a product. 
      */
     override fun tagOptions(tagOptions: TagOptions) {
-      cdkBuilder.tagOptions(tagOptions.let(TagOptions::unwrap))
+      cdkBuilder.tagOptions(tagOptions.let(TagOptions.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.servicecatalog.CloudFormationProduct =

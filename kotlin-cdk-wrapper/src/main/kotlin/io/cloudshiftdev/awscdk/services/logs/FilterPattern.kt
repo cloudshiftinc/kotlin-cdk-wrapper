@@ -30,7 +30,7 @@ public open class FilterPattern(
 
   public companion object {
     public fun all(patterns: JsonPattern): JsonPattern =
-        software.amazon.awscdk.services.logs.FilterPattern.all(patterns.let(JsonPattern::unwrap)).let(JsonPattern::wrap)
+        software.amazon.awscdk.services.logs.FilterPattern.all(patterns.let(JsonPattern.Companion::unwrap)).let(JsonPattern::wrap)
 
     public fun allEvents(): IFilterPattern =
         software.amazon.awscdk.services.logs.FilterPattern.allEvents().let(IFilterPattern::wrap)
@@ -39,7 +39,7 @@ public open class FilterPattern(
         software.amazon.awscdk.services.logs.FilterPattern.allTerms(terms).let(IFilterPattern::wrap)
 
     public fun any(patterns: JsonPattern): JsonPattern =
-        software.amazon.awscdk.services.logs.FilterPattern.any(patterns.let(JsonPattern::unwrap)).let(JsonPattern::wrap)
+        software.amazon.awscdk.services.logs.FilterPattern.any(patterns.let(JsonPattern.Companion::unwrap)).let(JsonPattern::wrap)
 
     public fun anyTerm(terms: String): IFilterPattern =
         software.amazon.awscdk.services.logs.FilterPattern.anyTerm(terms).let(IFilterPattern::wrap)

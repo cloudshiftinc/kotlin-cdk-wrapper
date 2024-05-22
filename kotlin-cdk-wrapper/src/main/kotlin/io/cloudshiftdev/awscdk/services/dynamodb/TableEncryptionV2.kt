@@ -59,11 +59,11 @@ public abstract class TableEncryptionV2(
         software.amazon.awscdk.services.dynamodb.TableEncryptionV2.awsManagedKey().let(TableEncryptionV2::wrap)
 
     public fun customerManagedKey(tableKey: IKey): TableEncryptionV2 =
-        software.amazon.awscdk.services.dynamodb.TableEncryptionV2.customerManagedKey(tableKey.let(IKey::unwrap)).let(TableEncryptionV2::wrap)
+        software.amazon.awscdk.services.dynamodb.TableEncryptionV2.customerManagedKey(tableKey.let(IKey.Companion::unwrap)).let(TableEncryptionV2::wrap)
 
     public fun customerManagedKey(tableKey: IKey, replicaKeyArns: Map<String, String>):
         TableEncryptionV2 =
-        software.amazon.awscdk.services.dynamodb.TableEncryptionV2.customerManagedKey(tableKey.let(IKey::unwrap),
+        software.amazon.awscdk.services.dynamodb.TableEncryptionV2.customerManagedKey(tableKey.let(IKey.Companion::unwrap),
         replicaKeyArns).let(TableEncryptionV2::wrap)
 
     public fun dynamoOwnedKey(): TableEncryptionV2 =

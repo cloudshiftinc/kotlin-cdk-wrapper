@@ -45,8 +45,8 @@ public open class CfnSnapshot(
     id: String,
     props: CfnSnapshotProps,
   ) :
-      this(software.amazon.awscdk.services.fsx.CfnSnapshot(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSnapshotProps::unwrap))
+      this(software.amazon.awscdk.services.fsx.CfnSnapshot(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSnapshotProps.Companion::unwrap))
   )
 
   public constructor(
@@ -75,7 +75,7 @@ public open class CfnSnapshot(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -105,7 +105,7 @@ public open class CfnSnapshot(
    * A list of `Tag` values, with a maximum of 50 elements.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -187,7 +187,7 @@ public open class CfnSnapshot(
      * @param tags A list of `Tag` values, with a maximum of 50 elements. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -201,7 +201,7 @@ public interface CfnMapProps {
      * The map style defines the look of maps and the data provider for your map resource.
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -210,7 +210,7 @@ public interface CfnMapProps {
      * The map style defines the look of maps and the data provider for your map resource.
      */
     override fun configuration(configuration: CfnMap.MapConfigurationProperty) {
-      cdkBuilder.configuration(configuration.let(CfnMap.MapConfigurationProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(CfnMap.MapConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -269,7 +269,7 @@ public interface CfnMapProps {
      * /
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

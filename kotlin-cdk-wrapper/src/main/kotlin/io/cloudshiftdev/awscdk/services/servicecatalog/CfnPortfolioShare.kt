@@ -43,8 +43,8 @@ public open class CfnPortfolioShare(
     id: String,
     props: CfnPortfolioShareProps,
   ) :
-      this(software.amazon.awscdk.services.servicecatalog.CfnPortfolioShare(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPortfolioShareProps::unwrap))
+      this(software.amazon.awscdk.services.servicecatalog.CfnPortfolioShare(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPortfolioShareProps.Companion::unwrap))
   )
 
   public constructor(
@@ -89,7 +89,7 @@ public open class CfnPortfolioShare(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -120,7 +120,7 @@ public open class CfnPortfolioShare(
    * Indicates whether TagOptions sharing is enabled or disabled for the portfolio share.
    */
   public open fun shareTagOptions(`value`: IResolvable) {
-    unwrap(this).setShareTagOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setShareTagOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -237,7 +237,7 @@ public open class CfnPortfolioShare(
      * portfolio share. 
      */
     override fun shareTagOptions(shareTagOptions: IResolvable) {
-      cdkBuilder.shareTagOptions(shareTagOptions.let(IResolvable::unwrap))
+      cdkBuilder.shareTagOptions(shareTagOptions.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.servicecatalog.CfnPortfolioShare =

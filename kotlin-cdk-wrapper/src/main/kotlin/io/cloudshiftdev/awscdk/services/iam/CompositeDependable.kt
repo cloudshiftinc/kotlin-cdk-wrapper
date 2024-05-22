@@ -27,7 +27,7 @@ public open class CompositeDependable(
   cdkObject: software.amazon.awscdk.services.iam.CompositeDependable,
 ) : CdkObject(cdkObject), IDependable {
   public constructor(dependables: IDependable) :
-      this(software.amazon.awscdk.services.iam.CompositeDependable(dependables.let(IDependable::unwrap))
+      this(software.amazon.awscdk.services.iam.CompositeDependable(dependables.let(IDependable.Companion::unwrap))
   )
 
   public companion object {

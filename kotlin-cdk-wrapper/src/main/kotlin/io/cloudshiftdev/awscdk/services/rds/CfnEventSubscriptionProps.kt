@@ -276,7 +276,7 @@ public interface CfnEventSubscriptionProps {
      * active.
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -387,7 +387,7 @@ public interface CfnEventSubscriptionProps {
      * @param tags An optional array of key-value pairs to apply to this subscription.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

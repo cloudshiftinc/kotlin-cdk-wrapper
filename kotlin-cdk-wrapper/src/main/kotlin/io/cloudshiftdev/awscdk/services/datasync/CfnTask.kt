@@ -80,6 +80,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .schedule(TaskScheduleProperty.builder()
  * .scheduleExpression("scheduleExpression")
+ * .status("status")
  * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -125,8 +126,8 @@ public open class CfnTask(
     id: String,
     props: CfnTaskProps,
   ) :
-      this(software.amazon.awscdk.services.datasync.CfnTask(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTaskProps::unwrap))
+      this(software.amazon.awscdk.services.datasync.CfnTask(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTaskProps.Companion::unwrap))
   )
 
   public constructor(
@@ -160,14 +161,14 @@ public open class CfnTask(
   public open fun attrTaskArn(): String = unwrap(this).getAttrTaskArn()
 
   /**
-   * The Amazon Resource Name (ARN) of the Amazon CloudWatch log group that is used to monitor and
-   * log events in the task.
+   * Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch log group for monitoring your
+   * task.
    */
   public open fun cloudWatchLogGroupArn(): String? = unwrap(this).getCloudWatchLogGroupArn()
 
   /**
-   * The Amazon Resource Name (ARN) of the Amazon CloudWatch log group that is used to monitor and
-   * log events in the task.
+   * Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch log group for monitoring your
+   * task.
    */
   public open fun cloudWatchLogGroupArn(`value`: String) {
     unwrap(this).setCloudWatchLogGroupArn(`value`)
@@ -186,50 +187,58 @@ public open class CfnTask(
   }
 
   /**
-   * Specifies a list of filter rules that exclude specific data during your transfer.
+   * Specifies exclude filters that define the files, objects, and folders in your source location
+   * that you don't want DataSync to transfer.
    */
   public open fun excludes(): Any? = unwrap(this).getExcludes()
 
   /**
-   * Specifies a list of filter rules that exclude specific data during your transfer.
+   * Specifies exclude filters that define the files, objects, and folders in your source location
+   * that you don't want DataSync to transfer.
    */
   public open fun excludes(`value`: IResolvable) {
-    unwrap(this).setExcludes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setExcludes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Specifies a list of filter rules that exclude specific data during your transfer.
+   * Specifies exclude filters that define the files, objects, and folders in your source location
+   * that you don't want DataSync to transfer.
    */
   public open fun excludes(`value`: List<Any>) {
     unwrap(this).setExcludes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * Specifies a list of filter rules that exclude specific data during your transfer.
+   * Specifies exclude filters that define the files, objects, and folders in your source location
+   * that you don't want DataSync to transfer.
    */
   public open fun excludes(vararg `value`: Any): Unit = excludes(`value`.toList())
 
   /**
-   * Specifies a list of filter rules that include specific data during your transfer.
+   * Specifies include filters define the files, objects, and folders in your source location that
+   * you want DataSync to transfer.
    */
   public open fun includes(): Any? = unwrap(this).getIncludes()
 
   /**
-   * Specifies a list of filter rules that include specific data during your transfer.
+   * Specifies include filters define the files, objects, and folders in your source location that
+   * you want DataSync to transfer.
    */
   public open fun includes(`value`: IResolvable) {
-    unwrap(this).setIncludes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIncludes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Specifies a list of filter rules that include specific data during your transfer.
+   * Specifies include filters define the files, objects, and folders in your source location that
+   * you want DataSync to transfer.
    */
   public open fun includes(`value`: List<Any>) {
     unwrap(this).setIncludes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * Specifies a list of filter rules that include specific data during your transfer.
+   * Specifies include filters define the files, objects, and folders in your source location that
+   * you want DataSync to transfer.
    */
   public open fun includes(vararg `value`: Any): Unit = includes(`value`.toList())
 
@@ -239,30 +248,34 @@ public open class CfnTask(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
-   * The configuration of the manifest that lists the files or objects to transfer.
+   * The configuration of the manifest that lists the files or objects that you want DataSync to
+   * transfer.
    */
   public open fun manifestConfig(): Any? = unwrap(this).getManifestConfig()
 
   /**
-   * The configuration of the manifest that lists the files or objects to transfer.
+   * The configuration of the manifest that lists the files or objects that you want DataSync to
+   * transfer.
    */
   public open fun manifestConfig(`value`: IResolvable) {
-    unwrap(this).setManifestConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setManifestConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The configuration of the manifest that lists the files or objects to transfer.
+   * The configuration of the manifest that lists the files or objects that you want DataSync to
+   * transfer.
    */
   public open fun manifestConfig(`value`: ManifestConfigProperty) {
-    unwrap(this).setManifestConfig(`value`.let(ManifestConfigProperty::unwrap))
+    unwrap(this).setManifestConfig(`value`.let(ManifestConfigProperty.Companion::unwrap))
   }
 
   /**
-   * The configuration of the manifest that lists the files or objects to transfer.
+   * The configuration of the manifest that lists the files or objects that you want DataSync to
+   * transfer.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("3f3d5d70b2fdc8b5bbd54d646e05702d83dfc05c58a414d9a28345e7fce8bb9d")
@@ -270,46 +283,42 @@ public open class CfnTask(
       manifestConfig(ManifestConfigProperty(`value`))
 
   /**
-   * The name of a task.
+   * Specifies the name of your task.
    */
   public open fun name(): String? = unwrap(this).getName()
 
   /**
-   * The name of a task.
+   * Specifies the name of your task.
    */
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
   }
 
   /**
-   * Specifies the configuration options for a task.
-   *
-   * Some options include preserving file or object metadata and verifying data integrity.
+   * Specifies your task's settings, such as preserving file metadata, verifying data integrity,
+   * among other options.
    */
   public open fun options(): Any? = unwrap(this).getOptions()
 
   /**
-   * Specifies the configuration options for a task.
-   *
-   * Some options include preserving file or object metadata and verifying data integrity.
+   * Specifies your task's settings, such as preserving file metadata, verifying data integrity,
+   * among other options.
    */
   public open fun options(`value`: IResolvable) {
-    unwrap(this).setOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Specifies the configuration options for a task.
-   *
-   * Some options include preserving file or object metadata and verifying data integrity.
+   * Specifies your task's settings, such as preserving file metadata, verifying data integrity,
+   * among other options.
    */
   public open fun options(`value`: OptionsProperty) {
-    unwrap(this).setOptions(`value`.let(OptionsProperty::unwrap))
+    unwrap(this).setOptions(`value`.let(OptionsProperty.Companion::unwrap))
   }
 
   /**
-   * Specifies the configuration options for a task.
-   *
-   * Some options include preserving file or object metadata and verifying data integrity.
+   * Specifies your task's settings, such as preserving file metadata, verifying data integrity,
+   * among other options.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("0cb73a6986b6a2eab6684e9cc43938f794e75585cce4f517dfd62a17d2fe2b76")
@@ -317,30 +326,26 @@ public open class CfnTask(
       options(OptionsProperty(`value`))
 
   /**
-   * Specifies a schedule used to periodically transfer files from a source to a destination
-   * location.
+   * Specifies a schedule for when you want your task to run.
    */
   public open fun schedule(): Any? = unwrap(this).getSchedule()
 
   /**
-   * Specifies a schedule used to periodically transfer files from a source to a destination
-   * location.
+   * Specifies a schedule for when you want your task to run.
    */
   public open fun schedule(`value`: IResolvable) {
-    unwrap(this).setSchedule(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSchedule(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Specifies a schedule used to periodically transfer files from a source to a destination
-   * location.
+   * Specifies a schedule for when you want your task to run.
    */
   public open fun schedule(`value`: TaskScheduleProperty) {
-    unwrap(this).setSchedule(`value`.let(TaskScheduleProperty::unwrap))
+    unwrap(this).setSchedule(`value`.let(TaskScheduleProperty.Companion::unwrap))
   }
 
   /**
-   * Specifies a schedule used to periodically transfer files from a source to a destination
-   * location.
+   * Specifies a schedule for when you want your task to run.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("618247c359dbc42271d0d4fff1b9a15f8cd3b3f3d1ad0966e97a9590fe51a050")
@@ -348,12 +353,12 @@ public open class CfnTask(
       schedule(TaskScheduleProperty(`value`))
 
   /**
-   * The Amazon Resource Name (ARN) of the source location for the task.
+   * Specifies the ARN of your transfer's source location.
    */
   public open fun sourceLocationArn(): String = unwrap(this).getSourceLocationArn()
 
   /**
-   * The Amazon Resource Name (ARN) of the source location for the task.
+   * Specifies the ARN of your transfer's source location.
    */
   public open fun sourceLocationArn(`value`: String) {
     unwrap(this).setSourceLocationArn(`value`)
@@ -365,23 +370,20 @@ public open class CfnTask(
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   /**
-   * Specifies the tags that you want to apply to the Amazon Resource Name (ARN) representing the
-   * task.
+   * Specifies the tags that you want to apply to your task.
    */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
   /**
-   * Specifies the tags that you want to apply to the Amazon Resource Name (ARN) representing the
-   * task.
+   * Specifies the tags that you want to apply to your task.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * Specifies the tags that you want to apply to the Amazon Resource Name (ARN) representing the
-   * task.
+   * Specifies the tags that you want to apply to your task.
    */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
@@ -396,7 +398,7 @@ public open class CfnTask(
    * your DataSync transfer.
    */
   public open fun taskReportConfig(`value`: IResolvable) {
-    unwrap(this).setTaskReportConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTaskReportConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -404,7 +406,7 @@ public open class CfnTask(
    * your DataSync transfer.
    */
   public open fun taskReportConfig(`value`: TaskReportConfigProperty) {
-    unwrap(this).setTaskReportConfig(`value`.let(TaskReportConfigProperty::unwrap))
+    unwrap(this).setTaskReportConfig(`value`.let(TaskReportConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -422,20 +424,15 @@ public open class CfnTask(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The Amazon Resource Name (ARN) of the Amazon CloudWatch log group that is used to monitor and
-     * log events in the task.
+     * Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch log group for monitoring
+     * your task.
      *
-     * For more information about how to use CloudWatch Logs with DataSync, see [Monitoring Your
-     * Task](https://docs.aws.amazon.com/datasync/latest/userguide/monitor-datasync.html#cloudwatchlogs)
-     * in the *AWS DataSync User Guide.*
-     *
-     * For more information about these groups, see [Working with Log Groups and Log
-     * Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)
-     * in the *Amazon CloudWatch Logs User Guide* .
+     * For more information, see [Monitoring DataSync with Amazon
+     * CloudWatch](https://docs.aws.amazon.com/datasync/latest/userguide/monitor-datasync.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-cloudwatchloggrouparn)
-     * @param cloudWatchLogGroupArn The Amazon Resource Name (ARN) of the Amazon CloudWatch log
-     * group that is used to monitor and log events in the task. 
+     * @param cloudWatchLogGroupArn Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch
+     * log group for monitoring your task. 
      */
     public fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String)
 
@@ -449,247 +446,229 @@ public open class CfnTask(
     public fun destinationLocationArn(destinationLocationArn: String)
 
     /**
-     * Specifies a list of filter rules that exclude specific data during your transfer.
+     * Specifies exclude filters that define the files, objects, and folders in your source location
+     * that you don't want DataSync to transfer.
      *
-     * For more information and examples, see [Filtering data transferred by
-     * DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
+     * For more information and examples, see [Specifying what DataSync transfers by using
+     * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-excludes)
-     * @param excludes Specifies a list of filter rules that exclude specific data during your
-     * transfer. 
+     * @param excludes Specifies exclude filters that define the files, objects, and folders in your
+     * source location that you don't want DataSync to transfer. 
      */
     public fun excludes(excludes: IResolvable)
 
     /**
-     * Specifies a list of filter rules that exclude specific data during your transfer.
+     * Specifies exclude filters that define the files, objects, and folders in your source location
+     * that you don't want DataSync to transfer.
      *
-     * For more information and examples, see [Filtering data transferred by
-     * DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
+     * For more information and examples, see [Specifying what DataSync transfers by using
+     * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-excludes)
-     * @param excludes Specifies a list of filter rules that exclude specific data during your
-     * transfer. 
+     * @param excludes Specifies exclude filters that define the files, objects, and folders in your
+     * source location that you don't want DataSync to transfer. 
      */
     public fun excludes(excludes: List<Any>)
 
     /**
-     * Specifies a list of filter rules that exclude specific data during your transfer.
+     * Specifies exclude filters that define the files, objects, and folders in your source location
+     * that you don't want DataSync to transfer.
      *
-     * For more information and examples, see [Filtering data transferred by
-     * DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
+     * For more information and examples, see [Specifying what DataSync transfers by using
+     * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-excludes)
-     * @param excludes Specifies a list of filter rules that exclude specific data during your
-     * transfer. 
+     * @param excludes Specifies exclude filters that define the files, objects, and folders in your
+     * source location that you don't want DataSync to transfer. 
      */
     public fun excludes(vararg excludes: Any)
 
     /**
-     * Specifies a list of filter rules that include specific data during your transfer.
+     * Specifies include filters define the files, objects, and folders in your source location that
+     * you want DataSync to transfer.
      *
-     * For more information and examples, see [Filtering data transferred by
-     * DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
+     * For more information and examples, see [Specifying what DataSync transfers by using
+     * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-includes)
-     * @param includes Specifies a list of filter rules that include specific data during your
-     * transfer. 
+     * @param includes Specifies include filters define the files, objects, and folders in your
+     * source location that you want DataSync to transfer. 
      */
     public fun includes(includes: IResolvable)
 
     /**
-     * Specifies a list of filter rules that include specific data during your transfer.
+     * Specifies include filters define the files, objects, and folders in your source location that
+     * you want DataSync to transfer.
      *
-     * For more information and examples, see [Filtering data transferred by
-     * DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
+     * For more information and examples, see [Specifying what DataSync transfers by using
+     * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-includes)
-     * @param includes Specifies a list of filter rules that include specific data during your
-     * transfer. 
+     * @param includes Specifies include filters define the files, objects, and folders in your
+     * source location that you want DataSync to transfer. 
      */
     public fun includes(includes: List<Any>)
 
     /**
-     * Specifies a list of filter rules that include specific data during your transfer.
+     * Specifies include filters define the files, objects, and folders in your source location that
+     * you want DataSync to transfer.
      *
-     * For more information and examples, see [Filtering data transferred by
-     * DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
+     * For more information and examples, see [Specifying what DataSync transfers by using
+     * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-includes)
-     * @param includes Specifies a list of filter rules that include specific data during your
-     * transfer. 
+     * @param includes Specifies include filters define the files, objects, and folders in your
+     * source location that you want DataSync to transfer. 
      */
     public fun includes(vararg includes: Any)
 
     /**
-     * The configuration of the manifest that lists the files or objects to transfer.
+     * The configuration of the manifest that lists the files or objects that you want DataSync to
+     * transfer.
      *
      * For more information, see [Specifying what DataSync transfers by using a
      * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-manifestconfig)
-     * @param manifestConfig The configuration of the manifest that lists the files or objects to
-     * transfer. 
+     * @param manifestConfig The configuration of the manifest that lists the files or objects that
+     * you want DataSync to transfer. 
      */
     public fun manifestConfig(manifestConfig: IResolvable)
 
     /**
-     * The configuration of the manifest that lists the files or objects to transfer.
+     * The configuration of the manifest that lists the files or objects that you want DataSync to
+     * transfer.
      *
      * For more information, see [Specifying what DataSync transfers by using a
      * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-manifestconfig)
-     * @param manifestConfig The configuration of the manifest that lists the files or objects to
-     * transfer. 
+     * @param manifestConfig The configuration of the manifest that lists the files or objects that
+     * you want DataSync to transfer. 
      */
     public fun manifestConfig(manifestConfig: ManifestConfigProperty)
 
     /**
-     * The configuration of the manifest that lists the files or objects to transfer.
+     * The configuration of the manifest that lists the files or objects that you want DataSync to
+     * transfer.
      *
      * For more information, see [Specifying what DataSync transfers by using a
      * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-manifestconfig)
-     * @param manifestConfig The configuration of the manifest that lists the files or objects to
-     * transfer. 
+     * @param manifestConfig The configuration of the manifest that lists the files or objects that
+     * you want DataSync to transfer. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7312f9c8ef32669d9d5371b2c1ce143f2bcca81052d450c0f5d9d7bcf9d5e543")
     public fun manifestConfig(manifestConfig: ManifestConfigProperty.Builder.() -> Unit)
 
     /**
-     * The name of a task.
-     *
-     * This value is a text reference that is used to identify the task in the console.
+     * Specifies the name of your task.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-name)
-     * @param name The name of a task. 
+     * @param name Specifies the name of your task. 
      */
     public fun name(name: String)
 
     /**
-     * Specifies the configuration options for a task. Some options include preserving file or
-     * object metadata and verifying data integrity.
-     *
-     * You can also override these options before starting an individual run of a task (also known
-     * as a *task execution* ). For more information, see
-     * [StartTaskExecution](https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html)
-     * .
+     * Specifies your task's settings, such as preserving file metadata, verifying data integrity,
+     * among other options.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-options)
-     * @param options Specifies the configuration options for a task. Some options include
-     * preserving file or object metadata and verifying data integrity. 
+     * @param options Specifies your task's settings, such as preserving file metadata, verifying
+     * data integrity, among other options. 
      */
     public fun options(options: IResolvable)
 
     /**
-     * Specifies the configuration options for a task. Some options include preserving file or
-     * object metadata and verifying data integrity.
-     *
-     * You can also override these options before starting an individual run of a task (also known
-     * as a *task execution* ). For more information, see
-     * [StartTaskExecution](https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html)
-     * .
+     * Specifies your task's settings, such as preserving file metadata, verifying data integrity,
+     * among other options.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-options)
-     * @param options Specifies the configuration options for a task. Some options include
-     * preserving file or object metadata and verifying data integrity. 
+     * @param options Specifies your task's settings, such as preserving file metadata, verifying
+     * data integrity, among other options. 
      */
     public fun options(options: OptionsProperty)
 
     /**
-     * Specifies the configuration options for a task. Some options include preserving file or
-     * object metadata and verifying data integrity.
-     *
-     * You can also override these options before starting an individual run of a task (also known
-     * as a *task execution* ). For more information, see
-     * [StartTaskExecution](https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html)
-     * .
+     * Specifies your task's settings, such as preserving file metadata, verifying data integrity,
+     * among other options.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-options)
-     * @param options Specifies the configuration options for a task. Some options include
-     * preserving file or object metadata and verifying data integrity. 
+     * @param options Specifies your task's settings, such as preserving file metadata, verifying
+     * data integrity, among other options. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("72305d8f86064d3c2e00f3c3ac30d4951c2ad22f68f689c764cd4ac5db235abc")
     public fun options(options: OptionsProperty.Builder.() -> Unit)
 
     /**
-     * Specifies a schedule used to periodically transfer files from a source to a destination
-     * location.
+     * Specifies a schedule for when you want your task to run.
      *
-     * The schedule should be specified in UTC time. For more information, see [Scheduling your
+     * For more information, see [Scheduling your
      * task](https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-schedule)
-     * @param schedule Specifies a schedule used to periodically transfer files from a source to a
-     * destination location. 
+     * @param schedule Specifies a schedule for when you want your task to run. 
      */
     public fun schedule(schedule: IResolvable)
 
     /**
-     * Specifies a schedule used to periodically transfer files from a source to a destination
-     * location.
+     * Specifies a schedule for when you want your task to run.
      *
-     * The schedule should be specified in UTC time. For more information, see [Scheduling your
+     * For more information, see [Scheduling your
      * task](https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-schedule)
-     * @param schedule Specifies a schedule used to periodically transfer files from a source to a
-     * destination location. 
+     * @param schedule Specifies a schedule for when you want your task to run. 
      */
     public fun schedule(schedule: TaskScheduleProperty)
 
     /**
-     * Specifies a schedule used to periodically transfer files from a source to a destination
-     * location.
+     * Specifies a schedule for when you want your task to run.
      *
-     * The schedule should be specified in UTC time. For more information, see [Scheduling your
+     * For more information, see [Scheduling your
      * task](https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-schedule)
-     * @param schedule Specifies a schedule used to periodically transfer files from a source to a
-     * destination location. 
+     * @param schedule Specifies a schedule for when you want your task to run. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bc570e5121b77db56ad8465e2e4b2bca206399256c4c7ca3af30554a5dfe7e3c")
     public fun schedule(schedule: TaskScheduleProperty.Builder.() -> Unit)
 
     /**
-     * The Amazon Resource Name (ARN) of the source location for the task.
+     * Specifies the ARN of your transfer's source location.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-sourcelocationarn)
-     * @param sourceLocationArn The Amazon Resource Name (ARN) of the source location for the task. 
+     * @param sourceLocationArn Specifies the ARN of your transfer's source location. 
      */
     public fun sourceLocationArn(sourceLocationArn: String)
 
     /**
-     * Specifies the tags that you want to apply to the Amazon Resource Name (ARN) representing the
-     * task.
+     * Specifies the tags that you want to apply to your task.
      *
      * *Tags* are key-value pairs that help you manage, filter, and search for your DataSync
      * resources.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-tags)
-     * @param tags Specifies the tags that you want to apply to the Amazon Resource Name (ARN)
-     * representing the task. 
+     * @param tags Specifies the tags that you want to apply to your task. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * Specifies the tags that you want to apply to the Amazon Resource Name (ARN) representing the
-     * task.
+     * Specifies the tags that you want to apply to your task.
      *
      * *Tags* are key-value pairs that help you manage, filter, and search for your DataSync
      * resources.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-tags)
-     * @param tags Specifies the tags that you want to apply to the Amazon Resource Name (ARN)
-     * representing the task. 
+     * @param tags Specifies the tags that you want to apply to your task. 
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -758,20 +737,15 @@ public open class CfnTask(
         software.amazon.awscdk.services.datasync.CfnTask.Builder.create(scope, id)
 
     /**
-     * The Amazon Resource Name (ARN) of the Amazon CloudWatch log group that is used to monitor and
-     * log events in the task.
+     * Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch log group for monitoring
+     * your task.
      *
-     * For more information about how to use CloudWatch Logs with DataSync, see [Monitoring Your
-     * Task](https://docs.aws.amazon.com/datasync/latest/userguide/monitor-datasync.html#cloudwatchlogs)
-     * in the *AWS DataSync User Guide.*
-     *
-     * For more information about these groups, see [Working with Log Groups and Log
-     * Streams](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/Working-with-log-groups-and-streams.html)
-     * in the *Amazon CloudWatch Logs User Guide* .
+     * For more information, see [Monitoring DataSync with Amazon
+     * CloudWatch](https://docs.aws.amazon.com/datasync/latest/userguide/monitor-datasync.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-cloudwatchloggrouparn)
-     * @param cloudWatchLogGroupArn The Amazon Resource Name (ARN) of the Amazon CloudWatch log
-     * group that is used to monitor and log events in the task. 
+     * @param cloudWatchLogGroupArn Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch
+     * log group for monitoring your task. 
      */
     override fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String) {
       cdkBuilder.cloudWatchLogGroupArn(cloudWatchLogGroupArn)
@@ -789,125 +763,134 @@ public open class CfnTask(
     }
 
     /**
-     * Specifies a list of filter rules that exclude specific data during your transfer.
+     * Specifies exclude filters that define the files, objects, and folders in your source location
+     * that you don't want DataSync to transfer.
      *
-     * For more information and examples, see [Filtering data transferred by
-     * DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
+     * For more information and examples, see [Specifying what DataSync transfers by using
+     * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-excludes)
-     * @param excludes Specifies a list of filter rules that exclude specific data during your
-     * transfer. 
+     * @param excludes Specifies exclude filters that define the files, objects, and folders in your
+     * source location that you don't want DataSync to transfer. 
      */
     override fun excludes(excludes: IResolvable) {
-      cdkBuilder.excludes(excludes.let(IResolvable::unwrap))
+      cdkBuilder.excludes(excludes.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Specifies a list of filter rules that exclude specific data during your transfer.
+     * Specifies exclude filters that define the files, objects, and folders in your source location
+     * that you don't want DataSync to transfer.
      *
-     * For more information and examples, see [Filtering data transferred by
-     * DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
+     * For more information and examples, see [Specifying what DataSync transfers by using
+     * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-excludes)
-     * @param excludes Specifies a list of filter rules that exclude specific data during your
-     * transfer. 
+     * @param excludes Specifies exclude filters that define the files, objects, and folders in your
+     * source location that you don't want DataSync to transfer. 
      */
     override fun excludes(excludes: List<Any>) {
       cdkBuilder.excludes(excludes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * Specifies a list of filter rules that exclude specific data during your transfer.
+     * Specifies exclude filters that define the files, objects, and folders in your source location
+     * that you don't want DataSync to transfer.
      *
-     * For more information and examples, see [Filtering data transferred by
-     * DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
+     * For more information and examples, see [Specifying what DataSync transfers by using
+     * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-excludes)
-     * @param excludes Specifies a list of filter rules that exclude specific data during your
-     * transfer. 
+     * @param excludes Specifies exclude filters that define the files, objects, and folders in your
+     * source location that you don't want DataSync to transfer. 
      */
     override fun excludes(vararg excludes: Any): Unit = excludes(excludes.toList())
 
     /**
-     * Specifies a list of filter rules that include specific data during your transfer.
+     * Specifies include filters define the files, objects, and folders in your source location that
+     * you want DataSync to transfer.
      *
-     * For more information and examples, see [Filtering data transferred by
-     * DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
+     * For more information and examples, see [Specifying what DataSync transfers by using
+     * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-includes)
-     * @param includes Specifies a list of filter rules that include specific data during your
-     * transfer. 
+     * @param includes Specifies include filters define the files, objects, and folders in your
+     * source location that you want DataSync to transfer. 
      */
     override fun includes(includes: IResolvable) {
-      cdkBuilder.includes(includes.let(IResolvable::unwrap))
+      cdkBuilder.includes(includes.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Specifies a list of filter rules that include specific data during your transfer.
+     * Specifies include filters define the files, objects, and folders in your source location that
+     * you want DataSync to transfer.
      *
-     * For more information and examples, see [Filtering data transferred by
-     * DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
+     * For more information and examples, see [Specifying what DataSync transfers by using
+     * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-includes)
-     * @param includes Specifies a list of filter rules that include specific data during your
-     * transfer. 
+     * @param includes Specifies include filters define the files, objects, and folders in your
+     * source location that you want DataSync to transfer. 
      */
     override fun includes(includes: List<Any>) {
       cdkBuilder.includes(includes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * Specifies a list of filter rules that include specific data during your transfer.
+     * Specifies include filters define the files, objects, and folders in your source location that
+     * you want DataSync to transfer.
      *
-     * For more information and examples, see [Filtering data transferred by
-     * DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
+     * For more information and examples, see [Specifying what DataSync transfers by using
+     * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-includes)
-     * @param includes Specifies a list of filter rules that include specific data during your
-     * transfer. 
+     * @param includes Specifies include filters define the files, objects, and folders in your
+     * source location that you want DataSync to transfer. 
      */
     override fun includes(vararg includes: Any): Unit = includes(includes.toList())
 
     /**
-     * The configuration of the manifest that lists the files or objects to transfer.
+     * The configuration of the manifest that lists the files or objects that you want DataSync to
+     * transfer.
      *
      * For more information, see [Specifying what DataSync transfers by using a
      * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-manifestconfig)
-     * @param manifestConfig The configuration of the manifest that lists the files or objects to
-     * transfer. 
+     * @param manifestConfig The configuration of the manifest that lists the files or objects that
+     * you want DataSync to transfer. 
      */
     override fun manifestConfig(manifestConfig: IResolvable) {
-      cdkBuilder.manifestConfig(manifestConfig.let(IResolvable::unwrap))
+      cdkBuilder.manifestConfig(manifestConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The configuration of the manifest that lists the files or objects to transfer.
+     * The configuration of the manifest that lists the files or objects that you want DataSync to
+     * transfer.
      *
      * For more information, see [Specifying what DataSync transfers by using a
      * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-manifestconfig)
-     * @param manifestConfig The configuration of the manifest that lists the files or objects to
-     * transfer. 
+     * @param manifestConfig The configuration of the manifest that lists the files or objects that
+     * you want DataSync to transfer. 
      */
     override fun manifestConfig(manifestConfig: ManifestConfigProperty) {
-      cdkBuilder.manifestConfig(manifestConfig.let(ManifestConfigProperty::unwrap))
+      cdkBuilder.manifestConfig(manifestConfig.let(ManifestConfigProperty.Companion::unwrap))
     }
 
     /**
-     * The configuration of the manifest that lists the files or objects to transfer.
+     * The configuration of the manifest that lists the files or objects that you want DataSync to
+     * transfer.
      *
      * For more information, see [Specifying what DataSync transfers by using a
      * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-manifestconfig)
-     * @param manifestConfig The configuration of the manifest that lists the files or objects to
-     * transfer. 
+     * @param manifestConfig The configuration of the manifest that lists the files or objects that
+     * you want DataSync to transfer. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7312f9c8ef32669d9d5371b2c1ce143f2bcca81052d450c0f5d9d7bcf9d5e543")
@@ -915,63 +898,46 @@ public open class CfnTask(
         manifestConfig(ManifestConfigProperty(manifestConfig))
 
     /**
-     * The name of a task.
-     *
-     * This value is a text reference that is used to identify the task in the console.
+     * Specifies the name of your task.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-name)
-     * @param name The name of a task. 
+     * @param name Specifies the name of your task. 
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
     /**
-     * Specifies the configuration options for a task. Some options include preserving file or
-     * object metadata and verifying data integrity.
-     *
-     * You can also override these options before starting an individual run of a task (also known
-     * as a *task execution* ). For more information, see
-     * [StartTaskExecution](https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html)
-     * .
+     * Specifies your task's settings, such as preserving file metadata, verifying data integrity,
+     * among other options.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-options)
-     * @param options Specifies the configuration options for a task. Some options include
-     * preserving file or object metadata and verifying data integrity. 
+     * @param options Specifies your task's settings, such as preserving file metadata, verifying
+     * data integrity, among other options. 
      */
     override fun options(options: IResolvable) {
-      cdkBuilder.options(options.let(IResolvable::unwrap))
+      cdkBuilder.options(options.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Specifies the configuration options for a task. Some options include preserving file or
-     * object metadata and verifying data integrity.
-     *
-     * You can also override these options before starting an individual run of a task (also known
-     * as a *task execution* ). For more information, see
-     * [StartTaskExecution](https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html)
-     * .
+     * Specifies your task's settings, such as preserving file metadata, verifying data integrity,
+     * among other options.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-options)
-     * @param options Specifies the configuration options for a task. Some options include
-     * preserving file or object metadata and verifying data integrity. 
+     * @param options Specifies your task's settings, such as preserving file metadata, verifying
+     * data integrity, among other options. 
      */
     override fun options(options: OptionsProperty) {
-      cdkBuilder.options(options.let(OptionsProperty::unwrap))
+      cdkBuilder.options(options.let(OptionsProperty.Companion::unwrap))
     }
 
     /**
-     * Specifies the configuration options for a task. Some options include preserving file or
-     * object metadata and verifying data integrity.
-     *
-     * You can also override these options before starting an individual run of a task (also known
-     * as a *task execution* ). For more information, see
-     * [StartTaskExecution](https://docs.aws.amazon.com/datasync/latest/userguide/API_StartTaskExecution.html)
-     * .
+     * Specifies your task's settings, such as preserving file metadata, verifying data integrity,
+     * among other options.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-options)
-     * @param options Specifies the configuration options for a task. Some options include
-     * preserving file or object metadata and verifying data integrity. 
+     * @param options Specifies your task's settings, such as preserving file metadata, verifying
+     * data integrity, among other options. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("72305d8f86064d3c2e00f3c3ac30d4951c2ad22f68f689c764cd4ac5db235abc")
@@ -979,45 +945,39 @@ public open class CfnTask(
         options(OptionsProperty(options))
 
     /**
-     * Specifies a schedule used to periodically transfer files from a source to a destination
-     * location.
+     * Specifies a schedule for when you want your task to run.
      *
-     * The schedule should be specified in UTC time. For more information, see [Scheduling your
+     * For more information, see [Scheduling your
      * task](https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-schedule)
-     * @param schedule Specifies a schedule used to periodically transfer files from a source to a
-     * destination location. 
+     * @param schedule Specifies a schedule for when you want your task to run. 
      */
     override fun schedule(schedule: IResolvable) {
-      cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
+      cdkBuilder.schedule(schedule.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Specifies a schedule used to periodically transfer files from a source to a destination
-     * location.
+     * Specifies a schedule for when you want your task to run.
      *
-     * The schedule should be specified in UTC time. For more information, see [Scheduling your
+     * For more information, see [Scheduling your
      * task](https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-schedule)
-     * @param schedule Specifies a schedule used to periodically transfer files from a source to a
-     * destination location. 
+     * @param schedule Specifies a schedule for when you want your task to run. 
      */
     override fun schedule(schedule: TaskScheduleProperty) {
-      cdkBuilder.schedule(schedule.let(TaskScheduleProperty::unwrap))
+      cdkBuilder.schedule(schedule.let(TaskScheduleProperty.Companion::unwrap))
     }
 
     /**
-     * Specifies a schedule used to periodically transfer files from a source to a destination
-     * location.
+     * Specifies a schedule for when you want your task to run.
      *
-     * The schedule should be specified in UTC time. For more information, see [Scheduling your
+     * For more information, see [Scheduling your
      * task](https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-schedule)
-     * @param schedule Specifies a schedule used to periodically transfer files from a source to a
-     * destination location. 
+     * @param schedule Specifies a schedule for when you want your task to run. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bc570e5121b77db56ad8465e2e4b2bca206399256c4c7ca3af30554a5dfe7e3c")
@@ -1025,40 +985,36 @@ public open class CfnTask(
         schedule(TaskScheduleProperty(schedule))
 
     /**
-     * The Amazon Resource Name (ARN) of the source location for the task.
+     * Specifies the ARN of your transfer's source location.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-sourcelocationarn)
-     * @param sourceLocationArn The Amazon Resource Name (ARN) of the source location for the task. 
+     * @param sourceLocationArn Specifies the ARN of your transfer's source location. 
      */
     override fun sourceLocationArn(sourceLocationArn: String) {
       cdkBuilder.sourceLocationArn(sourceLocationArn)
     }
 
     /**
-     * Specifies the tags that you want to apply to the Amazon Resource Name (ARN) representing the
-     * task.
+     * Specifies the tags that you want to apply to your task.
      *
      * *Tags* are key-value pairs that help you manage, filter, and search for your DataSync
      * resources.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-tags)
-     * @param tags Specifies the tags that you want to apply to the Amazon Resource Name (ARN)
-     * representing the task. 
+     * @param tags Specifies the tags that you want to apply to your task. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * Specifies the tags that you want to apply to the Amazon Resource Name (ARN) representing the
-     * task.
+     * Specifies the tags that you want to apply to your task.
      *
      * *Tags* are key-value pairs that help you manage, filter, and search for your DataSync
      * resources.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-tags)
-     * @param tags Specifies the tags that you want to apply to the Amazon Resource Name (ARN)
-     * representing the task. 
+     * @param tags Specifies the tags that you want to apply to your task. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -1079,7 +1035,7 @@ public open class CfnTask(
      * detailed information about your DataSync transfer. 
      */
     override fun taskReportConfig(taskReportConfig: IResolvable) {
-      cdkBuilder.taskReportConfig(taskReportConfig.let(IResolvable::unwrap))
+      cdkBuilder.taskReportConfig(taskReportConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1099,7 +1055,7 @@ public open class CfnTask(
      * detailed information about your DataSync transfer. 
      */
     override fun taskReportConfig(taskReportConfig: TaskReportConfigProperty) {
-      cdkBuilder.taskReportConfig(taskReportConfig.let(TaskReportConfigProperty::unwrap))
+      cdkBuilder.taskReportConfig(taskReportConfig.let(TaskReportConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1300,14 +1256,14 @@ public open class CfnTask(
        * @param s3 Specifies the Amazon S3 bucket where DataSync uploads your task report.
        */
       override fun s3(s3: IResolvable) {
-        cdkBuilder.s3(s3.let(IResolvable::unwrap))
+        cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3 Specifies the Amazon S3 bucket where DataSync uploads your task report.
        */
       override fun s3(s3: S3Property) {
-        cdkBuilder.s3(s3.let(S3Property::unwrap))
+        cdkBuilder.s3(s3.let(S3Property.Companion::unwrap))
       }
 
       /**
@@ -1636,7 +1592,7 @@ public open class CfnTask(
        * .
        */
       override fun source(source: IResolvable) {
-        cdkBuilder.source(source.let(IResolvable::unwrap))
+        cdkBuilder.source(source.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1652,7 +1608,7 @@ public open class CfnTask(
        * .
        */
       override fun source(source: SourceProperty) {
-        cdkBuilder.source(source.let(SourceProperty::unwrap))
+        cdkBuilder.source(source.let(SourceProperty.Companion::unwrap))
       }
 
       /**
@@ -3294,7 +3250,7 @@ public open class CfnTask(
        * data in the destination that isn't in the source.
        */
       override fun deleted(deleted: IResolvable) {
-        cdkBuilder.deleted(deleted.let(IResolvable::unwrap))
+        cdkBuilder.deleted(deleted.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3305,7 +3261,7 @@ public open class CfnTask(
        * data in the destination that isn't in the source.
        */
       override fun deleted(deleted: DeletedProperty) {
-        cdkBuilder.deleted(deleted.let(DeletedProperty::unwrap))
+        cdkBuilder.deleted(deleted.let(DeletedProperty.Companion::unwrap))
       }
 
       /**
@@ -3325,7 +3281,7 @@ public open class CfnTask(
        * that DataSync attempted to skip during your transfer.
        */
       override fun skipped(skipped: IResolvable) {
-        cdkBuilder.skipped(skipped.let(IResolvable::unwrap))
+        cdkBuilder.skipped(skipped.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3333,7 +3289,7 @@ public open class CfnTask(
        * that DataSync attempted to skip during your transfer.
        */
       override fun skipped(skipped: SkippedProperty) {
-        cdkBuilder.skipped(skipped.let(SkippedProperty::unwrap))
+        cdkBuilder.skipped(skipped.let(SkippedProperty.Companion::unwrap))
       }
 
       /**
@@ -3350,7 +3306,7 @@ public open class CfnTask(
        * that DataSync attempted to transfer.
        */
       override fun transferred(transferred: IResolvable) {
-        cdkBuilder.transferred(transferred.let(IResolvable::unwrap))
+        cdkBuilder.transferred(transferred.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3358,7 +3314,7 @@ public open class CfnTask(
        * that DataSync attempted to transfer.
        */
       override fun transferred(transferred: TransferredProperty) {
-        cdkBuilder.transferred(transferred.let(TransferredProperty::unwrap))
+        cdkBuilder.transferred(transferred.let(TransferredProperty.Companion::unwrap))
       }
 
       /**
@@ -3375,7 +3331,7 @@ public open class CfnTask(
        * that DataSync attempted to verify during your transfer.
        */
       override fun verified(verified: IResolvable) {
-        cdkBuilder.verified(verified.let(IResolvable::unwrap))
+        cdkBuilder.verified(verified.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3383,7 +3339,7 @@ public open class CfnTask(
        * that DataSync attempted to verify during your transfer.
        */
       override fun verified(verified: VerifiedProperty) {
-        cdkBuilder.verified(verified.let(VerifiedProperty::unwrap))
+        cdkBuilder.verified(verified.let(VerifiedProperty.Companion::unwrap))
       }
 
       /**
@@ -3730,14 +3686,14 @@ public open class CfnTask(
        * @param s3 Specifies the S3 bucket where you're hosting your manifest.
        */
       override fun s3(s3: IResolvable) {
-        cdkBuilder.s3(s3.let(IResolvable::unwrap))
+        cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3 Specifies the S3 bucket where you're hosting your manifest.
        */
       override fun s3(s3: ManifestConfigSourceS3Property) {
-        cdkBuilder.s3(s3.let(ManifestConfigSourceS3Property::unwrap))
+        cdkBuilder.s3(s3.let(ManifestConfigSourceS3Property.Companion::unwrap))
       }
 
       /**
@@ -3982,7 +3938,7 @@ public open class CfnTask(
        * .
        */
       override fun destination(destination: IResolvable) {
-        cdkBuilder.destination(destination.let(IResolvable::unwrap))
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3992,7 +3948,7 @@ public open class CfnTask(
        * .
        */
       override fun destination(destination: DestinationProperty) {
-        cdkBuilder.destination(destination.let(DestinationProperty::unwrap))
+        cdkBuilder.destination(destination.let(DestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -4036,7 +3992,7 @@ public open class CfnTask(
        * in your destination location.
        */
       override fun overrides(overrides: IResolvable) {
-        cdkBuilder.overrides(overrides.let(IResolvable::unwrap))
+        cdkBuilder.overrides(overrides.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4046,7 +4002,7 @@ public open class CfnTask(
        * in your destination location.
        */
       override fun overrides(overrides: OverridesProperty) {
-        cdkBuilder.overrides(overrides.let(OverridesProperty::unwrap))
+        cdkBuilder.overrides(overrides.let(OverridesProperty.Companion::unwrap))
       }
 
       /**
@@ -4159,10 +4115,9 @@ public open class CfnTask(
   }
 
   /**
-   * Specifies the schedule you want your task to use for repeated executions.
-   *
-   * For more information, see [Schedule Expressions for
-   * Rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html) .
+   * Configures your AWS DataSync task to run on a
+   * [schedule](https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html) (at a
+   * minimum interval of 1 hour).
    *
    * Example:
    *
@@ -4172,6 +4127,7 @@ public open class CfnTask(
    * import io.cloudshiftdev.awscdk.services.datasync.*;
    * TaskScheduleProperty taskScheduleProperty = TaskScheduleProperty.builder()
    * .scheduleExpression("scheduleExpression")
+   * .status("status")
    * .build();
    * ```
    *
@@ -4179,12 +4135,30 @@ public open class CfnTask(
    */
   public interface TaskScheduleProperty {
     /**
-     * A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a
-     * source to a destination location.
+     * Specifies your task schedule by using a cron expression in UTC time.
+     *
+     * For information about cron expression syntax, see the [*Amazon EventBridge User
+     * Guide*](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cron-expressions.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-taskschedule.html#cfn-datasync-task-taskschedule-scheduleexpression)
      */
-    public fun scheduleExpression(): String
+    public fun scheduleExpression(): String? = unwrap(this).getScheduleExpression()
+
+    /**
+     * Specifies whether to enable or disable your task schedule.
+     *
+     * Your schedule is enabled by default, but there can be situations where you need to disable
+     * it. For example, you might need to perform maintenance on a storage system before you can begin
+     * a recurring DataSync transfer.
+     *
+     * DataSync might disable your schedule automatically if your task fails repeatedly with the
+     * same error. For more information, see the [*DataSync User
+     * Guide*](https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html#pause-task-schedule)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-taskschedule.html#cfn-datasync-task-taskschedule-status)
+     */
+    public fun status(): String? = unwrap(this).getStatus()
 
     /**
      * A builder for [TaskScheduleProperty]
@@ -4192,10 +4166,25 @@ public open class CfnTask(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param scheduleExpression A cron expression that specifies when AWS DataSync initiates a
-       * scheduled transfer from a source to a destination location. 
+       * @param scheduleExpression Specifies your task schedule by using a cron expression in UTC
+       * time.
+       * For information about cron expression syntax, see the [*Amazon EventBridge User
+       * Guide*](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cron-expressions.html) .
        */
       public fun scheduleExpression(scheduleExpression: String)
+
+      /**
+       * @param status Specifies whether to enable or disable your task schedule.
+       * Your schedule is enabled by default, but there can be situations where you need to disable
+       * it. For example, you might need to perform maintenance on a storage system before you can
+       * begin a recurring DataSync transfer.
+       *
+       * DataSync might disable your schedule automatically if your task fails repeatedly with the
+       * same error. For more information, see the [*DataSync User
+       * Guide*](https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html#pause-task-schedule)
+       * .
+       */
+      public fun status(status: String)
     }
 
     private class BuilderImpl : Builder {
@@ -4204,11 +4193,28 @@ public open class CfnTask(
           software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty.builder()
 
       /**
-       * @param scheduleExpression A cron expression that specifies when AWS DataSync initiates a
-       * scheduled transfer from a source to a destination location. 
+       * @param scheduleExpression Specifies your task schedule by using a cron expression in UTC
+       * time.
+       * For information about cron expression syntax, see the [*Amazon EventBridge User
+       * Guide*](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cron-expressions.html) .
        */
       override fun scheduleExpression(scheduleExpression: String) {
         cdkBuilder.scheduleExpression(scheduleExpression)
+      }
+
+      /**
+       * @param status Specifies whether to enable or disable your task schedule.
+       * Your schedule is enabled by default, but there can be situations where you need to disable
+       * it. For example, you might need to perform maintenance on a storage system before you can
+       * begin a recurring DataSync transfer.
+       *
+       * DataSync might disable your schedule automatically if your task fails repeatedly with the
+       * same error. For more information, see the [*DataSync User
+       * Guide*](https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html#pause-task-schedule)
+       * .
+       */
+      override fun status(status: String) {
+        cdkBuilder.status(status)
       }
 
       public fun build(): software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty =
@@ -4219,12 +4225,30 @@ public open class CfnTask(
       cdkObject: software.amazon.awscdk.services.datasync.CfnTask.TaskScheduleProperty,
     ) : CdkObject(cdkObject), TaskScheduleProperty {
       /**
-       * A cron expression that specifies when AWS DataSync initiates a scheduled transfer from a
-       * source to a destination location.
+       * Specifies your task schedule by using a cron expression in UTC time.
+       *
+       * For information about cron expression syntax, see the [*Amazon EventBridge User
+       * Guide*](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-cron-expressions.html) .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-taskschedule.html#cfn-datasync-task-taskschedule-scheduleexpression)
        */
-      override fun scheduleExpression(): String = unwrap(this).getScheduleExpression()
+      override fun scheduleExpression(): String? = unwrap(this).getScheduleExpression()
+
+      /**
+       * Specifies whether to enable or disable your task schedule.
+       *
+       * Your schedule is enabled by default, but there can be situations where you need to disable
+       * it. For example, you might need to perform maintenance on a storage system before you can
+       * begin a recurring DataSync transfer.
+       *
+       * DataSync might disable your schedule automatically if your task fails repeatedly with the
+       * same error. For more information, see the [*DataSync User
+       * Guide*](https://docs.aws.amazon.com/datasync/latest/userguide/task-scheduling.html#pause-task-schedule)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-taskschedule.html#cfn-datasync-task-taskschedule-status)
+       */
+      override fun status(): String? = unwrap(this).getStatus()
     }
 
     public companion object {

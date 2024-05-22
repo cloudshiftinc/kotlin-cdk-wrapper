@@ -73,8 +73,8 @@ public open class CfnImageBuilder(
     id: String,
     props: CfnImageBuilderProps,
   ) :
-      this(software.amazon.awscdk.services.appstream.CfnImageBuilder(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnImageBuilderProps::unwrap))
+      this(software.amazon.awscdk.services.appstream.CfnImageBuilder(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnImageBuilderProps.Companion::unwrap))
   )
 
   public constructor(
@@ -93,7 +93,7 @@ public open class CfnImageBuilder(
    * The list of virtual private cloud (VPC) interface endpoint objects.
    */
   public open fun accessEndpoints(`value`: IResolvable) {
-    unwrap(this).setAccessEndpoints(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccessEndpoints(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -162,7 +162,7 @@ public open class CfnImageBuilder(
    * Microsoft Active Directory domain.
    */
   public open fun domainJoinInfo(`value`: IResolvable) {
-    unwrap(this).setDomainJoinInfo(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDomainJoinInfo(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -170,7 +170,7 @@ public open class CfnImageBuilder(
    * Microsoft Active Directory domain.
    */
   public open fun domainJoinInfo(`value`: DomainJoinInfoProperty) {
-    unwrap(this).setDomainJoinInfo(`value`.let(DomainJoinInfoProperty::unwrap))
+    unwrap(this).setDomainJoinInfo(`value`.let(DomainJoinInfoProperty.Companion::unwrap))
   }
 
   /**
@@ -199,7 +199,7 @@ public open class CfnImageBuilder(
    * Enables or disables default internet access for the image builder.
    */
   public open fun enableDefaultInternetAccess(`value`: IResolvable) {
-    unwrap(this).setEnableDefaultInternetAccess(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableDefaultInternetAccess(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -244,7 +244,7 @@ public open class CfnImageBuilder(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -290,7 +290,7 @@ public open class CfnImageBuilder(
    * An array of key-value pairs.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -307,14 +307,14 @@ public open class CfnImageBuilder(
    * The VPC configuration for the image builder.
    */
   public open fun vpcConfig(`value`: IResolvable) {
-    unwrap(this).setVpcConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The VPC configuration for the image builder.
    */
   public open fun vpcConfig(`value`: VpcConfigProperty) {
-    unwrap(this).setVpcConfig(`value`.let(VpcConfigProperty::unwrap))
+    unwrap(this).setVpcConfig(`value`.let(VpcConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -587,7 +587,7 @@ public open class CfnImageBuilder(
      * @param accessEndpoints The list of virtual private cloud (VPC) interface endpoint objects. 
      */
     override fun accessEndpoints(accessEndpoints: IResolvable) {
-      cdkBuilder.accessEndpoints(accessEndpoints.let(IResolvable::unwrap))
+      cdkBuilder.accessEndpoints(accessEndpoints.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -654,7 +654,7 @@ public open class CfnImageBuilder(
      * the image builder to a Microsoft Active Directory domain. 
      */
     override fun domainJoinInfo(domainJoinInfo: IResolvable) {
-      cdkBuilder.domainJoinInfo(domainJoinInfo.let(IResolvable::unwrap))
+      cdkBuilder.domainJoinInfo(domainJoinInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -666,7 +666,7 @@ public open class CfnImageBuilder(
      * the image builder to a Microsoft Active Directory domain. 
      */
     override fun domainJoinInfo(domainJoinInfo: DomainJoinInfoProperty) {
-      cdkBuilder.domainJoinInfo(domainJoinInfo.let(DomainJoinInfoProperty::unwrap))
+      cdkBuilder.domainJoinInfo(domainJoinInfo.let(DomainJoinInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -701,7 +701,7 @@ public open class CfnImageBuilder(
      * builder. 
      */
     override fun enableDefaultInternetAccess(enableDefaultInternetAccess: IResolvable) {
-      cdkBuilder.enableDefaultInternetAccess(enableDefaultInternetAccess.let(IResolvable::unwrap))
+      cdkBuilder.enableDefaultInternetAccess(enableDefaultInternetAccess.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -807,7 +807,7 @@ public open class CfnImageBuilder(
      * @param tags An array of key-value pairs. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -827,7 +827,7 @@ public open class CfnImageBuilder(
      * @param vpcConfig The VPC configuration for the image builder. 
      */
     override fun vpcConfig(vpcConfig: IResolvable) {
-      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -839,7 +839,7 @@ public open class CfnImageBuilder(
      * @param vpcConfig The VPC configuration for the image builder. 
      */
     override fun vpcConfig(vpcConfig: VpcConfigProperty) {
-      cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty.Companion::unwrap))
     }
 
     /**

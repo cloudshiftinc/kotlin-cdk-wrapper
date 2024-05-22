@@ -51,7 +51,7 @@ public open class CfnGlobalCluster(
   cdkObject: software.amazon.awscdk.services.rds.CfnGlobalCluster,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.rds.CfnGlobalCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.rds.CfnGlobalCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -60,8 +60,8 @@ public open class CfnGlobalCluster(
     id: String,
     props: CfnGlobalClusterProps,
   ) :
-      this(software.amazon.awscdk.services.rds.CfnGlobalCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGlobalClusterProps::unwrap))
+      this(software.amazon.awscdk.services.rds.CfnGlobalCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGlobalClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -87,7 +87,7 @@ public open class CfnGlobalCluster(
    * Specifies whether to enable deletion protection for the new global database cluster.
    */
   public open fun deletionProtection(`value`: IResolvable) {
-    unwrap(this).setDeletionProtection(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeletionProtection(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -132,7 +132,7 @@ public open class CfnGlobalCluster(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -163,7 +163,7 @@ public open class CfnGlobalCluster(
    * Specifies whether to enable storage encryption for the new global database cluster.
    */
   public open fun storageEncrypted(`value`: IResolvable) {
-    unwrap(this).setStorageEncrypted(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStorageEncrypted(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -307,7 +307,7 @@ public open class CfnGlobalCluster(
      * database cluster. 
      */
     override fun deletionProtection(deletionProtection: IResolvable) {
-      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable::unwrap))
+      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -402,7 +402,7 @@ public open class CfnGlobalCluster(
      * database cluster. 
      */
     override fun storageEncrypted(storageEncrypted: IResolvable) {
-      cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable::unwrap))
+      cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.CfnGlobalCluster = cdkBuilder.build()

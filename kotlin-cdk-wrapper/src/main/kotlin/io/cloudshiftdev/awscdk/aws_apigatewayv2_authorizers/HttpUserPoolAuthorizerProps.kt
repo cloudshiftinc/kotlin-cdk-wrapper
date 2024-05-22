@@ -127,7 +127,7 @@ public interface HttpUserPoolAuthorizerProps {
      * the user pool.
      */
     override fun userPoolClients(userPoolClients: List<IUserPoolClient>) {
-      cdkBuilder.userPoolClients(userPoolClients.map(IUserPoolClient::unwrap))
+      cdkBuilder.userPoolClients(userPoolClients.map(IUserPoolClient.Companion::unwrap))
     }
 
     /**

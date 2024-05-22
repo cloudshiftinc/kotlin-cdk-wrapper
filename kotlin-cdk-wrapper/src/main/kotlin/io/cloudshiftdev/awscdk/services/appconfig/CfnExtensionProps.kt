@@ -205,7 +205,7 @@ public interface CfnExtensionProps {
      * parameters are included in the Lambda request object.
      */
     override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -225,7 +225,7 @@ public interface CfnExtensionProps {
      * you define.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

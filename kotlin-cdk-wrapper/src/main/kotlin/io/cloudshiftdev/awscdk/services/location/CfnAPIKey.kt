@@ -62,8 +62,8 @@ public open class CfnAPIKey(
     id: String,
     props: CfnAPIKeyProps,
   ) :
-      this(software.amazon.awscdk.services.location.CfnAPIKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAPIKeyProps::unwrap))
+      this(software.amazon.awscdk.services.location.CfnAPIKey(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAPIKeyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -147,7 +147,7 @@ public open class CfnAPIKey(
    * ForceDelete bypasses an API key's expiry conditions and deletes the key.
    */
   public open fun forceDelete(`value`: IResolvable) {
-    unwrap(this).setForceDelete(`value`.let(IResolvable::unwrap))
+    unwrap(this).setForceDelete(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -166,7 +166,7 @@ public open class CfnAPIKey(
    * The boolean flag to be included for updating `ExpireTime` or Restrictions details.
    */
   public open fun forceUpdate(`value`: IResolvable) {
-    unwrap(this).setForceUpdate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setForceUpdate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -175,7 +175,7 @@ public open class CfnAPIKey(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -206,7 +206,7 @@ public open class CfnAPIKey(
    * Whether the API key should expire.
    */
   public open fun noExpiry(`value`: IResolvable) {
-    unwrap(this).setNoExpiry(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNoExpiry(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -218,14 +218,14 @@ public open class CfnAPIKey(
    * The API key restrictions for the API key resource.
    */
   public open fun restrictions(`value`: IResolvable) {
-    unwrap(this).setRestrictions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRestrictions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The API key restrictions for the API key resource.
    */
   public open fun restrictions(`value`: ApiKeyRestrictionsProperty) {
-    unwrap(this).setRestrictions(`value`.let(ApiKeyRestrictionsProperty::unwrap))
+    unwrap(this).setRestrictions(`value`.let(ApiKeyRestrictionsProperty.Companion::unwrap))
   }
 
   /**
@@ -245,7 +245,7 @@ public open class CfnAPIKey(
    * Applies one or more tags to the map resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -488,7 +488,7 @@ public open class CfnAPIKey(
      * @param forceDelete ForceDelete bypasses an API key's expiry conditions and deletes the key. 
      */
     override fun forceDelete(forceDelete: IResolvable) {
-      cdkBuilder.forceDelete(forceDelete.let(IResolvable::unwrap))
+      cdkBuilder.forceDelete(forceDelete.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -516,7 +516,7 @@ public open class CfnAPIKey(
      * details. 
      */
     override fun forceUpdate(forceUpdate: IResolvable) {
-      cdkBuilder.forceUpdate(forceUpdate.let(IResolvable::unwrap))
+      cdkBuilder.forceUpdate(forceUpdate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -557,7 +557,7 @@ public open class CfnAPIKey(
      * @param noExpiry Whether the API key should expire. 
      */
     override fun noExpiry(noExpiry: IResolvable) {
-      cdkBuilder.noExpiry(noExpiry.let(IResolvable::unwrap))
+      cdkBuilder.noExpiry(noExpiry.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -567,7 +567,7 @@ public open class CfnAPIKey(
      * @param restrictions The API key restrictions for the API key resource. 
      */
     override fun restrictions(restrictions: IResolvable) {
-      cdkBuilder.restrictions(restrictions.let(IResolvable::unwrap))
+      cdkBuilder.restrictions(restrictions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -577,7 +577,7 @@ public open class CfnAPIKey(
      * @param restrictions The API key restrictions for the API key resource. 
      */
     override fun restrictions(restrictions: ApiKeyRestrictionsProperty) {
-      cdkBuilder.restrictions(restrictions.let(ApiKeyRestrictionsProperty::unwrap))
+      cdkBuilder.restrictions(restrictions.let(ApiKeyRestrictionsProperty.Companion::unwrap))
     }
 
     /**
@@ -601,7 +601,7 @@ public open class CfnAPIKey(
      * @param tags Applies one or more tags to the map resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

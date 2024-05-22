@@ -153,7 +153,7 @@ public interface CfnAgentAliasProps {
      * @param routingConfiguration Contains details about the routing configuration of the alias.
      */
     override fun routingConfiguration(routingConfiguration: IResolvable) {
-      cdkBuilder.routingConfiguration(routingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.routingConfiguration(routingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**

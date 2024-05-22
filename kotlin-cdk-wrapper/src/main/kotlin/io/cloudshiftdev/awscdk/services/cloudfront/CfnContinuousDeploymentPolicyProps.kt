@@ -106,7 +106,7 @@ public interface CfnContinuousDeploymentPolicyProps {
      * deployment policy. 
      */
     override fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: IResolvable) {
-      cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig.let(IResolvable::unwrap))
+      cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -115,7 +115,7 @@ public interface CfnContinuousDeploymentPolicyProps {
      */
     override
         fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty) {
-      cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig.let(CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty::unwrap))
+      cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig.let(CfnContinuousDeploymentPolicy.ContinuousDeploymentPolicyConfigProperty.Companion::unwrap))
     }
 
     /**

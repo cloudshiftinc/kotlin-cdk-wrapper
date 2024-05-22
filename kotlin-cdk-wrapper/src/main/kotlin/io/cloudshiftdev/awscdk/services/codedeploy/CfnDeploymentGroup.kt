@@ -177,8 +177,8 @@ public open class CfnDeploymentGroup(
     id: String,
     props: CfnDeploymentGroupProps,
   ) :
-      this(software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDeploymentGroupProps::unwrap))
+      this(software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDeploymentGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -197,14 +197,14 @@ public open class CfnDeploymentGroup(
    * Information about the Amazon CloudWatch alarms that are associated with the deployment group.
    */
   public open fun alarmConfiguration(`value`: IResolvable) {
-    unwrap(this).setAlarmConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAlarmConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information about the Amazon CloudWatch alarms that are associated with the deployment group.
    */
   public open fun alarmConfiguration(`value`: AlarmConfigurationProperty) {
-    unwrap(this).setAlarmConfiguration(`value`.let(AlarmConfigurationProperty::unwrap))
+    unwrap(this).setAlarmConfiguration(`value`.let(AlarmConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -243,7 +243,7 @@ public open class CfnDeploymentGroup(
    * group.
    */
   public open fun autoRollbackConfiguration(`value`: IResolvable) {
-    unwrap(this).setAutoRollbackConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoRollbackConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -251,7 +251,7 @@ public open class CfnDeploymentGroup(
    * group.
    */
   public open fun autoRollbackConfiguration(`value`: AutoRollbackConfigurationProperty) {
-    unwrap(this).setAutoRollbackConfiguration(`value`.let(AutoRollbackConfigurationProperty::unwrap))
+    unwrap(this).setAutoRollbackConfiguration(`value`.let(AutoRollbackConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -296,7 +296,7 @@ public open class CfnDeploymentGroup(
    * Information about blue/green deployment options for a deployment group.
    */
   public open fun blueGreenDeploymentConfiguration(`value`: IResolvable) {
-    unwrap(this).setBlueGreenDeploymentConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBlueGreenDeploymentConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -304,7 +304,7 @@ public open class CfnDeploymentGroup(
    */
   public open
       fun blueGreenDeploymentConfiguration(`value`: BlueGreenDeploymentConfigurationProperty) {
-    unwrap(this).setBlueGreenDeploymentConfiguration(`value`.let(BlueGreenDeploymentConfigurationProperty::unwrap))
+    unwrap(this).setBlueGreenDeploymentConfiguration(`value`.let(BlueGreenDeploymentConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -325,14 +325,14 @@ public open class CfnDeploymentGroup(
    * The application revision to deploy to this deployment group.
    */
   public open fun deployment(`value`: IResolvable) {
-    unwrap(this).setDeployment(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeployment(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The application revision to deploy to this deployment group.
    */
   public open fun deployment(`value`: DeploymentProperty) {
-    unwrap(this).setDeployment(`value`.let(DeploymentProperty::unwrap))
+    unwrap(this).setDeployment(`value`.let(DeploymentProperty.Companion::unwrap))
   }
 
   /**
@@ -378,7 +378,7 @@ public open class CfnDeploymentGroup(
    * behind a load balancer.
    */
   public open fun deploymentStyle(`value`: IResolvable) {
-    unwrap(this).setDeploymentStyle(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeploymentStyle(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -386,7 +386,7 @@ public open class CfnDeploymentGroup(
    * behind a load balancer.
    */
   public open fun deploymentStyle(`value`: DeploymentStyleProperty) {
-    unwrap(this).setDeploymentStyle(`value`.let(DeploymentStyleProperty::unwrap))
+    unwrap(this).setDeploymentStyle(`value`.let(DeploymentStyleProperty.Companion::unwrap))
   }
 
   /**
@@ -409,7 +409,7 @@ public open class CfnDeploymentGroup(
    * in the deployment group.
    */
   public open fun ec2TagFilters(`value`: IResolvable) {
-    unwrap(this).setEc2TagFilters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEc2TagFilters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -435,14 +435,14 @@ public open class CfnDeploymentGroup(
    * Information about groups of tags applied to Amazon EC2 instances.
    */
   public open fun ec2TagSet(`value`: IResolvable) {
-    unwrap(this).setEc2TagSet(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEc2TagSet(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information about groups of tags applied to Amazon EC2 instances.
    */
   public open fun ec2TagSet(`value`: EC2TagSetProperty) {
-    unwrap(this).setEc2TagSet(`value`.let(EC2TagSetProperty::unwrap))
+    unwrap(this).setEc2TagSet(`value`.let(EC2TagSetProperty.Companion::unwrap))
   }
 
   /**
@@ -462,7 +462,7 @@ public open class CfnDeploymentGroup(
    * The target Amazon ECS services in the deployment group.
    */
   public open fun ecsServices(`value`: IResolvable) {
-    unwrap(this).setEcsServices(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEcsServices(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -483,7 +483,7 @@ public open class CfnDeploymentGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -495,14 +495,14 @@ public open class CfnDeploymentGroup(
    * Information about the load balancer to use in a deployment.
    */
   public open fun loadBalancerInfo(`value`: IResolvable) {
-    unwrap(this).setLoadBalancerInfo(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoadBalancerInfo(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information about the load balancer to use in a deployment.
    */
   public open fun loadBalancerInfo(`value`: LoadBalancerInfoProperty) {
-    unwrap(this).setLoadBalancerInfo(`value`.let(LoadBalancerInfoProperty::unwrap))
+    unwrap(this).setLoadBalancerInfo(`value`.let(LoadBalancerInfoProperty.Companion::unwrap))
   }
 
   /**
@@ -525,7 +525,7 @@ public open class CfnDeploymentGroup(
    * in the deployment group.
    */
   public open fun onPremisesInstanceTagFilters(`value`: IResolvable) {
-    unwrap(this).setOnPremisesInstanceTagFilters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOnPremisesInstanceTagFilters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -552,14 +552,14 @@ public open class CfnDeploymentGroup(
    * Information about groups of tags applied to on-premises instances.
    */
   public open fun onPremisesTagSet(`value`: IResolvable) {
-    unwrap(this).setOnPremisesTagSet(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOnPremisesTagSet(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information about groups of tags applied to on-premises instances.
    */
   public open fun onPremisesTagSet(`value`: OnPremisesTagSetProperty) {
-    unwrap(this).setOnPremisesTagSet(`value`.let(OnPremisesTagSetProperty::unwrap))
+    unwrap(this).setOnPremisesTagSet(`value`.let(OnPremisesTagSetProperty.Companion::unwrap))
   }
 
   /**
@@ -615,7 +615,7 @@ public open class CfnDeploymentGroup(
    * them.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -643,7 +643,7 @@ public open class CfnDeploymentGroup(
    * hook into an Auto Scaling group.
    */
   public open fun terminationHookEnabled(`value`: IResolvable) {
-    unwrap(this).setTerminationHookEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTerminationHookEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -655,7 +655,7 @@ public open class CfnDeploymentGroup(
    * Information about triggers associated with the deployment group.
    */
   public open fun triggerConfigurations(`value`: IResolvable) {
-    unwrap(this).setTriggerConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTriggerConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -1334,7 +1334,7 @@ public open class CfnDeploymentGroup(
      * with the deployment group. 
      */
     override fun alarmConfiguration(alarmConfiguration: IResolvable) {
-      cdkBuilder.alarmConfiguration(alarmConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.alarmConfiguration(alarmConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1345,7 +1345,7 @@ public open class CfnDeploymentGroup(
      * with the deployment group. 
      */
     override fun alarmConfiguration(alarmConfiguration: AlarmConfigurationProperty) {
-      cdkBuilder.alarmConfiguration(alarmConfiguration.let(AlarmConfigurationProperty::unwrap))
+      cdkBuilder.alarmConfiguration(alarmConfiguration.let(AlarmConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1383,7 +1383,7 @@ public open class CfnDeploymentGroup(
      * is associated with the deployment group. 
      */
     override fun autoRollbackConfiguration(autoRollbackConfiguration: IResolvable) {
-      cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1398,7 +1398,7 @@ public open class CfnDeploymentGroup(
      */
     override
         fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigurationProperty) {
-      cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(AutoRollbackConfigurationProperty::unwrap))
+      cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(AutoRollbackConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1453,7 +1453,7 @@ public open class CfnDeploymentGroup(
      * deployment group. 
      */
     override fun blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration: IResolvable) {
-      cdkBuilder.blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1465,7 +1465,7 @@ public open class CfnDeploymentGroup(
      */
     override
         fun blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration: BlueGreenDeploymentConfigurationProperty) {
-      cdkBuilder.blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration.let(BlueGreenDeploymentConfigurationProperty::unwrap))
+      cdkBuilder.blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration.let(BlueGreenDeploymentConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1493,7 +1493,7 @@ public open class CfnDeploymentGroup(
      * @param deployment The application revision to deploy to this deployment group. 
      */
     override fun deployment(deployment: IResolvable) {
-      cdkBuilder.deployment(deployment.let(IResolvable::unwrap))
+      cdkBuilder.deployment(deployment.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1507,7 +1507,7 @@ public open class CfnDeploymentGroup(
      * @param deployment The application revision to deploy to this deployment group. 
      */
     override fun deployment(deployment: DeploymentProperty) {
-      cdkBuilder.deployment(deployment.let(DeploymentProperty::unwrap))
+      cdkBuilder.deployment(deployment.let(DeploymentProperty.Companion::unwrap))
     }
 
     /**
@@ -1584,7 +1584,7 @@ public open class CfnDeploymentGroup(
      * route deployment traffic behind a load balancer. 
      */
     override fun deploymentStyle(deploymentStyle: IResolvable) {
-      cdkBuilder.deploymentStyle(deploymentStyle.let(IResolvable::unwrap))
+      cdkBuilder.deploymentStyle(deploymentStyle.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1608,7 +1608,7 @@ public open class CfnDeploymentGroup(
      * route deployment traffic behind a load balancer. 
      */
     override fun deploymentStyle(deploymentStyle: DeploymentStyleProperty) {
-      cdkBuilder.deploymentStyle(deploymentStyle.let(DeploymentStyleProperty::unwrap))
+      cdkBuilder.deploymentStyle(deploymentStyle.let(DeploymentStyleProperty.Companion::unwrap))
     }
 
     /**
@@ -1650,7 +1650,7 @@ public open class CfnDeploymentGroup(
      * that you want to include in the deployment group. 
      */
     override fun ec2TagFilters(ec2TagFilters: IResolvable) {
-      cdkBuilder.ec2TagFilters(ec2TagFilters.let(IResolvable::unwrap))
+      cdkBuilder.ec2TagFilters(ec2TagFilters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1696,7 +1696,7 @@ public open class CfnDeploymentGroup(
      * @param ec2TagSet Information about groups of tags applied to Amazon EC2 instances. 
      */
     override fun ec2TagSet(ec2TagSet: IResolvable) {
-      cdkBuilder.ec2TagSet(ec2TagSet.let(IResolvable::unwrap))
+      cdkBuilder.ec2TagSet(ec2TagSet.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1709,7 +1709,7 @@ public open class CfnDeploymentGroup(
      * @param ec2TagSet Information about groups of tags applied to Amazon EC2 instances. 
      */
     override fun ec2TagSet(ec2TagSet: EC2TagSetProperty) {
-      cdkBuilder.ec2TagSet(ec2TagSet.let(EC2TagSetProperty::unwrap))
+      cdkBuilder.ec2TagSet(ec2TagSet.let(EC2TagSetProperty.Companion::unwrap))
     }
 
     /**
@@ -1737,7 +1737,7 @@ public open class CfnDeploymentGroup(
      * @param ecsServices The target Amazon ECS services in the deployment group. 
      */
     override fun ecsServices(ecsServices: IResolvable) {
-      cdkBuilder.ecsServices(ecsServices.let(IResolvable::unwrap))
+      cdkBuilder.ecsServices(ecsServices.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1777,7 +1777,7 @@ public open class CfnDeploymentGroup(
      * @param loadBalancerInfo Information about the load balancer to use in a deployment. 
      */
     override fun loadBalancerInfo(loadBalancerInfo: IResolvable) {
-      cdkBuilder.loadBalancerInfo(loadBalancerInfo.let(IResolvable::unwrap))
+      cdkBuilder.loadBalancerInfo(loadBalancerInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1791,7 +1791,7 @@ public open class CfnDeploymentGroup(
      * @param loadBalancerInfo Information about the load balancer to use in a deployment. 
      */
     override fun loadBalancerInfo(loadBalancerInfo: LoadBalancerInfoProperty) {
-      cdkBuilder.loadBalancerInfo(loadBalancerInfo.let(LoadBalancerInfoProperty::unwrap))
+      cdkBuilder.loadBalancerInfo(loadBalancerInfo.let(LoadBalancerInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -1826,7 +1826,7 @@ public open class CfnDeploymentGroup(
      * on-premises instances that you want to include in the deployment group. 
      */
     override fun onPremisesInstanceTagFilters(onPremisesInstanceTagFilters: IResolvable) {
-      cdkBuilder.onPremisesInstanceTagFilters(onPremisesInstanceTagFilters.let(IResolvable::unwrap))
+      cdkBuilder.onPremisesInstanceTagFilters(onPremisesInstanceTagFilters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1879,7 +1879,7 @@ public open class CfnDeploymentGroup(
      * @param onPremisesTagSet Information about groups of tags applied to on-premises instances. 
      */
     override fun onPremisesTagSet(onPremisesTagSet: IResolvable) {
-      cdkBuilder.onPremisesTagSet(onPremisesTagSet.let(IResolvable::unwrap))
+      cdkBuilder.onPremisesTagSet(onPremisesTagSet.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1893,7 +1893,7 @@ public open class CfnDeploymentGroup(
      * @param onPremisesTagSet Information about groups of tags applied to on-premises instances. 
      */
     override fun onPremisesTagSet(onPremisesTagSet: OnPremisesTagSetProperty) {
-      cdkBuilder.onPremisesTagSet(onPremisesTagSet.let(OnPremisesTagSetProperty::unwrap))
+      cdkBuilder.onPremisesTagSet(onPremisesTagSet.let(OnPremisesTagSetProperty.Companion::unwrap))
     }
 
     /**
@@ -1964,7 +1964,7 @@ public open class CfnDeploymentGroup(
      * and categorize them. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -2008,7 +2008,7 @@ public open class CfnDeploymentGroup(
      * CodeDeploy install a termination hook into an Auto Scaling group. 
      */
     override fun terminationHookEnabled(terminationHookEnabled: IResolvable) {
-      cdkBuilder.terminationHookEnabled(terminationHookEnabled.let(IResolvable::unwrap))
+      cdkBuilder.terminationHookEnabled(terminationHookEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2021,7 +2021,7 @@ public open class CfnDeploymentGroup(
      * 
      */
     override fun triggerConfigurations(triggerConfigurations: IResolvable) {
-      cdkBuilder.triggerConfigurations(triggerConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.triggerConfigurations(triggerConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2200,7 +2200,7 @@ public open class CfnDeploymentGroup(
        * A maximum of 10 alarms can be added.
        */
       override fun alarms(alarms: IResolvable) {
-        cdkBuilder.alarms(alarms.let(IResolvable::unwrap))
+        cdkBuilder.alarms(alarms.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2228,7 +2228,7 @@ public open class CfnDeploymentGroup(
        * @param enabled Indicates whether the alarm configuration is enabled.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2256,7 +2256,7 @@ public open class CfnDeploymentGroup(
        * CloudWatch .
        */
       override fun ignorePollAlarmFailure(ignorePollAlarmFailure: IResolvable) {
-        cdkBuilder.ignorePollAlarmFailure(ignorePollAlarmFailure.let(IResolvable::unwrap))
+        cdkBuilder.ignorePollAlarmFailure(ignorePollAlarmFailure.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2507,7 +2507,7 @@ public open class CfnDeploymentGroup(
        * enabled.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2707,7 +2707,7 @@ public open class CfnDeploymentGroup(
        * instances are ready to receive traffic in a blue/green deployment.
        */
       override fun deploymentReadyOption(deploymentReadyOption: IResolvable) {
-        cdkBuilder.deploymentReadyOption(deploymentReadyOption.let(IResolvable::unwrap))
+        cdkBuilder.deploymentReadyOption(deploymentReadyOption.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2715,7 +2715,7 @@ public open class CfnDeploymentGroup(
        * instances are ready to receive traffic in a blue/green deployment.
        */
       override fun deploymentReadyOption(deploymentReadyOption: DeploymentReadyOptionProperty) {
-        cdkBuilder.deploymentReadyOption(deploymentReadyOption.let(DeploymentReadyOptionProperty::unwrap))
+        cdkBuilder.deploymentReadyOption(deploymentReadyOption.let(DeploymentReadyOptionProperty.Companion::unwrap))
       }
 
       /**
@@ -2733,7 +2733,7 @@ public open class CfnDeploymentGroup(
        * replacement environment in a blue/green deployment.
        */
       override fun greenFleetProvisioningOption(greenFleetProvisioningOption: IResolvable) {
-        cdkBuilder.greenFleetProvisioningOption(greenFleetProvisioningOption.let(IResolvable::unwrap))
+        cdkBuilder.greenFleetProvisioningOption(greenFleetProvisioningOption.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2742,7 +2742,7 @@ public open class CfnDeploymentGroup(
        */
       override
           fun greenFleetProvisioningOption(greenFleetProvisioningOption: GreenFleetProvisioningOptionProperty) {
-        cdkBuilder.greenFleetProvisioningOption(greenFleetProvisioningOption.let(GreenFleetProvisioningOptionProperty::unwrap))
+        cdkBuilder.greenFleetProvisioningOption(greenFleetProvisioningOption.let(GreenFleetProvisioningOptionProperty.Companion::unwrap))
       }
 
       /**
@@ -2762,7 +2762,7 @@ public open class CfnDeploymentGroup(
        */
       override
           fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: IResolvable) {
-        cdkBuilder.terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess.let(IResolvable::unwrap))
+        cdkBuilder.terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2771,7 +2771,7 @@ public open class CfnDeploymentGroup(
        */
       override
           fun terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess: BlueInstanceTerminationOptionProperty) {
-        cdkBuilder.terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess.let(BlueInstanceTerminationOptionProperty::unwrap))
+        cdkBuilder.terminateBlueInstancesOnDeploymentSuccess(terminateBlueInstancesOnDeploymentSuccess.let(BlueInstanceTerminationOptionProperty.Companion::unwrap))
       }
 
       /**
@@ -3232,7 +3232,7 @@ public open class CfnDeploymentGroup(
        * ignored.
        */
       override fun ignoreApplicationStopFailures(ignoreApplicationStopFailures: IResolvable) {
-        cdkBuilder.ignoreApplicationStopFailures(ignoreApplicationStopFailures.let(IResolvable::unwrap))
+        cdkBuilder.ignoreApplicationStopFailures(ignoreApplicationStopFailures.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3240,7 +3240,7 @@ public open class CfnDeploymentGroup(
        * service from which to retrieve them. 
        */
       override fun revision(revision: IResolvable) {
-        cdkBuilder.revision(revision.let(IResolvable::unwrap))
+        cdkBuilder.revision(revision.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3248,7 +3248,7 @@ public open class CfnDeploymentGroup(
        * service from which to retrieve them. 
        */
       override fun revision(revision: RevisionLocationProperty) {
-        cdkBuilder.revision(revision.let(RevisionLocationProperty::unwrap))
+        cdkBuilder.revision(revision.let(RevisionLocationProperty.Companion::unwrap))
       }
 
       /**
@@ -3853,7 +3853,7 @@ public open class CfnDeploymentGroup(
        * tag groups in the list.
        */
       override fun ec2TagGroup(ec2TagGroup: IResolvable) {
-        cdkBuilder.ec2TagGroup(ec2TagGroup.let(IResolvable::unwrap))
+        cdkBuilder.ec2TagGroup(ec2TagGroup.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4003,7 +4003,7 @@ public open class CfnDeploymentGroup(
        * Duplicates are not allowed.
        */
       override fun ec2TagSetList(ec2TagSetList: IResolvable) {
-        cdkBuilder.ec2TagSetList(ec2TagSetList.let(IResolvable::unwrap))
+        cdkBuilder.ec2TagSetList(ec2TagSetList.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4723,7 +4723,7 @@ public open class CfnDeploymentGroup(
        * Balancers or Network Load Balancers, use the `targetGroupInfoList` array instead of this one.
        */
       override fun elbInfoList(elbInfoList: IResolvable) {
-        cdkBuilder.elbInfoList(elbInfoList.let(IResolvable::unwrap))
+        cdkBuilder.elbInfoList(elbInfoList.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4761,7 +4761,7 @@ public open class CfnDeploymentGroup(
        * Balancers, use the `elbInfoList` array instead of this one.
        */
       override fun targetGroupInfoList(targetGroupInfoList: IResolvable) {
-        cdkBuilder.targetGroupInfoList(targetGroupInfoList.let(IResolvable::unwrap))
+        cdkBuilder.targetGroupInfoList(targetGroupInfoList.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4796,7 +4796,7 @@ public open class CfnDeploymentGroup(
        * This is an array of `TargeGroupPairInfo` objects with a maximum size of one.
        */
       override fun targetGroupPairInfoList(targetGroupPairInfoList: IResolvable) {
-        cdkBuilder.targetGroupPairInfoList(targetGroupPairInfoList.let(IResolvable::unwrap))
+        cdkBuilder.targetGroupPairInfoList(targetGroupPairInfoList.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4949,7 +4949,7 @@ public open class CfnDeploymentGroup(
        * @param onPremisesTagGroup Information about groups of on-premises instance tags.
        */
       override fun onPremisesTagGroup(onPremisesTagGroup: IResolvable) {
-        cdkBuilder.onPremisesTagGroup(onPremisesTagGroup.let(IResolvable::unwrap))
+        cdkBuilder.onPremisesTagGroup(onPremisesTagGroup.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5099,7 +5099,7 @@ public open class CfnDeploymentGroup(
        * Duplicates are not allowed.
        */
       override fun onPremisesTagSetList(onPremisesTagSetList: IResolvable) {
-        cdkBuilder.onPremisesTagSetList(onPremisesTagSetList.let(IResolvable::unwrap))
+        cdkBuilder.onPremisesTagSetList(onPremisesTagSetList.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5287,7 +5287,7 @@ public open class CfnDeploymentGroup(
        * GitHub.
        */
       override fun gitHubLocation(gitHubLocation: IResolvable) {
-        cdkBuilder.gitHubLocation(gitHubLocation.let(IResolvable::unwrap))
+        cdkBuilder.gitHubLocation(gitHubLocation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5295,7 +5295,7 @@ public open class CfnDeploymentGroup(
        * GitHub.
        */
       override fun gitHubLocation(gitHubLocation: GitHubLocationProperty) {
-        cdkBuilder.gitHubLocation(gitHubLocation.let(GitHubLocationProperty::unwrap))
+        cdkBuilder.gitHubLocation(gitHubLocation.let(GitHubLocationProperty.Companion::unwrap))
       }
 
       /**
@@ -5324,14 +5324,14 @@ public open class CfnDeploymentGroup(
        * @param s3Location Information about the location of a revision stored in Amazon S3.
        */
       override fun s3Location(s3Location: IResolvable) {
-        cdkBuilder.s3Location(s3Location.let(IResolvable::unwrap))
+        cdkBuilder.s3Location(s3Location.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3Location Information about the location of a revision stored in Amazon S3.
        */
       override fun s3Location(s3Location: S3LocationProperty) {
-        cdkBuilder.s3Location(s3Location.let(S3LocationProperty::unwrap))
+        cdkBuilder.s3Location(s3Location.let(S3LocationProperty.Companion::unwrap))
       }
 
       /**
@@ -6088,7 +6088,7 @@ public open class CfnDeploymentGroup(
        * an Amazon ECS deployment is complete.
        */
       override fun prodTrafficRoute(prodTrafficRoute: IResolvable) {
-        cdkBuilder.prodTrafficRoute(prodTrafficRoute.let(IResolvable::unwrap))
+        cdkBuilder.prodTrafficRoute(prodTrafficRoute.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6096,7 +6096,7 @@ public open class CfnDeploymentGroup(
        * an Amazon ECS deployment is complete.
        */
       override fun prodTrafficRoute(prodTrafficRoute: TrafficRouteProperty) {
-        cdkBuilder.prodTrafficRoute(prodTrafficRoute.let(TrafficRouteProperty::unwrap))
+        cdkBuilder.prodTrafficRoute(prodTrafficRoute.let(TrafficRouteProperty.Companion::unwrap))
       }
 
       /**
@@ -6114,7 +6114,7 @@ public open class CfnDeploymentGroup(
        * that serves traffic after the deployment is complete.
        */
       override fun targetGroups(targetGroups: IResolvable) {
-        cdkBuilder.targetGroups(targetGroups.let(IResolvable::unwrap))
+        cdkBuilder.targetGroups(targetGroups.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6140,7 +6140,7 @@ public open class CfnDeploymentGroup(
        * Validation can occur while test traffic is served during a deployment.
        */
       override fun testTrafficRoute(testTrafficRoute: IResolvable) {
-        cdkBuilder.testTrafficRoute(testTrafficRoute.let(IResolvable::unwrap))
+        cdkBuilder.testTrafficRoute(testTrafficRoute.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6149,7 +6149,7 @@ public open class CfnDeploymentGroup(
        * Validation can occur while test traffic is served during a deployment.
        */
       override fun testTrafficRoute(testTrafficRoute: TrafficRouteProperty) {
-        cdkBuilder.testTrafficRoute(testTrafficRoute.let(TrafficRouteProperty::unwrap))
+        cdkBuilder.testTrafficRoute(testTrafficRoute.let(TrafficRouteProperty.Companion::unwrap))
       }
 
       /**

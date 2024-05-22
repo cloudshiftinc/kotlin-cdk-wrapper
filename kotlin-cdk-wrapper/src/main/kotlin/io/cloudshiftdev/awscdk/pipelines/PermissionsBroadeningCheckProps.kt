@@ -65,7 +65,7 @@ public interface PermissionsBroadeningCheckProps {
      * confirmation.
      */
     override fun notificationTopic(notificationTopic: ITopic) {
-      cdkBuilder.notificationTopic(notificationTopic.let(ITopic::unwrap))
+      cdkBuilder.notificationTopic(notificationTopic.let(ITopic.Companion::unwrap))
     }
 
     /**
@@ -73,7 +73,7 @@ public interface PermissionsBroadeningCheckProps {
      * This should be the same Stage object you are passing to `addStage()`.
      */
     override fun stage(stage: Stage) {
-      cdkBuilder.stage(stage.let(Stage::unwrap))
+      cdkBuilder.stage(stage.let(Stage.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.pipelines.PermissionsBroadeningCheckProps =

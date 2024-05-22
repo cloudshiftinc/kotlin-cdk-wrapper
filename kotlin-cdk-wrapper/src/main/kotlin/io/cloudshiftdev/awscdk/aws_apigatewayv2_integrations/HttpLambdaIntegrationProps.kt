@@ -75,14 +75,14 @@ public interface HttpLambdaIntegrationProps {
      * backend.
      */
     override fun parameterMapping(parameterMapping: ParameterMapping) {
-      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping::unwrap))
+      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping.Companion::unwrap))
     }
 
     /**
      * @param payloadFormatVersion Version of the payload sent to the lambda handler.
      */
     override fun payloadFormatVersion(payloadFormatVersion: PayloadFormatVersion) {
-      cdkBuilder.payloadFormatVersion(payloadFormatVersion.let(PayloadFormatVersion::unwrap))
+      cdkBuilder.payloadFormatVersion(payloadFormatVersion.let(PayloadFormatVersion.Companion::unwrap))
     }
 
     public fun build():

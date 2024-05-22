@@ -68,8 +68,8 @@ public open class CfnLocationHDFS(
     id: String,
     props: CfnLocationHDFSProps,
   ) :
-      this(software.amazon.awscdk.services.datasync.CfnLocationHDFS(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLocationHDFSProps::unwrap))
+      this(software.amazon.awscdk.services.datasync.CfnLocationHDFS(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLocationHDFSProps.Companion::unwrap))
   )
 
   public constructor(
@@ -136,7 +136,7 @@ public open class CfnLocationHDFS(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -202,7 +202,7 @@ public open class CfnLocationHDFS(
    * The NameNode that manages the HDFS namespace.
    */
   public open fun nameNodes(`value`: IResolvable) {
-    unwrap(this).setNameNodes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNameNodes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -228,7 +228,7 @@ public open class CfnLocationHDFS(
    * data transfer protection settings configured on the Hadoop Distributed File System (HDFS) cluster.
    */
   public open fun qopConfiguration(`value`: IResolvable) {
-    unwrap(this).setQopConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setQopConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -236,7 +236,7 @@ public open class CfnLocationHDFS(
    * data transfer protection settings configured on the Hadoop Distributed File System (HDFS) cluster.
    */
   public open fun qopConfiguration(`value`: QopConfigurationProperty) {
-    unwrap(this).setQopConfiguration(`value`.let(QopConfigurationProperty::unwrap))
+    unwrap(this).setQopConfiguration(`value`.let(QopConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -299,7 +299,7 @@ public open class CfnLocationHDFS(
    * The key-value pair that represents the tag that you want to add to the location.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -655,7 +655,7 @@ public open class CfnLocationHDFS(
      * @param nameNodes The NameNode that manages the HDFS namespace. 
      */
     override fun nameNodes(nameNodes: IResolvable) {
-      cdkBuilder.nameNodes(nameNodes.let(IResolvable::unwrap))
+      cdkBuilder.nameNodes(nameNodes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -699,7 +699,7 @@ public open class CfnLocationHDFS(
      * File System (HDFS) cluster. 
      */
     override fun qopConfiguration(qopConfiguration: IResolvable) {
-      cdkBuilder.qopConfiguration(qopConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.qopConfiguration(qopConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -717,7 +717,7 @@ public open class CfnLocationHDFS(
      * File System (HDFS) cluster. 
      */
     override fun qopConfiguration(qopConfiguration: QopConfigurationProperty) {
-      cdkBuilder.qopConfiguration(qopConfiguration.let(QopConfigurationProperty::unwrap))
+      cdkBuilder.qopConfiguration(qopConfiguration.let(QopConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -790,7 +790,7 @@ public open class CfnLocationHDFS(
      * @param tags The key-value pair that represents the tag that you want to add to the location. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

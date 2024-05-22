@@ -632,7 +632,7 @@ public interface DomainProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun accessPolicies(accessPolicies: List<PolicyStatement>) {
-      cdkBuilder.accessPolicies(accessPolicies.map(PolicyStatement::unwrap))
+      cdkBuilder.accessPolicies(accessPolicies.map(PolicyStatement.Companion::unwrap))
     }
 
     /**
@@ -670,7 +670,7 @@ public interface DomainProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun capacity(capacity: CapacityConfig) {
-      cdkBuilder.capacity(capacity.let(CapacityConfig::unwrap))
+      cdkBuilder.capacity(capacity.let(CapacityConfig.Companion::unwrap))
     }
 
     /**
@@ -690,7 +690,7 @@ public interface DomainProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun cognitoKibanaAuth(cognitoKibanaAuth: CognitoOptions) {
-      cdkBuilder.cognitoKibanaAuth(cognitoKibanaAuth.let(CognitoOptions::unwrap))
+      cdkBuilder.cognitoKibanaAuth(cognitoKibanaAuth.let(CognitoOptions.Companion::unwrap))
     }
 
     /**
@@ -712,7 +712,7 @@ public interface DomainProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun customEndpoint(customEndpoint: CustomEndpointOptions) {
-      cdkBuilder.customEndpoint(customEndpoint.let(CustomEndpointOptions::unwrap))
+      cdkBuilder.customEndpoint(customEndpoint.let(CustomEndpointOptions.Companion::unwrap))
     }
 
     /**
@@ -747,7 +747,7 @@ public interface DomainProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun ebs(ebs: EbsOptions) {
-      cdkBuilder.ebs(ebs.let(EbsOptions::unwrap))
+      cdkBuilder.ebs(ebs.let(EbsOptions.Companion::unwrap))
     }
 
     /**
@@ -780,7 +780,7 @@ public interface DomainProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptions) {
-      cdkBuilder.encryptionAtRest(encryptionAtRest.let(EncryptionAtRestOptions::unwrap))
+      cdkBuilder.encryptionAtRest(encryptionAtRest.let(EncryptionAtRestOptions.Companion::unwrap))
     }
 
     /**
@@ -811,7 +811,7 @@ public interface DomainProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun fineGrainedAccessControl(fineGrainedAccessControl: AdvancedSecurityOptions) {
-      cdkBuilder.fineGrainedAccessControl(fineGrainedAccessControl.let(AdvancedSecurityOptions::unwrap))
+      cdkBuilder.fineGrainedAccessControl(fineGrainedAccessControl.let(AdvancedSecurityOptions.Companion::unwrap))
     }
 
     /**
@@ -834,7 +834,7 @@ public interface DomainProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun logging(logging: LoggingOptions) {
-      cdkBuilder.logging(logging.let(LoggingOptions::unwrap))
+      cdkBuilder.logging(logging.let(LoggingOptions.Companion::unwrap))
     }
 
     /**
@@ -863,7 +863,7 @@ public interface DomainProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -874,7 +874,7 @@ public interface DomainProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -893,7 +893,7 @@ public interface DomainProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun tlsSecurityPolicy(tlsSecurityPolicy: TLSSecurityPolicy) {
-      cdkBuilder.tlsSecurityPolicy(tlsSecurityPolicy.let(TLSSecurityPolicy::unwrap))
+      cdkBuilder.tlsSecurityPolicy(tlsSecurityPolicy.let(TLSSecurityPolicy.Companion::unwrap))
     }
 
     /**
@@ -920,7 +920,7 @@ public interface DomainProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun version(version: ElasticsearchVersion) {
-      cdkBuilder.version(version.let(ElasticsearchVersion::unwrap))
+      cdkBuilder.version(version.let(ElasticsearchVersion.Companion::unwrap))
     }
 
     /**
@@ -929,7 +929,7 @@ public interface DomainProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -944,7 +944,7 @@ public interface DomainProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun vpcSubnets(vpcSubnets: List<SubnetSelection>) {
-      cdkBuilder.vpcSubnets(vpcSubnets.map(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.map(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -967,7 +967,7 @@ public interface DomainProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig) {
-      cdkBuilder.zoneAwareness(zoneAwareness.let(ZoneAwarenessConfig::unwrap))
+      cdkBuilder.zoneAwareness(zoneAwareness.let(ZoneAwarenessConfig.Companion::unwrap))
     }
 
     /**

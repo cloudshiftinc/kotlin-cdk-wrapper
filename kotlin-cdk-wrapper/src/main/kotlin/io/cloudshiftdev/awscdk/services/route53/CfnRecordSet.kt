@@ -88,8 +88,8 @@ public open class CfnRecordSet(
     id: String,
     props: CfnRecordSetProps,
   ) :
-      this(software.amazon.awscdk.services.route53.CfnRecordSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRecordSetProps::unwrap))
+      this(software.amazon.awscdk.services.route53.CfnRecordSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRecordSetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -110,7 +110,7 @@ public open class CfnRecordSet(
    * distribution or an Amazon S3 bucket, that you want to route traffic to.
    */
   public open fun aliasTarget(`value`: IResolvable) {
-    unwrap(this).setAliasTarget(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAliasTarget(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -118,7 +118,7 @@ public open class CfnRecordSet(
    * distribution or an Amazon S3 bucket, that you want to route traffic to.
    */
   public open fun aliasTarget(`value`: AliasTargetProperty) {
-    unwrap(this).setAliasTarget(`value`.let(AliasTargetProperty::unwrap))
+    unwrap(this).setAliasTarget(`value`.let(AliasTargetProperty.Companion::unwrap))
   }
 
   /**
@@ -147,7 +147,7 @@ public open class CfnRecordSet(
    * record set to a CIDR location.
    */
   public open fun cidrRoutingConfig(`value`: IResolvable) {
-    unwrap(this).setCidrRoutingConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCidrRoutingConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -155,7 +155,7 @@ public open class CfnRecordSet(
    * record set to a CIDR location.
    */
   public open fun cidrRoutingConfig(`value`: CidrRoutingConfigProperty) {
-    unwrap(this).setCidrRoutingConfig(`value`.let(CidrRoutingConfigProperty::unwrap))
+    unwrap(this).setCidrRoutingConfig(`value`.let(CidrRoutingConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -204,7 +204,7 @@ public open class CfnRecordSet(
    * 53 responds to DNS queries based on the geographic origin of the query.
    */
   public open fun geoLocation(`value`: IResolvable) {
-    unwrap(this).setGeoLocation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setGeoLocation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -212,7 +212,7 @@ public open class CfnRecordSet(
    * 53 responds to DNS queries based on the geographic origin of the query.
    */
   public open fun geoLocation(`value`: GeoLocationProperty) {
-    unwrap(this).setGeoLocation(`value`.let(GeoLocationProperty::unwrap))
+    unwrap(this).setGeoLocation(`value`.let(GeoLocationProperty.Companion::unwrap))
   }
 
   /**
@@ -235,7 +235,7 @@ public open class CfnRecordSet(
    * Route 53 responds to DNS queries based on the geographic origin of the query and your resources.
    */
   public open fun geoProximityLocation(`value`: IResolvable) {
-    unwrap(this).setGeoProximityLocation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setGeoProximityLocation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -243,7 +243,7 @@ public open class CfnRecordSet(
    * Route 53 responds to DNS queries based on the geographic origin of the query and your resources.
    */
   public open fun geoProximityLocation(`value`: GeoProximityLocationProperty) {
-    unwrap(this).setGeoProximityLocation(`value`.let(GeoProximityLocationProperty::unwrap))
+    unwrap(this).setGeoProximityLocation(`value`.let(GeoProximityLocationProperty.Companion::unwrap))
   }
 
   /**
@@ -301,7 +301,7 @@ public open class CfnRecordSet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -326,7 +326,7 @@ public open class CfnRecordSet(
    * specify `true` for `MultiValueAnswer` .
    */
   public open fun multiValueAnswer(`value`: IResolvable) {
-    unwrap(this).setMultiValueAnswer(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMultiValueAnswer(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -1222,7 +1222,7 @@ public open class CfnRecordSet(
      * such as a CloudFront distribution or an Amazon S3 bucket, that you want to route traffic to. 
      */
     override fun aliasTarget(aliasTarget: IResolvable) {
-      cdkBuilder.aliasTarget(aliasTarget.let(IResolvable::unwrap))
+      cdkBuilder.aliasTarget(aliasTarget.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1243,7 +1243,7 @@ public open class CfnRecordSet(
      * such as a CloudFront distribution or an Amazon S3 bucket, that you want to route traffic to. 
      */
     override fun aliasTarget(aliasTarget: AliasTargetProperty) {
-      cdkBuilder.aliasTarget(aliasTarget.let(AliasTargetProperty::unwrap))
+      cdkBuilder.aliasTarget(aliasTarget.let(AliasTargetProperty.Companion::unwrap))
     }
 
     /**
@@ -1280,7 +1280,7 @@ public open class CfnRecordSet(
      * are linking a resource record set to a CIDR location. 
      */
     override fun cidrRoutingConfig(cidrRoutingConfig: IResolvable) {
-      cdkBuilder.cidrRoutingConfig(cidrRoutingConfig.let(IResolvable::unwrap))
+      cdkBuilder.cidrRoutingConfig(cidrRoutingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1295,7 +1295,7 @@ public open class CfnRecordSet(
      * are linking a resource record set to a CIDR location. 
      */
     override fun cidrRoutingConfig(cidrRoutingConfig: CidrRoutingConfigProperty) {
-      cdkBuilder.cidrRoutingConfig(cidrRoutingConfig.let(CidrRoutingConfigProperty::unwrap))
+      cdkBuilder.cidrRoutingConfig(cidrRoutingConfig.let(CidrRoutingConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1413,7 +1413,7 @@ public open class CfnRecordSet(
      * 
      */
     override fun geoLocation(geoLocation: IResolvable) {
-      cdkBuilder.geoLocation(geoLocation.let(IResolvable::unwrap))
+      cdkBuilder.geoLocation(geoLocation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1457,7 +1457,7 @@ public open class CfnRecordSet(
      * 
      */
     override fun geoLocation(geoLocation: GeoLocationProperty) {
-      cdkBuilder.geoLocation(geoLocation.let(GeoLocationProperty::unwrap))
+      cdkBuilder.geoLocation(geoLocation.let(GeoLocationProperty.Companion::unwrap))
     }
 
     /**
@@ -1515,7 +1515,7 @@ public open class CfnRecordSet(
      * query and your resources. 
      */
     override fun geoProximityLocation(geoProximityLocation: IResolvable) {
-      cdkBuilder.geoProximityLocation(geoProximityLocation.let(IResolvable::unwrap))
+      cdkBuilder.geoProximityLocation(geoProximityLocation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1528,7 +1528,7 @@ public open class CfnRecordSet(
      * query and your resources. 
      */
     override fun geoProximityLocation(geoProximityLocation: GeoProximityLocationProperty) {
-      cdkBuilder.geoProximityLocation(geoProximityLocation.let(GeoProximityLocationProperty::unwrap))
+      cdkBuilder.geoProximityLocation(geoProximityLocation.let(GeoProximityLocationProperty.Companion::unwrap))
     }
 
     /**
@@ -1771,7 +1771,7 @@ public open class CfnRecordSet(
      * record for each resource and specify `true` for `MultiValueAnswer` . 
      */
     override fun multiValueAnswer(multiValueAnswer: IResolvable) {
-      cdkBuilder.multiValueAnswer(multiValueAnswer.let(IResolvable::unwrap))
+      cdkBuilder.multiValueAnswer(multiValueAnswer.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2905,7 +2905,7 @@ public open class CfnRecordSet(
        * *Amazon Route 53 Developer Guide* .
        */
       override fun evaluateTargetHealth(evaluateTargetHealth: IResolvable) {
-        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth.let(IResolvable::unwrap))
+        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3892,14 +3892,14 @@ public open class CfnRecordSet(
        * @param coordinates Contains the longitude and latitude for a geographic region.
        */
       override fun coordinates(coordinates: IResolvable) {
-        cdkBuilder.coordinates(coordinates.let(IResolvable::unwrap))
+        cdkBuilder.coordinates(coordinates.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param coordinates Contains the longitude and latitude for a geographic region.
        */
       override fun coordinates(coordinates: CoordinatesProperty) {
-        cdkBuilder.coordinates(coordinates.let(CoordinatesProperty::unwrap))
+        cdkBuilder.coordinates(coordinates.let(CoordinatesProperty.Companion::unwrap))
       }
 
       /**

@@ -9,7 +9,7 @@ import kotlin.Boolean
 import kotlin.Unit
 
 /**
- * Properties for the Virtual Deliverablity Manager (VDM) attributes.
+ * Properties for the Virtual Deliverability Manager (VDM) attributes.
  *
  * Example:
  *

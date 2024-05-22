@@ -24,7 +24,7 @@ public open class DefaultTokenResolver(
   cdkObject: software.amazon.awscdk.DefaultTokenResolver,
 ) : CdkObject(cdkObject), ITokenResolver {
   public constructor(concat: IFragmentConcatenator) :
-      this(software.amazon.awscdk.DefaultTokenResolver(concat.let(IFragmentConcatenator::unwrap))
+      this(software.amazon.awscdk.DefaultTokenResolver(concat.let(IFragmentConcatenator.Companion::unwrap))
   )
 
   /**
@@ -34,7 +34,7 @@ public open class DefaultTokenResolver(
    * @param context 
    */
   public override fun resolveList(xs: List<String>, context: IResolveContext): Any =
-      unwrap(this).resolveList(xs, context.let(IResolveContext::unwrap))
+      unwrap(this).resolveList(xs, context.let(IResolveContext.Companion::unwrap))
 
   /**
    * Resolve string fragments to Tokens.
@@ -43,8 +43,8 @@ public open class DefaultTokenResolver(
    * @param context 
    */
   public override fun resolveString(fragments: TokenizedStringFragments, context: IResolveContext):
-      Any = unwrap(this).resolveString(fragments.let(TokenizedStringFragments::unwrap),
-      context.let(IResolveContext::unwrap))
+      Any = unwrap(this).resolveString(fragments.let(TokenizedStringFragments.Companion::unwrap),
+      context.let(IResolveContext.Companion::unwrap))
 
   /**
    * Default Token resolution.
@@ -60,8 +60,9 @@ public open class DefaultTokenResolver(
     t: IResolvable,
     context: IResolveContext,
     postProcessor: IPostProcessor,
-  ): Any = unwrap(this).resolveToken(t.let(IResolvable::unwrap),
-      context.let(IResolveContext::unwrap), postProcessor.let(IPostProcessor::unwrap))
+  ): Any = unwrap(this).resolveToken(t.let(IResolvable.Companion::unwrap),
+      context.let(IResolveContext.Companion::unwrap),
+      postProcessor.let(IPostProcessor.Companion::unwrap))
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.DefaultTokenResolver): DefaultTokenResolver

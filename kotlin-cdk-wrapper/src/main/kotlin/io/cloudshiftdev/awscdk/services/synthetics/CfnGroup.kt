@@ -58,8 +58,8 @@ public open class CfnGroup(
     id: String,
     props: CfnGroupProps,
   ) :
-      this(software.amazon.awscdk.services.synthetics.CfnGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGroupProps::unwrap))
+      this(software.amazon.awscdk.services.synthetics.CfnGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -80,7 +80,7 @@ public open class CfnGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -131,7 +131,7 @@ public open class CfnGroup(
    * The list of key-value pairs that are associated with the group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -232,7 +232,7 @@ public open class CfnGroup(
      * @param tags The list of key-value pairs that are associated with the group. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

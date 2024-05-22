@@ -224,7 +224,7 @@ public interface CfnIdMappingWorkflowProps {
      * `providerProperties` . 
      */
     override fun idMappingTechniques(idMappingTechniques: IResolvable) {
-      cdkBuilder.idMappingTechniques(idMappingTechniques.let(IResolvable::unwrap))
+      cdkBuilder.idMappingTechniques(idMappingTechniques.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -233,7 +233,7 @@ public interface CfnIdMappingWorkflowProps {
      */
     override
         fun idMappingTechniques(idMappingTechniques: CfnIdMappingWorkflow.IdMappingTechniquesProperty) {
-      cdkBuilder.idMappingTechniques(idMappingTechniques.let(CfnIdMappingWorkflow.IdMappingTechniquesProperty::unwrap))
+      cdkBuilder.idMappingTechniques(idMappingTechniques.let(CfnIdMappingWorkflow.IdMappingTechniquesProperty.Companion::unwrap))
     }
 
     /**
@@ -252,7 +252,7 @@ public interface CfnIdMappingWorkflowProps {
      * `InputSourceARN` and `SchemaName` . 
      */
     override fun inputSourceConfig(inputSourceConfig: IResolvable) {
-      cdkBuilder.inputSourceConfig(inputSourceConfig.let(IResolvable::unwrap))
+      cdkBuilder.inputSourceConfig(inputSourceConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -275,7 +275,7 @@ public interface CfnIdMappingWorkflowProps {
      * contains fields `OutputS3Path` and `Output` .
      */
     override fun outputSourceConfig(outputSourceConfig: IResolvable) {
-      cdkBuilder.outputSourceConfig(outputSourceConfig.let(IResolvable::unwrap))
+      cdkBuilder.outputSourceConfig(outputSourceConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -306,7 +306,7 @@ public interface CfnIdMappingWorkflowProps {
      * @param tags The tags used to organize, track, or control access for this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -112,7 +112,7 @@ public interface BackupSelectionProps : BackupSelectionOptions {
      * @param backupPlan The backup plan for this selection. 
      */
     override fun backupPlan(backupPlan: IBackupPlan) {
-      cdkBuilder.backupPlan(backupPlan.let(IBackupPlan::unwrap))
+      cdkBuilder.backupPlan(backupPlan.let(IBackupPlan.Companion::unwrap))
     }
 
     /**
@@ -137,7 +137,7 @@ public interface BackupSelectionProps : BackupSelectionOptions {
      * Use the helper static methods defined on `BackupResource`.
      */
     override fun resources(resources: List<BackupResource>) {
-      cdkBuilder.resources(resources.map(BackupResource::unwrap))
+      cdkBuilder.resources(resources.map(BackupResource.Companion::unwrap))
     }
 
     /**
@@ -154,7 +154,7 @@ public interface BackupSelectionProps : BackupSelectionOptions {
      * is set to `true`.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.backup.BackupSelectionProps =

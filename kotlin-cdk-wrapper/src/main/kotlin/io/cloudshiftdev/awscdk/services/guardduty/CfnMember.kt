@@ -51,8 +51,8 @@ public open class CfnMember(
     id: String,
     props: CfnMemberProps,
   ) :
-      this(software.amazon.awscdk.services.guardduty.CfnMember(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMemberProps::unwrap))
+      this(software.amazon.awscdk.services.guardduty.CfnMember(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMemberProps.Companion::unwrap))
   )
 
   public constructor(
@@ -90,7 +90,7 @@ public open class CfnMember(
    * Specifies whether or not to disable email notification for the member account that you invite.
    */
   public open fun disableEmailNotification(`value`: IResolvable) {
-    unwrap(this).setDisableEmailNotification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDisableEmailNotification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -111,7 +111,7 @@ public open class CfnMember(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -269,7 +269,7 @@ public open class CfnMember(
      * the member account that you invite. 
      */
     override fun disableEmailNotification(disableEmailNotification: IResolvable) {
-      cdkBuilder.disableEmailNotification(disableEmailNotification.let(IResolvable::unwrap))
+      cdkBuilder.disableEmailNotification(disableEmailNotification.let(IResolvable.Companion::unwrap))
     }
 
     /**

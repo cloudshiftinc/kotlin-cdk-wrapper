@@ -44,8 +44,9 @@ public open class CfnJson(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
     props: CfnJsonProps,
-  ) : this(software.amazon.awscdk.CfnJson(scope.let(CloudshiftdevConstructsConstruct::unwrap), id,
-      props.let(CfnJsonProps::unwrap))
+  ) :
+      this(software.amazon.awscdk.CfnJson(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnJsonProps.Companion::unwrap))
   )
 
   public constructor(
@@ -70,7 +71,7 @@ public open class CfnJson(
    * @param _context 
    */
   public override fun resolve(context: IResolveContext): Any =
-      unwrap(this).resolve(context.let(IResolveContext::unwrap))
+      unwrap(this).resolve(context.let(IResolveContext.Companion::unwrap))
 
   /**
    * This is required in case someone JSON.stringifys an object which references this object.

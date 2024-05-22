@@ -400,7 +400,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
      * @param subscription 
      */
     override fun addSubscription(subscription: ITopicSubscription): Subscription =
-        unwrap(this).addSubscription(subscription.let(ITopicSubscription::unwrap)).let(Subscription::wrap)
+        unwrap(this).addSubscription(subscription.let(ITopicSubscription.Companion::unwrap)).let(Subscription::wrap)
 
     /**
      * Adds a statement to the IAM resource policy associated with this topic.
@@ -412,7 +412,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
      * @param statement 
      */
     override fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
-        unwrap(this).addToResourcePolicy(statement.let(PolicyStatement::unwrap)).let(AddToResourcePolicyResult::wrap)
+        unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
 
     /**
      * Adds a statement to the IAM resource policy associated with this topic.
@@ -442,7 +442,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -451,7 +451,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
      * @param scope 
      */
     override fun bindAsNotificationRuleTarget(scope: Construct): NotificationRuleTargetConfig =
-        unwrap(this).bindAsNotificationRuleTarget(scope.let(Construct::unwrap)).let(NotificationRuleTargetConfig::wrap)
+        unwrap(this).bindAsNotificationRuleTarget(scope.let(Construct.Companion::unwrap)).let(NotificationRuleTargetConfig::wrap)
 
     /**
      * Enables content-based deduplication for FIFO topics.
@@ -483,7 +483,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
      * @param identity 
      */
     override fun grantPublish(identity: IGrantable): Grant =
-        unwrap(this).grantPublish(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantPublish(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Return the given named metric for this Topic.
@@ -501,7 +501,8 @@ public interface ITopic : IResource, INotificationRuleTarget {
      * @param props
      */
     override fun metric(metricName: String, props: MetricOptions): Metric =
-        unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metric(metricName,
+        props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Return the given named metric for this Topic.
@@ -532,7 +533,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
      * @param props
      */
     override fun metricNumberOfMessagesPublished(props: MetricOptions): Metric =
-        unwrap(this).metricNumberOfMessagesPublished(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricNumberOfMessagesPublished(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of messages published to your Amazon SNS topics.
@@ -566,7 +567,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
      * @param props
      */
     override fun metricNumberOfNotificationsDelivered(props: MetricOptions): Metric =
-        unwrap(this).metricNumberOfNotificationsDelivered(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricNumberOfNotificationsDelivered(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of messages successfully delivered from your Amazon SNS topics to subscribing
@@ -599,7 +600,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
      * @param props
      */
     override fun metricNumberOfNotificationsFailed(props: MetricOptions): Metric =
-        unwrap(this).metricNumberOfNotificationsFailed(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricNumberOfNotificationsFailed(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of messages that Amazon SNS failed to deliver.
@@ -631,7 +632,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
      * @param props
      */
     override fun metricNumberOfNotificationsFilteredOut(props: MetricOptions): Metric =
-        unwrap(this).metricNumberOfNotificationsFilteredOut(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricNumberOfNotificationsFilteredOut(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of messages that were rejected by subscription filter policies.
@@ -666,7 +667,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
      */
     override fun metricNumberOfNotificationsFilteredOutInvalidAttributes(props: MetricOptions):
         Metric =
-        unwrap(this).metricNumberOfNotificationsFilteredOutInvalidAttributes(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricNumberOfNotificationsFilteredOutInvalidAttributes(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of messages that were rejected by subscription filter policies because the
@@ -703,7 +704,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
      */
     override fun metricNumberOfNotificationsFilteredOutNoMessageAttributes(props: MetricOptions):
         Metric =
-        unwrap(this).metricNumberOfNotificationsFilteredOutNoMessageAttributes(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricNumberOfNotificationsFilteredOutNoMessageAttributes(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of messages that were rejected by subscription filter policies because the
@@ -736,7 +737,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
      * @param props
      */
     override fun metricPublishSize(props: MetricOptions): Metric =
-        unwrap(this).metricPublishSize(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricPublishSize(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Metric for the size of messages published through this topic.
@@ -770,7 +771,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
      * @param props
      */
     override fun metricSMSMonthToDateSpentUSD(props: MetricOptions): Metric =
-        unwrap(this).metricSMSMonthToDateSpentUSD(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricSMSMonthToDateSpentUSD(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The charges you have accrued since the start of the current calendar month for sending SMS
@@ -803,7 +804,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
      * @param props
      */
     override fun metricSMSSuccessRate(props: MetricOptions): Metric =
-        unwrap(this).metricSMSSuccessRate(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricSMSSuccessRate(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The rate of successful SMS message deliveries.

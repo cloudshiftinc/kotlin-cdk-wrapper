@@ -94,7 +94,7 @@ public interface QuotaSettings {
      * @param period The time period for which the maximum limit of requests applies.
      */
     override fun period(period: Period) {
-      cdkBuilder.period(period.let(Period::unwrap))
+      cdkBuilder.period(period.let(Period.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.QuotaSettings =

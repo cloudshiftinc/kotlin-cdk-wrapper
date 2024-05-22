@@ -123,7 +123,7 @@ public interface CfnDiscovererProps {
      * bus from another account.
      */
     override fun crossAccount(crossAccount: IResolvable) {
-      cdkBuilder.crossAccount(crossAccount.let(IResolvable::unwrap))
+      cdkBuilder.crossAccount(crossAccount.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -144,7 +144,7 @@ public interface CfnDiscovererProps {
      * @param tags Tags associated with the resource.
      */
     override fun tags(tags: List<CfnDiscoverer.TagsEntryProperty>) {
-      cdkBuilder.tags(tags.map(CfnDiscoverer.TagsEntryProperty::unwrap))
+      cdkBuilder.tags(tags.map(CfnDiscoverer.TagsEntryProperty.Companion::unwrap))
     }
 
     /**

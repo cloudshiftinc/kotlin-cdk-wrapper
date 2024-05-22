@@ -75,7 +75,7 @@ public open class PipelineProject(
   cdkObject: software.amazon.awscdk.services.codebuild.PipelineProject,
 ) : Project(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.codebuild.PipelineProject(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.codebuild.PipelineProject(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -84,8 +84,8 @@ public open class PipelineProject(
     id: String,
     props: PipelineProjectProps,
   ) :
-      this(software.amazon.awscdk.services.codebuild.PipelineProject(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(PipelineProjectProps::unwrap))
+      this(software.amazon.awscdk.services.codebuild.PipelineProject(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(PipelineProjectProps.Companion::unwrap))
   )
 
   public constructor(
@@ -510,7 +510,7 @@ public open class PipelineProject(
      * @param buildSpec Filename or contents of buildspec in JSON format. 
      */
     override fun buildSpec(buildSpec: BuildSpec) {
-      cdkBuilder.buildSpec(buildSpec.let(BuildSpec::unwrap))
+      cdkBuilder.buildSpec(buildSpec.let(BuildSpec.Companion::unwrap))
     }
 
     /**
@@ -521,7 +521,7 @@ public open class PipelineProject(
      * @param cache Caching strategy to use. 
      */
     override fun cache(cache: Cache) {
-      cdkBuilder.cache(cache.let(Cache::unwrap))
+      cdkBuilder.cache(cache.let(Cache.Companion::unwrap))
     }
 
     /**
@@ -579,7 +579,7 @@ public open class PipelineProject(
      * @param encryptionKey Encryption key to use to read and write artifacts. 
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -590,7 +590,7 @@ public open class PipelineProject(
      * @param environment Build environment to use for the build. 
      */
     override fun environment(environment: BuildEnvironment) {
-      cdkBuilder.environment(environment.let(BuildEnvironment::unwrap))
+      cdkBuilder.environment(environment.let(BuildEnvironment.Companion::unwrap))
     }
 
     /**
@@ -630,7 +630,7 @@ public open class PipelineProject(
      * project. 
      */
     override fun fileSystemLocations(fileSystemLocations: List<IFileSystemLocation>) {
-      cdkBuilder.fileSystemLocations(fileSystemLocations.map(IFileSystemLocation::unwrap))
+      cdkBuilder.fileSystemLocations(fileSystemLocations.map(IFileSystemLocation.Companion::unwrap))
     }
 
     /**
@@ -678,7 +678,7 @@ public open class PipelineProject(
      * @param logging Information about logs for the build project. 
      */
     override fun logging(logging: LoggingOptions) {
-      cdkBuilder.logging(logging.let(LoggingOptions::unwrap))
+      cdkBuilder.logging(logging.let(LoggingOptions.Companion::unwrap))
     }
 
     /**
@@ -718,7 +718,7 @@ public open class PipelineProject(
      * still in queue. 
      */
     override fun queuedTimeout(queuedTimeout: Duration) {
-      cdkBuilder.queuedTimeout(queuedTimeout.let(Duration::unwrap))
+      cdkBuilder.queuedTimeout(queuedTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -729,7 +729,7 @@ public open class PipelineProject(
      * @param role Service Role to assume while running the build. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -745,7 +745,7 @@ public open class PipelineProject(
      * interfaces. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -816,7 +816,7 @@ public open class PipelineProject(
      * @param subnetSelection Where to place the network interfaces within the VPC. 
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -861,7 +861,7 @@ public open class PipelineProject(
      * complete. 
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -874,7 +874,7 @@ public open class PipelineProject(
      * @param vpc VPC network to place codebuild network interfaces. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codebuild.PipelineProject =

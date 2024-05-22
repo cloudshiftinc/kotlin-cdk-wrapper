@@ -213,7 +213,7 @@ public interface MissingContext {
      * @param props A set of provider-specific options. 
      */
     override fun props(props: AmiContextQuery) {
-      cdkBuilder.props(props.let(AmiContextQuery::unwrap))
+      cdkBuilder.props(props.let(AmiContextQuery.Companion::unwrap))
     }
 
     /**
@@ -228,7 +228,7 @@ public interface MissingContext {
      * @param props A set of provider-specific options. 
      */
     override fun props(props: AvailabilityZonesContextQuery) {
-      cdkBuilder.props(props.let(AvailabilityZonesContextQuery::unwrap))
+      cdkBuilder.props(props.let(AvailabilityZonesContextQuery.Companion::unwrap))
     }
 
     /**
@@ -243,7 +243,7 @@ public interface MissingContext {
      * @param props A set of provider-specific options. 
      */
     override fun props(props: HostedZoneContextQuery) {
-      cdkBuilder.props(props.let(HostedZoneContextQuery::unwrap))
+      cdkBuilder.props(props.let(HostedZoneContextQuery.Companion::unwrap))
     }
 
     /**
@@ -258,7 +258,7 @@ public interface MissingContext {
      * @param props A set of provider-specific options. 
      */
     override fun props(props: SSMParameterContextQuery) {
-      cdkBuilder.props(props.let(SSMParameterContextQuery::unwrap))
+      cdkBuilder.props(props.let(SSMParameterContextQuery.Companion::unwrap))
     }
 
     /**
@@ -273,7 +273,7 @@ public interface MissingContext {
      * @param props A set of provider-specific options. 
      */
     override fun props(props: VpcContextQuery) {
-      cdkBuilder.props(props.let(VpcContextQuery::unwrap))
+      cdkBuilder.props(props.let(VpcContextQuery.Companion::unwrap))
     }
 
     /**
@@ -288,7 +288,7 @@ public interface MissingContext {
      * @param props A set of provider-specific options. 
      */
     override fun props(props: EndpointServiceAvailabilityZonesContextQuery) {
-      cdkBuilder.props(props.let(EndpointServiceAvailabilityZonesContextQuery::unwrap))
+      cdkBuilder.props(props.let(EndpointServiceAvailabilityZonesContextQuery.Companion::unwrap))
     }
 
     /**
@@ -303,7 +303,7 @@ public interface MissingContext {
      * @param props A set of provider-specific options. 
      */
     override fun props(props: LoadBalancerContextQuery) {
-      cdkBuilder.props(props.let(LoadBalancerContextQuery::unwrap))
+      cdkBuilder.props(props.let(LoadBalancerContextQuery.Companion::unwrap))
     }
 
     /**
@@ -318,7 +318,7 @@ public interface MissingContext {
      * @param props A set of provider-specific options. 
      */
     override fun props(props: LoadBalancerListenerContextQuery) {
-      cdkBuilder.props(props.let(LoadBalancerListenerContextQuery::unwrap))
+      cdkBuilder.props(props.let(LoadBalancerListenerContextQuery.Companion::unwrap))
     }
 
     /**
@@ -333,7 +333,7 @@ public interface MissingContext {
      * @param props A set of provider-specific options. 
      */
     override fun props(props: SecurityGroupContextQuery) {
-      cdkBuilder.props(props.let(SecurityGroupContextQuery::unwrap))
+      cdkBuilder.props(props.let(SecurityGroupContextQuery.Companion::unwrap))
     }
 
     /**
@@ -348,7 +348,7 @@ public interface MissingContext {
      * @param props A set of provider-specific options. 
      */
     override fun props(props: KeyContextQuery) {
-      cdkBuilder.props(props.let(KeyContextQuery::unwrap))
+      cdkBuilder.props(props.let(KeyContextQuery.Companion::unwrap))
     }
 
     /**
@@ -363,7 +363,7 @@ public interface MissingContext {
      * @param props A set of provider-specific options. 
      */
     override fun props(props: PluginContextQuery) {
-      cdkBuilder.props(props.let(PluginContextQuery::unwrap))
+      cdkBuilder.props(props.let(PluginContextQuery.Companion::unwrap))
     }
 
     /**
@@ -378,7 +378,7 @@ public interface MissingContext {
      * @param provider The provider from which we expect this context key to be obtained. 
      */
     override fun provider(provider: ContextProvider) {
-      cdkBuilder.provider(provider.let(ContextProvider::unwrap))
+      cdkBuilder.provider(provider.let(ContextProvider.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.cloudassembly.schema.MissingContext =

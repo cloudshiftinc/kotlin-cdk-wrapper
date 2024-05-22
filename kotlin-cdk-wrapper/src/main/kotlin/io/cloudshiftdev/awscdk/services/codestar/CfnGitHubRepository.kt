@@ -65,8 +65,8 @@ public open class CfnGitHubRepository(
     id: String,
     props: CfnGitHubRepositoryProps,
   ) :
-      this(software.amazon.awscdk.services.codestar.CfnGitHubRepository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGitHubRepositoryProps::unwrap))
+      this(software.amazon.awscdk.services.codestar.CfnGitHubRepository(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGitHubRepositoryProps.Companion::unwrap))
   )
 
   public constructor(
@@ -92,7 +92,7 @@ public open class CfnGitHubRepository(
    * CloudFormation stack.
    */
   public open fun code(`value`: IResolvable) {
-    unwrap(this).setCode(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCode(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -100,7 +100,7 @@ public open class CfnGitHubRepository(
    * CloudFormation stack.
    */
   public open fun code(`value`: CodeProperty) {
-    unwrap(this).setCode(`value`.let(CodeProperty::unwrap))
+    unwrap(this).setCode(`value`.let(CodeProperty.Companion::unwrap))
   }
 
   /**
@@ -139,7 +139,7 @@ public open class CfnGitHubRepository(
    * Indicates whether to enable issues for the GitHub repository.
    */
   public open fun enableIssues(`value`: IResolvable) {
-    unwrap(this).setEnableIssues(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableIssues(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -148,7 +148,7 @@ public open class CfnGitHubRepository(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -167,7 +167,7 @@ public open class CfnGitHubRepository(
    * Indicates whether the GitHub repository is a private repository.
    */
   public open fun isPrivate(`value`: IResolvable) {
-    unwrap(this).setIsPrivate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIsPrivate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -358,7 +358,7 @@ public open class CfnGitHubRepository(
      * AWS CloudFormation stack. 
      */
     override fun code(code: IResolvable) {
-      cdkBuilder.code(code.let(IResolvable::unwrap))
+      cdkBuilder.code(code.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -370,7 +370,7 @@ public open class CfnGitHubRepository(
      * AWS CloudFormation stack. 
      */
     override fun code(code: CodeProperty) {
-      cdkBuilder.code(code.let(CodeProperty::unwrap))
+      cdkBuilder.code(code.let(CodeProperty.Companion::unwrap))
     }
 
     /**
@@ -414,7 +414,7 @@ public open class CfnGitHubRepository(
      * @param enableIssues Indicates whether to enable issues for the GitHub repository. 
      */
     override fun enableIssues(enableIssues: IResolvable) {
-      cdkBuilder.enableIssues(enableIssues.let(IResolvable::unwrap))
+      cdkBuilder.enableIssues(enableIssues.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -438,7 +438,7 @@ public open class CfnGitHubRepository(
      * @param isPrivate Indicates whether the GitHub repository is a private repository. 
      */
     override fun isPrivate(isPrivate: IResolvable) {
-      cdkBuilder.isPrivate(isPrivate.let(IResolvable::unwrap))
+      cdkBuilder.isPrivate(isPrivate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -582,7 +582,7 @@ public open class CfnGitHubRepository(
        * committed to the repository. 
        */
       override fun s3(s3: IResolvable) {
-        cdkBuilder.s3(s3.let(IResolvable::unwrap))
+        cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -590,7 +590,7 @@ public open class CfnGitHubRepository(
        * committed to the repository. 
        */
       override fun s3(s3: S3Property) {
-        cdkBuilder.s3(s3.let(S3Property::unwrap))
+        cdkBuilder.s3(s3.let(S3Property.Companion::unwrap))
       }
 
       /**

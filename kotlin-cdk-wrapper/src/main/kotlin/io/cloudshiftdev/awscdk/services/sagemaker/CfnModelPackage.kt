@@ -308,7 +308,7 @@ public open class CfnModelPackage(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnModelPackage,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.sagemaker.CfnModelPackage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.sagemaker.CfnModelPackage(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -317,8 +317,8 @@ public open class CfnModelPackage(
     id: String,
     props: CfnModelPackageProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnModelPackage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnModelPackageProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnModelPackage(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnModelPackageProps.Companion::unwrap))
   )
 
   public constructor(
@@ -338,7 +338,7 @@ public open class CfnModelPackage(
    * An array of additional Inference Specification objects.
    */
   public open fun additionalInferenceSpecifications(`value`: IResolvable) {
-    unwrap(this).setAdditionalInferenceSpecifications(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAdditionalInferenceSpecifications(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -364,7 +364,7 @@ public open class CfnModelPackage(
    * An array of additional Inference Specification objects to be added to the existing array.
    */
   public open fun additionalInferenceSpecificationsToAdd(`value`: IResolvable) {
-    unwrap(this).setAdditionalInferenceSpecificationsToAdd(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAdditionalInferenceSpecificationsToAdd(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -429,7 +429,7 @@ public open class CfnModelPackage(
    * Whether the model package is to be certified to be listed on AWS Marketplace.
    */
   public open fun certifyForMarketplace(`value`: IResolvable) {
-    unwrap(this).setCertifyForMarketplace(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCertifyForMarketplace(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -453,7 +453,7 @@ public open class CfnModelPackage(
    * The metadata properties for the model package.
    */
   public open fun customerMetadataProperties(`value`: IResolvable) {
-    unwrap(this).setCustomerMetadataProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCustomerMetadataProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -486,7 +486,7 @@ public open class CfnModelPackage(
    * model package.
    */
   public open fun driftCheckBaselines(`value`: IResolvable) {
-    unwrap(this).setDriftCheckBaselines(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDriftCheckBaselines(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -494,7 +494,7 @@ public open class CfnModelPackage(
    * model package.
    */
   public open fun driftCheckBaselines(`value`: DriftCheckBaselinesProperty) {
-    unwrap(this).setDriftCheckBaselines(`value`.let(DriftCheckBaselinesProperty::unwrap))
+    unwrap(this).setDriftCheckBaselines(`value`.let(DriftCheckBaselinesProperty.Companion::unwrap))
   }
 
   /**
@@ -515,14 +515,14 @@ public open class CfnModelPackage(
    * Defines how to perform inference generation after a training job is run.
    */
   public open fun inferenceSpecification(`value`: IResolvable) {
-    unwrap(this).setInferenceSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInferenceSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Defines how to perform inference generation after a training job is run.
    */
   public open fun inferenceSpecification(`value`: InferenceSpecificationProperty) {
-    unwrap(this).setInferenceSpecification(`value`.let(InferenceSpecificationProperty::unwrap))
+    unwrap(this).setInferenceSpecification(`value`.let(InferenceSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -540,7 +540,7 @@ public open class CfnModelPackage(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -564,14 +564,14 @@ public open class CfnModelPackage(
    * Metadata properties of the tracking entity, trial, or trial component.
    */
   public open fun metadataProperties(`value`: IResolvable) {
-    unwrap(this).setMetadataProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMetadataProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Metadata properties of the tracking entity, trial, or trial component.
    */
   public open fun metadataProperties(`value`: MetadataPropertiesProperty) {
-    unwrap(this).setMetadataProperties(`value`.let(MetadataPropertiesProperty::unwrap))
+    unwrap(this).setMetadataProperties(`value`.let(MetadataPropertiesProperty.Companion::unwrap))
   }
 
   /**
@@ -607,14 +607,14 @@ public open class CfnModelPackage(
    * Metrics for the model.
    */
   public open fun modelMetrics(`value`: IResolvable) {
-    unwrap(this).setModelMetrics(`value`.let(IResolvable::unwrap))
+    unwrap(this).setModelMetrics(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Metrics for the model.
    */
   public open fun modelMetrics(`value`: ModelMetricsProperty) {
-    unwrap(this).setModelMetrics(`value`.let(ModelMetricsProperty::unwrap))
+    unwrap(this).setModelMetrics(`value`.let(ModelMetricsProperty.Companion::unwrap))
   }
 
   /**
@@ -670,14 +670,14 @@ public open class CfnModelPackage(
    * Specifies the validation and image scan statuses of the model package.
    */
   public open fun modelPackageStatusDetails(`value`: IResolvable) {
-    unwrap(this).setModelPackageStatusDetails(`value`.let(IResolvable::unwrap))
+    unwrap(this).setModelPackageStatusDetails(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the validation and image scan statuses of the model package.
    */
   public open fun modelPackageStatusDetails(`value`: ModelPackageStatusDetailsProperty) {
-    unwrap(this).setModelPackageStatusDetails(`value`.let(ModelPackageStatusDetailsProperty::unwrap))
+    unwrap(this).setModelPackageStatusDetails(`value`.let(ModelPackageStatusDetailsProperty.Companion::unwrap))
   }
 
   /**
@@ -735,14 +735,14 @@ public open class CfnModelPackage(
    * A list of algorithms that were used to create a model package.
    */
   public open fun sourceAlgorithmSpecification(`value`: IResolvable) {
-    unwrap(this).setSourceAlgorithmSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSourceAlgorithmSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A list of algorithms that were used to create a model package.
    */
   public open fun sourceAlgorithmSpecification(`value`: SourceAlgorithmSpecificationProperty) {
-    unwrap(this).setSourceAlgorithmSpecification(`value`.let(SourceAlgorithmSpecificationProperty::unwrap))
+    unwrap(this).setSourceAlgorithmSpecification(`value`.let(SourceAlgorithmSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -769,7 +769,7 @@ public open class CfnModelPackage(
    * A list of the tags associated with the model package.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -798,14 +798,14 @@ public open class CfnModelPackage(
    * Specifies batch transform jobs that SageMaker runs to validate your model package.
    */
   public open fun validationSpecification(`value`: IResolvable) {
-    unwrap(this).setValidationSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setValidationSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies batch transform jobs that SageMaker runs to validate your model package.
    */
   public open fun validationSpecification(`value`: ValidationSpecificationProperty) {
-    unwrap(this).setValidationSpecification(`value`.let(ValidationSpecificationProperty::unwrap))
+    unwrap(this).setValidationSpecification(`value`.let(ValidationSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -1294,7 +1294,7 @@ public open class CfnModelPackage(
      * objects. 
      */
     override fun additionalInferenceSpecifications(additionalInferenceSpecifications: IResolvable) {
-      cdkBuilder.additionalInferenceSpecifications(additionalInferenceSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.additionalInferenceSpecifications(additionalInferenceSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1332,7 +1332,7 @@ public open class CfnModelPackage(
      */
     override
         fun additionalInferenceSpecificationsToAdd(additionalInferenceSpecificationsToAdd: IResolvable) {
-      cdkBuilder.additionalInferenceSpecificationsToAdd(additionalInferenceSpecificationsToAdd.let(IResolvable::unwrap))
+      cdkBuilder.additionalInferenceSpecificationsToAdd(additionalInferenceSpecificationsToAdd.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1405,7 +1405,7 @@ public open class CfnModelPackage(
      * Marketplace. 
      */
     override fun certifyForMarketplace(certifyForMarketplace: IResolvable) {
-      cdkBuilder.certifyForMarketplace(certifyForMarketplace.let(IResolvable::unwrap))
+      cdkBuilder.certifyForMarketplace(certifyForMarketplace.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1425,7 +1425,7 @@ public open class CfnModelPackage(
      * @param customerMetadataProperties The metadata properties for the model package. 
      */
     override fun customerMetadataProperties(customerMetadataProperties: IResolvable) {
-      cdkBuilder.customerMetadataProperties(customerMetadataProperties.let(IResolvable::unwrap))
+      cdkBuilder.customerMetadataProperties(customerMetadataProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1459,7 +1459,7 @@ public open class CfnModelPackage(
      * model monitor is set using the model package. 
      */
     override fun driftCheckBaselines(driftCheckBaselines: IResolvable) {
-      cdkBuilder.driftCheckBaselines(driftCheckBaselines.let(IResolvable::unwrap))
+      cdkBuilder.driftCheckBaselines(driftCheckBaselines.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1471,7 +1471,7 @@ public open class CfnModelPackage(
      * model monitor is set using the model package. 
      */
     override fun driftCheckBaselines(driftCheckBaselines: DriftCheckBaselinesProperty) {
-      cdkBuilder.driftCheckBaselines(driftCheckBaselines.let(DriftCheckBaselinesProperty::unwrap))
+      cdkBuilder.driftCheckBaselines(driftCheckBaselines.let(DriftCheckBaselinesProperty.Companion::unwrap))
     }
 
     /**
@@ -1496,7 +1496,7 @@ public open class CfnModelPackage(
      * job is run. 
      */
     override fun inferenceSpecification(inferenceSpecification: IResolvable) {
-      cdkBuilder.inferenceSpecification(inferenceSpecification.let(IResolvable::unwrap))
+      cdkBuilder.inferenceSpecification(inferenceSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1507,7 +1507,7 @@ public open class CfnModelPackage(
      * job is run. 
      */
     override fun inferenceSpecification(inferenceSpecification: InferenceSpecificationProperty) {
-      cdkBuilder.inferenceSpecification(inferenceSpecification.let(InferenceSpecificationProperty::unwrap))
+      cdkBuilder.inferenceSpecification(inferenceSpecification.let(InferenceSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -1541,7 +1541,7 @@ public open class CfnModelPackage(
      * component. 
      */
     override fun metadataProperties(metadataProperties: IResolvable) {
-      cdkBuilder.metadataProperties(metadataProperties.let(IResolvable::unwrap))
+      cdkBuilder.metadataProperties(metadataProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1552,7 +1552,7 @@ public open class CfnModelPackage(
      * component. 
      */
     override fun metadataProperties(metadataProperties: MetadataPropertiesProperty) {
-      cdkBuilder.metadataProperties(metadataProperties.let(MetadataPropertiesProperty::unwrap))
+      cdkBuilder.metadataProperties(metadataProperties.let(MetadataPropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -1590,7 +1590,7 @@ public open class CfnModelPackage(
      * @param modelMetrics Metrics for the model. 
      */
     override fun modelMetrics(modelMetrics: IResolvable) {
-      cdkBuilder.modelMetrics(modelMetrics.let(IResolvable::unwrap))
+      cdkBuilder.modelMetrics(modelMetrics.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1600,7 +1600,7 @@ public open class CfnModelPackage(
      * @param modelMetrics Metrics for the model. 
      */
     override fun modelMetrics(modelMetrics: ModelMetricsProperty) {
-      cdkBuilder.modelMetrics(modelMetrics.let(ModelMetricsProperty::unwrap))
+      cdkBuilder.modelMetrics(modelMetrics.let(ModelMetricsProperty.Companion::unwrap))
     }
 
     /**
@@ -1652,7 +1652,7 @@ public open class CfnModelPackage(
      * model package. 
      */
     override fun modelPackageStatusDetails(modelPackageStatusDetails: IResolvable) {
-      cdkBuilder.modelPackageStatusDetails(modelPackageStatusDetails.let(IResolvable::unwrap))
+      cdkBuilder.modelPackageStatusDetails(modelPackageStatusDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1664,7 +1664,7 @@ public open class CfnModelPackage(
      */
     override
         fun modelPackageStatusDetails(modelPackageStatusDetails: ModelPackageStatusDetailsProperty) {
-      cdkBuilder.modelPackageStatusDetails(modelPackageStatusDetails.let(ModelPackageStatusDetailsProperty::unwrap))
+      cdkBuilder.modelPackageStatusDetails(modelPackageStatusDetails.let(ModelPackageStatusDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -1722,7 +1722,7 @@ public open class CfnModelPackage(
      * package. 
      */
     override fun sourceAlgorithmSpecification(sourceAlgorithmSpecification: IResolvable) {
-      cdkBuilder.sourceAlgorithmSpecification(sourceAlgorithmSpecification.let(IResolvable::unwrap))
+      cdkBuilder.sourceAlgorithmSpecification(sourceAlgorithmSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1734,7 +1734,7 @@ public open class CfnModelPackage(
      */
     override
         fun sourceAlgorithmSpecification(sourceAlgorithmSpecification: SourceAlgorithmSpecificationProperty) {
-      cdkBuilder.sourceAlgorithmSpecification(sourceAlgorithmSpecification.let(SourceAlgorithmSpecificationProperty::unwrap))
+      cdkBuilder.sourceAlgorithmSpecification(sourceAlgorithmSpecification.let(SourceAlgorithmSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -1762,7 +1762,7 @@ public open class CfnModelPackage(
      * @param tags A list of the tags associated with the model package. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1797,7 +1797,7 @@ public open class CfnModelPackage(
      * your model package. 
      */
     override fun validationSpecification(validationSpecification: IResolvable) {
-      cdkBuilder.validationSpecification(validationSpecification.let(IResolvable::unwrap))
+      cdkBuilder.validationSpecification(validationSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1808,7 +1808,7 @@ public open class CfnModelPackage(
      * your model package. 
      */
     override fun validationSpecification(validationSpecification: ValidationSpecificationProperty) {
-      cdkBuilder.validationSpecification(validationSpecification.let(ValidationSpecificationProperty::unwrap))
+      cdkBuilder.validationSpecification(validationSpecification.let(ValidationSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -2041,7 +2041,7 @@ public open class CfnModelPackage(
        * inference code. 
        */
       override fun containers(containers: IResolvable) {
-        cdkBuilder.containers(containers.let(IResolvable::unwrap))
+        cdkBuilder.containers(containers.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2338,14 +2338,14 @@ public open class CfnModelPackage(
        * @param postTrainingReport The post-training bias report for a model.
        */
       override fun postTrainingReport(postTrainingReport: IResolvable) {
-        cdkBuilder.postTrainingReport(postTrainingReport.let(IResolvable::unwrap))
+        cdkBuilder.postTrainingReport(postTrainingReport.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param postTrainingReport The post-training bias report for a model.
        */
       override fun postTrainingReport(postTrainingReport: MetricsSourceProperty) {
-        cdkBuilder.postTrainingReport(postTrainingReport.let(MetricsSourceProperty::unwrap))
+        cdkBuilder.postTrainingReport(postTrainingReport.let(MetricsSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -2360,14 +2360,14 @@ public open class CfnModelPackage(
        * @param preTrainingReport The pre-training bias report for a model.
        */
       override fun preTrainingReport(preTrainingReport: IResolvable) {
-        cdkBuilder.preTrainingReport(preTrainingReport.let(IResolvable::unwrap))
+        cdkBuilder.preTrainingReport(preTrainingReport.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param preTrainingReport The pre-training bias report for a model.
        */
       override fun preTrainingReport(preTrainingReport: MetricsSourceProperty) {
-        cdkBuilder.preTrainingReport(preTrainingReport.let(MetricsSourceProperty::unwrap))
+        cdkBuilder.preTrainingReport(preTrainingReport.let(MetricsSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -2382,14 +2382,14 @@ public open class CfnModelPackage(
        * @param report The bias report for a model.
        */
       override fun report(report: IResolvable) {
-        cdkBuilder.report(report.let(IResolvable::unwrap))
+        cdkBuilder.report(report.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param report The bias report for a model.
        */
       override fun report(report: MetricsSourceProperty) {
-        cdkBuilder.report(report.let(MetricsSourceProperty::unwrap))
+        cdkBuilder.report(report.let(MetricsSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -2505,14 +2505,14 @@ public open class CfnModelPackage(
        * @param s3DataSource The S3 location of the data source that is associated with a channel. 
        */
       override fun s3DataSource(s3DataSource: IResolvable) {
-        cdkBuilder.s3DataSource(s3DataSource.let(IResolvable::unwrap))
+        cdkBuilder.s3DataSource(s3DataSource.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3DataSource The S3 location of the data source that is associated with a channel. 
        */
       override fun s3DataSource(s3DataSource: S3DataSourceProperty) {
-        cdkBuilder.s3DataSource(s3DataSource.let(S3DataSourceProperty::unwrap))
+        cdkBuilder.s3DataSource(s3DataSource.let(S3DataSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -2766,7 +2766,7 @@ public open class CfnModelPackage(
        * monitor is set using the model package.
        */
       override fun bias(bias: IResolvable) {
-        cdkBuilder.bias(bias.let(IResolvable::unwrap))
+        cdkBuilder.bias(bias.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2774,7 +2774,7 @@ public open class CfnModelPackage(
        * monitor is set using the model package.
        */
       override fun bias(bias: DriftCheckBiasProperty) {
-        cdkBuilder.bias(bias.let(DriftCheckBiasProperty::unwrap))
+        cdkBuilder.bias(bias.let(DriftCheckBiasProperty.Companion::unwrap))
       }
 
       /**
@@ -2791,7 +2791,7 @@ public open class CfnModelPackage(
        * when the model monitor is set using the model package.
        */
       override fun explainability(explainability: IResolvable) {
-        cdkBuilder.explainability(explainability.let(IResolvable::unwrap))
+        cdkBuilder.explainability(explainability.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2799,7 +2799,7 @@ public open class CfnModelPackage(
        * when the model monitor is set using the model package.
        */
       override fun explainability(explainability: DriftCheckExplainabilityProperty) {
-        cdkBuilder.explainability(explainability.let(DriftCheckExplainabilityProperty::unwrap))
+        cdkBuilder.explainability(explainability.let(DriftCheckExplainabilityProperty.Companion::unwrap))
       }
 
       /**
@@ -2817,7 +2817,7 @@ public open class CfnModelPackage(
        * used when the model monitor is set using the model package.
        */
       override fun modelDataQuality(modelDataQuality: IResolvable) {
-        cdkBuilder.modelDataQuality(modelDataQuality.let(IResolvable::unwrap))
+        cdkBuilder.modelDataQuality(modelDataQuality.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2825,7 +2825,7 @@ public open class CfnModelPackage(
        * used when the model monitor is set using the model package.
        */
       override fun modelDataQuality(modelDataQuality: DriftCheckModelDataQualityProperty) {
-        cdkBuilder.modelDataQuality(modelDataQuality.let(DriftCheckModelDataQualityProperty::unwrap))
+        cdkBuilder.modelDataQuality(modelDataQuality.let(DriftCheckModelDataQualityProperty.Companion::unwrap))
       }
 
       /**
@@ -2843,7 +2843,7 @@ public open class CfnModelPackage(
        * when the model monitor is set using the model package.
        */
       override fun modelQuality(modelQuality: IResolvable) {
-        cdkBuilder.modelQuality(modelQuality.let(IResolvable::unwrap))
+        cdkBuilder.modelQuality(modelQuality.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2851,7 +2851,7 @@ public open class CfnModelPackage(
        * when the model monitor is set using the model package.
        */
       override fun modelQuality(modelQuality: DriftCheckModelQualityProperty) {
-        cdkBuilder.modelQuality(modelQuality.let(DriftCheckModelQualityProperty::unwrap))
+        cdkBuilder.modelQuality(modelQuality.let(DriftCheckModelQualityProperty.Companion::unwrap))
       }
 
       /**
@@ -3046,14 +3046,14 @@ public open class CfnModelPackage(
        * @param configFile The bias config file for a model.
        */
       override fun configFile(configFile: IResolvable) {
-        cdkBuilder.configFile(configFile.let(IResolvable::unwrap))
+        cdkBuilder.configFile(configFile.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param configFile The bias config file for a model.
        */
       override fun configFile(configFile: FileSourceProperty) {
-        cdkBuilder.configFile(configFile.let(FileSourceProperty::unwrap))
+        cdkBuilder.configFile(configFile.let(FileSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -3068,14 +3068,14 @@ public open class CfnModelPackage(
        * @param postTrainingConstraints The post-training constraints.
        */
       override fun postTrainingConstraints(postTrainingConstraints: IResolvable) {
-        cdkBuilder.postTrainingConstraints(postTrainingConstraints.let(IResolvable::unwrap))
+        cdkBuilder.postTrainingConstraints(postTrainingConstraints.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param postTrainingConstraints The post-training constraints.
        */
       override fun postTrainingConstraints(postTrainingConstraints: MetricsSourceProperty) {
-        cdkBuilder.postTrainingConstraints(postTrainingConstraints.let(MetricsSourceProperty::unwrap))
+        cdkBuilder.postTrainingConstraints(postTrainingConstraints.let(MetricsSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -3091,14 +3091,14 @@ public open class CfnModelPackage(
        * @param preTrainingConstraints The pre-training constraints.
        */
       override fun preTrainingConstraints(preTrainingConstraints: IResolvable) {
-        cdkBuilder.preTrainingConstraints(preTrainingConstraints.let(IResolvable::unwrap))
+        cdkBuilder.preTrainingConstraints(preTrainingConstraints.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param preTrainingConstraints The pre-training constraints.
        */
       override fun preTrainingConstraints(preTrainingConstraints: MetricsSourceProperty) {
-        cdkBuilder.preTrainingConstraints(preTrainingConstraints.let(MetricsSourceProperty::unwrap))
+        cdkBuilder.preTrainingConstraints(preTrainingConstraints.let(MetricsSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -3252,14 +3252,14 @@ public open class CfnModelPackage(
        * @param configFile The explainability config file for the model.
        */
       override fun configFile(configFile: IResolvable) {
-        cdkBuilder.configFile(configFile.let(IResolvable::unwrap))
+        cdkBuilder.configFile(configFile.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param configFile The explainability config file for the model.
        */
       override fun configFile(configFile: FileSourceProperty) {
-        cdkBuilder.configFile(configFile.let(FileSourceProperty::unwrap))
+        cdkBuilder.configFile(configFile.let(FileSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -3274,14 +3274,14 @@ public open class CfnModelPackage(
        * @param constraints The drift check explainability constraints.
        */
       override fun constraints(constraints: IResolvable) {
-        cdkBuilder.constraints(constraints.let(IResolvable::unwrap))
+        cdkBuilder.constraints(constraints.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param constraints The drift check explainability constraints.
        */
       override fun constraints(constraints: MetricsSourceProperty) {
-        cdkBuilder.constraints(constraints.let(MetricsSourceProperty::unwrap))
+        cdkBuilder.constraints(constraints.let(MetricsSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -3427,14 +3427,14 @@ public open class CfnModelPackage(
        * @param constraints The drift check model data quality constraints.
        */
       override fun constraints(constraints: IResolvable) {
-        cdkBuilder.constraints(constraints.let(IResolvable::unwrap))
+        cdkBuilder.constraints(constraints.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param constraints The drift check model data quality constraints.
        */
       override fun constraints(constraints: MetricsSourceProperty) {
-        cdkBuilder.constraints(constraints.let(MetricsSourceProperty::unwrap))
+        cdkBuilder.constraints(constraints.let(MetricsSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -3449,14 +3449,14 @@ public open class CfnModelPackage(
        * @param statistics The drift check model data quality statistics.
        */
       override fun statistics(statistics: IResolvable) {
-        cdkBuilder.statistics(statistics.let(IResolvable::unwrap))
+        cdkBuilder.statistics(statistics.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param statistics The drift check model data quality statistics.
        */
       override fun statistics(statistics: MetricsSourceProperty) {
-        cdkBuilder.statistics(statistics.let(MetricsSourceProperty::unwrap))
+        cdkBuilder.statistics(statistics.let(MetricsSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -3603,14 +3603,14 @@ public open class CfnModelPackage(
        * @param constraints The drift check model quality constraints.
        */
       override fun constraints(constraints: IResolvable) {
-        cdkBuilder.constraints(constraints.let(IResolvable::unwrap))
+        cdkBuilder.constraints(constraints.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param constraints The drift check model quality constraints.
        */
       override fun constraints(constraints: MetricsSourceProperty) {
-        cdkBuilder.constraints(constraints.let(MetricsSourceProperty::unwrap))
+        cdkBuilder.constraints(constraints.let(MetricsSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -3625,14 +3625,14 @@ public open class CfnModelPackage(
        * @param statistics The drift check model quality statistics.
        */
       override fun statistics(statistics: IResolvable) {
-        cdkBuilder.statistics(statistics.let(IResolvable::unwrap))
+        cdkBuilder.statistics(statistics.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param statistics The drift check model quality statistics.
        */
       override fun statistics(statistics: MetricsSourceProperty) {
-        cdkBuilder.statistics(statistics.let(MetricsSourceProperty::unwrap))
+        cdkBuilder.statistics(statistics.let(MetricsSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -3745,14 +3745,14 @@ public open class CfnModelPackage(
        * @param report The explainability report for a model.
        */
       override fun report(report: IResolvable) {
-        cdkBuilder.report(report.let(IResolvable::unwrap))
+        cdkBuilder.report(report.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param report The explainability report for a model.
        */
       override fun report(report: MetricsSourceProperty) {
-        cdkBuilder.report(report.let(MetricsSourceProperty::unwrap))
+        cdkBuilder.report(report.let(MetricsSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -4096,7 +4096,7 @@ public open class CfnModelPackage(
        * inference code. 
        */
       override fun containers(containers: IResolvable) {
-        cdkBuilder.containers(containers.let(IResolvable::unwrap))
+        cdkBuilder.containers(containers.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4636,14 +4636,14 @@ public open class CfnModelPackage(
        * @param constraints Data quality constraints for a model.
        */
       override fun constraints(constraints: IResolvable) {
-        cdkBuilder.constraints(constraints.let(IResolvable::unwrap))
+        cdkBuilder.constraints(constraints.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param constraints Data quality constraints for a model.
        */
       override fun constraints(constraints: MetricsSourceProperty) {
-        cdkBuilder.constraints(constraints.let(MetricsSourceProperty::unwrap))
+        cdkBuilder.constraints(constraints.let(MetricsSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -4658,14 +4658,14 @@ public open class CfnModelPackage(
        * @param statistics Data quality statistics for a model.
        */
       override fun statistics(statistics: IResolvable) {
-        cdkBuilder.statistics(statistics.let(IResolvable::unwrap))
+        cdkBuilder.statistics(statistics.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param statistics Data quality statistics for a model.
        */
       override fun statistics(statistics: MetricsSourceProperty) {
-        cdkBuilder.statistics(statistics.let(MetricsSourceProperty::unwrap))
+        cdkBuilder.statistics(statistics.let(MetricsSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -4981,14 +4981,14 @@ public open class CfnModelPackage(
        * @param bias Metrics that measure bias in a model.
        */
       override fun bias(bias: IResolvable) {
-        cdkBuilder.bias(bias.let(IResolvable::unwrap))
+        cdkBuilder.bias(bias.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param bias Metrics that measure bias in a model.
        */
       override fun bias(bias: BiasProperty) {
-        cdkBuilder.bias(bias.let(BiasProperty::unwrap))
+        cdkBuilder.bias(bias.let(BiasProperty.Companion::unwrap))
       }
 
       /**
@@ -5002,14 +5002,14 @@ public open class CfnModelPackage(
        * @param explainability Metrics that help explain a model.
        */
       override fun explainability(explainability: IResolvable) {
-        cdkBuilder.explainability(explainability.let(IResolvable::unwrap))
+        cdkBuilder.explainability(explainability.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param explainability Metrics that help explain a model.
        */
       override fun explainability(explainability: ExplainabilityProperty) {
-        cdkBuilder.explainability(explainability.let(ExplainabilityProperty::unwrap))
+        cdkBuilder.explainability(explainability.let(ExplainabilityProperty.Companion::unwrap))
       }
 
       /**
@@ -5024,14 +5024,14 @@ public open class CfnModelPackage(
        * @param modelDataQuality Metrics that measure the quality of the input data for a model.
        */
       override fun modelDataQuality(modelDataQuality: IResolvable) {
-        cdkBuilder.modelDataQuality(modelDataQuality.let(IResolvable::unwrap))
+        cdkBuilder.modelDataQuality(modelDataQuality.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param modelDataQuality Metrics that measure the quality of the input data for a model.
        */
       override fun modelDataQuality(modelDataQuality: ModelDataQualityProperty) {
-        cdkBuilder.modelDataQuality(modelDataQuality.let(ModelDataQualityProperty::unwrap))
+        cdkBuilder.modelDataQuality(modelDataQuality.let(ModelDataQualityProperty.Companion::unwrap))
       }
 
       /**
@@ -5046,14 +5046,14 @@ public open class CfnModelPackage(
        * @param modelQuality Metrics that measure the quality of a model.
        */
       override fun modelQuality(modelQuality: IResolvable) {
-        cdkBuilder.modelQuality(modelQuality.let(IResolvable::unwrap))
+        cdkBuilder.modelQuality(modelQuality.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param modelQuality Metrics that measure the quality of a model.
        */
       override fun modelQuality(modelQuality: ModelQualityProperty) {
-        cdkBuilder.modelQuality(modelQuality.let(ModelQualityProperty::unwrap))
+        cdkBuilder.modelQuality(modelQuality.let(ModelQualityProperty.Companion::unwrap))
       }
 
       /**
@@ -5323,7 +5323,7 @@ public open class CfnModelPackage(
        * We support up to 16 entries in the map.
        */
       override fun environment(environment: IResolvable) {
-        cdkBuilder.environment(environment.let(IResolvable::unwrap))
+        cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5570,7 +5570,7 @@ public open class CfnModelPackage(
        * @param validationStatuses The validation status of the model package.
        */
       override fun validationStatuses(validationStatuses: IResolvable) {
-        cdkBuilder.validationStatuses(validationStatuses.let(IResolvable::unwrap))
+        cdkBuilder.validationStatuses(validationStatuses.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5850,14 +5850,14 @@ public open class CfnModelPackage(
        * @param constraints Model quality constraints.
        */
       override fun constraints(constraints: IResolvable) {
-        cdkBuilder.constraints(constraints.let(IResolvable::unwrap))
+        cdkBuilder.constraints(constraints.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param constraints Model quality constraints.
        */
       override fun constraints(constraints: MetricsSourceProperty) {
-        cdkBuilder.constraints(constraints.let(MetricsSourceProperty::unwrap))
+        cdkBuilder.constraints(constraints.let(MetricsSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -5872,14 +5872,14 @@ public open class CfnModelPackage(
        * @param statistics Model quality statistics.
        */
       override fun statistics(statistics: IResolvable) {
-        cdkBuilder.statistics(statistics.let(IResolvable::unwrap))
+        cdkBuilder.statistics(statistics.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param statistics Model quality statistics.
        */
       override fun statistics(statistics: MetricsSourceProperty) {
-        cdkBuilder.statistics(statistics.let(MetricsSourceProperty::unwrap))
+        cdkBuilder.statistics(statistics.let(MetricsSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -6449,7 +6449,7 @@ public open class CfnModelPackage(
        * @param sourceAlgorithms A list of the algorithms that were used to create a model package. 
        */
       override fun sourceAlgorithms(sourceAlgorithms: IResolvable) {
-        cdkBuilder.sourceAlgorithms(sourceAlgorithms.let(IResolvable::unwrap))
+        cdkBuilder.sourceAlgorithms(sourceAlgorithms.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6693,7 +6693,7 @@ public open class CfnModelPackage(
        * the input data that the model can consume. 
        */
       override fun dataSource(dataSource: IResolvable) {
-        cdkBuilder.dataSource(dataSource.let(IResolvable::unwrap))
+        cdkBuilder.dataSource(dataSource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6701,7 +6701,7 @@ public open class CfnModelPackage(
        * the input data that the model can consume. 
        */
       override fun dataSource(dataSource: DataSourceProperty) {
-        cdkBuilder.dataSource(dataSource.let(DataSourceProperty::unwrap))
+        cdkBuilder.dataSource(dataSource.let(DataSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -7067,7 +7067,7 @@ public open class CfnModelPackage(
        * We support up to 16 key and values entries in the map.
        */
       override fun environment(environment: IResolvable) {
-        cdkBuilder.environment(environment.let(IResolvable::unwrap))
+        cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7100,7 +7100,7 @@ public open class CfnModelPackage(
        * consumes it. 
        */
       override fun transformInput(transformInput: IResolvable) {
-        cdkBuilder.transformInput(transformInput.let(IResolvable::unwrap))
+        cdkBuilder.transformInput(transformInput.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7108,7 +7108,7 @@ public open class CfnModelPackage(
        * consumes it. 
        */
       override fun transformInput(transformInput: TransformInputProperty) {
-        cdkBuilder.transformInput(transformInput.let(TransformInputProperty::unwrap))
+        cdkBuilder.transformInput(transformInput.let(TransformInputProperty.Companion::unwrap))
       }
 
       /**
@@ -7125,7 +7125,7 @@ public open class CfnModelPackage(
        * save the results from the transform job. 
        */
       override fun transformOutput(transformOutput: IResolvable) {
-        cdkBuilder.transformOutput(transformOutput.let(IResolvable::unwrap))
+        cdkBuilder.transformOutput(transformOutput.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7133,7 +7133,7 @@ public open class CfnModelPackage(
        * save the results from the transform job. 
        */
       override fun transformOutput(transformOutput: TransformOutputProperty) {
-        cdkBuilder.transformOutput(transformOutput.let(TransformOutputProperty::unwrap))
+        cdkBuilder.transformOutput(transformOutput.let(TransformOutputProperty.Companion::unwrap))
       }
 
       /**
@@ -7149,14 +7149,14 @@ public open class CfnModelPackage(
        * @param transformResources Identifies the ML compute instances for the transform job. 
        */
       override fun transformResources(transformResources: IResolvable) {
-        cdkBuilder.transformResources(transformResources.let(IResolvable::unwrap))
+        cdkBuilder.transformResources(transformResources.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param transformResources Identifies the ML compute instances for the transform job. 
        */
       override fun transformResources(transformResources: TransformResourcesProperty) {
-        cdkBuilder.transformResources(transformResources.let(TransformResourcesProperty::unwrap))
+        cdkBuilder.transformResources(transformResources.let(TransformResourcesProperty.Companion::unwrap))
       }
 
       /**
@@ -7938,7 +7938,7 @@ public open class CfnModelPackage(
        * transform job used for the validation of the model package. 
        */
       override fun transformJobDefinition(transformJobDefinition: IResolvable) {
-        cdkBuilder.transformJobDefinition(transformJobDefinition.let(IResolvable::unwrap))
+        cdkBuilder.transformJobDefinition(transformJobDefinition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7946,7 +7946,7 @@ public open class CfnModelPackage(
        * transform job used for the validation of the model package. 
        */
       override fun transformJobDefinition(transformJobDefinition: TransformJobDefinitionProperty) {
-        cdkBuilder.transformJobDefinition(transformJobDefinition.let(TransformJobDefinitionProperty::unwrap))
+        cdkBuilder.transformJobDefinition(transformJobDefinition.let(TransformJobDefinitionProperty.Companion::unwrap))
       }
 
       /**
@@ -8110,7 +8110,7 @@ public open class CfnModelPackage(
        * which specifies a batch transform job that SageMaker runs to validate your model package. 
        */
       override fun validationProfiles(validationProfiles: IResolvable) {
-        cdkBuilder.validationProfiles(validationProfiles.let(IResolvable::unwrap))
+        cdkBuilder.validationProfiles(validationProfiles.let(IResolvable.Companion::unwrap))
       }
 
       /**

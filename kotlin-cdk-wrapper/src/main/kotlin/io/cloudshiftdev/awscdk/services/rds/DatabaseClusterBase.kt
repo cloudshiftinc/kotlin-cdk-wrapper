@@ -30,7 +30,8 @@ public abstract class DatabaseClusterBase(
    * @param options 
    */
   public override fun addProxy(id: String, options: DatabaseProxyOptions): DatabaseProxy =
-      unwrap(this).addProxy(id, options.let(DatabaseProxyOptions::unwrap)).let(DatabaseProxy::wrap)
+      unwrap(this).addProxy(id,
+      options.let(DatabaseProxyOptions.Companion::unwrap)).let(DatabaseProxy::wrap)
 
   /**
    * Add a new db proxy to this cluster.
@@ -100,7 +101,7 @@ public abstract class DatabaseClusterBase(
    * @param dbUser 
    */
   public override fun grantConnect(grantee: IGrantable, dbUser: String): Grant =
-      unwrap(this).grantConnect(grantee.let(IGrantable::unwrap), dbUser).let(Grant::wrap)
+      unwrap(this).grantConnect(grantee.let(IGrantable.Companion::unwrap), dbUser).let(Grant::wrap)
 
   /**
    * Grant the given identity to access the Data API.
@@ -108,7 +109,7 @@ public abstract class DatabaseClusterBase(
    * @param grantee 
    */
   public override fun grantDataApiAccess(grantee: IGrantable): Grant =
-      unwrap(this).grantDataApiAccess(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantDataApiAccess(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Endpoints which address each individual replica.
@@ -137,7 +138,7 @@ public abstract class DatabaseClusterBase(
    * @param props
    */
   public override fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Return the given named metric for this DBCluster.
@@ -168,7 +169,7 @@ public abstract class DatabaseClusterBase(
    * @param props
    */
   public override fun metricCPUUtilization(props: MetricOptions): Metric =
-      unwrap(this).metricCPUUtilization(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricCPUUtilization(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The percentage of CPU utilization.
@@ -200,7 +201,7 @@ public abstract class DatabaseClusterBase(
    * @param props
    */
   public override fun metricDatabaseConnections(props: MetricOptions): Metric =
-      unwrap(this).metricDatabaseConnections(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricDatabaseConnections(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of database connections in use.
@@ -231,7 +232,7 @@ public abstract class DatabaseClusterBase(
    * @param props
    */
   public override fun metricDeadlocks(props: MetricOptions): Metric =
-      unwrap(this).metricDeadlocks(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricDeadlocks(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The average number of deadlocks in the database per second.
@@ -263,7 +264,7 @@ public abstract class DatabaseClusterBase(
    * @param props
    */
   public override fun metricEngineUptime(props: MetricOptions): Metric =
-      unwrap(this).metricEngineUptime(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricEngineUptime(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The amount of time that the instance has been running, in seconds.
@@ -295,7 +296,7 @@ public abstract class DatabaseClusterBase(
    * @param props
    */
   public override fun metricFreeLocalStorage(props: MetricOptions): Metric =
-      unwrap(this).metricFreeLocalStorage(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricFreeLocalStorage(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The amount of local storage available, in bytes.
@@ -327,7 +328,7 @@ public abstract class DatabaseClusterBase(
    * @param props
    */
   public override fun metricFreeableMemory(props: MetricOptions): Metric =
-      unwrap(this).metricFreeableMemory(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricFreeableMemory(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The amount of available random access memory, in bytes.
@@ -359,7 +360,7 @@ public abstract class DatabaseClusterBase(
    * @param props
    */
   public override fun metricNetworkReceiveThroughput(props: MetricOptions): Metric =
-      unwrap(this).metricNetworkReceiveThroughput(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricNetworkReceiveThroughput(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The amount of network throughput received from clients by each instance, in bytes per second.
@@ -393,7 +394,7 @@ public abstract class DatabaseClusterBase(
    * @param props
    */
   public override fun metricNetworkThroughput(props: MetricOptions): Metric =
-      unwrap(this).metricNetworkThroughput(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricNetworkThroughput(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The amount of network throughput both received from and transmitted to clients by each
@@ -426,7 +427,7 @@ public abstract class DatabaseClusterBase(
    * @param props
    */
   public override fun metricNetworkTransmitThroughput(props: MetricOptions): Metric =
-      unwrap(this).metricNetworkTransmitThroughput(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricNetworkTransmitThroughput(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The amount of network throughput sent to clients by each instance, in bytes per second.
@@ -460,7 +461,7 @@ public abstract class DatabaseClusterBase(
    * @param props
    */
   public override fun metricSnapshotStorageUsed(props: MetricOptions): Metric =
-      unwrap(this).metricSnapshotStorageUsed(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricSnapshotStorageUsed(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The total amount of backup storage in bytes consumed by all Aurora snapshots outside its backup
@@ -493,7 +494,7 @@ public abstract class DatabaseClusterBase(
    * @param props
    */
   public override fun metricTotalBackupStorageBilled(props: MetricOptions): Metric =
-      unwrap(this).metricTotalBackupStorageBilled(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricTotalBackupStorageBilled(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The total amount of backup storage in bytes for which you are billed.
@@ -525,7 +526,7 @@ public abstract class DatabaseClusterBase(
    * @param props
    */
   public override fun metricVolumeBytesUsed(props: MetricOptions): Metric =
-      unwrap(this).metricVolumeBytesUsed(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricVolumeBytesUsed(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The amount of storage used by your Aurora DB instance, in bytes.
@@ -557,7 +558,7 @@ public abstract class DatabaseClusterBase(
    * @param props
    */
   public override fun metricVolumeReadIOPs(props: MetricOptions): Metric =
-      unwrap(this).metricVolumeReadIOPs(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricVolumeReadIOPs(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of billed read I/O operations from a cluster volume, reported at 5-minute intervals.
@@ -589,7 +590,7 @@ public abstract class DatabaseClusterBase(
    * @param props
    */
   public override fun metricVolumeWriteIOPs(props: MetricOptions): Metric =
-      unwrap(this).metricVolumeWriteIOPs(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricVolumeWriteIOPs(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of write disk I/O operations to the cluster volume, reported at 5-minute intervals.

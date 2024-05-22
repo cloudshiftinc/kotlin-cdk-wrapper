@@ -245,7 +245,7 @@ public interface CfnRepositoryAssociationProps {
      * values are case sensitive.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

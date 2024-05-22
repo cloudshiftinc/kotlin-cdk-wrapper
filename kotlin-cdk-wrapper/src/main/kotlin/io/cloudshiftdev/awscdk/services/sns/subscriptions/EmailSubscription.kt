@@ -37,7 +37,7 @@ public open class EmailSubscription(
 
   public constructor(emailAddress: String, props: EmailSubscriptionProps) :
       this(software.amazon.awscdk.services.sns.subscriptions.EmailSubscription(emailAddress,
-      props.let(EmailSubscriptionProps::unwrap))
+      props.let(EmailSubscriptionProps.Companion::unwrap))
   )
 
   public constructor(emailAddress: String, props: EmailSubscriptionProps.Builder.() -> Unit) :
@@ -50,7 +50,7 @@ public open class EmailSubscription(
    * @param _topic 
    */
   public override fun bind(topic: ITopic): TopicSubscriptionConfig =
-      unwrap(this).bind(topic.let(ITopic::unwrap)).let(TopicSubscriptionConfig::wrap)
+      unwrap(this).bind(topic.let(ITopic.Companion::unwrap)).let(TopicSubscriptionConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.sns.subscriptions.EmailSubscription].
@@ -118,7 +118,7 @@ public open class EmailSubscription(
      * @param deadLetterQueue Queue to be used as dead letter queue. 
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**

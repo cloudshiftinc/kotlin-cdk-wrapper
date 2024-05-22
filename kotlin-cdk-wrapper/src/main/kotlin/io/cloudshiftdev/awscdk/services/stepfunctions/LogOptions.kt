@@ -76,7 +76,7 @@ public interface LogOptions {
      * @param destination The log group where the execution history events will be logged. 
      */
     override fun destination(destination: ILogGroup) {
-      cdkBuilder.destination(destination.let(ILogGroup::unwrap))
+      cdkBuilder.destination(destination.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -90,7 +90,7 @@ public interface LogOptions {
      * @param level Defines which category of execution history events are logged.
      */
     override fun level(level: LogLevel) {
-      cdkBuilder.level(level.let(LogLevel::unwrap))
+      cdkBuilder.level(level.let(LogLevel.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.LogOptions =

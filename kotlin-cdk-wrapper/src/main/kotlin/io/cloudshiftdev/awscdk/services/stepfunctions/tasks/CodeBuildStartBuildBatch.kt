@@ -59,8 +59,8 @@ public open class CodeBuildStartBuildBatch(
     id: String,
     props: CodeBuildStartBuildBatchProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuildBatch(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CodeBuildStartBuildBatchProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuildBatch(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CodeBuildStartBuildBatchProps.Companion::unwrap))
   )
 
   public constructor(
@@ -291,7 +291,7 @@ public open class CodeBuildStartBuildBatch(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -333,7 +333,7 @@ public open class CodeBuildStartBuildBatch(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -347,7 +347,7 @@ public open class CodeBuildStartBuildBatch(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -382,7 +382,7 @@ public open class CodeBuildStartBuildBatch(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -407,7 +407,7 @@ public open class CodeBuildStartBuildBatch(
      * @param project CodeBuild project to start. 
      */
     override fun project(project: IProject) {
-      cdkBuilder.project(project.let(IProject::unwrap))
+      cdkBuilder.project(project.let(IProject.Companion::unwrap))
     }
 
     /**
@@ -463,7 +463,7 @@ public open class CodeBuildStartBuildBatch(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -476,7 +476,7 @@ public open class CodeBuildStartBuildBatch(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.CodeBuildStartBuildBatch

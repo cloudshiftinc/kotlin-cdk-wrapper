@@ -310,7 +310,7 @@ public interface SecretProps {
      * value.
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -318,7 +318,7 @@ public interface SecretProps {
      * Only one of `secretString` and `generateSecretString` can be provided.
      */
     override fun generateSecretString(generateSecretString: SecretStringGenerator) {
-      cdkBuilder.generateSecretString(generateSecretString.let(SecretStringGenerator::unwrap))
+      cdkBuilder.generateSecretString(generateSecretString.let(SecretStringGenerator.Companion::unwrap))
     }
 
     /**
@@ -335,14 +335,14 @@ public interface SecretProps {
      * @param removalPolicy Policy to apply when the secret is removed from this stack.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
      * @param replicaRegions A list of regions where to replicate this secret.
      */
     override fun replicaRegions(replicaRegions: List<ReplicaRegion>) {
-      cdkBuilder.replicaRegions(replicaRegions.map(ReplicaRegion::unwrap))
+      cdkBuilder.replicaRegions(replicaRegions.map(ReplicaRegion.Companion::unwrap))
     }
 
     /**
@@ -404,7 +404,7 @@ public interface SecretProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun secretStringBeta1(secretStringBeta1: SecretStringValueBeta1) {
-      cdkBuilder.secretStringBeta1(secretStringBeta1.let(SecretStringValueBeta1::unwrap))
+      cdkBuilder.secretStringBeta1(secretStringBeta1.let(SecretStringValueBeta1.Companion::unwrap))
     }
 
     /**
@@ -427,7 +427,7 @@ public interface SecretProps {
      * `generateSecretString` can be provided.
      */
     override fun secretStringValue(secretStringValue: SecretValue) {
-      cdkBuilder.secretStringValue(secretStringValue.let(SecretValue::unwrap))
+      cdkBuilder.secretStringValue(secretStringValue.let(SecretValue.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.secretsmanager.SecretProps =

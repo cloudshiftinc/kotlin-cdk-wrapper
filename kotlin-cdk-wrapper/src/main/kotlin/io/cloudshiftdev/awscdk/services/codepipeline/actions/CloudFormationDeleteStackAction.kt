@@ -63,7 +63,7 @@ public open class CloudFormationDeleteStackAction(
   cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeleteStackAction,
 ) : Action(cdkObject) {
   public constructor(props: CloudFormationDeleteStackActionProps) :
-      this(software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeleteStackAction(props.let(CloudFormationDeleteStackActionProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.actions.CloudFormationDeleteStackAction(props.let(CloudFormationDeleteStackActionProps.Companion::unwrap))
   )
 
   public constructor(props: CloudFormationDeleteStackActionProps.Builder.() -> Unit) :
@@ -76,7 +76,7 @@ public open class CloudFormationDeleteStackAction(
    * @param statement 
    */
   public open fun addToDeploymentRolePolicy(statement: PolicyStatement): Boolean =
-      unwrap(this).addToDeploymentRolePolicy(statement.let(PolicyStatement::unwrap))
+      unwrap(this).addToDeploymentRolePolicy(statement.let(PolicyStatement.Companion::unwrap))
 
   /**
    * Add statement to the service role assumed by CloudFormation while executing this action.
@@ -428,7 +428,7 @@ public open class CloudFormationDeleteStackAction(
      * @param cfnCapabilities Acknowledge certain changes made as part of deployment. 
      */
     override fun cfnCapabilities(cfnCapabilities: List<CfnCapabilities>) {
-      cdkBuilder.cfnCapabilities(cfnCapabilities.map(CfnCapabilities::unwrap))
+      cdkBuilder.cfnCapabilities(cfnCapabilities.map(CfnCapabilities.Companion::unwrap))
     }
 
     /**
@@ -463,7 +463,7 @@ public open class CloudFormationDeleteStackAction(
      * @param deploymentRole IAM role to assume when deploying changes. 
      */
     override fun deploymentRole(deploymentRole: IRole) {
-      cdkBuilder.deploymentRole(deploymentRole.let(IRole::unwrap))
+      cdkBuilder.deploymentRole(deploymentRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -485,7 +485,7 @@ public open class CloudFormationDeleteStackAction(
      * @param extraInputs The list of additional input Artifacts for this Action. 
      */
     override fun extraInputs(extraInputs: List<Artifact>) {
-      cdkBuilder.extraInputs(extraInputs.map(Artifact::unwrap))
+      cdkBuilder.extraInputs(extraInputs.map(Artifact.Companion::unwrap))
     }
 
     /**
@@ -518,7 +518,7 @@ public open class CloudFormationDeleteStackAction(
      * @param output The name of the output artifact to generate. 
      */
     override fun output(output: Artifact) {
-      cdkBuilder.output(output.let(Artifact::unwrap))
+      cdkBuilder.output(output.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -593,7 +593,7 @@ public open class CloudFormationDeleteStackAction(
      * @param role The Role in which context's this Action will be executing in. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -636,7 +636,7 @@ public open class CloudFormationDeleteStackAction(
      * policy. 
      */
     override fun templateConfiguration(templateConfiguration: ArtifactPath) {
-      cdkBuilder.templateConfiguration(templateConfiguration.let(ArtifactPath::unwrap))
+      cdkBuilder.templateConfiguration(templateConfiguration.let(ArtifactPath.Companion::unwrap))
     }
 
     /**

@@ -226,7 +226,7 @@ public interface IVpc : IResource {
      */
     override fun addClientVpnEndpoint(id: String, options: ClientVpnEndpointOptions):
         ClientVpnEndpoint = unwrap(this).addClientVpnEndpoint(id,
-        options.let(ClientVpnEndpointOptions::unwrap)).let(ClientVpnEndpoint::wrap)
+        options.let(ClientVpnEndpointOptions.Companion::unwrap)).let(ClientVpnEndpoint::wrap)
 
     /**
      * Adds a new client VPN endpoint to this VPC.
@@ -255,7 +255,8 @@ public interface IVpc : IResource {
      * @param options
      */
     override fun addFlowLog(id: String, options: FlowLogOptions): FlowLog =
-        unwrap(this).addFlowLog(id, options.let(FlowLogOptions::unwrap)).let(FlowLog::wrap)
+        unwrap(this).addFlowLog(id,
+        options.let(FlowLogOptions.Companion::unwrap)).let(FlowLog::wrap)
 
     /**
      * Adds a new Flow Log to this VPC.
@@ -276,7 +277,7 @@ public interface IVpc : IResource {
      */
     override fun addGatewayEndpoint(id: String, options: GatewayVpcEndpointOptions):
         GatewayVpcEndpoint = unwrap(this).addGatewayEndpoint(id,
-        options.let(GatewayVpcEndpointOptions::unwrap)).let(GatewayVpcEndpoint::wrap)
+        options.let(GatewayVpcEndpointOptions.Companion::unwrap)).let(GatewayVpcEndpoint::wrap)
 
     /**
      * Adds a new gateway endpoint to this VPC.
@@ -298,7 +299,7 @@ public interface IVpc : IResource {
      */
     override fun addInterfaceEndpoint(id: String, options: InterfaceVpcEndpointOptions):
         InterfaceVpcEndpoint = unwrap(this).addInterfaceEndpoint(id,
-        options.let(InterfaceVpcEndpointOptions::unwrap)).let(InterfaceVpcEndpoint::wrap)
+        options.let(InterfaceVpcEndpointOptions.Companion::unwrap)).let(InterfaceVpcEndpoint::wrap)
 
     /**
      * Adds a new interface endpoint to this VPC.
@@ -320,7 +321,7 @@ public interface IVpc : IResource {
      */
     override fun addVpnConnection(id: String, options: VpnConnectionOptions): VpnConnection =
         unwrap(this).addVpnConnection(id,
-        options.let(VpnConnectionOptions::unwrap)).let(VpnConnection::wrap)
+        options.let(VpnConnectionOptions.Companion::unwrap)).let(VpnConnection::wrap)
 
     /**
      * Adds a new VPN connection to this VPC.
@@ -347,7 +348,7 @@ public interface IVpc : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -361,7 +362,7 @@ public interface IVpc : IResource {
      * @param options 
      */
     override fun enableVpnGateway(options: EnableVpnGatewayOptions) {
-      unwrap(this).enableVpnGateway(options.let(EnableVpnGatewayOptions::unwrap))
+      unwrap(this).enableVpnGateway(options.let(EnableVpnGatewayOptions.Companion::unwrap))
     }
 
     /**
@@ -431,7 +432,7 @@ public interface IVpc : IResource {
      * @param selection
      */
     override fun selectSubnets(selection: SubnetSelection): SelectedSubnets =
-        unwrap(this).selectSubnets(selection.let(SubnetSelection::unwrap)).let(SelectedSubnets::wrap)
+        unwrap(this).selectSubnets(selection.let(SubnetSelection.Companion::unwrap)).let(SelectedSubnets::wrap)
 
     /**
      * Return information on the subnets appropriate for the given selection strategy.

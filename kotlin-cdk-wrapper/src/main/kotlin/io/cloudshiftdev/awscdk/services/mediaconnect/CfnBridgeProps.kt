@@ -253,7 +253,7 @@ public interface CfnBridgeProps {
      * flow and is delivered to your premises.
      */
     override fun egressGatewayBridge(egressGatewayBridge: IResolvable) {
-      cdkBuilder.egressGatewayBridge(egressGatewayBridge.let(IResolvable::unwrap))
+      cdkBuilder.egressGatewayBridge(egressGatewayBridge.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -262,7 +262,7 @@ public interface CfnBridgeProps {
      * flow and is delivered to your premises.
      */
     override fun egressGatewayBridge(egressGatewayBridge: CfnBridge.EgressGatewayBridgeProperty) {
-      cdkBuilder.egressGatewayBridge(egressGatewayBridge.let(CfnBridge.EgressGatewayBridgeProperty::unwrap))
+      cdkBuilder.egressGatewayBridge(egressGatewayBridge.let(CfnBridge.EgressGatewayBridgeProperty.Companion::unwrap))
     }
 
     /**
@@ -282,7 +282,7 @@ public interface CfnBridgeProps {
      * delivered to the cloud.
      */
     override fun ingressGatewayBridge(ingressGatewayBridge: IResolvable) {
-      cdkBuilder.ingressGatewayBridge(ingressGatewayBridge.let(IResolvable::unwrap))
+      cdkBuilder.ingressGatewayBridge(ingressGatewayBridge.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -292,7 +292,7 @@ public interface CfnBridgeProps {
      */
     override
         fun ingressGatewayBridge(ingressGatewayBridge: CfnBridge.IngressGatewayBridgeProperty) {
-      cdkBuilder.ingressGatewayBridge(ingressGatewayBridge.let(CfnBridge.IngressGatewayBridgeProperty::unwrap))
+      cdkBuilder.ingressGatewayBridge(ingressGatewayBridge.let(CfnBridge.IngressGatewayBridgeProperty.Companion::unwrap))
     }
 
     /**
@@ -318,7 +318,7 @@ public interface CfnBridgeProps {
      * @param outputs The outputs that you want to add to this bridge.
      */
     override fun outputs(outputs: IResolvable) {
-      cdkBuilder.outputs(outputs.let(IResolvable::unwrap))
+      cdkBuilder.outputs(outputs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -344,14 +344,14 @@ public interface CfnBridgeProps {
      * @param sourceFailoverConfig The settings for source failover.
      */
     override fun sourceFailoverConfig(sourceFailoverConfig: IResolvable) {
-      cdkBuilder.sourceFailoverConfig(sourceFailoverConfig.let(IResolvable::unwrap))
+      cdkBuilder.sourceFailoverConfig(sourceFailoverConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param sourceFailoverConfig The settings for source failover.
      */
     override fun sourceFailoverConfig(sourceFailoverConfig: CfnBridge.FailoverConfigProperty) {
-      cdkBuilder.sourceFailoverConfig(sourceFailoverConfig.let(CfnBridge.FailoverConfigProperty::unwrap))
+      cdkBuilder.sourceFailoverConfig(sourceFailoverConfig.let(CfnBridge.FailoverConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -367,7 +367,7 @@ public interface CfnBridgeProps {
      * @param sources The sources that you want to add to this bridge. 
      */
     override fun sources(sources: IResolvable) {
-      cdkBuilder.sources(sources.let(IResolvable::unwrap))
+      cdkBuilder.sources(sources.let(IResolvable.Companion::unwrap))
     }
 
     /**

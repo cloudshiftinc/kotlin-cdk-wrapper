@@ -94,8 +94,8 @@ public open class CfnDBInstance(
     id: String,
     props: CfnDBInstanceProps,
   ) :
-      this(software.amazon.awscdk.services.neptune.CfnDBInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDBInstanceProps::unwrap))
+      this(software.amazon.awscdk.services.neptune.CfnDBInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDBInstanceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -121,7 +121,7 @@ public open class CfnDBInstance(
    * Indicates that major version upgrades are allowed.
    */
   public open fun allowMajorVersionUpgrade(`value`: IResolvable) {
-    unwrap(this).setAllowMajorVersionUpgrade(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAllowMajorVersionUpgrade(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -159,7 +159,7 @@ public open class CfnDBInstance(
    * Indicates that minor version patches are applied automatically.
    */
   public open fun autoMinorVersionUpgrade(`value`: IResolvable) {
-    unwrap(this).setAutoMinorVersionUpgrade(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoMinorVersionUpgrade(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -256,7 +256,7 @@ public open class CfnDBInstance(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -289,7 +289,7 @@ public open class CfnDBInstance(
    * An arbitrary set of tags (key-value pairs) for this DB instance.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -500,7 +500,7 @@ public open class CfnDBInstance(
      * @param allowMajorVersionUpgrade Indicates that major version upgrades are allowed. 
      */
     override fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: IResolvable) {
-      cdkBuilder.allowMajorVersionUpgrade(allowMajorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.allowMajorVersionUpgrade(allowMajorVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -526,7 +526,7 @@ public open class CfnDBInstance(
      * automatically. 
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -639,7 +639,7 @@ public open class CfnDBInstance(
      * @param tags An arbitrary set of tags (key-value pairs) for this DB instance. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

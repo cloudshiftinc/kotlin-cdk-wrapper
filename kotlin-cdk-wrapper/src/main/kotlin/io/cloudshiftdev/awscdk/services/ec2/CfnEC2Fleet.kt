@@ -178,8 +178,8 @@ public open class CfnEC2Fleet(
     id: String,
     props: CfnEC2FleetProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnEC2Fleet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEC2FleetProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnEC2Fleet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEC2FleetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -227,7 +227,7 @@ public open class CfnEC2Fleet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -239,7 +239,7 @@ public open class CfnEC2Fleet(
    * The configuration for the EC2 Fleet.
    */
   public open fun launchTemplateConfigs(`value`: IResolvable) {
-    unwrap(this).setLaunchTemplateConfigs(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLaunchTemplateConfigs(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -264,14 +264,14 @@ public open class CfnEC2Fleet(
    * Describes the configuration of On-Demand Instances in an EC2 Fleet.
    */
   public open fun onDemandOptions(`value`: IResolvable) {
-    unwrap(this).setOnDemandOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOnDemandOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Describes the configuration of On-Demand Instances in an EC2 Fleet.
    */
   public open fun onDemandOptions(`value`: OnDemandOptionsRequestProperty) {
-    unwrap(this).setOnDemandOptions(`value`.let(OnDemandOptionsRequestProperty::unwrap))
+    unwrap(this).setOnDemandOptions(`value`.let(OnDemandOptionsRequestProperty.Companion::unwrap))
   }
 
   /**
@@ -298,7 +298,7 @@ public open class CfnEC2Fleet(
    * Indicates whether EC2 Fleet should replace unhealthy Spot Instances.
    */
   public open fun replaceUnhealthyInstances(`value`: IResolvable) {
-    unwrap(this).setReplaceUnhealthyInstances(`value`.let(IResolvable::unwrap))
+    unwrap(this).setReplaceUnhealthyInstances(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -310,14 +310,14 @@ public open class CfnEC2Fleet(
    * Describes the configuration of Spot Instances in an EC2 Fleet.
    */
   public open fun spotOptions(`value`: IResolvable) {
-    unwrap(this).setSpotOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSpotOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Describes the configuration of Spot Instances in an EC2 Fleet.
    */
   public open fun spotOptions(`value`: SpotOptionsRequestProperty) {
-    unwrap(this).setSpotOptions(`value`.let(SpotOptionsRequestProperty::unwrap))
+    unwrap(this).setSpotOptions(`value`.let(SpotOptionsRequestProperty.Companion::unwrap))
   }
 
   /**
@@ -343,7 +343,7 @@ public open class CfnEC2Fleet(
    * resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources) .
    */
   public open fun tagSpecifications(`value`: IResolvable) {
-    unwrap(this).setTagSpecifications(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTagSpecifications(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -373,14 +373,14 @@ public open class CfnEC2Fleet(
    * The number of units to request.
    */
   public open fun targetCapacitySpecification(`value`: IResolvable) {
-    unwrap(this).setTargetCapacitySpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTargetCapacitySpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The number of units to request.
    */
   public open fun targetCapacitySpecification(`value`: TargetCapacitySpecificationRequestProperty) {
-    unwrap(this).setTargetCapacitySpecification(`value`.let(TargetCapacitySpecificationRequestProperty::unwrap))
+    unwrap(this).setTargetCapacitySpecification(`value`.let(TargetCapacitySpecificationRequestProperty.Companion::unwrap))
   }
 
   /**
@@ -409,7 +409,7 @@ public open class CfnEC2Fleet(
    * Indicates whether running instances should be terminated when the EC2 Fleet expires.
    */
   public open fun terminateInstancesWithExpiration(`value`: IResolvable) {
-    unwrap(this).setTerminateInstancesWithExpiration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTerminateInstancesWithExpiration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -778,7 +778,7 @@ public open class CfnEC2Fleet(
      * @param launchTemplateConfigs The configuration for the EC2 Fleet. 
      */
     override fun launchTemplateConfigs(launchTemplateConfigs: IResolvable) {
-      cdkBuilder.launchTemplateConfigs(launchTemplateConfigs.let(IResolvable::unwrap))
+      cdkBuilder.launchTemplateConfigs(launchTemplateConfigs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -807,7 +807,7 @@ public open class CfnEC2Fleet(
      * @param onDemandOptions Describes the configuration of On-Demand Instances in an EC2 Fleet. 
      */
     override fun onDemandOptions(onDemandOptions: IResolvable) {
-      cdkBuilder.onDemandOptions(onDemandOptions.let(IResolvable::unwrap))
+      cdkBuilder.onDemandOptions(onDemandOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -817,7 +817,7 @@ public open class CfnEC2Fleet(
      * @param onDemandOptions Describes the configuration of On-Demand Instances in an EC2 Fleet. 
      */
     override fun onDemandOptions(onDemandOptions: OnDemandOptionsRequestProperty) {
-      cdkBuilder.onDemandOptions(onDemandOptions.let(OnDemandOptionsRequestProperty::unwrap))
+      cdkBuilder.onDemandOptions(onDemandOptions.let(OnDemandOptionsRequestProperty.Companion::unwrap))
     }
 
     /**
@@ -859,7 +859,7 @@ public open class CfnEC2Fleet(
      * Instances. 
      */
     override fun replaceUnhealthyInstances(replaceUnhealthyInstances: IResolvable) {
-      cdkBuilder.replaceUnhealthyInstances(replaceUnhealthyInstances.let(IResolvable::unwrap))
+      cdkBuilder.replaceUnhealthyInstances(replaceUnhealthyInstances.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -869,7 +869,7 @@ public open class CfnEC2Fleet(
      * @param spotOptions Describes the configuration of Spot Instances in an EC2 Fleet. 
      */
     override fun spotOptions(spotOptions: IResolvable) {
-      cdkBuilder.spotOptions(spotOptions.let(IResolvable::unwrap))
+      cdkBuilder.spotOptions(spotOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -879,7 +879,7 @@ public open class CfnEC2Fleet(
      * @param spotOptions Describes the configuration of Spot Instances in an EC2 Fleet. 
      */
     override fun spotOptions(spotOptions: SpotOptionsRequestProperty) {
-      cdkBuilder.spotOptions(spotOptions.let(SpotOptionsRequestProperty::unwrap))
+      cdkBuilder.spotOptions(spotOptions.let(SpotOptionsRequestProperty.Companion::unwrap))
     }
 
     /**
@@ -913,7 +913,7 @@ public open class CfnEC2Fleet(
      * resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources) . 
      */
     override fun tagSpecifications(tagSpecifications: IResolvable) {
-      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -968,7 +968,7 @@ public open class CfnEC2Fleet(
      * @param targetCapacitySpecification The number of units to request. 
      */
     override fun targetCapacitySpecification(targetCapacitySpecification: IResolvable) {
-      cdkBuilder.targetCapacitySpecification(targetCapacitySpecification.let(IResolvable::unwrap))
+      cdkBuilder.targetCapacitySpecification(targetCapacitySpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -979,7 +979,7 @@ public open class CfnEC2Fleet(
      */
     override
         fun targetCapacitySpecification(targetCapacitySpecification: TargetCapacitySpecificationRequestProperty) {
-      cdkBuilder.targetCapacitySpecification(targetCapacitySpecification.let(TargetCapacitySpecificationRequestProperty::unwrap))
+      cdkBuilder.targetCapacitySpecification(targetCapacitySpecification.let(TargetCapacitySpecificationRequestProperty.Companion::unwrap))
     }
 
     /**
@@ -1014,7 +1014,7 @@ public open class CfnEC2Fleet(
      * terminated when the EC2 Fleet expires. 
      */
     override fun terminateInstancesWithExpiration(terminateInstancesWithExpiration: IResolvable) {
-      cdkBuilder.terminateInstancesWithExpiration(terminateInstancesWithExpiration.let(IResolvable::unwrap))
+      cdkBuilder.terminateInstancesWithExpiration(terminateInstancesWithExpiration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1963,7 +1963,7 @@ public open class CfnEC2Fleet(
        * You must specify either the launch template ID or launch template name in the request.
        */
       override fun launchTemplateSpecification(launchTemplateSpecification: IResolvable) {
-        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(IResolvable::unwrap))
+        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1972,7 +1972,7 @@ public open class CfnEC2Fleet(
        */
       override
           fun launchTemplateSpecification(launchTemplateSpecification: FleetLaunchTemplateSpecificationRequestProperty) {
-        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(FleetLaunchTemplateSpecificationRequestProperty::unwrap))
+        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(FleetLaunchTemplateSpecificationRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -1993,7 +1993,7 @@ public open class CfnEC2Fleet(
        * launch templates.
        */
       override fun overrides(overrides: IResolvable) {
-        cdkBuilder.overrides(overrides.let(IResolvable::unwrap))
+        cdkBuilder.overrides(overrides.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2388,7 +2388,7 @@ public open class CfnEC2Fleet(
        * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
        */
       override fun instanceRequirements(instanceRequirements: IResolvable) {
-        cdkBuilder.instanceRequirements(instanceRequirements.let(IResolvable::unwrap))
+        cdkBuilder.instanceRequirements(instanceRequirements.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2400,7 +2400,7 @@ public open class CfnEC2Fleet(
        * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
        */
       override fun instanceRequirements(instanceRequirements: InstanceRequirementsRequestProperty) {
-        cdkBuilder.instanceRequirements(instanceRequirements.let(InstanceRequirementsRequestProperty::unwrap))
+        cdkBuilder.instanceRequirements(instanceRequirements.let(InstanceRequirementsRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -2446,14 +2446,14 @@ public open class CfnEC2Fleet(
        * @param placement The location where the instance launched, if applicable.
        */
       override fun placement(placement: IResolvable) {
-        cdkBuilder.placement(placement.let(IResolvable::unwrap))
+        cdkBuilder.placement(placement.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param placement The location where the instance launched, if applicable.
        */
       override fun placement(placement: PlacementProperty) {
-        cdkBuilder.placement(placement.let(PlacementProperty::unwrap))
+        cdkBuilder.placement(placement.let(PlacementProperty.Companion::unwrap))
       }
 
       /**
@@ -3969,7 +3969,7 @@ public open class CfnEC2Fleet(
        * Default: No minimum or maximum limits
        */
       override fun acceleratorCount(acceleratorCount: IResolvable) {
-        cdkBuilder.acceleratorCount(acceleratorCount.let(IResolvable::unwrap))
+        cdkBuilder.acceleratorCount(acceleratorCount.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3980,7 +3980,7 @@ public open class CfnEC2Fleet(
        * Default: No minimum or maximum limits
        */
       override fun acceleratorCount(acceleratorCount: AcceleratorCountRequestProperty) {
-        cdkBuilder.acceleratorCount(acceleratorCount.let(AcceleratorCountRequestProperty::unwrap))
+        cdkBuilder.acceleratorCount(acceleratorCount.let(AcceleratorCountRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4072,7 +4072,7 @@ public open class CfnEC2Fleet(
        * Default: No minimum or maximum limits
        */
       override fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable) {
-        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(IResolvable::unwrap))
+        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4082,7 +4082,7 @@ public open class CfnEC2Fleet(
        */
       override
           fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBRequestProperty) {
-        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(AcceleratorTotalMemoryMiBRequestProperty::unwrap))
+        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(AcceleratorTotalMemoryMiBRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4186,7 +4186,7 @@ public open class CfnEC2Fleet(
        * Default: No minimum or maximum limits
        */
       override fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: IResolvable) {
-        cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(IResolvable::unwrap))
+        cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4200,7 +4200,7 @@ public open class CfnEC2Fleet(
        */
       override
           fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsRequestProperty) {
-        cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(BaselineEbsBandwidthMbpsRequestProperty::unwrap))
+        cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(BaselineEbsBandwidthMbpsRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4419,7 +4419,7 @@ public open class CfnEC2Fleet(
        * Default: No minimum or maximum limits
        */
       override fun memoryGiBPerVCpu(memoryGiBPerVCpu: IResolvable) {
-        cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(IResolvable::unwrap))
+        cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4427,7 +4427,7 @@ public open class CfnEC2Fleet(
        * Default: No minimum or maximum limits
        */
       override fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuRequestProperty) {
-        cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(MemoryGiBPerVCpuRequestProperty::unwrap))
+        cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(MemoryGiBPerVCpuRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4444,14 +4444,14 @@ public open class CfnEC2Fleet(
        * @param memoryMiB The minimum and maximum amount of memory, in MiB.
        */
       override fun memoryMiB(memoryMiB: IResolvable) {
-        cdkBuilder.memoryMiB(memoryMiB.let(IResolvable::unwrap))
+        cdkBuilder.memoryMiB(memoryMiB.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param memoryMiB The minimum and maximum amount of memory, in MiB.
        */
       override fun memoryMiB(memoryMiB: MemoryMiBRequestProperty) {
-        cdkBuilder.memoryMiB(memoryMiB.let(MemoryMiBRequestProperty::unwrap))
+        cdkBuilder.memoryMiB(memoryMiB.let(MemoryMiBRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4472,7 +4472,7 @@ public open class CfnEC2Fleet(
        * Default: No minimum or maximum limits
        */
       override fun networkBandwidthGbps(networkBandwidthGbps: IResolvable) {
-        cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(IResolvable::unwrap))
+        cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4485,7 +4485,7 @@ public open class CfnEC2Fleet(
        * Default: No minimum or maximum limits
        */
       override fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsRequestProperty) {
-        cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(NetworkBandwidthGbpsRequestProperty::unwrap))
+        cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(NetworkBandwidthGbpsRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4508,7 +4508,7 @@ public open class CfnEC2Fleet(
        * Default: No minimum or maximum limits
        */
       override fun networkInterfaceCount(networkInterfaceCount: IResolvable) {
-        cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(IResolvable::unwrap))
+        cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4517,7 +4517,7 @@ public open class CfnEC2Fleet(
        */
       override
           fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountRequestProperty) {
-        cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(NetworkInterfaceCountRequestProperty::unwrap))
+        cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(NetworkInterfaceCountRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4583,7 +4583,7 @@ public open class CfnEC2Fleet(
        * Default: `false`
        */
       override fun requireHibernateSupport(requireHibernateSupport: IResolvable) {
-        cdkBuilder.requireHibernateSupport(requireHibernateSupport.let(IResolvable::unwrap))
+        cdkBuilder.requireHibernateSupport(requireHibernateSupport.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4630,7 +4630,7 @@ public open class CfnEC2Fleet(
        * Default: No minimum or maximum limits
        */
       override fun totalLocalStorageGb(totalLocalStorageGb: IResolvable) {
-        cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(IResolvable::unwrap))
+        cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4638,7 +4638,7 @@ public open class CfnEC2Fleet(
        * Default: No minimum or maximum limits
        */
       override fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBRequestProperty) {
-        cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(TotalLocalStorageGBRequestProperty::unwrap))
+        cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(TotalLocalStorageGBRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4655,14 +4655,14 @@ public open class CfnEC2Fleet(
        * @param vCpuCount The minimum and maximum number of vCPUs.
        */
       override fun vCpuCount(vCpuCount: IResolvable) {
-        cdkBuilder.vCpuCount(vCpuCount.let(IResolvable::unwrap))
+        cdkBuilder.vCpuCount(vCpuCount.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param vCpuCount The minimum and maximum number of vCPUs.
        */
       override fun vCpuCount(vCpuCount: VCpuCountRangeRequestProperty) {
-        cdkBuilder.vCpuCount(vCpuCount.let(VCpuCountRangeRequestProperty::unwrap))
+        cdkBuilder.vCpuCount(vCpuCount.let(VCpuCountRangeRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -5172,7 +5172,7 @@ public open class CfnEC2Fleet(
        * Instance is at an elevated risk of being interrupted.
        */
       override fun capacityRebalance(capacityRebalance: IResolvable) {
-        cdkBuilder.capacityRebalance(capacityRebalance.let(IResolvable::unwrap))
+        cdkBuilder.capacityRebalance(capacityRebalance.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5180,7 +5180,7 @@ public open class CfnEC2Fleet(
        * Instance is at an elevated risk of being interrupted.
        */
       override fun capacityRebalance(capacityRebalance: CapacityRebalanceProperty) {
-        cdkBuilder.capacityRebalance(capacityRebalance.let(CapacityRebalanceProperty::unwrap))
+        cdkBuilder.capacityRebalance(capacityRebalance.let(CapacityRebalanceProperty.Companion::unwrap))
       }
 
       /**
@@ -5950,7 +5950,7 @@ public open class CfnEC2Fleet(
        * Supported only for fleets of type `instant` .
        */
       override fun capacityReservationOptions(capacityReservationOptions: IResolvable) {
-        cdkBuilder.capacityReservationOptions(capacityReservationOptions.let(IResolvable::unwrap))
+        cdkBuilder.capacityReservationOptions(capacityReservationOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5960,7 +5960,7 @@ public open class CfnEC2Fleet(
        */
       override
           fun capacityReservationOptions(capacityReservationOptions: CapacityReservationOptionsRequestProperty) {
-        cdkBuilder.capacityReservationOptions(capacityReservationOptions.let(CapacityReservationOptionsRequestProperty::unwrap))
+        cdkBuilder.capacityReservationOptions(capacityReservationOptions.let(CapacityReservationOptionsRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -6019,7 +6019,7 @@ public open class CfnEC2Fleet(
        * Supported only for fleets of type `instant` .
        */
       override fun singleAvailabilityZone(singleAvailabilityZone: IResolvable) {
-        cdkBuilder.singleAvailabilityZone(singleAvailabilityZone.let(IResolvable::unwrap))
+        cdkBuilder.singleAvailabilityZone(singleAvailabilityZone.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6037,7 +6037,7 @@ public open class CfnEC2Fleet(
        * Supported only for fleets of type `instant` .
        */
       override fun singleInstanceType(singleInstanceType: IResolvable) {
-        cdkBuilder.singleInstanceType(singleInstanceType.let(IResolvable::unwrap))
+        cdkBuilder.singleInstanceType(singleInstanceType.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -6862,7 +6862,7 @@ public open class CfnEC2Fleet(
        * elevated risk of being interrupted.
        */
       override fun maintenanceStrategies(maintenanceStrategies: IResolvable) {
-        cdkBuilder.maintenanceStrategies(maintenanceStrategies.let(IResolvable::unwrap))
+        cdkBuilder.maintenanceStrategies(maintenanceStrategies.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6870,7 +6870,7 @@ public open class CfnEC2Fleet(
        * elevated risk of being interrupted.
        */
       override fun maintenanceStrategies(maintenanceStrategies: MaintenanceStrategiesProperty) {
-        cdkBuilder.maintenanceStrategies(maintenanceStrategies.let(MaintenanceStrategiesProperty::unwrap))
+        cdkBuilder.maintenanceStrategies(maintenanceStrategies.let(MaintenanceStrategiesProperty.Companion::unwrap))
       }
 
       /**
@@ -6931,7 +6931,7 @@ public open class CfnEC2Fleet(
        * Supported only for fleets of type `instant` .
        */
       override fun singleAvailabilityZone(singleAvailabilityZone: IResolvable) {
-        cdkBuilder.singleAvailabilityZone(singleAvailabilityZone.let(IResolvable::unwrap))
+        cdkBuilder.singleAvailabilityZone(singleAvailabilityZone.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6949,7 +6949,7 @@ public open class CfnEC2Fleet(
        * Supported only for fleets of type `instant` .
        */
       override fun singleInstanceType(singleInstanceType: IResolvable) {
-        cdkBuilder.singleInstanceType(singleInstanceType.let(IResolvable::unwrap))
+        cdkBuilder.singleInstanceType(singleInstanceType.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.ec2.CfnEC2Fleet.SpotOptionsRequestProperty
@@ -7165,7 +7165,7 @@ public open class CfnEC2Fleet(
        * @param tags The tags to apply to the resource.
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**

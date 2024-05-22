@@ -203,7 +203,7 @@ public interface CfnTLSInspectionConfigurationProps {
      * @param tags The key:value pairs to associate with the resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -226,7 +226,7 @@ public interface CfnTLSInspectionConfigurationProps {
      * in the *AWS Network Firewall Developer Guide* .
      */
     override fun tlsInspectionConfiguration(tlsInspectionConfiguration: IResolvable) {
-      cdkBuilder.tlsInspectionConfiguration(tlsInspectionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.tlsInspectionConfiguration(tlsInspectionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -245,7 +245,7 @@ public interface CfnTLSInspectionConfigurationProps {
      */
     override
         fun tlsInspectionConfiguration(tlsInspectionConfiguration: CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty) {
-      cdkBuilder.tlsInspectionConfiguration(tlsInspectionConfiguration.let(CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty::unwrap))
+      cdkBuilder.tlsInspectionConfiguration(tlsInspectionConfiguration.let(CfnTLSInspectionConfiguration.TLSInspectionConfigurationProperty.Companion::unwrap))
     }
 
     /**

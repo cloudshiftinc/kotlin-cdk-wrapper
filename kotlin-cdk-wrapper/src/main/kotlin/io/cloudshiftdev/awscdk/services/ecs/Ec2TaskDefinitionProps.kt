@@ -181,7 +181,7 @@ public interface Ec2TaskDefinitionProps : CommonTaskDefinitionProps {
      * The role will be used to retrieve container images from ECR and create CloudWatch log groups.
      */
     override fun executionRole(executionRole: IRole) {
-      cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
+      cdkBuilder.executionRole(executionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -198,7 +198,7 @@ public interface Ec2TaskDefinitionProps : CommonTaskDefinitionProps {
      * Not supported in Fargate.
      */
     override fun inferenceAccelerators(inferenceAccelerators: List<InferenceAccelerator>) {
-      cdkBuilder.inferenceAccelerators(inferenceAccelerators.map(InferenceAccelerator::unwrap))
+      cdkBuilder.inferenceAccelerators(inferenceAccelerators.map(InferenceAccelerator.Companion::unwrap))
     }
 
     /**
@@ -214,7 +214,7 @@ public interface Ec2TaskDefinitionProps : CommonTaskDefinitionProps {
      * Not supported in Fargate and Windows containers.
      */
     override fun ipcMode(ipcMode: IpcMode) {
-      cdkBuilder.ipcMode(ipcMode.let(IpcMode::unwrap))
+      cdkBuilder.ipcMode(ipcMode.let(IpcMode.Companion::unwrap))
     }
 
     /**
@@ -222,7 +222,7 @@ public interface Ec2TaskDefinitionProps : CommonTaskDefinitionProps {
      * The valid values are NONE, BRIDGE, AWS_VPC, and HOST.
      */
     override fun networkMode(networkMode: NetworkMode) {
-      cdkBuilder.networkMode(networkMode.let(NetworkMode::unwrap))
+      cdkBuilder.networkMode(networkMode.let(NetworkMode.Companion::unwrap))
     }
 
     /**
@@ -230,7 +230,7 @@ public interface Ec2TaskDefinitionProps : CommonTaskDefinitionProps {
      * Not supported in Windows containers.
      */
     override fun pidMode(pidMode: PidMode) {
-      cdkBuilder.pidMode(pidMode.let(PidMode::unwrap))
+      cdkBuilder.pidMode(pidMode.let(PidMode.Companion::unwrap))
     }
 
     /**
@@ -240,7 +240,7 @@ public interface Ec2TaskDefinitionProps : CommonTaskDefinitionProps {
      * constraints in the task definition and those specified at run time).
      */
     override fun placementConstraints(placementConstraints: List<PlacementConstraint>) {
-      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint::unwrap))
+      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint.Companion::unwrap))
     }
 
     /**
@@ -256,7 +256,7 @@ public interface Ec2TaskDefinitionProps : CommonTaskDefinitionProps {
      * @param proxyConfiguration The configuration details for the App Mesh proxy.
      */
     override fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
-      cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfiguration::unwrap))
+      cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfiguration.Companion::unwrap))
     }
 
     /**
@@ -264,7 +264,7 @@ public interface Ec2TaskDefinitionProps : CommonTaskDefinitionProps {
      * call AWS APIs on your behalf.
      */
     override fun taskRole(taskRole: IRole) {
-      cdkBuilder.taskRole(taskRole.let(IRole::unwrap))
+      cdkBuilder.taskRole(taskRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -274,7 +274,7 @@ public interface Ec2TaskDefinitionProps : CommonTaskDefinitionProps {
      * Volumes](https://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html#volumes).
      */
     override fun volumes(volumes: List<Volume>) {
-      cdkBuilder.volumes(volumes.map(Volume::unwrap))
+      cdkBuilder.volumes(volumes.map(Volume.Companion::unwrap))
     }
 
     /**

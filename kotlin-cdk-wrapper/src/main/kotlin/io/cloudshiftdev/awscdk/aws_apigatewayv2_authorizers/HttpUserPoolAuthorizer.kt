@@ -40,7 +40,7 @@ public open class HttpUserPoolAuthorizer(
 ) : CdkObject(cdkObject), IHttpRouteAuthorizer {
   public constructor(id: String, pool: CloudshiftdevAwscdkServicesCognitoIUserPool) :
       this(software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpUserPoolAuthorizer(id,
-      pool.let(CloudshiftdevAwscdkServicesCognitoIUserPool::unwrap))
+      pool.let(CloudshiftdevAwscdkServicesCognitoIUserPool.Companion::unwrap))
   )
 
   public constructor(
@@ -48,8 +48,8 @@ public open class HttpUserPoolAuthorizer(
     pool: CloudshiftdevAwscdkServicesCognitoIUserPool,
     props: HttpUserPoolAuthorizerProps,
   ) : this(software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpUserPoolAuthorizer(id,
-      pool.let(CloudshiftdevAwscdkServicesCognitoIUserPool::unwrap),
-      props.let(HttpUserPoolAuthorizerProps::unwrap))
+      pool.let(CloudshiftdevAwscdkServicesCognitoIUserPool.Companion::unwrap),
+      props.let(HttpUserPoolAuthorizerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -65,7 +65,7 @@ public open class HttpUserPoolAuthorizer(
    * @param options 
    */
   public override fun bind(options: HttpRouteAuthorizerBindOptions): HttpRouteAuthorizerConfig =
-      unwrap(this).bind(options.let(HttpRouteAuthorizerBindOptions::unwrap)).let(HttpRouteAuthorizerConfig::wrap)
+      unwrap(this).bind(options.let(HttpRouteAuthorizerBindOptions.Companion::unwrap)).let(HttpRouteAuthorizerConfig::wrap)
 
   /**
    * Bind this authorizer to a specified Http route.
@@ -190,7 +190,7 @@ public open class HttpUserPoolAuthorizer(
      * the user pool. 
      */
     override fun userPoolClients(userPoolClients: List<IUserPoolClient>) {
-      cdkBuilder.userPoolClients(userPoolClients.map(IUserPoolClient::unwrap))
+      cdkBuilder.userPoolClients(userPoolClients.map(IUserPoolClient.Companion::unwrap))
     }
 
     /**

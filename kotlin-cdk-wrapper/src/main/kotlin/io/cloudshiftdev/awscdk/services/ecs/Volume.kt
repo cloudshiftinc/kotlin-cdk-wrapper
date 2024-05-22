@@ -211,7 +211,7 @@ public interface Volume {
      * To use bind mounts, specify a host instead.
      */
     override fun dockerVolumeConfiguration(dockerVolumeConfiguration: DockerVolumeConfiguration) {
-      cdkBuilder.dockerVolumeConfiguration(dockerVolumeConfiguration.let(DockerVolumeConfiguration::unwrap))
+      cdkBuilder.dockerVolumeConfiguration(dockerVolumeConfiguration.let(DockerVolumeConfiguration.Companion::unwrap))
     }
 
     /**
@@ -237,7 +237,7 @@ public interface Volume {
      * but is not visible in CloudWatch Container Insights.
      */
     override fun efsVolumeConfiguration(efsVolumeConfiguration: EfsVolumeConfiguration) {
-      cdkBuilder.efsVolumeConfiguration(efsVolumeConfiguration.let(EfsVolumeConfiguration::unwrap))
+      cdkBuilder.efsVolumeConfiguration(efsVolumeConfiguration.let(EfsVolumeConfiguration.Companion::unwrap))
     }
 
     /**
@@ -268,7 +268,7 @@ public interface Volume {
      * after the containers associated with it stop running.
      */
     override fun host(host: Host) {
-      cdkBuilder.host(host.let(Host::unwrap))
+      cdkBuilder.host(host.let(Host.Companion::unwrap))
     }
 
     /**

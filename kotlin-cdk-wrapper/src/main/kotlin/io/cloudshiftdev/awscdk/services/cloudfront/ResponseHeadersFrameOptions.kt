@@ -100,7 +100,7 @@ public interface ResponseHeadersFrameOptions {
      * @param frameOption The value of the X-Frame-Options HTTP response header. 
      */
     override fun frameOption(frameOption: HeadersFrameOption) {
-      cdkBuilder.frameOption(frameOption.let(HeadersFrameOption::unwrap))
+      cdkBuilder.frameOption(frameOption.let(HeadersFrameOption.Companion::unwrap))
     }
 
     /**

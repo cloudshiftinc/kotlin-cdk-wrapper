@@ -36,7 +36,7 @@ public abstract class WebSocketRouteIntegration(
    */
   public open fun bind(options: WebSocketRouteIntegrationBindOptions):
       WebSocketRouteIntegrationConfig =
-      unwrap(this).bind(options.let(WebSocketRouteIntegrationBindOptions::unwrap)).let(WebSocketRouteIntegrationConfig::wrap)
+      unwrap(this).bind(options.let(WebSocketRouteIntegrationBindOptions.Companion::unwrap)).let(WebSocketRouteIntegrationConfig::wrap)
 
   /**
    * Bind this integration to the route.

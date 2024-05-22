@@ -29,6 +29,7 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .as2Config(as2Config)
  * .loggingRole("loggingRole")
+ * .securityPolicyName("securityPolicyName")
  * .sftpConfig(SftpConfigProperty.builder()
  * .trustedHostKeys(List.of("trustedHostKeys"))
  * .userSecretId("userSecretId")
@@ -91,6 +92,13 @@ public interface CfnConnectorProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-connector.html#cfn-transfer-connector-loggingrole)
    */
   public fun loggingRole(): String? = unwrap(this).getLoggingRole()
+
+  /**
+   * The text name of the security policy for the specified connector.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-connector.html#cfn-transfer-connector-securitypolicyname)
+   */
+  public fun securityPolicyName(): String? = unwrap(this).getSecurityPolicyName()
 
   /**
    * A structure that contains the parameters for an SFTP connector object.
@@ -158,6 +166,11 @@ public interface CfnConnectorProps {
      * When set, you can view connector activity in your CloudWatch logs.
      */
     public fun loggingRole(loggingRole: String)
+
+    /**
+     * @param securityPolicyName The text name of the security policy for the specified connector.
+     */
+    public fun securityPolicyName(securityPolicyName: String)
 
     /**
      * @param sftpConfig A structure that contains the parameters for an SFTP connector object.
@@ -244,17 +257,24 @@ public interface CfnConnectorProps {
     }
 
     /**
+     * @param securityPolicyName The text name of the security policy for the specified connector.
+     */
+    override fun securityPolicyName(securityPolicyName: String) {
+      cdkBuilder.securityPolicyName(securityPolicyName)
+    }
+
+    /**
      * @param sftpConfig A structure that contains the parameters for an SFTP connector object.
      */
     override fun sftpConfig(sftpConfig: IResolvable) {
-      cdkBuilder.sftpConfig(sftpConfig.let(IResolvable::unwrap))
+      cdkBuilder.sftpConfig(sftpConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param sftpConfig A structure that contains the parameters for an SFTP connector object.
      */
     override fun sftpConfig(sftpConfig: CfnConnector.SftpConfigProperty) {
-      cdkBuilder.sftpConfig(sftpConfig.let(CfnConnector.SftpConfigProperty::unwrap))
+      cdkBuilder.sftpConfig(sftpConfig.let(CfnConnector.SftpConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -269,7 +289,7 @@ public interface CfnConnectorProps {
      * @param tags Key-value pairs that can be used to group and search for connectors.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -339,6 +359,13 @@ public interface CfnConnectorProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-connector.html#cfn-transfer-connector-loggingrole)
      */
     override fun loggingRole(): String? = unwrap(this).getLoggingRole()
+
+    /**
+     * The text name of the security policy for the specified connector.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-connector.html#cfn-transfer-connector-securitypolicyname)
+     */
+    override fun securityPolicyName(): String? = unwrap(this).getSecurityPolicyName()
 
     /**
      * A structure that contains the parameters for an SFTP connector object.

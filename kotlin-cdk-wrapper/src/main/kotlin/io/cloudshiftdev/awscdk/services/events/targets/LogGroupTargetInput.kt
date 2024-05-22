@@ -36,7 +36,7 @@ public abstract class LogGroupTargetInput(
    * @param rule 
    */
   public open fun bind(rule: IRule): RuleTargetInputProperties =
-      unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetInputProperties::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap)).let(RuleTargetInputProperties::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.targets.LogGroupTargetInput,
@@ -47,7 +47,7 @@ public abstract class LogGroupTargetInput(
         software.amazon.awscdk.services.events.targets.LogGroupTargetInput.fromObject().let(RuleTargetInput::wrap)
 
     public fun fromObject(options: LogGroupTargetInputOptions): RuleTargetInput =
-        software.amazon.awscdk.services.events.targets.LogGroupTargetInput.fromObject(options.let(LogGroupTargetInputOptions::unwrap)).let(RuleTargetInput::wrap)
+        software.amazon.awscdk.services.events.targets.LogGroupTargetInput.fromObject(options.let(LogGroupTargetInputOptions.Companion::unwrap)).let(RuleTargetInput::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("898b6d05b662d8870ea1382acc3991a186e6104ddb70b26df0483ceecd8265c6")

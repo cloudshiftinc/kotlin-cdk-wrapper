@@ -43,8 +43,8 @@ public open class CfnSyncJob(
     id: String,
     props: CfnSyncJobProps,
   ) :
-      this(software.amazon.awscdk.services.iottwinmaker.CfnSyncJob(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSyncJobProps::unwrap))
+      this(software.amazon.awscdk.services.iottwinmaker.CfnSyncJob(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSyncJobProps.Companion::unwrap))
   )
 
   public constructor(
@@ -80,7 +80,7 @@ public open class CfnSyncJob(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

@@ -290,7 +290,7 @@ public interface CfnAPIKeyProps {
      * use.
      */
     override fun forceDelete(forceDelete: IResolvable) {
-      cdkBuilder.forceDelete(forceDelete.let(IResolvable::unwrap))
+      cdkBuilder.forceDelete(forceDelete.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -310,7 +310,7 @@ public interface CfnAPIKeyProps {
      * `False` if force update is not preferred.
      */
     override fun forceUpdate(forceUpdate: IResolvable) {
-      cdkBuilder.forceUpdate(forceUpdate.let(IResolvable::unwrap))
+      cdkBuilder.forceUpdate(forceUpdate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -339,21 +339,21 @@ public interface CfnAPIKeyProps {
      * Set to `true` to set the API key to have no expiration time.
      */
     override fun noExpiry(noExpiry: IResolvable) {
-      cdkBuilder.noExpiry(noExpiry.let(IResolvable::unwrap))
+      cdkBuilder.noExpiry(noExpiry.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param restrictions The API key restrictions for the API key resource. 
      */
     override fun restrictions(restrictions: IResolvable) {
-      cdkBuilder.restrictions(restrictions.let(IResolvable::unwrap))
+      cdkBuilder.restrictions(restrictions.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param restrictions The API key restrictions for the API key resource. 
      */
     override fun restrictions(restrictions: CfnAPIKey.ApiKeyRestrictionsProperty) {
-      cdkBuilder.restrictions(restrictions.let(CfnAPIKey.ApiKeyRestrictionsProperty::unwrap))
+      cdkBuilder.restrictions(restrictions.let(CfnAPIKey.ApiKeyRestrictionsProperty.Companion::unwrap))
     }
 
     /**
@@ -371,7 +371,7 @@ public interface CfnAPIKeyProps {
      * labelling them.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -42,8 +42,8 @@ public open class ApplicationListenerRule(
     id: String,
     props: ApplicationListenerRuleProps,
   ) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ApplicationListenerRuleProps::unwrap))
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListenerRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ApplicationListenerRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -59,7 +59,7 @@ public open class ApplicationListenerRule(
    * @param condition 
    */
   public open fun addCondition(condition: ListenerCondition) {
-    unwrap(this).addCondition(condition.let(ListenerCondition::unwrap))
+    unwrap(this).addCondition(condition.let(ListenerCondition.Companion::unwrap))
   }
 
   /**
@@ -68,7 +68,7 @@ public open class ApplicationListenerRule(
    * @param action 
    */
   public open fun configureAction(action: ListenerAction) {
-    unwrap(this).configureAction(action.let(ListenerAction::unwrap))
+    unwrap(this).configureAction(action.let(ListenerAction.Companion::unwrap))
   }
 
   /**
@@ -177,7 +177,7 @@ public open class ApplicationListenerRule(
      * @param action Action to perform when requests are received. 
      */
     override fun action(action: ListenerAction) {
-      cdkBuilder.action(action.let(ListenerAction::unwrap))
+      cdkBuilder.action(action.let(ListenerAction.Companion::unwrap))
     }
 
     /**
@@ -189,7 +189,7 @@ public open class ApplicationListenerRule(
      * @param conditions Rule applies if matches the conditions. 
      */
     override fun conditions(conditions: List<ListenerCondition>) {
-      cdkBuilder.conditions(conditions.map(ListenerCondition::unwrap))
+      cdkBuilder.conditions(conditions.map(ListenerCondition.Companion::unwrap))
     }
 
     /**
@@ -209,7 +209,7 @@ public open class ApplicationListenerRule(
      * @param listener The listener to attach the rule to. 
      */
     override fun listener(listener: IApplicationListener) {
-      cdkBuilder.listener(listener.let(IApplicationListener::unwrap))
+      cdkBuilder.listener(listener.let(IApplicationListener.Companion::unwrap))
     }
 
     /**
@@ -237,7 +237,7 @@ public open class ApplicationListenerRule(
      * @param targetGroups Target groups to forward requests to. 
      */
     override fun targetGroups(targetGroups: List<IApplicationTargetGroup>) {
-      cdkBuilder.targetGroups(targetGroups.map(IApplicationTargetGroup::unwrap))
+      cdkBuilder.targetGroups(targetGroups.map(IApplicationTargetGroup.Companion::unwrap))
     }
 
     /**

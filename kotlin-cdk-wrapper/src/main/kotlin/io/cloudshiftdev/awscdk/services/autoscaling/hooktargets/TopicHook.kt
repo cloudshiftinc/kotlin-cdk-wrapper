@@ -29,7 +29,7 @@ public open class TopicHook(
   cdkObject: software.amazon.awscdk.services.autoscaling.hooktargets.TopicHook,
 ) : CdkObject(cdkObject), ILifecycleHookTarget {
   public constructor(topic: ITopic) :
-      this(software.amazon.awscdk.services.autoscaling.hooktargets.TopicHook(topic.let(ITopic::unwrap))
+      this(software.amazon.awscdk.services.autoscaling.hooktargets.TopicHook(topic.let(ITopic.Companion::unwrap))
   )
 
   /**
@@ -43,8 +43,8 @@ public open class TopicHook(
    * @param options 
    */
   public override fun bind(scope: Construct, options: BindHookTargetOptions):
-      LifecycleHookTargetConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      options.let(BindHookTargetOptions::unwrap)).let(LifecycleHookTargetConfig::wrap)
+      LifecycleHookTargetConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      options.let(BindHookTargetOptions.Companion::unwrap)).let(LifecycleHookTargetConfig::wrap)
 
   /**
    * If an `IRole` is found in `options`, grant it topic publishing permissions.

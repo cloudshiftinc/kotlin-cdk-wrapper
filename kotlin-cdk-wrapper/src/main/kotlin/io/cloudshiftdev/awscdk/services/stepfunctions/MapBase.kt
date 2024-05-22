@@ -33,7 +33,7 @@ public abstract class MapBase(
    * @param next 
    */
   public override fun next(next: IChainable): Chain =
-      unwrap(this).next(next.let(IChainable::unwrap)).let(Chain::wrap)
+      unwrap(this).next(next.let(IChainable.Companion::unwrap)).let(Chain::wrap)
 
   /**
    * Return the Amazon States Language object for this state.

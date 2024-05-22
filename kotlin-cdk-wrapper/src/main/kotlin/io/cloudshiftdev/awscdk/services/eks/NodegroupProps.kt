@@ -296,21 +296,21 @@ public interface NodegroupProps : NodegroupOptions {
      * for the nodegroup.
      */
     override fun amiType(amiType: NodegroupAmiType) {
-      cdkBuilder.amiType(amiType.let(NodegroupAmiType::unwrap))
+      cdkBuilder.amiType(amiType.let(NodegroupAmiType.Companion::unwrap))
     }
 
     /**
      * @param capacityType The capacity type of the nodegroup.
      */
     override fun capacityType(capacityType: CapacityType) {
-      cdkBuilder.capacityType(capacityType.let(CapacityType::unwrap))
+      cdkBuilder.capacityType(capacityType.let(CapacityType.Companion::unwrap))
     }
 
     /**
      * @param cluster Cluster resource. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -346,7 +346,7 @@ public interface NodegroupProps : NodegroupOptions {
      * @param instanceTypes The instance types to use for your node group.
      */
     override fun instanceTypes(instanceTypes: List<InstanceType>) {
-      cdkBuilder.instanceTypes(instanceTypes.map(InstanceType::unwrap))
+      cdkBuilder.instanceTypes(instanceTypes.map(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -367,7 +367,7 @@ public interface NodegroupProps : NodegroupOptions {
      * @param launchTemplateSpec Launch template specification used for the nodegroup.
      */
     override fun launchTemplateSpec(launchTemplateSpec: LaunchTemplateSpec) {
-      cdkBuilder.launchTemplateSpec(launchTemplateSpec.let(LaunchTemplateSpec::unwrap))
+      cdkBuilder.launchTemplateSpec(launchTemplateSpec.let(LaunchTemplateSpec.Companion::unwrap))
     }
 
     /**
@@ -431,7 +431,7 @@ public interface NodegroupProps : NodegroupOptions {
      * launched.
      */
     override fun nodeRole(nodeRole: IRole) {
-      cdkBuilder.nodeRole(nodeRole.let(IRole::unwrap))
+      cdkBuilder.nodeRole(nodeRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -457,7 +457,7 @@ public interface NodegroupProps : NodegroupOptions {
      * then port 22 on the worker nodes is opened to the internet (0.0.0.0/0)
      */
     override fun remoteAccess(remoteAccess: NodegroupRemoteAccess) {
-      cdkBuilder.remoteAccess(remoteAccess.let(NodegroupRemoteAccess::unwrap))
+      cdkBuilder.remoteAccess(remoteAccess.let(NodegroupRemoteAccess.Companion::unwrap))
     }
 
     /**
@@ -482,7 +482,7 @@ public interface NodegroupProps : NodegroupOptions {
      * the name of your cluster.
      */
     override fun subnets(subnets: SubnetSelection) {
-      cdkBuilder.subnets(subnets.let(SubnetSelection::unwrap))
+      cdkBuilder.subnets(subnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -516,7 +516,7 @@ public interface NodegroupProps : NodegroupOptions {
      * are created.
      */
     override fun taints(taints: List<TaintSpec>) {
-      cdkBuilder.taints(taints.map(TaintSpec::unwrap))
+      cdkBuilder.taints(taints.map(TaintSpec.Companion::unwrap))
     }
 
     /**

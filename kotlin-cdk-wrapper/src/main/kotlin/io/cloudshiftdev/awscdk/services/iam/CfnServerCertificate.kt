@@ -73,7 +73,7 @@ public open class CfnServerCertificate(
   cdkObject: software.amazon.awscdk.services.iam.CfnServerCertificate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.iam.CfnServerCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.iam.CfnServerCertificate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -82,8 +82,8 @@ public open class CfnServerCertificate(
     id: String,
     props: CfnServerCertificateProps,
   ) :
-      this(software.amazon.awscdk.services.iam.CfnServerCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnServerCertificateProps::unwrap))
+      this(software.amazon.awscdk.services.iam.CfnServerCertificate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnServerCertificateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -129,7 +129,7 @@ public open class CfnServerCertificate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -183,7 +183,7 @@ public open class CfnServerCertificate(
    * A list of tags that are attached to the server certificate.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -397,7 +397,7 @@ public open class CfnServerCertificate(
      * @param tags A list of tags that are attached to the server certificate. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

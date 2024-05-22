@@ -73,8 +73,8 @@ public open class CfnCertificateAuthority(
     id: String,
     props: CfnCertificateAuthorityProps,
   ) :
-      this(software.amazon.awscdk.services.acmpca.CfnCertificateAuthority(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCertificateAuthorityProps::unwrap))
+      this(software.amazon.awscdk.services.acmpca.CfnCertificateAuthority(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCertificateAuthorityProps.Companion::unwrap))
   )
 
   public constructor(
@@ -107,7 +107,7 @@ public open class CfnCertificateAuthority(
    * (CSR).
    */
   public open fun csrExtensions(`value`: IResolvable) {
-    unwrap(this).setCsrExtensions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCsrExtensions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -115,7 +115,7 @@ public open class CfnCertificateAuthority(
    * (CSR).
    */
   public open fun csrExtensions(`value`: CsrExtensionsProperty) {
-    unwrap(this).setCsrExtensions(`value`.let(CsrExtensionsProperty::unwrap))
+    unwrap(this).setCsrExtensions(`value`.let(CsrExtensionsProperty.Companion::unwrap))
   }
 
   /**
@@ -133,7 +133,7 @@ public open class CfnCertificateAuthority(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -194,7 +194,7 @@ public open class CfnCertificateAuthority(
    * Private CA User Guide* .
    */
   public open fun revocationConfiguration(`value`: IResolvable) {
-    unwrap(this).setRevocationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRevocationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -212,7 +212,7 @@ public open class CfnCertificateAuthority(
    * Private CA User Guide* .
    */
   public open fun revocationConfiguration(`value`: RevocationConfigurationProperty) {
-    unwrap(this).setRevocationConfiguration(`value`.let(RevocationConfigurationProperty::unwrap))
+    unwrap(this).setRevocationConfiguration(`value`.let(RevocationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -256,14 +256,14 @@ public open class CfnCertificateAuthority(
    * Structure that contains X.500 distinguished name information for your private CA.
    */
   public open fun subject(`value`: IResolvable) {
-    unwrap(this).setSubject(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSubject(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Structure that contains X.500 distinguished name information for your private CA.
    */
   public open fun subject(`value`: SubjectProperty) {
-    unwrap(this).setSubject(`value`.let(SubjectProperty::unwrap))
+    unwrap(this).setSubject(`value`.let(SubjectProperty.Companion::unwrap))
   }
 
   /**
@@ -289,7 +289,7 @@ public open class CfnCertificateAuthority(
    * Key-value pairs that will be attached to the new private CA.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -638,7 +638,7 @@ public open class CfnCertificateAuthority(
      * certificate signing request (CSR). 
      */
     override fun csrExtensions(csrExtensions: IResolvable) {
-      cdkBuilder.csrExtensions(csrExtensions.let(IResolvable::unwrap))
+      cdkBuilder.csrExtensions(csrExtensions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -650,7 +650,7 @@ public open class CfnCertificateAuthority(
      * certificate signing request (CSR). 
      */
     override fun csrExtensions(csrExtensions: CsrExtensionsProperty) {
-      cdkBuilder.csrExtensions(csrExtensions.let(CsrExtensionsProperty::unwrap))
+      cdkBuilder.csrExtensions(csrExtensions.let(CsrExtensionsProperty.Companion::unwrap))
     }
 
     /**
@@ -748,7 +748,7 @@ public open class CfnCertificateAuthority(
      * *AWS Private CA User Guide* . 
      */
     override fun revocationConfiguration(revocationConfiguration: IResolvable) {
-      cdkBuilder.revocationConfiguration(revocationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.revocationConfiguration(revocationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -794,7 +794,7 @@ public open class CfnCertificateAuthority(
      * *AWS Private CA User Guide* . 
      */
     override fun revocationConfiguration(revocationConfiguration: RevocationConfigurationProperty) {
-      cdkBuilder.revocationConfiguration(revocationConfiguration.let(RevocationConfigurationProperty::unwrap))
+      cdkBuilder.revocationConfiguration(revocationConfiguration.let(RevocationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -867,7 +867,7 @@ public open class CfnCertificateAuthority(
      * CA. 
      */
     override fun subject(subject: IResolvable) {
-      cdkBuilder.subject(subject.let(IResolvable::unwrap))
+      cdkBuilder.subject(subject.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -878,7 +878,7 @@ public open class CfnCertificateAuthority(
      * CA. 
      */
     override fun subject(subject: SubjectProperty) {
-      cdkBuilder.subject(subject.let(SubjectProperty::unwrap))
+      cdkBuilder.subject(subject.let(SubjectProperty.Companion::unwrap))
     }
 
     /**
@@ -904,7 +904,7 @@ public open class CfnCertificateAuthority(
      * @param tags Key-value pairs that will be attached to the new private CA. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1007,8 +1007,9 @@ public open class CfnCertificateAuthority(
    * .build())
    * .dnsName("dnsName")
    * .ediPartyName(EdiPartyNameProperty.builder()
-   * .nameAssigner("nameAssigner")
    * .partyName("partyName")
+   * // the properties below are optional
+   * .nameAssigner("nameAssigner")
    * .build())
    * .ipAddress("ipAddress")
    * .otherName(OtherNameProperty.builder()
@@ -1093,14 +1094,14 @@ public open class CfnCertificateAuthority(
        * @param accessLocation The location of `AccessDescription` information. 
        */
       override fun accessLocation(accessLocation: IResolvable) {
-        cdkBuilder.accessLocation(accessLocation.let(IResolvable::unwrap))
+        cdkBuilder.accessLocation(accessLocation.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param accessLocation The location of `AccessDescription` information. 
        */
       override fun accessLocation(accessLocation: GeneralNameProperty) {
-        cdkBuilder.accessLocation(accessLocation.let(GeneralNameProperty::unwrap))
+        cdkBuilder.accessLocation(accessLocation.let(GeneralNameProperty.Companion::unwrap))
       }
 
       /**
@@ -1115,14 +1116,14 @@ public open class CfnCertificateAuthority(
        * @param accessMethod The type and format of `AccessDescription` information. 
        */
       override fun accessMethod(accessMethod: IResolvable) {
-        cdkBuilder.accessMethod(accessMethod.let(IResolvable::unwrap))
+        cdkBuilder.accessMethod(accessMethod.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param accessMethod The type and format of `AccessDescription` information. 
        */
       override fun accessMethod(accessMethod: AccessMethodProperty) {
-        cdkBuilder.accessMethod(accessMethod.let(AccessMethodProperty::unwrap))
+        cdkBuilder.accessMethod(accessMethod.let(AccessMethodProperty.Companion::unwrap))
       }
 
       /**
@@ -1362,11 +1363,12 @@ public open class CfnCertificateAuthority(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.acmpca.*;
    * CrlConfigurationProperty crlConfigurationProperty = CrlConfigurationProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
    * .crlDistributionPointExtensionConfiguration(CrlDistributionPointExtensionConfigurationProperty.builder()
    * .omitExtension(false)
    * .build())
    * .customCname("customCname")
-   * .enabled(false)
    * .expirationInDays(123)
    * .s3BucketName("s3BucketName")
    * .s3ObjectAcl("s3ObjectAcl")
@@ -1414,7 +1416,7 @@ public open class CfnCertificateAuthority(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-enabled)
      */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
+    public fun enabled(): Any
 
     /**
      * Validity period of the CRL in days.
@@ -1515,7 +1517,7 @@ public open class CfnCertificateAuthority(
 
       /**
        * @param enabled Boolean value that specifies whether certificate revocation lists (CRLs) are
-       * enabled.
+       * enabled. 
        * You can use this value to enable certificate revocation for a new CA when you call the
        * `CreateCertificateAuthority` operation or for an existing CA when you call the
        * `UpdateCertificateAuthority` operation.
@@ -1524,7 +1526,7 @@ public open class CfnCertificateAuthority(
 
       /**
        * @param enabled Boolean value that specifies whether certificate revocation lists (CRLs) are
-       * enabled.
+       * enabled. 
        * You can use this value to enable certificate revocation for a new CA when you call the
        * `CreateCertificateAuthority` operation or for an existing CA when you call the
        * `UpdateCertificateAuthority` operation.
@@ -1587,7 +1589,7 @@ public open class CfnCertificateAuthority(
        */
       override
           fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: IResolvable) {
-        cdkBuilder.crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1598,7 +1600,7 @@ public open class CfnCertificateAuthority(
        */
       override
           fun crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration: CrlDistributionPointExtensionConfigurationProperty) {
-        cdkBuilder.crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration.let(CrlDistributionPointExtensionConfigurationProperty::unwrap))
+        cdkBuilder.crlDistributionPointExtensionConfiguration(crlDistributionPointExtensionConfiguration.let(CrlDistributionPointExtensionConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1631,7 +1633,7 @@ public open class CfnCertificateAuthority(
 
       /**
        * @param enabled Boolean value that specifies whether certificate revocation lists (CRLs) are
-       * enabled.
+       * enabled. 
        * You can use this value to enable certificate revocation for a new CA when you call the
        * `CreateCertificateAuthority` operation or for an existing CA when you call the
        * `UpdateCertificateAuthority` operation.
@@ -1642,13 +1644,13 @@ public open class CfnCertificateAuthority(
 
       /**
        * @param enabled Boolean value that specifies whether certificate revocation lists (CRLs) are
-       * enabled.
+       * enabled. 
        * You can use this value to enable certificate revocation for a new CA when you call the
        * `CreateCertificateAuthority` operation or for an existing CA when you call the
        * `UpdateCertificateAuthority` operation.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1744,7 +1746,7 @@ public open class CfnCertificateAuthority(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-crlconfiguration.html#cfn-acmpca-certificateauthority-crlconfiguration-enabled)
        */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any = unwrap(this).getEnabled()
 
       /**
        * Validity period of the CRL in days.
@@ -1926,7 +1928,7 @@ public open class CfnCertificateAuthority(
        * This configuration cannot be enabled with a custom CNAME set.
        */
       override fun omitExtension(omitExtension: IResolvable) {
-        cdkBuilder.omitExtension(omitExtension.let(IResolvable::unwrap))
+        cdkBuilder.omitExtension(omitExtension.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2020,8 +2022,9 @@ public open class CfnCertificateAuthority(
    * .build())
    * .dnsName("dnsName")
    * .ediPartyName(EdiPartyNameProperty.builder()
-   * .nameAssigner("nameAssigner")
    * .partyName("partyName")
+   * // the properties below are optional
+   * .nameAssigner("nameAssigner")
    * .build())
    * .ipAddress("ipAddress")
    * .otherName(OtherNameProperty.builder()
@@ -2126,7 +2129,7 @@ public open class CfnCertificateAuthority(
        * certificate.
        */
       override fun keyUsage(keyUsage: IResolvable) {
-        cdkBuilder.keyUsage(keyUsage.let(IResolvable::unwrap))
+        cdkBuilder.keyUsage(keyUsage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2134,7 +2137,7 @@ public open class CfnCertificateAuthority(
        * certificate.
        */
       override fun keyUsage(keyUsage: KeyUsageProperty) {
-        cdkBuilder.keyUsage(keyUsage.let(KeyUsageProperty::unwrap))
+        cdkBuilder.keyUsage(keyUsage.let(KeyUsageProperty.Companion::unwrap))
       }
 
       /**
@@ -2154,7 +2157,7 @@ public open class CfnCertificateAuthority(
        * in RFC 5280.
        */
       override fun subjectInformationAccess(subjectInformationAccess: IResolvable) {
-        cdkBuilder.subjectInformationAccess(subjectInformationAccess.let(IResolvable::unwrap))
+        cdkBuilder.subjectInformationAccess(subjectInformationAccess.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2349,8 +2352,9 @@ public open class CfnCertificateAuthority(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.acmpca.*;
    * EdiPartyNameProperty ediPartyNameProperty = EdiPartyNameProperty.builder()
-   * .nameAssigner("nameAssigner")
    * .partyName("partyName")
+   * // the properties below are optional
+   * .nameAssigner("nameAssigner")
    * .build();
    * ```
    *
@@ -2362,7 +2366,7 @@ public open class CfnCertificateAuthority(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-edipartyname.html#cfn-acmpca-certificateauthority-edipartyname-nameassigner)
      */
-    public fun nameAssigner(): String
+    public fun nameAssigner(): String? = unwrap(this).getNameAssigner()
 
     /**
      * Specifies the party name.
@@ -2377,7 +2381,7 @@ public open class CfnCertificateAuthority(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param nameAssigner Specifies the name assigner. 
+       * @param nameAssigner Specifies the name assigner.
        */
       public fun nameAssigner(nameAssigner: String)
 
@@ -2394,7 +2398,7 @@ public open class CfnCertificateAuthority(
           software.amazon.awscdk.services.acmpca.CfnCertificateAuthority.EdiPartyNameProperty.builder()
 
       /**
-       * @param nameAssigner Specifies the name assigner. 
+       * @param nameAssigner Specifies the name assigner.
        */
       override fun nameAssigner(nameAssigner: String) {
         cdkBuilder.nameAssigner(nameAssigner)
@@ -2420,7 +2424,7 @@ public open class CfnCertificateAuthority(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-edipartyname.html#cfn-acmpca-certificateauthority-edipartyname-nameassigner)
        */
-      override fun nameAssigner(): String = unwrap(this).getNameAssigner()
+      override fun nameAssigner(): String? = unwrap(this).getNameAssigner()
 
       /**
        * Specifies the party name.
@@ -2483,8 +2487,9 @@ public open class CfnCertificateAuthority(
    * .build())
    * .dnsName("dnsName")
    * .ediPartyName(EdiPartyNameProperty.builder()
-   * .nameAssigner("nameAssigner")
    * .partyName("partyName")
+   * // the properties below are optional
+   * .nameAssigner("nameAssigner")
    * .build())
    * .ipAddress("ipAddress")
    * .otherName(OtherNameProperty.builder()
@@ -2686,7 +2691,7 @@ public open class CfnCertificateAuthority(
        * one certificate with the same DN to the same entity.
        */
       override fun directoryName(directoryName: IResolvable) {
-        cdkBuilder.directoryName(directoryName.let(IResolvable::unwrap))
+        cdkBuilder.directoryName(directoryName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2700,7 +2705,7 @@ public open class CfnCertificateAuthority(
        * one certificate with the same DN to the same entity.
        */
       override fun directoryName(directoryName: SubjectProperty) {
-        cdkBuilder.directoryName(directoryName.let(SubjectProperty::unwrap))
+        cdkBuilder.directoryName(directoryName.let(SubjectProperty.Companion::unwrap))
       }
 
       /**
@@ -2729,14 +2734,14 @@ public open class CfnCertificateAuthority(
        * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
        */
       override fun ediPartyName(ediPartyName: IResolvable) {
-        cdkBuilder.ediPartyName(ediPartyName.let(IResolvable::unwrap))
+        cdkBuilder.ediPartyName(ediPartyName.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param ediPartyName Represents `GeneralName` as an `EdiPartyName` object.
        */
       override fun ediPartyName(ediPartyName: EdiPartyNameProperty) {
-        cdkBuilder.ediPartyName(ediPartyName.let(EdiPartyNameProperty::unwrap))
+        cdkBuilder.ediPartyName(ediPartyName.let(EdiPartyNameProperty.Companion::unwrap))
       }
 
       /**
@@ -2758,14 +2763,14 @@ public open class CfnCertificateAuthority(
        * @param otherName Represents `GeneralName` using an `OtherName` object.
        */
       override fun otherName(otherName: IResolvable) {
-        cdkBuilder.otherName(otherName.let(IResolvable::unwrap))
+        cdkBuilder.otherName(otherName.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param otherName Represents `GeneralName` using an `OtherName` object.
        */
       override fun otherName(otherName: OtherNameProperty) {
-        cdkBuilder.otherName(otherName.let(OtherNameProperty::unwrap))
+        cdkBuilder.otherName(otherName.let(OtherNameProperty.Companion::unwrap))
       }
 
       /**
@@ -3111,7 +3116,7 @@ public open class CfnCertificateAuthority(
        * @param crlSign Key can be used to sign CRLs.
        */
       override fun crlSign(crlSign: IResolvable) {
-        cdkBuilder.crlSign(crlSign.let(IResolvable::unwrap))
+        cdkBuilder.crlSign(crlSign.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3125,7 +3130,7 @@ public open class CfnCertificateAuthority(
        * @param dataEncipherment Key can be used to decipher data.
        */
       override fun dataEncipherment(dataEncipherment: IResolvable) {
-        cdkBuilder.dataEncipherment(dataEncipherment.let(IResolvable::unwrap))
+        cdkBuilder.dataEncipherment(dataEncipherment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3139,7 +3144,7 @@ public open class CfnCertificateAuthority(
        * @param decipherOnly Key can be used only to decipher data.
        */
       override fun decipherOnly(decipherOnly: IResolvable) {
-        cdkBuilder.decipherOnly(decipherOnly.let(IResolvable::unwrap))
+        cdkBuilder.decipherOnly(decipherOnly.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3153,7 +3158,7 @@ public open class CfnCertificateAuthority(
        * @param digitalSignature Key can be used for digital signing.
        */
       override fun digitalSignature(digitalSignature: IResolvable) {
-        cdkBuilder.digitalSignature(digitalSignature.let(IResolvable::unwrap))
+        cdkBuilder.digitalSignature(digitalSignature.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3167,7 +3172,7 @@ public open class CfnCertificateAuthority(
        * @param encipherOnly Key can be used only to encipher data.
        */
       override fun encipherOnly(encipherOnly: IResolvable) {
-        cdkBuilder.encipherOnly(encipherOnly.let(IResolvable::unwrap))
+        cdkBuilder.encipherOnly(encipherOnly.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3181,7 +3186,7 @@ public open class CfnCertificateAuthority(
        * @param keyAgreement Key can be used in a key-agreement protocol.
        */
       override fun keyAgreement(keyAgreement: IResolvable) {
-        cdkBuilder.keyAgreement(keyAgreement.let(IResolvable::unwrap))
+        cdkBuilder.keyAgreement(keyAgreement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3195,7 +3200,7 @@ public open class CfnCertificateAuthority(
        * @param keyCertSign Key can be used to sign certificates.
        */
       override fun keyCertSign(keyCertSign: IResolvable) {
-        cdkBuilder.keyCertSign(keyCertSign.let(IResolvable::unwrap))
+        cdkBuilder.keyCertSign(keyCertSign.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3209,7 +3214,7 @@ public open class CfnCertificateAuthority(
        * @param keyEncipherment Key can be used to encipher data.
        */
       override fun keyEncipherment(keyEncipherment: IResolvable) {
-        cdkBuilder.keyEncipherment(keyEncipherment.let(IResolvable::unwrap))
+        cdkBuilder.keyEncipherment(keyEncipherment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3223,7 +3228,7 @@ public open class CfnCertificateAuthority(
        * @param nonRepudiation Key can be used for non-repudiation.
        */
       override fun nonRepudiation(nonRepudiation: IResolvable) {
-        cdkBuilder.nonRepudiation(nonRepudiation.let(IResolvable::unwrap))
+        cdkBuilder.nonRepudiation(nonRepudiation.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -3346,6 +3351,7 @@ public open class CfnCertificateAuthority(
    * import io.cloudshiftdev.awscdk.services.acmpca.*;
    * OcspConfigurationProperty ocspConfigurationProperty = OcspConfigurationProperty.builder()
    * .enabled(false)
+   * // the properties below are optional
    * .ocspCustomCname("ocspCustomCname")
    * .build();
    * ```
@@ -3359,7 +3365,7 @@ public open class CfnCertificateAuthority(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-ocspconfiguration.html#cfn-acmpca-certificateauthority-ocspconfiguration-enabled)
      */
-    public fun enabled(): Any? = unwrap(this).getEnabled()
+    public fun enabled(): Any
 
     /**
      * By default, AWS Private CA injects an Amazon domain into certificates being validated by the
@@ -3386,13 +3392,13 @@ public open class CfnCertificateAuthority(
     public interface Builder {
       /**
        * @param enabled Flag enabling use of the Online Certificate Status Protocol (OCSP) for
-       * validating certificate revocation status.
+       * validating certificate revocation status. 
        */
       public fun enabled(enabled: Boolean)
 
       /**
        * @param enabled Flag enabling use of the Online Certificate Status Protocol (OCSP) for
-       * validating certificate revocation status.
+       * validating certificate revocation status. 
        */
       public fun enabled(enabled: IResolvable)
 
@@ -3419,7 +3425,7 @@ public open class CfnCertificateAuthority(
 
       /**
        * @param enabled Flag enabling use of the Online Certificate Status Protocol (OCSP) for
-       * validating certificate revocation status.
+       * validating certificate revocation status. 
        */
       override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
@@ -3427,10 +3433,10 @@ public open class CfnCertificateAuthority(
 
       /**
        * @param enabled Flag enabling use of the Online Certificate Status Protocol (OCSP) for
-       * validating certificate revocation status.
+       * validating certificate revocation status. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3463,7 +3469,7 @@ public open class CfnCertificateAuthority(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-acmpca-certificateauthority-ocspconfiguration.html#cfn-acmpca-certificateauthority-ocspconfiguration-enabled)
        */
-      override fun enabled(): Any? = unwrap(this).getEnabled()
+      override fun enabled(): Any = unwrap(this).getEnabled()
 
       /**
        * By default, AWS Private CA injects an Amazon domain into certificates being validated by
@@ -3650,17 +3656,19 @@ public open class CfnCertificateAuthority(
    * RevocationConfigurationProperty revocationConfigurationProperty =
    * RevocationConfigurationProperty.builder()
    * .crlConfiguration(CrlConfigurationProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
    * .crlDistributionPointExtensionConfiguration(CrlDistributionPointExtensionConfigurationProperty.builder()
    * .omitExtension(false)
    * .build())
    * .customCname("customCname")
-   * .enabled(false)
    * .expirationInDays(123)
    * .s3BucketName("s3BucketName")
    * .s3ObjectAcl("s3ObjectAcl")
    * .build())
    * .ocspConfiguration(OcspConfigurationProperty.builder()
    * .enabled(false)
+   * // the properties below are optional
    * .ocspCustomCname("ocspCustomCname")
    * .build())
    * .build();
@@ -3742,7 +3750,7 @@ public open class CfnCertificateAuthority(
        * maintained by your private CA.
        */
       override fun crlConfiguration(crlConfiguration: IResolvable) {
-        cdkBuilder.crlConfiguration(crlConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.crlConfiguration(crlConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3750,7 +3758,7 @@ public open class CfnCertificateAuthority(
        * maintained by your private CA.
        */
       override fun crlConfiguration(crlConfiguration: CrlConfigurationProperty) {
-        cdkBuilder.crlConfiguration(crlConfiguration.let(CrlConfigurationProperty::unwrap))
+        cdkBuilder.crlConfiguration(crlConfiguration.let(CrlConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3767,7 +3775,7 @@ public open class CfnCertificateAuthority(
        * support, if any, maintained by your private CA.
        */
       override fun ocspConfiguration(ocspConfiguration: IResolvable) {
-        cdkBuilder.ocspConfiguration(ocspConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.ocspConfiguration(ocspConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3775,7 +3783,7 @@ public open class CfnCertificateAuthority(
        * support, if any, maintained by your private CA.
        */
       override fun ocspConfiguration(ocspConfiguration: OcspConfigurationProperty) {
-        cdkBuilder.ocspConfiguration(ocspConfiguration.let(OcspConfigurationProperty::unwrap))
+        cdkBuilder.ocspConfiguration(ocspConfiguration.let(OcspConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -4129,7 +4137,7 @@ public open class CfnCertificateAuthority(
        * Custom attributes cannot be used in combination with standard attributes.
        */
       override fun customAttributes(customAttributes: IResolvable) {
-        cdkBuilder.customAttributes(customAttributes.let(IResolvable::unwrap))
+        cdkBuilder.customAttributes(customAttributes.let(IResolvable.Companion::unwrap))
       }
 
       /**

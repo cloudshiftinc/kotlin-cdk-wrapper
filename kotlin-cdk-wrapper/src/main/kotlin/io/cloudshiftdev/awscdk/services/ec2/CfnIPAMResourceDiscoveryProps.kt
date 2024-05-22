@@ -128,7 +128,7 @@ public interface CfnIPAMResourceDiscoveryProps {
      * only discovers and monitors resources in the AWS Regions you select as operating Regions.
      */
     override fun operatingRegions(operatingRegions: IResolvable) {
-      cdkBuilder.operatingRegions(operatingRegions.let(IResolvable::unwrap))
+      cdkBuilder.operatingRegions(operatingRegions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -154,7 +154,7 @@ public interface CfnIPAMResourceDiscoveryProps {
      * resources or track your AWS costs.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

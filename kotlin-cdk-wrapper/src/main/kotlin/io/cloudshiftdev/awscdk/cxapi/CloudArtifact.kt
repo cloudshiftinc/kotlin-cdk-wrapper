@@ -114,8 +114,8 @@ public open class CloudArtifact(
       id: String,
       artifact: ArtifactManifest,
     ): CloudArtifact? =
-        software.amazon.awscdk.cxapi.CloudArtifact.fromManifest(assembly.let(CloudAssembly::unwrap),
-        id, artifact.let(ArtifactManifest::unwrap))?.let(CloudArtifact::wrap)
+        software.amazon.awscdk.cxapi.CloudArtifact.fromManifest(assembly.let(CloudAssembly.Companion::unwrap),
+        id, artifact.let(ArtifactManifest.Companion::unwrap))?.let(CloudArtifact::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cf15c645a93890774d2fc564c09a4cc0b00096f48fca3019d1f567d1c659f93c")

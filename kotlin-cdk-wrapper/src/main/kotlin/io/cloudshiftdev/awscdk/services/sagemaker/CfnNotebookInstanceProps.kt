@@ -562,7 +562,7 @@ public interface CfnNotebookInstanceProps {
      */
     override
         fun instanceMetadataServiceConfiguration(instanceMetadataServiceConfiguration: IResolvable) {
-      cdkBuilder.instanceMetadataServiceConfiguration(instanceMetadataServiceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.instanceMetadataServiceConfiguration(instanceMetadataServiceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -571,7 +571,7 @@ public interface CfnNotebookInstanceProps {
      */
     override
         fun instanceMetadataServiceConfiguration(instanceMetadataServiceConfiguration: CfnNotebookInstance.InstanceMetadataServiceConfigurationProperty) {
-      cdkBuilder.instanceMetadataServiceConfiguration(instanceMetadataServiceConfiguration.let(CfnNotebookInstance.InstanceMetadataServiceConfigurationProperty::unwrap))
+      cdkBuilder.instanceMetadataServiceConfiguration(instanceMetadataServiceConfiguration.let(CfnNotebookInstance.InstanceMetadataServiceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -694,7 +694,7 @@ public interface CfnNotebookInstanceProps {
      * You can add tags later by using the `CreateTags` API.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

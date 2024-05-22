@@ -85,7 +85,7 @@ public interface IHttpRoute : IRoute {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -110,7 +110,7 @@ public interface IHttpRoute : IRoute {
      * @param options
      */
     override fun grantInvoke(grantee: IGrantable): Grant =
-        unwrap(this).grantInvoke(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantInvoke(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grant access to invoke the route.
@@ -122,8 +122,8 @@ public interface IHttpRoute : IRoute {
      * @param options
      */
     override fun grantInvoke(grantee: IGrantable, options: GrantInvokeOptions): Grant =
-        unwrap(this).grantInvoke(grantee.let(IGrantable::unwrap),
-        options.let(GrantInvokeOptions::unwrap)).let(Grant::wrap)
+        unwrap(this).grantInvoke(grantee.let(IGrantable.Companion::unwrap),
+        options.let(GrantInvokeOptions.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grant access to invoke the route.

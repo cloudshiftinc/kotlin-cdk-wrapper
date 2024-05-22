@@ -224,14 +224,14 @@ public interface CfnWorkspaceProps {
      * encrypted.
      */
     override fun rootVolumeEncryptionEnabled(rootVolumeEncryptionEnabled: IResolvable) {
-      cdkBuilder.rootVolumeEncryptionEnabled(rootVolumeEncryptionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.rootVolumeEncryptionEnabled(rootVolumeEncryptionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param tags The tags for the WorkSpace.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -262,7 +262,7 @@ public interface CfnWorkspaceProps {
      * encrypted.
      */
     override fun userVolumeEncryptionEnabled(userVolumeEncryptionEnabled: IResolvable) {
-      cdkBuilder.userVolumeEncryptionEnabled(userVolumeEncryptionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.userVolumeEncryptionEnabled(userVolumeEncryptionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -278,7 +278,7 @@ public interface CfnWorkspaceProps {
      * @param workspaceProperties The WorkSpace properties.
      */
     override fun workspaceProperties(workspaceProperties: IResolvable) {
-      cdkBuilder.workspaceProperties(workspaceProperties.let(IResolvable::unwrap))
+      cdkBuilder.workspaceProperties(workspaceProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -286,7 +286,7 @@ public interface CfnWorkspaceProps {
      */
     override
         fun workspaceProperties(workspaceProperties: CfnWorkspace.WorkspacePropertiesProperty) {
-      cdkBuilder.workspaceProperties(workspaceProperties.let(CfnWorkspace.WorkspacePropertiesProperty::unwrap))
+      cdkBuilder.workspaceProperties(workspaceProperties.let(CfnWorkspace.WorkspacePropertiesProperty.Companion::unwrap))
     }
 
     /**

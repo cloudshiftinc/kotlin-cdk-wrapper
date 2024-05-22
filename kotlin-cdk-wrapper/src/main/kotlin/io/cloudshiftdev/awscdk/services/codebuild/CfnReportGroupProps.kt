@@ -194,7 +194,7 @@ public interface CfnReportGroupProps {
      * you delete a report group that contains one or more reports, an exception is thrown.
      */
     override fun deleteReports(deleteReports: IResolvable) {
-      cdkBuilder.deleteReports(deleteReports.let(IResolvable::unwrap))
+      cdkBuilder.deleteReports(deleteReports.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -202,7 +202,7 @@ public interface CfnReportGroupProps {
      * `ReportGroup` is exported. 
      */
     override fun exportConfig(exportConfig: IResolvable) {
-      cdkBuilder.exportConfig(exportConfig.let(IResolvable::unwrap))
+      cdkBuilder.exportConfig(exportConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -210,7 +210,7 @@ public interface CfnReportGroupProps {
      * `ReportGroup` is exported. 
      */
     override fun exportConfig(exportConfig: CfnReportGroup.ReportExportConfigProperty) {
-      cdkBuilder.exportConfig(exportConfig.let(CfnReportGroup.ReportExportConfigProperty::unwrap))
+      cdkBuilder.exportConfig(exportConfig.let(CfnReportGroup.ReportExportConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -236,7 +236,7 @@ public interface CfnReportGroupProps {
      * tags.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

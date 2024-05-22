@@ -33,8 +33,8 @@ public open class AccessPoint(
     id: String,
     props: AccessPointProps,
   ) :
-      this(software.amazon.awscdk.services.efs.AccessPoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(AccessPointProps::unwrap))
+      this(software.amazon.awscdk.services.efs.AccessPoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(AccessPointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -179,7 +179,7 @@ public open class AccessPoint(
      * point's root directory. 
      */
     override fun createAcl(createAcl: Acl) {
-      cdkBuilder.createAcl(createAcl.let(Acl::unwrap))
+      cdkBuilder.createAcl(createAcl.let(Acl.Companion::unwrap))
     }
 
     /**
@@ -207,7 +207,7 @@ public open class AccessPoint(
      * @param fileSystem The efs filesystem. 
      */
     override fun fileSystem(fileSystem: IFileSystem) {
-      cdkBuilder.fileSystem(fileSystem.let(IFileSystem::unwrap))
+      cdkBuilder.fileSystem(fileSystem.let(IFileSystem.Companion::unwrap))
     }
 
     /**
@@ -239,7 +239,7 @@ public open class AccessPoint(
      * clients using the access point. 
      */
     override fun posixUser(posixUser: PosixUser) {
-      cdkBuilder.posixUser(posixUser.let(PosixUser::unwrap))
+      cdkBuilder.posixUser(posixUser.let(PosixUser.Companion::unwrap))
     }
 
     /**
@@ -271,8 +271,8 @@ public open class AccessPoint(
       id: String,
       attrs: AccessPointAttributes,
     ): IAccessPoint =
-        software.amazon.awscdk.services.efs.AccessPoint.fromAccessPointAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(AccessPointAttributes::unwrap)).let(IAccessPoint::wrap)
+        software.amazon.awscdk.services.efs.AccessPoint.fromAccessPointAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(AccessPointAttributes.Companion::unwrap)).let(IAccessPoint::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fdc24fd29d0d7d80090cf1ae8cde4702127ddffb6a4bc6cc5398f4fed3557f2d")
@@ -287,7 +287,7 @@ public open class AccessPoint(
       id: String,
       accessPointId: String,
     ): IAccessPoint =
-        software.amazon.awscdk.services.efs.AccessPoint.fromAccessPointId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.efs.AccessPoint.fromAccessPointId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, accessPointId).let(IAccessPoint::wrap)
 
     public operator fun invoke(

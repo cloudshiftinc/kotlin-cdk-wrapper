@@ -38,8 +38,8 @@ public open class CfnDomainNameApiAssociation(
     id: String,
     props: CfnDomainNameApiAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.appsync.CfnDomainNameApiAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDomainNameApiAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.appsync.CfnDomainNameApiAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDomainNameApiAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -85,7 +85,7 @@ public open class CfnDomainNameApiAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

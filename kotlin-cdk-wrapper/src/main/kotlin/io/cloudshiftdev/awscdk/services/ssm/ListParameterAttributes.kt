@@ -111,7 +111,7 @@ public interface ListParameterAttributes : CommonStringParameterAttributes {
      * ParameterValueType.STRING
      */
     override fun elementType(elementType: ParameterValueType) {
-      cdkBuilder.elementType(elementType.let(ParameterValueType::unwrap))
+      cdkBuilder.elementType(elementType.let(ParameterValueType.Companion::unwrap))
     }
 
     /**

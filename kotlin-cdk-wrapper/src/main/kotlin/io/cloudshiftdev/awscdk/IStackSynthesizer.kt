@@ -94,7 +94,7 @@ public interface IStackSynthesizer {
      * @param asset 
      */
     override fun addDockerImageAsset(asset: DockerImageAssetSource): DockerImageAssetLocation =
-        unwrap(this).addDockerImageAsset(asset.let(DockerImageAssetSource::unwrap)).let(DockerImageAssetLocation::wrap)
+        unwrap(this).addDockerImageAsset(asset.let(DockerImageAssetSource.Companion::unwrap)).let(DockerImageAssetLocation::wrap)
 
     /**
      * Register a Docker Image Asset.
@@ -116,7 +116,7 @@ public interface IStackSynthesizer {
      * @param asset 
      */
     override fun addFileAsset(asset: FileAssetSource): FileAssetLocation =
-        unwrap(this).addFileAsset(asset.let(FileAssetSource::unwrap)).let(FileAssetLocation::wrap)
+        unwrap(this).addFileAsset(asset.let(FileAssetSource.Companion::unwrap)).let(FileAssetLocation::wrap)
 
     /**
      * Register a File Asset.
@@ -138,7 +138,7 @@ public interface IStackSynthesizer {
      * @param stack 
      */
     override fun bind(stack: Stack) {
-      unwrap(this).bind(stack.let(Stack::unwrap))
+      unwrap(this).bind(stack.let(Stack.Companion::unwrap))
     }
 
     /**
@@ -161,7 +161,7 @@ public interface IStackSynthesizer {
      * @param session 
      */
     override fun synthesize(session: ISynthesisSession) {
-      unwrap(this).synthesize(session.let(ISynthesisSession::unwrap))
+      unwrap(this).synthesize(session.let(ISynthesisSession.Companion::unwrap))
     }
   }
 

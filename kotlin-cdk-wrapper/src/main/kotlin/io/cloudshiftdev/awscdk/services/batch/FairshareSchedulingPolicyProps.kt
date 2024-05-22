@@ -175,7 +175,7 @@ public interface FairshareSchedulingPolicyProps {
      * The maximum supported value is 604800 seconds (1 week).
      */
     override fun shareDecay(shareDecay: Duration) {
-      cdkBuilder.shareDecay(shareDecay.let(Duration::unwrap))
+      cdkBuilder.shareDecay(shareDecay.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -184,7 +184,7 @@ public interface FairshareSchedulingPolicyProps {
      * are not recognized by the Scheduling Policy.
      */
     override fun shares(shares: List<Share>) {
-      cdkBuilder.shares(shares.map(Share::unwrap))
+      cdkBuilder.shares(shares.map(Share.Companion::unwrap))
     }
 
     /**

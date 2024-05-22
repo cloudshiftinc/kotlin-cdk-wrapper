@@ -55,7 +55,7 @@ public interface DockerImageOptions {
      * accessing the repository holding the image, if the repository is private.
      */
     override fun secretsManagerCredentials(secretsManagerCredentials: ISecret) {
-      cdkBuilder.secretsManagerCredentials(secretsManagerCredentials.let(ISecret::unwrap))
+      cdkBuilder.secretsManagerCredentials(secretsManagerCredentials.let(ISecret.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codebuild.DockerImageOptions =

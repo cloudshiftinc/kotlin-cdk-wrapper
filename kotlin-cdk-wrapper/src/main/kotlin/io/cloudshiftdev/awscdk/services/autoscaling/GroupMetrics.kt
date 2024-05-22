@@ -37,7 +37,7 @@ public open class GroupMetrics(
   cdkObject: software.amazon.awscdk.services.autoscaling.GroupMetrics,
 ) : CdkObject(cdkObject) {
   public constructor(metrics: GroupMetric) :
-      this(software.amazon.awscdk.services.autoscaling.GroupMetrics(metrics.let(GroupMetric::unwrap))
+      this(software.amazon.awscdk.services.autoscaling.GroupMetrics(metrics.let(GroupMetric.Companion::unwrap))
   )
 
   public companion object {

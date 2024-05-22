@@ -84,7 +84,7 @@ public interface HttpDataSourceOptions : DataSourceOptions {
      * authorization.
      */
     override fun authorizationConfig(authorizationConfig: AwsIamConfig) {
-      cdkBuilder.authorizationConfig(authorizationConfig.let(AwsIamConfig::unwrap))
+      cdkBuilder.authorizationConfig(authorizationConfig.let(AwsIamConfig.Companion::unwrap))
     }
 
     /**

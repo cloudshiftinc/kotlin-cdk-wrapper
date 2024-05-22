@@ -32,7 +32,7 @@ public abstract class TrafficRouting(
    * @param scope 
    */
   public open fun bind(scope: Construct): TrafficRoutingConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(TrafficRoutingConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(TrafficRoutingConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codedeploy.TrafficRouting,
@@ -43,7 +43,7 @@ public abstract class TrafficRouting(
         software.amazon.awscdk.services.codedeploy.TrafficRouting.allAtOnce().let(TrafficRouting::wrap)
 
     public fun timeBasedCanary(props: TimeBasedCanaryTrafficRoutingProps): TrafficRouting =
-        software.amazon.awscdk.services.codedeploy.TrafficRouting.timeBasedCanary(props.let(TimeBasedCanaryTrafficRoutingProps::unwrap)).let(TrafficRouting::wrap)
+        software.amazon.awscdk.services.codedeploy.TrafficRouting.timeBasedCanary(props.let(TimeBasedCanaryTrafficRoutingProps.Companion::unwrap)).let(TrafficRouting::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("abccf0bf455bf39b5f48fcab5a5958ea2f660482f3ef7fe583281696b58153e9")
@@ -51,7 +51,7 @@ public abstract class TrafficRouting(
         TrafficRouting = timeBasedCanary(TimeBasedCanaryTrafficRoutingProps(props))
 
     public fun timeBasedLinear(props: TimeBasedLinearTrafficRoutingProps): TrafficRouting =
-        software.amazon.awscdk.services.codedeploy.TrafficRouting.timeBasedLinear(props.let(TimeBasedLinearTrafficRoutingProps::unwrap)).let(TrafficRouting::wrap)
+        software.amazon.awscdk.services.codedeploy.TrafficRouting.timeBasedLinear(props.let(TimeBasedLinearTrafficRoutingProps.Companion::unwrap)).let(TrafficRouting::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("afd27f22931c615a08a4ca56d4c8f7cc8c9751fc692fd927be173e7f33ff4998")

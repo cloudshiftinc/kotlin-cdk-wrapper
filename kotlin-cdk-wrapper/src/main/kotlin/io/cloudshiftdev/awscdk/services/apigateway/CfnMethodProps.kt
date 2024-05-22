@@ -375,7 +375,7 @@ public interface CfnMethodProps {
      * this method.
      */
     override fun apiKeyRequired(apiKeyRequired: IResolvable) {
-      cdkBuilder.apiKeyRequired(apiKeyRequired.let(IResolvable::unwrap))
+      cdkBuilder.apiKeyRequired(apiKeyRequired.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -437,7 +437,7 @@ public interface CfnMethodProps {
      * integration.
      */
     override fun integration(integration: IResolvable) {
-      cdkBuilder.integration(integration.let(IResolvable::unwrap))
+      cdkBuilder.integration(integration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -445,7 +445,7 @@ public interface CfnMethodProps {
      * integration.
      */
     override fun integration(integration: CfnMethod.IntegrationProperty) {
-      cdkBuilder.integration(integration.let(CfnMethod.IntegrationProperty::unwrap))
+      cdkBuilder.integration(integration.let(CfnMethod.IntegrationProperty.Companion::unwrap))
     }
 
     /**
@@ -461,7 +461,7 @@ public interface CfnMethodProps {
      * @param methodResponses Gets a method response associated with a given HTTP status code.
      */
     override fun methodResponses(methodResponses: IResolvable) {
-      cdkBuilder.methodResponses(methodResponses.let(IResolvable::unwrap))
+      cdkBuilder.methodResponses(methodResponses.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -491,7 +491,7 @@ public interface CfnMethodProps {
      * (as the mapped value) of the request payloads of given content types (as the mapping key).
      */
     override fun requestModels(requestModels: IResolvable) {
-      cdkBuilder.requestModels(requestModels.let(IResolvable::unwrap))
+      cdkBuilder.requestModels(requestModels.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -513,7 +513,7 @@ public interface CfnMethodProps {
      * request parameters or templates.
      */
     override fun requestParameters(requestParameters: IResolvable) {
-      cdkBuilder.requestParameters(requestParameters.let(IResolvable::unwrap))
+      cdkBuilder.requestParameters(requestParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -28,7 +28,7 @@ public open class UserPoolDomainTarget(
   cdkObject: software.amazon.awscdk.services.route53.targets.UserPoolDomainTarget,
 ) : CdkObject(cdkObject), IAliasRecordTarget {
   public constructor(domain: UserPoolDomain) :
-      this(software.amazon.awscdk.services.route53.targets.UserPoolDomainTarget(domain.let(UserPoolDomain::unwrap))
+      this(software.amazon.awscdk.services.route53.targets.UserPoolDomainTarget(domain.let(UserPoolDomain.Companion::unwrap))
   )
 
   /**
@@ -38,7 +38,7 @@ public open class UserPoolDomainTarget(
    * @param _zone
    */
   public override fun bind(record: IRecordSet): AliasRecordTargetConfig =
-      unwrap(this).bind(record.let(IRecordSet::unwrap)).let(AliasRecordTargetConfig::wrap)
+      unwrap(this).bind(record.let(IRecordSet.Companion::unwrap)).let(AliasRecordTargetConfig::wrap)
 
   /**
    * Return hosted zone ID and DNS name, usable for Route53 alias targets.
@@ -47,8 +47,8 @@ public open class UserPoolDomainTarget(
    * @param _zone
    */
   public override fun bind(record: IRecordSet, zone: IHostedZone): AliasRecordTargetConfig =
-      unwrap(this).bind(record.let(IRecordSet::unwrap),
-      zone.let(IHostedZone::unwrap)).let(AliasRecordTargetConfig::wrap)
+      unwrap(this).bind(record.let(IRecordSet.Companion::unwrap),
+      zone.let(IHostedZone.Companion::unwrap)).let(AliasRecordTargetConfig::wrap)
 
   public companion object {
     internal

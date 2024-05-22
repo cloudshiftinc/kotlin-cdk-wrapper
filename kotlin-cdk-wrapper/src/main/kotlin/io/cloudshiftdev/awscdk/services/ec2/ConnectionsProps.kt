@@ -95,7 +95,7 @@ public interface ConnectionsProps {
      * @param defaultPort Default port range for initiating connections to and from this object.
      */
     override fun defaultPort(defaultPort: Port) {
-      cdkBuilder.defaultPort(defaultPort.let(Port::unwrap))
+      cdkBuilder.defaultPort(defaultPort.let(Port.Companion::unwrap))
     }
 
     /**
@@ -111,14 +111,14 @@ public interface ConnectionsProps {
      * This object is required, but will be derived from securityGroup if that is passed.
      */
     override fun peer(peer: IPeer) {
-      cdkBuilder.peer(peer.let(IPeer::unwrap))
+      cdkBuilder.peer(peer.let(IPeer.Companion::unwrap))
     }
 
     /**
      * @param securityGroups What securityGroup(s) this object is managing connections for.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**

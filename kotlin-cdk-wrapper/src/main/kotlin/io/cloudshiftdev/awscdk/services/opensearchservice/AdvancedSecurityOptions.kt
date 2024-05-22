@@ -161,7 +161,7 @@ public interface AdvancedSecurityOptions {
      * Secrets Manager.
      */
     override fun masterUserPassword(masterUserPassword: SecretValue) {
-      cdkBuilder.masterUserPassword(masterUserPassword.let(SecretValue::unwrap))
+      cdkBuilder.masterUserPassword(masterUserPassword.let(SecretValue.Companion::unwrap))
     }
 
     /**
@@ -177,7 +177,7 @@ public interface AdvancedSecurityOptions {
      * If set, `samlAuthenticationEnabled` will be enabled.
      */
     override fun samlAuthenticationOptions(samlAuthenticationOptions: SAMLOptionsProperty) {
-      cdkBuilder.samlAuthenticationOptions(samlAuthenticationOptions.let(SAMLOptionsProperty::unwrap))
+      cdkBuilder.samlAuthenticationOptions(samlAuthenticationOptions.let(SAMLOptionsProperty.Companion::unwrap))
     }
 
     /**

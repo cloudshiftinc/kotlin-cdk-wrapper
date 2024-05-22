@@ -48,8 +48,8 @@ public open class CfnNode(
     id: String,
     props: CfnNodeProps,
   ) :
-      this(software.amazon.awscdk.services.managedblockchain.CfnNode(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnNodeProps::unwrap))
+      this(software.amazon.awscdk.services.managedblockchain.CfnNode(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnNodeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -87,7 +87,7 @@ public open class CfnNode(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -123,14 +123,14 @@ public open class CfnNode(
    * Configuration properties of a peer node.
    */
   public open fun nodeConfiguration(`value`: IResolvable) {
-    unwrap(this).setNodeConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNodeConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration properties of a peer node.
    */
   public open fun nodeConfiguration(`value`: NodeConfigurationProperty) {
-    unwrap(this).setNodeConfiguration(`value`.let(NodeConfigurationProperty::unwrap))
+    unwrap(this).setNodeConfiguration(`value`.let(NodeConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -235,7 +235,7 @@ public open class CfnNode(
      * @param nodeConfiguration Configuration properties of a peer node. 
      */
     override fun nodeConfiguration(nodeConfiguration: IResolvable) {
-      cdkBuilder.nodeConfiguration(nodeConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.nodeConfiguration(nodeConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -245,7 +245,7 @@ public open class CfnNode(
      * @param nodeConfiguration Configuration properties of a peer node. 
      */
     override fun nodeConfiguration(nodeConfiguration: NodeConfigurationProperty) {
-      cdkBuilder.nodeConfiguration(nodeConfiguration.let(NodeConfigurationProperty::unwrap))
+      cdkBuilder.nodeConfiguration(nodeConfiguration.let(NodeConfigurationProperty.Companion::unwrap))
     }
 
     /**

@@ -41,8 +41,8 @@ public open class CfnNetworkInterfacePermission(
     id: String,
     props: CfnNetworkInterfacePermissionProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnNetworkInterfacePermission(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnNetworkInterfacePermissionProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnNetworkInterfacePermission(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnNetworkInterfacePermissionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -75,7 +75,7 @@ public open class CfnNetworkInterfacePermission(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

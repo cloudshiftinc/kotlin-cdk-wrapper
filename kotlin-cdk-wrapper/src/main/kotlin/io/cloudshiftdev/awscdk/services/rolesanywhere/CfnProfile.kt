@@ -54,8 +54,8 @@ public open class CfnProfile(
     id: String,
     props: CfnProfileProps,
   ) :
-      this(software.amazon.awscdk.services.rolesanywhere.CfnProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnProfileProps::unwrap))
+      this(software.amazon.awscdk.services.rolesanywhere.CfnProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -103,7 +103,7 @@ public open class CfnProfile(
    * The enabled status of the resource.
    */
   public open fun enabled(`value`: IResolvable) {
-    unwrap(this).setEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -112,7 +112,7 @@ public open class CfnProfile(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -162,7 +162,7 @@ public open class CfnProfile(
    * Specifies whether instance properties are required in CreateSession requests with this profile.
    */
   public open fun requireInstanceProperties(`value`: IResolvable) {
-    unwrap(this).setRequireInstanceProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRequireInstanceProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -212,7 +212,7 @@ public open class CfnProfile(
    * A list of Tags.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -377,7 +377,7 @@ public open class CfnProfile(
      * @param enabled The enabled status of the resource. 
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -434,7 +434,7 @@ public open class CfnProfile(
      * CreateSession requests with this profile. 
      */
     override fun requireInstanceProperties(requireInstanceProperties: IResolvable) {
-      cdkBuilder.requireInstanceProperties(requireInstanceProperties.let(IResolvable::unwrap))
+      cdkBuilder.requireInstanceProperties(requireInstanceProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -477,7 +477,7 @@ public open class CfnProfile(
      * @param tags A list of Tags. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

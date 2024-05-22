@@ -48,8 +48,8 @@ public open class CfnClientVpnAuthorizationRule(
     id: String,
     props: CfnClientVpnAuthorizationRuleProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnClientVpnAuthorizationRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnClientVpnAuthorizationRuleProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnClientVpnAuthorizationRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnClientVpnAuthorizationRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -94,7 +94,7 @@ public open class CfnClientVpnAuthorizationRule(
    * Indicates whether to grant access to all clients.
    */
   public open fun authorizeAllGroups(`value`: IResolvable) {
-    unwrap(this).setAuthorizeAllGroups(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAuthorizeAllGroups(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -127,7 +127,7 @@ public open class CfnClientVpnAuthorizationRule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -253,7 +253,7 @@ public open class CfnClientVpnAuthorizationRule(
      * @param authorizeAllGroups Indicates whether to grant access to all clients. 
      */
     override fun authorizeAllGroups(authorizeAllGroups: IResolvable) {
-      cdkBuilder.authorizeAllGroups(authorizeAllGroups.let(IResolvable::unwrap))
+      cdkBuilder.authorizeAllGroups(authorizeAllGroups.let(IResolvable.Companion::unwrap))
     }
 
     /**

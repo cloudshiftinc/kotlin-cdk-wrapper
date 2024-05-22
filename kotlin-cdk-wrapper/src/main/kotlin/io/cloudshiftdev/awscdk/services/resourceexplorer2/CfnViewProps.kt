@@ -235,7 +235,7 @@ public interface CfnViewProps {
      * the letters `us` and are *not* tagged with a key `Stage` that has the value `prod` .
      */
     override fun filters(filters: IResolvable) {
-      cdkBuilder.filters(filters.let(IResolvable::unwrap))
+      cdkBuilder.filters(filters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -260,7 +260,7 @@ public interface CfnViewProps {
      * the letters `us` and are *not* tagged with a key `Stage` that has the value `prod` .
      */
     override fun filters(filters: CfnView.FiltersProperty) {
-      cdkBuilder.filters(filters.let(CfnView.FiltersProperty::unwrap))
+      cdkBuilder.filters(filters.let(CfnView.FiltersProperty.Companion::unwrap))
     }
 
     /**
@@ -294,7 +294,7 @@ public interface CfnViewProps {
      * view.
      */
     override fun includedProperties(includedProperties: IResolvable) {
-      cdkBuilder.includedProperties(includedProperties.let(IResolvable::unwrap))
+      cdkBuilder.includedProperties(includedProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**

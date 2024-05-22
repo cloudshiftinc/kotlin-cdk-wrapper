@@ -60,7 +60,7 @@ public abstract class EcsVolume(
 
   public companion object {
     public fun efs(options: EfsVolumeOptions): EfsVolume =
-        software.amazon.awscdk.services.batch.EcsVolume.efs(options.let(EfsVolumeOptions::unwrap)).let(EfsVolume::wrap)
+        software.amazon.awscdk.services.batch.EcsVolume.efs(options.let(EfsVolumeOptions.Companion::unwrap)).let(EfsVolume::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9275ffcb192fc3d2a8ef19e2ccbb251879805035fb5b6e25a33d4fb8f155c71b")
@@ -68,7 +68,7 @@ public abstract class EcsVolume(
         efs(EfsVolumeOptions(options))
 
     public fun host(options: HostVolumeOptions): HostVolume =
-        software.amazon.awscdk.services.batch.EcsVolume.host(options.let(HostVolumeOptions::unwrap)).let(HostVolume::wrap)
+        software.amazon.awscdk.services.batch.EcsVolume.host(options.let(HostVolumeOptions.Companion::unwrap)).let(HostVolume::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("95ba5d1b24b828eb8450cd58e809325a975ce6934b25a34c881235e47d1fa54d")

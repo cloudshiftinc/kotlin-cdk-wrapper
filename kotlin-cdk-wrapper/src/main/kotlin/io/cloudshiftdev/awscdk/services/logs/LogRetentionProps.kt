@@ -144,7 +144,7 @@ public interface LogRetentionProps {
      * @param logRetentionRetryOptions Retry options for all AWS API calls.
      */
     override fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions) {
-      cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions.let(LogRetentionRetryOptions::unwrap))
+      cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions.let(LogRetentionRetryOptions.Companion::unwrap))
     }
 
     /**
@@ -160,21 +160,21 @@ public interface LogRetentionProps {
      * @param removalPolicy The removalPolicy for the log group when the stack is deleted.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
      * @param retention The number of days log events are kept in CloudWatch Logs. 
      */
     override fun retention(retention: RetentionDays) {
-      cdkBuilder.retention(retention.let(RetentionDays::unwrap))
+      cdkBuilder.retention(retention.let(RetentionDays.Companion::unwrap))
     }
 
     /**
      * @param role The IAM role for the Lambda function associated with the custom resource.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.logs.LogRetentionProps = cdkBuilder.build()

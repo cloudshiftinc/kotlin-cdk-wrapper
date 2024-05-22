@@ -200,7 +200,7 @@ public interface EbsOptions {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun volumeType(volumeType: EbsDeviceVolumeType) {
-      cdkBuilder.volumeType(volumeType.let(EbsDeviceVolumeType::unwrap))
+      cdkBuilder.volumeType(volumeType.let(EbsDeviceVolumeType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.elasticsearch.EbsOptions =

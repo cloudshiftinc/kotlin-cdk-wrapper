@@ -197,7 +197,7 @@ public interface CfnComponentVersionProps {
      * You must specify either `InlineRecipe` or `LambdaFunction` .
      */
     override fun lambdaFunction(lambdaFunction: IResolvable) {
-      cdkBuilder.lambdaFunction(lambdaFunction.let(IResolvable::unwrap))
+      cdkBuilder.lambdaFunction(lambdaFunction.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -206,7 +206,7 @@ public interface CfnComponentVersionProps {
      */
     override
         fun lambdaFunction(lambdaFunction: CfnComponentVersion.LambdaFunctionRecipeSourceProperty) {
-      cdkBuilder.lambdaFunction(lambdaFunction.let(CfnComponentVersion.LambdaFunctionRecipeSourceProperty::unwrap))
+      cdkBuilder.lambdaFunction(lambdaFunction.let(CfnComponentVersion.LambdaFunctionRecipeSourceProperty.Companion::unwrap))
     }
 
     /**

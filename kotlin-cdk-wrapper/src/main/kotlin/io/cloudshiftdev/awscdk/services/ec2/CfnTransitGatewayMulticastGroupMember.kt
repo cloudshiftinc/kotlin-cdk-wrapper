@@ -45,8 +45,8 @@ public open class CfnTransitGatewayMulticastGroupMember(
     id: String,
     props: CfnTransitGatewayMulticastGroupMemberProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastGroupMember(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTransitGatewayMulticastGroupMemberProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnTransitGatewayMulticastGroupMember(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTransitGatewayMulticastGroupMemberProps.Companion::unwrap))
   )
 
   public constructor(
@@ -117,7 +117,7 @@ public open class CfnTransitGatewayMulticastGroupMember(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

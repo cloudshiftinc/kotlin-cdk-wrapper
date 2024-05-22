@@ -159,7 +159,7 @@ public interface SsmParameterImageOptions {
      * @param os Operating system.
      */
     override fun os(os: OperatingSystemType) {
-      cdkBuilder.os(os.let(OperatingSystemType::unwrap))
+      cdkBuilder.os(os.let(OperatingSystemType.Companion::unwrap))
     }
 
     /**
@@ -173,7 +173,7 @@ public interface SsmParameterImageOptions {
      * @param userData Custom UserData.
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.SsmParameterImageOptions =

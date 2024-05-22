@@ -45,7 +45,7 @@ public open class LookupMachineImage(
   cdkObject: software.amazon.awscdk.services.ec2.LookupMachineImage,
 ) : CdkObject(cdkObject), IMachineImage {
   public constructor(props: LookupMachineImageProps) :
-      this(software.amazon.awscdk.services.ec2.LookupMachineImage(props.let(LookupMachineImageProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.LookupMachineImage(props.let(LookupMachineImageProps.Companion::unwrap))
   )
 
   public constructor(props: LookupMachineImageProps.Builder.() -> Unit) :
@@ -58,7 +58,7 @@ public open class LookupMachineImage(
    * @param scope 
    */
   public override fun image(scope: Construct): MachineImageConfig =
-      unwrap(this).getImage(scope.let(Construct::unwrap)).let(MachineImageConfig::wrap)
+      unwrap(this).getImage(scope.let(Construct.Companion::unwrap)).let(MachineImageConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.LookupMachineImage].
@@ -172,7 +172,7 @@ public open class LookupMachineImage(
      * @param userData Custom userdata for this image. 
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     /**

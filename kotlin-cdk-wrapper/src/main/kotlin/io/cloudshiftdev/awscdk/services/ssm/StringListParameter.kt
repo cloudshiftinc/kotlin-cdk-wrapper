@@ -34,8 +34,8 @@ public open class StringListParameter(
     id: String,
     props: StringListParameterProps,
   ) :
-      this(software.amazon.awscdk.services.ssm.StringListParameter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(StringListParameterProps::unwrap))
+      this(software.amazon.awscdk.services.ssm.StringListParameter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(StringListParameterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -59,7 +59,7 @@ public open class StringListParameter(
    * @param grantee 
    */
   public override fun grantRead(grantee: IGrantable): Grant =
-      unwrap(this).grantRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grants write (PutParameter) permissions on the SSM Parameter.
@@ -67,7 +67,7 @@ public open class StringListParameter(
    * @param grantee 
    */
   public override fun grantWrite(grantee: IGrantable): Grant =
-      unwrap(this).grantWrite(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantWrite(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The ARN of the SSM Parameter resource.
@@ -265,7 +265,7 @@ public open class StringListParameter(
      * @param tier The tier of the string parameter. 
      */
     override fun tier(tier: ParameterTier) {
-      cdkBuilder.tier(tier.let(ParameterTier::unwrap))
+      cdkBuilder.tier(tier.let(ParameterTier.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ssm.StringListParameter = cdkBuilder.build()
@@ -277,8 +277,8 @@ public open class StringListParameter(
       id: String,
       attrs: ListParameterAttributes,
     ): IStringListParameter =
-        software.amazon.awscdk.services.ssm.StringListParameter.fromListParameterAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(ListParameterAttributes::unwrap)).let(IStringListParameter::wrap)
+        software.amazon.awscdk.services.ssm.StringListParameter.fromListParameterAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(ListParameterAttributes.Companion::unwrap)).let(IStringListParameter::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fc836518e1f7fbb91648bb3769bf2dea12bec5f330ace7c70ee50a8a23d820f6")
@@ -293,12 +293,12 @@ public open class StringListParameter(
       id: String,
       stringListParameterName: String,
     ): IStringListParameter =
-        software.amazon.awscdk.services.ssm.StringListParameter.fromStringListParameterName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ssm.StringListParameter.fromStringListParameterName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, stringListParameterName).let(IStringListParameter::wrap)
 
     public fun valueForTypedListParameter(scope: CloudshiftdevConstructsConstruct,
         parameterName: String): List<String> =
-        software.amazon.awscdk.services.ssm.StringListParameter.valueForTypedListParameter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ssm.StringListParameter.valueForTypedListParameter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         parameterName)
 
     public fun valueForTypedListParameter(
@@ -306,8 +306,8 @@ public open class StringListParameter(
       parameterName: String,
       type: ParameterValueType,
     ): List<String> =
-        software.amazon.awscdk.services.ssm.StringListParameter.valueForTypedListParameter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        parameterName, type.let(ParameterValueType::unwrap))
+        software.amazon.awscdk.services.ssm.StringListParameter.valueForTypedListParameter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        parameterName, type.let(ParameterValueType.Companion::unwrap))
 
     public fun valueForTypedListParameter(
       scope: CloudshiftdevConstructsConstruct,
@@ -315,8 +315,8 @@ public open class StringListParameter(
       type: ParameterValueType,
       version: Number,
     ): List<String> =
-        software.amazon.awscdk.services.ssm.StringListParameter.valueForTypedListParameter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        parameterName, type.let(ParameterValueType::unwrap), version)
+        software.amazon.awscdk.services.ssm.StringListParameter.valueForTypedListParameter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        parameterName, type.let(ParameterValueType.Companion::unwrap), version)
 
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,

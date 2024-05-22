@@ -365,14 +365,14 @@ public interface CfnAnalysisProps {
      * @param definition the value to be set.
      */
     override fun definition(definition: IResolvable) {
-      cdkBuilder.definition(definition.let(IResolvable::unwrap))
+      cdkBuilder.definition(definition.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param definition the value to be set.
      */
     override fun definition(definition: CfnAnalysis.AnalysisDefinitionProperty) {
-      cdkBuilder.definition(definition.let(CfnAnalysis.AnalysisDefinitionProperty::unwrap))
+      cdkBuilder.definition(definition.let(CfnAnalysis.AnalysisDefinitionProperty.Companion::unwrap))
     }
 
     /**
@@ -387,7 +387,7 @@ public interface CfnAnalysisProps {
      * @param errors Errors associated with the analysis.
      */
     override fun errors(errors: IResolvable) {
-      cdkBuilder.errors(errors.let(IResolvable::unwrap))
+      cdkBuilder.errors(errors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -415,7 +415,7 @@ public interface CfnAnalysisProps {
      * An analysis can have any parameter type, and some parameters might accept multiple values.
      */
     override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -423,7 +423,7 @@ public interface CfnAnalysisProps {
      * An analysis can have any parameter type, and some parameters might accept multiple values.
      */
     override fun parameters(parameters: CfnAnalysis.ParametersProperty) {
-      cdkBuilder.parameters(parameters.let(CfnAnalysis.ParametersProperty::unwrap))
+      cdkBuilder.parameters(parameters.let(CfnAnalysis.ParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -445,7 +445,7 @@ public interface CfnAnalysisProps {
      * To specify no permissions, omit `Permissions` .
      */
     override fun permissions(permissions: IResolvable) {
-      cdkBuilder.permissions(permissions.let(IResolvable::unwrap))
+      cdkBuilder.permissions(permissions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -477,7 +477,7 @@ public interface CfnAnalysisProps {
      * sheet.
      */
     override fun sheets(sheets: IResolvable) {
-      cdkBuilder.sheets(sheets.let(IResolvable::unwrap))
+      cdkBuilder.sheets(sheets.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -503,7 +503,7 @@ public interface CfnAnalysisProps {
      * valid.
      */
     override fun sourceEntity(sourceEntity: IResolvable) {
-      cdkBuilder.sourceEntity(sourceEntity.let(IResolvable::unwrap))
+      cdkBuilder.sourceEntity(sourceEntity.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -515,7 +515,7 @@ public interface CfnAnalysisProps {
      * valid.
      */
     override fun sourceEntity(sourceEntity: CfnAnalysis.AnalysisSourceEntityProperty) {
-      cdkBuilder.sourceEntity(sourceEntity.let(CfnAnalysis.AnalysisSourceEntityProperty::unwrap))
+      cdkBuilder.sourceEntity(sourceEntity.let(CfnAnalysis.AnalysisSourceEntityProperty.Companion::unwrap))
     }
 
     /**
@@ -544,7 +544,7 @@ public interface CfnAnalysisProps {
      * the analysis.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -567,7 +567,7 @@ public interface CfnAnalysisProps {
      * When you set this value to `LENIENT` , validation is skipped for specific errors.
      */
     override fun validationStrategy(validationStrategy: IResolvable) {
-      cdkBuilder.validationStrategy(validationStrategy.let(IResolvable::unwrap))
+      cdkBuilder.validationStrategy(validationStrategy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -576,7 +576,7 @@ public interface CfnAnalysisProps {
      * When you set this value to `LENIENT` , validation is skipped for specific errors.
      */
     override fun validationStrategy(validationStrategy: CfnAnalysis.ValidationStrategyProperty) {
-      cdkBuilder.validationStrategy(validationStrategy.let(CfnAnalysis.ValidationStrategyProperty::unwrap))
+      cdkBuilder.validationStrategy(validationStrategy.let(CfnAnalysis.ValidationStrategyProperty.Companion::unwrap))
     }
 
     /**

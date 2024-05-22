@@ -59,7 +59,7 @@ public interface IDistribution : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -91,7 +91,7 @@ public interface IDistribution : IResource {
      * @param actions The set of actions to allow (i.e. "cloudfront:ListInvalidations"). 
      */
     override fun grant(identity: IGrantable, vararg actions: String): Grant =
-        unwrap(this).grant(identity.let(IGrantable::unwrap),
+        unwrap(this).grant(identity.let(IGrantable.Companion::unwrap),
         *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
     /**
@@ -100,7 +100,7 @@ public interface IDistribution : IResource {
      * @param identity The principal. 
      */
     override fun grantCreateInvalidation(identity: IGrantable): Grant =
-        unwrap(this).grantCreateInvalidation(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantCreateInvalidation(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 

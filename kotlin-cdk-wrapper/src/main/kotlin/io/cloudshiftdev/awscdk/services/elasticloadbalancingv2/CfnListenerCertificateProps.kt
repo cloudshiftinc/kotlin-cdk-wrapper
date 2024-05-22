@@ -86,7 +86,7 @@ public interface CfnListenerCertificateProps {
      * You can specify one certificate per resource.
      */
     override fun certificates(certificates: IResolvable) {
-      cdkBuilder.certificates(certificates.let(IResolvable::unwrap))
+      cdkBuilder.certificates(certificates.let(IResolvable.Companion::unwrap))
     }
 
     /**

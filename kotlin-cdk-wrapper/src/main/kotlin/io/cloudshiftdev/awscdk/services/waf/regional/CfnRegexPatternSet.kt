@@ -47,8 +47,8 @@ public open class CfnRegexPatternSet(
     id: String,
     props: CfnRegexPatternSetProps,
   ) :
-      this(software.amazon.awscdk.services.waf.regional.CfnRegexPatternSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRegexPatternSetProps::unwrap))
+      this(software.amazon.awscdk.services.waf.regional.CfnRegexPatternSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRegexPatternSetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -69,7 +69,7 @@ public open class CfnRegexPatternSet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

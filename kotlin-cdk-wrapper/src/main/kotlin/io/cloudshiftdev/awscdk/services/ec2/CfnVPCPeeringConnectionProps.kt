@@ -178,7 +178,7 @@ public interface CfnVPCPeeringConnectionProps {
      * @param tags Any tags assigned to the resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

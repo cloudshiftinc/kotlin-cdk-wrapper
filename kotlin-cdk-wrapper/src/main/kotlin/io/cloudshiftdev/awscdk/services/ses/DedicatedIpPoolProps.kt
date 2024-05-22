@@ -86,7 +86,7 @@ public interface DedicatedIpPoolProps {
      * However, updating ScalingMode from `MANAGED` to `STANDARD` is not supported.
      */
     override fun scalingMode(scalingMode: ScalingMode) {
-      cdkBuilder.scalingMode(scalingMode.let(ScalingMode::unwrap))
+      cdkBuilder.scalingMode(scalingMode.let(ScalingMode.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ses.DedicatedIpPoolProps =

@@ -172,7 +172,7 @@ public interface CfnNetworkAnalyzerConfigurationProps {
      * Tags are metadata that you can use to manage a resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -150,7 +150,7 @@ public interface CfnIdentityPoolPrincipalTagProps {
      * instead of a custom map.
      */
     override fun useDefaults(useDefaults: IResolvable) {
-      cdkBuilder.useDefaults(useDefaults.let(IResolvable::unwrap))
+      cdkBuilder.useDefaults(useDefaults.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cognito.CfnIdentityPoolPrincipalTagProps =

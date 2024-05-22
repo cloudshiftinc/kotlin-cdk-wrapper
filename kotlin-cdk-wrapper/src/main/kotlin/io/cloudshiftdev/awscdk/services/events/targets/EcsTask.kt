@@ -50,7 +50,7 @@ public open class EcsTask(
   cdkObject: software.amazon.awscdk.services.events.targets.EcsTask,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(props: EcsTaskProps) :
-      this(software.amazon.awscdk.services.events.targets.EcsTask(props.let(EcsTaskProps::unwrap))
+      this(software.amazon.awscdk.services.events.targets.EcsTask(props.let(EcsTaskProps.Companion::unwrap))
   )
 
   public constructor(props: EcsTaskProps.Builder.() -> Unit) : this(EcsTaskProps(props)
@@ -63,7 +63,7 @@ public open class EcsTask(
    * @param _id
    */
   public override fun bind(rule: IRule): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap)).let(RuleTargetConfig::wrap)
 
   /**
    * Allows using tasks as target of EventBridge events.
@@ -72,7 +72,7 @@ public open class EcsTask(
    * @param _id
    */
   public override fun bind(rule: IRule, id: String): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap), id).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap), id).let(RuleTargetConfig::wrap)
 
   /**
    * The security groups associated with the task.
@@ -342,7 +342,7 @@ public open class EcsTask(
      * @param cluster Cluster where service will be deployed. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -354,7 +354,7 @@ public open class EcsTask(
      * @param containerOverrides Container setting overrides. 
      */
     override fun containerOverrides(containerOverrides: List<ContainerOverride>) {
-      cdkBuilder.containerOverrides(containerOverrides.map(ContainerOverride::unwrap))
+      cdkBuilder.containerOverrides(containerOverrides.map(ContainerOverride.Companion::unwrap))
     }
 
     /**
@@ -387,7 +387,7 @@ public open class EcsTask(
      * 
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -415,7 +415,7 @@ public open class EcsTask(
      * @param launchType Specifies the launch type on which your task is running. 
      */
     override fun launchType(launchType: LaunchType) {
-      cdkBuilder.launchType(launchType.let(LaunchType::unwrap))
+      cdkBuilder.launchType(launchType.let(LaunchType.Companion::unwrap))
     }
 
     /**
@@ -430,7 +430,7 @@ public open class EcsTask(
      * processing. 
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -444,7 +444,7 @@ public open class EcsTask(
      * @param platformVersion The platform version on which to run your task. 
      */
     override fun platformVersion(platformVersion: FargatePlatformVersion) {
-      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion::unwrap))
+      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion.Companion::unwrap))
     }
 
     /**
@@ -458,7 +458,7 @@ public open class EcsTask(
      * task. 
      */
     override fun propagateTags(propagateTags: PropagatedTagSource) {
-      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource.Companion::unwrap))
     }
 
     /**
@@ -484,7 +484,7 @@ public open class EcsTask(
      * @param role Existing IAM role to run the ECS task. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -497,7 +497,7 @@ public open class EcsTask(
      * @param securityGroups Existing security groups to use for the task's ENIs. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -522,7 +522,7 @@ public open class EcsTask(
      * @param subnetSelection In what subnets to place the task's ENIs. 
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -550,7 +550,7 @@ public open class EcsTask(
      * 
      */
     override fun tags(tags: List<Tag>) {
-      cdkBuilder.tags(tags.map(Tag::unwrap))
+      cdkBuilder.tags(tags.map(Tag.Companion::unwrap))
     }
 
     /**
@@ -582,7 +582,7 @@ public open class EcsTask(
      * @param taskDefinition Task Definition of the task that should be started. 
      */
     override fun taskDefinition(taskDefinition: ITaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(ITaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(ITaskDefinition.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.events.targets.EcsTask = cdkBuilder.build()

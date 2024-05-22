@@ -56,8 +56,8 @@ public open class CfnSlackChannelConfiguration(
     id: String,
     props: CfnSlackChannelConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.chatbot.CfnSlackChannelConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSlackChannelConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.chatbot.CfnSlackChannelConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSlackChannelConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -121,7 +121,7 @@ public open class CfnSlackChannelConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -197,7 +197,7 @@ public open class CfnSlackChannelConfiguration(
    * Enables use of a user role requirement in your chat configuration.
    */
   public open fun userRoleRequired(`value`: IResolvable) {
-    unwrap(this).setUserRoleRequired(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUserRoleRequired(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -462,7 +462,7 @@ public open class CfnSlackChannelConfiguration(
      * @param userRoleRequired Enables use of a user role requirement in your chat configuration. 
      */
     override fun userRoleRequired(userRoleRequired: IResolvable) {
-      cdkBuilder.userRoleRequired(userRoleRequired.let(IResolvable::unwrap))
+      cdkBuilder.userRoleRequired(userRoleRequired.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.chatbot.CfnSlackChannelConfiguration =

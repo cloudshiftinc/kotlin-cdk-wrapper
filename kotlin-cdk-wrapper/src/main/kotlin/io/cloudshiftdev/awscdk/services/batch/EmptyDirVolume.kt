@@ -36,7 +36,7 @@ public open class EmptyDirVolume(
   cdkObject: software.amazon.awscdk.services.batch.EmptyDirVolume,
 ) : EksVolume(cdkObject) {
   public constructor(options: EmptyDirVolumeOptions) :
-      this(software.amazon.awscdk.services.batch.EmptyDirVolume(options.let(EmptyDirVolumeOptions::unwrap))
+      this(software.amazon.awscdk.services.batch.EmptyDirVolume(options.let(EmptyDirVolumeOptions.Companion::unwrap))
   )
 
   public constructor(options: EmptyDirVolumeOptions.Builder.() -> Unit) :
@@ -124,7 +124,7 @@ public open class EmptyDirVolume(
      * @param medium The storage type to use for this Volume. 
      */
     override fun medium(medium: EmptyDirMediumType) {
-      cdkBuilder.medium(medium.let(EmptyDirMediumType::unwrap))
+      cdkBuilder.medium(medium.let(EmptyDirMediumType.Companion::unwrap))
     }
 
     /**
@@ -171,7 +171,7 @@ public open class EmptyDirVolume(
      * @param sizeLimit The maximum size for this Volume. 
      */
     override fun sizeLimit(sizeLimit: Size) {
-      cdkBuilder.sizeLimit(sizeLimit.let(Size::unwrap))
+      cdkBuilder.sizeLimit(sizeLimit.let(Size.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.batch.EmptyDirVolume = cdkBuilder.build()

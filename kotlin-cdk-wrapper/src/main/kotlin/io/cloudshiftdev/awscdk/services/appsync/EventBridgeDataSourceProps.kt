@@ -81,7 +81,7 @@ public interface EventBridgeDataSourceProps : BackedDataSourceProps {
      * @param api The API to attach this data source to. 
      */
     override fun api(api: IGraphqlApi) {
-      cdkBuilder.api(api.let(IGraphqlApi::unwrap))
+      cdkBuilder.api(api.let(IGraphqlApi.Companion::unwrap))
     }
 
     /**
@@ -95,7 +95,7 @@ public interface EventBridgeDataSourceProps : BackedDataSourceProps {
      * @param eventBus The EventBridge EventBus. 
      */
     override fun eventBus(eventBus: IEventBus) {
-      cdkBuilder.eventBus(eventBus.let(IEventBus::unwrap))
+      cdkBuilder.eventBus(eventBus.let(IEventBus.Companion::unwrap))
     }
 
     /**
@@ -110,7 +110,7 @@ public interface EventBridgeDataSourceProps : BackedDataSourceProps {
      * source.
      */
     override fun serviceRole(serviceRole: IRole) {
-      cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
+      cdkBuilder.serviceRole(serviceRole.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appsync.EventBridgeDataSourceProps =

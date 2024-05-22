@@ -161,7 +161,7 @@ public open class CfnUserPool(
   cdkObject: software.amazon.awscdk.services.cognito.CfnUserPool,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.cognito.CfnUserPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.cognito.CfnUserPool(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -170,8 +170,8 @@ public open class CfnUserPool(
     id: String,
     props: CfnUserPoolProps,
   ) :
-      this(software.amazon.awscdk.services.cognito.CfnUserPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnUserPoolProps::unwrap))
+      this(software.amazon.awscdk.services.cognito.CfnUserPool(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnUserPoolProps.Companion::unwrap))
   )
 
   public constructor(
@@ -192,7 +192,7 @@ public open class CfnUserPool(
    * password when they call `ForgotPassword` .
    */
   public open fun accountRecoverySetting(`value`: IResolvable) {
-    unwrap(this).setAccountRecoverySetting(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccountRecoverySetting(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -200,7 +200,7 @@ public open class CfnUserPool(
    * password when they call `ForgotPassword` .
    */
   public open fun accountRecoverySetting(`value`: AccountRecoverySettingProperty) {
-    unwrap(this).setAccountRecoverySetting(`value`.let(AccountRecoverySettingProperty::unwrap))
+    unwrap(this).setAccountRecoverySetting(`value`.let(AccountRecoverySettingProperty.Companion::unwrap))
   }
 
   /**
@@ -222,14 +222,14 @@ public open class CfnUserPool(
    * The configuration for creating a new user profile.
    */
   public open fun adminCreateUserConfig(`value`: IResolvable) {
-    unwrap(this).setAdminCreateUserConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAdminCreateUserConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration for creating a new user profile.
    */
   public open fun adminCreateUserConfig(`value`: AdminCreateUserConfigProperty) {
-    unwrap(this).setAdminCreateUserConfig(`value`.let(AdminCreateUserConfigProperty::unwrap))
+    unwrap(this).setAdminCreateUserConfig(`value`.let(AdminCreateUserConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -324,14 +324,14 @@ public open class CfnUserPool(
    * The device-remembering configuration for a user pool.
    */
   public open fun deviceConfiguration(`value`: IResolvable) {
-    unwrap(this).setDeviceConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeviceConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The device-remembering configuration for a user pool.
    */
   public open fun deviceConfiguration(`value`: DeviceConfigurationProperty) {
-    unwrap(this).setDeviceConfiguration(`value`.let(DeviceConfigurationProperty::unwrap))
+    unwrap(this).setDeviceConfiguration(`value`.let(DeviceConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -351,14 +351,14 @@ public open class CfnUserPool(
    * The email configuration of your user pool.
    */
   public open fun emailConfiguration(`value`: IResolvable) {
-    unwrap(this).setEmailConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEmailConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The email configuration of your user pool.
    */
   public open fun emailConfiguration(`value`: EmailConfigurationProperty) {
-    unwrap(this).setEmailConfiguration(`value`.let(EmailConfigurationProperty::unwrap))
+    unwrap(this).setEmailConfiguration(`value`.let(EmailConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -416,7 +416,7 @@ public open class CfnUserPool(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -428,14 +428,14 @@ public open class CfnUserPool(
    * The Lambda trigger configuration information for the new user pool.
    */
   public open fun lambdaConfig(`value`: IResolvable) {
-    unwrap(this).setLambdaConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLambdaConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The Lambda trigger configuration information for the new user pool.
    */
   public open fun lambdaConfig(`value`: LambdaConfigProperty) {
-    unwrap(this).setLambdaConfig(`value`.let(LambdaConfigProperty::unwrap))
+    unwrap(this).setLambdaConfig(`value`.let(LambdaConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -471,14 +471,14 @@ public open class CfnUserPool(
    * The policy associated with a user pool.
    */
   public open fun policies(`value`: IResolvable) {
-    unwrap(this).setPolicies(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPolicies(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The policy associated with a user pool.
    */
   public open fun policies(`value`: PoliciesProperty) {
-    unwrap(this).setPolicies(`value`.let(PoliciesProperty::unwrap))
+    unwrap(this).setPolicies(`value`.let(PoliciesProperty.Companion::unwrap))
   }
 
   /**
@@ -502,7 +502,7 @@ public open class CfnUserPool(
    * These attributes can be standard or custom attributes.
    */
   public open fun schema(`value`: IResolvable) {
-    unwrap(this).setSchema(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSchema(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -544,7 +544,7 @@ public open class CfnUserPool(
    * SMS message from your AWS account through Amazon Simple Notification Service.
    */
   public open fun smsConfiguration(`value`: IResolvable) {
-    unwrap(this).setSmsConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSmsConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -552,7 +552,7 @@ public open class CfnUserPool(
    * SMS message from your AWS account through Amazon Simple Notification Service.
    */
   public open fun smsConfiguration(`value`: SmsConfigurationProperty) {
-    unwrap(this).setSmsConfiguration(`value`.let(SmsConfigurationProperty::unwrap))
+    unwrap(this).setSmsConfiguration(`value`.let(SmsConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -591,14 +591,14 @@ public open class CfnUserPool(
    * The settings for updates to user attributes.
    */
   public open fun userAttributeUpdateSettings(`value`: IResolvable) {
-    unwrap(this).setUserAttributeUpdateSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUserAttributeUpdateSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The settings for updates to user attributes.
    */
   public open fun userAttributeUpdateSettings(`value`: UserAttributeUpdateSettingsProperty) {
-    unwrap(this).setUserAttributeUpdateSettings(`value`.let(UserAttributeUpdateSettingsProperty::unwrap))
+    unwrap(this).setUserAttributeUpdateSettings(`value`.let(UserAttributeUpdateSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -619,14 +619,14 @@ public open class CfnUserPool(
    * User pool add-ons.
    */
   public open fun userPoolAddOns(`value`: IResolvable) {
-    unwrap(this).setUserPoolAddOns(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUserPoolAddOns(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * User pool add-ons.
    */
   public open fun userPoolAddOns(`value`: UserPoolAddOnsProperty) {
-    unwrap(this).setUserPoolAddOns(`value`.let(UserPoolAddOnsProperty::unwrap))
+    unwrap(this).setUserPoolAddOns(`value`.let(UserPoolAddOnsProperty.Companion::unwrap))
   }
 
   /**
@@ -692,14 +692,14 @@ public open class CfnUserPool(
    * You can choose to set case sensitivity on the username input for the selected sign-in option.
    */
   public open fun usernameConfiguration(`value`: IResolvable) {
-    unwrap(this).setUsernameConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUsernameConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * You can choose to set case sensitivity on the username input for the selected sign-in option.
    */
   public open fun usernameConfiguration(`value`: UsernameConfigurationProperty) {
-    unwrap(this).setUsernameConfiguration(`value`.let(UsernameConfigurationProperty::unwrap))
+    unwrap(this).setUsernameConfiguration(`value`.let(UsernameConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -722,7 +722,7 @@ public open class CfnUserPool(
    * to access the user's information.
    */
   public open fun verificationMessageTemplate(`value`: IResolvable) {
-    unwrap(this).setVerificationMessageTemplate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVerificationMessageTemplate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -730,7 +730,7 @@ public open class CfnUserPool(
    * to access the user's information.
    */
   public open fun verificationMessageTemplate(`value`: VerificationMessageTemplateProperty) {
-    unwrap(this).setVerificationMessageTemplate(`value`.let(VerificationMessageTemplateProperty::unwrap))
+    unwrap(this).setVerificationMessageTemplate(`value`.let(VerificationMessageTemplateProperty.Companion::unwrap))
   }
 
   /**
@@ -1484,7 +1484,7 @@ public open class CfnUserPool(
      * user can use to recover their password when they call `ForgotPassword` . 
      */
     override fun accountRecoverySetting(accountRecoverySetting: IResolvable) {
-      cdkBuilder.accountRecoverySetting(accountRecoverySetting.let(IResolvable::unwrap))
+      cdkBuilder.accountRecoverySetting(accountRecoverySetting.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1501,7 +1501,7 @@ public open class CfnUserPool(
      * user can use to recover their password when they call `ForgotPassword` . 
      */
     override fun accountRecoverySetting(accountRecoverySetting: AccountRecoverySettingProperty) {
-      cdkBuilder.accountRecoverySetting(accountRecoverySetting.let(AccountRecoverySettingProperty::unwrap))
+      cdkBuilder.accountRecoverySetting(accountRecoverySetting.let(AccountRecoverySettingProperty.Companion::unwrap))
     }
 
     /**
@@ -1530,7 +1530,7 @@ public open class CfnUserPool(
      * @param adminCreateUserConfig The configuration for creating a new user profile. 
      */
     override fun adminCreateUserConfig(adminCreateUserConfig: IResolvable) {
-      cdkBuilder.adminCreateUserConfig(adminCreateUserConfig.let(IResolvable::unwrap))
+      cdkBuilder.adminCreateUserConfig(adminCreateUserConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1540,7 +1540,7 @@ public open class CfnUserPool(
      * @param adminCreateUserConfig The configuration for creating a new user profile. 
      */
     override fun adminCreateUserConfig(adminCreateUserConfig: AdminCreateUserConfigProperty) {
-      cdkBuilder.adminCreateUserConfig(adminCreateUserConfig.let(AdminCreateUserConfigProperty::unwrap))
+      cdkBuilder.adminCreateUserConfig(adminCreateUserConfig.let(AdminCreateUserConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1642,7 +1642,7 @@ public open class CfnUserPool(
      * @param deviceConfiguration The device-remembering configuration for a user pool. 
      */
     override fun deviceConfiguration(deviceConfiguration: IResolvable) {
-      cdkBuilder.deviceConfiguration(deviceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.deviceConfiguration(deviceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1659,7 +1659,7 @@ public open class CfnUserPool(
      * @param deviceConfiguration The device-remembering configuration for a user pool. 
      */
     override fun deviceConfiguration(deviceConfiguration: DeviceConfigurationProperty) {
-      cdkBuilder.deviceConfiguration(deviceConfiguration.let(DeviceConfigurationProperty::unwrap))
+      cdkBuilder.deviceConfiguration(deviceConfiguration.let(DeviceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1691,7 +1691,7 @@ public open class CfnUserPool(
      * @param emailConfiguration The email configuration of your user pool. 
      */
     override fun emailConfiguration(emailConfiguration: IResolvable) {
-      cdkBuilder.emailConfiguration(emailConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.emailConfiguration(emailConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1704,7 +1704,7 @@ public open class CfnUserPool(
      * @param emailConfiguration The email configuration of your user pool. 
      */
     override fun emailConfiguration(emailConfiguration: EmailConfigurationProperty) {
-      cdkBuilder.emailConfiguration(emailConfiguration.let(EmailConfigurationProperty::unwrap))
+      cdkBuilder.emailConfiguration(emailConfiguration.let(EmailConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1809,7 +1809,7 @@ public open class CfnUserPool(
      * @param lambdaConfig The Lambda trigger configuration information for the new user pool. 
      */
     override fun lambdaConfig(lambdaConfig: IResolvable) {
-      cdkBuilder.lambdaConfig(lambdaConfig.let(IResolvable::unwrap))
+      cdkBuilder.lambdaConfig(lambdaConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1831,7 +1831,7 @@ public open class CfnUserPool(
      * @param lambdaConfig The Lambda trigger configuration information for the new user pool. 
      */
     override fun lambdaConfig(lambdaConfig: LambdaConfigProperty) {
-      cdkBuilder.lambdaConfig(lambdaConfig.let(LambdaConfigProperty::unwrap))
+      cdkBuilder.lambdaConfig(lambdaConfig.let(LambdaConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1879,7 +1879,7 @@ public open class CfnUserPool(
      * @param policies The policy associated with a user pool. 
      */
     override fun policies(policies: IResolvable) {
-      cdkBuilder.policies(policies.let(IResolvable::unwrap))
+      cdkBuilder.policies(policies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1889,7 +1889,7 @@ public open class CfnUserPool(
      * @param policies The policy associated with a user pool. 
      */
     override fun policies(policies: PoliciesProperty) {
-      cdkBuilder.policies(policies.let(PoliciesProperty::unwrap))
+      cdkBuilder.policies(policies.let(PoliciesProperty.Companion::unwrap))
     }
 
     /**
@@ -1917,7 +1917,7 @@ public open class CfnUserPool(
      * or custom attributes. 
      */
     override fun schema(schema: IResolvable) {
-      cdkBuilder.schema(schema.let(IResolvable::unwrap))
+      cdkBuilder.schema(schema.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1975,7 +1975,7 @@ public open class CfnUserPool(
      * Service. 
      */
     override fun smsConfiguration(smsConfiguration: IResolvable) {
-      cdkBuilder.smsConfiguration(smsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.smsConfiguration(smsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1991,7 +1991,7 @@ public open class CfnUserPool(
      * Service. 
      */
     override fun smsConfiguration(smsConfiguration: SmsConfigurationProperty) {
-      cdkBuilder.smsConfiguration(smsConfiguration.let(SmsConfigurationProperty::unwrap))
+      cdkBuilder.smsConfiguration(smsConfiguration.let(SmsConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -2039,7 +2039,7 @@ public open class CfnUserPool(
      * @param userAttributeUpdateSettings The settings for updates to user attributes. 
      */
     override fun userAttributeUpdateSettings(userAttributeUpdateSettings: IResolvable) {
-      cdkBuilder.userAttributeUpdateSettings(userAttributeUpdateSettings.let(IResolvable::unwrap))
+      cdkBuilder.userAttributeUpdateSettings(userAttributeUpdateSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2057,7 +2057,7 @@ public open class CfnUserPool(
      */
     override
         fun userAttributeUpdateSettings(userAttributeUpdateSettings: UserAttributeUpdateSettingsProperty) {
-      cdkBuilder.userAttributeUpdateSettings(userAttributeUpdateSettings.let(UserAttributeUpdateSettingsProperty::unwrap))
+      cdkBuilder.userAttributeUpdateSettings(userAttributeUpdateSettings.let(UserAttributeUpdateSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -2095,7 +2095,7 @@ public open class CfnUserPool(
      * @param userPoolAddOns User pool add-ons. 
      */
     override fun userPoolAddOns(userPoolAddOns: IResolvable) {
-      cdkBuilder.userPoolAddOns(userPoolAddOns.let(IResolvable::unwrap))
+      cdkBuilder.userPoolAddOns(userPoolAddOns.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2113,7 +2113,7 @@ public open class CfnUserPool(
      * @param userPoolAddOns User pool add-ons. 
      */
     override fun userPoolAddOns(userPoolAddOns: UserPoolAddOnsProperty) {
-      cdkBuilder.userPoolAddOns(userPoolAddOns.let(UserPoolAddOnsProperty::unwrap))
+      cdkBuilder.userPoolAddOns(userPoolAddOns.let(UserPoolAddOnsProperty.Companion::unwrap))
     }
 
     /**
@@ -2200,7 +2200,7 @@ public open class CfnUserPool(
      * the selected sign-in option. 
      */
     override fun usernameConfiguration(usernameConfiguration: IResolvable) {
-      cdkBuilder.usernameConfiguration(usernameConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.usernameConfiguration(usernameConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2214,7 +2214,7 @@ public open class CfnUserPool(
      * the selected sign-in option. 
      */
     override fun usernameConfiguration(usernameConfiguration: UsernameConfigurationProperty) {
-      cdkBuilder.usernameConfiguration(usernameConfiguration.let(UsernameConfigurationProperty::unwrap))
+      cdkBuilder.usernameConfiguration(usernameConfiguration.let(UsernameConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -2242,7 +2242,7 @@ public open class CfnUserPool(
      * sees when the app requests permission to access the user's information. 
      */
     override fun verificationMessageTemplate(verificationMessageTemplate: IResolvable) {
-      cdkBuilder.verificationMessageTemplate(verificationMessageTemplate.let(IResolvable::unwrap))
+      cdkBuilder.verificationMessageTemplate(verificationMessageTemplate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2255,7 +2255,7 @@ public open class CfnUserPool(
      */
     override
         fun verificationMessageTemplate(verificationMessageTemplate: VerificationMessageTemplateProperty) {
-      cdkBuilder.verificationMessageTemplate(verificationMessageTemplate.let(VerificationMessageTemplateProperty::unwrap))
+      cdkBuilder.verificationMessageTemplate(verificationMessageTemplate.let(VerificationMessageTemplateProperty.Companion::unwrap))
     }
 
     /**
@@ -2361,7 +2361,7 @@ public open class CfnUserPool(
        * @param recoveryMechanisms The list of `RecoveryOptionTypes` .
        */
       override fun recoveryMechanisms(recoveryMechanisms: IResolvable) {
-        cdkBuilder.recoveryMechanisms(recoveryMechanisms.let(IResolvable::unwrap))
+        cdkBuilder.recoveryMechanisms(recoveryMechanisms.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2557,7 +2557,7 @@ public open class CfnUserPool(
        * Set to `False` if users can sign themselves up via an app.
        */
       override fun allowAdminCreateUserOnly(allowAdminCreateUserOnly: IResolvable) {
-        cdkBuilder.allowAdminCreateUserOnly(allowAdminCreateUserOnly.let(IResolvable::unwrap))
+        cdkBuilder.allowAdminCreateUserOnly(allowAdminCreateUserOnly.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2568,7 +2568,7 @@ public open class CfnUserPool(
        * .
        */
       override fun inviteMessageTemplate(inviteMessageTemplate: IResolvable) {
-        cdkBuilder.inviteMessageTemplate(inviteMessageTemplate.let(IResolvable::unwrap))
+        cdkBuilder.inviteMessageTemplate(inviteMessageTemplate.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2579,7 +2579,7 @@ public open class CfnUserPool(
        * .
        */
       override fun inviteMessageTemplate(inviteMessageTemplate: InviteMessageTemplateProperty) {
-        cdkBuilder.inviteMessageTemplate(inviteMessageTemplate.let(InviteMessageTemplateProperty::unwrap))
+        cdkBuilder.inviteMessageTemplate(inviteMessageTemplate.let(InviteMessageTemplateProperty.Companion::unwrap))
       }
 
       /**
@@ -3077,7 +3077,7 @@ public open class CfnUserPool(
        * requires MFA.
        */
       override fun challengeRequiredOnNewDevice(challengeRequiredOnNewDevice: IResolvable) {
-        cdkBuilder.challengeRequiredOnNewDevice(challengeRequiredOnNewDevice.let(IResolvable::unwrap))
+        cdkBuilder.challengeRequiredOnNewDevice(challengeRequiredOnNewDevice.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3107,7 +3107,7 @@ public open class CfnUserPool(
        * devices that you register in a `ConfirmDevice` API request.
        */
       override fun deviceOnlyRememberedOnUserPrompt(deviceOnlyRememberedOnUserPrompt: IResolvable) {
-        cdkBuilder.deviceOnlyRememberedOnUserPrompt(deviceOnlyRememberedOnUserPrompt.let(IResolvable::unwrap))
+        cdkBuilder.deviceOnlyRememberedOnUserPrompt(deviceOnlyRememberedOnUserPrompt.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -4097,14 +4097,14 @@ public open class CfnUserPool(
        * @param customEmailSender A custom email sender AWS Lambda trigger.
        */
       override fun customEmailSender(customEmailSender: IResolvable) {
-        cdkBuilder.customEmailSender(customEmailSender.let(IResolvable::unwrap))
+        cdkBuilder.customEmailSender(customEmailSender.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param customEmailSender A custom email sender AWS Lambda trigger.
        */
       override fun customEmailSender(customEmailSender: CustomEmailSenderProperty) {
-        cdkBuilder.customEmailSender(customEmailSender.let(CustomEmailSenderProperty::unwrap))
+        cdkBuilder.customEmailSender(customEmailSender.let(CustomEmailSenderProperty.Companion::unwrap))
       }
 
       /**
@@ -4127,14 +4127,14 @@ public open class CfnUserPool(
        * @param customSmsSender A custom SMS sender AWS Lambda trigger.
        */
       override fun customSmsSender(customSmsSender: IResolvable) {
-        cdkBuilder.customSmsSender(customSmsSender.let(IResolvable::unwrap))
+        cdkBuilder.customSmsSender(customSmsSender.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param customSmsSender A custom SMS sender AWS Lambda trigger.
        */
       override fun customSmsSender(customSmsSender: CustomSMSSenderProperty) {
-        cdkBuilder.customSmsSender(customSmsSender.let(CustomSMSSenderProperty::unwrap))
+        cdkBuilder.customSmsSender(customSmsSender.let(CustomSMSSenderProperty.Companion::unwrap))
       }
 
       /**
@@ -4210,7 +4210,7 @@ public open class CfnUserPool(
        * `PreTokenGenerationConfig` .
        */
       override fun preTokenGenerationConfig(preTokenGenerationConfig: IResolvable) {
-        cdkBuilder.preTokenGenerationConfig(preTokenGenerationConfig.let(IResolvable::unwrap))
+        cdkBuilder.preTokenGenerationConfig(preTokenGenerationConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4221,7 +4221,7 @@ public open class CfnUserPool(
        */
       override
           fun preTokenGenerationConfig(preTokenGenerationConfig: PreTokenGenerationConfigProperty) {
-        cdkBuilder.preTokenGenerationConfig(preTokenGenerationConfig.let(PreTokenGenerationConfigProperty::unwrap))
+        cdkBuilder.preTokenGenerationConfig(preTokenGenerationConfig.let(PreTokenGenerationConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -4690,7 +4690,7 @@ public open class CfnUserPool(
        * have required users to use at least one lowercase letter in their password.
        */
       override fun requireLowercase(requireLowercase: IResolvable) {
-        cdkBuilder.requireLowercase(requireLowercase.let(IResolvable::unwrap))
+        cdkBuilder.requireLowercase(requireLowercase.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4706,7 +4706,7 @@ public open class CfnUserPool(
        * required users to use at least one number in their password.
        */
       override fun requireNumbers(requireNumbers: IResolvable) {
-        cdkBuilder.requireNumbers(requireNumbers.let(IResolvable::unwrap))
+        cdkBuilder.requireNumbers(requireNumbers.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4722,7 +4722,7 @@ public open class CfnUserPool(
        * required users to use at least one symbol in their password.
        */
       override fun requireSymbols(requireSymbols: IResolvable) {
-        cdkBuilder.requireSymbols(requireSymbols.let(IResolvable::unwrap))
+        cdkBuilder.requireSymbols(requireSymbols.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4738,7 +4738,7 @@ public open class CfnUserPool(
        * have required users to use at least one uppercase letter in their password.
        */
       override fun requireUppercase(requireUppercase: IResolvable) {
-        cdkBuilder.requireUppercase(requireUppercase.let(IResolvable::unwrap))
+        cdkBuilder.requireUppercase(requireUppercase.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4903,14 +4903,14 @@ public open class CfnUserPool(
        * @param passwordPolicy The password policy.
        */
       override fun passwordPolicy(passwordPolicy: IResolvable) {
-        cdkBuilder.passwordPolicy(passwordPolicy.let(IResolvable::unwrap))
+        cdkBuilder.passwordPolicy(passwordPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param passwordPolicy The password policy.
        */
       override fun passwordPolicy(passwordPolicy: PasswordPolicyProperty) {
-        cdkBuilder.passwordPolicy(passwordPolicy.let(PasswordPolicyProperty::unwrap))
+        cdkBuilder.passwordPolicy(passwordPolicy.let(PasswordPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -5476,7 +5476,7 @@ public open class CfnUserPool(
        * by an administrator. Users will not be able to modify this attribute using their access token.
        */
       override fun developerOnlyAttribute(developerOnlyAttribute: IResolvable) {
-        cdkBuilder.developerOnlyAttribute(developerOnlyAttribute.let(IResolvable::unwrap))
+        cdkBuilder.developerOnlyAttribute(developerOnlyAttribute.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5504,7 +5504,7 @@ public open class CfnUserPool(
        * .
        */
       override fun mutable(mutable: IResolvable) {
-        cdkBuilder.mutable(mutable.let(IResolvable::unwrap))
+        cdkBuilder.mutable(mutable.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5526,7 +5526,7 @@ public open class CfnUserPool(
        * type.
        */
       override fun numberAttributeConstraints(numberAttributeConstraints: IResolvable) {
-        cdkBuilder.numberAttributeConstraints(numberAttributeConstraints.let(IResolvable::unwrap))
+        cdkBuilder.numberAttributeConstraints(numberAttributeConstraints.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5535,7 +5535,7 @@ public open class CfnUserPool(
        */
       override
           fun numberAttributeConstraints(numberAttributeConstraints: NumberAttributeConstraintsProperty) {
-        cdkBuilder.numberAttributeConstraints(numberAttributeConstraints.let(NumberAttributeConstraintsProperty::unwrap))
+        cdkBuilder.numberAttributeConstraints(numberAttributeConstraints.let(NumberAttributeConstraintsProperty.Companion::unwrap))
       }
 
       /**
@@ -5564,7 +5564,7 @@ public open class CfnUserPool(
        * will fail.
        */
       override fun required(required: IResolvable) {
-        cdkBuilder.required(required.let(IResolvable::unwrap))
+        cdkBuilder.required(required.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5572,7 +5572,7 @@ public open class CfnUserPool(
        * type.
        */
       override fun stringAttributeConstraints(stringAttributeConstraints: IResolvable) {
-        cdkBuilder.stringAttributeConstraints(stringAttributeConstraints.let(IResolvable::unwrap))
+        cdkBuilder.stringAttributeConstraints(stringAttributeConstraints.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5581,7 +5581,7 @@ public open class CfnUserPool(
        */
       override
           fun stringAttributeConstraints(stringAttributeConstraints: StringAttributeConstraintsProperty) {
-        cdkBuilder.stringAttributeConstraints(stringAttributeConstraints.let(StringAttributeConstraintsProperty::unwrap))
+        cdkBuilder.stringAttributeConstraints(stringAttributeConstraints.let(StringAttributeConstraintsProperty.Companion::unwrap))
       }
 
       /**
@@ -6471,7 +6471,7 @@ public open class CfnUserPool(
        * in addition to the `username` attribute.
        */
       override fun caseSensitive(caseSensitive: IResolvable) {
-        cdkBuilder.caseSensitive(caseSensitive.let(IResolvable::unwrap))
+        cdkBuilder.caseSensitive(caseSensitive.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

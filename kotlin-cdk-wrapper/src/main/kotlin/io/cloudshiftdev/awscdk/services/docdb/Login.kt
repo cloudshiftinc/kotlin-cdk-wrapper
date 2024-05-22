@@ -26,7 +26,7 @@ import kotlin.Unit
  * .subnetType(SubnetType.PUBLIC)
  * .build())
  * .vpc(vpc)
- * .removalPolicy(RemovalPolicy.SNAPSHOT)
+ * .caCertificate(CaCertificate.RDS_CA_RSA4096_G1)
  * .build();
  * ```
  */
@@ -113,7 +113,7 @@ public interface Login {
      * @param kmsKey KMS encryption key to encrypt the generated secret.
      */
     override fun kmsKey(kmsKey: IKey) {
-      cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -121,7 +121,7 @@ public interface Login {
      * Do not put passwords in your CDK code directly.
      */
     override fun password(password: SecretValue) {
-      cdkBuilder.password(password.let(SecretValue::unwrap))
+      cdkBuilder.password(password.let(SecretValue.Companion::unwrap))
     }
 
     /**

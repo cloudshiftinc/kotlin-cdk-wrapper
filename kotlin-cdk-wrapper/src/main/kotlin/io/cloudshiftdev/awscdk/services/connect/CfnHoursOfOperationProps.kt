@@ -153,7 +153,7 @@ public interface CfnHoursOfOperationProps {
      * @param config Configuration information for the hours of operation. 
      */
     override fun config(config: IResolvable) {
-      cdkBuilder.config(config.let(IResolvable::unwrap))
+      cdkBuilder.config(config.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -194,7 +194,7 @@ public interface CfnHoursOfOperationProps {
      * For example, { "Tags": {"key1":"value1", "key2":"value2"} }.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

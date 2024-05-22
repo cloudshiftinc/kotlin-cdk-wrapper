@@ -315,7 +315,7 @@ public interface TrailProps {
      * @param bucket The Amazon S3 bucket.
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -323,7 +323,7 @@ public interface TrailProps {
      * Ignored if sendToCloudWatchLogs is set to false.
      */
     override fun cloudWatchLogGroup(cloudWatchLogGroup: ILogGroup) {
-      cdkBuilder.cloudWatchLogGroup(cloudWatchLogGroup.let(ILogGroup::unwrap))
+      cdkBuilder.cloudWatchLogGroup(cloudWatchLogGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -331,7 +331,7 @@ public interface TrailProps {
      * Ignored if sendToCloudWatchLogs is false or if cloudWatchLogGroup is set.
      */
     override fun cloudWatchLogsRetention(cloudWatchLogsRetention: RetentionDays) {
-      cdkBuilder.cloudWatchLogsRetention(cloudWatchLogsRetention.let(RetentionDays::unwrap))
+      cdkBuilder.cloudWatchLogsRetention(cloudWatchLogsRetention.let(RetentionDays.Companion::unwrap))
     }
 
     /**
@@ -353,7 +353,7 @@ public interface TrailProps {
      * encrypt CloudTrail logs.
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -372,7 +372,7 @@ public interface TrailProps {
      * @param insightTypes A JSON string that contains the insight types you want to log on a trail.
      */
     override fun insightTypes(insightTypes: List<InsightType>) {
-      cdkBuilder.insightTypes(insightTypes.map(InsightType::unwrap))
+      cdkBuilder.insightTypes(insightTypes.map(InsightType.Companion::unwrap))
     }
 
     /**
@@ -420,7 +420,7 @@ public interface TrailProps {
      * For example, when a user logs in to your account, CloudTrail logs the ConsoleLogin event.
      */
     override fun managementEvents(managementEvents: ReadWriteType) {
-      cdkBuilder.managementEvents(managementEvents.let(ReadWriteType::unwrap))
+      cdkBuilder.managementEvents(managementEvents.let(ReadWriteType.Companion::unwrap))
     }
 
     /**
@@ -450,7 +450,7 @@ public interface TrailProps {
      * @param snsTopic SNS topic that is notified when new log files are published.
      */
     override fun snsTopic(snsTopic: ITopic) {
-      cdkBuilder.snsTopic(snsTopic.let(ITopic::unwrap))
+      cdkBuilder.snsTopic(snsTopic.let(ITopic.Companion::unwrap))
     }
 
     /**

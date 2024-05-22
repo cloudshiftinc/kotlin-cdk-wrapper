@@ -73,7 +73,7 @@ public interface AssociateCloudMapServiceOptions {
      * @param container The container to point to for a SRV record.
      */
     override fun container(container: ContainerDefinition) {
-      cdkBuilder.container(container.let(ContainerDefinition::unwrap))
+      cdkBuilder.container(container.let(ContainerDefinition.Companion::unwrap))
     }
 
     /**
@@ -87,7 +87,7 @@ public interface AssociateCloudMapServiceOptions {
      * @param service The cloudmap service to register with. 
      */
     override fun service(service: IService) {
-      cdkBuilder.service(service.let(IService::unwrap))
+      cdkBuilder.service(service.let(IService.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.AssociateCloudMapServiceOptions =

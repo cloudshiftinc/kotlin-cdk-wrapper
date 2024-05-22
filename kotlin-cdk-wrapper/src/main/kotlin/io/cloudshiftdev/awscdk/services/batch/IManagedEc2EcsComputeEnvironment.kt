@@ -164,7 +164,7 @@ public interface IManagedEc2EcsComputeEnvironment : IManagedComputeEnvironment {
      * @param instanceClass 
      */
     override fun addInstanceClass(instanceClass: InstanceClass) {
-      unwrap(this).addInstanceClass(instanceClass.let(InstanceClass::unwrap))
+      unwrap(this).addInstanceClass(instanceClass.let(InstanceClass.Companion::unwrap))
     }
 
     /**
@@ -173,7 +173,7 @@ public interface IManagedEc2EcsComputeEnvironment : IManagedComputeEnvironment {
      * @param instanceType 
      */
     override fun addInstanceType(instanceType: InstanceType) {
-      unwrap(this).addInstanceType(instanceType.let(InstanceType::unwrap))
+      unwrap(this).addInstanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -200,7 +200,7 @@ public interface IManagedEc2EcsComputeEnvironment : IManagedComputeEnvironment {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**

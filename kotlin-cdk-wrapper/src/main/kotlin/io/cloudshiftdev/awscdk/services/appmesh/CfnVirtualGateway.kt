@@ -179,8 +179,8 @@ public open class CfnVirtualGateway(
     id: String,
     props: CfnVirtualGatewayProps,
   ) :
-      this(software.amazon.awscdk.services.appmesh.CfnVirtualGateway(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVirtualGatewayProps::unwrap))
+      this(software.amazon.awscdk.services.appmesh.CfnVirtualGateway(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVirtualGatewayProps.Companion::unwrap))
   )
 
   public constructor(
@@ -239,7 +239,7 @@ public open class CfnVirtualGateway(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -275,14 +275,14 @@ public open class CfnVirtualGateway(
    * The specifications of the virtual gateway.
    */
   public open fun spec(`value`: IResolvable) {
-    unwrap(this).setSpec(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSpec(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The specifications of the virtual gateway.
    */
   public open fun spec(`value`: VirtualGatewaySpecProperty) {
-    unwrap(this).setSpec(`value`.let(VirtualGatewaySpecProperty::unwrap))
+    unwrap(this).setSpec(`value`.let(VirtualGatewaySpecProperty.Companion::unwrap))
   }
 
   /**
@@ -310,7 +310,7 @@ public open class CfnVirtualGateway(
    * organization.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -457,7 +457,7 @@ public open class CfnVirtualGateway(
      * @param spec The specifications of the virtual gateway. 
      */
     override fun spec(spec: IResolvable) {
-      cdkBuilder.spec(spec.let(IResolvable::unwrap))
+      cdkBuilder.spec(spec.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -467,7 +467,7 @@ public open class CfnVirtualGateway(
      * @param spec The specifications of the virtual gateway. 
      */
     override fun spec(spec: VirtualGatewaySpecProperty) {
-      cdkBuilder.spec(spec.let(VirtualGatewaySpecProperty::unwrap))
+      cdkBuilder.spec(spec.let(VirtualGatewaySpecProperty.Companion::unwrap))
     }
 
     /**
@@ -494,7 +494,7 @@ public open class CfnVirtualGateway(
      * categorization and organization. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -724,7 +724,7 @@ public open class CfnVirtualGateway(
        * @param json The logging format for JSON.
        */
       override fun json(json: IResolvable) {
-        cdkBuilder.json(json.let(IResolvable::unwrap))
+        cdkBuilder.json(json.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -942,14 +942,14 @@ public open class CfnVirtualGateway(
        * @param match An object that represents the criteria for determining a SANs match. 
        */
       override fun match(match: IResolvable) {
-        cdkBuilder.match(match.let(IResolvable::unwrap))
+        cdkBuilder.match(match.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param match An object that represents the criteria for determining a SANs match. 
        */
       override fun match(match: SubjectAlternativeNameMatchersProperty) {
-        cdkBuilder.match(match.let(SubjectAlternativeNameMatchersProperty::unwrap))
+        cdkBuilder.match(match.let(SubjectAlternativeNameMatchersProperty.Companion::unwrap))
       }
 
       /**
@@ -1062,14 +1062,14 @@ public open class CfnVirtualGateway(
        * @param file The file object to send virtual gateway access logs to.
        */
       override fun `file`(`file`: IResolvable) {
-        cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
+        cdkBuilder.`file`(`file`.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param file The file object to send virtual gateway access logs to.
        */
       override fun `file`(`file`: VirtualGatewayFileAccessLogProperty) {
-        cdkBuilder.`file`(`file`.let(VirtualGatewayFileAccessLogProperty::unwrap))
+        cdkBuilder.`file`(`file`.let(VirtualGatewayFileAccessLogProperty.Companion::unwrap))
       }
 
       /**
@@ -1206,14 +1206,14 @@ public open class CfnVirtualGateway(
        * @param clientPolicy A reference to an object that represents a client policy.
        */
       override fun clientPolicy(clientPolicy: IResolvable) {
-        cdkBuilder.clientPolicy(clientPolicy.let(IResolvable::unwrap))
+        cdkBuilder.clientPolicy(clientPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param clientPolicy A reference to an object that represents a client policy.
        */
       override fun clientPolicy(clientPolicy: VirtualGatewayClientPolicyProperty) {
-        cdkBuilder.clientPolicy(clientPolicy.let(VirtualGatewayClientPolicyProperty::unwrap))
+        cdkBuilder.clientPolicy(clientPolicy.let(VirtualGatewayClientPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -1354,7 +1354,7 @@ public open class CfnVirtualGateway(
        * policy.
        */
       override fun tls(tls: IResolvable) {
-        cdkBuilder.tls(tls.let(IResolvable::unwrap))
+        cdkBuilder.tls(tls.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1362,7 +1362,7 @@ public open class CfnVirtualGateway(
        * policy.
        */
       override fun tls(tls: VirtualGatewayClientPolicyTlsProperty) {
-        cdkBuilder.tls(tls.let(VirtualGatewayClientPolicyTlsProperty::unwrap))
+        cdkBuilder.tls(tls.let(VirtualGatewayClientPolicyTlsProperty.Companion::unwrap))
       }
 
       /**
@@ -1574,7 +1574,7 @@ public open class CfnVirtualGateway(
        * Transport Layer Security (TLS) certificate.
        */
       override fun certificate(certificate: IResolvable) {
-        cdkBuilder.certificate(certificate.let(IResolvable::unwrap))
+        cdkBuilder.certificate(certificate.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1582,7 +1582,7 @@ public open class CfnVirtualGateway(
        * Transport Layer Security (TLS) certificate.
        */
       override fun certificate(certificate: VirtualGatewayClientTlsCertificateProperty) {
-        cdkBuilder.certificate(certificate.let(VirtualGatewayClientTlsCertificateProperty::unwrap))
+        cdkBuilder.certificate(certificate.let(VirtualGatewayClientTlsCertificateProperty.Companion::unwrap))
       }
 
       /**
@@ -1608,14 +1608,14 @@ public open class CfnVirtualGateway(
        * The default is `True` , if a value isn't specified.
        */
       override fun enforce(enforce: IResolvable) {
-        cdkBuilder.enforce(enforce.let(IResolvable::unwrap))
+        cdkBuilder.enforce(enforce.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param ports One or more ports that the policy is enforced for.
        */
       override fun ports(ports: IResolvable) {
-        cdkBuilder.ports(ports.let(IResolvable::unwrap))
+        cdkBuilder.ports(ports.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1635,7 +1635,7 @@ public open class CfnVirtualGateway(
        * validation context. 
        */
       override fun validation(validation: IResolvable) {
-        cdkBuilder.validation(validation.let(IResolvable::unwrap))
+        cdkBuilder.validation(validation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1643,7 +1643,7 @@ public open class CfnVirtualGateway(
        * validation context. 
        */
       override fun validation(validation: VirtualGatewayTlsValidationContextProperty) {
-        cdkBuilder.validation(validation.let(VirtualGatewayTlsValidationContextProperty::unwrap))
+        cdkBuilder.validation(validation.let(VirtualGatewayTlsValidationContextProperty.Companion::unwrap))
       }
 
       /**
@@ -1825,7 +1825,7 @@ public open class CfnVirtualGateway(
        * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) .
        */
       override fun `file`(`file`: IResolvable) {
-        cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
+        cdkBuilder.`file`(`file`.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1835,7 +1835,7 @@ public open class CfnVirtualGateway(
        * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) .
        */
       override fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty) {
-        cdkBuilder.`file`(`file`.let(VirtualGatewayListenerTlsFileCertificateProperty::unwrap))
+        cdkBuilder.`file`(`file`.let(VirtualGatewayListenerTlsFileCertificateProperty.Companion::unwrap))
       }
 
       /**
@@ -1855,7 +1855,7 @@ public open class CfnVirtualGateway(
        * Discovery Service certificate.
        */
       override fun sds(sds: IResolvable) {
-        cdkBuilder.sds(sds.let(IResolvable::unwrap))
+        cdkBuilder.sds(sds.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1863,7 +1863,7 @@ public open class CfnVirtualGateway(
        * Discovery Service certificate.
        */
       override fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty) {
-        cdkBuilder.sds(sds.let(VirtualGatewayListenerTlsSdsCertificateProperty::unwrap))
+        cdkBuilder.sds(sds.let(VirtualGatewayListenerTlsSdsCertificateProperty.Companion::unwrap))
       }
 
       /**
@@ -2043,14 +2043,14 @@ public open class CfnVirtualGateway(
        * @param grpc An object that represents a type of connection pool.
        */
       override fun grpc(grpc: IResolvable) {
-        cdkBuilder.grpc(grpc.let(IResolvable::unwrap))
+        cdkBuilder.grpc(grpc.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param grpc An object that represents a type of connection pool.
        */
       override fun grpc(grpc: VirtualGatewayGrpcConnectionPoolProperty) {
-        cdkBuilder.grpc(grpc.let(VirtualGatewayGrpcConnectionPoolProperty::unwrap))
+        cdkBuilder.grpc(grpc.let(VirtualGatewayGrpcConnectionPoolProperty.Companion::unwrap))
       }
 
       /**
@@ -2065,14 +2065,14 @@ public open class CfnVirtualGateway(
        * @param http An object that represents a type of connection pool.
        */
       override fun http(http: IResolvable) {
-        cdkBuilder.http(http.let(IResolvable::unwrap))
+        cdkBuilder.http(http.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param http An object that represents a type of connection pool.
        */
       override fun http(http: VirtualGatewayHttpConnectionPoolProperty) {
-        cdkBuilder.http(http.let(VirtualGatewayHttpConnectionPoolProperty::unwrap))
+        cdkBuilder.http(http.let(VirtualGatewayHttpConnectionPoolProperty.Companion::unwrap))
       }
 
       /**
@@ -2087,14 +2087,14 @@ public open class CfnVirtualGateway(
        * @param http2 An object that represents a type of connection pool.
        */
       override fun http2(http2: IResolvable) {
-        cdkBuilder.http2(http2.let(IResolvable::unwrap))
+        cdkBuilder.http2(http2.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param http2 An object that represents a type of connection pool.
        */
       override fun http2(http2: VirtualGatewayHttp2ConnectionPoolProperty) {
-        cdkBuilder.http2(http2.let(VirtualGatewayHttp2ConnectionPoolProperty::unwrap))
+        cdkBuilder.http2(http2.let(VirtualGatewayHttp2ConnectionPoolProperty.Companion::unwrap))
       }
 
       /**
@@ -2247,7 +2247,7 @@ public open class CfnVirtualGateway(
        * It can be either `json_format` or `text_format` .
        */
       override fun format(format: IResolvable) {
-        cdkBuilder.format(format.let(IResolvable::unwrap))
+        cdkBuilder.format(format.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2255,7 +2255,7 @@ public open class CfnVirtualGateway(
        * It can be either `json_format` or `text_format` .
        */
       override fun format(format: LoggingFormatProperty) {
-        cdkBuilder.format(format.let(LoggingFormatProperty::unwrap))
+        cdkBuilder.format(format.let(LoggingFormatProperty.Companion::unwrap))
       }
 
       /**
@@ -3105,14 +3105,14 @@ public open class CfnVirtualGateway(
        * @param connectionPool The connection pool information for the listener.
        */
       override fun connectionPool(connectionPool: IResolvable) {
-        cdkBuilder.connectionPool(connectionPool.let(IResolvable::unwrap))
+        cdkBuilder.connectionPool(connectionPool.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param connectionPool The connection pool information for the listener.
        */
       override fun connectionPool(connectionPool: VirtualGatewayConnectionPoolProperty) {
-        cdkBuilder.connectionPool(connectionPool.let(VirtualGatewayConnectionPoolProperty::unwrap))
+        cdkBuilder.connectionPool(connectionPool.let(VirtualGatewayConnectionPoolProperty.Companion::unwrap))
       }
 
       /**
@@ -3128,14 +3128,14 @@ public open class CfnVirtualGateway(
        * @param healthCheck The health check information for the listener.
        */
       override fun healthCheck(healthCheck: IResolvable) {
-        cdkBuilder.healthCheck(healthCheck.let(IResolvable::unwrap))
+        cdkBuilder.healthCheck(healthCheck.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param healthCheck The health check information for the listener.
        */
       override fun healthCheck(healthCheck: VirtualGatewayHealthCheckPolicyProperty) {
-        cdkBuilder.healthCheck(healthCheck.let(VirtualGatewayHealthCheckPolicyProperty::unwrap))
+        cdkBuilder.healthCheck(healthCheck.let(VirtualGatewayHealthCheckPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -3151,14 +3151,14 @@ public open class CfnVirtualGateway(
        * @param portMapping The port mapping information for the listener. 
        */
       override fun portMapping(portMapping: IResolvable) {
-        cdkBuilder.portMapping(portMapping.let(IResolvable::unwrap))
+        cdkBuilder.portMapping(portMapping.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param portMapping The port mapping information for the listener. 
        */
       override fun portMapping(portMapping: VirtualGatewayPortMappingProperty) {
-        cdkBuilder.portMapping(portMapping.let(VirtualGatewayPortMappingProperty::unwrap))
+        cdkBuilder.portMapping(portMapping.let(VirtualGatewayPortMappingProperty.Companion::unwrap))
       }
 
       /**
@@ -3174,7 +3174,7 @@ public open class CfnVirtualGateway(
        * properties for the listener.
        */
       override fun tls(tls: IResolvable) {
-        cdkBuilder.tls(tls.let(IResolvable::unwrap))
+        cdkBuilder.tls(tls.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3182,7 +3182,7 @@ public open class CfnVirtualGateway(
        * properties for the listener.
        */
       override fun tls(tls: VirtualGatewayListenerTlsProperty) {
-        cdkBuilder.tls(tls.let(VirtualGatewayListenerTlsProperty::unwrap))
+        cdkBuilder.tls(tls.let(VirtualGatewayListenerTlsProperty.Companion::unwrap))
       }
 
       /**
@@ -3471,14 +3471,14 @@ public open class CfnVirtualGateway(
        * @param acm A reference to an object that represents an AWS Certificate Manager certificate.
        */
       override fun acm(acm: IResolvable) {
-        cdkBuilder.acm(acm.let(IResolvable::unwrap))
+        cdkBuilder.acm(acm.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param acm A reference to an object that represents an AWS Certificate Manager certificate.
        */
       override fun acm(acm: VirtualGatewayListenerTlsAcmCertificateProperty) {
-        cdkBuilder.acm(acm.let(VirtualGatewayListenerTlsAcmCertificateProperty::unwrap))
+        cdkBuilder.acm(acm.let(VirtualGatewayListenerTlsAcmCertificateProperty.Companion::unwrap))
       }
 
       /**
@@ -3493,14 +3493,14 @@ public open class CfnVirtualGateway(
        * @param file A reference to an object that represents a local file certificate.
        */
       override fun `file`(`file`: IResolvable) {
-        cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
+        cdkBuilder.`file`(`file`.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param file A reference to an object that represents a local file certificate.
        */
       override fun `file`(`file`: VirtualGatewayListenerTlsFileCertificateProperty) {
-        cdkBuilder.`file`(`file`.let(VirtualGatewayListenerTlsFileCertificateProperty::unwrap))
+        cdkBuilder.`file`(`file`.let(VirtualGatewayListenerTlsFileCertificateProperty.Companion::unwrap))
       }
 
       /**
@@ -3517,7 +3517,7 @@ public open class CfnVirtualGateway(
        * Discovery Service certificate.
        */
       override fun sds(sds: IResolvable) {
-        cdkBuilder.sds(sds.let(IResolvable::unwrap))
+        cdkBuilder.sds(sds.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3525,7 +3525,7 @@ public open class CfnVirtualGateway(
        * Discovery Service certificate.
        */
       override fun sds(sds: VirtualGatewayListenerTlsSdsCertificateProperty) {
-        cdkBuilder.sds(sds.let(VirtualGatewayListenerTlsSdsCertificateProperty::unwrap))
+        cdkBuilder.sds(sds.let(VirtualGatewayListenerTlsSdsCertificateProperty.Companion::unwrap))
       }
 
       /**
@@ -3844,14 +3844,14 @@ public open class CfnVirtualGateway(
        * @param certificate An object that represents a Transport Layer Security (TLS) certificate. 
        */
       override fun certificate(certificate: IResolvable) {
-        cdkBuilder.certificate(certificate.let(IResolvable::unwrap))
+        cdkBuilder.certificate(certificate.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param certificate An object that represents a Transport Layer Security (TLS) certificate. 
        */
       override fun certificate(certificate: VirtualGatewayListenerTlsCertificateProperty) {
-        cdkBuilder.certificate(certificate.let(VirtualGatewayListenerTlsCertificateProperty::unwrap))
+        cdkBuilder.certificate(certificate.let(VirtualGatewayListenerTlsCertificateProperty.Companion::unwrap))
       }
 
       /**
@@ -3878,7 +3878,7 @@ public open class CfnVirtualGateway(
        * Transport Layer Security (TLS) validation context.
        */
       override fun validation(validation: IResolvable) {
-        cdkBuilder.validation(validation.let(IResolvable::unwrap))
+        cdkBuilder.validation(validation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3886,7 +3886,7 @@ public open class CfnVirtualGateway(
        * Transport Layer Security (TLS) validation context.
        */
       override fun validation(validation: VirtualGatewayListenerTlsValidationContextProperty) {
-        cdkBuilder.validation(validation.let(VirtualGatewayListenerTlsValidationContextProperty::unwrap))
+        cdkBuilder.validation(validation.let(VirtualGatewayListenerTlsValidationContextProperty.Companion::unwrap))
       }
 
       /**
@@ -4156,7 +4156,7 @@ public open class CfnVirtualGateway(
        * virtual gateway listener's Transport Layer Security (TLS) validation context.
        */
       override fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
-        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(IResolvable::unwrap))
+        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4165,7 +4165,7 @@ public open class CfnVirtualGateway(
        */
       override
           fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty) {
-        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(SubjectAlternativeNamesProperty::unwrap))
+        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(SubjectAlternativeNamesProperty.Companion::unwrap))
       }
 
       /**
@@ -4183,7 +4183,7 @@ public open class CfnVirtualGateway(
        * Transport Layer Security (TLS) certificate. 
        */
       override fun trust(trust: IResolvable) {
-        cdkBuilder.trust(trust.let(IResolvable::unwrap))
+        cdkBuilder.trust(trust.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4191,7 +4191,7 @@ public open class CfnVirtualGateway(
        * Transport Layer Security (TLS) certificate. 
        */
       override fun trust(trust: VirtualGatewayListenerTlsValidationContextTrustProperty) {
-        cdkBuilder.trust(trust.let(VirtualGatewayListenerTlsValidationContextTrustProperty::unwrap))
+        cdkBuilder.trust(trust.let(VirtualGatewayListenerTlsValidationContextTrustProperty.Companion::unwrap))
       }
 
       /**
@@ -4347,7 +4347,7 @@ public open class CfnVirtualGateway(
        * trust for a local file.
        */
       override fun `file`(`file`: IResolvable) {
-        cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
+        cdkBuilder.`file`(`file`.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4355,7 +4355,7 @@ public open class CfnVirtualGateway(
        * trust for a local file.
        */
       override fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty) {
-        cdkBuilder.`file`(`file`.let(VirtualGatewayTlsValidationContextFileTrustProperty::unwrap))
+        cdkBuilder.`file`(`file`.let(VirtualGatewayTlsValidationContextFileTrustProperty.Companion::unwrap))
       }
 
       /**
@@ -4373,7 +4373,7 @@ public open class CfnVirtualGateway(
        * Transport Layer Security (TLS) Secret Discovery Service validation context trust.
        */
       override fun sds(sds: IResolvable) {
-        cdkBuilder.sds(sds.let(IResolvable::unwrap))
+        cdkBuilder.sds(sds.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4381,7 +4381,7 @@ public open class CfnVirtualGateway(
        * Transport Layer Security (TLS) Secret Discovery Service validation context trust.
        */
       override fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty) {
-        cdkBuilder.sds(sds.let(VirtualGatewayTlsValidationContextSdsTrustProperty::unwrap))
+        cdkBuilder.sds(sds.let(VirtualGatewayTlsValidationContextSdsTrustProperty.Companion::unwrap))
       }
 
       /**
@@ -4508,14 +4508,14 @@ public open class CfnVirtualGateway(
        * @param accessLog The access log configuration.
        */
       override fun accessLog(accessLog: IResolvable) {
-        cdkBuilder.accessLog(accessLog.let(IResolvable::unwrap))
+        cdkBuilder.accessLog(accessLog.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param accessLog The access log configuration.
        */
       override fun accessLog(accessLog: VirtualGatewayAccessLogProperty) {
-        cdkBuilder.accessLog(accessLog.let(VirtualGatewayAccessLogProperty::unwrap))
+        cdkBuilder.accessLog(accessLog.let(VirtualGatewayAccessLogProperty.Companion::unwrap))
       }
 
       /**
@@ -4903,14 +4903,14 @@ public open class CfnVirtualGateway(
        * @param backendDefaults A reference to an object that represents the defaults for backends.
        */
       override fun backendDefaults(backendDefaults: IResolvable) {
-        cdkBuilder.backendDefaults(backendDefaults.let(IResolvable::unwrap))
+        cdkBuilder.backendDefaults(backendDefaults.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param backendDefaults A reference to an object that represents the defaults for backends.
        */
       override fun backendDefaults(backendDefaults: VirtualGatewayBackendDefaultsProperty) {
-        cdkBuilder.backendDefaults(backendDefaults.let(VirtualGatewayBackendDefaultsProperty::unwrap))
+        cdkBuilder.backendDefaults(backendDefaults.let(VirtualGatewayBackendDefaultsProperty.Companion::unwrap))
       }
 
       /**
@@ -4928,7 +4928,7 @@ public open class CfnVirtualGateway(
        * You can specify one listener.
        */
       override fun listeners(listeners: IResolvable) {
-        cdkBuilder.listeners(listeners.let(IResolvable::unwrap))
+        cdkBuilder.listeners(listeners.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4951,14 +4951,14 @@ public open class CfnVirtualGateway(
        * @param logging An object that represents logging information.
        */
       override fun logging(logging: IResolvable) {
-        cdkBuilder.logging(logging.let(IResolvable::unwrap))
+        cdkBuilder.logging(logging.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param logging An object that represents logging information.
        */
       override fun logging(logging: VirtualGatewayLoggingProperty) {
-        cdkBuilder.logging(logging.let(VirtualGatewayLoggingProperty::unwrap))
+        cdkBuilder.logging(logging.let(VirtualGatewayLoggingProperty.Companion::unwrap))
       }
 
       /**
@@ -5315,7 +5315,7 @@ public open class CfnVirtualGateway(
        * virtual gateway's listener's Transport Layer Security (TLS) validation context.
        */
       override fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
-        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(IResolvable::unwrap))
+        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5324,7 +5324,7 @@ public open class CfnVirtualGateway(
        */
       override
           fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty) {
-        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(SubjectAlternativeNamesProperty::unwrap))
+        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(SubjectAlternativeNamesProperty.Companion::unwrap))
       }
 
       /**
@@ -5342,7 +5342,7 @@ public open class CfnVirtualGateway(
        * Transport Layer Security (TLS) certificate. 
        */
       override fun trust(trust: IResolvable) {
-        cdkBuilder.trust(trust.let(IResolvable::unwrap))
+        cdkBuilder.trust(trust.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5350,7 +5350,7 @@ public open class CfnVirtualGateway(
        * Transport Layer Security (TLS) certificate. 
        */
       override fun trust(trust: VirtualGatewayTlsValidationContextTrustProperty) {
-        cdkBuilder.trust(trust.let(VirtualGatewayTlsValidationContextTrustProperty::unwrap))
+        cdkBuilder.trust(trust.let(VirtualGatewayTlsValidationContextTrustProperty.Companion::unwrap))
       }
 
       /**
@@ -5629,7 +5629,7 @@ public open class CfnVirtualGateway(
        * validation context trust for an AWS Certificate Manager certificate.
        */
       override fun acm(acm: IResolvable) {
-        cdkBuilder.acm(acm.let(IResolvable::unwrap))
+        cdkBuilder.acm(acm.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5637,7 +5637,7 @@ public open class CfnVirtualGateway(
        * validation context trust for an AWS Certificate Manager certificate.
        */
       override fun acm(acm: VirtualGatewayTlsValidationContextAcmTrustProperty) {
-        cdkBuilder.acm(acm.let(VirtualGatewayTlsValidationContextAcmTrustProperty::unwrap))
+        cdkBuilder.acm(acm.let(VirtualGatewayTlsValidationContextAcmTrustProperty.Companion::unwrap))
       }
 
       /**
@@ -5654,7 +5654,7 @@ public open class CfnVirtualGateway(
        * trust for a local file.
        */
       override fun `file`(`file`: IResolvable) {
-        cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
+        cdkBuilder.`file`(`file`.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5662,7 +5662,7 @@ public open class CfnVirtualGateway(
        * trust for a local file.
        */
       override fun `file`(`file`: VirtualGatewayTlsValidationContextFileTrustProperty) {
-        cdkBuilder.`file`(`file`.let(VirtualGatewayTlsValidationContextFileTrustProperty::unwrap))
+        cdkBuilder.`file`(`file`.let(VirtualGatewayTlsValidationContextFileTrustProperty.Companion::unwrap))
       }
 
       /**
@@ -5680,7 +5680,7 @@ public open class CfnVirtualGateway(
        * Security (TLS) Secret Discovery Service validation context trust.
        */
       override fun sds(sds: IResolvable) {
-        cdkBuilder.sds(sds.let(IResolvable::unwrap))
+        cdkBuilder.sds(sds.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5688,7 +5688,7 @@ public open class CfnVirtualGateway(
        * Security (TLS) Secret Discovery Service validation context trust.
        */
       override fun sds(sds: VirtualGatewayTlsValidationContextSdsTrustProperty) {
-        cdkBuilder.sds(sds.let(VirtualGatewayTlsValidationContextSdsTrustProperty::unwrap))
+        cdkBuilder.sds(sds.let(VirtualGatewayTlsValidationContextSdsTrustProperty.Companion::unwrap))
       }
 
       /**

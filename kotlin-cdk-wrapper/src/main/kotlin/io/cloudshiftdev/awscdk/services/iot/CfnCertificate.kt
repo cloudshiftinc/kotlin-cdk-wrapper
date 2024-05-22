@@ -43,8 +43,8 @@ public open class CfnCertificate(
     id: String,
     props: CfnCertificateProps,
   ) :
-      this(software.amazon.awscdk.services.iot.CfnCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCertificateProps::unwrap))
+      this(software.amazon.awscdk.services.iot.CfnCertificate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCertificateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -126,7 +126,7 @@ public open class CfnCertificate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

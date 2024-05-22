@@ -161,7 +161,7 @@ public interface ArnComponents {
      * @param arnFormat The specific ARN format to use for this ARN value.
      */
     override fun arnFormat(arnFormat: ArnFormat) {
-      cdkBuilder.arnFormat(arnFormat.let(ArnFormat::unwrap))
+      cdkBuilder.arnFormat(arnFormat.let(ArnFormat.Companion::unwrap))
     }
 
     /**

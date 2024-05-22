@@ -46,8 +46,8 @@ public open class SlackChannelConfiguration(
     id: String,
     props: SlackChannelConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.chatbot.SlackChannelConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SlackChannelConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.chatbot.SlackChannelConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SlackChannelConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -63,7 +63,7 @@ public open class SlackChannelConfiguration(
    * @param notificationTopic 
    */
   public open fun addNotificationTopic(notificationTopic: ITopic) {
-    unwrap(this).addNotificationTopic(notificationTopic.let(ITopic::unwrap))
+    unwrap(this).addNotificationTopic(notificationTopic.let(ITopic.Companion::unwrap))
   }
 
   /**
@@ -72,7 +72,7 @@ public open class SlackChannelConfiguration(
    * @param statement 
    */
   public override fun addToRolePolicy(statement: PolicyStatement) {
-    unwrap(this).addToRolePolicy(statement.let(PolicyStatement::unwrap))
+    unwrap(this).addToRolePolicy(statement.let(PolicyStatement.Companion::unwrap))
   }
 
   /**
@@ -92,7 +92,7 @@ public open class SlackChannelConfiguration(
    */
   public override fun bindAsNotificationRuleTarget(scope: CloudshiftdevConstructsConstruct):
       NotificationRuleTargetConfig =
-      unwrap(this).bindAsNotificationRuleTarget(scope.let(CloudshiftdevConstructsConstruct::unwrap)).let(NotificationRuleTargetConfig::wrap)
+      unwrap(this).bindAsNotificationRuleTarget(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap)).let(NotificationRuleTargetConfig::wrap)
 
   /**
    * The principal to grant permissions to.
@@ -116,7 +116,7 @@ public open class SlackChannelConfiguration(
    * @param props
    */
   public override fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Return the given named metric for this SlackChannelConfiguration.
@@ -316,7 +316,7 @@ public open class SlackChannelConfiguration(
      * guardrails. 
      */
     override fun guardrailPolicies(guardrailPolicies: List<IManagedPolicy>) {
-      cdkBuilder.guardrailPolicies(guardrailPolicies.map(IManagedPolicy::unwrap))
+      cdkBuilder.guardrailPolicies(guardrailPolicies.map(IManagedPolicy.Companion::unwrap))
     }
 
     /**
@@ -343,7 +343,7 @@ public open class SlackChannelConfiguration(
      * @param logRetention The number of days log events are kept in CloudWatch Logs. 
      */
     override fun logRetention(logRetention: RetentionDays) {
-      cdkBuilder.logRetention(logRetention.let(RetentionDays::unwrap))
+      cdkBuilder.logRetention(logRetention.let(RetentionDays.Companion::unwrap))
     }
 
     /**
@@ -358,7 +358,7 @@ public open class SlackChannelConfiguration(
      * to create the CloudWatch log group. 
      */
     override fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions) {
-      cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions.let(LogRetentionRetryOptions::unwrap))
+      cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions.let(LogRetentionRetryOptions.Companion::unwrap))
     }
 
     /**
@@ -388,7 +388,7 @@ public open class SlackChannelConfiguration(
      * resource that sets the retention policy. 
      */
     override fun logRetentionRole(logRetentionRole: IRole) {
-      cdkBuilder.logRetentionRole(logRetentionRole.let(IRole::unwrap))
+      cdkBuilder.logRetentionRole(logRetentionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -401,7 +401,7 @@ public open class SlackChannelConfiguration(
      * @param loggingLevel Specifies the logging level for this configuration. 
      */
     override fun loggingLevel(loggingLevel: LoggingLevel) {
-      cdkBuilder.loggingLevel(loggingLevel.let(LoggingLevel::unwrap))
+      cdkBuilder.loggingLevel(loggingLevel.let(LoggingLevel.Companion::unwrap))
     }
 
     /**
@@ -412,7 +412,7 @@ public open class SlackChannelConfiguration(
      * @param notificationTopics The SNS topics that deliver notifications to AWS Chatbot. 
      */
     override fun notificationTopics(notificationTopics: List<ITopic>) {
-      cdkBuilder.notificationTopics(notificationTopics.map(ITopic::unwrap))
+      cdkBuilder.notificationTopics(notificationTopics.map(ITopic.Companion::unwrap))
     }
 
     /**
@@ -433,7 +433,7 @@ public open class SlackChannelConfiguration(
      * @param role The permission role of Slack channel configuration. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -484,7 +484,7 @@ public open class SlackChannelConfiguration(
       id: String,
       slackChannelConfigurationArn: String,
     ): ISlackChannelConfiguration =
-        software.amazon.awscdk.services.chatbot.SlackChannelConfiguration.fromSlackChannelConfigurationArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.chatbot.SlackChannelConfiguration.fromSlackChannelConfigurationArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, slackChannelConfigurationArn).let(ISlackChannelConfiguration::wrap)
 
     public fun metricAll(metricName: String): Metric =
@@ -492,7 +492,7 @@ public open class SlackChannelConfiguration(
 
     public fun metricAll(metricName: String, props: MetricOptions): Metric =
         software.amazon.awscdk.services.chatbot.SlackChannelConfiguration.metricAll(metricName,
-        props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("dc2edb7e8860d33b2c02a5d62b7557e31ca2fd399a100f3532bebaf81fa8a856")

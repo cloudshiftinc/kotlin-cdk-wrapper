@@ -61,7 +61,8 @@ public open class SecretValue(
   )
 
   public constructor(protectedValue: Any, options: IntrinsicProps) :
-      this(software.amazon.awscdk.SecretValue(protectedValue, options.let(IntrinsicProps::unwrap))
+      this(software.amazon.awscdk.SecretValue(protectedValue,
+      options.let(IntrinsicProps.Companion::unwrap))
   )
 
   public constructor(protectedValue: Any, options: IntrinsicProps.Builder.() -> Unit) :
@@ -77,7 +78,7 @@ public open class SecretValue(
    * @param context 
    */
   public override fun resolve(context: IResolveContext): Any =
-      unwrap(this).resolve(context.let(IResolveContext::unwrap))
+      unwrap(this).resolve(context.let(IResolveContext.Companion::unwrap))
 
   /**
    * Disable usage protection on this secret.
@@ -146,7 +147,7 @@ public open class SecretValue(
      * @param typeHint Type that this token is expected to evaluate to. 
      */
     override fun typeHint(typeHint: ResolutionTypeHint) {
-      cdkBuilder.typeHint(typeHint.let(ResolutionTypeHint::unwrap))
+      cdkBuilder.typeHint(typeHint.let(ResolutionTypeHint.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.SecretValue = cdkBuilder.build()
@@ -154,10 +155,10 @@ public open class SecretValue(
 
   public companion object {
     public fun cfnDynamicReference(ref: CfnDynamicReference): SecretValue =
-        software.amazon.awscdk.SecretValue.cfnDynamicReference(ref.let(CfnDynamicReference::unwrap)).let(SecretValue::wrap)
+        software.amazon.awscdk.SecretValue.cfnDynamicReference(ref.let(CfnDynamicReference.Companion::unwrap)).let(SecretValue::wrap)
 
     public fun cfnParameter(`param`: CfnParameter): SecretValue =
-        software.amazon.awscdk.SecretValue.cfnParameter(`param`.let(CfnParameter::unwrap)).let(SecretValue::wrap)
+        software.amazon.awscdk.SecretValue.cfnParameter(`param`.let(CfnParameter.Companion::unwrap)).let(SecretValue::wrap)
 
     public fun isSecretValue(x: Any): Boolean = software.amazon.awscdk.SecretValue.isSecretValue(x)
 
@@ -173,7 +174,7 @@ public open class SecretValue(
 
     public fun secretsManager(secretId: String, options: SecretsManagerSecretOptions): SecretValue =
         software.amazon.awscdk.SecretValue.secretsManager(secretId,
-        options.let(SecretsManagerSecretOptions::unwrap)).let(SecretValue::wrap)
+        options.let(SecretsManagerSecretOptions.Companion::unwrap)).let(SecretValue::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a3f7c9f1d82680cb6f5a02536b3a5ec5da53d07abf763bbfe93af1986e49e659")

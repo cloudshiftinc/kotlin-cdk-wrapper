@@ -84,7 +84,7 @@ public interface CloudWatchLoggingOptions {
      * @param logGroup The Log Group to send logs to.
      */
     override fun logGroup(logGroup: ILogGroup) {
-      cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
+      cdkBuilder.logGroup(logGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**

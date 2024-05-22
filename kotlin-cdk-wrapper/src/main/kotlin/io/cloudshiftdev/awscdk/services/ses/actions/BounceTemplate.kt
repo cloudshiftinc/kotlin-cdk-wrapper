@@ -23,7 +23,7 @@ public open class BounceTemplate(
   cdkObject: software.amazon.awscdk.services.ses.actions.BounceTemplate,
 ) : CdkObject(cdkObject) {
   public constructor(props: BounceTemplateProps) :
-      this(software.amazon.awscdk.services.ses.actions.BounceTemplate(props.let(BounceTemplateProps::unwrap))
+      this(software.amazon.awscdk.services.ses.actions.BounceTemplate(props.let(BounceTemplateProps.Companion::unwrap))
   )
 
   public constructor(props: BounceTemplateProps.Builder.() -> Unit) :

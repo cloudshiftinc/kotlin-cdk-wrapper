@@ -180,7 +180,7 @@ public interface EcsDeployActionProps : CommonAwsActionProps {
      * Value must be between 1-60.
      */
     override fun deploymentTimeout(deploymentTimeout: Duration) {
-      cdkBuilder.deploymentTimeout(deploymentTimeout.let(Duration::unwrap))
+      cdkBuilder.deploymentTimeout(deploymentTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -193,7 +193,7 @@ public interface EcsDeployActionProps : CommonAwsActionProps {
      * If you use this property, you don't need to specify the `input` property.
      */
     override fun imageFile(imageFile: ArtifactPath) {
-      cdkBuilder.imageFile(imageFile.let(ArtifactPath::unwrap))
+      cdkBuilder.imageFile(imageFile.let(ArtifactPath.Companion::unwrap))
     }
 
     /**
@@ -207,7 +207,7 @@ public interface EcsDeployActionProps : CommonAwsActionProps {
      * and use the `imageFile` property instead.
      */
     override fun input(input: Artifact) {
-      cdkBuilder.input(input.let(Artifact::unwrap))
+      cdkBuilder.input(input.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -219,7 +219,7 @@ public interface EcsDeployActionProps : CommonAwsActionProps {
      * method in the `ActionBindOptions.role` property.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -234,7 +234,7 @@ public interface EcsDeployActionProps : CommonAwsActionProps {
      * @param service The ECS Service to deploy. 
      */
     override fun service(service: IBaseService) {
-      cdkBuilder.service(service.let(IBaseService::unwrap))
+      cdkBuilder.service(service.let(IBaseService.Companion::unwrap))
     }
 
     /**

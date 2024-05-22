@@ -51,7 +51,7 @@ public abstract class Backend(
    * @param _scope 
    */
   public open fun bind(scope: Construct): BackendConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(BackendConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(BackendConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.Backend,
@@ -59,12 +59,12 @@ public abstract class Backend(
 
   public companion object {
     public fun virtualService(virtualService: IVirtualService): Backend =
-        software.amazon.awscdk.services.appmesh.Backend.virtualService(virtualService.let(IVirtualService::unwrap)).let(Backend::wrap)
+        software.amazon.awscdk.services.appmesh.Backend.virtualService(virtualService.let(IVirtualService.Companion::unwrap)).let(Backend::wrap)
 
     public fun virtualService(virtualService: IVirtualService, props: VirtualServiceBackendOptions):
         Backend =
-        software.amazon.awscdk.services.appmesh.Backend.virtualService(virtualService.let(IVirtualService::unwrap),
-        props.let(VirtualServiceBackendOptions::unwrap)).let(Backend::wrap)
+        software.amazon.awscdk.services.appmesh.Backend.virtualService(virtualService.let(IVirtualService.Companion::unwrap),
+        props.let(VirtualServiceBackendOptions.Companion::unwrap)).let(Backend::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1f9675289bd0bd999bf67bfd1bbd1b319fa2b042f6ddd5a2d2039ac9f8c433e3")

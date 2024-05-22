@@ -76,7 +76,7 @@ public interface InstanceEngineConfig {
      * @param features Features supported by the database engine.
      */
     override fun features(features: InstanceEngineFeatures) {
-      cdkBuilder.features(features.let(InstanceEngineFeatures::unwrap))
+      cdkBuilder.features(features.let(InstanceEngineFeatures.Companion::unwrap))
     }
 
     /**
@@ -91,7 +91,7 @@ public interface InstanceEngineConfig {
      * @param optionGroup Option group of the database.
      */
     override fun optionGroup(optionGroup: IOptionGroup) {
-      cdkBuilder.optionGroup(optionGroup.let(IOptionGroup::unwrap))
+      cdkBuilder.optionGroup(optionGroup.let(IOptionGroup.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.InstanceEngineConfig =

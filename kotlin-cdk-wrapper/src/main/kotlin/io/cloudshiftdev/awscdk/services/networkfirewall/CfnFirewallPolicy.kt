@@ -94,8 +94,8 @@ public open class CfnFirewallPolicy(
     id: String,
     props: CfnFirewallPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFirewallPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFirewallPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -138,7 +138,7 @@ public open class CfnFirewallPolicy(
    * stateful rule groups and other settings.
    */
   public open fun firewallPolicy(`value`: IResolvable) {
-    unwrap(this).setFirewallPolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFirewallPolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -146,7 +146,7 @@ public open class CfnFirewallPolicy(
    * stateful rule groups and other settings.
    */
   public open fun firewallPolicy(`value`: FirewallPolicyProperty) {
-    unwrap(this).setFirewallPolicy(`value`.let(FirewallPolicyProperty::unwrap))
+    unwrap(this).setFirewallPolicy(`value`.let(FirewallPolicyProperty.Companion::unwrap))
   }
 
   /**
@@ -176,7 +176,7 @@ public open class CfnFirewallPolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -194,7 +194,7 @@ public open class CfnFirewallPolicy(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -309,7 +309,7 @@ public open class CfnFirewallPolicy(
      * collection of stateless and stateful rule groups and other settings. 
      */
     override fun firewallPolicy(firewallPolicy: IResolvable) {
-      cdkBuilder.firewallPolicy(firewallPolicy.let(IResolvable::unwrap))
+      cdkBuilder.firewallPolicy(firewallPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -321,7 +321,7 @@ public open class CfnFirewallPolicy(
      * collection of stateless and stateful rule groups and other settings. 
      */
     override fun firewallPolicy(firewallPolicy: FirewallPolicyProperty) {
-      cdkBuilder.firewallPolicy(firewallPolicy.let(FirewallPolicyProperty::unwrap))
+      cdkBuilder.firewallPolicy(firewallPolicy.let(FirewallPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -360,7 +360,7 @@ public open class CfnFirewallPolicy(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -498,7 +498,7 @@ public open class CfnFirewallPolicy(
        * publishes metrics for the packet and forwards it.
        */
       override fun publishMetricAction(publishMetricAction: IResolvable) {
-        cdkBuilder.publishMetricAction(publishMetricAction.let(IResolvable::unwrap))
+        cdkBuilder.publishMetricAction(publishMetricAction.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -512,7 +512,7 @@ public open class CfnFirewallPolicy(
        * publishes metrics for the packet and forwards it.
        */
       override fun publishMetricAction(publishMetricAction: PublishMetricActionProperty) {
-        cdkBuilder.publishMetricAction(publishMetricAction.let(PublishMetricActionProperty::unwrap))
+        cdkBuilder.publishMetricAction(publishMetricAction.let(PublishMetricActionProperty.Companion::unwrap))
       }
 
       /**
@@ -668,14 +668,14 @@ public open class CfnFirewallPolicy(
        * @param actionDefinition The custom action associated with the action name. 
        */
       override fun actionDefinition(actionDefinition: IResolvable) {
-        cdkBuilder.actionDefinition(actionDefinition.let(IResolvable::unwrap))
+        cdkBuilder.actionDefinition(actionDefinition.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param actionDefinition The custom action associated with the action name. 
        */
       override fun actionDefinition(actionDefinition: ActionDefinitionProperty) {
-        cdkBuilder.actionDefinition(actionDefinition.let(ActionDefinitionProperty::unwrap))
+        cdkBuilder.actionDefinition(actionDefinition.let(ActionDefinitionProperty.Companion::unwrap))
       }
 
       /**
@@ -1232,7 +1232,7 @@ public open class CfnFirewallPolicy(
        * settings in your firewall policy.
        */
       override fun policyVariables(policyVariables: IResolvable) {
-        cdkBuilder.policyVariables(policyVariables.let(IResolvable::unwrap))
+        cdkBuilder.policyVariables(policyVariables.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1240,7 +1240,7 @@ public open class CfnFirewallPolicy(
        * settings in your firewall policy.
        */
       override fun policyVariables(policyVariables: PolicyVariablesProperty) {
-        cdkBuilder.policyVariables(policyVariables.let(PolicyVariablesProperty::unwrap))
+        cdkBuilder.policyVariables(policyVariables.let(PolicyVariablesProperty.Companion::unwrap))
       }
 
       /**
@@ -1300,7 +1300,7 @@ public open class CfnFirewallPolicy(
        * settings that are compatible with these settings.
        */
       override fun statefulEngineOptions(statefulEngineOptions: IResolvable) {
-        cdkBuilder.statefulEngineOptions(statefulEngineOptions.let(IResolvable::unwrap))
+        cdkBuilder.statefulEngineOptions(statefulEngineOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1310,7 +1310,7 @@ public open class CfnFirewallPolicy(
        * settings that are compatible with these settings.
        */
       override fun statefulEngineOptions(statefulEngineOptions: StatefulEngineOptionsProperty) {
-        cdkBuilder.statefulEngineOptions(statefulEngineOptions.let(StatefulEngineOptionsProperty::unwrap))
+        cdkBuilder.statefulEngineOptions(statefulEngineOptions.let(StatefulEngineOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -1331,7 +1331,7 @@ public open class CfnFirewallPolicy(
        * These define the inspection criteria in stateful rules.
        */
       override fun statefulRuleGroupReferences(statefulRuleGroupReferences: IResolvable) {
-        cdkBuilder.statefulRuleGroupReferences(statefulRuleGroupReferences.let(IResolvable::unwrap))
+        cdkBuilder.statefulRuleGroupReferences(statefulRuleGroupReferences.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1358,7 +1358,7 @@ public open class CfnFirewallPolicy(
        * default actions specifications.
        */
       override fun statelessCustomActions(statelessCustomActions: IResolvable) {
-        cdkBuilder.statelessCustomActions(statelessCustomActions.let(IResolvable::unwrap))
+        cdkBuilder.statelessCustomActions(statelessCustomActions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1456,7 +1456,7 @@ public open class CfnFirewallPolicy(
        * These define the matching criteria in stateless rules.
        */
       override fun statelessRuleGroupReferences(statelessRuleGroupReferences: IResolvable) {
-        cdkBuilder.statelessRuleGroupReferences(statelessRuleGroupReferences.let(IResolvable::unwrap))
+        cdkBuilder.statelessRuleGroupReferences(statelessRuleGroupReferences.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1790,7 +1790,7 @@ public open class CfnFirewallPolicy(
        * Network Firewall by default uses the CIDR of your inspection VPC.
        */
       override fun ruleVariables(ruleVariables: IResolvable) {
-        cdkBuilder.ruleVariables(ruleVariables.let(IResolvable::unwrap))
+        cdkBuilder.ruleVariables(ruleVariables.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1900,7 +1900,7 @@ public open class CfnFirewallPolicy(
        * @param dimensions the value to be set. 
        */
       override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+        cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2357,7 +2357,7 @@ public open class CfnFirewallPolicy(
        * rule group within a policy.
        */
       override fun `override`(`override`: IResolvable) {
-        cdkBuilder.`override`(`override`.let(IResolvable::unwrap))
+        cdkBuilder.`override`(`override`.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2365,7 +2365,7 @@ public open class CfnFirewallPolicy(
        * rule group within a policy.
        */
       override fun `override`(`override`: StatefulRuleGroupOverrideProperty) {
-        cdkBuilder.`override`(`override`.let(StatefulRuleGroupOverrideProperty::unwrap))
+        cdkBuilder.`override`(`override`.let(StatefulRuleGroupOverrideProperty.Companion::unwrap))
       }
 
       /**

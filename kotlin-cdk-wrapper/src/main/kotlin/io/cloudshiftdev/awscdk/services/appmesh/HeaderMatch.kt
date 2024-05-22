@@ -42,7 +42,7 @@ public abstract class HeaderMatch(
    * @param scope 
    */
   public open fun bind(scope: Construct): HeaderMatchConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(HeaderMatchConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(HeaderMatchConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.HeaderMatch,

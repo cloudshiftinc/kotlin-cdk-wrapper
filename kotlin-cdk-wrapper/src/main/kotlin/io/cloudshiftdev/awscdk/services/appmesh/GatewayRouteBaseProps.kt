@@ -72,7 +72,7 @@ public interface GatewayRouteBaseProps {
      * @param routeSpec What protocol the route uses. 
      */
     override fun routeSpec(routeSpec: GatewayRouteSpec) {
-      cdkBuilder.routeSpec(routeSpec.let(GatewayRouteSpec::unwrap))
+      cdkBuilder.routeSpec(routeSpec.let(GatewayRouteSpec.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appmesh.GatewayRouteBaseProps =

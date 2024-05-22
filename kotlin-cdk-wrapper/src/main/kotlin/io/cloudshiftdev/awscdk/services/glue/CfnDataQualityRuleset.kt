@@ -51,7 +51,7 @@ public open class CfnDataQualityRuleset(
   cdkObject: software.amazon.awscdk.services.glue.CfnDataQualityRuleset,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.glue.CfnDataQualityRuleset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.glue.CfnDataQualityRuleset(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -60,8 +60,8 @@ public open class CfnDataQualityRuleset(
     id: String,
     props: CfnDataQualityRulesetProps,
   ) :
-      this(software.amazon.awscdk.services.glue.CfnDataQualityRuleset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDataQualityRulesetProps::unwrap))
+      this(software.amazon.awscdk.services.glue.CfnDataQualityRuleset(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDataQualityRulesetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -114,7 +114,7 @@ public open class CfnDataQualityRuleset(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -162,14 +162,14 @@ public open class CfnDataQualityRuleset(
    * An object representing an AWS Glue table.
    */
   public open fun targetTable(`value`: IResolvable) {
-    unwrap(this).setTargetTable(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTargetTable(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An object representing an AWS Glue table.
    */
   public open fun targetTable(`value`: DataQualityTargetTableProperty) {
-    unwrap(this).setTargetTable(`value`.let(DataQualityTargetTableProperty::unwrap))
+    unwrap(this).setTargetTable(`value`.let(DataQualityTargetTableProperty.Companion::unwrap))
   }
 
   /**
@@ -324,7 +324,7 @@ public open class CfnDataQualityRuleset(
      * @param targetTable An object representing an AWS Glue table. 
      */
     override fun targetTable(targetTable: IResolvable) {
-      cdkBuilder.targetTable(targetTable.let(IResolvable::unwrap))
+      cdkBuilder.targetTable(targetTable.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -334,7 +334,7 @@ public open class CfnDataQualityRuleset(
      * @param targetTable An object representing an AWS Glue table. 
      */
     override fun targetTable(targetTable: DataQualityTargetTableProperty) {
-      cdkBuilder.targetTable(targetTable.let(DataQualityTargetTableProperty::unwrap))
+      cdkBuilder.targetTable(targetTable.let(DataQualityTargetTableProperty.Companion::unwrap))
     }
 
     /**

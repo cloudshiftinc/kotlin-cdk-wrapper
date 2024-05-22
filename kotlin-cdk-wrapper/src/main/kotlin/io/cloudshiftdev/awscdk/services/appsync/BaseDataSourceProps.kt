@@ -75,7 +75,7 @@ public interface BaseDataSourceProps {
      * @param api The API to attach this data source to. 
      */
     override fun api(api: IGraphqlApi) {
-      cdkBuilder.api(api.let(IGraphqlApi::unwrap))
+      cdkBuilder.api(api.let(IGraphqlApi.Companion::unwrap))
     }
 
     /**

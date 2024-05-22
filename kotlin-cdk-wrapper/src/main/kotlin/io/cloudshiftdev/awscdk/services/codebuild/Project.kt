@@ -60,8 +60,8 @@ public open class Project(
     id: String,
     props: ProjectProps,
   ) :
-      this(software.amazon.awscdk.services.codebuild.Project(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ProjectProps::unwrap))
+      this(software.amazon.awscdk.services.codebuild.Project(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ProjectProps.Companion::unwrap))
   )
 
   public constructor(
@@ -77,7 +77,7 @@ public open class Project(
    * @param fileSystemLocation the fileSystemLocation to add. 
    */
   public open fun addFileSystemLocation(fileSystemLocation: IFileSystemLocation) {
-    unwrap(this).addFileSystemLocation(fileSystemLocation.let(IFileSystemLocation::unwrap))
+    unwrap(this).addFileSystemLocation(fileSystemLocation.let(IFileSystemLocation.Companion::unwrap))
   }
 
   /**
@@ -87,7 +87,7 @@ public open class Project(
    * @param secondaryArtifact the artifact to add as a secondary artifact. 
    */
   public open fun addSecondaryArtifact(secondaryArtifact: IArtifacts) {
-    unwrap(this).addSecondaryArtifact(secondaryArtifact.let(IArtifacts::unwrap))
+    unwrap(this).addSecondaryArtifact(secondaryArtifact.let(IArtifacts.Companion::unwrap))
   }
 
   /**
@@ -97,7 +97,7 @@ public open class Project(
    * @param secondarySource the source to add as a secondary source. 
    */
   public open fun addSecondarySource(secondarySource: ISource) {
-    unwrap(this).addSecondarySource(secondarySource.let(ISource::unwrap))
+    unwrap(this).addSecondarySource(secondarySource.let(ISource.Companion::unwrap))
   }
 
   /**
@@ -106,7 +106,7 @@ public open class Project(
    * @param statement The permissions statement to add. 
    */
   public override fun addToRolePolicy(statement: PolicyStatement) {
-    unwrap(this).addToRolePolicy(statement.let(PolicyStatement::unwrap))
+    unwrap(this).addToRolePolicy(statement.let(PolicyStatement.Companion::unwrap))
   }
 
   /**
@@ -126,7 +126,7 @@ public open class Project(
    */
   public override fun bindAsNotificationRuleSource(scope: CloudshiftdevConstructsConstruct):
       NotificationRuleSourceConfig =
-      unwrap(this).bindAsNotificationRuleSource(scope.let(CloudshiftdevConstructsConstruct::unwrap)).let(NotificationRuleSourceConfig::wrap)
+      unwrap(this).bindAsNotificationRuleSource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap)).let(NotificationRuleSourceConfig::wrap)
 
   /**
    * A callback invoked when the given project is added to a CodePipeline.
@@ -136,8 +136,8 @@ public open class Project(
    */
   public open fun bindToCodePipeline(scope: CloudshiftdevConstructsConstruct,
       options: BindToCodePipelineOptions) {
-    unwrap(this).bindToCodePipeline(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        options.let(BindToCodePipelineOptions::unwrap))
+    unwrap(this).bindToCodePipeline(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        options.let(BindToCodePipelineOptions.Companion::unwrap))
   }
 
   /**
@@ -189,7 +189,7 @@ public open class Project(
    * @param props Customization properties.
    */
   public override fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * @return a CloudWatch metric associated with this build project.
@@ -226,7 +226,7 @@ public open class Project(
    * @param props
    */
   public override fun metricBuilds(props: MetricOptions): Metric =
-      unwrap(this).metricBuilds(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricBuilds(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Measures the number of builds triggered.
@@ -269,7 +269,7 @@ public open class Project(
    * @param props
    */
   public override fun metricDuration(props: MetricOptions): Metric =
-      unwrap(this).metricDuration(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricDuration(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Measures the duration of all builds over time.
@@ -313,7 +313,7 @@ public open class Project(
    * @param props
    */
   public override fun metricFailedBuilds(props: MetricOptions): Metric =
-      unwrap(this).metricFailedBuilds(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricFailedBuilds(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Measures the number of builds that failed because of client error or because of a timeout.
@@ -357,7 +357,7 @@ public open class Project(
    * @param props
    */
   public override fun metricSucceededBuilds(props: MetricOptions): Metric =
-      unwrap(this).metricSucceededBuilds(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricSucceededBuilds(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Measures the number of successful builds.
@@ -390,8 +390,9 @@ public open class Project(
     id: String,
     target: INotificationRuleTarget,
     options: ProjectNotifyOnOptions,
-  ): INotificationRule = unwrap(this).notifyOn(id, target.let(INotificationRuleTarget::unwrap),
-      options.let(ProjectNotifyOnOptions::unwrap)).let(INotificationRule::wrap)
+  ): INotificationRule = unwrap(this).notifyOn(id,
+      target.let(INotificationRuleTarget.Companion::unwrap),
+      options.let(ProjectNotifyOnOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar Notification rule triggered when the project events emitted by you
@@ -421,7 +422,7 @@ public open class Project(
    */
   public override fun notifyOnBuildFailed(id: String, target: INotificationRuleTarget):
       INotificationRule = unwrap(this).notifyOnBuildFailed(id,
-      target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar notification rule which triggers when a build fails.
@@ -435,8 +436,8 @@ public open class Project(
     target: INotificationRuleTarget,
     options: NotificationRuleOptions,
   ): INotificationRule = unwrap(this).notifyOnBuildFailed(id,
-      target.let(INotificationRuleTarget::unwrap),
-      options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap),
+      options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar notification rule which triggers when a build fails.
@@ -462,7 +463,7 @@ public open class Project(
    */
   public override fun notifyOnBuildSucceeded(id: String, target: INotificationRuleTarget):
       INotificationRule = unwrap(this).notifyOnBuildSucceeded(id,
-      target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar notification rule which triggers when a build completes successfully.
@@ -476,8 +477,8 @@ public open class Project(
     target: INotificationRuleTarget,
     options: NotificationRuleOptions,
   ): INotificationRule = unwrap(this).notifyOnBuildSucceeded(id,
-      target.let(INotificationRuleTarget::unwrap),
-      options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap),
+      options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar notification rule which triggers when a build completes successfully.
@@ -516,7 +517,7 @@ public open class Project(
    * @param options
    */
   public override fun onBuildFailed(id: String, options: OnEventOptions): Rule =
-      unwrap(this).onBuildFailed(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      unwrap(this).onBuildFailed(id, options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines an event rule which triggers when a build fails.
@@ -554,7 +555,7 @@ public open class Project(
    * @param options
    */
   public override fun onBuildStarted(id: String, options: OnEventOptions): Rule =
-      unwrap(this).onBuildStarted(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      unwrap(this).onBuildStarted(id, options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines an event rule which triggers when a build starts.
@@ -592,7 +593,8 @@ public open class Project(
    * @param options
    */
   public override fun onBuildSucceeded(id: String, options: OnEventOptions): Rule =
-      unwrap(this).onBuildSucceeded(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      unwrap(this).onBuildSucceeded(id,
+      options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines an event rule which triggers when a build completes successfully.
@@ -625,7 +627,7 @@ public open class Project(
    * @param options
    */
   public override fun onEvent(id: String, options: OnEventOptions): Rule = unwrap(this).onEvent(id,
-      options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines a CloudWatch event rule triggered when something happens with this project.
@@ -657,7 +659,7 @@ public open class Project(
    * @param options
    */
   public override fun onPhaseChange(id: String, options: OnEventOptions): Rule =
-      unwrap(this).onPhaseChange(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      unwrap(this).onPhaseChange(id, options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines a CloudWatch event rule that triggers upon phase change of this build project.
@@ -731,7 +733,7 @@ public open class Project(
    * @param options
    */
   public override fun onStateChange(id: String, options: OnEventOptions): Rule =
-      unwrap(this).onStateChange(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      unwrap(this).onStateChange(id, options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines a CloudWatch event rule triggered when the build project state changes.
@@ -1256,7 +1258,7 @@ public open class Project(
      * @param artifacts Defines where build artifacts will be stored. 
      */
     override fun artifacts(artifacts: IArtifacts) {
-      cdkBuilder.artifacts(artifacts.let(IArtifacts::unwrap))
+      cdkBuilder.artifacts(artifacts.let(IArtifacts.Companion::unwrap))
     }
 
     /**
@@ -1284,7 +1286,7 @@ public open class Project(
      * @param buildSpec Filename or contents of buildspec in JSON format. 
      */
     override fun buildSpec(buildSpec: BuildSpec) {
-      cdkBuilder.buildSpec(buildSpec.let(BuildSpec::unwrap))
+      cdkBuilder.buildSpec(buildSpec.let(BuildSpec.Companion::unwrap))
     }
 
     /**
@@ -1295,7 +1297,7 @@ public open class Project(
      * @param cache Caching strategy to use. 
      */
     override fun cache(cache: Cache) {
-      cdkBuilder.cache(cache.let(Cache::unwrap))
+      cdkBuilder.cache(cache.let(Cache.Companion::unwrap))
     }
 
     /**
@@ -1353,7 +1355,7 @@ public open class Project(
      * @param encryptionKey Encryption key to use to read and write artifacts. 
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -1364,7 +1366,7 @@ public open class Project(
      * @param environment Build environment to use for the build. 
      */
     override fun environment(environment: BuildEnvironment) {
-      cdkBuilder.environment(environment.let(BuildEnvironment::unwrap))
+      cdkBuilder.environment(environment.let(BuildEnvironment.Companion::unwrap))
     }
 
     /**
@@ -1404,7 +1406,7 @@ public open class Project(
      * project. 
      */
     override fun fileSystemLocations(fileSystemLocations: List<IFileSystemLocation>) {
-      cdkBuilder.fileSystemLocations(fileSystemLocations.map(IFileSystemLocation::unwrap))
+      cdkBuilder.fileSystemLocations(fileSystemLocations.map(IFileSystemLocation.Companion::unwrap))
     }
 
     /**
@@ -1452,7 +1454,7 @@ public open class Project(
      * @param logging Information about logs for the build project. 
      */
     override fun logging(logging: LoggingOptions) {
-      cdkBuilder.logging(logging.let(LoggingOptions::unwrap))
+      cdkBuilder.logging(logging.let(LoggingOptions.Companion::unwrap))
     }
 
     /**
@@ -1492,7 +1494,7 @@ public open class Project(
      * still in queue. 
      */
     override fun queuedTimeout(queuedTimeout: Duration) {
-      cdkBuilder.queuedTimeout(queuedTimeout.let(Duration::unwrap))
+      cdkBuilder.queuedTimeout(queuedTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -1503,7 +1505,7 @@ public open class Project(
      * @param role Service Role to assume while running the build. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -1518,7 +1520,7 @@ public open class Project(
      * @param secondaryArtifacts The secondary artifacts for the Project. 
      */
     override fun secondaryArtifacts(secondaryArtifacts: List<IArtifacts>) {
-      cdkBuilder.secondaryArtifacts(secondaryArtifacts.map(IArtifacts::unwrap))
+      cdkBuilder.secondaryArtifacts(secondaryArtifacts.map(IArtifacts.Companion::unwrap))
     }
 
     /**
@@ -1547,7 +1549,7 @@ public open class Project(
      * @param secondarySources The secondary sources for the Project. 
      */
     override fun secondarySources(secondarySources: List<ISource>) {
-      cdkBuilder.secondarySources(secondarySources.map(ISource::unwrap))
+      cdkBuilder.secondarySources(secondarySources.map(ISource.Companion::unwrap))
     }
 
     /**
@@ -1577,7 +1579,7 @@ public open class Project(
      * interfaces. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -1606,7 +1608,7 @@ public open class Project(
      * @param source The source of the build. 
      */
     override fun source(source: ISource) {
-      cdkBuilder.source(source.let(ISource::unwrap))
+      cdkBuilder.source(source.let(ISource.Companion::unwrap))
     }
 
     /**
@@ -1662,7 +1664,7 @@ public open class Project(
      * @param subnetSelection Where to place the network interfaces within the VPC. 
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -1707,7 +1709,7 @@ public open class Project(
      * complete. 
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -1720,7 +1722,7 @@ public open class Project(
      * @param vpc VPC network to place codebuild network interfaces. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codebuild.Project = cdkBuilder.build()
@@ -1732,7 +1734,7 @@ public open class Project(
       id: String,
       projectArn: String,
     ): IProject =
-        software.amazon.awscdk.services.codebuild.Project.fromProjectArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.codebuild.Project.fromProjectArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, projectArn).let(IProject::wrap)
 
     public fun fromProjectName(
@@ -1740,7 +1742,7 @@ public open class Project(
       id: String,
       projectName: String,
     ): IProject =
-        software.amazon.awscdk.services.codebuild.Project.fromProjectName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.codebuild.Project.fromProjectName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, projectName).let(IProject::wrap)
 
     public fun serializeEnvVariables(environmentVariables: Map<String, BuildEnvironmentVariable>):
@@ -1759,7 +1761,7 @@ public open class Project(
     ): List<CfnProject.EnvironmentVariableProperty> =
         software.amazon.awscdk.services.codebuild.Project.serializeEnvVariables(environmentVariables.mapValues{BuildEnvironmentVariable.unwrap(it.value)},
         validateNoPlainTextSecrets,
-        principal.let(IGrantable::unwrap)).map(CfnProject.EnvironmentVariableProperty::wrap)
+        principal.let(IGrantable.Companion::unwrap)).map(CfnProject.EnvironmentVariableProperty::wrap)
 
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,

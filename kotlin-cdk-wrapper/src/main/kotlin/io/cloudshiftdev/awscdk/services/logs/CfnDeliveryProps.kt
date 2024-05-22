@@ -106,7 +106,7 @@ public interface CfnDeliveryProps {
      * @param tags The tags that have been assigned to this delivery.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

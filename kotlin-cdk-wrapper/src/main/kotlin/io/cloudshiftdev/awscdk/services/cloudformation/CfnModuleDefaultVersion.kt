@@ -49,7 +49,7 @@ public open class CfnModuleDefaultVersion(
   cdkObject: software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -58,8 +58,8 @@ public open class CfnModuleDefaultVersion(
     id: String,
     props: CfnModuleDefaultVersionProps,
   ) :
-      this(software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnModuleDefaultVersionProps::unwrap))
+      this(software.amazon.awscdk.services.cloudformation.CfnModuleDefaultVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnModuleDefaultVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -87,7 +87,7 @@ public open class CfnModuleDefaultVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

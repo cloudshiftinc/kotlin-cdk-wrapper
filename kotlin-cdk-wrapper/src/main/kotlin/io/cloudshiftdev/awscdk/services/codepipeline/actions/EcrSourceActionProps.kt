@@ -130,14 +130,14 @@ public interface EcrSourceActionProps : CommonAwsActionProps {
      * @param output the value to be set. 
      */
     override fun output(output: Artifact) {
-      cdkBuilder.output(output.let(Artifact::unwrap))
+      cdkBuilder.output(output.let(Artifact.Companion::unwrap))
     }
 
     /**
      * @param repository The repository that will be watched for changes. 
      */
     override fun repository(repository: IRepository) {
-      cdkBuilder.repository(repository.let(IRepository::unwrap))
+      cdkBuilder.repository(repository.let(IRepository.Companion::unwrap))
     }
 
     /**
@@ -149,7 +149,7 @@ public interface EcrSourceActionProps : CommonAwsActionProps {
      * method in the `ActionBindOptions.role` property.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**

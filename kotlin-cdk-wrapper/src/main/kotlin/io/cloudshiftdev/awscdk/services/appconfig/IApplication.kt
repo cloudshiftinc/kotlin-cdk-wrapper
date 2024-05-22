@@ -395,7 +395,7 @@ public interface IApplication : IResource {
      */
     override fun addEnvironment(id: String, options: EnvironmentOptions): IEnvironment =
         unwrap(this).addEnvironment(id,
-        options.let(EnvironmentOptions::unwrap)).let(IEnvironment::wrap)
+        options.let(EnvironmentOptions.Companion::unwrap)).let(IEnvironment::wrap)
 
     /**
      * Adds an environment.
@@ -414,7 +414,7 @@ public interface IApplication : IResource {
      * @param environment The environment. 
      */
     override fun addExistingEnvironment(environment: IEnvironment) {
-      unwrap(this).addExistingEnvironment(environment.let(IEnvironment::unwrap))
+      unwrap(this).addExistingEnvironment(environment.let(IEnvironment.Companion::unwrap))
     }
 
     /**
@@ -423,7 +423,7 @@ public interface IApplication : IResource {
      * @param extension The extension to create an association for. 
      */
     override fun addExtension(extension: IExtension) {
-      unwrap(this).addExtension(extension.let(IExtension::unwrap))
+      unwrap(this).addExtension(extension.let(IExtension.Companion::unwrap))
     }
 
     /**
@@ -434,7 +434,7 @@ public interface IApplication : IResource {
      */
     override fun addHostedConfiguration(id: String, options: HostedConfigurationOptions):
         HostedConfiguration = unwrap(this).addHostedConfiguration(id,
-        options.let(HostedConfigurationOptions::unwrap)).let(HostedConfiguration::wrap)
+        options.let(HostedConfigurationOptions.Companion::unwrap)).let(HostedConfiguration::wrap)
 
     /**
      * Adds a hosted configuration.
@@ -456,7 +456,7 @@ public interface IApplication : IResource {
      */
     override fun addSourcedConfiguration(id: String, options: SourcedConfigurationOptions):
         SourcedConfiguration = unwrap(this).addSourcedConfiguration(id,
-        options.let(SourcedConfigurationOptions::unwrap)).let(SourcedConfiguration::wrap)
+        options.let(SourcedConfigurationOptions.Companion::unwrap)).let(SourcedConfiguration::wrap)
 
     /**
      * Adds a sourced configuration.
@@ -494,7 +494,7 @@ public interface IApplication : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -536,8 +536,8 @@ public interface IApplication : IResource {
      * @param options Options for the extension.
      */
     override fun on(actionPoint: ActionPoint, eventDestination: IEventDestination) {
-      unwrap(this).on(actionPoint.let(ActionPoint::unwrap),
-          eventDestination.let(IEventDestination::unwrap))
+      unwrap(this).on(actionPoint.let(ActionPoint.Companion::unwrap),
+          eventDestination.let(IEventDestination.Companion::unwrap))
     }
 
     /**
@@ -553,8 +553,9 @@ public interface IApplication : IResource {
       eventDestination: IEventDestination,
       options: ExtensionOptions,
     ) {
-      unwrap(this).on(actionPoint.let(ActionPoint::unwrap),
-          eventDestination.let(IEventDestination::unwrap), options.let(ExtensionOptions::unwrap))
+      unwrap(this).on(actionPoint.let(ActionPoint.Companion::unwrap),
+          eventDestination.let(IEventDestination.Companion::unwrap),
+          options.let(ExtensionOptions.Companion::unwrap))
     }
 
     /**
@@ -581,7 +582,7 @@ public interface IApplication : IResource {
      * @param options Options for the extension.
      */
     override fun onDeploymentBaking(eventDestination: IEventDestination) {
-      unwrap(this).onDeploymentBaking(eventDestination.let(IEventDestination::unwrap))
+      unwrap(this).onDeploymentBaking(eventDestination.let(IEventDestination.Companion::unwrap))
     }
 
     /**
@@ -593,8 +594,8 @@ public interface IApplication : IResource {
      */
     override fun onDeploymentBaking(eventDestination: IEventDestination,
         options: ExtensionOptions) {
-      unwrap(this).onDeploymentBaking(eventDestination.let(IEventDestination::unwrap),
-          options.let(ExtensionOptions::unwrap))
+      unwrap(this).onDeploymentBaking(eventDestination.let(IEventDestination.Companion::unwrap),
+          options.let(ExtensionOptions.Companion::unwrap))
     }
 
     /**
@@ -618,7 +619,7 @@ public interface IApplication : IResource {
      * @param options Options for the extension.
      */
     override fun onDeploymentComplete(eventDestination: IEventDestination) {
-      unwrap(this).onDeploymentComplete(eventDestination.let(IEventDestination::unwrap))
+      unwrap(this).onDeploymentComplete(eventDestination.let(IEventDestination.Companion::unwrap))
     }
 
     /**
@@ -630,8 +631,8 @@ public interface IApplication : IResource {
      */
     override fun onDeploymentComplete(eventDestination: IEventDestination,
         options: ExtensionOptions) {
-      unwrap(this).onDeploymentComplete(eventDestination.let(IEventDestination::unwrap),
-          options.let(ExtensionOptions::unwrap))
+      unwrap(this).onDeploymentComplete(eventDestination.let(IEventDestination.Companion::unwrap),
+          options.let(ExtensionOptions.Companion::unwrap))
     }
 
     /**
@@ -655,7 +656,7 @@ public interface IApplication : IResource {
      * @param options Options for the extension.
      */
     override fun onDeploymentRolledBack(eventDestination: IEventDestination) {
-      unwrap(this).onDeploymentRolledBack(eventDestination.let(IEventDestination::unwrap))
+      unwrap(this).onDeploymentRolledBack(eventDestination.let(IEventDestination.Companion::unwrap))
     }
 
     /**
@@ -667,8 +668,8 @@ public interface IApplication : IResource {
      */
     override fun onDeploymentRolledBack(eventDestination: IEventDestination,
         options: ExtensionOptions) {
-      unwrap(this).onDeploymentRolledBack(eventDestination.let(IEventDestination::unwrap),
-          options.let(ExtensionOptions::unwrap))
+      unwrap(this).onDeploymentRolledBack(eventDestination.let(IEventDestination.Companion::unwrap),
+          options.let(ExtensionOptions.Companion::unwrap))
     }
 
     /**
@@ -692,7 +693,7 @@ public interface IApplication : IResource {
      * @param options Options for the extension.
      */
     override fun onDeploymentStart(eventDestination: IEventDestination) {
-      unwrap(this).onDeploymentStart(eventDestination.let(IEventDestination::unwrap))
+      unwrap(this).onDeploymentStart(eventDestination.let(IEventDestination.Companion::unwrap))
     }
 
     /**
@@ -703,8 +704,8 @@ public interface IApplication : IResource {
      * @param options Options for the extension.
      */
     override fun onDeploymentStart(eventDestination: IEventDestination, options: ExtensionOptions) {
-      unwrap(this).onDeploymentStart(eventDestination.let(IEventDestination::unwrap),
-          options.let(ExtensionOptions::unwrap))
+      unwrap(this).onDeploymentStart(eventDestination.let(IEventDestination.Companion::unwrap),
+          options.let(ExtensionOptions.Companion::unwrap))
     }
 
     /**
@@ -728,7 +729,7 @@ public interface IApplication : IResource {
      * @param options Options for the extension.
      */
     override fun onDeploymentStep(eventDestination: IEventDestination) {
-      unwrap(this).onDeploymentStep(eventDestination.let(IEventDestination::unwrap))
+      unwrap(this).onDeploymentStep(eventDestination.let(IEventDestination.Companion::unwrap))
     }
 
     /**
@@ -739,8 +740,8 @@ public interface IApplication : IResource {
      * @param options Options for the extension.
      */
     override fun onDeploymentStep(eventDestination: IEventDestination, options: ExtensionOptions) {
-      unwrap(this).onDeploymentStep(eventDestination.let(IEventDestination::unwrap),
-          options.let(ExtensionOptions::unwrap))
+      unwrap(this).onDeploymentStep(eventDestination.let(IEventDestination.Companion::unwrap),
+          options.let(ExtensionOptions.Companion::unwrap))
     }
 
     /**
@@ -764,7 +765,7 @@ public interface IApplication : IResource {
      * @param options Options for the extension.
      */
     override fun preCreateHostedConfigurationVersion(eventDestination: IEventDestination) {
-      unwrap(this).preCreateHostedConfigurationVersion(eventDestination.let(IEventDestination::unwrap))
+      unwrap(this).preCreateHostedConfigurationVersion(eventDestination.let(IEventDestination.Companion::unwrap))
     }
 
     /**
@@ -776,8 +777,8 @@ public interface IApplication : IResource {
      */
     override fun preCreateHostedConfigurationVersion(eventDestination: IEventDestination,
         options: ExtensionOptions) {
-      unwrap(this).preCreateHostedConfigurationVersion(eventDestination.let(IEventDestination::unwrap),
-          options.let(ExtensionOptions::unwrap))
+      unwrap(this).preCreateHostedConfigurationVersion(eventDestination.let(IEventDestination.Companion::unwrap),
+          options.let(ExtensionOptions.Companion::unwrap))
     }
 
     /**
@@ -801,7 +802,7 @@ public interface IApplication : IResource {
      * @param options Options for the extension.
      */
     override fun preStartDeployment(eventDestination: IEventDestination) {
-      unwrap(this).preStartDeployment(eventDestination.let(IEventDestination::unwrap))
+      unwrap(this).preStartDeployment(eventDestination.let(IEventDestination.Companion::unwrap))
     }
 
     /**
@@ -813,8 +814,8 @@ public interface IApplication : IResource {
      */
     override fun preStartDeployment(eventDestination: IEventDestination,
         options: ExtensionOptions) {
-      unwrap(this).preStartDeployment(eventDestination.let(IEventDestination::unwrap),
-          options.let(ExtensionOptions::unwrap))
+      unwrap(this).preStartDeployment(eventDestination.let(IEventDestination.Companion::unwrap),
+          options.let(ExtensionOptions.Companion::unwrap))
     }
 
     /**

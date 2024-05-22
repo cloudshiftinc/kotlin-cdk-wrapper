@@ -37,7 +37,7 @@ public open class S3CsvItemReader(
   cdkObject: software.amazon.awscdk.services.stepfunctions.S3CsvItemReader,
 ) : CdkObject(cdkObject), IItemReader {
   public constructor(props: S3CsvItemReaderProps) :
-      this(software.amazon.awscdk.services.stepfunctions.S3CsvItemReader(props.let(S3CsvItemReaderProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.S3CsvItemReader(props.let(S3CsvItemReaderProps.Companion::unwrap))
   )
 
   public constructor(props: S3CsvItemReaderProps.Builder.() -> Unit) :
@@ -133,7 +133,7 @@ public open class S3CsvItemReader(
      * over. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -144,7 +144,7 @@ public open class S3CsvItemReader(
      * @param csvHeaders CSV file header configuration. 
      */
     override fun csvHeaders(csvHeaders: CsvHeaders) {
-      cdkBuilder.csvHeaders(csvHeaders.let(CsvHeaders::unwrap))
+      cdkBuilder.csvHeaders(csvHeaders.let(CsvHeaders.Companion::unwrap))
     }
 
     /**

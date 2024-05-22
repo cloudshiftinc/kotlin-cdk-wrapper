@@ -530,7 +530,7 @@ public interface FunctionProps : FunctionOptions {
      * instrumentation.
      */
     override fun adotInstrumentation(adotInstrumentation: AdotInstrumentationConfig) {
-      cdkBuilder.adotInstrumentation(adotInstrumentation.let(AdotInstrumentationConfig::unwrap))
+      cdkBuilder.adotInstrumentation(adotInstrumentation.let(AdotInstrumentationConfig.Companion::unwrap))
     }
 
     /**
@@ -575,7 +575,7 @@ public interface FunctionProps : FunctionOptions {
      * @param architecture The system architectures compatible with this lambda function.
      */
     override fun architecture(architecture: Architecture) {
-      cdkBuilder.architecture(architecture.let(Architecture::unwrap))
+      cdkBuilder.architecture(architecture.let(Architecture.Companion::unwrap))
     }
 
     /**
@@ -585,14 +585,14 @@ public interface FunctionProps : FunctionOptions {
      * code as inline text.
      */
     override fun code(code: Code) {
-      cdkBuilder.code(code.let(Code::unwrap))
+      cdkBuilder.code(code.let(Code.Companion::unwrap))
     }
 
     /**
      * @param codeSigningConfig Code signing config associated with this function.
      */
     override fun codeSigningConfig(codeSigningConfig: ICodeSigningConfig) {
-      cdkBuilder.codeSigningConfig(codeSigningConfig.let(ICodeSigningConfig::unwrap))
+      cdkBuilder.codeSigningConfig(codeSigningConfig.let(ICodeSigningConfig.Companion::unwrap))
     }
 
     /**
@@ -600,7 +600,7 @@ public interface FunctionProps : FunctionOptions {
      * by the `fn.currentVersion` method.
      */
     override fun currentVersionOptions(currentVersionOptions: VersionOptions) {
-      cdkBuilder.currentVersionOptions(currentVersionOptions.let(VersionOptions::unwrap))
+      cdkBuilder.currentVersionOptions(currentVersionOptions.let(VersionOptions.Companion::unwrap))
     }
 
     /**
@@ -617,7 +617,7 @@ public interface FunctionProps : FunctionOptions {
      * If SNS topic is desired, specify `deadLetterTopic` property instead.
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -636,7 +636,7 @@ public interface FunctionProps : FunctionOptions {
      * explicitly.
      */
     override fun deadLetterTopic(deadLetterTopic: ITopic) {
-      cdkBuilder.deadLetterTopic(deadLetterTopic.let(ITopic::unwrap))
+      cdkBuilder.deadLetterTopic(deadLetterTopic.let(ITopic.Companion::unwrap))
     }
 
     /**
@@ -662,14 +662,14 @@ public interface FunctionProps : FunctionOptions {
      * environment variables.
      */
     override fun environmentEncryption(environmentEncryption: IKey) {
-      cdkBuilder.environmentEncryption(environmentEncryption.let(IKey::unwrap))
+      cdkBuilder.environmentEncryption(environmentEncryption.let(IKey.Companion::unwrap))
     }
 
     /**
      * @param ephemeralStorageSize The size of the function’s /tmp directory in MiB.
      */
     override fun ephemeralStorageSize(ephemeralStorageSize: Size) {
-      cdkBuilder.ephemeralStorageSize(ephemeralStorageSize.let(Size::unwrap))
+      cdkBuilder.ephemeralStorageSize(ephemeralStorageSize.let(Size.Companion::unwrap))
     }
 
     /**
@@ -677,7 +677,7 @@ public interface FunctionProps : FunctionOptions {
      * You can also add event sources using `addEventSource`.
      */
     override fun events(events: List<IEventSource>) {
-      cdkBuilder.events(events.map(IEventSource::unwrap))
+      cdkBuilder.events(events.map(IEventSource.Companion::unwrap))
     }
 
     /**
@@ -690,7 +690,7 @@ public interface FunctionProps : FunctionOptions {
      * @param filesystem The filesystem configuration for the lambda function.
      */
     override fun filesystem(filesystem: FileSystem) {
-      cdkBuilder.filesystem(filesystem.let(FileSystem::unwrap))
+      cdkBuilder.filesystem(filesystem.let(FileSystem.Companion::unwrap))
     }
 
     /**
@@ -723,7 +723,7 @@ public interface FunctionProps : FunctionOptions {
      * You can call `addToRolePolicy` to the created lambda to add statements post creation.
      */
     override fun initialPolicy(initialPolicy: List<PolicyStatement>) {
-      cdkBuilder.initialPolicy(initialPolicy.map(PolicyStatement::unwrap))
+      cdkBuilder.initialPolicy(initialPolicy.map(PolicyStatement.Companion::unwrap))
     }
 
     /**
@@ -738,7 +738,7 @@ public interface FunctionProps : FunctionOptions {
      * monitoring.
      */
     override fun insightsVersion(insightsVersion: LambdaInsightsVersion) {
-      cdkBuilder.insightsVersion(insightsVersion.let(LambdaInsightsVersion::unwrap))
+      cdkBuilder.insightsVersion(insightsVersion.let(LambdaInsightsVersion.Companion::unwrap))
     }
 
     /**
@@ -758,7 +758,7 @@ public interface FunctionProps : FunctionOptions {
      * that can be used by multiple functions.
      */
     override fun layers(layers: List<ILayerVersion>) {
-      cdkBuilder.layers(layers.map(ILayerVersion::unwrap))
+      cdkBuilder.layers(layers.map(ILayerVersion.Companion::unwrap))
     }
 
     /**
@@ -791,7 +791,7 @@ public interface FunctionProps : FunctionOptions {
      * If you are deploying to another type of region, please check regional availability first.
      */
     override fun logGroup(logGroup: ILogGroup) {
-      cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
+      cdkBuilder.logGroup(logGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -818,7 +818,7 @@ public interface FunctionProps : FunctionOptions {
      * ```
      */
     override fun logRetention(logRetention: RetentionDays) {
-      cdkBuilder.logRetention(logRetention.let(RetentionDays::unwrap))
+      cdkBuilder.logRetention(logRetention.let(RetentionDays.Companion::unwrap))
     }
 
     /**
@@ -831,7 +831,7 @@ public interface FunctionProps : FunctionOptions {
      * function to send logs to it.
      */
     override fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions) {
-      cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions.let(LogRetentionRetryOptions::unwrap))
+      cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions.let(LogRetentionRetryOptions.Companion::unwrap))
     }
 
     /**
@@ -857,14 +857,14 @@ public interface FunctionProps : FunctionOptions {
      * function to send logs to it.
      */
     override fun logRetentionRole(logRetentionRole: IRole) {
-      cdkBuilder.logRetentionRole(logRetentionRole.let(IRole::unwrap))
+      cdkBuilder.logRetentionRole(logRetentionRole.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param loggingFormat Sets the loggingFormat for the function.
      */
     override fun loggingFormat(loggingFormat: LoggingFormat) {
-      cdkBuilder.loggingFormat(loggingFormat.let(LoggingFormat::unwrap))
+      cdkBuilder.loggingFormat(loggingFormat.let(LoggingFormat.Companion::unwrap))
     }
 
     /**
@@ -874,7 +874,7 @@ public interface FunctionProps : FunctionOptions {
      * Maximum: 6 hours
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -891,21 +891,21 @@ public interface FunctionProps : FunctionOptions {
      * @param onFailure The destination for failed invocations.
      */
     override fun onFailure(onFailure: IDestination) {
-      cdkBuilder.onFailure(onFailure.let(IDestination::unwrap))
+      cdkBuilder.onFailure(onFailure.let(IDestination.Companion::unwrap))
     }
 
     /**
      * @param onSuccess The destination for successful invocations.
      */
     override fun onSuccess(onSuccess: IDestination) {
-      cdkBuilder.onSuccess(onSuccess.let(IDestination::unwrap))
+      cdkBuilder.onSuccess(onSuccess.let(IDestination.Companion::unwrap))
     }
 
     /**
      * @param paramsAndSecrets Specify the configuration of Parameters and Secrets Extension.
      */
     override fun paramsAndSecrets(paramsAndSecrets: ParamsAndSecretsLayerVersion) {
-      cdkBuilder.paramsAndSecrets(paramsAndSecrets.let(ParamsAndSecretsLayerVersion::unwrap))
+      cdkBuilder.paramsAndSecrets(paramsAndSecrets.let(ParamsAndSecretsLayerVersion.Companion::unwrap))
     }
 
     /**
@@ -919,7 +919,7 @@ public interface FunctionProps : FunctionOptions {
      * @param profilingGroup Profiling Group.
      */
     override fun profilingGroup(profilingGroup: IProfilingGroup) {
-      cdkBuilder.profilingGroup(profilingGroup.let(IProfilingGroup::unwrap))
+      cdkBuilder.profilingGroup(profilingGroup.let(IProfilingGroup.Companion::unwrap))
     }
 
     /**
@@ -952,7 +952,7 @@ public interface FunctionProps : FunctionOptions {
      * "service-role/AWSLambdaVPCAccessExecutionRole".
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -963,7 +963,7 @@ public interface FunctionProps : FunctionOptions {
      * Use `Runtime.FROM_IMAGE` when defining a function from a Docker image.
      */
     override fun runtime(runtime: Runtime) {
-      cdkBuilder.runtime(runtime.let(Runtime::unwrap))
+      cdkBuilder.runtime(runtime.let(Runtime.Companion::unwrap))
     }
 
     /**
@@ -971,7 +971,7 @@ public interface FunctionProps : FunctionOptions {
      * version.
      */
     override fun runtimeManagementMode(runtimeManagementMode: RuntimeManagementMode) {
-      cdkBuilder.runtimeManagementMode(runtimeManagementMode.let(RuntimeManagementMode::unwrap))
+      cdkBuilder.runtimeManagementMode(runtimeManagementMode.let(RuntimeManagementMode.Companion::unwrap))
     }
 
     /**
@@ -980,7 +980,7 @@ public interface FunctionProps : FunctionOptions {
      * Only used if 'vpc' is supplied.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -996,7 +996,7 @@ public interface FunctionProps : FunctionOptions {
      * SnapStart is currently supported only for Java 11, 17 runtime
      */
     override fun snapStart(snapStart: SnapStartConf) {
-      cdkBuilder.snapStart(snapStart.let(SnapStartConf::unwrap))
+      cdkBuilder.snapStart(snapStart.let(SnapStartConf.Companion::unwrap))
     }
 
     /**
@@ -1013,14 +1013,14 @@ public interface FunctionProps : FunctionOptions {
      * based on the function's expected execution time.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param tracing Enable AWS X-Ray Tracing for Lambda Function.
      */
     override fun tracing(tracing: Tracing) {
-      cdkBuilder.tracing(tracing.let(Tracing::unwrap))
+      cdkBuilder.tracing(tracing.let(Tracing.Companion::unwrap))
     }
 
     /**
@@ -1029,7 +1029,7 @@ public interface FunctionProps : FunctionOptions {
      * This is required when `vpcSubnets` is specified.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -1041,7 +1041,7 @@ public interface FunctionProps : FunctionOptions {
      * public subnets is not allowed (unless `allowPublicSubnet` is set to `true`).
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

@@ -45,7 +45,7 @@ public abstract class Timeout(
         software.amazon.awscdk.services.stepfunctions.Timeout.at(path).let(Timeout::wrap)
 
     public fun duration(duration: Duration): Timeout =
-        software.amazon.awscdk.services.stepfunctions.Timeout.duration(duration.let(Duration::unwrap)).let(Timeout::wrap)
+        software.amazon.awscdk.services.stepfunctions.Timeout.duration(duration.let(Duration.Companion::unwrap)).let(Timeout::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.Timeout): Timeout =
         CdkObjectWrappers.wrap(cdkObject) as? Timeout ?: Wrapper(cdkObject)

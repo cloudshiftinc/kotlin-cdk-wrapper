@@ -53,7 +53,7 @@ public interface ITokenResolver {
      * @param context 
      */
     override fun resolveList(l: List<String>, context: IResolveContext): Any =
-        unwrap(this).resolveList(l, context.let(IResolveContext::unwrap))
+        unwrap(this).resolveList(l, context.let(IResolveContext.Companion::unwrap))
 
     /**
      * Resolve a string with at least one stringified token in it.
@@ -64,8 +64,8 @@ public interface ITokenResolver {
      * @param context 
      */
     override fun resolveString(s: TokenizedStringFragments, context: IResolveContext): Any =
-        unwrap(this).resolveString(s.let(TokenizedStringFragments::unwrap),
-        context.let(IResolveContext::unwrap))
+        unwrap(this).resolveString(s.let(TokenizedStringFragments.Companion::unwrap),
+        context.let(IResolveContext.Companion::unwrap))
 
     /**
      * Resolve a single token.
@@ -78,8 +78,9 @@ public interface ITokenResolver {
       t: IResolvable,
       context: IResolveContext,
       postProcessor: IPostProcessor,
-    ): Any = unwrap(this).resolveToken(t.let(IResolvable::unwrap),
-        context.let(IResolveContext::unwrap), postProcessor.let(IPostProcessor::unwrap))
+    ): Any = unwrap(this).resolveToken(t.let(IResolvable.Companion::unwrap),
+        context.let(IResolveContext.Companion::unwrap),
+        postProcessor.let(IPostProcessor.Companion::unwrap))
   }
 
   public companion object {

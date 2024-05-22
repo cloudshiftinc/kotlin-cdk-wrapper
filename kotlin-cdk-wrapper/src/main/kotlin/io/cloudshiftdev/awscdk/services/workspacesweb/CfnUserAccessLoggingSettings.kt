@@ -56,8 +56,8 @@ public open class CfnUserAccessLoggingSettings(
     id: String,
     props: CfnUserAccessLoggingSettingsProps,
   ) :
-      this(software.amazon.awscdk.services.workspacesweb.CfnUserAccessLoggingSettings(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnUserAccessLoggingSettingsProps::unwrap))
+      this(software.amazon.awscdk.services.workspacesweb.CfnUserAccessLoggingSettings(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnUserAccessLoggingSettingsProps.Companion::unwrap))
   )
 
   public constructor(
@@ -91,7 +91,7 @@ public open class CfnUserAccessLoggingSettings(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -115,7 +115,7 @@ public open class CfnUserAccessLoggingSettings(
    * The tags to add to the user access logging settings resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -186,7 +186,7 @@ public open class CfnUserAccessLoggingSettings(
      * @param tags The tags to add to the user access logging settings resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

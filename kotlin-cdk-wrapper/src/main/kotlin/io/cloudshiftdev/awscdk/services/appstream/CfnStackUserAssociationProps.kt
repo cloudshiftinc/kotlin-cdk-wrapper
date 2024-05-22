@@ -131,7 +131,7 @@ public interface CfnStackUserAssociationProps {
      * user is created in the user pool.
      */
     override fun sendEmailNotification(sendEmailNotification: IResolvable) {
-      cdkBuilder.sendEmailNotification(sendEmailNotification.let(IResolvable::unwrap))
+      cdkBuilder.sendEmailNotification(sendEmailNotification.let(IResolvable.Companion::unwrap))
     }
 
     /**

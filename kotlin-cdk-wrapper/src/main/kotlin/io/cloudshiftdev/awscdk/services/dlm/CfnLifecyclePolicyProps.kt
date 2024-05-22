@@ -535,7 +535,7 @@ public interface CfnLifecyclePolicyProps {
      * Default: false
      */
     override fun copyTags(copyTags: IResolvable) {
-      cdkBuilder.copyTags(copyTags.let(IResolvable::unwrap))
+      cdkBuilder.copyTags(copyTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -586,7 +586,7 @@ public interface CfnLifecyclePolicyProps {
      * specified exclusion parameters.
      */
     override fun exclusions(exclusions: IResolvable) {
-      cdkBuilder.exclusions(exclusions.let(IResolvable::unwrap))
+      cdkBuilder.exclusions(exclusions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -596,7 +596,7 @@ public interface CfnLifecyclePolicyProps {
      * specified exclusion parameters.
      */
     override fun exclusions(exclusions: CfnLifecyclePolicy.ExclusionsProperty) {
-      cdkBuilder.exclusions(exclusions.let(CfnLifecyclePolicy.ExclusionsProperty::unwrap))
+      cdkBuilder.exclusions(exclusions.let(CfnLifecyclePolicy.ExclusionsProperty.Companion::unwrap))
     }
 
     /**
@@ -667,7 +667,7 @@ public interface CfnLifecyclePolicyProps {
      * Default: false
      */
     override fun extendDeletion(extendDeletion: IResolvable) {
-      cdkBuilder.extendDeletion(extendDeletion.let(IResolvable::unwrap))
+      cdkBuilder.extendDeletion(extendDeletion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -677,7 +677,7 @@ public interface CfnLifecyclePolicyProps {
      * body, or in the PolicyDetails request structure, but not both.
      */
     override fun policyDetails(policyDetails: IResolvable) {
-      cdkBuilder.policyDetails(policyDetails.let(IResolvable::unwrap))
+      cdkBuilder.policyDetails(policyDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -687,7 +687,7 @@ public interface CfnLifecyclePolicyProps {
      * body, or in the PolicyDetails request structure, but not both.
      */
     override fun policyDetails(policyDetails: CfnLifecyclePolicy.PolicyDetailsProperty) {
-      cdkBuilder.policyDetails(policyDetails.let(CfnLifecyclePolicy.PolicyDetailsProperty::unwrap))
+      cdkBuilder.policyDetails(policyDetails.let(CfnLifecyclePolicy.PolicyDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -726,7 +726,7 @@ public interface CfnLifecyclePolicyProps {
      * @param tags The tags to apply to the lifecycle policy during creation.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -125,7 +125,7 @@ public interface ReportGroupProps {
      * @param exportBucket An optional S3 bucket to export the reports to.
      */
     override fun exportBucket(exportBucket: IBucket) {
-      cdkBuilder.exportBucket(exportBucket.let(IBucket::unwrap))
+      cdkBuilder.exportBucket(exportBucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -134,7 +134,7 @@ public interface ReportGroupProps {
      * this is set to retain the resource by default.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -150,7 +150,7 @@ public interface ReportGroupProps {
      * * **CODE_COVERAGE** - The report group contains code coverage reports.
      */
     override fun type(type: ReportGroupType) {
-      cdkBuilder.type(type.let(ReportGroupType::unwrap))
+      cdkBuilder.type(type.let(ReportGroupType.Companion::unwrap))
     }
 
     /**

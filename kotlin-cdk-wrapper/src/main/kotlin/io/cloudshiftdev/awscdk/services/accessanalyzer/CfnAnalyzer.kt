@@ -71,8 +71,8 @@ public open class CfnAnalyzer(
     id: String,
     props: CfnAnalyzerProps,
   ) :
-      this(software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAnalyzerProps::unwrap))
+      this(software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAnalyzerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -93,7 +93,7 @@ public open class CfnAnalyzer(
    * organization or account.
    */
   public open fun analyzerConfiguration(`value`: IResolvable) {
-    unwrap(this).setAnalyzerConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAnalyzerConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -101,7 +101,7 @@ public open class CfnAnalyzer(
    * organization or account.
    */
   public open fun analyzerConfiguration(`value`: AnalyzerConfigurationProperty) {
-    unwrap(this).setAnalyzerConfiguration(`value`.let(AnalyzerConfigurationProperty::unwrap))
+    unwrap(this).setAnalyzerConfiguration(`value`.let(AnalyzerConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -134,7 +134,7 @@ public open class CfnAnalyzer(
    * Specifies the archive rules to add for the analyzer.
    */
   public open fun archiveRules(`value`: IResolvable) {
-    unwrap(this).setArchiveRules(`value`.let(IResolvable::unwrap))
+    unwrap(this).setArchiveRules(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -160,7 +160,7 @@ public open class CfnAnalyzer(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -178,7 +178,7 @@ public open class CfnAnalyzer(
    * An array of key-value pairs to apply to the analyzer.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -318,7 +318,7 @@ public open class CfnAnalyzer(
      * analyzer for an AWS organization or account. 
      */
     override fun analyzerConfiguration(analyzerConfiguration: IResolvable) {
-      cdkBuilder.analyzerConfiguration(analyzerConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.analyzerConfiguration(analyzerConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -330,7 +330,7 @@ public open class CfnAnalyzer(
      * analyzer for an AWS organization or account. 
      */
     override fun analyzerConfiguration(analyzerConfiguration: AnalyzerConfigurationProperty) {
-      cdkBuilder.analyzerConfiguration(analyzerConfiguration.let(AnalyzerConfigurationProperty::unwrap))
+      cdkBuilder.analyzerConfiguration(analyzerConfiguration.let(AnalyzerConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -366,7 +366,7 @@ public open class CfnAnalyzer(
      * @param archiveRules Specifies the archive rules to add for the analyzer. 
      */
     override fun archiveRules(archiveRules: IResolvable) {
-      cdkBuilder.archiveRules(archiveRules.let(IResolvable::unwrap))
+      cdkBuilder.archiveRules(archiveRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -398,7 +398,7 @@ public open class CfnAnalyzer(
      * @param tags An array of key-value pairs to apply to the analyzer. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -520,7 +520,7 @@ public open class CfnAnalyzer(
        * External access analyzers do not support any configuration.
        */
       override fun unusedAccessConfiguration(unusedAccessConfiguration: IResolvable) {
-        cdkBuilder.unusedAccessConfiguration(unusedAccessConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.unusedAccessConfiguration(unusedAccessConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -530,7 +530,7 @@ public open class CfnAnalyzer(
        */
       override
           fun unusedAccessConfiguration(unusedAccessConfiguration: UnusedAccessConfigurationProperty) {
-        cdkBuilder.unusedAccessConfiguration(unusedAccessConfiguration.let(UnusedAccessConfigurationProperty::unwrap))
+        cdkBuilder.unusedAccessConfiguration(unusedAccessConfiguration.let(UnusedAccessConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -656,7 +656,7 @@ public open class CfnAnalyzer(
        * @param filter The criteria for the rule. 
        */
       override fun filter(filter: IResolvable) {
-        cdkBuilder.filter(filter.let(IResolvable::unwrap))
+        cdkBuilder.filter(filter.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -871,7 +871,7 @@ public open class CfnAnalyzer(
        * @param exists An "exists" condition to match for the rule.
        */
       override fun exists(exists: IResolvable) {
-        cdkBuilder.exists(exists.let(IResolvable::unwrap))
+        cdkBuilder.exists(exists.let(IResolvable.Companion::unwrap))
       }
 
       /**

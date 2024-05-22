@@ -108,8 +108,8 @@ public open class CfnMaintenanceWindowTask(
     id: String,
     props: CfnMaintenanceWindowTaskProps,
   ) :
-      this(software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMaintenanceWindowTaskProps::unwrap))
+      this(software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMaintenanceWindowTaskProps.Companion::unwrap))
   )
 
   public constructor(
@@ -156,7 +156,7 @@ public open class CfnMaintenanceWindowTask(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -168,14 +168,14 @@ public open class CfnMaintenanceWindowTask(
    * Information about an Amazon S3 bucket to write Run Command task-level logs to.
    */
   public open fun loggingInfo(`value`: IResolvable) {
-    unwrap(this).setLoggingInfo(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoggingInfo(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information about an Amazon S3 bucket to write Run Command task-level logs to.
    */
   public open fun loggingInfo(`value`: LoggingInfoProperty) {
-    unwrap(this).setLoggingInfo(`value`.let(LoggingInfoProperty::unwrap))
+    unwrap(this).setLoggingInfo(`value`.let(LoggingInfoProperty.Companion::unwrap))
   }
 
   /**
@@ -259,7 +259,7 @@ public open class CfnMaintenanceWindowTask(
    * The targets, either instances or window target IDs.
    */
   public open fun targets(`value`: IResolvable) {
-    unwrap(this).setTargets(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTargets(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -295,14 +295,14 @@ public open class CfnMaintenanceWindowTask(
    * The parameters to pass to the task when it runs.
    */
   public open fun taskInvocationParameters(`value`: IResolvable) {
-    unwrap(this).setTaskInvocationParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTaskInvocationParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The parameters to pass to the task when it runs.
    */
   public open fun taskInvocationParameters(`value`: TaskInvocationParametersProperty) {
-    unwrap(this).setTaskInvocationParameters(`value`.let(TaskInvocationParametersProperty::unwrap))
+    unwrap(this).setTaskInvocationParameters(`value`.let(TaskInvocationParametersProperty.Companion::unwrap))
   }
 
   /**
@@ -695,7 +695,7 @@ public open class CfnMaintenanceWindowTask(
      * to. 
      */
     override fun loggingInfo(loggingInfo: IResolvable) {
-      cdkBuilder.loggingInfo(loggingInfo.let(IResolvable::unwrap))
+      cdkBuilder.loggingInfo(loggingInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -715,7 +715,7 @@ public open class CfnMaintenanceWindowTask(
      * to. 
      */
     override fun loggingInfo(loggingInfo: LoggingInfoProperty) {
-      cdkBuilder.loggingInfo(loggingInfo.let(LoggingInfoProperty::unwrap))
+      cdkBuilder.loggingInfo(loggingInfo.let(LoggingInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -830,7 +830,7 @@ public open class CfnMaintenanceWindowTask(
      * @param targets The targets, either instances or window target IDs. 
      */
     override fun targets(targets: IResolvable) {
-      cdkBuilder.targets(targets.let(IResolvable::unwrap))
+      cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -895,7 +895,7 @@ public open class CfnMaintenanceWindowTask(
      * @param taskInvocationParameters The parameters to pass to the task when it runs. 
      */
     override fun taskInvocationParameters(taskInvocationParameters: IResolvable) {
-      cdkBuilder.taskInvocationParameters(taskInvocationParameters.let(IResolvable::unwrap))
+      cdkBuilder.taskInvocationParameters(taskInvocationParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -918,7 +918,7 @@ public open class CfnMaintenanceWindowTask(
      */
     override
         fun taskInvocationParameters(taskInvocationParameters: TaskInvocationParametersProperty) {
-      cdkBuilder.taskInvocationParameters(taskInvocationParameters.let(TaskInvocationParametersProperty::unwrap))
+      cdkBuilder.taskInvocationParameters(taskInvocationParameters.let(TaskInvocationParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -1108,7 +1108,7 @@ public open class CfnMaintenanceWindowTask(
        * Logs.
        */
       override fun cloudWatchOutputEnabled(cloudWatchOutputEnabled: IResolvable) {
-        cdkBuilder.cloudWatchOutputEnabled(cloudWatchOutputEnabled.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchOutputEnabled(cloudWatchOutputEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1900,7 +1900,7 @@ public open class CfnMaintenanceWindowTask(
        * CloudWatch Logs.
        */
       override fun cloudWatchOutputConfig(cloudWatchOutputConfig: IResolvable) {
-        cdkBuilder.cloudWatchOutputConfig(cloudWatchOutputConfig.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchOutputConfig(cloudWatchOutputConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1908,7 +1908,7 @@ public open class CfnMaintenanceWindowTask(
        * CloudWatch Logs.
        */
       override fun cloudWatchOutputConfig(cloudWatchOutputConfig: CloudWatchOutputConfigProperty) {
-        cdkBuilder.cloudWatchOutputConfig(cloudWatchOutputConfig.let(CloudWatchOutputConfigProperty::unwrap))
+        cdkBuilder.cloudWatchOutputConfig(cloudWatchOutputConfig.let(CloudWatchOutputConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1967,7 +1967,7 @@ public open class CfnMaintenanceWindowTask(
        * changes on a per-managed node basis.
        */
       override fun notificationConfig(notificationConfig: IResolvable) {
-        cdkBuilder.notificationConfig(notificationConfig.let(IResolvable::unwrap))
+        cdkBuilder.notificationConfig(notificationConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1975,7 +1975,7 @@ public open class CfnMaintenanceWindowTask(
        * changes on a per-managed node basis.
        */
       override fun notificationConfig(notificationConfig: NotificationConfigProperty) {
-        cdkBuilder.notificationConfig(notificationConfig.let(NotificationConfigProperty::unwrap))
+        cdkBuilder.notificationConfig(notificationConfig.let(NotificationConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2869,7 +2869,7 @@ public open class CfnMaintenanceWindowTask(
        */
       override
           fun maintenanceWindowAutomationParameters(maintenanceWindowAutomationParameters: IResolvable) {
-        cdkBuilder.maintenanceWindowAutomationParameters(maintenanceWindowAutomationParameters.let(IResolvable::unwrap))
+        cdkBuilder.maintenanceWindowAutomationParameters(maintenanceWindowAutomationParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2877,7 +2877,7 @@ public open class CfnMaintenanceWindowTask(
        */
       override
           fun maintenanceWindowAutomationParameters(maintenanceWindowAutomationParameters: MaintenanceWindowAutomationParametersProperty) {
-        cdkBuilder.maintenanceWindowAutomationParameters(maintenanceWindowAutomationParameters.let(MaintenanceWindowAutomationParametersProperty::unwrap))
+        cdkBuilder.maintenanceWindowAutomationParameters(maintenanceWindowAutomationParameters.let(MaintenanceWindowAutomationParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -2895,7 +2895,7 @@ public open class CfnMaintenanceWindowTask(
        */
       override
           fun maintenanceWindowLambdaParameters(maintenanceWindowLambdaParameters: IResolvable) {
-        cdkBuilder.maintenanceWindowLambdaParameters(maintenanceWindowLambdaParameters.let(IResolvable::unwrap))
+        cdkBuilder.maintenanceWindowLambdaParameters(maintenanceWindowLambdaParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2903,7 +2903,7 @@ public open class CfnMaintenanceWindowTask(
        */
       override
           fun maintenanceWindowLambdaParameters(maintenanceWindowLambdaParameters: MaintenanceWindowLambdaParametersProperty) {
-        cdkBuilder.maintenanceWindowLambdaParameters(maintenanceWindowLambdaParameters.let(MaintenanceWindowLambdaParametersProperty::unwrap))
+        cdkBuilder.maintenanceWindowLambdaParameters(maintenanceWindowLambdaParameters.let(MaintenanceWindowLambdaParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -2921,7 +2921,7 @@ public open class CfnMaintenanceWindowTask(
        */
       override
           fun maintenanceWindowRunCommandParameters(maintenanceWindowRunCommandParameters: IResolvable) {
-        cdkBuilder.maintenanceWindowRunCommandParameters(maintenanceWindowRunCommandParameters.let(IResolvable::unwrap))
+        cdkBuilder.maintenanceWindowRunCommandParameters(maintenanceWindowRunCommandParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2929,7 +2929,7 @@ public open class CfnMaintenanceWindowTask(
        */
       override
           fun maintenanceWindowRunCommandParameters(maintenanceWindowRunCommandParameters: MaintenanceWindowRunCommandParametersProperty) {
-        cdkBuilder.maintenanceWindowRunCommandParameters(maintenanceWindowRunCommandParameters.let(MaintenanceWindowRunCommandParametersProperty::unwrap))
+        cdkBuilder.maintenanceWindowRunCommandParameters(maintenanceWindowRunCommandParameters.let(MaintenanceWindowRunCommandParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -2948,7 +2948,7 @@ public open class CfnMaintenanceWindowTask(
        */
       override
           fun maintenanceWindowStepFunctionsParameters(maintenanceWindowStepFunctionsParameters: IResolvable) {
-        cdkBuilder.maintenanceWindowStepFunctionsParameters(maintenanceWindowStepFunctionsParameters.let(IResolvable::unwrap))
+        cdkBuilder.maintenanceWindowStepFunctionsParameters(maintenanceWindowStepFunctionsParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2957,7 +2957,7 @@ public open class CfnMaintenanceWindowTask(
        */
       override
           fun maintenanceWindowStepFunctionsParameters(maintenanceWindowStepFunctionsParameters: MaintenanceWindowStepFunctionsParametersProperty) {
-        cdkBuilder.maintenanceWindowStepFunctionsParameters(maintenanceWindowStepFunctionsParameters.let(MaintenanceWindowStepFunctionsParametersProperty::unwrap))
+        cdkBuilder.maintenanceWindowStepFunctionsParameters(maintenanceWindowStepFunctionsParameters.let(MaintenanceWindowStepFunctionsParametersProperty.Companion::unwrap))
       }
 
       /**

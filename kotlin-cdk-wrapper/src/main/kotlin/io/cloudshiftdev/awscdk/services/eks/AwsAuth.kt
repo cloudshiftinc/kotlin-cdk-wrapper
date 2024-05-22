@@ -36,8 +36,8 @@ public open class AwsAuth(
     id: String,
     props: AwsAuthProps,
   ) :
-      this(software.amazon.awscdk.services.eks.AwsAuth(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(AwsAuthProps::unwrap))
+      this(software.amazon.awscdk.services.eks.AwsAuth(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(AwsAuthProps.Companion::unwrap))
   )
 
   public constructor(
@@ -64,7 +64,7 @@ public open class AwsAuth(
    * @param username Optional user (defaults to the role ARN).
    */
   public open fun addMastersRole(role: IRole) {
-    unwrap(this).addMastersRole(role.let(IRole::unwrap))
+    unwrap(this).addMastersRole(role.let(IRole.Companion::unwrap))
   }
 
   /**
@@ -75,7 +75,7 @@ public open class AwsAuth(
    * @param username Optional user (defaults to the role ARN).
    */
   public open fun addMastersRole(role: IRole, username: String) {
-    unwrap(this).addMastersRole(role.let(IRole::unwrap), username)
+    unwrap(this).addMastersRole(role.let(IRole.Companion::unwrap), username)
   }
 
   /**
@@ -85,7 +85,8 @@ public open class AwsAuth(
    * @param mapping Mapping to k8s user name and groups. 
    */
   public open fun addRoleMapping(role: IRole, mapping: AwsAuthMapping) {
-    unwrap(this).addRoleMapping(role.let(IRole::unwrap), mapping.let(AwsAuthMapping::unwrap))
+    unwrap(this).addRoleMapping(role.let(IRole.Companion::unwrap),
+        mapping.let(AwsAuthMapping.Companion::unwrap))
   }
 
   /**
@@ -106,7 +107,8 @@ public open class AwsAuth(
    * @param mapping Mapping to k8s user name and groups. 
    */
   public open fun addUserMapping(user: IUser, mapping: AwsAuthMapping) {
-    unwrap(this).addUserMapping(user.let(IUser::unwrap), mapping.let(AwsAuthMapping::unwrap))
+    unwrap(this).addUserMapping(user.let(IUser.Companion::unwrap),
+        mapping.let(AwsAuthMapping.Companion::unwrap))
   }
 
   /**
@@ -150,7 +152,7 @@ public open class AwsAuth(
      * @param cluster The EKS cluster to apply this configuration to. 
      */
     override fun cluster(cluster: Cluster) {
-      cdkBuilder.cluster(cluster.let(Cluster::unwrap))
+      cdkBuilder.cluster(cluster.let(Cluster.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.eks.AwsAuth = cdkBuilder.build()

@@ -32,7 +32,7 @@ public open class FileSystemLocation(
 
   public companion object {
     public fun efs(props: EfsFileSystemLocationProps): IFileSystemLocation =
-        software.amazon.awscdk.services.codebuild.FileSystemLocation.efs(props.let(EfsFileSystemLocationProps::unwrap)).let(IFileSystemLocation::wrap)
+        software.amazon.awscdk.services.codebuild.FileSystemLocation.efs(props.let(EfsFileSystemLocationProps.Companion::unwrap)).let(IFileSystemLocation::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("946b041de0d09bf7421671b618ef671b9434b22a6e6bd4c23120e1b760eb1304")

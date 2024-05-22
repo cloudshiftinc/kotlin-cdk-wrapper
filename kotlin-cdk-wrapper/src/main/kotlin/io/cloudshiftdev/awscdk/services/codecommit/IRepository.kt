@@ -664,7 +664,7 @@ public interface IRepository : IResource, INotificationRuleSource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -673,7 +673,7 @@ public interface IRepository : IResource, INotificationRuleSource {
      * @param scope 
      */
     override fun bindAsNotificationRuleSource(scope: Construct): NotificationRuleSourceConfig =
-        unwrap(this).bindAsNotificationRuleSource(scope.let(Construct::unwrap)).let(NotificationRuleSourceConfig::wrap)
+        unwrap(this).bindAsNotificationRuleSource(scope.let(Construct.Companion::unwrap)).let(NotificationRuleSourceConfig::wrap)
 
     /**
      * The environment this resource belongs to.
@@ -694,7 +694,7 @@ public interface IRepository : IResource, INotificationRuleSource {
      * @param actions 
      */
     override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-        unwrap(this).grant(grantee.let(IGrantable::unwrap),
+        unwrap(this).grant(grantee.let(IGrantable.Companion::unwrap),
         *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
     /**
@@ -703,7 +703,7 @@ public interface IRepository : IResource, INotificationRuleSource {
      * @param grantee 
      */
     override fun grantPull(grantee: IGrantable): Grant =
-        unwrap(this).grantPull(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantPull(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grant the given identity permissions to pull and push this repository.
@@ -711,7 +711,7 @@ public interface IRepository : IResource, INotificationRuleSource {
      * @param grantee 
      */
     override fun grantPullPush(grantee: IGrantable): Grant =
-        unwrap(this).grantPullPush(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantPullPush(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grant the given identity permissions to read this repository.
@@ -719,7 +719,7 @@ public interface IRepository : IResource, INotificationRuleSource {
      * @param grantee 
      */
     override fun grantRead(grantee: IGrantable): Grant =
-        unwrap(this).grantRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
@@ -739,8 +739,9 @@ public interface IRepository : IResource, INotificationRuleSource {
       id: String,
       target: INotificationRuleTarget,
       options: RepositoryNotifyOnOptions,
-    ): INotificationRule = unwrap(this).notifyOn(id, target.let(INotificationRuleTarget::unwrap),
-        options.let(RepositoryNotifyOnOptions::unwrap)).let(INotificationRule::wrap)
+    ): INotificationRule = unwrap(this).notifyOn(id,
+        target.let(INotificationRuleTarget.Companion::unwrap),
+        options.let(RepositoryNotifyOnOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Defines a CodeStar Notification rule triggered when the project events specified by you are
@@ -771,7 +772,7 @@ public interface IRepository : IResource, INotificationRuleSource {
      */
     override fun notifyOnApprovalRuleOverridden(id: String, target: INotificationRuleTarget):
         INotificationRule = unwrap(this).notifyOnApprovalRuleOverridden(id,
-        target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Defines a CodeStar Notification rule which triggers when an approval rule is overridden.
@@ -785,8 +786,8 @@ public interface IRepository : IResource, INotificationRuleSource {
       target: INotificationRuleTarget,
       options: NotificationRuleOptions,
     ): INotificationRule = unwrap(this).notifyOnApprovalRuleOverridden(id,
-        target.let(INotificationRuleTarget::unwrap),
-        options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap),
+        options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Defines a CodeStar Notification rule which triggers when an approval rule is overridden.
@@ -813,7 +814,7 @@ public interface IRepository : IResource, INotificationRuleSource {
      */
     override fun notifyOnApprovalStatusChanged(id: String, target: INotificationRuleTarget):
         INotificationRule = unwrap(this).notifyOnApprovalStatusChanged(id,
-        target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Defines a CodeStar Notification rule which triggers when an approval status is changed.
@@ -827,8 +828,8 @@ public interface IRepository : IResource, INotificationRuleSource {
       target: INotificationRuleTarget,
       options: NotificationRuleOptions,
     ): INotificationRule = unwrap(this).notifyOnApprovalStatusChanged(id,
-        target.let(INotificationRuleTarget::unwrap),
-        options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap),
+        options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Defines a CodeStar Notification rule which triggers when an approval status is changed.
@@ -855,7 +856,7 @@ public interface IRepository : IResource, INotificationRuleSource {
      */
     override fun notifyOnBranchOrTagCreated(id: String, target: INotificationRuleTarget):
         INotificationRule = unwrap(this).notifyOnBranchOrTagCreated(id,
-        target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Defines a CodeStar Notification rule which triggers when a new branch or tag is created.
@@ -869,8 +870,8 @@ public interface IRepository : IResource, INotificationRuleSource {
       target: INotificationRuleTarget,
       options: NotificationRuleOptions,
     ): INotificationRule = unwrap(this).notifyOnBranchOrTagCreated(id,
-        target.let(INotificationRuleTarget::unwrap),
-        options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap),
+        options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Defines a CodeStar Notification rule which triggers when a new branch or tag is created.
@@ -896,7 +897,7 @@ public interface IRepository : IResource, INotificationRuleSource {
      */
     override fun notifyOnBranchOrTagDeleted(id: String, target: INotificationRuleTarget):
         INotificationRule = unwrap(this).notifyOnBranchOrTagDeleted(id,
-        target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Defines a CodeStar Notification rule which triggers when a branch or tag is deleted.
@@ -910,8 +911,8 @@ public interface IRepository : IResource, INotificationRuleSource {
       target: INotificationRuleTarget,
       options: NotificationRuleOptions,
     ): INotificationRule = unwrap(this).notifyOnBranchOrTagDeleted(id,
-        target.let(INotificationRuleTarget::unwrap),
-        options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap),
+        options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Defines a CodeStar Notification rule which triggers when a branch or tag is deleted.
@@ -937,7 +938,7 @@ public interface IRepository : IResource, INotificationRuleSource {
      */
     override fun notifyOnPullRequestComment(id: String, target: INotificationRuleTarget):
         INotificationRule = unwrap(this).notifyOnPullRequestComment(id,
-        target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Defines a CodeStar Notification rule which triggers when a comment is made on a pull request.
@@ -951,8 +952,8 @@ public interface IRepository : IResource, INotificationRuleSource {
       target: INotificationRuleTarget,
       options: NotificationRuleOptions,
     ): INotificationRule = unwrap(this).notifyOnPullRequestComment(id,
-        target.let(INotificationRuleTarget::unwrap),
-        options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap),
+        options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Defines a CodeStar Notification rule which triggers when a comment is made on a pull request.
@@ -978,7 +979,7 @@ public interface IRepository : IResource, INotificationRuleSource {
      */
     override fun notifyOnPullRequestCreated(id: String, target: INotificationRuleTarget):
         INotificationRule = unwrap(this).notifyOnPullRequestCreated(id,
-        target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Defines a CodeStar Notification rule which triggers when a pull request is created.
@@ -992,8 +993,8 @@ public interface IRepository : IResource, INotificationRuleSource {
       target: INotificationRuleTarget,
       options: NotificationRuleOptions,
     ): INotificationRule = unwrap(this).notifyOnPullRequestCreated(id,
-        target.let(INotificationRuleTarget::unwrap),
-        options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap),
+        options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Defines a CodeStar Notification rule which triggers when a pull request is created.
@@ -1019,7 +1020,7 @@ public interface IRepository : IResource, INotificationRuleSource {
      */
     override fun notifyOnPullRequestMerged(id: String, target: INotificationRuleTarget):
         INotificationRule = unwrap(this).notifyOnPullRequestMerged(id,
-        target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Defines a CodeStar Notification rule which triggers when a pull request is merged.
@@ -1033,8 +1034,8 @@ public interface IRepository : IResource, INotificationRuleSource {
       target: INotificationRuleTarget,
       options: NotificationRuleOptions,
     ): INotificationRule = unwrap(this).notifyOnPullRequestMerged(id,
-        target.let(INotificationRuleTarget::unwrap),
-        options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap),
+        options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Defines a CodeStar Notification rule which triggers when a pull request is merged.
@@ -1067,7 +1068,8 @@ public interface IRepository : IResource, INotificationRuleSource {
      * @param options
      */
     override fun onCommentOnCommit(id: String, options: OnEventOptions): Rule =
-        unwrap(this).onCommentOnCommit(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+        unwrap(this).onCommentOnCommit(id,
+        options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * Defines a CloudWatch event rule which triggers when a comment is made on a commit.
@@ -1096,7 +1098,8 @@ public interface IRepository : IResource, INotificationRuleSource {
      * @param options
      */
     override fun onCommentOnPullRequest(id: String, options: OnEventOptions): Rule =
-        unwrap(this).onCommentOnPullRequest(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+        unwrap(this).onCommentOnPullRequest(id,
+        options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * Defines a CloudWatch event rule which triggers when a comment is made on a pull request.
@@ -1124,7 +1127,7 @@ public interface IRepository : IResource, INotificationRuleSource {
      * @param options
      */
     override fun onCommit(id: String, options: OnCommitOptions): Rule = unwrap(this).onCommit(id,
-        options.let(OnCommitOptions::unwrap)).let(Rule::wrap)
+        options.let(OnCommitOptions.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * Defines a CloudWatch event rule which triggers when a commit is pushed to a branch.
@@ -1158,7 +1161,7 @@ public interface IRepository : IResource, INotificationRuleSource {
      * @param options
      */
     override fun onEvent(id: String, options: OnEventOptions): Rule = unwrap(this).onEvent(id,
-        options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+        options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * Defines a CloudWatch event rule which triggers for repository events.
@@ -1191,7 +1194,7 @@ public interface IRepository : IResource, INotificationRuleSource {
      */
     override fun onPullRequestStateChange(id: String, options: OnEventOptions): Rule =
         unwrap(this).onPullRequestStateChange(id,
-        options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+        options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * Defines a CloudWatch event rule which triggers when a pull request state is changed.
@@ -1222,7 +1225,8 @@ public interface IRepository : IResource, INotificationRuleSource {
      * @param options
      */
     override fun onReferenceCreated(id: String, options: OnEventOptions): Rule =
-        unwrap(this).onReferenceCreated(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+        unwrap(this).onReferenceCreated(id,
+        options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * Defines a CloudWatch event rule which triggers when a reference is created (i.e. a new
@@ -1254,7 +1258,8 @@ public interface IRepository : IResource, INotificationRuleSource {
      * @param options
      */
     override fun onReferenceDeleted(id: String, options: OnEventOptions): Rule =
-        unwrap(this).onReferenceDeleted(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+        unwrap(this).onReferenceDeleted(id,
+        options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * Defines a CloudWatch event rule which triggers when a reference is delete (i.e. a branch/tag
@@ -1286,7 +1291,8 @@ public interface IRepository : IResource, INotificationRuleSource {
      * @param options
      */
     override fun onReferenceUpdated(id: String, options: OnEventOptions): Rule =
-        unwrap(this).onReferenceUpdated(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+        unwrap(this).onReferenceUpdated(id,
+        options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * Defines a CloudWatch event rule which triggers when a reference is updated (i.e. a commit is
@@ -1317,7 +1323,8 @@ public interface IRepository : IResource, INotificationRuleSource {
      * @param options
      */
     override fun onStateChange(id: String, options: OnEventOptions): Rule =
-        unwrap(this).onStateChange(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+        unwrap(this).onStateChange(id,
+        options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * Defines a CloudWatch event rule which triggers when a "CodeCommit Repository State Change"

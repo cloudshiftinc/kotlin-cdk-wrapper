@@ -258,7 +258,7 @@ public interface CfnTriggerProps {
      * @param actions The actions initiated by this trigger. 
      */
     override fun actions(actions: IResolvable) {
-      cdkBuilder.actions(actions.let(IResolvable::unwrap))
+      cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -285,7 +285,7 @@ public interface CfnTriggerProps {
      * received or batch time window expired) before EventBridge event trigger fires.
      */
     override fun eventBatchingCondition(eventBatchingCondition: IResolvable) {
-      cdkBuilder.eventBatchingCondition(eventBatchingCondition.let(IResolvable::unwrap))
+      cdkBuilder.eventBatchingCondition(eventBatchingCondition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -294,7 +294,7 @@ public interface CfnTriggerProps {
      */
     override
         fun eventBatchingCondition(eventBatchingCondition: CfnTrigger.EventBatchingConditionProperty) {
-      cdkBuilder.eventBatchingCondition(eventBatchingCondition.let(CfnTrigger.EventBatchingConditionProperty::unwrap))
+      cdkBuilder.eventBatchingCondition(eventBatchingCondition.let(CfnTrigger.EventBatchingConditionProperty.Companion::unwrap))
     }
 
     /**
@@ -319,14 +319,14 @@ public interface CfnTriggerProps {
      * @param predicate The predicate of this trigger, which defines when it will fire.
      */
     override fun predicate(predicate: IResolvable) {
-      cdkBuilder.predicate(predicate.let(IResolvable::unwrap))
+      cdkBuilder.predicate(predicate.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param predicate The predicate of this trigger, which defines when it will fire.
      */
     override fun predicate(predicate: CfnTrigger.PredicateProperty) {
-      cdkBuilder.predicate(predicate.let(CfnTrigger.PredicateProperty::unwrap))
+      cdkBuilder.predicate(predicate.let(CfnTrigger.PredicateProperty.Companion::unwrap))
     }
 
     /**
@@ -363,7 +363,7 @@ public interface CfnTriggerProps {
      * True is not supported for `ON_DEMAND` triggers.
      */
     override fun startOnCreation(startOnCreation: IResolvable) {
-      cdkBuilder.startOnCreation(startOnCreation.let(IResolvable::unwrap))
+      cdkBuilder.startOnCreation(startOnCreation.let(IResolvable.Companion::unwrap))
     }
 
     /**

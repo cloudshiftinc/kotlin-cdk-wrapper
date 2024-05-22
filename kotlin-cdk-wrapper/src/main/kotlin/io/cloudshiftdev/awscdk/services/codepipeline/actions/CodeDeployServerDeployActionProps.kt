@@ -110,14 +110,14 @@ public interface CodeDeployServerDeployActionProps : CommonAwsActionProps {
      * @param deploymentGroup The CodeDeploy server Deployment Group to deploy to. 
      */
     override fun deploymentGroup(deploymentGroup: IServerDeploymentGroup) {
-      cdkBuilder.deploymentGroup(deploymentGroup.let(IServerDeploymentGroup::unwrap))
+      cdkBuilder.deploymentGroup(deploymentGroup.let(IServerDeploymentGroup.Companion::unwrap))
     }
 
     /**
      * @param input The source to use as input for deployment. 
      */
     override fun input(input: Artifact) {
-      cdkBuilder.input(input.let(Artifact::unwrap))
+      cdkBuilder.input(input.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -129,7 +129,7 @@ public interface CodeDeployServerDeployActionProps : CommonAwsActionProps {
      * method in the `ActionBindOptions.role` property.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**

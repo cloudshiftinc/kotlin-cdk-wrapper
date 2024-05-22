@@ -28,8 +28,8 @@ public open class AllowListReceiptFilter(
     id: String,
     props: AllowListReceiptFilterProps,
   ) :
-      this(software.amazon.awscdk.services.ses.AllowListReceiptFilter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(AllowListReceiptFilterProps::unwrap))
+      this(software.amazon.awscdk.services.ses.AllowListReceiptFilter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(AllowListReceiptFilterProps.Companion::unwrap))
   )
 
   public constructor(

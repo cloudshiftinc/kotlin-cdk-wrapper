@@ -28,7 +28,7 @@ public open class SingleValueWidget(
   cdkObject: software.amazon.awscdk.services.cloudwatch.SingleValueWidget,
 ) : ConcreteWidget(cdkObject) {
   public constructor(props: SingleValueWidgetProps) :
-      this(software.amazon.awscdk.services.cloudwatch.SingleValueWidget(props.let(SingleValueWidgetProps::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.SingleValueWidget(props.let(SingleValueWidgetProps.Companion::unwrap))
   )
 
   public constructor(props: SingleValueWidgetProps.Builder.() -> Unit) :
@@ -220,7 +220,7 @@ public open class SingleValueWidget(
      * @param metrics Metrics to display. 
      */
     override fun metrics(metrics: List<IMetric>) {
-      cdkBuilder.metrics(metrics.map(IMetric::unwrap))
+      cdkBuilder.metrics(metrics.map(IMetric.Companion::unwrap))
     }
 
     /**
@@ -241,7 +241,7 @@ public open class SingleValueWidget(
      * @param period The default period for all metrics in this widget. 
      */
     override fun period(period: Duration) {
-      cdkBuilder.period(period.let(Duration::unwrap))
+      cdkBuilder.period(period.let(Duration.Companion::unwrap))
     }
 
     /**

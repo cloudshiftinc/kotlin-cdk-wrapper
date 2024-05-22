@@ -44,13 +44,13 @@ public abstract class EventDestination(
 
   public companion object {
     public fun cloudWatchDimensions(dimensions: List<CloudWatchDimension>): EventDestination =
-        software.amazon.awscdk.services.ses.EventDestination.cloudWatchDimensions(dimensions.map(CloudWatchDimension::unwrap)).let(EventDestination::wrap)
+        software.amazon.awscdk.services.ses.EventDestination.cloudWatchDimensions(dimensions.map(CloudWatchDimension.Companion::unwrap)).let(EventDestination::wrap)
 
     public fun cloudWatchDimensions(vararg dimensions: CloudWatchDimension): EventDestination =
         cloudWatchDimensions(dimensions.toList())
 
     public fun snsTopic(topic: ITopic): EventDestination =
-        software.amazon.awscdk.services.ses.EventDestination.snsTopic(topic.let(ITopic::unwrap)).let(EventDestination::wrap)
+        software.amazon.awscdk.services.ses.EventDestination.snsTopic(topic.let(ITopic.Companion::unwrap)).let(EventDestination::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.EventDestination):
         EventDestination = CdkObjectWrappers.wrap(cdkObject) as? EventDestination ?:

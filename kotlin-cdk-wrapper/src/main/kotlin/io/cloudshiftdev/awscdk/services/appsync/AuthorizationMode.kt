@@ -14,47 +14,22 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * GraphqlApi api = GraphqlApi.Builder.create(this, "Api")
- * .name("demo")
- * .definition(Definition.fromFile(join(__dirname, "schema.graphql")))
+ * import io.cloudshiftdev.awscdk.services.appsync.*;
+ * GraphqlApi api = GraphqlApi.Builder.create(this, "api")
+ * .name("api")
+ * .definition(Definition.fromFile("schema.graphql"))
  * .authorizationConfig(AuthorizationConfig.builder()
- * .defaultAuthorization(AuthorizationMode.builder()
- * .authorizationType(AuthorizationType.IAM)
- * .build())
- * .build())
- * .xrayEnabled(true)
- * .build();
- * Table demoTable = Table.Builder.create(this, "DemoTable")
- * .partitionKey(Attribute.builder()
- * .name("id")
- * .type(AttributeType.STRING)
+ * .defaultAuthorization(AuthorizationMode.builder().authorizationType(AuthorizationType.IAM).build())
  * .build())
  * .build();
- * DynamoDbDataSource demoDS = api.addDynamoDbDataSource("demoDataSource", demoTable);
- * // Resolver for the Query "getDemos" that scans the DynamoDb table and returns the entire list.
- * // Resolver Mapping Template Reference:
- * //
- * https://docs.aws.amazon.com/appsync/latest/devguide/resolver-mapping-template-reference-dynamodb.html
- * demoDS.createResolver("QueryGetDemosResolver", BaseResolverProps.builder()
- * .typeName("Query")
- * .fieldName("getDemos")
- * .requestMappingTemplate(MappingTemplate.dynamoDbScanTable())
- * .responseMappingTemplate(MappingTemplate.dynamoDbResultList())
- * .build());
- * // Resolver for the Mutation "addDemo" that puts the item into the DynamoDb table.
- * demoDS.createResolver("MutationAddDemoResolver", BaseResolverProps.builder()
- * .typeName("Mutation")
- * .fieldName("addDemo")
- * .requestMappingTemplate(MappingTemplate.dynamoDbPutItem(PrimaryKey.partition("id").auto(),
- * Values.projecting("input")))
- * .responseMappingTemplate(MappingTemplate.dynamoDbResultItem())
- * .build());
- * //To enable DynamoDB read consistency with the `MappingTemplate`:
- * demoDS.createResolver("QueryGetDemosConsistentResolver", BaseResolverProps.builder()
- * .typeName("Query")
- * .fieldName("getDemosConsistent")
- * .requestMappingTemplate(MappingTemplate.dynamoDbScanTable(true))
- * .responseMappingTemplate(MappingTemplate.dynamoDbResultList())
+ * Rule rule = Rule.Builder.create(this, "Rule")
+ * .schedule(Schedule.rate(Duration.hours(1)))
+ * .build();
+ * rule.addTarget(AppSync.Builder.create(api)
+ * .graphQLOperation("mutation Publish($message: String!){ publish(message: $message) { message }
+ * }")
+ * .variables(RuleTargetInput.fromObject(Map.of(
+ * "message", "hello world")))
  * .build());
  * ```
  */
@@ -176,7 +151,7 @@ public interface AuthorizationMode {
      * configured.
      */
     override fun apiKeyConfig(apiKeyConfig: ApiKeyConfig) {
-      cdkBuilder.apiKeyConfig(apiKeyConfig.let(ApiKeyConfig::unwrap))
+      cdkBuilder.apiKeyConfig(apiKeyConfig.let(ApiKeyConfig.Companion::unwrap))
     }
 
     /**
@@ -192,7 +167,7 @@ public interface AuthorizationMode {
      * @param authorizationType One of possible four values AppSync supports. 
      */
     override fun authorizationType(authorizationType: AuthorizationType) {
-      cdkBuilder.authorizationType(authorizationType.let(AuthorizationType::unwrap))
+      cdkBuilder.authorizationType(authorizationType.let(AuthorizationType.Companion::unwrap))
     }
 
     /**
@@ -200,7 +175,7 @@ public interface AuthorizationMode {
      * is required.
      */
     override fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: LambdaAuthorizerConfig) {
-      cdkBuilder.lambdaAuthorizerConfig(lambdaAuthorizerConfig.let(LambdaAuthorizerConfig::unwrap))
+      cdkBuilder.lambdaAuthorizerConfig(lambdaAuthorizerConfig.let(LambdaAuthorizerConfig.Companion::unwrap))
     }
 
     /**
@@ -218,7 +193,7 @@ public interface AuthorizationMode {
      * required.
      */
     override fun openIdConnectConfig(openIdConnectConfig: OpenIdConnectConfig) {
-      cdkBuilder.openIdConnectConfig(openIdConnectConfig.let(OpenIdConnectConfig::unwrap))
+      cdkBuilder.openIdConnectConfig(openIdConnectConfig.let(OpenIdConnectConfig.Companion::unwrap))
     }
 
     /**
@@ -235,7 +210,7 @@ public interface AuthorizationMode {
      * required.
      */
     override fun userPoolConfig(userPoolConfig: UserPoolConfig) {
-      cdkBuilder.userPoolConfig(userPoolConfig.let(UserPoolConfig::unwrap))
+      cdkBuilder.userPoolConfig(userPoolConfig.let(UserPoolConfig.Companion::unwrap))
     }
 
     /**

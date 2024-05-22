@@ -41,8 +41,8 @@ public open class KeyGroup(
     id: String,
     props: KeyGroupProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.KeyGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(KeyGroupProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.KeyGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(KeyGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -119,7 +119,7 @@ public open class KeyGroup(
      * @param items A list of public keys to add to the key group. 
      */
     override fun items(items: List<IPublicKey>) {
-      cdkBuilder.items(items.map(IPublicKey::unwrap))
+      cdkBuilder.items(items.map(IPublicKey.Companion::unwrap))
     }
 
     /**
@@ -149,7 +149,7 @@ public open class KeyGroup(
       id: String,
       keyGroupId: String,
     ): IKeyGroup =
-        software.amazon.awscdk.services.cloudfront.KeyGroup.fromKeyGroupId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.cloudfront.KeyGroup.fromKeyGroupId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, keyGroupId).let(IKeyGroup::wrap)
 
     public operator fun invoke(

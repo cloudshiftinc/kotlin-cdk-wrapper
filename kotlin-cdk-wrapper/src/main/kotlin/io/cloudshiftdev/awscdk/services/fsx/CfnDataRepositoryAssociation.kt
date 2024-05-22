@@ -75,8 +75,8 @@ public open class CfnDataRepositoryAssociation(
     id: String,
     props: CfnDataRepositoryAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDataRepositoryAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.fsx.CfnDataRepositoryAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDataRepositoryAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -121,7 +121,7 @@ public open class CfnDataRepositoryAssociation(
    * after the data repository association is created.
    */
   public open fun batchImportMetaDataOnCreate(`value`: IResolvable) {
-    unwrap(this).setBatchImportMetaDataOnCreate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBatchImportMetaDataOnCreate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -184,7 +184,7 @@ public open class CfnDataRepositoryAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -198,7 +198,7 @@ public open class CfnDataRepositoryAssociation(
    * with a data repository association.
    */
   public open fun s3(`value`: IResolvable) {
-    unwrap(this).setS3(`value`.let(IResolvable::unwrap))
+    unwrap(this).setS3(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -206,7 +206,7 @@ public open class CfnDataRepositoryAssociation(
    * with a data repository association.
    */
   public open fun s3(`value`: S3Property) {
-    unwrap(this).setS3(`value`.let(S3Property::unwrap))
+    unwrap(this).setS3(`value`.let(S3Property.Companion::unwrap))
   }
 
   /**
@@ -232,7 +232,7 @@ public open class CfnDataRepositoryAssociation(
    * A list of `Tag` values, with a maximum of 50 elements.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -426,7 +426,7 @@ public open class CfnDataRepositoryAssociation(
      * repository task to import metadata should run after the data repository association is created. 
      */
     override fun batchImportMetaDataOnCreate(batchImportMetaDataOnCreate: IResolvable) {
-      cdkBuilder.batchImportMetaDataOnCreate(batchImportMetaDataOnCreate.let(IResolvable::unwrap))
+      cdkBuilder.batchImportMetaDataOnCreate(batchImportMetaDataOnCreate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -514,7 +514,7 @@ public open class CfnDataRepositoryAssociation(
      * file system with a data repository association. 
      */
     override fun s3(s3: IResolvable) {
-      cdkBuilder.s3(s3.let(IResolvable::unwrap))
+      cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -530,7 +530,7 @@ public open class CfnDataRepositoryAssociation(
      * file system with a data repository association. 
      */
     override fun s3(s3: S3Property) {
-      cdkBuilder.s3(s3.let(S3Property::unwrap))
+      cdkBuilder.s3(s3.let(S3Property.Companion::unwrap))
     }
 
     /**
@@ -556,7 +556,7 @@ public open class CfnDataRepositoryAssociation(
      * @param tags A list of `Tag` values, with a maximum of 50 elements. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1045,7 +1045,7 @@ public open class CfnDataRepositoryAssociation(
        * repository association.
        */
       override fun autoExportPolicy(autoExportPolicy: IResolvable) {
-        cdkBuilder.autoExportPolicy(autoExportPolicy.let(IResolvable::unwrap))
+        cdkBuilder.autoExportPolicy(autoExportPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1059,7 +1059,7 @@ public open class CfnDataRepositoryAssociation(
        * repository association.
        */
       override fun autoExportPolicy(autoExportPolicy: AutoExportPolicyProperty) {
-        cdkBuilder.autoExportPolicy(autoExportPolicy.let(AutoExportPolicyProperty::unwrap))
+        cdkBuilder.autoExportPolicy(autoExportPolicy.let(AutoExportPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -1088,7 +1088,7 @@ public open class CfnDataRepositoryAssociation(
        * repository association.
        */
       override fun autoImportPolicy(autoImportPolicy: IResolvable) {
-        cdkBuilder.autoImportPolicy(autoImportPolicy.let(IResolvable::unwrap))
+        cdkBuilder.autoImportPolicy(autoImportPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1102,7 +1102,7 @@ public open class CfnDataRepositoryAssociation(
        * repository association.
        */
       override fun autoImportPolicy(autoImportPolicy: AutoImportPolicyProperty) {
-        cdkBuilder.autoImportPolicy(autoImportPolicy.let(AutoImportPolicyProperty::unwrap))
+        cdkBuilder.autoImportPolicy(autoImportPolicy.let(AutoImportPolicyProperty.Companion::unwrap))
       }
 
       /**

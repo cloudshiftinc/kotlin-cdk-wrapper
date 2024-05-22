@@ -52,8 +52,8 @@ public open class CfnEnvironmentBlueprintConfiguration(
     id: String,
     props: CfnEnvironmentBlueprintConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEnvironmentBlueprintConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.datazone.CfnEnvironmentBlueprintConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEnvironmentBlueprintConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -134,7 +134,7 @@ public open class CfnEnvironmentBlueprintConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -170,7 +170,7 @@ public open class CfnEnvironmentBlueprintConfiguration(
    * The regional parameters of the environment blueprint.
    */
   public open fun regionalParameters(`value`: IResolvable) {
-    unwrap(this).setRegionalParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRegionalParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -348,7 +348,7 @@ public open class CfnEnvironmentBlueprintConfiguration(
      * @param regionalParameters The regional parameters of the environment blueprint. 
      */
     override fun regionalParameters(regionalParameters: IResolvable) {
-      cdkBuilder.regionalParameters(regionalParameters.let(IResolvable::unwrap))
+      cdkBuilder.regionalParameters(regionalParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -462,7 +462,7 @@ public open class CfnEnvironmentBlueprintConfiguration(
        * @param parameters A string to string map containing parameters for the region.
        */
       override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**

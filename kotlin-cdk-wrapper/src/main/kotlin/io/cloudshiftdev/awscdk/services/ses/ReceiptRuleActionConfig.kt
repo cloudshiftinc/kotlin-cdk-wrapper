@@ -212,7 +212,7 @@ public interface ReceiptRuleActionConfig {
      * @param addHeaderAction Adds a header to the received email.
      */
     override fun addHeaderAction(addHeaderAction: AddHeaderActionConfig) {
-      cdkBuilder.addHeaderAction(addHeaderAction.let(AddHeaderActionConfig::unwrap))
+      cdkBuilder.addHeaderAction(addHeaderAction.let(AddHeaderActionConfig.Companion::unwrap))
     }
 
     /**
@@ -228,7 +228,7 @@ public interface ReceiptRuleActionConfig {
      * and, optionally, publishes a notification to Amazon SNS.
      */
     override fun bounceAction(bounceAction: BounceActionConfig) {
-      cdkBuilder.bounceAction(bounceAction.let(BounceActionConfig::unwrap))
+      cdkBuilder.bounceAction(bounceAction.let(BounceActionConfig.Companion::unwrap))
     }
 
     /**
@@ -245,7 +245,7 @@ public interface ReceiptRuleActionConfig {
      * Amazon SNS.
      */
     override fun lambdaAction(lambdaAction: LambdaActionConfig) {
-      cdkBuilder.lambdaAction(lambdaAction.let(LambdaActionConfig::unwrap))
+      cdkBuilder.lambdaAction(lambdaAction.let(LambdaActionConfig.Companion::unwrap))
     }
 
     /**
@@ -262,7 +262,7 @@ public interface ReceiptRuleActionConfig {
      * a notification to Amazon SNS.
      */
     override fun s3Action(s3Action: S3ActionConfig) {
-      cdkBuilder.s3Action(s3Action.let(S3ActionConfig::unwrap))
+      cdkBuilder.s3Action(s3Action.let(S3ActionConfig.Companion::unwrap))
     }
 
     /**
@@ -278,7 +278,7 @@ public interface ReceiptRuleActionConfig {
      * @param snsAction Publishes the email content within a notification to Amazon SNS.
      */
     override fun snsAction(snsAction: SNSActionConfig) {
-      cdkBuilder.snsAction(snsAction.let(SNSActionConfig::unwrap))
+      cdkBuilder.snsAction(snsAction.let(SNSActionConfig.Companion::unwrap))
     }
 
     /**
@@ -294,7 +294,7 @@ public interface ReceiptRuleActionConfig {
      * a notification to Amazon SNS.
      */
     override fun stopAction(stopAction: StopActionConfig) {
-      cdkBuilder.stopAction(stopAction.let(StopActionConfig::unwrap))
+      cdkBuilder.stopAction(stopAction.let(StopActionConfig.Companion::unwrap))
     }
 
     /**
@@ -311,7 +311,7 @@ public interface ReceiptRuleActionConfig {
      * Amazon SNS.
      */
     override fun workmailAction(workmailAction: WorkmailActionConfig) {
-      cdkBuilder.workmailAction(workmailAction.let(WorkmailActionConfig::unwrap))
+      cdkBuilder.workmailAction(workmailAction.let(WorkmailActionConfig.Companion::unwrap))
     }
 
     /**

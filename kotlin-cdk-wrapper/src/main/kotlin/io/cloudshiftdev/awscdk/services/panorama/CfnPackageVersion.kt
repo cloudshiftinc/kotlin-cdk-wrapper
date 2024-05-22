@@ -46,8 +46,8 @@ public open class CfnPackageVersion(
     id: String,
     props: CfnPackageVersionProps,
   ) :
-      this(software.amazon.awscdk.services.panorama.CfnPackageVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPackageVersionProps::unwrap))
+      this(software.amazon.awscdk.services.panorama.CfnPackageVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPackageVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -94,7 +94,7 @@ public open class CfnPackageVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -113,7 +113,7 @@ public open class CfnPackageVersion(
    * Whether to mark the new version as the latest version.
    */
   public open fun markLatest(`value`: IResolvable) {
-    unwrap(this).setMarkLatest(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMarkLatest(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -263,7 +263,7 @@ public open class CfnPackageVersion(
      * @param markLatest Whether to mark the new version as the latest version. 
      */
     override fun markLatest(markLatest: IResolvable) {
-      cdkBuilder.markLatest(markLatest.let(IResolvable::unwrap))
+      cdkBuilder.markLatest(markLatest.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -166,7 +166,7 @@ public interface CfnThreatIntelSetProps {
      * uploaded ThreatIntelSet.
      */
     override fun activate(activate: IResolvable) {
-      cdkBuilder.activate(activate.let(IResolvable::unwrap))
+      cdkBuilder.activate(activate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -208,7 +208,7 @@ public interface CfnThreatIntelSetProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

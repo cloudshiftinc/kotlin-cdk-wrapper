@@ -53,10 +53,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .key("key")
  * .build())
  * .build())
+ * .type("type")
+ * // the properties below are optional
  * .name("name")
  * .overwriteExisting("overwriteExisting")
  * .sourceFileLocation("sourceFileLocation")
- * .type("type")
  * .build())
  * .deleteStepDetails(deleteStepDetails)
  * .tagStepDetails(tagStepDetails)
@@ -78,10 +79,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .key("key")
  * .build())
  * .build())
+ * .type("type")
+ * // the properties below are optional
  * .name("name")
  * .overwriteExisting("overwriteExisting")
  * .sourceFileLocation("sourceFileLocation")
- * .type("type")
  * .build())
  * .deleteStepDetails(deleteStepDetails)
  * .tagStepDetails(tagStepDetails)
@@ -104,8 +106,8 @@ public open class CfnWorkflow(
     id: String,
     props: CfnWorkflowProps,
   ) :
-      this(software.amazon.awscdk.services.transfer.CfnWorkflow(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnWorkflowProps::unwrap))
+      this(software.amazon.awscdk.services.transfer.CfnWorkflow(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnWorkflowProps.Companion::unwrap))
   )
 
   public constructor(
@@ -143,7 +145,7 @@ public open class CfnWorkflow(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -157,7 +159,7 @@ public open class CfnWorkflow(
    * workflow.
    */
   public open fun onExceptionSteps(`value`: IResolvable) {
-    unwrap(this).setOnExceptionSteps(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOnExceptionSteps(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -183,7 +185,7 @@ public open class CfnWorkflow(
    * Specifies the details for the steps that are in the specified workflow.
    */
   public open fun steps(`value`: IResolvable) {
-    unwrap(this).setSteps(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSteps(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -213,7 +215,7 @@ public open class CfnWorkflow(
    * Key-value pairs that can be used to group and search for workflows.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -335,7 +337,7 @@ public open class CfnWorkflow(
      * during execution of the workflow. 
      */
     override fun onExceptionSteps(onExceptionSteps: IResolvable) {
-      cdkBuilder.onExceptionSteps(onExceptionSteps.let(IResolvable::unwrap))
+      cdkBuilder.onExceptionSteps(onExceptionSteps.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -368,7 +370,7 @@ public open class CfnWorkflow(
      * @param steps Specifies the details for the steps that are in the specified workflow. 
      */
     override fun steps(steps: IResolvable) {
-      cdkBuilder.steps(steps.let(IResolvable::unwrap))
+      cdkBuilder.steps(steps.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -398,7 +400,7 @@ public open class CfnWorkflow(
      * @param tags Key-value pairs that can be used to group and search for workflows. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -632,7 +634,7 @@ public open class CfnWorkflow(
        * file is uploaded in UTC.
        */
       override fun destinationFileLocation(destinationFileLocation: IResolvable) {
-        cdkBuilder.destinationFileLocation(destinationFileLocation.let(IResolvable::unwrap))
+        cdkBuilder.destinationFileLocation(destinationFileLocation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -651,7 +653,7 @@ public open class CfnWorkflow(
        * file is uploaded in UTC.
        */
       override fun destinationFileLocation(destinationFileLocation: S3FileLocationProperty) {
-        cdkBuilder.destinationFileLocation(destinationFileLocation.let(S3FileLocationProperty::unwrap))
+        cdkBuilder.destinationFileLocation(destinationFileLocation.let(S3FileLocationProperty.Companion::unwrap))
       }
 
       /**
@@ -1013,10 +1015,11 @@ public open class CfnWorkflow(
    * .key("key")
    * .build())
    * .build())
+   * .type("type")
+   * // the properties below are optional
    * .name("name")
    * .overwriteExisting("overwriteExisting")
    * .sourceFileLocation("sourceFileLocation")
-   * .type("type")
    * .build();
    * ```
    *
@@ -1042,7 +1045,7 @@ public open class CfnWorkflow(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-destinationfilelocation)
      */
-    public fun destinationFileLocation(): Any? = unwrap(this).getDestinationFileLocation()
+    public fun destinationFileLocation(): Any
 
     /**
      * The name of the step, used as an identifier.
@@ -1087,7 +1090,7 @@ public open class CfnWorkflow(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-type)
      */
-    public fun type(): String? = unwrap(this).getType()
+    public fun type(): String
 
     /**
      * A builder for [DecryptStepDetailsProperty]
@@ -1095,7 +1098,7 @@ public open class CfnWorkflow(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param destinationFileLocation Specifies the location for the file being decrypted.
+       * @param destinationFileLocation Specifies the location for the file being decrypted. 
        * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
        * destination prefix by username or uploaded date.
        *
@@ -1112,7 +1115,7 @@ public open class CfnWorkflow(
       public fun destinationFileLocation(destinationFileLocation: IResolvable)
 
       /**
-       * @param destinationFileLocation Specifies the location for the file being decrypted.
+       * @param destinationFileLocation Specifies the location for the file being decrypted. 
        * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
        * destination prefix by username or uploaded date.
        *
@@ -1129,7 +1132,7 @@ public open class CfnWorkflow(
       public fun destinationFileLocation(destinationFileLocation: InputFileLocationProperty)
 
       /**
-       * @param destinationFileLocation Specifies the location for the file being decrypted.
+       * @param destinationFileLocation Specifies the location for the file being decrypted. 
        * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
        * destination prefix by username or uploaded date.
        *
@@ -1177,7 +1180,7 @@ public open class CfnWorkflow(
       public fun sourceFileLocation(sourceFileLocation: String)
 
       /**
-       * @param type The type of encryption used.
+       * @param type The type of encryption used. 
        * Currently, this value must be `PGP` .
        */
       public fun type(type: String)
@@ -1189,7 +1192,7 @@ public open class CfnWorkflow(
           software.amazon.awscdk.services.transfer.CfnWorkflow.DecryptStepDetailsProperty.builder()
 
       /**
-       * @param destinationFileLocation Specifies the location for the file being decrypted.
+       * @param destinationFileLocation Specifies the location for the file being decrypted. 
        * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
        * destination prefix by username or uploaded date.
        *
@@ -1204,11 +1207,11 @@ public open class CfnWorkflow(
        * file is uploaded in UTC.
        */
       override fun destinationFileLocation(destinationFileLocation: IResolvable) {
-        cdkBuilder.destinationFileLocation(destinationFileLocation.let(IResolvable::unwrap))
+        cdkBuilder.destinationFileLocation(destinationFileLocation.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param destinationFileLocation Specifies the location for the file being decrypted.
+       * @param destinationFileLocation Specifies the location for the file being decrypted. 
        * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
        * destination prefix by username or uploaded date.
        *
@@ -1223,11 +1226,11 @@ public open class CfnWorkflow(
        * file is uploaded in UTC.
        */
       override fun destinationFileLocation(destinationFileLocation: InputFileLocationProperty) {
-        cdkBuilder.destinationFileLocation(destinationFileLocation.let(InputFileLocationProperty::unwrap))
+        cdkBuilder.destinationFileLocation(destinationFileLocation.let(InputFileLocationProperty.Companion::unwrap))
       }
 
       /**
-       * @param destinationFileLocation Specifies the location for the file being decrypted.
+       * @param destinationFileLocation Specifies the location for the file being decrypted. 
        * Use `${Transfer:UserName}` or `${Transfer:UploadDate}` in this field to parametrize the
        * destination prefix by username or uploaded date.
        *
@@ -1282,7 +1285,7 @@ public open class CfnWorkflow(
       }
 
       /**
-       * @param type The type of encryption used.
+       * @param type The type of encryption used. 
        * Currently, this value must be `PGP` .
        */
       override fun type(type: String) {
@@ -1316,7 +1319,7 @@ public open class CfnWorkflow(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-destinationfilelocation)
        */
-      override fun destinationFileLocation(): Any? = unwrap(this).getDestinationFileLocation()
+      override fun destinationFileLocation(): Any = unwrap(this).getDestinationFileLocation()
 
       /**
        * The name of the step, used as an identifier.
@@ -1361,7 +1364,7 @@ public open class CfnWorkflow(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-workflow-decryptstepdetails.html#cfn-transfer-workflow-decryptstepdetails-type)
        */
-      override fun type(): String? = unwrap(this).getType()
+      override fun type(): String = unwrap(this).getType()
     }
 
     public companion object {
@@ -1721,7 +1724,7 @@ public open class CfnWorkflow(
        * EFS) file that's being decrypted.
        */
       override fun efsFileLocation(efsFileLocation: IResolvable) {
-        cdkBuilder.efsFileLocation(efsFileLocation.let(IResolvable::unwrap))
+        cdkBuilder.efsFileLocation(efsFileLocation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1729,7 +1732,7 @@ public open class CfnWorkflow(
        * EFS) file that's being decrypted.
        */
       override fun efsFileLocation(efsFileLocation: EfsInputFileLocationProperty) {
-        cdkBuilder.efsFileLocation(efsFileLocation.let(EfsInputFileLocationProperty::unwrap))
+        cdkBuilder.efsFileLocation(efsFileLocation.let(EfsInputFileLocationProperty.Companion::unwrap))
       }
 
       /**
@@ -1747,7 +1750,7 @@ public open class CfnWorkflow(
        * decrypted.
        */
       override fun s3FileLocation(s3FileLocation: IResolvable) {
-        cdkBuilder.s3FileLocation(s3FileLocation.let(IResolvable::unwrap))
+        cdkBuilder.s3FileLocation(s3FileLocation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1755,7 +1758,7 @@ public open class CfnWorkflow(
        * decrypted.
        */
       override fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty) {
-        cdkBuilder.s3FileLocation(s3FileLocation.let(S3InputFileLocationProperty::unwrap))
+        cdkBuilder.s3FileLocation(s3FileLocation.let(S3InputFileLocationProperty.Companion::unwrap))
       }
 
       /**
@@ -1878,7 +1881,7 @@ public open class CfnWorkflow(
        * Only applicable if you are using Amazon S3 storage.
        */
       override fun s3FileLocation(s3FileLocation: IResolvable) {
-        cdkBuilder.s3FileLocation(s3FileLocation.let(IResolvable::unwrap))
+        cdkBuilder.s3FileLocation(s3FileLocation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1887,7 +1890,7 @@ public open class CfnWorkflow(
        * Only applicable if you are using Amazon S3 storage.
        */
       override fun s3FileLocation(s3FileLocation: S3InputFileLocationProperty) {
-        cdkBuilder.s3FileLocation(s3FileLocation.let(S3InputFileLocationProperty::unwrap))
+        cdkBuilder.s3FileLocation(s3FileLocation.let(S3InputFileLocationProperty.Companion::unwrap))
       }
 
       /**
@@ -2270,7 +2273,7 @@ public open class CfnWorkflow(
        * @param tags Array that contains from 1 to 10 key/value pairs.
        */
       override fun tags(tags: List<S3TagProperty>) {
-        cdkBuilder.tags(tags.map(S3TagProperty::unwrap))
+        cdkBuilder.tags(tags.map(S3TagProperty.Companion::unwrap))
       }
 
       /**
@@ -2361,10 +2364,11 @@ public open class CfnWorkflow(
    * .key("key")
    * .build())
    * .build())
+   * .type("type")
+   * // the properties below are optional
    * .name("name")
    * .overwriteExisting("overwriteExisting")
    * .sourceFileLocation("sourceFileLocation")
-   * .type("type")
    * .build())
    * .deleteStepDetails(deleteStepDetails)
    * .tagStepDetails(tagStepDetails)
@@ -2572,7 +2576,7 @@ public open class CfnWorkflow(
        * * The type of encryption that's used. Currently, only PGP encryption is supported.
        */
       override fun decryptStepDetails(decryptStepDetails: IResolvable) {
-        cdkBuilder.decryptStepDetails(decryptStepDetails.let(IResolvable::unwrap))
+        cdkBuilder.decryptStepDetails(decryptStepDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2588,7 +2592,7 @@ public open class CfnWorkflow(
        * * The type of encryption that's used. Currently, only PGP encryption is supported.
        */
       override fun decryptStepDetails(decryptStepDetails: DecryptStepDetailsProperty) {
-        cdkBuilder.decryptStepDetails(decryptStepDetails.let(DecryptStepDetailsProperty::unwrap))
+        cdkBuilder.decryptStepDetails(decryptStepDetails.let(DecryptStepDetailsProperty.Companion::unwrap))
       }
 
       /**

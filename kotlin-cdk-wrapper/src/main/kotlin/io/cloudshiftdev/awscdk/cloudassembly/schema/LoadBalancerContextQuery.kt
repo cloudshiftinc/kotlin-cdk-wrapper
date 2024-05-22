@@ -114,7 +114,7 @@ public interface LoadBalancerContextQuery : LoadBalancerFilter {
      * @param loadBalancerTags Match load balancer tags.
      */
     override fun loadBalancerTags(loadBalancerTags: List<Tag>) {
-      cdkBuilder.loadBalancerTags(loadBalancerTags.map(Tag::unwrap))
+      cdkBuilder.loadBalancerTags(loadBalancerTags.map(Tag.Companion::unwrap))
     }
 
     /**
@@ -127,7 +127,7 @@ public interface LoadBalancerContextQuery : LoadBalancerFilter {
      * @param loadBalancerType Filter load balancers by their type. 
      */
     override fun loadBalancerType(loadBalancerType: LoadBalancerType) {
-      cdkBuilder.loadBalancerType(loadBalancerType.let(LoadBalancerType::unwrap))
+      cdkBuilder.loadBalancerType(loadBalancerType.let(LoadBalancerType.Companion::unwrap))
     }
 
     /**

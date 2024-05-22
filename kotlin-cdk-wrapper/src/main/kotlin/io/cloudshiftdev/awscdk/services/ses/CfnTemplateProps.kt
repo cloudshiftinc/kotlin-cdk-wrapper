@@ -76,7 +76,7 @@ public interface CfnTemplateProps {
      * or a text-only part.
      */
     override fun template(template: IResolvable) {
-      cdkBuilder.template(template.let(IResolvable::unwrap))
+      cdkBuilder.template(template.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -84,7 +84,7 @@ public interface CfnTemplateProps {
      * or a text-only part.
      */
     override fun template(template: CfnTemplate.TemplateProperty) {
-      cdkBuilder.template(template.let(CfnTemplate.TemplateProperty::unwrap))
+      cdkBuilder.template(template.let(CfnTemplate.TemplateProperty.Companion::unwrap))
     }
 
     /**

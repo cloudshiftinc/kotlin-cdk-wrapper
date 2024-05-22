@@ -62,8 +62,8 @@ public open class CfnTrafficMirrorFilterRule(
     id: String,
     props: CfnTrafficMirrorFilterRuleProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTrafficMirrorFilterRuleProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnTrafficMirrorFilterRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTrafficMirrorFilterRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -111,14 +111,14 @@ public open class CfnTrafficMirrorFilterRule(
    * The destination port range.
    */
   public open fun destinationPortRange(`value`: IResolvable) {
-    unwrap(this).setDestinationPortRange(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDestinationPortRange(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The destination port range.
    */
   public open fun destinationPortRange(`value`: TrafficMirrorPortRangeProperty) {
-    unwrap(this).setDestinationPortRange(`value`.let(TrafficMirrorPortRangeProperty::unwrap))
+    unwrap(this).setDestinationPortRange(`value`.let(TrafficMirrorPortRangeProperty.Companion::unwrap))
   }
 
   /**
@@ -135,7 +135,7 @@ public open class CfnTrafficMirrorFilterRule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -195,14 +195,14 @@ public open class CfnTrafficMirrorFilterRule(
    * The source port range.
    */
   public open fun sourcePortRange(`value`: IResolvable) {
-    unwrap(this).setSourcePortRange(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSourcePortRange(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The source port range.
    */
   public open fun sourcePortRange(`value`: TrafficMirrorPortRangeProperty) {
-    unwrap(this).setSourcePortRange(`value`.let(TrafficMirrorPortRangeProperty::unwrap))
+    unwrap(this).setSourcePortRange(`value`.let(TrafficMirrorPortRangeProperty.Companion::unwrap))
   }
 
   /**
@@ -401,7 +401,7 @@ public open class CfnTrafficMirrorFilterRule(
      * @param destinationPortRange The destination port range. 
      */
     override fun destinationPortRange(destinationPortRange: IResolvable) {
-      cdkBuilder.destinationPortRange(destinationPortRange.let(IResolvable::unwrap))
+      cdkBuilder.destinationPortRange(destinationPortRange.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -411,7 +411,7 @@ public open class CfnTrafficMirrorFilterRule(
      * @param destinationPortRange The destination port range. 
      */
     override fun destinationPortRange(destinationPortRange: TrafficMirrorPortRangeProperty) {
-      cdkBuilder.destinationPortRange(destinationPortRange.let(TrafficMirrorPortRangeProperty::unwrap))
+      cdkBuilder.destinationPortRange(destinationPortRange.let(TrafficMirrorPortRangeProperty.Companion::unwrap))
     }
 
     /**
@@ -480,7 +480,7 @@ public open class CfnTrafficMirrorFilterRule(
      * @param sourcePortRange The source port range. 
      */
     override fun sourcePortRange(sourcePortRange: IResolvable) {
-      cdkBuilder.sourcePortRange(sourcePortRange.let(IResolvable::unwrap))
+      cdkBuilder.sourcePortRange(sourcePortRange.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -490,7 +490,7 @@ public open class CfnTrafficMirrorFilterRule(
      * @param sourcePortRange The source port range. 
      */
     override fun sourcePortRange(sourcePortRange: TrafficMirrorPortRangeProperty) {
-      cdkBuilder.sourcePortRange(sourcePortRange.let(TrafficMirrorPortRangeProperty::unwrap))
+      cdkBuilder.sourcePortRange(sourcePortRange.let(TrafficMirrorPortRangeProperty.Companion::unwrap))
     }
 
     /**

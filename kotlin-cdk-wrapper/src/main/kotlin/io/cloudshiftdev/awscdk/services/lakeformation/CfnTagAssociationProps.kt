@@ -151,7 +151,7 @@ public interface CfnTagAssociationProps {
      * @param lfTags A structure containing an LF-tag key-value pair. 
      */
     override fun lfTags(lfTags: IResolvable) {
-      cdkBuilder.lfTags(lfTags.let(IResolvable::unwrap))
+      cdkBuilder.lfTags(lfTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -171,7 +171,7 @@ public interface CfnTagAssociationProps {
      * The resource for which the LF-tag policy applies.
      */
     override fun resource(resource: IResolvable) {
-      cdkBuilder.resource(resource.let(IResolvable::unwrap))
+      cdkBuilder.resource(resource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -179,7 +179,7 @@ public interface CfnTagAssociationProps {
      * The resource for which the LF-tag policy applies.
      */
     override fun resource(resource: CfnTagAssociation.ResourceProperty) {
-      cdkBuilder.resource(resource.let(CfnTagAssociation.ResourceProperty::unwrap))
+      cdkBuilder.resource(resource.let(CfnTagAssociation.ResourceProperty.Companion::unwrap))
     }
 
     /**

@@ -72,7 +72,7 @@ public interface InstanceProfileAttributes {
      * @param role The role associated with the InstanceProfile.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.iam.InstanceProfileAttributes =

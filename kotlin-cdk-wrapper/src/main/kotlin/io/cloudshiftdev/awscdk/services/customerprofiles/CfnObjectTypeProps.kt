@@ -276,7 +276,7 @@ public interface CfnObjectTypeProps {
      * set to `TRUE` , and if no match is found, then the service creates a new standard profile.
      */
     override fun allowProfileCreation(allowProfileCreation: IResolvable) {
-      cdkBuilder.allowProfileCreation(allowProfileCreation.let(IResolvable::unwrap))
+      cdkBuilder.allowProfileCreation(allowProfileCreation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -313,7 +313,7 @@ public interface CfnObjectTypeProps {
      * @param fields A list of field definitions for the object type mapping.
      */
     override fun fields(fields: IResolvable) {
-      cdkBuilder.fields(fields.let(IResolvable::unwrap))
+      cdkBuilder.fields(fields.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -333,7 +333,7 @@ public interface CfnObjectTypeProps {
      * profile.
      */
     override fun keys(keys: IResolvable) {
-      cdkBuilder.keys(keys.let(IResolvable::unwrap))
+      cdkBuilder.keys(keys.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -369,7 +369,7 @@ public interface CfnObjectTypeProps {
      * @param tags The tags used to organize, track, or control access for this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

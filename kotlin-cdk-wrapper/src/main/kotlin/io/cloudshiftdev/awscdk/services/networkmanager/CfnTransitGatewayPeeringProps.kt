@@ -97,7 +97,7 @@ public interface CfnTransitGatewayPeeringProps {
      * @param tags The list of key-value tags associated with the peering.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

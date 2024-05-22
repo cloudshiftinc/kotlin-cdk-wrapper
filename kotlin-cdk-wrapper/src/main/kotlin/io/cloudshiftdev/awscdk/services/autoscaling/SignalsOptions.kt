@@ -91,7 +91,7 @@ public interface SignalsOptions {
      * (including instance start time and instance initialization time).
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.autoscaling.SignalsOptions =

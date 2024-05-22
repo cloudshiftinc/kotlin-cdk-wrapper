@@ -71,7 +71,7 @@ public open class CfnDBCluster(
   cdkObject: software.amazon.awscdk.services.docdb.CfnDBCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.docdb.CfnDBCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.docdb.CfnDBCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -80,8 +80,8 @@ public open class CfnDBCluster(
     id: String,
     props: CfnDBClusterProps,
   ) :
-      this(software.amazon.awscdk.services.docdb.CfnDBCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDBClusterProps::unwrap))
+      this(software.amazon.awscdk.services.docdb.CfnDBCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDBClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -175,7 +175,7 @@ public open class CfnDBCluster(
    *
    */
   public open fun copyTagsToSnapshot(`value`: IResolvable) {
-    unwrap(this).setCopyTagsToSnapshot(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCopyTagsToSnapshot(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -235,7 +235,7 @@ public open class CfnDBCluster(
    * Protects clusters from being accidentally deleted.
    */
   public open fun deletionProtection(`value`: IResolvable) {
-    unwrap(this).setDeletionProtection(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeletionProtection(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -275,7 +275,7 @@ public open class CfnDBCluster(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -423,7 +423,7 @@ public open class CfnDBCluster(
    * Specifies whether the cluster is encrypted.
    */
   public open fun storageEncrypted(`value`: IResolvable) {
-    unwrap(this).setStorageEncrypted(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStorageEncrypted(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -453,7 +453,7 @@ public open class CfnDBCluster(
    * The tags to be assigned to the cluster.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -480,7 +480,7 @@ public open class CfnDBCluster(
    * `false` otherwise.
    */
   public open fun useLatestRestorableTime(`value`: IResolvable) {
-    unwrap(this).setUseLatestRestorableTime(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUseLatestRestorableTime(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -972,7 +972,7 @@ public open class CfnDBCluster(
      * @param copyTagsToSnapshot 
      */
     override fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable) {
-      cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot.let(IResolvable::unwrap))
+      cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1042,7 +1042,7 @@ public open class CfnDBCluster(
      * @param deletionProtection Protects clusters from being accidentally deleted. 
      */
     override fun deletionProtection(deletionProtection: IResolvable) {
-      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable::unwrap))
+      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1289,7 +1289,7 @@ public open class CfnDBCluster(
      * @param storageEncrypted Specifies whether the cluster is encrypted. 
      */
     override fun storageEncrypted(storageEncrypted: IResolvable) {
-      cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable::unwrap))
+      cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1322,7 +1322,7 @@ public open class CfnDBCluster(
      * @param tags The tags to be assigned to the cluster. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1362,7 +1362,7 @@ public open class CfnDBCluster(
      * latest restorable backup time, and `false` otherwise. 
      */
     override fun useLatestRestorableTime(useLatestRestorableTime: IResolvable) {
-      cdkBuilder.useLatestRestorableTime(useLatestRestorableTime.let(IResolvable::unwrap))
+      cdkBuilder.useLatestRestorableTime(useLatestRestorableTime.let(IResolvable.Companion::unwrap))
     }
 
     /**

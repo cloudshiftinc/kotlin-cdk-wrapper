@@ -23,6 +23,13 @@ import kotlin.jvm.JvmName
  * .gitConfiguration(GitConfiguration.builder()
  * .sourceAction(action)
  * // the properties below are optional
+ * .pullRequestFilter(List.of(GitPullRequestFilter.builder()
+ * .branchesExcludes(List.of("branchesExcludes"))
+ * .branchesIncludes(List.of("branchesIncludes"))
+ * .events(List.of(GitPullRequestEvent.OPEN))
+ * .filePathsExcludes(List.of("filePathsExcludes"))
+ * .filePathsIncludes(List.of("filePathsIncludes"))
+ * .build()))
  * .pushFilter(List.of(GitPushFilter.builder()
  * .tagsExcludes(List.of("tagsExcludes"))
  * .tagsIncludes(List.of("tagsIncludes"))
@@ -35,7 +42,7 @@ public open class Trigger(
   cdkObject: software.amazon.awscdk.services.codepipeline.Trigger,
 ) : CdkObject(cdkObject) {
   public constructor(props: TriggerProps) :
-      this(software.amazon.awscdk.services.codepipeline.Trigger(props.let(TriggerProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.Trigger(props.let(TriggerProps.Companion::unwrap))
   )
 
   public constructor(props: TriggerProps.Builder.() -> Unit) : this(TriggerProps(props)
@@ -99,7 +106,7 @@ public open class Trigger(
      * event that starts the pipeline, such as Git tags. 
      */
     override fun gitConfiguration(gitConfiguration: GitConfiguration) {
-      cdkBuilder.gitConfiguration(gitConfiguration.let(GitConfiguration::unwrap))
+      cdkBuilder.gitConfiguration(gitConfiguration.let(GitConfiguration.Companion::unwrap))
     }
 
     /**
@@ -124,7 +131,7 @@ public open class Trigger(
      * repository with Git tags, for the specified trigger configuration. 
      */
     override fun providerType(providerType: ProviderType) {
-      cdkBuilder.providerType(providerType.let(ProviderType::unwrap))
+      cdkBuilder.providerType(providerType.let(ProviderType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codepipeline.Trigger = cdkBuilder.build()

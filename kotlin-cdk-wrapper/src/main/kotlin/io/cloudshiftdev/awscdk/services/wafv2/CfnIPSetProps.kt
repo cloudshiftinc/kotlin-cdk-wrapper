@@ -356,7 +356,7 @@ public interface CfnIPSetProps {
      * AWS CloudFormation , you can only add tags to AWS WAF resources during resource creation.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

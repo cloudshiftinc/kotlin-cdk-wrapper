@@ -61,7 +61,7 @@ public open class CfnDeliveryStream(
   cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -70,8 +70,8 @@ public open class CfnDeliveryStream(
     id: String,
     props: CfnDeliveryStreamProps,
   ) :
-      this(software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDeliveryStreamProps::unwrap))
+      this(software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDeliveryStreamProps.Companion::unwrap))
   )
 
   public constructor(
@@ -93,7 +93,7 @@ public open class CfnDeliveryStream(
    * Service.
    */
   public open fun amazonOpenSearchServerlessDestinationConfiguration(`value`: IResolvable) {
-    unwrap(this).setAmazonOpenSearchServerlessDestinationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAmazonOpenSearchServerlessDestinationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -102,7 +102,7 @@ public open class CfnDeliveryStream(
    */
   public open
       fun amazonOpenSearchServerlessDestinationConfiguration(`value`: AmazonOpenSearchServerlessDestinationConfigurationProperty) {
-    unwrap(this).setAmazonOpenSearchServerlessDestinationConfiguration(`value`.let(AmazonOpenSearchServerlessDestinationConfigurationProperty::unwrap))
+    unwrap(this).setAmazonOpenSearchServerlessDestinationConfiguration(`value`.let(AmazonOpenSearchServerlessDestinationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -126,7 +126,7 @@ public open class CfnDeliveryStream(
    * The destination in Amazon OpenSearch Service.
    */
   public open fun amazonopensearchserviceDestinationConfiguration(`value`: IResolvable) {
-    unwrap(this).setAmazonopensearchserviceDestinationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAmazonopensearchserviceDestinationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -134,7 +134,7 @@ public open class CfnDeliveryStream(
    */
   public open
       fun amazonopensearchserviceDestinationConfiguration(`value`: AmazonopensearchserviceDestinationConfigurationProperty) {
-    unwrap(this).setAmazonopensearchserviceDestinationConfiguration(`value`.let(AmazonopensearchserviceDestinationConfigurationProperty::unwrap))
+    unwrap(this).setAmazonopensearchserviceDestinationConfiguration(`value`.let(AmazonopensearchserviceDestinationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -165,7 +165,7 @@ public open class CfnDeliveryStream(
    * (SSE).
    */
   public open fun deliveryStreamEncryptionConfigurationInput(`value`: IResolvable) {
-    unwrap(this).setDeliveryStreamEncryptionConfigurationInput(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeliveryStreamEncryptionConfigurationInput(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -174,7 +174,7 @@ public open class CfnDeliveryStream(
    */
   public open
       fun deliveryStreamEncryptionConfigurationInput(`value`: DeliveryStreamEncryptionConfigurationInputProperty) {
-    unwrap(this).setDeliveryStreamEncryptionConfigurationInput(`value`.let(DeliveryStreamEncryptionConfigurationInputProperty::unwrap))
+    unwrap(this).setDeliveryStreamEncryptionConfigurationInput(`value`.let(DeliveryStreamEncryptionConfigurationInputProperty.Companion::unwrap))
   }
 
   /**
@@ -226,7 +226,7 @@ public open class CfnDeliveryStream(
    * An Amazon ES destination for the delivery stream.
    */
   public open fun elasticsearchDestinationConfiguration(`value`: IResolvable) {
-    unwrap(this).setElasticsearchDestinationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setElasticsearchDestinationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -234,7 +234,7 @@ public open class CfnDeliveryStream(
    */
   public open
       fun elasticsearchDestinationConfiguration(`value`: ElasticsearchDestinationConfigurationProperty) {
-    unwrap(this).setElasticsearchDestinationConfiguration(`value`.let(ElasticsearchDestinationConfigurationProperty::unwrap))
+    unwrap(this).setElasticsearchDestinationConfiguration(`value`.let(ElasticsearchDestinationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -257,7 +257,7 @@ public open class CfnDeliveryStream(
    * An Amazon S3 destination for the delivery stream.
    */
   public open fun extendedS3DestinationConfiguration(`value`: IResolvable) {
-    unwrap(this).setExtendedS3DestinationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setExtendedS3DestinationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -265,7 +265,7 @@ public open class CfnDeliveryStream(
    */
   public open
       fun extendedS3DestinationConfiguration(`value`: ExtendedS3DestinationConfigurationProperty) {
-    unwrap(this).setExtendedS3DestinationConfiguration(`value`.let(ExtendedS3DestinationConfigurationProperty::unwrap))
+    unwrap(this).setExtendedS3DestinationConfiguration(`value`.let(ExtendedS3DestinationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -287,7 +287,7 @@ public open class CfnDeliveryStream(
    * Enables configuring Kinesis Firehose to deliver data to any HTTP endpoint destination.
    */
   public open fun httpEndpointDestinationConfiguration(`value`: IResolvable) {
-    unwrap(this).setHttpEndpointDestinationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHttpEndpointDestinationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -295,7 +295,7 @@ public open class CfnDeliveryStream(
    */
   public open
       fun httpEndpointDestinationConfiguration(`value`: HttpEndpointDestinationConfigurationProperty) {
-    unwrap(this).setHttpEndpointDestinationConfiguration(`value`.let(HttpEndpointDestinationConfigurationProperty::unwrap))
+    unwrap(this).setHttpEndpointDestinationConfiguration(`value`.let(HttpEndpointDestinationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -314,7 +314,7 @@ public open class CfnDeliveryStream(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -331,7 +331,7 @@ public open class CfnDeliveryStream(
    * containing the Kinesis stream ARN and the role ARN for the source stream.
    */
   public open fun kinesisStreamSourceConfiguration(`value`: IResolvable) {
-    unwrap(this).setKinesisStreamSourceConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKinesisStreamSourceConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -341,7 +341,7 @@ public open class CfnDeliveryStream(
    */
   public open
       fun kinesisStreamSourceConfiguration(`value`: KinesisStreamSourceConfigurationProperty) {
-    unwrap(this).setKinesisStreamSourceConfiguration(`value`.let(KinesisStreamSourceConfigurationProperty::unwrap))
+    unwrap(this).setKinesisStreamSourceConfiguration(`value`.let(KinesisStreamSourceConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -364,14 +364,14 @@ public open class CfnDeliveryStream(
    * The configuration for the Amazon MSK cluster to be used as the source for a delivery stream.
    */
   public open fun mskSourceConfiguration(`value`: IResolvable) {
-    unwrap(this).setMskSourceConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMskSourceConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration for the Amazon MSK cluster to be used as the source for a delivery stream.
    */
   public open fun mskSourceConfiguration(`value`: MSKSourceConfigurationProperty) {
-    unwrap(this).setMskSourceConfiguration(`value`.let(MSKSourceConfigurationProperty::unwrap))
+    unwrap(this).setMskSourceConfiguration(`value`.let(MSKSourceConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -393,7 +393,7 @@ public open class CfnDeliveryStream(
    * An Amazon Redshift destination for the delivery stream.
    */
   public open fun redshiftDestinationConfiguration(`value`: IResolvable) {
-    unwrap(this).setRedshiftDestinationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRedshiftDestinationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -401,7 +401,7 @@ public open class CfnDeliveryStream(
    */
   public open
       fun redshiftDestinationConfiguration(`value`: RedshiftDestinationConfigurationProperty) {
-    unwrap(this).setRedshiftDestinationConfiguration(`value`.let(RedshiftDestinationConfigurationProperty::unwrap))
+    unwrap(this).setRedshiftDestinationConfiguration(`value`.let(RedshiftDestinationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -426,7 +426,7 @@ public open class CfnDeliveryStream(
    * data.
    */
   public open fun s3DestinationConfiguration(`value`: IResolvable) {
-    unwrap(this).setS3DestinationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setS3DestinationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -435,7 +435,7 @@ public open class CfnDeliveryStream(
    * data.
    */
   public open fun s3DestinationConfiguration(`value`: S3DestinationConfigurationProperty) {
-    unwrap(this).setS3DestinationConfiguration(`value`.let(S3DestinationConfigurationProperty::unwrap))
+    unwrap(this).setS3DestinationConfiguration(`value`.let(S3DestinationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -459,7 +459,7 @@ public open class CfnDeliveryStream(
    * Configure Snowflake destination.
    */
   public open fun snowflakeDestinationConfiguration(`value`: IResolvable) {
-    unwrap(this).setSnowflakeDestinationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSnowflakeDestinationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -467,7 +467,7 @@ public open class CfnDeliveryStream(
    */
   public open
       fun snowflakeDestinationConfiguration(`value`: SnowflakeDestinationConfigurationProperty) {
-    unwrap(this).setSnowflakeDestinationConfiguration(`value`.let(SnowflakeDestinationConfigurationProperty::unwrap))
+    unwrap(this).setSnowflakeDestinationConfiguration(`value`.let(SnowflakeDestinationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -489,14 +489,14 @@ public open class CfnDeliveryStream(
    * The configuration of a destination in Splunk for the delivery stream.
    */
   public open fun splunkDestinationConfiguration(`value`: IResolvable) {
-    unwrap(this).setSplunkDestinationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSplunkDestinationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration of a destination in Splunk for the delivery stream.
    */
   public open fun splunkDestinationConfiguration(`value`: SplunkDestinationConfigurationProperty) {
-    unwrap(this).setSplunkDestinationConfiguration(`value`.let(SplunkDestinationConfigurationProperty::unwrap))
+    unwrap(this).setSplunkDestinationConfiguration(`value`.let(SplunkDestinationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -523,7 +523,7 @@ public open class CfnDeliveryStream(
    * A set of tags to assign to the delivery stream.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -1132,7 +1132,7 @@ public open class CfnDeliveryStream(
      */
     override
         fun amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration: IResolvable) {
-      cdkBuilder.amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1145,7 +1145,7 @@ public open class CfnDeliveryStream(
      */
     override
         fun amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration: AmazonOpenSearchServerlessDestinationConfigurationProperty) {
-      cdkBuilder.amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration.let(AmazonOpenSearchServerlessDestinationConfigurationProperty::unwrap))
+      cdkBuilder.amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration.let(AmazonOpenSearchServerlessDestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1174,7 +1174,7 @@ public open class CfnDeliveryStream(
      */
     override
         fun amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration: IResolvable) {
-      cdkBuilder.amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1188,7 +1188,7 @@ public open class CfnDeliveryStream(
      */
     override
         fun amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration: AmazonopensearchserviceDestinationConfigurationProperty) {
-      cdkBuilder.amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration.let(AmazonopensearchserviceDestinationConfigurationProperty::unwrap))
+      cdkBuilder.amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration.let(AmazonopensearchserviceDestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1217,7 +1217,7 @@ public open class CfnDeliveryStream(
      */
     override
         fun deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput: IResolvable) {
-      cdkBuilder.deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput.let(IResolvable::unwrap))
+      cdkBuilder.deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1230,7 +1230,7 @@ public open class CfnDeliveryStream(
      */
     override
         fun deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput: DeliveryStreamEncryptionConfigurationInputProperty) {
-      cdkBuilder.deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput.let(DeliveryStreamEncryptionConfigurationInputProperty::unwrap))
+      cdkBuilder.deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput.let(DeliveryStreamEncryptionConfigurationInputProperty.Companion::unwrap))
     }
 
     /**
@@ -1288,7 +1288,7 @@ public open class CfnDeliveryStream(
      */
     override
         fun elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration: IResolvable) {
-      cdkBuilder.elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1307,7 +1307,7 @@ public open class CfnDeliveryStream(
      */
     override
         fun elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration: ElasticsearchDestinationConfigurationProperty) {
-      cdkBuilder.elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration.let(ElasticsearchDestinationConfigurationProperty::unwrap))
+      cdkBuilder.elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration.let(ElasticsearchDestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1346,7 +1346,7 @@ public open class CfnDeliveryStream(
      */
     override
         fun extendedS3DestinationConfiguration(extendedS3DestinationConfiguration: IResolvable) {
-      cdkBuilder.extendedS3DestinationConfiguration(extendedS3DestinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.extendedS3DestinationConfiguration(extendedS3DestinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1364,7 +1364,7 @@ public open class CfnDeliveryStream(
      */
     override
         fun extendedS3DestinationConfiguration(extendedS3DestinationConfiguration: ExtendedS3DestinationConfigurationProperty) {
-      cdkBuilder.extendedS3DestinationConfiguration(extendedS3DestinationConfiguration.let(ExtendedS3DestinationConfigurationProperty::unwrap))
+      cdkBuilder.extendedS3DestinationConfiguration(extendedS3DestinationConfiguration.let(ExtendedS3DestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1398,7 +1398,7 @@ public open class CfnDeliveryStream(
      */
     override
         fun httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration: IResolvable) {
-      cdkBuilder.httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1412,7 +1412,7 @@ public open class CfnDeliveryStream(
      */
     override
         fun httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration: HttpEndpointDestinationConfigurationProperty) {
-      cdkBuilder.httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration.let(HttpEndpointDestinationConfigurationProperty::unwrap))
+      cdkBuilder.httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration.let(HttpEndpointDestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1443,7 +1443,7 @@ public open class CfnDeliveryStream(
      * containing the Kinesis stream ARN and the role ARN for the source stream. 
      */
     override fun kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration: IResolvable) {
-      cdkBuilder.kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1459,7 +1459,7 @@ public open class CfnDeliveryStream(
      */
     override
         fun kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration: KinesisStreamSourceConfigurationProperty) {
-      cdkBuilder.kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration.let(KinesisStreamSourceConfigurationProperty::unwrap))
+      cdkBuilder.kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration.let(KinesisStreamSourceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1488,7 +1488,7 @@ public open class CfnDeliveryStream(
      * source for a delivery stream. 
      */
     override fun mskSourceConfiguration(mskSourceConfiguration: IResolvable) {
-      cdkBuilder.mskSourceConfiguration(mskSourceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.mskSourceConfiguration(mskSourceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1499,7 +1499,7 @@ public open class CfnDeliveryStream(
      * source for a delivery stream. 
      */
     override fun mskSourceConfiguration(mskSourceConfiguration: MSKSourceConfigurationProperty) {
-      cdkBuilder.mskSourceConfiguration(mskSourceConfiguration.let(MSKSourceConfigurationProperty::unwrap))
+      cdkBuilder.mskSourceConfiguration(mskSourceConfiguration.let(MSKSourceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1530,7 +1530,7 @@ public open class CfnDeliveryStream(
      * stream. 
      */
     override fun redshiftDestinationConfiguration(redshiftDestinationConfiguration: IResolvable) {
-      cdkBuilder.redshiftDestinationConfiguration(redshiftDestinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.redshiftDestinationConfiguration(redshiftDestinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1549,7 +1549,7 @@ public open class CfnDeliveryStream(
      */
     override
         fun redshiftDestinationConfiguration(redshiftDestinationConfiguration: RedshiftDestinationConfigurationProperty) {
-      cdkBuilder.redshiftDestinationConfiguration(redshiftDestinationConfiguration.let(RedshiftDestinationConfigurationProperty::unwrap))
+      cdkBuilder.redshiftDestinationConfiguration(redshiftDestinationConfiguration.let(RedshiftDestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1591,7 +1591,7 @@ public open class CfnDeliveryStream(
      * (Kinesis Data Firehose) delivers data. 
      */
     override fun s3DestinationConfiguration(s3DestinationConfiguration: IResolvable) {
-      cdkBuilder.s3DestinationConfiguration(s3DestinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.s3DestinationConfiguration(s3DestinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1613,7 +1613,7 @@ public open class CfnDeliveryStream(
      */
     override
         fun s3DestinationConfiguration(s3DestinationConfiguration: S3DestinationConfigurationProperty) {
-      cdkBuilder.s3DestinationConfiguration(s3DestinationConfiguration.let(S3DestinationConfigurationProperty::unwrap))
+      cdkBuilder.s3DestinationConfiguration(s3DestinationConfiguration.let(S3DestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1647,7 +1647,7 @@ public open class CfnDeliveryStream(
      * @param snowflakeDestinationConfiguration Configure Snowflake destination. 
      */
     override fun snowflakeDestinationConfiguration(snowflakeDestinationConfiguration: IResolvable) {
-      cdkBuilder.snowflakeDestinationConfiguration(snowflakeDestinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.snowflakeDestinationConfiguration(snowflakeDestinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1658,7 +1658,7 @@ public open class CfnDeliveryStream(
      */
     override
         fun snowflakeDestinationConfiguration(snowflakeDestinationConfiguration: SnowflakeDestinationConfigurationProperty) {
-      cdkBuilder.snowflakeDestinationConfiguration(snowflakeDestinationConfiguration.let(SnowflakeDestinationConfigurationProperty::unwrap))
+      cdkBuilder.snowflakeDestinationConfiguration(snowflakeDestinationConfiguration.let(SnowflakeDestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1682,7 +1682,7 @@ public open class CfnDeliveryStream(
      * delivery stream. 
      */
     override fun splunkDestinationConfiguration(splunkDestinationConfiguration: IResolvable) {
-      cdkBuilder.splunkDestinationConfiguration(splunkDestinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.splunkDestinationConfiguration(splunkDestinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1694,7 +1694,7 @@ public open class CfnDeliveryStream(
      */
     override
         fun splunkDestinationConfiguration(splunkDestinationConfiguration: SplunkDestinationConfigurationProperty) {
-      cdkBuilder.splunkDestinationConfiguration(splunkDestinationConfiguration.let(SplunkDestinationConfigurationProperty::unwrap))
+      cdkBuilder.splunkDestinationConfiguration(splunkDestinationConfiguration.let(SplunkDestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1742,7 +1742,7 @@ public open class CfnDeliveryStream(
      * @param tags A set of tags to assign to the delivery stream. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -2267,7 +2267,7 @@ public open class CfnDeliveryStream(
        * used.
        */
       override fun bufferingHints(bufferingHints: IResolvable) {
-        cdkBuilder.bufferingHints(bufferingHints.let(IResolvable::unwrap))
+        cdkBuilder.bufferingHints(bufferingHints.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2277,7 +2277,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun bufferingHints(bufferingHints: AmazonOpenSearchServerlessBufferingHintsProperty) {
-        cdkBuilder.bufferingHints(bufferingHints.let(AmazonOpenSearchServerlessBufferingHintsProperty::unwrap))
+        cdkBuilder.bufferingHints(bufferingHints.let(AmazonOpenSearchServerlessBufferingHintsProperty.Companion::unwrap))
       }
 
       /**
@@ -2295,7 +2295,7 @@ public open class CfnDeliveryStream(
        * @param cloudWatchLoggingOptions the value to be set.
        */
       override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
-        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2303,7 +2303,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
-        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty::unwrap))
+        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -2335,7 +2335,7 @@ public open class CfnDeliveryStream(
        * @param processingConfiguration the value to be set.
        */
       override fun processingConfiguration(processingConfiguration: IResolvable) {
-        cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2343,7 +2343,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
-        cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty::unwrap))
+        cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2361,7 +2361,7 @@ public open class CfnDeliveryStream(
        * The default value is 300 (5 minutes).
        */
       override fun retryOptions(retryOptions: IResolvable) {
-        cdkBuilder.retryOptions(retryOptions.let(IResolvable::unwrap))
+        cdkBuilder.retryOptions(retryOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2370,7 +2370,7 @@ public open class CfnDeliveryStream(
        * The default value is 300 (5 minutes).
        */
       override fun retryOptions(retryOptions: AmazonOpenSearchServerlessRetryOptionsProperty) {
-        cdkBuilder.retryOptions(retryOptions.let(AmazonOpenSearchServerlessRetryOptionsProperty::unwrap))
+        cdkBuilder.retryOptions(retryOptions.let(AmazonOpenSearchServerlessRetryOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -2409,14 +2409,14 @@ public open class CfnDeliveryStream(
        * @param s3Configuration the value to be set. 
        */
       override fun s3Configuration(s3Configuration: IResolvable) {
-        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3Configuration the value to be set. 
        */
       override fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
-        cdkBuilder.s3Configuration(s3Configuration.let(S3DestinationConfigurationProperty::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(S3DestinationConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2432,14 +2432,14 @@ public open class CfnDeliveryStream(
        * @param vpcConfiguration the value to be set.
        */
       override fun vpcConfiguration(vpcConfiguration: IResolvable) {
-        cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param vpcConfiguration the value to be set.
        */
       override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
-        cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty::unwrap))
+        cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3196,7 +3196,7 @@ public open class CfnDeliveryStream(
        * used.
        */
       override fun bufferingHints(bufferingHints: IResolvable) {
-        cdkBuilder.bufferingHints(bufferingHints.let(IResolvable::unwrap))
+        cdkBuilder.bufferingHints(bufferingHints.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3205,7 +3205,7 @@ public open class CfnDeliveryStream(
        * used.
        */
       override fun bufferingHints(bufferingHints: AmazonopensearchserviceBufferingHintsProperty) {
-        cdkBuilder.bufferingHints(bufferingHints.let(AmazonopensearchserviceBufferingHintsProperty::unwrap))
+        cdkBuilder.bufferingHints(bufferingHints.let(AmazonopensearchserviceBufferingHintsProperty.Companion::unwrap))
       }
 
       /**
@@ -3224,7 +3224,7 @@ public open class CfnDeliveryStream(
        * delivery stream.
        */
       override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
-        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3233,7 +3233,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
-        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty::unwrap))
+        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -3261,7 +3261,7 @@ public open class CfnDeliveryStream(
        * document ID.
        */
       override fun documentIdOptions(documentIdOptions: IResolvable) {
-        cdkBuilder.documentIdOptions(documentIdOptions.let(IResolvable::unwrap))
+        cdkBuilder.documentIdOptions(documentIdOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3270,7 +3270,7 @@ public open class CfnDeliveryStream(
        * document ID.
        */
       override fun documentIdOptions(documentIdOptions: DocumentIdOptionsProperty) {
-        cdkBuilder.documentIdOptions(documentIdOptions.let(DocumentIdOptionsProperty::unwrap))
+        cdkBuilder.documentIdOptions(documentIdOptions.let(DocumentIdOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -3311,7 +3311,7 @@ public open class CfnDeliveryStream(
        * @param processingConfiguration Describes a data processing configuration.
        */
       override fun processingConfiguration(processingConfiguration: IResolvable) {
-        cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3319,7 +3319,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
-        cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty::unwrap))
+        cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3337,7 +3337,7 @@ public open class CfnDeliveryStream(
        * The default value is 300 (5 minutes).
        */
       override fun retryOptions(retryOptions: IResolvable) {
-        cdkBuilder.retryOptions(retryOptions.let(IResolvable::unwrap))
+        cdkBuilder.retryOptions(retryOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3346,7 +3346,7 @@ public open class CfnDeliveryStream(
        * The default value is 300 (5 minutes).
        */
       override fun retryOptions(retryOptions: AmazonopensearchserviceRetryOptionsProperty) {
-        cdkBuilder.retryOptions(retryOptions.let(AmazonopensearchserviceRetryOptionsProperty::unwrap))
+        cdkBuilder.retryOptions(retryOptions.let(AmazonopensearchserviceRetryOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -3380,14 +3380,14 @@ public open class CfnDeliveryStream(
        * @param s3Configuration Describes the configuration of a destination in Amazon S3. 
        */
       override fun s3Configuration(s3Configuration: IResolvable) {
-        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3Configuration Describes the configuration of a destination in Amazon S3. 
        */
       override fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
-        cdkBuilder.s3Configuration(s3Configuration.let(S3DestinationConfigurationProperty::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(S3DestinationConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3411,7 +3411,7 @@ public open class CfnDeliveryStream(
        * destination.
        */
       override fun vpcConfiguration(vpcConfiguration: IResolvable) {
-        cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3419,7 +3419,7 @@ public open class CfnDeliveryStream(
        * destination.
        */
       override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
-        cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty::unwrap))
+        cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -4030,7 +4030,7 @@ public open class CfnDeliveryStream(
        * @param enabled Indicates whether CloudWatch Logs logging is enabled.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4488,7 +4488,7 @@ public open class CfnDeliveryStream(
        * configuration details.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4497,7 +4497,7 @@ public open class CfnDeliveryStream(
        * This parameter is required if `Enabled` is set to true.
        */
       override fun inputFormatConfiguration(inputFormatConfiguration: IResolvable) {
-        cdkBuilder.inputFormatConfiguration(inputFormatConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.inputFormatConfiguration(inputFormatConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4507,7 +4507,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun inputFormatConfiguration(inputFormatConfiguration: InputFormatConfigurationProperty) {
-        cdkBuilder.inputFormatConfiguration(inputFormatConfiguration.let(InputFormatConfigurationProperty::unwrap))
+        cdkBuilder.inputFormatConfiguration(inputFormatConfiguration.let(InputFormatConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -4528,7 +4528,7 @@ public open class CfnDeliveryStream(
        * This parameter is required if `Enabled` is set to true.
        */
       override fun outputFormatConfiguration(outputFormatConfiguration: IResolvable) {
-        cdkBuilder.outputFormatConfiguration(outputFormatConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.outputFormatConfiguration(outputFormatConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4538,7 +4538,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun outputFormatConfiguration(outputFormatConfiguration: OutputFormatConfigurationProperty) {
-        cdkBuilder.outputFormatConfiguration(outputFormatConfiguration.let(OutputFormatConfigurationProperty::unwrap))
+        cdkBuilder.outputFormatConfiguration(outputFormatConfiguration.let(OutputFormatConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -4559,7 +4559,7 @@ public open class CfnDeliveryStream(
        * This parameter is required if `Enabled` is set to true.
        */
       override fun schemaConfiguration(schemaConfiguration: IResolvable) {
-        cdkBuilder.schemaConfiguration(schemaConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.schemaConfiguration(schemaConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4568,7 +4568,7 @@ public open class CfnDeliveryStream(
        * This parameter is required if `Enabled` is set to true.
        */
       override fun schemaConfiguration(schemaConfiguration: SchemaConfigurationProperty) {
-        cdkBuilder.schemaConfiguration(schemaConfiguration.let(SchemaConfigurationProperty::unwrap))
+        cdkBuilder.schemaConfiguration(schemaConfiguration.let(SchemaConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -4957,7 +4957,7 @@ public open class CfnDeliveryStream(
        * the OpenX SerDe.
        */
       override fun hiveJsonSerDe(hiveJsonSerDe: IResolvable) {
-        cdkBuilder.hiveJsonSerDe(hiveJsonSerDe.let(IResolvable::unwrap))
+        cdkBuilder.hiveJsonSerDe(hiveJsonSerDe.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4968,7 +4968,7 @@ public open class CfnDeliveryStream(
        * the OpenX SerDe.
        */
       override fun hiveJsonSerDe(hiveJsonSerDe: HiveJsonSerDeProperty) {
-        cdkBuilder.hiveJsonSerDe(hiveJsonSerDe.let(HiveJsonSerDeProperty::unwrap))
+        cdkBuilder.hiveJsonSerDe(hiveJsonSerDe.let(HiveJsonSerDeProperty.Companion::unwrap))
       }
 
       /**
@@ -4991,7 +4991,7 @@ public open class CfnDeliveryStream(
        * the native Hive / HCatalog JsonSerDe.
        */
       override fun openXJsonSerDe(openXJsonSerDe: IResolvable) {
-        cdkBuilder.openXJsonSerDe(openXJsonSerDe.let(IResolvable::unwrap))
+        cdkBuilder.openXJsonSerDe(openXJsonSerDe.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5002,7 +5002,7 @@ public open class CfnDeliveryStream(
        * the native Hive / HCatalog JsonSerDe.
        */
       override fun openXJsonSerDe(openXJsonSerDe: OpenXJsonSerDeProperty) {
-        cdkBuilder.openXJsonSerDe(openXJsonSerDe.let(OpenXJsonSerDeProperty::unwrap))
+        cdkBuilder.openXJsonSerDe(openXJsonSerDe.let(OpenXJsonSerDeProperty.Companion::unwrap))
       }
 
       /**
@@ -5291,7 +5291,7 @@ public open class CfnDeliveryStream(
        * Firehose delivery stream.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5299,7 +5299,7 @@ public open class CfnDeliveryStream(
        * deliver data to an Amazon S3 prefix.
        */
       override fun retryOptions(retryOptions: IResolvable) {
-        cdkBuilder.retryOptions(retryOptions.let(IResolvable::unwrap))
+        cdkBuilder.retryOptions(retryOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5307,7 +5307,7 @@ public open class CfnDeliveryStream(
        * deliver data to an Amazon S3 prefix.
        */
       override fun retryOptions(retryOptions: RetryOptionsProperty) {
-        cdkBuilder.retryOptions(retryOptions.let(RetryOptionsProperty::unwrap))
+        cdkBuilder.retryOptions(retryOptions.let(RetryOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -5943,7 +5943,7 @@ public open class CfnDeliveryStream(
        * delivering it to the Amazon ES domain.
        */
       override fun bufferingHints(bufferingHints: IResolvable) {
-        cdkBuilder.bufferingHints(bufferingHints.let(IResolvable::unwrap))
+        cdkBuilder.bufferingHints(bufferingHints.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5951,7 +5951,7 @@ public open class CfnDeliveryStream(
        * delivering it to the Amazon ES domain.
        */
       override fun bufferingHints(bufferingHints: ElasticsearchBufferingHintsProperty) {
-        cdkBuilder.bufferingHints(bufferingHints.let(ElasticsearchBufferingHintsProperty::unwrap))
+        cdkBuilder.bufferingHints(bufferingHints.let(ElasticsearchBufferingHintsProperty.Companion::unwrap))
       }
 
       /**
@@ -5969,7 +5969,7 @@ public open class CfnDeliveryStream(
        * stream.
        */
       override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
-        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5978,7 +5978,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
-        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty::unwrap))
+        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -6006,7 +6006,7 @@ public open class CfnDeliveryStream(
        * document ID.
        */
       override fun documentIdOptions(documentIdOptions: IResolvable) {
-        cdkBuilder.documentIdOptions(documentIdOptions.let(IResolvable::unwrap))
+        cdkBuilder.documentIdOptions(documentIdOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6015,7 +6015,7 @@ public open class CfnDeliveryStream(
        * document ID.
        */
       override fun documentIdOptions(documentIdOptions: DocumentIdOptionsProperty) {
-        cdkBuilder.documentIdOptions(documentIdOptions.let(DocumentIdOptionsProperty::unwrap))
+        cdkBuilder.documentIdOptions(documentIdOptions.let(DocumentIdOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -6066,7 +6066,7 @@ public open class CfnDeliveryStream(
        * Firehose delivery stream.
        */
       override fun processingConfiguration(processingConfiguration: IResolvable) {
-        cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6075,7 +6075,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
-        cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty::unwrap))
+        cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -6093,7 +6093,7 @@ public open class CfnDeliveryStream(
        * to Amazon ES.
        */
       override fun retryOptions(retryOptions: IResolvable) {
-        cdkBuilder.retryOptions(retryOptions.let(IResolvable::unwrap))
+        cdkBuilder.retryOptions(retryOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6101,7 +6101,7 @@ public open class CfnDeliveryStream(
        * to Amazon ES.
        */
       override fun retryOptions(retryOptions: ElasticsearchRetryOptionsProperty) {
-        cdkBuilder.retryOptions(retryOptions.let(ElasticsearchRetryOptionsProperty::unwrap))
+        cdkBuilder.retryOptions(retryOptions.let(ElasticsearchRetryOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -6140,14 +6140,14 @@ public open class CfnDeliveryStream(
        * @param s3Configuration The S3 bucket where Kinesis Data Firehose backs up incoming data. 
        */
       override fun s3Configuration(s3Configuration: IResolvable) {
-        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3Configuration The S3 bucket where Kinesis Data Firehose backs up incoming data. 
        */
       override fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
-        cdkBuilder.s3Configuration(s3Configuration.let(S3DestinationConfigurationProperty::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(S3DestinationConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -6171,14 +6171,14 @@ public open class CfnDeliveryStream(
        * @param vpcConfiguration The details of the VPC of the Amazon ES destination.
        */
       override fun vpcConfiguration(vpcConfiguration: IResolvable) {
-        cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param vpcConfiguration The details of the VPC of the Amazon ES destination.
        */
       override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
-        cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty::unwrap))
+        cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -6540,7 +6540,7 @@ public open class CfnDeliveryStream(
        * Amazon S3 uses to encrypt your data.
        */
       override fun kmsEncryptionConfig(kmsEncryptionConfig: IResolvable) {
-        cdkBuilder.kmsEncryptionConfig(kmsEncryptionConfig.let(IResolvable::unwrap))
+        cdkBuilder.kmsEncryptionConfig(kmsEncryptionConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6548,7 +6548,7 @@ public open class CfnDeliveryStream(
        * Amazon S3 uses to encrypt your data.
        */
       override fun kmsEncryptionConfig(kmsEncryptionConfig: KMSEncryptionConfigProperty) {
-        cdkBuilder.kmsEncryptionConfig(kmsEncryptionConfig.let(KMSEncryptionConfigProperty::unwrap))
+        cdkBuilder.kmsEncryptionConfig(kmsEncryptionConfig.let(KMSEncryptionConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -7121,14 +7121,14 @@ public open class CfnDeliveryStream(
        * @param bufferingHints The buffering option.
        */
       override fun bufferingHints(bufferingHints: IResolvable) {
-        cdkBuilder.bufferingHints(bufferingHints.let(IResolvable::unwrap))
+        cdkBuilder.bufferingHints(bufferingHints.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param bufferingHints The buffering option.
        */
       override fun bufferingHints(bufferingHints: BufferingHintsProperty) {
-        cdkBuilder.bufferingHints(bufferingHints.let(BufferingHintsProperty::unwrap))
+        cdkBuilder.bufferingHints(bufferingHints.let(BufferingHintsProperty.Companion::unwrap))
       }
 
       /**
@@ -7144,7 +7144,7 @@ public open class CfnDeliveryStream(
        * stream.
        */
       override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
-        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7153,7 +7153,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
-        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty::unwrap))
+        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -7190,7 +7190,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun dataFormatConversionConfiguration(dataFormatConversionConfiguration: IResolvable) {
-        cdkBuilder.dataFormatConversionConfiguration(dataFormatConversionConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.dataFormatConversionConfiguration(dataFormatConversionConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7200,7 +7200,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun dataFormatConversionConfiguration(dataFormatConversionConfiguration: DataFormatConversionConfigurationProperty) {
-        cdkBuilder.dataFormatConversionConfiguration(dataFormatConversionConfiguration.let(DataFormatConversionConfigurationProperty::unwrap))
+        cdkBuilder.dataFormatConversionConfiguration(dataFormatConversionConfiguration.let(DataFormatConversionConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -7221,7 +7221,7 @@ public open class CfnDeliveryStream(
        * partition keys.
        */
       override fun dynamicPartitioningConfiguration(dynamicPartitioningConfiguration: IResolvable) {
-        cdkBuilder.dynamicPartitioningConfiguration(dynamicPartitioningConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.dynamicPartitioningConfiguration(dynamicPartitioningConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7231,7 +7231,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun dynamicPartitioningConfiguration(dynamicPartitioningConfiguration: DynamicPartitioningConfigurationProperty) {
-        cdkBuilder.dynamicPartitioningConfiguration(dynamicPartitioningConfiguration.let(DynamicPartitioningConfigurationProperty::unwrap))
+        cdkBuilder.dynamicPartitioningConfiguration(dynamicPartitioningConfiguration.let(DynamicPartitioningConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -7252,7 +7252,7 @@ public open class CfnDeliveryStream(
        * The default value is `NoEncryption` .
        */
       override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7262,7 +7262,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
-        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty::unwrap))
+        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -7311,7 +7311,7 @@ public open class CfnDeliveryStream(
        * Firehose delivery stream.
        */
       override fun processingConfiguration(processingConfiguration: IResolvable) {
-        cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7320,7 +7320,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
-        cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty::unwrap))
+        cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -7347,7 +7347,7 @@ public open class CfnDeliveryStream(
        * @param s3BackupConfiguration The configuration for backup in Amazon S3.
        */
       override fun s3BackupConfiguration(s3BackupConfiguration: IResolvable) {
-        cdkBuilder.s3BackupConfiguration(s3BackupConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.s3BackupConfiguration(s3BackupConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7355,7 +7355,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun s3BackupConfiguration(s3BackupConfiguration: S3DestinationConfigurationProperty) {
-        cdkBuilder.s3BackupConfiguration(s3BackupConfiguration.let(S3DestinationConfigurationProperty::unwrap))
+        cdkBuilder.s3BackupConfiguration(s3BackupConfiguration.let(S3DestinationConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -8281,7 +8281,7 @@ public open class CfnDeliveryStream(
        * specify a value for one of them, you must also provide a value for the other.
        */
       override fun bufferingHints(bufferingHints: IResolvable) {
-        cdkBuilder.bufferingHints(bufferingHints.let(IResolvable::unwrap))
+        cdkBuilder.bufferingHints(bufferingHints.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8292,7 +8292,7 @@ public open class CfnDeliveryStream(
        * specify a value for one of them, you must also provide a value for the other.
        */
       override fun bufferingHints(bufferingHints: BufferingHintsProperty) {
-        cdkBuilder.bufferingHints(bufferingHints.let(BufferingHintsProperty::unwrap))
+        cdkBuilder.bufferingHints(bufferingHints.let(BufferingHintsProperty.Companion::unwrap))
       }
 
       /**
@@ -8312,7 +8312,7 @@ public open class CfnDeliveryStream(
        * delivery stream.
        */
       override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
-        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8321,7 +8321,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
-        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty::unwrap))
+        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -8340,7 +8340,7 @@ public open class CfnDeliveryStream(
        * destination. 
        */
       override fun endpointConfiguration(endpointConfiguration: IResolvable) {
-        cdkBuilder.endpointConfiguration(endpointConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.endpointConfiguration(endpointConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8348,7 +8348,7 @@ public open class CfnDeliveryStream(
        * destination. 
        */
       override fun endpointConfiguration(endpointConfiguration: HttpEndpointConfigurationProperty) {
-        cdkBuilder.endpointConfiguration(endpointConfiguration.let(HttpEndpointConfigurationProperty::unwrap))
+        cdkBuilder.endpointConfiguration(endpointConfiguration.let(HttpEndpointConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -8365,7 +8365,7 @@ public open class CfnDeliveryStream(
        * @param processingConfiguration Describes the data processing configuration.
        */
       override fun processingConfiguration(processingConfiguration: IResolvable) {
-        cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8373,7 +8373,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
-        cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty::unwrap))
+        cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -8390,7 +8390,7 @@ public open class CfnDeliveryStream(
        * specified as the destination.
        */
       override fun requestConfiguration(requestConfiguration: IResolvable) {
-        cdkBuilder.requestConfiguration(requestConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.requestConfiguration(requestConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8399,7 +8399,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun requestConfiguration(requestConfiguration: HttpEndpointRequestConfigurationProperty) {
-        cdkBuilder.requestConfiguration(requestConfiguration.let(HttpEndpointRequestConfigurationProperty::unwrap))
+        cdkBuilder.requestConfiguration(requestConfiguration.let(HttpEndpointRequestConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -8419,7 +8419,7 @@ public open class CfnDeliveryStream(
        * acknowledgment of receipt from the specified HTTP endpoint destination.
        */
       override fun retryOptions(retryOptions: IResolvable) {
-        cdkBuilder.retryOptions(retryOptions.let(IResolvable::unwrap))
+        cdkBuilder.retryOptions(retryOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8428,7 +8428,7 @@ public open class CfnDeliveryStream(
        * acknowledgment of receipt from the specified HTTP endpoint destination.
        */
       override fun retryOptions(retryOptions: RetryOptionsProperty) {
-        cdkBuilder.retryOptions(retryOptions.let(RetryOptionsProperty::unwrap))
+        cdkBuilder.retryOptions(retryOptions.let(RetryOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -8463,14 +8463,14 @@ public open class CfnDeliveryStream(
        * @param s3Configuration Describes the configuration of a destination in Amazon S3. 
        */
       override fun s3Configuration(s3Configuration: IResolvable) {
-        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3Configuration Describes the configuration of a destination in Amazon S3. 
        */
       override fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
-        cdkBuilder.s3Configuration(s3Configuration.let(S3DestinationConfigurationProperty::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(S3DestinationConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -8667,7 +8667,7 @@ public open class CfnDeliveryStream(
        * @param commonAttributes Describes the metadata sent to the HTTP endpoint destination.
        */
       override fun commonAttributes(commonAttributes: IResolvable) {
-        cdkBuilder.commonAttributes(commonAttributes.let(IResolvable::unwrap))
+        cdkBuilder.commonAttributes(commonAttributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8820,7 +8820,7 @@ public open class CfnDeliveryStream(
        * non-null, the server rejects the request.
        */
       override fun deserializer(deserializer: IResolvable) {
-        cdkBuilder.deserializer(deserializer.let(IResolvable::unwrap))
+        cdkBuilder.deserializer(deserializer.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8829,7 +8829,7 @@ public open class CfnDeliveryStream(
        * non-null, the server rejects the request.
        */
       override fun deserializer(deserializer: DeserializerProperty) {
-        cdkBuilder.deserializer(deserializer.let(DeserializerProperty::unwrap))
+        cdkBuilder.deserializer(deserializer.let(DeserializerProperty.Companion::unwrap))
       }
 
       /**
@@ -9178,7 +9178,7 @@ public open class CfnDeliveryStream(
        * cluster. 
        */
       override fun authenticationConfiguration(authenticationConfiguration: IResolvable) {
-        cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9187,7 +9187,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun authenticationConfiguration(authenticationConfiguration: AuthenticationConfigurationProperty) {
-        cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(AuthenticationConfigurationProperty::unwrap))
+        cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(AuthenticationConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -9400,7 +9400,7 @@ public open class CfnDeliveryStream(
        * keys to lowercase before deserializing them.
        */
       override fun caseInsensitive(caseInsensitive: IResolvable) {
-        cdkBuilder.caseInsensitive(caseInsensitive.let(IResolvable::unwrap))
+        cdkBuilder.caseInsensitive(caseInsensitive.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9411,7 +9411,7 @@ public open class CfnDeliveryStream(
        * "timestamp"}` to map this key to a column named `ts` .
        */
       override fun columnToJsonKeyMappings(columnToJsonKeyMappings: IResolvable) {
-        cdkBuilder.columnToJsonKeyMappings(columnToJsonKeyMappings.let(IResolvable::unwrap))
+        cdkBuilder.columnToJsonKeyMappings(columnToJsonKeyMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9449,7 +9449,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun convertDotsInJsonKeysToUnderscores(convertDotsInJsonKeysToUnderscores: IResolvable) {
-        cdkBuilder.convertDotsInJsonKeysToUnderscores(convertDotsInJsonKeysToUnderscores.let(IResolvable::unwrap))
+        cdkBuilder.convertDotsInJsonKeysToUnderscores(convertDotsInJsonKeysToUnderscores.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -9824,7 +9824,7 @@ public open class CfnDeliveryStream(
        * default is `false` .
        */
       override fun enablePadding(enablePadding: IResolvable) {
-        cdkBuilder.enablePadding(enablePadding.let(IResolvable::unwrap))
+        cdkBuilder.enablePadding(enablePadding.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10095,7 +10095,7 @@ public open class CfnDeliveryStream(
        * rejects the request.
        */
       override fun serializer(serializer: IResolvable) {
-        cdkBuilder.serializer(serializer.let(IResolvable::unwrap))
+        cdkBuilder.serializer(serializer.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10104,7 +10104,7 @@ public open class CfnDeliveryStream(
        * rejects the request.
        */
       override fun serializer(serializer: SerializerProperty) {
-        cdkBuilder.serializer(serializer.let(SerializerProperty::unwrap))
+        cdkBuilder.serializer(serializer.let(SerializerProperty.Companion::unwrap))
       }
 
       /**
@@ -10326,7 +10326,7 @@ public open class CfnDeliveryStream(
        * @param enableDictionaryCompression Indicates whether to enable dictionary compression.
        */
       override fun enableDictionaryCompression(enableDictionaryCompression: IResolvable) {
-        cdkBuilder.enableDictionaryCompression(enableDictionaryCompression.let(IResolvable::unwrap))
+        cdkBuilder.enableDictionaryCompression(enableDictionaryCompression.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10530,14 +10530,14 @@ public open class CfnDeliveryStream(
        * @param enabled Indicates whether data processing is enabled (true) or disabled (false).
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param processors The data processors.
        */
       override fun processors(processors: IResolvable) {
-        cdkBuilder.processors(processors.let(IResolvable::unwrap))
+        cdkBuilder.processors(processors.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10797,7 +10797,7 @@ public open class CfnDeliveryStream(
        * @param parameters The processor parameters.
        */
       override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11235,7 +11235,7 @@ public open class CfnDeliveryStream(
        * @param cloudWatchLoggingOptions The CloudWatch logging options for your delivery stream.
        */
       override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
-        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11243,7 +11243,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
-        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty::unwrap))
+        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -11269,7 +11269,7 @@ public open class CfnDeliveryStream(
        * uses to load data into the cluster from the Amazon S3 bucket. 
        */
       override fun copyCommand(copyCommand: IResolvable) {
-        cdkBuilder.copyCommand(copyCommand.let(IResolvable::unwrap))
+        cdkBuilder.copyCommand(copyCommand.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11277,7 +11277,7 @@ public open class CfnDeliveryStream(
        * uses to load data into the cluster from the Amazon S3 bucket. 
        */
       override fun copyCommand(copyCommand: CopyCommandProperty) {
-        cdkBuilder.copyCommand(copyCommand.let(CopyCommandProperty::unwrap))
+        cdkBuilder.copyCommand(copyCommand.let(CopyCommandProperty.Companion::unwrap))
       }
 
       /**
@@ -11302,7 +11302,7 @@ public open class CfnDeliveryStream(
        * Firehose delivery stream.
        */
       override fun processingConfiguration(processingConfiguration: IResolvable) {
-        cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11311,7 +11311,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
-        cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty::unwrap))
+        cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -11330,7 +11330,7 @@ public open class CfnDeliveryStream(
        * Default value is 3600 (60 minutes).
        */
       override fun retryOptions(retryOptions: IResolvable) {
-        cdkBuilder.retryOptions(retryOptions.let(IResolvable::unwrap))
+        cdkBuilder.retryOptions(retryOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11339,7 +11339,7 @@ public open class CfnDeliveryStream(
        * Default value is 3600 (60 minutes).
        */
       override fun retryOptions(retryOptions: RedshiftRetryOptionsProperty) {
-        cdkBuilder.retryOptions(retryOptions.let(RedshiftRetryOptionsProperty::unwrap))
+        cdkBuilder.retryOptions(retryOptions.let(RedshiftRetryOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -11368,7 +11368,7 @@ public open class CfnDeliveryStream(
        * @param s3BackupConfiguration The configuration for backup in Amazon S3.
        */
       override fun s3BackupConfiguration(s3BackupConfiguration: IResolvable) {
-        cdkBuilder.s3BackupConfiguration(s3BackupConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.s3BackupConfiguration(s3BackupConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11376,7 +11376,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun s3BackupConfiguration(s3BackupConfiguration: S3DestinationConfigurationProperty) {
-        cdkBuilder.s3BackupConfiguration(s3BackupConfiguration.let(S3DestinationConfigurationProperty::unwrap))
+        cdkBuilder.s3BackupConfiguration(s3BackupConfiguration.let(S3DestinationConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -11404,7 +11404,7 @@ public open class CfnDeliveryStream(
        * specify `SNAPPY` or `ZIP` because the Amazon Redshift `COPY` command doesn't support them.
        */
       override fun s3Configuration(s3Configuration: IResolvable) {
-        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11414,7 +11414,7 @@ public open class CfnDeliveryStream(
        * specify `SNAPPY` or `ZIP` because the Amazon Redshift `COPY` command doesn't support them.
        */
       override fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
-        cdkBuilder.s3Configuration(s3Configuration.let(S3DestinationConfigurationProperty::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(S3DestinationConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -12015,7 +12015,7 @@ public open class CfnDeliveryStream(
        * delivering it to the Amazon S3 bucket.
        */
       override fun bufferingHints(bufferingHints: IResolvable) {
-        cdkBuilder.bufferingHints(bufferingHints.let(IResolvable::unwrap))
+        cdkBuilder.bufferingHints(bufferingHints.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12023,7 +12023,7 @@ public open class CfnDeliveryStream(
        * delivering it to the Amazon S3 bucket.
        */
       override fun bufferingHints(bufferingHints: BufferingHintsProperty) {
-        cdkBuilder.bufferingHints(bufferingHints.let(BufferingHintsProperty::unwrap))
+        cdkBuilder.bufferingHints(bufferingHints.let(BufferingHintsProperty.Companion::unwrap))
       }
 
       /**
@@ -12039,7 +12039,7 @@ public open class CfnDeliveryStream(
        * @param cloudWatchLoggingOptions The CloudWatch logging options for your delivery stream.
        */
       override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
-        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12047,7 +12047,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
-        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty::unwrap))
+        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -12078,7 +12078,7 @@ public open class CfnDeliveryStream(
        * it delivers to your Amazon S3 bucket.
        */
       override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12089,7 +12089,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
-        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty::unwrap))
+        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -12690,7 +12690,7 @@ public open class CfnDeliveryStream(
        * ORC](https://docs.aws.amazon.com/https://orc.apache.org/docs/) .
        */
       override fun orcSerDe(orcSerDe: IResolvable) {
-        cdkBuilder.orcSerDe(orcSerDe.let(IResolvable::unwrap))
+        cdkBuilder.orcSerDe(orcSerDe.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12700,7 +12700,7 @@ public open class CfnDeliveryStream(
        * ORC](https://docs.aws.amazon.com/https://orc.apache.org/docs/) .
        */
       override fun orcSerDe(orcSerDe: OrcSerDeProperty) {
-        cdkBuilder.orcSerDe(orcSerDe.let(OrcSerDeProperty::unwrap))
+        cdkBuilder.orcSerDe(orcSerDe.let(OrcSerDeProperty.Companion::unwrap))
       }
 
       /**
@@ -12721,7 +12721,7 @@ public open class CfnDeliveryStream(
        * Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/documentation/latest/) .
        */
       override fun parquetSerDe(parquetSerDe: IResolvable) {
-        cdkBuilder.parquetSerDe(parquetSerDe.let(IResolvable::unwrap))
+        cdkBuilder.parquetSerDe(parquetSerDe.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12731,7 +12731,7 @@ public open class CfnDeliveryStream(
        * Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/documentation/latest/) .
        */
       override fun parquetSerDe(parquetSerDe: ParquetSerDeProperty) {
-        cdkBuilder.parquetSerDe(parquetSerDe.let(ParquetSerDeProperty::unwrap))
+        cdkBuilder.parquetSerDe(parquetSerDe.let(ParquetSerDeProperty.Companion::unwrap))
       }
 
       /**
@@ -13241,7 +13241,7 @@ public open class CfnDeliveryStream(
        * @param cloudWatchLoggingOptions the value to be set.
        */
       override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
-        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13249,7 +13249,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
-        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty::unwrap))
+        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -13316,7 +13316,7 @@ public open class CfnDeliveryStream(
        * @param processingConfiguration the value to be set.
        */
       override fun processingConfiguration(processingConfiguration: IResolvable) {
-        cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13324,7 +13324,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
-        cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty::unwrap))
+        cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -13341,7 +13341,7 @@ public open class CfnDeliveryStream(
        * HTTP endpoint.
        */
       override fun retryOptions(retryOptions: IResolvable) {
-        cdkBuilder.retryOptions(retryOptions.let(IResolvable::unwrap))
+        cdkBuilder.retryOptions(retryOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13349,7 +13349,7 @@ public open class CfnDeliveryStream(
        * HTTP endpoint.
        */
       override fun retryOptions(retryOptions: SnowflakeRetryOptionsProperty) {
-        cdkBuilder.retryOptions(retryOptions.let(SnowflakeRetryOptionsProperty::unwrap))
+        cdkBuilder.retryOptions(retryOptions.let(SnowflakeRetryOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -13379,14 +13379,14 @@ public open class CfnDeliveryStream(
        * @param s3Configuration the value to be set. 
        */
       override fun s3Configuration(s3Configuration: IResolvable) {
-        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3Configuration the value to be set. 
        */
       override fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
-        cdkBuilder.s3Configuration(s3Configuration.let(S3DestinationConfigurationProperty::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(S3DestinationConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -13411,7 +13411,7 @@ public open class CfnDeliveryStream(
        * Otherwise the default user role will be used.
        */
       override fun snowflakeRoleConfiguration(snowflakeRoleConfiguration: IResolvable) {
-        cdkBuilder.snowflakeRoleConfiguration(snowflakeRoleConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.snowflakeRoleConfiguration(snowflakeRoleConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13420,7 +13420,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun snowflakeRoleConfiguration(snowflakeRoleConfiguration: SnowflakeRoleConfigurationProperty) {
-        cdkBuilder.snowflakeRoleConfiguration(snowflakeRoleConfiguration.let(SnowflakeRoleConfigurationProperty::unwrap))
+        cdkBuilder.snowflakeRoleConfiguration(snowflakeRoleConfiguration.let(SnowflakeRoleConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -13442,7 +13442,7 @@ public open class CfnDeliveryStream(
        * Snowflake](https://docs.aws.amazon.com/https://docs.snowflake.com/en/user-guide/admin-security-privatelink)
        */
       override fun snowflakeVpcConfiguration(snowflakeVpcConfiguration: IResolvable) {
-        cdkBuilder.snowflakeVpcConfiguration(snowflakeVpcConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.snowflakeVpcConfiguration(snowflakeVpcConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13454,7 +13454,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun snowflakeVpcConfiguration(snowflakeVpcConfiguration: SnowflakeVpcConfigurationProperty) {
-        cdkBuilder.snowflakeVpcConfiguration(snowflakeVpcConfiguration.let(SnowflakeVpcConfigurationProperty::unwrap))
+        cdkBuilder.snowflakeVpcConfiguration(snowflakeVpcConfiguration.let(SnowflakeVpcConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -13826,7 +13826,7 @@ public open class CfnDeliveryStream(
        * @param enabled Enable Snowflake role.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14415,7 +14415,7 @@ public open class CfnDeliveryStream(
        * If no value is specified, the default values for Splunk are used.
        */
       override fun bufferingHints(bufferingHints: IResolvable) {
-        cdkBuilder.bufferingHints(bufferingHints.let(IResolvable::unwrap))
+        cdkBuilder.bufferingHints(bufferingHints.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14423,7 +14423,7 @@ public open class CfnDeliveryStream(
        * If no value is specified, the default values for Splunk are used.
        */
       override fun bufferingHints(bufferingHints: SplunkBufferingHintsProperty) {
-        cdkBuilder.bufferingHints(bufferingHints.let(SplunkBufferingHintsProperty::unwrap))
+        cdkBuilder.bufferingHints(bufferingHints.let(SplunkBufferingHintsProperty.Companion::unwrap))
       }
 
       /**
@@ -14440,7 +14440,7 @@ public open class CfnDeliveryStream(
        * stream.
        */
       override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
-        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14449,7 +14449,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
-        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty::unwrap))
+        cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(CloudWatchLoggingOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -14500,7 +14500,7 @@ public open class CfnDeliveryStream(
        * @param processingConfiguration The data processing configuration.
        */
       override fun processingConfiguration(processingConfiguration: IResolvable) {
-        cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.processingConfiguration(processingConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14508,7 +14508,7 @@ public open class CfnDeliveryStream(
        */
       override
           fun processingConfiguration(processingConfiguration: ProcessingConfigurationProperty) {
-        cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty::unwrap))
+        cdkBuilder.processingConfiguration(processingConfiguration.let(ProcessingConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -14525,7 +14525,7 @@ public open class CfnDeliveryStream(
        * Splunk, or if it doesn't receive an acknowledgment of receipt from Splunk.
        */
       override fun retryOptions(retryOptions: IResolvable) {
-        cdkBuilder.retryOptions(retryOptions.let(IResolvable::unwrap))
+        cdkBuilder.retryOptions(retryOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14533,7 +14533,7 @@ public open class CfnDeliveryStream(
        * Splunk, or if it doesn't receive an acknowledgment of receipt from Splunk.
        */
       override fun retryOptions(retryOptions: SplunkRetryOptionsProperty) {
-        cdkBuilder.retryOptions(retryOptions.let(SplunkRetryOptionsProperty::unwrap))
+        cdkBuilder.retryOptions(retryOptions.let(SplunkRetryOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -14563,14 +14563,14 @@ public open class CfnDeliveryStream(
        * @param s3Configuration The configuration for the backup Amazon S3 location. 
        */
       override fun s3Configuration(s3Configuration: IResolvable) {
-        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3Configuration The configuration for the backup Amazon S3 location. 
        */
       override fun s3Configuration(s3Configuration: S3DestinationConfigurationProperty) {
-        cdkBuilder.s3Configuration(s3Configuration.let(S3DestinationConfigurationProperty::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(S3DestinationConfigurationProperty.Companion::unwrap))
       }
 
       /**

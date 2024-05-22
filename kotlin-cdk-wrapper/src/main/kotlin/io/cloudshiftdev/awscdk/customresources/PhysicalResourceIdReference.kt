@@ -57,7 +57,7 @@ public open class PhysicalResourceIdReference(
    * @param _context 
    */
   public override fun resolve(context: IResolveContext): Any =
-      unwrap(this).resolve(context.let(IResolveContext::unwrap))
+      unwrap(this).resolve(context.let(IResolveContext.Companion::unwrap))
 
   /**
    * toJSON serialization to replace `PhysicalResourceIdReference` with a magic string.

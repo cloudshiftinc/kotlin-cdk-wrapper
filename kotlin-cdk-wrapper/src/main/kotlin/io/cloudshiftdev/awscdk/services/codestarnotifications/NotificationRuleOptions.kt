@@ -93,7 +93,7 @@ public interface NotificationRuleOptions {
      * the service for the resource for which the notification is created.
      */
     override fun detailType(detailType: DetailType) {
-      cdkBuilder.detailType(detailType.let(DetailType::unwrap))
+      cdkBuilder.detailType(detailType.let(DetailType.Companion::unwrap))
     }
 
     /**

@@ -49,14 +49,14 @@ public open class EcsOptimizedImage(
    * @param scope 
    */
   public override fun image(scope: Construct): MachineImageConfig =
-      unwrap(this).getImage(scope.let(Construct::unwrap)).let(MachineImageConfig::wrap)
+      unwrap(this).getImage(scope.let(Construct.Companion::unwrap)).let(MachineImageConfig::wrap)
 
   public companion object {
     public fun amazonLinux(): EcsOptimizedImage =
         software.amazon.awscdk.services.ecs.EcsOptimizedImage.amazonLinux().let(EcsOptimizedImage::wrap)
 
     public fun amazonLinux(options: EcsOptimizedImageOptions): EcsOptimizedImage =
-        software.amazon.awscdk.services.ecs.EcsOptimizedImage.amazonLinux(options.let(EcsOptimizedImageOptions::unwrap)).let(EcsOptimizedImage::wrap)
+        software.amazon.awscdk.services.ecs.EcsOptimizedImage.amazonLinux(options.let(EcsOptimizedImageOptions.Companion::unwrap)).let(EcsOptimizedImage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f93e5a87fbd6616222398433e1ccd8b9a1e019d397ddd8e321f33a36989609a7")
@@ -67,12 +67,12 @@ public open class EcsOptimizedImage(
         software.amazon.awscdk.services.ecs.EcsOptimizedImage.amazonLinux2().let(EcsOptimizedImage::wrap)
 
     public fun amazonLinux2(hardwareType: AmiHardwareType): EcsOptimizedImage =
-        software.amazon.awscdk.services.ecs.EcsOptimizedImage.amazonLinux2(hardwareType.let(AmiHardwareType::unwrap)).let(EcsOptimizedImage::wrap)
+        software.amazon.awscdk.services.ecs.EcsOptimizedImage.amazonLinux2(hardwareType.let(AmiHardwareType.Companion::unwrap)).let(EcsOptimizedImage::wrap)
 
     public fun amazonLinux2(hardwareType: AmiHardwareType, options: EcsOptimizedImageOptions):
         EcsOptimizedImage =
-        software.amazon.awscdk.services.ecs.EcsOptimizedImage.amazonLinux2(hardwareType.let(AmiHardwareType::unwrap),
-        options.let(EcsOptimizedImageOptions::unwrap)).let(EcsOptimizedImage::wrap)
+        software.amazon.awscdk.services.ecs.EcsOptimizedImage.amazonLinux2(hardwareType.let(AmiHardwareType.Companion::unwrap),
+        options.let(EcsOptimizedImageOptions.Companion::unwrap)).let(EcsOptimizedImage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fc3aa8d938d5713c1147297adfe81e772ad3efd29124368f915a9af0ce144697")
@@ -84,12 +84,12 @@ public open class EcsOptimizedImage(
         software.amazon.awscdk.services.ecs.EcsOptimizedImage.amazonLinux2023().let(EcsOptimizedImage::wrap)
 
     public fun amazonLinux2023(hardwareType: AmiHardwareType): EcsOptimizedImage =
-        software.amazon.awscdk.services.ecs.EcsOptimizedImage.amazonLinux2023(hardwareType.let(AmiHardwareType::unwrap)).let(EcsOptimizedImage::wrap)
+        software.amazon.awscdk.services.ecs.EcsOptimizedImage.amazonLinux2023(hardwareType.let(AmiHardwareType.Companion::unwrap)).let(EcsOptimizedImage::wrap)
 
     public fun amazonLinux2023(hardwareType: AmiHardwareType, options: EcsOptimizedImageOptions):
         EcsOptimizedImage =
-        software.amazon.awscdk.services.ecs.EcsOptimizedImage.amazonLinux2023(hardwareType.let(AmiHardwareType::unwrap),
-        options.let(EcsOptimizedImageOptions::unwrap)).let(EcsOptimizedImage::wrap)
+        software.amazon.awscdk.services.ecs.EcsOptimizedImage.amazonLinux2023(hardwareType.let(AmiHardwareType.Companion::unwrap),
+        options.let(EcsOptimizedImageOptions.Companion::unwrap)).let(EcsOptimizedImage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("aa3b2f35b5fa6f9d797342f29e3bf57f158ca291e867516dafe0ff05bb7c144c")
@@ -98,12 +98,12 @@ public open class EcsOptimizedImage(
         amazonLinux2023(hardwareType, EcsOptimizedImageOptions(options))
 
     public fun windows(windowsVersion: WindowsOptimizedVersion): EcsOptimizedImage =
-        software.amazon.awscdk.services.ecs.EcsOptimizedImage.windows(windowsVersion.let(WindowsOptimizedVersion::unwrap)).let(EcsOptimizedImage::wrap)
+        software.amazon.awscdk.services.ecs.EcsOptimizedImage.windows(windowsVersion.let(WindowsOptimizedVersion.Companion::unwrap)).let(EcsOptimizedImage::wrap)
 
     public fun windows(windowsVersion: WindowsOptimizedVersion, options: EcsOptimizedImageOptions):
         EcsOptimizedImage =
-        software.amazon.awscdk.services.ecs.EcsOptimizedImage.windows(windowsVersion.let(WindowsOptimizedVersion::unwrap),
-        options.let(EcsOptimizedImageOptions::unwrap)).let(EcsOptimizedImage::wrap)
+        software.amazon.awscdk.services.ecs.EcsOptimizedImage.windows(windowsVersion.let(WindowsOptimizedVersion.Companion::unwrap),
+        options.let(EcsOptimizedImageOptions.Companion::unwrap)).let(EcsOptimizedImage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a6b383a2e109bf0dcab6b90cd7f90e03c0ab136e7b88e89b9a716c1541d1e014")

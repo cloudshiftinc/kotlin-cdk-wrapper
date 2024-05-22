@@ -111,28 +111,28 @@ public interface AmazonLinux2022ImageSsmParameterProps : AmazonLinuxImageSsmPara
      * @param cpuType CPU Type.
      */
     override fun cpuType(cpuType: AmazonLinuxCpuType) {
-      cdkBuilder.cpuType(cpuType.let(AmazonLinuxCpuType::unwrap))
+      cdkBuilder.cpuType(cpuType.let(AmazonLinuxCpuType.Companion::unwrap))
     }
 
     /**
      * @param edition What edition of Amazon Linux to use.
      */
     override fun edition(edition: AmazonLinuxEdition) {
-      cdkBuilder.edition(edition.let(AmazonLinuxEdition::unwrap))
+      cdkBuilder.edition(edition.let(AmazonLinuxEdition.Companion::unwrap))
     }
 
     /**
      * @param kernel What kernel version of Amazon Linux to use.
      */
     override fun kernel(kernel: AmazonLinux2022Kernel) {
-      cdkBuilder.kernel(kernel.let(AmazonLinux2022Kernel::unwrap))
+      cdkBuilder.kernel(kernel.let(AmazonLinux2022Kernel.Companion::unwrap))
     }
 
     /**
      * @param userData Initial user data.
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.AmazonLinux2022ImageSsmParameterProps =

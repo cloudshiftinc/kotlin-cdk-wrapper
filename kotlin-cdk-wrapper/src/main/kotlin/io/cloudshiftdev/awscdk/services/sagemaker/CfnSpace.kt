@@ -108,8 +108,8 @@ public open class CfnSpace(
     id: String,
     props: CfnSpaceProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnSpace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSpaceProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnSpace(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSpaceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -157,7 +157,7 @@ public open class CfnSpace(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -169,14 +169,14 @@ public open class CfnSpace(
    * The collection of ownership settings for a space.
    */
   public open fun ownershipSettings(`value`: IResolvable) {
-    unwrap(this).setOwnershipSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOwnershipSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The collection of ownership settings for a space.
    */
   public open fun ownershipSettings(`value`: OwnershipSettingsProperty) {
-    unwrap(this).setOwnershipSettings(`value`.let(OwnershipSettingsProperty::unwrap))
+    unwrap(this).setOwnershipSettings(`value`.let(OwnershipSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -220,14 +220,14 @@ public open class CfnSpace(
    * A collection of space settings.
    */
   public open fun spaceSettings(`value`: IResolvable) {
-    unwrap(this).setSpaceSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSpaceSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A collection of space settings.
    */
   public open fun spaceSettings(`value`: SpaceSettingsProperty) {
-    unwrap(this).setSpaceSettings(`value`.let(SpaceSettingsProperty::unwrap))
+    unwrap(this).setSpaceSettings(`value`.let(SpaceSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -247,14 +247,14 @@ public open class CfnSpace(
    * A collection of space sharing settings.
    */
   public open fun spaceSharingSettings(`value`: IResolvable) {
-    unwrap(this).setSpaceSharingSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSpaceSharingSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A collection of space sharing settings.
    */
   public open fun spaceSharingSettings(`value`: SpaceSharingSettingsProperty) {
-    unwrap(this).setSpaceSharingSettings(`value`.let(SpaceSharingSettingsProperty::unwrap))
+    unwrap(this).setSpaceSharingSettings(`value`.let(SpaceSharingSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -280,7 +280,7 @@ public open class CfnSpace(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -445,7 +445,7 @@ public open class CfnSpace(
      * @param ownershipSettings The collection of ownership settings for a space. 
      */
     override fun ownershipSettings(ownershipSettings: IResolvable) {
-      cdkBuilder.ownershipSettings(ownershipSettings.let(IResolvable::unwrap))
+      cdkBuilder.ownershipSettings(ownershipSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -455,7 +455,7 @@ public open class CfnSpace(
      * @param ownershipSettings The collection of ownership settings for a space. 
      */
     override fun ownershipSettings(ownershipSettings: OwnershipSettingsProperty) {
-      cdkBuilder.ownershipSettings(ownershipSettings.let(OwnershipSettingsProperty::unwrap))
+      cdkBuilder.ownershipSettings(ownershipSettings.let(OwnershipSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -496,7 +496,7 @@ public open class CfnSpace(
      * @param spaceSettings A collection of space settings. 
      */
     override fun spaceSettings(spaceSettings: IResolvable) {
-      cdkBuilder.spaceSettings(spaceSettings.let(IResolvable::unwrap))
+      cdkBuilder.spaceSettings(spaceSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -506,7 +506,7 @@ public open class CfnSpace(
      * @param spaceSettings A collection of space settings. 
      */
     override fun spaceSettings(spaceSettings: SpaceSettingsProperty) {
-      cdkBuilder.spaceSettings(spaceSettings.let(SpaceSettingsProperty::unwrap))
+      cdkBuilder.spaceSettings(spaceSettings.let(SpaceSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -527,7 +527,7 @@ public open class CfnSpace(
      * @param spaceSharingSettings A collection of space sharing settings. 
      */
     override fun spaceSharingSettings(spaceSharingSettings: IResolvable) {
-      cdkBuilder.spaceSharingSettings(spaceSharingSettings.let(IResolvable::unwrap))
+      cdkBuilder.spaceSharingSettings(spaceSharingSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -537,7 +537,7 @@ public open class CfnSpace(
      * @param spaceSharingSettings A collection of space sharing settings. 
      */
     override fun spaceSharingSettings(spaceSharingSettings: SpaceSharingSettingsProperty) {
-      cdkBuilder.spaceSharingSettings(spaceSharingSettings.let(SpaceSharingSettingsProperty::unwrap))
+      cdkBuilder.spaceSharingSettings(spaceSharingSettings.let(SpaceSharingSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -563,7 +563,7 @@ public open class CfnSpace(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -743,14 +743,14 @@ public open class CfnSpace(
        * @param efsFileSystem A custom file system in Amazon EFS.
        */
       override fun efsFileSystem(efsFileSystem: IResolvable) {
-        cdkBuilder.efsFileSystem(efsFileSystem.let(IResolvable::unwrap))
+        cdkBuilder.efsFileSystem(efsFileSystem.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param efsFileSystem A custom file system in Amazon EFS.
        */
       override fun efsFileSystem(efsFileSystem: EFSFileSystemProperty) {
-        cdkBuilder.efsFileSystem(efsFileSystem.let(EFSFileSystemProperty::unwrap))
+        cdkBuilder.efsFileSystem(efsFileSystem.let(EFSFileSystemProperty.Companion::unwrap))
       }
 
       /**
@@ -1023,7 +1023,7 @@ public open class CfnSpace(
   }
 
   /**
-   * A collection of EBS storage settings that applies to private spaces.
+   * A collection of EBS storage settings that apply to both private and shared spaces.
    *
    * Example:
    *
@@ -1040,7 +1040,7 @@ public open class CfnSpace(
    */
   public interface EbsStorageSettingsProperty {
     /**
-     * The size of an EBS storage volume for a private space.
+     * The size of an EBS storage volume for a space.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-ebsstoragesettings.html#cfn-sagemaker-space-ebsstoragesettings-ebsvolumesizeingb)
      */
@@ -1052,7 +1052,7 @@ public open class CfnSpace(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param ebsVolumeSizeInGb The size of an EBS storage volume for a private space. 
+       * @param ebsVolumeSizeInGb The size of an EBS storage volume for a space. 
        */
       public fun ebsVolumeSizeInGb(ebsVolumeSizeInGb: Number)
     }
@@ -1063,7 +1063,7 @@ public open class CfnSpace(
           software.amazon.awscdk.services.sagemaker.CfnSpace.EbsStorageSettingsProperty.builder()
 
       /**
-       * @param ebsVolumeSizeInGb The size of an EBS storage volume for a private space. 
+       * @param ebsVolumeSizeInGb The size of an EBS storage volume for a space. 
        */
       override fun ebsVolumeSizeInGb(ebsVolumeSizeInGb: Number) {
         cdkBuilder.ebsVolumeSizeInGb(ebsVolumeSizeInGb)
@@ -1078,7 +1078,7 @@ public open class CfnSpace(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.EbsStorageSettingsProperty,
     ) : CdkObject(cdkObject), EbsStorageSettingsProperty {
       /**
-       * The size of an EBS storage volume for a private space.
+       * The size of an EBS storage volume for a space.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-ebsstoragesettings.html#cfn-sagemaker-space-ebsstoragesettings-ebsvolumesizeingb)
        */
@@ -1176,7 +1176,7 @@ public open class CfnSpace(
        * If you use the `LifecycleConfigArns` parameter, then this parameter is also required.
        */
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1185,7 +1185,7 @@ public open class CfnSpace(
        * If you use the `LifecycleConfigArns` parameter, then this parameter is also required.
        */
       override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty.Companion::unwrap))
       }
 
       /**
@@ -1352,7 +1352,7 @@ public open class CfnSpace(
        * KernelGateway app.
        */
       override fun customImages(customImages: IResolvable) {
-        cdkBuilder.customImages(customImages.let(IResolvable::unwrap))
+        cdkBuilder.customImages(customImages.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1379,7 +1379,7 @@ public open class CfnSpace(
        * CloudFormation and the instance type parameter value is not passed.
        */
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1391,7 +1391,7 @@ public open class CfnSpace(
        * CloudFormation and the instance type parameter value is not passed.
        */
       override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty.Companion::unwrap))
       }
 
       /**
@@ -1474,7 +1474,7 @@ public open class CfnSpace(
    */
   public interface OwnershipSettingsProperty {
     /**
-     * The user profile who is the owner of the private space.
+     * The user profile who is the owner of the space.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-ownershipsettings.html#cfn-sagemaker-space-ownershipsettings-owneruserprofilename)
      */
@@ -1486,7 +1486,7 @@ public open class CfnSpace(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param ownerUserProfileName The user profile who is the owner of the private space. 
+       * @param ownerUserProfileName The user profile who is the owner of the space. 
        */
       public fun ownerUserProfileName(ownerUserProfileName: String)
     }
@@ -1497,7 +1497,7 @@ public open class CfnSpace(
           software.amazon.awscdk.services.sagemaker.CfnSpace.OwnershipSettingsProperty.builder()
 
       /**
-       * @param ownerUserProfileName The user profile who is the owner of the private space. 
+       * @param ownerUserProfileName The user profile who is the owner of the space. 
        */
       override fun ownerUserProfileName(ownerUserProfileName: String) {
         cdkBuilder.ownerUserProfileName(ownerUserProfileName)
@@ -1512,7 +1512,7 @@ public open class CfnSpace(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.OwnershipSettingsProperty,
     ) : CdkObject(cdkObject), OwnershipSettingsProperty {
       /**
-       * The user profile who is the owner of the private space.
+       * The user profile who is the owner of the space.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-ownershipsettings.html#cfn-sagemaker-space-ownershipsettings-owneruserprofilename)
        */
@@ -1763,7 +1763,7 @@ public open class CfnSpace(
        * version, and the instance type that the version runs on.
        */
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1771,7 +1771,7 @@ public open class CfnSpace(
        * version, and the instance type that the version runs on.
        */
       override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty.Companion::unwrap))
       }
 
       /**
@@ -1916,7 +1916,7 @@ public open class CfnSpace(
        * users for cloning in the JupyterLab application.
        */
       override fun codeRepositories(codeRepositories: IResolvable) {
-        cdkBuilder.codeRepositories(codeRepositories.let(IResolvable::unwrap))
+        cdkBuilder.codeRepositories(codeRepositories.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1939,7 +1939,7 @@ public open class CfnSpace(
        * version, and the instance type that the version runs on.
        */
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1947,7 +1947,7 @@ public open class CfnSpace(
        * version, and the instance type that the version runs on.
        */
       override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty.Companion::unwrap))
       }
 
       /**
@@ -2113,7 +2113,7 @@ public open class CfnSpace(
     public fun kernelGatewayAppSettings(): Any? = unwrap(this).getKernelGatewayAppSettings()
 
     /**
-     * The storage settings for a private space.
+     * The storage settings for a space.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacesettings.html#cfn-sagemaker-space-spacesettings-spacestoragesettings)
      */
@@ -2225,17 +2225,17 @@ public open class CfnSpace(
           fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty.Builder.() -> Unit)
 
       /**
-       * @param spaceStorageSettings The storage settings for a private space.
+       * @param spaceStorageSettings The storage settings for a space.
        */
       public fun spaceStorageSettings(spaceStorageSettings: IResolvable)
 
       /**
-       * @param spaceStorageSettings The storage settings for a private space.
+       * @param spaceStorageSettings The storage settings for a space.
        */
       public fun spaceStorageSettings(spaceStorageSettings: SpaceStorageSettingsProperty)
 
       /**
-       * @param spaceStorageSettings The storage settings for a private space.
+       * @param spaceStorageSettings The storage settings for a space.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e918c17a2faf9653cd99fc52b83a57eea99102a611f1a0f4f0580518aa18211e")
@@ -2259,7 +2259,7 @@ public open class CfnSpace(
        * @param codeEditorAppSettings The Code Editor application settings.
        */
       override fun codeEditorAppSettings(codeEditorAppSettings: IResolvable) {
-        cdkBuilder.codeEditorAppSettings(codeEditorAppSettings.let(IResolvable::unwrap))
+        cdkBuilder.codeEditorAppSettings(codeEditorAppSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2267,7 +2267,7 @@ public open class CfnSpace(
        */
       override
           fun codeEditorAppSettings(codeEditorAppSettings: SpaceCodeEditorAppSettingsProperty) {
-        cdkBuilder.codeEditorAppSettings(codeEditorAppSettings.let(SpaceCodeEditorAppSettingsProperty::unwrap))
+        cdkBuilder.codeEditorAppSettings(codeEditorAppSettings.let(SpaceCodeEditorAppSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -2285,7 +2285,7 @@ public open class CfnSpace(
        * Permitted users can access this file system in Amazon SageMaker Studio.
        */
       override fun customFileSystems(customFileSystems: IResolvable) {
-        cdkBuilder.customFileSystems(customFileSystems.let(IResolvable::unwrap))
+        cdkBuilder.customFileSystems(customFileSystems.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2309,7 +2309,7 @@ public open class CfnSpace(
        * @param jupyterLabAppSettings The settings for the JupyterLab application.
        */
       override fun jupyterLabAppSettings(jupyterLabAppSettings: IResolvable) {
-        cdkBuilder.jupyterLabAppSettings(jupyterLabAppSettings.let(IResolvable::unwrap))
+        cdkBuilder.jupyterLabAppSettings(jupyterLabAppSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2317,7 +2317,7 @@ public open class CfnSpace(
        */
       override
           fun jupyterLabAppSettings(jupyterLabAppSettings: SpaceJupyterLabAppSettingsProperty) {
-        cdkBuilder.jupyterLabAppSettings(jupyterLabAppSettings.let(SpaceJupyterLabAppSettingsProperty::unwrap))
+        cdkBuilder.jupyterLabAppSettings(jupyterLabAppSettings.let(SpaceJupyterLabAppSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -2333,7 +2333,7 @@ public open class CfnSpace(
        * @param jupyterServerAppSettings The JupyterServer app settings.
        */
       override fun jupyterServerAppSettings(jupyterServerAppSettings: IResolvable) {
-        cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(IResolvable::unwrap))
+        cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2341,7 +2341,7 @@ public open class CfnSpace(
        */
       override
           fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty) {
-        cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(JupyterServerAppSettingsProperty::unwrap))
+        cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(JupyterServerAppSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -2358,7 +2358,7 @@ public open class CfnSpace(
        * @param kernelGatewayAppSettings The KernelGateway app settings.
        */
       override fun kernelGatewayAppSettings(kernelGatewayAppSettings: IResolvable) {
-        cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(IResolvable::unwrap))
+        cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2366,7 +2366,7 @@ public open class CfnSpace(
        */
       override
           fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty) {
-        cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(KernelGatewayAppSettingsProperty::unwrap))
+        cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(KernelGatewayAppSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -2380,21 +2380,21 @@ public open class CfnSpace(
           kernelGatewayAppSettings(KernelGatewayAppSettingsProperty(kernelGatewayAppSettings))
 
       /**
-       * @param spaceStorageSettings The storage settings for a private space.
+       * @param spaceStorageSettings The storage settings for a space.
        */
       override fun spaceStorageSettings(spaceStorageSettings: IResolvable) {
-        cdkBuilder.spaceStorageSettings(spaceStorageSettings.let(IResolvable::unwrap))
+        cdkBuilder.spaceStorageSettings(spaceStorageSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param spaceStorageSettings The storage settings for a private space.
+       * @param spaceStorageSettings The storage settings for a space.
        */
       override fun spaceStorageSettings(spaceStorageSettings: SpaceStorageSettingsProperty) {
-        cdkBuilder.spaceStorageSettings(spaceStorageSettings.let(SpaceStorageSettingsProperty::unwrap))
+        cdkBuilder.spaceStorageSettings(spaceStorageSettings.let(SpaceStorageSettingsProperty.Companion::unwrap))
       }
 
       /**
-       * @param spaceStorageSettings The storage settings for a private space.
+       * @param spaceStorageSettings The storage settings for a space.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e918c17a2faf9653cd99fc52b83a57eea99102a611f1a0f4f0580518aa18211e")
@@ -2454,7 +2454,7 @@ public open class CfnSpace(
       override fun kernelGatewayAppSettings(): Any? = unwrap(this).getKernelGatewayAppSettings()
 
       /**
-       * The storage settings for a private space.
+       * The storage settings for a space.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacesettings.html#cfn-sagemaker-space-spacesettings-spacestoragesettings)
        */
@@ -2562,7 +2562,7 @@ public open class CfnSpace(
   }
 
   /**
-   * The storage settings for a private space.
+   * The storage settings for a space.
    *
    * Example:
    *
@@ -2582,7 +2582,7 @@ public open class CfnSpace(
    */
   public interface SpaceStorageSettingsProperty {
     /**
-     * A collection of EBS storage settings for a private space.
+     * A collection of EBS storage settings for a space.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacestoragesettings.html#cfn-sagemaker-space-spacestoragesettings-ebsstoragesettings)
      */
@@ -2594,17 +2594,17 @@ public open class CfnSpace(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param ebsStorageSettings A collection of EBS storage settings for a private space.
+       * @param ebsStorageSettings A collection of EBS storage settings for a space.
        */
       public fun ebsStorageSettings(ebsStorageSettings: IResolvable)
 
       /**
-       * @param ebsStorageSettings A collection of EBS storage settings for a private space.
+       * @param ebsStorageSettings A collection of EBS storage settings for a space.
        */
       public fun ebsStorageSettings(ebsStorageSettings: EbsStorageSettingsProperty)
 
       /**
-       * @param ebsStorageSettings A collection of EBS storage settings for a private space.
+       * @param ebsStorageSettings A collection of EBS storage settings for a space.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("685af989ba2409bea91c1c7183d1e017811b8406dc2cb03fc45796cc3adf4da3")
@@ -2618,21 +2618,21 @@ public open class CfnSpace(
           software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceStorageSettingsProperty.builder()
 
       /**
-       * @param ebsStorageSettings A collection of EBS storage settings for a private space.
+       * @param ebsStorageSettings A collection of EBS storage settings for a space.
        */
       override fun ebsStorageSettings(ebsStorageSettings: IResolvable) {
-        cdkBuilder.ebsStorageSettings(ebsStorageSettings.let(IResolvable::unwrap))
+        cdkBuilder.ebsStorageSettings(ebsStorageSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param ebsStorageSettings A collection of EBS storage settings for a private space.
+       * @param ebsStorageSettings A collection of EBS storage settings for a space.
        */
       override fun ebsStorageSettings(ebsStorageSettings: EbsStorageSettingsProperty) {
-        cdkBuilder.ebsStorageSettings(ebsStorageSettings.let(EbsStorageSettingsProperty::unwrap))
+        cdkBuilder.ebsStorageSettings(ebsStorageSettings.let(EbsStorageSettingsProperty.Companion::unwrap))
       }
 
       /**
-       * @param ebsStorageSettings A collection of EBS storage settings for a private space.
+       * @param ebsStorageSettings A collection of EBS storage settings for a space.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("685af989ba2409bea91c1c7183d1e017811b8406dc2cb03fc45796cc3adf4da3")
@@ -2649,7 +2649,7 @@ public open class CfnSpace(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnSpace.SpaceStorageSettingsProperty,
     ) : CdkObject(cdkObject), SpaceStorageSettingsProperty {
       /**
-       * A collection of EBS storage settings for a private space.
+       * A collection of EBS storage settings for a space.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-space-spacestoragesettings.html#cfn-sagemaker-space-spacestoragesettings-ebsstoragesettings)
        */

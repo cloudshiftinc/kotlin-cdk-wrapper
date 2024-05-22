@@ -34,11 +34,11 @@ public open class DomainJoinedCredentialSpec(
 
   public companion object {
     public fun fromS3Bucket(bucket: IBucket, key: String): DomainJoinedCredentialSpec =
-        software.amazon.awscdk.services.ecs.DomainJoinedCredentialSpec.fromS3Bucket(bucket.let(IBucket::unwrap),
+        software.amazon.awscdk.services.ecs.DomainJoinedCredentialSpec.fromS3Bucket(bucket.let(IBucket.Companion::unwrap),
         key).let(DomainJoinedCredentialSpec::wrap)
 
     public fun fromSsmParameter(parameter: IParameter): DomainJoinedCredentialSpec =
-        software.amazon.awscdk.services.ecs.DomainJoinedCredentialSpec.fromSsmParameter(parameter.let(IParameter::unwrap)).let(DomainJoinedCredentialSpec::wrap)
+        software.amazon.awscdk.services.ecs.DomainJoinedCredentialSpec.fromSsmParameter(parameter.let(IParameter.Companion::unwrap)).let(DomainJoinedCredentialSpec::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.DomainJoinedCredentialSpec):
         DomainJoinedCredentialSpec = DomainJoinedCredentialSpec(cdkObject)

@@ -74,7 +74,7 @@ public interface INetworkTargetGroup : ITargetGroup {
      * @param listener 
      */
     override fun registerListener(listener: INetworkListener) {
-      unwrap(this).registerListener(listener.let(INetworkListener::unwrap))
+      unwrap(this).registerListener(listener.let(INetworkListener.Companion::unwrap))
     }
 
     /**

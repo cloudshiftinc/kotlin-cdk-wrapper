@@ -94,7 +94,7 @@ public open class WindowsBuildImage(
    * @param buildEnvironment 
    */
   public override fun validate(buildEnvironment: BuildEnvironment): List<String> =
-      unwrap(this).validate(buildEnvironment.let(BuildEnvironment::unwrap))
+      unwrap(this).validate(buildEnvironment.let(BuildEnvironment.Companion::unwrap))
 
   /**
    * Allows the image a chance to validate whether the passed configuration is correct.
@@ -124,8 +124,8 @@ public open class WindowsBuildImage(
       id: String,
       props: DockerImageAssetProps,
     ): IBuildImage =
-        software.amazon.awscdk.services.codebuild.WindowsBuildImage.fromAsset(scope.let(Construct::unwrap),
-        id, props.let(DockerImageAssetProps::unwrap)).let(IBuildImage::wrap)
+        software.amazon.awscdk.services.codebuild.WindowsBuildImage.fromAsset(scope.let(Construct.Companion::unwrap),
+        id, props.let(DockerImageAssetProps.Companion::unwrap)).let(IBuildImage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("66f4338ab15382a1d0a2efb8183796cd48bca3922530d07a2c878008262c08ef")
@@ -141,16 +141,16 @@ public open class WindowsBuildImage(
       props: DockerImageAssetProps,
       imageType: WindowsImageType,
     ): IBuildImage =
-        software.amazon.awscdk.services.codebuild.WindowsBuildImage.fromAsset(scope.let(Construct::unwrap),
-        id, props.let(DockerImageAssetProps::unwrap),
-        imageType.let(WindowsImageType::unwrap)).let(IBuildImage::wrap)
+        software.amazon.awscdk.services.codebuild.WindowsBuildImage.fromAsset(scope.let(Construct.Companion::unwrap),
+        id, props.let(DockerImageAssetProps.Companion::unwrap),
+        imageType.let(WindowsImageType.Companion::unwrap)).let(IBuildImage::wrap)
 
     public fun fromDockerRegistry(name: String): IBuildImage =
         software.amazon.awscdk.services.codebuild.WindowsBuildImage.fromDockerRegistry(name).let(IBuildImage::wrap)
 
     public fun fromDockerRegistry(name: String, options: DockerImageOptions): IBuildImage =
         software.amazon.awscdk.services.codebuild.WindowsBuildImage.fromDockerRegistry(name,
-        options.let(DockerImageOptions::unwrap)).let(IBuildImage::wrap)
+        options.let(DockerImageOptions.Companion::unwrap)).let(IBuildImage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e9dfa00b9fda484ff06b60ab8b92ae7805fa8054bf1b7155a5e6cb7e59c4680f")
@@ -163,14 +163,14 @@ public open class WindowsBuildImage(
       imageType: WindowsImageType,
     ): IBuildImage =
         software.amazon.awscdk.services.codebuild.WindowsBuildImage.fromDockerRegistry(name,
-        options.let(DockerImageOptions::unwrap),
-        imageType.let(WindowsImageType::unwrap)).let(IBuildImage::wrap)
+        options.let(DockerImageOptions.Companion::unwrap),
+        imageType.let(WindowsImageType.Companion::unwrap)).let(IBuildImage::wrap)
 
     public fun fromEcrRepository(repository: IRepository): IBuildImage =
-        software.amazon.awscdk.services.codebuild.WindowsBuildImage.fromEcrRepository(repository.let(IRepository::unwrap)).let(IBuildImage::wrap)
+        software.amazon.awscdk.services.codebuild.WindowsBuildImage.fromEcrRepository(repository.let(IRepository.Companion::unwrap)).let(IBuildImage::wrap)
 
     public fun fromEcrRepository(repository: IRepository, tagOrDigest: String): IBuildImage =
-        software.amazon.awscdk.services.codebuild.WindowsBuildImage.fromEcrRepository(repository.let(IRepository::unwrap),
+        software.amazon.awscdk.services.codebuild.WindowsBuildImage.fromEcrRepository(repository.let(IRepository.Companion::unwrap),
         tagOrDigest).let(IBuildImage::wrap)
 
     public fun fromEcrRepository(
@@ -178,8 +178,8 @@ public open class WindowsBuildImage(
       tagOrDigest: String,
       imageType: WindowsImageType,
     ): IBuildImage =
-        software.amazon.awscdk.services.codebuild.WindowsBuildImage.fromEcrRepository(repository.let(IRepository::unwrap),
-        tagOrDigest, imageType.let(WindowsImageType::unwrap)).let(IBuildImage::wrap)
+        software.amazon.awscdk.services.codebuild.WindowsBuildImage.fromEcrRepository(repository.let(IRepository.Companion::unwrap),
+        tagOrDigest, imageType.let(WindowsImageType.Companion::unwrap)).let(IBuildImage::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.WindowsBuildImage):
         WindowsBuildImage = WindowsBuildImage(cdkObject)

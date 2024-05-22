@@ -335,7 +335,7 @@ public interface FargateServiceProps : BaseServiceOptions {
      */
     override
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>) {
-      cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy::unwrap))
+      cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy.Companion::unwrap))
     }
 
     /**
@@ -352,7 +352,7 @@ public interface FargateServiceProps : BaseServiceOptions {
      * enabled.
      */
     override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
-      cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker::unwrap))
+      cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker.Companion::unwrap))
     }
 
     /**
@@ -370,7 +370,7 @@ public interface FargateServiceProps : BaseServiceOptions {
      * discovery.
      */
     override fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
-      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions::unwrap))
+      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions.Companion::unwrap))
     }
 
     /**
@@ -386,7 +386,7 @@ public interface FargateServiceProps : BaseServiceOptions {
      * @param cluster The name of the cluster that hosts the service. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -394,7 +394,7 @@ public interface FargateServiceProps : BaseServiceOptions {
      * at least one enters a state of alarm during the deployment or bake time.
      */
     override fun deploymentAlarms(deploymentAlarms: DeploymentAlarmConfig) {
-      cdkBuilder.deploymentAlarms(deploymentAlarms.let(DeploymentAlarmConfig::unwrap))
+      cdkBuilder.deploymentAlarms(deploymentAlarms.let(DeploymentAlarmConfig.Companion::unwrap))
     }
 
     /**
@@ -413,7 +413,7 @@ public interface FargateServiceProps : BaseServiceOptions {
      * Types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html)
      */
     override fun deploymentController(deploymentController: DeploymentController) {
-      cdkBuilder.deploymentController(deploymentController.let(DeploymentController::unwrap))
+      cdkBuilder.deploymentController(deploymentController.let(DeploymentController.Companion::unwrap))
     }
 
     /**
@@ -460,7 +460,7 @@ public interface FargateServiceProps : BaseServiceOptions {
      * started.
      */
     override fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
-      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration::unwrap))
+      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -489,7 +489,7 @@ public interface FargateServiceProps : BaseServiceOptions {
      * in the Amazon Elastic Container Service Developer Guide.
      */
     override fun platformVersion(platformVersion: FargatePlatformVersion) {
-      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion::unwrap))
+      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion.Companion::unwrap))
     }
 
     /**
@@ -499,7 +499,7 @@ public interface FargateServiceProps : BaseServiceOptions {
      * PropagatedTagSource.NONE
      */
     override fun propagateTags(propagateTags: PropagatedTagSource) {
-      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource.Companion::unwrap))
     }
 
     /**
@@ -507,7 +507,7 @@ public interface FargateServiceProps : BaseServiceOptions {
      * If you do not specify a security group, a new security group is created.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -521,7 +521,7 @@ public interface FargateServiceProps : BaseServiceOptions {
      * @param serviceConnectConfiguration Configuration for Service Connect.
      */
     override fun serviceConnectConfiguration(serviceConnectConfiguration: ServiceConnectProps) {
-      cdkBuilder.serviceConnectConfiguration(serviceConnectConfiguration.let(ServiceConnectProps::unwrap))
+      cdkBuilder.serviceConnectConfiguration(serviceConnectConfiguration.let(ServiceConnectProps.Companion::unwrap))
     }
 
     /**
@@ -545,7 +545,7 @@ public interface FargateServiceProps : BaseServiceOptions {
      * [disable-awslint:ref-via-interface]
      */
     override fun taskDefinition(taskDefinition: TaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(TaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(TaskDefinition.Companion::unwrap))
     }
 
     /**
@@ -553,7 +553,7 @@ public interface FargateServiceProps : BaseServiceOptions {
      * latest active task revision.
      */
     override fun taskDefinitionRevision(taskDefinitionRevision: TaskDefinitionRevision) {
-      cdkBuilder.taskDefinitionRevision(taskDefinitionRevision.let(TaskDefinitionRevision::unwrap))
+      cdkBuilder.taskDefinitionRevision(taskDefinitionRevision.let(TaskDefinitionRevision.Companion::unwrap))
     }
 
     /**
@@ -562,7 +562,7 @@ public interface FargateServiceProps : BaseServiceOptions {
      * details about the EBS volume that can be attched to ECS tasks.
      */
     override fun volumeConfigurations(volumeConfigurations: List<ServiceManagedVolume>) {
-      cdkBuilder.volumeConfigurations(volumeConfigurations.map(ServiceManagedVolume::unwrap))
+      cdkBuilder.volumeConfigurations(volumeConfigurations.map(ServiceManagedVolume.Companion::unwrap))
     }
 
     /**
@@ -577,7 +577,7 @@ public interface FargateServiceProps : BaseServiceOptions {
      * @param vpcSubnets The subnets to associate with the service.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

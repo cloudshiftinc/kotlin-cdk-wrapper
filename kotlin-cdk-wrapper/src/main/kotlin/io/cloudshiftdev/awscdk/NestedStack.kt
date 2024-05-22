@@ -182,7 +182,7 @@ public open class NestedStack(
   cdkObject: software.amazon.awscdk.NestedStack,
 ) : Stack(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.NestedStack(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.NestedStack(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -190,8 +190,9 @@ public open class NestedStack(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
     props: NestedStackProps,
-  ) : this(software.amazon.awscdk.NestedStack(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(NestedStackProps::unwrap))
+  ) :
+      this(software.amazon.awscdk.NestedStack(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(NestedStackProps.Companion::unwrap))
   )
 
   public constructor(
@@ -412,7 +413,7 @@ public open class NestedStack(
      * @param removalPolicy Policy to apply when the nested stack is removed. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -432,7 +433,7 @@ public open class NestedStack(
      * CREATE_COMPLETE state. 
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.NestedStack = cdkBuilder.build()

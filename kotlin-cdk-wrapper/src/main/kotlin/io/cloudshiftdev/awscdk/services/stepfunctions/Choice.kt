@@ -43,7 +43,7 @@ public open class Choice(
   cdkObject: software.amazon.awscdk.services.stepfunctions.Choice,
 ) : State(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.stepfunctions.Choice(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.stepfunctions.Choice(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -52,8 +52,8 @@ public open class Choice(
     id: String,
     props: ChoiceProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.Choice(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ChoiceProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.Choice(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ChoiceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -80,7 +80,7 @@ public open class Choice(
    * @param options
    */
   public open fun afterwards(options: AfterwardsOptions): Chain =
-      unwrap(this).afterwards(options.let(AfterwardsOptions::unwrap)).let(Chain::wrap)
+      unwrap(this).afterwards(options.let(AfterwardsOptions.Companion::unwrap)).let(Chain::wrap)
 
   /**
    * Return a Chain that contains all reachable end states from this Choice.
@@ -109,7 +109,7 @@ public open class Choice(
    * @param def 
    */
   public open fun otherwise(def: IChainable): Choice =
-      unwrap(this).otherwise(def.let(IChainable::unwrap)).let(Choice::wrap)
+      unwrap(this).otherwise(def.let(IChainable.Companion::unwrap)).let(Choice::wrap)
 
   /**
    * Return the Amazon States Language object for this state.
@@ -124,8 +124,8 @@ public open class Choice(
    * @param options
    */
   public open fun `when`(condition: Condition, next: IChainable): Choice =
-      unwrap(this).`when`(condition.let(Condition::unwrap),
-      next.let(IChainable::unwrap)).let(Choice::wrap)
+      unwrap(this).`when`(condition.let(Condition.Companion::unwrap),
+      next.let(IChainable.Companion::unwrap)).let(Choice::wrap)
 
   /**
    * If the given condition matches, continue execution with the given state.
@@ -138,8 +138,9 @@ public open class Choice(
     condition: Condition,
     next: IChainable,
     options: ChoiceTransitionOptions,
-  ): Choice = unwrap(this).`when`(condition.let(Condition::unwrap), next.let(IChainable::unwrap),
-      options.let(ChoiceTransitionOptions::unwrap)).let(Choice::wrap)
+  ): Choice = unwrap(this).`when`(condition.let(Condition.Companion::unwrap),
+      next.let(IChainable.Companion::unwrap),
+      options.let(ChoiceTransitionOptions.Companion::unwrap)).let(Choice::wrap)
 
   /**
    * If the given condition matches, continue execution with the given state.

@@ -278,7 +278,7 @@ public interface GatewayRouteSpecConfig {
      * @param grpcSpecConfig The spec for a grpc gateway route.
      */
     override fun grpcSpecConfig(grpcSpecConfig: CfnGatewayRoute.GrpcGatewayRouteProperty) {
-      cdkBuilder.grpcSpecConfig(grpcSpecConfig.let(CfnGatewayRoute.GrpcGatewayRouteProperty::unwrap))
+      cdkBuilder.grpcSpecConfig(grpcSpecConfig.let(CfnGatewayRoute.GrpcGatewayRouteProperty.Companion::unwrap))
     }
 
     /**
@@ -294,7 +294,7 @@ public interface GatewayRouteSpecConfig {
      * @param http2SpecConfig The spec for an http2 gateway route.
      */
     override fun http2SpecConfig(http2SpecConfig: CfnGatewayRoute.HttpGatewayRouteProperty) {
-      cdkBuilder.http2SpecConfig(http2SpecConfig.let(CfnGatewayRoute.HttpGatewayRouteProperty::unwrap))
+      cdkBuilder.http2SpecConfig(http2SpecConfig.let(CfnGatewayRoute.HttpGatewayRouteProperty.Companion::unwrap))
     }
 
     /**
@@ -310,7 +310,7 @@ public interface GatewayRouteSpecConfig {
      * @param httpSpecConfig The spec for an http gateway route.
      */
     override fun httpSpecConfig(httpSpecConfig: CfnGatewayRoute.HttpGatewayRouteProperty) {
-      cdkBuilder.httpSpecConfig(httpSpecConfig.let(CfnGatewayRoute.HttpGatewayRouteProperty::unwrap))
+      cdkBuilder.httpSpecConfig(httpSpecConfig.let(CfnGatewayRoute.HttpGatewayRouteProperty.Companion::unwrap))
     }
 
     /**

@@ -61,7 +61,7 @@ public open class Vpc(
   cdkObject: software.amazon.awscdk.services.ec2.Vpc,
 ) : Resource(cdkObject), IVpc {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ec2.Vpc(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ec2.Vpc(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -70,8 +70,8 @@ public open class Vpc(
     id: String,
     props: VpcProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.Vpc(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(VpcProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.Vpc(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(VpcProps.Companion::unwrap))
   )
 
   public constructor(
@@ -89,7 +89,7 @@ public open class Vpc(
    */
   public override fun addClientVpnEndpoint(id: String, options: ClientVpnEndpointOptions):
       ClientVpnEndpoint = unwrap(this).addClientVpnEndpoint(id,
-      options.let(ClientVpnEndpointOptions::unwrap)).let(ClientVpnEndpoint::wrap)
+      options.let(ClientVpnEndpointOptions.Companion::unwrap)).let(ClientVpnEndpoint::wrap)
 
   /**
    * Adds a new client VPN endpoint to this VPC.
@@ -119,7 +119,7 @@ public open class Vpc(
    * @param options
    */
   public override fun addFlowLog(id: String, options: FlowLogOptions): FlowLog =
-      unwrap(this).addFlowLog(id, options.let(FlowLogOptions::unwrap)).let(FlowLog::wrap)
+      unwrap(this).addFlowLog(id, options.let(FlowLogOptions.Companion::unwrap)).let(FlowLog::wrap)
 
   /**
    * Adds a new flow log to this VPC.
@@ -140,7 +140,7 @@ public open class Vpc(
    */
   public override fun addGatewayEndpoint(id: String, options: GatewayVpcEndpointOptions):
       GatewayVpcEndpoint = unwrap(this).addGatewayEndpoint(id,
-      options.let(GatewayVpcEndpointOptions::unwrap)).let(GatewayVpcEndpoint::wrap)
+      options.let(GatewayVpcEndpointOptions.Companion::unwrap)).let(GatewayVpcEndpoint::wrap)
 
   /**
    * Adds a new gateway endpoint to this VPC.
@@ -162,7 +162,7 @@ public open class Vpc(
    */
   public override fun addInterfaceEndpoint(id: String, options: InterfaceVpcEndpointOptions):
       InterfaceVpcEndpoint = unwrap(this).addInterfaceEndpoint(id,
-      options.let(InterfaceVpcEndpointOptions::unwrap)).let(InterfaceVpcEndpoint::wrap)
+      options.let(InterfaceVpcEndpointOptions.Companion::unwrap)).let(InterfaceVpcEndpoint::wrap)
 
   /**
    * Adds a new interface endpoint to this VPC.
@@ -184,7 +184,7 @@ public open class Vpc(
    */
   public override fun addVpnConnection(id: String, options: VpnConnectionOptions): VpnConnection =
       unwrap(this).addVpnConnection(id,
-      options.let(VpnConnectionOptions::unwrap)).let(VpnConnection::wrap)
+      options.let(VpnConnectionOptions.Companion::unwrap)).let(VpnConnection::wrap)
 
   /**
    * Adds a new VPN connection to this VPC.
@@ -219,7 +219,7 @@ public open class Vpc(
    * @param options 
    */
   public override fun enableVpnGateway(options: EnableVpnGatewayOptions) {
-    unwrap(this).enableVpnGateway(options.let(EnableVpnGatewayOptions::unwrap))
+    unwrap(this).enableVpnGateway(options.let(EnableVpnGatewayOptions.Companion::unwrap))
   }
 
   /**
@@ -278,7 +278,7 @@ public open class Vpc(
    * @param selection
    */
   public override fun selectSubnets(selection: SubnetSelection): SelectedSubnets =
-      unwrap(this).selectSubnets(selection.let(SubnetSelection::unwrap)).let(SelectedSubnets::wrap)
+      unwrap(this).selectSubnets(selection.let(SubnetSelection.Companion::unwrap)).let(SelectedSubnets::wrap)
 
   /**
    * Returns IDs of selected subnets.
@@ -787,7 +787,7 @@ public open class Vpc(
      * @param defaultInstanceTenancy The default tenancy of instances launched into the VPC. 
      */
     override fun defaultInstanceTenancy(defaultInstanceTenancy: DefaultInstanceTenancy) {
-      cdkBuilder.defaultInstanceTenancy(defaultInstanceTenancy.let(DefaultInstanceTenancy::unwrap))
+      cdkBuilder.defaultInstanceTenancy(defaultInstanceTenancy.let(DefaultInstanceTenancy.Companion::unwrap))
     }
 
     /**
@@ -856,7 +856,7 @@ public open class Vpc(
      * @param ipAddresses The Provider to use to allocate IPv4 Space to your VPC. 
      */
     override fun ipAddresses(ipAddresses: IIpAddresses) {
-      cdkBuilder.ipAddresses(ipAddresses.let(IIpAddresses::unwrap))
+      cdkBuilder.ipAddresses(ipAddresses.let(IIpAddresses.Companion::unwrap))
     }
 
     /**
@@ -869,7 +869,7 @@ public open class Vpc(
      * @param ipProtocol The protocol of the vpc. 
      */
     override fun ipProtocol(ipProtocol: IpProtocol) {
-      cdkBuilder.ipProtocol(ipProtocol.let(IpProtocol::unwrap))
+      cdkBuilder.ipProtocol(ipProtocol.let(IpProtocol.Companion::unwrap))
     }
 
     /**
@@ -884,7 +884,7 @@ public open class Vpc(
      * @param ipv6Addresses The Provider to use to allocate IPv6 Space to your VPC. 
      */
     override fun ipv6Addresses(ipv6Addresses: IIpv6Addresses) {
-      cdkBuilder.ipv6Addresses(ipv6Addresses.let(IIpv6Addresses::unwrap))
+      cdkBuilder.ipv6Addresses(ipv6Addresses.let(IIpv6Addresses.Companion::unwrap))
     }
 
     /**
@@ -923,7 +923,7 @@ public open class Vpc(
      * @param natGatewayProvider What type of NAT provider to use. 
      */
     override fun natGatewayProvider(natGatewayProvider: NatProvider) {
-      cdkBuilder.natGatewayProvider(natGatewayProvider.let(NatProvider::unwrap))
+      cdkBuilder.natGatewayProvider(natGatewayProvider.let(NatProvider.Companion::unwrap))
     }
 
     /**
@@ -939,7 +939,7 @@ public open class Vpc(
      * @param natGatewaySubnets Configures the subnets which will have NAT Gateways/Instances. 
      */
     override fun natGatewaySubnets(natGatewaySubnets: SubnetSelection) {
-      cdkBuilder.natGatewaySubnets(natGatewaySubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.natGatewaySubnets(natGatewaySubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -1037,7 +1037,7 @@ public open class Vpc(
      * @param subnetConfiguration Configure the subnets to build for each AZ. 
      */
     override fun subnetConfiguration(subnetConfiguration: List<SubnetConfiguration>) {
-      cdkBuilder.subnetConfiguration(subnetConfiguration.map(SubnetConfiguration::unwrap))
+      cdkBuilder.subnetConfiguration(subnetConfiguration.map(SubnetConfiguration.Companion::unwrap))
     }
 
     /**
@@ -1133,7 +1133,7 @@ public open class Vpc(
      * @param vpnRoutePropagation Where to propagate VPN routes. 
      */
     override fun vpnRoutePropagation(vpnRoutePropagation: List<SubnetSelection>) {
-      cdkBuilder.vpnRoutePropagation(vpnRoutePropagation.map(SubnetSelection::unwrap))
+      cdkBuilder.vpnRoutePropagation(vpnRoutePropagation.map(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -1166,8 +1166,8 @@ public open class Vpc(
       id: String,
       options: VpcLookupOptions,
     ): IVpc =
-        software.amazon.awscdk.services.ec2.Vpc.fromLookup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, options.let(VpcLookupOptions::unwrap)).let(IVpc::wrap)
+        software.amazon.awscdk.services.ec2.Vpc.fromLookup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, options.let(VpcLookupOptions.Companion::unwrap)).let(IVpc::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bfd3d4a9b937e72de676f265f17bf0e942f1bc1be6304439abd5c5d51ed927ca")
@@ -1182,8 +1182,8 @@ public open class Vpc(
       id: String,
       attrs: VpcAttributes,
     ): IVpc =
-        software.amazon.awscdk.services.ec2.Vpc.fromVpcAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(VpcAttributes::unwrap)).let(IVpc::wrap)
+        software.amazon.awscdk.services.ec2.Vpc.fromVpcAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(VpcAttributes.Companion::unwrap)).let(IVpc::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b042fc2d1b4b50c558012358dc931e1a21e45cb4ade21134892c366410e05793")

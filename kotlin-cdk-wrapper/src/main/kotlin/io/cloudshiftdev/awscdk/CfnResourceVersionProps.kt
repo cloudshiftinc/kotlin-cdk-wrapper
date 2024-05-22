@@ -192,14 +192,14 @@ public interface CfnResourceVersionProps {
      * @param loggingConfig Logging configuration information for a resource.
      */
     override fun loggingConfig(loggingConfig: IResolvable) {
-      cdkBuilder.loggingConfig(loggingConfig.let(IResolvable::unwrap))
+      cdkBuilder.loggingConfig(loggingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param loggingConfig Logging configuration information for a resource.
      */
     override fun loggingConfig(loggingConfig: CfnResourceVersion.LoggingConfigProperty) {
-      cdkBuilder.loggingConfig(loggingConfig.let(CfnResourceVersion.LoggingConfigProperty::unwrap))
+      cdkBuilder.loggingConfig(loggingConfig.let(CfnResourceVersion.LoggingConfigProperty.Companion::unwrap))
     }
 
     /**

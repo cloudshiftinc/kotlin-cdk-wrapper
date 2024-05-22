@@ -78,14 +78,14 @@ public interface LambdaDeploymentGroupAttributes {
      * Group belongs to. 
      */
     override fun application(application: ILambdaApplication) {
-      cdkBuilder.application(application.let(ILambdaApplication::unwrap))
+      cdkBuilder.application(application.let(ILambdaApplication.Companion::unwrap))
     }
 
     /**
      * @param deploymentConfig The Deployment Configuration this Deployment Group uses.
      */
     override fun deploymentConfig(deploymentConfig: ILambdaDeploymentConfig) {
-      cdkBuilder.deploymentConfig(deploymentConfig.let(ILambdaDeploymentConfig::unwrap))
+      cdkBuilder.deploymentConfig(deploymentConfig.let(ILambdaDeploymentConfig.Companion::unwrap))
     }
 
     /**

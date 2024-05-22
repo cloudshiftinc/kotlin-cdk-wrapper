@@ -70,8 +70,8 @@ public open class CfnSimulationApplication(
     id: String,
     props: CfnSimulationApplicationProps,
   ) :
-      this(software.amazon.awscdk.services.robomaker.CfnSimulationApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSimulationApplicationProps::unwrap))
+      this(software.amazon.awscdk.services.robomaker.CfnSimulationApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSimulationApplicationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -121,7 +121,7 @@ public open class CfnSimulationApplication(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -145,14 +145,14 @@ public open class CfnSimulationApplication(
    * The rendering engine for the simulation application.
    */
   public open fun renderingEngine(`value`: IResolvable) {
-    unwrap(this).setRenderingEngine(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRenderingEngine(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The rendering engine for the simulation application.
    */
   public open fun renderingEngine(`value`: RenderingEngineProperty) {
-    unwrap(this).setRenderingEngine(`value`.let(RenderingEngineProperty::unwrap))
+    unwrap(this).setRenderingEngine(`value`.let(RenderingEngineProperty.Companion::unwrap))
   }
 
   /**
@@ -172,14 +172,14 @@ public open class CfnSimulationApplication(
    * The robot software suite used by the simulation application.
    */
   public open fun robotSoftwareSuite(`value`: IResolvable) {
-    unwrap(this).setRobotSoftwareSuite(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRobotSoftwareSuite(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The robot software suite used by the simulation application.
    */
   public open fun robotSoftwareSuite(`value`: RobotSoftwareSuiteProperty) {
-    unwrap(this).setRobotSoftwareSuite(`value`.let(RobotSoftwareSuiteProperty::unwrap))
+    unwrap(this).setRobotSoftwareSuite(`value`.let(RobotSoftwareSuiteProperty.Companion::unwrap))
   }
 
   /**
@@ -199,14 +199,14 @@ public open class CfnSimulationApplication(
    * The simulation software suite used by the simulation application.
    */
   public open fun simulationSoftwareSuite(`value`: IResolvable) {
-    unwrap(this).setSimulationSoftwareSuite(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSimulationSoftwareSuite(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The simulation software suite used by the simulation application.
    */
   public open fun simulationSoftwareSuite(`value`: SimulationSoftwareSuiteProperty) {
-    unwrap(this).setSimulationSoftwareSuite(`value`.let(SimulationSoftwareSuiteProperty::unwrap))
+    unwrap(this).setSimulationSoftwareSuite(`value`.let(SimulationSoftwareSuiteProperty.Companion::unwrap))
   }
 
   /**
@@ -227,7 +227,7 @@ public open class CfnSimulationApplication(
    * The sources of the simulation application.
    */
   public open fun sources(`value`: IResolvable) {
-    unwrap(this).setSources(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSources(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -449,7 +449,7 @@ public open class CfnSimulationApplication(
      * @param renderingEngine The rendering engine for the simulation application. 
      */
     override fun renderingEngine(renderingEngine: IResolvable) {
-      cdkBuilder.renderingEngine(renderingEngine.let(IResolvable::unwrap))
+      cdkBuilder.renderingEngine(renderingEngine.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -459,7 +459,7 @@ public open class CfnSimulationApplication(
      * @param renderingEngine The rendering engine for the simulation application. 
      */
     override fun renderingEngine(renderingEngine: RenderingEngineProperty) {
-      cdkBuilder.renderingEngine(renderingEngine.let(RenderingEngineProperty::unwrap))
+      cdkBuilder.renderingEngine(renderingEngine.let(RenderingEngineProperty.Companion::unwrap))
     }
 
     /**
@@ -480,7 +480,7 @@ public open class CfnSimulationApplication(
      * @param robotSoftwareSuite The robot software suite used by the simulation application. 
      */
     override fun robotSoftwareSuite(robotSoftwareSuite: IResolvable) {
-      cdkBuilder.robotSoftwareSuite(robotSoftwareSuite.let(IResolvable::unwrap))
+      cdkBuilder.robotSoftwareSuite(robotSoftwareSuite.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -490,7 +490,7 @@ public open class CfnSimulationApplication(
      * @param robotSoftwareSuite The robot software suite used by the simulation application. 
      */
     override fun robotSoftwareSuite(robotSoftwareSuite: RobotSoftwareSuiteProperty) {
-      cdkBuilder.robotSoftwareSuite(robotSoftwareSuite.let(RobotSoftwareSuiteProperty::unwrap))
+      cdkBuilder.robotSoftwareSuite(robotSoftwareSuite.let(RobotSoftwareSuiteProperty.Companion::unwrap))
     }
 
     /**
@@ -513,7 +513,7 @@ public open class CfnSimulationApplication(
      * application. 
      */
     override fun simulationSoftwareSuite(simulationSoftwareSuite: IResolvable) {
-      cdkBuilder.simulationSoftwareSuite(simulationSoftwareSuite.let(IResolvable::unwrap))
+      cdkBuilder.simulationSoftwareSuite(simulationSoftwareSuite.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -524,7 +524,7 @@ public open class CfnSimulationApplication(
      * application. 
      */
     override fun simulationSoftwareSuite(simulationSoftwareSuite: SimulationSoftwareSuiteProperty) {
-      cdkBuilder.simulationSoftwareSuite(simulationSoftwareSuite.let(SimulationSoftwareSuiteProperty::unwrap))
+      cdkBuilder.simulationSoftwareSuite(simulationSoftwareSuite.let(SimulationSoftwareSuiteProperty.Companion::unwrap))
     }
 
     /**
@@ -547,7 +547,7 @@ public open class CfnSimulationApplication(
      * @param sources The sources of the simulation application. 
      */
     override fun sources(sources: IResolvable) {
-      cdkBuilder.sources(sources.let(IResolvable::unwrap))
+      cdkBuilder.sources(sources.let(IResolvable.Companion::unwrap))
     }
 
     /**

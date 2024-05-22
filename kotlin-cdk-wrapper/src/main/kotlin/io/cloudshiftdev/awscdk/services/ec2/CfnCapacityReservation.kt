@@ -67,8 +67,8 @@ public open class CfnCapacityReservation(
     id: String,
     props: CfnCapacityReservationProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnCapacityReservation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCapacityReservationProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnCapacityReservation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCapacityReservationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -148,7 +148,7 @@ public open class CfnCapacityReservation(
    * Indicates whether the Capacity Reservation supports EBS-optimized instances.
    */
   public open fun ebsOptimized(`value`: IResolvable) {
-    unwrap(this).setEbsOptimized(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEbsOptimized(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -191,7 +191,7 @@ public open class CfnCapacityReservation(
    * *Deprecated.*.
    */
   public open fun ephemeralStorage(`value`: IResolvable) {
-    unwrap(this).setEphemeralStorage(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEphemeralStorage(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -200,7 +200,7 @@ public open class CfnCapacityReservation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -290,7 +290,7 @@ public open class CfnCapacityReservation(
    * The tags to apply to the Capacity Reservation during launch.
    */
   public open fun tagSpecifications(`value`: IResolvable) {
-    unwrap(this).setTagSpecifications(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTagSpecifications(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -567,7 +567,7 @@ public open class CfnCapacityReservation(
      * instances. 
      */
     override fun ebsOptimized(ebsOptimized: IResolvable) {
-      cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
+      cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -625,7 +625,7 @@ public open class CfnCapacityReservation(
      * @param ephemeralStorage *Deprecated.*. 
      */
     override fun ephemeralStorage(ephemeralStorage: IResolvable) {
-      cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable::unwrap))
+      cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -720,7 +720,7 @@ public open class CfnCapacityReservation(
      * @param tagSpecifications The tags to apply to the Capacity Reservation during launch. 
      */
     override fun tagSpecifications(tagSpecifications: IResolvable) {
-      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -865,7 +865,7 @@ public open class CfnCapacityReservation(
        * @param tags The tags to apply to the resource.
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**

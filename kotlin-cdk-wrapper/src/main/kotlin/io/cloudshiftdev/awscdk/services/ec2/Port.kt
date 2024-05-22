@@ -31,7 +31,7 @@ public open class Port(
   cdkObject: software.amazon.awscdk.services.ec2.Port,
 ) : CdkObject(cdkObject) {
   public constructor(props: PortProps) :
-      this(software.amazon.awscdk.services.ec2.Port(props.let(PortProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.Port(props.let(PortProps.Companion::unwrap))
   )
 
   public constructor(props: PortProps.Builder.() -> Unit) : this(PortProps(props)
@@ -106,7 +106,7 @@ public open class Port(
      * @param protocol The protocol for the range. 
      */
     override fun protocol(protocol: Protocol) {
-      cdkBuilder.protocol(protocol.let(Protocol::unwrap))
+      cdkBuilder.protocol(protocol.let(Protocol.Companion::unwrap))
     }
 
     /**

@@ -173,7 +173,7 @@ public interface CfnApplicationProps {
      * Guide](https://docs.aws.amazon.com/m2/latest/userguide/applications-m2-definition.html) .
      */
     override fun definition(definition: IResolvable) {
-      cdkBuilder.definition(definition.let(IResolvable::unwrap))
+      cdkBuilder.definition(definition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -183,7 +183,7 @@ public interface CfnApplicationProps {
      * Guide](https://docs.aws.amazon.com/m2/latest/userguide/applications-m2-definition.html) .
      */
     override fun definition(definition: CfnApplication.DefinitionProperty) {
-      cdkBuilder.definition(definition.let(CfnApplication.DefinitionProperty::unwrap))
+      cdkBuilder.definition(definition.let(CfnApplication.DefinitionProperty.Companion::unwrap))
     }
 
     /**

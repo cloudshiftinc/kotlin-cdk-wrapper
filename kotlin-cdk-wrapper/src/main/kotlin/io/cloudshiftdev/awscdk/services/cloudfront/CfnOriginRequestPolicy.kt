@@ -75,8 +75,8 @@ public open class CfnOriginRequestPolicy(
     id: String,
     props: CfnOriginRequestPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnOriginRequestPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.CfnOriginRequestPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnOriginRequestPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -104,7 +104,7 @@ public open class CfnOriginRequestPolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -116,14 +116,14 @@ public open class CfnOriginRequestPolicy(
    * The origin request policy configuration.
    */
   public open fun originRequestPolicyConfig(`value`: IResolvable) {
-    unwrap(this).setOriginRequestPolicyConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOriginRequestPolicyConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The origin request policy configuration.
    */
   public open fun originRequestPolicyConfig(`value`: OriginRequestPolicyConfigProperty) {
-    unwrap(this).setOriginRequestPolicyConfig(`value`.let(OriginRequestPolicyConfigProperty::unwrap))
+    unwrap(this).setOriginRequestPolicyConfig(`value`.let(OriginRequestPolicyConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -184,7 +184,7 @@ public open class CfnOriginRequestPolicy(
      * @param originRequestPolicyConfig The origin request policy configuration. 
      */
     override fun originRequestPolicyConfig(originRequestPolicyConfig: IResolvable) {
-      cdkBuilder.originRequestPolicyConfig(originRequestPolicyConfig.let(IResolvable::unwrap))
+      cdkBuilder.originRequestPolicyConfig(originRequestPolicyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -195,7 +195,7 @@ public open class CfnOriginRequestPolicy(
      */
     override
         fun originRequestPolicyConfig(originRequestPolicyConfig: OriginRequestPolicyConfigProperty) {
-      cdkBuilder.originRequestPolicyConfig(originRequestPolicyConfig.let(OriginRequestPolicyConfigProperty::unwrap))
+      cdkBuilder.originRequestPolicyConfig(originRequestPolicyConfig.let(OriginRequestPolicyConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -761,14 +761,14 @@ public open class CfnOriginRequestPolicy(
        * @param cookiesConfig The cookies from viewer requests to include in origin requests. 
        */
       override fun cookiesConfig(cookiesConfig: IResolvable) {
-        cdkBuilder.cookiesConfig(cookiesConfig.let(IResolvable::unwrap))
+        cdkBuilder.cookiesConfig(cookiesConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param cookiesConfig The cookies from viewer requests to include in origin requests. 
        */
       override fun cookiesConfig(cookiesConfig: CookiesConfigProperty) {
-        cdkBuilder.cookiesConfig(cookiesConfig.let(CookiesConfigProperty::unwrap))
+        cdkBuilder.cookiesConfig(cookiesConfig.let(CookiesConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -784,7 +784,7 @@ public open class CfnOriginRequestPolicy(
        * These can include headers from viewer requests and additional headers added by CloudFront.
        */
       override fun headersConfig(headersConfig: IResolvable) {
-        cdkBuilder.headersConfig(headersConfig.let(IResolvable::unwrap))
+        cdkBuilder.headersConfig(headersConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -792,7 +792,7 @@ public open class CfnOriginRequestPolicy(
        * These can include headers from viewer requests and additional headers added by CloudFront.
        */
       override fun headersConfig(headersConfig: HeadersConfigProperty) {
-        cdkBuilder.headersConfig(headersConfig.let(HeadersConfigProperty::unwrap))
+        cdkBuilder.headersConfig(headersConfig.let(HeadersConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -816,7 +816,7 @@ public open class CfnOriginRequestPolicy(
        * requests. 
        */
       override fun queryStringsConfig(queryStringsConfig: IResolvable) {
-        cdkBuilder.queryStringsConfig(queryStringsConfig.let(IResolvable::unwrap))
+        cdkBuilder.queryStringsConfig(queryStringsConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -824,7 +824,7 @@ public open class CfnOriginRequestPolicy(
        * requests. 
        */
       override fun queryStringsConfig(queryStringsConfig: QueryStringsConfigProperty) {
-        cdkBuilder.queryStringsConfig(queryStringsConfig.let(QueryStringsConfigProperty::unwrap))
+        cdkBuilder.queryStringsConfig(queryStringsConfig.let(QueryStringsConfigProperty.Companion::unwrap))
       }
 
       /**

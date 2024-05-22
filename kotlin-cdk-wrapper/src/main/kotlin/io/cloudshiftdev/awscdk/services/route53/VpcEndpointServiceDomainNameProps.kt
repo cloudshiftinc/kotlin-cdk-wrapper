@@ -91,14 +91,14 @@ public interface VpcEndpointServiceDomainNameProps {
      * @param endpointService The VPC Endpoint Service to configure Private DNS for. 
      */
     override fun endpointService(endpointService: IVpcEndpointService) {
-      cdkBuilder.endpointService(endpointService.let(IVpcEndpointService::unwrap))
+      cdkBuilder.endpointService(endpointService.let(IVpcEndpointService.Companion::unwrap))
     }
 
     /**
      * @param publicHostedZone The public hosted zone to use for the domain. 
      */
     override fun publicHostedZone(publicHostedZone: IPublicHostedZone) {
-      cdkBuilder.publicHostedZone(publicHostedZone.let(IPublicHostedZone::unwrap))
+      cdkBuilder.publicHostedZone(publicHostedZone.let(IPublicHostedZone.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.route53.VpcEndpointServiceDomainNameProps =

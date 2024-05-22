@@ -350,7 +350,7 @@ public interface CfnEnvironmentEC2Props {
      * development environment.
      */
     override fun repositories(repositories: IResolvable) {
-      cdkBuilder.repositories(repositories.let(IResolvable::unwrap))
+      cdkBuilder.repositories(repositories.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -380,7 +380,7 @@ public interface CfnEnvironmentEC2Props {
      * development environment.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

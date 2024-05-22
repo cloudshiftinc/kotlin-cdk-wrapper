@@ -59,6 +59,9 @@ public interface CfnLinkProps {
   public fun labelTemplate(): String? = unwrap(this).getLabelTemplate()
 
   /**
+   * Use this structure to optionally create filters that specify that only some metric namespaces
+   * or log groups are to be shared from the source account to the monitoring account.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-linkconfiguration)
    */
   public fun linkConfiguration(): Any? = unwrap(this).getLinkConfiguration()
@@ -113,17 +116,23 @@ public interface CfnLinkProps {
     public fun labelTemplate(labelTemplate: String)
 
     /**
-     * @param linkConfiguration the value to be set.
+     * @param linkConfiguration Use this structure to optionally create filters that specify that
+     * only some metric namespaces or log groups are to be shared from the source account to the
+     * monitoring account.
      */
     public fun linkConfiguration(linkConfiguration: IResolvable)
 
     /**
-     * @param linkConfiguration the value to be set.
+     * @param linkConfiguration Use this structure to optionally create filters that specify that
+     * only some metric namespaces or log groups are to be shared from the source account to the
+     * monitoring account.
      */
     public fun linkConfiguration(linkConfiguration: CfnLink.LinkConfigurationProperty)
 
     /**
-     * @param linkConfiguration the value to be set.
+     * @param linkConfiguration Use this structure to optionally create filters that specify that
+     * only some metric namespaces or log groups are to be shared from the source account to the
+     * monitoring account.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c16b83fb005aa5f502bdd496d9c5765d2c4a68deb4bc415651ae331455a32cfc")
@@ -183,21 +192,27 @@ public interface CfnLinkProps {
     }
 
     /**
-     * @param linkConfiguration the value to be set.
+     * @param linkConfiguration Use this structure to optionally create filters that specify that
+     * only some metric namespaces or log groups are to be shared from the source account to the
+     * monitoring account.
      */
     override fun linkConfiguration(linkConfiguration: IResolvable) {
-      cdkBuilder.linkConfiguration(linkConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.linkConfiguration(linkConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param linkConfiguration the value to be set.
+     * @param linkConfiguration Use this structure to optionally create filters that specify that
+     * only some metric namespaces or log groups are to be shared from the source account to the
+     * monitoring account.
      */
     override fun linkConfiguration(linkConfiguration: CfnLink.LinkConfigurationProperty) {
-      cdkBuilder.linkConfiguration(linkConfiguration.let(CfnLink.LinkConfigurationProperty::unwrap))
+      cdkBuilder.linkConfiguration(linkConfiguration.let(CfnLink.LinkConfigurationProperty.Companion::unwrap))
     }
 
     /**
-     * @param linkConfiguration the value to be set.
+     * @param linkConfiguration Use this structure to optionally create filters that specify that
+     * only some metric namespaces or log groups are to be shared from the source account to the
+     * monitoring account.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c16b83fb005aa5f502bdd496d9c5765d2c4a68deb4bc415651ae331455a32cfc")
@@ -267,6 +282,9 @@ public interface CfnLinkProps {
     override fun labelTemplate(): String? = unwrap(this).getLabelTemplate()
 
     /**
+     * Use this structure to optionally create filters that specify that only some metric namespaces
+     * or log groups are to be shared from the source account to the monitoring account.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-linkconfiguration)
      */
     override fun linkConfiguration(): Any? = unwrap(this).getLinkConfiguration()

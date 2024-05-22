@@ -63,6 +63,7 @@ import kotlin.collections.List
  * .useGrouping(false)
  * .build())
  * .build())
+ * .disableIndexing(false)
  * .isIncludedInTopic(false)
  * .neverAggregateInFilter(false)
  * .nonAdditive(false)
@@ -117,6 +118,7 @@ import kotlin.collections.List
  * .useGrouping(false)
  * .build())
  * .build())
+ * .disableIndexing(false)
  * .isIncludedInTopic(false)
  * .neverAggregateInFilter(false)
  * .nonAdditive(false)
@@ -268,7 +270,7 @@ public interface CfnTopicProps {
   public fun topicId(): String? = unwrap(this).getTopicId()
 
   /**
-   * The user experience version of a topic.
+   * The user experience version of the topic.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-userexperienceversion)
    */
@@ -316,7 +318,7 @@ public interface CfnTopicProps {
     public fun topicId(topicId: String)
 
     /**
-     * @param userExperienceVersion The user experience version of a topic.
+     * @param userExperienceVersion The user experience version of the topic.
      */
     public fun userExperienceVersion(userExperienceVersion: String)
   }
@@ -336,7 +338,7 @@ public interface CfnTopicProps {
      * @param dataSets The data sets that the topic is associated with.
      */
     override fun dataSets(dataSets: IResolvable) {
-      cdkBuilder.dataSets(dataSets.let(IResolvable::unwrap))
+      cdkBuilder.dataSets(dataSets.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -374,7 +376,7 @@ public interface CfnTopicProps {
     }
 
     /**
-     * @param userExperienceVersion The user experience version of a topic.
+     * @param userExperienceVersion The user experience version of the topic.
      */
     override fun userExperienceVersion(userExperienceVersion: String) {
       cdkBuilder.userExperienceVersion(userExperienceVersion)
@@ -425,7 +427,7 @@ public interface CfnTopicProps {
     override fun topicId(): String? = unwrap(this).getTopicId()
 
     /**
-     * The user experience version of a topic.
+     * The user experience version of the topic.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-userexperienceversion)
      */

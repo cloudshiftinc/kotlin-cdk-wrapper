@@ -111,7 +111,7 @@ public interface TopicPolicyProps {
      * @param policyDocument IAM policy document to apply to topic(s).
      */
     override fun policyDocument(policyDocument: PolicyDocument) {
-      cdkBuilder.policyDocument(policyDocument.let(PolicyDocument::unwrap))
+      cdkBuilder.policyDocument(policyDocument.let(PolicyDocument.Companion::unwrap))
     }
 
     /**
@@ -126,7 +126,7 @@ public interface TopicPolicyProps {
      * @param topics The set of topics this policy applies to. 
      */
     override fun topics(topics: List<ITopic>) {
-      cdkBuilder.topics(topics.map(ITopic::unwrap))
+      cdkBuilder.topics(topics.map(ITopic.Companion::unwrap))
     }
 
     /**

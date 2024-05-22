@@ -38,8 +38,8 @@ public open class CfnEventStream(
     id: String,
     props: CfnEventStreamProps,
   ) :
-      this(software.amazon.awscdk.services.pinpoint.CfnEventStream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEventStreamProps::unwrap))
+      this(software.amazon.awscdk.services.pinpoint.CfnEventStream(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEventStreamProps.Companion::unwrap))
   )
 
   public constructor(
@@ -86,7 +86,7 @@ public open class CfnEventStream(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

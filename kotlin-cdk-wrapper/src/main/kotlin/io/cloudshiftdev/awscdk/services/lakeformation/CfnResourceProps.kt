@@ -139,7 +139,7 @@ public interface CfnResourceProps {
      * location can be managed by both Lake Formation permissions as well as Amazon S3 bucket policies.
      */
     override fun hybridAccessEnabled(hybridAccessEnabled: IResolvable) {
-      cdkBuilder.hybridAccessEnabled(hybridAccessEnabled.let(IResolvable::unwrap))
+      cdkBuilder.hybridAccessEnabled(hybridAccessEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -169,7 +169,7 @@ public interface CfnResourceProps {
      * this caller with the Data Catalog . 
      */
     override fun useServiceLinkedRole(useServiceLinkedRole: IResolvable) {
-      cdkBuilder.useServiceLinkedRole(useServiceLinkedRole.let(IResolvable::unwrap))
+      cdkBuilder.useServiceLinkedRole(useServiceLinkedRole.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -185,7 +185,7 @@ public interface CfnResourceProps {
      * database.
      */
     override fun withFederation(withFederation: IResolvable) {
-      cdkBuilder.withFederation(withFederation.let(IResolvable::unwrap))
+      cdkBuilder.withFederation(withFederation.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lakeformation.CfnResourceProps =

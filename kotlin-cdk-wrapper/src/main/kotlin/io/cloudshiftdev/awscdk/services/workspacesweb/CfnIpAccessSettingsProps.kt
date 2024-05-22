@@ -158,7 +158,7 @@ public interface CfnIpAccessSettingsProps {
      * @param additionalEncryptionContext Additional encryption context of the IP access settings.
      */
     override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable::unwrap))
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -194,7 +194,7 @@ public interface CfnIpAccessSettingsProps {
      * @param ipRules The IP rules of the IP access settings. 
      */
     override fun ipRules(ipRules: IResolvable) {
-      cdkBuilder.ipRules(ipRules.let(IResolvable::unwrap))
+      cdkBuilder.ipRules(ipRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -214,7 +214,7 @@ public interface CfnIpAccessSettingsProps {
      * A tag is a key-value pair.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

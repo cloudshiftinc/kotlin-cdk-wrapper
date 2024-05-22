@@ -95,7 +95,7 @@ public interface CfnStandardProps {
      * *Maximum* : `100`
      */
     override fun disabledStandardsControls(disabledStandardsControls: IResolvable) {
-      cdkBuilder.disabledStandardsControls(disabledStandardsControls.let(IResolvable::unwrap))
+      cdkBuilder.disabledStandardsControls(disabledStandardsControls.let(IResolvable.Companion::unwrap))
     }
 
     /**

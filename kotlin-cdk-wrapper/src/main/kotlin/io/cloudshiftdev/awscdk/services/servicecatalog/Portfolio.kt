@@ -34,8 +34,8 @@ public open class Portfolio(
     id: String,
     props: PortfolioProps,
   ) :
-      this(software.amazon.awscdk.services.servicecatalog.Portfolio(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(PortfolioProps::unwrap))
+      this(software.amazon.awscdk.services.servicecatalog.Portfolio(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(PortfolioProps.Companion::unwrap))
   )
 
   public constructor(
@@ -51,7 +51,7 @@ public open class Portfolio(
    * @param product 
    */
   public override fun addProduct(product: IProduct) {
-    unwrap(this).addProduct(product.let(IProduct::unwrap))
+    unwrap(this).addProduct(product.let(IProduct.Companion::unwrap))
   }
 
   /**
@@ -63,7 +63,7 @@ public open class Portfolio(
    * @param tagOptions 
    */
   public override fun associateTagOptions(tagOptions: TagOptions) {
-    unwrap(this).associateTagOptions(tagOptions.let(TagOptions::unwrap))
+    unwrap(this).associateTagOptions(tagOptions.let(TagOptions.Companion::unwrap))
   }
 
   /**
@@ -74,8 +74,8 @@ public open class Portfolio(
    */
   public override fun constrainCloudFormationParameters(product: IProduct,
       options: CloudFormationRuleConstraintOptions) {
-    unwrap(this).constrainCloudFormationParameters(product.let(IProduct::unwrap),
-        options.let(CloudFormationRuleConstraintOptions::unwrap))
+    unwrap(this).constrainCloudFormationParameters(product.let(IProduct.Companion::unwrap),
+        options.let(CloudFormationRuleConstraintOptions.Companion::unwrap))
   }
 
   /**
@@ -97,7 +97,7 @@ public open class Portfolio(
    * @param options
    */
   public override fun constrainTagUpdates(product: IProduct) {
-    unwrap(this).constrainTagUpdates(product.let(IProduct::unwrap))
+    unwrap(this).constrainTagUpdates(product.let(IProduct.Companion::unwrap))
   }
 
   /**
@@ -107,8 +107,8 @@ public open class Portfolio(
    * @param options
    */
   public override fun constrainTagUpdates(product: IProduct, options: TagUpdateConstraintOptions) {
-    unwrap(this).constrainTagUpdates(product.let(IProduct::unwrap),
-        options.let(TagUpdateConstraintOptions::unwrap))
+    unwrap(this).constrainTagUpdates(product.let(IProduct.Companion::unwrap),
+        options.let(TagUpdateConstraintOptions.Companion::unwrap))
   }
 
   /**
@@ -130,8 +130,8 @@ public open class Portfolio(
    * @param options 
    */
   public override fun deployWithStackSets(product: IProduct, options: StackSetsConstraintOptions) {
-    unwrap(this).deployWithStackSets(product.let(IProduct::unwrap),
-        options.let(StackSetsConstraintOptions::unwrap))
+    unwrap(this).deployWithStackSets(product.let(IProduct.Companion::unwrap),
+        options.let(StackSetsConstraintOptions.Companion::unwrap))
   }
 
   /**
@@ -152,7 +152,7 @@ public open class Portfolio(
    * @param group 
    */
   public override fun giveAccessToGroup(group: IGroup) {
-    unwrap(this).giveAccessToGroup(group.let(IGroup::unwrap))
+    unwrap(this).giveAccessToGroup(group.let(IGroup.Companion::unwrap))
   }
 
   /**
@@ -161,7 +161,7 @@ public open class Portfolio(
    * @param role 
    */
   public override fun giveAccessToRole(role: IRole) {
-    unwrap(this).giveAccessToRole(role.let(IRole::unwrap))
+    unwrap(this).giveAccessToRole(role.let(IRole.Companion::unwrap))
   }
 
   /**
@@ -170,7 +170,7 @@ public open class Portfolio(
    * @param user 
    */
   public override fun giveAccessToUser(user: IUser) {
-    unwrap(this).giveAccessToUser(user.let(IUser::unwrap))
+    unwrap(this).giveAccessToUser(user.let(IUser.Companion::unwrap))
   }
 
   /**
@@ -185,7 +185,8 @@ public open class Portfolio(
    * @param options
    */
   public override fun launchRole(product: IProduct, launchRole: IRole) {
-    unwrap(this).setLaunchRole(product.let(IProduct::unwrap), launchRole.let(IRole::unwrap))
+    unwrap(this).setLaunchRole(product.let(IProduct.Companion::unwrap),
+        launchRole.let(IRole.Companion::unwrap))
   }
 
   /**
@@ -204,8 +205,9 @@ public open class Portfolio(
     launchRole: IRole,
     options: CommonConstraintOptions,
   ) {
-    unwrap(this).setLaunchRole(product.let(IProduct::unwrap), launchRole.let(IRole::unwrap),
-        options.let(CommonConstraintOptions::unwrap))
+    unwrap(this).setLaunchRole(product.let(IProduct.Companion::unwrap),
+        launchRole.let(IRole.Companion::unwrap),
+        options.let(CommonConstraintOptions.Companion::unwrap))
   }
 
   /**
@@ -238,7 +240,8 @@ public open class Portfolio(
    * @param options
    */
   public override fun localLaunchRole(product: IProduct, launchRole: IRole) {
-    unwrap(this).setLocalLaunchRole(product.let(IProduct::unwrap), launchRole.let(IRole::unwrap))
+    unwrap(this).setLocalLaunchRole(product.let(IProduct.Companion::unwrap),
+        launchRole.let(IRole.Companion::unwrap))
   }
 
   /**
@@ -256,8 +259,9 @@ public open class Portfolio(
     launchRole: IRole,
     options: CommonConstraintOptions,
   ) {
-    unwrap(this).setLocalLaunchRole(product.let(IProduct::unwrap), launchRole.let(IRole::unwrap),
-        options.let(CommonConstraintOptions::unwrap))
+    unwrap(this).setLocalLaunchRole(product.let(IProduct.Companion::unwrap),
+        launchRole.let(IRole.Companion::unwrap),
+        options.let(CommonConstraintOptions.Companion::unwrap))
   }
 
   /**
@@ -291,7 +295,7 @@ public open class Portfolio(
    * @param options
    */
   public override fun localLaunchRoleName(product: IProduct, launchRoleName: String): IRole =
-      unwrap(this).setLocalLaunchRoleName(product.let(IProduct::unwrap),
+      unwrap(this).setLocalLaunchRoleName(product.let(IProduct.Companion::unwrap),
       launchRoleName).let(IRole::wrap)
 
   /**
@@ -310,8 +314,8 @@ public open class Portfolio(
     product: IProduct,
     launchRoleName: String,
     options: CommonConstraintOptions,
-  ): IRole = unwrap(this).setLocalLaunchRoleName(product.let(IProduct::unwrap), launchRoleName,
-      options.let(CommonConstraintOptions::unwrap)).let(IRole::wrap)
+  ): IRole = unwrap(this).setLocalLaunchRoleName(product.let(IProduct.Companion::unwrap),
+      launchRoleName, options.let(CommonConstraintOptions.Companion::unwrap)).let(IRole::wrap)
 
   /**
    * Force users to assume a certain role when launching a product.
@@ -341,7 +345,8 @@ public open class Portfolio(
    * @param options
    */
   public override fun notifyOnStackEvents(product: IProduct, topic: ITopic) {
-    unwrap(this).notifyOnStackEvents(product.let(IProduct::unwrap), topic.let(ITopic::unwrap))
+    unwrap(this).notifyOnStackEvents(product.let(IProduct.Companion::unwrap),
+        topic.let(ITopic.Companion::unwrap))
   }
 
   /**
@@ -356,8 +361,8 @@ public open class Portfolio(
     topic: ITopic,
     options: CommonConstraintOptions,
   ) {
-    unwrap(this).notifyOnStackEvents(product.let(IProduct::unwrap), topic.let(ITopic::unwrap),
-        options.let(CommonConstraintOptions::unwrap))
+    unwrap(this).notifyOnStackEvents(product.let(IProduct.Companion::unwrap),
+        topic.let(ITopic.Companion::unwrap), options.let(CommonConstraintOptions.Companion::unwrap))
   }
 
   /**
@@ -402,7 +407,7 @@ public open class Portfolio(
    * @param options
    */
   public override fun shareWithAccount(accountId: String, options: PortfolioShareOptions) {
-    unwrap(this).shareWithAccount(accountId, options.let(PortfolioShareOptions::unwrap))
+    unwrap(this).shareWithAccount(accountId, options.let(PortfolioShareOptions.Companion::unwrap))
   }
 
   /**
@@ -505,7 +510,7 @@ public open class Portfolio(
      * @param messageLanguage The message language. 
      */
     override fun messageLanguage(messageLanguage: MessageLanguage) {
-      cdkBuilder.messageLanguage(messageLanguage.let(MessageLanguage::unwrap))
+      cdkBuilder.messageLanguage(messageLanguage.let(MessageLanguage.Companion::unwrap))
     }
 
     /**
@@ -525,7 +530,7 @@ public open class Portfolio(
      * @param tagOptions TagOptions associated directly to a portfolio. 
      */
     override fun tagOptions(tagOptions: TagOptions) {
-      cdkBuilder.tagOptions(tagOptions.let(TagOptions::unwrap))
+      cdkBuilder.tagOptions(tagOptions.let(TagOptions.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.servicecatalog.Portfolio =
@@ -538,7 +543,7 @@ public open class Portfolio(
       id: String,
       portfolioArn: String,
     ): IPortfolio =
-        software.amazon.awscdk.services.servicecatalog.Portfolio.fromPortfolioArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.servicecatalog.Portfolio.fromPortfolioArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, portfolioArn).let(IPortfolio::wrap)
 
     public operator fun invoke(

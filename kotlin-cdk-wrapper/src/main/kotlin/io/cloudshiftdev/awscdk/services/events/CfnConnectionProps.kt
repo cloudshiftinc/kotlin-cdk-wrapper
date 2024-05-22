@@ -176,7 +176,7 @@ public interface CfnConnectionProps {
      * authorization parameters to use to authorize with the endpoint.
      */
     override fun authParameters(authParameters: IResolvable) {
-      cdkBuilder.authParameters(authParameters.let(IResolvable::unwrap))
+      cdkBuilder.authParameters(authParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -184,7 +184,7 @@ public interface CfnConnectionProps {
      * authorization parameters to use to authorize with the endpoint.
      */
     override fun authParameters(authParameters: CfnConnection.AuthParametersProperty) {
-      cdkBuilder.authParameters(authParameters.let(CfnConnection.AuthParametersProperty::unwrap))
+      cdkBuilder.authParameters(authParameters.let(CfnConnection.AuthParametersProperty.Companion::unwrap))
     }
 
     /**

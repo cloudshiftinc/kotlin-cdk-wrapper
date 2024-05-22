@@ -95,7 +95,7 @@ public interface DeployCommand : CdkCommand {
      * functionality.
      */
     override fun args(args: DeployOptions) {
-      cdkBuilder.args(args.let(DeployOptions::unwrap))
+      cdkBuilder.args(args.let(DeployOptions.Companion::unwrap))
     }
 
     /**

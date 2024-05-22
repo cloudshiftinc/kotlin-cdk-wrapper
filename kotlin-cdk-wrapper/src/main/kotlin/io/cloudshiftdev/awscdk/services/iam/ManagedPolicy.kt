@@ -42,7 +42,7 @@ public open class ManagedPolicy(
   cdkObject: software.amazon.awscdk.services.iam.ManagedPolicy,
 ) : Resource(cdkObject), IManagedPolicy, IGrantable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.iam.ManagedPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.iam.ManagedPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -51,8 +51,8 @@ public open class ManagedPolicy(
     id: String,
     props: ManagedPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.iam.ManagedPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ManagedPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.iam.ManagedPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ManagedPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -88,7 +88,7 @@ public open class ManagedPolicy(
    * @param group 
    */
   public open fun attachToGroup(group: IGroup) {
-    unwrap(this).attachToGroup(group.let(IGroup::unwrap))
+    unwrap(this).attachToGroup(group.let(IGroup.Companion::unwrap))
   }
 
   /**
@@ -97,7 +97,7 @@ public open class ManagedPolicy(
    * @param role 
    */
   public open fun attachToRole(role: IRole) {
-    unwrap(this).attachToRole(role.let(IRole::unwrap))
+    unwrap(this).attachToRole(role.let(IRole.Companion::unwrap))
   }
 
   /**
@@ -106,7 +106,7 @@ public open class ManagedPolicy(
    * @param user 
    */
   public open fun attachToUser(user: IUser) {
-    unwrap(this).attachToUser(user.let(IUser::unwrap))
+    unwrap(this).attachToUser(user.let(IUser.Companion::unwrap))
   }
 
   /**
@@ -342,7 +342,7 @@ public open class ManagedPolicy(
      * @param document Initial PolicyDocument to use for this ManagedPolicy. 
      */
     override fun document(document: PolicyDocument) {
-      cdkBuilder.document(document.let(PolicyDocument::unwrap))
+      cdkBuilder.document(document.let(PolicyDocument.Companion::unwrap))
     }
 
     /**
@@ -371,7 +371,7 @@ public open class ManagedPolicy(
      * @param groups Groups to attach this policy to. 
      */
     override fun groups(groups: List<IGroup>) {
-      cdkBuilder.groups(groups.map(IGroup::unwrap))
+      cdkBuilder.groups(groups.map(IGroup.Companion::unwrap))
     }
 
     /**
@@ -430,7 +430,7 @@ public open class ManagedPolicy(
      * @param roles Roles to attach this policy to. 
      */
     override fun roles(roles: List<IRole>) {
-      cdkBuilder.roles(roles.map(IRole::unwrap))
+      cdkBuilder.roles(roles.map(IRole.Companion::unwrap))
     }
 
     /**
@@ -454,7 +454,7 @@ public open class ManagedPolicy(
      * @param statements Initial set of permissions to add to this policy document. 
      */
     override fun statements(statements: List<PolicyStatement>) {
-      cdkBuilder.statements(statements.map(PolicyStatement::unwrap))
+      cdkBuilder.statements(statements.map(PolicyStatement.Companion::unwrap))
     }
 
     /**
@@ -479,7 +479,7 @@ public open class ManagedPolicy(
      * @param users Users to attach this policy to. 
      */
     override fun users(users: List<IUser>) {
-      cdkBuilder.users(users.map(IUser::unwrap))
+      cdkBuilder.users(users.map(IUser.Companion::unwrap))
     }
 
     /**
@@ -505,7 +505,7 @@ public open class ManagedPolicy(
       id: String,
       managedPolicyArn: String,
     ): IManagedPolicy =
-        software.amazon.awscdk.services.iam.ManagedPolicy.fromManagedPolicyArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.iam.ManagedPolicy.fromManagedPolicyArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, managedPolicyArn).let(IManagedPolicy::wrap)
 
     public fun fromManagedPolicyName(
@@ -513,7 +513,7 @@ public open class ManagedPolicy(
       id: String,
       managedPolicyName: String,
     ): IManagedPolicy =
-        software.amazon.awscdk.services.iam.ManagedPolicy.fromManagedPolicyName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.iam.ManagedPolicy.fromManagedPolicyName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, managedPolicyName).let(IManagedPolicy::wrap)
 
     public operator fun invoke(

@@ -37,8 +37,8 @@ public open class ClientVpnAuthorizationRule(
     id: String,
     props: ClientVpnAuthorizationRuleProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ClientVpnAuthorizationRuleProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.ClientVpnAuthorizationRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ClientVpnAuthorizationRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -118,7 +118,7 @@ public open class ClientVpnAuthorizationRule(
      * @param clientVpnEndpoint The client VPN endpoint to which to add the rule. 
      */
     override fun clientVpnEndpoint(clientVpnEndpoint: IClientVpnEndpoint) {
-      cdkBuilder.clientVpnEndpoint(clientVpnEndpoint.let(IClientVpnEndpoint::unwrap))
+      cdkBuilder.clientVpnEndpoint(clientVpnEndpoint.let(IClientVpnEndpoint.Companion::unwrap))
     }
 
     /**

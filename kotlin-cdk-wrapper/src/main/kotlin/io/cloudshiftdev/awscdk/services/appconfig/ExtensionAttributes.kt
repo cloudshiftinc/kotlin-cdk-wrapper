@@ -119,7 +119,7 @@ public interface ExtensionAttributes {
      * @param actions The actions of the extension.
      */
     override fun actions(actions: List<Action>) {
-      cdkBuilder.actions(actions.map(Action::unwrap))
+      cdkBuilder.actions(actions.map(Action.Companion::unwrap))
     }
 
     /**

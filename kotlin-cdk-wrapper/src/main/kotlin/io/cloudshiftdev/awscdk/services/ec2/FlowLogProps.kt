@@ -110,7 +110,7 @@ public interface FlowLogProps : FlowLogOptions {
      * Flow log data can be published to CloudWatch Logs or Amazon S3
      */
     override fun destination(destination: FlowLogDestination) {
-      cdkBuilder.destination(destination.let(FlowLogDestination::unwrap))
+      cdkBuilder.destination(destination.let(FlowLogDestination.Companion::unwrap))
     }
 
     /**
@@ -132,7 +132,7 @@ public interface FlowLogProps : FlowLogOptions {
      * See https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs.html#flow-log-records
      */
     override fun logFormat(logFormat: List<LogFormat>) {
-      cdkBuilder.logFormat(logFormat.map(LogFormat::unwrap))
+      cdkBuilder.logFormat(logFormat.map(LogFormat.Companion::unwrap))
     }
 
     /**
@@ -153,14 +153,14 @@ public interface FlowLogProps : FlowLogOptions {
      * this property must be ONE_MINUTES.
      */
     override fun maxAggregationInterval(maxAggregationInterval: FlowLogMaxAggregationInterval) {
-      cdkBuilder.maxAggregationInterval(maxAggregationInterval.let(FlowLogMaxAggregationInterval::unwrap))
+      cdkBuilder.maxAggregationInterval(maxAggregationInterval.let(FlowLogMaxAggregationInterval.Companion::unwrap))
     }
 
     /**
      * @param resourceType The type of resource for which to create the flow log. 
      */
     override fun resourceType(resourceType: FlowLogResourceType) {
-      cdkBuilder.resourceType(resourceType.let(FlowLogResourceType::unwrap))
+      cdkBuilder.resourceType(resourceType.let(FlowLogResourceType.Companion::unwrap))
     }
 
     /**
@@ -170,7 +170,7 @@ public interface FlowLogProps : FlowLogOptions {
      * type is not possible.
      */
     override fun trafficType(trafficType: FlowLogTrafficType) {
-      cdkBuilder.trafficType(trafficType.let(FlowLogTrafficType::unwrap))
+      cdkBuilder.trafficType(trafficType.let(FlowLogTrafficType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.FlowLogProps = cdkBuilder.build()

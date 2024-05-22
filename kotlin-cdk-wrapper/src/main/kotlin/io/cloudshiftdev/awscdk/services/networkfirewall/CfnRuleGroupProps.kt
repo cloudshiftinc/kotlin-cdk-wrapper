@@ -270,14 +270,14 @@ public interface CfnRuleGroupProps {
      * @param ruleGroup An object that defines the rule group rules.
      */
     override fun ruleGroup(ruleGroup: IResolvable) {
-      cdkBuilder.ruleGroup(ruleGroup.let(IResolvable::unwrap))
+      cdkBuilder.ruleGroup(ruleGroup.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param ruleGroup An object that defines the rule group rules.
      */
     override fun ruleGroup(ruleGroup: CfnRuleGroup.RuleGroupProperty) {
-      cdkBuilder.ruleGroup(ruleGroup.let(CfnRuleGroup.RuleGroupProperty::unwrap))
+      cdkBuilder.ruleGroup(ruleGroup.let(CfnRuleGroup.RuleGroupProperty.Companion::unwrap))
     }
 
     /**
@@ -303,7 +303,7 @@ public interface CfnRuleGroupProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

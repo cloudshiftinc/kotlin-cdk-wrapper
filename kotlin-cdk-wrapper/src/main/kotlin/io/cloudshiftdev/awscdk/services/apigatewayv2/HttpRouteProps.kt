@@ -125,21 +125,21 @@ public interface HttpRouteProps : BatchHttpRouteOptions {
      * @param authorizer Authorizer for a WebSocket API or an HTTP API.
      */
     override fun authorizer(authorizer: IHttpRouteAuthorizer) {
-      cdkBuilder.authorizer(authorizer.let(IHttpRouteAuthorizer::unwrap))
+      cdkBuilder.authorizer(authorizer.let(IHttpRouteAuthorizer.Companion::unwrap))
     }
 
     /**
      * @param httpApi the API the route is associated with. 
      */
     override fun httpApi(httpApi: IHttpApi) {
-      cdkBuilder.httpApi(httpApi.let(IHttpApi::unwrap))
+      cdkBuilder.httpApi(httpApi.let(IHttpApi.Companion::unwrap))
     }
 
     /**
      * @param integration The integration to be configured on this route. 
      */
     override fun integration(integration: HttpRouteIntegration) {
-      cdkBuilder.integration(integration.let(HttpRouteIntegration::unwrap))
+      cdkBuilder.integration(integration.let(HttpRouteIntegration.Companion::unwrap))
     }
 
     /**
@@ -147,7 +147,7 @@ public interface HttpRouteProps : BatchHttpRouteOptions {
      * This is a combination of an HTTP method and an HTTP path.
      */
     override fun routeKey(routeKey: HttpRouteKey) {
-      cdkBuilder.routeKey(routeKey.let(HttpRouteKey::unwrap))
+      cdkBuilder.routeKey(routeKey.let(HttpRouteKey.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.HttpRouteProps =

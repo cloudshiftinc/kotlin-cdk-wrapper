@@ -32,8 +32,9 @@ public open class CfnHook(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
     props: CfnHookProps,
-  ) : this(software.amazon.awscdk.CfnHook(scope.let(CloudshiftdevConstructsConstruct::unwrap), id,
-      props.let(CfnHookProps::unwrap))
+  ) :
+      this(software.amazon.awscdk.CfnHook(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnHookProps.Companion::unwrap))
   )
 
   public constructor(

@@ -211,7 +211,7 @@ public interface LogQueryWidgetProps {
      * @param view The type of view to use.
      */
     override fun view(view: LogQueryVisualizationType) {
-      cdkBuilder.view(view.let(LogQueryVisualizationType::unwrap))
+      cdkBuilder.view(view.let(LogQueryVisualizationType.Companion::unwrap))
     }
 
     /**

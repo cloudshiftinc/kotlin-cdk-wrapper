@@ -91,7 +91,7 @@ public interface ApplicationListenerAttributes {
      * @param securityGroup Security group of the load balancer this listener is associated with. 
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     public fun build():

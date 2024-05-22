@@ -64,7 +64,7 @@ public interface AddToResourcePolicyResult {
      * @param policyDependable Dependable which allows depending on the policy change being applied.
      */
     override fun policyDependable(policyDependable: IDependable) {
-      cdkBuilder.policyDependable(policyDependable.let(IDependable::unwrap))
+      cdkBuilder.policyDependable(policyDependable.let(IDependable.Companion::unwrap))
     }
 
     /**

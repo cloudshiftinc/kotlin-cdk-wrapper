@@ -25,7 +25,7 @@ public interface IEventSource {
      * @param target That lambda function to bind to. 
      */
     override fun bind(target: IFunction) {
-      unwrap(this).bind(target.let(IFunction::unwrap))
+      unwrap(this).bind(target.let(IFunction.Companion::unwrap))
     }
   }
 

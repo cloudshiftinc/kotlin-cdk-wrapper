@@ -42,8 +42,8 @@ public open class ScalableTarget(
     id: String,
     props: ScalableTargetProps,
   ) :
-      this(software.amazon.awscdk.services.applicationautoscaling.ScalableTarget(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ScalableTargetProps::unwrap))
+      this(software.amazon.awscdk.services.applicationautoscaling.ScalableTarget(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ScalableTargetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -59,7 +59,7 @@ public open class ScalableTarget(
    * @param statement 
    */
   public open fun addToRolePolicy(statement: PolicyStatement) {
-    unwrap(this).addToRolePolicy(statement.let(PolicyStatement::unwrap))
+    unwrap(this).addToRolePolicy(statement.let(PolicyStatement.Companion::unwrap))
   }
 
   /**
@@ -93,7 +93,7 @@ public open class ScalableTarget(
    */
   public open fun scaleOnMetric(id: String, props: BasicStepScalingPolicyProps): StepScalingPolicy =
       unwrap(this).scaleOnMetric(id,
-      props.let(BasicStepScalingPolicyProps::unwrap)).let(StepScalingPolicy::wrap)
+      props.let(BasicStepScalingPolicyProps.Companion::unwrap)).let(StepScalingPolicy::wrap)
 
   /**
    * Scale out or in, in response to a metric.
@@ -113,7 +113,7 @@ public open class ScalableTarget(
    * @param action 
    */
   public open fun scaleOnSchedule(id: String, action: ScalingSchedule) {
-    unwrap(this).scaleOnSchedule(id, action.let(ScalingSchedule::unwrap))
+    unwrap(this).scaleOnSchedule(id, action.let(ScalingSchedule.Companion::unwrap))
   }
 
   /**
@@ -135,7 +135,7 @@ public open class ScalableTarget(
    */
   public open fun scaleToTrackMetric(id: String, props: BasicTargetTrackingScalingPolicyProps):
       TargetTrackingScalingPolicy = unwrap(this).scaleToTrackMetric(id,
-      props.let(BasicTargetTrackingScalingPolicyProps::unwrap)).let(TargetTrackingScalingPolicy::wrap)
+      props.let(BasicTargetTrackingScalingPolicyProps.Companion::unwrap)).let(TargetTrackingScalingPolicy::wrap)
 
   /**
    * Scale out or in in order to keep a metric around a target value.
@@ -274,7 +274,7 @@ public open class ScalableTarget(
      * @param role Role that allows Application Auto Scaling to modify your scalable target. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -303,7 +303,7 @@ public open class ScalableTarget(
      * custom-resource for a resource provided by your own application or service. 
      */
     override fun serviceNamespace(serviceNamespace: ServiceNamespace) {
-      cdkBuilder.serviceNamespace(serviceNamespace.let(ServiceNamespace::unwrap))
+      cdkBuilder.serviceNamespace(serviceNamespace.let(ServiceNamespace.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.applicationautoscaling.ScalableTarget =
@@ -316,7 +316,7 @@ public open class ScalableTarget(
       id: String,
       scalableTargetId: String,
     ): IScalableTarget =
-        software.amazon.awscdk.services.applicationautoscaling.ScalableTarget.fromScalableTargetId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.applicationautoscaling.ScalableTarget.fromScalableTargetId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, scalableTargetId).let(IScalableTarget::wrap)
 
     public operator fun invoke(

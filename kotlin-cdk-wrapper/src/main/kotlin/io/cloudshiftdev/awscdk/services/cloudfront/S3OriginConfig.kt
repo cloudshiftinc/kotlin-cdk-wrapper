@@ -111,7 +111,7 @@ public interface S3OriginConfig {
      * cloudfront will use when calling your s3 bucket.
      */
     override fun originAccessIdentity(originAccessIdentity: IOriginAccessIdentity) {
-      cdkBuilder.originAccessIdentity(originAccessIdentity.let(IOriginAccessIdentity::unwrap))
+      cdkBuilder.originAccessIdentity(originAccessIdentity.let(IOriginAccessIdentity.Companion::unwrap))
     }
 
     /**
@@ -140,7 +140,7 @@ public interface S3OriginConfig {
      * @param s3BucketSource The source bucket to serve content from. 
      */
     override fun s3BucketSource(s3BucketSource: IBucket) {
-      cdkBuilder.s3BucketSource(s3BucketSource.let(IBucket::unwrap))
+      cdkBuilder.s3BucketSource(s3BucketSource.let(IBucket.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.S3OriginConfig =

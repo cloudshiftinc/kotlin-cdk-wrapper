@@ -140,7 +140,7 @@ public interface ExecuteCommandLogConfiguration {
      * The CloudWatch log group must already be created.
      */
     override fun cloudWatchLogGroup(cloudWatchLogGroup: ILogGroup) {
-      cdkBuilder.cloudWatchLogGroup(cloudWatchLogGroup.let(ILogGroup::unwrap))
+      cdkBuilder.cloudWatchLogGroup(cloudWatchLogGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -148,7 +148,7 @@ public interface ExecuteCommandLogConfiguration {
      * The S3 bucket must already be created.
      */
     override fun s3Bucket(s3Bucket: IBucket) {
-      cdkBuilder.s3Bucket(s3Bucket.let(IBucket::unwrap))
+      cdkBuilder.s3Bucket(s3Bucket.let(IBucket.Companion::unwrap))
     }
 
     /**

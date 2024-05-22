@@ -39,8 +39,8 @@ public open class CfnDomainName(
     id: String,
     props: CfnDomainNameProps,
   ) :
-      this(software.amazon.awscdk.services.appsync.CfnDomainName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDomainNameProps::unwrap))
+      this(software.amazon.awscdk.services.appsync.CfnDomainName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDomainNameProps.Companion::unwrap))
   )
 
   public constructor(
@@ -107,7 +107,7 @@ public open class CfnDomainName(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

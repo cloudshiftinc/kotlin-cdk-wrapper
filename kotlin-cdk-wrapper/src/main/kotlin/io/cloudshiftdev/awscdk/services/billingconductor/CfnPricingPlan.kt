@@ -47,8 +47,8 @@ public open class CfnPricingPlan(
     id: String,
     props: CfnPricingPlanProps,
   ) :
-      this(software.amazon.awscdk.services.billingconductor.CfnPricingPlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPricingPlanProps::unwrap))
+      this(software.amazon.awscdk.services.billingconductor.CfnPricingPlan(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPricingPlanProps.Companion::unwrap))
   )
 
   public constructor(
@@ -96,7 +96,7 @@ public open class CfnPricingPlan(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -143,7 +143,7 @@ public open class CfnPricingPlan(
    * A map that contains tag keys and tag values that are attached to a pricing plan.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -258,7 +258,7 @@ public open class CfnPricingPlan(
      * @param tags A map that contains tag keys and tag values that are attached to a pricing plan. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -62,8 +62,8 @@ public open class CfnAnalysisTemplate(
     id: String,
     props: CfnAnalysisTemplateProps,
   ) :
-      this(software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAnalysisTemplateProps::unwrap))
+      this(software.amazon.awscdk.services.cleanrooms.CfnAnalysisTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAnalysisTemplateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -82,7 +82,7 @@ public open class CfnAnalysisTemplate(
    * The parameters of the analysis template.
    */
   public open fun analysisParameters(`value`: IResolvable) {
-    unwrap(this).setAnalysisParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAnalysisParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -185,7 +185,7 @@ public open class CfnAnalysisTemplate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -221,14 +221,14 @@ public open class CfnAnalysisTemplate(
    * The source of the analysis template.
    */
   public open fun source(`value`: IResolvable) {
-    unwrap(this).setSource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The source of the analysis template.
    */
   public open fun source(`value`: AnalysisSourceProperty) {
-    unwrap(this).setSource(`value`.let(AnalysisSourceProperty::unwrap))
+    unwrap(this).setSource(`value`.let(AnalysisSourceProperty.Companion::unwrap))
   }
 
   /**
@@ -248,7 +248,7 @@ public open class CfnAnalysisTemplate(
    * An optional label that you can assign to a resource when you create it.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -382,7 +382,7 @@ public open class CfnAnalysisTemplate(
      * @param analysisParameters The parameters of the analysis template. 
      */
     override fun analysisParameters(analysisParameters: IResolvable) {
-      cdkBuilder.analysisParameters(analysisParameters.let(IResolvable::unwrap))
+      cdkBuilder.analysisParameters(analysisParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -451,7 +451,7 @@ public open class CfnAnalysisTemplate(
      * @param source The source of the analysis template. 
      */
     override fun source(source: IResolvable) {
-      cdkBuilder.source(source.let(IResolvable::unwrap))
+      cdkBuilder.source(source.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -461,7 +461,7 @@ public open class CfnAnalysisTemplate(
      * @param source The source of the analysis template. 
      */
     override fun source(source: AnalysisSourceProperty) {
-      cdkBuilder.source(source.let(AnalysisSourceProperty::unwrap))
+      cdkBuilder.source(source.let(AnalysisSourceProperty.Companion::unwrap))
     }
 
     /**
@@ -486,7 +486,7 @@ public open class CfnAnalysisTemplate(
      * @param tags An optional label that you can assign to a resource when you create it. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

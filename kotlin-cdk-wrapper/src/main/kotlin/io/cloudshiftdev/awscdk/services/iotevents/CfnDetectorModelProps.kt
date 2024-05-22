@@ -168,7 +168,7 @@ public interface CfnDetectorModelProps {
      * @param detectorModelDefinition Information that defines how a detector operates. 
      */
     override fun detectorModelDefinition(detectorModelDefinition: IResolvable) {
-      cdkBuilder.detectorModelDefinition(detectorModelDefinition.let(IResolvable::unwrap))
+      cdkBuilder.detectorModelDefinition(detectorModelDefinition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -176,7 +176,7 @@ public interface CfnDetectorModelProps {
      */
     override
         fun detectorModelDefinition(detectorModelDefinition: CfnDetectorModel.DetectorModelDefinitionProperty) {
-      cdkBuilder.detectorModelDefinition(detectorModelDefinition.let(CfnDetectorModel.DetectorModelDefinitionProperty::unwrap))
+      cdkBuilder.detectorModelDefinition(detectorModelDefinition.let(CfnDetectorModel.DetectorModelDefinitionProperty.Companion::unwrap))
     }
 
     /**
@@ -240,7 +240,7 @@ public interface CfnDetectorModelProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -402,7 +402,7 @@ public interface TableOptions : SchemaOptions {
      * manage capacity.
      */
     override fun billingMode(billingMode: BillingMode) {
-      cdkBuilder.billingMode(billingMode.let(BillingMode::unwrap))
+      cdkBuilder.billingMode(billingMode.let(BillingMode.Companion::unwrap))
     }
 
     /**
@@ -433,7 +433,7 @@ public interface TableOptions : SchemaOptions {
      * `&#64;aws-cdk/aws-kms:defaultKeyPolicies` is set to `true` in your `cdk.json`.
      */
     override fun encryption(encryption: TableEncryption) {
-      cdkBuilder.encryption(encryption.let(TableEncryption::unwrap))
+      cdkBuilder.encryption(encryption.let(TableEncryption.Companion::unwrap))
     }
 
     /**
@@ -441,7 +441,7 @@ public interface TableOptions : SchemaOptions {
      * This property can only be set if `encryption` is set to `TableEncryption.CUSTOMER_MANAGED`.
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -449,7 +449,7 @@ public interface TableOptions : SchemaOptions {
      * table.
      */
     override fun importSource(importSource: ImportSourceSpecification) {
-      cdkBuilder.importSource(importSource.let(ImportSourceSpecification::unwrap))
+      cdkBuilder.importSource(importSource.let(ImportSourceSpecification.Companion::unwrap))
     }
 
     /**
@@ -465,7 +465,7 @@ public interface TableOptions : SchemaOptions {
      * @param partitionKey Partition key attribute definition. 
      */
     override fun partitionKey(partitionKey: Attribute) {
-      cdkBuilder.partitionKey(partitionKey.let(Attribute::unwrap))
+      cdkBuilder.partitionKey(partitionKey.let(Attribute.Companion::unwrap))
     }
 
     /**
@@ -498,7 +498,7 @@ public interface TableOptions : SchemaOptions {
      * @param removalPolicy The removal policy to apply to the DynamoDB Table.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -518,14 +518,14 @@ public interface TableOptions : SchemaOptions {
      * @param replicationTimeout The timeout for a table replication operation in a single region.
      */
     override fun replicationTimeout(replicationTimeout: Duration) {
-      cdkBuilder.replicationTimeout(replicationTimeout.let(Duration::unwrap))
+      cdkBuilder.replicationTimeout(replicationTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param sortKey Sort key attribute definition.
      */
     override fun sortKey(sortKey: Attribute) {
-      cdkBuilder.sortKey(sortKey.let(Attribute::unwrap))
+      cdkBuilder.sortKey(sortKey.let(Attribute.Companion::unwrap))
     }
 
     /**
@@ -540,14 +540,14 @@ public interface TableOptions : SchemaOptions {
      * information is written to the stream for this table.
      */
     override fun stream(stream: StreamViewType) {
-      cdkBuilder.stream(stream.let(StreamViewType::unwrap))
+      cdkBuilder.stream(stream.let(StreamViewType.Companion::unwrap))
     }
 
     /**
      * @param tableClass Specify the table class.
      */
     override fun tableClass(tableClass: TableClass) {
-      cdkBuilder.tableClass(tableClass.let(TableClass::unwrap))
+      cdkBuilder.tableClass(tableClass.let(TableClass.Companion::unwrap))
     }
 
     /**

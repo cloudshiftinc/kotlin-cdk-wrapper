@@ -142,7 +142,7 @@ public interface CfnSiteToSiteVpnAttachmentProps {
      * In some cases, the segment change must first be evaluated and accepted.
      */
     override fun proposedSegmentChange(proposedSegmentChange: IResolvable) {
-      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(IResolvable::unwrap))
+      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -151,7 +151,7 @@ public interface CfnSiteToSiteVpnAttachmentProps {
      */
     override
         fun proposedSegmentChange(proposedSegmentChange: CfnSiteToSiteVpnAttachment.ProposedSegmentChangeProperty) {
-      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(CfnSiteToSiteVpnAttachment.ProposedSegmentChangeProperty::unwrap))
+      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(CfnSiteToSiteVpnAttachment.ProposedSegmentChangeProperty.Companion::unwrap))
     }
 
     /**
@@ -169,7 +169,7 @@ public interface CfnSiteToSiteVpnAttachmentProps {
      * @param tags Tags for the attachment.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

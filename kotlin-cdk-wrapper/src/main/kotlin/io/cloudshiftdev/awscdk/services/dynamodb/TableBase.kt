@@ -37,8 +37,8 @@ public abstract class TableBase(
    * @param actions The set of actions to allow (i.e. "dynamodb:PutItem", "dynamodb:GetItem", ...). 
    */
   public override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
-      as String}.toTypedArray()).let(Grant::wrap)
+      unwrap(this).grant(grantee.let(IGrantable.Companion::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Permits all DynamoDB operations ("dynamodb:*") to an IAM principal.
@@ -49,7 +49,7 @@ public abstract class TableBase(
    * @param grantee The principal to grant access to. 
    */
   public override fun grantFullAccess(grantee: IGrantable): Grant =
-      unwrap(this).grantFullAccess(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantFullAccess(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Permits an IAM principal all data read operations from this table: BatchGetItem, GetRecords,
@@ -61,7 +61,7 @@ public abstract class TableBase(
    * @param grantee The principal to grant access to. 
    */
   public override fun grantReadData(grantee: IGrantable): Grant =
-      unwrap(this).grantReadData(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantReadData(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Permits an IAM principal to all data read/write operations to this table.
@@ -75,7 +75,7 @@ public abstract class TableBase(
    * @param grantee The principal to grant access to. 
    */
   public override fun grantReadWriteData(grantee: IGrantable): Grant =
-      unwrap(this).grantReadWriteData(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantReadWriteData(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Adds an IAM policy statement associated with this table's stream to an IAM principal's policy.
@@ -88,7 +88,7 @@ public abstract class TableBase(
    * "dynamodb:GetRecords", ...). 
    */
   public override fun grantStream(grantee: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grantStream(grantee.let(IGrantable::unwrap),
+      unwrap(this).grantStream(grantee.let(IGrantable.Companion::unwrap),
       *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
@@ -101,7 +101,7 @@ public abstract class TableBase(
    * @param grantee The principal to grant access to. 
    */
   public override fun grantStreamRead(grantee: IGrantable): Grant =
-      unwrap(this).grantStreamRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantStreamRead(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Permits an IAM Principal to list streams attached to current dynamodb table.
@@ -109,7 +109,7 @@ public abstract class TableBase(
    * @param grantee The principal (no-op if undefined). 
    */
   public override fun grantTableListStreams(grantee: IGrantable): Grant =
-      unwrap(this).grantTableListStreams(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantTableListStreams(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Permits an IAM principal all data write operations to this table: BatchWriteItem, PutItem,
@@ -121,7 +121,7 @@ public abstract class TableBase(
    * @param grantee The principal to grant access to. 
    */
   public override fun grantWriteData(grantee: IGrantable): Grant =
-      unwrap(this).grantWriteData(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantWriteData(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Return the given named metric for this Table.
@@ -145,7 +145,7 @@ public abstract class TableBase(
    * @param props
    */
   public override fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Return the given named metric for this Table.
@@ -181,7 +181,7 @@ public abstract class TableBase(
    * @param props
    */
   public override fun metricConditionalCheckFailedRequests(props: MetricOptions): Metric =
-      unwrap(this).metricConditionalCheckFailedRequests(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricConditionalCheckFailedRequests(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the conditional check failed requests this table.
@@ -216,7 +216,7 @@ public abstract class TableBase(
    * @param props
    */
   public override fun metricConsumedReadCapacityUnits(props: MetricOptions): Metric =
-      unwrap(this).metricConsumedReadCapacityUnits(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricConsumedReadCapacityUnits(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the consumed read capacity units this table.
@@ -251,7 +251,7 @@ public abstract class TableBase(
    * @param props
    */
   public override fun metricConsumedWriteCapacityUnits(props: MetricOptions): Metric =
-      unwrap(this).metricConsumedWriteCapacityUnits(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricConsumedWriteCapacityUnits(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the consumed write capacity units this table.
@@ -286,7 +286,7 @@ public abstract class TableBase(
    * @param props
    */
   public override fun metricSuccessfulRequestLatency(props: MetricOptions): Metric =
-      unwrap(this).metricSuccessfulRequestLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricSuccessfulRequestLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the successful request latency this table.
@@ -318,7 +318,7 @@ public abstract class TableBase(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricSystemErrors(props: MetricOptions): Metric =
-      unwrap(this).metricSystemErrors(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricSystemErrors(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) Metric for the system errors this table.
@@ -357,7 +357,7 @@ public abstract class TableBase(
    */
   public override
       fun metricSystemErrorsForOperations(props: SystemErrorsForOperationsMetricOptions): IMetric =
-      unwrap(this).metricSystemErrorsForOperations(props.let(SystemErrorsForOperationsMetricOptions::unwrap)).let(IMetric::wrap)
+      unwrap(this).metricSystemErrorsForOperations(props.let(SystemErrorsForOperationsMetricOptions.Companion::unwrap)).let(IMetric::wrap)
 
   /**
    * Metric for the system errors this table.
@@ -399,7 +399,7 @@ public abstract class TableBase(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun metricThrottledRequests(props: MetricOptions): Metric =
-      unwrap(this).metricThrottledRequests(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricThrottledRequests(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) How many requests are throttled on this table.
@@ -437,7 +437,7 @@ public abstract class TableBase(
    */
   public open fun metricThrottledRequestsForOperation(operation: String, props: MetricOptions):
       Metric = unwrap(this).metricThrottledRequestsForOperation(operation,
-      props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * How many requests are throttled on this table, for the given operation.
@@ -478,7 +478,7 @@ public abstract class TableBase(
    */
   public override fun metricThrottledRequestsForOperations(props: OperationsMetricOptions): IMetric
       =
-      unwrap(this).metricThrottledRequestsForOperations(props.let(OperationsMetricOptions::unwrap)).let(IMetric::wrap)
+      unwrap(this).metricThrottledRequestsForOperations(props.let(OperationsMetricOptions.Companion::unwrap)).let(IMetric::wrap)
 
   /**
    * How many requests are throttled on this table.
@@ -521,7 +521,7 @@ public abstract class TableBase(
    * @param props
    */
   public override fun metricUserErrors(props: MetricOptions): Metric =
-      unwrap(this).metricUserErrors(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricUserErrors(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the user errors.

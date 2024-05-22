@@ -20,11 +20,11 @@ public open class Lazy(
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun any(producer: IStableAnyProducer): IResolvable =
-        software.amazon.awscdk.Lazy.any(producer.let(IStableAnyProducer::unwrap)).let(IResolvable::wrap)
+        software.amazon.awscdk.Lazy.any(producer.let(IStableAnyProducer.Companion::unwrap)).let(IResolvable::wrap)
 
     public fun any(producer: IStableAnyProducer, options: LazyAnyValueOptions): IResolvable =
-        software.amazon.awscdk.Lazy.any(producer.let(IStableAnyProducer::unwrap),
-        options.let(LazyAnyValueOptions::unwrap)).let(IResolvable::wrap)
+        software.amazon.awscdk.Lazy.any(producer.let(IStableAnyProducer.Companion::unwrap),
+        options.let(LazyAnyValueOptions.Companion::unwrap)).let(IResolvable::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f0679d26a0cf47861674eeb8f5a4e935244bf3d152d6dcd5bb7dfc5f939a51e0")
@@ -32,11 +32,11 @@ public open class Lazy(
         IResolvable = any(producer, LazyAnyValueOptions(options))
 
     public fun list(producer: IStableListProducer): List<String> =
-        software.amazon.awscdk.Lazy.list(producer.let(IStableListProducer::unwrap))
+        software.amazon.awscdk.Lazy.list(producer.let(IStableListProducer.Companion::unwrap))
 
     public fun list(producer: IStableListProducer, options: LazyListValueOptions): List<String> =
-        software.amazon.awscdk.Lazy.list(producer.let(IStableListProducer::unwrap),
-        options.let(LazyListValueOptions::unwrap))
+        software.amazon.awscdk.Lazy.list(producer.let(IStableListProducer.Companion::unwrap),
+        options.let(LazyListValueOptions.Companion::unwrap))
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("efdafbef7fc79827388e3b2d1c20329010a3e92222edd611a096d219a4a5bb45")
@@ -45,14 +45,14 @@ public open class Lazy(
         LazyListValueOptions(options))
 
     public fun number(producer: IStableNumberProducer): Number =
-        software.amazon.awscdk.Lazy.number(producer.let(IStableNumberProducer::unwrap))
+        software.amazon.awscdk.Lazy.number(producer.let(IStableNumberProducer.Companion::unwrap))
 
     public fun string(producer: IStableStringProducer): String =
-        software.amazon.awscdk.Lazy.string(producer.let(IStableStringProducer::unwrap))
+        software.amazon.awscdk.Lazy.string(producer.let(IStableStringProducer.Companion::unwrap))
 
     public fun string(producer: IStableStringProducer, options: LazyStringValueOptions): String =
-        software.amazon.awscdk.Lazy.string(producer.let(IStableStringProducer::unwrap),
-        options.let(LazyStringValueOptions::unwrap))
+        software.amazon.awscdk.Lazy.string(producer.let(IStableStringProducer.Companion::unwrap),
+        options.let(LazyStringValueOptions.Companion::unwrap))
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("71870f5090c89664c5acffa24a31a3eb39f5338c28704709b72d122ad6b5bef6")
@@ -61,11 +61,11 @@ public open class Lazy(
         LazyStringValueOptions(options))
 
     public fun uncachedAny(producer: IAnyProducer): IResolvable =
-        software.amazon.awscdk.Lazy.uncachedAny(producer.let(IAnyProducer::unwrap)).let(IResolvable::wrap)
+        software.amazon.awscdk.Lazy.uncachedAny(producer.let(IAnyProducer.Companion::unwrap)).let(IResolvable::wrap)
 
     public fun uncachedAny(producer: IAnyProducer, options: LazyAnyValueOptions): IResolvable =
-        software.amazon.awscdk.Lazy.uncachedAny(producer.let(IAnyProducer::unwrap),
-        options.let(LazyAnyValueOptions::unwrap)).let(IResolvable::wrap)
+        software.amazon.awscdk.Lazy.uncachedAny(producer.let(IAnyProducer.Companion::unwrap),
+        options.let(LazyAnyValueOptions.Companion::unwrap)).let(IResolvable::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("aaaec60c092fd3616dd89f2eaa2a074ea3b25197c92ce4d752b3cbc5c0295e14")
@@ -73,11 +73,11 @@ public open class Lazy(
         IResolvable = uncachedAny(producer, LazyAnyValueOptions(options))
 
     public fun uncachedList(producer: IListProducer): List<String> =
-        software.amazon.awscdk.Lazy.uncachedList(producer.let(IListProducer::unwrap))
+        software.amazon.awscdk.Lazy.uncachedList(producer.let(IListProducer.Companion::unwrap))
 
     public fun uncachedList(producer: IListProducer, options: LazyListValueOptions): List<String> =
-        software.amazon.awscdk.Lazy.uncachedList(producer.let(IListProducer::unwrap),
-        options.let(LazyListValueOptions::unwrap))
+        software.amazon.awscdk.Lazy.uncachedList(producer.let(IListProducer.Companion::unwrap),
+        options.let(LazyListValueOptions.Companion::unwrap))
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0f22d51b4637668c95997c8ad0f3eb6aa9d1f34afd2dfbed3720a7206d09f4be")
@@ -86,14 +86,14 @@ public open class Lazy(
         LazyListValueOptions(options))
 
     public fun uncachedNumber(producer: INumberProducer): Number =
-        software.amazon.awscdk.Lazy.uncachedNumber(producer.let(INumberProducer::unwrap))
+        software.amazon.awscdk.Lazy.uncachedNumber(producer.let(INumberProducer.Companion::unwrap))
 
     public fun uncachedString(producer: IStringProducer): String =
-        software.amazon.awscdk.Lazy.uncachedString(producer.let(IStringProducer::unwrap))
+        software.amazon.awscdk.Lazy.uncachedString(producer.let(IStringProducer.Companion::unwrap))
 
     public fun uncachedString(producer: IStringProducer, options: LazyStringValueOptions): String =
-        software.amazon.awscdk.Lazy.uncachedString(producer.let(IStringProducer::unwrap),
-        options.let(LazyStringValueOptions::unwrap))
+        software.amazon.awscdk.Lazy.uncachedString(producer.let(IStringProducer.Companion::unwrap),
+        options.let(LazyStringValueOptions.Companion::unwrap))
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e9ec31d44eea9a0c3c8a1d40d3f677f92a9aa7bf0f58a3d0ec20da69f6bc73e1")

@@ -65,7 +65,7 @@ public interface CfnDynamicReferenceProps {
      * @param service The service to retrieve the dynamic reference from. 
      */
     override fun service(service: CfnDynamicReferenceService) {
-      cdkBuilder.service(service.let(CfnDynamicReferenceService::unwrap))
+      cdkBuilder.service(service.let(CfnDynamicReferenceService.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.CfnDynamicReferenceProps = cdkBuilder.build()

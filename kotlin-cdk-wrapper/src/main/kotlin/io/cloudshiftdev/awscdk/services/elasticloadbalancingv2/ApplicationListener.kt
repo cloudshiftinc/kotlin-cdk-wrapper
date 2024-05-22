@@ -55,8 +55,8 @@ public open class ApplicationListener(
     id: String,
     props: ApplicationListenerProps,
   ) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListener(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ApplicationListenerProps::unwrap))
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListener(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ApplicationListenerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -81,7 +81,7 @@ public open class ApplicationListener(
    * @param props 
    */
   public override fun addAction(id: String, props: AddApplicationActionProps) {
-    unwrap(this).addAction(id, props.let(AddApplicationActionProps::unwrap))
+    unwrap(this).addAction(id, props.let(AddApplicationActionProps.Companion::unwrap))
   }
 
   /**
@@ -114,7 +114,7 @@ public open class ApplicationListener(
    * @param certificates 
    */
   public override fun addCertificates(id: String, certificates: List<IListenerCertificate>) {
-    unwrap(this).addCertificates(id, certificates.map(IListenerCertificate::unwrap))
+    unwrap(this).addCertificates(id, certificates.map(IListenerCertificate.Companion::unwrap))
   }
 
   /**
@@ -131,7 +131,7 @@ public open class ApplicationListener(
    * @param props 
    */
   public override fun addTargetGroups(id: String, props: AddApplicationTargetGroupsProps) {
-    unwrap(this).addTargetGroups(id, props.let(AddApplicationTargetGroupsProps::unwrap))
+    unwrap(this).addTargetGroups(id, props.let(AddApplicationTargetGroupsProps.Companion::unwrap))
   }
 
   /**
@@ -171,7 +171,7 @@ public open class ApplicationListener(
    */
   public override fun addTargets(id: String, props: AddApplicationTargetsProps):
       ApplicationTargetGroup = unwrap(this).addTargets(id,
-      props.let(AddApplicationTargetsProps::unwrap)).let(ApplicationTargetGroup::wrap)
+      props.let(AddApplicationTargetsProps.Companion::unwrap)).let(ApplicationTargetGroup::wrap)
 
   /**
    * Load balance incoming requests to the given load balancing targets.
@@ -215,8 +215,8 @@ public open class ApplicationListener(
    * @param portRange 
    */
   public override fun registerConnectable(connectable: IConnectable, portRange: Port) {
-    unwrap(this).registerConnectable(connectable.let(IConnectable::unwrap),
-        portRange.let(Port::unwrap))
+    unwrap(this).registerConnectable(connectable.let(IConnectable.Companion::unwrap),
+        portRange.let(Port.Companion::unwrap))
   }
 
   /**
@@ -377,7 +377,7 @@ public open class ApplicationListener(
      * @param certificates Certificate list of ACM cert ARNs. 
      */
     override fun certificates(certificates: List<IListenerCertificate>) {
-      cdkBuilder.certificates(certificates.map(IListenerCertificate::unwrap))
+      cdkBuilder.certificates(certificates.map(IListenerCertificate.Companion::unwrap))
     }
 
     /**
@@ -407,7 +407,7 @@ public open class ApplicationListener(
      * @param defaultAction Default action to take for requests to this listener. 
      */
     override fun defaultAction(defaultAction: ListenerAction) {
-      cdkBuilder.defaultAction(defaultAction.let(ListenerAction::unwrap))
+      cdkBuilder.defaultAction(defaultAction.let(ListenerAction.Companion::unwrap))
     }
 
     /**
@@ -424,7 +424,7 @@ public open class ApplicationListener(
      * @param defaultTargetGroups Default target groups to load balance to. 
      */
     override fun defaultTargetGroups(defaultTargetGroups: List<IApplicationTargetGroup>) {
-      cdkBuilder.defaultTargetGroups(defaultTargetGroups.map(IApplicationTargetGroup::unwrap))
+      cdkBuilder.defaultTargetGroups(defaultTargetGroups.map(IApplicationTargetGroup.Companion::unwrap))
     }
 
     /**
@@ -449,7 +449,7 @@ public open class ApplicationListener(
      * @param loadBalancer The load balancer to attach this listener to. 
      */
     override fun loadBalancer(loadBalancer: IApplicationLoadBalancer) {
-      cdkBuilder.loadBalancer(loadBalancer.let(IApplicationLoadBalancer::unwrap))
+      cdkBuilder.loadBalancer(loadBalancer.let(IApplicationLoadBalancer.Companion::unwrap))
     }
 
     /**
@@ -490,7 +490,7 @@ public open class ApplicationListener(
      * @param protocol The protocol to use. 
      */
     override fun protocol(protocol: ApplicationProtocol) {
-      cdkBuilder.protocol(protocol.let(ApplicationProtocol::unwrap))
+      cdkBuilder.protocol(protocol.let(ApplicationProtocol.Companion::unwrap))
     }
 
     /**
@@ -501,7 +501,7 @@ public open class ApplicationListener(
      * @param sslPolicy The security policy that defines which ciphers and protocols are supported. 
      */
     override fun sslPolicy(sslPolicy: SslPolicy) {
-      cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy::unwrap))
+      cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListener =
@@ -514,8 +514,9 @@ public open class ApplicationListener(
       id: String,
       attrs: ApplicationListenerAttributes,
     ): IApplicationListener =
-        software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListener.fromApplicationListenerAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(ApplicationListenerAttributes::unwrap)).let(IApplicationListener::wrap)
+        software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListener.fromApplicationListenerAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        attrs.let(ApplicationListenerAttributes.Companion::unwrap)).let(IApplicationListener::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b897b7fb5b672293f218aba1adecf0ac2282eeedea9ba928e37c9ecba0fae0d4")
@@ -531,8 +532,9 @@ public open class ApplicationListener(
       id: String,
       options: ApplicationListenerLookupOptions,
     ): IApplicationListener =
-        software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListener.fromLookup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, options.let(ApplicationListenerLookupOptions::unwrap)).let(IApplicationListener::wrap)
+        software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationListener.fromLookup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        options.let(ApplicationListenerLookupOptions.Companion::unwrap)).let(IApplicationListener::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c7a271d69b9802565632e8864c501b85c1d1c9a7287bb40117a2242310e7184e")

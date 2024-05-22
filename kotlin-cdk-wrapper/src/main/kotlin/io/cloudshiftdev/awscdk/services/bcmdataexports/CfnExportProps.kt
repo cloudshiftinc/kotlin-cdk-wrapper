@@ -115,14 +115,14 @@ public interface CfnExportProps {
      * @param export The details that are available for an export. 
      */
     override fun export(export: IResolvable) {
-      cdkBuilder.export(export.let(IResolvable::unwrap))
+      cdkBuilder.export(export.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param export The details that are available for an export. 
      */
     override fun export(export: CfnExport.ExportProperty) {
-      cdkBuilder.export(export.let(CfnExport.ExportProperty::unwrap))
+      cdkBuilder.export(export.let(CfnExport.ExportProperty.Companion::unwrap))
     }
 
     /**
@@ -137,7 +137,7 @@ public interface CfnExportProps {
      * @param tags the value to be set.
      */
     override fun tags(tags: List<CfnExport.ResourceTagProperty>) {
-      cdkBuilder.tags(tags.map(CfnExport.ResourceTagProperty::unwrap))
+      cdkBuilder.tags(tags.map(CfnExport.ResourceTagProperty.Companion::unwrap))
     }
 
     /**

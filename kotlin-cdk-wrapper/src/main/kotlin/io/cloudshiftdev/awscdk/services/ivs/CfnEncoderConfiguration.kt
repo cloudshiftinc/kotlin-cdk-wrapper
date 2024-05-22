@@ -57,7 +57,7 @@ public open class CfnEncoderConfiguration(
   cdkObject: software.amazon.awscdk.services.ivs.CfnEncoderConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ivs.CfnEncoderConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ivs.CfnEncoderConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -66,8 +66,8 @@ public open class CfnEncoderConfiguration(
     id: String,
     props: CfnEncoderConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.ivs.CfnEncoderConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEncoderConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.ivs.CfnEncoderConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEncoderConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -96,7 +96,7 @@ public open class CfnEncoderConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -120,7 +120,7 @@ public open class CfnEncoderConfiguration(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -137,14 +137,14 @@ public open class CfnEncoderConfiguration(
    * Video configuration.
    */
   public open fun video(`value`: IResolvable) {
-    unwrap(this).setVideo(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVideo(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Video configuration.
    */
   public open fun video(`value`: VideoProperty) {
-    unwrap(this).setVideo(`value`.let(VideoProperty::unwrap))
+    unwrap(this).setVideo(`value`.let(VideoProperty.Companion::unwrap))
   }
 
   /**
@@ -259,7 +259,7 @@ public open class CfnEncoderConfiguration(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -285,7 +285,7 @@ public open class CfnEncoderConfiguration(
      * @param video Video configuration. 
      */
     override fun video(video: IResolvable) {
-      cdkBuilder.video(video.let(IResolvable::unwrap))
+      cdkBuilder.video(video.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -299,7 +299,7 @@ public open class CfnEncoderConfiguration(
      * @param video Video configuration. 
      */
     override fun video(video: VideoProperty) {
-      cdkBuilder.video(video.let(VideoProperty::unwrap))
+      cdkBuilder.video(video.let(VideoProperty.Companion::unwrap))
     }
 
     /**

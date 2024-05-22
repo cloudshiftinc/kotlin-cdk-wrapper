@@ -95,7 +95,7 @@ public interface CfnXssMatchSetProps {
      * cross-site scripting attacks. 
      */
     override fun xssMatchTuples(xssMatchTuples: IResolvable) {
-      cdkBuilder.xssMatchTuples(xssMatchTuples.let(IResolvable::unwrap))
+      cdkBuilder.xssMatchTuples(xssMatchTuples.let(IResolvable.Companion::unwrap))
     }
 
     /**

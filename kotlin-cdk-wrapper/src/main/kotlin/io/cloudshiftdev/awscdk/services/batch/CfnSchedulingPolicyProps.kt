@@ -126,14 +126,14 @@ public interface CfnSchedulingPolicyProps {
      * @param fairsharePolicy The fair share policy of the scheduling policy.
      */
     override fun fairsharePolicy(fairsharePolicy: IResolvable) {
-      cdkBuilder.fairsharePolicy(fairsharePolicy.let(IResolvable::unwrap))
+      cdkBuilder.fairsharePolicy(fairsharePolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param fairsharePolicy The fair share policy of the scheduling policy.
      */
     override fun fairsharePolicy(fairsharePolicy: CfnSchedulingPolicy.FairsharePolicyProperty) {
-      cdkBuilder.fairsharePolicy(fairsharePolicy.let(CfnSchedulingPolicy.FairsharePolicyProperty::unwrap))
+      cdkBuilder.fairsharePolicy(fairsharePolicy.let(CfnSchedulingPolicy.FairsharePolicyProperty.Companion::unwrap))
     }
 
     /**

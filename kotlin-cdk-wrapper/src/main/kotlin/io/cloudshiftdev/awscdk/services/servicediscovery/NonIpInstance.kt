@@ -38,8 +38,8 @@ public open class NonIpInstance(
     id: String,
     props: NonIpInstanceProps,
   ) :
-      this(software.amazon.awscdk.services.servicediscovery.NonIpInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(NonIpInstanceProps::unwrap))
+      this(software.amazon.awscdk.services.servicediscovery.NonIpInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(NonIpInstanceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -125,7 +125,7 @@ public open class NonIpInstance(
      * @param service The Cloudmap service this resource is registered to. 
      */
     override fun service(service: IService) {
-      cdkBuilder.service(service.let(IService::unwrap))
+      cdkBuilder.service(service.let(IService.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.servicediscovery.NonIpInstance =

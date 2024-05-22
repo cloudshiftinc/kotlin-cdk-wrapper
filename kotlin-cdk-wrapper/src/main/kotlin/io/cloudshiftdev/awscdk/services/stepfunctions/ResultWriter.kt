@@ -37,7 +37,7 @@ public open class ResultWriter(
   cdkObject: software.amazon.awscdk.services.stepfunctions.ResultWriter,
 ) : CdkObject(cdkObject) {
   public constructor(props: ResultWriterProps) :
-      this(software.amazon.awscdk.services.stepfunctions.ResultWriter(props.let(ResultWriterProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.ResultWriter(props.let(ResultWriterProps.Companion::unwrap))
   )
 
   public constructor(props: ResultWriterProps.Builder.() -> Unit) : this(ResultWriterProps(props)
@@ -98,7 +98,7 @@ public open class ResultWriter(
      * @param bucket S3 Bucket in which to save Map Run results. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**

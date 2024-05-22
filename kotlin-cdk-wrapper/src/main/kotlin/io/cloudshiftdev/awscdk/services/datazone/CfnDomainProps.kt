@@ -184,14 +184,14 @@ public interface CfnDomainProps {
      * @param singleSignOn The single sign-on details in Amazon DataZone.
      */
     override fun singleSignOn(singleSignOn: IResolvable) {
-      cdkBuilder.singleSignOn(singleSignOn.let(IResolvable::unwrap))
+      cdkBuilder.singleSignOn(singleSignOn.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param singleSignOn The single sign-on details in Amazon DataZone.
      */
     override fun singleSignOn(singleSignOn: CfnDomain.SingleSignOnProperty) {
-      cdkBuilder.singleSignOn(singleSignOn.let(CfnDomain.SingleSignOnProperty::unwrap))
+      cdkBuilder.singleSignOn(singleSignOn.let(CfnDomain.SingleSignOnProperty.Companion::unwrap))
     }
 
     /**
@@ -206,7 +206,7 @@ public interface CfnDomainProps {
      * @param tags The tags specified for the Amazon DataZone domain.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -39,7 +39,7 @@ public open class AmazonLinux2023ImageSsmParameter(
   )
 
   public constructor(props: AmazonLinux2023ImageSsmParameterProps) :
-      this(software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameter(props.let(AmazonLinux2023ImageSsmParameterProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameter(props.let(AmazonLinux2023ImageSsmParameterProps.Companion::unwrap))
   )
 
   public constructor(props: AmazonLinux2023ImageSsmParameterProps.Builder.() -> Unit) :
@@ -149,7 +149,7 @@ public open class AmazonLinux2023ImageSsmParameter(
      * @param cpuType CPU Type. 
      */
     override fun cpuType(cpuType: AmazonLinuxCpuType) {
-      cdkBuilder.cpuType(cpuType.let(AmazonLinuxCpuType::unwrap))
+      cdkBuilder.cpuType(cpuType.let(AmazonLinuxCpuType.Companion::unwrap))
     }
 
     /**
@@ -160,7 +160,7 @@ public open class AmazonLinux2023ImageSsmParameter(
      * @param edition What edition of Amazon Linux to use. 
      */
     override fun edition(edition: AmazonLinuxEdition) {
-      cdkBuilder.edition(edition.let(AmazonLinuxEdition::unwrap))
+      cdkBuilder.edition(edition.let(AmazonLinuxEdition.Companion::unwrap))
     }
 
     /**
@@ -171,7 +171,7 @@ public open class AmazonLinux2023ImageSsmParameter(
      * @param kernel What kernel version of Amazon Linux to use. 
      */
     override fun kernel(kernel: AmazonLinux2023Kernel) {
-      cdkBuilder.kernel(kernel.let(AmazonLinux2023Kernel::unwrap))
+      cdkBuilder.kernel(kernel.let(AmazonLinux2023Kernel.Companion::unwrap))
     }
 
     /**
@@ -182,7 +182,7 @@ public open class AmazonLinux2023ImageSsmParameter(
      * @param userData Initial user data. 
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameter =
@@ -191,7 +191,7 @@ public open class AmazonLinux2023ImageSsmParameter(
 
   public companion object {
     public fun ssmParameterName(props: AmazonLinux2023ImageSsmParameterProps): String =
-        software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameter.ssmParameterName(props.let(AmazonLinux2023ImageSsmParameterProps::unwrap))
+        software.amazon.awscdk.services.ec2.AmazonLinux2023ImageSsmParameter.ssmParameterName(props.let(AmazonLinux2023ImageSsmParameterProps.Companion::unwrap))
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a0b3719397a1188916c6b60658e0e9c8f4e61fe053f967f62c8639c65cc7e125")

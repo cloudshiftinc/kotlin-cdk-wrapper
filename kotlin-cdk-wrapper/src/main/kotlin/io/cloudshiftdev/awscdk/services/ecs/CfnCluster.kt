@@ -73,7 +73,7 @@ public open class CfnCluster(
   cdkObject: software.amazon.awscdk.services.ecs.CfnCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ecs.CfnCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ecs.CfnCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -82,8 +82,8 @@ public open class CfnCluster(
     id: String,
     props: CfnClusterProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.CfnCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnClusterProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.CfnCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -139,7 +139,7 @@ public open class CfnCluster(
    * The settings to use when creating a cluster.
    */
   public open fun clusterSettings(`value`: IResolvable) {
-    unwrap(this).setClusterSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setClusterSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -163,14 +163,14 @@ public open class CfnCluster(
    * The execute command configuration for the cluster.
    */
   public open fun configuration(`value`: IResolvable) {
-    unwrap(this).setConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The execute command configuration for the cluster.
    */
   public open fun configuration(`value`: ClusterConfigurationProperty) {
-    unwrap(this).setConfiguration(`value`.let(ClusterConfigurationProperty::unwrap))
+    unwrap(this).setConfiguration(`value`.let(ClusterConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -191,7 +191,7 @@ public open class CfnCluster(
    * The default capacity provider strategy for the cluster.
    */
   public open fun defaultCapacityProviderStrategy(`value`: IResolvable) {
-    unwrap(this).setDefaultCapacityProviderStrategy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefaultCapacityProviderStrategy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -213,7 +213,7 @@ public open class CfnCluster(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -225,14 +225,14 @@ public open class CfnCluster(
    * Use this parameter to set a default Service Connect namespace.
    */
   public open fun serviceConnectDefaults(`value`: IResolvable) {
-    unwrap(this).setServiceConnectDefaults(`value`.let(IResolvable::unwrap))
+    unwrap(this).setServiceConnectDefaults(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Use this parameter to set a default Service Connect namespace.
    */
   public open fun serviceConnectDefaults(`value`: ServiceConnectDefaultsProperty) {
-    unwrap(this).setServiceConnectDefaults(`value`.let(ServiceConnectDefaultsProperty::unwrap))
+    unwrap(this).setServiceConnectDefaults(`value`.let(ServiceConnectDefaultsProperty.Companion::unwrap))
   }
 
   /**
@@ -259,7 +259,7 @@ public open class CfnCluster(
    * The metadata that you apply to the cluster to help you categorize and organize them.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -641,7 +641,7 @@ public open class CfnCluster(
      * @param clusterSettings The settings to use when creating a cluster. 
      */
     override fun clusterSettings(clusterSettings: IResolvable) {
-      cdkBuilder.clusterSettings(clusterSettings.let(IResolvable::unwrap))
+      cdkBuilder.clusterSettings(clusterSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -674,7 +674,7 @@ public open class CfnCluster(
      * @param configuration The execute command configuration for the cluster. 
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -684,7 +684,7 @@ public open class CfnCluster(
      * @param configuration The execute command configuration for the cluster. 
      */
     override fun configuration(configuration: ClusterConfigurationProperty) {
-      cdkBuilder.configuration(configuration.let(ClusterConfigurationProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(ClusterConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -709,7 +709,7 @@ public open class CfnCluster(
      * cluster. 
      */
     override fun defaultCapacityProviderStrategy(defaultCapacityProviderStrategy: IResolvable) {
-      cdkBuilder.defaultCapacityProviderStrategy(defaultCapacityProviderStrategy.let(IResolvable::unwrap))
+      cdkBuilder.defaultCapacityProviderStrategy(defaultCapacityProviderStrategy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -760,7 +760,7 @@ public open class CfnCluster(
      * @param serviceConnectDefaults Use this parameter to set a default Service Connect namespace. 
      */
     override fun serviceConnectDefaults(serviceConnectDefaults: IResolvable) {
-      cdkBuilder.serviceConnectDefaults(serviceConnectDefaults.let(IResolvable::unwrap))
+      cdkBuilder.serviceConnectDefaults(serviceConnectDefaults.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -784,7 +784,7 @@ public open class CfnCluster(
      * @param serviceConnectDefaults Use this parameter to set a default Service Connect namespace. 
      */
     override fun serviceConnectDefaults(serviceConnectDefaults: ServiceConnectDefaultsProperty) {
-      cdkBuilder.serviceConnectDefaults(serviceConnectDefaults.let(ServiceConnectDefaultsProperty::unwrap))
+      cdkBuilder.serviceConnectDefaults(serviceConnectDefaults.let(ServiceConnectDefaultsProperty.Companion::unwrap))
     }
 
     /**
@@ -833,7 +833,7 @@ public open class CfnCluster(
      * them. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1171,7 +1171,7 @@ public open class CfnCluster(
        * @param executeCommandConfiguration The details of the execute command configuration.
        */
       override fun executeCommandConfiguration(executeCommandConfiguration: IResolvable) {
-        cdkBuilder.executeCommandConfiguration(executeCommandConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.executeCommandConfiguration(executeCommandConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1179,7 +1179,7 @@ public open class CfnCluster(
        */
       override
           fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfigurationProperty) {
-        cdkBuilder.executeCommandConfiguration(executeCommandConfiguration.let(ExecuteCommandConfigurationProperty::unwrap))
+        cdkBuilder.executeCommandConfiguration(executeCommandConfiguration.let(ExecuteCommandConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1510,7 +1510,7 @@ public open class CfnCluster(
        * specified, a `logConfiguration` must be provided.
        */
       override fun logConfiguration(logConfiguration: IResolvable) {
-        cdkBuilder.logConfiguration(logConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.logConfiguration(logConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1520,7 +1520,7 @@ public open class CfnCluster(
        * specified, a `logConfiguration` must be provided.
        */
       override fun logConfiguration(logConfiguration: ExecuteCommandLogConfigurationProperty) {
-        cdkBuilder.logConfiguration(logConfiguration.let(ExecuteCommandLogConfigurationProperty::unwrap))
+        cdkBuilder.logConfiguration(logConfiguration.let(ExecuteCommandLogConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1753,7 +1753,7 @@ public open class CfnCluster(
        * If not specified, encryption will be off.
        */
       override fun cloudWatchEncryptionEnabled(cloudWatchEncryptionEnabled: IResolvable) {
-        cdkBuilder.cloudWatchEncryptionEnabled(cloudWatchEncryptionEnabled.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchEncryptionEnabled(cloudWatchEncryptionEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1787,7 +1787,7 @@ public open class CfnCluster(
        * If not specified, encryption is not used.
        */
       override fun s3EncryptionEnabled(s3EncryptionEnabled: IResolvable) {
-        cdkBuilder.s3EncryptionEnabled(s3EncryptionEnabled.let(IResolvable::unwrap))
+        cdkBuilder.s3EncryptionEnabled(s3EncryptionEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**

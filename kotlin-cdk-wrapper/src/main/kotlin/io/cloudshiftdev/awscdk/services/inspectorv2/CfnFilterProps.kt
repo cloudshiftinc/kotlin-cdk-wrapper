@@ -269,14 +269,14 @@ public interface CfnFilterProps {
      * @param filterCriteria Details on the filter criteria associated with this filter. 
      */
     override fun filterCriteria(filterCriteria: IResolvable) {
-      cdkBuilder.filterCriteria(filterCriteria.let(IResolvable::unwrap))
+      cdkBuilder.filterCriteria(filterCriteria.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param filterCriteria Details on the filter criteria associated with this filter. 
      */
     override fun filterCriteria(filterCriteria: CfnFilter.FilterCriteriaProperty) {
-      cdkBuilder.filterCriteria(filterCriteria.let(CfnFilter.FilterCriteriaProperty::unwrap))
+      cdkBuilder.filterCriteria(filterCriteria.let(CfnFilter.FilterCriteriaProperty.Companion::unwrap))
     }
 
     /**

@@ -230,7 +230,7 @@ public interface CfnGlobalReplicationGroupProps {
      * groups.
      */
     override fun automaticFailoverEnabled(automaticFailoverEnabled: IResolvable) {
-      cdkBuilder.automaticFailoverEnabled(automaticFailoverEnabled.let(IResolvable::unwrap))
+      cdkBuilder.automaticFailoverEnabled(automaticFailoverEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -282,7 +282,7 @@ public interface CfnGlobalReplicationGroupProps {
      * @param members The replication groups that comprise the Global datastore. 
      */
     override fun members(members: IResolvable) {
-      cdkBuilder.members(members.let(IResolvable::unwrap))
+      cdkBuilder.members(members.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -301,7 +301,7 @@ public interface CfnGlobalReplicationGroupProps {
      * @param regionalConfigurations The Regions that comprise the Global Datastore.
      */
     override fun regionalConfigurations(regionalConfigurations: IResolvable) {
-      cdkBuilder.regionalConfigurations(regionalConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.regionalConfigurations(regionalConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**

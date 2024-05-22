@@ -101,8 +101,8 @@ public open class CfnGroup(
     id: String,
     props: CfnGroupProps,
   ) :
-      this(software.amazon.awscdk.services.greengrass.CfnGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGroupProps::unwrap))
+      this(software.amazon.awscdk.services.greengrass.CfnGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -156,14 +156,14 @@ public open class CfnGroup(
    * The group version to include when the group is created.
    */
   public open fun initialVersion(`value`: IResolvable) {
-    unwrap(this).setInitialVersion(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInitialVersion(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The group version to include when the group is created.
    */
   public open fun initialVersion(`value`: GroupVersionProperty) {
-    unwrap(this).setInitialVersion(`value`.let(GroupVersionProperty::unwrap))
+    unwrap(this).setInitialVersion(`value`.let(GroupVersionProperty.Companion::unwrap))
   }
 
   /**
@@ -180,7 +180,7 @@ public open class CfnGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -354,7 +354,7 @@ public open class CfnGroup(
      * @param initialVersion The group version to include when the group is created. 
      */
     override fun initialVersion(initialVersion: IResolvable) {
-      cdkBuilder.initialVersion(initialVersion.let(IResolvable::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -375,7 +375,7 @@ public open class CfnGroup(
      * @param initialVersion The group version to include when the group is created. 
      */
     override fun initialVersion(initialVersion: GroupVersionProperty) {
-      cdkBuilder.initialVersion(initialVersion.let(GroupVersionProperty::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(GroupVersionProperty.Companion::unwrap))
     }
 
     /**

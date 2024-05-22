@@ -24,15 +24,17 @@ public open class S3EnvironmentFile(
   cdkObject: software.amazon.awscdk.services.ecs.S3EnvironmentFile,
 ) : EnvironmentFile(cdkObject) {
   public constructor(bucket: IBucket, key: String) :
-      this(software.amazon.awscdk.services.ecs.S3EnvironmentFile(bucket.let(IBucket::unwrap), key)
+      this(software.amazon.awscdk.services.ecs.S3EnvironmentFile(bucket.let(IBucket.Companion::unwrap),
+      key)
   )
 
   public constructor(
     bucket: IBucket,
     key: String,
     objectVersion: String,
-  ) : this(software.amazon.awscdk.services.ecs.S3EnvironmentFile(bucket.let(IBucket::unwrap), key,
-      objectVersion)
+  ) :
+      this(software.amazon.awscdk.services.ecs.S3EnvironmentFile(bucket.let(IBucket.Companion::unwrap),
+      key, objectVersion)
   )
 
   /**
@@ -41,7 +43,7 @@ public open class S3EnvironmentFile(
    * @param _scope 
    */
   public override fun bind(scope: Construct): EnvironmentFileConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(EnvironmentFileConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(EnvironmentFileConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.S3EnvironmentFile):

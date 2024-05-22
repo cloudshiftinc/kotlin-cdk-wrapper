@@ -59,8 +59,8 @@ public open class CfnRepository(
     id: String,
     props: CfnRepositoryProps,
   ) :
-      this(software.amazon.awscdk.services.codeartifact.CfnRepository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRepositoryProps::unwrap))
+      this(software.amazon.awscdk.services.codeartifact.CfnRepository(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRepositoryProps.Companion::unwrap))
   )
 
   public constructor(
@@ -154,7 +154,7 @@ public open class CfnRepository(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -196,7 +196,7 @@ public open class CfnRepository(
    * A list of tags to be applied to the repository.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -424,7 +424,7 @@ public open class CfnRepository(
      * @param tags A list of tags to be applied to the repository. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -29,7 +29,7 @@ public open class CodePipelineFileSet(
 ) : FileSet(cdkObject) {
   public companion object {
     public fun fromArtifact(artifact: Artifact): CodePipelineFileSet =
-        software.amazon.awscdk.pipelines.CodePipelineFileSet.fromArtifact(artifact.let(Artifact::unwrap)).let(CodePipelineFileSet::wrap)
+        software.amazon.awscdk.pipelines.CodePipelineFileSet.fromArtifact(artifact.let(Artifact.Companion::unwrap)).let(CodePipelineFileSet::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.CodePipelineFileSet):
         CodePipelineFileSet = CodePipelineFileSet(cdkObject)

@@ -127,7 +127,7 @@ public interface GitHubSourceOptions {
      * * **admin:repo_hook** - if you plan to use webhooks (true by default)
      */
     override fun authentication(authentication: SecretValue) {
-      cdkBuilder.authentication(authentication.let(SecretValue::unwrap))
+      cdkBuilder.authentication(authentication.let(SecretValue.Companion::unwrap))
     }
 
     /**
@@ -140,7 +140,7 @@ public interface GitHubSourceOptions {
      * **admin:repo_hook** scope (in addition to the regular **repo** scope).
      */
     override fun trigger(trigger: GitHubTrigger) {
-      cdkBuilder.trigger(trigger.let(GitHubTrigger::unwrap))
+      cdkBuilder.trigger(trigger.let(GitHubTrigger.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.pipelines.GitHubSourceOptions = cdkBuilder.build()

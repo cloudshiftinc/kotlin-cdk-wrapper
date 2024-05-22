@@ -53,8 +53,8 @@ public open class OpenSearchDataSource(
     id: String,
     props: OpenSearchDataSourceProps,
   ) :
-      this(software.amazon.awscdk.services.appsync.OpenSearchDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(OpenSearchDataSourceProps::unwrap))
+      this(software.amazon.awscdk.services.appsync.OpenSearchDataSource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(OpenSearchDataSourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -125,7 +125,7 @@ public open class OpenSearchDataSource(
      * @param api The API to attach this data source to. 
      */
     override fun api(api: IGraphqlApi) {
-      cdkBuilder.api(api.let(IGraphqlApi::unwrap))
+      cdkBuilder.api(api.let(IGraphqlApi.Companion::unwrap))
     }
 
     /**
@@ -145,7 +145,7 @@ public open class OpenSearchDataSource(
      * @param domain The OpenSearch domain containing the endpoint for the data source. 
      */
     override fun domain(domain: IDomain) {
-      cdkBuilder.domain(domain.let(IDomain::unwrap))
+      cdkBuilder.domain(domain.let(IDomain.Companion::unwrap))
     }
 
     /**
@@ -168,7 +168,7 @@ public open class OpenSearchDataSource(
      * source. 
      */
     override fun serviceRole(serviceRole: IRole) {
-      cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
+      cdkBuilder.serviceRole(serviceRole.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appsync.OpenSearchDataSource =

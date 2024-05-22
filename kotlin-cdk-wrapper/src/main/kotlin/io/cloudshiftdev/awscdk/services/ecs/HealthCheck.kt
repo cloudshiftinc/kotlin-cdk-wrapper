@@ -169,7 +169,7 @@ public interface HealthCheck {
      * You may specify between 5 and 300 seconds.
      */
     override fun interval(interval: Duration) {
-      cdkBuilder.interval(interval.let(Duration::unwrap))
+      cdkBuilder.interval(interval.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -187,7 +187,7 @@ public interface HealthCheck {
      * You may specify between 0 and 300 seconds.
      */
     override fun startPeriod(startPeriod: Duration) {
-      cdkBuilder.startPeriod(startPeriod.let(Duration::unwrap))
+      cdkBuilder.startPeriod(startPeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -196,7 +196,7 @@ public interface HealthCheck {
      * You may specify between 2 and 60 seconds.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.HealthCheck = cdkBuilder.build()

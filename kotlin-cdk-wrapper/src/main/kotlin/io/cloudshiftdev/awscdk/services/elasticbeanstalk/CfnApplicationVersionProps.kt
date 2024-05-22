@@ -130,7 +130,7 @@ public interface CfnApplicationVersionProps {
      * The Amazon S3 bucket must be in the same region as the environment.
      */
     override fun sourceBundle(sourceBundle: IResolvable) {
-      cdkBuilder.sourceBundle(sourceBundle.let(IResolvable::unwrap))
+      cdkBuilder.sourceBundle(sourceBundle.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -140,7 +140,7 @@ public interface CfnApplicationVersionProps {
      * The Amazon S3 bucket must be in the same region as the environment.
      */
     override fun sourceBundle(sourceBundle: CfnApplicationVersion.SourceBundleProperty) {
-      cdkBuilder.sourceBundle(sourceBundle.let(CfnApplicationVersion.SourceBundleProperty::unwrap))
+      cdkBuilder.sourceBundle(sourceBundle.let(CfnApplicationVersion.SourceBundleProperty.Companion::unwrap))
     }
 
     /**

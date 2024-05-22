@@ -55,8 +55,8 @@ public open class CfnAccessPoint(
     id: String,
     props: CfnAccessPointProps,
   ) :
-      this(software.amazon.awscdk.services.s3outposts.CfnAccessPoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAccessPointProps::unwrap))
+      this(software.amazon.awscdk.services.s3outposts.CfnAccessPoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAccessPointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -93,7 +93,7 @@ public open class CfnAccessPoint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -129,14 +129,14 @@ public open class CfnAccessPoint(
    * The virtual private cloud (VPC) configuration for this access point, if one exists.
    */
   public open fun vpcConfiguration(`value`: IResolvable) {
-    unwrap(this).setVpcConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The virtual private cloud (VPC) configuration for this access point, if one exists.
    */
   public open fun vpcConfiguration(`value`: VpcConfigurationProperty) {
-    unwrap(this).setVpcConfiguration(`value`.let(VpcConfigurationProperty::unwrap))
+    unwrap(this).setVpcConfiguration(`value`.let(VpcConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -255,7 +255,7 @@ public open class CfnAccessPoint(
      * if one exists. 
      */
     override fun vpcConfiguration(vpcConfiguration: IResolvable) {
-      cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -266,7 +266,7 @@ public open class CfnAccessPoint(
      * if one exists. 
      */
     override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
-      cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty::unwrap))
+      cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty.Companion::unwrap))
     }
 
     /**

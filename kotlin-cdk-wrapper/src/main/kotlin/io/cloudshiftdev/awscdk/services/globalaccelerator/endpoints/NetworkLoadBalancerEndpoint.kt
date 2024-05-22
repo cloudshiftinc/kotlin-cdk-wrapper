@@ -52,14 +52,14 @@ public open class NetworkLoadBalancerEndpoint(
   public
       constructor(loadBalancer: CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkLoadBalancer)
       :
-      this(software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBalancerEndpoint(loadBalancer.let(CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkLoadBalancer::unwrap))
+      this(software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBalancerEndpoint(loadBalancer.let(CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkLoadBalancer.Companion::unwrap))
   )
 
   public
       constructor(loadBalancer: CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkLoadBalancer,
       options: NetworkLoadBalancerEndpointProps) :
-      this(software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBalancerEndpoint(loadBalancer.let(CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkLoadBalancer::unwrap),
-      options.let(NetworkLoadBalancerEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.globalaccelerator.endpoints.NetworkLoadBalancerEndpoint(loadBalancer.let(CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkLoadBalancer.Companion::unwrap),
+      options.let(NetworkLoadBalancerEndpointProps.Companion::unwrap))
   )
 
   public

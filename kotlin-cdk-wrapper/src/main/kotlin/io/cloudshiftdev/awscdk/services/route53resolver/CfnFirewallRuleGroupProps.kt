@@ -110,7 +110,7 @@ public interface CfnFirewallRuleGroupProps {
      * @param firewallRules A list of the rules that you have defined.
      */
     override fun firewallRules(firewallRules: IResolvable) {
-      cdkBuilder.firewallRules(firewallRules.let(IResolvable::unwrap))
+      cdkBuilder.firewallRules(firewallRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -137,7 +137,7 @@ public interface CfnFirewallRuleGroupProps {
      * @param tags A list of the tag keys and values that you want to associate with the rule group.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -129,7 +129,7 @@ public interface CfnConnectionProps {
      * @param tags Specifies the tags applied to a connection.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

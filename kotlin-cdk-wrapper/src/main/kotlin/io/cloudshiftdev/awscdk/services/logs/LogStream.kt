@@ -37,8 +37,8 @@ public open class LogStream(
     id: String,
     props: LogStreamProps,
   ) :
-      this(software.amazon.awscdk.services.logs.LogStream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(LogStreamProps::unwrap))
+      this(software.amazon.awscdk.services.logs.LogStream(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(LogStreamProps.Companion::unwrap))
   )
 
   public constructor(
@@ -106,7 +106,7 @@ public open class LogStream(
      * @param logGroup The log group to create a log stream for. 
      */
     override fun logGroup(logGroup: ILogGroup) {
-      cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
+      cdkBuilder.logGroup(logGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -137,7 +137,7 @@ public open class LogStream(
      * app. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.logs.LogStream = cdkBuilder.build()
@@ -149,7 +149,7 @@ public open class LogStream(
       id: String,
       logStreamName: String,
     ): ILogStream =
-        software.amazon.awscdk.services.logs.LogStream.fromLogStreamName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.logs.LogStream.fromLogStreamName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, logStreamName).let(ILogStream::wrap)
 
     public operator fun invoke(

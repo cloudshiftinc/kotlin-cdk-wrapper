@@ -64,8 +64,8 @@ public open class CfnVirtualCluster(
     id: String,
     props: CfnVirtualClusterProps,
   ) :
-      this(software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVirtualClusterProps::unwrap))
+      this(software.amazon.awscdk.services.emrcontainers.CfnVirtualCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVirtualClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -95,14 +95,14 @@ public open class CfnVirtualCluster(
    * The container provider of the virtual cluster.
    */
   public open fun containerProvider(`value`: IResolvable) {
-    unwrap(this).setContainerProvider(`value`.let(IResolvable::unwrap))
+    unwrap(this).setContainerProvider(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The container provider of the virtual cluster.
    */
   public open fun containerProvider(`value`: ContainerProviderProperty) {
-    unwrap(this).setContainerProvider(`value`.let(ContainerProviderProperty::unwrap))
+    unwrap(this).setContainerProvider(`value`.let(ContainerProviderProperty.Companion::unwrap))
   }
 
   /**
@@ -119,7 +119,7 @@ public open class CfnVirtualCluster(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -149,7 +149,7 @@ public open class CfnVirtualCluster(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -235,7 +235,7 @@ public open class CfnVirtualCluster(
      * @param containerProvider The container provider of the virtual cluster. 
      */
     override fun containerProvider(containerProvider: IResolvable) {
-      cdkBuilder.containerProvider(containerProvider.let(IResolvable::unwrap))
+      cdkBuilder.containerProvider(containerProvider.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -245,7 +245,7 @@ public open class CfnVirtualCluster(
      * @param containerProvider The container provider of the virtual cluster. 
      */
     override fun containerProvider(containerProvider: ContainerProviderProperty) {
-      cdkBuilder.containerProvider(containerProvider.let(ContainerProviderProperty::unwrap))
+      cdkBuilder.containerProvider(containerProvider.let(ContainerProviderProperty.Companion::unwrap))
     }
 
     /**
@@ -280,7 +280,7 @@ public open class CfnVirtualCluster(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -379,14 +379,14 @@ public open class CfnVirtualCluster(
        * @param eksInfo The information about the Amazon EKS cluster. 
        */
       override fun eksInfo(eksInfo: IResolvable) {
-        cdkBuilder.eksInfo(eksInfo.let(IResolvable::unwrap))
+        cdkBuilder.eksInfo(eksInfo.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param eksInfo The information about the Amazon EKS cluster. 
        */
       override fun eksInfo(eksInfo: EksInfoProperty) {
-        cdkBuilder.eksInfo(eksInfo.let(EksInfoProperty::unwrap))
+        cdkBuilder.eksInfo(eksInfo.let(EksInfoProperty.Companion::unwrap))
       }
 
       /**
@@ -544,14 +544,14 @@ public open class CfnVirtualCluster(
        * @param info The information about the container cluster. 
        */
       override fun info(info: IResolvable) {
-        cdkBuilder.info(info.let(IResolvable::unwrap))
+        cdkBuilder.info(info.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param info The information about the container cluster. 
        */
       override fun info(info: ContainerInfoProperty) {
-        cdkBuilder.info(info.let(ContainerInfoProperty::unwrap))
+        cdkBuilder.info(info.let(ContainerInfoProperty.Companion::unwrap))
       }
 
       /**

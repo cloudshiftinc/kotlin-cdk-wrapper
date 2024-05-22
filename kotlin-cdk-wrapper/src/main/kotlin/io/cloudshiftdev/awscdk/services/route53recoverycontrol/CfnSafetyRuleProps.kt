@@ -255,7 +255,7 @@ public interface CfnSafetyRuleProps {
      * fail-open scenario.
      */
     override fun assertionRule(assertionRule: IResolvable) {
-      cdkBuilder.assertionRule(assertionRule.let(IResolvable::unwrap))
+      cdkBuilder.assertionRule(assertionRule.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -267,7 +267,7 @@ public interface CfnSafetyRuleProps {
      * fail-open scenario.
      */
     override fun assertionRule(assertionRule: CfnSafetyRule.AssertionRuleProperty) {
-      cdkBuilder.assertionRule(assertionRule.let(CfnSafetyRule.AssertionRuleProperty::unwrap))
+      cdkBuilder.assertionRule(assertionRule.let(CfnSafetyRule.AssertionRuleProperty.Companion::unwrap))
     }
 
     /**
@@ -302,7 +302,7 @@ public interface CfnSafetyRuleProps {
      * in the gating rule.
      */
     override fun gatingRule(gatingRule: IResolvable) {
-      cdkBuilder.gatingRule(gatingRule.let(IResolvable::unwrap))
+      cdkBuilder.gatingRule(gatingRule.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -316,7 +316,7 @@ public interface CfnSafetyRuleProps {
      * in the gating rule.
      */
     override fun gatingRule(gatingRule: CfnSafetyRule.GatingRuleProperty) {
-      cdkBuilder.gatingRule(gatingRule.let(CfnSafetyRule.GatingRuleProperty::unwrap))
+      cdkBuilder.gatingRule(gatingRule.let(CfnSafetyRule.GatingRuleProperty.Companion::unwrap))
     }
 
     /**
@@ -351,7 +351,7 @@ public interface CfnSafetyRuleProps {
      * least two AWS Regions have traffic flowing to them.
      */
     override fun ruleConfig(ruleConfig: IResolvable) {
-      cdkBuilder.ruleConfig(ruleConfig.let(IResolvable::unwrap))
+      cdkBuilder.ruleConfig(ruleConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -362,7 +362,7 @@ public interface CfnSafetyRuleProps {
      * least two AWS Regions have traffic flowing to them.
      */
     override fun ruleConfig(ruleConfig: CfnSafetyRule.RuleConfigProperty) {
-      cdkBuilder.ruleConfig(ruleConfig.let(CfnSafetyRule.RuleConfigProperty::unwrap))
+      cdkBuilder.ruleConfig(ruleConfig.let(CfnSafetyRule.RuleConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -381,7 +381,7 @@ public interface CfnSafetyRuleProps {
      * @param tags The tags associated with the safety rule.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

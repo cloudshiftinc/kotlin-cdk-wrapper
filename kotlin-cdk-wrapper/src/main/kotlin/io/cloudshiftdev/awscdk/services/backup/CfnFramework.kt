@@ -67,8 +67,8 @@ public open class CfnFramework(
     id: String,
     props: CfnFrameworkProps,
   ) :
-      this(software.amazon.awscdk.services.backup.CfnFramework(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFrameworkProps::unwrap))
+      this(software.amazon.awscdk.services.backup.CfnFramework(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFrameworkProps.Companion::unwrap))
   )
 
   public constructor(
@@ -124,7 +124,7 @@ public open class CfnFramework(
    * Contains detailed information about all of the controls of a framework.
    */
   public open fun frameworkControls(`value`: IResolvable) {
-    unwrap(this).setFrameworkControls(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFrameworkControls(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -173,7 +173,7 @@ public open class CfnFramework(
    * The tags to assign to your framework.
    */
   public open fun frameworkTags(`value`: List<CfnTag>) {
-    unwrap(this).setFrameworkTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setFrameworkTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -187,7 +187,7 @@ public open class CfnFramework(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -282,7 +282,7 @@ public open class CfnFramework(
      * framework. 
      */
     override fun frameworkControls(frameworkControls: IResolvable) {
-      cdkBuilder.frameworkControls(frameworkControls.let(IResolvable::unwrap))
+      cdkBuilder.frameworkControls(frameworkControls.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -341,7 +341,7 @@ public open class CfnFramework(
      * @param frameworkTags The tags to assign to your framework. 
      */
     override fun frameworkTags(frameworkTags: List<CfnTag>) {
-      cdkBuilder.frameworkTags(frameworkTags.map(CfnTag::unwrap))
+      cdkBuilder.frameworkTags(frameworkTags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -650,7 +650,7 @@ public open class CfnFramework(
        * The structure to assign a tag is: `[{"Key":"string","Value":"string"}]` .
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**
@@ -822,7 +822,7 @@ public open class CfnFramework(
        * @param controlInputParameters The name/value pairs.
        */
       override fun controlInputParameters(controlInputParameters: IResolvable) {
-        cdkBuilder.controlInputParameters(controlInputParameters.let(IResolvable::unwrap))
+        cdkBuilder.controlInputParameters(controlInputParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**

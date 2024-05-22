@@ -92,8 +92,8 @@ public open class CfnReceiptRule(
     id: String,
     props: CfnReceiptRuleProps,
   ) :
-      this(software.amazon.awscdk.services.ses.CfnReceiptRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnReceiptRuleProps::unwrap))
+      this(software.amazon.awscdk.services.ses.CfnReceiptRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnReceiptRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -126,7 +126,7 @@ public open class CfnReceiptRule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -140,7 +140,7 @@ public open class CfnReceiptRule(
    * status, scan status, and TLS policy.
    */
   public open fun rule(`value`: IResolvable) {
-    unwrap(this).setRule(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRule(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -148,7 +148,7 @@ public open class CfnReceiptRule(
    * status, scan status, and TLS policy.
    */
   public open fun rule(`value`: RuleProperty) {
-    unwrap(this).setRule(`value`.let(RuleProperty::unwrap))
+    unwrap(this).setRule(`value`.let(RuleProperty.Companion::unwrap))
   }
 
   /**
@@ -255,7 +255,7 @@ public open class CfnReceiptRule(
      * domains, enabled status, scan status, and TLS policy. 
      */
     override fun rule(rule: IResolvable) {
-      cdkBuilder.rule(rule.let(IResolvable::unwrap))
+      cdkBuilder.rule(rule.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -267,7 +267,7 @@ public open class CfnReceiptRule(
      * domains, enabled status, scan status, and TLS policy. 
      */
     override fun rule(rule: RuleProperty) {
-      cdkBuilder.rule(rule.let(RuleProperty::unwrap))
+      cdkBuilder.rule(rule.let(RuleProperty.Companion::unwrap))
     }
 
     /**
@@ -578,14 +578,14 @@ public open class CfnReceiptRule(
        * @param addHeaderAction Adds a header to the received email.
        */
       override fun addHeaderAction(addHeaderAction: IResolvable) {
-        cdkBuilder.addHeaderAction(addHeaderAction.let(IResolvable::unwrap))
+        cdkBuilder.addHeaderAction(addHeaderAction.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param addHeaderAction Adds a header to the received email.
        */
       override fun addHeaderAction(addHeaderAction: AddHeaderActionProperty) {
-        cdkBuilder.addHeaderAction(addHeaderAction.let(AddHeaderActionProperty::unwrap))
+        cdkBuilder.addHeaderAction(addHeaderAction.let(AddHeaderActionProperty.Companion::unwrap))
       }
 
       /**
@@ -601,7 +601,7 @@ public open class CfnReceiptRule(
        * and, optionally, publishes a notification to Amazon Simple Notification Service (Amazon SNS).
        */
       override fun bounceAction(bounceAction: IResolvable) {
-        cdkBuilder.bounceAction(bounceAction.let(IResolvable::unwrap))
+        cdkBuilder.bounceAction(bounceAction.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -609,7 +609,7 @@ public open class CfnReceiptRule(
        * and, optionally, publishes a notification to Amazon Simple Notification Service (Amazon SNS).
        */
       override fun bounceAction(bounceAction: BounceActionProperty) {
-        cdkBuilder.bounceAction(bounceAction.let(BounceActionProperty::unwrap))
+        cdkBuilder.bounceAction(bounceAction.let(BounceActionProperty.Companion::unwrap))
       }
 
       /**
@@ -626,7 +626,7 @@ public open class CfnReceiptRule(
        * to Amazon SNS.
        */
       override fun lambdaAction(lambdaAction: IResolvable) {
-        cdkBuilder.lambdaAction(lambdaAction.let(IResolvable::unwrap))
+        cdkBuilder.lambdaAction(lambdaAction.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -634,7 +634,7 @@ public open class CfnReceiptRule(
        * to Amazon SNS.
        */
       override fun lambdaAction(lambdaAction: LambdaActionProperty) {
-        cdkBuilder.lambdaAction(lambdaAction.let(LambdaActionProperty::unwrap))
+        cdkBuilder.lambdaAction(lambdaAction.let(LambdaActionProperty.Companion::unwrap))
       }
 
       /**
@@ -651,7 +651,7 @@ public open class CfnReceiptRule(
        * bucket and, optionally, publishes a notification to Amazon SNS.
        */
       override fun s3Action(s3Action: IResolvable) {
-        cdkBuilder.s3Action(s3Action.let(IResolvable::unwrap))
+        cdkBuilder.s3Action(s3Action.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -659,7 +659,7 @@ public open class CfnReceiptRule(
        * bucket and, optionally, publishes a notification to Amazon SNS.
        */
       override fun s3Action(s3Action: S3ActionProperty) {
-        cdkBuilder.s3Action(s3Action.let(S3ActionProperty::unwrap))
+        cdkBuilder.s3Action(s3Action.let(S3ActionProperty.Companion::unwrap))
       }
 
       /**
@@ -675,14 +675,14 @@ public open class CfnReceiptRule(
        * @param snsAction Publishes the email content within a notification to Amazon SNS.
        */
       override fun snsAction(snsAction: IResolvable) {
-        cdkBuilder.snsAction(snsAction.let(IResolvable::unwrap))
+        cdkBuilder.snsAction(snsAction.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param snsAction Publishes the email content within a notification to Amazon SNS.
        */
       override fun snsAction(snsAction: SNSActionProperty) {
-        cdkBuilder.snsAction(snsAction.let(SNSActionProperty::unwrap))
+        cdkBuilder.snsAction(snsAction.let(SNSActionProperty.Companion::unwrap))
       }
 
       /**
@@ -698,7 +698,7 @@ public open class CfnReceiptRule(
        * publishes a notification to Amazon SNS.
        */
       override fun stopAction(stopAction: IResolvable) {
-        cdkBuilder.stopAction(stopAction.let(IResolvable::unwrap))
+        cdkBuilder.stopAction(stopAction.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -706,7 +706,7 @@ public open class CfnReceiptRule(
        * publishes a notification to Amazon SNS.
        */
       override fun stopAction(stopAction: StopActionProperty) {
-        cdkBuilder.stopAction(stopAction.let(StopActionProperty::unwrap))
+        cdkBuilder.stopAction(stopAction.let(StopActionProperty.Companion::unwrap))
       }
 
       /**
@@ -723,7 +723,7 @@ public open class CfnReceiptRule(
        * Amazon Amazon SNS.
        */
       override fun workmailAction(workmailAction: IResolvable) {
-        cdkBuilder.workmailAction(workmailAction.let(IResolvable::unwrap))
+        cdkBuilder.workmailAction(workmailAction.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -731,7 +731,7 @@ public open class CfnReceiptRule(
        * Amazon Amazon SNS.
        */
       override fun workmailAction(workmailAction: WorkmailActionProperty) {
-        cdkBuilder.workmailAction(workmailAction.let(WorkmailActionProperty::unwrap))
+        cdkBuilder.workmailAction(workmailAction.let(WorkmailActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1648,7 +1648,7 @@ public open class CfnReceiptRule(
        * the recipient email addresses or domains specified in the receipt rule.
        */
       override fun actions(actions: IResolvable) {
-        cdkBuilder.actions(actions.let(IResolvable::unwrap))
+        cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1678,7 +1678,7 @@ public open class CfnReceiptRule(
        * The default value is `false` .
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1723,7 +1723,7 @@ public open class CfnReceiptRule(
        * The default value is `false` .
        */
       override fun scanEnabled(scanEnabled: IResolvable) {
-        cdkBuilder.scanEnabled(scanEnabled.let(IResolvable::unwrap))
+        cdkBuilder.scanEnabled(scanEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**

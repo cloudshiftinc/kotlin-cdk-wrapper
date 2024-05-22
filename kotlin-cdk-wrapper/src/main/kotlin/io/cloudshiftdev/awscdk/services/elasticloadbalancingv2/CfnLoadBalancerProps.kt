@@ -415,7 +415,7 @@ public interface CfnLoadBalancerProps {
      * @param loadBalancerAttributes The load balancer attributes.
      */
     override fun loadBalancerAttributes(loadBalancerAttributes: IResolvable) {
-      cdkBuilder.loadBalancerAttributes(loadBalancerAttributes.let(IResolvable::unwrap))
+      cdkBuilder.loadBalancerAttributes(loadBalancerAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -502,7 +502,7 @@ public interface CfnLoadBalancerProps {
      * cannot specify Elastic IP addresses for your subnets.
      */
     override fun subnetMappings(subnetMappings: IResolvable) {
-      cdkBuilder.subnetMappings(subnetMappings.let(IResolvable::unwrap))
+      cdkBuilder.subnetMappings(subnetMappings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -600,7 +600,7 @@ public interface CfnLoadBalancerProps {
      * @param tags The tags to assign to the load balancer.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

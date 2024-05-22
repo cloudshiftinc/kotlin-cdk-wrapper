@@ -81,8 +81,8 @@ public open class CfnAssociation(
     id: String,
     props: CfnAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.ssm.CfnAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.ssm.CfnAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -111,7 +111,7 @@ public open class CfnAssociation(
    * created and then according to the schedule you specified.
    */
   public open fun applyOnlyAtCronInterval(`value`: IResolvable) {
-    unwrap(this).setApplyOnlyAtCronInterval(`value`.let(IResolvable::unwrap))
+    unwrap(this).setApplyOnlyAtCronInterval(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -194,7 +194,7 @@ public open class CfnAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -258,7 +258,7 @@ public open class CfnAssociation(
    * of the request.
    */
   public open fun outputLocation(`value`: IResolvable) {
-    unwrap(this).setOutputLocation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOutputLocation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -266,7 +266,7 @@ public open class CfnAssociation(
    * of the request.
    */
   public open fun outputLocation(`value`: InstanceAssociationOutputLocationProperty) {
-    unwrap(this).setOutputLocation(`value`.let(InstanceAssociationOutputLocationProperty::unwrap))
+    unwrap(this).setOutputLocation(`value`.let(InstanceAssociationOutputLocationProperty.Companion::unwrap))
   }
 
   /**
@@ -336,7 +336,7 @@ public open class CfnAssociation(
    * The targets for the association.
    */
   public open fun targets(`value`: IResolvable) {
-    unwrap(this).setTargets(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTargets(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -745,7 +745,7 @@ public open class CfnAssociation(
      * it immediately after it is created and then according to the schedule you specified. 
      */
     override fun applyOnlyAtCronInterval(applyOnlyAtCronInterval: IResolvable) {
-      cdkBuilder.applyOnlyAtCronInterval(applyOnlyAtCronInterval.let(IResolvable::unwrap))
+      cdkBuilder.applyOnlyAtCronInterval(applyOnlyAtCronInterval.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -932,7 +932,7 @@ public open class CfnAssociation(
      * store the output details of the request. 
      */
     override fun outputLocation(outputLocation: IResolvable) {
-      cdkBuilder.outputLocation(outputLocation.let(IResolvable::unwrap))
+      cdkBuilder.outputLocation(outputLocation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -944,7 +944,7 @@ public open class CfnAssociation(
      * store the output details of the request. 
      */
     override fun outputLocation(outputLocation: InstanceAssociationOutputLocationProperty) {
-      cdkBuilder.outputLocation(outputLocation.let(InstanceAssociationOutputLocationProperty::unwrap))
+      cdkBuilder.outputLocation(outputLocation.let(InstanceAssociationOutputLocationProperty.Companion::unwrap))
     }
 
     /**
@@ -1033,7 +1033,7 @@ public open class CfnAssociation(
      * @param targets The targets for the association. 
      */
     override fun targets(targets: IResolvable) {
-      cdkBuilder.targets(targets.let(IResolvable::unwrap))
+      cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1206,7 +1206,7 @@ public open class CfnAssociation(
        * request.
        */
       override fun s3Location(s3Location: IResolvable) {
-        cdkBuilder.s3Location(s3Location.let(IResolvable::unwrap))
+        cdkBuilder.s3Location(s3Location.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1216,7 +1216,7 @@ public open class CfnAssociation(
        * request.
        */
       override fun s3Location(s3Location: S3OutputLocationProperty) {
-        cdkBuilder.s3Location(s3Location.let(S3OutputLocationProperty::unwrap))
+        cdkBuilder.s3Location(s3Location.let(S3OutputLocationProperty.Companion::unwrap))
       }
 
       /**

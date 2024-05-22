@@ -52,7 +52,7 @@ public abstract class UserData(
    * @param params 
    */
   public open fun addExecuteFileCommand(params: ExecuteFileOptions) {
-    unwrap(this).addExecuteFileCommand(params.let(ExecuteFileOptions::unwrap))
+    unwrap(this).addExecuteFileCommand(params.let(ExecuteFileOptions.Companion::unwrap))
   }
 
   /**
@@ -82,7 +82,7 @@ public abstract class UserData(
    * @param params 
    */
   public open fun addS3DownloadCommand(params: S3DownloadOptions): String =
-      unwrap(this).addS3DownloadCommand(params.let(S3DownloadOptions::unwrap))
+      unwrap(this).addS3DownloadCommand(params.let(S3DownloadOptions.Companion::unwrap))
 
   /**
    * Adds commands to download a file from S3.
@@ -101,7 +101,7 @@ public abstract class UserData(
    * @param resource 
    */
   public open fun addSignalOnExitCommand(resource: Resource) {
-    unwrap(this).addSignalOnExitCommand(resource.let(Resource::unwrap))
+    unwrap(this).addSignalOnExitCommand(resource.let(Resource.Companion::unwrap))
   }
 
   /**
@@ -121,7 +121,7 @@ public abstract class UserData(
         software.amazon.awscdk.services.ec2.UserData.forLinux().let(UserData::wrap)
 
     public fun forLinux(options: LinuxUserDataOptions): UserData =
-        software.amazon.awscdk.services.ec2.UserData.forLinux(options.let(LinuxUserDataOptions::unwrap)).let(UserData::wrap)
+        software.amazon.awscdk.services.ec2.UserData.forLinux(options.let(LinuxUserDataOptions.Companion::unwrap)).let(UserData::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d0f6580db612bc851c54d2099ec88beae3a75a687c834d4720cd21d88b136b1b")
@@ -129,13 +129,13 @@ public abstract class UserData(
         forLinux(LinuxUserDataOptions(options))
 
     public fun forOperatingSystem(os: OperatingSystemType): UserData =
-        software.amazon.awscdk.services.ec2.UserData.forOperatingSystem(os.let(OperatingSystemType::unwrap)).let(UserData::wrap)
+        software.amazon.awscdk.services.ec2.UserData.forOperatingSystem(os.let(OperatingSystemType.Companion::unwrap)).let(UserData::wrap)
 
     public fun forWindows(): UserData =
         software.amazon.awscdk.services.ec2.UserData.forWindows().let(UserData::wrap)
 
     public fun forWindows(options: WindowsUserDataOptions): UserData =
-        software.amazon.awscdk.services.ec2.UserData.forWindows(options.let(WindowsUserDataOptions::unwrap)).let(UserData::wrap)
+        software.amazon.awscdk.services.ec2.UserData.forWindows(options.let(WindowsUserDataOptions.Companion::unwrap)).let(UserData::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fbba03fb3cbf7b7fbd6f4cfa74c1e39e79eeb185157e50feec0de02231b7da9c")

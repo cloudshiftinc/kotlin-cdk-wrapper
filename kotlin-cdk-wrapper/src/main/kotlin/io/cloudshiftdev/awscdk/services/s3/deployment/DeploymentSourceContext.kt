@@ -50,7 +50,7 @@ public interface DeploymentSourceContext {
      * @param handlerRole The role for the handler. 
      */
     override fun handlerRole(handlerRole: IRole) {
-      cdkBuilder.handlerRole(handlerRole.let(IRole::unwrap))
+      cdkBuilder.handlerRole(handlerRole.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.s3.deployment.DeploymentSourceContext =

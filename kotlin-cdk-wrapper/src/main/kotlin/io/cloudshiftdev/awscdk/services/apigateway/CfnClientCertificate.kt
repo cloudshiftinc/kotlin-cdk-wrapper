@@ -41,7 +41,7 @@ public open class CfnClientCertificate(
   cdkObject: software.amazon.awscdk.services.apigateway.CfnClientCertificate,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.apigateway.CfnClientCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.apigateway.CfnClientCertificate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -50,8 +50,8 @@ public open class CfnClientCertificate(
     id: String,
     props: CfnClientCertificateProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.CfnClientCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnClientCertificateProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.CfnClientCertificate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnClientCertificateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -86,7 +86,7 @@ public open class CfnClientCertificate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -104,7 +104,7 @@ public open class CfnClientCertificate(
    * The collection of tags.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -172,7 +172,7 @@ public open class CfnClientCertificate(
      * @param tags The collection of tags. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

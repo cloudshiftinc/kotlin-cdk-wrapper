@@ -53,8 +53,8 @@ public open class CfnVPNGateway(
     id: String,
     props: CfnVPNGatewayProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnVPNGateway(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVPNGatewayProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnVPNGateway(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVPNGatewayProps.Companion::unwrap))
   )
 
   public constructor(
@@ -87,7 +87,7 @@ public open class CfnVPNGateway(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -105,7 +105,7 @@ public open class CfnVPNGateway(
    * Any tags assigned to the virtual private gateway.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -189,7 +189,7 @@ public open class CfnVPNGateway(
      * @param tags Any tags assigned to the virtual private gateway. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

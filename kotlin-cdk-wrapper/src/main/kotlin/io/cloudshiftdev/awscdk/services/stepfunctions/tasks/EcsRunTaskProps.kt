@@ -336,7 +336,7 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
      * @param cluster The ECS cluster to run the task on. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -351,7 +351,7 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
      * Specify the container to use and the overrides to apply.
      */
     override fun containerOverrides(containerOverrides: List<ContainerOverride>) {
-      cdkBuilder.containerOverrides(containerOverrides.map(ContainerOverride::unwrap))
+      cdkBuilder.containerOverrides(containerOverrides.map(ContainerOverride.Companion::unwrap))
     }
 
     /**
@@ -367,7 +367,7 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
      * This enables cross-account resource invocations.
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -393,7 +393,7 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -402,7 +402,7 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -423,7 +423,7 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
      * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -431,7 +431,7 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
      * your tasks and services are hosted. 
      */
     override fun launchTarget(launchTarget: IEcsLaunchTarget) {
-      cdkBuilder.launchTarget(launchTarget.let(IEcsLaunchTarget::unwrap))
+      cdkBuilder.launchTarget(launchTarget.let(IEcsLaunchTarget.Companion::unwrap))
     }
 
     /**
@@ -450,7 +450,7 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
      * An error will be received if you specify the SERVICE option when running a task.
      */
     override fun propagatedTagSource(propagatedTagSource: PropagatedTagSource) {
-      cdkBuilder.propagatedTagSource(propagatedTagSource.let(PropagatedTagSource::unwrap))
+      cdkBuilder.propagatedTagSource(propagatedTagSource.let(PropagatedTagSource.Companion::unwrap))
     }
 
     /**
@@ -483,7 +483,7 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
      * @param securityGroups Existing security groups to use for the tasks.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -503,7 +503,7 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
      * @param subnets Subnets to place the task's ENIs.
      */
     override fun subnets(subnets: SubnetSelection) {
-      cdkBuilder.subnets(subnets.let(SubnetSelection::unwrap))
+      cdkBuilder.subnets(subnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -523,7 +523,7 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
      * consider using CustomState
      */
     override fun taskDefinition(taskDefinition: TaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(TaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(TaskDefinition.Companion::unwrap))
     }
 
     /**
@@ -532,7 +532,7 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -541,7 +541,7 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.EcsRunTaskProps =

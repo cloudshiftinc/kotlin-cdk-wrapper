@@ -235,7 +235,7 @@ public interface CfnAPNSVoipSandboxChannelProps {
      * application.
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**

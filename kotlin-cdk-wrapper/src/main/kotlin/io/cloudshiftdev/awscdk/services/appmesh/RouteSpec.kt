@@ -45,7 +45,7 @@ public abstract class RouteSpec(
    * @param scope 
    */
   public open fun bind(scope: Construct): RouteSpecConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(RouteSpecConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(RouteSpecConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.RouteSpec,
@@ -53,7 +53,7 @@ public abstract class RouteSpec(
 
   public companion object {
     public fun grpc(options: GrpcRouteSpecOptions): RouteSpec =
-        software.amazon.awscdk.services.appmesh.RouteSpec.grpc(options.let(GrpcRouteSpecOptions::unwrap)).let(RouteSpec::wrap)
+        software.amazon.awscdk.services.appmesh.RouteSpec.grpc(options.let(GrpcRouteSpecOptions.Companion::unwrap)).let(RouteSpec::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fc28dcf808b3ebcbf9f38613fcbdd0645f0b82d5945d8a620ed7b4b9fcf3d85b")
@@ -61,7 +61,7 @@ public abstract class RouteSpec(
         grpc(GrpcRouteSpecOptions(options))
 
     public fun http(options: HttpRouteSpecOptions): RouteSpec =
-        software.amazon.awscdk.services.appmesh.RouteSpec.http(options.let(HttpRouteSpecOptions::unwrap)).let(RouteSpec::wrap)
+        software.amazon.awscdk.services.appmesh.RouteSpec.http(options.let(HttpRouteSpecOptions.Companion::unwrap)).let(RouteSpec::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1bfddccd485c3fe5b29338b133376307d93f409f7c0b903d635bbd558046f67b")
@@ -69,7 +69,7 @@ public abstract class RouteSpec(
         http(HttpRouteSpecOptions(options))
 
     public fun http2(options: HttpRouteSpecOptions): RouteSpec =
-        software.amazon.awscdk.services.appmesh.RouteSpec.http2(options.let(HttpRouteSpecOptions::unwrap)).let(RouteSpec::wrap)
+        software.amazon.awscdk.services.appmesh.RouteSpec.http2(options.let(HttpRouteSpecOptions.Companion::unwrap)).let(RouteSpec::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("23e1fc70af5ac38889106ed66894951534640db2bb38ad1eaa88b2dddc554f7c")
@@ -77,7 +77,7 @@ public abstract class RouteSpec(
         http2(HttpRouteSpecOptions(options))
 
     public fun tcp(options: TcpRouteSpecOptions): RouteSpec =
-        software.amazon.awscdk.services.appmesh.RouteSpec.tcp(options.let(TcpRouteSpecOptions::unwrap)).let(RouteSpec::wrap)
+        software.amazon.awscdk.services.appmesh.RouteSpec.tcp(options.let(TcpRouteSpecOptions.Companion::unwrap)).let(RouteSpec::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("981534fa18f8eb5ee1a048c400928ad525aa9f1c8826090f3f79666fdc02cf5a")

@@ -144,7 +144,7 @@ public interface HttpLambdaAuthorizerProps {
      * response format 2.0 will be used.
      */
     override fun responseTypes(responseTypes: List<HttpLambdaResponseType>) {
-      cdkBuilder.responseTypes(responseTypes.map(HttpLambdaResponseType::unwrap))
+      cdkBuilder.responseTypes(responseTypes.map(HttpLambdaResponseType.Companion::unwrap))
     }
 
     /**
@@ -161,7 +161,7 @@ public interface HttpLambdaAuthorizerProps {
      * Disable caching by setting this to `Duration.seconds(0)`.
      */
     override fun resultsCacheTtl(resultsCacheTtl: Duration) {
-      cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration::unwrap))
+      cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration.Companion::unwrap))
     }
 
     public fun build():

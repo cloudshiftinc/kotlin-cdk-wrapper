@@ -195,7 +195,7 @@ public interface CfnWorkteamProps {
      * created using your own OIDC identity provider (IdP) use `OidcMemberDefinition` .
      */
     override fun memberDefinitions(memberDefinitions: IResolvable) {
-      cdkBuilder.memberDefinitions(memberDefinitions.let(IResolvable::unwrap))
+      cdkBuilder.memberDefinitions(memberDefinitions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -224,7 +224,7 @@ public interface CfnWorkteamProps {
      * items for work teams.
      */
     override fun notificationConfiguration(notificationConfiguration: IResolvable) {
-      cdkBuilder.notificationConfiguration(notificationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.notificationConfiguration(notificationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -233,7 +233,7 @@ public interface CfnWorkteamProps {
      */
     override
         fun notificationConfiguration(notificationConfiguration: CfnWorkteam.NotificationConfigurationProperty) {
-      cdkBuilder.notificationConfiguration(notificationConfiguration.let(CfnWorkteam.NotificationConfigurationProperty::unwrap))
+      cdkBuilder.notificationConfiguration(notificationConfiguration.let(CfnWorkteam.NotificationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -251,7 +251,7 @@ public interface CfnWorkteamProps {
      * @param tags An array of key-value pairs.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

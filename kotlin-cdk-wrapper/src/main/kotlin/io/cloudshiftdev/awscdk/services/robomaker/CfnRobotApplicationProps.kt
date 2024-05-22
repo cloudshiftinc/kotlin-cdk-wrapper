@@ -178,7 +178,7 @@ public interface CfnRobotApplicationProps {
      * @param robotSoftwareSuite The robot software suite used by the robot application. 
      */
     override fun robotSoftwareSuite(robotSoftwareSuite: IResolvable) {
-      cdkBuilder.robotSoftwareSuite(robotSoftwareSuite.let(IResolvable::unwrap))
+      cdkBuilder.robotSoftwareSuite(robotSoftwareSuite.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -186,7 +186,7 @@ public interface CfnRobotApplicationProps {
      */
     override
         fun robotSoftwareSuite(robotSoftwareSuite: CfnRobotApplication.RobotSoftwareSuiteProperty) {
-      cdkBuilder.robotSoftwareSuite(robotSoftwareSuite.let(CfnRobotApplication.RobotSoftwareSuiteProperty::unwrap))
+      cdkBuilder.robotSoftwareSuite(robotSoftwareSuite.let(CfnRobotApplication.RobotSoftwareSuiteProperty.Companion::unwrap))
     }
 
     /**
@@ -203,7 +203,7 @@ public interface CfnRobotApplicationProps {
      * @param sources The sources of the robot application.
      */
     override fun sources(sources: IResolvable) {
-      cdkBuilder.sources(sources.let(IResolvable::unwrap))
+      cdkBuilder.sources(sources.let(IResolvable.Companion::unwrap))
     }
 
     /**

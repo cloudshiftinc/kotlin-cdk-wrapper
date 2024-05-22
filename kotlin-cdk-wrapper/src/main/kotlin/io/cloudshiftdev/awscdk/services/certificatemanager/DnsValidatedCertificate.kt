@@ -66,8 +66,8 @@ public open class DnsValidatedCertificate(
     id: String,
     props: DnsValidatedCertificateProps,
   ) :
-      this(software.amazon.awscdk.services.certificatemanager.DnsValidatedCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DnsValidatedCertificateProps::unwrap))
+      this(software.amazon.awscdk.services.certificatemanager.DnsValidatedCertificate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DnsValidatedCertificateProps.Companion::unwrap))
   )
 
   @Deprecated(message = "deprecated in CDK")
@@ -93,7 +93,7 @@ public open class DnsValidatedCertificate(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun applyRemovalPolicy(policy: RemovalPolicy) {
-    unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+    unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
   }
 
   /**
@@ -128,7 +128,7 @@ public open class DnsValidatedCertificate(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun metricDaysToExpiry(props: MetricOptions): Metric =
-      unwrap(this).metricDaysToExpiry(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricDaysToExpiry(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) Return the DaysToExpiry metric for this AWS Certificate Manager Certificate. By
@@ -358,7 +358,7 @@ public open class DnsValidatedCertificate(
      * certificate. 
      */
     override fun customResourceRole(customResourceRole: IRole) {
-      cdkBuilder.customResourceRole(customResourceRole.let(IRole::unwrap))
+      cdkBuilder.customResourceRole(customResourceRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -381,7 +381,7 @@ public open class DnsValidatedCertificate(
      * @param hostedZone Route 53 Hosted Zone used to perform DNS validation of the request. 
      */
     override fun hostedZone(hostedZone: IHostedZone) {
-      cdkBuilder.hostedZone(hostedZone.let(IHostedZone::unwrap))
+      cdkBuilder.hostedZone(hostedZone.let(IHostedZone.Companion::unwrap))
     }
 
     /**
@@ -395,7 +395,7 @@ public open class DnsValidatedCertificate(
      * certificate uses to encrypt data. 
      */
     override fun keyAlgorithm(keyAlgorithm: KeyAlgorithm) {
-      cdkBuilder.keyAlgorithm(keyAlgorithm.let(KeyAlgorithm::unwrap))
+      cdkBuilder.keyAlgorithm(keyAlgorithm.let(KeyAlgorithm.Companion::unwrap))
     }
 
     /**
@@ -485,7 +485,7 @@ public open class DnsValidatedCertificate(
      * @param validation How to validate this certificate. 
      */
     override fun validation(validation: CertificateValidation) {
-      cdkBuilder.validation(validation.let(CertificateValidation::unwrap))
+      cdkBuilder.validation(validation.let(CertificateValidation.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.certificatemanager.DnsValidatedCertificate =

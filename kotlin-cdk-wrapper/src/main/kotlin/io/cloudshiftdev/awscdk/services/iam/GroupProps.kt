@@ -133,7 +133,7 @@ public interface GroupProps {
      * `addManagedPolicy(ManagedPolicy.fromAwsManagedPolicyName(policyName))`.
      */
     override fun managedPolicies(managedPolicies: List<IManagedPolicy>) {
-      cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy::unwrap))
+      cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy.Companion::unwrap))
     }
 
     /**

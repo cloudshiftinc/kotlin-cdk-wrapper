@@ -165,7 +165,7 @@ public interface MultiNodeJobDefinitionProps : JobDefinitionProps {
      * @param containers The containers that this multinode job will run.
      */
     override fun containers(containers: List<MultiNodeContainer>) {
-      cdkBuilder.containers(containers.map(MultiNodeContainer::unwrap))
+      cdkBuilder.containers(containers.map(MultiNodeContainer.Companion::unwrap))
     }
 
     /**
@@ -178,7 +178,7 @@ public interface MultiNodeJobDefinitionProps : JobDefinitionProps {
      * @param instanceType The instance type that this job definition will run.
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -224,7 +224,7 @@ public interface MultiNodeJobDefinitionProps : JobDefinitionProps {
      * @param retryStrategies Defines the retry behavior for this job.
      */
     override fun retryStrategies(retryStrategies: List<RetryStrategy>) {
-      cdkBuilder.retryStrategies(retryStrategies.map(RetryStrategy::unwrap))
+      cdkBuilder.retryStrategies(retryStrategies.map(RetryStrategy.Companion::unwrap))
     }
 
     /**
@@ -249,7 +249,7 @@ public interface MultiNodeJobDefinitionProps : JobDefinitionProps {
      * Batch terminates your jobs if they aren't finished.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.batch.MultiNodeJobDefinitionProps =

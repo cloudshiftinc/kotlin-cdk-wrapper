@@ -46,7 +46,7 @@ public open class AccessLogFormat(
         software.amazon.awscdk.services.apigateway.AccessLogFormat.jsonWithStandardFields().let(AccessLogFormat::wrap)
 
     public fun jsonWithStandardFields(fields: JsonWithStandardFieldProps): AccessLogFormat =
-        software.amazon.awscdk.services.apigateway.AccessLogFormat.jsonWithStandardFields(fields.let(JsonWithStandardFieldProps::unwrap)).let(AccessLogFormat::wrap)
+        software.amazon.awscdk.services.apigateway.AccessLogFormat.jsonWithStandardFields(fields.let(JsonWithStandardFieldProps.Companion::unwrap)).let(AccessLogFormat::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4591f774534462d212e2135b0ca5f8af84d2e9b6494b7e776a0c1a4eb95e9593")

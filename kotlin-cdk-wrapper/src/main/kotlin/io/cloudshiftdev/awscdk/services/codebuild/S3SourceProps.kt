@@ -77,7 +77,7 @@ public interface S3SourceProps : SourceProps {
      * @param bucket the value to be set. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**

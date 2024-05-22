@@ -38,8 +38,8 @@ public open class KinesisEventSource(
 ) : StreamEventSource(cdkObject) {
   public constructor(stream: CloudshiftdevAwscdkServicesKinesisIStream,
       props: KinesisEventSourceProps) :
-      this(software.amazon.awscdk.services.lambda.eventsources.KinesisEventSource(stream.let(CloudshiftdevAwscdkServicesKinesisIStream::unwrap),
-      props.let(KinesisEventSourceProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.eventsources.KinesisEventSource(stream.let(CloudshiftdevAwscdkServicesKinesisIStream.Companion::unwrap),
+      props.let(KinesisEventSourceProps.Companion::unwrap))
   )
 
   public constructor(stream: CloudshiftdevAwscdkServicesKinesisIStream,
@@ -53,7 +53,7 @@ public open class KinesisEventSource(
    * @param target 
    */
   public override fun bind(target: IFunction) {
-    unwrap(this).bind(target.let(IFunction::unwrap))
+    unwrap(this).bind(target.let(IFunction.Companion::unwrap))
   }
 
   /**
@@ -334,7 +334,7 @@ public open class KinesisEventSource(
      * function. 
      */
     override fun maxBatchingWindow(maxBatchingWindow: Duration) {
-      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration::unwrap))
+      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -355,7 +355,7 @@ public open class KinesisEventSource(
      * processing. 
      */
     override fun maxRecordAge(maxRecordAge: Duration) {
-      cdkBuilder.maxRecordAge(maxRecordAge.let(Duration::unwrap))
+      cdkBuilder.maxRecordAge(maxRecordAge.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -366,7 +366,7 @@ public open class KinesisEventSource(
      * @param onFailure An Amazon SQS queue or Amazon SNS topic destination for discarded records. 
      */
     override fun onFailure(onFailure: IEventSourceDlq) {
-      cdkBuilder.onFailure(onFailure.let(IEventSourceDlq::unwrap))
+      cdkBuilder.onFailure(onFailure.let(IEventSourceDlq.Companion::unwrap))
     }
 
     /**
@@ -420,7 +420,7 @@ public open class KinesisEventSource(
      * @param startingPosition Where to begin consuming the stream. 
      */
     override fun startingPosition(startingPosition: StartingPosition) {
-      cdkBuilder.startingPosition(startingPosition.let(StartingPosition::unwrap))
+      cdkBuilder.startingPosition(startingPosition.let(StartingPosition.Companion::unwrap))
     }
 
     /**
@@ -444,7 +444,7 @@ public open class KinesisEventSource(
      * Kinesis Valid Range: 0 - 15 minutes. 
      */
     override fun tumblingWindow(tumblingWindow: Duration) {
-      cdkBuilder.tumblingWindow(tumblingWindow.let(Duration::unwrap))
+      cdkBuilder.tumblingWindow(tumblingWindow.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lambda.eventsources.KinesisEventSource =

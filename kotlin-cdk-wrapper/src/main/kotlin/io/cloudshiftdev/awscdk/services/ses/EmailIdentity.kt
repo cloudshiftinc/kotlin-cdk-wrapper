@@ -36,8 +36,8 @@ public open class EmailIdentity(
     id: String,
     props: EmailIdentityProps,
   ) :
-      this(software.amazon.awscdk.services.ses.EmailIdentity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EmailIdentityProps::unwrap))
+      this(software.amazon.awscdk.services.ses.EmailIdentity(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EmailIdentityProps.Companion::unwrap))
   )
 
   public constructor(
@@ -105,8 +105,8 @@ public open class EmailIdentity(
    * @param actions the set of actions to allow. 
    */
   public override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
-      as String}.toTypedArray()).let(Grant::wrap)
+      unwrap(this).grant(grantee.let(IGrantable.Companion::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Permits an IAM principal the send email action.
@@ -116,7 +116,7 @@ public open class EmailIdentity(
    * @param grantee the principal to grant access to. 
    */
   public override fun grantSendEmail(grantee: IGrantable): Grant =
-      unwrap(this).grantSendEmail(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantSendEmail(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ses.EmailIdentity].
@@ -221,7 +221,7 @@ public open class EmailIdentity(
      * @param configurationSet The configuration set to associate with the email identity. 
      */
     override fun configurationSet(configurationSet: IConfigurationSet) {
-      cdkBuilder.configurationSet(configurationSet.let(IConfigurationSet::unwrap))
+      cdkBuilder.configurationSet(configurationSet.let(IConfigurationSet.Companion::unwrap))
     }
 
     /**
@@ -232,7 +232,7 @@ public open class EmailIdentity(
      * @param dkimIdentity The type of DKIM identity to use. 
      */
     override fun dkimIdentity(dkimIdentity: DkimIdentity) {
-      cdkBuilder.dkimIdentity(dkimIdentity.let(DkimIdentity::unwrap))
+      cdkBuilder.dkimIdentity(dkimIdentity.let(DkimIdentity.Companion::unwrap))
     }
 
     /**
@@ -273,7 +273,7 @@ public open class EmailIdentity(
      * @param identity The email address or domain to verify. 
      */
     override fun identity(identity: Identity) {
-      cdkBuilder.identity(identity.let(Identity::unwrap))
+      cdkBuilder.identity(identity.let(Identity.Companion::unwrap))
     }
 
     /**
@@ -287,7 +287,7 @@ public open class EmailIdentity(
      */
     override
         fun mailFromBehaviorOnMxFailure(mailFromBehaviorOnMxFailure: MailFromBehaviorOnMxFailure) {
-      cdkBuilder.mailFromBehaviorOnMxFailure(mailFromBehaviorOnMxFailure.let(MailFromBehaviorOnMxFailure::unwrap))
+      cdkBuilder.mailFromBehaviorOnMxFailure(mailFromBehaviorOnMxFailure.let(MailFromBehaviorOnMxFailure.Companion::unwrap))
     }
 
     /**
@@ -319,7 +319,7 @@ public open class EmailIdentity(
       id: String,
       emailIdentityName: String,
     ): IEmailIdentity =
-        software.amazon.awscdk.services.ses.EmailIdentity.fromEmailIdentityName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ses.EmailIdentity.fromEmailIdentityName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, emailIdentityName).let(IEmailIdentity::wrap)
 
     public operator fun invoke(

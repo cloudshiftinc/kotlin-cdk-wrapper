@@ -33,8 +33,8 @@ public open class FlowLog(
     id: String,
     props: FlowLogProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.FlowLog(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(FlowLogProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.FlowLog(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(FlowLogProps.Companion::unwrap))
   )
 
   public constructor(
@@ -191,7 +191,7 @@ public open class FlowLog(
      * published. 
      */
     override fun destination(destination: FlowLogDestination) {
-      cdkBuilder.destination(destination.let(FlowLogDestination::unwrap))
+      cdkBuilder.destination(destination.let(FlowLogDestination.Companion::unwrap))
     }
 
     /**
@@ -223,7 +223,7 @@ public open class FlowLog(
      * should appear. 
      */
     override fun logFormat(logFormat: List<LogFormat>) {
-      cdkBuilder.logFormat(logFormat.map(LogFormat::unwrap))
+      cdkBuilder.logFormat(logFormat.map(LogFormat.Companion::unwrap))
     }
 
     /**
@@ -257,7 +257,7 @@ public open class FlowLog(
      * captured and aggregated into a flow log record. 
      */
     override fun maxAggregationInterval(maxAggregationInterval: FlowLogMaxAggregationInterval) {
-      cdkBuilder.maxAggregationInterval(maxAggregationInterval.let(FlowLogMaxAggregationInterval::unwrap))
+      cdkBuilder.maxAggregationInterval(maxAggregationInterval.let(FlowLogMaxAggregationInterval.Companion::unwrap))
     }
 
     /**
@@ -266,7 +266,7 @@ public open class FlowLog(
      * @param resourceType The type of resource for which to create the flow log. 
      */
     override fun resourceType(resourceType: FlowLogResourceType) {
-      cdkBuilder.resourceType(resourceType.let(FlowLogResourceType::unwrap))
+      cdkBuilder.resourceType(resourceType.let(FlowLogResourceType.Companion::unwrap))
     }
 
     /**
@@ -282,7 +282,7 @@ public open class FlowLog(
      * @param trafficType The type of traffic to log. 
      */
     override fun trafficType(trafficType: FlowLogTrafficType) {
-      cdkBuilder.trafficType(trafficType.let(FlowLogTrafficType::unwrap))
+      cdkBuilder.trafficType(trafficType.let(FlowLogTrafficType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.FlowLog = cdkBuilder.build()
@@ -294,7 +294,7 @@ public open class FlowLog(
       id: String,
       flowLogId: String,
     ): IFlowLog =
-        software.amazon.awscdk.services.ec2.FlowLog.fromFlowLogId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ec2.FlowLog.fromFlowLogId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, flowLogId).let(IFlowLog::wrap)
 
     public operator fun invoke(

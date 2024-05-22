@@ -63,7 +63,7 @@ public interface LoggingFormatConfig {
      * @param formatConfig CFN configuration for Access Logging Format.
      */
     override fun formatConfig(formatConfig: CfnVirtualNode.LoggingFormatProperty) {
-      cdkBuilder.formatConfig(formatConfig.let(CfnVirtualNode.LoggingFormatProperty::unwrap))
+      cdkBuilder.formatConfig(formatConfig.let(CfnVirtualNode.LoggingFormatProperty.Companion::unwrap))
     }
 
     /**

@@ -48,8 +48,8 @@ public open class CfnModuleVersion(
     id: String,
     props: CfnModuleVersionProps,
   ) :
-      this(software.amazon.awscdk.CfnModuleVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnModuleVersionProps::unwrap))
+      this(software.amazon.awscdk.CfnModuleVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnModuleVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -120,7 +120,7 @@ public open class CfnModuleVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

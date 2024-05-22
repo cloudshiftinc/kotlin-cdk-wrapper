@@ -54,7 +54,7 @@ public open class MultiNodeJobDefinition(
   cdkObject: software.amazon.awscdk.services.batch.MultiNodeJobDefinition,
 ) : Resource(cdkObject), IJobDefinition {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.batch.MultiNodeJobDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.batch.MultiNodeJobDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -63,8 +63,8 @@ public open class MultiNodeJobDefinition(
     id: String,
     props: MultiNodeJobDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.batch.MultiNodeJobDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(MultiNodeJobDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.batch.MultiNodeJobDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(MultiNodeJobDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -80,7 +80,7 @@ public open class MultiNodeJobDefinition(
    * @param container 
    */
   public open fun addContainer(container: MultiNodeContainer) {
-    unwrap(this).addContainer(container.let(MultiNodeContainer::unwrap))
+    unwrap(this).addContainer(container.let(MultiNodeContainer.Companion::unwrap))
   }
 
   /**
@@ -99,7 +99,7 @@ public open class MultiNodeJobDefinition(
    * @param strategy 
    */
   public override fun addRetryStrategy(strategy: RetryStrategy) {
-    unwrap(this).addRetryStrategy(strategy.let(RetryStrategy::unwrap))
+    unwrap(this).addRetryStrategy(strategy.let(RetryStrategy.Companion::unwrap))
   }
 
   /**
@@ -320,7 +320,7 @@ public open class MultiNodeJobDefinition(
      * @param containers The containers that this multinode job will run. 
      */
     override fun containers(containers: List<MultiNodeContainer>) {
-      cdkBuilder.containers(containers.map(MultiNodeContainer::unwrap))
+      cdkBuilder.containers(containers.map(MultiNodeContainer.Companion::unwrap))
     }
 
     /**
@@ -342,7 +342,7 @@ public open class MultiNodeJobDefinition(
      * @param instanceType The instance type that this job definition will run. 
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -416,7 +416,7 @@ public open class MultiNodeJobDefinition(
      * @param retryStrategies Defines the retry behavior for this job. 
      */
     override fun retryStrategies(retryStrategies: List<RetryStrategy>) {
-      cdkBuilder.retryStrategies(retryStrategies.map(RetryStrategy::unwrap))
+      cdkBuilder.retryStrategies(retryStrategies.map(RetryStrategy.Companion::unwrap))
     }
 
     /**
@@ -455,7 +455,7 @@ public open class MultiNodeJobDefinition(
      * @param timeout The timeout time for jobs that are submitted with this job definition. 
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.batch.MultiNodeJobDefinition =
@@ -468,7 +468,7 @@ public open class MultiNodeJobDefinition(
       id: String,
       jobDefinitionArn: String,
     ): IJobDefinition =
-        software.amazon.awscdk.services.batch.MultiNodeJobDefinition.fromJobDefinitionArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.batch.MultiNodeJobDefinition.fromJobDefinitionArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, jobDefinitionArn).let(IJobDefinition::wrap)
 
     public operator fun invoke(

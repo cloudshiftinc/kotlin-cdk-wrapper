@@ -658,7 +658,7 @@ public interface CfnDBClusterProps {
      * other Amazon services on your behalf.
      */
     override fun associatedRoles(associatedRoles: IResolvable) {
-      cdkBuilder.associatedRoles(associatedRoles.let(IResolvable::unwrap))
+      cdkBuilder.associatedRoles(associatedRoles.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -719,7 +719,7 @@ public interface CfnDBClusterProps {
      * cluster that is created.*.
      */
     override fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable) {
-      cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot.let(IResolvable::unwrap))
+      cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -793,7 +793,7 @@ public interface CfnDBClusterProps {
      * The database can't be deleted when deletion protection is enabled.
      */
     override fun deletionProtection(deletionProtection: IResolvable) {
-      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable::unwrap))
+      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -831,7 +831,7 @@ public interface CfnDBClusterProps {
      * to database accounts is enabled, and otherwise false.
      */
     override fun iamAuthEnabled(iamAuthEnabled: IResolvable) {
-      cdkBuilder.iamAuthEnabled(iamAuthEnabled.let(IResolvable::unwrap))
+      cdkBuilder.iamAuthEnabled(iamAuthEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -890,7 +890,7 @@ public interface CfnDBClusterProps {
      * Serverless DB cluster.
      */
     override fun serverlessScalingConfiguration(serverlessScalingConfiguration: IResolvable) {
-      cdkBuilder.serverlessScalingConfiguration(serverlessScalingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.serverlessScalingConfiguration(serverlessScalingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -899,7 +899,7 @@ public interface CfnDBClusterProps {
      */
     override
         fun serverlessScalingConfiguration(serverlessScalingConfiguration: CfnDBCluster.ServerlessScalingConfigurationProperty) {
-      cdkBuilder.serverlessScalingConfiguration(serverlessScalingConfiguration.let(CfnDBCluster.ServerlessScalingConfigurationProperty::unwrap))
+      cdkBuilder.serverlessScalingConfiguration(serverlessScalingConfiguration.let(CfnDBCluster.ServerlessScalingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -969,14 +969,14 @@ public interface CfnDBClusterProps {
      * true.
      */
     override fun storageEncrypted(storageEncrypted: IResolvable) {
-      cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable::unwrap))
+      cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param tags The tags assigned to this cluster.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1009,7 +1009,7 @@ public interface CfnDBClusterProps {
      * the new DB cluster is created with the default security group.
      */
     override fun useLatestRestorableTime(useLatestRestorableTime: IResolvable) {
-      cdkBuilder.useLatestRestorableTime(useLatestRestorableTime.let(IResolvable::unwrap))
+      cdkBuilder.useLatestRestorableTime(useLatestRestorableTime.let(IResolvable.Companion::unwrap))
     }
 
     /**

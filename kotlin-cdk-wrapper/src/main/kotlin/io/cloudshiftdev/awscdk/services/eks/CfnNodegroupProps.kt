@@ -678,7 +678,7 @@ public interface CfnNodegroupProps {
      * to terminate the old node whether or not any `Pod` is running on the node.
      */
     override fun forceUpdateEnabled(forceUpdateEnabled: IResolvable) {
-      cdkBuilder.forceUpdateEnabled(forceUpdateEnabled.let(IResolvable::unwrap))
+      cdkBuilder.forceUpdateEnabled(forceUpdateEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -725,7 +725,7 @@ public interface CfnNodegroupProps {
      * Kubernetes `labels` applied to the nodes in this group.
      */
     override fun labels(labels: IResolvable) {
-      cdkBuilder.labels(labels.let(IResolvable::unwrap))
+      cdkBuilder.labels(labels.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -747,7 +747,7 @@ public interface CfnNodegroupProps {
      * *Amazon EKS User Guide* .
      */
     override fun launchTemplate(launchTemplate: IResolvable) {
-      cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
+      cdkBuilder.launchTemplate(launchTemplate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -759,7 +759,7 @@ public interface CfnNodegroupProps {
      * *Amazon EKS User Guide* .
      */
     override fun launchTemplate(launchTemplate: CfnNodegroup.LaunchTemplateSpecificationProperty) {
-      cdkBuilder.launchTemplate(launchTemplate.let(CfnNodegroup.LaunchTemplateSpecificationProperty::unwrap))
+      cdkBuilder.launchTemplate(launchTemplate.let(CfnNodegroup.LaunchTemplateSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -827,7 +827,7 @@ public interface CfnNodegroupProps {
      * *Amazon EKS User Guide* .
      */
     override fun remoteAccess(remoteAccess: IResolvable) {
-      cdkBuilder.remoteAccess(remoteAccess.let(IResolvable::unwrap))
+      cdkBuilder.remoteAccess(remoteAccess.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -840,7 +840,7 @@ public interface CfnNodegroupProps {
      * *Amazon EKS User Guide* .
      */
     override fun remoteAccess(remoteAccess: CfnNodegroup.RemoteAccessProperty) {
-      cdkBuilder.remoteAccess(remoteAccess.let(CfnNodegroup.RemoteAccessProperty::unwrap))
+      cdkBuilder.remoteAccess(remoteAccess.let(CfnNodegroup.RemoteAccessProperty.Companion::unwrap))
     }
 
     /**
@@ -862,7 +862,7 @@ public interface CfnNodegroupProps {
      * created for your node group.
      */
     override fun scalingConfig(scalingConfig: IResolvable) {
-      cdkBuilder.scalingConfig(scalingConfig.let(IResolvable::unwrap))
+      cdkBuilder.scalingConfig(scalingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -870,7 +870,7 @@ public interface CfnNodegroupProps {
      * created for your node group.
      */
     override fun scalingConfig(scalingConfig: CfnNodegroup.ScalingConfigProperty) {
-      cdkBuilder.scalingConfig(scalingConfig.let(CfnNodegroup.ScalingConfigProperty::unwrap))
+      cdkBuilder.scalingConfig(scalingConfig.let(CfnNodegroup.ScalingConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -927,7 +927,7 @@ public interface CfnNodegroupProps {
      * groups](https://docs.aws.amazon.com/eks/latest/userguide/node-taints-managed-node-groups.html) .
      */
     override fun taints(taints: IResolvable) {
-      cdkBuilder.taints(taints.let(IResolvable::unwrap))
+      cdkBuilder.taints(taints.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -956,14 +956,14 @@ public interface CfnNodegroupProps {
      * @param updateConfig The node group update configuration.
      */
     override fun updateConfig(updateConfig: IResolvable) {
-      cdkBuilder.updateConfig(updateConfig.let(IResolvable::unwrap))
+      cdkBuilder.updateConfig(updateConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param updateConfig The node group update configuration.
      */
     override fun updateConfig(updateConfig: CfnNodegroup.UpdateConfigProperty) {
-      cdkBuilder.updateConfig(updateConfig.let(CfnNodegroup.UpdateConfigProperty::unwrap))
+      cdkBuilder.updateConfig(updateConfig.let(CfnNodegroup.UpdateConfigProperty.Companion::unwrap))
     }
 
     /**

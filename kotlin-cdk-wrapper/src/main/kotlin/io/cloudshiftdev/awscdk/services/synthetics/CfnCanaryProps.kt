@@ -511,7 +511,7 @@ public interface CfnCanaryProps {
      * including the encryption-at-rest settings for artifacts that the canary uploads to Amazon S3.
      */
     override fun artifactConfig(artifactConfig: IResolvable) {
-      cdkBuilder.artifactConfig(artifactConfig.let(IResolvable::unwrap))
+      cdkBuilder.artifactConfig(artifactConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -519,7 +519,7 @@ public interface CfnCanaryProps {
      * including the encryption-at-rest settings for artifacts that the canary uploads to Amazon S3.
      */
     override fun artifactConfig(artifactConfig: CfnCanary.ArtifactConfigProperty) {
-      cdkBuilder.artifactConfig(artifactConfig.let(CfnCanary.ArtifactConfigProperty::unwrap))
+      cdkBuilder.artifactConfig(artifactConfig.let(CfnCanary.ArtifactConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -550,7 +550,7 @@ public interface CfnCanaryProps {
      * contained in the value of `Script` .
      */
     override fun code(code: IResolvable) {
-      cdkBuilder.code(code.let(IResolvable::unwrap))
+      cdkBuilder.code(code.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -561,7 +561,7 @@ public interface CfnCanaryProps {
      * contained in the value of `Script` .
      */
     override fun code(code: CfnCanary.CodeProperty) {
-      cdkBuilder.code(code.let(CfnCanary.CodeProperty::unwrap))
+      cdkBuilder.code(code.let(CfnCanary.CodeProperty.Companion::unwrap))
     }
 
     /**
@@ -597,7 +597,7 @@ public interface CfnCanaryProps {
     @Deprecated(message = "deprecated in CDK")
     override
         fun deleteLambdaResourcesOnCanaryDeletion(deleteLambdaResourcesOnCanaryDeletion: IResolvable) {
-      cdkBuilder.deleteLambdaResourcesOnCanaryDeletion(deleteLambdaResourcesOnCanaryDeletion.let(IResolvable::unwrap))
+      cdkBuilder.deleteLambdaResourcesOnCanaryDeletion(deleteLambdaResourcesOnCanaryDeletion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -647,7 +647,7 @@ public interface CfnCanaryProps {
      * to a maximum of 900 seconds.
      */
     override fun runConfig(runConfig: IResolvable) {
-      cdkBuilder.runConfig(runConfig.let(IResolvable::unwrap))
+      cdkBuilder.runConfig(runConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -656,7 +656,7 @@ public interface CfnCanaryProps {
      * to a maximum of 900 seconds.
      */
     override fun runConfig(runConfig: CfnCanary.RunConfigProperty) {
-      cdkBuilder.runConfig(runConfig.let(CfnCanary.RunConfigProperty::unwrap))
+      cdkBuilder.runConfig(runConfig.let(CfnCanary.RunConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -684,7 +684,7 @@ public interface CfnCanaryProps {
      * and when these runs are to stop. 
      */
     override fun schedule(schedule: IResolvable) {
-      cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
+      cdkBuilder.schedule(schedule.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -692,7 +692,7 @@ public interface CfnCanaryProps {
      * and when these runs are to stop. 
      */
     override fun schedule(schedule: CfnCanary.ScheduleProperty) {
-      cdkBuilder.schedule(schedule.let(CfnCanary.ScheduleProperty::unwrap))
+      cdkBuilder.schedule(schedule.let(CfnCanary.ScheduleProperty.Companion::unwrap))
     }
 
     /**
@@ -721,7 +721,7 @@ public interface CfnCanaryProps {
      * stack that creates the canary or to roll back that stack if there is a failure.
      */
     override fun startCanaryAfterCreation(startCanaryAfterCreation: IResolvable) {
-      cdkBuilder.startCanaryAfterCreation(startCanaryAfterCreation.let(IResolvable::unwrap))
+      cdkBuilder.startCanaryAfterCreation(startCanaryAfterCreation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -737,7 +737,7 @@ public interface CfnCanaryProps {
      * @param tags The list of key-value pairs that are associated with the canary.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -751,7 +751,7 @@ public interface CfnCanaryProps {
      * coordinates of any parts of the screen to ignore during the visual monitoring comparison.
      */
     override fun visualReference(visualReference: IResolvable) {
-      cdkBuilder.visualReference(visualReference.let(IResolvable::unwrap))
+      cdkBuilder.visualReference(visualReference.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -760,7 +760,7 @@ public interface CfnCanaryProps {
      * coordinates of any parts of the screen to ignore during the visual monitoring comparison.
      */
     override fun visualReference(visualReference: CfnCanary.VisualReferenceProperty) {
-      cdkBuilder.visualReference(visualReference.let(CfnCanary.VisualReferenceProperty::unwrap))
+      cdkBuilder.visualReference(visualReference.let(CfnCanary.VisualReferenceProperty.Companion::unwrap))
     }
 
     /**
@@ -782,7 +782,7 @@ public interface CfnCanaryProps {
      * .
      */
     override fun vpcConfig(vpcConfig: IResolvable) {
-      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -793,7 +793,7 @@ public interface CfnCanaryProps {
      * .
      */
     override fun vpcConfig(vpcConfig: CfnCanary.VPCConfigProperty) {
-      cdkBuilder.vpcConfig(vpcConfig.let(CfnCanary.VPCConfigProperty::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(CfnCanary.VPCConfigProperty.Companion::unwrap))
     }
 
     /**

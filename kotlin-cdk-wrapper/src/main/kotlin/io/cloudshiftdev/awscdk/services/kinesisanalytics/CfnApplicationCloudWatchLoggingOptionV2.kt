@@ -49,8 +49,8 @@ public open class CfnApplicationCloudWatchLoggingOptionV2(
     id: String,
     props: CfnApplicationCloudWatchLoggingOptionV2Props,
   ) :
-      this(software.amazon.awscdk.services.kinesisanalytics.CfnApplicationCloudWatchLoggingOptionV2(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApplicationCloudWatchLoggingOptionV2Props::unwrap))
+      this(software.amazon.awscdk.services.kinesisanalytics.CfnApplicationCloudWatchLoggingOptionV2(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApplicationCloudWatchLoggingOptionV2Props.Companion::unwrap))
   )
 
   public constructor(
@@ -88,7 +88,7 @@ public open class CfnApplicationCloudWatchLoggingOptionV2(
    * Resource Name (ARN).
    */
   public open fun cloudWatchLoggingOption(`value`: IResolvable) {
-    unwrap(this).setCloudWatchLoggingOption(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCloudWatchLoggingOption(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -96,7 +96,7 @@ public open class CfnApplicationCloudWatchLoggingOptionV2(
    * Resource Name (ARN).
    */
   public open fun cloudWatchLoggingOption(`value`: CloudWatchLoggingOptionProperty) {
-    unwrap(this).setCloudWatchLoggingOption(`value`.let(CloudWatchLoggingOptionProperty::unwrap))
+    unwrap(this).setCloudWatchLoggingOption(`value`.let(CloudWatchLoggingOptionProperty.Companion::unwrap))
   }
 
   /**
@@ -115,7 +115,7 @@ public open class CfnApplicationCloudWatchLoggingOptionV2(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -195,7 +195,7 @@ public open class CfnApplicationCloudWatchLoggingOptionV2(
      * including the log stream Amazon Resource Name (ARN). 
      */
     override fun cloudWatchLoggingOption(cloudWatchLoggingOption: IResolvable) {
-      cdkBuilder.cloudWatchLoggingOption(cloudWatchLoggingOption.let(IResolvable::unwrap))
+      cdkBuilder.cloudWatchLoggingOption(cloudWatchLoggingOption.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -207,7 +207,7 @@ public open class CfnApplicationCloudWatchLoggingOptionV2(
      * including the log stream Amazon Resource Name (ARN). 
      */
     override fun cloudWatchLoggingOption(cloudWatchLoggingOption: CloudWatchLoggingOptionProperty) {
-      cdkBuilder.cloudWatchLoggingOption(cloudWatchLoggingOption.let(CloudWatchLoggingOptionProperty::unwrap))
+      cdkBuilder.cloudWatchLoggingOption(cloudWatchLoggingOption.let(CloudWatchLoggingOptionProperty.Companion::unwrap))
     }
 
     /**

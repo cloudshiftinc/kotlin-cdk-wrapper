@@ -177,8 +177,8 @@ public open class CfnJob(
     id: String,
     props: CfnJobProps,
   ) :
-      this(software.amazon.awscdk.services.databrew.CfnJob(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnJobProps::unwrap))
+      this(software.amazon.awscdk.services.databrew.CfnJob(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnJobProps.Companion::unwrap))
   )
 
   public constructor(
@@ -197,7 +197,7 @@ public open class CfnJob(
    * One or more artifacts that represent the AWS Glue Data Catalog output from running the job.
    */
   public open fun dataCatalogOutputs(`value`: IResolvable) {
-    unwrap(this).setDataCatalogOutputs(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataCatalogOutputs(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -224,7 +224,7 @@ public open class CfnJob(
    * DataBrew recipe job to write into.
    */
   public open fun databaseOutputs(`value`: IResolvable) {
-    unwrap(this).setDatabaseOutputs(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDatabaseOutputs(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -283,7 +283,7 @@ public open class CfnJob(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -297,7 +297,7 @@ public open class CfnJob(
    * profile job is run.
    */
   public open fun jobSample(`value`: IResolvable) {
-    unwrap(this).setJobSample(`value`.let(IResolvable::unwrap))
+    unwrap(this).setJobSample(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -305,7 +305,7 @@ public open class CfnJob(
    * profile job is run.
    */
   public open fun jobSample(`value`: JobSampleProperty) {
-    unwrap(this).setJobSample(`value`.let(JobSampleProperty::unwrap))
+    unwrap(this).setJobSample(`value`.let(JobSampleProperty.Companion::unwrap))
   }
 
   /**
@@ -374,14 +374,14 @@ public open class CfnJob(
    * The location in Amazon S3 where the job writes its output.
    */
   public open fun outputLocation(`value`: IResolvable) {
-    unwrap(this).setOutputLocation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOutputLocation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The location in Amazon S3 where the job writes its output.
    */
   public open fun outputLocation(`value`: OutputLocationProperty) {
-    unwrap(this).setOutputLocation(`value`.let(OutputLocationProperty::unwrap))
+    unwrap(this).setOutputLocation(`value`.let(OutputLocationProperty.Companion::unwrap))
   }
 
   /**
@@ -401,7 +401,7 @@ public open class CfnJob(
    * One or more artifacts that represent output from running the job.
    */
   public open fun outputs(`value`: IResolvable) {
-    unwrap(this).setOutputs(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOutputs(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -425,14 +425,14 @@ public open class CfnJob(
    * Configuration for profile jobs.
    */
   public open fun profileConfiguration(`value`: IResolvable) {
-    unwrap(this).setProfileConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProfileConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration for profile jobs.
    */
   public open fun profileConfiguration(`value`: ProfileConfigurationProperty) {
-    unwrap(this).setProfileConfiguration(`value`.let(ProfileConfigurationProperty::unwrap))
+    unwrap(this).setProfileConfiguration(`value`.let(ProfileConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -464,14 +464,14 @@ public open class CfnJob(
    * A series of data transformation steps that the job runs.
    */
   public open fun recipe(`value`: IResolvable) {
-    unwrap(this).setRecipe(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRecipe(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A series of data transformation steps that the job runs.
    */
   public open fun recipe(`value`: RecipeProperty) {
-    unwrap(this).setRecipe(`value`.let(RecipeProperty::unwrap))
+    unwrap(this).setRecipe(`value`.let(RecipeProperty.Companion::unwrap))
   }
 
   /**
@@ -509,7 +509,7 @@ public open class CfnJob(
    * Metadata tags that have been applied to the job.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -550,7 +550,7 @@ public open class CfnJob(
    * List of validation configurations that are applied to the profile job.
    */
   public open fun validationConfigurations(`value`: IResolvable) {
-    unwrap(this).setValidationConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setValidationConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -945,7 +945,7 @@ public open class CfnJob(
      * output from running the job. 
      */
     override fun dataCatalogOutputs(dataCatalogOutputs: IResolvable) {
-      cdkBuilder.dataCatalogOutputs(dataCatalogOutputs.let(IResolvable::unwrap))
+      cdkBuilder.dataCatalogOutputs(dataCatalogOutputs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -978,7 +978,7 @@ public open class CfnJob(
      * output destination for a DataBrew recipe job to write into. 
      */
     override fun databaseOutputs(databaseOutputs: IResolvable) {
-      cdkBuilder.databaseOutputs(databaseOutputs.let(IResolvable::unwrap))
+      cdkBuilder.databaseOutputs(databaseOutputs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1053,7 +1053,7 @@ public open class CfnJob(
      * rows on which the profile job is run. 
      */
     override fun jobSample(jobSample: IResolvable) {
-      cdkBuilder.jobSample(jobSample.let(IResolvable::unwrap))
+      cdkBuilder.jobSample(jobSample.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1068,7 +1068,7 @@ public open class CfnJob(
      * rows on which the profile job is run. 
      */
     override fun jobSample(jobSample: JobSampleProperty) {
-      cdkBuilder.jobSample(jobSample.let(JobSampleProperty::unwrap))
+      cdkBuilder.jobSample(jobSample.let(JobSampleProperty.Companion::unwrap))
     }
 
     /**
@@ -1135,7 +1135,7 @@ public open class CfnJob(
      * @param outputLocation The location in Amazon S3 where the job writes its output. 
      */
     override fun outputLocation(outputLocation: IResolvable) {
-      cdkBuilder.outputLocation(outputLocation.let(IResolvable::unwrap))
+      cdkBuilder.outputLocation(outputLocation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1145,7 +1145,7 @@ public open class CfnJob(
      * @param outputLocation The location in Amazon S3 where the job writes its output. 
      */
     override fun outputLocation(outputLocation: OutputLocationProperty) {
-      cdkBuilder.outputLocation(outputLocation.let(OutputLocationProperty::unwrap))
+      cdkBuilder.outputLocation(outputLocation.let(OutputLocationProperty.Companion::unwrap))
     }
 
     /**
@@ -1166,7 +1166,7 @@ public open class CfnJob(
      * @param outputs One or more artifacts that represent output from running the job. 
      */
     override fun outputs(outputs: IResolvable) {
-      cdkBuilder.outputs(outputs.let(IResolvable::unwrap))
+      cdkBuilder.outputs(outputs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1198,7 +1198,7 @@ public open class CfnJob(
      * @param profileConfiguration Configuration for profile jobs. 
      */
     override fun profileConfiguration(profileConfiguration: IResolvable) {
-      cdkBuilder.profileConfiguration(profileConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.profileConfiguration(profileConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1212,7 +1212,7 @@ public open class CfnJob(
      * @param profileConfiguration Configuration for profile jobs. 
      */
     override fun profileConfiguration(profileConfiguration: ProfileConfigurationProperty) {
-      cdkBuilder.profileConfiguration(profileConfiguration.let(ProfileConfigurationProperty::unwrap))
+      cdkBuilder.profileConfiguration(profileConfiguration.let(ProfileConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1248,7 +1248,7 @@ public open class CfnJob(
      * @param recipe A series of data transformation steps that the job runs. 
      */
     override fun recipe(recipe: IResolvable) {
-      cdkBuilder.recipe(recipe.let(IResolvable::unwrap))
+      cdkBuilder.recipe(recipe.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1258,7 +1258,7 @@ public open class CfnJob(
      * @param recipe A series of data transformation steps that the job runs. 
      */
     override fun recipe(recipe: RecipeProperty) {
-      cdkBuilder.recipe(recipe.let(RecipeProperty::unwrap))
+      cdkBuilder.recipe(recipe.let(RecipeProperty.Companion::unwrap))
     }
 
     /**
@@ -1289,7 +1289,7 @@ public open class CfnJob(
      * @param tags Metadata tags that have been applied to the job. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1334,7 +1334,7 @@ public open class CfnJob(
      * profile job. 
      */
     override fun validationConfigurations(validationConfigurations: IResolvable) {
-      cdkBuilder.validationConfigurations(validationConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.validationConfigurations(validationConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1698,7 +1698,7 @@ public open class CfnJob(
        * configuration will be applied to all supported columns.
        */
       override fun selectors(selectors: IResolvable) {
-        cdkBuilder.selectors(selectors.let(IResolvable::unwrap))
+        cdkBuilder.selectors(selectors.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1722,7 +1722,7 @@ public open class CfnJob(
        * Statistics can be used to select evaluations and override parameters of evaluations.
        */
       override fun statistics(statistics: IResolvable) {
-        cdkBuilder.statistics(statistics.let(IResolvable::unwrap))
+        cdkBuilder.statistics(statistics.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1730,7 +1730,7 @@ public open class CfnJob(
        * Statistics can be used to select evaluations and override parameters of evaluations.
        */
       override fun statistics(statistics: StatisticsConfigurationProperty) {
-        cdkBuilder.statistics(statistics.let(StatisticsConfigurationProperty::unwrap))
+        cdkBuilder.statistics(statistics.let(StatisticsConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2061,7 +2061,7 @@ public open class CfnJob(
        * database output generated by recipe jobs.
        */
       override fun databaseOptions(databaseOptions: IResolvable) {
-        cdkBuilder.databaseOptions(databaseOptions.let(IResolvable::unwrap))
+        cdkBuilder.databaseOptions(databaseOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2069,7 +2069,7 @@ public open class CfnJob(
        * database output generated by recipe jobs.
        */
       override fun databaseOptions(databaseOptions: DatabaseTableOutputOptionsProperty) {
-        cdkBuilder.databaseOptions(databaseOptions.let(DatabaseTableOutputOptionsProperty::unwrap))
+        cdkBuilder.databaseOptions(databaseOptions.let(DatabaseTableOutputOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -2097,7 +2097,7 @@ public open class CfnJob(
        * Not supported with DatabaseOptions.
        */
       override fun overwrite(overwrite: IResolvable) {
-        cdkBuilder.overwrite(overwrite.let(IResolvable::unwrap))
+        cdkBuilder.overwrite(overwrite.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2105,7 +2105,7 @@ public open class CfnJob(
        * S3 output generated by recipe jobs.
        */
       override fun s3Options(s3Options: IResolvable) {
-        cdkBuilder.s3Options(s3Options.let(IResolvable::unwrap))
+        cdkBuilder.s3Options(s3Options.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2113,7 +2113,7 @@ public open class CfnJob(
        * S3 output generated by recipe jobs.
        */
       override fun s3Options(s3Options: S3TableOutputOptionsProperty) {
-        cdkBuilder.s3Options(s3Options.let(S3TableOutputOptionsProperty::unwrap))
+        cdkBuilder.s3Options(s3Options.let(S3TableOutputOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -2308,7 +2308,7 @@ public open class CfnJob(
        * database output generated by recipe jobs. 
        */
       override fun databaseOptions(databaseOptions: IResolvable) {
-        cdkBuilder.databaseOptions(databaseOptions.let(IResolvable::unwrap))
+        cdkBuilder.databaseOptions(databaseOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2316,7 +2316,7 @@ public open class CfnJob(
        * database output generated by recipe jobs. 
        */
       override fun databaseOptions(databaseOptions: DatabaseTableOutputOptionsProperty) {
-        cdkBuilder.databaseOptions(databaseOptions.let(DatabaseTableOutputOptionsProperty::unwrap))
+        cdkBuilder.databaseOptions(databaseOptions.let(DatabaseTableOutputOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -2485,7 +2485,7 @@ public open class CfnJob(
        * DataBrew can store intermediate results.
        */
       override fun tempDirectory(tempDirectory: IResolvable) {
-        cdkBuilder.tempDirectory(tempDirectory.let(IResolvable::unwrap))
+        cdkBuilder.tempDirectory(tempDirectory.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2493,7 +2493,7 @@ public open class CfnJob(
        * DataBrew can store intermediate results.
        */
       override fun tempDirectory(tempDirectory: S3LocationProperty) {
-        cdkBuilder.tempDirectory(tempDirectory.let(S3LocationProperty::unwrap))
+        cdkBuilder.tempDirectory(tempDirectory.let(S3LocationProperty.Companion::unwrap))
       }
 
       /**
@@ -2707,7 +2707,7 @@ public open class CfnJob(
        * When undefined, no statistics will be computed on columns that contain detected entities.
        */
       override fun allowedStatistics(allowedStatistics: IResolvable) {
-        cdkBuilder.allowedStatistics(allowedStatistics.let(IResolvable::unwrap))
+        cdkBuilder.allowedStatistics(allowedStatistics.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2716,7 +2716,7 @@ public open class CfnJob(
        * When undefined, no statistics will be computed on columns that contain detected entities.
        */
       override fun allowedStatistics(allowedStatistics: AllowedStatisticsProperty) {
-        cdkBuilder.allowedStatistics(allowedStatistics.let(AllowedStatisticsProperty::unwrap))
+        cdkBuilder.allowedStatistics(allowedStatistics.let(AllowedStatisticsProperty.Companion::unwrap))
       }
 
       /**
@@ -3071,7 +3071,7 @@ public open class CfnJob(
        * (CSV) job output.
        */
       override fun csv(csv: IResolvable) {
-        cdkBuilder.csv(csv.let(IResolvable::unwrap))
+        cdkBuilder.csv(csv.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3079,7 +3079,7 @@ public open class CfnJob(
        * (CSV) job output.
        */
       override fun csv(csv: CsvOutputOptionsProperty) {
-        cdkBuilder.csv(csv.let(CsvOutputOptionsProperty::unwrap))
+        cdkBuilder.csv(csv.let(CsvOutputOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -3445,14 +3445,14 @@ public open class CfnJob(
        * @param formatOptions Represents options that define how DataBrew formats job output files.
        */
       override fun formatOptions(formatOptions: IResolvable) {
-        cdkBuilder.formatOptions(formatOptions.let(IResolvable::unwrap))
+        cdkBuilder.formatOptions(formatOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param formatOptions Represents options that define how DataBrew formats job output files.
        */
       override fun formatOptions(formatOptions: OutputFormatOptionsProperty) {
-        cdkBuilder.formatOptions(formatOptions.let(OutputFormatOptionsProperty::unwrap))
+        cdkBuilder.formatOptions(formatOptions.let(OutputFormatOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -3467,14 +3467,14 @@ public open class CfnJob(
        * @param location The location in Amazon S3 where the job writes its output. 
        */
       override fun location(location: IResolvable) {
-        cdkBuilder.location(location.let(IResolvable::unwrap))
+        cdkBuilder.location(location.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param location The location in Amazon S3 where the job writes its output. 
        */
       override fun location(location: S3LocationProperty) {
-        cdkBuilder.location(location.let(S3LocationProperty::unwrap))
+        cdkBuilder.location(location.let(S3LocationProperty.Companion::unwrap))
       }
 
       /**
@@ -3506,7 +3506,7 @@ public open class CfnJob(
        * output is overwritten with new output.
        */
       override fun overwrite(overwrite: IResolvable) {
-        cdkBuilder.overwrite(overwrite.let(IResolvable::unwrap))
+        cdkBuilder.overwrite(overwrite.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3809,7 +3809,7 @@ public open class CfnJob(
        * profile job will profile all supported columns and run all supported evaluations.
        */
       override fun columnStatisticsConfigurations(columnStatisticsConfigurations: IResolvable) {
-        cdkBuilder.columnStatisticsConfigurations(columnStatisticsConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.columnStatisticsConfigurations(columnStatisticsConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3838,7 +3838,7 @@ public open class CfnJob(
        * evaluations.
        */
       override fun datasetStatisticsConfiguration(datasetStatisticsConfiguration: IResolvable) {
-        cdkBuilder.datasetStatisticsConfiguration(datasetStatisticsConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.datasetStatisticsConfiguration(datasetStatisticsConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3849,7 +3849,7 @@ public open class CfnJob(
        */
       override
           fun datasetStatisticsConfiguration(datasetStatisticsConfiguration: StatisticsConfigurationProperty) {
-        cdkBuilder.datasetStatisticsConfiguration(datasetStatisticsConfiguration.let(StatisticsConfigurationProperty::unwrap))
+        cdkBuilder.datasetStatisticsConfiguration(datasetStatisticsConfiguration.let(StatisticsConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3870,7 +3870,7 @@ public open class CfnJob(
        * When undefined, entity detection is disabled.
        */
       override fun entityDetectorConfiguration(entityDetectorConfiguration: IResolvable) {
-        cdkBuilder.entityDetectorConfiguration(entityDetectorConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.entityDetectorConfiguration(entityDetectorConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3879,7 +3879,7 @@ public open class CfnJob(
        */
       override
           fun entityDetectorConfiguration(entityDetectorConfiguration: EntityDetectorConfigurationProperty) {
-        cdkBuilder.entityDetectorConfiguration(entityDetectorConfiguration.let(EntityDetectorConfigurationProperty::unwrap))
+        cdkBuilder.entityDetectorConfiguration(entityDetectorConfiguration.let(EntityDetectorConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3899,7 +3899,7 @@ public open class CfnJob(
        * undefined, the profile job will profile all supported columns.
        */
       override fun profileColumns(profileColumns: IResolvable) {
-        cdkBuilder.profileColumns(profileColumns.let(IResolvable::unwrap))
+        cdkBuilder.profileColumns(profileColumns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4298,7 +4298,7 @@ public open class CfnJob(
        * DataBrew can write output from a job. 
        */
       override fun location(location: IResolvable) {
-        cdkBuilder.location(location.let(IResolvable::unwrap))
+        cdkBuilder.location(location.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4306,7 +4306,7 @@ public open class CfnJob(
        * DataBrew can write output from a job. 
        */
       override fun location(location: S3LocationProperty) {
-        cdkBuilder.location(location.let(S3LocationProperty::unwrap))
+        cdkBuilder.location(location.let(S3LocationProperty.Companion::unwrap))
       }
 
       /**
@@ -4416,7 +4416,7 @@ public open class CfnJob(
        * @param parameters A map that includes overrides of an evaluation’s parameters. 
        */
       override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4573,7 +4573,7 @@ public open class CfnJob(
        * @param overrides List of overrides for evaluations.
        */
       override fun overrides(overrides: IResolvable) {
-        cdkBuilder.overrides(overrides.let(IResolvable::unwrap))
+        cdkBuilder.overrides(overrides.let(IResolvable.Companion::unwrap))
       }
 
       /**

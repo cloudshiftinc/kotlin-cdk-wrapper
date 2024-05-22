@@ -44,7 +44,7 @@ public abstract class InputFormat(
         software.amazon.awscdk.services.dynamodb.InputFormat.csv().let(InputFormat::wrap)
 
     public fun csv(options: CsvOptions): InputFormat =
-        software.amazon.awscdk.services.dynamodb.InputFormat.csv(options.let(CsvOptions::unwrap)).let(InputFormat::wrap)
+        software.amazon.awscdk.services.dynamodb.InputFormat.csv(options.let(CsvOptions.Companion::unwrap)).let(InputFormat::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2755f0fdb57e36185ffda293270efaf3fa63ca1727275d2fcf5c04e945bdd9ba")

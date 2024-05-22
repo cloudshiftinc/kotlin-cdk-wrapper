@@ -161,7 +161,7 @@ public interface CfnThingGroupProps {
      * @param tags Metadata which can be used to manage the thing group or dynamic thing group.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -180,7 +180,7 @@ public interface CfnThingGroupProps {
      * @param thingGroupProperties Thing group properties.
      */
     override fun thingGroupProperties(thingGroupProperties: IResolvable) {
-      cdkBuilder.thingGroupProperties(thingGroupProperties.let(IResolvable::unwrap))
+      cdkBuilder.thingGroupProperties(thingGroupProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -188,7 +188,7 @@ public interface CfnThingGroupProps {
      */
     override
         fun thingGroupProperties(thingGroupProperties: CfnThingGroup.ThingGroupPropertiesProperty) {
-      cdkBuilder.thingGroupProperties(thingGroupProperties.let(CfnThingGroup.ThingGroupPropertiesProperty::unwrap))
+      cdkBuilder.thingGroupProperties(thingGroupProperties.let(CfnThingGroup.ThingGroupPropertiesProperty.Companion::unwrap))
     }
 
     /**

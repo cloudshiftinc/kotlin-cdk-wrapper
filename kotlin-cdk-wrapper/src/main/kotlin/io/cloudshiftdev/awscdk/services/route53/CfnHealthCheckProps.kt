@@ -135,7 +135,7 @@ public interface CfnHealthCheckProps {
      * [HealthCheckConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_HealthCheckConfig.html)
      */
     override fun healthCheckConfig(healthCheckConfig: IResolvable) {
-      cdkBuilder.healthCheckConfig(healthCheckConfig.let(IResolvable::unwrap))
+      cdkBuilder.healthCheckConfig(healthCheckConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -145,7 +145,7 @@ public interface CfnHealthCheckProps {
      * [HealthCheckConfig](https://docs.aws.amazon.com/Route53/latest/APIReference/API_HealthCheckConfig.html)
      */
     override fun healthCheckConfig(healthCheckConfig: CfnHealthCheck.HealthCheckConfigProperty) {
-      cdkBuilder.healthCheckConfig(healthCheckConfig.let(CfnHealthCheck.HealthCheckConfigProperty::unwrap))
+      cdkBuilder.healthCheckConfig(healthCheckConfig.let(CfnHealthCheck.HealthCheckConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -165,7 +165,7 @@ public interface CfnHealthCheckProps {
      * associated with an `AWS::Route53::HealthCheck` resource.
      */
     override fun healthCheckTags(healthCheckTags: IResolvable) {
-      cdkBuilder.healthCheckTags(healthCheckTags.let(IResolvable::unwrap))
+      cdkBuilder.healthCheckTags(healthCheckTags.let(IResolvable.Companion::unwrap))
     }
 
     /**

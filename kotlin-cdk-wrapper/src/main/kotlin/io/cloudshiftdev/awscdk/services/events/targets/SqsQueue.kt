@@ -30,12 +30,12 @@ public open class SqsQueue(
   cdkObject: software.amazon.awscdk.services.events.targets.SqsQueue,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue) :
-      this(software.amazon.awscdk.services.events.targets.SqsQueue(queue.let(CloudshiftdevAwscdkServicesSqsIQueue::unwrap))
+      this(software.amazon.awscdk.services.events.targets.SqsQueue(queue.let(CloudshiftdevAwscdkServicesSqsIQueue.Companion::unwrap))
   )
 
   public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue, props: SqsQueueProps) :
-      this(software.amazon.awscdk.services.events.targets.SqsQueue(queue.let(CloudshiftdevAwscdkServicesSqsIQueue::unwrap),
-      props.let(SqsQueueProps::unwrap))
+      this(software.amazon.awscdk.services.events.targets.SqsQueue(queue.let(CloudshiftdevAwscdkServicesSqsIQueue.Companion::unwrap),
+      props.let(SqsQueueProps.Companion::unwrap))
   )
 
   public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue,
@@ -51,7 +51,7 @@ public open class SqsQueue(
    * @param _id
    */
   public override fun bind(rule: IRule): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap)).let(RuleTargetConfig::wrap)
 
   /**
    * Returns a RuleTarget that can be used to trigger this SQS queue as a result from an EventBridge
@@ -62,7 +62,7 @@ public open class SqsQueue(
    * @param _id
    */
   public override fun bind(rule: IRule, id: String): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap), id).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap), id).let(RuleTargetConfig::wrap)
 
   /**
    *
@@ -169,7 +169,7 @@ public open class SqsQueue(
      * 
      */
     override fun deadLetterQueue(deadLetterQueue: CloudshiftdevAwscdkServicesSqsIQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(CloudshiftdevAwscdkServicesSqsIQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(CloudshiftdevAwscdkServicesSqsIQueue.Companion::unwrap))
     }
 
     /**
@@ -184,7 +184,7 @@ public open class SqsQueue(
      * processing. 
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -197,7 +197,7 @@ public open class SqsQueue(
      * @param message The message to send to the queue. 
      */
     override fun message(message: RuleTargetInput) {
-      cdkBuilder.message(message.let(RuleTargetInput::unwrap))
+      cdkBuilder.message(message.let(RuleTargetInput.Companion::unwrap))
     }
 
     /**

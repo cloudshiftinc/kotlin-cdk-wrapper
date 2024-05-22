@@ -94,7 +94,7 @@ public interface CfnThingProps {
      * Maximum length of 800. Duplicates not allowed.
      */
     override fun attributePayload(attributePayload: IResolvable) {
-      cdkBuilder.attributePayload(attributePayload.let(IResolvable::unwrap))
+      cdkBuilder.attributePayload(attributePayload.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -102,7 +102,7 @@ public interface CfnThingProps {
      * Maximum length of 800. Duplicates not allowed.
      */
     override fun attributePayload(attributePayload: CfnThing.AttributePayloadProperty) {
-      cdkBuilder.attributePayload(attributePayload.let(CfnThing.AttributePayloadProperty::unwrap))
+      cdkBuilder.attributePayload(attributePayload.let(CfnThing.AttributePayloadProperty.Companion::unwrap))
     }
 
     /**

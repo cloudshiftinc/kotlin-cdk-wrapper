@@ -178,14 +178,14 @@ public interface CfnMulticastGroupProps {
      * @param loRaWan The LoRaWAN information that is to be used with the multicast group. 
      */
     override fun loRaWan(loRaWan: IResolvable) {
-      cdkBuilder.loRaWan(loRaWan.let(IResolvable::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param loRaWan The LoRaWAN information that is to be used with the multicast group. 
      */
     override fun loRaWan(loRaWan: CfnMulticastGroup.LoRaWANProperty) {
-      cdkBuilder.loRaWan(loRaWan.let(CfnMulticastGroup.LoRaWANProperty::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(CfnMulticastGroup.LoRaWANProperty.Companion::unwrap))
     }
 
     /**
@@ -208,7 +208,7 @@ public interface CfnMulticastGroupProps {
      * Tags can have a minimum of 0 and a maximum of 50 items.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -119,6 +119,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .featureName("featureName")
  * .roleArn("roleArn")
  * .build()))
+ * .automaticBackupReplicationKmsKeyId("automaticBackupReplicationKmsKeyId")
  * .automaticBackupReplicationRegion("automaticBackupReplicationRegion")
  * .autoMinorVersionUpgrade(false)
  * .availabilityZone("availabilityZone")
@@ -217,7 +218,7 @@ public open class CfnDBInstance(
   cdkObject: software.amazon.awscdk.services.rds.CfnDBInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.rds.CfnDBInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.rds.CfnDBInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -226,8 +227,8 @@ public open class CfnDBInstance(
     id: String,
     props: CfnDBInstanceProps,
   ) :
-      this(software.amazon.awscdk.services.rds.CfnDBInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDBInstanceProps::unwrap))
+      this(software.amazon.awscdk.services.rds.CfnDBInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDBInstanceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -265,7 +266,7 @@ public open class CfnDBInstance(
    * A value that indicates whether major version upgrades are allowed.
    */
   public open fun allowMajorVersionUpgrade(`value`: IResolvable) {
-    unwrap(this).setAllowMajorVersionUpgrade(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAllowMajorVersionUpgrade(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -277,7 +278,7 @@ public open class CfnDBInstance(
    * The AWS Identity and Access Management (IAM) roles associated with the DB instance.
    */
   public open fun associatedRoles(`value`: IResolvable) {
-    unwrap(this).setAssociatedRoles(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAssociatedRoles(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -371,7 +372,20 @@ public open class CfnDBInstance(
    * instance during the maintenance window.
    */
   public open fun autoMinorVersionUpgrade(`value`: IResolvable) {
-    unwrap(this).setAutoMinorVersionUpgrade(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoMinorVersionUpgrade(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The AWS KMS key identifier for encryption of the replicated automated backups.
+   */
+  public open fun automaticBackupReplicationKmsKeyId(): String? =
+      unwrap(this).getAutomaticBackupReplicationKmsKeyId()
+
+  /**
+   * The AWS KMS key identifier for encryption of the replicated automated backups.
+   */
+  public open fun automaticBackupReplicationKmsKeyId(`value`: String) {
+    unwrap(this).setAutomaticBackupReplicationKmsKeyId(`value`)
   }
 
   /**
@@ -432,14 +446,14 @@ public open class CfnDBInstance(
    * The details of the DB instance's server certificate.
    */
   public open fun certificateDetails(`value`: IResolvable) {
-    unwrap(this).setCertificateDetails(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCertificateDetails(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The details of the DB instance's server certificate.
    */
   public open fun certificateDetails(`value`: CertificateDetailsProperty) {
-    unwrap(this).setCertificateDetails(`value`.let(CertificateDetailsProperty::unwrap))
+    unwrap(this).setCertificateDetails(`value`.let(CertificateDetailsProperty.Companion::unwrap))
   }
 
   /**
@@ -466,7 +480,7 @@ public open class CfnDBInstance(
    * Specifies whether the DB instance is restarted when you rotate your SSL/TLS certificate.
    */
   public open fun certificateRotationRestart(`value`: IResolvable) {
-    unwrap(this).setCertificateRotationRestart(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCertificateRotationRestart(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -499,7 +513,7 @@ public open class CfnDBInstance(
    * Specifies whether to copy tags from the DB instance to snapshots of the DB instance.
    */
   public open fun copyTagsToSnapshot(`value`: IResolvable) {
-    unwrap(this).setCopyTagsToSnapshot(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCopyTagsToSnapshot(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -666,7 +680,7 @@ public open class CfnDBInstance(
    * Indicates whether the DB instance has a dedicated log volume (DLV) enabled.
    */
   public open fun dedicatedLogVolume(`value`: IResolvable) {
-    unwrap(this).setDedicatedLogVolume(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDedicatedLogVolume(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -688,7 +702,7 @@ public open class CfnDBInstance(
    * deleted.
    */
   public open fun deleteAutomatedBackups(`value`: IResolvable) {
-    unwrap(this).setDeleteAutomatedBackups(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeleteAutomatedBackups(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -707,7 +721,7 @@ public open class CfnDBInstance(
    * A value that indicates whether the DB instance has deletion protection enabled.
    */
   public open fun deletionProtection(`value`: IResolvable) {
-    unwrap(this).setDeletionProtection(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeletionProtection(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -826,7 +840,7 @@ public open class CfnDBInstance(
    * accounts to database accounts.
    */
   public open fun enableIamDatabaseAuthentication(`value`: IResolvable) {
-    unwrap(this).setEnableIamDatabaseAuthentication(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableIamDatabaseAuthentication(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -845,7 +859,7 @@ public open class CfnDBInstance(
    * Specifies whether to enable Performance Insights for the DB instance.
    */
   public open fun enablePerformanceInsights(`value`: IResolvable) {
-    unwrap(this).setEnablePerformanceInsights(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnablePerformanceInsights(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -857,14 +871,14 @@ public open class CfnDBInstance(
    * The connection endpoint for the DB instance.
    */
   public open fun endpoint(`value`: IResolvable) {
-    unwrap(this).setEndpoint(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEndpoint(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The connection endpoint for the DB instance.
    */
   public open fun endpoint(`value`: EndpointProperty) {
-    unwrap(this).setEndpoint(`value`.let(EndpointProperty::unwrap))
+    unwrap(this).setEndpoint(`value`.let(EndpointProperty.Companion::unwrap))
   }
 
   /**
@@ -905,7 +919,7 @@ public open class CfnDBInstance(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -962,7 +976,7 @@ public open class CfnDBInstance(
    * Specifies whether to manage the master user password with AWS Secrets Manager.
    */
   public open fun manageMasterUserPassword(`value`: IResolvable) {
-    unwrap(this).setManageMasterUserPassword(`value`.let(IResolvable::unwrap))
+    unwrap(this).setManageMasterUserPassword(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -990,14 +1004,14 @@ public open class CfnDBInstance(
    * The secret managed by RDS in AWS Secrets Manager for the master user password.
    */
   public open fun masterUserSecret(`value`: IResolvable) {
-    unwrap(this).setMasterUserSecret(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMasterUserSecret(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The secret managed by RDS in AWS Secrets Manager for the master user password.
    */
   public open fun masterUserSecret(`value`: MasterUserSecretProperty) {
-    unwrap(this).setMasterUserSecret(`value`.let(MasterUserSecretProperty::unwrap))
+    unwrap(this).setMasterUserSecret(`value`.let(MasterUserSecretProperty.Companion::unwrap))
   }
 
   /**
@@ -1078,7 +1092,7 @@ public open class CfnDBInstance(
    * Specifies whether the database instance is a Multi-AZ DB instance deployment.
    */
   public open fun multiAz(`value`: IResolvable) {
-    unwrap(this).setMultiAz(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMultiAz(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -1195,7 +1209,7 @@ public open class CfnDBInstance(
    * instance.
    */
   public open fun processorFeatures(`value`: IResolvable) {
-    unwrap(this).setProcessorFeatures(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProcessorFeatures(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -1242,7 +1256,7 @@ public open class CfnDBInstance(
    * Indicates whether the DB instance is an internet-facing instance.
    */
   public open fun publiclyAccessible(`value`: IResolvable) {
-    unwrap(this).setPubliclyAccessible(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPubliclyAccessible(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -1355,7 +1369,7 @@ public open class CfnDBInstance(
    * By default, it isn't encrypted.
    */
   public open fun storageEncrypted(`value`: IResolvable) {
-    unwrap(this).setStorageEncrypted(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStorageEncrypted(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -1401,7 +1415,7 @@ public open class CfnDBInstance(
    * An optional array of key-value pairs to apply to this DB instance.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -1466,7 +1480,7 @@ public open class CfnDBInstance(
    * Specifies whether the DB instance class of the DB instance uses its default processor features.
    */
   public open fun useDefaultProcessorFeatures(`value`: IResolvable) {
-    unwrap(this).setUseDefaultProcessorFeatures(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUseDefaultProcessorFeatures(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -1485,7 +1499,7 @@ public open class CfnDBInstance(
    * Specifies whether the DB instance is restored from the latest backup time.
    */
   public open fun useLatestRestorableTime(`value`: IResolvable) {
-    unwrap(this).setUseLatestRestorableTime(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUseLatestRestorableTime(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -1681,6 +1695,19 @@ public open class CfnDBInstance(
      * applied automatically to the DB instance during the maintenance window. 
      */
     public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable)
+
+    /**
+     * The AWS KMS key identifier for encryption of the replicated automated backups.
+     *
+     * The KMS key ID is the Amazon Resource Name (ARN) for the KMS encryption key in the
+     * destination AWS Region , for example,
+     * `arn:aws:kms:us-east-1:123456789012:key/AKIAIOSFODNN7EXAMPLE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-automaticbackupreplicationkmskeyid)
+     * @param automaticBackupReplicationKmsKeyId The AWS KMS key identifier for encryption of the
+     * replicated automated backups. 
+     */
+    public fun automaticBackupReplicationKmsKeyId(automaticBackupReplicationKmsKeyId: String)
 
     /**
      * The destination region for the backup replication of the DB instance.
@@ -3610,7 +3637,8 @@ public open class CfnDBInstance(
     /**
      * The time zone of the DB instance.
      *
-     * The time zone parameter is currently supported only by [Microsoft SQL
+     * The time zone parameter is currently supported only by [RDS for
+     * Db2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-time-zone) and [RDS for SQL
      * Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone)
      * .
      *
@@ -3875,7 +3903,7 @@ public open class CfnDBInstance(
      * allowed. 
      */
     override fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: IResolvable) {
-      cdkBuilder.allowMajorVersionUpgrade(allowMajorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.allowMajorVersionUpgrade(allowMajorVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3890,7 +3918,7 @@ public open class CfnDBInstance(
      * DB instance. 
      */
     override fun associatedRoles(associatedRoles: IResolvable) {
-      cdkBuilder.associatedRoles(associatedRoles.let(IResolvable::unwrap))
+      cdkBuilder.associatedRoles(associatedRoles.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3947,7 +3975,22 @@ public open class CfnDBInstance(
      * applied automatically to the DB instance during the maintenance window. 
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The AWS KMS key identifier for encryption of the replicated automated backups.
+     *
+     * The KMS key ID is the Amazon Resource Name (ARN) for the KMS encryption key in the
+     * destination AWS Region , for example,
+     * `arn:aws:kms:us-east-1:123456789012:key/AKIAIOSFODNN7EXAMPLE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-automaticbackupreplicationkmskeyid)
+     * @param automaticBackupReplicationKmsKeyId The AWS KMS key identifier for encryption of the
+     * replicated automated backups. 
+     */
+    override fun automaticBackupReplicationKmsKeyId(automaticBackupReplicationKmsKeyId: String) {
+      cdkBuilder.automaticBackupReplicationKmsKeyId(automaticBackupReplicationKmsKeyId)
     }
 
     /**
@@ -4042,7 +4085,7 @@ public open class CfnDBInstance(
      * @param certificateDetails The details of the DB instance's server certificate. 
      */
     override fun certificateDetails(certificateDetails: IResolvable) {
-      cdkBuilder.certificateDetails(certificateDetails.let(IResolvable::unwrap))
+      cdkBuilder.certificateDetails(certificateDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4052,7 +4095,7 @@ public open class CfnDBInstance(
      * @param certificateDetails The details of the DB instance's server certificate. 
      */
     override fun certificateDetails(certificateDetails: CertificateDetailsProperty) {
-      cdkBuilder.certificateDetails(certificateDetails.let(CertificateDetailsProperty::unwrap))
+      cdkBuilder.certificateDetails(certificateDetails.let(CertificateDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -4128,7 +4171,7 @@ public open class CfnDBInstance(
      * rotate your SSL/TLS certificate. 
      */
     override fun certificateRotationRestart(certificateRotationRestart: IResolvable) {
-      cdkBuilder.certificateRotationRestart(certificateRotationRestart.let(IResolvable::unwrap))
+      cdkBuilder.certificateRotationRestart(certificateRotationRestart.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4180,7 +4223,7 @@ public open class CfnDBInstance(
      * the DB instance. 
      */
     override fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable) {
-      cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot.let(IResolvable::unwrap))
+      cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4600,7 +4643,7 @@ public open class CfnDBInstance(
      * enabled. 
      */
     override fun dedicatedLogVolume(dedicatedLogVolume: IResolvable) {
-      cdkBuilder.dedicatedLogVolume(dedicatedLogVolume.let(IResolvable::unwrap))
+      cdkBuilder.dedicatedLogVolume(dedicatedLogVolume.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4640,7 +4683,7 @@ public open class CfnDBInstance(
      * immediately after the DB instance is deleted. 
      */
     override fun deleteAutomatedBackups(deleteAutomatedBackups: IResolvable) {
-      cdkBuilder.deleteAutomatedBackups(deleteAutomatedBackups.let(IResolvable::unwrap))
+      cdkBuilder.deleteAutomatedBackups(deleteAutomatedBackups.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4682,7 +4725,7 @@ public open class CfnDBInstance(
      * protection enabled. 
      */
     override fun deletionProtection(deletionProtection: IResolvable) {
-      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable::unwrap))
+      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4930,7 +4973,7 @@ public open class CfnDBInstance(
      * AWS Identity and Access Management (IAM) accounts to database accounts. 
      */
     override fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: IResolvable) {
-      cdkBuilder.enableIamDatabaseAuthentication(enableIamDatabaseAuthentication.let(IResolvable::unwrap))
+      cdkBuilder.enableIamDatabaseAuthentication(enableIamDatabaseAuthentication.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4964,7 +5007,7 @@ public open class CfnDBInstance(
      * instance. 
      */
     override fun enablePerformanceInsights(enablePerformanceInsights: IResolvable) {
-      cdkBuilder.enablePerformanceInsights(enablePerformanceInsights.let(IResolvable::unwrap))
+      cdkBuilder.enablePerformanceInsights(enablePerformanceInsights.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4978,7 +5021,7 @@ public open class CfnDBInstance(
      * @param endpoint The connection endpoint for the DB instance. 
      */
     override fun endpoint(endpoint: IResolvable) {
-      cdkBuilder.endpoint(endpoint.let(IResolvable::unwrap))
+      cdkBuilder.endpoint(endpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4992,7 +5035,7 @@ public open class CfnDBInstance(
      * @param endpoint The connection endpoint for the DB instance. 
      */
     override fun endpoint(endpoint: EndpointProperty) {
-      cdkBuilder.endpoint(endpoint.let(EndpointProperty::unwrap))
+      cdkBuilder.endpoint(endpoint.let(EndpointProperty.Companion::unwrap))
     }
 
     /**
@@ -5246,7 +5289,7 @@ public open class CfnDBInstance(
      * Secrets Manager. 
      */
     override fun manageMasterUserPassword(manageMasterUserPassword: IResolvable) {
-      cdkBuilder.manageMasterUserPassword(manageMasterUserPassword.let(IResolvable::unwrap))
+      cdkBuilder.manageMasterUserPassword(manageMasterUserPassword.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -5301,7 +5344,7 @@ public open class CfnDBInstance(
      * password. 
      */
     override fun masterUserSecret(masterUserSecret: IResolvable) {
-      cdkBuilder.masterUserSecret(masterUserSecret.let(IResolvable::unwrap))
+      cdkBuilder.masterUserSecret(masterUserSecret.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -5316,7 +5359,7 @@ public open class CfnDBInstance(
      * password. 
      */
     override fun masterUserSecret(masterUserSecret: MasterUserSecretProperty) {
-      cdkBuilder.masterUserSecret(masterUserSecret.let(MasterUserSecretProperty::unwrap))
+      cdkBuilder.masterUserSecret(masterUserSecret.let(MasterUserSecretProperty.Companion::unwrap))
     }
 
     /**
@@ -5510,7 +5553,7 @@ public open class CfnDBInstance(
      * @param multiAz Specifies whether the database instance is a Multi-AZ DB instance deployment. 
      */
     override fun multiAz(multiAz: IResolvable) {
-      cdkBuilder.multiAz(multiAz.let(IResolvable::unwrap))
+      cdkBuilder.multiAz(multiAz.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -5692,7 +5735,7 @@ public open class CfnDBInstance(
      * DB instance class of the DB instance. 
      */
     override fun processorFeatures(processorFeatures: IResolvable) {
-      cdkBuilder.processorFeatures(processorFeatures.let(IResolvable::unwrap))
+      cdkBuilder.processorFeatures(processorFeatures.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -5781,7 +5824,7 @@ public open class CfnDBInstance(
      * @param publiclyAccessible Indicates whether the DB instance is an internet-facing instance. 
      */
     override fun publiclyAccessible(publiclyAccessible: IResolvable) {
-      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
+      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -5974,7 +6017,7 @@ public open class CfnDBInstance(
      * default, it isn't encrypted. 
      */
     override fun storageEncrypted(storageEncrypted: IResolvable) {
-      cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable::unwrap))
+      cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -6018,7 +6061,7 @@ public open class CfnDBInstance(
      * @param tags An optional array of key-value pairs to apply to this DB instance. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -6052,7 +6095,8 @@ public open class CfnDBInstance(
     /**
      * The time zone of the DB instance.
      *
-     * The time zone parameter is currently supported only by [Microsoft SQL
+     * The time zone parameter is currently supported only by [RDS for
+     * Db2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-time-zone) and [RDS for SQL
      * Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone)
      * .
      *
@@ -6088,7 +6132,7 @@ public open class CfnDBInstance(
      * uses its default processor features. 
      */
     override fun useDefaultProcessorFeatures(useDefaultProcessorFeatures: IResolvable) {
-      cdkBuilder.useDefaultProcessorFeatures(useDefaultProcessorFeatures.let(IResolvable::unwrap))
+      cdkBuilder.useDefaultProcessorFeatures(useDefaultProcessorFeatures.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -6122,7 +6166,7 @@ public open class CfnDBInstance(
      * backup time. 
      */
     override fun useLatestRestorableTime(useLatestRestorableTime: IResolvable) {
-      cdkBuilder.useLatestRestorableTime(useLatestRestorableTime.let(IResolvable::unwrap))
+      cdkBuilder.useLatestRestorableTime(useLatestRestorableTime.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -130,8 +130,8 @@ public open class CfnBroker(
     id: String,
     props: CfnBrokerProps,
   ) :
-      this(software.amazon.awscdk.services.amazonmq.CfnBroker(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnBrokerProps::unwrap))
+      this(software.amazon.awscdk.services.amazonmq.CfnBroker(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnBrokerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -243,7 +243,7 @@ public open class CfnBroker(
    * released and supported by Amazon MQ.
    */
   public open fun autoMinorVersionUpgrade(`value`: IResolvable) {
-    unwrap(this).setAutoMinorVersionUpgrade(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoMinorVersionUpgrade(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -267,14 +267,14 @@ public open class CfnBroker(
    * A list of information about the configuration.
    */
   public open fun configuration(`value`: IResolvable) {
-    unwrap(this).setConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A list of information about the configuration.
    */
   public open fun configuration(`value`: ConfigurationIdProperty) {
-    unwrap(this).setConfiguration(`value`.let(ConfigurationIdProperty::unwrap))
+    unwrap(this).setConfiguration(`value`.let(ConfigurationIdProperty.Companion::unwrap))
   }
 
   /**
@@ -337,14 +337,14 @@ public open class CfnBroker(
    * Encryption options for the broker.
    */
   public open fun encryptionOptions(`value`: IResolvable) {
-    unwrap(this).setEncryptionOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEncryptionOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Encryption options for the broker.
    */
   public open fun encryptionOptions(`value`: EncryptionOptionsProperty) {
-    unwrap(this).setEncryptionOptions(`value`.let(EncryptionOptionsProperty::unwrap))
+    unwrap(this).setEncryptionOptions(`value`.let(EncryptionOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -397,7 +397,7 @@ public open class CfnBroker(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -409,14 +409,14 @@ public open class CfnBroker(
    * Optional.
    */
   public open fun ldapServerMetadata(`value`: IResolvable) {
-    unwrap(this).setLdapServerMetadata(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLdapServerMetadata(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Optional.
    */
   public open fun ldapServerMetadata(`value`: LdapServerMetadataProperty) {
-    unwrap(this).setLdapServerMetadata(`value`.let(LdapServerMetadataProperty::unwrap))
+    unwrap(this).setLdapServerMetadata(`value`.let(LdapServerMetadataProperty.Companion::unwrap))
   }
 
   /**
@@ -436,14 +436,14 @@ public open class CfnBroker(
    * Enables Amazon CloudWatch logging for brokers.
    */
   public open fun logs(`value`: IResolvable) {
-    unwrap(this).setLogs(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLogs(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Enables Amazon CloudWatch logging for brokers.
    */
   public open fun logs(`value`: LogListProperty) {
-    unwrap(this).setLogs(`value`.let(LogListProperty::unwrap))
+    unwrap(this).setLogs(`value`.let(LogListProperty.Companion::unwrap))
   }
 
   /**
@@ -465,7 +465,7 @@ public open class CfnBroker(
    * updates or patches to the broker.
    */
   public open fun maintenanceWindowStartTime(`value`: IResolvable) {
-    unwrap(this).setMaintenanceWindowStartTime(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMaintenanceWindowStartTime(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -473,7 +473,7 @@ public open class CfnBroker(
    * updates or patches to the broker.
    */
   public open fun maintenanceWindowStartTime(`value`: MaintenanceWindowProperty) {
-    unwrap(this).setMaintenanceWindowStartTime(`value`.let(MaintenanceWindowProperty::unwrap))
+    unwrap(this).setMaintenanceWindowStartTime(`value`.let(MaintenanceWindowProperty.Companion::unwrap))
   }
 
   /**
@@ -501,7 +501,7 @@ public open class CfnBroker(
    * Enables connections from applications outside of the VPC that hosts the broker's subnets.
    */
   public open fun publiclyAccessible(`value`: IResolvable) {
-    unwrap(this).setPubliclyAccessible(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPubliclyAccessible(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -568,7 +568,7 @@ public open class CfnBroker(
    * An array of key-value pairs.
    */
   public open fun tagsRaw(`value`: List<TagsEntryProperty>) {
-    unwrap(this).setTagsRaw(`value`.map(TagsEntryProperty::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(TagsEntryProperty.Companion::unwrap))
   }
 
   /**
@@ -585,7 +585,7 @@ public open class CfnBroker(
    * The list of broker users (persons or applications) who can access queues and topics.
    */
   public open fun users(`value`: IResolvable) {
-    unwrap(this).setUsers(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUsers(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -1080,7 +1080,7 @@ public open class CfnBroker(
      * as new broker engine versions are released and supported by Amazon MQ. 
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1112,7 +1112,7 @@ public open class CfnBroker(
      * @param configuration A list of information about the configuration. 
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1124,7 +1124,7 @@ public open class CfnBroker(
      * @param configuration A list of information about the configuration. 
      */
     override fun configuration(configuration: ConfigurationIdProperty) {
-      cdkBuilder.configuration(configuration.let(ConfigurationIdProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(ConfigurationIdProperty.Companion::unwrap))
     }
 
     /**
@@ -1188,7 +1188,7 @@ public open class CfnBroker(
      * @param encryptionOptions Encryption options for the broker. 
      */
     override fun encryptionOptions(encryptionOptions: IResolvable) {
-      cdkBuilder.encryptionOptions(encryptionOptions.let(IResolvable::unwrap))
+      cdkBuilder.encryptionOptions(encryptionOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1200,7 +1200,7 @@ public open class CfnBroker(
      * @param encryptionOptions Encryption options for the broker. 
      */
     override fun encryptionOptions(encryptionOptions: EncryptionOptionsProperty) {
-      cdkBuilder.encryptionOptions(encryptionOptions.let(EncryptionOptionsProperty::unwrap))
+      cdkBuilder.encryptionOptions(encryptionOptions.let(EncryptionOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -1262,7 +1262,7 @@ public open class CfnBroker(
      * @param ldapServerMetadata Optional. 
      */
     override fun ldapServerMetadata(ldapServerMetadata: IResolvable) {
-      cdkBuilder.ldapServerMetadata(ldapServerMetadata.let(IResolvable::unwrap))
+      cdkBuilder.ldapServerMetadata(ldapServerMetadata.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1275,7 +1275,7 @@ public open class CfnBroker(
      * @param ldapServerMetadata Optional. 
      */
     override fun ldapServerMetadata(ldapServerMetadata: LdapServerMetadataProperty) {
-      cdkBuilder.ldapServerMetadata(ldapServerMetadata.let(LdapServerMetadataProperty::unwrap))
+      cdkBuilder.ldapServerMetadata(ldapServerMetadata.let(LdapServerMetadataProperty.Companion::unwrap))
     }
 
     /**
@@ -1300,7 +1300,7 @@ public open class CfnBroker(
      * @param logs Enables Amazon CloudWatch logging for brokers. 
      */
     override fun logs(logs: IResolvable) {
-      cdkBuilder.logs(logs.let(IResolvable::unwrap))
+      cdkBuilder.logs(logs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1310,7 +1310,7 @@ public open class CfnBroker(
      * @param logs Enables Amazon CloudWatch logging for brokers. 
      */
     override fun logs(logs: LogListProperty) {
-      cdkBuilder.logs(logs.let(LogListProperty::unwrap))
+      cdkBuilder.logs(logs.let(LogListProperty.Companion::unwrap))
     }
 
     /**
@@ -1332,7 +1332,7 @@ public open class CfnBroker(
      * Amazon MQ begins to apply pending updates or patches to the broker. 
      */
     override fun maintenanceWindowStartTime(maintenanceWindowStartTime: IResolvable) {
-      cdkBuilder.maintenanceWindowStartTime(maintenanceWindowStartTime.let(IResolvable::unwrap))
+      cdkBuilder.maintenanceWindowStartTime(maintenanceWindowStartTime.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1344,7 +1344,7 @@ public open class CfnBroker(
      * Amazon MQ begins to apply pending updates or patches to the broker. 
      */
     override fun maintenanceWindowStartTime(maintenanceWindowStartTime: MaintenanceWindowProperty) {
-      cdkBuilder.maintenanceWindowStartTime(maintenanceWindowStartTime.let(MaintenanceWindowProperty::unwrap))
+      cdkBuilder.maintenanceWindowStartTime(maintenanceWindowStartTime.let(MaintenanceWindowProperty.Companion::unwrap))
     }
 
     /**
@@ -1380,7 +1380,7 @@ public open class CfnBroker(
      * the broker's subnets. 
      */
     override fun publiclyAccessible(publiclyAccessible: IResolvable) {
-      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
+      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1473,7 +1473,7 @@ public open class CfnBroker(
      * @param tags An array of key-value pairs. 
      */
     override fun tags(tags: List<TagsEntryProperty>) {
-      cdkBuilder.tags(tags.map(TagsEntryProperty::unwrap))
+      cdkBuilder.tags(tags.map(TagsEntryProperty.Companion::unwrap))
     }
 
     /**
@@ -1500,7 +1500,7 @@ public open class CfnBroker(
      * topics. 
      */
     override fun users(users: IResolvable) {
-      cdkBuilder.users(users.let(IResolvable::unwrap))
+      cdkBuilder.users(users.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1759,7 +1759,7 @@ public open class CfnBroker(
        * Set to `true` by default, if no value is provided, for example, for RabbitMQ brokers.
        */
       override fun useAwsOwnedKey(useAwsOwnedKey: IResolvable) {
-        cdkBuilder.useAwsOwnedKey(useAwsOwnedKey.let(IResolvable::unwrap))
+        cdkBuilder.useAwsOwnedKey(useAwsOwnedKey.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2139,7 +2139,7 @@ public open class CfnBroker(
        * If set to true, scope is to search the entire subtree.
        */
       override fun roleSearchSubtree(roleSearchSubtree: IResolvable) {
-        cdkBuilder.roleSearchSubtree(roleSearchSubtree.let(IResolvable::unwrap))
+        cdkBuilder.roleSearchSubtree(roleSearchSubtree.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2207,7 +2207,7 @@ public open class CfnBroker(
        * If set to true, scope is to search the entire subtree.
        */
       override fun userSearchSubtree(userSearchSubtree: IResolvable) {
-        cdkBuilder.userSearchSubtree(userSearchSubtree.let(IResolvable::unwrap))
+        cdkBuilder.userSearchSubtree(userSearchSubtree.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2441,7 +2441,7 @@ public open class CfnBroker(
        * apply to RabbitMQ brokers.
        */
       override fun audit(audit: IResolvable) {
-        cdkBuilder.audit(audit.let(IResolvable::unwrap))
+        cdkBuilder.audit(audit.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2455,7 +2455,7 @@ public open class CfnBroker(
        * @param general Enables general logging.
        */
       override fun general(general: IResolvable) {
-        cdkBuilder.general(general.let(IResolvable::unwrap))
+        cdkBuilder.general(general.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty =
@@ -2912,7 +2912,7 @@ public open class CfnBroker(
        * Does not apply to RabbitMQ brokers.
        */
       override fun consoleAccess(consoleAccess: IResolvable) {
-        cdkBuilder.consoleAccess(consoleAccess.let(IResolvable::unwrap))
+        cdkBuilder.consoleAccess(consoleAccess.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2953,7 +2953,7 @@ public open class CfnBroker(
        * @param replicationUser Defines if this user is intended for CRDR replication purposes.
        */
       override fun replicationUser(replicationUser: IResolvable) {
-        cdkBuilder.replicationUser(replicationUser.let(IResolvable::unwrap))
+        cdkBuilder.replicationUser(replicationUser.let(IResolvable.Companion::unwrap))
       }
 
       /**

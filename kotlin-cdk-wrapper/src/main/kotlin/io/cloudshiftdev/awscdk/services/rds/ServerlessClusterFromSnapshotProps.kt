@@ -294,7 +294,7 @@ public interface ServerlessClusterFromSnapshotProps {
      * Must be a value from 1 day to 35 days.
      */
     override fun backupRetention(backupRetention: Duration) {
-      cdkBuilder.backupRetention(backupRetention.let(Duration::unwrap))
+      cdkBuilder.backupRetention(backupRetention.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -317,7 +317,7 @@ public interface ServerlessClusterFromSnapshotProps {
      * however, it is possible to provide (or generate) a new password.
      */
     override fun credentials(credentials: SnapshotCredentials) {
-      cdkBuilder.credentials(credentials.let(SnapshotCredentials::unwrap))
+      cdkBuilder.credentials(credentials.let(SnapshotCredentials.Companion::unwrap))
     }
 
     /**
@@ -347,14 +347,14 @@ public interface ServerlessClusterFromSnapshotProps {
      * @param engine What kind of database to start. 
      */
     override fun engine(engine: IClusterEngine) {
-      cdkBuilder.engine(engine.let(IClusterEngine::unwrap))
+      cdkBuilder.engine(engine.let(IClusterEngine.Companion::unwrap))
     }
 
     /**
      * @param parameterGroup Additional parameters to pass to the database engine.
      */
     override fun parameterGroup(parameterGroup: IParameterGroup) {
-      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup::unwrap))
+      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup.Companion::unwrap))
     }
 
     /**
@@ -362,14 +362,14 @@ public interface ServerlessClusterFromSnapshotProps {
      * removed from the stack or replaced during an update.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
      * @param scaling Scaling configuration of an Aurora Serverless database cluster.
      */
     override fun scaling(scaling: ServerlessScalingOptions) {
-      cdkBuilder.scaling(scaling.let(ServerlessScalingOptions::unwrap))
+      cdkBuilder.scaling(scaling.let(ServerlessScalingOptions.Companion::unwrap))
     }
 
     /**
@@ -384,7 +384,7 @@ public interface ServerlessClusterFromSnapshotProps {
      * @param securityGroups Security group.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -408,14 +408,14 @@ public interface ServerlessClusterFromSnapshotProps {
      * @param subnetGroup Existing subnet group for the cluster.
      */
     override fun subnetGroup(subnetGroup: ISubnetGroup) {
-      cdkBuilder.subnetGroup(subnetGroup.let(ISubnetGroup::unwrap))
+      cdkBuilder.subnetGroup(subnetGroup.let(ISubnetGroup.Companion::unwrap))
     }
 
     /**
      * @param vpc The VPC that this Aurora Serverless cluster has been created in.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -423,7 +423,7 @@ public interface ServerlessClusterFromSnapshotProps {
      * If provided, the `vpc` property must also be specified.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

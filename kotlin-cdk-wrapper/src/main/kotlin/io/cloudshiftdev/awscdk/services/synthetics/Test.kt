@@ -40,7 +40,7 @@ public open class Test(
 
   public companion object {
     public fun custom(options: CustomTestOptions): Test =
-        software.amazon.awscdk.services.synthetics.Test.custom(options.let(CustomTestOptions::unwrap)).let(Test::wrap)
+        software.amazon.awscdk.services.synthetics.Test.custom(options.let(CustomTestOptions.Companion::unwrap)).let(Test::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9751a1027e751f9c259ce442960e603f2d6df7ed16fa356804ec2849517b6c85")

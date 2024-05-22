@@ -213,7 +213,7 @@ public interface UserPoolIdentityProviderOidcProps : UserPoolIdentityProviderPro
      * attributes of the user pool.
      */
     override fun attributeMapping(attributeMapping: AttributeMapping) {
-      cdkBuilder.attributeMapping(attributeMapping.let(AttributeMapping::unwrap))
+      cdkBuilder.attributeMapping(attributeMapping.let(AttributeMapping.Companion::unwrap))
     }
 
     /**
@@ -229,7 +229,7 @@ public interface UserPoolIdentityProviderOidcProps : UserPoolIdentityProviderPro
      * @param attributeRequestMethod The method to use to request attributes.
      */
     override fun attributeRequestMethod(attributeRequestMethod: OidcAttributeRequestMethod) {
-      cdkBuilder.attributeRequestMethod(attributeRequestMethod.let(OidcAttributeRequestMethod::unwrap))
+      cdkBuilder.attributeRequestMethod(attributeRequestMethod.let(OidcAttributeRequestMethod.Companion::unwrap))
     }
 
     /**
@@ -250,7 +250,7 @@ public interface UserPoolIdentityProviderOidcProps : UserPoolIdentityProviderPro
      * @param endpoints OpenID connect endpoints.
      */
     override fun endpoints(endpoints: OidcEndpoints) {
-      cdkBuilder.endpoints(endpoints.let(OidcEndpoints::unwrap))
+      cdkBuilder.endpoints(endpoints.let(OidcEndpoints.Companion::unwrap))
     }
 
     /**
@@ -307,7 +307,7 @@ public interface UserPoolIdentityProviderOidcProps : UserPoolIdentityProviderPro
      * @param userPool The user pool to which this construct provides identities. 
      */
     override fun userPool(userPool: IUserPool) {
-      cdkBuilder.userPool(userPool.let(IUserPool::unwrap))
+      cdkBuilder.userPool(userPool.let(IUserPool.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cognito.UserPoolIdentityProviderOidcProps =

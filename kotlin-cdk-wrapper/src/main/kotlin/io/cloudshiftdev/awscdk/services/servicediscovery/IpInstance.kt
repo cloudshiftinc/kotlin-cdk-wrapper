@@ -40,8 +40,8 @@ public open class IpInstance(
     id: String,
     props: IpInstanceProps,
   ) :
-      this(software.amazon.awscdk.services.servicediscovery.IpInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(IpInstanceProps::unwrap))
+      this(software.amazon.awscdk.services.servicediscovery.IpInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(IpInstanceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -222,7 +222,7 @@ public open class IpInstance(
      * @param service The Cloudmap service this resource is registered to. 
      */
     override fun service(service: IService) {
-      cdkBuilder.service(service.let(IService::unwrap))
+      cdkBuilder.service(service.let(IService.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.servicediscovery.IpInstance =

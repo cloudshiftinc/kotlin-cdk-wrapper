@@ -100,7 +100,8 @@ public interface IJobQueue : IResource {
      * @param order 
      */
     override fun addComputeEnvironment(computeEnvironment: IComputeEnvironment, order: Number) {
-      unwrap(this).addComputeEnvironment(computeEnvironment.let(IComputeEnvironment::unwrap), order)
+      unwrap(this).addComputeEnvironment(computeEnvironment.let(IComputeEnvironment.Companion::unwrap),
+          order)
     }
 
     /**
@@ -117,7 +118,7 @@ public interface IJobQueue : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**

@@ -69,8 +69,8 @@ public open class DynamoDbDataSource(
     id: String,
     props: DynamoDbDataSourceProps,
   ) :
-      this(software.amazon.awscdk.services.appsync.DynamoDbDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DynamoDbDataSourceProps::unwrap))
+      this(software.amazon.awscdk.services.appsync.DynamoDbDataSource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DynamoDbDataSourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -160,7 +160,7 @@ public open class DynamoDbDataSource(
      * @param api The API to attach this data source to. 
      */
     override fun api(api: IGraphqlApi) {
-      cdkBuilder.api(api.let(IGraphqlApi::unwrap))
+      cdkBuilder.api(api.let(IGraphqlApi.Companion::unwrap))
     }
 
     /**
@@ -206,7 +206,7 @@ public open class DynamoDbDataSource(
      * source. 
      */
     override fun serviceRole(serviceRole: IRole) {
-      cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
+      cdkBuilder.serviceRole(serviceRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -215,7 +215,7 @@ public open class DynamoDbDataSource(
      * @param table The DynamoDB table backing this data source. 
      */
     override fun table(table: ITable) {
-      cdkBuilder.table(table.let(ITable::unwrap))
+      cdkBuilder.table(table.let(ITable.Companion::unwrap))
     }
 
     /**

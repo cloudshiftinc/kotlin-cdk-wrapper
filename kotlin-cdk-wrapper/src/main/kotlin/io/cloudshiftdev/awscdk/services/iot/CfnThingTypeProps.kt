@@ -165,14 +165,14 @@ public interface CfnThingTypeProps {
      * action.
      */
     override fun deprecateThingType(deprecateThingType: IResolvable) {
-      cdkBuilder.deprecateThingType(deprecateThingType.let(IResolvable::unwrap))
+      cdkBuilder.deprecateThingType(deprecateThingType.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param tags Metadata which can be used to manage the thing type.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -194,7 +194,7 @@ public interface CfnThingTypeProps {
      * creation of the `ThingType` .
      */
     override fun thingTypeProperties(thingTypeProperties: IResolvable) {
-      cdkBuilder.thingTypeProperties(thingTypeProperties.let(IResolvable::unwrap))
+      cdkBuilder.thingTypeProperties(thingTypeProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -205,7 +205,7 @@ public interface CfnThingTypeProps {
      */
     override
         fun thingTypeProperties(thingTypeProperties: CfnThingType.ThingTypePropertiesProperty) {
-      cdkBuilder.thingTypeProperties(thingTypeProperties.let(CfnThingType.ThingTypePropertiesProperty::unwrap))
+      cdkBuilder.thingTypeProperties(thingTypeProperties.let(CfnThingType.ThingTypePropertiesProperty.Companion::unwrap))
     }
 
     /**

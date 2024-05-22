@@ -359,7 +359,7 @@ public interface CfnInferenceExperimentProps {
      * request and response data.
      */
     override fun dataStorageConfig(dataStorageConfig: IResolvable) {
-      cdkBuilder.dataStorageConfig(dataStorageConfig.let(IResolvable::unwrap))
+      cdkBuilder.dataStorageConfig(dataStorageConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -368,7 +368,7 @@ public interface CfnInferenceExperimentProps {
      */
     override
         fun dataStorageConfig(dataStorageConfig: CfnInferenceExperiment.DataStorageConfigProperty) {
-      cdkBuilder.dataStorageConfig(dataStorageConfig.let(CfnInferenceExperiment.DataStorageConfigProperty::unwrap))
+      cdkBuilder.dataStorageConfig(dataStorageConfig.let(CfnInferenceExperiment.DataStorageConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -421,7 +421,7 @@ public interface CfnInferenceExperimentProps {
      * variant.
      */
     override fun modelVariants(modelVariants: IResolvable) {
-      cdkBuilder.modelVariants(modelVariants.let(IResolvable::unwrap))
+      cdkBuilder.modelVariants(modelVariants.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -464,7 +464,7 @@ public interface CfnInferenceExperimentProps {
      * The maximum duration that you can set for an inference experiment is 30 days.
      */
     override fun schedule(schedule: IResolvable) {
-      cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
+      cdkBuilder.schedule(schedule.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -472,7 +472,7 @@ public interface CfnInferenceExperimentProps {
      * The maximum duration that you can set for an inference experiment is 30 days.
      */
     override fun schedule(schedule: CfnInferenceExperiment.InferenceExperimentScheduleProperty) {
-      cdkBuilder.schedule(schedule.let(CfnInferenceExperiment.InferenceExperimentScheduleProperty::unwrap))
+      cdkBuilder.schedule(schedule.let(CfnInferenceExperiment.InferenceExperimentScheduleProperty.Companion::unwrap))
     }
 
     /**
@@ -493,7 +493,7 @@ public interface CfnInferenceExperimentProps {
      * replicates.
      */
     override fun shadowModeConfig(shadowModeConfig: IResolvable) {
-      cdkBuilder.shadowModeConfig(shadowModeConfig.let(IResolvable::unwrap))
+      cdkBuilder.shadowModeConfig(shadowModeConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -505,7 +505,7 @@ public interface CfnInferenceExperimentProps {
      */
     override
         fun shadowModeConfig(shadowModeConfig: CfnInferenceExperiment.ShadowModeConfigProperty) {
-      cdkBuilder.shadowModeConfig(shadowModeConfig.let(CfnInferenceExperiment.ShadowModeConfigProperty::unwrap))
+      cdkBuilder.shadowModeConfig(shadowModeConfig.let(CfnInferenceExperiment.ShadowModeConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -535,7 +535,7 @@ public interface CfnInferenceExperimentProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -43,8 +43,8 @@ public open class CustomPolicy(
     id: String,
     props: CustomPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.config.CustomPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CustomPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.config.CustomPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CustomPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -90,7 +90,8 @@ public open class CustomPolicy(
    * @param options
    */
   public override fun onComplianceChange(id: String, options: OnEventOptions): Rule =
-      unwrap(this).onComplianceChange(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      unwrap(this).onComplianceChange(id,
+      options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines an EventBridge event rule which triggers for rule compliance events.
@@ -124,7 +125,7 @@ public open class CustomPolicy(
    * @param options
    */
   public override fun onEvent(id: String, options: OnEventOptions): Rule = unwrap(this).onEvent(id,
-      options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines an EventBridge event rule which triggers for rule events.
@@ -156,7 +157,8 @@ public open class CustomPolicy(
    * @param options
    */
   public override fun onReEvaluationStatus(id: String, options: OnEventOptions): Rule =
-      unwrap(this).onReEvaluationStatus(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      unwrap(this).onReEvaluationStatus(id,
+      options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines an EventBridge event rule which triggers for rule re-evaluation status events.
@@ -301,7 +303,7 @@ public open class CustomPolicy(
      * evaluations. 
      */
     override fun maximumExecutionFrequency(maximumExecutionFrequency: MaximumExecutionFrequency) {
-      cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency.let(MaximumExecutionFrequency::unwrap))
+      cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency.let(MaximumExecutionFrequency.Companion::unwrap))
     }
 
     /**
@@ -323,7 +325,7 @@ public open class CustomPolicy(
      * @param ruleScope Defines which resources trigger an evaluation for an AWS Config rule. 
      */
     override fun ruleScope(ruleScope: RuleScope) {
-      cdkBuilder.ruleScope(ruleScope.let(RuleScope::unwrap))
+      cdkBuilder.ruleScope(ruleScope.let(RuleScope.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.config.CustomPolicy = cdkBuilder.build()
@@ -335,7 +337,7 @@ public open class CustomPolicy(
       id: String,
       configRuleName: String,
     ): IRule =
-        software.amazon.awscdk.services.config.CustomPolicy.fromConfigRuleName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.config.CustomPolicy.fromConfigRuleName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, configRuleName).let(IRule::wrap)
 
     public operator fun invoke(

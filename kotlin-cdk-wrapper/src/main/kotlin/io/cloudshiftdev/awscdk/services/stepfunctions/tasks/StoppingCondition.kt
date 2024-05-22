@@ -76,7 +76,7 @@ public interface StoppingCondition {
      * job can run.
      */
     override fun maxRuntime(maxRuntime: Duration) {
-      cdkBuilder.maxRuntime(maxRuntime.let(Duration::unwrap))
+      cdkBuilder.maxRuntime(maxRuntime.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.StoppingCondition =

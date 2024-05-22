@@ -25,7 +25,7 @@ public open class SnsAction(
   cdkObject: software.amazon.awscdk.services.cloudwatch.actions.SnsAction,
 ) : CdkObject(cdkObject), IAlarmAction {
   public constructor(topic: ITopic) :
-      this(software.amazon.awscdk.services.cloudwatch.actions.SnsAction(topic.let(ITopic::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.actions.SnsAction(topic.let(ITopic.Companion::unwrap))
   )
 
   /**
@@ -35,8 +35,8 @@ public open class SnsAction(
    * @param _alarm 
    */
   public override fun bind(scope: Construct, alarm: IAlarm): AlarmActionConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap),
-      alarm.let(IAlarm::unwrap)).let(AlarmActionConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      alarm.let(IAlarm.Companion::unwrap)).let(AlarmActionConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.actions.SnsAction):

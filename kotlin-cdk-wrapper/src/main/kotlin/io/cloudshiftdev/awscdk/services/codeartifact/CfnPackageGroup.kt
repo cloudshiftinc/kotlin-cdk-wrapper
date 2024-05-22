@@ -76,8 +76,8 @@ public open class CfnPackageGroup(
     id: String,
     props: CfnPackageGroupProps,
   ) :
-      this(software.amazon.awscdk.services.codeartifact.CfnPackageGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPackageGroupProps::unwrap))
+      this(software.amazon.awscdk.services.codeartifact.CfnPackageGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPackageGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -153,7 +153,7 @@ public open class CfnPackageGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -165,14 +165,14 @@ public open class CfnPackageGroup(
    * Details about the package origin configuration of a package group.
    */
   public open fun originConfiguration(`value`: IResolvable) {
-    unwrap(this).setOriginConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOriginConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Details about the package origin configuration of a package group.
    */
   public open fun originConfiguration(`value`: OriginConfigurationProperty) {
-    unwrap(this).setOriginConfiguration(`value`.let(OriginConfigurationProperty::unwrap))
+    unwrap(this).setOriginConfiguration(`value`.let(OriginConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -204,7 +204,7 @@ public open class CfnPackageGroup(
    * A list of tags to be applied to the package group.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -365,7 +365,7 @@ public open class CfnPackageGroup(
      * 
      */
     override fun originConfiguration(originConfiguration: IResolvable) {
-      cdkBuilder.originConfiguration(originConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.originConfiguration(originConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -376,7 +376,7 @@ public open class CfnPackageGroup(
      * 
      */
     override fun originConfiguration(originConfiguration: OriginConfigurationProperty) {
-      cdkBuilder.originConfiguration(originConfiguration.let(OriginConfigurationProperty::unwrap))
+      cdkBuilder.originConfiguration(originConfiguration.let(OriginConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -411,7 +411,7 @@ public open class CfnPackageGroup(
      * @param tags A list of tags to be applied to the package group. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -525,7 +525,7 @@ public open class CfnPackageGroup(
        * can enter repositories. 
        */
       override fun restrictions(restrictions: IResolvable) {
-        cdkBuilder.restrictions(restrictions.let(IResolvable::unwrap))
+        cdkBuilder.restrictions(restrictions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -533,7 +533,7 @@ public open class CfnPackageGroup(
        * can enter repositories. 
        */
       override fun restrictions(restrictions: RestrictionsProperty) {
-        cdkBuilder.restrictions(restrictions.let(RestrictionsProperty::unwrap))
+        cdkBuilder.restrictions(restrictions.let(RestrictionsProperty.Companion::unwrap))
       }
 
       /**
@@ -854,7 +854,7 @@ public open class CfnPackageGroup(
        * repositories.
        */
       override fun externalUpstream(externalUpstream: IResolvable) {
-        cdkBuilder.externalUpstream(externalUpstream.let(IResolvable::unwrap))
+        cdkBuilder.externalUpstream(externalUpstream.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -862,7 +862,7 @@ public open class CfnPackageGroup(
        * repositories.
        */
       override fun externalUpstream(externalUpstream: RestrictionTypeProperty) {
-        cdkBuilder.externalUpstream(externalUpstream.let(RestrictionTypeProperty::unwrap))
+        cdkBuilder.externalUpstream(externalUpstream.let(RestrictionTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -879,7 +879,7 @@ public open class CfnPackageGroup(
        * repositories.
        */
       override fun internalUpstream(internalUpstream: IResolvable) {
-        cdkBuilder.internalUpstream(internalUpstream.let(IResolvable::unwrap))
+        cdkBuilder.internalUpstream(internalUpstream.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -887,7 +887,7 @@ public open class CfnPackageGroup(
        * repositories.
        */
       override fun internalUpstream(internalUpstream: RestrictionTypeProperty) {
-        cdkBuilder.internalUpstream(internalUpstream.let(RestrictionTypeProperty::unwrap))
+        cdkBuilder.internalUpstream(internalUpstream.let(RestrictionTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -903,14 +903,14 @@ public open class CfnPackageGroup(
        * @param publish The package group origin restriction setting for publishing packages.
        */
       override fun publish(publish: IResolvable) {
-        cdkBuilder.publish(publish.let(IResolvable::unwrap))
+        cdkBuilder.publish(publish.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param publish The package group origin restriction setting for publishing packages.
        */
       override fun publish(publish: RestrictionTypeProperty) {
-        cdkBuilder.publish(publish.let(RestrictionTypeProperty::unwrap))
+        cdkBuilder.publish(publish.let(RestrictionTypeProperty.Companion::unwrap))
       }
 
       /**

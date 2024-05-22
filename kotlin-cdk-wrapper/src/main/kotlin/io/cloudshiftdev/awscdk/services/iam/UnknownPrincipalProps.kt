@@ -49,7 +49,7 @@ public interface UnknownPrincipalProps {
      * @param resource The resource the role proxy is for. 
      */
     override fun resource(resource: IConstruct) {
-      cdkBuilder.resource(resource.let(IConstruct::unwrap))
+      cdkBuilder.resource(resource.let(IConstruct.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.iam.UnknownPrincipalProps =

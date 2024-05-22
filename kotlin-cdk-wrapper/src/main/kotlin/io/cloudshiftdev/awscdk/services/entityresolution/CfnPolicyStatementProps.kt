@@ -59,6 +59,12 @@ public interface CfnPolicyStatementProps {
    * Determines whether the permissions specified in the policy are to be allowed ( `Allow` ) or
    * denied ( `Deny` ).
    *
+   *
+   * If you set the value of the `effect` parameter to `Deny` for the `AddPolicyStatement`
+   * operation, you must also set the value of the `effect` parameter in the `policy` to `Deny` for the
+   * `PutPolicy` operation.
+   *
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-policystatement.html#cfn-entityresolution-policystatement-effect)
    */
   public fun effect(): String? = unwrap(this).getEffect()
@@ -108,6 +114,10 @@ public interface CfnPolicyStatementProps {
     /**
      * @param effect Determines whether the permissions specified in the policy are to be allowed (
      * `Allow` ) or denied ( `Deny` ).
+     *
+     * If you set the value of the `effect` parameter to `Deny` for the `AddPolicyStatement`
+     * operation, you must also set the value of the `effect` parameter in the `policy` to `Deny` for
+     * the `PutPolicy` operation.
      */
     public fun effect(effect: String)
 
@@ -165,6 +175,10 @@ public interface CfnPolicyStatementProps {
     /**
      * @param effect Determines whether the permissions specified in the policy are to be allowed (
      * `Allow` ) or denied ( `Deny` ).
+     *
+     * If you set the value of the `effect` parameter to `Deny` for the `AddPolicyStatement`
+     * operation, you must also set the value of the `effect` parameter in the `policy` to `Deny` for
+     * the `PutPolicy` operation.
      */
     override fun effect(effect: String) {
       cdkBuilder.effect(effect)
@@ -223,6 +237,12 @@ public interface CfnPolicyStatementProps {
     /**
      * Determines whether the permissions specified in the policy are to be allowed ( `Allow` ) or
      * denied ( `Deny` ).
+     *
+     *
+     * If you set the value of the `effect` parameter to `Deny` for the `AddPolicyStatement`
+     * operation, you must also set the value of the `effect` parameter in the `policy` to `Deny` for
+     * the `PutPolicy` operation.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-policystatement.html#cfn-entityresolution-policystatement-effect)
      */

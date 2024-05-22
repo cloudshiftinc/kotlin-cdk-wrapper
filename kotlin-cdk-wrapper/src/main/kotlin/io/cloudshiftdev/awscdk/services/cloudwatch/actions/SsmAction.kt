@@ -24,12 +24,12 @@ public open class SsmAction(
   cdkObject: software.amazon.awscdk.services.cloudwatch.actions.SsmAction,
 ) : CdkObject(cdkObject), IAlarmAction {
   public constructor(severity: OpsItemSeverity) :
-      this(software.amazon.awscdk.services.cloudwatch.actions.SsmAction(severity.let(OpsItemSeverity::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.actions.SsmAction(severity.let(OpsItemSeverity.Companion::unwrap))
   )
 
   public constructor(severity: OpsItemSeverity, category: OpsItemCategory) :
-      this(software.amazon.awscdk.services.cloudwatch.actions.SsmAction(severity.let(OpsItemSeverity::unwrap),
-      category.let(OpsItemCategory::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.actions.SsmAction(severity.let(OpsItemSeverity.Companion::unwrap),
+      category.let(OpsItemCategory.Companion::unwrap))
   )
 
   /**
@@ -39,8 +39,8 @@ public open class SsmAction(
    * @param _alarm 
    */
   public override fun bind(scope: Construct, alarm: IAlarm): AlarmActionConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap),
-      alarm.let(IAlarm::unwrap)).let(AlarmActionConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      alarm.let(IAlarm.Companion::unwrap)).let(AlarmActionConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudwatch.actions.SsmAction):

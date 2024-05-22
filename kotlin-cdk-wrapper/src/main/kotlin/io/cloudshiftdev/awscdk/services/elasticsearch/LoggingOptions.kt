@@ -216,7 +216,7 @@ public interface LoggingOptions {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun appLogGroup(appLogGroup: ILogGroup) {
-      cdkBuilder.appLogGroup(appLogGroup.let(ILogGroup::unwrap))
+      cdkBuilder.appLogGroup(appLogGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -235,7 +235,7 @@ public interface LoggingOptions {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun auditLogGroup(auditLogGroup: ILogGroup) {
-      cdkBuilder.auditLogGroup(auditLogGroup.let(ILogGroup::unwrap))
+      cdkBuilder.auditLogGroup(auditLogGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -254,7 +254,7 @@ public interface LoggingOptions {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun slowIndexLogGroup(slowIndexLogGroup: ILogGroup) {
-      cdkBuilder.slowIndexLogGroup(slowIndexLogGroup.let(ILogGroup::unwrap))
+      cdkBuilder.slowIndexLogGroup(slowIndexLogGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -273,7 +273,7 @@ public interface LoggingOptions {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun slowSearchLogGroup(slowSearchLogGroup: ILogGroup) {
-      cdkBuilder.slowSearchLogGroup(slowSearchLogGroup.let(ILogGroup::unwrap))
+      cdkBuilder.slowSearchLogGroup(slowSearchLogGroup.let(ILogGroup.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.elasticsearch.LoggingOptions =

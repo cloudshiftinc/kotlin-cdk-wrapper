@@ -130,7 +130,7 @@ public interface CfnServiceNetworkProps {
      * @param tags The tags for the service network.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

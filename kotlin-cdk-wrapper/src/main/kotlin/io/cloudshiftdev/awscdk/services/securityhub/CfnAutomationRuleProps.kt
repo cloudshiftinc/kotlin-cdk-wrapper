@@ -420,7 +420,7 @@ public interface CfnAutomationRuleProps {
      * conditions specified in `Criteria` .
      */
     override fun actions(actions: IResolvable) {
-      cdkBuilder.actions(actions.let(IResolvable::unwrap))
+      cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -445,7 +445,7 @@ public interface CfnAutomationRuleProps {
      * Security Hub applies the rule action to the finding.
      */
     override fun criteria(criteria: IResolvable) {
-      cdkBuilder.criteria(criteria.let(IResolvable::unwrap))
+      cdkBuilder.criteria(criteria.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -456,7 +456,7 @@ public interface CfnAutomationRuleProps {
      * Security Hub applies the rule action to the finding.
      */
     override fun criteria(criteria: CfnAutomationRule.AutomationRulesFindingFiltersProperty) {
-      cdkBuilder.criteria(criteria.let(CfnAutomationRule.AutomationRulesFindingFiltersProperty::unwrap))
+      cdkBuilder.criteria(criteria.let(CfnAutomationRule.AutomationRulesFindingFiltersProperty.Companion::unwrap))
     }
 
     /**
@@ -500,7 +500,7 @@ public interface CfnAutomationRuleProps {
      * isn't terminal.
      */
     override fun isTerminal(isTerminal: IResolvable) {
-      cdkBuilder.isTerminal(isTerminal.let(IResolvable::unwrap))
+      cdkBuilder.isTerminal(isTerminal.let(IResolvable.Companion::unwrap))
     }
 
     /**

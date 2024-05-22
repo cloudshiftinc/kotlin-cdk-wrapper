@@ -108,7 +108,7 @@ public interface UtilizationScalingOptions : BaseTargetTrackingProps {
      * activity can start.
      */
     override fun scaleInCooldown(scaleInCooldown: Duration) {
-      cdkBuilder.scaleInCooldown(scaleInCooldown.let(Duration::unwrap))
+      cdkBuilder.scaleInCooldown(scaleInCooldown.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -116,7 +116,7 @@ public interface UtilizationScalingOptions : BaseTargetTrackingProps {
      * activity can start.
      */
     override fun scaleOutCooldown(scaleOutCooldown: Duration) {
-      cdkBuilder.scaleOutCooldown(scaleOutCooldown.let(Duration::unwrap))
+      cdkBuilder.scaleOutCooldown(scaleOutCooldown.let(Duration.Companion::unwrap))
     }
 
     /**

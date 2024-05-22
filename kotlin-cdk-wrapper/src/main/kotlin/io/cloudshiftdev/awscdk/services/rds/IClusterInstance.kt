@@ -55,9 +55,9 @@ public interface IClusterInstance {
       scope: Construct,
       cluster: IDatabaseCluster,
       options: ClusterInstanceBindOptions,
-    ): IAuroraClusterInstance = unwrap(this).bind(scope.let(Construct::unwrap),
-        cluster.let(IDatabaseCluster::unwrap),
-        options.let(ClusterInstanceBindOptions::unwrap)).let(IAuroraClusterInstance::wrap)
+    ): IAuroraClusterInstance = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+        cluster.let(IDatabaseCluster.Companion::unwrap),
+        options.let(ClusterInstanceBindOptions.Companion::unwrap)).let(IAuroraClusterInstance::wrap)
 
     /**
      * Create the database instance within the provided cluster.

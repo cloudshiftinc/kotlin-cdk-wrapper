@@ -37,7 +37,7 @@ public open class Dashboard(
   cdkObject: software.amazon.awscdk.services.cloudwatch.Dashboard,
 ) : Resource(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.cloudwatch.Dashboard(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.cloudwatch.Dashboard(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -46,8 +46,8 @@ public open class Dashboard(
     id: String,
     props: DashboardProps,
   ) :
-      this(software.amazon.awscdk.services.cloudwatch.Dashboard(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DashboardProps::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.Dashboard(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DashboardProps.Companion::unwrap))
   )
 
   public constructor(
@@ -64,7 +64,7 @@ public open class Dashboard(
    * @param variable 
    */
   public open fun addVariable(variable: IVariable) {
-    unwrap(this).addVariable(variable.let(IVariable::unwrap))
+    unwrap(this).addVariable(variable.let(IVariable.Companion::unwrap))
   }
 
   /**
@@ -245,7 +245,7 @@ public open class Dashboard(
      * the relative time(eg. cdk.Duration.days(7)). 
      */
     override fun defaultInterval(defaultInterval: Duration) {
-      cdkBuilder.defaultInterval(defaultInterval.let(Duration::unwrap))
+      cdkBuilder.defaultInterval(defaultInterval.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -276,7 +276,7 @@ public open class Dashboard(
      * loads. 
      */
     override fun periodOverride(periodOverride: PeriodOverride) {
-      cdkBuilder.periodOverride(periodOverride.let(PeriodOverride::unwrap))
+      cdkBuilder.periodOverride(periodOverride.let(PeriodOverride.Companion::unwrap))
     }
 
     /**
@@ -311,7 +311,7 @@ public open class Dashboard(
      * @param variables A list of dashboard variables. 
      */
     override fun variables(variables: List<IVariable>) {
-      cdkBuilder.variables(variables.map(IVariable::unwrap))
+      cdkBuilder.variables(variables.map(IVariable.Companion::unwrap))
     }
 
     /**
@@ -334,7 +334,7 @@ public open class Dashboard(
      * @param widgets Initial set of widgets on the dashboard. 
      */
     override fun widgets(widgets: List<List<IWidget>>) {
-      cdkBuilder.widgets(widgets.map{ it.map(IWidget::unwrap) })
+      cdkBuilder.widgets(widgets.map{ it.map(IWidget.Companion::unwrap) })
     }
 
     /**

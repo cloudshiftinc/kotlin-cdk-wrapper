@@ -55,7 +55,7 @@ public open class FileSystem(
 
   public companion object {
     public fun fromEfsAccessPoint(ap: IAccessPoint, mountPath: String): FileSystem =
-        software.amazon.awscdk.services.lambda.FileSystem.fromEfsAccessPoint(ap.let(IAccessPoint::unwrap),
+        software.amazon.awscdk.services.lambda.FileSystem.fromEfsAccessPoint(ap.let(IAccessPoint.Companion::unwrap),
         mountPath).let(FileSystem::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.FileSystem): FileSystem =

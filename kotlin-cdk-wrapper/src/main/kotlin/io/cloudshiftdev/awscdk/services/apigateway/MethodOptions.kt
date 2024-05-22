@@ -333,7 +333,7 @@ public interface MethodOptions {
      * will result in an error.
      */
     override fun authorizationType(authorizationType: AuthorizationType) {
-      cdkBuilder.authorizationType(authorizationType.let(AuthorizationType::unwrap))
+      cdkBuilder.authorizationType(authorizationType.let(AuthorizationType.Companion::unwrap))
     }
 
     /**
@@ -342,14 +342,14 @@ public interface MethodOptions {
      * If specified, the value of `authorizationType` must be set to `Custom`
      */
     override fun authorizer(authorizer: IAuthorizer) {
-      cdkBuilder.authorizer(authorizer.let(IAuthorizer::unwrap))
+      cdkBuilder.authorizer(authorizer.let(IAuthorizer.Companion::unwrap))
     }
 
     /**
      * @param methodResponses The responses that can be sent to the client who calls the method.
      */
     override fun methodResponses(methodResponses: List<MethodResponse>) {
-      cdkBuilder.methodResponses(methodResponses.map(MethodResponse::unwrap))
+      cdkBuilder.methodResponses(methodResponses.map(MethodResponse.Companion::unwrap))
     }
 
     /**
@@ -399,7 +399,7 @@ public interface MethodOptions {
      * the request before it reaches integration like Lambda Proxy Integration.
      */
     override fun requestValidator(requestValidator: IRequestValidator) {
-      cdkBuilder.requestValidator(requestValidator.let(IRequestValidator::unwrap))
+      cdkBuilder.requestValidator(requestValidator.let(IRequestValidator.Companion::unwrap))
     }
 
     /**
@@ -409,7 +409,7 @@ public interface MethodOptions {
      * the request before it reaches integration like Lambda Proxy Integration.
      */
     override fun requestValidatorOptions(requestValidatorOptions: RequestValidatorOptions) {
-      cdkBuilder.requestValidatorOptions(requestValidatorOptions.let(RequestValidatorOptions::unwrap))
+      cdkBuilder.requestValidatorOptions(requestValidatorOptions.let(RequestValidatorOptions.Companion::unwrap))
     }
 
     /**

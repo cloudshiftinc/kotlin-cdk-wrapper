@@ -45,8 +45,8 @@ public open class CfnChannelGroup(
     id: String,
     props: CfnChannelGroupProps,
   ) :
-      this(software.amazon.awscdk.services.mediapackagev2.CfnChannelGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnChannelGroupProps::unwrap))
+      this(software.amazon.awscdk.services.mediapackagev2.CfnChannelGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnChannelGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -112,7 +112,7 @@ public open class CfnChannelGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -124,7 +124,7 @@ public open class CfnChannelGroup(
    * The tags associated with the channel group.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -204,7 +204,7 @@ public open class CfnChannelGroup(
      * @param tags The tags associated with the channel group. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -102,7 +102,7 @@ public interface BasePathMappingOptions {
      * @param stage The Deployment stage of API [disable-awslint:ref-via-interface].
      */
     override fun stage(stage: Stage) {
-      cdkBuilder.stage(stage.let(Stage::unwrap))
+      cdkBuilder.stage(stage.let(Stage.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.BasePathMappingOptions =

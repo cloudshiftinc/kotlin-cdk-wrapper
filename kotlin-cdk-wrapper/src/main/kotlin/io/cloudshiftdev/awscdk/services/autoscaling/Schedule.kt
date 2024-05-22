@@ -39,7 +39,7 @@ public abstract class Schedule(
 
   public companion object {
     public fun cron(options: CronOptions): Schedule =
-        software.amazon.awscdk.services.autoscaling.Schedule.cron(options.let(CronOptions::unwrap)).let(Schedule::wrap)
+        software.amazon.awscdk.services.autoscaling.Schedule.cron(options.let(CronOptions.Companion::unwrap)).let(Schedule::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("af064fd9e0fad094eabe25ea55682bfc02ac054c7d070975a439b1b83317aeba")

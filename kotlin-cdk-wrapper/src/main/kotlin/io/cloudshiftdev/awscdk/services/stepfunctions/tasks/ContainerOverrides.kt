@@ -188,7 +188,7 @@ public interface ContainerOverrides {
      * This parameter is not valid for single-node container jobs.
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**

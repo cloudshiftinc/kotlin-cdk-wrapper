@@ -119,7 +119,7 @@ public interface CfnConnectorProps {
      * @param connectorProvisioningConfig The configuration required for registering the connector. 
      */
     override fun connectorProvisioningConfig(connectorProvisioningConfig: IResolvable) {
-      cdkBuilder.connectorProvisioningConfig(connectorProvisioningConfig.let(IResolvable::unwrap))
+      cdkBuilder.connectorProvisioningConfig(connectorProvisioningConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -127,7 +127,7 @@ public interface CfnConnectorProps {
      */
     override
         fun connectorProvisioningConfig(connectorProvisioningConfig: CfnConnector.ConnectorProvisioningConfigProperty) {
-      cdkBuilder.connectorProvisioningConfig(connectorProvisioningConfig.let(CfnConnector.ConnectorProvisioningConfigProperty::unwrap))
+      cdkBuilder.connectorProvisioningConfig(connectorProvisioningConfig.let(CfnConnector.ConnectorProvisioningConfigProperty.Companion::unwrap))
     }
 
     /**

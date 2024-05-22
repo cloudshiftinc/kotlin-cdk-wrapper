@@ -38,7 +38,7 @@ public open class LambdaInvokeAction(
   cdkObject: software.amazon.awscdk.services.codepipeline.actions.LambdaInvokeAction,
 ) : Action(cdkObject) {
   public constructor(props: LambdaInvokeActionProps) :
-      this(software.amazon.awscdk.services.codepipeline.actions.LambdaInvokeAction(props.let(LambdaInvokeActionProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.actions.LambdaInvokeAction(props.let(LambdaInvokeActionProps.Companion::unwrap))
   )
 
   public constructor(props: LambdaInvokeActionProps.Builder.() -> Unit) :
@@ -233,7 +233,7 @@ public open class LambdaInvokeAction(
      * @param inputs The optional input Artifacts of the Action. 
      */
     override fun inputs(inputs: List<Artifact>) {
-      cdkBuilder.inputs(inputs.map(Artifact::unwrap))
+      cdkBuilder.inputs(inputs.map(Artifact.Companion::unwrap))
     }
 
     /**
@@ -256,7 +256,7 @@ public open class LambdaInvokeAction(
      * @param lambda The lambda function to invoke. 
      */
     override fun lambda(lambda: IFunction) {
-      cdkBuilder.lambda(lambda.let(IFunction::unwrap))
+      cdkBuilder.lambda(lambda.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -273,7 +273,7 @@ public open class LambdaInvokeAction(
      * @param outputs The optional names of the output Artifacts of the Action. 
      */
     override fun outputs(outputs: List<Artifact>) {
-      cdkBuilder.outputs(outputs.map(Artifact::unwrap))
+      cdkBuilder.outputs(outputs.map(Artifact.Companion::unwrap))
     }
 
     /**
@@ -305,7 +305,7 @@ public open class LambdaInvokeAction(
      * @param role The Role in which context's this Action will be executing in. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**

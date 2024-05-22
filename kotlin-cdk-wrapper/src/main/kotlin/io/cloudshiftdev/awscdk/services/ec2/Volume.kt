@@ -42,8 +42,8 @@ public open class Volume(
     id: String,
     props: VolumeProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.Volume(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(VolumeProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.Volume(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(VolumeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -75,7 +75,7 @@ public open class Volume(
    * @param instances
    */
   public override fun grantAttachVolume(grantee: IGrantable): Grant =
-      unwrap(this).grantAttachVolume(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantAttachVolume(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grants permission to attach this Volume to an instance.
@@ -89,8 +89,8 @@ public open class Volume(
    * @param instances
    */
   public override fun grantAttachVolume(grantee: IGrantable, instances: List<IInstance>): Grant =
-      unwrap(this).grantAttachVolume(grantee.let(IGrantable::unwrap),
-      instances.map(IInstance::unwrap)).let(Grant::wrap)
+      unwrap(this).grantAttachVolume(grantee.let(IGrantable.Companion::unwrap),
+      instances.map(IInstance.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grants permission to attach the Volume by a ResourceTag condition.
@@ -110,8 +110,8 @@ public open class Volume(
    */
   public override fun grantAttachVolumeByResourceTag(grantee: IGrantable,
       constructs: List<CloudshiftdevConstructsConstruct>): Grant =
-      unwrap(this).grantAttachVolumeByResourceTag(grantee.let(IGrantable::unwrap),
-      constructs.map(CloudshiftdevConstructsConstruct::unwrap)).let(Grant::wrap)
+      unwrap(this).grantAttachVolumeByResourceTag(grantee.let(IGrantable.Companion::unwrap),
+      constructs.map(CloudshiftdevConstructsConstruct.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grants permission to attach the Volume by a ResourceTag condition.
@@ -133,8 +133,9 @@ public open class Volume(
     grantee: IGrantable,
     constructs: List<CloudshiftdevConstructsConstruct>,
     tagKeySuffix: String,
-  ): Grant = unwrap(this).grantAttachVolumeByResourceTag(grantee.let(IGrantable::unwrap),
-      constructs.map(CloudshiftdevConstructsConstruct::unwrap), tagKeySuffix).let(Grant::wrap)
+  ): Grant = unwrap(this).grantAttachVolumeByResourceTag(grantee.let(IGrantable.Companion::unwrap),
+      constructs.map(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      tagKeySuffix).let(Grant::wrap)
 
   /**
    * Grants permission to detach this Volume from an instance CAUTION: Granting an instance
@@ -148,7 +149,7 @@ public open class Volume(
    * @param instances
    */
   public override fun grantDetachVolume(grantee: IGrantable): Grant =
-      unwrap(this).grantDetachVolume(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantDetachVolume(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grants permission to detach this Volume from an instance CAUTION: Granting an instance
@@ -162,8 +163,8 @@ public open class Volume(
    * @param instances
    */
   public override fun grantDetachVolume(grantee: IGrantable, instances: List<IInstance>): Grant =
-      unwrap(this).grantDetachVolume(grantee.let(IGrantable::unwrap),
-      instances.map(IInstance::unwrap)).let(Grant::wrap)
+      unwrap(this).grantDetachVolume(grantee.let(IGrantable.Companion::unwrap),
+      instances.map(IInstance.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grants permission to detach the Volume by a ResourceTag condition.
@@ -177,8 +178,8 @@ public open class Volume(
    */
   public override fun grantDetachVolumeByResourceTag(grantee: IGrantable,
       constructs: List<CloudshiftdevConstructsConstruct>): Grant =
-      unwrap(this).grantDetachVolumeByResourceTag(grantee.let(IGrantable::unwrap),
-      constructs.map(CloudshiftdevConstructsConstruct::unwrap)).let(Grant::wrap)
+      unwrap(this).grantDetachVolumeByResourceTag(grantee.let(IGrantable.Companion::unwrap),
+      constructs.map(CloudshiftdevConstructsConstruct.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grants permission to detach the Volume by a ResourceTag condition.
@@ -194,8 +195,9 @@ public open class Volume(
     grantee: IGrantable,
     constructs: List<CloudshiftdevConstructsConstruct>,
     tagKeySuffix: String,
-  ): Grant = unwrap(this).grantDetachVolumeByResourceTag(grantee.let(IGrantable::unwrap),
-      constructs.map(CloudshiftdevConstructsConstruct::unwrap), tagKeySuffix).let(Grant::wrap)
+  ): Grant = unwrap(this).grantDetachVolumeByResourceTag(grantee.let(IGrantable.Companion::unwrap),
+      constructs.map(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      tagKeySuffix).let(Grant::wrap)
 
   /**
    * The EBS Volume's ID.
@@ -489,7 +491,7 @@ public open class Volume(
      * @param encryptionKey The customer-managed encryption key that is used to encrypt the Volume. 
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -521,7 +523,7 @@ public open class Volume(
      * @param removalPolicy Policy to apply when the volume is removed from the stack. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -538,7 +540,7 @@ public open class Volume(
      * @param size The size of the volume, in GiBs. 
      */
     override fun size(size: Size) {
-      cdkBuilder.size(size.let(Size::unwrap))
+      cdkBuilder.size(size.let(Size.Companion::unwrap))
     }
 
     /**
@@ -588,7 +590,7 @@ public open class Volume(
      * @param volumeType The type of the volume;. 
      */
     override fun volumeType(volumeType: EbsDeviceVolumeType) {
-      cdkBuilder.volumeType(volumeType.let(EbsDeviceVolumeType::unwrap))
+      cdkBuilder.volumeType(volumeType.let(EbsDeviceVolumeType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.Volume = cdkBuilder.build()
@@ -600,8 +602,8 @@ public open class Volume(
       id: String,
       attrs: VolumeAttributes,
     ): IVolume =
-        software.amazon.awscdk.services.ec2.Volume.fromVolumeAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(VolumeAttributes::unwrap)).let(IVolume::wrap)
+        software.amazon.awscdk.services.ec2.Volume.fromVolumeAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(VolumeAttributes.Companion::unwrap)).let(IVolume::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("46294edfafb5f5897a09cfc033d6dc1f7599f18b9a23511cbbf2feae5897f105")

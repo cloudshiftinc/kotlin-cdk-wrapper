@@ -65,14 +65,14 @@ public interface AdotInstrumentationConfig {
      * for your use case: https://aws-otel.github.io/docs/getting-started/lambda. 
      */
     override fun execWrapper(execWrapper: AdotLambdaExecWrapper) {
-      cdkBuilder.execWrapper(execWrapper.let(AdotLambdaExecWrapper::unwrap))
+      cdkBuilder.execWrapper(execWrapper.let(AdotLambdaExecWrapper.Companion::unwrap))
     }
 
     /**
      * @param layerVersion The ADOT Lambda layer. 
      */
     override fun layerVersion(layerVersion: AdotLayerVersion) {
-      cdkBuilder.layerVersion(layerVersion.let(AdotLayerVersion::unwrap))
+      cdkBuilder.layerVersion(layerVersion.let(AdotLayerVersion.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lambda.AdotInstrumentationConfig =

@@ -407,7 +407,7 @@ public interface CodeBuildStepProps : ShellStepProps {
      * @param actionRole Custom execution role to be used for the Code Build Action.
      */
     override fun actionRole(actionRole: IRole) {
-      cdkBuilder.actionRole(actionRole.let(IRole::unwrap))
+      cdkBuilder.actionRole(actionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -439,7 +439,7 @@ public interface CodeBuildStepProps : ShellStepProps {
      * environment.
      */
     override fun buildEnvironment(buildEnvironment: BuildEnvironment) {
-      cdkBuilder.buildEnvironment(buildEnvironment.let(BuildEnvironment::unwrap))
+      cdkBuilder.buildEnvironment(buildEnvironment.let(BuildEnvironment.Companion::unwrap))
     }
 
     /**
@@ -456,7 +456,7 @@ public interface CodeBuildStepProps : ShellStepProps {
      * @param cache Caching strategy to use.
      */
     override fun cache(cache: Cache) {
-      cdkBuilder.cache(cache.let(Cache::unwrap))
+      cdkBuilder.cache(cache.let(Cache.Companion::unwrap))
     }
 
     /**
@@ -496,7 +496,7 @@ public interface CodeBuildStepProps : ShellStepProps {
      * and type of a file system created using Amazon Elastic File System.
      */
     override fun fileSystemLocations(fileSystemLocations: List<IFileSystemLocation>) {
-      cdkBuilder.fileSystemLocations(fileSystemLocations.map(IFileSystemLocation::unwrap))
+      cdkBuilder.fileSystemLocations(fileSystemLocations.map(IFileSystemLocation.Companion::unwrap))
     }
 
     /**
@@ -515,7 +515,7 @@ public interface CodeBuildStepProps : ShellStepProps {
      * to other directories as well.
      */
     override fun input(input: IFileSetProducer) {
-      cdkBuilder.input(input.let(IFileSetProducer::unwrap))
+      cdkBuilder.input(input.let(IFileSetProducer.Companion::unwrap))
     }
 
     /**
@@ -540,7 +540,7 @@ public interface CodeBuildStepProps : ShellStepProps {
      * A CodeBuild project can create logs in Amazon CloudWatch Logs, an S3 bucket, or both.
      */
     override fun logging(logging: LoggingOptions) {
-      cdkBuilder.logging(logging.let(LoggingOptions::unwrap))
+      cdkBuilder.logging(logging.let(LoggingOptions.Companion::unwrap))
     }
 
     /**
@@ -565,7 +565,7 @@ public interface CodeBuildStepProps : ShellStepProps {
      * on disk.
      */
     override fun partialBuildSpec(partialBuildSpec: BuildSpec) {
-      cdkBuilder.partialBuildSpec(partialBuildSpec.let(BuildSpec::unwrap))
+      cdkBuilder.partialBuildSpec(partialBuildSpec.let(BuildSpec.Companion::unwrap))
     }
 
     /**
@@ -588,7 +588,7 @@ public interface CodeBuildStepProps : ShellStepProps {
      * @param role Custom execution role to be used for the CodeBuild project.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -596,7 +596,7 @@ public interface CodeBuildStepProps : ShellStepProps {
      * Can be used to add acces to a CodeArtifact repository etc.
      */
     override fun rolePolicyStatements(rolePolicyStatements: List<PolicyStatement>) {
-      cdkBuilder.rolePolicyStatements(rolePolicyStatements.map(PolicyStatement::unwrap))
+      cdkBuilder.rolePolicyStatements(rolePolicyStatements.map(PolicyStatement.Companion::unwrap))
     }
 
     /**
@@ -614,7 +614,7 @@ public interface CodeBuildStepProps : ShellStepProps {
      * Only used if 'vpc' is supplied.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -632,7 +632,7 @@ public interface CodeBuildStepProps : ShellStepProps {
      * Only used if 'vpc' is supplied.
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -651,14 +651,14 @@ public interface CodeBuildStepProps : ShellStepProps {
      * CodeBuild User Guide.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param vpc The VPC where to execute the SimpleSynth.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.pipelines.CodeBuildStepProps = cdkBuilder.build()

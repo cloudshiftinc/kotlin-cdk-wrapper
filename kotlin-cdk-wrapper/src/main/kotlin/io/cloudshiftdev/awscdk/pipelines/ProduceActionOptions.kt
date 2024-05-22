@@ -277,7 +277,7 @@ public interface ProduceActionOptions {
      * @param artifacts Helper object to translate FileSets to CodePipeline Artifacts. 
      */
     override fun artifacts(artifacts: ArtifactMap) {
-      cdkBuilder.artifacts(artifacts.let(ArtifactMap::unwrap))
+      cdkBuilder.artifacts(artifacts.let(ArtifactMap.Companion::unwrap))
     }
 
     /**
@@ -295,7 +295,7 @@ public interface ProduceActionOptions {
      * inherit.
      */
     override fun codeBuildDefaults(codeBuildDefaults: CodeBuildOptions) {
-      cdkBuilder.codeBuildDefaults(codeBuildDefaults.let(CodeBuildOptions::unwrap))
+      cdkBuilder.codeBuildDefaults(codeBuildDefaults.let(CodeBuildOptions.Companion::unwrap))
     }
 
     /**
@@ -315,14 +315,14 @@ public interface ProduceActionOptions {
      * Artifact passed here.
      */
     override fun fallbackArtifact(fallbackArtifact: Artifact) {
-      cdkBuilder.fallbackArtifact(fallbackArtifact.let(Artifact::unwrap))
+      cdkBuilder.fallbackArtifact(fallbackArtifact.let(Artifact.Companion::unwrap))
     }
 
     /**
      * @param pipeline The pipeline the action is being generated for. 
      */
     override fun pipeline(pipeline: CodePipeline) {
-      cdkBuilder.pipeline(pipeline.let(CodePipeline::unwrap))
+      cdkBuilder.pipeline(pipeline.let(CodePipeline.Companion::unwrap))
     }
 
     /**
@@ -336,7 +336,7 @@ public interface ProduceActionOptions {
      * @param scope Scope in which to create constructs. 
      */
     override fun scope(scope: Construct) {
-      cdkBuilder.scope(scope.let(Construct::unwrap))
+      cdkBuilder.scope(scope.let(Construct.Companion::unwrap))
     }
 
     /**
@@ -348,7 +348,7 @@ public interface ProduceActionOptions {
      * configurations.
      */
     override fun stackOutputsMap(stackOutputsMap: StackOutputsMap) {
-      cdkBuilder.stackOutputsMap(stackOutputsMap.let(StackOutputsMap::unwrap))
+      cdkBuilder.stackOutputsMap(stackOutputsMap.let(StackOutputsMap.Companion::unwrap))
     }
 
     /**

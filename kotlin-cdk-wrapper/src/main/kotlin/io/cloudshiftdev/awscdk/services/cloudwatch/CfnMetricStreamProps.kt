@@ -374,7 +374,7 @@ public interface CfnMetricStreamProps {
      * datapoints that have a timestamp after the time of the update.
      */
     override fun excludeFilters(excludeFilters: IResolvable) {
-      cdkBuilder.excludeFilters(excludeFilters.let(IResolvable::unwrap))
+      cdkBuilder.excludeFilters(excludeFilters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -422,7 +422,7 @@ public interface CfnMetricStreamProps {
      * datapoints that have a timestamp after the time of the update.
      */
     override fun includeFilters(includeFilters: IResolvable) {
-      cdkBuilder.includeFilters(includeFilters.let(IResolvable::unwrap))
+      cdkBuilder.includeFilters(includeFilters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -473,7 +473,7 @@ public interface CfnMetricStreamProps {
      * observability](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Unified-Cross-Account.html)
      */
     override fun includeLinkedAccountsMetrics(includeLinkedAccountsMetrics: IResolvable) {
-      cdkBuilder.includeLinkedAccountsMetrics(includeLinkedAccountsMetrics.let(IResolvable::unwrap))
+      cdkBuilder.includeLinkedAccountsMetrics(includeLinkedAccountsMetrics.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -521,7 +521,7 @@ public interface CfnMetricStreamProps {
      * . If the `OutputFormat` is OpenTelemetry, you can stream percentile statistics.
      */
     override fun statisticsConfigurations(statisticsConfigurations: IResolvable) {
-      cdkBuilder.statisticsConfigurations(statisticsConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.statisticsConfigurations(statisticsConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -564,7 +564,7 @@ public interface CfnMetricStreamProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

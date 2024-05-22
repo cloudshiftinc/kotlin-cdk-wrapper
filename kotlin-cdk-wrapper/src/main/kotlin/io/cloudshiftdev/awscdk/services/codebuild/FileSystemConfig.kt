@@ -63,7 +63,7 @@ public interface FileSystemConfig {
      * @param location File system location wrapper property. 
      */
     override fun location(location: CfnProject.ProjectFileSystemLocationProperty) {
-      cdkBuilder.location(location.let(CfnProject.ProjectFileSystemLocationProperty::unwrap))
+      cdkBuilder.location(location.let(CfnProject.ProjectFileSystemLocationProperty.Companion::unwrap))
     }
 
     /**

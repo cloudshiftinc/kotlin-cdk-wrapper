@@ -160,7 +160,7 @@ public interface NetworkLoadBalancerProps : BaseLoadBalancerProps {
      * @param clientRoutingPolicy The AZ affinity routing policy.
      */
     override fun clientRoutingPolicy(clientRoutingPolicy: ClientRoutingPolicy) {
-      cdkBuilder.clientRoutingPolicy(clientRoutingPolicy.let(ClientRoutingPolicy::unwrap))
+      cdkBuilder.clientRoutingPolicy(clientRoutingPolicy.let(ClientRoutingPolicy.Companion::unwrap))
     }
 
     /**
@@ -208,7 +208,7 @@ public interface NetworkLoadBalancerProps : BaseLoadBalancerProps {
      * you must choose IPv4.
      */
     override fun ipAddressType(ipAddressType: IpAddressType) {
-      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType::unwrap))
+      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType.Companion::unwrap))
     }
 
     /**
@@ -222,7 +222,7 @@ public interface NetworkLoadBalancerProps : BaseLoadBalancerProps {
      * @param securityGroups Security groups to associate with this load balancer.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -235,14 +235,14 @@ public interface NetworkLoadBalancerProps : BaseLoadBalancerProps {
      * @param vpc The VPC network to place the load balancer in. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
      * @param vpcSubnets Which subnets place the load balancer in.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

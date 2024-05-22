@@ -169,7 +169,7 @@ public interface CfnQuickConnectProps {
      * @param quickConnectConfig Contains information about the quick connect. 
      */
     override fun quickConnectConfig(quickConnectConfig: IResolvable) {
-      cdkBuilder.quickConnectConfig(quickConnectConfig.let(IResolvable::unwrap))
+      cdkBuilder.quickConnectConfig(quickConnectConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -177,7 +177,7 @@ public interface CfnQuickConnectProps {
      */
     override
         fun quickConnectConfig(quickConnectConfig: CfnQuickConnect.QuickConnectConfigProperty) {
-      cdkBuilder.quickConnectConfig(quickConnectConfig.let(CfnQuickConnect.QuickConnectConfigProperty::unwrap))
+      cdkBuilder.quickConnectConfig(quickConnectConfig.let(CfnQuickConnect.QuickConnectConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -194,7 +194,7 @@ public interface CfnQuickConnectProps {
      * For example, { "Tags": {"key1":"value1", "key2":"value2"} }.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

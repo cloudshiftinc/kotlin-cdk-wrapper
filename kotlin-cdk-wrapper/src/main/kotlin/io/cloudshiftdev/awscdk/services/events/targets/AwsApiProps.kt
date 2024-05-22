@@ -144,7 +144,7 @@ public interface AwsApiProps : AwsApiInput {
      * resource restriction is needed.
      */
     override fun policyStatement(policyStatement: PolicyStatement) {
-      cdkBuilder.policyStatement(policyStatement.let(PolicyStatement::unwrap))
+      cdkBuilder.policyStatement(policyStatement.let(PolicyStatement.Companion::unwrap))
     }
 
     /**

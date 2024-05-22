@@ -25,7 +25,7 @@ public interface IAccessLogDestination {
      * @param stage 
      */
     override fun bind(stage: IStage): AccessLogDestinationConfig =
-        unwrap(this).bind(stage.let(IStage::unwrap)).let(AccessLogDestinationConfig::wrap)
+        unwrap(this).bind(stage.let(IStage.Companion::unwrap)).let(AccessLogDestinationConfig::wrap)
   }
 
   public companion object {

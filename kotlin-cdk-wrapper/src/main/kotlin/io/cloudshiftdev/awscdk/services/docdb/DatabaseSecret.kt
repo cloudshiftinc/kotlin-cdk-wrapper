@@ -37,8 +37,8 @@ public open class DatabaseSecret(
     id: String,
     props: DatabaseSecretProps,
   ) :
-      this(software.amazon.awscdk.services.docdb.DatabaseSecret(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DatabaseSecretProps::unwrap))
+      this(software.amazon.awscdk.services.docdb.DatabaseSecret(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DatabaseSecretProps.Companion::unwrap))
   )
 
   public constructor(
@@ -112,7 +112,7 @@ public open class DatabaseSecret(
      * @param encryptionKey The KMS key to use to encrypt the secret. 
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -134,7 +134,7 @@ public open class DatabaseSecret(
      * @param masterSecret The master secret which will be used to rotate this secret. 
      */
     override fun masterSecret(masterSecret: ISecret) {
-      cdkBuilder.masterSecret(masterSecret.let(ISecret::unwrap))
+      cdkBuilder.masterSecret(masterSecret.let(ISecret.Companion::unwrap))
     }
 
     /**

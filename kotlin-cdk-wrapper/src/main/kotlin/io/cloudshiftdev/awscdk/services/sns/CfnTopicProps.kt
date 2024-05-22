@@ -457,7 +457,7 @@ public interface CfnTopicProps {
      * `MessageDeduplicationId` parameter for the `Publish` action.
      */
     override fun contentBasedDeduplication(contentBasedDeduplication: IResolvable) {
-      cdkBuilder.contentBasedDeduplication(contentBasedDeduplication.let(IResolvable::unwrap))
+      cdkBuilder.contentBasedDeduplication(contentBasedDeduplication.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -485,7 +485,7 @@ public interface CfnTopicProps {
      * Once configured, log entries are sent to Amazon CloudWatch Logs.
      */
     override fun deliveryStatusLogging(deliveryStatusLogging: IResolvable) {
-      cdkBuilder.deliveryStatusLogging(deliveryStatusLogging.let(IResolvable::unwrap))
+      cdkBuilder.deliveryStatusLogging(deliveryStatusLogging.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -539,7 +539,7 @@ public interface CfnTopicProps {
      * @param fifoTopic Set to true to create a FIFO topic.
      */
     override fun fifoTopic(fifoTopic: IResolvable) {
-      cdkBuilder.fifoTopic(fifoTopic.let(IResolvable::unwrap))
+      cdkBuilder.fifoTopic(fifoTopic.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -577,7 +577,7 @@ public interface CfnTopicProps {
      * `AWS::SNS::Topic` resource is deleted.
      */
     override fun subscription(subscription: IResolvable) {
-      cdkBuilder.subscription(subscription.let(IResolvable::unwrap))
+      cdkBuilder.subscription(subscription.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -607,7 +607,7 @@ public interface CfnTopicProps {
      * `sns:TagResource` permissions.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

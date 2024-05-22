@@ -41,8 +41,8 @@ public open class DynamoDeleteItem(
     id: String,
     props: DynamoDeleteItemProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.DynamoDeleteItem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DynamoDeleteItemProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.DynamoDeleteItem(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DynamoDeleteItemProps.Companion::unwrap))
   )
 
   public constructor(
@@ -359,7 +359,7 @@ public open class DynamoDeleteItem(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -415,7 +415,7 @@ public open class DynamoDeleteItem(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -429,7 +429,7 @@ public open class DynamoDeleteItem(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -464,7 +464,7 @@ public open class DynamoDeleteItem(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -541,7 +541,7 @@ public open class DynamoDeleteItem(
      * consumption that is returned in the response. 
      */
     override fun returnConsumedCapacity(returnConsumedCapacity: DynamoConsumedCapacity) {
-      cdkBuilder.returnConsumedCapacity(returnConsumedCapacity.let(DynamoConsumedCapacity::unwrap))
+      cdkBuilder.returnConsumedCapacity(returnConsumedCapacity.let(DynamoConsumedCapacity.Companion::unwrap))
     }
 
     /**
@@ -557,7 +557,7 @@ public open class DynamoDeleteItem(
      */
     override
         fun returnItemCollectionMetrics(returnItemCollectionMetrics: DynamoItemCollectionMetrics) {
-      cdkBuilder.returnItemCollectionMetrics(returnItemCollectionMetrics.let(DynamoItemCollectionMetrics::unwrap))
+      cdkBuilder.returnItemCollectionMetrics(returnItemCollectionMetrics.let(DynamoItemCollectionMetrics.Companion::unwrap))
     }
 
     /**
@@ -571,7 +571,7 @@ public open class DynamoDeleteItem(
      * before they were deleted. 
      */
     override fun returnValues(returnValues: DynamoReturnValues) {
-      cdkBuilder.returnValues(returnValues.let(DynamoReturnValues::unwrap))
+      cdkBuilder.returnValues(returnValues.let(DynamoReturnValues.Companion::unwrap))
     }
 
     /**
@@ -591,7 +591,7 @@ public open class DynamoDeleteItem(
      * @param table The name of the table containing the requested item. 
      */
     override fun table(table: ITable) {
-      cdkBuilder.table(table.let(ITable::unwrap))
+      cdkBuilder.table(table.let(ITable.Companion::unwrap))
     }
 
     /**
@@ -605,7 +605,7 @@ public open class DynamoDeleteItem(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -618,7 +618,7 @@ public open class DynamoDeleteItem(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.DynamoDeleteItem =

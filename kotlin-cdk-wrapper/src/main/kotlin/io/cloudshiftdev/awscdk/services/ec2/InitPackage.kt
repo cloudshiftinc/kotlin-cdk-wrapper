@@ -63,7 +63,7 @@ public open class InitPackage(
 
     public fun apt(packageName: String, options: NamedPackageOptions): InitPackage =
         software.amazon.awscdk.services.ec2.InitPackage.apt(packageName,
-        options.let(NamedPackageOptions::unwrap)).let(InitPackage::wrap)
+        options.let(NamedPackageOptions.Companion::unwrap)).let(InitPackage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("56c5ef4dac296da113d618dc5a4c58d0f05db718cb912e50eff52e25a849456f")
@@ -75,7 +75,7 @@ public open class InitPackage(
 
     public fun msi(location: String, options: LocationPackageOptions): InitPackage =
         software.amazon.awscdk.services.ec2.InitPackage.msi(location,
-        options.let(LocationPackageOptions::unwrap)).let(InitPackage::wrap)
+        options.let(LocationPackageOptions.Companion::unwrap)).let(InitPackage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b31ac763634b5421ccf514f35d44f1c8490df358012f23e9765e8ca2bf948245")
@@ -87,7 +87,7 @@ public open class InitPackage(
 
     public fun python(packageName: String, options: NamedPackageOptions): InitPackage =
         software.amazon.awscdk.services.ec2.InitPackage.python(packageName,
-        options.let(NamedPackageOptions::unwrap)).let(InitPackage::wrap)
+        options.let(NamedPackageOptions.Companion::unwrap)).let(InitPackage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("840c48621004e25887c34b3d3cf879b2b56dfc1967359f95c3fbb02007c1ca00")
@@ -99,7 +99,7 @@ public open class InitPackage(
 
     public fun rpm(location: String, options: LocationPackageOptions): InitPackage =
         software.amazon.awscdk.services.ec2.InitPackage.rpm(location,
-        options.let(LocationPackageOptions::unwrap)).let(InitPackage::wrap)
+        options.let(LocationPackageOptions.Companion::unwrap)).let(InitPackage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("25b7cdfdafa50d54608d0c0d3078099e5fb70eb1b8b2edf44cc4f9878d770d9e")
@@ -111,7 +111,7 @@ public open class InitPackage(
 
     public fun rubyGem(gemName: String, options: NamedPackageOptions): InitPackage =
         software.amazon.awscdk.services.ec2.InitPackage.rubyGem(gemName,
-        options.let(NamedPackageOptions::unwrap)).let(InitPackage::wrap)
+        options.let(NamedPackageOptions.Companion::unwrap)).let(InitPackage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("98ea1b042a15902fe297b634ac1de33b10b9f3cd77a7d20936c283b18a29567d")
@@ -123,7 +123,7 @@ public open class InitPackage(
 
     public fun yum(packageName: String, options: NamedPackageOptions): InitPackage =
         software.amazon.awscdk.services.ec2.InitPackage.yum(packageName,
-        options.let(NamedPackageOptions::unwrap)).let(InitPackage::wrap)
+        options.let(NamedPackageOptions.Companion::unwrap)).let(InitPackage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("48256aac0dd654897815af44a1e0b5fb724b9ee9a6e898adf016e444af0fd075")

@@ -36,7 +36,7 @@ public open class UnmanagedComputeEnvironment(
   cdkObject: software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment,
 ) : Resource(cdkObject), IUnmanagedComputeEnvironment, IComputeEnvironment {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -45,8 +45,8 @@ public open class UnmanagedComputeEnvironment(
     id: String,
     props: UnmanagedComputeEnvironmentProps,
   ) :
-      this(software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(UnmanagedComputeEnvironmentProps::unwrap))
+      this(software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(UnmanagedComputeEnvironmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -211,7 +211,7 @@ public open class UnmanagedComputeEnvironment(
      * such as provision instances to run your jobs. 
      */
     override fun serviceRole(serviceRole: IRole) {
-      cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
+      cdkBuilder.serviceRole(serviceRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -240,7 +240,7 @@ public open class UnmanagedComputeEnvironment(
       id: String,
       unmanagedComputeEnvironmentArn: String,
     ): IUnmanagedComputeEnvironment =
-        software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment.fromUnmanagedComputeEnvironmentArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.batch.UnmanagedComputeEnvironment.fromUnmanagedComputeEnvironmentArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, unmanagedComputeEnvironmentArn).let(IUnmanagedComputeEnvironment::wrap)
 
     public operator fun invoke(

@@ -147,14 +147,14 @@ public interface CfnApplicationProps {
      * @param apiGatewayProxy The endpoint URL of the Amazon API Gateway proxy.
      */
     override fun apiGatewayProxy(apiGatewayProxy: IResolvable) {
-      cdkBuilder.apiGatewayProxy(apiGatewayProxy.let(IResolvable::unwrap))
+      cdkBuilder.apiGatewayProxy(apiGatewayProxy.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param apiGatewayProxy The endpoint URL of the Amazon API Gateway proxy.
      */
     override fun apiGatewayProxy(apiGatewayProxy: CfnApplication.ApiGatewayProxyInputProperty) {
-      cdkBuilder.apiGatewayProxy(apiGatewayProxy.let(CfnApplication.ApiGatewayProxyInputProperty::unwrap))
+      cdkBuilder.apiGatewayProxy(apiGatewayProxy.let(CfnApplication.ApiGatewayProxyInputProperty.Companion::unwrap))
     }
 
     /**
@@ -191,7 +191,7 @@ public interface CfnApplicationProps {
      * @param tags The tags assigned to the application.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

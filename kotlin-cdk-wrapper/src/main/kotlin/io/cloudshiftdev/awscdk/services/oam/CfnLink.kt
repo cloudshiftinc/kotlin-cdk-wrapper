@@ -70,8 +70,8 @@ public open class CfnLink(
     id: String,
     props: CfnLinkProps,
   ) :
-      this(software.amazon.awscdk.services.oam.CfnLink(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLinkProps::unwrap))
+      this(software.amazon.awscdk.services.oam.CfnLink(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLinkProps.Companion::unwrap))
   )
 
   public constructor(
@@ -102,7 +102,7 @@ public open class CfnLink(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -120,26 +120,30 @@ public open class CfnLink(
   }
 
   /**
-   *
+   * Use this structure to optionally create filters that specify that only some metric namespaces
+   * or log groups are to be shared from the source account to the monitoring account.
    */
   public open fun linkConfiguration(): Any? = unwrap(this).getLinkConfiguration()
 
   /**
-   *
+   * Use this structure to optionally create filters that specify that only some metric namespaces
+   * or log groups are to be shared from the source account to the monitoring account.
    */
   public open fun linkConfiguration(`value`: IResolvable) {
-    unwrap(this).setLinkConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLinkConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   *
+   * Use this structure to optionally create filters that specify that only some metric namespaces
+   * or log groups are to be shared from the source account to the monitoring account.
    */
   public open fun linkConfiguration(`value`: LinkConfigurationProperty) {
-    unwrap(this).setLinkConfiguration(`value`.let(LinkConfigurationProperty::unwrap))
+    unwrap(this).setLinkConfiguration(`value`.let(LinkConfigurationProperty.Companion::unwrap))
   }
 
   /**
-   *
+   * Use this structure to optionally create filters that specify that only some metric namespaces
+   * or log groups are to be shared from the source account to the monitoring account.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("f1c4f2ae27fd10fbd00313cd2fd1db2afc5874c89c47875133098be129bdfc14")
@@ -218,20 +222,35 @@ public open class CfnLink(
     public fun labelTemplate(labelTemplate: String)
 
     /**
+     * Use this structure to optionally create filters that specify that only some metric namespaces
+     * or log groups are to be shared from the source account to the monitoring account.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-linkconfiguration)
-     * @param linkConfiguration 
+     * @param linkConfiguration Use this structure to optionally create filters that specify that
+     * only some metric namespaces or log groups are to be shared from the source account to the
+     * monitoring account. 
      */
     public fun linkConfiguration(linkConfiguration: IResolvable)
 
     /**
+     * Use this structure to optionally create filters that specify that only some metric namespaces
+     * or log groups are to be shared from the source account to the monitoring account.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-linkconfiguration)
-     * @param linkConfiguration 
+     * @param linkConfiguration Use this structure to optionally create filters that specify that
+     * only some metric namespaces or log groups are to be shared from the source account to the
+     * monitoring account. 
      */
     public fun linkConfiguration(linkConfiguration: LinkConfigurationProperty)
 
     /**
+     * Use this structure to optionally create filters that specify that only some metric namespaces
+     * or log groups are to be shared from the source account to the monitoring account.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-linkconfiguration)
-     * @param linkConfiguration 
+     * @param linkConfiguration Use this structure to optionally create filters that specify that
+     * only some metric namespaces or log groups are to be shared from the source account to the
+     * monitoring account. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2f023ed46c2f574a2355e148ac03b8c6ca677f94961515df90dddb5daaafd79b")
@@ -316,24 +335,39 @@ public open class CfnLink(
     }
 
     /**
+     * Use this structure to optionally create filters that specify that only some metric namespaces
+     * or log groups are to be shared from the source account to the monitoring account.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-linkconfiguration)
-     * @param linkConfiguration 
+     * @param linkConfiguration Use this structure to optionally create filters that specify that
+     * only some metric namespaces or log groups are to be shared from the source account to the
+     * monitoring account. 
      */
     override fun linkConfiguration(linkConfiguration: IResolvable) {
-      cdkBuilder.linkConfiguration(linkConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.linkConfiguration(linkConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
+     * Use this structure to optionally create filters that specify that only some metric namespaces
+     * or log groups are to be shared from the source account to the monitoring account.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-linkconfiguration)
-     * @param linkConfiguration 
+     * @param linkConfiguration Use this structure to optionally create filters that specify that
+     * only some metric namespaces or log groups are to be shared from the source account to the
+     * monitoring account. 
      */
     override fun linkConfiguration(linkConfiguration: LinkConfigurationProperty) {
-      cdkBuilder.linkConfiguration(linkConfiguration.let(LinkConfigurationProperty::unwrap))
+      cdkBuilder.linkConfiguration(linkConfiguration.let(LinkConfigurationProperty.Companion::unwrap))
     }
 
     /**
+     * Use this structure to optionally create filters that specify that only some metric namespaces
+     * or log groups are to be shared from the source account to the monitoring account.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-linkconfiguration)
-     * @param linkConfiguration 
+     * @param linkConfiguration Use this structure to optionally create filters that specify that
+     * only some metric namespaces or log groups are to be shared from the source account to the
+     * monitoring account. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2f023ed46c2f574a2355e148ac03b8c6ca677f94961515df90dddb5daaafd79b")
@@ -422,6 +456,9 @@ public open class CfnLink(
   }
 
   /**
+   * Use this structure to optionally create filters that specify that only some metric namespaces
+   * or log groups are to be shared from the source account to the monitoring account.
+   *
    * Example:
    *
    * ```
@@ -442,11 +479,17 @@ public open class CfnLink(
    */
   public interface LinkConfigurationProperty {
     /**
+     * Use this structure to filter which log groups are to share log events from this source
+     * account to the monitoring account.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-oam-link-linkconfiguration.html#cfn-oam-link-linkconfiguration-loggroupconfiguration)
      */
     public fun logGroupConfiguration(): Any? = unwrap(this).getLogGroupConfiguration()
 
     /**
+     * Use this structure to filter which metric namespaces are to be shared from the source account
+     * to the monitoring account.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-oam-link-linkconfiguration.html#cfn-oam-link-linkconfiguration-metricconfiguration)
      */
     public fun metricConfiguration(): Any? = unwrap(this).getMetricConfiguration()
@@ -457,34 +500,40 @@ public open class CfnLink(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param logGroupConfiguration the value to be set.
+       * @param logGroupConfiguration Use this structure to filter which log groups are to share log
+       * events from this source account to the monitoring account.
        */
       public fun logGroupConfiguration(logGroupConfiguration: IResolvable)
 
       /**
-       * @param logGroupConfiguration the value to be set.
+       * @param logGroupConfiguration Use this structure to filter which log groups are to share log
+       * events from this source account to the monitoring account.
        */
       public fun logGroupConfiguration(logGroupConfiguration: LinkFilterProperty)
 
       /**
-       * @param logGroupConfiguration the value to be set.
+       * @param logGroupConfiguration Use this structure to filter which log groups are to share log
+       * events from this source account to the monitoring account.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6071a625c6b3d9a327b833ab989a7caddb31359aa7034471a709a9a56f27c917")
       public fun logGroupConfiguration(logGroupConfiguration: LinkFilterProperty.Builder.() -> Unit)
 
       /**
-       * @param metricConfiguration the value to be set.
+       * @param metricConfiguration Use this structure to filter which metric namespaces are to be
+       * shared from the source account to the monitoring account.
        */
       public fun metricConfiguration(metricConfiguration: IResolvable)
 
       /**
-       * @param metricConfiguration the value to be set.
+       * @param metricConfiguration Use this structure to filter which metric namespaces are to be
+       * shared from the source account to the monitoring account.
        */
       public fun metricConfiguration(metricConfiguration: LinkFilterProperty)
 
       /**
-       * @param metricConfiguration the value to be set.
+       * @param metricConfiguration Use this structure to filter which metric namespaces are to be
+       * shared from the source account to the monitoring account.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("10f1eac64888de848ebfafff66aa54b2a3f3a4e445e1ef1f0f075ad558f4f46b")
@@ -497,21 +546,24 @@ public open class CfnLink(
           software.amazon.awscdk.services.oam.CfnLink.LinkConfigurationProperty.builder()
 
       /**
-       * @param logGroupConfiguration the value to be set.
+       * @param logGroupConfiguration Use this structure to filter which log groups are to share log
+       * events from this source account to the monitoring account.
        */
       override fun logGroupConfiguration(logGroupConfiguration: IResolvable) {
-        cdkBuilder.logGroupConfiguration(logGroupConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.logGroupConfiguration(logGroupConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param logGroupConfiguration the value to be set.
+       * @param logGroupConfiguration Use this structure to filter which log groups are to share log
+       * events from this source account to the monitoring account.
        */
       override fun logGroupConfiguration(logGroupConfiguration: LinkFilterProperty) {
-        cdkBuilder.logGroupConfiguration(logGroupConfiguration.let(LinkFilterProperty::unwrap))
+        cdkBuilder.logGroupConfiguration(logGroupConfiguration.let(LinkFilterProperty.Companion::unwrap))
       }
 
       /**
-       * @param logGroupConfiguration the value to be set.
+       * @param logGroupConfiguration Use this structure to filter which log groups are to share log
+       * events from this source account to the monitoring account.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("6071a625c6b3d9a327b833ab989a7caddb31359aa7034471a709a9a56f27c917")
@@ -520,21 +572,24 @@ public open class CfnLink(
           Unit = logGroupConfiguration(LinkFilterProperty(logGroupConfiguration))
 
       /**
-       * @param metricConfiguration the value to be set.
+       * @param metricConfiguration Use this structure to filter which metric namespaces are to be
+       * shared from the source account to the monitoring account.
        */
       override fun metricConfiguration(metricConfiguration: IResolvable) {
-        cdkBuilder.metricConfiguration(metricConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.metricConfiguration(metricConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param metricConfiguration the value to be set.
+       * @param metricConfiguration Use this structure to filter which metric namespaces are to be
+       * shared from the source account to the monitoring account.
        */
       override fun metricConfiguration(metricConfiguration: LinkFilterProperty) {
-        cdkBuilder.metricConfiguration(metricConfiguration.let(LinkFilterProperty::unwrap))
+        cdkBuilder.metricConfiguration(metricConfiguration.let(LinkFilterProperty.Companion::unwrap))
       }
 
       /**
-       * @param metricConfiguration the value to be set.
+       * @param metricConfiguration Use this structure to filter which metric namespaces are to be
+       * shared from the source account to the monitoring account.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("10f1eac64888de848ebfafff66aa54b2a3f3a4e445e1ef1f0f075ad558f4f46b")
@@ -549,11 +604,17 @@ public open class CfnLink(
       cdkObject: software.amazon.awscdk.services.oam.CfnLink.LinkConfigurationProperty,
     ) : CdkObject(cdkObject), LinkConfigurationProperty {
       /**
+       * Use this structure to filter which log groups are to share log events from this source
+       * account to the monitoring account.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-oam-link-linkconfiguration.html#cfn-oam-link-linkconfiguration-loggroupconfiguration)
        */
       override fun logGroupConfiguration(): Any? = unwrap(this).getLogGroupConfiguration()
 
       /**
+       * Use this structure to filter which metric namespaces are to be shared from the source
+       * account to the monitoring account.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-oam-link-linkconfiguration.html#cfn-oam-link-linkconfiguration-metricconfiguration)
        */
       override fun metricConfiguration(): Any? = unwrap(this).getMetricConfiguration()
@@ -578,6 +639,13 @@ public open class CfnLink(
   }
 
   /**
+   * When used in `MetricConfiguration` this field specifies which metric namespaces are to be
+   * shared with the monitoring account.
+   *
+   * When used in `LogGroupConfiguration` this field specifies which log groups are to share their
+   * log events with the monitoring account. Use the term `LogGroupName` and one or more of the
+   * following operands.
+   *
    * Example:
    *
    * ```
@@ -593,6 +661,45 @@ public open class CfnLink(
    */
   public interface LinkFilterProperty {
     /**
+     * When used in `MetricConfiguration` this field specifies which metric namespaces are to be
+     * shared with the monitoring account.
+     *
+     * When used in `LogGroupConfiguration` this field specifies which log groups are to share their
+     * log events with the monitoring account. Use the term `LogGroupName` and one or more of the
+     * following operands.
+     *
+     * Use single quotation marks (') around log group names and metric namespaces.
+     *
+     * The matching of log group names and metric namespaces is case sensitive. Each filter has a
+     * limit of five conditional operands. Conditional operands are `AND` and `OR` .
+     *
+     * * `=` and `!=`
+     * * `AND`
+     * * `OR`
+     * * `LIKE` and `NOT LIKE` . These can be used only as prefix searches. Include a `%` at the end
+     * of the string that you want to search for and include.
+     * * `IN` and `NOT IN` , using parentheses `( )`
+     *
+     * Examples:
+     *
+     * * `Namespace NOT LIKE 'AWS/%'` includes only namespaces that don't start with `AWS/` , such
+     * as custom namespaces.
+     * * `Namespace IN ('AWS/EC2', 'AWS/ELB', 'AWS/S3')` includes only the metrics in the EC2,
+     * Elastic Load Balancing , and Amazon S3 namespaces.
+     * * `Namespace = 'AWS/EC2' OR Namespace NOT LIKE 'AWS/%'` includes only the EC2 namespace and
+     * your custom namespaces.
+     * * `LogGroupName IN ('This-Log-Group', 'Other-Log-Group')` includes only the log groups with
+     * names `This-Log-Group` and `Other-Log-Group` .
+     * * `LogGroupName NOT IN ('Private-Log-Group', 'Private-Log-Group-2')` includes all log groups
+     * except the log groups with names `Private-Log-Group` and `Private-Log-Group-2` .
+     * * `LogGroupName LIKE 'aws/lambda/%' OR LogGroupName LIKE 'AWSLogs%'` includes all log groups
+     * that have names that start with `aws/lambda/` or `AWSLogs` .
+     *
+     *
+     * If you are updating a link that uses filters, you can specify `*` as the only value for the
+     * `filter` parameter to delete the filter and share all log groups with the monitoring account.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-oam-link-linkfilter.html#cfn-oam-link-linkfilter-filter)
      */
     public fun filter(): String
@@ -603,7 +710,42 @@ public open class CfnLink(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param filter the value to be set. 
+       * @param filter When used in `MetricConfiguration` this field specifies which metric
+       * namespaces are to be shared with the monitoring account. 
+       * When used in `LogGroupConfiguration` this field specifies which log groups are to share
+       * their log events with the monitoring account. Use the term `LogGroupName` and one or more of
+       * the following operands.
+       *
+       * Use single quotation marks (') around log group names and metric namespaces.
+       *
+       * The matching of log group names and metric namespaces is case sensitive. Each filter has a
+       * limit of five conditional operands. Conditional operands are `AND` and `OR` .
+       *
+       * * `=` and `!=`
+       * * `AND`
+       * * `OR`
+       * * `LIKE` and `NOT LIKE` . These can be used only as prefix searches. Include a `%` at the
+       * end of the string that you want to search for and include.
+       * * `IN` and `NOT IN` , using parentheses `( )`
+       *
+       * Examples:
+       *
+       * * `Namespace NOT LIKE 'AWS/%'` includes only namespaces that don't start with `AWS/` , such
+       * as custom namespaces.
+       * * `Namespace IN ('AWS/EC2', 'AWS/ELB', 'AWS/S3')` includes only the metrics in the EC2,
+       * Elastic Load Balancing , and Amazon S3 namespaces.
+       * * `Namespace = 'AWS/EC2' OR Namespace NOT LIKE 'AWS/%'` includes only the EC2 namespace and
+       * your custom namespaces.
+       * * `LogGroupName IN ('This-Log-Group', 'Other-Log-Group')` includes only the log groups with
+       * names `This-Log-Group` and `Other-Log-Group` .
+       * * `LogGroupName NOT IN ('Private-Log-Group', 'Private-Log-Group-2')` includes all log
+       * groups except the log groups with names `Private-Log-Group` and `Private-Log-Group-2` .
+       * * `LogGroupName LIKE 'aws/lambda/%' OR LogGroupName LIKE 'AWSLogs%'` includes all log
+       * groups that have names that start with `aws/lambda/` or `AWSLogs` .
+       *
+       *
+       * If you are updating a link that uses filters, you can specify `*` as the only value for the
+       * `filter` parameter to delete the filter and share all log groups with the monitoring account.
        */
       public fun filter(filter: String)
     }
@@ -613,7 +755,42 @@ public open class CfnLink(
           = software.amazon.awscdk.services.oam.CfnLink.LinkFilterProperty.builder()
 
       /**
-       * @param filter the value to be set. 
+       * @param filter When used in `MetricConfiguration` this field specifies which metric
+       * namespaces are to be shared with the monitoring account. 
+       * When used in `LogGroupConfiguration` this field specifies which log groups are to share
+       * their log events with the monitoring account. Use the term `LogGroupName` and one or more of
+       * the following operands.
+       *
+       * Use single quotation marks (') around log group names and metric namespaces.
+       *
+       * The matching of log group names and metric namespaces is case sensitive. Each filter has a
+       * limit of five conditional operands. Conditional operands are `AND` and `OR` .
+       *
+       * * `=` and `!=`
+       * * `AND`
+       * * `OR`
+       * * `LIKE` and `NOT LIKE` . These can be used only as prefix searches. Include a `%` at the
+       * end of the string that you want to search for and include.
+       * * `IN` and `NOT IN` , using parentheses `( )`
+       *
+       * Examples:
+       *
+       * * `Namespace NOT LIKE 'AWS/%'` includes only namespaces that don't start with `AWS/` , such
+       * as custom namespaces.
+       * * `Namespace IN ('AWS/EC2', 'AWS/ELB', 'AWS/S3')` includes only the metrics in the EC2,
+       * Elastic Load Balancing , and Amazon S3 namespaces.
+       * * `Namespace = 'AWS/EC2' OR Namespace NOT LIKE 'AWS/%'` includes only the EC2 namespace and
+       * your custom namespaces.
+       * * `LogGroupName IN ('This-Log-Group', 'Other-Log-Group')` includes only the log groups with
+       * names `This-Log-Group` and `Other-Log-Group` .
+       * * `LogGroupName NOT IN ('Private-Log-Group', 'Private-Log-Group-2')` includes all log
+       * groups except the log groups with names `Private-Log-Group` and `Private-Log-Group-2` .
+       * * `LogGroupName LIKE 'aws/lambda/%' OR LogGroupName LIKE 'AWSLogs%'` includes all log
+       * groups that have names that start with `aws/lambda/` or `AWSLogs` .
+       *
+       *
+       * If you are updating a link that uses filters, you can specify `*` as the only value for the
+       * `filter` parameter to delete the filter and share all log groups with the monitoring account.
        */
       override fun filter(filter: String) {
         cdkBuilder.filter(filter)
@@ -627,6 +804,45 @@ public open class CfnLink(
       cdkObject: software.amazon.awscdk.services.oam.CfnLink.LinkFilterProperty,
     ) : CdkObject(cdkObject), LinkFilterProperty {
       /**
+       * When used in `MetricConfiguration` this field specifies which metric namespaces are to be
+       * shared with the monitoring account.
+       *
+       * When used in `LogGroupConfiguration` this field specifies which log groups are to share
+       * their log events with the monitoring account. Use the term `LogGroupName` and one or more of
+       * the following operands.
+       *
+       * Use single quotation marks (') around log group names and metric namespaces.
+       *
+       * The matching of log group names and metric namespaces is case sensitive. Each filter has a
+       * limit of five conditional operands. Conditional operands are `AND` and `OR` .
+       *
+       * * `=` and `!=`
+       * * `AND`
+       * * `OR`
+       * * `LIKE` and `NOT LIKE` . These can be used only as prefix searches. Include a `%` at the
+       * end of the string that you want to search for and include.
+       * * `IN` and `NOT IN` , using parentheses `( )`
+       *
+       * Examples:
+       *
+       * * `Namespace NOT LIKE 'AWS/%'` includes only namespaces that don't start with `AWS/` , such
+       * as custom namespaces.
+       * * `Namespace IN ('AWS/EC2', 'AWS/ELB', 'AWS/S3')` includes only the metrics in the EC2,
+       * Elastic Load Balancing , and Amazon S3 namespaces.
+       * * `Namespace = 'AWS/EC2' OR Namespace NOT LIKE 'AWS/%'` includes only the EC2 namespace and
+       * your custom namespaces.
+       * * `LogGroupName IN ('This-Log-Group', 'Other-Log-Group')` includes only the log groups with
+       * names `This-Log-Group` and `Other-Log-Group` .
+       * * `LogGroupName NOT IN ('Private-Log-Group', 'Private-Log-Group-2')` includes all log
+       * groups except the log groups with names `Private-Log-Group` and `Private-Log-Group-2` .
+       * * `LogGroupName LIKE 'aws/lambda/%' OR LogGroupName LIKE 'AWSLogs%'` includes all log
+       * groups that have names that start with `aws/lambda/` or `AWSLogs` .
+       *
+       *
+       * If you are updating a link that uses filters, you can specify `*` as the only value for the
+       * `filter` parameter to delete the filter and share all log groups with the monitoring account.
+       *
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-oam-link-linkfilter.html#cfn-oam-link-linkfilter-filter)
        */
       override fun filter(): String = unwrap(this).getFilter()

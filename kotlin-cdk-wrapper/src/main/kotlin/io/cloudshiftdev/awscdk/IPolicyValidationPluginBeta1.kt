@@ -99,7 +99,7 @@ public interface IPolicyValidationPluginBeta1 {
      */
     override fun validate(context: IPolicyValidationContextBeta1): PolicyValidationPluginReportBeta1
         =
-        unwrap(this).validate(context.let(IPolicyValidationContextBeta1::unwrap)).let(PolicyValidationPluginReportBeta1::wrap)
+        unwrap(this).validate(context.let(IPolicyValidationContextBeta1.Companion::unwrap)).let(PolicyValidationPluginReportBeta1::wrap)
 
     /**
      * The version of the plugin, following the Semantic Versioning specification (see

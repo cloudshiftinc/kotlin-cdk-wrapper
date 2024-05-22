@@ -59,8 +59,8 @@ public open class CfnDeviceFleet(
     id: String,
     props: CfnDeviceFleetProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnDeviceFleet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDeviceFleetProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnDeviceFleet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDeviceFleetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -100,7 +100,7 @@ public open class CfnDeviceFleet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -112,14 +112,14 @@ public open class CfnDeviceFleet(
    * The output configuration for storing sample data collected by the fleet.
    */
   public open fun outputConfig(`value`: IResolvable) {
-    unwrap(this).setOutputConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOutputConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The output configuration for storing sample data collected by the fleet.
    */
   public open fun outputConfig(`value`: EdgeOutputConfigProperty) {
-    unwrap(this).setOutputConfig(`value`.let(EdgeOutputConfigProperty::unwrap))
+    unwrap(this).setOutputConfig(`value`.let(EdgeOutputConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -159,7 +159,7 @@ public open class CfnDeviceFleet(
    * device fleets.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -283,7 +283,7 @@ public open class CfnDeviceFleet(
      * @param outputConfig The output configuration for storing sample data collected by the fleet. 
      */
     override fun outputConfig(outputConfig: IResolvable) {
-      cdkBuilder.outputConfig(outputConfig.let(IResolvable::unwrap))
+      cdkBuilder.outputConfig(outputConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -293,7 +293,7 @@ public open class CfnDeviceFleet(
      * @param outputConfig The output configuration for storing sample data collected by the fleet. 
      */
     override fun outputConfig(outputConfig: EdgeOutputConfigProperty) {
-      cdkBuilder.outputConfig(outputConfig.let(EdgeOutputConfigProperty::unwrap))
+      cdkBuilder.outputConfig(outputConfig.let(EdgeOutputConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -329,7 +329,7 @@ public open class CfnDeviceFleet(
      * organize your device fleets. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

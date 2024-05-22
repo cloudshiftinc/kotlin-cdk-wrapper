@@ -78,7 +78,7 @@ public open class DockerImage(
    * @param options
    */
   public open fun run(options: DockerRunOptions) {
-    unwrap(this).run(options.let(DockerRunOptions::unwrap))
+    unwrap(this).run(options.let(DockerRunOptions.Companion::unwrap))
   }
 
   /**
@@ -104,7 +104,7 @@ public open class DockerImage(
 
     public fun fromBuild(path: String, options: DockerBuildOptions): DockerImage =
         software.amazon.awscdk.DockerImage.fromBuild(path,
-        options.let(DockerBuildOptions::unwrap)).let(DockerImage::wrap)
+        options.let(DockerBuildOptions.Companion::unwrap)).let(DockerImage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7fa809b479d7fa4f75675888e725dc7bc71e72b027ae5adeca331083178755c4")

@@ -182,7 +182,7 @@ public interface CfnSceneProps {
      * @param sceneMetadata The scene metadata.
      */
     override fun sceneMetadata(sceneMetadata: IResolvable) {
-      cdkBuilder.sceneMetadata(sceneMetadata.let(IResolvable::unwrap))
+      cdkBuilder.sceneMetadata(sceneMetadata.let(IResolvable.Companion::unwrap))
     }
 
     /**

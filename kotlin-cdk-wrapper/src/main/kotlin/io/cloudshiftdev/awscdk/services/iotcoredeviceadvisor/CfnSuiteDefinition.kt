@@ -55,8 +55,8 @@ public open class CfnSuiteDefinition(
     id: String,
     props: CfnSuiteDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSuiteDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.iotcoredeviceadvisor.CfnSuiteDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSuiteDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -88,7 +88,7 @@ public open class CfnSuiteDefinition(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -123,7 +123,7 @@ public open class CfnSuiteDefinition(
    * Metadata that can be used to manage the the Suite Definition.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -260,7 +260,7 @@ public open class CfnSuiteDefinition(
      * @param tags Metadata that can be used to manage the the Suite Definition. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -556,7 +556,7 @@ public open class CfnSuiteDefinition(
        * @param devices Gets the devices configured.
        */
       override fun devices(devices: IResolvable) {
-        cdkBuilder.devices(devices.let(IResolvable::unwrap))
+        cdkBuilder.devices(devices.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -582,7 +582,7 @@ public open class CfnSuiteDefinition(
        * @param intendedForQualification Gets the tests intended for qualification in a suite.
        */
       override fun intendedForQualification(intendedForQualification: IResolvable) {
-        cdkBuilder.intendedForQualification(intendedForQualification.let(IResolvable::unwrap))
+        cdkBuilder.intendedForQualification(intendedForQualification.let(IResolvable.Companion::unwrap))
       }
 
       /**

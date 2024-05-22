@@ -92,14 +92,14 @@ public interface CfnConfigurationAssociationProps {
      * @param configuration The configuration to associate with a broker. 
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param configuration The configuration to associate with a broker. 
      */
     override fun configuration(configuration: CfnConfigurationAssociation.ConfigurationIdProperty) {
-      cdkBuilder.configuration(configuration.let(CfnConfigurationAssociation.ConfigurationIdProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(CfnConfigurationAssociation.ConfigurationIdProperty.Companion::unwrap))
     }
 
     /**

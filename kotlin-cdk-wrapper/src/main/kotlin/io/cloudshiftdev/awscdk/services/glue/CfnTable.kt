@@ -119,8 +119,8 @@ public open class CfnTable(
     id: String,
     props: CfnTableProps,
   ) :
-      this(software.amazon.awscdk.services.glue.CfnTable(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTableProps::unwrap))
+      this(software.amazon.awscdk.services.glue.CfnTable(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTableProps.Companion::unwrap))
   )
 
   public constructor(
@@ -165,7 +165,7 @@ public open class CfnTable(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -177,14 +177,14 @@ public open class CfnTable(
    * Specifies an `OpenTableFormatInput` structure when creating an open format table.
    */
   public open fun openTableFormatInput(`value`: IResolvable) {
-    unwrap(this).setOpenTableFormatInput(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOpenTableFormatInput(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies an `OpenTableFormatInput` structure when creating an open format table.
    */
   public open fun openTableFormatInput(`value`: OpenTableFormatInputProperty) {
-    unwrap(this).setOpenTableFormatInput(`value`.let(OpenTableFormatInputProperty::unwrap))
+    unwrap(this).setOpenTableFormatInput(`value`.let(OpenTableFormatInputProperty.Companion::unwrap))
   }
 
   /**
@@ -204,14 +204,14 @@ public open class CfnTable(
    * A structure used to define a table.
    */
   public open fun tableInput(`value`: IResolvable) {
-    unwrap(this).setTableInput(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTableInput(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A structure used to define a table.
    */
   public open fun tableInput(`value`: TableInputProperty) {
-    unwrap(this).setTableInput(`value`.let(TableInputProperty::unwrap))
+    unwrap(this).setTableInput(`value`.let(TableInputProperty.Companion::unwrap))
   }
 
   /**
@@ -339,7 +339,7 @@ public open class CfnTable(
      * open format table. 
      */
     override fun openTableFormatInput(openTableFormatInput: IResolvable) {
-      cdkBuilder.openTableFormatInput(openTableFormatInput.let(IResolvable::unwrap))
+      cdkBuilder.openTableFormatInput(openTableFormatInput.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -350,7 +350,7 @@ public open class CfnTable(
      * open format table. 
      */
     override fun openTableFormatInput(openTableFormatInput: OpenTableFormatInputProperty) {
-      cdkBuilder.openTableFormatInput(openTableFormatInput.let(OpenTableFormatInputProperty::unwrap))
+      cdkBuilder.openTableFormatInput(openTableFormatInput.let(OpenTableFormatInputProperty.Companion::unwrap))
     }
 
     /**
@@ -373,7 +373,7 @@ public open class CfnTable(
      * @param tableInput A structure used to define a table. 
      */
     override fun tableInput(tableInput: IResolvable) {
-      cdkBuilder.tableInput(tableInput.let(IResolvable::unwrap))
+      cdkBuilder.tableInput(tableInput.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -383,7 +383,7 @@ public open class CfnTable(
      * @param tableInput A structure used to define a table. 
      */
     override fun tableInput(tableInput: TableInputProperty) {
-      cdkBuilder.tableInput(tableInput.let(TableInputProperty::unwrap))
+      cdkBuilder.tableInput(tableInput.let(TableInputProperty.Companion::unwrap))
     }
 
     /**
@@ -734,7 +734,7 @@ public open class CfnTable(
        * metadata table.
        */
       override fun icebergInput(icebergInput: IResolvable) {
-        cdkBuilder.icebergInput(icebergInput.let(IResolvable::unwrap))
+        cdkBuilder.icebergInput(icebergInput.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -742,7 +742,7 @@ public open class CfnTable(
        * metadata table.
        */
       override fun icebergInput(icebergInput: IcebergInputProperty) {
-        cdkBuilder.icebergInput(icebergInput.let(IcebergInputProperty::unwrap))
+        cdkBuilder.icebergInput(icebergInput.let(IcebergInputProperty.Companion::unwrap))
       }
 
       /**
@@ -1144,7 +1144,7 @@ public open class CfnTable(
        * provided.
        */
       override fun schemaId(schemaId: IResolvable) {
-        cdkBuilder.schemaId(schemaId.let(IResolvable::unwrap))
+        cdkBuilder.schemaId(schemaId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1153,7 +1153,7 @@ public open class CfnTable(
        * provided.
        */
       override fun schemaId(schemaId: SchemaIdProperty) {
-        cdkBuilder.schemaId(schemaId.let(SchemaIdProperty::unwrap))
+        cdkBuilder.schemaId(schemaId.let(SchemaIdProperty.Companion::unwrap))
       }
 
       /**
@@ -1874,7 +1874,7 @@ public open class CfnTable(
        * @param columns A list of the `Columns` in the table.
        */
       override fun columns(columns: IResolvable) {
-        cdkBuilder.columns(columns.let(IResolvable::unwrap))
+        cdkBuilder.columns(columns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1900,7 +1900,7 @@ public open class CfnTable(
        * @param compressed `True` if the data in the table is compressed, or `False` if not.
        */
       override fun compressed(compressed: IResolvable) {
-        cdkBuilder.compressed(compressed.let(IResolvable::unwrap))
+        cdkBuilder.compressed(compressed.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1947,7 +1947,7 @@ public open class CfnTable(
        * Registry.
        */
       override fun schemaReference(schemaReference: IResolvable) {
-        cdkBuilder.schemaReference(schemaReference.let(IResolvable::unwrap))
+        cdkBuilder.schemaReference(schemaReference.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1955,7 +1955,7 @@ public open class CfnTable(
        * Registry.
        */
       override fun schemaReference(schemaReference: SchemaReferenceProperty) {
-        cdkBuilder.schemaReference(schemaReference.let(SchemaReferenceProperty::unwrap))
+        cdkBuilder.schemaReference(schemaReference.let(SchemaReferenceProperty.Companion::unwrap))
       }
 
       /**
@@ -1971,14 +1971,14 @@ public open class CfnTable(
        * @param serdeInfo The serialization/deserialization (SerDe) information.
        */
       override fun serdeInfo(serdeInfo: IResolvable) {
-        cdkBuilder.serdeInfo(serdeInfo.let(IResolvable::unwrap))
+        cdkBuilder.serdeInfo(serdeInfo.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param serdeInfo The serialization/deserialization (SerDe) information.
        */
       override fun serdeInfo(serdeInfo: SerdeInfoProperty) {
-        cdkBuilder.serdeInfo(serdeInfo.let(SerdeInfoProperty::unwrap))
+        cdkBuilder.serdeInfo(serdeInfo.let(SerdeInfoProperty.Companion::unwrap))
       }
 
       /**
@@ -1994,7 +1994,7 @@ public open class CfnTable(
        * values).
        */
       override fun skewedInfo(skewedInfo: IResolvable) {
-        cdkBuilder.skewedInfo(skewedInfo.let(IResolvable::unwrap))
+        cdkBuilder.skewedInfo(skewedInfo.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2002,7 +2002,7 @@ public open class CfnTable(
        * values).
        */
       override fun skewedInfo(skewedInfo: SkewedInfoProperty) {
-        cdkBuilder.skewedInfo(skewedInfo.let(SkewedInfoProperty::unwrap))
+        cdkBuilder.skewedInfo(skewedInfo.let(SkewedInfoProperty.Companion::unwrap))
       }
 
       /**
@@ -2018,7 +2018,7 @@ public open class CfnTable(
        * @param sortColumns A list specifying the sort order of each bucket in the table.
        */
       override fun sortColumns(sortColumns: IResolvable) {
-        cdkBuilder.sortColumns(sortColumns.let(IResolvable::unwrap))
+        cdkBuilder.sortColumns(sortColumns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2046,7 +2046,7 @@ public open class CfnTable(
        * `False` if not.
        */
       override fun storedAsSubDirectories(storedAsSubDirectories: IResolvable) {
-        cdkBuilder.storedAsSubDirectories(storedAsSubDirectories.let(IResolvable::unwrap))
+        cdkBuilder.storedAsSubDirectories(storedAsSubDirectories.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.glue.CfnTable.StorageDescriptorProperty =
@@ -2685,7 +2685,7 @@ public open class CfnTable(
        * `"PartitionKeys": []`
        */
       override fun partitionKeys(partitionKeys: IResolvable) {
-        cdkBuilder.partitionKeys(partitionKeys.let(IResolvable::unwrap))
+        cdkBuilder.partitionKeys(partitionKeys.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2723,7 +2723,7 @@ public open class CfnTable(
        * storage of this table.
        */
       override fun storageDescriptor(storageDescriptor: IResolvable) {
-        cdkBuilder.storageDescriptor(storageDescriptor.let(IResolvable::unwrap))
+        cdkBuilder.storageDescriptor(storageDescriptor.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2731,7 +2731,7 @@ public open class CfnTable(
        * storage of this table.
        */
       override fun storageDescriptor(storageDescriptor: StorageDescriptorProperty) {
-        cdkBuilder.storageDescriptor(storageDescriptor.let(StorageDescriptorProperty::unwrap))
+        cdkBuilder.storageDescriptor(storageDescriptor.let(StorageDescriptorProperty.Companion::unwrap))
       }
 
       /**
@@ -2764,7 +2764,7 @@ public open class CfnTable(
        * linking.
        */
       override fun targetTable(targetTable: IResolvable) {
-        cdkBuilder.targetTable(targetTable.let(IResolvable::unwrap))
+        cdkBuilder.targetTable(targetTable.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2772,7 +2772,7 @@ public open class CfnTable(
        * linking.
        */
       override fun targetTable(targetTable: TableIdentifierProperty) {
-        cdkBuilder.targetTable(targetTable.let(TableIdentifierProperty::unwrap))
+        cdkBuilder.targetTable(targetTable.let(TableIdentifierProperty.Companion::unwrap))
       }
 
       /**

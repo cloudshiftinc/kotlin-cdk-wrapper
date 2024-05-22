@@ -719,14 +719,14 @@ public interface CfnFunctionProps {
      * @param codeUri the value to be set.
      */
     override fun codeUri(codeUri: IResolvable) {
-      cdkBuilder.codeUri(codeUri.let(IResolvable::unwrap))
+      cdkBuilder.codeUri(codeUri.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param codeUri the value to be set.
      */
     override fun codeUri(codeUri: CfnFunction.S3LocationProperty) {
-      cdkBuilder.codeUri(codeUri.let(CfnFunction.S3LocationProperty::unwrap))
+      cdkBuilder.codeUri(codeUri.let(CfnFunction.S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -741,14 +741,14 @@ public interface CfnFunctionProps {
      * @param deadLetterQueue the value to be set.
      */
     override fun deadLetterQueue(deadLetterQueue: IResolvable) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IResolvable::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param deadLetterQueue the value to be set.
      */
     override fun deadLetterQueue(deadLetterQueue: CfnFunction.DeadLetterQueueProperty) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(CfnFunction.DeadLetterQueueProperty::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(CfnFunction.DeadLetterQueueProperty.Companion::unwrap))
     }
 
     /**
@@ -764,7 +764,7 @@ public interface CfnFunctionProps {
      * @param deploymentPreference the value to be set.
      */
     override fun deploymentPreference(deploymentPreference: IResolvable) {
-      cdkBuilder.deploymentPreference(deploymentPreference.let(IResolvable::unwrap))
+      cdkBuilder.deploymentPreference(deploymentPreference.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -772,7 +772,7 @@ public interface CfnFunctionProps {
      */
     override
         fun deploymentPreference(deploymentPreference: CfnFunction.DeploymentPreferenceProperty) {
-      cdkBuilder.deploymentPreference(deploymentPreference.let(CfnFunction.DeploymentPreferenceProperty::unwrap))
+      cdkBuilder.deploymentPreference(deploymentPreference.let(CfnFunction.DeploymentPreferenceProperty.Companion::unwrap))
     }
 
     /**
@@ -795,14 +795,14 @@ public interface CfnFunctionProps {
      * @param environment the value to be set.
      */
     override fun environment(environment: IResolvable) {
-      cdkBuilder.environment(environment.let(IResolvable::unwrap))
+      cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param environment the value to be set.
      */
     override fun environment(environment: CfnFunction.FunctionEnvironmentProperty) {
-      cdkBuilder.environment(environment.let(CfnFunction.FunctionEnvironmentProperty::unwrap))
+      cdkBuilder.environment(environment.let(CfnFunction.FunctionEnvironmentProperty.Companion::unwrap))
     }
 
     /**
@@ -818,14 +818,14 @@ public interface CfnFunctionProps {
      * @param ephemeralStorage the value to be set.
      */
     override fun ephemeralStorage(ephemeralStorage: IResolvable) {
-      cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable::unwrap))
+      cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param ephemeralStorage the value to be set.
      */
     override fun ephemeralStorage(ephemeralStorage: CfnFunction.EphemeralStorageProperty) {
-      cdkBuilder.ephemeralStorage(ephemeralStorage.let(CfnFunction.EphemeralStorageProperty::unwrap))
+      cdkBuilder.ephemeralStorage(ephemeralStorage.let(CfnFunction.EphemeralStorageProperty.Companion::unwrap))
     }
 
     /**
@@ -841,14 +841,14 @@ public interface CfnFunctionProps {
      * @param eventInvokeConfig the value to be set.
      */
     override fun eventInvokeConfig(eventInvokeConfig: IResolvable) {
-      cdkBuilder.eventInvokeConfig(eventInvokeConfig.let(IResolvable::unwrap))
+      cdkBuilder.eventInvokeConfig(eventInvokeConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param eventInvokeConfig the value to be set.
      */
     override fun eventInvokeConfig(eventInvokeConfig: CfnFunction.EventInvokeConfigProperty) {
-      cdkBuilder.eventInvokeConfig(eventInvokeConfig.let(CfnFunction.EventInvokeConfigProperty::unwrap))
+      cdkBuilder.eventInvokeConfig(eventInvokeConfig.let(CfnFunction.EventInvokeConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -864,7 +864,7 @@ public interface CfnFunctionProps {
      * @param events the value to be set.
      */
     override fun events(events: IResolvable) {
-      cdkBuilder.events(events.let(IResolvable::unwrap))
+      cdkBuilder.events(events.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -878,7 +878,7 @@ public interface CfnFunctionProps {
      * @param fileSystemConfigs the value to be set.
      */
     override fun fileSystemConfigs(fileSystemConfigs: IResolvable) {
-      cdkBuilder.fileSystemConfigs(fileSystemConfigs.let(IResolvable::unwrap))
+      cdkBuilder.fileSystemConfigs(fileSystemConfigs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -905,14 +905,14 @@ public interface CfnFunctionProps {
      * @param functionUrlConfig the value to be set.
      */
     override fun functionUrlConfig(functionUrlConfig: IResolvable) {
-      cdkBuilder.functionUrlConfig(functionUrlConfig.let(IResolvable::unwrap))
+      cdkBuilder.functionUrlConfig(functionUrlConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param functionUrlConfig the value to be set.
      */
     override fun functionUrlConfig(functionUrlConfig: CfnFunction.FunctionUrlConfigProperty) {
-      cdkBuilder.functionUrlConfig(functionUrlConfig.let(CfnFunction.FunctionUrlConfigProperty::unwrap))
+      cdkBuilder.functionUrlConfig(functionUrlConfig.let(CfnFunction.FunctionUrlConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -935,14 +935,14 @@ public interface CfnFunctionProps {
      * @param imageConfig the value to be set.
      */
     override fun imageConfig(imageConfig: IResolvable) {
-      cdkBuilder.imageConfig(imageConfig.let(IResolvable::unwrap))
+      cdkBuilder.imageConfig(imageConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param imageConfig the value to be set.
      */
     override fun imageConfig(imageConfig: CfnFunction.ImageConfigProperty) {
-      cdkBuilder.imageConfig(imageConfig.let(CfnFunction.ImageConfigProperty::unwrap))
+      cdkBuilder.imageConfig(imageConfig.let(CfnFunction.ImageConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1018,14 +1018,14 @@ public interface CfnFunctionProps {
      * @param policies the value to be set.
      */
     override fun policies(policies: IResolvable) {
-      cdkBuilder.policies(policies.let(IResolvable::unwrap))
+      cdkBuilder.policies(policies.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param policies the value to be set.
      */
     override fun policies(policies: CfnFunction.IAMPolicyDocumentProperty) {
-      cdkBuilder.policies(policies.let(CfnFunction.IAMPolicyDocumentProperty::unwrap))
+      cdkBuilder.policies(policies.let(CfnFunction.IAMPolicyDocumentProperty.Companion::unwrap))
     }
 
     /**
@@ -1052,7 +1052,7 @@ public interface CfnFunctionProps {
      * @param provisionedConcurrencyConfig the value to be set.
      */
     override fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: IResolvable) {
-      cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(IResolvable::unwrap))
+      cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1060,7 +1060,7 @@ public interface CfnFunctionProps {
      */
     override
         fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: CfnFunction.ProvisionedConcurrencyConfigProperty) {
-      cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(CfnFunction.ProvisionedConcurrencyConfigProperty::unwrap))
+      cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(CfnFunction.ProvisionedConcurrencyConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1126,14 +1126,14 @@ public interface CfnFunctionProps {
      * @param vpcConfig the value to be set.
      */
     override fun vpcConfig(vpcConfig: IResolvable) {
-      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param vpcConfig the value to be set.
      */
     override fun vpcConfig(vpcConfig: CfnFunction.VpcConfigProperty) {
-      cdkBuilder.vpcConfig(vpcConfig.let(CfnFunction.VpcConfigProperty::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(CfnFunction.VpcConfigProperty.Companion::unwrap))
     }
 
     /**

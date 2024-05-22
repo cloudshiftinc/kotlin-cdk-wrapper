@@ -47,8 +47,8 @@ public open class CfnPortfolio(
     id: String,
     props: CfnPortfolioProps,
   ) :
-      this(software.amazon.awscdk.services.servicecatalog.CfnPortfolio(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPortfolioProps::unwrap))
+      this(software.amazon.awscdk.services.servicecatalog.CfnPortfolio(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPortfolioProps.Companion::unwrap))
   )
 
   public constructor(
@@ -110,7 +110,7 @@ public open class CfnPortfolio(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -140,7 +140,7 @@ public open class CfnPortfolio(
    * One or more tags.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -262,7 +262,7 @@ public open class CfnPortfolio(
      * @param tags One or more tags. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

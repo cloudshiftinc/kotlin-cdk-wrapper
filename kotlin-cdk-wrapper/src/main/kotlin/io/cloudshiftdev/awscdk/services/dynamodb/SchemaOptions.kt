@@ -81,7 +81,7 @@ public interface SchemaOptions {
      * @param partitionKey Partition key attribute definition. 
      */
     override fun partitionKey(partitionKey: Attribute) {
-      cdkBuilder.partitionKey(partitionKey.let(Attribute::unwrap))
+      cdkBuilder.partitionKey(partitionKey.let(Attribute.Companion::unwrap))
     }
 
     /**
@@ -96,7 +96,7 @@ public interface SchemaOptions {
      * @param sortKey Sort key attribute definition.
      */
     override fun sortKey(sortKey: Attribute) {
-      cdkBuilder.sortKey(sortKey.let(Attribute::unwrap))
+      cdkBuilder.sortKey(sortKey.let(Attribute.Companion::unwrap))
     }
 
     /**

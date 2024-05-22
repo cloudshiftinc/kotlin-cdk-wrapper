@@ -119,8 +119,8 @@ public open class CfnComponentType(
     id: String,
     props: CfnComponentTypeProps,
   ) :
-      this(software.amazon.awscdk.services.iottwinmaker.CfnComponentType(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnComponentTypeProps::unwrap))
+      this(software.amazon.awscdk.services.iottwinmaker.CfnComponentType(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnComponentTypeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -205,7 +205,7 @@ public open class CfnComponentType(
    * Maps strings to `compositeComponentTypes` of the `componentType` .
    */
   public open fun compositeComponentTypes(`value`: IResolvable) {
-    unwrap(this).setCompositeComponentTypes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCompositeComponentTypes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -253,7 +253,7 @@ public open class CfnComponentType(
    * An object that maps strings to the functions in the component type.
    */
   public open fun functions(`value`: IResolvable) {
-    unwrap(this).setFunctions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFunctions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -269,7 +269,7 @@ public open class CfnComponentType(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -288,7 +288,7 @@ public open class CfnComponentType(
    * A boolean value that specifies whether an entity can have more than one component of this type.
    */
   public open fun isSingleton(`value`: IResolvable) {
-    unwrap(this).setIsSingleton(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIsSingleton(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -300,7 +300,7 @@ public open class CfnComponentType(
    * An object that maps strings to the property definitions in the component type.
    */
   public open fun propertyDefinitions(`value`: IResolvable) {
-    unwrap(this).setPropertyDefinitions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPropertyDefinitions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -319,7 +319,7 @@ public open class CfnComponentType(
    * An object that maps strings to the property groups in the component type.
    */
   public open fun propertyGroups(`value`: IResolvable) {
-    unwrap(this).setPropertyGroups(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPropertyGroups(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -561,7 +561,7 @@ public open class CfnComponentType(
      * `componentType` . 
      */
     override fun compositeComponentTypes(compositeComponentTypes: IResolvable) {
-      cdkBuilder.compositeComponentTypes(compositeComponentTypes.let(IResolvable::unwrap))
+      cdkBuilder.compositeComponentTypes(compositeComponentTypes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -618,7 +618,7 @@ public open class CfnComponentType(
      * @param functions An object that maps strings to the functions in the component type. 
      */
     override fun functions(functions: IResolvable) {
-      cdkBuilder.functions(functions.let(IResolvable::unwrap))
+      cdkBuilder.functions(functions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -658,7 +658,7 @@ public open class CfnComponentType(
      * component of this type. 
      */
     override fun isSingleton(isSingleton: IResolvable) {
-      cdkBuilder.isSingleton(isSingleton.let(IResolvable::unwrap))
+      cdkBuilder.isSingleton(isSingleton.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -675,7 +675,7 @@ public open class CfnComponentType(
      * component type. 
      */
     override fun propertyDefinitions(propertyDefinitions: IResolvable) {
-      cdkBuilder.propertyDefinitions(propertyDefinitions.let(IResolvable::unwrap))
+      cdkBuilder.propertyDefinitions(propertyDefinitions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -705,7 +705,7 @@ public open class CfnComponentType(
      * type. 
      */
     override fun propertyGroups(propertyGroups: IResolvable) {
-      cdkBuilder.propertyGroups(propertyGroups.let(IResolvable::unwrap))
+      cdkBuilder.propertyGroups(propertyGroups.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -937,21 +937,21 @@ public open class CfnComponentType(
        * TwinMaker.
        */
       override fun isNative(isNative: IResolvable) {
-        cdkBuilder.isNative(isNative.let(IResolvable::unwrap))
+        cdkBuilder.isNative(isNative.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param lambda The Lambda function associated with the data connector.
        */
       override fun lambda(lambda: IResolvable) {
-        cdkBuilder.lambda(lambda.let(IResolvable::unwrap))
+        cdkBuilder.lambda(lambda.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param lambda The Lambda function associated with the data connector.
        */
       override fun lambda(lambda: LambdaFunctionProperty) {
-        cdkBuilder.lambda(lambda.let(LambdaFunctionProperty::unwrap))
+        cdkBuilder.lambda(lambda.let(LambdaFunctionProperty.Companion::unwrap))
       }
 
       /**
@@ -1154,7 +1154,7 @@ public open class CfnComponentType(
        * @param allowedValues The allowed values for this data type.
        */
       override fun allowedValues(allowedValues: IResolvable) {
-        cdkBuilder.allowedValues(allowedValues.let(IResolvable::unwrap))
+        cdkBuilder.allowedValues(allowedValues.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1174,14 +1174,14 @@ public open class CfnComponentType(
        * @param nestedType The nested type in the data type.
        */
       override fun nestedType(nestedType: IResolvable) {
-        cdkBuilder.nestedType(nestedType.let(IResolvable::unwrap))
+        cdkBuilder.nestedType(nestedType.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param nestedType The nested type in the data type.
        */
       override fun nestedType(nestedType: DataTypeProperty) {
-        cdkBuilder.nestedType(nestedType.let(DataTypeProperty::unwrap))
+        cdkBuilder.nestedType(nestedType.let(DataTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -1196,14 +1196,14 @@ public open class CfnComponentType(
        * @param relationship A relationship that associates a component with another component.
        */
       override fun relationship(relationship: IResolvable) {
-        cdkBuilder.relationship(relationship.let(IResolvable::unwrap))
+        cdkBuilder.relationship(relationship.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param relationship A relationship that associates a component with another component.
        */
       override fun relationship(relationship: RelationshipProperty) {
-        cdkBuilder.relationship(relationship.let(RelationshipProperty::unwrap))
+        cdkBuilder.relationship(relationship.let(RelationshipProperty.Companion::unwrap))
       }
 
       /**
@@ -1471,7 +1471,7 @@ public open class CfnComponentType(
        * @param booleanValue A boolean value.
        */
       override fun booleanValue(booleanValue: IResolvable) {
-        cdkBuilder.booleanValue(booleanValue.let(IResolvable::unwrap))
+        cdkBuilder.booleanValue(booleanValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1499,7 +1499,7 @@ public open class CfnComponentType(
        * @param listValue A list of multiple values.
        */
       override fun listValue(listValue: IResolvable) {
-        cdkBuilder.listValue(listValue.let(IResolvable::unwrap))
+        cdkBuilder.listValue(listValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1525,7 +1525,7 @@ public open class CfnComponentType(
        * @param mapValue An object that maps strings to multiple `DataValue` objects.
        */
       override fun mapValue(mapValue: IResolvable) {
-        cdkBuilder.mapValue(mapValue.let(IResolvable::unwrap))
+        cdkBuilder.mapValue(mapValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1839,14 +1839,14 @@ public open class CfnComponentType(
        * @param implementedBy The data connector.
        */
       override fun implementedBy(implementedBy: IResolvable) {
-        cdkBuilder.implementedBy(implementedBy.let(IResolvable::unwrap))
+        cdkBuilder.implementedBy(implementedBy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param implementedBy The data connector.
        */
       override fun implementedBy(implementedBy: DataConnectorProperty) {
-        cdkBuilder.implementedBy(implementedBy.let(DataConnectorProperty::unwrap))
+        cdkBuilder.implementedBy(implementedBy.let(DataConnectorProperty.Companion::unwrap))
       }
 
       /**
@@ -2231,7 +2231,7 @@ public open class CfnComponentType(
        * property.
        */
       override fun configurations(configurations: IResolvable) {
-        cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
+        cdkBuilder.configurations(configurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2246,14 +2246,14 @@ public open class CfnComponentType(
        * @param dataType An object that specifies the data type of a property.
        */
       override fun dataType(dataType: IResolvable) {
-        cdkBuilder.dataType(dataType.let(IResolvable::unwrap))
+        cdkBuilder.dataType(dataType.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dataType An object that specifies the data type of a property.
        */
       override fun dataType(dataType: DataTypeProperty) {
-        cdkBuilder.dataType(dataType.let(DataTypeProperty::unwrap))
+        cdkBuilder.dataType(dataType.let(DataTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -2269,7 +2269,7 @@ public open class CfnComponentType(
        * external data store.
        */
       override fun defaultValue(defaultValue: IResolvable) {
-        cdkBuilder.defaultValue(defaultValue.let(IResolvable::unwrap))
+        cdkBuilder.defaultValue(defaultValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2277,7 +2277,7 @@ public open class CfnComponentType(
        * external data store.
        */
       override fun defaultValue(defaultValue: DataValueProperty) {
-        cdkBuilder.defaultValue(defaultValue.let(DataValueProperty::unwrap))
+        cdkBuilder.defaultValue(defaultValue.let(DataValueProperty.Companion::unwrap))
       }
 
       /**
@@ -2302,7 +2302,7 @@ public open class CfnComponentType(
        * external data source.
        */
       override fun isExternalId(isExternalId: IResolvable) {
-        cdkBuilder.isExternalId(isExternalId.let(IResolvable::unwrap))
+        cdkBuilder.isExternalId(isExternalId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2318,7 +2318,7 @@ public open class CfnComponentType(
        * in an entity.
        */
       override fun isRequiredInEntity(isRequiredInEntity: IResolvable) {
-        cdkBuilder.isRequiredInEntity(isRequiredInEntity.let(IResolvable::unwrap))
+        cdkBuilder.isRequiredInEntity(isRequiredInEntity.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2334,7 +2334,7 @@ public open class CfnComponentType(
        * externally.
        */
       override fun isStoredExternally(isStoredExternally: IResolvable) {
-        cdkBuilder.isStoredExternally(isStoredExternally.let(IResolvable::unwrap))
+        cdkBuilder.isStoredExternally(isStoredExternally.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2350,7 +2350,7 @@ public open class CfnComponentType(
        * series data.
        */
       override fun isTimeSeries(isTimeSeries: IResolvable) {
-        cdkBuilder.isTimeSeries(isTimeSeries.let(IResolvable::unwrap))
+        cdkBuilder.isTimeSeries(isTimeSeries.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2841,14 +2841,14 @@ public open class CfnComponentType(
        * @param error The component type error.
        */
       override fun error(error: IResolvable) {
-        cdkBuilder.error(error.let(IResolvable::unwrap))
+        cdkBuilder.error(error.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param error The component type error.
        */
       override fun error(error: ErrorProperty) {
-        cdkBuilder.error(error.let(ErrorProperty::unwrap))
+        cdkBuilder.error(error.let(ErrorProperty.Companion::unwrap))
       }
 
       /**

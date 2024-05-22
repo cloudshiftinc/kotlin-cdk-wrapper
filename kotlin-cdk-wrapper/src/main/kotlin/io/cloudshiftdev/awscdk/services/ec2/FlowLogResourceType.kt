@@ -54,7 +54,7 @@ public abstract class FlowLogResourceType(
         software.amazon.awscdk.services.ec2.FlowLogResourceType.fromNetworkInterfaceId(id).let(FlowLogResourceType::wrap)
 
     public fun fromSubnet(subnet: ISubnet): FlowLogResourceType =
-        software.amazon.awscdk.services.ec2.FlowLogResourceType.fromSubnet(subnet.let(ISubnet::unwrap)).let(FlowLogResourceType::wrap)
+        software.amazon.awscdk.services.ec2.FlowLogResourceType.fromSubnet(subnet.let(ISubnet.Companion::unwrap)).let(FlowLogResourceType::wrap)
 
     public fun fromTransitGatewayAttachmentId(id: String): FlowLogResourceType =
         software.amazon.awscdk.services.ec2.FlowLogResourceType.fromTransitGatewayAttachmentId(id).let(FlowLogResourceType::wrap)
@@ -63,7 +63,7 @@ public abstract class FlowLogResourceType(
         software.amazon.awscdk.services.ec2.FlowLogResourceType.fromTransitGatewayId(id).let(FlowLogResourceType::wrap)
 
     public fun fromVpc(vpc: IVpc): FlowLogResourceType =
-        software.amazon.awscdk.services.ec2.FlowLogResourceType.fromVpc(vpc.let(IVpc::unwrap)).let(FlowLogResourceType::wrap)
+        software.amazon.awscdk.services.ec2.FlowLogResourceType.fromVpc(vpc.let(IVpc.Companion::unwrap)).let(FlowLogResourceType::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.FlowLogResourceType):
         FlowLogResourceType = CdkObjectWrappers.wrap(cdkObject) as? FlowLogResourceType ?:

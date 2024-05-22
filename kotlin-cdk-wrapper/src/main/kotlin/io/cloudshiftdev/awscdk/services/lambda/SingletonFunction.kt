@@ -61,8 +61,8 @@ public open class SingletonFunction(
     id: String,
     props: SingletonFunctionProps,
   ) :
-      this(software.amazon.awscdk.services.lambda.SingletonFunction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SingletonFunctionProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.SingletonFunction(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SingletonFunctionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -109,7 +109,7 @@ public open class SingletonFunction(
     `value`: String,
     options: EnvironmentOptions,
   ): Function = unwrap(this).addEnvironment(key, `value`,
-      options.let(EnvironmentOptions::unwrap)).let(Function::wrap)
+      options.let(EnvironmentOptions.Companion::unwrap)).let(Function::wrap)
 
   /**
    * Adds an environment variable to this Lambda function.
@@ -145,7 +145,7 @@ public open class SingletonFunction(
    * @param permission 
    */
   public override fun addPermission(name: String, permission: Permission) {
-    unwrap(this).addPermission(name, permission.let(Permission::unwrap))
+    unwrap(this).addPermission(name, permission.let(Permission.Companion::unwrap))
   }
 
   /**
@@ -190,7 +190,7 @@ public open class SingletonFunction(
    * @param down 
    */
   public open fun dependOn(down: IConstruct) {
-    unwrap(this).dependOn(down.let(IConstruct::unwrap))
+    unwrap(this).dependOn(down.let(IConstruct.Companion::unwrap))
   }
 
   /**
@@ -998,7 +998,7 @@ public open class SingletonFunction(
      * instrumentation. 
      */
     override fun adotInstrumentation(adotInstrumentation: AdotInstrumentationConfig) {
-      cdkBuilder.adotInstrumentation(adotInstrumentation.let(AdotInstrumentationConfig::unwrap))
+      cdkBuilder.adotInstrumentation(adotInstrumentation.let(AdotInstrumentationConfig.Companion::unwrap))
     }
 
     /**
@@ -1067,7 +1067,7 @@ public open class SingletonFunction(
      * @param architecture The system architectures compatible with this lambda function. 
      */
     override fun architecture(architecture: Architecture) {
-      cdkBuilder.architecture(architecture.let(Architecture::unwrap))
+      cdkBuilder.architecture(architecture.let(Architecture.Companion::unwrap))
     }
 
     /**
@@ -1080,7 +1080,7 @@ public open class SingletonFunction(
      * @param code The source code of your Lambda function. 
      */
     override fun code(code: Code) {
-      cdkBuilder.code(code.let(Code::unwrap))
+      cdkBuilder.code(code.let(Code.Companion::unwrap))
     }
 
     /**
@@ -1091,7 +1091,7 @@ public open class SingletonFunction(
      * @param codeSigningConfig Code signing config associated with this function. 
      */
     override fun codeSigningConfig(codeSigningConfig: ICodeSigningConfig) {
-      cdkBuilder.codeSigningConfig(codeSigningConfig.let(ICodeSigningConfig::unwrap))
+      cdkBuilder.codeSigningConfig(codeSigningConfig.let(ICodeSigningConfig.Companion::unwrap))
     }
 
     /**
@@ -1104,7 +1104,7 @@ public open class SingletonFunction(
      * by the `fn.currentVersion` method. 
      */
     override fun currentVersionOptions(currentVersionOptions: VersionOptions) {
-      cdkBuilder.currentVersionOptions(currentVersionOptions.let(VersionOptions::unwrap))
+      cdkBuilder.currentVersionOptions(currentVersionOptions.let(VersionOptions.Companion::unwrap))
     }
 
     /**
@@ -1131,7 +1131,7 @@ public open class SingletonFunction(
      * @param deadLetterQueue The SQS queue to use if DLQ is enabled. 
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -1160,7 +1160,7 @@ public open class SingletonFunction(
      * @param deadLetterTopic The SNS topic to use as a DLQ. 
      */
     override fun deadLetterTopic(deadLetterTopic: ITopic) {
-      cdkBuilder.deadLetterTopic(deadLetterTopic.let(ITopic::unwrap))
+      cdkBuilder.deadLetterTopic(deadLetterTopic.let(ITopic.Companion::unwrap))
     }
 
     /**
@@ -1199,7 +1199,7 @@ public open class SingletonFunction(
      * environment variables. 
      */
     override fun environmentEncryption(environmentEncryption: IKey) {
-      cdkBuilder.environmentEncryption(environmentEncryption.let(IKey::unwrap))
+      cdkBuilder.environmentEncryption(environmentEncryption.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -1210,7 +1210,7 @@ public open class SingletonFunction(
      * @param ephemeralStorageSize The size of the function’s /tmp directory in MiB. 
      */
     override fun ephemeralStorageSize(ephemeralStorageSize: Size) {
-      cdkBuilder.ephemeralStorageSize(ephemeralStorageSize.let(Size::unwrap))
+      cdkBuilder.ephemeralStorageSize(ephemeralStorageSize.let(Size.Companion::unwrap))
     }
 
     /**
@@ -1223,7 +1223,7 @@ public open class SingletonFunction(
      * @param events Event sources for this function. 
      */
     override fun events(events: List<IEventSource>) {
-      cdkBuilder.events(events.map(IEventSource::unwrap))
+      cdkBuilder.events(events.map(IEventSource.Companion::unwrap))
     }
 
     /**
@@ -1245,7 +1245,7 @@ public open class SingletonFunction(
      * @param filesystem The filesystem configuration for the lambda function. 
      */
     override fun filesystem(filesystem: FileSystem) {
-      cdkBuilder.filesystem(filesystem.let(FileSystem::unwrap))
+      cdkBuilder.filesystem(filesystem.let(FileSystem.Companion::unwrap))
     }
 
     /**
@@ -1291,7 +1291,7 @@ public open class SingletonFunction(
      * @param initialPolicy Initial policy statements to add to the created Lambda Role. 
      */
     override fun initialPolicy(initialPolicy: List<PolicyStatement>) {
-      cdkBuilder.initialPolicy(initialPolicy.map(PolicyStatement::unwrap))
+      cdkBuilder.initialPolicy(initialPolicy.map(PolicyStatement.Companion::unwrap))
     }
 
     /**
@@ -1316,7 +1316,7 @@ public open class SingletonFunction(
      * monitoring. 
      */
     override fun insightsVersion(insightsVersion: LambdaInsightsVersion) {
-      cdkBuilder.insightsVersion(insightsVersion.let(LambdaInsightsVersion::unwrap))
+      cdkBuilder.insightsVersion(insightsVersion.let(LambdaInsightsVersion.Companion::unwrap))
     }
 
     /**
@@ -1361,7 +1361,7 @@ public open class SingletonFunction(
      * @param layers A list of layers to add to the function's execution environment. 
      */
     override fun layers(layers: List<ILayerVersion>) {
-      cdkBuilder.layers(layers.map(ILayerVersion::unwrap))
+      cdkBuilder.layers(layers.map(ILayerVersion.Companion::unwrap))
     }
 
     /**
@@ -1408,7 +1408,7 @@ public open class SingletonFunction(
      * @param logGroup The log group the function sends logs to. 
      */
     override fun logGroup(logGroup: ILogGroup) {
-      cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
+      cdkBuilder.logGroup(logGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -1438,7 +1438,7 @@ public open class SingletonFunction(
      * @param logRetention The number of days log events are kept in CloudWatch Logs. 
      */
     override fun logRetention(logRetention: RetentionDays) {
-      cdkBuilder.logRetention(logRetention.let(RetentionDays::unwrap))
+      cdkBuilder.logRetention(logRetention.let(RetentionDays.Companion::unwrap))
     }
 
     /**
@@ -1457,7 +1457,7 @@ public open class SingletonFunction(
      * to create the CloudWatch log group. 
      */
     override fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions) {
-      cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions.let(LogRetentionRetryOptions::unwrap))
+      cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions.let(LogRetentionRetryOptions.Companion::unwrap))
     }
 
     /**
@@ -1495,7 +1495,7 @@ public open class SingletonFunction(
      * resource that sets the retention policy. 
      */
     override fun logRetentionRole(logRetentionRole: IRole) {
-      cdkBuilder.logRetentionRole(logRetentionRole.let(IRole::unwrap))
+      cdkBuilder.logRetentionRole(logRetentionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -1506,7 +1506,7 @@ public open class SingletonFunction(
      * @param loggingFormat Sets the loggingFormat for the function. 
      */
     override fun loggingFormat(loggingFormat: LoggingFormat) {
-      cdkBuilder.loggingFormat(loggingFormat.let(LoggingFormat::unwrap))
+      cdkBuilder.loggingFormat(loggingFormat.let(LoggingFormat.Companion::unwrap))
     }
 
     /**
@@ -1521,7 +1521,7 @@ public open class SingletonFunction(
      * processing. 
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -1547,7 +1547,7 @@ public open class SingletonFunction(
      * @param onFailure The destination for failed invocations. 
      */
     override fun onFailure(onFailure: IDestination) {
-      cdkBuilder.onFailure(onFailure.let(IDestination::unwrap))
+      cdkBuilder.onFailure(onFailure.let(IDestination.Companion::unwrap))
     }
 
     /**
@@ -1558,7 +1558,7 @@ public open class SingletonFunction(
      * @param onSuccess The destination for successful invocations. 
      */
     override fun onSuccess(onSuccess: IDestination) {
-      cdkBuilder.onSuccess(onSuccess.let(IDestination::unwrap))
+      cdkBuilder.onSuccess(onSuccess.let(IDestination.Companion::unwrap))
     }
 
     /**
@@ -1570,7 +1570,7 @@ public open class SingletonFunction(
      * @param paramsAndSecrets Specify the configuration of Parameters and Secrets Extension. 
      */
     override fun paramsAndSecrets(paramsAndSecrets: ParamsAndSecretsLayerVersion) {
-      cdkBuilder.paramsAndSecrets(paramsAndSecrets.let(ParamsAndSecretsLayerVersion::unwrap))
+      cdkBuilder.paramsAndSecrets(paramsAndSecrets.let(ParamsAndSecretsLayerVersion.Companion::unwrap))
     }
 
     /**
@@ -1594,7 +1594,7 @@ public open class SingletonFunction(
      * @param profilingGroup Profiling Group. 
      */
     override fun profilingGroup(profilingGroup: IProfilingGroup) {
-      cdkBuilder.profilingGroup(profilingGroup.let(IProfilingGroup::unwrap))
+      cdkBuilder.profilingGroup(profilingGroup.let(IProfilingGroup.Companion::unwrap))
     }
 
     /**
@@ -1644,7 +1644,7 @@ public open class SingletonFunction(
      * @param role Lambda execution role. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -1658,7 +1658,7 @@ public open class SingletonFunction(
      * @param runtime The runtime environment for the Lambda function that you are uploading. 
      */
     override fun runtime(runtime: Runtime) {
-      cdkBuilder.runtime(runtime.let(Runtime::unwrap))
+      cdkBuilder.runtime(runtime.let(Runtime.Companion::unwrap))
     }
 
     /**
@@ -1670,7 +1670,7 @@ public open class SingletonFunction(
      * version. 
      */
     override fun runtimeManagementMode(runtimeManagementMode: RuntimeManagementMode) {
-      cdkBuilder.runtimeManagementMode(runtimeManagementMode.let(RuntimeManagementMode::unwrap))
+      cdkBuilder.runtimeManagementMode(runtimeManagementMode.let(RuntimeManagementMode.Companion::unwrap))
     }
 
     /**
@@ -1686,7 +1686,7 @@ public open class SingletonFunction(
      * interfaces. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -1714,7 +1714,7 @@ public open class SingletonFunction(
      * @param snapStart Enable SnapStart for Lambda Function. 
      */
     override fun snapStart(snapStart: SnapStartConf) {
-      cdkBuilder.snapStart(snapStart.let(SnapStartConf::unwrap))
+      cdkBuilder.snapStart(snapStart.let(SnapStartConf.Companion::unwrap))
     }
 
     /**
@@ -1740,7 +1740,7 @@ public open class SingletonFunction(
      * function. 
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -1751,7 +1751,7 @@ public open class SingletonFunction(
      * @param tracing Enable AWS X-Ray Tracing for Lambda Function. 
      */
     override fun tracing(tracing: Tracing) {
-      cdkBuilder.tracing(tracing.let(Tracing::unwrap))
+      cdkBuilder.tracing(tracing.let(Tracing.Companion::unwrap))
     }
 
     /**
@@ -1777,7 +1777,7 @@ public open class SingletonFunction(
      * @param vpc VPC network to place Lambda network interfaces. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -1794,7 +1794,7 @@ public open class SingletonFunction(
      * @param vpcSubnets Where to place the network interfaces within the VPC. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

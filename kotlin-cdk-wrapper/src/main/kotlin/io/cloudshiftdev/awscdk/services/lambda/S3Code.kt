@@ -25,14 +25,14 @@ public open class S3Code(
   cdkObject: software.amazon.awscdk.services.lambda.S3Code,
 ) : Code(cdkObject) {
   public constructor(bucket: IBucket, key: String) :
-      this(software.amazon.awscdk.services.lambda.S3Code(bucket.let(IBucket::unwrap), key)
+      this(software.amazon.awscdk.services.lambda.S3Code(bucket.let(IBucket.Companion::unwrap), key)
   )
 
   public constructor(
     bucket: IBucket,
     key: String,
     objectVersion: String,
-  ) : this(software.amazon.awscdk.services.lambda.S3Code(bucket.let(IBucket::unwrap), key,
+  ) : this(software.amazon.awscdk.services.lambda.S3Code(bucket.let(IBucket.Companion::unwrap), key,
       objectVersion)
   )
 
@@ -43,7 +43,7 @@ public open class S3Code(
    * @param _scope 
    */
   public override fun bind(scope: Construct): CodeConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(CodeConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(CodeConfig::wrap)
 
   /**
    * Determines whether this Code is inline code or not.

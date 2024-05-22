@@ -33,8 +33,8 @@ public open class GitHubSourceCredentials(
     id: String,
     props: GitHubSourceCredentialsProps,
   ) :
-      this(software.amazon.awscdk.services.codebuild.GitHubSourceCredentials(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(GitHubSourceCredentialsProps::unwrap))
+      this(software.amazon.awscdk.services.codebuild.GitHubSourceCredentials(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(GitHubSourceCredentialsProps.Companion::unwrap))
   )
 
   public constructor(
@@ -71,7 +71,7 @@ public open class GitHubSourceCredentials(
      * @param accessToken The personal access token to use when contacting the GitHub API. 
      */
     override fun accessToken(accessToken: SecretValue) {
-      cdkBuilder.accessToken(accessToken.let(SecretValue::unwrap))
+      cdkBuilder.accessToken(accessToken.let(SecretValue.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codebuild.GitHubSourceCredentials =

@@ -247,7 +247,7 @@ public interface CfnStorageSystemProps {
      * with the management interface of your on-premises storage system. 
      */
     override fun serverConfiguration(serverConfiguration: IResolvable) {
-      cdkBuilder.serverConfiguration(serverConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.serverConfiguration(serverConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -256,7 +256,7 @@ public interface CfnStorageSystemProps {
      */
     override
         fun serverConfiguration(serverConfiguration: CfnStorageSystem.ServerConfigurationProperty) {
-      cdkBuilder.serverConfiguration(serverConfiguration.let(CfnStorageSystem.ServerConfigurationProperty::unwrap))
+      cdkBuilder.serverConfiguration(serverConfiguration.let(CfnStorageSystem.ServerConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -275,7 +275,7 @@ public interface CfnStorageSystemProps {
      * storage system's management interface.
      */
     override fun serverCredentials(serverCredentials: IResolvable) {
-      cdkBuilder.serverCredentials(serverCredentials.let(IResolvable::unwrap))
+      cdkBuilder.serverCredentials(serverCredentials.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -283,7 +283,7 @@ public interface CfnStorageSystemProps {
      * storage system's management interface.
      */
     override fun serverCredentials(serverCredentials: CfnStorageSystem.ServerCredentialsProperty) {
-      cdkBuilder.serverCredentials(serverCredentials.let(CfnStorageSystem.ServerCredentialsProperty::unwrap))
+      cdkBuilder.serverCredentials(serverCredentials.let(CfnStorageSystem.ServerCredentialsProperty.Companion::unwrap))
     }
 
     /**
@@ -313,7 +313,7 @@ public interface CfnStorageSystemProps {
      * We recommend creating at least a name tag for your on-premises storage system.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

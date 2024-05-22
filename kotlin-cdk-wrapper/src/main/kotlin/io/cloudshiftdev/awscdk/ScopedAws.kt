@@ -26,7 +26,7 @@ public open class ScopedAws(
   cdkObject: software.amazon.awscdk.ScopedAws,
 ) : CdkObject(cdkObject) {
   public constructor(scope: Construct) :
-      this(software.amazon.awscdk.ScopedAws(scope.let(Construct::unwrap))
+      this(software.amazon.awscdk.ScopedAws(scope.let(Construct.Companion::unwrap))
   )
 
   /**

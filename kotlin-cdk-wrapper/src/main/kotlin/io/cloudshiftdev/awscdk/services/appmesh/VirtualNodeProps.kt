@@ -120,7 +120,7 @@ public interface VirtualNodeProps : VirtualNodeBaseProps {
      * @param accessLog Access Logging Configuration for the virtual node.
      */
     override fun accessLog(accessLog: AccessLog) {
-      cdkBuilder.accessLog(accessLog.let(AccessLog::unwrap))
+      cdkBuilder.accessLog(accessLog.let(AccessLog.Companion::unwrap))
     }
 
     /**
@@ -128,7 +128,7 @@ public interface VirtualNodeProps : VirtualNodeBaseProps {
      * Service.
      */
     override fun backendDefaults(backendDefaults: BackendDefaults) {
-      cdkBuilder.backendDefaults(backendDefaults.let(BackendDefaults::unwrap))
+      cdkBuilder.backendDefaults(backendDefaults.let(BackendDefaults.Companion::unwrap))
     }
 
     /**
@@ -144,7 +144,7 @@ public interface VirtualNodeProps : VirtualNodeBaseProps {
      * @param backends Virtual Services that this is node expected to send outbound traffic to.
      */
     override fun backends(backends: List<Backend>) {
-      cdkBuilder.backends(backends.map(Backend::unwrap))
+      cdkBuilder.backends(backends.map(Backend.Companion::unwrap))
     }
 
     /**
@@ -156,7 +156,7 @@ public interface VirtualNodeProps : VirtualNodeBaseProps {
      * @param listeners Initial listener for the virtual node.
      */
     override fun listeners(listeners: List<VirtualNodeListener>) {
-      cdkBuilder.listeners(listeners.map(VirtualNodeListener::unwrap))
+      cdkBuilder.listeners(listeners.map(VirtualNodeListener.Companion::unwrap))
     }
 
     /**
@@ -169,14 +169,14 @@ public interface VirtualNodeProps : VirtualNodeBaseProps {
      * @param mesh The Mesh which the VirtualNode belongs to. 
      */
     override fun mesh(mesh: IMesh) {
-      cdkBuilder.mesh(mesh.let(IMesh::unwrap))
+      cdkBuilder.mesh(mesh.let(IMesh.Companion::unwrap))
     }
 
     /**
      * @param serviceDiscovery Defines how upstream clients will discover this VirtualNode.
      */
     override fun serviceDiscovery(serviceDiscovery: ServiceDiscovery) {
-      cdkBuilder.serviceDiscovery(serviceDiscovery.let(ServiceDiscovery::unwrap))
+      cdkBuilder.serviceDiscovery(serviceDiscovery.let(ServiceDiscovery.Companion::unwrap))
     }
 
     /**

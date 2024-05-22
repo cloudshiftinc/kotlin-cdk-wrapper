@@ -549,7 +549,7 @@ public interface CfnPipeProps {
      * @param enrichmentParameters The parameters required to set up enrichment on your pipe.
      */
     override fun enrichmentParameters(enrichmentParameters: IResolvable) {
-      cdkBuilder.enrichmentParameters(enrichmentParameters.let(IResolvable::unwrap))
+      cdkBuilder.enrichmentParameters(enrichmentParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -557,7 +557,7 @@ public interface CfnPipeProps {
      */
     override
         fun enrichmentParameters(enrichmentParameters: CfnPipe.PipeEnrichmentParametersProperty) {
-      cdkBuilder.enrichmentParameters(enrichmentParameters.let(CfnPipe.PipeEnrichmentParametersProperty::unwrap))
+      cdkBuilder.enrichmentParameters(enrichmentParameters.let(CfnPipe.PipeEnrichmentParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -573,14 +573,14 @@ public interface CfnPipeProps {
      * @param logConfiguration The logging configuration settings for the pipe.
      */
     override fun logConfiguration(logConfiguration: IResolvable) {
-      cdkBuilder.logConfiguration(logConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.logConfiguration(logConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param logConfiguration The logging configuration settings for the pipe.
      */
     override fun logConfiguration(logConfiguration: CfnPipe.PipeLogConfigurationProperty) {
-      cdkBuilder.logConfiguration(logConfiguration.let(CfnPipe.PipeLogConfigurationProperty::unwrap))
+      cdkBuilder.logConfiguration(logConfiguration.let(CfnPipe.PipeLogConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -617,14 +617,14 @@ public interface CfnPipeProps {
      * @param sourceParameters The parameters required to set up a source for your pipe.
      */
     override fun sourceParameters(sourceParameters: IResolvable) {
-      cdkBuilder.sourceParameters(sourceParameters.let(IResolvable::unwrap))
+      cdkBuilder.sourceParameters(sourceParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param sourceParameters The parameters required to set up a source for your pipe.
      */
     override fun sourceParameters(sourceParameters: CfnPipe.PipeSourceParametersProperty) {
-      cdkBuilder.sourceParameters(sourceParameters.let(CfnPipe.PipeSourceParametersProperty::unwrap))
+      cdkBuilder.sourceParameters(sourceParameters.let(CfnPipe.PipeSourceParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -658,7 +658,7 @@ public interface CfnPipeProps {
      * in the *Amazon EventBridge User Guide* .
      */
     override fun targetParameters(targetParameters: IResolvable) {
-      cdkBuilder.targetParameters(targetParameters.let(IResolvable::unwrap))
+      cdkBuilder.targetParameters(targetParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -669,7 +669,7 @@ public interface CfnPipeProps {
      * in the *Amazon EventBridge User Guide* .
      */
     override fun targetParameters(targetParameters: CfnPipe.PipeTargetParametersProperty) {
-      cdkBuilder.targetParameters(targetParameters.let(CfnPipe.PipeTargetParametersProperty::unwrap))
+      cdkBuilder.targetParameters(targetParameters.let(CfnPipe.PipeTargetParametersProperty.Companion::unwrap))
     }
 
     /**

@@ -249,7 +249,7 @@ public interface LaunchTemplateOverrides {
      */
     override
         fun instanceRequirements(instanceRequirements: CfnAutoScalingGroup.InstanceRequirementsProperty) {
-      cdkBuilder.instanceRequirements(instanceRequirements.let(CfnAutoScalingGroup.InstanceRequirementsProperty::unwrap))
+      cdkBuilder.instanceRequirements(instanceRequirements.let(CfnAutoScalingGroup.InstanceRequirementsProperty.Companion::unwrap))
     }
 
     /**
@@ -279,7 +279,7 @@ public interface LaunchTemplateOverrides {
      * You must specify one of instanceRequirements or instanceType.
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -291,7 +291,7 @@ public interface LaunchTemplateOverrides {
      * that's defined for your mixed instances policy.
      */
     override fun launchTemplate(launchTemplate: ILaunchTemplate) {
-      cdkBuilder.launchTemplate(launchTemplate.let(ILaunchTemplate::unwrap))
+      cdkBuilder.launchTemplate(launchTemplate.let(ILaunchTemplate.Companion::unwrap))
     }
 
     /**

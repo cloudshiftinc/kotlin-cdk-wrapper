@@ -71,8 +71,8 @@ public open class CfnNotebookInstance(
     id: String,
     props: CfnNotebookInstanceProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnNotebookInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnNotebookInstanceProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnNotebookInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnNotebookInstanceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -160,7 +160,7 @@ public open class CfnNotebookInstance(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -173,7 +173,7 @@ public open class CfnNotebookInstance(
    * Information on the IMDS configuration of the notebook instance.
    */
   public open fun instanceMetadataServiceConfiguration(`value`: IResolvable) {
-    unwrap(this).setInstanceMetadataServiceConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInstanceMetadataServiceConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -181,7 +181,7 @@ public open class CfnNotebookInstance(
    */
   public open
       fun instanceMetadataServiceConfiguration(`value`: InstanceMetadataServiceConfigurationProperty) {
-    unwrap(this).setInstanceMetadataServiceConfiguration(`value`.let(InstanceMetadataServiceConfigurationProperty::unwrap))
+    unwrap(this).setInstanceMetadataServiceConfiguration(`value`.let(InstanceMetadataServiceConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -334,7 +334,7 @@ public open class CfnNotebookInstance(
    * A list of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -793,7 +793,7 @@ public open class CfnNotebookInstance(
      */
     override
         fun instanceMetadataServiceConfiguration(instanceMetadataServiceConfiguration: IResolvable) {
-      cdkBuilder.instanceMetadataServiceConfiguration(instanceMetadataServiceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.instanceMetadataServiceConfiguration(instanceMetadataServiceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -805,7 +805,7 @@ public open class CfnNotebookInstance(
      */
     override
         fun instanceMetadataServiceConfiguration(instanceMetadataServiceConfiguration: InstanceMetadataServiceConfigurationProperty) {
-      cdkBuilder.instanceMetadataServiceConfiguration(instanceMetadataServiceConfiguration.let(InstanceMetadataServiceConfigurationProperty::unwrap))
+      cdkBuilder.instanceMetadataServiceConfiguration(instanceMetadataServiceConfiguration.let(InstanceMetadataServiceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -979,7 +979,7 @@ public open class CfnNotebookInstance(
      * @param tags A list of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

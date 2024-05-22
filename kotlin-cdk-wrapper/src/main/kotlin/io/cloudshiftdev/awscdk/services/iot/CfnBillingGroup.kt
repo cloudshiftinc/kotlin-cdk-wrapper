@@ -51,7 +51,7 @@ public open class CfnBillingGroup(
   cdkObject: software.amazon.awscdk.services.iot.CfnBillingGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.iot.CfnBillingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.iot.CfnBillingGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -60,8 +60,8 @@ public open class CfnBillingGroup(
     id: String,
     props: CfnBillingGroupProps,
   ) :
-      this(software.amazon.awscdk.services.iot.CfnBillingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnBillingGroupProps::unwrap))
+      this(software.amazon.awscdk.services.iot.CfnBillingGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnBillingGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -102,14 +102,14 @@ public open class CfnBillingGroup(
    * The properties of the billing group.
    */
   public open fun billingGroupProperties(`value`: IResolvable) {
-    unwrap(this).setBillingGroupProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBillingGroupProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The properties of the billing group.
    */
   public open fun billingGroupProperties(`value`: BillingGroupPropertiesProperty) {
-    unwrap(this).setBillingGroupProperties(`value`.let(BillingGroupPropertiesProperty::unwrap))
+    unwrap(this).setBillingGroupProperties(`value`.let(BillingGroupPropertiesProperty.Companion::unwrap))
   }
 
   /**
@@ -127,7 +127,7 @@ public open class CfnBillingGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -145,7 +145,7 @@ public open class CfnBillingGroup(
    * Metadata which can be used to manage the billing group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -234,7 +234,7 @@ public open class CfnBillingGroup(
      * @param billingGroupProperties The properties of the billing group. 
      */
     override fun billingGroupProperties(billingGroupProperties: IResolvable) {
-      cdkBuilder.billingGroupProperties(billingGroupProperties.let(IResolvable::unwrap))
+      cdkBuilder.billingGroupProperties(billingGroupProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -244,7 +244,7 @@ public open class CfnBillingGroup(
      * @param billingGroupProperties The properties of the billing group. 
      */
     override fun billingGroupProperties(billingGroupProperties: BillingGroupPropertiesProperty) {
-      cdkBuilder.billingGroupProperties(billingGroupProperties.let(BillingGroupPropertiesProperty::unwrap))
+      cdkBuilder.billingGroupProperties(billingGroupProperties.let(BillingGroupPropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -266,7 +266,7 @@ public open class CfnBillingGroup(
      * @param tags Metadata which can be used to manage the billing group. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

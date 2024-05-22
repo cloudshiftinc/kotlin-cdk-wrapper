@@ -197,7 +197,7 @@ public interface BasicStepScalingPolicyProps {
      * @param adjustmentType How the adjustment numbers inside 'intervals' are interpreted.
      */
     override fun adjustmentType(adjustmentType: AdjustmentType) {
-      cdkBuilder.adjustmentType(adjustmentType.let(AdjustmentType::unwrap))
+      cdkBuilder.adjustmentType(adjustmentType.let(AdjustmentType.Companion::unwrap))
     }
 
     /**
@@ -208,7 +208,7 @@ public interface BasicStepScalingPolicyProps {
      * Subsequent scale ins during the cooldown period are ignored.
      */
     override fun cooldown(cooldown: Duration) {
-      cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
+      cdkBuilder.cooldown(cooldown.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -240,7 +240,7 @@ public interface BasicStepScalingPolicyProps {
      * @param metric Metric to scale on. 
      */
     override fun metric(metric: IMetric) {
-      cdkBuilder.metric(metric.let(IMetric::unwrap))
+      cdkBuilder.metric(metric.let(IMetric.Companion::unwrap))
     }
 
     /**
@@ -249,7 +249,7 @@ public interface BasicStepScalingPolicyProps {
      * Only has meaning if `evaluationPeriods != 1`.
      */
     override fun metricAggregationType(metricAggregationType: MetricAggregationType) {
-      cdkBuilder.metricAggregationType(metricAggregationType.let(MetricAggregationType::unwrap))
+      cdkBuilder.metricAggregationType(metricAggregationType.let(MetricAggregationType.Companion::unwrap))
     }
 
     /**
@@ -269,7 +269,7 @@ public interface BasicStepScalingPolicyProps {
      * Must be between 2 and 40 steps.
      */
     override fun scalingSteps(scalingSteps: List<ScalingInterval>) {
-      cdkBuilder.scalingSteps(scalingSteps.map(ScalingInterval::unwrap))
+      cdkBuilder.scalingSteps(scalingSteps.map(ScalingInterval.Companion::unwrap))
     }
 
     /**

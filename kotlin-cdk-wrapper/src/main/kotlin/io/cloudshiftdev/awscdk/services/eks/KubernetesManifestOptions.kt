@@ -135,7 +135,7 @@ public interface KubernetesManifestOptions {
      * Only applicable if `ingressAlb` is set to `true`.
      */
     override fun ingressAlbScheme(ingressAlbScheme: AlbScheme) {
-      cdkBuilder.ingressAlbScheme(ingressAlbScheme.let(AlbScheme::unwrap))
+      cdkBuilder.ingressAlbScheme(ingressAlbScheme.let(AlbScheme.Companion::unwrap))
     }
 
     /**

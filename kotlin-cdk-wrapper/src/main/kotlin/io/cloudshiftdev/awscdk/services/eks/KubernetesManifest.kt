@@ -44,8 +44,8 @@ public open class KubernetesManifest(
     id: String,
     props: KubernetesManifestProps,
   ) :
-      this(software.amazon.awscdk.services.eks.KubernetesManifest(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(KubernetesManifestProps::unwrap))
+      this(software.amazon.awscdk.services.eks.KubernetesManifest(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(KubernetesManifestProps.Companion::unwrap))
   )
 
   public constructor(
@@ -207,7 +207,7 @@ public open class KubernetesManifest(
      * @param cluster The EKS cluster to apply this manifest to. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -234,7 +234,7 @@ public open class KubernetesManifest(
      * 
      */
     override fun ingressAlbScheme(ingressAlbScheme: AlbScheme) {
-      cdkBuilder.ingressAlbScheme(ingressAlbScheme.let(AlbScheme::unwrap))
+      cdkBuilder.ingressAlbScheme(ingressAlbScheme.let(AlbScheme.Companion::unwrap))
     }
 
     /**

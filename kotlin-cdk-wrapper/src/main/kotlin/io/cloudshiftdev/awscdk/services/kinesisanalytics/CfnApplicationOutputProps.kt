@@ -123,7 +123,7 @@ public interface CfnApplicationOutputProps {
      * function), and record the formation to use when writing to the destination.
      */
     override fun output(output: IResolvable) {
-      cdkBuilder.output(output.let(IResolvable::unwrap))
+      cdkBuilder.output(output.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -133,7 +133,7 @@ public interface CfnApplicationOutputProps {
      * function), and record the formation to use when writing to the destination.
      */
     override fun output(output: CfnApplicationOutput.OutputProperty) {
-      cdkBuilder.output(output.let(CfnApplicationOutput.OutputProperty::unwrap))
+      cdkBuilder.output(output.let(CfnApplicationOutput.OutputProperty.Companion::unwrap))
     }
 
     /**

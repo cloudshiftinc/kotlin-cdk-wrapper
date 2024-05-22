@@ -200,14 +200,14 @@ public interface GitHubSourceActionProps : CommonActionProps {
      * * **admin:repo_hook** - if you plan to use webhooks (true by default)
      */
     override fun oauthToken(oauthToken: SecretValue) {
-      cdkBuilder.oauthToken(oauthToken.let(SecretValue::unwrap))
+      cdkBuilder.oauthToken(oauthToken.let(SecretValue.Companion::unwrap))
     }
 
     /**
      * @param output the value to be set. 
      */
     override fun output(output: Artifact) {
-      cdkBuilder.output(output.let(Artifact::unwrap))
+      cdkBuilder.output(output.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -242,7 +242,7 @@ public interface GitHubSourceActionProps : CommonActionProps {
      * **admin:repo_hook** scope (in addition to the regular **repo** scope).
      */
     override fun trigger(trigger: GitHubTrigger) {
-      cdkBuilder.trigger(trigger.let(GitHubTrigger::unwrap))
+      cdkBuilder.trigger(trigger.let(GitHubTrigger.Companion::unwrap))
     }
 
     /**

@@ -127,8 +127,8 @@ public open class CfnDeployment(
     id: String,
     props: CfnDeploymentProps,
   ) :
-      this(software.amazon.awscdk.services.greengrassv2.CfnDeployment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDeploymentProps::unwrap))
+      this(software.amazon.awscdk.services.greengrassv2.CfnDeployment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDeploymentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -152,7 +152,7 @@ public open class CfnDeployment(
    * The components to deploy.
    */
   public open fun components(`value`: IResolvable) {
-    unwrap(this).setComponents(`value`.let(IResolvable::unwrap))
+    unwrap(this).setComponents(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -183,14 +183,14 @@ public open class CfnDeployment(
    * The deployment policies for the deployment.
    */
   public open fun deploymentPolicies(`value`: IResolvable) {
-    unwrap(this).setDeploymentPolicies(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeploymentPolicies(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The deployment policies for the deployment.
    */
   public open fun deploymentPolicies(`value`: DeploymentPoliciesProperty) {
-    unwrap(this).setDeploymentPolicies(`value`.let(DeploymentPoliciesProperty::unwrap))
+    unwrap(this).setDeploymentPolicies(`value`.let(DeploymentPoliciesProperty.Companion::unwrap))
   }
 
   /**
@@ -207,7 +207,7 @@ public open class CfnDeployment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -219,14 +219,14 @@ public open class CfnDeployment(
    * The job configuration for the deployment configuration.
    */
   public open fun iotJobConfiguration(`value`: IResolvable) {
-    unwrap(this).setIotJobConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIotJobConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The job configuration for the deployment configuration.
    */
   public open fun iotJobConfiguration(`value`: DeploymentIoTJobConfigurationProperty) {
-    unwrap(this).setIotJobConfiguration(`value`.let(DeploymentIoTJobConfigurationProperty::unwrap))
+    unwrap(this).setIotJobConfiguration(`value`.let(DeploymentIoTJobConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -446,7 +446,7 @@ public open class CfnDeployment(
      * @param components The components to deploy. 
      */
     override fun components(components: IResolvable) {
-      cdkBuilder.components(components.let(IResolvable::unwrap))
+      cdkBuilder.components(components.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -481,7 +481,7 @@ public open class CfnDeployment(
      * @param deploymentPolicies The deployment policies for the deployment. 
      */
     override fun deploymentPolicies(deploymentPolicies: IResolvable) {
-      cdkBuilder.deploymentPolicies(deploymentPolicies.let(IResolvable::unwrap))
+      cdkBuilder.deploymentPolicies(deploymentPolicies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -493,7 +493,7 @@ public open class CfnDeployment(
      * @param deploymentPolicies The deployment policies for the deployment. 
      */
     override fun deploymentPolicies(deploymentPolicies: DeploymentPoliciesProperty) {
-      cdkBuilder.deploymentPolicies(deploymentPolicies.let(DeploymentPoliciesProperty::unwrap))
+      cdkBuilder.deploymentPolicies(deploymentPolicies.let(DeploymentPoliciesProperty.Companion::unwrap))
     }
 
     /**
@@ -520,7 +520,7 @@ public open class CfnDeployment(
      * @param iotJobConfiguration The job configuration for the deployment configuration. 
      */
     override fun iotJobConfiguration(iotJobConfiguration: IResolvable) {
-      cdkBuilder.iotJobConfiguration(iotJobConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.iotJobConfiguration(iotJobConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -533,7 +533,7 @@ public open class CfnDeployment(
      * @param iotJobConfiguration The job configuration for the deployment configuration. 
      */
     override fun iotJobConfiguration(iotJobConfiguration: DeploymentIoTJobConfigurationProperty) {
-      cdkBuilder.iotJobConfiguration(iotJobConfiguration.let(DeploymentIoTJobConfigurationProperty::unwrap))
+      cdkBuilder.iotJobConfiguration(iotJobConfiguration.let(DeploymentIoTJobConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -997,7 +997,7 @@ public open class CfnDeployment(
        * .
        */
       override fun configurationUpdate(configurationUpdate: IResolvable) {
-        cdkBuilder.configurationUpdate(configurationUpdate.let(IResolvable::unwrap))
+        cdkBuilder.configurationUpdate(configurationUpdate.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1011,7 +1011,7 @@ public open class CfnDeployment(
        * .
        */
       override fun configurationUpdate(configurationUpdate: ComponentConfigurationUpdateProperty) {
-        cdkBuilder.configurationUpdate(configurationUpdate.let(ComponentConfigurationUpdateProperty::unwrap))
+        cdkBuilder.configurationUpdate(configurationUpdate.let(ComponentConfigurationUpdateProperty.Companion::unwrap))
       }
 
       /**
@@ -1039,7 +1039,7 @@ public open class CfnDeployment(
        * in the *AWS IoT Greengrass V2 Developer Guide* .
        */
       override fun runWith(runWith: IResolvable) {
-        cdkBuilder.runWith(runWith.let(IResolvable::unwrap))
+        cdkBuilder.runWith(runWith.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1051,7 +1051,7 @@ public open class CfnDeployment(
        * in the *AWS IoT Greengrass V2 Developer Guide* .
        */
       override fun runWith(runWith: ComponentRunWithProperty) {
-        cdkBuilder.runWith(runWith.let(ComponentRunWithProperty::unwrap))
+        cdkBuilder.runWith(runWith.let(ComponentRunWithProperty.Companion::unwrap))
       }
 
       /**
@@ -1296,7 +1296,7 @@ public open class CfnDeployment(
        * .
        */
       override fun systemResourceLimits(systemResourceLimits: IResolvable) {
-        cdkBuilder.systemResourceLimits(systemResourceLimits.let(IResolvable::unwrap))
+        cdkBuilder.systemResourceLimits(systemResourceLimits.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1311,7 +1311,7 @@ public open class CfnDeployment(
        * .
        */
       override fun systemResourceLimits(systemResourceLimits: SystemResourceLimitsProperty) {
-        cdkBuilder.systemResourceLimits(systemResourceLimits.let(SystemResourceLimitsProperty::unwrap))
+        cdkBuilder.systemResourceLimits(systemResourceLimits.let(SystemResourceLimitsProperty.Companion::unwrap))
       }
 
       /**
@@ -1871,7 +1871,7 @@ public open class CfnDeployment(
        * This configuration defines when and how to stop a job rollout.
        */
       override fun abortConfig(abortConfig: IResolvable) {
-        cdkBuilder.abortConfig(abortConfig.let(IResolvable::unwrap))
+        cdkBuilder.abortConfig(abortConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1879,7 +1879,7 @@ public open class CfnDeployment(
        * This configuration defines when and how to stop a job rollout.
        */
       override fun abortConfig(abortConfig: IoTJobAbortConfigProperty) {
-        cdkBuilder.abortConfig(abortConfig.let(IoTJobAbortConfigProperty::unwrap))
+        cdkBuilder.abortConfig(abortConfig.let(IoTJobAbortConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1897,7 +1897,7 @@ public open class CfnDeployment(
        * devices.
        */
       override fun jobExecutionsRolloutConfig(jobExecutionsRolloutConfig: IResolvable) {
-        cdkBuilder.jobExecutionsRolloutConfig(jobExecutionsRolloutConfig.let(IResolvable::unwrap))
+        cdkBuilder.jobExecutionsRolloutConfig(jobExecutionsRolloutConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1907,7 +1907,7 @@ public open class CfnDeployment(
        */
       override
           fun jobExecutionsRolloutConfig(jobExecutionsRolloutConfig: IoTJobExecutionsRolloutConfigProperty) {
-        cdkBuilder.jobExecutionsRolloutConfig(jobExecutionsRolloutConfig.let(IoTJobExecutionsRolloutConfigProperty::unwrap))
+        cdkBuilder.jobExecutionsRolloutConfig(jobExecutionsRolloutConfig.let(IoTJobExecutionsRolloutConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1927,7 +1927,7 @@ public open class CfnDeployment(
        * This configuration defines the amount of time each device has to complete the job.
        */
       override fun timeoutConfig(timeoutConfig: IResolvable) {
-        cdkBuilder.timeoutConfig(timeoutConfig.let(IResolvable::unwrap))
+        cdkBuilder.timeoutConfig(timeoutConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1935,7 +1935,7 @@ public open class CfnDeployment(
        * This configuration defines the amount of time each device has to complete the job.
        */
       override fun timeoutConfig(timeoutConfig: IoTJobTimeoutConfigProperty) {
-        cdkBuilder.timeoutConfig(timeoutConfig.let(IoTJobTimeoutConfigProperty::unwrap))
+        cdkBuilder.timeoutConfig(timeoutConfig.let(IoTJobTimeoutConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2128,7 +2128,7 @@ public open class CfnDeployment(
        * This policy defines when it's safe to deploy the configuration to devices.
        */
       override fun componentUpdatePolicy(componentUpdatePolicy: IResolvable) {
-        cdkBuilder.componentUpdatePolicy(componentUpdatePolicy.let(IResolvable::unwrap))
+        cdkBuilder.componentUpdatePolicy(componentUpdatePolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2137,7 +2137,7 @@ public open class CfnDeployment(
        */
       override
           fun componentUpdatePolicy(componentUpdatePolicy: DeploymentComponentUpdatePolicyProperty) {
-        cdkBuilder.componentUpdatePolicy(componentUpdatePolicy.let(DeploymentComponentUpdatePolicyProperty::unwrap))
+        cdkBuilder.componentUpdatePolicy(componentUpdatePolicy.let(DeploymentComponentUpdatePolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -2157,7 +2157,7 @@ public open class CfnDeployment(
        * This policy defines how long each component has to validate its configure updates.
        */
       override fun configurationValidationPolicy(configurationValidationPolicy: IResolvable) {
-        cdkBuilder.configurationValidationPolicy(configurationValidationPolicy.let(IResolvable::unwrap))
+        cdkBuilder.configurationValidationPolicy(configurationValidationPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2167,7 +2167,7 @@ public open class CfnDeployment(
        */
       override
           fun configurationValidationPolicy(configurationValidationPolicy: DeploymentConfigurationValidationPolicyProperty) {
-        cdkBuilder.configurationValidationPolicy(configurationValidationPolicy.let(DeploymentConfigurationValidationPolicyProperty::unwrap))
+        cdkBuilder.configurationValidationPolicy(configurationValidationPolicy.let(DeploymentConfigurationValidationPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -2311,7 +2311,7 @@ public open class CfnDeployment(
        * configuration deployment. 
        */
       override fun criteriaList(criteriaList: IResolvable) {
-        cdkBuilder.criteriaList(criteriaList.let(IResolvable::unwrap))
+        cdkBuilder.criteriaList(criteriaList.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2626,14 +2626,14 @@ public open class CfnDeployment(
        * @param exponentialRate The exponential rate to increase the job rollout rate.
        */
       override fun exponentialRate(exponentialRate: IResolvable) {
-        cdkBuilder.exponentialRate(exponentialRate.let(IResolvable::unwrap))
+        cdkBuilder.exponentialRate(exponentialRate.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param exponentialRate The exponential rate to increase the job rollout rate.
        */
       override fun exponentialRate(exponentialRate: IoTJobExponentialRolloutRateProperty) {
-        cdkBuilder.exponentialRate(exponentialRate.let(IoTJobExponentialRolloutRateProperty::unwrap))
+        cdkBuilder.exponentialRate(exponentialRate.let(IoTJobExponentialRolloutRateProperty.Companion::unwrap))
       }
 
       /**

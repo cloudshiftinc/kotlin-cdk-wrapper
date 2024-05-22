@@ -140,8 +140,8 @@ public open class CfnService(
     id: String,
     props: CfnServiceProps,
   ) :
-      this(software.amazon.awscdk.services.apprunner.CfnService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnServiceProps::unwrap))
+      this(software.amazon.awscdk.services.apprunner.CfnService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnServiceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -207,7 +207,7 @@ public open class CfnService(
    * repository that it maintains and your service logs.
    */
   public open fun encryptionConfiguration(`value`: IResolvable) {
-    unwrap(this).setEncryptionConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEncryptionConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -215,7 +215,7 @@ public open class CfnService(
    * repository that it maintains and your service logs.
    */
   public open fun encryptionConfiguration(`value`: EncryptionConfigurationProperty) {
-    unwrap(this).setEncryptionConfiguration(`value`.let(EncryptionConfigurationProperty::unwrap))
+    unwrap(this).setEncryptionConfiguration(`value`.let(EncryptionConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -239,7 +239,7 @@ public open class CfnService(
    * Runner service.
    */
   public open fun healthCheckConfiguration(`value`: IResolvable) {
-    unwrap(this).setHealthCheckConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHealthCheckConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -247,7 +247,7 @@ public open class CfnService(
    * Runner service.
    */
   public open fun healthCheckConfiguration(`value`: HealthCheckConfigurationProperty) {
-    unwrap(this).setHealthCheckConfiguration(`value`.let(HealthCheckConfigurationProperty::unwrap))
+    unwrap(this).setHealthCheckConfiguration(`value`.let(HealthCheckConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -266,7 +266,7 @@ public open class CfnService(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -278,14 +278,14 @@ public open class CfnService(
    * The runtime configuration of instances (scaling units) of your service.
    */
   public open fun instanceConfiguration(`value`: IResolvable) {
-    unwrap(this).setInstanceConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInstanceConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The runtime configuration of instances (scaling units) of your service.
    */
   public open fun instanceConfiguration(`value`: InstanceConfigurationProperty) {
-    unwrap(this).setInstanceConfiguration(`value`.let(InstanceConfigurationProperty::unwrap))
+    unwrap(this).setInstanceConfiguration(`value`.let(InstanceConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -307,7 +307,7 @@ public open class CfnService(
    * service runs.
    */
   public open fun networkConfiguration(`value`: IResolvable) {
-    unwrap(this).setNetworkConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNetworkConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -315,7 +315,7 @@ public open class CfnService(
    * service runs.
    */
   public open fun networkConfiguration(`value`: NetworkConfigurationProperty) {
-    unwrap(this).setNetworkConfiguration(`value`.let(NetworkConfigurationProperty::unwrap))
+    unwrap(this).setNetworkConfiguration(`value`.let(NetworkConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -336,14 +336,14 @@ public open class CfnService(
    * The observability configuration of your service.
    */
   public open fun observabilityConfiguration(`value`: IResolvable) {
-    unwrap(this).setObservabilityConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setObservabilityConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The observability configuration of your service.
    */
   public open fun observabilityConfiguration(`value`: ServiceObservabilityConfigurationProperty) {
-    unwrap(this).setObservabilityConfiguration(`value`.let(ServiceObservabilityConfigurationProperty::unwrap))
+    unwrap(this).setObservabilityConfiguration(`value`.let(ServiceObservabilityConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -376,14 +376,14 @@ public open class CfnService(
    * The source to deploy to the App Runner service.
    */
   public open fun sourceConfiguration(`value`: IResolvable) {
-    unwrap(this).setSourceConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSourceConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The source to deploy to the App Runner service.
    */
   public open fun sourceConfiguration(`value`: SourceConfigurationProperty) {
-    unwrap(this).setSourceConfiguration(`value`.let(SourceConfigurationProperty::unwrap))
+    unwrap(this).setSourceConfiguration(`value`.let(SourceConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -409,7 +409,7 @@ public open class CfnService(
    * An optional list of metadata items that you can associate with the App Runner service resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -714,7 +714,7 @@ public open class CfnService(
      * encrypt the copy of your source repository that it maintains and your service logs. 
      */
     override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -728,7 +728,7 @@ public open class CfnService(
      * encrypt the copy of your source repository that it maintains and your service logs. 
      */
     override fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
-      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty::unwrap))
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -756,7 +756,7 @@ public open class CfnService(
      * performs to monitor the health of the App Runner service. 
      */
     override fun healthCheckConfiguration(healthCheckConfiguration: IResolvable) {
-      cdkBuilder.healthCheckConfiguration(healthCheckConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.healthCheckConfiguration(healthCheckConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -769,7 +769,7 @@ public open class CfnService(
      */
     override
         fun healthCheckConfiguration(healthCheckConfiguration: HealthCheckConfigurationProperty) {
-      cdkBuilder.healthCheckConfiguration(healthCheckConfiguration.let(HealthCheckConfigurationProperty::unwrap))
+      cdkBuilder.healthCheckConfiguration(healthCheckConfiguration.let(HealthCheckConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -794,7 +794,7 @@ public open class CfnService(
      * service. 
      */
     override fun instanceConfiguration(instanceConfiguration: IResolvable) {
-      cdkBuilder.instanceConfiguration(instanceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.instanceConfiguration(instanceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -805,7 +805,7 @@ public open class CfnService(
      * service. 
      */
     override fun instanceConfiguration(instanceConfiguration: InstanceConfigurationProperty) {
-      cdkBuilder.instanceConfiguration(instanceConfiguration.let(InstanceConfigurationProperty::unwrap))
+      cdkBuilder.instanceConfiguration(instanceConfiguration.let(InstanceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -830,7 +830,7 @@ public open class CfnService(
      * application that the App Runner service runs. 
      */
     override fun networkConfiguration(networkConfiguration: IResolvable) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -842,7 +842,7 @@ public open class CfnService(
      * application that the App Runner service runs. 
      */
     override fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -866,7 +866,7 @@ public open class CfnService(
      * @param observabilityConfiguration The observability configuration of your service. 
      */
     override fun observabilityConfiguration(observabilityConfiguration: IResolvable) {
-      cdkBuilder.observabilityConfiguration(observabilityConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.observabilityConfiguration(observabilityConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -877,7 +877,7 @@ public open class CfnService(
      */
     override
         fun observabilityConfiguration(observabilityConfiguration: ServiceObservabilityConfigurationProperty) {
-      cdkBuilder.observabilityConfiguration(observabilityConfiguration.let(ServiceObservabilityConfigurationProperty::unwrap))
+      cdkBuilder.observabilityConfiguration(observabilityConfiguration.let(ServiceObservabilityConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -917,7 +917,7 @@ public open class CfnService(
      * @param sourceConfiguration The source to deploy to the App Runner service. 
      */
     override fun sourceConfiguration(sourceConfiguration: IResolvable) {
-      cdkBuilder.sourceConfiguration(sourceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.sourceConfiguration(sourceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -929,7 +929,7 @@ public open class CfnService(
      * @param sourceConfiguration The source to deploy to the App Runner service. 
      */
     override fun sourceConfiguration(sourceConfiguration: SourceConfigurationProperty) {
-      cdkBuilder.sourceConfiguration(sourceConfiguration.let(SourceConfigurationProperty::unwrap))
+      cdkBuilder.sourceConfiguration(sourceConfiguration.let(SourceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -957,7 +957,7 @@ public open class CfnService(
      * service resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1239,7 +1239,7 @@ public open class CfnService(
        * the source code repository (or ignoring the file if it exists).
        */
       override fun codeConfigurationValues(codeConfigurationValues: IResolvable) {
-        cdkBuilder.codeConfigurationValues(codeConfigurationValues.let(IResolvable::unwrap))
+        cdkBuilder.codeConfigurationValues(codeConfigurationValues.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1250,7 +1250,7 @@ public open class CfnService(
        */
       override
           fun codeConfigurationValues(codeConfigurationValues: CodeConfigurationValuesProperty) {
-        cdkBuilder.codeConfigurationValues(codeConfigurationValues.let(CodeConfigurationValuesProperty::unwrap))
+        cdkBuilder.codeConfigurationValues(codeConfigurationValues.let(CodeConfigurationValuesProperty.Companion::unwrap))
       }
 
       /**
@@ -1556,7 +1556,7 @@ public open class CfnService(
        * not supported.
        */
       override fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: IResolvable) {
-        cdkBuilder.runtimeEnvironmentSecrets(runtimeEnvironmentSecrets.let(IResolvable::unwrap))
+        cdkBuilder.runtimeEnvironmentSecrets(runtimeEnvironmentSecrets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1598,7 +1598,7 @@ public open class CfnService(
        * An array of key-value pairs.
        */
       override fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: IResolvable) {
-        cdkBuilder.runtimeEnvironmentVariables(runtimeEnvironmentVariables.let(IResolvable::unwrap))
+        cdkBuilder.runtimeEnvironmentVariables(runtimeEnvironmentVariables.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1867,7 +1867,7 @@ public open class CfnService(
        * `CodeConfiguration` is required only for `CreateService` request.
        */
       override fun codeConfiguration(codeConfiguration: IResolvable) {
-        cdkBuilder.codeConfiguration(codeConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.codeConfiguration(codeConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1877,7 +1877,7 @@ public open class CfnService(
        * `CodeConfiguration` is required only for `CreateService` request.
        */
       override fun codeConfiguration(codeConfiguration: CodeConfigurationProperty) {
-        cdkBuilder.codeConfiguration(codeConfiguration.let(CodeConfigurationProperty::unwrap))
+        cdkBuilder.codeConfiguration(codeConfiguration.let(CodeConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1904,7 +1904,7 @@ public open class CfnService(
        * 
        */
       override fun sourceCodeVersion(sourceCodeVersion: IResolvable) {
-        cdkBuilder.sourceCodeVersion(sourceCodeVersion.let(IResolvable::unwrap))
+        cdkBuilder.sourceCodeVersion(sourceCodeVersion.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1912,7 +1912,7 @@ public open class CfnService(
        * 
        */
       override fun sourceCodeVersion(sourceCodeVersion: SourceCodeVersionProperty) {
-        cdkBuilder.sourceCodeVersion(sourceCodeVersion.let(SourceCodeVersionProperty::unwrap))
+        cdkBuilder.sourceCodeVersion(sourceCodeVersion.let(SourceCodeVersionProperty.Companion::unwrap))
       }
 
       /**
@@ -2687,7 +2687,7 @@ public open class CfnService(
        * not supported.
        */
       override fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: IResolvable) {
-        cdkBuilder.runtimeEnvironmentSecrets(runtimeEnvironmentSecrets.let(IResolvable::unwrap))
+        cdkBuilder.runtimeEnvironmentSecrets(runtimeEnvironmentSecrets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2729,7 +2729,7 @@ public open class CfnService(
        * An array of key-value pairs.
        */
       override fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: IResolvable) {
-        cdkBuilder.runtimeEnvironmentVariables(runtimeEnvironmentVariables.let(IResolvable::unwrap))
+        cdkBuilder.runtimeEnvironmentVariables(runtimeEnvironmentVariables.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2939,14 +2939,14 @@ public open class CfnService(
        * @param imageConfiguration Configuration for running the identified image.
        */
       override fun imageConfiguration(imageConfiguration: IResolvable) {
-        cdkBuilder.imageConfiguration(imageConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.imageConfiguration(imageConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param imageConfiguration Configuration for running the identified image.
        */
       override fun imageConfiguration(imageConfiguration: ImageConfigurationProperty) {
-        cdkBuilder.imageConfiguration(imageConfiguration.let(ImageConfigurationProperty::unwrap))
+        cdkBuilder.imageConfiguration(imageConfiguration.let(ImageConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3105,7 +3105,7 @@ public open class CfnService(
        * accessible, from only within an Amazon VPC set it to `False` .
        */
       override fun isPubliclyAccessible(isPubliclyAccessible: IResolvable) {
-        cdkBuilder.isPubliclyAccessible(isPubliclyAccessible.let(IResolvable::unwrap))
+        cdkBuilder.isPubliclyAccessible(isPubliclyAccessible.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -3540,14 +3540,14 @@ public open class CfnService(
        * @param egressConfiguration Network configuration settings for outbound message traffic.
        */
       override fun egressConfiguration(egressConfiguration: IResolvable) {
-        cdkBuilder.egressConfiguration(egressConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.egressConfiguration(egressConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param egressConfiguration Network configuration settings for outbound message traffic.
        */
       override fun egressConfiguration(egressConfiguration: EgressConfigurationProperty) {
-        cdkBuilder.egressConfiguration(egressConfiguration.let(EgressConfigurationProperty::unwrap))
+        cdkBuilder.egressConfiguration(egressConfiguration.let(EgressConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3563,14 +3563,14 @@ public open class CfnService(
        * @param ingressConfiguration Network configuration settings for inbound message traffic.
        */
       override fun ingressConfiguration(ingressConfiguration: IResolvable) {
-        cdkBuilder.ingressConfiguration(ingressConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.ingressConfiguration(ingressConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param ingressConfiguration Network configuration settings for inbound message traffic.
        */
       override fun ingressConfiguration(ingressConfiguration: IngressConfigurationProperty) {
-        cdkBuilder.ingressConfiguration(ingressConfiguration.let(IngressConfigurationProperty::unwrap))
+        cdkBuilder.ingressConfiguration(ingressConfiguration.let(IngressConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3771,7 +3771,7 @@ public open class CfnService(
        * associated with the service, and an `ObservabilityConfigurationArn` is specified. 
        */
       override fun observabilityEnabled(observabilityEnabled: IResolvable) {
-        cdkBuilder.observabilityEnabled(observabilityEnabled.let(IResolvable::unwrap))
+        cdkBuilder.observabilityEnabled(observabilityEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -4164,7 +4164,7 @@ public open class CfnService(
        * access to some source repositories.
        */
       override fun authenticationConfiguration(authenticationConfiguration: IResolvable) {
-        cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4173,7 +4173,7 @@ public open class CfnService(
        */
       override
           fun authenticationConfiguration(authenticationConfiguration: AuthenticationConfigurationProperty) {
-        cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(AuthenticationConfigurationProperty::unwrap))
+        cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(AuthenticationConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -4214,7 +4214,7 @@ public open class CfnService(
        * a source image using a same-account ECR repository).
        */
       override fun autoDeploymentsEnabled(autoDeploymentsEnabled: IResolvable) {
-        cdkBuilder.autoDeploymentsEnabled(autoDeploymentsEnabled.let(IResolvable::unwrap))
+        cdkBuilder.autoDeploymentsEnabled(autoDeploymentsEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4222,7 +4222,7 @@ public open class CfnService(
        * You must provide either this member or `ImageRepository` (but not both).
        */
       override fun codeRepository(codeRepository: IResolvable) {
-        cdkBuilder.codeRepository(codeRepository.let(IResolvable::unwrap))
+        cdkBuilder.codeRepository(codeRepository.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4230,7 +4230,7 @@ public open class CfnService(
        * You must provide either this member or `ImageRepository` (but not both).
        */
       override fun codeRepository(codeRepository: CodeRepositoryProperty) {
-        cdkBuilder.codeRepository(codeRepository.let(CodeRepositoryProperty::unwrap))
+        cdkBuilder.codeRepository(codeRepository.let(CodeRepositoryProperty.Companion::unwrap))
       }
 
       /**
@@ -4247,7 +4247,7 @@ public open class CfnService(
        * You must provide either this member or `CodeRepository` (but not both).
        */
       override fun imageRepository(imageRepository: IResolvable) {
-        cdkBuilder.imageRepository(imageRepository.let(IResolvable::unwrap))
+        cdkBuilder.imageRepository(imageRepository.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4255,7 +4255,7 @@ public open class CfnService(
        * You must provide either this member or `CodeRepository` (but not both).
        */
       override fun imageRepository(imageRepository: ImageRepositoryProperty) {
-        cdkBuilder.imageRepository(imageRepository.let(ImageRepositoryProperty::unwrap))
+        cdkBuilder.imageRepository(imageRepository.let(ImageRepositoryProperty.Companion::unwrap))
       }
 
       /**

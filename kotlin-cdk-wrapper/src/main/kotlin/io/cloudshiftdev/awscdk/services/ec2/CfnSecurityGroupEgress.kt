@@ -61,8 +61,8 @@ public open class CfnSecurityGroupEgress(
     id: String,
     props: CfnSecurityGroupEgressProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnSecurityGroupEgress(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSecurityGroupEgressProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnSecurityGroupEgress(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSecurityGroupEgressProps.Companion::unwrap))
   )
 
   public constructor(
@@ -168,7 +168,7 @@ public open class CfnSecurityGroupEgress(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

@@ -95,7 +95,7 @@ public open class CfnHttpApi(
   cdkObject: software.amazon.awscdk.services.sam.CfnHttpApi,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.sam.CfnHttpApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.sam.CfnHttpApi(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -104,8 +104,8 @@ public open class CfnHttpApi(
     id: String,
     props: CfnHttpApiProps,
   ) :
-      this(software.amazon.awscdk.services.sam.CfnHttpApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnHttpApiProps::unwrap))
+      this(software.amazon.awscdk.services.sam.CfnHttpApi(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnHttpApiProps.Companion::unwrap))
   )
 
   public constructor(
@@ -124,14 +124,14 @@ public open class CfnHttpApi(
    *
    */
   public open fun accessLogSetting(`value`: IResolvable) {
-    unwrap(this).setAccessLogSetting(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccessLogSetting(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun accessLogSetting(`value`: AccessLogSettingProperty) {
-    unwrap(this).setAccessLogSetting(`value`.let(AccessLogSettingProperty::unwrap))
+    unwrap(this).setAccessLogSetting(`value`.let(AccessLogSettingProperty.Companion::unwrap))
   }
 
   /**
@@ -151,14 +151,14 @@ public open class CfnHttpApi(
    *
    */
   public open fun auth(`value`: IResolvable) {
-    unwrap(this).setAuth(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAuth(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun auth(`value`: HttpApiAuthProperty) {
-    unwrap(this).setAuth(`value`.let(HttpApiAuthProperty::unwrap))
+    unwrap(this).setAuth(`value`.let(HttpApiAuthProperty.Companion::unwrap))
   }
 
   /**
@@ -185,14 +185,14 @@ public open class CfnHttpApi(
    *
    */
   public open fun corsConfiguration(`value`: IResolvable) {
-    unwrap(this).setCorsConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCorsConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun corsConfiguration(`value`: CorsConfigurationObjectProperty) {
-    unwrap(this).setCorsConfiguration(`value`.let(CorsConfigurationObjectProperty::unwrap))
+    unwrap(this).setCorsConfiguration(`value`.let(CorsConfigurationObjectProperty.Companion::unwrap))
   }
 
   /**
@@ -212,14 +212,14 @@ public open class CfnHttpApi(
    *
    */
   public open fun defaultRouteSettings(`value`: IResolvable) {
-    unwrap(this).setDefaultRouteSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefaultRouteSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun defaultRouteSettings(`value`: RouteSettingsProperty) {
-    unwrap(this).setDefaultRouteSettings(`value`.let(RouteSettingsProperty::unwrap))
+    unwrap(this).setDefaultRouteSettings(`value`.let(RouteSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -258,14 +258,14 @@ public open class CfnHttpApi(
    *
    */
   public open fun definitionUri(`value`: IResolvable) {
-    unwrap(this).setDefinitionUri(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefinitionUri(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun definitionUri(`value`: S3LocationProperty) {
-    unwrap(this).setDefinitionUri(`value`.let(S3LocationProperty::unwrap))
+    unwrap(this).setDefinitionUri(`value`.let(S3LocationProperty.Companion::unwrap))
   }
 
   /**
@@ -304,7 +304,7 @@ public open class CfnHttpApi(
    *
    */
   public open fun disableExecuteApiEndpoint(`value`: IResolvable) {
-    unwrap(this).setDisableExecuteApiEndpoint(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDisableExecuteApiEndpoint(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -316,14 +316,14 @@ public open class CfnHttpApi(
    *
    */
   public open fun domain(`value`: IResolvable) {
-    unwrap(this).setDomain(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDomain(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun domain(`value`: HttpApiDomainConfigurationProperty) {
-    unwrap(this).setDomain(`value`.let(HttpApiDomainConfigurationProperty::unwrap))
+    unwrap(this).setDomain(`value`.let(HttpApiDomainConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -350,7 +350,7 @@ public open class CfnHttpApi(
    *
    */
   public open fun failOnWarnings(`value`: IResolvable) {
-    unwrap(this).setFailOnWarnings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFailOnWarnings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -359,7 +359,7 @@ public open class CfnHttpApi(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -371,14 +371,14 @@ public open class CfnHttpApi(
    *
    */
   public open fun routeSettings(`value`: IResolvable) {
-    unwrap(this).setRouteSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRouteSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun routeSettings(`value`: RouteSettingsProperty) {
-    unwrap(this).setRouteSettings(`value`.let(RouteSettingsProperty::unwrap))
+    unwrap(this).setRouteSettings(`value`.let(RouteSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -410,7 +410,7 @@ public open class CfnHttpApi(
    *
    */
   public open fun stageVariables(`value`: IResolvable) {
-    unwrap(this).setStageVariables(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStageVariables(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -668,7 +668,7 @@ public open class CfnHttpApi(
      * @param accessLogSetting 
      */
     override fun accessLogSetting(accessLogSetting: IResolvable) {
-      cdkBuilder.accessLogSetting(accessLogSetting.let(IResolvable::unwrap))
+      cdkBuilder.accessLogSetting(accessLogSetting.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -676,7 +676,7 @@ public open class CfnHttpApi(
      * @param accessLogSetting 
      */
     override fun accessLogSetting(accessLogSetting: AccessLogSettingProperty) {
-      cdkBuilder.accessLogSetting(accessLogSetting.let(AccessLogSettingProperty::unwrap))
+      cdkBuilder.accessLogSetting(accessLogSetting.let(AccessLogSettingProperty.Companion::unwrap))
     }
 
     /**
@@ -693,7 +693,7 @@ public open class CfnHttpApi(
      * @param auth 
      */
     override fun auth(auth: IResolvable) {
-      cdkBuilder.auth(auth.let(IResolvable::unwrap))
+      cdkBuilder.auth(auth.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -701,7 +701,7 @@ public open class CfnHttpApi(
      * @param auth 
      */
     override fun auth(auth: HttpApiAuthProperty) {
-      cdkBuilder.auth(auth.let(HttpApiAuthProperty::unwrap))
+      cdkBuilder.auth(auth.let(HttpApiAuthProperty.Companion::unwrap))
     }
 
     /**
@@ -726,7 +726,7 @@ public open class CfnHttpApi(
      * @param corsConfiguration 
      */
     override fun corsConfiguration(corsConfiguration: IResolvable) {
-      cdkBuilder.corsConfiguration(corsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.corsConfiguration(corsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -734,7 +734,7 @@ public open class CfnHttpApi(
      * @param corsConfiguration 
      */
     override fun corsConfiguration(corsConfiguration: CorsConfigurationObjectProperty) {
-      cdkBuilder.corsConfiguration(corsConfiguration.let(CorsConfigurationObjectProperty::unwrap))
+      cdkBuilder.corsConfiguration(corsConfiguration.let(CorsConfigurationObjectProperty.Companion::unwrap))
     }
 
     /**
@@ -752,7 +752,7 @@ public open class CfnHttpApi(
      * @param defaultRouteSettings 
      */
     override fun defaultRouteSettings(defaultRouteSettings: IResolvable) {
-      cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(IResolvable::unwrap))
+      cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -760,7 +760,7 @@ public open class CfnHttpApi(
      * @param defaultRouteSettings 
      */
     override fun defaultRouteSettings(defaultRouteSettings: RouteSettingsProperty) {
-      cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(RouteSettingsProperty::unwrap))
+      cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(RouteSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -794,7 +794,7 @@ public open class CfnHttpApi(
      * @param definitionUri 
      */
     override fun definitionUri(definitionUri: IResolvable) {
-      cdkBuilder.definitionUri(definitionUri.let(IResolvable::unwrap))
+      cdkBuilder.definitionUri(definitionUri.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -802,7 +802,7 @@ public open class CfnHttpApi(
      * @param definitionUri 
      */
     override fun definitionUri(definitionUri: S3LocationProperty) {
-      cdkBuilder.definitionUri(definitionUri.let(S3LocationProperty::unwrap))
+      cdkBuilder.definitionUri(definitionUri.let(S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -835,7 +835,7 @@ public open class CfnHttpApi(
      * @param disableExecuteApiEndpoint 
      */
     override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable) {
-      cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint.let(IResolvable::unwrap))
+      cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -843,7 +843,7 @@ public open class CfnHttpApi(
      * @param domain 
      */
     override fun domain(domain: IResolvable) {
-      cdkBuilder.domain(domain.let(IResolvable::unwrap))
+      cdkBuilder.domain(domain.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -851,7 +851,7 @@ public open class CfnHttpApi(
      * @param domain 
      */
     override fun domain(domain: HttpApiDomainConfigurationProperty) {
-      cdkBuilder.domain(domain.let(HttpApiDomainConfigurationProperty::unwrap))
+      cdkBuilder.domain(domain.let(HttpApiDomainConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -876,7 +876,7 @@ public open class CfnHttpApi(
      * @param failOnWarnings 
      */
     override fun failOnWarnings(failOnWarnings: IResolvable) {
-      cdkBuilder.failOnWarnings(failOnWarnings.let(IResolvable::unwrap))
+      cdkBuilder.failOnWarnings(failOnWarnings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -884,7 +884,7 @@ public open class CfnHttpApi(
      * @param routeSettings 
      */
     override fun routeSettings(routeSettings: IResolvable) {
-      cdkBuilder.routeSettings(routeSettings.let(IResolvable::unwrap))
+      cdkBuilder.routeSettings(routeSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -892,7 +892,7 @@ public open class CfnHttpApi(
      * @param routeSettings 
      */
     override fun routeSettings(routeSettings: RouteSettingsProperty) {
-      cdkBuilder.routeSettings(routeSettings.let(RouteSettingsProperty::unwrap))
+      cdkBuilder.routeSettings(routeSettings.let(RouteSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -917,7 +917,7 @@ public open class CfnHttpApi(
      * @param stageVariables 
      */
     override fun stageVariables(stageVariables: IResolvable) {
-      cdkBuilder.stageVariables(stageVariables.let(IResolvable::unwrap))
+      cdkBuilder.stageVariables(stageVariables.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1187,7 +1187,7 @@ public open class CfnHttpApi(
        * @param allowCredentials the value to be set.
        */
       override fun allowCredentials(allowCredentials: IResolvable) {
-        cdkBuilder.allowCredentials(allowCredentials.let(IResolvable::unwrap))
+        cdkBuilder.allowCredentials(allowCredentials.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1574,7 +1574,7 @@ public open class CfnHttpApi(
        * @param mutualTlsAuthentication the value to be set.
        */
       override fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable) {
-        cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(IResolvable::unwrap))
+        cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1582,7 +1582,7 @@ public open class CfnHttpApi(
        */
       override
           fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty) {
-        cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(MutualTlsAuthenticationProperty::unwrap))
+        cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(MutualTlsAuthenticationProperty.Companion::unwrap))
       }
 
       /**
@@ -1598,14 +1598,14 @@ public open class CfnHttpApi(
        * @param route53 the value to be set.
        */
       override fun route53(route53: IResolvable) {
-        cdkBuilder.route53(route53.let(IResolvable::unwrap))
+        cdkBuilder.route53(route53.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param route53 the value to be set.
        */
       override fun route53(route53: Route53ConfigurationProperty) {
-        cdkBuilder.route53(route53.let(Route53ConfigurationProperty::unwrap))
+        cdkBuilder.route53(route53.let(Route53ConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1757,7 +1757,7 @@ public open class CfnHttpApi(
        * @param truststoreVersion the value to be set.
        */
       override fun truststoreVersion(truststoreVersion: IResolvable) {
-        cdkBuilder.truststoreVersion(truststoreVersion.let(IResolvable::unwrap))
+        cdkBuilder.truststoreVersion(truststoreVersion.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1906,7 +1906,7 @@ public open class CfnHttpApi(
        * @param evaluateTargetHealth the value to be set.
        */
       override fun evaluateTargetHealth(evaluateTargetHealth: IResolvable) {
-        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth.let(IResolvable::unwrap))
+        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1934,7 +1934,7 @@ public open class CfnHttpApi(
        * @param ipV6 the value to be set.
        */
       override fun ipV6(ipV6: IResolvable) {
-        cdkBuilder.ipV6(ipV6.let(IResolvable::unwrap))
+        cdkBuilder.ipV6(ipV6.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2090,7 +2090,7 @@ public open class CfnHttpApi(
        * @param dataTraceEnabled the value to be set.
        */
       override fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
-        cdkBuilder.dataTraceEnabled(dataTraceEnabled.let(IResolvable::unwrap))
+        cdkBuilder.dataTraceEnabled(dataTraceEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2104,7 +2104,7 @@ public open class CfnHttpApi(
        * @param detailedMetricsEnabled the value to be set.
        */
       override fun detailedMetricsEnabled(detailedMetricsEnabled: IResolvable) {
-        cdkBuilder.detailedMetricsEnabled(detailedMetricsEnabled.let(IResolvable::unwrap))
+        cdkBuilder.detailedMetricsEnabled(detailedMetricsEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**

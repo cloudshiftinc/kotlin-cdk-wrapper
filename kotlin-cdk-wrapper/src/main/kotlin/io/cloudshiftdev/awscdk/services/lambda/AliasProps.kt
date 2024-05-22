@@ -152,7 +152,7 @@ public interface AliasProps : AliasOptions {
      * the remaining 95% of traffic will be routed to function version 1.
      */
     override fun additionalVersions(additionalVersions: List<VersionWeight>) {
-      cdkBuilder.additionalVersions(additionalVersions.map(VersionWeight::unwrap))
+      cdkBuilder.additionalVersions(additionalVersions.map(VersionWeight.Companion::unwrap))
     }
 
     /**
@@ -193,21 +193,21 @@ public interface AliasProps : AliasOptions {
      * Maximum: 6 hours
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param onFailure The destination for failed invocations.
      */
     override fun onFailure(onFailure: IDestination) {
-      cdkBuilder.onFailure(onFailure.let(IDestination::unwrap))
+      cdkBuilder.onFailure(onFailure.let(IDestination.Companion::unwrap))
     }
 
     /**
      * @param onSuccess The destination for successful invocations.
      */
     override fun onSuccess(onSuccess: IDestination) {
-      cdkBuilder.onSuccess(onSuccess.let(IDestination::unwrap))
+      cdkBuilder.onSuccess(onSuccess.let(IDestination.Companion::unwrap))
     }
 
     /**
@@ -232,7 +232,7 @@ public interface AliasProps : AliasOptions {
      * Use lambda.currentVersion to reference a version with your latest changes.
      */
     override fun version(version: IVersion) {
-      cdkBuilder.version(version.let(IVersion::unwrap))
+      cdkBuilder.version(version.let(IVersion.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lambda.AliasProps = cdkBuilder.build()

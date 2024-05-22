@@ -29,7 +29,7 @@ public open class TableWidget(
   cdkObject: software.amazon.awscdk.services.cloudwatch.TableWidget,
 ) : ConcreteWidget(cdkObject) {
   public constructor(props: TableWidgetProps) :
-      this(software.amazon.awscdk.services.cloudwatch.TableWidget(props.let(TableWidgetProps::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.TableWidget(props.let(TableWidgetProps.Companion::unwrap))
   )
 
   public constructor(props: TableWidgetProps.Builder.() -> Unit) : this(TableWidgetProps(props)
@@ -41,7 +41,7 @@ public open class TableWidget(
    * @param metric the metric to add. 
    */
   public open fun addMetric(metric: IMetric) {
-    unwrap(this).addMetric(metric.let(IMetric::unwrap))
+    unwrap(this).addMetric(metric.let(IMetric.Companion::unwrap))
   }
 
   /**
@@ -303,7 +303,7 @@ public open class TableWidget(
      * @param layout Table layout. 
      */
     override fun layout(layout: TableLayout) {
-      cdkBuilder.layout(layout.let(TableLayout::unwrap))
+      cdkBuilder.layout(layout.let(TableLayout.Companion::unwrap))
     }
 
     /**
@@ -325,7 +325,7 @@ public open class TableWidget(
      * @param metrics Metrics to display in the table. 
      */
     override fun metrics(metrics: List<IMetric>) {
-      cdkBuilder.metrics(metrics.map(IMetric::unwrap))
+      cdkBuilder.metrics(metrics.map(IMetric.Companion::unwrap))
     }
 
     /**
@@ -348,7 +348,7 @@ public open class TableWidget(
      * @param period The default period for all metrics in this widget. 
      */
     override fun period(period: Duration) {
-      cdkBuilder.period(period.let(Duration::unwrap))
+      cdkBuilder.period(period.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -431,7 +431,7 @@ public open class TableWidget(
      * @param summary Properties for displaying summary columns. 
      */
     override fun summary(summary: TableSummaryProps) {
-      cdkBuilder.summary(summary.let(TableSummaryProps::unwrap))
+      cdkBuilder.summary(summary.let(TableSummaryProps.Companion::unwrap))
     }
 
     /**
@@ -454,7 +454,7 @@ public open class TableWidget(
      * @param thresholds Thresholds for highlighting table cells. 
      */
     override fun thresholds(thresholds: List<TableThreshold>) {
-      cdkBuilder.thresholds(thresholds.map(TableThreshold::unwrap))
+      cdkBuilder.thresholds(thresholds.map(TableThreshold.Companion::unwrap))
     }
 
     /**

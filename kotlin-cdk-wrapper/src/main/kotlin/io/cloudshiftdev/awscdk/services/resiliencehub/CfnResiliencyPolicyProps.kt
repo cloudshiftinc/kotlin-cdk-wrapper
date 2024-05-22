@@ -146,7 +146,7 @@ public interface CfnResiliencyPolicyProps {
      * @param policy The resiliency policy. 
      */
     override fun policy(policy: IResolvable) {
-      cdkBuilder.policy(policy.let(IResolvable::unwrap))
+      cdkBuilder.policy(policy.let(IResolvable.Companion::unwrap))
     }
 
     /**

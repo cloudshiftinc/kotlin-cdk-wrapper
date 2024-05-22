@@ -66,7 +66,7 @@ public interface RouteAttributes {
      * @param virtualRouter The VirtualRouter the Route belongs to. 
      */
     override fun virtualRouter(virtualRouter: IVirtualRouter) {
-      cdkBuilder.virtualRouter(virtualRouter.let(IVirtualRouter::unwrap))
+      cdkBuilder.virtualRouter(virtualRouter.let(IVirtualRouter.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appmesh.RouteAttributes = cdkBuilder.build()

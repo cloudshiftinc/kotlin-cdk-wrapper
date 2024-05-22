@@ -58,9 +58,9 @@ public interface IBindableBuildImage : IBuildImage {
       scope: Construct,
       project: IProject,
       options: BuildImageBindOptions,
-    ): BuildImageConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-        project.let(IProject::unwrap),
-        options.let(BuildImageBindOptions::unwrap)).let(BuildImageConfig::wrap)
+    ): BuildImageConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+        project.let(IProject.Companion::unwrap),
+        options.let(BuildImageBindOptions.Companion::unwrap)).let(BuildImageConfig::wrap)
 
     /**
      * Function that allows the build image access to the construct tree.
@@ -133,7 +133,7 @@ public interface IBindableBuildImage : IBuildImage {
      * @param buildEnvironment the current build environment. 
      */
     override fun validate(buildEnvironment: BuildEnvironment): List<String> =
-        unwrap(this).validate(buildEnvironment.let(BuildEnvironment::unwrap))
+        unwrap(this).validate(buildEnvironment.let(BuildEnvironment.Companion::unwrap))
 
     /**
      * Allows the image a chance to validate whether the passed configuration is correct.

@@ -22,7 +22,7 @@ public open class ScalingEvents(
   cdkObject: software.amazon.awscdk.services.autoscaling.ScalingEvents,
 ) : CdkObject(cdkObject) {
   public constructor(types: ScalingEvent) :
-      this(software.amazon.awscdk.services.autoscaling.ScalingEvents(types.let(ScalingEvent::unwrap))
+      this(software.amazon.awscdk.services.autoscaling.ScalingEvents(types.let(ScalingEvent.Companion::unwrap))
   )
 
   public companion object {

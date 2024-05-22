@@ -74,8 +74,8 @@ public open class CfnRuleset(
     id: String,
     props: CfnRulesetProps,
   ) :
-      this(software.amazon.awscdk.services.databrew.CfnRuleset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRulesetProps::unwrap))
+      this(software.amazon.awscdk.services.databrew.CfnRuleset(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRulesetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -103,7 +103,7 @@ public open class CfnRuleset(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -127,7 +127,7 @@ public open class CfnRuleset(
    * Contains metadata about the ruleset.
    */
   public open fun rules(`value`: IResolvable) {
-    unwrap(this).setRules(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRules(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -157,7 +157,7 @@ public open class CfnRuleset(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -290,7 +290,7 @@ public open class CfnRuleset(
      * @param rules Contains metadata about the ruleset. 
      */
     override fun rules(rules: IResolvable) {
-      cdkBuilder.rules(rules.let(IResolvable::unwrap))
+      cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -322,7 +322,7 @@ public open class CfnRuleset(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -716,7 +716,7 @@ public open class CfnRuleset(
        * dataset. Rule will be applied to selected columns.
        */
       override fun columnSelectors(columnSelectors: IResolvable) {
-        cdkBuilder.columnSelectors(columnSelectors.let(IResolvable::unwrap))
+        cdkBuilder.columnSelectors(columnSelectors.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -751,7 +751,7 @@ public open class CfnRuleset(
        * is false.
        */
       override fun disabled(disabled: IResolvable) {
-        cdkBuilder.disabled(disabled.let(IResolvable::unwrap))
+        cdkBuilder.disabled(disabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -769,7 +769,7 @@ public open class CfnRuleset(
        * backticks, for example, `":col1": "`Column A`".`
        */
       override fun substitutionMap(substitutionMap: IResolvable) {
-        cdkBuilder.substitutionMap(substitutionMap.let(IResolvable::unwrap))
+        cdkBuilder.substitutionMap(substitutionMap.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -799,7 +799,7 @@ public open class CfnRuleset(
        * threshold will be used to determine whether the validation succeeds.
        */
       override fun threshold(threshold: IResolvable) {
-        cdkBuilder.threshold(threshold.let(IResolvable::unwrap))
+        cdkBuilder.threshold(threshold.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -808,7 +808,7 @@ public open class CfnRuleset(
        * threshold will be used to determine whether the validation succeeds.
        */
       override fun threshold(threshold: ThresholdProperty) {
-        cdkBuilder.threshold(threshold.let(ThresholdProperty::unwrap))
+        cdkBuilder.threshold(threshold.let(ThresholdProperty.Companion::unwrap))
       }
 
       /**

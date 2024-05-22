@@ -271,7 +271,7 @@ public interface TablePropsV2 : TableOptionsV2 {
      * @param billing The billing mode and capacity settings to apply to the table.
      */
     override fun billing(billing: Billing) {
-      cdkBuilder.billing(billing.let(Billing::unwrap))
+      cdkBuilder.billing(billing.let(Billing.Companion::unwrap))
     }
 
     /**
@@ -293,14 +293,14 @@ public interface TablePropsV2 : TableOptionsV2 {
      * information is written to the stream.
      */
     override fun dynamoStream(dynamoStream: StreamViewType) {
-      cdkBuilder.dynamoStream(dynamoStream.let(StreamViewType::unwrap))
+      cdkBuilder.dynamoStream(dynamoStream.let(StreamViewType.Companion::unwrap))
     }
 
     /**
      * @param encryption The server-side encryption.
      */
     override fun encryption(encryption: TableEncryptionV2) {
-      cdkBuilder.encryption(encryption.let(TableEncryptionV2::unwrap))
+      cdkBuilder.encryption(encryption.let(TableEncryptionV2.Companion::unwrap))
     }
 
     /**
@@ -308,7 +308,7 @@ public interface TablePropsV2 : TableOptionsV2 {
      * Note: You can provide a maximum of 20 global secondary indexes.
      */
     override fun globalSecondaryIndexes(globalSecondaryIndexes: List<GlobalSecondaryIndexPropsV2>) {
-      cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes.map(GlobalSecondaryIndexPropsV2::unwrap))
+      cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes.map(GlobalSecondaryIndexPropsV2.Companion::unwrap))
     }
 
     /**
@@ -322,7 +322,7 @@ public interface TablePropsV2 : TableOptionsV2 {
      * @param kinesisStream Kinesis Data Stream to capture item level changes.
      */
     override fun kinesisStream(kinesisStream: IStream) {
-      cdkBuilder.kinesisStream(kinesisStream.let(IStream::unwrap))
+      cdkBuilder.kinesisStream(kinesisStream.let(IStream.Companion::unwrap))
     }
 
     /**
@@ -330,7 +330,7 @@ public interface TablePropsV2 : TableOptionsV2 {
      * Note: You can only provide a maximum of 5 local secondary indexes.
      */
     override fun localSecondaryIndexes(localSecondaryIndexes: List<LocalSecondaryIndexProps>) {
-      cdkBuilder.localSecondaryIndexes(localSecondaryIndexes.map(LocalSecondaryIndexProps::unwrap))
+      cdkBuilder.localSecondaryIndexes(localSecondaryIndexes.map(LocalSecondaryIndexProps.Companion::unwrap))
     }
 
     /**
@@ -344,7 +344,7 @@ public interface TablePropsV2 : TableOptionsV2 {
      * @param partitionKey Partition key attribute definition. 
      */
     override fun partitionKey(partitionKey: Attribute) {
-      cdkBuilder.partitionKey(partitionKey.let(Attribute::unwrap))
+      cdkBuilder.partitionKey(partitionKey.let(Attribute.Companion::unwrap))
     }
 
     /**
@@ -366,7 +366,7 @@ public interface TablePropsV2 : TableOptionsV2 {
      * @param removalPolicy The removal policy applied to the table.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -376,7 +376,7 @@ public interface TablePropsV2 : TableOptionsV2 {
      * to. Replica tables will only be supported if the stack deployment region is defined.
      */
     override fun replicas(replicas: List<ReplicaTableProps>) {
-      cdkBuilder.replicas(replicas.map(ReplicaTableProps::unwrap))
+      cdkBuilder.replicas(replicas.map(ReplicaTableProps.Companion::unwrap))
     }
 
     /**
@@ -391,7 +391,7 @@ public interface TablePropsV2 : TableOptionsV2 {
      * @param sortKey Sort key attribute definition.
      */
     override fun sortKey(sortKey: Attribute) {
-      cdkBuilder.sortKey(sortKey.let(Attribute::unwrap))
+      cdkBuilder.sortKey(sortKey.let(Attribute.Companion::unwrap))
     }
 
     /**
@@ -405,7 +405,7 @@ public interface TablePropsV2 : TableOptionsV2 {
      * @param tableClass The table class.
      */
     override fun tableClass(tableClass: TableClass) {
-      cdkBuilder.tableClass(tableClass.let(TableClass::unwrap))
+      cdkBuilder.tableClass(tableClass.let(TableClass.Companion::unwrap))
     }
 
     /**
@@ -419,7 +419,7 @@ public interface TablePropsV2 : TableOptionsV2 {
      * @param tags Tags to be applied to the table or replica table.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

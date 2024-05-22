@@ -159,7 +159,7 @@ public interface FlowLogDestinationConfig {
      * @param destinationOptions Options for writing flow logs to a supported destination.
      */
     override fun destinationOptions(destinationOptions: DestinationOptions) {
-      cdkBuilder.destinationOptions(destinationOptions.let(DestinationOptions::unwrap))
+      cdkBuilder.destinationOptions(destinationOptions.let(DestinationOptions.Companion::unwrap))
     }
 
     /**
@@ -174,7 +174,7 @@ public interface FlowLogDestinationConfig {
      * @param iamRole The IAM Role that has access to publish to CloudWatch logs.
      */
     override fun iamRole(iamRole: IRole) {
-      cdkBuilder.iamRole(iamRole.let(IRole::unwrap))
+      cdkBuilder.iamRole(iamRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -188,21 +188,21 @@ public interface FlowLogDestinationConfig {
      * @param logDestinationType The type of destination to publish the flow logs to. 
      */
     override fun logDestinationType(logDestinationType: FlowLogDestinationType) {
-      cdkBuilder.logDestinationType(logDestinationType.let(FlowLogDestinationType::unwrap))
+      cdkBuilder.logDestinationType(logDestinationType.let(FlowLogDestinationType.Companion::unwrap))
     }
 
     /**
      * @param logGroup The CloudWatch Logs Log Group to publish the flow logs to.
      */
     override fun logGroup(logGroup: ILogGroup) {
-      cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
+      cdkBuilder.logGroup(logGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
      * @param s3Bucket S3 bucket to publish the flow logs to.
      */
     override fun s3Bucket(s3Bucket: IBucket) {
-      cdkBuilder.s3Bucket(s3Bucket.let(IBucket::unwrap))
+      cdkBuilder.s3Bucket(s3Bucket.let(IBucket.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.FlowLogDestinationConfig =

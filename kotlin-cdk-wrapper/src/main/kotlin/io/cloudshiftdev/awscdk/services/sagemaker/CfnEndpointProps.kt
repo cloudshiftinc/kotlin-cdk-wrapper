@@ -297,7 +297,7 @@ public interface CfnEndpointProps {
      * desired deployment strategy and rollback configurations.
      */
     override fun deploymentConfig(deploymentConfig: IResolvable) {
-      cdkBuilder.deploymentConfig(deploymentConfig.let(IResolvable::unwrap))
+      cdkBuilder.deploymentConfig(deploymentConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -305,7 +305,7 @@ public interface CfnEndpointProps {
      * desired deployment strategy and rollback configurations.
      */
     override fun deploymentConfig(deploymentConfig: CfnEndpoint.DeploymentConfigProperty) {
-      cdkBuilder.deploymentConfig(deploymentConfig.let(CfnEndpoint.DeploymentConfigProperty::unwrap))
+      cdkBuilder.deploymentConfig(deploymentConfig.let(CfnEndpoint.DeploymentConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -349,7 +349,7 @@ public interface CfnEndpointProps {
      * when creating new endpoint resources or when `RetainAllVariantProperties` is set to `false` .
      */
     override fun excludeRetainedVariantProperties(excludeRetainedVariantProperties: IResolvable) {
-      cdkBuilder.excludeRetainedVariantProperties(excludeRetainedVariantProperties.let(IResolvable::unwrap))
+      cdkBuilder.excludeRetainedVariantProperties(excludeRetainedVariantProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -400,7 +400,7 @@ public interface CfnEndpointProps {
      * resources.
      */
     override fun retainAllVariantProperties(retainAllVariantProperties: IResolvable) {
-      cdkBuilder.retainAllVariantProperties(retainAllVariantProperties.let(IResolvable::unwrap))
+      cdkBuilder.retainAllVariantProperties(retainAllVariantProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -416,7 +416,7 @@ public interface CfnEndpointProps {
      * The default value is false (the configuration is not reused).
      */
     override fun retainDeploymentConfig(retainDeploymentConfig: IResolvable) {
-      cdkBuilder.retainDeploymentConfig(retainDeploymentConfig.let(IResolvable::unwrap))
+      cdkBuilder.retainDeploymentConfig(retainDeploymentConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -428,7 +428,7 @@ public interface CfnEndpointProps {
      * in the *AWS Billing and Cost Management User Guide* .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

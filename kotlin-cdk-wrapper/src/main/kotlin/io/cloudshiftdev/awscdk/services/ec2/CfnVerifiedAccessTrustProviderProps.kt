@@ -232,7 +232,7 @@ public interface CfnVerifiedAccessTrustProviderProps {
      * @param deviceOptions The options for device-identity trust provider.
      */
     override fun deviceOptions(deviceOptions: IResolvable) {
-      cdkBuilder.deviceOptions(deviceOptions.let(IResolvable::unwrap))
+      cdkBuilder.deviceOptions(deviceOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -240,7 +240,7 @@ public interface CfnVerifiedAccessTrustProviderProps {
      */
     override
         fun deviceOptions(deviceOptions: CfnVerifiedAccessTrustProvider.DeviceOptionsProperty) {
-      cdkBuilder.deviceOptions(deviceOptions.let(CfnVerifiedAccessTrustProvider.DeviceOptionsProperty::unwrap))
+      cdkBuilder.deviceOptions(deviceOptions.let(CfnVerifiedAccessTrustProvider.DeviceOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -263,14 +263,14 @@ public interface CfnVerifiedAccessTrustProviderProps {
      * @param oidcOptions The options for an OpenID Connect-compatible user-identity trust provider.
      */
     override fun oidcOptions(oidcOptions: IResolvable) {
-      cdkBuilder.oidcOptions(oidcOptions.let(IResolvable::unwrap))
+      cdkBuilder.oidcOptions(oidcOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param oidcOptions The options for an OpenID Connect-compatible user-identity trust provider.
      */
     override fun oidcOptions(oidcOptions: CfnVerifiedAccessTrustProvider.OidcOptionsProperty) {
-      cdkBuilder.oidcOptions(oidcOptions.let(CfnVerifiedAccessTrustProvider.OidcOptionsProperty::unwrap))
+      cdkBuilder.oidcOptions(oidcOptions.let(CfnVerifiedAccessTrustProvider.OidcOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -293,7 +293,7 @@ public interface CfnVerifiedAccessTrustProviderProps {
      * @param sseSpecification The options for additional server side encryption.
      */
     override fun sseSpecification(sseSpecification: IResolvable) {
-      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -301,7 +301,7 @@ public interface CfnVerifiedAccessTrustProviderProps {
      */
     override
         fun sseSpecification(sseSpecification: CfnVerifiedAccessTrustProvider.SseSpecificationProperty) {
-      cdkBuilder.sseSpecification(sseSpecification.let(CfnVerifiedAccessTrustProvider.SseSpecificationProperty::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(CfnVerifiedAccessTrustProvider.SseSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -318,7 +318,7 @@ public interface CfnVerifiedAccessTrustProviderProps {
      * @param tags The tags.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

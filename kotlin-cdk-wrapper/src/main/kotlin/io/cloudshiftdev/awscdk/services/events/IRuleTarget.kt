@@ -42,7 +42,7 @@ public interface IRuleTarget {
      * @param id The id of the target that will be attached to the rule.
      */
     override fun bind(rule: IRule): RuleTargetConfig =
-        unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
+        unwrap(this).bind(rule.let(IRule.Companion::unwrap)).let(RuleTargetConfig::wrap)
 
     /**
      * Returns the rule target specification.
@@ -53,7 +53,7 @@ public interface IRuleTarget {
      * @param id The id of the target that will be attached to the rule.
      */
     override fun bind(rule: IRule, id: String): RuleTargetConfig =
-        unwrap(this).bind(rule.let(IRule::unwrap), id).let(RuleTargetConfig::wrap)
+        unwrap(this).bind(rule.let(IRule.Companion::unwrap), id).let(RuleTargetConfig::wrap)
   }
 
   public companion object {

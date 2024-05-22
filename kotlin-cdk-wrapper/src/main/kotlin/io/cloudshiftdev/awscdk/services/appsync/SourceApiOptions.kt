@@ -87,14 +87,14 @@ public interface SourceApiOptions {
      * to update the merged API endpoint with the source API changes.
      */
     override fun mergedApiExecutionRole(mergedApiExecutionRole: Role) {
-      cdkBuilder.mergedApiExecutionRole(mergedApiExecutionRole.let(Role::unwrap))
+      cdkBuilder.mergedApiExecutionRole(mergedApiExecutionRole.let(Role.Companion::unwrap))
     }
 
     /**
      * @param sourceApis Definition of source APIs associated with this Merged API. 
      */
     override fun sourceApis(sourceApis: List<SourceApi>) {
-      cdkBuilder.sourceApis(sourceApis.map(SourceApi::unwrap))
+      cdkBuilder.sourceApis(sourceApis.map(SourceApi.Companion::unwrap))
     }
 
     /**

@@ -136,7 +136,7 @@ public interface CfnApplicationReferenceDataSourceProps {
      * the data elements in the Amazon S3 object to the in-application table. 
      */
     override fun referenceDataSource(referenceDataSource: IResolvable) {
-      cdkBuilder.referenceDataSource(referenceDataSource.let(IResolvable::unwrap))
+      cdkBuilder.referenceDataSource(referenceDataSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -147,7 +147,7 @@ public interface CfnApplicationReferenceDataSourceProps {
      */
     override
         fun referenceDataSource(referenceDataSource: CfnApplicationReferenceDataSource.ReferenceDataSourceProperty) {
-      cdkBuilder.referenceDataSource(referenceDataSource.let(CfnApplicationReferenceDataSource.ReferenceDataSourceProperty::unwrap))
+      cdkBuilder.referenceDataSource(referenceDataSource.let(CfnApplicationReferenceDataSource.ReferenceDataSourceProperty.Companion::unwrap))
     }
 
     /**

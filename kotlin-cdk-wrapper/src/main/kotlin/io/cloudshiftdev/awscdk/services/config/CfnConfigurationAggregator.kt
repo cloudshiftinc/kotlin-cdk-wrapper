@@ -59,7 +59,7 @@ public open class CfnConfigurationAggregator(
   cdkObject: software.amazon.awscdk.services.config.CfnConfigurationAggregator,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.config.CfnConfigurationAggregator(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.config.CfnConfigurationAggregator(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -68,8 +68,8 @@ public open class CfnConfigurationAggregator(
     id: String,
     props: CfnConfigurationAggregatorProps,
   ) :
-      this(software.amazon.awscdk.services.config.CfnConfigurationAggregator(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConfigurationAggregatorProps::unwrap))
+      this(software.amazon.awscdk.services.config.CfnConfigurationAggregator(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConfigurationAggregatorProps.Companion::unwrap))
   )
 
   public constructor(
@@ -88,7 +88,7 @@ public open class CfnConfigurationAggregator(
    * Provides a list of source accounts and regions to be aggregated.
    */
   public open fun accountAggregationSources(`value`: IResolvable) {
-    unwrap(this).setAccountAggregationSources(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccountAggregationSources(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -129,7 +129,7 @@ public open class CfnConfigurationAggregator(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -142,14 +142,14 @@ public open class CfnConfigurationAggregator(
    * Provides an organization and list of regions to be aggregated.
    */
   public open fun organizationAggregationSource(`value`: IResolvable) {
-    unwrap(this).setOrganizationAggregationSource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOrganizationAggregationSource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Provides an organization and list of regions to be aggregated.
    */
   public open fun organizationAggregationSource(`value`: OrganizationAggregationSourceProperty) {
-    unwrap(this).setOrganizationAggregationSource(`value`.let(OrganizationAggregationSourceProperty::unwrap))
+    unwrap(this).setOrganizationAggregationSource(`value`.let(OrganizationAggregationSourceProperty.Companion::unwrap))
   }
 
   /**
@@ -176,7 +176,7 @@ public open class CfnConfigurationAggregator(
    * An array of tag object.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -288,7 +288,7 @@ public open class CfnConfigurationAggregator(
      * aggregated. 
      */
     override fun accountAggregationSources(accountAggregationSources: IResolvable) {
-      cdkBuilder.accountAggregationSources(accountAggregationSources.let(IResolvable::unwrap))
+      cdkBuilder.accountAggregationSources(accountAggregationSources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -330,7 +330,7 @@ public open class CfnConfigurationAggregator(
      * aggregated. 
      */
     override fun organizationAggregationSource(organizationAggregationSource: IResolvable) {
-      cdkBuilder.organizationAggregationSource(organizationAggregationSource.let(IResolvable::unwrap))
+      cdkBuilder.organizationAggregationSource(organizationAggregationSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -342,7 +342,7 @@ public open class CfnConfigurationAggregator(
      */
     override
         fun organizationAggregationSource(organizationAggregationSource: OrganizationAggregationSourceProperty) {
-      cdkBuilder.organizationAggregationSource(organizationAggregationSource.let(OrganizationAggregationSourceProperty::unwrap))
+      cdkBuilder.organizationAggregationSource(organizationAggregationSource.let(OrganizationAggregationSourceProperty.Companion::unwrap))
     }
 
     /**
@@ -366,7 +366,7 @@ public open class CfnConfigurationAggregator(
      * @param tags An array of tag object. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -509,7 +509,7 @@ public open class CfnConfigurationAggregator(
        * @param allAwsRegions If true, aggregate existing AWS Config regions and future regions.
        */
       override fun allAwsRegions(allAwsRegions: IResolvable) {
-        cdkBuilder.allAwsRegions(allAwsRegions.let(IResolvable::unwrap))
+        cdkBuilder.allAwsRegions(allAwsRegions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -665,7 +665,7 @@ public open class CfnConfigurationAggregator(
        * @param allAwsRegions If true, aggregate existing AWS Config regions and future regions.
        */
       override fun allAwsRegions(allAwsRegions: IResolvable) {
-        cdkBuilder.allAwsRegions(allAwsRegions.let(IResolvable::unwrap))
+        cdkBuilder.allAwsRegions(allAwsRegions.let(IResolvable.Companion::unwrap))
       }
 
       /**

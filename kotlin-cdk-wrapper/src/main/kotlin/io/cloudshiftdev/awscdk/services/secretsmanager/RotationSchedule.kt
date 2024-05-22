@@ -44,8 +44,8 @@ public open class RotationSchedule(
     id: String,
     props: RotationScheduleProps,
   ) :
-      this(software.amazon.awscdk.services.secretsmanager.RotationSchedule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(RotationScheduleProps::unwrap))
+      this(software.amazon.awscdk.services.secretsmanager.RotationSchedule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(RotationScheduleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -154,7 +154,7 @@ public open class RotationSchedule(
      * Secrets Manager triggers the next automatic rotation. 
      */
     override fun automaticallyAfter(automaticallyAfter: Duration) {
-      cdkBuilder.automaticallyAfter(automaticallyAfter.let(Duration::unwrap))
+      cdkBuilder.automaticallyAfter(automaticallyAfter.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -165,7 +165,7 @@ public open class RotationSchedule(
      * @param hostedRotation Hosted rotation. 
      */
     override fun hostedRotation(hostedRotation: HostedRotation) {
-      cdkBuilder.hostedRotation(hostedRotation.let(HostedRotation::unwrap))
+      cdkBuilder.hostedRotation(hostedRotation.let(HostedRotation.Companion::unwrap))
     }
 
     /**
@@ -189,7 +189,7 @@ public open class RotationSchedule(
      * @param rotationLambda A Lambda function that can rotate the secret. 
      */
     override fun rotationLambda(rotationLambda: IFunction) {
-      cdkBuilder.rotationLambda(rotationLambda.let(IFunction::unwrap))
+      cdkBuilder.rotationLambda(rotationLambda.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -217,7 +217,7 @@ public open class RotationSchedule(
      * @param secret The secret to rotate. 
      */
     override fun secret(secret: ISecret) {
-      cdkBuilder.secret(secret.let(ISecret::unwrap))
+      cdkBuilder.secret(secret.let(ISecret.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.secretsmanager.RotationSchedule =

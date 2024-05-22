@@ -51,7 +51,7 @@ public open class CfnFirewallDomainList(
   cdkObject: software.amazon.awscdk.services.route53resolver.CfnFirewallDomainList,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.route53resolver.CfnFirewallDomainList(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.route53resolver.CfnFirewallDomainList(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -60,8 +60,8 @@ public open class CfnFirewallDomainList(
     id: String,
     props: CfnFirewallDomainListProps,
   ) :
-      this(software.amazon.awscdk.services.route53resolver.CfnFirewallDomainList(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFirewallDomainListProps::unwrap))
+      this(software.amazon.awscdk.services.route53resolver.CfnFirewallDomainList(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFirewallDomainListProps.Companion::unwrap))
   )
 
   public constructor(
@@ -161,7 +161,7 @@ public open class CfnFirewallDomainList(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -191,7 +191,7 @@ public open class CfnFirewallDomainList(
    * A list of the tag keys and values that you want to associate with the domain list.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -320,7 +320,7 @@ public open class CfnFirewallDomainList(
      * list. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

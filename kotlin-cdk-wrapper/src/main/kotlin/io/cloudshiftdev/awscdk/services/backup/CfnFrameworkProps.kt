@@ -139,7 +139,7 @@ public interface CfnFrameworkProps {
      * Each framework must contain at least one control.
      */
     override fun frameworkControls(frameworkControls: IResolvable) {
-      cdkBuilder.frameworkControls(frameworkControls.let(IResolvable::unwrap))
+      cdkBuilder.frameworkControls(frameworkControls.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -180,7 +180,7 @@ public interface CfnFrameworkProps {
      * @param frameworkTags The tags to assign to your framework.
      */
     override fun frameworkTags(frameworkTags: List<CfnTag>) {
-      cdkBuilder.frameworkTags(frameworkTags.map(CfnTag::unwrap))
+      cdkBuilder.frameworkTags(frameworkTags.map(CfnTag.Companion::unwrap))
     }
 
     /**

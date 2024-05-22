@@ -346,14 +346,14 @@ public interface CfnGatewayRouteProps {
      * @param spec The specifications of the gateway route. 
      */
     override fun spec(spec: IResolvable) {
-      cdkBuilder.spec(spec.let(IResolvable::unwrap))
+      cdkBuilder.spec(spec.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param spec The specifications of the gateway route. 
      */
     override fun spec(spec: CfnGatewayRoute.GatewayRouteSpecProperty) {
-      cdkBuilder.spec(spec.let(CfnGatewayRoute.GatewayRouteSpecProperty::unwrap))
+      cdkBuilder.spec(spec.let(CfnGatewayRoute.GatewayRouteSpecProperty.Companion::unwrap))
     }
 
     /**
@@ -372,7 +372,7 @@ public interface CfnGatewayRouteProps {
      * characters.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

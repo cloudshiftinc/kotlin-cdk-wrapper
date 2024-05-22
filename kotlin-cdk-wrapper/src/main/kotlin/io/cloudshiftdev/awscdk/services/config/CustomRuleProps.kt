@@ -135,7 +135,7 @@ public interface CustomRuleProps : RuleProps {
      * @param lambdaFunction The Lambda function to run. 
      */
     override fun lambdaFunction(lambdaFunction: IFunction) {
-      cdkBuilder.lambdaFunction(lambdaFunction.let(IFunction::unwrap))
+      cdkBuilder.lambdaFunction(lambdaFunction.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -143,7 +143,7 @@ public interface CustomRuleProps : RuleProps {
      * evaluations.
      */
     override fun maximumExecutionFrequency(maximumExecutionFrequency: MaximumExecutionFrequency) {
-      cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency.let(MaximumExecutionFrequency::unwrap))
+      cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency.let(MaximumExecutionFrequency.Companion::unwrap))
     }
 
     /**
@@ -157,7 +157,7 @@ public interface CustomRuleProps : RuleProps {
      * @param ruleScope Defines which resources trigger an evaluation for an AWS Config rule.
      */
     override fun ruleScope(ruleScope: RuleScope) {
-      cdkBuilder.ruleScope(ruleScope.let(RuleScope::unwrap))
+      cdkBuilder.ruleScope(ruleScope.let(RuleScope.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.config.CustomRuleProps = cdkBuilder.build()

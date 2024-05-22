@@ -39,9 +39,9 @@ public abstract class DefinitionBody(
     scope: Construct,
     sfnPrincipal: IPrincipal,
     sfnProps: StateMachineProps,
-  ): DefinitionConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      sfnPrincipal.let(IPrincipal::unwrap),
-      sfnProps.let(StateMachineProps::unwrap)).let(DefinitionConfig::wrap)
+  ): DefinitionConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      sfnPrincipal.let(IPrincipal.Companion::unwrap),
+      sfnProps.let(StateMachineProps.Companion::unwrap)).let(DefinitionConfig::wrap)
 
   /**
    * @param scope 
@@ -68,9 +68,10 @@ public abstract class DefinitionBody(
     sfnPrincipal: IPrincipal,
     sfnProps: StateMachineProps,
     graph: StateGraph,
-  ): DefinitionConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      sfnPrincipal.let(IPrincipal::unwrap), sfnProps.let(StateMachineProps::unwrap),
-      graph.let(StateGraph::unwrap)).let(DefinitionConfig::wrap)
+  ): DefinitionConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      sfnPrincipal.let(IPrincipal.Companion::unwrap),
+      sfnProps.let(StateMachineProps.Companion::unwrap),
+      graph.let(StateGraph.Companion::unwrap)).let(DefinitionConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.DefinitionBody,
@@ -78,14 +79,14 @@ public abstract class DefinitionBody(
 
   public companion object {
     public fun fromChainable(chainable: IChainable): DefinitionBody =
-        software.amazon.awscdk.services.stepfunctions.DefinitionBody.fromChainable(chainable.let(IChainable::unwrap)).let(DefinitionBody::wrap)
+        software.amazon.awscdk.services.stepfunctions.DefinitionBody.fromChainable(chainable.let(IChainable.Companion::unwrap)).let(DefinitionBody::wrap)
 
     public fun fromFile(path: String): DefinitionBody =
         software.amazon.awscdk.services.stepfunctions.DefinitionBody.fromFile(path).let(DefinitionBody::wrap)
 
     public fun fromFile(path: String, options: AssetOptions): DefinitionBody =
         software.amazon.awscdk.services.stepfunctions.DefinitionBody.fromFile(path,
-        options.let(AssetOptions::unwrap)).let(DefinitionBody::wrap)
+        options.let(AssetOptions.Companion::unwrap)).let(DefinitionBody::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("21d27b6a48dac2c5dbaf4ef80ba3ee7acc7ea5c13cf38f0df0bb52a4fb253451")

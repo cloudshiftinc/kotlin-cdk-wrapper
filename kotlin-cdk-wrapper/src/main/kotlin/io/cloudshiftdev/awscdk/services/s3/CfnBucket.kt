@@ -57,7 +57,7 @@ public open class CfnBucket(
   cdkObject: software.amazon.awscdk.services.s3.CfnBucket,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.s3.CfnBucket(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.s3.CfnBucket(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -66,8 +66,8 @@ public open class CfnBucket(
     id: String,
     props: CfnBucketProps,
   ) :
-      this(software.amazon.awscdk.services.s3.CfnBucket(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnBucketProps::unwrap))
+      this(software.amazon.awscdk.services.s3.CfnBucket(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnBucketProps.Companion::unwrap))
   )
 
   public constructor(
@@ -86,14 +86,14 @@ public open class CfnBucket(
    * Configures the transfer acceleration state for an Amazon S3 bucket.
    */
   public open fun accelerateConfiguration(`value`: IResolvable) {
-    unwrap(this).setAccelerateConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccelerateConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configures the transfer acceleration state for an Amazon S3 bucket.
    */
   public open fun accelerateConfiguration(`value`: AccelerateConfigurationProperty) {
-    unwrap(this).setAccelerateConfiguration(`value`.let(AccelerateConfigurationProperty::unwrap))
+    unwrap(this).setAccelerateConfiguration(`value`.let(AccelerateConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -126,7 +126,7 @@ public open class CfnBucket(
    * Specifies the configuration and any analyses for the analytics filter of an Amazon S3 bucket.
    */
   public open fun analyticsConfigurations(`value`: IResolvable) {
-    unwrap(this).setAnalyticsConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAnalyticsConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -195,7 +195,7 @@ public open class CfnBucket(
    * KMS-managed keys (DSSE-KMS).
    */
   public open fun bucketEncryption(`value`: IResolvable) {
-    unwrap(this).setBucketEncryption(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBucketEncryption(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -204,7 +204,7 @@ public open class CfnBucket(
    * KMS-managed keys (DSSE-KMS).
    */
   public open fun bucketEncryption(`value`: BucketEncryptionProperty) {
-    unwrap(this).setBucketEncryption(`value`.let(BucketEncryptionProperty::unwrap))
+    unwrap(this).setBucketEncryption(`value`.let(BucketEncryptionProperty.Companion::unwrap))
   }
 
   /**
@@ -238,14 +238,14 @@ public open class CfnBucket(
    * Describes the cross-origin access configuration for objects in an Amazon S3 bucket.
    */
   public open fun corsConfiguration(`value`: IResolvable) {
-    unwrap(this).setCorsConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCorsConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Describes the cross-origin access configuration for objects in an Amazon S3 bucket.
    */
   public open fun corsConfiguration(`value`: CorsConfigurationProperty) {
-    unwrap(this).setCorsConfiguration(`value`.let(CorsConfigurationProperty::unwrap))
+    unwrap(this).setCorsConfiguration(`value`.let(CorsConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -262,7 +262,7 @@ public open class CfnBucket(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -275,7 +275,7 @@ public open class CfnBucket(
    * Defines how Amazon S3 handles Intelligent-Tiering storage.
    */
   public open fun intelligentTieringConfigurations(`value`: IResolvable) {
-    unwrap(this).setIntelligentTieringConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIntelligentTieringConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -300,7 +300,7 @@ public open class CfnBucket(
    * Specifies the inventory configuration for an Amazon S3 bucket.
    */
   public open fun inventoryConfigurations(`value`: IResolvable) {
-    unwrap(this).setInventoryConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInventoryConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -325,14 +325,14 @@ public open class CfnBucket(
    * Specifies the lifecycle configuration for objects in an Amazon S3 bucket.
    */
   public open fun lifecycleConfiguration(`value`: IResolvable) {
-    unwrap(this).setLifecycleConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLifecycleConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the lifecycle configuration for objects in an Amazon S3 bucket.
    */
   public open fun lifecycleConfiguration(`value`: LifecycleConfigurationProperty) {
-    unwrap(this).setLifecycleConfiguration(`value`.let(LifecycleConfigurationProperty::unwrap))
+    unwrap(this).setLifecycleConfiguration(`value`.let(LifecycleConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -353,14 +353,14 @@ public open class CfnBucket(
    * Settings that define where logs are stored.
    */
   public open fun loggingConfiguration(`value`: IResolvable) {
-    unwrap(this).setLoggingConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoggingConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Settings that define where logs are stored.
    */
   public open fun loggingConfiguration(`value`: LoggingConfigurationProperty) {
-    unwrap(this).setLoggingConfiguration(`value`.let(LoggingConfigurationProperty::unwrap))
+    unwrap(this).setLoggingConfiguration(`value`.let(LoggingConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -382,7 +382,7 @@ public open class CfnBucket(
    * configuration ID) from an Amazon S3 bucket.
    */
   public open fun metricsConfigurations(`value`: IResolvable) {
-    unwrap(this).setMetricsConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMetricsConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -409,14 +409,14 @@ public open class CfnBucket(
    * Configuration that defines how Amazon S3 handles bucket notifications.
    */
   public open fun notificationConfiguration(`value`: IResolvable) {
-    unwrap(this).setNotificationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNotificationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration that defines how Amazon S3 handles bucket notifications.
    */
   public open fun notificationConfiguration(`value`: NotificationConfigurationProperty) {
-    unwrap(this).setNotificationConfiguration(`value`.let(NotificationConfigurationProperty::unwrap))
+    unwrap(this).setNotificationConfiguration(`value`.let(NotificationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -437,14 +437,14 @@ public open class CfnBucket(
    * This operation is not supported by directory buckets.
    */
   public open fun objectLockConfiguration(`value`: IResolvable) {
-    unwrap(this).setObjectLockConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setObjectLockConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * This operation is not supported by directory buckets.
    */
   public open fun objectLockConfiguration(`value`: ObjectLockConfigurationProperty) {
-    unwrap(this).setObjectLockConfiguration(`value`.let(ObjectLockConfigurationProperty::unwrap))
+    unwrap(this).setObjectLockConfiguration(`value`.let(ObjectLockConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -472,7 +472,7 @@ public open class CfnBucket(
    * Indicates whether this bucket has an Object Lock configuration enabled.
    */
   public open fun objectLockEnabled(`value`: IResolvable) {
-    unwrap(this).setObjectLockEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setObjectLockEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -484,14 +484,14 @@ public open class CfnBucket(
    * Configuration that defines how Amazon S3 handles Object Ownership rules.
    */
   public open fun ownershipControls(`value`: IResolvable) {
-    unwrap(this).setOwnershipControls(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOwnershipControls(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration that defines how Amazon S3 handles Object Ownership rules.
    */
   public open fun ownershipControls(`value`: OwnershipControlsProperty) {
-    unwrap(this).setOwnershipControls(`value`.let(OwnershipControlsProperty::unwrap))
+    unwrap(this).setOwnershipControls(`value`.let(OwnershipControlsProperty.Companion::unwrap))
   }
 
   /**
@@ -512,14 +512,14 @@ public open class CfnBucket(
    * Configuration that defines how Amazon S3 handles public access.
    */
   public open fun publicAccessBlockConfiguration(`value`: IResolvable) {
-    unwrap(this).setPublicAccessBlockConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPublicAccessBlockConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration that defines how Amazon S3 handles public access.
    */
   public open fun publicAccessBlockConfiguration(`value`: PublicAccessBlockConfigurationProperty) {
-    unwrap(this).setPublicAccessBlockConfiguration(`value`.let(PublicAccessBlockConfigurationProperty::unwrap))
+    unwrap(this).setPublicAccessBlockConfiguration(`value`.let(PublicAccessBlockConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -540,14 +540,14 @@ public open class CfnBucket(
    * Configuration for replicating objects in an S3 bucket.
    */
   public open fun replicationConfiguration(`value`: IResolvable) {
-    unwrap(this).setReplicationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setReplicationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration for replicating objects in an S3 bucket.
    */
   public open fun replicationConfiguration(`value`: ReplicationConfigurationProperty) {
-    unwrap(this).setReplicationConfiguration(`value`.let(ReplicationConfigurationProperty::unwrap))
+    unwrap(this).setReplicationConfiguration(`value`.let(ReplicationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -574,7 +574,7 @@ public open class CfnBucket(
    * An arbitrary set of tags (key-value pairs) for this S3 bucket.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -591,14 +591,14 @@ public open class CfnBucket(
    * Enables multiple versions of all objects in this bucket.
    */
   public open fun versioningConfiguration(`value`: IResolvable) {
-    unwrap(this).setVersioningConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVersioningConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Enables multiple versions of all objects in this bucket.
    */
   public open fun versioningConfiguration(`value`: VersioningConfigurationProperty) {
-    unwrap(this).setVersioningConfiguration(`value`.let(VersioningConfigurationProperty::unwrap))
+    unwrap(this).setVersioningConfiguration(`value`.let(VersioningConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -619,14 +619,14 @@ public open class CfnBucket(
    * Information used to configure the bucket as a static website.
    */
   public open fun websiteConfiguration(`value`: IResolvable) {
-    unwrap(this).setWebsiteConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setWebsiteConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information used to configure the bucket as a static website.
    */
   public open fun websiteConfiguration(`value`: WebsiteConfigurationProperty) {
-    unwrap(this).setWebsiteConfiguration(`value`.let(WebsiteConfigurationProperty::unwrap))
+    unwrap(this).setWebsiteConfiguration(`value`.let(WebsiteConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -1378,7 +1378,7 @@ public open class CfnBucket(
      * bucket. 
      */
     override fun accelerateConfiguration(accelerateConfiguration: IResolvable) {
-      cdkBuilder.accelerateConfiguration(accelerateConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.accelerateConfiguration(accelerateConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1393,7 +1393,7 @@ public open class CfnBucket(
      * bucket. 
      */
     override fun accelerateConfiguration(accelerateConfiguration: AccelerateConfigurationProperty) {
-      cdkBuilder.accelerateConfiguration(accelerateConfiguration.let(AccelerateConfigurationProperty::unwrap))
+      cdkBuilder.accelerateConfiguration(accelerateConfiguration.let(AccelerateConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1456,7 +1456,7 @@ public open class CfnBucket(
      * filter of an Amazon S3 bucket. 
      */
     override fun analyticsConfigurations(analyticsConfigurations: IResolvable) {
-      cdkBuilder.analyticsConfigurations(analyticsConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.analyticsConfigurations(analyticsConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1496,7 +1496,7 @@ public open class CfnBucket(
      * server-side encryption with KMS-managed keys (DSSE-KMS). 
      */
     override fun bucketEncryption(bucketEncryption: IResolvable) {
-      cdkBuilder.bucketEncryption(bucketEncryption.let(IResolvable::unwrap))
+      cdkBuilder.bucketEncryption(bucketEncryption.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1515,7 +1515,7 @@ public open class CfnBucket(
      * server-side encryption with KMS-managed keys (DSSE-KMS). 
      */
     override fun bucketEncryption(bucketEncryption: BucketEncryptionProperty) {
-      cdkBuilder.bucketEncryption(bucketEncryption.let(BucketEncryptionProperty::unwrap))
+      cdkBuilder.bucketEncryption(bucketEncryption.let(BucketEncryptionProperty.Companion::unwrap))
     }
 
     /**
@@ -1574,7 +1574,7 @@ public open class CfnBucket(
      * Amazon S3 bucket. 
      */
     override fun corsConfiguration(corsConfiguration: IResolvable) {
-      cdkBuilder.corsConfiguration(corsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.corsConfiguration(corsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1589,7 +1589,7 @@ public open class CfnBucket(
      * Amazon S3 bucket. 
      */
     override fun corsConfiguration(corsConfiguration: CorsConfigurationProperty) {
-      cdkBuilder.corsConfiguration(corsConfiguration.let(CorsConfigurationProperty::unwrap))
+      cdkBuilder.corsConfiguration(corsConfiguration.let(CorsConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1616,7 +1616,7 @@ public open class CfnBucket(
      * storage. 
      */
     override fun intelligentTieringConfigurations(intelligentTieringConfigurations: IResolvable) {
-      cdkBuilder.intelligentTieringConfigurations(intelligentTieringConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.intelligentTieringConfigurations(intelligentTieringConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1652,7 +1652,7 @@ public open class CfnBucket(
      * 
      */
     override fun inventoryConfigurations(inventoryConfigurations: IResolvable) {
-      cdkBuilder.inventoryConfigurations(inventoryConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.inventoryConfigurations(inventoryConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1696,7 +1696,7 @@ public open class CfnBucket(
      * S3 bucket. 
      */
     override fun lifecycleConfiguration(lifecycleConfiguration: IResolvable) {
-      cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1711,7 +1711,7 @@ public open class CfnBucket(
      * S3 bucket. 
      */
     override fun lifecycleConfiguration(lifecycleConfiguration: LifecycleConfigurationProperty) {
-      cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(LifecycleConfigurationProperty::unwrap))
+      cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(LifecycleConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1738,7 +1738,7 @@ public open class CfnBucket(
      * @param loggingConfiguration Settings that define where logs are stored. 
      */
     override fun loggingConfiguration(loggingConfiguration: IResolvable) {
-      cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1748,7 +1748,7 @@ public open class CfnBucket(
      * @param loggingConfiguration Settings that define where logs are stored. 
      */
     override fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty) {
-      cdkBuilder.loggingConfiguration(loggingConfiguration.let(LoggingConfigurationProperty::unwrap))
+      cdkBuilder.loggingConfiguration(loggingConfiguration.let(LoggingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1778,7 +1778,7 @@ public open class CfnBucket(
      * metrics (specified by the metrics configuration ID) from an Amazon S3 bucket. 
      */
     override fun metricsConfigurations(metricsConfigurations: IResolvable) {
-      cdkBuilder.metricsConfigurations(metricsConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.metricsConfigurations(metricsConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1824,7 +1824,7 @@ public open class CfnBucket(
      * notifications. 
      */
     override fun notificationConfiguration(notificationConfiguration: IResolvable) {
-      cdkBuilder.notificationConfiguration(notificationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.notificationConfiguration(notificationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1836,7 +1836,7 @@ public open class CfnBucket(
      */
     override
         fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty) {
-      cdkBuilder.notificationConfiguration(notificationConfiguration.let(NotificationConfigurationProperty::unwrap))
+      cdkBuilder.notificationConfiguration(notificationConfiguration.let(NotificationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1874,7 +1874,7 @@ public open class CfnBucket(
      * @param objectLockConfiguration This operation is not supported by directory buckets. 
      */
     override fun objectLockConfiguration(objectLockConfiguration: IResolvable) {
-      cdkBuilder.objectLockConfiguration(objectLockConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.objectLockConfiguration(objectLockConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1898,7 +1898,7 @@ public open class CfnBucket(
      * @param objectLockConfiguration This operation is not supported by directory buckets. 
      */
     override fun objectLockConfiguration(objectLockConfiguration: ObjectLockConfigurationProperty) {
-      cdkBuilder.objectLockConfiguration(objectLockConfiguration.let(ObjectLockConfigurationProperty::unwrap))
+      cdkBuilder.objectLockConfiguration(objectLockConfiguration.let(ObjectLockConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1950,7 +1950,7 @@ public open class CfnBucket(
      * enabled. 
      */
     override fun objectLockEnabled(objectLockEnabled: IResolvable) {
-      cdkBuilder.objectLockEnabled(objectLockEnabled.let(IResolvable::unwrap))
+      cdkBuilder.objectLockEnabled(objectLockEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1961,7 +1961,7 @@ public open class CfnBucket(
      * rules. 
      */
     override fun ownershipControls(ownershipControls: IResolvable) {
-      cdkBuilder.ownershipControls(ownershipControls.let(IResolvable::unwrap))
+      cdkBuilder.ownershipControls(ownershipControls.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1972,7 +1972,7 @@ public open class CfnBucket(
      * rules. 
      */
     override fun ownershipControls(ownershipControls: OwnershipControlsProperty) {
-      cdkBuilder.ownershipControls(ownershipControls.let(OwnershipControlsProperty::unwrap))
+      cdkBuilder.ownershipControls(ownershipControls.let(OwnershipControlsProperty.Companion::unwrap))
     }
 
     /**
@@ -1995,7 +1995,7 @@ public open class CfnBucket(
      * access. 
      */
     override fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: IResolvable) {
-      cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2007,7 +2007,7 @@ public open class CfnBucket(
      */
     override
         fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: PublicAccessBlockConfigurationProperty) {
-      cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration.let(PublicAccessBlockConfigurationProperty::unwrap))
+      cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration.let(PublicAccessBlockConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -2037,7 +2037,7 @@ public open class CfnBucket(
      * @param replicationConfiguration Configuration for replicating objects in an S3 bucket. 
      */
     override fun replicationConfiguration(replicationConfiguration: IResolvable) {
-      cdkBuilder.replicationConfiguration(replicationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.replicationConfiguration(replicationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2054,7 +2054,7 @@ public open class CfnBucket(
      */
     override
         fun replicationConfiguration(replicationConfiguration: ReplicationConfigurationProperty) {
-      cdkBuilder.replicationConfiguration(replicationConfiguration.let(ReplicationConfigurationProperty::unwrap))
+      cdkBuilder.replicationConfiguration(replicationConfiguration.let(ReplicationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -2082,7 +2082,7 @@ public open class CfnBucket(
      * @param tags An arbitrary set of tags (key-value pairs) for this S3 bucket. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -2103,7 +2103,7 @@ public open class CfnBucket(
      * @param versioningConfiguration Enables multiple versions of all objects in this bucket. 
      */
     override fun versioningConfiguration(versioningConfiguration: IResolvable) {
-      cdkBuilder.versioningConfiguration(versioningConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.versioningConfiguration(versioningConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2116,7 +2116,7 @@ public open class CfnBucket(
      * @param versioningConfiguration Enables multiple versions of all objects in this bucket. 
      */
     override fun versioningConfiguration(versioningConfiguration: VersioningConfigurationProperty) {
-      cdkBuilder.versioningConfiguration(versioningConfiguration.let(VersioningConfigurationProperty::unwrap))
+      cdkBuilder.versioningConfiguration(versioningConfiguration.let(VersioningConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -2144,7 +2144,7 @@ public open class CfnBucket(
      * @param websiteConfiguration Information used to configure the bucket as a static website. 
      */
     override fun websiteConfiguration(websiteConfiguration: IResolvable) {
-      cdkBuilder.websiteConfiguration(websiteConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.websiteConfiguration(websiteConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2157,7 +2157,7 @@ public open class CfnBucket(
      * @param websiteConfiguration Information used to configure the bucket as a static website. 
      */
     override fun websiteConfiguration(websiteConfiguration: WebsiteConfigurationProperty) {
-      cdkBuilder.websiteConfiguration(websiteConfiguration.let(WebsiteConfigurationProperty::unwrap))
+      cdkBuilder.websiteConfiguration(websiteConfiguration.let(WebsiteConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -2626,7 +2626,7 @@ public open class CfnBucket(
        * made available to analyze the tradeoffs between different storage classes. 
        */
       override fun storageClassAnalysis(storageClassAnalysis: IResolvable) {
-        cdkBuilder.storageClassAnalysis(storageClassAnalysis.let(IResolvable::unwrap))
+        cdkBuilder.storageClassAnalysis(storageClassAnalysis.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2634,7 +2634,7 @@ public open class CfnBucket(
        * made available to analyze the tradeoffs between different storage classes. 
        */
       override fun storageClassAnalysis(storageClassAnalysis: StorageClassAnalysisProperty) {
-        cdkBuilder.storageClassAnalysis(storageClassAnalysis.let(StorageClassAnalysisProperty::unwrap))
+        cdkBuilder.storageClassAnalysis(storageClassAnalysis.let(StorageClassAnalysisProperty.Companion::unwrap))
       }
 
       /**
@@ -2653,7 +2653,7 @@ public open class CfnBucket(
        * specified, all of the contents of the bucket are included in the analysis.
        */
       override fun tagFilters(tagFilters: IResolvable) {
-        cdkBuilder.tagFilters(tagFilters.let(IResolvable::unwrap))
+        cdkBuilder.tagFilters(tagFilters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2803,7 +2803,7 @@ public open class CfnBucket(
        */
       override
           fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
-        cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2931,7 +2931,7 @@ public open class CfnBucket(
        * You can add up to 100 rules to the configuration.
        */
       override fun corsRules(corsRules: IResolvable) {
-        cdkBuilder.corsRules(corsRules.let(IResolvable::unwrap))
+        cdkBuilder.corsRules(corsRules.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3371,14 +3371,14 @@ public open class CfnBucket(
        * @param destination The place to store the data for an analysis. 
        */
       override fun destination(destination: IResolvable) {
-        cdkBuilder.destination(destination.let(IResolvable::unwrap))
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param destination The place to store the data for an analysis. 
        */
       override fun destination(destination: DestinationProperty) {
-        cdkBuilder.destination(destination.let(DestinationProperty::unwrap))
+        cdkBuilder.destination(destination.let(DestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -4073,7 +4073,7 @@ public open class CfnBucket(
        * @param eventBridgeEnabled Enables delivery of events to Amazon EventBridge. 
        */
       override fun eventBridgeEnabled(eventBridgeEnabled: IResolvable) {
-        cdkBuilder.eventBridgeEnabled(eventBridgeEnabled.let(IResolvable::unwrap))
+        cdkBuilder.eventBridgeEnabled(eventBridgeEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -4431,7 +4431,7 @@ public open class CfnBucket(
        * @param tagFilters A container for a key-value pair.
        */
       override fun tagFilters(tagFilters: IResolvable) {
-        cdkBuilder.tagFilters(tagFilters.let(IResolvable::unwrap))
+        cdkBuilder.tagFilters(tagFilters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4458,7 +4458,7 @@ public open class CfnBucket(
        * or Deep Archive Access tiers.
        */
       override fun tierings(tierings: IResolvable) {
-        cdkBuilder.tierings(tierings.let(IResolvable::unwrap))
+        cdkBuilder.tierings(tierings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4733,14 +4733,14 @@ public open class CfnBucket(
        * @param destination Contains information about where to publish the inventory results. 
        */
       override fun destination(destination: IResolvable) {
-        cdkBuilder.destination(destination.let(IResolvable::unwrap))
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param destination Contains information about where to publish the inventory results. 
        */
       override fun destination(destination: DestinationProperty) {
-        cdkBuilder.destination(destination.let(DestinationProperty::unwrap))
+        cdkBuilder.destination(destination.let(DestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -4766,7 +4766,7 @@ public open class CfnBucket(
        * generated.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5022,7 +5022,7 @@ public open class CfnBucket(
        * invoke the function when they are added to the Amazon S3 bucket.
        */
       override fun filter(filter: IResolvable) {
-        cdkBuilder.filter(filter.let(IResolvable::unwrap))
+        cdkBuilder.filter(filter.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5032,7 +5032,7 @@ public open class CfnBucket(
        * invoke the function when they are added to the Amazon S3 bucket.
        */
       override fun filter(filter: NotificationFilterProperty) {
-        cdkBuilder.filter(filter.let(NotificationFilterProperty::unwrap))
+        cdkBuilder.filter(filter.let(NotificationFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -5215,7 +5215,7 @@ public open class CfnBucket(
        * @param rules A lifecycle rule for individual objects in an Amazon S3 bucket. 
        */
       override fun rules(rules: IResolvable) {
-        cdkBuilder.rules(rules.let(IResolvable::unwrap))
+        cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5400,7 +5400,7 @@ public open class CfnBucket(
        * Only one format, either PartitionedPrefix or SimplePrefix, is allowed.
        */
       override fun targetObjectKeyFormat(targetObjectKeyFormat: IResolvable) {
-        cdkBuilder.targetObjectKeyFormat(targetObjectKeyFormat.let(IResolvable::unwrap))
+        cdkBuilder.targetObjectKeyFormat(targetObjectKeyFormat.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5408,7 +5408,7 @@ public open class CfnBucket(
        * Only one format, either PartitionedPrefix or SimplePrefix, is allowed.
        */
       override fun targetObjectKeyFormat(targetObjectKeyFormat: TargetObjectKeyFormatProperty) {
-        cdkBuilder.targetObjectKeyFormat(targetObjectKeyFormat.let(TargetObjectKeyFormatProperty::unwrap))
+        cdkBuilder.targetObjectKeyFormat(targetObjectKeyFormat.let(TargetObjectKeyFormatProperty.Companion::unwrap))
       }
 
       /**
@@ -5620,7 +5620,7 @@ public open class CfnBucket(
        * The metrics configuration includes only objects that meet the filter's criteria.
        */
       override fun tagFilters(tagFilters: IResolvable) {
-        cdkBuilder.tagFilters(tagFilters.let(IResolvable::unwrap))
+        cdkBuilder.tagFilters(tagFilters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5774,7 +5774,7 @@ public open class CfnBucket(
        * `s3:Replication:OperationMissedThreshold` event.
        */
       override fun eventThreshold(eventThreshold: IResolvable) {
-        cdkBuilder.eventThreshold(eventThreshold.let(IResolvable::unwrap))
+        cdkBuilder.eventThreshold(eventThreshold.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5782,7 +5782,7 @@ public open class CfnBucket(
        * `s3:Replication:OperationMissedThreshold` event.
        */
       override fun eventThreshold(eventThreshold: ReplicationTimeValueProperty) {
-        cdkBuilder.eventThreshold(eventThreshold.let(ReplicationTimeValueProperty::unwrap))
+        cdkBuilder.eventThreshold(eventThreshold.let(ReplicationTimeValueProperty.Companion::unwrap))
       }
 
       /**
@@ -6385,7 +6385,7 @@ public open class CfnBucket(
        * @param eventBridgeConfiguration Enables delivery of events to Amazon EventBridge.
        */
       override fun eventBridgeConfiguration(eventBridgeConfiguration: IResolvable) {
-        cdkBuilder.eventBridgeConfiguration(eventBridgeConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.eventBridgeConfiguration(eventBridgeConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6393,7 +6393,7 @@ public open class CfnBucket(
        */
       override
           fun eventBridgeConfiguration(eventBridgeConfiguration: EventBridgeConfigurationProperty) {
-        cdkBuilder.eventBridgeConfiguration(eventBridgeConfiguration.let(EventBridgeConfigurationProperty::unwrap))
+        cdkBuilder.eventBridgeConfiguration(eventBridgeConfiguration.let(EventBridgeConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -6411,7 +6411,7 @@ public open class CfnBucket(
        * which to invoke them.
        */
       override fun lambdaConfigurations(lambdaConfigurations: IResolvable) {
-        cdkBuilder.lambdaConfigurations(lambdaConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.lambdaConfigurations(lambdaConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6434,7 +6434,7 @@ public open class CfnBucket(
        * and the events for which to publish messages.
        */
       override fun queueConfigurations(queueConfigurations: IResolvable) {
-        cdkBuilder.queueConfigurations(queueConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.queueConfigurations(queueConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6457,7 +6457,7 @@ public open class CfnBucket(
        * which notifications are generated.
        */
       override fun topicConfigurations(topicConfigurations: IResolvable) {
-        cdkBuilder.topicConfigurations(topicConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.topicConfigurations(topicConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6599,14 +6599,14 @@ public open class CfnBucket(
        * @param s3Key A container for object key name prefix and suffix filtering rules. 
        */
       override fun s3Key(s3Key: IResolvable) {
-        cdkBuilder.s3Key(s3Key.let(IResolvable::unwrap))
+        cdkBuilder.s3Key(s3Key.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3Key A container for object key name prefix and suffix filtering rules. 
        */
       override fun s3Key(s3Key: S3KeyFilterProperty) {
-        cdkBuilder.s3Key(s3Key.let(S3KeyFilterProperty::unwrap))
+        cdkBuilder.s3Key(s3Key.let(S3KeyFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -6779,7 +6779,7 @@ public open class CfnBucket(
        * .
        */
       override fun rule(rule: IResolvable) {
-        cdkBuilder.rule(rule.let(IResolvable::unwrap))
+        cdkBuilder.rule(rule.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6793,7 +6793,7 @@ public open class CfnBucket(
        * .
        */
       override fun rule(rule: ObjectLockRuleProperty) {
-        cdkBuilder.rule(rule.let(ObjectLockRuleProperty::unwrap))
+        cdkBuilder.rule(rule.let(ObjectLockRuleProperty.Companion::unwrap))
       }
 
       /**
@@ -6955,7 +6955,7 @@ public open class CfnBucket(
        * .
        */
       override fun defaultRetention(defaultRetention: IResolvable) {
-        cdkBuilder.defaultRetention(defaultRetention.let(IResolvable::unwrap))
+        cdkBuilder.defaultRetention(defaultRetention.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6968,7 +6968,7 @@ public open class CfnBucket(
        * .
        */
       override fun defaultRetention(defaultRetention: DefaultRetentionProperty) {
-        cdkBuilder.defaultRetention(defaultRetention.let(DefaultRetentionProperty::unwrap))
+        cdkBuilder.defaultRetention(defaultRetention.let(DefaultRetentionProperty.Companion::unwrap))
       }
 
       /**
@@ -7088,7 +7088,7 @@ public open class CfnBucket(
        * @param rules Specifies the container element for Object Ownership rules. 
        */
       override fun rules(rules: IResolvable) {
-        cdkBuilder.rules(rules.let(IResolvable::unwrap))
+        cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7527,7 +7527,7 @@ public open class CfnBucket(
        * Enabling this setting doesn't affect existing policies or ACLs.
        */
       override fun blockPublicAcls(blockPublicAcls: IResolvable) {
-        cdkBuilder.blockPublicAcls(blockPublicAcls.let(IResolvable::unwrap))
+        cdkBuilder.blockPublicAcls(blockPublicAcls.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7551,7 +7551,7 @@ public open class CfnBucket(
        * Enabling this setting doesn't affect existing bucket policies.
        */
       override fun blockPublicPolicy(blockPublicPolicy: IResolvable) {
-        cdkBuilder.blockPublicPolicy(blockPublicPolicy.let(IResolvable::unwrap))
+        cdkBuilder.blockPublicPolicy(blockPublicPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7577,7 +7577,7 @@ public open class CfnBucket(
        * prevent new public ACLs from being set.
        */
       override fun ignorePublicAcls(ignorePublicAcls: IResolvable) {
-        cdkBuilder.ignorePublicAcls(ignorePublicAcls.let(IResolvable::unwrap))
+        cdkBuilder.ignorePublicAcls(ignorePublicAcls.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7605,7 +7605,7 @@ public open class CfnBucket(
        * specific accounts, is blocked.
        */
       override fun restrictPublicBuckets(restrictPublicBuckets: IResolvable) {
-        cdkBuilder.restrictPublicBuckets(restrictPublicBuckets.let(IResolvable::unwrap))
+        cdkBuilder.restrictPublicBuckets(restrictPublicBuckets.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -7834,7 +7834,7 @@ public open class CfnBucket(
        * in the *Amazon S3 User Guide* .
        */
       override fun filter(filter: IResolvable) {
-        cdkBuilder.filter(filter.let(IResolvable::unwrap))
+        cdkBuilder.filter(filter.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7846,7 +7846,7 @@ public open class CfnBucket(
        * in the *Amazon S3 User Guide* .
        */
       override fun filter(filter: NotificationFilterProperty) {
-        cdkBuilder.filter(filter.let(NotificationFilterProperty::unwrap))
+        cdkBuilder.filter(filter.let(NotificationFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -8577,7 +8577,7 @@ public open class CfnBucket(
        * rules.
        */
       override fun rules(rules: IResolvable) {
-        cdkBuilder.rules(rules.let(IResolvable::unwrap))
+        cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8905,7 +8905,7 @@ public open class CfnBucket(
        * AWS account that owns the source object.
        */
       override fun accessControlTranslation(accessControlTranslation: IResolvable) {
-        cdkBuilder.accessControlTranslation(accessControlTranslation.let(IResolvable::unwrap))
+        cdkBuilder.accessControlTranslation(accessControlTranslation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8917,7 +8917,7 @@ public open class CfnBucket(
        */
       override
           fun accessControlTranslation(accessControlTranslation: AccessControlTranslationProperty) {
-        cdkBuilder.accessControlTranslation(accessControlTranslation.let(AccessControlTranslationProperty::unwrap))
+        cdkBuilder.accessControlTranslation(accessControlTranslation.let(AccessControlTranslationProperty.Companion::unwrap))
       }
 
       /**
@@ -8961,7 +8961,7 @@ public open class CfnBucket(
        * @param encryptionConfiguration Specifies encryption-related information.
        */
       override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8969,7 +8969,7 @@ public open class CfnBucket(
        */
       override
           fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
-        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty::unwrap))
+        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -8986,7 +8986,7 @@ public open class CfnBucket(
        * replication metrics and events.
        */
       override fun metrics(metrics: IResolvable) {
-        cdkBuilder.metrics(metrics.let(IResolvable::unwrap))
+        cdkBuilder.metrics(metrics.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8994,7 +8994,7 @@ public open class CfnBucket(
        * replication metrics and events.
        */
       override fun metrics(metrics: MetricsProperty) {
-        cdkBuilder.metrics(metrics.let(MetricsProperty::unwrap))
+        cdkBuilder.metrics(metrics.let(MetricsProperty.Companion::unwrap))
       }
 
       /**
@@ -9013,7 +9013,7 @@ public open class CfnBucket(
        * Must be specified together with a `Metrics` block.
        */
       override fun replicationTime(replicationTime: IResolvable) {
-        cdkBuilder.replicationTime(replicationTime.let(IResolvable::unwrap))
+        cdkBuilder.replicationTime(replicationTime.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9023,7 +9023,7 @@ public open class CfnBucket(
        * Must be specified together with a `Metrics` block.
        */
       override fun replicationTime(replicationTime: ReplicationTimeProperty) {
-        cdkBuilder.replicationTime(replicationTime.let(ReplicationTimeProperty::unwrap))
+        cdkBuilder.replicationTime(replicationTime.let(ReplicationTimeProperty.Companion::unwrap))
       }
 
       /**
@@ -9241,7 +9241,7 @@ public open class CfnBucket(
        * @param tagFilters An array of tags containing key and value pairs.
        */
       override fun tagFilters(tagFilters: IResolvable) {
-        cdkBuilder.tagFilters(tagFilters.let(IResolvable::unwrap))
+        cdkBuilder.tagFilters(tagFilters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9453,7 +9453,7 @@ public open class CfnBucket(
        * tag.
        */
       override fun and(and: IResolvable) {
-        cdkBuilder.and(and.let(IResolvable::unwrap))
+        cdkBuilder.and(and.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9466,7 +9466,7 @@ public open class CfnBucket(
        * tag.
        */
       override fun and(and: ReplicationRuleAndOperatorProperty) {
-        cdkBuilder.and(and.let(ReplicationRuleAndOperatorProperty::unwrap))
+        cdkBuilder.and(and.let(ReplicationRuleAndOperatorProperty.Companion::unwrap))
       }
 
       /**
@@ -9501,7 +9501,7 @@ public open class CfnBucket(
        * The rule applies only to objects that have the tag in their tag set.
        */
       override fun tagFilter(tagFilter: IResolvable) {
-        cdkBuilder.tagFilter(tagFilter.let(IResolvable::unwrap))
+        cdkBuilder.tagFilter(tagFilter.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9509,7 +9509,7 @@ public open class CfnBucket(
        * The rule applies only to objects that have the tag in their tag set.
        */
       override fun tagFilter(tagFilter: TagFilterProperty) {
-        cdkBuilder.tagFilter(tagFilter.let(TagFilterProperty::unwrap))
+        cdkBuilder.tagFilter(tagFilter.let(TagFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -9989,7 +9989,7 @@ public open class CfnBucket(
        * .
        */
       override fun deleteMarkerReplication(deleteMarkerReplication: IResolvable) {
-        cdkBuilder.deleteMarkerReplication(deleteMarkerReplication.let(IResolvable::unwrap))
+        cdkBuilder.deleteMarkerReplication(deleteMarkerReplication.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10013,7 +10013,7 @@ public open class CfnBucket(
        */
       override
           fun deleteMarkerReplication(deleteMarkerReplication: DeleteMarkerReplicationProperty) {
-        cdkBuilder.deleteMarkerReplication(deleteMarkerReplication.let(DeleteMarkerReplicationProperty::unwrap))
+        cdkBuilder.deleteMarkerReplication(deleteMarkerReplication.let(DeleteMarkerReplicationProperty.Companion::unwrap))
       }
 
       /**
@@ -10046,7 +10046,7 @@ public open class CfnBucket(
        * configurations including enabling the S3 Replication Time Control (S3 RTC). 
        */
       override fun destination(destination: IResolvable) {
-        cdkBuilder.destination(destination.let(IResolvable::unwrap))
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10054,7 +10054,7 @@ public open class CfnBucket(
        * configurations including enabling the S3 Replication Time Control (S3 RTC). 
        */
       override fun destination(destination: ReplicationDestinationProperty) {
-        cdkBuilder.destination(destination.let(ReplicationDestinationProperty::unwrap))
+        cdkBuilder.destination(destination.let(ReplicationDestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -10078,7 +10078,7 @@ public open class CfnBucket(
        * replication configuration, add the `Prefix` directly as a child element of the `Rule` element.
        */
       override fun filter(filter: IResolvable) {
-        cdkBuilder.filter(filter.let(IResolvable::unwrap))
+        cdkBuilder.filter(filter.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10093,7 +10093,7 @@ public open class CfnBucket(
        * replication configuration, add the `Prefix` directly as a child element of the `Rule` element.
        */
       override fun filter(filter: ReplicationRuleFilterProperty) {
-        cdkBuilder.filter(filter.let(ReplicationRuleFilterProperty::unwrap))
+        cdkBuilder.filter(filter.let(ReplicationRuleFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -10161,7 +10161,7 @@ public open class CfnBucket(
        * You can choose to enable or disable the replication of these objects.
        */
       override fun sourceSelectionCriteria(sourceSelectionCriteria: IResolvable) {
-        cdkBuilder.sourceSelectionCriteria(sourceSelectionCriteria.let(IResolvable::unwrap))
+        cdkBuilder.sourceSelectionCriteria(sourceSelectionCriteria.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10171,7 +10171,7 @@ public open class CfnBucket(
        */
       override
           fun sourceSelectionCriteria(sourceSelectionCriteria: SourceSelectionCriteriaProperty) {
-        cdkBuilder.sourceSelectionCriteria(sourceSelectionCriteria.let(SourceSelectionCriteriaProperty::unwrap))
+        cdkBuilder.sourceSelectionCriteria(sourceSelectionCriteria.let(SourceSelectionCriteriaProperty.Companion::unwrap))
       }
 
       /**
@@ -10417,7 +10417,7 @@ public open class CfnBucket(
        * objects and operations on objects. 
        */
       override fun time(time: IResolvable) {
-        cdkBuilder.time(time.let(IResolvable::unwrap))
+        cdkBuilder.time(time.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10425,7 +10425,7 @@ public open class CfnBucket(
        * objects and operations on objects. 
        */
       override fun time(time: ReplicationTimeValueProperty) {
-        cdkBuilder.time(time.let(ReplicationTimeValueProperty::unwrap))
+        cdkBuilder.time(time.let(ReplicationTimeValueProperty.Companion::unwrap))
       }
 
       /**
@@ -10855,7 +10855,7 @@ public open class CfnBucket(
        * the event of an error, you can specify a different error code to return.
        */
       override fun redirectRule(redirectRule: IResolvable) {
-        cdkBuilder.redirectRule(redirectRule.let(IResolvable::unwrap))
+        cdkBuilder.redirectRule(redirectRule.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10864,7 +10864,7 @@ public open class CfnBucket(
        * the event of an error, you can specify a different error code to return.
        */
       override fun redirectRule(redirectRule: RedirectRuleProperty) {
-        cdkBuilder.redirectRule(redirectRule.let(RedirectRuleProperty::unwrap))
+        cdkBuilder.redirectRule(redirectRule.let(RedirectRuleProperty.Companion::unwrap))
       }
 
       /**
@@ -10885,7 +10885,7 @@ public open class CfnBucket(
        * might process the error.
        */
       override fun routingRuleCondition(routingRuleCondition: IResolvable) {
-        cdkBuilder.routingRuleCondition(routingRuleCondition.let(IResolvable::unwrap))
+        cdkBuilder.routingRuleCondition(routingRuleCondition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10896,7 +10896,7 @@ public open class CfnBucket(
        * might process the error.
        */
       override fun routingRuleCondition(routingRuleCondition: RoutingRuleConditionProperty) {
-        cdkBuilder.routingRuleCondition(routingRuleCondition.let(RoutingRuleConditionProperty::unwrap))
+        cdkBuilder.routingRuleCondition(routingRuleCondition.let(RoutingRuleConditionProperty.Companion::unwrap))
       }
 
       /**
@@ -11495,7 +11495,7 @@ public open class CfnBucket(
        * multipart uploads to an Amazon S3 bucket.
        */
       override fun abortIncompleteMultipartUpload(abortIncompleteMultipartUpload: IResolvable) {
-        cdkBuilder.abortIncompleteMultipartUpload(abortIncompleteMultipartUpload.let(IResolvable::unwrap))
+        cdkBuilder.abortIncompleteMultipartUpload(abortIncompleteMultipartUpload.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11504,7 +11504,7 @@ public open class CfnBucket(
        */
       override
           fun abortIncompleteMultipartUpload(abortIncompleteMultipartUpload: AbortIncompleteMultipartUploadProperty) {
-        cdkBuilder.abortIncompleteMultipartUpload(abortIncompleteMultipartUpload.let(AbortIncompleteMultipartUploadProperty::unwrap))
+        cdkBuilder.abortIncompleteMultipartUpload(abortIncompleteMultipartUpload.let(AbortIncompleteMultipartUploadProperty.Companion::unwrap))
       }
 
       /**
@@ -11526,7 +11526,7 @@ public open class CfnBucket(
        * in days or by date). The expiration time must also be later than the transition time.
        */
       override fun expirationDate(expirationDate: IResolvable) {
-        cdkBuilder.expirationDate(expirationDate.let(IResolvable::unwrap))
+        cdkBuilder.expirationDate(expirationDate.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11568,7 +11568,7 @@ public open class CfnBucket(
        * cannot be specified with `ExpirationInDays` , `ExpirationDate` , or `TagFilters` .
        */
       override fun expiredObjectDeleteMarker(expiredObjectDeleteMarker: IResolvable) {
-        cdkBuilder.expiredObjectDeleteMarker(expiredObjectDeleteMarker.let(IResolvable::unwrap))
+        cdkBuilder.expiredObjectDeleteMarker(expiredObjectDeleteMarker.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11587,7 +11587,7 @@ public open class CfnBucket(
        * lifetime.
        */
       override fun noncurrentVersionExpiration(noncurrentVersionExpiration: IResolvable) {
-        cdkBuilder.noncurrentVersionExpiration(noncurrentVersionExpiration.let(IResolvable::unwrap))
+        cdkBuilder.noncurrentVersionExpiration(noncurrentVersionExpiration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11599,7 +11599,7 @@ public open class CfnBucket(
        */
       override
           fun noncurrentVersionExpiration(noncurrentVersionExpiration: NoncurrentVersionExpirationProperty) {
-        cdkBuilder.noncurrentVersionExpiration(noncurrentVersionExpiration.let(NoncurrentVersionExpirationProperty::unwrap))
+        cdkBuilder.noncurrentVersionExpiration(noncurrentVersionExpiration.let(NoncurrentVersionExpirationProperty.Companion::unwrap))
       }
 
       /**
@@ -11635,7 +11635,7 @@ public open class CfnBucket(
        * `NoncurrentVersionTransitions` property.
        */
       override fun noncurrentVersionTransition(noncurrentVersionTransition: IResolvable) {
-        cdkBuilder.noncurrentVersionTransition(noncurrentVersionTransition.let(IResolvable::unwrap))
+        cdkBuilder.noncurrentVersionTransition(noncurrentVersionTransition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11647,7 +11647,7 @@ public open class CfnBucket(
        */
       override
           fun noncurrentVersionTransition(noncurrentVersionTransition: NoncurrentVersionTransitionProperty) {
-        cdkBuilder.noncurrentVersionTransition(noncurrentVersionTransition.let(NoncurrentVersionTransitionProperty::unwrap))
+        cdkBuilder.noncurrentVersionTransition(noncurrentVersionTransition.let(NoncurrentVersionTransitionProperty.Companion::unwrap))
       }
 
       /**
@@ -11673,7 +11673,7 @@ public open class CfnBucket(
        * property.
        */
       override fun noncurrentVersionTransitions(noncurrentVersionTransitions: IResolvable) {
-        cdkBuilder.noncurrentVersionTransitions(noncurrentVersionTransitions.let(IResolvable::unwrap))
+        cdkBuilder.noncurrentVersionTransitions(noncurrentVersionTransitions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11749,7 +11749,7 @@ public open class CfnBucket(
        * applies.
        */
       override fun tagFilters(tagFilters: IResolvable) {
-        cdkBuilder.tagFilters(tagFilters.let(IResolvable::unwrap))
+        cdkBuilder.tagFilters(tagFilters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11773,7 +11773,7 @@ public open class CfnBucket(
        * transition time. If you specify this property, don't specify the `Transitions` property.
        */
       override fun transition(transition: IResolvable) {
-        cdkBuilder.transition(transition.let(IResolvable::unwrap))
+        cdkBuilder.transition(transition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11783,7 +11783,7 @@ public open class CfnBucket(
        * transition time. If you specify this property, don't specify the `Transitions` property.
        */
       override fun transition(transition: TransitionProperty) {
-        cdkBuilder.transition(transition.let(TransitionProperty::unwrap))
+        cdkBuilder.transition(transition.let(TransitionProperty.Companion::unwrap))
       }
 
       /**
@@ -11805,7 +11805,7 @@ public open class CfnBucket(
        * transition time. If you specify this property, don't specify the `Transition` property.
        */
       override fun transitions(transitions: IResolvable) {
-        cdkBuilder.transitions(transitions.let(IResolvable::unwrap))
+        cdkBuilder.transitions(transitions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12097,7 +12097,7 @@ public open class CfnBucket(
        * filter rule. 
        */
       override fun rules(rules: IResolvable) {
-        cdkBuilder.rules(rules.let(IResolvable::unwrap))
+        cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12497,7 +12497,7 @@ public open class CfnBucket(
        * Guide* .
        */
       override fun bucketKeyEnabled(bucketKeyEnabled: IResolvable) {
-        cdkBuilder.bucketKeyEnabled(bucketKeyEnabled.let(IResolvable::unwrap))
+        cdkBuilder.bucketKeyEnabled(bucketKeyEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12507,7 +12507,7 @@ public open class CfnBucket(
        * will be applied.
        */
       override fun serverSideEncryptionByDefault(serverSideEncryptionByDefault: IResolvable) {
-        cdkBuilder.serverSideEncryptionByDefault(serverSideEncryptionByDefault.let(IResolvable::unwrap))
+        cdkBuilder.serverSideEncryptionByDefault(serverSideEncryptionByDefault.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12518,7 +12518,7 @@ public open class CfnBucket(
        */
       override
           fun serverSideEncryptionByDefault(serverSideEncryptionByDefault: ServerSideEncryptionByDefaultProperty) {
-        cdkBuilder.serverSideEncryptionByDefault(serverSideEncryptionByDefault.let(ServerSideEncryptionByDefaultProperty::unwrap))
+        cdkBuilder.serverSideEncryptionByDefault(serverSideEncryptionByDefault.let(ServerSideEncryptionByDefaultProperty.Companion::unwrap))
       }
 
       /**
@@ -12686,7 +12686,7 @@ public open class CfnBucket(
        * on replicas.
        */
       override fun replicaModifications(replicaModifications: IResolvable) {
-        cdkBuilder.replicaModifications(replicaModifications.let(IResolvable::unwrap))
+        cdkBuilder.replicaModifications(replicaModifications.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12694,7 +12694,7 @@ public open class CfnBucket(
        * on replicas.
        */
       override fun replicaModifications(replicaModifications: ReplicaModificationsProperty) {
-        cdkBuilder.replicaModifications(replicaModifications.let(ReplicaModificationsProperty::unwrap))
+        cdkBuilder.replicaModifications(replicaModifications.let(ReplicaModificationsProperty.Companion::unwrap))
       }
 
       /**
@@ -12712,7 +12712,7 @@ public open class CfnBucket(
        * Amazon S3 objects encrypted with AWS KMS.
        */
       override fun sseKmsEncryptedObjects(sseKmsEncryptedObjects: IResolvable) {
-        cdkBuilder.sseKmsEncryptedObjects(sseKmsEncryptedObjects.let(IResolvable::unwrap))
+        cdkBuilder.sseKmsEncryptedObjects(sseKmsEncryptedObjects.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12720,7 +12720,7 @@ public open class CfnBucket(
        * Amazon S3 objects encrypted with AWS KMS.
        */
       override fun sseKmsEncryptedObjects(sseKmsEncryptedObjects: SseKmsEncryptedObjectsProperty) {
-        cdkBuilder.sseKmsEncryptedObjects(sseKmsEncryptedObjects.let(SseKmsEncryptedObjectsProperty::unwrap))
+        cdkBuilder.sseKmsEncryptedObjects(sseKmsEncryptedObjects.let(SseKmsEncryptedObjectsProperty.Companion::unwrap))
       }
 
       /**
@@ -12933,7 +12933,7 @@ public open class CfnBucket(
        * bucket should be exported.
        */
       override fun dataExport(dataExport: IResolvable) {
-        cdkBuilder.dataExport(dataExport.let(IResolvable::unwrap))
+        cdkBuilder.dataExport(dataExport.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12941,7 +12941,7 @@ public open class CfnBucket(
        * bucket should be exported.
        */
       override fun dataExport(dataExport: DataExportProperty) {
-        cdkBuilder.dataExport(dataExport.let(DataExportProperty::unwrap))
+        cdkBuilder.dataExport(dataExport.let(DataExportProperty.Companion::unwrap))
       }
 
       /**
@@ -13169,14 +13169,14 @@ public open class CfnBucket(
        * @param partitionedPrefix Partitioned S3 key for log objects.
        */
       override fun partitionedPrefix(partitionedPrefix: IResolvable) {
-        cdkBuilder.partitionedPrefix(partitionedPrefix.let(IResolvable::unwrap))
+        cdkBuilder.partitionedPrefix(partitionedPrefix.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param partitionedPrefix Partitioned S3 key for log objects.
        */
       override fun partitionedPrefix(partitionedPrefix: PartitionedPrefixProperty) {
-        cdkBuilder.partitionedPrefix(partitionedPrefix.let(PartitionedPrefixProperty::unwrap))
+        cdkBuilder.partitionedPrefix(partitionedPrefix.let(PartitionedPrefixProperty.Companion::unwrap))
       }
 
       /**
@@ -13496,7 +13496,7 @@ public open class CfnBucket(
        * files with a `.jpg` extension are added to the bucket.
        */
       override fun filter(filter: IResolvable) {
-        cdkBuilder.filter(filter.let(IResolvable::unwrap))
+        cdkBuilder.filter(filter.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13505,7 +13505,7 @@ public open class CfnBucket(
        * files with a `.jpg` extension are added to the bucket.
        */
       override fun filter(filter: NotificationFilterProperty) {
-        cdkBuilder.filter(filter.let(NotificationFilterProperty::unwrap))
+        cdkBuilder.filter(filter.let(NotificationFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -13682,7 +13682,7 @@ public open class CfnBucket(
        * The date value must be in ISO 8601 format. The time is always midnight UTC.
        */
       override fun transitionDate(transitionDate: IResolvable) {
-        cdkBuilder.transitionDate(transitionDate.let(IResolvable::unwrap))
+        cdkBuilder.transitionDate(transitionDate.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13997,7 +13997,7 @@ public open class CfnBucket(
        * If you specify this property, you can't specify any other property.
        */
       override fun redirectAllRequestsTo(redirectAllRequestsTo: IResolvable) {
-        cdkBuilder.redirectAllRequestsTo(redirectAllRequestsTo.let(IResolvable::unwrap))
+        cdkBuilder.redirectAllRequestsTo(redirectAllRequestsTo.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14007,7 +14007,7 @@ public open class CfnBucket(
        * If you specify this property, you can't specify any other property.
        */
       override fun redirectAllRequestsTo(redirectAllRequestsTo: RedirectAllRequestsToProperty) {
-        cdkBuilder.redirectAllRequestsTo(redirectAllRequestsTo.let(RedirectAllRequestsToProperty::unwrap))
+        cdkBuilder.redirectAllRequestsTo(redirectAllRequestsTo.let(RedirectAllRequestsToProperty.Companion::unwrap))
       }
 
       /**
@@ -14026,7 +14026,7 @@ public open class CfnBucket(
        * @param routingRules Rules that define when a redirect is applied and the redirect behavior.
        */
       override fun routingRules(routingRules: IResolvable) {
-        cdkBuilder.routingRules(routingRules.let(IResolvable::unwrap))
+        cdkBuilder.routingRules(routingRules.let(IResolvable.Companion::unwrap))
       }
 
       /**

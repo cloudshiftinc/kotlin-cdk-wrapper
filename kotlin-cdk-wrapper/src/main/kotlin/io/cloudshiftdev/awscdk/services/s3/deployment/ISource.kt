@@ -49,7 +49,7 @@ public interface ISource {
      * @param context
      */
     override fun bind(scope: Construct): SourceConfig =
-        unwrap(this).bind(scope.let(Construct::unwrap)).let(SourceConfig::wrap)
+        unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(SourceConfig::wrap)
 
     /**
      * Binds the source to a bucket deployment.
@@ -58,8 +58,8 @@ public interface ISource {
      * @param context
      */
     override fun bind(scope: Construct, context: DeploymentSourceContext): SourceConfig =
-        unwrap(this).bind(scope.let(Construct::unwrap),
-        context.let(DeploymentSourceContext::unwrap)).let(SourceConfig::wrap)
+        unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+        context.let(DeploymentSourceContext.Companion::unwrap)).let(SourceConfig::wrap)
 
     /**
      * Binds the source to a bucket deployment.

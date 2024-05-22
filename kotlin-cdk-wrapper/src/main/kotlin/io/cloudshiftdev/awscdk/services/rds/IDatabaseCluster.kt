@@ -552,7 +552,7 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
      */
     override fun addProxy(id: String, options: DatabaseProxyOptions): DatabaseProxy =
         unwrap(this).addProxy(id,
-        options.let(DatabaseProxyOptions::unwrap)).let(DatabaseProxy::wrap)
+        options.let(DatabaseProxyOptions.Companion::unwrap)).let(DatabaseProxy::wrap)
 
     /**
      * Add a new db proxy to this cluster.
@@ -579,7 +579,7 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -647,7 +647,8 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
      * @param dbUser the name of the database user to allow connecting. 
      */
     override fun grantConnect(grantee: IGrantable, dbUser: String): Grant =
-        unwrap(this).grantConnect(grantee.let(IGrantable::unwrap), dbUser).let(Grant::wrap)
+        unwrap(this).grantConnect(grantee.let(IGrantable.Companion::unwrap),
+        dbUser).let(Grant::wrap)
 
     /**
      * Grant the given identity to access to the Data API.
@@ -655,7 +656,7 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
      * @param grantee The principal to grant access to. 
      */
     override fun grantDataApiAccess(grantee: IGrantable): Grant =
-        unwrap(this).grantDataApiAccess(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantDataApiAccess(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Endpoints which address each individual replica.
@@ -684,7 +685,8 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
      * @param props
      */
     override fun metric(metricName: String, props: MetricOptions): Metric =
-        unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metric(metricName,
+        props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Return the given named metric for this DBCluster.
@@ -715,7 +717,7 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
      * @param props
      */
     override fun metricCPUUtilization(props: MetricOptions): Metric =
-        unwrap(this).metricCPUUtilization(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricCPUUtilization(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The percentage of CPU utilization.
@@ -747,7 +749,7 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
      * @param props
      */
     override fun metricDatabaseConnections(props: MetricOptions): Metric =
-        unwrap(this).metricDatabaseConnections(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricDatabaseConnections(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of database connections in use.
@@ -778,7 +780,7 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
      * @param props
      */
     override fun metricDeadlocks(props: MetricOptions): Metric =
-        unwrap(this).metricDeadlocks(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricDeadlocks(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The average number of deadlocks in the database per second.
@@ -809,7 +811,7 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
      * @param props
      */
     override fun metricEngineUptime(props: MetricOptions): Metric =
-        unwrap(this).metricEngineUptime(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricEngineUptime(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The amount of time that the instance has been running, in seconds.
@@ -841,7 +843,7 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
      * @param props
      */
     override fun metricFreeLocalStorage(props: MetricOptions): Metric =
-        unwrap(this).metricFreeLocalStorage(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricFreeLocalStorage(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The amount of local storage available, in bytes.
@@ -873,7 +875,7 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
      * @param props
      */
     override fun metricFreeableMemory(props: MetricOptions): Metric =
-        unwrap(this).metricFreeableMemory(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricFreeableMemory(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The amount of available random access memory, in bytes.
@@ -905,7 +907,7 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
      * @param props
      */
     override fun metricNetworkReceiveThroughput(props: MetricOptions): Metric =
-        unwrap(this).metricNetworkReceiveThroughput(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricNetworkReceiveThroughput(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The amount of network throughput received from clients by each instance, in bytes per second.
@@ -939,7 +941,7 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
      * @param props
      */
     override fun metricNetworkThroughput(props: MetricOptions): Metric =
-        unwrap(this).metricNetworkThroughput(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricNetworkThroughput(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The amount of network throughput both received from and transmitted to clients by each
@@ -972,7 +974,7 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
      * @param props
      */
     override fun metricNetworkTransmitThroughput(props: MetricOptions): Metric =
-        unwrap(this).metricNetworkTransmitThroughput(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricNetworkTransmitThroughput(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The amount of network throughput sent to clients by each instance, in bytes per second.
@@ -1006,7 +1008,7 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
      * @param props
      */
     override fun metricSnapshotStorageUsed(props: MetricOptions): Metric =
-        unwrap(this).metricSnapshotStorageUsed(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricSnapshotStorageUsed(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The total amount of backup storage in bytes consumed by all Aurora snapshots outside its
@@ -1039,7 +1041,7 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
      * @param props
      */
     override fun metricTotalBackupStorageBilled(props: MetricOptions): Metric =
-        unwrap(this).metricTotalBackupStorageBilled(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricTotalBackupStorageBilled(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The total amount of backup storage in bytes for which you are billed.
@@ -1071,7 +1073,7 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
      * @param props
      */
     override fun metricVolumeBytesUsed(props: MetricOptions): Metric =
-        unwrap(this).metricVolumeBytesUsed(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricVolumeBytesUsed(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The amount of storage used by your Aurora DB instance, in bytes.
@@ -1105,7 +1107,7 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
      * @param props
      */
     override fun metricVolumeReadIOPs(props: MetricOptions): Metric =
-        unwrap(this).metricVolumeReadIOPs(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricVolumeReadIOPs(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of billed read I/O operations from a cluster volume, reported at 5-minute
@@ -1140,7 +1142,7 @@ public interface IDatabaseCluster : IResource, IConnectable, ISecretAttachmentTa
      * @param props
      */
     override fun metricVolumeWriteIOPs(props: MetricOptions): Metric =
-        unwrap(this).metricVolumeWriteIOPs(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricVolumeWriteIOPs(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of write disk I/O operations to the cluster volume, reported at 5-minute

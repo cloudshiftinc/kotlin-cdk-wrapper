@@ -153,8 +153,8 @@ public open class CfnUserProfile(
     id: String,
     props: CfnUserProfileProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnUserProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnUserProfileProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnUserProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnUserProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -188,7 +188,7 @@ public open class CfnUserProfile(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -231,7 +231,7 @@ public open class CfnUserProfile(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -260,14 +260,14 @@ public open class CfnUserProfile(
    * A collection of settings that apply to users of Amazon SageMaker Studio.
    */
   public open fun userSettings(`value`: IResolvable) {
-    unwrap(this).setUserSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUserSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A collection of settings that apply to users of Amazon SageMaker Studio.
    */
   public open fun userSettings(`value`: UserSettingsProperty) {
-    unwrap(this).setUserSettings(`value`.let(UserSettingsProperty::unwrap))
+    unwrap(this).setUserSettings(`value`.let(UserSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -443,7 +443,7 @@ public open class CfnUserProfile(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -478,7 +478,7 @@ public open class CfnUserProfile(
      * @param userSettings A collection of settings that apply to users of Amazon SageMaker Studio. 
      */
     override fun userSettings(userSettings: IResolvable) {
-      cdkBuilder.userSettings(userSettings.let(IResolvable::unwrap))
+      cdkBuilder.userSettings(userSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -488,7 +488,7 @@ public open class CfnUserProfile(
      * @param userSettings A collection of settings that apply to users of Amazon SageMaker Studio. 
      */
     override fun userSettings(userSettings: UserSettingsProperty) {
-      cdkBuilder.userSettings(userSettings.let(UserSettingsProperty::unwrap))
+      cdkBuilder.userSettings(userSettings.let(UserSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -649,7 +649,7 @@ public open class CfnUserProfile(
        * Editor app.
        */
       override fun customImages(customImages: IResolvable) {
-        cdkBuilder.customImages(customImages.let(IResolvable::unwrap))
+        cdkBuilder.customImages(customImages.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -672,7 +672,7 @@ public open class CfnUserProfile(
        * the default SageMaker image used by the Code Editor app.
        */
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -680,7 +680,7 @@ public open class CfnUserProfile(
        * the default SageMaker image used by the Code Editor app.
        */
       override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty.Companion::unwrap))
       }
 
       /**
@@ -906,14 +906,14 @@ public open class CfnUserProfile(
        * @param efsFileSystemConfig The settings for a custom Amazon EFS file system.
        */
       override fun efsFileSystemConfig(efsFileSystemConfig: IResolvable) {
-        cdkBuilder.efsFileSystemConfig(efsFileSystemConfig.let(IResolvable::unwrap))
+        cdkBuilder.efsFileSystemConfig(efsFileSystemConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param efsFileSystemConfig The settings for a custom Amazon EFS file system.
        */
       override fun efsFileSystemConfig(efsFileSystemConfig: EFSFileSystemConfigProperty) {
-        cdkBuilder.efsFileSystemConfig(efsFileSystemConfig.let(EFSFileSystemConfigProperty::unwrap))
+        cdkBuilder.efsFileSystemConfig(efsFileSystemConfig.let(EFSFileSystemConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1215,8 +1215,8 @@ public open class CfnUserProfile(
   }
 
   /**
-   * A collection of default EBS storage settings that applies to private spaces created within a
-   * domain or user profile.
+   * A collection of default EBS storage settings that apply to spaces created within a domain or
+   * user profile.
    *
    * Example:
    *
@@ -1235,14 +1235,14 @@ public open class CfnUserProfile(
    */
   public interface DefaultEbsStorageSettingsProperty {
     /**
-     * The default size of the EBS storage volume for a private space.
+     * The default size of the EBS storage volume for a space.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-defaultebsstoragesettings.html#cfn-sagemaker-userprofile-defaultebsstoragesettings-defaultebsvolumesizeingb)
      */
     public fun defaultEbsVolumeSizeInGb(): Number
 
     /**
-     * The maximum size of the EBS storage volume for a private space.
+     * The maximum size of the EBS storage volume for a space.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-defaultebsstoragesettings.html#cfn-sagemaker-userprofile-defaultebsstoragesettings-maximumebsvolumesizeingb)
      */
@@ -1254,14 +1254,12 @@ public open class CfnUserProfile(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param defaultEbsVolumeSizeInGb The default size of the EBS storage volume for a private
-       * space. 
+       * @param defaultEbsVolumeSizeInGb The default size of the EBS storage volume for a space. 
        */
       public fun defaultEbsVolumeSizeInGb(defaultEbsVolumeSizeInGb: Number)
 
       /**
-       * @param maximumEbsVolumeSizeInGb The maximum size of the EBS storage volume for a private
-       * space. 
+       * @param maximumEbsVolumeSizeInGb The maximum size of the EBS storage volume for a space. 
        */
       public fun maximumEbsVolumeSizeInGb(maximumEbsVolumeSizeInGb: Number)
     }
@@ -1273,16 +1271,14 @@ public open class CfnUserProfile(
           software.amazon.awscdk.services.sagemaker.CfnUserProfile.DefaultEbsStorageSettingsProperty.builder()
 
       /**
-       * @param defaultEbsVolumeSizeInGb The default size of the EBS storage volume for a private
-       * space. 
+       * @param defaultEbsVolumeSizeInGb The default size of the EBS storage volume for a space. 
        */
       override fun defaultEbsVolumeSizeInGb(defaultEbsVolumeSizeInGb: Number) {
         cdkBuilder.defaultEbsVolumeSizeInGb(defaultEbsVolumeSizeInGb)
       }
 
       /**
-       * @param maximumEbsVolumeSizeInGb The maximum size of the EBS storage volume for a private
-       * space. 
+       * @param maximumEbsVolumeSizeInGb The maximum size of the EBS storage volume for a space. 
        */
       override fun maximumEbsVolumeSizeInGb(maximumEbsVolumeSizeInGb: Number) {
         cdkBuilder.maximumEbsVolumeSizeInGb(maximumEbsVolumeSizeInGb)
@@ -1297,14 +1293,14 @@ public open class CfnUserProfile(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.DefaultEbsStorageSettingsProperty,
     ) : CdkObject(cdkObject), DefaultEbsStorageSettingsProperty {
       /**
-       * The default size of the EBS storage volume for a private space.
+       * The default size of the EBS storage volume for a space.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-defaultebsstoragesettings.html#cfn-sagemaker-userprofile-defaultebsstoragesettings-defaultebsvolumesizeingb)
        */
       override fun defaultEbsVolumeSizeInGb(): Number = unwrap(this).getDefaultEbsVolumeSizeInGb()
 
       /**
-       * The maximum size of the EBS storage volume for a private space.
+       * The maximum size of the EBS storage volume for a space.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-defaultebsstoragesettings.html#cfn-sagemaker-userprofile-defaultebsstoragesettings-maximumebsvolumesizeingb)
        */
@@ -1331,7 +1327,7 @@ public open class CfnUserProfile(
   }
 
   /**
-   * The default storage settings for a private space.
+   * The default storage settings for a space.
    *
    * Example:
    *
@@ -1352,7 +1348,7 @@ public open class CfnUserProfile(
    */
   public interface DefaultSpaceStorageSettingsProperty {
     /**
-     * The default EBS storage settings for a private space.
+     * The default EBS storage settings for a space.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-defaultspacestoragesettings.html#cfn-sagemaker-userprofile-defaultspacestoragesettings-defaultebsstoragesettings)
      */
@@ -1364,18 +1360,18 @@ public open class CfnUserProfile(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
+       * @param defaultEbsStorageSettings The default EBS storage settings for a space.
        */
       public fun defaultEbsStorageSettings(defaultEbsStorageSettings: IResolvable)
 
       /**
-       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
+       * @param defaultEbsStorageSettings The default EBS storage settings for a space.
        */
       public
           fun defaultEbsStorageSettings(defaultEbsStorageSettings: DefaultEbsStorageSettingsProperty)
 
       /**
-       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
+       * @param defaultEbsStorageSettings The default EBS storage settings for a space.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7f67e23f19df36440b0e4a62615f0e09ef5d1f0dcbf47dd16dbb51a8adef7c11")
@@ -1390,22 +1386,22 @@ public open class CfnUserProfile(
           software.amazon.awscdk.services.sagemaker.CfnUserProfile.DefaultSpaceStorageSettingsProperty.builder()
 
       /**
-       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
+       * @param defaultEbsStorageSettings The default EBS storage settings for a space.
        */
       override fun defaultEbsStorageSettings(defaultEbsStorageSettings: IResolvable) {
-        cdkBuilder.defaultEbsStorageSettings(defaultEbsStorageSettings.let(IResolvable::unwrap))
+        cdkBuilder.defaultEbsStorageSettings(defaultEbsStorageSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
+       * @param defaultEbsStorageSettings The default EBS storage settings for a space.
        */
       override
           fun defaultEbsStorageSettings(defaultEbsStorageSettings: DefaultEbsStorageSettingsProperty) {
-        cdkBuilder.defaultEbsStorageSettings(defaultEbsStorageSettings.let(DefaultEbsStorageSettingsProperty::unwrap))
+        cdkBuilder.defaultEbsStorageSettings(defaultEbsStorageSettings.let(DefaultEbsStorageSettingsProperty.Companion::unwrap))
       }
 
       /**
-       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
+       * @param defaultEbsStorageSettings The default EBS storage settings for a space.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7f67e23f19df36440b0e4a62615f0e09ef5d1f0dcbf47dd16dbb51a8adef7c11")
@@ -1423,7 +1419,7 @@ public open class CfnUserProfile(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.DefaultSpaceStorageSettingsProperty,
     ) : CdkObject(cdkObject), DefaultSpaceStorageSettingsProperty {
       /**
-       * The default EBS storage settings for a private space.
+       * The default EBS storage settings for a space.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-defaultspacestoragesettings.html#cfn-sagemaker-userprofile-defaultspacestoragesettings-defaultebsstoragesettings)
        */
@@ -1721,7 +1717,7 @@ public open class CfnUserProfile(
        * users for cloning in the JupyterLab application.
        */
       override fun codeRepositories(codeRepositories: IResolvable) {
-        cdkBuilder.codeRepositories(codeRepositories.let(IResolvable::unwrap))
+        cdkBuilder.codeRepositories(codeRepositories.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1744,7 +1740,7 @@ public open class CfnUserProfile(
        * JupyterLab app.
        */
       override fun customImages(customImages: IResolvable) {
-        cdkBuilder.customImages(customImages.let(IResolvable::unwrap))
+        cdkBuilder.customImages(customImages.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1767,7 +1763,7 @@ public open class CfnUserProfile(
        * the default SageMaker image used by the JupyterLab app.
        */
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1775,7 +1771,7 @@ public open class CfnUserProfile(
        * the default SageMaker image used by the JupyterLab app.
        */
       override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty.Companion::unwrap))
       }
 
       /**
@@ -1933,7 +1929,7 @@ public open class CfnUserProfile(
        * the default SageMaker image used by the JupyterServer app.
        */
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1941,7 +1937,7 @@ public open class CfnUserProfile(
        * the default SageMaker image used by the JupyterServer app.
        */
       override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty.Companion::unwrap))
       }
 
       /**
@@ -2105,7 +2101,7 @@ public open class CfnUserProfile(
        * KernelGateway app.
        */
       override fun customImages(customImages: IResolvable) {
-        cdkBuilder.customImages(customImages.let(IResolvable::unwrap))
+        cdkBuilder.customImages(customImages.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2132,7 +2128,7 @@ public open class CfnUserProfile(
        * CloudFormation and the instance type parameter value is not passed.
        */
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2144,7 +2140,7 @@ public open class CfnUserProfile(
        * CloudFormation and the instance type parameter value is not passed.
        */
       override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty.Companion::unwrap))
       }
 
       /**
@@ -2854,7 +2850,7 @@ public open class CfnUserProfile(
     public fun sharingSettings(): Any? = unwrap(this).getSharingSettings()
 
     /**
-     * The storage settings for a private space.
+     * The storage settings for a space.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-usersettings.html#cfn-sagemaker-userprofile-usersettings-spacestoragesettings)
      */
@@ -3075,17 +3071,17 @@ public open class CfnUserProfile(
       public fun sharingSettings(sharingSettings: SharingSettingsProperty.Builder.() -> Unit)
 
       /**
-       * @param spaceStorageSettings The storage settings for a private space.
+       * @param spaceStorageSettings The storage settings for a space.
        */
       public fun spaceStorageSettings(spaceStorageSettings: IResolvable)
 
       /**
-       * @param spaceStorageSettings The storage settings for a private space.
+       * @param spaceStorageSettings The storage settings for a space.
        */
       public fun spaceStorageSettings(spaceStorageSettings: DefaultSpaceStorageSettingsProperty)
 
       /**
-       * @param spaceStorageSettings The storage settings for a private space.
+       * @param spaceStorageSettings The storage settings for a space.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("52e04b39a0bbef7c03ae0431e80cfabcc922dc10d762b41ce484dc0006a1d40b")
@@ -3109,14 +3105,14 @@ public open class CfnUserProfile(
        * @param codeEditorAppSettings The Code Editor application settings.
        */
       override fun codeEditorAppSettings(codeEditorAppSettings: IResolvable) {
-        cdkBuilder.codeEditorAppSettings(codeEditorAppSettings.let(IResolvable::unwrap))
+        cdkBuilder.codeEditorAppSettings(codeEditorAppSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param codeEditorAppSettings The Code Editor application settings.
        */
       override fun codeEditorAppSettings(codeEditorAppSettings: CodeEditorAppSettingsProperty) {
-        cdkBuilder.codeEditorAppSettings(codeEditorAppSettings.let(CodeEditorAppSettingsProperty::unwrap))
+        cdkBuilder.codeEditorAppSettings(codeEditorAppSettings.let(CodeEditorAppSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -3134,7 +3130,7 @@ public open class CfnUserProfile(
        * Permitted users can access this file system in Amazon SageMaker Studio.
        */
       override fun customFileSystemConfigs(customFileSystemConfigs: IResolvable) {
-        cdkBuilder.customFileSystemConfigs(customFileSystemConfigs.let(IResolvable::unwrap))
+        cdkBuilder.customFileSystemConfigs(customFileSystemConfigs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3159,7 +3155,7 @@ public open class CfnUserProfile(
        * operations.
        */
       override fun customPosixUserConfig(customPosixUserConfig: IResolvable) {
-        cdkBuilder.customPosixUserConfig(customPosixUserConfig.let(IResolvable::unwrap))
+        cdkBuilder.customPosixUserConfig(customPosixUserConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3167,7 +3163,7 @@ public open class CfnUserProfile(
        * operations.
        */
       override fun customPosixUserConfig(customPosixUserConfig: CustomPosixUserConfigProperty) {
-        cdkBuilder.customPosixUserConfig(customPosixUserConfig.let(CustomPosixUserConfigProperty::unwrap))
+        cdkBuilder.customPosixUserConfig(customPosixUserConfig.let(CustomPosixUserConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -3202,14 +3198,14 @@ public open class CfnUserProfile(
        * @param jupyterLabAppSettings The settings for the JupyterLab application.
        */
       override fun jupyterLabAppSettings(jupyterLabAppSettings: IResolvable) {
-        cdkBuilder.jupyterLabAppSettings(jupyterLabAppSettings.let(IResolvable::unwrap))
+        cdkBuilder.jupyterLabAppSettings(jupyterLabAppSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param jupyterLabAppSettings The settings for the JupyterLab application.
        */
       override fun jupyterLabAppSettings(jupyterLabAppSettings: JupyterLabAppSettingsProperty) {
-        cdkBuilder.jupyterLabAppSettings(jupyterLabAppSettings.let(JupyterLabAppSettingsProperty::unwrap))
+        cdkBuilder.jupyterLabAppSettings(jupyterLabAppSettings.let(JupyterLabAppSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -3225,7 +3221,7 @@ public open class CfnUserProfile(
        * @param jupyterServerAppSettings The Jupyter server's app settings.
        */
       override fun jupyterServerAppSettings(jupyterServerAppSettings: IResolvable) {
-        cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(IResolvable::unwrap))
+        cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3233,7 +3229,7 @@ public open class CfnUserProfile(
        */
       override
           fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty) {
-        cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(JupyterServerAppSettingsProperty::unwrap))
+        cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(JupyterServerAppSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -3250,7 +3246,7 @@ public open class CfnUserProfile(
        * @param kernelGatewayAppSettings The kernel gateway app settings.
        */
       override fun kernelGatewayAppSettings(kernelGatewayAppSettings: IResolvable) {
-        cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(IResolvable::unwrap))
+        cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3258,7 +3254,7 @@ public open class CfnUserProfile(
        */
       override
           fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty) {
-        cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(KernelGatewayAppSettingsProperty::unwrap))
+        cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(KernelGatewayAppSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -3276,7 +3272,7 @@ public open class CfnUserProfile(
        * with the `RStudioServerPro` app.
        */
       override fun rStudioServerProAppSettings(rStudioServerProAppSettings: IResolvable) {
-        cdkBuilder.rStudioServerProAppSettings(rStudioServerProAppSettings.let(IResolvable::unwrap))
+        cdkBuilder.rStudioServerProAppSettings(rStudioServerProAppSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3285,7 +3281,7 @@ public open class CfnUserProfile(
        */
       override
           fun rStudioServerProAppSettings(rStudioServerProAppSettings: RStudioServerProAppSettingsProperty) {
-        cdkBuilder.rStudioServerProAppSettings(rStudioServerProAppSettings.let(RStudioServerProAppSettingsProperty::unwrap))
+        cdkBuilder.rStudioServerProAppSettings(rStudioServerProAppSettings.let(RStudioServerProAppSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -3336,14 +3332,14 @@ public open class CfnUserProfile(
        * @param sharingSettings Specifies options for sharing Amazon SageMaker Studio notebooks.
        */
       override fun sharingSettings(sharingSettings: IResolvable) {
-        cdkBuilder.sharingSettings(sharingSettings.let(IResolvable::unwrap))
+        cdkBuilder.sharingSettings(sharingSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sharingSettings Specifies options for sharing Amazon SageMaker Studio notebooks.
        */
       override fun sharingSettings(sharingSettings: SharingSettingsProperty) {
-        cdkBuilder.sharingSettings(sharingSettings.let(SharingSettingsProperty::unwrap))
+        cdkBuilder.sharingSettings(sharingSettings.let(SharingSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -3355,21 +3351,21 @@ public open class CfnUserProfile(
           Unit = sharingSettings(SharingSettingsProperty(sharingSettings))
 
       /**
-       * @param spaceStorageSettings The storage settings for a private space.
+       * @param spaceStorageSettings The storage settings for a space.
        */
       override fun spaceStorageSettings(spaceStorageSettings: IResolvable) {
-        cdkBuilder.spaceStorageSettings(spaceStorageSettings.let(IResolvable::unwrap))
+        cdkBuilder.spaceStorageSettings(spaceStorageSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param spaceStorageSettings The storage settings for a private space.
+       * @param spaceStorageSettings The storage settings for a space.
        */
       override fun spaceStorageSettings(spaceStorageSettings: DefaultSpaceStorageSettingsProperty) {
-        cdkBuilder.spaceStorageSettings(spaceStorageSettings.let(DefaultSpaceStorageSettingsProperty::unwrap))
+        cdkBuilder.spaceStorageSettings(spaceStorageSettings.let(DefaultSpaceStorageSettingsProperty.Companion::unwrap))
       }
 
       /**
-       * @param spaceStorageSettings The storage settings for a private space.
+       * @param spaceStorageSettings The storage settings for a space.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("52e04b39a0bbef7c03ae0431e80cfabcc922dc10d762b41ce484dc0006a1d40b")
@@ -3491,7 +3487,7 @@ public open class CfnUserProfile(
       override fun sharingSettings(): Any? = unwrap(this).getSharingSettings()
 
       /**
-       * The storage settings for a private space.
+       * The storage settings for a space.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-usersettings.html#cfn-sagemaker-userprofile-usersettings-spacestoragesettings)
        */

@@ -38,8 +38,8 @@ public open class Resolver(
     id: String,
     props: ResolverProps,
   ) :
-      this(software.amazon.awscdk.services.appsync.Resolver(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ResolverProps::unwrap))
+      this(software.amazon.awscdk.services.appsync.Resolver(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ResolverProps.Companion::unwrap))
   )
 
   public constructor(
@@ -188,7 +188,7 @@ public open class Resolver(
      * @param api The API this resolver is attached to. 
      */
     override fun api(api: IGraphqlApi) {
-      cdkBuilder.api(api.let(IGraphqlApi::unwrap))
+      cdkBuilder.api(api.let(IGraphqlApi.Companion::unwrap))
     }
 
     /**
@@ -199,7 +199,7 @@ public open class Resolver(
      * @param cachingConfig The caching configuration for this resolver. 
      */
     override fun cachingConfig(cachingConfig: CachingConfig) {
-      cdkBuilder.cachingConfig(cachingConfig.let(CachingConfig::unwrap))
+      cdkBuilder.cachingConfig(cachingConfig.let(CachingConfig.Companion::unwrap))
     }
 
     /**
@@ -222,7 +222,7 @@ public open class Resolver(
      * @param code The function code. 
      */
     override fun code(code: Code) {
-      cdkBuilder.code(code.let(Code::unwrap))
+      cdkBuilder.code(code.let(Code.Companion::unwrap))
     }
 
     /**
@@ -233,7 +233,7 @@ public open class Resolver(
      * @param dataSource The data source this resolver is using. 
      */
     override fun dataSource(dataSource: BaseDataSource) {
-      cdkBuilder.dataSource(dataSource.let(BaseDataSource::unwrap))
+      cdkBuilder.dataSource(dataSource.let(BaseDataSource.Companion::unwrap))
     }
 
     /**
@@ -265,7 +265,7 @@ public open class Resolver(
      * @param pipelineConfig configuration of the pipeline resolver. 
      */
     override fun pipelineConfig(pipelineConfig: List<IAppsyncFunction>) {
-      cdkBuilder.pipelineConfig(pipelineConfig.map(IAppsyncFunction::unwrap))
+      cdkBuilder.pipelineConfig(pipelineConfig.map(IAppsyncFunction.Companion::unwrap))
     }
 
     /**
@@ -287,7 +287,7 @@ public open class Resolver(
      * @param requestMappingTemplate The request mapping template for this resolver. 
      */
     override fun requestMappingTemplate(requestMappingTemplate: MappingTemplate) {
-      cdkBuilder.requestMappingTemplate(requestMappingTemplate.let(MappingTemplate::unwrap))
+      cdkBuilder.requestMappingTemplate(requestMappingTemplate.let(MappingTemplate.Companion::unwrap))
     }
 
     /**
@@ -298,7 +298,7 @@ public open class Resolver(
      * @param responseMappingTemplate The response mapping template for this resolver. 
      */
     override fun responseMappingTemplate(responseMappingTemplate: MappingTemplate) {
-      cdkBuilder.responseMappingTemplate(responseMappingTemplate.let(MappingTemplate::unwrap))
+      cdkBuilder.responseMappingTemplate(responseMappingTemplate.let(MappingTemplate.Companion::unwrap))
     }
 
     /**
@@ -309,7 +309,7 @@ public open class Resolver(
      * @param runtime The functions runtime. 
      */
     override fun runtime(runtime: FunctionRuntime) {
-      cdkBuilder.runtime(runtime.let(FunctionRuntime::unwrap))
+      cdkBuilder.runtime(runtime.let(FunctionRuntime.Companion::unwrap))
     }
 
     /**

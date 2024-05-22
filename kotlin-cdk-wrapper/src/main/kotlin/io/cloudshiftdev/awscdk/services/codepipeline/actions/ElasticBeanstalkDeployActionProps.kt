@@ -131,7 +131,7 @@ public interface ElasticBeanstalkDeployActionProps : CommonAwsActionProps {
      * @param input The source to use as input for deployment. 
      */
     override fun input(input: Artifact) {
-      cdkBuilder.input(input.let(Artifact::unwrap))
+      cdkBuilder.input(input.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -143,7 +143,7 @@ public interface ElasticBeanstalkDeployActionProps : CommonAwsActionProps {
      * method in the `ActionBindOptions.role` property.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**

@@ -110,7 +110,7 @@ public interface ClientVpnRouteOptions {
      * @param target The target for the route. 
      */
     override fun target(target: ClientVpnRouteTarget) {
-      cdkBuilder.target(target.let(ClientVpnRouteTarget::unwrap))
+      cdkBuilder.target(target.let(ClientVpnRouteTarget.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.ClientVpnRouteOptions =

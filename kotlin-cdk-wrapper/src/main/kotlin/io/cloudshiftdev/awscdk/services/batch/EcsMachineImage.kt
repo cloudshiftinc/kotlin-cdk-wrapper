@@ -65,14 +65,14 @@ public interface EcsMachineImage {
      * @param image The machine image to use.
      */
     override fun image(image: IMachineImage) {
-      cdkBuilder.image(image.let(IMachineImage::unwrap))
+      cdkBuilder.image(image.let(IMachineImage.Companion::unwrap))
     }
 
     /**
      * @param imageType Tells Batch which instance type to launch this image on.
      */
     override fun imageType(imageType: EcsMachineImageType) {
-      cdkBuilder.imageType(imageType.let(EcsMachineImageType::unwrap))
+      cdkBuilder.imageType(imageType.let(EcsMachineImageType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.batch.EcsMachineImage = cdkBuilder.build()

@@ -479,7 +479,7 @@ public interface CfnApiProps {
      * doesn't support the combination of OpenAPI and CloudFormation resources.
      */
     override fun bodyS3Location(bodyS3Location: IResolvable) {
-      cdkBuilder.bodyS3Location(bodyS3Location.let(IResolvable::unwrap))
+      cdkBuilder.bodyS3Location(bodyS3Location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -490,7 +490,7 @@ public interface CfnApiProps {
      * doesn't support the combination of OpenAPI and CloudFormation resources.
      */
     override fun bodyS3Location(bodyS3Location: CfnApi.BodyS3LocationProperty) {
-      cdkBuilder.bodyS3Location(bodyS3Location.let(CfnApi.BodyS3LocationProperty::unwrap))
+      cdkBuilder.bodyS3Location(bodyS3Location.let(CfnApi.BodyS3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -512,7 +512,7 @@ public interface CfnApiProps {
      * information.
      */
     override fun corsConfiguration(corsConfiguration: IResolvable) {
-      cdkBuilder.corsConfiguration(corsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.corsConfiguration(corsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -522,7 +522,7 @@ public interface CfnApiProps {
      * information.
      */
     override fun corsConfiguration(corsConfiguration: CfnApi.CorsProperty) {
-      cdkBuilder.corsConfiguration(corsConfiguration.let(CfnApi.CorsProperty::unwrap))
+      cdkBuilder.corsConfiguration(corsConfiguration.let(CfnApi.CorsProperty.Companion::unwrap))
     }
 
     /**
@@ -575,7 +575,7 @@ public interface CfnApiProps {
      * custom domain name to invoke your API, disable the default endpoint.
      */
     override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable) {
-      cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint.let(IResolvable::unwrap))
+      cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -591,7 +591,7 @@ public interface CfnApiProps {
      * Supported only for WebSocket APIs.
      */
     override fun disableSchemaValidation(disableSchemaValidation: IResolvable) {
-      cdkBuilder.disableSchemaValidation(disableSchemaValidation.let(IResolvable::unwrap))
+      cdkBuilder.disableSchemaValidation(disableSchemaValidation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -609,7 +609,7 @@ public interface CfnApiProps {
      * By default, API creation continues if a warning is encountered.
      */
     override fun failOnWarnings(failOnWarnings: IResolvable) {
-      cdkBuilder.failOnWarnings(failOnWarnings.let(IResolvable::unwrap))
+      cdkBuilder.failOnWarnings(failOnWarnings.let(IResolvable.Companion::unwrap))
     }
 
     /**

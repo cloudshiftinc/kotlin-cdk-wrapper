@@ -57,8 +57,8 @@ public open class CfnView(
     id: String,
     props: CfnViewProps,
   ) :
-      this(software.amazon.awscdk.services.resourceexplorer2.CfnView(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnViewProps::unwrap))
+      this(software.amazon.awscdk.services.resourceexplorer2.CfnView(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnViewProps.Companion::unwrap))
   )
 
   public constructor(
@@ -86,7 +86,7 @@ public open class CfnView(
    * results that are returned for queries made using this view.
    */
   public open fun filters(`value`: IResolvable) {
-    unwrap(this).setFilters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFilters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -94,7 +94,7 @@ public open class CfnView(
    * results that are returned for queries made using this view.
    */
   public open fun filters(`value`: FiltersProperty) {
-    unwrap(this).setFilters(`value`.let(FiltersProperty::unwrap))
+    unwrap(this).setFilters(`value`.let(FiltersProperty.Companion::unwrap))
   }
 
   /**
@@ -115,7 +115,7 @@ public open class CfnView(
    * A list of fields that provide additional information about the view.
    */
   public open fun includedProperties(`value`: IResolvable) {
-    unwrap(this).setIncludedProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIncludedProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -137,7 +137,7 @@ public open class CfnView(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -365,7 +365,7 @@ public open class CfnView(
      * filter the results that are returned for queries made using this view. 
      */
     override fun filters(filters: IResolvable) {
-      cdkBuilder.filters(filters.let(IResolvable::unwrap))
+      cdkBuilder.filters(filters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -396,7 +396,7 @@ public open class CfnView(
      * filter the results that are returned for queries made using this view. 
      */
     override fun filters(filters: FiltersProperty) {
-      cdkBuilder.filters(filters.let(FiltersProperty::unwrap))
+      cdkBuilder.filters(filters.let(FiltersProperty.Companion::unwrap))
     }
 
     /**
@@ -439,7 +439,7 @@ public open class CfnView(
      * view. 
      */
     override fun includedProperties(includedProperties: IResolvable) {
-      cdkBuilder.includedProperties(includedProperties.let(IResolvable::unwrap))
+      cdkBuilder.includedProperties(includedProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**

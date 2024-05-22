@@ -44,7 +44,7 @@ public abstract class Code(
    * @param scope The binding scope. 
    */
   public open fun bind(scope: Construct): CodeConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(CodeConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(CodeConfig::wrap)
 
   /**
    * Called after the CFN function resource has been created to allow the code class to bind to it.
@@ -56,7 +56,7 @@ public abstract class Code(
    * @param _options
    */
   public open fun bindToResource(resource: CfnResource) {
-    unwrap(this).bindToResource(resource.let(CfnResource::unwrap))
+    unwrap(this).bindToResource(resource.let(CfnResource.Companion::unwrap))
   }
 
   /**
@@ -69,8 +69,8 @@ public abstract class Code(
    * @param _options
    */
   public open fun bindToResource(resource: CfnResource, options: ResourceBindOptions) {
-    unwrap(this).bindToResource(resource.let(CfnResource::unwrap),
-        options.let(ResourceBindOptions::unwrap))
+    unwrap(this).bindToResource(resource.let(CfnResource.Companion::unwrap),
+        options.let(ResourceBindOptions.Companion::unwrap))
   }
 
   /**
@@ -98,7 +98,7 @@ public abstract class Code(
 
     public fun fromAsset(path: String, options: AssetOptions): AssetCode =
         software.amazon.awscdk.services.lambda.Code.fromAsset(path,
-        options.let(AssetOptions::unwrap)).let(AssetCode::wrap)
+        options.let(AssetOptions.Companion::unwrap)).let(AssetCode::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("482ed6c90255a0e03a6d17ca66757ec35db161e58b4e0672875b7a9a0c2f0349")
@@ -110,7 +110,7 @@ public abstract class Code(
 
     public fun fromAssetImage(directory: String, props: AssetImageCodeProps): AssetImageCode =
         software.amazon.awscdk.services.lambda.Code.fromAssetImage(directory,
-        props.let(AssetImageCodeProps::unwrap)).let(AssetImageCode::wrap)
+        props.let(AssetImageCodeProps.Companion::unwrap)).let(AssetImageCode::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5d096922f964edb02ce125607a3ac9e055cfdef082088c11f7f28560c0ddce09")
@@ -118,21 +118,22 @@ public abstract class Code(
         AssetImageCode = fromAssetImage(directory, AssetImageCodeProps(props))
 
     public fun fromBucket(bucket: IBucket, key: String): S3Code =
-        software.amazon.awscdk.services.lambda.Code.fromBucket(bucket.let(IBucket::unwrap),
+        software.amazon.awscdk.services.lambda.Code.fromBucket(bucket.let(IBucket.Companion::unwrap),
         key).let(S3Code::wrap)
 
     public fun fromBucket(
       bucket: IBucket,
       key: String,
       objectVersion: String,
-    ): S3Code = software.amazon.awscdk.services.lambda.Code.fromBucket(bucket.let(IBucket::unwrap),
+    ): S3Code =
+        software.amazon.awscdk.services.lambda.Code.fromBucket(bucket.let(IBucket.Companion::unwrap),
         key, objectVersion).let(S3Code::wrap)
 
     public fun fromCfnParameters(): CfnParametersCode =
         software.amazon.awscdk.services.lambda.Code.fromCfnParameters().let(CfnParametersCode::wrap)
 
     public fun fromCfnParameters(props: CfnParametersCodeProps): CfnParametersCode =
-        software.amazon.awscdk.services.lambda.Code.fromCfnParameters(props.let(CfnParametersCodeProps::unwrap)).let(CfnParametersCode::wrap)
+        software.amazon.awscdk.services.lambda.Code.fromCfnParameters(props.let(CfnParametersCodeProps.Companion::unwrap)).let(CfnParametersCode::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f942d49f88ca2fe998eddb89bc7e5353b2a9928f94e7daa6c5c5852e24b69c2d")
@@ -144,7 +145,7 @@ public abstract class Code(
 
     public fun fromDockerBuild(path: String, options: DockerBuildAssetOptions): AssetCode =
         software.amazon.awscdk.services.lambda.Code.fromDockerBuild(path,
-        options.let(DockerBuildAssetOptions::unwrap)).let(AssetCode::wrap)
+        options.let(DockerBuildAssetOptions.Companion::unwrap)).let(AssetCode::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("372495861b22df1668950d0a721b1f978c0a72ddc5b57b8449704ad4b68afca8")
@@ -152,11 +153,11 @@ public abstract class Code(
         AssetCode = fromDockerBuild(path, DockerBuildAssetOptions(options))
 
     public fun fromEcrImage(repository: IRepository): EcrImageCode =
-        software.amazon.awscdk.services.lambda.Code.fromEcrImage(repository.let(IRepository::unwrap)).let(EcrImageCode::wrap)
+        software.amazon.awscdk.services.lambda.Code.fromEcrImage(repository.let(IRepository.Companion::unwrap)).let(EcrImageCode::wrap)
 
     public fun fromEcrImage(repository: IRepository, props: EcrImageCodeProps): EcrImageCode =
-        software.amazon.awscdk.services.lambda.Code.fromEcrImage(repository.let(IRepository::unwrap),
-        props.let(EcrImageCodeProps::unwrap)).let(EcrImageCode::wrap)
+        software.amazon.awscdk.services.lambda.Code.fromEcrImage(repository.let(IRepository.Companion::unwrap),
+        props.let(EcrImageCodeProps.Companion::unwrap)).let(EcrImageCode::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("333f15e8a17ec3ab2ad348015fcd8bc245011de756cdabf596035ba7d1ce157c")

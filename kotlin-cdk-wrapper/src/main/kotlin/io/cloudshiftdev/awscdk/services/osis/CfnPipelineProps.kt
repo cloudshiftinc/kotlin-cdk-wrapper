@@ -258,7 +258,7 @@ public interface CfnPipelineProps {
      * .
      */
     override fun bufferOptions(bufferOptions: IResolvable) {
-      cdkBuilder.bufferOptions(bufferOptions.let(IResolvable::unwrap))
+      cdkBuilder.bufferOptions(bufferOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -269,7 +269,7 @@ public interface CfnPipelineProps {
      * .
      */
     override fun bufferOptions(bufferOptions: CfnPipeline.BufferOptionsProperty) {
-      cdkBuilder.bufferOptions(bufferOptions.let(CfnPipeline.BufferOptionsProperty::unwrap))
+      cdkBuilder.bufferOptions(bufferOptions.let(CfnPipeline.BufferOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -288,7 +288,7 @@ public interface CfnPipelineProps {
      * @param encryptionAtRestOptions Options to control how OpenSearch encrypts buffer data.
      */
     override fun encryptionAtRestOptions(encryptionAtRestOptions: IResolvable) {
-      cdkBuilder.encryptionAtRestOptions(encryptionAtRestOptions.let(IResolvable::unwrap))
+      cdkBuilder.encryptionAtRestOptions(encryptionAtRestOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -296,7 +296,7 @@ public interface CfnPipelineProps {
      */
     override
         fun encryptionAtRestOptions(encryptionAtRestOptions: CfnPipeline.EncryptionAtRestOptionsProperty) {
-      cdkBuilder.encryptionAtRestOptions(encryptionAtRestOptions.let(CfnPipeline.EncryptionAtRestOptionsProperty::unwrap))
+      cdkBuilder.encryptionAtRestOptions(encryptionAtRestOptions.let(CfnPipeline.EncryptionAtRestOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -313,7 +313,7 @@ public interface CfnPipelineProps {
      * @param logPublishingOptions Key-value pairs that represent log publishing settings.
      */
     override fun logPublishingOptions(logPublishingOptions: IResolvable) {
-      cdkBuilder.logPublishingOptions(logPublishingOptions.let(IResolvable::unwrap))
+      cdkBuilder.logPublishingOptions(logPublishingOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -321,7 +321,7 @@ public interface CfnPipelineProps {
      */
     override
         fun logPublishingOptions(logPublishingOptions: CfnPipeline.LogPublishingOptionsProperty) {
-      cdkBuilder.logPublishingOptions(logPublishingOptions.let(CfnPipeline.LogPublishingOptionsProperty::unwrap))
+      cdkBuilder.logPublishingOptions(logPublishingOptions.let(CfnPipeline.LogPublishingOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -365,7 +365,7 @@ public interface CfnPipelineProps {
      * @param tags List of tags to add to the pipeline upon creation.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -378,7 +378,7 @@ public interface CfnPipelineProps {
      * Ingestion VPC endpoint.
      */
     override fun vpcOptions(vpcOptions: IResolvable) {
-      cdkBuilder.vpcOptions(vpcOptions.let(IResolvable::unwrap))
+      cdkBuilder.vpcOptions(vpcOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -386,7 +386,7 @@ public interface CfnPipelineProps {
      * Ingestion VPC endpoint.
      */
     override fun vpcOptions(vpcOptions: CfnPipeline.VpcOptionsProperty) {
-      cdkBuilder.vpcOptions(vpcOptions.let(CfnPipeline.VpcOptionsProperty::unwrap))
+      cdkBuilder.vpcOptions(vpcOptions.let(CfnPipeline.VpcOptionsProperty.Companion::unwrap))
     }
 
     /**

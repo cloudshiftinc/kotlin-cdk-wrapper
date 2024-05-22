@@ -113,7 +113,7 @@ public interface GrantOnPrincipalOptions : CommonGrantOptions {
      * @param grantee The principal to grant to. 
      */
     override fun grantee(grantee: IGrantable) {
-      cdkBuilder.grantee(grantee.let(IGrantable::unwrap))
+      cdkBuilder.grantee(grantee.let(IGrantable.Companion::unwrap))
     }
 
     /**
@@ -133,7 +133,7 @@ public interface GrantOnPrincipalOptions : CommonGrantOptions {
      * @param scope Construct to report warnings on in case grant could not be registered.
      */
     override fun scope(scope: IConstruct) {
-      cdkBuilder.scope(scope.let(IConstruct::unwrap))
+      cdkBuilder.scope(scope.let(IConstruct.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.iam.GrantOnPrincipalOptions =

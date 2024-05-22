@@ -41,8 +41,8 @@ public open class CfnClientVpnTargetNetworkAssociation(
     id: String,
     props: CfnClientVpnTargetNetworkAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnClientVpnTargetNetworkAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnClientVpnTargetNetworkAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnClientVpnTargetNetworkAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnClientVpnTargetNetworkAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -75,7 +75,7 @@ public open class CfnClientVpnTargetNetworkAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

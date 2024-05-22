@@ -36,7 +36,7 @@ public open class HttpApi(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpApi,
 ) : Resource(cdkObject), IHttpApi, IApi {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.apigatewayv2.HttpApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.apigatewayv2.HttpApi(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -45,8 +45,8 @@ public open class HttpApi(
     id: String,
     props: HttpApiProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.HttpApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(HttpApiProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.HttpApi(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(HttpApiProps.Companion::unwrap))
   )
 
   public constructor(
@@ -65,7 +65,7 @@ public open class HttpApi(
    * @param options 
    */
   public open fun addRoutes(options: AddRoutesOptions): List<HttpRoute> =
-      unwrap(this).addRoutes(options.let(AddRoutesOptions::unwrap)).map(HttpRoute::wrap)
+      unwrap(this).addRoutes(options.let(AddRoutesOptions.Companion::unwrap)).map(HttpRoute::wrap)
 
   /**
    * Add multiple routes that uses the same configuration.
@@ -87,7 +87,8 @@ public open class HttpApi(
    * @param options 
    */
   public open fun addStage(id: String, options: HttpStageOptions): HttpStage =
-      unwrap(this).addStage(id, options.let(HttpStageOptions::unwrap)).let(HttpStage::wrap)
+      unwrap(this).addStage(id,
+      options.let(HttpStageOptions.Companion::unwrap)).let(HttpStage::wrap)
 
   /**
    * Add a new stage.
@@ -106,7 +107,7 @@ public open class HttpApi(
    * @param options 
    */
   public override fun addVpcLink(options: VpcLinkProps): VpcLink =
-      unwrap(this).addVpcLink(options.let(VpcLinkProps::unwrap)).let(VpcLink::wrap)
+      unwrap(this).addVpcLink(options.let(VpcLinkProps.Companion::unwrap)).let(VpcLink::wrap)
 
   /**
    * Add a new VpcLink.
@@ -235,7 +236,7 @@ public open class HttpApi(
    * @param props
    */
   public override fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Return the given named metric for this Api Gateway.
@@ -262,7 +263,7 @@ public open class HttpApi(
    * @param props
    */
   public override fun metricClientError(props: MetricOptions): Metric =
-      unwrap(this).metricClientError(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricClientError(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of client-side errors captured in a given period.
@@ -287,7 +288,7 @@ public open class HttpApi(
    * @param props
    */
   public override fun metricCount(props: MetricOptions): Metric =
-      unwrap(this).metricCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the total number API requests in a given period.
@@ -313,7 +314,7 @@ public open class HttpApi(
    * @param props
    */
   public override fun metricDataProcessed(props: MetricOptions): Metric =
-      unwrap(this).metricDataProcessed(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricDataProcessed(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the amount of data processed in bytes.
@@ -341,7 +342,7 @@ public open class HttpApi(
    * @param props
    */
   public override fun metricIntegrationLatency(props: MetricOptions): Metric =
-      unwrap(this).metricIntegrationLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricIntegrationLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the time between when API Gateway relays a request to the backend and when it
@@ -373,7 +374,7 @@ public open class HttpApi(
    * @param props
    */
   public override fun metricLatency(props: MetricOptions): Metric =
-      unwrap(this).metricLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The time between when API Gateway receives a request from a client and when it returns a
@@ -402,7 +403,7 @@ public open class HttpApi(
    * @param props
    */
   public override fun metricServerError(props: MetricOptions): Metric =
-      unwrap(this).metricServerError(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricServerError(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of server-side errors captured in a given period.
@@ -587,7 +588,7 @@ public open class HttpApi(
      * @param corsPreflight Specifies a CORS configuration for an API. 
      */
     override fun corsPreflight(corsPreflight: CorsPreflightOptions) {
-      cdkBuilder.corsPreflight(corsPreflight.let(CorsPreflightOptions::unwrap))
+      cdkBuilder.corsPreflight(corsPreflight.let(CorsPreflightOptions.Companion::unwrap))
     }
 
     /**
@@ -652,7 +653,7 @@ public open class HttpApi(
      * @param defaultAuthorizer Default Authorizer applied to all routes in the gateway. 
      */
     override fun defaultAuthorizer(defaultAuthorizer: IHttpRouteAuthorizer) {
-      cdkBuilder.defaultAuthorizer(defaultAuthorizer.let(IHttpRouteAuthorizer::unwrap))
+      cdkBuilder.defaultAuthorizer(defaultAuthorizer.let(IHttpRouteAuthorizer.Companion::unwrap))
     }
 
     /**
@@ -665,7 +666,7 @@ public open class HttpApi(
      * HTTP API. 
      */
     override fun defaultDomainMapping(defaultDomainMapping: DomainMappingOptions) {
-      cdkBuilder.defaultDomainMapping(defaultDomainMapping.let(DomainMappingOptions::unwrap))
+      cdkBuilder.defaultDomainMapping(defaultDomainMapping.let(DomainMappingOptions.Companion::unwrap))
     }
 
     /**
@@ -692,7 +693,7 @@ public open class HttpApi(
      * ($default). 
      */
     override fun defaultIntegration(defaultIntegration: HttpRouteIntegration) {
-      cdkBuilder.defaultIntegration(defaultIntegration.let(HttpRouteIntegration::unwrap))
+      cdkBuilder.defaultIntegration(defaultIntegration.let(HttpRouteIntegration.Companion::unwrap))
     }
 
     /**
@@ -731,8 +732,8 @@ public open class HttpApi(
       id: String,
       attrs: HttpApiAttributes,
     ): IHttpApi =
-        software.amazon.awscdk.services.apigatewayv2.HttpApi.fromHttpApiAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(HttpApiAttributes::unwrap)).let(IHttpApi::wrap)
+        software.amazon.awscdk.services.apigatewayv2.HttpApi.fromHttpApiAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(HttpApiAttributes.Companion::unwrap)).let(IHttpApi::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c9b4b99209a3a68f4c8659bb0daf044a2ac392e8ef0ae6869e278a39e0ba5131")

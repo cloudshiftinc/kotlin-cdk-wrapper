@@ -32,7 +32,7 @@ public interface IPrivateSubnet : ISubnet {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -42,7 +42,7 @@ public interface IPrivateSubnet : ISubnet {
      * @param acl The Network ACL to associate. 
      */
     override fun associateNetworkAcl(id: String, acl: INetworkAcl) {
-      unwrap(this).associateNetworkAcl(id, acl.let(INetworkAcl::unwrap))
+      unwrap(this).associateNetworkAcl(id, acl.let(INetworkAcl.Companion::unwrap))
     }
 
     /**

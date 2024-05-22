@@ -55,8 +55,8 @@ public open class CfnSite(
     id: String,
     props: CfnSiteProps,
   ) :
-      this(software.amazon.awscdk.services.networkmanager.CfnSite(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSiteProps::unwrap))
+      this(software.amazon.awscdk.services.networkmanager.CfnSite(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSiteProps.Companion::unwrap))
   )
 
   public constructor(
@@ -122,7 +122,7 @@ public open class CfnSite(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -134,14 +134,14 @@ public open class CfnSite(
    * The site location.
    */
   public open fun location(`value`: IResolvable) {
-    unwrap(this).setLocation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLocation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The site location.
    */
   public open fun location(`value`: LocationProperty) {
-    unwrap(this).setLocation(`value`.let(LocationProperty::unwrap))
+    unwrap(this).setLocation(`value`.let(LocationProperty.Companion::unwrap))
   }
 
   /**
@@ -167,7 +167,7 @@ public open class CfnSite(
    * The tags for the site.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -305,7 +305,7 @@ public open class CfnSite(
      * @param location The site location. 
      */
     override fun location(location: IResolvable) {
-      cdkBuilder.location(location.let(IResolvable::unwrap))
+      cdkBuilder.location(location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -322,7 +322,7 @@ public open class CfnSite(
      * @param location The site location. 
      */
     override fun location(location: LocationProperty) {
-      cdkBuilder.location(location.let(LocationProperty::unwrap))
+      cdkBuilder.location(location.let(LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -350,7 +350,7 @@ public open class CfnSite(
      * @param tags The tags for the site. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

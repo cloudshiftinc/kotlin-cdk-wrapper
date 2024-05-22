@@ -140,7 +140,7 @@ public interface CfnEnabledControlProps {
      * @param parameters Array of `EnabledControlParameter` objects.
      */
     override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -159,7 +159,7 @@ public interface CfnEnabledControlProps {
      * @param tags Tags to be applied to the enabled control.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

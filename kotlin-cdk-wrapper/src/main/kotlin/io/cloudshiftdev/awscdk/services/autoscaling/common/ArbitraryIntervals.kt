@@ -75,7 +75,7 @@ public interface ArbitraryIntervals {
      * @param intervals the value to be set. 
      */
     override fun intervals(intervals: List<ScalingInterval>) {
-      cdkBuilder.intervals(intervals.map(ScalingInterval::unwrap))
+      cdkBuilder.intervals(intervals.map(ScalingInterval.Companion::unwrap))
     }
 
     /**

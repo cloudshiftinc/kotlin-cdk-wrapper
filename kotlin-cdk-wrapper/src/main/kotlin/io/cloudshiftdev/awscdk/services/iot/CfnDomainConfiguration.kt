@@ -61,7 +61,7 @@ public open class CfnDomainConfiguration(
   cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.iot.CfnDomainConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.iot.CfnDomainConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -70,8 +70,8 @@ public open class CfnDomainConfiguration(
     id: String,
     props: CfnDomainConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.iot.CfnDomainConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDomainConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.iot.CfnDomainConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDomainConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -109,14 +109,14 @@ public open class CfnDomainConfiguration(
    * An object that specifies the authorization service for a domain.
    */
   public open fun authorizerConfig(`value`: IResolvable) {
-    unwrap(this).setAuthorizerConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAuthorizerConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An object that specifies the authorization service for a domain.
    */
   public open fun authorizerConfig(`value`: AuthorizerConfigProperty) {
-    unwrap(this).setAuthorizerConfig(`value`.let(AuthorizerConfigProperty::unwrap))
+    unwrap(this).setAuthorizerConfig(`value`.let(AuthorizerConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -169,7 +169,7 @@ public open class CfnDomainConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -200,14 +200,14 @@ public open class CfnDomainConfiguration(
    * The server certificate configuration.
    */
   public open fun serverCertificateConfig(`value`: IResolvable) {
-    unwrap(this).setServerCertificateConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setServerCertificateConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The server certificate configuration.
    */
   public open fun serverCertificateConfig(`value`: ServerCertificateConfigProperty) {
-    unwrap(this).setServerCertificateConfig(`value`.let(ServerCertificateConfigProperty::unwrap))
+    unwrap(this).setServerCertificateConfig(`value`.let(ServerCertificateConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -246,7 +246,7 @@ public open class CfnDomainConfiguration(
    * Metadata which can be used to manage the domain configuration.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -263,14 +263,14 @@ public open class CfnDomainConfiguration(
    * An object that specifies the TLS configuration for a domain.
    */
   public open fun tlsConfig(`value`: IResolvable) {
-    unwrap(this).setTlsConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTlsConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An object that specifies the TLS configuration for a domain.
    */
   public open fun tlsConfig(`value`: TlsConfigProperty) {
-    unwrap(this).setTlsConfig(`value`.let(TlsConfigProperty::unwrap))
+    unwrap(this).setTlsConfig(`value`.let(TlsConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -515,7 +515,7 @@ public open class CfnDomainConfiguration(
      * @param authorizerConfig An object that specifies the authorization service for a domain. 
      */
     override fun authorizerConfig(authorizerConfig: IResolvable) {
-      cdkBuilder.authorizerConfig(authorizerConfig.let(IResolvable::unwrap))
+      cdkBuilder.authorizerConfig(authorizerConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -525,7 +525,7 @@ public open class CfnDomainConfiguration(
      * @param authorizerConfig An object that specifies the authorization service for a domain. 
      */
     override fun authorizerConfig(authorizerConfig: AuthorizerConfigProperty) {
-      cdkBuilder.authorizerConfig(authorizerConfig.let(AuthorizerConfigProperty::unwrap))
+      cdkBuilder.authorizerConfig(authorizerConfig.let(AuthorizerConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -612,7 +612,7 @@ public open class CfnDomainConfiguration(
      * @param serverCertificateConfig The server certificate configuration. 
      */
     override fun serverCertificateConfig(serverCertificateConfig: IResolvable) {
-      cdkBuilder.serverCertificateConfig(serverCertificateConfig.let(IResolvable::unwrap))
+      cdkBuilder.serverCertificateConfig(serverCertificateConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -626,7 +626,7 @@ public open class CfnDomainConfiguration(
      * @param serverCertificateConfig The server certificate configuration. 
      */
     override fun serverCertificateConfig(serverCertificateConfig: ServerCertificateConfigProperty) {
-      cdkBuilder.serverCertificateConfig(serverCertificateConfig.let(ServerCertificateConfigProperty::unwrap))
+      cdkBuilder.serverCertificateConfig(serverCertificateConfig.let(ServerCertificateConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -675,7 +675,7 @@ public open class CfnDomainConfiguration(
      * @param tags Metadata which can be used to manage the domain configuration. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -702,7 +702,7 @@ public open class CfnDomainConfiguration(
      * @param tlsConfig An object that specifies the TLS configuration for a domain. 
      */
     override fun tlsConfig(tlsConfig: IResolvable) {
-      cdkBuilder.tlsConfig(tlsConfig.let(IResolvable::unwrap))
+      cdkBuilder.tlsConfig(tlsConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -712,7 +712,7 @@ public open class CfnDomainConfiguration(
      * @param tlsConfig An object that specifies the TLS configuration for a domain. 
      */
     override fun tlsConfig(tlsConfig: TlsConfigProperty) {
-      cdkBuilder.tlsConfig(tlsConfig.let(TlsConfigProperty::unwrap))
+      cdkBuilder.tlsConfig(tlsConfig.let(TlsConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -841,7 +841,7 @@ public open class CfnDomainConfiguration(
        * authorization service can be overridden.
        */
       override fun allowAuthorizerOverride(allowAuthorizerOverride: IResolvable) {
-        cdkBuilder.allowAuthorizerOverride(allowAuthorizerOverride.let(IResolvable::unwrap))
+        cdkBuilder.allowAuthorizerOverride(allowAuthorizerOverride.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -977,7 +977,7 @@ public open class CfnDomainConfiguration(
        * from the AWS IoT Core Developer Guide.
        */
       override fun enableOcspCheck(enableOcspCheck: IResolvable) {
-        cdkBuilder.enableOcspCheck(enableOcspCheck.let(IResolvable::unwrap))
+        cdkBuilder.enableOcspCheck(enableOcspCheck.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

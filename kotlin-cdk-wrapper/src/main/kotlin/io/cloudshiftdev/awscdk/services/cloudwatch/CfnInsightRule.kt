@@ -52,8 +52,8 @@ public open class CfnInsightRule(
     id: String,
     props: CfnInsightRuleProps,
   ) :
-      this(software.amazon.awscdk.services.cloudwatch.CfnInsightRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInsightRuleProps::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.CfnInsightRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInsightRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -85,7 +85,7 @@ public open class CfnInsightRule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -139,7 +139,7 @@ public open class CfnInsightRule(
    * A list of key-value pairs to associate with the Contributor Insights rule.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -279,7 +279,7 @@ public open class CfnInsightRule(
      * @param tags A list of key-value pairs to associate with the Contributor Insights rule. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

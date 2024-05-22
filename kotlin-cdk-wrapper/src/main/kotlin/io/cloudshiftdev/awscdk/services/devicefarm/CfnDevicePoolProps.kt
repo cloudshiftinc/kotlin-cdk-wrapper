@@ -201,7 +201,7 @@ public interface CfnDevicePoolProps {
      * @param rules The device pool's rules. 
      */
     override fun rules(rules: IResolvable) {
-      cdkBuilder.rules(rules.let(IResolvable::unwrap))
+      cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -223,7 +223,7 @@ public interface CfnDevicePoolProps {
      * in the *guide* .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

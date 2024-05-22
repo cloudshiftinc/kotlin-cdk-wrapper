@@ -91,7 +91,7 @@ public interface MultiNodeContainer {
      * @param container The container that this node range will run. 
      */
     override fun container(container: IEcsContainerDefinition) {
-      cdkBuilder.container(container.let(IEcsContainerDefinition::unwrap))
+      cdkBuilder.container(container.let(IEcsContainerDefinition.Companion::unwrap))
     }
 
     /**

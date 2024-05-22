@@ -95,7 +95,7 @@ public interface ISlackChannelConfiguration : IResource, IGrantable, INotificati
      * @param statement 
      */
     override fun addToRolePolicy(statement: PolicyStatement) {
-      unwrap(this).addToRolePolicy(statement.let(PolicyStatement::unwrap))
+      unwrap(this).addToRolePolicy(statement.let(PolicyStatement.Companion::unwrap))
     }
 
     /**
@@ -122,7 +122,7 @@ public interface ISlackChannelConfiguration : IResource, IGrantable, INotificati
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -131,7 +131,7 @@ public interface ISlackChannelConfiguration : IResource, IGrantable, INotificati
      * @param scope 
      */
     override fun bindAsNotificationRuleTarget(scope: Construct): NotificationRuleTargetConfig =
-        unwrap(this).bindAsNotificationRuleTarget(scope.let(Construct::unwrap)).let(NotificationRuleTargetConfig::wrap)
+        unwrap(this).bindAsNotificationRuleTarget(scope.let(Construct.Companion::unwrap)).let(NotificationRuleTargetConfig::wrap)
 
     /**
      * The environment this resource belongs to.
@@ -167,7 +167,8 @@ public interface ISlackChannelConfiguration : IResource, IGrantable, INotificati
      * @param props
      */
     override fun metric(metricName: String, props: MetricOptions): Metric =
-        unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metric(metricName,
+        props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Return the given named metric for this SlackChannelConfiguration.

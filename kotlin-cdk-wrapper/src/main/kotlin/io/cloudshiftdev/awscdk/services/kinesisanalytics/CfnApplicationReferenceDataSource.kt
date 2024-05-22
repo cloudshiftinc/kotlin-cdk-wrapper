@@ -88,8 +88,8 @@ public open class CfnApplicationReferenceDataSource(
     id: String,
     props: CfnApplicationReferenceDataSourceProps,
   ) :
-      this(software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApplicationReferenceDataSourceProps::unwrap))
+      this(software.amazon.awscdk.services.kinesisanalytics.CfnApplicationReferenceDataSource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApplicationReferenceDataSourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -122,7 +122,7 @@ public open class CfnApplicationReferenceDataSource(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -134,14 +134,14 @@ public open class CfnApplicationReferenceDataSource(
    * The reference data source can be an object in your Amazon S3 bucket.
    */
   public open fun referenceDataSource(`value`: IResolvable) {
-    unwrap(this).setReferenceDataSource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setReferenceDataSource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The reference data source can be an object in your Amazon S3 bucket.
    */
   public open fun referenceDataSource(`value`: ReferenceDataSourceProperty) {
-    unwrap(this).setReferenceDataSource(`value`.let(ReferenceDataSourceProperty::unwrap))
+    unwrap(this).setReferenceDataSource(`value`.let(ReferenceDataSourceProperty.Companion::unwrap))
   }
 
   /**
@@ -244,7 +244,7 @@ public open class CfnApplicationReferenceDataSource(
      * bucket. 
      */
     override fun referenceDataSource(referenceDataSource: IResolvable) {
-      cdkBuilder.referenceDataSource(referenceDataSource.let(IResolvable::unwrap))
+      cdkBuilder.referenceDataSource(referenceDataSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -260,7 +260,7 @@ public open class CfnApplicationReferenceDataSource(
      * bucket. 
      */
     override fun referenceDataSource(referenceDataSource: ReferenceDataSourceProperty) {
-      cdkBuilder.referenceDataSource(referenceDataSource.let(ReferenceDataSourceProperty::unwrap))
+      cdkBuilder.referenceDataSource(referenceDataSource.let(ReferenceDataSourceProperty.Companion::unwrap))
     }
 
     /**
@@ -621,7 +621,7 @@ public open class CfnApplicationReferenceDataSource(
        * uses delimiters (for example, CSV).
        */
       override fun csvMappingParameters(csvMappingParameters: IResolvable) {
-        cdkBuilder.csvMappingParameters(csvMappingParameters.let(IResolvable::unwrap))
+        cdkBuilder.csvMappingParameters(csvMappingParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -629,7 +629,7 @@ public open class CfnApplicationReferenceDataSource(
        * uses delimiters (for example, CSV).
        */
       override fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty) {
-        cdkBuilder.csvMappingParameters(csvMappingParameters.let(CSVMappingParametersProperty::unwrap))
+        cdkBuilder.csvMappingParameters(csvMappingParameters.let(CSVMappingParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -647,7 +647,7 @@ public open class CfnApplicationReferenceDataSource(
        * record format on the streaming source.
        */
       override fun jsonMappingParameters(jsonMappingParameters: IResolvable) {
-        cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(IResolvable::unwrap))
+        cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -655,7 +655,7 @@ public open class CfnApplicationReferenceDataSource(
        * record format on the streaming source.
        */
       override fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty) {
-        cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(JSONMappingParametersProperty::unwrap))
+        cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(JSONMappingParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -961,7 +961,7 @@ public open class CfnApplicationReferenceDataSource(
        * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
        */
       override fun mappingParameters(mappingParameters: IResolvable) {
-        cdkBuilder.mappingParameters(mappingParameters.let(IResolvable::unwrap))
+        cdkBuilder.mappingParameters(mappingParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -970,7 +970,7 @@ public open class CfnApplicationReferenceDataSource(
        * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
        */
       override fun mappingParameters(mappingParameters: MappingParametersProperty) {
-        cdkBuilder.mappingParameters(mappingParameters.let(MappingParametersProperty::unwrap))
+        cdkBuilder.mappingParameters(mappingParameters.let(MappingParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -1184,7 +1184,7 @@ public open class CfnApplicationReferenceDataSource(
        * each data element maps to corresponding columns created in the in-application stream. 
        */
       override fun referenceSchema(referenceSchema: IResolvable) {
-        cdkBuilder.referenceSchema(referenceSchema.let(IResolvable::unwrap))
+        cdkBuilder.referenceSchema(referenceSchema.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1192,7 +1192,7 @@ public open class CfnApplicationReferenceDataSource(
        * each data element maps to corresponding columns created in the in-application stream. 
        */
       override fun referenceSchema(referenceSchema: ReferenceSchemaProperty) {
-        cdkBuilder.referenceSchema(referenceSchema.let(ReferenceSchemaProperty::unwrap))
+        cdkBuilder.referenceSchema(referenceSchema.let(ReferenceSchemaProperty.Companion::unwrap))
       }
 
       /**
@@ -1213,7 +1213,7 @@ public open class CfnApplicationReferenceDataSource(
        * your application.
        */
       override fun s3ReferenceDataSource(s3ReferenceDataSource: IResolvable) {
-        cdkBuilder.s3ReferenceDataSource(s3ReferenceDataSource.let(IResolvable::unwrap))
+        cdkBuilder.s3ReferenceDataSource(s3ReferenceDataSource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1225,7 +1225,7 @@ public open class CfnApplicationReferenceDataSource(
        * your application.
        */
       override fun s3ReferenceDataSource(s3ReferenceDataSource: S3ReferenceDataSourceProperty) {
-        cdkBuilder.s3ReferenceDataSource(s3ReferenceDataSource.let(S3ReferenceDataSourceProperty::unwrap))
+        cdkBuilder.s3ReferenceDataSource(s3ReferenceDataSource.let(S3ReferenceDataSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -1418,7 +1418,7 @@ public open class CfnApplicationReferenceDataSource(
        * @param recordColumns A list of RecordColumn objects. 
        */
       override fun recordColumns(recordColumns: IResolvable) {
-        cdkBuilder.recordColumns(recordColumns.let(IResolvable::unwrap))
+        cdkBuilder.recordColumns(recordColumns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1446,14 +1446,14 @@ public open class CfnApplicationReferenceDataSource(
        * @param recordFormat Specifies the format of the records on the reference source. 
        */
       override fun recordFormat(recordFormat: IResolvable) {
-        cdkBuilder.recordFormat(recordFormat.let(IResolvable::unwrap))
+        cdkBuilder.recordFormat(recordFormat.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param recordFormat Specifies the format of the records on the reference source. 
        */
       override fun recordFormat(recordFormat: RecordFormatProperty) {
-        cdkBuilder.recordFormat(recordFormat.let(RecordFormatProperty::unwrap))
+        cdkBuilder.recordFormat(recordFormat.let(RecordFormatProperty.Companion::unwrap))
       }
 
       /**

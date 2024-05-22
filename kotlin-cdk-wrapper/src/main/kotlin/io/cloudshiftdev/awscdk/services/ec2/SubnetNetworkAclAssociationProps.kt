@@ -81,14 +81,14 @@ public interface SubnetNetworkAclAssociationProps {
      * @param networkAcl The Network ACL this association is defined for. 
      */
     override fun networkAcl(networkAcl: INetworkAcl) {
-      cdkBuilder.networkAcl(networkAcl.let(INetworkAcl::unwrap))
+      cdkBuilder.networkAcl(networkAcl.let(INetworkAcl.Companion::unwrap))
     }
 
     /**
      * @param subnet ID of the Subnet. 
      */
     override fun subnet(subnet: ISubnet) {
-      cdkBuilder.subnet(subnet.let(ISubnet::unwrap))
+      cdkBuilder.subnet(subnet.let(ISubnet.Companion::unwrap))
     }
 
     /**

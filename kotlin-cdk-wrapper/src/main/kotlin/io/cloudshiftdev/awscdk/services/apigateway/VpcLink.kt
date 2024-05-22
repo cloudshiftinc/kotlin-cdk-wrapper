@@ -42,7 +42,7 @@ public open class VpcLink(
   cdkObject: software.amazon.awscdk.services.apigateway.VpcLink,
 ) : Resource(cdkObject), IVpcLink {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.apigateway.VpcLink(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.apigateway.VpcLink(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -51,8 +51,8 @@ public open class VpcLink(
     id: String,
     props: VpcLinkProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.VpcLink(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(VpcLinkProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.VpcLink(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(VpcLinkProps.Companion::unwrap))
   )
 
   public constructor(
@@ -153,7 +153,7 @@ public open class VpcLink(
      */
     override
         fun targets(targets: List<CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkLoadBalancer>) {
-      cdkBuilder.targets(targets.map(CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkLoadBalancer::unwrap))
+      cdkBuilder.targets(targets.map(CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkLoadBalancer.Companion::unwrap))
     }
 
     /**
@@ -189,7 +189,7 @@ public open class VpcLink(
       id: String,
       vpcLinkId: String,
     ): IVpcLink =
-        software.amazon.awscdk.services.apigateway.VpcLink.fromVpcLinkId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.apigateway.VpcLink.fromVpcLinkId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, vpcLinkId).let(IVpcLink::wrap)
 
     public operator fun invoke(

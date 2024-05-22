@@ -274,7 +274,7 @@ public interface CfnEndpointGroupProps {
      * @param endpointConfigurations The list of endpoint objects.
      */
     override fun endpointConfigurations(endpointConfigurations: IResolvable) {
-      cdkBuilder.endpointConfigurations(endpointConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.endpointConfigurations(endpointConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -350,7 +350,7 @@ public interface CfnEndpointGroupProps {
      * receive traffic on.
      */
     override fun portOverrides(portOverrides: IResolvable) {
-      cdkBuilder.portOverrides(portOverrides.let(IResolvable::unwrap))
+      cdkBuilder.portOverrides(portOverrides.let(IResolvable.Companion::unwrap))
     }
 
     /**

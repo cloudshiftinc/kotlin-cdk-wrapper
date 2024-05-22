@@ -49,8 +49,8 @@ public open class CfnBridgeOutput(
     id: String,
     props: CfnBridgeOutputProps,
   ) :
-      this(software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnBridgeOutputProps::unwrap))
+      this(software.amazon.awscdk.services.mediaconnect.CfnBridgeOutput(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnBridgeOutputProps.Companion::unwrap))
   )
 
   public constructor(
@@ -78,7 +78,7 @@ public open class CfnBridgeOutput(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -102,14 +102,14 @@ public open class CfnBridgeOutput(
    * Add a network output to an existing bridge.
    */
   public open fun networkOutput(`value`: IResolvable) {
-    unwrap(this).setNetworkOutput(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNetworkOutput(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Add a network output to an existing bridge.
    */
   public open fun networkOutput(`value`: BridgeNetworkOutputProperty) {
-    unwrap(this).setNetworkOutput(`value`.let(BridgeNetworkOutputProperty::unwrap))
+    unwrap(this).setNetworkOutput(`value`.let(BridgeNetworkOutputProperty.Companion::unwrap))
   }
 
   /**
@@ -206,7 +206,7 @@ public open class CfnBridgeOutput(
      * @param networkOutput Add a network output to an existing bridge. 
      */
     override fun networkOutput(networkOutput: IResolvable) {
-      cdkBuilder.networkOutput(networkOutput.let(IResolvable::unwrap))
+      cdkBuilder.networkOutput(networkOutput.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -216,7 +216,7 @@ public open class CfnBridgeOutput(
      * @param networkOutput Add a network output to an existing bridge. 
      */
     override fun networkOutput(networkOutput: BridgeNetworkOutputProperty) {
-      cdkBuilder.networkOutput(networkOutput.let(BridgeNetworkOutputProperty::unwrap))
+      cdkBuilder.networkOutput(networkOutput.let(BridgeNetworkOutputProperty.Companion::unwrap))
     }
 
     /**

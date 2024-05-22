@@ -24,7 +24,7 @@ public open class PartitionKey(
   cdkObject: software.amazon.awscdk.services.appsync.PartitionKey,
 ) : PrimaryKey(cdkObject) {
   public constructor(pkey: Assign) :
-      this(software.amazon.awscdk.services.appsync.PartitionKey(pkey.let(Assign::unwrap))
+      this(software.amazon.awscdk.services.appsync.PartitionKey(pkey.let(Assign.Companion::unwrap))
   )
 
   /**

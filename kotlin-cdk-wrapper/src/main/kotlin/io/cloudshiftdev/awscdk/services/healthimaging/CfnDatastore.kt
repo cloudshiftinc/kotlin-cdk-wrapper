@@ -37,7 +37,7 @@ public open class CfnDatastore(
   cdkObject: software.amazon.awscdk.services.healthimaging.CfnDatastore,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.healthimaging.CfnDatastore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.healthimaging.CfnDatastore(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -46,8 +46,8 @@ public open class CfnDatastore(
     id: String,
     props: CfnDatastoreProps,
   ) :
-      this(software.amazon.awscdk.services.healthimaging.CfnDatastore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDatastoreProps::unwrap))
+      this(software.amazon.awscdk.services.healthimaging.CfnDatastore(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDatastoreProps.Companion::unwrap))
   )
 
   public constructor(
@@ -106,7 +106,7 @@ public open class CfnDatastore(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

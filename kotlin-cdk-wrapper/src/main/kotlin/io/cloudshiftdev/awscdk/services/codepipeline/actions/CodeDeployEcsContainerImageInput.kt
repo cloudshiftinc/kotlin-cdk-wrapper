@@ -91,7 +91,7 @@ public interface CodeDeployEcsContainerImageInput {
      * }`
      */
     override fun input(input: Artifact) {
-      cdkBuilder.input(input.let(Artifact::unwrap))
+      cdkBuilder.input(input.let(Artifact.Companion::unwrap))
     }
 
     /**

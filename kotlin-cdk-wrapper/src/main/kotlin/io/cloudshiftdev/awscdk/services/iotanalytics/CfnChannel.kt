@@ -65,7 +65,7 @@ public open class CfnChannel(
   cdkObject: software.amazon.awscdk.services.iotanalytics.CfnChannel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.iotanalytics.CfnChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.iotanalytics.CfnChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -74,8 +74,8 @@ public open class CfnChannel(
     id: String,
     props: CfnChannelProps,
   ) :
-      this(software.amazon.awscdk.services.iotanalytics.CfnChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnChannelProps::unwrap))
+      this(software.amazon.awscdk.services.iotanalytics.CfnChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnChannelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -111,14 +111,14 @@ public open class CfnChannel(
    * Where channel data is stored.
    */
   public open fun channelStorage(`value`: IResolvable) {
-    unwrap(this).setChannelStorage(`value`.let(IResolvable::unwrap))
+    unwrap(this).setChannelStorage(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Where channel data is stored.
    */
   public open fun channelStorage(`value`: ChannelStorageProperty) {
-    unwrap(this).setChannelStorage(`value`.let(ChannelStorageProperty::unwrap))
+    unwrap(this).setChannelStorage(`value`.let(ChannelStorageProperty.Companion::unwrap))
   }
 
   /**
@@ -135,7 +135,7 @@ public open class CfnChannel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -147,14 +147,14 @@ public open class CfnChannel(
    * How long, in days, message data is kept for the channel.
    */
   public open fun retentionPeriod(`value`: IResolvable) {
-    unwrap(this).setRetentionPeriod(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRetentionPeriod(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * How long, in days, message data is kept for the channel.
    */
   public open fun retentionPeriod(`value`: RetentionPeriodProperty) {
-    unwrap(this).setRetentionPeriod(`value`.let(RetentionPeriodProperty::unwrap))
+    unwrap(this).setRetentionPeriod(`value`.let(RetentionPeriodProperty.Companion::unwrap))
   }
 
   /**
@@ -180,7 +180,7 @@ public open class CfnChannel(
    * Metadata which can be used to manage the channel.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -302,7 +302,7 @@ public open class CfnChannel(
      * @param channelStorage Where channel data is stored. 
      */
     override fun channelStorage(channelStorage: IResolvable) {
-      cdkBuilder.channelStorage(channelStorage.let(IResolvable::unwrap))
+      cdkBuilder.channelStorage(channelStorage.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -312,7 +312,7 @@ public open class CfnChannel(
      * @param channelStorage Where channel data is stored. 
      */
     override fun channelStorage(channelStorage: ChannelStorageProperty) {
-      cdkBuilder.channelStorage(channelStorage.let(ChannelStorageProperty::unwrap))
+      cdkBuilder.channelStorage(channelStorage.let(ChannelStorageProperty.Companion::unwrap))
     }
 
     /**
@@ -333,7 +333,7 @@ public open class CfnChannel(
      * @param retentionPeriod How long, in days, message data is kept for the channel. 
      */
     override fun retentionPeriod(retentionPeriod: IResolvable) {
-      cdkBuilder.retentionPeriod(retentionPeriod.let(IResolvable::unwrap))
+      cdkBuilder.retentionPeriod(retentionPeriod.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -343,7 +343,7 @@ public open class CfnChannel(
      * @param retentionPeriod How long, in days, message data is kept for the channel. 
      */
     override fun retentionPeriod(retentionPeriod: RetentionPeriodProperty) {
-      cdkBuilder.retentionPeriod(retentionPeriod.let(RetentionPeriodProperty::unwrap))
+      cdkBuilder.retentionPeriod(retentionPeriod.let(RetentionPeriodProperty.Companion::unwrap))
     }
 
     /**
@@ -368,7 +368,7 @@ public open class CfnChannel(
      * @param tags Metadata which can be used to manage the channel. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -500,7 +500,7 @@ public open class CfnChannel(
        * can't change the choice of S3 storage after the data store is created.
        */
       override fun customerManagedS3(customerManagedS3: IResolvable) {
-        cdkBuilder.customerManagedS3(customerManagedS3.let(IResolvable::unwrap))
+        cdkBuilder.customerManagedS3(customerManagedS3.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -509,7 +509,7 @@ public open class CfnChannel(
        * can't change the choice of S3 storage after the data store is created.
        */
       override fun customerManagedS3(customerManagedS3: CustomerManagedS3Property) {
-        cdkBuilder.customerManagedS3(customerManagedS3.let(CustomerManagedS3Property::unwrap))
+        cdkBuilder.customerManagedS3(customerManagedS3.let(CustomerManagedS3Property.Companion::unwrap))
       }
 
       /**
@@ -809,7 +809,7 @@ public open class CfnChannel(
        * @param unlimited If true, message data is kept indefinitely.
        */
       override fun unlimited(unlimited: IResolvable) {
-        cdkBuilder.unlimited(unlimited.let(IResolvable::unwrap))
+        cdkBuilder.unlimited(unlimited.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

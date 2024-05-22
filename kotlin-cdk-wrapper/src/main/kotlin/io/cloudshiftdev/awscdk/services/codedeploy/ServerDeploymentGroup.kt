@@ -38,7 +38,7 @@ public open class ServerDeploymentGroup(
   cdkObject: software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup,
 ) : Resource(cdkObject), IServerDeploymentGroup {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -47,8 +47,8 @@ public open class ServerDeploymentGroup(
     id: String,
     props: ServerDeploymentGroupProps,
   ) :
-      this(software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ServerDeploymentGroupProps::unwrap))
+      this(software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ServerDeploymentGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -64,7 +64,7 @@ public open class ServerDeploymentGroup(
    * @param alarm the alarm to associate with this Deployment Group. 
    */
   public open fun addAlarm(alarm: IAlarm) {
-    unwrap(this).addAlarm(alarm.let(IAlarm::unwrap))
+    unwrap(this).addAlarm(alarm.let(IAlarm.Companion::unwrap))
   }
 
   /**
@@ -73,7 +73,7 @@ public open class ServerDeploymentGroup(
    * @param asg the auto-scaling group to add to this Deployment Group. 
    */
   public open fun addAutoScalingGroup(asg: AutoScalingGroup) {
-    unwrap(this).addAutoScalingGroup(asg.let(AutoScalingGroup::unwrap))
+    unwrap(this).addAutoScalingGroup(asg.let(AutoScalingGroup.Companion::unwrap))
   }
 
   /**
@@ -348,7 +348,7 @@ public open class ServerDeploymentGroup(
      * @param alarms The CloudWatch alarms associated with this Deployment Group. 
      */
     override fun alarms(alarms: List<IAlarm>) {
-      cdkBuilder.alarms(alarms.map(IAlarm::unwrap))
+      cdkBuilder.alarms(alarms.map(IAlarm.Companion::unwrap))
     }
 
     /**
@@ -375,7 +375,7 @@ public open class ServerDeploymentGroup(
      * to. 
      */
     override fun application(application: IServerApplication) {
-      cdkBuilder.application(application.let(IServerApplication::unwrap))
+      cdkBuilder.application(application.let(IServerApplication.Companion::unwrap))
     }
 
     /**
@@ -386,7 +386,7 @@ public open class ServerDeploymentGroup(
      * @param autoRollback The auto-rollback configuration for this Deployment Group. 
      */
     override fun autoRollback(autoRollback: AutoRollbackConfig) {
-      cdkBuilder.autoRollback(autoRollback.let(AutoRollbackConfig::unwrap))
+      cdkBuilder.autoRollback(autoRollback.let(AutoRollbackConfig.Companion::unwrap))
     }
 
     /**
@@ -415,7 +415,7 @@ public open class ServerDeploymentGroup(
      * @param autoScalingGroups The auto-scaling groups belonging to this Deployment Group. 
      */
     override fun autoScalingGroups(autoScalingGroups: List<IAutoScalingGroup>) {
-      cdkBuilder.autoScalingGroups(autoScalingGroups.map(IAutoScalingGroup::unwrap))
+      cdkBuilder.autoScalingGroups(autoScalingGroups.map(IAutoScalingGroup.Companion::unwrap))
     }
 
     /**
@@ -443,7 +443,7 @@ public open class ServerDeploymentGroup(
      * Deployment Group. 
      */
     override fun deploymentConfig(deploymentConfig: IServerDeploymentConfig) {
-      cdkBuilder.deploymentConfig(deploymentConfig.let(IServerDeploymentConfig::unwrap))
+      cdkBuilder.deploymentConfig(deploymentConfig.let(IServerDeploymentConfig.Companion::unwrap))
     }
 
     /**
@@ -468,7 +468,7 @@ public open class ServerDeploymentGroup(
      * occurs will be added to this Deployment Group. 
      */
     override fun ec2InstanceTags(ec2InstanceTags: InstanceTagSet) {
-      cdkBuilder.ec2InstanceTags(ec2InstanceTags.let(InstanceTagSet::unwrap))
+      cdkBuilder.ec2InstanceTags(ec2InstanceTags.let(InstanceTagSet.Companion::unwrap))
     }
 
     /**
@@ -523,7 +523,7 @@ public open class ServerDeploymentGroup(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun loadBalancer(loadBalancer: LoadBalancer) {
-      cdkBuilder.loadBalancer(loadBalancer.let(LoadBalancer::unwrap))
+      cdkBuilder.loadBalancer(loadBalancer.let(LoadBalancer.Companion::unwrap))
     }
 
     /**
@@ -537,7 +537,7 @@ public open class ServerDeploymentGroup(
      * @param loadBalancers CodeDeploy supports the deployment to multiple load balancers. 
      */
     override fun loadBalancers(loadBalancers: List<LoadBalancer>) {
-      cdkBuilder.loadBalancers(loadBalancers.map(LoadBalancer::unwrap))
+      cdkBuilder.loadBalancers(loadBalancers.map(LoadBalancer.Companion::unwrap))
     }
 
     /**
@@ -563,7 +563,7 @@ public open class ServerDeploymentGroup(
      * deployment occurs will be added to this Deployment Group. 
      */
     override fun onPremiseInstanceTags(onPremiseInstanceTags: InstanceTagSet) {
-      cdkBuilder.onPremiseInstanceTags(onPremiseInstanceTags.let(InstanceTagSet::unwrap))
+      cdkBuilder.onPremiseInstanceTags(onPremiseInstanceTags.let(InstanceTagSet.Companion::unwrap))
     }
 
     /**
@@ -574,7 +574,7 @@ public open class ServerDeploymentGroup(
      * @param role The service Role of this Deployment Group. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup =
@@ -587,8 +587,9 @@ public open class ServerDeploymentGroup(
       id: String,
       attrs: ServerDeploymentGroupAttributes,
     ): IServerDeploymentGroup =
-        software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup.fromServerDeploymentGroupAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(ServerDeploymentGroupAttributes::unwrap)).let(IServerDeploymentGroup::wrap)
+        software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup.fromServerDeploymentGroupAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        attrs.let(ServerDeploymentGroupAttributes.Companion::unwrap)).let(IServerDeploymentGroup::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8d26e7a25cd6411326fe7cb7007a72ecb87fdcb6166fa4246aa79b27de671bfb")

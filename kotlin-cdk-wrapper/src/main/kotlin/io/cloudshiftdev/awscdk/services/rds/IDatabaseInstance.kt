@@ -350,7 +350,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
      */
     override fun addProxy(id: String, options: DatabaseProxyOptions): DatabaseProxy =
         unwrap(this).addProxy(id,
-        options.let(DatabaseProxyOptions::unwrap)).let(DatabaseProxy::wrap)
+        options.let(DatabaseProxyOptions.Companion::unwrap)).let(DatabaseProxy::wrap)
 
     /**
      * Add a new db proxy to this instance.
@@ -377,7 +377,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -428,7 +428,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
      * @param dbUser the name of the database user to allow connecting as to the db instance.
      */
     override fun grantConnect(grantee: IGrantable): Grant =
-        unwrap(this).grantConnect(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantConnect(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grant the given identity connection access to the database.
@@ -437,7 +437,8 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
      * @param dbUser the name of the database user to allow connecting as to the db instance.
      */
     override fun grantConnect(grantee: IGrantable, dbUser: String): Grant =
-        unwrap(this).grantConnect(grantee.let(IGrantable::unwrap), dbUser).let(Grant::wrap)
+        unwrap(this).grantConnect(grantee.let(IGrantable.Companion::unwrap),
+        dbUser).let(Grant::wrap)
 
     /**
      * The instance arn.
@@ -481,7 +482,8 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
      * @param props
      */
     override fun metric(metricName: String, props: MetricOptions): Metric =
-        unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metric(metricName,
+        props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Return the given named metric for this DBInstance.
@@ -512,7 +514,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
      * @param props
      */
     override fun metricCPUUtilization(props: MetricOptions): Metric =
-        unwrap(this).metricCPUUtilization(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricCPUUtilization(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The percentage of CPU utilization.
@@ -544,7 +546,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
      * @param props
      */
     override fun metricDatabaseConnections(props: MetricOptions): Metric =
-        unwrap(this).metricDatabaseConnections(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricDatabaseConnections(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of database connections in use.
@@ -576,7 +578,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
      * @param props
      */
     override fun metricFreeStorageSpace(props: MetricOptions): Metric =
-        unwrap(this).metricFreeStorageSpace(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricFreeStorageSpace(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The amount of available storage space.
@@ -608,7 +610,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
      * @param props
      */
     override fun metricFreeableMemory(props: MetricOptions): Metric =
-        unwrap(this).metricFreeableMemory(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricFreeableMemory(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The amount of available random access memory.
@@ -639,7 +641,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
      * @param props
      */
     override fun metricReadIOPS(props: MetricOptions): Metric =
-        unwrap(this).metricReadIOPS(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricReadIOPS(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The average number of disk write I/O operations per second.
@@ -670,7 +672,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
      * @param props
      */
     override fun metricWriteIOPS(props: MetricOptions): Metric =
-        unwrap(this).metricWriteIOPS(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricWriteIOPS(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The average number of disk read I/O operations per second.
@@ -707,7 +709,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
      * @param options
      */
     override fun onEvent(id: String, options: OnEventOptions): Rule = unwrap(this).onEvent(id,
-        options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+        options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * Defines a CloudWatch event rule which triggers for instance events.

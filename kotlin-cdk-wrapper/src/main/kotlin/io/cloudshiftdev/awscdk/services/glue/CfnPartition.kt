@@ -99,8 +99,8 @@ public open class CfnPartition(
     id: String,
     props: CfnPartitionProps,
   ) :
-      this(software.amazon.awscdk.services.glue.CfnPartition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPartitionProps::unwrap))
+      this(software.amazon.awscdk.services.glue.CfnPartition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPartitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -145,7 +145,7 @@ public open class CfnPartition(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -157,14 +157,14 @@ public open class CfnPartition(
    * The structure used to create and update a partition.
    */
   public open fun partitionInput(`value`: IResolvable) {
-    unwrap(this).setPartitionInput(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPartitionInput(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The structure used to create and update a partition.
    */
   public open fun partitionInput(`value`: PartitionInputProperty) {
-    unwrap(this).setPartitionInput(`value`.let(PartitionInputProperty::unwrap))
+    unwrap(this).setPartitionInput(`value`.let(PartitionInputProperty.Companion::unwrap))
   }
 
   /**
@@ -287,7 +287,7 @@ public open class CfnPartition(
      * @param partitionInput The structure used to create and update a partition. 
      */
     override fun partitionInput(partitionInput: IResolvable) {
-      cdkBuilder.partitionInput(partitionInput.let(IResolvable::unwrap))
+      cdkBuilder.partitionInput(partitionInput.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -297,7 +297,7 @@ public open class CfnPartition(
      * @param partitionInput The structure used to create and update a partition. 
      */
     override fun partitionInput(partitionInput: PartitionInputProperty) {
-      cdkBuilder.partitionInput(partitionInput.let(PartitionInputProperty::unwrap))
+      cdkBuilder.partitionInput(partitionInput.let(PartitionInputProperty.Companion::unwrap))
     }
 
     /**
@@ -746,7 +746,7 @@ public open class CfnPartition(
        * partition is stored.
        */
       override fun storageDescriptor(storageDescriptor: IResolvable) {
-        cdkBuilder.storageDescriptor(storageDescriptor.let(IResolvable::unwrap))
+        cdkBuilder.storageDescriptor(storageDescriptor.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -754,7 +754,7 @@ public open class CfnPartition(
        * partition is stored.
        */
       override fun storageDescriptor(storageDescriptor: StorageDescriptorProperty) {
-        cdkBuilder.storageDescriptor(storageDescriptor.let(StorageDescriptorProperty::unwrap))
+        cdkBuilder.storageDescriptor(storageDescriptor.let(StorageDescriptorProperty.Companion::unwrap))
       }
 
       /**
@@ -1097,7 +1097,7 @@ public open class CfnPartition(
        * provided.
        */
       override fun schemaId(schemaId: IResolvable) {
-        cdkBuilder.schemaId(schemaId.let(IResolvable::unwrap))
+        cdkBuilder.schemaId(schemaId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1106,7 +1106,7 @@ public open class CfnPartition(
        * provided.
        */
       override fun schemaId(schemaId: SchemaIdProperty) {
-        cdkBuilder.schemaId(schemaId.let(SchemaIdProperty::unwrap))
+        cdkBuilder.schemaId(schemaId.let(SchemaIdProperty.Companion::unwrap))
       }
 
       /**
@@ -1834,7 +1834,7 @@ public open class CfnPartition(
        * @param columns A list of the `Columns` in the table.
        */
       override fun columns(columns: IResolvable) {
-        cdkBuilder.columns(columns.let(IResolvable::unwrap))
+        cdkBuilder.columns(columns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1860,7 +1860,7 @@ public open class CfnPartition(
        * @param compressed `True` if the data in the table is compressed, or `False` if not.
        */
       override fun compressed(compressed: IResolvable) {
-        cdkBuilder.compressed(compressed.let(IResolvable::unwrap))
+        cdkBuilder.compressed(compressed.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1908,7 +1908,7 @@ public open class CfnPartition(
        * Registry.
        */
       override fun schemaReference(schemaReference: IResolvable) {
-        cdkBuilder.schemaReference(schemaReference.let(IResolvable::unwrap))
+        cdkBuilder.schemaReference(schemaReference.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1916,7 +1916,7 @@ public open class CfnPartition(
        * Registry.
        */
       override fun schemaReference(schemaReference: SchemaReferenceProperty) {
-        cdkBuilder.schemaReference(schemaReference.let(SchemaReferenceProperty::unwrap))
+        cdkBuilder.schemaReference(schemaReference.let(SchemaReferenceProperty.Companion::unwrap))
       }
 
       /**
@@ -1932,14 +1932,14 @@ public open class CfnPartition(
        * @param serdeInfo The serialization/deserialization (SerDe) information.
        */
       override fun serdeInfo(serdeInfo: IResolvable) {
-        cdkBuilder.serdeInfo(serdeInfo.let(IResolvable::unwrap))
+        cdkBuilder.serdeInfo(serdeInfo.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param serdeInfo The serialization/deserialization (SerDe) information.
        */
       override fun serdeInfo(serdeInfo: SerdeInfoProperty) {
-        cdkBuilder.serdeInfo(serdeInfo.let(SerdeInfoProperty::unwrap))
+        cdkBuilder.serdeInfo(serdeInfo.let(SerdeInfoProperty.Companion::unwrap))
       }
 
       /**
@@ -1955,7 +1955,7 @@ public open class CfnPartition(
        * values).
        */
       override fun skewedInfo(skewedInfo: IResolvable) {
-        cdkBuilder.skewedInfo(skewedInfo.let(IResolvable::unwrap))
+        cdkBuilder.skewedInfo(skewedInfo.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1963,7 +1963,7 @@ public open class CfnPartition(
        * values).
        */
       override fun skewedInfo(skewedInfo: SkewedInfoProperty) {
-        cdkBuilder.skewedInfo(skewedInfo.let(SkewedInfoProperty::unwrap))
+        cdkBuilder.skewedInfo(skewedInfo.let(SkewedInfoProperty.Companion::unwrap))
       }
 
       /**
@@ -1979,7 +1979,7 @@ public open class CfnPartition(
        * @param sortColumns A list specifying the sort order of each bucket in the table.
        */
       override fun sortColumns(sortColumns: IResolvable) {
-        cdkBuilder.sortColumns(sortColumns.let(IResolvable::unwrap))
+        cdkBuilder.sortColumns(sortColumns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2007,7 +2007,7 @@ public open class CfnPartition(
        * `False` if not.
        */
       override fun storedAsSubDirectories(storedAsSubDirectories: IResolvable) {
-        cdkBuilder.storedAsSubDirectories(storedAsSubDirectories.let(IResolvable::unwrap))
+        cdkBuilder.storedAsSubDirectories(storedAsSubDirectories.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

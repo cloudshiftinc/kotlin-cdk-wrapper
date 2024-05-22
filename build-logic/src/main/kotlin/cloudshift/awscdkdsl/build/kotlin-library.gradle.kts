@@ -51,8 +51,10 @@ tasks.withType<Test>().configureEach {
 }
 
 tasks.withType<KotlinCompile>().configureEach {
-    kotlinOptions { freeCompilerArgs += listOf("-Xjsr305=strict", "-Xcontext-receivers") }
-    compilerOptions {}
+    compilerOptions {
+        freeCompilerArgs.add("-Xjsr305=strict")
+//        freeCompilerArgs.add("-Xcontext-receivers")
+    }
 }
 
 dependencies {
@@ -91,7 +93,7 @@ configurations {
 kotlin {
     explicitApi()
     jvmToolchain {
-        languageVersion = JavaLanguageVersion.of(17)
+        languageVersion = JavaLanguageVersion.of(21)
         vendor = JvmVendorSpec.AMAZON
     }
     kotlinDaemonJvmArgs = when {

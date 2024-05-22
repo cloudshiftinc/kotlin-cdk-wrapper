@@ -166,7 +166,7 @@ public interface CfnReportPlanProps {
      * @param reportPlanTags The tags to assign to your report plan.
      */
     override fun reportPlanTags(reportPlanTags: List<CfnTag>) {
-      cdkBuilder.reportPlanTags(reportPlanTags.map(CfnTag::unwrap))
+      cdkBuilder.reportPlanTags(reportPlanTags.map(CfnTag.Companion::unwrap))
     }
 
     /**

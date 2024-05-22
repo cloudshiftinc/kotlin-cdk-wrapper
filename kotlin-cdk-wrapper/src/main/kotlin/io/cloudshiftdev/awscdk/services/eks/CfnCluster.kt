@@ -129,8 +129,8 @@ public open class CfnCluster(
     id: String,
     props: CfnClusterProps,
   ) :
-      this(software.amazon.awscdk.services.eks.CfnCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnClusterProps::unwrap))
+      this(software.amazon.awscdk.services.eks.CfnCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -149,14 +149,14 @@ public open class CfnCluster(
    * The access configuration for the cluster.
    */
   public open fun accessConfig(`value`: IResolvable) {
-    unwrap(this).setAccessConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccessConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The access configuration for the cluster.
    */
   public open fun accessConfig(`value`: AccessConfigProperty) {
-    unwrap(this).setAccessConfig(`value`.let(AccessConfigProperty::unwrap))
+    unwrap(this).setAccessConfig(`value`.let(AccessConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -239,7 +239,7 @@ public open class CfnCluster(
    * The encryption configuration for the cluster.
    */
   public open fun encryptionConfig(`value`: IResolvable) {
-    unwrap(this).setEncryptionConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEncryptionConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -260,7 +260,7 @@ public open class CfnCluster(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -272,14 +272,14 @@ public open class CfnCluster(
    * The Kubernetes network configuration for the cluster.
    */
   public open fun kubernetesNetworkConfig(`value`: IResolvable) {
-    unwrap(this).setKubernetesNetworkConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKubernetesNetworkConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The Kubernetes network configuration for the cluster.
    */
   public open fun kubernetesNetworkConfig(`value`: KubernetesNetworkConfigProperty) {
-    unwrap(this).setKubernetesNetworkConfig(`value`.let(KubernetesNetworkConfigProperty::unwrap))
+    unwrap(this).setKubernetesNetworkConfig(`value`.let(KubernetesNetworkConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -300,14 +300,14 @@ public open class CfnCluster(
    * The logging configuration for your cluster.
    */
   public open fun logging(`value`: IResolvable) {
-    unwrap(this).setLogging(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLogging(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The logging configuration for your cluster.
    */
   public open fun logging(`value`: LoggingProperty) {
-    unwrap(this).setLogging(`value`.let(LoggingProperty::unwrap))
+    unwrap(this).setLogging(`value`.let(LoggingProperty.Companion::unwrap))
   }
 
   /**
@@ -339,14 +339,14 @@ public open class CfnCluster(
    * An object representing the configuration of your local Amazon EKS cluster on an AWS Outpost.
    */
   public open fun outpostConfig(`value`: IResolvable) {
-    unwrap(this).setOutpostConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOutpostConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An object representing the configuration of your local Amazon EKS cluster on an AWS Outpost.
    */
   public open fun outpostConfig(`value`: OutpostConfigProperty) {
-    unwrap(this).setOutpostConfig(`value`.let(OutpostConfigProperty::unwrap))
+    unwrap(this).setOutpostConfig(`value`.let(OutpostConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -366,14 +366,14 @@ public open class CfnCluster(
    * The VPC configuration that's used by the cluster control plane.
    */
   public open fun resourcesVpcConfig(`value`: IResolvable) {
-    unwrap(this).setResourcesVpcConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResourcesVpcConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The VPC configuration that's used by the cluster control plane.
    */
   public open fun resourcesVpcConfig(`value`: ResourcesVpcConfigProperty) {
-    unwrap(this).setResourcesVpcConfig(`value`.let(ResourcesVpcConfigProperty::unwrap))
+    unwrap(this).setResourcesVpcConfig(`value`.let(ResourcesVpcConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -413,7 +413,7 @@ public open class CfnCluster(
    * The metadata that you apply to the cluster to assist with categorization and organization.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -720,7 +720,7 @@ public open class CfnCluster(
      * @param accessConfig The access configuration for the cluster. 
      */
     override fun accessConfig(accessConfig: IResolvable) {
-      cdkBuilder.accessConfig(accessConfig.let(IResolvable::unwrap))
+      cdkBuilder.accessConfig(accessConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -730,7 +730,7 @@ public open class CfnCluster(
      * @param accessConfig The access configuration for the cluster. 
      */
     override fun accessConfig(accessConfig: AccessConfigProperty) {
-      cdkBuilder.accessConfig(accessConfig.let(AccessConfigProperty::unwrap))
+      cdkBuilder.accessConfig(accessConfig.let(AccessConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -751,7 +751,7 @@ public open class CfnCluster(
      * @param encryptionConfig The encryption configuration for the cluster. 
      */
     override fun encryptionConfig(encryptionConfig: IResolvable) {
-      cdkBuilder.encryptionConfig(encryptionConfig.let(IResolvable::unwrap))
+      cdkBuilder.encryptionConfig(encryptionConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -780,7 +780,7 @@ public open class CfnCluster(
      * @param kubernetesNetworkConfig The Kubernetes network configuration for the cluster. 
      */
     override fun kubernetesNetworkConfig(kubernetesNetworkConfig: IResolvable) {
-      cdkBuilder.kubernetesNetworkConfig(kubernetesNetworkConfig.let(IResolvable::unwrap))
+      cdkBuilder.kubernetesNetworkConfig(kubernetesNetworkConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -790,7 +790,7 @@ public open class CfnCluster(
      * @param kubernetesNetworkConfig The Kubernetes network configuration for the cluster. 
      */
     override fun kubernetesNetworkConfig(kubernetesNetworkConfig: KubernetesNetworkConfigProperty) {
-      cdkBuilder.kubernetesNetworkConfig(kubernetesNetworkConfig.let(KubernetesNetworkConfigProperty::unwrap))
+      cdkBuilder.kubernetesNetworkConfig(kubernetesNetworkConfig.let(KubernetesNetworkConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -812,7 +812,7 @@ public open class CfnCluster(
      * @param logging The logging configuration for your cluster. 
      */
     override fun logging(logging: IResolvable) {
-      cdkBuilder.logging(logging.let(IResolvable::unwrap))
+      cdkBuilder.logging(logging.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -822,7 +822,7 @@ public open class CfnCluster(
      * @param logging The logging configuration for your cluster. 
      */
     override fun logging(logging: LoggingProperty) {
-      cdkBuilder.logging(logging.let(LoggingProperty::unwrap))
+      cdkBuilder.logging(logging.let(LoggingProperty.Companion::unwrap))
     }
 
     /**
@@ -856,7 +856,7 @@ public open class CfnCluster(
      * cluster on an AWS Outpost. 
      */
     override fun outpostConfig(outpostConfig: IResolvable) {
-      cdkBuilder.outpostConfig(outpostConfig.let(IResolvable::unwrap))
+      cdkBuilder.outpostConfig(outpostConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -869,7 +869,7 @@ public open class CfnCluster(
      * cluster on an AWS Outpost. 
      */
     override fun outpostConfig(outpostConfig: OutpostConfigProperty) {
-      cdkBuilder.outpostConfig(outpostConfig.let(OutpostConfigProperty::unwrap))
+      cdkBuilder.outpostConfig(outpostConfig.let(OutpostConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -902,7 +902,7 @@ public open class CfnCluster(
      * @param resourcesVpcConfig The VPC configuration that's used by the cluster control plane. 
      */
     override fun resourcesVpcConfig(resourcesVpcConfig: IResolvable) {
-      cdkBuilder.resourcesVpcConfig(resourcesVpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.resourcesVpcConfig(resourcesVpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -921,7 +921,7 @@ public open class CfnCluster(
      * @param resourcesVpcConfig The VPC configuration that's used by the cluster control plane. 
      */
     override fun resourcesVpcConfig(resourcesVpcConfig: ResourcesVpcConfigProperty) {
-      cdkBuilder.resourcesVpcConfig(resourcesVpcConfig.let(ResourcesVpcConfigProperty::unwrap))
+      cdkBuilder.resourcesVpcConfig(resourcesVpcConfig.let(ResourcesVpcConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -980,7 +980,7 @@ public open class CfnCluster(
      * organization. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1144,7 +1144,7 @@ public open class CfnCluster(
        */
       override
           fun bootstrapClusterCreatorAdminPermissions(bootstrapClusterCreatorAdminPermissions: IResolvable) {
-        cdkBuilder.bootstrapClusterCreatorAdminPermissions(bootstrapClusterCreatorAdminPermissions.let(IResolvable::unwrap))
+        cdkBuilder.bootstrapClusterCreatorAdminPermissions(bootstrapClusterCreatorAdminPermissions.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.eks.CfnCluster.AccessConfigProperty =
@@ -1278,7 +1278,7 @@ public open class CfnCluster(
        * CloudFormation template of the resource had it.
        */
       override fun enabledTypes(enabledTypes: IResolvable) {
-        cdkBuilder.enabledTypes(enabledTypes.let(IResolvable::unwrap))
+        cdkBuilder.enabledTypes(enabledTypes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1516,14 +1516,14 @@ public open class CfnCluster(
        * @param provider The encryption provider for the cluster.
        */
       override fun provider(provider: IResolvable) {
-        cdkBuilder.provider(provider.let(IResolvable::unwrap))
+        cdkBuilder.provider(provider.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param provider The encryption provider for the cluster.
        */
       override fun provider(provider: ProviderProperty) {
-        cdkBuilder.provider(provider.let(ProviderProperty::unwrap))
+        cdkBuilder.provider(provider.let(ProviderProperty.Companion::unwrap))
       }
 
       /**
@@ -1928,14 +1928,14 @@ public open class CfnCluster(
        * @param clusterLogging The cluster control plane logging configuration for your cluster.
        */
       override fun clusterLogging(clusterLogging: IResolvable) {
-        cdkBuilder.clusterLogging(clusterLogging.let(IResolvable::unwrap))
+        cdkBuilder.clusterLogging(clusterLogging.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param clusterLogging The cluster control plane logging configuration for your cluster.
        */
       override fun clusterLogging(clusterLogging: ClusterLoggingProperty) {
-        cdkBuilder.clusterLogging(clusterLogging.let(ClusterLoggingProperty::unwrap))
+        cdkBuilder.clusterLogging(clusterLogging.let(ClusterLoggingProperty.Companion::unwrap))
       }
 
       /**
@@ -2219,7 +2219,7 @@ public open class CfnCluster(
        * in the *Amazon EKS User Guide* .
        */
       override fun controlPlanePlacement(controlPlanePlacement: IResolvable) {
-        cdkBuilder.controlPlanePlacement(controlPlanePlacement.let(IResolvable::unwrap))
+        cdkBuilder.controlPlanePlacement(controlPlanePlacement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2230,7 +2230,7 @@ public open class CfnCluster(
        * in the *Amazon EKS User Guide* .
        */
       override fun controlPlanePlacement(controlPlanePlacement: ControlPlanePlacementProperty) {
-        cdkBuilder.controlPlanePlacement(controlPlanePlacement.let(ControlPlanePlacementProperty::unwrap))
+        cdkBuilder.controlPlanePlacement(controlPlanePlacement.let(ControlPlanePlacementProperty.Companion::unwrap))
       }
 
       /**
@@ -2691,7 +2691,7 @@ public open class CfnCluster(
        * **Amazon EKS User Guide** .
        */
       override fun endpointPrivateAccess(endpointPrivateAccess: IResolvable) {
-        cdkBuilder.endpointPrivateAccess(endpointPrivateAccess.let(IResolvable::unwrap))
+        cdkBuilder.endpointPrivateAccess(endpointPrivateAccess.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2719,7 +2719,7 @@ public open class CfnCluster(
        * **Amazon EKS User Guide** .
        */
       override fun endpointPublicAccess(endpointPublicAccess: IResolvable) {
-        cdkBuilder.endpointPublicAccess(endpointPublicAccess.let(IResolvable::unwrap))
+        cdkBuilder.endpointPublicAccess(endpointPublicAccess.let(IResolvable.Companion::unwrap))
       }
 
       /**

@@ -930,7 +930,7 @@ public interface CfnUserPoolProps {
      * determine the recovery method where SMS is preferred over email.
      */
     override fun accountRecoverySetting(accountRecoverySetting: IResolvable) {
-      cdkBuilder.accountRecoverySetting(accountRecoverySetting.let(IResolvable::unwrap))
+      cdkBuilder.accountRecoverySetting(accountRecoverySetting.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -943,7 +943,7 @@ public interface CfnUserPoolProps {
      */
     override
         fun accountRecoverySetting(accountRecoverySetting: CfnUserPool.AccountRecoverySettingProperty) {
-      cdkBuilder.accountRecoverySetting(accountRecoverySetting.let(CfnUserPool.AccountRecoverySettingProperty::unwrap))
+      cdkBuilder.accountRecoverySetting(accountRecoverySetting.let(CfnUserPool.AccountRecoverySettingProperty.Companion::unwrap))
     }
 
     /**
@@ -965,7 +965,7 @@ public interface CfnUserPoolProps {
      * @param adminCreateUserConfig The configuration for creating a new user profile.
      */
     override fun adminCreateUserConfig(adminCreateUserConfig: IResolvable) {
-      cdkBuilder.adminCreateUserConfig(adminCreateUserConfig.let(IResolvable::unwrap))
+      cdkBuilder.adminCreateUserConfig(adminCreateUserConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -973,7 +973,7 @@ public interface CfnUserPoolProps {
      */
     override
         fun adminCreateUserConfig(adminCreateUserConfig: CfnUserPool.AdminCreateUserConfigProperty) {
-      cdkBuilder.adminCreateUserConfig(adminCreateUserConfig.let(CfnUserPool.AdminCreateUserConfigProperty::unwrap))
+      cdkBuilder.adminCreateUserConfig(adminCreateUserConfig.let(CfnUserPool.AdminCreateUserConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1044,7 +1044,7 @@ public interface CfnUserPoolProps {
      * device-remembering feature.
      */
     override fun deviceConfiguration(deviceConfiguration: IResolvable) {
-      cdkBuilder.deviceConfiguration(deviceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.deviceConfiguration(deviceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1056,7 +1056,7 @@ public interface CfnUserPoolProps {
      * device-remembering feature.
      */
     override fun deviceConfiguration(deviceConfiguration: CfnUserPool.DeviceConfigurationProperty) {
-      cdkBuilder.deviceConfiguration(deviceConfiguration.let(CfnUserPool.DeviceConfigurationProperty::unwrap))
+      cdkBuilder.deviceConfiguration(deviceConfiguration.let(CfnUserPool.DeviceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1079,7 +1079,7 @@ public interface CfnUserPoolProps {
      * messages from your user pool.
      */
     override fun emailConfiguration(emailConfiguration: IResolvable) {
-      cdkBuilder.emailConfiguration(emailConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.emailConfiguration(emailConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1088,7 +1088,7 @@ public interface CfnUserPoolProps {
      * messages from your user pool.
      */
     override fun emailConfiguration(emailConfiguration: CfnUserPool.EmailConfigurationProperty) {
-      cdkBuilder.emailConfiguration(emailConfiguration.let(CfnUserPool.EmailConfigurationProperty::unwrap))
+      cdkBuilder.emailConfiguration(emailConfiguration.let(CfnUserPool.EmailConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1168,7 +1168,7 @@ public interface CfnUserPoolProps {
      * [add-permission](https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html) .
      */
     override fun lambdaConfig(lambdaConfig: IResolvable) {
-      cdkBuilder.lambdaConfig(lambdaConfig.let(IResolvable::unwrap))
+      cdkBuilder.lambdaConfig(lambdaConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1185,7 +1185,7 @@ public interface CfnUserPoolProps {
      * [add-permission](https://docs.aws.amazon.com/cli/latest/reference/lambda/add-permission.html) .
      */
     override fun lambdaConfig(lambdaConfig: CfnUserPool.LambdaConfigProperty) {
-      cdkBuilder.lambdaConfig(lambdaConfig.let(CfnUserPool.LambdaConfigProperty::unwrap))
+      cdkBuilder.lambdaConfig(lambdaConfig.let(CfnUserPool.LambdaConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1221,14 +1221,14 @@ public interface CfnUserPoolProps {
      * @param policies The policy associated with a user pool.
      */
     override fun policies(policies: IResolvable) {
-      cdkBuilder.policies(policies.let(IResolvable::unwrap))
+      cdkBuilder.policies(policies.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param policies The policy associated with a user pool.
      */
     override fun policies(policies: CfnUserPool.PoliciesProperty) {
-      cdkBuilder.policies(policies.let(CfnUserPool.PoliciesProperty::unwrap))
+      cdkBuilder.policies(policies.let(CfnUserPool.PoliciesProperty.Companion::unwrap))
     }
 
     /**
@@ -1247,7 +1247,7 @@ public interface CfnUserPoolProps {
      * an existing schema attribute.
      */
     override fun schema(schema: IResolvable) {
-      cdkBuilder.schema(schema.let(IResolvable::unwrap))
+      cdkBuilder.schema(schema.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1285,7 +1285,7 @@ public interface CfnUserPoolProps {
      * pool uses an AWS Identity and Access Management (IAM) role in your AWS account .
      */
     override fun smsConfiguration(smsConfiguration: IResolvable) {
-      cdkBuilder.smsConfiguration(smsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.smsConfiguration(smsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1296,7 +1296,7 @@ public interface CfnUserPoolProps {
      * pool uses an AWS Identity and Access Management (IAM) role in your AWS account .
      */
     override fun smsConfiguration(smsConfiguration: CfnUserPool.SmsConfigurationProperty) {
-      cdkBuilder.smsConfiguration(smsConfiguration.let(CfnUserPool.SmsConfigurationProperty::unwrap))
+      cdkBuilder.smsConfiguration(smsConfiguration.let(CfnUserPool.SmsConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1332,7 +1332,7 @@ public interface CfnUserPoolProps {
      * .
      */
     override fun userAttributeUpdateSettings(userAttributeUpdateSettings: IResolvable) {
-      cdkBuilder.userAttributeUpdateSettings(userAttributeUpdateSettings.let(IResolvable::unwrap))
+      cdkBuilder.userAttributeUpdateSettings(userAttributeUpdateSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1346,7 +1346,7 @@ public interface CfnUserPoolProps {
      */
     override
         fun userAttributeUpdateSettings(userAttributeUpdateSettings: CfnUserPool.UserAttributeUpdateSettingsProperty) {
-      cdkBuilder.userAttributeUpdateSettings(userAttributeUpdateSettings.let(CfnUserPool.UserAttributeUpdateSettingsProperty::unwrap))
+      cdkBuilder.userAttributeUpdateSettings(userAttributeUpdateSettings.let(CfnUserPool.UserAttributeUpdateSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -1376,7 +1376,7 @@ public interface CfnUserPoolProps {
      * .
      */
     override fun userPoolAddOns(userPoolAddOns: IResolvable) {
-      cdkBuilder.userPoolAddOns(userPoolAddOns.let(IResolvable::unwrap))
+      cdkBuilder.userPoolAddOns(userPoolAddOns.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1390,7 +1390,7 @@ public interface CfnUserPoolProps {
      * .
      */
     override fun userPoolAddOns(userPoolAddOns: CfnUserPool.UserPoolAddOnsProperty) {
-      cdkBuilder.userPoolAddOns(userPoolAddOns.let(CfnUserPool.UserPoolAddOnsProperty::unwrap))
+      cdkBuilder.userPoolAddOns(userPoolAddOns.let(CfnUserPool.UserPoolAddOnsProperty.Companion::unwrap))
     }
 
     /**
@@ -1453,7 +1453,7 @@ public interface CfnUserPoolProps {
      * "username" or "Username". This configuration is immutable once it has been set.
      */
     override fun usernameConfiguration(usernameConfiguration: IResolvable) {
-      cdkBuilder.usernameConfiguration(usernameConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.usernameConfiguration(usernameConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1464,7 +1464,7 @@ public interface CfnUserPoolProps {
      */
     override
         fun usernameConfiguration(usernameConfiguration: CfnUserPool.UsernameConfigurationProperty) {
-      cdkBuilder.usernameConfiguration(usernameConfiguration.let(CfnUserPool.UsernameConfigurationProperty::unwrap))
+      cdkBuilder.usernameConfiguration(usernameConfiguration.let(CfnUserPool.UsernameConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1485,7 +1485,7 @@ public interface CfnUserPoolProps {
      * sees when the app requests permission to access the user's information.
      */
     override fun verificationMessageTemplate(verificationMessageTemplate: IResolvable) {
-      cdkBuilder.verificationMessageTemplate(verificationMessageTemplate.let(IResolvable::unwrap))
+      cdkBuilder.verificationMessageTemplate(verificationMessageTemplate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1494,7 +1494,7 @@ public interface CfnUserPoolProps {
      */
     override
         fun verificationMessageTemplate(verificationMessageTemplate: CfnUserPool.VerificationMessageTemplateProperty) {
-      cdkBuilder.verificationMessageTemplate(verificationMessageTemplate.let(CfnUserPool.VerificationMessageTemplateProperty::unwrap))
+      cdkBuilder.verificationMessageTemplate(verificationMessageTemplate.let(CfnUserPool.VerificationMessageTemplateProperty.Companion::unwrap))
     }
 
     /**

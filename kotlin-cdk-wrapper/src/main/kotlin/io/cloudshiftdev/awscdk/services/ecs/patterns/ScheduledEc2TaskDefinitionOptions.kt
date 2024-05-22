@@ -60,7 +60,7 @@ public interface ScheduledEc2TaskDefinitionOptions {
      * [disable-awslint:ref-via-interface]
      */
     override fun taskDefinition(taskDefinition: Ec2TaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(Ec2TaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(Ec2TaskDefinition.Companion::unwrap))
     }
 
     public fun build():

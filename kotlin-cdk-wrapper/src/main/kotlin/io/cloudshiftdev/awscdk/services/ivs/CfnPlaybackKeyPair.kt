@@ -46,7 +46,7 @@ public open class CfnPlaybackKeyPair(
   cdkObject: software.amazon.awscdk.services.ivs.CfnPlaybackKeyPair,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ivs.CfnPlaybackKeyPair(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ivs.CfnPlaybackKeyPair(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -55,8 +55,8 @@ public open class CfnPlaybackKeyPair(
     id: String,
     props: CfnPlaybackKeyPairProps,
   ) :
-      this(software.amazon.awscdk.services.ivs.CfnPlaybackKeyPair(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPlaybackKeyPairProps::unwrap))
+      this(software.amazon.awscdk.services.ivs.CfnPlaybackKeyPair(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPlaybackKeyPairProps.Companion::unwrap))
   )
 
   public constructor(
@@ -87,7 +87,7 @@ public open class CfnPlaybackKeyPair(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -129,7 +129,7 @@ public open class CfnPlaybackKeyPair(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -225,7 +225,7 @@ public open class CfnPlaybackKeyPair(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

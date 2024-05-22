@@ -61,7 +61,7 @@ public interface OrderedComputeEnvironment {
      * @param computeEnvironment The ComputeEnvironment to link to this JobQueue. 
      */
     override fun computeEnvironment(computeEnvironment: IComputeEnvironment) {
-      cdkBuilder.computeEnvironment(computeEnvironment.let(IComputeEnvironment::unwrap))
+      cdkBuilder.computeEnvironment(computeEnvironment.let(IComputeEnvironment.Companion::unwrap))
     }
 
     /**

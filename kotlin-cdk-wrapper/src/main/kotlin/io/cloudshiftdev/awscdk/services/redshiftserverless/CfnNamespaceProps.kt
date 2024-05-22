@@ -432,7 +432,7 @@ public interface CfnNamespaceProps {
      * password.
      */
     override fun manageAdminPassword(manageAdminPassword: IResolvable) {
-      cdkBuilder.manageAdminPassword(manageAdminPassword.let(IResolvable::unwrap))
+      cdkBuilder.manageAdminPassword(manageAdminPassword.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -465,7 +465,7 @@ public interface CfnNamespaceProps {
      * @param snapshotCopyConfigurations The snapshot copy configurations for the namespace.
      */
     override fun snapshotCopyConfigurations(snapshotCopyConfigurations: IResolvable) {
-      cdkBuilder.snapshotCopyConfigurations(snapshotCopyConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.snapshotCopyConfigurations(snapshotCopyConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -485,7 +485,7 @@ public interface CfnNamespaceProps {
      * @param tags The map of the key-value pairs used to tag the namespace.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -61,8 +61,8 @@ public open class CfnFleetMetric(
     id: String,
     props: CfnFleetMetricProps,
   ) :
-      this(software.amazon.awscdk.services.iot.CfnFleetMetric(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFleetMetricProps::unwrap))
+      this(software.amazon.awscdk.services.iot.CfnFleetMetric(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFleetMetricProps.Companion::unwrap))
   )
 
   public constructor(
@@ -93,14 +93,14 @@ public open class CfnFleetMetric(
    * The type of the aggregation query.
    */
   public open fun aggregationType(`value`: IResolvable) {
-    unwrap(this).setAggregationType(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAggregationType(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The type of the aggregation query.
    */
   public open fun aggregationType(`value`: AggregationTypeProperty) {
-    unwrap(this).setAggregationType(`value`.let(AggregationTypeProperty::unwrap))
+    unwrap(this).setAggregationType(`value`.let(AggregationTypeProperty.Companion::unwrap))
   }
 
   /**
@@ -163,7 +163,7 @@ public open class CfnFleetMetric(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -229,7 +229,7 @@ public open class CfnFleetMetric(
    * Metadata which can be used to manage the fleet metric.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -389,7 +389,7 @@ public open class CfnFleetMetric(
      * @param aggregationType The type of the aggregation query. 
      */
     override fun aggregationType(aggregationType: IResolvable) {
-      cdkBuilder.aggregationType(aggregationType.let(IResolvable::unwrap))
+      cdkBuilder.aggregationType(aggregationType.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -399,7 +399,7 @@ public open class CfnFleetMetric(
      * @param aggregationType The type of the aggregation query. 
      */
     override fun aggregationType(aggregationType: AggregationTypeProperty) {
-      cdkBuilder.aggregationType(aggregationType.let(AggregationTypeProperty::unwrap))
+      cdkBuilder.aggregationType(aggregationType.let(AggregationTypeProperty.Companion::unwrap))
     }
 
     /**
@@ -482,7 +482,7 @@ public open class CfnFleetMetric(
      * @param tags Metadata which can be used to manage the fleet metric. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

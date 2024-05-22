@@ -95,7 +95,7 @@ public interface DestroyCommand : CdkCommand {
      * functionality.
      */
     override fun args(args: DestroyOptions) {
-      cdkBuilder.args(args.let(DestroyOptions::unwrap))
+      cdkBuilder.args(args.let(DestroyOptions.Companion::unwrap))
     }
 
     /**

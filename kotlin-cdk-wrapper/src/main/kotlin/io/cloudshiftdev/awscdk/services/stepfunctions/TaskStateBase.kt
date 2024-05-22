@@ -35,7 +35,7 @@ public abstract class TaskStateBase(
    * @param props
    */
   public open fun addCatch(handler: IChainable): TaskStateBase =
-      unwrap(this).addCatch(handler.let(IChainable::unwrap)).let(TaskStateBase::wrap)
+      unwrap(this).addCatch(handler.let(IChainable.Companion::unwrap)).let(TaskStateBase::wrap)
 
   /**
    * Add a recovery handler for this state.
@@ -47,8 +47,8 @@ public abstract class TaskStateBase(
    * @param props
    */
   public open fun addCatch(handler: IChainable, props: CatchProps): TaskStateBase =
-      unwrap(this).addCatch(handler.let(IChainable::unwrap),
-      props.let(CatchProps::unwrap)).let(TaskStateBase::wrap)
+      unwrap(this).addCatch(handler.let(IChainable.Companion::unwrap),
+      props.let(CatchProps.Companion::unwrap)).let(TaskStateBase::wrap)
 
   /**
    * Add a recovery handler for this state.
@@ -83,7 +83,7 @@ public abstract class TaskStateBase(
    * @param props
    */
   public open fun addRetry(props: RetryProps): TaskStateBase =
-      unwrap(this).addRetry(props.let(RetryProps::unwrap)).let(TaskStateBase::wrap)
+      unwrap(this).addRetry(props.let(RetryProps.Companion::unwrap)).let(TaskStateBase::wrap)
 
   /**
    * Add retry configuration for this state.
@@ -124,7 +124,7 @@ public abstract class TaskStateBase(
    * @param props
    */
   public open fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Return the given named metric for this Task.
@@ -156,7 +156,7 @@ public abstract class TaskStateBase(
    * @param props
    */
   public open fun metricFailed(props: MetricOptions): Metric =
-      unwrap(this).metricFailed(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricFailed(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of times this activity fails.
@@ -188,7 +188,7 @@ public abstract class TaskStateBase(
    * @param props
    */
   public open fun metricHeartbeatTimedOut(props: MetricOptions): Metric =
-      unwrap(this).metricHeartbeatTimedOut(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricHeartbeatTimedOut(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of times the heartbeat times out for this activity.
@@ -219,7 +219,7 @@ public abstract class TaskStateBase(
    * @param props
    */
   public open fun metricRunTime(props: MetricOptions): Metric =
-      unwrap(this).metricRunTime(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricRunTime(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The interval, in milliseconds, between the time the Task starts and the time it closes.
@@ -250,7 +250,7 @@ public abstract class TaskStateBase(
    * @param props
    */
   public open fun metricScheduleTime(props: MetricOptions): Metric =
-      unwrap(this).metricScheduleTime(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricScheduleTime(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The interval, in milliseconds, for which the activity stays in the schedule state.
@@ -281,7 +281,7 @@ public abstract class TaskStateBase(
    * @param props
    */
   public open fun metricScheduled(props: MetricOptions): Metric =
-      unwrap(this).metricScheduled(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricScheduled(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of times this activity is scheduled.
@@ -312,7 +312,7 @@ public abstract class TaskStateBase(
    * @param props
    */
   public open fun metricStarted(props: MetricOptions): Metric =
-      unwrap(this).metricStarted(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricStarted(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of times this activity is started.
@@ -343,7 +343,7 @@ public abstract class TaskStateBase(
    * @param props
    */
   public open fun metricSucceeded(props: MetricOptions): Metric =
-      unwrap(this).metricSucceeded(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricSucceeded(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of times this activity succeeds.
@@ -376,7 +376,7 @@ public abstract class TaskStateBase(
    * @param props
    */
   public open fun metricTime(props: MetricOptions): Metric =
-      unwrap(this).metricTime(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricTime(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The interval, in milliseconds, between the time the activity is scheduled and the time it
@@ -408,7 +408,7 @@ public abstract class TaskStateBase(
    * @param props
    */
   public open fun metricTimedOut(props: MetricOptions): Metric =
-      unwrap(this).metricTimedOut(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricTimedOut(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of times this activity times out.
@@ -428,7 +428,7 @@ public abstract class TaskStateBase(
    * @param next 
    */
   public override fun next(next: IChainable): Chain =
-      unwrap(this).next(next.let(IChainable::unwrap)).let(Chain::wrap)
+      unwrap(this).next(next.let(IChainable.Companion::unwrap)).let(Chain::wrap)
 
   /**
    * Return the Amazon States Language object for this state.

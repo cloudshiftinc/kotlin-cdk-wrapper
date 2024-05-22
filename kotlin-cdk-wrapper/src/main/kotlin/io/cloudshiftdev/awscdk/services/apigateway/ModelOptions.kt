@@ -162,7 +162,7 @@ public interface ModelOptions {
      * Specify null ({}) if you don't want to specify a schema.
      */
     override fun schema(schema: JsonSchema) {
-      cdkBuilder.schema(schema.let(JsonSchema::unwrap))
+      cdkBuilder.schema(schema.let(JsonSchema.Companion::unwrap))
     }
 
     /**

@@ -46,8 +46,8 @@ public open class CfnEndpointAuthorization(
     id: String,
     props: CfnEndpointAuthorizationProps,
   ) :
-      this(software.amazon.awscdk.services.redshift.CfnEndpointAuthorization(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEndpointAuthorizationProps::unwrap))
+      this(software.amazon.awscdk.services.redshift.CfnEndpointAuthorization(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEndpointAuthorizationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -138,7 +138,7 @@ public open class CfnEndpointAuthorization(
    * Indicates whether to force the revoke action.
    */
   public open fun force(`value`: IResolvable) {
-    unwrap(this).setForce(`value`.let(IResolvable::unwrap))
+    unwrap(this).setForce(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -147,7 +147,7 @@ public open class CfnEndpointAuthorization(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -282,7 +282,7 @@ public open class CfnEndpointAuthorization(
      * @param force Indicates whether to force the revoke action. 
      */
     override fun force(force: IResolvable) {
-      cdkBuilder.force(force.let(IResolvable::unwrap))
+      cdkBuilder.force(force.let(IResolvable.Companion::unwrap))
     }
 
     /**

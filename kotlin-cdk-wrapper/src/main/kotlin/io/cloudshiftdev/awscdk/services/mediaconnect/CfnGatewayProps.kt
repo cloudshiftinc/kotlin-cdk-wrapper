@@ -138,7 +138,7 @@ public interface CfnGatewayProps {
      * @param networks The list of networks that you want to add. 
      */
     override fun networks(networks: IResolvable) {
-      cdkBuilder.networks(networks.let(IResolvable::unwrap))
+      cdkBuilder.networks(networks.let(IResolvable.Companion::unwrap))
     }
 
     /**

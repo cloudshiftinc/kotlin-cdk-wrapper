@@ -57,8 +57,8 @@ public open class CfnProject(
     id: String,
     props: CfnProjectProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnProject(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnProjectProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnProject(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnProjectProps.Companion::unwrap))
   )
 
   public constructor(
@@ -96,7 +96,7 @@ public open class CfnProject(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -133,7 +133,7 @@ public open class CfnProject(
    * Details of a provisioned service catalog product.
    */
   public open fun serviceCatalogProvisionedProductDetails(`value`: IResolvable) {
-    unwrap(this).setServiceCatalogProvisionedProductDetails(`value`.let(IResolvable::unwrap))
+    unwrap(this).setServiceCatalogProvisionedProductDetails(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -141,7 +141,7 @@ public open class CfnProject(
    */
   public open
       fun serviceCatalogProvisionedProductDetails(`value`: ServiceCatalogProvisionedProductDetailsProperty) {
-    unwrap(this).setServiceCatalogProvisionedProductDetails(`value`.let(ServiceCatalogProvisionedProductDetailsProperty::unwrap))
+    unwrap(this).setServiceCatalogProvisionedProductDetails(`value`.let(ServiceCatalogProvisionedProductDetailsProperty.Companion::unwrap))
   }
 
   /**
@@ -182,7 +182,7 @@ public open class CfnProject(
    * A list of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -332,7 +332,7 @@ public open class CfnProject(
      */
     override
         fun serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails: IResolvable) {
-      cdkBuilder.serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails.let(IResolvable::unwrap))
+      cdkBuilder.serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -347,7 +347,7 @@ public open class CfnProject(
      */
     override
         fun serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails: ServiceCatalogProvisionedProductDetailsProperty) {
-      cdkBuilder.serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails.let(ServiceCatalogProvisionedProductDetailsProperty::unwrap))
+      cdkBuilder.serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails.let(ServiceCatalogProvisionedProductDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -394,7 +394,7 @@ public open class CfnProject(
      * @param tags A list of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -851,7 +851,7 @@ public open class CfnProject(
        * a product.
        */
       override fun provisioningParameters(provisioningParameters: IResolvable) {
-        cdkBuilder.provisioningParameters(provisioningParameters.let(IResolvable::unwrap))
+        cdkBuilder.provisioningParameters(provisioningParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**

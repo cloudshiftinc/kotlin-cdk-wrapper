@@ -110,8 +110,8 @@ public open class CfnScheduledQuery(
     id: String,
     props: CfnScheduledQueryProps,
   ) :
-      this(software.amazon.awscdk.services.timestream.CfnScheduledQuery(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnScheduledQueryProps::unwrap))
+      this(software.amazon.awscdk.services.timestream.CfnScheduledQuery(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnScheduledQueryProps.Companion::unwrap))
   )
 
   public constructor(
@@ -193,14 +193,14 @@ public open class CfnScheduledQuery(
    * Configuration for error reporting.
    */
   public open fun errorReportConfiguration(`value`: IResolvable) {
-    unwrap(this).setErrorReportConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setErrorReportConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration for error reporting.
    */
   public open fun errorReportConfiguration(`value`: ErrorReportConfigurationProperty) {
-    unwrap(this).setErrorReportConfiguration(`value`.let(ErrorReportConfigurationProperty::unwrap))
+    unwrap(this).setErrorReportConfiguration(`value`.let(ErrorReportConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -218,7 +218,7 @@ public open class CfnScheduledQuery(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -242,14 +242,14 @@ public open class CfnScheduledQuery(
    * Notification configuration for the scheduled query.
    */
   public open fun notificationConfiguration(`value`: IResolvable) {
-    unwrap(this).setNotificationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNotificationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Notification configuration for the scheduled query.
    */
   public open fun notificationConfiguration(`value`: NotificationConfigurationProperty) {
-    unwrap(this).setNotificationConfiguration(`value`.let(NotificationConfigurationProperty::unwrap))
+    unwrap(this).setNotificationConfiguration(`value`.let(NotificationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -282,14 +282,14 @@ public open class CfnScheduledQuery(
    * Schedule configuration.
    */
   public open fun scheduleConfiguration(`value`: IResolvable) {
-    unwrap(this).setScheduleConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setScheduleConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Schedule configuration.
    */
   public open fun scheduleConfiguration(`value`: ScheduleConfigurationProperty) {
-    unwrap(this).setScheduleConfiguration(`value`.let(ScheduleConfigurationProperty::unwrap))
+    unwrap(this).setScheduleConfiguration(`value`.let(ScheduleConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -340,7 +340,7 @@ public open class CfnScheduledQuery(
    * A list of key-value pairs to label the scheduled query.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -357,14 +357,14 @@ public open class CfnScheduledQuery(
    * Scheduled query target store configuration.
    */
   public open fun targetConfiguration(`value`: IResolvable) {
-    unwrap(this).setTargetConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTargetConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Scheduled query target store configuration.
    */
   public open fun targetConfiguration(`value`: TargetConfigurationProperty) {
-    unwrap(this).setTargetConfiguration(`value`.let(TargetConfigurationProperty::unwrap))
+    unwrap(this).setTargetConfiguration(`value`.let(TargetConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -625,7 +625,7 @@ public open class CfnScheduledQuery(
      * @param errorReportConfiguration Configuration for error reporting. 
      */
     override fun errorReportConfiguration(errorReportConfiguration: IResolvable) {
-      cdkBuilder.errorReportConfiguration(errorReportConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.errorReportConfiguration(errorReportConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -638,7 +638,7 @@ public open class CfnScheduledQuery(
      */
     override
         fun errorReportConfiguration(errorReportConfiguration: ErrorReportConfigurationProperty) {
-      cdkBuilder.errorReportConfiguration(errorReportConfiguration.let(ErrorReportConfigurationProperty::unwrap))
+      cdkBuilder.errorReportConfiguration(errorReportConfiguration.let(ErrorReportConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -682,7 +682,7 @@ public open class CfnScheduledQuery(
      * @param notificationConfiguration Notification configuration for the scheduled query. 
      */
     override fun notificationConfiguration(notificationConfiguration: IResolvable) {
-      cdkBuilder.notificationConfiguration(notificationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.notificationConfiguration(notificationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -696,7 +696,7 @@ public open class CfnScheduledQuery(
      */
     override
         fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty) {
-      cdkBuilder.notificationConfiguration(notificationConfiguration.let(NotificationConfigurationProperty::unwrap))
+      cdkBuilder.notificationConfiguration(notificationConfiguration.let(NotificationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -742,7 +742,7 @@ public open class CfnScheduledQuery(
      * @param scheduleConfiguration Schedule configuration. 
      */
     override fun scheduleConfiguration(scheduleConfiguration: IResolvable) {
-      cdkBuilder.scheduleConfiguration(scheduleConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.scheduleConfiguration(scheduleConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -752,7 +752,7 @@ public open class CfnScheduledQuery(
      * @param scheduleConfiguration Schedule configuration. 
      */
     override fun scheduleConfiguration(scheduleConfiguration: ScheduleConfigurationProperty) {
-      cdkBuilder.scheduleConfiguration(scheduleConfiguration.let(ScheduleConfigurationProperty::unwrap))
+      cdkBuilder.scheduleConfiguration(scheduleConfiguration.let(ScheduleConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -797,7 +797,7 @@ public open class CfnScheduledQuery(
      * @param tags A list of key-value pairs to label the scheduled query. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -815,7 +815,7 @@ public open class CfnScheduledQuery(
      * @param targetConfiguration Scheduled query target store configuration. 
      */
     override fun targetConfiguration(targetConfiguration: IResolvable) {
-      cdkBuilder.targetConfiguration(targetConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.targetConfiguration(targetConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -825,7 +825,7 @@ public open class CfnScheduledQuery(
      * @param targetConfiguration Scheduled query target store configuration. 
      */
     override fun targetConfiguration(targetConfiguration: TargetConfigurationProperty) {
-      cdkBuilder.targetConfiguration(targetConfiguration.let(TargetConfigurationProperty::unwrap))
+      cdkBuilder.targetConfiguration(targetConfiguration.let(TargetConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1038,14 +1038,14 @@ public open class CfnScheduledQuery(
        * @param s3Configuration The S3 configuration for the error reports. 
        */
       override fun s3Configuration(s3Configuration: IResolvable) {
-        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3Configuration The S3 configuration for the error reports. 
        */
       override fun s3Configuration(s3Configuration: S3ConfigurationProperty) {
-        cdkBuilder.s3Configuration(s3Configuration.let(S3ConfigurationProperty::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(S3ConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1240,7 +1240,7 @@ public open class CfnScheduledQuery(
        * Attribute mappings for MULTI value measures.
        */
       override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: IResolvable) {
-        cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings.let(IResolvable::unwrap))
+        cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1591,7 +1591,7 @@ public open class CfnScheduledQuery(
        * attributes.
        */
       override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: IResolvable) {
-        cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings.let(IResolvable::unwrap))
+        cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1732,14 +1732,14 @@ public open class CfnScheduledQuery(
        * @param snsConfiguration Details on SNS configuration. 
        */
       override fun snsConfiguration(snsConfiguration: IResolvable) {
-        cdkBuilder.snsConfiguration(snsConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.snsConfiguration(snsConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param snsConfiguration Details on SNS configuration. 
        */
       override fun snsConfiguration(snsConfiguration: SnsConfigurationProperty) {
-        cdkBuilder.snsConfiguration(snsConfiguration.let(SnsConfigurationProperty::unwrap))
+        cdkBuilder.snsConfiguration(snsConfiguration.let(SnsConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2204,7 +2204,7 @@ public open class CfnScheduledQuery(
        * database and table. 
        */
       override fun timestreamConfiguration(timestreamConfiguration: IResolvable) {
-        cdkBuilder.timestreamConfiguration(timestreamConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.timestreamConfiguration(timestreamConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2213,7 +2213,7 @@ public open class CfnScheduledQuery(
        */
       override
           fun timestreamConfiguration(timestreamConfiguration: TimestreamConfigurationProperty) {
-        cdkBuilder.timestreamConfiguration(timestreamConfiguration.let(TimestreamConfigurationProperty::unwrap))
+        cdkBuilder.timestreamConfiguration(timestreamConfiguration.let(TimestreamConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2469,7 +2469,7 @@ public open class CfnScheduledQuery(
        * dimension in the destination table. 
        */
       override fun dimensionMappings(dimensionMappings: IResolvable) {
-        cdkBuilder.dimensionMappings(dimensionMappings.let(IResolvable::unwrap))
+        cdkBuilder.dimensionMappings(dimensionMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2500,7 +2500,7 @@ public open class CfnScheduledQuery(
        * @param mixedMeasureMappings Specifies how to map measures to multi-measure records.
        */
       override fun mixedMeasureMappings(mixedMeasureMappings: IResolvable) {
-        cdkBuilder.mixedMeasureMappings(mixedMeasureMappings.let(IResolvable::unwrap))
+        cdkBuilder.mixedMeasureMappings(mixedMeasureMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2520,14 +2520,14 @@ public open class CfnScheduledQuery(
        * @param multiMeasureMappings Multi-measure mappings.
        */
       override fun multiMeasureMappings(multiMeasureMappings: IResolvable) {
-        cdkBuilder.multiMeasureMappings(multiMeasureMappings.let(IResolvable::unwrap))
+        cdkBuilder.multiMeasureMappings(multiMeasureMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param multiMeasureMappings Multi-measure mappings.
        */
       override fun multiMeasureMappings(multiMeasureMappings: MultiMeasureMappingsProperty) {
-        cdkBuilder.multiMeasureMappings(multiMeasureMappings.let(MultiMeasureMappingsProperty::unwrap))
+        cdkBuilder.multiMeasureMappings(multiMeasureMappings.let(MultiMeasureMappingsProperty.Companion::unwrap))
       }
 
       /**

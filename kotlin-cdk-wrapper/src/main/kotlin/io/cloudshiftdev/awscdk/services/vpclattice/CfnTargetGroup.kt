@@ -86,8 +86,8 @@ public open class CfnTargetGroup(
     id: String,
     props: CfnTargetGroupProps,
   ) :
-      this(software.amazon.awscdk.services.vpclattice.CfnTargetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTargetGroupProps::unwrap))
+      this(software.amazon.awscdk.services.vpclattice.CfnTargetGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTargetGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -134,14 +134,14 @@ public open class CfnTargetGroup(
    * The target group configuration.
    */
   public open fun config(`value`: IResolvable) {
-    unwrap(this).setConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The target group configuration.
    */
   public open fun config(`value`: TargetGroupConfigProperty) {
-    unwrap(this).setConfig(`value`.let(TargetGroupConfigProperty::unwrap))
+    unwrap(this).setConfig(`value`.let(TargetGroupConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -158,7 +158,7 @@ public open class CfnTargetGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -188,7 +188,7 @@ public open class CfnTargetGroup(
    * The tags for the target group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -205,7 +205,7 @@ public open class CfnTargetGroup(
    * Describes a target.
    */
   public open fun targets(`value`: IResolvable) {
-    unwrap(this).setTargets(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTargets(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -340,7 +340,7 @@ public open class CfnTargetGroup(
      * @param config The target group configuration. 
      */
     override fun config(config: IResolvable) {
-      cdkBuilder.config(config.let(IResolvable::unwrap))
+      cdkBuilder.config(config.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -350,7 +350,7 @@ public open class CfnTargetGroup(
      * @param config The target group configuration. 
      */
     override fun config(config: TargetGroupConfigProperty) {
-      cdkBuilder.config(config.let(TargetGroupConfigProperty::unwrap))
+      cdkBuilder.config(config.let(TargetGroupConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -387,7 +387,7 @@ public open class CfnTargetGroup(
      * @param tags The tags for the target group. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -405,7 +405,7 @@ public open class CfnTargetGroup(
      * @param targets Describes a target. 
      */
     override fun targets(targets: IResolvable) {
-      cdkBuilder.targets(targets.let(IResolvable::unwrap))
+      cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -685,7 +685,7 @@ public open class CfnTargetGroup(
        * @param enabled Indicates whether health checking is enabled.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -719,14 +719,14 @@ public open class CfnTargetGroup(
        * @param matcher The codes to use when checking for a successful response from a target.
        */
       override fun matcher(matcher: IResolvable) {
-        cdkBuilder.matcher(matcher.let(IResolvable::unwrap))
+        cdkBuilder.matcher(matcher.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param matcher The codes to use when checking for a successful response from a target.
        */
       override fun matcher(matcher: MatcherProperty) {
-        cdkBuilder.matcher(matcher.let(MatcherProperty::unwrap))
+        cdkBuilder.matcher(matcher.let(MatcherProperty.Companion::unwrap))
       }
 
       /**
@@ -1168,7 +1168,7 @@ public open class CfnTargetGroup(
        * Not supported if the target group type is `LAMBDA` or `ALB` .
        */
       override fun healthCheck(healthCheck: IResolvable) {
-        cdkBuilder.healthCheck(healthCheck.let(IResolvable::unwrap))
+        cdkBuilder.healthCheck(healthCheck.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1176,7 +1176,7 @@ public open class CfnTargetGroup(
        * Not supported if the target group type is `LAMBDA` or `ALB` .
        */
       override fun healthCheck(healthCheck: HealthCheckConfigProperty) {
-        cdkBuilder.healthCheck(healthCheck.let(HealthCheckConfigProperty::unwrap))
+        cdkBuilder.healthCheck(healthCheck.let(HealthCheckConfigProperty.Companion::unwrap))
       }
 
       /**

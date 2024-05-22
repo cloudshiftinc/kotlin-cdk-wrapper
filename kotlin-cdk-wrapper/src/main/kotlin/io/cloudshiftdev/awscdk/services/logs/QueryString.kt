@@ -37,7 +37,7 @@ public open class QueryString(
   )
 
   public constructor(props: QueryStringProps) :
-      this(software.amazon.awscdk.services.logs.QueryString(props.let(QueryStringProps::unwrap))
+      this(software.amazon.awscdk.services.logs.QueryString(props.let(QueryStringProps.Companion::unwrap))
   )
 
   public constructor(props: QueryStringProps.Builder.() -> Unit) : this(QueryStringProps(props)

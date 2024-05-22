@@ -280,14 +280,14 @@ public interface CfnSegmentProps {
      * @param dimensions An array that defines the dimensions for the segment.
      */
     override fun dimensions(dimensions: IResolvable) {
-      cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+      cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param dimensions An array that defines the dimensions for the segment.
      */
     override fun dimensions(dimensions: CfnSegment.SegmentDimensionsProperty) {
-      cdkBuilder.dimensions(dimensions.let(CfnSegment.SegmentDimensionsProperty::unwrap))
+      cdkBuilder.dimensions(dimensions.let(CfnSegment.SegmentDimensionsProperty.Companion::unwrap))
     }
 
     /**
@@ -314,7 +314,7 @@ public interface CfnSegmentProps {
      * segment group.
      */
     override fun segmentGroups(segmentGroups: IResolvable) {
-      cdkBuilder.segmentGroups(segmentGroups.let(IResolvable::unwrap))
+      cdkBuilder.segmentGroups(segmentGroups.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -324,7 +324,7 @@ public interface CfnSegmentProps {
      * segment group.
      */
     override fun segmentGroups(segmentGroups: CfnSegment.SegmentGroupsProperty) {
-      cdkBuilder.segmentGroups(segmentGroups.let(CfnSegment.SegmentGroupsProperty::unwrap))
+      cdkBuilder.segmentGroups(segmentGroups.let(CfnSegment.SegmentGroupsProperty.Companion::unwrap))
     }
 
     /**

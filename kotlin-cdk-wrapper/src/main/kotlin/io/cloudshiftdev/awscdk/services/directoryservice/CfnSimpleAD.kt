@@ -60,8 +60,8 @@ public open class CfnSimpleAD(
     id: String,
     props: CfnSimpleADProps,
   ) :
-      this(software.amazon.awscdk.services.directoryservice.CfnSimpleAD(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSimpleADProps::unwrap))
+      this(software.amazon.awscdk.services.directoryservice.CfnSimpleAD(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSimpleADProps.Companion::unwrap))
   )
 
   public constructor(
@@ -111,7 +111,7 @@ public open class CfnSimpleAD(
    * If set to `true` , specifies an alias for a directory and assigns the alias to the directory.
    */
   public open fun createAlias(`value`: IResolvable) {
-    unwrap(this).setCreateAlias(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCreateAlias(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -142,7 +142,7 @@ public open class CfnSimpleAD(
    * Whether to enable single sign-on for a directory.
    */
   public open fun enableSso(`value`: IResolvable) {
-    unwrap(this).setEnableSso(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableSso(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -151,7 +151,7 @@ public open class CfnSimpleAD(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -215,7 +215,7 @@ public open class CfnSimpleAD(
    * object that contains additional information for the operation.
    */
   public open fun vpcSettings(`value`: IResolvable) {
-    unwrap(this).setVpcSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -224,7 +224,7 @@ public open class CfnSimpleAD(
    * object that contains additional information for the operation.
    */
   public open fun vpcSettings(`value`: VpcSettingsProperty) {
-    unwrap(this).setVpcSettings(`value`.let(VpcSettingsProperty::unwrap))
+    unwrap(this).setVpcSettings(`value`.let(VpcSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -428,7 +428,7 @@ public open class CfnSimpleAD(
      * alias to the directory. 
      */
     override fun createAlias(createAlias: IResolvable) {
-      cdkBuilder.createAlias(createAlias.let(IResolvable::unwrap))
+      cdkBuilder.createAlias(createAlias.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -462,7 +462,7 @@ public open class CfnSimpleAD(
      * @param enableSso Whether to enable single sign-on for a directory. 
      */
     override fun enableSso(enableSso: IResolvable) {
-      cdkBuilder.enableSso(enableSso.let(IResolvable::unwrap))
+      cdkBuilder.enableSso(enableSso.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -527,7 +527,7 @@ public open class CfnSimpleAD(
      * object that contains additional information for the operation. 
      */
     override fun vpcSettings(vpcSettings: IResolvable) {
-      cdkBuilder.vpcSettings(vpcSettings.let(IResolvable::unwrap))
+      cdkBuilder.vpcSettings(vpcSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -541,7 +541,7 @@ public open class CfnSimpleAD(
      * object that contains additional information for the operation. 
      */
     override fun vpcSettings(vpcSettings: VpcSettingsProperty) {
-      cdkBuilder.vpcSettings(vpcSettings.let(VpcSettingsProperty::unwrap))
+      cdkBuilder.vpcSettings(vpcSettings.let(VpcSettingsProperty.Companion::unwrap))
     }
 
     /**

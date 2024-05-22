@@ -8,6 +8,8 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
+import kotlin.collections.Map
 
 /**
  * Options for creating a SystemD configuration file.
@@ -59,6 +61,23 @@ public interface SystemdConfigFileOptions {
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
+   * Loads environment variables from files when the process is running.
+   *
+   * Must use absolute paths.
+   *
+   * Default: - No environment files
+   */
+  public fun environmentFiles(): List<String> = unwrap(this).getEnvironmentFiles() ?: emptyList()
+
+  /**
+   * Environment variables to load when the process is running.
+   *
+   * Default: - No environment variables set
+   */
+  public fun environmentVariables(): Map<String, String> = unwrap(this).getEnvironmentVariables() ?:
+      emptyMap()
+
+  /**
    * The group to execute the process under.
    *
    * Default: root
@@ -108,6 +127,23 @@ public interface SystemdConfigFileOptions {
     public fun description(description: String)
 
     /**
+     * @param environmentFiles Loads environment variables from files when the process is running.
+     * Must use absolute paths.
+     */
+    public fun environmentFiles(environmentFiles: List<String>)
+
+    /**
+     * @param environmentFiles Loads environment variables from files when the process is running.
+     * Must use absolute paths.
+     */
+    public fun environmentFiles(vararg environmentFiles: String)
+
+    /**
+     * @param environmentVariables Environment variables to load when the process is running.
+     */
+    public fun environmentVariables(environmentVariables: Map<String, String>)
+
+    /**
      * @param group The group to execute the process under.
      */
     public fun group(group: String)
@@ -155,6 +191,28 @@ public interface SystemdConfigFileOptions {
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
+    }
+
+    /**
+     * @param environmentFiles Loads environment variables from files when the process is running.
+     * Must use absolute paths.
+     */
+    override fun environmentFiles(environmentFiles: List<String>) {
+      cdkBuilder.environmentFiles(environmentFiles)
+    }
+
+    /**
+     * @param environmentFiles Loads environment variables from files when the process is running.
+     * Must use absolute paths.
+     */
+    override fun environmentFiles(vararg environmentFiles: String): Unit =
+        environmentFiles(environmentFiles.toList())
+
+    /**
+     * @param environmentVariables Environment variables to load when the process is running.
+     */
+    override fun environmentVariables(environmentVariables: Map<String, String>) {
+      cdkBuilder.environmentVariables(environmentVariables)
     }
 
     /**
@@ -212,6 +270,24 @@ public interface SystemdConfigFileOptions {
      * Default: - No description
      */
     override fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * Loads environment variables from files when the process is running.
+     *
+     * Must use absolute paths.
+     *
+     * Default: - No environment files
+     */
+    override fun environmentFiles(): List<String> = unwrap(this).getEnvironmentFiles() ?:
+        emptyList()
+
+    /**
+     * Environment variables to load when the process is running.
+     *
+     * Default: - No environment variables set
+     */
+    override fun environmentVariables(): Map<String, String> =
+        unwrap(this).getEnvironmentVariables() ?: emptyMap()
 
     /**
      * The group to execute the process under.

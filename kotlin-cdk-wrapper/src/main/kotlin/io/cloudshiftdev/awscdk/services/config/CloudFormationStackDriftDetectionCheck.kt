@@ -35,7 +35,7 @@ public open class CloudFormationStackDriftDetectionCheck(
   cdkObject: software.amazon.awscdk.services.config.CloudFormationStackDriftDetectionCheck,
 ) : ManagedRule(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.config.CloudFormationStackDriftDetectionCheck(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.config.CloudFormationStackDriftDetectionCheck(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -44,8 +44,8 @@ public open class CloudFormationStackDriftDetectionCheck(
     id: String,
     props: CloudFormationStackDriftDetectionCheckProps,
   ) :
-      this(software.amazon.awscdk.services.config.CloudFormationStackDriftDetectionCheck(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CloudFormationStackDriftDetectionCheckProps::unwrap))
+      this(software.amazon.awscdk.services.config.CloudFormationStackDriftDetectionCheck(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CloudFormationStackDriftDetectionCheckProps.Companion::unwrap))
   )
 
   public constructor(
@@ -184,7 +184,7 @@ public open class CloudFormationStackDriftDetectionCheck(
      * evaluations. 
      */
     override fun maximumExecutionFrequency(maximumExecutionFrequency: MaximumExecutionFrequency) {
-      cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency.let(MaximumExecutionFrequency::unwrap))
+      cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency.let(MaximumExecutionFrequency.Companion::unwrap))
     }
 
     /**
@@ -212,7 +212,7 @@ public open class CloudFormationStackDriftDetectionCheck(
      * @param role The IAM role to use for this rule. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -224,7 +224,7 @@ public open class CloudFormationStackDriftDetectionCheck(
      * @param ruleScope Defines which resources trigger an evaluation for an AWS Config rule. 
      */
     override fun ruleScope(ruleScope: RuleScope) {
-      cdkBuilder.ruleScope(ruleScope.let(RuleScope::unwrap))
+      cdkBuilder.ruleScope(ruleScope.let(RuleScope.Companion::unwrap))
     }
 
     public fun build():

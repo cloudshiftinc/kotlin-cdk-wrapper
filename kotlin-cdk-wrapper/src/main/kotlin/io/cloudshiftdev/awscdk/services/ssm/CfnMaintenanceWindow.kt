@@ -70,8 +70,8 @@ public open class CfnMaintenanceWindow(
     id: String,
     props: CfnMaintenanceWindowProps,
   ) :
-      this(software.amazon.awscdk.services.ssm.CfnMaintenanceWindow(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMaintenanceWindowProps::unwrap))
+      this(software.amazon.awscdk.services.ssm.CfnMaintenanceWindow(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMaintenanceWindowProps.Companion::unwrap))
   )
 
   public constructor(
@@ -100,7 +100,7 @@ public open class CfnMaintenanceWindow(
    * those instances as targets.
    */
   public open fun allowUnassociatedTargets(`value`: IResolvable) {
-    unwrap(this).setAllowUnassociatedTargets(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAllowUnassociatedTargets(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -166,7 +166,7 @@ public open class CfnMaintenanceWindow(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -252,7 +252,7 @@ public open class CfnMaintenanceWindow(
    * (key-value pairs).
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -441,7 +441,7 @@ public open class CfnMaintenanceWindow(
      * instances, even if you have not registered those instances as targets. 
      */
     override fun allowUnassociatedTargets(allowUnassociatedTargets: IResolvable) {
-      cdkBuilder.allowUnassociatedTargets(allowUnassociatedTargets.let(IResolvable::unwrap))
+      cdkBuilder.allowUnassociatedTargets(allowUnassociatedTargets.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -561,7 +561,7 @@ public open class CfnMaintenanceWindow(
      * of tags (key-value pairs). 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

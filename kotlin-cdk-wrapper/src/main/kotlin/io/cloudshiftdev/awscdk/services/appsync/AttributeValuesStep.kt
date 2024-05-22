@@ -28,7 +28,7 @@ public open class AttributeValuesStep(
     container: String,
     assignments: List<Assign>,
   ) : this(software.amazon.awscdk.services.appsync.AttributeValuesStep(attr, container,
-      assignments.map(Assign::unwrap))
+      assignments.map(Assign.Companion::unwrap))
   )
 
   /**

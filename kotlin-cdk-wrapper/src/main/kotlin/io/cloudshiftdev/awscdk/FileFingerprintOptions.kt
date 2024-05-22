@@ -102,14 +102,14 @@ public interface FileFingerprintOptions : FileCopyOptions {
      * @param followSymlinks A strategy for how to handle symlinks.
      */
     override fun followSymlinks(followSymlinks: SymlinkFollowMode) {
-      cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode::unwrap))
+      cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode.Companion::unwrap))
     }
 
     /**
      * @param ignoreMode The ignore behavior to use for `exclude` patterns.
      */
     override fun ignoreMode(ignoreMode: IgnoreMode) {
-      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode::unwrap))
+      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.FileFingerprintOptions = cdkBuilder.build()

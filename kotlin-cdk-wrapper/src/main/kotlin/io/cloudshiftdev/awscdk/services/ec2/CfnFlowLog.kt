@@ -68,8 +68,8 @@ public open class CfnFlowLog(
     id: String,
     props: CfnFlowLogProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnFlowLog(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFlowLogProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnFlowLog(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFlowLogProps.Companion::unwrap))
   )
 
   public constructor(
@@ -128,7 +128,7 @@ public open class CfnFlowLog(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -238,7 +238,7 @@ public open class CfnFlowLog(
    * The tags to apply to the flow logs.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -600,7 +600,7 @@ public open class CfnFlowLog(
      * @param tags The tags to apply to the flow logs. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -760,7 +760,7 @@ public open class CfnFlowLog(
        * The default is `false` .
        */
       override fun hiveCompatiblePartitions(hiveCompatiblePartitions: IResolvable) {
-        cdkBuilder.hiveCompatiblePartitions(hiveCompatiblePartitions.let(IResolvable::unwrap))
+        cdkBuilder.hiveCompatiblePartitions(hiveCompatiblePartitions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -776,7 +776,7 @@ public open class CfnFlowLog(
        * This reduces the cost and response time for queries. The default is `false` .
        */
       override fun perHourPartition(perHourPartition: IResolvable) {
-        cdkBuilder.perHourPartition(perHourPartition.let(IResolvable::unwrap))
+        cdkBuilder.perHourPartition(perHourPartition.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.ec2.CfnFlowLog.DestinationOptionsProperty

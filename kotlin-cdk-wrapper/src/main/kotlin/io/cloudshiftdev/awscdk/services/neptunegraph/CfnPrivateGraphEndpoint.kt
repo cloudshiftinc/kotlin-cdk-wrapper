@@ -47,8 +47,8 @@ public open class CfnPrivateGraphEndpoint(
     id: String,
     props: CfnPrivateGraphEndpointProps,
   ) :
-      this(software.amazon.awscdk.services.neptunegraph.CfnPrivateGraphEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPrivateGraphEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.neptunegraph.CfnPrivateGraphEndpoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPrivateGraphEndpointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -93,7 +93,7 @@ public open class CfnPrivateGraphEndpoint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

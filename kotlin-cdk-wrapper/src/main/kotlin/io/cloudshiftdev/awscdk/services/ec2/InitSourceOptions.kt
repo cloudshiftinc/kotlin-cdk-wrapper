@@ -61,7 +61,7 @@ public interface InitSourceOptions {
      * extracted.
      */
     override fun serviceRestartHandles(serviceRestartHandles: List<InitServiceRestartHandle>) {
-      cdkBuilder.serviceRestartHandles(serviceRestartHandles.map(InitServiceRestartHandle::unwrap))
+      cdkBuilder.serviceRestartHandles(serviceRestartHandles.map(InitServiceRestartHandle.Companion::unwrap))
     }
 
     /**

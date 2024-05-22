@@ -455,7 +455,7 @@ public interface CfnRestApiProps {
      * an OpenAPI file, which defines a set of RESTful APIs in JSON or YAML format.
      */
     override fun bodyS3Location(bodyS3Location: IResolvable) {
-      cdkBuilder.bodyS3Location(bodyS3Location.let(IResolvable::unwrap))
+      cdkBuilder.bodyS3Location(bodyS3Location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -463,7 +463,7 @@ public interface CfnRestApiProps {
      * an OpenAPI file, which defines a set of RESTful APIs in JSON or YAML format.
      */
     override fun bodyS3Location(bodyS3Location: CfnRestApi.S3LocationProperty) {
-      cdkBuilder.bodyS3Location(bodyS3Location.let(CfnRestApi.S3LocationProperty::unwrap))
+      cdkBuilder.bodyS3Location(bodyS3Location.let(CfnRestApi.S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -508,7 +508,7 @@ public interface CfnRestApiProps {
      * custom domain name to invoke your API, disable the default endpoint
      */
     override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable) {
-      cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint.let(IResolvable::unwrap))
+      cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -517,7 +517,7 @@ public interface CfnRestApiProps {
      * configuration types using the `Parameters` property.
      */
     override fun endpointConfiguration(endpointConfiguration: IResolvable) {
-      cdkBuilder.endpointConfiguration(endpointConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.endpointConfiguration(endpointConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -527,7 +527,7 @@ public interface CfnRestApiProps {
      */
     override
         fun endpointConfiguration(endpointConfiguration: CfnRestApi.EndpointConfigurationProperty) {
-      cdkBuilder.endpointConfiguration(endpointConfiguration.let(CfnRestApi.EndpointConfigurationProperty::unwrap))
+      cdkBuilder.endpointConfiguration(endpointConfiguration.let(CfnRestApi.EndpointConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -557,7 +557,7 @@ public interface CfnRestApiProps {
      * The default value is `false` .
      */
     override fun failOnWarnings(failOnWarnings: IResolvable) {
-      cdkBuilder.failOnWarnings(failOnWarnings.let(IResolvable::unwrap))
+      cdkBuilder.failOnWarnings(failOnWarnings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -611,7 +611,7 @@ public interface CfnRestApiProps {
      * 'file:///path/to/imported-api-body.json'` .
      */
     override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -640,7 +640,7 @@ public interface CfnRestApiProps {
      * not start with `aws:` . The tag value can be up to 256 characters.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -212,7 +212,7 @@ public interface CfnFunctionDefinitionProps {
      * resource and specify the ID of this function definition.
      */
     override fun initialVersion(initialVersion: IResolvable) {
-      cdkBuilder.initialVersion(initialVersion.let(IResolvable::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -230,7 +230,7 @@ public interface CfnFunctionDefinitionProps {
      */
     override
         fun initialVersion(initialVersion: CfnFunctionDefinition.FunctionDefinitionVersionProperty) {
-      cdkBuilder.initialVersion(initialVersion.let(CfnFunctionDefinition.FunctionDefinitionVersionProperty::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(CfnFunctionDefinition.FunctionDefinitionVersionProperty.Companion::unwrap))
     }
 
     /**

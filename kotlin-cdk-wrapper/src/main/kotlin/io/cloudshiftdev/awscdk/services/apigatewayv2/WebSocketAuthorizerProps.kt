@@ -137,14 +137,14 @@ public interface WebSocketAuthorizerProps {
      * @param type The type of authorizer. 
      */
     override fun type(type: WebSocketAuthorizerType) {
-      cdkBuilder.type(type.let(WebSocketAuthorizerType::unwrap))
+      cdkBuilder.type(type.let(WebSocketAuthorizerType.Companion::unwrap))
     }
 
     /**
      * @param webSocketApi WebSocket Api to attach the authorizer to. 
      */
     override fun webSocketApi(webSocketApi: IWebSocketApi) {
-      cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi::unwrap))
+      cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizerProps =

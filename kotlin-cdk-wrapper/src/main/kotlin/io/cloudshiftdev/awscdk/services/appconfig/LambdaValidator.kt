@@ -42,7 +42,7 @@ public abstract class LambdaValidator(
 
   public companion object {
     public fun fromFunction(func: Function): LambdaValidator =
-        software.amazon.awscdk.services.appconfig.LambdaValidator.fromFunction(func.let(Function::unwrap)).let(LambdaValidator::wrap)
+        software.amazon.awscdk.services.appconfig.LambdaValidator.fromFunction(func.let(Function.Companion::unwrap)).let(LambdaValidator::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.LambdaValidator):
         LambdaValidator = CdkObjectWrappers.wrap(cdkObject) as? LambdaValidator ?:

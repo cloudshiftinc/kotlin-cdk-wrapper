@@ -141,7 +141,7 @@ public interface CfnRecipeProps {
      * @param steps A list of steps that are defined by the recipe. 
      */
     override fun steps(steps: IResolvable) {
-      cdkBuilder.steps(steps.let(IResolvable::unwrap))
+      cdkBuilder.steps(steps.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -160,7 +160,7 @@ public interface CfnRecipeProps {
      * @param tags Metadata tags that have been applied to the recipe.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

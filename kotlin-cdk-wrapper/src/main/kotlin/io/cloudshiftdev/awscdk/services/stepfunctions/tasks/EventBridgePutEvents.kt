@@ -48,8 +48,8 @@ public open class EventBridgePutEvents(
     id: String,
     props: EventBridgePutEventsProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEvents(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EventBridgePutEventsProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEvents(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EventBridgePutEventsProps.Companion::unwrap))
   )
 
   public constructor(
@@ -286,7 +286,7 @@ public open class EventBridgePutEvents(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -316,7 +316,7 @@ public open class EventBridgePutEvents(
      * @param entries The entries that will be sent. 
      */
     override fun entries(entries: List<EventBridgePutEventsEntry>) {
-      cdkBuilder.entries(entries.map(EventBridgePutEventsEntry::unwrap))
+      cdkBuilder.entries(entries.map(EventBridgePutEventsEntry.Companion::unwrap))
     }
 
     /**
@@ -342,7 +342,7 @@ public open class EventBridgePutEvents(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -356,7 +356,7 @@ public open class EventBridgePutEvents(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -391,7 +391,7 @@ public open class EventBridgePutEvents(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -463,7 +463,7 @@ public open class EventBridgePutEvents(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -476,7 +476,7 @@ public open class EventBridgePutEvents(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.EventBridgePutEvents =

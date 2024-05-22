@@ -151,7 +151,7 @@ public interface ContainerOverride {
      * @param environment Variables to set in the container's environment.
      */
     override fun environment(environment: List<TaskEnvironmentVariable>) {
-      cdkBuilder.environment(environment.map(TaskEnvironmentVariable::unwrap))
+      cdkBuilder.environment(environment.map(TaskEnvironmentVariable.Companion::unwrap))
     }
 
     /**

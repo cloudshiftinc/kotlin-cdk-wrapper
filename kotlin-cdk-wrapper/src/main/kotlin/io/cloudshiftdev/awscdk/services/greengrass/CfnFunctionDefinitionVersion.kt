@@ -98,8 +98,8 @@ public open class CfnFunctionDefinitionVersion(
     id: String,
     props: CfnFunctionDefinitionVersionProps,
   ) :
-      this(software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFunctionDefinitionVersionProps::unwrap))
+      this(software.amazon.awscdk.services.greengrass.CfnFunctionDefinitionVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFunctionDefinitionVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -123,14 +123,14 @@ public open class CfnFunctionDefinitionVersion(
    * The default configuration that applies to all Lambda functions in the group.
    */
   public open fun defaultConfig(`value`: IResolvable) {
-    unwrap(this).setDefaultConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefaultConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The default configuration that applies to all Lambda functions in the group.
    */
   public open fun defaultConfig(`value`: DefaultConfigProperty) {
-    unwrap(this).setDefaultConfig(`value`.let(DefaultConfigProperty::unwrap))
+    unwrap(this).setDefaultConfig(`value`.let(DefaultConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -162,7 +162,7 @@ public open class CfnFunctionDefinitionVersion(
    * The functions in this version.
    */
   public open fun functions(`value`: IResolvable) {
-    unwrap(this).setFunctions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFunctions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -183,7 +183,7 @@ public open class CfnFunctionDefinitionVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -281,7 +281,7 @@ public open class CfnFunctionDefinitionVersion(
      * group. 
      */
     override fun defaultConfig(defaultConfig: IResolvable) {
-      cdkBuilder.defaultConfig(defaultConfig.let(IResolvable::unwrap))
+      cdkBuilder.defaultConfig(defaultConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -294,7 +294,7 @@ public open class CfnFunctionDefinitionVersion(
      * group. 
      */
     override fun defaultConfig(defaultConfig: DefaultConfigProperty) {
-      cdkBuilder.defaultConfig(defaultConfig.let(DefaultConfigProperty::unwrap))
+      cdkBuilder.defaultConfig(defaultConfig.let(DefaultConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -330,7 +330,7 @@ public open class CfnFunctionDefinitionVersion(
      * @param functions The functions in this version. 
      */
     override fun functions(functions: IResolvable) {
-      cdkBuilder.functions(functions.let(IResolvable::unwrap))
+      cdkBuilder.functions(functions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -451,7 +451,7 @@ public open class CfnFunctionDefinitionVersion(
        * Greengrass core. 
        */
       override fun execution(execution: IResolvable) {
-        cdkBuilder.execution(execution.let(IResolvable::unwrap))
+        cdkBuilder.execution(execution.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -459,7 +459,7 @@ public open class CfnFunctionDefinitionVersion(
        * Greengrass core. 
        */
       override fun execution(execution: ExecutionProperty) {
-        cdkBuilder.execution(execution.let(ExecutionProperty::unwrap))
+        cdkBuilder.execution(execution.let(ExecutionProperty.Companion::unwrap))
       }
 
       /**
@@ -677,21 +677,21 @@ public open class CfnFunctionDefinitionVersion(
        * This property applies only to Lambda functions that run in a Greengrass container.
        */
       override fun accessSysfs(accessSysfs: IResolvable) {
-        cdkBuilder.accessSysfs(accessSysfs.let(IResolvable::unwrap))
+        cdkBuilder.accessSysfs(accessSysfs.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param execution Settings for the Lambda execution environment in AWS IoT Greengrass .
        */
       override fun execution(execution: IResolvable) {
-        cdkBuilder.execution(execution.let(IResolvable::unwrap))
+        cdkBuilder.execution(execution.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param execution Settings for the Lambda execution environment in AWS IoT Greengrass .
        */
       override fun execution(execution: ExecutionProperty) {
-        cdkBuilder.execution(execution.let(ExecutionProperty::unwrap))
+        cdkBuilder.execution(execution.let(ExecutionProperty.Companion::unwrap))
       }
 
       /**
@@ -711,7 +711,7 @@ public open class CfnFunctionDefinitionVersion(
        * This property applies only to Lambda functions that run in a Greengrass container.
        */
       override fun resourceAccessPolicies(resourceAccessPolicies: IResolvable) {
-        cdkBuilder.resourceAccessPolicies(resourceAccessPolicies.let(IResolvable::unwrap))
+        cdkBuilder.resourceAccessPolicies(resourceAccessPolicies.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1052,7 +1052,7 @@ public open class CfnFunctionDefinitionVersion(
        * .
        */
       override fun runAs(runAs: IResolvable) {
-        cdkBuilder.runAs(runAs.let(IResolvable::unwrap))
+        cdkBuilder.runAs(runAs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1079,7 +1079,7 @@ public open class CfnFunctionDefinitionVersion(
        * .
        */
       override fun runAs(runAs: RunAsProperty) {
-        cdkBuilder.runAs(runAs.let(RunAsProperty::unwrap))
+        cdkBuilder.runAs(runAs.let(RunAsProperty.Companion::unwrap))
       }
 
       /**
@@ -1386,14 +1386,14 @@ public open class CfnFunctionDefinitionVersion(
        * @param environment The environment configuration of the function.
        */
       override fun environment(environment: IResolvable) {
-        cdkBuilder.environment(environment.let(IResolvable::unwrap))
+        cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param environment The environment configuration of the function.
        */
       override fun environment(environment: EnvironmentProperty) {
-        cdkBuilder.environment(environment.let(EnvironmentProperty::unwrap))
+        cdkBuilder.environment(environment.let(EnvironmentProperty.Companion::unwrap))
       }
 
       /**
@@ -1442,7 +1442,7 @@ public open class CfnFunctionDefinitionVersion(
        * The default value is false.
        */
       override fun pinned(pinned: IResolvable) {
-        cdkBuilder.pinned(pinned.let(IResolvable::unwrap))
+        cdkBuilder.pinned(pinned.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1679,7 +1679,7 @@ public open class CfnFunctionDefinitionVersion(
        * These settings configure the function's behavior in the Greengrass group.
        */
       override fun functionConfiguration(functionConfiguration: IResolvable) {
-        cdkBuilder.functionConfiguration(functionConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.functionConfiguration(functionConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1687,7 +1687,7 @@ public open class CfnFunctionDefinitionVersion(
        * These settings configure the function's behavior in the Greengrass group.
        */
       override fun functionConfiguration(functionConfiguration: FunctionConfigurationProperty) {
-        cdkBuilder.functionConfiguration(functionConfiguration.let(FunctionConfigurationProperty::unwrap))
+        cdkBuilder.functionConfiguration(functionConfiguration.let(FunctionConfigurationProperty.Companion::unwrap))
       }
 
       /**

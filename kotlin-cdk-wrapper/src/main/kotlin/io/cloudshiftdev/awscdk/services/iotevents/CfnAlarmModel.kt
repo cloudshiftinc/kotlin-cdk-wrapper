@@ -174,8 +174,8 @@ public open class CfnAlarmModel(
     id: String,
     props: CfnAlarmModelProps,
   ) :
-      this(software.amazon.awscdk.services.iotevents.CfnAlarmModel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAlarmModelProps::unwrap))
+      this(software.amazon.awscdk.services.iotevents.CfnAlarmModel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAlarmModelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -194,14 +194,14 @@ public open class CfnAlarmModel(
    * Contains the configuration information of alarm state changes.
    */
   public open fun alarmCapabilities(`value`: IResolvable) {
-    unwrap(this).setAlarmCapabilities(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAlarmCapabilities(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Contains the configuration information of alarm state changes.
    */
   public open fun alarmCapabilities(`value`: AlarmCapabilitiesProperty) {
-    unwrap(this).setAlarmCapabilities(`value`.let(AlarmCapabilitiesProperty::unwrap))
+    unwrap(this).setAlarmCapabilities(`value`.let(AlarmCapabilitiesProperty.Companion::unwrap))
   }
 
   /**
@@ -221,14 +221,14 @@ public open class CfnAlarmModel(
    * Contains information about one or more alarm actions.
    */
   public open fun alarmEventActions(`value`: IResolvable) {
-    unwrap(this).setAlarmEventActions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAlarmEventActions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Contains information about one or more alarm actions.
    */
   public open fun alarmEventActions(`value`: AlarmEventActionsProperty) {
-    unwrap(this).setAlarmEventActions(`value`.let(AlarmEventActionsProperty::unwrap))
+    unwrap(this).setAlarmEventActions(`value`.let(AlarmEventActionsProperty.Companion::unwrap))
   }
 
   /**
@@ -272,14 +272,14 @@ public open class CfnAlarmModel(
    * Defines when your alarm is invoked.
    */
   public open fun alarmRule(`value`: IResolvable) {
-    unwrap(this).setAlarmRule(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAlarmRule(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Defines when your alarm is invoked.
    */
   public open fun alarmRule(`value`: AlarmRuleProperty) {
-    unwrap(this).setAlarmRule(`value`.let(AlarmRuleProperty::unwrap))
+    unwrap(this).setAlarmRule(`value`.let(AlarmRuleProperty.Companion::unwrap))
   }
 
   /**
@@ -296,7 +296,7 @@ public open class CfnAlarmModel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -350,7 +350,7 @@ public open class CfnAlarmModel(
    * A list of key-value pairs that contain metadata for the alarm model.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -535,7 +535,7 @@ public open class CfnAlarmModel(
      * @param alarmCapabilities Contains the configuration information of alarm state changes. 
      */
     override fun alarmCapabilities(alarmCapabilities: IResolvable) {
-      cdkBuilder.alarmCapabilities(alarmCapabilities.let(IResolvable::unwrap))
+      cdkBuilder.alarmCapabilities(alarmCapabilities.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -545,7 +545,7 @@ public open class CfnAlarmModel(
      * @param alarmCapabilities Contains the configuration information of alarm state changes. 
      */
     override fun alarmCapabilities(alarmCapabilities: AlarmCapabilitiesProperty) {
-      cdkBuilder.alarmCapabilities(alarmCapabilities.let(AlarmCapabilitiesProperty::unwrap))
+      cdkBuilder.alarmCapabilities(alarmCapabilities.let(AlarmCapabilitiesProperty.Companion::unwrap))
     }
 
     /**
@@ -566,7 +566,7 @@ public open class CfnAlarmModel(
      * @param alarmEventActions Contains information about one or more alarm actions. 
      */
     override fun alarmEventActions(alarmEventActions: IResolvable) {
-      cdkBuilder.alarmEventActions(alarmEventActions.let(IResolvable::unwrap))
+      cdkBuilder.alarmEventActions(alarmEventActions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -576,7 +576,7 @@ public open class CfnAlarmModel(
      * @param alarmEventActions Contains information about one or more alarm actions. 
      */
     override fun alarmEventActions(alarmEventActions: AlarmEventActionsProperty) {
-      cdkBuilder.alarmEventActions(alarmEventActions.let(AlarmEventActionsProperty::unwrap))
+      cdkBuilder.alarmEventActions(alarmEventActions.let(AlarmEventActionsProperty.Companion::unwrap))
     }
 
     /**
@@ -617,7 +617,7 @@ public open class CfnAlarmModel(
      * @param alarmRule Defines when your alarm is invoked. 
      */
     override fun alarmRule(alarmRule: IResolvable) {
-      cdkBuilder.alarmRule(alarmRule.let(IResolvable::unwrap))
+      cdkBuilder.alarmRule(alarmRule.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -627,7 +627,7 @@ public open class CfnAlarmModel(
      * @param alarmRule Defines when your alarm is invoked. 
      */
     override fun alarmRule(alarmRule: AlarmRuleProperty) {
-      cdkBuilder.alarmRule(alarmRule.let(AlarmRuleProperty::unwrap))
+      cdkBuilder.alarmRule(alarmRule.let(AlarmRuleProperty.Companion::unwrap))
     }
 
     /**
@@ -694,7 +694,7 @@ public open class CfnAlarmModel(
      * @param tags A list of key-value pairs that contain metadata for the alarm model. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -813,7 +813,7 @@ public open class CfnAlarmModel(
        * input property value returns to the specified range.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1659,7 +1659,7 @@ public open class CfnAlarmModel(
        * The value for the `type` parameter in `Payload` must be `JSON` .
        */
       override fun dynamoDBv2(dynamoDBv2: IResolvable) {
-        cdkBuilder.dynamoDBv2(dynamoDBv2.let(IResolvable::unwrap))
+        cdkBuilder.dynamoDBv2(dynamoDBv2.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1703,7 +1703,7 @@ public open class CfnAlarmModel(
        * The value for the `type` parameter in `Payload` must be `JSON` .
        */
       override fun dynamoDBv2(dynamoDBv2: DynamoDBv2Property) {
-        cdkBuilder.dynamoDBv2(dynamoDBv2.let(DynamoDBv2Property::unwrap))
+        cdkBuilder.dynamoDBv2(dynamoDBv2.let(DynamoDBv2Property.Companion::unwrap))
       }
 
       /**
@@ -1793,7 +1793,7 @@ public open class CfnAlarmModel(
        * The value for the `payloadField` parameter is `&lt;payload-field&gt;_raw` .
        */
       override fun dynamoDb(dynamoDb: IResolvable) {
-        cdkBuilder.dynamoDb(dynamoDb.let(IResolvable::unwrap))
+        cdkBuilder.dynamoDb(dynamoDb.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1838,7 +1838,7 @@ public open class CfnAlarmModel(
        * The value for the `payloadField` parameter is `&lt;payload-field&gt;_raw` .
        */
       override fun dynamoDb(dynamoDb: DynamoDBProperty) {
-        cdkBuilder.dynamoDb(dynamoDb.let(DynamoDBProperty::unwrap))
+        cdkBuilder.dynamoDb(dynamoDb.let(DynamoDBProperty.Companion::unwrap))
       }
 
       /**
@@ -1892,7 +1892,7 @@ public open class CfnAlarmModel(
        * triggered the action to an Amazon Kinesis Data Firehose delivery stream.
        */
       override fun firehose(firehose: IResolvable) {
-        cdkBuilder.firehose(firehose.let(IResolvable::unwrap))
+        cdkBuilder.firehose(firehose.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1900,7 +1900,7 @@ public open class CfnAlarmModel(
        * triggered the action to an Amazon Kinesis Data Firehose delivery stream.
        */
       override fun firehose(firehose: FirehoseProperty) {
-        cdkBuilder.firehose(firehose.let(FirehoseProperty::unwrap))
+        cdkBuilder.firehose(firehose.let(FirehoseProperty.Companion::unwrap))
       }
 
       /**
@@ -1917,7 +1917,7 @@ public open class CfnAlarmModel(
        * model instance and the event that triggered the action.
        */
       override fun iotEvents(iotEvents: IResolvable) {
-        cdkBuilder.iotEvents(iotEvents.let(IResolvable::unwrap))
+        cdkBuilder.iotEvents(iotEvents.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1925,7 +1925,7 @@ public open class CfnAlarmModel(
        * model instance and the event that triggered the action.
        */
       override fun iotEvents(iotEvents: IotEventsProperty) {
-        cdkBuilder.iotEvents(iotEvents.let(IotEventsProperty::unwrap))
+        cdkBuilder.iotEvents(iotEvents.let(IotEventsProperty.Companion::unwrap))
       }
 
       /**
@@ -1967,7 +1967,7 @@ public open class CfnAlarmModel(
        * in the *AWS IoT Events Developer Guide* .
        */
       override fun iotSiteWise(iotSiteWise: IResolvable) {
-        cdkBuilder.iotSiteWise(iotSiteWise.let(IResolvable::unwrap))
+        cdkBuilder.iotSiteWise(iotSiteWise.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2000,7 +2000,7 @@ public open class CfnAlarmModel(
        * in the *AWS IoT Events Developer Guide* .
        */
       override fun iotSiteWise(iotSiteWise: IotSiteWiseProperty) {
-        cdkBuilder.iotSiteWise(iotSiteWise.let(IotSiteWiseProperty::unwrap))
+        cdkBuilder.iotSiteWise(iotSiteWise.let(IotSiteWiseProperty.Companion::unwrap))
       }
 
       /**
@@ -2042,7 +2042,7 @@ public open class CfnAlarmModel(
        * message broker.
        */
       override fun iotTopicPublish(iotTopicPublish: IResolvable) {
-        cdkBuilder.iotTopicPublish(iotTopicPublish.let(IResolvable::unwrap))
+        cdkBuilder.iotTopicPublish(iotTopicPublish.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2050,7 +2050,7 @@ public open class CfnAlarmModel(
        * message broker.
        */
       override fun iotTopicPublish(iotTopicPublish: IotTopicPublishProperty) {
-        cdkBuilder.iotTopicPublish(iotTopicPublish.let(IotTopicPublishProperty::unwrap))
+        cdkBuilder.iotTopicPublish(iotTopicPublish.let(IotTopicPublishProperty.Companion::unwrap))
       }
 
       /**
@@ -2067,7 +2067,7 @@ public open class CfnAlarmModel(
        * instance and the event that triggered the action.
        */
       override fun lambda(lambda: IResolvable) {
-        cdkBuilder.lambda(lambda.let(IResolvable::unwrap))
+        cdkBuilder.lambda(lambda.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2075,7 +2075,7 @@ public open class CfnAlarmModel(
        * instance and the event that triggered the action.
        */
       override fun lambda(lambda: LambdaProperty) {
-        cdkBuilder.lambda(lambda.let(LambdaProperty::unwrap))
+        cdkBuilder.lambda(lambda.let(LambdaProperty.Companion::unwrap))
       }
 
       /**
@@ -2091,14 +2091,14 @@ public open class CfnAlarmModel(
        * @param sns Information required to publish the Amazon SNS message.
        */
       override fun sns(sns: IResolvable) {
-        cdkBuilder.sns(sns.let(IResolvable::unwrap))
+        cdkBuilder.sns(sns.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sns Information required to publish the Amazon SNS message.
        */
       override fun sns(sns: SnsProperty) {
-        cdkBuilder.sns(sns.let(SnsProperty::unwrap))
+        cdkBuilder.sns(sns.let(SnsProperty.Companion::unwrap))
       }
 
       /**
@@ -2113,7 +2113,7 @@ public open class CfnAlarmModel(
        * the action to an Amazon SQS queue.
        */
       override fun sqs(sqs: IResolvable) {
-        cdkBuilder.sqs(sqs.let(IResolvable::unwrap))
+        cdkBuilder.sqs(sqs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2121,7 +2121,7 @@ public open class CfnAlarmModel(
        * the action to an Amazon SQS queue.
        */
       override fun sqs(sqs: SqsProperty) {
-        cdkBuilder.sqs(sqs.let(SqsProperty::unwrap))
+        cdkBuilder.sqs(sqs.let(SqsProperty.Companion::unwrap))
       }
 
       /**
@@ -2423,14 +2423,14 @@ public open class CfnAlarmModel(
        * @param acknowledgeFlow Specifies whether to get notified for alarm state changes.
        */
       override fun acknowledgeFlow(acknowledgeFlow: IResolvable) {
-        cdkBuilder.acknowledgeFlow(acknowledgeFlow.let(IResolvable::unwrap))
+        cdkBuilder.acknowledgeFlow(acknowledgeFlow.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param acknowledgeFlow Specifies whether to get notified for alarm state changes.
        */
       override fun acknowledgeFlow(acknowledgeFlow: AcknowledgeFlowProperty) {
-        cdkBuilder.acknowledgeFlow(acknowledgeFlow.let(AcknowledgeFlowProperty::unwrap))
+        cdkBuilder.acknowledgeFlow(acknowledgeFlow.let(AcknowledgeFlowProperty.Companion::unwrap))
       }
 
       /**
@@ -2446,7 +2446,7 @@ public open class CfnAlarmModel(
        * The configuration applies to all alarms that were created based on this alarm model.
        */
       override fun initializationConfiguration(initializationConfiguration: IResolvable) {
-        cdkBuilder.initializationConfiguration(initializationConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.initializationConfiguration(initializationConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2455,7 +2455,7 @@ public open class CfnAlarmModel(
        */
       override
           fun initializationConfiguration(initializationConfiguration: InitializationConfigurationProperty) {
-        cdkBuilder.initializationConfiguration(initializationConfiguration.let(InitializationConfigurationProperty::unwrap))
+        cdkBuilder.initializationConfiguration(initializationConfiguration.let(InitializationConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2669,7 +2669,7 @@ public open class CfnAlarmModel(
        * the alarm state changes.
        */
       override fun alarmActions(alarmActions: IResolvable) {
-        cdkBuilder.alarmActions(alarmActions.let(IResolvable::unwrap))
+        cdkBuilder.alarmActions(alarmActions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2786,7 +2786,7 @@ public open class CfnAlarmModel(
        * comparison operator.
        */
       override fun simpleRule(simpleRule: IResolvable) {
-        cdkBuilder.simpleRule(simpleRule.let(IResolvable::unwrap))
+        cdkBuilder.simpleRule(simpleRule.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2794,7 +2794,7 @@ public open class CfnAlarmModel(
        * comparison operator.
        */
       override fun simpleRule(simpleRule: SimpleRuleProperty) {
-        cdkBuilder.simpleRule(simpleRule.let(SimpleRuleProperty::unwrap))
+        cdkBuilder.simpleRule(simpleRule.let(SimpleRuleProperty.Companion::unwrap))
       }
 
       /**
@@ -3123,7 +3123,7 @@ public open class CfnAlarmModel(
        * The default is the current event time.
        */
       override fun timestamp(timestamp: IResolvable) {
-        cdkBuilder.timestamp(timestamp.let(IResolvable::unwrap))
+        cdkBuilder.timestamp(timestamp.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3131,7 +3131,7 @@ public open class CfnAlarmModel(
        * The default is the current event time.
        */
       override fun timestamp(timestamp: AssetPropertyTimestampProperty) {
-        cdkBuilder.timestamp(timestamp.let(AssetPropertyTimestampProperty::unwrap))
+        cdkBuilder.timestamp(timestamp.let(AssetPropertyTimestampProperty.Companion::unwrap))
       }
 
       /**
@@ -3147,14 +3147,14 @@ public open class CfnAlarmModel(
        * @param value The value to send to an asset property. 
        */
       override fun `value`(`value`: IResolvable) {
-        cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
+        cdkBuilder.`value`(`value`.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param value The value to send to an asset property. 
        */
       override fun `value`(`value`: AssetPropertyVariantProperty) {
-        cdkBuilder.`value`(`value`.let(AssetPropertyVariantProperty::unwrap))
+        cdkBuilder.`value`(`value`.let(AssetPropertyVariantProperty.Companion::unwrap))
       }
 
       /**
@@ -3774,7 +3774,7 @@ public open class CfnAlarmModel(
        * `contentExpression` .
        */
       override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+        cdkBuilder.payload(payload.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3785,7 +3785,7 @@ public open class CfnAlarmModel(
        * `contentExpression` .
        */
       override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+        cdkBuilder.payload(payload.let(PayloadProperty.Companion::unwrap))
       }
 
       /**
@@ -4106,7 +4106,7 @@ public open class CfnAlarmModel(
        * `contentExpression` .
        */
       override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+        cdkBuilder.payload(payload.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4117,7 +4117,7 @@ public open class CfnAlarmModel(
        * `contentExpression` .
        */
       override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+        cdkBuilder.payload(payload.let(PayloadProperty.Companion::unwrap))
       }
 
       /**
@@ -4290,7 +4290,7 @@ public open class CfnAlarmModel(
        * Data Firehose delivery stream.
        */
       override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+        cdkBuilder.payload(payload.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4298,7 +4298,7 @@ public open class CfnAlarmModel(
        * Data Firehose delivery stream.
        */
       override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+        cdkBuilder.payload(payload.let(PayloadProperty.Companion::unwrap))
       }
 
       /**
@@ -4441,7 +4441,7 @@ public open class CfnAlarmModel(
        * default value is `TRUE` .
        */
       override fun disabledOnInitialization(disabledOnInitialization: IResolvable) {
-        cdkBuilder.disabledOnInitialization(disabledOnInitialization.let(IResolvable::unwrap))
+        cdkBuilder.disabledOnInitialization(disabledOnInitialization.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -4567,7 +4567,7 @@ public open class CfnAlarmModel(
        * Events input.
        */
       override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+        cdkBuilder.payload(payload.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4575,7 +4575,7 @@ public open class CfnAlarmModel(
        * Events input.
        */
       override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+        cdkBuilder.payload(payload.let(PayloadProperty.Companion::unwrap))
       }
 
       /**
@@ -4816,7 +4816,7 @@ public open class CfnAlarmModel(
        * This value contains timestamp, quality, and value (TQV) information.
        */
       override fun propertyValue(propertyValue: IResolvable) {
-        cdkBuilder.propertyValue(propertyValue.let(IResolvable::unwrap))
+        cdkBuilder.propertyValue(propertyValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4824,7 +4824,7 @@ public open class CfnAlarmModel(
        * This value contains timestamp, quality, and value (TQV) information.
        */
       override fun propertyValue(propertyValue: AssetPropertyValueProperty) {
-        cdkBuilder.propertyValue(propertyValue.let(AssetPropertyValueProperty::unwrap))
+        cdkBuilder.propertyValue(propertyValue.let(AssetPropertyValueProperty.Companion::unwrap))
       }
 
       /**
@@ -4994,7 +4994,7 @@ public open class CfnAlarmModel(
        * IoT Core topic.
        */
       override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+        cdkBuilder.payload(payload.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5002,7 +5002,7 @@ public open class CfnAlarmModel(
        * IoT Core topic.
        */
       override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+        cdkBuilder.payload(payload.let(PayloadProperty.Companion::unwrap))
       }
 
       /**
@@ -5143,7 +5143,7 @@ public open class CfnAlarmModel(
        * function.
        */
       override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+        cdkBuilder.payload(payload.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5151,7 +5151,7 @@ public open class CfnAlarmModel(
        * function.
        */
       override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+        cdkBuilder.payload(payload.let(PayloadProperty.Companion::unwrap))
       }
 
       /**
@@ -5560,7 +5560,7 @@ public open class CfnAlarmModel(
        * SNS push notification.
        */
       override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+        cdkBuilder.payload(payload.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5568,7 +5568,7 @@ public open class CfnAlarmModel(
        * SNS push notification.
        */
       override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+        cdkBuilder.payload(payload.let(PayloadProperty.Companion::unwrap))
       }
 
       /**
@@ -5730,7 +5730,7 @@ public open class CfnAlarmModel(
        * SQS queue.
        */
       override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+        cdkBuilder.payload(payload.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5738,7 +5738,7 @@ public open class CfnAlarmModel(
        * SQS queue.
        */
       override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+        cdkBuilder.payload(payload.let(PayloadProperty.Companion::unwrap))
       }
 
       /**
@@ -5772,7 +5772,7 @@ public open class CfnAlarmModel(
        * Otherwise, set this to FALSE.
        */
       override fun useBase64(useBase64: IResolvable) {
-        cdkBuilder.useBase64(useBase64.let(IResolvable::unwrap))
+        cdkBuilder.useBase64(useBase64.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.iotevents.CfnAlarmModel.SqsProperty =

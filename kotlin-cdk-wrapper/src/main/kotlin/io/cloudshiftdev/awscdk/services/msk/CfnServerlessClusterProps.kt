@@ -127,7 +127,7 @@ public interface CfnServerlessClusterProps {
      * @param clientAuthentication Includes all client authentication information. 
      */
     override fun clientAuthentication(clientAuthentication: IResolvable) {
-      cdkBuilder.clientAuthentication(clientAuthentication.let(IResolvable::unwrap))
+      cdkBuilder.clientAuthentication(clientAuthentication.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -135,7 +135,7 @@ public interface CfnServerlessClusterProps {
      */
     override
         fun clientAuthentication(clientAuthentication: CfnServerlessCluster.ClientAuthenticationProperty) {
-      cdkBuilder.clientAuthentication(clientAuthentication.let(CfnServerlessCluster.ClientAuthenticationProperty::unwrap))
+      cdkBuilder.clientAuthentication(clientAuthentication.let(CfnServerlessCluster.ClientAuthenticationProperty.Companion::unwrap))
     }
 
     /**
@@ -166,7 +166,7 @@ public interface CfnServerlessClusterProps {
      * @param vpcConfigs the value to be set. 
      */
     override fun vpcConfigs(vpcConfigs: IResolvable) {
-      cdkBuilder.vpcConfigs(vpcConfigs.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfigs(vpcConfigs.let(IResolvable.Companion::unwrap))
     }
 
     /**

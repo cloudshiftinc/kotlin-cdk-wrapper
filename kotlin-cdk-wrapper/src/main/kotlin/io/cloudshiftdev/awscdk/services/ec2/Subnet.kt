@@ -44,8 +44,8 @@ public open class Subnet(
     id: String,
     props: SubnetProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.Subnet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SubnetProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.Subnet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SubnetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -63,7 +63,8 @@ public open class Subnet(
    * @param gatewayAttachment the gateway attachment construct to be added as a dependency. 
    */
   public open fun addDefaultInternetRoute(gatewayId: String, gatewayAttachment: IDependable) {
-    unwrap(this).addDefaultInternetRoute(gatewayId, gatewayAttachment.let(IDependable::unwrap))
+    unwrap(this).addDefaultInternetRoute(gatewayId,
+        gatewayAttachment.let(IDependable.Companion::unwrap))
   }
 
   /**
@@ -111,7 +112,7 @@ public open class Subnet(
    * @param options 
    */
   public open fun addRoute(id: String, options: AddRouteOptions) {
-    unwrap(this).addRoute(id, options.let(AddRouteOptions::unwrap))
+    unwrap(this).addRoute(id, options.let(AddRouteOptions.Companion::unwrap))
   }
 
   /**
@@ -132,7 +133,7 @@ public open class Subnet(
    * @param networkAcl 
    */
   public override fun associateNetworkAcl(id: String, networkAcl: INetworkAcl) {
-    unwrap(this).associateNetworkAcl(id, networkAcl.let(INetworkAcl::unwrap))
+    unwrap(this).associateNetworkAcl(id, networkAcl.let(INetworkAcl.Companion::unwrap))
   }
 
   /**
@@ -346,8 +347,8 @@ public open class Subnet(
       id: String,
       attrs: SubnetAttributes,
     ): ISubnet =
-        software.amazon.awscdk.services.ec2.Subnet.fromSubnetAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(SubnetAttributes::unwrap)).let(ISubnet::wrap)
+        software.amazon.awscdk.services.ec2.Subnet.fromSubnetAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(SubnetAttributes.Companion::unwrap)).let(ISubnet::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bcd31c29478f827dbff002348d295e16e925bd47775558a2a43fd936e9c4133e")
@@ -362,7 +363,7 @@ public open class Subnet(
       id: String,
       subnetId: String,
     ): ISubnet =
-        software.amazon.awscdk.services.ec2.Subnet.fromSubnetId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ec2.Subnet.fromSubnetId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, subnetId).let(ISubnet::wrap)
 
     public fun isVpcSubnet(x: Any): Boolean =

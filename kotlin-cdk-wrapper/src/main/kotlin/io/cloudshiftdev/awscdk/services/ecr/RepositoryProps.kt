@@ -236,7 +236,7 @@ public interface RepositoryProps {
      * encryptionKey is not specified, an AWS managed KMS key is used.
      */
     override fun encryption(encryption: RepositoryEncryption) {
-      cdkBuilder.encryption(encryption.let(RepositoryEncryption::unwrap))
+      cdkBuilder.encryption(encryption.let(RepositoryEncryption.Companion::unwrap))
     }
 
     /**
@@ -245,7 +245,7 @@ public interface RepositoryProps {
      * An error will be emitted if encryption is set to "AES256".
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -261,7 +261,7 @@ public interface RepositoryProps {
      * image tags to be overwritten.
      */
     override fun imageTagMutability(imageTagMutability: TagMutability) {
-      cdkBuilder.imageTagMutability(imageTagMutability.let(TagMutability::unwrap))
+      cdkBuilder.imageTagMutability(imageTagMutability.let(TagMutability.Companion::unwrap))
     }
 
     /**
@@ -276,7 +276,7 @@ public interface RepositoryProps {
      * @param lifecycleRules Life cycle rules to apply to this registry.
      */
     override fun lifecycleRules(lifecycleRules: List<LifecycleRule>) {
-      cdkBuilder.lifecycleRules(lifecycleRules.map(LifecycleRule::unwrap))
+      cdkBuilder.lifecycleRules(lifecycleRules.map(LifecycleRule.Companion::unwrap))
     }
 
     /**
@@ -290,7 +290,7 @@ public interface RepositoryProps {
      * deleted.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**

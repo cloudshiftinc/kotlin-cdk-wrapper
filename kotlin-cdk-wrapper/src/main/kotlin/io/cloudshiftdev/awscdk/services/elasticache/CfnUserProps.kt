@@ -214,7 +214,7 @@ public interface CfnUserProps {
      * @param noPasswordRequired Indicates a password is not required for this user.
      */
     override fun noPasswordRequired(noPasswordRequired: IResolvable) {
-      cdkBuilder.noPasswordRequired(noPasswordRequired.let(IResolvable::unwrap))
+      cdkBuilder.noPasswordRequired(noPasswordRequired.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -235,7 +235,7 @@ public interface CfnUserProps {
      * @param tags An array of key-value pairs to apply to this user.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

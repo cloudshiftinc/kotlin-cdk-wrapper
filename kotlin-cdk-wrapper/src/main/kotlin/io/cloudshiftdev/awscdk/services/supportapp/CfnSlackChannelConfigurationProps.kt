@@ -222,7 +222,7 @@ public interface CfnSlackChannelConfigurationProps {
      * to your support cases.
      */
     override fun notifyOnAddCorrespondenceToCase(notifyOnAddCorrespondenceToCase: IResolvable) {
-      cdkBuilder.notifyOnAddCorrespondenceToCase(notifyOnAddCorrespondenceToCase.let(IResolvable::unwrap))
+      cdkBuilder.notifyOnAddCorrespondenceToCase(notifyOnAddCorrespondenceToCase.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -247,7 +247,7 @@ public interface CfnSlackChannelConfigurationProps {
      * or reopened.
      */
     override fun notifyOnCreateOrReopenCase(notifyOnCreateOrReopenCase: IResolvable) {
-      cdkBuilder.notifyOnCreateOrReopenCase(notifyOnCreateOrReopenCase.let(IResolvable::unwrap))
+      cdkBuilder.notifyOnCreateOrReopenCase(notifyOnCreateOrReopenCase.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -261,7 +261,7 @@ public interface CfnSlackChannelConfigurationProps {
      * @param notifyOnResolveCase Whether to get notified when your support cases are resolved.
      */
     override fun notifyOnResolveCase(notifyOnResolveCase: IResolvable) {
-      cdkBuilder.notifyOnResolveCase(notifyOnResolveCase.let(IResolvable::unwrap))
+      cdkBuilder.notifyOnResolveCase(notifyOnResolveCase.let(IResolvable.Companion::unwrap))
     }
 
     /**

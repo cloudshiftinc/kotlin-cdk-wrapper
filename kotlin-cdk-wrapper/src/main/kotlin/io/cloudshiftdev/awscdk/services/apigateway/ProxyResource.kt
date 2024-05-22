@@ -35,8 +35,8 @@ public open class ProxyResource(
     id: String,
     props: ProxyResourceProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.ProxyResource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ProxyResourceProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.ProxyResource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ProxyResourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -64,7 +64,8 @@ public open class ProxyResource(
    * @param options
    */
   public override fun addMethod(httpMethod: String, integration: Integration): Method =
-      unwrap(this).addMethod(httpMethod, integration.let(Integration::unwrap)).let(Method::wrap)
+      unwrap(this).addMethod(httpMethod,
+      integration.let(Integration.Companion::unwrap)).let(Method::wrap)
 
   /**
    * Defines a new method for this resource.
@@ -89,8 +90,8 @@ public open class ProxyResource(
     httpMethod: String,
     integration: Integration,
     options: MethodOptions,
-  ): Method = unwrap(this).addMethod(httpMethod, integration.let(Integration::unwrap),
-      options.let(MethodOptions::unwrap)).let(Method::wrap)
+  ): Method = unwrap(this).addMethod(httpMethod, integration.let(Integration.Companion::unwrap),
+      options.let(MethodOptions.Companion::unwrap)).let(Method::wrap)
 
   /**
    * Defines a new method for this resource.
@@ -248,7 +249,7 @@ public open class ProxyResource(
      * all child resources. 
      */
     override fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions) {
-      cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions::unwrap))
+      cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions.Companion::unwrap))
     }
 
     /**
@@ -277,7 +278,7 @@ public open class ProxyResource(
      * this API unless an integration is specified. 
      */
     override fun defaultIntegration(defaultIntegration: Integration) {
-      cdkBuilder.defaultIntegration(defaultIntegration.let(Integration::unwrap))
+      cdkBuilder.defaultIntegration(defaultIntegration.let(Integration.Companion::unwrap))
     }
 
     /**
@@ -304,7 +305,7 @@ public open class ProxyResource(
      * this API unless custom options are specified. 
      */
     override fun defaultMethodOptions(defaultMethodOptions: MethodOptions) {
-      cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions::unwrap))
+      cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions.Companion::unwrap))
     }
 
     /**
@@ -330,7 +331,7 @@ public open class ProxyResource(
      * @param parent The parent resource of this resource. 
      */
     override fun parent(parent: IResource) {
-      cdkBuilder.parent(parent.let(IResource::unwrap))
+      cdkBuilder.parent(parent.let(IResource.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.ProxyResource =

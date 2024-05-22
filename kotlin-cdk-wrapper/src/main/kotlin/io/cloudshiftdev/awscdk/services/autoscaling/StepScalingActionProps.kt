@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.Unit
 
@@ -46,10 +47,13 @@ public interface StepScalingActionProps {
   public fun autoScalingGroup(): IAutoScalingGroup
 
   /**
-   * Period after a scaling completes before another scaling activity can start.
+   * (deprecated) Period after a scaling completes before another scaling activity can start.
    *
    * Default: The default cooldown configured on the AutoScalingGroup
+   *
+   * @deprecated cooldown is not valid with step scaling action
    */
+  @Deprecated(message = "deprecated in CDK")
   public fun cooldown(): Duration? = unwrap(this).getCooldown()?.let(Duration::wrap)
 
   /**
@@ -95,7 +99,9 @@ public interface StepScalingActionProps {
 
     /**
      * @param cooldown Period after a scaling completes before another scaling activity can start.
+     * @deprecated cooldown is not valid with step scaling action
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun cooldown(cooldown: Duration)
 
     /**
@@ -127,21 +133,23 @@ public interface StepScalingActionProps {
      * @param adjustmentType How the adjustment numbers are interpreted.
      */
     override fun adjustmentType(adjustmentType: AdjustmentType) {
-      cdkBuilder.adjustmentType(adjustmentType.let(AdjustmentType::unwrap))
+      cdkBuilder.adjustmentType(adjustmentType.let(AdjustmentType.Companion::unwrap))
     }
 
     /**
      * @param autoScalingGroup The auto scaling group. 
      */
     override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
-      cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup::unwrap))
+      cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup.Companion::unwrap))
     }
 
     /**
      * @param cooldown Period after a scaling completes before another scaling activity can start.
+     * @deprecated cooldown is not valid with step scaling action
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun cooldown(cooldown: Duration) {
-      cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
+      cdkBuilder.cooldown(cooldown.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -149,14 +157,14 @@ public interface StepScalingActionProps {
      * metrics to CloudWatch.
      */
     override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
-      cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup.let(Duration::unwrap))
+      cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param metricAggregationType The aggregation type for the CloudWatch metrics.
      */
     override fun metricAggregationType(metricAggregationType: MetricAggregationType) {
-      cdkBuilder.metricAggregationType(metricAggregationType.let(MetricAggregationType::unwrap))
+      cdkBuilder.metricAggregationType(metricAggregationType.let(MetricAggregationType.Companion::unwrap))
     }
 
     /**
@@ -191,10 +199,13 @@ public interface StepScalingActionProps {
         unwrap(this).getAutoScalingGroup().let(IAutoScalingGroup::wrap)
 
     /**
-     * Period after a scaling completes before another scaling activity can start.
+     * (deprecated) Period after a scaling completes before another scaling activity can start.
      *
      * Default: The default cooldown configured on the AutoScalingGroup
+     *
+     * @deprecated cooldown is not valid with step scaling action
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun cooldown(): Duration? = unwrap(this).getCooldown()?.let(Duration::wrap)
 
     /**

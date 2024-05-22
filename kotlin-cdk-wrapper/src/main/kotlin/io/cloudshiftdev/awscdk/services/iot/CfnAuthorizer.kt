@@ -55,8 +55,8 @@ public open class CfnAuthorizer(
     id: String,
     props: CfnAuthorizerProps,
   ) :
-      this(software.amazon.awscdk.services.iot.CfnAuthorizer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAuthorizerProps::unwrap))
+      this(software.amazon.awscdk.services.iot.CfnAuthorizer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAuthorizerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -114,7 +114,7 @@ public open class CfnAuthorizer(
    * persistent HTTP connections.
    */
   public open fun enableCachingForHttp(`value`: IResolvable) {
-    unwrap(this).setEnableCachingForHttp(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableCachingForHttp(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -123,7 +123,7 @@ public open class CfnAuthorizer(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -142,7 +142,7 @@ public open class CfnAuthorizer(
    * Specifies whether AWS IoT validates the token signature in an authorization request.
    */
   public open fun signingDisabled(`value`: IResolvable) {
-    unwrap(this).setSigningDisabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSigningDisabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -172,7 +172,7 @@ public open class CfnAuthorizer(
    * Metadata which can be used to manage the custom authorizer.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -203,7 +203,7 @@ public open class CfnAuthorizer(
    * service.
    */
   public open fun tokenSigningPublicKeys(`value`: IResolvable) {
-    unwrap(this).setTokenSigningPublicKeys(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTokenSigningPublicKeys(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -410,7 +410,7 @@ public open class CfnAuthorizer(
      * cached for clients that use persistent HTTP connections. 
      */
     override fun enableCachingForHttp(enableCachingForHttp: IResolvable) {
-      cdkBuilder.enableCachingForHttp(enableCachingForHttp.let(IResolvable::unwrap))
+      cdkBuilder.enableCachingForHttp(enableCachingForHttp.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -432,7 +432,7 @@ public open class CfnAuthorizer(
      * authorization request. 
      */
     override fun signingDisabled(signingDisabled: IResolvable) {
-      cdkBuilder.signingDisabled(signingDisabled.let(IResolvable::unwrap))
+      cdkBuilder.signingDisabled(signingDisabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -463,7 +463,7 @@ public open class CfnAuthorizer(
      * @param tags Metadata which can be used to manage the custom authorizer. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -502,7 +502,7 @@ public open class CfnAuthorizer(
      * by your custom authentication service. 
      */
     override fun tokenSigningPublicKeys(tokenSigningPublicKeys: IResolvable) {
-      cdkBuilder.tokenSigningPublicKeys(tokenSigningPublicKeys.let(IResolvable::unwrap))
+      cdkBuilder.tokenSigningPublicKeys(tokenSigningPublicKeys.let(IResolvable.Companion::unwrap))
     }
 
     /**

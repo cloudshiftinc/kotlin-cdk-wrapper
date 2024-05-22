@@ -175,7 +175,7 @@ public interface CfnThemeProps {
      * @param overrides Describes the properties that can be overriden to customize a theme.
      */
     override fun overrides(overrides: IResolvable) {
-      cdkBuilder.overrides(overrides.let(IResolvable::unwrap))
+      cdkBuilder.overrides(overrides.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -201,7 +201,7 @@ public interface CfnThemeProps {
      * @param values A list of key-value pairs that defines the properties of the theme.
      */
     override fun values(values: IResolvable) {
-      cdkBuilder.values(values.let(IResolvable::unwrap))
+      cdkBuilder.values(values.let(IResolvable.Companion::unwrap))
     }
 
     /**

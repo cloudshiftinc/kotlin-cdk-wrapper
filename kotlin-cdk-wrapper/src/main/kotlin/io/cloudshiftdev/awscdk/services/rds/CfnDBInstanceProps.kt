@@ -32,6 +32,7 @@ import kotlin.jvm.JvmName
  * .featureName("featureName")
  * .roleArn("roleArn")
  * .build()))
+ * .automaticBackupReplicationKmsKeyId("automaticBackupReplicationKmsKeyId")
  * .automaticBackupReplicationRegion("automaticBackupReplicationRegion")
  * .autoMinorVersionUpgrade(false)
  * .availabilityZone("availabilityZone")
@@ -233,6 +234,17 @@ public interface CfnDBInstanceProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-autominorversionupgrade)
    */
   public fun autoMinorVersionUpgrade(): Any? = unwrap(this).getAutoMinorVersionUpgrade()
+
+  /**
+   * The AWS KMS key identifier for encryption of the replicated automated backups.
+   *
+   * The KMS key ID is the Amazon Resource Name (ARN) for the KMS encryption key in the destination
+   * AWS Region , for example, `arn:aws:kms:us-east-1:123456789012:key/AKIAIOSFODNN7EXAMPLE` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-automaticbackupreplicationkmskeyid)
+   */
+  public fun automaticBackupReplicationKmsKeyId(): String? =
+      unwrap(this).getAutomaticBackupReplicationKmsKeyId()
 
   /**
    * The destination region for the backup replication of the DB instance.
@@ -1632,7 +1644,8 @@ public interface CfnDBInstanceProps {
   /**
    * The time zone of the DB instance.
    *
-   * The time zone parameter is currently supported only by [Microsoft SQL
+   * The time zone parameter is currently supported only by [RDS for
+   * Db2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-time-zone) and [RDS for SQL
    * Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone)
    * .
    *
@@ -1843,6 +1856,15 @@ public interface CfnDBInstanceProps {
      * By default, minor engine upgrades are applied automatically.
      */
     public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable)
+
+    /**
+     * @param automaticBackupReplicationKmsKeyId The AWS KMS key identifier for encryption of the
+     * replicated automated backups.
+     * The KMS key ID is the Amazon Resource Name (ARN) for the KMS encryption key in the
+     * destination AWS Region , for example,
+     * `arn:aws:kms:us-east-1:123456789012:key/AKIAIOSFODNN7EXAMPLE` .
+     */
+    public fun automaticBackupReplicationKmsKeyId(automaticBackupReplicationKmsKeyId: String)
 
     /**
      * @param automaticBackupReplicationRegion The destination region for the backup replication of
@@ -3382,7 +3404,8 @@ public interface CfnDBInstanceProps {
 
     /**
      * @param timezone The time zone of the DB instance.
-     * The time zone parameter is currently supported only by [Microsoft SQL
+     * The time zone parameter is currently supported only by [RDS for
+     * Db2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-time-zone) and [RDS for SQL
      * Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone)
      * .
      */
@@ -3603,7 +3626,7 @@ public interface CfnDBInstanceProps {
      * version.
      */
     override fun allowMajorVersionUpgrade(allowMajorVersionUpgrade: IResolvable) {
-      cdkBuilder.allowMajorVersionUpgrade(allowMajorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.allowMajorVersionUpgrade(allowMajorVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3614,7 +3637,7 @@ public interface CfnDBInstanceProps {
      * Not applicable. The associated roles are managed by the DB cluster.
      */
     override fun associatedRoles(associatedRoles: IResolvable) {
-      cdkBuilder.associatedRoles(associatedRoles.let(IResolvable::unwrap))
+      cdkBuilder.associatedRoles(associatedRoles.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3653,7 +3676,18 @@ public interface CfnDBInstanceProps {
      * By default, minor engine upgrades are applied automatically.
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param automaticBackupReplicationKmsKeyId The AWS KMS key identifier for encryption of the
+     * replicated automated backups.
+     * The KMS key ID is the Amazon Resource Name (ARN) for the KMS encryption key in the
+     * destination AWS Region , for example,
+     * `arn:aws:kms:us-east-1:123456789012:key/AKIAIOSFODNN7EXAMPLE` .
+     */
+    override fun automaticBackupReplicationKmsKeyId(automaticBackupReplicationKmsKeyId: String) {
+      cdkBuilder.automaticBackupReplicationKmsKeyId(automaticBackupReplicationKmsKeyId)
     }
 
     /**
@@ -3727,14 +3761,14 @@ public interface CfnDBInstanceProps {
      * @param certificateDetails The details of the DB instance's server certificate.
      */
     override fun certificateDetails(certificateDetails: IResolvable) {
-      cdkBuilder.certificateDetails(certificateDetails.let(IResolvable::unwrap))
+      cdkBuilder.certificateDetails(certificateDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param certificateDetails The details of the DB instance's server certificate.
      */
     override fun certificateDetails(certificateDetails: CfnDBInstance.CertificateDetailsProperty) {
-      cdkBuilder.certificateDetails(certificateDetails.let(CfnDBInstance.CertificateDetailsProperty::unwrap))
+      cdkBuilder.certificateDetails(certificateDetails.let(CfnDBInstance.CertificateDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -3799,7 +3833,7 @@ public interface CfnDBInstanceProps {
      * This setting doesn't apply to RDS Custom DB instances.
      */
     override fun certificateRotationRestart(certificateRotationRestart: IResolvable) {
-      cdkBuilder.certificateRotationRestart(certificateRotationRestart.let(IResolvable::unwrap))
+      cdkBuilder.certificateRotationRestart(certificateRotationRestart.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3838,7 +3872,7 @@ public interface CfnDBInstanceProps {
      * cluster setting.
      */
     override fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable) {
-      cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot.let(IResolvable::unwrap))
+      cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4195,7 +4229,7 @@ public interface CfnDBInstanceProps {
      * enabled.
      */
     override fun dedicatedLogVolume(dedicatedLogVolume: IResolvable) {
-      cdkBuilder.dedicatedLogVolume(dedicatedLogVolume.let(IResolvable::unwrap))
+      cdkBuilder.dedicatedLogVolume(dedicatedLogVolume.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4225,7 +4259,7 @@ public interface CfnDBInstanceProps {
      * deleted and can't be recovered. Manual DB cluster snapshots of the DB cluster are not deleted.
      */
     override fun deleteAutomatedBackups(deleteAutomatedBackups: IResolvable) {
-      cdkBuilder.deleteAutomatedBackups(deleteAutomatedBackups.let(IResolvable::unwrap))
+      cdkBuilder.deleteAutomatedBackups(deleteAutomatedBackups.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4259,7 +4293,7 @@ public interface CfnDBInstanceProps {
      * deletion protection is enabled for the DB cluster.
      */
     override fun deletionProtection(deletionProtection: IResolvable) {
-      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable::unwrap))
+      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4461,7 +4495,7 @@ public interface CfnDBInstanceProps {
      * Not applicable. Mapping AWS IAM accounts to database accounts is managed by the DB cluster.
      */
     override fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: IResolvable) {
-      cdkBuilder.enableIamDatabaseAuthentication(enableIamDatabaseAuthentication.let(IResolvable::unwrap))
+      cdkBuilder.enableIamDatabaseAuthentication(enableIamDatabaseAuthentication.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4487,7 +4521,7 @@ public interface CfnDBInstanceProps {
      * This setting doesn't apply to RDS Custom DB instances.
      */
     override fun enablePerformanceInsights(enablePerformanceInsights: IResolvable) {
-      cdkBuilder.enablePerformanceInsights(enablePerformanceInsights.let(IResolvable::unwrap))
+      cdkBuilder.enablePerformanceInsights(enablePerformanceInsights.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4496,7 +4530,7 @@ public interface CfnDBInstanceProps {
      * The endpoint might not be shown for instances with the status of `creating` .
      */
     override fun endpoint(endpoint: IResolvable) {
-      cdkBuilder.endpoint(endpoint.let(IResolvable::unwrap))
+      cdkBuilder.endpoint(endpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4505,7 +4539,7 @@ public interface CfnDBInstanceProps {
      * The endpoint might not be shown for instances with the status of `creating` .
      */
     override fun endpoint(endpoint: CfnDBInstance.EndpointProperty) {
-      cdkBuilder.endpoint(endpoint.let(CfnDBInstance.EndpointProperty::unwrap))
+      cdkBuilder.endpoint(endpoint.let(CfnDBInstance.EndpointProperty.Companion::unwrap))
     }
 
     /**
@@ -4724,7 +4758,7 @@ public interface CfnDBInstanceProps {
      * specified.
      */
     override fun manageMasterUserPassword(manageMasterUserPassword: IResolvable) {
-      cdkBuilder.manageMasterUserPassword(manageMasterUserPassword.let(IResolvable::unwrap))
+      cdkBuilder.manageMasterUserPassword(manageMasterUserPassword.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4770,7 +4804,7 @@ public interface CfnDBInstanceProps {
      * *Amazon RDS User Guide.*
      */
     override fun masterUserSecret(masterUserSecret: IResolvable) {
-      cdkBuilder.masterUserSecret(masterUserSecret.let(IResolvable::unwrap))
+      cdkBuilder.masterUserSecret(masterUserSecret.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4781,7 +4815,7 @@ public interface CfnDBInstanceProps {
      * *Amazon RDS User Guide.*
      */
     override fun masterUserSecret(masterUserSecret: CfnDBInstance.MasterUserSecretProperty) {
-      cdkBuilder.masterUserSecret(masterUserSecret.let(CfnDBInstance.MasterUserSecretProperty::unwrap))
+      cdkBuilder.masterUserSecret(masterUserSecret.let(CfnDBInstance.MasterUserSecretProperty.Companion::unwrap))
     }
 
     /**
@@ -4943,7 +4977,7 @@ public interface CfnDBInstanceProps {
      * doesn't require the `MultiAZ` option to be set.
      */
     override fun multiAz(multiAz: IResolvable) {
-      cdkBuilder.multiAz(multiAz.let(IResolvable::unwrap))
+      cdkBuilder.multiAz(multiAz.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -5086,7 +5120,7 @@ public interface CfnDBInstanceProps {
      * This setting doesn't apply to Amazon Aurora or RDS Custom DB instances.
      */
     override fun processorFeatures(processorFeatures: IResolvable) {
-      cdkBuilder.processorFeatures(processorFeatures.let(IResolvable::unwrap))
+      cdkBuilder.processorFeatures(processorFeatures.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -5150,7 +5184,7 @@ public interface CfnDBInstanceProps {
      * in the *Amazon RDS API Reference* .
      */
     override fun publiclyAccessible(publiclyAccessible: IResolvable) {
-      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
+      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -5307,7 +5341,7 @@ public interface CfnDBInstanceProps {
      * Not applicable. The encryption for DB instances is managed by the DB cluster.
      */
     override fun storageEncrypted(storageEncrypted: IResolvable) {
-      cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable::unwrap))
+      cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -5339,7 +5373,7 @@ public interface CfnDBInstanceProps {
      * @param tags An optional array of key-value pairs to apply to this DB instance.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -5367,7 +5401,8 @@ public interface CfnDBInstanceProps {
 
     /**
      * @param timezone The time zone of the DB instance.
-     * The time zone parameter is currently supported only by [Microsoft SQL
+     * The time zone parameter is currently supported only by [RDS for
+     * Db2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-time-zone) and [RDS for SQL
      * Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone)
      * .
      */
@@ -5390,7 +5425,7 @@ public interface CfnDBInstanceProps {
      * This setting doesn't apply to RDS Custom DB instances.
      */
     override fun useDefaultProcessorFeatures(useDefaultProcessorFeatures: IResolvable) {
-      cdkBuilder.useDefaultProcessorFeatures(useDefaultProcessorFeatures.let(IResolvable::unwrap))
+      cdkBuilder.useDefaultProcessorFeatures(useDefaultProcessorFeatures.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -5416,7 +5451,7 @@ public interface CfnDBInstanceProps {
      * * Can't be specified if the `RestoreTime` parameter is provided.
      */
     override fun useLatestRestorableTime(useLatestRestorableTime: IResolvable) {
-      cdkBuilder.useLatestRestorableTime(useLatestRestorableTime.let(IResolvable::unwrap))
+      cdkBuilder.useLatestRestorableTime(useLatestRestorableTime.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -5611,6 +5646,18 @@ public interface CfnDBInstanceProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-autominorversionupgrade)
      */
     override fun autoMinorVersionUpgrade(): Any? = unwrap(this).getAutoMinorVersionUpgrade()
+
+    /**
+     * The AWS KMS key identifier for encryption of the replicated automated backups.
+     *
+     * The KMS key ID is the Amazon Resource Name (ARN) for the KMS encryption key in the
+     * destination AWS Region , for example,
+     * `arn:aws:kms:us-east-1:123456789012:key/AKIAIOSFODNN7EXAMPLE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-automaticbackupreplicationkmskeyid)
+     */
+    override fun automaticBackupReplicationKmsKeyId(): String? =
+        unwrap(this).getAutomaticBackupReplicationKmsKeyId()
 
     /**
      * The destination region for the backup replication of the DB instance.
@@ -7022,7 +7069,8 @@ public interface CfnDBInstanceProps {
     /**
      * The time zone of the DB instance.
      *
-     * The time zone parameter is currently supported only by [Microsoft SQL
+     * The time zone parameter is currently supported only by [RDS for
+     * Db2](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/db2-time-zone) and [RDS for SQL
      * Server](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_SQLServer.html#SQLServer.Concepts.General.TimeZone)
      * .
      *

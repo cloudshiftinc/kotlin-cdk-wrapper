@@ -247,7 +247,7 @@ public interface LustreConfiguration {
      * type.
      */
     override fun autoImportPolicy(autoImportPolicy: LustreAutoImportPolicy) {
-      cdkBuilder.autoImportPolicy(autoImportPolicy.let(LustreAutoImportPolicy::unwrap))
+      cdkBuilder.autoImportPolicy(autoImportPolicy.let(LustreAutoImportPolicy.Companion::unwrap))
     }
 
     /**
@@ -257,14 +257,14 @@ public interface LustreConfiguration {
      * *Amazon FSx for Lustre User Guide* .
      */
     override fun dataCompressionType(dataCompressionType: LustreDataCompressionType) {
-      cdkBuilder.dataCompressionType(dataCompressionType.let(LustreDataCompressionType::unwrap))
+      cdkBuilder.dataCompressionType(dataCompressionType.let(LustreDataCompressionType.Companion::unwrap))
     }
 
     /**
      * @param deploymentType The type of backing file system deployment used by FSx. 
      */
     override fun deploymentType(deploymentType: LustreDeploymentType) {
-      cdkBuilder.deploymentType(deploymentType.let(LustreDeploymentType::unwrap))
+      cdkBuilder.deploymentType(deploymentType.let(LustreDeploymentType.Companion::unwrap))
     }
 
     /**
@@ -321,7 +321,7 @@ public interface LustreConfiguration {
      * is Tuesdays at 20:30.
      */
     override fun weeklyMaintenanceStartTime(weeklyMaintenanceStartTime: LustreMaintenanceTime) {
-      cdkBuilder.weeklyMaintenanceStartTime(weeklyMaintenanceStartTime.let(LustreMaintenanceTime::unwrap))
+      cdkBuilder.weeklyMaintenanceStartTime(weeklyMaintenanceStartTime.let(LustreMaintenanceTime.Companion::unwrap))
     }
 
     /**

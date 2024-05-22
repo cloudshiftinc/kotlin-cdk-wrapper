@@ -38,8 +38,8 @@ public open class CfnApplicationEntitlementAssociation(
     id: String,
     props: CfnApplicationEntitlementAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.appstream.CfnApplicationEntitlementAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApplicationEntitlementAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.appstream.CfnApplicationEntitlementAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApplicationEntitlementAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -79,7 +79,7 @@ public open class CfnApplicationEntitlementAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

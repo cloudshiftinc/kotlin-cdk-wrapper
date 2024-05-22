@@ -78,7 +78,7 @@ public open class CfnMultiplexprogram(
   cdkObject: software.amazon.awscdk.services.medialive.CfnMultiplexprogram,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.medialive.CfnMultiplexprogram(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.medialive.CfnMultiplexprogram(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -87,8 +87,8 @@ public open class CfnMultiplexprogram(
     id: String,
     props: CfnMultiplexprogramProps,
   ) :
-      this(software.amazon.awscdk.services.medialive.CfnMultiplexprogram(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMultiplexprogramProps::unwrap))
+      this(software.amazon.awscdk.services.medialive.CfnMultiplexprogram(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMultiplexprogramProps.Companion::unwrap))
   )
 
   public constructor(
@@ -116,7 +116,7 @@ public open class CfnMultiplexprogram(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -140,14 +140,14 @@ public open class CfnMultiplexprogram(
    * Multiplex Program settings configuration.
    */
   public open fun multiplexProgramSettings(`value`: IResolvable) {
-    unwrap(this).setMultiplexProgramSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMultiplexProgramSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Multiplex Program settings configuration.
    */
   public open fun multiplexProgramSettings(`value`: MultiplexProgramSettingsProperty) {
-    unwrap(this).setMultiplexProgramSettings(`value`.let(MultiplexProgramSettingsProperty::unwrap))
+    unwrap(this).setMultiplexProgramSettings(`value`.let(MultiplexProgramSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -168,14 +168,14 @@ public open class CfnMultiplexprogram(
    * Packet identifiers map for a given Multiplex program.
    */
   public open fun packetIdentifiersMap(`value`: IResolvable) {
-    unwrap(this).setPacketIdentifiersMap(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPacketIdentifiersMap(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Packet identifiers map for a given Multiplex program.
    */
   public open fun packetIdentifiersMap(`value`: MultiplexProgramPacketIdentifiersMapProperty) {
-    unwrap(this).setPacketIdentifiersMap(`value`.let(MultiplexProgramPacketIdentifiersMapProperty::unwrap))
+    unwrap(this).setPacketIdentifiersMap(`value`.let(MultiplexProgramPacketIdentifiersMapProperty.Companion::unwrap))
   }
 
   /**
@@ -198,7 +198,7 @@ public open class CfnMultiplexprogram(
    * multiplex.
    */
   public open fun pipelineDetails(`value`: IResolvable) {
-    unwrap(this).setPipelineDetails(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPipelineDetails(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -415,7 +415,7 @@ public open class CfnMultiplexprogram(
      * @param multiplexProgramSettings Multiplex Program settings configuration. 
      */
     override fun multiplexProgramSettings(multiplexProgramSettings: IResolvable) {
-      cdkBuilder.multiplexProgramSettings(multiplexProgramSettings.let(IResolvable::unwrap))
+      cdkBuilder.multiplexProgramSettings(multiplexProgramSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -426,7 +426,7 @@ public open class CfnMultiplexprogram(
      */
     override
         fun multiplexProgramSettings(multiplexProgramSettings: MultiplexProgramSettingsProperty) {
-      cdkBuilder.multiplexProgramSettings(multiplexProgramSettings.let(MultiplexProgramSettingsProperty::unwrap))
+      cdkBuilder.multiplexProgramSettings(multiplexProgramSettings.let(MultiplexProgramSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -448,7 +448,7 @@ public open class CfnMultiplexprogram(
      * @param packetIdentifiersMap Packet identifiers map for a given Multiplex program. 
      */
     override fun packetIdentifiersMap(packetIdentifiersMap: IResolvable) {
-      cdkBuilder.packetIdentifiersMap(packetIdentifiersMap.let(IResolvable::unwrap))
+      cdkBuilder.packetIdentifiersMap(packetIdentifiersMap.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -459,7 +459,7 @@ public open class CfnMultiplexprogram(
      */
     override
         fun packetIdentifiersMap(packetIdentifiersMap: MultiplexProgramPacketIdentifiersMapProperty) {
-      cdkBuilder.packetIdentifiersMap(packetIdentifiersMap.let(MultiplexProgramPacketIdentifiersMapProperty::unwrap))
+      cdkBuilder.packetIdentifiersMap(packetIdentifiersMap.let(MultiplexProgramPacketIdentifiersMapProperty.Companion::unwrap))
     }
 
     /**
@@ -488,7 +488,7 @@ public open class CfnMultiplexprogram(
      * program in the specified multiplex. 
      */
     override fun pipelineDetails(pipelineDetails: IResolvable) {
-      cdkBuilder.pipelineDetails(pipelineDetails.let(IResolvable::unwrap))
+      cdkBuilder.pipelineDetails(pipelineDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -790,7 +790,7 @@ public open class CfnMultiplexprogram(
        * @param audioPids the value to be set.
        */
       override fun audioPids(audioPids: IResolvable) {
-        cdkBuilder.audioPids(audioPids.let(IResolvable::unwrap))
+        cdkBuilder.audioPids(audioPids.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -809,7 +809,7 @@ public open class CfnMultiplexprogram(
        * @param dvbSubPids the value to be set.
        */
       override fun dvbSubPids(dvbSubPids: IResolvable) {
-        cdkBuilder.dvbSubPids(dvbSubPids.let(IResolvable::unwrap))
+        cdkBuilder.dvbSubPids(dvbSubPids.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -849,7 +849,7 @@ public open class CfnMultiplexprogram(
        * @param klvDataPids the value to be set.
        */
       override fun klvDataPids(klvDataPids: IResolvable) {
-        cdkBuilder.klvDataPids(klvDataPids.let(IResolvable::unwrap))
+        cdkBuilder.klvDataPids(klvDataPids.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -889,7 +889,7 @@ public open class CfnMultiplexprogram(
        * @param scte27Pids the value to be set.
        */
       override fun scte27Pids(scte27Pids: IResolvable) {
-        cdkBuilder.scte27Pids(scte27Pids.let(IResolvable::unwrap))
+        cdkBuilder.scte27Pids(scte27Pids.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1385,7 +1385,7 @@ public open class CfnMultiplexprogram(
        * Multiplex program.
        */
       override fun serviceDescriptor(serviceDescriptor: IResolvable) {
-        cdkBuilder.serviceDescriptor(serviceDescriptor.let(IResolvable::unwrap))
+        cdkBuilder.serviceDescriptor(serviceDescriptor.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1393,7 +1393,7 @@ public open class CfnMultiplexprogram(
        * Multiplex program.
        */
       override fun serviceDescriptor(serviceDescriptor: MultiplexProgramServiceDescriptorProperty) {
-        cdkBuilder.serviceDescriptor(serviceDescriptor.let(MultiplexProgramServiceDescriptorProperty::unwrap))
+        cdkBuilder.serviceDescriptor(serviceDescriptor.let(MultiplexProgramServiceDescriptorProperty.Companion::unwrap))
       }
 
       /**
@@ -1410,14 +1410,14 @@ public open class CfnMultiplexprogram(
        * @param videoSettings Program video settings configuration.
        */
       override fun videoSettings(videoSettings: IResolvable) {
-        cdkBuilder.videoSettings(videoSettings.let(IResolvable::unwrap))
+        cdkBuilder.videoSettings(videoSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param videoSettings Program video settings configuration.
        */
       override fun videoSettings(videoSettings: MultiplexVideoSettingsProperty) {
-        cdkBuilder.videoSettings(videoSettings.let(MultiplexVideoSettingsProperty::unwrap))
+        cdkBuilder.videoSettings(videoSettings.let(MultiplexVideoSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -1732,7 +1732,7 @@ public open class CfnMultiplexprogram(
        * When this field is defined, ConstantBitrate must be undefined.
        */
       override fun statmuxSettings(statmuxSettings: IResolvable) {
-        cdkBuilder.statmuxSettings(statmuxSettings.let(IResolvable::unwrap))
+        cdkBuilder.statmuxSettings(statmuxSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1740,7 +1740,7 @@ public open class CfnMultiplexprogram(
        * When this field is defined, ConstantBitrate must be undefined.
        */
       override fun statmuxSettings(statmuxSettings: MultiplexStatmuxVideoSettingsProperty) {
-        cdkBuilder.statmuxSettings(statmuxSettings.let(MultiplexStatmuxVideoSettingsProperty::unwrap))
+        cdkBuilder.statmuxSettings(statmuxSettings.let(MultiplexStatmuxVideoSettingsProperty.Companion::unwrap))
       }
 
       /**

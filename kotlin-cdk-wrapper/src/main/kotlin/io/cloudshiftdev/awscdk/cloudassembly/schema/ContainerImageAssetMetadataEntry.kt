@@ -307,7 +307,7 @@ public interface ContainerImageAssetMetadataEntry {
      * @param cacheFrom Cache from options to pass to the `docker build` command.
      */
     override fun cacheFrom(cacheFrom: List<ContainerImageAssetCacheOption>) {
-      cdkBuilder.cacheFrom(cacheFrom.map(ContainerImageAssetCacheOption::unwrap))
+      cdkBuilder.cacheFrom(cacheFrom.map(ContainerImageAssetCacheOption.Companion::unwrap))
     }
 
     /**
@@ -320,7 +320,7 @@ public interface ContainerImageAssetMetadataEntry {
      * @param cacheTo Cache to options to pass to the `docker build` command.
      */
     override fun cacheTo(cacheTo: ContainerImageAssetCacheOption) {
-      cdkBuilder.cacheTo(cacheTo.let(ContainerImageAssetCacheOption::unwrap))
+      cdkBuilder.cacheTo(cacheTo.let(ContainerImageAssetCacheOption.Companion::unwrap))
     }
 
     /**

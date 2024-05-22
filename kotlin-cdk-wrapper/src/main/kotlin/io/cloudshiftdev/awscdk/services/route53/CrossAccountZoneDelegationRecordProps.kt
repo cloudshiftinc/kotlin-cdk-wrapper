@@ -142,14 +142,14 @@ public interface CrossAccountZoneDelegationRecordProps {
      * @param delegatedZone The zone to be delegated. 
      */
     override fun delegatedZone(delegatedZone: IHostedZone) {
-      cdkBuilder.delegatedZone(delegatedZone.let(IHostedZone::unwrap))
+      cdkBuilder.delegatedZone(delegatedZone.let(IHostedZone.Companion::unwrap))
     }
 
     /**
      * @param delegationRole The delegation role in the parent account. 
      */
     override fun delegationRole(delegationRole: IRole) {
-      cdkBuilder.delegationRole(delegationRole.let(IRole::unwrap))
+      cdkBuilder.delegationRole(delegationRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -170,14 +170,14 @@ public interface CrossAccountZoneDelegationRecordProps {
      * @param removalPolicy The removal policy to apply to the record set.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
      * @param ttl The resource record cache time to live (TTL).
      */
     override fun ttl(ttl: Duration) {
-      cdkBuilder.ttl(ttl.let(Duration::unwrap))
+      cdkBuilder.ttl(ttl.let(Duration.Companion::unwrap))
     }
 
     public fun build():

@@ -183,7 +183,7 @@ public interface CfnHypervisorProps {
      * @param tags The tags of the hypervisor configuration to import.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

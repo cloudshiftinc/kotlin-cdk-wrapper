@@ -107,7 +107,7 @@ public interface RdsDataSourceProps : BackedDataSourceProps {
      * @param api The API to attach this data source to. 
      */
     override fun api(api: IGraphqlApi) {
-      cdkBuilder.api(api.let(IGraphqlApi::unwrap))
+      cdkBuilder.api(api.let(IGraphqlApi.Companion::unwrap))
     }
 
     /**
@@ -135,14 +135,14 @@ public interface RdsDataSourceProps : BackedDataSourceProps {
      * @param secretStore The secret containing the credentials for the database. 
      */
     override fun secretStore(secretStore: ISecret) {
-      cdkBuilder.secretStore(secretStore.let(ISecret::unwrap))
+      cdkBuilder.secretStore(secretStore.let(ISecret.Companion::unwrap))
     }
 
     /**
      * @param serverlessCluster The serverless cluster to call to interact with this data source. 
      */
     override fun serverlessCluster(serverlessCluster: IServerlessCluster) {
-      cdkBuilder.serverlessCluster(serverlessCluster.let(IServerlessCluster::unwrap))
+      cdkBuilder.serverlessCluster(serverlessCluster.let(IServerlessCluster.Companion::unwrap))
     }
 
     /**
@@ -150,7 +150,7 @@ public interface RdsDataSourceProps : BackedDataSourceProps {
      * source.
      */
     override fun serviceRole(serviceRole: IRole) {
-      cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
+      cdkBuilder.serviceRole(serviceRole.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appsync.RdsDataSourceProps =

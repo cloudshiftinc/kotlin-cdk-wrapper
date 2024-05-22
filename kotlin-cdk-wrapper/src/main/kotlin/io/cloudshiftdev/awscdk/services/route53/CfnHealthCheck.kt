@@ -105,8 +105,8 @@ public open class CfnHealthCheck(
     id: String,
     props: CfnHealthCheckProps,
   ) :
-      this(software.amazon.awscdk.services.route53.CfnHealthCheck(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnHealthCheckProps::unwrap))
+      this(software.amazon.awscdk.services.route53.CfnHealthCheck(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnHealthCheckProps.Companion::unwrap))
   )
 
   public constructor(
@@ -133,14 +133,14 @@ public open class CfnHealthCheck(
    * A complex type that contains detailed information about one health check.
    */
   public open fun healthCheckConfig(`value`: IResolvable) {
-    unwrap(this).setHealthCheckConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHealthCheckConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A complex type that contains detailed information about one health check.
    */
   public open fun healthCheckConfig(`value`: HealthCheckConfigProperty) {
-    unwrap(this).setHealthCheckConfig(`value`.let(HealthCheckConfigProperty::unwrap))
+    unwrap(this).setHealthCheckConfig(`value`.let(HealthCheckConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -162,7 +162,7 @@ public open class CfnHealthCheck(
    * `AWS::Route53::HealthCheck` resource.
    */
   public open fun healthCheckTags(`value`: IResolvable) {
-    unwrap(this).setHealthCheckTags(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHealthCheckTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -185,7 +185,7 @@ public open class CfnHealthCheck(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -280,7 +280,7 @@ public open class CfnHealthCheck(
      * check. 
      */
     override fun healthCheckConfig(healthCheckConfig: IResolvable) {
-      cdkBuilder.healthCheckConfig(healthCheckConfig.let(IResolvable::unwrap))
+      cdkBuilder.healthCheckConfig(healthCheckConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -294,7 +294,7 @@ public open class CfnHealthCheck(
      * check. 
      */
     override fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty) {
-      cdkBuilder.healthCheckConfig(healthCheckConfig.let(HealthCheckConfigProperty::unwrap))
+      cdkBuilder.healthCheckConfig(healthCheckConfig.let(HealthCheckConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -321,7 +321,7 @@ public open class CfnHealthCheck(
      * associated with an `AWS::Route53::HealthCheck` resource. 
      */
     override fun healthCheckTags(healthCheckTags: IResolvable) {
-      cdkBuilder.healthCheckTags(healthCheckTags.let(IResolvable::unwrap))
+      cdkBuilder.healthCheckTags(healthCheckTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1329,7 +1329,7 @@ public open class CfnHealthCheck(
        * healthy.
        */
       override fun alarmIdentifier(alarmIdentifier: IResolvable) {
-        cdkBuilder.alarmIdentifier(alarmIdentifier.let(IResolvable::unwrap))
+        cdkBuilder.alarmIdentifier(alarmIdentifier.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1338,7 +1338,7 @@ public open class CfnHealthCheck(
        * healthy.
        */
       override fun alarmIdentifier(alarmIdentifier: AlarmIdentifierProperty) {
-        cdkBuilder.alarmIdentifier(alarmIdentifier.let(AlarmIdentifierProperty::unwrap))
+        cdkBuilder.alarmIdentifier(alarmIdentifier.let(AlarmIdentifierProperty.Companion::unwrap))
       }
 
       /**
@@ -1415,7 +1415,7 @@ public open class CfnHealthCheck(
        * from the `client_hello` message.
        */
       override fun enableSni(enableSni: IResolvable) {
-        cdkBuilder.enableSni(enableSni.let(IResolvable::unwrap))
+        cdkBuilder.enableSni(enableSni.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1537,7 +1537,7 @@ public open class CfnHealthCheck(
        * healthy.
        */
       override fun inverted(inverted: IResolvable) {
-        cdkBuilder.inverted(inverted.let(IResolvable::unwrap))
+        cdkBuilder.inverted(inverted.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1600,7 +1600,7 @@ public open class CfnHealthCheck(
        * You can't change the value of `MeasureLatency` after you create a health check.
        */
       override fun measureLatency(measureLatency: IResolvable) {
-        cdkBuilder.measureLatency(measureLatency.let(IResolvable::unwrap))
+        cdkBuilder.measureLatency(measureLatency.let(IResolvable.Companion::unwrap))
       }
 
       /**

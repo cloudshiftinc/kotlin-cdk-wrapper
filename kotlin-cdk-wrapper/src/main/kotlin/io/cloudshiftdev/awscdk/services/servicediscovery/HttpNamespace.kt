@@ -50,8 +50,8 @@ public open class HttpNamespace(
     id: String,
     props: HttpNamespaceProps,
   ) :
-      this(software.amazon.awscdk.services.servicediscovery.HttpNamespace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(HttpNamespaceProps::unwrap))
+      this(software.amazon.awscdk.services.servicediscovery.HttpNamespace(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(HttpNamespaceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -77,7 +77,8 @@ public open class HttpNamespace(
    * @param props
    */
   public open fun createService(id: String, props: BaseServiceProps): Service =
-      unwrap(this).createService(id, props.let(BaseServiceProps::unwrap)).let(Service::wrap)
+      unwrap(this).createService(id,
+      props.let(BaseServiceProps.Companion::unwrap)).let(Service::wrap)
 
   /**
    * Creates a service within the namespace.
@@ -184,8 +185,8 @@ public open class HttpNamespace(
       id: String,
       attrs: HttpNamespaceAttributes,
     ): IHttpNamespace =
-        software.amazon.awscdk.services.servicediscovery.HttpNamespace.fromHttpNamespaceAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(HttpNamespaceAttributes::unwrap)).let(IHttpNamespace::wrap)
+        software.amazon.awscdk.services.servicediscovery.HttpNamespace.fromHttpNamespaceAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(HttpNamespaceAttributes.Companion::unwrap)).let(IHttpNamespace::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("591ffd6f65594fcb61995bd440aa1c82077bd128d07f7f2065c6e21c797fa9f8")

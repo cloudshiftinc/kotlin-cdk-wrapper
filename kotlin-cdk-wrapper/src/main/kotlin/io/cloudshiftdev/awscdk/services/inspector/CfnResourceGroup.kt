@@ -45,8 +45,8 @@ public open class CfnResourceGroup(
     id: String,
     props: CfnResourceGroupProps,
   ) :
-      this(software.amazon.awscdk.services.inspector.CfnResourceGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnResourceGroupProps::unwrap))
+      this(software.amazon.awscdk.services.inspector.CfnResourceGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnResourceGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -67,7 +67,7 @@ public open class CfnResourceGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -79,7 +79,7 @@ public open class CfnResourceGroup(
    * The tags (key and value pairs) that will be associated with the resource group.
    */
   public open fun resourceGroupTags(`value`: IResolvable) {
-    unwrap(this).setResourceGroupTags(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResourceGroupTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -158,7 +158,7 @@ public open class CfnResourceGroup(
      * resource group. 
      */
     override fun resourceGroupTags(resourceGroupTags: IResolvable) {
-      cdkBuilder.resourceGroupTags(resourceGroupTags.let(IResolvable::unwrap))
+      cdkBuilder.resourceGroupTags(resourceGroupTags.let(IResolvable.Companion::unwrap))
     }
 
     /**

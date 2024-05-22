@@ -127,7 +127,7 @@ public interface CfnCreationPolicy {
      */
     override
         fun autoScalingCreationPolicy(autoScalingCreationPolicy: CfnResourceAutoScalingCreationPolicy) {
-      cdkBuilder.autoScalingCreationPolicy(autoScalingCreationPolicy.let(CfnResourceAutoScalingCreationPolicy::unwrap))
+      cdkBuilder.autoScalingCreationPolicy(autoScalingCreationPolicy.let(CfnResourceAutoScalingCreationPolicy.Companion::unwrap))
     }
 
     /**
@@ -147,7 +147,7 @@ public interface CfnCreationPolicy {
      * those signals.
      */
     override fun resourceSignal(resourceSignal: CfnResourceSignal) {
-      cdkBuilder.resourceSignal(resourceSignal.let(CfnResourceSignal::unwrap))
+      cdkBuilder.resourceSignal(resourceSignal.let(CfnResourceSignal.Companion::unwrap))
     }
 
     /**

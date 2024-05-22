@@ -50,7 +50,7 @@ public open class CfnThingType(
   cdkObject: software.amazon.awscdk.services.iot.CfnThingType,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.iot.CfnThingType(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.iot.CfnThingType(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -59,8 +59,8 @@ public open class CfnThingType(
     id: String,
     props: CfnThingTypeProps,
   ) :
-      this(software.amazon.awscdk.services.iot.CfnThingType(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnThingTypeProps::unwrap))
+      this(software.amazon.awscdk.services.iot.CfnThingType(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnThingTypeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -102,7 +102,7 @@ public open class CfnThingType(
    * You can not associate new things with deprecated thing type.
    */
   public open fun deprecateThingType(`value`: IResolvable) {
-    unwrap(this).setDeprecateThingType(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeprecateThingType(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -111,7 +111,7 @@ public open class CfnThingType(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -129,7 +129,7 @@ public open class CfnThingType(
    * Metadata which can be used to manage the thing type.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -158,14 +158,14 @@ public open class CfnThingType(
    * The thing type properties for the thing type to create.
    */
   public open fun thingTypeProperties(`value`: IResolvable) {
-    unwrap(this).setThingTypeProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setThingTypeProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The thing type properties for the thing type to create.
    */
   public open fun thingTypeProperties(`value`: ThingTypePropertiesProperty) {
-    unwrap(this).setThingTypeProperties(`value`.let(ThingTypePropertiesProperty::unwrap))
+    unwrap(this).setThingTypeProperties(`value`.let(ThingTypePropertiesProperty.Companion::unwrap))
   }
 
   /**
@@ -305,7 +305,7 @@ public open class CfnThingType(
      * deprecated thing type. 
      */
     override fun deprecateThingType(deprecateThingType: IResolvable) {
-      cdkBuilder.deprecateThingType(deprecateThingType.let(IResolvable::unwrap))
+      cdkBuilder.deprecateThingType(deprecateThingType.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -315,7 +315,7 @@ public open class CfnThingType(
      * @param tags Metadata which can be used to manage the thing type. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -347,7 +347,7 @@ public open class CfnThingType(
      * @param thingTypeProperties The thing type properties for the thing type to create. 
      */
     override fun thingTypeProperties(thingTypeProperties: IResolvable) {
-      cdkBuilder.thingTypeProperties(thingTypeProperties.let(IResolvable::unwrap))
+      cdkBuilder.thingTypeProperties(thingTypeProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -361,7 +361,7 @@ public open class CfnThingType(
      * @param thingTypeProperties The thing type properties for the thing type to create. 
      */
     override fun thingTypeProperties(thingTypeProperties: ThingTypePropertiesProperty) {
-      cdkBuilder.thingTypeProperties(thingTypeProperties.let(ThingTypePropertiesProperty::unwrap))
+      cdkBuilder.thingTypeProperties(thingTypeProperties.let(ThingTypePropertiesProperty.Companion::unwrap))
     }
 
     /**

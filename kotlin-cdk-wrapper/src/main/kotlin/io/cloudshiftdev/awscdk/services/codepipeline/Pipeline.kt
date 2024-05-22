@@ -48,7 +48,7 @@ public open class Pipeline(
   cdkObject: software.amazon.awscdk.services.codepipeline.Pipeline,
 ) : Resource(cdkObject), IPipeline {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.codepipeline.Pipeline(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.codepipeline.Pipeline(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -57,8 +57,8 @@ public open class Pipeline(
     id: String,
     props: PipelineProps,
   ) :
-      this(software.amazon.awscdk.services.codepipeline.Pipeline(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(PipelineProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.Pipeline(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(PipelineProps.Companion::unwrap))
   )
 
   public constructor(
@@ -75,7 +75,7 @@ public open class Pipeline(
    * @param props the creation properties of the new Stage. 
    */
   public open fun addStage(props: StageOptions): IStage =
-      unwrap(this).addStage(props.let(StageOptions::unwrap)).let(IStage::wrap)
+      unwrap(this).addStage(props.let(StageOptions.Companion::unwrap)).let(IStage::wrap)
 
   /**
    * Creates a new Stage, and adds it to this Pipeline.
@@ -94,7 +94,7 @@ public open class Pipeline(
    * @param statement 
    */
   public open fun addToRolePolicy(statement: PolicyStatement) {
-    unwrap(this).addToRolePolicy(statement.let(PolicyStatement::unwrap))
+    unwrap(this).addToRolePolicy(statement.let(PolicyStatement.Companion::unwrap))
   }
 
   /**
@@ -114,7 +114,7 @@ public open class Pipeline(
    * @param props Trigger property to add to this Pipeline. 
    */
   public open fun addTrigger(props: TriggerProps): Trigger =
-      unwrap(this).addTrigger(props.let(TriggerProps::unwrap)).let(Trigger::wrap)
+      unwrap(this).addTrigger(props.let(TriggerProps.Companion::unwrap)).let(Trigger::wrap)
 
   /**
    * Adds a new Trigger to this Pipeline.
@@ -134,7 +134,7 @@ public open class Pipeline(
    * @param variable Variable instance to add to this Pipeline. 
    */
   public open fun addVariable(variable: Variable): Variable =
-      unwrap(this).addVariable(variable.let(Variable::unwrap)).let(Variable::wrap)
+      unwrap(this).addVariable(variable.let(Variable.Companion::unwrap)).let(Variable::wrap)
 
   /**
    * Adds a new Variable to this Pipeline.
@@ -159,7 +159,7 @@ public open class Pipeline(
    */
   public override fun bindAsNotificationRuleSource(scope: CloudshiftdevConstructsConstruct):
       NotificationRuleSourceConfig =
-      unwrap(this).bindAsNotificationRuleSource(scope.let(CloudshiftdevConstructsConstruct::unwrap)).let(NotificationRuleSourceConfig::wrap)
+      unwrap(this).bindAsNotificationRuleSource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap)).let(NotificationRuleSourceConfig::wrap)
 
   /**
    * Returns all of the `CrossRegionSupportStack`s that were generated automatically when dealing
@@ -184,8 +184,9 @@ public open class Pipeline(
     id: String,
     target: INotificationRuleTarget,
     options: PipelineNotifyOnOptions,
-  ): INotificationRule = unwrap(this).notifyOn(id, target.let(INotificationRuleTarget::unwrap),
-      options.let(PipelineNotifyOnOptions::unwrap)).let(INotificationRule::wrap)
+  ): INotificationRule = unwrap(this).notifyOn(id,
+      target.let(INotificationRuleTarget.Companion::unwrap),
+      options.let(PipelineNotifyOnOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar notification rule triggered when the pipeline events emitted by you
@@ -217,7 +218,7 @@ public open class Pipeline(
    */
   public override fun notifyOnAnyActionStateChange(id: String, target: INotificationRuleTarget):
       INotificationRule = unwrap(this).notifyOnAnyActionStateChange(id,
-      target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Define an notification rule triggered by the set of the "Action execution" events emitted from
@@ -232,8 +233,8 @@ public open class Pipeline(
     target: INotificationRuleTarget,
     options: NotificationRuleOptions,
   ): INotificationRule = unwrap(this).notifyOnAnyActionStateChange(id,
-      target.let(INotificationRuleTarget::unwrap),
-      options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap),
+      options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Define an notification rule triggered by the set of the "Action execution" events emitted from
@@ -262,7 +263,7 @@ public open class Pipeline(
   public override fun notifyOnAnyManualApprovalStateChange(id: String,
       target: INotificationRuleTarget): INotificationRule =
       unwrap(this).notifyOnAnyManualApprovalStateChange(id,
-      target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Define an notification rule triggered by the set of the "Manual approval" events emitted from
@@ -277,8 +278,8 @@ public open class Pipeline(
     target: INotificationRuleTarget,
     options: NotificationRuleOptions,
   ): INotificationRule = unwrap(this).notifyOnAnyManualApprovalStateChange(id,
-      target.let(INotificationRuleTarget::unwrap),
-      options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap),
+      options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Define an notification rule triggered by the set of the "Manual approval" events emitted from
@@ -307,7 +308,7 @@ public open class Pipeline(
    */
   public override fun notifyOnAnyStageStateChange(id: String, target: INotificationRuleTarget):
       INotificationRule = unwrap(this).notifyOnAnyStageStateChange(id,
-      target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Define an notification rule triggered by the set of the "Stage execution" events emitted from
@@ -322,8 +323,8 @@ public open class Pipeline(
     target: INotificationRuleTarget,
     options: NotificationRuleOptions,
   ): INotificationRule = unwrap(this).notifyOnAnyStageStateChange(id,
-      target.let(INotificationRuleTarget::unwrap),
-      options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap),
+      options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Define an notification rule triggered by the set of the "Stage execution" events emitted from
@@ -351,7 +352,7 @@ public open class Pipeline(
    */
   public override fun notifyOnExecutionStateChange(id: String, target: INotificationRuleTarget):
       INotificationRule = unwrap(this).notifyOnExecutionStateChange(id,
-      target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Define an notification rule triggered by the set of the "Pipeline execution" events emitted
@@ -366,8 +367,8 @@ public open class Pipeline(
     target: INotificationRuleTarget,
     options: NotificationRuleOptions,
   ): INotificationRule = unwrap(this).notifyOnExecutionStateChange(id,
-      target.let(INotificationRuleTarget::unwrap),
-      options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap),
+      options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Define an notification rule triggered by the set of the "Pipeline execution" events emitted
@@ -400,7 +401,7 @@ public open class Pipeline(
    * @param options Additional options to pass to the event rule.
    */
   public override fun onEvent(id: String, options: OnEventOptions): Rule = unwrap(this).onEvent(id,
-      options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines an event rule triggered by this CodePipeline.
@@ -431,7 +432,7 @@ public open class Pipeline(
    * @param options Additional options to pass to the event rule.
    */
   public override fun onStateChange(id: String, options: OnEventOptions): Rule =
-      unwrap(this).onStateChange(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      unwrap(this).onStateChange(id, options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines an event rule triggered by the "CodePipeline Pipeline Execution State Change" event
@@ -703,7 +704,7 @@ public open class Pipeline(
      * @param artifactBucket The S3 bucket used by this Pipeline to store artifacts. 
      */
     override fun artifactBucket(artifactBucket: IBucket) {
-      cdkBuilder.artifactBucket(artifactBucket.let(IBucket::unwrap))
+      cdkBuilder.artifactBucket(artifactBucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -768,7 +769,7 @@ public open class Pipeline(
      * @param executionMode The method that the pipeline will use to handle multiple executions. 
      */
     override fun executionMode(executionMode: ExecutionMode) {
-      cdkBuilder.executionMode(executionMode.let(ExecutionMode::unwrap))
+      cdkBuilder.executionMode(executionMode.let(ExecutionMode.Companion::unwrap))
     }
 
     /**
@@ -792,7 +793,7 @@ public open class Pipeline(
      * @param pipelineType Type of the pipeline. 
      */
     override fun pipelineType(pipelineType: PipelineType) {
-      cdkBuilder.pipelineType(pipelineType.let(PipelineType::unwrap))
+      cdkBuilder.pipelineType(pipelineType.let(PipelineType.Companion::unwrap))
     }
 
     /**
@@ -827,7 +828,7 @@ public open class Pipeline(
      * @param role The IAM role to be assumed by this Pipeline. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -840,7 +841,7 @@ public open class Pipeline(
      * @param stages The list of Stages, in order, to create this Pipeline with. 
      */
     override fun stages(stages: List<StageProps>) {
-      cdkBuilder.stages(stages.map(StageProps::unwrap))
+      cdkBuilder.stages(stages.map(StageProps.Companion::unwrap))
     }
 
     /**
@@ -870,7 +871,7 @@ public open class Pipeline(
      * starts the pipeline. 
      */
     override fun triggers(triggers: List<TriggerProps>) {
-      cdkBuilder.triggers(triggers.map(TriggerProps::unwrap))
+      cdkBuilder.triggers(triggers.map(TriggerProps.Companion::unwrap))
     }
 
     /**
@@ -901,7 +902,7 @@ public open class Pipeline(
      * @param variables A list that defines the pipeline variables for a pipeline resource. 
      */
     override fun variables(variables: List<Variable>) {
-      cdkBuilder.variables(variables.map(Variable::unwrap))
+      cdkBuilder.variables(variables.map(Variable.Companion::unwrap))
     }
 
     /**
@@ -925,7 +926,7 @@ public open class Pipeline(
       id: String,
       pipelineArn: String,
     ): IPipeline =
-        software.amazon.awscdk.services.codepipeline.Pipeline.fromPipelineArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.codepipeline.Pipeline.fromPipelineArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, pipelineArn).let(IPipeline::wrap)
 
     public operator fun invoke(

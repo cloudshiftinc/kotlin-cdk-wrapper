@@ -29,7 +29,7 @@ public open class OriginRequestPolicy(
   cdkObject: software.amazon.awscdk.services.cloudfront.OriginRequestPolicy,
 ) : Resource(cdkObject), IOriginRequestPolicy {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.cloudfront.OriginRequestPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.cloudfront.OriginRequestPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -38,8 +38,8 @@ public open class OriginRequestPolicy(
     id: String,
     props: OriginRequestPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.OriginRequestPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(OriginRequestPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.OriginRequestPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(OriginRequestPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -136,7 +136,7 @@ public open class OriginRequestPolicy(
      * @param cookieBehavior The cookies from viewer requests to include in origin requests. 
      */
     override fun cookieBehavior(cookieBehavior: OriginRequestCookieBehavior) {
-      cdkBuilder.cookieBehavior(cookieBehavior.let(OriginRequestCookieBehavior::unwrap))
+      cdkBuilder.cookieBehavior(cookieBehavior.let(OriginRequestCookieBehavior.Companion::unwrap))
     }
 
     /**
@@ -149,7 +149,7 @@ public open class OriginRequestPolicy(
      * @param headerBehavior The HTTP headers to include in origin requests. 
      */
     override fun headerBehavior(headerBehavior: OriginRequestHeaderBehavior) {
-      cdkBuilder.headerBehavior(headerBehavior.let(OriginRequestHeaderBehavior::unwrap))
+      cdkBuilder.headerBehavior(headerBehavior.let(OriginRequestHeaderBehavior.Companion::unwrap))
     }
 
     /**
@@ -174,7 +174,7 @@ public open class OriginRequestPolicy(
      * requests. 
      */
     override fun queryStringBehavior(queryStringBehavior: OriginRequestQueryStringBehavior) {
-      cdkBuilder.queryStringBehavior(queryStringBehavior.let(OriginRequestQueryStringBehavior::unwrap))
+      cdkBuilder.queryStringBehavior(queryStringBehavior.let(OriginRequestQueryStringBehavior.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.OriginRequestPolicy =
@@ -208,7 +208,7 @@ public open class OriginRequestPolicy(
       id: String,
       originRequestPolicyId: String,
     ): IOriginRequestPolicy =
-        software.amazon.awscdk.services.cloudfront.OriginRequestPolicy.fromOriginRequestPolicyId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.cloudfront.OriginRequestPolicy.fromOriginRequestPolicyId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, originRequestPolicyId).let(IOriginRequestPolicy::wrap)
 
     public operator fun invoke(

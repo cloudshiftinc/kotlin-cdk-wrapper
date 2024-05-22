@@ -54,8 +54,8 @@ public open class AthenaStartQueryExecution(
     id: String,
     props: AthenaStartQueryExecutionProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.AthenaStartQueryExecution(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(AthenaStartQueryExecutionProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.AthenaStartQueryExecution(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(AthenaStartQueryExecutionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -369,7 +369,7 @@ public open class AthenaStartQueryExecution(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -425,7 +425,7 @@ public open class AthenaStartQueryExecution(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -439,7 +439,7 @@ public open class AthenaStartQueryExecution(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -474,7 +474,7 @@ public open class AthenaStartQueryExecution(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -501,7 +501,7 @@ public open class AthenaStartQueryExecution(
      * @param queryExecutionContext Database within which query executes. 
      */
     override fun queryExecutionContext(queryExecutionContext: QueryExecutionContext) {
-      cdkBuilder.queryExecutionContext(queryExecutionContext.let(QueryExecutionContext::unwrap))
+      cdkBuilder.queryExecutionContext(queryExecutionContext.let(QueryExecutionContext.Companion::unwrap))
     }
 
     /**
@@ -534,7 +534,7 @@ public open class AthenaStartQueryExecution(
      * @param resultConfiguration Configuration on how and where to save query. 
      */
     override fun resultConfiguration(resultConfiguration: ResultConfiguration) {
-      cdkBuilder.resultConfiguration(resultConfiguration.let(ResultConfiguration::unwrap))
+      cdkBuilder.resultConfiguration(resultConfiguration.let(ResultConfiguration.Companion::unwrap))
     }
 
     /**
@@ -602,7 +602,7 @@ public open class AthenaStartQueryExecution(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -615,7 +615,7 @@ public open class AthenaStartQueryExecution(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**

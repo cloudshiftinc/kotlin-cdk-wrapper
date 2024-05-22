@@ -160,14 +160,14 @@ public interface CfnPermissionsProps {
      * @param dataLakePrincipal The AWS Lake Formation principal. 
      */
     override fun dataLakePrincipal(dataLakePrincipal: IResolvable) {
-      cdkBuilder.dataLakePrincipal(dataLakePrincipal.let(IResolvable::unwrap))
+      cdkBuilder.dataLakePrincipal(dataLakePrincipal.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param dataLakePrincipal The AWS Lake Formation principal. 
      */
     override fun dataLakePrincipal(dataLakePrincipal: CfnPermissions.DataLakePrincipalProperty) {
-      cdkBuilder.dataLakePrincipal(dataLakePrincipal.let(CfnPermissions.DataLakePrincipalProperty::unwrap))
+      cdkBuilder.dataLakePrincipal(dataLakePrincipal.let(CfnPermissions.DataLakePrincipalProperty.Companion::unwrap))
     }
 
     /**
@@ -210,14 +210,14 @@ public interface CfnPermissionsProps {
      * @param resource A structure for the resource. 
      */
     override fun resource(resource: IResolvable) {
-      cdkBuilder.resource(resource.let(IResolvable::unwrap))
+      cdkBuilder.resource(resource.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param resource A structure for the resource. 
      */
     override fun resource(resource: CfnPermissions.ResourceProperty) {
-      cdkBuilder.resource(resource.let(CfnPermissions.ResourceProperty::unwrap))
+      cdkBuilder.resource(resource.let(CfnPermissions.ResourceProperty.Companion::unwrap))
     }
 
     /**

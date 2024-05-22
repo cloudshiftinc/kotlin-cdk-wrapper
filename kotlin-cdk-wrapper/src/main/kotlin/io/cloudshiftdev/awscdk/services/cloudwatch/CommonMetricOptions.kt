@@ -256,7 +256,7 @@ public interface CommonMetricOptions {
      * @param period The period over which the specified statistic is applied.
      */
     override fun period(period: Duration) {
-      cdkBuilder.period(period.let(Duration::unwrap))
+      cdkBuilder.period(period.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -300,7 +300,7 @@ public interface CommonMetricOptions {
      * CloudWatch does not honor this property for graphs.
      */
     override fun unit(unit: Unit) {
-      cdkBuilder.unit(unit.let(Unit::unwrap))
+      cdkBuilder.unit(unit.let(Unit.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudwatch.CommonMetricOptions =

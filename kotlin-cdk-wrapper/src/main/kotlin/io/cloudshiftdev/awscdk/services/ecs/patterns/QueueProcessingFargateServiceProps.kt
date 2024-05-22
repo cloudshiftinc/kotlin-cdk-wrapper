@@ -498,7 +498,7 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
      */
     override
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>) {
-      cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy::unwrap))
+      cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy.Companion::unwrap))
     }
 
     /**
@@ -515,7 +515,7 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
      * enabled.
      */
     override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
-      cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker::unwrap))
+      cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker.Companion::unwrap))
     }
 
     /**
@@ -534,7 +534,7 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
      * both cluster and vpc.
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -567,7 +567,7 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
      * Subsequent scale ins during the cooldown period are ignored.
      */
     override fun cooldown(cooldown: Duration) {
-      cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
+      cdkBuilder.cooldown(cooldown.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -609,7 +609,7 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
      * Types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html)
      */
     override fun deploymentController(deploymentController: DeploymentController) {
-      cdkBuilder.deploymentController(deploymentController.let(DeploymentController::unwrap))
+      cdkBuilder.deploymentController(deploymentController.let(DeploymentController.Companion::unwrap))
     }
 
     /**
@@ -689,7 +689,7 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
      * container.
      */
     override fun healthCheck(healthCheck: HealthCheck) {
-      cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
     }
 
     /**
@@ -708,14 +708,14 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
      * For `QueueProcessingEc2Service`, `image` is required.
      */
     override fun image(image: ContainerImage) {
-      cdkBuilder.image(image.let(ContainerImage::unwrap))
+      cdkBuilder.image(image.let(ContainerImage.Companion::unwrap))
     }
 
     /**
      * @param logDriver The log driver to use.
      */
     override fun logDriver(logDriver: LogDriver) {
-      cdkBuilder.logDriver(logDriver.let(LogDriver::unwrap))
+      cdkBuilder.logDriver(logDriver.let(LogDriver.Companion::unwrap))
     }
 
     /**
@@ -801,7 +801,7 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
      * in the Amazon Elastic Container Service Developer Guide.
      */
     override fun platformVersion(platformVersion: FargatePlatformVersion) {
-      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion::unwrap))
+      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion.Companion::unwrap))
     }
 
     /**
@@ -810,7 +810,7 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
      * Tags can only be propagated to the tasks within the service during service creation.
      */
     override fun propagateTags(propagateTags: PropagatedTagSource) {
-      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource.Companion::unwrap))
     }
 
     /**
@@ -819,7 +819,7 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
      * [CreateQueue](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/APIReference/API_CreateQueue.html)
      */
     override fun queue(queue: IQueue) {
-      cdkBuilder.queue(queue.let(IQueue::unwrap))
+      cdkBuilder.queue(queue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -827,14 +827,14 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
      * If the queue construct is specified, retentionPeriod should be omitted.
      */
     override fun retentionPeriod(retentionPeriod: Duration) {
-      cdkBuilder.retentionPeriod(retentionPeriod.let(Duration::unwrap))
+      cdkBuilder.retentionPeriod(retentionPeriod.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param runtimePlatform The runtime platform of the task definition.
      */
     override fun runtimePlatform(runtimePlatform: RuntimePlatform) {
-      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform::unwrap))
+      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform.Companion::unwrap))
     }
 
     /**
@@ -853,7 +853,7 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
      * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html)
      */
     override fun scalingSteps(scalingSteps: List<ScalingInterval>) {
-      cdkBuilder.scalingSteps(scalingSteps.map(ScalingInterval::unwrap))
+      cdkBuilder.scalingSteps(scalingSteps.map(ScalingInterval.Companion::unwrap))
     }
 
     /**
@@ -878,7 +878,7 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
      * If you do not specify a security group, a new security group is created.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -901,14 +901,14 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
      * [disable-awslint:ref-via-interface]
      */
     override fun taskDefinition(taskDefinition: FargateTaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition.Companion::unwrap))
     }
 
     /**
      * @param taskSubnets The subnets to associate with the service.
      */
     override fun taskSubnets(taskSubnets: SubnetSelection) {
-      cdkBuilder.taskSubnets(taskSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.taskSubnets(taskSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -929,7 +929,7 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
      * If the queue construct is specified, visibilityTimeout should be omitted.
      */
     override fun visibilityTimeout(visibilityTimeout: Duration) {
-      cdkBuilder.visibilityTimeout(visibilityTimeout.let(Duration::unwrap))
+      cdkBuilder.visibilityTimeout(visibilityTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -939,7 +939,7 @@ public interface QueueProcessingFargateServiceProps : QueueProcessingServiceBase
      * both vpc and cluster.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build():

@@ -48,7 +48,7 @@ public open class CacheControl(
         software.amazon.awscdk.services.s3.deployment.CacheControl.immutable().let(CacheControl::wrap)
 
     public fun maxAge(t: Duration): CacheControl =
-        software.amazon.awscdk.services.s3.deployment.CacheControl.maxAge(t.let(Duration::unwrap)).let(CacheControl::wrap)
+        software.amazon.awscdk.services.s3.deployment.CacheControl.maxAge(t.let(Duration.Companion::unwrap)).let(CacheControl::wrap)
 
     public fun mustRevalidate(): CacheControl =
         software.amazon.awscdk.services.s3.deployment.CacheControl.mustRevalidate().let(CacheControl::wrap)
@@ -75,13 +75,13 @@ public open class CacheControl(
         software.amazon.awscdk.services.s3.deployment.CacheControl.setPublic().let(CacheControl::wrap)
 
     public fun sMaxAge(t: Duration): CacheControl =
-        software.amazon.awscdk.services.s3.deployment.CacheControl.sMaxAge(t.let(Duration::unwrap)).let(CacheControl::wrap)
+        software.amazon.awscdk.services.s3.deployment.CacheControl.sMaxAge(t.let(Duration.Companion::unwrap)).let(CacheControl::wrap)
 
     public fun staleIfError(t: Duration): CacheControl =
-        software.amazon.awscdk.services.s3.deployment.CacheControl.staleIfError(t.let(Duration::unwrap)).let(CacheControl::wrap)
+        software.amazon.awscdk.services.s3.deployment.CacheControl.staleIfError(t.let(Duration.Companion::unwrap)).let(CacheControl::wrap)
 
     public fun staleWhileRevalidate(t: Duration): CacheControl =
-        software.amazon.awscdk.services.s3.deployment.CacheControl.staleWhileRevalidate(t.let(Duration::unwrap)).let(CacheControl::wrap)
+        software.amazon.awscdk.services.s3.deployment.CacheControl.staleWhileRevalidate(t.let(Duration.Companion::unwrap)).let(CacheControl::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.deployment.CacheControl):
         CacheControl = CacheControl(cdkObject)

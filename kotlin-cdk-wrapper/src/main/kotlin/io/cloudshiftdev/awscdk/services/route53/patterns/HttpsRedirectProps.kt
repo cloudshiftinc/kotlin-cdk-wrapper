@@ -124,7 +124,7 @@ public interface HttpsRedirectProps {
      * stored in us-east-1 (N. Virginia)
      */
     override fun certificate(certificate: ICertificate) {
-      cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
+      cdkBuilder.certificate(certificate.let(ICertificate.Companion::unwrap))
     }
 
     /**
@@ -160,7 +160,7 @@ public interface HttpsRedirectProps {
      * and its subdomains (acme.example.com, zenith.example.com).
      */
     override fun zone(zone: IHostedZone) {
-      cdkBuilder.zone(zone.let(IHostedZone::unwrap))
+      cdkBuilder.zone(zone.let(IHostedZone.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.route53.patterns.HttpsRedirectProps =

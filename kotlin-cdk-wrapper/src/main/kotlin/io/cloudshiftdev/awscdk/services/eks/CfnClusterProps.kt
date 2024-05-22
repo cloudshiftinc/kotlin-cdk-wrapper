@@ -378,14 +378,14 @@ public interface CfnClusterProps {
      * @param accessConfig The access configuration for the cluster.
      */
     override fun accessConfig(accessConfig: IResolvable) {
-      cdkBuilder.accessConfig(accessConfig.let(IResolvable::unwrap))
+      cdkBuilder.accessConfig(accessConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param accessConfig The access configuration for the cluster.
      */
     override fun accessConfig(accessConfig: CfnCluster.AccessConfigProperty) {
-      cdkBuilder.accessConfig(accessConfig.let(CfnCluster.AccessConfigProperty::unwrap))
+      cdkBuilder.accessConfig(accessConfig.let(CfnCluster.AccessConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -400,7 +400,7 @@ public interface CfnClusterProps {
      * @param encryptionConfig The encryption configuration for the cluster.
      */
     override fun encryptionConfig(encryptionConfig: IResolvable) {
-      cdkBuilder.encryptionConfig(encryptionConfig.let(IResolvable::unwrap))
+      cdkBuilder.encryptionConfig(encryptionConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -420,7 +420,7 @@ public interface CfnClusterProps {
      * @param kubernetesNetworkConfig The Kubernetes network configuration for the cluster.
      */
     override fun kubernetesNetworkConfig(kubernetesNetworkConfig: IResolvable) {
-      cdkBuilder.kubernetesNetworkConfig(kubernetesNetworkConfig.let(IResolvable::unwrap))
+      cdkBuilder.kubernetesNetworkConfig(kubernetesNetworkConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -428,7 +428,7 @@ public interface CfnClusterProps {
      */
     override
         fun kubernetesNetworkConfig(kubernetesNetworkConfig: CfnCluster.KubernetesNetworkConfigProperty) {
-      cdkBuilder.kubernetesNetworkConfig(kubernetesNetworkConfig.let(CfnCluster.KubernetesNetworkConfigProperty::unwrap))
+      cdkBuilder.kubernetesNetworkConfig(kubernetesNetworkConfig.let(CfnCluster.KubernetesNetworkConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -445,14 +445,14 @@ public interface CfnClusterProps {
      * @param logging The logging configuration for your cluster.
      */
     override fun logging(logging: IResolvable) {
-      cdkBuilder.logging(logging.let(IResolvable::unwrap))
+      cdkBuilder.logging(logging.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param logging The logging configuration for your cluster.
      */
     override fun logging(logging: CfnCluster.LoggingProperty) {
-      cdkBuilder.logging(logging.let(CfnCluster.LoggingProperty::unwrap))
+      cdkBuilder.logging(logging.let(CfnCluster.LoggingProperty.Companion::unwrap))
     }
 
     /**
@@ -476,7 +476,7 @@ public interface CfnClusterProps {
      * This object isn't available for clusters on the AWS cloud.
      */
     override fun outpostConfig(outpostConfig: IResolvable) {
-      cdkBuilder.outpostConfig(outpostConfig.let(IResolvable::unwrap))
+      cdkBuilder.outpostConfig(outpostConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -485,7 +485,7 @@ public interface CfnClusterProps {
      * This object isn't available for clusters on the AWS cloud.
      */
     override fun outpostConfig(outpostConfig: CfnCluster.OutpostConfigProperty) {
-      cdkBuilder.outpostConfig(outpostConfig.let(CfnCluster.OutpostConfigProperty::unwrap))
+      cdkBuilder.outpostConfig(outpostConfig.let(CfnCluster.OutpostConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -510,7 +510,7 @@ public interface CfnClusterProps {
      * control plane.
      */
     override fun resourcesVpcConfig(resourcesVpcConfig: IResolvable) {
-      cdkBuilder.resourcesVpcConfig(resourcesVpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.resourcesVpcConfig(resourcesVpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -525,7 +525,7 @@ public interface CfnClusterProps {
      * control plane.
      */
     override fun resourcesVpcConfig(resourcesVpcConfig: CfnCluster.ResourcesVpcConfigProperty) {
-      cdkBuilder.resourcesVpcConfig(resourcesVpcConfig.let(CfnCluster.ResourcesVpcConfigProperty::unwrap))
+      cdkBuilder.resourcesVpcConfig(resourcesVpcConfig.let(CfnCluster.ResourcesVpcConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -570,7 +570,7 @@ public interface CfnClusterProps {
      * and update.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -106,7 +106,7 @@ public interface WebSocketStageProps : StageOptions {
      * @param domainMapping The options for custom domain and api mapping.
      */
     override fun domainMapping(domainMapping: DomainMappingOptions) {
-      cdkBuilder.domainMapping(domainMapping.let(DomainMappingOptions::unwrap))
+      cdkBuilder.domainMapping(domainMapping.let(DomainMappingOptions.Companion::unwrap))
     }
 
     /**
@@ -128,7 +128,7 @@ public interface WebSocketStageProps : StageOptions {
      * @param throttle Throttle settings for the routes of this stage.
      */
     override fun throttle(throttle: ThrottleSettings) {
-      cdkBuilder.throttle(throttle.let(ThrottleSettings::unwrap))
+      cdkBuilder.throttle(throttle.let(ThrottleSettings.Companion::unwrap))
     }
 
     /**
@@ -143,7 +143,7 @@ public interface WebSocketStageProps : StageOptions {
      * @param webSocketApi The WebSocket API to which this stage is associated. 
      */
     override fun webSocketApi(webSocketApi: IWebSocketApi) {
-      cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi::unwrap))
+      cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.WebSocketStageProps =

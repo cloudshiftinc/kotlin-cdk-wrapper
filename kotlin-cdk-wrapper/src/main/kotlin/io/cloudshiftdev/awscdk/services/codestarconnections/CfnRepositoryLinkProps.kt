@@ -151,7 +151,7 @@ public interface CfnRepositoryLinkProps {
      * @param tags The tags for the repository to be associated with the repository link.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

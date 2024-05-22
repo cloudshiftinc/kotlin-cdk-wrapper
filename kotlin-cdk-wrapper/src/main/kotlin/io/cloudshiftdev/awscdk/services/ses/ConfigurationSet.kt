@@ -30,7 +30,7 @@ public open class ConfigurationSet(
   cdkObject: software.amazon.awscdk.services.ses.ConfigurationSet,
 ) : Resource(cdkObject), IConfigurationSet {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ses.ConfigurationSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ses.ConfigurationSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -39,8 +39,8 @@ public open class ConfigurationSet(
     id: String,
     props: ConfigurationSetProps,
   ) :
-      this(software.amazon.awscdk.services.ses.ConfigurationSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ConfigurationSetProps::unwrap))
+      this(software.amazon.awscdk.services.ses.ConfigurationSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ConfigurationSetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -58,7 +58,7 @@ public open class ConfigurationSet(
    */
   public open fun addEventDestination(id: String, options: ConfigurationSetEventDestinationOptions):
       ConfigurationSetEventDestination = unwrap(this).addEventDestination(id,
-      options.let(ConfigurationSetEventDestinationOptions::unwrap)).let(ConfigurationSetEventDestination::wrap)
+      options.let(ConfigurationSetEventDestinationOptions.Companion::unwrap)).let(ConfigurationSetEventDestination::wrap)
 
   /**
    * Adds an event destination to this configuration set.
@@ -194,7 +194,7 @@ public open class ConfigurationSet(
      * @param dedicatedIpPool The dedicated IP pool to associate with the configuration set. 
      */
     override fun dedicatedIpPool(dedicatedIpPool: IDedicatedIpPool) {
-      cdkBuilder.dedicatedIpPool(dedicatedIpPool.let(IDedicatedIpPool::unwrap))
+      cdkBuilder.dedicatedIpPool(dedicatedIpPool.let(IDedicatedIpPool.Companion::unwrap))
     }
 
     /**
@@ -231,7 +231,7 @@ public open class ConfigurationSet(
      * automatically added to your account's suppression list. 
      */
     override fun suppressionReasons(suppressionReasons: SuppressionReasons) {
-      cdkBuilder.suppressionReasons(suppressionReasons.let(SuppressionReasons::unwrap))
+      cdkBuilder.suppressionReasons(suppressionReasons.let(SuppressionReasons.Companion::unwrap))
     }
 
     /**
@@ -244,7 +244,7 @@ public open class ConfigurationSet(
      * use Transport Layer Security (TLS). 
      */
     override fun tlsPolicy(tlsPolicy: ConfigurationSetTlsPolicy) {
-      cdkBuilder.tlsPolicy(tlsPolicy.let(ConfigurationSetTlsPolicy::unwrap))
+      cdkBuilder.tlsPolicy(tlsPolicy.let(ConfigurationSetTlsPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ses.ConfigurationSet = cdkBuilder.build()
@@ -256,7 +256,7 @@ public open class ConfigurationSet(
       id: String,
       configurationSetName: String,
     ): IConfigurationSet =
-        software.amazon.awscdk.services.ses.ConfigurationSet.fromConfigurationSetName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ses.ConfigurationSet.fromConfigurationSetName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, configurationSetName).let(IConfigurationSet::wrap)
 
     public operator fun invoke(

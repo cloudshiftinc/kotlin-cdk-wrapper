@@ -68,8 +68,8 @@ public open class CfnRecipe(
     id: String,
     props: CfnRecipeProps,
   ) :
-      this(software.amazon.awscdk.services.databrew.CfnRecipe(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRecipeProps::unwrap))
+      this(software.amazon.awscdk.services.databrew.CfnRecipe(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRecipeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -97,7 +97,7 @@ public open class CfnRecipe(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -121,7 +121,7 @@ public open class CfnRecipe(
    * A list of steps that are defined by the recipe.
    */
   public open fun steps(`value`: IResolvable) {
-    unwrap(this).setSteps(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSteps(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -151,7 +151,7 @@ public open class CfnRecipe(
    * Metadata tags that have been applied to the recipe.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -255,7 +255,7 @@ public open class CfnRecipe(
      * @param steps A list of steps that are defined by the recipe. 
      */
     override fun steps(steps: IResolvable) {
-      cdkBuilder.steps(steps.let(IResolvable::unwrap))
+      cdkBuilder.steps(steps.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -283,7 +283,7 @@ public open class CfnRecipe(
      * @param tags Metadata tags that have been applied to the recipe. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -389,7 +389,7 @@ public open class CfnRecipe(
        * @param parameters Contextual parameters for the transformation.
        */
       override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -727,7 +727,7 @@ public open class CfnRecipe(
        * results.
        */
       override fun tempDirectory(tempDirectory: IResolvable) {
-        cdkBuilder.tempDirectory(tempDirectory.let(IResolvable::unwrap))
+        cdkBuilder.tempDirectory(tempDirectory.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -735,7 +735,7 @@ public open class CfnRecipe(
        * results.
        */
       override fun tempDirectory(tempDirectory: S3LocationProperty) {
-        cdkBuilder.tempDirectory(tempDirectory.let(S3LocationProperty::unwrap))
+        cdkBuilder.tempDirectory(tempDirectory.let(S3LocationProperty.Companion::unwrap))
       }
 
       /**
@@ -902,7 +902,7 @@ public open class CfnRecipe(
        * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
        */
       override fun dataCatalogInputDefinition(dataCatalogInputDefinition: IResolvable) {
-        cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(IResolvable::unwrap))
+        cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -910,7 +910,7 @@ public open class CfnRecipe(
        */
       override
           fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty) {
-        cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(DataCatalogInputDefinitionProperty::unwrap))
+        cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(DataCatalogInputDefinitionProperty.Companion::unwrap))
       }
 
       /**
@@ -927,14 +927,14 @@ public open class CfnRecipe(
        * @param s3InputDefinition The Amazon S3 location where the data is stored.
        */
       override fun s3InputDefinition(s3InputDefinition: IResolvable) {
-        cdkBuilder.s3InputDefinition(s3InputDefinition.let(IResolvable::unwrap))
+        cdkBuilder.s3InputDefinition(s3InputDefinition.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3InputDefinition The Amazon S3 location where the data is stored.
        */
       override fun s3InputDefinition(s3InputDefinition: S3LocationProperty) {
-        cdkBuilder.s3InputDefinition(s3InputDefinition.let(S3LocationProperty::unwrap))
+        cdkBuilder.s3InputDefinition(s3InputDefinition.let(S3LocationProperty.Companion::unwrap))
       }
 
       /**
@@ -2732,7 +2732,7 @@ public open class CfnRecipe(
        * @param multiLine Specifies whether JSON input contains embedded new line characters.
        */
       override fun multiLine(multiLine: IResolvable) {
-        cdkBuilder.multiLine(multiLine.let(IResolvable::unwrap))
+        cdkBuilder.multiLine(multiLine.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2949,7 +2949,7 @@ public open class CfnRecipe(
        * @param secondaryInputs A list of secondary inputs in a UNION transform.
        */
       override fun secondaryInputs(secondaryInputs: IResolvable) {
-        cdkBuilder.secondaryInputs(secondaryInputs.let(IResolvable::unwrap))
+        cdkBuilder.secondaryInputs(secondaryInputs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2970,7 +2970,7 @@ public open class CfnRecipe(
        * a dataset.
        */
       override fun sheetIndexes(sheetIndexes: IResolvable) {
-        cdkBuilder.sheetIndexes(sheetIndexes.let(IResolvable::unwrap))
+        cdkBuilder.sheetIndexes(sheetIndexes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4091,14 +4091,14 @@ public open class CfnRecipe(
        * @param action The particular action to be performed in the recipe step. 
        */
       override fun action(action: IResolvable) {
-        cdkBuilder.action(action.let(IResolvable::unwrap))
+        cdkBuilder.action(action.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param action The particular action to be performed in the recipe step. 
        */
       override fun action(action: ActionProperty) {
-        cdkBuilder.action(action.let(ActionProperty::unwrap))
+        cdkBuilder.action(action.let(ActionProperty.Companion::unwrap))
       }
 
       /**
@@ -4117,7 +4117,7 @@ public open class CfnRecipe(
        * be combined using a logical AND operation.
        */
       override fun conditionExpressions(conditionExpressions: IResolvable) {
-        cdkBuilder.conditionExpressions(conditionExpressions.let(IResolvable::unwrap))
+        cdkBuilder.conditionExpressions(conditionExpressions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4391,7 +4391,7 @@ public open class CfnRecipe(
        * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
        */
       override fun dataCatalogInputDefinition(dataCatalogInputDefinition: IResolvable) {
-        cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(IResolvable::unwrap))
+        cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4399,7 +4399,7 @@ public open class CfnRecipe(
        */
       override
           fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty) {
-        cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(DataCatalogInputDefinitionProperty::unwrap))
+        cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(DataCatalogInputDefinitionProperty.Companion::unwrap))
       }
 
       /**
@@ -4416,14 +4416,14 @@ public open class CfnRecipe(
        * @param s3InputDefinition The Amazon S3 location where the data is stored.
        */
       override fun s3InputDefinition(s3InputDefinition: IResolvable) {
-        cdkBuilder.s3InputDefinition(s3InputDefinition.let(IResolvable::unwrap))
+        cdkBuilder.s3InputDefinition(s3InputDefinition.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3InputDefinition The Amazon S3 location where the data is stored.
        */
       override fun s3InputDefinition(s3InputDefinition: S3LocationProperty) {
-        cdkBuilder.s3InputDefinition(s3InputDefinition.let(S3LocationProperty::unwrap))
+        cdkBuilder.s3InputDefinition(s3InputDefinition.let(S3LocationProperty.Companion::unwrap))
       }
 
       /**

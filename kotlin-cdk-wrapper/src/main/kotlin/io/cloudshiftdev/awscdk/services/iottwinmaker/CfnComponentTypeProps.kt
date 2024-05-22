@@ -325,7 +325,7 @@ public interface CfnComponentTypeProps {
      * `CompositeComponentType` is referenced by `componentTypeId` .
      */
     override fun compositeComponentTypes(compositeComponentTypes: IResolvable) {
-      cdkBuilder.compositeComponentTypes(compositeComponentTypes.let(IResolvable::unwrap))
+      cdkBuilder.compositeComponentTypes(compositeComponentTypes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -365,7 +365,7 @@ public interface CfnComponentTypeProps {
      * API reference.
      */
     override fun functions(functions: IResolvable) {
-      cdkBuilder.functions(functions.let(IResolvable::unwrap))
+      cdkBuilder.functions(functions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -393,7 +393,7 @@ public interface CfnComponentTypeProps {
      * component of this type.
      */
     override fun isSingleton(isSingleton: IResolvable) {
-      cdkBuilder.isSingleton(isSingleton.let(IResolvable::unwrap))
+      cdkBuilder.isSingleton(isSingleton.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -406,7 +406,7 @@ public interface CfnComponentTypeProps {
      * API reference.
      */
     override fun propertyDefinitions(propertyDefinitions: IResolvable) {
-      cdkBuilder.propertyDefinitions(propertyDefinitions.let(IResolvable::unwrap))
+      cdkBuilder.propertyDefinitions(propertyDefinitions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -428,7 +428,7 @@ public interface CfnComponentTypeProps {
      * Each string in the mapping must be unique to this object.
      */
     override fun propertyGroups(propertyGroups: IResolvable) {
-      cdkBuilder.propertyGroups(propertyGroups.let(IResolvable::unwrap))
+      cdkBuilder.propertyGroups(propertyGroups.let(IResolvable.Companion::unwrap))
     }
 
     /**

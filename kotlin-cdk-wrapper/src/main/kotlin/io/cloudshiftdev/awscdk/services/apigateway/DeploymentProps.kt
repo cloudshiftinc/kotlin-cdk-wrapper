@@ -65,6 +65,15 @@ public interface DeploymentProps {
   public fun retainDeployments(): Boolean? = unwrap(this).getRetainDeployments()
 
   /**
+   * The name of the stage the API Gateway deployment deploys to.
+   *
+   * Default: - No stage name. If the `stageName` property is set but a stage with the
+   * corresponding name does not exist, a new stage resource will be created with the
+   * provided stage name.
+   */
+  public fun stageName(): String? = unwrap(this).getStageName()
+
+  /**
    * A builder for [DeploymentProps]
    */
   @CdkDslMarker
@@ -86,6 +95,11 @@ public interface DeploymentProps {
      * This will allow manually reverting back to a previous deployment in case for example
      */
     public fun retainDeployments(retainDeployments: Boolean)
+
+    /**
+     * @param stageName The name of the stage the API Gateway deployment deploys to.
+     */
+    public fun stageName(stageName: String)
   }
 
   private class BuilderImpl : Builder {
@@ -96,7 +110,7 @@ public interface DeploymentProps {
      * @param api The Rest API to deploy. 
      */
     override fun api(api: IRestApi) {
-      cdkBuilder.api(api.let(IRestApi::unwrap))
+      cdkBuilder.api(api.let(IRestApi.Companion::unwrap))
     }
 
     /**
@@ -114,6 +128,13 @@ public interface DeploymentProps {
      */
     override fun retainDeployments(retainDeployments: Boolean) {
       cdkBuilder.retainDeployments(retainDeployments)
+    }
+
+    /**
+     * @param stageName The name of the stage the API Gateway deployment deploys to.
+     */
+    override fun stageName(stageName: String) {
+      cdkBuilder.stageName(stageName)
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.DeploymentProps =
@@ -144,6 +165,15 @@ public interface DeploymentProps {
      * Default: false
      */
     override fun retainDeployments(): Boolean? = unwrap(this).getRetainDeployments()
+
+    /**
+     * The name of the stage the API Gateway deployment deploys to.
+     *
+     * Default: - No stage name. If the `stageName` property is set but a stage with the
+     * corresponding name does not exist, a new stage resource will be created with the
+     * provided stage name.
+     */
+    override fun stageName(): String? = unwrap(this).getStageName()
   }
 
   public companion object {

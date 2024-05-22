@@ -94,7 +94,7 @@ public interface SnapshotCredentialsFromGeneratedPasswordOptions {
      * @param encryptionKey KMS encryption key to encrypt the generated secret.
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -108,7 +108,7 @@ public interface SnapshotCredentialsFromGeneratedPasswordOptions {
      * @param replicaRegions A list of regions where to replicate this secret.
      */
     override fun replicaRegions(replicaRegions: List<ReplicaRegion>) {
-      cdkBuilder.replicaRegions(replicaRegions.map(ReplicaRegion::unwrap))
+      cdkBuilder.replicaRegions(replicaRegions.map(ReplicaRegion.Companion::unwrap))
     }
 
     /**

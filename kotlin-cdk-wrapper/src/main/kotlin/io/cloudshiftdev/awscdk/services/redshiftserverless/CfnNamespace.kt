@@ -70,8 +70,8 @@ public open class CfnNamespace(
     id: String,
     props: CfnNamespaceProps,
   ) :
-      this(software.amazon.awscdk.services.redshiftserverless.CfnNamespace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnNamespaceProps::unwrap))
+      this(software.amazon.awscdk.services.redshiftserverless.CfnNamespace(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnNamespaceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -264,7 +264,7 @@ public open class CfnNamespace(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -312,7 +312,7 @@ public open class CfnNamespace(
    * If true, Amazon Redshift uses AWS Secrets Manager to manage the namespace's admin credentials.
    */
   public open fun manageAdminPassword(`value`: IResolvable) {
-    unwrap(this).setManageAdminPassword(`value`.let(IResolvable::unwrap))
+    unwrap(this).setManageAdminPassword(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -360,7 +360,7 @@ public open class CfnNamespace(
    * The snapshot copy configurations for the namespace.
    */
   public open fun snapshotCopyConfigurations(`value`: IResolvable) {
-    unwrap(this).setSnapshotCopyConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSnapshotCopyConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -391,7 +391,7 @@ public open class CfnNamespace(
    * The map of the key-value pairs used to tag the namespace.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -775,7 +775,7 @@ public open class CfnNamespace(
      * namespace's admin credentials. 
      */
     override fun manageAdminPassword(manageAdminPassword: IResolvable) {
-      cdkBuilder.manageAdminPassword(manageAdminPassword.let(IResolvable::unwrap))
+      cdkBuilder.manageAdminPassword(manageAdminPassword.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -821,7 +821,7 @@ public open class CfnNamespace(
      * @param snapshotCopyConfigurations The snapshot copy configurations for the namespace. 
      */
     override fun snapshotCopyConfigurations(snapshotCopyConfigurations: IResolvable) {
-      cdkBuilder.snapshotCopyConfigurations(snapshotCopyConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.snapshotCopyConfigurations(snapshotCopyConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -850,7 +850,7 @@ public open class CfnNamespace(
      * @param tags The map of the key-value pairs used to tag the namespace. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1351,6 +1351,9 @@ public open class CfnNamespace(
   }
 
   /**
+   * The object that you configure to copy snapshots from one namespace to a namespace in another
+   * AWS Region .
+   *
    * Example:
    *
    * ```
@@ -1370,16 +1373,22 @@ public open class CfnNamespace(
    */
   public interface SnapshotCopyConfigurationProperty {
     /**
+     * The ID of the KMS key to use to encrypt your snapshots in the destination AWS Region .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-namespace-snapshotcopyconfiguration.html#cfn-redshiftserverless-namespace-snapshotcopyconfiguration-destinationkmskeyid)
      */
     public fun destinationKmsKeyId(): String? = unwrap(this).getDestinationKmsKeyId()
 
     /**
+     * The destination AWS Region to copy snapshots to.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-namespace-snapshotcopyconfiguration.html#cfn-redshiftserverless-namespace-snapshotcopyconfiguration-destinationregion)
      */
     public fun destinationRegion(): String
 
     /**
+     * The retention period of snapshots that are copied to the destination AWS Region .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-namespace-snapshotcopyconfiguration.html#cfn-redshiftserverless-namespace-snapshotcopyconfiguration-snapshotretentionperiod)
      */
     public fun snapshotRetentionPeriod(): Number? = unwrap(this).getSnapshotRetentionPeriod()
@@ -1390,17 +1399,19 @@ public open class CfnNamespace(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param destinationKmsKeyId the value to be set.
+       * @param destinationKmsKeyId The ID of the KMS key to use to encrypt your snapshots in the
+       * destination AWS Region .
        */
       public fun destinationKmsKeyId(destinationKmsKeyId: String)
 
       /**
-       * @param destinationRegion the value to be set. 
+       * @param destinationRegion The destination AWS Region to copy snapshots to. 
        */
       public fun destinationRegion(destinationRegion: String)
 
       /**
-       * @param snapshotRetentionPeriod the value to be set.
+       * @param snapshotRetentionPeriod The retention period of snapshots that are copied to the
+       * destination AWS Region .
        */
       public fun snapshotRetentionPeriod(snapshotRetentionPeriod: Number)
     }
@@ -1412,21 +1423,23 @@ public open class CfnNamespace(
           software.amazon.awscdk.services.redshiftserverless.CfnNamespace.SnapshotCopyConfigurationProperty.builder()
 
       /**
-       * @param destinationKmsKeyId the value to be set.
+       * @param destinationKmsKeyId The ID of the KMS key to use to encrypt your snapshots in the
+       * destination AWS Region .
        */
       override fun destinationKmsKeyId(destinationKmsKeyId: String) {
         cdkBuilder.destinationKmsKeyId(destinationKmsKeyId)
       }
 
       /**
-       * @param destinationRegion the value to be set. 
+       * @param destinationRegion The destination AWS Region to copy snapshots to. 
        */
       override fun destinationRegion(destinationRegion: String) {
         cdkBuilder.destinationRegion(destinationRegion)
       }
 
       /**
-       * @param snapshotRetentionPeriod the value to be set.
+       * @param snapshotRetentionPeriod The retention period of snapshots that are copied to the
+       * destination AWS Region .
        */
       override fun snapshotRetentionPeriod(snapshotRetentionPeriod: Number) {
         cdkBuilder.snapshotRetentionPeriod(snapshotRetentionPeriod)
@@ -1441,16 +1454,22 @@ public open class CfnNamespace(
       cdkObject: software.amazon.awscdk.services.redshiftserverless.CfnNamespace.SnapshotCopyConfigurationProperty,
     ) : CdkObject(cdkObject), SnapshotCopyConfigurationProperty {
       /**
+       * The ID of the KMS key to use to encrypt your snapshots in the destination AWS Region .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-namespace-snapshotcopyconfiguration.html#cfn-redshiftserverless-namespace-snapshotcopyconfiguration-destinationkmskeyid)
        */
       override fun destinationKmsKeyId(): String? = unwrap(this).getDestinationKmsKeyId()
 
       /**
+       * The destination AWS Region to copy snapshots to.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-namespace-snapshotcopyconfiguration.html#cfn-redshiftserverless-namespace-snapshotcopyconfiguration-destinationregion)
        */
       override fun destinationRegion(): String = unwrap(this).getDestinationRegion()
 
       /**
+       * The retention period of snapshots that are copied to the destination AWS Region .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshiftserverless-namespace-snapshotcopyconfiguration.html#cfn-redshiftserverless-namespace-snapshotcopyconfiguration-snapshotretentionperiod)
        */
       override fun snapshotRetentionPeriod(): Number? = unwrap(this).getSnapshotRetentionPeriod()

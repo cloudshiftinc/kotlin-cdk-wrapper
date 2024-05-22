@@ -151,14 +151,14 @@ public interface CfnCustomPluginProps {
      * @param location Information about the location of the custom plugin. 
      */
     override fun location(location: IResolvable) {
-      cdkBuilder.location(location.let(IResolvable::unwrap))
+      cdkBuilder.location(location.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param location Information about the location of the custom plugin. 
      */
     override fun location(location: CfnCustomPlugin.CustomPluginLocationProperty) {
-      cdkBuilder.location(location.let(CfnCustomPlugin.CustomPluginLocationProperty::unwrap))
+      cdkBuilder.location(location.let(CfnCustomPlugin.CustomPluginLocationProperty.Companion::unwrap))
     }
 
     /**
@@ -181,7 +181,7 @@ public interface CfnCustomPluginProps {
      * @param tags An array of key-value pairs to apply to this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

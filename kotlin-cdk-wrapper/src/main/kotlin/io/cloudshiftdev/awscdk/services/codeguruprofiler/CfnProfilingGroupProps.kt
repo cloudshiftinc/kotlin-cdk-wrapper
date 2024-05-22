@@ -199,7 +199,7 @@ public interface CfnProfilingGroupProps {
      */
     override
         fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: IResolvable) {
-      cdkBuilder.anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -241,7 +241,7 @@ public interface CfnProfilingGroupProps {
      * @param tags A list of tags to add to the created profiling group.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

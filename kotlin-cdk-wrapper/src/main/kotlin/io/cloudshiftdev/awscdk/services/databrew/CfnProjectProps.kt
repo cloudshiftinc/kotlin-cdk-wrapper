@@ -187,7 +187,7 @@ public interface CfnProjectProps {
      * dataset.
      */
     override fun sample(sample: IResolvable) {
-      cdkBuilder.sample(sample.let(IResolvable::unwrap))
+      cdkBuilder.sample(sample.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -196,7 +196,7 @@ public interface CfnProjectProps {
      * dataset.
      */
     override fun sample(sample: CfnProject.SampleProperty) {
-      cdkBuilder.sample(sample.let(CfnProject.SampleProperty::unwrap))
+      cdkBuilder.sample(sample.let(CfnProject.SampleProperty.Companion::unwrap))
     }
 
     /**
@@ -213,7 +213,7 @@ public interface CfnProjectProps {
      * @param tags Metadata tags that have been applied to the project.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -337,7 +337,7 @@ public interface CfnDBInstanceProps {
      * Default: `false`
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -402,7 +402,7 @@ public interface CfnDBInstanceProps {
      * in the *Amazon DocumentDB Developer Guide* .
      */
     override fun certificateRotationRestart(certificateRotationRestart: IResolvable) {
-      cdkBuilder.certificateRotationRestart(certificateRotationRestart.let(IResolvable::unwrap))
+      cdkBuilder.certificateRotationRestart(certificateRotationRestart.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -455,7 +455,7 @@ public interface CfnDBInstanceProps {
      * .
      */
     override fun enablePerformanceInsights(enablePerformanceInsights: IResolvable) {
-      cdkBuilder.enablePerformanceInsights(enablePerformanceInsights.let(IResolvable::unwrap))
+      cdkBuilder.enablePerformanceInsights(enablePerformanceInsights.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -479,7 +479,7 @@ public interface CfnDBInstanceProps {
      * You can assign up to 10 tags to an instance.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

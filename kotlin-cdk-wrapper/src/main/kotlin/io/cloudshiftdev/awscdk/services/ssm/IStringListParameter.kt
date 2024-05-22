@@ -42,7 +42,7 @@ public interface IStringListParameter : IParameter {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -64,7 +64,7 @@ public interface IStringListParameter : IParameter {
      * @param grantee the role to be granted read-only access to the parameter. 
      */
     override fun grantRead(grantee: IGrantable): Grant =
-        unwrap(this).grantRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grants write (PutParameter) permissions on the SSM Parameter.
@@ -72,7 +72,7 @@ public interface IStringListParameter : IParameter {
      * @param grantee the role to be granted write access to the parameter. 
      */
     override fun grantWrite(grantee: IGrantable): Grant =
-        unwrap(this).grantWrite(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantWrite(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 

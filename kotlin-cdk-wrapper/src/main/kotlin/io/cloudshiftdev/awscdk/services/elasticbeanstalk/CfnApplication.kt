@@ -58,7 +58,7 @@ public open class CfnApplication(
   cdkObject: software.amazon.awscdk.services.elasticbeanstalk.CfnApplication,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.elasticbeanstalk.CfnApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.elasticbeanstalk.CfnApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -67,8 +67,8 @@ public open class CfnApplication(
     id: String,
     props: CfnApplicationProps,
   ) :
-      this(software.amazon.awscdk.services.elasticbeanstalk.CfnApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApplicationProps::unwrap))
+      this(software.amazon.awscdk.services.elasticbeanstalk.CfnApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApplicationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -108,7 +108,7 @@ public open class CfnApplication(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -122,7 +122,7 @@ public open class CfnApplication(
    * accumulating too many versions.
    */
   public open fun resourceLifecycleConfig(`value`: IResolvable) {
-    unwrap(this).setResourceLifecycleConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResourceLifecycleConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -130,7 +130,7 @@ public open class CfnApplication(
    * accumulating too many versions.
    */
   public open fun resourceLifecycleConfig(`value`: ApplicationResourceLifecycleConfigProperty) {
-    unwrap(this).setResourceLifecycleConfig(`value`.let(ApplicationResourceLifecycleConfigProperty::unwrap))
+    unwrap(this).setResourceLifecycleConfig(`value`.let(ApplicationResourceLifecycleConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -255,7 +255,7 @@ public open class CfnApplication(
      * prevent your application from accumulating too many versions. 
      */
     override fun resourceLifecycleConfig(resourceLifecycleConfig: IResolvable) {
-      cdkBuilder.resourceLifecycleConfig(resourceLifecycleConfig.let(IResolvable::unwrap))
+      cdkBuilder.resourceLifecycleConfig(resourceLifecycleConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -268,7 +268,7 @@ public open class CfnApplication(
      */
     override
         fun resourceLifecycleConfig(resourceLifecycleConfig: ApplicationResourceLifecycleConfigProperty) {
-      cdkBuilder.resourceLifecycleConfig(resourceLifecycleConfig.let(ApplicationResourceLifecycleConfigProperty::unwrap))
+      cdkBuilder.resourceLifecycleConfig(resourceLifecycleConfig.let(ApplicationResourceLifecycleConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -428,7 +428,7 @@ public open class CfnApplication(
        * @param versionLifecycleConfig Defines lifecycle settings for application versions.
        */
       override fun versionLifecycleConfig(versionLifecycleConfig: IResolvable) {
-        cdkBuilder.versionLifecycleConfig(versionLifecycleConfig.let(IResolvable::unwrap))
+        cdkBuilder.versionLifecycleConfig(versionLifecycleConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -436,7 +436,7 @@ public open class CfnApplication(
        */
       override
           fun versionLifecycleConfig(versionLifecycleConfig: ApplicationVersionLifecycleConfigProperty) {
-        cdkBuilder.versionLifecycleConfig(versionLifecycleConfig.let(ApplicationVersionLifecycleConfigProperty::unwrap))
+        cdkBuilder.versionLifecycleConfig(versionLifecycleConfig.let(ApplicationVersionLifecycleConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -610,7 +610,7 @@ public open class CfnApplication(
        * versions are retained for an application.
        */
       override fun maxAgeRule(maxAgeRule: IResolvable) {
-        cdkBuilder.maxAgeRule(maxAgeRule.let(IResolvable::unwrap))
+        cdkBuilder.maxAgeRule(maxAgeRule.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -618,7 +618,7 @@ public open class CfnApplication(
        * versions are retained for an application.
        */
       override fun maxAgeRule(maxAgeRule: MaxAgeRuleProperty) {
-        cdkBuilder.maxAgeRule(maxAgeRule.let(MaxAgeRuleProperty::unwrap))
+        cdkBuilder.maxAgeRule(maxAgeRule.let(MaxAgeRuleProperty.Companion::unwrap))
       }
 
       /**
@@ -635,7 +635,7 @@ public open class CfnApplication(
        * that are retained for an application.
        */
       override fun maxCountRule(maxCountRule: IResolvable) {
-        cdkBuilder.maxCountRule(maxCountRule.let(IResolvable::unwrap))
+        cdkBuilder.maxCountRule(maxCountRule.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -643,7 +643,7 @@ public open class CfnApplication(
        * that are retained for an application.
        */
       override fun maxCountRule(maxCountRule: MaxCountRuleProperty) {
-        cdkBuilder.maxCountRule(maxCountRule.let(MaxCountRuleProperty::unwrap))
+        cdkBuilder.maxCountRule(maxCountRule.let(MaxCountRuleProperty.Companion::unwrap))
       }
 
       /**
@@ -800,7 +800,7 @@ public open class CfnApplication(
        * when Elastic Beanstalk deletes the application version.
        */
       override fun deleteSourceFromS3(deleteSourceFromS3: IResolvable) {
-        cdkBuilder.deleteSourceFromS3(deleteSourceFromS3.let(IResolvable::unwrap))
+        cdkBuilder.deleteSourceFromS3(deleteSourceFromS3.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -814,7 +814,7 @@ public open class CfnApplication(
        * @param enabled Specify `true` to apply the rule, or `false` to disable it.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -975,7 +975,7 @@ public open class CfnApplication(
        * when Elastic Beanstalk deletes the application version.
        */
       override fun deleteSourceFromS3(deleteSourceFromS3: IResolvable) {
-        cdkBuilder.deleteSourceFromS3(deleteSourceFromS3.let(IResolvable::unwrap))
+        cdkBuilder.deleteSourceFromS3(deleteSourceFromS3.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -989,7 +989,7 @@ public open class CfnApplication(
        * @param enabled Specify `true` to apply the rule, or `false` to disable it.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**

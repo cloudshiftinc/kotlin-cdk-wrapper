@@ -102,14 +102,14 @@ public interface GrpcHealthCheckOptions {
      * @param interval The time period between each health check execution.
      */
     override fun interval(interval: Duration) {
-      cdkBuilder.interval(interval.let(Duration::unwrap))
+      cdkBuilder.interval(interval.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param timeout The amount of time to wait when receiving a response from the health check.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**

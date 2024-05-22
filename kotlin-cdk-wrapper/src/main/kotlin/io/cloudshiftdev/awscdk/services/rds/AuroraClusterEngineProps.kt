@@ -49,7 +49,7 @@ public interface AuroraClusterEngineProps {
      * @param version The version of the Aurora cluster engine. 
      */
     override fun version(version: AuroraEngineVersion) {
-      cdkBuilder.version(version.let(AuroraEngineVersion::unwrap))
+      cdkBuilder.version(version.let(AuroraEngineVersion.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.AuroraClusterEngineProps =

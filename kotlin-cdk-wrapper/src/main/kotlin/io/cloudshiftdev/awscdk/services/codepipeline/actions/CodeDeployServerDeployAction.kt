@@ -35,7 +35,7 @@ public open class CodeDeployServerDeployAction(
   cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeDeployServerDeployAction,
 ) : Action(cdkObject) {
   public constructor(props: CodeDeployServerDeployActionProps) :
-      this(software.amazon.awscdk.services.codepipeline.actions.CodeDeployServerDeployAction(props.let(CodeDeployServerDeployActionProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.actions.CodeDeployServerDeployAction(props.let(CodeDeployServerDeployActionProps.Companion::unwrap))
   )
 
   public constructor(props: CodeDeployServerDeployActionProps.Builder.() -> Unit) :
@@ -133,7 +133,7 @@ public open class CodeDeployServerDeployAction(
      * @param deploymentGroup The CodeDeploy server Deployment Group to deploy to. 
      */
     override fun deploymentGroup(deploymentGroup: IServerDeploymentGroup) {
-      cdkBuilder.deploymentGroup(deploymentGroup.let(IServerDeploymentGroup::unwrap))
+      cdkBuilder.deploymentGroup(deploymentGroup.let(IServerDeploymentGroup.Companion::unwrap))
     }
 
     /**
@@ -142,7 +142,7 @@ public open class CodeDeployServerDeployAction(
      * @param input The source to use as input for deployment. 
      */
     override fun input(input: Artifact) {
-      cdkBuilder.input(input.let(Artifact::unwrap))
+      cdkBuilder.input(input.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -159,7 +159,7 @@ public open class CodeDeployServerDeployAction(
      * @param role The Role in which context's this Action will be executing in. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**

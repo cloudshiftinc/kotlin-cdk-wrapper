@@ -51,8 +51,8 @@ public open class Model(
     id: String,
     props: ModelProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.Model(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ModelProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.Model(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ModelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -207,7 +207,7 @@ public open class Model(
      * @param restApi The rest API that this model is part of. 
      */
     override fun restApi(restApi: IRestApi) {
-      cdkBuilder.restApi(restApi.let(IRestApi::unwrap))
+      cdkBuilder.restApi(restApi.let(IRestApi.Companion::unwrap))
     }
 
     /**
@@ -218,7 +218,7 @@ public open class Model(
      * @param schema The schema to use to transform data to one or more output formats. 
      */
     override fun schema(schema: JsonSchema) {
-      cdkBuilder.schema(schema.let(JsonSchema::unwrap))
+      cdkBuilder.schema(schema.let(JsonSchema.Companion::unwrap))
     }
 
     /**
@@ -247,7 +247,7 @@ public open class Model(
       id: String,
       modelName: String,
     ): IModel =
-        software.amazon.awscdk.services.apigateway.Model.fromModelName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.apigateway.Model.fromModelName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, modelName).let(IModel::wrap)
 
     public operator fun invoke(

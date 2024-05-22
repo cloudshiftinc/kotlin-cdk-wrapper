@@ -36,7 +36,7 @@ public open class CfnParameterGroup(
   cdkObject: software.amazon.awscdk.services.dax.CfnParameterGroup,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.dax.CfnParameterGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.dax.CfnParameterGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -45,8 +45,8 @@ public open class CfnParameterGroup(
     id: String,
     props: CfnParameterGroupProps,
   ) :
-      this(software.amazon.awscdk.services.dax.CfnParameterGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnParameterGroupProps::unwrap))
+      this(software.amazon.awscdk.services.dax.CfnParameterGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnParameterGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -79,7 +79,7 @@ public open class CfnParameterGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

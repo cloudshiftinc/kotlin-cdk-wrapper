@@ -95,7 +95,7 @@ public interface NodegroupRemoteAccess {
      * nodes is opened to the internet (0.0.0.0/0).
      */
     override fun sourceSecurityGroups(sourceSecurityGroups: List<ISecurityGroup>) {
-      cdkBuilder.sourceSecurityGroups(sourceSecurityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.sourceSecurityGroups(sourceSecurityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**

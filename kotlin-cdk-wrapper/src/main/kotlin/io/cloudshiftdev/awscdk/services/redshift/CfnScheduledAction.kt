@@ -70,8 +70,8 @@ public open class CfnScheduledAction(
     id: String,
     props: CfnScheduledActionProps,
   ) :
-      this(software.amazon.awscdk.services.redshift.CfnScheduledAction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnScheduledActionProps::unwrap))
+      this(software.amazon.awscdk.services.redshift.CfnScheduledAction(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnScheduledActionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -109,7 +109,7 @@ public open class CfnScheduledAction(
    * If true, the schedule is enabled.
    */
   public open fun enable(`value`: IResolvable) {
-    unwrap(this).setEnable(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnable(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -142,7 +142,7 @@ public open class CfnScheduledAction(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -203,14 +203,14 @@ public open class CfnScheduledAction(
    * A JSON format string of the Amazon Redshift API operation with input parameters.
    */
   public open fun targetAction(`value`: IResolvable) {
-    unwrap(this).setTargetAction(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTargetAction(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A JSON format string of the Amazon Redshift API operation with input parameters.
    */
   public open fun targetAction(`value`: ScheduledActionTypeProperty) {
-    unwrap(this).setTargetAction(`value`.let(ScheduledActionTypeProperty::unwrap))
+    unwrap(this).setTargetAction(`value`.let(ScheduledActionTypeProperty.Companion::unwrap))
   }
 
   /**
@@ -391,7 +391,7 @@ public open class CfnScheduledAction(
      * @param enable If true, the schedule is enabled. 
      */
     override fun enable(enable: IResolvable) {
-      cdkBuilder.enable(enable.let(IResolvable::unwrap))
+      cdkBuilder.enable(enable.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -489,7 +489,7 @@ public open class CfnScheduledAction(
      * parameters. 
      */
     override fun targetAction(targetAction: IResolvable) {
-      cdkBuilder.targetAction(targetAction.let(IResolvable::unwrap))
+      cdkBuilder.targetAction(targetAction.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -504,7 +504,7 @@ public open class CfnScheduledAction(
      * parameters. 
      */
     override fun targetAction(targetAction: ScheduledActionTypeProperty) {
-      cdkBuilder.targetAction(targetAction.let(ScheduledActionTypeProperty::unwrap))
+      cdkBuilder.targetAction(targetAction.let(ScheduledActionTypeProperty.Companion::unwrap))
     }
 
     /**
@@ -765,7 +765,7 @@ public open class CfnScheduledAction(
        * elastic.
        */
       override fun classic(classic: IResolvable) {
-        cdkBuilder.classic(classic.let(IResolvable::unwrap))
+        cdkBuilder.classic(classic.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1072,14 +1072,14 @@ public open class CfnScheduledAction(
        * @param pauseCluster An action that runs a `PauseCluster` API operation.
        */
       override fun pauseCluster(pauseCluster: IResolvable) {
-        cdkBuilder.pauseCluster(pauseCluster.let(IResolvable::unwrap))
+        cdkBuilder.pauseCluster(pauseCluster.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param pauseCluster An action that runs a `PauseCluster` API operation.
        */
       override fun pauseCluster(pauseCluster: PauseClusterMessageProperty) {
-        cdkBuilder.pauseCluster(pauseCluster.let(PauseClusterMessageProperty::unwrap))
+        cdkBuilder.pauseCluster(pauseCluster.let(PauseClusterMessageProperty.Companion::unwrap))
       }
 
       /**
@@ -1094,14 +1094,14 @@ public open class CfnScheduledAction(
        * @param resizeCluster An action that runs a `ResizeCluster` API operation.
        */
       override fun resizeCluster(resizeCluster: IResolvable) {
-        cdkBuilder.resizeCluster(resizeCluster.let(IResolvable::unwrap))
+        cdkBuilder.resizeCluster(resizeCluster.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param resizeCluster An action that runs a `ResizeCluster` API operation.
        */
       override fun resizeCluster(resizeCluster: ResizeClusterMessageProperty) {
-        cdkBuilder.resizeCluster(resizeCluster.let(ResizeClusterMessageProperty::unwrap))
+        cdkBuilder.resizeCluster(resizeCluster.let(ResizeClusterMessageProperty.Companion::unwrap))
       }
 
       /**
@@ -1116,14 +1116,14 @@ public open class CfnScheduledAction(
        * @param resumeCluster An action that runs a `ResumeCluster` API operation.
        */
       override fun resumeCluster(resumeCluster: IResolvable) {
-        cdkBuilder.resumeCluster(resumeCluster.let(IResolvable::unwrap))
+        cdkBuilder.resumeCluster(resumeCluster.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param resumeCluster An action that runs a `ResumeCluster` API operation.
        */
       override fun resumeCluster(resumeCluster: ResumeClusterMessageProperty) {
-        cdkBuilder.resumeCluster(resumeCluster.let(ResumeClusterMessageProperty::unwrap))
+        cdkBuilder.resumeCluster(resumeCluster.let(ResumeClusterMessageProperty.Companion::unwrap))
       }
 
       /**

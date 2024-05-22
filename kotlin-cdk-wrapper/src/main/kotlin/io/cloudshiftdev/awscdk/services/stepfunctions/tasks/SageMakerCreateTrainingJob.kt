@@ -70,8 +70,8 @@ public open class SageMakerCreateTrainingJob(
     id: String,
     props: SageMakerCreateTrainingJobProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTrainingJob(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SageMakerCreateTrainingJobProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTrainingJob(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SageMakerCreateTrainingJobProps.Companion::unwrap))
   )
 
   public constructor(
@@ -87,7 +87,7 @@ public open class SageMakerCreateTrainingJob(
    * @param securityGroup : The security group to add. 
    */
   public open fun addSecurityGroup(securityGroup: ISecurityGroup) {
-    unwrap(this).addSecurityGroup(securityGroup.let(ISecurityGroup::unwrap))
+    unwrap(this).addSecurityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
   }
 
   /**
@@ -479,7 +479,7 @@ public open class SageMakerCreateTrainingJob(
      * @param algorithmSpecification Identifies the training algorithm to use. 
      */
     override fun algorithmSpecification(algorithmSpecification: AlgorithmSpecification) {
-      cdkBuilder.algorithmSpecification(algorithmSpecification.let(AlgorithmSpecification::unwrap))
+      cdkBuilder.algorithmSpecification(algorithmSpecification.let(AlgorithmSpecification.Companion::unwrap))
     }
 
     /**
@@ -516,7 +516,7 @@ public open class SageMakerCreateTrainingJob(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -569,7 +569,7 @@ public open class SageMakerCreateTrainingJob(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -583,7 +583,7 @@ public open class SageMakerCreateTrainingJob(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -610,7 +610,7 @@ public open class SageMakerCreateTrainingJob(
      * Amazon S3 location where stored. 
      */
     override fun inputDataConfig(inputDataConfig: List<Channel>) {
-      cdkBuilder.inputDataConfig(inputDataConfig.map(Channel::unwrap))
+      cdkBuilder.inputDataConfig(inputDataConfig.map(Channel.Companion::unwrap))
     }
 
     /**
@@ -655,7 +655,7 @@ public open class SageMakerCreateTrainingJob(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -666,7 +666,7 @@ public open class SageMakerCreateTrainingJob(
      * save the results of model training. 
      */
     override fun outputDataConfig(outputDataConfig: OutputDataConfig) {
-      cdkBuilder.outputDataConfig(outputDataConfig.let(OutputDataConfig::unwrap))
+      cdkBuilder.outputDataConfig(outputDataConfig.let(OutputDataConfig.Companion::unwrap))
     }
 
     /**
@@ -707,7 +707,7 @@ public open class SageMakerCreateTrainingJob(
      * to deploy for model training. 
      */
     override fun resourceConfig(resourceConfig: ResourceConfig) {
-      cdkBuilder.resourceConfig(resourceConfig.let(ResourceConfig::unwrap))
+      cdkBuilder.resourceConfig(resourceConfig.let(ResourceConfig.Companion::unwrap))
     }
 
     /**
@@ -769,7 +769,7 @@ public open class SageMakerCreateTrainingJob(
      * @param role Role for the Training Job. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -791,7 +791,7 @@ public open class SageMakerCreateTrainingJob(
      * @param stoppingCondition Sets a time limit for training. 
      */
     override fun stoppingCondition(stoppingCondition: StoppingCondition) {
-      cdkBuilder.stoppingCondition(stoppingCondition.let(StoppingCondition::unwrap))
+      cdkBuilder.stoppingCondition(stoppingCondition.let(StoppingCondition.Companion::unwrap))
     }
 
     /**
@@ -828,7 +828,7 @@ public open class SageMakerCreateTrainingJob(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -841,7 +841,7 @@ public open class SageMakerCreateTrainingJob(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -861,7 +861,7 @@ public open class SageMakerCreateTrainingJob(
      * @param vpcConfig Specifies the VPC that you want your training job to connect to. 
      */
     override fun vpcConfig(vpcConfig: VpcConfig) {
-      cdkBuilder.vpcConfig(vpcConfig.let(VpcConfig::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(VpcConfig.Companion::unwrap))
     }
 
     /**

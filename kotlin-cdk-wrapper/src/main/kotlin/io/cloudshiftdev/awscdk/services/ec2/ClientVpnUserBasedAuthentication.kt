@@ -44,12 +44,12 @@ public abstract class ClientVpnUserBasedAuthentication(
         software.amazon.awscdk.services.ec2.ClientVpnUserBasedAuthentication.activeDirectory(directoryId).let(ClientVpnUserBasedAuthentication::wrap)
 
     public fun federated(samlProvider: ISamlProvider): ClientVpnUserBasedAuthentication =
-        software.amazon.awscdk.services.ec2.ClientVpnUserBasedAuthentication.federated(samlProvider.let(ISamlProvider::unwrap)).let(ClientVpnUserBasedAuthentication::wrap)
+        software.amazon.awscdk.services.ec2.ClientVpnUserBasedAuthentication.federated(samlProvider.let(ISamlProvider.Companion::unwrap)).let(ClientVpnUserBasedAuthentication::wrap)
 
     public fun federated(samlProvider: ISamlProvider, selfServiceSamlProvider: ISamlProvider):
         ClientVpnUserBasedAuthentication =
-        software.amazon.awscdk.services.ec2.ClientVpnUserBasedAuthentication.federated(samlProvider.let(ISamlProvider::unwrap),
-        selfServiceSamlProvider.let(ISamlProvider::unwrap)).let(ClientVpnUserBasedAuthentication::wrap)
+        software.amazon.awscdk.services.ec2.ClientVpnUserBasedAuthentication.federated(samlProvider.let(ISamlProvider.Companion::unwrap),
+        selfServiceSamlProvider.let(ISamlProvider.Companion::unwrap)).let(ClientVpnUserBasedAuthentication::wrap)
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.ec2.ClientVpnUserBasedAuthentication):

@@ -74,8 +74,8 @@ public open class CfnGameSessionQueue(
     id: String,
     props: CfnGameSessionQueueProps,
   ) :
-      this(software.amazon.awscdk.services.gamelift.CfnGameSessionQueue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGameSessionQueueProps::unwrap))
+      this(software.amazon.awscdk.services.gamelift.CfnGameSessionQueue(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGameSessionQueueProps.Companion::unwrap))
   )
 
   public constructor(
@@ -120,7 +120,7 @@ public open class CfnGameSessionQueue(
    * requests in the queue.
    */
   public open fun destinations(`value`: IResolvable) {
-    unwrap(this).setDestinations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDestinations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -146,14 +146,14 @@ public open class CfnGameSessionQueue(
    * A list of locations where a queue is allowed to place new game sessions.
    */
   public open fun filterConfiguration(`value`: IResolvable) {
-    unwrap(this).setFilterConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFilterConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A list of locations where a queue is allowed to place new game sessions.
    */
   public open fun filterConfiguration(`value`: FilterConfigurationProperty) {
-    unwrap(this).setFilterConfiguration(`value`.let(FilterConfigurationProperty::unwrap))
+    unwrap(this).setFilterConfiguration(`value`.let(FilterConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -170,7 +170,7 @@ public open class CfnGameSessionQueue(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -206,7 +206,7 @@ public open class CfnGameSessionQueue(
    * A set of policies that act as a sliding cap on player latency.
    */
   public open fun playerLatencyPolicies(`value`: IResolvable) {
-    unwrap(this).setPlayerLatencyPolicies(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPlayerLatencyPolicies(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -233,7 +233,7 @@ public open class CfnGameSessionQueue(
    * placements.
    */
   public open fun priorityConfiguration(`value`: IResolvable) {
-    unwrap(this).setPriorityConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPriorityConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -241,7 +241,7 @@ public open class CfnGameSessionQueue(
    * placements.
    */
   public open fun priorityConfiguration(`value`: PriorityConfigurationProperty) {
-    unwrap(this).setPriorityConfiguration(`value`.let(PriorityConfigurationProperty::unwrap))
+    unwrap(this).setPriorityConfiguration(`value`.let(PriorityConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -268,7 +268,7 @@ public open class CfnGameSessionQueue(
    * A list of labels to assign to the new game session queue resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -556,7 +556,7 @@ public open class CfnGameSessionQueue(
      * session placement requests in the queue. 
      */
     override fun destinations(destinations: IResolvable) {
-      cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
+      cdkBuilder.destinations(destinations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -598,7 +598,7 @@ public open class CfnGameSessionQueue(
      * sessions. 
      */
     override fun filterConfiguration(filterConfiguration: IResolvable) {
-      cdkBuilder.filterConfiguration(filterConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.filterConfiguration(filterConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -612,7 +612,7 @@ public open class CfnGameSessionQueue(
      * sessions. 
      */
     override fun filterConfiguration(filterConfiguration: FilterConfigurationProperty) {
-      cdkBuilder.filterConfiguration(filterConfiguration.let(FilterConfigurationProperty::unwrap))
+      cdkBuilder.filterConfiguration(filterConfiguration.let(FilterConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -669,7 +669,7 @@ public open class CfnGameSessionQueue(
      * @param playerLatencyPolicies A set of policies that act as a sliding cap on player latency. 
      */
     override fun playerLatencyPolicies(playerLatencyPolicies: IResolvable) {
-      cdkBuilder.playerLatencyPolicies(playerLatencyPolicies.let(IResolvable::unwrap))
+      cdkBuilder.playerLatencyPolicies(playerLatencyPolicies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -713,7 +713,7 @@ public open class CfnGameSessionQueue(
      * locations for game session placements. 
      */
     override fun priorityConfiguration(priorityConfiguration: IResolvable) {
-      cdkBuilder.priorityConfiguration(priorityConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.priorityConfiguration(priorityConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -728,7 +728,7 @@ public open class CfnGameSessionQueue(
      * locations for game session placements. 
      */
     override fun priorityConfiguration(priorityConfiguration: PriorityConfigurationProperty) {
-      cdkBuilder.priorityConfiguration(priorityConfiguration.let(PriorityConfigurationProperty::unwrap))
+      cdkBuilder.priorityConfiguration(priorityConfiguration.let(PriorityConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -762,7 +762,7 @@ public open class CfnGameSessionQueue(
      * @param tags A list of labels to assign to the new game session queue resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

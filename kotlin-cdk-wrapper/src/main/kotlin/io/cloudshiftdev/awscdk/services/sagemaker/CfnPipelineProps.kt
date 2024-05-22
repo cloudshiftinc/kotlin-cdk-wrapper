@@ -189,7 +189,7 @@ public interface CfnPipelineProps {
      * @param tags The tags of the pipeline.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -87,8 +87,8 @@ public open class CfnTrail(
     id: String,
     props: CfnTrailProps,
   ) :
-      this(software.amazon.awscdk.services.cloudtrail.CfnTrail(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTrailProps::unwrap))
+      this(software.amazon.awscdk.services.cloudtrail.CfnTrail(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTrailProps.Companion::unwrap))
   )
 
   public constructor(
@@ -107,7 +107,7 @@ public open class CfnTrail(
    * Specifies the settings for advanced event selectors.
    */
   public open fun advancedEventSelectors(`value`: IResolvable) {
-    unwrap(this).setAdvancedEventSelectors(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAdvancedEventSelectors(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -183,7 +183,7 @@ public open class CfnTrail(
    * The default is false.
    */
   public open fun enableLogFileValidation(`value`: IResolvable) {
-    unwrap(this).setEnableLogFileValidation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableLogFileValidation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -195,7 +195,7 @@ public open class CfnTrail(
    * Use event selectors to further specify the management and data event settings for your trail.
    */
   public open fun eventSelectors(`value`: IResolvable) {
-    unwrap(this).setEventSelectors(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEventSelectors(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -229,7 +229,7 @@ public open class CfnTrail(
    * files.
    */
   public open fun includeGlobalServiceEvents(`value`: IResolvable) {
-    unwrap(this).setIncludeGlobalServiceEvents(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIncludeGlobalServiceEvents(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -241,7 +241,7 @@ public open class CfnTrail(
    * A JSON string that contains the Insights types you want to log on a trail.
    */
   public open fun insightSelectors(`value`: IResolvable) {
-    unwrap(this).setInsightSelectors(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInsightSelectors(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -262,7 +262,7 @@ public open class CfnTrail(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -281,7 +281,7 @@ public open class CfnTrail(
    * Whether the CloudTrail trail is currently logging AWS API calls.
    */
   public open fun isLogging(`value`: IResolvable) {
-    unwrap(this).setIsLogging(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIsLogging(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -300,7 +300,7 @@ public open class CfnTrail(
    * Specifies whether the trail applies only to the current Region or to all Regions.
    */
   public open fun isMultiRegionTrail(`value`: IResolvable) {
-    unwrap(this).setIsMultiRegionTrail(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIsMultiRegionTrail(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -322,7 +322,7 @@ public open class CfnTrail(
    * , or only for the current AWS account .
    */
   public open fun isOrganizationTrail(`value`: IResolvable) {
-    unwrap(this).setIsOrganizationTrail(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIsOrganizationTrail(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -390,7 +390,7 @@ public open class CfnTrail(
    * A custom set of tags (key-value pairs) for this trail.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -866,7 +866,7 @@ public open class CfnTrail(
      * @param advancedEventSelectors Specifies the settings for advanced event selectors. 
      */
     override fun advancedEventSelectors(advancedEventSelectors: IResolvable) {
-      cdkBuilder.advancedEventSelectors(advancedEventSelectors.let(IResolvable::unwrap))
+      cdkBuilder.advancedEventSelectors(advancedEventSelectors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -973,7 +973,7 @@ public open class CfnTrail(
      * is false. 
      */
     override fun enableLogFileValidation(enableLogFileValidation: IResolvable) {
-      cdkBuilder.enableLogFileValidation(enableLogFileValidation.let(IResolvable::unwrap))
+      cdkBuilder.enableLogFileValidation(enableLogFileValidation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -994,7 +994,7 @@ public open class CfnTrail(
      * settings for your trail. 
      */
     override fun eventSelectors(eventSelectors: IResolvable) {
-      cdkBuilder.eventSelectors(eventSelectors.let(IResolvable::unwrap))
+      cdkBuilder.eventSelectors(eventSelectors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1059,7 +1059,7 @@ public open class CfnTrail(
      * global services such as IAM to the log files. 
      */
     override fun includeGlobalServiceEvents(includeGlobalServiceEvents: IResolvable) {
-      cdkBuilder.includeGlobalServiceEvents(includeGlobalServiceEvents.let(IResolvable::unwrap))
+      cdkBuilder.includeGlobalServiceEvents(includeGlobalServiceEvents.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1078,7 +1078,7 @@ public open class CfnTrail(
      * trail. 
      */
     override fun insightSelectors(insightSelectors: IResolvable) {
-      cdkBuilder.insightSelectors(insightSelectors.let(IResolvable::unwrap))
+      cdkBuilder.insightSelectors(insightSelectors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1135,7 +1135,7 @@ public open class CfnTrail(
      * @param isLogging Whether the CloudTrail trail is currently logging AWS API calls. 
      */
     override fun isLogging(isLogging: IResolvable) {
-      cdkBuilder.isLogging(isLogging.let(IResolvable::unwrap))
+      cdkBuilder.isLogging(isLogging.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1169,7 +1169,7 @@ public open class CfnTrail(
      * to all Regions. 
      */
     override fun isMultiRegionTrail(isMultiRegionTrail: IResolvable) {
-      cdkBuilder.isMultiRegionTrail(isMultiRegionTrail.let(IResolvable::unwrap))
+      cdkBuilder.isMultiRegionTrail(isMultiRegionTrail.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1217,7 +1217,7 @@ public open class CfnTrail(
      * organization in AWS Organizations , or only for the current AWS account . 
      */
     override fun isOrganizationTrail(isOrganizationTrail: IResolvable) {
-      cdkBuilder.isOrganizationTrail(isOrganizationTrail.let(IResolvable::unwrap))
+      cdkBuilder.isOrganizationTrail(isOrganizationTrail.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1296,7 +1296,7 @@ public open class CfnTrail(
      * @param tags A custom set of tags (key-value pairs) for this trail. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1459,7 +1459,7 @@ public open class CfnTrail(
        * @param fieldSelectors Contains all selector statements in an advanced event selector. 
        */
       override fun fieldSelectors(fieldSelectors: IResolvable) {
-        cdkBuilder.fieldSelectors(fieldSelectors.let(IResolvable::unwrap))
+        cdkBuilder.fieldSelectors(fieldSelectors.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3729,12 +3729,20 @@ public open class CfnTrail(
   }
 
   /**
-   * The Amazon S3 buckets, AWS Lambda functions, or Amazon DynamoDB tables that you specify in your
-   * event selectors for your trail to log data events.
-   *
    * Data events provide information about the resource operations performed on or within a resource
-   * itself. These are also known as data plane operations. You can specify up to 250 data resources
-   * for a trail.
+   * itself.
+   *
+   * These are also known as data plane operations. You can specify up to 250 data resources for a
+   * trail.
+   *
+   * Configure the `DataResource` to specify the resource type and resource ARNs for which you want
+   * to log data events.
+   *
+   * You can specify the following resource types in your event selectors for your trail:
+   *
+   * * `AWS::DynamoDB::Table`
+   * * `AWS::Lambda::Function`
+   * * `AWS::S3::Object`
    *
    *
    * The total number of allowed data resources is 250. This number can be distributed between 1 and
@@ -3806,7 +3814,7 @@ public open class CfnTrail(
 
     /**
      * An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified
-     * objects.
+     * resource type.
      *
      * * To log data events for all objects in all S3 buckets in your AWS account , specify the
      * prefix as `arn:aws:s3` .
@@ -3868,7 +3876,7 @@ public open class CfnTrail(
 
       /**
        * @param values An array of Amazon Resource Name (ARN) strings or partial ARN strings for the
-       * specified objects.
+       * specified resource type.
        * * To log data events for all objects in all S3 buckets in your AWS account , specify the
        * prefix as `arn:aws:s3` .
        *
@@ -3908,7 +3916,7 @@ public open class CfnTrail(
 
       /**
        * @param values An array of Amazon Resource Name (ARN) strings or partial ARN strings for the
-       * specified objects.
+       * specified resource type.
        * * To log data events for all objects in all S3 buckets in your AWS account , specify the
        * prefix as `arn:aws:s3` .
        *
@@ -3971,7 +3979,7 @@ public open class CfnTrail(
 
       /**
        * @param values An array of Amazon Resource Name (ARN) strings or partial ARN strings for the
-       * specified objects.
+       * specified resource type.
        * * To log data events for all objects in all S3 buckets in your AWS account , specify the
        * prefix as `arn:aws:s3` .
        *
@@ -4013,7 +4021,7 @@ public open class CfnTrail(
 
       /**
        * @param values An array of Amazon Resource Name (ARN) strings or partial ARN strings for the
-       * specified objects.
+       * specified resource type.
        * * To log data events for all objects in all S3 buckets in your AWS account , specify the
        * prefix as `arn:aws:s3` .
        *
@@ -4078,7 +4086,7 @@ public open class CfnTrail(
 
       /**
        * An array of Amazon Resource Name (ARN) strings or partial ARN strings for the specified
-       * objects.
+       * resource type.
        *
        * * To log data events for all objects in all S3 buckets in your AWS account , specify the
        * prefix as `arn:aws:s3` .
@@ -4369,7 +4377,7 @@ public open class CfnTrail(
        * in the *AWS CloudTrail User Guide* .
        */
       override fun dataResources(dataResources: IResolvable) {
-        cdkBuilder.dataResources(dataResources.let(IResolvable::unwrap))
+        cdkBuilder.dataResources(dataResources.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4463,7 +4471,7 @@ public open class CfnTrail(
        * Pricing](https://docs.aws.amazon.com/cloudtrail/pricing/) .
        */
       override fun includeManagementEvents(includeManagementEvents: IResolvable) {
-        cdkBuilder.includeManagementEvents(includeManagementEvents.let(IResolvable::unwrap))
+        cdkBuilder.includeManagementEvents(includeManagementEvents.let(IResolvable.Companion::unwrap))
       }
 
       /**

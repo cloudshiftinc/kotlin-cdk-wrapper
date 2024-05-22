@@ -61,8 +61,8 @@ public open class CfnWirelessDeviceImportTask(
     id: String,
     props: CfnWirelessDeviceImportTaskProps,
   ) :
-      this(software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnWirelessDeviceImportTaskProps::unwrap))
+      this(software.amazon.awscdk.services.iotwireless.CfnWirelessDeviceImportTask(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnWirelessDeviceImportTaskProps.Companion::unwrap))
   )
 
   public constructor(
@@ -153,7 +153,7 @@ public open class CfnWirelessDeviceImportTask(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -165,14 +165,14 @@ public open class CfnWirelessDeviceImportTask(
    * The Sidewalk-related information of the wireless device import task.
    */
   public open fun sidewalk(`value`: IResolvable) {
-    unwrap(this).setSidewalk(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSidewalk(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The Sidewalk-related information of the wireless device import task.
    */
   public open fun sidewalk(`value`: SidewalkProperty) {
-    unwrap(this).setSidewalk(`value`.let(SidewalkProperty::unwrap))
+    unwrap(this).setSidewalk(`value`.let(SidewalkProperty.Companion::unwrap))
   }
 
   /**
@@ -198,7 +198,7 @@ public open class CfnWirelessDeviceImportTask(
    * Adds to or modifies the tags of the given resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -297,7 +297,7 @@ public open class CfnWirelessDeviceImportTask(
      * @param sidewalk The Sidewalk-related information of the wireless device import task. 
      */
     override fun sidewalk(sidewalk: IResolvable) {
-      cdkBuilder.sidewalk(sidewalk.let(IResolvable::unwrap))
+      cdkBuilder.sidewalk(sidewalk.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -307,7 +307,7 @@ public open class CfnWirelessDeviceImportTask(
      * @param sidewalk The Sidewalk-related information of the wireless device import task. 
      */
     override fun sidewalk(sidewalk: SidewalkProperty) {
-      cdkBuilder.sidewalk(sidewalk.let(SidewalkProperty::unwrap))
+      cdkBuilder.sidewalk(sidewalk.let(SidewalkProperty.Companion::unwrap))
     }
 
     /**
@@ -330,7 +330,7 @@ public open class CfnWirelessDeviceImportTask(
      * @param tags Adds to or modifies the tags of the given resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -176,14 +176,14 @@ public interface CfnVirtualRouterProps {
      * @param spec The virtual router specification to apply. 
      */
     override fun spec(spec: IResolvable) {
-      cdkBuilder.spec(spec.let(IResolvable::unwrap))
+      cdkBuilder.spec(spec.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param spec The virtual router specification to apply. 
      */
     override fun spec(spec: CfnVirtualRouter.VirtualRouterSpecProperty) {
-      cdkBuilder.spec(spec.let(CfnVirtualRouter.VirtualRouterSpecProperty::unwrap))
+      cdkBuilder.spec(spec.let(CfnVirtualRouter.VirtualRouterSpecProperty.Companion::unwrap))
     }
 
     /**
@@ -202,7 +202,7 @@ public interface CfnVirtualRouterProps {
      * characters.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

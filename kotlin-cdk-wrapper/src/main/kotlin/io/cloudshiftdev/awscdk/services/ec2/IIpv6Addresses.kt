@@ -104,7 +104,7 @@ public interface IIpv6Addresses {
      * @param input 
      */
     override fun allocateSubnetsIpv6Cidr(input: AllocateIpv6CidrRequest): SubnetIpamOptions =
-        unwrap(this).allocateSubnetsIpv6Cidr(input.let(AllocateIpv6CidrRequest::unwrap)).let(SubnetIpamOptions::wrap)
+        unwrap(this).allocateSubnetsIpv6Cidr(input.let(AllocateIpv6CidrRequest.Companion::unwrap)).let(SubnetIpamOptions::wrap)
 
     /**
      * Allocates Subnets IPv6 CIDRs. Called by VPC when creating subnets with IPv6 enabled.
@@ -126,7 +126,7 @@ public interface IIpv6Addresses {
      * @param input 
      */
     override fun allocateVpcIpv6Cidr(input: AllocateVpcIpv6CidrRequest): CfnVPCCidrBlock =
-        unwrap(this).allocateVpcIpv6Cidr(input.let(AllocateVpcIpv6CidrRequest::unwrap)).let(CfnVPCCidrBlock::wrap)
+        unwrap(this).allocateVpcIpv6Cidr(input.let(AllocateVpcIpv6CidrRequest.Companion::unwrap)).let(CfnVPCCidrBlock::wrap)
 
     /**
      * Called by VPC to allocate IPv6 CIDR.
@@ -164,7 +164,7 @@ public interface IIpv6Addresses {
      * @param input 
      */
     override fun createIpv6CidrBlocks(input: CreateIpv6CidrBlocksRequest): List<String> =
-        unwrap(this).createIpv6CidrBlocks(input.let(CreateIpv6CidrBlocksRequest::unwrap))
+        unwrap(this).createIpv6CidrBlocks(input.let(CreateIpv6CidrBlocksRequest.Companion::unwrap))
 
     /**
      * Split IPv6 CIDR block up for subnets.

@@ -284,7 +284,7 @@ public open class Template(
     public fun fromJSON(template: Map<String, Any>, templateParsingOptions: TemplateParsingOptions):
         Template =
         software.amazon.awscdk.assertions.Template.fromJSON(template.mapValues{CdkObjectWrappers.unwrap(it.value)},
-        templateParsingOptions.let(TemplateParsingOptions::unwrap)).let(Template::wrap)
+        templateParsingOptions.let(TemplateParsingOptions.Companion::unwrap)).let(Template::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cbffcbc7046e55838a1d5fb9e7a97ebb37d7a2374f5094e37c1eb7be3ab5e424")
@@ -293,11 +293,11 @@ public open class Template(
         fromJSON(template, TemplateParsingOptions(templateParsingOptions))
 
     public fun fromStack(stack: Stack): Template =
-        software.amazon.awscdk.assertions.Template.fromStack(stack.let(Stack::unwrap)).let(Template::wrap)
+        software.amazon.awscdk.assertions.Template.fromStack(stack.let(Stack.Companion::unwrap)).let(Template::wrap)
 
     public fun fromStack(stack: Stack, templateParsingOptions: TemplateParsingOptions): Template =
-        software.amazon.awscdk.assertions.Template.fromStack(stack.let(Stack::unwrap),
-        templateParsingOptions.let(TemplateParsingOptions::unwrap)).let(Template::wrap)
+        software.amazon.awscdk.assertions.Template.fromStack(stack.let(Stack.Companion::unwrap),
+        templateParsingOptions.let(TemplateParsingOptions.Companion::unwrap)).let(Template::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0d9a56c6b73e6abd2d132a6353bc67332f340f9993fef529c80abdbcf93a46c2")
@@ -310,7 +310,7 @@ public open class Template(
 
     public fun fromString(template: String, templateParsingOptions: TemplateParsingOptions):
         Template = software.amazon.awscdk.assertions.Template.fromString(template,
-        templateParsingOptions.let(TemplateParsingOptions::unwrap)).let(Template::wrap)
+        templateParsingOptions.let(TemplateParsingOptions.Companion::unwrap)).let(Template::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b22b6f80ac5b9c59fec0f09ec5f90ec88ae7e88a2a4c3887daece417bafe1029")

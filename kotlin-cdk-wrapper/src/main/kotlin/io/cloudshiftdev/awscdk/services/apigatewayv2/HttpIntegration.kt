@@ -46,8 +46,8 @@ public open class HttpIntegration(
     id: String,
     props: HttpIntegrationProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.HttpIntegration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(HttpIntegrationProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.HttpIntegration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(HttpIntegrationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -208,7 +208,7 @@ public open class HttpIntegration(
      * @param connectionType The type of the network connection to the integration endpoint. 
      */
     override fun connectionType(connectionType: HttpConnectionType) {
-      cdkBuilder.connectionType(connectionType.let(HttpConnectionType::unwrap))
+      cdkBuilder.connectionType(connectionType.let(HttpConnectionType.Companion::unwrap))
     }
 
     /**
@@ -219,7 +219,7 @@ public open class HttpIntegration(
      * @param credentials The credentials with which to invoke the integration. 
      */
     override fun credentials(credentials: IntegrationCredentials) {
-      cdkBuilder.credentials(credentials.let(IntegrationCredentials::unwrap))
+      cdkBuilder.credentials(credentials.let(IntegrationCredentials.Companion::unwrap))
     }
 
     /**
@@ -228,7 +228,7 @@ public open class HttpIntegration(
      * @param httpApi The HTTP API to which this integration should be bound. 
      */
     override fun httpApi(httpApi: IHttpApi) {
-      cdkBuilder.httpApi(httpApi.let(IHttpApi::unwrap))
+      cdkBuilder.httpApi(httpApi.let(IHttpApi.Companion::unwrap))
     }
 
     /**
@@ -241,7 +241,7 @@ public open class HttpIntegration(
      * @param integrationSubtype Integration subtype. 
      */
     override fun integrationSubtype(integrationSubtype: HttpIntegrationSubtype) {
-      cdkBuilder.integrationSubtype(integrationSubtype.let(HttpIntegrationSubtype::unwrap))
+      cdkBuilder.integrationSubtype(integrationSubtype.let(HttpIntegrationSubtype.Companion::unwrap))
     }
 
     /**
@@ -250,7 +250,7 @@ public open class HttpIntegration(
      * @param integrationType Integration type. 
      */
     override fun integrationType(integrationType: HttpIntegrationType) {
-      cdkBuilder.integrationType(integrationType.let(HttpIntegrationType::unwrap))
+      cdkBuilder.integrationType(integrationType.let(HttpIntegrationType.Companion::unwrap))
     }
 
     /**
@@ -275,7 +275,7 @@ public open class HttpIntegration(
      * @param method The HTTP method to use when calling the underlying HTTP proxy. 
      */
     override fun method(method: HttpMethod) {
-      cdkBuilder.method(method.let(HttpMethod::unwrap))
+      cdkBuilder.method(method.let(HttpMethod.Companion::unwrap))
     }
 
     /**
@@ -288,7 +288,7 @@ public open class HttpIntegration(
      * backend. 
      */
     override fun parameterMapping(parameterMapping: ParameterMapping) {
-      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping::unwrap))
+      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping.Companion::unwrap))
     }
 
     /**
@@ -301,7 +301,7 @@ public open class HttpIntegration(
      * @param payloadFormatVersion The version of the payload format. 
      */
     override fun payloadFormatVersion(payloadFormatVersion: PayloadFormatVersion) {
-      cdkBuilder.payloadFormatVersion(payloadFormatVersion.let(PayloadFormatVersion::unwrap))
+      cdkBuilder.payloadFormatVersion(payloadFormatVersion.let(PayloadFormatVersion.Companion::unwrap))
     }
 
     /**

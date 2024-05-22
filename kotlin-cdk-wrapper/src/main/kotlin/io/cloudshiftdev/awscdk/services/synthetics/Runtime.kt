@@ -28,7 +28,7 @@ public open class Runtime(
 ) : CdkObject(cdkObject) {
   public constructor(name: String, family: RuntimeFamily) :
       this(software.amazon.awscdk.services.synthetics.Runtime(name,
-      family.let(RuntimeFamily::unwrap))
+      family.let(RuntimeFamily.Companion::unwrap))
   )
 
   /**

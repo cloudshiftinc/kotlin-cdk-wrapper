@@ -63,14 +63,14 @@ public interface HttpRouteAuthorizerBindOptions {
      * @param route The route to which the authorizer is being bound. 
      */
     override fun route(route: IHttpRoute) {
-      cdkBuilder.route(route.let(IHttpRoute::unwrap))
+      cdkBuilder.route(route.let(IHttpRoute.Companion::unwrap))
     }
 
     /**
      * @param scope The scope for any constructs created as part of the bind. 
      */
     override fun scope(scope: Construct) {
-      cdkBuilder.scope(scope.let(Construct::unwrap))
+      cdkBuilder.scope(scope.let(Construct.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.HttpRouteAuthorizerBindOptions

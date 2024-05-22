@@ -59,7 +59,7 @@ public interface VersionWeight {
      * @param version The version to route traffic to. 
      */
     override fun version(version: IVersion) {
-      cdkBuilder.version(version.let(IVersion::unwrap))
+      cdkBuilder.version(version.let(IVersion.Companion::unwrap))
     }
 
     /**

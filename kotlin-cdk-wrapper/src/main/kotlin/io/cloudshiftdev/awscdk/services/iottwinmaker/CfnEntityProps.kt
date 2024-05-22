@@ -248,7 +248,7 @@ public interface CfnEntityProps {
      * API reference.
      */
     override fun components(components: IResolvable) {
-      cdkBuilder.components(components.let(IResolvable::unwrap))
+      cdkBuilder.components(components.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -268,7 +268,7 @@ public interface CfnEntityProps {
      * Each key of the map represents the `componentPath` of the `compositeComponent` .
      */
     override fun compositeComponents(compositeComponents: IResolvable) {
-      cdkBuilder.compositeComponents(compositeComponents.let(IResolvable::unwrap))
+      cdkBuilder.compositeComponents(compositeComponents.let(IResolvable.Companion::unwrap))
     }
 
     /**

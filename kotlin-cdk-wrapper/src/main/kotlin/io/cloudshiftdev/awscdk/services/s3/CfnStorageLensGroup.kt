@@ -106,8 +106,8 @@ public open class CfnStorageLensGroup(
     id: String,
     props: CfnStorageLensGroupProps,
   ) :
-      this(software.amazon.awscdk.services.s3.CfnStorageLensGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStorageLensGroupProps::unwrap))
+      this(software.amazon.awscdk.services.s3.CfnStorageLensGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStorageLensGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -137,14 +137,14 @@ public open class CfnStorageLensGroup(
    * This property contains the criteria for the Storage Lens group data that is displayed.
    */
   public open fun filter(`value`: IResolvable) {
-    unwrap(this).setFilter(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFilter(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * This property contains the criteria for the Storage Lens group data that is displayed.
    */
   public open fun filter(`value`: FilterProperty) {
-    unwrap(this).setFilter(`value`.let(FilterProperty::unwrap))
+    unwrap(this).setFilter(`value`.let(FilterProperty.Companion::unwrap))
   }
 
   /**
@@ -161,7 +161,7 @@ public open class CfnStorageLensGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -185,7 +185,7 @@ public open class CfnStorageLensGroup(
    * This property contains the AWS resource tags that you're adding to your Storage Lens group.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -273,7 +273,7 @@ public open class CfnStorageLensGroup(
      * displayed. 
      */
     override fun filter(filter: IResolvable) {
-      cdkBuilder.filter(filter.let(IResolvable::unwrap))
+      cdkBuilder.filter(filter.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -284,7 +284,7 @@ public open class CfnStorageLensGroup(
      * displayed. 
      */
     override fun filter(filter: FilterProperty) {
-      cdkBuilder.filter(filter.let(FilterProperty::unwrap))
+      cdkBuilder.filter(filter.let(FilterProperty.Companion::unwrap))
     }
 
     /**
@@ -319,7 +319,7 @@ public open class CfnStorageLensGroup(
      * Lens group. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -562,7 +562,7 @@ public open class CfnStorageLensGroup(
        * At least one object tag must be specified. Up to 10 object tags are allowed.
        */
       override fun matchAnyTag(matchAnyTag: IResolvable) {
-        cdkBuilder.matchAnyTag(matchAnyTag.let(IResolvable::unwrap))
+        cdkBuilder.matchAnyTag(matchAnyTag.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -584,7 +584,7 @@ public open class CfnStorageLensGroup(
        * properties to define the object age range (minimum and maximum number of days).
        */
       override fun matchObjectAge(matchObjectAge: IResolvable) {
-        cdkBuilder.matchObjectAge(matchObjectAge.let(IResolvable::unwrap))
+        cdkBuilder.matchObjectAge(matchObjectAge.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -592,7 +592,7 @@ public open class CfnStorageLensGroup(
        * properties to define the object age range (minimum and maximum number of days).
        */
       override fun matchObjectAge(matchObjectAge: MatchObjectAgeProperty) {
-        cdkBuilder.matchObjectAge(matchObjectAge.let(MatchObjectAgeProperty::unwrap))
+        cdkBuilder.matchObjectAge(matchObjectAge.let(MatchObjectAgeProperty.Companion::unwrap))
       }
 
       /**
@@ -609,7 +609,7 @@ public open class CfnStorageLensGroup(
        * define the object size range (minimum and maximum number of Bytes).
        */
       override fun matchObjectSize(matchObjectSize: IResolvable) {
-        cdkBuilder.matchObjectSize(matchObjectSize.let(IResolvable::unwrap))
+        cdkBuilder.matchObjectSize(matchObjectSize.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -617,7 +617,7 @@ public open class CfnStorageLensGroup(
        * define the object size range (minimum and maximum number of Bytes).
        */
       override fun matchObjectSize(matchObjectSize: MatchObjectSizeProperty) {
-        cdkBuilder.matchObjectSize(matchObjectSize.let(MatchObjectSizeProperty::unwrap))
+        cdkBuilder.matchObjectSize(matchObjectSize.let(MatchObjectSizeProperty.Companion::unwrap))
       }
 
       /**
@@ -977,7 +977,7 @@ public open class CfnStorageLensGroup(
        * operator. Only one of each filter condition is allowed.
        */
       override fun and(and: IResolvable) {
-        cdkBuilder.and(and.let(IResolvable::unwrap))
+        cdkBuilder.and(and.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -987,7 +987,7 @@ public open class CfnStorageLensGroup(
        * operator. Only one of each filter condition is allowed.
        */
       override fun and(and: AndProperty) {
-        cdkBuilder.and(and.let(AndProperty::unwrap))
+        cdkBuilder.and(and.let(AndProperty.Companion::unwrap))
       }
 
       /**
@@ -1035,7 +1035,7 @@ public open class CfnStorageLensGroup(
        * At least one object tag must be specified. Up to 10 object tags are allowed.
        */
       override fun matchAnyTag(matchAnyTag: IResolvable) {
-        cdkBuilder.matchAnyTag(matchAnyTag.let(IResolvable::unwrap))
+        cdkBuilder.matchAnyTag(matchAnyTag.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1057,7 +1057,7 @@ public open class CfnStorageLensGroup(
        * the object age range (minimum and maximum number of days).
        */
       override fun matchObjectAge(matchObjectAge: IResolvable) {
-        cdkBuilder.matchObjectAge(matchObjectAge.let(IResolvable::unwrap))
+        cdkBuilder.matchObjectAge(matchObjectAge.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1065,7 +1065,7 @@ public open class CfnStorageLensGroup(
        * the object age range (minimum and maximum number of days).
        */
       override fun matchObjectAge(matchObjectAge: MatchObjectAgeProperty) {
-        cdkBuilder.matchObjectAge(matchObjectAge.let(MatchObjectAgeProperty::unwrap))
+        cdkBuilder.matchObjectAge(matchObjectAge.let(MatchObjectAgeProperty.Companion::unwrap))
       }
 
       /**
@@ -1082,7 +1082,7 @@ public open class CfnStorageLensGroup(
        * define the object size range (minimum and maximum number of Bytes).
        */
       override fun matchObjectSize(matchObjectSize: IResolvable) {
-        cdkBuilder.matchObjectSize(matchObjectSize.let(IResolvable::unwrap))
+        cdkBuilder.matchObjectSize(matchObjectSize.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1090,7 +1090,7 @@ public open class CfnStorageLensGroup(
        * define the object size range (minimum and maximum number of Bytes).
        */
       override fun matchObjectSize(matchObjectSize: MatchObjectSizeProperty) {
-        cdkBuilder.matchObjectSize(matchObjectSize.let(MatchObjectSizeProperty::unwrap))
+        cdkBuilder.matchObjectSize(matchObjectSize.let(MatchObjectSizeProperty.Companion::unwrap))
       }
 
       /**
@@ -1109,7 +1109,7 @@ public open class CfnStorageLensGroup(
        * operator. Only one of each filter condition is allowed.
        */
       override fun or(or: IResolvable) {
-        cdkBuilder.or(or.let(IResolvable::unwrap))
+        cdkBuilder.or(or.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1119,7 +1119,7 @@ public open class CfnStorageLensGroup(
        * operator. Only one of each filter condition is allowed.
        */
       override fun or(or: OrProperty) {
-        cdkBuilder.or(or.let(OrProperty::unwrap))
+        cdkBuilder.or(or.let(OrProperty.Companion::unwrap))
       }
 
       /**
@@ -1659,7 +1659,7 @@ public open class CfnStorageLensGroup(
        * At least one object tag must be specified. Up to 10 object tags are allowed.
        */
       override fun matchAnyTag(matchAnyTag: IResolvable) {
-        cdkBuilder.matchAnyTag(matchAnyTag.let(IResolvable::unwrap))
+        cdkBuilder.matchAnyTag(matchAnyTag.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1681,7 +1681,7 @@ public open class CfnStorageLensGroup(
        * range.
        */
       override fun matchObjectAge(matchObjectAge: IResolvable) {
-        cdkBuilder.matchObjectAge(matchObjectAge.let(IResolvable::unwrap))
+        cdkBuilder.matchObjectAge(matchObjectAge.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1689,7 +1689,7 @@ public open class CfnStorageLensGroup(
        * range.
        */
       override fun matchObjectAge(matchObjectAge: MatchObjectAgeProperty) {
-        cdkBuilder.matchObjectAge(matchObjectAge.let(MatchObjectAgeProperty::unwrap))
+        cdkBuilder.matchObjectAge(matchObjectAge.let(MatchObjectAgeProperty.Companion::unwrap))
       }
 
       /**
@@ -1706,7 +1706,7 @@ public open class CfnStorageLensGroup(
        * values to define the object size range (minimum and maximum number of Bytes).
        */
       override fun matchObjectSize(matchObjectSize: IResolvable) {
-        cdkBuilder.matchObjectSize(matchObjectSize.let(IResolvable::unwrap))
+        cdkBuilder.matchObjectSize(matchObjectSize.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1714,7 +1714,7 @@ public open class CfnStorageLensGroup(
        * values to define the object size range (minimum and maximum number of Bytes).
        */
       override fun matchObjectSize(matchObjectSize: MatchObjectSizeProperty) {
-        cdkBuilder.matchObjectSize(matchObjectSize.let(MatchObjectSizeProperty::unwrap))
+        cdkBuilder.matchObjectSize(matchObjectSize.let(MatchObjectSizeProperty.Companion::unwrap))
       }
 
       /**

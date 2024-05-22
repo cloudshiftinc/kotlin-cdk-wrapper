@@ -367,7 +367,7 @@ public interface CanaryProps {
      * itself.
      */
     override fun artifactsBucketLifecycleRules(artifactsBucketLifecycleRules: List<LifecycleRule>) {
-      cdkBuilder.artifactsBucketLifecycleRules(artifactsBucketLifecycleRules.map(LifecycleRule::unwrap))
+      cdkBuilder.artifactsBucketLifecycleRules(artifactsBucketLifecycleRules.map(LifecycleRule.Companion::unwrap))
     }
 
     /**
@@ -385,7 +385,7 @@ public interface CanaryProps {
      * @param artifactsBucketLocation The s3 location that stores the data of the canary runs.
      */
     override fun artifactsBucketLocation(artifactsBucketLocation: ArtifactsBucketLocation) {
-      cdkBuilder.artifactsBucketLocation(artifactsBucketLocation.let(ArtifactsBucketLocation::unwrap))
+      cdkBuilder.artifactsBucketLocation(artifactsBucketLocation.let(ArtifactsBucketLocation.Companion::unwrap))
     }
 
     /**
@@ -414,7 +414,7 @@ public interface CanaryProps {
      * Using `Cleanup.LAMBDA` will create a Custom Resource to achieve this.
      */
     override fun cleanup(cleanup: Cleanup) {
-      cdkBuilder.cleanup(cleanup.let(Cleanup::unwrap))
+      cdkBuilder.cleanup(cleanup.let(Cleanup.Companion::unwrap))
     }
 
     /**
@@ -433,7 +433,7 @@ public interface CanaryProps {
      * @param failureRetentionPeriod How many days should failed runs be retained.
      */
     override fun failureRetentionPeriod(failureRetentionPeriod: Duration) {
-      cdkBuilder.failureRetentionPeriod(failureRetentionPeriod.let(Duration::unwrap))
+      cdkBuilder.failureRetentionPeriod(failureRetentionPeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -446,14 +446,14 @@ public interface CanaryProps {
      * If you provide a Role, you must add the required permissions.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param runtime Specify the runtime version to use for the canary. 
      */
     override fun runtime(runtime: Runtime) {
-      cdkBuilder.runtime(runtime.let(Runtime::unwrap))
+      cdkBuilder.runtime(runtime.let(Runtime.Companion::unwrap))
     }
 
     /**
@@ -464,7 +464,7 @@ public interface CanaryProps {
      * expression using `Schedule.expression()`.
      */
     override fun schedule(schedule: Schedule) {
-      cdkBuilder.schedule(schedule.let(Schedule::unwrap))
+      cdkBuilder.schedule(schedule.let(Schedule.Companion::unwrap))
     }
 
     /**
@@ -473,7 +473,7 @@ public interface CanaryProps {
      * You must provide `vpc` when using this prop.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -495,7 +495,7 @@ public interface CanaryProps {
      * @param successRetentionPeriod How many days should successful runs be retained.
      */
     override fun successRetentionPeriod(successRetentionPeriod: Duration) {
-      cdkBuilder.successRetentionPeriod(successRetentionPeriod.let(Duration::unwrap))
+      cdkBuilder.successRetentionPeriod(successRetentionPeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -503,7 +503,7 @@ public interface CanaryProps {
      * Use `Test.custom()` to specify the test to run.
      */
     override fun test(test: Test) {
-      cdkBuilder.test(test.let(Test::unwrap))
+      cdkBuilder.test(test.let(Test.Companion::unwrap))
     }
 
     /**
@@ -512,7 +512,7 @@ public interface CanaryProps {
      * your canary will run at 10 minute intervals for an hour, for a total of 6 times.
      */
     override fun timeToLive(timeToLive: Duration) {
-      cdkBuilder.timeToLive(timeToLive.let(Duration::unwrap))
+      cdkBuilder.timeToLive(timeToLive.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -520,7 +520,7 @@ public interface CanaryProps {
      * Specify this if the canary needs to access resources in a VPC.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -528,7 +528,7 @@ public interface CanaryProps {
      * You must provide `vpc` when using this prop.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

@@ -52,8 +52,8 @@ public open class CodePipeline(
     id: String,
     props: CodePipelineProps,
   ) :
-      this(software.amazon.awscdk.pipelines.CodePipeline(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CodePipelineProps::unwrap))
+      this(software.amazon.awscdk.pipelines.CodePipeline(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CodePipelineProps.Companion::unwrap))
   )
 
   public constructor(
@@ -446,7 +446,7 @@ public open class CodePipeline(
      * @param artifactBucket An existing S3 Bucket to use for storing the pipeline's artifact. 
      */
     override fun artifactBucket(artifactBucket: IBucket) {
-      cdkBuilder.artifactBucket(artifactBucket.let(IBucket::unwrap))
+      cdkBuilder.artifactBucket(artifactBucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -459,7 +459,7 @@ public open class CodePipeline(
      */
     override
         fun assetPublishingCodeBuildDefaults(assetPublishingCodeBuildDefaults: CodeBuildOptions) {
-      cdkBuilder.assetPublishingCodeBuildDefaults(assetPublishingCodeBuildDefaults.let(CodeBuildOptions::unwrap))
+      cdkBuilder.assetPublishingCodeBuildDefaults(assetPublishingCodeBuildDefaults.let(CodeBuildOptions.Companion::unwrap))
     }
 
     /**
@@ -512,7 +512,7 @@ public open class CodePipeline(
      * @param codeBuildDefaults Customize the CodeBuild projects created for this pipeline. 
      */
     override fun codeBuildDefaults(codeBuildDefaults: CodeBuildOptions) {
-      cdkBuilder.codeBuildDefaults(codeBuildDefaults.let(CodeBuildOptions::unwrap))
+      cdkBuilder.codeBuildDefaults(codeBuildDefaults.let(CodeBuildOptions.Companion::unwrap))
     }
 
     /**
@@ -538,7 +538,7 @@ public open class CodePipeline(
      * @param codePipeline An existing Pipeline to be reused and built upon. 
      */
     override fun codePipeline(codePipeline: Pipeline) {
-      cdkBuilder.codePipeline(codePipeline.let(Pipeline::unwrap))
+      cdkBuilder.codePipeline(codePipeline.let(Pipeline.Companion::unwrap))
     }
 
     /**
@@ -588,7 +588,7 @@ public open class CodePipeline(
      * @param dockerCredentials A list of credentials used to authenticate to Docker registries. 
      */
     override fun dockerCredentials(dockerCredentials: List<DockerCredential>) {
-      cdkBuilder.dockerCredentials(dockerCredentials.map(DockerCredential::unwrap))
+      cdkBuilder.dockerCredentials(dockerCredentials.map(DockerCredential.Companion::unwrap))
     }
 
     /**
@@ -718,7 +718,7 @@ public open class CodePipeline(
      * @param role The IAM role to be assumed by this Pipeline. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -748,7 +748,7 @@ public open class CodePipeline(
      * CodeBuild projects. 
      */
     override fun selfMutationCodeBuildDefaults(selfMutationCodeBuildDefaults: CodeBuildOptions) {
-      cdkBuilder.selfMutationCodeBuildDefaults(selfMutationCodeBuildDefaults.let(CodeBuildOptions::unwrap))
+      cdkBuilder.selfMutationCodeBuildDefaults(selfMutationCodeBuildDefaults.let(CodeBuildOptions.Companion::unwrap))
     }
 
     /**
@@ -777,7 +777,7 @@ public open class CodePipeline(
      * @param synth The build step that produces the CDK Cloud Assembly. 
      */
     override fun synth(synth: IFileSetProducer) {
-      cdkBuilder.synth(synth.let(IFileSetProducer::unwrap))
+      cdkBuilder.synth(synth.let(IFileSetProducer.Companion::unwrap))
     }
 
     /**
@@ -789,7 +789,7 @@ public open class CodePipeline(
      * projects. 
      */
     override fun synthCodeBuildDefaults(synthCodeBuildDefaults: CodeBuildOptions) {
-      cdkBuilder.synthCodeBuildDefaults(synthCodeBuildDefaults.let(CodeBuildOptions::unwrap))
+      cdkBuilder.synthCodeBuildDefaults(synthCodeBuildDefaults.let(CodeBuildOptions.Companion::unwrap))
     }
 
     /**

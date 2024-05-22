@@ -62,8 +62,8 @@ public open class CfnTransformer(
     id: String,
     props: CfnTransformerProps,
   ) :
-      this(software.amazon.awscdk.services.b2bi.CfnTransformer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTransformerProps::unwrap))
+      this(software.amazon.awscdk.services.b2bi.CfnTransformer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTransformerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -111,14 +111,14 @@ public open class CfnTransformer(
    * Returns the details for the EDI standard that is being used for the transformer.
    */
   public open fun ediType(`value`: IResolvable) {
-    unwrap(this).setEdiType(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEdiType(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Returns the details for the EDI standard that is being used for the transformer.
    */
   public open fun ediType(`value`: EdiTypeProperty) {
-    unwrap(this).setEdiType(`value`.let(EdiTypeProperty::unwrap))
+    unwrap(this).setEdiType(`value`.let(EdiTypeProperty.Companion::unwrap))
   }
 
   /**
@@ -149,7 +149,7 @@ public open class CfnTransformer(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -213,7 +213,7 @@ public open class CfnTransformer(
    * A key-value pair for a specific transformer.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -352,7 +352,7 @@ public open class CfnTransformer(
      * transformer. 
      */
     override fun ediType(ediType: IResolvable) {
-      cdkBuilder.ediType(ediType.let(IResolvable::unwrap))
+      cdkBuilder.ediType(ediType.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -366,7 +366,7 @@ public open class CfnTransformer(
      * transformer. 
      */
     override fun ediType(ediType: EdiTypeProperty) {
-      cdkBuilder.ediType(ediType.let(EdiTypeProperty::unwrap))
+      cdkBuilder.ediType(ediType.let(EdiTypeProperty.Companion::unwrap))
     }
 
     /**
@@ -452,7 +452,7 @@ public open class CfnTransformer(
      * @param tags A key-value pair for a specific transformer. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -566,7 +566,7 @@ public open class CfnTransformer(
        * define specific business documents.
        */
       override fun x12Details(x12Details: IResolvable) {
-        cdkBuilder.x12Details(x12Details.let(IResolvable::unwrap))
+        cdkBuilder.x12Details(x12Details.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -576,7 +576,7 @@ public open class CfnTransformer(
        * define specific business documents.
        */
       override fun x12Details(x12Details: X12DetailsProperty) {
-        cdkBuilder.x12Details(x12Details.let(X12DetailsProperty::unwrap))
+        cdkBuilder.x12Details(x12Details.let(X12DetailsProperty.Companion::unwrap))
       }
 
       /**

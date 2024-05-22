@@ -537,7 +537,7 @@ public interface JsonSchema {
      * @param additionalItems the value to be set.
      */
     override fun additionalItems(additionalItems: List<JsonSchema>) {
-      cdkBuilder.additionalItems(additionalItems.map(JsonSchema::unwrap))
+      cdkBuilder.additionalItems(additionalItems.map(JsonSchema.Companion::unwrap))
     }
 
     /**
@@ -557,7 +557,7 @@ public interface JsonSchema {
      * @param additionalProperties the value to be set.
      */
     override fun additionalProperties(additionalProperties: JsonSchema) {
-      cdkBuilder.additionalProperties(additionalProperties.let(JsonSchema::unwrap))
+      cdkBuilder.additionalProperties(additionalProperties.let(JsonSchema.Companion::unwrap))
     }
 
     /**
@@ -572,7 +572,7 @@ public interface JsonSchema {
      * @param allOf the value to be set.
      */
     override fun allOf(allOf: List<JsonSchema>) {
-      cdkBuilder.allOf(allOf.map(JsonSchema::unwrap))
+      cdkBuilder.allOf(allOf.map(JsonSchema.Companion::unwrap))
     }
 
     /**
@@ -584,7 +584,7 @@ public interface JsonSchema {
      * @param anyOf the value to be set.
      */
     override fun anyOf(anyOf: List<JsonSchema>) {
-      cdkBuilder.anyOf(anyOf.map(JsonSchema::unwrap))
+      cdkBuilder.anyOf(anyOf.map(JsonSchema.Companion::unwrap))
     }
 
     /**
@@ -596,7 +596,7 @@ public interface JsonSchema {
      * @param contains the value to be set.
      */
     override fun contains(contains: JsonSchema) {
-      cdkBuilder.contains(contains.let(JsonSchema::unwrap))
+      cdkBuilder.contains(contains.let(JsonSchema.Companion::unwrap))
     }
 
     /**
@@ -610,7 +610,7 @@ public interface JsonSchema {
      * @param contains the value to be set.
      */
     override fun contains(contains: List<JsonSchema>) {
-      cdkBuilder.contains(contains.map(JsonSchema::unwrap))
+      cdkBuilder.contains(contains.map(JsonSchema.Companion::unwrap))
     }
 
     /**
@@ -690,7 +690,7 @@ public interface JsonSchema {
      * @param items the value to be set.
      */
     override fun items(items: JsonSchema) {
-      cdkBuilder.items(items.let(JsonSchema::unwrap))
+      cdkBuilder.items(items.let(JsonSchema.Companion::unwrap))
     }
 
     /**
@@ -704,7 +704,7 @@ public interface JsonSchema {
      * @param items the value to be set.
      */
     override fun items(items: List<JsonSchema>) {
-      cdkBuilder.items(items.map(JsonSchema::unwrap))
+      cdkBuilder.items(items.map(JsonSchema.Companion::unwrap))
     }
 
     /**
@@ -779,7 +779,7 @@ public interface JsonSchema {
      * @param not the value to be set.
      */
     override fun not(not: JsonSchema) {
-      cdkBuilder.not(not.let(JsonSchema::unwrap))
+      cdkBuilder.not(not.let(JsonSchema.Companion::unwrap))
     }
 
     /**
@@ -793,7 +793,7 @@ public interface JsonSchema {
      * @param oneOf the value to be set.
      */
     override fun oneOf(oneOf: List<JsonSchema>) {
-      cdkBuilder.oneOf(oneOf.map(JsonSchema::unwrap))
+      cdkBuilder.oneOf(oneOf.map(JsonSchema.Companion::unwrap))
     }
 
     /**
@@ -826,7 +826,7 @@ public interface JsonSchema {
      * @param propertyNames the value to be set.
      */
     override fun propertyNames(propertyNames: JsonSchema) {
-      cdkBuilder.propertyNames(propertyNames.let(JsonSchema::unwrap))
+      cdkBuilder.propertyNames(propertyNames.let(JsonSchema.Companion::unwrap))
     }
 
     /**
@@ -860,7 +860,7 @@ public interface JsonSchema {
      * @param schema the value to be set.
      */
     override fun schema(schema: JsonSchemaVersion) {
-      cdkBuilder.schema(schema.let(JsonSchemaVersion::unwrap))
+      cdkBuilder.schema(schema.let(JsonSchemaVersion.Companion::unwrap))
     }
 
     /**
@@ -874,14 +874,14 @@ public interface JsonSchema {
      * @param type the value to be set.
      */
     override fun type(type: JsonSchemaType) {
-      cdkBuilder.type(type.let(JsonSchemaType::unwrap))
+      cdkBuilder.type(type.let(JsonSchemaType.Companion::unwrap))
     }
 
     /**
      * @param type the value to be set.
      */
     override fun type(type: List<JsonSchemaType>) {
-      cdkBuilder.type(type.map(JsonSchemaType::unwrap))
+      cdkBuilder.type(type.map(JsonSchemaType.Companion::unwrap))
     }
 
     /**

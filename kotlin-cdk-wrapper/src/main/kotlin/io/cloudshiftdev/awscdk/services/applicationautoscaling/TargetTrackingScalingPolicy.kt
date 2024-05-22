@@ -46,8 +46,8 @@ public open class TargetTrackingScalingPolicy(
     id: String,
     props: TargetTrackingScalingPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.applicationautoscaling.TargetTrackingScalingPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(TargetTrackingScalingPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.applicationautoscaling.TargetTrackingScalingPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(TargetTrackingScalingPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -198,7 +198,7 @@ public open class TargetTrackingScalingPolicy(
      * @param customMetric A custom metric for application autoscaling. 
      */
     override fun customMetric(customMetric: IMetric) {
-      cdkBuilder.customMetric(customMetric.let(IMetric::unwrap))
+      cdkBuilder.customMetric(customMetric.let(IMetric.Companion::unwrap))
     }
 
     /**
@@ -241,7 +241,7 @@ public open class TargetTrackingScalingPolicy(
      * @param predefinedMetric A predefined metric for application autoscaling. 
      */
     override fun predefinedMetric(predefinedMetric: PredefinedMetric) {
-      cdkBuilder.predefinedMetric(predefinedMetric.let(PredefinedMetric::unwrap))
+      cdkBuilder.predefinedMetric(predefinedMetric.let(PredefinedMetric.Companion::unwrap))
     }
 
     /**
@@ -274,7 +274,7 @@ public open class TargetTrackingScalingPolicy(
      * activity can start. 
      */
     override fun scaleInCooldown(scaleInCooldown: Duration) {
-      cdkBuilder.scaleInCooldown(scaleInCooldown.let(Duration::unwrap))
+      cdkBuilder.scaleInCooldown(scaleInCooldown.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -291,14 +291,14 @@ public open class TargetTrackingScalingPolicy(
      * activity can start. 
      */
     override fun scaleOutCooldown(scaleOutCooldown: Duration) {
-      cdkBuilder.scaleOutCooldown(scaleOutCooldown.let(Duration::unwrap))
+      cdkBuilder.scaleOutCooldown(scaleOutCooldown.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param scalingTarget 
      */
     override fun scalingTarget(scalingTarget: IScalableTarget) {
-      cdkBuilder.scalingTarget(scalingTarget.let(IScalableTarget::unwrap))
+      cdkBuilder.scalingTarget(scalingTarget.let(IScalableTarget.Companion::unwrap))
     }
 
     /**

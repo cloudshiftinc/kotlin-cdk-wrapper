@@ -52,7 +52,7 @@ public open class CfnRefreshSchedule(
   cdkObject: software.amazon.awscdk.services.quicksight.CfnRefreshSchedule,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.quicksight.CfnRefreshSchedule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.quicksight.CfnRefreshSchedule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -61,8 +61,8 @@ public open class CfnRefreshSchedule(
     id: String,
     props: CfnRefreshScheduleProps,
   ) :
-      this(software.amazon.awscdk.services.quicksight.CfnRefreshSchedule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRefreshScheduleProps::unwrap))
+      this(software.amazon.awscdk.services.quicksight.CfnRefreshSchedule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRefreshScheduleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -107,7 +107,7 @@ public open class CfnRefreshSchedule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -119,14 +119,14 @@ public open class CfnRefreshSchedule(
    * The refresh schedule of a dataset.
    */
   public open fun schedule(`value`: IResolvable) {
-    unwrap(this).setSchedule(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSchedule(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The refresh schedule of a dataset.
    */
   public open fun schedule(`value`: RefreshScheduleMapProperty) {
-    unwrap(this).setSchedule(`value`.let(RefreshScheduleMapProperty::unwrap))
+    unwrap(this).setSchedule(`value`.let(RefreshScheduleMapProperty.Companion::unwrap))
   }
 
   /**
@@ -219,7 +219,7 @@ public open class CfnRefreshSchedule(
      * @param schedule The refresh schedule of a dataset. 
      */
     override fun schedule(schedule: IResolvable) {
-      cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
+      cdkBuilder.schedule(schedule.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -229,7 +229,7 @@ public open class CfnRefreshSchedule(
      * @param schedule The refresh schedule of a dataset. 
      */
     override fun schedule(schedule: RefreshScheduleMapProperty) {
-      cdkBuilder.schedule(schedule.let(RefreshScheduleMapProperty::unwrap))
+      cdkBuilder.schedule(schedule.let(RefreshScheduleMapProperty.Companion::unwrap))
     }
 
     /**
@@ -526,14 +526,14 @@ public open class CfnRefreshSchedule(
        * @param scheduleFrequency The frequency for the refresh schedule.
        */
       override fun scheduleFrequency(scheduleFrequency: IResolvable) {
-        cdkBuilder.scheduleFrequency(scheduleFrequency.let(IResolvable::unwrap))
+        cdkBuilder.scheduleFrequency(scheduleFrequency.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param scheduleFrequency The frequency for the refresh schedule.
        */
       override fun scheduleFrequency(scheduleFrequency: ScheduleFrequencyProperty) {
-        cdkBuilder.scheduleFrequency(scheduleFrequency.let(ScheduleFrequencyProperty::unwrap))
+        cdkBuilder.scheduleFrequency(scheduleFrequency.let(ScheduleFrequencyProperty.Companion::unwrap))
       }
 
       /**
@@ -772,7 +772,7 @@ public open class CfnRefreshSchedule(
        * This value is required for weekly and monthly refresh intervals.
        */
       override fun refreshOnDay(refreshOnDay: IResolvable) {
-        cdkBuilder.refreshOnDay(refreshOnDay.let(IResolvable::unwrap))
+        cdkBuilder.refreshOnDay(refreshOnDay.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -780,7 +780,7 @@ public open class CfnRefreshSchedule(
        * This value is required for weekly and monthly refresh intervals.
        */
       override fun refreshOnDay(refreshOnDay: RefreshOnDayProperty) {
-        cdkBuilder.refreshOnDay(refreshOnDay.let(RefreshOnDayProperty::unwrap))
+        cdkBuilder.refreshOnDay(refreshOnDay.let(RefreshOnDayProperty.Companion::unwrap))
       }
 
       /**

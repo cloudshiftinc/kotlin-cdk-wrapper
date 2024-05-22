@@ -17,32 +17,31 @@ import kotlin.collections.Map
  * Example:
  *
  * ```
- * PipelineProject project;
- * Repository repository = Repository.Builder.create(this, "MyRepository")
- * .repositoryName("MyRepository")
+ * S3SourceAction sourceAction;
+ * Artifact sourceOutput;
+ * Bucket deployBucket;
+ * // Pipeline-level variable
+ * Variable variable = Variable.Builder.create()
+ * .variableName("bucket-var")
+ * .description("description")
+ * .defaultValue("sample")
  * .build();
- * PipelineProject project = new PipelineProject(this, "MyProject");
- * Artifact sourceOutput = new Artifact();
- * CodeCommitSourceAction sourceAction = CodeCommitSourceAction.Builder.create()
- * .actionName("CodeCommit")
- * .repository(repository)
- * .output(sourceOutput)
- * .build();
- * CodeBuildAction buildAction = CodeBuildAction.Builder.create()
- * .actionName("CodeBuild")
- * .project(project)
- * .input(sourceOutput)
- * .outputs(List.of(new Artifact())) // optional
- * .executeBatchBuild(true) // optional, defaults to false
- * .combineBatchBuildArtifacts(true)
- * .build();
- * Pipeline.Builder.create(this, "MyPipeline")
+ * Pipeline.Builder.create(this, "Pipeline")
+ * .pipelineType(PipelineType.V2)
+ * .variables(List.of(variable))
  * .stages(List.of(StageProps.builder()
  * .stageName("Source")
  * .actions(List.of(sourceAction))
  * .build(), StageProps.builder()
- * .stageName("Build")
- * .actions(List.of(buildAction))
+ * .stageName("Deploy")
+ * .actions(List.of(
+ * S3DeployAction.Builder.create()
+ * .actionName("DeployAction")
+ * // can reference the variables
+ * .objectKey(String.format("%s.txt", variable.reference()))
+ * .input(sourceOutput)
+ * .bucket(deployBucket)
+ * .build()))
  * .build()))
  * .build();
  * ```
@@ -309,7 +308,7 @@ public interface PipelineProps {
      * @param artifactBucket The S3 bucket used by this Pipeline to store artifacts.
      */
     override fun artifactBucket(artifactBucket: IBucket) {
-      cdkBuilder.artifactBucket(artifactBucket.let(IBucket::unwrap))
+      cdkBuilder.artifactBucket(artifactBucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -353,7 +352,7 @@ public interface PipelineProps {
      * @param executionMode The method that the pipeline will use to handle multiple executions.
      */
     override fun executionMode(executionMode: ExecutionMode) {
-      cdkBuilder.executionMode(executionMode.let(ExecutionMode::unwrap))
+      cdkBuilder.executionMode(executionMode.let(ExecutionMode.Companion::unwrap))
     }
 
     /**
@@ -367,7 +366,7 @@ public interface PipelineProps {
      * @param pipelineType Type of the pipeline.
      */
     override fun pipelineType(pipelineType: PipelineType) {
-      cdkBuilder.pipelineType(pipelineType.let(PipelineType::unwrap))
+      cdkBuilder.pipelineType(pipelineType.let(PipelineType.Companion::unwrap))
     }
 
     /**
@@ -390,7 +389,7 @@ public interface PipelineProps {
      * @param role The IAM role to be assumed by this Pipeline.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -398,7 +397,7 @@ public interface PipelineProps {
      * You can always add more Stages later by calling `Pipeline#addStage`.
      */
     override fun stages(stages: List<StageProps>) {
-      cdkBuilder.stages(stages.map(StageProps::unwrap))
+      cdkBuilder.stages(stages.map(StageProps.Companion::unwrap))
     }
 
     /**
@@ -417,7 +416,7 @@ public interface PipelineProps {
      * You can always add more triggers later by calling `Pipeline#addTrigger`.
      */
     override fun triggers(triggers: List<TriggerProps>) {
-      cdkBuilder.triggers(triggers.map(TriggerProps::unwrap))
+      cdkBuilder.triggers(triggers.map(TriggerProps.Companion::unwrap))
     }
 
     /**
@@ -437,7 +436,7 @@ public interface PipelineProps {
      * You can always add more variables later by calling `Pipeline#addVariable`.
      */
     override fun variables(variables: List<Variable>) {
-      cdkBuilder.variables(variables.map(Variable::unwrap))
+      cdkBuilder.variables(variables.map(Variable.Companion::unwrap))
     }
 
     /**

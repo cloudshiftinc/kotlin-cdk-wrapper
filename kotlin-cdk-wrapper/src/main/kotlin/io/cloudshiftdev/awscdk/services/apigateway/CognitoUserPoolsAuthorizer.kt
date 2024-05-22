@@ -37,8 +37,8 @@ public open class CognitoUserPoolsAuthorizer(
     id: String,
     props: CognitoUserPoolsAuthorizerProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CognitoUserPoolsAuthorizerProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CognitoUserPoolsAuthorizerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -150,7 +150,7 @@ public open class CognitoUserPoolsAuthorizer(
      * @param cognitoUserPools The user pools to associate with this authorizer. 
      */
     override fun cognitoUserPools(cognitoUserPools: List<IUserPool>) {
-      cdkBuilder.cognitoUserPools(cognitoUserPools.map(IUserPool::unwrap))
+      cdkBuilder.cognitoUserPools(cognitoUserPools.map(IUserPool.Companion::unwrap))
     }
 
     /**
@@ -188,7 +188,7 @@ public open class CognitoUserPoolsAuthorizer(
      * @param resultsCacheTtl How long APIGateway should cache the results. 
      */
     override fun resultsCacheTtl(resultsCacheTtl: Duration) {
-      cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration::unwrap))
+      cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizer =

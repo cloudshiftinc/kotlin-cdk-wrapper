@@ -46,8 +46,8 @@ public open class NotificationRule(
     id: String,
     props: NotificationRuleProps,
   ) :
-      this(software.amazon.awscdk.services.codestarnotifications.NotificationRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(NotificationRuleProps::unwrap))
+      this(software.amazon.awscdk.services.codestarnotifications.NotificationRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(NotificationRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -63,7 +63,7 @@ public open class NotificationRule(
    * @param target The SNS topic or AWS Chatbot Slack target. 
    */
   public override fun addTarget(target: INotificationRuleTarget): Boolean =
-      unwrap(this).addTarget(target.let(INotificationRuleTarget::unwrap))
+      unwrap(this).addTarget(target.let(INotificationRuleTarget.Companion::unwrap))
 
   /**
    * The ARN of the notification rule (i.e.
@@ -185,7 +185,7 @@ public open class NotificationRule(
      * @param detailType The level of detail to include in the notifications for this resource. 
      */
     override fun detailType(detailType: DetailType) {
-      cdkBuilder.detailType(detailType.let(DetailType::unwrap))
+      cdkBuilder.detailType(detailType.let(DetailType.Companion::unwrap))
     }
 
     /**
@@ -249,7 +249,7 @@ public open class NotificationRule(
      * notification rule. 
      */
     override fun source(source: INotificationRuleSource) {
-      cdkBuilder.source(source.let(INotificationRuleSource::unwrap))
+      cdkBuilder.source(source.let(INotificationRuleSource.Companion::unwrap))
     }
 
     /**
@@ -260,7 +260,7 @@ public open class NotificationRule(
      * @param targets The targets to register for the notification destination. 
      */
     override fun targets(targets: List<INotificationRuleTarget>) {
-      cdkBuilder.targets(targets.map(INotificationRuleTarget::unwrap))
+      cdkBuilder.targets(targets.map(INotificationRuleTarget.Companion::unwrap))
     }
 
     /**
@@ -282,7 +282,7 @@ public open class NotificationRule(
       id: String,
       notificationRuleArn: String,
     ): INotificationRule =
-        software.amazon.awscdk.services.codestarnotifications.NotificationRule.fromNotificationRuleArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.codestarnotifications.NotificationRule.fromNotificationRuleArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, notificationRuleArn).let(INotificationRule::wrap)
 
     public operator fun invoke(

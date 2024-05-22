@@ -220,7 +220,7 @@ public interface CfnDomainProps {
      * provisions and manages for you.
      */
     override fun certificateSettings(certificateSettings: IResolvable) {
-      cdkBuilder.certificateSettings(certificateSettings.let(IResolvable::unwrap))
+      cdkBuilder.certificateSettings(certificateSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -229,7 +229,7 @@ public interface CfnDomainProps {
      * provisions and manages for you.
      */
     override fun certificateSettings(certificateSettings: CfnDomain.CertificateSettingsProperty) {
-      cdkBuilder.certificateSettings(certificateSettings.let(CfnDomain.CertificateSettingsProperty::unwrap))
+      cdkBuilder.certificateSettings(certificateSettings.let(CfnDomain.CertificateSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -261,14 +261,14 @@ public interface CfnDomainProps {
      * @param enableAutoSubDomain Enables the automated creation of subdomains for branches.
      */
     override fun enableAutoSubDomain(enableAutoSubDomain: IResolvable) {
-      cdkBuilder.enableAutoSubDomain(enableAutoSubDomain.let(IResolvable::unwrap))
+      cdkBuilder.enableAutoSubDomain(enableAutoSubDomain.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param subDomainSettings The setting for the subdomain. 
      */
     override fun subDomainSettings(subDomainSettings: IResolvable) {
-      cdkBuilder.subDomainSettings(subDomainSettings.let(IResolvable::unwrap))
+      cdkBuilder.subDomainSettings(subDomainSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**

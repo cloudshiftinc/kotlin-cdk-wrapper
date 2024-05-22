@@ -61,7 +61,7 @@ public open class CfnFirewallRuleGroup(
   cdkObject: software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -70,8 +70,8 @@ public open class CfnFirewallRuleGroup(
     id: String,
     props: CfnFirewallRuleGroupProps,
   ) :
-      this(software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFirewallRuleGroupProps::unwrap))
+      this(software.amazon.awscdk.services.route53resolver.CfnFirewallRuleGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFirewallRuleGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -151,7 +151,7 @@ public open class CfnFirewallRuleGroup(
    * A list of the rules that you have defined.
    */
   public open fun firewallRules(`value`: IResolvable) {
-    unwrap(this).setFirewallRules(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFirewallRules(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -172,7 +172,7 @@ public open class CfnFirewallRuleGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -202,7 +202,7 @@ public open class CfnFirewallRuleGroup(
    * A list of the tag keys and values that you want to associate with the rule group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -282,7 +282,7 @@ public open class CfnFirewallRuleGroup(
      * @param firewallRules A list of the rules that you have defined. 
      */
     override fun firewallRules(firewallRules: IResolvable) {
-      cdkBuilder.firewallRules(firewallRules.let(IResolvable::unwrap))
+      cdkBuilder.firewallRules(firewallRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -322,7 +322,7 @@ public open class CfnFirewallRuleGroup(
      * 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

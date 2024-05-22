@@ -272,7 +272,7 @@ public interface CfnNetworkInsightsPathProps {
      * address.
      */
     override fun filterAtDestination(filterAtDestination: IResolvable) {
-      cdkBuilder.filterAtDestination(filterAtDestination.let(IResolvable::unwrap))
+      cdkBuilder.filterAtDestination(filterAtDestination.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -283,7 +283,7 @@ public interface CfnNetworkInsightsPathProps {
      */
     override
         fun filterAtDestination(filterAtDestination: CfnNetworkInsightsPath.PathFilterProperty) {
-      cdkBuilder.filterAtDestination(filterAtDestination.let(CfnNetworkInsightsPath.PathFilterProperty::unwrap))
+      cdkBuilder.filterAtDestination(filterAtDestination.let(CfnNetworkInsightsPath.PathFilterProperty.Companion::unwrap))
     }
 
     /**
@@ -305,7 +305,7 @@ public interface CfnNetworkInsightsPathProps {
      * the destination port.
      */
     override fun filterAtSource(filterAtSource: IResolvable) {
-      cdkBuilder.filterAtSource(filterAtSource.let(IResolvable::unwrap))
+      cdkBuilder.filterAtSource(filterAtSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -315,7 +315,7 @@ public interface CfnNetworkInsightsPathProps {
      * the destination port.
      */
     override fun filterAtSource(filterAtSource: CfnNetworkInsightsPath.PathFilterProperty) {
-      cdkBuilder.filterAtSource(filterAtSource.let(CfnNetworkInsightsPath.PathFilterProperty::unwrap))
+      cdkBuilder.filterAtSource(filterAtSource.let(CfnNetworkInsightsPath.PathFilterProperty.Companion::unwrap))
     }
 
     /**
@@ -356,7 +356,7 @@ public interface CfnNetworkInsightsPathProps {
      * @param tags The tags to add to the path.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

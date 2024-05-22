@@ -95,7 +95,7 @@ public interface BackendConfig {
      * @param virtualServiceBackend Config for a Virtual Service backend. 
      */
     override fun virtualServiceBackend(virtualServiceBackend: CfnVirtualNode.BackendProperty) {
-      cdkBuilder.virtualServiceBackend(virtualServiceBackend.let(CfnVirtualNode.BackendProperty::unwrap))
+      cdkBuilder.virtualServiceBackend(virtualServiceBackend.let(CfnVirtualNode.BackendProperty.Companion::unwrap))
     }
 
     /**

@@ -95,7 +95,7 @@ public open class CfnDatastore(
   cdkObject: software.amazon.awscdk.services.iotanalytics.CfnDatastore,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.iotanalytics.CfnDatastore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.iotanalytics.CfnDatastore(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -104,8 +104,8 @@ public open class CfnDatastore(
     id: String,
     props: CfnDatastoreProps,
   ) :
-      this(software.amazon.awscdk.services.iotanalytics.CfnDatastore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDatastoreProps::unwrap))
+      this(software.amazon.awscdk.services.iotanalytics.CfnDatastore(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDatastoreProps.Companion::unwrap))
   )
 
   public constructor(
@@ -141,14 +141,14 @@ public open class CfnDatastore(
    * Information about the partition dimensions in a data store.
    */
   public open fun datastorePartitions(`value`: IResolvable) {
-    unwrap(this).setDatastorePartitions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDatastorePartitions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information about the partition dimensions in a data store.
    */
   public open fun datastorePartitions(`value`: DatastorePartitionsProperty) {
-    unwrap(this).setDatastorePartitions(`value`.let(DatastorePartitionsProperty::unwrap))
+    unwrap(this).setDatastorePartitions(`value`.let(DatastorePartitionsProperty.Companion::unwrap))
   }
 
   /**
@@ -168,14 +168,14 @@ public open class CfnDatastore(
    * Where data store data is stored.
    */
   public open fun datastoreStorage(`value`: IResolvable) {
-    unwrap(this).setDatastoreStorage(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDatastoreStorage(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Where data store data is stored.
    */
   public open fun datastoreStorage(`value`: DatastoreStorageProperty) {
-    unwrap(this).setDatastoreStorage(`value`.let(DatastoreStorageProperty::unwrap))
+    unwrap(this).setDatastoreStorage(`value`.let(DatastoreStorageProperty.Companion::unwrap))
   }
 
   /**
@@ -201,7 +201,7 @@ public open class CfnDatastore(
    * [Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/) .
    */
   public open fun fileFormatConfiguration(`value`: IResolvable) {
-    unwrap(this).setFileFormatConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFileFormatConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -211,7 +211,7 @@ public open class CfnDatastore(
    * [Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/) .
    */
   public open fun fileFormatConfiguration(`value`: FileFormatConfigurationProperty) {
-    unwrap(this).setFileFormatConfiguration(`value`.let(FileFormatConfigurationProperty::unwrap))
+    unwrap(this).setFileFormatConfiguration(`value`.let(FileFormatConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -232,7 +232,7 @@ public open class CfnDatastore(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -244,14 +244,14 @@ public open class CfnDatastore(
    * How long, in days, message data is kept for the data store.
    */
   public open fun retentionPeriod(`value`: IResolvable) {
-    unwrap(this).setRetentionPeriod(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRetentionPeriod(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * How long, in days, message data is kept for the data store.
    */
   public open fun retentionPeriod(`value`: RetentionPeriodProperty) {
-    unwrap(this).setRetentionPeriod(`value`.let(RetentionPeriodProperty::unwrap))
+    unwrap(this).setRetentionPeriod(`value`.let(RetentionPeriodProperty.Companion::unwrap))
   }
 
   /**
@@ -277,7 +277,7 @@ public open class CfnDatastore(
    * Metadata which can be used to manage the data store.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -480,7 +480,7 @@ public open class CfnDatastore(
      * @param datastorePartitions Information about the partition dimensions in a data store. 
      */
     override fun datastorePartitions(datastorePartitions: IResolvable) {
-      cdkBuilder.datastorePartitions(datastorePartitions.let(IResolvable::unwrap))
+      cdkBuilder.datastorePartitions(datastorePartitions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -490,7 +490,7 @@ public open class CfnDatastore(
      * @param datastorePartitions Information about the partition dimensions in a data store. 
      */
     override fun datastorePartitions(datastorePartitions: DatastorePartitionsProperty) {
-      cdkBuilder.datastorePartitions(datastorePartitions.let(DatastorePartitionsProperty::unwrap))
+      cdkBuilder.datastorePartitions(datastorePartitions.let(DatastorePartitionsProperty.Companion::unwrap))
     }
 
     /**
@@ -512,7 +512,7 @@ public open class CfnDatastore(
      * @param datastoreStorage Where data store data is stored. 
      */
     override fun datastoreStorage(datastoreStorage: IResolvable) {
-      cdkBuilder.datastoreStorage(datastoreStorage.let(IResolvable::unwrap))
+      cdkBuilder.datastoreStorage(datastoreStorage.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -522,7 +522,7 @@ public open class CfnDatastore(
      * @param datastoreStorage Where data store data is stored. 
      */
     override fun datastoreStorage(datastoreStorage: DatastoreStorageProperty) {
-      cdkBuilder.datastoreStorage(datastoreStorage.let(DatastoreStorageProperty::unwrap))
+      cdkBuilder.datastoreStorage(datastoreStorage.let(DatastoreStorageProperty.Companion::unwrap))
     }
 
     /**
@@ -550,7 +550,7 @@ public open class CfnDatastore(
      * [Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/) . 
      */
     override fun fileFormatConfiguration(fileFormatConfiguration: IResolvable) {
-      cdkBuilder.fileFormatConfiguration(fileFormatConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.fileFormatConfiguration(fileFormatConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -567,7 +567,7 @@ public open class CfnDatastore(
      * [Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/) . 
      */
     override fun fileFormatConfiguration(fileFormatConfiguration: FileFormatConfigurationProperty) {
-      cdkBuilder.fileFormatConfiguration(fileFormatConfiguration.let(FileFormatConfigurationProperty::unwrap))
+      cdkBuilder.fileFormatConfiguration(fileFormatConfiguration.let(FileFormatConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -598,7 +598,7 @@ public open class CfnDatastore(
      * @param retentionPeriod How long, in days, message data is kept for the data store. 
      */
     override fun retentionPeriod(retentionPeriod: IResolvable) {
-      cdkBuilder.retentionPeriod(retentionPeriod.let(IResolvable::unwrap))
+      cdkBuilder.retentionPeriod(retentionPeriod.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -610,7 +610,7 @@ public open class CfnDatastore(
      * @param retentionPeriod How long, in days, message data is kept for the data store. 
      */
     override fun retentionPeriod(retentionPeriod: RetentionPeriodProperty) {
-      cdkBuilder.retentionPeriod(retentionPeriod.let(RetentionPeriodProperty::unwrap))
+      cdkBuilder.retentionPeriod(retentionPeriod.let(RetentionPeriodProperty.Companion::unwrap))
     }
 
     /**
@@ -637,7 +637,7 @@ public open class CfnDatastore(
      * @param tags Metadata which can be used to manage the data store. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1171,14 +1171,14 @@ public open class CfnDatastore(
        * @param partition A partition dimension defined by an attribute.
        */
       override fun partition(partition: IResolvable) {
-        cdkBuilder.partition(partition.let(IResolvable::unwrap))
+        cdkBuilder.partition(partition.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param partition A partition dimension defined by an attribute.
        */
       override fun partition(partition: PartitionProperty) {
-        cdkBuilder.partition(partition.let(PartitionProperty::unwrap))
+        cdkBuilder.partition(partition.let(PartitionProperty.Companion::unwrap))
       }
 
       /**
@@ -1193,14 +1193,14 @@ public open class CfnDatastore(
        * @param timestampPartition A partition dimension defined by a timestamp attribute.
        */
       override fun timestampPartition(timestampPartition: IResolvable) {
-        cdkBuilder.timestampPartition(timestampPartition.let(IResolvable::unwrap))
+        cdkBuilder.timestampPartition(timestampPartition.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param timestampPartition A partition dimension defined by a timestamp attribute.
        */
       override fun timestampPartition(timestampPartition: TimestampPartitionProperty) {
-        cdkBuilder.timestampPartition(timestampPartition.let(TimestampPartitionProperty::unwrap))
+        cdkBuilder.timestampPartition(timestampPartition.let(TimestampPartitionProperty.Companion::unwrap))
       }
 
       /**
@@ -1317,7 +1317,7 @@ public open class CfnDatastore(
        * @param partitions A list of partition dimensions in a data store.
        */
       override fun partitions(partitions: IResolvable) {
-        cdkBuilder.partitions(partitions.let(IResolvable::unwrap))
+        cdkBuilder.partitions(partitions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1500,7 +1500,7 @@ public open class CfnDatastore(
        * creation of the data store.
        */
       override fun customerManagedS3(customerManagedS3: IResolvable) {
-        cdkBuilder.customerManagedS3(customerManagedS3.let(IResolvable::unwrap))
+        cdkBuilder.customerManagedS3(customerManagedS3.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1509,7 +1509,7 @@ public open class CfnDatastore(
        * creation of the data store.
        */
       override fun customerManagedS3(customerManagedS3: CustomerManagedS3Property) {
-        cdkBuilder.customerManagedS3(customerManagedS3.let(CustomerManagedS3Property::unwrap))
+        cdkBuilder.customerManagedS3(customerManagedS3.let(CustomerManagedS3Property.Companion::unwrap))
       }
 
       /**
@@ -1529,7 +1529,7 @@ public open class CfnDatastore(
        * You can't change the choice of Amazon S3 storage after your data store is created.
        */
       override fun iotSiteWiseMultiLayerStorage(iotSiteWiseMultiLayerStorage: IResolvable) {
-        cdkBuilder.iotSiteWiseMultiLayerStorage(iotSiteWiseMultiLayerStorage.let(IResolvable::unwrap))
+        cdkBuilder.iotSiteWiseMultiLayerStorage(iotSiteWiseMultiLayerStorage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1539,7 +1539,7 @@ public open class CfnDatastore(
        */
       override
           fun iotSiteWiseMultiLayerStorage(iotSiteWiseMultiLayerStorage: IotSiteWiseMultiLayerStorageProperty) {
-        cdkBuilder.iotSiteWiseMultiLayerStorage(iotSiteWiseMultiLayerStorage.let(IotSiteWiseMultiLayerStorageProperty::unwrap))
+        cdkBuilder.iotSiteWiseMultiLayerStorage(iotSiteWiseMultiLayerStorage.let(IotSiteWiseMultiLayerStorageProperty.Companion::unwrap))
       }
 
       /**
@@ -1713,14 +1713,14 @@ public open class CfnDatastore(
        * @param parquetConfiguration Contains the configuration information of the Parquet format.
        */
       override fun parquetConfiguration(parquetConfiguration: IResolvable) {
-        cdkBuilder.parquetConfiguration(parquetConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.parquetConfiguration(parquetConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param parquetConfiguration Contains the configuration information of the Parquet format.
        */
       override fun parquetConfiguration(parquetConfiguration: ParquetConfigurationProperty) {
-        cdkBuilder.parquetConfiguration(parquetConfiguration.let(ParquetConfigurationProperty::unwrap))
+        cdkBuilder.parquetConfiguration(parquetConfiguration.let(ParquetConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1843,7 +1843,7 @@ public open class CfnDatastore(
        * that you manage.
        */
       override fun customerManagedS3Storage(customerManagedS3Storage: IResolvable) {
-        cdkBuilder.customerManagedS3Storage(customerManagedS3Storage.let(IResolvable::unwrap))
+        cdkBuilder.customerManagedS3Storage(customerManagedS3Storage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1852,7 +1852,7 @@ public open class CfnDatastore(
        */
       override
           fun customerManagedS3Storage(customerManagedS3Storage: CustomerManagedS3StorageProperty) {
-        cdkBuilder.customerManagedS3Storage(customerManagedS3Storage.let(CustomerManagedS3StorageProperty::unwrap))
+        cdkBuilder.customerManagedS3Storage(customerManagedS3Storage.let(CustomerManagedS3StorageProperty.Companion::unwrap))
       }
 
       /**
@@ -1964,14 +1964,14 @@ public open class CfnDatastore(
        * @param schemaDefinition Information needed to define a schema.
        */
       override fun schemaDefinition(schemaDefinition: IResolvable) {
-        cdkBuilder.schemaDefinition(schemaDefinition.let(IResolvable::unwrap))
+        cdkBuilder.schemaDefinition(schemaDefinition.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param schemaDefinition Information needed to define a schema.
        */
       override fun schemaDefinition(schemaDefinition: SchemaDefinitionProperty) {
-        cdkBuilder.schemaDefinition(schemaDefinition.let(SchemaDefinitionProperty::unwrap))
+        cdkBuilder.schemaDefinition(schemaDefinition.let(SchemaDefinitionProperty.Companion::unwrap))
       }
 
       /**
@@ -2180,7 +2180,7 @@ public open class CfnDatastore(
        * @param unlimited If true, message data is kept indefinitely.
        */
       override fun unlimited(unlimited: IResolvable) {
-        cdkBuilder.unlimited(unlimited.let(IResolvable::unwrap))
+        cdkBuilder.unlimited(unlimited.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2290,7 +2290,7 @@ public open class CfnDatastore(
        * Each schema can have up to 100 columns. Each column can have up to 100 nested types.
        */
       override fun columns(columns: IResolvable) {
-        cdkBuilder.columns(columns.let(IResolvable::unwrap))
+        cdkBuilder.columns(columns.let(IResolvable.Companion::unwrap))
       }
 
       /**

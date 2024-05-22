@@ -35,7 +35,7 @@ public abstract class DkimIdentity(
    * @param hostedZone
    */
   public open fun bind(emailIdentity: EmailIdentity): DkimIdentityConfig? =
-      unwrap(this).bind(emailIdentity.let(EmailIdentity::unwrap))?.let(DkimIdentityConfig::wrap)
+      unwrap(this).bind(emailIdentity.let(EmailIdentity.Companion::unwrap))?.let(DkimIdentityConfig::wrap)
 
   /**
    * Binds this DKIM identity to the email identity.
@@ -44,8 +44,8 @@ public abstract class DkimIdentity(
    * @param hostedZone
    */
   public open fun bind(emailIdentity: EmailIdentity, hostedZone: IPublicHostedZone):
-      DkimIdentityConfig? = unwrap(this).bind(emailIdentity.let(EmailIdentity::unwrap),
-      hostedZone.let(IPublicHostedZone::unwrap))?.let(DkimIdentityConfig::wrap)
+      DkimIdentityConfig? = unwrap(this).bind(emailIdentity.let(EmailIdentity.Companion::unwrap),
+      hostedZone.let(IPublicHostedZone.Companion::unwrap))?.let(DkimIdentityConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ses.DkimIdentity,
@@ -53,7 +53,7 @@ public abstract class DkimIdentity(
 
   public companion object {
     public fun byoDkim(options: ByoDkimOptions): DkimIdentity =
-        software.amazon.awscdk.services.ses.DkimIdentity.byoDkim(options.let(ByoDkimOptions::unwrap)).let(DkimIdentity::wrap)
+        software.amazon.awscdk.services.ses.DkimIdentity.byoDkim(options.let(ByoDkimOptions.Companion::unwrap)).let(DkimIdentity::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3bfff2fcb89d53bfb99ba06b7f9047a977afc3c905867e474890d4c288deeedd")
@@ -64,7 +64,7 @@ public abstract class DkimIdentity(
         software.amazon.awscdk.services.ses.DkimIdentity.easyDkim().let(DkimIdentity::wrap)
 
     public fun easyDkim(signingKeyLength: EasyDkimSigningKeyLength): DkimIdentity =
-        software.amazon.awscdk.services.ses.DkimIdentity.easyDkim(signingKeyLength.let(EasyDkimSigningKeyLength::unwrap)).let(DkimIdentity::wrap)
+        software.amazon.awscdk.services.ses.DkimIdentity.easyDkim(signingKeyLength.let(EasyDkimSigningKeyLength.Companion::unwrap)).let(DkimIdentity::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.DkimIdentity): DkimIdentity =
         CdkObjectWrappers.wrap(cdkObject) as? DkimIdentity ?: Wrapper(cdkObject)

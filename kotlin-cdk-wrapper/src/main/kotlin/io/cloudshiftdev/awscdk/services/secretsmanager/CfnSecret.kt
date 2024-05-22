@@ -92,7 +92,7 @@ public open class CfnSecret(
   cdkObject: software.amazon.awscdk.services.secretsmanager.CfnSecret,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.secretsmanager.CfnSecret(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.secretsmanager.CfnSecret(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -101,8 +101,8 @@ public open class CfnSecret(
     id: String,
     props: CfnSecretProps,
   ) :
-      this(software.amazon.awscdk.services.secretsmanager.CfnSecret(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSecretProps::unwrap))
+      this(software.amazon.awscdk.services.secretsmanager.CfnSecret(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSecretProps.Companion::unwrap))
   )
 
   public constructor(
@@ -138,14 +138,14 @@ public open class CfnSecret(
    * A structure that specifies how to generate a password to encrypt and store in the secret.
    */
   public open fun generateSecretString(`value`: IResolvable) {
-    unwrap(this).setGenerateSecretString(`value`.let(IResolvable::unwrap))
+    unwrap(this).setGenerateSecretString(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A structure that specifies how to generate a password to encrypt and store in the secret.
    */
   public open fun generateSecretString(`value`: GenerateSecretStringProperty) {
-    unwrap(this).setGenerateSecretString(`value`.let(GenerateSecretStringProperty::unwrap))
+    unwrap(this).setGenerateSecretString(`value`.let(GenerateSecretStringProperty.Companion::unwrap))
   }
 
   /**
@@ -162,7 +162,7 @@ public open class CfnSecret(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -200,7 +200,7 @@ public open class CfnSecret(
    * A custom type that specifies a `Region` and the `KmsKeyId` for a replica secret.
    */
   public open fun replicaRegions(`value`: IResolvable) {
-    unwrap(this).setReplicaRegions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setReplicaRegions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -242,7 +242,7 @@ public open class CfnSecret(
    * A list of tags to attach to the secret.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -518,7 +518,7 @@ public open class CfnSecret(
      * and store in the secret. 
      */
     override fun generateSecretString(generateSecretString: IResolvable) {
-      cdkBuilder.generateSecretString(generateSecretString.let(IResolvable::unwrap))
+      cdkBuilder.generateSecretString(generateSecretString.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -536,7 +536,7 @@ public open class CfnSecret(
      * and store in the secret. 
      */
     override fun generateSecretString(generateSecretString: GenerateSecretStringProperty) {
-      cdkBuilder.generateSecretString(generateSecretString.let(GenerateSecretStringProperty::unwrap))
+      cdkBuilder.generateSecretString(generateSecretString.let(GenerateSecretStringProperty.Companion::unwrap))
     }
 
     /**
@@ -610,7 +610,7 @@ public open class CfnSecret(
      * replica secret. 
      */
     override fun replicaRegions(replicaRegions: IResolvable) {
-      cdkBuilder.replicaRegions(replicaRegions.let(IResolvable::unwrap))
+      cdkBuilder.replicaRegions(replicaRegions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -694,7 +694,7 @@ public open class CfnSecret(
      * @param tags A list of tags to attach to the secret. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1032,7 +1032,7 @@ public open class CfnSecret(
        * If you don't include this switch, the password can contain lowercase letters.
        */
       override fun excludeLowercase(excludeLowercase: IResolvable) {
-        cdkBuilder.excludeLowercase(excludeLowercase.let(IResolvable::unwrap))
+        cdkBuilder.excludeLowercase(excludeLowercase.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1048,7 +1048,7 @@ public open class CfnSecret(
        * If you don't include this switch, the password can contain numbers.
        */
       override fun excludeNumbers(excludeNumbers: IResolvable) {
-        cdkBuilder.excludeNumbers(excludeNumbers.let(IResolvable::unwrap))
+        cdkBuilder.excludeNumbers(excludeNumbers.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1068,7 +1068,7 @@ public open class CfnSecret(
        * include this switch, the password can contain punctuation.
        */
       override fun excludePunctuation(excludePunctuation: IResolvable) {
-        cdkBuilder.excludePunctuation(excludePunctuation.let(IResolvable::unwrap))
+        cdkBuilder.excludePunctuation(excludePunctuation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1084,7 +1084,7 @@ public open class CfnSecret(
        * If you don't include this switch, the password can contain uppercase letters.
        */
       override fun excludeUppercase(excludeUppercase: IResolvable) {
-        cdkBuilder.excludeUppercase(excludeUppercase.let(IResolvable::unwrap))
+        cdkBuilder.excludeUppercase(excludeUppercase.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1110,7 +1110,7 @@ public open class CfnSecret(
        * If you include this switch, the password can contain space characters.
        */
       override fun includeSpace(includeSpace: IResolvable) {
-        cdkBuilder.includeSpace(includeSpace.let(IResolvable::unwrap))
+        cdkBuilder.includeSpace(includeSpace.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1138,7 +1138,7 @@ public open class CfnSecret(
        * type.
        */
       override fun requireEachIncludedType(requireEachIncludedType: IResolvable) {
-        cdkBuilder.requireEachIncludedType(requireEachIncludedType.let(IResolvable::unwrap))
+        cdkBuilder.requireEachIncludedType(requireEachIncludedType.let(IResolvable.Companion::unwrap))
       }
 
       /**

@@ -235,7 +235,7 @@ public interface CfnTrafficMirrorFilterRuleProps {
      * @param destinationPortRange The destination port range.
      */
     override fun destinationPortRange(destinationPortRange: IResolvable) {
-      cdkBuilder.destinationPortRange(destinationPortRange.let(IResolvable::unwrap))
+      cdkBuilder.destinationPortRange(destinationPortRange.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -243,7 +243,7 @@ public interface CfnTrafficMirrorFilterRuleProps {
      */
     override
         fun destinationPortRange(destinationPortRange: CfnTrafficMirrorFilterRule.TrafficMirrorPortRangeProperty) {
-      cdkBuilder.destinationPortRange(destinationPortRange.let(CfnTrafficMirrorFilterRule.TrafficMirrorPortRangeProperty::unwrap))
+      cdkBuilder.destinationPortRange(destinationPortRange.let(CfnTrafficMirrorFilterRule.TrafficMirrorPortRangeProperty.Companion::unwrap))
     }
 
     /**
@@ -293,7 +293,7 @@ public interface CfnTrafficMirrorFilterRuleProps {
      * @param sourcePortRange The source port range.
      */
     override fun sourcePortRange(sourcePortRange: IResolvable) {
-      cdkBuilder.sourcePortRange(sourcePortRange.let(IResolvable::unwrap))
+      cdkBuilder.sourcePortRange(sourcePortRange.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -301,7 +301,7 @@ public interface CfnTrafficMirrorFilterRuleProps {
      */
     override
         fun sourcePortRange(sourcePortRange: CfnTrafficMirrorFilterRule.TrafficMirrorPortRangeProperty) {
-      cdkBuilder.sourcePortRange(sourcePortRange.let(CfnTrafficMirrorFilterRule.TrafficMirrorPortRangeProperty::unwrap))
+      cdkBuilder.sourcePortRange(sourcePortRange.let(CfnTrafficMirrorFilterRule.TrafficMirrorPortRangeProperty.Companion::unwrap))
     }
 
     /**

@@ -59,8 +59,8 @@ public open class DatabaseInstanceFromSnapshot(
     id: String,
     props: DatabaseInstanceFromSnapshotProps,
   ) :
-      this(software.amazon.awscdk.services.rds.DatabaseInstanceFromSnapshot(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DatabaseInstanceFromSnapshotProps::unwrap))
+      this(software.amazon.awscdk.services.rds.DatabaseInstanceFromSnapshot(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DatabaseInstanceFromSnapshotProps.Companion::unwrap))
   )
 
   public constructor(
@@ -78,7 +78,7 @@ public open class DatabaseInstanceFromSnapshot(
    */
   public open fun addRotationMultiUser(id: String, options: RotationMultiUserOptions):
       SecretRotation = unwrap(this).addRotationMultiUser(id,
-      options.let(RotationMultiUserOptions::unwrap)).let(SecretRotation::wrap)
+      options.let(RotationMultiUserOptions.Companion::unwrap)).let(SecretRotation::wrap)
 
   /**
    * Adds the multi user rotation to this instance.
@@ -106,7 +106,7 @@ public open class DatabaseInstanceFromSnapshot(
    * @param options the options for the rotation, if you want to override the defaults.
    */
   public open fun addRotationSingleUser(options: RotationSingleUserOptions): SecretRotation =
-      unwrap(this).addRotationSingleUser(options.let(RotationSingleUserOptions::unwrap)).let(SecretRotation::wrap)
+      unwrap(this).addRotationSingleUser(options.let(RotationSingleUserOptions.Companion::unwrap)).let(SecretRotation::wrap)
 
   /**
    * Adds the single user rotation of the master password to this instance.
@@ -160,7 +160,7 @@ public open class DatabaseInstanceFromSnapshot(
    * default database user, obtained from the Secret, if not specified.
    */
   public override fun grantConnect(grantee: IGrantable): Grant =
-      unwrap(this).grantConnect(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantConnect(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant the given identity connection access to the database.
@@ -170,7 +170,7 @@ public open class DatabaseInstanceFromSnapshot(
    * default database user, obtained from the Secret, if not specified.
    */
   public override fun grantConnect(grantee: IGrantable, dbUser: String): Grant =
-      unwrap(this).grantConnect(grantee.let(IGrantable::unwrap), dbUser).let(Grant::wrap)
+      unwrap(this).grantConnect(grantee.let(IGrantable.Companion::unwrap), dbUser).let(Grant::wrap)
 
   /**
    * The instance endpoint.
@@ -921,7 +921,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param backupRetention The number of days during which automatic DB snapshots are retained. 
      */
     override fun backupRetention(backupRetention: Duration) {
-      cdkBuilder.backupRetention(backupRetention.let(Duration::unwrap))
+      cdkBuilder.backupRetention(backupRetention.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -937,7 +937,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param caCertificate The identifier of the CA certificate for this DB instance. 
      */
     override fun caCertificate(caCertificate: CaCertificate) {
-      cdkBuilder.caCertificate(caCertificate.let(CaCertificate::unwrap))
+      cdkBuilder.caCertificate(caCertificate.let(CaCertificate.Companion::unwrap))
     }
 
     /**
@@ -975,7 +975,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param cloudwatchLogsRetention The number of days log events are kept in CloudWatch Logs. 
      */
     override fun cloudwatchLogsRetention(cloudwatchLogsRetention: RetentionDays) {
-      cdkBuilder.cloudwatchLogsRetention(cloudwatchLogsRetention.let(RetentionDays::unwrap))
+      cdkBuilder.cloudwatchLogsRetention(cloudwatchLogsRetention.let(RetentionDays.Companion::unwrap))
     }
 
     /**
@@ -988,7 +988,7 @@ public open class DatabaseInstanceFromSnapshot(
      * custom resource that sets the retention policy. 
      */
     override fun cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole: IRole) {
-      cdkBuilder.cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole.let(IRole::unwrap))
+      cdkBuilder.cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -1015,7 +1015,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param credentials Master user credentials. 
      */
     override fun credentials(credentials: SnapshotCredentials) {
-      cdkBuilder.credentials(credentials.let(SnapshotCredentials::unwrap))
+      cdkBuilder.credentials(credentials.let(SnapshotCredentials.Companion::unwrap))
     }
 
     /**
@@ -1076,7 +1076,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param domainRole The IAM role to be used when making API calls to the Directory Service. 
      */
     override fun domainRole(domainRole: IRole) {
-      cdkBuilder.domainRole(domainRole.let(IRole::unwrap))
+      cdkBuilder.domainRole(domainRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -1097,7 +1097,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param engine The database engine. 
      */
     override fun engine(engine: IInstanceEngine) {
-      cdkBuilder.engine(engine.let(IInstanceEngine::unwrap))
+      cdkBuilder.engine(engine.let(IInstanceEngine.Companion::unwrap))
     }
 
     /**
@@ -1135,7 +1135,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param instanceType The name of the compute and memory capacity for the instance. 
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -1165,7 +1165,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param licenseModel The license model. 
      */
     override fun licenseModel(licenseModel: LicenseModel) {
-      cdkBuilder.licenseModel(licenseModel.let(LicenseModel::unwrap))
+      cdkBuilder.licenseModel(licenseModel.let(LicenseModel.Companion::unwrap))
     }
 
     /**
@@ -1190,7 +1190,7 @@ public open class DatabaseInstanceFromSnapshot(
      * enhanced monitoring metrics for the DB instance. 
      */
     override fun monitoringInterval(monitoringInterval: Duration) {
-      cdkBuilder.monitoringInterval(monitoringInterval.let(Duration::unwrap))
+      cdkBuilder.monitoringInterval(monitoringInterval.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -1201,7 +1201,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param monitoringRole Role that will be used to manage DB instance monitoring. 
      */
     override fun monitoringRole(monitoringRole: IRole) {
-      cdkBuilder.monitoringRole(monitoringRole.let(IRole::unwrap))
+      cdkBuilder.monitoringRole(monitoringRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -1224,7 +1224,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param networkType The network type of the DB instance. 
      */
     override fun networkType(networkType: NetworkType) {
-      cdkBuilder.networkType(networkType.let(NetworkType::unwrap))
+      cdkBuilder.networkType(networkType.let(NetworkType.Companion::unwrap))
     }
 
     /**
@@ -1235,7 +1235,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param optionGroup The option group to associate with the instance. 
      */
     override fun optionGroup(optionGroup: IOptionGroup) {
-      cdkBuilder.optionGroup(optionGroup.let(IOptionGroup::unwrap))
+      cdkBuilder.optionGroup(optionGroup.let(IOptionGroup.Companion::unwrap))
     }
 
     /**
@@ -1246,7 +1246,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param parameterGroup The DB parameter group to associate with the instance. 
      */
     override fun parameterGroup(parameterGroup: IParameterGroup) {
-      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup::unwrap))
+      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup.Companion::unwrap))
     }
 
     /**
@@ -1272,7 +1272,7 @@ public open class DatabaseInstanceFromSnapshot(
      * data. 
      */
     override fun performanceInsightEncryptionKey(performanceInsightEncryptionKey: IKey) {
-      cdkBuilder.performanceInsightEncryptionKey(performanceInsightEncryptionKey.let(IKey::unwrap))
+      cdkBuilder.performanceInsightEncryptionKey(performanceInsightEncryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -1285,7 +1285,7 @@ public open class DatabaseInstanceFromSnapshot(
      */
     override
         fun performanceInsightRetention(performanceInsightRetention: PerformanceInsightRetention) {
-      cdkBuilder.performanceInsightRetention(performanceInsightRetention.let(PerformanceInsightRetention::unwrap))
+      cdkBuilder.performanceInsightRetention(performanceInsightRetention.let(PerformanceInsightRetention.Companion::unwrap))
     }
 
     /**
@@ -1349,7 +1349,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param processorFeatures The number of CPU cores and the number of threads per core. 
      */
     override fun processorFeatures(processorFeatures: ProcessorFeatures) {
-      cdkBuilder.processorFeatures(processorFeatures.let(ProcessorFeatures::unwrap))
+      cdkBuilder.processorFeatures(processorFeatures.let(ProcessorFeatures.Companion::unwrap))
     }
 
     /**
@@ -1393,7 +1393,7 @@ public open class DatabaseInstanceFromSnapshot(
      * stack or replaced during an update. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -1409,7 +1409,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param s3ExportBuckets S3 buckets that you want to load data into. 
      */
     override fun s3ExportBuckets(s3ExportBuckets: List<IBucket>) {
-      cdkBuilder.s3ExportBuckets(s3ExportBuckets.map(IBucket::unwrap))
+      cdkBuilder.s3ExportBuckets(s3ExportBuckets.map(IBucket.Companion::unwrap))
     }
 
     /**
@@ -1440,7 +1440,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param s3ExportRole Role that will be associated with this DB instance to enable S3 export. 
      */
     override fun s3ExportRole(s3ExportRole: IRole) {
-      cdkBuilder.s3ExportRole(s3ExportRole.let(IRole::unwrap))
+      cdkBuilder.s3ExportRole(s3ExportRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -1458,7 +1458,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param s3ImportBuckets S3 buckets that you want to load data from. 
      */
     override fun s3ImportBuckets(s3ImportBuckets: List<IBucket>) {
-      cdkBuilder.s3ImportBuckets(s3ImportBuckets.map(IBucket::unwrap))
+      cdkBuilder.s3ImportBuckets(s3ImportBuckets.map(IBucket.Companion::unwrap))
     }
 
     /**
@@ -1493,7 +1493,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param s3ImportRole Role that will be associated with this DB instance to enable S3 import. 
      */
     override fun s3ImportRole(s3ImportRole: IRole) {
-      cdkBuilder.s3ImportRole(s3ImportRole.let(IRole::unwrap))
+      cdkBuilder.s3ImportRole(s3ImportRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -1504,7 +1504,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param securityGroups The security groups to assign to the DB instance. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -1560,7 +1560,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param storageType The storage type. 
      */
     override fun storageType(storageType: StorageType) {
-      cdkBuilder.storageType(storageType.let(StorageType::unwrap))
+      cdkBuilder.storageType(storageType.let(StorageType.Companion::unwrap))
     }
 
     /**
@@ -1571,7 +1571,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param subnetGroup Existing subnet group for the instance. 
      */
     override fun subnetGroup(subnetGroup: ISubnetGroup) {
-      cdkBuilder.subnetGroup(subnetGroup.let(ISubnetGroup::unwrap))
+      cdkBuilder.subnetGroup(subnetGroup.let(ISubnetGroup.Companion::unwrap))
     }
 
     /**
@@ -1593,7 +1593,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param vpc The VPC network where the DB subnet group should be created. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -1604,7 +1604,7 @@ public open class DatabaseInstanceFromSnapshot(
      * @param vpcSubnets The type of subnets to add to the created DB subnet group. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

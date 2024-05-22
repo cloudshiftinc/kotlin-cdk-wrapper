@@ -219,7 +219,7 @@ public interface DatabaseClusterAttributes {
      * @param engine The engine of the existing Cluster.
      */
     override fun engine(engine: IClusterEngine) {
-      cdkBuilder.engine(engine.let(IClusterEngine::unwrap))
+      cdkBuilder.engine(engine.let(IClusterEngine.Companion::unwrap))
     }
 
     /**
@@ -266,14 +266,14 @@ public interface DatabaseClusterAttributes {
      * @param secret The secret attached to the database cluster.
      */
     override fun secret(secret: ISecret) {
-      cdkBuilder.secret(secret.let(ISecret::unwrap))
+      cdkBuilder.secret(secret.let(ISecret.Companion::unwrap))
     }
 
     /**
      * @param securityGroups The security groups of the database cluster.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**

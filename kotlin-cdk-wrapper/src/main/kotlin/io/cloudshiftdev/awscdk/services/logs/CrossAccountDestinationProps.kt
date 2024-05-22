@@ -88,7 +88,7 @@ public interface CrossAccountDestinationProps {
      * The role must be assumable by 'logs.{REGION}.amazonaws.com'.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**

@@ -27,7 +27,7 @@ public open class LogGroupLogDestination(
   cdkObject: software.amazon.awscdk.services.apigateway.LogGroupLogDestination,
 ) : CdkObject(cdkObject), IAccessLogDestination {
   public constructor(logGroup: ILogGroup) :
-      this(software.amazon.awscdk.services.apigateway.LogGroupLogDestination(logGroup.let(ILogGroup::unwrap))
+      this(software.amazon.awscdk.services.apigateway.LogGroupLogDestination(logGroup.let(ILogGroup.Companion::unwrap))
   )
 
   /**
@@ -36,7 +36,7 @@ public open class LogGroupLogDestination(
    * @param _stage 
    */
   public override fun bind(stage: IStage): AccessLogDestinationConfig =
-      unwrap(this).bind(stage.let(IStage::unwrap)).let(AccessLogDestinationConfig::wrap)
+      unwrap(this).bind(stage.let(IStage.Companion::unwrap)).let(AccessLogDestinationConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.LogGroupLogDestination):

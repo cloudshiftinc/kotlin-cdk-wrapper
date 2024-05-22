@@ -40,8 +40,8 @@ public open class CfnLicenseEndpoint(
     id: String,
     props: CfnLicenseEndpointProps,
   ) :
-      this(software.amazon.awscdk.services.deadline.CfnLicenseEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLicenseEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.deadline.CfnLicenseEndpoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLicenseEndpointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -82,7 +82,7 @@ public open class CfnLicenseEndpoint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

@@ -32,7 +32,7 @@ public open class JournaldLogDriver(
   )
 
   public constructor(props: JournaldLogDriverProps) :
-      this(software.amazon.awscdk.services.ecs.JournaldLogDriver(props.let(JournaldLogDriverProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.JournaldLogDriver(props.let(JournaldLogDriverProps.Companion::unwrap))
   )
 
   public constructor(props: JournaldLogDriverProps.Builder.() -> Unit) :
@@ -46,8 +46,8 @@ public open class JournaldLogDriver(
    * @param _containerDefinition 
    */
   public override fun bind(scope: Construct, containerDefinition: ContainerDefinition):
-      LogDriverConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      containerDefinition.let(ContainerDefinition::unwrap)).let(LogDriverConfig::wrap)
+      LogDriverConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      containerDefinition.let(ContainerDefinition.Companion::unwrap)).let(LogDriverConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.JournaldLogDriver].

@@ -366,7 +366,7 @@ public interface CfnContainerRecipeProps {
      * components in any combination.
      */
     override fun components(components: IResolvable) {
-      cdkBuilder.components(components.let(IResolvable::unwrap))
+      cdkBuilder.components(components.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -430,7 +430,7 @@ public interface CfnContainerRecipeProps {
      * building and testing container images.
      */
     override fun instanceConfiguration(instanceConfiguration: IResolvable) {
-      cdkBuilder.instanceConfiguration(instanceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.instanceConfiguration(instanceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -439,7 +439,7 @@ public interface CfnContainerRecipeProps {
      */
     override
         fun instanceConfiguration(instanceConfiguration: CfnContainerRecipe.InstanceConfigurationProperty) {
-      cdkBuilder.instanceConfiguration(instanceConfiguration.let(CfnContainerRecipe.InstanceConfigurationProperty::unwrap))
+      cdkBuilder.instanceConfiguration(instanceConfiguration.let(CfnContainerRecipe.InstanceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -494,7 +494,7 @@ public interface CfnContainerRecipeProps {
      * @param targetRepository The destination repository for the container image. 
      */
     override fun targetRepository(targetRepository: IResolvable) {
-      cdkBuilder.targetRepository(targetRepository.let(IResolvable::unwrap))
+      cdkBuilder.targetRepository(targetRepository.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -502,7 +502,7 @@ public interface CfnContainerRecipeProps {
      */
     override
         fun targetRepository(targetRepository: CfnContainerRecipe.TargetContainerRepositoryProperty) {
-      cdkBuilder.targetRepository(targetRepository.let(CfnContainerRecipe.TargetContainerRepositoryProperty::unwrap))
+      cdkBuilder.targetRepository(targetRepository.let(CfnContainerRecipe.TargetContainerRepositoryProperty.Companion::unwrap))
     }
 
     /**

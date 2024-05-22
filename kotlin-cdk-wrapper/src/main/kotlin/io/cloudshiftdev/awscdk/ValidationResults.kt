@@ -28,7 +28,7 @@ public open class ValidationResults(
   )
 
   public constructor(results: List<ValidationResult>) :
-      this(software.amazon.awscdk.ValidationResults(results.map(ValidationResult::unwrap))
+      this(software.amazon.awscdk.ValidationResults(results.map(ValidationResult.Companion::unwrap))
   )
 
   public constructor(vararg results: ValidationResult) : this(results.toList()
@@ -38,7 +38,7 @@ public open class ValidationResults(
    * @param result 
    */
   public open fun collect(result: ValidationResult) {
-    unwrap(this).collect(result.let(ValidationResult::unwrap))
+    unwrap(this).collect(result.let(ValidationResult.Companion::unwrap))
   }
 
   /**
@@ -61,7 +61,7 @@ public open class ValidationResults(
    *
    */
   public open fun results(`value`: List<ValidationResult>) {
-    unwrap(this).setResults(`value`.map(ValidationResult::unwrap))
+    unwrap(this).setResults(`value`.map(ValidationResult.Companion::unwrap))
   }
 
   /**

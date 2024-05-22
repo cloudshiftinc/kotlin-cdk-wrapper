@@ -111,7 +111,7 @@ public interface CfnApplicationProps {
      * and an optional value, both of which you define.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

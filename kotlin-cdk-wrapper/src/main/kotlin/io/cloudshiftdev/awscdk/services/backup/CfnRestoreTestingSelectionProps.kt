@@ -263,7 +263,7 @@ public interface CfnRestoreTestingSelectionProps {
      * specific conditions such as `StringEquals` or `StringNotEquals` .
      */
     override fun protectedResourceConditions(protectedResourceConditions: IResolvable) {
-      cdkBuilder.protectedResourceConditions(protectedResourceConditions.let(IResolvable::unwrap))
+      cdkBuilder.protectedResourceConditions(protectedResourceConditions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -272,7 +272,7 @@ public interface CfnRestoreTestingSelectionProps {
      */
     override
         fun protectedResourceConditions(protectedResourceConditions: CfnRestoreTestingSelection.ProtectedResourceConditionsProperty) {
-      cdkBuilder.protectedResourceConditions(protectedResourceConditions.let(CfnRestoreTestingSelection.ProtectedResourceConditionsProperty::unwrap))
+      cdkBuilder.protectedResourceConditions(protectedResourceConditions.let(CfnRestoreTestingSelection.ProtectedResourceConditionsProperty.Companion::unwrap))
     }
 
     /**
@@ -305,7 +305,7 @@ public interface CfnRestoreTestingSelectionProps {
      * .
      */
     override fun restoreMetadataOverrides(restoreMetadataOverrides: IResolvable) {
-      cdkBuilder.restoreMetadataOverrides(restoreMetadataOverrides.let(IResolvable::unwrap))
+      cdkBuilder.restoreMetadataOverrides(restoreMetadataOverrides.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -127,14 +127,14 @@ public interface ClusterInstanceBindOptions {
      * enhanced monitoring metrics for the DB instances.
      */
     override fun monitoringInterval(monitoringInterval: Duration) {
-      cdkBuilder.monitoringInterval(monitoringInterval.let(Duration::unwrap))
+      cdkBuilder.monitoringInterval(monitoringInterval.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param monitoringRole Role that will be used to manage DB instances monitoring.
      */
     override fun monitoringRole(monitoringRole: IRole) {
-      cdkBuilder.monitoringRole(monitoringRole.let(IRole::unwrap))
+      cdkBuilder.monitoringRole(monitoringRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -153,7 +153,7 @@ public interface ClusterInstanceBindOptions {
      * @param removalPolicy The removal policy on the cluster.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -161,7 +161,7 @@ public interface ClusterInstanceBindOptions {
      * This is only needed when using the isFromLegacyInstanceProps
      */
     override fun subnetGroup(subnetGroup: ISubnetGroup) {
-      cdkBuilder.subnetGroup(subnetGroup.let(ISubnetGroup::unwrap))
+      cdkBuilder.subnetGroup(subnetGroup.let(ISubnetGroup.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.ClusterInstanceBindOptions =

@@ -31,7 +31,7 @@ public abstract class VirtualRouterListener(
    * @param scope 
    */
   public open fun bind(scope: Construct): VirtualRouterListenerConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(VirtualRouterListenerConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(VirtualRouterListenerConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.VirtualRouterListener,

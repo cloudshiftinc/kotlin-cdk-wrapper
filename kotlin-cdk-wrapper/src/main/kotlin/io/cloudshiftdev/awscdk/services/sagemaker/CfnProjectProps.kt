@@ -189,7 +189,7 @@ public interface CfnProjectProps {
      */
     override
         fun serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails: IResolvable) {
-      cdkBuilder.serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails.let(IResolvable::unwrap))
+      cdkBuilder.serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -200,7 +200,7 @@ public interface CfnProjectProps {
      */
     override
         fun serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails: CfnProject.ServiceCatalogProvisionedProductDetailsProperty) {
-      cdkBuilder.serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails.let(CfnProject.ServiceCatalogProvisionedProductDetailsProperty::unwrap))
+      cdkBuilder.serviceCatalogProvisionedProductDetails(serviceCatalogProvisionedProductDetails.let(CfnProject.ServiceCatalogProvisionedProductDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -235,7 +235,7 @@ public interface CfnProjectProps {
      * in the *AWS Billing and Cost Management User Guide* .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

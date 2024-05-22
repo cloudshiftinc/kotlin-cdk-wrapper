@@ -112,7 +112,7 @@ public interface AlbControllerOptions {
      * @param version Version of the controller. 
      */
     override fun version(version: AlbControllerVersion) {
-      cdkBuilder.version(version.let(AlbControllerVersion::unwrap))
+      cdkBuilder.version(version.let(AlbControllerVersion.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.eks.AlbControllerOptions =

@@ -279,7 +279,7 @@ public interface CfnLocationAzureBlobProps {
      * access your Azure Blob Storage.
      */
     override fun azureBlobSasConfiguration(azureBlobSasConfiguration: IResolvable) {
-      cdkBuilder.azureBlobSasConfiguration(azureBlobSasConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.azureBlobSasConfiguration(azureBlobSasConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -288,7 +288,7 @@ public interface CfnLocationAzureBlobProps {
      */
     override
         fun azureBlobSasConfiguration(azureBlobSasConfiguration: CfnLocationAzureBlob.AzureBlobSasConfigurationProperty) {
-      cdkBuilder.azureBlobSasConfiguration(azureBlobSasConfiguration.let(CfnLocationAzureBlob.AzureBlobSasConfigurationProperty::unwrap))
+      cdkBuilder.azureBlobSasConfiguration(azureBlobSasConfiguration.let(CfnLocationAzureBlob.AzureBlobSasConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -328,7 +328,7 @@ public interface CfnLocationAzureBlobProps {
      * We recommend creating at least a name tag for your transfer location.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

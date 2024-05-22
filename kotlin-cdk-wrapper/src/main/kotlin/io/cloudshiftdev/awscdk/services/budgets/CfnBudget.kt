@@ -100,8 +100,8 @@ public open class CfnBudget(
     id: String,
     props: CfnBudgetProps,
   ) :
-      this(software.amazon.awscdk.services.budgets.CfnBudget(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnBudgetProps::unwrap))
+      this(software.amazon.awscdk.services.budgets.CfnBudget(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnBudgetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -125,14 +125,14 @@ public open class CfnBudget(
    * The budget object that you want to create.
    */
   public open fun budget(`value`: IResolvable) {
-    unwrap(this).setBudget(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBudget(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The budget object that you want to create.
    */
   public open fun budget(`value`: BudgetDataProperty) {
-    unwrap(this).setBudget(`value`.let(BudgetDataProperty::unwrap))
+    unwrap(this).setBudget(`value`.let(BudgetDataProperty.Companion::unwrap))
   }
 
   /**
@@ -149,7 +149,7 @@ public open class CfnBudget(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -162,7 +162,7 @@ public open class CfnBudget(
    * A notification that you want to associate with a budget.
    */
   public open fun notificationsWithSubscribers(`value`: IResolvable) {
-    unwrap(this).setNotificationsWithSubscribers(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNotificationsWithSubscribers(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -260,7 +260,7 @@ public open class CfnBudget(
      * @param budget The budget object that you want to create. 
      */
     override fun budget(budget: IResolvable) {
-      cdkBuilder.budget(budget.let(IResolvable::unwrap))
+      cdkBuilder.budget(budget.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -270,7 +270,7 @@ public open class CfnBudget(
      * @param budget The budget object that you want to create. 
      */
     override fun budget(budget: BudgetDataProperty) {
-      cdkBuilder.budget(budget.let(BudgetDataProperty::unwrap))
+      cdkBuilder.budget(budget.let(BudgetDataProperty.Companion::unwrap))
     }
 
     /**
@@ -295,7 +295,7 @@ public open class CfnBudget(
      * @param notificationsWithSubscribers A notification that you want to associate with a budget. 
      */
     override fun notificationsWithSubscribers(notificationsWithSubscribers: IResolvable) {
-      cdkBuilder.notificationsWithSubscribers(notificationsWithSubscribers.let(IResolvable::unwrap))
+      cdkBuilder.notificationsWithSubscribers(notificationsWithSubscribers.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -435,7 +435,7 @@ public open class CfnBudget(
        * your auto-adjusting budget is based on.
        */
       override fun historicalOptions(historicalOptions: IResolvable) {
-        cdkBuilder.historicalOptions(historicalOptions.let(IResolvable::unwrap))
+        cdkBuilder.historicalOptions(historicalOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -443,7 +443,7 @@ public open class CfnBudget(
        * your auto-adjusting budget is based on.
        */
       override fun historicalOptions(historicalOptions: HistoricalOptionsProperty) {
-        cdkBuilder.historicalOptions(historicalOptions.let(HistoricalOptionsProperty::unwrap))
+        cdkBuilder.historicalOptions(historicalOptions.let(HistoricalOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -897,14 +897,14 @@ public open class CfnBudget(
        * @param autoAdjustData Determine the budget amount for an auto-adjusting budget.
        */
       override fun autoAdjustData(autoAdjustData: IResolvable) {
-        cdkBuilder.autoAdjustData(autoAdjustData.let(IResolvable::unwrap))
+        cdkBuilder.autoAdjustData(autoAdjustData.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param autoAdjustData Determine the budget amount for an auto-adjusting budget.
        */
       override fun autoAdjustData(autoAdjustData: AutoAdjustDataProperty) {
-        cdkBuilder.autoAdjustData(autoAdjustData.let(AutoAdjustDataProperty::unwrap))
+        cdkBuilder.autoAdjustData(autoAdjustData.let(AutoAdjustDataProperty.Companion::unwrap))
       }
 
       /**
@@ -925,7 +925,7 @@ public open class CfnBudget(
        * `UpdateBudget` actions.
        */
       override fun budgetLimit(budgetLimit: IResolvable) {
-        cdkBuilder.budgetLimit(budgetLimit.let(IResolvable::unwrap))
+        cdkBuilder.budgetLimit(budgetLimit.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -938,7 +938,7 @@ public open class CfnBudget(
        * `UpdateBudget` actions.
        */
       override fun budgetLimit(budgetLimit: SpendProperty) {
-        cdkBuilder.budgetLimit(budgetLimit.let(SpendProperty::unwrap))
+        cdkBuilder.budgetLimit(budgetLimit.let(SpendProperty.Companion::unwrap))
       }
 
       /**
@@ -994,7 +994,7 @@ public open class CfnBudget(
        * `SAVINGS_PLANS_COVERAGE` budgets do not have `CostTypes` .
        */
       override fun costTypes(costTypes: IResolvable) {
-        cdkBuilder.costTypes(costTypes.let(IResolvable::unwrap))
+        cdkBuilder.costTypes(costTypes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1003,7 +1003,7 @@ public open class CfnBudget(
        * `SAVINGS_PLANS_COVERAGE` budgets do not have `CostTypes` .
        */
       override fun costTypes(costTypes: CostTypesProperty) {
-        cdkBuilder.costTypes(costTypes.let(CostTypesProperty::unwrap))
+        cdkBuilder.costTypes(costTypes.let(CostTypesProperty.Companion::unwrap))
       }
 
       /**
@@ -1067,7 +1067,7 @@ public open class CfnBudget(
        * subscribers.
        */
       override fun timePeriod(timePeriod: IResolvable) {
-        cdkBuilder.timePeriod(timePeriod.let(IResolvable::unwrap))
+        cdkBuilder.timePeriod(timePeriod.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1087,7 +1087,7 @@ public open class CfnBudget(
        * subscribers.
        */
       override fun timePeriod(timePeriod: TimePeriodProperty) {
-        cdkBuilder.timePeriod(timePeriod.let(TimePeriodProperty::unwrap))
+        cdkBuilder.timePeriod(timePeriod.let(TimePeriodProperty.Companion::unwrap))
       }
 
       /**
@@ -1564,7 +1564,7 @@ public open class CfnBudget(
        * The default value is `true` .
        */
       override fun includeCredit(includeCredit: IResolvable) {
-        cdkBuilder.includeCredit(includeCredit.let(IResolvable::unwrap))
+        cdkBuilder.includeCredit(includeCredit.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1580,7 +1580,7 @@ public open class CfnBudget(
        * The default value is `true` .
        */
       override fun includeDiscount(includeDiscount: IResolvable) {
-        cdkBuilder.includeDiscount(includeDiscount.let(IResolvable::unwrap))
+        cdkBuilder.includeDiscount(includeDiscount.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1598,7 +1598,7 @@ public open class CfnBudget(
        * The default value is `true` .
        */
       override fun includeOtherSubscription(includeOtherSubscription: IResolvable) {
-        cdkBuilder.includeOtherSubscription(includeOtherSubscription.let(IResolvable::unwrap))
+        cdkBuilder.includeOtherSubscription(includeOtherSubscription.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1616,7 +1616,7 @@ public open class CfnBudget(
        * The default value is `true` .
        */
       override fun includeRecurring(includeRecurring: IResolvable) {
-        cdkBuilder.includeRecurring(includeRecurring.let(IResolvable::unwrap))
+        cdkBuilder.includeRecurring(includeRecurring.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1632,7 +1632,7 @@ public open class CfnBudget(
        * The default value is `true` .
        */
       override fun includeRefund(includeRefund: IResolvable) {
-        cdkBuilder.includeRefund(includeRefund.let(IResolvable::unwrap))
+        cdkBuilder.includeRefund(includeRefund.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1648,7 +1648,7 @@ public open class CfnBudget(
        * The default value is `true` .
        */
       override fun includeSubscription(includeSubscription: IResolvable) {
-        cdkBuilder.includeSubscription(includeSubscription.let(IResolvable::unwrap))
+        cdkBuilder.includeSubscription(includeSubscription.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1664,7 +1664,7 @@ public open class CfnBudget(
        * The default value is `true` .
        */
       override fun includeSupport(includeSupport: IResolvable) {
-        cdkBuilder.includeSupport(includeSupport.let(IResolvable::unwrap))
+        cdkBuilder.includeSupport(includeSupport.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1680,7 +1680,7 @@ public open class CfnBudget(
        * The default value is `true` .
        */
       override fun includeTax(includeTax: IResolvable) {
-        cdkBuilder.includeTax(includeTax.let(IResolvable::unwrap))
+        cdkBuilder.includeTax(includeTax.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1696,7 +1696,7 @@ public open class CfnBudget(
        * The default value is `true` .
        */
       override fun includeUpfront(includeUpfront: IResolvable) {
-        cdkBuilder.includeUpfront(includeUpfront.let(IResolvable::unwrap))
+        cdkBuilder.includeUpfront(includeUpfront.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1712,7 +1712,7 @@ public open class CfnBudget(
        * The default value is `false` .
        */
       override fun useAmortized(useAmortized: IResolvable) {
-        cdkBuilder.useAmortized(useAmortized.let(IResolvable::unwrap))
+        cdkBuilder.useAmortized(useAmortized.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1728,7 +1728,7 @@ public open class CfnBudget(
        * The default value is `false` .
        */
       override fun useBlended(useBlended: IResolvable) {
-        cdkBuilder.useBlended(useBlended.let(IResolvable::unwrap))
+        cdkBuilder.useBlended(useBlended.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.budgets.CfnBudget.CostTypesProperty =
@@ -2274,14 +2274,14 @@ public open class CfnBudget(
        * @param notification The notification that's associated with a budget. 
        */
       override fun notification(notification: IResolvable) {
-        cdkBuilder.notification(notification.let(IResolvable::unwrap))
+        cdkBuilder.notification(notification.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param notification The notification that's associated with a budget. 
        */
       override fun notification(notification: NotificationProperty) {
-        cdkBuilder.notification(notification.let(NotificationProperty::unwrap))
+        cdkBuilder.notification(notification.let(NotificationProperty.Companion::unwrap))
       }
 
       /**
@@ -2296,7 +2296,7 @@ public open class CfnBudget(
        * @param subscribers A list of subscribers who are subscribed to this notification. 
        */
       override fun subscribers(subscribers: IResolvable) {
-        cdkBuilder.subscribers(subscribers.let(IResolvable::unwrap))
+        cdkBuilder.subscribers(subscribers.let(IResolvable.Companion::unwrap))
       }
 
       /**

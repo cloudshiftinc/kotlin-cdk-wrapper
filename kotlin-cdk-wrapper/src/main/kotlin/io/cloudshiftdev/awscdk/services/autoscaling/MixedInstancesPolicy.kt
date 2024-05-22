@@ -116,7 +116,7 @@ public interface MixedInstancesPolicy {
      * @param instancesDistribution InstancesDistribution to use.
      */
     override fun instancesDistribution(instancesDistribution: InstancesDistribution) {
-      cdkBuilder.instancesDistribution(instancesDistribution.let(InstancesDistribution::unwrap))
+      cdkBuilder.instancesDistribution(instancesDistribution.let(InstancesDistribution.Companion::unwrap))
     }
 
     /**
@@ -132,7 +132,7 @@ public interface MixedInstancesPolicy {
      * @param launchTemplate Launch template to use. 
      */
     override fun launchTemplate(launchTemplate: ILaunchTemplate) {
-      cdkBuilder.launchTemplate(launchTemplate.let(ILaunchTemplate::unwrap))
+      cdkBuilder.launchTemplate(launchTemplate.let(ILaunchTemplate.Companion::unwrap))
     }
 
     /**
@@ -143,7 +143,7 @@ public interface MixedInstancesPolicy {
      * 20.
      */
     override fun launchTemplateOverrides(launchTemplateOverrides: List<LaunchTemplateOverrides>) {
-      cdkBuilder.launchTemplateOverrides(launchTemplateOverrides.map(LaunchTemplateOverrides::unwrap))
+      cdkBuilder.launchTemplateOverrides(launchTemplateOverrides.map(LaunchTemplateOverrides.Companion::unwrap))
     }
 
     /**

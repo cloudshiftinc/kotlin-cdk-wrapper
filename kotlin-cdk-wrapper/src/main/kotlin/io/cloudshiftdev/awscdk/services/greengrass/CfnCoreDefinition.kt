@@ -76,8 +76,8 @@ public open class CfnCoreDefinition(
     id: String,
     props: CfnCoreDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.greengrass.CfnCoreDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCoreDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.greengrass.CfnCoreDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCoreDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -120,14 +120,14 @@ public open class CfnCoreDefinition(
    * The core definition version to include when the core definition is created.
    */
   public open fun initialVersion(`value`: IResolvable) {
-    unwrap(this).setInitialVersion(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInitialVersion(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The core definition version to include when the core definition is created.
    */
   public open fun initialVersion(`value`: CoreDefinitionVersionProperty) {
-    unwrap(this).setInitialVersion(`value`.let(CoreDefinitionVersionProperty::unwrap))
+    unwrap(this).setInitialVersion(`value`.let(CoreDefinitionVersionProperty.Companion::unwrap))
   }
 
   /**
@@ -144,7 +144,7 @@ public open class CfnCoreDefinition(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -295,7 +295,7 @@ public open class CfnCoreDefinition(
      * created. 
      */
     override fun initialVersion(initialVersion: IResolvable) {
-      cdkBuilder.initialVersion(initialVersion.let(IResolvable::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -316,7 +316,7 @@ public open class CfnCoreDefinition(
      * created. 
      */
     override fun initialVersion(initialVersion: CoreDefinitionVersionProperty) {
-      cdkBuilder.initialVersion(initialVersion.let(CoreDefinitionVersionProperty::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(CoreDefinitionVersionProperty.Companion::unwrap))
     }
 
     /**
@@ -481,7 +481,7 @@ public open class CfnCoreDefinition(
        * Currently, the `Cores` property for a core definition version can contain only one core.
        */
       override fun cores(cores: IResolvable) {
-        cdkBuilder.cores(cores.let(IResolvable::unwrap))
+        cdkBuilder.cores(cores.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -680,7 +680,7 @@ public open class CfnCoreDefinition(
        * The default is false.
        */
       override fun syncShadow(syncShadow: IResolvable) {
-        cdkBuilder.syncShadow(syncShadow.let(IResolvable::unwrap))
+        cdkBuilder.syncShadow(syncShadow.let(IResolvable.Companion::unwrap))
       }
 
       /**

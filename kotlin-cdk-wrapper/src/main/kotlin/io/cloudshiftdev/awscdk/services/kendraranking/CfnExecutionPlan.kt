@@ -62,8 +62,8 @@ public open class CfnExecutionPlan(
     id: String,
     props: CfnExecutionPlanProps,
   ) :
-      this(software.amazon.awscdk.services.kendraranking.CfnExecutionPlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnExecutionPlanProps::unwrap))
+      this(software.amazon.awscdk.services.kendraranking.CfnExecutionPlan(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnExecutionPlanProps.Companion::unwrap))
   )
 
   public constructor(
@@ -92,14 +92,14 @@ public open class CfnExecutionPlan(
    * You can set additional capacity units to meet the needs of your rescore execution plan.
    */
   public open fun capacityUnits(`value`: IResolvable) {
-    unwrap(this).setCapacityUnits(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCapacityUnits(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * You can set additional capacity units to meet the needs of your rescore execution plan.
    */
   public open fun capacityUnits(`value`: CapacityUnitsConfigurationProperty) {
-    unwrap(this).setCapacityUnits(`value`.let(CapacityUnitsConfigurationProperty::unwrap))
+    unwrap(this).setCapacityUnits(`value`.let(CapacityUnitsConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -128,7 +128,7 @@ public open class CfnExecutionPlan(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -158,7 +158,7 @@ public open class CfnExecutionPlan(
    * A list of key-value pairs that identify or categorize your rescore execution plan.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -278,7 +278,7 @@ public open class CfnExecutionPlan(
      * execution plan. 
      */
     override fun capacityUnits(capacityUnits: IResolvable) {
-      cdkBuilder.capacityUnits(capacityUnits.let(IResolvable::unwrap))
+      cdkBuilder.capacityUnits(capacityUnits.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -294,7 +294,7 @@ public open class CfnExecutionPlan(
      * execution plan. 
      */
     override fun capacityUnits(capacityUnits: CapacityUnitsConfigurationProperty) {
-      cdkBuilder.capacityUnits(capacityUnits.let(CapacityUnitsConfigurationProperty::unwrap))
+      cdkBuilder.capacityUnits(capacityUnits.let(CapacityUnitsConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -347,7 +347,7 @@ public open class CfnExecutionPlan(
      * plan. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

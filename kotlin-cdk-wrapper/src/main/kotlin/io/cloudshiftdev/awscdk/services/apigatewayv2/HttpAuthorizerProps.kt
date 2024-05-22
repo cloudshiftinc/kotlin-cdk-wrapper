@@ -219,7 +219,7 @@ public interface HttpAuthorizerProps {
      * @param httpApi HTTP Api to attach the authorizer to. 
      */
     override fun httpApi(httpApi: IHttpApi) {
-      cdkBuilder.httpApi(httpApi.let(IHttpApi::unwrap))
+      cdkBuilder.httpApi(httpApi.let(IHttpApi.Companion::unwrap))
     }
 
     /**
@@ -261,7 +261,7 @@ public interface HttpAuthorizerProps {
      * authorizer.
      */
     override fun payloadFormatVersion(payloadFormatVersion: AuthorizerPayloadVersion) {
-      cdkBuilder.payloadFormatVersion(payloadFormatVersion.let(AuthorizerPayloadVersion::unwrap))
+      cdkBuilder.payloadFormatVersion(payloadFormatVersion.let(AuthorizerPayloadVersion.Companion::unwrap))
     }
 
     /**
@@ -269,14 +269,14 @@ public interface HttpAuthorizerProps {
      * Max 1 hour.
      */
     override fun resultsCacheTtl(resultsCacheTtl: Duration) {
-      cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration::unwrap))
+      cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param type The type of authorizer. 
      */
     override fun type(type: HttpAuthorizerType) {
-      cdkBuilder.type(type.let(HttpAuthorizerType::unwrap))
+      cdkBuilder.type(type.let(HttpAuthorizerType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.HttpAuthorizerProps =

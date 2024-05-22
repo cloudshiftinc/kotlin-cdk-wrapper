@@ -193,7 +193,7 @@ public interface CfnFirewallRuleGroupAssociationProps {
      * @param tags A list of the tag keys and values that you want to associate with the rule group.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

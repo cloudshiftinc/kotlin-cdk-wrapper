@@ -73,7 +73,7 @@ public open class CfnEventDataStore(
   cdkObject: software.amazon.awscdk.services.cloudtrail.CfnEventDataStore,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.cloudtrail.CfnEventDataStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.cloudtrail.CfnEventDataStore(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -82,8 +82,8 @@ public open class CfnEventDataStore(
     id: String,
     props: CfnEventDataStoreProps,
   ) :
-      this(software.amazon.awscdk.services.cloudtrail.CfnEventDataStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEventDataStoreProps::unwrap))
+      this(software.amazon.awscdk.services.cloudtrail.CfnEventDataStore(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEventDataStoreProps.Companion::unwrap))
   )
 
   public constructor(
@@ -102,7 +102,7 @@ public open class CfnEventDataStore(
    * The advanced event selectors to use to select the events for the data store.
    */
   public open fun advancedEventSelectors(`value`: IResolvable) {
-    unwrap(this).setAdvancedEventSelectors(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAdvancedEventSelectors(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -179,7 +179,7 @@ public open class CfnEventDataStore(
    * Lake query federation is enabled.
    */
   public open fun federationEnabled(`value`: IResolvable) {
-    unwrap(this).setFederationEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFederationEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -212,7 +212,7 @@ public open class CfnEventDataStore(
    * Specifies whether the event data store should start ingesting live events.
    */
   public open fun ingestionEnabled(`value`: IResolvable) {
-    unwrap(this).setIngestionEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIngestionEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -224,7 +224,7 @@ public open class CfnEventDataStore(
    * A JSON string that contains the Insights types you want to log on an event data store.
    */
   public open fun insightSelectors(`value`: IResolvable) {
-    unwrap(this).setInsightSelectors(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInsightSelectors(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -259,7 +259,7 @@ public open class CfnEventDataStore(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -293,7 +293,7 @@ public open class CfnEventDataStore(
    * Region in which the event data store is created.
    */
   public open fun multiRegionEnabled(`value`: IResolvable) {
-    unwrap(this).setMultiRegionEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMultiRegionEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -327,7 +327,7 @@ public open class CfnEventDataStore(
    * Organizations .
    */
   public open fun organizationEnabled(`value`: IResolvable) {
-    unwrap(this).setOrganizationEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOrganizationEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -357,7 +357,7 @@ public open class CfnEventDataStore(
    * A list of tags.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -382,7 +382,7 @@ public open class CfnEventDataStore(
    * Specifies whether termination protection is enabled for the event data store.
    */
   public open fun terminationProtectionEnabled(`value`: IResolvable) {
-    unwrap(this).setTerminationProtectionEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTerminationProtectionEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -805,7 +805,7 @@ public open class CfnEventDataStore(
      * the data store. 
      */
     override fun advancedEventSelectors(advancedEventSelectors: IResolvable) {
-      cdkBuilder.advancedEventSelectors(advancedEventSelectors.let(IResolvable::unwrap))
+      cdkBuilder.advancedEventSelectors(advancedEventSelectors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -922,7 +922,7 @@ public open class CfnEventDataStore(
      * Lake query federation is enabled. 
      */
     override fun federationEnabled(federationEnabled: IResolvable) {
-      cdkBuilder.federationEnabled(federationEnabled.let(IResolvable::unwrap))
+      cdkBuilder.federationEnabled(federationEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -964,7 +964,7 @@ public open class CfnEventDataStore(
      * events. 
      */
     override fun ingestionEnabled(ingestionEnabled: IResolvable) {
-      cdkBuilder.ingestionEnabled(ingestionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.ingestionEnabled(ingestionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -983,7 +983,7 @@ public open class CfnEventDataStore(
      * event data store. 
      */
     override fun insightSelectors(insightSelectors: IResolvable) {
-      cdkBuilder.insightSelectors(insightSelectors.let(IResolvable::unwrap))
+      cdkBuilder.insightSelectors(insightSelectors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1094,7 +1094,7 @@ public open class CfnEventDataStore(
      * Regions, or only from the Region in which the event data store is created. 
      */
     override fun multiRegionEnabled(multiRegionEnabled: IResolvable) {
-      cdkBuilder.multiRegionEnabled(multiRegionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.multiRegionEnabled(multiRegionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1128,7 +1128,7 @@ public open class CfnEventDataStore(
      * an organization in AWS Organizations . 
      */
     override fun organizationEnabled(organizationEnabled: IResolvable) {
-      cdkBuilder.organizationEnabled(organizationEnabled.let(IResolvable::unwrap))
+      cdkBuilder.organizationEnabled(organizationEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1165,7 +1165,7 @@ public open class CfnEventDataStore(
      * @param tags A list of tags. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1201,7 +1201,7 @@ public open class CfnEventDataStore(
      * the event data store. 
      */
     override fun terminationProtectionEnabled(terminationProtectionEnabled: IResolvable) {
-      cdkBuilder.terminationProtectionEnabled(terminationProtectionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.terminationProtectionEnabled(terminationProtectionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudtrail.CfnEventDataStore =
@@ -1339,7 +1339,7 @@ public open class CfnEventDataStore(
        * @param fieldSelectors Contains all selector statements in an advanced event selector. 
        */
       override fun fieldSelectors(fieldSelectors: IResolvable) {
-        cdkBuilder.fieldSelectors(fieldSelectors.let(IResolvable::unwrap))
+        cdkBuilder.fieldSelectors(fieldSelectors.let(IResolvable.Companion::unwrap))
       }
 
       /**

@@ -271,7 +271,7 @@ public interface AsgCapacityProviderProps : AddAutoScalingGroupCapacityOptions {
      * @param autoScalingGroup The autoscaling group to add as a Capacity Provider. 
      */
     override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
-      cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup::unwrap))
+      cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup.Companion::unwrap))
     }
 
     /**
@@ -357,7 +357,7 @@ public interface AsgCapacityProviderProps : AddAutoScalingGroupCapacityOptions {
      * from the `machineImage` you pass.
      */
     override fun machineImageType(machineImageType: MachineImageType) {
-      cdkBuilder.machineImageType(machineImageType.let(MachineImageType::unwrap))
+      cdkBuilder.machineImageType(machineImageType.let(MachineImageType.Companion::unwrap))
     }
 
     /**
@@ -403,7 +403,7 @@ public interface AsgCapacityProviderProps : AddAutoScalingGroupCapacityOptions {
      * information.
      */
     override fun topicEncryptionKey(topicEncryptionKey: IKey) {
-      cdkBuilder.topicEncryptionKey(topicEncryptionKey.let(IKey::unwrap))
+      cdkBuilder.topicEncryptionKey(topicEncryptionKey.let(IKey.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.AsgCapacityProviderProps =

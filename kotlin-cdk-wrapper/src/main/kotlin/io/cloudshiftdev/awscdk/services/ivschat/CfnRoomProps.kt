@@ -209,14 +209,14 @@ public interface CfnRoomProps {
      * @param messageReviewHandler Configuration information for optional review of messages.
      */
     override fun messageReviewHandler(messageReviewHandler: IResolvable) {
-      cdkBuilder.messageReviewHandler(messageReviewHandler.let(IResolvable::unwrap))
+      cdkBuilder.messageReviewHandler(messageReviewHandler.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param messageReviewHandler Configuration information for optional review of messages.
      */
     override fun messageReviewHandler(messageReviewHandler: CfnRoom.MessageReviewHandlerProperty) {
-      cdkBuilder.messageReviewHandler(messageReviewHandler.let(CfnRoom.MessageReviewHandlerProperty::unwrap))
+      cdkBuilder.messageReviewHandler(messageReviewHandler.let(CfnRoom.MessageReviewHandlerProperty.Companion::unwrap))
     }
 
     /**
@@ -243,7 +243,7 @@ public interface CfnRoomProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

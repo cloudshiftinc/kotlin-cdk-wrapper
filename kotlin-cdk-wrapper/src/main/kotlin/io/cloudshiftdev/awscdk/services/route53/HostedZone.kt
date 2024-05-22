@@ -41,8 +41,8 @@ public open class HostedZone(
     id: String,
     props: HostedZoneProps,
   ) :
-      this(software.amazon.awscdk.services.route53.HostedZone(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(HostedZoneProps::unwrap))
+      this(software.amazon.awscdk.services.route53.HostedZone(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(HostedZoneProps.Companion::unwrap))
   )
 
   public constructor(
@@ -58,7 +58,7 @@ public open class HostedZone(
    * @param vpc the other VPC to add. 
    */
   public open fun addVpc(vpc: IVpc) {
-    unwrap(this).addVpc(vpc.let(IVpc::unwrap))
+    unwrap(this).addVpc(vpc.let(IVpc.Companion::unwrap))
   }
 
   /**
@@ -70,7 +70,7 @@ public open class HostedZone(
    * @param options 
    */
   public open fun enableDnssec(options: ZoneSigningOptions): IKeySigningKey =
-      unwrap(this).enableDnssec(options.let(ZoneSigningOptions::unwrap)).let(IKeySigningKey::wrap)
+      unwrap(this).enableDnssec(options.let(ZoneSigningOptions.Companion::unwrap)).let(IKeySigningKey::wrap)
 
   /**
    * Enable DNSSEC for this hosted zone.
@@ -91,7 +91,7 @@ public open class HostedZone(
    * @param grantee 
    */
   public override fun grantDelegation(grantee: IGrantable): Grant =
-      unwrap(this).grantDelegation(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantDelegation(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * ARN of this hosted zone, such as arn:${Partition}:route53:::hostedzone/${Id}.
@@ -245,7 +245,7 @@ public open class HostedZone(
      * @param vpcs A VPC that you want to associate with this hosted zone. 
      */
     override fun vpcs(vpcs: List<IVpc>) {
-      cdkBuilder.vpcs(vpcs.map(IVpc::unwrap))
+      cdkBuilder.vpcs(vpcs.map(IVpc.Companion::unwrap))
     }
 
     /**
@@ -283,8 +283,8 @@ public open class HostedZone(
       id: String,
       attrs: HostedZoneAttributes,
     ): IHostedZone =
-        software.amazon.awscdk.services.route53.HostedZone.fromHostedZoneAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(HostedZoneAttributes::unwrap)).let(IHostedZone::wrap)
+        software.amazon.awscdk.services.route53.HostedZone.fromHostedZoneAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(HostedZoneAttributes.Companion::unwrap)).let(IHostedZone::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ec7a6041c2e75e630a70fa110a2369053e8a0554dd6c63d11cfc004e3770592a")
@@ -299,7 +299,7 @@ public open class HostedZone(
       id: String,
       hostedZoneId: String,
     ): IHostedZone =
-        software.amazon.awscdk.services.route53.HostedZone.fromHostedZoneId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.route53.HostedZone.fromHostedZoneId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, hostedZoneId).let(IHostedZone::wrap)
 
     public fun fromLookup(
@@ -307,8 +307,8 @@ public open class HostedZone(
       id: String,
       query: HostedZoneProviderProps,
     ): IHostedZone =
-        software.amazon.awscdk.services.route53.HostedZone.fromLookup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, query.let(HostedZoneProviderProps::unwrap)).let(IHostedZone::wrap)
+        software.amazon.awscdk.services.route53.HostedZone.fromLookup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, query.let(HostedZoneProviderProps.Companion::unwrap)).let(IHostedZone::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1f3c8afe809bef1b11863ef5f2169db51c709530a321c9ba303e6b29bcd9690a")

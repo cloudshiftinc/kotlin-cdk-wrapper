@@ -36,8 +36,8 @@ public open class KubernetesPatch(
     id: String,
     props: KubernetesPatchProps,
   ) :
-      this(software.amazon.awscdk.services.eks.KubernetesPatch(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(KubernetesPatchProps::unwrap))
+      this(software.amazon.awscdk.services.eks.KubernetesPatch(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(KubernetesPatchProps.Companion::unwrap))
   )
 
   public constructor(
@@ -129,7 +129,7 @@ public open class KubernetesPatch(
      * @param cluster The cluster to apply the patch to. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -142,7 +142,7 @@ public open class KubernetesPatch(
      * @param patchType The patch type to pass to `kubectl patch`. 
      */
     override fun patchType(patchType: PatchType) {
-      cdkBuilder.patchType(patchType.let(PatchType::unwrap))
+      cdkBuilder.patchType(patchType.let(PatchType.Companion::unwrap))
     }
 
     /**

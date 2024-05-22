@@ -137,7 +137,7 @@ public abstract class Credentials(
 
     public fun fromGeneratedSecret(username: String, options: CredentialsBaseOptions): Credentials =
         software.amazon.awscdk.services.rds.Credentials.fromGeneratedSecret(username,
-        options.let(CredentialsBaseOptions::unwrap)).let(Credentials::wrap)
+        options.let(CredentialsBaseOptions.Companion::unwrap)).let(Credentials::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b03868995120525e6c312c2b4db8734101eb6d27be52a57f09996a4835396e0b")
@@ -147,13 +147,13 @@ public abstract class Credentials(
 
     public fun fromPassword(username: String, password: SecretValue): Credentials =
         software.amazon.awscdk.services.rds.Credentials.fromPassword(username,
-        password.let(SecretValue::unwrap)).let(Credentials::wrap)
+        password.let(SecretValue.Companion::unwrap)).let(Credentials::wrap)
 
     public fun fromSecret(secret: ISecret): Credentials =
-        software.amazon.awscdk.services.rds.Credentials.fromSecret(secret.let(ISecret::unwrap)).let(Credentials::wrap)
+        software.amazon.awscdk.services.rds.Credentials.fromSecret(secret.let(ISecret.Companion::unwrap)).let(Credentials::wrap)
 
     public fun fromSecret(secret: ISecret, username: String): Credentials =
-        software.amazon.awscdk.services.rds.Credentials.fromSecret(secret.let(ISecret::unwrap),
+        software.amazon.awscdk.services.rds.Credentials.fromSecret(secret.let(ISecret.Companion::unwrap),
         username).let(Credentials::wrap)
 
     public fun fromUsername(username: String): Credentials =
@@ -161,7 +161,7 @@ public abstract class Credentials(
 
     public fun fromUsername(username: String, options: CredentialsFromUsernameOptions): Credentials
         = software.amazon.awscdk.services.rds.Credentials.fromUsername(username,
-        options.let(CredentialsFromUsernameOptions::unwrap)).let(Credentials::wrap)
+        options.let(CredentialsFromUsernameOptions.Companion::unwrap)).let(Credentials::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0119aa6b8af2cf428e8ddcf75af4780c80416d50332ca96c1ad629359abae392")

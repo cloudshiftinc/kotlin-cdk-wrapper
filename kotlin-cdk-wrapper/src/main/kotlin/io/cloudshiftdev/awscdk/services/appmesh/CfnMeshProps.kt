@@ -129,14 +129,14 @@ public interface CfnMeshProps {
      * @param spec The service mesh specification to apply.
      */
     override fun spec(spec: IResolvable) {
-      cdkBuilder.spec(spec.let(IResolvable::unwrap))
+      cdkBuilder.spec(spec.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param spec The service mesh specification to apply.
      */
     override fun spec(spec: CfnMesh.MeshSpecProperty) {
-      cdkBuilder.spec(spec.let(CfnMesh.MeshSpecProperty::unwrap))
+      cdkBuilder.spec(spec.let(CfnMesh.MeshSpecProperty.Companion::unwrap))
     }
 
     /**
@@ -155,7 +155,7 @@ public interface CfnMeshProps {
      * characters.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

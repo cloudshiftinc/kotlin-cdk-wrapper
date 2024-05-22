@@ -44,8 +44,8 @@ public open class EmrModifyInstanceGroupByName(
     id: String,
     props: EmrModifyInstanceGroupByNameProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EmrModifyInstanceGroupByNameProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EmrModifyInstanceGroupByName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EmrModifyInstanceGroupByNameProps.Companion::unwrap))
   )
 
   public constructor(
@@ -305,7 +305,7 @@ public open class EmrModifyInstanceGroupByName(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -334,7 +334,7 @@ public open class EmrModifyInstanceGroupByName(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -348,7 +348,7 @@ public open class EmrModifyInstanceGroupByName(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -376,7 +376,7 @@ public open class EmrModifyInstanceGroupByName(
      * input. 
      */
     override fun instanceGroup(instanceGroup: InstanceGroupModifyConfigProperty) {
-      cdkBuilder.instanceGroup(instanceGroup.let(InstanceGroupModifyConfigProperty::unwrap))
+      cdkBuilder.instanceGroup(instanceGroup.let(InstanceGroupModifyConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -419,7 +419,7 @@ public open class EmrModifyInstanceGroupByName(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -491,7 +491,7 @@ public open class EmrModifyInstanceGroupByName(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -504,7 +504,7 @@ public open class EmrModifyInstanceGroupByName(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build():
@@ -647,7 +647,7 @@ public open class EmrModifyInstanceGroupByName(
        * group.
        */
       override fun configurations(configurations: List<EmrCreateCluster.ConfigurationProperty>) {
-        cdkBuilder.configurations(configurations.map(EmrCreateCluster.ConfigurationProperty::unwrap))
+        cdkBuilder.configurations(configurations.map(EmrCreateCluster.ConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -685,7 +685,7 @@ public open class EmrModifyInstanceGroupByName(
        * @param shrinkPolicy Policy for customizing shrink operations.
        */
       override fun shrinkPolicy(shrinkPolicy: ShrinkPolicyProperty) {
-        cdkBuilder.shrinkPolicy(shrinkPolicy.let(ShrinkPolicyProperty::unwrap))
+        cdkBuilder.shrinkPolicy(shrinkPolicy.let(ShrinkPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -854,7 +854,7 @@ public open class EmrModifyInstanceGroupByName(
        * instances to be terminated.
        */
       override fun instanceTerminationTimeout(instanceTerminationTimeout: Duration) {
-        cdkBuilder.instanceTerminationTimeout(instanceTerminationTimeout.let(Duration::unwrap))
+        cdkBuilder.instanceTerminationTimeout(instanceTerminationTimeout.let(Duration.Companion::unwrap))
       }
 
       /**
@@ -1020,7 +1020,7 @@ public open class EmrModifyInstanceGroupByName(
        * Overrides the default YARN decommissioning timeout.
        */
       override fun decommissionTimeout(decommissionTimeout: Duration) {
-        cdkBuilder.decommissionTimeout(decommissionTimeout.let(Duration::unwrap))
+        cdkBuilder.decommissionTimeout(decommissionTimeout.let(Duration.Companion::unwrap))
       }
 
       /**
@@ -1028,7 +1028,7 @@ public open class EmrModifyInstanceGroupByName(
        * termination of specific instances when shrinking an instance group.
        */
       override fun instanceResizePolicy(instanceResizePolicy: InstanceResizePolicyProperty) {
-        cdkBuilder.instanceResizePolicy(instanceResizePolicy.let(InstanceResizePolicyProperty::unwrap))
+        cdkBuilder.instanceResizePolicy(instanceResizePolicy.let(InstanceResizePolicyProperty.Companion::unwrap))
       }
 
       /**

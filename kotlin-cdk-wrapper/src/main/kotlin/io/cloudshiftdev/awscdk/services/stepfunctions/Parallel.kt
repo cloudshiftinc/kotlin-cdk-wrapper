@@ -70,7 +70,7 @@ public open class Parallel(
   cdkObject: software.amazon.awscdk.services.stepfunctions.Parallel,
 ) : State(cdkObject), INextable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.stepfunctions.Parallel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.stepfunctions.Parallel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -79,8 +79,8 @@ public open class Parallel(
     id: String,
     props: ParallelProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.Parallel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ParallelProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.Parallel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ParallelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -100,7 +100,7 @@ public open class Parallel(
    * @param props
    */
   public open fun addCatch(handler: IChainable): Parallel =
-      unwrap(this).addCatch(handler.let(IChainable::unwrap)).let(Parallel::wrap)
+      unwrap(this).addCatch(handler.let(IChainable.Companion::unwrap)).let(Parallel::wrap)
 
   /**
    * Add a recovery handler for this state.
@@ -112,8 +112,8 @@ public open class Parallel(
    * @param props
    */
   public open fun addCatch(handler: IChainable, props: CatchProps): Parallel =
-      unwrap(this).addCatch(handler.let(IChainable::unwrap),
-      props.let(CatchProps::unwrap)).let(Parallel::wrap)
+      unwrap(this).addCatch(handler.let(IChainable.Companion::unwrap),
+      props.let(CatchProps.Companion::unwrap)).let(Parallel::wrap)
 
   /**
    * Add a recovery handler for this state.
@@ -148,7 +148,7 @@ public open class Parallel(
    * @param props
    */
   public open fun addRetry(props: RetryProps): Parallel =
-      unwrap(this).addRetry(props.let(RetryProps::unwrap)).let(Parallel::wrap)
+      unwrap(this).addRetry(props.let(RetryProps.Companion::unwrap)).let(Parallel::wrap)
 
   /**
    * Add retry configuration for this state.
@@ -170,7 +170,7 @@ public open class Parallel(
    * @param graph 
    */
   public override fun bindToGraph(graph: StateGraph) {
-    unwrap(this).bindToGraph(graph.let(StateGraph::unwrap))
+    unwrap(this).bindToGraph(graph.let(StateGraph.Companion::unwrap))
   }
 
   /**
@@ -194,7 +194,7 @@ public open class Parallel(
    * @param next 
    */
   public override fun next(next: IChainable): Chain =
-      unwrap(this).next(next.let(IChainable::unwrap)).let(Chain::wrap)
+      unwrap(this).next(next.let(IChainable.Companion::unwrap)).let(Chain::wrap)
 
   /**
    * Return the Amazon States Language object for this state.

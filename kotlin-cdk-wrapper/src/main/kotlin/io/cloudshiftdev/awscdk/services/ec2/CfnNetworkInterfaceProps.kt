@@ -542,7 +542,7 @@ public interface CfnNetworkInterfaceProps {
      * interface.
      */
     override fun connectionTrackingSpecification(connectionTrackingSpecification: IResolvable) {
-      cdkBuilder.connectionTrackingSpecification(connectionTrackingSpecification.let(IResolvable::unwrap))
+      cdkBuilder.connectionTrackingSpecification(connectionTrackingSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -551,7 +551,7 @@ public interface CfnNetworkInterfaceProps {
      */
     override
         fun connectionTrackingSpecification(connectionTrackingSpecification: CfnNetworkInterface.ConnectionTrackingSpecificationProperty) {
-      cdkBuilder.connectionTrackingSpecification(connectionTrackingSpecification.let(CfnNetworkInterface.ConnectionTrackingSpecificationProperty::unwrap))
+      cdkBuilder.connectionTrackingSpecification(connectionTrackingSpecification.let(CfnNetworkInterface.ConnectionTrackingSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -603,7 +603,7 @@ public interface CfnNetworkInterfaceProps {
      * address, the first IPv6 GUA address associated with the ENI becomes the primary IPv6 address.
      */
     override fun enablePrimaryIpv6(enablePrimaryIpv6: IResolvable) {
-      cdkBuilder.enablePrimaryIpv6(enablePrimaryIpv6.let(IResolvable::unwrap))
+      cdkBuilder.enablePrimaryIpv6(enablePrimaryIpv6.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -644,7 +644,7 @@ public interface CfnNetworkInterfaceProps {
      * IPv4 addresses.
      */
     override fun ipv4Prefixes(ipv4Prefixes: IResolvable) {
-      cdkBuilder.ipv4Prefixes(ipv4Prefixes.let(IResolvable::unwrap))
+      cdkBuilder.ipv4Prefixes(ipv4Prefixes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -689,7 +689,7 @@ public interface CfnNetworkInterfaceProps {
      * prefixes.
      */
     override fun ipv6Addresses(ipv6Addresses: IResolvable) {
-      cdkBuilder.ipv6Addresses(ipv6Addresses.let(IResolvable::unwrap))
+      cdkBuilder.ipv6Addresses(ipv6Addresses.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -736,7 +736,7 @@ public interface CfnNetworkInterfaceProps {
      * the following: a count of IPv6 prefixes, specific IPv6 addresses, or a count of IPv6 addresses.
      */
     override fun ipv6Prefixes(ipv6Prefixes: IResolvable) {
-      cdkBuilder.ipv6Prefixes(ipv6Prefixes.let(IResolvable::unwrap))
+      cdkBuilder.ipv6Prefixes(ipv6Prefixes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -776,7 +776,7 @@ public interface CfnNetworkInterfaceProps {
      * count of IPv4 prefixes.
      */
     override fun privateIpAddresses(privateIpAddresses: IResolvable) {
-      cdkBuilder.privateIpAddresses(privateIpAddresses.let(IResolvable::unwrap))
+      cdkBuilder.privateIpAddresses(privateIpAddresses.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -842,7 +842,7 @@ public interface CfnNetworkInterfaceProps {
      * services such as network address translation, routing, or firewalls.
      */
     override fun sourceDestCheck(sourceDestCheck: IResolvable) {
-      cdkBuilder.sourceDestCheck(sourceDestCheck.let(IResolvable::unwrap))
+      cdkBuilder.sourceDestCheck(sourceDestCheck.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -856,7 +856,7 @@ public interface CfnNetworkInterfaceProps {
      * @param tags The tags to apply to the network interface.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -37,8 +37,8 @@ public open class AppsyncFunction(
     id: String,
     props: AppsyncFunctionProps,
   ) :
-      this(software.amazon.awscdk.services.appsync.AppsyncFunction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(AppsyncFunctionProps::unwrap))
+      this(software.amazon.awscdk.services.appsync.AppsyncFunction(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(AppsyncFunctionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -154,7 +154,7 @@ public open class AppsyncFunction(
      * @param api the GraphQL Api linked to this AppSync Function. 
      */
     override fun api(api: IGraphqlApi) {
-      cdkBuilder.api(api.let(IGraphqlApi::unwrap))
+      cdkBuilder.api(api.let(IGraphqlApi.Companion::unwrap))
     }
 
     /**
@@ -165,7 +165,7 @@ public open class AppsyncFunction(
      * @param code The function code. 
      */
     override fun code(code: Code) {
-      cdkBuilder.code(code.let(Code::unwrap))
+      cdkBuilder.code(code.let(Code.Companion::unwrap))
     }
 
     /**
@@ -174,7 +174,7 @@ public open class AppsyncFunction(
      * @param dataSource the data source linked to this AppSync Function. 
      */
     override fun dataSource(dataSource: BaseDataSource) {
-      cdkBuilder.dataSource(dataSource.let(BaseDataSource::unwrap))
+      cdkBuilder.dataSource(dataSource.let(BaseDataSource.Companion::unwrap))
     }
 
     /**
@@ -205,7 +205,7 @@ public open class AppsyncFunction(
      * @param requestMappingTemplate the request mapping template for the AppSync Function. 
      */
     override fun requestMappingTemplate(requestMappingTemplate: MappingTemplate) {
-      cdkBuilder.requestMappingTemplate(requestMappingTemplate.let(MappingTemplate::unwrap))
+      cdkBuilder.requestMappingTemplate(requestMappingTemplate.let(MappingTemplate.Companion::unwrap))
     }
 
     /**
@@ -216,7 +216,7 @@ public open class AppsyncFunction(
      * @param responseMappingTemplate the response mapping template for the AppSync Function. 
      */
     override fun responseMappingTemplate(responseMappingTemplate: MappingTemplate) {
-      cdkBuilder.responseMappingTemplate(responseMappingTemplate.let(MappingTemplate::unwrap))
+      cdkBuilder.responseMappingTemplate(responseMappingTemplate.let(MappingTemplate.Companion::unwrap))
     }
 
     /**
@@ -227,7 +227,7 @@ public open class AppsyncFunction(
      * @param runtime The functions runtime. 
      */
     override fun runtime(runtime: FunctionRuntime) {
-      cdkBuilder.runtime(runtime.let(FunctionRuntime::unwrap))
+      cdkBuilder.runtime(runtime.let(FunctionRuntime.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appsync.AppsyncFunction = cdkBuilder.build()
@@ -239,8 +239,8 @@ public open class AppsyncFunction(
       id: String,
       attrs: AppsyncFunctionAttributes,
     ): IAppsyncFunction =
-        software.amazon.awscdk.services.appsync.AppsyncFunction.fromAppsyncFunctionAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(AppsyncFunctionAttributes::unwrap)).let(IAppsyncFunction::wrap)
+        software.amazon.awscdk.services.appsync.AppsyncFunction.fromAppsyncFunctionAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(AppsyncFunctionAttributes.Companion::unwrap)).let(IAppsyncFunction::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ed7ecc1286cc2b7d138724c3b9dd94d5d96e306586089852133a6f7882c79ee2")

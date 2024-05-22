@@ -42,10 +42,10 @@ public open class ObjectLockRetention(
 
   public companion object {
     public fun compliance(duration: Duration): ObjectLockRetention =
-        software.amazon.awscdk.services.s3.ObjectLockRetention.compliance(duration.let(Duration::unwrap)).let(ObjectLockRetention::wrap)
+        software.amazon.awscdk.services.s3.ObjectLockRetention.compliance(duration.let(Duration.Companion::unwrap)).let(ObjectLockRetention::wrap)
 
     public fun governance(duration: Duration): ObjectLockRetention =
-        software.amazon.awscdk.services.s3.ObjectLockRetention.governance(duration.let(Duration::unwrap)).let(ObjectLockRetention::wrap)
+        software.amazon.awscdk.services.s3.ObjectLockRetention.governance(duration.let(Duration.Companion::unwrap)).let(ObjectLockRetention::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.ObjectLockRetention):
         ObjectLockRetention = ObjectLockRetention(cdkObject)

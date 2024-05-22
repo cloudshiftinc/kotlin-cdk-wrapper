@@ -45,8 +45,8 @@ public open class LoadBalancer(
     id: String,
     props: LoadBalancerProps,
   ) :
-      this(software.amazon.awscdk.services.elasticloadbalancing.LoadBalancer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(LoadBalancerProps::unwrap))
+      this(software.amazon.awscdk.services.elasticloadbalancing.LoadBalancer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(LoadBalancerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -63,7 +63,7 @@ public open class LoadBalancer(
    * @param listener 
    */
   public open fun addListener(listener: LoadBalancerListener): ListenerPort =
-      unwrap(this).addListener(listener.let(LoadBalancerListener::unwrap)).let(ListenerPort::wrap)
+      unwrap(this).addListener(listener.let(LoadBalancerListener.Companion::unwrap)).let(ListenerPort::wrap)
 
   /**
    * Add a backend to the load balancer.
@@ -80,7 +80,7 @@ public open class LoadBalancer(
    * @param target 
    */
   public open fun addTarget(target: ILoadBalancerTarget) {
-    unwrap(this).addTarget(target.let(ILoadBalancerTarget::unwrap))
+    unwrap(this).addTarget(target.let(ILoadBalancerTarget.Companion::unwrap))
   }
 
   /**
@@ -311,7 +311,7 @@ public open class LoadBalancer(
      */
     override
         fun accessLoggingPolicy(accessLoggingPolicy: CfnLoadBalancer.AccessLoggingPolicyProperty) {
-      cdkBuilder.accessLoggingPolicy(accessLoggingPolicy.let(CfnLoadBalancer.AccessLoggingPolicyProperty::unwrap))
+      cdkBuilder.accessLoggingPolicy(accessLoggingPolicy.let(CfnLoadBalancer.AccessLoggingPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -355,7 +355,7 @@ public open class LoadBalancer(
      * @param healthCheck Health check settings for the load balancing targets. 
      */
     override fun healthCheck(healthCheck: HealthCheck) {
-      cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
     }
 
     /**
@@ -396,7 +396,7 @@ public open class LoadBalancer(
      * @param listeners What listeners to set up for the load balancer. 
      */
     override fun listeners(listeners: List<LoadBalancerListener>) {
-      cdkBuilder.listeners(listeners.map(LoadBalancerListener::unwrap))
+      cdkBuilder.listeners(listeners.map(LoadBalancerListener.Companion::unwrap))
     }
 
     /**
@@ -422,7 +422,7 @@ public open class LoadBalancer(
      * @param subnetSelection Which subnets to deploy the load balancer. 
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -450,7 +450,7 @@ public open class LoadBalancer(
      * @param targets What targets to load balance to. 
      */
     override fun targets(targets: List<ILoadBalancerTarget>) {
-      cdkBuilder.targets(targets.map(ILoadBalancerTarget::unwrap))
+      cdkBuilder.targets(targets.map(ILoadBalancerTarget.Companion::unwrap))
     }
 
     /**
@@ -470,7 +470,7 @@ public open class LoadBalancer(
      * @param vpc VPC network of the fleet instances. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.elasticloadbalancing.LoadBalancer =

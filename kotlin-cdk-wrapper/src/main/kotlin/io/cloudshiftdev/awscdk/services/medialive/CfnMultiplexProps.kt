@@ -168,7 +168,7 @@ public interface CfnMultiplexProps {
      * @param destinations A list of the multiplex output destinations.
      */
     override fun destinations(destinations: IResolvable) {
-      cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
+      cdkBuilder.destinations(destinations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -187,14 +187,14 @@ public interface CfnMultiplexProps {
      * @param multiplexSettings Configuration for a multiplex event. 
      */
     override fun multiplexSettings(multiplexSettings: IResolvable) {
-      cdkBuilder.multiplexSettings(multiplexSettings.let(IResolvable::unwrap))
+      cdkBuilder.multiplexSettings(multiplexSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param multiplexSettings Configuration for a multiplex event. 
      */
     override fun multiplexSettings(multiplexSettings: CfnMultiplex.MultiplexSettingsProperty) {
-      cdkBuilder.multiplexSettings(multiplexSettings.let(CfnMultiplex.MultiplexSettingsProperty::unwrap))
+      cdkBuilder.multiplexSettings(multiplexSettings.let(CfnMultiplex.MultiplexSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -217,7 +217,7 @@ public interface CfnMultiplexProps {
      * @param tags A collection of key-value pairs.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

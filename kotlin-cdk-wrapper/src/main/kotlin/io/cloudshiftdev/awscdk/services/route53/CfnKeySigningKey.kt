@@ -41,8 +41,8 @@ public open class CfnKeySigningKey(
     id: String,
     props: CfnKeySigningKeyProps,
   ) :
-      this(software.amazon.awscdk.services.route53.CfnKeySigningKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnKeySigningKeyProps::unwrap))
+      this(software.amazon.awscdk.services.route53.CfnKeySigningKey(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnKeySigningKeyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -70,7 +70,7 @@ public open class CfnKeySigningKey(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

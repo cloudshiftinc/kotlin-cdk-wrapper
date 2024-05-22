@@ -59,8 +59,8 @@ public open class Cluster(
     id: String,
     props: ClusterProps,
   ) :
-      this(software.amazon.awscdk.services.eks.Cluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ClusterProps::unwrap))
+      this(software.amazon.awscdk.services.eks.Cluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -95,7 +95,7 @@ public open class Cluster(
    */
   public open fun addAutoScalingGroupCapacity(id: String, options: AutoScalingGroupCapacityOptions):
       AutoScalingGroup = unwrap(this).addAutoScalingGroupCapacity(id,
-      options.let(AutoScalingGroupCapacityOptions::unwrap)).let(AutoScalingGroup::wrap)
+      options.let(AutoScalingGroupCapacityOptions.Companion::unwrap)).let(AutoScalingGroup::wrap)
 
   /**
    * Add nodes to this EKS cluster.
@@ -136,7 +136,7 @@ public open class Cluster(
    */
   public override fun addCdk8sChart(id: String, chart: CloudshiftdevConstructsConstruct):
       KubernetesManifest = unwrap(this).addCdk8sChart(id,
-      chart.let(CloudshiftdevConstructsConstruct::unwrap)).let(KubernetesManifest::wrap)
+      chart.let(CloudshiftdevConstructsConstruct.Companion::unwrap)).let(KubernetesManifest::wrap)
 
   /**
    * Defines a CDK8s chart in this cluster.
@@ -151,8 +151,8 @@ public open class Cluster(
     chart: CloudshiftdevConstructsConstruct,
     options: KubernetesManifestOptions,
   ): KubernetesManifest = unwrap(this).addCdk8sChart(id,
-      chart.let(CloudshiftdevConstructsConstruct::unwrap),
-      options.let(KubernetesManifestOptions::unwrap)).let(KubernetesManifest::wrap)
+      chart.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      options.let(KubernetesManifestOptions.Companion::unwrap)).let(KubernetesManifest::wrap)
 
   /**
    * Defines a CDK8s chart in this cluster.
@@ -179,7 +179,7 @@ public open class Cluster(
    */
   public open fun addFargateProfile(id: String, options: FargateProfileOptions): FargateProfile =
       unwrap(this).addFargateProfile(id,
-      options.let(FargateProfileOptions::unwrap)).let(FargateProfile::wrap)
+      options.let(FargateProfileOptions.Companion::unwrap)).let(FargateProfile::wrap)
 
   /**
    * Adds a Fargate profile to this cluster.
@@ -201,7 +201,8 @@ public open class Cluster(
    * @param options options of this chart. 
    */
   public override fun addHelmChart(id: String, options: HelmChartOptions): HelmChart =
-      unwrap(this).addHelmChart(id, options.let(HelmChartOptions::unwrap)).let(HelmChart::wrap)
+      unwrap(this).addHelmChart(id,
+      options.let(HelmChartOptions.Companion::unwrap)).let(HelmChart::wrap)
 
   /**
    * Defines a Helm chart in this cluster.
@@ -251,7 +252,7 @@ public open class Cluster(
    */
   public open fun addNodegroupCapacity(id: String, options: NodegroupOptions): Nodegroup =
       unwrap(this).addNodegroupCapacity(id,
-      options.let(NodegroupOptions::unwrap)).let(Nodegroup::wrap)
+      options.let(NodegroupOptions.Companion::unwrap)).let(Nodegroup::wrap)
 
   /**
    * Add managed nodegroup to this Amazon EKS cluster.
@@ -284,7 +285,7 @@ public open class Cluster(
    */
   public override fun addServiceAccount(id: String, options: ServiceAccountOptions): ServiceAccount
       = unwrap(this).addServiceAccount(id,
-      options.let(ServiceAccountOptions::unwrap)).let(ServiceAccount::wrap)
+      options.let(ServiceAccountOptions.Companion::unwrap)).let(ServiceAccount::wrap)
 
   /**
    * Creates a new service account with corresponding IAM Role (IRSA).
@@ -426,8 +427,8 @@ public open class Cluster(
    */
   public override fun connectAutoScalingGroupCapacity(autoScalingGroup: AutoScalingGroup,
       options: AutoScalingGroupOptions) {
-    unwrap(this).connectAutoScalingGroupCapacity(autoScalingGroup.let(AutoScalingGroup::unwrap),
-        options.let(AutoScalingGroupOptions::unwrap))
+    unwrap(this).connectAutoScalingGroupCapacity(autoScalingGroup.let(AutoScalingGroup.Companion::unwrap),
+        options.let(AutoScalingGroupOptions.Companion::unwrap))
   }
 
   /**
@@ -500,7 +501,7 @@ public open class Cluster(
   public open fun ingressLoadBalancerAddress(ingressName: String,
       options: IngressLoadBalancerAddressOptions): String =
       unwrap(this).getIngressLoadBalancerAddress(ingressName,
-      options.let(IngressLoadBalancerAddressOptions::unwrap))
+      options.let(IngressLoadBalancerAddressOptions.Companion::unwrap))
 
   /**
    * Fetch the load balancer address of an ingress backed by a load balancer.
@@ -626,7 +627,7 @@ public open class Cluster(
   public open fun serviceLoadBalancerAddress(serviceName: String,
       options: ServiceLoadBalancerAddressOptions): String =
       unwrap(this).getServiceLoadBalancerAddress(serviceName,
-      options.let(ServiceLoadBalancerAddressOptions::unwrap))
+      options.let(ServiceLoadBalancerAddressOptions.Companion::unwrap))
 
   /**
    * Fetch the load balancer address of a service of type 'LoadBalancer'.
@@ -1067,7 +1068,7 @@ public open class Cluster(
      * @param albController Install the AWS Load Balancer Controller onto the cluster. 
      */
     override fun albController(albController: AlbControllerOptions) {
-      cdkBuilder.albController(albController.let(AlbControllerOptions::unwrap))
+      cdkBuilder.albController(albController.let(AlbControllerOptions.Companion::unwrap))
     }
 
     /**
@@ -1097,7 +1098,7 @@ public open class Cluster(
      * @param awscliLayer An AWS Lambda layer that contains the `aws` CLI. 
      */
     override fun awscliLayer(awscliLayer: ILayerVersion) {
-      cdkBuilder.awscliLayer(awscliLayer.let(ILayerVersion::unwrap))
+      cdkBuilder.awscliLayer(awscliLayer.let(ILayerVersion.Companion::unwrap))
     }
 
     /**
@@ -1126,7 +1127,7 @@ public open class Cluster(
      * Lambdas. 
      */
     override fun clusterHandlerSecurityGroup(clusterHandlerSecurityGroup: ISecurityGroup) {
-      cdkBuilder.clusterHandlerSecurityGroup(clusterHandlerSecurityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.clusterHandlerSecurityGroup(clusterHandlerSecurityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -1137,7 +1138,7 @@ public open class Cluster(
      * @param clusterLogging The cluster log types which you want to enable. 
      */
     override fun clusterLogging(clusterLogging: List<ClusterLoggingTypes>) {
-      cdkBuilder.clusterLogging(clusterLogging.map(ClusterLoggingTypes::unwrap))
+      cdkBuilder.clusterLogging(clusterLogging.map(ClusterLoggingTypes.Companion::unwrap))
     }
 
     /**
@@ -1171,7 +1172,7 @@ public open class Cluster(
      * CoreDNS configuration on your cluster to determine which compute type to use for CoreDNS. 
      */
     override fun coreDnsComputeType(coreDnsComputeType: CoreDnsComputeType) {
-      cdkBuilder.coreDnsComputeType(coreDnsComputeType.let(CoreDnsComputeType::unwrap))
+      cdkBuilder.coreDnsComputeType(coreDnsComputeType.let(CoreDnsComputeType.Companion::unwrap))
     }
 
     /**
@@ -1203,7 +1204,7 @@ public open class Cluster(
      * @param defaultCapacityInstance The instance type to use for the default capacity. 
      */
     override fun defaultCapacityInstance(defaultCapacityInstance: InstanceType) {
-      cdkBuilder.defaultCapacityInstance(defaultCapacityInstance.let(InstanceType::unwrap))
+      cdkBuilder.defaultCapacityInstance(defaultCapacityInstance.let(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -1214,7 +1215,7 @@ public open class Cluster(
      * @param defaultCapacityType The default capacity type for the cluster. 
      */
     override fun defaultCapacityType(defaultCapacityType: DefaultCapacityType) {
-      cdkBuilder.defaultCapacityType(defaultCapacityType.let(DefaultCapacityType::unwrap))
+      cdkBuilder.defaultCapacityType(defaultCapacityType.let(DefaultCapacityType.Companion::unwrap))
     }
 
     /**
@@ -1226,7 +1227,7 @@ public open class Cluster(
      * @param endpointAccess Configure access to the Kubernetes API server endpoint.. 
      */
     override fun endpointAccess(endpointAccess: EndpointAccess) {
-      cdkBuilder.endpointAccess(endpointAccess.let(EndpointAccess::unwrap))
+      cdkBuilder.endpointAccess(endpointAccess.let(EndpointAccess.Companion::unwrap))
     }
 
     /**
@@ -1239,7 +1240,7 @@ public open class Cluster(
      * addresses. 
      */
     override fun ipFamily(ipFamily: IpFamily) {
-      cdkBuilder.ipFamily(ipFamily.let(IpFamily::unwrap))
+      cdkBuilder.ipFamily(ipFamily.let(IpFamily.Companion::unwrap))
     }
 
     /**
@@ -1263,7 +1264,7 @@ public open class Cluster(
      * @param kubectlLambdaRole The IAM role to pass to the Kubectl Lambda Handler. 
      */
     override fun kubectlLambdaRole(kubectlLambdaRole: IRole) {
-      cdkBuilder.kubectlLambdaRole(kubectlLambdaRole.let(IRole::unwrap))
+      cdkBuilder.kubectlLambdaRole(kubectlLambdaRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -1287,7 +1288,7 @@ public open class Cluster(
      * @param kubectlLayer An AWS Lambda Layer which includes `kubectl` and Helm. 
      */
     override fun kubectlLayer(kubectlLayer: ILayerVersion) {
-      cdkBuilder.kubectlLayer(kubectlLayer.let(ILayerVersion::unwrap))
+      cdkBuilder.kubectlLayer(kubectlLayer.let(ILayerVersion.Companion::unwrap))
     }
 
     /**
@@ -1298,7 +1299,7 @@ public open class Cluster(
      * @param kubectlMemory Amount of memory to allocate to the provider's lambda function. 
      */
     override fun kubectlMemory(kubectlMemory: Size) {
-      cdkBuilder.kubectlMemory(kubectlMemory.let(Size::unwrap))
+      cdkBuilder.kubectlMemory(kubectlMemory.let(Size.Companion::unwrap))
     }
 
     /**
@@ -1311,7 +1312,7 @@ public open class Cluster(
      * group. 
      */
     override fun mastersRole(mastersRole: IRole) {
-      cdkBuilder.mastersRole(mastersRole.let(IRole::unwrap))
+      cdkBuilder.mastersRole(mastersRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -1338,7 +1339,7 @@ public open class Cluster(
      * @param onEventLayer An AWS Lambda Layer which includes the NPM dependency `proxy-agent`. 
      */
     override fun onEventLayer(onEventLayer: ILayerVersion) {
-      cdkBuilder.onEventLayer(onEventLayer.let(ILayerVersion::unwrap))
+      cdkBuilder.onEventLayer(onEventLayer.let(ILayerVersion.Companion::unwrap))
     }
 
     /**
@@ -1422,7 +1423,7 @@ public open class Cluster(
      * AWS API operations on your behalf. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -1435,7 +1436,7 @@ public open class Cluster(
      * @param secretsEncryptionKey KMS secret for envelope encryption for Kubernetes secrets. 
      */
     override fun secretsEncryptionKey(secretsEncryptionKey: IKey) {
-      cdkBuilder.secretsEncryptionKey(secretsEncryptionKey.let(IKey::unwrap))
+      cdkBuilder.secretsEncryptionKey(secretsEncryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -1446,7 +1447,7 @@ public open class Cluster(
      * @param securityGroup Security Group to use for Control Plane ENIs. 
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -1479,7 +1480,7 @@ public open class Cluster(
      * @param version The Kubernetes version to run in the cluster. 
      */
     override fun version(version: KubernetesVersion) {
-      cdkBuilder.version(version.let(KubernetesVersion::unwrap))
+      cdkBuilder.version(version.let(KubernetesVersion.Companion::unwrap))
     }
 
     /**
@@ -1491,7 +1492,7 @@ public open class Cluster(
      * @param vpc The VPC in which to create the Cluster. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -1506,7 +1507,7 @@ public open class Cluster(
      * @param vpcSubnets Where to place EKS Control Plane ENIs. 
      */
     override fun vpcSubnets(vpcSubnets: List<SubnetSelection>) {
-      cdkBuilder.vpcSubnets(vpcSubnets.map(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.map(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -1532,8 +1533,8 @@ public open class Cluster(
       id: String,
       attrs: ClusterAttributes,
     ): ICluster =
-        software.amazon.awscdk.services.eks.Cluster.fromClusterAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(ClusterAttributes::unwrap)).let(ICluster::wrap)
+        software.amazon.awscdk.services.eks.Cluster.fromClusterAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(ClusterAttributes.Companion::unwrap)).let(ICluster::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2f9f698ebef13011b7bab8c610cfa73efb97bee56308d6cafa66534ab5f42b49")

@@ -229,7 +229,7 @@ public interface CfnMicrosoftADProps {
      * only be used when absolutely necessary.
      */
     override fun createAlias(createAlias: IResolvable) {
-      cdkBuilder.createAlias(createAlias.let(IResolvable::unwrap))
+      cdkBuilder.createAlias(createAlias.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -258,7 +258,7 @@ public interface CfnMicrosoftADProps {
      * specify a value, AWS CloudFormation disables single sign-on by default.
      */
     override fun enableSso(enableSso: IResolvable) {
-      cdkBuilder.enableSso(enableSso.let(IResolvable::unwrap))
+      cdkBuilder.enableSso(enableSso.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -293,14 +293,14 @@ public interface CfnMicrosoftADProps {
      * @param vpcSettings Specifies the VPC settings of the Microsoft AD directory server in AWS . 
      */
     override fun vpcSettings(vpcSettings: IResolvable) {
-      cdkBuilder.vpcSettings(vpcSettings.let(IResolvable::unwrap))
+      cdkBuilder.vpcSettings(vpcSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param vpcSettings Specifies the VPC settings of the Microsoft AD directory server in AWS . 
      */
     override fun vpcSettings(vpcSettings: CfnMicrosoftAD.VpcSettingsProperty) {
-      cdkBuilder.vpcSettings(vpcSettings.let(CfnMicrosoftAD.VpcSettingsProperty::unwrap))
+      cdkBuilder.vpcSettings(vpcSettings.let(CfnMicrosoftAD.VpcSettingsProperty.Companion::unwrap))
     }
 
     /**

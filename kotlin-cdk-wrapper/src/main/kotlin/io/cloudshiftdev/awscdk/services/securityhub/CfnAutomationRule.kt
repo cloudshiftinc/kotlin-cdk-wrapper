@@ -250,7 +250,7 @@ public open class CfnAutomationRule(
   cdkObject: software.amazon.awscdk.services.securityhub.CfnAutomationRule,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.securityhub.CfnAutomationRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.securityhub.CfnAutomationRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -259,8 +259,8 @@ public open class CfnAutomationRule(
     id: String,
     props: CfnAutomationRuleProps,
   ) :
-      this(software.amazon.awscdk.services.securityhub.CfnAutomationRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAutomationRuleProps::unwrap))
+      this(software.amazon.awscdk.services.securityhub.CfnAutomationRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAutomationRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -281,7 +281,7 @@ public open class CfnAutomationRule(
    * `Criteria` .
    */
   public open fun actions(`value`: IResolvable) {
-    unwrap(this).setActions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setActions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -355,7 +355,7 @@ public open class CfnAutomationRule(
    * Security Hub applies the rule action to the finding.
    */
   public open fun criteria(`value`: IResolvable) {
-    unwrap(this).setCriteria(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCriteria(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -366,7 +366,7 @@ public open class CfnAutomationRule(
    * Security Hub applies the rule action to the finding.
    */
   public open fun criteria(`value`: AutomationRulesFindingFiltersProperty) {
-    unwrap(this).setCriteria(`value`.let(AutomationRulesFindingFiltersProperty::unwrap))
+    unwrap(this).setCriteria(`value`.let(AutomationRulesFindingFiltersProperty.Companion::unwrap))
   }
 
   /**
@@ -399,7 +399,7 @@ public open class CfnAutomationRule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -421,7 +421,7 @@ public open class CfnAutomationRule(
    * rule criteria.
    */
   public open fun isTerminal(`value`: IResolvable) {
-    unwrap(this).setIsTerminal(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIsTerminal(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -653,7 +653,7 @@ public open class CfnAutomationRule(
      * conditions specified in `Criteria` . 
      */
     override fun actions(actions: IResolvable) {
-      cdkBuilder.actions(actions.let(IResolvable::unwrap))
+      cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -693,7 +693,7 @@ public open class CfnAutomationRule(
      * Security Hub applies the rule action to the finding. 
      */
     override fun criteria(criteria: IResolvable) {
-      cdkBuilder.criteria(criteria.let(IResolvable::unwrap))
+      cdkBuilder.criteria(criteria.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -711,7 +711,7 @@ public open class CfnAutomationRule(
      * Security Hub applies the rule action to the finding. 
      */
     override fun criteria(criteria: AutomationRulesFindingFiltersProperty) {
-      cdkBuilder.criteria(criteria.let(AutomationRulesFindingFiltersProperty::unwrap))
+      cdkBuilder.criteria(criteria.let(AutomationRulesFindingFiltersProperty.Companion::unwrap))
     }
 
     /**
@@ -774,7 +774,7 @@ public open class CfnAutomationRule(
      * finding that matches the rule criteria. 
      */
     override fun isTerminal(isTerminal: IResolvable) {
-      cdkBuilder.isTerminal(isTerminal.let(IResolvable::unwrap))
+      cdkBuilder.isTerminal(isTerminal.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -961,7 +961,7 @@ public open class CfnAutomationRule(
        * finding field. 
        */
       override fun findingFieldsUpdate(findingFieldsUpdate: IResolvable) {
-        cdkBuilder.findingFieldsUpdate(findingFieldsUpdate.let(IResolvable::unwrap))
+        cdkBuilder.findingFieldsUpdate(findingFieldsUpdate.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -970,7 +970,7 @@ public open class CfnAutomationRule(
        */
       override
           fun findingFieldsUpdate(findingFieldsUpdate: AutomationRulesFindingFieldsUpdateProperty) {
-        cdkBuilder.findingFieldsUpdate(findingFieldsUpdate.let(AutomationRulesFindingFieldsUpdateProperty::unwrap))
+        cdkBuilder.findingFieldsUpdate(findingFieldsUpdate.let(AutomationRulesFindingFieldsUpdateProperty.Companion::unwrap))
       }
 
       /**
@@ -1283,14 +1283,14 @@ public open class CfnAutomationRule(
        * @param note The rule action will update the `Note` field of a finding.
        */
       override fun note(note: IResolvable) {
-        cdkBuilder.note(note.let(IResolvable::unwrap))
+        cdkBuilder.note(note.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param note The rule action will update the `Note` field of a finding.
        */
       override fun note(note: NoteUpdateProperty) {
-        cdkBuilder.note(note.let(NoteUpdateProperty::unwrap))
+        cdkBuilder.note(note.let(NoteUpdateProperty.Companion::unwrap))
       }
 
       /**
@@ -1306,7 +1306,7 @@ public open class CfnAutomationRule(
        * finding.
        */
       override fun relatedFindings(relatedFindings: IResolvable) {
-        cdkBuilder.relatedFindings(relatedFindings.let(IResolvable::unwrap))
+        cdkBuilder.relatedFindings(relatedFindings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1328,14 +1328,14 @@ public open class CfnAutomationRule(
        * @param severity The rule action will update the `Severity` field of a finding.
        */
       override fun severity(severity: IResolvable) {
-        cdkBuilder.severity(severity.let(IResolvable::unwrap))
+        cdkBuilder.severity(severity.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param severity The rule action will update the `Severity` field of a finding.
        */
       override fun severity(severity: SeverityUpdateProperty) {
-        cdkBuilder.severity(severity.let(SeverityUpdateProperty::unwrap))
+        cdkBuilder.severity(severity.let(SeverityUpdateProperty.Companion::unwrap))
       }
 
       /**
@@ -1363,7 +1363,7 @@ public open class CfnAutomationRule(
        * finding.
        */
       override fun userDefinedFields(userDefinedFields: IResolvable) {
-        cdkBuilder.userDefinedFields(userDefinedFields.let(IResolvable::unwrap))
+        cdkBuilder.userDefinedFields(userDefinedFields.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1386,14 +1386,14 @@ public open class CfnAutomationRule(
        * @param workflow The rule action will update the `Workflow` field of a finding.
        */
       override fun workflow(workflow: IResolvable) {
-        cdkBuilder.workflow(workflow.let(IResolvable::unwrap))
+        cdkBuilder.workflow(workflow.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param workflow The rule action will update the `Workflow` field of a finding.
        */
       override fun workflow(workflow: WorkflowUpdateProperty) {
-        cdkBuilder.workflow(workflow.let(WorkflowUpdateProperty::unwrap))
+        cdkBuilder.workflow(workflow.let(WorkflowUpdateProperty.Companion::unwrap))
       }
 
       /**
@@ -3043,7 +3043,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 100 items.
        */
       override fun awsAccountId(awsAccountId: IResolvable) {
-        cdkBuilder.awsAccountId(awsAccountId.let(IResolvable::unwrap))
+        cdkBuilder.awsAccountId(awsAccountId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3068,7 +3068,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun companyName(companyName: IResolvable) {
-        cdkBuilder.companyName(companyName.let(IResolvable::unwrap))
+        cdkBuilder.companyName(companyName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3100,7 +3100,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun complianceAssociatedStandardsId(complianceAssociatedStandardsId: IResolvable) {
-        cdkBuilder.complianceAssociatedStandardsId(complianceAssociatedStandardsId.let(IResolvable::unwrap))
+        cdkBuilder.complianceAssociatedStandardsId(complianceAssociatedStandardsId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3136,7 +3136,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun complianceSecurityControlId(complianceSecurityControlId: IResolvable) {
-        cdkBuilder.complianceSecurityControlId(complianceSecurityControlId.let(IResolvable::unwrap))
+        cdkBuilder.complianceSecurityControlId(complianceSecurityControlId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3162,7 +3162,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun complianceStatus(complianceStatus: IResolvable) {
-        cdkBuilder.complianceStatus(complianceStatus.let(IResolvable::unwrap))
+        cdkBuilder.complianceStatus(complianceStatus.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3195,7 +3195,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun confidence(confidence: IResolvable) {
-        cdkBuilder.confidence(confidence.let(IResolvable::unwrap))
+        cdkBuilder.confidence(confidence.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3244,7 +3244,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun createdAt(createdAt: IResolvable) {
-        cdkBuilder.createdAt(createdAt.let(IResolvable::unwrap))
+        cdkBuilder.createdAt(createdAt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3295,7 +3295,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun criticality(criticality: IResolvable) {
-        cdkBuilder.criticality(criticality.let(IResolvable::unwrap))
+        cdkBuilder.criticality(criticality.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3331,7 +3331,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun description(description: IResolvable) {
-        cdkBuilder.description(description.let(IResolvable::unwrap))
+        cdkBuilder.description(description.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3365,7 +3365,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun firstObservedAt(firstObservedAt: IResolvable) {
-        cdkBuilder.firstObservedAt(firstObservedAt.let(IResolvable::unwrap))
+        cdkBuilder.firstObservedAt(firstObservedAt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3413,7 +3413,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 100 items.
        */
       override fun generatorId(generatorId: IResolvable) {
-        cdkBuilder.generatorId(generatorId.let(IResolvable::unwrap))
+        cdkBuilder.generatorId(generatorId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3437,7 +3437,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun id(id: IResolvable) {
-        cdkBuilder.id(id.let(IResolvable::unwrap))
+        cdkBuilder.id(id.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3471,7 +3471,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun lastObservedAt(lastObservedAt: IResolvable) {
-        cdkBuilder.lastObservedAt(lastObservedAt.let(IResolvable::unwrap))
+        cdkBuilder.lastObservedAt(lastObservedAt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3518,7 +3518,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun noteText(noteText: IResolvable) {
-        cdkBuilder.noteText(noteText.let(IResolvable::unwrap))
+        cdkBuilder.noteText(noteText.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3551,7 +3551,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun noteUpdatedAt(noteUpdatedAt: IResolvable) {
-        cdkBuilder.noteUpdatedAt(noteUpdatedAt.let(IResolvable::unwrap))
+        cdkBuilder.noteUpdatedAt(noteUpdatedAt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3596,7 +3596,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun noteUpdatedBy(noteUpdatedBy: IResolvable) {
-        cdkBuilder.noteUpdatedBy(noteUpdatedBy.let(IResolvable::unwrap))
+        cdkBuilder.noteUpdatedBy(noteUpdatedBy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3620,7 +3620,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun productArn(productArn: IResolvable) {
-        cdkBuilder.productArn(productArn.let(IResolvable::unwrap))
+        cdkBuilder.productArn(productArn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3645,7 +3645,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun productName(productName: IResolvable) {
-        cdkBuilder.productName(productName.let(IResolvable::unwrap))
+        cdkBuilder.productName(productName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3669,7 +3669,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun recordState(recordState: IResolvable) {
-        cdkBuilder.recordState(recordState.let(IResolvable::unwrap))
+        cdkBuilder.recordState(recordState.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3691,7 +3691,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun relatedFindingsId(relatedFindingsId: IResolvable) {
-        cdkBuilder.relatedFindingsId(relatedFindingsId.let(IResolvable::unwrap))
+        cdkBuilder.relatedFindingsId(relatedFindingsId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3714,7 +3714,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun relatedFindingsProductArn(relatedFindingsProductArn: IResolvable) {
-        cdkBuilder.relatedFindingsProductArn(relatedFindingsProductArn.let(IResolvable::unwrap))
+        cdkBuilder.relatedFindingsProductArn(relatedFindingsProductArn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3738,7 +3738,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun resourceDetailsOther(resourceDetailsOther: IResolvable) {
-        cdkBuilder.resourceDetailsOther(resourceDetailsOther.let(IResolvable::unwrap))
+        cdkBuilder.resourceDetailsOther(resourceDetailsOther.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3768,7 +3768,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 100 items.
        */
       override fun resourceId(resourceId: IResolvable) {
-        cdkBuilder.resourceId(resourceId.let(IResolvable::unwrap))
+        cdkBuilder.resourceId(resourceId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3803,7 +3803,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun resourcePartition(resourcePartition: IResolvable) {
-        cdkBuilder.resourcePartition(resourcePartition.let(IResolvable::unwrap))
+        cdkBuilder.resourcePartition(resourcePartition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3833,7 +3833,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun resourceRegion(resourceRegion: IResolvable) {
-        cdkBuilder.resourceRegion(resourceRegion.let(IResolvable::unwrap))
+        cdkBuilder.resourceRegion(resourceRegion.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3859,7 +3859,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun resourceTags(resourceTags: IResolvable) {
-        cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
+        cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3884,7 +3884,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 100 items.
        */
       override fun resourceType(resourceType: IResolvable) {
-        cdkBuilder.resourceType(resourceType.let(IResolvable::unwrap))
+        cdkBuilder.resourceType(resourceType.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3907,7 +3907,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun severityLabel(severityLabel: IResolvable) {
-        cdkBuilder.severityLabel(severityLabel.let(IResolvable::unwrap))
+        cdkBuilder.severityLabel(severityLabel.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3931,7 +3931,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun sourceUrl(sourceUrl: IResolvable) {
-        cdkBuilder.sourceUrl(sourceUrl.let(IResolvable::unwrap))
+        cdkBuilder.sourceUrl(sourceUrl.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3955,7 +3955,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 100 items.
        */
       override fun title(title: IResolvable) {
-        cdkBuilder.title(title.let(IResolvable::unwrap))
+        cdkBuilder.title(title.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3982,7 +3982,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun type(type: IResolvable) {
-        cdkBuilder.type(type.let(IResolvable::unwrap))
+        cdkBuilder.type(type.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4026,7 +4026,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun updatedAt(updatedAt: IResolvable) {
-        cdkBuilder.updatedAt(updatedAt.let(IResolvable::unwrap))
+        cdkBuilder.updatedAt(updatedAt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4073,7 +4073,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun userDefinedFields(userDefinedFields: IResolvable) {
-        cdkBuilder.userDefinedFields(userDefinedFields.let(IResolvable::unwrap))
+        cdkBuilder.userDefinedFields(userDefinedFields.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4098,7 +4098,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun verificationState(verificationState: IResolvable) {
-        cdkBuilder.verificationState(verificationState.let(IResolvable::unwrap))
+        cdkBuilder.verificationState(verificationState.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4122,7 +4122,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun workflowStatus(workflowStatus: IResolvable) {
-        cdkBuilder.workflowStatus(workflowStatus.let(IResolvable::unwrap))
+        cdkBuilder.workflowStatus(workflowStatus.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4707,14 +4707,14 @@ public open class CfnAutomationRule(
        * @param dateRange A date range for the date filter.
        */
       override fun dateRange(dateRange: IResolvable) {
-        cdkBuilder.dateRange(dateRange.let(IResolvable::unwrap))
+        cdkBuilder.dateRange(dateRange.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dateRange A date range for the date filter.
        */
       override fun dateRange(dateRange: DateRangeProperty) {
-        cdkBuilder.dateRange(dateRange.let(DateRangeProperty::unwrap))
+        cdkBuilder.dateRange(dateRange.let(DateRangeProperty.Companion::unwrap))
       }
 
       /**

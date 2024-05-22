@@ -70,8 +70,8 @@ public open class EcsRunTask(
     id: String,
     props: EcsRunTaskProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.EcsRunTask(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EcsRunTaskProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EcsRunTask(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EcsRunTaskProps.Companion::unwrap))
   )
 
   public constructor(
@@ -412,7 +412,7 @@ public open class EcsRunTask(
      * @param cluster The ECS cluster to run the task on. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -436,7 +436,7 @@ public open class EcsRunTask(
      * @param containerOverrides Container setting overrides. 
      */
     override fun containerOverrides(containerOverrides: List<ContainerOverride>) {
-      cdkBuilder.containerOverrides(containerOverrides.map(ContainerOverride::unwrap))
+      cdkBuilder.containerOverrides(containerOverrides.map(ContainerOverride.Companion::unwrap))
     }
 
     /**
@@ -463,7 +463,7 @@ public open class EcsRunTask(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -504,7 +504,7 @@ public open class EcsRunTask(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -518,7 +518,7 @@ public open class EcsRunTask(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -553,7 +553,7 @@ public open class EcsRunTask(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -565,7 +565,7 @@ public open class EcsRunTask(
      * your tasks and services are hosted. 
      */
     override fun launchTarget(launchTarget: IEcsLaunchTarget) {
-      cdkBuilder.launchTarget(launchTarget.let(IEcsLaunchTarget::unwrap))
+      cdkBuilder.launchTarget(launchTarget.let(IEcsLaunchTarget.Companion::unwrap))
     }
 
     /**
@@ -596,7 +596,7 @@ public open class EcsRunTask(
      * to the task. 
      */
     override fun propagatedTagSource(propagatedTagSource: PropagatedTagSource) {
-      cdkBuilder.propagatedTagSource(propagatedTagSource.let(PropagatedTagSource::unwrap))
+      cdkBuilder.propagatedTagSource(propagatedTagSource.let(PropagatedTagSource.Companion::unwrap))
     }
 
     /**
@@ -649,7 +649,7 @@ public open class EcsRunTask(
      * @param securityGroups Existing security groups to use for the tasks. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -681,7 +681,7 @@ public open class EcsRunTask(
      * @param subnets Subnets to place the task's ENIs. 
      */
     override fun subnets(subnets: SubnetSelection) {
-      cdkBuilder.subnets(subnets.let(SubnetSelection::unwrap))
+      cdkBuilder.subnets(subnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -708,7 +708,7 @@ public open class EcsRunTask(
      * tasks in the service. 
      */
     override fun taskDefinition(taskDefinition: TaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(TaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(TaskDefinition.Companion::unwrap))
     }
 
     /**
@@ -722,7 +722,7 @@ public open class EcsRunTask(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -735,7 +735,7 @@ public open class EcsRunTask(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.EcsRunTask =

@@ -137,7 +137,7 @@ public interface CfnVpcIngressConnectionProps {
      * AWS PrivateLink VPC endpoint that are used to create the VPC Ingress Connection resource. 
      */
     override fun ingressVpcConfiguration(ingressVpcConfiguration: IResolvable) {
-      cdkBuilder.ingressVpcConfiguration(ingressVpcConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.ingressVpcConfiguration(ingressVpcConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -146,7 +146,7 @@ public interface CfnVpcIngressConnectionProps {
      */
     override
         fun ingressVpcConfiguration(ingressVpcConfiguration: CfnVpcIngressConnection.IngressVpcConfigurationProperty) {
-      cdkBuilder.ingressVpcConfiguration(ingressVpcConfiguration.let(CfnVpcIngressConnection.IngressVpcConfigurationProperty::unwrap))
+      cdkBuilder.ingressVpcConfiguration(ingressVpcConfiguration.let(CfnVpcIngressConnection.IngressVpcConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -174,7 +174,7 @@ public interface CfnVpcIngressConnectionProps {
      * A tag is a key-value pair.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

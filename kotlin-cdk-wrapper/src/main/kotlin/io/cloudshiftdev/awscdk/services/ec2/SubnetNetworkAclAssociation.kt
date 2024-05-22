@@ -35,8 +35,8 @@ public open class SubnetNetworkAclAssociation(
     id: String,
     props: SubnetNetworkAclAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.SubnetNetworkAclAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SubnetNetworkAclAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.SubnetNetworkAclAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SubnetNetworkAclAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -108,7 +108,7 @@ public open class SubnetNetworkAclAssociation(
      * @param networkAcl The Network ACL this association is defined for. 
      */
     override fun networkAcl(networkAcl: INetworkAcl) {
-      cdkBuilder.networkAcl(networkAcl.let(INetworkAcl::unwrap))
+      cdkBuilder.networkAcl(networkAcl.let(INetworkAcl.Companion::unwrap))
     }
 
     /**
@@ -117,7 +117,7 @@ public open class SubnetNetworkAclAssociation(
      * @param subnet ID of the Subnet. 
      */
     override fun subnet(subnet: ISubnet) {
-      cdkBuilder.subnet(subnet.let(ISubnet::unwrap))
+      cdkBuilder.subnet(subnet.let(ISubnet.Companion::unwrap))
     }
 
     /**
@@ -145,7 +145,7 @@ public open class SubnetNetworkAclAssociation(
       id: String,
       subnetNetworkAclAssociationAssociationId: String,
     ): ISubnetNetworkAclAssociation =
-        software.amazon.awscdk.services.ec2.SubnetNetworkAclAssociation.fromSubnetNetworkAclAssociationAssociationId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ec2.SubnetNetworkAclAssociation.fromSubnetNetworkAclAssociationAssociationId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, subnetNetworkAclAssociationAssociationId).let(ISubnetNetworkAclAssociation::wrap)
 
     public operator fun invoke(

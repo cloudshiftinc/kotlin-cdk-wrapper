@@ -45,8 +45,8 @@ public open class CfnStackUserAssociation(
     id: String,
     props: CfnStackUserAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.appstream.CfnStackUserAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStackUserAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.appstream.CfnStackUserAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStackUserAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -79,7 +79,7 @@ public open class CfnStackUserAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -98,7 +98,7 @@ public open class CfnStackUserAssociation(
    * Specifies whether a welcome email is sent to a user after the user is created in the user pool.
    */
   public open fun sendEmailNotification(`value`: IResolvable) {
-    unwrap(this).setSendEmailNotification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSendEmailNotification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -224,7 +224,7 @@ public open class CfnStackUserAssociation(
      * user is created in the user pool. 
      */
     override fun sendEmailNotification(sendEmailNotification: IResolvable) {
-      cdkBuilder.sendEmailNotification(sendEmailNotification.let(IResolvable::unwrap))
+      cdkBuilder.sendEmailNotification(sendEmailNotification.let(IResolvable.Companion::unwrap))
     }
 
     /**

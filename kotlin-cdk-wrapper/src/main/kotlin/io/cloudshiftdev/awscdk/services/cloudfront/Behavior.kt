@@ -326,14 +326,14 @@ public interface Behavior {
      * @param allowedMethods The method this CloudFront distribution responds do.
      */
     override fun allowedMethods(allowedMethods: CloudFrontAllowedMethods) {
-      cdkBuilder.allowedMethods(allowedMethods.let(CloudFrontAllowedMethods::unwrap))
+      cdkBuilder.allowedMethods(allowedMethods.let(CloudFrontAllowedMethods.Companion::unwrap))
     }
 
     /**
      * @param cachedMethods Which methods are cached by CloudFront by default.
      */
     override fun cachedMethods(cachedMethods: CloudFrontAllowedCachedMethods) {
-      cdkBuilder.cachedMethods(cachedMethods.let(CloudFrontAllowedCachedMethods::unwrap))
+      cdkBuilder.cachedMethods(cachedMethods.let(CloudFrontAllowedCachedMethods.Companion::unwrap))
     }
 
     /**
@@ -349,7 +349,7 @@ public interface Behavior {
      * such as Cache-Control max-age, Cache-Control s-maxage, and Expires to objects.
      */
     override fun defaultTtl(defaultTtl: Duration) {
-      cdkBuilder.defaultTtl(defaultTtl.let(Duration::unwrap))
+      cdkBuilder.defaultTtl(defaultTtl.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -357,7 +357,7 @@ public interface Behavior {
      * request.
      */
     override fun forwardedValues(forwardedValues: CfnDistribution.ForwardedValuesProperty) {
-      cdkBuilder.forwardedValues(forwardedValues.let(CfnDistribution.ForwardedValuesProperty::unwrap))
+      cdkBuilder.forwardedValues(forwardedValues.let(CfnDistribution.ForwardedValuesProperty.Companion::unwrap))
     }
 
     /**
@@ -374,7 +374,7 @@ public interface Behavior {
      * @param functionAssociations The CloudFront functions to invoke before serving the contents.
      */
     override fun functionAssociations(functionAssociations: List<FunctionAssociation>) {
-      cdkBuilder.functionAssociations(functionAssociations.map(FunctionAssociation::unwrap))
+      cdkBuilder.functionAssociations(functionAssociations.map(FunctionAssociation.Companion::unwrap))
     }
 
     /**
@@ -398,7 +398,7 @@ public interface Behavior {
      */
     override
         fun lambdaFunctionAssociations(lambdaFunctionAssociations: List<LambdaFunctionAssociation>) {
-      cdkBuilder.lambdaFunctionAssociations(lambdaFunctionAssociations.map(LambdaFunctionAssociation::unwrap))
+      cdkBuilder.lambdaFunctionAssociations(lambdaFunctionAssociations.map(LambdaFunctionAssociation.Companion::unwrap))
     }
 
     /**
@@ -414,7 +414,7 @@ public interface Behavior {
      * queries your origin.
      */
     override fun maxTtl(maxTtl: Duration) {
-      cdkBuilder.maxTtl(maxTtl.let(Duration::unwrap))
+      cdkBuilder.maxTtl(maxTtl.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -422,7 +422,7 @@ public interface Behavior {
      * CloudFront queries your origin.
      */
     override fun minTtl(minTtl: Duration) {
-      cdkBuilder.minTtl(minTtl.let(Duration::unwrap))
+      cdkBuilder.minTtl(minTtl.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -439,7 +439,7 @@ public interface Behavior {
      * or signed cookies.
      */
     override fun trustedKeyGroups(trustedKeyGroups: List<IKeyGroup>) {
-      cdkBuilder.trustedKeyGroups(trustedKeyGroups.map(IKeyGroup::unwrap))
+      cdkBuilder.trustedKeyGroups(trustedKeyGroups.map(IKeyGroup.Companion::unwrap))
     }
 
     /**
@@ -480,7 +480,7 @@ public interface Behavior {
      * @param viewerProtocolPolicy The viewer policy for this behavior.
      */
     override fun viewerProtocolPolicy(viewerProtocolPolicy: ViewerProtocolPolicy) {
-      cdkBuilder.viewerProtocolPolicy(viewerProtocolPolicy.let(ViewerProtocolPolicy::unwrap))
+      cdkBuilder.viewerProtocolPolicy(viewerProtocolPolicy.let(ViewerProtocolPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.Behavior = cdkBuilder.build()

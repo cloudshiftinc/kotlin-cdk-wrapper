@@ -42,8 +42,8 @@ public open class UserPoolClient(
     id: String,
     props: UserPoolClientProps,
   ) :
-      this(software.amazon.awscdk.services.cognito.UserPoolClient(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(UserPoolClientProps::unwrap))
+      this(software.amazon.awscdk.services.cognito.UserPoolClient(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(UserPoolClientProps.Companion::unwrap))
   )
 
   public constructor(
@@ -310,7 +310,7 @@ public open class UserPoolClient(
      * @param accessTokenValidity Validity of the access token. 
      */
     override fun accessTokenValidity(accessTokenValidity: Duration) {
-      cdkBuilder.accessTokenValidity(accessTokenValidity.let(Duration::unwrap))
+      cdkBuilder.accessTokenValidity(accessTokenValidity.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -323,7 +323,7 @@ public open class UserPoolClient(
      * @param authFlows The set of OAuth authentication flows to enable on the client. 
      */
     override fun authFlows(authFlows: AuthFlow) {
-      cdkBuilder.authFlows(authFlows.let(AuthFlow::unwrap))
+      cdkBuilder.authFlows(authFlows.let(AuthFlow.Companion::unwrap))
     }
 
     /**
@@ -353,7 +353,7 @@ public open class UserPoolClient(
      * authentication flow. 
      */
     override fun authSessionValidity(authSessionValidity: Duration) {
-      cdkBuilder.authSessionValidity(authSessionValidity.let(Duration::unwrap))
+      cdkBuilder.authSessionValidity(authSessionValidity.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -402,7 +402,7 @@ public open class UserPoolClient(
      * @param idTokenValidity Validity of the ID token. 
      */
     override fun idTokenValidity(idTokenValidity: Duration) {
-      cdkBuilder.idTokenValidity(idTokenValidity.let(Duration::unwrap))
+      cdkBuilder.idTokenValidity(idTokenValidity.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -415,7 +415,7 @@ public open class UserPoolClient(
      * @param oAuth OAuth settings for this client to interact with the app. 
      */
     override fun oAuth(oAuth: OAuthSettings) {
-      cdkBuilder.oAuth(oAuth.let(OAuthSettings::unwrap))
+      cdkBuilder.oAuth(oAuth.let(OAuthSettings.Companion::unwrap))
     }
 
     /**
@@ -456,7 +456,7 @@ public open class UserPoolClient(
      * @param readAttributes The set of attributes this client will be able to read. 
      */
     override fun readAttributes(readAttributes: ClientAttributes) {
-      cdkBuilder.readAttributes(readAttributes.let(ClientAttributes::unwrap))
+      cdkBuilder.readAttributes(readAttributes.let(ClientAttributes.Companion::unwrap))
     }
 
     /**
@@ -470,7 +470,7 @@ public open class UserPoolClient(
      * @param refreshTokenValidity Validity of the refresh token. 
      */
     override fun refreshTokenValidity(refreshTokenValidity: Duration) {
-      cdkBuilder.refreshTokenValidity(refreshTokenValidity.let(Duration::unwrap))
+      cdkBuilder.refreshTokenValidity(refreshTokenValidity.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -487,7 +487,7 @@ public open class UserPoolClient(
      */
     override
         fun supportedIdentityProviders(supportedIdentityProviders: List<UserPoolClientIdentityProvider>) {
-      cdkBuilder.supportedIdentityProviders(supportedIdentityProviders.map(UserPoolClientIdentityProvider::unwrap))
+      cdkBuilder.supportedIdentityProviders(supportedIdentityProviders.map(UserPoolClientIdentityProvider.Companion::unwrap))
     }
 
     /**
@@ -512,7 +512,7 @@ public open class UserPoolClient(
      * @param userPool The UserPool resource this client will have access to. 
      */
     override fun userPool(userPool: IUserPool) {
-      cdkBuilder.userPool(userPool.let(IUserPool::unwrap))
+      cdkBuilder.userPool(userPool.let(IUserPool.Companion::unwrap))
     }
 
     /**
@@ -535,7 +535,7 @@ public open class UserPoolClient(
      * @param writeAttributes The set of attributes this client will be able to write. 
      */
     override fun writeAttributes(writeAttributes: ClientAttributes) {
-      cdkBuilder.writeAttributes(writeAttributes.let(ClientAttributes::unwrap))
+      cdkBuilder.writeAttributes(writeAttributes.let(ClientAttributes.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cognito.UserPoolClient = cdkBuilder.build()
@@ -547,7 +547,7 @@ public open class UserPoolClient(
       id: String,
       userPoolClientId: String,
     ): IUserPoolClient =
-        software.amazon.awscdk.services.cognito.UserPoolClient.fromUserPoolClientId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.cognito.UserPoolClient.fromUserPoolClientId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, userPoolClientId).let(IUserPoolClient::wrap)
 
     public operator fun invoke(

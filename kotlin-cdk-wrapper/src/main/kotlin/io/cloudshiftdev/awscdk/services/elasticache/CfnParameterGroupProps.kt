@@ -167,7 +167,7 @@ public interface CfnParameterGroupProps {
      * ```
      */
     override fun properties(properties: IResolvable) {
-      cdkBuilder.properties(properties.let(IResolvable::unwrap))
+      cdkBuilder.properties(properties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -189,7 +189,7 @@ public interface CfnParameterGroupProps {
      * parameter groups. A tag with a null Value is permitted.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

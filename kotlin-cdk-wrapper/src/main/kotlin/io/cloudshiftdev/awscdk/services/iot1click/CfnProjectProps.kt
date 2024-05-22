@@ -110,14 +110,14 @@ public interface CfnProjectProps {
      * @param placementTemplate An object describing the project's placement specifications. 
      */
     override fun placementTemplate(placementTemplate: IResolvable) {
-      cdkBuilder.placementTemplate(placementTemplate.let(IResolvable::unwrap))
+      cdkBuilder.placementTemplate(placementTemplate.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param placementTemplate An object describing the project's placement specifications. 
      */
     override fun placementTemplate(placementTemplate: CfnProject.PlacementTemplateProperty) {
-      cdkBuilder.placementTemplate(placementTemplate.let(CfnProject.PlacementTemplateProperty::unwrap))
+      cdkBuilder.placementTemplate(placementTemplate.let(CfnProject.PlacementTemplateProperty.Companion::unwrap))
     }
 
     /**

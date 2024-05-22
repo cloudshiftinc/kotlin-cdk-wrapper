@@ -59,7 +59,7 @@ public open class CfnStream(
   cdkObject: software.amazon.awscdk.services.kinesis.CfnStream,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.kinesis.CfnStream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.kinesis.CfnStream(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -68,8 +68,8 @@ public open class CfnStream(
     id: String,
     props: CfnStreamProps,
   ) :
-      this(software.amazon.awscdk.services.kinesis.CfnStream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStreamProps::unwrap))
+      this(software.amazon.awscdk.services.kinesis.CfnStream(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStreamProps.Companion::unwrap))
   )
 
   public constructor(
@@ -91,7 +91,7 @@ public open class CfnStream(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -141,7 +141,7 @@ public open class CfnStream(
    * stream.
    */
   public open fun streamEncryption(`value`: IResolvable) {
-    unwrap(this).setStreamEncryption(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStreamEncryption(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -149,7 +149,7 @@ public open class CfnStream(
    * stream.
    */
   public open fun streamEncryption(`value`: StreamEncryptionProperty) {
-    unwrap(this).setStreamEncryption(`value`.let(StreamEncryptionProperty::unwrap))
+    unwrap(this).setStreamEncryption(`value`.let(StreamEncryptionProperty.Companion::unwrap))
   }
 
   /**
@@ -170,14 +170,14 @@ public open class CfnStream(
    * Specifies the capacity mode to which you want to set your data stream.
    */
   public open fun streamModeDetails(`value`: IResolvable) {
-    unwrap(this).setStreamModeDetails(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStreamModeDetails(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the capacity mode to which you want to set your data stream.
    */
   public open fun streamModeDetails(`value`: StreamModeDetailsProperty) {
-    unwrap(this).setStreamModeDetails(`value`.let(StreamModeDetailsProperty::unwrap))
+    unwrap(this).setStreamModeDetails(`value`.let(StreamModeDetailsProperty.Companion::unwrap))
   }
 
   /**
@@ -203,7 +203,7 @@ public open class CfnStream(
    * An arbitrary set of tags (key–value pairs) to associate with the Kinesis stream.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -421,7 +421,7 @@ public open class CfnStream(
      * AWS KMS key for a specified stream. 
      */
     override fun streamEncryption(streamEncryption: IResolvable) {
-      cdkBuilder.streamEncryption(streamEncryption.let(IResolvable::unwrap))
+      cdkBuilder.streamEncryption(streamEncryption.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -435,7 +435,7 @@ public open class CfnStream(
      * AWS KMS key for a specified stream. 
      */
     override fun streamEncryption(streamEncryption: StreamEncryptionProperty) {
-      cdkBuilder.streamEncryption(streamEncryption.let(StreamEncryptionProperty::unwrap))
+      cdkBuilder.streamEncryption(streamEncryption.let(StreamEncryptionProperty.Companion::unwrap))
     }
 
     /**
@@ -464,7 +464,7 @@ public open class CfnStream(
      * stream. 
      */
     override fun streamModeDetails(streamModeDetails: IResolvable) {
-      cdkBuilder.streamModeDetails(streamModeDetails.let(IResolvable::unwrap))
+      cdkBuilder.streamModeDetails(streamModeDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -478,7 +478,7 @@ public open class CfnStream(
      * stream. 
      */
     override fun streamModeDetails(streamModeDetails: StreamModeDetailsProperty) {
-      cdkBuilder.streamModeDetails(streamModeDetails.let(StreamModeDetailsProperty::unwrap))
+      cdkBuilder.streamModeDetails(streamModeDetails.let(StreamModeDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -507,7 +507,7 @@ public open class CfnStream(
      * @param tags An arbitrary set of tags (key–value pairs) to associate with the Kinesis stream. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

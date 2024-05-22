@@ -53,7 +53,7 @@ public open class CfnPublicRepository(
   cdkObject: software.amazon.awscdk.services.ecr.CfnPublicRepository,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ecr.CfnPublicRepository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ecr.CfnPublicRepository(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -62,8 +62,8 @@ public open class CfnPublicRepository(
     id: String,
     props: CfnPublicRepositoryProps,
   ) :
-      this(software.amazon.awscdk.services.ecr.CfnPublicRepository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPublicRepositoryProps::unwrap))
+      this(software.amazon.awscdk.services.ecr.CfnPublicRepository(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPublicRepositoryProps.Companion::unwrap))
   )
 
   public constructor(
@@ -86,7 +86,7 @@ public open class CfnPublicRepository(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -140,7 +140,7 @@ public open class CfnPublicRepository(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -282,7 +282,7 @@ public open class CfnPublicRepository(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

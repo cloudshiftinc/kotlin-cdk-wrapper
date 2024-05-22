@@ -76,8 +76,8 @@ public open class CfnCapability(
     id: String,
     props: CfnCapabilityProps,
   ) :
-      this(software.amazon.awscdk.services.b2bi.CfnCapability(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCapabilityProps::unwrap))
+      this(software.amazon.awscdk.services.b2bi.CfnCapability(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCapabilityProps.Companion::unwrap))
   )
 
   public constructor(
@@ -124,14 +124,14 @@ public open class CfnCapability(
    * Specifies a structure that contains the details for a capability.
    */
   public open fun configuration(`value`: IResolvable) {
-    unwrap(this).setConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies a structure that contains the details for a capability.
    */
   public open fun configuration(`value`: CapabilityConfigurationProperty) {
-    unwrap(this).setConfiguration(`value`.let(CapabilityConfigurationProperty::unwrap))
+    unwrap(this).setConfiguration(`value`.let(CapabilityConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -148,7 +148,7 @@ public open class CfnCapability(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -162,7 +162,7 @@ public open class CfnCapability(
    * with this capability.
    */
   public open fun instructionsDocuments(`value`: IResolvable) {
-    unwrap(this).setInstructionsDocuments(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInstructionsDocuments(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -203,7 +203,7 @@ public open class CfnCapability(
    * resources by type.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -350,7 +350,7 @@ public open class CfnCapability(
      * @param configuration Specifies a structure that contains the details for a capability. 
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -360,7 +360,7 @@ public open class CfnCapability(
      * @param configuration Specifies a structure that contains the details for a capability. 
      */
     override fun configuration(configuration: CapabilityConfigurationProperty) {
-      cdkBuilder.configuration(configuration.let(CapabilityConfigurationProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(CapabilityConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -385,7 +385,7 @@ public open class CfnCapability(
      * EDI document that can be used with this capability. 
      */
     override fun instructionsDocuments(instructionsDocuments: IResolvable) {
-      cdkBuilder.instructionsDocuments(instructionsDocuments.let(IResolvable::unwrap))
+      cdkBuilder.instructionsDocuments(instructionsDocuments.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -437,7 +437,7 @@ public open class CfnCapability(
      * search for resources by type. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -566,14 +566,14 @@ public open class CfnCapability(
        * @param edi An EDI (electronic data interchange) configuration object. 
        */
       override fun edi(edi: IResolvable) {
-        cdkBuilder.edi(edi.let(IResolvable::unwrap))
+        cdkBuilder.edi(edi.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param edi An EDI (electronic data interchange) configuration object. 
        */
       override fun edi(edi: EdiConfigurationProperty) {
-        cdkBuilder.edi(edi.let(EdiConfigurationProperty::unwrap))
+        cdkBuilder.edi(edi.let(EdiConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -762,7 +762,7 @@ public open class CfnCapability(
        * file, which is contained in an `S3Location` object. 
        */
       override fun inputLocation(inputLocation: IResolvable) {
-        cdkBuilder.inputLocation(inputLocation.let(IResolvable::unwrap))
+        cdkBuilder.inputLocation(inputLocation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -770,7 +770,7 @@ public open class CfnCapability(
        * file, which is contained in an `S3Location` object. 
        */
       override fun inputLocation(inputLocation: S3LocationProperty) {
-        cdkBuilder.inputLocation(inputLocation.let(S3LocationProperty::unwrap))
+        cdkBuilder.inputLocation(inputLocation.let(S3LocationProperty.Companion::unwrap))
       }
 
       /**
@@ -787,7 +787,7 @@ public open class CfnCapability(
        * output file, which is contained in an `S3Location` object. 
        */
       override fun outputLocation(outputLocation: IResolvable) {
-        cdkBuilder.outputLocation(outputLocation.let(IResolvable::unwrap))
+        cdkBuilder.outputLocation(outputLocation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -795,7 +795,7 @@ public open class CfnCapability(
        * output file, which is contained in an `S3Location` object. 
        */
       override fun outputLocation(outputLocation: S3LocationProperty) {
-        cdkBuilder.outputLocation(outputLocation.let(S3LocationProperty::unwrap))
+        cdkBuilder.outputLocation(outputLocation.let(S3LocationProperty.Companion::unwrap))
       }
 
       /**
@@ -819,7 +819,7 @@ public open class CfnCapability(
        * Currently, only `edi` is supported.
        */
       override fun type(type: IResolvable) {
-        cdkBuilder.type(type.let(IResolvable::unwrap))
+        cdkBuilder.type(type.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -827,7 +827,7 @@ public open class CfnCapability(
        * Currently, only `edi` is supported.
        */
       override fun type(type: EdiTypeProperty) {
-        cdkBuilder.type(type.let(EdiTypeProperty::unwrap))
+        cdkBuilder.type(type.let(EdiTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -975,7 +975,7 @@ public open class CfnCapability(
        * define specific business documents.
        */
       override fun x12Details(x12Details: IResolvable) {
-        cdkBuilder.x12Details(x12Details.let(IResolvable::unwrap))
+        cdkBuilder.x12Details(x12Details.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -985,7 +985,7 @@ public open class CfnCapability(
        * define specific business documents.
        */
       override fun x12Details(x12Details: X12DetailsProperty) {
-        cdkBuilder.x12Details(x12Details.let(X12DetailsProperty::unwrap))
+        cdkBuilder.x12Details(x12Details.let(X12DetailsProperty.Companion::unwrap))
       }
 
       /**

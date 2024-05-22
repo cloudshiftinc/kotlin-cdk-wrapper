@@ -97,8 +97,8 @@ public open class CfnApp(
     id: String,
     props: CfnAppProps,
   ) :
-      this(software.amazon.awscdk.services.amplify.CfnApp(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAppProps::unwrap))
+      this(software.amazon.awscdk.services.amplify.CfnApp(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAppProps.Companion::unwrap))
   )
 
   public constructor(
@@ -149,14 +149,14 @@ public open class CfnApp(
    * Sets the configuration for your automatic branch creation.
    */
   public open fun autoBranchCreationConfig(`value`: IResolvable) {
-    unwrap(this).setAutoBranchCreationConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoBranchCreationConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Sets the configuration for your automatic branch creation.
    */
   public open fun autoBranchCreationConfig(`value`: AutoBranchCreationConfigProperty) {
-    unwrap(this).setAutoBranchCreationConfig(`value`.let(AutoBranchCreationConfigProperty::unwrap))
+    unwrap(this).setAutoBranchCreationConfig(`value`.let(AutoBranchCreationConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -177,14 +177,14 @@ public open class CfnApp(
    * The credentials for basic authorization for an Amplify app.
    */
   public open fun basicAuthConfig(`value`: IResolvable) {
-    unwrap(this).setBasicAuthConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBasicAuthConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The credentials for basic authorization for an Amplify app.
    */
   public open fun basicAuthConfig(`value`: BasicAuthConfigProperty) {
-    unwrap(this).setBasicAuthConfig(`value`.let(BasicAuthConfigProperty::unwrap))
+    unwrap(this).setBasicAuthConfig(`value`.let(BasicAuthConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -228,7 +228,7 @@ public open class CfnApp(
    * The custom rewrite and redirect rules for an Amplify app.
    */
   public open fun customRules(`value`: IResolvable) {
-    unwrap(this).setCustomRules(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCustomRules(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -274,7 +274,7 @@ public open class CfnApp(
    * repository.
    */
   public open fun enableBranchAutoDeletion(`value`: IResolvable) {
-    unwrap(this).setEnableBranchAutoDeletion(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableBranchAutoDeletion(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -286,7 +286,7 @@ public open class CfnApp(
    * The environment variables for the Amplify app.
    */
   public open fun environmentVariables(`value`: IResolvable) {
-    unwrap(this).setEnvironmentVariables(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnvironmentVariables(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -322,7 +322,7 @@ public open class CfnApp(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -388,7 +388,7 @@ public open class CfnApp(
    * The tag for an Amplify app.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -708,7 +708,7 @@ public open class CfnApp(
      * @param autoBranchCreationConfig Sets the configuration for your automatic branch creation. 
      */
     override fun autoBranchCreationConfig(autoBranchCreationConfig: IResolvable) {
-      cdkBuilder.autoBranchCreationConfig(autoBranchCreationConfig.let(IResolvable::unwrap))
+      cdkBuilder.autoBranchCreationConfig(autoBranchCreationConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -719,7 +719,7 @@ public open class CfnApp(
      */
     override
         fun autoBranchCreationConfig(autoBranchCreationConfig: AutoBranchCreationConfigProperty) {
-      cdkBuilder.autoBranchCreationConfig(autoBranchCreationConfig.let(AutoBranchCreationConfigProperty::unwrap))
+      cdkBuilder.autoBranchCreationConfig(autoBranchCreationConfig.let(AutoBranchCreationConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -744,7 +744,7 @@ public open class CfnApp(
      * @param basicAuthConfig The credentials for basic authorization for an Amplify app. 
      */
     override fun basicAuthConfig(basicAuthConfig: IResolvable) {
-      cdkBuilder.basicAuthConfig(basicAuthConfig.let(IResolvable::unwrap))
+      cdkBuilder.basicAuthConfig(basicAuthConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -757,7 +757,7 @@ public open class CfnApp(
      * @param basicAuthConfig The credentials for basic authorization for an Amplify app. 
      */
     override fun basicAuthConfig(basicAuthConfig: BasicAuthConfigProperty) {
-      cdkBuilder.basicAuthConfig(basicAuthConfig.let(BasicAuthConfigProperty::unwrap))
+      cdkBuilder.basicAuthConfig(basicAuthConfig.let(BasicAuthConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -801,7 +801,7 @@ public open class CfnApp(
      * @param customRules The custom rewrite and redirect rules for an Amplify app. 
      */
     override fun customRules(customRules: IResolvable) {
-      cdkBuilder.customRules(customRules.let(IResolvable::unwrap))
+      cdkBuilder.customRules(customRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -853,7 +853,7 @@ public open class CfnApp(
      * delete a branch from your Git repository. 
      */
     override fun enableBranchAutoDeletion(enableBranchAutoDeletion: IResolvable) {
-      cdkBuilder.enableBranchAutoDeletion(enableBranchAutoDeletion.let(IResolvable::unwrap))
+      cdkBuilder.enableBranchAutoDeletion(enableBranchAutoDeletion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -868,7 +868,7 @@ public open class CfnApp(
      * @param environmentVariables The environment variables for the Amplify app. 
      */
     override fun environmentVariables(environmentVariables: IResolvable) {
-      cdkBuilder.environmentVariables(environmentVariables.let(IResolvable::unwrap))
+      cdkBuilder.environmentVariables(environmentVariables.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -978,7 +978,7 @@ public open class CfnApp(
      * @param tags The tag for an Amplify app. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1338,14 +1338,14 @@ public open class CfnApp(
        * @param basicAuthConfig Sets password protection for your auto created branch.
        */
       override fun basicAuthConfig(basicAuthConfig: IResolvable) {
-        cdkBuilder.basicAuthConfig(basicAuthConfig.let(IResolvable::unwrap))
+        cdkBuilder.basicAuthConfig(basicAuthConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param basicAuthConfig Sets password protection for your auto created branch.
        */
       override fun basicAuthConfig(basicAuthConfig: BasicAuthConfigProperty) {
-        cdkBuilder.basicAuthConfig(basicAuthConfig.let(BasicAuthConfigProperty::unwrap))
+        cdkBuilder.basicAuthConfig(basicAuthConfig.let(BasicAuthConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1374,7 +1374,7 @@ public open class CfnApp(
        * @param enableAutoBranchCreation Enables automated branch creation for the Amplify app.
        */
       override fun enableAutoBranchCreation(enableAutoBranchCreation: IResolvable) {
-        cdkBuilder.enableAutoBranchCreation(enableAutoBranchCreation.let(IResolvable::unwrap))
+        cdkBuilder.enableAutoBranchCreation(enableAutoBranchCreation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1388,7 +1388,7 @@ public open class CfnApp(
        * @param enableAutoBuild Enables auto building for the auto created branch.
        */
       override fun enableAutoBuild(enableAutoBuild: IResolvable) {
-        cdkBuilder.enableAutoBuild(enableAutoBuild.let(IResolvable::unwrap))
+        cdkBuilder.enableAutoBuild(enableAutoBuild.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1408,7 +1408,7 @@ public open class CfnApp(
        * changes can take up to 10 minutes to roll out.
        */
       override fun enablePerformanceMode(enablePerformanceMode: IResolvable) {
-        cdkBuilder.enablePerformanceMode(enablePerformanceMode.let(IResolvable::unwrap))
+        cdkBuilder.enablePerformanceMode(enablePerformanceMode.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1448,14 +1448,14 @@ public open class CfnApp(
        * Amplify Hosting User Guide* .
        */
       override fun enablePullRequestPreview(enablePullRequestPreview: IResolvable) {
-        cdkBuilder.enablePullRequestPreview(enablePullRequestPreview.let(IResolvable::unwrap))
+        cdkBuilder.enablePullRequestPreview(enablePullRequestPreview.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param environmentVariables The environment variables for the autocreated branch.
        */
       override fun environmentVariables(environmentVariables: IResolvable) {
-        cdkBuilder.environmentVariables(environmentVariables.let(IResolvable::unwrap))
+        cdkBuilder.environmentVariables(environmentVariables.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1728,7 +1728,7 @@ public open class CfnApp(
        * @param enableBasicAuth Enables basic authorization for the Amplify app's branches.
        */
       override fun enableBasicAuth(enableBasicAuth: IResolvable) {
-        cdkBuilder.enableBasicAuth(enableBasicAuth.let(IResolvable::unwrap))
+        cdkBuilder.enableBasicAuth(enableBasicAuth.let(IResolvable.Companion::unwrap))
       }
 
       /**

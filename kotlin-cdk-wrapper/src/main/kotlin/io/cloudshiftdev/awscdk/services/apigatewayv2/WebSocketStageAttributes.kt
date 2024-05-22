@@ -55,7 +55,7 @@ public interface WebSocketStageAttributes : StageAttributes {
      * @param api The API to which this stage is associated. 
      */
     override fun api(api: IWebSocketApi) {
-      cdkBuilder.api(api.let(IWebSocketApi::unwrap))
+      cdkBuilder.api(api.let(IWebSocketApi.Companion::unwrap))
     }
 
     /**

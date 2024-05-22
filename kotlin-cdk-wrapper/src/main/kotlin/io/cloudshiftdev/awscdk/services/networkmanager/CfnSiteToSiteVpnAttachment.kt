@@ -60,8 +60,8 @@ public open class CfnSiteToSiteVpnAttachment(
     id: String,
     props: CfnSiteToSiteVpnAttachmentProps,
   ) :
-      this(software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSiteToSiteVpnAttachmentProps::unwrap))
+      this(software.amazon.awscdk.services.networkmanager.CfnSiteToSiteVpnAttachment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSiteToSiteVpnAttachmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -150,7 +150,7 @@ public open class CfnSiteToSiteVpnAttachment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -162,14 +162,14 @@ public open class CfnSiteToSiteVpnAttachment(
    * Describes a proposed segment change.
    */
   public open fun proposedSegmentChange(`value`: IResolvable) {
-    unwrap(this).setProposedSegmentChange(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProposedSegmentChange(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Describes a proposed segment change.
    */
   public open fun proposedSegmentChange(`value`: ProposedSegmentChangeProperty) {
-    unwrap(this).setProposedSegmentChange(`value`.let(ProposedSegmentChangeProperty::unwrap))
+    unwrap(this).setProposedSegmentChange(`value`.let(ProposedSegmentChangeProperty.Companion::unwrap))
   }
 
   /**
@@ -195,7 +195,7 @@ public open class CfnSiteToSiteVpnAttachment(
    * Tags for the attachment.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -317,7 +317,7 @@ public open class CfnSiteToSiteVpnAttachment(
      * @param proposedSegmentChange Describes a proposed segment change. 
      */
     override fun proposedSegmentChange(proposedSegmentChange: IResolvable) {
-      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(IResolvable::unwrap))
+      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -329,7 +329,7 @@ public open class CfnSiteToSiteVpnAttachment(
      * @param proposedSegmentChange Describes a proposed segment change. 
      */
     override fun proposedSegmentChange(proposedSegmentChange: ProposedSegmentChangeProperty) {
-      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(ProposedSegmentChangeProperty::unwrap))
+      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(ProposedSegmentChangeProperty.Companion::unwrap))
     }
 
     /**
@@ -353,7 +353,7 @@ public open class CfnSiteToSiteVpnAttachment(
      * @param tags Tags for the attachment. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -499,7 +499,7 @@ public open class CfnSiteToSiteVpnAttachment(
        * @param tags The list of key-value tags that changed for the segment.
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**

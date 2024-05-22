@@ -259,7 +259,7 @@ public interface CfnAccountAuditConfigurationProps {
      * AuditCheckConfigurations](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-accountauditconfiguration-auditcheckconfigurations.html)
      */
     override fun auditCheckConfigurations(auditCheckConfigurations: IResolvable) {
-      cdkBuilder.auditCheckConfigurations(auditCheckConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.auditCheckConfigurations(auditCheckConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -279,7 +279,7 @@ public interface CfnAccountAuditConfigurationProps {
      */
     override
         fun auditCheckConfigurations(auditCheckConfigurations: CfnAccountAuditConfiguration.AuditCheckConfigurationsProperty) {
-      cdkBuilder.auditCheckConfigurations(auditCheckConfigurations.let(CfnAccountAuditConfiguration.AuditCheckConfigurationsProperty::unwrap))
+      cdkBuilder.auditCheckConfigurations(auditCheckConfigurations.let(CfnAccountAuditConfiguration.AuditCheckConfigurationsProperty.Companion::unwrap))
     }
 
     /**
@@ -310,7 +310,7 @@ public interface CfnAccountAuditConfigurationProps {
      */
     override
         fun auditNotificationTargetConfigurations(auditNotificationTargetConfigurations: IResolvable) {
-      cdkBuilder.auditNotificationTargetConfigurations(auditNotificationTargetConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.auditNotificationTargetConfigurations(auditNotificationTargetConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -319,7 +319,7 @@ public interface CfnAccountAuditConfigurationProps {
      */
     override
         fun auditNotificationTargetConfigurations(auditNotificationTargetConfigurations: CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty) {
-      cdkBuilder.auditNotificationTargetConfigurations(auditNotificationTargetConfigurations.let(CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty::unwrap))
+      cdkBuilder.auditNotificationTargetConfigurations(auditNotificationTargetConfigurations.let(CfnAccountAuditConfiguration.AuditNotificationTargetConfigurationsProperty.Companion::unwrap))
     }
 
     /**

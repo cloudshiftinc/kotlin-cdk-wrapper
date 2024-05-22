@@ -42,7 +42,7 @@ public interface IResourceWithPolicy : IResource {
      * @param statement 
      */
     override fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
-        unwrap(this).addToResourcePolicy(statement.let(PolicyStatement::unwrap)).let(AddToResourcePolicyResult::wrap)
+        unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
 
     /**
      * Add a statement to the resource's resource policy.
@@ -68,7 +68,7 @@ public interface IResourceWithPolicy : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**

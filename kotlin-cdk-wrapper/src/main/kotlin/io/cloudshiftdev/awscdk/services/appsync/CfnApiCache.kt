@@ -46,8 +46,8 @@ public open class CfnApiCache(
     id: String,
     props: CfnApiCacheProps,
   ) :
-      this(software.amazon.awscdk.services.appsync.CfnApiCache(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApiCacheProps::unwrap))
+      this(software.amazon.awscdk.services.appsync.CfnApiCache(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApiCacheProps.Companion::unwrap))
   )
 
   public constructor(
@@ -97,7 +97,7 @@ public open class CfnApiCache(
    * At-rest encryption flag for cache.
    */
   public open fun atRestEncryptionEnabled(`value`: IResolvable) {
-    unwrap(this).setAtRestEncryptionEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAtRestEncryptionEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -127,7 +127,7 @@ public open class CfnApiCache(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -146,7 +146,7 @@ public open class CfnApiCache(
    * Transit encryption flag when connecting to cache.
    */
   public open fun transitEncryptionEnabled(`value`: IResolvable) {
-    unwrap(this).setTransitEncryptionEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTransitEncryptionEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -351,7 +351,7 @@ public open class CfnApiCache(
      * @param atRestEncryptionEnabled At-rest encryption flag for cache. 
      */
     override fun atRestEncryptionEnabled(atRestEncryptionEnabled: IResolvable) {
-      cdkBuilder.atRestEncryptionEnabled(atRestEncryptionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.atRestEncryptionEnabled(atRestEncryptionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -395,7 +395,7 @@ public open class CfnApiCache(
      * @param transitEncryptionEnabled Transit encryption flag when connecting to cache. 
      */
     override fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable) {
-      cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**

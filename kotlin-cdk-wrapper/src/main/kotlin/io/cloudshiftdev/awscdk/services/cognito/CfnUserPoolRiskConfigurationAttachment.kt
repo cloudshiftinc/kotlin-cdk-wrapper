@@ -104,8 +104,8 @@ public open class CfnUserPoolRiskConfigurationAttachment(
     id: String,
     props: CfnUserPoolRiskConfigurationAttachmentProps,
   ) :
-      this(software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnUserPoolRiskConfigurationAttachmentProps::unwrap))
+      this(software.amazon.awscdk.services.cognito.CfnUserPoolRiskConfigurationAttachment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnUserPoolRiskConfigurationAttachmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -127,7 +127,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
    * `Actions` to take if there is an account takeover.
    */
   public open fun accountTakeoverRiskConfiguration(`value`: IResolvable) {
-    unwrap(this).setAccountTakeoverRiskConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccountTakeoverRiskConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -136,7 +136,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
    */
   public open
       fun accountTakeoverRiskConfiguration(`value`: AccountTakeoverRiskConfigurationTypeProperty) {
-    unwrap(this).setAccountTakeoverRiskConfiguration(`value`.let(AccountTakeoverRiskConfigurationTypeProperty::unwrap))
+    unwrap(this).setAccountTakeoverRiskConfiguration(`value`.let(AccountTakeoverRiskConfigurationTypeProperty.Companion::unwrap))
   }
 
   /**
@@ -173,7 +173,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
    * `EventAction` .
    */
   public open fun compromisedCredentialsRiskConfiguration(`value`: IResolvable) {
-    unwrap(this).setCompromisedCredentialsRiskConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCompromisedCredentialsRiskConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -182,7 +182,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
    */
   public open
       fun compromisedCredentialsRiskConfiguration(`value`: CompromisedCredentialsRiskConfigurationTypeProperty) {
-    unwrap(this).setCompromisedCredentialsRiskConfiguration(`value`.let(CompromisedCredentialsRiskConfigurationTypeProperty::unwrap))
+    unwrap(this).setCompromisedCredentialsRiskConfiguration(`value`.let(CompromisedCredentialsRiskConfigurationTypeProperty.Companion::unwrap))
   }
 
   /**
@@ -202,7 +202,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -214,14 +214,14 @@ public open class CfnUserPoolRiskConfigurationAttachment(
    * The configuration to override the risk decision.
    */
   public open fun riskExceptionConfiguration(`value`: IResolvable) {
-    unwrap(this).setRiskExceptionConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRiskExceptionConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration to override the risk decision.
    */
   public open fun riskExceptionConfiguration(`value`: RiskExceptionConfigurationTypeProperty) {
-    unwrap(this).setRiskExceptionConfiguration(`value`.let(RiskExceptionConfigurationTypeProperty::unwrap))
+    unwrap(this).setRiskExceptionConfiguration(`value`.let(RiskExceptionConfigurationTypeProperty.Companion::unwrap))
   }
 
   /**
@@ -390,7 +390,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
      * takeover. 
      */
     override fun accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration: IResolvable) {
-      cdkBuilder.accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -404,7 +404,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
      */
     override
         fun accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration: AccountTakeoverRiskConfigurationTypeProperty) {
-      cdkBuilder.accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration.let(AccountTakeoverRiskConfigurationTypeProperty::unwrap))
+      cdkBuilder.accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration.let(AccountTakeoverRiskConfigurationTypeProperty.Companion::unwrap))
     }
 
     /**
@@ -446,7 +446,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
      */
     override
         fun compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration: IResolvable) {
-      cdkBuilder.compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -459,7 +459,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
      */
     override
         fun compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration: CompromisedCredentialsRiskConfigurationTypeProperty) {
-      cdkBuilder.compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration.let(CompromisedCredentialsRiskConfigurationTypeProperty::unwrap))
+      cdkBuilder.compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration.let(CompromisedCredentialsRiskConfigurationTypeProperty.Companion::unwrap))
     }
 
     /**
@@ -484,7 +484,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
      * @param riskExceptionConfiguration The configuration to override the risk decision. 
      */
     override fun riskExceptionConfiguration(riskExceptionConfiguration: IResolvable) {
-      cdkBuilder.riskExceptionConfiguration(riskExceptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.riskExceptionConfiguration(riskExceptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -495,7 +495,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
      */
     override
         fun riskExceptionConfiguration(riskExceptionConfiguration: RiskExceptionConfigurationTypeProperty) {
-      cdkBuilder.riskExceptionConfiguration(riskExceptionConfiguration.let(RiskExceptionConfigurationTypeProperty::unwrap))
+      cdkBuilder.riskExceptionConfiguration(riskExceptionConfiguration.let(RiskExceptionConfigurationTypeProperty.Companion::unwrap))
     }
 
     /**
@@ -647,7 +647,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
        * @param notify Flag specifying whether to send a notification. 
        */
       override fun notify(notify: IResolvable) {
-        cdkBuilder.notify(notify.let(IResolvable::unwrap))
+        cdkBuilder.notify(notify.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -817,14 +817,14 @@ public open class CfnUserPoolRiskConfigurationAttachment(
        * @param highAction Action to take for a high risk.
        */
       override fun highAction(highAction: IResolvable) {
-        cdkBuilder.highAction(highAction.let(IResolvable::unwrap))
+        cdkBuilder.highAction(highAction.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param highAction Action to take for a high risk.
        */
       override fun highAction(highAction: AccountTakeoverActionTypeProperty) {
-        cdkBuilder.highAction(highAction.let(AccountTakeoverActionTypeProperty::unwrap))
+        cdkBuilder.highAction(highAction.let(AccountTakeoverActionTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -839,14 +839,14 @@ public open class CfnUserPoolRiskConfigurationAttachment(
        * @param lowAction Action to take for a low risk.
        */
       override fun lowAction(lowAction: IResolvable) {
-        cdkBuilder.lowAction(lowAction.let(IResolvable::unwrap))
+        cdkBuilder.lowAction(lowAction.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param lowAction Action to take for a low risk.
        */
       override fun lowAction(lowAction: AccountTakeoverActionTypeProperty) {
-        cdkBuilder.lowAction(lowAction.let(AccountTakeoverActionTypeProperty::unwrap))
+        cdkBuilder.lowAction(lowAction.let(AccountTakeoverActionTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -861,14 +861,14 @@ public open class CfnUserPoolRiskConfigurationAttachment(
        * @param mediumAction Action to take for a medium risk.
        */
       override fun mediumAction(mediumAction: IResolvable) {
-        cdkBuilder.mediumAction(mediumAction.let(IResolvable::unwrap))
+        cdkBuilder.mediumAction(mediumAction.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param mediumAction Action to take for a medium risk.
        */
       override fun mediumAction(mediumAction: AccountTakeoverActionTypeProperty) {
-        cdkBuilder.mediumAction(mediumAction.let(AccountTakeoverActionTypeProperty::unwrap))
+        cdkBuilder.mediumAction(mediumAction.let(AccountTakeoverActionTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -1050,14 +1050,14 @@ public open class CfnUserPoolRiskConfigurationAttachment(
        * @param actions Account takeover risk configuration actions. 
        */
       override fun actions(actions: IResolvable) {
-        cdkBuilder.actions(actions.let(IResolvable::unwrap))
+        cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param actions Account takeover risk configuration actions. 
        */
       override fun actions(actions: AccountTakeoverActionsTypeProperty) {
-        cdkBuilder.actions(actions.let(AccountTakeoverActionsTypeProperty::unwrap))
+        cdkBuilder.actions(actions.let(AccountTakeoverActionsTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -1072,14 +1072,14 @@ public open class CfnUserPoolRiskConfigurationAttachment(
        * @param notifyConfiguration The notify configuration used to construct email notifications.
        */
       override fun notifyConfiguration(notifyConfiguration: IResolvable) {
-        cdkBuilder.notifyConfiguration(notifyConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.notifyConfiguration(notifyConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param notifyConfiguration The notify configuration used to construct email notifications.
        */
       override fun notifyConfiguration(notifyConfiguration: NotifyConfigurationTypeProperty) {
-        cdkBuilder.notifyConfiguration(notifyConfiguration.let(NotifyConfigurationTypeProperty::unwrap))
+        cdkBuilder.notifyConfiguration(notifyConfiguration.let(NotifyConfigurationTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -1301,14 +1301,14 @@ public open class CfnUserPoolRiskConfigurationAttachment(
        * @param actions The compromised credentials risk configuration actions. 
        */
       override fun actions(actions: IResolvable) {
-        cdkBuilder.actions(actions.let(IResolvable::unwrap))
+        cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param actions The compromised credentials risk configuration actions. 
        */
       override fun actions(actions: CompromisedCredentialsActionsTypeProperty) {
-        cdkBuilder.actions(actions.let(CompromisedCredentialsActionsTypeProperty::unwrap))
+        cdkBuilder.actions(actions.let(CompromisedCredentialsActionsTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -1556,14 +1556,14 @@ public open class CfnUserPoolRiskConfigurationAttachment(
        * @param blockEmail Email template used when a detected risk event is blocked.
        */
       override fun blockEmail(blockEmail: IResolvable) {
-        cdkBuilder.blockEmail(blockEmail.let(IResolvable::unwrap))
+        cdkBuilder.blockEmail(blockEmail.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param blockEmail Email template used when a detected risk event is blocked.
        */
       override fun blockEmail(blockEmail: NotifyEmailTypeProperty) {
-        cdkBuilder.blockEmail(blockEmail.let(NotifyEmailTypeProperty::unwrap))
+        cdkBuilder.blockEmail(blockEmail.let(NotifyEmailTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -1588,7 +1588,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
        * challenged as part of a detected risk.
        */
       override fun mfaEmail(mfaEmail: IResolvable) {
-        cdkBuilder.mfaEmail(mfaEmail.let(IResolvable::unwrap))
+        cdkBuilder.mfaEmail(mfaEmail.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1596,7 +1596,7 @@ public open class CfnUserPoolRiskConfigurationAttachment(
        * challenged as part of a detected risk.
        */
       override fun mfaEmail(mfaEmail: NotifyEmailTypeProperty) {
-        cdkBuilder.mfaEmail(mfaEmail.let(NotifyEmailTypeProperty::unwrap))
+        cdkBuilder.mfaEmail(mfaEmail.let(NotifyEmailTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -1612,14 +1612,14 @@ public open class CfnUserPoolRiskConfigurationAttachment(
        * @param noActionEmail The email template used when a detected risk event is allowed.
        */
       override fun noActionEmail(noActionEmail: IResolvable) {
-        cdkBuilder.noActionEmail(noActionEmail.let(IResolvable::unwrap))
+        cdkBuilder.noActionEmail(noActionEmail.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param noActionEmail The email template used when a detected risk event is allowed.
        */
       override fun noActionEmail(noActionEmail: NotifyEmailTypeProperty) {
-        cdkBuilder.noActionEmail(noActionEmail.let(NotifyEmailTypeProperty::unwrap))
+        cdkBuilder.noActionEmail(noActionEmail.let(NotifyEmailTypeProperty.Companion::unwrap))
       }
 
       /**

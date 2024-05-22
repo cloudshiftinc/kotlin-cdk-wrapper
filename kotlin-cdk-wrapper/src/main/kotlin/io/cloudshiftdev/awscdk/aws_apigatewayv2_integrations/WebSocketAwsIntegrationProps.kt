@@ -197,14 +197,14 @@ public interface WebSocketAwsIntegrationProps {
      * @param contentHandling Specifies how to handle response payload content type conversions.
      */
     override fun contentHandling(contentHandling: ContentHandling) {
-      cdkBuilder.contentHandling(contentHandling.let(ContentHandling::unwrap))
+      cdkBuilder.contentHandling(contentHandling.let(ContentHandling.Companion::unwrap))
     }
 
     /**
      * @param credentialsRole Specifies the credentials role required for the integration.
      */
     override fun credentialsRole(credentialsRole: IRole) {
-      cdkBuilder.credentialsRole(credentialsRole.let(IRole::unwrap))
+      cdkBuilder.credentialsRole(credentialsRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -229,7 +229,7 @@ public interface WebSocketAwsIntegrationProps {
      * NEVER.
      */
     override fun passthroughBehavior(passthroughBehavior: PassthroughBehavior) {
-      cdkBuilder.passthroughBehavior(passthroughBehavior.let(PassthroughBehavior::unwrap))
+      cdkBuilder.passthroughBehavior(passthroughBehavior.let(PassthroughBehavior.Companion::unwrap))
     }
 
     /**
@@ -266,7 +266,7 @@ public interface WebSocketAwsIntegrationProps {
      * Must be between 50 milliseconds and 29 seconds.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build():

@@ -104,7 +104,7 @@ public interface CfnAccessPointProps {
      * Point. 
      */
     override fun objectLambdaConfiguration(objectLambdaConfiguration: IResolvable) {
-      cdkBuilder.objectLambdaConfiguration(objectLambdaConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.objectLambdaConfiguration(objectLambdaConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -113,7 +113,7 @@ public interface CfnAccessPointProps {
      */
     override
         fun objectLambdaConfiguration(objectLambdaConfiguration: CfnAccessPoint.ObjectLambdaConfigurationProperty) {
-      cdkBuilder.objectLambdaConfiguration(objectLambdaConfiguration.let(CfnAccessPoint.ObjectLambdaConfigurationProperty::unwrap))
+      cdkBuilder.objectLambdaConfiguration(objectLambdaConfiguration.let(CfnAccessPoint.ObjectLambdaConfigurationProperty.Companion::unwrap))
     }
 
     /**

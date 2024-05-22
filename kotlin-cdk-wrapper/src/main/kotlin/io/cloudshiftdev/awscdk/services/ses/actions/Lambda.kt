@@ -36,7 +36,7 @@ public open class Lambda(
   cdkObject: software.amazon.awscdk.services.ses.actions.Lambda,
 ) : CdkObject(cdkObject), IReceiptRuleAction {
   public constructor(props: LambdaProps) :
-      this(software.amazon.awscdk.services.ses.actions.Lambda(props.let(LambdaProps::unwrap))
+      this(software.amazon.awscdk.services.ses.actions.Lambda(props.let(LambdaProps.Companion::unwrap))
   )
 
   public constructor(props: LambdaProps.Builder.() -> Unit) : this(LambdaProps(props)
@@ -48,7 +48,7 @@ public open class Lambda(
    * @param rule 
    */
   public override fun bind(rule: IReceiptRule): ReceiptRuleActionConfig =
-      unwrap(this).bind(rule.let(IReceiptRule::unwrap)).let(ReceiptRuleActionConfig::wrap)
+      unwrap(this).bind(rule.let(IReceiptRule.Companion::unwrap)).let(ReceiptRuleActionConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ses.actions.Lambda].
@@ -91,7 +91,7 @@ public open class Lambda(
      * @param function The Lambda function to invoke. 
      */
     override fun function(function: IFunction) {
-      cdkBuilder.function(function.let(IFunction::unwrap))
+      cdkBuilder.function(function.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -102,7 +102,7 @@ public open class Lambda(
      * @param invocationType The invocation type of the Lambda function. 
      */
     override fun invocationType(invocationType: LambdaInvocationType) {
-      cdkBuilder.invocationType(invocationType.let(LambdaInvocationType::unwrap))
+      cdkBuilder.invocationType(invocationType.let(LambdaInvocationType.Companion::unwrap))
     }
 
     /**
@@ -113,7 +113,7 @@ public open class Lambda(
      * @param topic The SNS topic to notify when the Lambda action is taken. 
      */
     override fun topic(topic: ITopic) {
-      cdkBuilder.topic(topic.let(ITopic::unwrap))
+      cdkBuilder.topic(topic.let(ITopic.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ses.actions.Lambda = cdkBuilder.build()

@@ -377,7 +377,7 @@ public interface LifecycleRule {
      */
     override
         fun abortIncompleteMultipartUploadAfter(abortIncompleteMultipartUploadAfter: Duration) {
-      cdkBuilder.abortIncompleteMultipartUploadAfter(abortIncompleteMultipartUploadAfter.let(Duration::unwrap))
+      cdkBuilder.abortIncompleteMultipartUploadAfter(abortIncompleteMultipartUploadAfter.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -398,7 +398,7 @@ public interface LifecycleRule {
      * does not represent a whole number of days will result in a runtime or deployment error.
      */
     override fun expiration(expiration: Duration) {
-      cdkBuilder.expiration(expiration.let(Duration::unwrap))
+      cdkBuilder.expiration(expiration.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -444,7 +444,7 @@ public interface LifecycleRule {
      * does not represent a whole number of days will result in a runtime or deployment error.
      */
     override fun noncurrentVersionExpiration(noncurrentVersionExpiration: Duration) {
-      cdkBuilder.noncurrentVersionExpiration(noncurrentVersionExpiration.let(Duration::unwrap))
+      cdkBuilder.noncurrentVersionExpiration(noncurrentVersionExpiration.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -457,7 +457,7 @@ public interface LifecycleRule {
      */
     override
         fun noncurrentVersionTransitions(noncurrentVersionTransitions: List<NoncurrentVersionTransition>) {
-      cdkBuilder.noncurrentVersionTransitions(noncurrentVersionTransitions.map(NoncurrentVersionTransition::unwrap))
+      cdkBuilder.noncurrentVersionTransitions(noncurrentVersionTransitions.map(NoncurrentVersionTransition.Companion::unwrap))
     }
 
     /**
@@ -524,7 +524,7 @@ public interface LifecycleRule {
      * expiration time must also be later than the transition time.
      */
     override fun transitions(transitions: List<Transition>) {
-      cdkBuilder.transitions(transitions.map(Transition::unwrap))
+      cdkBuilder.transitions(transitions.map(Transition.Companion::unwrap))
     }
 
     /**

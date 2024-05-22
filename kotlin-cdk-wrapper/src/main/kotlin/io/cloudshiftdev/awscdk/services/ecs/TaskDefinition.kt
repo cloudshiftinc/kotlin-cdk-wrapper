@@ -50,8 +50,8 @@ public open class TaskDefinition(
     id: String,
     props: TaskDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.TaskDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(TaskDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.TaskDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(TaskDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -69,7 +69,7 @@ public open class TaskDefinition(
    */
   public open fun addContainer(id: String, props: ContainerDefinitionOptions): ContainerDefinition =
       unwrap(this).addContainer(id,
-      props.let(ContainerDefinitionOptions::unwrap)).let(ContainerDefinition::wrap)
+      props.let(ContainerDefinitionOptions.Companion::unwrap)).let(ContainerDefinition::wrap)
 
   /**
    * Adds a new container to the task definition.
@@ -91,7 +91,7 @@ public open class TaskDefinition(
    * @param extension 
    */
   public open fun addExtension(extension: ITaskDefinitionExtension) {
-    unwrap(this).addExtension(extension.let(ITaskDefinitionExtension::unwrap))
+    unwrap(this).addExtension(extension.let(ITaskDefinitionExtension.Companion::unwrap))
   }
 
   /**
@@ -102,7 +102,7 @@ public open class TaskDefinition(
    */
   public open fun addFirelensLogRouter(id: String, props: FirelensLogRouterDefinitionOptions):
       FirelensLogRouter = unwrap(this).addFirelensLogRouter(id,
-      props.let(FirelensLogRouterDefinitionOptions::unwrap)).let(FirelensLogRouter::wrap)
+      props.let(FirelensLogRouterDefinitionOptions.Companion::unwrap)).let(FirelensLogRouter::wrap)
 
   /**
    * Adds a firelens log router to the task definition.
@@ -122,7 +122,7 @@ public open class TaskDefinition(
    * @param inferenceAccelerator 
    */
   public open fun addInferenceAccelerator(inferenceAccelerator: InferenceAccelerator) {
-    unwrap(this).addInferenceAccelerator(inferenceAccelerator.let(InferenceAccelerator::unwrap))
+    unwrap(this).addInferenceAccelerator(inferenceAccelerator.let(InferenceAccelerator.Companion::unwrap))
   }
 
   /**
@@ -142,7 +142,7 @@ public open class TaskDefinition(
    * @param constraint 
    */
   public open fun addPlacementConstraint(constraint: PlacementConstraint) {
-    unwrap(this).addPlacementConstraint(constraint.let(PlacementConstraint::unwrap))
+    unwrap(this).addPlacementConstraint(constraint.let(PlacementConstraint.Companion::unwrap))
   }
 
   /**
@@ -151,7 +151,7 @@ public open class TaskDefinition(
    * @param statement 
    */
   public open fun addToExecutionRolePolicy(statement: PolicyStatement) {
-    unwrap(this).addToExecutionRolePolicy(statement.let(PolicyStatement::unwrap))
+    unwrap(this).addToExecutionRolePolicy(statement.let(PolicyStatement.Companion::unwrap))
   }
 
   /**
@@ -170,7 +170,7 @@ public open class TaskDefinition(
    * @param statement 
    */
   public open fun addToTaskRolePolicy(statement: PolicyStatement) {
-    unwrap(this).addToTaskRolePolicy(statement.let(PolicyStatement::unwrap))
+    unwrap(this).addToTaskRolePolicy(statement.let(PolicyStatement.Companion::unwrap))
   }
 
   /**
@@ -189,7 +189,7 @@ public open class TaskDefinition(
    * @param volume 
    */
   public open fun addVolume(volume: Volume) {
-    unwrap(this).addVolume(volume.let(Volume::unwrap))
+    unwrap(this).addVolume(volume.let(Volume.Companion::unwrap))
   }
 
   /**
@@ -225,7 +225,7 @@ public open class TaskDefinition(
    * container.
    */
   public open fun defaultContainer(`value`: ContainerDefinition) {
-    unwrap(this).setDefaultContainer(`value`.let(ContainerDefinition::unwrap))
+    unwrap(this).setDefaultContainer(`value`.let(ContainerDefinition.Companion::unwrap))
   }
 
   /**
@@ -275,7 +275,7 @@ public open class TaskDefinition(
    * @param grantee Principal to grant consume rights to. 
    */
   public open fun grantRun(grantee: IGrantable): Grant =
-      unwrap(this).grantRun(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantRun(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Public getter method to access list of inference accelerators attached to the instance.
@@ -313,8 +313,11 @@ public open class TaskDefinition(
    * The process namespace to use for the containers in the task.
    *
    * Only supported for tasks that are hosted on AWS Fargate if the tasks
-   * are using platform version 1.4.0 or later (Linux).
-   * Not supported in Windows containers.
+   * are using platform version 1.4.0 or later (Linux). Not supported in
+   * Windows containers. If pidMode is specified for a Fargate task,
+   * then runtimePlatform.operatingSystemFamily must also be specified.  For more
+   * information, see [Task Definition
+   * Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_definition_pidmode).
    */
   public open fun pidMode(): PidMode? = unwrap(this).getPidMode()?.let(PidMode::wrap)
 
@@ -501,8 +504,12 @@ public open class TaskDefinition(
      * The process namespace to use for the containers in the task.
      *
      * Only supported for tasks that are hosted on AWS Fargate if the tasks
-     * are using platform version 1.4.0 or later (Linux).
-     * Not supported in Windows containers.
+     * are using platform version 1.4.0 or later (Linux). Only the TASK option
+     * is supported for Linux-based Fargate containers. Not supported in Windows
+     * containers. If pidMode is specified for a Fargate task, then
+     * runtimePlatform.operatingSystemFamily must also be specified.  For more
+     * information, see [Task Definition
+     * Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_definition_pidmode).
      *
      * Default: - PidMode used by the task is not specified
      *
@@ -622,7 +629,7 @@ public open class TaskDefinition(
      * @param compatibility The task launch type compatiblity requirement. 
      */
     override fun compatibility(compatibility: Compatibility) {
-      cdkBuilder.compatibility(compatibility.let(Compatibility::unwrap))
+      cdkBuilder.compatibility(compatibility.let(Compatibility.Companion::unwrap))
     }
 
     /**
@@ -687,7 +694,7 @@ public open class TaskDefinition(
      * permission to call AWS APIs on your behalf. 
      */
     override fun executionRole(executionRole: IRole) {
-      cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
+      cdkBuilder.executionRole(executionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -714,7 +721,7 @@ public open class TaskDefinition(
      * task. 
      */
     override fun inferenceAccelerators(inferenceAccelerators: List<InferenceAccelerator>) {
-      cdkBuilder.inferenceAccelerators(inferenceAccelerators.map(InferenceAccelerator::unwrap))
+      cdkBuilder.inferenceAccelerators(inferenceAccelerators.map(InferenceAccelerator.Companion::unwrap))
     }
 
     /**
@@ -740,7 +747,7 @@ public open class TaskDefinition(
      * @param ipcMode The IPC resource namespace to use for the containers in the task. 
      */
     override fun ipcMode(ipcMode: IpcMode) {
-      cdkBuilder.ipcMode(ipcMode.let(IpcMode::unwrap))
+      cdkBuilder.ipcMode(ipcMode.let(IpcMode.Companion::unwrap))
     }
 
     /**
@@ -788,22 +795,26 @@ public open class TaskDefinition(
      * @param networkMode The networking mode to use for the containers in the task. 
      */
     override fun networkMode(networkMode: NetworkMode) {
-      cdkBuilder.networkMode(networkMode.let(NetworkMode::unwrap))
+      cdkBuilder.networkMode(networkMode.let(NetworkMode.Companion::unwrap))
     }
 
     /**
      * The process namespace to use for the containers in the task.
      *
      * Only supported for tasks that are hosted on AWS Fargate if the tasks
-     * are using platform version 1.4.0 or later (Linux).
-     * Not supported in Windows containers.
+     * are using platform version 1.4.0 or later (Linux). Only the TASK option
+     * is supported for Linux-based Fargate containers. Not supported in Windows
+     * containers. If pidMode is specified for a Fargate task, then
+     * runtimePlatform.operatingSystemFamily must also be specified.  For more
+     * information, see [Task Definition
+     * Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_definition_pidmode).
      *
      * Default: - PidMode used by the task is not specified
      *
      * @param pidMode The process namespace to use for the containers in the task. 
      */
     override fun pidMode(pidMode: PidMode) {
-      cdkBuilder.pidMode(pidMode.let(PidMode::unwrap))
+      cdkBuilder.pidMode(pidMode.let(PidMode.Companion::unwrap))
     }
 
     /**
@@ -819,7 +830,7 @@ public open class TaskDefinition(
      * @param placementConstraints The placement constraints to use for tasks in the service. 
      */
     override fun placementConstraints(placementConstraints: List<PlacementConstraint>) {
-      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint::unwrap))
+      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint.Companion::unwrap))
     }
 
     /**
@@ -845,7 +856,7 @@ public open class TaskDefinition(
      * @param proxyConfiguration The configuration details for the App Mesh proxy. 
      */
     override fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
-      cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfiguration::unwrap))
+      cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfiguration.Companion::unwrap))
     }
 
     /**
@@ -858,7 +869,7 @@ public open class TaskDefinition(
      * @param runtimePlatform The operating system that your task definitions are running on. 
      */
     override fun runtimePlatform(runtimePlatform: RuntimePlatform) {
-      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform::unwrap))
+      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform.Companion::unwrap))
     }
 
     /**
@@ -885,7 +896,7 @@ public open class TaskDefinition(
      * call AWS APIs on your behalf. 
      */
     override fun taskRole(taskRole: IRole) {
-      cdkBuilder.taskRole(taskRole.let(IRole::unwrap))
+      cdkBuilder.taskRole(taskRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -900,7 +911,7 @@ public open class TaskDefinition(
      * @param volumes The list of volume definitions for the task. 
      */
     override fun volumes(volumes: List<Volume>) {
-      cdkBuilder.volumes(volumes.map(Volume::unwrap))
+      cdkBuilder.volumes(volumes.map(Volume.Companion::unwrap))
     }
 
     /**
@@ -925,7 +936,7 @@ public open class TaskDefinition(
       id: String,
       taskDefinitionArn: String,
     ): ITaskDefinition =
-        software.amazon.awscdk.services.ecs.TaskDefinition.fromTaskDefinitionArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ecs.TaskDefinition.fromTaskDefinitionArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, taskDefinitionArn).let(ITaskDefinition::wrap)
 
     public fun fromTaskDefinitionAttributes(
@@ -933,8 +944,8 @@ public open class TaskDefinition(
       id: String,
       attrs: TaskDefinitionAttributes,
     ): ITaskDefinition =
-        software.amazon.awscdk.services.ecs.TaskDefinition.fromTaskDefinitionAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(TaskDefinitionAttributes::unwrap)).let(ITaskDefinition::wrap)
+        software.amazon.awscdk.services.ecs.TaskDefinition.fromTaskDefinitionAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(TaskDefinitionAttributes.Companion::unwrap)).let(ITaskDefinition::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ed824df4eec5e5f45c3bcd7ff84cc08d918cf494c5b6d021f8cb2e318fba063c")

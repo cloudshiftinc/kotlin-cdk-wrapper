@@ -36,7 +36,7 @@ public open class Pass(
   cdkObject: software.amazon.awscdk.services.stepfunctions.Pass,
 ) : State(cdkObject), INextable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.stepfunctions.Pass(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.stepfunctions.Pass(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -45,8 +45,8 @@ public open class Pass(
     id: String,
     props: PassProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.Pass(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(PassProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.Pass(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(PassProps.Companion::unwrap))
   )
 
   public constructor(
@@ -68,7 +68,7 @@ public open class Pass(
    * @param next 
    */
   public override fun next(next: IChainable): Chain =
-      unwrap(this).next(next.let(IChainable::unwrap)).let(Chain::wrap)
+      unwrap(this).next(next.let(IChainable.Companion::unwrap)).let(Chain::wrap)
 
   /**
    * Return the Amazon States Language object for this state.
@@ -232,7 +232,7 @@ public open class Pass(
      * @param result If given, treat as the result of this operation. 
      */
     override fun result(result: Result) {
-      cdkBuilder.result(result.let(Result::unwrap))
+      cdkBuilder.result(result.let(Result.Companion::unwrap))
     }
 
     /**

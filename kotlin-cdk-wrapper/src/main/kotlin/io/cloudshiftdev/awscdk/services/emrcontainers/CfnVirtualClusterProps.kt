@@ -123,14 +123,14 @@ public interface CfnVirtualClusterProps {
      * @param containerProvider The container provider of the virtual cluster. 
      */
     override fun containerProvider(containerProvider: IResolvable) {
-      cdkBuilder.containerProvider(containerProvider.let(IResolvable::unwrap))
+      cdkBuilder.containerProvider(containerProvider.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param containerProvider The container provider of the virtual cluster. 
      */
     override fun containerProvider(containerProvider: CfnVirtualCluster.ContainerProviderProperty) {
-      cdkBuilder.containerProvider(containerProvider.let(CfnVirtualCluster.ContainerProviderProperty::unwrap))
+      cdkBuilder.containerProvider(containerProvider.let(CfnVirtualCluster.ContainerProviderProperty.Companion::unwrap))
     }
 
     /**
@@ -156,7 +156,7 @@ public interface CfnVirtualClusterProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

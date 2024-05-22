@@ -41,7 +41,7 @@ public open class ManualApprovalStep(
 
   public constructor(id: String, props: ManualApprovalStepProps) :
       this(software.amazon.awscdk.pipelines.ManualApprovalStep(id,
-      props.let(ManualApprovalStepProps::unwrap))
+      props.let(ManualApprovalStepProps.Companion::unwrap))
   )
 
   public constructor(id: String, props: ManualApprovalStepProps.Builder.() -> Unit) : this(id,

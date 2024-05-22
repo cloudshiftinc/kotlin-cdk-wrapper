@@ -84,7 +84,7 @@ public interface AuroraPostgresClusterEngineProps {
      * @param version The version of the Aurora PostgreSQL cluster engine. 
      */
     override fun version(version: AuroraPostgresEngineVersion) {
-      cdkBuilder.version(version.let(AuroraPostgresEngineVersion::unwrap))
+      cdkBuilder.version(version.let(AuroraPostgresEngineVersion.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.AuroraPostgresClusterEngineProps =

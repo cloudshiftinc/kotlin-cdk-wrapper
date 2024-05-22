@@ -179,14 +179,14 @@ public interface CfnEndpointProps {
      * @param failedReason The failure reason, if any, for a create or delete endpoint operation.
      */
     override fun failedReason(failedReason: IResolvable) {
-      cdkBuilder.failedReason(failedReason.let(IResolvable::unwrap))
+      cdkBuilder.failedReason(failedReason.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param failedReason The failure reason, if any, for a create or delete endpoint operation.
      */
     override fun failedReason(failedReason: CfnEndpoint.FailedReasonProperty) {
-      cdkBuilder.failedReason(failedReason.let(CfnEndpoint.FailedReasonProperty::unwrap))
+      cdkBuilder.failedReason(failedReason.let(CfnEndpoint.FailedReasonProperty.Companion::unwrap))
     }
 
     /**

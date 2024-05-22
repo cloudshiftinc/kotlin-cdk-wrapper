@@ -38,7 +38,7 @@ public open class WebSocketLambdaIntegration(
 ) : WebSocketRouteIntegration(cdkObject) {
   public constructor(id: String, handler: CloudshiftdevAwscdkServicesLambdaIFunction) :
       this(software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketLambdaIntegration(id,
-      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap))
+      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap))
   )
 
   public constructor(
@@ -46,8 +46,8 @@ public open class WebSocketLambdaIntegration(
     handler: CloudshiftdevAwscdkServicesLambdaIFunction,
     props: WebSocketLambdaIntegrationProps,
   ) : this(software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketLambdaIntegration(id,
-      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap),
-      props.let(WebSocketLambdaIntegrationProps::unwrap))
+      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap),
+      props.let(WebSocketLambdaIntegrationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -64,7 +64,7 @@ public open class WebSocketLambdaIntegration(
    */
   public override fun bind(options: WebSocketRouteIntegrationBindOptions):
       WebSocketRouteIntegrationConfig =
-      unwrap(this).bind(options.let(WebSocketRouteIntegrationBindOptions::unwrap)).let(WebSocketRouteIntegrationConfig::wrap)
+      unwrap(this).bind(options.let(WebSocketRouteIntegrationBindOptions.Companion::unwrap)).let(WebSocketRouteIntegrationConfig::wrap)
 
   /**
    * Bind this integration to the route.
@@ -123,7 +123,7 @@ public open class WebSocketLambdaIntegration(
      * @param contentHandling Specifies how to handle response payload content type conversions. 
      */
     override fun contentHandling(contentHandling: ContentHandling) {
-      cdkBuilder.contentHandling(contentHandling.let(ContentHandling::unwrap))
+      cdkBuilder.contentHandling(contentHandling.let(ContentHandling.Companion::unwrap))
     }
 
     /**
@@ -137,7 +137,7 @@ public open class WebSocketLambdaIntegration(
      * response. 
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build():

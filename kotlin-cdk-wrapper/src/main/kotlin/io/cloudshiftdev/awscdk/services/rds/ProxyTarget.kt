@@ -40,14 +40,14 @@ public open class ProxyTarget(
    * @param proxy 
    */
   public open fun bind(proxy: DatabaseProxy): ProxyTargetConfig =
-      unwrap(this).bind(proxy.let(DatabaseProxy::unwrap)).let(ProxyTargetConfig::wrap)
+      unwrap(this).bind(proxy.let(DatabaseProxy.Companion::unwrap)).let(ProxyTargetConfig::wrap)
 
   public companion object {
     public fun fromCluster(cluster: IDatabaseCluster): ProxyTarget =
-        software.amazon.awscdk.services.rds.ProxyTarget.fromCluster(cluster.let(IDatabaseCluster::unwrap)).let(ProxyTarget::wrap)
+        software.amazon.awscdk.services.rds.ProxyTarget.fromCluster(cluster.let(IDatabaseCluster.Companion::unwrap)).let(ProxyTarget::wrap)
 
     public fun fromInstance(instance: IDatabaseInstance): ProxyTarget =
-        software.amazon.awscdk.services.rds.ProxyTarget.fromInstance(instance.let(IDatabaseInstance::unwrap)).let(ProxyTarget::wrap)
+        software.amazon.awscdk.services.rds.ProxyTarget.fromInstance(instance.let(IDatabaseInstance.Companion::unwrap)).let(ProxyTarget::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.ProxyTarget): ProxyTarget =
         ProxyTarget(cdkObject)

@@ -113,8 +113,8 @@ public open class CfnEventSourceMapping(
     id: String,
     props: CfnEventSourceMappingProps,
   ) :
-      this(software.amazon.awscdk.services.lambda.CfnEventSourceMapping(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEventSourceMappingProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.CfnEventSourceMapping(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEventSourceMappingProps.Companion::unwrap))
   )
 
   public constructor(
@@ -136,7 +136,7 @@ public open class CfnEventSourceMapping(
    * event source.
    */
   public open fun amazonManagedKafkaEventSourceConfig(`value`: IResolvable) {
-    unwrap(this).setAmazonManagedKafkaEventSourceConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAmazonManagedKafkaEventSourceConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -145,7 +145,7 @@ public open class CfnEventSourceMapping(
    */
   public open
       fun amazonManagedKafkaEventSourceConfig(`value`: AmazonManagedKafkaEventSourceConfigProperty) {
-    unwrap(this).setAmazonManagedKafkaEventSourceConfig(`value`.let(AmazonManagedKafkaEventSourceConfigProperty::unwrap))
+    unwrap(this).setAmazonManagedKafkaEventSourceConfig(`value`.let(AmazonManagedKafkaEventSourceConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -197,7 +197,7 @@ public open class CfnEventSourceMapping(
    * and retry.
    */
   public open fun bisectBatchOnFunctionError(`value`: IResolvable) {
-    unwrap(this).setBisectBatchOnFunctionError(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBisectBatchOnFunctionError(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -211,7 +211,7 @@ public open class CfnEventSourceMapping(
    * configuration object that specifies the destination of an event after Lambda processes it.
    */
   public open fun destinationConfig(`value`: IResolvable) {
-    unwrap(this).setDestinationConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDestinationConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -219,7 +219,7 @@ public open class CfnEventSourceMapping(
    * configuration object that specifies the destination of an event after Lambda processes it.
    */
   public open fun destinationConfig(`value`: DestinationConfigProperty) {
-    unwrap(this).setDestinationConfig(`value`.let(DestinationConfigProperty::unwrap))
+    unwrap(this).setDestinationConfig(`value`.let(DestinationConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -241,14 +241,14 @@ public open class CfnEventSourceMapping(
    * Specific configuration settings for a DocumentDB event source.
    */
   public open fun documentDbEventSourceConfig(`value`: IResolvable) {
-    unwrap(this).setDocumentDbEventSourceConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDocumentDbEventSourceConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specific configuration settings for a DocumentDB event source.
    */
   public open fun documentDbEventSourceConfig(`value`: DocumentDBEventSourceConfigProperty) {
-    unwrap(this).setDocumentDbEventSourceConfig(`value`.let(DocumentDBEventSourceConfigProperty::unwrap))
+    unwrap(this).setDocumentDbEventSourceConfig(`value`.let(DocumentDBEventSourceConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -282,7 +282,7 @@ public open class CfnEventSourceMapping(
    * When false, Lambda pauses polling and invocation.
    */
   public open fun enabled(`value`: IResolvable) {
-    unwrap(this).setEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -308,7 +308,7 @@ public open class CfnEventSourceMapping(
    * event.
    */
   public open fun filterCriteria(`value`: IResolvable) {
-    unwrap(this).setFilterCriteria(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFilterCriteria(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -316,7 +316,7 @@ public open class CfnEventSourceMapping(
    * event.
    */
   public open fun filterCriteria(`value`: FilterCriteriaProperty) {
-    unwrap(this).setFilterCriteria(`value`.let(FilterCriteriaProperty::unwrap))
+    unwrap(this).setFilterCriteria(`value`.let(FilterCriteriaProperty.Companion::unwrap))
   }
 
   /**
@@ -365,7 +365,7 @@ public open class CfnEventSourceMapping(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -447,14 +447,14 @@ public open class CfnEventSourceMapping(
    * (Amazon SQS only) The scaling configuration for the event source.
    */
   public open fun scalingConfig(`value`: IResolvable) {
-    unwrap(this).setScalingConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setScalingConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * (Amazon SQS only) The scaling configuration for the event source.
    */
   public open fun scalingConfig(`value`: ScalingConfigProperty) {
-    unwrap(this).setScalingConfig(`value`.let(ScalingConfigProperty::unwrap))
+    unwrap(this).setScalingConfig(`value`.let(ScalingConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -474,14 +474,14 @@ public open class CfnEventSourceMapping(
    * The self-managed Apache Kafka cluster for your event source.
    */
   public open fun selfManagedEventSource(`value`: IResolvable) {
-    unwrap(this).setSelfManagedEventSource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSelfManagedEventSource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The self-managed Apache Kafka cluster for your event source.
    */
   public open fun selfManagedEventSource(`value`: SelfManagedEventSourceProperty) {
-    unwrap(this).setSelfManagedEventSource(`value`.let(SelfManagedEventSourceProperty::unwrap))
+    unwrap(this).setSelfManagedEventSource(`value`.let(SelfManagedEventSourceProperty.Companion::unwrap))
   }
 
   /**
@@ -503,7 +503,7 @@ public open class CfnEventSourceMapping(
    * Specific configuration settings for a self-managed Apache Kafka event source.
    */
   public open fun selfManagedKafkaEventSourceConfig(`value`: IResolvable) {
-    unwrap(this).setSelfManagedKafkaEventSourceConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSelfManagedKafkaEventSourceConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -511,7 +511,7 @@ public open class CfnEventSourceMapping(
    */
   public open
       fun selfManagedKafkaEventSourceConfig(`value`: SelfManagedKafkaEventSourceConfigProperty) {
-    unwrap(this).setSelfManagedKafkaEventSourceConfig(`value`.let(SelfManagedKafkaEventSourceConfigProperty::unwrap))
+    unwrap(this).setSelfManagedKafkaEventSourceConfig(`value`.let(SelfManagedKafkaEventSourceConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -534,7 +534,7 @@ public open class CfnEventSourceMapping(
    * your event source.
    */
   public open fun sourceAccessConfigurations(`value`: IResolvable) {
-    unwrap(this).setSourceAccessConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSourceAccessConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -1159,7 +1159,7 @@ public open class CfnEventSourceMapping(
      */
     override
         fun amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig: IResolvable) {
-      cdkBuilder.amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig.let(IResolvable::unwrap))
+      cdkBuilder.amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1172,7 +1172,7 @@ public open class CfnEventSourceMapping(
      */
     override
         fun amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig: AmazonManagedKafkaEventSourceConfigProperty) {
-      cdkBuilder.amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig.let(AmazonManagedKafkaEventSourceConfigProperty::unwrap))
+      cdkBuilder.amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig.let(AmazonManagedKafkaEventSourceConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1239,7 +1239,7 @@ public open class CfnEventSourceMapping(
      * an error, split the batch in two and retry. 
      */
     override fun bisectBatchOnFunctionError(bisectBatchOnFunctionError: IResolvable) {
-      cdkBuilder.bisectBatchOnFunctionError(bisectBatchOnFunctionError.let(IResolvable::unwrap))
+      cdkBuilder.bisectBatchOnFunctionError(bisectBatchOnFunctionError.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1252,7 +1252,7 @@ public open class CfnEventSourceMapping(
      * after Lambda processes it. 
      */
     override fun destinationConfig(destinationConfig: IResolvable) {
-      cdkBuilder.destinationConfig(destinationConfig.let(IResolvable::unwrap))
+      cdkBuilder.destinationConfig(destinationConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1265,7 +1265,7 @@ public open class CfnEventSourceMapping(
      * after Lambda processes it. 
      */
     override fun destinationConfig(destinationConfig: DestinationConfigProperty) {
-      cdkBuilder.destinationConfig(destinationConfig.let(DestinationConfigProperty::unwrap))
+      cdkBuilder.destinationConfig(destinationConfig.let(DestinationConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1290,7 +1290,7 @@ public open class CfnEventSourceMapping(
      * source. 
      */
     override fun documentDbEventSourceConfig(documentDbEventSourceConfig: IResolvable) {
-      cdkBuilder.documentDbEventSourceConfig(documentDbEventSourceConfig.let(IResolvable::unwrap))
+      cdkBuilder.documentDbEventSourceConfig(documentDbEventSourceConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1302,7 +1302,7 @@ public open class CfnEventSourceMapping(
      */
     override
         fun documentDbEventSourceConfig(documentDbEventSourceConfig: DocumentDBEventSourceConfigProperty) {
-      cdkBuilder.documentDbEventSourceConfig(documentDbEventSourceConfig.let(DocumentDBEventSourceConfigProperty::unwrap))
+      cdkBuilder.documentDbEventSourceConfig(documentDbEventSourceConfig.let(DocumentDBEventSourceConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1344,7 +1344,7 @@ public open class CfnEventSourceMapping(
      * polling and invocation. 
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1378,7 +1378,7 @@ public open class CfnEventSourceMapping(
      * Lambda should process an event. 
      */
     override fun filterCriteria(filterCriteria: IResolvable) {
-      cdkBuilder.filterCriteria(filterCriteria.let(IResolvable::unwrap))
+      cdkBuilder.filterCriteria(filterCriteria.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1393,7 +1393,7 @@ public open class CfnEventSourceMapping(
      * Lambda should process an event. 
      */
     override fun filterCriteria(filterCriteria: FilterCriteriaProperty) {
-      cdkBuilder.filterCriteria(filterCriteria.let(FilterCriteriaProperty::unwrap))
+      cdkBuilder.filterCriteria(filterCriteria.let(FilterCriteriaProperty.Companion::unwrap))
     }
 
     /**
@@ -1553,7 +1553,7 @@ public open class CfnEventSourceMapping(
      * @param scalingConfig (Amazon SQS only) The scaling configuration for the event source. 
      */
     override fun scalingConfig(scalingConfig: IResolvable) {
-      cdkBuilder.scalingConfig(scalingConfig.let(IResolvable::unwrap))
+      cdkBuilder.scalingConfig(scalingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1567,7 +1567,7 @@ public open class CfnEventSourceMapping(
      * @param scalingConfig (Amazon SQS only) The scaling configuration for the event source. 
      */
     override fun scalingConfig(scalingConfig: ScalingConfigProperty) {
-      cdkBuilder.scalingConfig(scalingConfig.let(ScalingConfigProperty::unwrap))
+      cdkBuilder.scalingConfig(scalingConfig.let(ScalingConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1592,7 +1592,7 @@ public open class CfnEventSourceMapping(
      * @param selfManagedEventSource The self-managed Apache Kafka cluster for your event source. 
      */
     override fun selfManagedEventSource(selfManagedEventSource: IResolvable) {
-      cdkBuilder.selfManagedEventSource(selfManagedEventSource.let(IResolvable::unwrap))
+      cdkBuilder.selfManagedEventSource(selfManagedEventSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1602,7 +1602,7 @@ public open class CfnEventSourceMapping(
      * @param selfManagedEventSource The self-managed Apache Kafka cluster for your event source. 
      */
     override fun selfManagedEventSource(selfManagedEventSource: SelfManagedEventSourceProperty) {
-      cdkBuilder.selfManagedEventSource(selfManagedEventSource.let(SelfManagedEventSourceProperty::unwrap))
+      cdkBuilder.selfManagedEventSource(selfManagedEventSource.let(SelfManagedEventSourceProperty.Companion::unwrap))
     }
 
     /**
@@ -1625,7 +1625,7 @@ public open class CfnEventSourceMapping(
      * Apache Kafka event source. 
      */
     override fun selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig: IResolvable) {
-      cdkBuilder.selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig.let(IResolvable::unwrap))
+      cdkBuilder.selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1637,7 +1637,7 @@ public open class CfnEventSourceMapping(
      */
     override
         fun selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig: SelfManagedKafkaEventSourceConfigProperty) {
-      cdkBuilder.selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig.let(SelfManagedKafkaEventSourceConfigProperty::unwrap))
+      cdkBuilder.selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig.let(SelfManagedKafkaEventSourceConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1663,7 +1663,7 @@ public open class CfnEventSourceMapping(
      * virtual host to secure and define your event source. 
      */
     override fun sourceAccessConfigurations(sourceAccessConfigurations: IResolvable) {
-      cdkBuilder.sourceAccessConfigurations(sourceAccessConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.sourceAccessConfigurations(sourceAccessConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1941,14 +1941,14 @@ public open class CfnEventSourceMapping(
        * @param onFailure The destination configuration for failed invocations.
        */
       override fun onFailure(onFailure: IResolvable) {
-        cdkBuilder.onFailure(onFailure.let(IResolvable::unwrap))
+        cdkBuilder.onFailure(onFailure.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param onFailure The destination configuration for failed invocations.
        */
       override fun onFailure(onFailure: OnFailureProperty) {
-        cdkBuilder.onFailure(onFailure.let(OnFailureProperty::unwrap))
+        cdkBuilder.onFailure(onFailure.let(OnFailureProperty.Companion::unwrap))
       }
 
       /**
@@ -2311,7 +2311,7 @@ public open class CfnEventSourceMapping(
        * @param filters A list of filters.
        */
       override fun filters(filters: IResolvable) {
-        cdkBuilder.filters(filters.let(IResolvable::unwrap))
+        cdkBuilder.filters(filters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2749,7 +2749,7 @@ public open class CfnEventSourceMapping(
        * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
        */
       override fun endpoints(endpoints: IResolvable) {
-        cdkBuilder.endpoints(endpoints.let(IResolvable::unwrap))
+        cdkBuilder.endpoints(endpoints.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2757,7 +2757,7 @@ public open class CfnEventSourceMapping(
        * format: `"KafkaBootstrapServers": ["abc.xyz.com:xxxx","abc2.xyz.com:xxxx"]` .
        */
       override fun endpoints(endpoints: EndpointsProperty) {
-        cdkBuilder.endpoints(endpoints.let(EndpointsProperty::unwrap))
+        cdkBuilder.endpoints(endpoints.let(EndpointsProperty.Companion::unwrap))
       }
 
       /**

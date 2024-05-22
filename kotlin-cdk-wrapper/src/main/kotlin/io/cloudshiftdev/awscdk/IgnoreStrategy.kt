@@ -55,7 +55,7 @@ public abstract class IgnoreStrategy(
         patterns).let(DockerIgnoreStrategy::wrap)
 
     public fun fromCopyOptions(options: CopyOptions, absoluteRootPath: String): IgnoreStrategy =
-        software.amazon.awscdk.IgnoreStrategy.fromCopyOptions(options.let(CopyOptions::unwrap),
+        software.amazon.awscdk.IgnoreStrategy.fromCopyOptions(options.let(CopyOptions.Companion::unwrap),
         absoluteRootPath).let(IgnoreStrategy::wrap)
 
     public fun git(absoluteRootPath: String, patterns: List<String>): GitIgnoreStrategy =

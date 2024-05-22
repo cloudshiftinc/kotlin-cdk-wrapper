@@ -157,14 +157,14 @@ public interface CfnChannelProps {
      * @param channelStorage Where channel data is stored.
      */
     override fun channelStorage(channelStorage: IResolvable) {
-      cdkBuilder.channelStorage(channelStorage.let(IResolvable::unwrap))
+      cdkBuilder.channelStorage(channelStorage.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param channelStorage Where channel data is stored.
      */
     override fun channelStorage(channelStorage: CfnChannel.ChannelStorageProperty) {
-      cdkBuilder.channelStorage(channelStorage.let(CfnChannel.ChannelStorageProperty::unwrap))
+      cdkBuilder.channelStorage(channelStorage.let(CfnChannel.ChannelStorageProperty.Companion::unwrap))
     }
 
     /**
@@ -180,14 +180,14 @@ public interface CfnChannelProps {
      * @param retentionPeriod How long, in days, message data is kept for the channel.
      */
     override fun retentionPeriod(retentionPeriod: IResolvable) {
-      cdkBuilder.retentionPeriod(retentionPeriod.let(IResolvable::unwrap))
+      cdkBuilder.retentionPeriod(retentionPeriod.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param retentionPeriod How long, in days, message data is kept for the channel.
      */
     override fun retentionPeriod(retentionPeriod: CfnChannel.RetentionPeriodProperty) {
-      cdkBuilder.retentionPeriod(retentionPeriod.let(CfnChannel.RetentionPeriodProperty::unwrap))
+      cdkBuilder.retentionPeriod(retentionPeriod.let(CfnChannel.RetentionPeriodProperty.Companion::unwrap))
     }
 
     /**
@@ -206,7 +206,7 @@ public interface CfnChannelProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

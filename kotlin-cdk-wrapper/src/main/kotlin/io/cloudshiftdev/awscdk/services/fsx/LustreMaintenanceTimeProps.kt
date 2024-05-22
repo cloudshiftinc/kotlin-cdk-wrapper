@@ -69,7 +69,7 @@ public interface LustreMaintenanceTimeProps {
      * @param day The day of the week for maintenance to be performed. 
      */
     override fun day(day: Weekday) {
-      cdkBuilder.day(day.let(Weekday::unwrap))
+      cdkBuilder.day(day.let(Weekday.Companion::unwrap))
     }
 
     /**

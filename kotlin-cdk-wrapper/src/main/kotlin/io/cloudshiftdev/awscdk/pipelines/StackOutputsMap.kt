@@ -22,7 +22,7 @@ public open class StackOutputsMap(
   cdkObject: software.amazon.awscdk.pipelines.StackOutputsMap,
 ) : CdkObject(cdkObject) {
   public constructor(pipeline: PipelineBase) :
-      this(software.amazon.awscdk.pipelines.StackOutputsMap(pipeline.let(PipelineBase::unwrap))
+      this(software.amazon.awscdk.pipelines.StackOutputsMap(pipeline.let(PipelineBase.Companion::unwrap))
   )
 
   /**
@@ -31,7 +31,7 @@ public open class StackOutputsMap(
    * @param x 
    */
   public open fun toCodePipeline(x: StackOutputReference): String =
-      unwrap(this).toCodePipeline(x.let(StackOutputReference::unwrap))
+      unwrap(this).toCodePipeline(x.let(StackOutputReference.Companion::unwrap))
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.StackOutputsMap): StackOutputsMap

@@ -34,8 +34,8 @@ public open class CfnCodeDeployBlueGreenHook(
     id: String,
     props: CfnCodeDeployBlueGreenHookProps,
   ) :
-      this(software.amazon.awscdk.CfnCodeDeployBlueGreenHook(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCodeDeployBlueGreenHookProps::unwrap))
+      this(software.amazon.awscdk.CfnCodeDeployBlueGreenHook(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCodeDeployBlueGreenHookProps.Companion::unwrap))
   )
 
   public constructor(
@@ -59,7 +59,7 @@ public open class CfnCodeDeployBlueGreenHook(
    * Default: - no additional options
    */
   public open fun additionalOptions(`value`: CfnCodeDeployBlueGreenAdditionalOptions) {
-    unwrap(this).setAdditionalOptions(`value`.let(CfnCodeDeployBlueGreenAdditionalOptions::unwrap))
+    unwrap(this).setAdditionalOptions(`value`.let(CfnCodeDeployBlueGreenAdditionalOptions.Companion::unwrap))
   }
 
   /**
@@ -83,7 +83,7 @@ public open class CfnCodeDeployBlueGreenHook(
    * Properties of the Amazon ECS applications being deployed.
    */
   public open fun applications(`value`: List<CfnCodeDeployBlueGreenApplication>) {
-    unwrap(this).setApplications(`value`.map(CfnCodeDeployBlueGreenApplication::unwrap))
+    unwrap(this).setApplications(`value`.map(CfnCodeDeployBlueGreenApplication.Companion::unwrap))
   }
 
   /**
@@ -118,7 +118,7 @@ public open class CfnCodeDeployBlueGreenHook(
    * Default: - no lifecycle event hooks
    */
   public open fun lifecycleEventHooks(`value`: CfnCodeDeployBlueGreenLifecycleEventHooks) {
-    unwrap(this).setLifecycleEventHooks(`value`.let(CfnCodeDeployBlueGreenLifecycleEventHooks::unwrap))
+    unwrap(this).setLifecycleEventHooks(`value`.let(CfnCodeDeployBlueGreenLifecycleEventHooks.Companion::unwrap))
   }
 
   /**
@@ -166,7 +166,7 @@ public open class CfnCodeDeployBlueGreenHook(
    * bake time
    */
   public open fun trafficRoutingConfig(`value`: CfnTrafficRoutingConfig) {
-    unwrap(this).setTrafficRoutingConfig(`value`.let(CfnTrafficRoutingConfig::unwrap))
+    unwrap(this).setTrafficRoutingConfig(`value`.let(CfnTrafficRoutingConfig.Companion::unwrap))
   }
 
   /**
@@ -301,7 +301,7 @@ public open class CfnCodeDeployBlueGreenHook(
      * @param additionalOptions Additional options for the blue/green deployment. 
      */
     override fun additionalOptions(additionalOptions: CfnCodeDeployBlueGreenAdditionalOptions) {
-      cdkBuilder.additionalOptions(additionalOptions.let(CfnCodeDeployBlueGreenAdditionalOptions::unwrap))
+      cdkBuilder.additionalOptions(additionalOptions.let(CfnCodeDeployBlueGreenAdditionalOptions.Companion::unwrap))
     }
 
     /**
@@ -323,7 +323,7 @@ public open class CfnCodeDeployBlueGreenHook(
      * @param applications Properties of the Amazon ECS applications being deployed. 
      */
     override fun applications(applications: List<CfnCodeDeployBlueGreenApplication>) {
-      cdkBuilder.applications(applications.map(CfnCodeDeployBlueGreenApplication::unwrap))
+      cdkBuilder.applications(applications.map(CfnCodeDeployBlueGreenApplication.Companion::unwrap))
     }
 
     /**
@@ -350,7 +350,7 @@ public open class CfnCodeDeployBlueGreenHook(
      */
     override
         fun lifecycleEventHooks(lifecycleEventHooks: CfnCodeDeployBlueGreenLifecycleEventHooks) {
-      cdkBuilder.lifecycleEventHooks(lifecycleEventHooks.let(CfnCodeDeployBlueGreenLifecycleEventHooks::unwrap))
+      cdkBuilder.lifecycleEventHooks(lifecycleEventHooks.let(CfnCodeDeployBlueGreenLifecycleEventHooks.Companion::unwrap))
     }
 
     /**
@@ -391,7 +391,7 @@ public open class CfnCodeDeployBlueGreenHook(
      * @param trafficRoutingConfig Traffic routing configuration settings. 
      */
     override fun trafficRoutingConfig(trafficRoutingConfig: CfnTrafficRoutingConfig) {
-      cdkBuilder.trafficRoutingConfig(trafficRoutingConfig.let(CfnTrafficRoutingConfig::unwrap))
+      cdkBuilder.trafficRoutingConfig(trafficRoutingConfig.let(CfnTrafficRoutingConfig.Companion::unwrap))
     }
 
     /**

@@ -40,7 +40,8 @@ public open class ShellStep(
   cdkObject: software.amazon.awscdk.pipelines.ShellStep,
 ) : Step(cdkObject) {
   public constructor(id: String, props: ShellStepProps) :
-      this(software.amazon.awscdk.pipelines.ShellStep(id, props.let(ShellStepProps::unwrap))
+      this(software.amazon.awscdk.pipelines.ShellStep(id,
+      props.let(ShellStepProps.Companion::unwrap))
   )
 
   public constructor(id: String, props: ShellStepProps.Builder.() -> Unit) : this(id,
@@ -336,7 +337,7 @@ public open class ShellStep(
      * @param input FileSet to run these scripts on. 
      */
     override fun input(input: IFileSetProducer) {
-      cdkBuilder.input(input.let(IFileSetProducer::unwrap))
+      cdkBuilder.input(input.let(IFileSetProducer.Companion::unwrap))
     }
 
     /**

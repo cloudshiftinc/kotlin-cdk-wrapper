@@ -129,7 +129,7 @@ public interface CfnTemplateGroupAccessControlEntryProps {
      * autoenroll certificates issued against a template. 
      */
     override fun accessRights(accessRights: IResolvable) {
-      cdkBuilder.accessRights(accessRights.let(IResolvable::unwrap))
+      cdkBuilder.accessRights(accessRights.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -138,7 +138,7 @@ public interface CfnTemplateGroupAccessControlEntryProps {
      */
     override
         fun accessRights(accessRights: CfnTemplateGroupAccessControlEntry.AccessRightsProperty) {
-      cdkBuilder.accessRights(accessRights.let(CfnTemplateGroupAccessControlEntry.AccessRightsProperty::unwrap))
+      cdkBuilder.accessRights(accessRights.let(CfnTemplateGroupAccessControlEntry.AccessRightsProperty.Companion::unwrap))
     }
 
     /**

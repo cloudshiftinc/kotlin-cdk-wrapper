@@ -52,8 +52,8 @@ public open class CfnApplication(
     id: String,
     props: CfnApplicationProps,
   ) :
-      this(software.amazon.awscdk.services.sam.CfnApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApplicationProps::unwrap))
+      this(software.amazon.awscdk.services.sam.CfnApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApplicationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -69,7 +69,7 @@ public open class CfnApplication(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -88,14 +88,14 @@ public open class CfnApplication(
    *
    */
   public open fun location(`value`: IResolvable) {
-    unwrap(this).setLocation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLocation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun location(`value`: ApplicationLocationProperty) {
-    unwrap(this).setLocation(`value`.let(ApplicationLocationProperty::unwrap))
+    unwrap(this).setLocation(`value`.let(ApplicationLocationProperty.Companion::unwrap))
   }
 
   /**
@@ -134,7 +134,7 @@ public open class CfnApplication(
    *
    */
   public open fun parameters(`value`: IResolvable) {
-    unwrap(this).setParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -261,7 +261,7 @@ public open class CfnApplication(
      * @param location 
      */
     override fun location(location: IResolvable) {
-      cdkBuilder.location(location.let(IResolvable::unwrap))
+      cdkBuilder.location(location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -269,7 +269,7 @@ public open class CfnApplication(
      * @param location 
      */
     override fun location(location: ApplicationLocationProperty) {
-      cdkBuilder.location(location.let(ApplicationLocationProperty::unwrap))
+      cdkBuilder.location(location.let(ApplicationLocationProperty.Companion::unwrap))
     }
 
     /**
@@ -301,7 +301,7 @@ public open class CfnApplication(
      * @param parameters 
      */
     override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**

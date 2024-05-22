@@ -70,8 +70,8 @@ public open class CfnVirtualService(
     id: String,
     props: CfnVirtualServiceProps,
   ) :
-      this(software.amazon.awscdk.services.appmesh.CfnVirtualService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVirtualServiceProps::unwrap))
+      this(software.amazon.awscdk.services.appmesh.CfnVirtualService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVirtualServiceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -130,7 +130,7 @@ public open class CfnVirtualService(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -166,14 +166,14 @@ public open class CfnVirtualService(
    * The virtual service specification to apply.
    */
   public open fun spec(`value`: IResolvable) {
-    unwrap(this).setSpec(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSpec(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The virtual service specification to apply.
    */
   public open fun spec(`value`: VirtualServiceSpecProperty) {
-    unwrap(this).setSpec(`value`.let(VirtualServiceSpecProperty::unwrap))
+    unwrap(this).setSpec(`value`.let(VirtualServiceSpecProperty.Companion::unwrap))
   }
 
   /**
@@ -201,7 +201,7 @@ public open class CfnVirtualService(
    * organization.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -350,7 +350,7 @@ public open class CfnVirtualService(
      * @param spec The virtual service specification to apply. 
      */
     override fun spec(spec: IResolvable) {
-      cdkBuilder.spec(spec.let(IResolvable::unwrap))
+      cdkBuilder.spec(spec.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -360,7 +360,7 @@ public open class CfnVirtualService(
      * @param spec The virtual service specification to apply. 
      */
     override fun spec(spec: VirtualServiceSpecProperty) {
-      cdkBuilder.spec(spec.let(VirtualServiceSpecProperty::unwrap))
+      cdkBuilder.spec(spec.let(VirtualServiceSpecProperty.Companion::unwrap))
     }
 
     /**
@@ -387,7 +387,7 @@ public open class CfnVirtualService(
      * categorization and organization. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -697,14 +697,14 @@ public open class CfnVirtualService(
        * @param virtualNode The virtual node associated with a virtual service.
        */
       override fun virtualNode(virtualNode: IResolvable) {
-        cdkBuilder.virtualNode(virtualNode.let(IResolvable::unwrap))
+        cdkBuilder.virtualNode(virtualNode.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param virtualNode The virtual node associated with a virtual service.
        */
       override fun virtualNode(virtualNode: VirtualNodeServiceProviderProperty) {
-        cdkBuilder.virtualNode(virtualNode.let(VirtualNodeServiceProviderProperty::unwrap))
+        cdkBuilder.virtualNode(virtualNode.let(VirtualNodeServiceProviderProperty.Companion::unwrap))
       }
 
       /**
@@ -719,14 +719,14 @@ public open class CfnVirtualService(
        * @param virtualRouter The virtual router associated with a virtual service.
        */
       override fun virtualRouter(virtualRouter: IResolvable) {
-        cdkBuilder.virtualRouter(virtualRouter.let(IResolvable::unwrap))
+        cdkBuilder.virtualRouter(virtualRouter.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param virtualRouter The virtual router associated with a virtual service.
        */
       override fun virtualRouter(virtualRouter: VirtualRouterServiceProviderProperty) {
-        cdkBuilder.virtualRouter(virtualRouter.let(VirtualRouterServiceProviderProperty::unwrap))
+        cdkBuilder.virtualRouter(virtualRouter.let(VirtualRouterServiceProviderProperty.Companion::unwrap))
       }
 
       /**
@@ -849,7 +849,7 @@ public open class CfnVirtualService(
        * You can specify a single virtual node or virtual router.
        */
       override fun provider(provider: IResolvable) {
-        cdkBuilder.provider(provider.let(IResolvable::unwrap))
+        cdkBuilder.provider(provider.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -857,7 +857,7 @@ public open class CfnVirtualService(
        * You can specify a single virtual node or virtual router.
        */
       override fun provider(provider: VirtualServiceProviderProperty) {
-        cdkBuilder.provider(provider.let(VirtualServiceProviderProperty::unwrap))
+        cdkBuilder.provider(provider.let(VirtualServiceProviderProperty.Companion::unwrap))
       }
 
       /**

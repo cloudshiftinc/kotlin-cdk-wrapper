@@ -53,7 +53,7 @@ public interface IAssumeRolePrincipal : IPrincipal {
      * @param document 
      */
     override fun addToAssumeRolePolicy(document: PolicyDocument) {
-      unwrap(this).addToAssumeRolePolicy(document.let(PolicyDocument::unwrap))
+      unwrap(this).addToAssumeRolePolicy(document.let(PolicyDocument.Companion::unwrap))
     }
 
     /**
@@ -75,7 +75,7 @@ public interface IAssumeRolePrincipal : IPrincipal {
      * @param statement 
      */
     override fun addToPrincipalPolicy(statement: PolicyStatement): AddToPrincipalPolicyResult =
-        unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement::unwrap)).let(AddToPrincipalPolicyResult::wrap)
+        unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToPrincipalPolicyResult::wrap)
 
     /**
      * Add to the policy of this principal.

@@ -76,8 +76,8 @@ public open class CfnWebhook(
     id: String,
     props: CfnWebhookProps,
   ) :
-      this(software.amazon.awscdk.services.codepipeline.CfnWebhook(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnWebhookProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.CfnWebhook(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnWebhookProps.Companion::unwrap))
   )
 
   public constructor(
@@ -119,14 +119,14 @@ public open class CfnWebhook(
    * Properties that configure the authentication applied to incoming webhook trigger requests.
    */
   public open fun authenticationConfiguration(`value`: IResolvable) {
-    unwrap(this).setAuthenticationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAuthenticationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Properties that configure the authentication applied to incoming webhook trigger requests.
    */
   public open fun authenticationConfiguration(`value`: WebhookAuthConfigurationProperty) {
-    unwrap(this).setAuthenticationConfiguration(`value`.let(WebhookAuthConfigurationProperty::unwrap))
+    unwrap(this).setAuthenticationConfiguration(`value`.let(WebhookAuthConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -147,7 +147,7 @@ public open class CfnWebhook(
    * A list of rules applied to the body/payload sent in the POST request to a webhook URL.
    */
   public open fun filters(`value`: IResolvable) {
-    unwrap(this).setFilters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFilters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -168,7 +168,7 @@ public open class CfnWebhook(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -202,7 +202,7 @@ public open class CfnWebhook(
    * to be detected.
    */
   public open fun registerWithThirdParty(`value`: IResolvable) {
-    unwrap(this).setRegisterWithThirdParty(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRegisterWithThirdParty(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -436,7 +436,7 @@ public open class CfnWebhook(
      * incoming webhook trigger requests. 
      */
     override fun authenticationConfiguration(authenticationConfiguration: IResolvable) {
-      cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -452,7 +452,7 @@ public open class CfnWebhook(
      */
     override
         fun authenticationConfiguration(authenticationConfiguration: WebhookAuthConfigurationProperty) {
-      cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(WebhookAuthConfigurationProperty::unwrap))
+      cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(WebhookAuthConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -483,7 +483,7 @@ public open class CfnWebhook(
      * webhook URL. 
      */
     override fun filters(filters: IResolvable) {
-      cdkBuilder.filters(filters.let(IResolvable::unwrap))
+      cdkBuilder.filters(filters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -541,7 +541,7 @@ public open class CfnWebhook(
      * and the external tool with events to be detected. 
      */
     override fun registerWithThirdParty(registerWithThirdParty: IResolvable) {
-      cdkBuilder.registerWithThirdParty(registerWithThirdParty.let(IResolvable::unwrap))
+      cdkBuilder.registerWithThirdParty(registerWithThirdParty.let(IResolvable.Companion::unwrap))
     }
 
     /**

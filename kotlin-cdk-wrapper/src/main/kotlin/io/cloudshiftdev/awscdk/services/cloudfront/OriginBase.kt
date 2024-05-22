@@ -24,8 +24,8 @@ public abstract class OriginBase(
    * @param options 
    */
   public override fun bind(scope: Construct, options: OriginBindOptions): OriginBindConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap),
-      options.let(OriginBindOptions::unwrap)).let(OriginBindConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      options.let(OriginBindOptions.Companion::unwrap)).let(OriginBindConfig::wrap)
 
   /**
    * Binds the origin to the associated Distribution.

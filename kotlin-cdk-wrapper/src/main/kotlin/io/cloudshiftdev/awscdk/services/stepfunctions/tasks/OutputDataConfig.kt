@@ -86,7 +86,7 @@ public interface OutputDataConfig {
      * model artifacts at rest using Amazon S3 server-side encryption.
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -94,7 +94,7 @@ public interface OutputDataConfig {
      * model artifacts. 
      */
     override fun s3OutputLocation(s3OutputLocation: S3Location) {
-      cdkBuilder.s3OutputLocation(s3OutputLocation.let(S3Location::unwrap))
+      cdkBuilder.s3OutputLocation(s3OutputLocation.let(S3Location.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.OutputDataConfig =

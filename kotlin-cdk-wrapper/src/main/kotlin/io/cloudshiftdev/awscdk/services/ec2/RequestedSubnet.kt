@@ -92,7 +92,7 @@ public interface RequestedSubnet {
      * @param configuration Specify configuration parameters for a single subnet group in a VPC. 
      */
     override fun configuration(configuration: SubnetConfiguration) {
-      cdkBuilder.configuration(configuration.let(SubnetConfiguration::unwrap))
+      cdkBuilder.configuration(configuration.let(SubnetConfiguration.Companion::unwrap))
     }
 
     /**

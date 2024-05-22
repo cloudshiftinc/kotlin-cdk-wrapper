@@ -263,7 +263,7 @@ public interface GraphqlApiProps {
      * @param authorizationConfig Optional authorization configuration.
      */
     override fun authorizationConfig(authorizationConfig: AuthorizationConfig) {
-      cdkBuilder.authorizationConfig(authorizationConfig.let(AuthorizationConfig::unwrap))
+      cdkBuilder.authorizationConfig(authorizationConfig.let(AuthorizationConfig.Companion::unwrap))
     }
 
     /**
@@ -278,7 +278,7 @@ public interface GraphqlApiProps {
      * @param definition Definition (schema file or source APIs) for this GraphQL Api.
      */
     override fun definition(definition: Definition) {
-      cdkBuilder.definition(definition.let(Definition::unwrap))
+      cdkBuilder.definition(definition.let(Definition.Companion::unwrap))
     }
 
     /**
@@ -288,7 +288,7 @@ public interface GraphqlApiProps {
      * enable custom domain URL
      */
     override fun domainName(domainName: DomainOptions) {
-      cdkBuilder.domainName(domainName.let(DomainOptions::unwrap))
+      cdkBuilder.domainName(domainName.let(DomainOptions.Companion::unwrap))
     }
 
     /**
@@ -322,14 +322,14 @@ public interface GraphqlApiProps {
      * (DISABLED) introspection.
      */
     override fun introspectionConfig(introspectionConfig: IntrospectionConfig) {
-      cdkBuilder.introspectionConfig(introspectionConfig.let(IntrospectionConfig::unwrap))
+      cdkBuilder.introspectionConfig(introspectionConfig.let(IntrospectionConfig.Companion::unwrap))
     }
 
     /**
      * @param logConfig Logging configuration for this api.
      */
     override fun logConfig(logConfig: LogConfig) {
-      cdkBuilder.logConfig(logConfig.let(LogConfig::unwrap))
+      cdkBuilder.logConfig(logConfig.let(LogConfig.Companion::unwrap))
     }
 
     /**
@@ -372,7 +372,7 @@ public interface GraphqlApiProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun schema(schema: ISchema) {
-      cdkBuilder.schema(schema.let(ISchema::unwrap))
+      cdkBuilder.schema(schema.let(ISchema.Companion::unwrap))
     }
 
     /**
@@ -380,7 +380,7 @@ public interface GraphqlApiProps {
      * can only be access from a VPC (PRIVATE).
      */
     override fun visibility(visibility: Visibility) {
-      cdkBuilder.visibility(visibility.let(Visibility::unwrap))
+      cdkBuilder.visibility(visibility.let(Visibility.Companion::unwrap))
     }
 
     /**

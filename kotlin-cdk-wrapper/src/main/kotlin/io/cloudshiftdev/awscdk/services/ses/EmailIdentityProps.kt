@@ -156,14 +156,14 @@ public interface EmailIdentityProps {
      * @param configurationSet The configuration set to associate with the email identity.
      */
     override fun configurationSet(configurationSet: IConfigurationSet) {
-      cdkBuilder.configurationSet(configurationSet.let(IConfigurationSet::unwrap))
+      cdkBuilder.configurationSet(configurationSet.let(IConfigurationSet.Companion::unwrap))
     }
 
     /**
      * @param dkimIdentity The type of DKIM identity to use.
      */
     override fun dkimIdentity(dkimIdentity: DkimIdentity) {
-      cdkBuilder.dkimIdentity(dkimIdentity.let(DkimIdentity::unwrap))
+      cdkBuilder.dkimIdentity(dkimIdentity.let(DkimIdentity.Companion::unwrap))
     }
 
     /**
@@ -193,7 +193,7 @@ public interface EmailIdentityProps {
      * @param identity The email address or domain to verify. 
      */
     override fun identity(identity: Identity) {
-      cdkBuilder.identity(identity.let(Identity::unwrap))
+      cdkBuilder.identity(identity.let(Identity.Companion::unwrap))
     }
 
     /**
@@ -202,7 +202,7 @@ public interface EmailIdentityProps {
      */
     override
         fun mailFromBehaviorOnMxFailure(mailFromBehaviorOnMxFailure: MailFromBehaviorOnMxFailure) {
-      cdkBuilder.mailFromBehaviorOnMxFailure(mailFromBehaviorOnMxFailure.let(MailFromBehaviorOnMxFailure::unwrap))
+      cdkBuilder.mailFromBehaviorOnMxFailure(mailFromBehaviorOnMxFailure.let(MailFromBehaviorOnMxFailure.Companion::unwrap))
     }
 
     /**

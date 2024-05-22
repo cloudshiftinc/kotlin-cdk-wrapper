@@ -92,7 +92,7 @@ public interface CredentialsFromUsernameOptions : CredentialsBaseOptions {
      * @param encryptionKey KMS encryption key to encrypt the generated secret.
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -108,14 +108,14 @@ public interface CredentialsFromUsernameOptions : CredentialsBaseOptions {
      * Do not put passwords in your CDK code directly.
      */
     override fun password(password: SecretValue) {
-      cdkBuilder.password(password.let(SecretValue::unwrap))
+      cdkBuilder.password(password.let(SecretValue.Companion::unwrap))
     }
 
     /**
      * @param replicaRegions A list of regions where to replicate this secret.
      */
     override fun replicaRegions(replicaRegions: List<ReplicaRegion>) {
-      cdkBuilder.replicaRegions(replicaRegions.map(ReplicaRegion::unwrap))
+      cdkBuilder.replicaRegions(replicaRegions.map(ReplicaRegion.Companion::unwrap))
     }
 
     /**

@@ -165,7 +165,7 @@ public interface PasswordPolicy {
      * Fractional days, such as Duration.hours(20), will generate an error.
      */
     override fun tempPasswordValidity(tempPasswordValidity: Duration) {
-      cdkBuilder.tempPasswordValidity(tempPasswordValidity.let(Duration::unwrap))
+      cdkBuilder.tempPasswordValidity(tempPasswordValidity.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cognito.PasswordPolicy = cdkBuilder.build()

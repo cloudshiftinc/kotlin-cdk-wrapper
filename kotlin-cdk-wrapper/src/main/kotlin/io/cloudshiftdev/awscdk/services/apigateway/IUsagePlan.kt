@@ -58,7 +58,7 @@ public interface IUsagePlan : IResource {
      * @param options options that control the behaviour of this method.
      */
     override fun addApiKey(apiKey: IApiKey) {
-      unwrap(this).addApiKey(apiKey.let(IApiKey::unwrap))
+      unwrap(this).addApiKey(apiKey.let(IApiKey.Companion::unwrap))
     }
 
     /**
@@ -68,7 +68,8 @@ public interface IUsagePlan : IResource {
      * @param options options that control the behaviour of this method.
      */
     override fun addApiKey(apiKey: IApiKey, options: AddApiKeyOptions) {
-      unwrap(this).addApiKey(apiKey.let(IApiKey::unwrap), options.let(AddApiKeyOptions::unwrap))
+      unwrap(this).addApiKey(apiKey.let(IApiKey.Companion::unwrap),
+          options.let(AddApiKeyOptions.Companion::unwrap))
     }
 
     /**
@@ -96,7 +97,7 @@ public interface IUsagePlan : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**

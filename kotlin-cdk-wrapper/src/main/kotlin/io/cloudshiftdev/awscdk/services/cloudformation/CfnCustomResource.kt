@@ -54,8 +54,8 @@ public open class CfnCustomResource(
     id: String,
     props: CfnCustomResourceProps,
   ) :
-      this(software.amazon.awscdk.services.cloudformation.CfnCustomResource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCustomResourceProps::unwrap))
+      this(software.amazon.awscdk.services.cloudformation.CfnCustomResource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCustomResourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -76,7 +76,7 @@ public open class CfnCustomResource(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

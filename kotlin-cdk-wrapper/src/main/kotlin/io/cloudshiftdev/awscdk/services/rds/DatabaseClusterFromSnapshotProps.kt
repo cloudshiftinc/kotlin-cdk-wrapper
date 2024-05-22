@@ -832,14 +832,14 @@ public interface DatabaseClusterFromSnapshotProps {
      * cannot be enabled on existing clusters.
      */
     override fun backtrackWindow(backtrackWindow: Duration) {
-      cdkBuilder.backtrackWindow(backtrackWindow.let(Duration::unwrap))
+      cdkBuilder.backtrackWindow(backtrackWindow.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param backup Backup settings.
      */
     override fun backup(backup: BackupProps) {
-      cdkBuilder.backup(backup.let(BackupProps::unwrap))
+      cdkBuilder.backup(backup.let(BackupProps.Companion::unwrap))
     }
 
     /**
@@ -871,7 +871,7 @@ public interface DatabaseClusterFromSnapshotProps {
      * remove the retention policy, set the value to `Infinity`.
      */
     override fun cloudwatchLogsRetention(cloudwatchLogsRetention: RetentionDays) {
-      cdkBuilder.cloudwatchLogsRetention(cloudwatchLogsRetention.let(RetentionDays::unwrap))
+      cdkBuilder.cloudwatchLogsRetention(cloudwatchLogsRetention.let(RetentionDays.Companion::unwrap))
     }
 
     /**
@@ -879,7 +879,7 @@ public interface DatabaseClusterFromSnapshotProps {
      * custom resource that sets the retention policy.
      */
     override fun cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole: IRole) {
-      cdkBuilder.cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole.let(IRole::unwrap))
+      cdkBuilder.cloudwatchLogsRetentionRole(cloudwatchLogsRetentionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -906,7 +906,7 @@ public interface DatabaseClusterFromSnapshotProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -942,7 +942,7 @@ public interface DatabaseClusterFromSnapshotProps {
      * `AmazonRDSDirectoryServiceAccess` or equivalent.
      */
     override fun domainRole(domainRole: IRole) {
-      cdkBuilder.domainRole(domainRole.let(IRole::unwrap))
+      cdkBuilder.domainRole(domainRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -956,7 +956,7 @@ public interface DatabaseClusterFromSnapshotProps {
      * @param engine What kind of database to start. 
      */
     override fun engine(engine: IClusterEngine) {
-      cdkBuilder.engine(engine.let(IClusterEngine::unwrap))
+      cdkBuilder.engine(engine.let(IClusterEngine.Companion::unwrap))
     }
 
     /**
@@ -981,7 +981,7 @@ public interface DatabaseClusterFromSnapshotProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun instanceProps(instanceProps: InstanceProps) {
-      cdkBuilder.instanceProps(instanceProps.let(InstanceProps::unwrap))
+      cdkBuilder.instanceProps(instanceProps.let(InstanceProps.Companion::unwrap))
     }
 
     /**
@@ -998,7 +998,7 @@ public interface DatabaseClusterFromSnapshotProps {
      * @param instanceUpdateBehaviour The ordering of updates for instances.
      */
     override fun instanceUpdateBehaviour(instanceUpdateBehaviour: InstanceUpdateBehaviour) {
-      cdkBuilder.instanceUpdateBehaviour(instanceUpdateBehaviour.let(InstanceUpdateBehaviour::unwrap))
+      cdkBuilder.instanceUpdateBehaviour(instanceUpdateBehaviour.let(InstanceUpdateBehaviour.Companion::unwrap))
     }
 
     /**
@@ -1016,28 +1016,28 @@ public interface DatabaseClusterFromSnapshotProps {
      * enhanced monitoring metrics for the DB instances.
      */
     override fun monitoringInterval(monitoringInterval: Duration) {
-      cdkBuilder.monitoringInterval(monitoringInterval.let(Duration::unwrap))
+      cdkBuilder.monitoringInterval(monitoringInterval.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param monitoringRole Role that will be used to manage DB instances monitoring.
      */
     override fun monitoringRole(monitoringRole: IRole) {
-      cdkBuilder.monitoringRole(monitoringRole.let(IRole::unwrap))
+      cdkBuilder.monitoringRole(monitoringRole.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param networkType The network type of the DB instance.
      */
     override fun networkType(networkType: NetworkType) {
-      cdkBuilder.networkType(networkType.let(NetworkType::unwrap))
+      cdkBuilder.networkType(networkType.let(NetworkType.Companion::unwrap))
     }
 
     /**
      * @param parameterGroup Additional parameters to pass to the database engine.
      */
     override fun parameterGroup(parameterGroup: IParameterGroup) {
-      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup::unwrap))
+      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup.Companion::unwrap))
     }
 
     /**
@@ -1069,7 +1069,7 @@ public interface DatabaseClusterFromSnapshotProps {
      * @param readers A list of instances to create as cluster reader instances.
      */
     override fun readers(readers: List<IClusterInstance>) {
-      cdkBuilder.readers(readers.map(IClusterInstance::unwrap))
+      cdkBuilder.readers(readers.map(IClusterInstance.Companion::unwrap))
     }
 
     /**
@@ -1082,7 +1082,7 @@ public interface DatabaseClusterFromSnapshotProps {
      * removed from the stack or replaced during an update.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -1093,7 +1093,7 @@ public interface DatabaseClusterFromSnapshotProps {
      * For MySQL:
      */
     override fun s3ExportBuckets(s3ExportBuckets: List<IBucket>) {
-      cdkBuilder.s3ExportBuckets(s3ExportBuckets.map(IBucket::unwrap))
+      cdkBuilder.s3ExportBuckets(s3ExportBuckets.map(IBucket.Companion::unwrap))
     }
 
     /**
@@ -1115,7 +1115,7 @@ public interface DatabaseClusterFromSnapshotProps {
      * For MySQL:
      */
     override fun s3ExportRole(s3ExportRole: IRole) {
-      cdkBuilder.s3ExportRole(s3ExportRole.let(IRole::unwrap))
+      cdkBuilder.s3ExportRole(s3ExportRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -1126,7 +1126,7 @@ public interface DatabaseClusterFromSnapshotProps {
      * For MySQL:
      */
     override fun s3ImportBuckets(s3ImportBuckets: List<IBucket>) {
-      cdkBuilder.s3ImportBuckets(s3ImportBuckets.map(IBucket::unwrap))
+      cdkBuilder.s3ImportBuckets(s3ImportBuckets.map(IBucket.Companion::unwrap))
     }
 
     /**
@@ -1148,14 +1148,14 @@ public interface DatabaseClusterFromSnapshotProps {
      * For MySQL:
      */
     override fun s3ImportRole(s3ImportRole: IRole) {
-      cdkBuilder.s3ImportRole(s3ImportRole.let(IRole::unwrap))
+      cdkBuilder.s3ImportRole(s3ImportRole.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param securityGroups Security group.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -1192,7 +1192,7 @@ public interface DatabaseClusterFromSnapshotProps {
      * however, it is possible to provide (or generate) a new password.
      */
     override fun snapshotCredentials(snapshotCredentials: SnapshotCredentials) {
-      cdkBuilder.snapshotCredentials(snapshotCredentials.let(SnapshotCredentials::unwrap))
+      cdkBuilder.snapshotCredentials(snapshotCredentials.let(SnapshotCredentials.Companion::unwrap))
     }
 
     /**
@@ -1218,21 +1218,21 @@ public interface DatabaseClusterFromSnapshotProps {
      * If specified, `storageEncrypted` will be set to `true`.
      */
     override fun storageEncryptionKey(storageEncryptionKey: IKey) {
-      cdkBuilder.storageEncryptionKey(storageEncryptionKey.let(IKey::unwrap))
+      cdkBuilder.storageEncryptionKey(storageEncryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
      * @param storageType The storage type to be associated with the DB cluster.
      */
     override fun storageType(storageType: DBClusterStorageType) {
-      cdkBuilder.storageType(storageType.let(DBClusterStorageType::unwrap))
+      cdkBuilder.storageType(storageType.let(DBClusterStorageType.Companion::unwrap))
     }
 
     /**
      * @param subnetGroup Existing subnet group for the cluster.
      */
     override fun subnetGroup(subnetGroup: ISubnetGroup) {
-      cdkBuilder.subnetGroup(subnetGroup.let(ISubnetGroup::unwrap))
+      cdkBuilder.subnetGroup(subnetGroup.let(ISubnetGroup.Companion::unwrap))
     }
 
     /**
@@ -1240,14 +1240,14 @@ public interface DatabaseClusterFromSnapshotProps {
      * Must be at least 2 subnets in two different AZs.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
      * @param vpcSubnets Where to place the instances within the VPC.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -1262,7 +1262,7 @@ public interface DatabaseClusterFromSnapshotProps {
      * @param writer The instance to use for the cluster writer.
      */
     override fun writer(writer: IClusterInstance) {
-      cdkBuilder.writer(writer.let(IClusterInstance::unwrap))
+      cdkBuilder.writer(writer.let(IClusterInstance.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.DatabaseClusterFromSnapshotProps =

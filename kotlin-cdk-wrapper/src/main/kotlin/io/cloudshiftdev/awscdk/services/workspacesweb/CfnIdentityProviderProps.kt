@@ -230,7 +230,7 @@ public interface CfnIdentityProviderProps {
      * * `EncryptedResponses` (boolean) *optional*
      */
     override fun identityProviderDetails(identityProviderDetails: IResolvable) {
-      cdkBuilder.identityProviderDetails(identityProviderDetails.let(IResolvable::unwrap))
+      cdkBuilder.identityProviderDetails(identityProviderDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**

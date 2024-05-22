@@ -89,7 +89,7 @@ public open class CfnServer(
   cdkObject: software.amazon.awscdk.services.transfer.CfnServer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.transfer.CfnServer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.transfer.CfnServer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -98,8 +98,8 @@ public open class CfnServer(
     id: String,
     props: CfnServerProps,
   ) :
-      this(software.amazon.awscdk.services.transfer.CfnServer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnServerProps::unwrap))
+      this(software.amazon.awscdk.services.transfer.CfnServer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnServerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -158,14 +158,14 @@ public open class CfnServer(
    * The virtual private cloud (VPC) endpoint settings that are configured for your server.
    */
   public open fun endpointDetails(`value`: IResolvable) {
-    unwrap(this).setEndpointDetails(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEndpointDetails(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The virtual private cloud (VPC) endpoint settings that are configured for your server.
    */
   public open fun endpointDetails(`value`: EndpointDetailsProperty) {
-    unwrap(this).setEndpointDetails(`value`.let(EndpointDetailsProperty::unwrap))
+    unwrap(this).setEndpointDetails(`value`.let(EndpointDetailsProperty.Companion::unwrap))
   }
 
   /**
@@ -199,7 +199,7 @@ public open class CfnServer(
    * `API_GATEWAY` .
    */
   public open fun identityProviderDetails(`value`: IResolvable) {
-    unwrap(this).setIdentityProviderDetails(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIdentityProviderDetails(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -207,7 +207,7 @@ public open class CfnServer(
    * `API_GATEWAY` .
    */
   public open fun identityProviderDetails(`value`: IdentityProviderDetailsProperty) {
-    unwrap(this).setIdentityProviderDetails(`value`.let(IdentityProviderDetailsProperty::unwrap))
+    unwrap(this).setIdentityProviderDetails(`value`.let(IdentityProviderDetailsProperty.Companion::unwrap))
   }
 
   /**
@@ -238,7 +238,7 @@ public open class CfnServer(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -294,14 +294,14 @@ public open class CfnServer(
    * The protocol settings that are configured for your server.
    */
   public open fun protocolDetails(`value`: IResolvable) {
-    unwrap(this).setProtocolDetails(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProtocolDetails(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The protocol settings that are configured for your server.
    */
   public open fun protocolDetails(`value`: ProtocolDetailsProperty) {
-    unwrap(this).setProtocolDetails(`value`.let(ProtocolDetailsProperty::unwrap))
+    unwrap(this).setProtocolDetails(`value`.let(ProtocolDetailsProperty.Companion::unwrap))
   }
 
   /**
@@ -345,7 +345,7 @@ public open class CfnServer(
    * This is disabled by default.
    */
   public open fun s3StorageOptions(`value`: IResolvable) {
-    unwrap(this).setS3StorageOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setS3StorageOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -354,7 +354,7 @@ public open class CfnServer(
    * This is disabled by default.
    */
   public open fun s3StorageOptions(`value`: S3StorageOptionsProperty) {
-    unwrap(this).setS3StorageOptions(`value`.let(S3StorageOptionsProperty::unwrap))
+    unwrap(this).setS3StorageOptions(`value`.let(S3StorageOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -413,7 +413,7 @@ public open class CfnServer(
    * Key-value pairs that can be used to group and search for servers.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -432,7 +432,7 @@ public open class CfnServer(
    * executing the workflow.
    */
   public open fun workflowDetails(`value`: IResolvable) {
-    unwrap(this).setWorkflowDetails(`value`.let(IResolvable::unwrap))
+    unwrap(this).setWorkflowDetails(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -440,7 +440,7 @@ public open class CfnServer(
    * executing the workflow.
    */
   public open fun workflowDetails(`value`: WorkflowDetailsProperty) {
-    unwrap(this).setWorkflowDetails(`value`.let(WorkflowDetailsProperty::unwrap))
+    unwrap(this).setWorkflowDetails(`value`.let(WorkflowDetailsProperty.Companion::unwrap))
   }
 
   /**
@@ -1071,7 +1071,7 @@ public open class CfnServer(
      * for your server. 
      */
     override fun endpointDetails(endpointDetails: IResolvable) {
-      cdkBuilder.endpointDetails(endpointDetails.let(IResolvable::unwrap))
+      cdkBuilder.endpointDetails(endpointDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1087,7 +1087,7 @@ public open class CfnServer(
      * for your server. 
      */
     override fun endpointDetails(endpointDetails: EndpointDetailsProperty) {
-      cdkBuilder.endpointDetails(endpointDetails.let(EndpointDetailsProperty::unwrap))
+      cdkBuilder.endpointDetails(endpointDetails.let(EndpointDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -1151,7 +1151,7 @@ public open class CfnServer(
      * `AWS_DIRECTORY_SERVICE` , `AWS _LAMBDA` or `API_GATEWAY` . 
      */
     override fun identityProviderDetails(identityProviderDetails: IResolvable) {
-      cdkBuilder.identityProviderDetails(identityProviderDetails.let(IResolvable::unwrap))
+      cdkBuilder.identityProviderDetails(identityProviderDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1167,7 +1167,7 @@ public open class CfnServer(
      * `AWS_DIRECTORY_SERVICE` , `AWS _LAMBDA` or `API_GATEWAY` . 
      */
     override fun identityProviderDetails(identityProviderDetails: IdentityProviderDetailsProperty) {
-      cdkBuilder.identityProviderDetails(identityProviderDetails.let(IdentityProviderDetailsProperty::unwrap))
+      cdkBuilder.identityProviderDetails(identityProviderDetails.let(IdentityProviderDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -1288,7 +1288,7 @@ public open class CfnServer(
      * @param protocolDetails The protocol settings that are configured for your server. 
      */
     override fun protocolDetails(protocolDetails: IResolvable) {
-      cdkBuilder.protocolDetails(protocolDetails.let(IResolvable::unwrap))
+      cdkBuilder.protocolDetails(protocolDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1316,7 +1316,7 @@ public open class CfnServer(
      * @param protocolDetails The protocol settings that are configured for your server. 
      */
     override fun protocolDetails(protocolDetails: ProtocolDetailsProperty) {
-      cdkBuilder.protocolDetails(protocolDetails.let(ProtocolDetailsProperty::unwrap))
+      cdkBuilder.protocolDetails(protocolDetails.let(ProtocolDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -1435,7 +1435,7 @@ public open class CfnServer(
      * is optimized. This is disabled by default. 
      */
     override fun s3StorageOptions(s3StorageOptions: IResolvable) {
-      cdkBuilder.s3StorageOptions(s3StorageOptions.let(IResolvable::unwrap))
+      cdkBuilder.s3StorageOptions(s3StorageOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1451,7 +1451,7 @@ public open class CfnServer(
      * is optimized. This is disabled by default. 
      */
     override fun s3StorageOptions(s3StorageOptions: S3StorageOptionsProperty) {
-      cdkBuilder.s3StorageOptions(s3StorageOptions.let(S3StorageOptionsProperty::unwrap))
+      cdkBuilder.s3StorageOptions(s3StorageOptions.let(S3StorageOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -1535,7 +1535,7 @@ public open class CfnServer(
      * @param tags Key-value pairs that can be used to group and search for servers. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1559,7 +1559,7 @@ public open class CfnServer(
      * role that's used for executing the workflow. 
      */
     override fun workflowDetails(workflowDetails: IResolvable) {
-      cdkBuilder.workflowDetails(workflowDetails.let(IResolvable::unwrap))
+      cdkBuilder.workflowDetails(workflowDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1575,7 +1575,7 @@ public open class CfnServer(
      * role that's used for executing the workflow. 
      */
     override fun workflowDetails(workflowDetails: WorkflowDetailsProperty) {
-      cdkBuilder.workflowDetails(workflowDetails.let(WorkflowDetailsProperty::unwrap))
+      cdkBuilder.workflowDetails(workflowDetails.let(WorkflowDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -3161,7 +3161,7 @@ public open class CfnServer(
        * A *partial upload* occurs when a file is open when the session disconnects.
        */
       override fun onPartialUpload(onPartialUpload: IResolvable) {
-        cdkBuilder.onPartialUpload(onPartialUpload.let(IResolvable::unwrap))
+        cdkBuilder.onPartialUpload(onPartialUpload.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3195,7 +3195,7 @@ public open class CfnServer(
        * '{"OnUpload":[]}'`
        */
       override fun onUpload(onUpload: IResolvable) {
-        cdkBuilder.onUpload(onUpload.let(IResolvable::unwrap))
+        cdkBuilder.onUpload(onUpload.let(IResolvable.Companion::unwrap))
       }
 
       /**

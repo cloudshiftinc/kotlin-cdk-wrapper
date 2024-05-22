@@ -59,7 +59,7 @@ public open class CfnServiceNetworkVpcAssociation(
   cdkObject: software.amazon.awscdk.services.vpclattice.CfnServiceNetworkVpcAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.vpclattice.CfnServiceNetworkVpcAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.vpclattice.CfnServiceNetworkVpcAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -68,8 +68,8 @@ public open class CfnServiceNetworkVpcAssociation(
     id: String,
     props: CfnServiceNetworkVpcAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.vpclattice.CfnServiceNetworkVpcAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnServiceNetworkVpcAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.vpclattice.CfnServiceNetworkVpcAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnServiceNetworkVpcAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -125,7 +125,7 @@ public open class CfnServiceNetworkVpcAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -174,7 +174,7 @@ public open class CfnServiceNetworkVpcAssociation(
    * The tags for the association.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -322,7 +322,7 @@ public open class CfnServiceNetworkVpcAssociation(
      * @param tags The tags for the association. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

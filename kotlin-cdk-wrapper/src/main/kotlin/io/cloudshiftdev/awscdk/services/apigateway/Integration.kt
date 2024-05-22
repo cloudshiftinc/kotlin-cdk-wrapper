@@ -38,7 +38,7 @@ public open class Integration(
   cdkObject: software.amazon.awscdk.services.apigateway.Integration,
 ) : CdkObject(cdkObject) {
   public constructor(props: IntegrationProps) :
-      this(software.amazon.awscdk.services.apigateway.Integration(props.let(IntegrationProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.Integration(props.let(IntegrationProps.Companion::unwrap))
   )
 
   public constructor(props: IntegrationProps.Builder.() -> Unit) : this(IntegrationProps(props)
@@ -51,7 +51,7 @@ public open class Integration(
    * @param _method 
    */
   public open fun bind(method: Method): IntegrationConfig =
-      unwrap(this).bind(method.let(Method::unwrap)).let(IntegrationConfig::wrap)
+      unwrap(this).bind(method.let(Method.Companion::unwrap)).let(IntegrationConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.apigateway.Integration].
@@ -129,7 +129,7 @@ public open class Integration(
      * @param options Integration options. 
      */
     override fun options(options: IntegrationOptions) {
-      cdkBuilder.options(options.let(IntegrationOptions::unwrap))
+      cdkBuilder.options(options.let(IntegrationOptions.Companion::unwrap))
     }
 
     /**
@@ -148,7 +148,7 @@ public open class Integration(
      * @param type Specifies an API method integration type. 
      */
     override fun type(type: IntegrationType) {
-      cdkBuilder.type(type.let(IntegrationType::unwrap))
+      cdkBuilder.type(type.let(IntegrationType.Companion::unwrap))
     }
 
     /**

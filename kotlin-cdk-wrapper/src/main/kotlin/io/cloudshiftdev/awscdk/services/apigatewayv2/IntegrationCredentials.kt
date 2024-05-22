@@ -35,7 +35,7 @@ public abstract class IntegrationCredentials(
 
   public companion object {
     public fun fromRole(role: IRole): IntegrationCredentials =
-        software.amazon.awscdk.services.apigatewayv2.IntegrationCredentials.fromRole(role.let(IRole::unwrap)).let(IntegrationCredentials::wrap)
+        software.amazon.awscdk.services.apigatewayv2.IntegrationCredentials.fromRole(role.let(IRole.Companion::unwrap)).let(IntegrationCredentials::wrap)
 
     public fun useCallerIdentity(): IntegrationCredentials =
         software.amazon.awscdk.services.apigatewayv2.IntegrationCredentials.useCallerIdentity().let(IntegrationCredentials::wrap)

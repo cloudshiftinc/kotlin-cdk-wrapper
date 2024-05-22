@@ -45,8 +45,8 @@ public open class CallAwsService(
     id: String,
     props: CallAwsServiceProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.CallAwsService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CallAwsServiceProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.CallAwsService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CallAwsServiceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -350,7 +350,7 @@ public open class CallAwsService(
      * machine role's policy. 
      */
     override fun additionalIamStatements(additionalIamStatements: List<PolicyStatement>) {
-      cdkBuilder.additionalIamStatements(additionalIamStatements.map(PolicyStatement::unwrap))
+      cdkBuilder.additionalIamStatements(additionalIamStatements.map(PolicyStatement.Companion::unwrap))
     }
 
     /**
@@ -391,7 +391,7 @@ public open class CallAwsService(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -420,7 +420,7 @@ public open class CallAwsService(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -434,7 +434,7 @@ public open class CallAwsService(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -510,7 +510,7 @@ public open class CallAwsService(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -605,7 +605,7 @@ public open class CallAwsService(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -618,7 +618,7 @@ public open class CallAwsService(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.CallAwsService =

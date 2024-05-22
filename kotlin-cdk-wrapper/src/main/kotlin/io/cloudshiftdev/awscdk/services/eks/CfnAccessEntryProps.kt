@@ -284,7 +284,7 @@ public interface CfnAccessEntryProps {
      * @param accessPolicies The access policies to associate to the access entry.
      */
     override fun accessPolicies(accessPolicies: IResolvable) {
-      cdkBuilder.accessPolicies(accessPolicies.let(IResolvable::unwrap))
+      cdkBuilder.accessPolicies(accessPolicies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -380,7 +380,7 @@ public interface CfnAccessEntryProps {
      * any other cluster or AWS resources.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

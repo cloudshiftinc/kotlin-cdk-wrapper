@@ -38,6 +38,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * import io.cloudshiftdev.awscdk.services.arczonalshift.*;
  * CfnZonalAutoshiftConfiguration cfnZonalAutoshiftConfiguration =
  * CfnZonalAutoshiftConfiguration.Builder.create(this, "MyCfnZonalAutoshiftConfiguration")
+ * .resourceIdentifier("resourceIdentifier")
+ * // the properties below are optional
  * .practiceRunConfiguration(PracticeRunConfigurationProperty.builder()
  * .outcomeAlarms(List.of(ControlConditionProperty.builder()
  * .alarmIdentifier("alarmIdentifier")
@@ -51,7 +53,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .type("type")
  * .build()))
  * .build())
- * .resourceIdentifier("resourceIdentifier")
  * .zonalAutoshiftStatus("zonalAutoshiftStatus")
  * .build();
  * ```
@@ -61,18 +62,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnZonalAutoshiftConfiguration(
   cdkObject: software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration,
 ) : CfnResource(cdkObject), IInspectable {
-  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id)
-  )
-
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
     props: CfnZonalAutoshiftConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnZonalAutoshiftConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.arczonalshift.CfnZonalAutoshiftConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnZonalAutoshiftConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -88,7 +84,7 @@ public open class CfnZonalAutoshiftConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -104,7 +100,7 @@ public open class CfnZonalAutoshiftConfiguration(
    * run.
    */
   public open fun practiceRunConfiguration(`value`: IResolvable) {
-    unwrap(this).setPracticeRunConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPracticeRunConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -113,7 +109,7 @@ public open class CfnZonalAutoshiftConfiguration(
    * run.
    */
   public open fun practiceRunConfiguration(`value`: PracticeRunConfigurationProperty) {
-    unwrap(this).setPracticeRunConfiguration(`value`.let(PracticeRunConfigurationProperty::unwrap))
+    unwrap(this).setPracticeRunConfiguration(`value`.let(PracticeRunConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -130,7 +126,7 @@ public open class CfnZonalAutoshiftConfiguration(
   /**
    * The identifier for the resource that AWS shifts traffic for.
    */
-  public open fun resourceIdentifier(): String? = unwrap(this).getResourceIdentifier()
+  public open fun resourceIdentifier(): String = unwrap(this).getResourceIdentifier()
 
   /**
    * The identifier for the resource that AWS shifts traffic for.
@@ -292,7 +288,7 @@ public open class CfnZonalAutoshiftConfiguration(
      * or blocked windows for the practice run. 
      */
     override fun practiceRunConfiguration(practiceRunConfiguration: IResolvable) {
-      cdkBuilder.practiceRunConfiguration(practiceRunConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.practiceRunConfiguration(practiceRunConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -318,7 +314,7 @@ public open class CfnZonalAutoshiftConfiguration(
      */
     override
         fun practiceRunConfiguration(practiceRunConfiguration: PracticeRunConfigurationProperty) {
-      cdkBuilder.practiceRunConfiguration(practiceRunConfiguration.let(PracticeRunConfigurationProperty::unwrap))
+      cdkBuilder.practiceRunConfiguration(practiceRunConfiguration.let(PracticeRunConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -775,7 +771,7 @@ public open class CfnZonalAutoshiftConfiguration(
        * started, and ends practice runs that are in progress.
        */
       override fun blockingAlarms(blockingAlarms: IResolvable) {
-        cdkBuilder.blockingAlarms(blockingAlarms.let(IResolvable::unwrap))
+        cdkBuilder.blockingAlarms(blockingAlarms.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -804,7 +800,7 @@ public open class CfnZonalAutoshiftConfiguration(
        * outcome is set to `FAILED` .
        */
       override fun outcomeAlarms(outcomeAlarms: IResolvable) {
-        cdkBuilder.outcomeAlarms(outcomeAlarms.let(IResolvable::unwrap))
+        cdkBuilder.outcomeAlarms(outcomeAlarms.let(IResolvable.Companion::unwrap))
       }
 
       /**

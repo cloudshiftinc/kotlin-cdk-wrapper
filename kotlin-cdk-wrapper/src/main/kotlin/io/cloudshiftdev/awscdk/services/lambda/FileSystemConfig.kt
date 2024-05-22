@@ -135,7 +135,7 @@ public interface FileSystemConfig {
      * @param connections connections object used to allow ingress traffic from lambda function.
      */
     override fun connections(connections: Connections) {
-      cdkBuilder.connections(connections.let(Connections::unwrap))
+      cdkBuilder.connections(connections.let(Connections.Companion::unwrap))
     }
 
     /**
@@ -150,7 +150,7 @@ public interface FileSystemConfig {
      * @param dependency array of IDependable that lambda function depends on.
      */
     override fun dependency(dependency: List<IDependable>) {
-      cdkBuilder.dependency(dependency.map(IDependable::unwrap))
+      cdkBuilder.dependency(dependency.map(IDependable.Companion::unwrap))
     }
 
     /**
@@ -169,7 +169,7 @@ public interface FileSystemConfig {
      * @param policies additional IAM policies required for the lambda function.
      */
     override fun policies(policies: List<PolicyStatement>) {
-      cdkBuilder.policies(policies.map(PolicyStatement::unwrap))
+      cdkBuilder.policies(policies.map(PolicyStatement.Companion::unwrap))
     }
 
     /**

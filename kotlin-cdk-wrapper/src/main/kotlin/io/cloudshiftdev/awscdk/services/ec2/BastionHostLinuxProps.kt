@@ -241,7 +241,7 @@ public interface BastionHostLinuxProps {
      * instance store volumes to attach to an instance when it is launched.
      */
     override fun blockDevices(blockDevices: List<BlockDevice>) {
-      cdkBuilder.blockDevices(blockDevices.map(BlockDevice::unwrap))
+      cdkBuilder.blockDevices(blockDevices.map(BlockDevice.Companion::unwrap))
     }
 
     /**
@@ -259,7 +259,7 @@ public interface BastionHostLinuxProps {
      * @param init Apply the given CloudFormation Init configuration to the instance at startup.
      */
     override fun `init`(`init`: CloudFormationInit) {
-      cdkBuilder.`init`(`init`.let(CloudFormationInit::unwrap))
+      cdkBuilder.`init`(`init`.let(CloudFormationInit.Companion::unwrap))
     }
 
     /**
@@ -267,7 +267,7 @@ public interface BastionHostLinuxProps {
      * Describes the configsets to use and the timeout to wait
      */
     override fun initOptions(initOptions: ApplyCloudFormationInitOptions) {
-      cdkBuilder.initOptions(initOptions.let(ApplyCloudFormationInitOptions::unwrap))
+      cdkBuilder.initOptions(initOptions.let(ApplyCloudFormationInitOptions.Companion::unwrap))
     }
 
     /**
@@ -290,14 +290,14 @@ public interface BastionHostLinuxProps {
      * @param instanceType Type of instance to launch.
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**
      * @param machineImage The machine image to use, assumed to have SSM Agent preinstalled.
      */
     override fun machineImage(machineImage: IMachineImage) {
-      cdkBuilder.machineImage(machineImage.let(IMachineImage::unwrap))
+      cdkBuilder.machineImage(machineImage.let(IMachineImage.Companion::unwrap))
     }
 
     /**
@@ -311,7 +311,7 @@ public interface BastionHostLinuxProps {
      * @param securityGroup Security Group to assign to this instance.
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -321,7 +321,7 @@ public interface BastionHostLinuxProps {
      * You have to allow port 22 manually by using the connections field
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -339,7 +339,7 @@ public interface BastionHostLinuxProps {
      * @param vpc VPC to launch the instance in. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.BastionHostLinuxProps =

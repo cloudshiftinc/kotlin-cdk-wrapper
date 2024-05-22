@@ -186,7 +186,7 @@ public interface ClusterAttributes {
      * @param autoscalingGroup Autoscaling group added to the cluster if capacity is added.
      */
     override fun autoscalingGroup(autoscalingGroup: IAutoScalingGroup) {
-      cdkBuilder.autoscalingGroup(autoscalingGroup.let(IAutoScalingGroup::unwrap))
+      cdkBuilder.autoscalingGroup(autoscalingGroup.let(IAutoScalingGroup.Companion::unwrap))
     }
 
     /**
@@ -207,7 +207,7 @@ public interface ClusterAttributes {
      * @param defaultCloudMapNamespace The AWS Cloud Map namespace to associate with the cluster.
      */
     override fun defaultCloudMapNamespace(defaultCloudMapNamespace: INamespace) {
-      cdkBuilder.defaultCloudMapNamespace(defaultCloudMapNamespace.let(INamespace::unwrap))
+      cdkBuilder.defaultCloudMapNamespace(defaultCloudMapNamespace.let(INamespace.Companion::unwrap))
     }
 
     /**
@@ -215,7 +215,7 @@ public interface ClusterAttributes {
      */
     override
         fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfiguration) {
-      cdkBuilder.executeCommandConfiguration(executeCommandConfiguration.let(ExecuteCommandConfiguration::unwrap))
+      cdkBuilder.executeCommandConfiguration(executeCommandConfiguration.let(ExecuteCommandConfiguration.Companion::unwrap))
     }
 
     /**
@@ -239,7 +239,7 @@ public interface ClusterAttributes {
      * to the cluster.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -253,7 +253,7 @@ public interface ClusterAttributes {
      * @param vpc The VPC associated with the cluster. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.ClusterAttributes = cdkBuilder.build()

@@ -253,7 +253,7 @@ public interface CfnLocationFSxWindowsProps {
      * We recommend creating at least a name tag for your location.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

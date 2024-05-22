@@ -66,7 +66,7 @@ public interface TlsCertificateConfig {
      * @param tlsCertificate The CFN shape for a TLS certificate. 
      */
     override fun tlsCertificate(tlsCertificate: CfnVirtualNode.ListenerTlsCertificateProperty) {
-      cdkBuilder.tlsCertificate(tlsCertificate.let(CfnVirtualNode.ListenerTlsCertificateProperty::unwrap))
+      cdkBuilder.tlsCertificate(tlsCertificate.let(CfnVirtualNode.ListenerTlsCertificateProperty.Companion::unwrap))
     }
 
     /**

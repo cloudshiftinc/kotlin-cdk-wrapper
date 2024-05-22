@@ -40,7 +40,7 @@ public abstract class Product(
    * @param tagOptions 
    */
   public override fun associateTagOptions(tagOptions: TagOptions) {
-    unwrap(this).associateTagOptions(tagOptions.let(TagOptions::unwrap))
+    unwrap(this).associateTagOptions(tagOptions.let(TagOptions.Companion::unwrap))
   }
 
   /**
@@ -63,7 +63,7 @@ public abstract class Product(
       id: String,
       productArn: String,
     ): IProduct =
-        software.amazon.awscdk.services.servicecatalog.Product.fromProductArn(scope.let(Construct::unwrap),
+        software.amazon.awscdk.services.servicecatalog.Product.fromProductArn(scope.let(Construct.Companion::unwrap),
         id, productArn).let(IProduct::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.servicecatalog.Product): Product =

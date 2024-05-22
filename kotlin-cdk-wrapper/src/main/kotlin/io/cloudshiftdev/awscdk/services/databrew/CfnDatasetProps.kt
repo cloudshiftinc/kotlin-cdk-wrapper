@@ -263,7 +263,7 @@ public interface CfnDatasetProps {
      * dataset.
      */
     override fun formatOptions(formatOptions: IResolvable) {
-      cdkBuilder.formatOptions(formatOptions.let(IResolvable::unwrap))
+      cdkBuilder.formatOptions(formatOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -271,7 +271,7 @@ public interface CfnDatasetProps {
      * dataset.
      */
     override fun formatOptions(formatOptions: CfnDataset.FormatOptionsProperty) {
-      cdkBuilder.formatOptions(formatOptions.let(CfnDataset.FormatOptionsProperty::unwrap))
+      cdkBuilder.formatOptions(formatOptions.let(CfnDataset.FormatOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -288,7 +288,7 @@ public interface CfnDatasetProps {
      * Catalog or Amazon S3 . 
      */
     override fun input(input: IResolvable) {
-      cdkBuilder.input(input.let(IResolvable::unwrap))
+      cdkBuilder.input(input.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -296,7 +296,7 @@ public interface CfnDatasetProps {
      * Catalog or Amazon S3 . 
      */
     override fun input(input: CfnDataset.InputProperty) {
-      cdkBuilder.input(input.let(CfnDataset.InputProperty::unwrap))
+      cdkBuilder.input(input.let(CfnDataset.InputProperty.Companion::unwrap))
     }
 
     /**
@@ -320,7 +320,7 @@ public interface CfnDatasetProps {
      * the dataset.
      */
     override fun pathOptions(pathOptions: IResolvable) {
-      cdkBuilder.pathOptions(pathOptions.let(IResolvable::unwrap))
+      cdkBuilder.pathOptions(pathOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -328,7 +328,7 @@ public interface CfnDatasetProps {
      * the dataset.
      */
     override fun pathOptions(pathOptions: CfnDataset.PathOptionsProperty) {
-      cdkBuilder.pathOptions(pathOptions.let(CfnDataset.PathOptionsProperty::unwrap))
+      cdkBuilder.pathOptions(pathOptions.let(CfnDataset.PathOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -344,7 +344,7 @@ public interface CfnDatasetProps {
      * @param tags Metadata tags that have been applied to the dataset.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

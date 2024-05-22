@@ -177,7 +177,7 @@ public interface CfnHubProps {
      * automatically enable new controls, set this to `false` .
      */
     override fun autoEnableControls(autoEnableControls: IResolvable) {
-      cdkBuilder.autoEnableControls(autoEnableControls.let(IResolvable::unwrap))
+      cdkBuilder.autoEnableControls(autoEnableControls.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -224,7 +224,7 @@ public interface CfnHubProps {
      * Foundations Benchmark v1.2.0 and AWS Foundational Security Best Practices (FSBP).
      */
     override fun enableDefaultStandards(enableDefaultStandards: IResolvable) {
-      cdkBuilder.enableDefaultStandards(enableDefaultStandards.let(IResolvable::unwrap))
+      cdkBuilder.enableDefaultStandards(enableDefaultStandards.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -68,7 +68,7 @@ public interface ResultWriterProps {
      * @param bucket S3 Bucket in which to save Map Run results. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**

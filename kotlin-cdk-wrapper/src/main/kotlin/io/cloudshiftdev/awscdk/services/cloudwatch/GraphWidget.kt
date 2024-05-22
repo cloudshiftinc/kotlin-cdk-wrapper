@@ -29,7 +29,7 @@ public open class GraphWidget(
   cdkObject: software.amazon.awscdk.services.cloudwatch.GraphWidget,
 ) : ConcreteWidget(cdkObject) {
   public constructor(props: GraphWidgetProps) :
-      this(software.amazon.awscdk.services.cloudwatch.GraphWidget(props.let(GraphWidgetProps::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.GraphWidget(props.let(GraphWidgetProps.Companion::unwrap))
   )
 
   public constructor(props: GraphWidgetProps.Builder.() -> Unit) : this(GraphWidgetProps(props)
@@ -41,7 +41,7 @@ public open class GraphWidget(
    * @param metric the metric to add. 
    */
   public open fun addLeftMetric(metric: IMetric) {
-    unwrap(this).addLeftMetric(metric.let(IMetric::unwrap))
+    unwrap(this).addLeftMetric(metric.let(IMetric.Companion::unwrap))
   }
 
   /**
@@ -50,7 +50,7 @@ public open class GraphWidget(
    * @param metric the metric to add. 
    */
   public open fun addRightMetric(metric: IMetric) {
-    unwrap(this).addRightMetric(metric.let(IMetric::unwrap))
+    unwrap(this).addRightMetric(metric.let(IMetric.Companion::unwrap))
   }
 
   /**
@@ -375,7 +375,7 @@ public open class GraphWidget(
      * @param left Metrics to display on left Y axis. 
      */
     override fun left(left: List<IMetric>) {
-      cdkBuilder.left(left.map(IMetric::unwrap))
+      cdkBuilder.left(left.map(IMetric.Companion::unwrap))
     }
 
     /**
@@ -395,7 +395,7 @@ public open class GraphWidget(
      * @param leftAnnotations Annotations for the left Y axis. 
      */
     override fun leftAnnotations(leftAnnotations: List<HorizontalAnnotation>) {
-      cdkBuilder.leftAnnotations(leftAnnotations.map(HorizontalAnnotation::unwrap))
+      cdkBuilder.leftAnnotations(leftAnnotations.map(HorizontalAnnotation.Companion::unwrap))
     }
 
     /**
@@ -416,7 +416,7 @@ public open class GraphWidget(
      * @param leftYAxis Left Y axis. 
      */
     override fun leftYAxis(leftYAxis: YAxisProps) {
-      cdkBuilder.leftYAxis(leftYAxis.let(YAxisProps::unwrap))
+      cdkBuilder.leftYAxis(leftYAxis.let(YAxisProps.Companion::unwrap))
     }
 
     /**
@@ -439,7 +439,7 @@ public open class GraphWidget(
      * @param legendPosition Position of the legend. 
      */
     override fun legendPosition(legendPosition: LegendPosition) {
-      cdkBuilder.legendPosition(legendPosition.let(LegendPosition::unwrap))
+      cdkBuilder.legendPosition(legendPosition.let(LegendPosition.Companion::unwrap))
     }
 
     /**
@@ -464,7 +464,7 @@ public open class GraphWidget(
      * @param period The default period for all metrics in this widget. 
      */
     override fun period(period: Duration) {
-      cdkBuilder.period(period.let(Duration::unwrap))
+      cdkBuilder.period(period.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -501,7 +501,7 @@ public open class GraphWidget(
      * @param right Metrics to display on right Y axis. 
      */
     override fun right(right: List<IMetric>) {
-      cdkBuilder.right(right.map(IMetric::unwrap))
+      cdkBuilder.right(right.map(IMetric.Companion::unwrap))
     }
 
     /**
@@ -521,7 +521,7 @@ public open class GraphWidget(
      * @param rightAnnotations Annotations for the right Y axis. 
      */
     override fun rightAnnotations(rightAnnotations: List<HorizontalAnnotation>) {
-      cdkBuilder.rightAnnotations(rightAnnotations.map(HorizontalAnnotation::unwrap))
+      cdkBuilder.rightAnnotations(rightAnnotations.map(HorizontalAnnotation.Companion::unwrap))
     }
 
     /**
@@ -542,7 +542,7 @@ public open class GraphWidget(
      * @param rightYAxis Right Y axis. 
      */
     override fun rightYAxis(rightYAxis: YAxisProps) {
-      cdkBuilder.rightYAxis(rightYAxis.let(YAxisProps::unwrap))
+      cdkBuilder.rightYAxis(rightYAxis.let(YAxisProps.Companion::unwrap))
     }
 
     /**
@@ -622,7 +622,7 @@ public open class GraphWidget(
      * @param verticalAnnotations Annotations for the X axis. 
      */
     override fun verticalAnnotations(verticalAnnotations: List<VerticalAnnotation>) {
-      cdkBuilder.verticalAnnotations(verticalAnnotations.map(VerticalAnnotation::unwrap))
+      cdkBuilder.verticalAnnotations(verticalAnnotations.map(VerticalAnnotation.Companion::unwrap))
     }
 
     /**
@@ -643,7 +643,7 @@ public open class GraphWidget(
      * @param view Display this metric. 
      */
     override fun view(view: GraphWidgetView) {
-      cdkBuilder.view(view.let(GraphWidgetView::unwrap))
+      cdkBuilder.view(view.let(GraphWidgetView.Companion::unwrap))
     }
 
     /**

@@ -217,7 +217,7 @@ public interface CfnCustomLineItemProps {
      * @param billingPeriodRange A time range for which the custom line item is effective.
      */
     override fun billingPeriodRange(billingPeriodRange: IResolvable) {
-      cdkBuilder.billingPeriodRange(billingPeriodRange.let(IResolvable::unwrap))
+      cdkBuilder.billingPeriodRange(billingPeriodRange.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -225,7 +225,7 @@ public interface CfnCustomLineItemProps {
      */
     override
         fun billingPeriodRange(billingPeriodRange: CfnCustomLineItem.BillingPeriodRangeProperty) {
-      cdkBuilder.billingPeriodRange(billingPeriodRange.let(CfnCustomLineItem.BillingPeriodRangeProperty::unwrap))
+      cdkBuilder.billingPeriodRange(billingPeriodRange.let(CfnCustomLineItem.BillingPeriodRangeProperty.Companion::unwrap))
     }
 
     /**
@@ -242,7 +242,7 @@ public interface CfnCustomLineItemProps {
      * It should contain only one of `Flat` or `Percentage` .
      */
     override fun customLineItemChargeDetails(customLineItemChargeDetails: IResolvable) {
-      cdkBuilder.customLineItemChargeDetails(customLineItemChargeDetails.let(IResolvable::unwrap))
+      cdkBuilder.customLineItemChargeDetails(customLineItemChargeDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -251,7 +251,7 @@ public interface CfnCustomLineItemProps {
      */
     override
         fun customLineItemChargeDetails(customLineItemChargeDetails: CfnCustomLineItem.CustomLineItemChargeDetailsProperty) {
-      cdkBuilder.customLineItemChargeDetails(customLineItemChargeDetails.let(CfnCustomLineItem.CustomLineItemChargeDetailsProperty::unwrap))
+      cdkBuilder.customLineItemChargeDetails(customLineItemChargeDetails.let(CfnCustomLineItem.CustomLineItemChargeDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -285,7 +285,7 @@ public interface CfnCustomLineItemProps {
      * item.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -34,8 +34,8 @@ public open class AaaaRecord(
     id: String,
     props: AaaaRecordProps,
   ) :
-      this(software.amazon.awscdk.services.route53.AaaaRecord(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(AaaaRecordProps::unwrap))
+      this(software.amazon.awscdk.services.route53.AaaaRecord(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(AaaaRecordProps.Companion::unwrap))
   )
 
   public constructor(
@@ -242,7 +242,7 @@ public open class AaaaRecord(
      * user's location. 
      */
     override fun geoLocation(geoLocation: GeoLocation) {
-      cdkBuilder.geoLocation(geoLocation.let(GeoLocation::unwrap))
+      cdkBuilder.geoLocation(geoLocation.let(GeoLocation.Companion::unwrap))
     }
 
     /**
@@ -321,7 +321,7 @@ public open class AaaaRecord(
      * @param target The target. 
      */
     override fun target(target: RecordTarget) {
-      cdkBuilder.target(target.let(RecordTarget::unwrap))
+      cdkBuilder.target(target.let(RecordTarget.Companion::unwrap))
     }
 
     /**
@@ -332,7 +332,7 @@ public open class AaaaRecord(
      * @param ttl The resource record cache time to live (TTL). 
      */
     override fun ttl(ttl: Duration) {
-      cdkBuilder.ttl(ttl.let(Duration::unwrap))
+      cdkBuilder.ttl(ttl.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -363,7 +363,7 @@ public open class AaaaRecord(
      * @param zone The hosted zone in which to define the new record. 
      */
     override fun zone(zone: IHostedZone) {
-      cdkBuilder.zone(zone.let(IHostedZone::unwrap))
+      cdkBuilder.zone(zone.let(IHostedZone.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.route53.AaaaRecord = cdkBuilder.build()

@@ -254,14 +254,14 @@ public interface CfnVolumeProps {
      * @param ontapConfiguration The configuration of an Amazon FSx for NetApp ONTAP volume.
      */
     override fun ontapConfiguration(ontapConfiguration: IResolvable) {
-      cdkBuilder.ontapConfiguration(ontapConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.ontapConfiguration(ontapConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param ontapConfiguration The configuration of an Amazon FSx for NetApp ONTAP volume.
      */
     override fun ontapConfiguration(ontapConfiguration: CfnVolume.OntapConfigurationProperty) {
-      cdkBuilder.ontapConfiguration(ontapConfiguration.let(CfnVolume.OntapConfigurationProperty::unwrap))
+      cdkBuilder.ontapConfiguration(ontapConfiguration.let(CfnVolume.OntapConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -277,7 +277,7 @@ public interface CfnVolumeProps {
      * @param openZfsConfiguration The configuration of an Amazon FSx for OpenZFS volume.
      */
     override fun openZfsConfiguration(openZfsConfiguration: IResolvable) {
-      cdkBuilder.openZfsConfiguration(openZfsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.openZfsConfiguration(openZfsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -285,7 +285,7 @@ public interface CfnVolumeProps {
      */
     override
         fun openZfsConfiguration(openZfsConfiguration: CfnVolume.OpenZFSConfigurationProperty) {
-      cdkBuilder.openZfsConfiguration(openZfsConfiguration.let(CfnVolume.OpenZFSConfigurationProperty::unwrap))
+      cdkBuilder.openZfsConfiguration(openZfsConfiguration.let(CfnVolume.OpenZFSConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -304,7 +304,7 @@ public interface CfnVolumeProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

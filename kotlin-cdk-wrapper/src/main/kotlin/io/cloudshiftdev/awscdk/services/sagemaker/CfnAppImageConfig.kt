@@ -87,8 +87,8 @@ public open class CfnAppImageConfig(
     id: String,
     props: CfnAppImageConfigProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnAppImageConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAppImageConfigProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnAppImageConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAppImageConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -127,7 +127,7 @@ public open class CfnAppImageConfig(
    * entry point.
    */
   public open fun codeEditorAppImageConfig(`value`: IResolvable) {
-    unwrap(this).setCodeEditorAppImageConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCodeEditorAppImageConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -135,7 +135,7 @@ public open class CfnAppImageConfig(
    * entry point.
    */
   public open fun codeEditorAppImageConfig(`value`: CodeEditorAppImageConfigProperty) {
-    unwrap(this).setCodeEditorAppImageConfig(`value`.let(CodeEditorAppImageConfigProperty::unwrap))
+    unwrap(this).setCodeEditorAppImageConfig(`value`.let(CodeEditorAppImageConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -154,7 +154,7 @@ public open class CfnAppImageConfig(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -168,7 +168,7 @@ public open class CfnAppImageConfig(
    * entry point.
    */
   public open fun jupyterLabAppImageConfig(`value`: IResolvable) {
-    unwrap(this).setJupyterLabAppImageConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setJupyterLabAppImageConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -176,7 +176,7 @@ public open class CfnAppImageConfig(
    * entry point.
    */
   public open fun jupyterLabAppImageConfig(`value`: JupyterLabAppImageConfigProperty) {
-    unwrap(this).setJupyterLabAppImageConfig(`value`.let(JupyterLabAppImageConfigProperty::unwrap))
+    unwrap(this).setJupyterLabAppImageConfig(`value`.let(JupyterLabAppImageConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -198,14 +198,14 @@ public open class CfnAppImageConfig(
    * The configuration for the file system and kernels in the SageMaker image.
    */
   public open fun kernelGatewayImageConfig(`value`: IResolvable) {
-    unwrap(this).setKernelGatewayImageConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKernelGatewayImageConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration for the file system and kernels in the SageMaker image.
    */
   public open fun kernelGatewayImageConfig(`value`: KernelGatewayImageConfigProperty) {
-    unwrap(this).setKernelGatewayImageConfig(`value`.let(KernelGatewayImageConfigProperty::unwrap))
+    unwrap(this).setKernelGatewayImageConfig(`value`.let(KernelGatewayImageConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -232,7 +232,7 @@ public open class CfnAppImageConfig(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -404,7 +404,7 @@ public open class CfnAppImageConfig(
      * as the environment variables and entry point. 
      */
     override fun codeEditorAppImageConfig(codeEditorAppImageConfig: IResolvable) {
-      cdkBuilder.codeEditorAppImageConfig(codeEditorAppImageConfig.let(IResolvable::unwrap))
+      cdkBuilder.codeEditorAppImageConfig(codeEditorAppImageConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -417,7 +417,7 @@ public open class CfnAppImageConfig(
      */
     override
         fun codeEditorAppImageConfig(codeEditorAppImageConfig: CodeEditorAppImageConfigProperty) {
-      cdkBuilder.codeEditorAppImageConfig(codeEditorAppImageConfig.let(CodeEditorAppImageConfigProperty::unwrap))
+      cdkBuilder.codeEditorAppImageConfig(codeEditorAppImageConfig.let(CodeEditorAppImageConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -443,7 +443,7 @@ public open class CfnAppImageConfig(
      * as the environment variables and entry point. 
      */
     override fun jupyterLabAppImageConfig(jupyterLabAppImageConfig: IResolvable) {
-      cdkBuilder.jupyterLabAppImageConfig(jupyterLabAppImageConfig.let(IResolvable::unwrap))
+      cdkBuilder.jupyterLabAppImageConfig(jupyterLabAppImageConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -456,7 +456,7 @@ public open class CfnAppImageConfig(
      */
     override
         fun jupyterLabAppImageConfig(jupyterLabAppImageConfig: JupyterLabAppImageConfigProperty) {
-      cdkBuilder.jupyterLabAppImageConfig(jupyterLabAppImageConfig.let(JupyterLabAppImageConfigProperty::unwrap))
+      cdkBuilder.jupyterLabAppImageConfig(jupyterLabAppImageConfig.let(JupyterLabAppImageConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -481,7 +481,7 @@ public open class CfnAppImageConfig(
      * SageMaker image. 
      */
     override fun kernelGatewayImageConfig(kernelGatewayImageConfig: IResolvable) {
-      cdkBuilder.kernelGatewayImageConfig(kernelGatewayImageConfig.let(IResolvable::unwrap))
+      cdkBuilder.kernelGatewayImageConfig(kernelGatewayImageConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -493,7 +493,7 @@ public open class CfnAppImageConfig(
      */
     override
         fun kernelGatewayImageConfig(kernelGatewayImageConfig: KernelGatewayImageConfigProperty) {
-      cdkBuilder.kernelGatewayImageConfig(kernelGatewayImageConfig.let(KernelGatewayImageConfigProperty::unwrap))
+      cdkBuilder.kernelGatewayImageConfig(kernelGatewayImageConfig.let(KernelGatewayImageConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -520,7 +520,7 @@ public open class CfnAppImageConfig(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -628,14 +628,14 @@ public open class CfnAppImageConfig(
        * @param containerConfig The container configuration for a SageMaker image.
        */
       override fun containerConfig(containerConfig: IResolvable) {
-        cdkBuilder.containerConfig(containerConfig.let(IResolvable::unwrap))
+        cdkBuilder.containerConfig(containerConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param containerConfig The container configuration for a SageMaker image.
        */
       override fun containerConfig(containerConfig: ContainerConfigProperty) {
-        cdkBuilder.containerConfig(containerConfig.let(ContainerConfigProperty::unwrap))
+        cdkBuilder.containerConfig(containerConfig.let(ContainerConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -807,7 +807,7 @@ public open class CfnAppImageConfig(
        * @param containerEnvironmentVariables The environment variables to set in the container.
        */
       override fun containerEnvironmentVariables(containerEnvironmentVariables: IResolvable) {
-        cdkBuilder.containerEnvironmentVariables(containerEnvironmentVariables.let(IResolvable::unwrap))
+        cdkBuilder.containerEnvironmentVariables(containerEnvironmentVariables.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1207,14 +1207,14 @@ public open class CfnAppImageConfig(
        * @param containerConfig The configuration used to run the application image container.
        */
       override fun containerConfig(containerConfig: IResolvable) {
-        cdkBuilder.containerConfig(containerConfig.let(IResolvable::unwrap))
+        cdkBuilder.containerConfig(containerConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param containerConfig The configuration used to run the application image container.
        */
       override fun containerConfig(containerConfig: ContainerConfigProperty) {
-        cdkBuilder.containerConfig(containerConfig.let(ContainerConfigProperty::unwrap))
+        cdkBuilder.containerConfig(containerConfig.let(ContainerConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1354,7 +1354,7 @@ public open class CfnAppImageConfig(
        * SageMaker image.
        */
       override fun fileSystemConfig(fileSystemConfig: IResolvable) {
-        cdkBuilder.fileSystemConfig(fileSystemConfig.let(IResolvable::unwrap))
+        cdkBuilder.fileSystemConfig(fileSystemConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1362,7 +1362,7 @@ public open class CfnAppImageConfig(
        * SageMaker image.
        */
       override fun fileSystemConfig(fileSystemConfig: FileSystemConfigProperty) {
-        cdkBuilder.fileSystemConfig(fileSystemConfig.let(FileSystemConfigProperty::unwrap))
+        cdkBuilder.fileSystemConfig(fileSystemConfig.let(FileSystemConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1378,7 +1378,7 @@ public open class CfnAppImageConfig(
        * @param kernelSpecs The specification of the Jupyter kernels in the image. 
        */
       override fun kernelSpecs(kernelSpecs: IResolvable) {
-        cdkBuilder.kernelSpecs(kernelSpecs.let(IResolvable::unwrap))
+        cdkBuilder.kernelSpecs(kernelSpecs.let(IResolvable.Companion::unwrap))
       }
 
       /**

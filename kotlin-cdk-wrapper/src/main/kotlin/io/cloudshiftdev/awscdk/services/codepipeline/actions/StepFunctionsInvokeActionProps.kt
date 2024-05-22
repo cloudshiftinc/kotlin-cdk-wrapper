@@ -156,7 +156,7 @@ public interface StepFunctionsInvokeActionProps : CommonAwsActionProps {
      * @param output The optional output Artifact of the Action.
      */
     override fun output(output: Artifact) {
-      cdkBuilder.output(output.let(Artifact::unwrap))
+      cdkBuilder.output(output.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -168,7 +168,7 @@ public interface StepFunctionsInvokeActionProps : CommonAwsActionProps {
      * method in the `ActionBindOptions.role` property.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -183,7 +183,7 @@ public interface StepFunctionsInvokeActionProps : CommonAwsActionProps {
      * @param stateMachine The state machine to invoke. 
      */
     override fun stateMachine(stateMachine: IStateMachine) {
-      cdkBuilder.stateMachine(stateMachine.let(IStateMachine::unwrap))
+      cdkBuilder.stateMachine(stateMachine.let(IStateMachine.Companion::unwrap))
     }
 
     /**
@@ -191,7 +191,7 @@ public interface StepFunctionsInvokeActionProps : CommonAwsActionProps {
      * This includes input artifact, input type and the statemachine input.
      */
     override fun stateMachineInput(stateMachineInput: StateMachineInput) {
-      cdkBuilder.stateMachineInput(stateMachineInput.let(StateMachineInput::unwrap))
+      cdkBuilder.stateMachineInput(stateMachineInput.let(StateMachineInput.Companion::unwrap))
     }
 
     /**

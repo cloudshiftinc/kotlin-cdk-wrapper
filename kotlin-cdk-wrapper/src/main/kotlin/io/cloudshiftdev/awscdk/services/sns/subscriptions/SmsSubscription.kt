@@ -33,7 +33,7 @@ public open class SmsSubscription(
 
   public constructor(phoneNumber: String, props: SmsSubscriptionProps) :
       this(software.amazon.awscdk.services.sns.subscriptions.SmsSubscription(phoneNumber,
-      props.let(SmsSubscriptionProps::unwrap))
+      props.let(SmsSubscriptionProps.Companion::unwrap))
   )
 
   public constructor(phoneNumber: String, props: SmsSubscriptionProps.Builder.() -> Unit) :
@@ -46,7 +46,7 @@ public open class SmsSubscription(
    * @param _topic 
    */
   public override fun bind(topic: ITopic): TopicSubscriptionConfig =
-      unwrap(this).bind(topic.let(ITopic::unwrap)).let(TopicSubscriptionConfig::wrap)
+      unwrap(this).bind(topic.let(ITopic.Companion::unwrap)).let(TopicSubscriptionConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.sns.subscriptions.SmsSubscription].
@@ -103,7 +103,7 @@ public open class SmsSubscription(
      * @param deadLetterQueue Queue to be used as dead letter queue. 
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**

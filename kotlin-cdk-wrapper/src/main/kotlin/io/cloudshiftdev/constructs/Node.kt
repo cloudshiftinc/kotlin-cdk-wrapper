@@ -19,11 +19,12 @@ public open class Node(
     host: Construct,
     scope: IConstruct,
     id: String,
-  ) : this(software.constructs.Node(host.let(Construct::unwrap), scope.let(IConstruct::unwrap), id)
+  ) : this(software.constructs.Node(host.let(Construct.Companion::unwrap),
+      scope.let(IConstruct.Companion::unwrap), id)
   )
 
   public open fun addDependency(deps: IDependable) {
-    unwrap(this).addDependency(deps.let(IDependable::unwrap))
+    unwrap(this).addDependency(deps.let(IDependable.Companion::unwrap))
   }
 
   public open fun addMetadata(type: String, `data`: Any) {
@@ -35,7 +36,7 @@ public open class Node(
     `data`: Any,
     options: MetadataOptions,
   ) {
-    unwrap(this).addMetadata(type, `data`, options.let(MetadataOptions::unwrap))
+    unwrap(this).addMetadata(type, `data`, options.let(MetadataOptions.Companion::unwrap))
   }
 
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -47,7 +48,7 @@ public open class Node(
   ): Unit = addMetadata(type, `data`, MetadataOptions(options))
 
   public open fun addValidation(validation: IValidation) {
-    unwrap(this).addValidation(validation.let(IValidation::unwrap))
+    unwrap(this).addValidation(validation.let(IValidation.Companion::unwrap))
   }
 
   public open fun addr(): String = unwrap(this).getAddr()
@@ -68,7 +69,7 @@ public open class Node(
       unwrap(this).getDefaultChild()?.let(IConstruct::wrap)
 
   public open fun defaultChild(`value`: IConstruct) {
-    unwrap(this).setDefaultChild(`value`.let(IConstruct::unwrap))
+    unwrap(this).setDefaultChild(`value`.let(IConstruct.Companion::unwrap))
   }
 
   public open fun dependencies(): List<IConstruct> =
@@ -77,7 +78,7 @@ public open class Node(
   public open fun findAll(): List<IConstruct> = unwrap(this).findAll().map(IConstruct::wrap)
 
   public open fun findAll(order: ConstructOrder): List<IConstruct> =
-      unwrap(this).findAll(order.let(ConstructOrder::unwrap)).map(IConstruct::wrap)
+      unwrap(this).findAll(order.let(ConstructOrder.Companion::unwrap)).map(IConstruct::wrap)
 
   public open fun findChild(id: String): IConstruct =
       unwrap(this).findChild(id).let(IConstruct::wrap)
@@ -116,7 +117,7 @@ public open class Node(
 
     @Deprecated(message = "deprecated in CDK")
     public fun of(construct: IConstruct): Node =
-        software.constructs.Node.of(construct.let(IConstruct::unwrap)).let(Node::wrap)
+        software.constructs.Node.of(construct.let(IConstruct.Companion::unwrap)).let(Node::wrap)
 
     internal fun wrap(cdkObject: software.constructs.Node): Node = Node(cdkObject)
 

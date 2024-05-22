@@ -143,7 +143,7 @@ public interface CfnStorageConfigurationProps {
      * property type for more information.
      */
     override fun s3(s3: IResolvable) {
-      cdkBuilder.s3(s3.let(IResolvable::unwrap))
+      cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -154,7 +154,7 @@ public interface CfnStorageConfigurationProps {
      * property type for more information.
      */
     override fun s3(s3: CfnStorageConfiguration.S3StorageConfigurationProperty) {
-      cdkBuilder.s3(s3.let(CfnStorageConfiguration.S3StorageConfigurationProperty::unwrap))
+      cdkBuilder.s3(s3.let(CfnStorageConfiguration.S3StorageConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -176,7 +176,7 @@ public interface CfnStorageConfigurationProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

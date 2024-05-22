@@ -74,7 +74,7 @@ public interface UntrustedCodeBoundaryPolicyProps {
      * @param additionalStatements Additional statements to add to the default set of statements.
      */
     override fun additionalStatements(additionalStatements: List<PolicyStatement>) {
-      cdkBuilder.additionalStatements(additionalStatements.map(PolicyStatement::unwrap))
+      cdkBuilder.additionalStatements(additionalStatements.map(PolicyStatement.Companion::unwrap))
     }
 
     /**

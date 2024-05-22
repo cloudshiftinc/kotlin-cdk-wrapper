@@ -61,8 +61,8 @@ public open class CfnServerlessCluster(
     id: String,
     props: CfnServerlessClusterProps,
   ) :
-      this(software.amazon.awscdk.services.msk.CfnServerlessCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnServerlessClusterProps::unwrap))
+      this(software.amazon.awscdk.services.msk.CfnServerlessCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnServerlessClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -86,14 +86,14 @@ public open class CfnServerlessCluster(
    * Includes all client authentication information.
    */
   public open fun clientAuthentication(`value`: IResolvable) {
-    unwrap(this).setClientAuthentication(`value`.let(IResolvable::unwrap))
+    unwrap(this).setClientAuthentication(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Includes all client authentication information.
    */
   public open fun clientAuthentication(`value`: ClientAuthenticationProperty) {
-    unwrap(this).setClientAuthentication(`value`.let(ClientAuthenticationProperty::unwrap))
+    unwrap(this).setClientAuthentication(`value`.let(ClientAuthenticationProperty.Companion::unwrap))
   }
 
   /**
@@ -122,7 +122,7 @@ public open class CfnServerlessCluster(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -151,7 +151,7 @@ public open class CfnServerlessCluster(
    *
    */
   public open fun vpcConfigs(`value`: IResolvable) {
-    unwrap(this).setVpcConfigs(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcConfigs(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -245,7 +245,7 @@ public open class CfnServerlessCluster(
      * @param clientAuthentication Includes all client authentication information. 
      */
     override fun clientAuthentication(clientAuthentication: IResolvable) {
-      cdkBuilder.clientAuthentication(clientAuthentication.let(IResolvable::unwrap))
+      cdkBuilder.clientAuthentication(clientAuthentication.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -255,7 +255,7 @@ public open class CfnServerlessCluster(
      * @param clientAuthentication Includes all client authentication information. 
      */
     override fun clientAuthentication(clientAuthentication: ClientAuthenticationProperty) {
-      cdkBuilder.clientAuthentication(clientAuthentication.let(ClientAuthenticationProperty::unwrap))
+      cdkBuilder.clientAuthentication(clientAuthentication.let(ClientAuthenticationProperty.Companion::unwrap))
     }
 
     /**
@@ -293,7 +293,7 @@ public open class CfnServerlessCluster(
      * @param vpcConfigs 
      */
     override fun vpcConfigs(vpcConfigs: IResolvable) {
-      cdkBuilder.vpcConfigs(vpcConfigs.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfigs(vpcConfigs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -413,7 +413,7 @@ public open class CfnServerlessCluster(
        * `TLS_PLAINTEXT` , then you must also set `unauthenticated` to true.
        */
       override fun sasl(sasl: IResolvable) {
-        cdkBuilder.sasl(sasl.let(IResolvable::unwrap))
+        cdkBuilder.sasl(sasl.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -423,7 +423,7 @@ public open class CfnServerlessCluster(
        * `TLS_PLAINTEXT` , then you must also set `unauthenticated` to true.
        */
       override fun sasl(sasl: SaslProperty) {
-        cdkBuilder.sasl(sasl.let(SaslProperty::unwrap))
+        cdkBuilder.sasl(sasl.let(SaslProperty.Companion::unwrap))
       }
 
       /**
@@ -530,7 +530,7 @@ public open class CfnServerlessCluster(
        * @param enabled SASL/IAM authentication is enabled or not. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.msk.CfnServerlessCluster.IamProperty =
@@ -627,14 +627,14 @@ public open class CfnServerlessCluster(
        * @param iam Details for ClientAuthentication using IAM. 
        */
       override fun iam(iam: IResolvable) {
-        cdkBuilder.iam(iam.let(IResolvable::unwrap))
+        cdkBuilder.iam(iam.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param iam Details for ClientAuthentication using IAM. 
        */
       override fun iam(iam: IamProperty) {
-        cdkBuilder.iam(iam.let(IamProperty::unwrap))
+        cdkBuilder.iam(iam.let(IamProperty.Companion::unwrap))
       }
 
       /**

@@ -292,14 +292,14 @@ public interface CfnApplicationProps {
      * @param iconS3Location The icon S3 location of the application. 
      */
     override fun iconS3Location(iconS3Location: IResolvable) {
-      cdkBuilder.iconS3Location(iconS3Location.let(IResolvable::unwrap))
+      cdkBuilder.iconS3Location(iconS3Location.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param iconS3Location The icon S3 location of the application. 
      */
     override fun iconS3Location(iconS3Location: CfnApplication.S3LocationProperty) {
-      cdkBuilder.iconS3Location(iconS3Location.let(CfnApplication.S3LocationProperty::unwrap))
+      cdkBuilder.iconS3Location(iconS3Location.let(CfnApplication.S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -368,7 +368,7 @@ public interface CfnApplicationProps {
      * @param tags The tags of the application.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -52,7 +52,7 @@ public abstract class FilterOrPolicy(
 
   public companion object {
     public fun filter(filter: SubscriptionFilter): Filter =
-        software.amazon.awscdk.services.sns.FilterOrPolicy.filter(filter.let(SubscriptionFilter::unwrap)).let(Filter::wrap)
+        software.amazon.awscdk.services.sns.FilterOrPolicy.filter(filter.let(SubscriptionFilter.Companion::unwrap)).let(Filter::wrap)
 
     public fun policy(policy: Map<String, FilterOrPolicy>): Policy =
         software.amazon.awscdk.services.sns.FilterOrPolicy.policy(policy.mapValues{FilterOrPolicy.unwrap(it.value)}).let(Policy::wrap)

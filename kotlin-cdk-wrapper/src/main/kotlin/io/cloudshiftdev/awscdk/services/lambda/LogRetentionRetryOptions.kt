@@ -56,7 +56,7 @@ public interface LogRetentionRetryOptions :
      */
     @Deprecated(message = "deprecated in CDK")
     override fun base(base: Duration) {
-      cdkBuilder.base(base.let(Duration::unwrap))
+      cdkBuilder.base(base.let(Duration.Companion::unwrap))
     }
 
     /**

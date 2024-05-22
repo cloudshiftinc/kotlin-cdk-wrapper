@@ -46,8 +46,8 @@ public open class CfnFlowTemplate(
     id: String,
     props: CfnFlowTemplateProps,
   ) :
-      this(software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFlowTemplateProps::unwrap))
+      this(software.amazon.awscdk.services.iotthingsgraph.CfnFlowTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFlowTemplateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -84,14 +84,14 @@ public open class CfnFlowTemplate(
    *
    */
   public open fun definition(`value`: IResolvable) {
-    unwrap(this).setDefinition(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefinition(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun definition(`value`: DefinitionDocumentProperty) {
-    unwrap(this).setDefinition(`value`.let(DefinitionDocumentProperty::unwrap))
+    unwrap(this).setDefinition(`value`.let(DefinitionDocumentProperty.Companion::unwrap))
   }
 
   /**
@@ -108,7 +108,7 @@ public open class CfnFlowTemplate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -163,7 +163,7 @@ public open class CfnFlowTemplate(
      * @param definition 
      */
     override fun definition(definition: IResolvable) {
-      cdkBuilder.definition(definition.let(IResolvable::unwrap))
+      cdkBuilder.definition(definition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -171,7 +171,7 @@ public open class CfnFlowTemplate(
      * @param definition 
      */
     override fun definition(definition: DefinitionDocumentProperty) {
-      cdkBuilder.definition(definition.let(DefinitionDocumentProperty::unwrap))
+      cdkBuilder.definition(definition.let(DefinitionDocumentProperty.Companion::unwrap))
     }
 
     /**

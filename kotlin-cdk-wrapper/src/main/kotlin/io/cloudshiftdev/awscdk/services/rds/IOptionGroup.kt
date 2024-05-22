@@ -57,7 +57,7 @@ public interface IOptionGroup : IResource {
      * @param configuration 
      */
     override fun addConfiguration(configuration: OptionConfiguration): Boolean =
-        unwrap(this).addConfiguration(configuration.let(OptionConfiguration::unwrap))
+        unwrap(this).addConfiguration(configuration.let(OptionConfiguration.Companion::unwrap))
 
     /**
      * Adds a configuration to this OptionGroup.
@@ -86,7 +86,7 @@ public interface IOptionGroup : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**

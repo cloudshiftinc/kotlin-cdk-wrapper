@@ -54,7 +54,7 @@ public open class EventField(
    * @param _ctx 
    */
   public override fun resolve(ctx: IResolveContext): Any =
-      unwrap(this).resolve(ctx.let(IResolveContext::unwrap))
+      unwrap(this).resolve(ctx.let(IResolveContext.Companion::unwrap))
 
   /**
    * Convert the path to the field in the event pattern to JSON.

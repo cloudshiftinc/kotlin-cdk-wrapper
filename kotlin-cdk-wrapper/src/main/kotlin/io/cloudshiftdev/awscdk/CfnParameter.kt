@@ -31,7 +31,7 @@ public open class CfnParameter(
   cdkObject: software.amazon.awscdk.CfnParameter,
 ) : CfnElement(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.CfnParameter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.CfnParameter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -39,8 +39,9 @@ public open class CfnParameter(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
     props: CfnParameterProps,
-  ) : this(software.amazon.awscdk.CfnParameter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnParameterProps::unwrap))
+  ) :
+      this(software.amazon.awscdk.CfnParameter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnParameterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -237,7 +238,7 @@ public open class CfnParameter(
    * @param _context 
    */
   public open fun resolve(context: IResolveContext): Any =
-      unwrap(this).resolve(context.let(IResolveContext::unwrap))
+      unwrap(this).resolve(context.let(IResolveContext.Companion::unwrap))
 
   /**
    * The data type for the parameter (DataType).

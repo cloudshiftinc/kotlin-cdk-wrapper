@@ -82,7 +82,7 @@ public interface CfnCollectionProps {
      * @param tags A set of tags (key-value pairs) that you want to attach to the collection.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

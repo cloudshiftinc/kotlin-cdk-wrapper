@@ -296,7 +296,7 @@ public interface CfnLoadBalancerProps {
      * the same instance.
      */
     override fun sessionStickinessEnabled(sessionStickinessEnabled: IResolvable) {
-      cdkBuilder.sessionStickinessEnabled(sessionStickinessEnabled.let(IResolvable::unwrap))
+      cdkBuilder.sessionStickinessEnabled(sessionStickinessEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -320,7 +320,7 @@ public interface CfnLoadBalancerProps {
      * The `Value` of `Tags` is optional for Lightsail resources.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

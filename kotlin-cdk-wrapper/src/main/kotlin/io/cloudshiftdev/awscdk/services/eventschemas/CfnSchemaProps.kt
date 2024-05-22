@@ -158,7 +158,7 @@ public interface CfnSchemaProps {
      * @param tags Tags associated with the schema.
      */
     override fun tags(tags: List<CfnSchema.TagsEntryProperty>) {
-      cdkBuilder.tags(tags.map(CfnSchema.TagsEntryProperty::unwrap))
+      cdkBuilder.tags(tags.map(CfnSchema.TagsEntryProperty.Companion::unwrap))
     }
 
     /**

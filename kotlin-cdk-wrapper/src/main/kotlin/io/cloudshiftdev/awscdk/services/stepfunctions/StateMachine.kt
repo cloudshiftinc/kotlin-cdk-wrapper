@@ -55,8 +55,8 @@ public open class StateMachine(
     id: String,
     props: StateMachineProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.StateMachine(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(StateMachineProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.StateMachine(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(StateMachineProps.Companion::unwrap))
   )
 
   public constructor(
@@ -72,7 +72,7 @@ public open class StateMachine(
    * @param statement 
    */
   public open fun addToRolePolicy(statement: PolicyStatement) {
-    unwrap(this).addToRolePolicy(statement.let(PolicyStatement::unwrap))
+    unwrap(this).addToRolePolicy(statement.let(PolicyStatement.Companion::unwrap))
   }
 
   /**
@@ -92,8 +92,8 @@ public open class StateMachine(
    * @param actions 
    */
   public override fun grant(identity: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(identity.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
-      as String}.toTypedArray()).let(Grant::wrap)
+      unwrap(this).grant(identity.let(IGrantable.Companion::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Grant the given identity permissions on all executions of the state machine.
@@ -102,7 +102,7 @@ public open class StateMachine(
    * @param actions 
    */
   public override fun grantExecution(identity: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grantExecution(identity.let(IGrantable::unwrap),
+      unwrap(this).grantExecution(identity.let(IGrantable.Companion::unwrap),
       *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
@@ -117,7 +117,7 @@ public open class StateMachine(
    * @param identity 
    */
   public override fun grantRead(identity: IGrantable): Grant =
-      unwrap(this).grantRead(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantRead(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant the given identity permissions to start an execution of this state machine.
@@ -125,7 +125,7 @@ public open class StateMachine(
    * @param identity 
    */
   public override fun grantStartExecution(identity: IGrantable): Grant =
-      unwrap(this).grantStartExecution(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantStartExecution(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant the given identity permissions to start a synchronous execution of this state machine.
@@ -133,7 +133,7 @@ public open class StateMachine(
    * @param identity 
    */
   public override fun grantStartSyncExecution(identity: IGrantable): Grant =
-      unwrap(this).grantStartSyncExecution(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantStartSyncExecution(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant the given identity task response permissions on a state machine.
@@ -141,7 +141,7 @@ public open class StateMachine(
    * @param identity 
    */
   public override fun grantTaskResponse(identity: IGrantable): Grant =
-      unwrap(this).grantTaskResponse(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantTaskResponse(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Return the given named metric for this State Machine's executions.
@@ -163,7 +163,7 @@ public open class StateMachine(
    * @param props
    */
   public override fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Return the given named metric for this State Machine's executions.
@@ -195,7 +195,7 @@ public open class StateMachine(
    * @param props
    */
   public override fun metricAborted(props: MetricOptions): Metric =
-      unwrap(this).metricAborted(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricAborted(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of executions that were aborted.
@@ -226,7 +226,7 @@ public open class StateMachine(
    * @param props
    */
   public override fun metricFailed(props: MetricOptions): Metric =
-      unwrap(this).metricFailed(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricFailed(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of executions that failed.
@@ -257,7 +257,7 @@ public open class StateMachine(
    * @param props
    */
   public override fun metricStarted(props: MetricOptions): Metric =
-      unwrap(this).metricStarted(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricStarted(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of executions that were started.
@@ -288,7 +288,7 @@ public open class StateMachine(
    * @param props
    */
   public override fun metricSucceeded(props: MetricOptions): Metric =
-      unwrap(this).metricSucceeded(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricSucceeded(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of executions that succeeded.
@@ -319,7 +319,7 @@ public open class StateMachine(
    * @param props
    */
   public override fun metricThrottled(props: MetricOptions): Metric =
-      unwrap(this).metricThrottled(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricThrottled(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of executions that were throttled.
@@ -352,7 +352,7 @@ public open class StateMachine(
    * @param props
    */
   public override fun metricTime(props: MetricOptions): Metric =
-      unwrap(this).metricTime(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricTime(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the interval, in milliseconds, between the time the execution starts and the time it
@@ -384,7 +384,7 @@ public open class StateMachine(
    * @param props
    */
   public override fun metricTimedOut(props: MetricOptions): Metric =
-      unwrap(this).metricTimedOut(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricTimedOut(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of executions that timed out.
@@ -564,7 +564,7 @@ public open class StateMachine(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun definition(definition: IChainable) {
-      cdkBuilder.definition(definition.let(IChainable::unwrap))
+      cdkBuilder.definition(definition.let(IChainable.Companion::unwrap))
     }
 
     /**
@@ -573,7 +573,7 @@ public open class StateMachine(
      * @param definitionBody Definition for this state machine. 
      */
     override fun definitionBody(definitionBody: DefinitionBody) {
-      cdkBuilder.definitionBody(definitionBody.let(DefinitionBody::unwrap))
+      cdkBuilder.definitionBody(definitionBody.let(DefinitionBody.Companion::unwrap))
     }
 
     /**
@@ -593,7 +593,7 @@ public open class StateMachine(
      * @param logs Defines what execution history events are logged and where they are logged. 
      */
     override fun logs(logs: LogOptions) {
-      cdkBuilder.logs(logs.let(LogOptions::unwrap))
+      cdkBuilder.logs(logs.let(LogOptions.Companion::unwrap))
     }
 
     /**
@@ -615,7 +615,7 @@ public open class StateMachine(
      * @param removalPolicy The removal policy to apply to state machine. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -626,7 +626,7 @@ public open class StateMachine(
      * @param role The execution role for the state machine service. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -648,7 +648,7 @@ public open class StateMachine(
      * @param stateMachineType Type of the state machine. 
      */
     override fun stateMachineType(stateMachineType: StateMachineType) {
-      cdkBuilder.stateMachineType(stateMachineType.let(StateMachineType::unwrap))
+      cdkBuilder.stateMachineType(stateMachineType.let(StateMachineType.Companion::unwrap))
     }
 
     /**
@@ -659,7 +659,7 @@ public open class StateMachine(
      * @param timeout Maximum run time for this state machine. 
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -684,7 +684,7 @@ public open class StateMachine(
       id: String,
       stateMachineArn: String,
     ): IStateMachine =
-        software.amazon.awscdk.services.stepfunctions.StateMachine.fromStateMachineArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.stepfunctions.StateMachine.fromStateMachineArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, stateMachineArn).let(IStateMachine::wrap)
 
     public fun fromStateMachineName(
@@ -692,7 +692,7 @@ public open class StateMachine(
       id: String,
       stateMachineName: String,
     ): IStateMachine =
-        software.amazon.awscdk.services.stepfunctions.StateMachine.fromStateMachineName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.stepfunctions.StateMachine.fromStateMachineName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, stateMachineName).let(IStateMachine::wrap)
 
     public operator fun invoke(

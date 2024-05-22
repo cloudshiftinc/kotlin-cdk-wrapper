@@ -248,7 +248,7 @@ public interface CfnSimpleADProps {
      * only be used when absolutely necessary.
      */
     override fun createAlias(createAlias: IResolvable) {
-      cdkBuilder.createAlias(createAlias.let(IResolvable::unwrap))
+      cdkBuilder.createAlias(createAlias.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -271,7 +271,7 @@ public interface CfnSimpleADProps {
      * If you don't specify a value, AWS CloudFormation disables single sign-on by default.
      */
     override fun enableSso(enableSso: IResolvable) {
-      cdkBuilder.enableSso(enableSso.let(IResolvable::unwrap))
+      cdkBuilder.enableSso(enableSso.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -317,7 +317,7 @@ public interface CfnSimpleADProps {
      * object that contains additional information for the operation. 
      */
     override fun vpcSettings(vpcSettings: IResolvable) {
-      cdkBuilder.vpcSettings(vpcSettings.let(IResolvable::unwrap))
+      cdkBuilder.vpcSettings(vpcSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -326,7 +326,7 @@ public interface CfnSimpleADProps {
      * object that contains additional information for the operation. 
      */
     override fun vpcSettings(vpcSettings: CfnSimpleAD.VpcSettingsProperty) {
-      cdkBuilder.vpcSettings(vpcSettings.let(CfnSimpleAD.VpcSettingsProperty::unwrap))
+      cdkBuilder.vpcSettings(vpcSettings.let(CfnSimpleAD.VpcSettingsProperty.Companion::unwrap))
     }
 
     /**

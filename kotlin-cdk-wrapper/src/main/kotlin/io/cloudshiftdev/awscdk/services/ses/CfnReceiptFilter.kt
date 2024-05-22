@@ -49,8 +49,8 @@ public open class CfnReceiptFilter(
     id: String,
     props: CfnReceiptFilterProps,
   ) :
-      this(software.amazon.awscdk.services.ses.CfnReceiptFilter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnReceiptFilterProps::unwrap))
+      this(software.amazon.awscdk.services.ses.CfnReceiptFilter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnReceiptFilterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -76,7 +76,7 @@ public open class CfnReceiptFilter(
    * IP address range, and whether to allow or block mail from it.
    */
   public open fun filter(`value`: IResolvable) {
-    unwrap(this).setFilter(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFilter(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -84,7 +84,7 @@ public open class CfnReceiptFilter(
    * IP address range, and whether to allow or block mail from it.
    */
   public open fun filter(`value`: FilterProperty) {
-    unwrap(this).setFilter(`value`.let(FilterProperty::unwrap))
+    unwrap(this).setFilter(`value`.let(FilterProperty.Companion::unwrap))
   }
 
   /**
@@ -102,7 +102,7 @@ public open class CfnReceiptFilter(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -159,7 +159,7 @@ public open class CfnReceiptFilter(
      * of a name, an IP address range, and whether to allow or block mail from it. 
      */
     override fun filter(filter: IResolvable) {
-      cdkBuilder.filter(filter.let(IResolvable::unwrap))
+      cdkBuilder.filter(filter.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -171,7 +171,7 @@ public open class CfnReceiptFilter(
      * of a name, an IP address range, and whether to allow or block mail from it. 
      */
     override fun filter(filter: FilterProperty) {
-      cdkBuilder.filter(filter.let(FilterProperty::unwrap))
+      cdkBuilder.filter(filter.let(FilterProperty.Companion::unwrap))
     }
 
     /**
@@ -297,7 +297,7 @@ public open class CfnReceiptFilter(
        * to block or allow incoming mail from them. 
        */
       override fun ipFilter(ipFilter: IResolvable) {
-        cdkBuilder.ipFilter(ipFilter.let(IResolvable::unwrap))
+        cdkBuilder.ipFilter(ipFilter.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -305,7 +305,7 @@ public open class CfnReceiptFilter(
        * to block or allow incoming mail from them. 
        */
       override fun ipFilter(ipFilter: IpFilterProperty) {
-        cdkBuilder.ipFilter(ipFilter.let(IpFilterProperty::unwrap))
+        cdkBuilder.ipFilter(ipFilter.let(IpFilterProperty.Companion::unwrap))
       }
 
       /**

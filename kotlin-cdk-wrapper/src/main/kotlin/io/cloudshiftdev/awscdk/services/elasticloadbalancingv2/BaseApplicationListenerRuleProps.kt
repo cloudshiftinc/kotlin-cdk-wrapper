@@ -129,14 +129,14 @@ public interface BaseApplicationListenerRuleProps {
      * Only one of `action`, `fixedResponse`, `redirectResponse` or `targetGroups` can be specified.
      */
     override fun action(action: ListenerAction) {
-      cdkBuilder.action(action.let(ListenerAction::unwrap))
+      cdkBuilder.action(action.let(ListenerAction.Companion::unwrap))
     }
 
     /**
      * @param conditions Rule applies if matches the conditions.
      */
     override fun conditions(conditions: List<ListenerCondition>) {
-      cdkBuilder.conditions(conditions.map(ListenerCondition::unwrap))
+      cdkBuilder.conditions(conditions.map(ListenerCondition.Companion::unwrap))
     }
 
     /**
@@ -162,7 +162,7 @@ public interface BaseApplicationListenerRuleProps {
      * Implies a `forward` action.
      */
     override fun targetGroups(targetGroups: List<IApplicationTargetGroup>) {
-      cdkBuilder.targetGroups(targetGroups.map(IApplicationTargetGroup::unwrap))
+      cdkBuilder.targetGroups(targetGroups.map(IApplicationTargetGroup.Companion::unwrap))
     }
 
     /**

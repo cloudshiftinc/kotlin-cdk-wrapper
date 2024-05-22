@@ -33,8 +33,8 @@ public open class AccessKey(
     id: String,
     props: AccessKeyProps,
   ) :
-      this(software.amazon.awscdk.services.iam.AccessKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(AccessKeyProps::unwrap))
+      this(software.amazon.awscdk.services.iam.AccessKey(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(AccessKeyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -130,7 +130,7 @@ public open class AccessKey(
      * @param status The status of the access key. 
      */
     override fun status(status: AccessKeyStatus) {
-      cdkBuilder.status(status.let(AccessKeyStatus::unwrap))
+      cdkBuilder.status(status.let(AccessKeyStatus.Companion::unwrap))
     }
 
     /**
@@ -143,7 +143,7 @@ public open class AccessKey(
      * @param user The IAM user this key will belong to. 
      */
     override fun user(user: IUser) {
-      cdkBuilder.user(user.let(IUser::unwrap))
+      cdkBuilder.user(user.let(IUser.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.iam.AccessKey = cdkBuilder.build()

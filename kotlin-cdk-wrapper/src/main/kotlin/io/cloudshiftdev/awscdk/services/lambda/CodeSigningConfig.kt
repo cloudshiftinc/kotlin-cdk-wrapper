@@ -40,8 +40,8 @@ public open class CodeSigningConfig(
     id: String,
     props: CodeSigningConfigProps,
   ) :
-      this(software.amazon.awscdk.services.lambda.CodeSigningConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CodeSigningConfigProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.CodeSigningConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CodeSigningConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -133,7 +133,7 @@ public open class CodeSigningConfig(
      * code package. 
      */
     override fun signingProfiles(signingProfiles: List<ISigningProfile>) {
-      cdkBuilder.signingProfiles(signingProfiles.map(ISigningProfile::unwrap))
+      cdkBuilder.signingProfiles(signingProfiles.map(ISigningProfile.Companion::unwrap))
     }
 
     /**
@@ -160,7 +160,7 @@ public open class CodeSigningConfig(
      */
     override
         fun untrustedArtifactOnDeployment(untrustedArtifactOnDeployment: UntrustedArtifactOnDeployment) {
-      cdkBuilder.untrustedArtifactOnDeployment(untrustedArtifactOnDeployment.let(UntrustedArtifactOnDeployment::unwrap))
+      cdkBuilder.untrustedArtifactOnDeployment(untrustedArtifactOnDeployment.let(UntrustedArtifactOnDeployment.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lambda.CodeSigningConfig =
@@ -173,7 +173,7 @@ public open class CodeSigningConfig(
       id: String,
       codeSigningConfigArn: String,
     ): ICodeSigningConfig =
-        software.amazon.awscdk.services.lambda.CodeSigningConfig.fromCodeSigningConfigArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.lambda.CodeSigningConfig.fromCodeSigningConfigArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, codeSigningConfigArn).let(ICodeSigningConfig::wrap)
 
     public operator fun invoke(

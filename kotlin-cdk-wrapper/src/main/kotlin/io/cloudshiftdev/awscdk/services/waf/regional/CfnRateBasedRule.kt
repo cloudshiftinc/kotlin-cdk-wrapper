@@ -79,8 +79,8 @@ public open class CfnRateBasedRule(
     id: String,
     props: CfnRateBasedRuleProps,
   ) :
-      this(software.amazon.awscdk.services.waf.regional.CfnRateBasedRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRateBasedRuleProps::unwrap))
+      this(software.amazon.awscdk.services.waf.regional.CfnRateBasedRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRateBasedRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -101,7 +101,7 @@ public open class CfnRateBasedRule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -115,7 +115,7 @@ public open class CfnRateBasedRule(
    * `SqlInjectionMatchSet&gt;` object that you want to include in a `RateBasedRule` .
    */
   public open fun matchPredicates(`value`: IResolvable) {
-    unwrap(this).setMatchPredicates(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMatchPredicates(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -289,7 +289,7 @@ public open class CfnRateBasedRule(
      * `RateBasedRule` . 
      */
     override fun matchPredicates(matchPredicates: IResolvable) {
-      cdkBuilder.matchPredicates(matchPredicates.let(IResolvable::unwrap))
+      cdkBuilder.matchPredicates(matchPredicates.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -552,7 +552,7 @@ public open class CfnRateBasedRule(
        * based on all IP addresses *except* `192.0.2.44` .
        */
       override fun negated(negated: IResolvable) {
-        cdkBuilder.negated(negated.let(IResolvable::unwrap))
+        cdkBuilder.negated(negated.let(IResolvable.Companion::unwrap))
       }
 
       /**

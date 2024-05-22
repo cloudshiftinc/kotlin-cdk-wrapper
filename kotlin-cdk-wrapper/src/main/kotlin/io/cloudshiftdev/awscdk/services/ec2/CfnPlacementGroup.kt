@@ -55,7 +55,7 @@ public open class CfnPlacementGroup(
   cdkObject: software.amazon.awscdk.services.ec2.CfnPlacementGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ec2.CfnPlacementGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ec2.CfnPlacementGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -64,8 +64,8 @@ public open class CfnPlacementGroup(
     id: String,
     props: CfnPlacementGroupProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnPlacementGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPlacementGroupProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnPlacementGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPlacementGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -86,7 +86,7 @@ public open class CfnPlacementGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -140,7 +140,7 @@ public open class CfnPlacementGroup(
    * The tags to apply to the new placement group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -248,7 +248,7 @@ public open class CfnPlacementGroup(
      * @param tags The tags to apply to the new placement group. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

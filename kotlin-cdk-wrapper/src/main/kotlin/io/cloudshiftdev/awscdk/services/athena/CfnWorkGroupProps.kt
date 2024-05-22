@@ -313,7 +313,7 @@ public interface CfnWorkGroupProps {
      * The default is false.
      */
     override fun recursiveDeleteOption(recursiveDeleteOption: IResolvable) {
-      cdkBuilder.recursiveDeleteOption(recursiveDeleteOption.let(IResolvable::unwrap))
+      cdkBuilder.recursiveDeleteOption(recursiveDeleteOption.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -327,7 +327,7 @@ public interface CfnWorkGroupProps {
      * @param tags The tags (key-value pairs) to associate with this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -344,7 +344,7 @@ public interface CfnWorkGroupProps {
      * client-side query settings.
      */
     override fun workGroupConfiguration(workGroupConfiguration: IResolvable) {
-      cdkBuilder.workGroupConfiguration(workGroupConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.workGroupConfiguration(workGroupConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -357,7 +357,7 @@ public interface CfnWorkGroupProps {
      */
     override
         fun workGroupConfiguration(workGroupConfiguration: CfnWorkGroup.WorkGroupConfigurationProperty) {
-      cdkBuilder.workGroupConfiguration(workGroupConfiguration.let(CfnWorkGroup.WorkGroupConfigurationProperty::unwrap))
+      cdkBuilder.workGroupConfiguration(workGroupConfiguration.let(CfnWorkGroup.WorkGroupConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -385,7 +385,7 @@ public interface CfnWorkGroupProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun workGroupConfigurationUpdates(workGroupConfigurationUpdates: IResolvable) {
-      cdkBuilder.workGroupConfigurationUpdates(workGroupConfigurationUpdates.let(IResolvable::unwrap))
+      cdkBuilder.workGroupConfigurationUpdates(workGroupConfigurationUpdates.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -399,7 +399,7 @@ public interface CfnWorkGroupProps {
     @Deprecated(message = "deprecated in CDK")
     override
         fun workGroupConfigurationUpdates(workGroupConfigurationUpdates: CfnWorkGroup.WorkGroupConfigurationUpdatesProperty) {
-      cdkBuilder.workGroupConfigurationUpdates(workGroupConfigurationUpdates.let(CfnWorkGroup.WorkGroupConfigurationUpdatesProperty::unwrap))
+      cdkBuilder.workGroupConfigurationUpdates(workGroupConfigurationUpdates.let(CfnWorkGroup.WorkGroupConfigurationUpdatesProperty.Companion::unwrap))
     }
 
     /**

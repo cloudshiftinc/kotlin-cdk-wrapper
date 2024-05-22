@@ -76,7 +76,7 @@ public interface AllocateCidrRequest {
      * @param requestedSubnets The Subnets to be allocated. 
      */
     override fun requestedSubnets(requestedSubnets: List<RequestedSubnet>) {
-      cdkBuilder.requestedSubnets(requestedSubnets.map(RequestedSubnet::unwrap))
+      cdkBuilder.requestedSubnets(requestedSubnets.map(RequestedSubnet.Companion::unwrap))
     }
 
     /**

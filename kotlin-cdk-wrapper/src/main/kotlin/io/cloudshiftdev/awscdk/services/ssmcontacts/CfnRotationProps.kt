@@ -247,14 +247,14 @@ public interface CfnRotationProps {
      * @param recurrence Information about the rule that specifies when shift team members rotate. 
      */
     override fun recurrence(recurrence: IResolvable) {
-      cdkBuilder.recurrence(recurrence.let(IResolvable::unwrap))
+      cdkBuilder.recurrence(recurrence.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param recurrence Information about the rule that specifies when shift team members rotate. 
      */
     override fun recurrence(recurrence: CfnRotation.RecurrenceSettingsProperty) {
-      cdkBuilder.recurrence(recurrence.let(CfnRotation.RecurrenceSettingsProperty::unwrap))
+      cdkBuilder.recurrence(recurrence.let(CfnRotation.RecurrenceSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -280,7 +280,7 @@ public interface CfnRotationProps {
      * *Incident Manager User Guide* .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -29,12 +29,12 @@ public open class KinesisStream(
   cdkObject: software.amazon.awscdk.services.events.targets.KinesisStream,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(stream: CloudshiftdevAwscdkServicesKinesisIStream) :
-      this(software.amazon.awscdk.services.events.targets.KinesisStream(stream.let(CloudshiftdevAwscdkServicesKinesisIStream::unwrap))
+      this(software.amazon.awscdk.services.events.targets.KinesisStream(stream.let(CloudshiftdevAwscdkServicesKinesisIStream.Companion::unwrap))
   )
 
   public constructor(stream: CloudshiftdevAwscdkServicesKinesisIStream, props: KinesisStreamProps) :
-      this(software.amazon.awscdk.services.events.targets.KinesisStream(stream.let(CloudshiftdevAwscdkServicesKinesisIStream::unwrap),
-      props.let(KinesisStreamProps::unwrap))
+      this(software.amazon.awscdk.services.events.targets.KinesisStream(stream.let(CloudshiftdevAwscdkServicesKinesisIStream.Companion::unwrap),
+      props.let(KinesisStreamProps.Companion::unwrap))
   )
 
   public constructor(stream: CloudshiftdevAwscdkServicesKinesisIStream,
@@ -49,7 +49,7 @@ public open class KinesisStream(
    * @param _id
    */
   public override fun bind(rule: IRule): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap)).let(RuleTargetConfig::wrap)
 
   /**
    * Returns a RuleTarget that can be used to trigger this Kinesis Stream as a result from a
@@ -59,7 +59,7 @@ public open class KinesisStream(
    * @param _id
    */
   public override fun bind(rule: IRule, id: String): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap), id).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap), id).let(RuleTargetConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.events.targets.KinesisStream].
@@ -103,7 +103,7 @@ public open class KinesisStream(
      * @param message The message to send to the stream. 
      */
     override fun message(message: RuleTargetInput) {
-      cdkBuilder.message(message.let(RuleTargetInput::unwrap))
+      cdkBuilder.message(message.let(RuleTargetInput.Companion::unwrap))
     }
 
     /**

@@ -231,7 +231,7 @@ public interface CfnTrainingDatasetProps {
      * numbers, and spaces representable in UTF-8, and the following characters: + - = . _ : /
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -257,7 +257,7 @@ public interface CfnTrainingDatasetProps {
      * You must provide a role that has read access to these tables.
      */
     override fun trainingData(trainingData: IResolvable) {
-      cdkBuilder.trainingData(trainingData.let(IResolvable::unwrap))
+      cdkBuilder.trainingData(trainingData.let(IResolvable.Companion::unwrap))
     }
 
     /**

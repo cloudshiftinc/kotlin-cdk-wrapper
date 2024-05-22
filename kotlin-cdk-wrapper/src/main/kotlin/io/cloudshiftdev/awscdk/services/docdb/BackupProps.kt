@@ -90,7 +90,7 @@ public interface BackupProps {
      * @param retention How many days to retain the backup. 
      */
     override fun retention(retention: Duration) {
-      cdkBuilder.retention(retention.let(Duration::unwrap))
+      cdkBuilder.retention(retention.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.docdb.BackupProps = cdkBuilder.build()

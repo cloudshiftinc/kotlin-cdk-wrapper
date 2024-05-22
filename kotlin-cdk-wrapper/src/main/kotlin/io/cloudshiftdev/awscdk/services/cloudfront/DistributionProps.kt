@@ -443,7 +443,7 @@ public interface DistributionProps {
      * The certificate must be located in N. Virginia (us-east-1).
      */
     override fun certificate(certificate: ICertificate) {
-      cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
+      cdkBuilder.certificate(certificate.let(ICertificate.Companion::unwrap))
     }
 
     /**
@@ -457,7 +457,7 @@ public interface DistributionProps {
      * @param defaultBehavior The default behavior for the distribution. 
      */
     override fun defaultBehavior(defaultBehavior: BehaviorOptions) {
-      cdkBuilder.defaultBehavior(defaultBehavior.let(BehaviorOptions::unwrap))
+      cdkBuilder.defaultBehavior(defaultBehavior.let(BehaviorOptions.Companion::unwrap))
     }
 
     /**
@@ -528,7 +528,7 @@ public interface DistributionProps {
      * PageNotFound).
      */
     override fun errorResponses(errorResponses: List<ErrorResponse>) {
-      cdkBuilder.errorResponses(errorResponses.map(ErrorResponse::unwrap))
+      cdkBuilder.errorResponses(errorResponses.map(ErrorResponse.Companion::unwrap))
     }
 
     /**
@@ -542,7 +542,7 @@ public interface DistributionProps {
      * @param geoRestriction Controls the countries in which your content is distributed.
      */
     override fun geoRestriction(geoRestriction: GeoRestriction) {
-      cdkBuilder.geoRestriction(geoRestriction.let(GeoRestriction::unwrap))
+      cdkBuilder.geoRestriction(geoRestriction.let(GeoRestriction.Companion::unwrap))
     }
 
     /**
@@ -552,7 +552,7 @@ public interface DistributionProps {
      * support server name identification (SNI).
      */
     override fun httpVersion(httpVersion: HttpVersion) {
-      cdkBuilder.httpVersion(httpVersion.let(HttpVersion::unwrap))
+      cdkBuilder.httpVersion(httpVersion.let(HttpVersion.Companion::unwrap))
     }
 
     /**
@@ -561,7 +561,7 @@ public interface DistributionProps {
      * bucket.
      */
     override fun logBucket(logBucket: IBucket) {
-      cdkBuilder.logBucket(logBucket.let(IBucket::unwrap))
+      cdkBuilder.logBucket(logBucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -587,7 +587,7 @@ public interface DistributionProps {
      * least the SSL version that you specify.
      */
     override fun minimumProtocolVersion(minimumProtocolVersion: SecurityPolicyProtocol) {
-      cdkBuilder.minimumProtocolVersion(minimumProtocolVersion.let(SecurityPolicyProtocol::unwrap))
+      cdkBuilder.minimumProtocolVersion(minimumProtocolVersion.let(SecurityPolicyProtocol.Companion::unwrap))
     }
 
     /**
@@ -600,7 +600,7 @@ public interface DistributionProps {
      * that has the lowest latency among the edge locations in your price class.
      */
     override fun priceClass(priceClass: PriceClass) {
-      cdkBuilder.priceClass(priceClass.let(PriceClass::unwrap))
+      cdkBuilder.priceClass(priceClass.let(PriceClass.Companion::unwrap))
     }
 
     /**
@@ -633,7 +633,7 @@ public interface DistributionProps {
      * https://aws.amazon.com/cloudfront/custom-ssl-domains/
      */
     override fun sslSupportMethod(sslSupportMethod: SSLMethod) {
-      cdkBuilder.sslSupportMethod(sslSupportMethod.let(SSLMethod::unwrap))
+      cdkBuilder.sslSupportMethod(sslSupportMethod.let(SSLMethod.Companion::unwrap))
     }
 
     /**

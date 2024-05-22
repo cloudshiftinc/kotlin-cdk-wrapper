@@ -88,7 +88,7 @@ public interface AlarmWidgetProps : MetricWidgetProps {
      * @param alarm The alarm to show. 
      */
     override fun alarm(alarm: IAlarm) {
-      cdkBuilder.alarm(alarm.let(IAlarm::unwrap))
+      cdkBuilder.alarm(alarm.let(IAlarm.Companion::unwrap))
     }
 
     /**
@@ -102,7 +102,7 @@ public interface AlarmWidgetProps : MetricWidgetProps {
      * @param leftYAxis Left Y axis.
      */
     override fun leftYAxis(leftYAxis: YAxisProps) {
-      cdkBuilder.leftYAxis(leftYAxis.let(YAxisProps::unwrap))
+      cdkBuilder.leftYAxis(leftYAxis.let(YAxisProps.Companion::unwrap))
     }
 
     /**

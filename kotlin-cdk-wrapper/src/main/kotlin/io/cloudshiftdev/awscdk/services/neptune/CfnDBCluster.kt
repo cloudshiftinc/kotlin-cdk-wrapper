@@ -91,7 +91,7 @@ public open class CfnDBCluster(
   cdkObject: software.amazon.awscdk.services.neptune.CfnDBCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.neptune.CfnDBCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.neptune.CfnDBCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -100,8 +100,8 @@ public open class CfnDBCluster(
     id: String,
     props: CfnDBClusterProps,
   ) :
-      this(software.amazon.awscdk.services.neptune.CfnDBCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDBClusterProps::unwrap))
+      this(software.amazon.awscdk.services.neptune.CfnDBCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDBClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -122,7 +122,7 @@ public open class CfnDBCluster(
    * with the DB cluster.
    */
   public open fun associatedRoles(`value`: IResolvable) {
-    unwrap(this).setAssociatedRoles(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAssociatedRoles(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -213,7 +213,7 @@ public open class CfnDBCluster(
    * *If set to `true` , tags are copied to any snapshot of the DB cluster that is created.*.
    */
   public open fun copyTagsToSnapshot(`value`: IResolvable) {
-    unwrap(this).setCopyTagsToSnapshot(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCopyTagsToSnapshot(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -296,7 +296,7 @@ public open class CfnDBCluster(
    * Indicates whether or not the DB cluster has deletion protection enabled.
    */
   public open fun deletionProtection(`value`: IResolvable) {
-    unwrap(this).setDeletionProtection(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeletionProtection(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -349,7 +349,7 @@ public open class CfnDBCluster(
    * enabled, and otherwise false.
    */
   public open fun iamAuthEnabled(`value`: IResolvable) {
-    unwrap(this).setIamAuthEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIamAuthEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -358,7 +358,7 @@ public open class CfnDBCluster(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -436,14 +436,14 @@ public open class CfnDBCluster(
    * Contains the scaling configuration of an Neptune Serverless DB cluster.
    */
   public open fun serverlessScalingConfiguration(`value`: IResolvable) {
-    unwrap(this).setServerlessScalingConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setServerlessScalingConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Contains the scaling configuration of an Neptune Serverless DB cluster.
    */
   public open fun serverlessScalingConfiguration(`value`: ServerlessScalingConfigurationProperty) {
-    unwrap(this).setServerlessScalingConfiguration(`value`.let(ServerlessScalingConfigurationProperty::unwrap))
+    unwrap(this).setServerlessScalingConfiguration(`value`.let(ServerlessScalingConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -499,7 +499,7 @@ public open class CfnDBCluster(
    * Indicates whether the DB cluster is encrypted.
    */
   public open fun storageEncrypted(`value`: IResolvable) {
-    unwrap(this).setStorageEncrypted(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStorageEncrypted(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -517,7 +517,7 @@ public open class CfnDBCluster(
    * The tags assigned to this cluster.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -541,7 +541,7 @@ public open class CfnDBCluster(
    * Creates a new DB cluster from a DB snapshot or DB cluster snapshot.
    */
   public open fun useLatestRestorableTime(`value`: IResolvable) {
-    unwrap(this).setUseLatestRestorableTime(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUseLatestRestorableTime(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -1044,7 +1044,7 @@ public open class CfnDBCluster(
      * roles that are associated with the DB cluster. 
      */
     override fun associatedRoles(associatedRoles: IResolvable) {
-      cdkBuilder.associatedRoles(associatedRoles.let(IResolvable::unwrap))
+      cdkBuilder.associatedRoles(associatedRoles.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1135,7 +1135,7 @@ public open class CfnDBCluster(
      * cluster that is created.*. 
      */
     override fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable) {
-      cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot.let(IResolvable::unwrap))
+      cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1239,7 +1239,7 @@ public open class CfnDBCluster(
      * enabled. 
      */
     override fun deletionProtection(deletionProtection: IResolvable) {
-      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable::unwrap))
+      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1294,7 +1294,7 @@ public open class CfnDBCluster(
      * to database accounts is enabled, and otherwise false. 
      */
     override fun iamAuthEnabled(iamAuthEnabled: IResolvable) {
-      cdkBuilder.iamAuthEnabled(iamAuthEnabled.let(IResolvable::unwrap))
+      cdkBuilder.iamAuthEnabled(iamAuthEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1378,7 +1378,7 @@ public open class CfnDBCluster(
      * Serverless DB cluster. 
      */
     override fun serverlessScalingConfiguration(serverlessScalingConfiguration: IResolvable) {
-      cdkBuilder.serverlessScalingConfiguration(serverlessScalingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.serverlessScalingConfiguration(serverlessScalingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1390,7 +1390,7 @@ public open class CfnDBCluster(
      */
     override
         fun serverlessScalingConfiguration(serverlessScalingConfiguration: ServerlessScalingConfigurationProperty) {
-      cdkBuilder.serverlessScalingConfiguration(serverlessScalingConfiguration.let(ServerlessScalingConfigurationProperty::unwrap))
+      cdkBuilder.serverlessScalingConfiguration(serverlessScalingConfiguration.let(ServerlessScalingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1480,7 +1480,7 @@ public open class CfnDBCluster(
      * @param storageEncrypted Indicates whether the DB cluster is encrypted. 
      */
     override fun storageEncrypted(storageEncrypted: IResolvable) {
-      cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable::unwrap))
+      cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1490,7 +1490,7 @@ public open class CfnDBCluster(
      * @param tags The tags assigned to this cluster. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1534,7 +1534,7 @@ public open class CfnDBCluster(
      * snapshot. 
      */
     override fun useLatestRestorableTime(useLatestRestorableTime: IResolvable) {
-      cdkBuilder.useLatestRestorableTime(useLatestRestorableTime.let(IResolvable::unwrap))
+      cdkBuilder.useLatestRestorableTime(useLatestRestorableTime.let(IResolvable.Companion::unwrap))
     }
 
     /**

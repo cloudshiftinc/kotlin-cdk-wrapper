@@ -66,7 +66,7 @@ public interface SecretAttachmentTargetProps {
      * @param targetType The type of the target to attach the secret to. 
      */
     override fun targetType(targetType: AttachmentTargetType) {
-      cdkBuilder.targetType(targetType.let(AttachmentTargetType::unwrap))
+      cdkBuilder.targetType(targetType.let(AttachmentTargetType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.secretsmanager.SecretAttachmentTargetProps =

@@ -153,7 +153,7 @@ public interface CfnSkillProps {
      * secret, and refresh token are required.
      */
     override fun authenticationConfiguration(authenticationConfiguration: IResolvable) {
-      cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -164,7 +164,7 @@ public interface CfnSkillProps {
      */
     override
         fun authenticationConfiguration(authenticationConfiguration: CfnSkill.AuthenticationConfigurationProperty) {
-      cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(CfnSkill.AuthenticationConfigurationProperty::unwrap))
+      cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(CfnSkill.AuthenticationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -187,7 +187,7 @@ public interface CfnSkillProps {
      * the skill. For more information about the skill package format, see the  .
      */
     override fun skillPackage(skillPackage: IResolvable) {
-      cdkBuilder.skillPackage(skillPackage.let(IResolvable::unwrap))
+      cdkBuilder.skillPackage(skillPackage.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -197,7 +197,7 @@ public interface CfnSkillProps {
      * the skill. For more information about the skill package format, see the  .
      */
     override fun skillPackage(skillPackage: CfnSkill.SkillPackageProperty) {
-      cdkBuilder.skillPackage(skillPackage.let(CfnSkill.SkillPackageProperty::unwrap))
+      cdkBuilder.skillPackage(skillPackage.let(CfnSkill.SkillPackageProperty.Companion::unwrap))
     }
 
     /**

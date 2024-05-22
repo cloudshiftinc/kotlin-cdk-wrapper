@@ -118,8 +118,8 @@ public open class CfnConfig(
     id: String,
     props: CfnConfigProps,
   ) :
-      this(software.amazon.awscdk.services.groundstation.CfnConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConfigProps::unwrap))
+      this(software.amazon.awscdk.services.groundstation.CfnConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -155,14 +155,14 @@ public open class CfnConfig(
    * Object containing the parameters of a config.
    */
   public open fun configData(`value`: IResolvable) {
-    unwrap(this).setConfigData(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfigData(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Object containing the parameters of a config.
    */
   public open fun configData(`value`: ConfigDataProperty) {
-    unwrap(this).setConfigData(`value`.let(ConfigDataProperty::unwrap))
+    unwrap(this).setConfigData(`value`.let(ConfigDataProperty.Companion::unwrap))
   }
 
   /**
@@ -179,7 +179,7 @@ public open class CfnConfig(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -209,7 +209,7 @@ public open class CfnConfig(
    * Tags assigned to a resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -299,7 +299,7 @@ public open class CfnConfig(
      * @param configData Object containing the parameters of a config. 
      */
     override fun configData(configData: IResolvable) {
-      cdkBuilder.configData(configData.let(IResolvable::unwrap))
+      cdkBuilder.configData(configData.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -312,7 +312,7 @@ public open class CfnConfig(
      * @param configData Object containing the parameters of a config. 
      */
     override fun configData(configData: ConfigDataProperty) {
-      cdkBuilder.configData(configData.let(ConfigDataProperty::unwrap))
+      cdkBuilder.configData(configData.let(ConfigDataProperty.Companion::unwrap))
     }
 
     /**
@@ -346,7 +346,7 @@ public open class CfnConfig(
      * @param tags Tags assigned to a resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -452,14 +452,14 @@ public open class CfnConfig(
        * @param spectrumConfig Defines the spectrum configuration.
        */
       override fun spectrumConfig(spectrumConfig: IResolvable) {
-        cdkBuilder.spectrumConfig(spectrumConfig.let(IResolvable::unwrap))
+        cdkBuilder.spectrumConfig(spectrumConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param spectrumConfig Defines the spectrum configuration.
        */
       override fun spectrumConfig(spectrumConfig: SpectrumConfigProperty) {
-        cdkBuilder.spectrumConfig(spectrumConfig.let(SpectrumConfigProperty::unwrap))
+        cdkBuilder.spectrumConfig(spectrumConfig.let(SpectrumConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -631,14 +631,14 @@ public open class CfnConfig(
        * @param decodeConfig Defines how the RF signal will be decoded.
        */
       override fun decodeConfig(decodeConfig: IResolvable) {
-        cdkBuilder.decodeConfig(decodeConfig.let(IResolvable::unwrap))
+        cdkBuilder.decodeConfig(decodeConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param decodeConfig Defines how the RF signal will be decoded.
        */
       override fun decodeConfig(decodeConfig: DecodeConfigProperty) {
-        cdkBuilder.decodeConfig(decodeConfig.let(DecodeConfigProperty::unwrap))
+        cdkBuilder.decodeConfig(decodeConfig.let(DecodeConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -653,14 +653,14 @@ public open class CfnConfig(
        * @param demodulationConfig Defines how the RF signal will be demodulated.
        */
       override fun demodulationConfig(demodulationConfig: IResolvable) {
-        cdkBuilder.demodulationConfig(demodulationConfig.let(IResolvable::unwrap))
+        cdkBuilder.demodulationConfig(demodulationConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param demodulationConfig Defines how the RF signal will be demodulated.
        */
       override fun demodulationConfig(demodulationConfig: DemodulationConfigProperty) {
-        cdkBuilder.demodulationConfig(demodulationConfig.let(DemodulationConfigProperty::unwrap))
+        cdkBuilder.demodulationConfig(demodulationConfig.let(DemodulationConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -676,14 +676,14 @@ public open class CfnConfig(
        * @param spectrumConfig Defines the spectrum configuration.
        */
       override fun spectrumConfig(spectrumConfig: IResolvable) {
-        cdkBuilder.spectrumConfig(spectrumConfig.let(IResolvable::unwrap))
+        cdkBuilder.spectrumConfig(spectrumConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param spectrumConfig Defines the spectrum configuration.
        */
       override fun spectrumConfig(spectrumConfig: SpectrumConfigProperty) {
-        cdkBuilder.spectrumConfig(spectrumConfig.let(SpectrumConfigProperty::unwrap))
+        cdkBuilder.spectrumConfig(spectrumConfig.let(SpectrumConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -861,14 +861,14 @@ public open class CfnConfig(
        * @param spectrumConfig Defines the spectrum configuration.
        */
       override fun spectrumConfig(spectrumConfig: IResolvable) {
-        cdkBuilder.spectrumConfig(spectrumConfig.let(IResolvable::unwrap))
+        cdkBuilder.spectrumConfig(spectrumConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param spectrumConfig Defines the spectrum configuration.
        */
       override fun spectrumConfig(spectrumConfig: UplinkSpectrumConfigProperty) {
-        cdkBuilder.spectrumConfig(spectrumConfig.let(UplinkSpectrumConfigProperty::unwrap))
+        cdkBuilder.spectrumConfig(spectrumConfig.let(UplinkSpectrumConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -885,7 +885,7 @@ public open class CfnConfig(
        * Valid values are between 20.0 to 50.0 dBW.
        */
       override fun targetEirp(targetEirp: IResolvable) {
-        cdkBuilder.targetEirp(targetEirp.let(IResolvable::unwrap))
+        cdkBuilder.targetEirp(targetEirp.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -894,7 +894,7 @@ public open class CfnConfig(
        * Valid values are between 20.0 to 50.0 dBW.
        */
       override fun targetEirp(targetEirp: EirpProperty) {
-        cdkBuilder.targetEirp(targetEirp.let(EirpProperty::unwrap))
+        cdkBuilder.targetEirp(targetEirp.let(EirpProperty.Companion::unwrap))
       }
 
       /**
@@ -918,7 +918,7 @@ public open class CfnConfig(
        * @param transmitDisabled Whether or not uplink transmit is disabled.
        */
       override fun transmitDisabled(transmitDisabled: IResolvable) {
-        cdkBuilder.transmitDisabled(transmitDisabled.let(IResolvable::unwrap))
+        cdkBuilder.transmitDisabled(transmitDisabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1311,7 +1311,7 @@ public open class CfnConfig(
        * demodulation or decoding is performed by Ground Station (RF over IP downlinks).
        */
       override fun antennaDownlinkConfig(antennaDownlinkConfig: IResolvable) {
-        cdkBuilder.antennaDownlinkConfig(antennaDownlinkConfig.let(IResolvable::unwrap))
+        cdkBuilder.antennaDownlinkConfig(antennaDownlinkConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1320,7 +1320,7 @@ public open class CfnConfig(
        * demodulation or decoding is performed by Ground Station (RF over IP downlinks).
        */
       override fun antennaDownlinkConfig(antennaDownlinkConfig: AntennaDownlinkConfigProperty) {
-        cdkBuilder.antennaDownlinkConfig(antennaDownlinkConfig.let(AntennaDownlinkConfigProperty::unwrap))
+        cdkBuilder.antennaDownlinkConfig(antennaDownlinkConfig.let(AntennaDownlinkConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1341,7 +1341,7 @@ public open class CfnConfig(
        * Ground Station service will demodulate and decode the downlinked data.
        */
       override fun antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig: IResolvable) {
-        cdkBuilder.antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig.let(IResolvable::unwrap))
+        cdkBuilder.antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1352,7 +1352,7 @@ public open class CfnConfig(
        */
       override
           fun antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig: AntennaDownlinkDemodDecodeConfigProperty) {
-        cdkBuilder.antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig.let(AntennaDownlinkDemodDecodeConfigProperty::unwrap))
+        cdkBuilder.antennaDownlinkDemodDecodeConfig(antennaDownlinkDemodDecodeConfig.let(AntennaDownlinkDemodDecodeConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1373,7 +1373,7 @@ public open class CfnConfig(
        * Uplink config objects are used to provide parameters for uplink contacts.
        */
       override fun antennaUplinkConfig(antennaUplinkConfig: IResolvable) {
-        cdkBuilder.antennaUplinkConfig(antennaUplinkConfig.let(IResolvable::unwrap))
+        cdkBuilder.antennaUplinkConfig(antennaUplinkConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1381,7 +1381,7 @@ public open class CfnConfig(
        * Uplink config objects are used to provide parameters for uplink contacts.
        */
       override fun antennaUplinkConfig(antennaUplinkConfig: AntennaUplinkConfigProperty) {
-        cdkBuilder.antennaUplinkConfig(antennaUplinkConfig.let(AntennaUplinkConfigProperty::unwrap))
+        cdkBuilder.antennaUplinkConfig(antennaUplinkConfig.let(AntennaUplinkConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1402,7 +1402,7 @@ public open class CfnConfig(
        * uplink contact.
        */
       override fun dataflowEndpointConfig(dataflowEndpointConfig: IResolvable) {
-        cdkBuilder.dataflowEndpointConfig(dataflowEndpointConfig.let(IResolvable::unwrap))
+        cdkBuilder.dataflowEndpointConfig(dataflowEndpointConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1413,7 +1413,7 @@ public open class CfnConfig(
        * uplink contact.
        */
       override fun dataflowEndpointConfig(dataflowEndpointConfig: DataflowEndpointConfigProperty) {
-        cdkBuilder.dataflowEndpointConfig(dataflowEndpointConfig.let(DataflowEndpointConfigProperty::unwrap))
+        cdkBuilder.dataflowEndpointConfig(dataflowEndpointConfig.let(DataflowEndpointConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1435,7 +1435,7 @@ public open class CfnConfig(
        * contacts.
        */
       override fun s3RecordingConfig(s3RecordingConfig: IResolvable) {
-        cdkBuilder.s3RecordingConfig(s3RecordingConfig.let(IResolvable::unwrap))
+        cdkBuilder.s3RecordingConfig(s3RecordingConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1444,7 +1444,7 @@ public open class CfnConfig(
        * contacts.
        */
       override fun s3RecordingConfig(s3RecordingConfig: S3RecordingConfigProperty) {
-        cdkBuilder.s3RecordingConfig(s3RecordingConfig.let(S3RecordingConfigProperty::unwrap))
+        cdkBuilder.s3RecordingConfig(s3RecordingConfig.let(S3RecordingConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1464,7 +1464,7 @@ public open class CfnConfig(
        * through the sky during a contact.
        */
       override fun trackingConfig(trackingConfig: IResolvable) {
-        cdkBuilder.trackingConfig(trackingConfig.let(IResolvable::unwrap))
+        cdkBuilder.trackingConfig(trackingConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1473,7 +1473,7 @@ public open class CfnConfig(
        * through the sky during a contact.
        */
       override fun trackingConfig(trackingConfig: TrackingConfigProperty) {
-        cdkBuilder.trackingConfig(trackingConfig.let(TrackingConfigProperty::unwrap))
+        cdkBuilder.trackingConfig(trackingConfig.let(TrackingConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1492,7 +1492,7 @@ public open class CfnConfig(
        * contacts.
        */
       override fun uplinkEchoConfig(uplinkEchoConfig: IResolvable) {
-        cdkBuilder.uplinkEchoConfig(uplinkEchoConfig.let(IResolvable::unwrap))
+        cdkBuilder.uplinkEchoConfig(uplinkEchoConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1501,7 +1501,7 @@ public open class CfnConfig(
        * contacts.
        */
       override fun uplinkEchoConfig(uplinkEchoConfig: UplinkEchoConfigProperty) {
-        cdkBuilder.uplinkEchoConfig(uplinkEchoConfig.let(UplinkEchoConfigProperty::unwrap))
+        cdkBuilder.uplinkEchoConfig(uplinkEchoConfig.let(UplinkEchoConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2542,7 +2542,7 @@ public open class CfnConfig(
        * * For `AntennaUplinkConfig` , valid values are between 10 kHz to 54 MHz.
        */
       override fun bandwidth(bandwidth: IResolvable) {
-        cdkBuilder.bandwidth(bandwidth.let(IResolvable::unwrap))
+        cdkBuilder.bandwidth(bandwidth.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2553,7 +2553,7 @@ public open class CfnConfig(
        * * For `AntennaUplinkConfig` , valid values are between 10 kHz to 54 MHz.
        */
       override fun bandwidth(bandwidth: FrequencyBandwidthProperty) {
-        cdkBuilder.bandwidth(bandwidth.let(FrequencyBandwidthProperty::unwrap))
+        cdkBuilder.bandwidth(bandwidth.let(FrequencyBandwidthProperty.Companion::unwrap))
       }
 
       /**
@@ -2574,7 +2574,7 @@ public open class CfnConfig(
        * 2120 MHz for uplink.
        */
       override fun centerFrequency(centerFrequency: IResolvable) {
-        cdkBuilder.centerFrequency(centerFrequency.let(IResolvable::unwrap))
+        cdkBuilder.centerFrequency(centerFrequency.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2583,7 +2583,7 @@ public open class CfnConfig(
        * 2120 MHz for uplink.
        */
       override fun centerFrequency(centerFrequency: FrequencyProperty) {
-        cdkBuilder.centerFrequency(centerFrequency.let(FrequencyProperty::unwrap))
+        cdkBuilder.centerFrequency(centerFrequency.let(FrequencyProperty.Companion::unwrap))
       }
 
       /**
@@ -2843,7 +2843,7 @@ public open class CfnConfig(
        * @param enabled Whether or not uplink echo is enabled.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2975,7 +2975,7 @@ public open class CfnConfig(
        * 2120 MHz for uplink.
        */
       override fun centerFrequency(centerFrequency: IResolvable) {
-        cdkBuilder.centerFrequency(centerFrequency.let(IResolvable::unwrap))
+        cdkBuilder.centerFrequency(centerFrequency.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2984,7 +2984,7 @@ public open class CfnConfig(
        * 2120 MHz for uplink.
        */
       override fun centerFrequency(centerFrequency: FrequencyProperty) {
-        cdkBuilder.centerFrequency(centerFrequency.let(FrequencyProperty::unwrap))
+        cdkBuilder.centerFrequency(centerFrequency.let(FrequencyProperty.Companion::unwrap))
       }
 
       /**

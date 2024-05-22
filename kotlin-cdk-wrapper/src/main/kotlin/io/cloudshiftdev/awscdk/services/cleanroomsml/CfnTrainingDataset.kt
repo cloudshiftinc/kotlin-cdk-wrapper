@@ -72,8 +72,8 @@ public open class CfnTrainingDataset(
     id: String,
     props: CfnTrainingDatasetProps,
   ) :
-      this(software.amazon.awscdk.services.cleanroomsml.CfnTrainingDataset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTrainingDatasetProps::unwrap))
+      this(software.amazon.awscdk.services.cleanroomsml.CfnTrainingDataset(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTrainingDatasetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -117,7 +117,7 @@ public open class CfnTrainingDataset(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -155,7 +155,7 @@ public open class CfnTrainingDataset(
    * The optional metadata that you apply to the resource to help you categorize and organize them.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -174,7 +174,7 @@ public open class CfnTrainingDataset(
    * details on its location and schema.
    */
   public open fun trainingData(`value`: IResolvable) {
-    unwrap(this).setTrainingData(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTrainingData(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -369,7 +369,7 @@ public open class CfnTrainingDataset(
      * organize them. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -405,7 +405,7 @@ public open class CfnTrainingDataset(
      * the dataset type and details on its location and schema. 
      */
     override fun trainingData(trainingData: IResolvable) {
-      cdkBuilder.trainingData(trainingData.let(IResolvable::unwrap))
+      cdkBuilder.trainingData(trainingData.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -645,7 +645,7 @@ public open class CfnTrainingDataset(
        * and table name for the training data. 
        */
       override fun glueDataSource(glueDataSource: IResolvable) {
-        cdkBuilder.glueDataSource(glueDataSource.let(IResolvable::unwrap))
+        cdkBuilder.glueDataSource(glueDataSource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -653,7 +653,7 @@ public open class CfnTrainingDataset(
        * and table name for the training data. 
        */
       override fun glueDataSource(glueDataSource: GlueDataSourceProperty) {
-        cdkBuilder.glueDataSource(glueDataSource.let(GlueDataSourceProperty::unwrap))
+        cdkBuilder.glueDataSource(glueDataSource.let(GlueDataSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -794,7 +794,7 @@ public open class CfnTrainingDataset(
        * data. 
        */
       override fun dataSource(dataSource: IResolvable) {
-        cdkBuilder.dataSource(dataSource.let(IResolvable::unwrap))
+        cdkBuilder.dataSource(dataSource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -802,7 +802,7 @@ public open class CfnTrainingDataset(
        * data. 
        */
       override fun dataSource(dataSource: DataSourceProperty) {
-        cdkBuilder.dataSource(dataSource.let(DataSourceProperty::unwrap))
+        cdkBuilder.dataSource(dataSource.let(DataSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -818,7 +818,7 @@ public open class CfnTrainingDataset(
        * @param schema The schema information for the training data. 
        */
       override fun schema(schema: IResolvable) {
-        cdkBuilder.schema(schema.let(IResolvable::unwrap))
+        cdkBuilder.schema(schema.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -961,7 +961,7 @@ public open class CfnTrainingDataset(
        * mapping. 
        */
       override fun inputConfig(inputConfig: IResolvable) {
-        cdkBuilder.inputConfig(inputConfig.let(IResolvable::unwrap))
+        cdkBuilder.inputConfig(inputConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -969,7 +969,7 @@ public open class CfnTrainingDataset(
        * mapping. 
        */
       override fun inputConfig(inputConfig: DatasetInputConfigProperty) {
-        cdkBuilder.inputConfig(inputConfig.let(DatasetInputConfigProperty::unwrap))
+        cdkBuilder.inputConfig(inputConfig.let(DatasetInputConfigProperty.Companion::unwrap))
       }
 
       /**

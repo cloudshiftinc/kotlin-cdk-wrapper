@@ -160,7 +160,7 @@ public interface HttpGatewayRouteMatch {
      * must match for the gateway route to match.
      */
     override fun headers(headers: List<HeaderMatch>) {
-      cdkBuilder.headers(headers.map(HeaderMatch::unwrap))
+      cdkBuilder.headers(headers.map(HeaderMatch.Companion::unwrap))
     }
 
     /**
@@ -174,21 +174,21 @@ public interface HttpGatewayRouteMatch {
      * @param hostname The gateway route host name to be matched on.
      */
     override fun hostname(hostname: GatewayRouteHostnameMatch) {
-      cdkBuilder.hostname(hostname.let(GatewayRouteHostnameMatch::unwrap))
+      cdkBuilder.hostname(hostname.let(GatewayRouteHostnameMatch.Companion::unwrap))
     }
 
     /**
      * @param method The method to match on.
      */
     override fun method(method: HttpRouteMethod) {
-      cdkBuilder.method(method.let(HttpRouteMethod::unwrap))
+      cdkBuilder.method(method.let(HttpRouteMethod.Companion::unwrap))
     }
 
     /**
      * @param path Specify how to match requests based on the 'path' part of their URL.
      */
     override fun path(path: HttpGatewayRoutePathMatch) {
-      cdkBuilder.path(path.let(HttpGatewayRoutePathMatch::unwrap))
+      cdkBuilder.path(path.let(HttpGatewayRoutePathMatch.Companion::unwrap))
     }
 
     /**
@@ -203,7 +203,7 @@ public interface HttpGatewayRouteMatch {
      * All specified query parameters must match for the route to match.
      */
     override fun queryParameters(queryParameters: List<QueryParameterMatch>) {
-      cdkBuilder.queryParameters(queryParameters.map(QueryParameterMatch::unwrap))
+      cdkBuilder.queryParameters(queryParameters.map(QueryParameterMatch.Companion::unwrap))
     }
 
     /**

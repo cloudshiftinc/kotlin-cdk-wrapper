@@ -53,8 +53,8 @@ public open class Listener(
     id: String,
     props: ListenerProps,
   ) :
-      this(software.amazon.awscdk.services.globalaccelerator.Listener(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ListenerProps::unwrap))
+      this(software.amazon.awscdk.services.globalaccelerator.Listener(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ListenerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -81,7 +81,7 @@ public open class Listener(
    */
   public open fun addEndpointGroup(id: String, options: EndpointGroupOptions): EndpointGroup =
       unwrap(this).addEndpointGroup(id,
-      options.let(EndpointGroupOptions::unwrap)).let(EndpointGroup::wrap)
+      options.let(EndpointGroupOptions.Companion::unwrap)).let(EndpointGroup::wrap)
 
   /**
    * Add a new endpoint group to this listener.
@@ -181,7 +181,7 @@ public open class Listener(
      * @param accelerator The accelerator for this listener. 
      */
     override fun accelerator(accelerator: IAccelerator) {
-      cdkBuilder.accelerator(accelerator.let(IAccelerator::unwrap))
+      cdkBuilder.accelerator(accelerator.let(IAccelerator.Companion::unwrap))
     }
 
     /**
@@ -200,7 +200,7 @@ public open class Listener(
      * endpoint. 
      */
     override fun clientAffinity(clientAffinity: ClientAffinity) {
-      cdkBuilder.clientAffinity(clientAffinity.let(ClientAffinity::unwrap))
+      cdkBuilder.clientAffinity(clientAffinity.let(ClientAffinity.Companion::unwrap))
     }
 
     /**
@@ -221,7 +221,7 @@ public open class Listener(
      * accelerator. 
      */
     override fun portRanges(portRanges: List<PortRange>) {
-      cdkBuilder.portRanges(portRanges.map(PortRange::unwrap))
+      cdkBuilder.portRanges(portRanges.map(PortRange.Companion::unwrap))
     }
 
     /**
@@ -240,7 +240,7 @@ public open class Listener(
      * @param protocol The protocol for the connections from clients to the accelerator. 
      */
     override fun protocol(protocol: ConnectionProtocol) {
-      cdkBuilder.protocol(protocol.let(ConnectionProtocol::unwrap))
+      cdkBuilder.protocol(protocol.let(ConnectionProtocol.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.globalaccelerator.Listener =
@@ -253,7 +253,7 @@ public open class Listener(
       id: String,
       listenerArn: String,
     ): IListener =
-        software.amazon.awscdk.services.globalaccelerator.Listener.fromListenerArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.globalaccelerator.Listener.fromListenerArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, listenerArn).let(IListener::wrap)
 
     public operator fun invoke(

@@ -81,7 +81,7 @@ public interface S3EventSourceProps {
      * @param events The s3 event types that will trigger the notification. 
      */
     override fun events(events: List<EventType>) {
-      cdkBuilder.events(events.map(EventType::unwrap))
+      cdkBuilder.events(events.map(EventType.Companion::unwrap))
     }
 
     /**
@@ -96,7 +96,7 @@ public interface S3EventSourceProps {
      * about allowed filter rules.
      */
     override fun filters(filters: List<NotificationKeyFilter>) {
-      cdkBuilder.filters(filters.map(NotificationKeyFilter::unwrap))
+      cdkBuilder.filters(filters.map(NotificationKeyFilter.Companion::unwrap))
     }
 
     /**

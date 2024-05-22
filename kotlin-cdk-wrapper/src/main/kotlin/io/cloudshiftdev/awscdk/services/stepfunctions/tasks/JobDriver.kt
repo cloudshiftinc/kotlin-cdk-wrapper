@@ -68,7 +68,7 @@ public interface JobDriver {
      * @param sparkSubmitJobDriver The job driver parameters specified for spark submit. 
      */
     override fun sparkSubmitJobDriver(sparkSubmitJobDriver: SparkSubmitJobDriver) {
-      cdkBuilder.sparkSubmitJobDriver(sparkSubmitJobDriver.let(SparkSubmitJobDriver::unwrap))
+      cdkBuilder.sparkSubmitJobDriver(sparkSubmitJobDriver.let(SparkSubmitJobDriver.Companion::unwrap))
     }
 
     /**

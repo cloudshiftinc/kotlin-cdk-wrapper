@@ -47,8 +47,8 @@ public open class CfnEndpointAccess(
     id: String,
     props: CfnEndpointAccessProps,
   ) :
-      this(software.amazon.awscdk.services.redshift.CfnEndpointAccess(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEndpointAccessProps::unwrap))
+      this(software.amazon.awscdk.services.redshift.CfnEndpointAccess(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEndpointAccessProps.Companion::unwrap))
   )
 
   public constructor(
@@ -137,7 +137,7 @@ public open class CfnEndpointAccess(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -595,7 +595,7 @@ public open class CfnEndpointAccess(
        * Also known as an interface endpoint.
        */
       override fun networkInterfaces(networkInterfaces: IResolvable) {
-        cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable::unwrap))
+        cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable.Companion::unwrap))
       }
 
       /**

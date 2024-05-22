@@ -46,8 +46,8 @@ public open class CfnWorkflow(
     id: String,
     props: CfnWorkflowProps,
   ) :
-      this(software.amazon.awscdk.services.imagebuilder.CfnWorkflow(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnWorkflowProps::unwrap))
+      this(software.amazon.awscdk.services.imagebuilder.CfnWorkflow(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnWorkflowProps.Companion::unwrap))
   )
 
   public constructor(
@@ -106,7 +106,7 @@ public open class CfnWorkflow(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

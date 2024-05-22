@@ -117,8 +117,8 @@ public open class CfnScalingPlan(
     id: String,
     props: CfnScalingPlanProps,
   ) :
-      this(software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnScalingPlanProps::unwrap))
+      this(software.amazon.awscdk.services.autoscalingplans.CfnScalingPlan(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnScalingPlanProps.Companion::unwrap))
   )
 
   public constructor(
@@ -137,14 +137,14 @@ public open class CfnScalingPlan(
    * A CloudFormation stack or a set of tags.
    */
   public open fun applicationSource(`value`: IResolvable) {
-    unwrap(this).setApplicationSource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setApplicationSource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A CloudFormation stack or a set of tags.
    */
   public open fun applicationSource(`value`: ApplicationSourceProperty) {
-    unwrap(this).setApplicationSource(`value`.let(ApplicationSourceProperty::unwrap))
+    unwrap(this).setApplicationSource(`value`.let(ApplicationSourceProperty.Companion::unwrap))
   }
 
   /**
@@ -176,7 +176,7 @@ public open class CfnScalingPlan(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -188,7 +188,7 @@ public open class CfnScalingPlan(
    * The scaling instructions.
    */
   public open fun scalingInstructions(`value`: IResolvable) {
-    unwrap(this).setScalingInstructions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setScalingInstructions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -286,7 +286,7 @@ public open class CfnScalingPlan(
      * @param applicationSource A CloudFormation stack or a set of tags. 
      */
     override fun applicationSource(applicationSource: IResolvable) {
-      cdkBuilder.applicationSource(applicationSource.let(IResolvable::unwrap))
+      cdkBuilder.applicationSource(applicationSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -299,7 +299,7 @@ public open class CfnScalingPlan(
      * @param applicationSource A CloudFormation stack or a set of tags. 
      */
     override fun applicationSource(applicationSource: ApplicationSourceProperty) {
-      cdkBuilder.applicationSource(applicationSource.let(ApplicationSourceProperty::unwrap))
+      cdkBuilder.applicationSource(applicationSource.let(ApplicationSourceProperty.Companion::unwrap))
     }
 
     /**
@@ -323,7 +323,7 @@ public open class CfnScalingPlan(
      * @param scalingInstructions The scaling instructions. 
      */
     override fun scalingInstructions(scalingInstructions: IResolvable) {
-      cdkBuilder.scalingInstructions(scalingInstructions.let(IResolvable::unwrap))
+      cdkBuilder.scalingInstructions(scalingInstructions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -512,7 +512,7 @@ public open class CfnScalingPlan(
        * You must specify either a `CloudFormationStackARN` or `TagFilters` .
        */
       override fun tagFilters(tagFilters: IResolvable) {
-        cdkBuilder.tagFilters(tagFilters.let(IResolvable::unwrap))
+        cdkBuilder.tagFilters(tagFilters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -759,7 +759,7 @@ public open class CfnScalingPlan(
        * dimensions in your customized load metric specification.
        */
       override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+        cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1035,7 +1035,7 @@ public open class CfnScalingPlan(
        * dimensions in your scaling policy.
        */
       override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+        cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2222,7 +2222,7 @@ public open class CfnScalingPlan(
        */
       override
           fun customizedLoadMetricSpecification(customizedLoadMetricSpecification: IResolvable) {
-        cdkBuilder.customizedLoadMetricSpecification(customizedLoadMetricSpecification.let(IResolvable::unwrap))
+        cdkBuilder.customizedLoadMetricSpecification(customizedLoadMetricSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2233,7 +2233,7 @@ public open class CfnScalingPlan(
        */
       override
           fun customizedLoadMetricSpecification(customizedLoadMetricSpecification: CustomizedLoadMetricSpecificationProperty) {
-        cdkBuilder.customizedLoadMetricSpecification(customizedLoadMetricSpecification.let(CustomizedLoadMetricSpecificationProperty::unwrap))
+        cdkBuilder.customizedLoadMetricSpecification(customizedLoadMetricSpecification.let(CustomizedLoadMetricSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -2268,7 +2268,7 @@ public open class CfnScalingPlan(
        * The default is enabled ( `false` ).
        */
       override fun disableDynamicScaling(disableDynamicScaling: IResolvable) {
-        cdkBuilder.disableDynamicScaling(disableDynamicScaling.let(IResolvable::unwrap))
+        cdkBuilder.disableDynamicScaling(disableDynamicScaling.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2295,7 +2295,7 @@ public open class CfnScalingPlan(
        */
       override
           fun predefinedLoadMetricSpecification(predefinedLoadMetricSpecification: IResolvable) {
-        cdkBuilder.predefinedLoadMetricSpecification(predefinedLoadMetricSpecification.let(IResolvable::unwrap))
+        cdkBuilder.predefinedLoadMetricSpecification(predefinedLoadMetricSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2306,7 +2306,7 @@ public open class CfnScalingPlan(
        */
       override
           fun predefinedLoadMetricSpecification(predefinedLoadMetricSpecification: PredefinedLoadMetricSpecificationProperty) {
-        cdkBuilder.predefinedLoadMetricSpecification(predefinedLoadMetricSpecification.let(PredefinedLoadMetricSpecificationProperty::unwrap))
+        cdkBuilder.predefinedLoadMetricSpecification(predefinedLoadMetricSpecification.let(PredefinedLoadMetricSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -2453,7 +2453,7 @@ public open class CfnScalingPlan(
        * metric.
        */
       override fun targetTrackingConfigurations(targetTrackingConfigurations: IResolvable) {
-        cdkBuilder.targetTrackingConfigurations(targetTrackingConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.targetTrackingConfigurations(targetTrackingConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3046,7 +3046,7 @@ public open class CfnScalingPlan(
        */
       override
           fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: IResolvable) {
-        cdkBuilder.customizedScalingMetricSpecification(customizedScalingMetricSpecification.let(IResolvable::unwrap))
+        cdkBuilder.customizedScalingMetricSpecification(customizedScalingMetricSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3055,7 +3055,7 @@ public open class CfnScalingPlan(
        */
       override
           fun customizedScalingMetricSpecification(customizedScalingMetricSpecification: CustomizedScalingMetricSpecificationProperty) {
-        cdkBuilder.customizedScalingMetricSpecification(customizedScalingMetricSpecification.let(CustomizedScalingMetricSpecificationProperty::unwrap))
+        cdkBuilder.customizedScalingMetricSpecification(customizedScalingMetricSpecification.let(CustomizedScalingMetricSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -3092,7 +3092,7 @@ public open class CfnScalingPlan(
        * The default value is `false` .
        */
       override fun disableScaleIn(disableScaleIn: IResolvable) {
-        cdkBuilder.disableScaleIn(disableScaleIn.let(IResolvable::unwrap))
+        cdkBuilder.disableScaleIn(disableScaleIn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3110,7 +3110,7 @@ public open class CfnScalingPlan(
        */
       override
           fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: IResolvable) {
-        cdkBuilder.predefinedScalingMetricSpecification(predefinedScalingMetricSpecification.let(IResolvable::unwrap))
+        cdkBuilder.predefinedScalingMetricSpecification(predefinedScalingMetricSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3119,7 +3119,7 @@ public open class CfnScalingPlan(
        */
       override
           fun predefinedScalingMetricSpecification(predefinedScalingMetricSpecification: PredefinedScalingMetricSpecificationProperty) {
-        cdkBuilder.predefinedScalingMetricSpecification(predefinedScalingMetricSpecification.let(PredefinedScalingMetricSpecificationProperty::unwrap))
+        cdkBuilder.predefinedScalingMetricSpecification(predefinedScalingMetricSpecification.let(PredefinedScalingMetricSpecificationProperty.Companion::unwrap))
       }
 
       /**

@@ -44,8 +44,8 @@ public open class Role(
     id: String,
     props: RoleProps,
   ) :
-      this(software.amazon.awscdk.services.iam.Role(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(RoleProps::unwrap))
+      this(software.amazon.awscdk.services.iam.Role(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(RoleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -61,7 +61,7 @@ public open class Role(
    * @param policy The the managed policy to attach. 
    */
   public override fun addManagedPolicy(policy: IManagedPolicy) {
-    unwrap(this).addManagedPolicy(policy.let(IManagedPolicy::unwrap))
+    unwrap(this).addManagedPolicy(policy.let(IManagedPolicy.Companion::unwrap))
   }
 
   /**
@@ -70,7 +70,7 @@ public open class Role(
    * @param statement 
    */
   public open fun addToPolicy(statement: PolicyStatement): Boolean =
-      unwrap(this).addToPolicy(statement.let(PolicyStatement::unwrap))
+      unwrap(this).addToPolicy(statement.let(PolicyStatement.Companion::unwrap))
 
   /**
    * Add to the policy of this principal.
@@ -90,7 +90,7 @@ public open class Role(
    * @param statement The permission statement to add to the policy document. 
    */
   public override fun addToPrincipalPolicy(statement: PolicyStatement): AddToPrincipalPolicyResult =
-      unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement::unwrap)).let(AddToPrincipalPolicyResult::wrap)
+      unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToPrincipalPolicyResult::wrap)
 
   /**
    * Adds a permission to the role's default policy document.
@@ -121,7 +121,7 @@ public open class Role(
    * @param policy The policy to attach. 
    */
   public override fun attachInlinePolicy(policy: Policy) {
-    unwrap(this).attachInlinePolicy(policy.let(Policy::unwrap))
+    unwrap(this).attachInlinePolicy(policy.let(Policy.Companion::unwrap))
   }
 
   /**
@@ -131,8 +131,8 @@ public open class Role(
    * @param actions 
    */
   public override fun grant(grantee: IPrincipal, vararg actions: String): Grant =
-      unwrap(this).grant(grantee.let(IPrincipal::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
-      as String}.toTypedArray()).let(Grant::wrap)
+      unwrap(this).grant(grantee.let(IPrincipal.Companion::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Grant permissions to the given principal to assume this role.
@@ -140,7 +140,7 @@ public open class Role(
    * @param identity 
    */
   public override fun grantAssumeRole(identity: IPrincipal): Grant =
-      unwrap(this).grantAssumeRole(identity.let(IPrincipal::unwrap)).let(Grant::wrap)
+      unwrap(this).grantAssumeRole(identity.let(IPrincipal.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant permissions to the given principal to pass this role.
@@ -148,7 +148,7 @@ public open class Role(
    * @param identity 
    */
   public override fun grantPassRole(identity: IPrincipal): Grant =
-      unwrap(this).grantPassRole(identity.let(IPrincipal::unwrap)).let(Grant::wrap)
+      unwrap(this).grantPassRole(identity.let(IPrincipal.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The principal to grant permissions to.
@@ -222,7 +222,7 @@ public open class Role(
    * @param options
    */
   public open fun withoutPolicyUpdates(options: WithoutPolicyUpdatesOptions): IRole =
-      unwrap(this).withoutPolicyUpdates(options.let(WithoutPolicyUpdatesOptions::unwrap)).let(IRole::wrap)
+      unwrap(this).withoutPolicyUpdates(options.let(WithoutPolicyUpdatesOptions.Companion::unwrap)).let(IRole::wrap)
 
   /**
    * Return a copy of this Role object whose Policies will not be updated.
@@ -423,7 +423,7 @@ public open class Role(
      * can assume this role. 
      */
     override fun assumedBy(assumedBy: IPrincipal) {
-      cdkBuilder.assumedBy(assumedBy.let(IPrincipal::unwrap))
+      cdkBuilder.assumedBy(assumedBy.let(IPrincipal.Companion::unwrap))
     }
 
     /**
@@ -494,7 +494,7 @@ public open class Role(
      * @param managedPolicies A list of managed policies associated with this role. 
      */
     override fun managedPolicies(managedPolicies: List<IManagedPolicy>) {
-      cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy::unwrap))
+      cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy.Companion::unwrap))
     }
 
     /**
@@ -532,7 +532,7 @@ public open class Role(
      * role. 
      */
     override fun maxSessionDuration(maxSessionDuration: Duration) {
-      cdkBuilder.maxSessionDuration(maxSessionDuration.let(Duration::unwrap))
+      cdkBuilder.maxSessionDuration(maxSessionDuration.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -564,7 +564,7 @@ public open class Role(
      * roles). 
      */
     override fun permissionsBoundary(permissionsBoundary: IManagedPolicy) {
-      cdkBuilder.permissionsBoundary(permissionsBoundary.let(IManagedPolicy::unwrap))
+      cdkBuilder.permissionsBoundary(permissionsBoundary.let(IManagedPolicy.Companion::unwrap))
     }
 
     /**
@@ -595,13 +595,13 @@ public open class Role(
 
   public companion object {
     public fun customizeRoles(scope: CloudshiftdevConstructsConstruct) {
-      software.amazon.awscdk.services.iam.Role.customizeRoles(scope.let(CloudshiftdevConstructsConstruct::unwrap))
+      software.amazon.awscdk.services.iam.Role.customizeRoles(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap))
     }
 
     public fun customizeRoles(scope: CloudshiftdevConstructsConstruct,
         options: CustomizeRolesOptions) {
-      software.amazon.awscdk.services.iam.Role.customizeRoles(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-          options.let(CustomizeRolesOptions::unwrap))
+      software.amazon.awscdk.services.iam.Role.customizeRoles(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+          options.let(CustomizeRolesOptions.Companion::unwrap))
     }
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -615,7 +615,7 @@ public open class Role(
       id: String,
       roleArn: String,
     ): IRole =
-        software.amazon.awscdk.services.iam.Role.fromRoleArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.iam.Role.fromRoleArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, roleArn).let(IRole::wrap)
 
     public fun fromRoleArn(
@@ -624,8 +624,8 @@ public open class Role(
       roleArn: String,
       options: FromRoleArnOptions,
     ): IRole =
-        software.amazon.awscdk.services.iam.Role.fromRoleArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, roleArn, options.let(FromRoleArnOptions::unwrap)).let(IRole::wrap)
+        software.amazon.awscdk.services.iam.Role.fromRoleArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, roleArn, options.let(FromRoleArnOptions.Companion::unwrap)).let(IRole::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a4fb31fe9dd1e72e4b8ca587f24946f2fdf30b789ba5dd86492388cc8e4a5a11")
@@ -641,7 +641,7 @@ public open class Role(
       id: String,
       roleName: String,
     ): IRole =
-        software.amazon.awscdk.services.iam.Role.fromRoleName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.iam.Role.fromRoleName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, roleName).let(IRole::wrap)
 
     public fun fromRoleName(
@@ -650,8 +650,8 @@ public open class Role(
       roleName: String,
       options: FromRoleNameOptions,
     ): IRole =
-        software.amazon.awscdk.services.iam.Role.fromRoleName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, roleName, options.let(FromRoleNameOptions::unwrap)).let(IRole::wrap)
+        software.amazon.awscdk.services.iam.Role.fromRoleName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, roleName, options.let(FromRoleNameOptions.Companion::unwrap)).let(IRole::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("75fdf9c6375dbd7430f3304bb8fd3be42333a5b7701b06ab210e40c20e6d1d3a")

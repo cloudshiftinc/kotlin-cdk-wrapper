@@ -211,14 +211,14 @@ public interface CfnLayerVersionProps {
      * @param content The function layer archive. 
      */
     override fun content(content: IResolvable) {
-      cdkBuilder.content(content.let(IResolvable::unwrap))
+      cdkBuilder.content(content.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param content The function layer archive. 
      */
     override fun content(content: CfnLayerVersion.ContentProperty) {
-      cdkBuilder.content(content.let(CfnLayerVersion.ContentProperty::unwrap))
+      cdkBuilder.content(content.let(CfnLayerVersion.ContentProperty.Companion::unwrap))
     }
 
     /**

@@ -162,7 +162,7 @@ public open class CfnInstance(
   cdkObject: software.amazon.awscdk.services.ec2.CfnInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ec2.CfnInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ec2.CfnInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -171,8 +171,8 @@ public open class CfnInstance(
     id: String,
     props: CfnInstanceProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInstanceProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInstanceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -245,6 +245,11 @@ public open class CfnInstance(
   public open fun attrPublicIp(): String = unwrap(this).getAttrPublicIp()
 
   /**
+   * The current state of the instance.
+   */
+  public open fun attrState(): IResolvable = unwrap(this).getAttrState().let(IResolvable::wrap)
+
+  /**
    * The ID of the VPC in which the instance is running.
    */
   public open fun attrVpcId(): String = unwrap(this).getAttrVpcId()
@@ -272,7 +277,7 @@ public open class CfnInstance(
    * launch.
    */
   public open fun blockDeviceMappings(`value`: IResolvable) {
-    unwrap(this).setBlockDeviceMappings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBlockDeviceMappings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -299,14 +304,14 @@ public open class CfnInstance(
    * The CPU options for the instance.
    */
   public open fun cpuOptions(`value`: IResolvable) {
-    unwrap(this).setCpuOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCpuOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The CPU options for the instance.
    */
   public open fun cpuOptions(`value`: CpuOptionsProperty) {
-    unwrap(this).setCpuOptions(`value`.let(CpuOptionsProperty::unwrap))
+    unwrap(this).setCpuOptions(`value`.let(CpuOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -326,14 +331,14 @@ public open class CfnInstance(
    * The credit option for CPU usage of the burstable performance instance.
    */
   public open fun creditSpecification(`value`: IResolvable) {
-    unwrap(this).setCreditSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCreditSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The credit option for CPU usage of the burstable performance instance.
    */
   public open fun creditSpecification(`value`: CreditSpecificationProperty) {
-    unwrap(this).setCreditSpecification(`value`.let(CreditSpecificationProperty::unwrap))
+    unwrap(this).setCreditSpecification(`value`.let(CreditSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -363,7 +368,7 @@ public open class CfnInstance(
    * console, CLI, or API;
    */
   public open fun disableApiTermination(`value`: IResolvable) {
-    unwrap(this).setDisableApiTermination(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDisableApiTermination(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -382,7 +387,7 @@ public open class CfnInstance(
    * Indicates whether the instance is optimized for Amazon EBS I/O.
    */
   public open fun ebsOptimized(`value`: IResolvable) {
-    unwrap(this).setEbsOptimized(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEbsOptimized(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -394,7 +399,7 @@ public open class CfnInstance(
    * An elastic GPU to associate with the instance.
    */
   public open fun elasticGpuSpecifications(`value`: IResolvable) {
-    unwrap(this).setElasticGpuSpecifications(`value`.let(IResolvable::unwrap))
+    unwrap(this).setElasticGpuSpecifications(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -420,7 +425,7 @@ public open class CfnInstance(
    * An elastic inference accelerator to associate with the instance.
    */
   public open fun elasticInferenceAccelerators(`value`: IResolvable) {
-    unwrap(this).setElasticInferenceAccelerators(`value`.let(IResolvable::unwrap))
+    unwrap(this).setElasticInferenceAccelerators(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -445,14 +450,14 @@ public open class CfnInstance(
    * Indicates whether the instance is enabled for AWS Nitro Enclaves.
    */
   public open fun enclaveOptions(`value`: IResolvable) {
-    unwrap(this).setEnclaveOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnclaveOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Indicates whether the instance is enabled for AWS Nitro Enclaves.
    */
   public open fun enclaveOptions(`value`: EnclaveOptionsProperty) {
-    unwrap(this).setEnclaveOptions(`value`.let(EnclaveOptionsProperty::unwrap))
+    unwrap(this).setEnclaveOptions(`value`.let(EnclaveOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -472,14 +477,14 @@ public open class CfnInstance(
    * Indicates whether an instance is enabled for hibernation.
    */
   public open fun hibernationOptions(`value`: IResolvable) {
-    unwrap(this).setHibernationOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHibernationOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Indicates whether an instance is enabled for hibernation.
    */
   public open fun hibernationOptions(`value`: HibernationOptionsProperty) {
-    unwrap(this).setHibernationOptions(`value`.let(HibernationOptionsProperty::unwrap))
+    unwrap(this).setHibernationOptions(`value`.let(HibernationOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -546,7 +551,7 @@ public open class CfnInstance(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -607,7 +612,7 @@ public open class CfnInstance(
    * interface.
    */
   public open fun ipv6Addresses(`value`: IResolvable) {
-    unwrap(this).setIpv6Addresses(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIpv6Addresses(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -657,26 +662,26 @@ public open class CfnInstance(
   }
 
   /**
-   * The launch template to use to launch the instances.
+   * The launch template.
    */
   public open fun launchTemplate(): Any? = unwrap(this).getLaunchTemplate()
 
   /**
-   * The launch template to use to launch the instances.
+   * The launch template.
    */
   public open fun launchTemplate(`value`: IResolvable) {
-    unwrap(this).setLaunchTemplate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLaunchTemplate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The launch template to use to launch the instances.
+   * The launch template.
    */
   public open fun launchTemplate(`value`: LaunchTemplateSpecificationProperty) {
-    unwrap(this).setLaunchTemplate(`value`.let(LaunchTemplateSpecificationProperty::unwrap))
+    unwrap(this).setLaunchTemplate(`value`.let(LaunchTemplateSpecificationProperty.Companion::unwrap))
   }
 
   /**
-   * The launch template to use to launch the instances.
+   * The launch template.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("535cb576814b4579419de7412d1256c1940139943ea2c243956fbc07001789a0")
@@ -692,7 +697,7 @@ public open class CfnInstance(
    * The license configurations.
    */
   public open fun licenseSpecifications(`value`: IResolvable) {
-    unwrap(this).setLicenseSpecifications(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLicenseSpecifications(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -724,7 +729,7 @@ public open class CfnInstance(
    * Specifies whether detailed monitoring is enabled for the instance.
    */
   public open fun monitoring(`value`: IResolvable) {
-    unwrap(this).setMonitoring(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMonitoring(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -736,7 +741,7 @@ public open class CfnInstance(
    * The network interfaces to associate with the instance.
    */
   public open fun networkInterfaces(`value`: IResolvable) {
-    unwrap(this).setNetworkInterfaces(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNetworkInterfaces(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -774,14 +779,14 @@ public open class CfnInstance(
    * The options for the instance hostname.
    */
   public open fun privateDnsNameOptions(`value`: IResolvable) {
-    unwrap(this).setPrivateDnsNameOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPrivateDnsNameOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The options for the instance hostname.
    */
   public open fun privateDnsNameOptions(`value`: PrivateDnsNameOptionsProperty) {
-    unwrap(this).setPrivateDnsNameOptions(`value`.let(PrivateDnsNameOptionsProperty::unwrap))
+    unwrap(this).setPrivateDnsNameOptions(`value`.let(PrivateDnsNameOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -828,7 +833,7 @@ public open class CfnInstance(
    * instance at launch.
    */
   public open fun propagateTagsToVolumeOnCreation(`value`: IResolvable) {
-    unwrap(this).setPropagateTagsToVolumeOnCreation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPropagateTagsToVolumeOnCreation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -904,7 +909,7 @@ public open class CfnInstance(
    * source or the destination of any traffic that it receives.
    */
   public open fun sourceDestCheck(`value`: IResolvable) {
-    unwrap(this).setSourceDestCheck(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSourceDestCheck(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -928,7 +933,7 @@ public open class CfnInstance(
    * in the *AWS Systems Manager User Guide* .
    */
   public open fun ssmAssociations(`value`: IResolvable) {
-    unwrap(this).setSsmAssociations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSsmAssociations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -982,7 +987,7 @@ public open class CfnInstance(
    * The tags to add to the instance.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -1023,7 +1028,7 @@ public open class CfnInstance(
    * The volumes to attach to the instance.
    */
   public open fun volumes(`value`: IResolvable) {
-    unwrap(this).setVolumes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVolumes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -1646,38 +1651,35 @@ public open class CfnInstance(
     public fun keyName(keyName: String)
 
     /**
-     * The launch template to use to launch the instances.
+     * The launch template.
      *
-     * Any parameters that you specify in the AWS CloudFormation template override the same
-     * parameters in the launch template. You can specify either the name or ID of a launch template,
-     * but not both.
+     * Any additional parameters that you specify for the new instance overwrite the corresponding
+     * parameters included in the launch template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-launchtemplate)
-     * @param launchTemplate The launch template to use to launch the instances. 
+     * @param launchTemplate The launch template. 
      */
     public fun launchTemplate(launchTemplate: IResolvable)
 
     /**
-     * The launch template to use to launch the instances.
+     * The launch template.
      *
-     * Any parameters that you specify in the AWS CloudFormation template override the same
-     * parameters in the launch template. You can specify either the name or ID of a launch template,
-     * but not both.
+     * Any additional parameters that you specify for the new instance overwrite the corresponding
+     * parameters included in the launch template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-launchtemplate)
-     * @param launchTemplate The launch template to use to launch the instances. 
+     * @param launchTemplate The launch template. 
      */
     public fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty)
 
     /**
-     * The launch template to use to launch the instances.
+     * The launch template.
      *
-     * Any parameters that you specify in the AWS CloudFormation template override the same
-     * parameters in the launch template. You can specify either the name or ID of a launch template,
-     * but not both.
+     * Any additional parameters that you specify for the new instance overwrite the corresponding
+     * parameters included in the launch template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-launchtemplate)
-     * @param launchTemplate The launch template to use to launch the instances. 
+     * @param launchTemplate The launch template. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1a96fad6d5019a3dd2182fee83a3a37fbea28f6c867f2ec0ff8c8d0b4e93680a")
@@ -2214,7 +2216,7 @@ public open class CfnInstance(
      * attach to the instance at launch. 
      */
     override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
-      cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable::unwrap))
+      cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2277,7 +2279,7 @@ public open class CfnInstance(
      * @param cpuOptions The CPU options for the instance. 
      */
     override fun cpuOptions(cpuOptions: IResolvable) {
-      cdkBuilder.cpuOptions(cpuOptions.let(IResolvable::unwrap))
+      cdkBuilder.cpuOptions(cpuOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2291,7 +2293,7 @@ public open class CfnInstance(
      * @param cpuOptions The CPU options for the instance. 
      */
     override fun cpuOptions(cpuOptions: CpuOptionsProperty) {
-      cdkBuilder.cpuOptions(cpuOptions.let(CpuOptionsProperty::unwrap))
+      cdkBuilder.cpuOptions(cpuOptions.let(CpuOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -2327,7 +2329,7 @@ public open class CfnInstance(
      * instance. 
      */
     override fun creditSpecification(creditSpecification: IResolvable) {
-      cdkBuilder.creditSpecification(creditSpecification.let(IResolvable::unwrap))
+      cdkBuilder.creditSpecification(creditSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2348,7 +2350,7 @@ public open class CfnInstance(
      * instance. 
      */
     override fun creditSpecification(creditSpecification: CreditSpecificationProperty) {
-      cdkBuilder.creditSpecification(creditSpecification.let(CreditSpecificationProperty::unwrap))
+      cdkBuilder.creditSpecification(creditSpecification.let(CreditSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -2409,7 +2411,7 @@ public open class CfnInstance(
      * instance using the Amazon EC2 console, CLI, or API;. 
      */
     override fun disableApiTermination(disableApiTermination: IResolvable) {
-      cdkBuilder.disableApiTermination(disableApiTermination.let(IResolvable::unwrap))
+      cdkBuilder.disableApiTermination(disableApiTermination.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2441,7 +2443,7 @@ public open class CfnInstance(
      * @param ebsOptimized Indicates whether the instance is optimized for Amazon EBS I/O. 
      */
     override fun ebsOptimized(ebsOptimized: IResolvable) {
-      cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
+      cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2455,7 +2457,7 @@ public open class CfnInstance(
      * @param elasticGpuSpecifications An elastic GPU to associate with the instance. 
      */
     override fun elasticGpuSpecifications(elasticGpuSpecifications: IResolvable) {
-      cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2499,7 +2501,7 @@ public open class CfnInstance(
      * instance. 
      */
     override fun elasticInferenceAccelerators(elasticInferenceAccelerators: IResolvable) {
-      cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators.let(IResolvable::unwrap))
+      cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2542,7 +2544,7 @@ public open class CfnInstance(
      * @param enclaveOptions Indicates whether the instance is enabled for AWS Nitro Enclaves. 
      */
     override fun enclaveOptions(enclaveOptions: IResolvable) {
-      cdkBuilder.enclaveOptions(enclaveOptions.let(IResolvable::unwrap))
+      cdkBuilder.enclaveOptions(enclaveOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2552,7 +2554,7 @@ public open class CfnInstance(
      * @param enclaveOptions Indicates whether the instance is enabled for AWS Nitro Enclaves. 
      */
     override fun enclaveOptions(enclaveOptions: EnclaveOptionsProperty) {
-      cdkBuilder.enclaveOptions(enclaveOptions.let(EnclaveOptionsProperty::unwrap))
+      cdkBuilder.enclaveOptions(enclaveOptions.let(EnclaveOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -2581,7 +2583,7 @@ public open class CfnInstance(
      * @param hibernationOptions Indicates whether an instance is enabled for hibernation. 
      */
     override fun hibernationOptions(hibernationOptions: IResolvable) {
-      cdkBuilder.hibernationOptions(hibernationOptions.let(IResolvable::unwrap))
+      cdkBuilder.hibernationOptions(hibernationOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2599,7 +2601,7 @@ public open class CfnInstance(
      * @param hibernationOptions Indicates whether an instance is enabled for hibernation. 
      */
     override fun hibernationOptions(hibernationOptions: HibernationOptionsProperty) {
-      cdkBuilder.hibernationOptions(hibernationOptions.let(HibernationOptionsProperty::unwrap))
+      cdkBuilder.hibernationOptions(hibernationOptions.let(HibernationOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -2746,7 +2748,7 @@ public open class CfnInstance(
      * primary network interface. 
      */
     override fun ipv6Addresses(ipv6Addresses: IResolvable) {
-      cdkBuilder.ipv6Addresses(ipv6Addresses.let(IResolvable::unwrap))
+      cdkBuilder.ipv6Addresses(ipv6Addresses.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2823,42 +2825,39 @@ public open class CfnInstance(
     }
 
     /**
-     * The launch template to use to launch the instances.
+     * The launch template.
      *
-     * Any parameters that you specify in the AWS CloudFormation template override the same
-     * parameters in the launch template. You can specify either the name or ID of a launch template,
-     * but not both.
+     * Any additional parameters that you specify for the new instance overwrite the corresponding
+     * parameters included in the launch template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-launchtemplate)
-     * @param launchTemplate The launch template to use to launch the instances. 
+     * @param launchTemplate The launch template. 
      */
     override fun launchTemplate(launchTemplate: IResolvable) {
-      cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
+      cdkBuilder.launchTemplate(launchTemplate.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The launch template to use to launch the instances.
+     * The launch template.
      *
-     * Any parameters that you specify in the AWS CloudFormation template override the same
-     * parameters in the launch template. You can specify either the name or ID of a launch template,
-     * but not both.
+     * Any additional parameters that you specify for the new instance overwrite the corresponding
+     * parameters included in the launch template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-launchtemplate)
-     * @param launchTemplate The launch template to use to launch the instances. 
+     * @param launchTemplate The launch template. 
      */
     override fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty) {
-      cdkBuilder.launchTemplate(launchTemplate.let(LaunchTemplateSpecificationProperty::unwrap))
+      cdkBuilder.launchTemplate(launchTemplate.let(LaunchTemplateSpecificationProperty.Companion::unwrap))
     }
 
     /**
-     * The launch template to use to launch the instances.
+     * The launch template.
      *
-     * Any parameters that you specify in the AWS CloudFormation template override the same
-     * parameters in the launch template. You can specify either the name or ID of a launch template,
-     * but not both.
+     * Any additional parameters that you specify for the new instance overwrite the corresponding
+     * parameters included in the launch template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-launchtemplate)
-     * @param launchTemplate The launch template to use to launch the instances. 
+     * @param launchTemplate The launch template. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1a96fad6d5019a3dd2182fee83a3a37fbea28f6c867f2ec0ff8c8d0b4e93680a")
@@ -2873,7 +2872,7 @@ public open class CfnInstance(
      * @param licenseSpecifications The license configurations. 
      */
     override fun licenseSpecifications(licenseSpecifications: IResolvable) {
-      cdkBuilder.licenseSpecifications(licenseSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.licenseSpecifications(licenseSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2922,7 +2921,7 @@ public open class CfnInstance(
      * @param monitoring Specifies whether detailed monitoring is enabled for the instance. 
      */
     override fun monitoring(monitoring: IResolvable) {
-      cdkBuilder.monitoring(monitoring.let(IResolvable::unwrap))
+      cdkBuilder.monitoring(monitoring.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2942,7 +2941,7 @@ public open class CfnInstance(
      * @param networkInterfaces The network interfaces to associate with the instance. 
      */
     override fun networkInterfaces(networkInterfaces: IResolvable) {
-      cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable::unwrap))
+      cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3003,7 +3002,7 @@ public open class CfnInstance(
      * @param privateDnsNameOptions The options for the instance hostname. 
      */
     override fun privateDnsNameOptions(privateDnsNameOptions: IResolvable) {
-      cdkBuilder.privateDnsNameOptions(privateDnsNameOptions.let(IResolvable::unwrap))
+      cdkBuilder.privateDnsNameOptions(privateDnsNameOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3013,7 +3012,7 @@ public open class CfnInstance(
      * @param privateDnsNameOptions The options for the instance hostname. 
      */
     override fun privateDnsNameOptions(privateDnsNameOptions: PrivateDnsNameOptionsProperty) {
-      cdkBuilder.privateDnsNameOptions(privateDnsNameOptions.let(PrivateDnsNameOptionsProperty::unwrap))
+      cdkBuilder.privateDnsNameOptions(privateDnsNameOptions.let(PrivateDnsNameOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -3081,7 +3080,7 @@ public open class CfnInstance(
      * to all of the volumes attached to the instance at launch. 
      */
     override fun propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation: IResolvable) {
-      cdkBuilder.propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation.let(IResolvable::unwrap))
+      cdkBuilder.propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3199,7 +3198,7 @@ public open class CfnInstance(
      * instance is either the source or the destination of any traffic that it receives. 
      */
     override fun sourceDestCheck(sourceDestCheck: IResolvable) {
-      cdkBuilder.sourceDestCheck(sourceDestCheck.let(IResolvable::unwrap))
+      cdkBuilder.sourceDestCheck(sourceDestCheck.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3225,7 +3224,7 @@ public open class CfnInstance(
      * in the *AWS Systems Manager User Guide* . 
      */
     override fun ssmAssociations(ssmAssociations: IResolvable) {
-      cdkBuilder.ssmAssociations(ssmAssociations.let(IResolvable::unwrap))
+      cdkBuilder.ssmAssociations(ssmAssociations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3303,7 +3302,7 @@ public open class CfnInstance(
      * @param tags The tags to add to the instance. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -3356,7 +3355,7 @@ public open class CfnInstance(
      * @param volumes The volumes to attach to the instance. 
      */
     override fun volumes(volumes: IResolvable) {
-      cdkBuilder.volumes(volumes.let(IResolvable::unwrap))
+      cdkBuilder.volumes(volumes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3760,7 +3759,7 @@ public open class CfnInstance(
        * .
        */
       override fun ebs(ebs: IResolvable) {
-        cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
+        cdkBuilder.ebs(ebs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3774,7 +3773,7 @@ public open class CfnInstance(
        * .
        */
       override fun ebs(ebs: EbsProperty) {
-        cdkBuilder.ebs(ebs.let(EbsProperty::unwrap))
+        cdkBuilder.ebs(ebs.let(EbsProperty.Companion::unwrap))
       }
 
       /**
@@ -3799,7 +3798,7 @@ public open class CfnInstance(
        * .
        */
       override fun noDevice(noDevice: IResolvable) {
-        cdkBuilder.noDevice(noDevice.let(IResolvable::unwrap))
+        cdkBuilder.noDevice(noDevice.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3810,7 +3809,7 @@ public open class CfnInstance(
        * .
        */
       override fun noDevice(noDevice: NoDeviceProperty) {
-        cdkBuilder.noDevice(noDevice.let(NoDeviceProperty::unwrap))
+        cdkBuilder.noDevice(noDevice.let(NoDeviceProperty.Companion::unwrap))
       }
 
       /**
@@ -4521,7 +4520,7 @@ public open class CfnInstance(
        * in the *Amazon EC2 User Guide* .
        */
       override fun deleteOnTermination(deleteOnTermination: IResolvable) {
-        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
+        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4565,7 +4564,7 @@ public open class CfnInstance(
        * .
        */
       override fun encrypted(encrypted: IResolvable) {
-        cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
+        cdkBuilder.encrypted(encrypted.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5147,7 +5146,7 @@ public open class CfnInstance(
        * otherwise, it is not enabled for AWS Nitro Enclaves.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.ec2.CfnInstance.EnclaveOptionsProperty =
@@ -5298,7 +5297,7 @@ public open class CfnInstance(
        * Default: `false`
        */
       override fun configured(configured: IResolvable) {
-        cdkBuilder.configured(configured.let(IResolvable::unwrap))
+        cdkBuilder.configured(configured.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.ec2.CfnInstance.HibernationOptionsProperty
@@ -5444,9 +5443,7 @@ public open class CfnInstance(
    * [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
    * and [Create a launch
    * template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#create-launch-template)
-   * in the *Amazon EC2 User Guide* .
-   *
-   * For example launch templates, see the
+   * in the *Amazon EC2 User Guide* . For example launch templates, see the
    * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate--examples)
    * for `AWS::EC2::LaunchTemplate` .
    *
@@ -5471,7 +5468,7 @@ public open class CfnInstance(
     /**
      * The ID of the launch template.
      *
-     * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
+     * You must specify either the launch template ID or the launch template name, but not both.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-launchtemplateid)
      */
@@ -5480,19 +5477,20 @@ public open class CfnInstance(
     /**
      * The name of the launch template.
      *
-     * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
+     * You must specify either the launch template ID or the launch template name, but not both.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-launchtemplatename)
      */
     public fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
 
     /**
-     * The version number of the launch template.
+     * The version number of the launch template. You must specify this property.
      *
-     * Specifying `$Latest` or `$Default` for the template version number is not supported. However,
-     * you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the `Fn::GetAtt` intrinsic
-     * function. For more information, see
-     * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
+     * To specify the default version of the template, use the `Fn::GetAtt` intrinsic function to
+     * retrieve the `DefaultVersionNumber` attribute of the launch template. To specify the latest
+     * version of the template, use `Fn::GetAtt` to retrieve the `LatestVersionNumber` attribute. For
+     * more information, see [AWS::EC2:LaunchTemplate return values for
+     * Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-version)
@@ -5506,22 +5504,23 @@ public open class CfnInstance(
     public interface Builder {
       /**
        * @param launchTemplateId The ID of the launch template.
-       * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
+       * You must specify either the launch template ID or the launch template name, but not both.
        */
       public fun launchTemplateId(launchTemplateId: String)
 
       /**
        * @param launchTemplateName The name of the launch template.
-       * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
+       * You must specify either the launch template ID or the launch template name, but not both.
        */
       public fun launchTemplateName(launchTemplateName: String)
 
       /**
-       * @param version The version number of the launch template. 
-       * Specifying `$Latest` or `$Default` for the template version number is not supported.
-       * However, you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the
-       * `Fn::GetAtt` intrinsic function. For more information, see
-       * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
+       * @param version The version number of the launch template. You must specify this property. 
+       * To specify the default version of the template, use the `Fn::GetAtt` intrinsic function to
+       * retrieve the `DefaultVersionNumber` attribute of the launch template. To specify the latest
+       * version of the template, use `Fn::GetAtt` to retrieve the `LatestVersionNumber` attribute. For
+       * more information, see [AWS::EC2:LaunchTemplate return values for
+       * Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
        * .
        */
       public fun version(version: String)
@@ -5535,7 +5534,7 @@ public open class CfnInstance(
 
       /**
        * @param launchTemplateId The ID of the launch template.
-       * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
+       * You must specify either the launch template ID or the launch template name, but not both.
        */
       override fun launchTemplateId(launchTemplateId: String) {
         cdkBuilder.launchTemplateId(launchTemplateId)
@@ -5543,18 +5542,19 @@ public open class CfnInstance(
 
       /**
        * @param launchTemplateName The name of the launch template.
-       * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
+       * You must specify either the launch template ID or the launch template name, but not both.
        */
       override fun launchTemplateName(launchTemplateName: String) {
         cdkBuilder.launchTemplateName(launchTemplateName)
       }
 
       /**
-       * @param version The version number of the launch template. 
-       * Specifying `$Latest` or `$Default` for the template version number is not supported.
-       * However, you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the
-       * `Fn::GetAtt` intrinsic function. For more information, see
-       * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
+       * @param version The version number of the launch template. You must specify this property. 
+       * To specify the default version of the template, use the `Fn::GetAtt` intrinsic function to
+       * retrieve the `DefaultVersionNumber` attribute of the launch template. To specify the latest
+       * version of the template, use `Fn::GetAtt` to retrieve the `LatestVersionNumber` attribute. For
+       * more information, see [AWS::EC2:LaunchTemplate return values for
+       * Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
        * .
        */
       override fun version(version: String) {
@@ -5572,7 +5572,7 @@ public open class CfnInstance(
       /**
        * The ID of the launch template.
        *
-       * You must specify the `LaunchTemplateId` or the `LaunchTemplateName` , but not both.
+       * You must specify either the launch template ID or the launch template name, but not both.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-launchtemplateid)
        */
@@ -5581,19 +5581,20 @@ public open class CfnInstance(
       /**
        * The name of the launch template.
        *
-       * You must specify the `LaunchTemplateName` or the `LaunchTemplateId` , but not both.
+       * You must specify either the launch template ID or the launch template name, but not both.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-launchtemplatename)
        */
       override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
 
       /**
-       * The version number of the launch template.
+       * The version number of the launch template. You must specify this property.
        *
-       * Specifying `$Latest` or `$Default` for the template version number is not supported.
-       * However, you can specify `LatestVersionNumber` or `DefaultVersionNumber` using the
-       * `Fn::GetAtt` intrinsic function. For more information, see
-       * [Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
+       * To specify the default version of the template, use the `Fn::GetAtt` intrinsic function to
+       * retrieve the `DefaultVersionNumber` attribute of the launch template. To specify the latest
+       * version of the template, use `Fn::GetAtt` to retrieve the `LatestVersionNumber` attribute. For
+       * more information, see [AWS::EC2:LaunchTemplate return values for
+       * Fn::GetAtt](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate-return-values-fn--getatt)
        * .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-launchtemplatespecification.html#cfn-ec2-instance-launchtemplatespecification-version)
@@ -6080,7 +6081,7 @@ public open class CfnInstance(
        * in the *AWS Wavelength Developer Guide* .
        */
       override fun associateCarrierIpAddress(associateCarrierIpAddress: IResolvable) {
-        cdkBuilder.associateCarrierIpAddress(associateCarrierIpAddress.let(IResolvable::unwrap))
+        cdkBuilder.associateCarrierIpAddress(associateCarrierIpAddress.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6110,7 +6111,7 @@ public open class CfnInstance(
        * Address* tab on the [VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
        */
       override fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
-        cdkBuilder.associatePublicIpAddress(associatePublicIpAddress.let(IResolvable::unwrap))
+        cdkBuilder.associatePublicIpAddress(associatePublicIpAddress.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6128,7 +6129,7 @@ public open class CfnInstance(
        * Applies only if creating a network interface when launching an instance.
        */
       override fun deleteOnTermination(deleteOnTermination: IResolvable) {
-        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
+        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6181,7 +6182,7 @@ public open class CfnInstance(
        * to launch.
        */
       override fun ipv6Addresses(ipv6Addresses: IResolvable) {
-        cdkBuilder.ipv6Addresses(ipv6Addresses.let(IResolvable::unwrap))
+        cdkBuilder.ipv6Addresses(ipv6Addresses.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6225,7 +6226,7 @@ public open class CfnInstance(
        * Only one private IPv4 address can be designated as primary.
        */
       override fun privateIpAddresses(privateIpAddresses: IResolvable) {
-        cdkBuilder.privateIpAddresses(privateIpAddresses.let(IResolvable::unwrap))
+        cdkBuilder.privateIpAddresses(privateIpAddresses.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6608,7 +6609,7 @@ public open class CfnInstance(
        * *Amazon Elastic Compute Cloud User Guide* .
        */
       override fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: IResolvable) {
-        cdkBuilder.enableResourceNameDnsARecord(enableResourceNameDnsARecord.let(IResolvable::unwrap))
+        cdkBuilder.enableResourceNameDnsARecord(enableResourceNameDnsARecord.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6630,7 +6631,7 @@ public open class CfnInstance(
        * *Amazon Elastic Compute Cloud User Guide* .
        */
       override fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: IResolvable) {
-        cdkBuilder.enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord.let(IResolvable::unwrap))
+        cdkBuilder.enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6792,7 +6793,7 @@ public open class CfnInstance(
        * Only one IPv4 address can be designated as primary.
        */
       override fun primary(primary: IResolvable) {
-        cdkBuilder.primary(primary.let(IResolvable::unwrap))
+        cdkBuilder.primary(primary.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6926,7 +6927,7 @@ public open class CfnInstance(
        * document.
        */
       override fun associationParameters(associationParameters: IResolvable) {
-        cdkBuilder.associationParameters(associationParameters.let(IResolvable::unwrap))
+        cdkBuilder.associationParameters(associationParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6988,6 +6989,109 @@ public open class CfnInstance(
           software.amazon.awscdk.services.ec2.CfnInstance.SsmAssociationProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnInstance.SsmAssociationProperty
+    }
+  }
+
+  /**
+   * The current state of the instance.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * StateProperty stateProperty = StateProperty.builder()
+   * .code("code")
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-state.html)
+   */
+  public interface StateProperty {
+    /**
+     * The state of the instance as a 16-bit unsigned integer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-state.html#cfn-ec2-instance-state-code)
+     */
+    public fun code(): String? = unwrap(this).getCode()
+
+    /**
+     * The current state of the instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-state.html#cfn-ec2-instance-state-name)
+     */
+    public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * A builder for [StateProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param code The state of the instance as a 16-bit unsigned integer.
+       */
+      public fun code(code: String)
+
+      /**
+       * @param name The current state of the instance.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder: software.amazon.awscdk.services.ec2.CfnInstance.StateProperty.Builder
+          = software.amazon.awscdk.services.ec2.CfnInstance.StateProperty.builder()
+
+      /**
+       * @param code The state of the instance as a 16-bit unsigned integer.
+       */
+      override fun code(code: String) {
+        cdkBuilder.code(code)
+      }
+
+      /**
+       * @param name The current state of the instance.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnInstance.StateProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.StateProperty,
+    ) : CdkObject(cdkObject), StateProperty {
+      /**
+       * The state of the instance as a 16-bit unsigned integer.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-state.html#cfn-ec2-instance-state-code)
+       */
+      override fun code(): String? = unwrap(this).getCode()
+
+      /**
+       * The current state of the instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-state.html#cfn-ec2-instance-state-name)
+       */
+      override fun name(): String? = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StateProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnInstance.StateProperty):
+          StateProperty = CdkObjectWrappers.wrap(cdkObject) as? StateProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StateProperty):
+          software.amazon.awscdk.services.ec2.CfnInstance.StateProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.ec2.CfnInstance.StateProperty
     }
   }
 

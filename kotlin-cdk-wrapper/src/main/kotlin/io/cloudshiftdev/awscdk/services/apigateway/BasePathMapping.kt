@@ -40,8 +40,8 @@ public open class BasePathMapping(
     id: String,
     props: BasePathMappingProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.BasePathMapping(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(BasePathMappingProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.BasePathMapping(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(BasePathMappingProps.Companion::unwrap))
   )
 
   public constructor(
@@ -149,7 +149,7 @@ public open class BasePathMapping(
      * @param domainName The DomainName to associate with this base path mapping. 
      */
     override fun domainName(domainName: IDomainName) {
-      cdkBuilder.domainName(domainName.let(IDomainName::unwrap))
+      cdkBuilder.domainName(domainName.let(IDomainName.Companion::unwrap))
     }
 
     /**
@@ -158,7 +158,7 @@ public open class BasePathMapping(
      * @param restApi The RestApi resource to target. 
      */
     override fun restApi(restApi: IRestApi) {
-      cdkBuilder.restApi(restApi.let(IRestApi::unwrap))
+      cdkBuilder.restApi(restApi.let(IRestApi.Companion::unwrap))
     }
 
     /**
@@ -169,7 +169,7 @@ public open class BasePathMapping(
      * @param stage The Deployment stage of API [disable-awslint:ref-via-interface]. 
      */
     override fun stage(stage: Stage) {
-      cdkBuilder.stage(stage.let(Stage::unwrap))
+      cdkBuilder.stage(stage.let(Stage.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.BasePathMapping =

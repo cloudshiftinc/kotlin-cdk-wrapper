@@ -82,21 +82,21 @@ public interface UsagePlanPerApiStage {
      * @param api the value to be set.
      */
     override fun api(api: IRestApi) {
-      cdkBuilder.api(api.let(IRestApi::unwrap))
+      cdkBuilder.api(api.let(IRestApi.Companion::unwrap))
     }
 
     /**
      * @param stage [disable-awslint:ref-via-interface].
      */
     override fun stage(stage: Stage) {
-      cdkBuilder.stage(stage.let(Stage::unwrap))
+      cdkBuilder.stage(stage.let(Stage.Companion::unwrap))
     }
 
     /**
      * @param throttle the value to be set.
      */
     override fun throttle(throttle: List<ThrottlingPerMethod>) {
-      cdkBuilder.throttle(throttle.map(ThrottlingPerMethod::unwrap))
+      cdkBuilder.throttle(throttle.map(ThrottlingPerMethod.Companion::unwrap))
     }
 
     /**

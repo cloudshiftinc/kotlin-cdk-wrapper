@@ -41,7 +41,7 @@ public open class FeatureFlags(
 
   public companion object {
     public fun of(scope: IConstruct): FeatureFlags =
-        software.amazon.awscdk.FeatureFlags.of(scope.let(IConstruct::unwrap)).let(FeatureFlags::wrap)
+        software.amazon.awscdk.FeatureFlags.of(scope.let(IConstruct.Companion::unwrap)).let(FeatureFlags::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.FeatureFlags): FeatureFlags =
         FeatureFlags(cdkObject)

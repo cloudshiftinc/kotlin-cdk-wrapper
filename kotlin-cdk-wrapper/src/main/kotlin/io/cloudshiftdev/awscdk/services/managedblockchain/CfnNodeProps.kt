@@ -125,14 +125,14 @@ public interface CfnNodeProps {
      * @param nodeConfiguration Configuration properties of a peer node. 
      */
     override fun nodeConfiguration(nodeConfiguration: IResolvable) {
-      cdkBuilder.nodeConfiguration(nodeConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.nodeConfiguration(nodeConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param nodeConfiguration Configuration properties of a peer node. 
      */
     override fun nodeConfiguration(nodeConfiguration: CfnNode.NodeConfigurationProperty) {
-      cdkBuilder.nodeConfiguration(nodeConfiguration.let(CfnNode.NodeConfigurationProperty::unwrap))
+      cdkBuilder.nodeConfiguration(nodeConfiguration.let(CfnNode.NodeConfigurationProperty.Companion::unwrap))
     }
 
     /**

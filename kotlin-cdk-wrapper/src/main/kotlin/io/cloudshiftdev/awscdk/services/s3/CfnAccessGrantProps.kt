@@ -238,7 +238,7 @@ public interface CfnAccessGrantProps {
      * location scope of the registered location.
      */
     override fun accessGrantsLocationConfiguration(accessGrantsLocationConfiguration: IResolvable) {
-      cdkBuilder.accessGrantsLocationConfiguration(accessGrantsLocationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.accessGrantsLocationConfiguration(accessGrantsLocationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -249,7 +249,7 @@ public interface CfnAccessGrantProps {
      */
     override
         fun accessGrantsLocationConfiguration(accessGrantsLocationConfiguration: CfnAccessGrant.AccessGrantsLocationConfigurationProperty) {
-      cdkBuilder.accessGrantsLocationConfiguration(accessGrantsLocationConfiguration.let(CfnAccessGrant.AccessGrantsLocationConfigurationProperty::unwrap))
+      cdkBuilder.accessGrantsLocationConfiguration(accessGrantsLocationConfiguration.let(CfnAccessGrant.AccessGrantsLocationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -293,7 +293,7 @@ public interface CfnAccessGrantProps {
      * instance, the grantee can also be a corporate directory user or group.
      */
     override fun grantee(grantee: IResolvable) {
-      cdkBuilder.grantee(grantee.let(IResolvable::unwrap))
+      cdkBuilder.grantee(grantee.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -303,7 +303,7 @@ public interface CfnAccessGrantProps {
      * instance, the grantee can also be a corporate directory user or group.
      */
     override fun grantee(grantee: CfnAccessGrant.GranteeProperty) {
-      cdkBuilder.grantee(grantee.let(CfnAccessGrant.GranteeProperty::unwrap))
+      cdkBuilder.grantee(grantee.let(CfnAccessGrant.GranteeProperty.Companion::unwrap))
     }
 
     /**
@@ -342,7 +342,7 @@ public interface CfnAccessGrantProps {
      * identify, organize, search for, and filter resources.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

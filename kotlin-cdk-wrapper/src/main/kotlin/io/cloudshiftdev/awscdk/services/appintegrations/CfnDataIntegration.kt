@@ -67,8 +67,8 @@ public open class CfnDataIntegration(
     id: String,
     props: CfnDataIntegrationProps,
   ) :
-      this(software.amazon.awscdk.services.appintegrations.CfnDataIntegration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDataIntegrationProps::unwrap))
+      this(software.amazon.awscdk.services.appintegrations.CfnDataIntegration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDataIntegrationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -109,14 +109,14 @@ public open class CfnDataIntegration(
    * The configuration for what files should be pulled from the source.
    */
   public open fun fileConfiguration(`value`: IResolvable) {
-    unwrap(this).setFileConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFileConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration for what files should be pulled from the source.
    */
   public open fun fileConfiguration(`value`: FileConfigurationProperty) {
-    unwrap(this).setFileConfiguration(`value`.let(FileConfigurationProperty::unwrap))
+    unwrap(this).setFileConfiguration(`value`.let(FileConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -133,7 +133,7 @@ public open class CfnDataIntegration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -181,14 +181,14 @@ public open class CfnDataIntegration(
    * The name of the data and how often it should be pulled from the source.
    */
   public open fun scheduleConfig(`value`: IResolvable) {
-    unwrap(this).setScheduleConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setScheduleConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The name of the data and how often it should be pulled from the source.
    */
   public open fun scheduleConfig(`value`: ScheduleConfigProperty) {
-    unwrap(this).setScheduleConfig(`value`.let(ScheduleConfigProperty::unwrap))
+    unwrap(this).setScheduleConfig(`value`.let(ScheduleConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -226,7 +226,7 @@ public open class CfnDataIntegration(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -384,7 +384,7 @@ public open class CfnDataIntegration(
      * @param fileConfiguration The configuration for what files should be pulled from the source. 
      */
     override fun fileConfiguration(fileConfiguration: IResolvable) {
-      cdkBuilder.fileConfiguration(fileConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.fileConfiguration(fileConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -394,7 +394,7 @@ public open class CfnDataIntegration(
      * @param fileConfiguration The configuration for what files should be pulled from the source. 
      */
     override fun fileConfiguration(fileConfiguration: FileConfigurationProperty) {
-      cdkBuilder.fileConfiguration(fileConfiguration.let(FileConfigurationProperty::unwrap))
+      cdkBuilder.fileConfiguration(fileConfiguration.let(FileConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -446,7 +446,7 @@ public open class CfnDataIntegration(
      * 
      */
     override fun scheduleConfig(scheduleConfig: IResolvable) {
-      cdkBuilder.scheduleConfig(scheduleConfig.let(IResolvable::unwrap))
+      cdkBuilder.scheduleConfig(scheduleConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -457,7 +457,7 @@ public open class CfnDataIntegration(
      * 
      */
     override fun scheduleConfig(scheduleConfig: ScheduleConfigProperty) {
-      cdkBuilder.scheduleConfig(scheduleConfig.let(ScheduleConfigProperty::unwrap))
+      cdkBuilder.scheduleConfig(scheduleConfig.let(ScheduleConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -493,7 +493,7 @@ public open class CfnDataIntegration(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

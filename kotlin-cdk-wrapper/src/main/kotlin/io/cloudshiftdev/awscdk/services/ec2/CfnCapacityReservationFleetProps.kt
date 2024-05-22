@@ -345,7 +345,7 @@ public interface CfnCapacityReservationFleetProps {
      * the capacity.
      */
     override fun instanceTypeSpecifications(instanceTypeSpecifications: IResolvable) {
-      cdkBuilder.instanceTypeSpecifications(instanceTypeSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.instanceTypeSpecifications(instanceTypeSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -380,7 +380,7 @@ public interface CfnCapacityReservationFleetProps {
      * specify the end date and time (in UTC time format) for the *EndDate* parameter.
      */
     override fun noRemoveEndDate(noRemoveEndDate: IResolvable) {
-      cdkBuilder.noRemoveEndDate(noRemoveEndDate.let(IResolvable::unwrap))
+      cdkBuilder.noRemoveEndDate(noRemoveEndDate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -400,7 +400,7 @@ public interface CfnCapacityReservationFleetProps {
      * and omit the *EndDate* parameter.
      */
     override fun removeEndDate(removeEndDate: IResolvable) {
-      cdkBuilder.removeEndDate(removeEndDate.let(IResolvable::unwrap))
+      cdkBuilder.removeEndDate(removeEndDate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -408,7 +408,7 @@ public interface CfnCapacityReservationFleetProps {
      * The tags are automatically assigned to the Capacity Reservations in the Fleet.
      */
     override fun tagSpecifications(tagSpecifications: IResolvable) {
-      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**

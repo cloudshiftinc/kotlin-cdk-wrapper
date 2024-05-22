@@ -196,7 +196,7 @@ public interface EfsVolumeOptions : EcsVolumeOptions {
      * @param fileSystem The EFS File System that supports this volume. 
      */
     override fun fileSystem(fileSystem: IFileSystem) {
-      cdkBuilder.fileSystem(fileSystem.let(IFileSystem::unwrap))
+      cdkBuilder.fileSystem(fileSystem.let(IFileSystem.Companion::unwrap))
     }
 
     /**

@@ -34,7 +34,7 @@ public abstract class GatewayRouteHostnameMatch(
    * @param scope 
    */
   public open fun bind(scope: Construct): GatewayRouteHostnameMatchConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(GatewayRouteHostnameMatchConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(GatewayRouteHostnameMatchConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.GatewayRouteHostnameMatch,

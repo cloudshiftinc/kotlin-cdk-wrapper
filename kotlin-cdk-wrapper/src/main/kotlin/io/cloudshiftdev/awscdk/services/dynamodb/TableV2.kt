@@ -42,8 +42,8 @@ public open class TableV2(
     id: String,
     props: TablePropsV2,
   ) :
-      this(software.amazon.awscdk.services.dynamodb.TableV2(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(TablePropsV2::unwrap))
+      this(software.amazon.awscdk.services.dynamodb.TableV2(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(TablePropsV2.Companion::unwrap))
   )
 
   public constructor(
@@ -61,7 +61,7 @@ public open class TableV2(
    * @param props the properties of the global secondary index. 
    */
   public open fun addGlobalSecondaryIndex(props: GlobalSecondaryIndexPropsV2) {
-    unwrap(this).addGlobalSecondaryIndex(props.let(GlobalSecondaryIndexPropsV2::unwrap))
+    unwrap(this).addGlobalSecondaryIndex(props.let(GlobalSecondaryIndexPropsV2.Companion::unwrap))
   }
 
   /**
@@ -84,7 +84,7 @@ public open class TableV2(
    * @param props the properties of the local secondary index. 
    */
   public open fun addLocalSecondaryIndex(props: LocalSecondaryIndexProps) {
-    unwrap(this).addLocalSecondaryIndex(props.let(LocalSecondaryIndexProps::unwrap))
+    unwrap(this).addLocalSecondaryIndex(props.let(LocalSecondaryIndexProps.Companion::unwrap))
   }
 
   /**
@@ -107,7 +107,7 @@ public open class TableV2(
    * @param props the properties of the replica table to add. 
    */
   public open fun addReplica(props: ReplicaTableProps) {
-    unwrap(this).addReplica(props.let(ReplicaTableProps::unwrap))
+    unwrap(this).addReplica(props.let(ReplicaTableProps.Companion::unwrap))
   }
 
   /**
@@ -405,7 +405,7 @@ public open class TableV2(
      * @param billing The billing mode and capacity settings to apply to the table. 
      */
     override fun billing(billing: Billing) {
-      cdkBuilder.billing(billing.let(Billing::unwrap))
+      cdkBuilder.billing(billing.let(Billing.Companion::unwrap))
     }
 
     /**
@@ -442,7 +442,7 @@ public open class TableV2(
      * information is written to the stream. 
      */
     override fun dynamoStream(dynamoStream: StreamViewType) {
-      cdkBuilder.dynamoStream(dynamoStream.let(StreamViewType::unwrap))
+      cdkBuilder.dynamoStream(dynamoStream.let(StreamViewType.Companion::unwrap))
     }
 
     /**
@@ -453,7 +453,7 @@ public open class TableV2(
      * @param encryption The server-side encryption. 
      */
     override fun encryption(encryption: TableEncryptionV2) {
-      cdkBuilder.encryption(encryption.let(TableEncryptionV2::unwrap))
+      cdkBuilder.encryption(encryption.let(TableEncryptionV2.Companion::unwrap))
     }
 
     /**
@@ -466,7 +466,7 @@ public open class TableV2(
      * @param globalSecondaryIndexes Global secondary indexes. 
      */
     override fun globalSecondaryIndexes(globalSecondaryIndexes: List<GlobalSecondaryIndexPropsV2>) {
-      cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes.map(GlobalSecondaryIndexPropsV2::unwrap))
+      cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes.map(GlobalSecondaryIndexPropsV2.Companion::unwrap))
     }
 
     /**
@@ -489,7 +489,7 @@ public open class TableV2(
      * @param kinesisStream Kinesis Data Stream to capture item level changes. 
      */
     override fun kinesisStream(kinesisStream: IStream) {
-      cdkBuilder.kinesisStream(kinesisStream.let(IStream::unwrap))
+      cdkBuilder.kinesisStream(kinesisStream.let(IStream.Companion::unwrap))
     }
 
     /**
@@ -502,7 +502,7 @@ public open class TableV2(
      * @param localSecondaryIndexes Local secondary indexes. 
      */
     override fun localSecondaryIndexes(localSecondaryIndexes: List<LocalSecondaryIndexProps>) {
-      cdkBuilder.localSecondaryIndexes(localSecondaryIndexes.map(LocalSecondaryIndexProps::unwrap))
+      cdkBuilder.localSecondaryIndexes(localSecondaryIndexes.map(LocalSecondaryIndexProps.Companion::unwrap))
     }
 
     /**
@@ -523,7 +523,7 @@ public open class TableV2(
      * @param partitionKey Partition key attribute definition. 
      */
     override fun partitionKey(partitionKey: Attribute) {
-      cdkBuilder.partitionKey(partitionKey.let(Attribute::unwrap))
+      cdkBuilder.partitionKey(partitionKey.let(Attribute.Companion::unwrap))
     }
 
     /**
@@ -555,7 +555,7 @@ public open class TableV2(
      * @param removalPolicy The removal policy applied to the table. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -570,7 +570,7 @@ public open class TableV2(
      * @param replicas Replica tables to deploy with the primary table. 
      */
     override fun replicas(replicas: List<ReplicaTableProps>) {
-      cdkBuilder.replicas(replicas.map(ReplicaTableProps::unwrap))
+      cdkBuilder.replicas(replicas.map(ReplicaTableProps.Companion::unwrap))
     }
 
     /**
@@ -594,7 +594,7 @@ public open class TableV2(
      * @param sortKey Sort key attribute definition. 
      */
     override fun sortKey(sortKey: Attribute) {
-      cdkBuilder.sortKey(sortKey.let(Attribute::unwrap))
+      cdkBuilder.sortKey(sortKey.let(Attribute.Companion::unwrap))
     }
 
     /**
@@ -616,7 +616,7 @@ public open class TableV2(
      * @param tableClass The table class. 
      */
     override fun tableClass(tableClass: TableClass) {
-      cdkBuilder.tableClass(tableClass.let(TableClass::unwrap))
+      cdkBuilder.tableClass(tableClass.let(TableClass.Companion::unwrap))
     }
 
     /**
@@ -638,7 +638,7 @@ public open class TableV2(
      * @param tags Tags to be applied to the table or replica table. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -670,7 +670,7 @@ public open class TableV2(
       id: String,
       tableArn: String,
     ): ITableV2 =
-        software.amazon.awscdk.services.dynamodb.TableV2.fromTableArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.dynamodb.TableV2.fromTableArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, tableArn).let(ITableV2::wrap)
 
     public fun fromTableAttributes(
@@ -678,8 +678,8 @@ public open class TableV2(
       id: String,
       attrs: TableAttributesV2,
     ): ITableV2 =
-        software.amazon.awscdk.services.dynamodb.TableV2.fromTableAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(TableAttributesV2::unwrap)).let(ITableV2::wrap)
+        software.amazon.awscdk.services.dynamodb.TableV2.fromTableAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(TableAttributesV2.Companion::unwrap)).let(ITableV2::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("372c946c79c90401b2fe4249b59cb6d3bf9278dc8e195126ce781bb179c557b6")
@@ -694,7 +694,7 @@ public open class TableV2(
       id: String,
       tableName: String,
     ): ITableV2 =
-        software.amazon.awscdk.services.dynamodb.TableV2.fromTableName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.dynamodb.TableV2.fromTableName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, tableName).let(ITableV2::wrap)
 
     public operator fun invoke(

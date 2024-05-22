@@ -51,7 +51,7 @@ public open class S3(
   cdkObject: software.amazon.awscdk.services.ses.actions.S3,
 ) : CdkObject(cdkObject), IReceiptRuleAction {
   public constructor(props: S3Props) :
-      this(software.amazon.awscdk.services.ses.actions.S3(props.let(S3Props::unwrap))
+      this(software.amazon.awscdk.services.ses.actions.S3(props.let(S3Props.Companion::unwrap))
   )
 
   public constructor(props: S3Props.Builder.() -> Unit) : this(S3Props(props)
@@ -63,7 +63,7 @@ public open class S3(
    * @param rule 
    */
   public override fun bind(rule: IReceiptRule): ReceiptRuleActionConfig =
-      unwrap(this).bind(rule.let(IReceiptRule::unwrap)).let(ReceiptRuleActionConfig::wrap)
+      unwrap(this).bind(rule.let(IReceiptRule.Companion::unwrap)).let(ReceiptRuleActionConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ses.actions.S3].
@@ -117,7 +117,7 @@ public open class S3(
      * @param bucket The S3 bucket that incoming email will be saved to. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -130,7 +130,7 @@ public open class S3(
      * the S3 bucket. 
      */
     override fun kmsKey(kmsKey: IKey) {
-      cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -152,7 +152,7 @@ public open class S3(
      * @param topic The SNS topic to notify when the S3 action is taken. 
      */
     override fun topic(topic: ITopic) {
-      cdkBuilder.topic(topic.let(ITopic::unwrap))
+      cdkBuilder.topic(topic.let(ITopic.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ses.actions.S3 = cdkBuilder.build()

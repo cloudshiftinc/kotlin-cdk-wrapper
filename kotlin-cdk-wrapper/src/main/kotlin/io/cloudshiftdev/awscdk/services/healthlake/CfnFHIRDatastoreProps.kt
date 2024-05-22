@@ -225,7 +225,7 @@ public interface CfnFHIRDatastoreProps {
      * the data store was created.
      */
     override fun identityProviderConfiguration(identityProviderConfiguration: IResolvable) {
-      cdkBuilder.identityProviderConfiguration(identityProviderConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.identityProviderConfiguration(identityProviderConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -234,7 +234,7 @@ public interface CfnFHIRDatastoreProps {
      */
     override
         fun identityProviderConfiguration(identityProviderConfiguration: CfnFHIRDatastore.IdentityProviderConfigurationProperty) {
-      cdkBuilder.identityProviderConfiguration(identityProviderConfiguration.let(CfnFHIRDatastore.IdentityProviderConfigurationProperty::unwrap))
+      cdkBuilder.identityProviderConfiguration(identityProviderConfiguration.let(CfnFHIRDatastore.IdentityProviderConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -253,7 +253,7 @@ public interface CfnFHIRDatastoreProps {
      * Only data preloaded from Synthea is supported.
      */
     override fun preloadDataConfig(preloadDataConfig: IResolvable) {
-      cdkBuilder.preloadDataConfig(preloadDataConfig.let(IResolvable::unwrap))
+      cdkBuilder.preloadDataConfig(preloadDataConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -261,7 +261,7 @@ public interface CfnFHIRDatastoreProps {
      * Only data preloaded from Synthea is supported.
      */
     override fun preloadDataConfig(preloadDataConfig: CfnFHIRDatastore.PreloadDataConfigProperty) {
-      cdkBuilder.preloadDataConfig(preloadDataConfig.let(CfnFHIRDatastore.PreloadDataConfigProperty::unwrap))
+      cdkBuilder.preloadDataConfig(preloadDataConfig.let(CfnFHIRDatastore.PreloadDataConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -279,7 +279,7 @@ public interface CfnFHIRDatastoreProps {
      * encryption key specified for creating a data store.
      */
     override fun sseConfiguration(sseConfiguration: IResolvable) {
-      cdkBuilder.sseConfiguration(sseConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.sseConfiguration(sseConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -287,7 +287,7 @@ public interface CfnFHIRDatastoreProps {
      * encryption key specified for creating a data store.
      */
     override fun sseConfiguration(sseConfiguration: CfnFHIRDatastore.SseConfigurationProperty) {
-      cdkBuilder.sseConfiguration(sseConfiguration.let(CfnFHIRDatastore.SseConfigurationProperty::unwrap))
+      cdkBuilder.sseConfiguration(sseConfiguration.let(CfnFHIRDatastore.SseConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -307,7 +307,7 @@ public interface CfnFHIRDatastoreProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

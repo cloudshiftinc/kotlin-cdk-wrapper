@@ -65,8 +65,8 @@ public open class CfnMissionProfile(
     id: String,
     props: CfnMissionProfileProps,
   ) :
-      this(software.amazon.awscdk.services.groundstation.CfnMissionProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMissionProfileProps::unwrap))
+      this(software.amazon.awscdk.services.groundstation.CfnMissionProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMissionProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -132,7 +132,7 @@ public open class CfnMissionProfile(
    * A list containing lists of config ARNs.
    */
   public open fun dataflowEdges(`value`: IResolvable) {
-    unwrap(this).setDataflowEdges(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataflowEdges(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -153,7 +153,7 @@ public open class CfnMissionProfile(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -190,14 +190,14 @@ public open class CfnMissionProfile(
    *
    */
   public open fun streamsKmsKey(`value`: IResolvable) {
-    unwrap(this).setStreamsKmsKey(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStreamsKmsKey(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun streamsKmsKey(`value`: StreamsKmsKeyProperty) {
-    unwrap(this).setStreamsKmsKey(`value`.let(StreamsKmsKeyProperty::unwrap))
+    unwrap(this).setStreamsKmsKey(`value`.let(StreamsKmsKeyProperty.Companion::unwrap))
   }
 
   /**
@@ -235,7 +235,7 @@ public open class CfnMissionProfile(
    * Tags assigned to the mission profile.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -427,7 +427,7 @@ public open class CfnMissionProfile(
      * @param dataflowEdges A list containing lists of config ARNs. 
      */
     override fun dataflowEdges(dataflowEdges: IResolvable) {
-      cdkBuilder.dataflowEdges(dataflowEdges.let(IResolvable::unwrap))
+      cdkBuilder.dataflowEdges(dataflowEdges.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -481,7 +481,7 @@ public open class CfnMissionProfile(
      * @param streamsKmsKey 
      */
     override fun streamsKmsKey(streamsKmsKey: IResolvable) {
-      cdkBuilder.streamsKmsKey(streamsKmsKey.let(IResolvable::unwrap))
+      cdkBuilder.streamsKmsKey(streamsKmsKey.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -489,7 +489,7 @@ public open class CfnMissionProfile(
      * @param streamsKmsKey 
      */
     override fun streamsKmsKey(streamsKmsKey: StreamsKmsKeyProperty) {
-      cdkBuilder.streamsKmsKey(streamsKmsKey.let(StreamsKmsKeyProperty::unwrap))
+      cdkBuilder.streamsKmsKey(streamsKmsKey.let(StreamsKmsKeyProperty.Companion::unwrap))
     }
 
     /**
@@ -519,7 +519,7 @@ public open class CfnMissionProfile(
      * @param tags Tags assigned to the mission profile. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -58,8 +58,8 @@ public open class CfnFaq(
     id: String,
     props: CfnFaqProps,
   ) :
-      this(software.amazon.awscdk.services.kendra.CfnFaq(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFaqProps::unwrap))
+      this(software.amazon.awscdk.services.kendra.CfnFaq(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFaqProps.Companion::unwrap))
   )
 
   public constructor(
@@ -123,7 +123,7 @@ public open class CfnFaq(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -173,14 +173,14 @@ public open class CfnFaq(
    * The Amazon Simple Storage Service (Amazon S3) location of the FAQ input data.
    */
   public open fun s3Path(`value`: IResolvable) {
-    unwrap(this).setS3Path(`value`.let(IResolvable::unwrap))
+    unwrap(this).setS3Path(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The Amazon Simple Storage Service (Amazon S3) location of the FAQ input data.
    */
   public open fun s3Path(`value`: S3PathProperty) {
-    unwrap(this).setS3Path(`value`.let(S3PathProperty::unwrap))
+    unwrap(this).setS3Path(`value`.let(S3PathProperty.Companion::unwrap))
   }
 
   /**
@@ -206,7 +206,7 @@ public open class CfnFaq(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -430,7 +430,7 @@ public open class CfnFaq(
      * @param s3Path The Amazon Simple Storage Service (Amazon S3) location of the FAQ input data. 
      */
     override fun s3Path(s3Path: IResolvable) {
-      cdkBuilder.s3Path(s3Path.let(IResolvable::unwrap))
+      cdkBuilder.s3Path(s3Path.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -440,7 +440,7 @@ public open class CfnFaq(
      * @param s3Path The Amazon Simple Storage Service (Amazon S3) location of the FAQ input data. 
      */
     override fun s3Path(s3Path: S3PathProperty) {
-      cdkBuilder.s3Path(s3Path.let(S3PathProperty::unwrap))
+      cdkBuilder.s3Path(s3Path.let(S3PathProperty.Companion::unwrap))
     }
 
     /**
@@ -465,7 +465,7 @@ public open class CfnFaq(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

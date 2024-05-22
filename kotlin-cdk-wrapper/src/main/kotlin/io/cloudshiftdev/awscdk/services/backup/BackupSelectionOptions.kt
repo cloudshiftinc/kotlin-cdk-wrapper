@@ -179,7 +179,7 @@ public interface BackupSelectionOptions {
      * Use the helper static methods defined on `BackupResource`.
      */
     override fun resources(resources: List<BackupResource>) {
-      cdkBuilder.resources(resources.map(BackupResource::unwrap))
+      cdkBuilder.resources(resources.map(BackupResource.Companion::unwrap))
     }
 
     /**
@@ -196,7 +196,7 @@ public interface BackupSelectionOptions {
      * is set to `true`.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.backup.BackupSelectionOptions =

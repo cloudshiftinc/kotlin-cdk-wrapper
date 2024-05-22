@@ -57,7 +57,7 @@ public open class CfnRoom(
   cdkObject: software.amazon.awscdk.services.ivschat.CfnRoom,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ivschat.CfnRoom(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ivschat.CfnRoom(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -66,8 +66,8 @@ public open class CfnRoom(
     id: String,
     props: CfnRoomProps,
   ) :
-      this(software.amazon.awscdk.services.ivschat.CfnRoom(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRoomProps::unwrap))
+      this(software.amazon.awscdk.services.ivschat.CfnRoom(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRoomProps.Companion::unwrap))
   )
 
   public constructor(
@@ -97,7 +97,7 @@ public open class CfnRoom(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -153,14 +153,14 @@ public open class CfnRoom(
    * Configuration information for optional review of messages.
    */
   public open fun messageReviewHandler(`value`: IResolvable) {
-    unwrap(this).setMessageReviewHandler(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMessageReviewHandler(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration information for optional review of messages.
    */
   public open fun messageReviewHandler(`value`: MessageReviewHandlerProperty) {
-    unwrap(this).setMessageReviewHandler(`value`.let(MessageReviewHandlerProperty::unwrap))
+    unwrap(this).setMessageReviewHandler(`value`.let(MessageReviewHandlerProperty.Companion::unwrap))
   }
 
   /**
@@ -198,7 +198,7 @@ public open class CfnRoom(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -378,7 +378,7 @@ public open class CfnRoom(
      * @param messageReviewHandler Configuration information for optional review of messages. 
      */
     override fun messageReviewHandler(messageReviewHandler: IResolvable) {
-      cdkBuilder.messageReviewHandler(messageReviewHandler.let(IResolvable::unwrap))
+      cdkBuilder.messageReviewHandler(messageReviewHandler.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -388,7 +388,7 @@ public open class CfnRoom(
      * @param messageReviewHandler Configuration information for optional review of messages. 
      */
     override fun messageReviewHandler(messageReviewHandler: MessageReviewHandlerProperty) {
-      cdkBuilder.messageReviewHandler(messageReviewHandler.let(MessageReviewHandlerProperty::unwrap))
+      cdkBuilder.messageReviewHandler(messageReviewHandler.let(MessageReviewHandlerProperty.Companion::unwrap))
     }
 
     /**
@@ -426,7 +426,7 @@ public open class CfnRoom(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

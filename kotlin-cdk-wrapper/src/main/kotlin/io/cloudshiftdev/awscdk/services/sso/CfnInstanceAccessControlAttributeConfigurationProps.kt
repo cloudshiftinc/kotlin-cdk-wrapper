@@ -151,7 +151,7 @@ public interface CfnInstanceAccessControlAttributeConfigurationProps {
      * specified IAM Identity Center instance.
      */
     override fun accessControlAttributes(accessControlAttributes: IResolvable) {
-      cdkBuilder.accessControlAttributes(accessControlAttributes.let(IResolvable::unwrap))
+      cdkBuilder.accessControlAttributes(accessControlAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -179,7 +179,7 @@ public interface CfnInstanceAccessControlAttributeConfigurationProps {
     @Deprecated(message = "deprecated in CDK")
     override
         fun instanceAccessControlAttributeConfiguration(instanceAccessControlAttributeConfiguration: IResolvable) {
-      cdkBuilder.instanceAccessControlAttributeConfiguration(instanceAccessControlAttributeConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.instanceAccessControlAttributeConfiguration(instanceAccessControlAttributeConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -192,7 +192,7 @@ public interface CfnInstanceAccessControlAttributeConfigurationProps {
     @Deprecated(message = "deprecated in CDK")
     override
         fun instanceAccessControlAttributeConfiguration(instanceAccessControlAttributeConfiguration: CfnInstanceAccessControlAttributeConfiguration.InstanceAccessControlAttributeConfigurationProperty) {
-      cdkBuilder.instanceAccessControlAttributeConfiguration(instanceAccessControlAttributeConfiguration.let(CfnInstanceAccessControlAttributeConfiguration.InstanceAccessControlAttributeConfigurationProperty::unwrap))
+      cdkBuilder.instanceAccessControlAttributeConfiguration(instanceAccessControlAttributeConfiguration.let(CfnInstanceAccessControlAttributeConfiguration.InstanceAccessControlAttributeConfigurationProperty.Companion::unwrap))
     }
 
     /**

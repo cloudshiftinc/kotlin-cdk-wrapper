@@ -84,14 +84,14 @@ public interface PrefixListProps : PrefixListOptions {
      * @param addressFamily The address family of the prefix list.
      */
     override fun addressFamily(addressFamily: AddressFamily) {
-      cdkBuilder.addressFamily(addressFamily.let(AddressFamily::unwrap))
+      cdkBuilder.addressFamily(addressFamily.let(AddressFamily.Companion::unwrap))
     }
 
     /**
      * @param entries The list of entries for the prefix list.
      */
     override fun entries(entries: List<CfnPrefixList.EntryProperty>) {
-      cdkBuilder.entries(entries.map(CfnPrefixList.EntryProperty::unwrap))
+      cdkBuilder.entries(entries.map(CfnPrefixList.EntryProperty.Companion::unwrap))
     }
 
     /**

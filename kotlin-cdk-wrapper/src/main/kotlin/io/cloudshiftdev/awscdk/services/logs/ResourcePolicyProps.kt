@@ -72,7 +72,7 @@ public interface ResourcePolicyProps {
      * @param policyStatements Initial statements to add to the resource policy.
      */
     override fun policyStatements(policyStatements: List<PolicyStatement>) {
-      cdkBuilder.policyStatements(policyStatements.map(PolicyStatement::unwrap))
+      cdkBuilder.policyStatements(policyStatements.map(PolicyStatement.Companion::unwrap))
     }
 
     /**

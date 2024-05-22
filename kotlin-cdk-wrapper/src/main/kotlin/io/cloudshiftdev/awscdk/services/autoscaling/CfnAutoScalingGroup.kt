@@ -213,8 +213,8 @@ public open class CfnAutoScalingGroup(
     id: String,
     props: CfnAutoScalingGroupProps,
   ) :
-      this(software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAutoScalingGroupProps::unwrap))
+      this(software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAutoScalingGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -275,7 +275,7 @@ public open class CfnAutoScalingGroup(
    * Indicates whether Capacity Rebalancing is enabled.
    */
   public open fun capacityRebalance(`value`: IResolvable) {
-    unwrap(this).setCapacityRebalance(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCapacityRebalance(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -376,7 +376,7 @@ public open class CfnAutoScalingGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -400,14 +400,14 @@ public open class CfnAutoScalingGroup(
    * An instance maintenance policy.
    */
   public open fun instanceMaintenancePolicy(`value`: IResolvable) {
-    unwrap(this).setInstanceMaintenancePolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInstanceMaintenancePolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An instance maintenance policy.
    */
   public open fun instanceMaintenancePolicy(`value`: InstanceMaintenancePolicyProperty) {
-    unwrap(this).setInstanceMaintenancePolicy(`value`.let(InstanceMaintenancePolicyProperty::unwrap))
+    unwrap(this).setInstanceMaintenancePolicy(`value`.let(InstanceMaintenancePolicyProperty.Companion::unwrap))
   }
 
   /**
@@ -440,14 +440,14 @@ public open class CfnAutoScalingGroup(
    * Information used to specify the launch template and version to use to launch instances.
    */
   public open fun launchTemplate(`value`: IResolvable) {
-    unwrap(this).setLaunchTemplate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLaunchTemplate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information used to specify the launch template and version to use to launch instances.
    */
   public open fun launchTemplate(`value`: LaunchTemplateSpecificationProperty) {
-    unwrap(this).setLaunchTemplate(`value`.let(LaunchTemplateSpecificationProperty::unwrap))
+    unwrap(this).setLaunchTemplate(`value`.let(LaunchTemplateSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -468,7 +468,7 @@ public open class CfnAutoScalingGroup(
    * One or more lifecycle hooks to add to the Auto Scaling group before instances are launched.
    */
   public open fun lifecycleHookSpecificationList(`value`: IResolvable) {
-    unwrap(this).setLifecycleHookSpecificationList(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLifecycleHookSpecificationList(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -536,7 +536,7 @@ public open class CfnAutoScalingGroup(
    * Enables the monitoring of group metrics of an Auto Scaling group.
    */
   public open fun metricsCollection(`value`: IResolvable) {
-    unwrap(this).setMetricsCollection(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMetricsCollection(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -572,14 +572,14 @@ public open class CfnAutoScalingGroup(
    * An embedded object that specifies a mixed instances policy.
    */
   public open fun mixedInstancesPolicy(`value`: IResolvable) {
-    unwrap(this).setMixedInstancesPolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMixedInstancesPolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An embedded object that specifies a mixed instances policy.
    */
   public open fun mixedInstancesPolicy(`value`: MixedInstancesPolicyProperty) {
-    unwrap(this).setMixedInstancesPolicy(`value`.let(MixedInstancesPolicyProperty::unwrap))
+    unwrap(this).setMixedInstancesPolicy(`value`.let(MixedInstancesPolicyProperty.Companion::unwrap))
   }
 
   /**
@@ -610,7 +610,7 @@ public open class CfnAutoScalingGroup(
    * Scaling when scaling in.
    */
   public open fun newInstancesProtectedFromScaleIn(`value`: IResolvable) {
-    unwrap(this).setNewInstancesProtectedFromScaleIn(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNewInstancesProtectedFromScaleIn(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -642,7 +642,7 @@ public open class CfnAutoScalingGroup(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun notificationConfiguration(`value`: IResolvable) {
-    unwrap(this).setNotificationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNotificationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -659,7 +659,7 @@ public open class CfnAutoScalingGroup(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun notificationConfiguration(`value`: NotificationConfigurationProperty) {
-    unwrap(this).setNotificationConfiguration(`value`.let(NotificationConfigurationProperty::unwrap))
+    unwrap(this).setNotificationConfiguration(`value`.let(NotificationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -690,7 +690,7 @@ public open class CfnAutoScalingGroup(
    * Configures an Auto Scaling group to send notifications when specified events take place.
    */
   public open fun notificationConfigurations(`value`: IResolvable) {
-    unwrap(this).setNotificationConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNotificationConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -747,7 +747,7 @@ public open class CfnAutoScalingGroup(
    * One or more tags.
    */
   public open fun tagsRaw(`value`: List<TagPropertyProperty>) {
-    unwrap(this).setTagsRaw(`value`.map(TagPropertyProperty::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(TagPropertyProperty.Companion::unwrap))
   }
 
   /**
@@ -1741,7 +1741,7 @@ public open class CfnAutoScalingGroup(
      * @param capacityRebalance Indicates whether Capacity Rebalancing is enabled. 
      */
     override fun capacityRebalance(capacityRebalance: IResolvable) {
-      cdkBuilder.capacityRebalance(capacityRebalance.let(IResolvable::unwrap))
+      cdkBuilder.capacityRebalance(capacityRebalance.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1915,7 +1915,7 @@ public open class CfnAutoScalingGroup(
      * @param instanceMaintenancePolicy An instance maintenance policy. 
      */
     override fun instanceMaintenancePolicy(instanceMaintenancePolicy: IResolvable) {
-      cdkBuilder.instanceMaintenancePolicy(instanceMaintenancePolicy.let(IResolvable::unwrap))
+      cdkBuilder.instanceMaintenancePolicy(instanceMaintenancePolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1930,7 +1930,7 @@ public open class CfnAutoScalingGroup(
      */
     override
         fun instanceMaintenancePolicy(instanceMaintenancePolicy: InstanceMaintenancePolicyProperty) {
-      cdkBuilder.instanceMaintenancePolicy(instanceMaintenancePolicy.let(InstanceMaintenancePolicyProperty::unwrap))
+      cdkBuilder.instanceMaintenancePolicy(instanceMaintenancePolicy.let(InstanceMaintenancePolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -1981,7 +1981,7 @@ public open class CfnAutoScalingGroup(
      * launch instances. 
      */
     override fun launchTemplate(launchTemplate: IResolvable) {
-      cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
+      cdkBuilder.launchTemplate(launchTemplate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2001,7 +2001,7 @@ public open class CfnAutoScalingGroup(
      * launch instances. 
      */
     override fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty) {
-      cdkBuilder.launchTemplate(launchTemplate.let(LaunchTemplateSpecificationProperty::unwrap))
+      cdkBuilder.launchTemplate(launchTemplate.let(LaunchTemplateSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -2034,7 +2034,7 @@ public open class CfnAutoScalingGroup(
      * group before instances are launched. 
      */
     override fun lifecycleHookSpecificationList(lifecycleHookSpecificationList: IResolvable) {
-      cdkBuilder.lifecycleHookSpecificationList(lifecycleHookSpecificationList.let(IResolvable::unwrap))
+      cdkBuilder.lifecycleHookSpecificationList(lifecycleHookSpecificationList.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2128,7 +2128,7 @@ public open class CfnAutoScalingGroup(
      * @param metricsCollection Enables the monitoring of group metrics of an Auto Scaling group. 
      */
     override fun metricsCollection(metricsCollection: IResolvable) {
-      cdkBuilder.metricsCollection(metricsCollection.let(IResolvable::unwrap))
+      cdkBuilder.metricsCollection(metricsCollection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2182,7 +2182,7 @@ public open class CfnAutoScalingGroup(
      * @param mixedInstancesPolicy An embedded object that specifies a mixed instances policy. 
      */
     override fun mixedInstancesPolicy(mixedInstancesPolicy: IResolvable) {
-      cdkBuilder.mixedInstancesPolicy(mixedInstancesPolicy.let(IResolvable::unwrap))
+      cdkBuilder.mixedInstancesPolicy(mixedInstancesPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2203,7 +2203,7 @@ public open class CfnAutoScalingGroup(
      * @param mixedInstancesPolicy An embedded object that specifies a mixed instances policy. 
      */
     override fun mixedInstancesPolicy(mixedInstancesPolicy: MixedInstancesPolicyProperty) {
-      cdkBuilder.mixedInstancesPolicy(mixedInstancesPolicy.let(MixedInstancesPolicyProperty::unwrap))
+      cdkBuilder.mixedInstancesPolicy(mixedInstancesPolicy.let(MixedInstancesPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -2260,7 +2260,7 @@ public open class CfnAutoScalingGroup(
      * protected from termination by Amazon EC2 Auto Scaling when scaling in. 
      */
     override fun newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn: IResolvable) {
-      cdkBuilder.newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn.let(IResolvable::unwrap))
+      cdkBuilder.newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2286,7 +2286,7 @@ public open class CfnAutoScalingGroup(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun notificationConfiguration(notificationConfiguration: IResolvable) {
-      cdkBuilder.notificationConfiguration(notificationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.notificationConfiguration(notificationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2313,7 +2313,7 @@ public open class CfnAutoScalingGroup(
     @Deprecated(message = "deprecated in CDK")
     override
         fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty) {
-      cdkBuilder.notificationConfiguration(notificationConfiguration.let(NotificationConfigurationProperty::unwrap))
+      cdkBuilder.notificationConfiguration(notificationConfiguration.let(NotificationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -2353,7 +2353,7 @@ public open class CfnAutoScalingGroup(
      * specified events take place. 
      */
     override fun notificationConfigurations(notificationConfigurations: IResolvable) {
-      cdkBuilder.notificationConfigurations(notificationConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.notificationConfigurations(notificationConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2430,7 +2430,7 @@ public open class CfnAutoScalingGroup(
      * @param tags One or more tags. 
      */
     override fun tags(tags: List<TagPropertyProperty>) {
-      cdkBuilder.tags(tags.map(TagPropertyProperty::unwrap))
+      cdkBuilder.tags(tags.map(TagPropertyProperty.Companion::unwrap))
     }
 
     /**
@@ -4130,7 +4130,7 @@ public open class CfnAutoScalingGroup(
        * Default: No minimum or maximum limits
        */
       override fun acceleratorCount(acceleratorCount: IResolvable) {
-        cdkBuilder.acceleratorCount(acceleratorCount.let(IResolvable::unwrap))
+        cdkBuilder.acceleratorCount(acceleratorCount.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4141,7 +4141,7 @@ public open class CfnAutoScalingGroup(
        * Default: No minimum or maximum limits
        */
       override fun acceleratorCount(acceleratorCount: AcceleratorCountRequestProperty) {
-        cdkBuilder.acceleratorCount(acceleratorCount.let(AcceleratorCountRequestProperty::unwrap))
+        cdkBuilder.acceleratorCount(acceleratorCount.let(AcceleratorCountRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4221,7 +4221,7 @@ public open class CfnAutoScalingGroup(
        * Default: No minimum or maximum limits
        */
       override fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable) {
-        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(IResolvable::unwrap))
+        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4231,7 +4231,7 @@ public open class CfnAutoScalingGroup(
        */
       override
           fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBRequestProperty) {
-        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(AcceleratorTotalMemoryMiBRequestProperty::unwrap))
+        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(AcceleratorTotalMemoryMiBRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4331,7 +4331,7 @@ public open class CfnAutoScalingGroup(
        * Default: No minimum or maximum limits
        */
       override fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: IResolvable) {
-        cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(IResolvable::unwrap))
+        cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4345,7 +4345,7 @@ public open class CfnAutoScalingGroup(
        */
       override
           fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsRequestProperty) {
-        cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(BaselineEbsBandwidthMbpsRequestProperty::unwrap))
+        cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(BaselineEbsBandwidthMbpsRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4551,7 +4551,7 @@ public open class CfnAutoScalingGroup(
        * Default: No minimum or maximum limits
        */
       override fun memoryGiBPerVCpu(memoryGiBPerVCpu: IResolvable) {
-        cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(IResolvable::unwrap))
+        cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4560,7 +4560,7 @@ public open class CfnAutoScalingGroup(
        * Default: No minimum or maximum limits
        */
       override fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuRequestProperty) {
-        cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(MemoryGiBPerVCpuRequestProperty::unwrap))
+        cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(MemoryGiBPerVCpuRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4579,7 +4579,7 @@ public open class CfnAutoScalingGroup(
        * 
        */
       override fun memoryMiB(memoryMiB: IResolvable) {
-        cdkBuilder.memoryMiB(memoryMiB.let(IResolvable::unwrap))
+        cdkBuilder.memoryMiB(memoryMiB.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4587,7 +4587,7 @@ public open class CfnAutoScalingGroup(
        * 
        */
       override fun memoryMiB(memoryMiB: MemoryMiBRequestProperty) {
-        cdkBuilder.memoryMiB(memoryMiB.let(MemoryMiBRequestProperty::unwrap))
+        cdkBuilder.memoryMiB(memoryMiB.let(MemoryMiBRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4605,7 +4605,7 @@ public open class CfnAutoScalingGroup(
        * Default: No minimum or maximum limits
        */
       override fun networkBandwidthGbps(networkBandwidthGbps: IResolvable) {
-        cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(IResolvable::unwrap))
+        cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4614,7 +4614,7 @@ public open class CfnAutoScalingGroup(
        * Default: No minimum or maximum limits
        */
       override fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsRequestProperty) {
-        cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(NetworkBandwidthGbpsRequestProperty::unwrap))
+        cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(NetworkBandwidthGbpsRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4634,7 +4634,7 @@ public open class CfnAutoScalingGroup(
        * Default: No minimum or maximum limits
        */
       override fun networkInterfaceCount(networkInterfaceCount: IResolvable) {
-        cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(IResolvable::unwrap))
+        cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4644,7 +4644,7 @@ public open class CfnAutoScalingGroup(
        */
       override
           fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountRequestProperty) {
-        cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(NetworkInterfaceCountRequestProperty::unwrap))
+        cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(NetworkInterfaceCountRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4698,7 +4698,7 @@ public open class CfnAutoScalingGroup(
        * Default: `false`
        */
       override fun requireHibernateSupport(requireHibernateSupport: IResolvable) {
-        cdkBuilder.requireHibernateSupport(requireHibernateSupport.let(IResolvable::unwrap))
+        cdkBuilder.requireHibernateSupport(requireHibernateSupport.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4736,7 +4736,7 @@ public open class CfnAutoScalingGroup(
        * Default: No minimum or maximum limits
        */
       override fun totalLocalStorageGb(totalLocalStorageGb: IResolvable) {
-        cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(IResolvable::unwrap))
+        cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4745,7 +4745,7 @@ public open class CfnAutoScalingGroup(
        * Default: No minimum or maximum limits
        */
       override fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBRequestProperty) {
-        cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(TotalLocalStorageGBRequestProperty::unwrap))
+        cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(TotalLocalStorageGBRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4763,14 +4763,14 @@ public open class CfnAutoScalingGroup(
        * @param vCpuCount The minimum and maximum number of vCPUs for an instance type. 
        */
       override fun vCpuCount(vCpuCount: IResolvable) {
-        cdkBuilder.vCpuCount(vCpuCount.let(IResolvable::unwrap))
+        cdkBuilder.vCpuCount(vCpuCount.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param vCpuCount The minimum and maximum number of vCPUs for an instance type. 
        */
       override fun vCpuCount(vCpuCount: VCpuCountRequestProperty) {
-        cdkBuilder.vCpuCount(vCpuCount.let(VCpuCountRequestProperty::unwrap))
+        cdkBuilder.vCpuCount(vCpuCount.let(VCpuCountRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -6070,7 +6070,7 @@ public open class CfnAutoScalingGroup(
        * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
        */
       override fun instanceRequirements(instanceRequirements: IResolvable) {
-        cdkBuilder.instanceRequirements(instanceRequirements.let(IResolvable::unwrap))
+        cdkBuilder.instanceRequirements(instanceRequirements.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6088,7 +6088,7 @@ public open class CfnAutoScalingGroup(
        * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
        */
       override fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty) {
-        cdkBuilder.instanceRequirements(instanceRequirements.let(InstanceRequirementsProperty::unwrap))
+        cdkBuilder.instanceRequirements(instanceRequirements.let(InstanceRequirementsProperty.Companion::unwrap))
       }
 
       /**
@@ -6136,7 +6136,7 @@ public open class CfnAutoScalingGroup(
        * specified in the overrides and in the `LaunchTemplate` definition count towards this limit.
        */
       override fun launchTemplateSpecification(launchTemplateSpecification: IResolvable) {
-        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(IResolvable::unwrap))
+        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6154,7 +6154,7 @@ public open class CfnAutoScalingGroup(
        */
       override
           fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty) {
-        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(LaunchTemplateSpecificationProperty::unwrap))
+        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(LaunchTemplateSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -6469,7 +6469,7 @@ public open class CfnAutoScalingGroup(
        * @param launchTemplateSpecification The launch template. 
        */
       override fun launchTemplateSpecification(launchTemplateSpecification: IResolvable) {
-        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(IResolvable::unwrap))
+        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6477,7 +6477,7 @@ public open class CfnAutoScalingGroup(
        */
       override
           fun launchTemplateSpecification(launchTemplateSpecification: LaunchTemplateSpecificationProperty) {
-        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(LaunchTemplateSpecificationProperty::unwrap))
+        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(LaunchTemplateSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -6495,7 +6495,7 @@ public open class CfnAutoScalingGroup(
        * template.
        */
       override fun overrides(overrides: IResolvable) {
-        cdkBuilder.overrides(overrides.let(IResolvable::unwrap))
+        cdkBuilder.overrides(overrides.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7847,14 +7847,14 @@ public open class CfnAutoScalingGroup(
        * @param instancesDistribution The instances distribution.
        */
       override fun instancesDistribution(instancesDistribution: IResolvable) {
-        cdkBuilder.instancesDistribution(instancesDistribution.let(IResolvable::unwrap))
+        cdkBuilder.instancesDistribution(instancesDistribution.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param instancesDistribution The instances distribution.
        */
       override fun instancesDistribution(instancesDistribution: InstancesDistributionProperty) {
-        cdkBuilder.instancesDistribution(instancesDistribution.let(InstancesDistributionProperty::unwrap))
+        cdkBuilder.instancesDistribution(instancesDistribution.let(InstancesDistributionProperty.Companion::unwrap))
       }
 
       /**
@@ -7871,7 +7871,7 @@ public open class CfnAutoScalingGroup(
        * are used to launch EC2 instances to fulfill On-Demand and Spot capacities. 
        */
       override fun launchTemplate(launchTemplate: IResolvable) {
-        cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
+        cdkBuilder.launchTemplate(launchTemplate.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7879,7 +7879,7 @@ public open class CfnAutoScalingGroup(
        * are used to launch EC2 instances to fulfill On-Demand and Spot capacities. 
        */
       override fun launchTemplate(launchTemplate: LaunchTemplateProperty) {
-        cdkBuilder.launchTemplate(launchTemplate.let(LaunchTemplateProperty::unwrap))
+        cdkBuilder.launchTemplate(launchTemplate.let(LaunchTemplateProperty.Companion::unwrap))
       }
 
       /**
@@ -8478,7 +8478,7 @@ public open class CfnAutoScalingGroup(
        * to any instances launched as part of the Auto Scaling group.
        */
       override fun propagateAtLaunch(propagateAtLaunch: IResolvable) {
-        cdkBuilder.propagateAtLaunch(propagateAtLaunch.let(IResolvable::unwrap))
+        cdkBuilder.propagateAtLaunch(propagateAtLaunch.let(IResolvable.Companion::unwrap))
       }
 
       /**

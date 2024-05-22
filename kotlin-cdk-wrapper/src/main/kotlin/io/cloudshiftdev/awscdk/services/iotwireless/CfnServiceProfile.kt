@@ -68,7 +68,7 @@ public open class CfnServiceProfile(
   cdkObject: software.amazon.awscdk.services.iotwireless.CfnServiceProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.iotwireless.CfnServiceProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.iotwireless.CfnServiceProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -77,8 +77,8 @@ public open class CfnServiceProfile(
     id: String,
     props: CfnServiceProfileProps,
   ) :
-      this(software.amazon.awscdk.services.iotwireless.CfnServiceProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnServiceProfileProps::unwrap))
+      this(software.amazon.awscdk.services.iotwireless.CfnServiceProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnServiceProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -195,7 +195,7 @@ public open class CfnServiceProfile(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -207,14 +207,14 @@ public open class CfnServiceProfile(
    * LoRaWAN service profile object.
    */
   public open fun loRaWan(`value`: IResolvable) {
-    unwrap(this).setLoRaWan(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoRaWan(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * LoRaWAN service profile object.
    */
   public open fun loRaWan(`value`: LoRaWANServiceProfileProperty) {
-    unwrap(this).setLoRaWan(`value`.let(LoRaWANServiceProfileProperty::unwrap))
+    unwrap(this).setLoRaWan(`value`.let(LoRaWANServiceProfileProperty.Companion::unwrap))
   }
 
   /**
@@ -252,7 +252,7 @@ public open class CfnServiceProfile(
    * The tags are an array of key-value pairs to attach to the specified resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -334,7 +334,7 @@ public open class CfnServiceProfile(
      * @param loRaWan LoRaWAN service profile object. 
      */
     override fun loRaWan(loRaWan: IResolvable) {
-      cdkBuilder.loRaWan(loRaWan.let(IResolvable::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -344,7 +344,7 @@ public open class CfnServiceProfile(
      * @param loRaWan LoRaWAN service profile object. 
      */
     override fun loRaWan(loRaWan: LoRaWANServiceProfileProperty) {
-      cdkBuilder.loRaWan(loRaWan.let(LoRaWANServiceProfileProperty::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(LoRaWANServiceProfileProperty.Companion::unwrap))
     }
 
     /**
@@ -377,7 +377,7 @@ public open class CfnServiceProfile(
      * @param tags The tags are an array of key-value pairs to attach to the specified resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -815,7 +815,7 @@ public open class CfnServiceProfile(
        * @param addGwMetadata The AddGWMetaData value.
        */
       override fun addGwMetadata(addGwMetadata: IResolvable) {
-        cdkBuilder.addGwMetadata(addGwMetadata.let(IResolvable::unwrap))
+        cdkBuilder.addGwMetadata(addGwMetadata.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -896,7 +896,7 @@ public open class CfnServiceProfile(
        * `Fn::GetAtt`
        */
       override fun hrAllowed(hrAllowed: IResolvable) {
-        cdkBuilder.hrAllowed(hrAllowed.let(IResolvable::unwrap))
+        cdkBuilder.hrAllowed(hrAllowed.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -923,7 +923,7 @@ public open class CfnServiceProfile(
        * `Fn::GetAtt`
        */
       override fun nwkGeoLoc(nwkGeoLoc: IResolvable) {
-        cdkBuilder.nwkGeoLoc(nwkGeoLoc.let(IResolvable::unwrap))
+        cdkBuilder.nwkGeoLoc(nwkGeoLoc.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -941,7 +941,7 @@ public open class CfnServiceProfile(
        * `Fn::GetAtt`
        */
       override fun prAllowed(prAllowed: IResolvable) {
-        cdkBuilder.prAllowed(prAllowed.let(IResolvable::unwrap))
+        cdkBuilder.prAllowed(prAllowed.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -955,7 +955,7 @@ public open class CfnServiceProfile(
        * @param raAllowed The RAAllowed value that describes whether roaming activation is allowed.
        */
       override fun raAllowed(raAllowed: IResolvable) {
-        cdkBuilder.raAllowed(raAllowed.let(IResolvable::unwrap))
+        cdkBuilder.raAllowed(raAllowed.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -973,7 +973,7 @@ public open class CfnServiceProfile(
        * `Fn::GetAtt`
        */
       override fun reportDevStatusBattery(reportDevStatusBattery: IResolvable) {
-        cdkBuilder.reportDevStatusBattery(reportDevStatusBattery.let(IResolvable::unwrap))
+        cdkBuilder.reportDevStatusBattery(reportDevStatusBattery.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -991,7 +991,7 @@ public open class CfnServiceProfile(
        * `Fn::GetAtt`
        */
       override fun reportDevStatusMargin(reportDevStatusMargin: IResolvable) {
-        cdkBuilder.reportDevStatusMargin(reportDevStatusMargin.let(IResolvable::unwrap))
+        cdkBuilder.reportDevStatusMargin(reportDevStatusMargin.let(IResolvable.Companion::unwrap))
       }
 
       /**

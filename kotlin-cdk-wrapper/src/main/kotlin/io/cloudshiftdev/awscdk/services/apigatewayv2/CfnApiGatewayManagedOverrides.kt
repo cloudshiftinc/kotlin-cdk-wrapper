@@ -84,8 +84,8 @@ public open class CfnApiGatewayManagedOverrides(
     id: String,
     props: CfnApiGatewayManagedOverridesProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApiGatewayManagedOverridesProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.CfnApiGatewayManagedOverrides(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApiGatewayManagedOverridesProps.Companion::unwrap))
   )
 
   public constructor(
@@ -118,7 +118,7 @@ public open class CfnApiGatewayManagedOverrides(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -130,14 +130,14 @@ public open class CfnApiGatewayManagedOverrides(
    * Overrides the integration configuration for an API Gateway-managed integration.
    */
   public open fun integration(`value`: IResolvable) {
-    unwrap(this).setIntegration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIntegration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Overrides the integration configuration for an API Gateway-managed integration.
    */
   public open fun integration(`value`: IntegrationOverridesProperty) {
-    unwrap(this).setIntegration(`value`.let(IntegrationOverridesProperty::unwrap))
+    unwrap(this).setIntegration(`value`.let(IntegrationOverridesProperty.Companion::unwrap))
   }
 
   /**
@@ -157,14 +157,14 @@ public open class CfnApiGatewayManagedOverrides(
    * Overrides the route configuration for an API Gateway-managed route.
    */
   public open fun route(`value`: IResolvable) {
-    unwrap(this).setRoute(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRoute(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Overrides the route configuration for an API Gateway-managed route.
    */
   public open fun route(`value`: RouteOverridesProperty) {
-    unwrap(this).setRoute(`value`.let(RouteOverridesProperty::unwrap))
+    unwrap(this).setRoute(`value`.let(RouteOverridesProperty.Companion::unwrap))
   }
 
   /**
@@ -184,14 +184,14 @@ public open class CfnApiGatewayManagedOverrides(
    * Overrides the stage configuration for an API Gateway-managed stage.
    */
   public open fun stage(`value`: IResolvable) {
-    unwrap(this).setStage(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStage(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Overrides the stage configuration for an API Gateway-managed stage.
    */
   public open fun stage(`value`: StageOverridesProperty) {
-    unwrap(this).setStage(`value`.let(StageOverridesProperty::unwrap))
+    unwrap(this).setStage(`value`.let(StageOverridesProperty.Companion::unwrap))
   }
 
   /**
@@ -327,7 +327,7 @@ public open class CfnApiGatewayManagedOverrides(
      * integration. 
      */
     override fun integration(integration: IResolvable) {
-      cdkBuilder.integration(integration.let(IResolvable::unwrap))
+      cdkBuilder.integration(integration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -338,7 +338,7 @@ public open class CfnApiGatewayManagedOverrides(
      * integration. 
      */
     override fun integration(integration: IntegrationOverridesProperty) {
-      cdkBuilder.integration(integration.let(IntegrationOverridesProperty::unwrap))
+      cdkBuilder.integration(integration.let(IntegrationOverridesProperty.Companion::unwrap))
     }
 
     /**
@@ -360,7 +360,7 @@ public open class CfnApiGatewayManagedOverrides(
      * @param route Overrides the route configuration for an API Gateway-managed route. 
      */
     override fun route(route: IResolvable) {
-      cdkBuilder.route(route.let(IResolvable::unwrap))
+      cdkBuilder.route(route.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -370,7 +370,7 @@ public open class CfnApiGatewayManagedOverrides(
      * @param route Overrides the route configuration for an API Gateway-managed route. 
      */
     override fun route(route: RouteOverridesProperty) {
-      cdkBuilder.route(route.let(RouteOverridesProperty::unwrap))
+      cdkBuilder.route(route.let(RouteOverridesProperty.Companion::unwrap))
     }
 
     /**
@@ -391,7 +391,7 @@ public open class CfnApiGatewayManagedOverrides(
      * @param stage Overrides the stage configuration for an API Gateway-managed stage. 
      */
     override fun stage(stage: IResolvable) {
-      cdkBuilder.stage(stage.let(IResolvable::unwrap))
+      cdkBuilder.stage(stage.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -401,7 +401,7 @@ public open class CfnApiGatewayManagedOverrides(
      * @param stage Overrides the stage configuration for an API Gateway-managed stage. 
      */
     override fun stage(stage: StageOverridesProperty) {
-      cdkBuilder.stage(stage.let(StageOverridesProperty::unwrap))
+      cdkBuilder.stage(stage.let(StageOverridesProperty.Companion::unwrap))
     }
 
     /**
@@ -1143,7 +1143,7 @@ public open class CfnApiGatewayManagedOverrides(
        * WebSocket APIs.
        */
       override fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
-        cdkBuilder.dataTraceEnabled(dataTraceEnabled.let(IResolvable::unwrap))
+        cdkBuilder.dataTraceEnabled(dataTraceEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1157,7 +1157,7 @@ public open class CfnApiGatewayManagedOverrides(
        * @param detailedMetricsEnabled Specifies whether detailed metrics are enabled.
        */
       override fun detailedMetricsEnabled(detailedMetricsEnabled: IResolvable) {
-        cdkBuilder.detailedMetricsEnabled(detailedMetricsEnabled.let(IResolvable::unwrap))
+        cdkBuilder.detailedMetricsEnabled(detailedMetricsEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1418,14 +1418,14 @@ public open class CfnApiGatewayManagedOverrides(
        * @param accessLogSettings Settings for logging access in a stage.
        */
       override fun accessLogSettings(accessLogSettings: IResolvable) {
-        cdkBuilder.accessLogSettings(accessLogSettings.let(IResolvable::unwrap))
+        cdkBuilder.accessLogSettings(accessLogSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param accessLogSettings Settings for logging access in a stage.
        */
       override fun accessLogSettings(accessLogSettings: AccessLogSettingsProperty) {
-        cdkBuilder.accessLogSettings(accessLogSettings.let(AccessLogSettingsProperty::unwrap))
+        cdkBuilder.accessLogSettings(accessLogSettings.let(AccessLogSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -1452,21 +1452,21 @@ public open class CfnApiGatewayManagedOverrides(
        * The default value is `true` .
        */
       override fun autoDeploy(autoDeploy: IResolvable) {
-        cdkBuilder.autoDeploy(autoDeploy.let(IResolvable::unwrap))
+        cdkBuilder.autoDeploy(autoDeploy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param defaultRouteSettings The default route settings for the stage.
        */
       override fun defaultRouteSettings(defaultRouteSettings: IResolvable) {
-        cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(IResolvable::unwrap))
+        cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param defaultRouteSettings The default route settings for the stage.
        */
       override fun defaultRouteSettings(defaultRouteSettings: RouteSettingsProperty) {
-        cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(RouteSettingsProperty::unwrap))
+        cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(RouteSettingsProperty.Companion::unwrap))
       }
 
       /**

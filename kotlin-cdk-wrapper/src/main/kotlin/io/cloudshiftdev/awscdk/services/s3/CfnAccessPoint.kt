@@ -56,8 +56,8 @@ public open class CfnAccessPoint(
     id: String,
     props: CfnAccessPointProps,
   ) :
-      this(software.amazon.awscdk.services.s3.CfnAccessPoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAccessPointProps::unwrap))
+      this(software.amazon.awscdk.services.s3.CfnAccessPoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAccessPointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -124,7 +124,7 @@ public open class CfnAccessPoint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -161,14 +161,14 @@ public open class CfnAccessPoint(
    * The PublicAccessBlock configuration that you want to apply to this Amazon S3 bucket.
    */
   public open fun publicAccessBlockConfiguration(`value`: IResolvable) {
-    unwrap(this).setPublicAccessBlockConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPublicAccessBlockConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The PublicAccessBlock configuration that you want to apply to this Amazon S3 bucket.
    */
   public open fun publicAccessBlockConfiguration(`value`: PublicAccessBlockConfigurationProperty) {
-    unwrap(this).setPublicAccessBlockConfiguration(`value`.let(PublicAccessBlockConfigurationProperty::unwrap))
+    unwrap(this).setPublicAccessBlockConfiguration(`value`.let(PublicAccessBlockConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -189,14 +189,14 @@ public open class CfnAccessPoint(
    * The Virtual Private Cloud (VPC) configuration for this access point, if one exists.
    */
   public open fun vpcConfiguration(`value`: IResolvable) {
-    unwrap(this).setVpcConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The Virtual Private Cloud (VPC) configuration for this access point, if one exists.
    */
   public open fun vpcConfiguration(`value`: VpcConfigurationProperty) {
-    unwrap(this).setVpcConfiguration(`value`.let(VpcConfigurationProperty::unwrap))
+    unwrap(this).setVpcConfiguration(`value`.let(VpcConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -388,7 +388,7 @@ public open class CfnAccessPoint(
      * apply to this Amazon S3 bucket. 
      */
     override fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: IResolvable) {
-      cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -405,7 +405,7 @@ public open class CfnAccessPoint(
      */
     override
         fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: PublicAccessBlockConfigurationProperty) {
-      cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration.let(PublicAccessBlockConfigurationProperty::unwrap))
+      cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration.let(PublicAccessBlockConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -435,7 +435,7 @@ public open class CfnAccessPoint(
      * if one exists. 
      */
     override fun vpcConfiguration(vpcConfiguration: IResolvable) {
-      cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -446,7 +446,7 @@ public open class CfnAccessPoint(
      * if one exists. 
      */
     override fun vpcConfiguration(vpcConfiguration: VpcConfigurationProperty) {
-      cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty::unwrap))
+      cdkBuilder.vpcConfiguration(vpcConfiguration.let(VpcConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -697,7 +697,7 @@ public open class CfnAccessPoint(
        * Enabling this setting doesn't affect existing policies or ACLs.
        */
       override fun blockPublicAcls(blockPublicAcls: IResolvable) {
-        cdkBuilder.blockPublicAcls(blockPublicAcls.let(IResolvable::unwrap))
+        cdkBuilder.blockPublicAcls(blockPublicAcls.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -721,7 +721,7 @@ public open class CfnAccessPoint(
        * Enabling this setting doesn't affect existing bucket policies.
        */
       override fun blockPublicPolicy(blockPublicPolicy: IResolvable) {
-        cdkBuilder.blockPublicPolicy(blockPublicPolicy.let(IResolvable::unwrap))
+        cdkBuilder.blockPublicPolicy(blockPublicPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -747,7 +747,7 @@ public open class CfnAccessPoint(
        * prevent new public ACLs from being set.
        */
       override fun ignorePublicAcls(ignorePublicAcls: IResolvable) {
-        cdkBuilder.ignorePublicAcls(ignorePublicAcls.let(IResolvable::unwrap))
+        cdkBuilder.ignorePublicAcls(ignorePublicAcls.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -775,7 +775,7 @@ public open class CfnAccessPoint(
        * specific accounts, is blocked.
        */
       override fun restrictPublicBuckets(restrictPublicBuckets: IResolvable) {
-        cdkBuilder.restrictPublicBuckets(restrictPublicBuckets.let(IResolvable::unwrap))
+        cdkBuilder.restrictPublicBuckets(restrictPublicBuckets.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

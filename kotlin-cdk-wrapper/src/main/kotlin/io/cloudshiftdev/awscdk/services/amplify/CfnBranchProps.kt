@@ -385,14 +385,14 @@ public interface CfnBranchProps {
      * @param backend Specifies the backend for a `Branch` of an Amplify app.
      */
     override fun backend(backend: IResolvable) {
-      cdkBuilder.backend(backend.let(IResolvable::unwrap))
+      cdkBuilder.backend(backend.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param backend Specifies the backend for a `Branch` of an Amplify app.
      */
     override fun backend(backend: CfnBranch.BackendProperty) {
-      cdkBuilder.backend(backend.let(CfnBranch.BackendProperty::unwrap))
+      cdkBuilder.backend(backend.let(CfnBranch.BackendProperty.Companion::unwrap))
     }
 
     /**
@@ -409,7 +409,7 @@ public interface CfnBranchProps {
      * `user:password` .
      */
     override fun basicAuthConfig(basicAuthConfig: IResolvable) {
-      cdkBuilder.basicAuthConfig(basicAuthConfig.let(IResolvable::unwrap))
+      cdkBuilder.basicAuthConfig(basicAuthConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -418,7 +418,7 @@ public interface CfnBranchProps {
      * `user:password` .
      */
     override fun basicAuthConfig(basicAuthConfig: CfnBranch.BasicAuthConfigProperty) {
-      cdkBuilder.basicAuthConfig(basicAuthConfig.let(CfnBranch.BasicAuthConfigProperty::unwrap))
+      cdkBuilder.basicAuthConfig(basicAuthConfig.let(CfnBranch.BasicAuthConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -464,7 +464,7 @@ public interface CfnBranchProps {
      * @param enableAutoBuild Enables auto building for the branch.
      */
     override fun enableAutoBuild(enableAutoBuild: IResolvable) {
-      cdkBuilder.enableAutoBuild(enableAutoBuild.let(IResolvable::unwrap))
+      cdkBuilder.enableAutoBuild(enableAutoBuild.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -484,7 +484,7 @@ public interface CfnBranchProps {
      * changes can take up to 10 minutes to roll out.
      */
     override fun enablePerformanceMode(enablePerformanceMode: IResolvable) {
-      cdkBuilder.enablePerformanceMode(enablePerformanceMode.let(IResolvable::unwrap))
+      cdkBuilder.enablePerformanceMode(enablePerformanceMode.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -522,14 +522,14 @@ public interface CfnBranchProps {
      * Amplify Hosting User Guide* .
      */
     override fun enablePullRequestPreview(enablePullRequestPreview: IResolvable) {
-      cdkBuilder.enablePullRequestPreview(enablePullRequestPreview.let(IResolvable::unwrap))
+      cdkBuilder.enablePullRequestPreview(enablePullRequestPreview.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param environmentVariables The environment variables for the branch.
      */
     override fun environmentVariables(environmentVariables: IResolvable) {
-      cdkBuilder.environmentVariables(environmentVariables.let(IResolvable::unwrap))
+      cdkBuilder.environmentVariables(environmentVariables.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -583,7 +583,7 @@ public interface CfnBranchProps {
      * @param tags The tag for the branch.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

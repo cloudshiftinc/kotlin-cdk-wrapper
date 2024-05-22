@@ -72,8 +72,8 @@ public open class CfnJobTemplate(
     id: String,
     props: CfnJobTemplateProps,
   ) :
-      this(software.amazon.awscdk.services.mediaconvert.CfnJobTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnJobTemplateProps::unwrap))
+      this(software.amazon.awscdk.services.mediaconvert.CfnJobTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnJobTemplateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -92,14 +92,14 @@ public open class CfnJobTemplate(
    * Accelerated transcoding can significantly speed up jobs with long, visually complex content.
    */
   public open fun accelerationSettings(`value`: IResolvable) {
-    unwrap(this).setAccelerationSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccelerationSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Accelerated transcoding can significantly speed up jobs with long, visually complex content.
    */
   public open fun accelerationSettings(`value`: AccelerationSettingsProperty) {
-    unwrap(this).setAccelerationSettings(`value`.let(AccelerationSettingsProperty::unwrap))
+    unwrap(this).setAccelerationSettings(`value`.let(AccelerationSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -159,7 +159,7 @@ public open class CfnJobTemplate(
    * Optional.
    */
   public open fun hopDestinations(`value`: IResolvable) {
-    unwrap(this).setHopDestinations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHopDestinations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -180,7 +180,7 @@ public open class CfnJobTemplate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -502,7 +502,7 @@ public open class CfnJobTemplate(
      * long, visually complex content. 
      */
     override fun accelerationSettings(accelerationSettings: IResolvable) {
-      cdkBuilder.accelerationSettings(accelerationSettings.let(IResolvable::unwrap))
+      cdkBuilder.accelerationSettings(accelerationSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -519,7 +519,7 @@ public open class CfnJobTemplate(
      * long, visually complex content. 
      */
     override fun accelerationSettings(accelerationSettings: AccelerationSettingsProperty) {
-      cdkBuilder.accelerationSettings(accelerationSettings.let(AccelerationSettingsProperty::unwrap))
+      cdkBuilder.accelerationSettings(accelerationSettings.let(AccelerationSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -577,7 +577,7 @@ public open class CfnJobTemplate(
      * @param hopDestinations Optional. 
      */
     override fun hopDestinations(hopDestinations: IResolvable) {
-      cdkBuilder.hopDestinations(hopDestinations.let(IResolvable::unwrap))
+      cdkBuilder.hopDestinations(hopDestinations.let(IResolvable.Companion::unwrap))
     }
 
     /**

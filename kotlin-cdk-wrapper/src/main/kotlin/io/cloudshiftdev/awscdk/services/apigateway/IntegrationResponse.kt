@@ -149,7 +149,7 @@ public interface IntegrationResponse {
      * @param contentHandling Specifies how to handle request payload content type conversions.
      */
     override fun contentHandling(contentHandling: ContentHandling) {
-      cdkBuilder.contentHandling(contentHandling.let(ContentHandling::unwrap))
+      cdkBuilder.contentHandling(contentHandling.let(ContentHandling.Companion::unwrap))
     }
 
     /**

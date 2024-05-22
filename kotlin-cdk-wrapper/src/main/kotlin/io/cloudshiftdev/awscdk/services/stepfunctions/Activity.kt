@@ -32,7 +32,7 @@ public open class Activity(
   cdkObject: software.amazon.awscdk.services.stepfunctions.Activity,
 ) : Resource(cdkObject), IActivity {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.stepfunctions.Activity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.stepfunctions.Activity(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -41,8 +41,8 @@ public open class Activity(
     id: String,
     props: ActivityProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.Activity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ActivityProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.Activity(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ActivityProps.Companion::unwrap))
   )
 
   public constructor(
@@ -69,8 +69,8 @@ public open class Activity(
    * @param actions The list of desired actions. 
    */
   public open fun grant(identity: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(identity.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
-      as String}.toTypedArray()).let(Grant::wrap)
+      unwrap(this).grant(identity.let(IGrantable.Companion::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Return the given named metric for this Activity.
@@ -92,7 +92,7 @@ public open class Activity(
    * @param props
    */
   public open fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Return the given named metric for this Activity.
@@ -124,7 +124,7 @@ public open class Activity(
    * @param props
    */
   public open fun metricFailed(props: MetricOptions): Metric =
-      unwrap(this).metricFailed(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricFailed(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of times this activity fails.
@@ -156,7 +156,7 @@ public open class Activity(
    * @param props
    */
   public open fun metricHeartbeatTimedOut(props: MetricOptions): Metric =
-      unwrap(this).metricHeartbeatTimedOut(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricHeartbeatTimedOut(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of times the heartbeat times out for this activity.
@@ -187,7 +187,7 @@ public open class Activity(
    * @param props
    */
   public open fun metricRunTime(props: MetricOptions): Metric =
-      unwrap(this).metricRunTime(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricRunTime(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The interval, in milliseconds, between the time the activity starts and the time it closes.
@@ -218,7 +218,7 @@ public open class Activity(
    * @param props
    */
   public open fun metricScheduleTime(props: MetricOptions): Metric =
-      unwrap(this).metricScheduleTime(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricScheduleTime(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The interval, in milliseconds, for which the activity stays in the schedule state.
@@ -249,7 +249,7 @@ public open class Activity(
    * @param props
    */
   public open fun metricScheduled(props: MetricOptions): Metric =
-      unwrap(this).metricScheduled(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricScheduled(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of times this activity is scheduled.
@@ -280,7 +280,7 @@ public open class Activity(
    * @param props
    */
   public open fun metricStarted(props: MetricOptions): Metric =
-      unwrap(this).metricStarted(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricStarted(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of times this activity is started.
@@ -311,7 +311,7 @@ public open class Activity(
    * @param props
    */
   public open fun metricSucceeded(props: MetricOptions): Metric =
-      unwrap(this).metricSucceeded(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricSucceeded(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of times this activity succeeds.
@@ -344,7 +344,7 @@ public open class Activity(
    * @param props
    */
   public open fun metricTime(props: MetricOptions): Metric =
-      unwrap(this).metricTime(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricTime(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The interval, in milliseconds, between the time the activity is scheduled and the time it
@@ -376,7 +376,7 @@ public open class Activity(
    * @param props
    */
   public open fun metricTimedOut(props: MetricOptions): Metric =
-      unwrap(this).metricTimedOut(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricTimedOut(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of times this activity times out.
@@ -432,7 +432,7 @@ public open class Activity(
       id: String,
       activityArn: String,
     ): IActivity =
-        software.amazon.awscdk.services.stepfunctions.Activity.fromActivityArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.stepfunctions.Activity.fromActivityArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, activityArn).let(IActivity::wrap)
 
     public fun fromActivityName(
@@ -440,7 +440,7 @@ public open class Activity(
       id: String,
       activityName: String,
     ): IActivity =
-        software.amazon.awscdk.services.stepfunctions.Activity.fromActivityName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.stepfunctions.Activity.fromActivityName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, activityName).let(IActivity::wrap)
 
     public operator fun invoke(

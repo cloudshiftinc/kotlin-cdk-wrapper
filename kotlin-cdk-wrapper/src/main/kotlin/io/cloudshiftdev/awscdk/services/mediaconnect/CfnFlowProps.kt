@@ -182,14 +182,14 @@ public interface CfnFlowProps {
      * @param source The settings for the source that you want to use for the new flow. 
      */
     override fun source(source: IResolvable) {
-      cdkBuilder.source(source.let(IResolvable::unwrap))
+      cdkBuilder.source(source.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param source The settings for the source that you want to use for the new flow. 
      */
     override fun source(source: CfnFlow.SourceProperty) {
-      cdkBuilder.source(source.let(CfnFlow.SourceProperty::unwrap))
+      cdkBuilder.source(source.let(CfnFlow.SourceProperty.Companion::unwrap))
     }
 
     /**
@@ -204,14 +204,14 @@ public interface CfnFlowProps {
      * @param sourceFailoverConfig The settings for source failover.
      */
     override fun sourceFailoverConfig(sourceFailoverConfig: IResolvable) {
-      cdkBuilder.sourceFailoverConfig(sourceFailoverConfig.let(IResolvable::unwrap))
+      cdkBuilder.sourceFailoverConfig(sourceFailoverConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param sourceFailoverConfig The settings for source failover.
      */
     override fun sourceFailoverConfig(sourceFailoverConfig: CfnFlow.FailoverConfigProperty) {
-      cdkBuilder.sourceFailoverConfig(sourceFailoverConfig.let(CfnFlow.FailoverConfigProperty::unwrap))
+      cdkBuilder.sourceFailoverConfig(sourceFailoverConfig.let(CfnFlow.FailoverConfigProperty.Companion::unwrap))
     }
 
     /**

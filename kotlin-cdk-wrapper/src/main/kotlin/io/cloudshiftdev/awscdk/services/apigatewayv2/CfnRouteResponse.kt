@@ -55,8 +55,8 @@ public open class CfnRouteResponse(
     id: String,
     props: CfnRouteResponseProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.CfnRouteResponse(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRouteResponseProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.CfnRouteResponse(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRouteResponseProps.Companion::unwrap))
   )
 
   public constructor(
@@ -89,7 +89,7 @@ public open class CfnRouteResponse(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -125,7 +125,7 @@ public open class CfnRouteResponse(
    * The route response parameters.
    */
   public open fun responseParameters(`value`: IResolvable) {
-    unwrap(this).setResponseParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResponseParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -269,7 +269,7 @@ public open class CfnRouteResponse(
      * @param responseParameters The route response parameters. 
      */
     override fun responseParameters(responseParameters: IResolvable) {
-      cdkBuilder.responseParameters(responseParameters.let(IResolvable::unwrap))
+      cdkBuilder.responseParameters(responseParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -385,7 +385,7 @@ public open class CfnRouteResponse(
        * @param required Specifies whether the parameter is required. 
        */
       override fun required(required: IResolvable) {
-        cdkBuilder.required(required.let(IResolvable::unwrap))
+        cdkBuilder.required(required.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

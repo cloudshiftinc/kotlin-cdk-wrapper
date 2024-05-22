@@ -99,7 +99,7 @@ public interface GatewayVpcEndpointOptions {
      * @param service The service to use for this gateway VPC endpoint. 
      */
     override fun service(service: IGatewayVpcEndpointService) {
-      cdkBuilder.service(service.let(IGatewayVpcEndpointService::unwrap))
+      cdkBuilder.service(service.let(IGatewayVpcEndpointService.Companion::unwrap))
     }
 
     /**
@@ -108,7 +108,7 @@ public interface GatewayVpcEndpointOptions {
      * Specify a list of subnet selection objects here to be more specific.
      */
     override fun subnets(subnets: List<SubnetSelection>) {
-      cdkBuilder.subnets(subnets.map(SubnetSelection::unwrap))
+      cdkBuilder.subnets(subnets.map(SubnetSelection.Companion::unwrap))
     }
 
     /**

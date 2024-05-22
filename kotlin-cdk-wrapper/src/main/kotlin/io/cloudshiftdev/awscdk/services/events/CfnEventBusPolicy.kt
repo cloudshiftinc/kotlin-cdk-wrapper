@@ -72,8 +72,8 @@ public open class CfnEventBusPolicy(
     id: String,
     props: CfnEventBusPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.events.CfnEventBusPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEventBusPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.events.CfnEventBusPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEventBusPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -111,7 +111,7 @@ public open class CfnEventBusPolicy(
    * condition, such as being a member of a certain AWS organization.
    */
   public open fun condition(`value`: IResolvable) {
-    unwrap(this).setCondition(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCondition(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -119,7 +119,7 @@ public open class CfnEventBusPolicy(
    * condition, such as being a member of a certain AWS organization.
    */
   public open fun condition(`value`: ConditionProperty) {
-    unwrap(this).setCondition(`value`.let(ConditionProperty::unwrap))
+    unwrap(this).setCondition(`value`.let(ConditionProperty.Companion::unwrap))
   }
 
   /**
@@ -149,7 +149,7 @@ public open class CfnEventBusPolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -351,7 +351,7 @@ public open class CfnEventBusPolicy(
      * a certain condition, such as being a member of a certain AWS organization. 
      */
     override fun condition(condition: IResolvable) {
-      cdkBuilder.condition(condition.let(IResolvable::unwrap))
+      cdkBuilder.condition(condition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -372,7 +372,7 @@ public open class CfnEventBusPolicy(
      * a certain condition, such as being a member of a certain AWS organization. 
      */
     override fun condition(condition: ConditionProperty) {
-      cdkBuilder.condition(condition.let(ConditionProperty::unwrap))
+      cdkBuilder.condition(condition.let(ConditionProperty.Companion::unwrap))
     }
 
     /**

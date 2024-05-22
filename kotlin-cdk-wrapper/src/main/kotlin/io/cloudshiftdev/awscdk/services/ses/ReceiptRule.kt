@@ -31,8 +31,8 @@ public open class ReceiptRule(
     id: String,
     props: ReceiptRuleProps,
   ) :
-      this(software.amazon.awscdk.services.ses.ReceiptRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ReceiptRuleProps::unwrap))
+      this(software.amazon.awscdk.services.ses.ReceiptRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ReceiptRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -48,7 +48,7 @@ public open class ReceiptRule(
    * @param action 
    */
   public open fun addAction(action: IReceiptRuleAction) {
-    unwrap(this).addAction(action.let(IReceiptRuleAction::unwrap))
+    unwrap(this).addAction(action.let(IReceiptRuleAction.Companion::unwrap))
   }
 
   /**
@@ -175,7 +175,7 @@ public open class ReceiptRule(
      * the recipient email addresses or domains specified in the receipt rule. 
      */
     override fun actions(actions: List<IReceiptRuleAction>) {
-      cdkBuilder.actions(actions.map(IReceiptRuleAction::unwrap))
+      cdkBuilder.actions(actions.map(IReceiptRuleAction.Companion::unwrap))
     }
 
     /**
@@ -197,7 +197,7 @@ public open class ReceiptRule(
      * @param after An existing rule after which the new rule will be placed. 
      */
     override fun after(after: IReceiptRule) {
-      cdkBuilder.after(after.let(IReceiptRule::unwrap))
+      cdkBuilder.after(after.let(IReceiptRule.Companion::unwrap))
     }
 
     /**
@@ -250,7 +250,7 @@ public open class ReceiptRule(
      * @param ruleSet The name of the rule set that the receipt rule will be added to. 
      */
     override fun ruleSet(ruleSet: IReceiptRuleSet) {
-      cdkBuilder.ruleSet(ruleSet.let(IReceiptRuleSet::unwrap))
+      cdkBuilder.ruleSet(ruleSet.let(IReceiptRuleSet.Companion::unwrap))
     }
 
     /**
@@ -274,7 +274,7 @@ public open class ReceiptRule(
      * connection encrypted with Transport Layer Security (TLS). 
      */
     override fun tlsPolicy(tlsPolicy: TlsPolicy) {
-      cdkBuilder.tlsPolicy(tlsPolicy.let(TlsPolicy::unwrap))
+      cdkBuilder.tlsPolicy(tlsPolicy.let(TlsPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ses.ReceiptRule = cdkBuilder.build()
@@ -286,7 +286,7 @@ public open class ReceiptRule(
       id: String,
       receiptRuleName: String,
     ): IReceiptRule =
-        software.amazon.awscdk.services.ses.ReceiptRule.fromReceiptRuleName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ses.ReceiptRule.fromReceiptRuleName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, receiptRuleName).let(IReceiptRule::wrap)
 
     public operator fun invoke(

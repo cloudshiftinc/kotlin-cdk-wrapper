@@ -60,8 +60,8 @@ public open class CfnDBInstance(
     id: String,
     props: CfnDBInstanceProps,
   ) :
-      this(software.amazon.awscdk.services.docdb.CfnDBInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDBInstanceProps::unwrap))
+      this(software.amazon.awscdk.services.docdb.CfnDBInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDBInstanceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -104,7 +104,7 @@ public open class CfnDBInstance(
    * This parameter does not apply to Amazon DocumentDB.
    */
   public open fun autoMinorVersionUpgrade(`value`: IResolvable) {
-    unwrap(this).setAutoMinorVersionUpgrade(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoMinorVersionUpgrade(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -147,7 +147,7 @@ public open class CfnDBInstance(
    * Specifies whether the DB instance is restarted when you rotate your SSL/TLS certificate.
    */
   public open fun certificateRotationRestart(`value`: IResolvable) {
-    unwrap(this).setCertificateRotationRestart(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCertificateRotationRestart(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -206,7 +206,7 @@ public open class CfnDBInstance(
    * A value that indicates whether to enable Performance Insights for the DB Instance.
    */
   public open fun enablePerformanceInsights(`value`: IResolvable) {
-    unwrap(this).setEnablePerformanceInsights(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnablePerformanceInsights(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -215,7 +215,7 @@ public open class CfnDBInstance(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -248,7 +248,7 @@ public open class CfnDBInstance(
    * The tags to be assigned to the instance.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -492,7 +492,7 @@ public open class CfnDBInstance(
      * @param autoMinorVersionUpgrade This parameter does not apply to Amazon DocumentDB. 
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -573,7 +573,7 @@ public open class CfnDBInstance(
      * rotate your SSL/TLS certificate. 
      */
     override fun certificateRotationRestart(certificateRotationRestart: IResolvable) {
-      cdkBuilder.certificateRotationRestart(certificateRotationRestart.let(IResolvable::unwrap))
+      cdkBuilder.certificateRotationRestart(certificateRotationRestart.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -645,7 +645,7 @@ public open class CfnDBInstance(
      * Insights for the DB Instance. 
      */
     override fun enablePerformanceInsights(enablePerformanceInsights: IResolvable) {
-      cdkBuilder.enablePerformanceInsights(enablePerformanceInsights.let(IResolvable::unwrap))
+      cdkBuilder.enablePerformanceInsights(enablePerformanceInsights.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -678,7 +678,7 @@ public open class CfnDBInstance(
      * @param tags The tags to be assigned to the instance. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

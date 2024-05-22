@@ -68,8 +68,8 @@ public open class CfnDatabase(
     id: String,
     props: CfnDatabaseProps,
   ) :
-      this(software.amazon.awscdk.services.glue.CfnDatabase(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDatabaseProps::unwrap))
+      this(software.amazon.awscdk.services.glue.CfnDatabase(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDatabaseProps.Companion::unwrap))
   )
 
   public constructor(
@@ -105,14 +105,14 @@ public open class CfnDatabase(
    * The metadata for the database.
    */
   public open fun databaseInput(`value`: IResolvable) {
-    unwrap(this).setDatabaseInput(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDatabaseInput(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The metadata for the database.
    */
   public open fun databaseInput(`value`: DatabaseInputProperty) {
-    unwrap(this).setDatabaseInput(`value`.let(DatabaseInputProperty::unwrap))
+    unwrap(this).setDatabaseInput(`value`.let(DatabaseInputProperty.Companion::unwrap))
   }
 
   /**
@@ -129,7 +129,7 @@ public open class CfnDatabase(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -206,7 +206,7 @@ public open class CfnDatabase(
      * @param databaseInput The metadata for the database. 
      */
     override fun databaseInput(databaseInput: IResolvable) {
-      cdkBuilder.databaseInput(databaseInput.let(IResolvable::unwrap))
+      cdkBuilder.databaseInput(databaseInput.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -216,7 +216,7 @@ public open class CfnDatabase(
      * @param databaseInput The metadata for the database. 
      */
     override fun databaseInput(databaseInput: DatabaseInputProperty) {
-      cdkBuilder.databaseInput(databaseInput.let(DatabaseInputProperty::unwrap))
+      cdkBuilder.databaseInput(databaseInput.let(DatabaseInputProperty.Companion::unwrap))
     }
 
     /**
@@ -659,7 +659,7 @@ public open class CfnDatabase(
        * Used by AWS Lake Formation . Not used in the normal course of AWS Glue operations.
        */
       override fun createTableDefaultPermissions(createTableDefaultPermissions: IResolvable) {
-        cdkBuilder.createTableDefaultPermissions(createTableDefaultPermissions.let(IResolvable::unwrap))
+        cdkBuilder.createTableDefaultPermissions(createTableDefaultPermissions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -691,7 +691,7 @@ public open class CfnDatabase(
        * the AWS Glue Data Catalog .
        */
       override fun federatedDatabase(federatedDatabase: IResolvable) {
-        cdkBuilder.federatedDatabase(federatedDatabase.let(IResolvable::unwrap))
+        cdkBuilder.federatedDatabase(federatedDatabase.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -699,7 +699,7 @@ public open class CfnDatabase(
        * the AWS Glue Data Catalog .
        */
       override fun federatedDatabase(federatedDatabase: FederatedDatabaseProperty) {
-        cdkBuilder.federatedDatabase(federatedDatabase.let(FederatedDatabaseProperty::unwrap))
+        cdkBuilder.federatedDatabase(federatedDatabase.let(FederatedDatabaseProperty.Companion::unwrap))
       }
 
       /**
@@ -739,7 +739,7 @@ public open class CfnDatabase(
        * resource linking.
        */
       override fun targetDatabase(targetDatabase: IResolvable) {
-        cdkBuilder.targetDatabase(targetDatabase.let(IResolvable::unwrap))
+        cdkBuilder.targetDatabase(targetDatabase.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -747,7 +747,7 @@ public open class CfnDatabase(
        * resource linking.
        */
       override fun targetDatabase(targetDatabase: DatabaseIdentifierProperty) {
-        cdkBuilder.targetDatabase(targetDatabase.let(DatabaseIdentifierProperty::unwrap))
+        cdkBuilder.targetDatabase(targetDatabase.let(DatabaseIdentifierProperty.Companion::unwrap))
       }
 
       /**
@@ -1035,14 +1035,14 @@ public open class CfnDatabase(
        * @param principal The principal who is granted permissions.
        */
       override fun principal(principal: IResolvable) {
-        cdkBuilder.principal(principal.let(IResolvable::unwrap))
+        cdkBuilder.principal(principal.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param principal The principal who is granted permissions.
        */
       override fun principal(principal: DataLakePrincipalProperty) {
-        cdkBuilder.principal(principal.let(DataLakePrincipalProperty::unwrap))
+        cdkBuilder.principal(principal.let(DataLakePrincipalProperty.Companion::unwrap))
       }
 
       /**

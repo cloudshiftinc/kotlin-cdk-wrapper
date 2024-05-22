@@ -398,7 +398,7 @@ public interface CfnUserPoolUserProps {
      * information.
      */
     override fun clientMetadata(clientMetadata: IResolvable) {
-      cdkBuilder.clientMetadata(clientMetadata.let(IResolvable::unwrap))
+      cdkBuilder.clientMetadata(clientMetadata.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -481,7 +481,7 @@ public interface CfnUserPoolUserProps {
      * alias already exists. The default value is `False` .
      */
     override fun forceAliasCreation(forceAliasCreation: IResolvable) {
-      cdkBuilder.forceAliasCreation(forceAliasCreation.let(IResolvable::unwrap))
+      cdkBuilder.forceAliasCreation(forceAliasCreation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -498,7 +498,7 @@ public interface CfnUserPoolUserProps {
      * values.
      */
     override fun userAttributes(userAttributes: IResolvable) {
-      cdkBuilder.userAttributes(userAttributes.let(IResolvable::unwrap))
+      cdkBuilder.userAttributes(userAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -555,7 +555,7 @@ public interface CfnUserPoolUserProps {
      * .
      */
     override fun validationData(validationData: IResolvable) {
-      cdkBuilder.validationData(validationData.let(IResolvable::unwrap))
+      cdkBuilder.validationData(validationData.let(IResolvable.Companion::unwrap))
     }
 
     /**

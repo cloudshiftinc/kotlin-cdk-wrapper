@@ -58,8 +58,8 @@ public open class CfnMap(
     id: String,
     props: CfnMapProps,
   ) :
-      this(software.amazon.awscdk.services.location.CfnMap(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMapProps::unwrap))
+      this(software.amazon.awscdk.services.location.CfnMap(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMapProps.Companion::unwrap))
   )
 
   public constructor(
@@ -123,7 +123,7 @@ public open class CfnMap(
    * create.
    */
   public open fun configuration(`value`: IResolvable) {
-    unwrap(this).setConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -131,7 +131,7 @@ public open class CfnMap(
    * create.
    */
   public open fun configuration(`value`: MapConfigurationProperty) {
-    unwrap(this).setConfiguration(`value`.let(MapConfigurationProperty::unwrap))
+    unwrap(this).setConfiguration(`value`.let(MapConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -161,7 +161,7 @@ public open class CfnMap(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -201,7 +201,7 @@ public open class CfnMap(
    * Applies one or more tags to the map resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -349,7 +349,7 @@ public open class CfnMap(
      * resource that you create. 
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -363,7 +363,7 @@ public open class CfnMap(
      * resource that you create. 
      */
     override fun configuration(configuration: MapConfigurationProperty) {
-      cdkBuilder.configuration(configuration.let(MapConfigurationProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(MapConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -442,7 +442,7 @@ public open class CfnMap(
      * @param tags Applies one or more tags to the map resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

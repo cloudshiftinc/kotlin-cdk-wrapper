@@ -63,7 +63,7 @@ public interface ISynthesisSession {
      * Cloud assembly builder.
      */
     override fun assembly(`value`: CloudAssemblyBuilder) {
-      unwrap(this).setAssembly(`value`.let(CloudAssemblyBuilder::unwrap))
+      unwrap(this).setAssembly(`value`.let(CloudAssemblyBuilder.Companion::unwrap))
     }
 
     /**

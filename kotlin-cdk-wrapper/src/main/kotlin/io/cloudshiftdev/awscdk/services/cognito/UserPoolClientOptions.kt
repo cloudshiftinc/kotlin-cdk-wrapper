@@ -296,14 +296,14 @@ public interface UserPoolClientOptions {
      * token validity.
      */
     override fun accessTokenValidity(accessTokenValidity: Duration) {
-      cdkBuilder.accessTokenValidity(accessTokenValidity.let(Duration::unwrap))
+      cdkBuilder.accessTokenValidity(accessTokenValidity.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param authFlows The set of OAuth authentication flows to enable on the client.
      */
     override fun authFlows(authFlows: AuthFlow) {
-      cdkBuilder.authFlows(authFlows.let(AuthFlow::unwrap))
+      cdkBuilder.authFlows(authFlows.let(AuthFlow.Companion::unwrap))
     }
 
     /**
@@ -321,7 +321,7 @@ public interface UserPoolClientOptions {
      * see defaults in `AuthSessionValidity`. Valid duration is from 3 to 15 minutes.
      */
     override fun authSessionValidity(authSessionValidity: Duration) {
-      cdkBuilder.authSessionValidity(authSessionValidity.let(Duration::unwrap))
+      cdkBuilder.authSessionValidity(authSessionValidity.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -351,7 +351,7 @@ public interface UserPoolClientOptions {
      * token validity.
      */
     override fun idTokenValidity(idTokenValidity: Duration) {
-      cdkBuilder.idTokenValidity(idTokenValidity.let(Duration::unwrap))
+      cdkBuilder.idTokenValidity(idTokenValidity.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -359,7 +359,7 @@ public interface UserPoolClientOptions {
      * An error is thrown when this is specified and `disableOAuth` is set.
      */
     override fun oAuth(oAuth: OAuthSettings) {
-      cdkBuilder.oAuth(oAuth.let(OAuthSettings::unwrap))
+      cdkBuilder.oAuth(oAuth.let(OAuthSettings.Companion::unwrap))
     }
 
     /**
@@ -383,7 +383,7 @@ public interface UserPoolClientOptions {
      * @param readAttributes The set of attributes this client will be able to read.
      */
     override fun readAttributes(readAttributes: ClientAttributes) {
-      cdkBuilder.readAttributes(readAttributes.let(ClientAttributes::unwrap))
+      cdkBuilder.readAttributes(readAttributes.let(ClientAttributes.Companion::unwrap))
     }
 
     /**
@@ -391,7 +391,7 @@ public interface UserPoolClientOptions {
      * Values between 60 minutes and 10 years are valid.
      */
     override fun refreshTokenValidity(refreshTokenValidity: Duration) {
-      cdkBuilder.refreshTokenValidity(refreshTokenValidity.let(Duration::unwrap))
+      cdkBuilder.refreshTokenValidity(refreshTokenValidity.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -400,7 +400,7 @@ public interface UserPoolClientOptions {
      */
     override
         fun supportedIdentityProviders(supportedIdentityProviders: List<UserPoolClientIdentityProvider>) {
-      cdkBuilder.supportedIdentityProviders(supportedIdentityProviders.map(UserPoolClientIdentityProvider::unwrap))
+      cdkBuilder.supportedIdentityProviders(supportedIdentityProviders.map(UserPoolClientIdentityProvider.Companion::unwrap))
     }
 
     /**
@@ -422,7 +422,7 @@ public interface UserPoolClientOptions {
      * @param writeAttributes The set of attributes this client will be able to write.
      */
     override fun writeAttributes(writeAttributes: ClientAttributes) {
-      cdkBuilder.writeAttributes(writeAttributes.let(ClientAttributes::unwrap))
+      cdkBuilder.writeAttributes(writeAttributes.let(ClientAttributes.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cognito.UserPoolClientOptions =

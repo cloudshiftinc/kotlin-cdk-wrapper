@@ -60,7 +60,7 @@ public abstract class SubjectAlternativeNames(
    * @param scope 
    */
   public open fun bind(scope: Construct): SubjectAlternativeNamesMatcherConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(SubjectAlternativeNamesMatcherConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(SubjectAlternativeNamesMatcherConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.SubjectAlternativeNames,

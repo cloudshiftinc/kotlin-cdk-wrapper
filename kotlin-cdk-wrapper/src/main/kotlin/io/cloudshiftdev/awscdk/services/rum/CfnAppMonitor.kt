@@ -93,8 +93,8 @@ public open class CfnAppMonitor(
     id: String,
     props: CfnAppMonitorProps,
   ) :
-      this(software.amazon.awscdk.services.rum.CfnAppMonitor(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAppMonitorProps::unwrap))
+      this(software.amazon.awscdk.services.rum.CfnAppMonitor(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAppMonitorProps.Companion::unwrap))
   )
 
   public constructor(
@@ -113,14 +113,14 @@ public open class CfnAppMonitor(
    * A structure that contains much of the configuration data for the app monitor.
    */
   public open fun appMonitorConfiguration(`value`: IResolvable) {
-    unwrap(this).setAppMonitorConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAppMonitorConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A structure that contains much of the configuration data for the app monitor.
    */
   public open fun appMonitorConfiguration(`value`: AppMonitorConfigurationProperty) {
-    unwrap(this).setAppMonitorConfiguration(`value`.let(AppMonitorConfigurationProperty::unwrap))
+    unwrap(this).setAppMonitorConfiguration(`value`.let(AppMonitorConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -146,14 +146,14 @@ public open class CfnAppMonitor(
    * Specifies whether this app monitor allows the web client to define and send custom events.
    */
   public open fun customEvents(`value`: IResolvable) {
-    unwrap(this).setCustomEvents(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCustomEvents(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies whether this app monitor allows the web client to define and send custom events.
    */
   public open fun customEvents(`value`: CustomEventsProperty) {
-    unwrap(this).setCustomEvents(`value`.let(CustomEventsProperty::unwrap))
+    unwrap(this).setCustomEvents(`value`.let(CustomEventsProperty.Companion::unwrap))
   }
 
   /**
@@ -180,7 +180,7 @@ public open class CfnAppMonitor(
    * Data collected by CloudWatch RUM is kept by RUM for 30 days and then deleted.
    */
   public open fun cwLogEnabled(`value`: IResolvable) {
-    unwrap(this).setCwLogEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCwLogEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -201,7 +201,7 @@ public open class CfnAppMonitor(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -231,7 +231,7 @@ public open class CfnAppMonitor(
    * Assigns one or more tags (key-value pairs) to the app monitor.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -456,7 +456,7 @@ public open class CfnAppMonitor(
      * the app monitor. 
      */
     override fun appMonitorConfiguration(appMonitorConfiguration: IResolvable) {
-      cdkBuilder.appMonitorConfiguration(appMonitorConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.appMonitorConfiguration(appMonitorConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -477,7 +477,7 @@ public open class CfnAppMonitor(
      * the app monitor. 
      */
     override fun appMonitorConfiguration(appMonitorConfiguration: AppMonitorConfigurationProperty) {
-      cdkBuilder.appMonitorConfiguration(appMonitorConfiguration.let(AppMonitorConfigurationProperty::unwrap))
+      cdkBuilder.appMonitorConfiguration(appMonitorConfiguration.let(AppMonitorConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -513,7 +513,7 @@ public open class CfnAppMonitor(
      * send custom events. 
      */
     override fun customEvents(customEvents: IResolvable) {
-      cdkBuilder.customEvents(customEvents.let(IResolvable::unwrap))
+      cdkBuilder.customEvents(customEvents.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -526,7 +526,7 @@ public open class CfnAppMonitor(
      * send custom events. 
      */
     override fun customEvents(customEvents: CustomEventsProperty) {
-      cdkBuilder.customEvents(customEvents.let(CustomEventsProperty::unwrap))
+      cdkBuilder.customEvents(customEvents.let(CustomEventsProperty.Companion::unwrap))
     }
 
     /**
@@ -574,7 +574,7 @@ public open class CfnAppMonitor(
      * deleted. 
      */
     override fun cwLogEnabled(cwLogEnabled: IResolvable) {
-      cdkBuilder.cwLogEnabled(cwLogEnabled.let(IResolvable::unwrap))
+      cdkBuilder.cwLogEnabled(cwLogEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -621,7 +621,7 @@ public open class CfnAppMonitor(
      * @param tags Assigns one or more tags (key-value pairs) to the app monitor. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -983,7 +983,7 @@ public open class CfnAppMonitor(
        * Cookies are stored in the top-level domain of the current page.
        */
       override fun allowCookies(allowCookies: IResolvable) {
-        cdkBuilder.allowCookies(allowCookies.let(IResolvable::unwrap))
+        cdkBuilder.allowCookies(allowCookies.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1005,7 +1005,7 @@ public open class CfnAppMonitor(
        * ?](https://docs.aws.amazon.com/xray/latest/devguide/aws-xray.html)
        */
       override fun enableXRay(enableXRay: IResolvable) {
-        cdkBuilder.enableXRay(enableXRay.let(IResolvable::unwrap))
+        cdkBuilder.enableXRay(enableXRay.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1078,7 +1078,7 @@ public open class CfnAppMonitor(
        * app monitor will send extended metrics to.
        */
       override fun metricDestinations(metricDestinations: IResolvable) {
-        cdkBuilder.metricDestinations(metricDestinations.let(IResolvable::unwrap))
+        cdkBuilder.metricDestinations(metricDestinations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1546,7 +1546,7 @@ public open class CfnAppMonitor(
        * `Evidently` , the value of `DimensionKeys` is ignored.
        */
       override fun dimensionKeys(dimensionKeys: IResolvable) {
-        cdkBuilder.dimensionKeys(dimensionKeys.let(IResolvable::unwrap))
+        cdkBuilder.dimensionKeys(dimensionKeys.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1854,7 +1854,7 @@ public open class CfnAppMonitor(
        * send.
        */
       override fun metricDefinitions(metricDefinitions: IResolvable) {
-        cdkBuilder.metricDefinitions(metricDefinitions.let(IResolvable::unwrap))
+        cdkBuilder.metricDefinitions(metricDefinitions.let(IResolvable.Companion::unwrap))
       }
 
       /**

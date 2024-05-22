@@ -63,7 +63,7 @@ public open class CloudFormationExecuteChangeSetAction(
   cdkObject: software.amazon.awscdk.services.codepipeline.actions.CloudFormationExecuteChangeSetAction,
 ) : Action(cdkObject) {
   public constructor(props: CloudFormationExecuteChangeSetActionProps) :
-      this(software.amazon.awscdk.services.codepipeline.actions.CloudFormationExecuteChangeSetAction(props.let(CloudFormationExecuteChangeSetActionProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.actions.CloudFormationExecuteChangeSetAction(props.let(CloudFormationExecuteChangeSetActionProps.Companion::unwrap))
   )
 
   public constructor(props: CloudFormationExecuteChangeSetActionProps.Builder.() -> Unit) :
@@ -243,7 +243,7 @@ public open class CloudFormationExecuteChangeSetAction(
      * @param output The name of the output artifact to generate. 
      */
     override fun output(output: Artifact) {
-      cdkBuilder.output(output.let(Artifact::unwrap))
+      cdkBuilder.output(output.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -295,7 +295,7 @@ public open class CloudFormationExecuteChangeSetAction(
      * @param role The Role in which context's this Action will be executing in. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**

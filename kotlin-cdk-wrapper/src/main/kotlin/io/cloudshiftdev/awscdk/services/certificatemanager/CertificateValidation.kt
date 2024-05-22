@@ -48,7 +48,7 @@ public open class CertificateValidation(
         software.amazon.awscdk.services.certificatemanager.CertificateValidation.fromDns().let(CertificateValidation::wrap)
 
     public fun fromDns(hostedZone: IHostedZone): CertificateValidation =
-        software.amazon.awscdk.services.certificatemanager.CertificateValidation.fromDns(hostedZone.let(IHostedZone::unwrap)).let(CertificateValidation::wrap)
+        software.amazon.awscdk.services.certificatemanager.CertificateValidation.fromDns(hostedZone.let(IHostedZone.Companion::unwrap)).let(CertificateValidation::wrap)
 
     public fun fromDnsMultiZone(hostedZones: Map<String, IHostedZone>): CertificateValidation =
         software.amazon.awscdk.services.certificatemanager.CertificateValidation.fromDnsMultiZone(hostedZones.mapValues{IHostedZone.unwrap(it.value)}).let(CertificateValidation::wrap)

@@ -462,7 +462,7 @@ public interface CfnAssetModelProps {
      * in the *AWS IoT SiteWise User Guide* .
      */
     override fun assetModelCompositeModels(assetModelCompositeModels: IResolvable) {
-      cdkBuilder.assetModelCompositeModels(assetModelCompositeModels.let(IResolvable::unwrap))
+      cdkBuilder.assetModelCompositeModels(assetModelCompositeModels.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -529,7 +529,7 @@ public interface CfnAssetModelProps {
      * SiteWise User Guide* .
      */
     override fun assetModelHierarchies(assetModelHierarchies: IResolvable) {
-      cdkBuilder.assetModelHierarchies(assetModelHierarchies.let(IResolvable::unwrap))
+      cdkBuilder.assetModelHierarchies(assetModelHierarchies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -579,7 +579,7 @@ public interface CfnAssetModelProps {
      * SiteWise User Guide* .
      */
     override fun assetModelProperties(assetModelProperties: IResolvable) {
-      cdkBuilder.assetModelProperties(assetModelProperties.let(IResolvable::unwrap))
+      cdkBuilder.assetModelProperties(assetModelProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -627,7 +627,7 @@ public interface CfnAssetModelProps {
      * *AWS IoT SiteWise User Guide* .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

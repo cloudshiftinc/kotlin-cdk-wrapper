@@ -150,7 +150,7 @@ public interface CfnLaunchTemplateProps {
      * @param launchTemplateData The information for the launch template. 
      */
     override fun launchTemplateData(launchTemplateData: IResolvable) {
-      cdkBuilder.launchTemplateData(launchTemplateData.let(IResolvable::unwrap))
+      cdkBuilder.launchTemplateData(launchTemplateData.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -158,7 +158,7 @@ public interface CfnLaunchTemplateProps {
      */
     override
         fun launchTemplateData(launchTemplateData: CfnLaunchTemplate.LaunchTemplateDataProperty) {
-      cdkBuilder.launchTemplateData(launchTemplateData.let(CfnLaunchTemplate.LaunchTemplateDataProperty::unwrap))
+      cdkBuilder.launchTemplateData(launchTemplateData.let(CfnLaunchTemplate.LaunchTemplateDataProperty.Companion::unwrap))
     }
 
     /**
@@ -187,7 +187,7 @@ public interface CfnLaunchTemplateProps {
      * .
      */
     override fun tagSpecifications(tagSpecifications: IResolvable) {
-      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**

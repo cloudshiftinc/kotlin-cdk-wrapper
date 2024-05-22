@@ -53,7 +53,7 @@ public interface QueuePolicyProps {
      * @param queues The set of queues this policy applies to. 
      */
     override fun queues(queues: List<IQueue>) {
-      cdkBuilder.queues(queues.map(IQueue::unwrap))
+      cdkBuilder.queues(queues.map(IQueue.Companion::unwrap))
     }
 
     /**

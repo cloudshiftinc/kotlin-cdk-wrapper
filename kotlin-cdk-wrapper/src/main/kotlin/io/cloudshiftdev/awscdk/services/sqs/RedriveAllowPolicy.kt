@@ -110,7 +110,7 @@ public interface RedriveAllowPolicy {
      * as their dead-letter queue.
      */
     override fun redrivePermission(redrivePermission: RedrivePermission) {
-      cdkBuilder.redrivePermission(redrivePermission.let(RedrivePermission::unwrap))
+      cdkBuilder.redrivePermission(redrivePermission.let(RedrivePermission.Companion::unwrap))
     }
 
     /**
@@ -127,7 +127,7 @@ public interface RedriveAllowPolicy {
      * this parameter cannot be set.
      */
     override fun sourceQueues(sourceQueues: List<IQueue>) {
-      cdkBuilder.sourceQueues(sourceQueues.map(IQueue::unwrap))
+      cdkBuilder.sourceQueues(sourceQueues.map(IQueue.Companion::unwrap))
     }
 
     /**

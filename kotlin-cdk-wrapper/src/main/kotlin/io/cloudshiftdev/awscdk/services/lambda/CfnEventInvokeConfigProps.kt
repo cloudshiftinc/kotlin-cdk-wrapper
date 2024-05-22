@@ -178,7 +178,7 @@ public interface CfnEventInvokeConfigProps {
      * * *Event Bus* - The ARN of an Amazon EventBridge event bus.
      */
     override fun destinationConfig(destinationConfig: IResolvable) {
-      cdkBuilder.destinationConfig(destinationConfig.let(IResolvable::unwrap))
+      cdkBuilder.destinationConfig(destinationConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -192,7 +192,7 @@ public interface CfnEventInvokeConfigProps {
      */
     override
         fun destinationConfig(destinationConfig: CfnEventInvokeConfig.DestinationConfigProperty) {
-      cdkBuilder.destinationConfig(destinationConfig.let(CfnEventInvokeConfig.DestinationConfigProperty::unwrap))
+      cdkBuilder.destinationConfig(destinationConfig.let(CfnEventInvokeConfig.DestinationConfigProperty.Companion::unwrap))
     }
 
     /**

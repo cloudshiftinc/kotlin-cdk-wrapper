@@ -53,8 +53,8 @@ public open class FargateProfile(
     id: String,
     props: FargateProfileProps,
   ) :
-      this(software.amazon.awscdk.services.eks.FargateProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(FargateProfileProps::unwrap))
+      this(software.amazon.awscdk.services.eks.FargateProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(FargateProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -212,7 +212,7 @@ public open class FargateProfile(
      * @param cluster The EKS cluster to apply the Fargate profile to. 
      */
     override fun cluster(cluster: Cluster) {
-      cdkBuilder.cluster(cluster.let(Cluster::unwrap))
+      cdkBuilder.cluster(cluster.let(Cluster.Companion::unwrap))
     }
 
     /**
@@ -240,7 +240,7 @@ public open class FargateProfile(
      * the Fargate profile. 
      */
     override fun podExecutionRole(podExecutionRole: IRole) {
-      cdkBuilder.podExecutionRole(podExecutionRole.let(IRole::unwrap))
+      cdkBuilder.podExecutionRole(podExecutionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -255,7 +255,7 @@ public open class FargateProfile(
      * @param selectors The selectors to match for pods to use this Fargate profile. 
      */
     override fun selectors(selectors: List<Selector>) {
-      cdkBuilder.selectors(selectors.map(Selector::unwrap))
+      cdkBuilder.selectors(selectors.map(Selector.Companion::unwrap))
     }
 
     /**
@@ -285,7 +285,7 @@ public open class FargateProfile(
      * @param subnetSelection Select which subnets to launch your pods into. 
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -317,7 +317,7 @@ public open class FargateProfile(
      * @param vpc The VPC from which to select subnets to launch your pods into. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.eks.FargateProfile = cdkBuilder.build()

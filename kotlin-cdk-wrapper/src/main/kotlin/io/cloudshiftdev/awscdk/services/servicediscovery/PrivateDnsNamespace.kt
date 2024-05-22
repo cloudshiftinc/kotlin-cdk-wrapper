@@ -46,8 +46,8 @@ public open class PrivateDnsNamespace(
     id: String,
     props: PrivateDnsNamespaceProps,
   ) :
-      this(software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(PrivateDnsNamespaceProps::unwrap))
+      this(software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespace(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(PrivateDnsNamespaceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -73,7 +73,8 @@ public open class PrivateDnsNamespace(
    * @param props
    */
   public open fun createService(id: String, props: DnsServiceProps): Service =
-      unwrap(this).createService(id, props.let(DnsServiceProps::unwrap)).let(Service::wrap)
+      unwrap(this).createService(id,
+      props.let(DnsServiceProps.Companion::unwrap)).let(Service::wrap)
 
   /**
    * Creates a service within the namespace.
@@ -190,7 +191,7 @@ public open class PrivateDnsNamespace(
      * @param vpc The Amazon VPC that you want to associate the namespace with. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespace =
@@ -203,8 +204,9 @@ public open class PrivateDnsNamespace(
       id: String,
       attrs: PrivateDnsNamespaceAttributes,
     ): IPrivateDnsNamespace =
-        software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespace.fromPrivateDnsNamespaceAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(PrivateDnsNamespaceAttributes::unwrap)).let(IPrivateDnsNamespace::wrap)
+        software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespace.fromPrivateDnsNamespaceAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        attrs.let(PrivateDnsNamespaceAttributes.Companion::unwrap)).let(IPrivateDnsNamespace::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("290f81154068a36f8c9030fac93d53587f36b821b223b825f369b4b448f72741")

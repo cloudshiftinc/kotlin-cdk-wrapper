@@ -155,7 +155,7 @@ public interface CfnGroupProps {
      * through Amazon EventBridge for the group.
      */
     override fun insightsConfiguration(insightsConfiguration: IResolvable) {
-      cdkBuilder.insightsConfiguration(insightsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.insightsConfiguration(insightsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -167,7 +167,7 @@ public interface CfnGroupProps {
      */
     override
         fun insightsConfiguration(insightsConfiguration: CfnGroup.InsightsConfigurationProperty) {
-      cdkBuilder.insightsConfiguration(insightsConfiguration.let(CfnGroup.InsightsConfigurationProperty::unwrap))
+      cdkBuilder.insightsConfiguration(insightsConfiguration.let(CfnGroup.InsightsConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -187,7 +187,7 @@ public interface CfnGroupProps {
      * @param tags An array of key-value pairs to apply to this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

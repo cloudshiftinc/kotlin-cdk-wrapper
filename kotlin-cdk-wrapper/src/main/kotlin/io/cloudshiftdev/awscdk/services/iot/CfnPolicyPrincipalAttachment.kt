@@ -42,8 +42,8 @@ public open class CfnPolicyPrincipalAttachment(
     id: String,
     props: CfnPolicyPrincipalAttachmentProps,
   ) :
-      this(software.amazon.awscdk.services.iot.CfnPolicyPrincipalAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPolicyPrincipalAttachmentProps::unwrap))
+      this(software.amazon.awscdk.services.iot.CfnPolicyPrincipalAttachment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPolicyPrincipalAttachmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -64,7 +64,7 @@ public open class CfnPolicyPrincipalAttachment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

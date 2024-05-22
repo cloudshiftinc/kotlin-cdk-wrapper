@@ -233,14 +233,14 @@ public interface CfnFlywheelProps {
      * @param dataSecurityConfig Data security configuration.
      */
     override fun dataSecurityConfig(dataSecurityConfig: IResolvable) {
-      cdkBuilder.dataSecurityConfig(dataSecurityConfig.let(IResolvable::unwrap))
+      cdkBuilder.dataSecurityConfig(dataSecurityConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param dataSecurityConfig Data security configuration.
      */
     override fun dataSecurityConfig(dataSecurityConfig: CfnFlywheel.DataSecurityConfigProperty) {
-      cdkBuilder.dataSecurityConfig(dataSecurityConfig.let(CfnFlywheel.DataSecurityConfigProperty::unwrap))
+      cdkBuilder.dataSecurityConfig(dataSecurityConfig.let(CfnFlywheel.DataSecurityConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -272,7 +272,7 @@ public interface CfnFlywheelProps {
      * as the key might be added to an endpoint to indicate its use by the sales department.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -286,14 +286,14 @@ public interface CfnFlywheelProps {
      * @param taskConfig Configuration about the model associated with a flywheel.
      */
     override fun taskConfig(taskConfig: IResolvable) {
-      cdkBuilder.taskConfig(taskConfig.let(IResolvable::unwrap))
+      cdkBuilder.taskConfig(taskConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param taskConfig Configuration about the model associated with a flywheel.
      */
     override fun taskConfig(taskConfig: CfnFlywheel.TaskConfigProperty) {
-      cdkBuilder.taskConfig(taskConfig.let(CfnFlywheel.TaskConfigProperty::unwrap))
+      cdkBuilder.taskConfig(taskConfig.let(CfnFlywheel.TaskConfigProperty.Companion::unwrap))
     }
 
     /**

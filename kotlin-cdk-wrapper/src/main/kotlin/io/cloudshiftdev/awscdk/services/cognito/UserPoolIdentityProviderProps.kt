@@ -97,7 +97,7 @@ public interface UserPoolIdentityProviderProps {
      * attributes of the user pool.
      */
     override fun attributeMapping(attributeMapping: AttributeMapping) {
-      cdkBuilder.attributeMapping(attributeMapping.let(AttributeMapping::unwrap))
+      cdkBuilder.attributeMapping(attributeMapping.let(AttributeMapping.Companion::unwrap))
     }
 
     /**
@@ -113,7 +113,7 @@ public interface UserPoolIdentityProviderProps {
      * @param userPool The user pool to which this construct provides identities. 
      */
     override fun userPool(userPool: IUserPool) {
-      cdkBuilder.userPool(userPool.let(IUserPool::unwrap))
+      cdkBuilder.userPool(userPool.let(IUserPool.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cognito.UserPoolIdentityProviderProps =

@@ -27,7 +27,7 @@ public open class TimeBasedCanaryTrafficRouting(
   cdkObject: software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRouting,
 ) : TrafficRouting(cdkObject) {
   public constructor(props: TimeBasedCanaryTrafficRoutingProps) :
-      this(software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRouting(props.let(TimeBasedCanaryTrafficRoutingProps::unwrap))
+      this(software.amazon.awscdk.services.codedeploy.TimeBasedCanaryTrafficRouting(props.let(TimeBasedCanaryTrafficRoutingProps.Companion::unwrap))
   )
 
   public constructor(props: TimeBasedCanaryTrafficRoutingProps.Builder.() -> Unit) :
@@ -40,7 +40,7 @@ public open class TimeBasedCanaryTrafficRouting(
    * @param _scope 
    */
   public override fun bind(scope: Construct): TrafficRoutingConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(TrafficRoutingConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(TrafficRoutingConfig::wrap)
 
   /**
    * The amount of time between additional traffic shifts.
@@ -84,7 +84,7 @@ public open class TimeBasedCanaryTrafficRouting(
      * @param interval The amount of time between traffic shifts. 
      */
     override fun interval(interval: Duration) {
-      cdkBuilder.interval(interval.let(Duration::unwrap))
+      cdkBuilder.interval(interval.let(Duration.Companion::unwrap))
     }
 
     /**

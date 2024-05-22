@@ -656,7 +656,7 @@ public interface CfnDeliveryStreamProps {
      */
     override
         fun amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration: IResolvable) {
-      cdkBuilder.amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -665,7 +665,7 @@ public interface CfnDeliveryStreamProps {
      */
     override
         fun amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration: CfnDeliveryStream.AmazonOpenSearchServerlessDestinationConfigurationProperty) {
-      cdkBuilder.amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration.let(CfnDeliveryStream.AmazonOpenSearchServerlessDestinationConfigurationProperty::unwrap))
+      cdkBuilder.amazonOpenSearchServerlessDestinationConfiguration(amazonOpenSearchServerlessDestinationConfiguration.let(CfnDeliveryStream.AmazonOpenSearchServerlessDestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -686,7 +686,7 @@ public interface CfnDeliveryStreamProps {
      */
     override
         fun amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration: IResolvable) {
-      cdkBuilder.amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -696,7 +696,7 @@ public interface CfnDeliveryStreamProps {
      */
     override
         fun amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration: CfnDeliveryStream.AmazonopensearchserviceDestinationConfigurationProperty) {
-      cdkBuilder.amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration.let(CfnDeliveryStream.AmazonopensearchserviceDestinationConfigurationProperty::unwrap))
+      cdkBuilder.amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration.let(CfnDeliveryStream.AmazonopensearchserviceDestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -717,7 +717,7 @@ public interface CfnDeliveryStreamProps {
      */
     override
         fun deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput: IResolvable) {
-      cdkBuilder.deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput.let(IResolvable::unwrap))
+      cdkBuilder.deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -726,7 +726,7 @@ public interface CfnDeliveryStreamProps {
      */
     override
         fun deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput: CfnDeliveryStream.DeliveryStreamEncryptionConfigurationInputProperty) {
-      cdkBuilder.deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput.let(CfnDeliveryStream.DeliveryStreamEncryptionConfigurationInputProperty::unwrap))
+      cdkBuilder.deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput.let(CfnDeliveryStream.DeliveryStreamEncryptionConfigurationInputProperty.Companion::unwrap))
     }
 
     /**
@@ -768,7 +768,7 @@ public interface CfnDeliveryStreamProps {
      */
     override
         fun elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration: IResolvable) {
-      cdkBuilder.elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -783,7 +783,7 @@ public interface CfnDeliveryStreamProps {
      */
     override
         fun elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration: CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty) {
-      cdkBuilder.elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration.let(CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty::unwrap))
+      cdkBuilder.elasticsearchDestinationConfiguration(elasticsearchDestinationConfiguration.let(CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -814,7 +814,7 @@ public interface CfnDeliveryStreamProps {
      */
     override
         fun extendedS3DestinationConfiguration(extendedS3DestinationConfiguration: IResolvable) {
-      cdkBuilder.extendedS3DestinationConfiguration(extendedS3DestinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.extendedS3DestinationConfiguration(extendedS3DestinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -828,7 +828,7 @@ public interface CfnDeliveryStreamProps {
      */
     override
         fun extendedS3DestinationConfiguration(extendedS3DestinationConfiguration: CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty) {
-      cdkBuilder.extendedS3DestinationConfiguration(extendedS3DestinationConfiguration.let(CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty::unwrap))
+      cdkBuilder.extendedS3DestinationConfiguration(extendedS3DestinationConfiguration.let(CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -854,7 +854,7 @@ public interface CfnDeliveryStreamProps {
      */
     override
         fun httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration: IResolvable) {
-      cdkBuilder.httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -864,7 +864,7 @@ public interface CfnDeliveryStreamProps {
      */
     override
         fun httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration: CfnDeliveryStream.HttpEndpointDestinationConfigurationProperty) {
-      cdkBuilder.httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration.let(CfnDeliveryStream.HttpEndpointDestinationConfigurationProperty::unwrap))
+      cdkBuilder.httpEndpointDestinationConfiguration(httpEndpointDestinationConfiguration.let(CfnDeliveryStream.HttpEndpointDestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -886,7 +886,7 @@ public interface CfnDeliveryStreamProps {
      * containing the Kinesis stream ARN and the role ARN for the source stream.
      */
     override fun kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration: IResolvable) {
-      cdkBuilder.kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -897,7 +897,7 @@ public interface CfnDeliveryStreamProps {
      */
     override
         fun kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration: CfnDeliveryStream.KinesisStreamSourceConfigurationProperty) {
-      cdkBuilder.kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration.let(CfnDeliveryStream.KinesisStreamSourceConfigurationProperty::unwrap))
+      cdkBuilder.kinesisStreamSourceConfiguration(kinesisStreamSourceConfiguration.let(CfnDeliveryStream.KinesisStreamSourceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -918,7 +918,7 @@ public interface CfnDeliveryStreamProps {
      * source for a delivery stream.
      */
     override fun mskSourceConfiguration(mskSourceConfiguration: IResolvable) {
-      cdkBuilder.mskSourceConfiguration(mskSourceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.mskSourceConfiguration(mskSourceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -927,7 +927,7 @@ public interface CfnDeliveryStreamProps {
      */
     override
         fun mskSourceConfiguration(mskSourceConfiguration: CfnDeliveryStream.MSKSourceConfigurationProperty) {
-      cdkBuilder.mskSourceConfiguration(mskSourceConfiguration.let(CfnDeliveryStream.MSKSourceConfigurationProperty::unwrap))
+      cdkBuilder.mskSourceConfiguration(mskSourceConfiguration.let(CfnDeliveryStream.MSKSourceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -952,7 +952,7 @@ public interface CfnDeliveryStreamProps {
      * .
      */
     override fun redshiftDestinationConfiguration(redshiftDestinationConfiguration: IResolvable) {
-      cdkBuilder.redshiftDestinationConfiguration(redshiftDestinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.redshiftDestinationConfiguration(redshiftDestinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -967,7 +967,7 @@ public interface CfnDeliveryStreamProps {
      */
     override
         fun redshiftDestinationConfiguration(redshiftDestinationConfiguration: CfnDeliveryStream.RedshiftDestinationConfigurationProperty) {
-      cdkBuilder.redshiftDestinationConfiguration(redshiftDestinationConfiguration.let(CfnDeliveryStream.RedshiftDestinationConfigurationProperty::unwrap))
+      cdkBuilder.redshiftDestinationConfiguration(redshiftDestinationConfiguration.let(CfnDeliveryStream.RedshiftDestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -999,7 +999,7 @@ public interface CfnDeliveryStreamProps {
      * .
      */
     override fun s3DestinationConfiguration(s3DestinationConfiguration: IResolvable) {
-      cdkBuilder.s3DestinationConfiguration(s3DestinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.s3DestinationConfiguration(s3DestinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1015,7 +1015,7 @@ public interface CfnDeliveryStreamProps {
      */
     override
         fun s3DestinationConfiguration(s3DestinationConfiguration: CfnDeliveryStream.S3DestinationConfigurationProperty) {
-      cdkBuilder.s3DestinationConfiguration(s3DestinationConfiguration.let(CfnDeliveryStream.S3DestinationConfigurationProperty::unwrap))
+      cdkBuilder.s3DestinationConfiguration(s3DestinationConfiguration.let(CfnDeliveryStream.S3DestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1040,7 +1040,7 @@ public interface CfnDeliveryStreamProps {
      * @param snowflakeDestinationConfiguration Configure Snowflake destination.
      */
     override fun snowflakeDestinationConfiguration(snowflakeDestinationConfiguration: IResolvable) {
-      cdkBuilder.snowflakeDestinationConfiguration(snowflakeDestinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.snowflakeDestinationConfiguration(snowflakeDestinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1048,7 +1048,7 @@ public interface CfnDeliveryStreamProps {
      */
     override
         fun snowflakeDestinationConfiguration(snowflakeDestinationConfiguration: CfnDeliveryStream.SnowflakeDestinationConfigurationProperty) {
-      cdkBuilder.snowflakeDestinationConfiguration(snowflakeDestinationConfiguration.let(CfnDeliveryStream.SnowflakeDestinationConfigurationProperty::unwrap))
+      cdkBuilder.snowflakeDestinationConfiguration(snowflakeDestinationConfiguration.let(CfnDeliveryStream.SnowflakeDestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1066,7 +1066,7 @@ public interface CfnDeliveryStreamProps {
      * delivery stream.
      */
     override fun splunkDestinationConfiguration(splunkDestinationConfiguration: IResolvable) {
-      cdkBuilder.splunkDestinationConfiguration(splunkDestinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.splunkDestinationConfiguration(splunkDestinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1075,7 +1075,7 @@ public interface CfnDeliveryStreamProps {
      */
     override
         fun splunkDestinationConfiguration(splunkDestinationConfiguration: CfnDeliveryStream.SplunkDestinationConfigurationProperty) {
-      cdkBuilder.splunkDestinationConfiguration(splunkDestinationConfiguration.let(CfnDeliveryStream.SplunkDestinationConfigurationProperty::unwrap))
+      cdkBuilder.splunkDestinationConfiguration(splunkDestinationConfiguration.let(CfnDeliveryStream.SplunkDestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1116,7 +1116,7 @@ public interface CfnDeliveryStreamProps {
      * example.](https://docs.aws.amazon.com/firehose/latest/APIReference/API_CreateDeliveryStream.html#API_CreateDeliveryStream_Examples)
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -148,7 +148,7 @@ public interface CompositeAlarmProps {
      * state.
      */
     override fun actionsSuppressor(actionsSuppressor: IAlarm) {
-      cdkBuilder.actionsSuppressor(actionsSuppressor.let(IAlarm::unwrap))
+      cdkBuilder.actionsSuppressor(actionsSuppressor.let(IAlarm.Companion::unwrap))
     }
 
     /**
@@ -157,7 +157,7 @@ public interface CompositeAlarmProps {
      * After this time, the composite alarm performs its actions.
      */
     override fun actionsSuppressorExtensionPeriod(actionsSuppressorExtensionPeriod: Duration) {
-      cdkBuilder.actionsSuppressorExtensionPeriod(actionsSuppressorExtensionPeriod.let(Duration::unwrap))
+      cdkBuilder.actionsSuppressorExtensionPeriod(actionsSuppressorExtensionPeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -166,7 +166,7 @@ public interface CompositeAlarmProps {
      * After this time, the composite alarm performs its actions.
      */
     override fun actionsSuppressorWaitPeriod(actionsSuppressorWaitPeriod: Duration) {
-      cdkBuilder.actionsSuppressorWaitPeriod(actionsSuppressorWaitPeriod.let(Duration::unwrap))
+      cdkBuilder.actionsSuppressorWaitPeriod(actionsSuppressorWaitPeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -181,7 +181,7 @@ public interface CompositeAlarmProps {
      * determine this composite alarm's state. 
      */
     override fun alarmRule(alarmRule: IAlarmRule) {
-      cdkBuilder.alarmRule(alarmRule.let(IAlarmRule::unwrap))
+      cdkBuilder.alarmRule(alarmRule.let(IAlarmRule.Companion::unwrap))
     }
 
     /**

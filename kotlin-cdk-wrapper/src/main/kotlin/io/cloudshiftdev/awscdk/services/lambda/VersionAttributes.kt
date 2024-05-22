@@ -57,7 +57,7 @@ public interface VersionAttributes {
      * @param lambda The lambda function. 
      */
     override fun lambda(lambda: IFunction) {
-      cdkBuilder.lambda(lambda.let(IFunction::unwrap))
+      cdkBuilder.lambda(lambda.let(IFunction.Companion::unwrap))
     }
 
     /**

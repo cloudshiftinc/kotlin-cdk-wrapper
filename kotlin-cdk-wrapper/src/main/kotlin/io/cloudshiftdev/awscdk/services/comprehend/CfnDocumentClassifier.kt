@@ -95,8 +95,8 @@ public open class CfnDocumentClassifier(
     id: String,
     props: CfnDocumentClassifierProps,
   ) :
-      this(software.amazon.awscdk.services.comprehend.CfnDocumentClassifier(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDocumentClassifierProps::unwrap))
+      this(software.amazon.awscdk.services.comprehend.CfnDocumentClassifier(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDocumentClassifierProps.Companion::unwrap))
   )
 
   public constructor(
@@ -152,14 +152,14 @@ public open class CfnDocumentClassifier(
    * Specifies the format and location of the input data for the job.
    */
   public open fun inputDataConfig(`value`: IResolvable) {
-    unwrap(this).setInputDataConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInputDataConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the format and location of the input data for the job.
    */
   public open fun inputDataConfig(`value`: DocumentClassifierInputDataConfigProperty) {
-    unwrap(this).setInputDataConfig(`value`.let(DocumentClassifierInputDataConfigProperty::unwrap))
+    unwrap(this).setInputDataConfig(`value`.let(DocumentClassifierInputDataConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -177,7 +177,7 @@ public open class CfnDocumentClassifier(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -237,14 +237,14 @@ public open class CfnDocumentClassifier(
    * Provides output results configuration parameters for custom classifier jobs.
    */
   public open fun outputDataConfig(`value`: IResolvable) {
-    unwrap(this).setOutputDataConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOutputDataConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Provides output results configuration parameters for custom classifier jobs.
    */
   public open fun outputDataConfig(`value`: DocumentClassifierOutputDataConfigProperty) {
-    unwrap(this).setOutputDataConfig(`value`.let(DocumentClassifierOutputDataConfigProperty::unwrap))
+    unwrap(this).setOutputDataConfig(`value`.let(DocumentClassifierOutputDataConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -265,7 +265,7 @@ public open class CfnDocumentClassifier(
    * Tags to associate with the document classifier.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -310,7 +310,7 @@ public open class CfnDocumentClassifier(
    * are using for your custom classifier.
    */
   public open fun vpcConfig(`value`: IResolvable) {
-    unwrap(this).setVpcConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -318,7 +318,7 @@ public open class CfnDocumentClassifier(
    * are using for your custom classifier.
    */
   public open fun vpcConfig(`value`: VpcConfigProperty) {
-    unwrap(this).setVpcConfig(`value`.let(VpcConfigProperty::unwrap))
+    unwrap(this).setVpcConfig(`value`.let(VpcConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -603,7 +603,7 @@ public open class CfnDocumentClassifier(
      * @param inputDataConfig Specifies the format and location of the input data for the job. 
      */
     override fun inputDataConfig(inputDataConfig: IResolvable) {
-      cdkBuilder.inputDataConfig(inputDataConfig.let(IResolvable::unwrap))
+      cdkBuilder.inputDataConfig(inputDataConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -613,7 +613,7 @@ public open class CfnDocumentClassifier(
      * @param inputDataConfig Specifies the format and location of the input data for the job. 
      */
     override fun inputDataConfig(inputDataConfig: DocumentClassifierInputDataConfigProperty) {
-      cdkBuilder.inputDataConfig(inputDataConfig.let(DocumentClassifierInputDataConfigProperty::unwrap))
+      cdkBuilder.inputDataConfig(inputDataConfig.let(DocumentClassifierInputDataConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -706,7 +706,7 @@ public open class CfnDocumentClassifier(
      * classifier jobs. 
      */
     override fun outputDataConfig(outputDataConfig: IResolvable) {
-      cdkBuilder.outputDataConfig(outputDataConfig.let(IResolvable::unwrap))
+      cdkBuilder.outputDataConfig(outputDataConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -717,7 +717,7 @@ public open class CfnDocumentClassifier(
      * classifier jobs. 
      */
     override fun outputDataConfig(outputDataConfig: DocumentClassifierOutputDataConfigProperty) {
-      cdkBuilder.outputDataConfig(outputDataConfig.let(DocumentClassifierOutputDataConfigProperty::unwrap))
+      cdkBuilder.outputDataConfig(outputDataConfig.let(DocumentClassifierOutputDataConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -744,7 +744,7 @@ public open class CfnDocumentClassifier(
      * @param tags Tags to associate with the document classifier. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -804,7 +804,7 @@ public open class CfnDocumentClassifier(
      * containing the resources you are using for your custom classifier. 
      */
     override fun vpcConfig(vpcConfig: IResolvable) {
-      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -819,7 +819,7 @@ public open class CfnDocumentClassifier(
      * containing the resources you are using for your custom classifier. 
      */
     override fun vpcConfig(vpcConfig: VpcConfigProperty) {
-      cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1507,7 +1507,7 @@ public open class CfnDocumentClassifier(
        * This parameter is required if you set `DataFormat` to `AUGMENTED_MANIFEST` .
        */
       override fun augmentedManifests(augmentedManifests: IResolvable) {
-        cdkBuilder.augmentedManifests(augmentedManifests.let(IResolvable::unwrap))
+        cdkBuilder.augmentedManifests(augmentedManifests.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1554,14 +1554,14 @@ public open class CfnDocumentClassifier(
        * @param documentReaderConfig the value to be set.
        */
       override fun documentReaderConfig(documentReaderConfig: IResolvable) {
-        cdkBuilder.documentReaderConfig(documentReaderConfig.let(IResolvable::unwrap))
+        cdkBuilder.documentReaderConfig(documentReaderConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param documentReaderConfig the value to be set.
        */
       override fun documentReaderConfig(documentReaderConfig: DocumentReaderConfigProperty) {
-        cdkBuilder.documentReaderConfig(documentReaderConfig.let(DocumentReaderConfigProperty::unwrap))
+        cdkBuilder.documentReaderConfig(documentReaderConfig.let(DocumentReaderConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1587,7 +1587,7 @@ public open class CfnDocumentClassifier(
        * This parameter is required in a request to create a native document model.
        */
       override fun documents(documents: IResolvable) {
-        cdkBuilder.documents(documents.let(IResolvable::unwrap))
+        cdkBuilder.documents(documents.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1595,7 +1595,7 @@ public open class CfnDocumentClassifier(
        * This parameter is required in a request to create a native document model.
        */
       override fun documents(documents: DocumentClassifierDocumentsProperty) {
-        cdkBuilder.documents(documents.let(DocumentClassifierDocumentsProperty::unwrap))
+        cdkBuilder.documents(documents.let(DocumentClassifierDocumentsProperty.Companion::unwrap))
       }
 
       /**

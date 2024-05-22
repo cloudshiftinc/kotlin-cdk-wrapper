@@ -147,7 +147,7 @@ public interface BasicTargetTrackingScalingPolicyProps : BaseTargetTrackingProps
      * @param cooldown Period after a scaling completes before another scaling activity can start.
      */
     override fun cooldown(cooldown: Duration) {
-      cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
+      cdkBuilder.cooldown(cooldown.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -158,7 +158,7 @@ public interface BasicTargetTrackingScalingPolicyProps : BaseTargetTrackingProps
      * Exactly one of customMetric or predefinedMetric must be specified.
      */
     override fun customMetric(customMetric: IMetric) {
-      cdkBuilder.customMetric(customMetric.let(IMetric::unwrap))
+      cdkBuilder.customMetric(customMetric.let(IMetric.Companion::unwrap))
     }
 
     /**
@@ -177,7 +177,7 @@ public interface BasicTargetTrackingScalingPolicyProps : BaseTargetTrackingProps
      * metrics to CloudWatch.
      */
     override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
-      cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup.let(Duration::unwrap))
+      cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -188,7 +188,7 @@ public interface BasicTargetTrackingScalingPolicyProps : BaseTargetTrackingProps
      * Exactly one of customMetric or predefinedMetric must be specified.
      */
     override fun predefinedMetric(predefinedMetric: PredefinedMetric) {
-      cdkBuilder.predefinedMetric(predefinedMetric.let(PredefinedMetric::unwrap))
+      cdkBuilder.predefinedMetric(predefinedMetric.let(PredefinedMetric.Companion::unwrap))
     }
 
     /**

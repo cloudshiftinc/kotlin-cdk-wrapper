@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.codecommit
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.String
 import kotlin.Unit
 
@@ -12,47 +13,33 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * // Source stage: read from repository
- * Repository repo = Repository.Builder.create(stack, "TemplateRepo")
- * .repositoryName("template-repo")
+ * PipelineProject project;
+ * Repository repository = Repository.Builder.create(this, "MyRepository")
+ * .repositoryName("MyRepository")
  * .build();
- * Artifact sourceOutput = new Artifact("SourceArtifact");
- * CodeCommitSourceAction source = CodeCommitSourceAction.Builder.create()
- * .actionName("Source")
- * .repository(repo)
+ * PipelineProject project = new PipelineProject(this, "MyProject");
+ * Artifact sourceOutput = new Artifact();
+ * CodeCommitSourceAction sourceAction = CodeCommitSourceAction.Builder.create()
+ * .actionName("CodeCommit")
+ * .repository(repository)
  * .output(sourceOutput)
- * .trigger(CodeCommitTrigger.POLL)
  * .build();
- * Map&lt;String, Object&gt; sourceStage = Map.of(
- * "stageName", "Source",
- * "actions", List.of(source));
- * // Deployment stage: create and deploy changeset with manual approval
- * String stackName = "OurStack";
- * String changeSetName = "StagedChangeSet";
- * Map&lt;String, Object&gt; prodStage = Map.of(
- * "stageName", "Deploy",
- * "actions", List.of(
- * CloudFormationCreateReplaceChangeSetAction.Builder.create()
- * .actionName("PrepareChanges")
- * .stackName(stackName)
- * .changeSetName(changeSetName)
- * .adminPermissions(true)
- * .templatePath(sourceOutput.atPath("template.yaml"))
- * .runOrder(1)
- * .build(),
- * ManualApprovalAction.Builder.create()
- * .actionName("ApproveChanges")
- * .runOrder(2)
- * .build(),
- * CloudFormationExecuteChangeSetAction.Builder.create()
- * .actionName("ExecuteChanges")
- * .stackName(stackName)
- * .changeSetName(changeSetName)
- * .runOrder(3)
- * .build()));
- * Pipeline.Builder.create(stack, "Pipeline")
- * .crossAccountKeys(true)
- * .stages(List.of(sourceStage, prodStage))
+ * CodeBuildAction buildAction = CodeBuildAction.Builder.create()
+ * .actionName("CodeBuild")
+ * .project(project)
+ * .input(sourceOutput)
+ * .outputs(List.of(new Artifact())) // optional
+ * .executeBatchBuild(true) // optional, defaults to false
+ * .combineBatchBuildArtifacts(true)
+ * .build();
+ * Pipeline.Builder.create(this, "MyPipeline")
+ * .stages(List.of(StageProps.builder()
+ * .stageName("Source")
+ * .actions(List.of(sourceAction))
+ * .build(), StageProps.builder()
+ * .stageName("Build")
+ * .actions(List.of(buildAction))
+ * .build()))
  * .build();
  * ```
  */
@@ -73,6 +60,13 @@ public interface RepositoryProps {
    * Default: - No description.
    */
   public fun description(): String? = unwrap(this).getDescription()
+
+  /**
+   * The customer managed key used to encrypt and decrypt the data in repository.
+   *
+   * Default: - Use an AWS managed key
+   */
+  public fun kmsKey(): IKey? = unwrap(this).getKmsKey()?.let(IKey::wrap)
 
   /**
    * Name of the repository.
@@ -99,6 +93,11 @@ public interface RepositoryProps {
     public fun description(description: String)
 
     /**
+     * @param kmsKey The customer managed key used to encrypt and decrypt the data in repository.
+     */
+    public fun kmsKey(kmsKey: IKey)
+
+    /**
      * @param repositoryName Name of the repository. 
      * This property is required for all CodeCommit repositories.
      */
@@ -113,7 +112,7 @@ public interface RepositoryProps {
      * @param code The contents with which to initialize the repository after it has been created.
      */
     override fun code(code: Code) {
-      cdkBuilder.code(code.let(Code::unwrap))
+      cdkBuilder.code(code.let(Code.Companion::unwrap))
     }
 
     /**
@@ -123,6 +122,13 @@ public interface RepositoryProps {
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
+    }
+
+    /**
+     * @param kmsKey The customer managed key used to encrypt and decrypt the data in repository.
+     */
+    override fun kmsKey(kmsKey: IKey) {
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -156,6 +162,13 @@ public interface RepositoryProps {
      * Default: - No description.
      */
     override fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * The customer managed key used to encrypt and decrypt the data in repository.
+     *
+     * Default: - Use an AWS managed key
+     */
+    override fun kmsKey(): IKey? = unwrap(this).getKmsKey()?.let(IKey::wrap)
 
     /**
      * Name of the repository.

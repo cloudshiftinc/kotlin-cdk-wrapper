@@ -74,8 +74,8 @@ public open class CfnFunction(
     id: String,
     props: CfnFunctionProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.CfnFunction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFunctionProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.CfnFunction(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFunctionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -128,7 +128,7 @@ public open class CfnFunction(
    * it’s created.
    */
   public open fun autoPublish(`value`: IResolvable) {
-    unwrap(this).setAutoPublish(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoPublish(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -152,14 +152,14 @@ public open class CfnFunction(
    * Contains configuration information about a CloudFront function.
    */
   public open fun functionConfig(`value`: IResolvable) {
-    unwrap(this).setFunctionConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFunctionConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Contains configuration information about a CloudFront function.
    */
   public open fun functionConfig(`value`: FunctionConfigProperty) {
-    unwrap(this).setFunctionConfig(`value`.let(FunctionConfigProperty::unwrap))
+    unwrap(this).setFunctionConfig(`value`.let(FunctionConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -179,14 +179,14 @@ public open class CfnFunction(
    * Contains metadata about a CloudFront function.
    */
   public open fun functionMetadata(`value`: IResolvable) {
-    unwrap(this).setFunctionMetadata(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFunctionMetadata(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Contains metadata about a CloudFront function.
    */
   public open fun functionMetadata(`value`: FunctionMetadataProperty) {
-    unwrap(this).setFunctionMetadata(`value`.let(FunctionMetadataProperty::unwrap))
+    unwrap(this).setFunctionMetadata(`value`.let(FunctionMetadataProperty.Companion::unwrap))
   }
 
   /**
@@ -203,7 +203,7 @@ public open class CfnFunction(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -353,7 +353,7 @@ public open class CfnFunction(
      * the `LIVE` stage when it’s created. 
      */
     override fun autoPublish(autoPublish: IResolvable) {
-      cdkBuilder.autoPublish(autoPublish.let(IResolvable::unwrap))
+      cdkBuilder.autoPublish(autoPublish.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -378,7 +378,7 @@ public open class CfnFunction(
      * @param functionConfig Contains configuration information about a CloudFront function. 
      */
     override fun functionConfig(functionConfig: IResolvable) {
-      cdkBuilder.functionConfig(functionConfig.let(IResolvable::unwrap))
+      cdkBuilder.functionConfig(functionConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -388,7 +388,7 @@ public open class CfnFunction(
      * @param functionConfig Contains configuration information about a CloudFront function. 
      */
     override fun functionConfig(functionConfig: FunctionConfigProperty) {
-      cdkBuilder.functionConfig(functionConfig.let(FunctionConfigProperty::unwrap))
+      cdkBuilder.functionConfig(functionConfig.let(FunctionConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -409,7 +409,7 @@ public open class CfnFunction(
      * @param functionMetadata Contains metadata about a CloudFront function. 
      */
     override fun functionMetadata(functionMetadata: IResolvable) {
-      cdkBuilder.functionMetadata(functionMetadata.let(IResolvable::unwrap))
+      cdkBuilder.functionMetadata(functionMetadata.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -419,7 +419,7 @@ public open class CfnFunction(
      * @param functionMetadata Contains metadata about a CloudFront function. 
      */
     override fun functionMetadata(functionMetadata: FunctionMetadataProperty) {
-      cdkBuilder.functionMetadata(functionMetadata.let(FunctionMetadataProperty::unwrap))
+      cdkBuilder.functionMetadata(functionMetadata.let(FunctionMetadataProperty.Companion::unwrap))
     }
 
     /**
@@ -557,7 +557,7 @@ public open class CfnFunction(
        * @param keyValueStoreAssociations The configuration for the key value store associations.
        */
       override fun keyValueStoreAssociations(keyValueStoreAssociations: IResolvable) {
-        cdkBuilder.keyValueStoreAssociations(keyValueStoreAssociations.let(IResolvable::unwrap))
+        cdkBuilder.keyValueStoreAssociations(keyValueStoreAssociations.let(IResolvable.Companion::unwrap))
       }
 
       /**

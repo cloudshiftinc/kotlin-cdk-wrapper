@@ -34,8 +34,8 @@ public open class SubscriptionFilter(
     id: String,
     props: SubscriptionFilterProps,
   ) :
-      this(software.amazon.awscdk.services.logs.SubscriptionFilter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SubscriptionFilterProps::unwrap))
+      this(software.amazon.awscdk.services.logs.SubscriptionFilter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SubscriptionFilterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -98,7 +98,7 @@ public open class SubscriptionFilter(
      * @param destination The destination to send the filtered events to. 
      */
     override fun destination(destination: ILogSubscriptionDestination) {
-      cdkBuilder.destination(destination.let(ILogSubscriptionDestination::unwrap))
+      cdkBuilder.destination(destination.let(ILogSubscriptionDestination.Companion::unwrap))
     }
 
     /**
@@ -118,7 +118,7 @@ public open class SubscriptionFilter(
      * @param filterPattern Log events matching this pattern will be sent to the destination. 
      */
     override fun filterPattern(filterPattern: IFilterPattern) {
-      cdkBuilder.filterPattern(filterPattern.let(IFilterPattern::unwrap))
+      cdkBuilder.filterPattern(filterPattern.let(IFilterPattern.Companion::unwrap))
     }
 
     /**
@@ -127,7 +127,7 @@ public open class SubscriptionFilter(
      * @param logGroup The log group to create the subscription on. 
      */
     override fun logGroup(logGroup: ILogGroup) {
-      cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
+      cdkBuilder.logGroup(logGroup.let(ILogGroup.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.logs.SubscriptionFilter = cdkBuilder.build()

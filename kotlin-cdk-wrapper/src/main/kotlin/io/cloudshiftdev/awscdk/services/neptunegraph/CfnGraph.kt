@@ -64,8 +64,8 @@ public open class CfnGraph(
     id: String,
     props: CfnGraphProps,
   ) :
-      this(software.amazon.awscdk.services.neptunegraph.CfnGraph(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGraphProps::unwrap))
+      this(software.amazon.awscdk.services.neptunegraph.CfnGraph(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGraphProps.Companion::unwrap))
   )
 
   public constructor(
@@ -118,7 +118,7 @@ public open class CfnGraph(
    * A value that indicates whether the graph has deletion protection enabled.
    */
   public open fun deletionProtection(`value`: IResolvable) {
-    unwrap(this).setDeletionProtection(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeletionProtection(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -143,7 +143,7 @@ public open class CfnGraph(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -180,7 +180,7 @@ public open class CfnGraph(
    * All access to graphs is IAM authenticated.
    */
   public open fun publicConnectivity(`value`: IResolvable) {
-    unwrap(this).setPublicConnectivity(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPublicConnectivity(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -204,7 +204,7 @@ public open class CfnGraph(
    * Adds metadata tags to the new graph.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -221,14 +221,14 @@ public open class CfnGraph(
    * Specifies the number of dimensions for vector embeddings that will be loaded into the graph.
    */
   public open fun vectorSearchConfiguration(`value`: IResolvable) {
-    unwrap(this).setVectorSearchConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVectorSearchConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the number of dimensions for vector embeddings that will be loaded into the graph.
    */
   public open fun vectorSearchConfiguration(`value`: VectorSearchConfigurationProperty) {
-    unwrap(this).setVectorSearchConfiguration(`value`.let(VectorSearchConfigurationProperty::unwrap))
+    unwrap(this).setVectorSearchConfiguration(`value`.let(VectorSearchConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -436,7 +436,7 @@ public open class CfnGraph(
      * enabled. 
      */
     override fun deletionProtection(deletionProtection: IResolvable) {
-      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable::unwrap))
+      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -513,7 +513,7 @@ public open class CfnGraph(
      * internet. All access to graphs is IAM authenticated. 
      */
     override fun publicConnectivity(publicConnectivity: IResolvable) {
-      cdkBuilder.publicConnectivity(publicConnectivity.let(IResolvable::unwrap))
+      cdkBuilder.publicConnectivity(publicConnectivity.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -538,7 +538,7 @@ public open class CfnGraph(
      * @param tags Adds metadata tags to the new graph. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -562,7 +562,7 @@ public open class CfnGraph(
      * that will be loaded into the graph. 
      */
     override fun vectorSearchConfiguration(vectorSearchConfiguration: IResolvable) {
-      cdkBuilder.vectorSearchConfiguration(vectorSearchConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.vectorSearchConfiguration(vectorSearchConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -576,7 +576,7 @@ public open class CfnGraph(
      */
     override
         fun vectorSearchConfiguration(vectorSearchConfiguration: VectorSearchConfigurationProperty) {
-      cdkBuilder.vectorSearchConfiguration(vectorSearchConfiguration.let(VectorSearchConfigurationProperty::unwrap))
+      cdkBuilder.vectorSearchConfiguration(vectorSearchConfiguration.let(VectorSearchConfigurationProperty.Companion::unwrap))
     }
 
     /**

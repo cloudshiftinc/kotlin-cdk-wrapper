@@ -128,14 +128,14 @@ public interface CfnReplicationSetProps {
      * If deletion protection is enabled, you can't delete the last Region in the replication set.
      */
     override fun deletionProtected(deletionProtected: IResolvable) {
-      cdkBuilder.deletionProtected(deletionProtected.let(IResolvable::unwrap))
+      cdkBuilder.deletionProtected(deletionProtected.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param regions Specifies the Regions of the replication set. 
      */
     override fun regions(regions: IResolvable) {
-      cdkBuilder.regions(regions.let(IResolvable::unwrap))
+      cdkBuilder.regions(regions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -154,7 +154,7 @@ public interface CfnReplicationSetProps {
      * @param tags A list of tags to add to the replication set.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

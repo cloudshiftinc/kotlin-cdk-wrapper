@@ -50,8 +50,8 @@ public open class CfnView(
     id: String,
     props: CfnViewProps,
   ) :
-      this(software.amazon.awscdk.services.connect.CfnView(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnViewProps::unwrap))
+      this(software.amazon.awscdk.services.connect.CfnView(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnViewProps.Companion::unwrap))
   )
 
   public constructor(
@@ -121,7 +121,7 @@ public open class CfnView(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -157,7 +157,7 @@ public open class CfnView(
    * The tags associated with the view resource (not specific to view version).
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -309,7 +309,7 @@ public open class CfnView(
      * @param tags The tags associated with the view resource (not specific to view version). 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

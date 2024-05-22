@@ -119,7 +119,7 @@ public interface UserPoolDomainProps : UserPoolDomainOptions {
      * `customDomain` or `cognitoDomain` must be specified.
      */
     override fun cognitoDomain(cognitoDomain: CognitoDomainOptions) {
-      cdkBuilder.cognitoDomain(cognitoDomain.let(CognitoDomainOptions::unwrap))
+      cdkBuilder.cognitoDomain(cognitoDomain.let(CognitoDomainOptions.Companion::unwrap))
     }
 
     /**
@@ -136,7 +136,7 @@ public interface UserPoolDomainProps : UserPoolDomainOptions {
      * `cognitoDomain` must be specified.
      */
     override fun customDomain(customDomain: CustomDomainOptions) {
-      cdkBuilder.customDomain(customDomain.let(CustomDomainOptions::unwrap))
+      cdkBuilder.customDomain(customDomain.let(CustomDomainOptions.Companion::unwrap))
     }
 
     /**
@@ -152,7 +152,7 @@ public interface UserPoolDomainProps : UserPoolDomainOptions {
      * @param userPool The user pool to which this domain should be associated. 
      */
     override fun userPool(userPool: IUserPool) {
-      cdkBuilder.userPool(userPool.let(IUserPool::unwrap))
+      cdkBuilder.userPool(userPool.let(IUserPool.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cognito.UserPoolDomainProps =

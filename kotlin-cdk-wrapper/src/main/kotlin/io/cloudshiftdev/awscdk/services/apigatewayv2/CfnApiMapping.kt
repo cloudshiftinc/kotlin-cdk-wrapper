@@ -45,8 +45,8 @@ public open class CfnApiMapping(
     id: String,
     props: CfnApiMappingProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.CfnApiMapping(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApiMappingProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.CfnApiMapping(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApiMappingProps.Companion::unwrap))
   )
 
   public constructor(
@@ -103,7 +103,7 @@ public open class CfnApiMapping(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

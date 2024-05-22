@@ -81,7 +81,7 @@ public interface CfnResourceCollectionProps {
      * resources are analyzed for anomalous behavior by DevOps Guru. 
      */
     override fun resourceCollectionFilter(resourceCollectionFilter: IResolvable) {
-      cdkBuilder.resourceCollectionFilter(resourceCollectionFilter.let(IResolvable::unwrap))
+      cdkBuilder.resourceCollectionFilter(resourceCollectionFilter.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -90,7 +90,7 @@ public interface CfnResourceCollectionProps {
      */
     override
         fun resourceCollectionFilter(resourceCollectionFilter: CfnResourceCollection.ResourceCollectionFilterProperty) {
-      cdkBuilder.resourceCollectionFilter(resourceCollectionFilter.let(CfnResourceCollection.ResourceCollectionFilterProperty::unwrap))
+      cdkBuilder.resourceCollectionFilter(resourceCollectionFilter.let(CfnResourceCollection.ResourceCollectionFilterProperty.Companion::unwrap))
     }
 
     /**

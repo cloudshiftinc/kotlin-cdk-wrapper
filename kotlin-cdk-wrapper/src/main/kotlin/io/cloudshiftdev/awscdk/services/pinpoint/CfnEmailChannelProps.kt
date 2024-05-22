@@ -76,6 +76,9 @@ public interface CfnEmailChannelProps {
   public fun identity(): String
 
   /**
+   * The ARN of an IAM role for Amazon Pinpoint to use to send email from your campaigns or journeys
+   * through Amazon SES .
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailchannel.html#cfn-pinpoint-emailchannel-orchestrationsendingrolearn)
    */
   public fun orchestrationSendingRoleArn(): String? = unwrap(this).getOrchestrationSendingRoleArn()
@@ -129,7 +132,8 @@ public interface CfnEmailChannelProps {
     public fun identity(identity: String)
 
     /**
-     * @param orchestrationSendingRoleArn the value to be set.
+     * @param orchestrationSendingRoleArn The ARN of an IAM role for Amazon Pinpoint to use to send
+     * email from your campaigns or journeys through Amazon SES .
      */
     public fun orchestrationSendingRoleArn(orchestrationSendingRoleArn: String)
 
@@ -172,7 +176,7 @@ public interface CfnEmailChannelProps {
      * @param enabled Specifies whether to enable the email channel for the application.
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -192,7 +196,8 @@ public interface CfnEmailChannelProps {
     }
 
     /**
-     * @param orchestrationSendingRoleArn the value to be set.
+     * @param orchestrationSendingRoleArn The ARN of an IAM role for Amazon Pinpoint to use to send
+     * email from your campaigns or journeys through Amazon SES .
      */
     override fun orchestrationSendingRoleArn(orchestrationSendingRoleArn: String) {
       cdkBuilder.orchestrationSendingRoleArn(orchestrationSendingRoleArn)
@@ -254,6 +259,9 @@ public interface CfnEmailChannelProps {
     override fun identity(): String = unwrap(this).getIdentity()
 
     /**
+     * The ARN of an IAM role for Amazon Pinpoint to use to send email from your campaigns or
+     * journeys through Amazon SES .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailchannel.html#cfn-pinpoint-emailchannel-orchestrationsendingrolearn)
      */
     override fun orchestrationSendingRoleArn(): String? =

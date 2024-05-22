@@ -31,7 +31,7 @@ public abstract class SubnetFilter(
    * @param _subnets 
    */
   public open fun selectSubnets(subnets: List<ISubnet>): List<ISubnet> =
-      unwrap(this).selectSubnets(subnets.map(ISubnet::unwrap)).map(ISubnet::wrap)
+      unwrap(this).selectSubnets(subnets.map(ISubnet.Companion::unwrap)).map(ISubnet::wrap)
 
   /**
    * Executes the subnet filtering logic, returning a filtered set of subnets.

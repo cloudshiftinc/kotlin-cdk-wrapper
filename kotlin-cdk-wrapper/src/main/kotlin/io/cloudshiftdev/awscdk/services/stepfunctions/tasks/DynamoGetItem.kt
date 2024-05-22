@@ -42,8 +42,8 @@ public open class DynamoGetItem(
     id: String,
     props: DynamoGetItemProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.DynamoGetItem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DynamoGetItemProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.DynamoGetItem(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DynamoGetItemProps.Companion::unwrap))
   )
 
   public constructor(
@@ -354,7 +354,7 @@ public open class DynamoGetItem(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -396,7 +396,7 @@ public open class DynamoGetItem(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -410,7 +410,7 @@ public open class DynamoGetItem(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -445,7 +445,7 @@ public open class DynamoGetItem(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -493,7 +493,7 @@ public open class DynamoGetItem(
      * more attributes to retrieve from the table. 
      */
     override fun projectionExpression(projectionExpression: List<DynamoProjectionExpression>) {
-      cdkBuilder.projectionExpression(projectionExpression.map(DynamoProjectionExpression::unwrap))
+      cdkBuilder.projectionExpression(projectionExpression.map(DynamoProjectionExpression.Companion::unwrap))
     }
 
     /**
@@ -553,7 +553,7 @@ public open class DynamoGetItem(
      * consumption that is returned in the response. 
      */
     override fun returnConsumedCapacity(returnConsumedCapacity: DynamoConsumedCapacity) {
-      cdkBuilder.returnConsumedCapacity(returnConsumedCapacity.let(DynamoConsumedCapacity::unwrap))
+      cdkBuilder.returnConsumedCapacity(returnConsumedCapacity.let(DynamoConsumedCapacity.Companion::unwrap))
     }
 
     /**
@@ -573,7 +573,7 @@ public open class DynamoGetItem(
      * @param table The name of the table containing the requested item. 
      */
     override fun table(table: ITable) {
-      cdkBuilder.table(table.let(ITable::unwrap))
+      cdkBuilder.table(table.let(ITable.Companion::unwrap))
     }
 
     /**
@@ -587,7 +587,7 @@ public open class DynamoGetItem(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -600,7 +600,7 @@ public open class DynamoGetItem(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.DynamoGetItem =

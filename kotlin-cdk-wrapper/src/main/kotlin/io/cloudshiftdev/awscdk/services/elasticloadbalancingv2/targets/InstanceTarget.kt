@@ -21,11 +21,11 @@ public open class InstanceTarget(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceTarget,
 ) : InstanceIdTarget(cdkObject) {
   public constructor(instance: Instance) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceTarget(instance.let(Instance::unwrap))
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceTarget(instance.let(Instance.Companion::unwrap))
   )
 
   public constructor(instance: Instance, port: Number) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceTarget(instance.let(Instance::unwrap),
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.InstanceTarget(instance.let(Instance.Companion::unwrap),
       port)
   )
 

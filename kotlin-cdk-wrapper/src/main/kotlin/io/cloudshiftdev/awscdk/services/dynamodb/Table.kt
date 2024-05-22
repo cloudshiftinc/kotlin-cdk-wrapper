@@ -52,8 +52,8 @@ public open class Table(
     id: String,
     props: TableProps,
   ) :
-      this(software.amazon.awscdk.services.dynamodb.Table(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(TableProps::unwrap))
+      this(software.amazon.awscdk.services.dynamodb.Table(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(TableProps.Companion::unwrap))
   )
 
   public constructor(
@@ -69,7 +69,7 @@ public open class Table(
    * @param props the property of global secondary index. 
    */
   public open fun addGlobalSecondaryIndex(props: GlobalSecondaryIndexProps) {
-    unwrap(this).addGlobalSecondaryIndex(props.let(GlobalSecondaryIndexProps::unwrap))
+    unwrap(this).addGlobalSecondaryIndex(props.let(GlobalSecondaryIndexProps.Companion::unwrap))
   }
 
   /**
@@ -88,7 +88,7 @@ public open class Table(
    * @param props the property of local secondary index. 
    */
   public open fun addLocalSecondaryIndex(props: LocalSecondaryIndexProps) {
-    unwrap(this).addLocalSecondaryIndex(props.let(LocalSecondaryIndexProps::unwrap))
+    unwrap(this).addLocalSecondaryIndex(props.let(LocalSecondaryIndexProps.Companion::unwrap))
   }
 
   /**
@@ -111,7 +111,7 @@ public open class Table(
   public open fun autoScaleGlobalSecondaryIndexReadCapacity(indexName: String,
       props: EnableScalingProps): IScalableTableAttribute =
       unwrap(this).autoScaleGlobalSecondaryIndexReadCapacity(indexName,
-      props.let(EnableScalingProps::unwrap)).let(IScalableTableAttribute::wrap)
+      props.let(EnableScalingProps.Companion::unwrap)).let(IScalableTableAttribute::wrap)
 
   /**
    * Enable read capacity scaling for the given GSI.
@@ -136,7 +136,7 @@ public open class Table(
   public open fun autoScaleGlobalSecondaryIndexWriteCapacity(indexName: String,
       props: EnableScalingProps): IScalableTableAttribute =
       unwrap(this).autoScaleGlobalSecondaryIndexWriteCapacity(indexName,
-      props.let(EnableScalingProps::unwrap)).let(IScalableTableAttribute::wrap)
+      props.let(EnableScalingProps.Companion::unwrap)).let(IScalableTableAttribute::wrap)
 
   /**
    * Enable write capacity scaling for the given GSI.
@@ -158,7 +158,7 @@ public open class Table(
    * @param props 
    */
   public open fun autoScaleReadCapacity(props: EnableScalingProps): IScalableTableAttribute =
-      unwrap(this).autoScaleReadCapacity(props.let(EnableScalingProps::unwrap)).let(IScalableTableAttribute::wrap)
+      unwrap(this).autoScaleReadCapacity(props.let(EnableScalingProps.Companion::unwrap)).let(IScalableTableAttribute::wrap)
 
   /**
    * Enable read capacity scaling for this table.
@@ -178,7 +178,7 @@ public open class Table(
    * @param props 
    */
   public open fun autoScaleWriteCapacity(props: EnableScalingProps): IScalableTableAttribute =
-      unwrap(this).autoScaleWriteCapacity(props.let(EnableScalingProps::unwrap)).let(IScalableTableAttribute::wrap)
+      unwrap(this).autoScaleWriteCapacity(props.let(EnableScalingProps.Companion::unwrap)).let(IScalableTableAttribute::wrap)
 
   /**
    * Enable write capacity scaling for this table.
@@ -519,7 +519,7 @@ public open class Table(
      * manage capacity. 
      */
     override fun billingMode(billingMode: BillingMode) {
-      cdkBuilder.billingMode(billingMode.let(BillingMode::unwrap))
+      cdkBuilder.billingMode(billingMode.let(BillingMode.Companion::unwrap))
     }
 
     /**
@@ -565,7 +565,7 @@ public open class Table(
      * enabled. 
      */
     override fun encryption(encryption: TableEncryption) {
-      cdkBuilder.encryption(encryption.let(TableEncryption::unwrap))
+      cdkBuilder.encryption(encryption.let(TableEncryption.Companion::unwrap))
     }
 
     /**
@@ -581,7 +581,7 @@ public open class Table(
      * @param encryptionKey External KMS key to use for table encryption. 
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -593,7 +593,7 @@ public open class Table(
      * table. 
      */
     override fun importSource(importSource: ImportSourceSpecification) {
-      cdkBuilder.importSource(importSource.let(ImportSourceSpecification::unwrap))
+      cdkBuilder.importSource(importSource.let(ImportSourceSpecification.Companion::unwrap))
     }
 
     /**
@@ -617,7 +617,7 @@ public open class Table(
      * @param kinesisStream Kinesis Data Stream to capture item-level changes for the table. 
      */
     override fun kinesisStream(kinesisStream: IStream) {
-      cdkBuilder.kinesisStream(kinesisStream.let(IStream::unwrap))
+      cdkBuilder.kinesisStream(kinesisStream.let(IStream.Companion::unwrap))
     }
 
     /**
@@ -626,7 +626,7 @@ public open class Table(
      * @param partitionKey Partition key attribute definition. 
      */
     override fun partitionKey(partitionKey: Attribute) {
-      cdkBuilder.partitionKey(partitionKey.let(Attribute::unwrap))
+      cdkBuilder.partitionKey(partitionKey.let(Attribute.Companion::unwrap))
     }
 
     /**
@@ -674,7 +674,7 @@ public open class Table(
      * @param removalPolicy The removal policy to apply to the DynamoDB Table. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -706,7 +706,7 @@ public open class Table(
      * @param replicationTimeout The timeout for a table replication operation in a single region. 
      */
     override fun replicationTimeout(replicationTimeout: Duration) {
-      cdkBuilder.replicationTimeout(replicationTimeout.let(Duration::unwrap))
+      cdkBuilder.replicationTimeout(replicationTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -717,7 +717,7 @@ public open class Table(
      * @param sortKey Sort key attribute definition. 
      */
     override fun sortKey(sortKey: Attribute) {
-      cdkBuilder.sortKey(sortKey.let(Attribute::unwrap))
+      cdkBuilder.sortKey(sortKey.let(Attribute.Companion::unwrap))
     }
 
     /**
@@ -741,7 +741,7 @@ public open class Table(
      * information is written to the stream for this table. 
      */
     override fun stream(stream: StreamViewType) {
-      cdkBuilder.stream(stream.let(StreamViewType::unwrap))
+      cdkBuilder.stream(stream.let(StreamViewType.Companion::unwrap))
     }
 
     /**
@@ -752,7 +752,7 @@ public open class Table(
      * @param tableClass Specify the table class. 
      */
     override fun tableClass(tableClass: TableClass) {
-      cdkBuilder.tableClass(tableClass.let(TableClass::unwrap))
+      cdkBuilder.tableClass(tableClass.let(TableClass.Companion::unwrap))
     }
 
     /**
@@ -831,7 +831,7 @@ public open class Table(
       id: String,
       tableArn: String,
     ): ITable =
-        software.amazon.awscdk.services.dynamodb.Table.fromTableArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.dynamodb.Table.fromTableArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, tableArn).let(ITable::wrap)
 
     public fun fromTableAttributes(
@@ -839,8 +839,8 @@ public open class Table(
       id: String,
       attrs: TableAttributes,
     ): ITable =
-        software.amazon.awscdk.services.dynamodb.Table.fromTableAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(TableAttributes::unwrap)).let(ITable::wrap)
+        software.amazon.awscdk.services.dynamodb.Table.fromTableAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(TableAttributes.Companion::unwrap)).let(ITable::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("62bcd05214907d2b15967422d696b87c576a19fd7d7eda43e7c503e51c260176")
@@ -855,7 +855,7 @@ public open class Table(
       id: String,
       tableName: String,
     ): ITable =
-        software.amazon.awscdk.services.dynamodb.Table.fromTableName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.dynamodb.Table.fromTableName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, tableName).let(ITable::wrap)
 
     public operator fun invoke(

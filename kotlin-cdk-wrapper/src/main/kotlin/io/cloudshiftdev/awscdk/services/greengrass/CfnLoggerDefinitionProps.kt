@@ -176,7 +176,7 @@ public interface CfnLoggerDefinitionProps {
      * resource and specify the ID of this logger definition.
      */
     override fun initialVersion(initialVersion: IResolvable) {
-      cdkBuilder.initialVersion(initialVersion.let(IResolvable::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -193,7 +193,7 @@ public interface CfnLoggerDefinitionProps {
      */
     override
         fun initialVersion(initialVersion: CfnLoggerDefinition.LoggerDefinitionVersionProperty) {
-      cdkBuilder.initialVersion(initialVersion.let(CfnLoggerDefinition.LoggerDefinitionVersionProperty::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(CfnLoggerDefinition.LoggerDefinitionVersionProperty.Companion::unwrap))
     }
 
     /**

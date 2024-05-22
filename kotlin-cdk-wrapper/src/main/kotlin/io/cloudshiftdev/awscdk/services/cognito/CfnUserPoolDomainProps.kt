@@ -121,7 +121,7 @@ public interface CfnUserPoolDomainProps {
      * Use this object to specify an SSL certificate that is managed by ACM.
      */
     override fun customDomainConfig(customDomainConfig: IResolvable) {
-      cdkBuilder.customDomainConfig(customDomainConfig.let(IResolvable::unwrap))
+      cdkBuilder.customDomainConfig(customDomainConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -131,7 +131,7 @@ public interface CfnUserPoolDomainProps {
      */
     override
         fun customDomainConfig(customDomainConfig: CfnUserPoolDomain.CustomDomainConfigTypeProperty) {
-      cdkBuilder.customDomainConfig(customDomainConfig.let(CfnUserPoolDomain.CustomDomainConfigTypeProperty::unwrap))
+      cdkBuilder.customDomainConfig(customDomainConfig.let(CfnUserPoolDomain.CustomDomainConfigTypeProperty.Companion::unwrap))
     }
 
     /**

@@ -137,7 +137,7 @@ public interface UserPoolIdentityProviderGoogleProps : UserPoolIdentityProviderP
      * attributes of the user pool.
      */
     override fun attributeMapping(attributeMapping: AttributeMapping) {
-      cdkBuilder.attributeMapping(attributeMapping.let(AttributeMapping::unwrap))
+      cdkBuilder.attributeMapping(attributeMapping.let(AttributeMapping.Companion::unwrap))
     }
 
     /**
@@ -171,7 +171,7 @@ public interface UserPoolIdentityProviderGoogleProps : UserPoolIdentityProviderP
      * authenticate the client as SecretValue.
      */
     override fun clientSecretValue(clientSecretValue: SecretValue) {
-      cdkBuilder.clientSecretValue(clientSecretValue.let(SecretValue::unwrap))
+      cdkBuilder.clientSecretValue(clientSecretValue.let(SecretValue.Companion::unwrap))
     }
 
     /**
@@ -192,7 +192,7 @@ public interface UserPoolIdentityProviderGoogleProps : UserPoolIdentityProviderP
      * @param userPool The user pool to which this construct provides identities. 
      */
     override fun userPool(userPool: IUserPool) {
-      cdkBuilder.userPool(userPool.let(IUserPool::unwrap))
+      cdkBuilder.userPool(userPool.let(IUserPool.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cognito.UserPoolIdentityProviderGoogleProps

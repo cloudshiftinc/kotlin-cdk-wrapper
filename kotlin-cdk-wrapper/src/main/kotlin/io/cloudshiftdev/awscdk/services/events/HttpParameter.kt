@@ -30,7 +30,7 @@ public abstract class HttpParameter(
 
   public companion object {
     public fun fromSecret(`value`: SecretValue): HttpParameter =
-        software.amazon.awscdk.services.events.HttpParameter.fromSecret(`value`.let(SecretValue::unwrap)).let(HttpParameter::wrap)
+        software.amazon.awscdk.services.events.HttpParameter.fromSecret(`value`.let(SecretValue.Companion::unwrap)).let(HttpParameter::wrap)
 
     public fun fromString(`value`: String): HttpParameter =
         software.amazon.awscdk.services.events.HttpParameter.fromString(`value`).let(HttpParameter::wrap)

@@ -125,7 +125,7 @@ public interface ReceiptRuleSetProps {
      * order as they appear in the list.
      */
     override fun rules(rules: List<ReceiptRuleOptions>) {
-      cdkBuilder.rules(rules.map(ReceiptRuleOptions::unwrap))
+      cdkBuilder.rules(rules.map(ReceiptRuleOptions.Companion::unwrap))
     }
 
     /**

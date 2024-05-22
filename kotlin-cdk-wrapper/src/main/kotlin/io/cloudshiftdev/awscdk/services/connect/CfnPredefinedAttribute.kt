@@ -46,8 +46,8 @@ public open class CfnPredefinedAttribute(
     id: String,
     props: CfnPredefinedAttributeProps,
   ) :
-      this(software.amazon.awscdk.services.connect.CfnPredefinedAttribute(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPredefinedAttributeProps::unwrap))
+      this(software.amazon.awscdk.services.connect.CfnPredefinedAttribute(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPredefinedAttributeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -74,7 +74,7 @@ public open class CfnPredefinedAttribute(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -110,14 +110,14 @@ public open class CfnPredefinedAttribute(
    * The values of a predefined attribute.
    */
   public open fun values(`value`: IResolvable) {
-    unwrap(this).setValues(`value`.let(IResolvable::unwrap))
+    unwrap(this).setValues(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The values of a predefined attribute.
    */
   public open fun values(`value`: ValuesProperty) {
-    unwrap(this).setValues(`value`.let(ValuesProperty::unwrap))
+    unwrap(this).setValues(`value`.let(ValuesProperty.Companion::unwrap))
   }
 
   /**
@@ -210,7 +210,7 @@ public open class CfnPredefinedAttribute(
      * @param values The values of a predefined attribute. 
      */
     override fun values(values: IResolvable) {
-      cdkBuilder.values(values.let(IResolvable::unwrap))
+      cdkBuilder.values(values.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -220,7 +220,7 @@ public open class CfnPredefinedAttribute(
      * @param values The values of a predefined attribute. 
      */
     override fun values(values: ValuesProperty) {
-      cdkBuilder.values(values.let(ValuesProperty::unwrap))
+      cdkBuilder.values(values.let(ValuesProperty.Companion::unwrap))
     }
 
     /**

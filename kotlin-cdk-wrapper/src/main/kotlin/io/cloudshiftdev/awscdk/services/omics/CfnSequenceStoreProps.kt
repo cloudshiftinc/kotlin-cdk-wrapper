@@ -148,14 +148,14 @@ public interface CfnSequenceStoreProps {
      * @param sseConfig Server-side encryption (SSE) settings for the store.
      */
     override fun sseConfig(sseConfig: IResolvable) {
-      cdkBuilder.sseConfig(sseConfig.let(IResolvable::unwrap))
+      cdkBuilder.sseConfig(sseConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param sseConfig Server-side encryption (SSE) settings for the store.
      */
     override fun sseConfig(sseConfig: CfnSequenceStore.SseConfigProperty) {
-      cdkBuilder.sseConfig(sseConfig.let(CfnSequenceStore.SseConfigProperty::unwrap))
+      cdkBuilder.sseConfig(sseConfig.let(CfnSequenceStore.SseConfigProperty.Companion::unwrap))
     }
 
     /**

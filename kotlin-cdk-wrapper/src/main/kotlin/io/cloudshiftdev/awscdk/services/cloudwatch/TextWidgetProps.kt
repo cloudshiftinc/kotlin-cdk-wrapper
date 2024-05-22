@@ -83,7 +83,7 @@ public interface TextWidgetProps {
      * @param background Background for the widget.
      */
     override fun background(background: TextWidgetBackground) {
-      cdkBuilder.background(background.let(TextWidgetBackground::unwrap))
+      cdkBuilder.background(background.let(TextWidgetBackground.Companion::unwrap))
     }
 
     /**

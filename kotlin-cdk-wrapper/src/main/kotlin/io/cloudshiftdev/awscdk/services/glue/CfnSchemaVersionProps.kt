@@ -83,14 +83,14 @@ public interface CfnSchemaVersionProps {
      * @param schema The schema that includes the schema version. 
      */
     override fun schema(schema: IResolvable) {
-      cdkBuilder.schema(schema.let(IResolvable::unwrap))
+      cdkBuilder.schema(schema.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param schema The schema that includes the schema version. 
      */
     override fun schema(schema: CfnSchemaVersion.SchemaProperty) {
-      cdkBuilder.schema(schema.let(CfnSchemaVersion.SchemaProperty::unwrap))
+      cdkBuilder.schema(schema.let(CfnSchemaVersion.SchemaProperty.Companion::unwrap))
     }
 
     /**

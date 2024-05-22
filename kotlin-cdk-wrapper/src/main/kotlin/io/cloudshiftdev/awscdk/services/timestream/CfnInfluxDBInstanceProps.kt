@@ -413,7 +413,7 @@ public interface CfnInfluxDBInstanceProps {
      * S3 bucket.
      */
     override fun logDeliveryConfiguration(logDeliveryConfiguration: IResolvable) {
-      cdkBuilder.logDeliveryConfiguration(logDeliveryConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.logDeliveryConfiguration(logDeliveryConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -422,7 +422,7 @@ public interface CfnInfluxDBInstanceProps {
      */
     override
         fun logDeliveryConfiguration(logDeliveryConfiguration: CfnInfluxDBInstance.LogDeliveryConfigurationProperty) {
-      cdkBuilder.logDeliveryConfiguration(logDeliveryConfiguration.let(CfnInfluxDBInstance.LogDeliveryConfigurationProperty::unwrap))
+      cdkBuilder.logDeliveryConfiguration(logDeliveryConfiguration.let(CfnInfluxDBInstance.LogDeliveryConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -476,14 +476,14 @@ public interface CfnInfluxDBInstanceProps {
      * @param publiclyAccessible Configures the DB instance with a public IP to facilitate access.
      */
     override fun publiclyAccessible(publiclyAccessible: IResolvable) {
-      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
+      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param tags A list of key-value pairs to associate with the DB instance.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

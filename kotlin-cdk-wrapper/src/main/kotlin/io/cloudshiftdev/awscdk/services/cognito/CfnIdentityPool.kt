@@ -49,8 +49,8 @@ public open class CfnIdentityPool(
     id: String,
     props: CfnIdentityPoolProps,
   ) :
-      this(software.amazon.awscdk.services.cognito.CfnIdentityPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnIdentityPoolProps::unwrap))
+      this(software.amazon.awscdk.services.cognito.CfnIdentityPool(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnIdentityPoolProps.Companion::unwrap))
   )
 
   public constructor(
@@ -76,7 +76,7 @@ public open class CfnIdentityPool(
    * Enables the Basic (Classic) authentication flow.
    */
   public open fun allowClassicFlow(`value`: IResolvable) {
-    unwrap(this).setAllowClassicFlow(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAllowClassicFlow(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -96,7 +96,7 @@ public open class CfnIdentityPool(
    * Specifies whether the identity pool supports unauthenticated logins.
    */
   public open fun allowUnauthenticatedIdentities(`value`: IResolvable) {
-    unwrap(this).setAllowUnauthenticatedIdentities(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAllowUnauthenticatedIdentities(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -130,7 +130,7 @@ public open class CfnIdentityPool(
    * The Amazon Cognito user pools and their client IDs.
    */
   public open fun cognitoIdentityProviders(`value`: IResolvable) {
-    unwrap(this).setCognitoIdentityProviders(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCognitoIdentityProviders(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -155,14 +155,14 @@ public open class CfnIdentityPool(
    * Configuration options for configuring Amazon Cognito streams.
    */
   public open fun cognitoStreams(`value`: IResolvable) {
-    unwrap(this).setCognitoStreams(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCognitoStreams(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration options for configuring Amazon Cognito streams.
    */
   public open fun cognitoStreams(`value`: CognitoStreamsProperty) {
-    unwrap(this).setCognitoStreams(`value`.let(CognitoStreamsProperty::unwrap))
+    unwrap(this).setCognitoStreams(`value`.let(CognitoStreamsProperty.Companion::unwrap))
   }
 
   /**
@@ -203,7 +203,7 @@ public open class CfnIdentityPool(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -234,14 +234,14 @@ public open class CfnIdentityPool(
    * The configuration options to be applied to the identity pool.
    */
   public open fun pushSync(`value`: IResolvable) {
-    unwrap(this).setPushSync(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPushSync(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration options to be applied to the identity pool.
    */
   public open fun pushSync(`value`: PushSyncProperty) {
-    unwrap(this).setPushSync(`value`.let(PushSyncProperty::unwrap))
+    unwrap(this).setPushSync(`value`.let(PushSyncProperty.Companion::unwrap))
   }
 
   /**
@@ -505,7 +505,7 @@ public open class CfnIdentityPool(
      * @param allowClassicFlow Enables the Basic (Classic) authentication flow. 
      */
     override fun allowClassicFlow(allowClassicFlow: IResolvable) {
-      cdkBuilder.allowClassicFlow(allowClassicFlow.let(IResolvable::unwrap))
+      cdkBuilder.allowClassicFlow(allowClassicFlow.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -527,7 +527,7 @@ public open class CfnIdentityPool(
      * unauthenticated logins. 
      */
     override fun allowUnauthenticatedIdentities(allowUnauthenticatedIdentities: IResolvable) {
-      cdkBuilder.allowUnauthenticatedIdentities(allowUnauthenticatedIdentities.let(IResolvable::unwrap))
+      cdkBuilder.allowUnauthenticatedIdentities(allowUnauthenticatedIdentities.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -547,7 +547,7 @@ public open class CfnIdentityPool(
      * @param cognitoIdentityProviders The Amazon Cognito user pools and their client IDs. 
      */
     override fun cognitoIdentityProviders(cognitoIdentityProviders: IResolvable) {
-      cdkBuilder.cognitoIdentityProviders(cognitoIdentityProviders.let(IResolvable::unwrap))
+      cdkBuilder.cognitoIdentityProviders(cognitoIdentityProviders.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -576,7 +576,7 @@ public open class CfnIdentityPool(
      * @param cognitoStreams Configuration options for configuring Amazon Cognito streams. 
      */
     override fun cognitoStreams(cognitoStreams: IResolvable) {
-      cdkBuilder.cognitoStreams(cognitoStreams.let(IResolvable::unwrap))
+      cdkBuilder.cognitoStreams(cognitoStreams.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -586,7 +586,7 @@ public open class CfnIdentityPool(
      * @param cognitoStreams Configuration options for configuring Amazon Cognito streams. 
      */
     override fun cognitoStreams(cognitoStreams: CognitoStreamsProperty) {
-      cdkBuilder.cognitoStreams(cognitoStreams.let(CognitoStreamsProperty::unwrap))
+      cdkBuilder.cognitoStreams(cognitoStreams.let(CognitoStreamsProperty.Companion::unwrap))
     }
 
     /**
@@ -662,7 +662,7 @@ public open class CfnIdentityPool(
      * @param pushSync The configuration options to be applied to the identity pool. 
      */
     override fun pushSync(pushSync: IResolvable) {
-      cdkBuilder.pushSync(pushSync.let(IResolvable::unwrap))
+      cdkBuilder.pushSync(pushSync.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -672,7 +672,7 @@ public open class CfnIdentityPool(
      * @param pushSync The configuration options to be applied to the identity pool. 
      */
     override fun pushSync(pushSync: PushSyncProperty) {
-      cdkBuilder.pushSync(pushSync.let(PushSyncProperty::unwrap))
+      cdkBuilder.pushSync(pushSync.let(PushSyncProperty.Companion::unwrap))
     }
 
     /**
@@ -876,7 +876,7 @@ public open class CfnIdentityPool(
        * If the user is signed out or deleted, the identity pool returns a 400 Not Authorized error.
        */
       override fun serverSideTokenCheck(serverSideTokenCheck: IResolvable) {
-        cdkBuilder.serverSideTokenCheck(serverSideTokenCheck.let(IResolvable::unwrap))
+        cdkBuilder.serverSideTokenCheck(serverSideTokenCheck.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

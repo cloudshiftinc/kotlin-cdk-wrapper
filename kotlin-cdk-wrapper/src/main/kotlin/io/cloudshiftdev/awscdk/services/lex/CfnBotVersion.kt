@@ -56,8 +56,8 @@ public open class CfnBotVersion(
     id: String,
     props: CfnBotVersionProps,
   ) :
-      this(software.amazon.awscdk.services.lex.CfnBotVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnBotVersionProps::unwrap))
+      this(software.amazon.awscdk.services.lex.CfnBotVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnBotVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -94,7 +94,7 @@ public open class CfnBotVersion(
    * Specifies the locales that Amazon Lex adds to this version.
    */
   public open fun botVersionLocaleSpecification(`value`: IResolvable) {
-    unwrap(this).setBotVersionLocaleSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBotVersionLocaleSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -128,7 +128,7 @@ public open class CfnBotVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -221,7 +221,7 @@ public open class CfnBotVersion(
      * version. 
      */
     override fun botVersionLocaleSpecification(botVersionLocaleSpecification: IResolvable) {
-      cdkBuilder.botVersionLocaleSpecification(botVersionLocaleSpecification.let(IResolvable::unwrap))
+      cdkBuilder.botVersionLocaleSpecification(botVersionLocaleSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -447,7 +447,7 @@ public open class CfnBotVersion(
        * @param botVersionLocaleDetails The version of a bot used for a bot locale. 
        */
       override fun botVersionLocaleDetails(botVersionLocaleDetails: IResolvable) {
-        cdkBuilder.botVersionLocaleDetails(botVersionLocaleDetails.let(IResolvable::unwrap))
+        cdkBuilder.botVersionLocaleDetails(botVersionLocaleDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -455,7 +455,7 @@ public open class CfnBotVersion(
        */
       override
           fun botVersionLocaleDetails(botVersionLocaleDetails: BotVersionLocaleDetailsProperty) {
-        cdkBuilder.botVersionLocaleDetails(botVersionLocaleDetails.let(BotVersionLocaleDetailsProperty::unwrap))
+        cdkBuilder.botVersionLocaleDetails(botVersionLocaleDetails.let(BotVersionLocaleDetailsProperty.Companion::unwrap))
       }
 
       /**

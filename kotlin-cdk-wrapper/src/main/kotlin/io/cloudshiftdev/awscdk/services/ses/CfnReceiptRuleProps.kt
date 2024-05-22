@@ -156,7 +156,7 @@ public interface CfnReceiptRuleProps {
      * domains, enabled status, scan status, and TLS policy. 
      */
     override fun rule(rule: IResolvable) {
-      cdkBuilder.rule(rule.let(IResolvable::unwrap))
+      cdkBuilder.rule(rule.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -164,7 +164,7 @@ public interface CfnReceiptRuleProps {
      * domains, enabled status, scan status, and TLS policy. 
      */
     override fun rule(rule: CfnReceiptRule.RuleProperty) {
-      cdkBuilder.rule(rule.let(CfnReceiptRule.RuleProperty::unwrap))
+      cdkBuilder.rule(rule.let(CfnReceiptRule.RuleProperty.Companion::unwrap))
     }
 
     /**

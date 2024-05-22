@@ -125,7 +125,7 @@ public interface VpnTunnelOption {
      * and 64 characters in length and cannot start with zero (0).
      */
     override fun preSharedKeySecret(preSharedKeySecret: SecretValue) {
-      cdkBuilder.preSharedKeySecret(preSharedKeySecret.let(SecretValue::unwrap))
+      cdkBuilder.preSharedKeySecret(preSharedKeySecret.let(SecretValue.Companion::unwrap))
     }
 
     /**

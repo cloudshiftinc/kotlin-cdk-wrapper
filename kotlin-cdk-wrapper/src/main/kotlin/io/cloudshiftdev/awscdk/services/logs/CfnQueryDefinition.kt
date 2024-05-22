@@ -43,8 +43,8 @@ public open class CfnQueryDefinition(
     id: String,
     props: CfnQueryDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.logs.CfnQueryDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnQueryDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.logs.CfnQueryDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnQueryDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -65,7 +65,7 @@ public open class CfnQueryDefinition(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

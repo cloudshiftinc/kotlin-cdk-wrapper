@@ -167,7 +167,7 @@ public interface CommonTaskDefinitionProps {
      * The role will be used to retrieve container images from ECR and create CloudWatch log groups.
      */
     override fun executionRole(executionRole: IRole) {
-      cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
+      cdkBuilder.executionRole(executionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -182,7 +182,7 @@ public interface CommonTaskDefinitionProps {
      * @param proxyConfiguration The configuration details for the App Mesh proxy.
      */
     override fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
-      cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfiguration::unwrap))
+      cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfiguration.Companion::unwrap))
     }
 
     /**
@@ -190,7 +190,7 @@ public interface CommonTaskDefinitionProps {
      * call AWS APIs on your behalf.
      */
     override fun taskRole(taskRole: IRole) {
-      cdkBuilder.taskRole(taskRole.let(IRole::unwrap))
+      cdkBuilder.taskRole(taskRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -200,7 +200,7 @@ public interface CommonTaskDefinitionProps {
      * Volumes](https://docs.aws.amazon.com/AmazonECS/latest/developerguide//task_definition_parameters.html#volumes).
      */
     override fun volumes(volumes: List<Volume>) {
-      cdkBuilder.volumes(volumes.map(Volume::unwrap))
+      cdkBuilder.volumes(volumes.map(Volume.Companion::unwrap))
     }
 
     /**

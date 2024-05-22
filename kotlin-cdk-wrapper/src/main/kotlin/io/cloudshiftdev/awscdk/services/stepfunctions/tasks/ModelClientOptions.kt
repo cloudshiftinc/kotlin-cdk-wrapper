@@ -90,7 +90,7 @@ public interface ModelClientOptions {
      * @param invocationsTimeout The timeout duration for an invocation request.
      */
     override fun invocationsTimeout(invocationsTimeout: Duration) {
-      cdkBuilder.invocationsTimeout(invocationsTimeout.let(Duration::unwrap))
+      cdkBuilder.invocationsTimeout(invocationsTimeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.ModelClientOptions =

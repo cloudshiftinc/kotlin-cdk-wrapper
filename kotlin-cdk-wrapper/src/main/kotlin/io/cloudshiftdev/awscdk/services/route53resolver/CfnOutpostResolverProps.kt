@@ -148,7 +148,7 @@ public interface CfnOutpostResolverProps {
      * @param tags A key value pair that helps you identify a Route 53 Resolver .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

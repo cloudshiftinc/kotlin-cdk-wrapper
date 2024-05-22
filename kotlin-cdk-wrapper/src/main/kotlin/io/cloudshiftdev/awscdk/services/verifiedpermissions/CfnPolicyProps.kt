@@ -109,7 +109,7 @@ public interface CfnPolicyProps {
      * The definition structure must include either a `Static` or a `TemplateLinked` element.
      */
     override fun definition(definition: IResolvable) {
-      cdkBuilder.definition(definition.let(IResolvable::unwrap))
+      cdkBuilder.definition(definition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -118,7 +118,7 @@ public interface CfnPolicyProps {
      * The definition structure must include either a `Static` or a `TemplateLinked` element.
      */
     override fun definition(definition: CfnPolicy.PolicyDefinitionProperty) {
-      cdkBuilder.definition(definition.let(CfnPolicy.PolicyDefinitionProperty::unwrap))
+      cdkBuilder.definition(definition.let(CfnPolicy.PolicyDefinitionProperty.Companion::unwrap))
     }
 
     /**

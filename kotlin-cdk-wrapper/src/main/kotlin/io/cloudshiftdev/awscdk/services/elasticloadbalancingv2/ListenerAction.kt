@@ -57,7 +57,8 @@ public open class ListenerAction(
    * @param associatingConstruct
    */
   public open fun bind(scope: Construct, listener: IApplicationListener) {
-    unwrap(this).bind(scope.let(Construct::unwrap), listener.let(IApplicationListener::unwrap))
+    unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+        listener.let(IApplicationListener.Companion::unwrap))
   }
 
   /**
@@ -72,8 +73,9 @@ public open class ListenerAction(
     listener: IApplicationListener,
     associatingConstruct: IConstruct,
   ) {
-    unwrap(this).bind(scope.let(Construct::unwrap), listener.let(IApplicationListener::unwrap),
-        associatingConstruct.let(IConstruct::unwrap))
+    unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+        listener.let(IApplicationListener.Companion::unwrap),
+        associatingConstruct.let(IConstruct.Companion::unwrap))
   }
 
   /**
@@ -90,7 +92,7 @@ public open class ListenerAction(
 
   public companion object {
     public fun authenticateOidc(options: AuthenticateOidcOptions): ListenerAction =
-        software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction.authenticateOidc(options.let(AuthenticateOidcOptions::unwrap)).let(ListenerAction::wrap)
+        software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction.authenticateOidc(options.let(AuthenticateOidcOptions.Companion::unwrap)).let(ListenerAction::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("02f4270c547a02b7f0b9d0550ece424b1b41de91bfc69f93696b32175affcdfd")
@@ -102,7 +104,7 @@ public open class ListenerAction(
 
     public fun fixedResponse(statusCode: Number, options: FixedResponseOptions): ListenerAction =
         software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction.fixedResponse(statusCode,
-        options.let(FixedResponseOptions::unwrap)).let(ListenerAction::wrap)
+        options.let(FixedResponseOptions.Companion::unwrap)).let(ListenerAction::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6ca345f3d3c2683f66fa1e38f24b92a4b0f6c61f223ba47cf89c0dbdd408da8b")
@@ -110,15 +112,15 @@ public open class ListenerAction(
         ListenerAction = fixedResponse(statusCode, FixedResponseOptions(options))
 
     public fun forward(targetGroups: List<IApplicationTargetGroup>): ListenerAction =
-        software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction.forward(targetGroups.map(IApplicationTargetGroup::unwrap)).let(ListenerAction::wrap)
+        software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction.forward(targetGroups.map(IApplicationTargetGroup.Companion::unwrap)).let(ListenerAction::wrap)
 
     public fun forward(vararg targetGroups: IApplicationTargetGroup): ListenerAction =
         forward(targetGroups.toList())
 
     public fun forward(targetGroups: List<IApplicationTargetGroup>, options: ForwardOptions):
         ListenerAction =
-        software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction.forward(targetGroups.map(IApplicationTargetGroup::unwrap),
-        options.let(ForwardOptions::unwrap)).let(ListenerAction::wrap)
+        software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction.forward(targetGroups.map(IApplicationTargetGroup.Companion::unwrap),
+        options.let(ForwardOptions.Companion::unwrap)).let(ListenerAction::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b1977ca66cf3b21839ab7046d80272a616a15a4f9d160ae53eba23adceb6f9d1")
@@ -127,7 +129,7 @@ public open class ListenerAction(
         ForwardOptions(options))
 
     public fun redirect(options: RedirectOptions): ListenerAction =
-        software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction.redirect(options.let(RedirectOptions::unwrap)).let(ListenerAction::wrap)
+        software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction.redirect(options.let(RedirectOptions.Companion::unwrap)).let(ListenerAction::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ff3e5156e25823d24931fc41a372d9f2a6c74f1a1eab69d9035d3936cbcb40e4")
@@ -135,15 +137,15 @@ public open class ListenerAction(
         redirect(RedirectOptions(options))
 
     public fun weightedForward(targetGroups: List<WeightedTargetGroup>): ListenerAction =
-        software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction.weightedForward(targetGroups.map(WeightedTargetGroup::unwrap)).let(ListenerAction::wrap)
+        software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction.weightedForward(targetGroups.map(WeightedTargetGroup.Companion::unwrap)).let(ListenerAction::wrap)
 
     public fun weightedForward(vararg targetGroups: WeightedTargetGroup): ListenerAction =
         weightedForward(targetGroups.toList())
 
     public fun weightedForward(targetGroups: List<WeightedTargetGroup>, options: ForwardOptions):
         ListenerAction =
-        software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction.weightedForward(targetGroups.map(WeightedTargetGroup::unwrap),
-        options.let(ForwardOptions::unwrap)).let(ListenerAction::wrap)
+        software.amazon.awscdk.services.elasticloadbalancingv2.ListenerAction.weightedForward(targetGroups.map(WeightedTargetGroup.Companion::unwrap),
+        options.let(ForwardOptions.Companion::unwrap)).let(ListenerAction::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f1faaf479f8b219868e510298addee08e2b43a0d635c2e647f5f5b14d4680765")

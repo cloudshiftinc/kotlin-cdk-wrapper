@@ -139,7 +139,7 @@ public interface ApplicationLoadBalancerRedirectConfig {
      * @param sourceProtocol The protocol of the listener being created.
      */
     override fun sourceProtocol(sourceProtocol: ApplicationProtocol) {
-      cdkBuilder.sourceProtocol(sourceProtocol.let(ApplicationProtocol::unwrap))
+      cdkBuilder.sourceProtocol(sourceProtocol.let(ApplicationProtocol.Companion::unwrap))
     }
 
     /**
@@ -153,7 +153,7 @@ public interface ApplicationLoadBalancerRedirectConfig {
      * @param targetProtocol The protocol of the redirection target.
      */
     override fun targetProtocol(targetProtocol: ApplicationProtocol) {
-      cdkBuilder.targetProtocol(targetProtocol.let(ApplicationProtocol::unwrap))
+      cdkBuilder.targetProtocol(targetProtocol.let(ApplicationProtocol.Companion::unwrap))
     }
 
     public fun build():

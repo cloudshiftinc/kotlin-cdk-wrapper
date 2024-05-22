@@ -221,7 +221,7 @@ public interface CfnSecurityGroupProps {
      * There is a short interruption during which you cannot connect to the security group.
      */
     override fun securityGroupEgress(securityGroupEgress: IResolvable) {
-      cdkBuilder.securityGroupEgress(securityGroupEgress.let(IResolvable::unwrap))
+      cdkBuilder.securityGroupEgress(securityGroupEgress.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -244,7 +244,7 @@ public interface CfnSecurityGroupProps {
      * There is a short interruption during which you cannot connect to the security group.
      */
     override fun securityGroupIngress(securityGroupIngress: IResolvable) {
-      cdkBuilder.securityGroupIngress(securityGroupIngress.let(IResolvable::unwrap))
+      cdkBuilder.securityGroupIngress(securityGroupIngress.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -266,7 +266,7 @@ public interface CfnSecurityGroupProps {
      * @param tags Any tags assigned to the security group.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

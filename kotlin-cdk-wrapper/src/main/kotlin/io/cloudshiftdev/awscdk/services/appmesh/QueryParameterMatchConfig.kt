@@ -62,7 +62,7 @@ public interface QueryParameterMatchConfig {
      * @param queryParameterMatch Route CFN configuration for route query parameter match. 
      */
     override fun queryParameterMatch(queryParameterMatch: CfnRoute.QueryParameterProperty) {
-      cdkBuilder.queryParameterMatch(queryParameterMatch.let(CfnRoute.QueryParameterProperty::unwrap))
+      cdkBuilder.queryParameterMatch(queryParameterMatch.let(CfnRoute.QueryParameterProperty.Companion::unwrap))
     }
 
     /**

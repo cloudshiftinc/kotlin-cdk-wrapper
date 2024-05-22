@@ -317,7 +317,7 @@ public interface CfnDataSourceProps {
      * with.
      */
     override fun assetFormsInput(assetFormsInput: IResolvable) {
-      cdkBuilder.assetFormsInput(assetFormsInput.let(IResolvable::unwrap))
+      cdkBuilder.assetFormsInput(assetFormsInput.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -339,14 +339,14 @@ public interface CfnDataSourceProps {
      * @param configuration The configuration of the data source.
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param configuration The configuration of the data source.
      */
     override fun configuration(configuration: CfnDataSource.DataSourceConfigurationInputProperty) {
-      cdkBuilder.configuration(configuration.let(CfnDataSource.DataSourceConfigurationInputProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(CfnDataSource.DataSourceConfigurationInputProperty.Companion::unwrap))
     }
 
     /**
@@ -416,7 +416,7 @@ public interface CfnDataSourceProps {
      * inventory are to be also automatically published to the catalog.
      */
     override fun publishOnImport(publishOnImport: IResolvable) {
-      cdkBuilder.publishOnImport(publishOnImport.let(IResolvable::unwrap))
+      cdkBuilder.publishOnImport(publishOnImport.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -424,7 +424,7 @@ public interface CfnDataSourceProps {
      * this data source.
      */
     override fun recommendation(recommendation: IResolvable) {
-      cdkBuilder.recommendation(recommendation.let(IResolvable::unwrap))
+      cdkBuilder.recommendation(recommendation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -432,7 +432,7 @@ public interface CfnDataSourceProps {
      * this data source.
      */
     override fun recommendation(recommendation: CfnDataSource.RecommendationConfigurationProperty) {
-      cdkBuilder.recommendation(recommendation.let(CfnDataSource.RecommendationConfigurationProperty::unwrap))
+      cdkBuilder.recommendation(recommendation.let(CfnDataSource.RecommendationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -449,14 +449,14 @@ public interface CfnDataSourceProps {
      * @param schedule The schedule of the data source runs.
      */
     override fun schedule(schedule: IResolvable) {
-      cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
+      cdkBuilder.schedule(schedule.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param schedule The schedule of the data source runs.
      */
     override fun schedule(schedule: CfnDataSource.ScheduleConfigurationProperty) {
-      cdkBuilder.schedule(schedule.let(CfnDataSource.ScheduleConfigurationProperty::unwrap))
+      cdkBuilder.schedule(schedule.let(CfnDataSource.ScheduleConfigurationProperty.Companion::unwrap))
     }
 
     /**

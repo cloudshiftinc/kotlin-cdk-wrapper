@@ -221,14 +221,14 @@ public interface CallApiGatewayHttpApiEndpointProps : CallApiGatewayEndpointBase
      * @param apiStack The Stack in which the API is defined. 
      */
     override fun apiStack(apiStack: Stack) {
-      cdkBuilder.apiStack(apiStack.let(Stack::unwrap))
+      cdkBuilder.apiStack(apiStack.let(Stack.Companion::unwrap))
     }
 
     /**
      * @param authType Authentication methods.
      */
     override fun authType(authType: AuthType) {
-      cdkBuilder.authType(authType.let(AuthType::unwrap))
+      cdkBuilder.authType(authType.let(AuthType.Companion::unwrap))
     }
 
     /**
@@ -244,7 +244,7 @@ public interface CallApiGatewayHttpApiEndpointProps : CallApiGatewayEndpointBase
      * This enables cross-account resource invocations.
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -261,7 +261,7 @@ public interface CallApiGatewayHttpApiEndpointProps : CallApiGatewayEndpointBase
      * @param headers HTTP request information that does not relate to contents of the request.
      */
     override fun headers(headers: TaskInput) {
-      cdkBuilder.headers(headers.let(TaskInput::unwrap))
+      cdkBuilder.headers(headers.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -270,7 +270,7 @@ public interface CallApiGatewayHttpApiEndpointProps : CallApiGatewayEndpointBase
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -279,7 +279,7 @@ public interface CallApiGatewayHttpApiEndpointProps : CallApiGatewayEndpointBase
      * aws-stepfunctions-tasks extend this interface
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -300,14 +300,14 @@ public interface CallApiGatewayHttpApiEndpointProps : CallApiGatewayEndpointBase
      * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
      * @param method Http method for the API. 
      */
     override fun method(method: HttpMethod) {
-      cdkBuilder.method(method.let(HttpMethod::unwrap))
+      cdkBuilder.method(method.let(HttpMethod.Companion::unwrap))
     }
 
     /**
@@ -324,14 +324,14 @@ public interface CallApiGatewayHttpApiEndpointProps : CallApiGatewayEndpointBase
      * @param queryParameters Query strings attatched to end of request.
      */
     override fun queryParameters(queryParameters: TaskInput) {
-      cdkBuilder.queryParameters(queryParameters.let(TaskInput::unwrap))
+      cdkBuilder.queryParameters(queryParameters.let(TaskInput.Companion::unwrap))
     }
 
     /**
      * @param requestBody HTTP Request body.
      */
     override fun requestBody(requestBody: TaskInput) {
-      cdkBuilder.requestBody(requestBody.let(TaskInput::unwrap))
+      cdkBuilder.requestBody(requestBody.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -373,7 +373,7 @@ public interface CallApiGatewayHttpApiEndpointProps : CallApiGatewayEndpointBase
      * aws-stepfunctions-tasks extend this interface
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -382,7 +382,7 @@ public interface CallApiGatewayHttpApiEndpointProps : CallApiGatewayEndpointBase
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build():

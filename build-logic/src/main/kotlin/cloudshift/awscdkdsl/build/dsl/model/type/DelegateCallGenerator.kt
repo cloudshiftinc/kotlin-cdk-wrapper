@@ -216,7 +216,7 @@ private class DelegatedCall(
                     val listType =
                         type.typeArguments[1] as ParameterizedTypeName
                     CallSegment(
-                        "%N$nullable.mapValues{it.value.map(%T::unwrap) }$nullableListSuffix",
+                        "%N$nullable.mapValues{it.value.map(%T.Companion::unwrap) }$nullableListSuffix",
                         listOf(
                             name,
                             listType.typeArguments[0].mapClassName().copy(nullable = false),
@@ -237,7 +237,7 @@ private class DelegatedCall(
                     val listType =
                         type.typeArguments[0] as ParameterizedTypeName
                     CallSegment(
-                        "%N$nullable.map{ it.map(%T::unwrap) }$nullableListSuffix",
+                        "%N$nullable.map{ it.map(%T.Companion::unwrap) }$nullableListSuffix",
                         listOf(
                             name,
                             listType.typeArguments[0].mapClassName().copy(nullable = false),
@@ -246,7 +246,7 @@ private class DelegatedCall(
                 }
 
                 type.isListOfCdkObject() -> CallSegment(
-                    "%N$nullable.map(%T::unwrap)$nullableListSuffix",
+                    "%N$nullable.map(%T.Companion::unwrap)$nullableListSuffix",
                     listOf(
                         name,
                         type.typeArguments[0].mapClassName()
@@ -287,7 +287,7 @@ private class DelegatedCall(
             )
 
             type.isCdkClass -> CallSegment(
-                "%N$nullable.let(%T::unwrap)",
+                "%N$nullable.let(%T.Companion::unwrap)",
                 listOf(name, type.mapClassName()),
             )
 

@@ -69,7 +69,7 @@ public open class CfnObservabilityConfiguration(
   cdkObject: software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -78,8 +78,8 @@ public open class CfnObservabilityConfiguration(
     id: String,
     props: CfnObservabilityConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnObservabilityConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.apprunner.CfnObservabilityConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnObservabilityConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -118,7 +118,7 @@ public open class CfnObservabilityConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -149,7 +149,7 @@ public open class CfnObservabilityConfiguration(
    * A list of metadata items that you can associate with your observability configuration resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -166,14 +166,14 @@ public open class CfnObservabilityConfiguration(
    * The configuration of the tracing feature within this observability configuration.
    */
   public open fun traceConfiguration(`value`: IResolvable) {
-    unwrap(this).setTraceConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTraceConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration of the tracing feature within this observability configuration.
    */
   public open fun traceConfiguration(`value`: TraceConfigurationProperty) {
-    unwrap(this).setTraceConfiguration(`value`.let(TraceConfigurationProperty::unwrap))
+    unwrap(this).setTraceConfiguration(`value`.let(TraceConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -320,7 +320,7 @@ public open class CfnObservabilityConfiguration(
      * configuration resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -345,7 +345,7 @@ public open class CfnObservabilityConfiguration(
      * configuration. 
      */
     override fun traceConfiguration(traceConfiguration: IResolvable) {
-      cdkBuilder.traceConfiguration(traceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.traceConfiguration(traceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -358,7 +358,7 @@ public open class CfnObservabilityConfiguration(
      * configuration. 
      */
     override fun traceConfiguration(traceConfiguration: TraceConfigurationProperty) {
-      cdkBuilder.traceConfiguration(traceConfiguration.let(TraceConfigurationProperty::unwrap))
+      cdkBuilder.traceConfiguration(traceConfiguration.let(TraceConfigurationProperty.Companion::unwrap))
     }
 
     /**

@@ -80,8 +80,8 @@ public open class CfnNetworkInterface(
     id: String,
     props: CfnNetworkInterfaceProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnNetworkInterface(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnNetworkInterfaceProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnNetworkInterface(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnNetworkInterfaceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -132,7 +132,7 @@ public open class CfnNetworkInterface(
    * A connection tracking specification for the network interface.
    */
   public open fun connectionTrackingSpecification(`value`: IResolvable) {
-    unwrap(this).setConnectionTrackingSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConnectionTrackingSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -140,7 +140,7 @@ public open class CfnNetworkInterface(
    */
   public open
       fun connectionTrackingSpecification(`value`: ConnectionTrackingSpecificationProperty) {
-    unwrap(this).setConnectionTrackingSpecification(`value`.let(ConnectionTrackingSpecificationProperty::unwrap))
+    unwrap(this).setConnectionTrackingSpecification(`value`.let(ConnectionTrackingSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -183,7 +183,7 @@ public open class CfnNetworkInterface(
    * option to assign a primary IPv6 IP address.
    */
   public open fun enablePrimaryIpv6(`value`: IResolvable) {
-    unwrap(this).setEnablePrimaryIpv6(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnablePrimaryIpv6(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -209,7 +209,7 @@ public open class CfnNetworkInterface(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -245,7 +245,7 @@ public open class CfnNetworkInterface(
    * The IPv4 delegated prefixes that are assigned to the network interface.
    */
   public open fun ipv4Prefixes(`value`: IResolvable) {
-    unwrap(this).setIpv4Prefixes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIpv4Prefixes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -283,7 +283,7 @@ public open class CfnNetworkInterface(
    * interface.
    */
   public open fun ipv6Addresses(`value`: IResolvable) {
-    unwrap(this).setIpv6Addresses(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIpv6Addresses(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -321,7 +321,7 @@ public open class CfnNetworkInterface(
    * The IPv6 delegated prefixes that are assigned to the network interface.
    */
   public open fun ipv6Prefixes(`value`: IResolvable) {
-    unwrap(this).setIpv6Prefixes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIpv6Prefixes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -357,7 +357,7 @@ public open class CfnNetworkInterface(
    * The private IPv4 addresses to assign to the network interface.
    */
   public open fun privateIpAddresses(`value`: IResolvable) {
-    unwrap(this).setPrivateIpAddresses(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPrivateIpAddresses(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -405,7 +405,7 @@ public open class CfnNetworkInterface(
    * source or the destination of any traffic that it receives.
    */
   public open fun sourceDestCheck(`value`: IResolvable) {
-    unwrap(this).setSourceDestCheck(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSourceDestCheck(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -435,7 +435,7 @@ public open class CfnNetworkInterface(
    * The tags to apply to the network interface.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -862,7 +862,7 @@ public open class CfnNetworkInterface(
      * interface. 
      */
     override fun connectionTrackingSpecification(connectionTrackingSpecification: IResolvable) {
-      cdkBuilder.connectionTrackingSpecification(connectionTrackingSpecification.let(IResolvable::unwrap))
+      cdkBuilder.connectionTrackingSpecification(connectionTrackingSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -874,7 +874,7 @@ public open class CfnNetworkInterface(
      */
     override
         fun connectionTrackingSpecification(connectionTrackingSpecification: ConnectionTrackingSpecificationProperty) {
-      cdkBuilder.connectionTrackingSpecification(connectionTrackingSpecification.let(ConnectionTrackingSpecificationProperty::unwrap))
+      cdkBuilder.connectionTrackingSpecification(connectionTrackingSpecification.let(ConnectionTrackingSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -942,7 +942,7 @@ public open class CfnNetworkInterface(
      * subnet, you have the option to assign a primary IPv6 IP address. 
      */
     override fun enablePrimaryIpv6(enablePrimaryIpv6: IResolvable) {
-      cdkBuilder.enablePrimaryIpv6(enablePrimaryIpv6.let(IResolvable::unwrap))
+      cdkBuilder.enablePrimaryIpv6(enablePrimaryIpv6.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1001,7 +1001,7 @@ public open class CfnNetworkInterface(
      * @param ipv4Prefixes The IPv4 delegated prefixes that are assigned to the network interface. 
      */
     override fun ipv4Prefixes(ipv4Prefixes: IResolvable) {
-      cdkBuilder.ipv4Prefixes(ipv4Prefixes.let(IResolvable::unwrap))
+      cdkBuilder.ipv4Prefixes(ipv4Prefixes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1063,7 +1063,7 @@ public open class CfnNetworkInterface(
      * assign to the network interface. 
      */
     override fun ipv6Addresses(ipv6Addresses: IResolvable) {
-      cdkBuilder.ipv6Addresses(ipv6Addresses.let(IResolvable::unwrap))
+      cdkBuilder.ipv6Addresses(ipv6Addresses.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1128,7 +1128,7 @@ public open class CfnNetworkInterface(
      * @param ipv6Prefixes The IPv6 delegated prefixes that are assigned to the network interface. 
      */
     override fun ipv6Prefixes(ipv6Prefixes: IResolvable) {
-      cdkBuilder.ipv6Prefixes(ipv6Prefixes.let(IResolvable::unwrap))
+      cdkBuilder.ipv6Prefixes(ipv6Prefixes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1185,7 +1185,7 @@ public open class CfnNetworkInterface(
      * @param privateIpAddresses The private IPv4 addresses to assign to the network interface. 
      */
     override fun privateIpAddresses(privateIpAddresses: IResolvable) {
-      cdkBuilder.privateIpAddresses(privateIpAddresses.let(IResolvable::unwrap))
+      cdkBuilder.privateIpAddresses(privateIpAddresses.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1273,7 +1273,7 @@ public open class CfnNetworkInterface(
      * instance is either the source or the destination of any traffic that it receives. 
      */
     override fun sourceDestCheck(sourceDestCheck: IResolvable) {
-      cdkBuilder.sourceDestCheck(sourceDestCheck.let(IResolvable::unwrap))
+      cdkBuilder.sourceDestCheck(sourceDestCheck.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1293,7 +1293,7 @@ public open class CfnNetworkInterface(
      * @param tags The tags to apply to the network interface. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1860,7 +1860,7 @@ public open class CfnNetworkInterface(
        * address, Amazon EC2 automatically assigns a primary private IP address.
        */
       override fun primary(primary: IResolvable) {
-        cdkBuilder.primary(primary.let(IResolvable::unwrap))
+        cdkBuilder.primary(primary.let(IResolvable.Companion::unwrap))
       }
 
       /**

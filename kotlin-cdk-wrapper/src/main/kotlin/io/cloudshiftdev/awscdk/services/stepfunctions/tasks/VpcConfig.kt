@@ -81,7 +81,7 @@ public interface VpcConfig {
      * @param subnets VPC subnets.
      */
     override fun subnets(subnets: SubnetSelection) {
-      cdkBuilder.subnets(subnets.let(SubnetSelection::unwrap))
+      cdkBuilder.subnets(subnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -96,7 +96,7 @@ public interface VpcConfig {
      * @param vpc VPC. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.VpcConfig =

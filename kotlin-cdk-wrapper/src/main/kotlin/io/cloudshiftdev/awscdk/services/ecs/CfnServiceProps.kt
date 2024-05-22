@@ -1009,7 +1009,7 @@ public interface CfnServiceProps {
      * A capacity provider strategy may contain a maximum of 6 capacity providers.
      */
     override fun capacityProviderStrategy(capacityProviderStrategy: IResolvable) {
-      cdkBuilder.capacityProviderStrategy(capacityProviderStrategy.let(IResolvable::unwrap))
+      cdkBuilder.capacityProviderStrategy(capacityProviderStrategy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1049,7 +1049,7 @@ public interface CfnServiceProps {
      * during the deployment and the ordering of stopping and starting tasks.
      */
     override fun deploymentConfiguration(deploymentConfiguration: IResolvable) {
-      cdkBuilder.deploymentConfiguration(deploymentConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.deploymentConfiguration(deploymentConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1058,7 +1058,7 @@ public interface CfnServiceProps {
      */
     override
         fun deploymentConfiguration(deploymentConfiguration: CfnService.DeploymentConfigurationProperty) {
-      cdkBuilder.deploymentConfiguration(deploymentConfiguration.let(CfnService.DeploymentConfigurationProperty::unwrap))
+      cdkBuilder.deploymentConfiguration(deploymentConfiguration.let(CfnService.DeploymentConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1077,7 +1077,7 @@ public interface CfnServiceProps {
      * If no deployment controller is specified, the default value of `ECS` is used.
      */
     override fun deploymentController(deploymentController: IResolvable) {
-      cdkBuilder.deploymentController(deploymentController.let(IResolvable::unwrap))
+      cdkBuilder.deploymentController(deploymentController.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1086,7 +1086,7 @@ public interface CfnServiceProps {
      */
     override
         fun deploymentController(deploymentController: CfnService.DeploymentControllerProperty) {
-      cdkBuilder.deploymentController(deploymentController.let(CfnService.DeploymentControllerProperty::unwrap))
+      cdkBuilder.deploymentController(deploymentController.let(CfnService.DeploymentControllerProperty.Companion::unwrap))
     }
 
     /**
@@ -1134,7 +1134,7 @@ public interface CfnServiceProps {
      * When you use Amazon ECS managed tags, you need to set the `propagateTags` request parameter.
      */
     override fun enableEcsManagedTags(enableEcsManagedTags: IResolvable) {
-      cdkBuilder.enableEcsManagedTags(enableEcsManagedTags.let(IResolvable::unwrap))
+      cdkBuilder.enableEcsManagedTags(enableEcsManagedTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1154,7 +1154,7 @@ public interface CfnServiceProps {
      * part of the service.
      */
     override fun enableExecuteCommand(enableExecuteCommand: IResolvable) {
-      cdkBuilder.enableExecuteCommand(enableExecuteCommand.let(IResolvable::unwrap))
+      cdkBuilder.enableExecuteCommand(enableExecuteCommand.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1198,7 +1198,7 @@ public interface CfnServiceProps {
      * in the *Amazon Elastic Container Service Developer Guide* .
      */
     override fun loadBalancers(loadBalancers: IResolvable) {
-      cdkBuilder.loadBalancers(loadBalancers.let(IResolvable::unwrap))
+      cdkBuilder.loadBalancers(loadBalancers.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1233,7 +1233,7 @@ public interface CfnServiceProps {
      * the *Amazon Elastic Container Service Developer Guide* .
      */
     override fun networkConfiguration(networkConfiguration: IResolvable) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1246,7 +1246,7 @@ public interface CfnServiceProps {
      */
     override
         fun networkConfiguration(networkConfiguration: CfnService.NetworkConfigurationProperty) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(CfnService.NetworkConfigurationProperty::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(CfnService.NetworkConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1270,7 +1270,7 @@ public interface CfnServiceProps {
      * the task definition and those specified at runtime.
      */
     override fun placementConstraints(placementConstraints: IResolvable) {
-      cdkBuilder.placementConstraints(placementConstraints.let(IResolvable::unwrap))
+      cdkBuilder.placementConstraints(placementConstraints.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1297,7 +1297,7 @@ public interface CfnServiceProps {
      * You can specify a maximum of 5 strategy rules for each service.
      */
     override fun placementStrategies(placementStrategies: IResolvable) {
-      cdkBuilder.placementStrategies(placementStrategies.let(IResolvable::unwrap))
+      cdkBuilder.placementStrategies(placementStrategies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1413,7 +1413,7 @@ public interface CfnServiceProps {
      * the *Amazon Elastic Container Service Developer Guide* .
      */
     override fun serviceConnectConfiguration(serviceConnectConfiguration: IResolvable) {
-      cdkBuilder.serviceConnectConfiguration(serviceConnectConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.serviceConnectConfiguration(serviceConnectConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1429,7 +1429,7 @@ public interface CfnServiceProps {
      */
     override
         fun serviceConnectConfiguration(serviceConnectConfiguration: CfnService.ServiceConnectConfigurationProperty) {
-      cdkBuilder.serviceConnectConfiguration(serviceConnectConfiguration.let(CfnService.ServiceConnectConfigurationProperty::unwrap))
+      cdkBuilder.serviceConnectConfiguration(serviceConnectConfiguration.let(CfnService.ServiceConnectConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1474,7 +1474,7 @@ public interface CfnServiceProps {
      * each service isn't supported.
      */
     override fun serviceRegistries(serviceRegistries: IResolvable) {
-      cdkBuilder.serviceRegistries(serviceRegistries.let(IResolvable::unwrap))
+      cdkBuilder.serviceRegistries(serviceRegistries.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1517,7 +1517,7 @@ public interface CfnServiceProps {
      * numbers, and spaces representable in UTF-8, and the following characters: + - = . _ : /
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1559,7 +1559,7 @@ public interface CfnServiceProps {
      * Currently, the only supported volume type is an Amazon EBS volume.
      */
     override fun volumeConfigurations(volumeConfigurations: IResolvable) {
-      cdkBuilder.volumeConfigurations(volumeConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.volumeConfigurations(volumeConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**

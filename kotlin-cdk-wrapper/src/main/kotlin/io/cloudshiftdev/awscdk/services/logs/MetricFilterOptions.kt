@@ -189,7 +189,7 @@ public interface MetricFilterOptions {
      * @param filterPattern Pattern to search for log events. 
      */
     override fun filterPattern(filterPattern: IFilterPattern) {
-      cdkBuilder.filterPattern(filterPattern.let(IFilterPattern::unwrap))
+      cdkBuilder.filterPattern(filterPattern.let(IFilterPattern.Companion::unwrap))
     }
 
     /**
@@ -226,7 +226,7 @@ public interface MetricFilterOptions {
      * @param unit The unit to assign to the metric.
      */
     override fun unit(unit: CloudwatchUnit) {
-      cdkBuilder.unit(unit.let(CloudwatchUnit::unwrap))
+      cdkBuilder.unit(unit.let(CloudwatchUnit.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.logs.MetricFilterOptions =

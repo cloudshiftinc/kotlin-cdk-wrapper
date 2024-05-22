@@ -101,7 +101,7 @@ public interface AssetManifestDockerImageDestination {
      * @param role Role to use to perform the upload.
      */
     override fun role(role: RoleOptions) {
-      cdkBuilder.role(role.let(RoleOptions::unwrap))
+      cdkBuilder.role(role.let(RoleOptions.Companion::unwrap))
     }
 
     /**

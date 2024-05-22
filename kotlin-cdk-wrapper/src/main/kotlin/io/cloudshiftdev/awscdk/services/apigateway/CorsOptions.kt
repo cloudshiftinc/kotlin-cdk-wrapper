@@ -341,7 +341,7 @@ public interface CorsOptions {
      * To disable caching altogether use `disableCache: true`.
      */
     override fun maxAge(maxAge: Duration) {
-      cdkBuilder.maxAge(maxAge.let(Duration::unwrap))
+      cdkBuilder.maxAge(maxAge.let(Duration.Companion::unwrap))
     }
 
     /**

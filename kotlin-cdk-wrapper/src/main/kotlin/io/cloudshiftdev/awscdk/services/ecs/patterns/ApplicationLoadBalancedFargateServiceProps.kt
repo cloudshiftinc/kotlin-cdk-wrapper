@@ -485,7 +485,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      */
     override
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>) {
-      cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy::unwrap))
+      cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy.Companion::unwrap))
     }
 
     /**
@@ -501,7 +501,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * Setting this option will set the load balancer protocol to HTTPS.
      */
     override fun certificate(certificate: ICertificate) {
-      cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
+      cdkBuilder.certificate(certificate.let(ICertificate.Companion::unwrap))
     }
 
     /**
@@ -510,7 +510,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * enabled.
      */
     override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
-      cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker::unwrap))
+      cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker.Companion::unwrap))
     }
 
     /**
@@ -528,7 +528,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * discovery.
      */
     override fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
-      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions::unwrap))
+      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions.Companion::unwrap))
     }
 
     /**
@@ -546,7 +546,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * both cluster and vpc.
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -580,7 +580,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * Types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html)
      */
     override fun deploymentController(deploymentController: DeploymentController) {
-      cdkBuilder.deploymentController(deploymentController.let(DeploymentController::unwrap))
+      cdkBuilder.deploymentController(deploymentController.let(DeploymentController.Companion::unwrap))
     }
 
     /**
@@ -615,7 +615,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * @param domainZone The Route53 hosted zone for the domain, e.g. "example.com.".
      */
     override fun domainZone(domainZone: IHostedZone) {
-      cdkBuilder.domainZone(domainZone.let(IHostedZone::unwrap))
+      cdkBuilder.domainZone(domainZone.let(IHostedZone.Companion::unwrap))
     }
 
     /**
@@ -652,7 +652,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * container.
      */
     override fun healthCheck(healthCheck: HealthCheck) {
-      cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
     }
 
     /**
@@ -670,7 +670,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * started.
      */
     override fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
-      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration::unwrap))
+      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -678,7 +678,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * Can be between 1 and 4000 seconds
      */
     override fun idleTimeout(idleTimeout: Duration) {
-      cdkBuilder.idleTimeout(idleTimeout.let(Duration::unwrap))
+      cdkBuilder.idleTimeout(idleTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -697,7 +697,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * [disable-awslint:ref-via-interface]
      */
     override fun loadBalancer(loadBalancer: IApplicationLoadBalancer) {
-      cdkBuilder.loadBalancer(loadBalancer.let(IApplicationLoadBalancer::unwrap))
+      cdkBuilder.loadBalancer(loadBalancer.let(IApplicationLoadBalancer.Companion::unwrap))
     }
 
     /**
@@ -772,7 +772,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * in the Amazon Elastic Container Service Developer Guide.
      */
     override fun platformVersion(platformVersion: FargatePlatformVersion) {
-      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion::unwrap))
+      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion.Companion::unwrap))
     }
 
     /**
@@ -781,7 +781,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * Tags can only be propagated to the tasks within the service during service creation.
      */
     override fun propagateTags(propagateTags: PropagatedTagSource) {
-      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource.Companion::unwrap))
     }
 
     /**
@@ -791,14 +791,14 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * name and domain zone must also be specified.
      */
     override fun protocol(protocol: ApplicationProtocol) {
-      cdkBuilder.protocol(protocol.let(ApplicationProtocol::unwrap))
+      cdkBuilder.protocol(protocol.let(ApplicationProtocol.Companion::unwrap))
     }
 
     /**
      * @param protocolVersion The protocol version to use.
      */
     override fun protocolVersion(protocolVersion: ApplicationProtocolVersion) {
-      cdkBuilder.protocolVersion(protocolVersion.let(ApplicationProtocolVersion::unwrap))
+      cdkBuilder.protocolVersion(protocolVersion.let(ApplicationProtocolVersion.Companion::unwrap))
     }
 
     /**
@@ -814,7 +814,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * This is useful if you need to work with DNS systems that do not support alias records.
      */
     override fun recordType(recordType: ApplicationLoadBalancedServiceRecordType) {
-      cdkBuilder.recordType(recordType.let(ApplicationLoadBalancedServiceRecordType::unwrap))
+      cdkBuilder.recordType(recordType.let(ApplicationLoadBalancedServiceRecordType.Companion::unwrap))
     }
 
     /**
@@ -830,7 +830,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * @param runtimePlatform The runtime platform of the task definition.
      */
     override fun runtimePlatform(runtimePlatform: RuntimePlatform) {
-      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform::unwrap))
+      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform.Companion::unwrap))
     }
 
     /**
@@ -846,7 +846,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * If you do not specify a security group, a new security group is created.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -868,7 +868,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * by the ALB Listener.
      */
     override fun sslPolicy(sslPolicy: SslPolicy) {
-      cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy::unwrap))
+      cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy.Companion::unwrap))
     }
 
     /**
@@ -877,7 +877,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * HTTP, port 443 for HTTPS).
      */
     override fun targetProtocol(targetProtocol: ApplicationProtocol) {
-      cdkBuilder.targetProtocol(targetProtocol.let(ApplicationProtocol::unwrap))
+      cdkBuilder.targetProtocol(targetProtocol.let(ApplicationProtocol.Companion::unwrap))
     }
 
     /**
@@ -886,7 +886,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * [disable-awslint:ref-via-interface]
      */
     override fun taskDefinition(taskDefinition: FargateTaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition.Companion::unwrap))
     }
 
     /**
@@ -894,7 +894,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * TaskDefinition or TaskImageOptions must be specified, but not both.
      */
     override fun taskImageOptions(taskImageOptions: ApplicationLoadBalancedTaskImageOptions) {
-      cdkBuilder.taskImageOptions(taskImageOptions.let(ApplicationLoadBalancedTaskImageOptions::unwrap))
+      cdkBuilder.taskImageOptions(taskImageOptions.let(ApplicationLoadBalancedTaskImageOptions.Companion::unwrap))
     }
 
     /**
@@ -911,7 +911,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * @param taskSubnets The subnets to associate with the service.
      */
     override fun taskSubnets(taskSubnets: SubnetSelection) {
-      cdkBuilder.taskSubnets(taskSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.taskSubnets(taskSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -929,7 +929,7 @@ public interface ApplicationLoadBalancedFargateServiceProps :
      * both vpc and cluster.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build():

@@ -137,7 +137,7 @@ public interface CfnPlanProps {
      * contacts and contact methods.
      */
     override fun stages(stages: IResolvable) {
-      cdkBuilder.stages(stages.let(IResolvable::unwrap))
+      cdkBuilder.stages(stages.let(IResolvable.Companion::unwrap))
     }
 
     /**

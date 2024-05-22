@@ -71,8 +71,8 @@ public open class CfnTaskTemplate(
     id: String,
     props: CfnTaskTemplateProps,
   ) :
-      this(software.amazon.awscdk.services.connect.CfnTaskTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTaskTemplateProps::unwrap))
+      this(software.amazon.awscdk.services.connect.CfnTaskTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTaskTemplateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -134,7 +134,7 @@ public open class CfnTaskTemplate(
    * The default values for fields when a task is created by referencing this template.
    */
   public open fun defaults(`value`: IResolvable) {
-    unwrap(this).setDefaults(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefaults(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -170,7 +170,7 @@ public open class CfnTaskTemplate(
    * Fields that are part of the template.
    */
   public open fun fields(`value`: IResolvable) {
-    unwrap(this).setFields(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFields(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -191,7 +191,7 @@ public open class CfnTaskTemplate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -245,7 +245,7 @@ public open class CfnTaskTemplate(
    * The tags used to organize, track, or control access for this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -451,7 +451,7 @@ public open class CfnTaskTemplate(
      * template. 
      */
     override fun defaults(defaults: IResolvable) {
-      cdkBuilder.defaults(defaults.let(IResolvable::unwrap))
+      cdkBuilder.defaults(defaults.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -493,7 +493,7 @@ public open class CfnTaskTemplate(
      * @param fields Fields that are part of the template. 
      */
     override fun fields(fields: IResolvable) {
-      cdkBuilder.fields(fields.let(IResolvable::unwrap))
+      cdkBuilder.fields(fields.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -555,7 +555,7 @@ public open class CfnTaskTemplate(
      * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -702,7 +702,7 @@ public open class CfnTaskTemplate(
        * @param invisibleFields Lists the fields that are invisible to agents.
        */
       override fun invisibleFields(invisibleFields: IResolvable) {
-        cdkBuilder.invisibleFields(invisibleFields.let(IResolvable::unwrap))
+        cdkBuilder.invisibleFields(invisibleFields.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -722,7 +722,7 @@ public open class CfnTaskTemplate(
        * @param readOnlyFields Lists the fields that are read-only to agents, and cannot be edited.
        */
       override fun readOnlyFields(readOnlyFields: IResolvable) {
-        cdkBuilder.readOnlyFields(readOnlyFields.let(IResolvable::unwrap))
+        cdkBuilder.readOnlyFields(readOnlyFields.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -742,7 +742,7 @@ public open class CfnTaskTemplate(
        * @param requiredFields Lists the fields that are required to be filled by agents.
        */
       override fun requiredFields(requiredFields: IResolvable) {
-        cdkBuilder.requiredFields(requiredFields.let(IResolvable::unwrap))
+        cdkBuilder.requiredFields(requiredFields.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -885,14 +885,14 @@ public open class CfnTaskTemplate(
        * @param id Identifier of a field. 
        */
       override fun id(id: IResolvable) {
-        cdkBuilder.id(id.let(IResolvable::unwrap))
+        cdkBuilder.id(id.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param id Identifier of a field. 
        */
       override fun id(id: FieldIdentifierProperty) {
-        cdkBuilder.id(id.let(FieldIdentifierProperty::unwrap))
+        cdkBuilder.id(id.let(FieldIdentifierProperty.Companion::unwrap))
       }
 
       /**
@@ -1143,14 +1143,14 @@ public open class CfnTaskTemplate(
        * @param id The unique identifier for the field. 
        */
       override fun id(id: IResolvable) {
-        cdkBuilder.id(id.let(IResolvable::unwrap))
+        cdkBuilder.id(id.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param id The unique identifier for the field. 
        */
       override fun id(id: FieldIdentifierProperty) {
-        cdkBuilder.id(id.let(FieldIdentifierProperty::unwrap))
+        cdkBuilder.id(id.let(FieldIdentifierProperty.Companion::unwrap))
       }
 
       /**
@@ -1301,14 +1301,14 @@ public open class CfnTaskTemplate(
        * @param id Identifier of the invisible field. 
        */
       override fun id(id: IResolvable) {
-        cdkBuilder.id(id.let(IResolvable::unwrap))
+        cdkBuilder.id(id.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param id Identifier of the invisible field. 
        */
       override fun id(id: FieldIdentifierProperty) {
-        cdkBuilder.id(id.let(FieldIdentifierProperty::unwrap))
+        cdkBuilder.id(id.let(FieldIdentifierProperty.Companion::unwrap))
       }
 
       /**
@@ -1412,14 +1412,14 @@ public open class CfnTaskTemplate(
        * @param id Identifier of the read-only field. 
        */
       override fun id(id: IResolvable) {
-        cdkBuilder.id(id.let(IResolvable::unwrap))
+        cdkBuilder.id(id.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param id Identifier of the read-only field. 
        */
       override fun id(id: FieldIdentifierProperty) {
-        cdkBuilder.id(id.let(FieldIdentifierProperty::unwrap))
+        cdkBuilder.id(id.let(FieldIdentifierProperty.Companion::unwrap))
       }
 
       /**
@@ -1523,14 +1523,14 @@ public open class CfnTaskTemplate(
        * @param id The unique identifier for the field. 
        */
       override fun id(id: IResolvable) {
-        cdkBuilder.id(id.let(IResolvable::unwrap))
+        cdkBuilder.id(id.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param id The unique identifier for the field. 
        */
       override fun id(id: FieldIdentifierProperty) {
-        cdkBuilder.id(id.let(FieldIdentifierProperty::unwrap))
+        cdkBuilder.id(id.let(FieldIdentifierProperty.Companion::unwrap))
       }
 
       /**

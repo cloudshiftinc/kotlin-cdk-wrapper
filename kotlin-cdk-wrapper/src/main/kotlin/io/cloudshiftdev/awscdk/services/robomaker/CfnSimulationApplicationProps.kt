@@ -242,7 +242,7 @@ public interface CfnSimulationApplicationProps {
      * @param renderingEngine The rendering engine for the simulation application.
      */
     override fun renderingEngine(renderingEngine: IResolvable) {
-      cdkBuilder.renderingEngine(renderingEngine.let(IResolvable::unwrap))
+      cdkBuilder.renderingEngine(renderingEngine.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -250,7 +250,7 @@ public interface CfnSimulationApplicationProps {
      */
     override
         fun renderingEngine(renderingEngine: CfnSimulationApplication.RenderingEngineProperty) {
-      cdkBuilder.renderingEngine(renderingEngine.let(CfnSimulationApplication.RenderingEngineProperty::unwrap))
+      cdkBuilder.renderingEngine(renderingEngine.let(CfnSimulationApplication.RenderingEngineProperty.Companion::unwrap))
     }
 
     /**
@@ -266,7 +266,7 @@ public interface CfnSimulationApplicationProps {
      * @param robotSoftwareSuite The robot software suite used by the simulation application. 
      */
     override fun robotSoftwareSuite(robotSoftwareSuite: IResolvable) {
-      cdkBuilder.robotSoftwareSuite(robotSoftwareSuite.let(IResolvable::unwrap))
+      cdkBuilder.robotSoftwareSuite(robotSoftwareSuite.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -274,7 +274,7 @@ public interface CfnSimulationApplicationProps {
      */
     override
         fun robotSoftwareSuite(robotSoftwareSuite: CfnSimulationApplication.RobotSoftwareSuiteProperty) {
-      cdkBuilder.robotSoftwareSuite(robotSoftwareSuite.let(CfnSimulationApplication.RobotSoftwareSuiteProperty::unwrap))
+      cdkBuilder.robotSoftwareSuite(robotSoftwareSuite.let(CfnSimulationApplication.RobotSoftwareSuiteProperty.Companion::unwrap))
     }
 
     /**
@@ -292,7 +292,7 @@ public interface CfnSimulationApplicationProps {
      * application. 
      */
     override fun simulationSoftwareSuite(simulationSoftwareSuite: IResolvable) {
-      cdkBuilder.simulationSoftwareSuite(simulationSoftwareSuite.let(IResolvable::unwrap))
+      cdkBuilder.simulationSoftwareSuite(simulationSoftwareSuite.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -301,7 +301,7 @@ public interface CfnSimulationApplicationProps {
      */
     override
         fun simulationSoftwareSuite(simulationSoftwareSuite: CfnSimulationApplication.SimulationSoftwareSuiteProperty) {
-      cdkBuilder.simulationSoftwareSuite(simulationSoftwareSuite.let(CfnSimulationApplication.SimulationSoftwareSuiteProperty::unwrap))
+      cdkBuilder.simulationSoftwareSuite(simulationSoftwareSuite.let(CfnSimulationApplication.SimulationSoftwareSuiteProperty.Companion::unwrap))
     }
 
     /**
@@ -319,7 +319,7 @@ public interface CfnSimulationApplicationProps {
      * @param sources The sources of the simulation application.
      */
     override fun sources(sources: IResolvable) {
-      cdkBuilder.sources(sources.let(IResolvable::unwrap))
+      cdkBuilder.sources(sources.let(IResolvable.Companion::unwrap))
     }
 
     /**

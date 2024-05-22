@@ -76,7 +76,7 @@ public interface DataSource {
      * @param s3DataSource S3 location of the data source that is associated with a channel. 
      */
     override fun s3DataSource(s3DataSource: S3DataSource) {
-      cdkBuilder.s3DataSource(s3DataSource.let(S3DataSource::unwrap))
+      cdkBuilder.s3DataSource(s3DataSource.let(S3DataSource.Companion::unwrap))
     }
 
     /**

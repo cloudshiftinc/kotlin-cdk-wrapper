@@ -62,7 +62,7 @@ public interface ServerDeploymentConfigProps : BaseDeploymentConfigOptions {
      * @param minimumHealthyHosts Minimum number of healthy hosts. 
      */
     override fun minimumHealthyHosts(minimumHealthyHosts: MinimumHealthyHosts) {
-      cdkBuilder.minimumHealthyHosts(minimumHealthyHosts.let(MinimumHealthyHosts::unwrap))
+      cdkBuilder.minimumHealthyHosts(minimumHealthyHosts.let(MinimumHealthyHosts.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codedeploy.ServerDeploymentConfigProps =

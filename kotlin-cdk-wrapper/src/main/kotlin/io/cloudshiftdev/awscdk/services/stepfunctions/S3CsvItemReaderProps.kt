@@ -76,14 +76,14 @@ public interface S3CsvItemReaderProps : S3FileItemReaderProps {
      * over. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**
      * @param csvHeaders CSV file header configuration.
      */
     override fun csvHeaders(csvHeaders: CsvHeaders) {
-      cdkBuilder.csvHeaders(csvHeaders.let(CsvHeaders::unwrap))
+      cdkBuilder.csvHeaders(csvHeaders.let(CsvHeaders.Companion::unwrap))
     }
 
     /**

@@ -101,7 +101,7 @@ public interface WaitProps {
      * @param time Wait duration. 
      */
     override fun time(time: WaitTime) {
-      cdkBuilder.time(time.let(WaitTime::unwrap))
+      cdkBuilder.time(time.let(WaitTime.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.WaitProps = cdkBuilder.build()

@@ -83,8 +83,8 @@ public open class CfnJob(
     id: String,
     props: CfnJobProps,
   ) :
-      this(software.amazon.awscdk.services.glue.CfnJob(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnJobProps::unwrap))
+      this(software.amazon.awscdk.services.glue.CfnJob(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnJobProps.Companion::unwrap))
   )
 
   public constructor(
@@ -124,14 +124,14 @@ public open class CfnJob(
    * The code that executes a job.
    */
   public open fun command(`value`: IResolvable) {
-    unwrap(this).setCommand(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCommand(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The code that executes a job.
    */
   public open fun command(`value`: JobCommandProperty) {
-    unwrap(this).setCommand(`value`.let(JobCommandProperty::unwrap))
+    unwrap(this).setCommand(`value`.let(JobCommandProperty.Companion::unwrap))
   }
 
   /**
@@ -151,14 +151,14 @@ public open class CfnJob(
    * The connections used for this job.
    */
   public open fun connections(`value`: IResolvable) {
-    unwrap(this).setConnections(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConnections(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The connections used for this job.
    */
   public open fun connections(`value`: ConnectionsListProperty) {
-    unwrap(this).setConnections(`value`.let(ConnectionsListProperty::unwrap))
+    unwrap(this).setConnections(`value`.let(ConnectionsListProperty.Companion::unwrap))
   }
 
   /**
@@ -214,14 +214,14 @@ public open class CfnJob(
    * The maximum number of concurrent runs that are allowed for this job.
    */
   public open fun executionProperty(`value`: IResolvable) {
-    unwrap(this).setExecutionProperty(`value`.let(IResolvable::unwrap))
+    unwrap(this).setExecutionProperty(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The maximum number of concurrent runs that are allowed for this job.
    */
   public open fun executionProperty(`value`: ExecutionPropertyProperty) {
-    unwrap(this).setExecutionProperty(`value`.let(ExecutionPropertyProperty::unwrap))
+    unwrap(this).setExecutionProperty(`value`.let(ExecutionPropertyProperty.Companion::unwrap))
   }
 
   /**
@@ -250,7 +250,7 @@ public open class CfnJob(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -322,14 +322,14 @@ public open class CfnJob(
    * Specifies configuration properties of a notification.
    */
   public open fun notificationProperty(`value`: IResolvable) {
-    unwrap(this).setNotificationProperty(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNotificationProperty(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies configuration properties of a notification.
    */
   public open fun notificationProperty(`value`: NotificationPropertyProperty) {
-    unwrap(this).setNotificationProperty(`value`.let(NotificationPropertyProperty::unwrap))
+    unwrap(this).setNotificationProperty(`value`.let(NotificationPropertyProperty.Companion::unwrap))
   }
 
   /**
@@ -772,7 +772,7 @@ public open class CfnJob(
      * @param command The code that executes a job. 
      */
     override fun command(command: IResolvable) {
-      cdkBuilder.command(command.let(IResolvable::unwrap))
+      cdkBuilder.command(command.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -782,7 +782,7 @@ public open class CfnJob(
      * @param command The code that executes a job. 
      */
     override fun command(command: JobCommandProperty) {
-      cdkBuilder.command(command.let(JobCommandProperty::unwrap))
+      cdkBuilder.command(command.let(JobCommandProperty.Companion::unwrap))
     }
 
     /**
@@ -803,7 +803,7 @@ public open class CfnJob(
      * @param connections The connections used for this job. 
      */
     override fun connections(connections: IResolvable) {
-      cdkBuilder.connections(connections.let(IResolvable::unwrap))
+      cdkBuilder.connections(connections.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -813,7 +813,7 @@ public open class CfnJob(
      * @param connections The connections used for this job. 
      */
     override fun connections(connections: ConnectionsListProperty) {
-      cdkBuilder.connections(connections.let(ConnectionsListProperty::unwrap))
+      cdkBuilder.connections(connections.let(ConnectionsListProperty.Companion::unwrap))
     }
 
     /**
@@ -888,7 +888,7 @@ public open class CfnJob(
      * 
      */
     override fun executionProperty(executionProperty: IResolvable) {
-      cdkBuilder.executionProperty(executionProperty.let(IResolvable::unwrap))
+      cdkBuilder.executionProperty(executionProperty.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -899,7 +899,7 @@ public open class CfnJob(
      * 
      */
     override fun executionProperty(executionProperty: ExecutionPropertyProperty) {
-      cdkBuilder.executionProperty(executionProperty.let(ExecutionPropertyProperty::unwrap))
+      cdkBuilder.executionProperty(executionProperty.let(ExecutionPropertyProperty.Companion::unwrap))
     }
 
     /**
@@ -1006,7 +1006,7 @@ public open class CfnJob(
      * @param notificationProperty Specifies configuration properties of a notification. 
      */
     override fun notificationProperty(notificationProperty: IResolvable) {
-      cdkBuilder.notificationProperty(notificationProperty.let(IResolvable::unwrap))
+      cdkBuilder.notificationProperty(notificationProperty.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1016,7 +1016,7 @@ public open class CfnJob(
      * @param notificationProperty Specifies configuration properties of a notification. 
      */
     override fun notificationProperty(notificationProperty: NotificationPropertyProperty) {
-      cdkBuilder.notificationProperty(notificationProperty.let(NotificationPropertyProperty::unwrap))
+      cdkBuilder.notificationProperty(notificationProperty.let(NotificationPropertyProperty.Companion::unwrap))
     }
 
     /**

@@ -80,8 +80,8 @@ public open class CfnRestoreTestingSelection(
     id: String,
     props: CfnRestoreTestingSelectionProps,
   ) :
-      this(software.amazon.awscdk.services.backup.CfnRestoreTestingSelection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRestoreTestingSelectionProps::unwrap))
+      this(software.amazon.awscdk.services.backup.CfnRestoreTestingSelection(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRestoreTestingSelectionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -111,7 +111,7 @@ public open class CfnRestoreTestingSelection(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -148,7 +148,7 @@ public open class CfnRestoreTestingSelection(
    * `StringEquals` or `StringNotEquals` .
    */
   public open fun protectedResourceConditions(`value`: IResolvable) {
-    unwrap(this).setProtectedResourceConditions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProtectedResourceConditions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -156,7 +156,7 @@ public open class CfnRestoreTestingSelection(
    * `StringEquals` or `StringNotEquals` .
    */
   public open fun protectedResourceConditions(`value`: ProtectedResourceConditionsProperty) {
-    unwrap(this).setProtectedResourceConditions(`value`.let(ProtectedResourceConditionsProperty::unwrap))
+    unwrap(this).setProtectedResourceConditions(`value`.let(ProtectedResourceConditionsProperty.Companion::unwrap))
   }
 
   /**
@@ -192,7 +192,7 @@ public open class CfnRestoreTestingSelection(
    * `RestoreMetadataOverrides` in the body of `RestoreTestingSelection` .
    */
   public open fun restoreMetadataOverrides(`value`: IResolvable) {
-    unwrap(this).setRestoreMetadataOverrides(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRestoreMetadataOverrides(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -448,7 +448,7 @@ public open class CfnRestoreTestingSelection(
      * specific conditions such as `StringEquals` or `StringNotEquals` . 
      */
     override fun protectedResourceConditions(protectedResourceConditions: IResolvable) {
-      cdkBuilder.protectedResourceConditions(protectedResourceConditions.let(IResolvable::unwrap))
+      cdkBuilder.protectedResourceConditions(protectedResourceConditions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -461,7 +461,7 @@ public open class CfnRestoreTestingSelection(
      */
     override
         fun protectedResourceConditions(protectedResourceConditions: ProtectedResourceConditionsProperty) {
-      cdkBuilder.protectedResourceConditions(protectedResourceConditions.let(ProtectedResourceConditionsProperty::unwrap))
+      cdkBuilder.protectedResourceConditions(protectedResourceConditions.let(ProtectedResourceConditionsProperty.Companion::unwrap))
     }
 
     /**
@@ -507,7 +507,7 @@ public open class CfnRestoreTestingSelection(
      * the parameter `RestoreMetadataOverrides` in the body of `RestoreTestingSelection` . 
      */
     override fun restoreMetadataOverrides(restoreMetadataOverrides: IResolvable) {
-      cdkBuilder.restoreMetadataOverrides(restoreMetadataOverrides.let(IResolvable::unwrap))
+      cdkBuilder.restoreMetadataOverrides(restoreMetadataOverrides.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -812,7 +812,7 @@ public open class CfnRestoreTestingSelection(
        * Also called "exact matching."
        */
       override fun stringEquals(stringEquals: IResolvable) {
-        cdkBuilder.stringEquals(stringEquals.let(IResolvable::unwrap))
+        cdkBuilder.stringEquals(stringEquals.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -838,7 +838,7 @@ public open class CfnRestoreTestingSelection(
        * Also called "negated matching."
        */
       override fun stringNotEquals(stringNotEquals: IResolvable) {
-        cdkBuilder.stringNotEquals(stringNotEquals.let(IResolvable::unwrap))
+        cdkBuilder.stringNotEquals(stringNotEquals.let(IResolvable.Companion::unwrap))
       }
 
       /**

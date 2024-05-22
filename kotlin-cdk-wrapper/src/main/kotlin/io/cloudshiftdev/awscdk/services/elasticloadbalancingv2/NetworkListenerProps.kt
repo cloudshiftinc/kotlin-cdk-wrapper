@@ -133,7 +133,7 @@ public interface NetworkListenerProps : BaseNetworkListenerProps {
      * Can only be specified together with Protocol TLS.
      */
     override fun alpnPolicy(alpnPolicy: AlpnPolicy) {
-      cdkBuilder.alpnPolicy(alpnPolicy.let(AlpnPolicy::unwrap))
+      cdkBuilder.alpnPolicy(alpnPolicy.let(AlpnPolicy.Companion::unwrap))
     }
 
     /**
@@ -141,7 +141,7 @@ public interface NetworkListenerProps : BaseNetworkListenerProps {
      * You must provide exactly one certificate if the listener protocol is HTTPS or TLS.
      */
     override fun certificates(certificates: List<IListenerCertificate>) {
-      cdkBuilder.certificates(certificates.map(IListenerCertificate::unwrap))
+      cdkBuilder.certificates(certificates.map(IListenerCertificate.Companion::unwrap))
     }
 
     /**
@@ -160,7 +160,7 @@ public interface NetworkListenerProps : BaseNetworkListenerProps {
      * Cannot be specified together with `defaultTargetGroups`.
      */
     override fun defaultAction(defaultAction: NetworkListenerAction) {
-      cdkBuilder.defaultAction(defaultAction.let(NetworkListenerAction::unwrap))
+      cdkBuilder.defaultAction(defaultAction.let(NetworkListenerAction.Companion::unwrap))
     }
 
     /**
@@ -172,7 +172,7 @@ public interface NetworkListenerProps : BaseNetworkListenerProps {
      * Cannot be specified together with `defaultAction`.
      */
     override fun defaultTargetGroups(defaultTargetGroups: List<INetworkTargetGroup>) {
-      cdkBuilder.defaultTargetGroups(defaultTargetGroups.map(INetworkTargetGroup::unwrap))
+      cdkBuilder.defaultTargetGroups(defaultTargetGroups.map(INetworkTargetGroup.Companion::unwrap))
     }
 
     /**
@@ -190,7 +190,7 @@ public interface NetworkListenerProps : BaseNetworkListenerProps {
      * @param loadBalancer The load balancer to attach this listener to. 
      */
     override fun loadBalancer(loadBalancer: INetworkLoadBalancer) {
-      cdkBuilder.loadBalancer(loadBalancer.let(INetworkLoadBalancer::unwrap))
+      cdkBuilder.loadBalancer(loadBalancer.let(INetworkLoadBalancer.Companion::unwrap))
     }
 
     /**
@@ -204,14 +204,14 @@ public interface NetworkListenerProps : BaseNetworkListenerProps {
      * @param protocol Protocol for listener, expects TCP, TLS, UDP, or TCP_UDP.
      */
     override fun protocol(protocol: Protocol) {
-      cdkBuilder.protocol(protocol.let(Protocol::unwrap))
+      cdkBuilder.protocol(protocol.let(Protocol.Companion::unwrap))
     }
 
     /**
      * @param sslPolicy SSL Policy.
      */
     override fun sslPolicy(sslPolicy: SslPolicy) {
-      cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy::unwrap))
+      cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerProps

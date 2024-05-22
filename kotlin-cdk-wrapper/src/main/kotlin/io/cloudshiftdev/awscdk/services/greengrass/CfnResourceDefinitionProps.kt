@@ -221,7 +221,7 @@ public interface CfnResourceDefinitionProps {
      * resource and specify the ID of this resource definition.
      */
     override fun initialVersion(initialVersion: IResolvable) {
-      cdkBuilder.initialVersion(initialVersion.let(IResolvable::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -239,7 +239,7 @@ public interface CfnResourceDefinitionProps {
      */
     override
         fun initialVersion(initialVersion: CfnResourceDefinition.ResourceDefinitionVersionProperty) {
-      cdkBuilder.initialVersion(initialVersion.let(CfnResourceDefinition.ResourceDefinitionVersionProperty::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(CfnResourceDefinition.ResourceDefinitionVersionProperty.Companion::unwrap))
     }
 
     /**

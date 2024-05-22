@@ -115,7 +115,7 @@ public interface ViewerCertificateOptions {
      * least the SSL version that you specify.
      */
     override fun securityPolicy(securityPolicy: SecurityPolicyProtocol) {
-      cdkBuilder.securityPolicy(securityPolicy.let(SecurityPolicyProtocol::unwrap))
+      cdkBuilder.securityPolicy(securityPolicy.let(SecurityPolicyProtocol.Companion::unwrap))
     }
 
     /**
@@ -123,7 +123,7 @@ public interface ViewerCertificateOptions {
      * See the notes on SSLMethod if you wish to use other SSL termination types.
      */
     override fun sslMethod(sslMethod: SSLMethod) {
-      cdkBuilder.sslMethod(sslMethod.let(SSLMethod::unwrap))
+      cdkBuilder.sslMethod(sslMethod.let(SSLMethod.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.ViewerCertificateOptions =

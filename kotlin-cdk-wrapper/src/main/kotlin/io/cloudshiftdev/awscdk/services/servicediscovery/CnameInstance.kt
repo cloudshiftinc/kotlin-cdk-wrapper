@@ -37,8 +37,8 @@ public open class CnameInstance(
     id: String,
     props: CnameInstanceProps,
   ) :
-      this(software.amazon.awscdk.services.servicediscovery.CnameInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CnameInstanceProps::unwrap))
+      this(software.amazon.awscdk.services.servicediscovery.CnameInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CnameInstanceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -153,7 +153,7 @@ public open class CnameInstance(
      * @param service The Cloudmap service this resource is registered to. 
      */
     override fun service(service: IService) {
-      cdkBuilder.service(service.let(IService::unwrap))
+      cdkBuilder.service(service.let(IService.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.servicediscovery.CnameInstance =

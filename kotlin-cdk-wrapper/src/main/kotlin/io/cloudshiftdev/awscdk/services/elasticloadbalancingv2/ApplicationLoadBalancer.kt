@@ -60,8 +60,8 @@ public open class ApplicationLoadBalancer(
     id: String,
     props: ApplicationLoadBalancerProps,
   ) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ApplicationLoadBalancerProps::unwrap))
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ApplicationLoadBalancerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -79,7 +79,7 @@ public open class ApplicationLoadBalancer(
    */
   public override fun addListener(id: String, props: BaseApplicationListenerProps):
       ApplicationListener = unwrap(this).addListener(id,
-      props.let(BaseApplicationListenerProps::unwrap)).let(ApplicationListener::wrap)
+      props.let(BaseApplicationListenerProps.Companion::unwrap)).let(ApplicationListener::wrap)
 
   /**
    * Add a new listener to this load balancer.
@@ -107,7 +107,7 @@ public open class ApplicationLoadBalancer(
    * @param props
    */
   public open fun addRedirect(props: ApplicationLoadBalancerRedirectConfig): ApplicationListener =
-      unwrap(this).addRedirect(props.let(ApplicationLoadBalancerRedirectConfig::unwrap)).let(ApplicationListener::wrap)
+      unwrap(this).addRedirect(props.let(ApplicationLoadBalancerRedirectConfig.Companion::unwrap)).let(ApplicationListener::wrap)
 
   /**
    * Add a redirection listener to this load balancer.
@@ -125,7 +125,7 @@ public open class ApplicationLoadBalancer(
    * @param securityGroup 
    */
   public open fun addSecurityGroup(securityGroup: ISecurityGroup) {
-    unwrap(this).addSecurityGroup(securityGroup.let(ISecurityGroup::unwrap))
+    unwrap(this).addSecurityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
   }
 
   /**
@@ -159,7 +159,7 @@ public open class ApplicationLoadBalancer(
    * @param prefix
    */
   public override fun logAccessLogs(bucket: IBucket) {
-    unwrap(this).logAccessLogs(bucket.let(IBucket::unwrap))
+    unwrap(this).logAccessLogs(bucket.let(IBucket.Companion::unwrap))
   }
 
   /**
@@ -173,7 +173,7 @@ public open class ApplicationLoadBalancer(
    * @param prefix
    */
   public override fun logAccessLogs(bucket: IBucket, prefix: String) {
-    unwrap(this).logAccessLogs(bucket.let(IBucket::unwrap), prefix)
+    unwrap(this).logAccessLogs(bucket.let(IBucket.Companion::unwrap), prefix)
   }
 
   /**
@@ -200,7 +200,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) Return the given named metric for this Application Load Balancer.
@@ -241,7 +241,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricActiveConnectionCount(props: MetricOptions): Metric =
-      unwrap(this).metricActiveConnectionCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricActiveConnectionCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The total number of concurrent TCP connections active from clients to the load
@@ -288,7 +288,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricClientTlsNegotiationErrorCount(props: MetricOptions): Metric =
-      unwrap(this).metricClientTlsNegotiationErrorCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricClientTlsNegotiationErrorCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The number of TLS connections initiated by the client that did not establish a
@@ -329,7 +329,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricConsumedLCUs(props: MetricOptions): Metric =
-      unwrap(this).metricConsumedLCUs(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricConsumedLCUs(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The number of load balancer capacity units (LCU) used by your load balancer.
@@ -374,7 +374,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricElbAuthError(props: MetricOptions): Metric =
-      unwrap(this).metricElbAuthError(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricElbAuthError(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The number of user authentications that could not be completed.
@@ -418,7 +418,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricElbAuthFailure(props: MetricOptions): Metric =
-      unwrap(this).metricElbAuthFailure(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricElbAuthFailure(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The number of user authentications that could not be completed because the IdP
@@ -463,7 +463,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricElbAuthLatency(props: MetricOptions): Metric =
-      unwrap(this).metricElbAuthLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricElbAuthLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The time elapsed, in milliseconds, to query the IdP for the ID token and user
@@ -510,7 +510,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricElbAuthSuccess(props: MetricOptions): Metric =
-      unwrap(this).metricElbAuthSuccess(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricElbAuthSuccess(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The number of authenticate actions that were successful.
@@ -542,7 +542,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricHttpCodeElb(code: HttpCodeElb): Metric =
-      unwrap(this).metricHttpCodeElb(code.let(HttpCodeElb::unwrap)).let(Metric::wrap)
+      unwrap(this).metricHttpCodeElb(code.let(HttpCodeElb.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The number of HTTP 3xx/4xx/5xx codes that originate from the load balancer.
@@ -557,8 +557,8 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricHttpCodeElb(code: HttpCodeElb, props: MetricOptions): Metric =
-      unwrap(this).metricHttpCodeElb(code.let(HttpCodeElb::unwrap),
-      props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricHttpCodeElb(code.let(HttpCodeElb.Companion::unwrap),
+      props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The number of HTTP 3xx/4xx/5xx codes that originate from the load balancer.
@@ -591,7 +591,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricHttpCodeTarget(code: HttpCodeTarget): Metric =
-      unwrap(this).metricHttpCodeTarget(code.let(HttpCodeTarget::unwrap)).let(Metric::wrap)
+      unwrap(this).metricHttpCodeTarget(code.let(HttpCodeTarget.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The number of HTTP 2xx/3xx/4xx/5xx response codes generated by all targets in the
@@ -607,8 +607,8 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricHttpCodeTarget(code: HttpCodeTarget, props: MetricOptions): Metric =
-      unwrap(this).metricHttpCodeTarget(code.let(HttpCodeTarget::unwrap),
-      props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricHttpCodeTarget(code.let(HttpCodeTarget.Companion::unwrap),
+      props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The number of HTTP 2xx/3xx/4xx/5xx response codes generated by all targets in the
@@ -651,7 +651,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricHttpFixedResponseCount(props: MetricOptions): Metric =
-      unwrap(this).metricHttpFixedResponseCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricHttpFixedResponseCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The number of fixed-response actions that were successful.
@@ -689,7 +689,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricHttpRedirectCount(props: MetricOptions): Metric =
-      unwrap(this).metricHttpRedirectCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricHttpRedirectCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The number of redirect actions that were successful.
@@ -729,7 +729,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricHttpRedirectUrlLimitExceededCount(props: MetricOptions): Metric =
-      unwrap(this).metricHttpRedirectUrlLimitExceededCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricHttpRedirectUrlLimitExceededCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The number of redirect actions that couldn't be completed because the URL in the
@@ -768,7 +768,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricIpv6ProcessedBytes(props: MetricOptions): Metric =
-      unwrap(this).metricIpv6ProcessedBytes(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricIpv6ProcessedBytes(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The total number of bytes processed by the load balancer over IPv6.
@@ -806,7 +806,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricIpv6RequestCount(props: MetricOptions): Metric =
-      unwrap(this).metricIpv6RequestCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricIpv6RequestCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The number of IPv6 requests received by the load balancer.
@@ -846,7 +846,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricNewConnectionCount(props: MetricOptions): Metric =
-      unwrap(this).metricNewConnectionCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricNewConnectionCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The total number of new TCP connections established from clients to the load
@@ -885,7 +885,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricProcessedBytes(props: MetricOptions): Metric =
-      unwrap(this).metricProcessedBytes(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricProcessedBytes(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The total number of bytes processed by the load balancer over IPv4 and IPv6.
@@ -925,7 +925,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricRejectedConnectionCount(props: MetricOptions): Metric =
-      unwrap(this).metricRejectedConnectionCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricRejectedConnectionCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The number of connections that were rejected because the load balancer had reached
@@ -969,7 +969,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricRequestCount(props: MetricOptions): Metric =
-      unwrap(this).metricRequestCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricRequestCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The number of requests processed over IPv4 and IPv6.
@@ -1012,7 +1012,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricRuleEvaluations(props: MetricOptions): Metric =
-      unwrap(this).metricRuleEvaluations(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricRuleEvaluations(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The number of rules processed by the load balancer given a request rate averaged
@@ -1053,7 +1053,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricTargetConnectionErrorCount(props: MetricOptions): Metric =
-      unwrap(this).metricTargetConnectionErrorCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricTargetConnectionErrorCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The number of connections that were not successfully established between the load
@@ -1094,7 +1094,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricTargetResponseTime(props: MetricOptions): Metric =
-      unwrap(this).metricTargetResponseTime(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricTargetResponseTime(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The time elapsed, in seconds, after the request leaves the load balancer until a
@@ -1139,7 +1139,7 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun metricTargetTLSNegotiationErrorCount(props: MetricOptions): Metric =
-      unwrap(this).metricTargetTLSNegotiationErrorCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricTargetTLSNegotiationErrorCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) The number of TLS connections initiated by the load balancer that did not
@@ -1402,7 +1402,7 @@ public open class ApplicationLoadBalancer(
      * @param clientKeepAlive The client keep alive duration. 
      */
     override fun clientKeepAlive(clientKeepAlive: Duration) {
-      cdkBuilder.clientKeepAlive(clientKeepAlive.let(Duration::unwrap))
+      cdkBuilder.clientKeepAlive(clientKeepAlive.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -1452,7 +1452,7 @@ public open class ApplicationLoadBalancer(
      * a security risk to your application. 
      */
     override fun desyncMitigationMode(desyncMitigationMode: DesyncMitigationMode) {
-      cdkBuilder.desyncMitigationMode(desyncMitigationMode.let(DesyncMitigationMode::unwrap))
+      cdkBuilder.desyncMitigationMode(desyncMitigationMode.let(DesyncMitigationMode.Companion::unwrap))
     }
 
     /**
@@ -1487,7 +1487,7 @@ public open class ApplicationLoadBalancer(
      * @param idleTimeout The load balancer idle timeout, in seconds. 
      */
     override fun idleTimeout(idleTimeout: Duration) {
-      cdkBuilder.idleTimeout(idleTimeout.let(Duration::unwrap))
+      cdkBuilder.idleTimeout(idleTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -1509,7 +1509,7 @@ public open class ApplicationLoadBalancer(
      * @param ipAddressType The type of IP addresses to use. 
      */
     override fun ipAddressType(ipAddressType: IpAddressType) {
-      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType::unwrap))
+      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType.Companion::unwrap))
     }
 
     /**
@@ -1557,7 +1557,7 @@ public open class ApplicationLoadBalancer(
      * @param securityGroup Security group to associate with this load balancer. 
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -1566,7 +1566,7 @@ public open class ApplicationLoadBalancer(
      * @param vpc The VPC network to place the load balancer in. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -1577,7 +1577,7 @@ public open class ApplicationLoadBalancer(
      * @param vpcSubnets Which subnets place the load balancer in. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -1639,7 +1639,7 @@ public open class ApplicationLoadBalancer(
      * 
      */
     override fun xffHeaderProcessingMode(xffHeaderProcessingMode: XffHeaderProcessingMode) {
-      cdkBuilder.xffHeaderProcessingMode(xffHeaderProcessingMode.let(XffHeaderProcessingMode::unwrap))
+      cdkBuilder.xffHeaderProcessingMode(xffHeaderProcessingMode.let(XffHeaderProcessingMode.Companion::unwrap))
     }
 
     public fun build():
@@ -1653,9 +1653,9 @@ public open class ApplicationLoadBalancer(
       id: String,
       attrs: ApplicationLoadBalancerAttributes,
     ): IApplicationLoadBalancer =
-        software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancer.fromApplicationLoadBalancerAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancer.fromApplicationLoadBalancerAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id,
-        attrs.let(ApplicationLoadBalancerAttributes::unwrap)).let(IApplicationLoadBalancer::wrap)
+        attrs.let(ApplicationLoadBalancerAttributes.Companion::unwrap)).let(IApplicationLoadBalancer::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("13cee8bdd3ada2786fba9f63419504bcf481668ec2f4e0edb3c498f69610ef38")
@@ -1671,9 +1671,9 @@ public open class ApplicationLoadBalancer(
       id: String,
       options: ApplicationLoadBalancerLookupOptions,
     ): IApplicationLoadBalancer =
-        software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancer.fromLookup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancer.fromLookup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id,
-        options.let(ApplicationLoadBalancerLookupOptions::unwrap)).let(IApplicationLoadBalancer::wrap)
+        options.let(ApplicationLoadBalancerLookupOptions.Companion::unwrap)).let(IApplicationLoadBalancer::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("296951d0c25167abddbc9bef4ff4ec5da29b12faec1bbb29a746129a61469732")

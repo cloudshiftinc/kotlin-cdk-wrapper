@@ -34,7 +34,7 @@ public open class RepositoryImage(
 
   public constructor(imageName: String, props: RepositoryImageProps) :
       this(software.amazon.awscdk.services.ecs.RepositoryImage(imageName,
-      props.let(RepositoryImageProps::unwrap))
+      props.let(RepositoryImageProps.Companion::unwrap))
   )
 
   public constructor(imageName: String, props: RepositoryImageProps.Builder.() -> Unit) :
@@ -48,8 +48,8 @@ public open class RepositoryImage(
    * @param containerDefinition 
    */
   public override fun bind(scope: Construct, containerDefinition: ContainerDefinition):
-      ContainerImageConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      containerDefinition.let(ContainerDefinition::unwrap)).let(ContainerImageConfig::wrap)
+      ContainerImageConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      containerDefinition.let(ContainerDefinition.Companion::unwrap)).let(ContainerImageConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.RepositoryImage].
@@ -82,7 +82,7 @@ public open class RepositoryImage(
      * the image repository. 
      */
     override fun credentials(credentials: ISecret) {
-      cdkBuilder.credentials(credentials.let(ISecret::unwrap))
+      cdkBuilder.credentials(credentials.let(ISecret.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.RepositoryImage = cdkBuilder.build()

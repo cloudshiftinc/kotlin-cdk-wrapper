@@ -60,7 +60,7 @@ public interface CfnInternetGatewayProps {
      * @param tags Any tags to assign to the internet gateway.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

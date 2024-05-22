@@ -168,7 +168,7 @@ public interface ScalableTargetProps {
      * @param role Role that allows Application Auto Scaling to modify your scalable target.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -188,7 +188,7 @@ public interface ScalableTargetProps {
      * action in the Application Auto Scaling API Reference.
      */
     override fun serviceNamespace(serviceNamespace: ServiceNamespace) {
-      cdkBuilder.serviceNamespace(serviceNamespace.let(ServiceNamespace::unwrap))
+      cdkBuilder.serviceNamespace(serviceNamespace.let(ServiceNamespace.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.applicationautoscaling.ScalableTargetProps =

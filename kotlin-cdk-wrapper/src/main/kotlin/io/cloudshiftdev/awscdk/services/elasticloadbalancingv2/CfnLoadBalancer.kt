@@ -60,7 +60,7 @@ public open class CfnLoadBalancer(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -69,8 +69,8 @@ public open class CfnLoadBalancer(
     id: String,
     props: CfnLoadBalancerProps,
   ) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLoadBalancerProps::unwrap))
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLoadBalancerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -139,7 +139,7 @@ public open class CfnLoadBalancer(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -163,7 +163,7 @@ public open class CfnLoadBalancer(
    * The load balancer attributes.
    */
   public open fun loadBalancerAttributes(`value`: IResolvable) {
-    unwrap(this).setLoadBalancerAttributes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoadBalancerAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -232,7 +232,7 @@ public open class CfnLoadBalancer(
    * The IDs of the subnets.
    */
   public open fun subnetMappings(`value`: IResolvable) {
-    unwrap(this).setSubnetMappings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSubnetMappings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -279,7 +279,7 @@ public open class CfnLoadBalancer(
    * The tags to assign to the load balancer.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -608,7 +608,7 @@ public open class CfnLoadBalancer(
      * @param loadBalancerAttributes The load balancer attributes. 
      */
     override fun loadBalancerAttributes(loadBalancerAttributes: IResolvable) {
-      cdkBuilder.loadBalancerAttributes(loadBalancerAttributes.let(IResolvable::unwrap))
+      cdkBuilder.loadBalancerAttributes(loadBalancerAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -721,7 +721,7 @@ public open class CfnLoadBalancer(
      * @param subnetMappings The IDs of the subnets. 
      */
     override fun subnetMappings(subnetMappings: IResolvable) {
-      cdkBuilder.subnetMappings(subnetMappings.let(IResolvable::unwrap))
+      cdkBuilder.subnetMappings(subnetMappings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -838,7 +838,7 @@ public open class CfnLoadBalancer(
      * @param tags The tags to assign to the load balancer. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

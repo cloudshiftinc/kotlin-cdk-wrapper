@@ -184,14 +184,14 @@ public interface CfnVpcAttachmentProps {
      * @param options Options for creating the VPC attachment.
      */
     override fun options(options: IResolvable) {
-      cdkBuilder.options(options.let(IResolvable::unwrap))
+      cdkBuilder.options(options.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param options Options for creating the VPC attachment.
      */
     override fun options(options: CfnVpcAttachment.VpcOptionsProperty) {
-      cdkBuilder.options(options.let(CfnVpcAttachment.VpcOptionsProperty::unwrap))
+      cdkBuilder.options(options.let(CfnVpcAttachment.VpcOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -207,7 +207,7 @@ public interface CfnVpcAttachmentProps {
      * In some cases, the segment change must first be evaluated and accepted.
      */
     override fun proposedSegmentChange(proposedSegmentChange: IResolvable) {
-      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(IResolvable::unwrap))
+      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -216,7 +216,7 @@ public interface CfnVpcAttachmentProps {
      */
     override
         fun proposedSegmentChange(proposedSegmentChange: CfnVpcAttachment.ProposedSegmentChangeProperty) {
-      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(CfnVpcAttachment.ProposedSegmentChangeProperty::unwrap))
+      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(CfnVpcAttachment.ProposedSegmentChangeProperty.Companion::unwrap))
     }
 
     /**
@@ -246,7 +246,7 @@ public interface CfnVpcAttachmentProps {
      * @param tags The tags associated with the VPC attachment.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

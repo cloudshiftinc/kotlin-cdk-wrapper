@@ -204,7 +204,7 @@ public interface StackDeploymentProps {
      * @param assets Assets referenced by this stack.
      */
     override fun assets(assets: List<StackAsset>) {
-      cdkBuilder.assets(assets.map(StackAsset::unwrap))
+      cdkBuilder.assets(assets.map(StackAsset.Companion::unwrap))
     }
 
     /**

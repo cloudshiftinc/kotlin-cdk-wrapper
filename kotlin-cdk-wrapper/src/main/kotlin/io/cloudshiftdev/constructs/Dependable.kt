@@ -20,15 +20,15 @@ public abstract class Dependable(
   public companion object {
     @Deprecated(message = "deprecated in CDK")
     public fun `get`(instance: IDependable): Dependable =
-        software.constructs.Dependable.`get`(instance.let(IDependable::unwrap)).let(Dependable::wrap)
+        software.constructs.Dependable.`get`(instance.let(IDependable.Companion::unwrap)).let(Dependable::wrap)
 
     public fun implement(instance: IDependable, trait: Dependable) {
-      software.constructs.Dependable.implement(instance.let(IDependable::unwrap),
-          trait.let(Dependable::unwrap))
+      software.constructs.Dependable.implement(instance.let(IDependable.Companion::unwrap),
+          trait.let(Dependable.Companion::unwrap))
     }
 
     public fun of(instance: IDependable): Dependable =
-        software.constructs.Dependable.of(instance.let(IDependable::unwrap)).let(Dependable::wrap)
+        software.constructs.Dependable.of(instance.let(IDependable.Companion::unwrap)).let(Dependable::wrap)
 
     internal fun wrap(cdkObject: software.constructs.Dependable): Dependable =
         CdkObjectWrappers.wrap(cdkObject) as? Dependable ?: Wrapper(cdkObject)

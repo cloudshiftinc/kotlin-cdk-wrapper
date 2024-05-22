@@ -56,8 +56,8 @@ public open class CfnTracker(
     id: String,
     props: CfnTrackerProps,
   ) :
-      this(software.amazon.awscdk.services.location.CfnTracker(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTrackerProps::unwrap))
+      this(software.amazon.awscdk.services.location.CfnTracker(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTrackerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -134,7 +134,7 @@ public open class CfnTracker(
    *
    */
   public open fun eventBridgeEnabled(`value`: IResolvable) {
-    unwrap(this).setEventBridgeEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEventBridgeEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -143,7 +143,7 @@ public open class CfnTracker(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -163,7 +163,7 @@ public open class CfnTracker(
    *
    */
   public open fun kmsKeyEnableGeospatialQueries(`value`: IResolvable) {
-    unwrap(this).setKmsKeyEnableGeospatialQueries(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKmsKeyEnableGeospatialQueries(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -231,7 +231,7 @@ public open class CfnTracker(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -405,7 +405,7 @@ public open class CfnTracker(
      * @param eventBridgeEnabled 
      */
     override fun eventBridgeEnabled(eventBridgeEnabled: IResolvable) {
-      cdkBuilder.eventBridgeEnabled(eventBridgeEnabled.let(IResolvable::unwrap))
+      cdkBuilder.eventBridgeEnabled(eventBridgeEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -421,7 +421,7 @@ public open class CfnTracker(
      * @param kmsKeyEnableGeospatialQueries 
      */
     override fun kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries: IResolvable) {
-      cdkBuilder.kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries.let(IResolvable::unwrap))
+      cdkBuilder.kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -494,7 +494,7 @@ public open class CfnTracker(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

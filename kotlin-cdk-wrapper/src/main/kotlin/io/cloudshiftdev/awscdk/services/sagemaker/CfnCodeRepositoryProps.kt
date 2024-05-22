@@ -124,7 +124,7 @@ public interface CfnCodeRepositoryProps {
      * access the repository. 
      */
     override fun gitConfig(gitConfig: IResolvable) {
-      cdkBuilder.gitConfig(gitConfig.let(IResolvable::unwrap))
+      cdkBuilder.gitConfig(gitConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -133,7 +133,7 @@ public interface CfnCodeRepositoryProps {
      * access the repository. 
      */
     override fun gitConfig(gitConfig: CfnCodeRepository.GitConfigProperty) {
-      cdkBuilder.gitConfig(gitConfig.let(CfnCodeRepository.GitConfigProperty::unwrap))
+      cdkBuilder.gitConfig(gitConfig.let(CfnCodeRepository.GitConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -150,7 +150,7 @@ public interface CfnCodeRepositoryProps {
      * @param tags List of tags for Code Repository.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

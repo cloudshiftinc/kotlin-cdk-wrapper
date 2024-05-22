@@ -582,7 +582,7 @@ public interface CfnInsightProps {
      * values.
      */
     override fun filters(filters: IResolvable) {
-      cdkBuilder.filters(filters.let(IResolvable::unwrap))
+      cdkBuilder.filters(filters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -592,7 +592,7 @@ public interface CfnInsightProps {
      * values.
      */
     override fun filters(filters: CfnInsight.AwsSecurityFindingFiltersProperty) {
-      cdkBuilder.filters(filters.let(CfnInsight.AwsSecurityFindingFiltersProperty::unwrap))
+      cdkBuilder.filters(filters.let(CfnInsight.AwsSecurityFindingFiltersProperty.Companion::unwrap))
     }
 
     /**

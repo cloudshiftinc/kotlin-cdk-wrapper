@@ -289,7 +289,7 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
      * You must specify either the `body` or the `input` field, but not both.
      */
     override fun body(body: TaskInput) {
-      cdkBuilder.body(body.let(TaskInput::unwrap))
+      cdkBuilder.body(body.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -312,7 +312,7 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
      * This enables cross-account resource invocations.
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -331,7 +331,7 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -340,14 +340,14 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
      * @param input The source location to retrieve the input data from.
      */
     override fun input(input: BedrockInvokeModelInputProps) {
-      cdkBuilder.input(input.let(BedrockInvokeModelInputProps::unwrap))
+      cdkBuilder.input(input.let(BedrockInvokeModelInputProps.Companion::unwrap))
     }
 
     /**
@@ -376,14 +376,14 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
      * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
      * @param model The Bedrock model that the task will invoke. 
      */
     override fun model(model: IModel) {
-      cdkBuilder.model(model.let(IModel::unwrap))
+      cdkBuilder.model(model.let(IModel.Companion::unwrap))
     }
 
     /**
@@ -392,7 +392,7 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
      * output location.
      */
     override fun output(output: BedrockInvokeModelOutputProps) {
-      cdkBuilder.output(output.let(BedrockInvokeModelOutputProps::unwrap))
+      cdkBuilder.output(output.let(BedrockInvokeModelOutputProps.Companion::unwrap))
     }
 
     /**
@@ -447,7 +447,7 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -456,7 +456,7 @@ public interface BedrockInvokeModelProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.BedrockInvokeModelProps

@@ -51,8 +51,8 @@ public open class CfnProfile(
     id: String,
     props: CfnProfileProps,
   ) :
-      this(software.amazon.awscdk.services.b2bi.CfnProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnProfileProps::unwrap))
+      this(software.amazon.awscdk.services.b2bi.CfnProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -124,7 +124,7 @@ public open class CfnProfile(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -172,7 +172,7 @@ public open class CfnProfile(
    * A key-value pair for a specific profile.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -304,7 +304,7 @@ public open class CfnProfile(
      * @param tags A key-value pair for a specific profile. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

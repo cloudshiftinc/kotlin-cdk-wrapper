@@ -388,14 +388,14 @@ public interface CfnResolverProps {
      * @param cachingConfig The caching configuration for the resolver.
      */
     override fun cachingConfig(cachingConfig: IResolvable) {
-      cdkBuilder.cachingConfig(cachingConfig.let(IResolvable::unwrap))
+      cdkBuilder.cachingConfig(cachingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param cachingConfig The caching configuration for the resolver.
      */
     override fun cachingConfig(cachingConfig: CfnResolver.CachingConfigProperty) {
-      cdkBuilder.cachingConfig(cachingConfig.let(CfnResolver.CachingConfigProperty::unwrap))
+      cdkBuilder.cachingConfig(cachingConfig.let(CfnResolver.CachingConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -470,14 +470,14 @@ public interface CfnResolverProps {
      * @param pipelineConfig Functions linked with the pipeline resolver.
      */
     override fun pipelineConfig(pipelineConfig: IResolvable) {
-      cdkBuilder.pipelineConfig(pipelineConfig.let(IResolvable::unwrap))
+      cdkBuilder.pipelineConfig(pipelineConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param pipelineConfig Functions linked with the pipeline resolver.
      */
     override fun pipelineConfig(pipelineConfig: CfnResolver.PipelineConfigProperty) {
-      cdkBuilder.pipelineConfig(pipelineConfig.let(CfnResolver.PipelineConfigProperty::unwrap))
+      cdkBuilder.pipelineConfig(pipelineConfig.let(CfnResolver.PipelineConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -531,7 +531,7 @@ public interface CfnResolverProps {
      * code must also be specified.
      */
     override fun runtime(runtime: IResolvable) {
-      cdkBuilder.runtime(runtime.let(IResolvable::unwrap))
+      cdkBuilder.runtime(runtime.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -540,7 +540,7 @@ public interface CfnResolverProps {
      * code must also be specified.
      */
     override fun runtime(runtime: CfnResolver.AppSyncRuntimeProperty) {
-      cdkBuilder.runtime(runtime.let(CfnResolver.AppSyncRuntimeProperty::unwrap))
+      cdkBuilder.runtime(runtime.let(CfnResolver.AppSyncRuntimeProperty.Companion::unwrap))
     }
 
     /**
@@ -557,14 +557,14 @@ public interface CfnResolverProps {
      * @param syncConfig The `SyncConfig` for a resolver attached to a versioned data source.
      */
     override fun syncConfig(syncConfig: IResolvable) {
-      cdkBuilder.syncConfig(syncConfig.let(IResolvable::unwrap))
+      cdkBuilder.syncConfig(syncConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param syncConfig The `SyncConfig` for a resolver attached to a versioned data source.
      */
     override fun syncConfig(syncConfig: CfnResolver.SyncConfigProperty) {
-      cdkBuilder.syncConfig(syncConfig.let(CfnResolver.SyncConfigProperty::unwrap))
+      cdkBuilder.syncConfig(syncConfig.let(CfnResolver.SyncConfigProperty.Companion::unwrap))
     }
 
     /**

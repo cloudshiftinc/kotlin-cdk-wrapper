@@ -136,7 +136,7 @@ public interface StringParameterProps : ParameterOptions {
      * @param dataType The data type of the parameter, such as `text` or `aws:ec2:image`.
      */
     override fun dataType(dataType: ParameterDataType) {
-      cdkBuilder.dataType(dataType.let(ParameterDataType::unwrap))
+      cdkBuilder.dataType(dataType.let(ParameterDataType.Companion::unwrap))
     }
 
     /**
@@ -180,7 +180,7 @@ public interface StringParameterProps : ParameterOptions {
      * @param tier The tier of the string parameter.
      */
     override fun tier(tier: ParameterTier) {
-      cdkBuilder.tier(tier.let(ParameterTier::unwrap))
+      cdkBuilder.tier(tier.let(ParameterTier.Companion::unwrap))
     }
 
     /**
@@ -189,7 +189,7 @@ public interface StringParameterProps : ParameterOptions {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun type(type: ParameterType) {
-      cdkBuilder.type(type.let(ParameterType::unwrap))
+      cdkBuilder.type(type.let(ParameterType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ssm.StringParameterProps =

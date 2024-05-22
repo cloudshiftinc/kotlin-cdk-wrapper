@@ -59,8 +59,8 @@ public open class CfnOriginAccessControl(
     id: String,
     props: CfnOriginAccessControlProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnOriginAccessControlProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.CfnOriginAccessControl(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnOriginAccessControlProps.Companion::unwrap))
   )
 
   public constructor(
@@ -81,7 +81,7 @@ public open class CfnOriginAccessControl(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -93,14 +93,14 @@ public open class CfnOriginAccessControl(
    * The origin access control.
    */
   public open fun originAccessControlConfig(`value`: IResolvable) {
-    unwrap(this).setOriginAccessControlConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOriginAccessControlConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The origin access control.
    */
   public open fun originAccessControlConfig(`value`: OriginAccessControlConfigProperty) {
-    unwrap(this).setOriginAccessControlConfig(`value`.let(OriginAccessControlConfigProperty::unwrap))
+    unwrap(this).setOriginAccessControlConfig(`value`.let(OriginAccessControlConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -161,7 +161,7 @@ public open class CfnOriginAccessControl(
      * @param originAccessControlConfig The origin access control. 
      */
     override fun originAccessControlConfig(originAccessControlConfig: IResolvable) {
-      cdkBuilder.originAccessControlConfig(originAccessControlConfig.let(IResolvable::unwrap))
+      cdkBuilder.originAccessControlConfig(originAccessControlConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -172,7 +172,7 @@ public open class CfnOriginAccessControl(
      */
     override
         fun originAccessControlConfig(originAccessControlConfig: OriginAccessControlConfigProperty) {
-      cdkBuilder.originAccessControlConfig(originAccessControlConfig.let(OriginAccessControlConfigProperty::unwrap))
+      cdkBuilder.originAccessControlConfig(originAccessControlConfig.let(OriginAccessControlConfigProperty.Companion::unwrap))
     }
 
     /**

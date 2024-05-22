@@ -96,7 +96,7 @@ public interface CfnDeviceDefinitionVersionProps {
      * @param devices The devices in this version. 
      */
     override fun devices(devices: IResolvable) {
-      cdkBuilder.devices(devices.let(IResolvable::unwrap))
+      cdkBuilder.devices(devices.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -11,20 +11,12 @@ import kotlin.String
  * Example:
  *
  * ```
- * Bucket s3Bucket;
- * // Add a cloudfront Function to a Distribution
- * Function cfFunction = Function.Builder.create(this, "Function")
+ * KeyValueStore store = new KeyValueStore(this, "KeyValueStore");
+ * Function.Builder.create(this, "Function")
  * .code(FunctionCode.fromInline("function handler(event) { return event.request }"))
+ * // Note that JS_2_0 must be used for Key Value Store support
  * .runtime(FunctionRuntime.JS_2_0)
- * .build();
- * Distribution.Builder.create(this, "distro")
- * .defaultBehavior(BehaviorOptions.builder()
- * .origin(new S3Origin(s3Bucket))
- * .functionAssociations(List.of(FunctionAssociation.builder()
- * .function(cfFunction)
- * .eventType(FunctionEventType.VIEWER_REQUEST)
- * .build()))
- * .build())
+ * .keyValueStore(store)
  * .build();
  * ```
  */

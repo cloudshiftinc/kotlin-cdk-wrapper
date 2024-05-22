@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.kinesis
 
 import io.cloudshiftdev.awscdk.Duration
+import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
@@ -37,7 +38,7 @@ public open class Stream(
   cdkObject: software.amazon.awscdk.services.kinesis.Stream,
 ) : Resource(cdkObject), IStream {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.kinesis.Stream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.kinesis.Stream(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -46,8 +47,8 @@ public open class Stream(
     id: String,
     props: StreamProps,
   ) :
-      this(software.amazon.awscdk.services.kinesis.Stream(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(StreamProps::unwrap))
+      this(software.amazon.awscdk.services.kinesis.Stream(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(StreamProps.Companion::unwrap))
   )
 
   public constructor(
@@ -69,8 +70,8 @@ public open class Stream(
    * @param actions 
    */
   public override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
-      as String}.toTypedArray()).let(Grant::wrap)
+      unwrap(this).grant(grantee.let(IGrantable.Companion::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Grant read permissions for this stream and its contents to an IAM principal (Role/Group/User).
@@ -81,7 +82,7 @@ public open class Stream(
    * @param grantee 
    */
   public override fun grantRead(grantee: IGrantable): Grant =
-      unwrap(this).grantRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grants read/write permissions for this stream and its contents to an IAM principal
@@ -93,7 +94,7 @@ public open class Stream(
    * @param grantee 
    */
   public override fun grantReadWrite(grantee: IGrantable): Grant =
-      unwrap(this).grantReadWrite(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantReadWrite(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant write permissions for this stream and its contents to an IAM principal (Role/Group/User).
@@ -104,7 +105,7 @@ public open class Stream(
    * @param grantee 
    */
   public override fun grantWrite(grantee: IGrantable): Grant =
-      unwrap(this).grantWrite(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantWrite(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Return stream metric based from its metric name.
@@ -122,7 +123,7 @@ public open class Stream(
    * @param props properties of the metric.
    */
   public override fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Return stream metric based from its metric name.
@@ -166,7 +167,7 @@ public open class Stream(
    * @param props properties of the metric.
    */
   public override fun metricGetRecords(props: MetricOptions): Metric =
-      unwrap(this).metricGetRecords(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricGetRecords(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of records retrieved from the shard, measured over the specified time period.
@@ -217,7 +218,7 @@ public open class Stream(
    * @param props properties of the metric.
    */
   public override fun metricGetRecordsBytes(props: MetricOptions): Metric =
-      unwrap(this).metricGetRecordsBytes(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricGetRecordsBytes(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of bytes retrieved from the Kinesis stream, measured over the specified time period.
@@ -273,7 +274,7 @@ public open class Stream(
    * @param props properties of the metric.
    */
   public override fun metricGetRecordsIteratorAgeMilliseconds(props: MetricOptions): Metric =
-      unwrap(this).metricGetRecordsIteratorAgeMilliseconds(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricGetRecordsIteratorAgeMilliseconds(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The age of the last record in all GetRecords calls made against a Kinesis stream, measured over
@@ -319,7 +320,7 @@ public open class Stream(
    * @param props properties of the metric.
    */
   public override fun metricGetRecordsLatency(props: MetricOptions): Metric =
-      unwrap(this).metricGetRecordsLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricGetRecordsLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of successful GetRecords operations per stream, measured over the specified time
@@ -357,7 +358,7 @@ public open class Stream(
    * @param props properties of the metric.
    */
   public override fun metricGetRecordsSuccess(props: MetricOptions): Metric =
-      unwrap(this).metricGetRecordsSuccess(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricGetRecordsSuccess(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of successful GetRecords operations per stream, measured over the specified time
@@ -403,7 +404,7 @@ public open class Stream(
    * @param props properties of the metric.
    */
   public override fun metricIncomingBytes(props: MetricOptions): Metric =
-      unwrap(this).metricIncomingBytes(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricIncomingBytes(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of bytes successfully put to the Kinesis stream over the specified time period.
@@ -453,7 +454,7 @@ public open class Stream(
    * @param props properties of the metric.
    */
   public override fun metricIncomingRecords(props: MetricOptions): Metric =
-      unwrap(this).metricIncomingRecords(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricIncomingRecords(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of records successfully put to the Kinesis stream over the specified time period.
@@ -495,7 +496,7 @@ public open class Stream(
    * @param props properties of the metric.
    */
   public override fun metricPutRecordBytes(props: MetricOptions): Metric =
-      unwrap(this).metricPutRecordBytes(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricPutRecordBytes(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of bytes put to the Kinesis stream using the PutRecord operation over the specified
@@ -531,7 +532,7 @@ public open class Stream(
    * @param props properties of the metric.
    */
   public override fun metricPutRecordLatency(props: MetricOptions): Metric =
-      unwrap(this).metricPutRecordLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricPutRecordLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The time taken per PutRecord operation, measured over the specified time period.
@@ -574,7 +575,7 @@ public open class Stream(
    * @param props properties of the metric.
    */
   public override fun metricPutRecordSuccess(props: MetricOptions): Metric =
-      unwrap(this).metricPutRecordSuccess(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricPutRecordSuccess(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of successful PutRecord operations per Kinesis stream, measured over the specified
@@ -615,7 +616,7 @@ public open class Stream(
    * @param props properties of the metric.
    */
   public override fun metricPutRecordsBytes(props: MetricOptions): Metric =
-      unwrap(this).metricPutRecordsBytes(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricPutRecordsBytes(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of bytes put to the Kinesis stream using the PutRecords operation over the specified
@@ -657,7 +658,7 @@ public open class Stream(
    * @param props properties of the metric.
    */
   public override fun metricPutRecordsFailedRecords(props: MetricOptions): Metric =
-      unwrap(this).metricPutRecordsFailedRecords(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricPutRecordsFailedRecords(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of records rejected due to internal failures in a PutRecords operation per Kinesis
@@ -695,7 +696,7 @@ public open class Stream(
    * @param props properties of the metric.
    */
   public override fun metricPutRecordsLatency(props: MetricOptions): Metric =
-      unwrap(this).metricPutRecordsLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricPutRecordsLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The time taken per PutRecords operation, measured over the specified time period.
@@ -732,7 +733,7 @@ public open class Stream(
    * @param props properties of the metric.
    */
   public override fun metricPutRecordsSuccess(props: MetricOptions): Metric =
-      unwrap(this).metricPutRecordsSuccess(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricPutRecordsSuccess(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of PutRecords operations where at least one record succeeded, per Kinesis stream,
@@ -770,7 +771,7 @@ public open class Stream(
    * @param props properties of the metric.
    */
   public override fun metricPutRecordsSuccessfulRecords(props: MetricOptions): Metric =
-      unwrap(this).metricPutRecordsSuccessfulRecords(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricPutRecordsSuccessfulRecords(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of successful records in a PutRecords operation per Kinesis data stream, measured
@@ -808,7 +809,7 @@ public open class Stream(
    * @param props properties of the metric.
    */
   public override fun metricPutRecordsThrottledRecords(props: MetricOptions): Metric =
-      unwrap(this).metricPutRecordsThrottledRecords(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricPutRecordsThrottledRecords(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of records rejected due to throttling in a PutRecords operation per Kinesis data
@@ -846,7 +847,7 @@ public open class Stream(
    * @param props properties of the metric.
    */
   public override fun metricPutRecordsTotalRecords(props: MetricOptions): Metric =
-      unwrap(this).metricPutRecordsTotalRecords(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricPutRecordsTotalRecords(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The total number of records sent in a PutRecords operation per Kinesis data stream, measured
@@ -904,7 +905,7 @@ public open class Stream(
    * @param props properties of the metric.
    */
   public override fun metricReadProvisionedThroughputExceeded(props: MetricOptions): Metric =
-      unwrap(this).metricReadProvisionedThroughputExceeded(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricReadProvisionedThroughputExceeded(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of GetRecords calls throttled for the stream over the specified time period.
@@ -973,7 +974,7 @@ public open class Stream(
    * @param props properties of the metric.
    */
   public override fun metricWriteProvisionedThroughputExceeded(props: MetricOptions): Metric =
-      unwrap(this).metricWriteProvisionedThroughputExceeded(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricWriteProvisionedThroughputExceeded(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The number of records rejected due to throttling for the stream over the specified time period.
@@ -1043,6 +1044,15 @@ public open class Stream(
     public fun encryptionKey(encryptionKey: IKey)
 
     /**
+     * Policy to apply when the stream is removed from the stack.
+     *
+     * Default: RemovalPolicy.RETAIN
+     *
+     * @param removalPolicy Policy to apply when the stream is removed from the stack. 
+     */
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
+
+    /**
      * The number of hours for the data records that are stored in shards to remain accessible.
      *
      * Default: Duration.hours(24)
@@ -1102,7 +1112,7 @@ public open class Stream(
      * @param encryption The kind of server-side encryption to apply to this stream. 
      */
     override fun encryption(encryption: StreamEncryption) {
-      cdkBuilder.encryption(encryption.let(StreamEncryption::unwrap))
+      cdkBuilder.encryption(encryption.let(StreamEncryption.Companion::unwrap))
     }
 
     /**
@@ -1117,7 +1127,18 @@ public open class Stream(
      * @param encryptionKey External KMS key to use for stream encryption. 
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
+    }
+
+    /**
+     * Policy to apply when the stream is removed from the stack.
+     *
+     * Default: RemovalPolicy.RETAIN
+     *
+     * @param removalPolicy Policy to apply when the stream is removed from the stack. 
+     */
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -1129,7 +1150,7 @@ public open class Stream(
      * remain accessible. 
      */
     override fun retentionPeriod(retentionPeriod: Duration) {
-      cdkBuilder.retentionPeriod(retentionPeriod.let(Duration::unwrap))
+      cdkBuilder.retentionPeriod(retentionPeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -1153,7 +1174,7 @@ public open class Stream(
      * @param streamMode The capacity mode of this stream. 
      */
     override fun streamMode(streamMode: StreamMode) {
-      cdkBuilder.streamMode(streamMode.let(StreamMode::unwrap))
+      cdkBuilder.streamMode(streamMode.let(StreamMode.Companion::unwrap))
     }
 
     /**
@@ -1176,7 +1197,7 @@ public open class Stream(
       id: String,
       streamArn: String,
     ): IStream =
-        software.amazon.awscdk.services.kinesis.Stream.fromStreamArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.kinesis.Stream.fromStreamArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, streamArn).let(IStream::wrap)
 
     public fun fromStreamAttributes(
@@ -1184,8 +1205,8 @@ public open class Stream(
       id: String,
       attrs: StreamAttributes,
     ): IStream =
-        software.amazon.awscdk.services.kinesis.Stream.fromStreamAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(StreamAttributes::unwrap)).let(IStream::wrap)
+        software.amazon.awscdk.services.kinesis.Stream.fromStreamAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(StreamAttributes.Companion::unwrap)).let(IStream::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ef7ebd7feb27a37dfb1f0d6a36bd8d7bb4dbab3fa2f42817390c0e4d58ae82cf")

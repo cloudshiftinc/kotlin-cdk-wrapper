@@ -38,8 +38,8 @@ public open class CfnQueueFleetAssociation(
     id: String,
     props: CfnQueueFleetAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.deadline.CfnQueueFleetAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnQueueFleetAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.deadline.CfnQueueFleetAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnQueueFleetAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -79,7 +79,7 @@ public open class CfnQueueFleetAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

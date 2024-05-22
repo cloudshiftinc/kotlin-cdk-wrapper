@@ -62,7 +62,7 @@ public open class CfnTheme(
   cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnTheme,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.amplifyuibuilder.CfnTheme(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.amplifyuibuilder.CfnTheme(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -71,8 +71,8 @@ public open class CfnTheme(
     id: String,
     props: CfnThemeProps,
   ) :
-      this(software.amazon.awscdk.services.amplifyuibuilder.CfnTheme(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnThemeProps::unwrap))
+      this(software.amazon.awscdk.services.amplifyuibuilder.CfnTheme(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnThemeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -127,7 +127,7 @@ public open class CfnTheme(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -151,7 +151,7 @@ public open class CfnTheme(
    * Describes the properties that can be overriden to customize a theme.
    */
   public open fun overrides(`value`: IResolvable) {
-    unwrap(this).setOverrides(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOverrides(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -192,7 +192,7 @@ public open class CfnTheme(
    * A list of key-value pairs that defines the properties of the theme.
    */
   public open fun values(`value`: IResolvable) {
-    unwrap(this).setValues(`value`.let(IResolvable::unwrap))
+    unwrap(this).setValues(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -339,7 +339,7 @@ public open class CfnTheme(
      * @param overrides Describes the properties that can be overriden to customize a theme. 
      */
     override fun overrides(overrides: IResolvable) {
-      cdkBuilder.overrides(overrides.let(IResolvable::unwrap))
+      cdkBuilder.overrides(overrides.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -377,7 +377,7 @@ public open class CfnTheme(
      * @param values A list of key-value pairs that defines the properties of the theme. 
      */
     override fun values(values: IResolvable) {
-      cdkBuilder.values(values.let(IResolvable::unwrap))
+      cdkBuilder.values(values.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -494,7 +494,7 @@ public open class CfnTheme(
        * @param children A list of key-value pairs that define the theme's properties.
        */
       override fun children(children: IResolvable) {
-        cdkBuilder.children(children.let(IResolvable::unwrap))
+        cdkBuilder.children(children.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -637,14 +637,14 @@ public open class CfnTheme(
        * @param value The value of the property.
        */
       override fun `value`(`value`: IResolvable) {
-        cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
+        cdkBuilder.`value`(`value`.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param value The value of the property.
        */
       override fun `value`(`value`: ThemeValueProperty) {
-        cdkBuilder.`value`(`value`.let(ThemeValueProperty::unwrap))
+        cdkBuilder.`value`(`value`.let(ThemeValueProperty.Companion::unwrap))
       }
 
       /**

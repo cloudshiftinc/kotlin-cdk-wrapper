@@ -142,8 +142,8 @@ public open class CfnSchedule(
     id: String,
     props: CfnScheduleProps,
   ) :
-      this(software.amazon.awscdk.services.scheduler.CfnSchedule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnScheduleProps::unwrap))
+      this(software.amazon.awscdk.services.scheduler.CfnSchedule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnScheduleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -191,14 +191,14 @@ public open class CfnSchedule(
    * Allows you to configure a time window during which EventBridge Scheduler invokes the schedule.
    */
   public open fun flexibleTimeWindow(`value`: IResolvable) {
-    unwrap(this).setFlexibleTimeWindow(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFlexibleTimeWindow(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Allows you to configure a time window during which EventBridge Scheduler invokes the schedule.
    */
   public open fun flexibleTimeWindow(`value`: FlexibleTimeWindowProperty) {
-    unwrap(this).setFlexibleTimeWindow(`value`.let(FlexibleTimeWindowProperty::unwrap))
+    unwrap(this).setFlexibleTimeWindow(`value`.let(FlexibleTimeWindowProperty.Companion::unwrap))
   }
 
   /**
@@ -227,7 +227,7 @@ public open class CfnSchedule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -318,14 +318,14 @@ public open class CfnSchedule(
    * The schedule's target details.
    */
   public open fun target(`value`: IResolvable) {
-    unwrap(this).setTarget(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTarget(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The schedule's target details.
    */
   public open fun target(`value`: TargetProperty) {
-    unwrap(this).setTarget(`value`.let(TargetProperty::unwrap))
+    unwrap(this).setTarget(`value`.let(TargetProperty.Companion::unwrap))
   }
 
   /**
@@ -547,7 +547,7 @@ public open class CfnSchedule(
      * Scheduler invokes the schedule. 
      */
     override fun flexibleTimeWindow(flexibleTimeWindow: IResolvable) {
-      cdkBuilder.flexibleTimeWindow(flexibleTimeWindow.let(IResolvable::unwrap))
+      cdkBuilder.flexibleTimeWindow(flexibleTimeWindow.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -559,7 +559,7 @@ public open class CfnSchedule(
      * Scheduler invokes the schedule. 
      */
     override fun flexibleTimeWindow(flexibleTimeWindow: FlexibleTimeWindowProperty) {
-      cdkBuilder.flexibleTimeWindow(flexibleTimeWindow.let(FlexibleTimeWindowProperty::unwrap))
+      cdkBuilder.flexibleTimeWindow(flexibleTimeWindow.let(FlexibleTimeWindowProperty.Companion::unwrap))
     }
 
     /**
@@ -684,7 +684,7 @@ public open class CfnSchedule(
      * @param target The schedule's target details. 
      */
     override fun target(target: IResolvable) {
-      cdkBuilder.target(target.let(IResolvable::unwrap))
+      cdkBuilder.target(target.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -694,7 +694,7 @@ public open class CfnSchedule(
      * @param target The schedule's target details. 
      */
     override fun target(target: TargetProperty) {
-      cdkBuilder.target(target.let(TargetProperty::unwrap))
+      cdkBuilder.target(target.let(TargetProperty.Companion::unwrap))
     }
 
     /**
@@ -1550,7 +1550,7 @@ public open class CfnSchedule(
        * @param capacityProviderStrategy The capacity provider strategy to use for the task.
        */
       override fun capacityProviderStrategy(capacityProviderStrategy: IResolvable) {
-        cdkBuilder.capacityProviderStrategy(capacityProviderStrategy.let(IResolvable::unwrap))
+        cdkBuilder.capacityProviderStrategy(capacityProviderStrategy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1585,7 +1585,7 @@ public open class CfnSchedule(
        * the *Amazon ECS Developer Guide* .
        */
       override fun enableEcsManagedTags(enableEcsManagedTags: IResolvable) {
-        cdkBuilder.enableEcsManagedTags(enableEcsManagedTags.let(IResolvable::unwrap))
+        cdkBuilder.enableEcsManagedTags(enableEcsManagedTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1603,7 +1603,7 @@ public open class CfnSchedule(
        * If true, this enables execute command functionality on all containers in the task.
        */
       override fun enableExecuteCommand(enableExecuteCommand: IResolvable) {
-        cdkBuilder.enableExecuteCommand(enableExecuteCommand.let(IResolvable::unwrap))
+        cdkBuilder.enableExecuteCommand(enableExecuteCommand.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1631,7 +1631,7 @@ public open class CfnSchedule(
        * task.
        */
       override fun networkConfiguration(networkConfiguration: IResolvable) {
-        cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1639,7 +1639,7 @@ public open class CfnSchedule(
        * task.
        */
       override fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
-        cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty::unwrap))
+        cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1658,7 +1658,7 @@ public open class CfnSchedule(
        * and those specified at runtime).
        */
       override fun placementConstraints(placementConstraints: IResolvable) {
-        cdkBuilder.placementConstraints(placementConstraints.let(IResolvable::unwrap))
+        cdkBuilder.placementConstraints(placementConstraints.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1682,7 +1682,7 @@ public open class CfnSchedule(
        * @param placementStrategy The task placement strategy for a task or service.
        */
       override fun placementStrategy(placementStrategy: IResolvable) {
-        cdkBuilder.placementStrategy(placementStrategy.let(IResolvable::unwrap))
+        cdkBuilder.placementStrategy(placementStrategy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2337,7 +2337,7 @@ public open class CfnSchedule(
        * This structure is relevant only for ECS tasks that use the awsvpc network mode.
        */
       override fun awsvpcConfiguration(awsvpcConfiguration: IResolvable) {
-        cdkBuilder.awsvpcConfiguration(awsvpcConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.awsvpcConfiguration(awsvpcConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2346,7 +2346,7 @@ public open class CfnSchedule(
        * This structure is relevant only for ECS tasks that use the awsvpc network mode.
        */
       override fun awsvpcConfiguration(awsvpcConfiguration: AwsVpcConfigurationProperty) {
-        cdkBuilder.awsvpcConfiguration(awsvpcConfiguration.let(AwsVpcConfigurationProperty::unwrap))
+        cdkBuilder.awsvpcConfiguration(awsvpcConfiguration.let(AwsVpcConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2994,7 +2994,7 @@ public open class CfnSchedule(
        * SageMaker Model Building Pipeline.
        */
       override fun pipelineParameterList(pipelineParameterList: IResolvable) {
-        cdkBuilder.pipelineParameterList(pipelineParameterList.let(IResolvable::unwrap))
+        cdkBuilder.pipelineParameterList(pipelineParameterList.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3538,7 +3538,7 @@ public open class CfnSchedule(
        * delivered to a target to the queue.
        */
       override fun deadLetterConfig(deadLetterConfig: IResolvable) {
-        cdkBuilder.deadLetterConfig(deadLetterConfig.let(IResolvable::unwrap))
+        cdkBuilder.deadLetterConfig(deadLetterConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3548,7 +3548,7 @@ public open class CfnSchedule(
        * delivered to a target to the queue.
        */
       override fun deadLetterConfig(deadLetterConfig: DeadLetterConfigProperty) {
-        cdkBuilder.deadLetterConfig(deadLetterConfig.let(DeadLetterConfigProperty::unwrap))
+        cdkBuilder.deadLetterConfig(deadLetterConfig.let(DeadLetterConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -3568,7 +3568,7 @@ public open class CfnSchedule(
        * operation.
        */
       override fun ecsParameters(ecsParameters: IResolvable) {
-        cdkBuilder.ecsParameters(ecsParameters.let(IResolvable::unwrap))
+        cdkBuilder.ecsParameters(ecsParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3577,7 +3577,7 @@ public open class CfnSchedule(
        * operation.
        */
       override fun ecsParameters(ecsParameters: EcsParametersProperty) {
-        cdkBuilder.ecsParameters(ecsParameters.let(EcsParametersProperty::unwrap))
+        cdkBuilder.ecsParameters(ecsParameters.let(EcsParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3596,7 +3596,7 @@ public open class CfnSchedule(
        * API operation.
        */
       override fun eventBridgeParameters(eventBridgeParameters: IResolvable) {
-        cdkBuilder.eventBridgeParameters(eventBridgeParameters.let(IResolvable::unwrap))
+        cdkBuilder.eventBridgeParameters(eventBridgeParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3605,7 +3605,7 @@ public open class CfnSchedule(
        * API operation.
        */
       override fun eventBridgeParameters(eventBridgeParameters: EventBridgeParametersProperty) {
-        cdkBuilder.eventBridgeParameters(eventBridgeParameters.let(EventBridgeParametersProperty::unwrap))
+        cdkBuilder.eventBridgeParameters(eventBridgeParameters.let(EventBridgeParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3636,7 +3636,7 @@ public open class CfnSchedule(
        * operation.
        */
       override fun kinesisParameters(kinesisParameters: IResolvable) {
-        cdkBuilder.kinesisParameters(kinesisParameters.let(IResolvable::unwrap))
+        cdkBuilder.kinesisParameters(kinesisParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3645,7 +3645,7 @@ public open class CfnSchedule(
        * operation.
        */
       override fun kinesisParameters(kinesisParameters: KinesisParametersProperty) {
-        cdkBuilder.kinesisParameters(kinesisParameters.let(KinesisParametersProperty::unwrap))
+        cdkBuilder.kinesisParameters(kinesisParameters.let(KinesisParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3665,7 +3665,7 @@ public open class CfnSchedule(
        * Scheduler will try to deliver the event to a target.
        */
       override fun retryPolicy(retryPolicy: IResolvable) {
-        cdkBuilder.retryPolicy(retryPolicy.let(IResolvable::unwrap))
+        cdkBuilder.retryPolicy(retryPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3674,7 +3674,7 @@ public open class CfnSchedule(
        * Scheduler will try to deliver the event to a target.
        */
       override fun retryPolicy(retryPolicy: RetryPolicyProperty) {
-        cdkBuilder.retryPolicy(retryPolicy.let(RetryPolicyProperty::unwrap))
+        cdkBuilder.retryPolicy(retryPolicy.let(RetryPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -3701,7 +3701,7 @@ public open class CfnSchedule(
        * API operation.
        */
       override fun sageMakerPipelineParameters(sageMakerPipelineParameters: IResolvable) {
-        cdkBuilder.sageMakerPipelineParameters(sageMakerPipelineParameters.let(IResolvable::unwrap))
+        cdkBuilder.sageMakerPipelineParameters(sageMakerPipelineParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3711,7 +3711,7 @@ public open class CfnSchedule(
        */
       override
           fun sageMakerPipelineParameters(sageMakerPipelineParameters: SageMakerPipelineParametersProperty) {
-        cdkBuilder.sageMakerPipelineParameters(sageMakerPipelineParameters.let(SageMakerPipelineParametersProperty::unwrap))
+        cdkBuilder.sageMakerPipelineParameters(sageMakerPipelineParameters.let(SageMakerPipelineParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3736,7 +3736,7 @@ public open class CfnSchedule(
        * in the *Amazon SQS Developer Guide* .
        */
       override fun sqsParameters(sqsParameters: IResolvable) {
-        cdkBuilder.sqsParameters(sqsParameters.let(IResolvable::unwrap))
+        cdkBuilder.sqsParameters(sqsParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3749,7 +3749,7 @@ public open class CfnSchedule(
        * in the *Amazon SQS Developer Guide* .
        */
       override fun sqsParameters(sqsParameters: SqsParametersProperty) {
-        cdkBuilder.sqsParameters(sqsParameters.let(SqsParametersProperty::unwrap))
+        cdkBuilder.sqsParameters(sqsParameters.let(SqsParametersProperty.Companion::unwrap))
       }
 
       /**

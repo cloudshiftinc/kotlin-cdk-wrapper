@@ -23,7 +23,7 @@ public open class CfnDynamicReference(
   cdkObject: software.amazon.awscdk.CfnDynamicReference,
 ) : Intrinsic(cdkObject) {
   public constructor(service: CfnDynamicReferenceService, key: String) :
-      this(software.amazon.awscdk.CfnDynamicReference(service.let(CfnDynamicReferenceService::unwrap),
+      this(software.amazon.awscdk.CfnDynamicReference(service.let(CfnDynamicReferenceService.Companion::unwrap),
       key)
   )
 

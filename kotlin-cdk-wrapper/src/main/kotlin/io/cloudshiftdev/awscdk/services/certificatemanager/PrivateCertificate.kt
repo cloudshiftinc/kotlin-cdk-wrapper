@@ -38,8 +38,8 @@ public open class PrivateCertificate(
     id: String,
     props: PrivateCertificateProps,
   ) :
-      this(software.amazon.awscdk.services.certificatemanager.PrivateCertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(PrivateCertificateProps::unwrap))
+      this(software.amazon.awscdk.services.certificatemanager.PrivateCertificate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(PrivateCertificateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -78,7 +78,7 @@ public open class PrivateCertificate(
    * @param props
    */
   public override fun metricDaysToExpiry(props: MetricOptions): Metric =
-      unwrap(this).metricDaysToExpiry(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricDaysToExpiry(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Return the DaysToExpiry metric for this AWS Certificate Manager Certificate. By default, this
@@ -172,7 +172,7 @@ public open class PrivateCertificate(
      * certificate. 
      */
     override fun certificateAuthority(certificateAuthority: ICertificateAuthority) {
-      cdkBuilder.certificateAuthority(certificateAuthority.let(ICertificateAuthority::unwrap))
+      cdkBuilder.certificateAuthority(certificateAuthority.let(ICertificateAuthority.Companion::unwrap))
     }
 
     /**
@@ -201,7 +201,7 @@ public open class PrivateCertificate(
      * certificate uses to encrypt data. 
      */
     override fun keyAlgorithm(keyAlgorithm: KeyAlgorithm) {
-      cdkBuilder.keyAlgorithm(keyAlgorithm.let(KeyAlgorithm::unwrap))
+      cdkBuilder.keyAlgorithm(keyAlgorithm.let(KeyAlgorithm.Companion::unwrap))
     }
 
     /**
@@ -239,7 +239,7 @@ public open class PrivateCertificate(
       id: String,
       certificateArn: String,
     ): ICertificate =
-        software.amazon.awscdk.services.certificatemanager.PrivateCertificate.fromCertificateArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.certificatemanager.PrivateCertificate.fromCertificateArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, certificateArn).let(ICertificate::wrap)
 
     public operator fun invoke(

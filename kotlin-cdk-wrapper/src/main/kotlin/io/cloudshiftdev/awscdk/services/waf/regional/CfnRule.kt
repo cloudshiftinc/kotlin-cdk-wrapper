@@ -70,8 +70,8 @@ public open class CfnRule(
     id: String,
     props: CfnRuleProps,
   ) :
-      this(software.amazon.awscdk.services.waf.regional.CfnRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRuleProps::unwrap))
+      this(software.amazon.awscdk.services.waf.regional.CfnRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -92,7 +92,7 @@ public open class CfnRule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -130,7 +130,7 @@ public open class CfnRule(
    * `SqlInjectionMatchSet` object that you want to include in a `Rule` .
    */
   public open fun predicates(`value`: IResolvable) {
-    unwrap(this).setPredicates(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPredicates(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -253,7 +253,7 @@ public open class CfnRule(
      * . 
      */
     override fun predicates(predicates: IResolvable) {
-      cdkBuilder.predicates(predicates.let(IResolvable::unwrap))
+      cdkBuilder.predicates(predicates.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -456,7 +456,7 @@ public open class CfnRule(
        * based on all IP addresses *except* `192.0.2.44` .
        */
       override fun negated(negated: IResolvable) {
-        cdkBuilder.negated(negated.let(IResolvable::unwrap))
+        cdkBuilder.negated(negated.let(IResolvable.Companion::unwrap))
       }
 
       /**

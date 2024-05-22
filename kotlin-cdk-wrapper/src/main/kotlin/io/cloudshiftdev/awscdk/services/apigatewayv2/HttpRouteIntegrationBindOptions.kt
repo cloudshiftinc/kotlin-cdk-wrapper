@@ -68,7 +68,7 @@ public interface HttpRouteIntegrationBindOptions {
      * @param route The route to which this is being bound. 
      */
     override fun route(route: IHttpRoute) {
-      cdkBuilder.route(route.let(IHttpRoute::unwrap))
+      cdkBuilder.route(route.let(IHttpRoute.Companion::unwrap))
     }
 
     /**
@@ -77,7 +77,7 @@ public interface HttpRouteIntegrationBindOptions {
      * this will be used as their parent scope.
      */
     override fun scope(scope: Construct) {
-      cdkBuilder.scope(scope.let(Construct::unwrap))
+      cdkBuilder.scope(scope.let(Construct.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.HttpRouteIntegrationBindOptions

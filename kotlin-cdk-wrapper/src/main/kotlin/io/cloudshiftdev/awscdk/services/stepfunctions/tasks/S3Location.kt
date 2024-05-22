@@ -55,8 +55,8 @@ public abstract class S3Location(
    * @param opts 
    */
   public open fun bind(task: ISageMakerTask, opts: S3LocationBindOptions): S3LocationConfig =
-      unwrap(this).bind(task.let(ISageMakerTask::unwrap),
-      opts.let(S3LocationBindOptions::unwrap)).let(S3LocationConfig::wrap)
+      unwrap(this).bind(task.let(ISageMakerTask.Companion::unwrap),
+      opts.let(S3LocationBindOptions.Companion::unwrap)).let(S3LocationConfig::wrap)
 
   /**
    * Called when the S3Location is bound to a StepFunctions task.
@@ -75,7 +75,7 @@ public abstract class S3Location(
 
   public companion object {
     public fun fromBucket(bucket: IBucket, keyPrefix: String): S3Location =
-        software.amazon.awscdk.services.stepfunctions.tasks.S3Location.fromBucket(bucket.let(IBucket::unwrap),
+        software.amazon.awscdk.services.stepfunctions.tasks.S3Location.fromBucket(bucket.let(IBucket.Companion::unwrap),
         keyPrefix).let(S3Location::wrap)
 
     public fun fromJsonExpression(expression: String): S3Location =

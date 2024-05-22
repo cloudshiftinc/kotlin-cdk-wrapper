@@ -299,7 +299,7 @@ public interface TestCase : TestOptions {
      * @param cdkCommandOptions Additional options to use for each CDK command.
      */
     override fun cdkCommandOptions(cdkCommandOptions: CdkCommands) {
-      cdkBuilder.cdkCommandOptions(cdkCommandOptions.let(CdkCommands::unwrap))
+      cdkBuilder.cdkCommandOptions(cdkCommandOptions.let(CdkCommands.Companion::unwrap))
     }
 
     /**
@@ -326,7 +326,7 @@ public interface TestCase : TestOptions {
      * e.g. { postDeploy: ['yarn', 'test'] }
      */
     override fun hooks(hooks: Hooks) {
-      cdkBuilder.hooks(hooks.let(Hooks::unwrap))
+      cdkBuilder.hooks(hooks.let(Hooks.Companion::unwrap))
     }
 
     /**

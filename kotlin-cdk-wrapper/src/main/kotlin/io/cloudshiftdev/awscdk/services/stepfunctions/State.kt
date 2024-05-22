@@ -36,7 +36,7 @@ public abstract class State(
    * @param graph 
    */
   public open fun bindToGraph(graph: StateGraph) {
-    unwrap(this).bindToGraph(graph.let(StateGraph::unwrap))
+    unwrap(this).bindToGraph(graph.let(StateGraph.Companion::unwrap))
   }
 
   /**
@@ -71,17 +71,17 @@ public abstract class State(
 
   public companion object {
     public fun filterNextables(states: List<State>): List<INextable> =
-        software.amazon.awscdk.services.stepfunctions.State.filterNextables(states.map(State::unwrap)).map(INextable::wrap)
+        software.amazon.awscdk.services.stepfunctions.State.filterNextables(states.map(State.Companion::unwrap)).map(INextable::wrap)
 
     public fun filterNextables(vararg states: State): List<INextable> =
         filterNextables(states.toList())
 
     public fun findReachableEndStates(start: State): List<State> =
-        software.amazon.awscdk.services.stepfunctions.State.findReachableEndStates(start.let(State::unwrap)).map(State::wrap)
+        software.amazon.awscdk.services.stepfunctions.State.findReachableEndStates(start.let(State.Companion::unwrap)).map(State::wrap)
 
     public fun findReachableEndStates(start: State, options: FindStateOptions): List<State> =
-        software.amazon.awscdk.services.stepfunctions.State.findReachableEndStates(start.let(State::unwrap),
-        options.let(FindStateOptions::unwrap)).map(State::wrap)
+        software.amazon.awscdk.services.stepfunctions.State.findReachableEndStates(start.let(State.Companion::unwrap),
+        options.let(FindStateOptions.Companion::unwrap)).map(State::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1ff9032f5265cc45d2fff5d628ac563f648bfb67e4d786b9ad0937f2bc31aad2")
@@ -89,11 +89,11 @@ public abstract class State(
         List<State> = findReachableEndStates(start, FindStateOptions(options))
 
     public fun findReachableStates(start: State): List<State> =
-        software.amazon.awscdk.services.stepfunctions.State.findReachableStates(start.let(State::unwrap)).map(State::wrap)
+        software.amazon.awscdk.services.stepfunctions.State.findReachableStates(start.let(State.Companion::unwrap)).map(State::wrap)
 
     public fun findReachableStates(start: State, options: FindStateOptions): List<State> =
-        software.amazon.awscdk.services.stepfunctions.State.findReachableStates(start.let(State::unwrap),
-        options.let(FindStateOptions::unwrap)).map(State::wrap)
+        software.amazon.awscdk.services.stepfunctions.State.findReachableStates(start.let(State.Companion::unwrap),
+        options.let(FindStateOptions.Companion::unwrap)).map(State::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("50910c2105c823e8562e9a0f8e2aa4aab19c86635a763fa9ab48e94fec614bf9")
@@ -101,7 +101,7 @@ public abstract class State(
         List<State> = findReachableStates(start, FindStateOptions(options))
 
     public fun prefixStates(root: IConstruct, prefix: String) {
-      software.amazon.awscdk.services.stepfunctions.State.prefixStates(root.let(IConstruct::unwrap),
+      software.amazon.awscdk.services.stepfunctions.State.prefixStates(root.let(IConstruct.Companion::unwrap),
           prefix)
     }
 

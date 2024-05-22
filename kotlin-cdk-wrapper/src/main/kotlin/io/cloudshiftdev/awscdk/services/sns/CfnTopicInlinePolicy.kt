@@ -39,8 +39,8 @@ public open class CfnTopicInlinePolicy(
     id: String,
     props: CfnTopicInlinePolicyProps,
   ) :
-      this(software.amazon.awscdk.services.sns.CfnTopicInlinePolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTopicInlinePolicyProps::unwrap))
+      this(software.amazon.awscdk.services.sns.CfnTopicInlinePolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTopicInlinePolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -56,7 +56,7 @@ public open class CfnTopicInlinePolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

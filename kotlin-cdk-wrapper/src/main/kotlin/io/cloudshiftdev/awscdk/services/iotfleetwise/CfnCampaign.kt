@@ -101,8 +101,8 @@ public open class CfnCampaign(
     id: String,
     props: CfnCampaignProps,
   ) :
-      this(software.amazon.awscdk.services.iotfleetwise.CfnCampaign(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCampaignProps::unwrap))
+      this(software.amazon.awscdk.services.iotfleetwise.CfnCampaign(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCampaignProps.Companion::unwrap))
   )
 
   public constructor(
@@ -160,14 +160,14 @@ public open class CfnCampaign(
    * The data collection scheme associated with the campaign.
    */
   public open fun collectionScheme(`value`: IResolvable) {
-    unwrap(this).setCollectionScheme(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCollectionScheme(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The data collection scheme associated with the campaign.
    */
   public open fun collectionScheme(`value`: CollectionSchemeProperty) {
-    unwrap(this).setCollectionScheme(`value`.let(CollectionSchemeProperty::unwrap))
+    unwrap(this).setCollectionScheme(`value`.let(CollectionSchemeProperty.Companion::unwrap))
   }
 
   /**
@@ -199,7 +199,7 @@ public open class CfnCampaign(
    * (Optional) The destination where the campaign sends data.
    */
   public open fun dataDestinationConfigs(`value`: IResolvable) {
-    unwrap(this).setDataDestinationConfigs(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataDestinationConfigs(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -278,7 +278,7 @@ public open class CfnCampaign(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -343,7 +343,7 @@ public open class CfnCampaign(
    * (Optional) A list of information about signals to collect.
    */
   public open fun signalsToCollect(`value`: IResolvable) {
-    unwrap(this).setSignalsToCollect(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSignalsToCollect(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -397,7 +397,7 @@ public open class CfnCampaign(
    * (Optional) Metadata that can be used to manage the campaign.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -774,7 +774,7 @@ public open class CfnCampaign(
      * @param collectionScheme The data collection scheme associated with the campaign. 
      */
     override fun collectionScheme(collectionScheme: IResolvable) {
-      cdkBuilder.collectionScheme(collectionScheme.let(IResolvable::unwrap))
+      cdkBuilder.collectionScheme(collectionScheme.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -786,7 +786,7 @@ public open class CfnCampaign(
      * @param collectionScheme The data collection scheme associated with the campaign. 
      */
     override fun collectionScheme(collectionScheme: CollectionSchemeProperty) {
-      cdkBuilder.collectionScheme(collectionScheme.let(CollectionSchemeProperty::unwrap))
+      cdkBuilder.collectionScheme(collectionScheme.let(CollectionSchemeProperty.Companion::unwrap))
     }
 
     /**
@@ -837,7 +837,7 @@ public open class CfnCampaign(
      * @param dataDestinationConfigs (Optional) The destination where the campaign sends data. 
      */
     override fun dataDestinationConfigs(dataDestinationConfigs: IResolvable) {
-      cdkBuilder.dataDestinationConfigs(dataDestinationConfigs.let(IResolvable::unwrap))
+      cdkBuilder.dataDestinationConfigs(dataDestinationConfigs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1023,7 +1023,7 @@ public open class CfnCampaign(
      * @param signalsToCollect (Optional) A list of information about signals to collect. 
      */
     override fun signalsToCollect(signalsToCollect: IResolvable) {
-      cdkBuilder.signalsToCollect(signalsToCollect.let(IResolvable::unwrap))
+      cdkBuilder.signalsToCollect(signalsToCollect.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1088,7 +1088,7 @@ public open class CfnCampaign(
      * @param tags (Optional) Metadata that can be used to manage the campaign. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1239,7 +1239,7 @@ public open class CfnCampaign(
        * uses a simple logical expression to recognize what data to collect.
        */
       override fun conditionBasedCollectionScheme(conditionBasedCollectionScheme: IResolvable) {
-        cdkBuilder.conditionBasedCollectionScheme(conditionBasedCollectionScheme.let(IResolvable::unwrap))
+        cdkBuilder.conditionBasedCollectionScheme(conditionBasedCollectionScheme.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1248,7 +1248,7 @@ public open class CfnCampaign(
        */
       override
           fun conditionBasedCollectionScheme(conditionBasedCollectionScheme: ConditionBasedCollectionSchemeProperty) {
-        cdkBuilder.conditionBasedCollectionScheme(conditionBasedCollectionScheme.let(ConditionBasedCollectionSchemeProperty::unwrap))
+        cdkBuilder.conditionBasedCollectionScheme(conditionBasedCollectionScheme.let(ConditionBasedCollectionSchemeProperty.Companion::unwrap))
       }
 
       /**
@@ -1267,7 +1267,7 @@ public open class CfnCampaign(
        * a time period to decide how often to collect data.
        */
       override fun timeBasedCollectionScheme(timeBasedCollectionScheme: IResolvable) {
-        cdkBuilder.timeBasedCollectionScheme(timeBasedCollectionScheme.let(IResolvable::unwrap))
+        cdkBuilder.timeBasedCollectionScheme(timeBasedCollectionScheme.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1276,7 +1276,7 @@ public open class CfnCampaign(
        */
       override
           fun timeBasedCollectionScheme(timeBasedCollectionScheme: TimeBasedCollectionSchemeProperty) {
-        cdkBuilder.timeBasedCollectionScheme(timeBasedCollectionScheme.let(TimeBasedCollectionSchemeProperty::unwrap))
+        cdkBuilder.timeBasedCollectionScheme(timeBasedCollectionScheme.let(TimeBasedCollectionSchemeProperty.Companion::unwrap))
       }
 
       /**
@@ -1642,7 +1642,7 @@ public open class CfnCampaign(
        * data.
        */
       override fun s3Config(s3Config: IResolvable) {
-        cdkBuilder.s3Config(s3Config.let(IResolvable::unwrap))
+        cdkBuilder.s3Config(s3Config.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1650,7 +1650,7 @@ public open class CfnCampaign(
        * data.
        */
       override fun s3Config(s3Config: S3ConfigProperty) {
-        cdkBuilder.s3Config(s3Config.let(S3ConfigProperty::unwrap))
+        cdkBuilder.s3Config(s3Config.let(S3ConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1667,7 +1667,7 @@ public open class CfnCampaign(
        * data.
        */
       override fun timestreamConfig(timestreamConfig: IResolvable) {
-        cdkBuilder.timestreamConfig(timestreamConfig.let(IResolvable::unwrap))
+        cdkBuilder.timestreamConfig(timestreamConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1675,7 +1675,7 @@ public open class CfnCampaign(
        * data.
        */
       override fun timestreamConfig(timestreamConfig: TimestreamConfigProperty) {
-        cdkBuilder.timestreamConfig(timestreamConfig.let(TimestreamConfigProperty::unwrap))
+        cdkBuilder.timestreamConfig(timestreamConfig.let(TimestreamConfigProperty.Companion::unwrap))
       }
 
       /**

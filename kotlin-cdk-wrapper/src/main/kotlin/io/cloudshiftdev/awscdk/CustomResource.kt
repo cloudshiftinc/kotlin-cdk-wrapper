@@ -56,8 +56,8 @@ public open class CustomResource(
     id: String,
     props: CustomResourceProps,
   ) :
-      this(software.amazon.awscdk.CustomResource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CustomResourceProps::unwrap))
+      this(software.amazon.awscdk.CustomResource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CustomResourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -241,7 +241,7 @@ public open class CustomResource(
      * @param removalPolicy The policy to apply when this resource is removed from the application. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**

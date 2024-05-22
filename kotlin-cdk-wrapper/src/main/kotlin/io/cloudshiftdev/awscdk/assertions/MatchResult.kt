@@ -38,7 +38,7 @@ public open class MatchResult(
    * @param inner 
    */
   public open fun compose(id: String, `inner`: MatchResult): MatchResult = unwrap(this).compose(id,
-      `inner`.let(MatchResult::unwrap)).let(MatchResult::wrap)
+      `inner`.let(MatchResult.Companion::unwrap)).let(MatchResult::wrap)
 
   /**
    * The cost of the failures so far.
@@ -82,7 +82,7 @@ public open class MatchResult(
     matcher: Matcher,
     path: List<String>,
     message: String,
-  ): MatchResult = unwrap(this).push(matcher.let(Matcher::unwrap), path,
+  ): MatchResult = unwrap(this).push(matcher.let(Matcher.Companion::unwrap), path,
       message).let(MatchResult::wrap)
 
   /**
@@ -91,7 +91,7 @@ public open class MatchResult(
    * @param options 
    */
   public open fun recordCapture(options: MatchCapture) {
-    unwrap(this).recordCapture(options.let(MatchCapture::unwrap))
+    unwrap(this).recordCapture(options.let(MatchCapture.Companion::unwrap))
   }
 
   /**
@@ -110,7 +110,7 @@ public open class MatchResult(
    * @param failure 
    */
   public open fun recordFailure(failure: MatchFailure): MatchResult =
-      unwrap(this).recordFailure(failure.let(MatchFailure::unwrap)).let(MatchResult::wrap)
+      unwrap(this).recordFailure(failure.let(MatchFailure.Companion::unwrap)).let(MatchResult::wrap)
 
   /**
    * Record a new failure into this result at a specific path.

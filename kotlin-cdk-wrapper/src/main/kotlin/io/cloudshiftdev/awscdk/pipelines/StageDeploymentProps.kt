@@ -114,7 +114,7 @@ public interface StageDeploymentProps {
      * @param post Additional steps to run after all of the stacks in the stage.
      */
     override fun post(post: List<Step>) {
-      cdkBuilder.post(post.map(Step::unwrap))
+      cdkBuilder.post(post.map(Step.Companion::unwrap))
     }
 
     /**
@@ -126,7 +126,7 @@ public interface StageDeploymentProps {
      * @param pre Additional steps to run before any of the stacks in the stage.
      */
     override fun pre(pre: List<Step>) {
-      cdkBuilder.pre(pre.map(Step::unwrap))
+      cdkBuilder.pre(pre.map(Step.Companion::unwrap))
     }
 
     /**
@@ -138,7 +138,7 @@ public interface StageDeploymentProps {
      * @param stackSteps Instructions for additional steps that are run at the stack level.
      */
     override fun stackSteps(stackSteps: List<StackSteps>) {
-      cdkBuilder.stackSteps(stackSteps.map(StackSteps::unwrap))
+      cdkBuilder.stackSteps(stackSteps.map(StackSteps.Companion::unwrap))
     }
 
     /**

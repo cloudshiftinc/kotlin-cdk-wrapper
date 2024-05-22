@@ -49,8 +49,8 @@ public open class CfnMonitoringSubscription(
     id: String,
     props: CfnMonitoringSubscriptionProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMonitoringSubscriptionProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.CfnMonitoringSubscription(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMonitoringSubscriptionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -78,7 +78,7 @@ public open class CfnMonitoringSubscription(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -90,14 +90,14 @@ public open class CfnMonitoringSubscription(
    * A subscription configuration for additional CloudWatch metrics.
    */
   public open fun monitoringSubscription(`value`: IResolvable) {
-    unwrap(this).setMonitoringSubscription(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMonitoringSubscription(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A subscription configuration for additional CloudWatch metrics.
    */
   public open fun monitoringSubscription(`value`: MonitoringSubscriptionProperty) {
-    unwrap(this).setMonitoringSubscription(`value`.let(MonitoringSubscriptionProperty::unwrap))
+    unwrap(this).setMonitoringSubscription(`value`.let(MonitoringSubscriptionProperty.Companion::unwrap))
   }
 
   /**
@@ -180,7 +180,7 @@ public open class CfnMonitoringSubscription(
      * 
      */
     override fun monitoringSubscription(monitoringSubscription: IResolvable) {
-      cdkBuilder.monitoringSubscription(monitoringSubscription.let(IResolvable::unwrap))
+      cdkBuilder.monitoringSubscription(monitoringSubscription.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -191,7 +191,7 @@ public open class CfnMonitoringSubscription(
      * 
      */
     override fun monitoringSubscription(monitoringSubscription: MonitoringSubscriptionProperty) {
-      cdkBuilder.monitoringSubscription(monitoringSubscription.let(MonitoringSubscriptionProperty::unwrap))
+      cdkBuilder.monitoringSubscription(monitoringSubscription.let(MonitoringSubscriptionProperty.Companion::unwrap))
     }
 
     /**
@@ -304,7 +304,7 @@ public open class CfnMonitoringSubscription(
        */
       override
           fun realtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionConfig: IResolvable) {
-        cdkBuilder.realtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionConfig.let(IResolvable::unwrap))
+        cdkBuilder.realtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -313,7 +313,7 @@ public open class CfnMonitoringSubscription(
        */
       override
           fun realtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionConfig: RealtimeMetricsSubscriptionConfigProperty) {
-        cdkBuilder.realtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionConfig.let(RealtimeMetricsSubscriptionConfigProperty::unwrap))
+        cdkBuilder.realtimeMetricsSubscriptionConfig(realtimeMetricsSubscriptionConfig.let(RealtimeMetricsSubscriptionConfigProperty.Companion::unwrap))
       }
 
       /**

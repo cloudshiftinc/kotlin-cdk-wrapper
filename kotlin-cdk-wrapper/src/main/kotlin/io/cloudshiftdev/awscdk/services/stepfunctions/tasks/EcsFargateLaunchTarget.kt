@@ -52,7 +52,7 @@ public open class EcsFargateLaunchTarget(
   )
 
   public constructor(options: EcsFargateLaunchTargetOptions) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.EcsFargateLaunchTarget(options.let(EcsFargateLaunchTargetOptions::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EcsFargateLaunchTarget(options.let(EcsFargateLaunchTargetOptions.Companion::unwrap))
   )
 
   public constructor(options: EcsFargateLaunchTargetOptions.Builder.() -> Unit) :
@@ -66,8 +66,8 @@ public open class EcsFargateLaunchTarget(
    * @param launchTargetOptions 
    */
   public override fun bind(task: EcsRunTask, launchTargetOptions: LaunchTargetBindOptions):
-      EcsLaunchTargetConfig = unwrap(this).bind(task.let(EcsRunTask::unwrap),
-      launchTargetOptions.let(LaunchTargetBindOptions::unwrap)).let(EcsLaunchTargetConfig::wrap)
+      EcsLaunchTargetConfig = unwrap(this).bind(task.let(EcsRunTask.Companion::unwrap),
+      launchTargetOptions.let(LaunchTargetBindOptions.Companion::unwrap)).let(EcsLaunchTargetConfig::wrap)
 
   /**
    * Called when the Fargate launch type configured on RunTask.
@@ -114,7 +114,7 @@ public open class EcsFargateLaunchTarget(
      * infrastructure. 
      */
     override fun platformVersion(platformVersion: FargatePlatformVersion) {
-      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion::unwrap))
+      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.EcsFargateLaunchTarget =

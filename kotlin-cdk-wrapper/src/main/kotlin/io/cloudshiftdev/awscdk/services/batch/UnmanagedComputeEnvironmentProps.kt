@@ -122,7 +122,7 @@ public interface UnmanagedComputeEnvironmentProps : ComputeEnvironmentProps {
      * such as provision instances to run your jobs.
      */
     override fun serviceRole(serviceRole: IRole) {
-      cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
+      cdkBuilder.serviceRole(serviceRole.let(IRole.Companion::unwrap))
     }
 
     /**

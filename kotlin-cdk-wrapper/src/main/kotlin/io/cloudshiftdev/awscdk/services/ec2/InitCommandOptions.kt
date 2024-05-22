@@ -182,7 +182,7 @@ public interface InitCommandOptions {
      * @param serviceRestartHandles Restart the given service(s) after this command has run.
      */
     override fun serviceRestartHandles(serviceRestartHandles: List<InitServiceRestartHandle>) {
-      cdkBuilder.serviceRestartHandles(serviceRestartHandles.map(InitServiceRestartHandle::unwrap))
+      cdkBuilder.serviceRestartHandles(serviceRestartHandles.map(InitServiceRestartHandle.Companion::unwrap))
     }
 
     /**
@@ -210,7 +210,7 @@ public interface InitCommandOptions {
      * For Windows systems only.
      */
     override fun waitAfterCompletion(waitAfterCompletion: InitCommandWaitDuration) {
-      cdkBuilder.waitAfterCompletion(waitAfterCompletion.let(InitCommandWaitDuration::unwrap))
+      cdkBuilder.waitAfterCompletion(waitAfterCompletion.let(InitCommandWaitDuration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.InitCommandOptions = cdkBuilder.build()

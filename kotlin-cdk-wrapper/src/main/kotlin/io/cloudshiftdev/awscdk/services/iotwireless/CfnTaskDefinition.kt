@@ -84,8 +84,8 @@ public open class CfnTaskDefinition(
     id: String,
     props: CfnTaskDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.iotwireless.CfnTaskDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTaskDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.iotwireless.CfnTaskDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTaskDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -124,7 +124,7 @@ public open class CfnTaskDefinition(
    * specified current version.
    */
   public open fun autoCreateTasks(`value`: IResolvable) {
-    unwrap(this).setAutoCreateTasks(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoCreateTasks(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -133,7 +133,7 @@ public open class CfnTaskDefinition(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -146,14 +146,14 @@ public open class CfnTaskDefinition(
    * LoRaWANUpdateGatewayTaskEntry object.
    */
   public open fun loRaWanUpdateGatewayTaskEntry(`value`: IResolvable) {
-    unwrap(this).setLoRaWanUpdateGatewayTaskEntry(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoRaWanUpdateGatewayTaskEntry(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * LoRaWANUpdateGatewayTaskEntry object.
    */
   public open fun loRaWanUpdateGatewayTaskEntry(`value`: LoRaWANUpdateGatewayTaskEntryProperty) {
-    unwrap(this).setLoRaWanUpdateGatewayTaskEntry(`value`.let(LoRaWANUpdateGatewayTaskEntryProperty::unwrap))
+    unwrap(this).setLoRaWanUpdateGatewayTaskEntry(`value`.let(LoRaWANUpdateGatewayTaskEntryProperty.Companion::unwrap))
   }
 
   /**
@@ -192,7 +192,7 @@ public open class CfnTaskDefinition(
    * The tags are an array of key-value pairs to attach to the specified resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -221,14 +221,14 @@ public open class CfnTaskDefinition(
    * Information about the gateways to update.
    */
   public open fun update(`value`: IResolvable) {
-    unwrap(this).setUpdate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUpdate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information about the gateways to update.
    */
   public open fun update(`value`: UpdateWirelessGatewayTaskCreateProperty) {
-    unwrap(this).setUpdate(`value`.let(UpdateWirelessGatewayTaskCreateProperty::unwrap))
+    unwrap(this).setUpdate(`value`.let(UpdateWirelessGatewayTaskCreateProperty.Companion::unwrap))
   }
 
   /**
@@ -393,7 +393,7 @@ public open class CfnTaskDefinition(
      * all gateways with the specified current version. 
      */
     override fun autoCreateTasks(autoCreateTasks: IResolvable) {
-      cdkBuilder.autoCreateTasks(autoCreateTasks.let(IResolvable::unwrap))
+      cdkBuilder.autoCreateTasks(autoCreateTasks.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -403,7 +403,7 @@ public open class CfnTaskDefinition(
      * @param loRaWanUpdateGatewayTaskEntry LoRaWANUpdateGatewayTaskEntry object. 
      */
     override fun loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry: IResolvable) {
-      cdkBuilder.loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry.let(IResolvable::unwrap))
+      cdkBuilder.loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -414,7 +414,7 @@ public open class CfnTaskDefinition(
      */
     override
         fun loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry: LoRaWANUpdateGatewayTaskEntryProperty) {
-      cdkBuilder.loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry.let(LoRaWANUpdateGatewayTaskEntryProperty::unwrap))
+      cdkBuilder.loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry.let(LoRaWANUpdateGatewayTaskEntryProperty.Companion::unwrap))
     }
 
     /**
@@ -449,7 +449,7 @@ public open class CfnTaskDefinition(
      * @param tags The tags are an array of key-value pairs to attach to the specified resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -481,7 +481,7 @@ public open class CfnTaskDefinition(
      * @param update Information about the gateways to update. 
      */
     override fun update(update: IResolvable) {
-      cdkBuilder.update(update.let(IResolvable::unwrap))
+      cdkBuilder.update(update.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -491,7 +491,7 @@ public open class CfnTaskDefinition(
      * @param update Information about the gateways to update. 
      */
     override fun update(update: UpdateWirelessGatewayTaskCreateProperty) {
-      cdkBuilder.update(update.let(UpdateWirelessGatewayTaskCreateProperty::unwrap))
+      cdkBuilder.update(update.let(UpdateWirelessGatewayTaskCreateProperty.Companion::unwrap))
     }
 
     /**
@@ -784,14 +784,14 @@ public open class CfnTaskDefinition(
        * @param currentVersion The version of the gateways that should receive the update.
        */
       override fun currentVersion(currentVersion: IResolvable) {
-        cdkBuilder.currentVersion(currentVersion.let(IResolvable::unwrap))
+        cdkBuilder.currentVersion(currentVersion.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param currentVersion The version of the gateways that should receive the update.
        */
       override fun currentVersion(currentVersion: LoRaWANGatewayVersionProperty) {
-        cdkBuilder.currentVersion(currentVersion.let(LoRaWANGatewayVersionProperty::unwrap))
+        cdkBuilder.currentVersion(currentVersion.let(LoRaWANGatewayVersionProperty.Companion::unwrap))
       }
 
       /**
@@ -820,14 +820,14 @@ public open class CfnTaskDefinition(
        * @param updateVersion The firmware version to update the gateway to.
        */
       override fun updateVersion(updateVersion: IResolvable) {
-        cdkBuilder.updateVersion(updateVersion.let(IResolvable::unwrap))
+        cdkBuilder.updateVersion(updateVersion.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param updateVersion The firmware version to update the gateway to.
        */
       override fun updateVersion(updateVersion: LoRaWANGatewayVersionProperty) {
-        cdkBuilder.updateVersion(updateVersion.let(LoRaWANGatewayVersionProperty::unwrap))
+        cdkBuilder.updateVersion(updateVersion.let(LoRaWANGatewayVersionProperty.Companion::unwrap))
       }
 
       /**
@@ -985,14 +985,14 @@ public open class CfnTaskDefinition(
        * @param currentVersion The version of the gateways that should receive the update.
        */
       override fun currentVersion(currentVersion: IResolvable) {
-        cdkBuilder.currentVersion(currentVersion.let(IResolvable::unwrap))
+        cdkBuilder.currentVersion(currentVersion.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param currentVersion The version of the gateways that should receive the update.
        */
       override fun currentVersion(currentVersion: LoRaWANGatewayVersionProperty) {
-        cdkBuilder.currentVersion(currentVersion.let(LoRaWANGatewayVersionProperty::unwrap))
+        cdkBuilder.currentVersion(currentVersion.let(LoRaWANGatewayVersionProperty.Companion::unwrap))
       }
 
       /**
@@ -1007,14 +1007,14 @@ public open class CfnTaskDefinition(
        * @param updateVersion The firmware version to update the gateway to.
        */
       override fun updateVersion(updateVersion: IResolvable) {
-        cdkBuilder.updateVersion(updateVersion.let(IResolvable::unwrap))
+        cdkBuilder.updateVersion(updateVersion.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param updateVersion The firmware version to update the gateway to.
        */
       override fun updateVersion(updateVersion: LoRaWANGatewayVersionProperty) {
-        cdkBuilder.updateVersion(updateVersion.let(LoRaWANGatewayVersionProperty::unwrap))
+        cdkBuilder.updateVersion(updateVersion.let(LoRaWANGatewayVersionProperty.Companion::unwrap))
       }
 
       /**
@@ -1164,14 +1164,14 @@ public open class CfnTaskDefinition(
        * @param loRaWan The properties that relate to the LoRaWAN wireless gateway.
        */
       override fun loRaWan(loRaWan: IResolvable) {
-        cdkBuilder.loRaWan(loRaWan.let(IResolvable::unwrap))
+        cdkBuilder.loRaWan(loRaWan.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param loRaWan The properties that relate to the LoRaWAN wireless gateway.
        */
       override fun loRaWan(loRaWan: LoRaWANUpdateGatewayTaskCreateProperty) {
-        cdkBuilder.loRaWan(loRaWan.let(LoRaWANUpdateGatewayTaskCreateProperty::unwrap))
+        cdkBuilder.loRaWan(loRaWan.let(LoRaWANUpdateGatewayTaskCreateProperty.Companion::unwrap))
       }
 
       /**

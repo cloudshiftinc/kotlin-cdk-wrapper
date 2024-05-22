@@ -212,7 +212,7 @@ public interface CfnApplicationInstanceProps {
      * @param manifestOverridesPayload Setting overrides for the application manifest.
      */
     override fun manifestOverridesPayload(manifestOverridesPayload: IResolvable) {
-      cdkBuilder.manifestOverridesPayload(manifestOverridesPayload.let(IResolvable::unwrap))
+      cdkBuilder.manifestOverridesPayload(manifestOverridesPayload.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -220,7 +220,7 @@ public interface CfnApplicationInstanceProps {
      */
     override
         fun manifestOverridesPayload(manifestOverridesPayload: CfnApplicationInstance.ManifestOverridesPayloadProperty) {
-      cdkBuilder.manifestOverridesPayload(manifestOverridesPayload.let(CfnApplicationInstance.ManifestOverridesPayloadProperty::unwrap))
+      cdkBuilder.manifestOverridesPayload(manifestOverridesPayload.let(CfnApplicationInstance.ManifestOverridesPayloadProperty.Companion::unwrap))
     }
 
     /**
@@ -237,14 +237,14 @@ public interface CfnApplicationInstanceProps {
      * @param manifestPayload The application's manifest document. 
      */
     override fun manifestPayload(manifestPayload: IResolvable) {
-      cdkBuilder.manifestPayload(manifestPayload.let(IResolvable::unwrap))
+      cdkBuilder.manifestPayload(manifestPayload.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param manifestPayload The application's manifest document. 
      */
     override fun manifestPayload(manifestPayload: CfnApplicationInstance.ManifestPayloadProperty) {
-      cdkBuilder.manifestPayload(manifestPayload.let(CfnApplicationInstance.ManifestPayloadProperty::unwrap))
+      cdkBuilder.manifestPayload(manifestPayload.let(CfnApplicationInstance.ManifestPayloadProperty.Companion::unwrap))
     }
 
     /**
@@ -274,7 +274,7 @@ public interface CfnApplicationInstanceProps {
      * @param tags Tags for the application instance.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

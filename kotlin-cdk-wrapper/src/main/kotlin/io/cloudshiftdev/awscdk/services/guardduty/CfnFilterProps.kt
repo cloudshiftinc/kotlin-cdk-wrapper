@@ -249,7 +249,7 @@ public interface CfnFilterProps {
      * findings. 
      */
     override fun findingCriteria(findingCriteria: IResolvable) {
-      cdkBuilder.findingCriteria(findingCriteria.let(IResolvable::unwrap))
+      cdkBuilder.findingCriteria(findingCriteria.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -257,7 +257,7 @@ public interface CfnFilterProps {
      * findings. 
      */
     override fun findingCriteria(findingCriteria: CfnFilter.FindingCriteriaProperty) {
-      cdkBuilder.findingCriteria(findingCriteria.let(CfnFilter.FindingCriteriaProperty::unwrap))
+      cdkBuilder.findingCriteria(findingCriteria.let(CfnFilter.FindingCriteriaProperty.Companion::unwrap))
     }
 
     /**
@@ -302,7 +302,7 @@ public interface CfnFilterProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

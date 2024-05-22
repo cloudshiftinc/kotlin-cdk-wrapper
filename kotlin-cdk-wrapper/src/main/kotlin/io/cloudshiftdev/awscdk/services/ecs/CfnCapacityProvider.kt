@@ -71,8 +71,8 @@ public open class CfnCapacityProvider(
     id: String,
     props: CfnCapacityProviderProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.CfnCapacityProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCapacityProviderProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.CfnCapacityProvider(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCapacityProviderProps.Companion::unwrap))
   )
 
   public constructor(
@@ -91,14 +91,14 @@ public open class CfnCapacityProvider(
    * The Auto Scaling group settings for the capacity provider.
    */
   public open fun autoScalingGroupProvider(`value`: IResolvable) {
-    unwrap(this).setAutoScalingGroupProvider(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoScalingGroupProvider(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The Auto Scaling group settings for the capacity provider.
    */
   public open fun autoScalingGroupProvider(`value`: AutoScalingGroupProviderProperty) {
-    unwrap(this).setAutoScalingGroupProvider(`value`.let(AutoScalingGroupProviderProperty::unwrap))
+    unwrap(this).setAutoScalingGroupProvider(`value`.let(AutoScalingGroupProviderProperty.Companion::unwrap))
   }
 
   /**
@@ -116,7 +116,7 @@ public open class CfnCapacityProvider(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -146,7 +146,7 @@ public open class CfnCapacityProvider(
    * The metadata that you apply to the capacity provider to help you categorize and organize it.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -254,7 +254,7 @@ public open class CfnCapacityProvider(
      * @param autoScalingGroupProvider The Auto Scaling group settings for the capacity provider. 
      */
     override fun autoScalingGroupProvider(autoScalingGroupProvider: IResolvable) {
-      cdkBuilder.autoScalingGroupProvider(autoScalingGroupProvider.let(IResolvable::unwrap))
+      cdkBuilder.autoScalingGroupProvider(autoScalingGroupProvider.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -265,7 +265,7 @@ public open class CfnCapacityProvider(
      */
     override
         fun autoScalingGroupProvider(autoScalingGroupProvider: AutoScalingGroupProviderProperty) {
-      cdkBuilder.autoScalingGroupProvider(autoScalingGroupProvider.let(AutoScalingGroupProviderProperty::unwrap))
+      cdkBuilder.autoScalingGroupProvider(autoScalingGroupProvider.let(AutoScalingGroupProviderProperty.Companion::unwrap))
     }
 
     /**
@@ -313,7 +313,7 @@ public open class CfnCapacityProvider(
      * organize it. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -533,7 +533,7 @@ public open class CfnCapacityProvider(
        * provider.
        */
       override fun managedScaling(managedScaling: IResolvable) {
-        cdkBuilder.managedScaling(managedScaling.let(IResolvable::unwrap))
+        cdkBuilder.managedScaling(managedScaling.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -541,7 +541,7 @@ public open class CfnCapacityProvider(
        * provider.
        */
       override fun managedScaling(managedScaling: ManagedScalingProperty) {
-        cdkBuilder.managedScaling(managedScaling.let(ManagedScalingProperty::unwrap))
+        cdkBuilder.managedScaling(managedScaling.let(ManagedScalingProperty.Companion::unwrap))
       }
 
       /**

@@ -280,7 +280,7 @@ public interface HttpInvokeProps : TaskStateBaseProps {
      * @param apiEndpoint The API endpoint to call, relative to `apiRoot`. 
      */
     override fun apiEndpoint(apiEndpoint: TaskInput) {
-      cdkBuilder.apiEndpoint(apiEndpoint.let(TaskInput::unwrap))
+      cdkBuilder.apiEndpoint(apiEndpoint.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -294,7 +294,7 @@ public interface HttpInvokeProps : TaskStateBaseProps {
      * @param body The body to send to the HTTP endpoint.
      */
     override fun body(body: TaskInput) {
-      cdkBuilder.body(body.let(TaskInput::unwrap))
+      cdkBuilder.body(body.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -308,7 +308,7 @@ public interface HttpInvokeProps : TaskStateBaseProps {
      * @param connection The EventBridge Connection to use for authentication. 
      */
     override fun connection(connection: IConnection) {
-      cdkBuilder.connection(connection.let(IConnection::unwrap))
+      cdkBuilder.connection(connection.let(IConnection.Companion::unwrap))
     }
 
     /**
@@ -317,7 +317,7 @@ public interface HttpInvokeProps : TaskStateBaseProps {
      * This enables cross-account resource invocations.
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -334,7 +334,7 @@ public interface HttpInvokeProps : TaskStateBaseProps {
      * @param headers The headers to send to the HTTP endpoint.
      */
     override fun headers(headers: TaskInput) {
-      cdkBuilder.headers(headers.let(TaskInput::unwrap))
+      cdkBuilder.headers(headers.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -343,7 +343,7 @@ public interface HttpInvokeProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -352,7 +352,7 @@ public interface HttpInvokeProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -373,14 +373,14 @@ public interface HttpInvokeProps : TaskStateBaseProps {
      * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
      * @param method The HTTP method to use. 
      */
     override fun method(method: TaskInput) {
-      cdkBuilder.method(method.let(TaskInput::unwrap))
+      cdkBuilder.method(method.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -397,7 +397,7 @@ public interface HttpInvokeProps : TaskStateBaseProps {
      * @param queryStringParameters The query string parameters to send to the HTTP endpoint.
      */
     override fun queryStringParameters(queryStringParameters: TaskInput) {
-      cdkBuilder.queryStringParameters(queryStringParameters.let(TaskInput::unwrap))
+      cdkBuilder.queryStringParameters(queryStringParameters.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -432,7 +432,7 @@ public interface HttpInvokeProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -441,7 +441,7 @@ public interface HttpInvokeProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -455,7 +455,7 @@ public interface HttpInvokeProps : TaskStateBaseProps {
      * `application/x-www-form-urlencoded`.
      */
     override fun urlEncodingFormat(urlEncodingFormat: URLEncodingFormat) {
-      cdkBuilder.urlEncodingFormat(urlEncodingFormat.let(URLEncodingFormat::unwrap))
+      cdkBuilder.urlEncodingFormat(urlEncodingFormat.let(URLEncodingFormat.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.HttpInvokeProps =

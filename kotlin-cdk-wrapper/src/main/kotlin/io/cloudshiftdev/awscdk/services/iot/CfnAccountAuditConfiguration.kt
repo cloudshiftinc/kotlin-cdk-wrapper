@@ -108,8 +108,8 @@ public open class CfnAccountAuditConfiguration(
     id: String,
     props: CfnAccountAuditConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAccountAuditConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.iot.CfnAccountAuditConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAccountAuditConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -140,14 +140,14 @@ public open class CfnAccountAuditConfiguration(
    * Specifies which audit checks are enabled and disabled for this account.
    */
   public open fun auditCheckConfigurations(`value`: IResolvable) {
-    unwrap(this).setAuditCheckConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAuditCheckConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies which audit checks are enabled and disabled for this account.
    */
   public open fun auditCheckConfigurations(`value`: AuditCheckConfigurationsProperty) {
-    unwrap(this).setAuditCheckConfigurations(`value`.let(AuditCheckConfigurationsProperty::unwrap))
+    unwrap(this).setAuditCheckConfigurations(`value`.let(AuditCheckConfigurationsProperty.Companion::unwrap))
   }
 
   /**
@@ -169,7 +169,7 @@ public open class CfnAccountAuditConfiguration(
    * Information about the targets to which audit notifications are sent.
    */
   public open fun auditNotificationTargetConfigurations(`value`: IResolvable) {
-    unwrap(this).setAuditNotificationTargetConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAuditNotificationTargetConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -177,7 +177,7 @@ public open class CfnAccountAuditConfiguration(
    */
   public open
       fun auditNotificationTargetConfigurations(`value`: AuditNotificationTargetConfigurationsProperty) {
-    unwrap(this).setAuditNotificationTargetConfigurations(`value`.let(AuditNotificationTargetConfigurationsProperty::unwrap))
+    unwrap(this).setAuditNotificationTargetConfigurations(`value`.let(AuditNotificationTargetConfigurationsProperty.Companion::unwrap))
   }
 
   /**
@@ -196,7 +196,7 @@ public open class CfnAccountAuditConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -380,7 +380,7 @@ public open class CfnAccountAuditConfiguration(
      * this account. 
      */
     override fun auditCheckConfigurations(auditCheckConfigurations: IResolvable) {
-      cdkBuilder.auditCheckConfigurations(auditCheckConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.auditCheckConfigurations(auditCheckConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -404,7 +404,7 @@ public open class CfnAccountAuditConfiguration(
      */
     override
         fun auditCheckConfigurations(auditCheckConfigurations: AuditCheckConfigurationsProperty) {
-      cdkBuilder.auditCheckConfigurations(auditCheckConfigurations.let(AuditCheckConfigurationsProperty::unwrap))
+      cdkBuilder.auditCheckConfigurations(auditCheckConfigurations.let(AuditCheckConfigurationsProperty.Companion::unwrap))
     }
 
     /**
@@ -441,7 +441,7 @@ public open class CfnAccountAuditConfiguration(
      */
     override
         fun auditNotificationTargetConfigurations(auditNotificationTargetConfigurations: IResolvable) {
-      cdkBuilder.auditNotificationTargetConfigurations(auditNotificationTargetConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.auditNotificationTargetConfigurations(auditNotificationTargetConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -453,7 +453,7 @@ public open class CfnAccountAuditConfiguration(
      */
     override
         fun auditNotificationTargetConfigurations(auditNotificationTargetConfigurations: AuditNotificationTargetConfigurationsProperty) {
-      cdkBuilder.auditNotificationTargetConfigurations(auditNotificationTargetConfigurations.let(AuditNotificationTargetConfigurationsProperty::unwrap))
+      cdkBuilder.auditNotificationTargetConfigurations(auditNotificationTargetConfigurations.let(AuditNotificationTargetConfigurationsProperty.Companion::unwrap))
     }
 
     /**
@@ -567,7 +567,7 @@ public open class CfnAccountAuditConfiguration(
        * @param enabled True if this audit check is enabled for this account.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1218,7 +1218,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun authenticatedCognitoRoleOverlyPermissiveCheck(authenticatedCognitoRoleOverlyPermissiveCheck: IResolvable) {
-        cdkBuilder.authenticatedCognitoRoleOverlyPermissiveCheck(authenticatedCognitoRoleOverlyPermissiveCheck.let(IResolvable::unwrap))
+        cdkBuilder.authenticatedCognitoRoleOverlyPermissiveCheck(authenticatedCognitoRoleOverlyPermissiveCheck.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1230,7 +1230,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun authenticatedCognitoRoleOverlyPermissiveCheck(authenticatedCognitoRoleOverlyPermissiveCheck: AuditCheckConfigurationProperty) {
-        cdkBuilder.authenticatedCognitoRoleOverlyPermissiveCheck(authenticatedCognitoRoleOverlyPermissiveCheck.let(AuditCheckConfigurationProperty::unwrap))
+        cdkBuilder.authenticatedCognitoRoleOverlyPermissiveCheck(authenticatedCognitoRoleOverlyPermissiveCheck.let(AuditCheckConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1252,7 +1252,7 @@ public open class CfnAccountAuditConfiguration(
        * This check applies to CA certificates expiring within 30 days or that have expired.
        */
       override fun caCertificateExpiringCheck(caCertificateExpiringCheck: IResolvable) {
-        cdkBuilder.caCertificateExpiringCheck(caCertificateExpiringCheck.let(IResolvable::unwrap))
+        cdkBuilder.caCertificateExpiringCheck(caCertificateExpiringCheck.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1261,7 +1261,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun caCertificateExpiringCheck(caCertificateExpiringCheck: AuditCheckConfigurationProperty) {
-        cdkBuilder.caCertificateExpiringCheck(caCertificateExpiringCheck.let(AuditCheckConfigurationProperty::unwrap))
+        cdkBuilder.caCertificateExpiringCheck(caCertificateExpiringCheck.let(AuditCheckConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1282,7 +1282,7 @@ public open class CfnAccountAuditConfiguration(
        * `PENDING_TRANSFER` .
        */
       override fun caCertificateKeyQualityCheck(caCertificateKeyQualityCheck: IResolvable) {
-        cdkBuilder.caCertificateKeyQualityCheck(caCertificateKeyQualityCheck.let(IResolvable::unwrap))
+        cdkBuilder.caCertificateKeyQualityCheck(caCertificateKeyQualityCheck.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1293,7 +1293,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun caCertificateKeyQualityCheck(caCertificateKeyQualityCheck: AuditCheckConfigurationProperty) {
-        cdkBuilder.caCertificateKeyQualityCheck(caCertificateKeyQualityCheck.let(AuditCheckConfigurationProperty::unwrap))
+        cdkBuilder.caCertificateKeyQualityCheck(caCertificateKeyQualityCheck.let(AuditCheckConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1314,7 +1314,7 @@ public open class CfnAccountAuditConfiguration(
        * ID.
        */
       override fun conflictingClientIdsCheck(conflictingClientIdsCheck: IResolvable) {
-        cdkBuilder.conflictingClientIdsCheck(conflictingClientIdsCheck.let(IResolvable::unwrap))
+        cdkBuilder.conflictingClientIdsCheck(conflictingClientIdsCheck.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1323,7 +1323,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun conflictingClientIdsCheck(conflictingClientIdsCheck: AuditCheckConfigurationProperty) {
-        cdkBuilder.conflictingClientIdsCheck(conflictingClientIdsCheck.let(AuditCheckConfigurationProperty::unwrap))
+        cdkBuilder.conflictingClientIdsCheck(conflictingClientIdsCheck.let(AuditCheckConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1342,7 +1342,7 @@ public open class CfnAccountAuditConfiguration(
        * This check applies to device certificates expiring within 30 days or that have expired.
        */
       override fun deviceCertificateExpiringCheck(deviceCertificateExpiringCheck: IResolvable) {
-        cdkBuilder.deviceCertificateExpiringCheck(deviceCertificateExpiringCheck.let(IResolvable::unwrap))
+        cdkBuilder.deviceCertificateExpiringCheck(deviceCertificateExpiringCheck.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1351,7 +1351,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun deviceCertificateExpiringCheck(deviceCertificateExpiringCheck: AuditCheckConfigurationProperty) {
-        cdkBuilder.deviceCertificateExpiringCheck(deviceCertificateExpiringCheck.let(AuditCheckConfigurationProperty::unwrap))
+        cdkBuilder.deviceCertificateExpiringCheck(deviceCertificateExpiringCheck.let(AuditCheckConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1371,7 +1371,7 @@ public open class CfnAccountAuditConfiguration(
        * certificate authority, and if the key meets a minimum required size.
        */
       override fun deviceCertificateKeyQualityCheck(deviceCertificateKeyQualityCheck: IResolvable) {
-        cdkBuilder.deviceCertificateKeyQualityCheck(deviceCertificateKeyQualityCheck.let(IResolvable::unwrap))
+        cdkBuilder.deviceCertificateKeyQualityCheck(deviceCertificateKeyQualityCheck.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1381,7 +1381,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun deviceCertificateKeyQualityCheck(deviceCertificateKeyQualityCheck: AuditCheckConfigurationProperty) {
-        cdkBuilder.deviceCertificateKeyQualityCheck(deviceCertificateKeyQualityCheck.let(AuditCheckConfigurationProperty::unwrap))
+        cdkBuilder.deviceCertificateKeyQualityCheck(deviceCertificateKeyQualityCheck.let(AuditCheckConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1401,7 +1401,7 @@ public open class CfnAccountAuditConfiguration(
        * X.509 certificate to authenticate with AWS IoT .
        */
       override fun deviceCertificateSharedCheck(deviceCertificateSharedCheck: IResolvable) {
-        cdkBuilder.deviceCertificateSharedCheck(deviceCertificateSharedCheck.let(IResolvable::unwrap))
+        cdkBuilder.deviceCertificateSharedCheck(deviceCertificateSharedCheck.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1410,7 +1410,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun deviceCertificateSharedCheck(deviceCertificateSharedCheck: AuditCheckConfigurationProperty) {
-        cdkBuilder.deviceCertificateSharedCheck(deviceCertificateSharedCheck.let(AuditCheckConfigurationProperty::unwrap))
+        cdkBuilder.deviceCertificateSharedCheck(deviceCertificateSharedCheck.let(AuditCheckConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1430,7 +1430,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun intermediateCaRevokedForActiveDeviceCertificatesCheck(intermediateCaRevokedForActiveDeviceCertificatesCheck: IResolvable) {
-        cdkBuilder.intermediateCaRevokedForActiveDeviceCertificatesCheck(intermediateCaRevokedForActiveDeviceCertificatesCheck.let(IResolvable::unwrap))
+        cdkBuilder.intermediateCaRevokedForActiveDeviceCertificatesCheck(intermediateCaRevokedForActiveDeviceCertificatesCheck.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1439,7 +1439,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun intermediateCaRevokedForActiveDeviceCertificatesCheck(intermediateCaRevokedForActiveDeviceCertificatesCheck: AuditCheckConfigurationProperty) {
-        cdkBuilder.intermediateCaRevokedForActiveDeviceCertificatesCheck(intermediateCaRevokedForActiveDeviceCertificatesCheck.let(AuditCheckConfigurationProperty::unwrap))
+        cdkBuilder.intermediateCaRevokedForActiveDeviceCertificatesCheck(intermediateCaRevokedForActiveDeviceCertificatesCheck.let(AuditCheckConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1462,7 +1462,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun ioTPolicyPotentialMisConfigurationCheck(ioTPolicyPotentialMisConfigurationCheck: IResolvable) {
-        cdkBuilder.ioTPolicyPotentialMisConfigurationCheck(ioTPolicyPotentialMisConfigurationCheck.let(IResolvable::unwrap))
+        cdkBuilder.ioTPolicyPotentialMisConfigurationCheck(ioTPolicyPotentialMisConfigurationCheck.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1474,7 +1474,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun ioTPolicyPotentialMisConfigurationCheck(ioTPolicyPotentialMisConfigurationCheck: AuditCheckConfigurationProperty) {
-        cdkBuilder.ioTPolicyPotentialMisConfigurationCheck(ioTPolicyPotentialMisConfigurationCheck.let(AuditCheckConfigurationProperty::unwrap))
+        cdkBuilder.ioTPolicyPotentialMisConfigurationCheck(ioTPolicyPotentialMisConfigurationCheck.let(AuditCheckConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1496,7 +1496,7 @@ public open class CfnAccountAuditConfiguration(
        * authenticated Amazon Cognito identity pool role.
        */
       override fun iotPolicyOverlyPermissiveCheck(iotPolicyOverlyPermissiveCheck: IResolvable) {
-        cdkBuilder.iotPolicyOverlyPermissiveCheck(iotPolicyOverlyPermissiveCheck.let(IResolvable::unwrap))
+        cdkBuilder.iotPolicyOverlyPermissiveCheck(iotPolicyOverlyPermissiveCheck.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1505,7 +1505,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun iotPolicyOverlyPermissiveCheck(iotPolicyOverlyPermissiveCheck: AuditCheckConfigurationProperty) {
-        cdkBuilder.iotPolicyOverlyPermissiveCheck(iotPolicyOverlyPermissiveCheck.let(AuditCheckConfigurationProperty::unwrap))
+        cdkBuilder.iotPolicyOverlyPermissiveCheck(iotPolicyOverlyPermissiveCheck.let(AuditCheckConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1525,7 +1525,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun iotRoleAliasAllowsAccessToUnusedServicesCheck(iotRoleAliasAllowsAccessToUnusedServicesCheck: IResolvable) {
-        cdkBuilder.iotRoleAliasAllowsAccessToUnusedServicesCheck(iotRoleAliasAllowsAccessToUnusedServicesCheck.let(IResolvable::unwrap))
+        cdkBuilder.iotRoleAliasAllowsAccessToUnusedServicesCheck(iotRoleAliasAllowsAccessToUnusedServicesCheck.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1534,7 +1534,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun iotRoleAliasAllowsAccessToUnusedServicesCheck(iotRoleAliasAllowsAccessToUnusedServicesCheck: AuditCheckConfigurationProperty) {
-        cdkBuilder.iotRoleAliasAllowsAccessToUnusedServicesCheck(iotRoleAliasAllowsAccessToUnusedServicesCheck.let(AuditCheckConfigurationProperty::unwrap))
+        cdkBuilder.iotRoleAliasAllowsAccessToUnusedServicesCheck(iotRoleAliasAllowsAccessToUnusedServicesCheck.let(AuditCheckConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1554,7 +1554,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun iotRoleAliasOverlyPermissiveCheck(iotRoleAliasOverlyPermissiveCheck: IResolvable) {
-        cdkBuilder.iotRoleAliasOverlyPermissiveCheck(iotRoleAliasOverlyPermissiveCheck.let(IResolvable::unwrap))
+        cdkBuilder.iotRoleAliasOverlyPermissiveCheck(iotRoleAliasOverlyPermissiveCheck.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1563,7 +1563,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun iotRoleAliasOverlyPermissiveCheck(iotRoleAliasOverlyPermissiveCheck: AuditCheckConfigurationProperty) {
-        cdkBuilder.iotRoleAliasOverlyPermissiveCheck(iotRoleAliasOverlyPermissiveCheck.let(AuditCheckConfigurationProperty::unwrap))
+        cdkBuilder.iotRoleAliasOverlyPermissiveCheck(iotRoleAliasOverlyPermissiveCheck.let(AuditCheckConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1581,14 +1581,14 @@ public open class CfnAccountAuditConfiguration(
        * @param loggingDisabledCheck Checks if AWS IoT logs are disabled.
        */
       override fun loggingDisabledCheck(loggingDisabledCheck: IResolvable) {
-        cdkBuilder.loggingDisabledCheck(loggingDisabledCheck.let(IResolvable::unwrap))
+        cdkBuilder.loggingDisabledCheck(loggingDisabledCheck.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param loggingDisabledCheck Checks if AWS IoT logs are disabled.
        */
       override fun loggingDisabledCheck(loggingDisabledCheck: AuditCheckConfigurationProperty) {
-        cdkBuilder.loggingDisabledCheck(loggingDisabledCheck.let(AuditCheckConfigurationProperty::unwrap))
+        cdkBuilder.loggingDisabledCheck(loggingDisabledCheck.let(AuditCheckConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1606,7 +1606,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun revokedCaCertificateStillActiveCheck(revokedCaCertificateStillActiveCheck: IResolvable) {
-        cdkBuilder.revokedCaCertificateStillActiveCheck(revokedCaCertificateStillActiveCheck.let(IResolvable::unwrap))
+        cdkBuilder.revokedCaCertificateStillActiveCheck(revokedCaCertificateStillActiveCheck.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1615,7 +1615,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun revokedCaCertificateStillActiveCheck(revokedCaCertificateStillActiveCheck: AuditCheckConfigurationProperty) {
-        cdkBuilder.revokedCaCertificateStillActiveCheck(revokedCaCertificateStillActiveCheck.let(AuditCheckConfigurationProperty::unwrap))
+        cdkBuilder.revokedCaCertificateStillActiveCheck(revokedCaCertificateStillActiveCheck.let(AuditCheckConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1635,7 +1635,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun revokedDeviceCertificateStillActiveCheck(revokedDeviceCertificateStillActiveCheck: IResolvable) {
-        cdkBuilder.revokedDeviceCertificateStillActiveCheck(revokedDeviceCertificateStillActiveCheck.let(IResolvable::unwrap))
+        cdkBuilder.revokedDeviceCertificateStillActiveCheck(revokedDeviceCertificateStillActiveCheck.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1644,7 +1644,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun revokedDeviceCertificateStillActiveCheck(revokedDeviceCertificateStillActiveCheck: AuditCheckConfigurationProperty) {
-        cdkBuilder.revokedDeviceCertificateStillActiveCheck(revokedDeviceCertificateStillActiveCheck.let(AuditCheckConfigurationProperty::unwrap))
+        cdkBuilder.revokedDeviceCertificateStillActiveCheck(revokedDeviceCertificateStillActiveCheck.let(AuditCheckConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1664,7 +1664,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun unauthenticatedCognitoRoleOverlyPermissiveCheck(unauthenticatedCognitoRoleOverlyPermissiveCheck: IResolvable) {
-        cdkBuilder.unauthenticatedCognitoRoleOverlyPermissiveCheck(unauthenticatedCognitoRoleOverlyPermissiveCheck.let(IResolvable::unwrap))
+        cdkBuilder.unauthenticatedCognitoRoleOverlyPermissiveCheck(unauthenticatedCognitoRoleOverlyPermissiveCheck.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1673,7 +1673,7 @@ public open class CfnAccountAuditConfiguration(
        */
       override
           fun unauthenticatedCognitoRoleOverlyPermissiveCheck(unauthenticatedCognitoRoleOverlyPermissiveCheck: AuditCheckConfigurationProperty) {
-        cdkBuilder.unauthenticatedCognitoRoleOverlyPermissiveCheck(unauthenticatedCognitoRoleOverlyPermissiveCheck.let(AuditCheckConfigurationProperty::unwrap))
+        cdkBuilder.unauthenticatedCognitoRoleOverlyPermissiveCheck(unauthenticatedCognitoRoleOverlyPermissiveCheck.let(AuditCheckConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1924,14 +1924,14 @@ public open class CfnAccountAuditConfiguration(
        * @param sns The `Sns` notification target.
        */
       override fun sns(sns: IResolvable) {
-        cdkBuilder.sns(sns.let(IResolvable::unwrap))
+        cdkBuilder.sns(sns.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sns The `Sns` notification target.
        */
       override fun sns(sns: AuditNotificationTargetProperty) {
-        cdkBuilder.sns(sns.let(AuditNotificationTargetProperty::unwrap))
+        cdkBuilder.sns(sns.let(AuditNotificationTargetProperty.Companion::unwrap))
       }
 
       /**
@@ -2062,7 +2062,7 @@ public open class CfnAccountAuditConfiguration(
        * @param enabled True if notifications to the target are enabled.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**

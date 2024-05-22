@@ -301,7 +301,7 @@ public interface CfnReportDefinitionProps {
      * These charges can include refunds, credits, or support fees.
      */
     override fun refreshClosedReports(refreshClosedReports: IResolvable) {
-      cdkBuilder.refreshClosedReports(refreshClosedReports.let(IResolvable::unwrap))
+      cdkBuilder.refreshClosedReports(refreshClosedReports.let(IResolvable.Companion::unwrap))
     }
 
     /**

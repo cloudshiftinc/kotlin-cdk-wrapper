@@ -157,7 +157,7 @@ public interface LookupMachineImageProps {
      * @param userData Custom userdata for this image.
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     /**

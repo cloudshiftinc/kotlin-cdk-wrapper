@@ -119,7 +119,7 @@ public open class CfnModel(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnModel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.sagemaker.CfnModel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.sagemaker.CfnModel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -128,8 +128,8 @@ public open class CfnModel(
     id: String,
     props: CfnModelProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnModel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnModelProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnModel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnModelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -158,7 +158,7 @@ public open class CfnModel(
    * Specifies the containers in the inference pipeline.
    */
   public open fun containers(`value`: IResolvable) {
-    unwrap(this).setContainers(`value`.let(IResolvable::unwrap))
+    unwrap(this).setContainers(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -189,7 +189,7 @@ public open class CfnModel(
    * Isolates the model container.
    */
   public open fun enableNetworkIsolation(`value`: IResolvable) {
-    unwrap(this).setEnableNetworkIsolation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableNetworkIsolation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -215,14 +215,14 @@ public open class CfnModel(
    * Specifies details of how containers in a multi-container endpoint are called.
    */
   public open fun inferenceExecutionConfig(`value`: IResolvable) {
-    unwrap(this).setInferenceExecutionConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInferenceExecutionConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies details of how containers in a multi-container endpoint are called.
    */
   public open fun inferenceExecutionConfig(`value`: InferenceExecutionConfigProperty) {
-    unwrap(this).setInferenceExecutionConfig(`value`.let(InferenceExecutionConfigProperty::unwrap))
+    unwrap(this).setInferenceExecutionConfig(`value`.let(InferenceExecutionConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -240,7 +240,7 @@ public open class CfnModel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -266,7 +266,7 @@ public open class CfnModel(
    * custom environment map that the inference code uses when the model is deployed for predictions.
    */
   public open fun primaryContainer(`value`: IResolvable) {
-    unwrap(this).setPrimaryContainer(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPrimaryContainer(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -274,7 +274,7 @@ public open class CfnModel(
    * custom environment map that the inference code uses when the model is deployed for predictions.
    */
   public open fun primaryContainer(`value`: ContainerDefinitionProperty) {
-    unwrap(this).setPrimaryContainer(`value`.let(ContainerDefinitionProperty::unwrap))
+    unwrap(this).setPrimaryContainer(`value`.let(ContainerDefinitionProperty.Companion::unwrap))
   }
 
   /**
@@ -301,7 +301,7 @@ public open class CfnModel(
    * A list of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -330,7 +330,7 @@ public open class CfnModel(
    * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/batch-vpc.html) .
    */
   public open fun vpcConfig(`value`: IResolvable) {
-    unwrap(this).setVpcConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -343,7 +343,7 @@ public open class CfnModel(
    * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/batch-vpc.html) .
    */
   public open fun vpcConfig(`value`: VpcConfigProperty) {
-    unwrap(this).setVpcConfig(`value`.let(VpcConfigProperty::unwrap))
+    unwrap(this).setVpcConfig(`value`.let(VpcConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -609,7 +609,7 @@ public open class CfnModel(
      * @param containers Specifies the containers in the inference pipeline. 
      */
     override fun containers(containers: IResolvable) {
-      cdkBuilder.containers(containers.let(IResolvable::unwrap))
+      cdkBuilder.containers(containers.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -651,7 +651,7 @@ public open class CfnModel(
      * @param enableNetworkIsolation Isolates the model container. 
      */
     override fun enableNetworkIsolation(enableNetworkIsolation: IResolvable) {
-      cdkBuilder.enableNetworkIsolation(enableNetworkIsolation.let(IResolvable::unwrap))
+      cdkBuilder.enableNetworkIsolation(enableNetworkIsolation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -683,7 +683,7 @@ public open class CfnModel(
      * endpoint are called. 
      */
     override fun inferenceExecutionConfig(inferenceExecutionConfig: IResolvable) {
-      cdkBuilder.inferenceExecutionConfig(inferenceExecutionConfig.let(IResolvable::unwrap))
+      cdkBuilder.inferenceExecutionConfig(inferenceExecutionConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -695,7 +695,7 @@ public open class CfnModel(
      */
     override
         fun inferenceExecutionConfig(inferenceExecutionConfig: InferenceExecutionConfigProperty) {
-      cdkBuilder.inferenceExecutionConfig(inferenceExecutionConfig.let(InferenceExecutionConfigProperty::unwrap))
+      cdkBuilder.inferenceExecutionConfig(inferenceExecutionConfig.let(InferenceExecutionConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -731,7 +731,7 @@ public open class CfnModel(
      * deployed for predictions. 
      */
     override fun primaryContainer(primaryContainer: IResolvable) {
-      cdkBuilder.primaryContainer(primaryContainer.let(IResolvable::unwrap))
+      cdkBuilder.primaryContainer(primaryContainer.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -744,7 +744,7 @@ public open class CfnModel(
      * deployed for predictions. 
      */
     override fun primaryContainer(primaryContainer: ContainerDefinitionProperty) {
-      cdkBuilder.primaryContainer(primaryContainer.let(ContainerDefinitionProperty::unwrap))
+      cdkBuilder.primaryContainer(primaryContainer.let(ContainerDefinitionProperty.Companion::unwrap))
     }
 
     /**
@@ -774,7 +774,7 @@ public open class CfnModel(
      * @param tags A list of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -811,7 +811,7 @@ public open class CfnModel(
      * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/batch-vpc.html) . 
      */
     override fun vpcConfig(vpcConfig: IResolvable) {
-      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -834,7 +834,7 @@ public open class CfnModel(
      * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/batch-vpc.html) . 
      */
     override fun vpcConfig(vpcConfig: VpcConfigProperty) {
-      cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1315,7 +1315,7 @@ public open class CfnModel(
        * creating.
        */
       override fun imageConfig(imageConfig: IResolvable) {
-        cdkBuilder.imageConfig(imageConfig.let(IResolvable::unwrap))
+        cdkBuilder.imageConfig(imageConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1332,7 +1332,7 @@ public open class CfnModel(
        * creating.
        */
       override fun imageConfig(imageConfig: ImageConfigProperty) {
-        cdkBuilder.imageConfig(imageConfig.let(ImageConfigProperty::unwrap))
+        cdkBuilder.imageConfig(imageConfig.let(ImageConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1375,7 +1375,7 @@ public open class CfnModel(
        * SageMaker serverless endpoints, SageMaker multi-model endpoints, and SageMaker Marketplace.
        */
       override fun modelDataSource(modelDataSource: IResolvable) {
-        cdkBuilder.modelDataSource(modelDataSource.let(IResolvable::unwrap))
+        cdkBuilder.modelDataSource(modelDataSource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1385,7 +1385,7 @@ public open class CfnModel(
        * SageMaker serverless endpoints, SageMaker multi-model endpoints, and SageMaker Marketplace.
        */
       override fun modelDataSource(modelDataSource: ModelDataSourceProperty) {
-        cdkBuilder.modelDataSource(modelDataSource.let(ModelDataSourceProperty::unwrap))
+        cdkBuilder.modelDataSource(modelDataSource.let(ModelDataSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -1441,14 +1441,14 @@ public open class CfnModel(
        * @param multiModelConfig Specifies additional configuration for multi-model endpoints.
        */
       override fun multiModelConfig(multiModelConfig: IResolvable) {
-        cdkBuilder.multiModelConfig(multiModelConfig.let(IResolvable::unwrap))
+        cdkBuilder.multiModelConfig(multiModelConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param multiModelConfig Specifies additional configuration for multi-model endpoints.
        */
       override fun multiModelConfig(multiModelConfig: MultiModelConfigProperty) {
-        cdkBuilder.multiModelConfig(multiModelConfig.let(MultiModelConfigProperty::unwrap))
+        cdkBuilder.multiModelConfig(multiModelConfig.let(MultiModelConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1736,7 +1736,7 @@ public open class CfnModel(
        * requires authentication.
        */
       override fun repositoryAuthConfig(repositoryAuthConfig: IResolvable) {
-        cdkBuilder.repositoryAuthConfig(repositoryAuthConfig.let(IResolvable::unwrap))
+        cdkBuilder.repositoryAuthConfig(repositoryAuthConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1747,7 +1747,7 @@ public open class CfnModel(
        * requires authentication.
        */
       override fun repositoryAuthConfig(repositoryAuthConfig: RepositoryAuthConfigProperty) {
-        cdkBuilder.repositoryAuthConfig(repositoryAuthConfig.let(RepositoryAuthConfigProperty::unwrap))
+        cdkBuilder.repositoryAuthConfig(repositoryAuthConfig.let(RepositoryAuthConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1992,7 +1992,7 @@ public open class CfnModel(
        * using a model.
        */
       override fun acceptEula(acceptEula: IResolvable) {
-        cdkBuilder.acceptEula(acceptEula.let(IResolvable::unwrap))
+        cdkBuilder.acceptEula(acceptEula.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2100,14 +2100,14 @@ public open class CfnModel(
        * @param s3DataSource Specifies the S3 location of ML model data to deploy. 
        */
       override fun s3DataSource(s3DataSource: IResolvable) {
-        cdkBuilder.s3DataSource(s3DataSource.let(IResolvable::unwrap))
+        cdkBuilder.s3DataSource(s3DataSource.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3DataSource Specifies the S3 location of ML model data to deploy. 
        */
       override fun s3DataSource(s3DataSource: S3DataSourceProperty) {
-        cdkBuilder.s3DataSource(s3DataSource.let(S3DataSourceProperty::unwrap))
+        cdkBuilder.s3DataSource(s3DataSource.let(S3DataSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -2570,14 +2570,14 @@ public open class CfnModel(
        * @param modelAccessConfig the value to be set.
        */
       override fun modelAccessConfig(modelAccessConfig: IResolvable) {
-        cdkBuilder.modelAccessConfig(modelAccessConfig.let(IResolvable::unwrap))
+        cdkBuilder.modelAccessConfig(modelAccessConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param modelAccessConfig the value to be set.
        */
       override fun modelAccessConfig(modelAccessConfig: ModelAccessConfigProperty) {
-        cdkBuilder.modelAccessConfig(modelAccessConfig.let(ModelAccessConfigProperty::unwrap))
+        cdkBuilder.modelAccessConfig(modelAccessConfig.let(ModelAccessConfigProperty.Companion::unwrap))
       }
 
       /**

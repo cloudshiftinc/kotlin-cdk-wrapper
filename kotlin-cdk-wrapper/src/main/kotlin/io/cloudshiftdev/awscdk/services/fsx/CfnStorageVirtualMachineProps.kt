@@ -192,7 +192,7 @@ public interface CfnStorageVirtualMachineProps {
      * which the SVM is joined, if applicable.
      */
     override fun activeDirectoryConfiguration(activeDirectoryConfiguration: IResolvable) {
-      cdkBuilder.activeDirectoryConfiguration(activeDirectoryConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.activeDirectoryConfiguration(activeDirectoryConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -201,7 +201,7 @@ public interface CfnStorageVirtualMachineProps {
      */
     override
         fun activeDirectoryConfiguration(activeDirectoryConfiguration: CfnStorageVirtualMachine.ActiveDirectoryConfigurationProperty) {
-      cdkBuilder.activeDirectoryConfiguration(activeDirectoryConfiguration.let(CfnStorageVirtualMachine.ActiveDirectoryConfigurationProperty::unwrap))
+      cdkBuilder.activeDirectoryConfiguration(activeDirectoryConfiguration.let(CfnStorageVirtualMachine.ActiveDirectoryConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -262,7 +262,7 @@ public interface CfnStorageVirtualMachineProps {
      * @param tags A list of `Tag` values, with a maximum of 50 elements.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

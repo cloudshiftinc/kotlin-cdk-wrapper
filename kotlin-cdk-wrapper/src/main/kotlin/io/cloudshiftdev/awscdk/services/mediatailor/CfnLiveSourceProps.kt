@@ -129,7 +129,7 @@ public interface CfnLiveSourceProps {
      * @param httpPackageConfigurations The HTTP package configurations for the live source. 
      */
     override fun httpPackageConfigurations(httpPackageConfigurations: IResolvable) {
-      cdkBuilder.httpPackageConfigurations(httpPackageConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.httpPackageConfigurations(httpPackageConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -167,7 +167,7 @@ public interface CfnLiveSourceProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

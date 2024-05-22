@@ -62,7 +62,7 @@ public open class IpAddresses(
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun awsIpamAllocation(props: AwsIpamProps): IIpAddresses =
-        software.amazon.awscdk.services.ec2.IpAddresses.awsIpamAllocation(props.let(AwsIpamProps::unwrap)).let(IIpAddresses::wrap)
+        software.amazon.awscdk.services.ec2.IpAddresses.awsIpamAllocation(props.let(AwsIpamProps.Companion::unwrap)).let(IIpAddresses::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("27407714c0d9440af0c80765721b424fa3415f353924aba4901f276414c99cb4")

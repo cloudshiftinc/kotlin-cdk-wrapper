@@ -69,7 +69,7 @@ public interface Attribute {
      * @param type The data type of an attribute. 
      */
     override fun type(type: AttributeType) {
-      cdkBuilder.type(type.let(AttributeType::unwrap))
+      cdkBuilder.type(type.let(AttributeType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.dynamodb.Attribute = cdkBuilder.build()

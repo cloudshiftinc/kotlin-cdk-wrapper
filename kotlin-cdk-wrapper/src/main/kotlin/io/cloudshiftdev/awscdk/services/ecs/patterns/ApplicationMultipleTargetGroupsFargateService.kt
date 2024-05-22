@@ -92,7 +92,7 @@ public open class ApplicationMultipleTargetGroupsFargateService(
   cdkObject: software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsFargateService,
 ) : ApplicationMultipleTargetGroupsServiceBase(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsFargateService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsFargateService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -101,8 +101,8 @@ public open class ApplicationMultipleTargetGroupsFargateService(
     id: String,
     props: ApplicationMultipleTargetGroupsFargateServiceProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsFargateService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ApplicationMultipleTargetGroupsFargateServiceProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.patterns.ApplicationMultipleTargetGroupsFargateService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ApplicationMultipleTargetGroupsFargateServiceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -490,7 +490,7 @@ public open class ApplicationMultipleTargetGroupsFargateService(
      * discovery. 
      */
     override fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
-      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions::unwrap))
+      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions.Companion::unwrap))
     }
 
     /**
@@ -518,7 +518,7 @@ public open class ApplicationMultipleTargetGroupsFargateService(
      * @param cluster The name of the cluster that hosts the service. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -619,7 +619,7 @@ public open class ApplicationMultipleTargetGroupsFargateService(
      * started. 
      */
     override fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
-      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration::unwrap))
+      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -630,7 +630,7 @@ public open class ApplicationMultipleTargetGroupsFargateService(
      * @param loadBalancers The application load balancer that will serve traffic to the service. 
      */
     override fun loadBalancers(loadBalancers: List<ApplicationLoadBalancerProps>) {
-      cdkBuilder.loadBalancers(loadBalancers.map(ApplicationLoadBalancerProps::unwrap))
+      cdkBuilder.loadBalancers(loadBalancers.map(ApplicationLoadBalancerProps.Companion::unwrap))
     }
 
     /**
@@ -693,7 +693,7 @@ public open class ApplicationMultipleTargetGroupsFargateService(
      * @param platformVersion The platform version on which to run your service. 
      */
     override fun platformVersion(platformVersion: FargatePlatformVersion) {
-      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion::unwrap))
+      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion.Companion::unwrap))
     }
 
     /**
@@ -708,7 +708,7 @@ public open class ApplicationMultipleTargetGroupsFargateService(
      * service to the tasks in the service. 
      */
     override fun propagateTags(propagateTags: PropagatedTagSource) {
-      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource.Companion::unwrap))
     }
 
     /**
@@ -720,7 +720,7 @@ public open class ApplicationMultipleTargetGroupsFargateService(
      * @param runtimePlatform The runtime platform of the task definition. 
      */
     override fun runtimePlatform(runtimePlatform: RuntimePlatform) {
-      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform::unwrap))
+      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform.Companion::unwrap))
     }
 
     /**
@@ -756,7 +756,7 @@ public open class ApplicationMultipleTargetGroupsFargateService(
      * @param targetGroups Properties to specify ALB target groups. 
      */
     override fun targetGroups(targetGroups: List<ApplicationTargetProps>) {
-      cdkBuilder.targetGroups(targetGroups.map(ApplicationTargetProps::unwrap))
+      cdkBuilder.targetGroups(targetGroups.map(ApplicationTargetProps.Companion::unwrap))
     }
 
     /**
@@ -782,7 +782,7 @@ public open class ApplicationMultipleTargetGroupsFargateService(
      * TaskImageOptions must be specified, but not both. 
      */
     override fun taskDefinition(taskDefinition: FargateTaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition.Companion::unwrap))
     }
 
     /**
@@ -795,7 +795,7 @@ public open class ApplicationMultipleTargetGroupsFargateService(
      * @param taskImageOptions The properties required to create a new task definition. 
      */
     override fun taskImageOptions(taskImageOptions: ApplicationLoadBalancedTaskImageProps) {
-      cdkBuilder.taskImageOptions(taskImageOptions.let(ApplicationLoadBalancedTaskImageProps::unwrap))
+      cdkBuilder.taskImageOptions(taskImageOptions.let(ApplicationLoadBalancedTaskImageProps.Companion::unwrap))
     }
 
     /**
@@ -826,7 +826,7 @@ public open class ApplicationMultipleTargetGroupsFargateService(
      * interfaces (ENIs) will be deployed. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build():

@@ -213,7 +213,7 @@ public interface CachePolicyProps {
      * cache key and automatically included in requests that CloudFront sends to the origin.
      */
     override fun cookieBehavior(cookieBehavior: CacheCookieBehavior) {
-      cdkBuilder.cookieBehavior(cookieBehavior.let(CacheCookieBehavior::unwrap))
+      cdkBuilder.cookieBehavior(cookieBehavior.let(CacheCookieBehavior.Companion::unwrap))
     }
 
     /**
@@ -221,7 +221,7 @@ public interface CachePolicyProps {
      * Only used when the origin does not send Cache-Control or Expires headers with the object.
      */
     override fun defaultTtl(defaultTtl: Duration) {
-      cdkBuilder.defaultTtl(defaultTtl.let(Duration::unwrap))
+      cdkBuilder.defaultTtl(defaultTtl.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -245,7 +245,7 @@ public interface CachePolicyProps {
      * automatically included in requests that CloudFront sends to the origin.
      */
     override fun headerBehavior(headerBehavior: CacheHeaderBehavior) {
-      cdkBuilder.headerBehavior(headerBehavior.let(CacheHeaderBehavior::unwrap))
+      cdkBuilder.headerBehavior(headerBehavior.let(CacheHeaderBehavior.Companion::unwrap))
     }
 
     /**
@@ -254,14 +254,14 @@ public interface CachePolicyProps {
      * the object.
      */
     override fun maxTtl(maxTtl: Duration) {
-      cdkBuilder.maxTtl(maxTtl.let(Duration::unwrap))
+      cdkBuilder.maxTtl(maxTtl.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param minTtl The minimum amount of time for objects to stay in the CloudFront cache.
      */
     override fun minTtl(minTtl: Duration) {
-      cdkBuilder.minTtl(minTtl.let(Duration::unwrap))
+      cdkBuilder.minTtl(minTtl.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -269,7 +269,7 @@ public interface CachePolicyProps {
      * and automatically included in requests that CloudFront sends to the origin.
      */
     override fun queryStringBehavior(queryStringBehavior: CacheQueryStringBehavior) {
-      cdkBuilder.queryStringBehavior(queryStringBehavior.let(CacheQueryStringBehavior::unwrap))
+      cdkBuilder.queryStringBehavior(queryStringBehavior.let(CacheQueryStringBehavior.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.CachePolicyProps =

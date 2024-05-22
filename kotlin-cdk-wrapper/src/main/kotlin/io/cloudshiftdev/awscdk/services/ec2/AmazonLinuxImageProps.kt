@@ -191,49 +191,49 @@ public interface AmazonLinuxImageProps {
      * @param cpuType CPU Type.
      */
     override fun cpuType(cpuType: AmazonLinuxCpuType) {
-      cdkBuilder.cpuType(cpuType.let(AmazonLinuxCpuType::unwrap))
+      cdkBuilder.cpuType(cpuType.let(AmazonLinuxCpuType.Companion::unwrap))
     }
 
     /**
      * @param edition What edition of Amazon Linux to use.
      */
     override fun edition(edition: AmazonLinuxEdition) {
-      cdkBuilder.edition(edition.let(AmazonLinuxEdition::unwrap))
+      cdkBuilder.edition(edition.let(AmazonLinuxEdition.Companion::unwrap))
     }
 
     /**
      * @param generation What generation of Amazon Linux to use.
      */
     override fun generation(generation: AmazonLinuxGeneration) {
-      cdkBuilder.generation(generation.let(AmazonLinuxGeneration::unwrap))
+      cdkBuilder.generation(generation.let(AmazonLinuxGeneration.Companion::unwrap))
     }
 
     /**
      * @param kernel What kernel version of Amazon Linux to use.
      */
     override fun kernel(kernel: AmazonLinuxKernel) {
-      cdkBuilder.kernel(kernel.let(AmazonLinuxKernel::unwrap))
+      cdkBuilder.kernel(kernel.let(AmazonLinuxKernel.Companion::unwrap))
     }
 
     /**
      * @param storage What storage backed image to use.
      */
     override fun storage(storage: AmazonLinuxStorage) {
-      cdkBuilder.storage(storage.let(AmazonLinuxStorage::unwrap))
+      cdkBuilder.storage(storage.let(AmazonLinuxStorage.Companion::unwrap))
     }
 
     /**
      * @param userData Initial user data.
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     /**
      * @param virtualization Virtualization type.
      */
     override fun virtualization(virtualization: AmazonLinuxVirt) {
-      cdkBuilder.virtualization(virtualization.let(AmazonLinuxVirt::unwrap))
+      cdkBuilder.virtualization(virtualization.let(AmazonLinuxVirt.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.AmazonLinuxImageProps =

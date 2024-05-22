@@ -37,8 +37,8 @@ public open class CfnApprovedOrigin(
     id: String,
     props: CfnApprovedOriginProps,
   ) :
-      this(software.amazon.awscdk.services.connect.CfnApprovedOrigin(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApprovedOriginProps::unwrap))
+      this(software.amazon.awscdk.services.connect.CfnApprovedOrigin(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApprovedOriginProps.Companion::unwrap))
   )
 
   public constructor(
@@ -54,7 +54,7 @@ public open class CfnApprovedOrigin(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

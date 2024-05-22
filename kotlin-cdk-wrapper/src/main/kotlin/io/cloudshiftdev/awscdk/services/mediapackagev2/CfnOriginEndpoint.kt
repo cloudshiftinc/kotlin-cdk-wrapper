@@ -120,8 +120,8 @@ public open class CfnOriginEndpoint(
     id: String,
     props: CfnOriginEndpointProps,
   ) :
-      this(software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnOriginEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnOriginEndpointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -209,7 +209,7 @@ public open class CfnOriginEndpoint(
    * The HLS manfiests associated with the origin endpoint configuration.
    */
   public open fun hlsManifests(`value`: IResolvable) {
-    unwrap(this).setHlsManifests(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHlsManifests(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -230,7 +230,7 @@ public open class CfnOriginEndpoint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -242,7 +242,7 @@ public open class CfnOriginEndpoint(
    * The low-latency HLS (LL-HLS) manifests associated with the origin endpoint.
    */
   public open fun lowLatencyHlsManifests(`value`: IResolvable) {
-    unwrap(this).setLowLatencyHlsManifests(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLowLatencyHlsManifests(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -279,14 +279,14 @@ public open class CfnOriginEndpoint(
    * The segment associated with the origin endpoint.
    */
   public open fun segment(`value`: IResolvable) {
-    unwrap(this).setSegment(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSegment(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The segment associated with the origin endpoint.
    */
   public open fun segment(`value`: SegmentProperty) {
-    unwrap(this).setSegment(`value`.let(SegmentProperty::unwrap))
+    unwrap(this).setSegment(`value`.let(SegmentProperty.Companion::unwrap))
   }
 
   /**
@@ -320,7 +320,7 @@ public open class CfnOriginEndpoint(
    * The tags associated with the origin endpoint.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -536,7 +536,7 @@ public open class CfnOriginEndpoint(
      * @param hlsManifests The HLS manfiests associated with the origin endpoint configuration. 
      */
     override fun hlsManifests(hlsManifests: IResolvable) {
-      cdkBuilder.hlsManifests(hlsManifests.let(IResolvable::unwrap))
+      cdkBuilder.hlsManifests(hlsManifests.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -565,7 +565,7 @@ public open class CfnOriginEndpoint(
      * origin endpoint. 
      */
     override fun lowLatencyHlsManifests(lowLatencyHlsManifests: IResolvable) {
-      cdkBuilder.lowLatencyHlsManifests(lowLatencyHlsManifests.let(IResolvable::unwrap))
+      cdkBuilder.lowLatencyHlsManifests(lowLatencyHlsManifests.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -607,7 +607,7 @@ public open class CfnOriginEndpoint(
      * @param segment The segment associated with the origin endpoint. 
      */
     override fun segment(segment: IResolvable) {
-      cdkBuilder.segment(segment.let(IResolvable::unwrap))
+      cdkBuilder.segment(segment.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -617,7 +617,7 @@ public open class CfnOriginEndpoint(
      * @param segment The segment associated with the origin endpoint. 
      */
     override fun segment(segment: SegmentProperty) {
-      cdkBuilder.segment(segment.let(SegmentProperty::unwrap))
+      cdkBuilder.segment(segment.let(SegmentProperty.Companion::unwrap))
     }
 
     /**
@@ -652,7 +652,7 @@ public open class CfnOriginEndpoint(
      * @param tags The tags associated with the origin endpoint. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1121,14 +1121,14 @@ public open class CfnOriginEndpoint(
        * @param encryptionMethod The encryption method to use. 
        */
       override fun encryptionMethod(encryptionMethod: IResolvable) {
-        cdkBuilder.encryptionMethod(encryptionMethod.let(IResolvable::unwrap))
+        cdkBuilder.encryptionMethod(encryptionMethod.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param encryptionMethod The encryption method to use. 
        */
       override fun encryptionMethod(encryptionMethod: EncryptionMethodProperty) {
-        cdkBuilder.encryptionMethod(encryptionMethod.let(EncryptionMethodProperty::unwrap))
+        cdkBuilder.encryptionMethod(encryptionMethod.let(EncryptionMethodProperty.Companion::unwrap))
       }
 
       /**
@@ -1151,14 +1151,14 @@ public open class CfnOriginEndpoint(
        * @param spekeKeyProvider The SPEKE key provider to use for encryption. 
        */
       override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
-        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable::unwrap))
+        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param spekeKeyProvider The SPEKE key provider to use for encryption. 
        */
       override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
-        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty::unwrap))
+        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty.Companion::unwrap))
       }
 
       /**
@@ -1633,7 +1633,7 @@ public open class CfnOriginEndpoint(
        * </p>
        */
       override fun filterConfiguration(filterConfiguration: IResolvable) {
-        cdkBuilder.filterConfiguration(filterConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.filterConfiguration(filterConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1643,7 +1643,7 @@ public open class CfnOriginEndpoint(
        * </p>
        */
       override fun filterConfiguration(filterConfiguration: FilterConfigurationProperty) {
-        cdkBuilder.filterConfiguration(filterConfiguration.let(FilterConfigurationProperty::unwrap))
+        cdkBuilder.filterConfiguration(filterConfiguration.let(FilterConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1687,7 +1687,7 @@ public open class CfnOriginEndpoint(
        * configuration.
        */
       override fun scteHls(scteHls: IResolvable) {
-        cdkBuilder.scteHls(scteHls.let(IResolvable::unwrap))
+        cdkBuilder.scteHls(scteHls.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1695,7 +1695,7 @@ public open class CfnOriginEndpoint(
        * configuration.
        */
       override fun scteHls(scteHls: ScteHlsProperty) {
-        cdkBuilder.scteHls(scteHls.let(ScteHlsProperty::unwrap))
+        cdkBuilder.scteHls(scteHls.let(ScteHlsProperty.Companion::unwrap))
       }
 
       /**
@@ -2011,7 +2011,7 @@ public open class CfnOriginEndpoint(
        * </p>
        */
       override fun filterConfiguration(filterConfiguration: IResolvable) {
-        cdkBuilder.filterConfiguration(filterConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.filterConfiguration(filterConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2021,7 +2021,7 @@ public open class CfnOriginEndpoint(
        * </p>
        */
       override fun filterConfiguration(filterConfiguration: FilterConfigurationProperty) {
-        cdkBuilder.filterConfiguration(filterConfiguration.let(FilterConfigurationProperty::unwrap))
+        cdkBuilder.filterConfiguration(filterConfiguration.let(FilterConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2075,7 +2075,7 @@ public open class CfnOriginEndpoint(
        * manifest configuration of the origin endpoint.
        */
       override fun scteHls(scteHls: IResolvable) {
-        cdkBuilder.scteHls(scteHls.let(IResolvable::unwrap))
+        cdkBuilder.scteHls(scteHls.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2083,7 +2083,7 @@ public open class CfnOriginEndpoint(
        * manifest configuration of the origin endpoint.
        */
       override fun scteHls(scteHls: ScteHlsProperty) {
-        cdkBuilder.scteHls(scteHls.let(ScteHlsProperty::unwrap))
+        cdkBuilder.scteHls(scteHls.let(ScteHlsProperty.Companion::unwrap))
       }
 
       /**
@@ -2554,14 +2554,14 @@ public open class CfnOriginEndpoint(
        * @param encryption Whether to use encryption for the segment.
        */
       override fun encryption(encryption: IResolvable) {
-        cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
+        cdkBuilder.encryption(encryption.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param encryption Whether to use encryption for the segment.
        */
       override fun encryption(encryption: EncryptionProperty) {
-        cdkBuilder.encryption(encryption.let(EncryptionProperty::unwrap))
+        cdkBuilder.encryption(encryption.let(EncryptionProperty.Companion::unwrap))
       }
 
       /**
@@ -2583,21 +2583,21 @@ public open class CfnOriginEndpoint(
        * @param includeIframeOnlyStreams Whether the segment includes I-frame-only streams.
        */
       override fun includeIframeOnlyStreams(includeIframeOnlyStreams: IResolvable) {
-        cdkBuilder.includeIframeOnlyStreams(includeIframeOnlyStreams.let(IResolvable::unwrap))
+        cdkBuilder.includeIframeOnlyStreams(includeIframeOnlyStreams.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param scte The SCTE-35 configuration associated with the segment.
        */
       override fun scte(scte: IResolvable) {
-        cdkBuilder.scte(scte.let(IResolvable::unwrap))
+        cdkBuilder.scte(scte.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param scte The SCTE-35 configuration associated with the segment.
        */
       override fun scte(scte: ScteProperty) {
-        cdkBuilder.scte(scte.let(ScteProperty::unwrap))
+        cdkBuilder.scte(scte.let(ScteProperty.Companion::unwrap))
       }
 
       /**
@@ -2632,7 +2632,7 @@ public open class CfnOriginEndpoint(
        * @param tsIncludeDvbSubtitles Whether the segment includes DVB subtitles.
        */
       override fun tsIncludeDvbSubtitles(tsIncludeDvbSubtitles: IResolvable) {
-        cdkBuilder.tsIncludeDvbSubtitles(tsIncludeDvbSubtitles.let(IResolvable::unwrap))
+        cdkBuilder.tsIncludeDvbSubtitles(tsIncludeDvbSubtitles.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2646,7 +2646,7 @@ public open class CfnOriginEndpoint(
        * @param tsUseAudioRenditionGroup Whether the segment is an audio rendition group.
        */
       override fun tsUseAudioRenditionGroup(tsUseAudioRenditionGroup: IResolvable) {
-        cdkBuilder.tsUseAudioRenditionGroup(tsUseAudioRenditionGroup.let(IResolvable::unwrap))
+        cdkBuilder.tsUseAudioRenditionGroup(tsUseAudioRenditionGroup.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2892,7 +2892,7 @@ public open class CfnOriginEndpoint(
        * with the SPEKE key provider. 
        */
       override fun encryptionContractConfiguration(encryptionContractConfiguration: IResolvable) {
-        cdkBuilder.encryptionContractConfiguration(encryptionContractConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.encryptionContractConfiguration(encryptionContractConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2901,7 +2901,7 @@ public open class CfnOriginEndpoint(
        */
       override
           fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty) {
-        cdkBuilder.encryptionContractConfiguration(encryptionContractConfiguration.let(EncryptionContractConfigurationProperty::unwrap))
+        cdkBuilder.encryptionContractConfiguration(encryptionContractConfiguration.let(EncryptionContractConfigurationProperty.Companion::unwrap))
       }
 
       /**

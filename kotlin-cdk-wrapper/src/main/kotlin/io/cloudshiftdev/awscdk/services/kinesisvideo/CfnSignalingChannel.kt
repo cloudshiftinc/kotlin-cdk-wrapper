@@ -45,7 +45,7 @@ public open class CfnSignalingChannel(
   cdkObject: software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannel,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -54,8 +54,8 @@ public open class CfnSignalingChannel(
     id: String,
     props: CfnSignalingChannelProps,
   ) :
-      this(software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSignalingChannelProps::unwrap))
+      this(software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSignalingChannelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -76,16 +76,18 @@ public open class CfnSignalingChannel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
-   * The period of time a signaling channel retains undelivered messages before they are discarded.
+   * The period of time (in seconds) a signaling channel retains undelivered messages before they
+   * are discarded.
    */
   public open fun messageTtlSeconds(): Number? = unwrap(this).getMessageTtlSeconds()
 
   /**
-   * The period of time a signaling channel retains undelivered messages before they are discarded.
+   * The period of time (in seconds) a signaling channel retains undelivered messages before they
+   * are discarded.
    */
   public open fun messageTtlSeconds(`value`: Number) {
     unwrap(this).setMessageTtlSeconds(`value`)
@@ -118,7 +120,7 @@ public open class CfnSignalingChannel(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -144,12 +146,14 @@ public open class CfnSignalingChannel(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The period of time a signaling channel retains undelivered messages before they are
-     * discarded.
+     * The period of time (in seconds) a signaling channel retains undelivered messages before they
+     * are discarded.
+     *
+     * Use `API_UpdateSignalingChannel` to update this value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisvideo-signalingchannel.html#cfn-kinesisvideo-signalingchannel-messagettlseconds)
-     * @param messageTtlSeconds The period of time a signaling channel retains undelivered messages
-     * before they are discarded. 
+     * @param messageTtlSeconds The period of time (in seconds) a signaling channel retains
+     * undelivered messages before they are discarded. 
      */
     public fun messageTtlSeconds(messageTtlSeconds: Number)
 
@@ -206,12 +210,14 @@ public open class CfnSignalingChannel(
         = software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannel.Builder.create(scope, id)
 
     /**
-     * The period of time a signaling channel retains undelivered messages before they are
-     * discarded.
+     * The period of time (in seconds) a signaling channel retains undelivered messages before they
+     * are discarded.
+     *
+     * Use `API_UpdateSignalingChannel` to update this value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisvideo-signalingchannel.html#cfn-kinesisvideo-signalingchannel-messagettlseconds)
-     * @param messageTtlSeconds The period of time a signaling channel retains undelivered messages
-     * before they are discarded. 
+     * @param messageTtlSeconds The period of time (in seconds) a signaling channel retains
+     * undelivered messages before they are discarded. 
      */
     override fun messageTtlSeconds(messageTtlSeconds: Number) {
       cdkBuilder.messageTtlSeconds(messageTtlSeconds)
@@ -240,7 +246,7 @@ public open class CfnSignalingChannel(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

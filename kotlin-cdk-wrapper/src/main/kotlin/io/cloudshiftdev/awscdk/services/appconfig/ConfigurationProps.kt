@@ -118,7 +118,7 @@ public interface ConfigurationProps : ConfigurationOptions {
      * @param application The application associated with the configuration. 
      */
     override fun application(application: IApplication) {
-      cdkBuilder.application(application.let(IApplication::unwrap))
+      cdkBuilder.application(application.let(IApplication.Companion::unwrap))
     }
 
     /**
@@ -130,7 +130,7 @@ public interface ConfigurationProps : ConfigurationOptions {
      * `IEnvironment.addDeployments` methods.
      */
     override fun deployTo(deployTo: List<IEnvironment>) {
-      cdkBuilder.deployTo(deployTo.map(IEnvironment::unwrap))
+      cdkBuilder.deployTo(deployTo.map(IEnvironment.Companion::unwrap))
     }
 
     /**
@@ -147,14 +147,14 @@ public interface ConfigurationProps : ConfigurationOptions {
      * @param deploymentKey The deployment key of the configuration.
      */
     override fun deploymentKey(deploymentKey: IKey) {
-      cdkBuilder.deploymentKey(deploymentKey.let(IKey::unwrap))
+      cdkBuilder.deploymentKey(deploymentKey.let(IKey.Companion::unwrap))
     }
 
     /**
      * @param deploymentStrategy The deployment strategy for the configuration.
      */
     override fun deploymentStrategy(deploymentStrategy: IDeploymentStrategy) {
-      cdkBuilder.deploymentStrategy(deploymentStrategy.let(IDeploymentStrategy::unwrap))
+      cdkBuilder.deploymentStrategy(deploymentStrategy.let(IDeploymentStrategy.Companion::unwrap))
     }
 
     /**
@@ -175,14 +175,14 @@ public interface ConfigurationProps : ConfigurationOptions {
      * @param type The type of configuration.
      */
     override fun type(type: ConfigurationType) {
-      cdkBuilder.type(type.let(ConfigurationType::unwrap))
+      cdkBuilder.type(type.let(ConfigurationType.Companion::unwrap))
     }
 
     /**
      * @param validators The validators for the configuration.
      */
     override fun validators(validators: List<IValidator>) {
-      cdkBuilder.validators(validators.map(IValidator::unwrap))
+      cdkBuilder.validators(validators.map(IValidator.Companion::unwrap))
     }
 
     /**

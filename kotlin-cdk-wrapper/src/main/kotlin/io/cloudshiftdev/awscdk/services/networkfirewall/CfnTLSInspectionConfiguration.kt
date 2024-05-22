@@ -93,8 +93,8 @@ public open class CfnTLSInspectionConfiguration(
     id: String,
     props: CfnTLSInspectionConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTLSInspectionConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.networkfirewall.CfnTLSInspectionConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTLSInspectionConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -143,7 +143,7 @@ public open class CfnTLSInspectionConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -155,7 +155,7 @@ public open class CfnTLSInspectionConfiguration(
    * The key:value pairs to associate with the resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -172,14 +172,14 @@ public open class CfnTLSInspectionConfiguration(
    * The object that defines a TLS inspection configuration.
    */
   public open fun tlsInspectionConfiguration(`value`: IResolvable) {
-    unwrap(this).setTlsInspectionConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTlsInspectionConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The object that defines a TLS inspection configuration.
    */
   public open fun tlsInspectionConfiguration(`value`: TLSInspectionConfigurationProperty) {
-    unwrap(this).setTlsInspectionConfiguration(`value`.let(TLSInspectionConfigurationProperty::unwrap))
+    unwrap(this).setTlsInspectionConfiguration(`value`.let(TLSInspectionConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -336,7 +336,7 @@ public open class CfnTLSInspectionConfiguration(
      * @param tags The key:value pairs to associate with the resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -366,7 +366,7 @@ public open class CfnTLSInspectionConfiguration(
      * @param tlsInspectionConfiguration The object that defines a TLS inspection configuration. 
      */
     override fun tlsInspectionConfiguration(tlsInspectionConfiguration: IResolvable) {
-      cdkBuilder.tlsInspectionConfiguration(tlsInspectionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.tlsInspectionConfiguration(tlsInspectionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -389,7 +389,7 @@ public open class CfnTLSInspectionConfiguration(
      */
     override
         fun tlsInspectionConfiguration(tlsInspectionConfiguration: TLSInspectionConfigurationProperty) {
-      cdkBuilder.tlsInspectionConfiguration(tlsInspectionConfiguration.let(TLSInspectionConfigurationProperty::unwrap))
+      cdkBuilder.tlsInspectionConfiguration(tlsInspectionConfiguration.let(TLSInspectionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1185,7 +1185,7 @@ public open class CfnTLSInspectionConfiguration(
        * .
        */
       override fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: IResolvable) {
-        cdkBuilder.checkCertificateRevocationStatus(checkCertificateRevocationStatus.let(IResolvable::unwrap))
+        cdkBuilder.checkCertificateRevocationStatus(checkCertificateRevocationStatus.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1199,7 +1199,7 @@ public open class CfnTLSInspectionConfiguration(
        */
       override
           fun checkCertificateRevocationStatus(checkCertificateRevocationStatus: CheckCertificateRevocationStatusProperty) {
-        cdkBuilder.checkCertificateRevocationStatus(checkCertificateRevocationStatus.let(CheckCertificateRevocationStatusProperty::unwrap))
+        cdkBuilder.checkCertificateRevocationStatus(checkCertificateRevocationStatus.let(CheckCertificateRevocationStatusProperty.Companion::unwrap))
       }
 
       /**
@@ -1222,7 +1222,7 @@ public open class CfnTLSInspectionConfiguration(
        * @param scopes A list of scopes.
        */
       override fun scopes(scopes: IResolvable) {
-        cdkBuilder.scopes(scopes.let(IResolvable::unwrap))
+        cdkBuilder.scopes(scopes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1242,7 +1242,7 @@ public open class CfnTLSInspectionConfiguration(
        * inspection.
        */
       override fun serverCertificates(serverCertificates: IResolvable) {
-        cdkBuilder.serverCertificates(serverCertificates.let(IResolvable::unwrap))
+        cdkBuilder.serverCertificates(serverCertificates.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1676,7 +1676,7 @@ public open class CfnTLSInspectionConfiguration(
        * such as `1990:1994` .
        */
       override fun destinationPorts(destinationPorts: IResolvable) {
-        cdkBuilder.destinationPorts(destinationPorts.let(IResolvable::unwrap))
+        cdkBuilder.destinationPorts(destinationPorts.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1709,7 +1709,7 @@ public open class CfnTLSInspectionConfiguration(
        * matches with any destination address.
        */
       override fun destinations(destinations: IResolvable) {
-        cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
+        cdkBuilder.destinations(destinations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1737,7 +1737,7 @@ public open class CfnTLSInspectionConfiguration(
        * Network Firewall currently supports only TCP.
        */
       override fun protocols(protocols: IResolvable) {
-        cdkBuilder.protocols(protocols.let(IResolvable::unwrap))
+        cdkBuilder.protocols(protocols.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1765,7 +1765,7 @@ public open class CfnTLSInspectionConfiguration(
        * such as `1990:1994` .
        */
       override fun sourcePorts(sourcePorts: IResolvable) {
-        cdkBuilder.sourcePorts(sourcePorts.let(IResolvable::unwrap))
+        cdkBuilder.sourcePorts(sourcePorts.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1797,7 +1797,7 @@ public open class CfnTLSInspectionConfiguration(
        * matches with any source address.
        */
       override fun sources(sources: IResolvable) {
-        cdkBuilder.sources(sources.let(IResolvable::unwrap))
+        cdkBuilder.sources(sources.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2001,7 +2001,7 @@ public open class CfnTLSInspectionConfiguration(
        * associated with the TLS configuration.
        */
       override fun serverCertificateConfigurations(serverCertificateConfigurations: IResolvable) {
-        cdkBuilder.serverCertificateConfigurations(serverCertificateConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.serverCertificateConfigurations(serverCertificateConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**

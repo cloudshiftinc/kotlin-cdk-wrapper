@@ -92,7 +92,7 @@ public interface CfnCodeDeployBlueGreenApplication {
      * @param ecsAttributes The detailed attributes of the deployed target. 
      */
     override fun ecsAttributes(ecsAttributes: CfnCodeDeployBlueGreenEcsAttributes) {
-      cdkBuilder.ecsAttributes(ecsAttributes.let(CfnCodeDeployBlueGreenEcsAttributes::unwrap))
+      cdkBuilder.ecsAttributes(ecsAttributes.let(CfnCodeDeployBlueGreenEcsAttributes.Companion::unwrap))
     }
 
     /**
@@ -108,7 +108,7 @@ public interface CfnCodeDeployBlueGreenApplication {
      * @param target The target that is being deployed. 
      */
     override fun target(target: CfnCodeDeployBlueGreenApplicationTarget) {
-      cdkBuilder.target(target.let(CfnCodeDeployBlueGreenApplicationTarget::unwrap))
+      cdkBuilder.target(target.let(CfnCodeDeployBlueGreenApplicationTarget.Companion::unwrap))
     }
 
     /**

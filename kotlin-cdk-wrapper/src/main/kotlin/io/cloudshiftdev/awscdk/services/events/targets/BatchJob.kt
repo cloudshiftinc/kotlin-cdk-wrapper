@@ -72,8 +72,8 @@ public open class BatchJob(
     jobDefinitionArn: String,
     jobDefinitionScope: CloudshiftdevConstructsIConstruct,
   ) : this(software.amazon.awscdk.services.events.targets.BatchJob(jobQueueArn,
-      jobQueueScope.let(CloudshiftdevConstructsIConstruct::unwrap), jobDefinitionArn,
-      jobDefinitionScope.let(CloudshiftdevConstructsIConstruct::unwrap))
+      jobQueueScope.let(CloudshiftdevConstructsIConstruct.Companion::unwrap), jobDefinitionArn,
+      jobDefinitionScope.let(CloudshiftdevConstructsIConstruct.Companion::unwrap))
   )
 
   public constructor(
@@ -83,9 +83,9 @@ public open class BatchJob(
     jobDefinitionScope: CloudshiftdevConstructsIConstruct,
     props: BatchJobProps,
   ) : this(software.amazon.awscdk.services.events.targets.BatchJob(jobQueueArn,
-      jobQueueScope.let(CloudshiftdevConstructsIConstruct::unwrap), jobDefinitionArn,
-      jobDefinitionScope.let(CloudshiftdevConstructsIConstruct::unwrap),
-      props.let(BatchJobProps::unwrap))
+      jobQueueScope.let(CloudshiftdevConstructsIConstruct.Companion::unwrap), jobDefinitionArn,
+      jobDefinitionScope.let(CloudshiftdevConstructsIConstruct.Companion::unwrap),
+      props.let(BatchJobProps.Companion::unwrap))
   )
 
   public constructor(
@@ -105,7 +105,7 @@ public open class BatchJob(
    * @param _id
    */
   public override fun bind(rule: IRule): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap)).let(RuleTargetConfig::wrap)
 
   /**
    * Returns a RuleTarget that can be used to trigger queue this batch job as a result from an
@@ -115,7 +115,7 @@ public open class BatchJob(
    * @param _id
    */
   public override fun bind(rule: IRule, id: String): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap), id).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap), id).let(RuleTargetConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.events.targets.BatchJob].
@@ -253,7 +253,7 @@ public open class BatchJob(
      * 
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -266,7 +266,7 @@ public open class BatchJob(
      * @param event The event to send to the Lambda. 
      */
     override fun event(event: RuleTargetInput) {
-      cdkBuilder.event(event.let(RuleTargetInput::unwrap))
+      cdkBuilder.event(event.let(RuleTargetInput.Companion::unwrap))
     }
 
     /**
@@ -292,7 +292,7 @@ public open class BatchJob(
      * processing. 
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**

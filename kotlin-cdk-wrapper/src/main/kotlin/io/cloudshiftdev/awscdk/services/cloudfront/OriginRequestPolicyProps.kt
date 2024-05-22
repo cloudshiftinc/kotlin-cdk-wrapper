@@ -125,7 +125,7 @@ public interface OriginRequestPolicyProps {
      * @param cookieBehavior The cookies from viewer requests to include in origin requests.
      */
     override fun cookieBehavior(cookieBehavior: OriginRequestCookieBehavior) {
-      cdkBuilder.cookieBehavior(cookieBehavior.let(OriginRequestCookieBehavior::unwrap))
+      cdkBuilder.cookieBehavior(cookieBehavior.let(OriginRequestCookieBehavior.Companion::unwrap))
     }
 
     /**
@@ -133,7 +133,7 @@ public interface OriginRequestPolicyProps {
      * These can include headers from viewer requests and additional headers added by CloudFront.
      */
     override fun headerBehavior(headerBehavior: OriginRequestHeaderBehavior) {
-      cdkBuilder.headerBehavior(headerBehavior.let(OriginRequestHeaderBehavior::unwrap))
+      cdkBuilder.headerBehavior(headerBehavior.let(OriginRequestHeaderBehavior.Companion::unwrap))
     }
 
     /**
@@ -149,7 +149,7 @@ public interface OriginRequestPolicyProps {
      * requests.
      */
     override fun queryStringBehavior(queryStringBehavior: OriginRequestQueryStringBehavior) {
-      cdkBuilder.queryStringBehavior(queryStringBehavior.let(OriginRequestQueryStringBehavior::unwrap))
+      cdkBuilder.queryStringBehavior(queryStringBehavior.let(OriginRequestQueryStringBehavior.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.OriginRequestPolicyProps =

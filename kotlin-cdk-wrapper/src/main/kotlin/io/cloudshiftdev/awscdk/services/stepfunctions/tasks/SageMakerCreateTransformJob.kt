@@ -60,8 +60,8 @@ public open class SageMakerCreateTransformJob(
     id: String,
     props: SageMakerCreateTransformJobProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTransformJob(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SageMakerCreateTransformJobProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateTransformJob(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SageMakerCreateTransformJobProps.Companion::unwrap))
   )
 
   public constructor(
@@ -419,7 +419,7 @@ public open class SageMakerCreateTransformJob(
      * request. 
      */
     override fun batchStrategy(batchStrategy: BatchStrategy) {
-      cdkBuilder.batchStrategy(batchStrategy.let(BatchStrategy::unwrap))
+      cdkBuilder.batchStrategy(batchStrategy.let(BatchStrategy.Companion::unwrap))
     }
 
     /**
@@ -445,7 +445,7 @@ public open class SageMakerCreateTransformJob(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -485,7 +485,7 @@ public open class SageMakerCreateTransformJob(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -499,7 +499,7 @@ public open class SageMakerCreateTransformJob(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -534,7 +534,7 @@ public open class SageMakerCreateTransformJob(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -559,7 +559,7 @@ public open class SageMakerCreateTransformJob(
      * @param maxPayload Maximum allowed size of the payload, in MB. 
      */
     override fun maxPayload(maxPayload: Size) {
-      cdkBuilder.maxPayload(maxPayload.let(Size::unwrap))
+      cdkBuilder.maxPayload(maxPayload.let(Size.Companion::unwrap))
     }
 
     /**
@@ -572,7 +572,7 @@ public open class SageMakerCreateTransformJob(
      * a transform job invocation. 
      */
     override fun modelClientOptions(modelClientOptions: ModelClientOptions) {
-      cdkBuilder.modelClientOptions(modelClientOptions.let(ModelClientOptions::unwrap))
+      cdkBuilder.modelClientOptions(modelClientOptions.let(ModelClientOptions.Companion::unwrap))
     }
 
     /**
@@ -653,7 +653,7 @@ public open class SageMakerCreateTransformJob(
      * @param role Role for the Transform Job. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -689,7 +689,7 @@ public open class SageMakerCreateTransformJob(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -702,7 +702,7 @@ public open class SageMakerCreateTransformJob(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -712,7 +712,7 @@ public open class SageMakerCreateTransformJob(
      * stored. 
      */
     override fun transformInput(transformInput: TransformInput) {
-      cdkBuilder.transformInput(transformInput.let(TransformInput::unwrap))
+      cdkBuilder.transformInput(transformInput.let(TransformInput.Companion::unwrap))
     }
 
     /**
@@ -742,7 +742,7 @@ public open class SageMakerCreateTransformJob(
      * the transform job. 
      */
     override fun transformOutput(transformOutput: TransformOutput) {
-      cdkBuilder.transformOutput(transformOutput.let(TransformOutput::unwrap))
+      cdkBuilder.transformOutput(transformOutput.let(TransformOutput.Companion::unwrap))
     }
 
     /**
@@ -764,7 +764,7 @@ public open class SageMakerCreateTransformJob(
      * @param transformResources ML compute instances for the transform job. 
      */
     override fun transformResources(transformResources: TransformResources) {
-      cdkBuilder.transformResources(transformResources.let(TransformResources::unwrap))
+      cdkBuilder.transformResources(transformResources.let(TransformResources.Companion::unwrap))
     }
 
     /**

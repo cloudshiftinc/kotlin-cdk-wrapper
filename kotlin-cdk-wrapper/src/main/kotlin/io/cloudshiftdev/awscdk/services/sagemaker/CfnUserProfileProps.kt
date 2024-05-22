@@ -294,7 +294,7 @@ public interface CfnUserProfileProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -319,14 +319,14 @@ public interface CfnUserProfileProps {
      * @param userSettings A collection of settings that apply to users of Amazon SageMaker Studio.
      */
     override fun userSettings(userSettings: IResolvable) {
-      cdkBuilder.userSettings(userSettings.let(IResolvable::unwrap))
+      cdkBuilder.userSettings(userSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param userSettings A collection of settings that apply to users of Amazon SageMaker Studio.
      */
     override fun userSettings(userSettings: CfnUserProfile.UserSettingsProperty) {
-      cdkBuilder.userSettings(userSettings.let(CfnUserProfile.UserSettingsProperty::unwrap))
+      cdkBuilder.userSettings(userSettings.let(CfnUserProfile.UserSettingsProperty.Companion::unwrap))
     }
 
     /**

@@ -1029,6 +1029,12 @@ public interface CfnDBClusterProps {
    * property for the KMS key to use for encryption. If you don't want the restored DB cluster to be
    * encrypted, then don't set this property or set it to `false` .
    *
+   *
+   * If you specify both the `StorageEncrypted` and `SnapshotIdentifier` properties without
+   * specifying the `KmsKeyId` property, then the restored DB cluster inherits the encryption settings
+   * from the DB snapshot that provide.
+   *
+   *
    * Valid for: Aurora DB clusters and Multi-AZ DB clusters
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-storageencrypted)
@@ -2155,6 +2161,12 @@ public interface CfnDBClusterProps {
      * property for the KMS key to use for encryption. If you don't want the restored DB cluster to be
      * encrypted, then don't set this property or set it to `false` .
      *
+     *
+     * If you specify both the `StorageEncrypted` and `SnapshotIdentifier` properties without
+     * specifying the `KmsKeyId` property, then the restored DB cluster inherits the encryption
+     * settings from the DB snapshot that provide.
+     *
+     *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
     public fun storageEncrypted(storageEncrypted: Boolean)
@@ -2175,6 +2187,12 @@ public interface CfnDBClusterProps {
      * use this property to specify that the restored DB cluster is encrypted. Specify the `KmsKeyId`
      * property for the KMS key to use for encryption. If you don't want the restored DB cluster to be
      * encrypted, then don't set this property or set it to `false` .
+     *
+     *
+     * If you specify both the `StorageEncrypted` and `SnapshotIdentifier` properties without
+     * specifying the `KmsKeyId` property, then the restored DB cluster inherits the encryption
+     * settings from the DB snapshot that provide.
+     *
      *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
@@ -2286,7 +2304,7 @@ public interface CfnDBClusterProps {
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
     override fun associatedRoles(associatedRoles: IResolvable) {
-      cdkBuilder.associatedRoles(associatedRoles.let(IResolvable::unwrap))
+      cdkBuilder.associatedRoles(associatedRoles.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2331,7 +2349,7 @@ public interface CfnDBClusterProps {
      * Valid for Cluster Type: Multi-AZ DB clusters only
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2413,7 +2431,7 @@ public interface CfnDBClusterProps {
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
     override fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable) {
-      cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot.let(IResolvable::unwrap))
+      cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2547,7 +2565,7 @@ public interface CfnDBClusterProps {
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
     override fun deletionProtection(deletionProtection: IResolvable) {
-      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable::unwrap))
+      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2650,7 +2668,7 @@ public interface CfnDBClusterProps {
      * Valid for Cluster Type: Aurora DB clusters only
      */
     override fun enableGlobalWriteForwarding(enableGlobalWriteForwarding: IResolvable) {
-      cdkBuilder.enableGlobalWriteForwarding(enableGlobalWriteForwarding.let(IResolvable::unwrap))
+      cdkBuilder.enableGlobalWriteForwarding(enableGlobalWriteForwarding.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2694,7 +2712,7 @@ public interface CfnDBClusterProps {
      * Valid for Cluster Type: Aurora DB clusters only
      */
     override fun enableHttpEndpoint(enableHttpEndpoint: IResolvable) {
-      cdkBuilder.enableHttpEndpoint(enableHttpEndpoint.let(IResolvable::unwrap))
+      cdkBuilder.enableHttpEndpoint(enableHttpEndpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2724,7 +2742,7 @@ public interface CfnDBClusterProps {
      * Valid for: Aurora DB clusters only
      */
     override fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: IResolvable) {
-      cdkBuilder.enableIamDatabaseAuthentication(enableIamDatabaseAuthentication.let(IResolvable::unwrap))
+      cdkBuilder.enableIamDatabaseAuthentication(enableIamDatabaseAuthentication.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2923,7 +2941,7 @@ public interface CfnDBClusterProps {
      * specified.
      */
     override fun manageMasterUserPassword(manageMasterUserPassword: IResolvable) {
-      cdkBuilder.manageMasterUserPassword(manageMasterUserPassword.let(IResolvable::unwrap))
+      cdkBuilder.manageMasterUserPassword(manageMasterUserPassword.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2951,7 +2969,7 @@ public interface CfnDBClusterProps {
      * in the *Amazon Aurora User Guide.*
      */
     override fun masterUserSecret(masterUserSecret: IResolvable) {
-      cdkBuilder.masterUserSecret(masterUserSecret.let(IResolvable::unwrap))
+      cdkBuilder.masterUserSecret(masterUserSecret.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2964,7 +2982,7 @@ public interface CfnDBClusterProps {
      * in the *Amazon Aurora User Guide.*
      */
     override fun masterUserSecret(masterUserSecret: CfnDBCluster.MasterUserSecretProperty) {
-      cdkBuilder.masterUserSecret(masterUserSecret.let(CfnDBCluster.MasterUserSecretProperty::unwrap))
+      cdkBuilder.masterUserSecret(masterUserSecret.let(CfnDBCluster.MasterUserSecretProperty.Companion::unwrap))
     }
 
     /**
@@ -3075,7 +3093,7 @@ public interface CfnDBClusterProps {
      * Valid for Cluster Type: Multi-AZ DB clusters only
      */
     override fun performanceInsightsEnabled(performanceInsightsEnabled: IResolvable) {
-      cdkBuilder.performanceInsightsEnabled(performanceInsightsEnabled.let(IResolvable::unwrap))
+      cdkBuilder.performanceInsightsEnabled(performanceInsightsEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3243,7 +3261,7 @@ public interface CfnDBClusterProps {
      * cluster is public.
      */
     override fun publiclyAccessible(publiclyAccessible: IResolvable) {
-      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
+      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3300,7 +3318,7 @@ public interface CfnDBClusterProps {
      * Valid for: Aurora Serverless v1 DB clusters only
      */
     override fun scalingConfiguration(scalingConfiguration: IResolvable) {
-      cdkBuilder.scalingConfiguration(scalingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.scalingConfiguration(scalingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3312,7 +3330,7 @@ public interface CfnDBClusterProps {
      */
     override
         fun scalingConfiguration(scalingConfiguration: CfnDBCluster.ScalingConfigurationProperty) {
-      cdkBuilder.scalingConfiguration(scalingConfiguration.let(CfnDBCluster.ScalingConfigurationProperty::unwrap))
+      cdkBuilder.scalingConfiguration(scalingConfiguration.let(CfnDBCluster.ScalingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -3337,7 +3355,7 @@ public interface CfnDBClusterProps {
      * Valid for: Aurora Serverless v2 DB clusters only
      */
     override fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: IResolvable) {
-      cdkBuilder.serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3350,7 +3368,7 @@ public interface CfnDBClusterProps {
      */
     override
         fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: CfnDBCluster.ServerlessV2ScalingConfigurationProperty) {
-      cdkBuilder.serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration.let(CfnDBCluster.ServerlessV2ScalingConfigurationProperty::unwrap))
+      cdkBuilder.serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration.let(CfnDBCluster.ServerlessV2ScalingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -3445,6 +3463,12 @@ public interface CfnDBClusterProps {
      * property for the KMS key to use for encryption. If you don't want the restored DB cluster to be
      * encrypted, then don't set this property or set it to `false` .
      *
+     *
+     * If you specify both the `StorageEncrypted` and `SnapshotIdentifier` properties without
+     * specifying the `KmsKeyId` property, then the restored DB cluster inherits the encryption
+     * settings from the DB snapshot that provide.
+     *
+     *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
     override fun storageEncrypted(storageEncrypted: Boolean) {
@@ -3468,10 +3492,16 @@ public interface CfnDBClusterProps {
      * property for the KMS key to use for encryption. If you don't want the restored DB cluster to be
      * encrypted, then don't set this property or set it to `false` .
      *
+     *
+     * If you specify both the `StorageEncrypted` and `SnapshotIdentifier` properties without
+     * specifying the `KmsKeyId` property, then the restored DB cluster inherits the encryption
+     * settings from the DB snapshot that provide.
+     *
+     *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
     override fun storageEncrypted(storageEncrypted: IResolvable) {
-      cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable::unwrap))
+      cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3514,7 +3544,7 @@ public interface CfnDBClusterProps {
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -3542,7 +3572,7 @@ public interface CfnDBClusterProps {
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
     override fun useLatestRestorableTime(useLatestRestorableTime: IResolvable) {
-      cdkBuilder.useLatestRestorableTime(useLatestRestorableTime.let(IResolvable::unwrap))
+      cdkBuilder.useLatestRestorableTime(useLatestRestorableTime.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4507,6 +4537,12 @@ public interface CfnDBClusterProps {
      * use this property to specify that the restored DB cluster is encrypted. Specify the `KmsKeyId`
      * property for the KMS key to use for encryption. If you don't want the restored DB cluster to be
      * encrypted, then don't set this property or set it to `false` .
+     *
+     *
+     * If you specify both the `StorageEncrypted` and `SnapshotIdentifier` properties without
+     * specifying the `KmsKeyId` property, then the restored DB cluster inherits the encryption
+     * settings from the DB snapshot that provide.
+     *
      *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      *

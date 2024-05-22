@@ -41,8 +41,8 @@ public open class ConfigurationSetEventDestination(
     id: String,
     props: ConfigurationSetEventDestinationProps,
   ) :
-      this(software.amazon.awscdk.services.ses.ConfigurationSetEventDestination(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ConfigurationSetEventDestinationProps::unwrap))
+      this(software.amazon.awscdk.services.ses.ConfigurationSetEventDestination(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ConfigurationSetEventDestinationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -130,7 +130,7 @@ public open class ConfigurationSetEventDestination(
      * @param configurationSet The configuration set that contains the event destination. 
      */
     override fun configurationSet(configurationSet: IConfigurationSet) {
-      cdkBuilder.configurationSet(configurationSet.let(IConfigurationSet::unwrap))
+      cdkBuilder.configurationSet(configurationSet.let(IConfigurationSet.Companion::unwrap))
     }
 
     /**
@@ -152,7 +152,7 @@ public open class ConfigurationSetEventDestination(
      * @param destination The event destination. 
      */
     override fun destination(destination: EventDestination) {
-      cdkBuilder.destination(destination.let(EventDestination::unwrap))
+      cdkBuilder.destination(destination.let(EventDestination.Companion::unwrap))
     }
 
     /**
@@ -174,7 +174,7 @@ public open class ConfigurationSetEventDestination(
      * @param events The type of email sending events to publish to the event destination. 
      */
     override fun events(events: List<EmailSendingEvent>) {
-      cdkBuilder.events(events.map(EmailSendingEvent::unwrap))
+      cdkBuilder.events(events.map(EmailSendingEvent.Companion::unwrap))
     }
 
     /**
@@ -196,7 +196,7 @@ public open class ConfigurationSetEventDestination(
       id: String,
       configurationSetEventDestinationId: String,
     ): IConfigurationSetEventDestination =
-        software.amazon.awscdk.services.ses.ConfigurationSetEventDestination.fromConfigurationSetEventDestinationId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ses.ConfigurationSetEventDestination.fromConfigurationSetEventDestinationId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, configurationSetEventDestinationId).let(IConfigurationSetEventDestination::wrap)
 
     public operator fun invoke(

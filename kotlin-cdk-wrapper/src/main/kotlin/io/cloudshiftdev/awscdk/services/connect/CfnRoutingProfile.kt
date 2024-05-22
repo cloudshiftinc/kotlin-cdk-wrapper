@@ -71,8 +71,8 @@ public open class CfnRoutingProfile(
     id: String,
     props: CfnRoutingProfileProps,
   ) :
-      this(software.amazon.awscdk.services.connect.CfnRoutingProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRoutingProfileProps::unwrap))
+      this(software.amazon.awscdk.services.connect.CfnRoutingProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRoutingProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -137,7 +137,7 @@ public open class CfnRoutingProfile(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -161,7 +161,7 @@ public open class CfnRoutingProfile(
    * The channels agents can handle in the Contact Control Panel (CCP) for this routing profile.
    */
   public open fun mediaConcurrencies(`value`: IResolvable) {
-    unwrap(this).setMediaConcurrencies(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMediaConcurrencies(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -198,7 +198,7 @@ public open class CfnRoutingProfile(
    * The inbound queues associated with the routing profile.
    */
   public open fun queueConfigs(`value`: IResolvable) {
-    unwrap(this).setQueueConfigs(`value`.let(IResolvable::unwrap))
+    unwrap(this).setQueueConfigs(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -222,7 +222,7 @@ public open class CfnRoutingProfile(
    * The tags used to organize, track, or control access for this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -416,7 +416,7 @@ public open class CfnRoutingProfile(
      * for this routing profile. 
      */
     override fun mediaConcurrencies(mediaConcurrencies: IResolvable) {
-      cdkBuilder.mediaConcurrencies(mediaConcurrencies.let(IResolvable::unwrap))
+      cdkBuilder.mediaConcurrencies(mediaConcurrencies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -459,7 +459,7 @@ public open class CfnRoutingProfile(
      * @param queueConfigs The inbound queues associated with the routing profile. 
      */
     override fun queueConfigs(queueConfigs: IResolvable) {
-      cdkBuilder.queueConfigs(queueConfigs.let(IResolvable::unwrap))
+      cdkBuilder.queueConfigs(queueConfigs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -493,7 +493,7 @@ public open class CfnRoutingProfile(
      * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -751,7 +751,7 @@ public open class CfnRoutingProfile(
        * when they are currently working with a contact from a Voice channel.
        */
       override fun crossChannelBehavior(crossChannelBehavior: IResolvable) {
-        cdkBuilder.crossChannelBehavior(crossChannelBehavior.let(IResolvable::unwrap))
+        cdkBuilder.crossChannelBehavior(crossChannelBehavior.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -761,7 +761,7 @@ public open class CfnRoutingProfile(
        * when they are currently working with a contact from a Voice channel.
        */
       override fun crossChannelBehavior(crossChannelBehavior: CrossChannelBehaviorProperty) {
-        cdkBuilder.crossChannelBehavior(crossChannelBehavior.let(CrossChannelBehaviorProperty::unwrap))
+        cdkBuilder.crossChannelBehavior(crossChannelBehavior.let(CrossChannelBehaviorProperty.Companion::unwrap))
       }
 
       /**
@@ -959,14 +959,14 @@ public open class CfnRoutingProfile(
        * @param queueReference Contains information about a queue resource. 
        */
       override fun queueReference(queueReference: IResolvable) {
-        cdkBuilder.queueReference(queueReference.let(IResolvable::unwrap))
+        cdkBuilder.queueReference(queueReference.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param queueReference Contains information about a queue resource. 
        */
       override fun queueReference(queueReference: RoutingProfileQueueReferenceProperty) {
-        cdkBuilder.queueReference(queueReference.let(RoutingProfileQueueReferenceProperty::unwrap))
+        cdkBuilder.queueReference(queueReference.let(RoutingProfileQueueReferenceProperty.Companion::unwrap))
       }
 
       /**

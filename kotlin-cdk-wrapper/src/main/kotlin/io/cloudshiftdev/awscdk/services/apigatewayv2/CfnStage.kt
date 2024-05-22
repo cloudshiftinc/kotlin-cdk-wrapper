@@ -75,8 +75,8 @@ public open class CfnStage(
     id: String,
     props: CfnStageProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.CfnStage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStageProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.CfnStage(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStageProps.Companion::unwrap))
   )
 
   public constructor(
@@ -95,14 +95,14 @@ public open class CfnStage(
    * Settings for logging access in this stage.
    */
   public open fun accessLogSettings(`value`: IResolvable) {
-    unwrap(this).setAccessLogSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccessLogSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Settings for logging access in this stage.
    */
   public open fun accessLogSettings(`value`: AccessLogSettingsProperty) {
-    unwrap(this).setAccessLogSettings(`value`.let(AccessLogSettingsProperty::unwrap))
+    unwrap(this).setAccessLogSettings(`value`.let(AccessLogSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -158,7 +158,7 @@ public open class CfnStage(
    * Specifies whether updates to an API automatically trigger a new deployment.
    */
   public open fun autoDeploy(`value`: IResolvable) {
-    unwrap(this).setAutoDeploy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoDeploy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -182,14 +182,14 @@ public open class CfnStage(
    * The default route settings for the stage.
    */
   public open fun defaultRouteSettings(`value`: IResolvable) {
-    unwrap(this).setDefaultRouteSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefaultRouteSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The default route settings for the stage.
    */
   public open fun defaultRouteSettings(`value`: RouteSettingsProperty) {
-    unwrap(this).setDefaultRouteSettings(`value`.let(RouteSettingsProperty::unwrap))
+    unwrap(this).setDefaultRouteSettings(`value`.let(RouteSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -230,7 +230,7 @@ public open class CfnStage(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -464,7 +464,7 @@ public open class CfnStage(
      * @param accessLogSettings Settings for logging access in this stage. 
      */
     override fun accessLogSettings(accessLogSettings: IResolvable) {
-      cdkBuilder.accessLogSettings(accessLogSettings.let(IResolvable::unwrap))
+      cdkBuilder.accessLogSettings(accessLogSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -474,7 +474,7 @@ public open class CfnStage(
      * @param accessLogSettings Settings for logging access in this stage. 
      */
     override fun accessLogSettings(accessLogSettings: AccessLogSettingsProperty) {
-      cdkBuilder.accessLogSettings(accessLogSettings.let(AccessLogSettingsProperty::unwrap))
+      cdkBuilder.accessLogSettings(accessLogSettings.let(AccessLogSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -531,7 +531,7 @@ public open class CfnStage(
      * 
      */
     override fun autoDeploy(autoDeploy: IResolvable) {
-      cdkBuilder.autoDeploy(autoDeploy.let(IResolvable::unwrap))
+      cdkBuilder.autoDeploy(autoDeploy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -553,7 +553,7 @@ public open class CfnStage(
      * @param defaultRouteSettings The default route settings for the stage. 
      */
     override fun defaultRouteSettings(defaultRouteSettings: IResolvable) {
-      cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(IResolvable::unwrap))
+      cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -563,7 +563,7 @@ public open class CfnStage(
      * @param defaultRouteSettings The default route settings for the stage. 
      */
     override fun defaultRouteSettings(defaultRouteSettings: RouteSettingsProperty) {
-      cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(RouteSettingsProperty::unwrap))
+      cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(RouteSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -932,7 +932,7 @@ public open class CfnStage(
        * WebSocket APIs.
        */
       override fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
-        cdkBuilder.dataTraceEnabled(dataTraceEnabled.let(IResolvable::unwrap))
+        cdkBuilder.dataTraceEnabled(dataTraceEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -946,7 +946,7 @@ public open class CfnStage(
        * @param detailedMetricsEnabled Specifies whether detailed metrics are enabled.
        */
       override fun detailedMetricsEnabled(detailedMetricsEnabled: IResolvable) {
-        cdkBuilder.detailedMetricsEnabled(detailedMetricsEnabled.let(IResolvable::unwrap))
+        cdkBuilder.detailedMetricsEnabled(detailedMetricsEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**

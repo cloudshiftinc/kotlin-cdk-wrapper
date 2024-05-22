@@ -40,8 +40,9 @@ public open class CfnMacro(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
     props: CfnMacroProps,
-  ) : this(software.amazon.awscdk.CfnMacro(scope.let(CloudshiftdevConstructsConstruct::unwrap), id,
-      props.let(CfnMacroProps::unwrap))
+  ) :
+      this(software.amazon.awscdk.CfnMacro(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMacroProps.Companion::unwrap))
   )
 
   public constructor(
@@ -88,7 +89,7 @@ public open class CfnMacro(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

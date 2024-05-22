@@ -148,7 +148,7 @@ public interface CfnTestGridProjectProps {
      * in the *guide* .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -163,14 +163,14 @@ public interface CfnTestGridProjectProps {
      * @param vpcConfig The VPC security groups and subnets that are attached to a project.
      */
     override fun vpcConfig(vpcConfig: IResolvable) {
-      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param vpcConfig The VPC security groups and subnets that are attached to a project.
      */
     override fun vpcConfig(vpcConfig: CfnTestGridProject.VpcConfigProperty) {
-      cdkBuilder.vpcConfig(vpcConfig.let(CfnTestGridProject.VpcConfigProperty::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(CfnTestGridProject.VpcConfigProperty.Companion::unwrap))
     }
 
     /**

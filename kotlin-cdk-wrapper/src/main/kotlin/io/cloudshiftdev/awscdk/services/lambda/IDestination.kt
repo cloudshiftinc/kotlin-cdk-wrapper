@@ -60,8 +60,8 @@ public interface IDestination {
      * @param options
      */
     override fun bind(scope: Construct, fn: IFunction): DestinationConfig =
-        unwrap(this).bind(scope.let(Construct::unwrap),
-        fn.let(IFunction::unwrap)).let(DestinationConfig::wrap)
+        unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+        fn.let(IFunction.Companion::unwrap)).let(DestinationConfig::wrap)
 
     /**
      * Binds this destination to the Lambda function.
@@ -74,9 +74,9 @@ public interface IDestination {
       scope: Construct,
       fn: IFunction,
       options: DestinationOptions,
-    ): DestinationConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-        fn.let(IFunction::unwrap),
-        options.let(DestinationOptions::unwrap)).let(DestinationConfig::wrap)
+    ): DestinationConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+        fn.let(IFunction.Companion::unwrap),
+        options.let(DestinationOptions.Companion::unwrap)).let(DestinationConfig::wrap)
 
     /**
      * Binds this destination to the Lambda function.

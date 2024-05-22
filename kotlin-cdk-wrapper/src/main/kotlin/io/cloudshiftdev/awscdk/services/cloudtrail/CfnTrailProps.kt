@@ -608,7 +608,7 @@ public interface CfnTrailProps {
      * in the *AWS CloudTrail User Guide* .
      */
     override fun advancedEventSelectors(advancedEventSelectors: IResolvable) {
-      cdkBuilder.advancedEventSelectors(advancedEventSelectors.let(IResolvable::unwrap))
+      cdkBuilder.advancedEventSelectors(advancedEventSelectors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -687,7 +687,7 @@ public interface CfnTrailProps {
      * a trail.
      */
     override fun enableLogFileValidation(enableLogFileValidation: IResolvable) {
-      cdkBuilder.enableLogFileValidation(enableLogFileValidation.let(IResolvable::unwrap))
+      cdkBuilder.enableLogFileValidation(enableLogFileValidation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -704,7 +704,7 @@ public interface CfnTrailProps {
      * You cannot apply both event selectors and advanced event selectors to a trail.
      */
     override fun eventSelectors(eventSelectors: IResolvable) {
-      cdkBuilder.eventSelectors(eventSelectors.let(IResolvable::unwrap))
+      cdkBuilder.eventSelectors(eventSelectors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -753,7 +753,7 @@ public interface CfnTrailProps {
      * global services such as IAM to the log files.
      */
     override fun includeGlobalServiceEvents(includeGlobalServiceEvents: IResolvable) {
-      cdkBuilder.includeGlobalServiceEvents(includeGlobalServiceEvents.let(IResolvable::unwrap))
+      cdkBuilder.includeGlobalServiceEvents(includeGlobalServiceEvents.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -768,7 +768,7 @@ public interface CfnTrailProps {
      * codes. The error is shown if the API call is unsuccessful.
      */
     override fun insightSelectors(insightSelectors: IResolvable) {
-      cdkBuilder.insightSelectors(insightSelectors.let(IResolvable::unwrap))
+      cdkBuilder.insightSelectors(insightSelectors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -811,7 +811,7 @@ public interface CfnTrailProps {
      * @param isLogging Whether the CloudTrail trail is currently logging AWS API calls. 
      */
     override fun isLogging(isLogging: IResolvable) {
-      cdkBuilder.isLogging(isLogging.let(IResolvable::unwrap))
+      cdkBuilder.isLogging(isLogging.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -837,7 +837,7 @@ public interface CfnTrailProps {
      * practice, consider using trails that log events in all Regions.
      */
     override fun isMultiRegionTrail(isMultiRegionTrail: IResolvable) {
-      cdkBuilder.isMultiRegionTrail(isMultiRegionTrail.let(IResolvable::unwrap))
+      cdkBuilder.isMultiRegionTrail(isMultiRegionTrail.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -873,7 +873,7 @@ public interface CfnTrailProps {
      * non-organization trail, or convert a non-organization trail to an organization trail.
      */
     override fun isOrganizationTrail(isOrganizationTrail: IResolvable) {
-      cdkBuilder.isOrganizationTrail(isOrganizationTrail.let(IResolvable::unwrap))
+      cdkBuilder.isOrganizationTrail(isOrganizationTrail.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -932,7 +932,7 @@ public interface CfnTrailProps {
      * @param tags A custom set of tags (key-value pairs) for this trail.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

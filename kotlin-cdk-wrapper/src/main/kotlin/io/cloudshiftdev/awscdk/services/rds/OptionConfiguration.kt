@@ -162,7 +162,7 @@ public interface OptionConfiguration {
      * If no groups are provided, a default one will be created.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -193,7 +193,7 @@ public interface OptionConfiguration {
      * is specified then `port` must also be specified.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.OptionConfiguration = cdkBuilder.build()

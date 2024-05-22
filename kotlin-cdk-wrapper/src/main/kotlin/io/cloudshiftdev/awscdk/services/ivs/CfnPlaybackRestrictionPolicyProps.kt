@@ -205,7 +205,7 @@ public interface CfnPlaybackRestrictionPolicyProps {
      * site.
      */
     override fun enableStrictOriginEnforcement(enableStrictOriginEnforcement: IResolvable) {
-      cdkBuilder.enableStrictOriginEnforcement(enableStrictOriginEnforcement.let(IResolvable::unwrap))
+      cdkBuilder.enableStrictOriginEnforcement(enableStrictOriginEnforcement.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -222,7 +222,7 @@ public interface CfnPlaybackRestrictionPolicyProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -68,8 +68,8 @@ public open class CfnVPCEndpoint(
     id: String,
     props: CfnVPCEndpointProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnVPCEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVPCEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnVPCEndpoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVPCEndpointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -125,7 +125,7 @@ public open class CfnVPCEndpoint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -156,7 +156,7 @@ public open class CfnVPCEndpoint(
    * Indicate whether to associate a private hosted zone with the specified VPC.
    */
   public open fun privateDnsEnabled(`value`: IResolvable) {
-    unwrap(this).setPrivateDnsEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPrivateDnsEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -476,7 +476,7 @@ public open class CfnVPCEndpoint(
      * specified VPC. 
      */
     override fun privateDnsEnabled(privateDnsEnabled: IResolvable) {
-      cdkBuilder.privateDnsEnabled(privateDnsEnabled.let(IResolvable::unwrap))
+      cdkBuilder.privateDnsEnabled(privateDnsEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**

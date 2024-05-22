@@ -171,7 +171,7 @@ public interface CfnDestinationProps {
      * Tags can have a minimum of 0 and a maximum of 50 items.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

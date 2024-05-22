@@ -60,8 +60,8 @@ public open class CfnDataCellsFilter(
     id: String,
     props: CfnDataCellsFilterProps,
   ) :
-      this(software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDataCellsFilterProps::unwrap))
+      this(software.amazon.awscdk.services.lakeformation.CfnDataCellsFilter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDataCellsFilterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -97,14 +97,14 @@ public open class CfnDataCellsFilter(
    * A wildcard with exclusions.
    */
   public open fun columnWildcard(`value`: IResolvable) {
-    unwrap(this).setColumnWildcard(`value`.let(IResolvable::unwrap))
+    unwrap(this).setColumnWildcard(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A wildcard with exclusions.
    */
   public open fun columnWildcard(`value`: ColumnWildcardProperty) {
-    unwrap(this).setColumnWildcard(`value`.let(ColumnWildcardProperty::unwrap))
+    unwrap(this).setColumnWildcard(`value`.let(ColumnWildcardProperty.Companion::unwrap))
   }
 
   /**
@@ -137,7 +137,7 @@ public open class CfnDataCellsFilter(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -165,14 +165,14 @@ public open class CfnDataCellsFilter(
    * A PartiQL predicate.
    */
   public open fun rowFilter(`value`: IResolvable) {
-    unwrap(this).setRowFilter(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRowFilter(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A PartiQL predicate.
    */
   public open fun rowFilter(`value`: RowFilterProperty) {
-    unwrap(this).setRowFilter(`value`.let(RowFilterProperty::unwrap))
+    unwrap(this).setRowFilter(`value`.let(RowFilterProperty.Companion::unwrap))
   }
 
   /**
@@ -400,7 +400,7 @@ public open class CfnDataCellsFilter(
      * @param columnWildcard A wildcard with exclusions. 
      */
     override fun columnWildcard(columnWildcard: IResolvable) {
-      cdkBuilder.columnWildcard(columnWildcard.let(IResolvable::unwrap))
+      cdkBuilder.columnWildcard(columnWildcard.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -412,7 +412,7 @@ public open class CfnDataCellsFilter(
      * @param columnWildcard A wildcard with exclusions. 
      */
     override fun columnWildcard(columnWildcard: ColumnWildcardProperty) {
-      cdkBuilder.columnWildcard(columnWildcard.let(ColumnWildcardProperty::unwrap))
+      cdkBuilder.columnWildcard(columnWildcard.let(ColumnWildcardProperty.Companion::unwrap))
     }
 
     /**
@@ -469,7 +469,7 @@ public open class CfnDataCellsFilter(
      * @param rowFilter A PartiQL predicate. 
      */
     override fun rowFilter(rowFilter: IResolvable) {
-      cdkBuilder.rowFilter(rowFilter.let(IResolvable::unwrap))
+      cdkBuilder.rowFilter(rowFilter.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -479,7 +479,7 @@ public open class CfnDataCellsFilter(
      * @param rowFilter A PartiQL predicate. 
      */
     override fun rowFilter(rowFilter: RowFilterProperty) {
-      cdkBuilder.rowFilter(rowFilter.let(RowFilterProperty::unwrap))
+      cdkBuilder.rowFilter(rowFilter.let(RowFilterProperty.Companion::unwrap))
     }
 
     /**

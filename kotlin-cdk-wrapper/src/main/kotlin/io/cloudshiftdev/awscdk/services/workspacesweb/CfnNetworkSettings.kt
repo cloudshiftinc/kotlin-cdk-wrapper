@@ -57,8 +57,8 @@ public open class CfnNetworkSettings(
     id: String,
     props: CfnNetworkSettingsProps,
   ) :
-      this(software.amazon.awscdk.services.workspacesweb.CfnNetworkSettings(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnNetworkSettingsProps::unwrap))
+      this(software.amazon.awscdk.services.workspacesweb.CfnNetworkSettings(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnNetworkSettingsProps.Companion::unwrap))
   )
 
   public constructor(
@@ -91,7 +91,7 @@ public open class CfnNetworkSettings(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -138,7 +138,7 @@ public open class CfnNetworkSettings(
    * The tags to add to the network settings resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -315,7 +315,7 @@ public open class CfnNetworkSettings(
      * @param tags The tags to add to the network settings resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

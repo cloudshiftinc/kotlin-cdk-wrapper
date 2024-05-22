@@ -155,14 +155,14 @@ public interface CfnConfigurationProps {
      * @param latestRevision Latest revision of the configuration.
      */
     override fun latestRevision(latestRevision: IResolvable) {
-      cdkBuilder.latestRevision(latestRevision.let(IResolvable::unwrap))
+      cdkBuilder.latestRevision(latestRevision.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param latestRevision Latest revision of the configuration.
      */
     override fun latestRevision(latestRevision: CfnConfiguration.LatestRevisionProperty) {
-      cdkBuilder.latestRevision(latestRevision.let(CfnConfiguration.LatestRevisionProperty::unwrap))
+      cdkBuilder.latestRevision(latestRevision.let(CfnConfiguration.LatestRevisionProperty.Companion::unwrap))
     }
 
     /**

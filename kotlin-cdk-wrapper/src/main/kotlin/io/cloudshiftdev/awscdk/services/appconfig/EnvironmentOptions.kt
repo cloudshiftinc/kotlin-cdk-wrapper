@@ -97,7 +97,7 @@ public interface EnvironmentOptions {
      * @param monitors The monitors for the environment.
      */
     override fun monitors(monitors: List<Monitor>) {
-      cdkBuilder.monitors(monitors.map(Monitor::unwrap))
+      cdkBuilder.monitors(monitors.map(Monitor.Companion::unwrap))
     }
 
     /**

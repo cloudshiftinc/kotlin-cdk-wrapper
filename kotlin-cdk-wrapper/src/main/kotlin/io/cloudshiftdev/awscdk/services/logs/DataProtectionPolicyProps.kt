@@ -178,7 +178,7 @@ public interface DataProtectionPolicyProps {
      * https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CWL-custom-data-identifiers.html#custom-data-identifiers-constraints
      */
     override fun identifiers(identifiers: List<DataIdentifier>) {
-      cdkBuilder.identifiers(identifiers.map(DataIdentifier::unwrap))
+      cdkBuilder.identifiers(identifiers.map(DataIdentifier.Companion::unwrap))
     }
 
     /**
@@ -196,7 +196,7 @@ public interface DataProtectionPolicyProps {
      * The log group must already exist prior to creating the data protection policy.
      */
     override fun logGroupAuditDestination(logGroupAuditDestination: ILogGroup) {
-      cdkBuilder.logGroupAuditDestination(logGroupAuditDestination.let(ILogGroup::unwrap))
+      cdkBuilder.logGroupAuditDestination(logGroupAuditDestination.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -211,7 +211,7 @@ public interface DataProtectionPolicyProps {
      * The bucket must already exist.
      */
     override fun s3BucketAuditDestination(s3BucketAuditDestination: IBucket) {
-      cdkBuilder.s3BucketAuditDestination(s3BucketAuditDestination.let(IBucket::unwrap))
+      cdkBuilder.s3BucketAuditDestination(s3BucketAuditDestination.let(IBucket.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.logs.DataProtectionPolicyProps =

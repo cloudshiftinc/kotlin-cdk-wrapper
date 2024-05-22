@@ -327,7 +327,7 @@ public interface CfnInstanceGroupConfigProps {
      * *Amazon EMR Management Guide* .
      */
     override fun autoScalingPolicy(autoScalingPolicy: IResolvable) {
-      cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(IResolvable::unwrap))
+      cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -340,7 +340,7 @@ public interface CfnInstanceGroupConfigProps {
      */
     override
         fun autoScalingPolicy(autoScalingPolicy: CfnInstanceGroupConfig.AutoScalingPolicyProperty) {
-      cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(CfnInstanceGroupConfig.AutoScalingPolicyProperty::unwrap))
+      cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(CfnInstanceGroupConfig.AutoScalingPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -373,7 +373,7 @@ public interface CfnInstanceGroupConfigProps {
      * a separate configuration for each instance group (master, core, and task).
      */
     override fun configurations(configurations: IResolvable) {
-      cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
+      cdkBuilder.configurations(configurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -405,7 +405,7 @@ public interface CfnInstanceGroupConfigProps {
      * cluster instances.
      */
     override fun ebsConfiguration(ebsConfiguration: IResolvable) {
-      cdkBuilder.ebsConfiguration(ebsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.ebsConfiguration(ebsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -414,7 +414,7 @@ public interface CfnInstanceGroupConfigProps {
      */
     override
         fun ebsConfiguration(ebsConfiguration: CfnInstanceGroupConfig.EbsConfigurationProperty) {
-      cdkBuilder.ebsConfiguration(ebsConfiguration.let(CfnInstanceGroupConfig.EbsConfigurationProperty::unwrap))
+      cdkBuilder.ebsConfiguration(ebsConfiguration.let(CfnInstanceGroupConfig.EbsConfigurationProperty.Companion::unwrap))
     }
 
     /**

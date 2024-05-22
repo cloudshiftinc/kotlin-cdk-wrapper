@@ -62,7 +62,7 @@ public open class ArtifactPath(
   cdkObject: software.amazon.awscdk.services.codepipeline.ArtifactPath,
 ) : CdkObject(cdkObject) {
   public constructor(artifact: Artifact, fileName: String) :
-      this(software.amazon.awscdk.services.codepipeline.ArtifactPath(artifact.let(Artifact::unwrap),
+      this(software.amazon.awscdk.services.codepipeline.ArtifactPath(artifact.let(Artifact.Companion::unwrap),
       fileName)
   )
 

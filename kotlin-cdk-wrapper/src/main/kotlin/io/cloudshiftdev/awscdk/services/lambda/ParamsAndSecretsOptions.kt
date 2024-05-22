@@ -256,7 +256,7 @@ public interface ParamsAndSecretsOptions {
      * Note: Set to debug to see the cache configuration.
      */
     override fun logLevel(logLevel: ParamsAndSecretsLogLevel) {
-      cdkBuilder.logLevel(logLevel.let(ParamsAndSecretsLogLevel::unwrap))
+      cdkBuilder.logLevel(logLevel.let(ParamsAndSecretsLogLevel.Companion::unwrap))
     }
 
     /**
@@ -278,7 +278,7 @@ public interface ParamsAndSecretsOptions {
      * timeout.
      */
     override fun parameterStoreTimeout(parameterStoreTimeout: Duration) {
-      cdkBuilder.parameterStoreTimeout(parameterStoreTimeout.let(Duration::unwrap))
+      cdkBuilder.parameterStoreTimeout(parameterStoreTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -289,7 +289,7 @@ public interface ParamsAndSecretsOptions {
      * Note: This variable is ignored if cacheSize is 0.
      */
     override fun parameterStoreTtl(parameterStoreTtl: Duration) {
-      cdkBuilder.parameterStoreTtl(parameterStoreTtl.let(Duration::unwrap))
+      cdkBuilder.parameterStoreTtl(parameterStoreTtl.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -298,7 +298,7 @@ public interface ParamsAndSecretsOptions {
      * no timeout.
      */
     override fun secretsManagerTimeout(secretsManagerTimeout: Duration) {
-      cdkBuilder.secretsManagerTimeout(secretsManagerTimeout.let(Duration::unwrap))
+      cdkBuilder.secretsManagerTimeout(secretsManagerTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -309,7 +309,7 @@ public interface ParamsAndSecretsOptions {
      * Note: This variable is ignored if cacheSize is 0.
      */
     override fun secretsManagerTtl(secretsManagerTtl: Duration) {
-      cdkBuilder.secretsManagerTtl(secretsManagerTtl.let(Duration::unwrap))
+      cdkBuilder.secretsManagerTtl(secretsManagerTtl.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lambda.ParamsAndSecretsOptions =

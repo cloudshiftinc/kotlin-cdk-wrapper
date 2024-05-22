@@ -106,7 +106,7 @@ public interface AliasProps {
      * @param removalPolicy Policy to apply when the alias is removed from this stack.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -116,7 +116,7 @@ public interface AliasProps {
      * specify another alias.
      */
     override fun targetKey(targetKey: IKey) {
-      cdkBuilder.targetKey(targetKey.let(IKey::unwrap))
+      cdkBuilder.targetKey(targetKey.let(IKey.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.kms.AliasProps = cdkBuilder.build()

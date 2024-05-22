@@ -34,7 +34,7 @@ public open class GaugeWidget(
   cdkObject: software.amazon.awscdk.services.cloudwatch.GaugeWidget,
 ) : ConcreteWidget(cdkObject) {
   public constructor(props: GaugeWidgetProps) :
-      this(software.amazon.awscdk.services.cloudwatch.GaugeWidget(props.let(GaugeWidgetProps::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.GaugeWidget(props.let(GaugeWidgetProps.Companion::unwrap))
   )
 
   public constructor(props: GaugeWidgetProps.Builder.() -> Unit) : this(GaugeWidgetProps(props)
@@ -46,7 +46,7 @@ public open class GaugeWidget(
    * @param metric the metric to add. 
    */
   public open fun addMetric(metric: IMetric) {
-    unwrap(this).addMetric(metric.let(IMetric::unwrap))
+    unwrap(this).addMetric(metric.let(IMetric.Companion::unwrap))
   }
 
   /**
@@ -252,7 +252,7 @@ public open class GaugeWidget(
      * @param annotations Annotations for the left Y axis. 
      */
     override fun annotations(annotations: List<HorizontalAnnotation>) {
-      cdkBuilder.annotations(annotations.map(HorizontalAnnotation::unwrap))
+      cdkBuilder.annotations(annotations.map(HorizontalAnnotation.Companion::unwrap))
     }
 
     /**
@@ -300,7 +300,7 @@ public open class GaugeWidget(
      * @param leftYAxis Left Y axis. 
      */
     override fun leftYAxis(leftYAxis: YAxisProps) {
-      cdkBuilder.leftYAxis(leftYAxis.let(YAxisProps::unwrap))
+      cdkBuilder.leftYAxis(leftYAxis.let(YAxisProps.Companion::unwrap))
     }
 
     /**
@@ -323,7 +323,7 @@ public open class GaugeWidget(
      * @param legendPosition Position of the legend. 
      */
     override fun legendPosition(legendPosition: LegendPosition) {
-      cdkBuilder.legendPosition(legendPosition.let(LegendPosition::unwrap))
+      cdkBuilder.legendPosition(legendPosition.let(LegendPosition.Companion::unwrap))
     }
 
     /**
@@ -345,7 +345,7 @@ public open class GaugeWidget(
      * @param metrics Metrics to display on left Y axis. 
      */
     override fun metrics(metrics: List<IMetric>) {
-      cdkBuilder.metrics(metrics.map(IMetric::unwrap))
+      cdkBuilder.metrics(metrics.map(IMetric.Companion::unwrap))
     }
 
     /**
@@ -368,7 +368,7 @@ public open class GaugeWidget(
      * @param period The default period for all metrics in this widget. 
      */
     override fun period(period: Duration) {
-      cdkBuilder.period(period.let(Duration::unwrap))
+      cdkBuilder.period(period.let(Duration.Companion::unwrap))
     }
 
     /**

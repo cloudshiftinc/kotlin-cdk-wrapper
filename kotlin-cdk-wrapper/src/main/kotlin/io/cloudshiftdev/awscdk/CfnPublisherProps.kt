@@ -109,7 +109,7 @@ public interface CfnPublisherProps {
      * The default is `false` .
      */
     override fun acceptTermsAndConditions(acceptTermsAndConditions: IResolvable) {
-      cdkBuilder.acceptTermsAndConditions(acceptTermsAndConditions.let(IResolvable::unwrap))
+      cdkBuilder.acceptTermsAndConditions(acceptTermsAndConditions.let(IResolvable.Companion::unwrap))
     }
 
     /**

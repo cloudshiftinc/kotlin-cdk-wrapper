@@ -40,8 +40,8 @@ public open class WebSocketAuthorizer(
     id: String,
     props: WebSocketAuthorizerProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(WebSocketAuthorizerProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(WebSocketAuthorizerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -168,7 +168,7 @@ public open class WebSocketAuthorizer(
      * @param type The type of authorizer. 
      */
     override fun type(type: WebSocketAuthorizerType) {
-      cdkBuilder.type(type.let(WebSocketAuthorizerType::unwrap))
+      cdkBuilder.type(type.let(WebSocketAuthorizerType.Companion::unwrap))
     }
 
     /**
@@ -177,7 +177,7 @@ public open class WebSocketAuthorizer(
      * @param webSocketApi WebSocket Api to attach the authorizer to. 
      */
     override fun webSocketApi(webSocketApi: IWebSocketApi) {
-      cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi::unwrap))
+      cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizer =
@@ -190,8 +190,9 @@ public open class WebSocketAuthorizer(
       id: String,
       attrs: WebSocketAuthorizerAttributes,
     ): IWebSocketRouteAuthorizer =
-        software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizer.fromWebSocketAuthorizerAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(WebSocketAuthorizerAttributes::unwrap)).let(IWebSocketRouteAuthorizer::wrap)
+        software.amazon.awscdk.services.apigatewayv2.WebSocketAuthorizer.fromWebSocketAuthorizerAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        attrs.let(WebSocketAuthorizerAttributes.Companion::unwrap)).let(IWebSocketRouteAuthorizer::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c1ef7641b7e24d5299874ba34280a6013ee58585e0c382e2bd0a1c5bd8550955")

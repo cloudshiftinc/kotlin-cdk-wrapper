@@ -59,8 +59,8 @@ public open class CfnApplication(
     id: String,
     props: CfnApplicationProps,
   ) :
-      this(software.amazon.awscdk.services.appintegrations.CfnApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApplicationProps::unwrap))
+      this(software.amazon.awscdk.services.appintegrations.CfnApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApplicationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -79,14 +79,14 @@ public open class CfnApplication(
    * The configuration for where the application should be loaded from.
    */
   public open fun applicationSourceConfig(`value`: IResolvable) {
-    unwrap(this).setApplicationSourceConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setApplicationSourceConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration for where the application should be loaded from.
    */
   public open fun applicationSourceConfig(`value`: ApplicationSourceConfigProperty) {
-    unwrap(this).setApplicationSourceConfig(`value`.let(ApplicationSourceConfigProperty::unwrap))
+    unwrap(this).setApplicationSourceConfig(`value`.let(ApplicationSourceConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -132,7 +132,7 @@ public open class CfnApplication(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -185,7 +185,7 @@ public open class CfnApplication(
    * The tags used to organize, track, or control access for this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -306,7 +306,7 @@ public open class CfnApplication(
      * from. 
      */
     override fun applicationSourceConfig(applicationSourceConfig: IResolvable) {
-      cdkBuilder.applicationSourceConfig(applicationSourceConfig.let(IResolvable::unwrap))
+      cdkBuilder.applicationSourceConfig(applicationSourceConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -317,7 +317,7 @@ public open class CfnApplication(
      * from. 
      */
     override fun applicationSourceConfig(applicationSourceConfig: ApplicationSourceConfigProperty) {
-      cdkBuilder.applicationSourceConfig(applicationSourceConfig.let(ApplicationSourceConfigProperty::unwrap))
+      cdkBuilder.applicationSourceConfig(applicationSourceConfig.let(ApplicationSourceConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -392,7 +392,7 @@ public open class CfnApplication(
      * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -492,14 +492,14 @@ public open class CfnApplication(
        * @param externalUrlConfig The external URL source for the application. 
        */
       override fun externalUrlConfig(externalUrlConfig: IResolvable) {
-        cdkBuilder.externalUrlConfig(externalUrlConfig.let(IResolvable::unwrap))
+        cdkBuilder.externalUrlConfig(externalUrlConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param externalUrlConfig The external URL source for the application. 
        */
       override fun externalUrlConfig(externalUrlConfig: ExternalUrlConfigProperty) {
-        cdkBuilder.externalUrlConfig(externalUrlConfig.let(ExternalUrlConfigProperty::unwrap))
+        cdkBuilder.externalUrlConfig(externalUrlConfig.let(ExternalUrlConfigProperty.Companion::unwrap))
       }
 
       /**

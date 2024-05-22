@@ -57,7 +57,7 @@ public open class CfnApiKey(
   cdkObject: software.amazon.awscdk.services.apigateway.CfnApiKey,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.apigateway.CfnApiKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.apigateway.CfnApiKey(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -66,8 +66,8 @@ public open class CfnApiKey(
     id: String,
     props: CfnApiKeyProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.CfnApiKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApiKeyProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.CfnApiKey(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApiKeyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -124,7 +124,7 @@ public open class CfnApiKey(
    * Specifies whether the ApiKey can be used by callers.
    */
   public open fun enabled(`value`: IResolvable) {
-    unwrap(this).setEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -146,7 +146,7 @@ public open class CfnApiKey(
    * API key value.
    */
   public open fun generateDistinctId(`value`: IResolvable) {
-    unwrap(this).setGenerateDistinctId(`value`.let(IResolvable::unwrap))
+    unwrap(this).setGenerateDistinctId(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -155,7 +155,7 @@ public open class CfnApiKey(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -179,7 +179,7 @@ public open class CfnApiKey(
    * DEPRECATED FOR USAGE PLANS - Specifies stages associated with the API key.
    */
   public open fun stageKeys(`value`: IResolvable) {
-    unwrap(this).setStageKeys(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStageKeys(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -209,7 +209,7 @@ public open class CfnApiKey(
    * The key-value map of strings.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -417,7 +417,7 @@ public open class CfnApiKey(
      * @param enabled Specifies whether the ApiKey can be used by callers. 
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -445,7 +445,7 @@ public open class CfnApiKey(
      * is distinct from the created API key value. 
      */
     override fun generateDistinctId(generateDistinctId: IResolvable) {
-      cdkBuilder.generateDistinctId(generateDistinctId.let(IResolvable::unwrap))
+      cdkBuilder.generateDistinctId(generateDistinctId.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -475,7 +475,7 @@ public open class CfnApiKey(
      * @param stageKeys DEPRECATED FOR USAGE PLANS - Specifies stages associated with the API key. 
      */
     override fun stageKeys(stageKeys: IResolvable) {
-      cdkBuilder.stageKeys(stageKeys.let(IResolvable::unwrap))
+      cdkBuilder.stageKeys(stageKeys.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -506,7 +506,7 @@ public open class CfnApiKey(
      * @param tags The key-value map of strings. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

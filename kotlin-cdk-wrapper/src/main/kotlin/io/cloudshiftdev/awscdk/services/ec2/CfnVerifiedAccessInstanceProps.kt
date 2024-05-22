@@ -209,14 +209,14 @@ public interface CfnVerifiedAccessInstanceProps {
      * (FIPS) is enabled on the instance.
      */
     override fun fipsEnabled(fipsEnabled: IResolvable) {
-      cdkBuilder.fipsEnabled(fipsEnabled.let(IResolvable::unwrap))
+      cdkBuilder.fipsEnabled(fipsEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param loggingConfigurations The logging configuration for the Verified Access instances.
      */
     override fun loggingConfigurations(loggingConfigurations: IResolvable) {
-      cdkBuilder.loggingConfigurations(loggingConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.loggingConfigurations(loggingConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -224,7 +224,7 @@ public interface CfnVerifiedAccessInstanceProps {
      */
     override
         fun loggingConfigurations(loggingConfigurations: CfnVerifiedAccessInstance.VerifiedAccessLogsProperty) {
-      cdkBuilder.loggingConfigurations(loggingConfigurations.let(CfnVerifiedAccessInstance.VerifiedAccessLogsProperty::unwrap))
+      cdkBuilder.loggingConfigurations(loggingConfigurations.let(CfnVerifiedAccessInstance.VerifiedAccessLogsProperty.Companion::unwrap))
     }
 
     /**
@@ -241,7 +241,7 @@ public interface CfnVerifiedAccessInstanceProps {
      * @param tags The tags.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -266,7 +266,7 @@ public interface CfnVerifiedAccessInstanceProps {
      * @param verifiedAccessTrustProviders The IDs of the AWS Verified Access trust providers.
      */
     override fun verifiedAccessTrustProviders(verifiedAccessTrustProviders: IResolvable) {
-      cdkBuilder.verifiedAccessTrustProviders(verifiedAccessTrustProviders.let(IResolvable::unwrap))
+      cdkBuilder.verifiedAccessTrustProviders(verifiedAccessTrustProviders.let(IResolvable.Companion::unwrap))
     }
 
     /**

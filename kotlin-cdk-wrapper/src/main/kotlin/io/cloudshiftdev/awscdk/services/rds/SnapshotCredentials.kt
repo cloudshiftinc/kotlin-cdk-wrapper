@@ -115,7 +115,7 @@ public abstract class SnapshotCredentials(
     public fun fromGeneratedPassword(username: String,
         options: SnapshotCredentialsFromGeneratedPasswordOptions): SnapshotCredentials =
         software.amazon.awscdk.services.rds.SnapshotCredentials.fromGeneratedPassword(username,
-        options.let(SnapshotCredentialsFromGeneratedPasswordOptions::unwrap)).let(SnapshotCredentials::wrap)
+        options.let(SnapshotCredentialsFromGeneratedPasswordOptions.Companion::unwrap)).let(SnapshotCredentials::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3b437dfc7de68bde863f8913a8f7257fa4f3365c7319431248f9f54c1c2072b1")
@@ -130,7 +130,7 @@ public abstract class SnapshotCredentials(
     public fun fromGeneratedSecret(username: String,
         options: SnapshotCredentialsFromGeneratedPasswordOptions): SnapshotCredentials =
         software.amazon.awscdk.services.rds.SnapshotCredentials.fromGeneratedSecret(username,
-        options.let(SnapshotCredentialsFromGeneratedPasswordOptions::unwrap)).let(SnapshotCredentials::wrap)
+        options.let(SnapshotCredentialsFromGeneratedPasswordOptions.Companion::unwrap)).let(SnapshotCredentials::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("705fa082196cb4dd2b1b4538f0bf65522295840612d62d4ebfd5fe38af402ef1")
@@ -140,10 +140,10 @@ public abstract class SnapshotCredentials(
         SnapshotCredentialsFromGeneratedPasswordOptions(options))
 
     public fun fromPassword(password: SecretValue): SnapshotCredentials =
-        software.amazon.awscdk.services.rds.SnapshotCredentials.fromPassword(password.let(SecretValue::unwrap)).let(SnapshotCredentials::wrap)
+        software.amazon.awscdk.services.rds.SnapshotCredentials.fromPassword(password.let(SecretValue.Companion::unwrap)).let(SnapshotCredentials::wrap)
 
     public fun fromSecret(secret: ISecret): SnapshotCredentials =
-        software.amazon.awscdk.services.rds.SnapshotCredentials.fromSecret(secret.let(ISecret::unwrap)).let(SnapshotCredentials::wrap)
+        software.amazon.awscdk.services.rds.SnapshotCredentials.fromSecret(secret.let(ISecret.Companion::unwrap)).let(SnapshotCredentials::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.rds.SnapshotCredentials):
         SnapshotCredentials = CdkObjectWrappers.wrap(cdkObject) as? SnapshotCredentials ?:

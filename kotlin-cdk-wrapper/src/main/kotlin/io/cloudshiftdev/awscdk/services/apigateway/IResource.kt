@@ -249,7 +249,7 @@ public interface IResource : io.cloudshiftdev.awscdk.IResource {
      * @param options CORS options. 
      */
     override fun addCorsPreflight(options: CorsOptions): Method =
-        unwrap(this).addCorsPreflight(options.let(CorsOptions::unwrap)).let(Method::wrap)
+        unwrap(this).addCorsPreflight(options.let(CorsOptions.Companion::unwrap)).let(Method::wrap)
 
     /**
      * Adds an OPTIONS method to this resource which responds to Cross-Origin Resource Sharing
@@ -291,7 +291,8 @@ public interface IResource : io.cloudshiftdev.awscdk.IResource {
      * @param options Method options, such as authentication.
      */
     override fun addMethod(httpMethod: String, target: Integration): Method =
-        unwrap(this).addMethod(httpMethod, target.let(Integration::unwrap)).let(Method::wrap)
+        unwrap(this).addMethod(httpMethod,
+        target.let(Integration.Companion::unwrap)).let(Method::wrap)
 
     /**
      * Defines a new method for this resource.
@@ -318,8 +319,8 @@ public interface IResource : io.cloudshiftdev.awscdk.IResource {
       httpMethod: String,
       target: Integration,
       options: MethodOptions,
-    ): Method = unwrap(this).addMethod(httpMethod, target.let(Integration::unwrap),
-        options.let(MethodOptions::unwrap)).let(Method::wrap)
+    ): Method = unwrap(this).addMethod(httpMethod, target.let(Integration.Companion::unwrap),
+        options.let(MethodOptions.Companion::unwrap)).let(Method::wrap)
 
     /**
      * Defines a new method for this resource.
@@ -350,7 +351,7 @@ public interface IResource : io.cloudshiftdev.awscdk.IResource {
      * @param options Default integration and method options.
      */
     override fun addProxy(options: ProxyResourceOptions): ProxyResource =
-        unwrap(this).addProxy(options.let(ProxyResourceOptions::unwrap)).let(ProxyResource::wrap)
+        unwrap(this).addProxy(options.let(ProxyResourceOptions.Companion::unwrap)).let(ProxyResource::wrap)
 
     /**
      * Adds a greedy proxy resource ("{proxy+}") and an ANY method to this route.
@@ -380,7 +381,8 @@ public interface IResource : io.cloudshiftdev.awscdk.IResource {
      * @param options Resource options.
      */
     override fun addResource(pathPart: String, options: ResourceOptions): Resource =
-        unwrap(this).addResource(pathPart, options.let(ResourceOptions::unwrap)).let(Resource::wrap)
+        unwrap(this).addResource(pathPart,
+        options.let(ResourceOptions.Companion::unwrap)).let(Resource::wrap)
 
     /**
      * Defines a new child resource where this resource is the parent.
@@ -418,7 +420,7 @@ public interface IResource : io.cloudshiftdev.awscdk.IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**

@@ -86,7 +86,7 @@ public interface ConfigureNatOptions {
      * @param natSubnets The public subnets where the NAT providers need to be placed. 
      */
     override fun natSubnets(natSubnets: List<PublicSubnet>) {
-      cdkBuilder.natSubnets(natSubnets.map(PublicSubnet::unwrap))
+      cdkBuilder.natSubnets(natSubnets.map(PublicSubnet.Companion::unwrap))
     }
 
     /**
@@ -99,7 +99,7 @@ public interface ConfigureNatOptions {
      * There may be more private subnets than public subnets with NAT providers.
      */
     override fun privateSubnets(privateSubnets: List<PrivateSubnet>) {
-      cdkBuilder.privateSubnets(privateSubnets.map(PrivateSubnet::unwrap))
+      cdkBuilder.privateSubnets(privateSubnets.map(PrivateSubnet.Companion::unwrap))
     }
 
     /**
@@ -113,7 +113,7 @@ public interface ConfigureNatOptions {
      * @param vpc The VPC we're configuring NAT for. 
      */
     override fun vpc(vpc: Vpc) {
-      cdkBuilder.vpc(vpc.let(Vpc::unwrap))
+      cdkBuilder.vpc(vpc.let(Vpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.ConfigureNatOptions = cdkBuilder.build()

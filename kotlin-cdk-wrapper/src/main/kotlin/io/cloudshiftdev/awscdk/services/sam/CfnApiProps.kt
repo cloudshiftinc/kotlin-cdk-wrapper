@@ -490,14 +490,14 @@ public interface CfnApiProps {
      * @param accessLogSetting the value to be set.
      */
     override fun accessLogSetting(accessLogSetting: IResolvable) {
-      cdkBuilder.accessLogSetting(accessLogSetting.let(IResolvable::unwrap))
+      cdkBuilder.accessLogSetting(accessLogSetting.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param accessLogSetting the value to be set.
      */
     override fun accessLogSetting(accessLogSetting: CfnApi.AccessLogSettingProperty) {
-      cdkBuilder.accessLogSetting(accessLogSetting.let(CfnApi.AccessLogSettingProperty::unwrap))
+      cdkBuilder.accessLogSetting(accessLogSetting.let(CfnApi.AccessLogSettingProperty.Companion::unwrap))
     }
 
     /**
@@ -520,21 +520,21 @@ public interface CfnApiProps {
      * @param alwaysDeploy the value to be set.
      */
     override fun alwaysDeploy(alwaysDeploy: IResolvable) {
-      cdkBuilder.alwaysDeploy(alwaysDeploy.let(IResolvable::unwrap))
+      cdkBuilder.alwaysDeploy(alwaysDeploy.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param auth the value to be set.
      */
     override fun auth(auth: IResolvable) {
-      cdkBuilder.auth(auth.let(IResolvable::unwrap))
+      cdkBuilder.auth(auth.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param auth the value to be set.
      */
     override fun auth(auth: CfnApi.AuthProperty) {
-      cdkBuilder.auth(auth.let(CfnApi.AuthProperty::unwrap))
+      cdkBuilder.auth(auth.let(CfnApi.AuthProperty.Companion::unwrap))
     }
 
     /**
@@ -569,7 +569,7 @@ public interface CfnApiProps {
      * @param cacheClusterEnabled the value to be set.
      */
     override fun cacheClusterEnabled(cacheClusterEnabled: IResolvable) {
-      cdkBuilder.cacheClusterEnabled(cacheClusterEnabled.let(IResolvable::unwrap))
+      cdkBuilder.cacheClusterEnabled(cacheClusterEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -583,14 +583,14 @@ public interface CfnApiProps {
      * @param canarySetting the value to be set.
      */
     override fun canarySetting(canarySetting: IResolvable) {
-      cdkBuilder.canarySetting(canarySetting.let(IResolvable::unwrap))
+      cdkBuilder.canarySetting(canarySetting.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param canarySetting the value to be set.
      */
     override fun canarySetting(canarySetting: CfnApi.CanarySettingProperty) {
-      cdkBuilder.canarySetting(canarySetting.let(CfnApi.CanarySettingProperty::unwrap))
+      cdkBuilder.canarySetting(canarySetting.let(CfnApi.CanarySettingProperty.Companion::unwrap))
     }
 
     /**
@@ -612,14 +612,14 @@ public interface CfnApiProps {
      * @param cors the value to be set.
      */
     override fun cors(cors: IResolvable) {
-      cdkBuilder.cors(cors.let(IResolvable::unwrap))
+      cdkBuilder.cors(cors.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param cors the value to be set.
      */
     override fun cors(cors: CfnApi.CorsConfigurationProperty) {
-      cdkBuilder.cors(cors.let(CfnApi.CorsConfigurationProperty::unwrap))
+      cdkBuilder.cors(cors.let(CfnApi.CorsConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -648,14 +648,14 @@ public interface CfnApiProps {
      * @param definitionUri the value to be set.
      */
     override fun definitionUri(definitionUri: IResolvable) {
-      cdkBuilder.definitionUri(definitionUri.let(IResolvable::unwrap))
+      cdkBuilder.definitionUri(definitionUri.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param definitionUri the value to be set.
      */
     override fun definitionUri(definitionUri: CfnApi.S3LocationProperty) {
-      cdkBuilder.definitionUri(definitionUri.let(CfnApi.S3LocationProperty::unwrap))
+      cdkBuilder.definitionUri(definitionUri.let(CfnApi.S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -684,21 +684,21 @@ public interface CfnApiProps {
      * @param disableExecuteApiEndpoint the value to be set.
      */
     override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable) {
-      cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint.let(IResolvable::unwrap))
+      cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param domain the value to be set.
      */
     override fun domain(domain: IResolvable) {
-      cdkBuilder.domain(domain.let(IResolvable::unwrap))
+      cdkBuilder.domain(domain.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param domain the value to be set.
      */
     override fun domain(domain: CfnApi.DomainConfigurationProperty) {
-      cdkBuilder.domain(domain.let(CfnApi.DomainConfigurationProperty::unwrap))
+      cdkBuilder.domain(domain.let(CfnApi.DomainConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -720,7 +720,7 @@ public interface CfnApiProps {
      * @param endpointConfiguration the value to be set.
      */
     override fun endpointConfiguration(endpointConfiguration: IResolvable) {
-      cdkBuilder.endpointConfiguration(endpointConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.endpointConfiguration(endpointConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -728,7 +728,7 @@ public interface CfnApiProps {
      */
     override
         fun endpointConfiguration(endpointConfiguration: CfnApi.EndpointConfigurationProperty) {
-      cdkBuilder.endpointConfiguration(endpointConfiguration.let(CfnApi.EndpointConfigurationProperty::unwrap))
+      cdkBuilder.endpointConfiguration(endpointConfiguration.let(CfnApi.EndpointConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -764,7 +764,7 @@ public interface CfnApiProps {
      * @param methodSettings the value to be set.
      */
     override fun methodSettings(methodSettings: IResolvable) {
-      cdkBuilder.methodSettings(methodSettings.let(IResolvable::unwrap))
+      cdkBuilder.methodSettings(methodSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -820,14 +820,14 @@ public interface CfnApiProps {
      * @param tracingEnabled the value to be set.
      */
     override fun tracingEnabled(tracingEnabled: IResolvable) {
-      cdkBuilder.tracingEnabled(tracingEnabled.let(IResolvable::unwrap))
+      cdkBuilder.tracingEnabled(tracingEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param variables the value to be set.
      */
     override fun variables(variables: IResolvable) {
-      cdkBuilder.variables(variables.let(IResolvable::unwrap))
+      cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
     }
 
     /**

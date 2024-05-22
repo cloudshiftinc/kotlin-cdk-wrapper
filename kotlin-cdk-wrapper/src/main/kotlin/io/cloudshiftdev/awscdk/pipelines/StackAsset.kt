@@ -143,7 +143,7 @@ public interface StackAsset {
      * @param assetType Type of asset to publish. 
      */
     override fun assetType(assetType: AssetType) {
-      cdkBuilder.assetType(assetType.let(AssetType::unwrap))
+      cdkBuilder.assetType(assetType.let(AssetType.Companion::unwrap))
     }
 
     /**

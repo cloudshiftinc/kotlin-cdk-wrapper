@@ -48,7 +48,7 @@ public open class FairshareSchedulingPolicy(
   cdkObject: software.amazon.awscdk.services.batch.FairshareSchedulingPolicy,
 ) : Resource(cdkObject), IFairshareSchedulingPolicy, ISchedulingPolicy {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.batch.FairshareSchedulingPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.batch.FairshareSchedulingPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -57,8 +57,8 @@ public open class FairshareSchedulingPolicy(
     id: String,
     props: FairshareSchedulingPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.batch.FairshareSchedulingPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(FairshareSchedulingPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.batch.FairshareSchedulingPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(FairshareSchedulingPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -74,7 +74,7 @@ public open class FairshareSchedulingPolicy(
    * @param share 
    */
   public open fun addShare(share: Share) {
-    unwrap(this).addShare(share.let(Share::unwrap))
+    unwrap(this).addShare(share.let(Share.Companion::unwrap))
   }
 
   /**
@@ -276,7 +276,7 @@ public open class FairshareSchedulingPolicy(
      * @param shareDecay The amount of time to use to measure the usage of each job. 
      */
     override fun shareDecay(shareDecay: Duration) {
-      cdkBuilder.shareDecay(shareDecay.let(Duration::unwrap))
+      cdkBuilder.shareDecay(shareDecay.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -290,7 +290,7 @@ public open class FairshareSchedulingPolicy(
      * @param shares The shares that this Scheduling Policy applies to. 
      */
     override fun shares(shares: List<Share>) {
-      cdkBuilder.shares(shares.map(Share::unwrap))
+      cdkBuilder.shares(shares.map(Share.Companion::unwrap))
     }
 
     /**
@@ -315,7 +315,7 @@ public open class FairshareSchedulingPolicy(
       id: String,
       fairshareSchedulingPolicyArn: String,
     ): IFairshareSchedulingPolicy =
-        software.amazon.awscdk.services.batch.FairshareSchedulingPolicy.fromFairshareSchedulingPolicyArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.batch.FairshareSchedulingPolicy.fromFairshareSchedulingPolicyArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, fairshareSchedulingPolicyArn).let(IFairshareSchedulingPolicy::wrap)
 
     public operator fun invoke(

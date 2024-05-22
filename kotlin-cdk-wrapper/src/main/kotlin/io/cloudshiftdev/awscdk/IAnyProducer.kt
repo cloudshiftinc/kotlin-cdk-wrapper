@@ -26,7 +26,7 @@ public interface IAnyProducer {
      * @param context 
      */
     override fun produce(context: IResolveContext): Any =
-        unwrap(this).produce(context.let(IResolveContext::unwrap))
+        unwrap(this).produce(context.let(IResolveContext.Companion::unwrap))
   }
 
   public companion object {

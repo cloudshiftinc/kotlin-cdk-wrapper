@@ -25,6 +25,7 @@ import kotlin.jvm.JvmName
  * .s3Configuration(S3DataSourceConfigurationProperty.builder()
  * .bucketArn("bucketArn")
  * // the properties below are optional
+ * .bucketOwnerAccountId("bucketOwnerAccountId")
  * .inclusionPrefixes(List.of("inclusionPrefixes"))
  * .build())
  * .type("type")
@@ -32,6 +33,7 @@ import kotlin.jvm.JvmName
  * .knowledgeBaseId("knowledgeBaseId")
  * .name("name")
  * // the properties below are optional
+ * .dataDeletionPolicy("dataDeletionPolicy")
  * .description("description")
  * .serverSideEncryptionConfiguration(ServerSideEncryptionConfigurationProperty.builder()
  * .kmsKeyArn("kmsKeyArn")
@@ -52,6 +54,13 @@ import kotlin.jvm.JvmName
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-datasource.html)
  */
 public interface CfnDataSourceProps {
+  /**
+   * The data deletion policy for a data source.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-datasource.html#cfn-bedrock-datasource-datadeletionpolicy)
+   */
+  public fun dataDeletionPolicy(): String? = unwrap(this).getDataDeletionPolicy()
+
   /**
    * Contains details about how the data source is stored.
    *
@@ -100,6 +109,11 @@ public interface CfnDataSourceProps {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param dataDeletionPolicy The data deletion policy for a data source.
+     */
+    public fun dataDeletionPolicy(dataDeletionPolicy: String)
+
     /**
      * @param dataSourceConfiguration Contains details about how the data source is stored. 
      */
@@ -185,10 +199,17 @@ public interface CfnDataSourceProps {
         software.amazon.awscdk.services.bedrock.CfnDataSourceProps.builder()
 
     /**
+     * @param dataDeletionPolicy The data deletion policy for a data source.
+     */
+    override fun dataDeletionPolicy(dataDeletionPolicy: String) {
+      cdkBuilder.dataDeletionPolicy(dataDeletionPolicy)
+    }
+
+    /**
      * @param dataSourceConfiguration Contains details about how the data source is stored. 
      */
     override fun dataSourceConfiguration(dataSourceConfiguration: IResolvable) {
-      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -196,7 +217,7 @@ public interface CfnDataSourceProps {
      */
     override
         fun dataSourceConfiguration(dataSourceConfiguration: CfnDataSource.DataSourceConfigurationProperty) {
-      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(CfnDataSource.DataSourceConfigurationProperty::unwrap))
+      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(CfnDataSource.DataSourceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -236,7 +257,7 @@ public interface CfnDataSourceProps {
      * server-side encryption.
      */
     override fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
-      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -245,7 +266,7 @@ public interface CfnDataSourceProps {
      */
     override
         fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: CfnDataSource.ServerSideEncryptionConfigurationProperty) {
-      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(CfnDataSource.ServerSideEncryptionConfigurationProperty::unwrap))
+      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(CfnDataSource.ServerSideEncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -264,7 +285,7 @@ public interface CfnDataSourceProps {
      * data source.
      */
     override fun vectorIngestionConfiguration(vectorIngestionConfiguration: IResolvable) {
-      cdkBuilder.vectorIngestionConfiguration(vectorIngestionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.vectorIngestionConfiguration(vectorIngestionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -273,7 +294,7 @@ public interface CfnDataSourceProps {
      */
     override
         fun vectorIngestionConfiguration(vectorIngestionConfiguration: CfnDataSource.VectorIngestionConfigurationProperty) {
-      cdkBuilder.vectorIngestionConfiguration(vectorIngestionConfiguration.let(CfnDataSource.VectorIngestionConfigurationProperty::unwrap))
+      cdkBuilder.vectorIngestionConfiguration(vectorIngestionConfiguration.let(CfnDataSource.VectorIngestionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -294,6 +315,13 @@ public interface CfnDataSourceProps {
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.bedrock.CfnDataSourceProps,
   ) : CdkObject(cdkObject), CfnDataSourceProps {
+    /**
+     * The data deletion policy for a data source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-datasource.html#cfn-bedrock-datasource-datadeletionpolicy)
+     */
+    override fun dataDeletionPolicy(): String? = unwrap(this).getDataDeletionPolicy()
+
     /**
      * Contains details about how the data source is stored.
      *

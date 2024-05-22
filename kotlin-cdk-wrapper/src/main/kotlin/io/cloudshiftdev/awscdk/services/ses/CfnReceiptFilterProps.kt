@@ -77,7 +77,7 @@ public interface CfnReceiptFilterProps {
      * of a name, an IP address range, and whether to allow or block mail from it. 
      */
     override fun filter(filter: IResolvable) {
-      cdkBuilder.filter(filter.let(IResolvable::unwrap))
+      cdkBuilder.filter(filter.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -85,7 +85,7 @@ public interface CfnReceiptFilterProps {
      * of a name, an IP address range, and whether to allow or block mail from it. 
      */
     override fun filter(filter: CfnReceiptFilter.FilterProperty) {
-      cdkBuilder.filter(filter.let(CfnReceiptFilter.FilterProperty::unwrap))
+      cdkBuilder.filter(filter.let(CfnReceiptFilter.FilterProperty.Companion::unwrap))
     }
 
     /**

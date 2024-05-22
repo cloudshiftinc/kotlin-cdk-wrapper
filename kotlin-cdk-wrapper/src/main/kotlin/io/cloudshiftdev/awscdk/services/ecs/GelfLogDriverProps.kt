@@ -195,7 +195,7 @@ public interface GelfLogDriverProps : BaseLogDriverProps {
      * Allowed values are gzip, zlib and none.
      */
     override fun compressionType(compressionType: GelfCompressionType) {
-      cdkBuilder.compressionType(compressionType.let(GelfCompressionType::unwrap))
+      cdkBuilder.compressionType(compressionType.let(GelfCompressionType.Companion::unwrap))
     }
 
     /**
@@ -269,7 +269,7 @@ public interface GelfLogDriverProps : BaseLogDriverProps {
      * A positive integer.
      */
     override fun tcpReconnectDelay(tcpReconnectDelay: Duration) {
-      cdkBuilder.tcpReconnectDelay(tcpReconnectDelay.let(Duration::unwrap))
+      cdkBuilder.tcpReconnectDelay(tcpReconnectDelay.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.GelfLogDriverProps = cdkBuilder.build()

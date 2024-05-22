@@ -61,8 +61,8 @@ public open class ParameterGroup(
     id: String,
     props: ParameterGroupProps,
   ) :
-      this(software.amazon.awscdk.services.rds.ParameterGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ParameterGroupProps::unwrap))
+      this(software.amazon.awscdk.services.rds.ParameterGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ParameterGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -88,7 +88,7 @@ public open class ParameterGroup(
    */
   public override fun bindToCluster(options: ParameterGroupClusterBindOptions):
       ParameterGroupClusterConfig =
-      unwrap(this).bindToCluster(options.let(ParameterGroupClusterBindOptions::unwrap)).let(ParameterGroupClusterConfig::wrap)
+      unwrap(this).bindToCluster(options.let(ParameterGroupClusterBindOptions.Companion::unwrap)).let(ParameterGroupClusterConfig::wrap)
 
   /**
    * Method called when this Parameter Group is used when defining a database cluster.
@@ -107,7 +107,7 @@ public open class ParameterGroup(
    */
   public override fun bindToInstance(options: ParameterGroupInstanceBindOptions):
       ParameterGroupInstanceConfig =
-      unwrap(this).bindToInstance(options.let(ParameterGroupInstanceBindOptions::unwrap)).let(ParameterGroupInstanceConfig::wrap)
+      unwrap(this).bindToInstance(options.let(ParameterGroupInstanceBindOptions.Companion::unwrap)).let(ParameterGroupInstanceConfig::wrap)
 
   /**
    * Method called when this Parameter Group is used when defining a database instance.
@@ -139,6 +139,15 @@ public open class ParameterGroup(
      * @param engine The database engine for this parameter group. 
      */
     public fun engine(engine: IEngine)
+
+    /**
+     * The name of this parameter group.
+     *
+     * Default: - CloudFormation-generated name
+     *
+     * @param name The name of this parameter group. 
+     */
+    public fun name(name: String)
 
     /**
      * The parameters in this parameter group.
@@ -185,7 +194,18 @@ public open class ParameterGroup(
      * @param engine The database engine for this parameter group. 
      */
     override fun engine(engine: IEngine) {
-      cdkBuilder.engine(engine.let(IEngine::unwrap))
+      cdkBuilder.engine(engine.let(IEngine.Companion::unwrap))
+    }
+
+    /**
+     * The name of this parameter group.
+     *
+     * Default: - CloudFormation-generated name
+     *
+     * @param name The name of this parameter group. 
+     */
+    override fun name(name: String) {
+      cdkBuilder.name(name)
     }
 
     /**
@@ -209,7 +229,7 @@ public open class ParameterGroup(
      * stack or replaced during an update. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.ParameterGroup = cdkBuilder.build()
@@ -221,7 +241,7 @@ public open class ParameterGroup(
       id: String,
       parameterGroupName: String,
     ): IParameterGroup =
-        software.amazon.awscdk.services.rds.ParameterGroup.fromParameterGroupName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.rds.ParameterGroup.fromParameterGroupName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, parameterGroupName).let(IParameterGroup::wrap)
 
     public operator fun invoke(

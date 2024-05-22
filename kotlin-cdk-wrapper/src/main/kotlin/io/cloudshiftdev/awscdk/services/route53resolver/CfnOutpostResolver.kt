@@ -49,8 +49,8 @@ public open class CfnOutpostResolver(
     id: String,
     props: CfnOutpostResolverProps,
   ) :
-      this(software.amazon.awscdk.services.route53resolver.CfnOutpostResolver(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnOutpostResolverProps::unwrap))
+      this(software.amazon.awscdk.services.route53resolver.CfnOutpostResolver(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnOutpostResolverProps.Companion::unwrap))
   )
 
   public constructor(
@@ -115,7 +115,7 @@ public open class CfnOutpostResolver(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -175,7 +175,7 @@ public open class CfnOutpostResolver(
    * A key value pair that helps you identify a Route 53 Resolver .
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -296,7 +296,7 @@ public open class CfnOutpostResolver(
      * @param tags A key value pair that helps you identify a Route 53 Resolver . 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

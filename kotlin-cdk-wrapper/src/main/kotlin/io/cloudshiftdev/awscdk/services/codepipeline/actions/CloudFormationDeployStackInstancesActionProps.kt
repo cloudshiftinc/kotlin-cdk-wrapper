@@ -199,7 +199,7 @@ public interface CloudFormationDeployStackInstancesActionProps : CommonAwsAction
      * These parameters are shared between all instances added by this action.
      */
     override fun parameterOverrides(parameterOverrides: StackSetParameters) {
-      cdkBuilder.parameterOverrides(parameterOverrides.let(StackSetParameters::unwrap))
+      cdkBuilder.parameterOverrides(parameterOverrides.let(StackSetParameters.Companion::unwrap))
     }
 
     /**
@@ -211,7 +211,7 @@ public interface CloudFormationDeployStackInstancesActionProps : CommonAwsAction
      * method in the `ActionBindOptions.role` property.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -227,7 +227,7 @@ public interface CloudFormationDeployStackInstancesActionProps : CommonAwsAction
      * You can specify either AWS Accounts Ids or AWS Organizations Organizational Units.
      */
     override fun stackInstances(stackInstances: StackInstances) {
-      cdkBuilder.stackInstances(stackInstances.let(StackInstances::unwrap))
+      cdkBuilder.stackInstances(stackInstances.let(StackInstances.Companion::unwrap))
     }
 
     /**

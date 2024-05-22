@@ -34,7 +34,7 @@ public open class CfnHookDefaultVersion(
   cdkObject: software.amazon.awscdk.CfnHookDefaultVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.CfnHookDefaultVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.CfnHookDefaultVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -43,8 +43,8 @@ public open class CfnHookDefaultVersion(
     id: String,
     props: CfnHookDefaultVersionProps,
   ) :
-      this(software.amazon.awscdk.CfnHookDefaultVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnHookDefaultVersionProps::unwrap))
+      this(software.amazon.awscdk.CfnHookDefaultVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnHookDefaultVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -65,7 +65,7 @@ public open class CfnHookDefaultVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

@@ -45,8 +45,8 @@ public open class VpcLink(
     id: String,
     props: VpcLinkProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.VpcLink(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(VpcLinkProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.VpcLink(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(VpcLinkProps.Companion::unwrap))
   )
 
   public constructor(
@@ -162,7 +162,7 @@ public open class VpcLink(
      */
     override
         fun securityGroups(securityGroups: List<CloudshiftdevAwscdkServicesEc2ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(CloudshiftdevAwscdkServicesEc2ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(CloudshiftdevAwscdkServicesEc2ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -184,7 +184,7 @@ public open class VpcLink(
      * @param subnets A list of subnets for the VPC link. 
      */
     override fun subnets(subnets: SubnetSelection) {
-      cdkBuilder.subnets(subnets.let(SubnetSelection::unwrap))
+      cdkBuilder.subnets(subnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -205,7 +205,7 @@ public open class VpcLink(
      * @param vpc The VPC in which the private resources reside. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -228,8 +228,8 @@ public open class VpcLink(
       id: String,
       attrs: VpcLinkAttributes,
     ): IVpcLink =
-        software.amazon.awscdk.services.apigatewayv2.VpcLink.fromVpcLinkAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(VpcLinkAttributes::unwrap)).let(IVpcLink::wrap)
+        software.amazon.awscdk.services.apigatewayv2.VpcLink.fromVpcLinkAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(VpcLinkAttributes.Companion::unwrap)).let(IVpcLink::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a9e78863e3435398a013c3a0826c825227d2aed3794e9cb063278a04cc32533a")

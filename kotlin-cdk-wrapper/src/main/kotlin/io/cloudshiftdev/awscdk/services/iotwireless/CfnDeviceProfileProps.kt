@@ -127,14 +127,14 @@ public interface CfnDeviceProfileProps {
      * @param loRaWan LoRaWAN device profile object.
      */
     override fun loRaWan(loRaWan: IResolvable) {
-      cdkBuilder.loRaWan(loRaWan.let(IResolvable::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param loRaWan LoRaWAN device profile object.
      */
     override fun loRaWan(loRaWan: CfnDeviceProfile.LoRaWANDeviceProfileProperty) {
-      cdkBuilder.loRaWan(loRaWan.let(CfnDeviceProfile.LoRaWANDeviceProfileProperty::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(CfnDeviceProfile.LoRaWANDeviceProfileProperty.Companion::unwrap))
     }
 
     /**
@@ -157,7 +157,7 @@ public interface CfnDeviceProfileProps {
      * Tags can have a minimum of 0 and a maximum of 50 items.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

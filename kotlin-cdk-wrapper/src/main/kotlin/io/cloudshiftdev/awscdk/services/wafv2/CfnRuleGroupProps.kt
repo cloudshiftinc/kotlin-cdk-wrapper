@@ -804,7 +804,7 @@ public interface CfnRuleGroupProps {
      * These labels are defined in the `RuleLabels` for a `Rule` .
      */
     override fun availableLabels(availableLabels: IResolvable) {
-      cdkBuilder.availableLabels(availableLabels.let(IResolvable::unwrap))
+      cdkBuilder.availableLabels(availableLabels.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -847,7 +847,7 @@ public interface CfnRuleGroupProps {
      * definition of a rule.
      */
     override fun consumedLabels(consumedLabels: IResolvable) {
-      cdkBuilder.consumedLabels(consumedLabels.let(IResolvable::unwrap))
+      cdkBuilder.consumedLabels(consumedLabels.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -885,7 +885,7 @@ public interface CfnRuleGroupProps {
      * *AWS WAF Developer Guide* .
      */
     override fun customResponseBodies(customResponseBodies: IResolvable) {
-      cdkBuilder.customResponseBodies(customResponseBodies.let(IResolvable::unwrap))
+      cdkBuilder.customResponseBodies(customResponseBodies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -929,7 +929,7 @@ public interface CfnRuleGroupProps {
      * requests, and parameters that govern how AWS WAF handles them.
      */
     override fun rules(rules: IResolvable) {
-      cdkBuilder.rules(rules.let(IResolvable::unwrap))
+      cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -976,7 +976,7 @@ public interface CfnRuleGroupProps {
      * AWS CloudFormation , you can only add tags to AWS WAF resources during resource creation.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -996,7 +996,7 @@ public interface CfnRuleGroupProps {
      * collection. 
      */
     override fun visibilityConfig(visibilityConfig: IResolvable) {
-      cdkBuilder.visibilityConfig(visibilityConfig.let(IResolvable::unwrap))
+      cdkBuilder.visibilityConfig(visibilityConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1004,7 +1004,7 @@ public interface CfnRuleGroupProps {
      * collection. 
      */
     override fun visibilityConfig(visibilityConfig: CfnRuleGroup.VisibilityConfigProperty) {
-      cdkBuilder.visibilityConfig(visibilityConfig.let(CfnRuleGroup.VisibilityConfigProperty::unwrap))
+      cdkBuilder.visibilityConfig(visibilityConfig.let(CfnRuleGroup.VisibilityConfigProperty.Companion::unwrap))
     }
 
     /**

@@ -30,7 +30,7 @@ public open class ExternalTaskDefinition(
   cdkObject: software.amazon.awscdk.services.ecs.ExternalTaskDefinition,
 ) : TaskDefinition(cdkObject), IExternalTaskDefinition {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ecs.ExternalTaskDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ecs.ExternalTaskDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -39,8 +39,8 @@ public open class ExternalTaskDefinition(
     id: String,
     props: ExternalTaskDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.ExternalTaskDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ExternalTaskDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.ExternalTaskDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ExternalTaskDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -56,7 +56,7 @@ public open class ExternalTaskDefinition(
    * @param _inferenceAccelerator 
    */
   public override fun addInferenceAccelerator(inferenceAccelerator: InferenceAccelerator) {
-    unwrap(this).addInferenceAccelerator(inferenceAccelerator.let(InferenceAccelerator::unwrap))
+    unwrap(this).addInferenceAccelerator(inferenceAccelerator.let(InferenceAccelerator.Companion::unwrap))
   }
 
   /**
@@ -178,7 +178,7 @@ public open class ExternalTaskDefinition(
      * permission to call AWS APIs on your behalf. 
      */
     override fun executionRole(executionRole: IRole) {
-      cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
+      cdkBuilder.executionRole(executionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -204,7 +204,7 @@ public open class ExternalTaskDefinition(
      * @param networkMode The networking mode to use for the containers in the task. 
      */
     override fun networkMode(networkMode: NetworkMode) {
-      cdkBuilder.networkMode(networkMode.let(NetworkMode::unwrap))
+      cdkBuilder.networkMode(networkMode.let(NetworkMode.Companion::unwrap))
     }
 
     /**
@@ -215,7 +215,7 @@ public open class ExternalTaskDefinition(
      * @param proxyConfiguration The configuration details for the App Mesh proxy. 
      */
     override fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
-      cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfiguration::unwrap))
+      cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfiguration.Companion::unwrap))
     }
 
     /**
@@ -228,7 +228,7 @@ public open class ExternalTaskDefinition(
      * call AWS APIs on your behalf. 
      */
     override fun taskRole(taskRole: IRole) {
-      cdkBuilder.taskRole(taskRole.let(IRole::unwrap))
+      cdkBuilder.taskRole(taskRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -243,7 +243,7 @@ public open class ExternalTaskDefinition(
      * @param volumes The list of volume definitions for the task. 
      */
     override fun volumes(volumes: List<Volume>) {
-      cdkBuilder.volumes(volumes.map(Volume::unwrap))
+      cdkBuilder.volumes(volumes.map(Volume.Companion::unwrap))
     }
 
     /**
@@ -269,7 +269,7 @@ public open class ExternalTaskDefinition(
       id: String,
       externalTaskDefinitionArn: String,
     ): IExternalTaskDefinition =
-        software.amazon.awscdk.services.ecs.ExternalTaskDefinition.fromEc2TaskDefinitionArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ecs.ExternalTaskDefinition.fromEc2TaskDefinitionArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, externalTaskDefinitionArn).let(IExternalTaskDefinition::wrap)
 
     public fun fromExternalTaskDefinitionAttributes(
@@ -277,8 +277,9 @@ public open class ExternalTaskDefinition(
       id: String,
       attrs: ExternalTaskDefinitionAttributes,
     ): IExternalTaskDefinition =
-        software.amazon.awscdk.services.ecs.ExternalTaskDefinition.fromExternalTaskDefinitionAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(ExternalTaskDefinitionAttributes::unwrap)).let(IExternalTaskDefinition::wrap)
+        software.amazon.awscdk.services.ecs.ExternalTaskDefinition.fromExternalTaskDefinitionAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        attrs.let(ExternalTaskDefinitionAttributes.Companion::unwrap)).let(IExternalTaskDefinition::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("79b74a848577dd70dae18e1ee2e46d90562825a4b2b91ccfd7a22ec79c56b22a")

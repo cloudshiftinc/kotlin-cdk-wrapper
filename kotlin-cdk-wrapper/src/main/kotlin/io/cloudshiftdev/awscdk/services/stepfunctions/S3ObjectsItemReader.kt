@@ -35,7 +35,7 @@ public open class S3ObjectsItemReader(
   cdkObject: software.amazon.awscdk.services.stepfunctions.S3ObjectsItemReader,
 ) : CdkObject(cdkObject), IItemReader {
   public constructor(props: S3ObjectsItemReaderProps) :
-      this(software.amazon.awscdk.services.stepfunctions.S3ObjectsItemReader(props.let(S3ObjectsItemReaderProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.S3ObjectsItemReader(props.let(S3ObjectsItemReaderProps.Companion::unwrap))
   )
 
   public constructor(props: S3ObjectsItemReaderProps.Builder.() -> Unit) :
@@ -125,7 +125,7 @@ public open class S3ObjectsItemReader(
      * over. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**

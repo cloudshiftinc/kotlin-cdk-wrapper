@@ -98,7 +98,7 @@ public interface S3SourceOptions {
      * action.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -108,7 +108,7 @@ public interface S3SourceOptions {
      * as otherwise the CloudWatch Events will not be emitted.
      */
     override fun trigger(trigger: S3Trigger) {
-      cdkBuilder.trigger(trigger.let(S3Trigger::unwrap))
+      cdkBuilder.trigger(trigger.let(S3Trigger.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.pipelines.S3SourceOptions = cdkBuilder.build()

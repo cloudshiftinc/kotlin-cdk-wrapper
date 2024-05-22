@@ -170,7 +170,7 @@ public interface PolicyViolationBeta1 {
      * @param violatingResources The resources violating this rule. 
      */
     override fun violatingResources(violatingResources: List<PolicyViolatingResourceBeta1>) {
-      cdkBuilder.violatingResources(violatingResources.map(PolicyViolatingResourceBeta1::unwrap))
+      cdkBuilder.violatingResources(violatingResources.map(PolicyViolatingResourceBeta1.Companion::unwrap))
     }
 
     /**

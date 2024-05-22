@@ -141,7 +141,7 @@ public interface AddRouteOptions {
      * @param routerType What type of router to route this traffic to. 
      */
     override fun routerType(routerType: RouterType) {
-      cdkBuilder.routerType(routerType.let(RouterType::unwrap))
+      cdkBuilder.routerType(routerType.let(RouterType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.AddRouteOptions = cdkBuilder.build()

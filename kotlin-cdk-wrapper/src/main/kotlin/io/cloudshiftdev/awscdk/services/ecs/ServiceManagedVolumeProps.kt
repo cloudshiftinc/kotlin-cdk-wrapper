@@ -102,7 +102,7 @@ public interface ServiceManagedVolumeProps {
      * by ECS.
      */
     override fun managedEbsVolume(managedEbsVolume: ServiceManagedEBSVolumeConfiguration) {
-      cdkBuilder.managedEbsVolume(managedEbsVolume.let(ServiceManagedEBSVolumeConfiguration::unwrap))
+      cdkBuilder.managedEbsVolume(managedEbsVolume.let(ServiceManagedEBSVolumeConfiguration.Companion::unwrap))
     }
 
     /**

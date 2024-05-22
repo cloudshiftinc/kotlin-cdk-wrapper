@@ -46,8 +46,8 @@ public open class Instance(
     id: String,
     props: InstanceProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.Instance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(InstanceProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.Instance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(InstanceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -63,7 +63,7 @@ public open class Instance(
    * @param securityGroup : The security group to add. 
    */
   public open fun addSecurityGroup(securityGroup: ISecurityGroup) {
-    unwrap(this).addSecurityGroup(securityGroup.let(ISecurityGroup::unwrap))
+    unwrap(this).addSecurityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
   }
 
   /**
@@ -72,7 +72,7 @@ public open class Instance(
    * @param statement 
    */
   public open fun addToRolePolicy(statement: PolicyStatement) {
-    unwrap(this).addToRolePolicy(statement.let(PolicyStatement::unwrap))
+    unwrap(this).addToRolePolicy(statement.let(PolicyStatement.Companion::unwrap))
   }
 
   /**
@@ -271,6 +271,20 @@ public open class Instance(
      * mind that Detailed Monitoring results in extra charges. 
      */
     public fun detailedMonitoring(detailedMonitoring: Boolean)
+
+    /**
+     * Indicates whether the instance is optimized for Amazon EBS I/O.
+     *
+     * This optimization provides dedicated throughput to Amazon EBS and an optimized configuration
+     * stack to provide optimal Amazon EBS I/O performance.
+     * This optimization isn't available with all instance types.
+     * Additional usage charges apply when using an EBS-optimized instance.
+     *
+     * Default: false
+     *
+     * @param ebsOptimized Indicates whether the instance is optimized for Amazon EBS I/O. 
+     */
+    public fun ebsOptimized(ebsOptimized: Boolean)
 
     /**
      * Apply the given CloudFormation Init configuration to the instance at startup.
@@ -589,7 +603,7 @@ public open class Instance(
      * virtual devices and EBS volumes. 
      */
     override fun blockDevices(blockDevices: List<BlockDevice>) {
-      cdkBuilder.blockDevices(blockDevices.map(BlockDevice::unwrap))
+      cdkBuilder.blockDevices(blockDevices.map(BlockDevice.Companion::unwrap))
     }
 
     /**
@@ -621,7 +635,7 @@ public open class Instance(
      * (T2, T3, T3a, etc). 
      */
     override fun creditSpecification(creditSpecification: CpuCredits) {
-      cdkBuilder.creditSpecification(creditSpecification.let(CpuCredits::unwrap))
+      cdkBuilder.creditSpecification(creditSpecification.let(CpuCredits.Companion::unwrap))
     }
 
     /**
@@ -639,6 +653,22 @@ public open class Instance(
     }
 
     /**
+     * Indicates whether the instance is optimized for Amazon EBS I/O.
+     *
+     * This optimization provides dedicated throughput to Amazon EBS and an optimized configuration
+     * stack to provide optimal Amazon EBS I/O performance.
+     * This optimization isn't available with all instance types.
+     * Additional usage charges apply when using an EBS-optimized instance.
+     *
+     * Default: false
+     *
+     * @param ebsOptimized Indicates whether the instance is optimized for Amazon EBS I/O. 
+     */
+    override fun ebsOptimized(ebsOptimized: Boolean) {
+      cdkBuilder.ebsOptimized(ebsOptimized)
+    }
+
+    /**
      * Apply the given CloudFormation Init configuration to the instance at startup.
      *
      * Default: - no CloudFormation init
@@ -646,7 +676,7 @@ public open class Instance(
      * @param init Apply the given CloudFormation Init configuration to the instance at startup. 
      */
     override fun `init`(`init`: CloudFormationInit) {
-      cdkBuilder.`init`(`init`.let(CloudFormationInit::unwrap))
+      cdkBuilder.`init`(`init`.let(CloudFormationInit.Companion::unwrap))
     }
 
     /**
@@ -659,7 +689,7 @@ public open class Instance(
      * @param initOptions Use the given options for applying CloudFormation Init. 
      */
     override fun initOptions(initOptions: ApplyCloudFormationInitOptions) {
-      cdkBuilder.initOptions(initOptions.let(ApplyCloudFormationInitOptions::unwrap))
+      cdkBuilder.initOptions(initOptions.let(ApplyCloudFormationInitOptions.Companion::unwrap))
     }
 
     /**
@@ -693,7 +723,7 @@ public open class Instance(
      * @param instanceType Type of instance to launch. 
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -718,7 +748,7 @@ public open class Instance(
      * @param keyPair The SSH keypair to grant access to the instance. 
      */
     override fun keyPair(keyPair: IKeyPair) {
-      cdkBuilder.keyPair(keyPair.let(IKeyPair::unwrap))
+      cdkBuilder.keyPair(keyPair.let(IKeyPair.Companion::unwrap))
     }
 
     /**
@@ -727,7 +757,7 @@ public open class Instance(
      * @param machineImage AMI to launch. 
      */
     override fun machineImage(machineImage: IMachineImage) {
-      cdkBuilder.machineImage(machineImage.let(IMachineImage::unwrap))
+      cdkBuilder.machineImage(machineImage.let(IMachineImage.Companion::unwrap))
     }
 
     /**
@@ -775,7 +805,7 @@ public open class Instance(
      * @param resourceSignalTimeout The length of time to wait for the resourceSignalCount. 
      */
     override fun resourceSignalTimeout(resourceSignalTimeout: Duration) {
-      cdkBuilder.resourceSignalTimeout(resourceSignalTimeout.let(Duration::unwrap))
+      cdkBuilder.resourceSignalTimeout(resourceSignalTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -797,7 +827,7 @@ public open class Instance(
      * Group. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -808,7 +838,7 @@ public open class Instance(
      * @param securityGroup Security Group to assign to this instance. 
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -860,7 +890,7 @@ public open class Instance(
      * @param userData Specific UserData to use. 
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     /**
@@ -893,7 +923,7 @@ public open class Instance(
      * @param vpc VPC to launch the instance in. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -904,7 +934,7 @@ public open class Instance(
      * @param vpcSubnets Where to place the instance within the VPC. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

@@ -37,7 +37,7 @@ public open class Bounce(
   cdkObject: software.amazon.awscdk.services.ses.actions.Bounce,
 ) : CdkObject(cdkObject), IReceiptRuleAction {
   public constructor(props: BounceProps) :
-      this(software.amazon.awscdk.services.ses.actions.Bounce(props.let(BounceProps::unwrap))
+      this(software.amazon.awscdk.services.ses.actions.Bounce(props.let(BounceProps.Companion::unwrap))
   )
 
   public constructor(props: BounceProps.Builder.() -> Unit) : this(BounceProps(props)
@@ -49,7 +49,7 @@ public open class Bounce(
    * @param _rule 
    */
   public override fun bind(rule: IReceiptRule): ReceiptRuleActionConfig =
-      unwrap(this).bind(rule.let(IReceiptRule::unwrap)).let(ReceiptRuleActionConfig::wrap)
+      unwrap(this).bind(rule.let(IReceiptRule.Companion::unwrap)).let(ReceiptRuleActionConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ses.actions.Bounce].
@@ -114,7 +114,7 @@ public open class Bounce(
      * @param template The template containing the message, reply code and status code. 
      */
     override fun template(template: BounceTemplate) {
-      cdkBuilder.template(template.let(BounceTemplate::unwrap))
+      cdkBuilder.template(template.let(BounceTemplate.Companion::unwrap))
     }
 
     /**
@@ -135,7 +135,7 @@ public open class Bounce(
      * @param topic The SNS topic to notify when the bounce action is taken. 
      */
     override fun topic(topic: ITopic) {
-      cdkBuilder.topic(topic.let(ITopic::unwrap))
+      cdkBuilder.topic(topic.let(ITopic.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ses.actions.Bounce = cdkBuilder.build()

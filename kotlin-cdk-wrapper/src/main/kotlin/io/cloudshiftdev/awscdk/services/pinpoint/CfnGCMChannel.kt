@@ -51,8 +51,8 @@ public open class CfnGCMChannel(
     id: String,
     props: CfnGCMChannelProps,
   ) :
-      this(software.amazon.awscdk.services.pinpoint.CfnGCMChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGCMChannelProps::unwrap))
+      this(software.amazon.awscdk.services.pinpoint.CfnGCMChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGCMChannelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -124,7 +124,7 @@ public open class CfnGCMChannel(
    * Specifies whether to enable the GCM channel for the Amazon Pinpoint application.
    */
   public open fun enabled(`value`: IResolvable) {
-    unwrap(this).setEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -133,7 +133,7 @@ public open class CfnGCMChannel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -277,7 +277,7 @@ public open class CfnGCMChannel(
      * application. 
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**

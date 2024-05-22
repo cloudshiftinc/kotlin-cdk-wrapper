@@ -33,7 +33,7 @@ public open class SecretPathVolume(
   cdkObject: software.amazon.awscdk.services.batch.SecretPathVolume,
 ) : EksVolume(cdkObject) {
   public constructor(options: SecretPathVolumeOptions) :
-      this(software.amazon.awscdk.services.batch.SecretPathVolume(options.let(SecretPathVolumeOptions::unwrap))
+      this(software.amazon.awscdk.services.batch.SecretPathVolume(options.let(SecretPathVolumeOptions.Companion::unwrap))
   )
 
   public constructor(options: SecretPathVolumeOptions.Builder.() -> Unit) :

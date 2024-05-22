@@ -43,8 +43,9 @@ public open class CfnOutput(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
     props: CfnOutputProps,
-  ) : this(software.amazon.awscdk.CfnOutput(scope.let(CloudshiftdevConstructsConstruct::unwrap), id,
-      props.let(CfnOutputProps::unwrap))
+  ) :
+      this(software.amazon.awscdk.CfnOutput(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnOutputProps.Companion::unwrap))
   )
 
   public constructor(
@@ -73,7 +74,7 @@ public open class CfnOutput(
    * Default: - No condition is associated with the output.
    */
   public open fun condition(`value`: CfnCondition) {
-    unwrap(this).setCondition(`value`.let(CfnCondition::unwrap))
+    unwrap(this).setCondition(`value`.let(CfnCondition.Companion::unwrap))
   }
 
   /**
@@ -230,7 +231,7 @@ public open class CfnOutput(
      * @param condition A condition to associate with this output value. 
      */
     override fun condition(condition: CfnCondition) {
-      cdkBuilder.condition(condition.let(CfnCondition::unwrap))
+      cdkBuilder.condition(condition.let(CfnCondition.Companion::unwrap))
     }
 
     /**

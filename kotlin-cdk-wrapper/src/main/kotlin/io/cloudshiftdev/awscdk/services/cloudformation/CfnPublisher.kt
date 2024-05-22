@@ -47,8 +47,8 @@ public open class CfnPublisher(
     id: String,
     props: CfnPublisherProps,
   ) :
-      this(software.amazon.awscdk.services.cloudformation.CfnPublisher(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPublisherProps::unwrap))
+      this(software.amazon.awscdk.services.cloudformation.CfnPublisher(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPublisherProps.Companion::unwrap))
   )
 
   public constructor(
@@ -83,7 +83,7 @@ public open class CfnPublisher(
    * in order to register to publish public extensions to the CloudFormation registry.
    */
   public open fun acceptTermsAndConditions(`value`: IResolvable) {
-    unwrap(this).setAcceptTermsAndConditions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAcceptTermsAndConditions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -129,7 +129,7 @@ public open class CfnPublisher(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -224,7 +224,7 @@ public open class CfnPublisher(
      * conditions in order to register to publish public extensions to the CloudFormation registry. 
      */
     override fun acceptTermsAndConditions(acceptTermsAndConditions: IResolvable) {
-      cdkBuilder.acceptTermsAndConditions(acceptTermsAndConditions.let(IResolvable::unwrap))
+      cdkBuilder.acceptTermsAndConditions(acceptTermsAndConditions.let(IResolvable.Companion::unwrap))
     }
 
     /**

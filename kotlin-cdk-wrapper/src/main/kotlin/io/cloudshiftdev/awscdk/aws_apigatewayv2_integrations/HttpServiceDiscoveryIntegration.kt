@@ -42,7 +42,7 @@ public open class HttpServiceDiscoveryIntegration(
 ) : HttpRouteIntegration(cdkObject) {
   public constructor(id: String, service: CloudshiftdevAwscdkServicesServicediscoveryIService) :
       this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpServiceDiscoveryIntegration(id,
-      service.let(CloudshiftdevAwscdkServicesServicediscoveryIService::unwrap))
+      service.let(CloudshiftdevAwscdkServicesServicediscoveryIService.Companion::unwrap))
   )
 
   public constructor(
@@ -50,8 +50,8 @@ public open class HttpServiceDiscoveryIntegration(
     service: CloudshiftdevAwscdkServicesServicediscoveryIService,
     props: HttpServiceDiscoveryIntegrationProps,
   ) : this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpServiceDiscoveryIntegration(id,
-      service.let(CloudshiftdevAwscdkServicesServicediscoveryIService::unwrap),
-      props.let(HttpServiceDiscoveryIntegrationProps::unwrap))
+      service.let(CloudshiftdevAwscdkServicesServicediscoveryIService.Companion::unwrap),
+      props.let(HttpServiceDiscoveryIntegrationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -67,7 +67,7 @@ public open class HttpServiceDiscoveryIntegration(
    * @param _options 
    */
   public override fun bind(options: HttpRouteIntegrationBindOptions): HttpRouteIntegrationConfig =
-      unwrap(this).bind(options.let(HttpRouteIntegrationBindOptions::unwrap)).let(HttpRouteIntegrationConfig::wrap)
+      unwrap(this).bind(options.let(HttpRouteIntegrationBindOptions.Companion::unwrap)).let(HttpRouteIntegrationConfig::wrap)
 
   /**
    * Bind this integration to the route.
@@ -144,7 +144,7 @@ public open class HttpServiceDiscoveryIntegration(
      * @param method The HTTP method that must be used to invoke the underlying HTTP proxy. 
      */
     override fun method(method: HttpMethod) {
-      cdkBuilder.method(method.let(HttpMethod::unwrap))
+      cdkBuilder.method(method.let(HttpMethod.Companion::unwrap))
     }
 
     /**
@@ -157,7 +157,7 @@ public open class HttpServiceDiscoveryIntegration(
      * backend. 
      */
     override fun parameterMapping(parameterMapping: ParameterMapping) {
-      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping::unwrap))
+      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping.Companion::unwrap))
     }
 
     /**
@@ -181,7 +181,7 @@ public open class HttpServiceDiscoveryIntegration(
      * @param vpcLink The vpc link to be used for the private integration. 
      */
     override fun vpcLink(vpcLink: IVpcLink) {
-      cdkBuilder.vpcLink(vpcLink.let(IVpcLink::unwrap))
+      cdkBuilder.vpcLink(vpcLink.let(IVpcLink.Companion::unwrap))
     }
 
     public fun build():

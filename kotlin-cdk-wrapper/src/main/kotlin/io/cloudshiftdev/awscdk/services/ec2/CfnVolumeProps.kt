@@ -416,7 +416,7 @@ public interface CfnVolumeProps {
      * you can configure the volume to automatically enable I/O.
      */
     override fun autoEnableIo(autoEnableIo: IResolvable) {
-      cdkBuilder.autoEnableIo(autoEnableIo.let(IResolvable::unwrap))
+      cdkBuilder.autoEnableIo(autoEnableIo.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -458,7 +458,7 @@ public interface CfnVolumeProps {
      * .
      */
     override fun encrypted(encrypted: IResolvable) {
-      cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
+      cdkBuilder.encrypted(encrypted.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -524,7 +524,7 @@ public interface CfnVolumeProps {
      * the size or number of I/O operations per second (IOPS) of a multi-attach enabled volume.
      */
     override fun multiAttachEnabled(multiAttachEnabled: IResolvable) {
-      cdkBuilder.multiAttachEnabled(multiAttachEnabled.let(IResolvable::unwrap))
+      cdkBuilder.multiAttachEnabled(multiAttachEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -564,7 +564,7 @@ public interface CfnVolumeProps {
      * @param tags The tags to apply to the volume during creation.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

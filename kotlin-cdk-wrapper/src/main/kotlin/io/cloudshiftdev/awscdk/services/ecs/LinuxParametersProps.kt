@@ -137,7 +137,7 @@ public interface LinuxParametersProps {
      * Accepted values are positive integers.
      */
     override fun maxSwap(maxSwap: Size) {
-      cdkBuilder.maxSwap(maxSwap.let(Size::unwrap))
+      cdkBuilder.maxSwap(maxSwap.let(Size.Companion::unwrap))
     }
 
     /**

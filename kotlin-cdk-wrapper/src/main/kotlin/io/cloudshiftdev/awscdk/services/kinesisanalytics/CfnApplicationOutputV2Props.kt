@@ -118,7 +118,7 @@ public interface CfnApplicationOutputV2Props {
      * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
      */
     override fun output(output: IResolvable) {
-      cdkBuilder.output(output.let(IResolvable::unwrap))
+      cdkBuilder.output(output.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -128,7 +128,7 @@ public interface CfnApplicationOutputV2Props {
      * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
      */
     override fun output(output: CfnApplicationOutputV2.OutputProperty) {
-      cdkBuilder.output(output.let(CfnApplicationOutputV2.OutputProperty::unwrap))
+      cdkBuilder.output(output.let(CfnApplicationOutputV2.OutputProperty.Companion::unwrap))
     }
 
     /**

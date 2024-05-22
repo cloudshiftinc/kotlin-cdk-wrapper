@@ -58,8 +58,8 @@ public open class CfnAddon(
     id: String,
     props: CfnAddonProps,
   ) :
-      this(software.amazon.awscdk.services.eks.CfnAddon(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAddonProps::unwrap))
+      this(software.amazon.awscdk.services.eks.CfnAddon(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAddonProps.Companion::unwrap))
   )
 
   public constructor(
@@ -129,7 +129,7 @@ public open class CfnAddon(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -151,7 +151,7 @@ public open class CfnAddon(
    * managing any settings for the add-on.
    */
   public open fun preserveOnDelete(`value`: IResolvable) {
-    unwrap(this).setPreserveOnDelete(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPreserveOnDelete(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -193,7 +193,7 @@ public open class CfnAddon(
    * The metadata that you apply to the add-on to assist with categorization and organization.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -407,7 +407,7 @@ public open class CfnAddon(
      * but Amazon EKS stops managing any settings for the add-on. 
      */
     override fun preserveOnDelete(preserveOnDelete: IResolvable) {
-      cdkBuilder.preserveOnDelete(preserveOnDelete.let(IResolvable::unwrap))
+      cdkBuilder.preserveOnDelete(preserveOnDelete.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -473,7 +473,7 @@ public open class CfnAddon(
      * organization. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -47,8 +47,8 @@ public open class ElasticsearchDataSource(
     id: String,
     props: ElasticsearchDataSourceProps,
   ) :
-      this(software.amazon.awscdk.services.appsync.ElasticsearchDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ElasticsearchDataSourceProps::unwrap))
+      this(software.amazon.awscdk.services.appsync.ElasticsearchDataSource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ElasticsearchDataSourceProps.Companion::unwrap))
   )
 
   @Deprecated(message = "deprecated in CDK")
@@ -123,7 +123,7 @@ public open class ElasticsearchDataSource(
      * @param api The API to attach this data source to. 
      */
     override fun api(api: IGraphqlApi) {
-      cdkBuilder.api(api.let(IGraphqlApi::unwrap))
+      cdkBuilder.api(api.let(IGraphqlApi.Companion::unwrap))
     }
 
     /**
@@ -144,7 +144,7 @@ public open class ElasticsearchDataSource(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun domain(domain: IDomain) {
-      cdkBuilder.domain(domain.let(IDomain::unwrap))
+      cdkBuilder.domain(domain.let(IDomain.Companion::unwrap))
     }
 
     /**
@@ -167,7 +167,7 @@ public open class ElasticsearchDataSource(
      * source. 
      */
     override fun serviceRole(serviceRole: IRole) {
-      cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
+      cdkBuilder.serviceRole(serviceRole.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appsync.ElasticsearchDataSource =

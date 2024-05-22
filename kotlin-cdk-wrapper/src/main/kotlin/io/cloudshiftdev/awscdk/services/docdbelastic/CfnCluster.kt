@@ -57,8 +57,8 @@ public open class CfnCluster(
     id: String,
     props: CfnClusterProps,
   ) :
-      this(software.amazon.awscdk.services.docdbelastic.CfnCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnClusterProps::unwrap))
+      this(software.amazon.awscdk.services.docdbelastic.CfnCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -152,7 +152,7 @@ public open class CfnCluster(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -264,7 +264,7 @@ public open class CfnCluster(
    * The tags to be assigned to the new elastic cluster.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -689,7 +689,7 @@ public open class CfnCluster(
      * @param tags The tags to be assigned to the new elastic cluster. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

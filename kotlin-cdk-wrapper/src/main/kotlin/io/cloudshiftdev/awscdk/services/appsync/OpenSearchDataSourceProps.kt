@@ -81,7 +81,7 @@ public interface OpenSearchDataSourceProps : BackedDataSourceProps {
      * @param api The API to attach this data source to. 
      */
     override fun api(api: IGraphqlApi) {
-      cdkBuilder.api(api.let(IGraphqlApi::unwrap))
+      cdkBuilder.api(api.let(IGraphqlApi.Companion::unwrap))
     }
 
     /**
@@ -95,7 +95,7 @@ public interface OpenSearchDataSourceProps : BackedDataSourceProps {
      * @param domain The OpenSearch domain containing the endpoint for the data source. 
      */
     override fun domain(domain: IDomain) {
-      cdkBuilder.domain(domain.let(IDomain::unwrap))
+      cdkBuilder.domain(domain.let(IDomain.Companion::unwrap))
     }
 
     /**
@@ -110,7 +110,7 @@ public interface OpenSearchDataSourceProps : BackedDataSourceProps {
      * source.
      */
     override fun serviceRole(serviceRole: IRole) {
-      cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
+      cdkBuilder.serviceRole(serviceRole.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appsync.OpenSearchDataSourceProps =

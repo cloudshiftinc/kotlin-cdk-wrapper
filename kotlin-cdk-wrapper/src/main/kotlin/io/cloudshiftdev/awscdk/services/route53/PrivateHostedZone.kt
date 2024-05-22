@@ -34,8 +34,8 @@ public open class PrivateHostedZone(
     id: String,
     props: PrivateHostedZoneProps,
   ) :
-      this(software.amazon.awscdk.services.route53.PrivateHostedZone(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(PrivateHostedZoneProps::unwrap))
+      this(software.amazon.awscdk.services.route53.PrivateHostedZone(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(PrivateHostedZoneProps.Companion::unwrap))
   )
 
   public constructor(
@@ -151,7 +151,7 @@ public open class PrivateHostedZone(
      * @param vpc A VPC that you want to associate with this hosted zone. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -176,7 +176,7 @@ public open class PrivateHostedZone(
       id: String,
       privateHostedZoneId: String,
     ): IPrivateHostedZone =
-        software.amazon.awscdk.services.route53.PrivateHostedZone.fromPrivateHostedZoneId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.route53.PrivateHostedZone.fromPrivateHostedZoneId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, privateHostedZoneId).let(IPrivateHostedZone::wrap)
 
     public operator fun invoke(

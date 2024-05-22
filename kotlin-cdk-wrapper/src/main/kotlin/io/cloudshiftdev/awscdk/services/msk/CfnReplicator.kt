@@ -86,8 +86,8 @@ public open class CfnReplicator(
     id: String,
     props: CfnReplicatorProps,
   ) :
-      this(software.amazon.awscdk.services.msk.CfnReplicator(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnReplicatorProps::unwrap))
+      this(software.amazon.awscdk.services.msk.CfnReplicator(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnReplicatorProps.Companion::unwrap))
   )
 
   public constructor(
@@ -138,7 +138,7 @@ public open class CfnReplicator(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -150,7 +150,7 @@ public open class CfnReplicator(
    * Specifies a list of Kafka clusters which are targets of the replicator.
    */
   public open fun kafkaClusters(`value`: IResolvable) {
-    unwrap(this).setKafkaClusters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKafkaClusters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -176,7 +176,7 @@ public open class CfnReplicator(
    * to target cluster replication flow.
    */
   public open fun replicationInfoList(`value`: IResolvable) {
-    unwrap(this).setReplicationInfoList(`value`.let(IResolvable::unwrap))
+    unwrap(this).setReplicationInfoList(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -229,7 +229,7 @@ public open class CfnReplicator(
    * A collection of tags associated with a resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -381,7 +381,7 @@ public open class CfnReplicator(
      * @param kafkaClusters Specifies a list of Kafka clusters which are targets of the replicator. 
      */
     override fun kafkaClusters(kafkaClusters: IResolvable) {
-      cdkBuilder.kafkaClusters(kafkaClusters.let(IResolvable::unwrap))
+      cdkBuilder.kafkaClusters(kafkaClusters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -412,7 +412,7 @@ public open class CfnReplicator(
      * targets a given source cluster to target cluster replication flow. 
      */
     override fun replicationInfoList(replicationInfoList: IResolvable) {
-      cdkBuilder.replicationInfoList(replicationInfoList.let(IResolvable::unwrap))
+      cdkBuilder.replicationInfoList(replicationInfoList.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -467,7 +467,7 @@ public open class CfnReplicator(
      * @param tags A collection of tags associated with a resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -739,7 +739,7 @@ public open class CfnReplicator(
        * groups.
        */
       override fun detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups: IResolvable) {
-        cdkBuilder.detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups.let(IResolvable::unwrap))
+        cdkBuilder.detectAndCopyNewConsumerGroups(detectAndCopyNewConsumerGroups.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -755,7 +755,7 @@ public open class CfnReplicator(
        * to __consumer_offsets topic in target cluster.
        */
       override fun synchroniseConsumerGroupOffsets(synchroniseConsumerGroupOffsets: IResolvable) {
-        cdkBuilder.synchroniseConsumerGroupOffsets(synchroniseConsumerGroupOffsets.let(IResolvable::unwrap))
+        cdkBuilder.synchroniseConsumerGroupOffsets(synchroniseConsumerGroupOffsets.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1071,14 +1071,14 @@ public open class CfnReplicator(
        * @param amazonMskCluster Details of an Amazon MSK cluster. 
        */
       override fun amazonMskCluster(amazonMskCluster: IResolvable) {
-        cdkBuilder.amazonMskCluster(amazonMskCluster.let(IResolvable::unwrap))
+        cdkBuilder.amazonMskCluster(amazonMskCluster.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param amazonMskCluster Details of an Amazon MSK cluster. 
        */
       override fun amazonMskCluster(amazonMskCluster: AmazonMskClusterProperty) {
-        cdkBuilder.amazonMskCluster(amazonMskCluster.let(AmazonMskClusterProperty::unwrap))
+        cdkBuilder.amazonMskCluster(amazonMskCluster.let(AmazonMskClusterProperty.Companion::unwrap))
       }
 
       /**
@@ -1094,7 +1094,7 @@ public open class CfnReplicator(
        * cluster. 
        */
       override fun vpcConfig(vpcConfig: IResolvable) {
-        cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+        cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1102,7 +1102,7 @@ public open class CfnReplicator(
        * cluster. 
        */
       override fun vpcConfig(vpcConfig: KafkaClusterClientVpcConfigProperty) {
-        cdkBuilder.vpcConfig(vpcConfig.let(KafkaClusterClientVpcConfigProperty::unwrap))
+        cdkBuilder.vpcConfig(vpcConfig.let(KafkaClusterClientVpcConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1291,7 +1291,7 @@ public open class CfnReplicator(
        * @param consumerGroupReplication Configuration relating to consumer group replication. 
        */
       override fun consumerGroupReplication(consumerGroupReplication: IResolvable) {
-        cdkBuilder.consumerGroupReplication(consumerGroupReplication.let(IResolvable::unwrap))
+        cdkBuilder.consumerGroupReplication(consumerGroupReplication.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1299,7 +1299,7 @@ public open class CfnReplicator(
        */
       override
           fun consumerGroupReplication(consumerGroupReplication: ConsumerGroupReplicationProperty) {
-        cdkBuilder.consumerGroupReplication(consumerGroupReplication.let(ConsumerGroupReplicationProperty::unwrap))
+        cdkBuilder.consumerGroupReplication(consumerGroupReplication.let(ConsumerGroupReplicationProperty.Companion::unwrap))
       }
 
       /**
@@ -1338,14 +1338,14 @@ public open class CfnReplicator(
        * @param topicReplication the value to be set. 
        */
       override fun topicReplication(topicReplication: IResolvable) {
-        cdkBuilder.topicReplication(topicReplication.let(IResolvable::unwrap))
+        cdkBuilder.topicReplication(topicReplication.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param topicReplication the value to be set. 
        */
       override fun topicReplication(topicReplication: TopicReplicationProperty) {
-        cdkBuilder.topicReplication(topicReplication.let(TopicReplicationProperty::unwrap))
+        cdkBuilder.topicReplication(topicReplication.let(TopicReplicationProperty.Companion::unwrap))
       }
 
       /**
@@ -1669,7 +1669,7 @@ public open class CfnReplicator(
        * to match their corresponding upstream topics.
        */
       override fun copyAccessControlListsForTopics(copyAccessControlListsForTopics: IResolvable) {
-        cdkBuilder.copyAccessControlListsForTopics(copyAccessControlListsForTopics.let(IResolvable::unwrap))
+        cdkBuilder.copyAccessControlListsForTopics(copyAccessControlListsForTopics.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1685,7 +1685,7 @@ public open class CfnReplicator(
        * their corresponding upstream topics.
        */
       override fun copyTopicConfigurations(copyTopicConfigurations: IResolvable) {
-        cdkBuilder.copyTopicConfigurations(copyTopicConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.copyTopicConfigurations(copyTopicConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1699,7 +1699,7 @@ public open class CfnReplicator(
        * @param detectAndCopyNewTopics Whether to periodically check for new topics and partitions.
        */
       override fun detectAndCopyNewTopics(detectAndCopyNewTopics: IResolvable) {
-        cdkBuilder.detectAndCopyNewTopics(detectAndCopyNewTopics.let(IResolvable::unwrap))
+        cdkBuilder.detectAndCopyNewTopics(detectAndCopyNewTopics.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1707,7 +1707,7 @@ public open class CfnReplicator(
        * replicating from.
        */
       override fun startingPosition(startingPosition: IResolvable) {
-        cdkBuilder.startingPosition(startingPosition.let(IResolvable::unwrap))
+        cdkBuilder.startingPosition(startingPosition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1715,7 +1715,7 @@ public open class CfnReplicator(
        * replicating from.
        */
       override fun startingPosition(startingPosition: ReplicationStartingPositionProperty) {
-        cdkBuilder.startingPosition(startingPosition.let(ReplicationStartingPositionProperty::unwrap))
+        cdkBuilder.startingPosition(startingPosition.let(ReplicationStartingPositionProperty.Companion::unwrap))
       }
 
       /**

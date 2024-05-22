@@ -68,8 +68,8 @@ public open class CfnLoggingConfiguration(
     id: String,
     props: CfnLoggingConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLoggingConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.networkfirewall.CfnLoggingConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLoggingConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -111,7 +111,7 @@ public open class CfnLoggingConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -123,14 +123,14 @@ public open class CfnLoggingConfiguration(
    * Defines how AWS Network Firewall performs logging for a `Firewall` .
    */
   public open fun loggingConfiguration(`value`: IResolvable) {
-    unwrap(this).setLoggingConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoggingConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Defines how AWS Network Firewall performs logging for a `Firewall` .
    */
   public open fun loggingConfiguration(`value`: LoggingConfigurationProperty) {
-    unwrap(this).setLoggingConfiguration(`value`.let(LoggingConfigurationProperty::unwrap))
+    unwrap(this).setLoggingConfiguration(`value`.let(LoggingConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -245,7 +245,7 @@ public open class CfnLoggingConfiguration(
      * `Firewall` . 
      */
     override fun loggingConfiguration(loggingConfiguration: IResolvable) {
-      cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -256,7 +256,7 @@ public open class CfnLoggingConfiguration(
      * `Firewall` . 
      */
     override fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty) {
-      cdkBuilder.loggingConfiguration(loggingConfiguration.let(LoggingConfigurationProperty::unwrap))
+      cdkBuilder.loggingConfiguration(loggingConfiguration.let(LoggingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -463,7 +463,7 @@ public open class CfnLoggingConfiguration(
        * `"LogDestination": { "deliveryStream": "alert-delivery-stream" }`
        */
       override fun logDestination(logDestination: IResolvable) {
-        cdkBuilder.logDestination(logDestination.let(IResolvable::unwrap))
+        cdkBuilder.logDestination(logDestination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -647,7 +647,7 @@ public open class CfnLoggingConfiguration(
        * Network Firewall generates logs for stateful rule groups.
        */
       override fun logDestinationConfigs(logDestinationConfigs: IResolvable) {
-        cdkBuilder.logDestinationConfigs(logDestinationConfigs.let(IResolvable::unwrap))
+        cdkBuilder.logDestinationConfigs(logDestinationConfigs.let(IResolvable.Companion::unwrap))
       }
 
       /**

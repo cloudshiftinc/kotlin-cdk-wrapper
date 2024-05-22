@@ -133,7 +133,7 @@ public open class CfnFunction(
   cdkObject: software.amazon.awscdk.services.sam.CfnFunction,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.sam.CfnFunction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.sam.CfnFunction(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -142,8 +142,8 @@ public open class CfnFunction(
     id: String,
     props: CfnFunctionProps,
   ) :
-      this(software.amazon.awscdk.services.sam.CfnFunction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFunctionProps::unwrap))
+      this(software.amazon.awscdk.services.sam.CfnFunction(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFunctionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -234,14 +234,14 @@ public open class CfnFunction(
    *
    */
   public open fun codeUri(`value`: IResolvable) {
-    unwrap(this).setCodeUri(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCodeUri(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun codeUri(`value`: S3LocationProperty) {
-    unwrap(this).setCodeUri(`value`.let(S3LocationProperty::unwrap))
+    unwrap(this).setCodeUri(`value`.let(S3LocationProperty.Companion::unwrap))
   }
 
   /**
@@ -261,14 +261,14 @@ public open class CfnFunction(
    *
    */
   public open fun deadLetterQueue(`value`: IResolvable) {
-    unwrap(this).setDeadLetterQueue(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeadLetterQueue(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun deadLetterQueue(`value`: DeadLetterQueueProperty) {
-    unwrap(this).setDeadLetterQueue(`value`.let(DeadLetterQueueProperty::unwrap))
+    unwrap(this).setDeadLetterQueue(`value`.let(DeadLetterQueueProperty.Companion::unwrap))
   }
 
   /**
@@ -288,14 +288,14 @@ public open class CfnFunction(
    *
    */
   public open fun deploymentPreference(`value`: IResolvable) {
-    unwrap(this).setDeploymentPreference(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeploymentPreference(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun deploymentPreference(`value`: DeploymentPreferenceProperty) {
-    unwrap(this).setDeploymentPreference(`value`.let(DeploymentPreferenceProperty::unwrap))
+    unwrap(this).setDeploymentPreference(`value`.let(DeploymentPreferenceProperty.Companion::unwrap))
   }
 
   /**
@@ -327,14 +327,14 @@ public open class CfnFunction(
    *
    */
   public open fun environment(`value`: IResolvable) {
-    unwrap(this).setEnvironment(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnvironment(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun environment(`value`: FunctionEnvironmentProperty) {
-    unwrap(this).setEnvironment(`value`.let(FunctionEnvironmentProperty::unwrap))
+    unwrap(this).setEnvironment(`value`.let(FunctionEnvironmentProperty.Companion::unwrap))
   }
 
   /**
@@ -354,14 +354,14 @@ public open class CfnFunction(
    *
    */
   public open fun ephemeralStorage(`value`: IResolvable) {
-    unwrap(this).setEphemeralStorage(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEphemeralStorage(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun ephemeralStorage(`value`: EphemeralStorageProperty) {
-    unwrap(this).setEphemeralStorage(`value`.let(EphemeralStorageProperty::unwrap))
+    unwrap(this).setEphemeralStorage(`value`.let(EphemeralStorageProperty.Companion::unwrap))
   }
 
   /**
@@ -381,14 +381,14 @@ public open class CfnFunction(
    *
    */
   public open fun eventInvokeConfig(`value`: IResolvable) {
-    unwrap(this).setEventInvokeConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEventInvokeConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun eventInvokeConfig(`value`: EventInvokeConfigProperty) {
-    unwrap(this).setEventInvokeConfig(`value`.let(EventInvokeConfigProperty::unwrap))
+    unwrap(this).setEventInvokeConfig(`value`.let(EventInvokeConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -408,7 +408,7 @@ public open class CfnFunction(
    *
    */
   public open fun events(`value`: IResolvable) {
-    unwrap(this).setEvents(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEvents(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -427,7 +427,7 @@ public open class CfnFunction(
    *
    */
   public open fun fileSystemConfigs(`value`: IResolvable) {
-    unwrap(this).setFileSystemConfigs(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFileSystemConfigs(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -463,14 +463,14 @@ public open class CfnFunction(
    *
    */
   public open fun functionUrlConfig(`value`: IResolvable) {
-    unwrap(this).setFunctionUrlConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFunctionUrlConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun functionUrlConfig(`value`: FunctionUrlConfigProperty) {
-    unwrap(this).setFunctionUrlConfig(`value`.let(FunctionUrlConfigProperty::unwrap))
+    unwrap(this).setFunctionUrlConfig(`value`.let(FunctionUrlConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -502,14 +502,14 @@ public open class CfnFunction(
    *
    */
   public open fun imageConfig(`value`: IResolvable) {
-    unwrap(this).setImageConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setImageConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun imageConfig(`value`: ImageConfigProperty) {
-    unwrap(this).setImageConfig(`value`.let(ImageConfigProperty::unwrap))
+    unwrap(this).setImageConfig(`value`.let(ImageConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -550,7 +550,7 @@ public open class CfnFunction(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -634,14 +634,14 @@ public open class CfnFunction(
    *
    */
   public open fun policies(`value`: IResolvable) {
-    unwrap(this).setPolicies(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPolicies(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun policies(`value`: IAMPolicyDocumentProperty) {
-    unwrap(this).setPolicies(`value`.let(IAMPolicyDocumentProperty::unwrap))
+    unwrap(this).setPolicies(`value`.let(IAMPolicyDocumentProperty.Companion::unwrap))
   }
 
   /**
@@ -674,14 +674,14 @@ public open class CfnFunction(
    *
    */
   public open fun provisionedConcurrencyConfig(`value`: IResolvable) {
-    unwrap(this).setProvisionedConcurrencyConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProvisionedConcurrencyConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun provisionedConcurrencyConfig(`value`: ProvisionedConcurrencyConfigProperty) {
-    unwrap(this).setProvisionedConcurrencyConfig(`value`.let(ProvisionedConcurrencyConfigProperty::unwrap))
+    unwrap(this).setProvisionedConcurrencyConfig(`value`.let(ProvisionedConcurrencyConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -792,14 +792,14 @@ public open class CfnFunction(
    *
    */
   public open fun vpcConfig(`value`: IResolvable) {
-    unwrap(this).setVpcConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun vpcConfig(`value`: VpcConfigProperty) {
-    unwrap(this).setVpcConfig(`value`.let(VpcConfigProperty::unwrap))
+    unwrap(this).setVpcConfig(`value`.let(VpcConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -1304,7 +1304,7 @@ public open class CfnFunction(
      * @param codeUri 
      */
     override fun codeUri(codeUri: IResolvable) {
-      cdkBuilder.codeUri(codeUri.let(IResolvable::unwrap))
+      cdkBuilder.codeUri(codeUri.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1312,7 +1312,7 @@ public open class CfnFunction(
      * @param codeUri 
      */
     override fun codeUri(codeUri: S3LocationProperty) {
-      cdkBuilder.codeUri(codeUri.let(S3LocationProperty::unwrap))
+      cdkBuilder.codeUri(codeUri.let(S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -1329,7 +1329,7 @@ public open class CfnFunction(
      * @param deadLetterQueue 
      */
     override fun deadLetterQueue(deadLetterQueue: IResolvable) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IResolvable::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1337,7 +1337,7 @@ public open class CfnFunction(
      * @param deadLetterQueue 
      */
     override fun deadLetterQueue(deadLetterQueue: DeadLetterQueueProperty) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(DeadLetterQueueProperty::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(DeadLetterQueueProperty.Companion::unwrap))
     }
 
     /**
@@ -1354,7 +1354,7 @@ public open class CfnFunction(
      * @param deploymentPreference 
      */
     override fun deploymentPreference(deploymentPreference: IResolvable) {
-      cdkBuilder.deploymentPreference(deploymentPreference.let(IResolvable::unwrap))
+      cdkBuilder.deploymentPreference(deploymentPreference.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1362,7 +1362,7 @@ public open class CfnFunction(
      * @param deploymentPreference 
      */
     override fun deploymentPreference(deploymentPreference: DeploymentPreferenceProperty) {
-      cdkBuilder.deploymentPreference(deploymentPreference.let(DeploymentPreferenceProperty::unwrap))
+      cdkBuilder.deploymentPreference(deploymentPreference.let(DeploymentPreferenceProperty.Companion::unwrap))
     }
 
     /**
@@ -1388,7 +1388,7 @@ public open class CfnFunction(
      * @param environment 
      */
     override fun environment(environment: IResolvable) {
-      cdkBuilder.environment(environment.let(IResolvable::unwrap))
+      cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1396,7 +1396,7 @@ public open class CfnFunction(
      * @param environment 
      */
     override fun environment(environment: FunctionEnvironmentProperty) {
-      cdkBuilder.environment(environment.let(FunctionEnvironmentProperty::unwrap))
+      cdkBuilder.environment(environment.let(FunctionEnvironmentProperty.Companion::unwrap))
     }
 
     /**
@@ -1413,7 +1413,7 @@ public open class CfnFunction(
      * @param ephemeralStorage 
      */
     override fun ephemeralStorage(ephemeralStorage: IResolvable) {
-      cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable::unwrap))
+      cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1421,7 +1421,7 @@ public open class CfnFunction(
      * @param ephemeralStorage 
      */
     override fun ephemeralStorage(ephemeralStorage: EphemeralStorageProperty) {
-      cdkBuilder.ephemeralStorage(ephemeralStorage.let(EphemeralStorageProperty::unwrap))
+      cdkBuilder.ephemeralStorage(ephemeralStorage.let(EphemeralStorageProperty.Companion::unwrap))
     }
 
     /**
@@ -1438,7 +1438,7 @@ public open class CfnFunction(
      * @param eventInvokeConfig 
      */
     override fun eventInvokeConfig(eventInvokeConfig: IResolvable) {
-      cdkBuilder.eventInvokeConfig(eventInvokeConfig.let(IResolvable::unwrap))
+      cdkBuilder.eventInvokeConfig(eventInvokeConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1446,7 +1446,7 @@ public open class CfnFunction(
      * @param eventInvokeConfig 
      */
     override fun eventInvokeConfig(eventInvokeConfig: EventInvokeConfigProperty) {
-      cdkBuilder.eventInvokeConfig(eventInvokeConfig.let(EventInvokeConfigProperty::unwrap))
+      cdkBuilder.eventInvokeConfig(eventInvokeConfig.let(EventInvokeConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1463,7 +1463,7 @@ public open class CfnFunction(
      * @param events 
      */
     override fun events(events: IResolvable) {
-      cdkBuilder.events(events.let(IResolvable::unwrap))
+      cdkBuilder.events(events.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1479,7 +1479,7 @@ public open class CfnFunction(
      * @param fileSystemConfigs 
      */
     override fun fileSystemConfigs(fileSystemConfigs: IResolvable) {
-      cdkBuilder.fileSystemConfigs(fileSystemConfigs.let(IResolvable::unwrap))
+      cdkBuilder.fileSystemConfigs(fileSystemConfigs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1510,7 +1510,7 @@ public open class CfnFunction(
      * @param functionUrlConfig 
      */
     override fun functionUrlConfig(functionUrlConfig: IResolvable) {
-      cdkBuilder.functionUrlConfig(functionUrlConfig.let(IResolvable::unwrap))
+      cdkBuilder.functionUrlConfig(functionUrlConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1518,7 +1518,7 @@ public open class CfnFunction(
      * @param functionUrlConfig 
      */
     override fun functionUrlConfig(functionUrlConfig: FunctionUrlConfigProperty) {
-      cdkBuilder.functionUrlConfig(functionUrlConfig.let(FunctionUrlConfigProperty::unwrap))
+      cdkBuilder.functionUrlConfig(functionUrlConfig.let(FunctionUrlConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1543,7 +1543,7 @@ public open class CfnFunction(
      * @param imageConfig 
      */
     override fun imageConfig(imageConfig: IResolvable) {
-      cdkBuilder.imageConfig(imageConfig.let(IResolvable::unwrap))
+      cdkBuilder.imageConfig(imageConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1551,7 +1551,7 @@ public open class CfnFunction(
      * @param imageConfig 
      */
     override fun imageConfig(imageConfig: ImageConfigProperty) {
-      cdkBuilder.imageConfig(imageConfig.let(ImageConfigProperty::unwrap))
+      cdkBuilder.imageConfig(imageConfig.let(ImageConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1638,7 +1638,7 @@ public open class CfnFunction(
      * @param policies 
      */
     override fun policies(policies: IResolvable) {
-      cdkBuilder.policies(policies.let(IResolvable::unwrap))
+      cdkBuilder.policies(policies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1646,7 +1646,7 @@ public open class CfnFunction(
      * @param policies 
      */
     override fun policies(policies: IAMPolicyDocumentProperty) {
-      cdkBuilder.policies(policies.let(IAMPolicyDocumentProperty::unwrap))
+      cdkBuilder.policies(policies.let(IAMPolicyDocumentProperty.Companion::unwrap))
     }
 
     /**
@@ -1677,7 +1677,7 @@ public open class CfnFunction(
      * @param provisionedConcurrencyConfig 
      */
     override fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: IResolvable) {
-      cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(IResolvable::unwrap))
+      cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1686,7 +1686,7 @@ public open class CfnFunction(
      */
     override
         fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: ProvisionedConcurrencyConfigProperty) {
-      cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(ProvisionedConcurrencyConfigProperty::unwrap))
+      cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(ProvisionedConcurrencyConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1761,7 +1761,7 @@ public open class CfnFunction(
      * @param vpcConfig 
      */
     override fun vpcConfig(vpcConfig: IResolvable) {
-      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1769,7 +1769,7 @@ public open class CfnFunction(
      * @param vpcConfig 
      */
     override fun vpcConfig(vpcConfig: VpcConfigProperty) {
-      cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -2035,14 +2035,14 @@ public open class CfnFunction(
        * @param auth the value to be set.
        */
       override fun auth(auth: IResolvable) {
-        cdkBuilder.auth(auth.let(IResolvable::unwrap))
+        cdkBuilder.auth(auth.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param auth the value to be set.
        */
       override fun auth(auth: AuthProperty) {
-        cdkBuilder.auth(auth.let(AuthProperty::unwrap))
+        cdkBuilder.auth(auth.let(AuthProperty.Companion::unwrap))
       }
 
       /**
@@ -2070,14 +2070,14 @@ public open class CfnFunction(
        * @param requestModel the value to be set.
        */
       override fun requestModel(requestModel: IResolvable) {
-        cdkBuilder.requestModel(requestModel.let(IResolvable::unwrap))
+        cdkBuilder.requestModel(requestModel.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param requestModel the value to be set.
        */
       override fun requestModel(requestModel: RequestModelProperty) {
-        cdkBuilder.requestModel(requestModel.let(RequestModelProperty::unwrap))
+        cdkBuilder.requestModel(requestModel.let(RequestModelProperty.Companion::unwrap))
       }
 
       /**
@@ -2092,7 +2092,7 @@ public open class CfnFunction(
        * @param requestParameters the value to be set.
        */
       override fun requestParameters(requestParameters: IResolvable) {
-        cdkBuilder.requestParameters(requestParameters.let(IResolvable::unwrap))
+        cdkBuilder.requestParameters(requestParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2285,7 +2285,7 @@ public open class CfnFunction(
        * @param apiKeyRequired the value to be set.
        */
       override fun apiKeyRequired(apiKeyRequired: IResolvable) {
-        cdkBuilder.apiKeyRequired(apiKeyRequired.let(IResolvable::unwrap))
+        cdkBuilder.apiKeyRequired(apiKeyRequired.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2312,14 +2312,14 @@ public open class CfnFunction(
        * @param resourcePolicy the value to be set.
        */
       override fun resourcePolicy(resourcePolicy: IResolvable) {
-        cdkBuilder.resourcePolicy(resourcePolicy.let(IResolvable::unwrap))
+        cdkBuilder.resourcePolicy(resourcePolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param resourcePolicy the value to be set.
        */
       override fun resourcePolicy(resourcePolicy: AuthResourcePolicyProperty) {
-        cdkBuilder.resourcePolicy(resourcePolicy.let(AuthResourcePolicyProperty::unwrap))
+        cdkBuilder.resourcePolicy(resourcePolicy.let(AuthResourcePolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -2632,7 +2632,7 @@ public open class CfnFunction(
        * @param customStatements the value to be set.
        */
       override fun customStatements(customStatements: IResolvable) {
-        cdkBuilder.customStatements(customStatements.let(IResolvable::unwrap))
+        cdkBuilder.customStatements(customStatements.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3394,7 +3394,7 @@ public open class CfnFunction(
        * @param allowCredentials the value to be set.
        */
       override fun allowCredentials(allowCredentials: IResolvable) {
-        cdkBuilder.allowCredentials(allowCredentials.let(IResolvable::unwrap))
+        cdkBuilder.allowCredentials(allowCredentials.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3702,21 +3702,21 @@ public open class CfnFunction(
        * @param enabled the value to be set.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param hooks the value to be set.
        */
       override fun hooks(hooks: IResolvable) {
-        cdkBuilder.hooks(hooks.let(IResolvable::unwrap))
+        cdkBuilder.hooks(hooks.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param hooks the value to be set.
        */
       override fun hooks(hooks: HooksProperty) {
-        cdkBuilder.hooks(hooks.let(HooksProperty::unwrap))
+        cdkBuilder.hooks(hooks.let(HooksProperty.Companion::unwrap))
       }
 
       /**
@@ -3849,14 +3849,14 @@ public open class CfnFunction(
        * @param onFailure the value to be set. 
        */
       override fun onFailure(onFailure: IResolvable) {
-        cdkBuilder.onFailure(onFailure.let(IResolvable::unwrap))
+        cdkBuilder.onFailure(onFailure.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param onFailure the value to be set. 
        */
       override fun onFailure(onFailure: DestinationProperty) {
-        cdkBuilder.onFailure(onFailure.let(DestinationProperty::unwrap))
+        cdkBuilder.onFailure(onFailure.let(DestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -4253,21 +4253,21 @@ public open class CfnFunction(
        * @param bisectBatchOnFunctionError the value to be set.
        */
       override fun bisectBatchOnFunctionError(bisectBatchOnFunctionError: IResolvable) {
-        cdkBuilder.bisectBatchOnFunctionError(bisectBatchOnFunctionError.let(IResolvable::unwrap))
+        cdkBuilder.bisectBatchOnFunctionError(bisectBatchOnFunctionError.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param destinationConfig the value to be set.
        */
       override fun destinationConfig(destinationConfig: IResolvable) {
-        cdkBuilder.destinationConfig(destinationConfig.let(IResolvable::unwrap))
+        cdkBuilder.destinationConfig(destinationConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param destinationConfig the value to be set.
        */
       override fun destinationConfig(destinationConfig: DestinationConfigProperty) {
-        cdkBuilder.destinationConfig(destinationConfig.let(DestinationConfigProperty::unwrap))
+        cdkBuilder.destinationConfig(destinationConfig.let(DestinationConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -4290,7 +4290,7 @@ public open class CfnFunction(
        * @param enabled the value to be set.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4769,14 +4769,14 @@ public open class CfnFunction(
        * @param destinationConfig the value to be set.
        */
       override fun destinationConfig(destinationConfig: IResolvable) {
-        cdkBuilder.destinationConfig(destinationConfig.let(IResolvable::unwrap))
+        cdkBuilder.destinationConfig(destinationConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param destinationConfig the value to be set.
        */
       override fun destinationConfig(destinationConfig: EventInvokeDestinationConfigProperty) {
-        cdkBuilder.destinationConfig(destinationConfig.let(EventInvokeDestinationConfigProperty::unwrap))
+        cdkBuilder.destinationConfig(destinationConfig.let(EventInvokeDestinationConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -4928,14 +4928,14 @@ public open class CfnFunction(
        * @param onFailure the value to be set. 
        */
       override fun onFailure(onFailure: IResolvable) {
-        cdkBuilder.onFailure(onFailure.let(IResolvable::unwrap))
+        cdkBuilder.onFailure(onFailure.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param onFailure the value to be set. 
        */
       override fun onFailure(onFailure: DestinationProperty) {
-        cdkBuilder.onFailure(onFailure.let(DestinationProperty::unwrap))
+        cdkBuilder.onFailure(onFailure.let(DestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -4950,14 +4950,14 @@ public open class CfnFunction(
        * @param onSuccess the value to be set. 
        */
       override fun onSuccess(onSuccess: IResolvable) {
-        cdkBuilder.onSuccess(onSuccess.let(IResolvable::unwrap))
+        cdkBuilder.onSuccess(onSuccess.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param onSuccess the value to be set. 
        */
       override fun onSuccess(onSuccess: DestinationProperty) {
-        cdkBuilder.onSuccess(onSuccess.let(DestinationProperty::unwrap))
+        cdkBuilder.onSuccess(onSuccess.let(DestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -5227,14 +5227,14 @@ public open class CfnFunction(
        * @param properties the value to be set. 
        */
       override fun properties(properties: IResolvable) {
-        cdkBuilder.properties(properties.let(IResolvable::unwrap))
+        cdkBuilder.properties(properties.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param properties the value to be set. 
        */
       override fun properties(properties: AlexaSkillEventProperty) {
-        cdkBuilder.properties(properties.let(AlexaSkillEventProperty::unwrap))
+        cdkBuilder.properties(properties.let(AlexaSkillEventProperty.Companion::unwrap))
       }
 
       /**
@@ -5249,7 +5249,7 @@ public open class CfnFunction(
        * @param properties the value to be set. 
        */
       override fun properties(properties: ApiEventProperty) {
-        cdkBuilder.properties(properties.let(ApiEventProperty::unwrap))
+        cdkBuilder.properties(properties.let(ApiEventProperty.Companion::unwrap))
       }
 
       /**
@@ -5264,7 +5264,7 @@ public open class CfnFunction(
        * @param properties the value to be set. 
        */
       override fun properties(properties: CloudWatchEventEventProperty) {
-        cdkBuilder.properties(properties.let(CloudWatchEventEventProperty::unwrap))
+        cdkBuilder.properties(properties.let(CloudWatchEventEventProperty.Companion::unwrap))
       }
 
       /**
@@ -5279,7 +5279,7 @@ public open class CfnFunction(
        * @param properties the value to be set. 
        */
       override fun properties(properties: CloudWatchLogsEventProperty) {
-        cdkBuilder.properties(properties.let(CloudWatchLogsEventProperty::unwrap))
+        cdkBuilder.properties(properties.let(CloudWatchLogsEventProperty.Companion::unwrap))
       }
 
       /**
@@ -5294,7 +5294,7 @@ public open class CfnFunction(
        * @param properties the value to be set. 
        */
       override fun properties(properties: CognitoEventProperty) {
-        cdkBuilder.properties(properties.let(CognitoEventProperty::unwrap))
+        cdkBuilder.properties(properties.let(CognitoEventProperty.Companion::unwrap))
       }
 
       /**
@@ -5309,7 +5309,7 @@ public open class CfnFunction(
        * @param properties the value to be set. 
        */
       override fun properties(properties: DynamoDBEventProperty) {
-        cdkBuilder.properties(properties.let(DynamoDBEventProperty::unwrap))
+        cdkBuilder.properties(properties.let(DynamoDBEventProperty.Companion::unwrap))
       }
 
       /**
@@ -5324,7 +5324,7 @@ public open class CfnFunction(
        * @param properties the value to be set. 
        */
       override fun properties(properties: EventBridgeRuleEventProperty) {
-        cdkBuilder.properties(properties.let(EventBridgeRuleEventProperty::unwrap))
+        cdkBuilder.properties(properties.let(EventBridgeRuleEventProperty.Companion::unwrap))
       }
 
       /**
@@ -5339,7 +5339,7 @@ public open class CfnFunction(
        * @param properties the value to be set. 
        */
       override fun properties(properties: HttpApiEventProperty) {
-        cdkBuilder.properties(properties.let(HttpApiEventProperty::unwrap))
+        cdkBuilder.properties(properties.let(HttpApiEventProperty.Companion::unwrap))
       }
 
       /**
@@ -5354,7 +5354,7 @@ public open class CfnFunction(
        * @param properties the value to be set. 
        */
       override fun properties(properties: IoTRuleEventProperty) {
-        cdkBuilder.properties(properties.let(IoTRuleEventProperty::unwrap))
+        cdkBuilder.properties(properties.let(IoTRuleEventProperty.Companion::unwrap))
       }
 
       /**
@@ -5369,7 +5369,7 @@ public open class CfnFunction(
        * @param properties the value to be set. 
        */
       override fun properties(properties: KinesisEventProperty) {
-        cdkBuilder.properties(properties.let(KinesisEventProperty::unwrap))
+        cdkBuilder.properties(properties.let(KinesisEventProperty.Companion::unwrap))
       }
 
       /**
@@ -5384,7 +5384,7 @@ public open class CfnFunction(
        * @param properties the value to be set. 
        */
       override fun properties(properties: S3EventProperty) {
-        cdkBuilder.properties(properties.let(S3EventProperty::unwrap))
+        cdkBuilder.properties(properties.let(S3EventProperty.Companion::unwrap))
       }
 
       /**
@@ -5399,7 +5399,7 @@ public open class CfnFunction(
        * @param properties the value to be set. 
        */
       override fun properties(properties: ScheduleEventProperty) {
-        cdkBuilder.properties(properties.let(ScheduleEventProperty::unwrap))
+        cdkBuilder.properties(properties.let(ScheduleEventProperty.Companion::unwrap))
       }
 
       /**
@@ -5414,7 +5414,7 @@ public open class CfnFunction(
        * @param properties the value to be set. 
        */
       override fun properties(properties: SNSEventProperty) {
-        cdkBuilder.properties(properties.let(SNSEventProperty::unwrap))
+        cdkBuilder.properties(properties.let(SNSEventProperty.Companion::unwrap))
       }
 
       /**
@@ -5429,7 +5429,7 @@ public open class CfnFunction(
        * @param properties the value to be set. 
        */
       override fun properties(properties: SQSEventProperty) {
-        cdkBuilder.properties(properties.let(SQSEventProperty::unwrap))
+        cdkBuilder.properties(properties.let(SQSEventProperty.Companion::unwrap))
       }
 
       /**
@@ -5626,7 +5626,7 @@ public open class CfnFunction(
        * @param variables the value to be set. 
        */
       override fun variables(variables: IResolvable) {
-        cdkBuilder.variables(variables.let(IResolvable::unwrap))
+        cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5836,14 +5836,14 @@ public open class CfnFunction(
        * @param cors the value to be set.
        */
       override fun cors(cors: IResolvable) {
-        cdkBuilder.cors(cors.let(IResolvable::unwrap))
+        cdkBuilder.cors(cors.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param cors the value to be set.
        */
       override fun cors(cors: CorsConfigurationProperty) {
-        cdkBuilder.cors(cors.let(CorsConfigurationProperty::unwrap))
+        cdkBuilder.cors(cors.let(CorsConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -6141,14 +6141,14 @@ public open class CfnFunction(
        * @param auth the value to be set.
        */
       override fun auth(auth: IResolvable) {
-        cdkBuilder.auth(auth.let(IResolvable::unwrap))
+        cdkBuilder.auth(auth.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param auth the value to be set.
        */
       override fun auth(auth: HttpApiFunctionAuthProperty) {
-        cdkBuilder.auth(auth.let(HttpApiFunctionAuthProperty::unwrap))
+        cdkBuilder.auth(auth.let(HttpApiFunctionAuthProperty.Companion::unwrap))
       }
 
       /**
@@ -6184,14 +6184,14 @@ public open class CfnFunction(
        * @param routeSettings the value to be set.
        */
       override fun routeSettings(routeSettings: IResolvable) {
-        cdkBuilder.routeSettings(routeSettings.let(IResolvable::unwrap))
+        cdkBuilder.routeSettings(routeSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param routeSettings the value to be set.
        */
       override fun routeSettings(routeSettings: RouteSettingsProperty) {
-        cdkBuilder.routeSettings(routeSettings.let(RouteSettingsProperty::unwrap))
+        cdkBuilder.routeSettings(routeSettings.let(RouteSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -6974,7 +6974,7 @@ public open class CfnFunction(
        * @param enabled the value to be set.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7459,7 +7459,7 @@ public open class CfnFunction(
        * @param required the value to be set.
        */
       override fun required(required: IResolvable) {
-        cdkBuilder.required(required.let(IResolvable::unwrap))
+        cdkBuilder.required(required.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7473,7 +7473,7 @@ public open class CfnFunction(
        * @param validateBody the value to be set.
        */
       override fun validateBody(validateBody: IResolvable) {
-        cdkBuilder.validateBody(validateBody.let(IResolvable::unwrap))
+        cdkBuilder.validateBody(validateBody.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7487,7 +7487,7 @@ public open class CfnFunction(
        * @param validateParameters the value to be set.
        */
       override fun validateParameters(validateParameters: IResolvable) {
-        cdkBuilder.validateParameters(validateParameters.let(IResolvable::unwrap))
+        cdkBuilder.validateParameters(validateParameters.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.sam.CfnFunction.RequestModelProperty =
@@ -7604,7 +7604,7 @@ public open class CfnFunction(
        * @param caching the value to be set.
        */
       override fun caching(caching: IResolvable) {
-        cdkBuilder.caching(caching.let(IResolvable::unwrap))
+        cdkBuilder.caching(caching.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7618,7 +7618,7 @@ public open class CfnFunction(
        * @param required the value to be set.
        */
       override fun required(required: IResolvable) {
-        cdkBuilder.required(required.let(IResolvable::unwrap))
+        cdkBuilder.required(required.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.sam.CfnFunction.RequestParameterProperty =
@@ -7758,7 +7758,7 @@ public open class CfnFunction(
        * @param dataTraceEnabled the value to be set.
        */
       override fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
-        cdkBuilder.dataTraceEnabled(dataTraceEnabled.let(IResolvable::unwrap))
+        cdkBuilder.dataTraceEnabled(dataTraceEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7772,7 +7772,7 @@ public open class CfnFunction(
        * @param detailedMetricsEnabled the value to be set.
        */
       override fun detailedMetricsEnabled(detailedMetricsEnabled: IResolvable) {
-        cdkBuilder.detailedMetricsEnabled(detailedMetricsEnabled.let(IResolvable::unwrap))
+        cdkBuilder.detailedMetricsEnabled(detailedMetricsEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7943,14 +7943,14 @@ public open class CfnFunction(
        * @param filter the value to be set.
        */
       override fun filter(filter: IResolvable) {
-        cdkBuilder.filter(filter.let(IResolvable::unwrap))
+        cdkBuilder.filter(filter.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param filter the value to be set.
        */
       override fun filter(filter: S3NotificationFilterProperty) {
-        cdkBuilder.filter(filter.let(S3NotificationFilterProperty::unwrap))
+        cdkBuilder.filter(filter.let(S3NotificationFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -8053,7 +8053,7 @@ public open class CfnFunction(
        * @param rules the value to be set. 
        */
       override fun rules(rules: IResolvable) {
-        cdkBuilder.rules(rules.let(IResolvable::unwrap))
+        cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8374,14 +8374,14 @@ public open class CfnFunction(
        * @param s3Key the value to be set. 
        */
       override fun s3Key(s3Key: IResolvable) {
-        cdkBuilder.s3Key(s3Key.let(IResolvable::unwrap))
+        cdkBuilder.s3Key(s3Key.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3Key the value to be set. 
        */
       override fun s3Key(s3Key: S3KeyFilterProperty) {
-        cdkBuilder.s3Key(s3Key.let(S3KeyFilterProperty::unwrap))
+        cdkBuilder.s3Key(s3Key.let(S3KeyFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -9315,14 +9315,14 @@ public open class CfnFunction(
        * @param amiDescribePolicy the value to be set.
        */
       override fun amiDescribePolicy(amiDescribePolicy: IResolvable) {
-        cdkBuilder.amiDescribePolicy(amiDescribePolicy.let(IResolvable::unwrap))
+        cdkBuilder.amiDescribePolicy(amiDescribePolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param amiDescribePolicy the value to be set.
        */
       override fun amiDescribePolicy(amiDescribePolicy: EmptySAMPTProperty) {
-        cdkBuilder.amiDescribePolicy(amiDescribePolicy.let(EmptySAMPTProperty::unwrap))
+        cdkBuilder.amiDescribePolicy(amiDescribePolicy.let(EmptySAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9338,7 +9338,7 @@ public open class CfnFunction(
        */
       override
           fun awsSecretsManagerGetSecretValuePolicy(awsSecretsManagerGetSecretValuePolicy: IResolvable) {
-        cdkBuilder.awsSecretsManagerGetSecretValuePolicy(awsSecretsManagerGetSecretValuePolicy.let(IResolvable::unwrap))
+        cdkBuilder.awsSecretsManagerGetSecretValuePolicy(awsSecretsManagerGetSecretValuePolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9346,7 +9346,7 @@ public open class CfnFunction(
        */
       override
           fun awsSecretsManagerGetSecretValuePolicy(awsSecretsManagerGetSecretValuePolicy: SecretArnSAMPTProperty) {
-        cdkBuilder.awsSecretsManagerGetSecretValuePolicy(awsSecretsManagerGetSecretValuePolicy.let(SecretArnSAMPTProperty::unwrap))
+        cdkBuilder.awsSecretsManagerGetSecretValuePolicy(awsSecretsManagerGetSecretValuePolicy.let(SecretArnSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9364,7 +9364,7 @@ public open class CfnFunction(
        */
       override
           fun cloudFormationDescribeStacksPolicy(cloudFormationDescribeStacksPolicy: IResolvable) {
-        cdkBuilder.cloudFormationDescribeStacksPolicy(cloudFormationDescribeStacksPolicy.let(IResolvable::unwrap))
+        cdkBuilder.cloudFormationDescribeStacksPolicy(cloudFormationDescribeStacksPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9372,7 +9372,7 @@ public open class CfnFunction(
        */
       override
           fun cloudFormationDescribeStacksPolicy(cloudFormationDescribeStacksPolicy: EmptySAMPTProperty) {
-        cdkBuilder.cloudFormationDescribeStacksPolicy(cloudFormationDescribeStacksPolicy.let(EmptySAMPTProperty::unwrap))
+        cdkBuilder.cloudFormationDescribeStacksPolicy(cloudFormationDescribeStacksPolicy.let(EmptySAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9389,14 +9389,14 @@ public open class CfnFunction(
        * @param cloudWatchPutMetricPolicy the value to be set.
        */
       override fun cloudWatchPutMetricPolicy(cloudWatchPutMetricPolicy: IResolvable) {
-        cdkBuilder.cloudWatchPutMetricPolicy(cloudWatchPutMetricPolicy.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchPutMetricPolicy(cloudWatchPutMetricPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param cloudWatchPutMetricPolicy the value to be set.
        */
       override fun cloudWatchPutMetricPolicy(cloudWatchPutMetricPolicy: EmptySAMPTProperty) {
-        cdkBuilder.cloudWatchPutMetricPolicy(cloudWatchPutMetricPolicy.let(EmptySAMPTProperty::unwrap))
+        cdkBuilder.cloudWatchPutMetricPolicy(cloudWatchPutMetricPolicy.let(EmptySAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9412,14 +9412,14 @@ public open class CfnFunction(
        * @param dynamoDbCrudPolicy the value to be set.
        */
       override fun dynamoDbCrudPolicy(dynamoDbCrudPolicy: IResolvable) {
-        cdkBuilder.dynamoDbCrudPolicy(dynamoDbCrudPolicy.let(IResolvable::unwrap))
+        cdkBuilder.dynamoDbCrudPolicy(dynamoDbCrudPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dynamoDbCrudPolicy the value to be set.
        */
       override fun dynamoDbCrudPolicy(dynamoDbCrudPolicy: TableSAMPTProperty) {
-        cdkBuilder.dynamoDbCrudPolicy(dynamoDbCrudPolicy.let(TableSAMPTProperty::unwrap))
+        cdkBuilder.dynamoDbCrudPolicy(dynamoDbCrudPolicy.let(TableSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9434,14 +9434,14 @@ public open class CfnFunction(
        * @param dynamoDbReadPolicy the value to be set.
        */
       override fun dynamoDbReadPolicy(dynamoDbReadPolicy: IResolvable) {
-        cdkBuilder.dynamoDbReadPolicy(dynamoDbReadPolicy.let(IResolvable::unwrap))
+        cdkBuilder.dynamoDbReadPolicy(dynamoDbReadPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dynamoDbReadPolicy the value to be set.
        */
       override fun dynamoDbReadPolicy(dynamoDbReadPolicy: TableSAMPTProperty) {
-        cdkBuilder.dynamoDbReadPolicy(dynamoDbReadPolicy.let(TableSAMPTProperty::unwrap))
+        cdkBuilder.dynamoDbReadPolicy(dynamoDbReadPolicy.let(TableSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9456,14 +9456,14 @@ public open class CfnFunction(
        * @param dynamoDbStreamReadPolicy the value to be set.
        */
       override fun dynamoDbStreamReadPolicy(dynamoDbStreamReadPolicy: IResolvable) {
-        cdkBuilder.dynamoDbStreamReadPolicy(dynamoDbStreamReadPolicy.let(IResolvable::unwrap))
+        cdkBuilder.dynamoDbStreamReadPolicy(dynamoDbStreamReadPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dynamoDbStreamReadPolicy the value to be set.
        */
       override fun dynamoDbStreamReadPolicy(dynamoDbStreamReadPolicy: TableStreamSAMPTProperty) {
-        cdkBuilder.dynamoDbStreamReadPolicy(dynamoDbStreamReadPolicy.let(TableStreamSAMPTProperty::unwrap))
+        cdkBuilder.dynamoDbStreamReadPolicy(dynamoDbStreamReadPolicy.let(TableStreamSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9479,14 +9479,14 @@ public open class CfnFunction(
        * @param dynamoDbWritePolicy the value to be set.
        */
       override fun dynamoDbWritePolicy(dynamoDbWritePolicy: IResolvable) {
-        cdkBuilder.dynamoDbWritePolicy(dynamoDbWritePolicy.let(IResolvable::unwrap))
+        cdkBuilder.dynamoDbWritePolicy(dynamoDbWritePolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dynamoDbWritePolicy the value to be set.
        */
       override fun dynamoDbWritePolicy(dynamoDbWritePolicy: TableSAMPTProperty) {
-        cdkBuilder.dynamoDbWritePolicy(dynamoDbWritePolicy.let(TableSAMPTProperty::unwrap))
+        cdkBuilder.dynamoDbWritePolicy(dynamoDbWritePolicy.let(TableSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9501,14 +9501,14 @@ public open class CfnFunction(
        * @param ec2DescribePolicy the value to be set.
        */
       override fun ec2DescribePolicy(ec2DescribePolicy: IResolvable) {
-        cdkBuilder.ec2DescribePolicy(ec2DescribePolicy.let(IResolvable::unwrap))
+        cdkBuilder.ec2DescribePolicy(ec2DescribePolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param ec2DescribePolicy the value to be set.
        */
       override fun ec2DescribePolicy(ec2DescribePolicy: EmptySAMPTProperty) {
-        cdkBuilder.ec2DescribePolicy(ec2DescribePolicy.let(EmptySAMPTProperty::unwrap))
+        cdkBuilder.ec2DescribePolicy(ec2DescribePolicy.let(EmptySAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9523,14 +9523,14 @@ public open class CfnFunction(
        * @param elasticsearchHttpPostPolicy the value to be set.
        */
       override fun elasticsearchHttpPostPolicy(elasticsearchHttpPostPolicy: IResolvable) {
-        cdkBuilder.elasticsearchHttpPostPolicy(elasticsearchHttpPostPolicy.let(IResolvable::unwrap))
+        cdkBuilder.elasticsearchHttpPostPolicy(elasticsearchHttpPostPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param elasticsearchHttpPostPolicy the value to be set.
        */
       override fun elasticsearchHttpPostPolicy(elasticsearchHttpPostPolicy: DomainSAMPTProperty) {
-        cdkBuilder.elasticsearchHttpPostPolicy(elasticsearchHttpPostPolicy.let(DomainSAMPTProperty::unwrap))
+        cdkBuilder.elasticsearchHttpPostPolicy(elasticsearchHttpPostPolicy.let(DomainSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9546,14 +9546,14 @@ public open class CfnFunction(
        * @param filterLogEventsPolicy the value to be set.
        */
       override fun filterLogEventsPolicy(filterLogEventsPolicy: IResolvable) {
-        cdkBuilder.filterLogEventsPolicy(filterLogEventsPolicy.let(IResolvable::unwrap))
+        cdkBuilder.filterLogEventsPolicy(filterLogEventsPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param filterLogEventsPolicy the value to be set.
        */
       override fun filterLogEventsPolicy(filterLogEventsPolicy: LogGroupSAMPTProperty) {
-        cdkBuilder.filterLogEventsPolicy(filterLogEventsPolicy.let(LogGroupSAMPTProperty::unwrap))
+        cdkBuilder.filterLogEventsPolicy(filterLogEventsPolicy.let(LogGroupSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9569,14 +9569,14 @@ public open class CfnFunction(
        * @param kinesisCrudPolicy the value to be set.
        */
       override fun kinesisCrudPolicy(kinesisCrudPolicy: IResolvable) {
-        cdkBuilder.kinesisCrudPolicy(kinesisCrudPolicy.let(IResolvable::unwrap))
+        cdkBuilder.kinesisCrudPolicy(kinesisCrudPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param kinesisCrudPolicy the value to be set.
        */
       override fun kinesisCrudPolicy(kinesisCrudPolicy: StreamSAMPTProperty) {
-        cdkBuilder.kinesisCrudPolicy(kinesisCrudPolicy.let(StreamSAMPTProperty::unwrap))
+        cdkBuilder.kinesisCrudPolicy(kinesisCrudPolicy.let(StreamSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9591,14 +9591,14 @@ public open class CfnFunction(
        * @param kinesisStreamReadPolicy the value to be set.
        */
       override fun kinesisStreamReadPolicy(kinesisStreamReadPolicy: IResolvable) {
-        cdkBuilder.kinesisStreamReadPolicy(kinesisStreamReadPolicy.let(IResolvable::unwrap))
+        cdkBuilder.kinesisStreamReadPolicy(kinesisStreamReadPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param kinesisStreamReadPolicy the value to be set.
        */
       override fun kinesisStreamReadPolicy(kinesisStreamReadPolicy: StreamSAMPTProperty) {
-        cdkBuilder.kinesisStreamReadPolicy(kinesisStreamReadPolicy.let(StreamSAMPTProperty::unwrap))
+        cdkBuilder.kinesisStreamReadPolicy(kinesisStreamReadPolicy.let(StreamSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9614,14 +9614,14 @@ public open class CfnFunction(
        * @param kmsDecryptPolicy the value to be set.
        */
       override fun kmsDecryptPolicy(kmsDecryptPolicy: IResolvable) {
-        cdkBuilder.kmsDecryptPolicy(kmsDecryptPolicy.let(IResolvable::unwrap))
+        cdkBuilder.kmsDecryptPolicy(kmsDecryptPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param kmsDecryptPolicy the value to be set.
        */
       override fun kmsDecryptPolicy(kmsDecryptPolicy: KeySAMPTProperty) {
-        cdkBuilder.kmsDecryptPolicy(kmsDecryptPolicy.let(KeySAMPTProperty::unwrap))
+        cdkBuilder.kmsDecryptPolicy(kmsDecryptPolicy.let(KeySAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9636,14 +9636,14 @@ public open class CfnFunction(
        * @param lambdaInvokePolicy the value to be set.
        */
       override fun lambdaInvokePolicy(lambdaInvokePolicy: IResolvable) {
-        cdkBuilder.lambdaInvokePolicy(lambdaInvokePolicy.let(IResolvable::unwrap))
+        cdkBuilder.lambdaInvokePolicy(lambdaInvokePolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param lambdaInvokePolicy the value to be set.
        */
       override fun lambdaInvokePolicy(lambdaInvokePolicy: FunctionSAMPTProperty) {
-        cdkBuilder.lambdaInvokePolicy(lambdaInvokePolicy.let(FunctionSAMPTProperty::unwrap))
+        cdkBuilder.lambdaInvokePolicy(lambdaInvokePolicy.let(FunctionSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9658,14 +9658,14 @@ public open class CfnFunction(
        * @param rekognitionDetectOnlyPolicy the value to be set.
        */
       override fun rekognitionDetectOnlyPolicy(rekognitionDetectOnlyPolicy: IResolvable) {
-        cdkBuilder.rekognitionDetectOnlyPolicy(rekognitionDetectOnlyPolicy.let(IResolvable::unwrap))
+        cdkBuilder.rekognitionDetectOnlyPolicy(rekognitionDetectOnlyPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param rekognitionDetectOnlyPolicy the value to be set.
        */
       override fun rekognitionDetectOnlyPolicy(rekognitionDetectOnlyPolicy: EmptySAMPTProperty) {
-        cdkBuilder.rekognitionDetectOnlyPolicy(rekognitionDetectOnlyPolicy.let(EmptySAMPTProperty::unwrap))
+        cdkBuilder.rekognitionDetectOnlyPolicy(rekognitionDetectOnlyPolicy.let(EmptySAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9681,14 +9681,14 @@ public open class CfnFunction(
        * @param rekognitionLabelsPolicy the value to be set.
        */
       override fun rekognitionLabelsPolicy(rekognitionLabelsPolicy: IResolvable) {
-        cdkBuilder.rekognitionLabelsPolicy(rekognitionLabelsPolicy.let(IResolvable::unwrap))
+        cdkBuilder.rekognitionLabelsPolicy(rekognitionLabelsPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param rekognitionLabelsPolicy the value to be set.
        */
       override fun rekognitionLabelsPolicy(rekognitionLabelsPolicy: EmptySAMPTProperty) {
-        cdkBuilder.rekognitionLabelsPolicy(rekognitionLabelsPolicy.let(EmptySAMPTProperty::unwrap))
+        cdkBuilder.rekognitionLabelsPolicy(rekognitionLabelsPolicy.let(EmptySAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9704,7 +9704,7 @@ public open class CfnFunction(
        * @param rekognitionNoDataAccessPolicy the value to be set.
        */
       override fun rekognitionNoDataAccessPolicy(rekognitionNoDataAccessPolicy: IResolvable) {
-        cdkBuilder.rekognitionNoDataAccessPolicy(rekognitionNoDataAccessPolicy.let(IResolvable::unwrap))
+        cdkBuilder.rekognitionNoDataAccessPolicy(rekognitionNoDataAccessPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9712,7 +9712,7 @@ public open class CfnFunction(
        */
       override
           fun rekognitionNoDataAccessPolicy(rekognitionNoDataAccessPolicy: CollectionSAMPTProperty) {
-        cdkBuilder.rekognitionNoDataAccessPolicy(rekognitionNoDataAccessPolicy.let(CollectionSAMPTProperty::unwrap))
+        cdkBuilder.rekognitionNoDataAccessPolicy(rekognitionNoDataAccessPolicy.let(CollectionSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9729,14 +9729,14 @@ public open class CfnFunction(
        * @param rekognitionReadPolicy the value to be set.
        */
       override fun rekognitionReadPolicy(rekognitionReadPolicy: IResolvable) {
-        cdkBuilder.rekognitionReadPolicy(rekognitionReadPolicy.let(IResolvable::unwrap))
+        cdkBuilder.rekognitionReadPolicy(rekognitionReadPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param rekognitionReadPolicy the value to be set.
        */
       override fun rekognitionReadPolicy(rekognitionReadPolicy: CollectionSAMPTProperty) {
-        cdkBuilder.rekognitionReadPolicy(rekognitionReadPolicy.let(CollectionSAMPTProperty::unwrap))
+        cdkBuilder.rekognitionReadPolicy(rekognitionReadPolicy.let(CollectionSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9752,7 +9752,7 @@ public open class CfnFunction(
        * @param rekognitionWriteOnlyAccessPolicy the value to be set.
        */
       override fun rekognitionWriteOnlyAccessPolicy(rekognitionWriteOnlyAccessPolicy: IResolvable) {
-        cdkBuilder.rekognitionWriteOnlyAccessPolicy(rekognitionWriteOnlyAccessPolicy.let(IResolvable::unwrap))
+        cdkBuilder.rekognitionWriteOnlyAccessPolicy(rekognitionWriteOnlyAccessPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9760,7 +9760,7 @@ public open class CfnFunction(
        */
       override
           fun rekognitionWriteOnlyAccessPolicy(rekognitionWriteOnlyAccessPolicy: CollectionSAMPTProperty) {
-        cdkBuilder.rekognitionWriteOnlyAccessPolicy(rekognitionWriteOnlyAccessPolicy.let(CollectionSAMPTProperty::unwrap))
+        cdkBuilder.rekognitionWriteOnlyAccessPolicy(rekognitionWriteOnlyAccessPolicy.let(CollectionSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9777,14 +9777,14 @@ public open class CfnFunction(
        * @param s3CrudPolicy the value to be set.
        */
       override fun s3CrudPolicy(s3CrudPolicy: IResolvable) {
-        cdkBuilder.s3CrudPolicy(s3CrudPolicy.let(IResolvable::unwrap))
+        cdkBuilder.s3CrudPolicy(s3CrudPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3CrudPolicy the value to be set.
        */
       override fun s3CrudPolicy(s3CrudPolicy: BucketSAMPTProperty) {
-        cdkBuilder.s3CrudPolicy(s3CrudPolicy.let(BucketSAMPTProperty::unwrap))
+        cdkBuilder.s3CrudPolicy(s3CrudPolicy.let(BucketSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9799,14 +9799,14 @@ public open class CfnFunction(
        * @param s3ReadPolicy the value to be set.
        */
       override fun s3ReadPolicy(s3ReadPolicy: IResolvable) {
-        cdkBuilder.s3ReadPolicy(s3ReadPolicy.let(IResolvable::unwrap))
+        cdkBuilder.s3ReadPolicy(s3ReadPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3ReadPolicy the value to be set.
        */
       override fun s3ReadPolicy(s3ReadPolicy: BucketSAMPTProperty) {
-        cdkBuilder.s3ReadPolicy(s3ReadPolicy.let(BucketSAMPTProperty::unwrap))
+        cdkBuilder.s3ReadPolicy(s3ReadPolicy.let(BucketSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9821,14 +9821,14 @@ public open class CfnFunction(
        * @param s3WritePolicy the value to be set.
        */
       override fun s3WritePolicy(s3WritePolicy: IResolvable) {
-        cdkBuilder.s3WritePolicy(s3WritePolicy.let(IResolvable::unwrap))
+        cdkBuilder.s3WritePolicy(s3WritePolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3WritePolicy the value to be set.
        */
       override fun s3WritePolicy(s3WritePolicy: BucketSAMPTProperty) {
-        cdkBuilder.s3WritePolicy(s3WritePolicy.let(BucketSAMPTProperty::unwrap))
+        cdkBuilder.s3WritePolicy(s3WritePolicy.let(BucketSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9843,14 +9843,14 @@ public open class CfnFunction(
        * @param sesBulkTemplatedCrudPolicy the value to be set.
        */
       override fun sesBulkTemplatedCrudPolicy(sesBulkTemplatedCrudPolicy: IResolvable) {
-        cdkBuilder.sesBulkTemplatedCrudPolicy(sesBulkTemplatedCrudPolicy.let(IResolvable::unwrap))
+        cdkBuilder.sesBulkTemplatedCrudPolicy(sesBulkTemplatedCrudPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sesBulkTemplatedCrudPolicy the value to be set.
        */
       override fun sesBulkTemplatedCrudPolicy(sesBulkTemplatedCrudPolicy: IdentitySAMPTProperty) {
-        cdkBuilder.sesBulkTemplatedCrudPolicy(sesBulkTemplatedCrudPolicy.let(IdentitySAMPTProperty::unwrap))
+        cdkBuilder.sesBulkTemplatedCrudPolicy(sesBulkTemplatedCrudPolicy.let(IdentitySAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9866,14 +9866,14 @@ public open class CfnFunction(
        * @param sesCrudPolicy the value to be set.
        */
       override fun sesCrudPolicy(sesCrudPolicy: IResolvable) {
-        cdkBuilder.sesCrudPolicy(sesCrudPolicy.let(IResolvable::unwrap))
+        cdkBuilder.sesCrudPolicy(sesCrudPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sesCrudPolicy the value to be set.
        */
       override fun sesCrudPolicy(sesCrudPolicy: IdentitySAMPTProperty) {
-        cdkBuilder.sesCrudPolicy(sesCrudPolicy.let(IdentitySAMPTProperty::unwrap))
+        cdkBuilder.sesCrudPolicy(sesCrudPolicy.let(IdentitySAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9888,14 +9888,14 @@ public open class CfnFunction(
        * @param sesEmailTemplateCrudPolicy the value to be set.
        */
       override fun sesEmailTemplateCrudPolicy(sesEmailTemplateCrudPolicy: IResolvable) {
-        cdkBuilder.sesEmailTemplateCrudPolicy(sesEmailTemplateCrudPolicy.let(IResolvable::unwrap))
+        cdkBuilder.sesEmailTemplateCrudPolicy(sesEmailTemplateCrudPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sesEmailTemplateCrudPolicy the value to be set.
        */
       override fun sesEmailTemplateCrudPolicy(sesEmailTemplateCrudPolicy: EmptySAMPTProperty) {
-        cdkBuilder.sesEmailTemplateCrudPolicy(sesEmailTemplateCrudPolicy.let(EmptySAMPTProperty::unwrap))
+        cdkBuilder.sesEmailTemplateCrudPolicy(sesEmailTemplateCrudPolicy.let(EmptySAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9911,14 +9911,14 @@ public open class CfnFunction(
        * @param sesSendBouncePolicy the value to be set.
        */
       override fun sesSendBouncePolicy(sesSendBouncePolicy: IResolvable) {
-        cdkBuilder.sesSendBouncePolicy(sesSendBouncePolicy.let(IResolvable::unwrap))
+        cdkBuilder.sesSendBouncePolicy(sesSendBouncePolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sesSendBouncePolicy the value to be set.
        */
       override fun sesSendBouncePolicy(sesSendBouncePolicy: IdentitySAMPTProperty) {
-        cdkBuilder.sesSendBouncePolicy(sesSendBouncePolicy.let(IdentitySAMPTProperty::unwrap))
+        cdkBuilder.sesSendBouncePolicy(sesSendBouncePolicy.let(IdentitySAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9934,14 +9934,14 @@ public open class CfnFunction(
        * @param snsCrudPolicy the value to be set.
        */
       override fun snsCrudPolicy(snsCrudPolicy: IResolvable) {
-        cdkBuilder.snsCrudPolicy(snsCrudPolicy.let(IResolvable::unwrap))
+        cdkBuilder.snsCrudPolicy(snsCrudPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param snsCrudPolicy the value to be set.
        */
       override fun snsCrudPolicy(snsCrudPolicy: TopicSAMPTProperty) {
-        cdkBuilder.snsCrudPolicy(snsCrudPolicy.let(TopicSAMPTProperty::unwrap))
+        cdkBuilder.snsCrudPolicy(snsCrudPolicy.let(TopicSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9956,14 +9956,14 @@ public open class CfnFunction(
        * @param snsPublishMessagePolicy the value to be set.
        */
       override fun snsPublishMessagePolicy(snsPublishMessagePolicy: IResolvable) {
-        cdkBuilder.snsPublishMessagePolicy(snsPublishMessagePolicy.let(IResolvable::unwrap))
+        cdkBuilder.snsPublishMessagePolicy(snsPublishMessagePolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param snsPublishMessagePolicy the value to be set.
        */
       override fun snsPublishMessagePolicy(snsPublishMessagePolicy: TopicSAMPTProperty) {
-        cdkBuilder.snsPublishMessagePolicy(snsPublishMessagePolicy.let(TopicSAMPTProperty::unwrap))
+        cdkBuilder.snsPublishMessagePolicy(snsPublishMessagePolicy.let(TopicSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -9979,14 +9979,14 @@ public open class CfnFunction(
        * @param sqsPollerPolicy the value to be set.
        */
       override fun sqsPollerPolicy(sqsPollerPolicy: IResolvable) {
-        cdkBuilder.sqsPollerPolicy(sqsPollerPolicy.let(IResolvable::unwrap))
+        cdkBuilder.sqsPollerPolicy(sqsPollerPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sqsPollerPolicy the value to be set.
        */
       override fun sqsPollerPolicy(sqsPollerPolicy: QueueSAMPTProperty) {
-        cdkBuilder.sqsPollerPolicy(sqsPollerPolicy.let(QueueSAMPTProperty::unwrap))
+        cdkBuilder.sqsPollerPolicy(sqsPollerPolicy.let(QueueSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -10001,14 +10001,14 @@ public open class CfnFunction(
        * @param sqsSendMessagePolicy the value to be set.
        */
       override fun sqsSendMessagePolicy(sqsSendMessagePolicy: IResolvable) {
-        cdkBuilder.sqsSendMessagePolicy(sqsSendMessagePolicy.let(IResolvable::unwrap))
+        cdkBuilder.sqsSendMessagePolicy(sqsSendMessagePolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sqsSendMessagePolicy the value to be set.
        */
       override fun sqsSendMessagePolicy(sqsSendMessagePolicy: QueueSAMPTProperty) {
-        cdkBuilder.sqsSendMessagePolicy(sqsSendMessagePolicy.let(QueueSAMPTProperty::unwrap))
+        cdkBuilder.sqsSendMessagePolicy(sqsSendMessagePolicy.let(QueueSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -10024,14 +10024,14 @@ public open class CfnFunction(
        * @param ssmParameterReadPolicy the value to be set.
        */
       override fun ssmParameterReadPolicy(ssmParameterReadPolicy: IResolvable) {
-        cdkBuilder.ssmParameterReadPolicy(ssmParameterReadPolicy.let(IResolvable::unwrap))
+        cdkBuilder.ssmParameterReadPolicy(ssmParameterReadPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param ssmParameterReadPolicy the value to be set.
        */
       override fun ssmParameterReadPolicy(ssmParameterReadPolicy: ParameterNameSAMPTProperty) {
-        cdkBuilder.ssmParameterReadPolicy(ssmParameterReadPolicy.let(ParameterNameSAMPTProperty::unwrap))
+        cdkBuilder.ssmParameterReadPolicy(ssmParameterReadPolicy.let(ParameterNameSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -10047,7 +10047,7 @@ public open class CfnFunction(
        * @param stepFunctionsExecutionPolicy the value to be set.
        */
       override fun stepFunctionsExecutionPolicy(stepFunctionsExecutionPolicy: IResolvable) {
-        cdkBuilder.stepFunctionsExecutionPolicy(stepFunctionsExecutionPolicy.let(IResolvable::unwrap))
+        cdkBuilder.stepFunctionsExecutionPolicy(stepFunctionsExecutionPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10055,7 +10055,7 @@ public open class CfnFunction(
        */
       override
           fun stepFunctionsExecutionPolicy(stepFunctionsExecutionPolicy: StateMachineSAMPTProperty) {
-        cdkBuilder.stepFunctionsExecutionPolicy(stepFunctionsExecutionPolicy.let(StateMachineSAMPTProperty::unwrap))
+        cdkBuilder.stepFunctionsExecutionPolicy(stepFunctionsExecutionPolicy.let(StateMachineSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -10072,14 +10072,14 @@ public open class CfnFunction(
        * @param vpcAccessPolicy the value to be set.
        */
       override fun vpcAccessPolicy(vpcAccessPolicy: IResolvable) {
-        cdkBuilder.vpcAccessPolicy(vpcAccessPolicy.let(IResolvable::unwrap))
+        cdkBuilder.vpcAccessPolicy(vpcAccessPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param vpcAccessPolicy the value to be set.
        */
       override fun vpcAccessPolicy(vpcAccessPolicy: EmptySAMPTProperty) {
-        cdkBuilder.vpcAccessPolicy(vpcAccessPolicy.let(EmptySAMPTProperty::unwrap))
+        cdkBuilder.vpcAccessPolicy(vpcAccessPolicy.let(EmptySAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -10448,7 +10448,7 @@ public open class CfnFunction(
        * @param enabled the value to be set.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10602,7 +10602,7 @@ public open class CfnFunction(
        * @param enabled the value to be set.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**

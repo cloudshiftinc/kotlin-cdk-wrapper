@@ -174,7 +174,7 @@ public interface NumericConditions {
      * @param between Match values that are between the specified values.
      */
     override fun between(between: BetweenCondition) {
-      cdkBuilder.between(between.let(BetweenCondition::unwrap))
+      cdkBuilder.between(between.let(BetweenCondition.Companion::unwrap))
     }
 
     /**
@@ -189,7 +189,7 @@ public interface NumericConditions {
      * @param betweenStrict Match values that are strictly between the specified values.
      */
     override fun betweenStrict(betweenStrict: BetweenCondition) {
-      cdkBuilder.betweenStrict(betweenStrict.let(BetweenCondition::unwrap))
+      cdkBuilder.betweenStrict(betweenStrict.let(BetweenCondition.Companion::unwrap))
     }
 
     /**

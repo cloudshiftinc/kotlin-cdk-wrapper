@@ -60,7 +60,7 @@ public abstract class ListenerCondition(
         pathPatterns(values.toList())
 
     public fun queryStrings(values: List<QueryStringCondition>): ListenerCondition =
-        software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCondition.queryStrings(values.map(QueryStringCondition::unwrap)).let(ListenerCondition::wrap)
+        software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCondition.queryStrings(values.map(QueryStringCondition.Companion::unwrap)).let(ListenerCondition::wrap)
 
     public fun queryStrings(vararg values: QueryStringCondition): ListenerCondition =
         queryStrings(values.toList())

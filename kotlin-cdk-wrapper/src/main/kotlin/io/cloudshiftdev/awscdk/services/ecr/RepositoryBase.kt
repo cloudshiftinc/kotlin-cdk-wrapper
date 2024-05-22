@@ -29,7 +29,7 @@ public abstract class RepositoryBase(
    * @param statement 
    */
   public override fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
-      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement::unwrap)).let(AddToResourcePolicyResult::wrap)
+      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
 
   /**
    * Add a policy statement to the repository's resource policy.
@@ -48,8 +48,8 @@ public abstract class RepositoryBase(
    * @param actions 
    */
   public override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
-      as String}.toTypedArray()).let(Grant::wrap)
+      unwrap(this).grant(grantee.let(IGrantable.Companion::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Grant the given identity permissions to use the images in this repository.
@@ -57,7 +57,7 @@ public abstract class RepositoryBase(
    * @param grantee 
    */
   public override fun grantPull(grantee: IGrantable): Grant =
-      unwrap(this).grantPull(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantPull(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant the given identity permissions to pull and push images to this repository.
@@ -65,7 +65,7 @@ public abstract class RepositoryBase(
    * @param grantee 
    */
   public override fun grantPullPush(grantee: IGrantable): Grant =
-      unwrap(this).grantPullPush(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantPullPush(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant the given identity permissions to use the images in this repository.
@@ -73,7 +73,7 @@ public abstract class RepositoryBase(
    * @param grantee 
    */
   public override fun grantPush(grantee: IGrantable): Grant =
-      unwrap(this).grantPush(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantPush(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant the given identity permissions to read the images in this repository.
@@ -81,7 +81,7 @@ public abstract class RepositoryBase(
    * @param grantee 
    */
   public override fun grantRead(grantee: IGrantable): Grant =
-      unwrap(this).grantRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Define a CloudWatch event that triggers when something happens to this repository.
@@ -105,7 +105,8 @@ public abstract class RepositoryBase(
    * @param options Options for adding the rule.
    */
   public override fun onCloudTrailEvent(id: String, options: OnEventOptions): Rule =
-      unwrap(this).onCloudTrailEvent(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      unwrap(this).onCloudTrailEvent(id,
+      options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Define a CloudWatch event that triggers when something happens to this repository.
@@ -146,7 +147,7 @@ public abstract class RepositoryBase(
    */
   public override fun onCloudTrailImagePushed(id: String, options: OnCloudTrailImagePushedOptions):
       Rule = unwrap(this).onCloudTrailImagePushed(id,
-      options.let(OnCloudTrailImagePushedOptions::unwrap)).let(Rule::wrap)
+      options.let(OnCloudTrailImagePushedOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines an AWS CloudWatch event rule that can trigger a target when an image is pushed to this
@@ -185,7 +186,7 @@ public abstract class RepositoryBase(
    * @param options
    */
   public override fun onEvent(id: String, options: OnEventOptions): Rule = unwrap(this).onEvent(id,
-      options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines a CloudWatch event rule which triggers for repository events.
@@ -218,7 +219,7 @@ public abstract class RepositoryBase(
    */
   public override fun onImageScanCompleted(id: String, options: OnImageScanCompletedOptions): Rule =
       unwrap(this).onImageScanCompleted(id,
-      options.let(OnImageScanCompletedOptions::unwrap)).let(Rule::wrap)
+      options.let(OnImageScanCompletedOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines an AWS CloudWatch event rule that can trigger a target when an image scan is completed.

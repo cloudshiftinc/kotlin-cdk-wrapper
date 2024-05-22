@@ -59,8 +59,8 @@ public open class CfnAgentAlias(
     id: String,
     props: CfnAgentAliasProps,
   ) :
-      this(software.amazon.awscdk.services.bedrock.CfnAgentAlias(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAgentAliasProps::unwrap))
+      this(software.amazon.awscdk.services.bedrock.CfnAgentAlias(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAgentAliasProps.Companion::unwrap))
   )
 
   public constructor(
@@ -157,7 +157,7 @@ public open class CfnAgentAlias(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -169,7 +169,7 @@ public open class CfnAgentAlias(
    * Contains details about the routing configuration of the alias.
    */
   public open fun routingConfiguration(`value`: IResolvable) {
-    unwrap(this).setRoutingConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRoutingConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -314,7 +314,7 @@ public open class CfnAgentAlias(
      * @param routingConfiguration Contains details about the routing configuration of the alias. 
      */
     override fun routingConfiguration(routingConfiguration: IResolvable) {
-      cdkBuilder.routingConfiguration(routingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.routingConfiguration(routingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -477,7 +477,7 @@ public open class CfnAgentAlias(
        * alias is associated.
        */
       override fun routingConfiguration(routingConfiguration: IResolvable) {
-        cdkBuilder.routingConfiguration(routingConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.routingConfiguration(routingConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**

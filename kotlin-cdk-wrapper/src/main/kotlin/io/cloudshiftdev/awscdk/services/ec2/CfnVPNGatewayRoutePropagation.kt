@@ -47,8 +47,8 @@ public open class CfnVPNGatewayRoutePropagation(
     id: String,
     props: CfnVPNGatewayRoutePropagationProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnVPNGatewayRoutePropagation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVPNGatewayRoutePropagationProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnVPNGatewayRoutePropagation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVPNGatewayRoutePropagationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -69,7 +69,7 @@ public open class CfnVPNGatewayRoutePropagation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

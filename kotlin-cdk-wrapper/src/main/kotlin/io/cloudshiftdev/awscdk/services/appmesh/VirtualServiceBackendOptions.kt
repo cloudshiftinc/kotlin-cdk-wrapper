@@ -72,7 +72,7 @@ public interface VirtualServiceBackendOptions {
      * @param tlsClientPolicy TLS properties for  Client policy for the backend.
      */
     override fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy) {
-      cdkBuilder.tlsClientPolicy(tlsClientPolicy.let(TlsClientPolicy::unwrap))
+      cdkBuilder.tlsClientPolicy(tlsClientPolicy.let(TlsClientPolicy.Companion::unwrap))
     }
 
     /**

@@ -58,8 +58,8 @@ public open class CfnDBProxyEndpoint(
     id: String,
     props: CfnDBProxyEndpointProps,
   ) :
-      this(software.amazon.awscdk.services.rds.CfnDBProxyEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDBProxyEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.rds.CfnDBProxyEndpoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDBProxyEndpointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -130,7 +130,7 @@ public open class CfnDBProxyEndpoint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -143,7 +143,7 @@ public open class CfnDBProxyEndpoint(
    * An optional set of key-value pairs to associate arbitrary data of your choosing with the proxy.
    */
   public open fun tags(`value`: List<TagFormatProperty>) {
-    unwrap(this).setTags(`value`.map(TagFormatProperty::unwrap))
+    unwrap(this).setTags(`value`.map(TagFormatProperty.Companion::unwrap))
   }
 
   /**
@@ -337,7 +337,7 @@ public open class CfnDBProxyEndpoint(
      * with the proxy. 
      */
     override fun tags(tags: List<TagFormatProperty>) {
-      cdkBuilder.tags(tags.map(TagFormatProperty::unwrap))
+      cdkBuilder.tags(tags.map(TagFormatProperty.Companion::unwrap))
     }
 
     /**

@@ -134,8 +134,8 @@ public open class CfnDataset(
     id: String,
     props: CfnDatasetProps,
   ) :
-      this(software.amazon.awscdk.services.databrew.CfnDataset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDatasetProps::unwrap))
+      this(software.amazon.awscdk.services.databrew.CfnDataset(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDatasetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -166,14 +166,14 @@ public open class CfnDataset(
    * A set of options that define how DataBrew interprets the data in the dataset.
    */
   public open fun formatOptions(`value`: IResolvable) {
-    unwrap(this).setFormatOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFormatOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A set of options that define how DataBrew interprets the data in the dataset.
    */
   public open fun formatOptions(`value`: FormatOptionsProperty) {
-    unwrap(this).setFormatOptions(`value`.let(FormatOptionsProperty::unwrap))
+    unwrap(this).setFormatOptions(`value`.let(FormatOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -195,7 +195,7 @@ public open class CfnDataset(
    * S3 .
    */
   public open fun input(`value`: IResolvable) {
-    unwrap(this).setInput(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInput(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -203,7 +203,7 @@ public open class CfnDataset(
    * S3 .
    */
   public open fun input(`value`: InputProperty) {
-    unwrap(this).setInput(`value`.let(InputProperty::unwrap))
+    unwrap(this).setInput(`value`.let(InputProperty.Companion::unwrap))
   }
 
   /**
@@ -221,7 +221,7 @@ public open class CfnDataset(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -245,14 +245,14 @@ public open class CfnDataset(
    * A set of options that defines how DataBrew interprets an Amazon S3 path of the dataset.
    */
   public open fun pathOptions(`value`: IResolvable) {
-    unwrap(this).setPathOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPathOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A set of options that defines how DataBrew interprets an Amazon S3 path of the dataset.
    */
   public open fun pathOptions(`value`: PathOptionsProperty) {
-    unwrap(this).setPathOptions(`value`.let(PathOptionsProperty::unwrap))
+    unwrap(this).setPathOptions(`value`.let(PathOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -278,7 +278,7 @@ public open class CfnDataset(
    * Metadata tags that have been applied to the dataset.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -439,7 +439,7 @@ public open class CfnDataset(
      * dataset. 
      */
     override fun formatOptions(formatOptions: IResolvable) {
-      cdkBuilder.formatOptions(formatOptions.let(IResolvable::unwrap))
+      cdkBuilder.formatOptions(formatOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -450,7 +450,7 @@ public open class CfnDataset(
      * dataset. 
      */
     override fun formatOptions(formatOptions: FormatOptionsProperty) {
-      cdkBuilder.formatOptions(formatOptions.let(FormatOptionsProperty::unwrap))
+      cdkBuilder.formatOptions(formatOptions.let(FormatOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -474,7 +474,7 @@ public open class CfnDataset(
      * Catalog or Amazon S3 . 
      */
     override fun input(input: IResolvable) {
-      cdkBuilder.input(input.let(IResolvable::unwrap))
+      cdkBuilder.input(input.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -486,7 +486,7 @@ public open class CfnDataset(
      * Catalog or Amazon S3 . 
      */
     override fun input(input: InputProperty) {
-      cdkBuilder.input(input.let(InputProperty::unwrap))
+      cdkBuilder.input(input.let(InputProperty.Companion::unwrap))
     }
 
     /**
@@ -519,7 +519,7 @@ public open class CfnDataset(
      * the dataset. 
      */
     override fun pathOptions(pathOptions: IResolvable) {
-      cdkBuilder.pathOptions(pathOptions.let(IResolvable::unwrap))
+      cdkBuilder.pathOptions(pathOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -530,7 +530,7 @@ public open class CfnDataset(
      * the dataset. 
      */
     override fun pathOptions(pathOptions: PathOptionsProperty) {
-      cdkBuilder.pathOptions(pathOptions.let(PathOptionsProperty::unwrap))
+      cdkBuilder.pathOptions(pathOptions.let(PathOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -552,7 +552,7 @@ public open class CfnDataset(
      * @param tags Metadata tags that have been applied to the dataset. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -675,7 +675,7 @@ public open class CfnDataset(
        * If this value is false, column names are auto-generated.
        */
       override fun headerRow(headerRow: IResolvable) {
-        cdkBuilder.headerRow(headerRow.let(IResolvable::unwrap))
+        cdkBuilder.headerRow(headerRow.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.databrew.CfnDataset.CsvOptionsProperty =
@@ -852,7 +852,7 @@ public open class CfnDataset(
        * directory.
        */
       override fun tempDirectory(tempDirectory: IResolvable) {
-        cdkBuilder.tempDirectory(tempDirectory.let(IResolvable::unwrap))
+        cdkBuilder.tempDirectory(tempDirectory.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -860,7 +860,7 @@ public open class CfnDataset(
        * directory.
        */
       override fun tempDirectory(tempDirectory: S3LocationProperty) {
-        cdkBuilder.tempDirectory(tempDirectory.let(S3LocationProperty::unwrap))
+        cdkBuilder.tempDirectory(tempDirectory.let(S3LocationProperty.Companion::unwrap))
       }
 
       /**
@@ -1063,7 +1063,7 @@ public open class CfnDataset(
        * directory.
        */
       override fun tempDirectory(tempDirectory: IResolvable) {
-        cdkBuilder.tempDirectory(tempDirectory.let(IResolvable::unwrap))
+        cdkBuilder.tempDirectory(tempDirectory.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1071,7 +1071,7 @@ public open class CfnDataset(
        * directory.
        */
       override fun tempDirectory(tempDirectory: S3LocationProperty) {
-        cdkBuilder.tempDirectory(tempDirectory.let(S3LocationProperty::unwrap))
+        cdkBuilder.tempDirectory(tempDirectory.let(S3LocationProperty.Companion::unwrap))
       }
 
       /**
@@ -1300,7 +1300,7 @@ public open class CfnDataset(
        * parameter should be loaded as an additional column in the dataset.
        */
       override fun createColumn(createColumn: IResolvable) {
-        cdkBuilder.createColumn(createColumn.let(IResolvable::unwrap))
+        cdkBuilder.createColumn(createColumn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1308,7 +1308,7 @@ public open class CfnDataset(
        * Required for datetime parameters.
        */
       override fun datetimeOptions(datetimeOptions: IResolvable) {
-        cdkBuilder.datetimeOptions(datetimeOptions.let(IResolvable::unwrap))
+        cdkBuilder.datetimeOptions(datetimeOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1316,7 +1316,7 @@ public open class CfnDataset(
        * Required for datetime parameters.
        */
       override fun datetimeOptions(datetimeOptions: DatetimeOptionsProperty) {
-        cdkBuilder.datetimeOptions(datetimeOptions.let(DatetimeOptionsProperty::unwrap))
+        cdkBuilder.datetimeOptions(datetimeOptions.let(DatetimeOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -1333,7 +1333,7 @@ public open class CfnDataset(
        * criteria to the parameter.
        */
       override fun filter(filter: IResolvable) {
-        cdkBuilder.filter(filter.let(IResolvable::unwrap))
+        cdkBuilder.filter(filter.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1341,7 +1341,7 @@ public open class CfnDataset(
        * criteria to the parameter.
        */
       override fun filter(filter: FilterExpressionProperty) {
-        cdkBuilder.filter(filter.let(FilterExpressionProperty::unwrap))
+        cdkBuilder.filter(filter.let(FilterExpressionProperty.Companion::unwrap))
       }
 
       /**
@@ -1714,7 +1714,7 @@ public open class CfnDataset(
        * If this value is false, column names are auto-generated.
        */
       override fun headerRow(headerRow: IResolvable) {
-        cdkBuilder.headerRow(headerRow.let(IResolvable::unwrap))
+        cdkBuilder.headerRow(headerRow.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1722,7 +1722,7 @@ public open class CfnDataset(
        * the dataset.
        */
       override fun sheetIndexes(sheetIndexes: IResolvable) {
-        cdkBuilder.sheetIndexes(sheetIndexes.let(IResolvable::unwrap))
+        cdkBuilder.sheetIndexes(sheetIndexes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2050,7 +2050,7 @@ public open class CfnDataset(
        * expression. 
        */
       override fun valuesMap(valuesMap: IResolvable) {
-        cdkBuilder.valuesMap(valuesMap.let(IResolvable::unwrap))
+        cdkBuilder.valuesMap(valuesMap.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2337,14 +2337,14 @@ public open class CfnDataset(
        * @param csv Options that define how CSV input is to be interpreted by DataBrew.
        */
       override fun csv(csv: IResolvable) {
-        cdkBuilder.csv(csv.let(IResolvable::unwrap))
+        cdkBuilder.csv(csv.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param csv Options that define how CSV input is to be interpreted by DataBrew.
        */
       override fun csv(csv: CsvOptionsProperty) {
-        cdkBuilder.csv(csv.let(CsvOptionsProperty::unwrap))
+        cdkBuilder.csv(csv.let(CsvOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -2359,14 +2359,14 @@ public open class CfnDataset(
        * @param excel Options that define how Excel input is to be interpreted by DataBrew.
        */
       override fun excel(excel: IResolvable) {
-        cdkBuilder.excel(excel.let(IResolvable::unwrap))
+        cdkBuilder.excel(excel.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param excel Options that define how Excel input is to be interpreted by DataBrew.
        */
       override fun excel(excel: ExcelOptionsProperty) {
-        cdkBuilder.excel(excel.let(ExcelOptionsProperty::unwrap))
+        cdkBuilder.excel(excel.let(ExcelOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -2381,14 +2381,14 @@ public open class CfnDataset(
        * @param json Options that define how JSON input is to be interpreted by DataBrew.
        */
       override fun json(json: IResolvable) {
-        cdkBuilder.json(json.let(IResolvable::unwrap))
+        cdkBuilder.json(json.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param json Options that define how JSON input is to be interpreted by DataBrew.
        */
       override fun json(json: JsonOptionsProperty) {
-        cdkBuilder.json(json.let(JsonOptionsProperty::unwrap))
+        cdkBuilder.json(json.let(JsonOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -2609,7 +2609,7 @@ public open class CfnDataset(
        * @param dataCatalogInputDefinition The AWS Glue Data Catalog parameters for the data.
        */
       override fun dataCatalogInputDefinition(dataCatalogInputDefinition: IResolvable) {
-        cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(IResolvable::unwrap))
+        cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2617,7 +2617,7 @@ public open class CfnDataset(
        */
       override
           fun dataCatalogInputDefinition(dataCatalogInputDefinition: DataCatalogInputDefinitionProperty) {
-        cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(DataCatalogInputDefinitionProperty::unwrap))
+        cdkBuilder.dataCatalogInputDefinition(dataCatalogInputDefinition.let(DataCatalogInputDefinitionProperty.Companion::unwrap))
       }
 
       /**
@@ -2635,7 +2635,7 @@ public open class CfnDataset(
        * database.
        */
       override fun databaseInputDefinition(databaseInputDefinition: IResolvable) {
-        cdkBuilder.databaseInputDefinition(databaseInputDefinition.let(IResolvable::unwrap))
+        cdkBuilder.databaseInputDefinition(databaseInputDefinition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2644,7 +2644,7 @@ public open class CfnDataset(
        */
       override
           fun databaseInputDefinition(databaseInputDefinition: DatabaseInputDefinitionProperty) {
-        cdkBuilder.databaseInputDefinition(databaseInputDefinition.let(DatabaseInputDefinitionProperty::unwrap))
+        cdkBuilder.databaseInputDefinition(databaseInputDefinition.let(DatabaseInputDefinitionProperty.Companion::unwrap))
       }
 
       /**
@@ -2661,14 +2661,14 @@ public open class CfnDataset(
        * @param metadata Contains additional resource information needed for specific datasets.
        */
       override fun metadata(metadata: IResolvable) {
-        cdkBuilder.metadata(metadata.let(IResolvable::unwrap))
+        cdkBuilder.metadata(metadata.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param metadata Contains additional resource information needed for specific datasets.
        */
       override fun metadata(metadata: MetadataProperty) {
-        cdkBuilder.metadata(metadata.let(MetadataProperty::unwrap))
+        cdkBuilder.metadata(metadata.let(MetadataProperty.Companion::unwrap))
       }
 
       /**
@@ -2683,14 +2683,14 @@ public open class CfnDataset(
        * @param s3InputDefinition The Amazon S3 location where the data is stored.
        */
       override fun s3InputDefinition(s3InputDefinition: IResolvable) {
-        cdkBuilder.s3InputDefinition(s3InputDefinition.let(IResolvable::unwrap))
+        cdkBuilder.s3InputDefinition(s3InputDefinition.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3InputDefinition The Amazon S3 location where the data is stored.
        */
       override fun s3InputDefinition(s3InputDefinition: S3LocationProperty) {
-        cdkBuilder.s3InputDefinition(s3InputDefinition.let(S3LocationProperty::unwrap))
+        cdkBuilder.s3InputDefinition(s3InputDefinition.let(S3LocationProperty.Companion::unwrap))
       }
 
       /**
@@ -2814,7 +2814,7 @@ public open class CfnDataset(
        * characters.
        */
       override fun multiLine(multiLine: IResolvable) {
-        cdkBuilder.multiLine(multiLine.let(IResolvable::unwrap))
+        cdkBuilder.multiLine(multiLine.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.databrew.CfnDataset.JsonOptionsProperty =
@@ -3086,7 +3086,7 @@ public open class CfnDataset(
        * should be selected.
        */
       override fun filesLimit(filesLimit: IResolvable) {
-        cdkBuilder.filesLimit(filesLimit.let(IResolvable::unwrap))
+        cdkBuilder.filesLimit(filesLimit.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3094,7 +3094,7 @@ public open class CfnDataset(
        * should be selected.
        */
       override fun filesLimit(filesLimit: FilesLimitProperty) {
-        cdkBuilder.filesLimit(filesLimit.let(FilesLimitProperty::unwrap))
+        cdkBuilder.filesLimit(filesLimit.let(FilesLimitProperty.Companion::unwrap))
       }
 
       /**
@@ -3111,7 +3111,7 @@ public open class CfnDataset(
        * matching Amazon S3 objects based on their LastModifiedDate attribute in Amazon S3 .
        */
       override fun lastModifiedDateCondition(lastModifiedDateCondition: IResolvable) {
-        cdkBuilder.lastModifiedDateCondition(lastModifiedDateCondition.let(IResolvable::unwrap))
+        cdkBuilder.lastModifiedDateCondition(lastModifiedDateCondition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3119,7 +3119,7 @@ public open class CfnDataset(
        * matching Amazon S3 objects based on their LastModifiedDate attribute in Amazon S3 .
        */
       override fun lastModifiedDateCondition(lastModifiedDateCondition: FilterExpressionProperty) {
-        cdkBuilder.lastModifiedDateCondition(lastModifiedDateCondition.let(FilterExpressionProperty::unwrap))
+        cdkBuilder.lastModifiedDateCondition(lastModifiedDateCondition.let(FilterExpressionProperty.Companion::unwrap))
       }
 
       /**
@@ -3137,7 +3137,7 @@ public open class CfnDataset(
        * dataset to their definitions.
        */
       override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3292,14 +3292,14 @@ public open class CfnDataset(
        * @param datasetParameter The path parameter definition. 
        */
       override fun datasetParameter(datasetParameter: IResolvable) {
-        cdkBuilder.datasetParameter(datasetParameter.let(IResolvable::unwrap))
+        cdkBuilder.datasetParameter(datasetParameter.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param datasetParameter The path parameter definition. 
        */
       override fun datasetParameter(datasetParameter: DatasetParameterProperty) {
-        cdkBuilder.datasetParameter(datasetParameter.let(DatasetParameterProperty::unwrap))
+        cdkBuilder.datasetParameter(datasetParameter.let(DatasetParameterProperty.Companion::unwrap))
       }
 
       /**

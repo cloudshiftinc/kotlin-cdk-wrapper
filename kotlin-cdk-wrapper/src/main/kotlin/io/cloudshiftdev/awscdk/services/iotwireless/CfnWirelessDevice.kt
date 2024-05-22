@@ -86,8 +86,8 @@ public open class CfnWirelessDevice(
     id: String,
     props: CfnWirelessDeviceProps,
   ) :
-      this(software.amazon.awscdk.services.iotwireless.CfnWirelessDevice(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnWirelessDeviceProps::unwrap))
+      this(software.amazon.awscdk.services.iotwireless.CfnWirelessDevice(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnWirelessDeviceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -144,7 +144,7 @@ public open class CfnWirelessDevice(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -168,14 +168,14 @@ public open class CfnWirelessDevice(
    * The device configuration information to use to create the wireless device.
    */
   public open fun loRaWan(`value`: IResolvable) {
-    unwrap(this).setLoRaWan(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoRaWan(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The device configuration information to use to create the wireless device.
    */
   public open fun loRaWan(`value`: LoRaWANDeviceProperty) {
-    unwrap(this).setLoRaWan(`value`.let(LoRaWANDeviceProperty::unwrap))
+    unwrap(this).setLoRaWan(`value`.let(LoRaWANDeviceProperty.Companion::unwrap))
   }
 
   /**
@@ -225,7 +225,7 @@ public open class CfnWirelessDevice(
    * The tags are an array of key-value pairs to attach to the specified resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -428,7 +428,7 @@ public open class CfnWirelessDevice(
      * @param loRaWan The device configuration information to use to create the wireless device. 
      */
     override fun loRaWan(loRaWan: IResolvable) {
-      cdkBuilder.loRaWan(loRaWan.let(IResolvable::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -440,7 +440,7 @@ public open class CfnWirelessDevice(
      * @param loRaWan The device configuration information to use to create the wireless device. 
      */
     override fun loRaWan(loRaWan: LoRaWANDeviceProperty) {
-      cdkBuilder.loRaWan(loRaWan.let(LoRaWANDeviceProperty::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(LoRaWANDeviceProperty.Companion::unwrap))
     }
 
     /**
@@ -486,7 +486,7 @@ public open class CfnWirelessDevice(
      * @param tags The tags are an array of key-value pairs to attach to the specified resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -623,14 +623,14 @@ public open class CfnWirelessDevice(
        * @param sessionKeys Session keys for ABP v1.0.x. 
        */
       override fun sessionKeys(sessionKeys: IResolvable) {
-        cdkBuilder.sessionKeys(sessionKeys.let(IResolvable::unwrap))
+        cdkBuilder.sessionKeys(sessionKeys.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sessionKeys Session keys for ABP v1.0.x. 
        */
       override fun sessionKeys(sessionKeys: SessionKeysAbpV10xProperty) {
-        cdkBuilder.sessionKeys(sessionKeys.let(SessionKeysAbpV10xProperty::unwrap))
+        cdkBuilder.sessionKeys(sessionKeys.let(SessionKeysAbpV10xProperty.Companion::unwrap))
       }
 
       /**
@@ -763,14 +763,14 @@ public open class CfnWirelessDevice(
        * @param sessionKeys Session keys for ABP v1.1. 
        */
       override fun sessionKeys(sessionKeys: IResolvable) {
-        cdkBuilder.sessionKeys(sessionKeys.let(IResolvable::unwrap))
+        cdkBuilder.sessionKeys(sessionKeys.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sessionKeys Session keys for ABP v1.1. 
        */
       override fun sessionKeys(sessionKeys: SessionKeysAbpV11Property) {
-        cdkBuilder.sessionKeys(sessionKeys.let(SessionKeysAbpV11Property::unwrap))
+        cdkBuilder.sessionKeys(sessionKeys.let(SessionKeysAbpV11Property.Companion::unwrap))
       }
 
       /**
@@ -1014,14 +1014,14 @@ public open class CfnWirelessDevice(
        * @param abpV10X ABP device object for LoRaWAN specification v1.0.x.
        */
       override fun abpV10X(abpV10X: IResolvable) {
-        cdkBuilder.abpV10X(abpV10X.let(IResolvable::unwrap))
+        cdkBuilder.abpV10X(abpV10X.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param abpV10X ABP device object for LoRaWAN specification v1.0.x.
        */
       override fun abpV10X(abpV10X: AbpV10xProperty) {
-        cdkBuilder.abpV10X(abpV10X.let(AbpV10xProperty::unwrap))
+        cdkBuilder.abpV10X(abpV10X.let(AbpV10xProperty.Companion::unwrap))
       }
 
       /**
@@ -1036,14 +1036,14 @@ public open class CfnWirelessDevice(
        * @param abpV11 ABP device object for create APIs for v1.1.
        */
       override fun abpV11(abpV11: IResolvable) {
-        cdkBuilder.abpV11(abpV11.let(IResolvable::unwrap))
+        cdkBuilder.abpV11(abpV11.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param abpV11 ABP device object for create APIs for v1.1.
        */
       override fun abpV11(abpV11: AbpV11Property) {
-        cdkBuilder.abpV11(abpV11.let(AbpV11Property::unwrap))
+        cdkBuilder.abpV11(abpV11.let(AbpV11Property.Companion::unwrap))
       }
 
       /**
@@ -1072,14 +1072,14 @@ public open class CfnWirelessDevice(
        * @param otaaV10X OTAA device object for create APIs for v1.0.x.
        */
       override fun otaaV10X(otaaV10X: IResolvable) {
-        cdkBuilder.otaaV10X(otaaV10X.let(IResolvable::unwrap))
+        cdkBuilder.otaaV10X(otaaV10X.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param otaaV10X OTAA device object for create APIs for v1.0.x.
        */
       override fun otaaV10X(otaaV10X: OtaaV10xProperty) {
-        cdkBuilder.otaaV10X(otaaV10X.let(OtaaV10xProperty::unwrap))
+        cdkBuilder.otaaV10X(otaaV10X.let(OtaaV10xProperty.Companion::unwrap))
       }
 
       /**
@@ -1094,14 +1094,14 @@ public open class CfnWirelessDevice(
        * @param otaaV11 OTAA device object for v1.1 for create APIs.
        */
       override fun otaaV11(otaaV11: IResolvable) {
-        cdkBuilder.otaaV11(otaaV11.let(IResolvable::unwrap))
+        cdkBuilder.otaaV11(otaaV11.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param otaaV11 OTAA device object for v1.1 for create APIs.
        */
       override fun otaaV11(otaaV11: OtaaV11Property) {
-        cdkBuilder.otaaV11(otaaV11.let(OtaaV11Property::unwrap))
+        cdkBuilder.otaaV11(otaaV11.let(OtaaV11Property.Companion::unwrap))
       }
 
       /**

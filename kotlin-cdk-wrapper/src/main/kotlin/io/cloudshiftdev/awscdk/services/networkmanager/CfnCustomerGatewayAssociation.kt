@@ -45,8 +45,8 @@ public open class CfnCustomerGatewayAssociation(
     id: String,
     props: CfnCustomerGatewayAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.networkmanager.CfnCustomerGatewayAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCustomerGatewayAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.networkmanager.CfnCustomerGatewayAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCustomerGatewayAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -98,7 +98,7 @@ public open class CfnCustomerGatewayAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

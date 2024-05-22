@@ -38,8 +38,8 @@ public open class MetricFilter(
     id: String,
     props: MetricFilterProps,
   ) :
-      this(software.amazon.awscdk.services.logs.MetricFilter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(MetricFilterProps::unwrap))
+      this(software.amazon.awscdk.services.logs.MetricFilter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(MetricFilterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -66,7 +66,7 @@ public open class MetricFilter(
    * @param props
    */
   public open fun metric(props: MetricOptions): Metric =
-      unwrap(this).metric(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Return the given named metric for this Metric Filter.
@@ -222,7 +222,7 @@ public open class MetricFilter(
      * @param filterPattern Pattern to search for log events. 
      */
     override fun filterPattern(filterPattern: IFilterPattern) {
-      cdkBuilder.filterPattern(filterPattern.let(IFilterPattern::unwrap))
+      cdkBuilder.filterPattern(filterPattern.let(IFilterPattern.Companion::unwrap))
     }
 
     /**
@@ -231,7 +231,7 @@ public open class MetricFilter(
      * @param logGroup The log group to create the filter on. 
      */
     override fun logGroup(logGroup: ILogGroup) {
-      cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
+      cdkBuilder.logGroup(logGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -282,7 +282,7 @@ public open class MetricFilter(
      * @param unit The unit to assign to the metric. 
      */
     override fun unit(unit: CloudwatchUnit) {
-      cdkBuilder.unit(unit.let(CloudwatchUnit::unwrap))
+      cdkBuilder.unit(unit.let(CloudwatchUnit.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.logs.MetricFilter = cdkBuilder.build()

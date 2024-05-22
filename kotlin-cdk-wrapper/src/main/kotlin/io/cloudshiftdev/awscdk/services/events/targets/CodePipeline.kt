@@ -37,13 +37,13 @@ public open class CodePipeline(
   cdkObject: software.amazon.awscdk.services.events.targets.CodePipeline,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(pipeline: CloudshiftdevAwscdkServicesCodepipelineIPipeline) :
-      this(software.amazon.awscdk.services.events.targets.CodePipeline(pipeline.let(CloudshiftdevAwscdkServicesCodepipelineIPipeline::unwrap))
+      this(software.amazon.awscdk.services.events.targets.CodePipeline(pipeline.let(CloudshiftdevAwscdkServicesCodepipelineIPipeline.Companion::unwrap))
   )
 
   public constructor(pipeline: CloudshiftdevAwscdkServicesCodepipelineIPipeline,
       options: CodePipelineTargetOptions) :
-      this(software.amazon.awscdk.services.events.targets.CodePipeline(pipeline.let(CloudshiftdevAwscdkServicesCodepipelineIPipeline::unwrap),
-      options.let(CodePipelineTargetOptions::unwrap))
+      this(software.amazon.awscdk.services.events.targets.CodePipeline(pipeline.let(CloudshiftdevAwscdkServicesCodepipelineIPipeline.Companion::unwrap),
+      options.let(CodePipelineTargetOptions.Companion::unwrap))
   )
 
   public constructor(pipeline: CloudshiftdevAwscdkServicesCodepipelineIPipeline,
@@ -60,7 +60,7 @@ public open class CodePipeline(
    * @param _id
    */
   public override fun bind(rule: IRule): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap)).let(RuleTargetConfig::wrap)
 
   /**
    * Returns the rule target specification.
@@ -71,7 +71,7 @@ public open class CodePipeline(
    * @param _id
    */
   public override fun bind(rule: IRule, id: String): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap), id).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap), id).let(RuleTargetConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.events.targets.CodePipeline].
@@ -161,7 +161,7 @@ public open class CodePipeline(
      * 
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -174,7 +174,7 @@ public open class CodePipeline(
      * given rule is triggered. 
      */
     override fun eventRole(eventRole: IRole) {
-      cdkBuilder.eventRole(eventRole.let(IRole::unwrap))
+      cdkBuilder.eventRole(eventRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -189,7 +189,7 @@ public open class CodePipeline(
      * processing. 
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**

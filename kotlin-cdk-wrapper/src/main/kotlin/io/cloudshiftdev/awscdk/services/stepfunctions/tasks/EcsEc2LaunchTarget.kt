@@ -54,7 +54,7 @@ public open class EcsEc2LaunchTarget(
   )
 
   public constructor(options: EcsEc2LaunchTargetOptions) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.EcsEc2LaunchTarget(options.let(EcsEc2LaunchTargetOptions::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EcsEc2LaunchTarget(options.let(EcsEc2LaunchTargetOptions.Companion::unwrap))
   )
 
   public constructor(options: EcsEc2LaunchTargetOptions.Builder.() -> Unit) :
@@ -68,8 +68,8 @@ public open class EcsEc2LaunchTarget(
    * @param launchTargetOptions 
    */
   public override fun bind(task: EcsRunTask, launchTargetOptions: LaunchTargetBindOptions):
-      EcsLaunchTargetConfig = unwrap(this).bind(task.let(EcsRunTask::unwrap),
-      launchTargetOptions.let(LaunchTargetBindOptions::unwrap)).let(EcsLaunchTargetConfig::wrap)
+      EcsLaunchTargetConfig = unwrap(this).bind(task.let(EcsRunTask.Companion::unwrap),
+      launchTargetOptions.let(LaunchTargetBindOptions.Companion::unwrap)).let(EcsLaunchTargetConfig::wrap)
 
   /**
    * Called when the EC2 launch type is configured on RunTask.
@@ -138,7 +138,7 @@ public open class EcsEc2LaunchTarget(
      * @param placementConstraints Placement constraints. 
      */
     override fun placementConstraints(placementConstraints: List<PlacementConstraint>) {
-      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint::unwrap))
+      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint.Companion::unwrap))
     }
 
     /**
@@ -159,7 +159,7 @@ public open class EcsEc2LaunchTarget(
      * @param placementStrategies Placement strategies. 
      */
     override fun placementStrategies(placementStrategies: List<PlacementStrategy>) {
-      cdkBuilder.placementStrategies(placementStrategies.map(PlacementStrategy::unwrap))
+      cdkBuilder.placementStrategies(placementStrategies.map(PlacementStrategy.Companion::unwrap))
     }
 
     /**

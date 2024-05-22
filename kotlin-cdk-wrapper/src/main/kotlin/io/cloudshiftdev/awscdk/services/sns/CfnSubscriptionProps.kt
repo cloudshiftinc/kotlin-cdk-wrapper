@@ -378,7 +378,7 @@ public interface CfnSubscriptionProps {
      * in the *Amazon SNS API Reference* .
      */
     override fun rawMessageDelivery(rawMessageDelivery: IResolvable) {
-      cdkBuilder.rawMessageDelivery(rawMessageDelivery.let(IResolvable::unwrap))
+      cdkBuilder.rawMessageDelivery(rawMessageDelivery.let(IResolvable.Companion::unwrap))
     }
 
     /**

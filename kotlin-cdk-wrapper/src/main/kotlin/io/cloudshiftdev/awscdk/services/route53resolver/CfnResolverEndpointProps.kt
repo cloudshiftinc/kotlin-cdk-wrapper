@@ -302,7 +302,7 @@ public interface CfnResolverEndpointProps {
      * Even though the minimum is 1, Route 53 requires that you create at least two.
      */
     override fun ipAddresses(ipAddresses: IResolvable) {
-      cdkBuilder.ipAddresses(ipAddresses.let(IResolvable::unwrap))
+      cdkBuilder.ipAddresses(ipAddresses.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -427,7 +427,7 @@ public interface CfnResolverEndpointProps {
      * @param tags Route 53 Resolver doesn't support updating tags through CloudFormation.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

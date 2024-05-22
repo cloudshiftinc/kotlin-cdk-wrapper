@@ -157,7 +157,7 @@ public interface CorsRule {
      * @param allowedMethods An HTTP method that you allow the origin to execute. 
      */
     override fun allowedMethods(allowedMethods: List<HttpMethods>) {
-      cdkBuilder.allowedMethods(allowedMethods.map(HttpMethods::unwrap))
+      cdkBuilder.allowedMethods(allowedMethods.map(HttpMethods.Companion::unwrap))
     }
 
     /**

@@ -177,7 +177,7 @@ public interface CfnListenerProps {
      * Each listener has a default rule. The default rule is used if no other rules match.
      */
     override fun defaultAction(defaultAction: IResolvable) {
-      cdkBuilder.defaultAction(defaultAction.let(IResolvable::unwrap))
+      cdkBuilder.defaultAction(defaultAction.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -185,7 +185,7 @@ public interface CfnListenerProps {
      * Each listener has a default rule. The default rule is used if no other rules match.
      */
     override fun defaultAction(defaultAction: CfnListener.DefaultActionProperty) {
-      cdkBuilder.defaultAction(defaultAction.let(CfnListener.DefaultActionProperty::unwrap))
+      cdkBuilder.defaultAction(defaultAction.let(CfnListener.DefaultActionProperty.Companion::unwrap))
     }
 
     /**
@@ -237,7 +237,7 @@ public interface CfnListenerProps {
      * @param tags The tags for the listener.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

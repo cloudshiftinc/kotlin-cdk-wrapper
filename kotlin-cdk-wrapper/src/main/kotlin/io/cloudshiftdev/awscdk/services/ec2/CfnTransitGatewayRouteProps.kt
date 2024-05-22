@@ -106,7 +106,7 @@ public interface CfnTransitGatewayRouteProps {
      * @param blackhole Indicates whether to drop traffic that matches this route.
      */
     override fun blackhole(blackhole: IResolvable) {
-      cdkBuilder.blackhole(blackhole.let(IResolvable::unwrap))
+      cdkBuilder.blackhole(blackhole.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -289,7 +289,7 @@ public interface CfnStudioComponentProps {
      * @param configuration The configuration of the studio component, based on component type.
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -297,7 +297,7 @@ public interface CfnStudioComponentProps {
      */
     override
         fun configuration(configuration: CfnStudioComponent.StudioComponentConfigurationProperty) {
-      cdkBuilder.configuration(configuration.let(CfnStudioComponent.StudioComponentConfigurationProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(CfnStudioComponent.StudioComponentConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -335,7 +335,7 @@ public interface CfnStudioComponentProps {
      * @param initializationScripts Initialization scripts for studio components.
      */
     override fun initializationScripts(initializationScripts: IResolvable) {
-      cdkBuilder.initializationScripts(initializationScripts.let(IResolvable::unwrap))
+      cdkBuilder.initializationScripts(initializationScripts.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -370,7 +370,7 @@ public interface CfnStudioComponentProps {
      * @param scriptParameters Parameters for the studio component scripts.
      */
     override fun scriptParameters(scriptParameters: IResolvable) {
-      cdkBuilder.scriptParameters(scriptParameters.let(IResolvable::unwrap))
+      cdkBuilder.scriptParameters(scriptParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**

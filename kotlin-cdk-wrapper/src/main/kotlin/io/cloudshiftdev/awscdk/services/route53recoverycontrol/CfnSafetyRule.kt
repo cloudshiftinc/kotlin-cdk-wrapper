@@ -85,8 +85,8 @@ public open class CfnSafetyRule(
     id: String,
     props: CfnSafetyRuleProps,
   ) :
-      this(software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSafetyRuleProps::unwrap))
+      this(software.amazon.awscdk.services.route53recoverycontrol.CfnSafetyRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSafetyRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -107,7 +107,7 @@ public open class CfnSafetyRule(
    * that you set in the rule configuration is met.
    */
   public open fun assertionRule(`value`: IResolvable) {
-    unwrap(this).setAssertionRule(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAssertionRule(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -115,7 +115,7 @@ public open class CfnSafetyRule(
    * that you set in the rule configuration is met.
    */
   public open fun assertionRule(`value`: AssertionRuleProperty) {
-    unwrap(this).setAssertionRule(`value`.let(AssertionRuleProperty::unwrap))
+    unwrap(this).setAssertionRule(`value`.let(AssertionRuleProperty.Companion::unwrap))
   }
 
   /**
@@ -164,7 +164,7 @@ public open class CfnSafetyRule(
    * control state changes to complete.
    */
   public open fun gatingRule(`value`: IResolvable) {
-    unwrap(this).setGatingRule(`value`.let(IResolvable::unwrap))
+    unwrap(this).setGatingRule(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -173,7 +173,7 @@ public open class CfnSafetyRule(
    * control state changes to complete.
    */
   public open fun gatingRule(`value`: GatingRuleProperty) {
-    unwrap(this).setGatingRule(`value`.let(GatingRuleProperty::unwrap))
+    unwrap(this).setGatingRule(`value`.let(GatingRuleProperty.Companion::unwrap))
   }
 
   /**
@@ -192,7 +192,7 @@ public open class CfnSafetyRule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -218,7 +218,7 @@ public open class CfnSafetyRule(
    * many control states must be `ON` as the result of a transaction.
    */
   public open fun ruleConfig(`value`: IResolvable) {
-    unwrap(this).setRuleConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRuleConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -226,7 +226,7 @@ public open class CfnSafetyRule(
    * many control states must be `ON` as the result of a transaction.
    */
   public open fun ruleConfig(`value`: RuleConfigProperty) {
-    unwrap(this).setRuleConfig(`value`.let(RuleConfigProperty::unwrap))
+    unwrap(this).setRuleConfig(`value`.let(RuleConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -253,7 +253,7 @@ public open class CfnSafetyRule(
    * The tags associated with the safety rule.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -472,7 +472,7 @@ public open class CfnSafetyRule(
      * state, that the criteria that you set in the rule configuration is met. 
      */
     override fun assertionRule(assertionRule: IResolvable) {
-      cdkBuilder.assertionRule(assertionRule.let(IResolvable::unwrap))
+      cdkBuilder.assertionRule(assertionRule.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -489,7 +489,7 @@ public open class CfnSafetyRule(
      * state, that the criteria that you set in the rule configuration is met. 
      */
     override fun assertionRule(assertionRule: AssertionRuleProperty) {
-      cdkBuilder.assertionRule(assertionRule.let(AssertionRuleProperty::unwrap))
+      cdkBuilder.assertionRule(assertionRule.let(AssertionRuleProperty.Companion::unwrap))
     }
 
     /**
@@ -537,7 +537,7 @@ public open class CfnSafetyRule(
      * allows a set of routing control state changes to complete. 
      */
     override fun gatingRule(gatingRule: IResolvable) {
-      cdkBuilder.gatingRule(gatingRule.let(IResolvable::unwrap))
+      cdkBuilder.gatingRule(gatingRule.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -557,7 +557,7 @@ public open class CfnSafetyRule(
      * allows a set of routing control state changes to complete. 
      */
     override fun gatingRule(gatingRule: GatingRuleProperty) {
-      cdkBuilder.gatingRule(gatingRule.let(GatingRuleProperty::unwrap))
+      cdkBuilder.gatingRule(gatingRule.let(GatingRuleProperty.Companion::unwrap))
     }
 
     /**
@@ -607,7 +607,7 @@ public open class CfnSafetyRule(
      * controls) that designate how many control states must be `ON` as the result of a transaction. 
      */
     override fun ruleConfig(ruleConfig: IResolvable) {
-      cdkBuilder.ruleConfig(ruleConfig.let(IResolvable::unwrap))
+      cdkBuilder.ruleConfig(ruleConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -623,7 +623,7 @@ public open class CfnSafetyRule(
      * controls) that designate how many control states must be `ON` as the result of a transaction. 
      */
     override fun ruleConfig(ruleConfig: RuleConfigProperty) {
-      cdkBuilder.ruleConfig(ruleConfig.let(RuleConfigProperty::unwrap))
+      cdkBuilder.ruleConfig(ruleConfig.let(RuleConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -650,7 +650,7 @@ public open class CfnSafetyRule(
      * @param tags The tags associated with the safety rule. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1170,7 +1170,7 @@ public open class CfnSafetyRule(
        * If the rule would usually evaluate true, it's evaluated as false, and vice versa.
        */
       override fun inverted(inverted: IResolvable) {
-        cdkBuilder.inverted(inverted.let(IResolvable::unwrap))
+        cdkBuilder.inverted(inverted.let(IResolvable.Companion::unwrap))
       }
 
       /**

@@ -96,8 +96,8 @@ public open class CfnExport(
     id: String,
     props: CfnExportProps,
   ) :
-      this(software.amazon.awscdk.services.bcmdataexports.CfnExport(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnExportProps::unwrap))
+      this(software.amazon.awscdk.services.bcmdataexports.CfnExport(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnExportProps.Companion::unwrap))
   )
 
   public constructor(
@@ -127,14 +127,14 @@ public open class CfnExport(
    * The details that are available for an export.
    */
   public open fun export(`value`: IResolvable) {
-    unwrap(this).setExport(`value`.let(IResolvable::unwrap))
+    unwrap(this).setExport(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The details that are available for an export.
    */
   public open fun export(`value`: ExportProperty) {
-    unwrap(this).setExport(`value`.let(ExportProperty::unwrap))
+    unwrap(this).setExport(`value`.let(ExportProperty.Companion::unwrap))
   }
 
   /**
@@ -151,7 +151,7 @@ public open class CfnExport(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -164,7 +164,7 @@ public open class CfnExport(
    *
    */
   public open fun tags(`value`: List<ResourceTagProperty>) {
-    unwrap(this).setTags(`value`.map(ResourceTagProperty::unwrap))
+    unwrap(this).setTags(`value`.map(ResourceTagProperty.Companion::unwrap))
   }
 
   /**
@@ -230,7 +230,7 @@ public open class CfnExport(
      * @param export The details that are available for an export. 
      */
     override fun export(export: IResolvable) {
-      cdkBuilder.export(export.let(IResolvable::unwrap))
+      cdkBuilder.export(export.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -240,7 +240,7 @@ public open class CfnExport(
      * @param export The details that are available for an export. 
      */
     override fun export(export: ExportProperty) {
-      cdkBuilder.export(export.let(ExportProperty::unwrap))
+      cdkBuilder.export(export.let(ExportProperty.Companion::unwrap))
     }
 
     /**
@@ -259,7 +259,7 @@ public open class CfnExport(
      * @param tags 
      */
     override fun tags(tags: List<ResourceTagProperty>) {
-      cdkBuilder.tags(tags.map(ResourceTagProperty::unwrap))
+      cdkBuilder.tags(tags.map(ResourceTagProperty.Companion::unwrap))
     }
 
     /**
@@ -365,7 +365,7 @@ public open class CfnExport(
        * @param tableConfigurations The table configuration.
        */
       override fun tableConfigurations(tableConfigurations: IResolvable) {
-        cdkBuilder.tableConfigurations(tableConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.tableConfigurations(tableConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -483,14 +483,14 @@ public open class CfnExport(
        * @param s3Destination An object that describes the destination of the data exports file. 
        */
       override fun s3Destination(s3Destination: IResolvable) {
-        cdkBuilder.s3Destination(s3Destination.let(IResolvable::unwrap))
+        cdkBuilder.s3Destination(s3Destination.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3Destination An object that describes the destination of the data exports file. 
        */
       override fun s3Destination(s3Destination: S3DestinationProperty) {
-        cdkBuilder.s3Destination(s3Destination.let(S3DestinationProperty::unwrap))
+        cdkBuilder.s3Destination(s3Destination.let(S3DestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -707,14 +707,14 @@ public open class CfnExport(
        * @param dataQuery The data query for this specific data export. 
        */
       override fun dataQuery(dataQuery: IResolvable) {
-        cdkBuilder.dataQuery(dataQuery.let(IResolvable::unwrap))
+        cdkBuilder.dataQuery(dataQuery.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dataQuery The data query for this specific data export. 
        */
       override fun dataQuery(dataQuery: DataQueryProperty) {
-        cdkBuilder.dataQuery(dataQuery.let(DataQueryProperty::unwrap))
+        cdkBuilder.dataQuery(dataQuery.let(DataQueryProperty.Companion::unwrap))
       }
 
       /**
@@ -737,7 +737,7 @@ public open class CfnExport(
        * export. 
        */
       override fun destinationConfigurations(destinationConfigurations: IResolvable) {
-        cdkBuilder.destinationConfigurations(destinationConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.destinationConfigurations(destinationConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -746,7 +746,7 @@ public open class CfnExport(
        */
       override
           fun destinationConfigurations(destinationConfigurations: DestinationConfigurationsProperty) {
-        cdkBuilder.destinationConfigurations(destinationConfigurations.let(DestinationConfigurationsProperty::unwrap))
+        cdkBuilder.destinationConfigurations(destinationConfigurations.let(DestinationConfigurationsProperty.Companion::unwrap))
       }
 
       /**
@@ -778,14 +778,14 @@ public open class CfnExport(
        * @param refreshCadence The cadence for AWS to update the export in your S3 bucket. 
        */
       override fun refreshCadence(refreshCadence: IResolvable) {
-        cdkBuilder.refreshCadence(refreshCadence.let(IResolvable::unwrap))
+        cdkBuilder.refreshCadence(refreshCadence.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param refreshCadence The cadence for AWS to update the export in your S3 bucket. 
        */
       override fun refreshCadence(refreshCadence: RefreshCadenceProperty) {
-        cdkBuilder.refreshCadence(refreshCadence.let(RefreshCadenceProperty::unwrap))
+        cdkBuilder.refreshCadence(refreshCadence.let(RefreshCadenceProperty.Companion::unwrap))
       }
 
       /**
@@ -1170,14 +1170,14 @@ public open class CfnExport(
        * @param s3OutputConfigurations The output configuration for the data export. 
        */
       override fun s3OutputConfigurations(s3OutputConfigurations: IResolvable) {
-        cdkBuilder.s3OutputConfigurations(s3OutputConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.s3OutputConfigurations(s3OutputConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3OutputConfigurations The output configuration for the data export. 
        */
       override fun s3OutputConfigurations(s3OutputConfigurations: S3OutputConfigurationsProperty) {
-        cdkBuilder.s3OutputConfigurations(s3OutputConfigurations.let(S3OutputConfigurationsProperty::unwrap))
+        cdkBuilder.s3OutputConfigurations(s3OutputConfigurations.let(S3OutputConfigurationsProperty.Companion::unwrap))
       }
 
       /**

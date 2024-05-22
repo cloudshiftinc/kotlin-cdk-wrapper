@@ -33,7 +33,7 @@ public abstract class VirtualServiceProvider(
    * @param _construct 
    */
   public open fun bind(construct: Construct): VirtualServiceProviderConfig =
-      unwrap(this).bind(construct.let(Construct::unwrap)).let(VirtualServiceProviderConfig::wrap)
+      unwrap(this).bind(construct.let(Construct.Companion::unwrap)).let(VirtualServiceProviderConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceProvider,
@@ -41,13 +41,13 @@ public abstract class VirtualServiceProvider(
 
   public companion object {
     public fun none(mesh: IMesh): VirtualServiceProvider =
-        software.amazon.awscdk.services.appmesh.VirtualServiceProvider.none(mesh.let(IMesh::unwrap)).let(VirtualServiceProvider::wrap)
+        software.amazon.awscdk.services.appmesh.VirtualServiceProvider.none(mesh.let(IMesh.Companion::unwrap)).let(VirtualServiceProvider::wrap)
 
     public fun virtualNode(virtualNode: IVirtualNode): VirtualServiceProvider =
-        software.amazon.awscdk.services.appmesh.VirtualServiceProvider.virtualNode(virtualNode.let(IVirtualNode::unwrap)).let(VirtualServiceProvider::wrap)
+        software.amazon.awscdk.services.appmesh.VirtualServiceProvider.virtualNode(virtualNode.let(IVirtualNode.Companion::unwrap)).let(VirtualServiceProvider::wrap)
 
     public fun virtualRouter(virtualRouter: IVirtualRouter): VirtualServiceProvider =
-        software.amazon.awscdk.services.appmesh.VirtualServiceProvider.virtualRouter(virtualRouter.let(IVirtualRouter::unwrap)).let(VirtualServiceProvider::wrap)
+        software.amazon.awscdk.services.appmesh.VirtualServiceProvider.virtualRouter(virtualRouter.let(IVirtualRouter.Companion::unwrap)).let(VirtualServiceProvider::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.VirtualServiceProvider):
         VirtualServiceProvider = CdkObjectWrappers.wrap(cdkObject) as? VirtualServiceProvider ?:

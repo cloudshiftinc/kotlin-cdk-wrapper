@@ -154,7 +154,7 @@ public interface CfnAllowListProps {
      * ignore.
      */
     override fun criteria(criteria: IResolvable) {
-      cdkBuilder.criteria(criteria.let(IResolvable::unwrap))
+      cdkBuilder.criteria(criteria.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -164,7 +164,7 @@ public interface CfnAllowListProps {
      * ignore.
      */
     override fun criteria(criteria: CfnAllowList.CriteriaProperty) {
-      cdkBuilder.criteria(criteria.let(CfnAllowList.CriteriaProperty::unwrap))
+      cdkBuilder.criteria(criteria.let(CfnAllowList.CriteriaProperty.Companion::unwrap))
     }
 
     /**
@@ -201,7 +201,7 @@ public interface CfnAllowListProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

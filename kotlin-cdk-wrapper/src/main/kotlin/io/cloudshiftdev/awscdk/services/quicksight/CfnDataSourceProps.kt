@@ -682,7 +682,7 @@ public interface CfnDataSourceProps {
      * `DataSourceParameters` are automatically allowed.
      */
     override fun alternateDataSourceParameters(alternateDataSourceParameters: IResolvable) {
-      cdkBuilder.alternateDataSourceParameters(alternateDataSourceParameters.let(IResolvable::unwrap))
+      cdkBuilder.alternateDataSourceParameters(alternateDataSourceParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -727,7 +727,7 @@ public interface CfnDataSourceProps {
      * Currently, only credentials based on user name and password are supported.
      */
     override fun credentials(credentials: IResolvable) {
-      cdkBuilder.credentials(credentials.let(IResolvable::unwrap))
+      cdkBuilder.credentials(credentials.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -736,7 +736,7 @@ public interface CfnDataSourceProps {
      * Currently, only credentials based on user name and password are supported.
      */
     override fun credentials(credentials: CfnDataSource.DataSourceCredentialsProperty) {
-      cdkBuilder.credentials(credentials.let(CfnDataSource.DataSourceCredentialsProperty::unwrap))
+      cdkBuilder.credentials(credentials.let(CfnDataSource.DataSourceCredentialsProperty.Companion::unwrap))
     }
 
     /**
@@ -763,7 +763,7 @@ public interface CfnDataSourceProps {
      * underlying source.
      */
     override fun dataSourceParameters(dataSourceParameters: IResolvable) {
-      cdkBuilder.dataSourceParameters(dataSourceParameters.let(IResolvable::unwrap))
+      cdkBuilder.dataSourceParameters(dataSourceParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -772,7 +772,7 @@ public interface CfnDataSourceProps {
      */
     override
         fun dataSourceParameters(dataSourceParameters: CfnDataSource.DataSourceParametersProperty) {
-      cdkBuilder.dataSourceParameters(dataSourceParameters.let(CfnDataSource.DataSourceParametersProperty::unwrap))
+      cdkBuilder.dataSourceParameters(dataSourceParameters.let(CfnDataSource.DataSourceParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -790,14 +790,14 @@ public interface CfnDataSourceProps {
      * @param errorInfo Error information from the last update or the creation of the data source.
      */
     override fun errorInfo(errorInfo: IResolvable) {
-      cdkBuilder.errorInfo(errorInfo.let(IResolvable::unwrap))
+      cdkBuilder.errorInfo(errorInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param errorInfo Error information from the last update or the creation of the data source.
      */
     override fun errorInfo(errorInfo: CfnDataSource.DataSourceErrorInfoProperty) {
-      cdkBuilder.errorInfo(errorInfo.let(CfnDataSource.DataSourceErrorInfoProperty::unwrap))
+      cdkBuilder.errorInfo(errorInfo.let(CfnDataSource.DataSourceErrorInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -819,7 +819,7 @@ public interface CfnDataSourceProps {
      * @param permissions A list of resource permissions on the data source.
      */
     override fun permissions(permissions: IResolvable) {
-      cdkBuilder.permissions(permissions.let(IResolvable::unwrap))
+      cdkBuilder.permissions(permissions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -839,7 +839,7 @@ public interface CfnDataSourceProps {
      * connects to your underlying source.
      */
     override fun sslProperties(sslProperties: IResolvable) {
-      cdkBuilder.sslProperties(sslProperties.let(IResolvable::unwrap))
+      cdkBuilder.sslProperties(sslProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -847,7 +847,7 @@ public interface CfnDataSourceProps {
      * connects to your underlying source.
      */
     override fun sslProperties(sslProperties: CfnDataSource.SslPropertiesProperty) {
-      cdkBuilder.sslProperties(sslProperties.let(CfnDataSource.SslPropertiesProperty::unwrap))
+      cdkBuilder.sslProperties(sslProperties.let(CfnDataSource.SslPropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -865,7 +865,7 @@ public interface CfnDataSourceProps {
      * the data source.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -888,7 +888,7 @@ public interface CfnDataSourceProps {
      * a VPC connection when connecting to your underlying source.
      */
     override fun vpcConnectionProperties(vpcConnectionProperties: IResolvable) {
-      cdkBuilder.vpcConnectionProperties(vpcConnectionProperties.let(IResolvable::unwrap))
+      cdkBuilder.vpcConnectionProperties(vpcConnectionProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -897,7 +897,7 @@ public interface CfnDataSourceProps {
      */
     override
         fun vpcConnectionProperties(vpcConnectionProperties: CfnDataSource.VpcConnectionPropertiesProperty) {
-      cdkBuilder.vpcConnectionProperties(vpcConnectionProperties.let(CfnDataSource.VpcConnectionPropertiesProperty::unwrap))
+      cdkBuilder.vpcConnectionProperties(vpcConnectionProperties.let(CfnDataSource.VpcConnectionPropertiesProperty.Companion::unwrap))
     }
 
     /**

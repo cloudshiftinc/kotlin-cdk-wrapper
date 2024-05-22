@@ -193,14 +193,14 @@ public interface CfnDetectorProps {
      * @param dataSources Describes which data sources will be enabled for the detector.
      */
     override fun dataSources(dataSources: IResolvable) {
-      cdkBuilder.dataSources(dataSources.let(IResolvable::unwrap))
+      cdkBuilder.dataSources(dataSources.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param dataSources Describes which data sources will be enabled for the detector.
      */
     override fun dataSources(dataSources: CfnDetector.CFNDataSourceConfigurationsProperty) {
-      cdkBuilder.dataSources(dataSources.let(CfnDetector.CFNDataSourceConfigurationsProperty::unwrap))
+      cdkBuilder.dataSources(dataSources.let(CfnDetector.CFNDataSourceConfigurationsProperty.Companion::unwrap))
     }
 
     /**
@@ -223,14 +223,14 @@ public interface CfnDetectorProps {
      * @param enable Specifies whether the detector is to be enabled on creation. 
      */
     override fun enable(enable: IResolvable) {
-      cdkBuilder.enable(enable.let(IResolvable::unwrap))
+      cdkBuilder.enable(enable.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param features A list of features that will be configured for the detector.
      */
     override fun features(features: IResolvable) {
-      cdkBuilder.features(features.let(IResolvable::unwrap))
+      cdkBuilder.features(features.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -264,7 +264,7 @@ public interface CfnDetectorProps {
      * .
      */
     override fun tags(tags: List<CfnDetector.TagItemProperty>) {
-      cdkBuilder.tags(tags.map(CfnDetector.TagItemProperty::unwrap))
+      cdkBuilder.tags(tags.map(CfnDetector.TagItemProperty.Companion::unwrap))
     }
 
     /**

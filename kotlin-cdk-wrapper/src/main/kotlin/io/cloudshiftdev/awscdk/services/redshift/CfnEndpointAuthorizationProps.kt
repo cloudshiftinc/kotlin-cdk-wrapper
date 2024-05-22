@@ -143,7 +143,7 @@ public interface CfnEndpointAuthorizationProps {
      * also deleted.
      */
     override fun force(force: IResolvable) {
-      cdkBuilder.force(force.let(IResolvable::unwrap))
+      cdkBuilder.force(force.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -71,8 +71,8 @@ public open class CfnPipeline(
     id: String,
     props: CfnPipelineProps,
   ) :
-      this(software.amazon.awscdk.services.osis.CfnPipeline(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPipelineProps::unwrap))
+      this(software.amazon.awscdk.services.osis.CfnPipeline(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPipelineProps.Companion::unwrap))
   )
 
   public constructor(
@@ -110,14 +110,14 @@ public open class CfnPipeline(
    * Options that specify the configuration of a persistent buffer.
    */
   public open fun bufferOptions(`value`: IResolvable) {
-    unwrap(this).setBufferOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBufferOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Options that specify the configuration of a persistent buffer.
    */
   public open fun bufferOptions(`value`: BufferOptionsProperty) {
-    unwrap(this).setBufferOptions(`value`.let(BufferOptionsProperty::unwrap))
+    unwrap(this).setBufferOptions(`value`.let(BufferOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -137,14 +137,14 @@ public open class CfnPipeline(
    * Options to control how OpenSearch encrypts buffer data.
    */
   public open fun encryptionAtRestOptions(`value`: IResolvable) {
-    unwrap(this).setEncryptionAtRestOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEncryptionAtRestOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Options to control how OpenSearch encrypts buffer data.
    */
   public open fun encryptionAtRestOptions(`value`: EncryptionAtRestOptionsProperty) {
-    unwrap(this).setEncryptionAtRestOptions(`value`.let(EncryptionAtRestOptionsProperty::unwrap))
+    unwrap(this).setEncryptionAtRestOptions(`value`.let(EncryptionAtRestOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -162,7 +162,7 @@ public open class CfnPipeline(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -174,14 +174,14 @@ public open class CfnPipeline(
    * Key-value pairs that represent log publishing settings.
    */
   public open fun logPublishingOptions(`value`: IResolvable) {
-    unwrap(this).setLogPublishingOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLogPublishingOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Key-value pairs that represent log publishing settings.
    */
   public open fun logPublishingOptions(`value`: LogPublishingOptionsProperty) {
-    unwrap(this).setLogPublishingOptions(`value`.let(LogPublishingOptionsProperty::unwrap))
+    unwrap(this).setLogPublishingOptions(`value`.let(LogPublishingOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -255,7 +255,7 @@ public open class CfnPipeline(
    * List of tags to add to the pipeline upon creation.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -272,14 +272,14 @@ public open class CfnPipeline(
    * Options that specify the subnets and security groups for an OpenSearch Ingestion VPC endpoint.
    */
   public open fun vpcOptions(`value`: IResolvable) {
-    unwrap(this).setVpcOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Options that specify the subnets and security groups for an OpenSearch Ingestion VPC endpoint.
    */
   public open fun vpcOptions(`value`: VpcOptionsProperty) {
-    unwrap(this).setVpcOptions(`value`.let(VpcOptionsProperty::unwrap))
+    unwrap(this).setVpcOptions(`value`.let(VpcOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -490,7 +490,7 @@ public open class CfnPipeline(
      * @param bufferOptions Options that specify the configuration of a persistent buffer. 
      */
     override fun bufferOptions(bufferOptions: IResolvable) {
-      cdkBuilder.bufferOptions(bufferOptions.let(IResolvable::unwrap))
+      cdkBuilder.bufferOptions(bufferOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -505,7 +505,7 @@ public open class CfnPipeline(
      * @param bufferOptions Options that specify the configuration of a persistent buffer. 
      */
     override fun bufferOptions(bufferOptions: BufferOptionsProperty) {
-      cdkBuilder.bufferOptions(bufferOptions.let(BufferOptionsProperty::unwrap))
+      cdkBuilder.bufferOptions(bufferOptions.let(BufferOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -531,7 +531,7 @@ public open class CfnPipeline(
      * @param encryptionAtRestOptions Options to control how OpenSearch encrypts buffer data. 
      */
     override fun encryptionAtRestOptions(encryptionAtRestOptions: IResolvable) {
-      cdkBuilder.encryptionAtRestOptions(encryptionAtRestOptions.let(IResolvable::unwrap))
+      cdkBuilder.encryptionAtRestOptions(encryptionAtRestOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -541,7 +541,7 @@ public open class CfnPipeline(
      * @param encryptionAtRestOptions Options to control how OpenSearch encrypts buffer data. 
      */
     override fun encryptionAtRestOptions(encryptionAtRestOptions: EncryptionAtRestOptionsProperty) {
-      cdkBuilder.encryptionAtRestOptions(encryptionAtRestOptions.let(EncryptionAtRestOptionsProperty::unwrap))
+      cdkBuilder.encryptionAtRestOptions(encryptionAtRestOptions.let(EncryptionAtRestOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -563,7 +563,7 @@ public open class CfnPipeline(
      * @param logPublishingOptions Key-value pairs that represent log publishing settings. 
      */
     override fun logPublishingOptions(logPublishingOptions: IResolvable) {
-      cdkBuilder.logPublishingOptions(logPublishingOptions.let(IResolvable::unwrap))
+      cdkBuilder.logPublishingOptions(logPublishingOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -573,7 +573,7 @@ public open class CfnPipeline(
      * @param logPublishingOptions Key-value pairs that represent log publishing settings. 
      */
     override fun logPublishingOptions(logPublishingOptions: LogPublishingOptionsProperty) {
-      cdkBuilder.logPublishingOptions(logPublishingOptions.let(LogPublishingOptionsProperty::unwrap))
+      cdkBuilder.logPublishingOptions(logPublishingOptions.let(LogPublishingOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -635,7 +635,7 @@ public open class CfnPipeline(
      * @param tags List of tags to add to the pipeline upon creation. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -655,7 +655,7 @@ public open class CfnPipeline(
      * Ingestion VPC endpoint. 
      */
     override fun vpcOptions(vpcOptions: IResolvable) {
-      cdkBuilder.vpcOptions(vpcOptions.let(IResolvable::unwrap))
+      cdkBuilder.vpcOptions(vpcOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -667,7 +667,7 @@ public open class CfnPipeline(
      * Ingestion VPC endpoint. 
      */
     override fun vpcOptions(vpcOptions: VpcOptionsProperty) {
-      cdkBuilder.vpcOptions(vpcOptions.let(VpcOptionsProperty::unwrap))
+      cdkBuilder.vpcOptions(vpcOptions.let(VpcOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -767,7 +767,7 @@ public open class CfnPipeline(
        * @param persistentBufferEnabled Whether persistent buffering should be enabled. 
        */
       override fun persistentBufferEnabled(persistentBufferEnabled: IResolvable) {
-        cdkBuilder.persistentBufferEnabled(persistentBufferEnabled.let(IResolvable::unwrap))
+        cdkBuilder.persistentBufferEnabled(persistentBufferEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.osis.CfnPipeline.BufferOptionsProperty =
@@ -1076,7 +1076,7 @@ public open class CfnPipeline(
        * This parameter is required if `IsLoggingEnabled` is set to `true` .
        */
       override fun cloudWatchLogDestination(cloudWatchLogDestination: IResolvable) {
-        cdkBuilder.cloudWatchLogDestination(cloudWatchLogDestination.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchLogDestination(cloudWatchLogDestination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1086,7 +1086,7 @@ public open class CfnPipeline(
        */
       override
           fun cloudWatchLogDestination(cloudWatchLogDestination: CloudWatchLogDestinationProperty) {
-        cdkBuilder.cloudWatchLogDestination(cloudWatchLogDestination.let(CloudWatchLogDestinationProperty::unwrap))
+        cdkBuilder.cloudWatchLogDestination(cloudWatchLogDestination.let(CloudWatchLogDestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -1112,7 +1112,7 @@ public open class CfnPipeline(
        * @param isLoggingEnabled Whether logs should be published.
        */
       override fun isLoggingEnabled(isLoggingEnabled: IResolvable) {
-        cdkBuilder.isLoggingEnabled(isLoggingEnabled.let(IResolvable::unwrap))
+        cdkBuilder.isLoggingEnabled(isLoggingEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1266,7 +1266,7 @@ public open class CfnPipeline(
        * groups.
        */
       override fun vpcOptions(vpcOptions: IResolvable) {
-        cdkBuilder.vpcOptions(vpcOptions.let(IResolvable::unwrap))
+        cdkBuilder.vpcOptions(vpcOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1274,7 +1274,7 @@ public open class CfnPipeline(
        * groups.
        */
       override fun vpcOptions(vpcOptions: VpcOptionsProperty) {
-        cdkBuilder.vpcOptions(vpcOptions.let(VpcOptionsProperty::unwrap))
+        cdkBuilder.vpcOptions(vpcOptions.let(VpcOptionsProperty.Companion::unwrap))
       }
 
       /**

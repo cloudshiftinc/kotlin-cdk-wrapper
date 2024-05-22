@@ -70,7 +70,7 @@ public interface IntrinsicProps {
      * @param typeHint Type that this token is expected to evaluate to.
      */
     override fun typeHint(typeHint: ResolutionTypeHint) {
-      cdkBuilder.typeHint(typeHint.let(ResolutionTypeHint::unwrap))
+      cdkBuilder.typeHint(typeHint.let(ResolutionTypeHint.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.IntrinsicProps = cdkBuilder.build()

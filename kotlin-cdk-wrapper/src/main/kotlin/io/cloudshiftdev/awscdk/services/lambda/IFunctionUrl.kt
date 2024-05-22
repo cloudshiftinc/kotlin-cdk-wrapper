@@ -51,7 +51,7 @@ public interface IFunctionUrl : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -77,7 +77,7 @@ public interface IFunctionUrl : IResource {
      * @param identity 
      */
     override fun grantInvokeUrl(identity: IGrantable): Grant =
-        unwrap(this).grantInvokeUrl(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantInvokeUrl(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 

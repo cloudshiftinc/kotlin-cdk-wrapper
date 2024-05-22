@@ -167,7 +167,7 @@ public interface CfnDBClusterParameterGroupProps {
      * @param tags The tags that you want to attach to this parameter group.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

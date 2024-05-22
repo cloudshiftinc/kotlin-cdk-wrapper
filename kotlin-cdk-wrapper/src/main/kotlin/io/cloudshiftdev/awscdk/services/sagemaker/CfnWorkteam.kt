@@ -64,7 +64,7 @@ public open class CfnWorkteam(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnWorkteam,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.sagemaker.CfnWorkteam(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.sagemaker.CfnWorkteam(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -73,8 +73,8 @@ public open class CfnWorkteam(
     id: String,
     props: CfnWorkteamProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnWorkteam(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnWorkteamProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnWorkteam(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnWorkteamProps.Companion::unwrap))
   )
 
   public constructor(
@@ -112,7 +112,7 @@ public open class CfnWorkteam(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -126,7 +126,7 @@ public open class CfnWorkteam(
    * up the work team.
    */
   public open fun memberDefinitions(`value`: IResolvable) {
-    unwrap(this).setMemberDefinitions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMemberDefinitions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -152,14 +152,14 @@ public open class CfnWorkteam(
    * Configures SNS notifications of available or expiring work items for work teams.
    */
   public open fun notificationConfiguration(`value`: IResolvable) {
-    unwrap(this).setNotificationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNotificationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configures SNS notifications of available or expiring work items for work teams.
    */
   public open fun notificationConfiguration(`value`: NotificationConfigurationProperty) {
-    unwrap(this).setNotificationConfiguration(`value`.let(NotificationConfigurationProperty::unwrap))
+    unwrap(this).setNotificationConfiguration(`value`.let(NotificationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -186,7 +186,7 @@ public open class CfnWorkteam(
    * An array of key-value pairs.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -367,7 +367,7 @@ public open class CfnWorkteam(
      * identify the workers that make up the work team. 
      */
     override fun memberDefinitions(memberDefinitions: IResolvable) {
-      cdkBuilder.memberDefinitions(memberDefinitions.let(IResolvable::unwrap))
+      cdkBuilder.memberDefinitions(memberDefinitions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -409,7 +409,7 @@ public open class CfnWorkteam(
      * items for work teams. 
      */
     override fun notificationConfiguration(notificationConfiguration: IResolvable) {
-      cdkBuilder.notificationConfiguration(notificationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.notificationConfiguration(notificationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -421,7 +421,7 @@ public open class CfnWorkteam(
      */
     override
         fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty) {
-      cdkBuilder.notificationConfiguration(notificationConfiguration.let(NotificationConfigurationProperty::unwrap))
+      cdkBuilder.notificationConfiguration(notificationConfiguration.let(NotificationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -445,7 +445,7 @@ public open class CfnWorkteam(
      * @param tags An array of key-value pairs. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -759,7 +759,7 @@ public open class CfnWorkteam(
        * @param cognitoMemberDefinition The Amazon Cognito user group that is part of the work team.
        */
       override fun cognitoMemberDefinition(cognitoMemberDefinition: IResolvable) {
-        cdkBuilder.cognitoMemberDefinition(cognitoMemberDefinition.let(IResolvable::unwrap))
+        cdkBuilder.cognitoMemberDefinition(cognitoMemberDefinition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -767,7 +767,7 @@ public open class CfnWorkteam(
        */
       override
           fun cognitoMemberDefinition(cognitoMemberDefinition: CognitoMemberDefinitionProperty) {
-        cdkBuilder.cognitoMemberDefinition(cognitoMemberDefinition.let(CognitoMemberDefinitionProperty::unwrap))
+        cdkBuilder.cognitoMemberDefinition(cognitoMemberDefinition.let(CognitoMemberDefinitionProperty.Companion::unwrap))
       }
 
       /**
@@ -788,7 +788,7 @@ public open class CfnWorkteam(
        * the work team.
        */
       override fun oidcMemberDefinition(oidcMemberDefinition: IResolvable) {
-        cdkBuilder.oidcMemberDefinition(oidcMemberDefinition.let(IResolvable::unwrap))
+        cdkBuilder.oidcMemberDefinition(oidcMemberDefinition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -800,7 +800,7 @@ public open class CfnWorkteam(
        * the work team.
        */
       override fun oidcMemberDefinition(oidcMemberDefinition: OidcMemberDefinitionProperty) {
-        cdkBuilder.oidcMemberDefinition(oidcMemberDefinition.let(OidcMemberDefinitionProperty::unwrap))
+        cdkBuilder.oidcMemberDefinition(oidcMemberDefinition.let(OidcMemberDefinitionProperty.Companion::unwrap))
       }
 
       /**

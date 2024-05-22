@@ -117,7 +117,7 @@ public interface MetadataEntryResult : MetadataEntry {
      * @param data The data.
      */
     override fun `data`(`data`: FileAssetMetadataEntry) {
-      cdkBuilder.`data`(`data`.let(FileAssetMetadataEntry::unwrap))
+      cdkBuilder.`data`(`data`.let(FileAssetMetadataEntry.Companion::unwrap))
     }
 
     /**
@@ -132,7 +132,7 @@ public interface MetadataEntryResult : MetadataEntry {
      * @param data The data.
      */
     override fun `data`(`data`: ContainerImageAssetMetadataEntry) {
-      cdkBuilder.`data`(`data`.let(ContainerImageAssetMetadataEntry::unwrap))
+      cdkBuilder.`data`(`data`.let(ContainerImageAssetMetadataEntry.Companion::unwrap))
     }
 
     /**
@@ -147,7 +147,7 @@ public interface MetadataEntryResult : MetadataEntry {
      * @param data The data.
      */
     override fun `data`(`data`: List<Tag>) {
-      cdkBuilder.`data`(`data`.map(Tag::unwrap))
+      cdkBuilder.`data`(`data`.map(Tag.Companion::unwrap))
     }
 
     /**

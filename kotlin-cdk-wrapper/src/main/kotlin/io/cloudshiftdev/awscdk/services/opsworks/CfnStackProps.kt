@@ -909,7 +909,7 @@ public interface CfnStackProps {
      * attributes.
      */
     override fun attributes(attributes: IResolvable) {
-      cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+      cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -926,7 +926,7 @@ public interface CfnStackProps {
      * New Stack](https://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-creating.html) .
      */
     override fun chefConfiguration(chefConfiguration: IResolvable) {
-      cdkBuilder.chefConfiguration(chefConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.chefConfiguration(chefConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -935,7 +935,7 @@ public interface CfnStackProps {
      * New Stack](https://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-creating.html) .
      */
     override fun chefConfiguration(chefConfiguration: CfnStack.ChefConfigurationProperty) {
-      cdkBuilder.chefConfiguration(chefConfiguration.let(CfnStack.ChefConfigurationProperty::unwrap))
+      cdkBuilder.chefConfiguration(chefConfiguration.let(CfnStack.ChefConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -976,7 +976,7 @@ public interface CfnStackProps {
      * the source stack's permissions.
      */
     override fun clonePermissions(clonePermissions: IResolvable) {
-      cdkBuilder.clonePermissions(clonePermissions.let(IResolvable::unwrap))
+      cdkBuilder.clonePermissions(clonePermissions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -986,7 +986,7 @@ public interface CfnStackProps {
      * for Linux stacks is currently 12.
      */
     override fun configurationManager(configurationManager: IResolvable) {
-      cdkBuilder.configurationManager(configurationManager.let(IResolvable::unwrap))
+      cdkBuilder.configurationManager(configurationManager.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -997,7 +997,7 @@ public interface CfnStackProps {
      */
     override
         fun configurationManager(configurationManager: CfnStack.StackConfigurationManagerProperty) {
-      cdkBuilder.configurationManager(configurationManager.let(CfnStack.StackConfigurationManagerProperty::unwrap))
+      cdkBuilder.configurationManager(configurationManager.let(CfnStack.StackConfigurationManagerProperty.Companion::unwrap))
     }
 
     /**
@@ -1022,7 +1022,7 @@ public interface CfnStackProps {
      * Recipes](https://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook.html) .
      */
     override fun customCookbooksSource(customCookbooksSource: IResolvable) {
-      cdkBuilder.customCookbooksSource(customCookbooksSource.let(IResolvable::unwrap))
+      cdkBuilder.customCookbooksSource(customCookbooksSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1034,7 +1034,7 @@ public interface CfnStackProps {
      * Recipes](https://docs.aws.amazon.com/opsworks/latest/userguide/workingcookbook.html) .
      */
     override fun customCookbooksSource(customCookbooksSource: CfnStack.SourceProperty) {
-      cdkBuilder.customCookbooksSource(customCookbooksSource.let(CfnStack.SourceProperty::unwrap))
+      cdkBuilder.customCookbooksSource(customCookbooksSource.let(CfnStack.SourceProperty.Companion::unwrap))
     }
 
     /**
@@ -1172,7 +1172,7 @@ public interface CfnStackProps {
      * CloudFormation deregisters the existing association before registering the IP address.
      */
     override fun elasticIps(elasticIps: IResolvable) {
-      cdkBuilder.elasticIps(elasticIps.let(IResolvable::unwrap))
+      cdkBuilder.elasticIps(elasticIps.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1234,7 +1234,7 @@ public interface CfnStackProps {
      * CloudFormation deregisters the existing association before registering the database instance.
      */
     override fun rdsDbInstances(rdsDbInstances: IResolvable) {
-      cdkBuilder.rdsDbInstances(rdsDbInstances.let(IResolvable::unwrap))
+      cdkBuilder.rdsDbInstances(rdsDbInstances.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1289,7 +1289,7 @@ public interface CfnStackProps {
      * * A maximum of 40 tags is allowed for any resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1316,7 +1316,7 @@ public interface CfnStackProps {
      * @param useCustomCookbooks Whether the stack uses custom cookbooks.
      */
     override fun useCustomCookbooks(useCustomCookbooks: IResolvable) {
-      cdkBuilder.useCustomCookbooks(useCustomCookbooks.let(IResolvable::unwrap))
+      cdkBuilder.useCustomCookbooks(useCustomCookbooks.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1360,7 +1360,7 @@ public interface CfnStackProps {
      * Stack](https://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-creating.html) .
      */
     override fun useOpsworksSecurityGroups(useOpsworksSecurityGroups: IResolvable) {
-      cdkBuilder.useOpsworksSecurityGroups(useOpsworksSecurityGroups.let(IResolvable::unwrap))
+      cdkBuilder.useOpsworksSecurityGroups(useOpsworksSecurityGroups.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -158,7 +158,7 @@ public interface CfnPolicyProps {
   public fun includeMap(): Any? = unwrap(this).getIncludeMap()
 
   /**
-   * The definition of the AWS Network Firewall firewall policy.
+   * Your description of the AWS Firewall Manager policy.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-policydescription)
    */
@@ -646,7 +646,7 @@ public interface CfnPolicyProps {
     public fun includeMap(includeMap: CfnPolicy.IEMapProperty.Builder.() -> Unit)
 
     /**
-     * @param policyDescription The definition of the AWS Network Firewall firewall policy.
+     * @param policyDescription Your description of the AWS Firewall Manager policy.
      */
     public fun policyDescription(policyDescription: String)
 
@@ -1355,7 +1355,7 @@ public interface CfnPolicyProps {
      * specify tags or accounts, all resources are in scope.
      */
     override fun deleteAllPolicyResources(deleteAllPolicyResources: IResolvable) {
-      cdkBuilder.deleteAllPolicyResources(deleteAllPolicyResources.let(IResolvable::unwrap))
+      cdkBuilder.deleteAllPolicyResources(deleteAllPolicyResources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1380,7 +1380,7 @@ public interface CfnPolicyProps {
      * “ouid112”]}` .
      */
     override fun excludeMap(excludeMap: IResolvable) {
-      cdkBuilder.excludeMap(excludeMap.let(IResolvable::unwrap))
+      cdkBuilder.excludeMap(excludeMap.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1405,7 +1405,7 @@ public interface CfnPolicyProps {
      * “ouid112”]}` .
      */
     override fun excludeMap(excludeMap: CfnPolicy.IEMapProperty) {
-      cdkBuilder.excludeMap(excludeMap.let(CfnPolicy.IEMapProperty::unwrap))
+      cdkBuilder.excludeMap(excludeMap.let(CfnPolicy.IEMapProperty.Companion::unwrap))
     }
 
     /**
@@ -1449,7 +1449,7 @@ public interface CfnPolicyProps {
      * policy. If it's `False` , only resources with the specified tags are in scope of the policy.
      */
     override fun excludeResourceTags(excludeResourceTags: IResolvable) {
-      cdkBuilder.excludeResourceTags(excludeResourceTags.let(IResolvable::unwrap))
+      cdkBuilder.excludeResourceTags(excludeResourceTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1474,7 +1474,7 @@ public interface CfnPolicyProps {
      * “ouid112”]}` .
      */
     override fun includeMap(includeMap: IResolvable) {
-      cdkBuilder.includeMap(includeMap.let(IResolvable::unwrap))
+      cdkBuilder.includeMap(includeMap.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1499,7 +1499,7 @@ public interface CfnPolicyProps {
      * “ouid112”]}` .
      */
     override fun includeMap(includeMap: CfnPolicy.IEMapProperty) {
-      cdkBuilder.includeMap(includeMap.let(CfnPolicy.IEMapProperty::unwrap))
+      cdkBuilder.includeMap(includeMap.let(CfnPolicy.IEMapProperty.Companion::unwrap))
     }
 
     /**
@@ -1529,7 +1529,7 @@ public interface CfnPolicyProps {
         includeMap(CfnPolicy.IEMapProperty(includeMap))
 
     /**
-     * @param policyDescription The definition of the AWS Network Firewall firewall policy.
+     * @param policyDescription Your description of the AWS Firewall Manager policy.
      */
     override fun policyDescription(policyDescription: String) {
       cdkBuilder.policyDescription(policyDescription)
@@ -1555,7 +1555,7 @@ public interface CfnPolicyProps {
      * resources. 
      */
     override fun remediationEnabled(remediationEnabled: IResolvable) {
-      cdkBuilder.remediationEnabled(remediationEnabled.let(IResolvable::unwrap))
+      cdkBuilder.remediationEnabled(remediationEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1578,7 +1578,7 @@ public interface CfnPolicyProps {
      * `ExcludeResourceTags` .
      */
     override fun resourceTags(resourceTags: IResolvable) {
-      cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
+      cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1670,7 +1670,7 @@ public interface CfnPolicyProps {
      * This option is not available for Shield Advanced or AWS WAF Classic policies.
      */
     override fun resourcesCleanUp(resourcesCleanUp: IResolvable) {
-      cdkBuilder.resourcesCleanUp(resourcesCleanUp.let(IResolvable::unwrap))
+      cdkBuilder.resourcesCleanUp(resourcesCleanUp.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1843,7 +1843,7 @@ public interface CfnPolicyProps {
      * `"{\"type\":\"SECURITY_GROUPS_USAGE_AUDIT\",\"deleteUnusedSecurityGroups\":true,\"coalesceRedundantSecurityGroups\":true}"`
      */
     override fun securityServicePolicyData(securityServicePolicyData: IResolvable) {
-      cdkBuilder.securityServicePolicyData(securityServicePolicyData.let(IResolvable::unwrap))
+      cdkBuilder.securityServicePolicyData(securityServicePolicyData.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2017,7 +2017,7 @@ public interface CfnPolicyProps {
      */
     override
         fun securityServicePolicyData(securityServicePolicyData: CfnPolicy.SecurityServicePolicyDataProperty) {
-      cdkBuilder.securityServicePolicyData(securityServicePolicyData.let(CfnPolicy.SecurityServicePolicyDataProperty::unwrap))
+      cdkBuilder.securityServicePolicyData(securityServicePolicyData.let(CfnPolicy.SecurityServicePolicyDataProperty.Companion::unwrap))
     }
 
     /**
@@ -2203,7 +2203,7 @@ public interface CfnPolicyProps {
      * as "test," "development," or "production"). You can add up to 50 tags to each AWS resource.
      */
     override fun tags(tags: List<CfnPolicy.PolicyTagProperty>) {
-      cdkBuilder.tags(tags.map(CfnPolicy.PolicyTagProperty::unwrap))
+      cdkBuilder.tags(tags.map(CfnPolicy.PolicyTagProperty.Companion::unwrap))
     }
 
     /**
@@ -2311,7 +2311,7 @@ public interface CfnPolicyProps {
     override fun includeMap(): Any? = unwrap(this).getIncludeMap()
 
     /**
-     * The definition of the AWS Network Firewall firewall policy.
+     * Your description of the AWS Firewall Manager policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-policydescription)
      */

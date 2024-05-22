@@ -112,7 +112,7 @@ public interface HorizontalAnnotation {
      * @param fill Add shading above or below the annotation.
      */
     override fun fill(fill: Shading) {
-      cdkBuilder.fill(fill.let(Shading::unwrap))
+      cdkBuilder.fill(fill.let(Shading.Companion::unwrap))
     }
 
     /**

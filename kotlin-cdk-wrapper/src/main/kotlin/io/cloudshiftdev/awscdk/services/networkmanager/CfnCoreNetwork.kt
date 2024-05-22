@@ -52,8 +52,8 @@ public open class CfnCoreNetwork(
     id: String,
     props: CfnCoreNetworkProps,
   ) :
-      this(software.amazon.awscdk.services.networkmanager.CfnCoreNetwork(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCoreNetworkProps::unwrap))
+      this(software.amazon.awscdk.services.networkmanager.CfnCoreNetwork(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCoreNetworkProps.Companion::unwrap))
   )
 
   public constructor(
@@ -131,7 +131,7 @@ public open class CfnCoreNetwork(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -169,7 +169,7 @@ public open class CfnCoreNetwork(
    * The list of key-value tags associated with a core network.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -283,7 +283,7 @@ public open class CfnCoreNetwork(
      * @param tags The list of key-value tags associated with a core network. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

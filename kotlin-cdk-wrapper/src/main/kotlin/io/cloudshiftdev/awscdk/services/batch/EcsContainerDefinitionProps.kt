@@ -304,21 +304,21 @@ public interface EcsContainerDefinitionProps {
      * API calls on your behalf.
      */
     override fun executionRole(executionRole: IRole) {
-      cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
+      cdkBuilder.executionRole(executionRole.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param image The image that this container will run. 
      */
     override fun image(image: ContainerImage) {
-      cdkBuilder.image(image.let(ContainerImage::unwrap))
+      cdkBuilder.image(image.let(ContainerImage.Companion::unwrap))
     }
 
     /**
      * @param jobRole The role that the container can assume.
      */
     override fun jobRole(jobRole: IRole) {
-      cdkBuilder.jobRole(jobRole.let(IRole::unwrap))
+      cdkBuilder.jobRole(jobRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -326,14 +326,14 @@ public interface EcsContainerDefinitionProps {
      * as details for device mappings.
      */
     override fun linuxParameters(linuxParameters: LinuxParameters) {
-      cdkBuilder.linuxParameters(linuxParameters.let(LinuxParameters::unwrap))
+      cdkBuilder.linuxParameters(linuxParameters.let(LinuxParameters.Companion::unwrap))
     }
 
     /**
      * @param logging The loging configuration for this Job.
      */
     override fun logging(logging: LogDriver) {
-      cdkBuilder.logging(logging.let(LogDriver::unwrap))
+      cdkBuilder.logging(logging.let(LogDriver.Companion::unwrap))
     }
 
     /**
@@ -342,7 +342,7 @@ public interface EcsContainerDefinitionProps {
      * You must specify at least 4 MiB of memory for a job.
      */
     override fun memory(memory: Size) {
-      cdkBuilder.memory(memory.let(Size::unwrap))
+      cdkBuilder.memory(memory.let(Size.Companion::unwrap))
     }
 
     /**
@@ -373,7 +373,7 @@ public interface EcsContainerDefinitionProps {
      * Automatically added to the job definition.
      */
     override fun volumes(volumes: List<EcsVolume>) {
-      cdkBuilder.volumes(volumes.map(EcsVolume::unwrap))
+      cdkBuilder.volumes(volumes.map(EcsVolume.Companion::unwrap))
     }
 
     /**

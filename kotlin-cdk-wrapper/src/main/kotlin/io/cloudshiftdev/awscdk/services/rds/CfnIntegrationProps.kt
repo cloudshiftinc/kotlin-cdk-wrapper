@@ -209,7 +209,7 @@ public interface CfnIntegrationProps {
      * You can only include this parameter if you specify the `KMSKeyId` parameter.
      */
     override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable::unwrap))
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -272,7 +272,7 @@ public interface CfnIntegrationProps {
      * *Amazon RDS User Guide.* .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

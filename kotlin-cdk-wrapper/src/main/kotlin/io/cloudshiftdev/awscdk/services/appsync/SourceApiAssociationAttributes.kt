@@ -79,14 +79,14 @@ public interface SourceApiAssociationAttributes {
      * @param mergedApi The merged api in the association. 
      */
     override fun mergedApi(mergedApi: IGraphqlApi) {
-      cdkBuilder.mergedApi(mergedApi.let(IGraphqlApi::unwrap))
+      cdkBuilder.mergedApi(mergedApi.let(IGraphqlApi.Companion::unwrap))
     }
 
     /**
      * @param sourceApi The source api in the association. 
      */
     override fun sourceApi(sourceApi: IGraphqlApi) {
-      cdkBuilder.sourceApi(sourceApi.let(IGraphqlApi::unwrap))
+      cdkBuilder.sourceApi(sourceApi.let(IGraphqlApi.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appsync.SourceApiAssociationAttributes =

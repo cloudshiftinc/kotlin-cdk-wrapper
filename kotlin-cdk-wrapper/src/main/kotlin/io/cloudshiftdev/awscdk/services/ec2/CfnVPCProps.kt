@@ -266,7 +266,7 @@ public interface CfnVPCProps {
      * You can only enable DNS hostnames if you've enabled DNS support.
      */
     override fun enableDnsHostnames(enableDnsHostnames: IResolvable) {
-      cdkBuilder.enableDnsHostnames(enableDnsHostnames.let(IResolvable::unwrap))
+      cdkBuilder.enableDnsHostnames(enableDnsHostnames.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -290,7 +290,7 @@ public interface CfnVPCProps {
      * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-dns.html#vpc-dns-support) .
      */
     override fun enableDnsSupport(enableDnsSupport: IResolvable) {
-      cdkBuilder.enableDnsSupport(enableDnsSupport.let(IResolvable::unwrap))
+      cdkBuilder.enableDnsSupport(enableDnsSupport.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -337,7 +337,7 @@ public interface CfnVPCProps {
      * @param tags The tags for the VPC.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

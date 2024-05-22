@@ -33,7 +33,7 @@ public open class NatInstanceProvider(
 ) : NatProvider(cdkObject), IConnectable {
   @Deprecated(message = "deprecated in CDK")
   public constructor(props: NatInstanceProps) :
-      this(software.amazon.awscdk.services.ec2.NatInstanceProvider(props.let(NatInstanceProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.NatInstanceProvider(props.let(NatInstanceProps.Companion::unwrap))
   )
 
   @Deprecated(message = "deprecated in CDK")
@@ -49,7 +49,7 @@ public open class NatInstanceProvider(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun configureNat(options: ConfigureNatOptions) {
-    unwrap(this).configureNat(options.let(ConfigureNatOptions::unwrap))
+    unwrap(this).configureNat(options.let(ConfigureNatOptions.Companion::unwrap))
   }
 
   /**
@@ -74,7 +74,7 @@ public open class NatInstanceProvider(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun configureSubnet(subnet: PrivateSubnet) {
-    unwrap(this).configureSubnet(subnet.let(PrivateSubnet::unwrap))
+    unwrap(this).configureSubnet(subnet.let(PrivateSubnet.Companion::unwrap))
   }
 
   /**
@@ -246,7 +246,7 @@ public open class NatInstanceProvider(
      * (T2, T3, T3a, etc). 
      */
     override fun creditSpecification(creditSpecification: CpuCredits) {
-      cdkBuilder.creditSpecification(creditSpecification.let(CpuCredits::unwrap))
+      cdkBuilder.creditSpecification(creditSpecification.let(CpuCredits.Companion::unwrap))
     }
 
     /**
@@ -266,7 +266,7 @@ public open class NatInstanceProvider(
      * default. 
      */
     override fun defaultAllowedTraffic(defaultAllowedTraffic: NatTrafficDirection) {
-      cdkBuilder.defaultAllowedTraffic(defaultAllowedTraffic.let(NatTrafficDirection::unwrap))
+      cdkBuilder.defaultAllowedTraffic(defaultAllowedTraffic.let(NatTrafficDirection.Companion::unwrap))
     }
 
     /**
@@ -275,7 +275,7 @@ public open class NatInstanceProvider(
      * @param instanceType Instance type of the NAT instance. 
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -300,7 +300,7 @@ public open class NatInstanceProvider(
      * @param keyPair The SSH keypair to grant access to the instance. 
      */
     override fun keyPair(keyPair: IKeyPair) {
-      cdkBuilder.keyPair(keyPair.let(IKeyPair::unwrap))
+      cdkBuilder.keyPair(keyPair.let(IKeyPair.Companion::unwrap))
     }
 
     /**
@@ -323,7 +323,7 @@ public open class NatInstanceProvider(
      * @param machineImage The machine image (AMI) to use. 
      */
     override fun machineImage(machineImage: IMachineImage) {
-      cdkBuilder.machineImage(machineImage.let(IMachineImage::unwrap))
+      cdkBuilder.machineImage(machineImage.let(IMachineImage.Companion::unwrap))
     }
 
     /**
@@ -358,7 +358,7 @@ public open class NatInstanceProvider(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -372,7 +372,7 @@ public open class NatInstanceProvider(
      * @param userData Custom user data to run on the NAT instances. 
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.NatInstanceProvider = cdkBuilder.build()

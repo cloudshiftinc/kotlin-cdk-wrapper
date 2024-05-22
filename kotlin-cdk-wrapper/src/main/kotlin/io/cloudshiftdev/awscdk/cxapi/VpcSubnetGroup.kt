@@ -102,7 +102,7 @@ public interface VpcSubnetGroup {
      * in the group.
      */
     override fun subnets(subnets: List<VpcSubnet>) {
-      cdkBuilder.subnets(subnets.map(VpcSubnet::unwrap))
+      cdkBuilder.subnets(subnets.map(VpcSubnet.Companion::unwrap))
     }
 
     /**
@@ -116,7 +116,7 @@ public interface VpcSubnetGroup {
      * @param type The type of the subnet group. 
      */
     override fun type(type: VpcSubnetGroupType) {
-      cdkBuilder.type(type.let(VpcSubnetGroupType::unwrap))
+      cdkBuilder.type(type.let(VpcSubnetGroupType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.cxapi.VpcSubnetGroup = cdkBuilder.build()

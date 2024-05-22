@@ -68,7 +68,7 @@ public interface DomainMappingOptions {
      * @param domainName The domain name for the mapping. 
      */
     override fun domainName(domainName: IDomainName) {
-      cdkBuilder.domainName(domainName.let(IDomainName::unwrap))
+      cdkBuilder.domainName(domainName.let(IDomainName.Companion::unwrap))
     }
 
     /**

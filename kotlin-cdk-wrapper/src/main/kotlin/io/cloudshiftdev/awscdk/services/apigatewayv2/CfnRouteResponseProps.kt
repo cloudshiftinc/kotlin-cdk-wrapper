@@ -155,7 +155,7 @@ public interface CfnRouteResponseProps {
      * @param responseParameters The route response parameters.
      */
     override fun responseParameters(responseParameters: IResolvable) {
-      cdkBuilder.responseParameters(responseParameters.let(IResolvable::unwrap))
+      cdkBuilder.responseParameters(responseParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -450,7 +450,7 @@ public interface CfnCustomDBEngineVersionProps {
      * *Amazon RDS User Guide.*
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -476,7 +476,7 @@ public interface CfnCustomDBEngineVersionProps {
      * If you specify `UseAwsProvidedLatestImage` , you can't also specify `ImageId` .
      */
     override fun useAwsProvidedLatestImage(useAwsProvidedLatestImage: IResolvable) {
-      cdkBuilder.useAwsProvidedLatestImage(useAwsProvidedLatestImage.let(IResolvable::unwrap))
+      cdkBuilder.useAwsProvidedLatestImage(useAwsProvidedLatestImage.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.CfnCustomDBEngineVersionProps =

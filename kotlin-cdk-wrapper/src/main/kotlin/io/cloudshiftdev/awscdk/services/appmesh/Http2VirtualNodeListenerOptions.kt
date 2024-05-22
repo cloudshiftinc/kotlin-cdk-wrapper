@@ -171,7 +171,7 @@ public interface Http2VirtualNodeListenerOptions {
      * @param connectionPool Connection pool for http2 listeners.
      */
     override fun connectionPool(connectionPool: Http2ConnectionPool) {
-      cdkBuilder.connectionPool(connectionPool.let(Http2ConnectionPool::unwrap))
+      cdkBuilder.connectionPool(connectionPool.let(Http2ConnectionPool.Companion::unwrap))
     }
 
     /**
@@ -186,14 +186,14 @@ public interface Http2VirtualNodeListenerOptions {
      * @param healthCheck The health check information for the listener.
      */
     override fun healthCheck(healthCheck: HealthCheck) {
-      cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
     }
 
     /**
      * @param outlierDetection Represents the configuration for enabling outlier detection.
      */
     override fun outlierDetection(outlierDetection: OutlierDetection) {
-      cdkBuilder.outlierDetection(outlierDetection.let(OutlierDetection::unwrap))
+      cdkBuilder.outlierDetection(outlierDetection.let(OutlierDetection.Companion::unwrap))
     }
 
     /**
@@ -215,7 +215,7 @@ public interface Http2VirtualNodeListenerOptions {
      * @param timeout Timeout for HTTP protocol.
      */
     override fun timeout(timeout: HttpTimeout) {
-      cdkBuilder.timeout(timeout.let(HttpTimeout::unwrap))
+      cdkBuilder.timeout(timeout.let(HttpTimeout.Companion::unwrap))
     }
 
     /**
@@ -230,7 +230,7 @@ public interface Http2VirtualNodeListenerOptions {
      * @param tls Represents the configuration for enabling TLS on a listener.
      */
     override fun tls(tls: ListenerTlsOptions) {
-      cdkBuilder.tls(tls.let(ListenerTlsOptions::unwrap))
+      cdkBuilder.tls(tls.let(ListenerTlsOptions.Companion::unwrap))
     }
 
     /**

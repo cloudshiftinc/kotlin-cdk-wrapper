@@ -35,8 +35,8 @@ public open class DeploymentStrategy(
     id: String,
     props: DeploymentStrategyProps,
   ) :
-      this(software.amazon.awscdk.services.appconfig.DeploymentStrategy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DeploymentStrategyProps::unwrap))
+      this(software.amazon.awscdk.services.appconfig.DeploymentStrategy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DeploymentStrategyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -164,7 +164,7 @@ public open class DeploymentStrategy(
      * @param rolloutStrategy The rollout strategy for the deployment strategy. 
      */
     override fun rolloutStrategy(rolloutStrategy: RolloutStrategy) {
-      cdkBuilder.rolloutStrategy(rolloutStrategy.let(RolloutStrategy::unwrap))
+      cdkBuilder.rolloutStrategy(rolloutStrategy.let(RolloutStrategy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appconfig.DeploymentStrategy =
@@ -177,7 +177,7 @@ public open class DeploymentStrategy(
       id: String,
       deploymentStrategyArn: String,
     ): IDeploymentStrategy =
-        software.amazon.awscdk.services.appconfig.DeploymentStrategy.fromDeploymentStrategyArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.appconfig.DeploymentStrategy.fromDeploymentStrategyArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, deploymentStrategyArn).let(IDeploymentStrategy::wrap)
 
     public fun fromDeploymentStrategyId(
@@ -185,8 +185,9 @@ public open class DeploymentStrategy(
       id: String,
       deploymentStrategyId: DeploymentStrategyId,
     ): IDeploymentStrategy =
-        software.amazon.awscdk.services.appconfig.DeploymentStrategy.fromDeploymentStrategyId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, deploymentStrategyId.let(DeploymentStrategyId::unwrap)).let(IDeploymentStrategy::wrap)
+        software.amazon.awscdk.services.appconfig.DeploymentStrategy.fromDeploymentStrategyId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        deploymentStrategyId.let(DeploymentStrategyId.Companion::unwrap)).let(IDeploymentStrategy::wrap)
 
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,

@@ -301,7 +301,7 @@ public interface SplunkLogDriverProps : BaseLogDriverProps {
      * Can be inline, json or raw.
      */
     override fun format(format: SplunkLogFormat) {
-      cdkBuilder.format(format.let(SplunkLogFormat::unwrap))
+      cdkBuilder.format(format.let(SplunkLogFormat.Companion::unwrap))
     }
 
     /**
@@ -360,7 +360,7 @@ public interface SplunkLogDriverProps : BaseLogDriverProps {
      * resolved or viewable as plain text.
      */
     override fun secretToken(secretToken: Secret) {
-      cdkBuilder.secretToken(secretToken.let(Secret::unwrap))
+      cdkBuilder.secretToken(secretToken.let(Secret.Companion::unwrap))
     }
 
     /**

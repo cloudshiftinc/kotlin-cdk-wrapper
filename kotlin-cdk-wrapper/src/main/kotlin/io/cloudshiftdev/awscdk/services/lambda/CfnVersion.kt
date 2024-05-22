@@ -55,8 +55,8 @@ public open class CfnVersion(
     id: String,
     props: CfnVersionProps,
   ) :
-      this(software.amazon.awscdk.services.lambda.CfnVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVersionProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.CfnVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -118,7 +118,7 @@ public open class CfnVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -131,7 +131,7 @@ public open class CfnVersion(
    * Specifies a provisioned concurrency configuration for a function's version.
    */
   public open fun provisionedConcurrencyConfig(`value`: IResolvable) {
-    unwrap(this).setProvisionedConcurrencyConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProvisionedConcurrencyConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -139,7 +139,7 @@ public open class CfnVersion(
    */
   public open
       fun provisionedConcurrencyConfig(`value`: ProvisionedConcurrencyConfigurationProperty) {
-    unwrap(this).setProvisionedConcurrencyConfig(`value`.let(ProvisionedConcurrencyConfigurationProperty::unwrap))
+    unwrap(this).setProvisionedConcurrencyConfig(`value`.let(ProvisionedConcurrencyConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -160,14 +160,14 @@ public open class CfnVersion(
    * Runtime Management Config of a function.
    */
   public open fun runtimePolicy(`value`: IResolvable) {
-    unwrap(this).setRuntimePolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRuntimePolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Runtime Management Config of a function.
    */
   public open fun runtimePolicy(`value`: RuntimePolicyProperty) {
-    unwrap(this).setRuntimePolicy(`value`.let(RuntimePolicyProperty::unwrap))
+    unwrap(this).setRuntimePolicy(`value`.let(RuntimePolicyProperty.Companion::unwrap))
   }
 
   /**
@@ -348,7 +348,7 @@ public open class CfnVersion(
      * function's version. 
      */
     override fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: IResolvable) {
-      cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(IResolvable::unwrap))
+      cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -362,7 +362,7 @@ public open class CfnVersion(
      */
     override
         fun provisionedConcurrencyConfig(provisionedConcurrencyConfig: ProvisionedConcurrencyConfigurationProperty) {
-      cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(ProvisionedConcurrencyConfigurationProperty::unwrap))
+      cdkBuilder.provisionedConcurrencyConfig(provisionedConcurrencyConfig.let(ProvisionedConcurrencyConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -388,7 +388,7 @@ public open class CfnVersion(
      * @param runtimePolicy Runtime Management Config of a function. 
      */
     override fun runtimePolicy(runtimePolicy: IResolvable) {
-      cdkBuilder.runtimePolicy(runtimePolicy.let(IResolvable::unwrap))
+      cdkBuilder.runtimePolicy(runtimePolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -398,7 +398,7 @@ public open class CfnVersion(
      * @param runtimePolicy Runtime Management Config of a function. 
      */
     override fun runtimePolicy(runtimePolicy: RuntimePolicyProperty) {
-      cdkBuilder.runtimePolicy(runtimePolicy.let(RuntimePolicyProperty::unwrap))
+      cdkBuilder.runtimePolicy(runtimePolicy.let(RuntimePolicyProperty.Companion::unwrap))
     }
 
     /**

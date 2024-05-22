@@ -47,8 +47,8 @@ public open class CfnPrompt(
     id: String,
     props: CfnPromptProps,
   ) :
-      this(software.amazon.awscdk.services.connect.CfnPrompt(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPromptProps::unwrap))
+      this(software.amazon.awscdk.services.connect.CfnPrompt(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPromptProps.Companion::unwrap))
   )
 
   public constructor(
@@ -87,7 +87,7 @@ public open class CfnPrompt(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -135,7 +135,7 @@ public open class CfnPrompt(
    * The tags used to organize, track, or control access for this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -261,7 +261,7 @@ public open class CfnPrompt(
      * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

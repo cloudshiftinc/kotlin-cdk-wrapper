@@ -44,8 +44,8 @@ public interface ILifecycleHookTarget {
      * to use. 
      */
     override fun bind(scope: Construct, options: BindHookTargetOptions): LifecycleHookTargetConfig =
-        unwrap(this).bind(scope.let(Construct::unwrap),
-        options.let(BindHookTargetOptions::unwrap)).let(LifecycleHookTargetConfig::wrap)
+        unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+        options.let(BindHookTargetOptions.Companion::unwrap)).let(LifecycleHookTargetConfig::wrap)
 
     /**
      * Called when this object is used as the target of a lifecycle hook.

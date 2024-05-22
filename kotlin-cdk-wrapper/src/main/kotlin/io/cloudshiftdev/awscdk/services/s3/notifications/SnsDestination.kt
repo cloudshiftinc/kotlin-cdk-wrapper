@@ -24,7 +24,7 @@ public open class SnsDestination(
   cdkObject: software.amazon.awscdk.services.s3.notifications.SnsDestination,
 ) : CdkObject(cdkObject), IBucketNotificationDestination {
   public constructor(topic: ITopic) :
-      this(software.amazon.awscdk.services.s3.notifications.SnsDestination(topic.let(ITopic::unwrap))
+      this(software.amazon.awscdk.services.s3.notifications.SnsDestination(topic.let(ITopic.Companion::unwrap))
   )
 
   /**
@@ -38,8 +38,8 @@ public open class SnsDestination(
    * @param bucket 
    */
   public override fun bind(scope: Construct, bucket: IBucket): BucketNotificationDestinationConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap),
-      bucket.let(IBucket::unwrap)).let(BucketNotificationDestinationConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      bucket.let(IBucket.Companion::unwrap)).let(BucketNotificationDestinationConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.s3.notifications.SnsDestination):

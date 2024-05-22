@@ -39,12 +39,12 @@ public open class CloudWatchLogGroup(
   cdkObject: software.amazon.awscdk.services.events.targets.CloudWatchLogGroup,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(logGroup: CloudshiftdevAwscdkServicesLogsILogGroup) :
-      this(software.amazon.awscdk.services.events.targets.CloudWatchLogGroup(logGroup.let(CloudshiftdevAwscdkServicesLogsILogGroup::unwrap))
+      this(software.amazon.awscdk.services.events.targets.CloudWatchLogGroup(logGroup.let(CloudshiftdevAwscdkServicesLogsILogGroup.Companion::unwrap))
   )
 
   public constructor(logGroup: CloudshiftdevAwscdkServicesLogsILogGroup, props: LogGroupProps) :
-      this(software.amazon.awscdk.services.events.targets.CloudWatchLogGroup(logGroup.let(CloudshiftdevAwscdkServicesLogsILogGroup::unwrap),
-      props.let(LogGroupProps::unwrap))
+      this(software.amazon.awscdk.services.events.targets.CloudWatchLogGroup(logGroup.let(CloudshiftdevAwscdkServicesLogsILogGroup.Companion::unwrap),
+      props.let(LogGroupProps.Companion::unwrap))
   )
 
   public constructor(logGroup: CloudshiftdevAwscdkServicesLogsILogGroup,
@@ -58,7 +58,7 @@ public open class CloudWatchLogGroup(
    * @param _id
    */
   public override fun bind(rule: IRule): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap)).let(RuleTargetConfig::wrap)
 
   /**
    * Returns a RuleTarget that can be used to log an event into a CloudWatch LogGroup.
@@ -67,7 +67,7 @@ public open class CloudWatchLogGroup(
    * @param _id
    */
   public override fun bind(rule: IRule, id: String): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap), id).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap), id).let(RuleTargetConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.events.targets.CloudWatchLogGroup].
@@ -181,7 +181,7 @@ public open class CloudWatchLogGroup(
      * 
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -196,7 +196,7 @@ public open class CloudWatchLogGroup(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun event(event: RuleTargetInput) {
-      cdkBuilder.event(event.let(RuleTargetInput::unwrap))
+      cdkBuilder.event(event.let(RuleTargetInput.Companion::unwrap))
     }
 
     /**
@@ -221,7 +221,7 @@ public open class CloudWatchLogGroup(
      * @param logEvent The event to send to the CloudWatch LogGroup. 
      */
     override fun logEvent(logEvent: LogGroupTargetInput) {
-      cdkBuilder.logEvent(logEvent.let(LogGroupTargetInput::unwrap))
+      cdkBuilder.logEvent(logEvent.let(LogGroupTargetInput.Companion::unwrap))
     }
 
     /**
@@ -236,7 +236,7 @@ public open class CloudWatchLogGroup(
      * processing. 
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**

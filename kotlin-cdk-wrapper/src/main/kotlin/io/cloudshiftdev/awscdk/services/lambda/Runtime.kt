@@ -41,15 +41,16 @@ public open class Runtime(
   )
 
   public constructor(name: String, family: RuntimeFamily) :
-      this(software.amazon.awscdk.services.lambda.Runtime(name, family.let(RuntimeFamily::unwrap))
+      this(software.amazon.awscdk.services.lambda.Runtime(name,
+      family.let(RuntimeFamily.Companion::unwrap))
   )
 
   public constructor(
     name: String,
     family: RuntimeFamily,
     props: LambdaRuntimeProps,
-  ) : this(software.amazon.awscdk.services.lambda.Runtime(name, family.let(RuntimeFamily::unwrap),
-      props.let(LambdaRuntimeProps::unwrap))
+  ) : this(software.amazon.awscdk.services.lambda.Runtime(name,
+      family.let(RuntimeFamily.Companion::unwrap), props.let(LambdaRuntimeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -84,7 +85,7 @@ public open class Runtime(
    * @param other 
    */
   public open fun runtimeEquals(other: Runtime): Boolean =
-      unwrap(this).runtimeEquals(other.let(Runtime::unwrap))
+      unwrap(this).runtimeEquals(other.let(Runtime.Companion::unwrap))
 
   /**
    * Whether this runtime is integrated with and supported for profiling using Amazon CodeGuru

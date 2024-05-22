@@ -75,8 +75,8 @@ public open class CfnIdentity(
     id: String,
     props: CfnIdentityProps,
   ) :
-      this(software.amazon.awscdk.services.pinpointemail.CfnIdentity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnIdentityProps::unwrap))
+      this(software.amazon.awscdk.services.pinpointemail.CfnIdentity(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnIdentityProps.Companion::unwrap))
   )
 
   public constructor(
@@ -162,7 +162,7 @@ public open class CfnIdentity(
    * (DKIM) signing for the domain.
    */
   public open fun dkimSigningEnabled(`value`: IResolvable) {
-    unwrap(this).setDkimSigningEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDkimSigningEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -181,7 +181,7 @@ public open class CfnIdentity(
    * Used to enable or disable feedback forwarding for an identity.
    */
   public open fun feedbackForwardingEnabled(`value`: IResolvable) {
-    unwrap(this).setFeedbackForwardingEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFeedbackForwardingEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -190,7 +190,7 @@ public open class CfnIdentity(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -202,14 +202,14 @@ public open class CfnIdentity(
    * Used to enable or disable the custom Mail-From domain configuration for an email identity.
    */
   public open fun mailFromAttributes(`value`: IResolvable) {
-    unwrap(this).setMailFromAttributes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMailFromAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Used to enable or disable the custom Mail-From domain configuration for an email identity.
    */
   public open fun mailFromAttributes(`value`: MailFromAttributesProperty) {
-    unwrap(this).setMailFromAttributes(`value`.let(MailFromAttributesProperty::unwrap))
+    unwrap(this).setMailFromAttributes(`value`.let(MailFromAttributesProperty.Companion::unwrap))
   }
 
   /**
@@ -243,7 +243,7 @@ public open class CfnIdentity(
    * identity.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -428,7 +428,7 @@ public open class CfnIdentity(
      * DomainKeys Identified Mail (DKIM) signing for the domain. 
      */
     override fun dkimSigningEnabled(dkimSigningEnabled: IResolvable) {
-      cdkBuilder.dkimSigningEnabled(dkimSigningEnabled.let(IResolvable::unwrap))
+      cdkBuilder.dkimSigningEnabled(dkimSigningEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -476,7 +476,7 @@ public open class CfnIdentity(
      * identity. 
      */
     override fun feedbackForwardingEnabled(feedbackForwardingEnabled: IResolvable) {
-      cdkBuilder.feedbackForwardingEnabled(feedbackForwardingEnabled.let(IResolvable::unwrap))
+      cdkBuilder.feedbackForwardingEnabled(feedbackForwardingEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -487,7 +487,7 @@ public open class CfnIdentity(
      * for an email identity. 
      */
     override fun mailFromAttributes(mailFromAttributes: IResolvable) {
-      cdkBuilder.mailFromAttributes(mailFromAttributes.let(IResolvable::unwrap))
+      cdkBuilder.mailFromAttributes(mailFromAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -498,7 +498,7 @@ public open class CfnIdentity(
      * for an email identity. 
      */
     override fun mailFromAttributes(mailFromAttributes: MailFromAttributesProperty) {
-      cdkBuilder.mailFromAttributes(mailFromAttributes.let(MailFromAttributesProperty::unwrap))
+      cdkBuilder.mailFromAttributes(mailFromAttributes.let(MailFromAttributesProperty.Companion::unwrap))
     }
 
     /**
@@ -534,7 +534,7 @@ public open class CfnIdentity(
      * the email identity. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

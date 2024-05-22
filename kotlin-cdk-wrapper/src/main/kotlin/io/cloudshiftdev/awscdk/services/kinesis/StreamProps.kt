@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.kinesis
 
 import io.cloudshiftdev.awscdk.Duration
+import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
@@ -48,6 +49,14 @@ public interface StreamProps {
    * will be created and associated with this stream.
    */
   public fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
+
+  /**
+   * Policy to apply when the stream is removed from the stack.
+   *
+   * Default: RemovalPolicy.RETAIN
+   */
+  public fun removalPolicy(): RemovalPolicy? =
+      unwrap(this).getRemovalPolicy()?.let(RemovalPolicy::wrap)
 
   /**
    * The number of hours for the data records that are stored in shards to remain accessible.
@@ -98,6 +107,11 @@ public interface StreamProps {
     public fun encryptionKey(encryptionKey: IKey)
 
     /**
+     * @param removalPolicy Policy to apply when the stream is removed from the stack.
+     */
+    public fun removalPolicy(removalPolicy: RemovalPolicy)
+
+    /**
      * @param retentionPeriod The number of hours for the data records that are stored in shards to
      * remain accessible.
      */
@@ -130,7 +144,7 @@ public interface StreamProps {
      * encryption key is not specified, a key will automatically be created.
      */
     override fun encryption(encryption: StreamEncryption) {
-      cdkBuilder.encryption(encryption.let(StreamEncryption::unwrap))
+      cdkBuilder.encryption(encryption.let(StreamEncryption.Companion::unwrap))
     }
 
     /**
@@ -138,7 +152,14 @@ public interface StreamProps {
      * The 'encryption' property must be set to "Kms".
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
+    }
+
+    /**
+     * @param removalPolicy Policy to apply when the stream is removed from the stack.
+     */
+    override fun removalPolicy(removalPolicy: RemovalPolicy) {
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -146,7 +167,7 @@ public interface StreamProps {
      * remain accessible.
      */
     override fun retentionPeriod(retentionPeriod: Duration) {
-      cdkBuilder.retentionPeriod(retentionPeriod.let(Duration::unwrap))
+      cdkBuilder.retentionPeriod(retentionPeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -161,7 +182,7 @@ public interface StreamProps {
      * @param streamMode The capacity mode of this stream.
      */
     override fun streamMode(streamMode: StreamMode) {
-      cdkBuilder.streamMode(streamMode.let(StreamMode::unwrap))
+      cdkBuilder.streamMode(streamMode.let(StreamMode.Companion::unwrap))
     }
 
     /**
@@ -200,6 +221,14 @@ public interface StreamProps {
      * will be created and associated with this stream.
      */
     override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
+
+    /**
+     * Policy to apply when the stream is removed from the stack.
+     *
+     * Default: RemovalPolicy.RETAIN
+     */
+    override fun removalPolicy(): RemovalPolicy? =
+        unwrap(this).getRemovalPolicy()?.let(RemovalPolicy::wrap)
 
     /**
      * The number of hours for the data records that are stored in shards to remain accessible.

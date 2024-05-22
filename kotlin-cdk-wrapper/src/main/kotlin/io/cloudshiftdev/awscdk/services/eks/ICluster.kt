@@ -346,7 +346,8 @@ public interface ICluster : IResource, IConnectable {
      * @param options
      */
     override fun addCdk8sChart(id: String, chart: Construct): KubernetesManifest =
-        unwrap(this).addCdk8sChart(id, chart.let(Construct::unwrap)).let(KubernetesManifest::wrap)
+        unwrap(this).addCdk8sChart(id,
+        chart.let(Construct.Companion::unwrap)).let(KubernetesManifest::wrap)
 
     /**
      * Defines a CDK8s chart in this cluster.
@@ -360,8 +361,8 @@ public interface ICluster : IResource, IConnectable {
       id: String,
       chart: Construct,
       options: KubernetesManifestOptions,
-    ): KubernetesManifest = unwrap(this).addCdk8sChart(id, chart.let(Construct::unwrap),
-        options.let(KubernetesManifestOptions::unwrap)).let(KubernetesManifest::wrap)
+    ): KubernetesManifest = unwrap(this).addCdk8sChart(id, chart.let(Construct.Companion::unwrap),
+        options.let(KubernetesManifestOptions.Companion::unwrap)).let(KubernetesManifest::wrap)
 
     /**
      * Defines a CDK8s chart in this cluster.
@@ -387,7 +388,8 @@ public interface ICluster : IResource, IConnectable {
      * @param options options of this chart. 
      */
     override fun addHelmChart(id: String, options: HelmChartOptions): HelmChart =
-        unwrap(this).addHelmChart(id, options.let(HelmChartOptions::unwrap)).let(HelmChart::wrap)
+        unwrap(this).addHelmChart(id,
+        options.let(HelmChartOptions.Companion::unwrap)).let(HelmChart::wrap)
 
     /**
      * Defines a Helm chart in this cluster.
@@ -431,7 +433,7 @@ public interface ICluster : IResource, IConnectable {
      */
     override fun addServiceAccount(id: String, options: ServiceAccountOptions): ServiceAccount =
         unwrap(this).addServiceAccount(id,
-        options.let(ServiceAccountOptions::unwrap)).let(ServiceAccount::wrap)
+        options.let(ServiceAccountOptions.Companion::unwrap)).let(ServiceAccount::wrap)
 
     /**
      * Creates a new service account with corresponding IAM Role (IRSA).
@@ -458,7 +460,7 @@ public interface ICluster : IResource, IConnectable {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -544,8 +546,8 @@ public interface ICluster : IResource, IConnectable {
      */
     override fun connectAutoScalingGroupCapacity(autoScalingGroup: AutoScalingGroup,
         options: AutoScalingGroupOptions) {
-      unwrap(this).connectAutoScalingGroupCapacity(autoScalingGroup.let(AutoScalingGroup::unwrap),
-          options.let(AutoScalingGroupOptions::unwrap))
+      unwrap(this).connectAutoScalingGroupCapacity(autoScalingGroup.let(AutoScalingGroup.Companion::unwrap),
+          options.let(AutoScalingGroupOptions.Companion::unwrap))
     }
 
     /**

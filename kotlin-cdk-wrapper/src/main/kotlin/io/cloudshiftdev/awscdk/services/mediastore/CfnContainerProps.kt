@@ -323,7 +323,7 @@ public interface CfnContainerProps {
      * objects stored in that container to CloudWatch Logs.
      */
     override fun accessLoggingEnabled(accessLoggingEnabled: IResolvable) {
-      cdkBuilder.accessLoggingEnabled(accessLoggingEnabled.let(IResolvable::unwrap))
+      cdkBuilder.accessLoggingEnabled(accessLoggingEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -352,7 +352,7 @@ public interface CfnContainerProps {
      * MediaStore](https://docs.aws.amazon.com/mediastore/latest/ug/cors-policy.html) .
      */
     override fun corsPolicy(corsPolicy: IResolvable) {
-      cdkBuilder.corsPolicy(corsPolicy.let(IResolvable::unwrap))
+      cdkBuilder.corsPolicy(corsPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -416,7 +416,7 @@ public interface CfnContainerProps {
      * Policies](https://docs.aws.amazon.com/mediastore/latest/ug/policies-metric-examples.html) .
      */
     override fun metricPolicy(metricPolicy: IResolvable) {
-      cdkBuilder.metricPolicy(metricPolicy.let(IResolvable::unwrap))
+      cdkBuilder.metricPolicy(metricPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -430,7 +430,7 @@ public interface CfnContainerProps {
      * Policies](https://docs.aws.amazon.com/mediastore/latest/ug/policies-metric-examples.html) .
      */
     override fun metricPolicy(metricPolicy: CfnContainer.MetricPolicyProperty) {
-      cdkBuilder.metricPolicy(metricPolicy.let(CfnContainer.MetricPolicyProperty::unwrap))
+      cdkBuilder.metricPolicy(metricPolicy.let(CfnContainer.MetricPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -465,7 +465,7 @@ public interface CfnContainerProps {
      * @param tags the value to be set.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

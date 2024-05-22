@@ -73,7 +73,7 @@ public interface CrossRegionSupport {
      * Belongs to `stack`.
      */
     override fun replicationBucket(replicationBucket: IBucket) {
-      cdkBuilder.replicationBucket(replicationBucket.let(IBucket::unwrap))
+      cdkBuilder.replicationBucket(replicationBucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -81,7 +81,7 @@ public interface CrossRegionSupport {
      * this  region. 
      */
     override fun stack(stack: Stack) {
-      cdkBuilder.stack(stack.let(Stack::unwrap))
+      cdkBuilder.stack(stack.let(Stack.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codepipeline.CrossRegionSupport =

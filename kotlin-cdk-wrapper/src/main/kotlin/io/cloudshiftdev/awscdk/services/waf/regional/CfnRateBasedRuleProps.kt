@@ -158,7 +158,7 @@ public interface CfnRateBasedRuleProps {
      * `RateBasedRule` .
      */
     override fun matchPredicates(matchPredicates: IResolvable) {
-      cdkBuilder.matchPredicates(matchPredicates.let(IResolvable::unwrap))
+      cdkBuilder.matchPredicates(matchPredicates.let(IResolvable.Companion::unwrap))
     }
 
     /**

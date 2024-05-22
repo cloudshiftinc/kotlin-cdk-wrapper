@@ -305,8 +305,8 @@ public open class CfnConnectorProfile(
     id: String,
     props: CfnConnectorProfileProps,
   ) :
-      this(software.amazon.awscdk.services.appflow.CfnConnectorProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConnectorProfileProps::unwrap))
+      this(software.amazon.awscdk.services.appflow.CfnConnectorProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConnectorProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -359,14 +359,14 @@ public open class CfnConnectorProfile(
    * Defines the connector-specific configuration and credentials.
    */
   public open fun connectorProfileConfig(`value`: IResolvable) {
-    unwrap(this).setConnectorProfileConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConnectorProfileConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Defines the connector-specific configuration and credentials.
    */
   public open fun connectorProfileConfig(`value`: ConnectorProfileConfigProperty) {
-    unwrap(this).setConnectorProfileConfig(`value`.let(ConnectorProfileConfigProperty::unwrap))
+    unwrap(this).setConnectorProfileConfig(`value`.let(ConnectorProfileConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -408,7 +408,7 @@ public open class CfnConnectorProfile(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -539,7 +539,7 @@ public open class CfnConnectorProfile(
      * @param connectorProfileConfig Defines the connector-specific configuration and credentials. 
      */
     override fun connectorProfileConfig(connectorProfileConfig: IResolvable) {
-      cdkBuilder.connectorProfileConfig(connectorProfileConfig.let(IResolvable::unwrap))
+      cdkBuilder.connectorProfileConfig(connectorProfileConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -549,7 +549,7 @@ public open class CfnConnectorProfile(
      * @param connectorProfileConfig Defines the connector-specific configuration and credentials. 
      */
     override fun connectorProfileConfig(connectorProfileConfig: ConnectorProfileConfigProperty) {
-      cdkBuilder.connectorProfileConfig(connectorProfileConfig.let(ConnectorProfileConfigProperty::unwrap))
+      cdkBuilder.connectorProfileConfig(connectorProfileConfig.let(ConnectorProfileConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1410,7 +1410,7 @@ public open class CfnConnectorProfile(
        * connector.
        */
       override fun connectorProfileCredentials(connectorProfileCredentials: IResolvable) {
-        cdkBuilder.connectorProfileCredentials(connectorProfileCredentials.let(IResolvable::unwrap))
+        cdkBuilder.connectorProfileCredentials(connectorProfileCredentials.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1419,7 +1419,7 @@ public open class CfnConnectorProfile(
        */
       override
           fun connectorProfileCredentials(connectorProfileCredentials: ConnectorProfileCredentialsProperty) {
-        cdkBuilder.connectorProfileCredentials(connectorProfileCredentials.let(ConnectorProfileCredentialsProperty::unwrap))
+        cdkBuilder.connectorProfileCredentials(connectorProfileCredentials.let(ConnectorProfileCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -1438,7 +1438,7 @@ public open class CfnConnectorProfile(
        * configuration.
        */
       override fun connectorProfileProperties(connectorProfileProperties: IResolvable) {
-        cdkBuilder.connectorProfileProperties(connectorProfileProperties.let(IResolvable::unwrap))
+        cdkBuilder.connectorProfileProperties(connectorProfileProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1447,7 +1447,7 @@ public open class CfnConnectorProfile(
        */
       override
           fun connectorProfileProperties(connectorProfileProperties: ConnectorProfilePropertiesProperty) {
-        cdkBuilder.connectorProfileProperties(connectorProfileProperties.let(ConnectorProfilePropertiesProperty::unwrap))
+        cdkBuilder.connectorProfileProperties(connectorProfileProperties.let(ConnectorProfilePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -2139,14 +2139,14 @@ public open class CfnConnectorProfile(
        * @param amplitude The connector-specific credentials required when using Amplitude.
        */
       override fun amplitude(amplitude: IResolvable) {
-        cdkBuilder.amplitude(amplitude.let(IResolvable::unwrap))
+        cdkBuilder.amplitude(amplitude.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param amplitude The connector-specific credentials required when using Amplitude.
        */
       override fun amplitude(amplitude: AmplitudeConnectorProfileCredentialsProperty) {
-        cdkBuilder.amplitude(amplitude.let(AmplitudeConnectorProfileCredentialsProperty::unwrap))
+        cdkBuilder.amplitude(amplitude.let(AmplitudeConnectorProfileCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -2163,7 +2163,7 @@ public open class CfnConnectorProfile(
        * using the custom connector.
        */
       override fun customConnector(customConnector: IResolvable) {
-        cdkBuilder.customConnector(customConnector.let(IResolvable::unwrap))
+        cdkBuilder.customConnector(customConnector.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2171,7 +2171,7 @@ public open class CfnConnectorProfile(
        * using the custom connector.
        */
       override fun customConnector(customConnector: CustomConnectorProfileCredentialsProperty) {
-        cdkBuilder.customConnector(customConnector.let(CustomConnectorProfileCredentialsProperty::unwrap))
+        cdkBuilder.customConnector(customConnector.let(CustomConnectorProfileCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -2188,14 +2188,14 @@ public open class CfnConnectorProfile(
        * @param datadog The connector-specific credentials required when using Datadog.
        */
       override fun datadog(datadog: IResolvable) {
-        cdkBuilder.datadog(datadog.let(IResolvable::unwrap))
+        cdkBuilder.datadog(datadog.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param datadog The connector-specific credentials required when using Datadog.
        */
       override fun datadog(datadog: DatadogConnectorProfileCredentialsProperty) {
-        cdkBuilder.datadog(datadog.let(DatadogConnectorProfileCredentialsProperty::unwrap))
+        cdkBuilder.datadog(datadog.let(DatadogConnectorProfileCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -2210,14 +2210,14 @@ public open class CfnConnectorProfile(
        * @param dynatrace The connector-specific credentials required when using Dynatrace.
        */
       override fun dynatrace(dynatrace: IResolvable) {
-        cdkBuilder.dynatrace(dynatrace.let(IResolvable::unwrap))
+        cdkBuilder.dynatrace(dynatrace.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dynatrace The connector-specific credentials required when using Dynatrace.
        */
       override fun dynatrace(dynatrace: DynatraceConnectorProfileCredentialsProperty) {
-        cdkBuilder.dynatrace(dynatrace.let(DynatraceConnectorProfileCredentialsProperty::unwrap))
+        cdkBuilder.dynatrace(dynatrace.let(DynatraceConnectorProfileCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -2234,7 +2234,7 @@ public open class CfnConnectorProfile(
        * Analytics.
        */
       override fun googleAnalytics(googleAnalytics: IResolvable) {
-        cdkBuilder.googleAnalytics(googleAnalytics.let(IResolvable::unwrap))
+        cdkBuilder.googleAnalytics(googleAnalytics.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2243,7 +2243,7 @@ public open class CfnConnectorProfile(
        */
       override
           fun googleAnalytics(googleAnalytics: GoogleAnalyticsConnectorProfileCredentialsProperty) {
-        cdkBuilder.googleAnalytics(googleAnalytics.let(GoogleAnalyticsConnectorProfileCredentialsProperty::unwrap))
+        cdkBuilder.googleAnalytics(googleAnalytics.let(GoogleAnalyticsConnectorProfileCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -2261,14 +2261,14 @@ public open class CfnConnectorProfile(
        * @param inforNexus The connector-specific credentials required when using Infor Nexus.
        */
       override fun inforNexus(inforNexus: IResolvable) {
-        cdkBuilder.inforNexus(inforNexus.let(IResolvable::unwrap))
+        cdkBuilder.inforNexus(inforNexus.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param inforNexus The connector-specific credentials required when using Infor Nexus.
        */
       override fun inforNexus(inforNexus: InforNexusConnectorProfileCredentialsProperty) {
-        cdkBuilder.inforNexus(inforNexus.let(InforNexusConnectorProfileCredentialsProperty::unwrap))
+        cdkBuilder.inforNexus(inforNexus.let(InforNexusConnectorProfileCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -2284,14 +2284,14 @@ public open class CfnConnectorProfile(
        * @param marketo The connector-specific credentials required when using Marketo.
        */
       override fun marketo(marketo: IResolvable) {
-        cdkBuilder.marketo(marketo.let(IResolvable::unwrap))
+        cdkBuilder.marketo(marketo.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param marketo The connector-specific credentials required when using Marketo.
        */
       override fun marketo(marketo: MarketoConnectorProfileCredentialsProperty) {
-        cdkBuilder.marketo(marketo.let(MarketoConnectorProfileCredentialsProperty::unwrap))
+        cdkBuilder.marketo(marketo.let(MarketoConnectorProfileCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -2306,14 +2306,14 @@ public open class CfnConnectorProfile(
        * @param pardot The connector-specific credentials required when using Salesforce Pardot.
        */
       override fun pardot(pardot: IResolvable) {
-        cdkBuilder.pardot(pardot.let(IResolvable::unwrap))
+        cdkBuilder.pardot(pardot.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param pardot The connector-specific credentials required when using Salesforce Pardot.
        */
       override fun pardot(pardot: PardotConnectorProfileCredentialsProperty) {
-        cdkBuilder.pardot(pardot.let(PardotConnectorProfileCredentialsProperty::unwrap))
+        cdkBuilder.pardot(pardot.let(PardotConnectorProfileCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -2328,14 +2328,14 @@ public open class CfnConnectorProfile(
        * @param redshift The connector-specific credentials required when using Amazon Redshift.
        */
       override fun redshift(redshift: IResolvable) {
-        cdkBuilder.redshift(redshift.let(IResolvable::unwrap))
+        cdkBuilder.redshift(redshift.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param redshift The connector-specific credentials required when using Amazon Redshift.
        */
       override fun redshift(redshift: RedshiftConnectorProfileCredentialsProperty) {
-        cdkBuilder.redshift(redshift.let(RedshiftConnectorProfileCredentialsProperty::unwrap))
+        cdkBuilder.redshift(redshift.let(RedshiftConnectorProfileCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -2351,14 +2351,14 @@ public open class CfnConnectorProfile(
        * @param salesforce The connector-specific credentials required when using Salesforce.
        */
       override fun salesforce(salesforce: IResolvable) {
-        cdkBuilder.salesforce(salesforce.let(IResolvable::unwrap))
+        cdkBuilder.salesforce(salesforce.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param salesforce The connector-specific credentials required when using Salesforce.
        */
       override fun salesforce(salesforce: SalesforceConnectorProfileCredentialsProperty) {
-        cdkBuilder.salesforce(salesforce.let(SalesforceConnectorProfileCredentialsProperty::unwrap))
+        cdkBuilder.salesforce(salesforce.let(SalesforceConnectorProfileCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -2374,14 +2374,14 @@ public open class CfnConnectorProfile(
        * @param sapoData The connector-specific profile credentials required when using SAPOData.
        */
       override fun sapoData(sapoData: IResolvable) {
-        cdkBuilder.sapoData(sapoData.let(IResolvable::unwrap))
+        cdkBuilder.sapoData(sapoData.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sapoData The connector-specific profile credentials required when using SAPOData.
        */
       override fun sapoData(sapoData: SAPODataConnectorProfileCredentialsProperty) {
-        cdkBuilder.sapoData(sapoData.let(SAPODataConnectorProfileCredentialsProperty::unwrap))
+        cdkBuilder.sapoData(sapoData.let(SAPODataConnectorProfileCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -2397,14 +2397,14 @@ public open class CfnConnectorProfile(
        * @param serviceNow The connector-specific credentials required when using ServiceNow.
        */
       override fun serviceNow(serviceNow: IResolvable) {
-        cdkBuilder.serviceNow(serviceNow.let(IResolvable::unwrap))
+        cdkBuilder.serviceNow(serviceNow.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param serviceNow The connector-specific credentials required when using ServiceNow.
        */
       override fun serviceNow(serviceNow: ServiceNowConnectorProfileCredentialsProperty) {
-        cdkBuilder.serviceNow(serviceNow.let(ServiceNowConnectorProfileCredentialsProperty::unwrap))
+        cdkBuilder.serviceNow(serviceNow.let(ServiceNowConnectorProfileCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -2420,14 +2420,14 @@ public open class CfnConnectorProfile(
        * @param singular The connector-specific credentials required when using Singular.
        */
       override fun singular(singular: IResolvable) {
-        cdkBuilder.singular(singular.let(IResolvable::unwrap))
+        cdkBuilder.singular(singular.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param singular The connector-specific credentials required when using Singular.
        */
       override fun singular(singular: SingularConnectorProfileCredentialsProperty) {
-        cdkBuilder.singular(singular.let(SingularConnectorProfileCredentialsProperty::unwrap))
+        cdkBuilder.singular(singular.let(SingularConnectorProfileCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -2443,14 +2443,14 @@ public open class CfnConnectorProfile(
        * @param slack The connector-specific credentials required when using Slack.
        */
       override fun slack(slack: IResolvable) {
-        cdkBuilder.slack(slack.let(IResolvable::unwrap))
+        cdkBuilder.slack(slack.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param slack The connector-specific credentials required when using Slack.
        */
       override fun slack(slack: SlackConnectorProfileCredentialsProperty) {
-        cdkBuilder.slack(slack.let(SlackConnectorProfileCredentialsProperty::unwrap))
+        cdkBuilder.slack(slack.let(SlackConnectorProfileCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -2465,14 +2465,14 @@ public open class CfnConnectorProfile(
        * @param snowflake The connector-specific credentials required when using Snowflake.
        */
       override fun snowflake(snowflake: IResolvable) {
-        cdkBuilder.snowflake(snowflake.let(IResolvable::unwrap))
+        cdkBuilder.snowflake(snowflake.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param snowflake The connector-specific credentials required when using Snowflake.
        */
       override fun snowflake(snowflake: SnowflakeConnectorProfileCredentialsProperty) {
-        cdkBuilder.snowflake(snowflake.let(SnowflakeConnectorProfileCredentialsProperty::unwrap))
+        cdkBuilder.snowflake(snowflake.let(SnowflakeConnectorProfileCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -2488,14 +2488,14 @@ public open class CfnConnectorProfile(
        * @param trendmicro The connector-specific credentials required when using Trend Micro.
        */
       override fun trendmicro(trendmicro: IResolvable) {
-        cdkBuilder.trendmicro(trendmicro.let(IResolvable::unwrap))
+        cdkBuilder.trendmicro(trendmicro.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param trendmicro The connector-specific credentials required when using Trend Micro.
        */
       override fun trendmicro(trendmicro: TrendmicroConnectorProfileCredentialsProperty) {
-        cdkBuilder.trendmicro(trendmicro.let(TrendmicroConnectorProfileCredentialsProperty::unwrap))
+        cdkBuilder.trendmicro(trendmicro.let(TrendmicroConnectorProfileCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -2511,14 +2511,14 @@ public open class CfnConnectorProfile(
        * @param veeva The connector-specific credentials required when using Veeva.
        */
       override fun veeva(veeva: IResolvable) {
-        cdkBuilder.veeva(veeva.let(IResolvable::unwrap))
+        cdkBuilder.veeva(veeva.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param veeva The connector-specific credentials required when using Veeva.
        */
       override fun veeva(veeva: VeevaConnectorProfileCredentialsProperty) {
-        cdkBuilder.veeva(veeva.let(VeevaConnectorProfileCredentialsProperty::unwrap))
+        cdkBuilder.veeva(veeva.let(VeevaConnectorProfileCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -2533,14 +2533,14 @@ public open class CfnConnectorProfile(
        * @param zendesk The connector-specific credentials required when using Zendesk.
        */
       override fun zendesk(zendesk: IResolvable) {
-        cdkBuilder.zendesk(zendesk.let(IResolvable::unwrap))
+        cdkBuilder.zendesk(zendesk.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param zendesk The connector-specific credentials required when using Zendesk.
        */
       override fun zendesk(zendesk: ZendeskConnectorProfileCredentialsProperty) {
-        cdkBuilder.zendesk(zendesk.let(ZendeskConnectorProfileCredentialsProperty::unwrap))
+        cdkBuilder.zendesk(zendesk.let(ZendeskConnectorProfileCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -3162,14 +3162,14 @@ public open class CfnConnectorProfile(
        * @param customConnector The properties required by the custom connector.
        */
       override fun customConnector(customConnector: IResolvable) {
-        cdkBuilder.customConnector(customConnector.let(IResolvable::unwrap))
+        cdkBuilder.customConnector(customConnector.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param customConnector The properties required by the custom connector.
        */
       override fun customConnector(customConnector: CustomConnectorProfilePropertiesProperty) {
-        cdkBuilder.customConnector(customConnector.let(CustomConnectorProfilePropertiesProperty::unwrap))
+        cdkBuilder.customConnector(customConnector.let(CustomConnectorProfilePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3185,14 +3185,14 @@ public open class CfnConnectorProfile(
        * @param datadog The connector-specific properties required by Datadog.
        */
       override fun datadog(datadog: IResolvable) {
-        cdkBuilder.datadog(datadog.let(IResolvable::unwrap))
+        cdkBuilder.datadog(datadog.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param datadog The connector-specific properties required by Datadog.
        */
       override fun datadog(datadog: DatadogConnectorProfilePropertiesProperty) {
-        cdkBuilder.datadog(datadog.let(DatadogConnectorProfilePropertiesProperty::unwrap))
+        cdkBuilder.datadog(datadog.let(DatadogConnectorProfilePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3207,14 +3207,14 @@ public open class CfnConnectorProfile(
        * @param dynatrace The connector-specific properties required by Dynatrace.
        */
       override fun dynatrace(dynatrace: IResolvable) {
-        cdkBuilder.dynatrace(dynatrace.let(IResolvable::unwrap))
+        cdkBuilder.dynatrace(dynatrace.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dynatrace The connector-specific properties required by Dynatrace.
        */
       override fun dynatrace(dynatrace: DynatraceConnectorProfilePropertiesProperty) {
-        cdkBuilder.dynatrace(dynatrace.let(DynatraceConnectorProfilePropertiesProperty::unwrap))
+        cdkBuilder.dynatrace(dynatrace.let(DynatraceConnectorProfilePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3230,14 +3230,14 @@ public open class CfnConnectorProfile(
        * @param inforNexus The connector-specific properties required by Infor Nexus.
        */
       override fun inforNexus(inforNexus: IResolvable) {
-        cdkBuilder.inforNexus(inforNexus.let(IResolvable::unwrap))
+        cdkBuilder.inforNexus(inforNexus.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param inforNexus The connector-specific properties required by Infor Nexus.
        */
       override fun inforNexus(inforNexus: InforNexusConnectorProfilePropertiesProperty) {
-        cdkBuilder.inforNexus(inforNexus.let(InforNexusConnectorProfilePropertiesProperty::unwrap))
+        cdkBuilder.inforNexus(inforNexus.let(InforNexusConnectorProfilePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3253,14 +3253,14 @@ public open class CfnConnectorProfile(
        * @param marketo The connector-specific properties required by Marketo.
        */
       override fun marketo(marketo: IResolvable) {
-        cdkBuilder.marketo(marketo.let(IResolvable::unwrap))
+        cdkBuilder.marketo(marketo.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param marketo The connector-specific properties required by Marketo.
        */
       override fun marketo(marketo: MarketoConnectorProfilePropertiesProperty) {
-        cdkBuilder.marketo(marketo.let(MarketoConnectorProfilePropertiesProperty::unwrap))
+        cdkBuilder.marketo(marketo.let(MarketoConnectorProfilePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3275,14 +3275,14 @@ public open class CfnConnectorProfile(
        * @param pardot The connector-specific properties required by Salesforce Pardot.
        */
       override fun pardot(pardot: IResolvable) {
-        cdkBuilder.pardot(pardot.let(IResolvable::unwrap))
+        cdkBuilder.pardot(pardot.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param pardot The connector-specific properties required by Salesforce Pardot.
        */
       override fun pardot(pardot: PardotConnectorProfilePropertiesProperty) {
-        cdkBuilder.pardot(pardot.let(PardotConnectorProfilePropertiesProperty::unwrap))
+        cdkBuilder.pardot(pardot.let(PardotConnectorProfilePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3297,14 +3297,14 @@ public open class CfnConnectorProfile(
        * @param redshift The connector-specific properties required by Amazon Redshift.
        */
       override fun redshift(redshift: IResolvable) {
-        cdkBuilder.redshift(redshift.let(IResolvable::unwrap))
+        cdkBuilder.redshift(redshift.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param redshift The connector-specific properties required by Amazon Redshift.
        */
       override fun redshift(redshift: RedshiftConnectorProfilePropertiesProperty) {
-        cdkBuilder.redshift(redshift.let(RedshiftConnectorProfilePropertiesProperty::unwrap))
+        cdkBuilder.redshift(redshift.let(RedshiftConnectorProfilePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3320,14 +3320,14 @@ public open class CfnConnectorProfile(
        * @param salesforce The connector-specific properties required by Salesforce.
        */
       override fun salesforce(salesforce: IResolvable) {
-        cdkBuilder.salesforce(salesforce.let(IResolvable::unwrap))
+        cdkBuilder.salesforce(salesforce.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param salesforce The connector-specific properties required by Salesforce.
        */
       override fun salesforce(salesforce: SalesforceConnectorProfilePropertiesProperty) {
-        cdkBuilder.salesforce(salesforce.let(SalesforceConnectorProfilePropertiesProperty::unwrap))
+        cdkBuilder.salesforce(salesforce.let(SalesforceConnectorProfilePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3343,14 +3343,14 @@ public open class CfnConnectorProfile(
        * @param sapoData The connector-specific profile properties required when using SAPOData.
        */
       override fun sapoData(sapoData: IResolvable) {
-        cdkBuilder.sapoData(sapoData.let(IResolvable::unwrap))
+        cdkBuilder.sapoData(sapoData.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sapoData The connector-specific profile properties required when using SAPOData.
        */
       override fun sapoData(sapoData: SAPODataConnectorProfilePropertiesProperty) {
-        cdkBuilder.sapoData(sapoData.let(SAPODataConnectorProfilePropertiesProperty::unwrap))
+        cdkBuilder.sapoData(sapoData.let(SAPODataConnectorProfilePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3366,14 +3366,14 @@ public open class CfnConnectorProfile(
        * @param serviceNow The connector-specific properties required by serviceNow.
        */
       override fun serviceNow(serviceNow: IResolvable) {
-        cdkBuilder.serviceNow(serviceNow.let(IResolvable::unwrap))
+        cdkBuilder.serviceNow(serviceNow.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param serviceNow The connector-specific properties required by serviceNow.
        */
       override fun serviceNow(serviceNow: ServiceNowConnectorProfilePropertiesProperty) {
-        cdkBuilder.serviceNow(serviceNow.let(ServiceNowConnectorProfilePropertiesProperty::unwrap))
+        cdkBuilder.serviceNow(serviceNow.let(ServiceNowConnectorProfilePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3389,14 +3389,14 @@ public open class CfnConnectorProfile(
        * @param slack The connector-specific properties required by Slack.
        */
       override fun slack(slack: IResolvable) {
-        cdkBuilder.slack(slack.let(IResolvable::unwrap))
+        cdkBuilder.slack(slack.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param slack The connector-specific properties required by Slack.
        */
       override fun slack(slack: SlackConnectorProfilePropertiesProperty) {
-        cdkBuilder.slack(slack.let(SlackConnectorProfilePropertiesProperty::unwrap))
+        cdkBuilder.slack(slack.let(SlackConnectorProfilePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3411,14 +3411,14 @@ public open class CfnConnectorProfile(
        * @param snowflake The connector-specific properties required by Snowflake.
        */
       override fun snowflake(snowflake: IResolvable) {
-        cdkBuilder.snowflake(snowflake.let(IResolvable::unwrap))
+        cdkBuilder.snowflake(snowflake.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param snowflake The connector-specific properties required by Snowflake.
        */
       override fun snowflake(snowflake: SnowflakeConnectorProfilePropertiesProperty) {
-        cdkBuilder.snowflake(snowflake.let(SnowflakeConnectorProfilePropertiesProperty::unwrap))
+        cdkBuilder.snowflake(snowflake.let(SnowflakeConnectorProfilePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3434,14 +3434,14 @@ public open class CfnConnectorProfile(
        * @param veeva The connector-specific properties required by Veeva.
        */
       override fun veeva(veeva: IResolvable) {
-        cdkBuilder.veeva(veeva.let(IResolvable::unwrap))
+        cdkBuilder.veeva(veeva.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param veeva The connector-specific properties required by Veeva.
        */
       override fun veeva(veeva: VeevaConnectorProfilePropertiesProperty) {
-        cdkBuilder.veeva(veeva.let(VeevaConnectorProfilePropertiesProperty::unwrap))
+        cdkBuilder.veeva(veeva.let(VeevaConnectorProfilePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3456,14 +3456,14 @@ public open class CfnConnectorProfile(
        * @param zendesk The connector-specific properties required by Zendesk.
        */
       override fun zendesk(zendesk: IResolvable) {
-        cdkBuilder.zendesk(zendesk.let(IResolvable::unwrap))
+        cdkBuilder.zendesk(zendesk.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param zendesk The connector-specific properties required by Zendesk.
        */
       override fun zendesk(zendesk: ZendeskConnectorProfilePropertiesProperty) {
-        cdkBuilder.zendesk(zendesk.let(ZendeskConnectorProfilePropertiesProperty::unwrap))
+        cdkBuilder.zendesk(zendesk.let(ZendeskConnectorProfilePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3666,7 +3666,7 @@ public open class CfnConnectorProfile(
        * @param credentialsMap A map that holds custom authentication credentials.
        */
       override fun credentialsMap(credentialsMap: IResolvable) {
-        cdkBuilder.credentialsMap(credentialsMap.let(IResolvable::unwrap))
+        cdkBuilder.credentialsMap(credentialsMap.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3898,14 +3898,14 @@ public open class CfnConnectorProfile(
        * @param apiKey The API keys required for the authentication of the user.
        */
       override fun apiKey(apiKey: IResolvable) {
-        cdkBuilder.apiKey(apiKey.let(IResolvable::unwrap))
+        cdkBuilder.apiKey(apiKey.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param apiKey The API keys required for the authentication of the user.
        */
       override fun apiKey(apiKey: ApiKeyCredentialsProperty) {
-        cdkBuilder.apiKey(apiKey.let(ApiKeyCredentialsProperty::unwrap))
+        cdkBuilder.apiKey(apiKey.let(ApiKeyCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -3928,14 +3928,14 @@ public open class CfnConnectorProfile(
        * @param basic The basic credentials that are required for the authentication of the user.
        */
       override fun basic(basic: IResolvable) {
-        cdkBuilder.basic(basic.let(IResolvable::unwrap))
+        cdkBuilder.basic(basic.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param basic The basic credentials that are required for the authentication of the user.
        */
       override fun basic(basic: BasicAuthCredentialsProperty) {
-        cdkBuilder.basic(basic.let(BasicAuthCredentialsProperty::unwrap))
+        cdkBuilder.basic(basic.let(BasicAuthCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -3951,7 +3951,7 @@ public open class CfnConnectorProfile(
        * required credentials.
        */
       override fun custom(custom: IResolvable) {
-        cdkBuilder.custom(custom.let(IResolvable::unwrap))
+        cdkBuilder.custom(custom.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3959,7 +3959,7 @@ public open class CfnConnectorProfile(
        * required credentials.
        */
       override fun custom(custom: CustomAuthCredentialsProperty) {
-        cdkBuilder.custom(custom.let(CustomAuthCredentialsProperty::unwrap))
+        cdkBuilder.custom(custom.let(CustomAuthCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -3975,14 +3975,14 @@ public open class CfnConnectorProfile(
        * @param oauth2 The OAuth 2.0 credentials required for the authentication of the user.
        */
       override fun oauth2(oauth2: IResolvable) {
-        cdkBuilder.oauth2(oauth2.let(IResolvable::unwrap))
+        cdkBuilder.oauth2(oauth2.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param oauth2 The OAuth 2.0 credentials required for the authentication of the user.
        */
       override fun oauth2(oauth2: OAuth2CredentialsProperty) {
-        cdkBuilder.oauth2(oauth2.let(OAuth2CredentialsProperty::unwrap))
+        cdkBuilder.oauth2(oauth2.let(OAuth2CredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -4142,14 +4142,14 @@ public open class CfnConnectorProfile(
        * @param oAuth2Properties The OAuth 2.0 properties required for OAuth 2.0 authentication.
        */
       override fun oAuth2Properties(oAuth2Properties: IResolvable) {
-        cdkBuilder.oAuth2Properties(oAuth2Properties.let(IResolvable::unwrap))
+        cdkBuilder.oAuth2Properties(oAuth2Properties.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param oAuth2Properties The OAuth 2.0 properties required for OAuth 2.0 authentication.
        */
       override fun oAuth2Properties(oAuth2Properties: OAuth2PropertiesProperty) {
-        cdkBuilder.oAuth2Properties(oAuth2Properties.let(OAuth2PropertiesProperty::unwrap))
+        cdkBuilder.oAuth2Properties(oAuth2Properties.let(OAuth2PropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -4165,7 +4165,7 @@ public open class CfnConnectorProfile(
        * custom connector.
        */
       override fun profileProperties(profileProperties: IResolvable) {
-        cdkBuilder.profileProperties(profileProperties.let(IResolvable::unwrap))
+        cdkBuilder.profileProperties(profileProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4747,7 +4747,7 @@ public open class CfnConnectorProfile(
        * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
        */
       override fun connectorOAuthRequest(connectorOAuthRequest: IResolvable) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable::unwrap))
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4755,7 +4755,7 @@ public open class CfnConnectorProfile(
        * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
        */
       override fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty::unwrap))
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -5223,7 +5223,7 @@ public open class CfnConnectorProfile(
        * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
        */
       override fun connectorOAuthRequest(connectorOAuthRequest: IResolvable) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable::unwrap))
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5231,7 +5231,7 @@ public open class CfnConnectorProfile(
        * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
        */
       override fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty::unwrap))
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -5518,14 +5518,14 @@ public open class CfnConnectorProfile(
        * @param oAuthRequest the value to be set.
        */
       override fun oAuthRequest(oAuthRequest: IResolvable) {
-        cdkBuilder.oAuthRequest(oAuthRequest.let(IResolvable::unwrap))
+        cdkBuilder.oAuthRequest(oAuthRequest.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param oAuthRequest the value to be set.
        */
       override fun oAuthRequest(oAuthRequest: ConnectorOAuthRequestProperty) {
-        cdkBuilder.oAuthRequest(oAuthRequest.let(ConnectorOAuthRequestProperty::unwrap))
+        cdkBuilder.oAuthRequest(oAuthRequest.let(ConnectorOAuthRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -5708,7 +5708,7 @@ public open class CfnConnectorProfile(
        * authenticate your request.
        */
       override fun tokenUrlCustomProperties(tokenUrlCustomProperties: IResolvable) {
-        cdkBuilder.tokenUrlCustomProperties(tokenUrlCustomProperties.let(IResolvable::unwrap))
+        cdkBuilder.tokenUrlCustomProperties(tokenUrlCustomProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5906,14 +5906,14 @@ public open class CfnConnectorProfile(
        * @param connectorOAuthRequest the value to be set.
        */
       override fun connectorOAuthRequest(connectorOAuthRequest: IResolvable) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable::unwrap))
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param connectorOAuthRequest the value to be set.
        */
       override fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty::unwrap))
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -6261,14 +6261,14 @@ public open class CfnConnectorProfile(
        * @param connectorOAuthRequest the value to be set.
        */
       override fun connectorOAuthRequest(connectorOAuthRequest: IResolvable) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable::unwrap))
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param connectorOAuthRequest the value to be set.
        */
       override fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty::unwrap))
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -6445,7 +6445,7 @@ public open class CfnConnectorProfile(
        * production environment.
        */
       override fun isSandboxEnvironment(isSandboxEnvironment: IResolvable) {
-        cdkBuilder.isSandboxEnvironment(isSandboxEnvironment.let(IResolvable::unwrap))
+        cdkBuilder.isSandboxEnvironment(isSandboxEnvironment.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -6847,7 +6847,7 @@ public open class CfnConnectorProfile(
        * an Amazon Redshift Serverless data warehouse.
        */
       override fun isRedshiftServerless(isRedshiftServerless: IResolvable) {
-        cdkBuilder.isRedshiftServerless(isRedshiftServerless.let(IResolvable::unwrap))
+        cdkBuilder.isRedshiftServerless(isRedshiftServerless.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7069,14 +7069,14 @@ public open class CfnConnectorProfile(
        * @param basicAuthCredentials The SAPOData basic authentication credentials.
        */
       override fun basicAuthCredentials(basicAuthCredentials: IResolvable) {
-        cdkBuilder.basicAuthCredentials(basicAuthCredentials.let(IResolvable::unwrap))
+        cdkBuilder.basicAuthCredentials(basicAuthCredentials.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param basicAuthCredentials The SAPOData basic authentication credentials.
        */
       override fun basicAuthCredentials(basicAuthCredentials: BasicAuthCredentialsProperty) {
-        cdkBuilder.basicAuthCredentials(basicAuthCredentials.let(BasicAuthCredentialsProperty::unwrap))
+        cdkBuilder.basicAuthCredentials(basicAuthCredentials.let(BasicAuthCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -7092,14 +7092,14 @@ public open class CfnConnectorProfile(
        * @param oAuthCredentials The SAPOData OAuth type authentication credentials.
        */
       override fun oAuthCredentials(oAuthCredentials: IResolvable) {
-        cdkBuilder.oAuthCredentials(oAuthCredentials.let(IResolvable::unwrap))
+        cdkBuilder.oAuthCredentials(oAuthCredentials.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param oAuthCredentials The SAPOData OAuth type authentication credentials.
        */
       override fun oAuthCredentials(oAuthCredentials: OAuthCredentialsProperty) {
-        cdkBuilder.oAuthCredentials(oAuthCredentials.let(OAuthCredentialsProperty::unwrap))
+        cdkBuilder.oAuthCredentials(oAuthCredentials.let(OAuthCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -7347,7 +7347,7 @@ public open class CfnConnectorProfile(
        * sign-on (SSO) settings in your SAP account when it accesses your SAP OData instance.
        */
       override fun disableSso(disableSso: IResolvable) {
-        cdkBuilder.disableSso(disableSso.let(IResolvable::unwrap))
+        cdkBuilder.disableSso(disableSso.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7362,7 +7362,7 @@ public open class CfnConnectorProfile(
        * authentication.
        */
       override fun oAuthProperties(oAuthProperties: IResolvable) {
-        cdkBuilder.oAuthProperties(oAuthProperties.let(IResolvable::unwrap))
+        cdkBuilder.oAuthProperties(oAuthProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7370,7 +7370,7 @@ public open class CfnConnectorProfile(
        * authentication.
        */
       override fun oAuthProperties(oAuthProperties: OAuthPropertiesProperty) {
-        cdkBuilder.oAuthProperties(oAuthProperties.let(OAuthPropertiesProperty::unwrap))
+        cdkBuilder.oAuthProperties(oAuthProperties.let(OAuthPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -7661,7 +7661,7 @@ public open class CfnConnectorProfile(
        * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
        */
       override fun connectorOAuthRequest(connectorOAuthRequest: IResolvable) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable::unwrap))
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7669,7 +7669,7 @@ public open class CfnConnectorProfile(
        * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
        */
       override fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty::unwrap))
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -7991,7 +7991,7 @@ public open class CfnConnectorProfile(
        * production environment.
        */
       override fun isSandboxEnvironment(isSandboxEnvironment: IResolvable) {
-        cdkBuilder.isSandboxEnvironment(isSandboxEnvironment.let(IResolvable::unwrap))
+        cdkBuilder.isSandboxEnvironment(isSandboxEnvironment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8061,7 +8061,7 @@ public open class CfnConnectorProfile(
        */
       override
           fun usePrivateLinkForMetadataAndAuthorization(usePrivateLinkForMetadataAndAuthorization: IResolvable) {
-        cdkBuilder.usePrivateLinkForMetadataAndAuthorization(usePrivateLinkForMetadataAndAuthorization.let(IResolvable::unwrap))
+        cdkBuilder.usePrivateLinkForMetadataAndAuthorization(usePrivateLinkForMetadataAndAuthorization.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -8233,14 +8233,14 @@ public open class CfnConnectorProfile(
        * @param oAuth2Credentials the value to be set.
        */
       override fun oAuth2Credentials(oAuth2Credentials: IResolvable) {
-        cdkBuilder.oAuth2Credentials(oAuth2Credentials.let(IResolvable::unwrap))
+        cdkBuilder.oAuth2Credentials(oAuth2Credentials.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param oAuth2Credentials the value to be set.
        */
       override fun oAuth2Credentials(oAuth2Credentials: OAuth2CredentialsProperty) {
-        cdkBuilder.oAuth2Credentials(oAuth2Credentials.let(OAuth2CredentialsProperty::unwrap))
+        cdkBuilder.oAuth2Credentials(oAuth2Credentials.let(OAuth2CredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -8615,7 +8615,7 @@ public open class CfnConnectorProfile(
        * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
        */
       override fun connectorOAuthRequest(connectorOAuthRequest: IResolvable) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable::unwrap))
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8623,7 +8623,7 @@ public open class CfnConnectorProfile(
        * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
        */
       override fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty::unwrap))
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -9558,7 +9558,7 @@ public open class CfnConnectorProfile(
        * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
        */
       override fun connectorOAuthRequest(connectorOAuthRequest: IResolvable) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable::unwrap))
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9566,7 +9566,7 @@ public open class CfnConnectorProfile(
        * supported, such as Salesforce, Google Analytics, Marketo, Zendesk, and Slack.
        */
       override fun connectorOAuthRequest(connectorOAuthRequest: ConnectorOAuthRequestProperty) {
-        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty::unwrap))
+        cdkBuilder.connectorOAuthRequest(connectorOAuthRequest.let(ConnectorOAuthRequestProperty.Companion::unwrap))
       }
 
       /**

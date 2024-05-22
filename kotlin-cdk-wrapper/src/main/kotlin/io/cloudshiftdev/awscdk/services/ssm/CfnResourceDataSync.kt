@@ -100,8 +100,8 @@ public open class CfnResourceDataSync(
     id: String,
     props: CfnResourceDataSyncProps,
   ) :
-      this(software.amazon.awscdk.services.ssm.CfnResourceDataSync(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnResourceDataSyncProps::unwrap))
+      this(software.amazon.awscdk.services.ssm.CfnResourceDataSync(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnResourceDataSyncProps.Companion::unwrap))
   )
 
   public constructor(
@@ -158,7 +158,7 @@ public open class CfnResourceDataSync(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -182,14 +182,14 @@ public open class CfnResourceDataSync(
    * Configuration information for the target S3 bucket.
    */
   public open fun s3Destination(`value`: IResolvable) {
-    unwrap(this).setS3Destination(`value`.let(IResolvable::unwrap))
+    unwrap(this).setS3Destination(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration information for the target S3 bucket.
    */
   public open fun s3Destination(`value`: S3DestinationProperty) {
-    unwrap(this).setS3Destination(`value`.let(S3DestinationProperty::unwrap))
+    unwrap(this).setS3Destination(`value`.let(S3DestinationProperty.Companion::unwrap))
   }
 
   /**
@@ -233,14 +233,14 @@ public open class CfnResourceDataSync(
    * Information about the source where the data was synchronized.
    */
   public open fun syncSource(`value`: IResolvable) {
-    unwrap(this).setSyncSource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSyncSource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information about the source where the data was synchronized.
    */
   public open fun syncSource(`value`: SyncSourceProperty) {
-    unwrap(this).setSyncSource(`value`.let(SyncSourceProperty::unwrap))
+    unwrap(this).setSyncSource(`value`.let(SyncSourceProperty.Companion::unwrap))
   }
 
   /**
@@ -443,7 +443,7 @@ public open class CfnResourceDataSync(
      * @param s3Destination Configuration information for the target S3 bucket. 
      */
     override fun s3Destination(s3Destination: IResolvable) {
-      cdkBuilder.s3Destination(s3Destination.let(IResolvable::unwrap))
+      cdkBuilder.s3Destination(s3Destination.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -453,7 +453,7 @@ public open class CfnResourceDataSync(
      * @param s3Destination Configuration information for the target S3 bucket. 
      */
     override fun s3Destination(s3Destination: S3DestinationProperty) {
-      cdkBuilder.s3Destination(s3Destination.let(S3DestinationProperty::unwrap))
+      cdkBuilder.s3Destination(s3Destination.let(S3DestinationProperty.Companion::unwrap))
     }
 
     /**
@@ -494,7 +494,7 @@ public open class CfnResourceDataSync(
      * @param syncSource Information about the source where the data was synchronized. 
      */
     override fun syncSource(syncSource: IResolvable) {
-      cdkBuilder.syncSource(syncSource.let(IResolvable::unwrap))
+      cdkBuilder.syncSource(syncSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -504,7 +504,7 @@ public open class CfnResourceDataSync(
      * @param syncSource Information about the source where the data was synchronized. 
      */
     override fun syncSource(syncSource: SyncSourceProperty) {
-      cdkBuilder.syncSource(syncSource.let(SyncSourceProperty::unwrap))
+      cdkBuilder.syncSource(syncSource.let(SyncSourceProperty.Companion::unwrap))
     }
 
     /**
@@ -1028,7 +1028,7 @@ public open class CfnResourceDataSync(
        * A sync source of this type can synchronize data from AWS Organizations .
        */
       override fun awsOrganizationsSource(awsOrganizationsSource: IResolvable) {
-        cdkBuilder.awsOrganizationsSource(awsOrganizationsSource.let(IResolvable::unwrap))
+        cdkBuilder.awsOrganizationsSource(awsOrganizationsSource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1037,7 +1037,7 @@ public open class CfnResourceDataSync(
        * A sync source of this type can synchronize data from AWS Organizations .
        */
       override fun awsOrganizationsSource(awsOrganizationsSource: AwsOrganizationsSourceProperty) {
-        cdkBuilder.awsOrganizationsSource(awsOrganizationsSource.let(AwsOrganizationsSourceProperty::unwrap))
+        cdkBuilder.awsOrganizationsSource(awsOrganizationsSource.let(AwsOrganizationsSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -1064,7 +1064,7 @@ public open class CfnResourceDataSync(
        * new AWS Regions when those Regions come online.
        */
       override fun includeFutureRegions(includeFutureRegions: IResolvable) {
-        cdkBuilder.includeFutureRegions(includeFutureRegions.let(IResolvable::unwrap))
+        cdkBuilder.includeFutureRegions(includeFutureRegions.let(IResolvable.Companion::unwrap))
       }
 
       /**

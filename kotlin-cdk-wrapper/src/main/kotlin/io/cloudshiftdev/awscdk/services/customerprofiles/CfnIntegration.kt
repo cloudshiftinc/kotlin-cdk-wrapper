@@ -126,8 +126,8 @@ public open class CfnIntegration(
     id: String,
     props: CfnIntegrationProps,
   ) :
-      this(software.amazon.awscdk.services.customerprofiles.CfnIntegration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnIntegrationProps::unwrap))
+      this(software.amazon.awscdk.services.customerprofiles.CfnIntegration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnIntegrationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -168,14 +168,14 @@ public open class CfnIntegration(
    * The configuration that controls how Customer Profiles retrieves data from the source.
    */
   public open fun flowDefinition(`value`: IResolvable) {
-    unwrap(this).setFlowDefinition(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFlowDefinition(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration that controls how Customer Profiles retrieves data from the source.
    */
   public open fun flowDefinition(`value`: FlowDefinitionProperty) {
-    unwrap(this).setFlowDefinition(`value`.let(FlowDefinitionProperty::unwrap))
+    unwrap(this).setFlowDefinition(`value`.let(FlowDefinitionProperty.Companion::unwrap))
   }
 
   /**
@@ -192,7 +192,7 @@ public open class CfnIntegration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -216,7 +216,7 @@ public open class CfnIntegration(
    * The object type mapping.
    */
   public open fun objectTypeNames(`value`: IResolvable) {
-    unwrap(this).setObjectTypeNames(`value`.let(IResolvable::unwrap))
+    unwrap(this).setObjectTypeNames(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -246,7 +246,7 @@ public open class CfnIntegration(
    * The tags used to organize, track, or control access for this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -390,7 +390,7 @@ public open class CfnIntegration(
      * from the source. 
      */
     override fun flowDefinition(flowDefinition: IResolvable) {
-      cdkBuilder.flowDefinition(flowDefinition.let(IResolvable::unwrap))
+      cdkBuilder.flowDefinition(flowDefinition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -401,7 +401,7 @@ public open class CfnIntegration(
      * from the source. 
      */
     override fun flowDefinition(flowDefinition: FlowDefinitionProperty) {
-      cdkBuilder.flowDefinition(flowDefinition.let(FlowDefinitionProperty::unwrap))
+      cdkBuilder.flowDefinition(flowDefinition.let(FlowDefinitionProperty.Companion::unwrap))
     }
 
     /**
@@ -433,7 +433,7 @@ public open class CfnIntegration(
      * @param objectTypeNames The object type mapping. 
      */
     override fun objectTypeNames(objectTypeNames: IResolvable) {
-      cdkBuilder.objectTypeNames(objectTypeNames.let(IResolvable::unwrap))
+      cdkBuilder.objectTypeNames(objectTypeNames.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -462,7 +462,7 @@ public open class CfnIntegration(
      * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -941,7 +941,7 @@ public open class CfnIntegration(
        * data from the source. 
        */
       override fun sourceFlowConfig(sourceFlowConfig: IResolvable) {
-        cdkBuilder.sourceFlowConfig(sourceFlowConfig.let(IResolvable::unwrap))
+        cdkBuilder.sourceFlowConfig(sourceFlowConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -949,7 +949,7 @@ public open class CfnIntegration(
        * data from the source. 
        */
       override fun sourceFlowConfig(sourceFlowConfig: SourceFlowConfigProperty) {
-        cdkBuilder.sourceFlowConfig(sourceFlowConfig.let(SourceFlowConfigProperty::unwrap))
+        cdkBuilder.sourceFlowConfig(sourceFlowConfig.let(SourceFlowConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -966,7 +966,7 @@ public open class CfnIntegration(
        * the flow run. 
        */
       override fun tasks(tasks: IResolvable) {
-        cdkBuilder.tasks(tasks.let(IResolvable::unwrap))
+        cdkBuilder.tasks(tasks.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -987,14 +987,14 @@ public open class CfnIntegration(
        * @param triggerConfig The trigger settings that determine how and when the flow runs. 
        */
       override fun triggerConfig(triggerConfig: IResolvable) {
-        cdkBuilder.triggerConfig(triggerConfig.let(IResolvable::unwrap))
+        cdkBuilder.triggerConfig(triggerConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param triggerConfig The trigger settings that determine how and when the flow runs. 
        */
       override fun triggerConfig(triggerConfig: TriggerConfigProperty) {
-        cdkBuilder.triggerConfig(triggerConfig.let(TriggerConfigProperty::unwrap))
+        cdkBuilder.triggerConfig(triggerConfig.let(TriggerConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1567,7 +1567,7 @@ public open class CfnIntegration(
        * added) fields in the Salesforce objects while running a flow.
        */
       override fun enableDynamicFieldUpdate(enableDynamicFieldUpdate: IResolvable) {
-        cdkBuilder.enableDynamicFieldUpdate(enableDynamicFieldUpdate.let(IResolvable::unwrap))
+        cdkBuilder.enableDynamicFieldUpdate(enableDynamicFieldUpdate.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1583,7 +1583,7 @@ public open class CfnIntegration(
        * flow run.
        */
       override fun includeDeletedRecords(includeDeletedRecords: IResolvable) {
-        cdkBuilder.includeDeletedRecords(includeDeletedRecords.let(IResolvable::unwrap))
+        cdkBuilder.includeDeletedRecords(includeDeletedRecords.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2176,14 +2176,14 @@ public open class CfnIntegration(
        * @param marketo The properties that are applied when Marketo is being used as a source.
        */
       override fun marketo(marketo: IResolvable) {
-        cdkBuilder.marketo(marketo.let(IResolvable::unwrap))
+        cdkBuilder.marketo(marketo.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param marketo The properties that are applied when Marketo is being used as a source.
        */
       override fun marketo(marketo: MarketoSourcePropertiesProperty) {
-        cdkBuilder.marketo(marketo.let(MarketoSourcePropertiesProperty::unwrap))
+        cdkBuilder.marketo(marketo.let(MarketoSourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -2198,14 +2198,14 @@ public open class CfnIntegration(
        * @param s3 The properties that are applied when Amazon S3 is being used as the flow source.
        */
       override fun s3(s3: IResolvable) {
-        cdkBuilder.s3(s3.let(IResolvable::unwrap))
+        cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3 The properties that are applied when Amazon S3 is being used as the flow source.
        */
       override fun s3(s3: S3SourcePropertiesProperty) {
-        cdkBuilder.s3(s3.let(S3SourcePropertiesProperty::unwrap))
+        cdkBuilder.s3(s3.let(S3SourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -2221,7 +2221,7 @@ public open class CfnIntegration(
        * source.
        */
       override fun salesforce(salesforce: IResolvable) {
-        cdkBuilder.salesforce(salesforce.let(IResolvable::unwrap))
+        cdkBuilder.salesforce(salesforce.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2229,7 +2229,7 @@ public open class CfnIntegration(
        * source.
        */
       override fun salesforce(salesforce: SalesforceSourcePropertiesProperty) {
-        cdkBuilder.salesforce(salesforce.let(SalesforceSourcePropertiesProperty::unwrap))
+        cdkBuilder.salesforce(salesforce.let(SalesforceSourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -2246,7 +2246,7 @@ public open class CfnIntegration(
        * source.
        */
       override fun serviceNow(serviceNow: IResolvable) {
-        cdkBuilder.serviceNow(serviceNow.let(IResolvable::unwrap))
+        cdkBuilder.serviceNow(serviceNow.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2254,7 +2254,7 @@ public open class CfnIntegration(
        * source.
        */
       override fun serviceNow(serviceNow: ServiceNowSourcePropertiesProperty) {
-        cdkBuilder.serviceNow(serviceNow.let(ServiceNowSourcePropertiesProperty::unwrap))
+        cdkBuilder.serviceNow(serviceNow.let(ServiceNowSourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -2270,14 +2270,14 @@ public open class CfnIntegration(
        * @param zendesk The properties that are applied when using Zendesk as a flow source.
        */
       override fun zendesk(zendesk: IResolvable) {
-        cdkBuilder.zendesk(zendesk.let(IResolvable::unwrap))
+        cdkBuilder.zendesk(zendesk.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param zendesk The properties that are applied when using Zendesk as a flow source.
        */
       override fun zendesk(zendesk: ZendeskSourcePropertiesProperty) {
-        cdkBuilder.zendesk(zendesk.let(ZendeskSourcePropertiesProperty::unwrap))
+        cdkBuilder.zendesk(zendesk.let(ZendeskSourcePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -2522,7 +2522,7 @@ public open class CfnIntegration(
        * when querying for the incremental data pull.
        */
       override fun incrementalPullConfig(incrementalPullConfig: IResolvable) {
-        cdkBuilder.incrementalPullConfig(incrementalPullConfig.let(IResolvable::unwrap))
+        cdkBuilder.incrementalPullConfig(incrementalPullConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2532,7 +2532,7 @@ public open class CfnIntegration(
        * when querying for the incremental data pull.
        */
       override fun incrementalPullConfig(incrementalPullConfig: IncrementalPullConfigProperty) {
-        cdkBuilder.incrementalPullConfig(incrementalPullConfig.let(IncrementalPullConfigProperty::unwrap))
+        cdkBuilder.incrementalPullConfig(incrementalPullConfig.let(IncrementalPullConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2552,7 +2552,7 @@ public open class CfnIntegration(
        * particular source connector. 
        */
       override fun sourceConnectorProperties(sourceConnectorProperties: IResolvable) {
-        cdkBuilder.sourceConnectorProperties(sourceConnectorProperties.let(IResolvable::unwrap))
+        cdkBuilder.sourceConnectorProperties(sourceConnectorProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2561,7 +2561,7 @@ public open class CfnIntegration(
        */
       override
           fun sourceConnectorProperties(sourceConnectorProperties: SourceConnectorPropertiesProperty) {
-        cdkBuilder.sourceConnectorProperties(sourceConnectorProperties.let(SourceConnectorPropertiesProperty::unwrap))
+        cdkBuilder.sourceConnectorProperties(sourceConnectorProperties.let(SourceConnectorPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -2888,14 +2888,14 @@ public open class CfnIntegration(
        * @param connectorOperator The operation to be performed on the provided source fields.
        */
       override fun connectorOperator(connectorOperator: IResolvable) {
-        cdkBuilder.connectorOperator(connectorOperator.let(IResolvable::unwrap))
+        cdkBuilder.connectorOperator(connectorOperator.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param connectorOperator The operation to be performed on the provided source fields.
        */
       override fun connectorOperator(connectorOperator: ConnectorOperatorProperty) {
-        cdkBuilder.connectorOperator(connectorOperator.let(ConnectorOperatorProperty::unwrap))
+        cdkBuilder.connectorOperator(connectorOperator.let(ConnectorOperatorProperty.Companion::unwrap))
       }
 
       /**
@@ -2933,7 +2933,7 @@ public open class CfnIntegration(
        * The service looks for particular information based on the TaskType.
        */
       override fun taskProperties(taskProperties: IResolvable) {
-        cdkBuilder.taskProperties(taskProperties.let(IResolvable::unwrap))
+        cdkBuilder.taskProperties(taskProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3117,7 +3117,7 @@ public open class CfnIntegration(
        * Currently, these settings only apply to the Scheduled trigger type.
        */
       override fun triggerProperties(triggerProperties: IResolvable) {
-        cdkBuilder.triggerProperties(triggerProperties.let(IResolvable::unwrap))
+        cdkBuilder.triggerProperties(triggerProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3126,7 +3126,7 @@ public open class CfnIntegration(
        * Currently, these settings only apply to the Scheduled trigger type.
        */
       override fun triggerProperties(triggerProperties: TriggerPropertiesProperty) {
-        cdkBuilder.triggerProperties(triggerProperties.let(TriggerPropertiesProperty::unwrap))
+        cdkBuilder.triggerProperties(triggerProperties.let(TriggerPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3265,7 +3265,7 @@ public open class CfnIntegration(
        * define.
        */
       override fun scheduled(scheduled: IResolvable) {
-        cdkBuilder.scheduled(scheduled.let(IResolvable::unwrap))
+        cdkBuilder.scheduled(scheduled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3273,7 +3273,7 @@ public open class CfnIntegration(
        * define.
        */
       override fun scheduled(scheduled: ScheduledTriggerPropertiesProperty) {
-        cdkBuilder.scheduled(scheduled.let(ScheduledTriggerPropertiesProperty::unwrap))
+        cdkBuilder.scheduled(scheduled.let(ScheduledTriggerPropertiesProperty.Companion::unwrap))
       }
 
       /**

@@ -405,7 +405,7 @@ public interface CfnLocationHDFSProps {
      * can use only one NameNode.
      */
     override fun nameNodes(nameNodes: IResolvable) {
-      cdkBuilder.nameNodes(nameNodes.let(IResolvable::unwrap))
+      cdkBuilder.nameNodes(nameNodes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -435,7 +435,7 @@ public interface CfnLocationHDFSProps {
      * assumes the same value.
      */
     override fun qopConfiguration(qopConfiguration: IResolvable) {
-      cdkBuilder.qopConfiguration(qopConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.qopConfiguration(qopConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -447,7 +447,7 @@ public interface CfnLocationHDFSProps {
      * assumes the same value.
      */
     override fun qopConfiguration(qopConfiguration: CfnLocationHDFS.QopConfigurationProperty) {
-      cdkBuilder.qopConfiguration(qopConfiguration.let(CfnLocationHDFS.QopConfigurationProperty::unwrap))
+      cdkBuilder.qopConfiguration(qopConfiguration.let(CfnLocationHDFS.QopConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -496,7 +496,7 @@ public interface CfnLocationHDFSProps {
      * The value can be an empty string. We recommend using tags to name your resources.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

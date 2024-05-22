@@ -80,14 +80,14 @@ public interface SourceApi {
      * @param mergeType Merging option used to associate the source API to the Merged API.
      */
     override fun mergeType(mergeType: MergeType) {
-      cdkBuilder.mergeType(mergeType.let(MergeType::unwrap))
+      cdkBuilder.mergeType(mergeType.let(MergeType.Companion::unwrap))
     }
 
     /**
      * @param sourceApi Source API that is associated with the merged API. 
      */
     override fun sourceApi(sourceApi: IGraphqlApi) {
-      cdkBuilder.sourceApi(sourceApi.let(IGraphqlApi::unwrap))
+      cdkBuilder.sourceApi(sourceApi.let(IGraphqlApi.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appsync.SourceApi = cdkBuilder.build()

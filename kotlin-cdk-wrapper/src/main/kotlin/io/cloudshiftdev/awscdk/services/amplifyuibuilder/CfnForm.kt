@@ -187,7 +187,7 @@ public open class CfnForm(
   cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnForm,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.amplifyuibuilder.CfnForm(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.amplifyuibuilder.CfnForm(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -196,8 +196,8 @@ public open class CfnForm(
     id: String,
     props: CfnFormProps,
   ) :
-      this(software.amazon.awscdk.services.amplifyuibuilder.CfnForm(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFormProps::unwrap))
+      this(software.amazon.awscdk.services.amplifyuibuilder.CfnForm(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFormProps.Companion::unwrap))
   )
 
   public constructor(
@@ -233,14 +233,14 @@ public open class CfnForm(
    * The `FormCTA` object that stores the call to action configuration for the form.
    */
   public open fun cta(`value`: IResolvable) {
-    unwrap(this).setCta(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCta(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The `FormCTA` object that stores the call to action configuration for the form.
    */
   public open fun cta(`value`: FormCTAProperty) {
-    unwrap(this).setCta(`value`.let(FormCTAProperty::unwrap))
+    unwrap(this).setCta(`value`.let(FormCTAProperty.Companion::unwrap))
   }
 
   /**
@@ -260,14 +260,14 @@ public open class CfnForm(
    * The type of data source to use to create the form.
    */
   public open fun dataType(`value`: IResolvable) {
-    unwrap(this).setDataType(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataType(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The type of data source to use to create the form.
    */
   public open fun dataType(`value`: FormDataTypeConfigProperty) {
-    unwrap(this).setDataType(`value`.let(FormDataTypeConfigProperty::unwrap))
+    unwrap(this).setDataType(`value`.let(FormDataTypeConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -299,7 +299,7 @@ public open class CfnForm(
    * The configuration information for the form's fields.
    */
   public open fun fields(`value`: IResolvable) {
-    unwrap(this).setFields(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFields(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -327,7 +327,7 @@ public open class CfnForm(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -375,7 +375,7 @@ public open class CfnForm(
    * The configuration information for the visual helper elements for the form.
    */
   public open fun sectionalElements(`value`: IResolvable) {
-    unwrap(this).setSectionalElements(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSectionalElements(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -394,14 +394,14 @@ public open class CfnForm(
    * The configuration for the form's style.
    */
   public open fun style(`value`: IResolvable) {
-    unwrap(this).setStyle(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStyle(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration for the form's style.
    */
   public open fun style(`value`: FormStyleProperty) {
-    unwrap(this).setStyle(`value`.let(FormStyleProperty::unwrap))
+    unwrap(this).setStyle(`value`.let(FormStyleProperty.Companion::unwrap))
   }
 
   /**
@@ -632,7 +632,7 @@ public open class CfnForm(
      * @param cta The `FormCTA` object that stores the call to action configuration for the form. 
      */
     override fun cta(cta: IResolvable) {
-      cdkBuilder.cta(cta.let(IResolvable::unwrap))
+      cdkBuilder.cta(cta.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -642,7 +642,7 @@ public open class CfnForm(
      * @param cta The `FormCTA` object that stores the call to action configuration for the form. 
      */
     override fun cta(cta: FormCTAProperty) {
-      cdkBuilder.cta(cta.let(FormCTAProperty::unwrap))
+      cdkBuilder.cta(cta.let(FormCTAProperty.Companion::unwrap))
     }
 
     /**
@@ -662,7 +662,7 @@ public open class CfnForm(
      * @param dataType The type of data source to use to create the form. 
      */
     override fun dataType(dataType: IResolvable) {
-      cdkBuilder.dataType(dataType.let(IResolvable::unwrap))
+      cdkBuilder.dataType(dataType.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -672,7 +672,7 @@ public open class CfnForm(
      * @param dataType The type of data source to use to create the form. 
      */
     override fun dataType(dataType: FormDataTypeConfigProperty) {
-      cdkBuilder.dataType(dataType.let(FormDataTypeConfigProperty::unwrap))
+      cdkBuilder.dataType(dataType.let(FormDataTypeConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -704,7 +704,7 @@ public open class CfnForm(
      * @param fields The configuration information for the form's fields. 
      */
     override fun fields(fields: IResolvable) {
-      cdkBuilder.fields(fields.let(IResolvable::unwrap))
+      cdkBuilder.fields(fields.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -767,7 +767,7 @@ public open class CfnForm(
      * form. 
      */
     override fun sectionalElements(sectionalElements: IResolvable) {
-      cdkBuilder.sectionalElements(sectionalElements.let(IResolvable::unwrap))
+      cdkBuilder.sectionalElements(sectionalElements.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -790,7 +790,7 @@ public open class CfnForm(
      * @param style The configuration for the form's style. 
      */
     override fun style(style: IResolvable) {
-      cdkBuilder.style(style.let(IResolvable::unwrap))
+      cdkBuilder.style(style.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -800,7 +800,7 @@ public open class CfnForm(
      * @param style The configuration for the form's style. 
      */
     override fun style(style: FormStyleProperty) {
-      cdkBuilder.style(style.let(FormStyleProperty::unwrap))
+      cdkBuilder.style(style.let(FormStyleProperty.Companion::unwrap))
     }
 
     /**
@@ -1060,7 +1060,7 @@ public open class CfnForm(
        * @param excluded Specifies whether to hide a field.
        */
       override fun excluded(excluded: IResolvable) {
-        cdkBuilder.excluded(excluded.let(IResolvable::unwrap))
+        cdkBuilder.excluded(excluded.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1068,7 +1068,7 @@ public open class CfnForm(
        * field.
        */
       override fun inputType(inputType: IResolvable) {
-        cdkBuilder.inputType(inputType.let(IResolvable::unwrap))
+        cdkBuilder.inputType(inputType.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1076,7 +1076,7 @@ public open class CfnForm(
        * field.
        */
       override fun inputType(inputType: FieldInputConfigProperty) {
-        cdkBuilder.inputType(inputType.let(FieldInputConfigProperty::unwrap))
+        cdkBuilder.inputType(inputType.let(FieldInputConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1099,14 +1099,14 @@ public open class CfnForm(
        * @param position Specifies the field position.
        */
       override fun position(position: IResolvable) {
-        cdkBuilder.position(position.let(IResolvable::unwrap))
+        cdkBuilder.position(position.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param position Specifies the field position.
        */
       override fun position(position: FieldPositionProperty) {
-        cdkBuilder.position(position.let(FieldPositionProperty::unwrap))
+        cdkBuilder.position(position.let(FieldPositionProperty.Companion::unwrap))
       }
 
       /**
@@ -1121,7 +1121,7 @@ public open class CfnForm(
        * @param validations The validations to perform on the value in the field.
        */
       override fun validations(validations: IResolvable) {
-        cdkBuilder.validations(validations.let(IResolvable::unwrap))
+        cdkBuilder.validations(validations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1538,7 +1538,7 @@ public open class CfnForm(
        * @param defaultChecked Specifies whether a field has a default value.
        */
       override fun defaultChecked(defaultChecked: IResolvable) {
-        cdkBuilder.defaultChecked(defaultChecked.let(IResolvable::unwrap))
+        cdkBuilder.defaultChecked(defaultChecked.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1566,14 +1566,14 @@ public open class CfnForm(
        * @param fileUploaderConfig The configuration for the file uploader field.
        */
       override fun fileUploaderConfig(fileUploaderConfig: IResolvable) {
-        cdkBuilder.fileUploaderConfig(fileUploaderConfig.let(IResolvable::unwrap))
+        cdkBuilder.fileUploaderConfig(fileUploaderConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param fileUploaderConfig The configuration for the file uploader field.
        */
       override fun fileUploaderConfig(fileUploaderConfig: FileUploaderFieldConfigProperty) {
-        cdkBuilder.fileUploaderConfig(fileUploaderConfig.let(FileUploaderFieldConfigProperty::unwrap))
+        cdkBuilder.fileUploaderConfig(fileUploaderConfig.let(FileUploaderFieldConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1598,7 +1598,7 @@ public open class CfnForm(
        * This property is ignored if the `dataSourceType` for the form is a Data Store.
        */
       override fun isArray(isArray: IResolvable) {
-        cdkBuilder.isArray(isArray.let(IResolvable::unwrap))
+        cdkBuilder.isArray(isArray.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1640,7 +1640,7 @@ public open class CfnForm(
        * @param readOnly Specifies a read only field.
        */
       override fun readOnly(readOnly: IResolvable) {
-        cdkBuilder.readOnly(readOnly.let(IResolvable::unwrap))
+        cdkBuilder.readOnly(readOnly.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1654,7 +1654,7 @@ public open class CfnForm(
        * @param required Specifies a field that requires input.
        */
       override fun required(required: IResolvable) {
-        cdkBuilder.required(required.let(IResolvable::unwrap))
+        cdkBuilder.required(required.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1683,7 +1683,7 @@ public open class CfnForm(
        * runtime.
        */
       override fun valueMappings(valueMappings: IResolvable) {
-        cdkBuilder.valueMappings(valueMappings.let(IResolvable::unwrap))
+        cdkBuilder.valueMappings(valueMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1691,7 +1691,7 @@ public open class CfnForm(
        * runtime.
        */
       override fun valueMappings(valueMappings: ValueMappingsProperty) {
-        cdkBuilder.valueMappings(valueMappings.let(ValueMappingsProperty::unwrap))
+        cdkBuilder.valueMappings(valueMappings.let(ValueMappingsProperty.Companion::unwrap))
       }
 
       /**
@@ -2083,7 +2083,7 @@ public open class CfnForm(
        * @param numValues The validation to perform on a number value.
        */
       override fun numValues(numValues: IResolvable) {
-        cdkBuilder.numValues(numValues.let(IResolvable::unwrap))
+        cdkBuilder.numValues(numValues.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2395,7 +2395,7 @@ public open class CfnForm(
        * file uploader uploads a chunk at a time.
        */
       override fun isResumable(isResumable: IResolvable) {
-        cdkBuilder.isResumable(isResumable.let(IResolvable::unwrap))
+        cdkBuilder.isResumable(isResumable.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2429,7 +2429,7 @@ public open class CfnForm(
        * The default value is `true` to display the image preview.
        */
       override fun showThumbnails(showThumbnails: IResolvable) {
-        cdkBuilder.showThumbnails(showThumbnails.let(IResolvable::unwrap))
+        cdkBuilder.showThumbnails(showThumbnails.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2625,21 +2625,21 @@ public open class CfnForm(
        * @param excluded Specifies whether the button is visible on the form.
        */
       override fun excluded(excluded: IResolvable) {
-        cdkBuilder.excluded(excluded.let(IResolvable::unwrap))
+        cdkBuilder.excluded(excluded.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param position The position of the button.
        */
       override fun position(position: IResolvable) {
-        cdkBuilder.position(position.let(IResolvable::unwrap))
+        cdkBuilder.position(position.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param position The position of the button.
        */
       override fun position(position: FieldPositionProperty) {
-        cdkBuilder.position(position.let(FieldPositionProperty::unwrap))
+        cdkBuilder.position(position.let(FieldPositionProperty.Companion::unwrap))
       }
 
       /**
@@ -2841,14 +2841,14 @@ public open class CfnForm(
        * @param cancel Displays a cancel button.
        */
       override fun cancel(cancel: IResolvable) {
-        cdkBuilder.cancel(cancel.let(IResolvable::unwrap))
+        cdkBuilder.cancel(cancel.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param cancel Displays a cancel button.
        */
       override fun cancel(cancel: FormButtonProperty) {
-        cdkBuilder.cancel(cancel.let(FormButtonProperty::unwrap))
+        cdkBuilder.cancel(cancel.let(FormButtonProperty.Companion::unwrap))
       }
 
       /**
@@ -2863,14 +2863,14 @@ public open class CfnForm(
        * @param clear Displays a clear button.
        */
       override fun clear(clear: IResolvable) {
-        cdkBuilder.clear(clear.let(IResolvable::unwrap))
+        cdkBuilder.clear(clear.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param clear Displays a clear button.
        */
       override fun clear(clear: FormButtonProperty) {
-        cdkBuilder.clear(clear.let(FormButtonProperty::unwrap))
+        cdkBuilder.clear(clear.let(FormButtonProperty.Companion::unwrap))
       }
 
       /**
@@ -2892,14 +2892,14 @@ public open class CfnForm(
        * @param submit Displays a submit button.
        */
       override fun submit(submit: IResolvable) {
-        cdkBuilder.submit(submit.let(IResolvable::unwrap))
+        cdkBuilder.submit(submit.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param submit Displays a submit button.
        */
       override fun submit(submit: FormButtonProperty) {
-        cdkBuilder.submit(submit.let(FormButtonProperty::unwrap))
+        cdkBuilder.submit(submit.let(FormButtonProperty.Companion::unwrap))
       }
 
       /**
@@ -3243,7 +3243,7 @@ public open class CfnForm(
        * @param bindingProperties Describes the properties to customize with data at runtime.
        */
       override fun bindingProperties(bindingProperties: IResolvable) {
-        cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
+        cdkBuilder.bindingProperties(bindingProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3251,7 +3251,7 @@ public open class CfnForm(
        */
       override
           fun bindingProperties(bindingProperties: FormInputBindingPropertiesValuePropertiesProperty) {
-        cdkBuilder.bindingProperties(bindingProperties.let(FormInputBindingPropertiesValuePropertiesProperty::unwrap))
+        cdkBuilder.bindingProperties(bindingProperties.let(FormInputBindingPropertiesValuePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3535,7 +3535,7 @@ public open class CfnForm(
        * @param bindingProperties The information to bind fields to data at runtime.
        */
       override fun bindingProperties(bindingProperties: IResolvable) {
-        cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
+        cdkBuilder.bindingProperties(bindingProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3543,7 +3543,7 @@ public open class CfnForm(
        */
       override
           fun bindingProperties(bindingProperties: FormInputValuePropertyBindingPropertiesProperty) {
-        cdkBuilder.bindingProperties(bindingProperties.let(FormInputValuePropertyBindingPropertiesProperty::unwrap))
+        cdkBuilder.bindingProperties(bindingProperties.let(FormInputValuePropertyBindingPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -3561,7 +3561,7 @@ public open class CfnForm(
        * this field property.
        */
       override fun concat(concat: IResolvable) {
-        cdkBuilder.concat(concat.let(IResolvable::unwrap))
+        cdkBuilder.concat(concat.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3862,14 +3862,14 @@ public open class CfnForm(
        * @param horizontalGap The spacing for the horizontal gap.
        */
       override fun horizontalGap(horizontalGap: IResolvable) {
-        cdkBuilder.horizontalGap(horizontalGap.let(IResolvable::unwrap))
+        cdkBuilder.horizontalGap(horizontalGap.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param horizontalGap The spacing for the horizontal gap.
        */
       override fun horizontalGap(horizontalGap: FormStyleConfigProperty) {
-        cdkBuilder.horizontalGap(horizontalGap.let(FormStyleConfigProperty::unwrap))
+        cdkBuilder.horizontalGap(horizontalGap.let(FormStyleConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -3884,14 +3884,14 @@ public open class CfnForm(
        * @param outerPadding The size of the outer padding for the form.
        */
       override fun outerPadding(outerPadding: IResolvable) {
-        cdkBuilder.outerPadding(outerPadding.let(IResolvable::unwrap))
+        cdkBuilder.outerPadding(outerPadding.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param outerPadding The size of the outer padding for the form.
        */
       override fun outerPadding(outerPadding: FormStyleConfigProperty) {
-        cdkBuilder.outerPadding(outerPadding.let(FormStyleConfigProperty::unwrap))
+        cdkBuilder.outerPadding(outerPadding.let(FormStyleConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -3906,14 +3906,14 @@ public open class CfnForm(
        * @param verticalGap The spacing for the vertical gap.
        */
       override fun verticalGap(verticalGap: IResolvable) {
-        cdkBuilder.verticalGap(verticalGap.let(IResolvable::unwrap))
+        cdkBuilder.verticalGap(verticalGap.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param verticalGap The spacing for the vertical gap.
        */
       override fun verticalGap(verticalGap: FormStyleConfigProperty) {
-        cdkBuilder.verticalGap(verticalGap.let(FormStyleConfigProperty::unwrap))
+        cdkBuilder.verticalGap(verticalGap.let(FormStyleConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -4130,7 +4130,7 @@ public open class CfnForm(
        * data model.
        */
       override fun excluded(excluded: IResolvable) {
-        cdkBuilder.excluded(excluded.let(IResolvable::unwrap))
+        cdkBuilder.excluded(excluded.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4154,7 +4154,7 @@ public open class CfnForm(
        * element.
        */
       override fun position(position: IResolvable) {
-        cdkBuilder.position(position.let(IResolvable::unwrap))
+        cdkBuilder.position(position.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4162,7 +4162,7 @@ public open class CfnForm(
        * element.
        */
       override fun position(position: FieldPositionProperty) {
-        cdkBuilder.position(position.let(FieldPositionProperty::unwrap))
+        cdkBuilder.position(position.let(FieldPositionProperty.Companion::unwrap))
       }
 
       /**
@@ -4366,14 +4366,14 @@ public open class CfnForm(
        * @param displayValue The value to display for the complex object.
        */
       override fun displayValue(displayValue: IResolvable) {
-        cdkBuilder.displayValue(displayValue.let(IResolvable::unwrap))
+        cdkBuilder.displayValue(displayValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param displayValue The value to display for the complex object.
        */
       override fun displayValue(displayValue: FormInputValuePropertyProperty) {
-        cdkBuilder.displayValue(displayValue.let(FormInputValuePropertyProperty::unwrap))
+        cdkBuilder.displayValue(displayValue.let(FormInputValuePropertyProperty.Companion::unwrap))
       }
 
       /**
@@ -4388,14 +4388,14 @@ public open class CfnForm(
        * @param value The complex object. 
        */
       override fun `value`(`value`: IResolvable) {
-        cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
+        cdkBuilder.`value`(`value`.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param value The complex object. 
        */
       override fun `value`(`value`: FormInputValuePropertyProperty) {
-        cdkBuilder.`value`(`value`.let(FormInputValuePropertyProperty::unwrap))
+        cdkBuilder.`value`(`value`.let(FormInputValuePropertyProperty.Companion::unwrap))
       }
 
       /**
@@ -4547,7 +4547,7 @@ public open class CfnForm(
        * @param bindingProperties The information to bind fields to data at runtime.
        */
       override fun bindingProperties(bindingProperties: IResolvable) {
-        cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
+        cdkBuilder.bindingProperties(bindingProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4561,7 +4561,7 @@ public open class CfnForm(
        * @param values The value and display value pairs. 
        */
       override fun values(values: IResolvable) {
-        cdkBuilder.values(values.let(IResolvable::unwrap))
+        cdkBuilder.values(values.let(IResolvable.Companion::unwrap))
       }
 
       /**

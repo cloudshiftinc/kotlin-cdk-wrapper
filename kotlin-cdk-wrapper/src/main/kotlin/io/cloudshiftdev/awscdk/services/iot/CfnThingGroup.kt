@@ -69,7 +69,7 @@ public open class CfnThingGroup(
   cdkObject: software.amazon.awscdk.services.iot.CfnThingGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.iot.CfnThingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.iot.CfnThingGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -78,8 +78,8 @@ public open class CfnThingGroup(
     id: String,
     props: CfnThingGroupProps,
   ) :
-      this(software.amazon.awscdk.services.iot.CfnThingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnThingGroupProps::unwrap))
+      this(software.amazon.awscdk.services.iot.CfnThingGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnThingGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -105,7 +105,7 @@ public open class CfnThingGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -147,7 +147,7 @@ public open class CfnThingGroup(
    * Metadata which can be used to manage the thing group or dynamic thing group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -176,14 +176,14 @@ public open class CfnThingGroup(
    * Thing group properties.
    */
   public open fun thingGroupProperties(`value`: IResolvable) {
-    unwrap(this).setThingGroupProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setThingGroupProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Thing group properties.
    */
   public open fun thingGroupProperties(`value`: ThingGroupPropertiesProperty) {
-    unwrap(this).setThingGroupProperties(`value`.let(ThingGroupPropertiesProperty::unwrap))
+    unwrap(this).setThingGroupProperties(`value`.let(ThingGroupPropertiesProperty.Companion::unwrap))
   }
 
   /**
@@ -311,7 +311,7 @@ public open class CfnThingGroup(
      * @param tags Metadata which can be used to manage the thing group or dynamic thing group. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -339,7 +339,7 @@ public open class CfnThingGroup(
      * @param thingGroupProperties Thing group properties. 
      */
     override fun thingGroupProperties(thingGroupProperties: IResolvable) {
-      cdkBuilder.thingGroupProperties(thingGroupProperties.let(IResolvable::unwrap))
+      cdkBuilder.thingGroupProperties(thingGroupProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -349,7 +349,7 @@ public open class CfnThingGroup(
      * @param thingGroupProperties Thing group properties. 
      */
     override fun thingGroupProperties(thingGroupProperties: ThingGroupPropertiesProperty) {
-      cdkBuilder.thingGroupProperties(thingGroupProperties.let(ThingGroupPropertiesProperty::unwrap))
+      cdkBuilder.thingGroupProperties(thingGroupProperties.let(ThingGroupPropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -445,7 +445,7 @@ public open class CfnThingGroup(
        * `{\"attributes\":{\"string1\":\"string2\"}}`
        */
       override fun attributes(attributes: IResolvable) {
-        cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -565,14 +565,14 @@ public open class CfnThingGroup(
        * @param attributePayload The thing group attributes in JSON format.
        */
       override fun attributePayload(attributePayload: IResolvable) {
-        cdkBuilder.attributePayload(attributePayload.let(IResolvable::unwrap))
+        cdkBuilder.attributePayload(attributePayload.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param attributePayload The thing group attributes in JSON format.
        */
       override fun attributePayload(attributePayload: AttributePayloadProperty) {
-        cdkBuilder.attributePayload(attributePayload.let(AttributePayloadProperty::unwrap))
+        cdkBuilder.attributePayload(attributePayload.let(AttributePayloadProperty.Companion::unwrap))
       }
 
       /**

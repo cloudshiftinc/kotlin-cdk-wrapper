@@ -379,14 +379,14 @@ public interface CfnServerlessCacheProps {
      * @param cacheUsageLimits The cache usage limit for the serverless cache.
      */
     override fun cacheUsageLimits(cacheUsageLimits: IResolvable) {
-      cdkBuilder.cacheUsageLimits(cacheUsageLimits.let(IResolvable::unwrap))
+      cdkBuilder.cacheUsageLimits(cacheUsageLimits.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param cacheUsageLimits The cache usage limit for the serverless cache.
      */
     override fun cacheUsageLimits(cacheUsageLimits: CfnServerlessCache.CacheUsageLimitsProperty) {
-      cdkBuilder.cacheUsageLimits(cacheUsageLimits.let(CfnServerlessCache.CacheUsageLimitsProperty::unwrap))
+      cdkBuilder.cacheUsageLimits(cacheUsageLimits.let(CfnServerlessCache.CacheUsageLimitsProperty.Companion::unwrap))
     }
 
     /**
@@ -420,7 +420,7 @@ public interface CfnServerlessCacheProps {
      * This value is read-only.
      */
     override fun endpoint(endpoint: IResolvable) {
-      cdkBuilder.endpoint(endpoint.let(IResolvable::unwrap))
+      cdkBuilder.endpoint(endpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -429,7 +429,7 @@ public interface CfnServerlessCacheProps {
      * This value is read-only.
      */
     override fun endpoint(endpoint: CfnServerlessCache.EndpointProperty) {
-      cdkBuilder.endpoint(endpoint.let(CfnServerlessCache.EndpointProperty::unwrap))
+      cdkBuilder.endpoint(endpoint.let(CfnServerlessCache.EndpointProperty.Companion::unwrap))
     }
 
     /**
@@ -479,7 +479,7 @@ public interface CfnServerlessCacheProps {
      * This value is read-only.
      */
     override fun readerEndpoint(readerEndpoint: IResolvable) {
-      cdkBuilder.readerEndpoint(readerEndpoint.let(IResolvable::unwrap))
+      cdkBuilder.readerEndpoint(readerEndpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -488,7 +488,7 @@ public interface CfnServerlessCacheProps {
      * This value is read-only.
      */
     override fun readerEndpoint(readerEndpoint: CfnServerlessCache.EndpointProperty) {
-      cdkBuilder.readerEndpoint(readerEndpoint.let(CfnServerlessCache.EndpointProperty::unwrap))
+      cdkBuilder.readerEndpoint(readerEndpoint.let(CfnServerlessCache.EndpointProperty.Companion::unwrap))
     }
 
     /**
@@ -570,7 +570,7 @@ public interface CfnServerlessCacheProps {
      * @param tags A list of tags to be added to this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

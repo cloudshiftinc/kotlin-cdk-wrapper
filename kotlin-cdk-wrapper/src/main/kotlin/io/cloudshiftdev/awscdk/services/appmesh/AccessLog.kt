@@ -48,7 +48,7 @@ public abstract class AccessLog(
    * @param scope 
    */
   public open fun bind(scope: Construct): AccessLogConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(AccessLogConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(AccessLogConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.AccessLog,
@@ -60,7 +60,7 @@ public abstract class AccessLog(
 
     public fun fromFilePath(filePath: String, loggingFormat: LoggingFormat): AccessLog =
         software.amazon.awscdk.services.appmesh.AccessLog.fromFilePath(filePath,
-        loggingFormat.let(LoggingFormat::unwrap)).let(AccessLog::wrap)
+        loggingFormat.let(LoggingFormat.Companion::unwrap)).let(AccessLog::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appmesh.AccessLog): AccessLog =
         CdkObjectWrappers.wrap(cdkObject) as? AccessLog ?: Wrapper(cdkObject)

@@ -200,7 +200,7 @@ public interface SubnetSelection {
      * @param subnetFilters List of provided subnet filters.
      */
     override fun subnetFilters(subnetFilters: List<SubnetFilter>) {
-      cdkBuilder.subnetFilters(subnetFilters.map(SubnetFilter::unwrap))
+      cdkBuilder.subnetFilters(subnetFilters.map(SubnetFilter.Companion::unwrap))
     }
 
     /**
@@ -231,7 +231,7 @@ public interface SubnetSelection {
      * At most one of `subnetType` and `subnetGroupName` can be supplied.
      */
     override fun subnetType(subnetType: SubnetType) {
-      cdkBuilder.subnetType(subnetType.let(SubnetType::unwrap))
+      cdkBuilder.subnetType(subnetType.let(SubnetType.Companion::unwrap))
     }
 
     /**
@@ -243,7 +243,7 @@ public interface SubnetSelection {
      * Cannot be specified together with `subnetType` or `subnetGroupName`.
      */
     override fun subnets(subnets: List<ISubnet>) {
-      cdkBuilder.subnets(subnets.map(ISubnet::unwrap))
+      cdkBuilder.subnets(subnets.map(ISubnet.Companion::unwrap))
     }
 
     /**

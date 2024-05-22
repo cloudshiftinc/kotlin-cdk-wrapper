@@ -204,7 +204,7 @@ public interface BackupPlanRuleProps {
      * @param backupVault The backup vault where backups are.
      */
     override fun backupVault(backupVault: IBackupVault) {
-      cdkBuilder.backupVault(backupVault.let(IBackupVault::unwrap))
+      cdkBuilder.backupVault(backupVault.let(IBackupVault.Companion::unwrap))
     }
 
     /**
@@ -212,14 +212,14 @@ public interface BackupPlanRuleProps {
      * must be completed or it is canceled by AWS Backup.
      */
     override fun completionWindow(completionWindow: Duration) {
-      cdkBuilder.completionWindow(completionWindow.let(Duration::unwrap))
+      cdkBuilder.completionWindow(completionWindow.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param copyActions Copy operations to perform on recovery points created by this rule.
      */
     override fun copyActions(copyActions: List<BackupPlanCopyActionProps>) {
-      cdkBuilder.copyActions(copyActions.map(BackupPlanCopyActionProps::unwrap))
+      cdkBuilder.copyActions(copyActions.map(BackupPlanCopyActionProps.Companion::unwrap))
     }
 
     /**
@@ -233,7 +233,7 @@ public interface BackupPlanRuleProps {
      * Must be greater than `moveToColdStorageAfter`.
      */
     override fun deleteAfter(deleteAfter: Duration) {
-      cdkBuilder.deleteAfter(deleteAfter.let(Duration::unwrap))
+      cdkBuilder.deleteAfter(deleteAfter.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -255,7 +255,7 @@ public interface BackupPlanRuleProps {
      * moved to cold storage.
      */
     override fun moveToColdStorageAfter(moveToColdStorageAfter: Duration) {
-      cdkBuilder.moveToColdStorageAfter(moveToColdStorageAfter.let(Duration::unwrap))
+      cdkBuilder.moveToColdStorageAfter(moveToColdStorageAfter.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -279,7 +279,7 @@ public interface BackupPlanRuleProps {
      * job.
      */
     override fun scheduleExpression(scheduleExpression: Schedule) {
-      cdkBuilder.scheduleExpression(scheduleExpression.let(Schedule::unwrap))
+      cdkBuilder.scheduleExpression(scheduleExpression.let(Schedule.Companion::unwrap))
     }
 
     /**
@@ -287,7 +287,7 @@ public interface BackupPlanRuleProps {
      * doesn't start successfully.
      */
     override fun startWindow(startWindow: Duration) {
-      cdkBuilder.startWindow(startWindow.let(Duration::unwrap))
+      cdkBuilder.startWindow(startWindow.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.backup.BackupPlanRuleProps =

@@ -38,7 +38,7 @@ public open class CertificateAuthority(
       id: String,
       certificateAuthorityArn: String,
     ): ICertificateAuthority =
-        software.amazon.awscdk.services.acmpca.CertificateAuthority.fromCertificateAuthorityArn(scope.let(Construct::unwrap),
+        software.amazon.awscdk.services.acmpca.CertificateAuthority.fromCertificateAuthorityArn(scope.let(Construct.Companion::unwrap),
         id, certificateAuthorityArn).let(ICertificateAuthority::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.acmpca.CertificateAuthority):

@@ -113,7 +113,7 @@ public interface CfnBillingGroupProps {
      * @param billingGroupProperties The properties of the billing group.
      */
     override fun billingGroupProperties(billingGroupProperties: IResolvable) {
-      cdkBuilder.billingGroupProperties(billingGroupProperties.let(IResolvable::unwrap))
+      cdkBuilder.billingGroupProperties(billingGroupProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -121,7 +121,7 @@ public interface CfnBillingGroupProps {
      */
     override
         fun billingGroupProperties(billingGroupProperties: CfnBillingGroup.BillingGroupPropertiesProperty) {
-      cdkBuilder.billingGroupProperties(billingGroupProperties.let(CfnBillingGroup.BillingGroupPropertiesProperty::unwrap))
+      cdkBuilder.billingGroupProperties(billingGroupProperties.let(CfnBillingGroup.BillingGroupPropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -138,7 +138,7 @@ public interface CfnBillingGroupProps {
      * @param tags Metadata which can be used to manage the billing group.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

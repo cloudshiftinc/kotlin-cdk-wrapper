@@ -55,7 +55,7 @@ public open class WebSocketIamAuthorizer(
    */
   public override fun bind(options: WebSocketRouteAuthorizerBindOptions):
       WebSocketRouteAuthorizerConfig =
-      unwrap(this).bind(options.let(WebSocketRouteAuthorizerBindOptions::unwrap)).let(WebSocketRouteAuthorizerConfig::wrap)
+      unwrap(this).bind(options.let(WebSocketRouteAuthorizerBindOptions.Companion::unwrap)).let(WebSocketRouteAuthorizerConfig::wrap)
 
   /**
    * Bind this authorizer to a specified WebSocket route.

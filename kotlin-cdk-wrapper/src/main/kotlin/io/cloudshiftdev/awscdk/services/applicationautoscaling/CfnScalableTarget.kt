@@ -80,8 +80,8 @@ public open class CfnScalableTarget(
     id: String,
     props: CfnScalableTargetProps,
   ) :
-      this(software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnScalableTargetProps::unwrap))
+      this(software.amazon.awscdk.services.applicationautoscaling.CfnScalableTarget(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnScalableTargetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -92,10 +92,7 @@ public open class CfnScalableTarget(
   )
 
   /**
-   * This value can be returned by using the Ref function.
    *
-   * Ref returns the Cloudformation generated ID of the resource in format -
-   * ResourceId|ScalableDimension|ServiceNamespace
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
@@ -105,7 +102,7 @@ public open class CfnScalableTarget(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -179,7 +176,7 @@ public open class CfnScalableTarget(
    * The scheduled actions for the scalable target.
    */
   public open fun scheduledActions(`value`: IResolvable) {
-    unwrap(this).setScheduledActions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setScheduledActions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -217,7 +214,7 @@ public open class CfnScalableTarget(
    * resume automatic scaling.
    */
   public open fun suspendedState(`value`: IResolvable) {
-    unwrap(this).setSuspendedState(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSuspendedState(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -225,7 +222,7 @@ public open class CfnScalableTarget(
    * resume automatic scaling.
    */
   public open fun suspendedState(`value`: SuspendedStateProperty) {
-    unwrap(this).setSuspendedState(`value`.let(SuspendedStateProperty::unwrap))
+    unwrap(this).setSuspendedState(`value`.let(SuspendedStateProperty.Companion::unwrap))
   }
 
   /**
@@ -679,7 +676,7 @@ public open class CfnScalableTarget(
      * @param scheduledActions The scheduled actions for the scalable target. 
      */
     override fun scheduledActions(scheduledActions: IResolvable) {
-      cdkBuilder.scheduledActions(scheduledActions.let(IResolvable::unwrap))
+      cdkBuilder.scheduledActions(scheduledActions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -737,7 +734,7 @@ public open class CfnScalableTarget(
      * are used to suspend and resume automatic scaling. 
      */
     override fun suspendedState(suspendedState: IResolvable) {
-      cdkBuilder.suspendedState(suspendedState.let(IResolvable::unwrap))
+      cdkBuilder.suspendedState(suspendedState.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -761,7 +758,7 @@ public open class CfnScalableTarget(
      * are used to suspend and resume automatic scaling. 
      */
     override fun suspendedState(suspendedState: SuspendedStateProperty) {
-      cdkBuilder.suspendedState(suspendedState.let(SuspendedStateProperty::unwrap))
+      cdkBuilder.suspendedState(suspendedState.let(SuspendedStateProperty.Companion::unwrap))
     }
 
     /**
@@ -1125,7 +1122,7 @@ public open class CfnScalableTarget(
        * @param endTime The date and time that the action is scheduled to end, in UTC.
        */
       override fun endTime(endTime: IResolvable) {
-        cdkBuilder.endTime(endTime.let(IResolvable::unwrap))
+        cdkBuilder.endTime(endTime.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1143,7 +1140,7 @@ public open class CfnScalableTarget(
        * maximum capacity.
        */
       override fun scalableTargetAction(scalableTargetAction: IResolvable) {
-        cdkBuilder.scalableTargetAction(scalableTargetAction.let(IResolvable::unwrap))
+        cdkBuilder.scalableTargetAction(scalableTargetAction.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1154,7 +1151,7 @@ public open class CfnScalableTarget(
        * maximum capacity.
        */
       override fun scalableTargetAction(scalableTargetAction: ScalableTargetActionProperty) {
-        cdkBuilder.scalableTargetAction(scalableTargetAction.let(ScalableTargetActionProperty::unwrap))
+        cdkBuilder.scalableTargetAction(scalableTargetAction.let(ScalableTargetActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1205,7 +1202,7 @@ public open class CfnScalableTarget(
        * @param startTime The date and time that the action is scheduled to begin, in UTC.
        */
       override fun startTime(startTime: IResolvable) {
-        cdkBuilder.startTime(startTime.let(IResolvable::unwrap))
+        cdkBuilder.startTime(startTime.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1448,7 +1445,7 @@ public open class CfnScalableTarget(
        * a scaling policy is triggered. The default is `false` .
        */
       override fun dynamicScalingInSuspended(dynamicScalingInSuspended: IResolvable) {
-        cdkBuilder.dynamicScalingInSuspended(dynamicScalingInSuspended.let(IResolvable::unwrap))
+        cdkBuilder.dynamicScalingInSuspended(dynamicScalingInSuspended.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1468,7 +1465,7 @@ public open class CfnScalableTarget(
        * scaling policy is triggered. The default is `false` .
        */
       override fun dynamicScalingOutSuspended(dynamicScalingOutSuspended: IResolvable) {
-        cdkBuilder.dynamicScalingOutSuspended(dynamicScalingOutSuspended.let(IResolvable::unwrap))
+        cdkBuilder.dynamicScalingOutSuspended(dynamicScalingOutSuspended.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1486,7 +1483,7 @@ public open class CfnScalableTarget(
        * capacity by initiating scheduled actions. The default is `false` .
        */
       override fun scheduledScalingSuspended(scheduledScalingSuspended: IResolvable) {
-        cdkBuilder.scheduledScalingSuspended(scheduledScalingSuspended.let(IResolvable::unwrap))
+        cdkBuilder.scheduledScalingSuspended(scheduledScalingSuspended.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

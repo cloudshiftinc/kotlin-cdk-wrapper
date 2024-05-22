@@ -227,7 +227,7 @@ public interface HttpOriginProps : OriginProps {
      * Valid values are 1-10 seconds, inclusive.
      */
     override fun connectionTimeout(connectionTimeout: Duration) {
-      cdkBuilder.connectionTimeout(connectionTimeout.let(Duration::unwrap))
+      cdkBuilder.connectionTimeout(connectionTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -263,7 +263,7 @@ public interface HttpOriginProps : OriginProps {
      * error at deploy time.
      */
     override fun keepaliveTimeout(keepaliveTimeout: Duration) {
-      cdkBuilder.keepaliveTimeout(keepaliveTimeout.let(Duration::unwrap))
+      cdkBuilder.keepaliveTimeout(keepaliveTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -303,7 +303,7 @@ public interface HttpOriginProps : OriginProps {
      * @param originSslProtocols The SSL versions to use when interacting with the origin.
      */
     override fun originSslProtocols(originSslProtocols: List<OriginSslPolicy>) {
-      cdkBuilder.originSslProtocols(originSslProtocols.map(OriginSslPolicy::unwrap))
+      cdkBuilder.originSslProtocols(originSslProtocols.map(OriginSslPolicy.Companion::unwrap))
     }
 
     /**
@@ -317,7 +317,7 @@ public interface HttpOriginProps : OriginProps {
      * to the origin.
      */
     override fun protocolPolicy(protocolPolicy: OriginProtocolPolicy) {
-      cdkBuilder.protocolPolicy(protocolPolicy.let(OriginProtocolPolicy::unwrap))
+      cdkBuilder.protocolPolicy(protocolPolicy.let(OriginProtocolPolicy.Companion::unwrap))
     }
 
     /**
@@ -331,7 +331,7 @@ public interface HttpOriginProps : OriginProps {
      * error at deploy time.
      */
     override fun readTimeout(readTimeout: Duration) {
-      cdkBuilder.readTimeout(readTimeout.let(Duration::unwrap))
+      cdkBuilder.readTimeout(readTimeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.origins.HttpOriginProps =

@@ -67,8 +67,8 @@ public open class CfnSqlInjectionMatchSet(
     id: String,
     props: CfnSqlInjectionMatchSetProps,
   ) :
-      this(software.amazon.awscdk.services.waf.CfnSqlInjectionMatchSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSqlInjectionMatchSetProps::unwrap))
+      this(software.amazon.awscdk.services.waf.CfnSqlInjectionMatchSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSqlInjectionMatchSetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -89,7 +89,7 @@ public open class CfnSqlInjectionMatchSet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -115,7 +115,7 @@ public open class CfnSqlInjectionMatchSet(
    * code.
    */
   public open fun sqlInjectionMatchTuples(`value`: IResolvable) {
-    unwrap(this).setSqlInjectionMatchTuples(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSqlInjectionMatchTuples(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -203,7 +203,7 @@ public open class CfnSqlInjectionMatchSet(
      * for snippets of malicious SQL code. 
      */
     override fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: IResolvable) {
-      cdkBuilder.sqlInjectionMatchTuples(sqlInjectionMatchTuples.let(IResolvable::unwrap))
+      cdkBuilder.sqlInjectionMatchTuples(sqlInjectionMatchTuples.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -696,7 +696,7 @@ public open class CfnSqlInjectionMatchSet(
        * header or a query string. 
        */
       override fun fieldToMatch(fieldToMatch: IResolvable) {
-        cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable::unwrap))
+        cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -704,7 +704,7 @@ public open class CfnSqlInjectionMatchSet(
        * header or a query string. 
        */
       override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
-        cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty::unwrap))
+        cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty.Companion::unwrap))
       }
 
       /**

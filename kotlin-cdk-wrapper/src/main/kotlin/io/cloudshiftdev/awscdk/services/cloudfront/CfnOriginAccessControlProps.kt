@@ -75,7 +75,7 @@ public interface CfnOriginAccessControlProps {
      * @param originAccessControlConfig The origin access control. 
      */
     override fun originAccessControlConfig(originAccessControlConfig: IResolvable) {
-      cdkBuilder.originAccessControlConfig(originAccessControlConfig.let(IResolvable::unwrap))
+      cdkBuilder.originAccessControlConfig(originAccessControlConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -83,7 +83,7 @@ public interface CfnOriginAccessControlProps {
      */
     override
         fun originAccessControlConfig(originAccessControlConfig: CfnOriginAccessControl.OriginAccessControlConfigProperty) {
-      cdkBuilder.originAccessControlConfig(originAccessControlConfig.let(CfnOriginAccessControl.OriginAccessControlConfigProperty::unwrap))
+      cdkBuilder.originAccessControlConfig(originAccessControlConfig.let(CfnOriginAccessControl.OriginAccessControlConfigProperty.Companion::unwrap))
     }
 
     /**

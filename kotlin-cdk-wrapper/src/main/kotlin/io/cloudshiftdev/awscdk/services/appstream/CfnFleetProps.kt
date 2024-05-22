@@ -611,7 +611,7 @@ public interface CfnFleetProps {
      * This is not allowed for Elastic fleets.
      */
     override fun computeCapacity(computeCapacity: IResolvable) {
-      cdkBuilder.computeCapacity(computeCapacity.let(IResolvable::unwrap))
+      cdkBuilder.computeCapacity(computeCapacity.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -619,7 +619,7 @@ public interface CfnFleetProps {
      * This is not allowed for Elastic fleets.
      */
     override fun computeCapacity(computeCapacity: CfnFleet.ComputeCapacityProperty) {
-      cdkBuilder.computeCapacity(computeCapacity.let(CfnFleet.ComputeCapacityProperty::unwrap))
+      cdkBuilder.computeCapacity(computeCapacity.let(CfnFleet.ComputeCapacityProperty.Companion::unwrap))
     }
 
     /**
@@ -665,7 +665,7 @@ public interface CfnFleetProps {
      * This is not allowed for Elastic fleets.
      */
     override fun domainJoinInfo(domainJoinInfo: IResolvable) {
-      cdkBuilder.domainJoinInfo(domainJoinInfo.let(IResolvable::unwrap))
+      cdkBuilder.domainJoinInfo(domainJoinInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -674,7 +674,7 @@ public interface CfnFleetProps {
      * This is not allowed for Elastic fleets.
      */
     override fun domainJoinInfo(domainJoinInfo: CfnFleet.DomainJoinInfoProperty) {
-      cdkBuilder.domainJoinInfo(domainJoinInfo.let(CfnFleet.DomainJoinInfoProperty::unwrap))
+      cdkBuilder.domainJoinInfo(domainJoinInfo.let(CfnFleet.DomainJoinInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -698,7 +698,7 @@ public interface CfnFleetProps {
      * @param enableDefaultInternetAccess Enables or disables default internet access for the fleet.
      */
     override fun enableDefaultInternetAccess(enableDefaultInternetAccess: IResolvable) {
-      cdkBuilder.enableDefaultInternetAccess(enableDefaultInternetAccess.let(IResolvable::unwrap))
+      cdkBuilder.enableDefaultInternetAccess(enableDefaultInternetAccess.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -870,7 +870,7 @@ public interface CfnFleetProps {
      * This only applies to Elastic fleets.
      */
     override fun sessionScriptS3Location(sessionScriptS3Location: IResolvable) {
-      cdkBuilder.sessionScriptS3Location(sessionScriptS3Location.let(IResolvable::unwrap))
+      cdkBuilder.sessionScriptS3Location(sessionScriptS3Location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -878,7 +878,7 @@ public interface CfnFleetProps {
      * This only applies to Elastic fleets.
      */
     override fun sessionScriptS3Location(sessionScriptS3Location: CfnFleet.S3LocationProperty) {
-      cdkBuilder.sessionScriptS3Location(sessionScriptS3Location.let(CfnFleet.S3LocationProperty::unwrap))
+      cdkBuilder.sessionScriptS3Location(sessionScriptS3Location.let(CfnFleet.S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -906,7 +906,7 @@ public interface CfnFleetProps {
      * @param tags An array of key-value pairs.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -936,7 +936,7 @@ public interface CfnFleetProps {
      * This is required for Elastic fleets, but not required for other fleet types.
      */
     override fun vpcConfig(vpcConfig: IResolvable) {
-      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -944,7 +944,7 @@ public interface CfnFleetProps {
      * This is required for Elastic fleets, but not required for other fleet types.
      */
     override fun vpcConfig(vpcConfig: CfnFleet.VpcConfigProperty) {
-      cdkBuilder.vpcConfig(vpcConfig.let(CfnFleet.VpcConfigProperty::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(CfnFleet.VpcConfigProperty.Companion::unwrap))
     }
 
     /**

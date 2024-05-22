@@ -24,15 +24,16 @@ public open class S3Code(
   cdkObject: software.amazon.awscdk.services.synthetics.S3Code,
 ) : Code(cdkObject) {
   public constructor(bucket: IBucket, key: String) :
-      this(software.amazon.awscdk.services.synthetics.S3Code(bucket.let(IBucket::unwrap), key)
+      this(software.amazon.awscdk.services.synthetics.S3Code(bucket.let(IBucket.Companion::unwrap),
+      key)
   )
 
   public constructor(
     bucket: IBucket,
     key: String,
     objectVersion: String,
-  ) : this(software.amazon.awscdk.services.synthetics.S3Code(bucket.let(IBucket::unwrap), key,
-      objectVersion)
+  ) : this(software.amazon.awscdk.services.synthetics.S3Code(bucket.let(IBucket.Companion::unwrap),
+      key, objectVersion)
   )
 
   /**
@@ -47,8 +48,8 @@ public open class S3Code(
     scope: Construct,
     handler: String,
     family: RuntimeFamily,
-  ): CodeConfig = unwrap(this).bind(scope.let(Construct::unwrap), handler,
-      family.let(RuntimeFamily::unwrap)).let(CodeConfig::wrap)
+  ): CodeConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap), handler,
+      family.let(RuntimeFamily.Companion::unwrap)).let(CodeConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.S3Code): S3Code =

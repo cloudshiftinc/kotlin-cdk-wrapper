@@ -36,8 +36,8 @@ public open class BitBucketSourceCredentials(
     id: String,
     props: BitBucketSourceCredentialsProps,
   ) :
-      this(software.amazon.awscdk.services.codebuild.BitBucketSourceCredentials(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(BitBucketSourceCredentialsProps::unwrap))
+      this(software.amazon.awscdk.services.codebuild.BitBucketSourceCredentials(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(BitBucketSourceCredentialsProps.Companion::unwrap))
   )
 
   public constructor(
@@ -82,7 +82,7 @@ public open class BitBucketSourceCredentials(
      * @param password Your BitBucket application password. 
      */
     override fun password(password: SecretValue) {
-      cdkBuilder.password(password.let(SecretValue::unwrap))
+      cdkBuilder.password(password.let(SecretValue.Companion::unwrap))
     }
 
     /**
@@ -91,7 +91,7 @@ public open class BitBucketSourceCredentials(
      * @param username Your BitBucket username. 
      */
     override fun username(username: SecretValue) {
-      cdkBuilder.username(username.let(SecretValue::unwrap))
+      cdkBuilder.username(username.let(SecretValue.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codebuild.BitBucketSourceCredentials =

@@ -44,7 +44,7 @@ public open class Key(
   cdkObject: software.amazon.awscdk.services.kms.Key,
 ) : Resource(cdkObject), IKey {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.kms.Key(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.kms.Key(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -53,8 +53,8 @@ public open class Key(
     id: String,
     props: KeyProps,
   ) :
-      this(software.amazon.awscdk.services.kms.Key(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(KeyProps::unwrap))
+      this(software.amazon.awscdk.services.kms.Key(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(KeyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -80,7 +80,7 @@ public open class Key(
    * the operation will fail. Otherwise, it will no-op.
    */
   public override fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
-      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement::unwrap)).let(AddToResourcePolicyResult::wrap)
+      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
 
   /**
    * Adds a statement to the KMS key resource policy.
@@ -103,7 +103,7 @@ public open class Key(
    */
   public override fun addToResourcePolicy(statement: PolicyStatement, allowNoOp: Boolean):
       AddToResourcePolicyResult =
-      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement::unwrap),
+      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap),
       allowNoOp).let(AddToResourcePolicyResult::wrap)
 
   /**
@@ -117,8 +117,8 @@ public open class Key(
    * @param actions 
    */
   public override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
-      as String}.toTypedArray()).let(Grant::wrap)
+      unwrap(this).grant(grantee.let(IGrantable.Companion::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Grant admins permissions using this key to the given principal.
@@ -130,7 +130,7 @@ public open class Key(
    * @param grantee 
    */
   public open fun grantAdmin(grantee: IGrantable): Grant =
-      unwrap(this).grantAdmin(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantAdmin(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant decryption permissions using this key to the given principal.
@@ -138,7 +138,7 @@ public open class Key(
    * @param grantee 
    */
   public override fun grantDecrypt(grantee: IGrantable): Grant =
-      unwrap(this).grantDecrypt(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantDecrypt(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant encryption permissions using this key to the given principal.
@@ -146,7 +146,7 @@ public open class Key(
    * @param grantee 
    */
   public override fun grantEncrypt(grantee: IGrantable): Grant =
-      unwrap(this).grantEncrypt(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantEncrypt(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant encryption and decryption permissions using this key to the given principal.
@@ -154,7 +154,7 @@ public open class Key(
    * @param grantee 
    */
   public override fun grantEncryptDecrypt(grantee: IGrantable): Grant =
-      unwrap(this).grantEncryptDecrypt(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantEncryptDecrypt(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant permissions to generating MACs to the given principal.
@@ -162,7 +162,7 @@ public open class Key(
    * @param grantee 
    */
   public override fun grantGenerateMac(grantee: IGrantable): Grant =
-      unwrap(this).grantGenerateMac(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantGenerateMac(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant permissions to verifying MACs to the given principal.
@@ -170,7 +170,7 @@ public open class Key(
    * @param grantee 
    */
   public override fun grantVerifyMac(grantee: IGrantable): Grant =
-      unwrap(this).grantVerifyMac(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantVerifyMac(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The ARN of the key.
@@ -356,6 +356,15 @@ public open class Key(
      * the Stack. 
      */
     public fun removalPolicy(removalPolicy: RemovalPolicy)
+
+    /**
+     * The period between each automatic rotation.
+     *
+     * Default: - set by CFN to 365 days.
+     *
+     * @param rotationPeriod The period between each automatic rotation. 
+     */
+    public fun rotationPeriod(rotationPeriod: Duration)
   }
 
   private class BuilderImpl(
@@ -380,7 +389,7 @@ public open class Key(
      * @param admins A list of principals to add as key administrators to the key policy. 
      */
     override fun admins(admins: List<IPrincipal>) {
-      cdkBuilder.admins(admins.map(IPrincipal::unwrap))
+      cdkBuilder.admins(admins.map(IPrincipal.Companion::unwrap))
     }
 
     /**
@@ -461,7 +470,7 @@ public open class Key(
      * of the key. 
      */
     override fun keySpec(keySpec: KeySpec) {
-      cdkBuilder.keySpec(keySpec.let(KeySpec::unwrap))
+      cdkBuilder.keySpec(keySpec.let(KeySpec.Companion::unwrap))
     }
 
     /**
@@ -476,7 +485,7 @@ public open class Key(
      * @param keyUsage The cryptographic operations for which the key can be used. 
      */
     override fun keyUsage(keyUsage: KeyUsage) {
-      cdkBuilder.keyUsage(keyUsage.let(KeyUsage::unwrap))
+      cdkBuilder.keyUsage(keyUsage.let(KeyUsage.Companion::unwrap))
     }
 
     /**
@@ -501,7 +510,7 @@ public open class Key(
      * deletes a CMK that has been removed from a CloudFormation stack. 
      */
     override fun pendingWindow(pendingWindow: Duration) {
-      cdkBuilder.pendingWindow(pendingWindow.let(Duration::unwrap))
+      cdkBuilder.pendingWindow(pendingWindow.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -519,7 +528,7 @@ public open class Key(
      * @param policy Custom policy document to attach to the KMS key. 
      */
     override fun policy(policy: PolicyDocument) {
-      cdkBuilder.policy(policy.let(PolicyDocument::unwrap))
+      cdkBuilder.policy(policy.let(PolicyDocument.Companion::unwrap))
     }
 
     /**
@@ -553,7 +562,18 @@ public open class Key(
      * the Stack. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
+    }
+
+    /**
+     * The period between each automatic rotation.
+     *
+     * Default: - set by CFN to 365 days.
+     *
+     * @param rotationPeriod The period between each automatic rotation. 
+     */
+    override fun rotationPeriod(rotationPeriod: Duration) {
+      cdkBuilder.rotationPeriod(rotationPeriod.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.kms.Key = cdkBuilder.build()
@@ -561,14 +581,14 @@ public open class Key(
 
   public companion object {
     public fun fromCfnKey(cfnKey: CfnKey): IKey =
-        software.amazon.awscdk.services.kms.Key.fromCfnKey(cfnKey.let(CfnKey::unwrap)).let(IKey::wrap)
+        software.amazon.awscdk.services.kms.Key.fromCfnKey(cfnKey.let(CfnKey.Companion::unwrap)).let(IKey::wrap)
 
     public fun fromKeyArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
       keyArn: String,
     ): IKey =
-        software.amazon.awscdk.services.kms.Key.fromKeyArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.kms.Key.fromKeyArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, keyArn).let(IKey::wrap)
 
     public fun fromLookup(
@@ -576,8 +596,8 @@ public open class Key(
       id: String,
       options: KeyLookupOptions,
     ): IKey =
-        software.amazon.awscdk.services.kms.Key.fromLookup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, options.let(KeyLookupOptions::unwrap)).let(IKey::wrap)
+        software.amazon.awscdk.services.kms.Key.fromLookup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, options.let(KeyLookupOptions.Companion::unwrap)).let(IKey::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a38292968d860b56054807de2f29eed5b258ee0b12b25fe8d96e0d9eadd0a18a")

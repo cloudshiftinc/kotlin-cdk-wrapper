@@ -218,7 +218,7 @@ public interface SecurityGroupProps {
      * @param vpc The VPC in which to create the security group. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.SecurityGroupProps = cdkBuilder.build()

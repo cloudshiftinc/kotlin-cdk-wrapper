@@ -48,8 +48,8 @@ public open class EventInvokeConfig(
     id: String,
     props: EventInvokeConfigProps,
   ) :
-      this(software.amazon.awscdk.services.lambda.EventInvokeConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EventInvokeConfigProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.EventInvokeConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EventInvokeConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -138,7 +138,7 @@ public open class EventInvokeConfig(
      * @param function The Lambda function. 
      */
     override fun function(function: IFunction) {
-      cdkBuilder.function(function.let(IFunction::unwrap))
+      cdkBuilder.function(function.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -153,7 +153,7 @@ public open class EventInvokeConfig(
      * processing. 
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -164,7 +164,7 @@ public open class EventInvokeConfig(
      * @param onFailure The destination for failed invocations. 
      */
     override fun onFailure(onFailure: IDestination) {
-      cdkBuilder.onFailure(onFailure.let(IDestination::unwrap))
+      cdkBuilder.onFailure(onFailure.let(IDestination.Companion::unwrap))
     }
 
     /**
@@ -175,7 +175,7 @@ public open class EventInvokeConfig(
      * @param onSuccess The destination for successful invocations. 
      */
     override fun onSuccess(onSuccess: IDestination) {
-      cdkBuilder.onSuccess(onSuccess.let(IDestination::unwrap))
+      cdkBuilder.onSuccess(onSuccess.let(IDestination.Companion::unwrap))
     }
 
     /**

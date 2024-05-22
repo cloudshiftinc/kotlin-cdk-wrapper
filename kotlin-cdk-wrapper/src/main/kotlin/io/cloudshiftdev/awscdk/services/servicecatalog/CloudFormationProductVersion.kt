@@ -97,7 +97,7 @@ public interface CloudFormationProductVersion {
      * template. 
      */
     override fun cloudFormationTemplate(cloudFormationTemplate: CloudFormationTemplate) {
-      cdkBuilder.cloudFormationTemplate(cloudFormationTemplate.let(CloudFormationTemplate::unwrap))
+      cdkBuilder.cloudFormationTemplate(cloudFormationTemplate.let(CloudFormationTemplate.Companion::unwrap))
     }
 
     /**

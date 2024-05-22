@@ -42,8 +42,8 @@ public open class ClientVpnEndpoint(
     id: String,
     props: ClientVpnEndpointProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.ClientVpnEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ClientVpnEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.ClientVpnEndpoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ClientVpnEndpointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -61,7 +61,7 @@ public open class ClientVpnEndpoint(
    */
   public open fun addAuthorizationRule(id: String, props: ClientVpnAuthorizationRuleOptions):
       ClientVpnAuthorizationRule = unwrap(this).addAuthorizationRule(id,
-      props.let(ClientVpnAuthorizationRuleOptions::unwrap)).let(ClientVpnAuthorizationRule::wrap)
+      props.let(ClientVpnAuthorizationRuleOptions.Companion::unwrap)).let(ClientVpnAuthorizationRule::wrap)
 
   /**
    * Adds an authorization rule to this endpoint.
@@ -82,7 +82,8 @@ public open class ClientVpnEndpoint(
    * @param props 
    */
   public open fun addRoute(id: String, props: ClientVpnRouteOptions): ClientVpnRoute =
-      unwrap(this).addRoute(id, props.let(ClientVpnRouteOptions::unwrap)).let(ClientVpnRoute::wrap)
+      unwrap(this).addRoute(id,
+      props.let(ClientVpnRouteOptions.Companion::unwrap)).let(ClientVpnRoute::wrap)
 
   /**
    * Adds a route to this endpoint.
@@ -410,7 +411,7 @@ public open class ClientVpnEndpoint(
      * @param clientConnectionHandler The AWS Lambda function used for connection authorization. 
      */
     override fun clientConnectionHandler(clientConnectionHandler: IClientVpnConnectionHandler) {
-      cdkBuilder.clientConnectionHandler(clientConnectionHandler.let(IClientVpnConnectionHandler::unwrap))
+      cdkBuilder.clientConnectionHandler(clientConnectionHandler.let(IClientVpnConnectionHandler.Companion::unwrap))
     }
 
     /**
@@ -471,7 +472,7 @@ public open class ClientVpnEndpoint(
      * @param logGroup A CloudWatch Logs log group for connection logging. 
      */
     override fun logGroup(logGroup: ILogGroup) {
-      cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
+      cdkBuilder.logGroup(logGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -482,7 +483,7 @@ public open class ClientVpnEndpoint(
      * @param logStream A CloudWatch Logs log stream for connection logging. 
      */
     override fun logStream(logStream: ILogStream) {
-      cdkBuilder.logStream(logStream.let(ILogStream::unwrap))
+      cdkBuilder.logStream(logStream.let(ILogStream.Companion::unwrap))
     }
 
     /**
@@ -504,7 +505,7 @@ public open class ClientVpnEndpoint(
      * @param port The port number to assign to the Client VPN endpoint for TCP and UDP traffic. 
      */
     override fun port(port: VpnPort) {
-      cdkBuilder.port(port.let(VpnPort::unwrap))
+      cdkBuilder.port(port.let(VpnPort.Companion::unwrap))
     }
 
     /**
@@ -515,7 +516,7 @@ public open class ClientVpnEndpoint(
      * @param securityGroups The security groups to apply to the target network. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -557,7 +558,7 @@ public open class ClientVpnEndpoint(
      * @param sessionTimeout The maximum VPN session duration time. 
      */
     override fun sessionTimeout(sessionTimeout: ClientVpnSessionTimeout) {
-      cdkBuilder.sessionTimeout(sessionTimeout.let(ClientVpnSessionTimeout::unwrap))
+      cdkBuilder.sessionTimeout(sessionTimeout.let(ClientVpnSessionTimeout.Companion::unwrap))
     }
 
     /**
@@ -580,7 +581,7 @@ public open class ClientVpnEndpoint(
      * @param transportProtocol The transport protocol to be used by the VPN session. 
      */
     override fun transportProtocol(transportProtocol: TransportProtocol) {
-      cdkBuilder.transportProtocol(transportProtocol.let(TransportProtocol::unwrap))
+      cdkBuilder.transportProtocol(transportProtocol.let(TransportProtocol.Companion::unwrap))
     }
 
     /**
@@ -593,7 +594,7 @@ public open class ClientVpnEndpoint(
      */
     override
         fun userBasedAuthentication(userBasedAuthentication: ClientVpnUserBasedAuthentication) {
-      cdkBuilder.userBasedAuthentication(userBasedAuthentication.let(ClientVpnUserBasedAuthentication::unwrap))
+      cdkBuilder.userBasedAuthentication(userBasedAuthentication.let(ClientVpnUserBasedAuthentication.Companion::unwrap))
     }
 
     /**
@@ -602,7 +603,7 @@ public open class ClientVpnEndpoint(
      * @param vpc The VPC to connect to. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -613,7 +614,7 @@ public open class ClientVpnEndpoint(
      * @param vpcSubnets Subnets to associate to the client VPN endpoint. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -637,8 +638,8 @@ public open class ClientVpnEndpoint(
       id: String,
       attrs: ClientVpnEndpointAttributes,
     ): IClientVpnEndpoint =
-        software.amazon.awscdk.services.ec2.ClientVpnEndpoint.fromEndpointAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(ClientVpnEndpointAttributes::unwrap)).let(IClientVpnEndpoint::wrap)
+        software.amazon.awscdk.services.ec2.ClientVpnEndpoint.fromEndpointAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(ClientVpnEndpointAttributes.Companion::unwrap)).let(IClientVpnEndpoint::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1ee168512bf896e7da207e8fee80caa0b6a2feb399a6f9a2fbfbb973a25175dd")

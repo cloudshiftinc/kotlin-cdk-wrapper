@@ -55,8 +55,8 @@ public open class CfnNetworkInterfaceAttachment(
     id: String,
     props: CfnNetworkInterfaceAttachmentProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnNetworkInterfaceAttachmentProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnNetworkInterfaceAttachment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnNetworkInterfaceAttachmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -87,7 +87,7 @@ public open class CfnNetworkInterfaceAttachment(
    * Whether to delete the network interface when the instance terminates.
    */
   public open fun deleteOnTermination(`value`: IResolvable) {
-    unwrap(this).setDeleteOnTermination(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeleteOnTermination(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -111,14 +111,14 @@ public open class CfnNetworkInterfaceAttachment(
    * Configures ENA Express for the network interface that this action attaches to the instance.
    */
   public open fun enaSrdSpecification(`value`: IResolvable) {
-    unwrap(this).setEnaSrdSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnaSrdSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configures ENA Express for the network interface that this action attaches to the instance.
    */
   public open fun enaSrdSpecification(`value`: EnaSrdSpecificationProperty) {
-    unwrap(this).setEnaSrdSpecification(`value`.let(EnaSrdSpecificationProperty::unwrap))
+    unwrap(this).setEnaSrdSpecification(`value`.let(EnaSrdSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -135,7 +135,7 @@ public open class CfnNetworkInterfaceAttachment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -285,7 +285,7 @@ public open class CfnNetworkInterfaceAttachment(
      * terminates. 
      */
     override fun deleteOnTermination(deleteOnTermination: IResolvable) {
-      cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
+      cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -308,7 +308,7 @@ public open class CfnNetworkInterfaceAttachment(
      * attaches to the instance. 
      */
     override fun enaSrdSpecification(enaSrdSpecification: IResolvable) {
-      cdkBuilder.enaSrdSpecification(enaSrdSpecification.let(IResolvable::unwrap))
+      cdkBuilder.enaSrdSpecification(enaSrdSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -319,7 +319,7 @@ public open class CfnNetworkInterfaceAttachment(
      * attaches to the instance. 
      */
     override fun enaSrdSpecification(enaSrdSpecification: EnaSrdSpecificationProperty) {
-      cdkBuilder.enaSrdSpecification(enaSrdSpecification.let(EnaSrdSpecificationProperty::unwrap))
+      cdkBuilder.enaSrdSpecification(enaSrdSpecification.let(EnaSrdSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -475,21 +475,21 @@ public open class CfnNetworkInterfaceAttachment(
        * @param enaSrdEnabled Indicates whether ENA Express is enabled for the network interface.
        */
       override fun enaSrdEnabled(enaSrdEnabled: IResolvable) {
-        cdkBuilder.enaSrdEnabled(enaSrdEnabled.let(IResolvable::unwrap))
+        cdkBuilder.enaSrdEnabled(enaSrdEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
        */
       override fun enaSrdUdpSpecification(enaSrdUdpSpecification: IResolvable) {
-        cdkBuilder.enaSrdUdpSpecification(enaSrdUdpSpecification.let(IResolvable::unwrap))
+        cdkBuilder.enaSrdUdpSpecification(enaSrdUdpSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
        */
       override fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty) {
-        cdkBuilder.enaSrdUdpSpecification(enaSrdUdpSpecification.let(EnaSrdUdpSpecificationProperty::unwrap))
+        cdkBuilder.enaSrdUdpSpecification(enaSrdUdpSpecification.let(EnaSrdUdpSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -615,7 +615,7 @@ public open class CfnNetworkInterfaceAttachment(
        * To specify this setting, you must first enable ENA Express.
        */
       override fun enaSrdUdpEnabled(enaSrdUdpEnabled: IResolvable) {
-        cdkBuilder.enaSrdUdpEnabled(enaSrdUdpEnabled.let(IResolvable::unwrap))
+        cdkBuilder.enaSrdUdpEnabled(enaSrdUdpEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

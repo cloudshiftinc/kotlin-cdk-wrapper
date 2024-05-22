@@ -126,7 +126,7 @@ public interface CloudFormationStackDriftDetectionCheckProps : RuleProps {
      * evaluations.
      */
     override fun maximumExecutionFrequency(maximumExecutionFrequency: MaximumExecutionFrequency) {
-      cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency.let(MaximumExecutionFrequency::unwrap))
+      cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency.let(MaximumExecutionFrequency.Companion::unwrap))
     }
 
     /**
@@ -145,14 +145,14 @@ public interface CloudFormationStackDriftDetectionCheckProps : RuleProps {
      * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param ruleScope Defines which resources trigger an evaluation for an AWS Config rule.
      */
     override fun ruleScope(ruleScope: RuleScope) {
-      cdkBuilder.ruleScope(ruleScope.let(RuleScope::unwrap))
+      cdkBuilder.ruleScope(ruleScope.let(RuleScope.Companion::unwrap))
     }
 
     public fun build():

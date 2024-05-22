@@ -39,8 +39,8 @@ public abstract class ContainerImage(
    * @param containerDefinition 
    */
   public open fun bind(scope: Construct, containerDefinition: ContainerDefinition):
-      ContainerImageConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      containerDefinition.let(ContainerDefinition::unwrap)).let(ContainerImageConfig::wrap)
+      ContainerImageConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      containerDefinition.let(ContainerDefinition.Companion::unwrap)).let(ContainerImageConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.ContainerImage,
@@ -52,7 +52,7 @@ public abstract class ContainerImage(
 
     public fun fromAsset(directory: String, props: AssetImageProps): AssetImage =
         software.amazon.awscdk.services.ecs.ContainerImage.fromAsset(directory,
-        props.let(AssetImageProps::unwrap)).let(AssetImage::wrap)
+        props.let(AssetImageProps.Companion::unwrap)).let(AssetImage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("079bd47206f00ba5df71024a9ccc19749b364c49826c602f2e09d28ba45b86f4")
@@ -60,13 +60,13 @@ public abstract class ContainerImage(
         fromAsset(directory, AssetImageProps(props))
 
     public fun fromDockerImageAsset(asset: DockerImageAsset): ContainerImage =
-        software.amazon.awscdk.services.ecs.ContainerImage.fromDockerImageAsset(asset.let(DockerImageAsset::unwrap)).let(ContainerImage::wrap)
+        software.amazon.awscdk.services.ecs.ContainerImage.fromDockerImageAsset(asset.let(DockerImageAsset.Companion::unwrap)).let(ContainerImage::wrap)
 
     public fun fromEcrRepository(repository: IRepository): EcrImage =
-        software.amazon.awscdk.services.ecs.ContainerImage.fromEcrRepository(repository.let(IRepository::unwrap)).let(EcrImage::wrap)
+        software.amazon.awscdk.services.ecs.ContainerImage.fromEcrRepository(repository.let(IRepository.Companion::unwrap)).let(EcrImage::wrap)
 
     public fun fromEcrRepository(repository: IRepository, tag: String): EcrImage =
-        software.amazon.awscdk.services.ecs.ContainerImage.fromEcrRepository(repository.let(IRepository::unwrap),
+        software.amazon.awscdk.services.ecs.ContainerImage.fromEcrRepository(repository.let(IRepository.Companion::unwrap),
         tag).let(EcrImage::wrap)
 
     public fun fromRegistry(name: String): RepositoryImage =
@@ -74,7 +74,7 @@ public abstract class ContainerImage(
 
     public fun fromRegistry(name: String, props: RepositoryImageProps): RepositoryImage =
         software.amazon.awscdk.services.ecs.ContainerImage.fromRegistry(name,
-        props.let(RepositoryImageProps::unwrap)).let(RepositoryImage::wrap)
+        props.let(RepositoryImageProps.Companion::unwrap)).let(RepositoryImage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("60234a1c1e29f6a957bb3e79efb0c46aace8158ca4dad387364294ac0404dd93")

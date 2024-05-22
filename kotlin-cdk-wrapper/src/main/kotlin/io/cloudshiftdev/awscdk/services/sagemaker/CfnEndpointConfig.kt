@@ -182,8 +182,8 @@ public open class CfnEndpointConfig(
     id: String,
     props: CfnEndpointConfigProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnEndpointConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEndpointConfigProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnEndpointConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEndpointConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -202,14 +202,14 @@ public open class CfnEndpointConfig(
    * Specifies configuration for how an endpoint performs asynchronous inference.
    */
   public open fun asyncInferenceConfig(`value`: IResolvable) {
-    unwrap(this).setAsyncInferenceConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAsyncInferenceConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies configuration for how an endpoint performs asynchronous inference.
    */
   public open fun asyncInferenceConfig(`value`: AsyncInferenceConfigProperty) {
-    unwrap(this).setAsyncInferenceConfig(`value`.let(AsyncInferenceConfigProperty::unwrap))
+    unwrap(this).setAsyncInferenceConfig(`value`.let(AsyncInferenceConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -239,14 +239,14 @@ public open class CfnEndpointConfig(
    * Specifies how to capture endpoint data for model monitor.
    */
   public open fun dataCaptureConfig(`value`: IResolvable) {
-    unwrap(this).setDataCaptureConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataCaptureConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies how to capture endpoint data for model monitor.
    */
   public open fun dataCaptureConfig(`value`: DataCaptureConfigProperty) {
-    unwrap(this).setDataCaptureConfig(`value`.let(DataCaptureConfigProperty::unwrap))
+    unwrap(this).setDataCaptureConfig(`value`.let(DataCaptureConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -273,7 +273,7 @@ public open class CfnEndpointConfig(
    *
    */
   public open fun enableNetworkIsolation(`value`: IResolvable) {
-    unwrap(this).setEnableNetworkIsolation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableNetworkIsolation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -309,14 +309,14 @@ public open class CfnEndpointConfig(
    * A parameter to activate explainers.
    */
   public open fun explainerConfig(`value`: IResolvable) {
-    unwrap(this).setExplainerConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setExplainerConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A parameter to activate explainers.
    */
   public open fun explainerConfig(`value`: ExplainerConfigProperty) {
-    unwrap(this).setExplainerConfig(`value`.let(ExplainerConfigProperty::unwrap))
+    unwrap(this).setExplainerConfig(`value`.let(ExplainerConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -333,7 +333,7 @@ public open class CfnEndpointConfig(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -361,7 +361,7 @@ public open class CfnEndpointConfig(
    * endpoint.
    */
   public open fun productionVariants(`value`: IResolvable) {
-    unwrap(this).setProductionVariants(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProductionVariants(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -388,7 +388,7 @@ public open class CfnEndpointConfig(
    * Array of `ProductionVariant` objects.
    */
   public open fun shadowProductionVariants(`value`: IResolvable) {
-    unwrap(this).setShadowProductionVariants(`value`.let(IResolvable::unwrap))
+    unwrap(this).setShadowProductionVariants(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -419,7 +419,7 @@ public open class CfnEndpointConfig(
    * A list of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -436,14 +436,14 @@ public open class CfnEndpointConfig(
    *
    */
   public open fun vpcConfig(`value`: IResolvable) {
-    unwrap(this).setVpcConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun vpcConfig(`value`: VpcConfigProperty) {
-    unwrap(this).setVpcConfig(`value`.let(VpcConfigProperty::unwrap))
+    unwrap(this).setVpcConfig(`value`.let(VpcConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -744,7 +744,7 @@ public open class CfnEndpointConfig(
      * inference. 
      */
     override fun asyncInferenceConfig(asyncInferenceConfig: IResolvable) {
-      cdkBuilder.asyncInferenceConfig(asyncInferenceConfig.let(IResolvable::unwrap))
+      cdkBuilder.asyncInferenceConfig(asyncInferenceConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -755,7 +755,7 @@ public open class CfnEndpointConfig(
      * inference. 
      */
     override fun asyncInferenceConfig(asyncInferenceConfig: AsyncInferenceConfigProperty) {
-      cdkBuilder.asyncInferenceConfig(asyncInferenceConfig.let(AsyncInferenceConfigProperty::unwrap))
+      cdkBuilder.asyncInferenceConfig(asyncInferenceConfig.let(AsyncInferenceConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -780,7 +780,7 @@ public open class CfnEndpointConfig(
      * @param dataCaptureConfig Specifies how to capture endpoint data for model monitor. 
      */
     override fun dataCaptureConfig(dataCaptureConfig: IResolvable) {
-      cdkBuilder.dataCaptureConfig(dataCaptureConfig.let(IResolvable::unwrap))
+      cdkBuilder.dataCaptureConfig(dataCaptureConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -792,7 +792,7 @@ public open class CfnEndpointConfig(
      * @param dataCaptureConfig Specifies how to capture endpoint data for model monitor. 
      */
     override fun dataCaptureConfig(dataCaptureConfig: DataCaptureConfigProperty) {
-      cdkBuilder.dataCaptureConfig(dataCaptureConfig.let(DataCaptureConfigProperty::unwrap))
+      cdkBuilder.dataCaptureConfig(dataCaptureConfig.let(DataCaptureConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -821,7 +821,7 @@ public open class CfnEndpointConfig(
      * @param enableNetworkIsolation 
      */
     override fun enableNetworkIsolation(enableNetworkIsolation: IResolvable) {
-      cdkBuilder.enableNetworkIsolation(enableNetworkIsolation.let(IResolvable::unwrap))
+      cdkBuilder.enableNetworkIsolation(enableNetworkIsolation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -849,7 +849,7 @@ public open class CfnEndpointConfig(
      * @param explainerConfig A parameter to activate explainers. 
      */
     override fun explainerConfig(explainerConfig: IResolvable) {
-      cdkBuilder.explainerConfig(explainerConfig.let(IResolvable::unwrap))
+      cdkBuilder.explainerConfig(explainerConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -859,7 +859,7 @@ public open class CfnEndpointConfig(
      * @param explainerConfig A parameter to activate explainers. 
      */
     override fun explainerConfig(explainerConfig: ExplainerConfigProperty) {
-      cdkBuilder.explainerConfig(explainerConfig.let(ExplainerConfigProperty::unwrap))
+      cdkBuilder.explainerConfig(explainerConfig.let(ExplainerConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -922,7 +922,7 @@ public open class CfnEndpointConfig(
      * want to host at this endpoint. 
      */
     override fun productionVariants(productionVariants: IResolvable) {
-      cdkBuilder.productionVariants(productionVariants.let(IResolvable::unwrap))
+      cdkBuilder.productionVariants(productionVariants.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -960,7 +960,7 @@ public open class CfnEndpointConfig(
      * @param shadowProductionVariants Array of `ProductionVariant` objects. 
      */
     override fun shadowProductionVariants(shadowProductionVariants: IResolvable) {
-      cdkBuilder.shadowProductionVariants(shadowProductionVariants.let(IResolvable::unwrap))
+      cdkBuilder.shadowProductionVariants(shadowProductionVariants.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1005,7 +1005,7 @@ public open class CfnEndpointConfig(
      * @param tags A list of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1027,7 +1027,7 @@ public open class CfnEndpointConfig(
      * @param vpcConfig 
      */
     override fun vpcConfig(vpcConfig: IResolvable) {
-      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1035,7 +1035,7 @@ public open class CfnEndpointConfig(
      * @param vpcConfig 
      */
     override fun vpcConfig(vpcConfig: VpcConfigProperty) {
-      cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1273,7 +1273,7 @@ public open class CfnEndpointConfig(
        * with the model container during asynchronous inference.
        */
       override fun clientConfig(clientConfig: IResolvable) {
-        cdkBuilder.clientConfig(clientConfig.let(IResolvable::unwrap))
+        cdkBuilder.clientConfig(clientConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1281,7 +1281,7 @@ public open class CfnEndpointConfig(
        * with the model container during asynchronous inference.
        */
       override fun clientConfig(clientConfig: AsyncInferenceClientConfigProperty) {
-        cdkBuilder.clientConfig(clientConfig.let(AsyncInferenceClientConfigProperty::unwrap))
+        cdkBuilder.clientConfig(clientConfig.let(AsyncInferenceClientConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1299,7 +1299,7 @@ public open class CfnEndpointConfig(
        * outputs. 
        */
       override fun outputConfig(outputConfig: IResolvable) {
-        cdkBuilder.outputConfig(outputConfig.let(IResolvable::unwrap))
+        cdkBuilder.outputConfig(outputConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1307,7 +1307,7 @@ public open class CfnEndpointConfig(
        * outputs. 
        */
       override fun outputConfig(outputConfig: AsyncInferenceOutputConfigProperty) {
-        cdkBuilder.outputConfig(outputConfig.let(AsyncInferenceOutputConfigProperty::unwrap))
+        cdkBuilder.outputConfig(outputConfig.let(AsyncInferenceOutputConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1669,7 +1669,7 @@ public open class CfnEndpointConfig(
        * results for asynchronous inference.
        */
       override fun notificationConfig(notificationConfig: IResolvable) {
-        cdkBuilder.notificationConfig(notificationConfig.let(IResolvable::unwrap))
+        cdkBuilder.notificationConfig(notificationConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1678,7 +1678,7 @@ public open class CfnEndpointConfig(
        */
       override
           fun notificationConfig(notificationConfig: AsyncInferenceNotificationConfigProperty) {
-        cdkBuilder.notificationConfig(notificationConfig.let(AsyncInferenceNotificationConfigProperty::unwrap))
+        cdkBuilder.notificationConfig(notificationConfig.let(AsyncInferenceNotificationConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2157,14 +2157,14 @@ public open class CfnEndpointConfig(
        * @param inferenceConfig The inference configuration parameter for the model container.
        */
       override fun inferenceConfig(inferenceConfig: IResolvable) {
-        cdkBuilder.inferenceConfig(inferenceConfig.let(IResolvable::unwrap))
+        cdkBuilder.inferenceConfig(inferenceConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param inferenceConfig The inference configuration parameter for the model container.
        */
       override fun inferenceConfig(inferenceConfig: ClarifyInferenceConfigProperty) {
-        cdkBuilder.inferenceConfig(inferenceConfig.let(ClarifyInferenceConfigProperty::unwrap))
+        cdkBuilder.inferenceConfig(inferenceConfig.let(ClarifyInferenceConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2180,14 +2180,14 @@ public open class CfnEndpointConfig(
        * @param shapConfig The configuration for SHAP analysis. 
        */
       override fun shapConfig(shapConfig: IResolvable) {
-        cdkBuilder.shapConfig(shapConfig.let(IResolvable::unwrap))
+        cdkBuilder.shapConfig(shapConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param shapConfig The configuration for SHAP analysis. 
        */
       override fun shapConfig(shapConfig: ClarifyShapConfigProperty) {
-        cdkBuilder.shapConfig(shapConfig.let(ClarifyShapConfigProperty::unwrap))
+        cdkBuilder.shapConfig(shapConfig.let(ClarifyShapConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -3331,7 +3331,7 @@ public open class CfnEndpointConfig(
        * algorithm. 
        */
       override fun shapBaselineConfig(shapBaselineConfig: IResolvable) {
-        cdkBuilder.shapBaselineConfig(shapBaselineConfig.let(IResolvable::unwrap))
+        cdkBuilder.shapBaselineConfig(shapBaselineConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3339,7 +3339,7 @@ public open class CfnEndpointConfig(
        * algorithm. 
        */
       override fun shapBaselineConfig(shapBaselineConfig: ClarifyShapBaselineConfigProperty) {
-        cdkBuilder.shapBaselineConfig(shapBaselineConfig.let(ClarifyShapBaselineConfigProperty::unwrap))
+        cdkBuilder.shapBaselineConfig(shapBaselineConfig.let(ClarifyShapBaselineConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -3358,7 +3358,7 @@ public open class CfnEndpointConfig(
        * Required for natural language processing (NLP) explainability only.
        */
       override fun textConfig(textConfig: IResolvable) {
-        cdkBuilder.textConfig(textConfig.let(IResolvable::unwrap))
+        cdkBuilder.textConfig(textConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3367,7 +3367,7 @@ public open class CfnEndpointConfig(
        * Required for natural language processing (NLP) explainability only.
        */
       override fun textConfig(textConfig: ClarifyTextConfigProperty) {
-        cdkBuilder.textConfig(textConfig.let(ClarifyTextConfigProperty::unwrap))
+        cdkBuilder.textConfig(textConfig.let(ClarifyTextConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -3395,7 +3395,7 @@ public open class CfnEndpointConfig(
        * Defaults to false.
        */
       override fun useLogit(useLogit: IResolvable) {
-        cdkBuilder.useLogit(useLogit.let(IResolvable::unwrap))
+        cdkBuilder.useLogit(useLogit.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -3804,7 +3804,7 @@ public open class CfnEndpointConfig(
        * captures.
        */
       override fun captureContentTypeHeader(captureContentTypeHeader: IResolvable) {
-        cdkBuilder.captureContentTypeHeader(captureContentTypeHeader.let(IResolvable::unwrap))
+        cdkBuilder.captureContentTypeHeader(captureContentTypeHeader.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3813,7 +3813,7 @@ public open class CfnEndpointConfig(
        */
       override
           fun captureContentTypeHeader(captureContentTypeHeader: CaptureContentTypeHeaderProperty) {
-        cdkBuilder.captureContentTypeHeader(captureContentTypeHeader.let(CaptureContentTypeHeaderProperty::unwrap))
+        cdkBuilder.captureContentTypeHeader(captureContentTypeHeader.let(CaptureContentTypeHeaderProperty.Companion::unwrap))
       }
 
       /**
@@ -3832,7 +3832,7 @@ public open class CfnEndpointConfig(
        * output data from your model, or both. 
        */
       override fun captureOptions(captureOptions: IResolvable) {
-        cdkBuilder.captureOptions(captureOptions.let(IResolvable::unwrap))
+        cdkBuilder.captureOptions(captureOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3868,7 +3868,7 @@ public open class CfnEndpointConfig(
        * @param enableCapture Set to `True` to enable data capture.
        */
       override fun enableCapture(enableCapture: IResolvable) {
-        cdkBuilder.enableCapture(enableCapture.let(IResolvable::unwrap))
+        cdkBuilder.enableCapture(enableCapture.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4078,7 +4078,7 @@ public open class CfnEndpointConfig(
        * parameters for the SageMaker Clarify explainer.
        */
       override fun clarifyExplainerConfig(clarifyExplainerConfig: IResolvable) {
-        cdkBuilder.clarifyExplainerConfig(clarifyExplainerConfig.let(IResolvable::unwrap))
+        cdkBuilder.clarifyExplainerConfig(clarifyExplainerConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4086,7 +4086,7 @@ public open class CfnEndpointConfig(
        * parameters for the SageMaker Clarify explainer.
        */
       override fun clarifyExplainerConfig(clarifyExplainerConfig: ClarifyExplainerConfigProperty) {
-        cdkBuilder.clarifyExplainerConfig(clarifyExplainerConfig.let(ClarifyExplainerConfigProperty::unwrap))
+        cdkBuilder.clarifyExplainerConfig(clarifyExplainerConfig.let(ClarifyExplainerConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -4619,7 +4619,7 @@ public open class CfnEndpointConfig(
        * creating a new endpoint configuration and calling `UpdateEndpoint` .
        */
       override fun enableSsmAccess(enableSsmAccess: IResolvable) {
-        cdkBuilder.enableSsmAccess(enableSsmAccess.let(IResolvable::unwrap))
+        cdkBuilder.enableSsmAccess(enableSsmAccess.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4651,14 +4651,14 @@ public open class CfnEndpointConfig(
        * @param managedInstanceScaling the value to be set.
        */
       override fun managedInstanceScaling(managedInstanceScaling: IResolvable) {
-        cdkBuilder.managedInstanceScaling(managedInstanceScaling.let(IResolvable::unwrap))
+        cdkBuilder.managedInstanceScaling(managedInstanceScaling.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param managedInstanceScaling the value to be set.
        */
       override fun managedInstanceScaling(managedInstanceScaling: ManagedInstanceScalingProperty) {
-        cdkBuilder.managedInstanceScaling(managedInstanceScaling.let(ManagedInstanceScalingProperty::unwrap))
+        cdkBuilder.managedInstanceScaling(managedInstanceScaling.let(ManagedInstanceScalingProperty.Companion::unwrap))
       }
 
       /**
@@ -4691,14 +4691,14 @@ public open class CfnEndpointConfig(
        * @param routingConfig the value to be set.
        */
       override fun routingConfig(routingConfig: IResolvable) {
-        cdkBuilder.routingConfig(routingConfig.let(IResolvable::unwrap))
+        cdkBuilder.routingConfig(routingConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param routingConfig the value to be set.
        */
       override fun routingConfig(routingConfig: RoutingConfigProperty) {
-        cdkBuilder.routingConfig(routingConfig.let(RoutingConfigProperty::unwrap))
+        cdkBuilder.routingConfig(routingConfig.let(RoutingConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -4715,7 +4715,7 @@ public open class CfnEndpointConfig(
        * configuration.
        */
       override fun serverlessConfig(serverlessConfig: IResolvable) {
-        cdkBuilder.serverlessConfig(serverlessConfig.let(IResolvable::unwrap))
+        cdkBuilder.serverlessConfig(serverlessConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4724,7 +4724,7 @@ public open class CfnEndpointConfig(
        * configuration.
        */
       override fun serverlessConfig(serverlessConfig: ServerlessConfigProperty) {
-        cdkBuilder.serverlessConfig(serverlessConfig.let(ServerlessConfigProperty::unwrap))
+        cdkBuilder.serverlessConfig(serverlessConfig.let(ServerlessConfigProperty.Companion::unwrap))
       }
 
       /**

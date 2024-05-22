@@ -345,7 +345,7 @@ public interface CodeBuildActionProps : CommonAwsActionProps {
      * see https://docs.aws.amazon.com/codebuild/latest/userguide/sample-multi-in-out.html .
      */
     override fun extraInputs(extraInputs: List<Artifact>) {
-      cdkBuilder.extraInputs(extraInputs.map(Artifact::unwrap))
+      cdkBuilder.extraInputs(extraInputs.map(Artifact.Companion::unwrap))
     }
 
     /**
@@ -364,7 +364,7 @@ public interface CodeBuildActionProps : CommonAwsActionProps {
      * @param input The source to use as input for this action. 
      */
     override fun input(input: Artifact) {
-      cdkBuilder.input(input.let(Artifact::unwrap))
+      cdkBuilder.input(input.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -376,7 +376,7 @@ public interface CodeBuildActionProps : CommonAwsActionProps {
      * for details.
      */
     override fun outputs(outputs: List<Artifact>) {
-      cdkBuilder.outputs(outputs.map(Artifact::unwrap))
+      cdkBuilder.outputs(outputs.map(Artifact.Companion::unwrap))
     }
 
     /**
@@ -393,7 +393,7 @@ public interface CodeBuildActionProps : CommonAwsActionProps {
      * @param project The action's Project. 
      */
     override fun project(project: IProject) {
-      cdkBuilder.project(project.let(IProject::unwrap))
+      cdkBuilder.project(project.let(IProject.Companion::unwrap))
     }
 
     /**
@@ -405,7 +405,7 @@ public interface CodeBuildActionProps : CommonAwsActionProps {
      * method in the `ActionBindOptions.role` property.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -421,7 +421,7 @@ public interface CodeBuildActionProps : CommonAwsActionProps {
      * Test.
      */
     override fun type(type: CodeBuildActionType) {
-      cdkBuilder.type(type.let(CodeBuildActionType::unwrap))
+      cdkBuilder.type(type.let(CodeBuildActionType.Companion::unwrap))
     }
 
     /**

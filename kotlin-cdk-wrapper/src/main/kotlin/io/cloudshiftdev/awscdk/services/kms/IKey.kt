@@ -131,7 +131,7 @@ public interface IKey : IResource {
      * key), the operation will fail. Otherwise, it will no-op.
      */
     override fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
-        unwrap(this).addToResourcePolicy(statement.let(PolicyStatement::unwrap)).let(AddToResourcePolicyResult::wrap)
+        unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
 
     /**
      * Adds a statement to the KMS key resource policy.
@@ -154,7 +154,7 @@ public interface IKey : IResource {
      */
     override fun addToResourcePolicy(statement: PolicyStatement, allowNoOp: Boolean):
         AddToResourcePolicyResult =
-        unwrap(this).addToResourcePolicy(statement.let(PolicyStatement::unwrap),
+        unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap),
         allowNoOp).let(AddToResourcePolicyResult::wrap)
 
     /**
@@ -171,7 +171,7 @@ public interface IKey : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -193,7 +193,7 @@ public interface IKey : IResource {
      * @param actions 
      */
     override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-        unwrap(this).grant(grantee.let(IGrantable::unwrap),
+        unwrap(this).grant(grantee.let(IGrantable.Companion::unwrap),
         *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
     /**
@@ -202,7 +202,7 @@ public interface IKey : IResource {
      * @param grantee 
      */
     override fun grantDecrypt(grantee: IGrantable): Grant =
-        unwrap(this).grantDecrypt(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantDecrypt(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grant encryption permissions using this key to the given principal.
@@ -210,7 +210,7 @@ public interface IKey : IResource {
      * @param grantee 
      */
     override fun grantEncrypt(grantee: IGrantable): Grant =
-        unwrap(this).grantEncrypt(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantEncrypt(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grant encryption and decryption permissions using this key to the given principal.
@@ -218,7 +218,7 @@ public interface IKey : IResource {
      * @param grantee 
      */
     override fun grantEncryptDecrypt(grantee: IGrantable): Grant =
-        unwrap(this).grantEncryptDecrypt(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantEncryptDecrypt(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grant permissions to generating MACs to the given principal.
@@ -226,7 +226,7 @@ public interface IKey : IResource {
      * @param grantee 
      */
     override fun grantGenerateMac(grantee: IGrantable): Grant =
-        unwrap(this).grantGenerateMac(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantGenerateMac(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grant permissions to verifying MACs to the given principal.
@@ -234,7 +234,7 @@ public interface IKey : IResource {
      * @param grantee 
      */
     override fun grantVerifyMac(grantee: IGrantable): Grant =
-        unwrap(this).grantVerifyMac(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantVerifyMac(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * The ARN of the key.

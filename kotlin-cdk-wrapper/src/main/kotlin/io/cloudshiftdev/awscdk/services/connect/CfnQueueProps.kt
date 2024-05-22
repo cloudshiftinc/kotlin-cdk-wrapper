@@ -236,14 +236,14 @@ public interface CfnQueueProps {
      * @param outboundCallerConfig The outbound caller ID name, number, and outbound whisper flow.
      */
     override fun outboundCallerConfig(outboundCallerConfig: IResolvable) {
-      cdkBuilder.outboundCallerConfig(outboundCallerConfig.let(IResolvable::unwrap))
+      cdkBuilder.outboundCallerConfig(outboundCallerConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param outboundCallerConfig The outbound caller ID name, number, and outbound whisper flow.
      */
     override fun outboundCallerConfig(outboundCallerConfig: CfnQueue.OutboundCallerConfigProperty) {
-      cdkBuilder.outboundCallerConfig(outboundCallerConfig.let(CfnQueue.OutboundCallerConfigProperty::unwrap))
+      cdkBuilder.outboundCallerConfig(outboundCallerConfig.let(CfnQueue.OutboundCallerConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -282,7 +282,7 @@ public interface CfnQueueProps {
      * For example, { "Tags": {"key1":"value1", "key2":"value2"} }.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

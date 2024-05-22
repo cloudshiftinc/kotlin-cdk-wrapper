@@ -112,14 +112,14 @@ public interface SfnStateMachineProps : TargetBaseProps {
      * dead letter queue.
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
      * @param input The input to the state machine execution.
      */
     override fun input(input: RuleTargetInput) {
-      cdkBuilder.input(input.let(RuleTargetInput::unwrap))
+      cdkBuilder.input(input.let(RuleTargetInput.Companion::unwrap))
     }
 
     /**
@@ -129,7 +129,7 @@ public interface SfnStateMachineProps : TargetBaseProps {
      * Maximum value of 86400.
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -145,7 +145,7 @@ public interface SfnStateMachineProps : TargetBaseProps {
      * @param role The IAM role to be assumed to execute the State Machine.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.events.targets.SfnStateMachineProps =

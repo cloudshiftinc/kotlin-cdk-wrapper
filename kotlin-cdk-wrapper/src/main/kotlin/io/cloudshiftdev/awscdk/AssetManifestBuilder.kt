@@ -50,9 +50,9 @@ public open class AssetManifestBuilder(
     sourceHash: String,
     source: DockerImageSource,
     dest: DockerImageDestination,
-  ): DockerImageDestination = unwrap(this).addDockerImageAsset(stack.let(Stack::unwrap), sourceHash,
-      source.let(DockerImageSource::unwrap),
-      dest.let(DockerImageDestination::unwrap)).let(DockerImageDestination::wrap)
+  ): DockerImageDestination = unwrap(this).addDockerImageAsset(stack.let(Stack.Companion::unwrap),
+      sourceHash, source.let(DockerImageSource.Companion::unwrap),
+      dest.let(DockerImageDestination.Companion::unwrap)).let(DockerImageDestination::wrap)
 
   /**
    * Add a docker asset source and destination to the manifest.
@@ -89,8 +89,9 @@ public open class AssetManifestBuilder(
     sourceHash: String,
     source: FileSource,
     dest: FileDestination,
-  ): FileDestination = unwrap(this).addFileAsset(stack.let(Stack::unwrap), sourceHash,
-      source.let(FileSource::unwrap), dest.let(FileDestination::unwrap)).let(FileDestination::wrap)
+  ): FileDestination = unwrap(this).addFileAsset(stack.let(Stack.Companion::unwrap), sourceHash,
+      source.let(FileSource.Companion::unwrap),
+      dest.let(FileDestination.Companion::unwrap)).let(FileDestination::wrap)
 
   /**
    * Add a file asset source and destination to the manifest.
@@ -124,9 +125,10 @@ public open class AssetManifestBuilder(
     stack: Stack,
     asset: DockerImageAssetSource,
     target: AssetManifestDockerImageDestination,
-  ): DockerImageDestination = unwrap(this).defaultAddDockerImageAsset(stack.let(Stack::unwrap),
-      asset.let(DockerImageAssetSource::unwrap),
-      target.let(AssetManifestDockerImageDestination::unwrap)).let(DockerImageDestination::wrap)
+  ): DockerImageDestination =
+      unwrap(this).defaultAddDockerImageAsset(stack.let(Stack.Companion::unwrap),
+      asset.let(DockerImageAssetSource.Companion::unwrap),
+      target.let(AssetManifestDockerImageDestination.Companion::unwrap)).let(DockerImageDestination::wrap)
 
   /**
    * Add a docker image asset to the manifest with default settings.
@@ -160,9 +162,9 @@ public open class AssetManifestBuilder(
     stack: Stack,
     asset: FileAssetSource,
     target: AssetManifestFileDestination,
-  ): FileDestination = unwrap(this).defaultAddFileAsset(stack.let(Stack::unwrap),
-      asset.let(FileAssetSource::unwrap),
-      target.let(AssetManifestFileDestination::unwrap)).let(FileDestination::wrap)
+  ): FileDestination = unwrap(this).defaultAddFileAsset(stack.let(Stack.Companion::unwrap),
+      asset.let(FileAssetSource.Companion::unwrap),
+      target.let(AssetManifestFileDestination.Companion::unwrap)).let(FileDestination::wrap)
 
   /**
    * Add a file asset to the manifest with default settings.
@@ -194,7 +196,8 @@ public open class AssetManifestBuilder(
    * @param dependencies
    */
   public open fun emitManifest(stack: Stack, session: ISynthesisSession): String =
-      unwrap(this).emitManifest(stack.let(Stack::unwrap), session.let(ISynthesisSession::unwrap))
+      unwrap(this).emitManifest(stack.let(Stack.Companion::unwrap),
+      session.let(ISynthesisSession.Companion::unwrap))
 
   /**
    * Write the manifest to disk, and add it to the synthesis session.
@@ -211,8 +214,9 @@ public open class AssetManifestBuilder(
     stack: Stack,
     session: ISynthesisSession,
     options: AssetManifestOptions,
-  ): String = unwrap(this).emitManifest(stack.let(Stack::unwrap),
-      session.let(ISynthesisSession::unwrap), options.let(AssetManifestOptions::unwrap))
+  ): String = unwrap(this).emitManifest(stack.let(Stack.Companion::unwrap),
+      session.let(ISynthesisSession.Companion::unwrap),
+      options.let(AssetManifestOptions.Companion::unwrap))
 
   /**
    * Write the manifest to disk, and add it to the synthesis session.
@@ -249,9 +253,9 @@ public open class AssetManifestBuilder(
     session: ISynthesisSession,
     options: AssetManifestOptions,
     dependencies: List<String>,
-  ): String = unwrap(this).emitManifest(stack.let(Stack::unwrap),
-      session.let(ISynthesisSession::unwrap), options.let(AssetManifestOptions::unwrap),
-      dependencies)
+  ): String = unwrap(this).emitManifest(stack.let(Stack.Companion::unwrap),
+      session.let(ISynthesisSession.Companion::unwrap),
+      options.let(AssetManifestOptions.Companion::unwrap), dependencies)
 
   /**
    * Whether there are any assets registered in the manifest.

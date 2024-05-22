@@ -118,7 +118,7 @@ public interface AclTrafficConfig {
      * @param icmp The Internet Control Message Protocol (ICMP) code and type.
      */
     override fun icmp(icmp: AclIcmp) {
-      cdkBuilder.icmp(icmp.let(AclIcmp::unwrap))
+      cdkBuilder.icmp(icmp.let(AclIcmp.Companion::unwrap))
     }
 
     /**
@@ -132,7 +132,7 @@ public interface AclTrafficConfig {
      * @param portRange The range of port numbers for the UDP/TCP protocol.
      */
     override fun portRange(portRange: AclPortRange) {
-      cdkBuilder.portRange(portRange.let(AclPortRange::unwrap))
+      cdkBuilder.portRange(portRange.let(AclPortRange.Companion::unwrap))
     }
 
     /**

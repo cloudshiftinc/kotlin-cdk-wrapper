@@ -190,7 +190,7 @@ public interface CfnTransformerProps {
      * define specific business documents.
      */
     override fun ediType(ediType: IResolvable) {
-      cdkBuilder.ediType(ediType.let(IResolvable::unwrap))
+      cdkBuilder.ediType(ediType.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -200,7 +200,7 @@ public interface CfnTransformerProps {
      * define specific business documents.
      */
     override fun ediType(ediType: CfnTransformer.EdiTypeProperty) {
-      cdkBuilder.ediType(ediType.let(CfnTransformer.EdiTypeProperty::unwrap))
+      cdkBuilder.ediType(ediType.let(CfnTransformer.EdiTypeProperty.Companion::unwrap))
     }
 
     /**
@@ -259,7 +259,7 @@ public interface CfnTransformerProps {
      * Tags are metadata that you can use to search for and group capabilities for various purposes.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

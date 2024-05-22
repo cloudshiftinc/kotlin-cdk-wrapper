@@ -50,8 +50,8 @@ public open class ScheduledEc2Task(
     id: String,
     props: ScheduledEc2TaskProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.patterns.ScheduledEc2Task(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ScheduledEc2TaskProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.patterns.ScheduledEc2Task(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ScheduledEc2TaskProps.Companion::unwrap))
   )
 
   public constructor(
@@ -305,7 +305,7 @@ public open class ScheduledEc2Task(
      * @param cluster The name of the cluster that hosts the service. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -342,7 +342,7 @@ public open class ScheduledEc2Task(
      * task. 
      */
     override fun propagateTags(propagateTags: PropagatedTagSource) {
-      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource.Companion::unwrap))
     }
 
     /**
@@ -370,7 +370,7 @@ public open class ScheduledEc2Task(
      * the rule. 
      */
     override fun schedule(schedule: Schedule) {
-      cdkBuilder.schedule(schedule.let(Schedule::unwrap))
+      cdkBuilder.schedule(schedule.let(Schedule.Companion::unwrap))
     }
 
     /**
@@ -386,7 +386,7 @@ public open class ScheduledEc2Task(
      */
     override
         fun scheduledEc2TaskDefinitionOptions(scheduledEc2TaskDefinitionOptions: ScheduledEc2TaskDefinitionOptions) {
-      cdkBuilder.scheduledEc2TaskDefinitionOptions(scheduledEc2TaskDefinitionOptions.let(ScheduledEc2TaskDefinitionOptions::unwrap))
+      cdkBuilder.scheduledEc2TaskDefinitionOptions(scheduledEc2TaskDefinitionOptions.let(ScheduledEc2TaskDefinitionOptions.Companion::unwrap))
     }
 
     /**
@@ -420,7 +420,7 @@ public open class ScheduledEc2Task(
      */
     override
         fun scheduledEc2TaskImageOptions(scheduledEc2TaskImageOptions: ScheduledEc2TaskImageOptions) {
-      cdkBuilder.scheduledEc2TaskImageOptions(scheduledEc2TaskImageOptions.let(ScheduledEc2TaskImageOptions::unwrap))
+      cdkBuilder.scheduledEc2TaskImageOptions(scheduledEc2TaskImageOptions.let(ScheduledEc2TaskImageOptions.Companion::unwrap))
     }
 
     /**
@@ -449,7 +449,7 @@ public open class ScheduledEc2Task(
      * @param securityGroups Existing security groups to use for your service. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -472,7 +472,7 @@ public open class ScheduledEc2Task(
      * @param subnetSelection In what subnets to place the task's ENIs. 
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -500,7 +500,7 @@ public open class ScheduledEc2Task(
      * 
      */
     override fun tags(tags: List<Tag>) {
-      cdkBuilder.tags(tags.map(Tag::unwrap))
+      cdkBuilder.tags(tags.map(Tag.Companion::unwrap))
     }
 
     /**
@@ -528,7 +528,7 @@ public open class ScheduledEc2Task(
      * interfaces (ENIs) will be deployed. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.patterns.ScheduledEc2Task =

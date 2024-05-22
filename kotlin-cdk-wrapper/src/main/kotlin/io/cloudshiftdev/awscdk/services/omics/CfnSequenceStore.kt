@@ -53,8 +53,8 @@ public open class CfnSequenceStore(
     id: String,
     props: CfnSequenceStoreProps,
   ) :
-      this(software.amazon.awscdk.services.omics.CfnSequenceStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSequenceStoreProps::unwrap))
+      this(software.amazon.awscdk.services.omics.CfnSequenceStore(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSequenceStoreProps.Companion::unwrap))
   )
 
   public constructor(
@@ -109,7 +109,7 @@ public open class CfnSequenceStore(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -133,14 +133,14 @@ public open class CfnSequenceStore(
    * Server-side encryption (SSE) settings for the store.
    */
   public open fun sseConfig(`value`: IResolvable) {
-    unwrap(this).setSseConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSseConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Server-side encryption (SSE) settings for the store.
    */
   public open fun sseConfig(`value`: SseConfigProperty) {
-    unwrap(this).setSseConfig(`value`.let(SseConfigProperty::unwrap))
+    unwrap(this).setSseConfig(`value`.let(SseConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -278,7 +278,7 @@ public open class CfnSequenceStore(
      * @param sseConfig Server-side encryption (SSE) settings for the store. 
      */
     override fun sseConfig(sseConfig: IResolvable) {
-      cdkBuilder.sseConfig(sseConfig.let(IResolvable::unwrap))
+      cdkBuilder.sseConfig(sseConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -288,7 +288,7 @@ public open class CfnSequenceStore(
      * @param sseConfig Server-side encryption (SSE) settings for the store. 
      */
     override fun sseConfig(sseConfig: SseConfigProperty) {
-      cdkBuilder.sseConfig(sseConfig.let(SseConfigProperty::unwrap))
+      cdkBuilder.sseConfig(sseConfig.let(SseConfigProperty.Companion::unwrap))
     }
 
     /**

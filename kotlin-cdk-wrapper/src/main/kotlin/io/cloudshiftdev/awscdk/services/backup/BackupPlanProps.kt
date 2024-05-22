@@ -109,7 +109,7 @@ public interface BackupPlanProps {
      * instantiation.
      */
     override fun backupPlanRules(backupPlanRules: List<BackupPlanRule>) {
-      cdkBuilder.backupPlanRules(backupPlanRules.map(BackupPlanRule::unwrap))
+      cdkBuilder.backupPlanRules(backupPlanRules.map(BackupPlanRule.Companion::unwrap))
     }
 
     /**
@@ -124,7 +124,7 @@ public interface BackupPlanProps {
      * @param backupVault The backup vault where backups are stored.
      */
     override fun backupVault(backupVault: IBackupVault) {
-      cdkBuilder.backupVault(backupVault.let(IBackupVault::unwrap))
+      cdkBuilder.backupVault(backupVault.let(IBackupVault.Companion::unwrap))
     }
 
     /**

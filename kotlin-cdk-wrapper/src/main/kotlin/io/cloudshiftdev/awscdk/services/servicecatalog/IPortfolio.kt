@@ -360,7 +360,7 @@ public interface IPortfolio : IResource {
      * @param product A service catalog produt. 
      */
     override fun addProduct(product: IProduct) {
-      unwrap(this).addProduct(product.let(IProduct::unwrap))
+      unwrap(this).addProduct(product.let(IProduct.Companion::unwrap))
     }
 
     /**
@@ -377,7 +377,7 @@ public interface IPortfolio : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -390,7 +390,7 @@ public interface IPortfolio : IResource {
      * @param tagOptions 
      */
     override fun associateTagOptions(tagOptions: TagOptions) {
-      unwrap(this).associateTagOptions(tagOptions.let(TagOptions::unwrap))
+      unwrap(this).associateTagOptions(tagOptions.let(TagOptions.Companion::unwrap))
     }
 
     /**
@@ -401,8 +401,8 @@ public interface IPortfolio : IResource {
      */
     override fun constrainCloudFormationParameters(product: IProduct,
         options: CloudFormationRuleConstraintOptions) {
-      unwrap(this).constrainCloudFormationParameters(product.let(IProduct::unwrap),
-          options.let(CloudFormationRuleConstraintOptions::unwrap))
+      unwrap(this).constrainCloudFormationParameters(product.let(IProduct.Companion::unwrap),
+          options.let(CloudFormationRuleConstraintOptions.Companion::unwrap))
     }
 
     /**
@@ -424,7 +424,7 @@ public interface IPortfolio : IResource {
      * @param options
      */
     override fun constrainTagUpdates(product: IProduct) {
-      unwrap(this).constrainTagUpdates(product.let(IProduct::unwrap))
+      unwrap(this).constrainTagUpdates(product.let(IProduct.Companion::unwrap))
     }
 
     /**
@@ -434,8 +434,8 @@ public interface IPortfolio : IResource {
      * @param options
      */
     override fun constrainTagUpdates(product: IProduct, options: TagUpdateConstraintOptions) {
-      unwrap(this).constrainTagUpdates(product.let(IProduct::unwrap),
-          options.let(TagUpdateConstraintOptions::unwrap))
+      unwrap(this).constrainTagUpdates(product.let(IProduct.Companion::unwrap),
+          options.let(TagUpdateConstraintOptions.Companion::unwrap))
     }
 
     /**
@@ -457,8 +457,8 @@ public interface IPortfolio : IResource {
      * @param options Configuration options for the constraint. 
      */
     override fun deployWithStackSets(product: IProduct, options: StackSetsConstraintOptions) {
-      unwrap(this).deployWithStackSets(product.let(IProduct::unwrap),
-          options.let(StackSetsConstraintOptions::unwrap))
+      unwrap(this).deployWithStackSets(product.let(IProduct.Companion::unwrap),
+          options.let(StackSetsConstraintOptions.Companion::unwrap))
     }
 
     /**
@@ -491,7 +491,7 @@ public interface IPortfolio : IResource {
      * @param group an IAM Group. 
      */
     override fun giveAccessToGroup(group: IGroup) {
-      unwrap(this).giveAccessToGroup(group.let(IGroup::unwrap))
+      unwrap(this).giveAccessToGroup(group.let(IGroup.Companion::unwrap))
     }
 
     /**
@@ -500,7 +500,7 @@ public interface IPortfolio : IResource {
      * @param role an IAM role. 
      */
     override fun giveAccessToRole(role: IRole) {
-      unwrap(this).giveAccessToRole(role.let(IRole::unwrap))
+      unwrap(this).giveAccessToRole(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -509,7 +509,7 @@ public interface IPortfolio : IResource {
      * @param user an IAM user. 
      */
     override fun giveAccessToUser(user: IUser) {
-      unwrap(this).giveAccessToUser(user.let(IUser::unwrap))
+      unwrap(this).giveAccessToUser(user.let(IUser.Companion::unwrap))
     }
 
     /**
@@ -525,7 +525,8 @@ public interface IPortfolio : IResource {
      * @param options options for the constraint.
      */
     override fun launchRole(product: IProduct, launchRole: IRole) {
-      unwrap(this).setLaunchRole(product.let(IProduct::unwrap), launchRole.let(IRole::unwrap))
+      unwrap(this).setLaunchRole(product.let(IProduct.Companion::unwrap),
+          launchRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -545,8 +546,9 @@ public interface IPortfolio : IResource {
       launchRole: IRole,
       options: CommonConstraintOptions,
     ) {
-      unwrap(this).setLaunchRole(product.let(IProduct::unwrap), launchRole.let(IRole::unwrap),
-          options.let(CommonConstraintOptions::unwrap))
+      unwrap(this).setLaunchRole(product.let(IProduct.Companion::unwrap),
+          launchRole.let(IRole.Companion::unwrap),
+          options.let(CommonConstraintOptions.Companion::unwrap))
     }
 
     /**
@@ -580,7 +582,8 @@ public interface IPortfolio : IResource {
      * @param options options for the constraint.
      */
     override fun localLaunchRole(product: IProduct, launchRole: IRole) {
-      unwrap(this).setLocalLaunchRole(product.let(IProduct::unwrap), launchRole.let(IRole::unwrap))
+      unwrap(this).setLocalLaunchRole(product.let(IProduct.Companion::unwrap),
+          launchRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -598,8 +601,9 @@ public interface IPortfolio : IResource {
       launchRole: IRole,
       options: CommonConstraintOptions,
     ) {
-      unwrap(this).setLocalLaunchRole(product.let(IProduct::unwrap), launchRole.let(IRole::unwrap),
-          options.let(CommonConstraintOptions::unwrap))
+      unwrap(this).setLocalLaunchRole(product.let(IProduct.Companion::unwrap),
+          launchRole.let(IRole.Companion::unwrap),
+          options.let(CommonConstraintOptions.Companion::unwrap))
     }
 
     /**
@@ -634,7 +638,7 @@ public interface IPortfolio : IResource {
      * @param options options for the constraint.
      */
     override fun localLaunchRoleName(product: IProduct, launchRoleName: String): IRole =
-        unwrap(this).setLocalLaunchRoleName(product.let(IProduct::unwrap),
+        unwrap(this).setLocalLaunchRoleName(product.let(IProduct.Companion::unwrap),
         launchRoleName).let(IRole::wrap)
 
     /**
@@ -654,8 +658,8 @@ public interface IPortfolio : IResource {
       product: IProduct,
       launchRoleName: String,
       options: CommonConstraintOptions,
-    ): IRole = unwrap(this).setLocalLaunchRoleName(product.let(IProduct::unwrap), launchRoleName,
-        options.let(CommonConstraintOptions::unwrap)).let(IRole::wrap)
+    ): IRole = unwrap(this).setLocalLaunchRoleName(product.let(IProduct.Companion::unwrap),
+        launchRoleName, options.let(CommonConstraintOptions.Companion::unwrap)).let(IRole::wrap)
 
     /**
      * Force users to assume a certain role when launching a product.
@@ -689,7 +693,8 @@ public interface IPortfolio : IResource {
      * @param options
      */
     override fun notifyOnStackEvents(product: IProduct, topic: ITopic) {
-      unwrap(this).notifyOnStackEvents(product.let(IProduct::unwrap), topic.let(ITopic::unwrap))
+      unwrap(this).notifyOnStackEvents(product.let(IProduct.Companion::unwrap),
+          topic.let(ITopic.Companion::unwrap))
     }
 
     /**
@@ -705,8 +710,9 @@ public interface IPortfolio : IResource {
       topic: ITopic,
       options: CommonConstraintOptions,
     ) {
-      unwrap(this).notifyOnStackEvents(product.let(IProduct::unwrap), topic.let(ITopic::unwrap),
-          options.let(CommonConstraintOptions::unwrap))
+      unwrap(this).notifyOnStackEvents(product.let(IProduct.Companion::unwrap),
+          topic.let(ITopic.Companion::unwrap),
+          options.let(CommonConstraintOptions.Companion::unwrap))
     }
 
     /**
@@ -752,7 +758,7 @@ public interface IPortfolio : IResource {
      * @param options Options for the initiate share.
      */
     override fun shareWithAccount(accountId: String, options: PortfolioShareOptions) {
-      unwrap(this).shareWithAccount(accountId, options.let(PortfolioShareOptions::unwrap))
+      unwrap(this).shareWithAccount(accountId, options.let(PortfolioShareOptions.Companion::unwrap))
     }
 
     /**

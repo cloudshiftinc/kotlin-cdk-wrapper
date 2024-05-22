@@ -75,8 +75,8 @@ public open class CfnProactiveEngagement(
     id: String,
     props: CfnProactiveEngagementProps,
   ) :
-      this(software.amazon.awscdk.services.shield.CfnProactiveEngagement(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnProactiveEngagementProps::unwrap))
+      this(software.amazon.awscdk.services.shield.CfnProactiveEngagement(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnProactiveEngagementProps.Companion::unwrap))
   )
 
   public constructor(
@@ -104,7 +104,7 @@ public open class CfnProactiveEngagement(
    * relevant notes.
    */
   public open fun emergencyContactList(`value`: IResolvable) {
-    unwrap(this).setEmergencyContactList(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEmergencyContactList(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -130,7 +130,7 @@ public open class CfnProactiveEngagement(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -270,7 +270,7 @@ public open class CfnProactiveEngagement(
      * customer support, plus any relevant notes. 
      */
     override fun emergencyContactList(emergencyContactList: IResolvable) {
-      cdkBuilder.emergencyContactList(emergencyContactList.let(IResolvable::unwrap))
+      cdkBuilder.emergencyContactList(emergencyContactList.let(IResolvable.Companion::unwrap))
     }
 
     /**

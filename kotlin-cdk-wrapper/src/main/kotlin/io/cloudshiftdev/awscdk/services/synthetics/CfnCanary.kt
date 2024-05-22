@@ -119,8 +119,8 @@ public open class CfnCanary(
     id: String,
     props: CfnCanaryProps,
   ) :
-      this(software.amazon.awscdk.services.synthetics.CfnCanary(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCanaryProps::unwrap))
+      this(software.amazon.awscdk.services.synthetics.CfnCanary(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCanaryProps.Companion::unwrap))
   )
 
   public constructor(
@@ -141,7 +141,7 @@ public open class CfnCanary(
    * encryption-at-rest settings for artifacts that the canary uploads to Amazon S3.
    */
   public open fun artifactConfig(`value`: IResolvable) {
-    unwrap(this).setArtifactConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setArtifactConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -149,7 +149,7 @@ public open class CfnCanary(
    * encryption-at-rest settings for artifacts that the canary uploads to Amazon S3.
    */
   public open fun artifactConfig(`value`: ArtifactConfigProperty) {
-    unwrap(this).setArtifactConfig(`value`.let(ArtifactConfigProperty::unwrap))
+    unwrap(this).setArtifactConfig(`value`.let(ArtifactConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -199,14 +199,14 @@ public open class CfnCanary(
    * Use this structure to input your script code for the canary.
    */
   public open fun code(`value`: IResolvable) {
-    unwrap(this).setCode(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCode(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Use this structure to input your script code for the canary.
    */
   public open fun code(`value`: CodeProperty) {
-    unwrap(this).setCode(`value`.let(CodeProperty::unwrap))
+    unwrap(this).setCode(`value`.let(CodeProperty.Companion::unwrap))
   }
 
   /**
@@ -242,7 +242,7 @@ public open class CfnCanary(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun deleteLambdaResourcesOnCanaryDeletion(`value`: IResolvable) {
-    unwrap(this).setDeleteLambdaResourcesOnCanaryDeletion(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeleteLambdaResourcesOnCanaryDeletion(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -275,7 +275,7 @@ public open class CfnCanary(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -299,14 +299,14 @@ public open class CfnCanary(
    * A structure that contains input information for a canary run.
    */
   public open fun runConfig(`value`: IResolvable) {
-    unwrap(this).setRunConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRunConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A structure that contains input information for a canary run.
    */
   public open fun runConfig(`value`: RunConfigProperty) {
-    unwrap(this).setRunConfig(`value`.let(RunConfigProperty::unwrap))
+    unwrap(this).setRunConfig(`value`.let(RunConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -340,7 +340,7 @@ public open class CfnCanary(
    * are to stop.
    */
   public open fun schedule(`value`: IResolvable) {
-    unwrap(this).setSchedule(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSchedule(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -348,7 +348,7 @@ public open class CfnCanary(
    * are to stop.
    */
   public open fun schedule(`value`: ScheduleProperty) {
-    unwrap(this).setSchedule(`value`.let(ScheduleProperty::unwrap))
+    unwrap(this).setSchedule(`value`.let(ScheduleProperty.Companion::unwrap))
   }
 
   /**
@@ -376,7 +376,7 @@ public open class CfnCanary(
    * Specify TRUE to have the canary start making runs immediately after it is created.
    */
   public open fun startCanaryAfterCreation(`value`: IResolvable) {
-    unwrap(this).setStartCanaryAfterCreation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStartCanaryAfterCreation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -406,7 +406,7 @@ public open class CfnCanary(
    * The list of key-value pairs that are associated with the canary.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -427,7 +427,7 @@ public open class CfnCanary(
    * the screen to ignore during the visual monitoring comparison.
    */
   public open fun visualReference(`value`: IResolvable) {
-    unwrap(this).setVisualReference(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVisualReference(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -436,7 +436,7 @@ public open class CfnCanary(
    * the screen to ignore during the visual monitoring comparison.
    */
   public open fun visualReference(`value`: VisualReferenceProperty) {
-    unwrap(this).setVisualReference(`value`.let(VisualReferenceProperty::unwrap))
+    unwrap(this).setVisualReference(`value`.let(VisualReferenceProperty.Companion::unwrap))
   }
 
   /**
@@ -460,7 +460,7 @@ public open class CfnCanary(
    * subnet and security groups of the VPC endpoint.
    */
   public open fun vpcConfig(`value`: IResolvable) {
-    unwrap(this).setVpcConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -468,7 +468,7 @@ public open class CfnCanary(
    * subnet and security groups of the VPC endpoint.
    */
   public open fun vpcConfig(`value`: VPCConfigProperty) {
-    unwrap(this).setVpcConfig(`value`.let(VPCConfigProperty::unwrap))
+    unwrap(this).setVpcConfig(`value`.let(VPCConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -873,7 +873,7 @@ public open class CfnCanary(
      * including the encryption-at-rest settings for artifacts that the canary uploads to Amazon S3. 
      */
     override fun artifactConfig(artifactConfig: IResolvable) {
-      cdkBuilder.artifactConfig(artifactConfig.let(IResolvable::unwrap))
+      cdkBuilder.artifactConfig(artifactConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -885,7 +885,7 @@ public open class CfnCanary(
      * including the encryption-at-rest settings for artifacts that the canary uploads to Amazon S3. 
      */
     override fun artifactConfig(artifactConfig: ArtifactConfigProperty) {
-      cdkBuilder.artifactConfig(artifactConfig.let(ArtifactConfigProperty::unwrap))
+      cdkBuilder.artifactConfig(artifactConfig.let(ArtifactConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -927,7 +927,7 @@ public open class CfnCanary(
      * @param code Use this structure to input your script code for the canary. 
      */
     override fun code(code: IResolvable) {
-      cdkBuilder.code(code.let(IResolvable::unwrap))
+      cdkBuilder.code(code.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -942,7 +942,7 @@ public open class CfnCanary(
      * @param code Use this structure to input your script code for the canary. 
      */
     override fun code(code: CodeProperty) {
-      cdkBuilder.code(code.let(CodeProperty::unwrap))
+      cdkBuilder.code(code.let(CodeProperty.Companion::unwrap))
     }
 
     /**
@@ -989,7 +989,7 @@ public open class CfnCanary(
     @Deprecated(message = "deprecated in CDK")
     override
         fun deleteLambdaResourcesOnCanaryDeletion(deleteLambdaResourcesOnCanaryDeletion: IResolvable) {
-      cdkBuilder.deleteLambdaResourcesOnCanaryDeletion(deleteLambdaResourcesOnCanaryDeletion.let(IResolvable::unwrap))
+      cdkBuilder.deleteLambdaResourcesOnCanaryDeletion(deleteLambdaResourcesOnCanaryDeletion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1055,7 +1055,7 @@ public open class CfnCanary(
      * @param runConfig A structure that contains input information for a canary run. 
      */
     override fun runConfig(runConfig: IResolvable) {
-      cdkBuilder.runConfig(runConfig.let(IResolvable::unwrap))
+      cdkBuilder.runConfig(runConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1068,7 +1068,7 @@ public open class CfnCanary(
      * @param runConfig A structure that contains input information for a canary run. 
      */
     override fun runConfig(runConfig: RunConfigProperty) {
-      cdkBuilder.runConfig(runConfig.let(RunConfigProperty::unwrap))
+      cdkBuilder.runConfig(runConfig.let(RunConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1108,7 +1108,7 @@ public open class CfnCanary(
      * and when these runs are to stop. 
      */
     override fun schedule(schedule: IResolvable) {
-      cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
+      cdkBuilder.schedule(schedule.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1120,7 +1120,7 @@ public open class CfnCanary(
      * and when these runs are to stop. 
      */
     override fun schedule(schedule: ScheduleProperty) {
-      cdkBuilder.schedule(schedule.let(ScheduleProperty::unwrap))
+      cdkBuilder.schedule(schedule.let(ScheduleProperty.Companion::unwrap))
     }
 
     /**
@@ -1161,7 +1161,7 @@ public open class CfnCanary(
      * after it is created. 
      */
     override fun startCanaryAfterCreation(startCanaryAfterCreation: IResolvable) {
-      cdkBuilder.startCanaryAfterCreation(startCanaryAfterCreation.let(IResolvable::unwrap))
+      cdkBuilder.startCanaryAfterCreation(startCanaryAfterCreation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1184,7 +1184,7 @@ public open class CfnCanary(
      * @param tags The list of key-value pairs that are associated with the canary. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1206,7 +1206,7 @@ public open class CfnCanary(
      * coordinates of any parts of the screen to ignore during the visual monitoring comparison. 
      */
     override fun visualReference(visualReference: IResolvable) {
-      cdkBuilder.visualReference(visualReference.let(IResolvable::unwrap))
+      cdkBuilder.visualReference(visualReference.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1220,7 +1220,7 @@ public open class CfnCanary(
      * coordinates of any parts of the screen to ignore during the visual monitoring comparison. 
      */
     override fun visualReference(visualReference: VisualReferenceProperty) {
-      cdkBuilder.visualReference(visualReference.let(VisualReferenceProperty::unwrap))
+      cdkBuilder.visualReference(visualReference.let(VisualReferenceProperty.Companion::unwrap))
     }
 
     /**
@@ -1251,7 +1251,7 @@ public open class CfnCanary(
      * information about the subnet and security groups of the VPC endpoint. 
      */
     override fun vpcConfig(vpcConfig: IResolvable) {
-      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1267,7 +1267,7 @@ public open class CfnCanary(
      * information about the subnet and security groups of the VPC endpoint. 
      */
     override fun vpcConfig(vpcConfig: VPCConfigProperty) {
-      cdkBuilder.vpcConfig(vpcConfig.let(VPCConfigProperty::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(VPCConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1400,7 +1400,7 @@ public open class CfnCanary(
        * .
        */
       override fun s3Encryption(s3Encryption: IResolvable) {
-        cdkBuilder.s3Encryption(s3Encryption.let(IResolvable::unwrap))
+        cdkBuilder.s3Encryption(s3Encryption.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1413,7 +1413,7 @@ public open class CfnCanary(
        * .
        */
       override fun s3Encryption(s3Encryption: S3EncryptionProperty) {
-        cdkBuilder.s3Encryption(s3Encryption.let(S3EncryptionProperty::unwrap))
+        cdkBuilder.s3Encryption(s3Encryption.let(S3EncryptionProperty.Companion::unwrap))
       }
 
       /**
@@ -2096,7 +2096,7 @@ public open class CfnCanary(
        * for their canary runtime.
        */
       override fun activeTracing(activeTracing: IResolvable) {
-        cdkBuilder.activeTracing(activeTracing.let(IResolvable::unwrap))
+        cdkBuilder.activeTracing(activeTracing.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2114,7 +2114,7 @@ public open class CfnCanary(
        * .
        */
       override fun environmentVariables(environmentVariables: IResolvable) {
-        cdkBuilder.environmentVariables(environmentVariables.let(IResolvable::unwrap))
+        cdkBuilder.environmentVariables(environmentVariables.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2832,7 +2832,7 @@ public open class CfnCanary(
        * comparisons during visual monitoring.
        */
       override fun baseScreenshots(baseScreenshots: IResolvable) {
-        cdkBuilder.baseScreenshots(baseScreenshots.let(IResolvable::unwrap))
+        cdkBuilder.baseScreenshots(baseScreenshots.let(IResolvable.Companion::unwrap))
       }
 
       /**

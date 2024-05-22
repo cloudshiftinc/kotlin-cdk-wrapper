@@ -125,7 +125,7 @@ public interface CfnSigningProfileProps {
      * If unspecified, the default is 135 months.
      */
     override fun signatureValidityPeriod(signatureValidityPeriod: IResolvable) {
-      cdkBuilder.signatureValidityPeriod(signatureValidityPeriod.let(IResolvable::unwrap))
+      cdkBuilder.signatureValidityPeriod(signatureValidityPeriod.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -135,7 +135,7 @@ public interface CfnSigningProfileProps {
      */
     override
         fun signatureValidityPeriod(signatureValidityPeriod: CfnSigningProfile.SignatureValidityPeriodProperty) {
-      cdkBuilder.signatureValidityPeriod(signatureValidityPeriod.let(CfnSigningProfile.SignatureValidityPeriodProperty::unwrap))
+      cdkBuilder.signatureValidityPeriod(signatureValidityPeriod.let(CfnSigningProfile.SignatureValidityPeriodProperty.Companion::unwrap))
     }
 
     /**
@@ -154,7 +154,7 @@ public interface CfnSigningProfileProps {
      * @param tags A list of tags associated with the signing profile.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

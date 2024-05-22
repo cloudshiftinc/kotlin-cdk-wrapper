@@ -85,7 +85,7 @@ public interface TableSummaryProps {
      * @param columns Summary columns.
      */
     override fun columns(columns: List<TableSummaryColumn>) {
-      cdkBuilder.columns(columns.map(TableSummaryColumn::unwrap))
+      cdkBuilder.columns(columns.map(TableSummaryColumn.Companion::unwrap))
     }
 
     /**

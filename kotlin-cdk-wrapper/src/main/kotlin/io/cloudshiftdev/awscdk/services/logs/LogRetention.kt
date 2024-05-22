@@ -50,8 +50,8 @@ public open class LogRetention(
     id: String,
     props: LogRetentionProps,
   ) :
-      this(software.amazon.awscdk.services.logs.LogRetention(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(LogRetentionProps::unwrap))
+      this(software.amazon.awscdk.services.logs.LogRetention(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(LogRetentionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -169,7 +169,7 @@ public open class LogRetention(
      * @param logRetentionRetryOptions Retry options for all AWS API calls. 
      */
     override fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions) {
-      cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions.let(LogRetentionRetryOptions::unwrap))
+      cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions.let(LogRetentionRetryOptions.Companion::unwrap))
     }
 
     /**
@@ -193,7 +193,7 @@ public open class LogRetention(
      * @param removalPolicy The removalPolicy for the log group when the stack is deleted. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -202,7 +202,7 @@ public open class LogRetention(
      * @param retention The number of days log events are kept in CloudWatch Logs. 
      */
     override fun retention(retention: RetentionDays) {
-      cdkBuilder.retention(retention.let(RetentionDays::unwrap))
+      cdkBuilder.retention(retention.let(RetentionDays.Companion::unwrap))
     }
 
     /**
@@ -213,7 +213,7 @@ public open class LogRetention(
      * @param role The IAM role for the Lambda function associated with the custom resource. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.logs.LogRetention = cdkBuilder.build()

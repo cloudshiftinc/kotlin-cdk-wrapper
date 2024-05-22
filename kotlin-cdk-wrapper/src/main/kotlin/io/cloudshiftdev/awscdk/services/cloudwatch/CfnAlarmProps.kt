@@ -655,7 +655,7 @@ public interface CfnAlarmProps {
      * The default is TRUE.
      */
     override fun actionsEnabled(actionsEnabled: IResolvable) {
-      cdkBuilder.actionsEnabled(actionsEnabled.let(IResolvable::unwrap))
+      cdkBuilder.actionsEnabled(actionsEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -734,7 +734,7 @@ public interface CfnAlarmProps {
      * `Metrics` .
      */
     override fun dimensions(dimensions: IResolvable) {
-      cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+      cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -826,7 +826,7 @@ public interface CfnAlarmProps {
      * `Period` , `Namespace` , `Statistic` , `ExtendedStatistic` , or `Unit` .
      */
     override fun metrics(metrics: IResolvable) {
-      cdkBuilder.metrics(metrics.let(IResolvable::unwrap))
+      cdkBuilder.metrics(metrics.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -917,7 +917,7 @@ public interface CfnAlarmProps {
      * values.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

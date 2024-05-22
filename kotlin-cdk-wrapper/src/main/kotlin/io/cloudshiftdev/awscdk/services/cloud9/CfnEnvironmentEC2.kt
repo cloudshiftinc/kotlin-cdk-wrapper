@@ -66,8 +66,8 @@ public open class CfnEnvironmentEC2(
     id: String,
     props: CfnEnvironmentEC2Props,
   ) :
-      this(software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEnvironmentEC2Props::unwrap))
+      this(software.amazon.awscdk.services.cloud9.CfnEnvironmentEC2(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEnvironmentEC2Props.Companion::unwrap))
   )
 
   public constructor(
@@ -149,7 +149,7 @@ public open class CfnEnvironmentEC2(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -197,7 +197,7 @@ public open class CfnEnvironmentEC2(
    * Any AWS CodeCommit source code repositories to be cloned into the development environment.
    */
   public open fun repositories(`value`: IResolvable) {
-    unwrap(this).setRepositories(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRepositories(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -243,7 +243,7 @@ public open class CfnEnvironmentEC2(
    * environment.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -528,7 +528,7 @@ public open class CfnEnvironmentEC2(
      * development environment. 
      */
     override fun repositories(repositories: IResolvable) {
-      cdkBuilder.repositories(repositories.let(IResolvable::unwrap))
+      cdkBuilder.repositories(repositories.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -572,7 +572,7 @@ public open class CfnEnvironmentEC2(
      * development environment. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

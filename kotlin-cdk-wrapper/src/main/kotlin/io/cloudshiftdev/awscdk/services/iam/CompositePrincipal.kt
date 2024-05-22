@@ -36,7 +36,7 @@ public open class CompositePrincipal(
   cdkObject: software.amazon.awscdk.services.iam.CompositePrincipal,
 ) : PrincipalBase(cdkObject) {
   public constructor(principals: IPrincipal) :
-      this(software.amazon.awscdk.services.iam.CompositePrincipal(principals.let(IPrincipal::unwrap))
+      this(software.amazon.awscdk.services.iam.CompositePrincipal(principals.let(IPrincipal.Companion::unwrap))
   )
 
   /**
@@ -60,7 +60,7 @@ public open class CompositePrincipal(
    * @param doc 
    */
   public override fun addToAssumeRolePolicy(doc: PolicyDocument) {
-    unwrap(this).addToAssumeRolePolicy(doc.let(PolicyDocument::unwrap))
+    unwrap(this).addToAssumeRolePolicy(doc.let(PolicyDocument.Companion::unwrap))
   }
 
   /**

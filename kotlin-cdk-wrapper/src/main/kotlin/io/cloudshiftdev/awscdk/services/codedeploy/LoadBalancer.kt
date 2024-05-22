@@ -48,15 +48,15 @@ public abstract class LoadBalancer(
 
   public companion object {
     public fun application(albTargetGroup: IApplicationTargetGroup): LoadBalancer =
-        software.amazon.awscdk.services.codedeploy.LoadBalancer.application(albTargetGroup.let(IApplicationTargetGroup::unwrap)).let(LoadBalancer::wrap)
+        software.amazon.awscdk.services.codedeploy.LoadBalancer.application(albTargetGroup.let(IApplicationTargetGroup.Companion::unwrap)).let(LoadBalancer::wrap)
 
     public
         fun classic(loadBalancer: io.cloudshiftdev.awscdk.services.elasticloadbalancing.LoadBalancer):
         LoadBalancer =
-        software.amazon.awscdk.services.codedeploy.LoadBalancer.classic(loadBalancer.let(io.cloudshiftdev.awscdk.services.elasticloadbalancing.LoadBalancer::unwrap)).let(LoadBalancer::wrap)
+        software.amazon.awscdk.services.codedeploy.LoadBalancer.classic(loadBalancer.let(io.cloudshiftdev.awscdk.services.elasticloadbalancing.LoadBalancer.Companion::unwrap)).let(LoadBalancer::wrap)
 
     public fun network(nlbTargetGroup: INetworkTargetGroup): LoadBalancer =
-        software.amazon.awscdk.services.codedeploy.LoadBalancer.network(nlbTargetGroup.let(INetworkTargetGroup::unwrap)).let(LoadBalancer::wrap)
+        software.amazon.awscdk.services.codedeploy.LoadBalancer.network(nlbTargetGroup.let(INetworkTargetGroup.Companion::unwrap)).let(LoadBalancer::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codedeploy.LoadBalancer):
         LoadBalancer = CdkObjectWrappers.wrap(cdkObject) as? LoadBalancer ?: Wrapper(cdkObject)

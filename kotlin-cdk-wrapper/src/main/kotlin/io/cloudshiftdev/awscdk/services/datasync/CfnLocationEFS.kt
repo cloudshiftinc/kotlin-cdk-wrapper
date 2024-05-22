@@ -59,8 +59,8 @@ public open class CfnLocationEFS(
     id: String,
     props: CfnLocationEFSProps,
   ) :
-      this(software.amazon.awscdk.services.datasync.CfnLocationEFS(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLocationEFSProps::unwrap))
+      this(software.amazon.awscdk.services.datasync.CfnLocationEFS(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLocationEFSProps.Companion::unwrap))
   )
 
   public constructor(
@@ -103,14 +103,14 @@ public open class CfnLocationEFS(
    * Specifies the subnet and security groups DataSync uses to access your Amazon EFS file system.
    */
   public open fun ec2Config(`value`: IResolvable) {
-    unwrap(this).setEc2Config(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEc2Config(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the subnet and security groups DataSync uses to access your Amazon EFS file system.
    */
   public open fun ec2Config(`value`: Ec2ConfigProperty) {
-    unwrap(this).setEc2Config(`value`.let(Ec2ConfigProperty::unwrap))
+    unwrap(this).setEc2Config(`value`.let(Ec2ConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -167,7 +167,7 @@ public open class CfnLocationEFS(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -197,7 +197,7 @@ public open class CfnLocationEFS(
    * Specifies the key-value pair that represents a tag that you want to add to the resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -348,7 +348,7 @@ public open class CfnLocationEFS(
      * EFS file system. 
      */
     override fun ec2Config(ec2Config: IResolvable) {
-      cdkBuilder.ec2Config(ec2Config.let(IResolvable::unwrap))
+      cdkBuilder.ec2Config(ec2Config.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -359,7 +359,7 @@ public open class CfnLocationEFS(
      * EFS file system. 
      */
     override fun ec2Config(ec2Config: Ec2ConfigProperty) {
-      cdkBuilder.ec2Config(ec2Config.let(Ec2ConfigProperty::unwrap))
+      cdkBuilder.ec2Config(ec2Config.let(Ec2ConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -440,7 +440,7 @@ public open class CfnLocationEFS(
      * resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

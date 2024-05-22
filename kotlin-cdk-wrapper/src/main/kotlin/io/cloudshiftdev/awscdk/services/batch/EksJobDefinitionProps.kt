@@ -156,14 +156,14 @@ public interface EksJobDefinitionProps : JobDefinitionProps {
      * @param container The container this Job Definition will run. 
      */
     override fun container(container: EksContainerDefinition) {
-      cdkBuilder.container(container.let(EksContainerDefinition::unwrap))
+      cdkBuilder.container(container.let(EksContainerDefinition.Companion::unwrap))
     }
 
     /**
      * @param dnsPolicy The DNS Policy of the pod used by this Job Definition.
      */
     override fun dnsPolicy(dnsPolicy: DnsPolicy) {
-      cdkBuilder.dnsPolicy(dnsPolicy.let(DnsPolicy::unwrap))
+      cdkBuilder.dnsPolicy(dnsPolicy.let(DnsPolicy.Companion::unwrap))
     }
 
     /**
@@ -193,7 +193,7 @@ public interface EksJobDefinitionProps : JobDefinitionProps {
      * @param retryStrategies Defines the retry behavior for this job.
      */
     override fun retryStrategies(retryStrategies: List<RetryStrategy>) {
-      cdkBuilder.retryStrategies(retryStrategies.map(RetryStrategy::unwrap))
+      cdkBuilder.retryStrategies(retryStrategies.map(RetryStrategy.Companion::unwrap))
     }
 
     /**
@@ -227,7 +227,7 @@ public interface EksJobDefinitionProps : JobDefinitionProps {
      * Batch terminates your jobs if they aren't finished.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**

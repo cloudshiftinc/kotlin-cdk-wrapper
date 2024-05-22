@@ -277,14 +277,14 @@ public interface AttributeMapping {
      * @param address The user's postal address is a required attribute.
      */
     override fun address(address: ProviderAttribute) {
-      cdkBuilder.address(address.let(ProviderAttribute::unwrap))
+      cdkBuilder.address(address.let(ProviderAttribute.Companion::unwrap))
     }
 
     /**
      * @param birthdate The user's birthday.
      */
     override fun birthdate(birthdate: ProviderAttribute) {
-      cdkBuilder.birthdate(birthdate.let(ProviderAttribute::unwrap))
+      cdkBuilder.birthdate(birthdate.let(ProviderAttribute.Companion::unwrap))
     }
 
     /**
@@ -299,105 +299,105 @@ public interface AttributeMapping {
      * @param email The user's e-mail address.
      */
     override fun email(email: ProviderAttribute) {
-      cdkBuilder.email(email.let(ProviderAttribute::unwrap))
+      cdkBuilder.email(email.let(ProviderAttribute.Companion::unwrap))
     }
 
     /**
      * @param familyName The surname or last name of user.
      */
     override fun familyName(familyName: ProviderAttribute) {
-      cdkBuilder.familyName(familyName.let(ProviderAttribute::unwrap))
+      cdkBuilder.familyName(familyName.let(ProviderAttribute.Companion::unwrap))
     }
 
     /**
      * @param fullname The user's full name in displayable form.
      */
     override fun fullname(fullname: ProviderAttribute) {
-      cdkBuilder.fullname(fullname.let(ProviderAttribute::unwrap))
+      cdkBuilder.fullname(fullname.let(ProviderAttribute.Companion::unwrap))
     }
 
     /**
      * @param gender The user's gender.
      */
     override fun gender(gender: ProviderAttribute) {
-      cdkBuilder.gender(gender.let(ProviderAttribute::unwrap))
+      cdkBuilder.gender(gender.let(ProviderAttribute.Companion::unwrap))
     }
 
     /**
      * @param givenName The user's first name or give name.
      */
     override fun givenName(givenName: ProviderAttribute) {
-      cdkBuilder.givenName(givenName.let(ProviderAttribute::unwrap))
+      cdkBuilder.givenName(givenName.let(ProviderAttribute.Companion::unwrap))
     }
 
     /**
      * @param lastUpdateTime Time, the user's information was last updated.
      */
     override fun lastUpdateTime(lastUpdateTime: ProviderAttribute) {
-      cdkBuilder.lastUpdateTime(lastUpdateTime.let(ProviderAttribute::unwrap))
+      cdkBuilder.lastUpdateTime(lastUpdateTime.let(ProviderAttribute.Companion::unwrap))
     }
 
     /**
      * @param locale The user's locale.
      */
     override fun locale(locale: ProviderAttribute) {
-      cdkBuilder.locale(locale.let(ProviderAttribute::unwrap))
+      cdkBuilder.locale(locale.let(ProviderAttribute.Companion::unwrap))
     }
 
     /**
      * @param middleName The user's middle name.
      */
     override fun middleName(middleName: ProviderAttribute) {
-      cdkBuilder.middleName(middleName.let(ProviderAttribute::unwrap))
+      cdkBuilder.middleName(middleName.let(ProviderAttribute.Companion::unwrap))
     }
 
     /**
      * @param nickname The user's nickname or casual name.
      */
     override fun nickname(nickname: ProviderAttribute) {
-      cdkBuilder.nickname(nickname.let(ProviderAttribute::unwrap))
+      cdkBuilder.nickname(nickname.let(ProviderAttribute.Companion::unwrap))
     }
 
     /**
      * @param phoneNumber The user's telephone number.
      */
     override fun phoneNumber(phoneNumber: ProviderAttribute) {
-      cdkBuilder.phoneNumber(phoneNumber.let(ProviderAttribute::unwrap))
+      cdkBuilder.phoneNumber(phoneNumber.let(ProviderAttribute.Companion::unwrap))
     }
 
     /**
      * @param preferredUsername The user's preferred username.
      */
     override fun preferredUsername(preferredUsername: ProviderAttribute) {
-      cdkBuilder.preferredUsername(preferredUsername.let(ProviderAttribute::unwrap))
+      cdkBuilder.preferredUsername(preferredUsername.let(ProviderAttribute.Companion::unwrap))
     }
 
     /**
      * @param profilePage The URL to the user's profile page.
      */
     override fun profilePage(profilePage: ProviderAttribute) {
-      cdkBuilder.profilePage(profilePage.let(ProviderAttribute::unwrap))
+      cdkBuilder.profilePage(profilePage.let(ProviderAttribute.Companion::unwrap))
     }
 
     /**
      * @param profilePicture The URL to the user's profile picture.
      */
     override fun profilePicture(profilePicture: ProviderAttribute) {
-      cdkBuilder.profilePicture(profilePicture.let(ProviderAttribute::unwrap))
+      cdkBuilder.profilePicture(profilePicture.let(ProviderAttribute.Companion::unwrap))
     }
 
     /**
      * @param timezone The user's time zone.
      */
     override fun timezone(timezone: ProviderAttribute) {
-      cdkBuilder.timezone(timezone.let(ProviderAttribute::unwrap))
+      cdkBuilder.timezone(timezone.let(ProviderAttribute.Companion::unwrap))
     }
 
     /**
      * @param website The URL to the user's web page or blog.
      */
     override fun website(website: ProviderAttribute) {
-      cdkBuilder.website(website.let(ProviderAttribute::unwrap))
+      cdkBuilder.website(website.let(ProviderAttribute.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cognito.AttributeMapping =

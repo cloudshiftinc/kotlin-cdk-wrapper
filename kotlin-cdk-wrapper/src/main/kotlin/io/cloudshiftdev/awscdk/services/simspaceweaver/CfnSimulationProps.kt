@@ -256,7 +256,7 @@ public interface CfnSimulationProps {
      * If you provide a `SchemaS3Location` then you can't provide a `SnapshotS3Location` .
      */
     override fun schemaS3Location(schemaS3Location: IResolvable) {
-      cdkBuilder.schemaS3Location(schemaS3Location.let(IResolvable::unwrap))
+      cdkBuilder.schemaS3Location(schemaS3Location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -270,7 +270,7 @@ public interface CfnSimulationProps {
      * If you provide a `SchemaS3Location` then you can't provide a `SnapshotS3Location` .
      */
     override fun schemaS3Location(schemaS3Location: CfnSimulation.S3LocationProperty) {
-      cdkBuilder.schemaS3Location(schemaS3Location.let(CfnSimulation.S3LocationProperty::unwrap))
+      cdkBuilder.schemaS3Location(schemaS3Location.let(CfnSimulation.S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -300,7 +300,7 @@ public interface CfnSimulationProps {
      * If you provide a `SnapshotS3Location` then you can't provide a `SchemaS3Location` .
      */
     override fun snapshotS3Location(snapshotS3Location: IResolvable) {
-      cdkBuilder.snapshotS3Location(snapshotS3Location.let(IResolvable::unwrap))
+      cdkBuilder.snapshotS3Location(snapshotS3Location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -314,7 +314,7 @@ public interface CfnSimulationProps {
      * If you provide a `SnapshotS3Location` then you can't provide a `SchemaS3Location` .
      */
     override fun snapshotS3Location(snapshotS3Location: CfnSimulation.S3LocationProperty) {
-      cdkBuilder.snapshotS3Location(snapshotS3Location.let(CfnSimulation.S3LocationProperty::unwrap))
+      cdkBuilder.snapshotS3Location(snapshotS3Location.let(CfnSimulation.S3LocationProperty.Companion::unwrap))
     }
 
     /**

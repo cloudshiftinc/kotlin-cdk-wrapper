@@ -604,7 +604,7 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
      * @param policyStatement 
      */
     override fun addToRolePolicy(policyStatement: PolicyStatement) {
-      unwrap(this).addToRolePolicy(policyStatement.let(PolicyStatement::unwrap))
+      unwrap(this).addToRolePolicy(policyStatement.let(PolicyStatement.Companion::unwrap))
     }
 
     /**
@@ -629,7 +629,7 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -638,7 +638,7 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
      * @param scope 
      */
     override fun bindAsNotificationRuleSource(scope: Construct): NotificationRuleSourceConfig =
-        unwrap(this).bindAsNotificationRuleSource(scope.let(Construct::unwrap)).let(NotificationRuleSourceConfig::wrap)
+        unwrap(this).bindAsNotificationRuleSource(scope.let(Construct.Companion::unwrap)).let(NotificationRuleSourceConfig::wrap)
 
     /**
      * The network connections associated with this resource.
@@ -686,7 +686,8 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
      * @param props Customization properties.
      */
     override fun metric(metricName: String, props: MetricOptions): Metric =
-        unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metric(metricName,
+        props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * @return a CloudWatch metric associated with this build project.
@@ -723,7 +724,7 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
      * @param props
      */
     override fun metricBuilds(props: MetricOptions): Metric =
-        unwrap(this).metricBuilds(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricBuilds(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Measures the number of builds triggered.
@@ -766,7 +767,7 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
      * @param props
      */
     override fun metricDuration(props: MetricOptions): Metric =
-        unwrap(this).metricDuration(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricDuration(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Measures the duration of all builds over time.
@@ -809,7 +810,7 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
      * @param props
      */
     override fun metricFailedBuilds(props: MetricOptions): Metric =
-        unwrap(this).metricFailedBuilds(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricFailedBuilds(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Measures the number of builds that failed because of client error or because of a timeout.
@@ -853,7 +854,7 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
      * @param props
      */
     override fun metricSucceededBuilds(props: MetricOptions): Metric =
-        unwrap(this).metricSucceededBuilds(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricSucceededBuilds(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Measures the number of successful builds.
@@ -889,8 +890,9 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
       id: String,
       target: INotificationRuleTarget,
       options: ProjectNotifyOnOptions,
-    ): INotificationRule = unwrap(this).notifyOn(id, target.let(INotificationRuleTarget::unwrap),
-        options.let(ProjectNotifyOnOptions::unwrap)).let(INotificationRule::wrap)
+    ): INotificationRule = unwrap(this).notifyOn(id,
+        target.let(INotificationRuleTarget.Companion::unwrap),
+        options.let(ProjectNotifyOnOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Defines a CodeStar Notification rule triggered when the project events emitted by you
@@ -921,7 +923,7 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
      */
     override fun notifyOnBuildFailed(id: String, target: INotificationRuleTarget): INotificationRule
         = unwrap(this).notifyOnBuildFailed(id,
-        target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Defines a CodeStar notification rule which triggers when a build fails.
@@ -935,8 +937,8 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
       target: INotificationRuleTarget,
       options: NotificationRuleOptions,
     ): INotificationRule = unwrap(this).notifyOnBuildFailed(id,
-        target.let(INotificationRuleTarget::unwrap),
-        options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap),
+        options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Defines a CodeStar notification rule which triggers when a build fails.
@@ -962,7 +964,7 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
      */
     override fun notifyOnBuildSucceeded(id: String, target: INotificationRuleTarget):
         INotificationRule = unwrap(this).notifyOnBuildSucceeded(id,
-        target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Defines a CodeStar notification rule which triggers when a build completes successfully.
@@ -976,8 +978,8 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
       target: INotificationRuleTarget,
       options: NotificationRuleOptions,
     ): INotificationRule = unwrap(this).notifyOnBuildSucceeded(id,
-        target.let(INotificationRuleTarget::unwrap),
-        options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap),
+        options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Defines a CodeStar notification rule which triggers when a build completes successfully.
@@ -1009,7 +1011,8 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
      * @param options
      */
     override fun onBuildFailed(id: String, options: OnEventOptions): Rule =
-        unwrap(this).onBuildFailed(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+        unwrap(this).onBuildFailed(id,
+        options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * Defines an event rule which triggers when a build fails.
@@ -1037,7 +1040,8 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
      * @param options
      */
     override fun onBuildStarted(id: String, options: OnEventOptions): Rule =
-        unwrap(this).onBuildStarted(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+        unwrap(this).onBuildStarted(id,
+        options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * Defines an event rule which triggers when a build starts.
@@ -1066,7 +1070,8 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
      * @param options
      */
     override fun onBuildSucceeded(id: String, options: OnEventOptions): Rule =
-        unwrap(this).onBuildSucceeded(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+        unwrap(this).onBuildSucceeded(id,
+        options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * Defines an event rule which triggers when a build completes successfully.
@@ -1096,7 +1101,7 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
      * @param options
      */
     override fun onEvent(id: String, options: OnEventOptions): Rule = unwrap(this).onEvent(id,
-        options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+        options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * Defines a CloudWatch event rule triggered when something happens with this project.
@@ -1127,7 +1132,8 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
      * @param options
      */
     override fun onPhaseChange(id: String, options: OnEventOptions): Rule =
-        unwrap(this).onPhaseChange(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+        unwrap(this).onPhaseChange(id,
+        options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * Defines a CloudWatch event rule that triggers upon phase change of this build project.
@@ -1200,7 +1206,8 @@ public interface IProject : IResource, IGrantable, IConnectable, INotificationRu
      * @param options
      */
     override fun onStateChange(id: String, options: OnEventOptions): Rule =
-        unwrap(this).onStateChange(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+        unwrap(this).onStateChange(id,
+        options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * Defines a CloudWatch event rule triggered when the build project state changes.

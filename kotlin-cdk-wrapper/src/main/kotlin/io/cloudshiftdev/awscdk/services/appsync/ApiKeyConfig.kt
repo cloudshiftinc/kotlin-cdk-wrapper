@@ -92,7 +92,7 @@ public interface ApiKeyConfig {
      * Rounded down to the nearest hour.
      */
     override fun expires(expires: Expiration) {
-      cdkBuilder.expires(expires.let(Expiration::unwrap))
+      cdkBuilder.expires(expires.let(Expiration.Companion::unwrap))
     }
 
     /**

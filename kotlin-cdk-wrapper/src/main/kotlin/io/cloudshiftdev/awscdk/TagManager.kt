@@ -41,15 +41,16 @@ public open class TagManager(
   cdkObject: software.amazon.awscdk.TagManager,
 ) : CdkObject(cdkObject) {
   public constructor(tagType: TagType, resourceTypeName: String) :
-      this(software.amazon.awscdk.TagManager(tagType.let(TagType::unwrap), resourceTypeName)
+      this(software.amazon.awscdk.TagManager(tagType.let(TagType.Companion::unwrap),
+      resourceTypeName)
   )
 
   public constructor(
     tagType: TagType,
     resourceTypeName: String,
     initialTags: Any,
-  ) : this(software.amazon.awscdk.TagManager(tagType.let(TagType::unwrap), resourceTypeName,
-      initialTags)
+  ) : this(software.amazon.awscdk.TagManager(tagType.let(TagType.Companion::unwrap),
+      resourceTypeName, initialTags)
   )
 
   public constructor(
@@ -57,8 +58,8 @@ public open class TagManager(
     resourceTypeName: String,
     initialTags: Any,
     options: TagManagerOptions,
-  ) : this(software.amazon.awscdk.TagManager(tagType.let(TagType::unwrap), resourceTypeName,
-      initialTags, options.let(TagManagerOptions::unwrap))
+  ) : this(software.amazon.awscdk.TagManager(tagType.let(TagType.Companion::unwrap),
+      resourceTypeName, initialTags, options.let(TagManagerOptions.Companion::unwrap))
   )
 
   public constructor(

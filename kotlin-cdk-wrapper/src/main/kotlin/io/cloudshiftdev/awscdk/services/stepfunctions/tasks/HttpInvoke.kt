@@ -50,8 +50,8 @@ public open class HttpInvoke(
     id: String,
     props: HttpInvokeProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.HttpInvoke(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(HttpInvokeProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.HttpInvoke(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(HttpInvokeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -347,7 +347,7 @@ public open class HttpInvoke(
      * @param apiEndpoint The API endpoint to call, relative to `apiRoot`. 
      */
     override fun apiEndpoint(apiEndpoint: TaskInput) {
-      cdkBuilder.apiEndpoint(apiEndpoint.let(TaskInput::unwrap))
+      cdkBuilder.apiEndpoint(apiEndpoint.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -373,7 +373,7 @@ public open class HttpInvoke(
      * @param body The body to send to the HTTP endpoint. 
      */
     override fun body(body: TaskInput) {
-      cdkBuilder.body(body.let(TaskInput::unwrap))
+      cdkBuilder.body(body.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -393,7 +393,7 @@ public open class HttpInvoke(
      * @param connection The EventBridge Connection to use for authentication. 
      */
     override fun connection(connection: IConnection) {
-      cdkBuilder.connection(connection.let(IConnection::unwrap))
+      cdkBuilder.connection(connection.let(IConnection.Companion::unwrap))
     }
 
     /**
@@ -408,7 +408,7 @@ public open class HttpInvoke(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -441,7 +441,7 @@ public open class HttpInvoke(
      * @param headers The headers to send to the HTTP endpoint. 
      */
     override fun headers(headers: TaskInput) {
-      cdkBuilder.headers(headers.let(TaskInput::unwrap))
+      cdkBuilder.headers(headers.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -454,7 +454,7 @@ public open class HttpInvoke(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -468,7 +468,7 @@ public open class HttpInvoke(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -503,7 +503,7 @@ public open class HttpInvoke(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -518,7 +518,7 @@ public open class HttpInvoke(
      * @param method The HTTP method to use. 
      */
     override fun method(method: TaskInput) {
-      cdkBuilder.method(method.let(TaskInput::unwrap))
+      cdkBuilder.method(method.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -545,7 +545,7 @@ public open class HttpInvoke(
      * @param queryStringParameters The query string parameters to send to the HTTP endpoint. 
      */
     override fun queryStringParameters(queryStringParameters: TaskInput) {
-      cdkBuilder.queryStringParameters(queryStringParameters.let(TaskInput::unwrap))
+      cdkBuilder.queryStringParameters(queryStringParameters.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -601,7 +601,7 @@ public open class HttpInvoke(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -614,7 +614,7 @@ public open class HttpInvoke(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -634,7 +634,7 @@ public open class HttpInvoke(
      * which array encoding format to use. 
      */
     override fun urlEncodingFormat(urlEncodingFormat: URLEncodingFormat) {
-      cdkBuilder.urlEncodingFormat(urlEncodingFormat.let(URLEncodingFormat::unwrap))
+      cdkBuilder.urlEncodingFormat(urlEncodingFormat.let(URLEncodingFormat.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.HttpInvoke =

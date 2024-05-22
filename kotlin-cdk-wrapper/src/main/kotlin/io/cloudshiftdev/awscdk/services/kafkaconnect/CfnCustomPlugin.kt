@@ -60,8 +60,8 @@ public open class CfnCustomPlugin(
     id: String,
     props: CfnCustomPluginProps,
   ) :
-      this(software.amazon.awscdk.services.kafkaconnect.CfnCustomPlugin(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCustomPluginProps::unwrap))
+      this(software.amazon.awscdk.services.kafkaconnect.CfnCustomPlugin(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCustomPluginProps.Companion::unwrap))
   )
 
   public constructor(
@@ -123,7 +123,7 @@ public open class CfnCustomPlugin(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -135,14 +135,14 @@ public open class CfnCustomPlugin(
    * Information about the location of the custom plugin.
    */
   public open fun location(`value`: IResolvable) {
-    unwrap(this).setLocation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLocation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information about the location of the custom plugin.
    */
   public open fun location(`value`: CustomPluginLocationProperty) {
-    unwrap(this).setLocation(`value`.let(CustomPluginLocationProperty::unwrap))
+    unwrap(this).setLocation(`value`.let(CustomPluginLocationProperty.Companion::unwrap))
   }
 
   /**
@@ -174,7 +174,7 @@ public open class CfnCustomPlugin(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -288,7 +288,7 @@ public open class CfnCustomPlugin(
      * @param location Information about the location of the custom plugin. 
      */
     override fun location(location: IResolvable) {
-      cdkBuilder.location(location.let(IResolvable::unwrap))
+      cdkBuilder.location(location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -298,7 +298,7 @@ public open class CfnCustomPlugin(
      * @param location Information about the location of the custom plugin. 
      */
     override fun location(location: CustomPluginLocationProperty) {
-      cdkBuilder.location(location.let(CustomPluginLocationProperty::unwrap))
+      cdkBuilder.location(location.let(CustomPluginLocationProperty.Companion::unwrap))
     }
 
     /**
@@ -329,7 +329,7 @@ public open class CfnCustomPlugin(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -556,7 +556,7 @@ public open class CfnCustomPlugin(
        * the plugin file stored in Amazon S3. 
        */
       override fun s3Location(s3Location: IResolvable) {
-        cdkBuilder.s3Location(s3Location.let(IResolvable::unwrap))
+        cdkBuilder.s3Location(s3Location.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -564,7 +564,7 @@ public open class CfnCustomPlugin(
        * the plugin file stored in Amazon S3. 
        */
       override fun s3Location(s3Location: S3LocationProperty) {
-        cdkBuilder.s3Location(s3Location.let(S3LocationProperty::unwrap))
+        cdkBuilder.s3Location(s3Location.let(S3LocationProperty.Companion::unwrap))
       }
 
       /**

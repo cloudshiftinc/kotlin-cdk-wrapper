@@ -46,7 +46,7 @@ public open class JobQueue(
   cdkObject: software.amazon.awscdk.services.batch.JobQueue,
 ) : Resource(cdkObject), IJobQueue {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.batch.JobQueue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.batch.JobQueue(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -55,8 +55,8 @@ public open class JobQueue(
     id: String,
     props: JobQueueProps,
   ) :
-      this(software.amazon.awscdk.services.batch.JobQueue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(JobQueueProps::unwrap))
+      this(software.amazon.awscdk.services.batch.JobQueue(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(JobQueueProps.Companion::unwrap))
   )
 
   public constructor(
@@ -76,7 +76,8 @@ public open class JobQueue(
    */
   public override fun addComputeEnvironment(computeEnvironment: IComputeEnvironment,
       order: Number) {
-    unwrap(this).addComputeEnvironment(computeEnvironment.let(IComputeEnvironment::unwrap), order)
+    unwrap(this).addComputeEnvironment(computeEnvironment.let(IComputeEnvironment.Companion::unwrap),
+        order)
   }
 
   /**
@@ -269,7 +270,7 @@ public open class JobQueue(
      * order relative to each other. 
      */
     override fun computeEnvironments(computeEnvironments: List<OrderedComputeEnvironment>) {
-      cdkBuilder.computeEnvironments(computeEnvironments.map(OrderedComputeEnvironment::unwrap))
+      cdkBuilder.computeEnvironments(computeEnvironments.map(OrderedComputeEnvironment.Companion::unwrap))
     }
 
     /**
@@ -351,7 +352,7 @@ public open class JobQueue(
      * @param schedulingPolicy The SchedulingPolicy for this JobQueue. 
      */
     override fun schedulingPolicy(schedulingPolicy: ISchedulingPolicy) {
-      cdkBuilder.schedulingPolicy(schedulingPolicy.let(ISchedulingPolicy::unwrap))
+      cdkBuilder.schedulingPolicy(schedulingPolicy.let(ISchedulingPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.batch.JobQueue = cdkBuilder.build()
@@ -363,7 +364,7 @@ public open class JobQueue(
       id: String,
       jobQueueArn: String,
     ): IJobQueue =
-        software.amazon.awscdk.services.batch.JobQueue.fromJobQueueArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.batch.JobQueue.fromJobQueueArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, jobQueueArn).let(IJobQueue::wrap)
 
     public operator fun invoke(

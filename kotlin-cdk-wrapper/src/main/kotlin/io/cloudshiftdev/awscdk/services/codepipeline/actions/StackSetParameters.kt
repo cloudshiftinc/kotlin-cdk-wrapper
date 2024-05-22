@@ -29,7 +29,7 @@ public abstract class StackSetParameters(
 
   public companion object {
     public fun fromArtifactPath(artifactPath: ArtifactPath): StackSetParameters =
-        software.amazon.awscdk.services.codepipeline.actions.StackSetParameters.fromArtifactPath(artifactPath.let(ArtifactPath::unwrap)).let(StackSetParameters::wrap)
+        software.amazon.awscdk.services.codepipeline.actions.StackSetParameters.fromArtifactPath(artifactPath.let(ArtifactPath.Companion::unwrap)).let(StackSetParameters::wrap)
 
     public fun fromLiteral(parameters: Map<String, String>): StackSetParameters =
         software.amazon.awscdk.services.codepipeline.actions.StackSetParameters.fromLiteral(parameters).let(StackSetParameters::wrap)

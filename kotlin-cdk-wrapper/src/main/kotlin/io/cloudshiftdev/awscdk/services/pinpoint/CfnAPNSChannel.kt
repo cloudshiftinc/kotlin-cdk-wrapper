@@ -54,8 +54,8 @@ public open class CfnAPNSChannel(
     id: String,
     props: CfnAPNSChannelProps,
   ) :
-      this(software.amazon.awscdk.services.pinpoint.CfnAPNSChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAPNSChannelProps::unwrap))
+      this(software.amazon.awscdk.services.pinpoint.CfnAPNSChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAPNSChannelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -139,7 +139,7 @@ public open class CfnAPNSChannel(
    * Specifies whether to enable the APNs channel for the application.
    */
   public open fun enabled(`value`: IResolvable) {
-    unwrap(this).setEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -148,7 +148,7 @@ public open class CfnAPNSChannel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -377,7 +377,7 @@ public open class CfnAPNSChannel(
      * @param enabled Specifies whether to enable the APNs channel for the application. 
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**

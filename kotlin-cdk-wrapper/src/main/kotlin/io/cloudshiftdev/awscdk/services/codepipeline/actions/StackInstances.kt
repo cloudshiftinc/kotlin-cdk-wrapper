@@ -51,7 +51,7 @@ public abstract class StackInstances(
 
   public companion object {
     public fun fromArtifactPath(artifactPath: ArtifactPath, regions: List<String>): StackInstances =
-        software.amazon.awscdk.services.codepipeline.actions.StackInstances.fromArtifactPath(artifactPath.let(ArtifactPath::unwrap),
+        software.amazon.awscdk.services.codepipeline.actions.StackInstances.fromArtifactPath(artifactPath.let(ArtifactPath.Companion::unwrap),
         regions).let(StackInstances::wrap)
 
     public fun inAccounts(accounts: List<String>, regions: List<String>): StackInstances =

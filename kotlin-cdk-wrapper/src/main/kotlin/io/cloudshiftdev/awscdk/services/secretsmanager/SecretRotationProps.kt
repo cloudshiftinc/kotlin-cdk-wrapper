@@ -234,7 +234,7 @@ public interface SecretRotationProps {
      * @param application The serverless application for the rotation. 
      */
     override fun application(application: SecretRotationApplication) {
-      cdkBuilder.application(application.let(SecretRotationApplication::unwrap))
+      cdkBuilder.application(application.let(SecretRotationApplication.Companion::unwrap))
     }
 
     /**
@@ -242,7 +242,7 @@ public interface SecretRotationProps {
      * Secrets Manager triggers the next automatic rotation.
      */
     override fun automaticallyAfter(automaticallyAfter: Duration) {
-      cdkBuilder.automaticallyAfter(automaticallyAfter.let(Duration::unwrap))
+      cdkBuilder.automaticallyAfter(automaticallyAfter.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -253,7 +253,7 @@ public interface SecretRotationProps {
      * resolves to your VPC endpoint.
      */
     override fun endpoint(endpoint: IInterfaceVpcEndpoint) {
-      cdkBuilder.endpoint(endpoint.let(IInterfaceVpcEndpoint::unwrap))
+      cdkBuilder.endpoint(endpoint.let(IInterfaceVpcEndpoint.Companion::unwrap))
     }
 
     /**
@@ -267,7 +267,7 @@ public interface SecretRotationProps {
      * @param masterSecret The master secret for a multi user rotation scheme.
      */
     override fun masterSecret(masterSecret: ISecret) {
-      cdkBuilder.masterSecret(masterSecret.let(ISecret::unwrap))
+      cdkBuilder.masterSecret(masterSecret.let(ISecret.Companion::unwrap))
     }
 
     /**
@@ -298,35 +298,35 @@ public interface SecretRotationProps {
      * or an `ISecret` returned by the `attach()` method of `Secret`.
      */
     override fun secret(secret: ISecret) {
-      cdkBuilder.secret(secret.let(ISecret::unwrap))
+      cdkBuilder.secret(secret.let(ISecret.Companion::unwrap))
     }
 
     /**
      * @param securityGroup The security group for the Lambda rotation function.
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
      * @param target The target service or database. 
      */
     override fun target(target: IConnectable) {
-      cdkBuilder.target(target.let(IConnectable::unwrap))
+      cdkBuilder.target(target.let(IConnectable.Companion::unwrap))
     }
 
     /**
      * @param vpc The VPC where the Lambda rotation function will run. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
      * @param vpcSubnets The type of subnets in the VPC where the Lambda rotation function will run.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

@@ -26,11 +26,11 @@ public open class SamlConsolePrincipal(
   cdkObject: software.amazon.awscdk.services.iam.SamlConsolePrincipal,
 ) : SamlPrincipal(cdkObject) {
   public constructor(samlProvider: ISamlProvider) :
-      this(software.amazon.awscdk.services.iam.SamlConsolePrincipal(samlProvider.let(ISamlProvider::unwrap))
+      this(software.amazon.awscdk.services.iam.SamlConsolePrincipal(samlProvider.let(ISamlProvider.Companion::unwrap))
   )
 
   public constructor(samlProvider: ISamlProvider, conditions: Map<String, Any>) :
-      this(software.amazon.awscdk.services.iam.SamlConsolePrincipal(samlProvider.let(ISamlProvider::unwrap),
+      this(software.amazon.awscdk.services.iam.SamlConsolePrincipal(samlProvider.let(ISamlProvider.Companion::unwrap),
       conditions.mapValues{CdkObjectWrappers.unwrap(it.value)})
   )
 

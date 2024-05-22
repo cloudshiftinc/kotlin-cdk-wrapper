@@ -73,14 +73,14 @@ public interface ContainerDependency {
      * ContainerDependencyCondition.SUCCESS and ContainerDependencyCondition.HEALTHY.
      */
     override fun condition(condition: ContainerDependencyCondition) {
-      cdkBuilder.condition(condition.let(ContainerDependencyCondition::unwrap))
+      cdkBuilder.condition(condition.let(ContainerDependencyCondition.Companion::unwrap))
     }
 
     /**
      * @param container The container to depend on. 
      */
     override fun container(container: ContainerDefinition) {
-      cdkBuilder.container(container.let(ContainerDefinition::unwrap))
+      cdkBuilder.container(container.let(ContainerDefinition.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.ContainerDependency = cdkBuilder.build()

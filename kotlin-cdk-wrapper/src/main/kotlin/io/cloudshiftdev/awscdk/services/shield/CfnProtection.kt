@@ -100,8 +100,8 @@ public open class CfnProtection(
     id: String,
     props: CfnProtectionProps,
   ) :
-      this(software.amazon.awscdk.services.shield.CfnProtection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnProtectionProps::unwrap))
+      this(software.amazon.awscdk.services.shield.CfnProtection(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnProtectionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -121,7 +121,7 @@ public open class CfnProtection(
    * The automatic application layer DDoS mitigation settings for the protection.
    */
   public open fun applicationLayerAutomaticResponseConfiguration(`value`: IResolvable) {
-    unwrap(this).setApplicationLayerAutomaticResponseConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setApplicationLayerAutomaticResponseConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -129,7 +129,7 @@ public open class CfnProtection(
    */
   public open
       fun applicationLayerAutomaticResponseConfiguration(`value`: ApplicationLayerAutomaticResponseConfigurationProperty) {
-    unwrap(this).setApplicationLayerAutomaticResponseConfiguration(`value`.let(ApplicationLayerAutomaticResponseConfigurationProperty::unwrap))
+    unwrap(this).setApplicationLayerAutomaticResponseConfiguration(`value`.let(ApplicationLayerAutomaticResponseConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -181,7 +181,7 @@ public open class CfnProtection(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -221,7 +221,7 @@ public open class CfnProtection(
    * Key:value pairs associated with an AWS resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -397,7 +397,7 @@ public open class CfnProtection(
      */
     override
         fun applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration: IResolvable) {
-      cdkBuilder.applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -417,7 +417,7 @@ public open class CfnProtection(
      */
     override
         fun applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration: ApplicationLayerAutomaticResponseConfigurationProperty) {
-      cdkBuilder.applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration.let(ApplicationLayerAutomaticResponseConfigurationProperty::unwrap))
+      cdkBuilder.applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration.let(ApplicationLayerAutomaticResponseConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -518,7 +518,7 @@ public open class CfnProtection(
      * @param tags Key:value pairs associated with an AWS resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -835,7 +835,7 @@ public open class CfnProtection(
        * associated with the resource.
        */
       override fun action(action: IResolvable) {
-        cdkBuilder.action(action.let(IResolvable::unwrap))
+        cdkBuilder.action(action.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -847,7 +847,7 @@ public open class CfnProtection(
        * associated with the resource.
        */
       override fun action(action: ActionProperty) {
-        cdkBuilder.action(action.let(ActionProperty::unwrap))
+        cdkBuilder.action(action.let(ActionProperty.Companion::unwrap))
       }
 
       /**

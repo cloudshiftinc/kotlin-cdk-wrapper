@@ -195,8 +195,8 @@ public open class CfnFilter(
     id: String,
     props: CfnFilterProps,
   ) :
-      this(software.amazon.awscdk.services.inspectorv2.CfnFilter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFilterProps::unwrap))
+      this(software.amazon.awscdk.services.inspectorv2.CfnFilter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFilterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -244,14 +244,14 @@ public open class CfnFilter(
    * Details on the filter criteria associated with this filter.
    */
   public open fun filterCriteria(`value`: IResolvable) {
-    unwrap(this).setFilterCriteria(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFilterCriteria(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Details on the filter criteria associated with this filter.
    */
   public open fun filterCriteria(`value`: FilterCriteriaProperty) {
-    unwrap(this).setFilterCriteria(`value`.let(FilterCriteriaProperty::unwrap))
+    unwrap(this).setFilterCriteria(`value`.let(FilterCriteriaProperty.Companion::unwrap))
   }
 
   /**
@@ -268,7 +268,7 @@ public open class CfnFilter(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -373,7 +373,7 @@ public open class CfnFilter(
      * @param filterCriteria Details on the filter criteria associated with this filter. 
      */
     override fun filterCriteria(filterCriteria: IResolvable) {
-      cdkBuilder.filterCriteria(filterCriteria.let(IResolvable::unwrap))
+      cdkBuilder.filterCriteria(filterCriteria.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -383,7 +383,7 @@ public open class CfnFilter(
      * @param filterCriteria Details on the filter criteria associated with this filter. 
      */
     override fun filterCriteria(filterCriteria: FilterCriteriaProperty) {
-      cdkBuilder.filterCriteria(filterCriteria.let(FilterCriteriaProperty::unwrap))
+      cdkBuilder.filterCriteria(filterCriteria.let(FilterCriteriaProperty.Companion::unwrap))
     }
 
     /**
@@ -1425,7 +1425,7 @@ public open class CfnFilter(
        * @param awsAccountId Details of the AWS account IDs used to filter findings.
        */
       override fun awsAccountId(awsAccountId: IResolvable) {
-        cdkBuilder.awsAccountId(awsAccountId.let(IResolvable::unwrap))
+        cdkBuilder.awsAccountId(awsAccountId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1445,7 +1445,7 @@ public open class CfnFilter(
        * @param componentId Details of the component IDs used to filter findings.
        */
       override fun componentId(componentId: IResolvable) {
-        cdkBuilder.componentId(componentId.let(IResolvable::unwrap))
+        cdkBuilder.componentId(componentId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1464,7 +1464,7 @@ public open class CfnFilter(
        * @param componentType Details of the component types used to filter findings.
        */
       override fun componentType(componentType: IResolvable) {
-        cdkBuilder.componentType(componentType.let(IResolvable::unwrap))
+        cdkBuilder.componentType(componentType.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1485,7 +1485,7 @@ public open class CfnFilter(
        * findings.
        */
       override fun ec2InstanceImageId(ec2InstanceImageId: IResolvable) {
-        cdkBuilder.ec2InstanceImageId(ec2InstanceImageId.let(IResolvable::unwrap))
+        cdkBuilder.ec2InstanceImageId(ec2InstanceImageId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1508,7 +1508,7 @@ public open class CfnFilter(
        * findings.
        */
       override fun ec2InstanceSubnetId(ec2InstanceSubnetId: IResolvable) {
-        cdkBuilder.ec2InstanceSubnetId(ec2InstanceSubnetId.let(IResolvable::unwrap))
+        cdkBuilder.ec2InstanceSubnetId(ec2InstanceSubnetId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1530,7 +1530,7 @@ public open class CfnFilter(
        * @param ec2InstanceVpcId Details of the Amazon EC2 instance VPC IDs used to filter findings.
        */
       override fun ec2InstanceVpcId(ec2InstanceVpcId: IResolvable) {
-        cdkBuilder.ec2InstanceVpcId(ec2InstanceVpcId.let(IResolvable::unwrap))
+        cdkBuilder.ec2InstanceVpcId(ec2InstanceVpcId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1551,7 +1551,7 @@ public open class CfnFilter(
        * filter findings.
        */
       override fun ecrImageArchitecture(ecrImageArchitecture: IResolvable) {
-        cdkBuilder.ecrImageArchitecture(ecrImageArchitecture.let(IResolvable::unwrap))
+        cdkBuilder.ecrImageArchitecture(ecrImageArchitecture.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1573,7 +1573,7 @@ public open class CfnFilter(
        * @param ecrImageHash Details of the Amazon ECR image hashes used to filter findings.
        */
       override fun ecrImageHash(ecrImageHash: IResolvable) {
-        cdkBuilder.ecrImageHash(ecrImageHash.let(IResolvable::unwrap))
+        cdkBuilder.ecrImageHash(ecrImageHash.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1594,7 +1594,7 @@ public open class CfnFilter(
        * findings.
        */
       override fun ecrImagePushedAt(ecrImagePushedAt: IResolvable) {
-        cdkBuilder.ecrImagePushedAt(ecrImagePushedAt.let(IResolvable::unwrap))
+        cdkBuilder.ecrImagePushedAt(ecrImagePushedAt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1616,7 +1616,7 @@ public open class CfnFilter(
        * @param ecrImageRegistry Details on the Amazon ECR registry used to filter findings.
        */
       override fun ecrImageRegistry(ecrImageRegistry: IResolvable) {
-        cdkBuilder.ecrImageRegistry(ecrImageRegistry.let(IResolvable::unwrap))
+        cdkBuilder.ecrImageRegistry(ecrImageRegistry.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1637,7 +1637,7 @@ public open class CfnFilter(
        * filter findings.
        */
       override fun ecrImageRepositoryName(ecrImageRepositoryName: IResolvable) {
-        cdkBuilder.ecrImageRepositoryName(ecrImageRepositoryName.let(IResolvable::unwrap))
+        cdkBuilder.ecrImageRepositoryName(ecrImageRepositoryName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1659,7 +1659,7 @@ public open class CfnFilter(
        * @param ecrImageTags The tags attached to the Amazon ECR container image.
        */
       override fun ecrImageTags(ecrImageTags: IResolvable) {
-        cdkBuilder.ecrImageTags(ecrImageTags.let(IResolvable::unwrap))
+        cdkBuilder.ecrImageTags(ecrImageTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1679,7 +1679,7 @@ public open class CfnFilter(
        * @param findingArn Details on the finding ARNs used to filter findings.
        */
       override fun findingArn(findingArn: IResolvable) {
-        cdkBuilder.findingArn(findingArn.let(IResolvable::unwrap))
+        cdkBuilder.findingArn(findingArn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1698,7 +1698,7 @@ public open class CfnFilter(
        * @param findingStatus Details on the finding status types used to filter findings.
        */
       override fun findingStatus(findingStatus: IResolvable) {
-        cdkBuilder.findingStatus(findingStatus.let(IResolvable::unwrap))
+        cdkBuilder.findingStatus(findingStatus.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1718,7 +1718,7 @@ public open class CfnFilter(
        * @param findingType Details on the finding types used to filter findings.
        */
       override fun findingType(findingType: IResolvable) {
-        cdkBuilder.findingType(findingType.let(IResolvable::unwrap))
+        cdkBuilder.findingType(findingType.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1738,7 +1738,7 @@ public open class CfnFilter(
        * findings.
        */
       override fun firstObservedAt(firstObservedAt: IResolvable) {
-        cdkBuilder.firstObservedAt(firstObservedAt.let(IResolvable::unwrap))
+        cdkBuilder.firstObservedAt(firstObservedAt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1760,7 +1760,7 @@ public open class CfnFilter(
        * @param inspectorScore The Amazon Inspector score to filter on.
        */
       override fun inspectorScore(inspectorScore: IResolvable) {
-        cdkBuilder.inspectorScore(inspectorScore.let(IResolvable::unwrap))
+        cdkBuilder.inspectorScore(inspectorScore.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1781,7 +1781,7 @@ public open class CfnFilter(
        * findings.
        */
       override fun lastObservedAt(lastObservedAt: IResolvable) {
-        cdkBuilder.lastObservedAt(lastObservedAt.let(IResolvable::unwrap))
+        cdkBuilder.lastObservedAt(lastObservedAt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1803,7 +1803,7 @@ public open class CfnFilter(
        * @param networkProtocol Details on network protocol used to filter findings.
        */
       override fun networkProtocol(networkProtocol: IResolvable) {
-        cdkBuilder.networkProtocol(networkProtocol.let(IResolvable::unwrap))
+        cdkBuilder.networkProtocol(networkProtocol.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1823,7 +1823,7 @@ public open class CfnFilter(
        * @param portRange Details on the port ranges used to filter findings.
        */
       override fun portRange(portRange: IResolvable) {
-        cdkBuilder.portRange(portRange.let(IResolvable::unwrap))
+        cdkBuilder.portRange(portRange.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1843,7 +1843,7 @@ public open class CfnFilter(
        * findings.
        */
       override fun relatedVulnerabilities(relatedVulnerabilities: IResolvable) {
-        cdkBuilder.relatedVulnerabilities(relatedVulnerabilities.let(IResolvable::unwrap))
+        cdkBuilder.relatedVulnerabilities(relatedVulnerabilities.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1865,7 +1865,7 @@ public open class CfnFilter(
        * @param resourceId Details on the resource IDs used to filter findings.
        */
       override fun resourceId(resourceId: IResolvable) {
-        cdkBuilder.resourceId(resourceId.let(IResolvable::unwrap))
+        cdkBuilder.resourceId(resourceId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1884,7 +1884,7 @@ public open class CfnFilter(
        * @param resourceTags Details on the resource tags used to filter findings.
        */
       override fun resourceTags(resourceTags: IResolvable) {
-        cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
+        cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1904,7 +1904,7 @@ public open class CfnFilter(
        * @param resourceType Details on the resource types used to filter findings.
        */
       override fun resourceType(resourceType: IResolvable) {
-        cdkBuilder.resourceType(resourceType.let(IResolvable::unwrap))
+        cdkBuilder.resourceType(resourceType.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1924,7 +1924,7 @@ public open class CfnFilter(
        * @param severity Details on the severity used to filter findings.
        */
       override fun severity(severity: IResolvable) {
-        cdkBuilder.severity(severity.let(IResolvable::unwrap))
+        cdkBuilder.severity(severity.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1943,7 +1943,7 @@ public open class CfnFilter(
        * @param title Details on the finding title used to filter findings.
        */
       override fun title(title: IResolvable) {
-        cdkBuilder.title(title.let(IResolvable::unwrap))
+        cdkBuilder.title(title.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1963,7 +1963,7 @@ public open class CfnFilter(
        * findings.
        */
       override fun updatedAt(updatedAt: IResolvable) {
-        cdkBuilder.updatedAt(updatedAt.let(IResolvable::unwrap))
+        cdkBuilder.updatedAt(updatedAt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1984,7 +1984,7 @@ public open class CfnFilter(
        * @param vendorSeverity Details on the vendor severity used to filter findings.
        */
       override fun vendorSeverity(vendorSeverity: IResolvable) {
-        cdkBuilder.vendorSeverity(vendorSeverity.let(IResolvable::unwrap))
+        cdkBuilder.vendorSeverity(vendorSeverity.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2004,7 +2004,7 @@ public open class CfnFilter(
        * @param vulnerabilityId Details on the vulnerability ID used to filter findings.
        */
       override fun vulnerabilityId(vulnerabilityId: IResolvable) {
-        cdkBuilder.vulnerabilityId(vulnerabilityId.let(IResolvable::unwrap))
+        cdkBuilder.vulnerabilityId(vulnerabilityId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2024,7 +2024,7 @@ public open class CfnFilter(
        * @param vulnerabilitySource Details on the vulnerability score to filter findings by.
        */
       override fun vulnerabilitySource(vulnerabilitySource: IResolvable) {
-        cdkBuilder.vulnerabilitySource(vulnerabilitySource.let(IResolvable::unwrap))
+        cdkBuilder.vulnerabilitySource(vulnerabilitySource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2044,7 +2044,7 @@ public open class CfnFilter(
        * @param vulnerablePackages Details on the vulnerable packages used to filter findings.
        */
       override fun vulnerablePackages(vulnerablePackages: IResolvable) {
-        cdkBuilder.vulnerablePackages(vulnerablePackages.let(IResolvable::unwrap))
+        cdkBuilder.vulnerablePackages(vulnerablePackages.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2752,7 +2752,7 @@ public open class CfnFilter(
        * filter on.
        */
       override fun architecture(architecture: IResolvable) {
-        cdkBuilder.architecture(architecture.let(IResolvable::unwrap))
+        cdkBuilder.architecture(architecture.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2760,7 +2760,7 @@ public open class CfnFilter(
        * filter on.
        */
       override fun architecture(architecture: StringFilterProperty) {
-        cdkBuilder.architecture(architecture.let(StringFilterProperty::unwrap))
+        cdkBuilder.architecture(architecture.let(StringFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -2776,14 +2776,14 @@ public open class CfnFilter(
        * @param epoch An object that contains details on the package epoch to filter on.
        */
       override fun epoch(epoch: IResolvable) {
-        cdkBuilder.epoch(epoch.let(IResolvable::unwrap))
+        cdkBuilder.epoch(epoch.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param epoch An object that contains details on the package epoch to filter on.
        */
       override fun epoch(epoch: NumberFilterProperty) {
-        cdkBuilder.epoch(epoch.let(NumberFilterProperty::unwrap))
+        cdkBuilder.epoch(epoch.let(NumberFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -2798,14 +2798,14 @@ public open class CfnFilter(
        * @param name An object that contains details on the name of the package to filter on.
        */
       override fun name(name: IResolvable) {
-        cdkBuilder.name(name.let(IResolvable::unwrap))
+        cdkBuilder.name(name.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param name An object that contains details on the name of the package to filter on.
        */
       override fun name(name: StringFilterProperty) {
-        cdkBuilder.name(name.let(StringFilterProperty::unwrap))
+        cdkBuilder.name(name.let(StringFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -2820,14 +2820,14 @@ public open class CfnFilter(
        * @param release An object that contains details on the package release to filter on.
        */
       override fun release(release: IResolvable) {
-        cdkBuilder.release(release.let(IResolvable::unwrap))
+        cdkBuilder.release(release.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param release An object that contains details on the package release to filter on.
        */
       override fun release(release: StringFilterProperty) {
-        cdkBuilder.release(release.let(StringFilterProperty::unwrap))
+        cdkBuilder.release(release.let(StringFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -2843,7 +2843,7 @@ public open class CfnFilter(
        * on.
        */
       override fun sourceLayerHash(sourceLayerHash: IResolvable) {
-        cdkBuilder.sourceLayerHash(sourceLayerHash.let(IResolvable::unwrap))
+        cdkBuilder.sourceLayerHash(sourceLayerHash.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2851,7 +2851,7 @@ public open class CfnFilter(
        * on.
        */
       override fun sourceLayerHash(sourceLayerHash: StringFilterProperty) {
-        cdkBuilder.sourceLayerHash(sourceLayerHash.let(StringFilterProperty::unwrap))
+        cdkBuilder.sourceLayerHash(sourceLayerHash.let(StringFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -2867,14 +2867,14 @@ public open class CfnFilter(
        * @param version The package version to filter on.
        */
       override fun version(version: IResolvable) {
-        cdkBuilder.version(version.let(IResolvable::unwrap))
+        cdkBuilder.version(version.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param version The package version to filter on.
        */
       override fun version(version: StringFilterProperty) {
-        cdkBuilder.version(version.let(StringFilterProperty::unwrap))
+        cdkBuilder.version(version.let(StringFilterProperty.Companion::unwrap))
       }
 
       /**

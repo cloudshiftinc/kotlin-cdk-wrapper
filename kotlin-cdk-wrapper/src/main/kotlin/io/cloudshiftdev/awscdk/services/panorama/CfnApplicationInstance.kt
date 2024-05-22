@@ -61,8 +61,8 @@ public open class CfnApplicationInstance(
     id: String,
     props: CfnApplicationInstanceProps,
   ) :
-      this(software.amazon.awscdk.services.panorama.CfnApplicationInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApplicationInstanceProps::unwrap))
+      this(software.amazon.awscdk.services.panorama.CfnApplicationInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApplicationInstanceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -157,7 +157,7 @@ public open class CfnApplicationInstance(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -169,14 +169,14 @@ public open class CfnApplicationInstance(
    * Setting overrides for the application manifest.
    */
   public open fun manifestOverridesPayload(`value`: IResolvable) {
-    unwrap(this).setManifestOverridesPayload(`value`.let(IResolvable::unwrap))
+    unwrap(this).setManifestOverridesPayload(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Setting overrides for the application manifest.
    */
   public open fun manifestOverridesPayload(`value`: ManifestOverridesPayloadProperty) {
-    unwrap(this).setManifestOverridesPayload(`value`.let(ManifestOverridesPayloadProperty::unwrap))
+    unwrap(this).setManifestOverridesPayload(`value`.let(ManifestOverridesPayloadProperty.Companion::unwrap))
   }
 
   /**
@@ -197,14 +197,14 @@ public open class CfnApplicationInstance(
    * The application's manifest document.
    */
   public open fun manifestPayload(`value`: IResolvable) {
-    unwrap(this).setManifestPayload(`value`.let(IResolvable::unwrap))
+    unwrap(this).setManifestPayload(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The application's manifest document.
    */
   public open fun manifestPayload(`value`: ManifestPayloadProperty) {
-    unwrap(this).setManifestPayload(`value`.let(ManifestPayloadProperty::unwrap))
+    unwrap(this).setManifestPayload(`value`.let(ManifestPayloadProperty.Companion::unwrap))
   }
 
   /**
@@ -254,7 +254,7 @@ public open class CfnApplicationInstance(
    * Tags for the application instance.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -423,7 +423,7 @@ public open class CfnApplicationInstance(
      * @param manifestOverridesPayload Setting overrides for the application manifest. 
      */
     override fun manifestOverridesPayload(manifestOverridesPayload: IResolvable) {
-      cdkBuilder.manifestOverridesPayload(manifestOverridesPayload.let(IResolvable::unwrap))
+      cdkBuilder.manifestOverridesPayload(manifestOverridesPayload.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -434,7 +434,7 @@ public open class CfnApplicationInstance(
      */
     override
         fun manifestOverridesPayload(manifestOverridesPayload: ManifestOverridesPayloadProperty) {
-      cdkBuilder.manifestOverridesPayload(manifestOverridesPayload.let(ManifestOverridesPayloadProperty::unwrap))
+      cdkBuilder.manifestOverridesPayload(manifestOverridesPayload.let(ManifestOverridesPayloadProperty.Companion::unwrap))
     }
 
     /**
@@ -456,7 +456,7 @@ public open class CfnApplicationInstance(
      * @param manifestPayload The application's manifest document. 
      */
     override fun manifestPayload(manifestPayload: IResolvable) {
-      cdkBuilder.manifestPayload(manifestPayload.let(IResolvable::unwrap))
+      cdkBuilder.manifestPayload(manifestPayload.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -466,7 +466,7 @@ public open class CfnApplicationInstance(
      * @param manifestPayload The application's manifest document. 
      */
     override fun manifestPayload(manifestPayload: ManifestPayloadProperty) {
-      cdkBuilder.manifestPayload(manifestPayload.let(ManifestPayloadProperty::unwrap))
+      cdkBuilder.manifestPayload(manifestPayload.let(ManifestPayloadProperty.Companion::unwrap))
     }
 
     /**
@@ -507,7 +507,7 @@ public open class CfnApplicationInstance(
      * @param tags Tags for the application instance. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

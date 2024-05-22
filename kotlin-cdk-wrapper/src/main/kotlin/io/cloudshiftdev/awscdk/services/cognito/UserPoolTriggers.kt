@@ -228,7 +228,7 @@ public interface UserPoolTriggers {
      * @param createAuthChallenge Creates an authentication challenge.
      */
     override fun createAuthChallenge(createAuthChallenge: IFunction) {
-      cdkBuilder.createAuthChallenge(createAuthChallenge.let(IFunction::unwrap))
+      cdkBuilder.createAuthChallenge(createAuthChallenge.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -236,14 +236,14 @@ public interface UserPoolTriggers {
      * users.
      */
     override fun customEmailSender(customEmailSender: IFunction) {
-      cdkBuilder.customEmailSender(customEmailSender.let(IFunction::unwrap))
+      cdkBuilder.customEmailSender(customEmailSender.let(IFunction.Companion::unwrap))
     }
 
     /**
      * @param customMessage A custom Message AWS Lambda trigger.
      */
     override fun customMessage(customMessage: IFunction) {
-      cdkBuilder.customMessage(customMessage.let(IFunction::unwrap))
+      cdkBuilder.customMessage(customMessage.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -251,63 +251,63 @@ public interface UserPoolTriggers {
      * users.
      */
     override fun customSmsSender(customSmsSender: IFunction) {
-      cdkBuilder.customSmsSender(customSmsSender.let(IFunction::unwrap))
+      cdkBuilder.customSmsSender(customSmsSender.let(IFunction.Companion::unwrap))
     }
 
     /**
      * @param defineAuthChallenge Defines the authentication challenge.
      */
     override fun defineAuthChallenge(defineAuthChallenge: IFunction) {
-      cdkBuilder.defineAuthChallenge(defineAuthChallenge.let(IFunction::unwrap))
+      cdkBuilder.defineAuthChallenge(defineAuthChallenge.let(IFunction.Companion::unwrap))
     }
 
     /**
      * @param postAuthentication A post-authentication AWS Lambda trigger.
      */
     override fun postAuthentication(postAuthentication: IFunction) {
-      cdkBuilder.postAuthentication(postAuthentication.let(IFunction::unwrap))
+      cdkBuilder.postAuthentication(postAuthentication.let(IFunction.Companion::unwrap))
     }
 
     /**
      * @param postConfirmation A post-confirmation AWS Lambda trigger.
      */
     override fun postConfirmation(postConfirmation: IFunction) {
-      cdkBuilder.postConfirmation(postConfirmation.let(IFunction::unwrap))
+      cdkBuilder.postConfirmation(postConfirmation.let(IFunction.Companion::unwrap))
     }
 
     /**
      * @param preAuthentication A pre-authentication AWS Lambda trigger.
      */
     override fun preAuthentication(preAuthentication: IFunction) {
-      cdkBuilder.preAuthentication(preAuthentication.let(IFunction::unwrap))
+      cdkBuilder.preAuthentication(preAuthentication.let(IFunction.Companion::unwrap))
     }
 
     /**
      * @param preSignUp A pre-registration AWS Lambda trigger.
      */
     override fun preSignUp(preSignUp: IFunction) {
-      cdkBuilder.preSignUp(preSignUp.let(IFunction::unwrap))
+      cdkBuilder.preSignUp(preSignUp.let(IFunction.Companion::unwrap))
     }
 
     /**
      * @param preTokenGeneration A pre-token-generation AWS Lambda trigger.
      */
     override fun preTokenGeneration(preTokenGeneration: IFunction) {
-      cdkBuilder.preTokenGeneration(preTokenGeneration.let(IFunction::unwrap))
+      cdkBuilder.preTokenGeneration(preTokenGeneration.let(IFunction.Companion::unwrap))
     }
 
     /**
      * @param userMigration A user-migration AWS Lambda trigger.
      */
     override fun userMigration(userMigration: IFunction) {
-      cdkBuilder.userMigration(userMigration.let(IFunction::unwrap))
+      cdkBuilder.userMigration(userMigration.let(IFunction.Companion::unwrap))
     }
 
     /**
      * @param verifyAuthChallengeResponse Verifies the authentication challenge response.
      */
     override fun verifyAuthChallengeResponse(verifyAuthChallengeResponse: IFunction) {
-      cdkBuilder.verifyAuthChallengeResponse(verifyAuthChallengeResponse.let(IFunction::unwrap))
+      cdkBuilder.verifyAuthChallengeResponse(verifyAuthChallengeResponse.let(IFunction.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cognito.UserPoolTriggers =

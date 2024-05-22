@@ -61,7 +61,7 @@ public open class CfnDomainName(
   cdkObject: software.amazon.awscdk.services.apigateway.CfnDomainName,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.apigateway.CfnDomainName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.apigateway.CfnDomainName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -70,8 +70,8 @@ public open class CfnDomainName(
     id: String,
     props: CfnDomainNameProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.CfnDomainName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDomainNameProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.CfnDomainName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDomainNameProps.Companion::unwrap))
   )
 
   public constructor(
@@ -147,14 +147,14 @@ public open class CfnDomainName(
    * The endpoint configuration of this DomainName showing the endpoint types of the domain name.
    */
   public open fun endpointConfiguration(`value`: IResolvable) {
-    unwrap(this).setEndpointConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEndpointConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The endpoint configuration of this DomainName showing the endpoint types of the domain name.
    */
   public open fun endpointConfiguration(`value`: EndpointConfigurationProperty) {
-    unwrap(this).setEndpointConfiguration(`value`.let(EndpointConfigurationProperty::unwrap))
+    unwrap(this).setEndpointConfiguration(`value`.let(EndpointConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -171,7 +171,7 @@ public open class CfnDomainName(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -183,14 +183,14 @@ public open class CfnDomainName(
    * The mutual TLS authentication configuration for a custom domain name.
    */
   public open fun mutualTlsAuthentication(`value`: IResolvable) {
-    unwrap(this).setMutualTlsAuthentication(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMutualTlsAuthentication(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The mutual TLS authentication configuration for a custom domain name.
    */
   public open fun mutualTlsAuthentication(`value`: MutualTlsAuthenticationProperty) {
-    unwrap(this).setMutualTlsAuthentication(`value`.let(MutualTlsAuthenticationProperty::unwrap))
+    unwrap(this).setMutualTlsAuthentication(`value`.let(MutualTlsAuthenticationProperty.Companion::unwrap))
   }
 
   /**
@@ -256,7 +256,7 @@ public open class CfnDomainName(
    * The collection of tags.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -455,7 +455,7 @@ public open class CfnDomainName(
      * endpoint types of the domain name. 
      */
     override fun endpointConfiguration(endpointConfiguration: IResolvable) {
-      cdkBuilder.endpointConfiguration(endpointConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.endpointConfiguration(endpointConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -466,7 +466,7 @@ public open class CfnDomainName(
      * endpoint types of the domain name. 
      */
     override fun endpointConfiguration(endpointConfiguration: EndpointConfigurationProperty) {
-      cdkBuilder.endpointConfiguration(endpointConfiguration.let(EndpointConfigurationProperty::unwrap))
+      cdkBuilder.endpointConfiguration(endpointConfiguration.let(EndpointConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -493,7 +493,7 @@ public open class CfnDomainName(
      * domain name. 
      */
     override fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable) {
-      cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(IResolvable::unwrap))
+      cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -507,7 +507,7 @@ public open class CfnDomainName(
      * domain name. 
      */
     override fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty) {
-      cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(MutualTlsAuthenticationProperty::unwrap))
+      cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(MutualTlsAuthenticationProperty.Companion::unwrap))
     }
 
     /**
@@ -576,7 +576,7 @@ public open class CfnDomainName(
      * @param tags The collection of tags. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

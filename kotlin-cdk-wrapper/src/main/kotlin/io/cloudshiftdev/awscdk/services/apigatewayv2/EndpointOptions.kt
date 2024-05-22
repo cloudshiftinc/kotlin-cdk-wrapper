@@ -124,7 +124,7 @@ public interface EndpointOptions {
      * Certificate can be both ACM issued or imported.
      */
     override fun certificate(certificate: ICertificate) {
-      cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
+      cdkBuilder.certificate(certificate.let(ICertificate.Companion::unwrap))
     }
 
     /**
@@ -139,7 +139,7 @@ public interface EndpointOptions {
      * @param endpointType The type of endpoint for this DomainName.
      */
     override fun endpointType(endpointType: EndpointType) {
-      cdkBuilder.endpointType(endpointType.let(EndpointType::unwrap))
+      cdkBuilder.endpointType(endpointType.let(EndpointType.Companion::unwrap))
     }
 
     /**
@@ -152,7 +152,7 @@ public interface EndpointOptions {
      * domain name.
      */
     override fun ownershipCertificate(ownershipCertificate: ICertificate) {
-      cdkBuilder.ownershipCertificate(ownershipCertificate.let(ICertificate::unwrap))
+      cdkBuilder.ownershipCertificate(ownershipCertificate.let(ICertificate.Companion::unwrap))
     }
 
     /**
@@ -160,7 +160,7 @@ public interface EndpointOptions {
      * domain name.
      */
     override fun securityPolicy(securityPolicy: SecurityPolicy) {
-      cdkBuilder.securityPolicy(securityPolicy.let(SecurityPolicy::unwrap))
+      cdkBuilder.securityPolicy(securityPolicy.let(SecurityPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.EndpointOptions =

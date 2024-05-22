@@ -167,14 +167,14 @@ public interface CfnLinkProps {
      * @param bandwidth The bandwidth for the link. 
      */
     override fun bandwidth(bandwidth: IResolvable) {
-      cdkBuilder.bandwidth(bandwidth.let(IResolvable::unwrap))
+      cdkBuilder.bandwidth(bandwidth.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param bandwidth The bandwidth for the link. 
      */
     override fun bandwidth(bandwidth: CfnLink.BandwidthProperty) {
-      cdkBuilder.bandwidth(bandwidth.let(CfnLink.BandwidthProperty::unwrap))
+      cdkBuilder.bandwidth(bandwidth.let(CfnLink.BandwidthProperty.Companion::unwrap))
     }
 
     /**
@@ -219,7 +219,7 @@ public interface CfnLinkProps {
      * @param tags The tags for the link.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

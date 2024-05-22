@@ -12,7 +12,6 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
-import kotlin.jvm.JvmName
 
 /**
  * Properties for defining a `CfnDataProvider`.
@@ -30,15 +29,6 @@ import kotlin.jvm.JvmName
  * .dataProviderName("dataProviderName")
  * .description("description")
  * .exactSettings(false)
- * .settings(SettingsProperty.builder()
- * .postgreSqlSettings(PostgreSqlSettingsProperty.builder()
- * .certificateArn("certificateArn")
- * .databaseName("databaseName")
- * .port(123)
- * .serverName("serverName")
- * .sslMode("sslMode")
- * .build())
- * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -98,13 +88,6 @@ public interface CfnDataProviderProps {
   public fun exactSettings(): Any? = unwrap(this).getExactSettings()
 
   /**
-   * The settings in JSON format for a data provider.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-settings)
-   */
-  public fun settings(): Any? = unwrap(this).getSettings()
-
-  /**
    * An array of key-value pairs to apply to this resource.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-tags)
@@ -153,23 +136,6 @@ public interface CfnDataProviderProps {
      * @param exactSettings The property describes the exact settings which can be modified.
      */
     public fun exactSettings(exactSettings: IResolvable)
-
-    /**
-     * @param settings The settings in JSON format for a data provider.
-     */
-    public fun settings(settings: IResolvable)
-
-    /**
-     * @param settings The settings in JSON format for a data provider.
-     */
-    public fun settings(settings: CfnDataProvider.SettingsProperty)
-
-    /**
-     * @param settings The settings in JSON format for a data provider.
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("e5d74db5466a3c55f01d8a55af7cecd169b9ba622ed58ad61dc597716b252aab")
-    public fun settings(settings: CfnDataProvider.SettingsProperty.Builder.() -> Unit)
 
     /**
      * @param tags An array of key-value pairs to apply to this resource.
@@ -233,36 +199,14 @@ public interface CfnDataProviderProps {
      * @param exactSettings The property describes the exact settings which can be modified.
      */
     override fun exactSettings(exactSettings: IResolvable) {
-      cdkBuilder.exactSettings(exactSettings.let(IResolvable::unwrap))
+      cdkBuilder.exactSettings(exactSettings.let(IResolvable.Companion::unwrap))
     }
-
-    /**
-     * @param settings The settings in JSON format for a data provider.
-     */
-    override fun settings(settings: IResolvable) {
-      cdkBuilder.settings(settings.let(IResolvable::unwrap))
-    }
-
-    /**
-     * @param settings The settings in JSON format for a data provider.
-     */
-    override fun settings(settings: CfnDataProvider.SettingsProperty) {
-      cdkBuilder.settings(settings.let(CfnDataProvider.SettingsProperty::unwrap))
-    }
-
-    /**
-     * @param settings The settings in JSON format for a data provider.
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("e5d74db5466a3c55f01d8a55af7cecd169b9ba622ed58ad61dc597716b252aab")
-    override fun settings(settings: CfnDataProvider.SettingsProperty.Builder.() -> Unit): Unit =
-        settings(CfnDataProvider.SettingsProperty(settings))
 
     /**
      * @param tags An array of key-value pairs to apply to this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -324,13 +268,6 @@ public interface CfnDataProviderProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-exactsettings)
      */
     override fun exactSettings(): Any? = unwrap(this).getExactSettings()
-
-    /**
-     * The settings in JSON format for a data provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-settings)
-     */
-    override fun settings(): Any? = unwrap(this).getSettings()
 
     /**
      * An array of key-value pairs to apply to this resource.

@@ -194,7 +194,7 @@ public open class CfnLifecyclePolicy(
   cdkObject: software.amazon.awscdk.services.dlm.CfnLifecyclePolicy,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.dlm.CfnLifecyclePolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.dlm.CfnLifecyclePolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -203,8 +203,8 @@ public open class CfnLifecyclePolicy(
     id: String,
     props: CfnLifecyclePolicyProps,
   ) :
-      this(software.amazon.awscdk.services.dlm.CfnLifecyclePolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLifecyclePolicyProps::unwrap))
+      this(software.amazon.awscdk.services.dlm.CfnLifecyclePolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLifecyclePolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -243,7 +243,7 @@ public open class CfnLifecyclePolicy(
    * resource to the snapshot or AMI.
    */
   public open fun copyTags(`value`: IResolvable) {
-    unwrap(this).setCopyTags(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCopyTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -307,7 +307,7 @@ public open class CfnLifecyclePolicy(
    * do not want to create snapshots or AMIs.
    */
   public open fun exclusions(`value`: IResolvable) {
-    unwrap(this).setExclusions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setExclusions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -315,7 +315,7 @@ public open class CfnLifecyclePolicy(
    * do not want to create snapshots or AMIs.
    */
   public open fun exclusions(`value`: ExclusionsProperty) {
-    unwrap(this).setExclusions(`value`.let(ExclusionsProperty::unwrap))
+    unwrap(this).setExclusions(`value`.let(ExclusionsProperty.Companion::unwrap))
   }
 
   /**
@@ -363,7 +363,7 @@ public open class CfnLifecyclePolicy(
    * state.
    */
   public open fun extendDeletion(`value`: IResolvable) {
-    unwrap(this).setExtendDeletion(`value`.let(IResolvable::unwrap))
+    unwrap(this).setExtendDeletion(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -372,7 +372,7 @@ public open class CfnLifecyclePolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -384,14 +384,14 @@ public open class CfnLifecyclePolicy(
    * The configuration details of the lifecycle policy.
    */
   public open fun policyDetails(`value`: IResolvable) {
-    unwrap(this).setPolicyDetails(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPolicyDetails(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration details of the lifecycle policy.
    */
   public open fun policyDetails(`value`: PolicyDetailsProperty) {
-    unwrap(this).setPolicyDetails(`value`.let(PolicyDetailsProperty::unwrap))
+    unwrap(this).setPolicyDetails(`value`.let(PolicyDetailsProperty.Companion::unwrap))
   }
 
   /**
@@ -443,7 +443,7 @@ public open class CfnLifecyclePolicy(
    * The tags to apply to the lifecycle policy during creation.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -763,7 +763,7 @@ public open class CfnLifecyclePolicy(
      * the source resource to the snapshot or AMI. 
      */
     override fun copyTags(copyTags: IResolvable) {
-      cdkBuilder.copyTags(copyTags.let(IResolvable::unwrap))
+      cdkBuilder.copyTags(copyTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -836,7 +836,7 @@ public open class CfnLifecyclePolicy(
      * instances for which you do not want to create snapshots or AMIs. 
      */
     override fun exclusions(exclusions: IResolvable) {
-      cdkBuilder.exclusions(exclusions.let(IResolvable::unwrap))
+      cdkBuilder.exclusions(exclusions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -851,7 +851,7 @@ public open class CfnLifecyclePolicy(
      * instances for which you do not want to create snapshots or AMIs. 
      */
     override fun exclusions(exclusions: ExclusionsProperty) {
-      cdkBuilder.exclusions(exclusions.let(ExclusionsProperty::unwrap))
+      cdkBuilder.exclusions(exclusions.let(ExclusionsProperty.Companion::unwrap))
     }
 
     /**
@@ -943,7 +943,7 @@ public open class CfnLifecyclePolicy(
      * error, disabled, or deleted state. 
      */
     override fun extendDeletion(extendDeletion: IResolvable) {
-      cdkBuilder.extendDeletion(extendDeletion.let(IResolvable::unwrap))
+      cdkBuilder.extendDeletion(extendDeletion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -958,7 +958,7 @@ public open class CfnLifecyclePolicy(
      * @param policyDetails The configuration details of the lifecycle policy. 
      */
     override fun policyDetails(policyDetails: IResolvable) {
-      cdkBuilder.policyDetails(policyDetails.let(IResolvable::unwrap))
+      cdkBuilder.policyDetails(policyDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -973,7 +973,7 @@ public open class CfnLifecyclePolicy(
      * @param policyDetails The configuration details of the lifecycle policy. 
      */
     override fun policyDetails(policyDetails: PolicyDetailsProperty) {
-      cdkBuilder.policyDetails(policyDetails.let(PolicyDetailsProperty::unwrap))
+      cdkBuilder.policyDetails(policyDetails.let(PolicyDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -1027,7 +1027,7 @@ public open class CfnLifecyclePolicy(
      * @param tags The tags to apply to the lifecycle policy during creation. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1141,7 +1141,7 @@ public open class CfnLifecyclePolicy(
        * @param crossRegionCopy The rule for copying shared snapshots across Regions. 
        */
       override fun crossRegionCopy(crossRegionCopy: IResolvable) {
-        cdkBuilder.crossRegionCopy(crossRegionCopy.let(IResolvable::unwrap))
+        cdkBuilder.crossRegionCopy(crossRegionCopy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1281,7 +1281,7 @@ public open class CfnLifecyclePolicy(
        * snapshots](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/snapshot-archive.html) .
        */
       override fun retentionArchiveTier(retentionArchiveTier: IResolvable) {
-        cdkBuilder.retentionArchiveTier(retentionArchiveTier.let(IResolvable::unwrap))
+        cdkBuilder.retentionArchiveTier(retentionArchiveTier.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1291,7 +1291,7 @@ public open class CfnLifecyclePolicy(
        * snapshots](https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/snapshot-archive.html) .
        */
       override fun retentionArchiveTier(retentionArchiveTier: RetentionArchiveTierProperty) {
-        cdkBuilder.retentionArchiveTier(retentionArchiveTier.let(RetentionArchiveTierProperty::unwrap))
+        cdkBuilder.retentionArchiveTier(retentionArchiveTier.let(RetentionArchiveTierProperty.Companion::unwrap))
       }
 
       /**
@@ -1405,14 +1405,14 @@ public open class CfnLifecyclePolicy(
        * @param retainRule Information about the retention period for the snapshot archiving rule. 
        */
       override fun retainRule(retainRule: IResolvable) {
-        cdkBuilder.retainRule(retainRule.let(IResolvable::unwrap))
+        cdkBuilder.retainRule(retainRule.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param retainRule Information about the retention period for the snapshot archiving rule. 
        */
       override fun retainRule(retainRule: ArchiveRetainRuleProperty) {
-        cdkBuilder.retainRule(retainRule.let(ArchiveRetainRuleProperty::unwrap))
+        cdkBuilder.retainRule(retainRule.let(ArchiveRetainRuleProperty.Companion::unwrap))
       }
 
       /**
@@ -1714,7 +1714,7 @@ public open class CfnLifecyclePolicy(
        * .
        */
       override fun scripts(scripts: IResolvable) {
-        cdkBuilder.scripts(scripts.let(IResolvable::unwrap))
+        cdkBuilder.scripts(scripts.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1978,7 +1978,7 @@ public open class CfnLifecyclePolicy(
        * @param encryptionConfiguration The encryption settings for the copied snapshot. 
        */
       override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1986,7 +1986,7 @@ public open class CfnLifecyclePolicy(
        */
       override
           fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
-        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty::unwrap))
+        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2004,7 +2004,7 @@ public open class CfnLifecyclePolicy(
        * After the retention period expires, the cross-Region copy is deleted.
        */
       override fun retainRule(retainRule: IResolvable) {
-        cdkBuilder.retainRule(retainRule.let(IResolvable::unwrap))
+        cdkBuilder.retainRule(retainRule.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2013,7 +2013,7 @@ public open class CfnLifecyclePolicy(
        * After the retention period expires, the cross-Region copy is deleted.
        */
       override fun retainRule(retainRule: CrossRegionCopyRetainRuleProperty) {
-        cdkBuilder.retainRule(retainRule.let(CrossRegionCopyRetainRuleProperty::unwrap))
+        cdkBuilder.retainRule(retainRule.let(CrossRegionCopyRetainRuleProperty.Companion::unwrap))
       }
 
       /**
@@ -2578,7 +2578,7 @@ public open class CfnLifecyclePolicy(
        * AMI to the cross-Region copy.
        */
       override fun copyTags(copyTags: IResolvable) {
-        cdkBuilder.copyTags(copyTags.let(IResolvable::unwrap))
+        cdkBuilder.copyTags(copyTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2586,7 +2586,7 @@ public open class CfnLifecyclePolicy(
        * AMI copies created by the rule.
        */
       override fun deprecateRule(deprecateRule: IResolvable) {
-        cdkBuilder.deprecateRule(deprecateRule.let(IResolvable::unwrap))
+        cdkBuilder.deprecateRule(deprecateRule.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2594,7 +2594,7 @@ public open class CfnLifecyclePolicy(
        * AMI copies created by the rule.
        */
       override fun deprecateRule(deprecateRule: CrossRegionCopyDeprecateRuleProperty) {
-        cdkBuilder.deprecateRule(deprecateRule.let(CrossRegionCopyDeprecateRuleProperty::unwrap))
+        cdkBuilder.deprecateRule(deprecateRule.let(CrossRegionCopyDeprecateRuleProperty.Companion::unwrap))
       }
 
       /**
@@ -2624,7 +2624,7 @@ public open class CfnLifecyclePolicy(
        * encryption by default is not enabled.
        */
       override fun encrypted(encrypted: IResolvable) {
-        cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
+        cdkBuilder.encrypted(encrypted.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2632,7 +2632,7 @@ public open class CfnLifecyclePolicy(
        * AMI copies are to be retained in the destination Region.
        */
       override fun retainRule(retainRule: IResolvable) {
-        cdkBuilder.retainRule(retainRule.let(IResolvable::unwrap))
+        cdkBuilder.retainRule(retainRule.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2640,7 +2640,7 @@ public open class CfnLifecyclePolicy(
        * AMI copies are to be retained in the destination Region.
        */
       override fun retainRule(retainRule: CrossRegionCopyRetainRuleProperty) {
-        cdkBuilder.retainRule(retainRule.let(CrossRegionCopyRetainRuleProperty::unwrap))
+        cdkBuilder.retainRule(retainRule.let(CrossRegionCopyRetainRuleProperty.Companion::unwrap))
       }
 
       /**
@@ -3038,7 +3038,7 @@ public open class CfnLifecyclePolicy(
        * encryption by default is not enabled.
        */
       override fun encrypted(encrypted: IResolvable) {
-        cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
+        cdkBuilder.encrypted(encrypted.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -3363,14 +3363,14 @@ public open class CfnLifecyclePolicy(
        * @param parameters Information about the event.
        */
       override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param parameters Information about the event.
        */
       override fun parameters(parameters: EventParametersProperty) {
-        cdkBuilder.parameters(parameters.let(EventParametersProperty::unwrap))
+        cdkBuilder.parameters(parameters.let(EventParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3541,7 +3541,7 @@ public open class CfnLifecyclePolicy(
        * backed up by the policy. To exclude boot volumes, specify `true` .
        */
       override fun excludeBootVolumes(excludeBootVolumes: IResolvable) {
-        cdkBuilder.excludeBootVolumes(excludeBootVolumes.let(IResolvable::unwrap))
+        cdkBuilder.excludeBootVolumes(excludeBootVolumes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3954,7 +3954,7 @@ public open class CfnLifecyclePolicy(
        * instances will be excluded from the multi-volume snapshot sets created by the policy.
        */
       override fun excludeBootVolume(excludeBootVolume: IResolvable) {
-        cdkBuilder.excludeBootVolume(excludeBootVolume.let(IResolvable::unwrap))
+        cdkBuilder.excludeBootVolume(excludeBootVolume.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3965,7 +3965,7 @@ public open class CfnLifecyclePolicy(
        * instances will be excluded from the multi-volume snapshot sets created by the policy.
        */
       override fun excludeDataVolumeTags(excludeDataVolumeTags: IResolvable) {
-        cdkBuilder.excludeDataVolumeTags(excludeDataVolumeTags.let(IResolvable::unwrap))
+        cdkBuilder.excludeDataVolumeTags(excludeDataVolumeTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4008,7 +4008,7 @@ public open class CfnLifecyclePolicy(
        * (instances are not rebooted).
        */
       override fun noReboot(noReboot: IResolvable) {
-        cdkBuilder.noReboot(noReboot.let(IResolvable::unwrap))
+        cdkBuilder.noReboot(noReboot.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.dlm.CfnLifecyclePolicy.ParametersProperty
@@ -4737,7 +4737,7 @@ public open class CfnLifecyclePolicy(
        * You can specify only one action per policy.
        */
       override fun actions(actions: IResolvable) {
-        cdkBuilder.actions(actions.let(IResolvable::unwrap))
+        cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4775,7 +4775,7 @@ public open class CfnLifecyclePolicy(
        * Default: false
        */
       override fun copyTags(copyTags: IResolvable) {
-        cdkBuilder.copyTags(copyTags.let(IResolvable::unwrap))
+        cdkBuilder.copyTags(copyTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4805,7 +4805,7 @@ public open class CfnLifecyclePolicy(
        * policy.
        */
       override fun eventSource(eventSource: IResolvable) {
-        cdkBuilder.eventSource(eventSource.let(IResolvable::unwrap))
+        cdkBuilder.eventSource(eventSource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4813,7 +4813,7 @@ public open class CfnLifecyclePolicy(
        * policy.
        */
       override fun eventSource(eventSource: EventSourceProperty) {
-        cdkBuilder.eventSource(eventSource.let(EventSourceProperty::unwrap))
+        cdkBuilder.eventSource(eventSource.let(EventSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -4832,7 +4832,7 @@ public open class CfnLifecyclePolicy(
        * specified exclusion parameters.
        */
       override fun exclusions(exclusions: IResolvable) {
-        cdkBuilder.exclusions(exclusions.let(IResolvable::unwrap))
+        cdkBuilder.exclusions(exclusions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4842,7 +4842,7 @@ public open class CfnLifecyclePolicy(
        * specified exclusion parameters.
        */
       override fun exclusions(exclusions: ExclusionsProperty) {
-        cdkBuilder.exclusions(exclusions.let(ExclusionsProperty::unwrap))
+        cdkBuilder.exclusions(exclusions.let(ExclusionsProperty.Companion::unwrap))
       }
 
       /**
@@ -4905,7 +4905,7 @@ public open class CfnLifecyclePolicy(
        * Default: false
        */
       override fun extendDeletion(extendDeletion: IResolvable) {
-        cdkBuilder.extendDeletion(extendDeletion.let(IResolvable::unwrap))
+        cdkBuilder.extendDeletion(extendDeletion.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4918,7 +4918,7 @@ public open class CfnLifecyclePolicy(
        * null.
        */
       override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4931,7 +4931,7 @@ public open class CfnLifecyclePolicy(
        * null.
        */
       override fun parameters(parameters: ParametersProperty) {
-        cdkBuilder.parameters(parameters.let(ParametersProperty::unwrap))
+        cdkBuilder.parameters(parameters.let(ParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -5045,7 +5045,7 @@ public open class CfnLifecyclePolicy(
        * schedules.
        */
       override fun schedules(schedules: IResolvable) {
-        cdkBuilder.schedules(schedules.let(IResolvable::unwrap))
+        cdkBuilder.schedules(schedules.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5071,7 +5071,7 @@ public open class CfnLifecyclePolicy(
        * targeted resources for this policy.
        */
       override fun targetTags(targetTags: IResolvable) {
-        cdkBuilder.targetTags(targetTags.let(IResolvable::unwrap))
+        cdkBuilder.targetTags(targetTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6146,7 +6146,7 @@ public open class CfnLifecyclePolicy(
        * .
        */
       override fun archiveRule(archiveRule: IResolvable) {
-        cdkBuilder.archiveRule(archiveRule.let(IResolvable::unwrap))
+        cdkBuilder.archiveRule(archiveRule.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6162,7 +6162,7 @@ public open class CfnLifecyclePolicy(
        * .
        */
       override fun archiveRule(archiveRule: ArchiveRuleProperty) {
-        cdkBuilder.archiveRule(archiveRule.let(ArchiveRuleProperty::unwrap))
+        cdkBuilder.archiveRule(archiveRule.let(ArchiveRuleProperty.Companion::unwrap))
       }
 
       /**
@@ -6195,21 +6195,21 @@ public open class CfnLifecyclePolicy(
        * created by this policy.
        */
       override fun copyTags(copyTags: IResolvable) {
-        cdkBuilder.copyTags(copyTags.let(IResolvable::unwrap))
+        cdkBuilder.copyTags(copyTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param createRule The creation rule.
        */
       override fun createRule(createRule: IResolvable) {
-        cdkBuilder.createRule(createRule.let(IResolvable::unwrap))
+        cdkBuilder.createRule(createRule.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param createRule The creation rule.
        */
       override fun createRule(createRule: CreateRuleProperty) {
-        cdkBuilder.createRule(createRule.let(CreateRuleProperty::unwrap))
+        cdkBuilder.createRule(createRule.let(CreateRuleProperty.Companion::unwrap))
       }
 
       /**
@@ -6228,7 +6228,7 @@ public open class CfnLifecyclePolicy(
        * Regions or Outposts.
        */
       override fun crossRegionCopyRules(crossRegionCopyRules: IResolvable) {
-        cdkBuilder.crossRegionCopyRules(crossRegionCopyRules.let(IResolvable::unwrap))
+        cdkBuilder.crossRegionCopyRules(crossRegionCopyRules.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6257,7 +6257,7 @@ public open class CfnLifecyclePolicy(
        * schedule.
        */
       override fun deprecateRule(deprecateRule: IResolvable) {
-        cdkBuilder.deprecateRule(deprecateRule.let(IResolvable::unwrap))
+        cdkBuilder.deprecateRule(deprecateRule.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6265,7 +6265,7 @@ public open class CfnLifecyclePolicy(
        * schedule.
        */
       override fun deprecateRule(deprecateRule: DeprecateRuleProperty) {
-        cdkBuilder.deprecateRule(deprecateRule.let(DeprecateRuleProperty::unwrap))
+        cdkBuilder.deprecateRule(deprecateRule.let(DeprecateRuleProperty.Companion::unwrap))
       }
 
       /**
@@ -6282,7 +6282,7 @@ public open class CfnLifecyclePolicy(
        * snapshot restore.
        */
       override fun fastRestoreRule(fastRestoreRule: IResolvable) {
-        cdkBuilder.fastRestoreRule(fastRestoreRule.let(IResolvable::unwrap))
+        cdkBuilder.fastRestoreRule(fastRestoreRule.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6290,7 +6290,7 @@ public open class CfnLifecyclePolicy(
        * snapshot restore.
        */
       override fun fastRestoreRule(fastRestoreRule: FastRestoreRuleProperty) {
-        cdkBuilder.fastRestoreRule(fastRestoreRule.let(FastRestoreRuleProperty::unwrap))
+        cdkBuilder.fastRestoreRule(fastRestoreRule.let(FastRestoreRuleProperty.Companion::unwrap))
       }
 
       /**
@@ -6313,14 +6313,14 @@ public open class CfnLifecyclePolicy(
        * @param retainRule The retention rule for snapshots or AMIs created by the policy.
        */
       override fun retainRule(retainRule: IResolvable) {
-        cdkBuilder.retainRule(retainRule.let(IResolvable::unwrap))
+        cdkBuilder.retainRule(retainRule.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param retainRule The retention rule for snapshots or AMIs created by the policy.
        */
       override fun retainRule(retainRule: RetainRuleProperty) {
-        cdkBuilder.retainRule(retainRule.let(RetainRuleProperty::unwrap))
+        cdkBuilder.retainRule(retainRule.let(RetainRuleProperty.Companion::unwrap))
       }
 
       /**
@@ -6336,7 +6336,7 @@ public open class CfnLifecyclePolicy(
        * other AWS accounts .
        */
       override fun shareRules(shareRules: IResolvable) {
-        cdkBuilder.shareRules(shareRules.let(IResolvable::unwrap))
+        cdkBuilder.shareRules(shareRules.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6358,7 +6358,7 @@ public open class CfnLifecyclePolicy(
        * These user-defined tags are in addition to the AWS -added lifecycle tags.
        */
       override fun tagsToAdd(tagsToAdd: IResolvable) {
-        cdkBuilder.tagsToAdd(tagsToAdd.let(IResolvable::unwrap))
+        cdkBuilder.tagsToAdd(tagsToAdd.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6383,7 +6383,7 @@ public open class CfnLifecyclePolicy(
        * Management – Instance policies.
        */
       override fun variableTags(variableTags: IResolvable) {
-        cdkBuilder.variableTags(variableTags.let(IResolvable::unwrap))
+        cdkBuilder.variableTags(variableTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6815,7 +6815,7 @@ public open class CfnLifecyclePolicy(
        * Default: true
        */
       override fun executeOperationOnScriptFailure(executeOperationOnScriptFailure: IResolvable) {
-        cdkBuilder.executeOperationOnScriptFailure(executeOperationOnScriptFailure.let(IResolvable::unwrap))
+        cdkBuilder.executeOperationOnScriptFailure(executeOperationOnScriptFailure.let(IResolvable.Companion::unwrap))
       }
 
       /**

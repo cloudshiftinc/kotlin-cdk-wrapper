@@ -53,8 +53,8 @@ public open class CfnListener(
     id: String,
     props: CfnListenerProps,
   ) :
-      this(software.amazon.awscdk.services.globalaccelerator.CfnListener(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnListenerProps::unwrap))
+      this(software.amazon.awscdk.services.globalaccelerator.CfnListener(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnListenerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -103,7 +103,7 @@ public open class CfnListener(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -115,7 +115,7 @@ public open class CfnListener(
    * The list of port ranges for the connections from clients to the accelerator.
    */
   public open fun portRanges(`value`: IResolvable) {
-    unwrap(this).setPortRanges(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPortRanges(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -282,7 +282,7 @@ public open class CfnListener(
      * accelerator. 
      */
     override fun portRanges(portRanges: IResolvable) {
-      cdkBuilder.portRanges(portRanges.let(IResolvable::unwrap))
+      cdkBuilder.portRanges(portRanges.let(IResolvable.Companion::unwrap))
     }
 
     /**

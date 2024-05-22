@@ -57,8 +57,8 @@ public open class CfnProtectionGroup(
     id: String,
     props: CfnProtectionGroupProps,
   ) :
-      this(software.amazon.awscdk.services.shield.CfnProtectionGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnProtectionGroupProps::unwrap))
+      this(software.amazon.awscdk.services.shield.CfnProtectionGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnProtectionGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -99,7 +99,7 @@ public open class CfnProtectionGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -164,7 +164,7 @@ public open class CfnProtectionGroup(
    * Key:value pairs associated with an AWS resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -384,7 +384,7 @@ public open class CfnProtectionGroup(
      * @param tags Key:value pairs associated with an AWS resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

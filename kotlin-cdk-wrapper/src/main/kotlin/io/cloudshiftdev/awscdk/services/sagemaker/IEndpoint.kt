@@ -51,7 +51,7 @@ public interface IEndpoint : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -82,7 +82,7 @@ public interface IEndpoint : IResource {
      * @param grantee The principal to grant access to. 
      */
     override fun grantInvoke(grantee: IGrantable): Grant =
-        unwrap(this).grantInvoke(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantInvoke(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 

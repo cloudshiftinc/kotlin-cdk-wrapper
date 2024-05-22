@@ -576,7 +576,7 @@ public interface CfnComputeEnvironmentProps {
      * the ** .
      */
     override fun computeResources(computeResources: IResolvable) {
-      cdkBuilder.computeResources(computeResources.let(IResolvable::unwrap))
+      cdkBuilder.computeResources(computeResources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -589,7 +589,7 @@ public interface CfnComputeEnvironmentProps {
      */
     override
         fun computeResources(computeResources: CfnComputeEnvironment.ComputeResourcesProperty) {
-      cdkBuilder.computeResources(computeResources.let(CfnComputeEnvironment.ComputeResourcesProperty::unwrap))
+      cdkBuilder.computeResources(computeResources.let(CfnComputeEnvironment.ComputeResourcesProperty.Companion::unwrap))
     }
 
     /**
@@ -611,7 +611,7 @@ public interface CfnComputeEnvironmentProps {
      * environment.
      */
     override fun eksConfiguration(eksConfiguration: IResolvable) {
-      cdkBuilder.eksConfiguration(eksConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.eksConfiguration(eksConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -620,7 +620,7 @@ public interface CfnComputeEnvironmentProps {
      */
     override
         fun eksConfiguration(eksConfiguration: CfnComputeEnvironment.EksConfigurationProperty) {
-      cdkBuilder.eksConfiguration(eksConfiguration.let(CfnComputeEnvironment.EksConfigurationProperty::unwrap))
+      cdkBuilder.eksConfiguration(eksConfiguration.let(CfnComputeEnvironment.EksConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -740,7 +740,7 @@ public interface CfnComputeEnvironmentProps {
      * .
      */
     override fun replaceComputeEnvironment(replaceComputeEnvironment: IResolvable) {
-      cdkBuilder.replaceComputeEnvironment(replaceComputeEnvironment.let(IResolvable::unwrap))
+      cdkBuilder.replaceComputeEnvironment(replaceComputeEnvironment.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -841,7 +841,7 @@ public interface CfnComputeEnvironmentProps {
      * in the *AWS Batch User Guide* .
      */
     override fun updatePolicy(updatePolicy: IResolvable) {
-      cdkBuilder.updatePolicy(updatePolicy.let(IResolvable::unwrap))
+      cdkBuilder.updatePolicy(updatePolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -851,7 +851,7 @@ public interface CfnComputeEnvironmentProps {
      * in the *AWS Batch User Guide* .
      */
     override fun updatePolicy(updatePolicy: CfnComputeEnvironment.UpdatePolicyProperty) {
-      cdkBuilder.updatePolicy(updatePolicy.let(CfnComputeEnvironment.UpdatePolicyProperty::unwrap))
+      cdkBuilder.updatePolicy(updatePolicy.let(CfnComputeEnvironment.UpdatePolicyProperty.Companion::unwrap))
     }
 
     /**

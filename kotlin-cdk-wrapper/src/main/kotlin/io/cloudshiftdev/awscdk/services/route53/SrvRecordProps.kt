@@ -188,7 +188,7 @@ public interface SrvRecordProps : RecordSetOptions {
      * user's location.
      */
     override fun geoLocation(geoLocation: GeoLocation) {
-      cdkBuilder.geoLocation(geoLocation.let(GeoLocation::unwrap))
+      cdkBuilder.geoLocation(geoLocation.let(GeoLocation.Companion::unwrap))
     }
 
     /**
@@ -243,14 +243,14 @@ public interface SrvRecordProps : RecordSetOptions {
      * @param ttl The resource record cache time to live (TTL).
      */
     override fun ttl(ttl: Duration) {
-      cdkBuilder.ttl(ttl.let(Duration::unwrap))
+      cdkBuilder.ttl(ttl.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param values The values. 
      */
     override fun values(values: List<SrvRecordValue>) {
-      cdkBuilder.values(values.map(SrvRecordValue::unwrap))
+      cdkBuilder.values(values.map(SrvRecordValue.Companion::unwrap))
     }
 
     /**
@@ -276,7 +276,7 @@ public interface SrvRecordProps : RecordSetOptions {
      * @param zone The hosted zone in which to define the new record. 
      */
     override fun zone(zone: IHostedZone) {
-      cdkBuilder.zone(zone.let(IHostedZone::unwrap))
+      cdkBuilder.zone(zone.let(IHostedZone.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.route53.SrvRecordProps = cdkBuilder.build()

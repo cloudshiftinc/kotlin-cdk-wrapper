@@ -93,8 +93,8 @@ public open class CfnInferenceComponent(
     id: String,
     props: CfnInferenceComponentProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnInferenceComponent(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInferenceComponentProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnInferenceComponent(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInferenceComponentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -197,7 +197,7 @@ public open class CfnInferenceComponent(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -209,14 +209,14 @@ public open class CfnInferenceComponent(
    * The runtime config for the inference component.
    */
   public open fun runtimeConfig(`value`: IResolvable) {
-    unwrap(this).setRuntimeConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRuntimeConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The runtime config for the inference component.
    */
   public open fun runtimeConfig(`value`: InferenceComponentRuntimeConfigProperty) {
-    unwrap(this).setRuntimeConfig(`value`.let(InferenceComponentRuntimeConfigProperty::unwrap))
+    unwrap(this).setRuntimeConfig(`value`.let(InferenceComponentRuntimeConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -237,14 +237,14 @@ public open class CfnInferenceComponent(
    * The specification for the inference component.
    */
   public open fun specification(`value`: IResolvable) {
-    unwrap(this).setSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The specification for the inference component.
    */
   public open fun specification(`value`: InferenceComponentSpecificationProperty) {
-    unwrap(this).setSpecification(`value`.let(InferenceComponentSpecificationProperty::unwrap))
+    unwrap(this).setSpecification(`value`.let(InferenceComponentSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -265,7 +265,7 @@ public open class CfnInferenceComponent(
    * An array of tags to apply to the resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -439,7 +439,7 @@ public open class CfnInferenceComponent(
      * @param runtimeConfig The runtime config for the inference component. 
      */
     override fun runtimeConfig(runtimeConfig: IResolvable) {
-      cdkBuilder.runtimeConfig(runtimeConfig.let(IResolvable::unwrap))
+      cdkBuilder.runtimeConfig(runtimeConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -449,7 +449,7 @@ public open class CfnInferenceComponent(
      * @param runtimeConfig The runtime config for the inference component. 
      */
     override fun runtimeConfig(runtimeConfig: InferenceComponentRuntimeConfigProperty) {
-      cdkBuilder.runtimeConfig(runtimeConfig.let(InferenceComponentRuntimeConfigProperty::unwrap))
+      cdkBuilder.runtimeConfig(runtimeConfig.let(InferenceComponentRuntimeConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -471,7 +471,7 @@ public open class CfnInferenceComponent(
      * @param specification The specification for the inference component. 
      */
     override fun specification(specification: IResolvable) {
-      cdkBuilder.specification(specification.let(IResolvable::unwrap))
+      cdkBuilder.specification(specification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -481,7 +481,7 @@ public open class CfnInferenceComponent(
      * @param specification The specification for the inference component. 
      */
     override fun specification(specification: InferenceComponentSpecificationProperty) {
-      cdkBuilder.specification(specification.let(InferenceComponentSpecificationProperty::unwrap))
+      cdkBuilder.specification(specification.let(InferenceComponentSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -503,7 +503,7 @@ public open class CfnInferenceComponent(
      * @param tags An array of tags to apply to the resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1020,14 +1020,14 @@ public open class CfnInferenceComponent(
        * @param deployedImage the value to be set.
        */
       override fun deployedImage(deployedImage: IResolvable) {
-        cdkBuilder.deployedImage(deployedImage.let(IResolvable::unwrap))
+        cdkBuilder.deployedImage(deployedImage.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param deployedImage the value to be set.
        */
       override fun deployedImage(deployedImage: DeployedImageProperty) {
-        cdkBuilder.deployedImage(deployedImage.let(DeployedImageProperty::unwrap))
+        cdkBuilder.deployedImage(deployedImage.let(DeployedImageProperty.Companion::unwrap))
       }
 
       /**
@@ -1044,7 +1044,7 @@ public open class CfnInferenceComponent(
        * We support up to 16 entries in the map.
        */
       override fun environment(environment: IResolvable) {
-        cdkBuilder.environment(environment.let(IResolvable::unwrap))
+        cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1431,7 +1431,7 @@ public open class CfnInferenceComponent(
        * assigned to the inference component. 
        */
       override fun computeResourceRequirements(computeResourceRequirements: IResolvable) {
-        cdkBuilder.computeResourceRequirements(computeResourceRequirements.let(IResolvable::unwrap))
+        cdkBuilder.computeResourceRequirements(computeResourceRequirements.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1440,7 +1440,7 @@ public open class CfnInferenceComponent(
        */
       override
           fun computeResourceRequirements(computeResourceRequirements: InferenceComponentComputeResourceRequirementsProperty) {
-        cdkBuilder.computeResourceRequirements(computeResourceRequirements.let(InferenceComponentComputeResourceRequirementsProperty::unwrap))
+        cdkBuilder.computeResourceRequirements(computeResourceRequirements.let(InferenceComponentComputeResourceRequirementsProperty.Companion::unwrap))
       }
 
       /**
@@ -1459,7 +1459,7 @@ public open class CfnInferenceComponent(
        * you deploy with an inference component.
        */
       override fun container(container: IResolvable) {
-        cdkBuilder.container(container.let(IResolvable::unwrap))
+        cdkBuilder.container(container.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1467,7 +1467,7 @@ public open class CfnInferenceComponent(
        * you deploy with an inference component.
        */
       override fun container(container: InferenceComponentContainerSpecificationProperty) {
-        cdkBuilder.container(container.let(InferenceComponentContainerSpecificationProperty::unwrap))
+        cdkBuilder.container(container.let(InferenceComponentContainerSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -1492,7 +1492,7 @@ public open class CfnInferenceComponent(
        * @param startupParameters Settings that take effect while the model container starts up.
        */
       override fun startupParameters(startupParameters: IResolvable) {
-        cdkBuilder.startupParameters(startupParameters.let(IResolvable::unwrap))
+        cdkBuilder.startupParameters(startupParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1500,7 +1500,7 @@ public open class CfnInferenceComponent(
        */
       override
           fun startupParameters(startupParameters: InferenceComponentStartupParametersProperty) {
-        cdkBuilder.startupParameters(startupParameters.let(InferenceComponentStartupParametersProperty::unwrap))
+        cdkBuilder.startupParameters(startupParameters.let(InferenceComponentStartupParametersProperty.Companion::unwrap))
       }
 
       /**

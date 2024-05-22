@@ -137,7 +137,7 @@ public interface CustomLambdaDeploymentConfigProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun interval(interval: Duration) {
-      cdkBuilder.interval(interval.let(Duration::unwrap))
+      cdkBuilder.interval(interval.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -157,7 +157,7 @@ public interface CustomLambdaDeploymentConfigProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun type(type: CustomLambdaDeploymentConfigType) {
-      cdkBuilder.type(type.let(CustomLambdaDeploymentConfigType::unwrap))
+      cdkBuilder.type(type.let(CustomLambdaDeploymentConfigType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codedeploy.CustomLambdaDeploymentConfigProps

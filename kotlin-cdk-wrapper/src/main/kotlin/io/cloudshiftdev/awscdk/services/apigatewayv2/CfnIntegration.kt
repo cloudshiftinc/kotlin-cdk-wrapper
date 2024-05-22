@@ -65,8 +65,8 @@ public open class CfnIntegration(
     id: String,
     props: CfnIntegrationProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.CfnIntegration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnIntegrationProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.CfnIntegration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnIntegrationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -159,7 +159,7 @@ public open class CfnIntegration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -318,14 +318,14 @@ public open class CfnIntegration(
    * The TLS configuration for a private integration.
    */
   public open fun tlsConfig(`value`: IResolvable) {
-    unwrap(this).setTlsConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTlsConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The TLS configuration for a private integration.
    */
   public open fun tlsConfig(`value`: TlsConfigProperty) {
-    unwrap(this).setTlsConfig(`value`.let(TlsConfigProperty::unwrap))
+    unwrap(this).setTlsConfig(`value`.let(TlsConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -946,7 +946,7 @@ public open class CfnIntegration(
      * @param tlsConfig The TLS configuration for a private integration. 
      */
     override fun tlsConfig(tlsConfig: IResolvable) {
-      cdkBuilder.tlsConfig(tlsConfig.let(IResolvable::unwrap))
+      cdkBuilder.tlsConfig(tlsConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -959,7 +959,7 @@ public open class CfnIntegration(
      * @param tlsConfig The TLS configuration for a private integration. 
      */
     override fun tlsConfig(tlsConfig: TlsConfigProperty) {
-      cdkBuilder.tlsConfig(tlsConfig.let(TlsConfigProperty::unwrap))
+      cdkBuilder.tlsConfig(tlsConfig.let(TlsConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1056,7 +1056,7 @@ public open class CfnIntegration(
        * @param responseParameters the value to be set.
        */
       override fun responseParameters(responseParameters: IResolvable) {
-        cdkBuilder.responseParameters(responseParameters.let(IResolvable::unwrap))
+        cdkBuilder.responseParameters(responseParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**

@@ -115,14 +115,14 @@ public interface CfnDeviceProps {
      * @param device Edge device you want to create.
      */
     override fun device(device: IResolvable) {
-      cdkBuilder.device(device.let(IResolvable::unwrap))
+      cdkBuilder.device(device.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param device Edge device you want to create.
      */
     override fun device(device: CfnDevice.DeviceProperty) {
-      cdkBuilder.device(device.let(CfnDevice.DeviceProperty::unwrap))
+      cdkBuilder.device(device.let(CfnDevice.DeviceProperty.Companion::unwrap))
     }
 
     /**
@@ -146,7 +146,7 @@ public interface CfnDeviceProps {
      * Each tag consists of a key and a value, both of which you define.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

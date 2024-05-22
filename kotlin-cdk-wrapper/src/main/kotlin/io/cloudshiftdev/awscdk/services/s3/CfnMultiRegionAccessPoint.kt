@@ -59,8 +59,8 @@ public open class CfnMultiRegionAccessPoint(
     id: String,
     props: CfnMultiRegionAccessPointProps,
   ) :
-      this(software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMultiRegionAccessPointProps::unwrap))
+      this(software.amazon.awscdk.services.s3.CfnMultiRegionAccessPoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMultiRegionAccessPointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -91,7 +91,7 @@ public open class CfnMultiRegionAccessPoint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -116,14 +116,14 @@ public open class CfnMultiRegionAccessPoint(
    * The PublicAccessBlock configuration that you want to apply to this Multi-Region Access Point.
    */
   public open fun publicAccessBlockConfiguration(`value`: IResolvable) {
-    unwrap(this).setPublicAccessBlockConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPublicAccessBlockConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The PublicAccessBlock configuration that you want to apply to this Multi-Region Access Point.
    */
   public open fun publicAccessBlockConfiguration(`value`: PublicAccessBlockConfigurationProperty) {
-    unwrap(this).setPublicAccessBlockConfiguration(`value`.let(PublicAccessBlockConfigurationProperty::unwrap))
+    unwrap(this).setPublicAccessBlockConfiguration(`value`.let(PublicAccessBlockConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -144,7 +144,7 @@ public open class CfnMultiRegionAccessPoint(
    * A collection of the Regions and buckets associated with the Multi-Region Access Point.
    */
   public open fun regions(`value`: IResolvable) {
-    unwrap(this).setRegions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRegions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -276,7 +276,7 @@ public open class CfnMultiRegionAccessPoint(
      * apply to this Multi-Region Access Point. 
      */
     override fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: IResolvable) {
-      cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -293,7 +293,7 @@ public open class CfnMultiRegionAccessPoint(
      */
     override
         fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: PublicAccessBlockConfigurationProperty) {
-      cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration.let(PublicAccessBlockConfigurationProperty::unwrap))
+      cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration.let(PublicAccessBlockConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -323,7 +323,7 @@ public open class CfnMultiRegionAccessPoint(
      * Access Point. 
      */
     override fun regions(regions: IResolvable) {
-      cdkBuilder.regions(regions.let(IResolvable::unwrap))
+      cdkBuilder.regions(regions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -585,7 +585,7 @@ public open class CfnMultiRegionAccessPoint(
        * Enabling this setting doesn't affect existing policies or ACLs.
        */
       override fun blockPublicAcls(blockPublicAcls: IResolvable) {
-        cdkBuilder.blockPublicAcls(blockPublicAcls.let(IResolvable::unwrap))
+        cdkBuilder.blockPublicAcls(blockPublicAcls.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -609,7 +609,7 @@ public open class CfnMultiRegionAccessPoint(
        * Enabling this setting doesn't affect existing bucket policies.
        */
       override fun blockPublicPolicy(blockPublicPolicy: IResolvable) {
-        cdkBuilder.blockPublicPolicy(blockPublicPolicy.let(IResolvable::unwrap))
+        cdkBuilder.blockPublicPolicy(blockPublicPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -635,7 +635,7 @@ public open class CfnMultiRegionAccessPoint(
        * prevent new public ACLs from being set.
        */
       override fun ignorePublicAcls(ignorePublicAcls: IResolvable) {
-        cdkBuilder.ignorePublicAcls(ignorePublicAcls.let(IResolvable::unwrap))
+        cdkBuilder.ignorePublicAcls(ignorePublicAcls.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -663,7 +663,7 @@ public open class CfnMultiRegionAccessPoint(
        * specific accounts, is blocked.
        */
       override fun restrictPublicBuckets(restrictPublicBuckets: IResolvable) {
-        cdkBuilder.restrictPublicBuckets(restrictPublicBuckets.let(IResolvable::unwrap))
+        cdkBuilder.restrictPublicBuckets(restrictPublicBuckets.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

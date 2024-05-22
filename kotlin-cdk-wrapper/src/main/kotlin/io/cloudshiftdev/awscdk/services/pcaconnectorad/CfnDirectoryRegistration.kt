@@ -43,8 +43,8 @@ public open class CfnDirectoryRegistration(
     id: String,
     props: CfnDirectoryRegistrationProps,
   ) :
-      this(software.amazon.awscdk.services.pcaconnectorad.CfnDirectoryRegistration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDirectoryRegistrationProps::unwrap))
+      this(software.amazon.awscdk.services.pcaconnectorad.CfnDirectoryRegistration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDirectoryRegistrationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -86,7 +86,7 @@ public open class CfnDirectoryRegistration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

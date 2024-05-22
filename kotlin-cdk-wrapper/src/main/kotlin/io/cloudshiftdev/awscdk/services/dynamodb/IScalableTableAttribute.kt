@@ -57,7 +57,7 @@ public interface IScalableTableAttribute {
      * @param actions 
      */
     override fun scaleOnSchedule(id: String, actions: ScalingSchedule) {
-      unwrap(this).scaleOnSchedule(id, actions.let(ScalingSchedule::unwrap))
+      unwrap(this).scaleOnSchedule(id, actions.let(ScalingSchedule.Companion::unwrap))
     }
 
     /**
@@ -77,7 +77,7 @@ public interface IScalableTableAttribute {
      * @param props 
      */
     override fun scaleOnUtilization(props: UtilizationScalingProps) {
-      unwrap(this).scaleOnUtilization(props.let(UtilizationScalingProps::unwrap))
+      unwrap(this).scaleOnUtilization(props.let(UtilizationScalingProps.Companion::unwrap))
     }
 
     /**

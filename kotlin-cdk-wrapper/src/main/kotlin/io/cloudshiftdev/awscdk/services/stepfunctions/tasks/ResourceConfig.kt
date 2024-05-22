@@ -142,7 +142,7 @@ public interface ResourceConfig {
      * ```
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -150,14 +150,14 @@ public interface ResourceConfig {
      * volume attached to the ML compute instance(s) that run the training job.
      */
     override fun volumeEncryptionKey(volumeEncryptionKey: IKey) {
-      cdkBuilder.volumeEncryptionKey(volumeEncryptionKey.let(IKey::unwrap))
+      cdkBuilder.volumeEncryptionKey(volumeEncryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
      * @param volumeSize Size of the ML storage volume that you want to provision. 
      */
     override fun volumeSize(volumeSize: Size) {
-      cdkBuilder.volumeSize(volumeSize.let(Size::unwrap))
+      cdkBuilder.volumeSize(volumeSize.let(Size.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.ResourceConfig =

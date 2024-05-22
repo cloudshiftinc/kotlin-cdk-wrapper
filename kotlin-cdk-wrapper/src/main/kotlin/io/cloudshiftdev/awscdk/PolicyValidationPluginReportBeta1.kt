@@ -129,7 +129,7 @@ public interface PolicyValidationPluginReportBeta1 {
      * @param violations List of violations in the report. 
      */
     override fun violations(violations: List<PolicyViolationBeta1>) {
-      cdkBuilder.violations(violations.map(PolicyViolationBeta1::unwrap))
+      cdkBuilder.violations(violations.map(PolicyViolationBeta1.Companion::unwrap))
     }
 
     /**

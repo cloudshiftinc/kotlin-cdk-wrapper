@@ -14,6 +14,7 @@ import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.logs.ILogGroup
 import io.cloudshiftdev.awscdk.services.logs.RetentionDays
 import kotlin.Boolean
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -57,8 +58,8 @@ public open class AwsCustomResource(
     id: String,
     props: AwsCustomResourceProps,
   ) :
-      this(software.amazon.awscdk.customresources.AwsCustomResource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(AwsCustomResourceProps::unwrap))
+      this(software.amazon.awscdk.customresources.AwsCustomResource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(AwsCustomResourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -169,6 +170,16 @@ public open class AwsCustomResource(
      * implementing this custom resource are kept in CloudWatch Logs. 
      */
     public fun logRetention(logRetention: RetentionDays)
+
+    /**
+     * The memory size for the singleton Lambda function implementing this custom resource.
+     *
+     * Default: 512 mega in case if installLatestAwsSdk is false.
+     *
+     * @param memorySize The memory size for the singleton Lambda function implementing this custom
+     * resource. 
+     */
+    public fun memorySize(memorySize: Number)
 
     /**
      * The AWS SDK call to make when the resource is created.
@@ -388,7 +399,7 @@ public open class AwsCustomResource(
      * lambda function. 
      */
     override fun logGroup(logGroup: ILogGroup) {
-      cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
+      cdkBuilder.logGroup(logGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -405,7 +416,19 @@ public open class AwsCustomResource(
      * implementing this custom resource are kept in CloudWatch Logs. 
      */
     override fun logRetention(logRetention: RetentionDays) {
-      cdkBuilder.logRetention(logRetention.let(RetentionDays::unwrap))
+      cdkBuilder.logRetention(logRetention.let(RetentionDays.Companion::unwrap))
+    }
+
+    /**
+     * The memory size for the singleton Lambda function implementing this custom resource.
+     *
+     * Default: 512 mega in case if installLatestAwsSdk is false.
+     *
+     * @param memorySize The memory size for the singleton Lambda function implementing this custom
+     * resource. 
+     */
+    override fun memorySize(memorySize: Number) {
+      cdkBuilder.memorySize(memorySize)
     }
 
     /**
@@ -416,7 +439,7 @@ public open class AwsCustomResource(
      * @param onCreate The AWS SDK call to make when the resource is created. 
      */
     override fun onCreate(onCreate: AwsSdkCall) {
-      cdkBuilder.onCreate(onCreate.let(AwsSdkCall::unwrap))
+      cdkBuilder.onCreate(onCreate.let(AwsSdkCall.Companion::unwrap))
     }
 
     /**
@@ -439,7 +462,7 @@ public open class AwsCustomResource(
      * @param onDelete The AWS SDK call to make when the resource is deleted. 
      */
     override fun onDelete(onDelete: AwsSdkCall) {
-      cdkBuilder.onDelete(onDelete.let(AwsSdkCall::unwrap))
+      cdkBuilder.onDelete(onDelete.let(AwsSdkCall.Companion::unwrap))
     }
 
     /**
@@ -462,7 +485,7 @@ public open class AwsCustomResource(
      * @param onUpdate The AWS SDK call to make when the resource is updated. 
      */
     override fun onUpdate(onUpdate: AwsSdkCall) {
-      cdkBuilder.onUpdate(onUpdate.let(AwsSdkCall::unwrap))
+      cdkBuilder.onUpdate(onUpdate.let(AwsSdkCall.Companion::unwrap))
     }
 
     /**
@@ -499,7 +522,7 @@ public open class AwsCustomResource(
      * implementing this custom resource provider. 
      */
     override fun policy(policy: AwsCustomResourcePolicy) {
-      cdkBuilder.policy(policy.let(AwsCustomResourcePolicy::unwrap))
+      cdkBuilder.policy(policy.let(AwsCustomResourcePolicy.Companion::unwrap))
     }
 
     /**
@@ -510,7 +533,7 @@ public open class AwsCustomResource(
      * @param removalPolicy The policy to apply when this resource is removed from the application. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -538,7 +561,7 @@ public open class AwsCustomResource(
      * resource provider. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -550,7 +573,7 @@ public open class AwsCustomResource(
      * resource. 
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -561,7 +584,7 @@ public open class AwsCustomResource(
      * @param vpc The vpc to provision the lambda function in. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -575,7 +598,7 @@ public open class AwsCustomResource(
      * @param vpcSubnets Which subnets from the VPC to place the lambda function in. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

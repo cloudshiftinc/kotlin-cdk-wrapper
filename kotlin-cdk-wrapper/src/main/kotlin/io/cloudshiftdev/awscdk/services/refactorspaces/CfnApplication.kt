@@ -70,8 +70,8 @@ public open class CfnApplication(
     id: String,
     props: CfnApplicationProps,
   ) :
-      this(software.amazon.awscdk.services.refactorspaces.CfnApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApplicationProps::unwrap))
+      this(software.amazon.awscdk.services.refactorspaces.CfnApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApplicationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -90,14 +90,14 @@ public open class CfnApplication(
    * The endpoint URL of the Amazon API Gateway proxy.
    */
   public open fun apiGatewayProxy(`value`: IResolvable) {
-    unwrap(this).setApiGatewayProxy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setApiGatewayProxy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The endpoint URL of the Amazon API Gateway proxy.
    */
   public open fun apiGatewayProxy(`value`: ApiGatewayProxyInputProperty) {
-    unwrap(this).setApiGatewayProxy(`value`.let(ApiGatewayProxyInputProperty::unwrap))
+    unwrap(this).setApiGatewayProxy(`value`.let(ApiGatewayProxyInputProperty.Companion::unwrap))
   }
 
   /**
@@ -168,7 +168,7 @@ public open class CfnApplication(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -210,7 +210,7 @@ public open class CfnApplication(
    * The tags assigned to the application.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -324,7 +324,7 @@ public open class CfnApplication(
      * @param apiGatewayProxy The endpoint URL of the Amazon API Gateway proxy. 
      */
     override fun apiGatewayProxy(apiGatewayProxy: IResolvable) {
-      cdkBuilder.apiGatewayProxy(apiGatewayProxy.let(IResolvable::unwrap))
+      cdkBuilder.apiGatewayProxy(apiGatewayProxy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -334,7 +334,7 @@ public open class CfnApplication(
      * @param apiGatewayProxy The endpoint URL of the Amazon API Gateway proxy. 
      */
     override fun apiGatewayProxy(apiGatewayProxy: ApiGatewayProxyInputProperty) {
-      cdkBuilder.apiGatewayProxy(apiGatewayProxy.let(ApiGatewayProxyInputProperty::unwrap))
+      cdkBuilder.apiGatewayProxy(apiGatewayProxy.let(ApiGatewayProxyInputProperty.Companion::unwrap))
     }
 
     /**
@@ -385,7 +385,7 @@ public open class CfnApplication(
      * @param tags The tags assigned to the application. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

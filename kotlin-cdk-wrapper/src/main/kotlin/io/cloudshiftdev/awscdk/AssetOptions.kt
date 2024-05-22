@@ -170,7 +170,7 @@ public interface AssetOptions {
      * `AssetHashType.CUSTOM`.
      */
     override fun assetHashType(assetHashType: AssetHashType) {
-      cdkBuilder.assetHashType(assetHashType.let(AssetHashType::unwrap))
+      cdkBuilder.assetHashType(assetHashType.let(AssetHashType.Companion::unwrap))
     }
 
     /**
@@ -182,7 +182,7 @@ public interface AssetOptions {
      * final asset.
      */
     override fun bundling(bundling: BundlingOptions) {
-      cdkBuilder.bundling(bundling.let(BundlingOptions::unwrap))
+      cdkBuilder.bundling(bundling.let(BundlingOptions.Companion::unwrap))
     }
 
     /**

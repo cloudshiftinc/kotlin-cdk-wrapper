@@ -50,8 +50,8 @@ public open class CfnGateway(
     id: String,
     props: CfnGatewayProps,
   ) :
-      this(software.amazon.awscdk.services.mediaconnect.CfnGateway(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGatewayProps::unwrap))
+      this(software.amazon.awscdk.services.mediaconnect.CfnGateway(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGatewayProps.Companion::unwrap))
   )
 
   public constructor(
@@ -100,7 +100,7 @@ public open class CfnGateway(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -124,7 +124,7 @@ public open class CfnGateway(
    * The list of networks that you want to add.
    */
   public open fun networks(`value`: IResolvable) {
-    unwrap(this).setNetworks(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNetworks(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -260,7 +260,7 @@ public open class CfnGateway(
      * @param networks The list of networks that you want to add. 
      */
     override fun networks(networks: IResolvable) {
-      cdkBuilder.networks(networks.let(IResolvable::unwrap))
+      cdkBuilder.networks(networks.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -48,8 +48,8 @@ public open class NetworkAcl(
     id: String,
     props: NetworkAclProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.NetworkAcl(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(NetworkAclProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.NetworkAcl(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(NetworkAclProps.Companion::unwrap))
   )
 
   public constructor(
@@ -67,7 +67,7 @@ public open class NetworkAcl(
    */
   public override fun addEntry(id: String, options: CommonNetworkAclEntryOptions): NetworkAclEntry =
       unwrap(this).addEntry(id,
-      options.let(CommonNetworkAclEntryOptions::unwrap)).let(NetworkAclEntry::wrap)
+      options.let(CommonNetworkAclEntryOptions.Companion::unwrap)).let(NetworkAclEntry::wrap)
 
   /**
    * Add a new entry to the ACL.
@@ -88,7 +88,7 @@ public open class NetworkAcl(
    * @param selection 
    */
   public open fun associateWithSubnet(id: String, selection: SubnetSelection) {
-    unwrap(this).associateWithSubnet(id, selection.let(SubnetSelection::unwrap))
+    unwrap(this).associateWithSubnet(id, selection.let(SubnetSelection.Companion::unwrap))
   }
 
   /**
@@ -195,7 +195,7 @@ public open class NetworkAcl(
      * @param subnetSelection Subnets in the given VPC to associate the ACL with. 
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -219,7 +219,7 @@ public open class NetworkAcl(
      * @param vpc The VPC in which to create the NetworkACL. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.NetworkAcl = cdkBuilder.build()
@@ -231,7 +231,7 @@ public open class NetworkAcl(
       id: String,
       networkAclId: String,
     ): INetworkAcl =
-        software.amazon.awscdk.services.ec2.NetworkAcl.fromNetworkAclId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ec2.NetworkAcl.fromNetworkAclId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, networkAclId).let(INetworkAcl::wrap)
 
     public operator fun invoke(

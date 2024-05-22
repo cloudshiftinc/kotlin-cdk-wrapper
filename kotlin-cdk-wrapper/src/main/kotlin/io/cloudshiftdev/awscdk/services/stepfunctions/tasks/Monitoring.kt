@@ -122,7 +122,7 @@ public interface Monitoring {
      * You can configure your jobs to send log information to Amazon S3.
      */
     override fun logBucket(logBucket: IBucket) {
-      cdkBuilder.logBucket(logBucket.let(IBucket::unwrap))
+      cdkBuilder.logBucket(logBucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -130,7 +130,7 @@ public interface Monitoring {
      * You can configure your jobs to send log information to CloudWatch Logs.
      */
     override fun logGroup(logGroup: ILogGroup) {
-      cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
+      cdkBuilder.logGroup(logGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**

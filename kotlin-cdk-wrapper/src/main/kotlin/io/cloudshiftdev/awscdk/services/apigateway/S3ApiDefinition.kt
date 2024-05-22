@@ -24,7 +24,7 @@ public open class S3ApiDefinition(
   cdkObject: software.amazon.awscdk.services.apigateway.S3ApiDefinition,
 ) : ApiDefinition(cdkObject) {
   public constructor(bucket: IBucket, key: String) :
-      this(software.amazon.awscdk.services.apigateway.S3ApiDefinition(bucket.let(IBucket::unwrap),
+      this(software.amazon.awscdk.services.apigateway.S3ApiDefinition(bucket.let(IBucket.Companion::unwrap),
       key)
   )
 
@@ -32,7 +32,8 @@ public open class S3ApiDefinition(
     bucket: IBucket,
     key: String,
     objectVersion: String,
-  ) : this(software.amazon.awscdk.services.apigateway.S3ApiDefinition(bucket.let(IBucket::unwrap),
+  ) :
+      this(software.amazon.awscdk.services.apigateway.S3ApiDefinition(bucket.let(IBucket.Companion::unwrap),
       key, objectVersion)
   )
 
@@ -43,7 +44,7 @@ public open class S3ApiDefinition(
    * @param _scope 
    */
   public override fun bind(scope: Construct): ApiDefinitionConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(ApiDefinitionConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(ApiDefinitionConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.S3ApiDefinition):

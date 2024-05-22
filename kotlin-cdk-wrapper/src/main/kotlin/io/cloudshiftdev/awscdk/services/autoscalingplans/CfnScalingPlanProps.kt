@@ -162,7 +162,7 @@ public interface CfnScalingPlanProps {
      * be present to ensure interoperability with the AWS Auto Scaling console.
      */
     override fun applicationSource(applicationSource: IResolvable) {
-      cdkBuilder.applicationSource(applicationSource.let(IResolvable::unwrap))
+      cdkBuilder.applicationSource(applicationSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -171,7 +171,7 @@ public interface CfnScalingPlanProps {
      * be present to ensure interoperability with the AWS Auto Scaling console.
      */
     override fun applicationSource(applicationSource: CfnScalingPlan.ApplicationSourceProperty) {
-      cdkBuilder.applicationSource(applicationSource.let(CfnScalingPlan.ApplicationSourceProperty::unwrap))
+      cdkBuilder.applicationSource(applicationSource.let(CfnScalingPlan.ApplicationSourceProperty.Companion::unwrap))
     }
 
     /**
@@ -189,7 +189,7 @@ public interface CfnScalingPlanProps {
      * @param scalingInstructions The scaling instructions. 
      */
     override fun scalingInstructions(scalingInstructions: IResolvable) {
-      cdkBuilder.scalingInstructions(scalingInstructions.let(IResolvable::unwrap))
+      cdkBuilder.scalingInstructions(scalingInstructions.let(IResolvable.Companion::unwrap))
     }
 
     /**

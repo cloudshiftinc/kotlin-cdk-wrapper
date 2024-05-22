@@ -104,7 +104,7 @@ public interface CfnDataCatalogEncryptionSettingsProps {
      * Catalog security. 
      */
     override fun dataCatalogEncryptionSettings(dataCatalogEncryptionSettings: IResolvable) {
-      cdkBuilder.dataCatalogEncryptionSettings(dataCatalogEncryptionSettings.let(IResolvable::unwrap))
+      cdkBuilder.dataCatalogEncryptionSettings(dataCatalogEncryptionSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -113,7 +113,7 @@ public interface CfnDataCatalogEncryptionSettingsProps {
      */
     override
         fun dataCatalogEncryptionSettings(dataCatalogEncryptionSettings: CfnDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty) {
-      cdkBuilder.dataCatalogEncryptionSettings(dataCatalogEncryptionSettings.let(CfnDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty::unwrap))
+      cdkBuilder.dataCatalogEncryptionSettings(dataCatalogEncryptionSettings.let(CfnDataCatalogEncryptionSettings.DataCatalogEncryptionSettingsProperty.Companion::unwrap))
     }
 
     /**

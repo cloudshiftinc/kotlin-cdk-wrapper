@@ -209,7 +209,7 @@ public interface CfnVpcConnectorProps {
      * resource. To replace a `VpcConnector` , you must provide a new combination of security groups.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -147,7 +147,7 @@ public interface CfnClientVpnAuthorizationRuleProps {
      * network. Must be set to `true` if `AccessGroupId` is not specified.
      */
     override fun authorizeAllGroups(authorizeAllGroups: IResolvable) {
-      cdkBuilder.authorizeAllGroups(authorizeAllGroups.let(IResolvable::unwrap))
+      cdkBuilder.authorizeAllGroups(authorizeAllGroups.let(IResolvable.Companion::unwrap))
     }
 
     /**

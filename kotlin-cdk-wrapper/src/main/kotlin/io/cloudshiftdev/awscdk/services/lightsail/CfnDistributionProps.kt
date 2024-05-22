@@ -312,7 +312,7 @@ public interface CfnDistributionProps {
      * distribution.
      */
     override fun cacheBehaviorSettings(cacheBehaviorSettings: IResolvable) {
-      cdkBuilder.cacheBehaviorSettings(cacheBehaviorSettings.let(IResolvable::unwrap))
+      cdkBuilder.cacheBehaviorSettings(cacheBehaviorSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -321,7 +321,7 @@ public interface CfnDistributionProps {
      */
     override
         fun cacheBehaviorSettings(cacheBehaviorSettings: CfnDistribution.CacheSettingsProperty) {
-      cdkBuilder.cacheBehaviorSettings(cacheBehaviorSettings.let(CfnDistribution.CacheSettingsProperty::unwrap))
+      cdkBuilder.cacheBehaviorSettings(cacheBehaviorSettings.let(CfnDistribution.CacheSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -339,7 +339,7 @@ public interface CfnDistributionProps {
      * distribution.
      */
     override fun cacheBehaviors(cacheBehaviors: IResolvable) {
-      cdkBuilder.cacheBehaviors(cacheBehaviors.let(IResolvable::unwrap))
+      cdkBuilder.cacheBehaviors(cacheBehaviors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -369,7 +369,7 @@ public interface CfnDistributionProps {
      * distribution. 
      */
     override fun defaultCacheBehavior(defaultCacheBehavior: IResolvable) {
-      cdkBuilder.defaultCacheBehavior(defaultCacheBehavior.let(IResolvable::unwrap))
+      cdkBuilder.defaultCacheBehavior(defaultCacheBehavior.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -377,7 +377,7 @@ public interface CfnDistributionProps {
      * distribution. 
      */
     override fun defaultCacheBehavior(defaultCacheBehavior: CfnDistribution.CacheBehaviorProperty) {
-      cdkBuilder.defaultCacheBehavior(defaultCacheBehavior.let(CfnDistribution.CacheBehaviorProperty::unwrap))
+      cdkBuilder.defaultCacheBehavior(defaultCacheBehavior.let(CfnDistribution.CacheBehaviorProperty.Companion::unwrap))
     }
 
     /**
@@ -416,7 +416,7 @@ public interface CfnDistributionProps {
      * @param isEnabled A Boolean value indicating whether the distribution is enabled.
      */
     override fun isEnabled(isEnabled: IResolvable) {
-      cdkBuilder.isEnabled(isEnabled.let(IResolvable::unwrap))
+      cdkBuilder.isEnabled(isEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -425,7 +425,7 @@ public interface CfnDistributionProps {
      * The distribution pulls, caches, and serves content from the origin.
      */
     override fun origin(origin: IResolvable) {
-      cdkBuilder.origin(origin.let(IResolvable::unwrap))
+      cdkBuilder.origin(origin.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -434,7 +434,7 @@ public interface CfnDistributionProps {
      * The distribution pulls, caches, and serves content from the origin.
      */
     override fun origin(origin: CfnDistribution.InputOriginProperty) {
-      cdkBuilder.origin(origin.let(CfnDistribution.InputOriginProperty::unwrap))
+      cdkBuilder.origin(origin.let(CfnDistribution.InputOriginProperty.Companion::unwrap))
     }
 
     /**
@@ -457,7 +457,7 @@ public interface CfnDistributionProps {
      * The `Value` of `Tags` is optional for Lightsail resources.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

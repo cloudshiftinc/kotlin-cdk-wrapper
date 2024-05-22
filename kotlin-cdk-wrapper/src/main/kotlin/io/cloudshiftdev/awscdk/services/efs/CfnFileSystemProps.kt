@@ -535,7 +535,7 @@ public interface CfnFileSystemProps {
      * system.
      */
     override fun backupPolicy(backupPolicy: IResolvable) {
-      cdkBuilder.backupPolicy(backupPolicy.let(IResolvable::unwrap))
+      cdkBuilder.backupPolicy(backupPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -543,7 +543,7 @@ public interface CfnFileSystemProps {
      * system.
      */
     override fun backupPolicy(backupPolicy: CfnFileSystem.BackupPolicyProperty) {
-      cdkBuilder.backupPolicy(backupPolicy.let(CfnFileSystem.BackupPolicyProperty::unwrap))
+      cdkBuilder.backupPolicy(backupPolicy.let(CfnFileSystem.BackupPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -578,7 +578,7 @@ public interface CfnFileSystemProps {
      * `PutFileSystemPolicy` requests on this file system. The default value is `False` .
      */
     override fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: IResolvable) {
-      cdkBuilder.bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck.let(IResolvable::unwrap))
+      cdkBuilder.bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -598,7 +598,7 @@ public interface CfnFileSystemProps {
      * , `/aws/elasticfilesystem` , is used to protect the encrypted file system.
      */
     override fun encrypted(encrypted: IResolvable) {
-      cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
+      cdkBuilder.encrypted(encrypted.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -616,7 +616,7 @@ public interface CfnFileSystemProps {
      * @param fileSystemProtection Describes the protection on the file system.
      */
     override fun fileSystemProtection(fileSystemProtection: IResolvable) {
-      cdkBuilder.fileSystemProtection(fileSystemProtection.let(IResolvable::unwrap))
+      cdkBuilder.fileSystemProtection(fileSystemProtection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -624,7 +624,7 @@ public interface CfnFileSystemProps {
      */
     override
         fun fileSystemProtection(fileSystemProtection: CfnFileSystem.FileSystemProtectionProperty) {
-      cdkBuilder.fileSystemProtection(fileSystemProtection.let(CfnFileSystem.FileSystemProtectionProperty::unwrap))
+      cdkBuilder.fileSystemProtection(fileSystemProtection.let(CfnFileSystem.FileSystemProtectionProperty.Companion::unwrap))
     }
 
     /**
@@ -645,7 +645,7 @@ public interface CfnFileSystemProps {
      * the *AWS General Reference Guide* .
      */
     override fun fileSystemTags(fileSystemTags: List<CfnFileSystem.ElasticFileSystemTagProperty>) {
-      cdkBuilder.fileSystemTags(fileSystemTags.map(CfnFileSystem.ElasticFileSystemTagProperty::unwrap))
+      cdkBuilder.fileSystemTags(fileSystemTags.map(CfnFileSystem.ElasticFileSystemTagProperty.Companion::unwrap))
     }
 
     /**
@@ -696,7 +696,7 @@ public interface CfnFileSystemProps {
      * following section for more information.
      */
     override fun lifecyclePolicies(lifecyclePolicies: IResolvable) {
-      cdkBuilder.lifecyclePolicies(lifecyclePolicies.let(IResolvable::unwrap))
+      cdkBuilder.lifecyclePolicies(lifecyclePolicies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -777,7 +777,7 @@ public interface CfnFileSystemProps {
      * system.
      */
     override fun replicationConfiguration(replicationConfiguration: IResolvable) {
-      cdkBuilder.replicationConfiguration(replicationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.replicationConfiguration(replicationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -786,7 +786,7 @@ public interface CfnFileSystemProps {
      */
     override
         fun replicationConfiguration(replicationConfiguration: CfnFileSystem.ReplicationConfigurationProperty) {
-      cdkBuilder.replicationConfiguration(replicationConfiguration.let(CfnFileSystem.ReplicationConfigurationProperty::unwrap))
+      cdkBuilder.replicationConfiguration(replicationConfiguration.let(CfnFileSystem.ReplicationConfigurationProperty.Companion::unwrap))
     }
 
     /**

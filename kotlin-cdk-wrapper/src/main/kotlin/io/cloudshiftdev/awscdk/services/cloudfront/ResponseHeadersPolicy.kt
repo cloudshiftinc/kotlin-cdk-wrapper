@@ -68,7 +68,7 @@ public open class ResponseHeadersPolicy(
   cdkObject: software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicy,
 ) : Resource(cdkObject), IResponseHeadersPolicy {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -77,8 +77,8 @@ public open class ResponseHeadersPolicy(
     id: String,
     props: ResponseHeadersPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ResponseHeadersPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ResponseHeadersPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -245,7 +245,7 @@ public open class ResponseHeadersPolicy(
      * cross-origin resource sharing (CORS). 
      */
     override fun corsBehavior(corsBehavior: ResponseHeadersCorsBehavior) {
-      cdkBuilder.corsBehavior(corsBehavior.let(ResponseHeadersCorsBehavior::unwrap))
+      cdkBuilder.corsBehavior(corsBehavior.let(ResponseHeadersCorsBehavior.Companion::unwrap))
     }
 
     /**
@@ -270,7 +270,7 @@ public open class ResponseHeadersPolicy(
      * @param customHeadersBehavior A configuration for a set of custom HTTP response headers. 
      */
     override fun customHeadersBehavior(customHeadersBehavior: ResponseCustomHeadersBehavior) {
-      cdkBuilder.customHeadersBehavior(customHeadersBehavior.let(ResponseCustomHeadersBehavior::unwrap))
+      cdkBuilder.customHeadersBehavior(customHeadersBehavior.let(ResponseCustomHeadersBehavior.Companion::unwrap))
     }
 
     /**
@@ -331,7 +331,7 @@ public open class ResponseHeadersPolicy(
      * headers. 
      */
     override fun securityHeadersBehavior(securityHeadersBehavior: ResponseSecurityHeadersBehavior) {
-      cdkBuilder.securityHeadersBehavior(securityHeadersBehavior.let(ResponseSecurityHeadersBehavior::unwrap))
+      cdkBuilder.securityHeadersBehavior(securityHeadersBehavior.let(ResponseSecurityHeadersBehavior.Companion::unwrap))
     }
 
     /**
@@ -385,7 +385,7 @@ public open class ResponseHeadersPolicy(
       id: String,
       responseHeadersPolicyId: String,
     ): IResponseHeadersPolicy =
-        software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicy.fromResponseHeadersPolicyId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.cloudfront.ResponseHeadersPolicy.fromResponseHeadersPolicyId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, responseHeadersPolicyId).let(IResponseHeadersPolicy::wrap)
 
     public operator fun invoke(

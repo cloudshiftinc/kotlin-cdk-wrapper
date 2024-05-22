@@ -41,8 +41,8 @@ public open class CfnLaunchTemplateConstraint(
     id: String,
     props: CfnLaunchTemplateConstraintProps,
   ) :
-      this(software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLaunchTemplateConstraintProps::unwrap))
+      this(software.amazon.awscdk.services.servicecatalog.CfnLaunchTemplateConstraint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLaunchTemplateConstraintProps.Companion::unwrap))
   )
 
   public constructor(
@@ -87,7 +87,7 @@ public open class CfnLaunchTemplateConstraint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

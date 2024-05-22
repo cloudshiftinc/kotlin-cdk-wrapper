@@ -61,8 +61,8 @@ public open class CfnTransitGatewayRouteTableAttachment(
     id: String,
     props: CfnTransitGatewayRouteTableAttachmentProps,
   ) :
-      this(software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTransitGatewayRouteTableAttachmentProps::unwrap))
+      this(software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRouteTableAttachment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTransitGatewayRouteTableAttachmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -144,7 +144,7 @@ public open class CfnTransitGatewayRouteTableAttachment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -168,14 +168,14 @@ public open class CfnTransitGatewayRouteTableAttachment(
    * This property is read-only.
    */
   public open fun proposedSegmentChange(`value`: IResolvable) {
-    unwrap(this).setProposedSegmentChange(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProposedSegmentChange(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * This property is read-only.
    */
   public open fun proposedSegmentChange(`value`: ProposedSegmentChangeProperty) {
-    unwrap(this).setProposedSegmentChange(`value`.let(ProposedSegmentChangeProperty::unwrap))
+    unwrap(this).setProposedSegmentChange(`value`.let(ProposedSegmentChangeProperty.Companion::unwrap))
   }
 
   /**
@@ -201,7 +201,7 @@ public open class CfnTransitGatewayRouteTableAttachment(
    * The list of key-value pairs associated with the transit gateway route table attachment.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -328,7 +328,7 @@ public open class CfnTransitGatewayRouteTableAttachment(
      * @param proposedSegmentChange This property is read-only. 
      */
     override fun proposedSegmentChange(proposedSegmentChange: IResolvable) {
-      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(IResolvable::unwrap))
+      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -340,7 +340,7 @@ public open class CfnTransitGatewayRouteTableAttachment(
      * @param proposedSegmentChange This property is read-only. 
      */
     override fun proposedSegmentChange(proposedSegmentChange: ProposedSegmentChangeProperty) {
-      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(ProposedSegmentChangeProperty::unwrap))
+      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(ProposedSegmentChangeProperty.Companion::unwrap))
     }
 
     /**
@@ -365,7 +365,7 @@ public open class CfnTransitGatewayRouteTableAttachment(
      * attachment. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -516,7 +516,7 @@ public open class CfnTransitGatewayRouteTableAttachment(
        * @param tags The list of key-value tags that changed for the segment.
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**

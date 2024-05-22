@@ -57,8 +57,8 @@ public open class CfnConfiguration(
     id: String,
     props: CfnConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.amazonmq.CfnConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.amazonmq.CfnConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -155,7 +155,7 @@ public open class CfnConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -185,7 +185,7 @@ public open class CfnConfiguration(
    * Create tags when creating the configuration.
    */
   public open fun tagsRaw(`value`: List<TagsEntryProperty>) {
-    unwrap(this).setTagsRaw(`value`.map(TagsEntryProperty::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(TagsEntryProperty.Companion::unwrap))
   }
 
   /**
@@ -359,7 +359,7 @@ public open class CfnConfiguration(
      * @param tags Create tags when creating the configuration. 
      */
     override fun tags(tags: List<TagsEntryProperty>) {
-      cdkBuilder.tags(tags.map(TagsEntryProperty::unwrap))
+      cdkBuilder.tags(tags.map(TagsEntryProperty.Companion::unwrap))
     }
 
     /**

@@ -76,14 +76,14 @@ public interface EncryptionConfiguration {
      * @param encryptionKey KMS key ARN or ID.
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
      * @param encryptionOption Type of S3 server-side encryption enabled. 
      */
     override fun encryptionOption(encryptionOption: EncryptionOption) {
-      cdkBuilder.encryptionOption(encryptionOption.let(EncryptionOption::unwrap))
+      cdkBuilder.encryptionOption(encryptionOption.let(EncryptionOption.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.EncryptionConfiguration

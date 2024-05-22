@@ -178,7 +178,7 @@ public interface LoadBalancerListener {
      * (IP ranges or security groups).
      */
     override fun allowConnectionsFrom(allowConnectionsFrom: List<IConnectable>) {
-      cdkBuilder.allowConnectionsFrom(allowConnectionsFrom.map(IConnectable::unwrap))
+      cdkBuilder.allowConnectionsFrom(allowConnectionsFrom.map(IConnectable.Companion::unwrap))
     }
 
     /**
@@ -205,7 +205,7 @@ public interface LoadBalancerListener {
      * May be omitted if the external port is either 80 or 443.
      */
     override fun externalProtocol(externalProtocol: LoadBalancingProtocol) {
-      cdkBuilder.externalProtocol(externalProtocol.let(LoadBalancingProtocol::unwrap))
+      cdkBuilder.externalProtocol(externalProtocol.let(LoadBalancingProtocol.Companion::unwrap))
     }
 
     /**
@@ -227,7 +227,7 @@ public interface LoadBalancerListener {
      * front-end protocol is 'https'.
      */
     override fun internalProtocol(internalProtocol: LoadBalancingProtocol) {
-      cdkBuilder.internalProtocol(internalProtocol.let(LoadBalancingProtocol::unwrap))
+      cdkBuilder.internalProtocol(internalProtocol.let(LoadBalancingProtocol.Companion::unwrap))
     }
 
     /**

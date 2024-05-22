@@ -302,7 +302,7 @@ public interface CfnConfigRuleProps {
      * provides the number of contributors that affect the compliance.
      */
     override fun compliance(compliance: IResolvable) {
-      cdkBuilder.compliance(compliance.let(IResolvable::unwrap))
+      cdkBuilder.compliance(compliance.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -310,7 +310,7 @@ public interface CfnConfigRuleProps {
      * provides the number of contributors that affect the compliance.
      */
     override fun compliance(compliance: CfnConfigRule.ComplianceProperty) {
-      cdkBuilder.compliance(compliance.let(CfnConfigRule.ComplianceProperty::unwrap))
+      cdkBuilder.compliance(compliance.let(CfnConfigRule.ComplianceProperty.Companion::unwrap))
     }
 
     /**
@@ -345,7 +345,7 @@ public interface CfnConfigRuleProps {
      * only.
      */
     override fun evaluationModes(evaluationModes: IResolvable) {
-      cdkBuilder.evaluationModes(evaluationModes.let(IResolvable::unwrap))
+      cdkBuilder.evaluationModes(evaluationModes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -403,7 +403,7 @@ public interface CfnConfigRuleProps {
      * The scope can be empty.
      */
     override fun scope(scope: IResolvable) {
-      cdkBuilder.scope(scope.let(IResolvable::unwrap))
+      cdkBuilder.scope(scope.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -417,7 +417,7 @@ public interface CfnConfigRuleProps {
      * The scope can be empty.
      */
     override fun scope(scope: CfnConfigRule.ScopeProperty) {
-      cdkBuilder.scope(scope.let(CfnConfigRule.ScopeProperty::unwrap))
+      cdkBuilder.scope(scope.let(CfnConfigRule.ScopeProperty.Companion::unwrap))
     }
 
     /**
@@ -441,7 +441,7 @@ public interface CfnConfigRuleProps {
      * notifications that cause the function to evaluate your AWS resources. 
      */
     override fun source(source: IResolvable) {
-      cdkBuilder.source(source.let(IResolvable::unwrap))
+      cdkBuilder.source(source.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -450,7 +450,7 @@ public interface CfnConfigRuleProps {
      * notifications that cause the function to evaluate your AWS resources. 
      */
     override fun source(source: CfnConfigRule.SourceProperty) {
-      cdkBuilder.source(source.let(CfnConfigRule.SourceProperty::unwrap))
+      cdkBuilder.source(source.let(CfnConfigRule.SourceProperty.Companion::unwrap))
     }
 
     /**

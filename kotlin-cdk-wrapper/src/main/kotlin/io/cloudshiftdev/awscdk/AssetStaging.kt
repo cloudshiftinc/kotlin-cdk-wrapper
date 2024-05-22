@@ -78,8 +78,9 @@ public open class AssetStaging(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
     props: AssetStagingProps,
-  ) : this(software.amazon.awscdk.AssetStaging(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(AssetStagingProps::unwrap))
+  ) :
+      this(software.amazon.awscdk.AssetStaging(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(AssetStagingProps.Companion::unwrap))
   )
 
   public constructor(
@@ -144,7 +145,7 @@ public open class AssetStaging(
    * @param stack 
    */
   public open fun relativeStagedPath(stack: Stack): String =
-      unwrap(this).relativeStagedPath(stack.let(Stack::unwrap))
+      unwrap(this).relativeStagedPath(stack.let(Stack.Companion::unwrap))
 
   /**
    * The absolute path of the asset as it was referenced by the user.
@@ -324,7 +325,7 @@ public open class AssetStaging(
      * @param assetHashType Specifies the type of hash to calculate for this asset. 
      */
     override fun assetHashType(assetHashType: AssetHashType) {
-      cdkBuilder.assetHashType(assetHashType.let(AssetHashType::unwrap))
+      cdkBuilder.assetHashType(assetHashType.let(AssetHashType.Companion::unwrap))
     }
 
     /**
@@ -342,7 +343,7 @@ public open class AssetStaging(
      * bundling provider. 
      */
     override fun bundling(bundling: BundlingOptions) {
-      cdkBuilder.bundling(bundling.let(BundlingOptions::unwrap))
+      cdkBuilder.bundling(bundling.let(BundlingOptions.Companion::unwrap))
     }
 
     /**
@@ -410,7 +411,7 @@ public open class AssetStaging(
      * @param follow A strategy for how to handle symlinks. 
      */
     override fun follow(follow: SymlinkFollowMode) {
-      cdkBuilder.follow(follow.let(SymlinkFollowMode::unwrap))
+      cdkBuilder.follow(follow.let(SymlinkFollowMode.Companion::unwrap))
     }
 
     /**
@@ -421,7 +422,7 @@ public open class AssetStaging(
      * @param ignoreMode The ignore behavior to use for `exclude` patterns. 
      */
     override fun ignoreMode(ignoreMode: IgnoreMode) {
-      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode::unwrap))
+      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode.Companion::unwrap))
     }
 
     /**

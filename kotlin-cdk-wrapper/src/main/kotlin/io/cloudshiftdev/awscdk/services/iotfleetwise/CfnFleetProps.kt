@@ -122,7 +122,7 @@ public interface CfnFleetProps {
      * @param tags (Optional) Metadata that can be used to manage the fleet.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

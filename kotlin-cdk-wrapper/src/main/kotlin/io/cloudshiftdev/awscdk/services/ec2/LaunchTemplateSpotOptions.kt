@@ -137,14 +137,14 @@ public interface LaunchTemplateSpotOptions {
      * You can use a duration of 1, 2, 3, 4, 5, or 6 hours.
      */
     override fun blockDuration(blockDuration: Duration) {
-      cdkBuilder.blockDuration(blockDuration.let(Duration::unwrap))
+      cdkBuilder.blockDuration(blockDuration.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param interruptionBehavior The behavior when a Spot Instance is interrupted.
      */
     override fun interruptionBehavior(interruptionBehavior: SpotInstanceInterruption) {
-      cdkBuilder.interruptionBehavior(interruptionBehavior.let(SpotInstanceInterruption::unwrap))
+      cdkBuilder.interruptionBehavior(interruptionBehavior.let(SpotInstanceInterruption.Companion::unwrap))
     }
 
     /**
@@ -163,7 +163,7 @@ public interface LaunchTemplateSpotOptions {
      * below its desired capacity.
      */
     override fun requestType(requestType: SpotRequestType) {
-      cdkBuilder.requestType(requestType.let(SpotRequestType::unwrap))
+      cdkBuilder.requestType(requestType.let(SpotRequestType.Companion::unwrap))
     }
 
     /**
@@ -174,7 +174,7 @@ public interface LaunchTemplateSpotOptions {
      * active until it is canceled or this date and time is reached.
      */
     override fun validUntil(validUntil: Expiration) {
-      cdkBuilder.validUntil(validUntil.let(Expiration::unwrap))
+      cdkBuilder.validUntil(validUntil.let(Expiration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.LaunchTemplateSpotOptions =

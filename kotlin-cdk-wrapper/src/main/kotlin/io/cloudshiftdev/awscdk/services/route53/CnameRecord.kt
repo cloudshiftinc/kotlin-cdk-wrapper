@@ -57,8 +57,8 @@ public open class CnameRecord(
     id: String,
     props: CnameRecordProps,
   ) :
-      this(software.amazon.awscdk.services.route53.CnameRecord(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CnameRecordProps::unwrap))
+      this(software.amazon.awscdk.services.route53.CnameRecord(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CnameRecordProps.Companion::unwrap))
   )
 
   public constructor(
@@ -274,7 +274,7 @@ public open class CnameRecord(
      * user's location. 
      */
     override fun geoLocation(geoLocation: GeoLocation) {
-      cdkBuilder.geoLocation(geoLocation.let(GeoLocation::unwrap))
+      cdkBuilder.geoLocation(geoLocation.let(GeoLocation.Companion::unwrap))
     }
 
     /**
@@ -355,7 +355,7 @@ public open class CnameRecord(
      * @param ttl The resource record cache time to live (TTL). 
      */
     override fun ttl(ttl: Duration) {
-      cdkBuilder.ttl(ttl.let(Duration::unwrap))
+      cdkBuilder.ttl(ttl.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -386,7 +386,7 @@ public open class CnameRecord(
      * @param zone The hosted zone in which to define the new record. 
      */
     override fun zone(zone: IHostedZone) {
-      cdkBuilder.zone(zone.let(IHostedZone::unwrap))
+      cdkBuilder.zone(zone.let(IHostedZone.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.route53.CnameRecord = cdkBuilder.build()

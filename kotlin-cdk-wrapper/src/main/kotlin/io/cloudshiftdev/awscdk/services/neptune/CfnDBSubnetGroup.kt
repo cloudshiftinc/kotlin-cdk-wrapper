@@ -49,8 +49,8 @@ public open class CfnDBSubnetGroup(
     id: String,
     props: CfnDBSubnetGroupProps,
   ) :
-      this(software.amazon.awscdk.services.neptune.CfnDBSubnetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDBSubnetGroupProps::unwrap))
+      this(software.amazon.awscdk.services.neptune.CfnDBSubnetGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDBSubnetGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -95,7 +95,7 @@ public open class CfnDBSubnetGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -130,7 +130,7 @@ public open class CfnDBSubnetGroup(
    * The tags that you want to attach to the DB subnet group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -244,7 +244,7 @@ public open class CfnDBSubnetGroup(
      * @param tags The tags that you want to attach to the DB subnet group. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

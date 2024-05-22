@@ -55,8 +55,8 @@ public open class CfnSubscription(
     id: String,
     props: CfnSubscriptionProps,
   ) :
-      this(software.amazon.awscdk.services.sns.CfnSubscription(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSubscriptionProps::unwrap))
+      this(software.amazon.awscdk.services.sns.CfnSubscription(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSubscriptionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -127,7 +127,7 @@ public open class CfnSubscription(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -158,7 +158,7 @@ public open class CfnSubscription(
    * When set to `true` , enables raw message delivery.
    */
   public open fun rawMessageDelivery(`value`: IResolvable) {
-    unwrap(this).setRawMessageDelivery(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRawMessageDelivery(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -499,7 +499,7 @@ public open class CfnSubscription(
      * @param rawMessageDelivery When set to `true` , enables raw message delivery. 
      */
     override fun rawMessageDelivery(rawMessageDelivery: IResolvable) {
-      cdkBuilder.rawMessageDelivery(rawMessageDelivery.let(IResolvable::unwrap))
+      cdkBuilder.rawMessageDelivery(rawMessageDelivery.let(IResolvable.Companion::unwrap))
     }
 
     /**

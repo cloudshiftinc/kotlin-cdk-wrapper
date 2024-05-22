@@ -65,8 +65,8 @@ public open class CfnOptionGroup(
     id: String,
     props: CfnOptionGroupProps,
   ) :
-      this(software.amazon.awscdk.services.rds.CfnOptionGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnOptionGroupProps::unwrap))
+      this(software.amazon.awscdk.services.rds.CfnOptionGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnOptionGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -94,7 +94,7 @@ public open class CfnOptionGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -118,7 +118,7 @@ public open class CfnOptionGroup(
    * A list of options and the settings for each option.
    */
   public open fun optionConfigurations(`value`: IResolvable) {
-    unwrap(this).setOptionConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOptionConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -173,7 +173,7 @@ public open class CfnOptionGroup(
    * An optional array of key-value pairs to apply to this option group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -340,7 +340,7 @@ public open class CfnOptionGroup(
      * @param optionConfigurations A list of options and the settings for each option. 
      */
     override fun optionConfigurations(optionConfigurations: IResolvable) {
-      cdkBuilder.optionConfigurations(optionConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.optionConfigurations(optionConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -404,7 +404,7 @@ public open class CfnOptionGroup(
      * @param tags An optional array of key-value pairs to apply to this option group. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -600,7 +600,7 @@ public open class CfnOptionGroup(
        * @param optionSettings The option settings to include in an option group.
        */
       override fun optionSettings(optionSettings: IResolvable) {
-        cdkBuilder.optionSettings(optionSettings.let(IResolvable::unwrap))
+        cdkBuilder.optionSettings(optionSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**

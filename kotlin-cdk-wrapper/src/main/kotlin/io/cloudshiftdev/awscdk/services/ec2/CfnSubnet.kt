@@ -74,8 +74,8 @@ public open class CfnSubnet(
     id: String,
     props: CfnSubnetProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnSubnet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSubnetProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnSubnet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSubnetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -108,7 +108,7 @@ public open class CfnSubnet(
    * The default value is `false` .
    */
   public open fun assignIpv6AddressOnCreation(`value`: IResolvable) {
-    unwrap(this).setAssignIpv6AddressOnCreation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAssignIpv6AddressOnCreation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -211,7 +211,7 @@ public open class CfnSubnet(
    * return synthetic IPv6 addresses for IPv4-only destinations.
    */
   public open fun enableDns64(`value`: IResolvable) {
-    unwrap(this).setEnableDns64(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableDns64(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -232,7 +232,7 @@ public open class CfnSubnet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -316,7 +316,7 @@ public open class CfnSubnet(
    * Indicates whether this is an IPv6 only subnet.
    */
   public open fun ipv6Native(`value`: IResolvable) {
-    unwrap(this).setIpv6Native(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIpv6Native(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -353,7 +353,7 @@ public open class CfnSubnet(
    * The default value is `false` .
    */
   public open fun mapPublicIpOnLaunch(`value`: IResolvable) {
-    unwrap(this).setMapPublicIpOnLaunch(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMapPublicIpOnLaunch(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -398,7 +398,7 @@ public open class CfnSubnet(
    * Any tags assigned to the subnet.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -712,7 +712,7 @@ public open class CfnSubnet(
      * subnet receives an IPv6 address. The default value is `false` . 
      */
     override fun assignIpv6AddressOnCreation(assignIpv6AddressOnCreation: IResolvable) {
-      cdkBuilder.assignIpv6AddressOnCreation(assignIpv6AddressOnCreation.let(IResolvable::unwrap))
+      cdkBuilder.assignIpv6AddressOnCreation(assignIpv6AddressOnCreation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -778,7 +778,7 @@ public open class CfnSubnet(
      * this subnet should return synthetic IPv6 addresses for IPv4-only destinations. 
      */
     override fun enableDns64(enableDns64: IResolvable) {
-      cdkBuilder.enableDns64(enableDns64.let(IResolvable::unwrap))
+      cdkBuilder.enableDns64(enableDns64.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -881,7 +881,7 @@ public open class CfnSubnet(
      * @param ipv6Native Indicates whether this is an IPv6 only subnet. 
      */
     override fun ipv6Native(ipv6Native: IResolvable) {
-      cdkBuilder.ipv6Native(ipv6Native.let(IResolvable::unwrap))
+      cdkBuilder.ipv6Native(ipv6Native.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -923,7 +923,7 @@ public open class CfnSubnet(
      * public IPv4 address. The default value is `false` . 
      */
     override fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: IResolvable) {
-      cdkBuilder.mapPublicIpOnLaunch(mapPublicIpOnLaunch.let(IResolvable::unwrap))
+      cdkBuilder.mapPublicIpOnLaunch(mapPublicIpOnLaunch.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -965,7 +965,7 @@ public open class CfnSubnet(
      * @param tags Any tags assigned to the subnet. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1114,7 +1114,7 @@ public open class CfnSubnet(
        * instance hostnames with DNS A records.
        */
       override fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: IResolvable) {
-        cdkBuilder.enableResourceNameDnsARecord(enableResourceNameDnsARecord.let(IResolvable::unwrap))
+        cdkBuilder.enableResourceNameDnsARecord(enableResourceNameDnsARecord.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1130,7 +1130,7 @@ public open class CfnSubnet(
        * instance hostname with DNS AAAA records.
        */
       override fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: IResolvable) {
-        cdkBuilder.enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord.let(IResolvable::unwrap))
+        cdkBuilder.enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord.let(IResolvable.Companion::unwrap))
       }
 
       /**

@@ -243,7 +243,7 @@ public interface CfnPipelineProps {
      * By default, the value is set to `true` .
      */
     override fun activate(activate: IResolvable) {
-      cdkBuilder.activate(activate.let(IResolvable::unwrap))
+      cdkBuilder.activate(activate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -264,7 +264,7 @@ public interface CfnPipelineProps {
      * @param parameterObjects The parameter objects used with the pipeline.
      */
     override fun parameterObjects(parameterObjects: IResolvable) {
-      cdkBuilder.parameterObjects(parameterObjects.let(IResolvable::unwrap))
+      cdkBuilder.parameterObjects(parameterObjects.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -284,7 +284,7 @@ public interface CfnPipelineProps {
      * @param parameterValues The parameter values used with the pipeline.
      */
     override fun parameterValues(parameterValues: IResolvable) {
-      cdkBuilder.parameterValues(parameterValues.let(IResolvable::unwrap))
+      cdkBuilder.parameterValues(parameterValues.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -308,7 +308,7 @@ public interface CfnPipelineProps {
      * in the *AWS Data Pipeline Developer Guide* .
      */
     override fun pipelineObjects(pipelineObjects: IResolvable) {
-      cdkBuilder.pipelineObjects(pipelineObjects.let(IResolvable::unwrap))
+      cdkBuilder.pipelineObjects(pipelineObjects.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -340,7 +340,7 @@ public interface CfnPipelineProps {
      * in the *AWS Data Pipeline Developer Guide* .
      */
     override fun pipelineTags(pipelineTags: List<CfnPipeline.PipelineTagProperty>) {
-      cdkBuilder.pipelineTags(pipelineTags.map(CfnPipeline.PipelineTagProperty::unwrap))
+      cdkBuilder.pipelineTags(pipelineTags.map(CfnPipeline.PipelineTagProperty.Companion::unwrap))
     }
 
     /**

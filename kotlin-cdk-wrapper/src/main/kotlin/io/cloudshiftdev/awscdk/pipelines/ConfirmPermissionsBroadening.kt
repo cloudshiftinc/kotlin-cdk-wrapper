@@ -31,7 +31,7 @@ public open class ConfirmPermissionsBroadening(
 ) : Step(cdkObject), ICodePipelineActionFactory {
   public constructor(id: String, props: PermissionsBroadeningCheckProps) :
       this(software.amazon.awscdk.pipelines.ConfirmPermissionsBroadening(id,
-      props.let(PermissionsBroadeningCheckProps::unwrap))
+      props.let(PermissionsBroadeningCheckProps.Companion::unwrap))
   )
 
   public constructor(id: String, props: PermissionsBroadeningCheckProps.Builder.() -> Unit) :
@@ -45,8 +45,9 @@ public open class ConfirmPermissionsBroadening(
    * @param options 
    */
   public override fun produceAction(stage: IStage, options: ProduceActionOptions):
-      CodePipelineActionFactoryResult = unwrap(this).produceAction(stage.let(IStage::unwrap),
-      options.let(ProduceActionOptions::unwrap)).let(CodePipelineActionFactoryResult::wrap)
+      CodePipelineActionFactoryResult =
+      unwrap(this).produceAction(stage.let(IStage.Companion::unwrap),
+      options.let(ProduceActionOptions.Companion::unwrap)).let(CodePipelineActionFactoryResult::wrap)
 
   /**
    * Create the desired Action and add it to the pipeline.
@@ -100,7 +101,7 @@ public open class ConfirmPermissionsBroadening(
      * confirmation. 
      */
     override fun notificationTopic(notificationTopic: ITopic) {
-      cdkBuilder.notificationTopic(notificationTopic.let(ITopic::unwrap))
+      cdkBuilder.notificationTopic(notificationTopic.let(ITopic.Companion::unwrap))
     }
 
     /**
@@ -111,7 +112,7 @@ public open class ConfirmPermissionsBroadening(
      * @param stage The CDK Stage object to check the stacks of. 
      */
     override fun stage(stage: Stage) {
-      cdkBuilder.stage(stage.let(Stage::unwrap))
+      cdkBuilder.stage(stage.let(Stage.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.pipelines.ConfirmPermissionsBroadening =

@@ -121,7 +121,7 @@ public interface CognitoUserPoolsAuthorizerProps {
      * @param cognitoUserPools The user pools to associate with this authorizer. 
      */
     override fun cognitoUserPools(cognitoUserPools: List<IUserPool>) {
-      cdkBuilder.cognitoUserPools(cognitoUserPools.map(IUserPool::unwrap))
+      cdkBuilder.cognitoUserPools(cognitoUserPools.map(IUserPool.Companion::unwrap))
     }
 
     /**
@@ -146,7 +146,7 @@ public interface CognitoUserPoolsAuthorizerProps {
      * Disable caching by setting this to 0.
      */
     override fun resultsCacheTtl(resultsCacheTtl: Duration) {
-      cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration::unwrap))
+      cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.CognitoUserPoolsAuthorizerProps =

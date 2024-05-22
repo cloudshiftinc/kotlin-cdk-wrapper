@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.CloudFormationInit
 import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.ec2.IConnectable
+import io.cloudshiftdev.awscdk.services.ec2.IKeyPair
 import io.cloudshiftdev.awscdk.services.ec2.ILaunchTemplate
 import io.cloudshiftdev.awscdk.services.ec2.IMachineImage
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
@@ -28,6 +29,7 @@ import io.cloudshiftdev.awscdk.services.iam.IPrincipal
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -51,20 +53,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * Vpc vpc;
- * InstanceType instanceType;
- * IMachineImage machineImage;
- * AutoScalingGroup.Builder.create(this, "ASG")
- * .vpc(vpc)
- * .instanceType(instanceType)
- * .machineImage(machineImage)
- * // ...
- * .init(CloudFormationInit.fromElements(InitFile.fromString("/etc/my_instance", "This got written
- * during instance startup")))
- * .signals(Signals.waitForAll(SignalsOptions.builder()
- * .timeout(Duration.minutes(10))
- * .build()))
- * .build();
+ * Cluster cluster;
+ * AutoScalingGroup asg;
+ * ICluster importedCluster = Cluster.fromClusterAttributes(this, "ImportedCluster",
+ * ClusterAttributes.builder()
+ * .clusterName(cluster.getClusterName())
+ * .clusterSecurityGroupId(cluster.getClusterSecurityGroupId())
+ * .build());
+ * importedCluster.connectAutoScalingGroupCapacity(asg, AutoScalingGroupOptions.builder().build());
  * ```
  */
 public open class AutoScalingGroup(
@@ -76,8 +72,8 @@ public open class AutoScalingGroup(
     id: String,
     props: AutoScalingGroupProps,
   ) :
-      this(software.amazon.awscdk.services.autoscaling.AutoScalingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(AutoScalingGroupProps::unwrap))
+      this(software.amazon.awscdk.services.autoscaling.AutoScalingGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(AutoScalingGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -95,7 +91,7 @@ public open class AutoScalingGroup(
    */
   public override fun addLifecycleHook(id: String, props: BasicLifecycleHookProps): LifecycleHook =
       unwrap(this).addLifecycleHook(id,
-      props.let(BasicLifecycleHookProps::unwrap)).let(LifecycleHook::wrap)
+      props.let(BasicLifecycleHookProps.Companion::unwrap)).let(LifecycleHook::wrap)
 
   /**
    * Send a message to either an SQS queue or SNS topic when instances launch or terminate.
@@ -115,7 +111,7 @@ public open class AutoScalingGroup(
    * @param securityGroup : The security group to add. 
    */
   public open fun addSecurityGroup(securityGroup: ISecurityGroup) {
-    unwrap(this).addSecurityGroup(securityGroup.let(ISecurityGroup::unwrap))
+    unwrap(this).addSecurityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
   }
 
   /**
@@ -124,7 +120,7 @@ public open class AutoScalingGroup(
    * @param statement 
    */
   public open fun addToRolePolicy(statement: PolicyStatement) {
-    unwrap(this).addToRolePolicy(statement.let(PolicyStatement::unwrap))
+    unwrap(this).addToRolePolicy(statement.let(PolicyStatement.Companion::unwrap))
   }
 
   /**
@@ -162,7 +158,7 @@ public open class AutoScalingGroup(
    * @param options
    */
   public override fun addWarmPool(options: WarmPoolOptions): WarmPool =
-      unwrap(this).addWarmPool(options.let(WarmPoolOptions::unwrap)).let(WarmPool::wrap)
+      unwrap(this).addWarmPool(options.let(WarmPoolOptions.Companion::unwrap)).let(WarmPool::wrap)
 
   /**
    * Add a pool of pre-initialized EC2 instances that sits alongside an Auto Scaling group.
@@ -188,7 +184,7 @@ public open class AutoScalingGroup(
    * @param options
    */
   public open fun applyCloudFormationInit(`init`: CloudFormationInit) {
-    unwrap(this).applyCloudFormationInit(`init`.let(CloudFormationInit::unwrap))
+    unwrap(this).applyCloudFormationInit(`init`.let(CloudFormationInit.Companion::unwrap))
   }
 
   /**
@@ -206,8 +202,8 @@ public open class AutoScalingGroup(
    */
   public open fun applyCloudFormationInit(`init`: CloudFormationInit,
       options: ApplyCloudFormationInitOptions) {
-    unwrap(this).applyCloudFormationInit(`init`.let(CloudFormationInit::unwrap),
-        options.let(ApplyCloudFormationInitOptions::unwrap))
+    unwrap(this).applyCloudFormationInit(`init`.let(CloudFormationInit.Companion::unwrap),
+        options.let(ApplyCloudFormationInitOptions.Companion::unwrap))
   }
 
   /**
@@ -242,7 +238,7 @@ public open class AutoScalingGroup(
    */
   public override fun attachToApplicationTargetGroup(targetGroup: IApplicationTargetGroup):
       LoadBalancerTargetProps =
-      unwrap(this).attachToApplicationTargetGroup(targetGroup.let(IApplicationTargetGroup::unwrap)).let(LoadBalancerTargetProps::wrap)
+      unwrap(this).attachToApplicationTargetGroup(targetGroup.let(IApplicationTargetGroup.Companion::unwrap)).let(LoadBalancerTargetProps::wrap)
 
   /**
    * Attach to a classic load balancer.
@@ -250,7 +246,7 @@ public open class AutoScalingGroup(
    * @param loadBalancer 
    */
   public override fun attachToClassicLB(loadBalancer: LoadBalancer) {
-    unwrap(this).attachToClassicLB(loadBalancer.let(LoadBalancer::unwrap))
+    unwrap(this).attachToClassicLB(loadBalancer.let(LoadBalancer.Companion::unwrap))
   }
 
   /**
@@ -260,7 +256,7 @@ public open class AutoScalingGroup(
    */
   public override fun attachToNetworkTargetGroup(targetGroup: INetworkTargetGroup):
       LoadBalancerTargetProps =
-      unwrap(this).attachToNetworkTargetGroup(targetGroup.let(INetworkTargetGroup::unwrap)).let(LoadBalancerTargetProps::wrap)
+      unwrap(this).attachToNetworkTargetGroup(targetGroup.let(INetworkTargetGroup.Companion::unwrap)).let(LoadBalancerTargetProps::wrap)
 
   /**
    * Arn of the AutoScalingGroup.
@@ -316,7 +312,7 @@ public open class AutoScalingGroup(
    */
   public override fun scaleOnCpuUtilization(id: String, props: CpuUtilizationScalingProps):
       TargetTrackingScalingPolicy = unwrap(this).scaleOnCpuUtilization(id,
-      props.let(CpuUtilizationScalingProps::unwrap)).let(TargetTrackingScalingPolicy::wrap)
+      props.let(CpuUtilizationScalingProps.Companion::unwrap)).let(TargetTrackingScalingPolicy::wrap)
 
   /**
    * Scale out or in to achieve a target CPU utilization.
@@ -338,7 +334,7 @@ public open class AutoScalingGroup(
    */
   public override fun scaleOnIncomingBytes(id: String, props: NetworkUtilizationScalingProps):
       TargetTrackingScalingPolicy = unwrap(this).scaleOnIncomingBytes(id,
-      props.let(NetworkUtilizationScalingProps::unwrap)).let(TargetTrackingScalingPolicy::wrap)
+      props.let(NetworkUtilizationScalingProps.Companion::unwrap)).let(TargetTrackingScalingPolicy::wrap)
 
   /**
    * Scale out or in to achieve a target network ingress rate.
@@ -360,7 +356,7 @@ public open class AutoScalingGroup(
    */
   public override fun scaleOnMetric(id: String, props: BasicStepScalingPolicyProps):
       StepScalingPolicy = unwrap(this).scaleOnMetric(id,
-      props.let(BasicStepScalingPolicyProps::unwrap)).let(StepScalingPolicy::wrap)
+      props.let(BasicStepScalingPolicyProps.Companion::unwrap)).let(StepScalingPolicy::wrap)
 
   /**
    * Scale out or in, in response to a metric.
@@ -382,7 +378,7 @@ public open class AutoScalingGroup(
    */
   public override fun scaleOnOutgoingBytes(id: String, props: NetworkUtilizationScalingProps):
       TargetTrackingScalingPolicy = unwrap(this).scaleOnOutgoingBytes(id,
-      props.let(NetworkUtilizationScalingProps::unwrap)).let(TargetTrackingScalingPolicy::wrap)
+      props.let(NetworkUtilizationScalingProps.Companion::unwrap)).let(TargetTrackingScalingPolicy::wrap)
 
   /**
    * Scale out or in to achieve a target network egress rate.
@@ -407,7 +403,7 @@ public open class AutoScalingGroup(
    */
   public open fun scaleOnRequestCount(id: String, props: RequestCountScalingProps):
       TargetTrackingScalingPolicy = unwrap(this).scaleOnRequestCount(id,
-      props.let(RequestCountScalingProps::unwrap)).let(TargetTrackingScalingPolicy::wrap)
+      props.let(RequestCountScalingProps.Companion::unwrap)).let(TargetTrackingScalingPolicy::wrap)
 
   /**
    * Scale out or in to achieve a target request handling rate.
@@ -432,7 +428,7 @@ public open class AutoScalingGroup(
    */
   public override fun scaleOnSchedule(id: String, props: BasicScheduledActionProps): ScheduledAction
       = unwrap(this).scaleOnSchedule(id,
-      props.let(BasicScheduledActionProps::unwrap)).let(ScheduledAction::wrap)
+      props.let(BasicScheduledActionProps.Companion::unwrap)).let(ScheduledAction::wrap)
 
   /**
    * Scale out or in based on time.
@@ -454,7 +450,7 @@ public open class AutoScalingGroup(
    */
   public override fun scaleToTrackMetric(id: String, props: MetricTargetTrackingProps):
       TargetTrackingScalingPolicy = unwrap(this).scaleToTrackMetric(id,
-      props.let(MetricTargetTrackingProps::unwrap)).let(TargetTrackingScalingPolicy::wrap)
+      props.let(MetricTargetTrackingProps.Companion::unwrap)).let(TargetTrackingScalingPolicy::wrap)
 
   /**
    * Scale out or in in order to keep a metric around a target value.
@@ -747,16 +743,37 @@ public open class AutoScalingGroup(
     public fun instanceType(instanceType: InstanceType)
 
     /**
-     * Name of SSH keypair to grant access to instances.
+     * (deprecated) Name of SSH keypair to grant access to instances.
      *
      * `launchTemplate` and `mixedInstancesPolicy` must not be specified when this property is
      * specified
      *
+     * You can either specify `keyPair` or `keyName`, not both.
+     *
      * Default: - No SSH access will be possible.
      *
+     * * Use `keyPair` instead -
+     * https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_ec2-readme.html#using-an-existing-ec2-key-pair
      * @param keyName Name of SSH keypair to grant access to instances. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun keyName(keyName: String)
+
+    /**
+     * The SSH keypair to grant access to the instance.
+     *
+     * Feature flag `AUTOSCALING_GENERATE_LAUNCH_TEMPLATE` must be enabled to use this property.
+     *
+     * `launchTemplate` and `mixedInstancesPolicy` must not be specified when this property is
+     * specified.
+     *
+     * You can either specify `keyPair` or `keyName`, not both.
+     *
+     * Default: - No SSH access will be possible.
+     *
+     * @param keyPair The SSH keypair to grant access to the instance. 
+     */
+    public fun keyPair(keyPair: IKeyPair)
 
     /**
      * Launch template to use.
@@ -1210,7 +1227,7 @@ public open class AutoScalingGroup(
      * virtual devices and EBS volumes. 
      */
     override fun blockDevices(blockDevices: List<BlockDevice>) {
-      cdkBuilder.blockDevices(blockDevices.map(BlockDevice::unwrap))
+      cdkBuilder.blockDevices(blockDevices.map(BlockDevice.Companion::unwrap))
     }
 
     /**
@@ -1259,7 +1276,7 @@ public open class AutoScalingGroup(
      * @param cooldown Default scaling cooldown for this AutoScalingGroup. 
      */
     override fun cooldown(cooldown: Duration) {
-      cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
+      cdkBuilder.cooldown(cooldown.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -1286,7 +1303,7 @@ public open class AutoScalingGroup(
      * can contribute to the Amazon CloudWatch metrics. 
      */
     override fun defaultInstanceWarmup(defaultInstanceWarmup: Duration) {
-      cdkBuilder.defaultInstanceWarmup(defaultInstanceWarmup.let(Duration::unwrap))
+      cdkBuilder.defaultInstanceWarmup(defaultInstanceWarmup.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -1317,7 +1334,7 @@ public open class AutoScalingGroup(
      * rather than any of its instances. 
      */
     override fun groupMetrics(groupMetrics: List<GroupMetrics>) {
-      cdkBuilder.groupMetrics(groupMetrics.map(GroupMetrics::unwrap))
+      cdkBuilder.groupMetrics(groupMetrics.map(GroupMetrics.Companion::unwrap))
     }
 
     /**
@@ -1343,7 +1360,7 @@ public open class AutoScalingGroup(
      * @param healthCheck Configuration for health checks. 
      */
     override fun healthCheck(healthCheck: HealthCheck) {
-      cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
     }
 
     /**
@@ -1378,7 +1395,7 @@ public open class AutoScalingGroup(
      * AutoScalingGroup at startup. 
      */
     override fun `init`(`init`: CloudFormationInit) {
-      cdkBuilder.`init`(`init`.let(CloudFormationInit::unwrap))
+      cdkBuilder.`init`(`init`.let(CloudFormationInit.Companion::unwrap))
     }
 
     /**
@@ -1391,7 +1408,7 @@ public open class AutoScalingGroup(
      * @param initOptions Use the given options for applying CloudFormation Init. 
      */
     override fun initOptions(initOptions: ApplyCloudFormationInitOptions) {
-      cdkBuilder.initOptions(initOptions.let(ApplyCloudFormationInitOptions::unwrap))
+      cdkBuilder.initOptions(initOptions.let(ApplyCloudFormationInitOptions.Companion::unwrap))
     }
 
     /**
@@ -1426,7 +1443,7 @@ public open class AutoScalingGroup(
      * or basic monitoring. 
      */
     override fun instanceMonitoring(instanceMonitoring: Monitoring) {
-      cdkBuilder.instanceMonitoring(instanceMonitoring.let(Monitoring::unwrap))
+      cdkBuilder.instanceMonitoring(instanceMonitoring.let(Monitoring.Companion::unwrap))
     }
 
     /**
@@ -1440,21 +1457,44 @@ public open class AutoScalingGroup(
      * @param instanceType Type of instance to launch. 
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**
-     * Name of SSH keypair to grant access to instances.
+     * (deprecated) Name of SSH keypair to grant access to instances.
      *
      * `launchTemplate` and `mixedInstancesPolicy` must not be specified when this property is
      * specified
      *
+     * You can either specify `keyPair` or `keyName`, not both.
+     *
      * Default: - No SSH access will be possible.
      *
+     * * Use `keyPair` instead -
+     * https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_ec2-readme.html#using-an-existing-ec2-key-pair
      * @param keyName Name of SSH keypair to grant access to instances. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun keyName(keyName: String) {
       cdkBuilder.keyName(keyName)
+    }
+
+    /**
+     * The SSH keypair to grant access to the instance.
+     *
+     * Feature flag `AUTOSCALING_GENERATE_LAUNCH_TEMPLATE` must be enabled to use this property.
+     *
+     * `launchTemplate` and `mixedInstancesPolicy` must not be specified when this property is
+     * specified.
+     *
+     * You can either specify `keyPair` or `keyName`, not both.
+     *
+     * Default: - No SSH access will be possible.
+     *
+     * @param keyPair The SSH keypair to grant access to the instance. 
+     */
+    override fun keyPair(keyPair: IKeyPair) {
+      cdkBuilder.keyPair(keyPair.let(IKeyPair.Companion::unwrap))
     }
 
     /**
@@ -1468,7 +1508,7 @@ public open class AutoScalingGroup(
      * @param launchTemplate Launch template to use. 
      */
     override fun launchTemplate(launchTemplate: ILaunchTemplate) {
-      cdkBuilder.launchTemplate(launchTemplate.let(ILaunchTemplate::unwrap))
+      cdkBuilder.launchTemplate(launchTemplate.let(ILaunchTemplate.Companion::unwrap))
     }
 
     /**
@@ -1482,7 +1522,7 @@ public open class AutoScalingGroup(
      * @param machineImage AMI to launch. 
      */
     override fun machineImage(machineImage: IMachineImage) {
-      cdkBuilder.machineImage(machineImage.let(IMachineImage::unwrap))
+      cdkBuilder.machineImage(machineImage.let(IMachineImage.Companion::unwrap))
     }
 
     /**
@@ -1541,7 +1581,7 @@ public open class AutoScalingGroup(
      * @param maxInstanceLifetime The maximum amount of time that an instance can be in service. 
      */
     override fun maxInstanceLifetime(maxInstanceLifetime: Duration) {
-      cdkBuilder.maxInstanceLifetime(maxInstanceLifetime.let(Duration::unwrap))
+      cdkBuilder.maxInstanceLifetime(maxInstanceLifetime.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -1593,7 +1633,7 @@ public open class AutoScalingGroup(
      * @param mixedInstancesPolicy Mixed Instances Policy to use. 
      */
     override fun mixedInstancesPolicy(mixedInstancesPolicy: MixedInstancesPolicy) {
-      cdkBuilder.mixedInstancesPolicy(mixedInstancesPolicy.let(MixedInstancesPolicy::unwrap))
+      cdkBuilder.mixedInstancesPolicy(mixedInstancesPolicy.let(MixedInstancesPolicy.Companion::unwrap))
     }
 
     /**
@@ -1644,7 +1684,7 @@ public open class AutoScalingGroup(
      * an SNS topic(s). 
      */
     override fun notifications(notifications: List<NotificationConfiguration>) {
-      cdkBuilder.notifications(notifications.map(NotificationConfiguration::unwrap))
+      cdkBuilder.notifications(notifications.map(NotificationConfiguration.Companion::unwrap))
     }
 
     /**
@@ -1692,7 +1732,7 @@ public open class AutoScalingGroup(
      * Group. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -1706,7 +1746,7 @@ public open class AutoScalingGroup(
      * @param securityGroup Security group to launch the instances in. 
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -1733,7 +1773,7 @@ public open class AutoScalingGroup(
      * @param signals Configure waiting for signals during deployment. 
      */
     override fun signals(signals: Signals) {
-      cdkBuilder.signals(signals.let(Signals::unwrap))
+      cdkBuilder.signals(signals.let(Signals.Companion::unwrap))
     }
 
     /**
@@ -1789,7 +1829,7 @@ public open class AutoScalingGroup(
      * instances to terminate. 
      */
     override fun terminationPolicies(terminationPolicies: List<TerminationPolicy>) {
-      cdkBuilder.terminationPolicies(terminationPolicies.map(TerminationPolicy::unwrap))
+      cdkBuilder.terminationPolicies(terminationPolicies.map(TerminationPolicy.Companion::unwrap))
     }
 
     /**
@@ -1838,7 +1878,7 @@ public open class AutoScalingGroup(
      * @param updatePolicy What to do when an AutoScalingGroup's instance configuration is changed. 
      */
     override fun updatePolicy(updatePolicy: UpdatePolicy) {
-      cdkBuilder.updatePolicy(updatePolicy.let(UpdatePolicy::unwrap))
+      cdkBuilder.updatePolicy(updatePolicy.let(UpdatePolicy.Companion::unwrap))
     }
 
     /**
@@ -1855,7 +1895,7 @@ public open class AutoScalingGroup(
      * @param userData Specific UserData to use. 
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     /**
@@ -1864,7 +1904,7 @@ public open class AutoScalingGroup(
      * @param vpc VPC to launch these instances in. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -1875,7 +1915,7 @@ public open class AutoScalingGroup(
      * @param vpcSubnets Where to place instances within the VPC. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -1900,7 +1940,7 @@ public open class AutoScalingGroup(
       id: String,
       autoScalingGroupName: String,
     ): IAutoScalingGroup =
-        software.amazon.awscdk.services.autoscaling.AutoScalingGroup.fromAutoScalingGroupName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.autoscaling.AutoScalingGroup.fromAutoScalingGroupName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, autoScalingGroupName).let(IAutoScalingGroup::wrap)
 
     public operator fun invoke(

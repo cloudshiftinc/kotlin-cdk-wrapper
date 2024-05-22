@@ -109,7 +109,7 @@ public interface CfnTransitGatewayMulticastDomainProps {
      * @param tags The tags for the transit gateway multicast domain.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -56,8 +56,8 @@ public open class CfnDomain(
     id: String,
     props: CfnDomainProps,
   ) :
-      this(software.amazon.awscdk.services.codeartifact.CfnDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDomainProps::unwrap))
+      this(software.amazon.awscdk.services.codeartifact.CfnDomain(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDomainProps.Companion::unwrap))
   )
 
   public constructor(
@@ -120,7 +120,7 @@ public open class CfnDomain(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -150,7 +150,7 @@ public open class CfnDomain(
    * A list of tags to be applied to the domain.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -252,7 +252,7 @@ public open class CfnDomain(
      * @param tags A list of tags to be applied to the domain. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

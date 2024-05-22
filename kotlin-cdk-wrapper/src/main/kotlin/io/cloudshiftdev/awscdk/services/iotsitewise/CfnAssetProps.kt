@@ -233,7 +233,7 @@ public interface CfnAssetProps {
      * A hierarchy specifies allowed parent/child asset relationships.
      */
     override fun assetHierarchies(assetHierarchies: IResolvable) {
-      cdkBuilder.assetHierarchies(assetHierarchies.let(IResolvable::unwrap))
+      cdkBuilder.assetHierarchies(assetHierarchies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -275,7 +275,7 @@ public interface CfnAssetProps {
      * composite model properties in the `assetCompositeModels` object.
      */
     override fun assetProperties(assetProperties: IResolvable) {
-      cdkBuilder.assetProperties(assetProperties.let(IResolvable::unwrap))
+      cdkBuilder.assetProperties(assetProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -302,7 +302,7 @@ public interface CfnAssetProps {
      * *AWS IoT SiteWise User Guide* .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

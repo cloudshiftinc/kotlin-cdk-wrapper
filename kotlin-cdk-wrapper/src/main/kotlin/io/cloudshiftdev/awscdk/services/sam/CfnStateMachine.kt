@@ -75,7 +75,7 @@ public open class CfnStateMachine(
   cdkObject: software.amazon.awscdk.services.sam.CfnStateMachine,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.sam.CfnStateMachine(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.sam.CfnStateMachine(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -84,8 +84,8 @@ public open class CfnStateMachine(
     id: String,
     props: CfnStateMachineProps,
   ) :
-      this(software.amazon.awscdk.services.sam.CfnStateMachine(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStateMachineProps::unwrap))
+      this(software.amazon.awscdk.services.sam.CfnStateMachine(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStateMachineProps.Companion::unwrap))
   )
 
   public constructor(
@@ -116,7 +116,7 @@ public open class CfnStateMachine(
    *
    */
   public open fun definitionSubstitutions(`value`: IResolvable) {
-    unwrap(this).setDefinitionSubstitutions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefinitionSubstitutions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -142,14 +142,14 @@ public open class CfnStateMachine(
    *
    */
   public open fun definitionUri(`value`: IResolvable) {
-    unwrap(this).setDefinitionUri(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefinitionUri(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun definitionUri(`value`: S3LocationProperty) {
-    unwrap(this).setDefinitionUri(`value`.let(S3LocationProperty::unwrap))
+    unwrap(this).setDefinitionUri(`value`.let(S3LocationProperty.Companion::unwrap))
   }
 
   /**
@@ -169,7 +169,7 @@ public open class CfnStateMachine(
    *
    */
   public open fun events(`value`: IResolvable) {
-    unwrap(this).setEvents(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEvents(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -185,7 +185,7 @@ public open class CfnStateMachine(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -197,14 +197,14 @@ public open class CfnStateMachine(
    *
    */
   public open fun logging(`value`: IResolvable) {
-    unwrap(this).setLogging(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLogging(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun logging(`value`: LoggingConfigurationProperty) {
-    unwrap(this).setLogging(`value`.let(LoggingConfigurationProperty::unwrap))
+    unwrap(this).setLogging(`value`.let(LoggingConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -255,14 +255,14 @@ public open class CfnStateMachine(
    *
    */
   public open fun policies(`value`: IResolvable) {
-    unwrap(this).setPolicies(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPolicies(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun policies(`value`: IAMPolicyDocumentProperty) {
-    unwrap(this).setPolicies(`value`.let(IAMPolicyDocumentProperty::unwrap))
+    unwrap(this).setPolicies(`value`.let(IAMPolicyDocumentProperty.Companion::unwrap))
   }
 
   /**
@@ -323,14 +323,14 @@ public open class CfnStateMachine(
    *
    */
   public open fun tracing(`value`: IResolvable) {
-    unwrap(this).setTracing(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTracing(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun tracing(`value`: TracingConfigurationProperty) {
-    unwrap(this).setTracing(`value`.let(TracingConfigurationProperty::unwrap))
+    unwrap(this).setTracing(`value`.let(TracingConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -543,7 +543,7 @@ public open class CfnStateMachine(
      * @param definitionSubstitutions 
      */
     override fun definitionSubstitutions(definitionSubstitutions: IResolvable) {
-      cdkBuilder.definitionSubstitutions(definitionSubstitutions.let(IResolvable::unwrap))
+      cdkBuilder.definitionSubstitutions(definitionSubstitutions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -567,7 +567,7 @@ public open class CfnStateMachine(
      * @param definitionUri 
      */
     override fun definitionUri(definitionUri: IResolvable) {
-      cdkBuilder.definitionUri(definitionUri.let(IResolvable::unwrap))
+      cdkBuilder.definitionUri(definitionUri.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -575,7 +575,7 @@ public open class CfnStateMachine(
      * @param definitionUri 
      */
     override fun definitionUri(definitionUri: S3LocationProperty) {
-      cdkBuilder.definitionUri(definitionUri.let(S3LocationProperty::unwrap))
+      cdkBuilder.definitionUri(definitionUri.let(S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -592,7 +592,7 @@ public open class CfnStateMachine(
      * @param events 
      */
     override fun events(events: IResolvable) {
-      cdkBuilder.events(events.let(IResolvable::unwrap))
+      cdkBuilder.events(events.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -608,7 +608,7 @@ public open class CfnStateMachine(
      * @param logging 
      */
     override fun logging(logging: IResolvable) {
-      cdkBuilder.logging(logging.let(IResolvable::unwrap))
+      cdkBuilder.logging(logging.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -616,7 +616,7 @@ public open class CfnStateMachine(
      * @param logging 
      */
     override fun logging(logging: LoggingConfigurationProperty) {
-      cdkBuilder.logging(logging.let(LoggingConfigurationProperty::unwrap))
+      cdkBuilder.logging(logging.let(LoggingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -657,7 +657,7 @@ public open class CfnStateMachine(
      * @param policies 
      */
     override fun policies(policies: IResolvable) {
-      cdkBuilder.policies(policies.let(IResolvable::unwrap))
+      cdkBuilder.policies(policies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -665,7 +665,7 @@ public open class CfnStateMachine(
      * @param policies 
      */
     override fun policies(policies: IAMPolicyDocumentProperty) {
-      cdkBuilder.policies(policies.let(IAMPolicyDocumentProperty::unwrap))
+      cdkBuilder.policies(policies.let(IAMPolicyDocumentProperty.Companion::unwrap))
     }
 
     /**
@@ -712,7 +712,7 @@ public open class CfnStateMachine(
      * @param tracing 
      */
     override fun tracing(tracing: IResolvable) {
-      cdkBuilder.tracing(tracing.let(IResolvable::unwrap))
+      cdkBuilder.tracing(tracing.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -720,7 +720,7 @@ public open class CfnStateMachine(
      * @param tracing 
      */
     override fun tracing(tracing: TracingConfigurationProperty) {
-      cdkBuilder.tracing(tracing.let(TracingConfigurationProperty::unwrap))
+      cdkBuilder.tracing(tracing.let(TracingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1363,14 +1363,14 @@ public open class CfnStateMachine(
        * @param properties the value to be set. 
        */
       override fun properties(properties: IResolvable) {
-        cdkBuilder.properties(properties.let(IResolvable::unwrap))
+        cdkBuilder.properties(properties.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param properties the value to be set. 
        */
       override fun properties(properties: ApiEventProperty) {
-        cdkBuilder.properties(properties.let(ApiEventProperty::unwrap))
+        cdkBuilder.properties(properties.let(ApiEventProperty.Companion::unwrap))
       }
 
       /**
@@ -1385,7 +1385,7 @@ public open class CfnStateMachine(
        * @param properties the value to be set. 
        */
       override fun properties(properties: CloudWatchEventEventProperty) {
-        cdkBuilder.properties(properties.let(CloudWatchEventEventProperty::unwrap))
+        cdkBuilder.properties(properties.let(CloudWatchEventEventProperty.Companion::unwrap))
       }
 
       /**
@@ -1400,7 +1400,7 @@ public open class CfnStateMachine(
        * @param properties the value to be set. 
        */
       override fun properties(properties: EventBridgeRuleEventProperty) {
-        cdkBuilder.properties(properties.let(EventBridgeRuleEventProperty::unwrap))
+        cdkBuilder.properties(properties.let(EventBridgeRuleEventProperty.Companion::unwrap))
       }
 
       /**
@@ -1415,7 +1415,7 @@ public open class CfnStateMachine(
        * @param properties the value to be set. 
        */
       override fun properties(properties: ScheduleEventProperty) {
-        cdkBuilder.properties(properties.let(ScheduleEventProperty::unwrap))
+        cdkBuilder.properties(properties.let(ScheduleEventProperty.Companion::unwrap))
       }
 
       /**
@@ -1696,14 +1696,14 @@ public open class CfnStateMachine(
        * @param cloudWatchLogsLogGroup the value to be set. 
        */
       override fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: IResolvable) {
-        cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param cloudWatchLogsLogGroup the value to be set. 
        */
       override fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: CloudWatchLogsLogGroupProperty) {
-        cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup.let(CloudWatchLogsLogGroupProperty::unwrap))
+        cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup.let(CloudWatchLogsLogGroupProperty.Companion::unwrap))
       }
 
       /**
@@ -1828,7 +1828,7 @@ public open class CfnStateMachine(
        * @param destinations the value to be set. 
        */
       override fun destinations(destinations: IResolvable) {
-        cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
+        cdkBuilder.destinations(destinations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1855,7 +1855,7 @@ public open class CfnStateMachine(
        * @param includeExecutionData the value to be set. 
        */
       override fun includeExecutionData(includeExecutionData: IResolvable) {
-        cdkBuilder.includeExecutionData(includeExecutionData.let(IResolvable::unwrap))
+        cdkBuilder.includeExecutionData(includeExecutionData.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2109,14 +2109,14 @@ public open class CfnStateMachine(
        * @param lambdaInvokePolicy the value to be set.
        */
       override fun lambdaInvokePolicy(lambdaInvokePolicy: IResolvable) {
-        cdkBuilder.lambdaInvokePolicy(lambdaInvokePolicy.let(IResolvable::unwrap))
+        cdkBuilder.lambdaInvokePolicy(lambdaInvokePolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param lambdaInvokePolicy the value to be set.
        */
       override fun lambdaInvokePolicy(lambdaInvokePolicy: FunctionSAMPTProperty) {
-        cdkBuilder.lambdaInvokePolicy(lambdaInvokePolicy.let(FunctionSAMPTProperty::unwrap))
+        cdkBuilder.lambdaInvokePolicy(lambdaInvokePolicy.let(FunctionSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -2131,7 +2131,7 @@ public open class CfnStateMachine(
        * @param stepFunctionsExecutionPolicy the value to be set.
        */
       override fun stepFunctionsExecutionPolicy(stepFunctionsExecutionPolicy: IResolvable) {
-        cdkBuilder.stepFunctionsExecutionPolicy(stepFunctionsExecutionPolicy.let(IResolvable::unwrap))
+        cdkBuilder.stepFunctionsExecutionPolicy(stepFunctionsExecutionPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2139,7 +2139,7 @@ public open class CfnStateMachine(
        */
       override
           fun stepFunctionsExecutionPolicy(stepFunctionsExecutionPolicy: StateMachineSAMPTProperty) {
-        cdkBuilder.stepFunctionsExecutionPolicy(stepFunctionsExecutionPolicy.let(StateMachineSAMPTProperty::unwrap))
+        cdkBuilder.stepFunctionsExecutionPolicy(stepFunctionsExecutionPolicy.let(StateMachineSAMPTProperty.Companion::unwrap))
       }
 
       /**
@@ -2416,7 +2416,7 @@ public open class CfnStateMachine(
        * @param enabled the value to be set.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

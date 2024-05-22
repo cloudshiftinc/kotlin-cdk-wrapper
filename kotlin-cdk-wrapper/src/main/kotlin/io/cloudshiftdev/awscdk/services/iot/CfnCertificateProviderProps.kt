@@ -143,7 +143,7 @@ public interface CfnCertificateProviderProps {
      * @param tags Metadata that can be used to manage the certificate provider.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

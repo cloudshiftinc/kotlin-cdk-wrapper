@@ -51,8 +51,8 @@ public open class CfnStreamingImage(
     id: String,
     props: CfnStreamingImageProps,
   ) :
-      this(software.amazon.awscdk.services.nimblestudio.CfnStreamingImage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStreamingImageProps::unwrap))
+      this(software.amazon.awscdk.services.nimblestudio.CfnStreamingImage(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStreamingImageProps.Companion::unwrap))
   )
 
   public constructor(
@@ -132,7 +132,7 @@ public open class CfnStreamingImage(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

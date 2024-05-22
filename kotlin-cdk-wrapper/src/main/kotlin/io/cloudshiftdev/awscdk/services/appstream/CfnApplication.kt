@@ -65,8 +65,8 @@ public open class CfnApplication(
     id: String,
     props: CfnApplicationProps,
   ) :
-      this(software.amazon.awscdk.services.appstream.CfnApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApplicationProps::unwrap))
+      this(software.amazon.awscdk.services.appstream.CfnApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApplicationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -150,14 +150,14 @@ public open class CfnApplication(
    * The icon S3 location of the application.
    */
   public open fun iconS3Location(`value`: IResolvable) {
-    unwrap(this).setIconS3Location(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIconS3Location(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The icon S3 location of the application.
    */
   public open fun iconS3Location(`value`: S3LocationProperty) {
-    unwrap(this).setIconS3Location(`value`.let(S3LocationProperty::unwrap))
+    unwrap(this).setIconS3Location(`value`.let(S3LocationProperty.Companion::unwrap))
   }
 
   /**
@@ -174,7 +174,7 @@ public open class CfnApplication(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -263,7 +263,7 @@ public open class CfnApplication(
    * The tags of the application.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -514,7 +514,7 @@ public open class CfnApplication(
      * @param iconS3Location The icon S3 location of the application. 
      */
     override fun iconS3Location(iconS3Location: IResolvable) {
-      cdkBuilder.iconS3Location(iconS3Location.let(IResolvable::unwrap))
+      cdkBuilder.iconS3Location(iconS3Location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -524,7 +524,7 @@ public open class CfnApplication(
      * @param iconS3Location The icon S3 location of the application. 
      */
     override fun iconS3Location(iconS3Location: S3LocationProperty) {
-      cdkBuilder.iconS3Location(iconS3Location.let(S3LocationProperty::unwrap))
+      cdkBuilder.iconS3Location(iconS3Location.let(S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -624,7 +624,7 @@ public open class CfnApplication(
      * @param tags The tags of the application. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

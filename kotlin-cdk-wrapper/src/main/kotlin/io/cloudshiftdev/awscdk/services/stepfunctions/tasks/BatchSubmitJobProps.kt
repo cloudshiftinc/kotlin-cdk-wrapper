@@ -317,7 +317,7 @@ public interface BatchSubmitJobProps : TaskStateBaseProps {
      * of a container in the specified job definition and the overrides it should receive.
      */
     override fun containerOverrides(containerOverrides: BatchContainerOverrides) {
-      cdkBuilder.containerOverrides(containerOverrides.let(BatchContainerOverrides::unwrap))
+      cdkBuilder.containerOverrides(containerOverrides.let(BatchContainerOverrides.Companion::unwrap))
     }
 
     /**
@@ -335,7 +335,7 @@ public interface BatchSubmitJobProps : TaskStateBaseProps {
      * This enables cross-account resource invocations.
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -353,7 +353,7 @@ public interface BatchSubmitJobProps : TaskStateBaseProps {
      * A job can depend upon a maximum of 20 jobs.
      */
     override fun dependsOn(dependsOn: List<BatchJobDependency>) {
-      cdkBuilder.dependsOn(dependsOn.map(BatchJobDependency::unwrap))
+      cdkBuilder.dependsOn(dependsOn.map(BatchJobDependency.Companion::unwrap))
     }
 
     /**
@@ -369,7 +369,7 @@ public interface BatchSubmitJobProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -378,7 +378,7 @@ public interface BatchSubmitJobProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -399,7 +399,7 @@ public interface BatchSubmitJobProps : TaskStateBaseProps {
      * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -439,7 +439,7 @@ public interface BatchSubmitJobProps : TaskStateBaseProps {
      * @param payload The payload to be passed as parameters to the batch job.
      */
     override fun payload(payload: TaskInput) {
-      cdkBuilder.payload(payload.let(TaskInput::unwrap))
+      cdkBuilder.payload(payload.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -481,7 +481,7 @@ public interface BatchSubmitJobProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -490,7 +490,7 @@ public interface BatchSubmitJobProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.BatchSubmitJobProps =

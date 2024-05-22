@@ -98,7 +98,7 @@ public interface CfnMonitoringSubscriptionProps {
      * 
      */
     override fun monitoringSubscription(monitoringSubscription: IResolvable) {
-      cdkBuilder.monitoringSubscription(monitoringSubscription.let(IResolvable::unwrap))
+      cdkBuilder.monitoringSubscription(monitoringSubscription.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -107,7 +107,7 @@ public interface CfnMonitoringSubscriptionProps {
      */
     override
         fun monitoringSubscription(monitoringSubscription: CfnMonitoringSubscription.MonitoringSubscriptionProperty) {
-      cdkBuilder.monitoringSubscription(monitoringSubscription.let(CfnMonitoringSubscription.MonitoringSubscriptionProperty::unwrap))
+      cdkBuilder.monitoringSubscription(monitoringSubscription.let(CfnMonitoringSubscription.MonitoringSubscriptionProperty.Companion::unwrap))
     }
 
     /**

@@ -57,8 +57,8 @@ public open class CfnPackage(
     id: String,
     props: CfnPackageProps,
   ) :
-      this(software.amazon.awscdk.services.panorama.CfnPackage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPackageProps::unwrap))
+      this(software.amazon.awscdk.services.panorama.CfnPackage(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPackageProps.Companion::unwrap))
   )
 
   public constructor(
@@ -118,7 +118,7 @@ public open class CfnPackage(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -142,14 +142,14 @@ public open class CfnPackage(
    * A storage location.
    */
   public open fun storageLocation(`value`: IResolvable) {
-    unwrap(this).setStorageLocation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStorageLocation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A storage location.
    */
   public open fun storageLocation(`value`: StorageLocationProperty) {
-    unwrap(this).setStorageLocation(`value`.let(StorageLocationProperty::unwrap))
+    unwrap(this).setStorageLocation(`value`.let(StorageLocationProperty.Companion::unwrap))
   }
 
   /**
@@ -175,7 +175,7 @@ public open class CfnPackage(
    * Tags for the package.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -263,7 +263,7 @@ public open class CfnPackage(
      * @param storageLocation A storage location. 
      */
     override fun storageLocation(storageLocation: IResolvable) {
-      cdkBuilder.storageLocation(storageLocation.let(IResolvable::unwrap))
+      cdkBuilder.storageLocation(storageLocation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -273,7 +273,7 @@ public open class CfnPackage(
      * @param storageLocation A storage location. 
      */
     override fun storageLocation(storageLocation: StorageLocationProperty) {
-      cdkBuilder.storageLocation(storageLocation.let(StorageLocationProperty::unwrap))
+      cdkBuilder.storageLocation(storageLocation.let(StorageLocationProperty.Companion::unwrap))
     }
 
     /**
@@ -294,7 +294,7 @@ public open class CfnPackage(
      * @param tags Tags for the package. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

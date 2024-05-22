@@ -40,7 +40,8 @@ public open class ParameterMapping(
    * @param value 
    */
   public open fun appendHeader(name: String, `value`: MappingValue): ParameterMapping =
-      unwrap(this).appendHeader(name, `value`.let(MappingValue::unwrap)).let(ParameterMapping::wrap)
+      unwrap(this).appendHeader(name,
+      `value`.let(MappingValue.Companion::unwrap)).let(ParameterMapping::wrap)
 
   /**
    * Creates a mapping to append a query string.
@@ -50,7 +51,7 @@ public open class ParameterMapping(
    */
   public open fun appendQueryString(name: String, `value`: MappingValue): ParameterMapping =
       unwrap(this).appendQueryString(name,
-      `value`.let(MappingValue::unwrap)).let(ParameterMapping::wrap)
+      `value`.let(MappingValue.Companion::unwrap)).let(ParameterMapping::wrap)
 
   /**
    * Creates a custom mapping.
@@ -74,7 +75,7 @@ public open class ParameterMapping(
    */
   public open fun overwriteHeader(name: String, `value`: MappingValue): ParameterMapping =
       unwrap(this).overwriteHeader(name,
-      `value`.let(MappingValue::unwrap)).let(ParameterMapping::wrap)
+      `value`.let(MappingValue.Companion::unwrap)).let(ParameterMapping::wrap)
 
   /**
    * Creates a mapping to overwrite a path.
@@ -82,7 +83,7 @@ public open class ParameterMapping(
    * @param value 
    */
   public open fun overwritePath(`value`: MappingValue): ParameterMapping =
-      unwrap(this).overwritePath(`value`.let(MappingValue::unwrap)).let(ParameterMapping::wrap)
+      unwrap(this).overwritePath(`value`.let(MappingValue.Companion::unwrap)).let(ParameterMapping::wrap)
 
   /**
    * Creates a mapping to overwrite a querystring.
@@ -92,7 +93,7 @@ public open class ParameterMapping(
    */
   public open fun overwriteQueryString(name: String, `value`: MappingValue): ParameterMapping =
       unwrap(this).overwriteQueryString(name,
-      `value`.let(MappingValue::unwrap)).let(ParameterMapping::wrap)
+      `value`.let(MappingValue.Companion::unwrap)).let(ParameterMapping::wrap)
 
   /**
    * Creates a mapping to remove a header.

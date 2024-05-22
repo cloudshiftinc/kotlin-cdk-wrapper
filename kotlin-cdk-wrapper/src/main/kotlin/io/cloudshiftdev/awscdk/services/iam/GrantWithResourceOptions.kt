@@ -136,7 +136,7 @@ public interface GrantWithResourceOptions : CommonGrantOptions {
      * @param grantee The principal to grant to. 
      */
     override fun grantee(grantee: IGrantable) {
-      cdkBuilder.grantee(grantee.let(IGrantable::unwrap))
+      cdkBuilder.grantee(grantee.let(IGrantable.Companion::unwrap))
     }
 
     /**
@@ -145,7 +145,7 @@ public interface GrantWithResourceOptions : CommonGrantOptions {
      * added to the principal policy.
      */
     override fun resource(resource: IResourceWithPolicy) {
-      cdkBuilder.resource(resource.let(IResourceWithPolicy::unwrap))
+      cdkBuilder.resource(resource.let(IResourceWithPolicy.Companion::unwrap))
     }
 
     /**

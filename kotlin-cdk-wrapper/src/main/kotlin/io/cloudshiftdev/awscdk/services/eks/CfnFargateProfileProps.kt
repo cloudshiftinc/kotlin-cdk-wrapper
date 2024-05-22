@@ -213,7 +213,7 @@ public interface CfnFargateProfileProps {
      * specify `labels` for a `namespace` . You may specify up to five selectors in a Fargate profile.
      */
     override fun selectors(selectors: IResolvable) {
-      cdkBuilder.selectors(selectors.let(IResolvable::unwrap))
+      cdkBuilder.selectors(selectors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -254,7 +254,7 @@ public interface CfnFargateProfileProps {
      * any other cluster or AWS resources.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

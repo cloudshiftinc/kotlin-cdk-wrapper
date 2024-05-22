@@ -158,7 +158,7 @@ public interface CfnCapacityProviderProps {
      * @param autoScalingGroupProvider The Auto Scaling group settings for the capacity provider. 
      */
     override fun autoScalingGroupProvider(autoScalingGroupProvider: IResolvable) {
-      cdkBuilder.autoScalingGroupProvider(autoScalingGroupProvider.let(IResolvable::unwrap))
+      cdkBuilder.autoScalingGroupProvider(autoScalingGroupProvider.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -166,7 +166,7 @@ public interface CfnCapacityProviderProps {
      */
     override
         fun autoScalingGroupProvider(autoScalingGroupProvider: CfnCapacityProvider.AutoScalingGroupProviderProperty) {
-      cdkBuilder.autoScalingGroupProvider(autoScalingGroupProvider.let(CfnCapacityProvider.AutoScalingGroupProviderProperty::unwrap))
+      cdkBuilder.autoScalingGroupProvider(autoScalingGroupProvider.let(CfnCapacityProvider.AutoScalingGroupProviderProperty.Companion::unwrap))
     }
 
     /**
@@ -204,7 +204,7 @@ public interface CfnCapacityProviderProps {
      * numbers, and spaces representable in UTF-8, and the following characters: + - = . _ : /
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

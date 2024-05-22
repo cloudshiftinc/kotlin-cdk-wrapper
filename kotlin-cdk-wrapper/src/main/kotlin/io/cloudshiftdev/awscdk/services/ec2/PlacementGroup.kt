@@ -34,7 +34,7 @@ public open class PlacementGroup(
   cdkObject: software.amazon.awscdk.services.ec2.PlacementGroup,
 ) : Resource(cdkObject), IPlacementGroup {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ec2.PlacementGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ec2.PlacementGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -43,8 +43,8 @@ public open class PlacementGroup(
     id: String,
     props: PlacementGroupProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.PlacementGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(PlacementGroupProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.PlacementGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(PlacementGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -202,7 +202,7 @@ public open class PlacementGroup(
      * @param spreadLevel Places instances on distinct hardware. 
      */
     override fun spreadLevel(spreadLevel: PlacementGroupSpreadLevel) {
-      cdkBuilder.spreadLevel(spreadLevel.let(PlacementGroupSpreadLevel::unwrap))
+      cdkBuilder.spreadLevel(spreadLevel.let(PlacementGroupSpreadLevel.Companion::unwrap))
     }
 
     /**
@@ -213,7 +213,7 @@ public open class PlacementGroup(
      * @param strategy Which strategy to use when launching instances. 
      */
     override fun strategy(strategy: PlacementGroupStrategy) {
-      cdkBuilder.strategy(strategy.let(PlacementGroupStrategy::unwrap))
+      cdkBuilder.strategy(strategy.let(PlacementGroupStrategy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.PlacementGroup = cdkBuilder.build()
@@ -225,7 +225,7 @@ public open class PlacementGroup(
       id: String,
       placementGroupName: String,
     ): IPlacementGroup =
-        software.amazon.awscdk.services.ec2.PlacementGroup.fromPlacementGroupName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ec2.PlacementGroup.fromPlacementGroupName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, placementGroupName).let(IPlacementGroup::wrap)
 
     public operator fun invoke(

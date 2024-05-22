@@ -60,14 +60,14 @@ public interface IncludedNestedStack {
      * access Resources and other template elements. 
      */
     override fun includedTemplate(includedTemplate: CfnInclude) {
-      cdkBuilder.includedTemplate(includedTemplate.let(CfnInclude::unwrap))
+      cdkBuilder.includedTemplate(includedTemplate.let(CfnInclude.Companion::unwrap))
     }
 
     /**
      * @param stack The NestedStack object which represents the scope of the template. 
      */
     override fun stack(stack: NestedStack) {
-      cdkBuilder.stack(stack.let(NestedStack::unwrap))
+      cdkBuilder.stack(stack.let(NestedStack.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.cloudformation.include.IncludedNestedStack =

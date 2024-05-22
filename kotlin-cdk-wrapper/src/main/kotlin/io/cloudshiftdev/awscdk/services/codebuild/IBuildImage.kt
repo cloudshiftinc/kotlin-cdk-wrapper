@@ -141,7 +141,7 @@ public interface IBuildImage {
      * @param buildEnvironment the current build environment. 
      */
     override fun validate(buildEnvironment: BuildEnvironment): List<String> =
-        unwrap(this).validate(buildEnvironment.let(BuildEnvironment::unwrap))
+        unwrap(this).validate(buildEnvironment.let(BuildEnvironment.Companion::unwrap))
 
     /**
      * Allows the image a chance to validate whether the passed configuration is correct.

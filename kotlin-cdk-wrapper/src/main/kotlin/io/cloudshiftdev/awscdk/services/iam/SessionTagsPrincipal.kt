@@ -27,7 +27,7 @@ public open class SessionTagsPrincipal(
   cdkObject: software.amazon.awscdk.services.iam.SessionTagsPrincipal,
 ) : PrincipalBase(cdkObject) {
   public constructor(principal: IPrincipal) :
-      this(software.amazon.awscdk.services.iam.SessionTagsPrincipal(principal.let(IPrincipal::unwrap))
+      this(software.amazon.awscdk.services.iam.SessionTagsPrincipal(principal.let(IPrincipal.Companion::unwrap))
   )
 
   /**
@@ -39,7 +39,7 @@ public open class SessionTagsPrincipal(
    * @param doc 
    */
   public override fun addToAssumeRolePolicy(doc: PolicyDocument) {
-    unwrap(this).addToAssumeRolePolicy(doc.let(PolicyDocument::unwrap))
+    unwrap(this).addToAssumeRolePolicy(doc.let(PolicyDocument.Companion::unwrap))
   }
 
   /**
@@ -61,7 +61,7 @@ public open class SessionTagsPrincipal(
    * @param statement 
    */
   public override fun addToPolicy(statement: PolicyStatement): Boolean =
-      unwrap(this).addToPolicy(statement.let(PolicyStatement::unwrap))
+      unwrap(this).addToPolicy(statement.let(PolicyStatement.Companion::unwrap))
 
   /**
    * Add to the policy of this principal.
@@ -79,7 +79,7 @@ public open class SessionTagsPrincipal(
    * @param statement 
    */
   public override fun addToPrincipalPolicy(statement: PolicyStatement): AddToPrincipalPolicyResult =
-      unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement::unwrap)).let(AddToPrincipalPolicyResult::wrap)
+      unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToPrincipalPolicyResult::wrap)
 
   /**
    * Add to the policy of this principal.

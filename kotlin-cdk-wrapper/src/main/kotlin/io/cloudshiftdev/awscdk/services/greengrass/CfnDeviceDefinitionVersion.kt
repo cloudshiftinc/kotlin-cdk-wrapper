@@ -64,8 +64,8 @@ public open class CfnDeviceDefinitionVersion(
     id: String,
     props: CfnDeviceDefinitionVersionProps,
   ) :
-      this(software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDeviceDefinitionVersionProps::unwrap))
+      this(software.amazon.awscdk.services.greengrass.CfnDeviceDefinitionVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDeviceDefinitionVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -101,7 +101,7 @@ public open class CfnDeviceDefinitionVersion(
    * The devices in this version.
    */
   public open fun devices(`value`: IResolvable) {
-    unwrap(this).setDevices(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDevices(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -122,7 +122,7 @@ public open class CfnDeviceDefinitionVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -193,7 +193,7 @@ public open class CfnDeviceDefinitionVersion(
      * @param devices The devices in this version. 
      */
     override fun devices(devices: IResolvable) {
-      cdkBuilder.devices(devices.let(IResolvable::unwrap))
+      cdkBuilder.devices(devices.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -379,7 +379,7 @@ public open class CfnDeviceDefinitionVersion(
        * automatically.
        */
       override fun syncShadow(syncShadow: IResolvable) {
-        cdkBuilder.syncShadow(syncShadow.let(IResolvable::unwrap))
+        cdkBuilder.syncShadow(syncShadow.let(IResolvable.Companion::unwrap))
       }
 
       /**

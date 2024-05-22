@@ -26,7 +26,7 @@ public abstract class VpcEndpoint(
    * @param statement the IAM statement to add. 
    */
   public open fun addToPolicy(statement: PolicyStatement) {
-    unwrap(this).addToPolicy(statement.let(PolicyStatement::unwrap))
+    unwrap(this).addToPolicy(statement.let(PolicyStatement.Companion::unwrap))
   }
 
   /**

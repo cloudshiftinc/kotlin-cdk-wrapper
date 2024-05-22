@@ -121,7 +121,7 @@ public interface ApiDestinationProps {
      * @param connection The ARN of the connection to use for the API destination. 
      */
     override fun connection(connection: IConnection) {
-      cdkBuilder.connection(connection.let(IConnection::unwrap))
+      cdkBuilder.connection(connection.let(IConnection.Companion::unwrap))
     }
 
     /**
@@ -142,7 +142,7 @@ public interface ApiDestinationProps {
      * @param httpMethod The method to use for the request to the HTTP invocation endpoint.
      */
     override fun httpMethod(httpMethod: HttpMethod) {
-      cdkBuilder.httpMethod(httpMethod.let(HttpMethod::unwrap))
+      cdkBuilder.httpMethod(httpMethod.let(HttpMethod.Companion::unwrap))
     }
 
     /**

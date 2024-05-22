@@ -268,7 +268,7 @@ public interface CfnLaunchProfileProps {
      * @param streamConfiguration A configuration for a streaming session. 
      */
     override fun streamConfiguration(streamConfiguration: IResolvable) {
-      cdkBuilder.streamConfiguration(streamConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.streamConfiguration(streamConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -276,7 +276,7 @@ public interface CfnLaunchProfileProps {
      */
     override
         fun streamConfiguration(streamConfiguration: CfnLaunchProfile.StreamConfigurationProperty) {
-      cdkBuilder.streamConfiguration(streamConfiguration.let(CfnLaunchProfile.StreamConfigurationProperty::unwrap))
+      cdkBuilder.streamConfiguration(streamConfiguration.let(CfnLaunchProfile.StreamConfigurationProperty.Companion::unwrap))
     }
 
     /**

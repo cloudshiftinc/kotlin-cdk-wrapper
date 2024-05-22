@@ -60,7 +60,7 @@ public interface MatchCapture {
      * @param capture The instance of Capture class to which this capture is associated with. 
      */
     override fun capture(capture: Capture) {
-      cdkBuilder.capture(capture.let(Capture::unwrap))
+      cdkBuilder.capture(capture.let(Capture.Companion::unwrap))
     }
 
     /**

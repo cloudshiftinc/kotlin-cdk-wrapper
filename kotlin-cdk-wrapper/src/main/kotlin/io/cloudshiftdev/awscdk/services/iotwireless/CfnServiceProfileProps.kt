@@ -127,14 +127,14 @@ public interface CfnServiceProfileProps {
      * @param loRaWan LoRaWAN service profile object.
      */
     override fun loRaWan(loRaWan: IResolvable) {
-      cdkBuilder.loRaWan(loRaWan.let(IResolvable::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param loRaWan LoRaWAN service profile object.
      */
     override fun loRaWan(loRaWan: CfnServiceProfile.LoRaWANServiceProfileProperty) {
-      cdkBuilder.loRaWan(loRaWan.let(CfnServiceProfile.LoRaWANServiceProfileProperty::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(CfnServiceProfile.LoRaWANServiceProfileProperty.Companion::unwrap))
     }
 
     /**
@@ -158,7 +158,7 @@ public interface CfnServiceProfileProps {
      * Tags can have a minimum of 0 and a maximum of 50 items.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

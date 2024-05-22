@@ -327,7 +327,7 @@ public interface GitHubSourceProps : SourceProps {
      * Only valid if `webhook` was not provided as false.
      */
     override fun webhookFilters(webhookFilters: List<FilterGroup>) {
-      cdkBuilder.webhookFilters(webhookFilters.map(FilterGroup::unwrap))
+      cdkBuilder.webhookFilters(webhookFilters.map(FilterGroup.Companion::unwrap))
     }
 
     /**

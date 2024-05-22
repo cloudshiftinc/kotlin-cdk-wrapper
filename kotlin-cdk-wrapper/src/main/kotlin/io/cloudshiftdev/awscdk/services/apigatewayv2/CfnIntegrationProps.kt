@@ -746,7 +746,7 @@ public interface CfnIntegrationProps {
      * Supported only for HTTP APIs.
      */
     override fun tlsConfig(tlsConfig: IResolvable) {
-      cdkBuilder.tlsConfig(tlsConfig.let(IResolvable::unwrap))
+      cdkBuilder.tlsConfig(tlsConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -755,7 +755,7 @@ public interface CfnIntegrationProps {
      * Supported only for HTTP APIs.
      */
     override fun tlsConfig(tlsConfig: CfnIntegration.TlsConfigProperty) {
-      cdkBuilder.tlsConfig(tlsConfig.let(CfnIntegration.TlsConfigProperty::unwrap))
+      cdkBuilder.tlsConfig(tlsConfig.let(CfnIntegration.TlsConfigProperty.Companion::unwrap))
     }
 
     /**

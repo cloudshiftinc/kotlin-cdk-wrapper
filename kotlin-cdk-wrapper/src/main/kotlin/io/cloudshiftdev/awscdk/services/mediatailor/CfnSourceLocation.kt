@@ -72,8 +72,8 @@ public open class CfnSourceLocation(
     id: String,
     props: CfnSourceLocationProps,
   ) :
-      this(software.amazon.awscdk.services.mediatailor.CfnSourceLocation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSourceLocationProps::unwrap))
+      this(software.amazon.awscdk.services.mediatailor.CfnSourceLocation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSourceLocationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -92,14 +92,14 @@ public open class CfnSourceLocation(
    * The access configuration for the source location.
    */
   public open fun accessConfiguration(`value`: IResolvable) {
-    unwrap(this).setAccessConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccessConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The access configuration for the source location.
    */
   public open fun accessConfiguration(`value`: AccessConfigurationProperty) {
-    unwrap(this).setAccessConfiguration(`value`.let(AccessConfigurationProperty::unwrap))
+    unwrap(this).setAccessConfiguration(`value`.let(AccessConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -131,7 +131,7 @@ public open class CfnSourceLocation(
    * The default segment delivery configuration.
    */
   public open fun defaultSegmentDeliveryConfiguration(`value`: IResolvable) {
-    unwrap(this).setDefaultSegmentDeliveryConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefaultSegmentDeliveryConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -139,7 +139,7 @@ public open class CfnSourceLocation(
    */
   public open
       fun defaultSegmentDeliveryConfiguration(`value`: DefaultSegmentDeliveryConfigurationProperty) {
-    unwrap(this).setDefaultSegmentDeliveryConfiguration(`value`.let(DefaultSegmentDeliveryConfigurationProperty::unwrap))
+    unwrap(this).setDefaultSegmentDeliveryConfiguration(`value`.let(DefaultSegmentDeliveryConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -161,14 +161,14 @@ public open class CfnSourceLocation(
    * The HTTP configuration for the source location.
    */
   public open fun httpConfiguration(`value`: IResolvable) {
-    unwrap(this).setHttpConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHttpConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The HTTP configuration for the source location.
    */
   public open fun httpConfiguration(`value`: HttpConfigurationProperty) {
-    unwrap(this).setHttpConfiguration(`value`.let(HttpConfigurationProperty::unwrap))
+    unwrap(this).setHttpConfiguration(`value`.let(HttpConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -185,7 +185,7 @@ public open class CfnSourceLocation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -198,7 +198,7 @@ public open class CfnSourceLocation(
    * The segment delivery configurations for the source location.
    */
   public open fun segmentDeliveryConfigurations(`value`: IResolvable) {
-    unwrap(this).setSegmentDeliveryConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSegmentDeliveryConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -235,7 +235,7 @@ public open class CfnSourceLocation(
    * The tags assigned to the source location.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -405,7 +405,7 @@ public open class CfnSourceLocation(
      * @param accessConfiguration The access configuration for the source location. 
      */
     override fun accessConfiguration(accessConfiguration: IResolvable) {
-      cdkBuilder.accessConfiguration(accessConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.accessConfiguration(accessConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -415,7 +415,7 @@ public open class CfnSourceLocation(
      * @param accessConfiguration The access configuration for the source location. 
      */
     override fun accessConfiguration(accessConfiguration: AccessConfigurationProperty) {
-      cdkBuilder.accessConfiguration(accessConfiguration.let(AccessConfigurationProperty::unwrap))
+      cdkBuilder.accessConfiguration(accessConfiguration.let(AccessConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -438,7 +438,7 @@ public open class CfnSourceLocation(
      */
     override
         fun defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration: IResolvable) {
-      cdkBuilder.defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -449,7 +449,7 @@ public open class CfnSourceLocation(
      */
     override
         fun defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration: DefaultSegmentDeliveryConfigurationProperty) {
-      cdkBuilder.defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration.let(DefaultSegmentDeliveryConfigurationProperty::unwrap))
+      cdkBuilder.defaultSegmentDeliveryConfiguration(defaultSegmentDeliveryConfiguration.let(DefaultSegmentDeliveryConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -472,7 +472,7 @@ public open class CfnSourceLocation(
      * @param httpConfiguration The HTTP configuration for the source location. 
      */
     override fun httpConfiguration(httpConfiguration: IResolvable) {
-      cdkBuilder.httpConfiguration(httpConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.httpConfiguration(httpConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -482,7 +482,7 @@ public open class CfnSourceLocation(
      * @param httpConfiguration The HTTP configuration for the source location. 
      */
     override fun httpConfiguration(httpConfiguration: HttpConfigurationProperty) {
-      cdkBuilder.httpConfiguration(httpConfiguration.let(HttpConfigurationProperty::unwrap))
+      cdkBuilder.httpConfiguration(httpConfiguration.let(HttpConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -504,7 +504,7 @@ public open class CfnSourceLocation(
      * location. 
      */
     override fun segmentDeliveryConfigurations(segmentDeliveryConfigurations: IResolvable) {
-      cdkBuilder.segmentDeliveryConfigurations(segmentDeliveryConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.segmentDeliveryConfigurations(segmentDeliveryConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -550,7 +550,7 @@ public open class CfnSourceLocation(
      * @param tags The tags assigned to the source location. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -736,7 +736,7 @@ public open class CfnSourceLocation(
        */
       override
           fun secretsManagerAccessTokenConfiguration(secretsManagerAccessTokenConfiguration: IResolvable) {
-        cdkBuilder.secretsManagerAccessTokenConfiguration(secretsManagerAccessTokenConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.secretsManagerAccessTokenConfiguration(secretsManagerAccessTokenConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -745,7 +745,7 @@ public open class CfnSourceLocation(
        */
       override
           fun secretsManagerAccessTokenConfiguration(secretsManagerAccessTokenConfiguration: SecretsManagerAccessTokenConfigurationProperty) {
-        cdkBuilder.secretsManagerAccessTokenConfiguration(secretsManagerAccessTokenConfiguration.let(SecretsManagerAccessTokenConfigurationProperty::unwrap))
+        cdkBuilder.secretsManagerAccessTokenConfiguration(secretsManagerAccessTokenConfiguration.let(SecretsManagerAccessTokenConfigurationProperty.Companion::unwrap))
       }
 
       /**

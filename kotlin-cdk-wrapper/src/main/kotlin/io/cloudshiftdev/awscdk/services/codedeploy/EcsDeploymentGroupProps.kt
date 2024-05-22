@@ -222,7 +222,7 @@ public interface EcsDeploymentGroupProps {
      * Alarms can also be added after the Deployment Group is created using the `#addAlarm` method.
      */
     override fun alarms(alarms: List<IAlarm>) {
-      cdkBuilder.alarms(alarms.map(IAlarm::unwrap))
+      cdkBuilder.alarms(alarms.map(IAlarm.Companion::unwrap))
     }
 
     /**
@@ -239,14 +239,14 @@ public interface EcsDeploymentGroupProps {
      * belongs to.
      */
     override fun application(application: IEcsApplication) {
-      cdkBuilder.application(application.let(IEcsApplication::unwrap))
+      cdkBuilder.application(application.let(IEcsApplication.Companion::unwrap))
     }
 
     /**
      * @param autoRollback The auto-rollback configuration for this Deployment Group.
      */
     override fun autoRollback(autoRollback: AutoRollbackConfig) {
-      cdkBuilder.autoRollback(autoRollback.let(AutoRollbackConfig::unwrap))
+      cdkBuilder.autoRollback(autoRollback.let(AutoRollbackConfig.Companion::unwrap))
     }
 
     /**
@@ -262,7 +262,7 @@ public interface EcsDeploymentGroupProps {
      */
     override
         fun blueGreenDeploymentConfig(blueGreenDeploymentConfig: EcsBlueGreenDeploymentConfig) {
-      cdkBuilder.blueGreenDeploymentConfig(blueGreenDeploymentConfig.let(EcsBlueGreenDeploymentConfig::unwrap))
+      cdkBuilder.blueGreenDeploymentConfig(blueGreenDeploymentConfig.let(EcsBlueGreenDeploymentConfig.Companion::unwrap))
     }
 
     /**
@@ -278,7 +278,7 @@ public interface EcsDeploymentGroupProps {
      * @param deploymentConfig The Deployment Configuration this Deployment Group uses.
      */
     override fun deploymentConfig(deploymentConfig: IEcsDeploymentConfig) {
-      cdkBuilder.deploymentConfig(deploymentConfig.let(IEcsDeploymentConfig::unwrap))
+      cdkBuilder.deploymentConfig(deploymentConfig.let(IEcsDeploymentConfig.Companion::unwrap))
     }
 
     /**
@@ -309,14 +309,14 @@ public interface EcsDeploymentGroupProps {
      * @param role The service Role of this Deployment Group.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param service The ECS service to deploy with this Deployment Group. 
      */
     override fun service(service: IBaseService) {
-      cdkBuilder.service(service.let(IBaseService::unwrap))
+      cdkBuilder.service(service.let(IBaseService.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codedeploy.EcsDeploymentGroupProps =

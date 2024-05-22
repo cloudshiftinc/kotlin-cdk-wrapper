@@ -88,8 +88,8 @@ public open class CfnPolicy(
     id: String,
     props: CfnPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.verifiedpermissions.CfnPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.verifiedpermissions.CfnPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -121,14 +121,14 @@ public open class CfnPolicy(
    * Specifies the policy type and content to use for the new or updated policy.
    */
   public open fun definition(`value`: IResolvable) {
-    unwrap(this).setDefinition(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefinition(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the policy type and content to use for the new or updated policy.
    */
   public open fun definition(`value`: PolicyDefinitionProperty) {
-    unwrap(this).setDefinition(`value`.let(PolicyDefinitionProperty::unwrap))
+    unwrap(this).setDefinition(`value`.let(PolicyDefinitionProperty.Companion::unwrap))
   }
 
   /**
@@ -145,7 +145,7 @@ public open class CfnPolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -227,7 +227,7 @@ public open class CfnPolicy(
      * 
      */
     override fun definition(definition: IResolvable) {
-      cdkBuilder.definition(definition.let(IResolvable::unwrap))
+      cdkBuilder.definition(definition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -240,7 +240,7 @@ public open class CfnPolicy(
      * 
      */
     override fun definition(definition: PolicyDefinitionProperty) {
-      cdkBuilder.definition(definition.let(PolicyDefinitionProperty::unwrap))
+      cdkBuilder.definition(definition.let(PolicyDefinitionProperty.Companion::unwrap))
     }
 
     /**
@@ -545,7 +545,7 @@ public open class CfnPolicy(
        * An static policy doesn't use a template or allow placeholders for entities.
        */
       override fun staticValue(staticValue: IResolvable) {
-        cdkBuilder.staticValue(staticValue.let(IResolvable::unwrap))
+        cdkBuilder.staticValue(staticValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -553,7 +553,7 @@ public open class CfnPolicy(
        * An static policy doesn't use a template or allow placeholders for entities.
        */
       override fun staticValue(staticValue: StaticPolicyDefinitionProperty) {
-        cdkBuilder.staticValue(staticValue.let(StaticPolicyDefinitionProperty::unwrap))
+        cdkBuilder.staticValue(staticValue.let(StaticPolicyDefinitionProperty.Companion::unwrap))
       }
 
       /**
@@ -574,7 +574,7 @@ public open class CfnPolicy(
        * the instantiated policy.
        */
       override fun templateLinked(templateLinked: IResolvable) {
-        cdkBuilder.templateLinked(templateLinked.let(IResolvable::unwrap))
+        cdkBuilder.templateLinked(templateLinked.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -586,7 +586,7 @@ public open class CfnPolicy(
        * the instantiated policy.
        */
       override fun templateLinked(templateLinked: TemplateLinkedPolicyDefinitionProperty) {
-        cdkBuilder.templateLinked(templateLinked.let(TemplateLinkedPolicyDefinitionProperty::unwrap))
+        cdkBuilder.templateLinked(templateLinked.let(TemplateLinkedPolicyDefinitionProperty.Companion::unwrap))
       }
 
       /**
@@ -901,7 +901,7 @@ public open class CfnPolicy(
        * policy template when it evaluates an authorization request.
        */
       override fun principal(principal: IResolvable) {
-        cdkBuilder.principal(principal.let(IResolvable::unwrap))
+        cdkBuilder.principal(principal.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -910,7 +910,7 @@ public open class CfnPolicy(
        * policy template when it evaluates an authorization request.
        */
       override fun principal(principal: EntityIdentifierProperty) {
-        cdkBuilder.principal(principal.let(EntityIdentifierProperty::unwrap))
+        cdkBuilder.principal(principal.let(EntityIdentifierProperty.Companion::unwrap))
       }
 
       /**
@@ -929,7 +929,7 @@ public open class CfnPolicy(
        * policy template when it evaluates an authorization request.
        */
       override fun resource(resource: IResolvable) {
-        cdkBuilder.resource(resource.let(IResolvable::unwrap))
+        cdkBuilder.resource(resource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -938,7 +938,7 @@ public open class CfnPolicy(
        * policy template when it evaluates an authorization request.
        */
       override fun resource(resource: EntityIdentifierProperty) {
-        cdkBuilder.resource(resource.let(EntityIdentifierProperty::unwrap))
+        cdkBuilder.resource(resource.let(EntityIdentifierProperty.Companion::unwrap))
       }
 
       /**

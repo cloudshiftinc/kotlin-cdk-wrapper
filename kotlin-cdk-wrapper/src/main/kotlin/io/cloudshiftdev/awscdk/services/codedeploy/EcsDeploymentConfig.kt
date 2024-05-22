@@ -42,7 +42,7 @@ public open class EcsDeploymentConfig(
   cdkObject: software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig,
 ) : BaseDeploymentConfig(cdkObject), IEcsDeploymentConfig {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -51,8 +51,8 @@ public open class EcsDeploymentConfig(
     id: String,
     props: EcsDeploymentConfigProps,
   ) :
-      this(software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EcsDeploymentConfigProps::unwrap))
+      this(software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EcsDeploymentConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -118,7 +118,7 @@ public open class EcsDeploymentConfig(
      * target group to the 'green' target group during a deployment. 
      */
     override fun trafficRouting(trafficRouting: TrafficRouting) {
-      cdkBuilder.trafficRouting(trafficRouting.let(TrafficRouting::unwrap))
+      cdkBuilder.trafficRouting(trafficRouting.let(TrafficRouting.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig =
@@ -146,7 +146,7 @@ public open class EcsDeploymentConfig(
       id: String,
       ecsDeploymentConfigName: String,
     ): IEcsDeploymentConfig =
-        software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig.fromEcsDeploymentConfigName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.codedeploy.EcsDeploymentConfig.fromEcsDeploymentConfigName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, ecsDeploymentConfigName).let(IEcsDeploymentConfig::wrap)
 
     public operator fun invoke(

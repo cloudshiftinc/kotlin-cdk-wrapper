@@ -396,7 +396,7 @@ public interface CfnDocumentClassifierProps {
      * @param inputDataConfig Specifies the format and location of the input data for the job. 
      */
     override fun inputDataConfig(inputDataConfig: IResolvable) {
-      cdkBuilder.inputDataConfig(inputDataConfig.let(IResolvable::unwrap))
+      cdkBuilder.inputDataConfig(inputDataConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -404,7 +404,7 @@ public interface CfnDocumentClassifierProps {
      */
     override
         fun inputDataConfig(inputDataConfig: CfnDocumentClassifier.DocumentClassifierInputDataConfigProperty) {
-      cdkBuilder.inputDataConfig(inputDataConfig.let(CfnDocumentClassifier.DocumentClassifierInputDataConfigProperty::unwrap))
+      cdkBuilder.inputDataConfig(inputDataConfig.let(CfnDocumentClassifier.DocumentClassifierInputDataConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -476,7 +476,7 @@ public interface CfnDocumentClassifierProps {
      * classifier jobs.
      */
     override fun outputDataConfig(outputDataConfig: IResolvable) {
-      cdkBuilder.outputDataConfig(outputDataConfig.let(IResolvable::unwrap))
+      cdkBuilder.outputDataConfig(outputDataConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -485,7 +485,7 @@ public interface CfnDocumentClassifierProps {
      */
     override
         fun outputDataConfig(outputDataConfig: CfnDocumentClassifier.DocumentClassifierOutputDataConfigProperty) {
-      cdkBuilder.outputDataConfig(outputDataConfig.let(CfnDocumentClassifier.DocumentClassifierOutputDataConfigProperty::unwrap))
+      cdkBuilder.outputDataConfig(outputDataConfig.let(CfnDocumentClassifier.DocumentClassifierOutputDataConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -506,7 +506,7 @@ public interface CfnDocumentClassifierProps {
      * the sales department.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -548,7 +548,7 @@ public interface CfnDocumentClassifierProps {
      * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
      */
     override fun vpcConfig(vpcConfig: IResolvable) {
-      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -558,7 +558,7 @@ public interface CfnDocumentClassifierProps {
      * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
      */
     override fun vpcConfig(vpcConfig: CfnDocumentClassifier.VpcConfigProperty) {
-      cdkBuilder.vpcConfig(vpcConfig.let(CfnDocumentClassifier.VpcConfigProperty::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(CfnDocumentClassifier.VpcConfigProperty.Companion::unwrap))
     }
 
     /**

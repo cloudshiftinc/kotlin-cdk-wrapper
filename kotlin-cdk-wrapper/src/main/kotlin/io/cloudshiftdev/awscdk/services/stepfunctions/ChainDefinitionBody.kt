@@ -22,7 +22,7 @@ public open class ChainDefinitionBody(
   cdkObject: software.amazon.awscdk.services.stepfunctions.ChainDefinitionBody,
 ) : DefinitionBody(cdkObject) {
   public constructor(chainable: IChainable) :
-      this(software.amazon.awscdk.services.stepfunctions.ChainDefinitionBody(chainable.let(IChainable::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.ChainDefinitionBody(chainable.let(IChainable.Companion::unwrap))
   )
 
   /**
@@ -35,9 +35,9 @@ public open class ChainDefinitionBody(
     scope: Construct,
     sfnPrincipal: IPrincipal,
     sfnProps: StateMachineProps,
-  ): DefinitionConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      sfnPrincipal.let(IPrincipal::unwrap),
-      sfnProps.let(StateMachineProps::unwrap)).let(DefinitionConfig::wrap)
+  ): DefinitionConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      sfnPrincipal.let(IPrincipal.Companion::unwrap),
+      sfnProps.let(StateMachineProps.Companion::unwrap)).let(DefinitionConfig::wrap)
 
   /**
    * @param scope 
@@ -64,9 +64,10 @@ public open class ChainDefinitionBody(
     sfnPrincipal: IPrincipal,
     sfnProps: StateMachineProps,
     graph: StateGraph,
-  ): DefinitionConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      sfnPrincipal.let(IPrincipal::unwrap), sfnProps.let(StateMachineProps::unwrap),
-      graph.let(StateGraph::unwrap)).let(DefinitionConfig::wrap)
+  ): DefinitionConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      sfnPrincipal.let(IPrincipal.Companion::unwrap),
+      sfnProps.let(StateMachineProps.Companion::unwrap),
+      graph.let(StateGraph.Companion::unwrap)).let(DefinitionConfig::wrap)
 
   /**
    *

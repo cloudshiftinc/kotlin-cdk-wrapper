@@ -103,8 +103,8 @@ public open class CfnPrincipalPermissions(
     id: String,
     props: CfnPrincipalPermissionsProps,
   ) :
-      this(software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPrincipalPermissionsProps::unwrap))
+      this(software.amazon.awscdk.services.lakeformation.CfnPrincipalPermissions(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPrincipalPermissionsProps.Companion::unwrap))
   )
 
   public constructor(
@@ -147,7 +147,7 @@ public open class CfnPrincipalPermissions(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -195,14 +195,14 @@ public open class CfnPrincipalPermissions(
    * The principal to be granted a permission.
    */
   public open fun principal(`value`: IResolvable) {
-    unwrap(this).setPrincipal(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPrincipal(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The principal to be granted a permission.
    */
   public open fun principal(`value`: DataLakePrincipalProperty) {
-    unwrap(this).setPrincipal(`value`.let(DataLakePrincipalProperty::unwrap))
+    unwrap(this).setPrincipal(`value`.let(DataLakePrincipalProperty.Companion::unwrap))
   }
 
   /**
@@ -222,14 +222,14 @@ public open class CfnPrincipalPermissions(
    * The resource to be granted or revoked permissions.
    */
   public open fun resource(`value`: IResolvable) {
-    unwrap(this).setResource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The resource to be granted or revoked permissions.
    */
   public open fun resource(`value`: ResourceProperty) {
-    unwrap(this).setResource(`value`.let(ResourceProperty::unwrap))
+    unwrap(this).setResource(`value`.let(ResourceProperty.Companion::unwrap))
   }
 
   /**
@@ -413,7 +413,7 @@ public open class CfnPrincipalPermissions(
      * @param principal The principal to be granted a permission. 
      */
     override fun principal(principal: IResolvable) {
-      cdkBuilder.principal(principal.let(IResolvable::unwrap))
+      cdkBuilder.principal(principal.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -423,7 +423,7 @@ public open class CfnPrincipalPermissions(
      * @param principal The principal to be granted a permission. 
      */
     override fun principal(principal: DataLakePrincipalProperty) {
-      cdkBuilder.principal(principal.let(DataLakePrincipalProperty::unwrap))
+      cdkBuilder.principal(principal.let(DataLakePrincipalProperty.Companion::unwrap))
     }
 
     /**
@@ -444,7 +444,7 @@ public open class CfnPrincipalPermissions(
      * @param resource The resource to be granted or revoked permissions. 
      */
     override fun resource(resource: IResolvable) {
-      cdkBuilder.resource(resource.let(IResolvable::unwrap))
+      cdkBuilder.resource(resource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -454,7 +454,7 @@ public open class CfnPrincipalPermissions(
      * @param resource The resource to be granted or revoked permissions. 
      */
     override fun resource(resource: ResourceProperty) {
-      cdkBuilder.resource(resource.let(ResourceProperty::unwrap))
+      cdkBuilder.resource(resource.let(ResourceProperty.Companion::unwrap))
     }
 
     /**
@@ -1336,7 +1336,7 @@ public open class CfnPrincipalPermissions(
        * @param expression A list of LF-tag conditions that apply to the resource's LF-tag policy. 
        */
       override fun expression(expression: IResolvable) {
-        cdkBuilder.expression(expression.let(IResolvable::unwrap))
+        cdkBuilder.expression(expression.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1839,14 +1839,14 @@ public open class CfnPrincipalPermissions(
        * @param dataCellsFilter A data cell filter.
        */
       override fun dataCellsFilter(dataCellsFilter: IResolvable) {
-        cdkBuilder.dataCellsFilter(dataCellsFilter.let(IResolvable::unwrap))
+        cdkBuilder.dataCellsFilter(dataCellsFilter.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dataCellsFilter A data cell filter.
        */
       override fun dataCellsFilter(dataCellsFilter: DataCellsFilterResourceProperty) {
-        cdkBuilder.dataCellsFilter(dataCellsFilter.let(DataCellsFilterResourceProperty::unwrap))
+        cdkBuilder.dataCellsFilter(dataCellsFilter.let(DataCellsFilterResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -1863,7 +1863,7 @@ public open class CfnPrincipalPermissions(
        * revoked.
        */
       override fun dataLocation(dataLocation: IResolvable) {
-        cdkBuilder.dataLocation(dataLocation.let(IResolvable::unwrap))
+        cdkBuilder.dataLocation(dataLocation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1871,7 +1871,7 @@ public open class CfnPrincipalPermissions(
        * revoked.
        */
       override fun dataLocation(dataLocation: DataLocationResourceProperty) {
-        cdkBuilder.dataLocation(dataLocation.let(DataLocationResourceProperty::unwrap))
+        cdkBuilder.dataLocation(dataLocation.let(DataLocationResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -1889,7 +1889,7 @@ public open class CfnPrincipalPermissions(
        * into a logical group. You can Grant and Revoke database permissions to a principal.
        */
       override fun database(database: IResolvable) {
-        cdkBuilder.database(database.let(IResolvable::unwrap))
+        cdkBuilder.database(database.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1898,7 +1898,7 @@ public open class CfnPrincipalPermissions(
        * into a logical group. You can Grant and Revoke database permissions to a principal.
        */
       override fun database(database: DatabaseResourceProperty) {
-        cdkBuilder.database(database.let(DatabaseResourceProperty::unwrap))
+        cdkBuilder.database(database.let(DatabaseResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -1915,14 +1915,14 @@ public open class CfnPrincipalPermissions(
        * @param lfTag The LF-tag key and values attached to a resource.
        */
       override fun lfTag(lfTag: IResolvable) {
-        cdkBuilder.lfTag(lfTag.let(IResolvable::unwrap))
+        cdkBuilder.lfTag(lfTag.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param lfTag The LF-tag key and values attached to a resource.
        */
       override fun lfTag(lfTag: LFTagKeyResourceProperty) {
-        cdkBuilder.lfTag(lfTag.let(LFTagKeyResourceProperty::unwrap))
+        cdkBuilder.lfTag(lfTag.let(LFTagKeyResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -1937,14 +1937,14 @@ public open class CfnPrincipalPermissions(
        * @param lfTagPolicy A list of LF-tag conditions that define a resource's LF-tag policy.
        */
       override fun lfTagPolicy(lfTagPolicy: IResolvable) {
-        cdkBuilder.lfTagPolicy(lfTagPolicy.let(IResolvable::unwrap))
+        cdkBuilder.lfTagPolicy(lfTagPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param lfTagPolicy A list of LF-tag conditions that define a resource's LF-tag policy.
        */
       override fun lfTagPolicy(lfTagPolicy: LFTagPolicyResourceProperty) {
-        cdkBuilder.lfTagPolicy(lfTagPolicy.let(LFTagPolicyResourceProperty::unwrap))
+        cdkBuilder.lfTagPolicy(lfTagPolicy.let(LFTagPolicyResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -1961,7 +1961,7 @@ public open class CfnPrincipalPermissions(
        * privileges to a principal.
        */
       override fun table(table: IResolvable) {
-        cdkBuilder.table(table.let(IResolvable::unwrap))
+        cdkBuilder.table(table.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1970,7 +1970,7 @@ public open class CfnPrincipalPermissions(
        * privileges to a principal.
        */
       override fun table(table: TableResourceProperty) {
-        cdkBuilder.table(table.let(TableResourceProperty::unwrap))
+        cdkBuilder.table(table.let(TableResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -1989,7 +1989,7 @@ public open class CfnPrincipalPermissions(
        * table in the Data Catalog and the underlying data in Amazon S3.
        */
       override fun tableWithColumns(tableWithColumns: IResolvable) {
-        cdkBuilder.tableWithColumns(tableWithColumns.let(IResolvable::unwrap))
+        cdkBuilder.tableWithColumns(tableWithColumns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1998,7 +1998,7 @@ public open class CfnPrincipalPermissions(
        * table in the Data Catalog and the underlying data in Amazon S3.
        */
       override fun tableWithColumns(tableWithColumns: TableWithColumnsResourceProperty) {
-        cdkBuilder.tableWithColumns(tableWithColumns.let(TableWithColumnsResourceProperty::unwrap))
+        cdkBuilder.tableWithColumns(tableWithColumns.let(TableWithColumnsResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -2464,7 +2464,7 @@ public open class CfnPrincipalPermissions(
        * At least one of `ColumnNames` or `ColumnWildcard` is required.
        */
       override fun columnWildcard(columnWildcard: IResolvable) {
-        cdkBuilder.columnWildcard(columnWildcard.let(IResolvable::unwrap))
+        cdkBuilder.columnWildcard(columnWildcard.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2472,7 +2472,7 @@ public open class CfnPrincipalPermissions(
        * At least one of `ColumnNames` or `ColumnWildcard` is required.
        */
       override fun columnWildcard(columnWildcard: ColumnWildcardProperty) {
-        cdkBuilder.columnWildcard(columnWildcard.let(ColumnWildcardProperty::unwrap))
+        cdkBuilder.columnWildcard(columnWildcard.let(ColumnWildcardProperty.Companion::unwrap))
       }
 
       /**

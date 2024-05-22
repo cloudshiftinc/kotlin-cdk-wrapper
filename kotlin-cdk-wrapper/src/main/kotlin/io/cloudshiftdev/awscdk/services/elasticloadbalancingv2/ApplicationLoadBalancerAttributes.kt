@@ -162,7 +162,7 @@ public interface ApplicationLoadBalancerAttributes {
      * @param vpc The VPC this load balancer has been created in, if available.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build():

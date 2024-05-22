@@ -70,8 +70,8 @@ public open class CfnWarmPool(
     id: String,
     props: CfnWarmPoolProps,
   ) :
-      this(software.amazon.awscdk.services.autoscaling.CfnWarmPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnWarmPoolProps::unwrap))
+      this(software.amazon.awscdk.services.autoscaling.CfnWarmPool(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnWarmPoolProps.Companion::unwrap))
   )
 
   public constructor(
@@ -99,7 +99,7 @@ public open class CfnWarmPool(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -113,7 +113,7 @@ public open class CfnWarmPool(
    * in.
    */
   public open fun instanceReusePolicy(`value`: IResolvable) {
-    unwrap(this).setInstanceReusePolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInstanceReusePolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -121,7 +121,7 @@ public open class CfnWarmPool(
    * in.
    */
   public open fun instanceReusePolicy(`value`: InstanceReusePolicyProperty) {
-    unwrap(this).setInstanceReusePolicy(`value`.let(InstanceReusePolicyProperty::unwrap))
+    unwrap(this).setInstanceReusePolicy(`value`.let(InstanceReusePolicyProperty.Companion::unwrap))
   }
 
   /**
@@ -302,7 +302,7 @@ public open class CfnWarmPool(
      * returned to the warm pool on scale in. 
      */
     override fun instanceReusePolicy(instanceReusePolicy: IResolvable) {
-      cdkBuilder.instanceReusePolicy(instanceReusePolicy.let(IResolvable::unwrap))
+      cdkBuilder.instanceReusePolicy(instanceReusePolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -316,7 +316,7 @@ public open class CfnWarmPool(
      * returned to the warm pool on scale in. 
      */
     override fun instanceReusePolicy(instanceReusePolicy: InstanceReusePolicyProperty) {
-      cdkBuilder.instanceReusePolicy(instanceReusePolicy.let(InstanceReusePolicyProperty::unwrap))
+      cdkBuilder.instanceReusePolicy(instanceReusePolicy.let(InstanceReusePolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -484,7 +484,7 @@ public open class CfnWarmPool(
        * to the warm pool on scale in.
        */
       override fun reuseOnScaleIn(reuseOnScaleIn: IResolvable) {
-        cdkBuilder.reuseOnScaleIn(reuseOnScaleIn.let(IResolvable::unwrap))
+        cdkBuilder.reuseOnScaleIn(reuseOnScaleIn.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

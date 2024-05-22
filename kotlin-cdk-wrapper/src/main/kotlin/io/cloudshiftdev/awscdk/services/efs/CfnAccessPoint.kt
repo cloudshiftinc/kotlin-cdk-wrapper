@@ -73,8 +73,8 @@ public open class CfnAccessPoint(
     id: String,
     props: CfnAccessPointProps,
   ) :
-      this(software.amazon.awscdk.services.efs.CfnAccessPoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAccessPointProps::unwrap))
+      this(software.amazon.awscdk.services.efs.CfnAccessPoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAccessPointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -94,7 +94,7 @@ public open class CfnAccessPoint(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun accessPointTagsRaw(`value`: List<AccessPointTagProperty>) {
-    unwrap(this).setAccessPointTagsRaw(`value`.map(AccessPointTagProperty::unwrap))
+    unwrap(this).setAccessPointTagsRaw(`value`.map(AccessPointTagProperty.Companion::unwrap))
   }
 
   /**
@@ -143,7 +143,7 @@ public open class CfnAccessPoint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -157,7 +157,7 @@ public open class CfnAccessPoint(
    * point that is used for all file operations by NFS clients using the access point.
    */
   public open fun posixUser(`value`: IResolvable) {
-    unwrap(this).setPosixUser(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPosixUser(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -165,7 +165,7 @@ public open class CfnAccessPoint(
    * point that is used for all file operations by NFS clients using the access point.
    */
   public open fun posixUser(`value`: PosixUserProperty) {
-    unwrap(this).setPosixUser(`value`.let(PosixUserProperty::unwrap))
+    unwrap(this).setPosixUser(`value`.let(PosixUserProperty.Companion::unwrap))
   }
 
   /**
@@ -188,7 +188,7 @@ public open class CfnAccessPoint(
    * clients using the access point.
    */
   public open fun rootDirectory(`value`: IResolvable) {
-    unwrap(this).setRootDirectory(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRootDirectory(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -196,7 +196,7 @@ public open class CfnAccessPoint(
    * clients using the access point.
    */
   public open fun rootDirectory(`value`: RootDirectoryProperty) {
-    unwrap(this).setRootDirectory(`value`.let(RootDirectoryProperty::unwrap))
+    unwrap(this).setRootDirectory(`value`.let(RootDirectoryProperty.Companion::unwrap))
   }
 
   /**
@@ -347,7 +347,7 @@ public open class CfnAccessPoint(
      * @param accessPointTags An array of key-value pairs to apply to this resource. 
      */
     override fun accessPointTags(accessPointTags: List<AccessPointTagProperty>) {
-      cdkBuilder.accessPointTags(accessPointTags.map(AccessPointTagProperty::unwrap))
+      cdkBuilder.accessPointTags(accessPointTags.map(AccessPointTagProperty.Companion::unwrap))
     }
 
     /**
@@ -396,7 +396,7 @@ public open class CfnAccessPoint(
      * access point. 
      */
     override fun posixUser(posixUser: IResolvable) {
-      cdkBuilder.posixUser(posixUser.let(IResolvable::unwrap))
+      cdkBuilder.posixUser(posixUser.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -409,7 +409,7 @@ public open class CfnAccessPoint(
      * access point. 
      */
     override fun posixUser(posixUser: PosixUserProperty) {
-      cdkBuilder.posixUser(posixUser.let(PosixUserProperty::unwrap))
+      cdkBuilder.posixUser(posixUser.let(PosixUserProperty.Companion::unwrap))
     }
 
     /**
@@ -435,7 +435,7 @@ public open class CfnAccessPoint(
      * the root directory to NFS clients using the access point. 
      */
     override fun rootDirectory(rootDirectory: IResolvable) {
-      cdkBuilder.rootDirectory(rootDirectory.let(IResolvable::unwrap))
+      cdkBuilder.rootDirectory(rootDirectory.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -447,7 +447,7 @@ public open class CfnAccessPoint(
      * the root directory to NFS clients using the access point. 
      */
     override fun rootDirectory(rootDirectory: RootDirectoryProperty) {
-      cdkBuilder.rootDirectory(rootDirectory.let(RootDirectoryProperty::unwrap))
+      cdkBuilder.rootDirectory(rootDirectory.let(RootDirectoryProperty.Companion::unwrap))
     }
 
     /**
@@ -1045,7 +1045,7 @@ public open class CfnAccessPoint(
        * exist, attempts to mount the file system using the access point will fail.
        */
       override fun creationInfo(creationInfo: IResolvable) {
-        cdkBuilder.creationInfo(creationInfo.let(IResolvable::unwrap))
+        cdkBuilder.creationInfo(creationInfo.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1060,7 +1060,7 @@ public open class CfnAccessPoint(
        * exist, attempts to mount the file system using the access point will fail.
        */
       override fun creationInfo(creationInfo: CreationInfoProperty) {
-        cdkBuilder.creationInfo(creationInfo.let(CreationInfoProperty::unwrap))
+        cdkBuilder.creationInfo(creationInfo.let(CreationInfoProperty.Companion::unwrap))
       }
 
       /**

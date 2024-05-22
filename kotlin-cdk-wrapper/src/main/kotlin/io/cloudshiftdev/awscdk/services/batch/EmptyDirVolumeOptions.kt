@@ -88,7 +88,7 @@ public interface EmptyDirVolumeOptions : EksVolumeOptions {
      * @param medium The storage type to use for this Volume.
      */
     override fun medium(medium: EmptyDirMediumType) {
-      cdkBuilder.medium(medium.let(EmptyDirMediumType::unwrap))
+      cdkBuilder.medium(medium.let(EmptyDirMediumType.Companion::unwrap))
     }
 
     /**
@@ -118,7 +118,7 @@ public interface EmptyDirVolumeOptions : EksVolumeOptions {
      * @param sizeLimit The maximum size for this Volume.
      */
     override fun sizeLimit(sizeLimit: Size) {
-      cdkBuilder.sizeLimit(sizeLimit.let(Size::unwrap))
+      cdkBuilder.sizeLimit(sizeLimit.let(Size.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.batch.EmptyDirVolumeOptions =

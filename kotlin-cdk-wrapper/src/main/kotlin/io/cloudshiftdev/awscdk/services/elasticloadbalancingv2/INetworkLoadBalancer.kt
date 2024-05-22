@@ -87,7 +87,7 @@ public interface INetworkLoadBalancer : ILoadBalancerV2, IVpcEndpointServiceLoad
      */
     override fun addListener(id: String, props: BaseNetworkListenerProps): NetworkListener =
         unwrap(this).addListener(id,
-        props.let(BaseNetworkListenerProps::unwrap)).let(NetworkListener::wrap)
+        props.let(BaseNetworkListenerProps.Companion::unwrap)).let(NetworkListener::wrap)
 
     /**
      * Add a listener to this load balancer.
@@ -115,7 +115,7 @@ public interface INetworkLoadBalancer : ILoadBalancerV2, IVpcEndpointServiceLoad
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**

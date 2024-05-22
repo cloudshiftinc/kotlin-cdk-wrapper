@@ -47,7 +47,7 @@ public open class AddHeader(
   cdkObject: software.amazon.awscdk.services.ses.actions.AddHeader,
 ) : CdkObject(cdkObject), IReceiptRuleAction {
   public constructor(props: AddHeaderProps) :
-      this(software.amazon.awscdk.services.ses.actions.AddHeader(props.let(AddHeaderProps::unwrap))
+      this(software.amazon.awscdk.services.ses.actions.AddHeader(props.let(AddHeaderProps.Companion::unwrap))
   )
 
   public constructor(props: AddHeaderProps.Builder.() -> Unit) : this(AddHeaderProps(props)
@@ -59,7 +59,7 @@ public open class AddHeader(
    * @param _rule 
    */
   public override fun bind(rule: IReceiptRule): ReceiptRuleActionConfig =
-      unwrap(this).bind(rule.let(IReceiptRule::unwrap)).let(ReceiptRuleActionConfig::wrap)
+      unwrap(this).bind(rule.let(IReceiptRule.Companion::unwrap)).let(ReceiptRuleActionConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ses.actions.AddHeader].

@@ -257,7 +257,7 @@ public interface CfnInputProps {
      * @param destinations Settings that apply only if the input is a push type of input.
      */
     override fun destinations(destinations: IResolvable) {
-      cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
+      cdkBuilder.destinations(destinations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -276,7 +276,7 @@ public interface CfnInputProps {
      * @param inputDevices Settings that apply only if the input is an Elemental Link input.
      */
     override fun inputDevices(inputDevices: IResolvable) {
-      cdkBuilder.inputDevices(inputDevices.let(IResolvable::unwrap))
+      cdkBuilder.inputDevices(inputDevices.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -310,7 +310,7 @@ public interface CfnInputProps {
      * @param mediaConnectFlows Settings that apply only if the input is a MediaConnect input.
      */
     override fun mediaConnectFlows(mediaConnectFlows: IResolvable) {
-      cdkBuilder.mediaConnectFlows(mediaConnectFlows.let(IResolvable::unwrap))
+      cdkBuilder.mediaConnectFlows(mediaConnectFlows.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -346,7 +346,7 @@ public interface CfnInputProps {
      * @param sources Settings that apply only if the input is a pull type of input.
      */
     override fun sources(sources: IResolvable) {
-      cdkBuilder.sources(sources.let(IResolvable::unwrap))
+      cdkBuilder.sources(sources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -381,7 +381,7 @@ public interface CfnInputProps {
      * Amazon VPC.
      */
     override fun vpc(vpc: IResolvable) {
-      cdkBuilder.vpc(vpc.let(IResolvable::unwrap))
+      cdkBuilder.vpc(vpc.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -389,7 +389,7 @@ public interface CfnInputProps {
      * Amazon VPC.
      */
     override fun vpc(vpc: CfnInput.InputVpcRequestProperty) {
-      cdkBuilder.vpc(vpc.let(CfnInput.InputVpcRequestProperty::unwrap))
+      cdkBuilder.vpc(vpc.let(CfnInput.InputVpcRequestProperty.Companion::unwrap))
     }
 
     /**

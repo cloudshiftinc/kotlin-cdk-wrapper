@@ -186,7 +186,7 @@ public interface CfnMembershipProps {
      * specified by the member who can receive results.
      */
     override fun defaultResultConfiguration(defaultResultConfiguration: IResolvable) {
-      cdkBuilder.defaultResultConfiguration(defaultResultConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.defaultResultConfiguration(defaultResultConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -195,7 +195,7 @@ public interface CfnMembershipProps {
      */
     override
         fun defaultResultConfiguration(defaultResultConfiguration: CfnMembership.MembershipProtectedQueryResultConfigurationProperty) {
-      cdkBuilder.defaultResultConfiguration(defaultResultConfiguration.let(CfnMembership.MembershipProtectedQueryResultConfigurationProperty::unwrap))
+      cdkBuilder.defaultResultConfiguration(defaultResultConfiguration.let(CfnMembership.MembershipProtectedQueryResultConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -214,7 +214,7 @@ public interface CfnMembershipProps {
      * member.
      */
     override fun paymentConfiguration(paymentConfiguration: IResolvable) {
-      cdkBuilder.paymentConfiguration(paymentConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.paymentConfiguration(paymentConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -223,7 +223,7 @@ public interface CfnMembershipProps {
      */
     override
         fun paymentConfiguration(paymentConfiguration: CfnMembership.MembershipPaymentConfigurationProperty) {
-      cdkBuilder.paymentConfiguration(paymentConfiguration.let(CfnMembership.MembershipPaymentConfigurationProperty::unwrap))
+      cdkBuilder.paymentConfiguration(paymentConfiguration.let(CfnMembership.MembershipPaymentConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -252,7 +252,7 @@ public interface CfnMembershipProps {
      * resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

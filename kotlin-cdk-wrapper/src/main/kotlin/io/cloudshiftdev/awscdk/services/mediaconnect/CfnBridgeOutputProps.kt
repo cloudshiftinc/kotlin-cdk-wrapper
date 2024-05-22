@@ -118,14 +118,14 @@ public interface CfnBridgeOutputProps {
      * @param networkOutput Add a network output to an existing bridge. 
      */
     override fun networkOutput(networkOutput: IResolvable) {
-      cdkBuilder.networkOutput(networkOutput.let(IResolvable::unwrap))
+      cdkBuilder.networkOutput(networkOutput.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param networkOutput Add a network output to an existing bridge. 
      */
     override fun networkOutput(networkOutput: CfnBridgeOutput.BridgeNetworkOutputProperty) {
-      cdkBuilder.networkOutput(networkOutput.let(CfnBridgeOutput.BridgeNetworkOutputProperty::unwrap))
+      cdkBuilder.networkOutput(networkOutput.let(CfnBridgeOutput.BridgeNetworkOutputProperty.Companion::unwrap))
     }
 
     /**

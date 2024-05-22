@@ -107,8 +107,8 @@ public open class CfnConnection(
     id: String,
     props: CfnConnectionProps,
   ) :
-      this(software.amazon.awscdk.services.events.CfnConnection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConnectionProps::unwrap))
+      this(software.amazon.awscdk.services.events.CfnConnection(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConnectionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -139,7 +139,7 @@ public open class CfnConnection(
    * use to authorize with the endpoint.
    */
   public open fun authParameters(`value`: IResolvable) {
-    unwrap(this).setAuthParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAuthParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -147,7 +147,7 @@ public open class CfnConnection(
    * use to authorize with the endpoint.
    */
   public open fun authParameters(`value`: AuthParametersProperty) {
-    unwrap(this).setAuthParameters(`value`.let(AuthParametersProperty::unwrap))
+    unwrap(this).setAuthParameters(`value`.let(AuthParametersProperty.Companion::unwrap))
   }
 
   /**
@@ -189,7 +189,7 @@ public open class CfnConnection(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -286,7 +286,7 @@ public open class CfnConnection(
      * authorization parameters to use to authorize with the endpoint. 
      */
     override fun authParameters(authParameters: IResolvable) {
-      cdkBuilder.authParameters(authParameters.let(IResolvable::unwrap))
+      cdkBuilder.authParameters(authParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -298,7 +298,7 @@ public open class CfnConnection(
      * authorization parameters to use to authorize with the endpoint. 
      */
     override fun authParameters(authParameters: AuthParametersProperty) {
-      cdkBuilder.authParameters(authParameters.let(AuthParametersProperty::unwrap))
+      cdkBuilder.authParameters(authParameters.let(AuthParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -674,14 +674,14 @@ public open class CfnConnection(
        * @param apiKeyAuthParameters The API Key parameters to use for authorization.
        */
       override fun apiKeyAuthParameters(apiKeyAuthParameters: IResolvable) {
-        cdkBuilder.apiKeyAuthParameters(apiKeyAuthParameters.let(IResolvable::unwrap))
+        cdkBuilder.apiKeyAuthParameters(apiKeyAuthParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param apiKeyAuthParameters The API Key parameters to use for authorization.
        */
       override fun apiKeyAuthParameters(apiKeyAuthParameters: ApiKeyAuthParametersProperty) {
-        cdkBuilder.apiKeyAuthParameters(apiKeyAuthParameters.let(ApiKeyAuthParametersProperty::unwrap))
+        cdkBuilder.apiKeyAuthParameters(apiKeyAuthParameters.let(ApiKeyAuthParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -697,14 +697,14 @@ public open class CfnConnection(
        * @param basicAuthParameters The authorization parameters for Basic authorization.
        */
       override fun basicAuthParameters(basicAuthParameters: IResolvable) {
-        cdkBuilder.basicAuthParameters(basicAuthParameters.let(IResolvable::unwrap))
+        cdkBuilder.basicAuthParameters(basicAuthParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param basicAuthParameters The authorization parameters for Basic authorization.
        */
       override fun basicAuthParameters(basicAuthParameters: BasicAuthParametersProperty) {
-        cdkBuilder.basicAuthParameters(basicAuthParameters.let(BasicAuthParametersProperty::unwrap))
+        cdkBuilder.basicAuthParameters(basicAuthParameters.let(BasicAuthParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -721,7 +721,7 @@ public open class CfnConnection(
        * through with every invocation to the HTTP endpoint.
        */
       override fun invocationHttpParameters(invocationHttpParameters: IResolvable) {
-        cdkBuilder.invocationHttpParameters(invocationHttpParameters.let(IResolvable::unwrap))
+        cdkBuilder.invocationHttpParameters(invocationHttpParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -730,7 +730,7 @@ public open class CfnConnection(
        */
       override
           fun invocationHttpParameters(invocationHttpParameters: ConnectionHttpParametersProperty) {
-        cdkBuilder.invocationHttpParameters(invocationHttpParameters.let(ConnectionHttpParametersProperty::unwrap))
+        cdkBuilder.invocationHttpParameters(invocationHttpParameters.let(ConnectionHttpParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -748,14 +748,14 @@ public open class CfnConnection(
        * @param oAuthParameters The OAuth parameters to use for authorization.
        */
       override fun oAuthParameters(oAuthParameters: IResolvable) {
-        cdkBuilder.oAuthParameters(oAuthParameters.let(IResolvable::unwrap))
+        cdkBuilder.oAuthParameters(oAuthParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param oAuthParameters The OAuth parameters to use for authorization.
        */
       override fun oAuthParameters(oAuthParameters: OAuthParametersProperty) {
-        cdkBuilder.oAuthParameters(oAuthParameters.let(OAuthParametersProperty::unwrap))
+        cdkBuilder.oAuthParameters(oAuthParameters.let(OAuthParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -1160,7 +1160,7 @@ public open class CfnConnection(
        * @param bodyParameters Contains additional body string parameters for the connection.
        */
       override fun bodyParameters(bodyParameters: IResolvable) {
-        cdkBuilder.bodyParameters(bodyParameters.let(IResolvable::unwrap))
+        cdkBuilder.bodyParameters(bodyParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1180,7 +1180,7 @@ public open class CfnConnection(
        * @param headerParameters Contains additional header parameters for the connection.
        */
       override fun headerParameters(headerParameters: IResolvable) {
-        cdkBuilder.headerParameters(headerParameters.let(IResolvable::unwrap))
+        cdkBuilder.headerParameters(headerParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1201,7 +1201,7 @@ public open class CfnConnection(
        * connection.
        */
       override fun queryStringParameters(queryStringParameters: IResolvable) {
-        cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable::unwrap))
+        cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1416,7 +1416,7 @@ public open class CfnConnection(
        * contains the client parameters for OAuth authorization. 
        */
       override fun clientParameters(clientParameters: IResolvable) {
-        cdkBuilder.clientParameters(clientParameters.let(IResolvable::unwrap))
+        cdkBuilder.clientParameters(clientParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1424,7 +1424,7 @@ public open class CfnConnection(
        * contains the client parameters for OAuth authorization. 
        */
       override fun clientParameters(clientParameters: ClientParametersProperty) {
-        cdkBuilder.clientParameters(clientParameters.let(ClientParametersProperty::unwrap))
+        cdkBuilder.clientParameters(clientParameters.let(ClientParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -1448,7 +1448,7 @@ public open class CfnConnection(
        * the additional parameters to use for the connection.
        */
       override fun oAuthHttpParameters(oAuthHttpParameters: IResolvable) {
-        cdkBuilder.oAuthHttpParameters(oAuthHttpParameters.let(IResolvable::unwrap))
+        cdkBuilder.oAuthHttpParameters(oAuthHttpParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1456,7 +1456,7 @@ public open class CfnConnection(
        * the additional parameters to use for the connection.
        */
       override fun oAuthHttpParameters(oAuthHttpParameters: ConnectionHttpParametersProperty) {
-        cdkBuilder.oAuthHttpParameters(oAuthHttpParameters.let(ConnectionHttpParametersProperty::unwrap))
+        cdkBuilder.oAuthHttpParameters(oAuthHttpParameters.let(ConnectionHttpParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -1612,7 +1612,7 @@ public open class CfnConnection(
        * @param isValueSecret Specifies whether the value is secret.
        */
       override fun isValueSecret(isValueSecret: IResolvable) {
-        cdkBuilder.isValueSecret(isValueSecret.let(IResolvable::unwrap))
+        cdkBuilder.isValueSecret(isValueSecret.let(IResolvable.Companion::unwrap))
       }
 
       /**

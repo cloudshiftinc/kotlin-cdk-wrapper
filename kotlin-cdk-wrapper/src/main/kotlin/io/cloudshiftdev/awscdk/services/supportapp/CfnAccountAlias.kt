@@ -44,8 +44,8 @@ public open class CfnAccountAlias(
     id: String,
     props: CfnAccountAliasProps,
   ) :
-      this(software.amazon.awscdk.services.supportapp.CfnAccountAlias(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAccountAliasProps::unwrap))
+      this(software.amazon.awscdk.services.supportapp.CfnAccountAlias(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAccountAliasProps.Companion::unwrap))
   )
 
   public constructor(
@@ -84,7 +84,7 @@ public open class CfnAccountAlias(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

@@ -90,8 +90,8 @@ public open class CfnFargateProfile(
     id: String,
     props: CfnFargateProfileProps,
   ) :
-      this(software.amazon.awscdk.services.eks.CfnFargateProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFargateProfileProps::unwrap))
+      this(software.amazon.awscdk.services.eks.CfnFargateProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFargateProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -138,7 +138,7 @@ public open class CfnFargateProfile(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -164,7 +164,7 @@ public open class CfnFargateProfile(
    * The selectors to match for a `Pod` to use this Fargate profile.
    */
   public open fun selectors(`value`: IResolvable) {
-    unwrap(this).setSelectors(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSelectors(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -211,7 +211,7 @@ public open class CfnFargateProfile(
    * Metadata that assists with categorization and organization.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -387,7 +387,7 @@ public open class CfnFargateProfile(
      * @param selectors The selectors to match for a `Pod` to use this Fargate profile. 
      */
     override fun selectors(selectors: IResolvable) {
-      cdkBuilder.selectors(selectors.let(IResolvable::unwrap))
+      cdkBuilder.selectors(selectors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -448,7 +448,7 @@ public open class CfnFargateProfile(
      * @param tags Metadata that assists with categorization and organization. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -674,7 +674,7 @@ public open class CfnFargateProfile(
        * considered a match.
        */
       override fun labels(labels: IResolvable) {
-        cdkBuilder.labels(labels.let(IResolvable::unwrap))
+        cdkBuilder.labels(labels.let(IResolvable.Companion::unwrap))
       }
 
       /**

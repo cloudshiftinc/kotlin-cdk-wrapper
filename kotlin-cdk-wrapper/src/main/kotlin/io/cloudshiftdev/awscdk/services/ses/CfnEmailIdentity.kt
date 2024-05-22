@@ -84,8 +84,8 @@ public open class CfnEmailIdentity(
     id: String,
     props: CfnEmailIdentityProps,
   ) :
-      this(software.amazon.awscdk.services.ses.CfnEmailIdentity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEmailIdentityProps::unwrap))
+      this(software.amazon.awscdk.services.ses.CfnEmailIdentity(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEmailIdentityProps.Companion::unwrap))
   )
 
   public constructor(
@@ -140,14 +140,14 @@ public open class CfnEmailIdentity(
    * Used to associate a configuration set with an email identity.
    */
   public open fun configurationSetAttributes(`value`: IResolvable) {
-    unwrap(this).setConfigurationSetAttributes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfigurationSetAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Used to associate a configuration set with an email identity.
    */
   public open fun configurationSetAttributes(`value`: ConfigurationSetAttributesProperty) {
-    unwrap(this).setConfigurationSetAttributes(`value`.let(ConfigurationSetAttributesProperty::unwrap))
+    unwrap(this).setConfigurationSetAttributes(`value`.let(ConfigurationSetAttributesProperty.Companion::unwrap))
   }
 
   /**
@@ -168,14 +168,14 @@ public open class CfnEmailIdentity(
    * An object that contains information about the DKIM attributes for the identity.
    */
   public open fun dkimAttributes(`value`: IResolvable) {
-    unwrap(this).setDkimAttributes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDkimAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An object that contains information about the DKIM attributes for the identity.
    */
   public open fun dkimAttributes(`value`: DkimAttributesProperty) {
-    unwrap(this).setDkimAttributes(`value`.let(DkimAttributesProperty::unwrap))
+    unwrap(this).setDkimAttributes(`value`.let(DkimAttributesProperty.Companion::unwrap))
   }
 
   /**
@@ -199,7 +199,7 @@ public open class CfnEmailIdentity(
    * [Easy DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) .
    */
   public open fun dkimSigningAttributes(`value`: IResolvable) {
-    unwrap(this).setDkimSigningAttributes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDkimSigningAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -208,7 +208,7 @@ public open class CfnEmailIdentity(
    * [Easy DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) .
    */
   public open fun dkimSigningAttributes(`value`: DkimSigningAttributesProperty) {
-    unwrap(this).setDkimSigningAttributes(`value`.let(DkimSigningAttributesProperty::unwrap))
+    unwrap(this).setDkimSigningAttributes(`value`.let(DkimSigningAttributesProperty.Companion::unwrap))
   }
 
   /**
@@ -242,14 +242,14 @@ public open class CfnEmailIdentity(
    * Used to enable or disable feedback forwarding for an identity.
    */
   public open fun feedbackAttributes(`value`: IResolvable) {
-    unwrap(this).setFeedbackAttributes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFeedbackAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Used to enable or disable feedback forwarding for an identity.
    */
   public open fun feedbackAttributes(`value`: FeedbackAttributesProperty) {
-    unwrap(this).setFeedbackAttributes(`value`.let(FeedbackAttributesProperty::unwrap))
+    unwrap(this).setFeedbackAttributes(`value`.let(FeedbackAttributesProperty.Companion::unwrap))
   }
 
   /**
@@ -266,7 +266,7 @@ public open class CfnEmailIdentity(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -278,14 +278,14 @@ public open class CfnEmailIdentity(
    * Used to enable or disable the custom Mail-From domain configuration for an email identity.
    */
   public open fun mailFromAttributes(`value`: IResolvable) {
-    unwrap(this).setMailFromAttributes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMailFromAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Used to enable or disable the custom Mail-From domain configuration for an email identity.
    */
   public open fun mailFromAttributes(`value`: MailFromAttributesProperty) {
-    unwrap(this).setMailFromAttributes(`value`.let(MailFromAttributesProperty::unwrap))
+    unwrap(this).setMailFromAttributes(`value`.let(MailFromAttributesProperty.Companion::unwrap))
   }
 
   /**
@@ -485,7 +485,7 @@ public open class CfnEmailIdentity(
      * identity. 
      */
     override fun configurationSetAttributes(configurationSetAttributes: IResolvable) {
-      cdkBuilder.configurationSetAttributes(configurationSetAttributes.let(IResolvable::unwrap))
+      cdkBuilder.configurationSetAttributes(configurationSetAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -497,7 +497,7 @@ public open class CfnEmailIdentity(
      */
     override
         fun configurationSetAttributes(configurationSetAttributes: ConfigurationSetAttributesProperty) {
-      cdkBuilder.configurationSetAttributes(configurationSetAttributes.let(ConfigurationSetAttributesProperty::unwrap))
+      cdkBuilder.configurationSetAttributes(configurationSetAttributes.let(ConfigurationSetAttributesProperty.Companion::unwrap))
     }
 
     /**
@@ -522,7 +522,7 @@ public open class CfnEmailIdentity(
      * identity. 
      */
     override fun dkimAttributes(dkimAttributes: IResolvable) {
-      cdkBuilder.dkimAttributes(dkimAttributes.let(IResolvable::unwrap))
+      cdkBuilder.dkimAttributes(dkimAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -533,7 +533,7 @@ public open class CfnEmailIdentity(
      * identity. 
      */
     override fun dkimAttributes(dkimAttributes: DkimAttributesProperty) {
-      cdkBuilder.dkimAttributes(dkimAttributes.let(DkimAttributesProperty::unwrap))
+      cdkBuilder.dkimAttributes(dkimAttributes.let(DkimAttributesProperty.Companion::unwrap))
     }
 
     /**
@@ -561,7 +561,7 @@ public open class CfnEmailIdentity(
      * DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) . 
      */
     override fun dkimSigningAttributes(dkimSigningAttributes: IResolvable) {
-      cdkBuilder.dkimSigningAttributes(dkimSigningAttributes.let(IResolvable::unwrap))
+      cdkBuilder.dkimSigningAttributes(dkimSigningAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -577,7 +577,7 @@ public open class CfnEmailIdentity(
      * DKIM](https://docs.aws.amazon.com/ses/latest/dg/send-email-authentication-dkim-easy.html) . 
      */
     override fun dkimSigningAttributes(dkimSigningAttributes: DkimSigningAttributesProperty) {
-      cdkBuilder.dkimSigningAttributes(dkimSigningAttributes.let(DkimSigningAttributesProperty::unwrap))
+      cdkBuilder.dkimSigningAttributes(dkimSigningAttributes.let(DkimSigningAttributesProperty.Companion::unwrap))
     }
 
     /**
@@ -615,7 +615,7 @@ public open class CfnEmailIdentity(
      * @param feedbackAttributes Used to enable or disable feedback forwarding for an identity. 
      */
     override fun feedbackAttributes(feedbackAttributes: IResolvable) {
-      cdkBuilder.feedbackAttributes(feedbackAttributes.let(IResolvable::unwrap))
+      cdkBuilder.feedbackAttributes(feedbackAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -625,7 +625,7 @@ public open class CfnEmailIdentity(
      * @param feedbackAttributes Used to enable or disable feedback forwarding for an identity. 
      */
     override fun feedbackAttributes(feedbackAttributes: FeedbackAttributesProperty) {
-      cdkBuilder.feedbackAttributes(feedbackAttributes.let(FeedbackAttributesProperty::unwrap))
+      cdkBuilder.feedbackAttributes(feedbackAttributes.let(FeedbackAttributesProperty.Companion::unwrap))
     }
 
     /**
@@ -648,7 +648,7 @@ public open class CfnEmailIdentity(
      * for an email identity. 
      */
     override fun mailFromAttributes(mailFromAttributes: IResolvable) {
-      cdkBuilder.mailFromAttributes(mailFromAttributes.let(IResolvable::unwrap))
+      cdkBuilder.mailFromAttributes(mailFromAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -659,7 +659,7 @@ public open class CfnEmailIdentity(
      * for an email identity. 
      */
     override fun mailFromAttributes(mailFromAttributes: MailFromAttributesProperty) {
-      cdkBuilder.mailFromAttributes(mailFromAttributes.let(MailFromAttributesProperty::unwrap))
+      cdkBuilder.mailFromAttributes(mailFromAttributes.let(MailFromAttributesProperty.Companion::unwrap))
     }
 
     /**
@@ -854,7 +854,7 @@ public open class CfnEmailIdentity(
        * signing.
        */
       override fun signingEnabled(signingEnabled: IResolvable) {
-        cdkBuilder.signingEnabled(signingEnabled.let(IResolvable::unwrap))
+        cdkBuilder.signingEnabled(signingEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1215,7 +1215,7 @@ public open class CfnEmailIdentity(
        * setting is disabled).
        */
       override fun emailForwardingEnabled(emailForwardingEnabled: IResolvable) {
-        cdkBuilder.emailForwardingEnabled(emailForwardingEnabled.let(IResolvable::unwrap))
+        cdkBuilder.emailForwardingEnabled(emailForwardingEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

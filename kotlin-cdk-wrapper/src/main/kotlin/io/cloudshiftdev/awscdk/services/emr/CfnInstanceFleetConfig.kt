@@ -109,8 +109,8 @@ public open class CfnInstanceFleetConfig(
     id: String,
     props: CfnInstanceFleetConfigProps,
   ) :
-      this(software.amazon.awscdk.services.emr.CfnInstanceFleetConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInstanceFleetConfigProps::unwrap))
+      this(software.amazon.awscdk.services.emr.CfnInstanceFleetConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInstanceFleetConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -143,7 +143,7 @@ public open class CfnInstanceFleetConfig(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -169,7 +169,7 @@ public open class CfnInstanceFleetConfig(
    * fulfill On-Demand and Spot target capacities.
    */
   public open fun instanceTypeConfigs(`value`: IResolvable) {
-    unwrap(this).setInstanceTypeConfigs(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInstanceTypeConfigs(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -196,14 +196,14 @@ public open class CfnInstanceFleetConfig(
    * The launch specification for the instance fleet.
    */
   public open fun launchSpecifications(`value`: IResolvable) {
-    unwrap(this).setLaunchSpecifications(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLaunchSpecifications(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The launch specification for the instance fleet.
    */
   public open fun launchSpecifications(`value`: InstanceFleetProvisioningSpecificationsProperty) {
-    unwrap(this).setLaunchSpecifications(`value`.let(InstanceFleetProvisioningSpecificationsProperty::unwrap))
+    unwrap(this).setLaunchSpecifications(`value`.let(InstanceFleetProvisioningSpecificationsProperty.Companion::unwrap))
   }
 
   /**
@@ -454,7 +454,7 @@ public open class CfnInstanceFleetConfig(
      * attempts to provision to fulfill On-Demand and Spot target capacities. 
      */
     override fun instanceTypeConfigs(instanceTypeConfigs: IResolvable) {
-      cdkBuilder.instanceTypeConfigs(instanceTypeConfigs.let(IResolvable::unwrap))
+      cdkBuilder.instanceTypeConfigs(instanceTypeConfigs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -497,7 +497,7 @@ public open class CfnInstanceFleetConfig(
      * @param launchSpecifications The launch specification for the instance fleet. 
      */
     override fun launchSpecifications(launchSpecifications: IResolvable) {
-      cdkBuilder.launchSpecifications(launchSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.launchSpecifications(launchSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -508,7 +508,7 @@ public open class CfnInstanceFleetConfig(
      */
     override
         fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty) {
-      cdkBuilder.launchSpecifications(launchSpecifications.let(InstanceFleetProvisioningSpecificationsProperty::unwrap))
+      cdkBuilder.launchSpecifications(launchSpecifications.let(InstanceFleetProvisioningSpecificationsProperty.Companion::unwrap))
     }
 
     /**
@@ -728,7 +728,7 @@ public open class CfnInstanceFleetConfig(
        * Duplicates not allowed.
        */
       override fun configurationProperties(configurationProperties: IResolvable) {
-        cdkBuilder.configurationProperties(configurationProperties.let(IResolvable::unwrap))
+        cdkBuilder.configurationProperties(configurationProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -745,7 +745,7 @@ public open class CfnInstanceFleetConfig(
        * object.
        */
       override fun configurations(configurations: IResolvable) {
-        cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
+        cdkBuilder.configurations(configurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -907,7 +907,7 @@ public open class CfnInstanceFleetConfig(
        * instance in the cluster. 
        */
       override fun volumeSpecification(volumeSpecification: IResolvable) {
-        cdkBuilder.volumeSpecification(volumeSpecification.let(IResolvable::unwrap))
+        cdkBuilder.volumeSpecification(volumeSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -916,7 +916,7 @@ public open class CfnInstanceFleetConfig(
        * instance in the cluster. 
        */
       override fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty) {
-        cdkBuilder.volumeSpecification(volumeSpecification.let(VolumeSpecificationProperty::unwrap))
+        cdkBuilder.volumeSpecification(volumeSpecification.let(VolumeSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -1068,7 +1068,7 @@ public open class CfnInstanceFleetConfig(
        * cluster instance.
        */
       override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: IResolvable) {
-        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.let(IResolvable::unwrap))
+        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1097,7 +1097,7 @@ public open class CfnInstanceFleetConfig(
        * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
        */
       override fun ebsOptimized(ebsOptimized: IResolvable) {
-        cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
+        cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1271,7 +1271,7 @@ public open class CfnInstanceFleetConfig(
        * releases 5.12.1 and later.
        */
       override fun onDemandSpecification(onDemandSpecification: IResolvable) {
-        cdkBuilder.onDemandSpecification(onDemandSpecification.let(IResolvable::unwrap))
+        cdkBuilder.onDemandSpecification(onDemandSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1284,7 +1284,7 @@ public open class CfnInstanceFleetConfig(
        */
       override
           fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty) {
-        cdkBuilder.onDemandSpecification(onDemandSpecification.let(OnDemandProvisioningSpecificationProperty::unwrap))
+        cdkBuilder.onDemandSpecification(onDemandSpecification.let(OnDemandProvisioningSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -1307,7 +1307,7 @@ public open class CfnInstanceFleetConfig(
        * determines the defined duration, provisioning timeout behavior, and allocation strategy.
        */
       override fun spotSpecification(spotSpecification: IResolvable) {
-        cdkBuilder.spotSpecification(spotSpecification.let(IResolvable::unwrap))
+        cdkBuilder.spotSpecification(spotSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1315,7 +1315,7 @@ public open class CfnInstanceFleetConfig(
        * determines the defined duration, provisioning timeout behavior, and allocation strategy.
        */
       override fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty) {
-        cdkBuilder.spotSpecification(spotSpecification.let(SpotProvisioningSpecificationProperty::unwrap))
+        cdkBuilder.spotSpecification(spotSpecification.let(SpotProvisioningSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -1632,7 +1632,7 @@ public open class CfnInstanceFleetConfig(
        * Applications](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-configure-apps.html) .
        */
       override fun configurations(configurations: IResolvable) {
-        cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
+        cdkBuilder.configurations(configurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1672,7 +1672,7 @@ public open class CfnInstanceFleetConfig(
        * attached to each instance as defined by `InstanceType` .
        */
       override fun ebsConfiguration(ebsConfiguration: IResolvable) {
-        cdkBuilder.ebsConfiguration(ebsConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.ebsConfiguration(ebsConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1680,7 +1680,7 @@ public open class CfnInstanceFleetConfig(
        * attached to each instance as defined by `InstanceType` .
        */
       override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
-        cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty::unwrap))
+        cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty.Companion::unwrap))
       }
 
       /**

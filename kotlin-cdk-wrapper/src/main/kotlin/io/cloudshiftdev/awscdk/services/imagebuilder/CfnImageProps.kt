@@ -286,7 +286,7 @@ public interface CfnImageProps {
      * Enabled by default.
      */
     override fun enhancedImageMetadataEnabled(enhancedImageMetadataEnabled: IResolvable) {
-      cdkBuilder.enhancedImageMetadataEnabled(enhancedImageMetadataEnabled.let(IResolvable::unwrap))
+      cdkBuilder.enhancedImageMetadataEnabled(enhancedImageMetadataEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -309,7 +309,7 @@ public interface CfnImageProps {
      * @param imageScanningConfiguration Contains settings for vulnerability scans.
      */
     override fun imageScanningConfiguration(imageScanningConfiguration: IResolvable) {
-      cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -317,7 +317,7 @@ public interface CfnImageProps {
      */
     override
         fun imageScanningConfiguration(imageScanningConfiguration: CfnImage.ImageScanningConfigurationProperty) {
-      cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(CfnImage.ImageScanningConfigurationProperty::unwrap))
+      cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(CfnImage.ImageScanningConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -334,7 +334,7 @@ public interface CfnImageProps {
      * @param imageTestsConfiguration The image tests configuration of the image.
      */
     override fun imageTestsConfiguration(imageTestsConfiguration: IResolvable) {
-      cdkBuilder.imageTestsConfiguration(imageTestsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.imageTestsConfiguration(imageTestsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -342,7 +342,7 @@ public interface CfnImageProps {
      */
     override
         fun imageTestsConfiguration(imageTestsConfiguration: CfnImage.ImageTestsConfigurationProperty) {
-      cdkBuilder.imageTestsConfiguration(imageTestsConfiguration.let(CfnImage.ImageTestsConfigurationProperty::unwrap))
+      cdkBuilder.imageTestsConfiguration(imageTestsConfiguration.let(CfnImage.ImageTestsConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -374,7 +374,7 @@ public interface CfnImageProps {
      * @param workflows Contains an array of workflow configuration objects.
      */
     override fun workflows(workflows: IResolvable) {
-      cdkBuilder.workflows(workflows.let(IResolvable::unwrap))
+      cdkBuilder.workflows(workflows.let(IResolvable.Companion::unwrap))
     }
 
     /**

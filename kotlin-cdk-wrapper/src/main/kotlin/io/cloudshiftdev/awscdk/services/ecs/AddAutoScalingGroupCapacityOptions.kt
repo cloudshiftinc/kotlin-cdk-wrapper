@@ -143,7 +143,7 @@ public interface AddAutoScalingGroupCapacityOptions {
      * from the `machineImage` you pass.
      */
     override fun machineImageType(machineImageType: MachineImageType) {
-      cdkBuilder.machineImageType(machineImageType.let(MachineImageType::unwrap))
+      cdkBuilder.machineImageType(machineImageType.let(MachineImageType.Companion::unwrap))
     }
 
     /**
@@ -165,7 +165,7 @@ public interface AddAutoScalingGroupCapacityOptions {
      * information.
      */
     override fun topicEncryptionKey(topicEncryptionKey: IKey) {
-      cdkBuilder.topicEncryptionKey(topicEncryptionKey.let(IKey::unwrap))
+      cdkBuilder.topicEncryptionKey(topicEncryptionKey.let(IKey.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.AddAutoScalingGroupCapacityOptions =

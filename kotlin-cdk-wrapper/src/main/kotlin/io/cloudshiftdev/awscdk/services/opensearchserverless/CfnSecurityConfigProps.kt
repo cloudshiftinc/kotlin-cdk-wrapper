@@ -134,7 +134,7 @@ public interface CfnSecurityConfigProps {
      * map.
      */
     override fun samlOptions(samlOptions: IResolvable) {
-      cdkBuilder.samlOptions(samlOptions.let(IResolvable::unwrap))
+      cdkBuilder.samlOptions(samlOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -142,7 +142,7 @@ public interface CfnSecurityConfigProps {
      * map.
      */
     override fun samlOptions(samlOptions: CfnSecurityConfig.SamlConfigOptionsProperty) {
-      cdkBuilder.samlOptions(samlOptions.let(CfnSecurityConfig.SamlConfigOptionsProperty::unwrap))
+      cdkBuilder.samlOptions(samlOptions.let(CfnSecurityConfig.SamlConfigOptionsProperty.Companion::unwrap))
     }
 
     /**

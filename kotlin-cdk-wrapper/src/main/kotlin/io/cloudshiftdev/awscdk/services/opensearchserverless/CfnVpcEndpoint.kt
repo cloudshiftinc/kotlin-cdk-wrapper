@@ -44,8 +44,8 @@ public open class CfnVpcEndpoint(
     id: String,
     props: CfnVpcEndpointProps,
   ) :
-      this(software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVpcEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.opensearchserverless.CfnVpcEndpoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVpcEndpointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -68,7 +68,7 @@ public open class CfnVpcEndpoint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

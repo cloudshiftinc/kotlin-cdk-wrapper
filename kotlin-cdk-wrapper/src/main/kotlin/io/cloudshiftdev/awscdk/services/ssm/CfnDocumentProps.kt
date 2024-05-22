@@ -322,7 +322,7 @@ public interface CfnDocumentProps {
      * document.
      */
     override fun attachments(attachments: IResolvable) {
-      cdkBuilder.attachments(attachments.let(IResolvable::unwrap))
+      cdkBuilder.attachments(attachments.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -396,7 +396,7 @@ public interface CfnDocumentProps {
      * AppConfig User Guide* .
      */
     override fun requires(requires: IResolvable) {
-      cdkBuilder.requires(requires.let(IResolvable::unwrap))
+      cdkBuilder.requires(requires.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -430,7 +430,7 @@ public interface CfnDocumentProps {
      * Use tags to help you identify and categorize resources.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -28,8 +28,8 @@ public interface IAlarmAction {
      * @param alarm CloudWatch alarm that the action will target. 
      */
     override fun bind(scope: Construct, alarm: IAlarm): AlarmActionConfig =
-        unwrap(this).bind(scope.let(Construct::unwrap),
-        alarm.let(IAlarm::unwrap)).let(AlarmActionConfig::wrap)
+        unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+        alarm.let(IAlarm.Companion::unwrap)).let(AlarmActionConfig::wrap)
   }
 
   public companion object {

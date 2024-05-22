@@ -40,8 +40,8 @@ public open class RequestAuthorizer(
     id: String,
     props: RequestAuthorizerProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.RequestAuthorizer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(RequestAuthorizerProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.RequestAuthorizer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(RequestAuthorizerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -181,7 +181,7 @@ public open class RequestAuthorizer(
      * Lambda-based authorizer. 
      */
     override fun assumeRole(assumeRole: IRole) {
-      cdkBuilder.assumeRole(assumeRole.let(IRole::unwrap))
+      cdkBuilder.assumeRole(assumeRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -210,7 +210,7 @@ public open class RequestAuthorizer(
      * @param handler The handler for the authorizer lambda function. 
      */
     override fun handler(handler: IFunction) {
-      cdkBuilder.handler(handler.let(IFunction::unwrap))
+      cdkBuilder.handler(handler.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -269,7 +269,7 @@ public open class RequestAuthorizer(
      * @param resultsCacheTtl How long APIGateway should cache the results. 
      */
     override fun resultsCacheTtl(resultsCacheTtl: Duration) {
-      cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration::unwrap))
+      cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.RequestAuthorizer =

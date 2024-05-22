@@ -69,7 +69,7 @@ public interface IScalableFunctionAttribute : IConstruct {
      * @param actions 
      */
     override fun scaleOnSchedule(id: String, actions: ScalingSchedule) {
-      unwrap(this).scaleOnSchedule(id, actions.let(ScalingSchedule::unwrap))
+      unwrap(this).scaleOnSchedule(id, actions.let(ScalingSchedule.Companion::unwrap))
     }
 
     /**
@@ -93,7 +93,7 @@ public interface IScalableFunctionAttribute : IConstruct {
      * @param options 
      */
     override fun scaleOnUtilization(options: UtilizationScalingOptions) {
-      unwrap(this).scaleOnUtilization(options.let(UtilizationScalingOptions::unwrap))
+      unwrap(this).scaleOnUtilization(options.let(UtilizationScalingOptions.Companion::unwrap))
     }
 
     /**

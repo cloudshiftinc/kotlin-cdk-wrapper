@@ -169,7 +169,7 @@ public interface FunctionUrlCorsOptions {
      * @param allowedMethods An HTTP method that you allow the origin to execute.
      */
     override fun allowedMethods(allowedMethods: List<HttpMethod>) {
-      cdkBuilder.allowedMethods(allowedMethods.map(HttpMethod::unwrap))
+      cdkBuilder.allowedMethods(allowedMethods.map(HttpMethod.Companion::unwrap))
     }
 
     /**
@@ -213,7 +213,7 @@ public interface FunctionUrlCorsOptions {
      * the specified resource.
      */
     override fun maxAge(maxAge: Duration) {
-      cdkBuilder.maxAge(maxAge.let(Duration::unwrap))
+      cdkBuilder.maxAge(maxAge.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lambda.FunctionUrlCorsOptions =

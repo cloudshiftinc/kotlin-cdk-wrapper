@@ -188,14 +188,14 @@ public interface BatchContainerOverrides {
      * This parameter is not valid for single-node container jobs.
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**
      * @param memory Memory reserved for the job.
      */
     override fun memory(memory: Size) {
-      cdkBuilder.memory(memory.let(Size::unwrap))
+      cdkBuilder.memory(memory.let(Size.Companion::unwrap))
     }
 
     /**

@@ -138,8 +138,8 @@ public open class CfnTable(
     id: String,
     props: CfnTableProps,
   ) :
-      this(software.amazon.awscdk.services.cassandra.CfnTable(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTableProps::unwrap))
+      this(software.amazon.awscdk.services.cassandra.CfnTable(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTableProps.Companion::unwrap))
   )
 
   public constructor(
@@ -158,14 +158,14 @@ public open class CfnTable(
    * The optional auto scaling capacity settings for a table in provisioned capacity mode.
    */
   public open fun autoScalingSpecifications(`value`: IResolvable) {
-    unwrap(this).setAutoScalingSpecifications(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoScalingSpecifications(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The optional auto scaling capacity settings for a table in provisioned capacity mode.
    */
   public open fun autoScalingSpecifications(`value`: AutoScalingSpecificationProperty) {
-    unwrap(this).setAutoScalingSpecifications(`value`.let(AutoScalingSpecificationProperty::unwrap))
+    unwrap(this).setAutoScalingSpecifications(`value`.let(AutoScalingSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -186,14 +186,14 @@ public open class CfnTable(
    * The billing mode for the table, which determines how you'll be charged for reads and writes:.
    */
   public open fun billingMode(`value`: IResolvable) {
-    unwrap(this).setBillingMode(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBillingMode(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The billing mode for the table, which determines how you'll be charged for reads and writes:.
    */
   public open fun billingMode(`value`: BillingModeProperty) {
-    unwrap(this).setBillingMode(`value`.let(BillingModeProperty::unwrap))
+    unwrap(this).setBillingMode(`value`.let(BillingModeProperty.Companion::unwrap))
   }
 
   /**
@@ -221,7 +221,7 @@ public open class CfnTable(
    * Enables client-side timestamps for the table.
    */
   public open fun clientSideTimestampsEnabled(`value`: IResolvable) {
-    unwrap(this).setClientSideTimestampsEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setClientSideTimestampsEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -233,7 +233,7 @@ public open class CfnTable(
    * One or more columns that determine how the table data is sorted.
    */
   public open fun clusteringKeyColumns(`value`: IResolvable) {
-    unwrap(this).setClusteringKeyColumns(`value`.let(IResolvable::unwrap))
+    unwrap(this).setClusteringKeyColumns(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -270,14 +270,14 @@ public open class CfnTable(
    * The encryption at rest options for the table.
    */
   public open fun encryptionSpecification(`value`: IResolvable) {
-    unwrap(this).setEncryptionSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEncryptionSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The encryption at rest options for the table.
    */
   public open fun encryptionSpecification(`value`: EncryptionSpecificationProperty) {
-    unwrap(this).setEncryptionSpecification(`value`.let(EncryptionSpecificationProperty::unwrap))
+    unwrap(this).setEncryptionSpecification(`value`.let(EncryptionSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -295,7 +295,7 @@ public open class CfnTable(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -319,7 +319,7 @@ public open class CfnTable(
    * One or more columns that uniquely identify every row in the table.
    */
   public open fun partitionKeyColumns(`value`: IResolvable) {
-    unwrap(this).setPartitionKeyColumns(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPartitionKeyColumns(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -351,7 +351,7 @@ public open class CfnTable(
    * Specifies if point-in-time recovery is enabled or disabled for the table.
    */
   public open fun pointInTimeRecoveryEnabled(`value`: IResolvable) {
-    unwrap(this).setPointInTimeRecoveryEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPointInTimeRecoveryEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -365,7 +365,7 @@ public open class CfnTable(
    * defined as partition key columns or clustering key columns.
    */
   public open fun regularColumns(`value`: IResolvable) {
-    unwrap(this).setRegularColumns(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRegularColumns(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -391,7 +391,7 @@ public open class CfnTable(
    * The AWS Region specific settings of a multi-Region table.
    */
   public open fun replicaSpecifications(`value`: IResolvable) {
-    unwrap(this).setReplicaSpecifications(`value`.let(IResolvable::unwrap))
+    unwrap(this).setReplicaSpecifications(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -434,7 +434,7 @@ public open class CfnTable(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -877,7 +877,7 @@ public open class CfnTable(
      * provisioned capacity mode. 
      */
     override fun autoScalingSpecifications(autoScalingSpecifications: IResolvable) {
-      cdkBuilder.autoScalingSpecifications(autoScalingSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.autoScalingSpecifications(autoScalingSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -889,7 +889,7 @@ public open class CfnTable(
      */
     override
         fun autoScalingSpecifications(autoScalingSpecifications: AutoScalingSpecificationProperty) {
-      cdkBuilder.autoScalingSpecifications(autoScalingSpecifications.let(AutoScalingSpecificationProperty::unwrap))
+      cdkBuilder.autoScalingSpecifications(autoScalingSpecifications.let(AutoScalingSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -921,7 +921,7 @@ public open class CfnTable(
      * reads and writes:. 
      */
     override fun billingMode(billingMode: IResolvable) {
-      cdkBuilder.billingMode(billingMode.let(IResolvable::unwrap))
+      cdkBuilder.billingMode(billingMode.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -939,7 +939,7 @@ public open class CfnTable(
      * reads and writes:. 
      */
     override fun billingMode(billingMode: BillingModeProperty) {
-      cdkBuilder.billingMode(billingMode.let(BillingModeProperty::unwrap))
+      cdkBuilder.billingMode(billingMode.let(BillingModeProperty.Companion::unwrap))
     }
 
     /**
@@ -992,7 +992,7 @@ public open class CfnTable(
      * @param clientSideTimestampsEnabled Enables client-side timestamps for the table. 
      */
     override fun clientSideTimestampsEnabled(clientSideTimestampsEnabled: IResolvable) {
-      cdkBuilder.clientSideTimestampsEnabled(clientSideTimestampsEnabled.let(IResolvable::unwrap))
+      cdkBuilder.clientSideTimestampsEnabled(clientSideTimestampsEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1002,7 +1002,7 @@ public open class CfnTable(
      * @param clusteringKeyColumns One or more columns that determine how the table data is sorted. 
      */
     override fun clusteringKeyColumns(clusteringKeyColumns: IResolvable) {
-      cdkBuilder.clusteringKeyColumns(clusteringKeyColumns.let(IResolvable::unwrap))
+      cdkBuilder.clusteringKeyColumns(clusteringKeyColumns.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1062,7 +1062,7 @@ public open class CfnTable(
      * @param encryptionSpecification The encryption at rest options for the table. 
      */
     override fun encryptionSpecification(encryptionSpecification: IResolvable) {
-      cdkBuilder.encryptionSpecification(encryptionSpecification.let(IResolvable::unwrap))
+      cdkBuilder.encryptionSpecification(encryptionSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1085,7 +1085,7 @@ public open class CfnTable(
      * @param encryptionSpecification The encryption at rest options for the table. 
      */
     override fun encryptionSpecification(encryptionSpecification: EncryptionSpecificationProperty) {
-      cdkBuilder.encryptionSpecification(encryptionSpecification.let(EncryptionSpecificationProperty::unwrap))
+      cdkBuilder.encryptionSpecification(encryptionSpecification.let(EncryptionSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -1135,7 +1135,7 @@ public open class CfnTable(
      * 
      */
     override fun partitionKeyColumns(partitionKeyColumns: IResolvable) {
-      cdkBuilder.partitionKeyColumns(partitionKeyColumns.let(IResolvable::unwrap))
+      cdkBuilder.partitionKeyColumns(partitionKeyColumns.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1188,7 +1188,7 @@ public open class CfnTable(
      * for the table. 
      */
     override fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: IResolvable) {
-      cdkBuilder.pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled.let(IResolvable::unwrap))
+      cdkBuilder.pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1202,7 +1202,7 @@ public open class CfnTable(
      * columns that are *not* defined as partition key columns or clustering key columns. 
      */
     override fun regularColumns(regularColumns: IResolvable) {
-      cdkBuilder.regularColumns(regularColumns.let(IResolvable::unwrap))
+      cdkBuilder.regularColumns(regularColumns.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1247,7 +1247,7 @@ public open class CfnTable(
      * @param replicaSpecifications The AWS Region specific settings of a multi-Region table. 
      */
     override fun replicaSpecifications(replicaSpecifications: IResolvable) {
-      cdkBuilder.replicaSpecifications(replicaSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.replicaSpecifications(replicaSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1320,7 +1320,7 @@ public open class CfnTable(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1523,7 +1523,7 @@ public open class CfnTable(
        * set to `false` .
        */
       override fun autoScalingDisabled(autoScalingDisabled: IResolvable) {
-        cdkBuilder.autoScalingDisabled(autoScalingDisabled.let(IResolvable::unwrap))
+        cdkBuilder.autoScalingDisabled(autoScalingDisabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1553,7 +1553,7 @@ public open class CfnTable(
        * target value as a percentage between 20 and 90.
        */
       override fun scalingPolicy(scalingPolicy: IResolvable) {
-        cdkBuilder.scalingPolicy(scalingPolicy.let(IResolvable::unwrap))
+        cdkBuilder.scalingPolicy(scalingPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1563,7 +1563,7 @@ public open class CfnTable(
        * target value as a percentage between 20 and 90.
        */
       override fun scalingPolicy(scalingPolicy: ScalingPolicyProperty) {
-        cdkBuilder.scalingPolicy(scalingPolicy.let(ScalingPolicyProperty::unwrap))
+        cdkBuilder.scalingPolicy(scalingPolicy.let(ScalingPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -1755,14 +1755,14 @@ public open class CfnTable(
        * @param readCapacityAutoScaling The auto scaling settings for the table's read capacity.
        */
       override fun readCapacityAutoScaling(readCapacityAutoScaling: IResolvable) {
-        cdkBuilder.readCapacityAutoScaling(readCapacityAutoScaling.let(IResolvable::unwrap))
+        cdkBuilder.readCapacityAutoScaling(readCapacityAutoScaling.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param readCapacityAutoScaling The auto scaling settings for the table's read capacity.
        */
       override fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty) {
-        cdkBuilder.readCapacityAutoScaling(readCapacityAutoScaling.let(AutoScalingSettingProperty::unwrap))
+        cdkBuilder.readCapacityAutoScaling(readCapacityAutoScaling.let(AutoScalingSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -1778,14 +1778,14 @@ public open class CfnTable(
        * @param writeCapacityAutoScaling The auto scaling settings for the table's write capacity.
        */
       override fun writeCapacityAutoScaling(writeCapacityAutoScaling: IResolvable) {
-        cdkBuilder.writeCapacityAutoScaling(writeCapacityAutoScaling.let(IResolvable::unwrap))
+        cdkBuilder.writeCapacityAutoScaling(writeCapacityAutoScaling.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param writeCapacityAutoScaling The auto scaling settings for the table's write capacity.
        */
       override fun writeCapacityAutoScaling(writeCapacityAutoScaling: AutoScalingSettingProperty) {
-        cdkBuilder.writeCapacityAutoScaling(writeCapacityAutoScaling.let(AutoScalingSettingProperty::unwrap))
+        cdkBuilder.writeCapacityAutoScaling(writeCapacityAutoScaling.let(AutoScalingSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -1969,7 +1969,7 @@ public open class CfnTable(
        * in the *Amazon Keyspaces Developer Guide* .
        */
       override fun provisionedThroughput(provisionedThroughput: IResolvable) {
-        cdkBuilder.provisionedThroughput(provisionedThroughput.let(IResolvable::unwrap))
+        cdkBuilder.provisionedThroughput(provisionedThroughput.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1980,7 +1980,7 @@ public open class CfnTable(
        * in the *Amazon Keyspaces Developer Guide* .
        */
       override fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty) {
-        cdkBuilder.provisionedThroughput(provisionedThroughput.let(ProvisionedThroughputProperty::unwrap))
+        cdkBuilder.provisionedThroughput(provisionedThroughput.let(ProvisionedThroughputProperty.Companion::unwrap))
       }
 
       /**
@@ -2132,14 +2132,14 @@ public open class CfnTable(
        * @param column The name and data type of this clustering key column. 
        */
       override fun column(column: IResolvable) {
-        cdkBuilder.column(column.let(IResolvable::unwrap))
+        cdkBuilder.column(column.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param column The name and data type of this clustering key column. 
        */
       override fun column(column: ColumnProperty) {
-        cdkBuilder.column(column.let(ColumnProperty::unwrap))
+        cdkBuilder.column(column.let(ColumnProperty.Companion::unwrap))
       }
 
       /**
@@ -2748,7 +2748,7 @@ public open class CfnTable(
        * table in the specified AWS Region.
        */
       override fun readCapacityAutoScaling(readCapacityAutoScaling: IResolvable) {
-        cdkBuilder.readCapacityAutoScaling(readCapacityAutoScaling.let(IResolvable::unwrap))
+        cdkBuilder.readCapacityAutoScaling(readCapacityAutoScaling.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2756,7 +2756,7 @@ public open class CfnTable(
        * table in the specified AWS Region.
        */
       override fun readCapacityAutoScaling(readCapacityAutoScaling: AutoScalingSettingProperty) {
-        cdkBuilder.readCapacityAutoScaling(readCapacityAutoScaling.let(AutoScalingSettingProperty::unwrap))
+        cdkBuilder.readCapacityAutoScaling(readCapacityAutoScaling.let(AutoScalingSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -2909,7 +2909,7 @@ public open class CfnTable(
        */
       override
           fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: IResolvable) {
-        cdkBuilder.targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2918,7 +2918,7 @@ public open class CfnTable(
        */
       override
           fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty) {
-        cdkBuilder.targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration.let(TargetTrackingScalingPolicyConfigurationProperty::unwrap))
+        cdkBuilder.targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration.let(TargetTrackingScalingPolicyConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3119,7 +3119,7 @@ public open class CfnTable(
        * When scaling policies are set, they can't scale in the table lower than its minimum capacity.
        */
       override fun disableScaleIn(disableScaleIn: IResolvable) {
-        cdkBuilder.disableScaleIn(disableScaleIn.let(IResolvable::unwrap))
+        cdkBuilder.disableScaleIn(disableScaleIn.let(IResolvable.Companion::unwrap))
       }
 
       /**

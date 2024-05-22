@@ -26,7 +26,7 @@ public open class BackupPlan(
   cdkObject: software.amazon.awscdk.services.backup.BackupPlan,
 ) : Resource(cdkObject), IBackupPlan {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.backup.BackupPlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.backup.BackupPlan(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -35,8 +35,8 @@ public open class BackupPlan(
     id: String,
     props: BackupPlanProps,
   ) :
-      this(software.amazon.awscdk.services.backup.BackupPlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(BackupPlanProps::unwrap))
+      this(software.amazon.awscdk.services.backup.BackupPlan(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(BackupPlanProps.Companion::unwrap))
   )
 
   public constructor(
@@ -52,7 +52,7 @@ public open class BackupPlan(
    * @param rule the rule to add. 
    */
   public open fun addRule(rule: BackupPlanRule) {
-    unwrap(this).addRule(rule.let(BackupPlanRule::unwrap))
+    unwrap(this).addRule(rule.let(BackupPlanRule.Companion::unwrap))
   }
 
   /**
@@ -73,7 +73,7 @@ public open class BackupPlan(
    */
   public open fun addSelection(id: String, options: BackupSelectionOptions): BackupSelection =
       unwrap(this).addSelection(id,
-      options.let(BackupSelectionOptions::unwrap)).let(BackupSelection::wrap)
+      options.let(BackupSelectionOptions.Companion::unwrap)).let(BackupSelection::wrap)
 
   /**
    * Adds a selection to this plan.
@@ -195,7 +195,7 @@ public open class BackupPlan(
      * @param backupPlanRules Rules for the backup plan. 
      */
     override fun backupPlanRules(backupPlanRules: List<BackupPlanRule>) {
-      cdkBuilder.backupPlanRules(backupPlanRules.map(BackupPlanRule::unwrap))
+      cdkBuilder.backupPlanRules(backupPlanRules.map(BackupPlanRule.Companion::unwrap))
     }
 
     /**
@@ -220,7 +220,7 @@ public open class BackupPlan(
      * @param backupVault The backup vault where backups are stored. 
      */
     override fun backupVault(backupVault: IBackupVault) {
-      cdkBuilder.backupVault(backupVault.let(IBackupVault::unwrap))
+      cdkBuilder.backupVault(backupVault.let(IBackupVault.Companion::unwrap))
     }
 
     /**
@@ -241,7 +241,7 @@ public open class BackupPlan(
   public companion object {
     public fun daily35DayRetention(scope: CloudshiftdevConstructsConstruct, id: String): BackupPlan
         =
-        software.amazon.awscdk.services.backup.BackupPlan.daily35DayRetention(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.backup.BackupPlan.daily35DayRetention(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id).let(BackupPlan::wrap)
 
     public fun daily35DayRetention(
@@ -249,12 +249,12 @@ public open class BackupPlan(
       id: String,
       backupVault: IBackupVault,
     ): BackupPlan =
-        software.amazon.awscdk.services.backup.BackupPlan.daily35DayRetention(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, backupVault.let(IBackupVault::unwrap)).let(BackupPlan::wrap)
+        software.amazon.awscdk.services.backup.BackupPlan.daily35DayRetention(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, backupVault.let(IBackupVault.Companion::unwrap)).let(BackupPlan::wrap)
 
     public fun dailyMonthly1YearRetention(scope: CloudshiftdevConstructsConstruct, id: String):
         BackupPlan =
-        software.amazon.awscdk.services.backup.BackupPlan.dailyMonthly1YearRetention(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.backup.BackupPlan.dailyMonthly1YearRetention(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id).let(BackupPlan::wrap)
 
     public fun dailyMonthly1YearRetention(
@@ -262,12 +262,12 @@ public open class BackupPlan(
       id: String,
       backupVault: IBackupVault,
     ): BackupPlan =
-        software.amazon.awscdk.services.backup.BackupPlan.dailyMonthly1YearRetention(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, backupVault.let(IBackupVault::unwrap)).let(BackupPlan::wrap)
+        software.amazon.awscdk.services.backup.BackupPlan.dailyMonthly1YearRetention(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, backupVault.let(IBackupVault.Companion::unwrap)).let(BackupPlan::wrap)
 
     public fun dailyWeeklyMonthly5YearRetention(scope: CloudshiftdevConstructsConstruct,
         id: String): BackupPlan =
-        software.amazon.awscdk.services.backup.BackupPlan.dailyWeeklyMonthly5YearRetention(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.backup.BackupPlan.dailyWeeklyMonthly5YearRetention(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id).let(BackupPlan::wrap)
 
     public fun dailyWeeklyMonthly5YearRetention(
@@ -275,12 +275,12 @@ public open class BackupPlan(
       id: String,
       backupVault: IBackupVault,
     ): BackupPlan =
-        software.amazon.awscdk.services.backup.BackupPlan.dailyWeeklyMonthly5YearRetention(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, backupVault.let(IBackupVault::unwrap)).let(BackupPlan::wrap)
+        software.amazon.awscdk.services.backup.BackupPlan.dailyWeeklyMonthly5YearRetention(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, backupVault.let(IBackupVault.Companion::unwrap)).let(BackupPlan::wrap)
 
     public fun dailyWeeklyMonthly7YearRetention(scope: CloudshiftdevConstructsConstruct,
         id: String): BackupPlan =
-        software.amazon.awscdk.services.backup.BackupPlan.dailyWeeklyMonthly7YearRetention(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.backup.BackupPlan.dailyWeeklyMonthly7YearRetention(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id).let(BackupPlan::wrap)
 
     public fun dailyWeeklyMonthly7YearRetention(
@@ -288,15 +288,15 @@ public open class BackupPlan(
       id: String,
       backupVault: IBackupVault,
     ): BackupPlan =
-        software.amazon.awscdk.services.backup.BackupPlan.dailyWeeklyMonthly7YearRetention(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, backupVault.let(IBackupVault::unwrap)).let(BackupPlan::wrap)
+        software.amazon.awscdk.services.backup.BackupPlan.dailyWeeklyMonthly7YearRetention(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, backupVault.let(IBackupVault.Companion::unwrap)).let(BackupPlan::wrap)
 
     public fun fromBackupPlanId(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
       backupPlanId: String,
     ): IBackupPlan =
-        software.amazon.awscdk.services.backup.BackupPlan.fromBackupPlanId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.backup.BackupPlan.fromBackupPlanId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, backupPlanId).let(IBackupPlan::wrap)
 
     public operator fun invoke(

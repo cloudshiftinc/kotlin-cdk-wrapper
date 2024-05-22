@@ -37,7 +37,7 @@ public open class HttpLambdaIntegration(
 ) : HttpRouteIntegration(cdkObject) {
   public constructor(id: String, handler: CloudshiftdevAwscdkServicesLambdaIFunction) :
       this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegration(id,
-      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap))
+      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap))
   )
 
   public constructor(
@@ -45,8 +45,8 @@ public open class HttpLambdaIntegration(
     handler: CloudshiftdevAwscdkServicesLambdaIFunction,
     props: HttpLambdaIntegrationProps,
   ) : this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegration(id,
-      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap),
-      props.let(HttpLambdaIntegrationProps::unwrap))
+      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap),
+      props.let(HttpLambdaIntegrationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -62,7 +62,7 @@ public open class HttpLambdaIntegration(
    * @param _options 
    */
   public override fun bind(options: HttpRouteIntegrationBindOptions): HttpRouteIntegrationConfig =
-      unwrap(this).bind(options.let(HttpRouteIntegrationBindOptions::unwrap)).let(HttpRouteIntegrationConfig::wrap)
+      unwrap(this).bind(options.let(HttpRouteIntegrationBindOptions.Companion::unwrap)).let(HttpRouteIntegrationConfig::wrap)
 
   /**
    * Bind this integration to the route.
@@ -121,7 +121,7 @@ public open class HttpLambdaIntegration(
      * backend. 
      */
     override fun parameterMapping(parameterMapping: ParameterMapping) {
-      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping::unwrap))
+      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping.Companion::unwrap))
     }
 
     /**
@@ -133,7 +133,7 @@ public open class HttpLambdaIntegration(
      * @param payloadFormatVersion Version of the payload sent to the lambda handler. 
      */
     override fun payloadFormatVersion(payloadFormatVersion: PayloadFormatVersion) {
-      cdkBuilder.payloadFormatVersion(payloadFormatVersion.let(PayloadFormatVersion::unwrap))
+      cdkBuilder.payloadFormatVersion(payloadFormatVersion.let(PayloadFormatVersion.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.aws_apigatewayv2_integrations.HttpLambdaIntegration =

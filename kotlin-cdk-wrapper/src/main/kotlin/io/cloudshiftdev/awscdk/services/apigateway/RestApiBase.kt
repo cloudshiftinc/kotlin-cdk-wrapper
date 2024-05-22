@@ -41,7 +41,7 @@ public abstract class RestApiBase(
    * @param options
    */
   public open fun addApiKey(id: String, options: ApiKeyOptions): IApiKey =
-      unwrap(this).addApiKey(id, options.let(ApiKeyOptions::unwrap)).let(IApiKey::wrap)
+      unwrap(this).addApiKey(id, options.let(ApiKeyOptions.Companion::unwrap)).let(IApiKey::wrap)
 
   /**
    * Add an ApiKey to the deploymentStage.
@@ -61,7 +61,8 @@ public abstract class RestApiBase(
    * @param options custom domain options. 
    */
   public open fun addDomainName(id: String, options: DomainNameOptions): DomainName =
-      unwrap(this).addDomainName(id, options.let(DomainNameOptions::unwrap)).let(DomainName::wrap)
+      unwrap(this).addDomainName(id,
+      options.let(DomainNameOptions.Companion::unwrap)).let(DomainName::wrap)
 
   /**
    * Defines an API Gateway domain name and maps it to this API.
@@ -82,7 +83,7 @@ public abstract class RestApiBase(
    */
   public open fun addGatewayResponse(id: String, options: GatewayResponseOptions): GatewayResponse =
       unwrap(this).addGatewayResponse(id,
-      options.let(GatewayResponseOptions::unwrap)).let(GatewayResponse::wrap)
+      options.let(GatewayResponseOptions.Companion::unwrap)).let(GatewayResponse::wrap)
 
   /**
    * Adds a new gateway response.
@@ -112,7 +113,8 @@ public abstract class RestApiBase(
    * @param props
    */
   public open fun addUsagePlan(id: String, props: UsagePlanProps): UsagePlan =
-      unwrap(this).addUsagePlan(id, props.let(UsagePlanProps::unwrap)).let(UsagePlan::wrap)
+      unwrap(this).addUsagePlan(id,
+      props.let(UsagePlanProps.Companion::unwrap)).let(UsagePlan::wrap)
 
   /**
    * Adds a usage plan.
@@ -182,7 +184,7 @@ public abstract class RestApiBase(
    * set up integrations.
    */
   public override fun deploymentStage(`value`: Stage) {
-    unwrap(this).setDeploymentStage(`value`.let(Stage::unwrap))
+    unwrap(this).setDeploymentStage(`value`.let(Stage.Companion::unwrap))
   }
 
   /**
@@ -216,7 +218,7 @@ public abstract class RestApiBase(
    * @param props
    */
   public open fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Returns the given named metric for this API.
@@ -247,7 +249,7 @@ public abstract class RestApiBase(
    * @param props
    */
   public open fun metricCacheHitCount(props: MetricOptions): Metric =
-      unwrap(this).metricCacheHitCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricCacheHitCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of requests served from the API cache in a given period.
@@ -281,7 +283,7 @@ public abstract class RestApiBase(
    * @param props
    */
   public open fun metricCacheMissCount(props: MetricOptions): Metric =
-      unwrap(this).metricCacheMissCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricCacheMissCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of requests served from the backend in a given period, when API caching
@@ -313,7 +315,7 @@ public abstract class RestApiBase(
    * @param props
    */
   public open fun metricClientError(props: MetricOptions): Metric =
-      unwrap(this).metricClientError(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricClientError(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of client-side errors captured in a given period.
@@ -344,7 +346,7 @@ public abstract class RestApiBase(
    * @param props
    */
   public open fun metricCount(props: MetricOptions): Metric =
-      unwrap(this).metricCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the total number API requests in a given period.
@@ -378,7 +380,7 @@ public abstract class RestApiBase(
    * @param props
    */
   public open fun metricIntegrationLatency(props: MetricOptions): Metric =
-      unwrap(this).metricIntegrationLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricIntegrationLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the time between when API Gateway relays a request to the backend and when it
@@ -416,7 +418,7 @@ public abstract class RestApiBase(
    * @param props
    */
   public open fun metricLatency(props: MetricOptions): Metric =
-      unwrap(this).metricLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The time between when API Gateway receives a request from a client and when it returns a
@@ -450,7 +452,7 @@ public abstract class RestApiBase(
    * @param props
    */
   public open fun metricServerError(props: MetricOptions): Metric =
-      unwrap(this).metricServerError(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricServerError(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of server-side errors captured in a given period.

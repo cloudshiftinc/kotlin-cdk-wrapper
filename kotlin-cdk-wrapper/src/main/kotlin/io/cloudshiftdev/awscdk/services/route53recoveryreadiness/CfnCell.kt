@@ -56,7 +56,7 @@ public open class CfnCell(
   cdkObject: software.amazon.awscdk.services.route53recoveryreadiness.CfnCell,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.route53recoveryreadiness.CfnCell(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.route53recoveryreadiness.CfnCell(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -65,8 +65,8 @@ public open class CfnCell(
     id: String,
     props: CfnCellProps,
   ) :
-      this(software.amazon.awscdk.services.route53recoveryreadiness.CfnCell(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCellProps::unwrap))
+      this(software.amazon.awscdk.services.route53recoveryreadiness.CfnCell(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCellProps.Companion::unwrap))
   )
 
   public constructor(
@@ -128,7 +128,7 @@ public open class CfnCell(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -146,7 +146,7 @@ public open class CfnCell(
    * A collection of tags associated with a resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -258,7 +258,7 @@ public open class CfnCell(
      * @param tags A collection of tags associated with a resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -92,7 +92,7 @@ public abstract class BaseLoadBalancer(
    * @param prefix
    */
   public open fun logAccessLogs(bucket: IBucket) {
-    unwrap(this).logAccessLogs(bucket.let(IBucket::unwrap))
+    unwrap(this).logAccessLogs(bucket.let(IBucket.Companion::unwrap))
   }
 
   /**
@@ -106,7 +106,7 @@ public abstract class BaseLoadBalancer(
    * @param prefix
    */
   public open fun logAccessLogs(bucket: IBucket, prefix: String) {
-    unwrap(this).logAccessLogs(bucket.let(IBucket::unwrap), prefix)
+    unwrap(this).logAccessLogs(bucket.let(IBucket.Companion::unwrap), prefix)
   }
 
   /**

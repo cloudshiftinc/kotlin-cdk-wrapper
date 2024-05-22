@@ -124,7 +124,7 @@ public interface ApplicationListenerProps {
      * Setting this option will set the load balancer protocol to HTTPS.
      */
     override fun certificate(certificate: ICertificate) {
-      cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
+      cdkBuilder.certificate(certificate.let(ICertificate.Companion::unwrap))
     }
 
     /**
@@ -148,7 +148,7 @@ public interface ApplicationListenerProps {
      * specified if using HTTPS.
      */
     override fun protocol(protocol: ApplicationProtocol) {
-      cdkBuilder.protocol(protocol.let(ApplicationProtocol::unwrap))
+      cdkBuilder.protocol(protocol.let(ApplicationProtocol.Companion::unwrap))
     }
 
     /**
@@ -156,7 +156,7 @@ public interface ApplicationListenerProps {
      * by the ALB Listener.
      */
     override fun sslPolicy(sslPolicy: SslPolicy) {
-      cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy::unwrap))
+      cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.patterns.ApplicationListenerProps =

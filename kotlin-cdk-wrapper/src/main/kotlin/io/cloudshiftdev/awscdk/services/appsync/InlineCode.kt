@@ -29,7 +29,7 @@ public open class InlineCode(
    * @param _scope 
    */
   public override fun bind(scope: Construct): CodeConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(CodeConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(CodeConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appsync.InlineCode): InlineCode =

@@ -56,8 +56,8 @@ public open class CfnDomain(
     id: String,
     props: CfnDomainProps,
   ) :
-      this(software.amazon.awscdk.services.voiceid.CfnDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDomainProps::unwrap))
+      this(software.amazon.awscdk.services.voiceid.CfnDomain(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDomainProps.Companion::unwrap))
   )
 
   public constructor(
@@ -90,7 +90,7 @@ public open class CfnDomain(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -117,7 +117,7 @@ public open class CfnDomain(
    * use to encrypt your data.
    */
   public open fun serverSideEncryptionConfiguration(`value`: IResolvable) {
-    unwrap(this).setServerSideEncryptionConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setServerSideEncryptionConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -126,7 +126,7 @@ public open class CfnDomain(
    */
   public open
       fun serverSideEncryptionConfiguration(`value`: ServerSideEncryptionConfigurationProperty) {
-    unwrap(this).setServerSideEncryptionConfiguration(`value`.let(ServerSideEncryptionConfigurationProperty::unwrap))
+    unwrap(this).setServerSideEncryptionConfiguration(`value`.let(ServerSideEncryptionConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -154,7 +154,7 @@ public open class CfnDomain(
    * The tags used to organize, track, or control access for this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -270,7 +270,7 @@ public open class CfnDomain(
      * the KMS key identifier you want Voice ID to use to encrypt your data. 
      */
     override fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
-      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -283,7 +283,7 @@ public open class CfnDomain(
      */
     override
         fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty) {
-      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(ServerSideEncryptionConfigurationProperty::unwrap))
+      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(ServerSideEncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -308,7 +308,7 @@ public open class CfnDomain(
      * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -364,7 +364,7 @@ public open class CfnDomain(
     /**
      * The identifier of the KMS key to use to encrypt data stored by Voice ID.
      *
-     * Voice ID doesn't support asymmetric customer managed keys .
+     * Voice ID doesn't support asymmetric customer managed keys.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-voiceid-domain-serversideencryptionconfiguration.html#cfn-voiceid-domain-serversideencryptionconfiguration-kmskeyid)
      */
@@ -377,7 +377,7 @@ public open class CfnDomain(
     public interface Builder {
       /**
        * @param kmsKeyId The identifier of the KMS key to use to encrypt data stored by Voice ID. 
-       * Voice ID doesn't support asymmetric customer managed keys .
+       * Voice ID doesn't support asymmetric customer managed keys.
        */
       public fun kmsKeyId(kmsKeyId: String)
     }
@@ -390,7 +390,7 @@ public open class CfnDomain(
 
       /**
        * @param kmsKeyId The identifier of the KMS key to use to encrypt data stored by Voice ID. 
-       * Voice ID doesn't support asymmetric customer managed keys .
+       * Voice ID doesn't support asymmetric customer managed keys.
        */
       override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
@@ -407,7 +407,7 @@ public open class CfnDomain(
       /**
        * The identifier of the KMS key to use to encrypt data stored by Voice ID.
        *
-       * Voice ID doesn't support asymmetric customer managed keys .
+       * Voice ID doesn't support asymmetric customer managed keys.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-voiceid-domain-serversideencryptionconfiguration.html#cfn-voiceid-domain-serversideencryptionconfiguration-kmskeyid)
        */

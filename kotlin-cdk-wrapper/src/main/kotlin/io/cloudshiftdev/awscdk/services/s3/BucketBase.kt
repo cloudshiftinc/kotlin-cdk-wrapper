@@ -59,9 +59,10 @@ public abstract class BucketBase(
     dest: IBucketNotificationDestination,
     vararg filters: NotificationKeyFilter,
   ) {
-    unwrap(this).addEventNotification(event.let(EventType::unwrap),
-        dest.let(IBucketNotificationDestination::unwrap), *filters.map{CdkObjectWrappers.unwrap(it)
-        as software.amazon.awscdk.services.s3.NotificationKeyFilter}.toTypedArray())
+    unwrap(this).addEventNotification(event.let(EventType.Companion::unwrap),
+        dest.let(IBucketNotificationDestination.Companion::unwrap),
+        *filters.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.s3.NotificationKeyFilter}.toTypedArray())
   }
 
   /**
@@ -100,7 +101,7 @@ public abstract class BucketBase(
    */
   public override fun addObjectCreatedNotification(dest: IBucketNotificationDestination, vararg
       filters: NotificationKeyFilter) {
-    unwrap(this).addObjectCreatedNotification(dest.let(IBucketNotificationDestination::unwrap),
+    unwrap(this).addObjectCreatedNotification(dest.let(IBucketNotificationDestination.Companion::unwrap),
         *filters.map{CdkObjectWrappers.unwrap(it) as
         software.amazon.awscdk.services.s3.NotificationKeyFilter}.toTypedArray())
   }
@@ -131,7 +132,7 @@ public abstract class BucketBase(
    */
   public override fun addObjectRemovedNotification(dest: IBucketNotificationDestination, vararg
       filters: NotificationKeyFilter) {
-    unwrap(this).addObjectRemovedNotification(dest.let(IBucketNotificationDestination::unwrap),
+    unwrap(this).addObjectRemovedNotification(dest.let(IBucketNotificationDestination.Companion::unwrap),
         *filters.map{CdkObjectWrappers.unwrap(it) as
         software.amazon.awscdk.services.s3.NotificationKeyFilter}.toTypedArray())
   }
@@ -170,7 +171,7 @@ public abstract class BucketBase(
    * @param permission the policy statement to be added to the bucket's policy. 
    */
   public override fun addToResourcePolicy(permission: PolicyStatement): AddToResourcePolicyResult =
-      unwrap(this).addToResourcePolicy(permission.let(PolicyStatement::unwrap)).let(AddToResourcePolicyResult::wrap)
+      unwrap(this).addToResourcePolicy(permission.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
 
   /**
    * Adds a statement to the resource policy for a principal (i.e. account/role/service) to perform
@@ -278,7 +279,7 @@ public abstract class BucketBase(
    * @param objectsKeyPattern Restrict the permission to a certain key pattern (default '*').
    */
   public override fun grantDelete(identity: IGrantable): Grant =
-      unwrap(this).grantDelete(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantDelete(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grants s3:DeleteObject* permission to an IAM principal for objects in this bucket.
@@ -287,7 +288,8 @@ public abstract class BucketBase(
    * @param objectsKeyPattern Restrict the permission to a certain key pattern (default '*').
    */
   public override fun grantDelete(identity: IGrantable, objectsKeyPattern: Any): Grant =
-      unwrap(this).grantDelete(identity.let(IGrantable::unwrap), objectsKeyPattern).let(Grant::wrap)
+      unwrap(this).grantDelete(identity.let(IGrantable.Companion::unwrap),
+      objectsKeyPattern).let(Grant::wrap)
 
   /**
    * Allows unrestricted access to objects from this bucket.
@@ -330,7 +332,7 @@ public abstract class BucketBase(
    * @param objectsKeyPattern Restrict the permission to a certain key pattern (default '*').
    */
   public override fun grantPut(identity: IGrantable): Grant =
-      unwrap(this).grantPut(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantPut(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grants s3:PutObject* and s3:Abort* permissions for this bucket to an IAM principal.
@@ -342,7 +344,8 @@ public abstract class BucketBase(
    * @param objectsKeyPattern Restrict the permission to a certain key pattern (default '*').
    */
   public override fun grantPut(identity: IGrantable, objectsKeyPattern: Any): Grant =
-      unwrap(this).grantPut(identity.let(IGrantable::unwrap), objectsKeyPattern).let(Grant::wrap)
+      unwrap(this).grantPut(identity.let(IGrantable.Companion::unwrap),
+      objectsKeyPattern).let(Grant::wrap)
 
   /**
    * Grant the given IAM identity permissions to modify the ACLs of objects in the given Bucket.
@@ -356,7 +359,7 @@ public abstract class BucketBase(
    * @param objectsKeyPattern
    */
   public override fun grantPutAcl(identity: IGrantable): Grant =
-      unwrap(this).grantPutAcl(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantPutAcl(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant the given IAM identity permissions to modify the ACLs of objects in the given Bucket.
@@ -370,7 +373,8 @@ public abstract class BucketBase(
    * @param objectsKeyPattern
    */
   public override fun grantPutAcl(identity: IGrantable, objectsKeyPattern: String): Grant =
-      unwrap(this).grantPutAcl(identity.let(IGrantable::unwrap), objectsKeyPattern).let(Grant::wrap)
+      unwrap(this).grantPutAcl(identity.let(IGrantable.Companion::unwrap),
+      objectsKeyPattern).let(Grant::wrap)
 
   /**
    * Grant read permissions for this bucket and it's contents to an IAM principal (Role/Group/User).
@@ -382,7 +386,7 @@ public abstract class BucketBase(
    * @param objectsKeyPattern Restrict the permission to a certain key pattern (default '*').
    */
   public override fun grantRead(identity: IGrantable): Grant =
-      unwrap(this).grantRead(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantRead(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant read permissions for this bucket and it's contents to an IAM principal (Role/Group/User).
@@ -394,7 +398,8 @@ public abstract class BucketBase(
    * @param objectsKeyPattern Restrict the permission to a certain key pattern (default '*').
    */
   public override fun grantRead(identity: IGrantable, objectsKeyPattern: Any): Grant =
-      unwrap(this).grantRead(identity.let(IGrantable::unwrap), objectsKeyPattern).let(Grant::wrap)
+      unwrap(this).grantRead(identity.let(IGrantable.Companion::unwrap),
+      objectsKeyPattern).let(Grant::wrap)
 
   /**
    * Grants read/write permissions for this bucket and it's contents to an IAM principal
@@ -416,7 +421,7 @@ public abstract class BucketBase(
    * @param objectsKeyPattern
    */
   public override fun grantReadWrite(identity: IGrantable): Grant =
-      unwrap(this).grantReadWrite(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantReadWrite(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grants read/write permissions for this bucket and it's contents to an IAM principal
@@ -438,7 +443,7 @@ public abstract class BucketBase(
    * @param objectsKeyPattern
    */
   public override fun grantReadWrite(identity: IGrantable, objectsKeyPattern: Any): Grant =
-      unwrap(this).grantReadWrite(identity.let(IGrantable::unwrap),
+      unwrap(this).grantReadWrite(identity.let(IGrantable.Companion::unwrap),
       objectsKeyPattern).let(Grant::wrap)
 
   /**
@@ -461,7 +466,7 @@ public abstract class BucketBase(
    * @param allowedActionPatterns
    */
   public override fun grantWrite(identity: IGrantable): Grant =
-      unwrap(this).grantWrite(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantWrite(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant write permissions to this bucket to an IAM principal.
@@ -483,7 +488,8 @@ public abstract class BucketBase(
    * @param allowedActionPatterns
    */
   public override fun grantWrite(identity: IGrantable, objectsKeyPattern: Any): Grant =
-      unwrap(this).grantWrite(identity.let(IGrantable::unwrap), objectsKeyPattern).let(Grant::wrap)
+      unwrap(this).grantWrite(identity.let(IGrantable.Companion::unwrap),
+      objectsKeyPattern).let(Grant::wrap)
 
   /**
    * Grant write permissions to this bucket to an IAM principal.
@@ -508,7 +514,7 @@ public abstract class BucketBase(
     identity: IGrantable,
     objectsKeyPattern: Any,
     allowedActionPatterns: List<String>,
-  ): Grant = unwrap(this).grantWrite(identity.let(IGrantable::unwrap), objectsKeyPattern,
+  ): Grant = unwrap(this).grantWrite(identity.let(IGrantable.Companion::unwrap), objectsKeyPattern,
       allowedActionPatterns).let(Grant::wrap)
 
   /**
@@ -539,7 +545,7 @@ public abstract class BucketBase(
    */
   public override fun onCloudTrailEvent(id: String, options: OnCloudTrailBucketEventOptions): Rule =
       unwrap(this).onCloudTrailEvent(id,
-      options.let(OnCloudTrailBucketEventOptions::unwrap)).let(Rule::wrap)
+      options.let(OnCloudTrailBucketEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Define a CloudWatch event that triggers when something happens to this repository.
@@ -589,7 +595,7 @@ public abstract class BucketBase(
    */
   public override fun onCloudTrailPutObject(id: String, options: OnCloudTrailBucketEventOptions):
       Rule = unwrap(this).onCloudTrailPutObject(id,
-      options.let(OnCloudTrailBucketEventOptions::unwrap)).let(Rule::wrap)
+      options.let(OnCloudTrailBucketEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines an AWS CloudWatch event that triggers when an object is uploaded to the specified paths
@@ -650,7 +656,7 @@ public abstract class BucketBase(
    */
   public override fun onCloudTrailWriteObject(id: String, options: OnCloudTrailBucketEventOptions):
       Rule = unwrap(this).onCloudTrailWriteObject(id,
-      options.let(OnCloudTrailBucketEventOptions::unwrap)).let(Rule::wrap)
+      options.let(OnCloudTrailBucketEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines an AWS CloudWatch event that triggers when an object at the specified paths (keys) in
@@ -690,7 +696,7 @@ public abstract class BucketBase(
    * first call to addToResourcePolicy(s).
    */
   public override fun policy(`value`: BucketPolicy) {
-    unwrap(this).setPolicy(`value`.let(BucketPolicy::unwrap))
+    unwrap(this).setPolicy(`value`.let(BucketPolicy.Companion::unwrap))
   }
 
   /**
@@ -763,7 +769,7 @@ public abstract class BucketBase(
   public override fun transferAccelerationUrlForObject(key: String,
       options: TransferAccelerationUrlOptions): String =
       unwrap(this).transferAccelerationUrlForObject(key,
-      options.let(TransferAccelerationUrlOptions::unwrap))
+      options.let(TransferAccelerationUrlOptions.Companion::unwrap))
 
   /**
    * The https Transfer Acceleration URL of an S3 object.
@@ -856,7 +862,7 @@ public abstract class BucketBase(
    */
   public override fun virtualHostedUrlForObject(key: String, options: VirtualHostedStyleUrlOptions):
       String = unwrap(this).virtualHostedUrlForObject(key,
-      options.let(VirtualHostedStyleUrlOptions::unwrap))
+      options.let(VirtualHostedStyleUrlOptions.Companion::unwrap))
 
   /**
    * The virtual hosted-style URL of an S3 object. Specify `regional: false` at the options for

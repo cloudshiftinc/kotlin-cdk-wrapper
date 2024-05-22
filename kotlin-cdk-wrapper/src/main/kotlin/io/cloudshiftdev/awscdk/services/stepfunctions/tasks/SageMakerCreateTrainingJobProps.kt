@@ -376,7 +376,7 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
      * @param algorithmSpecification Identifies the training algorithm to use. 
      */
     override fun algorithmSpecification(algorithmSpecification: AlgorithmSpecification) {
-      cdkBuilder.algorithmSpecification(algorithmSpecification.let(AlgorithmSpecification::unwrap))
+      cdkBuilder.algorithmSpecification(algorithmSpecification.let(AlgorithmSpecification.Companion::unwrap))
     }
 
     /**
@@ -401,7 +401,7 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
      * This enables cross-account resource invocations.
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -435,7 +435,7 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -444,7 +444,7 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -461,7 +461,7 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
      * Amazon S3 location where stored. 
      */
     override fun inputDataConfig(inputDataConfig: List<Channel>) {
-      cdkBuilder.inputDataConfig(inputDataConfig.map(Channel::unwrap))
+      cdkBuilder.inputDataConfig(inputDataConfig.map(Channel.Companion::unwrap))
     }
 
     /**
@@ -489,7 +489,7 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
      * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -497,7 +497,7 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
      * save the results of model training. 
      */
     override fun outputDataConfig(outputDataConfig: OutputDataConfig) {
-      cdkBuilder.outputDataConfig(outputDataConfig.let(OutputDataConfig::unwrap))
+      cdkBuilder.outputDataConfig(outputDataConfig.let(OutputDataConfig.Companion::unwrap))
     }
 
     /**
@@ -524,7 +524,7 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
      * to deploy for model training.
      */
     override fun resourceConfig(resourceConfig: ResourceConfig) {
-      cdkBuilder.resourceConfig(resourceConfig.let(ResourceConfig::unwrap))
+      cdkBuilder.resourceConfig(resourceConfig.let(ResourceConfig.Companion::unwrap))
     }
 
     /**
@@ -564,7 +564,7 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
      * https://docs.aws.amazon.com/fr_fr/sagemaker/latest/dg/sagemaker-roles.html#sagemaker-roles-createtrainingjob-perms
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -578,7 +578,7 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
      * @param stoppingCondition Sets a time limit for training.
      */
     override fun stoppingCondition(stoppingCondition: StoppingCondition) {
-      cdkBuilder.stoppingCondition(stoppingCondition.let(StoppingCondition::unwrap))
+      cdkBuilder.stoppingCondition(stoppingCondition.let(StoppingCondition.Companion::unwrap))
     }
 
     /**
@@ -602,7 +602,7 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -611,7 +611,7 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -625,7 +625,7 @@ public interface SageMakerCreateTrainingJobProps : TaskStateBaseProps {
      * @param vpcConfig Specifies the VPC that you want your training job to connect to.
      */
     override fun vpcConfig(vpcConfig: VpcConfig) {
-      cdkBuilder.vpcConfig(vpcConfig.let(VpcConfig::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(VpcConfig.Companion::unwrap))
     }
 
     /**

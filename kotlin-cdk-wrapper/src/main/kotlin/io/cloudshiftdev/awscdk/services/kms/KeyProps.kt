@@ -157,6 +157,13 @@ public interface KeyProps {
       unwrap(this).getRemovalPolicy()?.let(RemovalPolicy::wrap)
 
   /**
+   * The period between each automatic rotation.
+   *
+   * Default: - set by CFN to 365 days.
+   */
+  public fun rotationPeriod(): Duration? = unwrap(this).getRotationPeriod()?.let(Duration::wrap)
+
+  /**
    * A builder for [KeyProps]
    */
   @CdkDslMarker
@@ -268,6 +275,11 @@ public interface KeyProps {
      * retain access to data that was encrypted with a key that is being retired.
      */
     public fun removalPolicy(removalPolicy: RemovalPolicy)
+
+    /**
+     * @param rotationPeriod The period between each automatic rotation.
+     */
+    public fun rotationPeriod(rotationPeriod: Duration)
   }
 
   private class BuilderImpl : Builder {
@@ -284,7 +296,7 @@ public interface KeyProps {
      * specified policy (if provided).
      */
     override fun admins(admins: List<IPrincipal>) {
-      cdkBuilder.admins(admins.map(IPrincipal::unwrap))
+      cdkBuilder.admins(admins.map(IPrincipal.Companion::unwrap))
     }
 
     /**
@@ -337,7 +349,7 @@ public interface KeyProps {
      * and a new key is created with the specified value.
      */
     override fun keySpec(keySpec: KeySpec) {
-      cdkBuilder.keySpec(keySpec.let(KeySpec::unwrap))
+      cdkBuilder.keySpec(keySpec.let(KeySpec.Companion::unwrap))
     }
 
     /**
@@ -347,7 +359,7 @@ public interface KeyProps {
      * and a new key is created with the specified value.
      */
     override fun keyUsage(keyUsage: KeyUsage) {
-      cdkBuilder.keyUsage(keyUsage.let(KeyUsage::unwrap))
+      cdkBuilder.keyUsage(keyUsage.let(KeyUsage.Companion::unwrap))
     }
 
     /**
@@ -365,7 +377,7 @@ public interface KeyProps {
      * Enter a value between 7 and 30 days.
      */
     override fun pendingWindow(pendingWindow: Duration) {
-      cdkBuilder.pendingWindow(pendingWindow.let(Duration::unwrap))
+      cdkBuilder.pendingWindow(pendingWindow.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -377,7 +389,7 @@ public interface KeyProps {
      * feature flag is not set, this policy will be appended to the default key policy.
      */
     override fun policy(policy: PolicyDocument) {
-      cdkBuilder.policy(policy.let(PolicyDocument::unwrap))
+      cdkBuilder.policy(policy.let(PolicyDocument.Companion::unwrap))
     }
 
     /**
@@ -400,7 +412,14 @@ public interface KeyProps {
      * retain access to data that was encrypted with a key that is being retired.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
+    }
+
+    /**
+     * @param rotationPeriod The period between each automatic rotation.
+     */
+    override fun rotationPeriod(rotationPeriod: Duration) {
+      cdkBuilder.rotationPeriod(rotationPeriod.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.kms.KeyProps = cdkBuilder.build()
@@ -524,6 +543,13 @@ public interface KeyProps {
      */
     override fun removalPolicy(): RemovalPolicy? =
         unwrap(this).getRemovalPolicy()?.let(RemovalPolicy::wrap)
+
+    /**
+     * The period between each automatic rotation.
+     *
+     * Default: - set by CFN to 365 days.
+     */
+    override fun rotationPeriod(): Duration? = unwrap(this).getRotationPeriod()?.let(Duration::wrap)
   }
 
   public companion object {

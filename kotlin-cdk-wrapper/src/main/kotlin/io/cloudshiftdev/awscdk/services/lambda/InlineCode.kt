@@ -46,7 +46,7 @@ public open class InlineCode(
    * @param _scope 
    */
   public override fun bind(scope: Construct): CodeConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(CodeConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(CodeConfig::wrap)
 
   /**
    * Determines whether this Code is inline code or not.

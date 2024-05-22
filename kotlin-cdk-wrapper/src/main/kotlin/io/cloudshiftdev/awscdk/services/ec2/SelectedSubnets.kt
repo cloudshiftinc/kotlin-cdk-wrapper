@@ -149,7 +149,7 @@ public interface SelectedSubnets {
      * these subnets. 
      */
     override fun internetConnectivityEstablished(internetConnectivityEstablished: IDependable) {
-      cdkBuilder.internetConnectivityEstablished(internetConnectivityEstablished.let(IDependable::unwrap))
+      cdkBuilder.internetConnectivityEstablished(internetConnectivityEstablished.let(IDependable.Companion::unwrap))
     }
 
     /**
@@ -178,7 +178,7 @@ public interface SelectedSubnets {
      * @param subnets Selected subnet objects. 
      */
     override fun subnets(subnets: List<ISubnet>) {
-      cdkBuilder.subnets(subnets.map(ISubnet::unwrap))
+      cdkBuilder.subnets(subnets.map(ISubnet.Companion::unwrap))
     }
 
     /**

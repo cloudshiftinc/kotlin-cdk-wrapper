@@ -40,7 +40,7 @@ public open class HttpNlbIntegration(
   public constructor(id: String,
       listener: CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkListener) :
       this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpNlbIntegration(id,
-      listener.let(CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkListener::unwrap))
+      listener.let(CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkListener.Companion::unwrap))
   )
 
   public constructor(
@@ -48,8 +48,8 @@ public open class HttpNlbIntegration(
     listener: CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkListener,
     props: HttpNlbIntegrationProps,
   ) : this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpNlbIntegration(id,
-      listener.let(CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkListener::unwrap),
-      props.let(HttpNlbIntegrationProps::unwrap))
+      listener.let(CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkListener.Companion::unwrap),
+      props.let(HttpNlbIntegrationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -65,7 +65,7 @@ public open class HttpNlbIntegration(
    * @param options 
    */
   public override fun bind(options: HttpRouteIntegrationBindOptions): HttpRouteIntegrationConfig =
-      unwrap(this).bind(options.let(HttpRouteIntegrationBindOptions::unwrap)).let(HttpRouteIntegrationConfig::wrap)
+      unwrap(this).bind(options.let(HttpRouteIntegrationBindOptions.Companion::unwrap)).let(HttpRouteIntegrationConfig::wrap)
 
   /**
    * Bind this integration to the route.
@@ -141,7 +141,7 @@ public open class HttpNlbIntegration(
      * @param method The HTTP method that must be used to invoke the underlying HTTP proxy. 
      */
     override fun method(method: HttpMethod) {
-      cdkBuilder.method(method.let(HttpMethod::unwrap))
+      cdkBuilder.method(method.let(HttpMethod.Companion::unwrap))
     }
 
     /**
@@ -154,7 +154,7 @@ public open class HttpNlbIntegration(
      * backend. 
      */
     override fun parameterMapping(parameterMapping: ParameterMapping) {
-      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping::unwrap))
+      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping.Companion::unwrap))
     }
 
     /**
@@ -178,7 +178,7 @@ public open class HttpNlbIntegration(
      * @param vpcLink The vpc link to be used for the private integration. 
      */
     override fun vpcLink(vpcLink: IVpcLink) {
-      cdkBuilder.vpcLink(vpcLink.let(IVpcLink::unwrap))
+      cdkBuilder.vpcLink(vpcLink.let(IVpcLink.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.aws_apigatewayv2_integrations.HttpNlbIntegration =

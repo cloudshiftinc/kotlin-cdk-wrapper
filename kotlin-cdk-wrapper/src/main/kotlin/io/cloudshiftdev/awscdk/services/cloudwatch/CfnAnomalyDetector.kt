@@ -100,7 +100,7 @@ public open class CfnAnomalyDetector(
   cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -109,8 +109,8 @@ public open class CfnAnomalyDetector(
     id: String,
     props: CfnAnomalyDetectorProps,
   ) :
-      this(software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAnomalyDetectorProps::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.CfnAnomalyDetector(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAnomalyDetectorProps.Companion::unwrap))
   )
 
   public constructor(
@@ -136,7 +136,7 @@ public open class CfnAnomalyDetector(
    * to exclude when training and updating the model.
    */
   public open fun configuration(`value`: IResolvable) {
-    unwrap(this).setConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -144,7 +144,7 @@ public open class CfnAnomalyDetector(
    * to exclude when training and updating the model.
    */
   public open fun configuration(`value`: ConfigurationProperty) {
-    unwrap(this).setConfiguration(`value`.let(ConfigurationProperty::unwrap))
+    unwrap(this).setConfiguration(`value`.let(ConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -165,7 +165,7 @@ public open class CfnAnomalyDetector(
    * The dimensions of the metric associated with the anomaly detection band.
    */
   public open fun dimensions(`value`: IResolvable) {
-    unwrap(this).setDimensions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDimensions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -186,7 +186,7 @@ public open class CfnAnomalyDetector(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -200,7 +200,7 @@ public open class CfnAnomalyDetector(
    * help it build more accurate anomaly detection models.
    */
   public open fun metricCharacteristics(`value`: IResolvable) {
-    unwrap(this).setMetricCharacteristics(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMetricCharacteristics(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -208,7 +208,7 @@ public open class CfnAnomalyDetector(
    * help it build more accurate anomaly detection models.
    */
   public open fun metricCharacteristics(`value`: MetricCharacteristicsProperty) {
-    unwrap(this).setMetricCharacteristics(`value`.let(MetricCharacteristicsProperty::unwrap))
+    unwrap(this).setMetricCharacteristics(`value`.let(MetricCharacteristicsProperty.Companion::unwrap))
   }
 
   /**
@@ -229,14 +229,14 @@ public open class CfnAnomalyDetector(
    * The CloudWatch metric math expression for this anomaly detector.
    */
   public open fun metricMathAnomalyDetector(`value`: IResolvable) {
-    unwrap(this).setMetricMathAnomalyDetector(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMetricMathAnomalyDetector(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The CloudWatch metric math expression for this anomaly detector.
    */
   public open fun metricMathAnomalyDetector(`value`: MetricMathAnomalyDetectorProperty) {
-    unwrap(this).setMetricMathAnomalyDetector(`value`.let(MetricMathAnomalyDetectorProperty::unwrap))
+    unwrap(this).setMetricMathAnomalyDetector(`value`.let(MetricMathAnomalyDetectorProperty.Companion::unwrap))
   }
 
   /**
@@ -282,14 +282,14 @@ public open class CfnAnomalyDetector(
    * The CloudWatch metric and statistic for this anomaly detector.
    */
   public open fun singleMetricAnomalyDetector(`value`: IResolvable) {
-    unwrap(this).setSingleMetricAnomalyDetector(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSingleMetricAnomalyDetector(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The CloudWatch metric and statistic for this anomaly detector.
    */
   public open fun singleMetricAnomalyDetector(`value`: SingleMetricAnomalyDetectorProperty) {
-    unwrap(this).setSingleMetricAnomalyDetector(`value`.let(SingleMetricAnomalyDetectorProperty::unwrap))
+    unwrap(this).setSingleMetricAnomalyDetector(`value`.let(SingleMetricAnomalyDetectorProperty.Companion::unwrap))
   }
 
   /**
@@ -524,7 +524,7 @@ public open class CfnAnomalyDetector(
      * trained, including time ranges to exclude when training and updating the model. 
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -538,7 +538,7 @@ public open class CfnAnomalyDetector(
      * trained, including time ranges to exclude when training and updating the model. 
      */
     override fun configuration(configuration: ConfigurationProperty) {
-      cdkBuilder.configuration(configuration.let(ConfigurationProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(ConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -563,7 +563,7 @@ public open class CfnAnomalyDetector(
      * @param dimensions The dimensions of the metric associated with the anomaly detection band. 
      */
     override fun dimensions(dimensions: IResolvable) {
-      cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+      cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -595,7 +595,7 @@ public open class CfnAnomalyDetector(
      * about your metric to CloudWatch to help it build more accurate anomaly detection models. 
      */
     override fun metricCharacteristics(metricCharacteristics: IResolvable) {
-      cdkBuilder.metricCharacteristics(metricCharacteristics.let(IResolvable::unwrap))
+      cdkBuilder.metricCharacteristics(metricCharacteristics.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -609,7 +609,7 @@ public open class CfnAnomalyDetector(
      * about your metric to CloudWatch to help it build more accurate anomaly detection models. 
      */
     override fun metricCharacteristics(metricCharacteristics: MetricCharacteristicsProperty) {
-      cdkBuilder.metricCharacteristics(metricCharacteristics.let(MetricCharacteristicsProperty::unwrap))
+      cdkBuilder.metricCharacteristics(metricCharacteristics.let(MetricCharacteristicsProperty.Companion::unwrap))
     }
 
     /**
@@ -636,7 +636,7 @@ public open class CfnAnomalyDetector(
      * detector. 
      */
     override fun metricMathAnomalyDetector(metricMathAnomalyDetector: IResolvable) {
-      cdkBuilder.metricMathAnomalyDetector(metricMathAnomalyDetector.let(IResolvable::unwrap))
+      cdkBuilder.metricMathAnomalyDetector(metricMathAnomalyDetector.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -648,7 +648,7 @@ public open class CfnAnomalyDetector(
      */
     override
         fun metricMathAnomalyDetector(metricMathAnomalyDetector: MetricMathAnomalyDetectorProperty) {
-      cdkBuilder.metricMathAnomalyDetector(metricMathAnomalyDetector.let(MetricMathAnomalyDetectorProperty::unwrap))
+      cdkBuilder.metricMathAnomalyDetector(metricMathAnomalyDetector.let(MetricMathAnomalyDetectorProperty.Companion::unwrap))
     }
 
     /**
@@ -693,7 +693,7 @@ public open class CfnAnomalyDetector(
      * detector. 
      */
     override fun singleMetricAnomalyDetector(singleMetricAnomalyDetector: IResolvable) {
-      cdkBuilder.singleMetricAnomalyDetector(singleMetricAnomalyDetector.let(IResolvable::unwrap))
+      cdkBuilder.singleMetricAnomalyDetector(singleMetricAnomalyDetector.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -705,7 +705,7 @@ public open class CfnAnomalyDetector(
      */
     override
         fun singleMetricAnomalyDetector(singleMetricAnomalyDetector: SingleMetricAnomalyDetectorProperty) {
-      cdkBuilder.singleMetricAnomalyDetector(singleMetricAnomalyDetector.let(SingleMetricAnomalyDetectorProperty::unwrap))
+      cdkBuilder.singleMetricAnomalyDetector(singleMetricAnomalyDetector.let(SingleMetricAnomalyDetectorProperty.Companion::unwrap))
     }
 
     /**
@@ -860,7 +860,7 @@ public open class CfnAnomalyDetector(
        * deployments, aren't used when CloudWatch creates or updates the model.
        */
       override fun excludedTimeRanges(excludedTimeRanges: IResolvable) {
-        cdkBuilder.excludedTimeRanges(excludedTimeRanges.let(IResolvable::unwrap))
+        cdkBuilder.excludedTimeRanges(excludedTimeRanges.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1151,7 +1151,7 @@ public open class CfnAnomalyDetector(
        * during the model training period, and won't flag future similar spikes as anomalies.
        */
       override fun periodicSpikes(periodicSpikes: IResolvable) {
-        cdkBuilder.periodicSpikes(periodicSpikes.let(IResolvable::unwrap))
+        cdkBuilder.periodicSpikes(periodicSpikes.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1555,7 +1555,7 @@ public open class CfnAnomalyDetector(
        * not both.
        */
       override fun metricStat(metricStat: IResolvable) {
-        cdkBuilder.metricStat(metricStat.let(IResolvable::unwrap))
+        cdkBuilder.metricStat(metricStat.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1567,7 +1567,7 @@ public open class CfnAnomalyDetector(
        * not both.
        */
       override fun metricStat(metricStat: MetricStatProperty) {
-        cdkBuilder.metricStat(metricStat.let(MetricStatProperty::unwrap))
+        cdkBuilder.metricStat(metricStat.let(MetricStatProperty.Companion::unwrap))
       }
 
       /**
@@ -1620,7 +1620,7 @@ public open class CfnAnomalyDetector(
        * `ReturnData` as False.
        */
       override fun returnData(returnData: IResolvable) {
-        cdkBuilder.returnData(returnData.let(IResolvable::unwrap))
+        cdkBuilder.returnData(returnData.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1867,7 +1867,7 @@ public open class CfnAnomalyDetector(
        * expression must return a single time series.
        */
       override fun metricDataQueries(metricDataQueries: IResolvable) {
-        cdkBuilder.metricDataQueries(metricDataQueries.let(IResolvable::unwrap))
+        cdkBuilder.metricDataQueries(metricDataQueries.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2024,7 +2024,7 @@ public open class CfnAnomalyDetector(
        * @param dimensions The dimensions for the metric.
        */
       override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+        cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2249,14 +2249,14 @@ public open class CfnAnomalyDetector(
        * @param metric The metric to return, including the metric name, namespace, and dimensions. 
        */
       override fun metric(metric: IResolvable) {
-        cdkBuilder.metric(metric.let(IResolvable::unwrap))
+        cdkBuilder.metric(metric.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param metric The metric to return, including the metric name, namespace, and dimensions. 
        */
       override fun metric(metric: MetricProperty) {
-        cdkBuilder.metric(metric.let(MetricProperty::unwrap))
+        cdkBuilder.metric(metric.let(MetricProperty.Companion::unwrap))
       }
 
       /**
@@ -2633,7 +2633,7 @@ public open class CfnAnomalyDetector(
        * @param dimensions The metric dimensions to create the anomaly detection model for.
        */
       override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+        cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
       }
 
       /**

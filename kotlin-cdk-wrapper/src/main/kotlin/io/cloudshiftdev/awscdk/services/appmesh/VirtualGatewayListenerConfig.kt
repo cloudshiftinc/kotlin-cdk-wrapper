@@ -118,7 +118,7 @@ public interface VirtualGatewayListenerConfig {
      * @param listener Single listener config for a VirtualGateway. 
      */
     override fun listener(listener: CfnVirtualGateway.VirtualGatewayListenerProperty) {
-      cdkBuilder.listener(listener.let(CfnVirtualGateway.VirtualGatewayListenerProperty::unwrap))
+      cdkBuilder.listener(listener.let(CfnVirtualGateway.VirtualGatewayListenerProperty.Companion::unwrap))
     }
 
     /**

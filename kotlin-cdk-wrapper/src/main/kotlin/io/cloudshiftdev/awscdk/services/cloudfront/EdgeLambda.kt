@@ -87,7 +87,7 @@ public interface EdgeLambda {
      * @param eventType The type of event in response to which should the function be invoked. 
      */
     override fun eventType(eventType: LambdaEdgeEventType) {
-      cdkBuilder.eventType(eventType.let(LambdaEdgeEventType::unwrap))
+      cdkBuilder.eventType(eventType.let(LambdaEdgeEventType.Companion::unwrap))
     }
 
     /**
@@ -95,7 +95,7 @@ public interface EdgeLambda {
      * **Note**: it's not possible to use the '$LATEST' function version for Lambda&#64;Edge!
      */
     override fun functionVersion(functionVersion: IVersion) {
-      cdkBuilder.functionVersion(functionVersion.let(IVersion::unwrap))
+      cdkBuilder.functionVersion(functionVersion.let(IVersion.Companion::unwrap))
     }
 
     /**

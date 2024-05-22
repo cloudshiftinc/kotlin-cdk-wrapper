@@ -144,7 +144,7 @@ public interface UserVerificationConfig {
      * https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-email-verification-message-customization.html
      */
     override fun emailStyle(emailStyle: VerificationEmailStyle) {
-      cdkBuilder.emailStyle(emailStyle.let(VerificationEmailStyle::unwrap))
+      cdkBuilder.emailStyle(emailStyle.let(VerificationEmailStyle.Companion::unwrap))
     }
 
     /**

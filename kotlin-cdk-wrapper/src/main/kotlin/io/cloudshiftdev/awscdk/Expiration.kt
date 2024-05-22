@@ -35,14 +35,16 @@ public open class Expiration(
    *
    * @param t the duration to check against. 
    */
-  public open fun isAfter(t: Duration): Boolean = unwrap(this).isAfter(t.let(Duration::unwrap))
+  public open fun isAfter(t: Duration): Boolean =
+      unwrap(this).isAfter(t.let(Duration.Companion::unwrap))
 
   /**
    * Check if Expiration expires before input.
    *
    * @param t the duration to check against. 
    */
-  public open fun isBefore(t: Duration): Boolean = unwrap(this).isBefore(t.let(Duration::unwrap))
+  public open fun isBefore(t: Duration): Boolean =
+      unwrap(this).isBefore(t.let(Duration.Companion::unwrap))
 
   /**
    * Expiration Value in a formatted Unix Epoch Time in seconds.
@@ -51,7 +53,7 @@ public open class Expiration(
 
   public companion object {
     public fun after(t: Duration): Expiration =
-        software.amazon.awscdk.Expiration.after(t.let(Duration::unwrap)).let(Expiration::wrap)
+        software.amazon.awscdk.Expiration.after(t.let(Duration.Companion::unwrap)).let(Expiration::wrap)
 
     public fun atDate(d: Instant): Expiration =
         software.amazon.awscdk.Expiration.atDate(d).let(Expiration::wrap)

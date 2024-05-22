@@ -55,8 +55,8 @@ public open class CfnPreset(
     id: String,
     props: CfnPresetProps,
   ) :
-      this(software.amazon.awscdk.services.mediaconvert.CfnPreset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPresetProps::unwrap))
+      this(software.amazon.awscdk.services.mediaconvert.CfnPreset(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPresetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -112,7 +112,7 @@ public open class CfnPreset(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

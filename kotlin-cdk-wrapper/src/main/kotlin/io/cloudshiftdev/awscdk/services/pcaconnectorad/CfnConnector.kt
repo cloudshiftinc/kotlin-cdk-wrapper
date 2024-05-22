@@ -53,8 +53,8 @@ public open class CfnConnector(
     id: String,
     props: CfnConnectorProps,
   ) :
-      this(software.amazon.awscdk.services.pcaconnectorad.CfnConnector(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConnectorProps::unwrap))
+      this(software.amazon.awscdk.services.pcaconnectorad.CfnConnector(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConnectorProps.Companion::unwrap))
   )
 
   public constructor(
@@ -107,7 +107,7 @@ public open class CfnConnector(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -131,14 +131,14 @@ public open class CfnConnector(
    * Information of the VPC and security group(s) used with the connector.
    */
   public open fun vpcInformation(`value`: IResolvable) {
-    unwrap(this).setVpcInformation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcInformation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information of the VPC and security group(s) used with the connector.
    */
   public open fun vpcInformation(`value`: VpcInformationProperty) {
-    unwrap(this).setVpcInformation(`value`.let(VpcInformationProperty::unwrap))
+    unwrap(this).setVpcInformation(`value`.let(VpcInformationProperty.Companion::unwrap))
   }
 
   /**
@@ -251,7 +251,7 @@ public open class CfnConnector(
      * @param vpcInformation Information of the VPC and security group(s) used with the connector. 
      */
     override fun vpcInformation(vpcInformation: IResolvable) {
-      cdkBuilder.vpcInformation(vpcInformation.let(IResolvable::unwrap))
+      cdkBuilder.vpcInformation(vpcInformation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -261,7 +261,7 @@ public open class CfnConnector(
      * @param vpcInformation Information of the VPC and security group(s) used with the connector. 
      */
     override fun vpcInformation(vpcInformation: VpcInformationProperty) {
-      cdkBuilder.vpcInformation(vpcInformation.let(VpcInformationProperty::unwrap))
+      cdkBuilder.vpcInformation(vpcInformation.let(VpcInformationProperty.Companion::unwrap))
     }
 
     /**

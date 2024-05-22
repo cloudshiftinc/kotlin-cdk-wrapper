@@ -52,8 +52,8 @@ public open class CfnAlarm(
     id: String,
     props: CfnAlarmProps,
   ) :
-      this(software.amazon.awscdk.services.lightsail.CfnAlarm(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAlarmProps::unwrap))
+      this(software.amazon.awscdk.services.lightsail.CfnAlarm(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAlarmProps.Companion::unwrap))
   )
 
   public constructor(
@@ -155,7 +155,7 @@ public open class CfnAlarm(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -198,7 +198,7 @@ public open class CfnAlarm(
    * A Boolean value indicating whether the alarm is enabled.
    */
   public open fun notificationEnabled(`value`: IResolvable) {
-    unwrap(this).setNotificationEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNotificationEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -510,7 +510,7 @@ public open class CfnAlarm(
      * @param notificationEnabled A Boolean value indicating whether the alarm is enabled. 
      */
     override fun notificationEnabled(notificationEnabled: IResolvable) {
-      cdkBuilder.notificationEnabled(notificationEnabled.let(IResolvable::unwrap))
+      cdkBuilder.notificationEnabled(notificationEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**

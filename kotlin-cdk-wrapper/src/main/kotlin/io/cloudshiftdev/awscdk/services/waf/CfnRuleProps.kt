@@ -134,7 +134,7 @@ public interface CfnRuleProps {
      * .
      */
     override fun predicates(predicates: IResolvable) {
-      cdkBuilder.predicates(predicates.let(IResolvable::unwrap))
+      cdkBuilder.predicates(predicates.let(IResolvable.Companion::unwrap))
     }
 
     /**

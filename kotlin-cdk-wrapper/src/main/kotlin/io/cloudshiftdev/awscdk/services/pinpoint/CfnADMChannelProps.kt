@@ -131,7 +131,7 @@ public interface CfnADMChannelProps {
      * @param enabled Specifies whether to enable the ADM channel for the application.
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.pinpoint.CfnADMChannelProps =

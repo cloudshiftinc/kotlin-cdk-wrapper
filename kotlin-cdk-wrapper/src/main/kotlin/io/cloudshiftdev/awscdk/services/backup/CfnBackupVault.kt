@@ -70,8 +70,8 @@ public open class CfnBackupVault(
     id: String,
     props: CfnBackupVaultProps,
   ) :
-      this(software.amazon.awscdk.services.backup.CfnBackupVault(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnBackupVaultProps::unwrap))
+      this(software.amazon.awscdk.services.backup.CfnBackupVault(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnBackupVaultProps.Companion::unwrap))
   )
 
   public constructor(
@@ -160,7 +160,7 @@ public open class CfnBackupVault(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -174,7 +174,7 @@ public open class CfnBackupVault(
    * Lock](https://docs.aws.amazon.com/aws-backup/latest/devguide/vault-lock.html) .
    */
   public open fun lockConfiguration(`value`: IResolvable) {
-    unwrap(this).setLockConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLockConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -182,7 +182,7 @@ public open class CfnBackupVault(
    * Lock](https://docs.aws.amazon.com/aws-backup/latest/devguide/vault-lock.html) .
    */
   public open fun lockConfiguration(`value`: LockConfigurationTypeProperty) {
-    unwrap(this).setLockConfiguration(`value`.let(LockConfigurationTypeProperty::unwrap))
+    unwrap(this).setLockConfiguration(`value`.let(LockConfigurationTypeProperty.Companion::unwrap))
   }
 
   /**
@@ -203,14 +203,14 @@ public open class CfnBackupVault(
    * The SNS event notifications for the specified backup vault.
    */
   public open fun notifications(`value`: IResolvable) {
-    unwrap(this).setNotifications(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNotifications(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The SNS event notifications for the specified backup vault.
    */
   public open fun notifications(`value`: NotificationObjectTypeProperty) {
-    unwrap(this).setNotifications(`value`.let(NotificationObjectTypeProperty::unwrap))
+    unwrap(this).setNotifications(`value`.let(NotificationObjectTypeProperty.Companion::unwrap))
   }
 
   /**
@@ -404,7 +404,7 @@ public open class CfnBackupVault(
      * Lock](https://docs.aws.amazon.com/aws-backup/latest/devguide/vault-lock.html) . 
      */
     override fun lockConfiguration(lockConfiguration: IResolvable) {
-      cdkBuilder.lockConfiguration(lockConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.lockConfiguration(lockConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -416,7 +416,7 @@ public open class CfnBackupVault(
      * Lock](https://docs.aws.amazon.com/aws-backup/latest/devguide/vault-lock.html) . 
      */
     override fun lockConfiguration(lockConfiguration: LockConfigurationTypeProperty) {
-      cdkBuilder.lockConfiguration(lockConfiguration.let(LockConfigurationTypeProperty::unwrap))
+      cdkBuilder.lockConfiguration(lockConfiguration.let(LockConfigurationTypeProperty.Companion::unwrap))
     }
 
     /**
@@ -440,7 +440,7 @@ public open class CfnBackupVault(
      * @param notifications The SNS event notifications for the specified backup vault. 
      */
     override fun notifications(notifications: IResolvable) {
-      cdkBuilder.notifications(notifications.let(IResolvable::unwrap))
+      cdkBuilder.notifications(notifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -450,7 +450,7 @@ public open class CfnBackupVault(
      * @param notifications The SNS event notifications for the specified backup vault. 
      */
     override fun notifications(notifications: NotificationObjectTypeProperty) {
-      cdkBuilder.notifications(notifications.let(NotificationObjectTypeProperty::unwrap))
+      cdkBuilder.notifications(notifications.let(NotificationObjectTypeProperty.Companion::unwrap))
     }
 
     /**

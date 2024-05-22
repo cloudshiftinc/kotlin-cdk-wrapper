@@ -40,8 +40,8 @@ public open class CfnPreparedStatement(
     id: String,
     props: CfnPreparedStatementProps,
   ) :
-      this(software.amazon.awscdk.services.athena.CfnPreparedStatement(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPreparedStatementProps::unwrap))
+      this(software.amazon.awscdk.services.athena.CfnPreparedStatement(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPreparedStatementProps.Companion::unwrap))
   )
 
   public constructor(
@@ -69,7 +69,7 @@ public open class CfnPreparedStatement(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

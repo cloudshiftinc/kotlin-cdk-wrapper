@@ -89,7 +89,7 @@ public open class CfnKey(
   cdkObject: software.amazon.awscdk.services.kms.CfnKey,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.kms.CfnKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.kms.CfnKey(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -98,8 +98,8 @@ public open class CfnKey(
     id: String,
     props: CfnKeyProps,
   ) :
-      this(software.amazon.awscdk.services.kms.CfnKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnKeyProps::unwrap))
+      this(software.amazon.awscdk.services.kms.CfnKey(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnKeyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -151,7 +151,7 @@ public open class CfnKey(
    * The default value is false.
    */
   public open fun bypassPolicyLockoutSafetyCheck(`value`: IResolvable) {
-    unwrap(this).setBypassPolicyLockoutSafetyCheck(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBypassPolicyLockoutSafetyCheck(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -182,7 +182,7 @@ public open class CfnKey(
    * Enables automatic rotation of the key material for the specified KMS key.
    */
   public open fun enableKeyRotation(`value`: IResolvable) {
-    unwrap(this).setEnableKeyRotation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableKeyRotation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -207,7 +207,7 @@ public open class CfnKey(
    * Disabled KMS keys cannot be used in cryptographic operations.
    */
   public open fun enabled(`value`: IResolvable) {
-    unwrap(this).setEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -216,7 +216,7 @@ public open class CfnKey(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -279,7 +279,7 @@ public open class CfnKey(
    * Creates a multi-Region primary key that you can replicate in other AWS Regions .
    */
   public open fun multiRegion(`value`: IResolvable) {
-    unwrap(this).setMultiRegion(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMultiRegion(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -309,12 +309,12 @@ public open class CfnKey(
   }
 
   /**
-   * The number of days between each automatic rotation.
+   * Specifies a custom period of time between each rotation date.
    */
   public open fun rotationPeriodInDays(): Number? = unwrap(this).getRotationPeriodInDays()
 
   /**
-   * The number of days between each automatic rotation.
+   * Specifies a custom period of time between each rotation date.
    */
   public open fun rotationPeriodInDays(`value`: Number) {
     unwrap(this).setRotationPeriodInDays(`value`)
@@ -335,7 +335,7 @@ public open class CfnKey(
    * Assigns one or more tags to the replica key.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -813,14 +813,27 @@ public open class CfnKey(
     public fun pendingWindowInDays(pendingWindowInDays: Number)
 
     /**
-     * The number of days between each automatic rotation.
+     * Specifies a custom period of time between each rotation date.
      *
-     * The default value is 365 days.
+     * If no value is specified, the default value is 365 days.
+     *
+     * The rotation period defines the number of days after you enable automatic key rotation that
+     * AWS KMS will rotate your key material, and the number of days between each automatic rotation
+     * thereafter.
+     *
+     * You can use the
+     * [`kms:RotationPeriodInDays`](https://docs.aws.amazon.com/kms/latest/developerguide/conditions-kms.html#conditions-kms-rotation-period-in-days)
+     * condition key to further constrain the values that principals can specify in the
+     * `RotationPeriodInDays` parameter.
+     *
+     * For more information about rotating KMS keys and automatic rotation, see [Rotating
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) in the *AWS Key
+     * Management Service Developer Guide* .
      *
      * Default: - 365
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-rotationperiodindays)
-     * @param rotationPeriodInDays The number of days between each automatic rotation. 
+     * @param rotationPeriodInDays Specifies a custom period of time between each rotation date. 
      */
     public fun rotationPeriodInDays(rotationPeriodInDays: Number)
 
@@ -923,7 +936,7 @@ public open class CfnKey(
      * The default value is false. 
      */
     override fun bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck: IResolvable) {
-      cdkBuilder.bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck.let(IResolvable::unwrap))
+      cdkBuilder.bypassPolicyLockoutSafetyCheck(bypassPolicyLockoutSafetyCheck.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -994,7 +1007,7 @@ public open class CfnKey(
      * key. 
      */
     override fun enableKeyRotation(enableKeyRotation: IResolvable) {
-      cdkBuilder.enableKeyRotation(enableKeyRotation.let(IResolvable::unwrap))
+      cdkBuilder.enableKeyRotation(enableKeyRotation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1046,7 +1059,7 @@ public open class CfnKey(
      * cryptographic operations. 
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1281,7 +1294,7 @@ public open class CfnKey(
      * Regions . 
      */
     override fun multiRegion(multiRegion: IResolvable) {
-      cdkBuilder.multiRegion(multiRegion.let(IResolvable::unwrap))
+      cdkBuilder.multiRegion(multiRegion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1365,14 +1378,27 @@ public open class CfnKey(
     }
 
     /**
-     * The number of days between each automatic rotation.
+     * Specifies a custom period of time between each rotation date.
      *
-     * The default value is 365 days.
+     * If no value is specified, the default value is 365 days.
+     *
+     * The rotation period defines the number of days after you enable automatic key rotation that
+     * AWS KMS will rotate your key material, and the number of days between each automatic rotation
+     * thereafter.
+     *
+     * You can use the
+     * [`kms:RotationPeriodInDays`](https://docs.aws.amazon.com/kms/latest/developerguide/conditions-kms.html#conditions-kms-rotation-period-in-days)
+     * condition key to further constrain the values that principals can specify in the
+     * `RotationPeriodInDays` parameter.
+     *
+     * For more information about rotating KMS keys and automatic rotation, see [Rotating
+     * keys](https://docs.aws.amazon.com/kms/latest/developerguide/rotate-keys.html) in the *AWS Key
+     * Management Service Developer Guide* .
      *
      * Default: - 365
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-rotationperiodindays)
-     * @param rotationPeriodInDays The number of days between each automatic rotation. 
+     * @param rotationPeriodInDays Specifies a custom period of time between each rotation date. 
      */
     override fun rotationPeriodInDays(rotationPeriodInDays: Number) {
       cdkBuilder.rotationPeriodInDays(rotationPeriodInDays)
@@ -1397,7 +1423,7 @@ public open class CfnKey(
      * @param tags Assigns one or more tags to the replica key. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

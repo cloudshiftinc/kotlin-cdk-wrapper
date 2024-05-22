@@ -438,7 +438,7 @@ public interface CfnUserProps {
      * `[ { "Entry": "/", "Target": "/bucket_name/home/mydirectory" } ]`
      */
     override fun homeDirectoryMappings(homeDirectoryMappings: IResolvable) {
-      cdkBuilder.homeDirectoryMappings(homeDirectoryMappings.let(IResolvable::unwrap))
+      cdkBuilder.homeDirectoryMappings(homeDirectoryMappings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -540,7 +540,7 @@ public interface CfnUserProps {
      * systems.
      */
     override fun posixProfile(posixProfile: IResolvable) {
-      cdkBuilder.posixProfile(posixProfile.let(IResolvable::unwrap))
+      cdkBuilder.posixProfile(posixProfile.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -552,7 +552,7 @@ public interface CfnUserProps {
      * systems.
      */
     override fun posixProfile(posixProfile: CfnUser.PosixProfileProperty) {
-      cdkBuilder.posixProfile(posixProfile.let(CfnUser.PosixProfileProperty::unwrap))
+      cdkBuilder.posixProfile(posixProfile.let(CfnUser.PosixProfileProperty.Companion::unwrap))
     }
 
     /**
@@ -608,7 +608,7 @@ public interface CfnUserProps {
      * Tags are metadata attached to users for any purpose.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

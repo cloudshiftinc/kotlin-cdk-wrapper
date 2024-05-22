@@ -129,7 +129,7 @@ public interface CfnNotebookInstanceLifecycleConfigProps {
      * The shell script must be a base64-encoded string.
      */
     override fun onCreate(onCreate: IResolvable) {
-      cdkBuilder.onCreate(onCreate.let(IResolvable::unwrap))
+      cdkBuilder.onCreate(onCreate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -152,7 +152,7 @@ public interface CfnNotebookInstanceLifecycleConfigProps {
      * The shell script must be a base64-encoded string.
      */
     override fun onStart(onStart: IResolvable) {
-      cdkBuilder.onStart(onStart.let(IResolvable::unwrap))
+      cdkBuilder.onStart(onStart.let(IResolvable.Companion::unwrap))
     }
 
     /**

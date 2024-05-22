@@ -265,14 +265,14 @@ public interface CfnStageProps {
      * @param accessLogSettings Settings for logging access in this stage.
      */
     override fun accessLogSettings(accessLogSettings: IResolvable) {
-      cdkBuilder.accessLogSettings(accessLogSettings.let(IResolvable::unwrap))
+      cdkBuilder.accessLogSettings(accessLogSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param accessLogSettings Settings for logging access in this stage.
      */
     override fun accessLogSettings(accessLogSettings: CfnStage.AccessLogSettingsProperty) {
-      cdkBuilder.accessLogSettings(accessLogSettings.let(CfnStage.AccessLogSettingsProperty::unwrap))
+      cdkBuilder.accessLogSettings(accessLogSettings.let(CfnStage.AccessLogSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -311,7 +311,7 @@ public interface CfnStageProps {
      * The default value is `false` .
      */
     override fun autoDeploy(autoDeploy: IResolvable) {
-      cdkBuilder.autoDeploy(autoDeploy.let(IResolvable::unwrap))
+      cdkBuilder.autoDeploy(autoDeploy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -326,14 +326,14 @@ public interface CfnStageProps {
      * @param defaultRouteSettings The default route settings for the stage.
      */
     override fun defaultRouteSettings(defaultRouteSettings: IResolvable) {
-      cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(IResolvable::unwrap))
+      cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param defaultRouteSettings The default route settings for the stage.
      */
     override fun defaultRouteSettings(defaultRouteSettings: CfnStage.RouteSettingsProperty) {
-      cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(CfnStage.RouteSettingsProperty::unwrap))
+      cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(CfnStage.RouteSettingsProperty.Companion::unwrap))
     }
 
     /**

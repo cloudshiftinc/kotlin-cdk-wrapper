@@ -135,8 +135,8 @@ public open class CfnDetector(
     id: String,
     props: CfnDetectorProps,
   ) :
-      this(software.amazon.awscdk.services.frauddetector.CfnDetector(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDetectorProps::unwrap))
+      this(software.amazon.awscdk.services.frauddetector.CfnDetector(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDetectorProps.Companion::unwrap))
   )
 
   public constructor(
@@ -155,7 +155,7 @@ public open class CfnDetector(
    * The models to associate with this detector.
    */
   public open fun associatedModels(`value`: IResolvable) {
-    unwrap(this).setAssociatedModels(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAssociatedModels(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -251,14 +251,14 @@ public open class CfnDetector(
    * The event type associated with this detector.
    */
   public open fun eventType(`value`: IResolvable) {
-    unwrap(this).setEventType(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEventType(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The event type associated with this detector.
    */
   public open fun eventType(`value`: EventTypeProperty) {
-    unwrap(this).setEventType(`value`.let(EventTypeProperty::unwrap))
+    unwrap(this).setEventType(`value`.let(EventTypeProperty.Companion::unwrap))
   }
 
   /**
@@ -275,7 +275,7 @@ public open class CfnDetector(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -299,7 +299,7 @@ public open class CfnDetector(
    * The rules to include in the detector version.
    */
   public open fun rules(`value`: IResolvable) {
-    unwrap(this).setRules(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRules(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -329,7 +329,7 @@ public open class CfnDetector(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -512,7 +512,7 @@ public open class CfnDetector(
      * @param associatedModels The models to associate with this detector. 
      */
     override fun associatedModels(associatedModels: IResolvable) {
-      cdkBuilder.associatedModels(associatedModels.let(IResolvable::unwrap))
+      cdkBuilder.associatedModels(associatedModels.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -579,7 +579,7 @@ public open class CfnDetector(
      * @param eventType The event type associated with this detector. 
      */
     override fun eventType(eventType: IResolvable) {
-      cdkBuilder.eventType(eventType.let(IResolvable::unwrap))
+      cdkBuilder.eventType(eventType.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -589,7 +589,7 @@ public open class CfnDetector(
      * @param eventType The event type associated with this detector. 
      */
     override fun eventType(eventType: EventTypeProperty) {
-      cdkBuilder.eventType(eventType.let(EventTypeProperty::unwrap))
+      cdkBuilder.eventType(eventType.let(EventTypeProperty.Companion::unwrap))
     }
 
     /**
@@ -633,7 +633,7 @@ public open class CfnDetector(
      * @param rules The rules to include in the detector version. 
      */
     override fun rules(rules: IResolvable) {
-      cdkBuilder.rules(rules.let(IResolvable::unwrap))
+      cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -665,7 +665,7 @@ public open class CfnDetector(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -933,7 +933,7 @@ public open class CfnDetector(
        * any changes to the variables.
        */
       override fun `inline`(`inline`: IResolvable) {
-        cdkBuilder.`inline`(`inline`.let(IResolvable::unwrap))
+        cdkBuilder.`inline`(`inline`.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -957,7 +957,7 @@ public open class CfnDetector(
        * .
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**
@@ -1365,7 +1365,7 @@ public open class CfnDetector(
        * @param entityTypes The event type entity types.
        */
       override fun entityTypes(entityTypes: IResolvable) {
-        cdkBuilder.entityTypes(entityTypes.let(IResolvable::unwrap))
+        cdkBuilder.entityTypes(entityTypes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1384,7 +1384,7 @@ public open class CfnDetector(
        * @param eventVariables The event type event variables.
        */
       override fun eventVariables(eventVariables: IResolvable) {
-        cdkBuilder.eventVariables(eventVariables.let(IResolvable::unwrap))
+        cdkBuilder.eventVariables(eventVariables.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1433,14 +1433,14 @@ public open class CfnDetector(
        * any changes to the variables.
        */
       override fun `inline`(`inline`: IResolvable) {
-        cdkBuilder.`inline`(`inline`.let(IResolvable::unwrap))
+        cdkBuilder.`inline`(`inline`.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param labels The event type labels.
        */
       override fun labels(labels: IResolvable) {
-        cdkBuilder.labels(labels.let(IResolvable::unwrap))
+        cdkBuilder.labels(labels.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1476,7 +1476,7 @@ public open class CfnDetector(
        * .
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**
@@ -1932,7 +1932,7 @@ public open class CfnDetector(
        * any changes to the variables.
        */
       override fun `inline`(`inline`: IResolvable) {
-        cdkBuilder.`inline`(`inline`.let(IResolvable::unwrap))
+        cdkBuilder.`inline`(`inline`.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1956,7 +1956,7 @@ public open class CfnDetector(
        * .
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**
@@ -2339,7 +2339,7 @@ public open class CfnDetector(
        * any changes to the variables.
        */
       override fun `inline`(`inline`: IResolvable) {
-        cdkBuilder.`inline`(`inline`.let(IResolvable::unwrap))
+        cdkBuilder.`inline`(`inline`.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2363,7 +2363,7 @@ public open class CfnDetector(
        * .
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**
@@ -2771,7 +2771,7 @@ public open class CfnDetector(
        * any changes to the variables.
        */
       override fun `inline`(`inline`: IResolvable) {
-        cdkBuilder.`inline`(`inline`.let(IResolvable::unwrap))
+        cdkBuilder.`inline`(`inline`.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2795,7 +2795,7 @@ public open class CfnDetector(
        * .
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**
@@ -3170,7 +3170,7 @@ public open class CfnDetector(
        * @param outcomes The rule outcome.
        */
       override fun outcomes(outcomes: IResolvable) {
-        cdkBuilder.outcomes(outcomes.let(IResolvable::unwrap))
+        cdkBuilder.outcomes(outcomes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3206,7 +3206,7 @@ public open class CfnDetector(
        * .
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**

@@ -72,7 +72,7 @@ public open class CfnClassifier(
   cdkObject: software.amazon.awscdk.services.glue.CfnClassifier,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.glue.CfnClassifier(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.glue.CfnClassifier(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -81,8 +81,8 @@ public open class CfnClassifier(
     id: String,
     props: CfnClassifierProps,
   ) :
-      this(software.amazon.awscdk.services.glue.CfnClassifier(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnClassifierProps::unwrap))
+      this(software.amazon.awscdk.services.glue.CfnClassifier(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnClassifierProps.Companion::unwrap))
   )
 
   public constructor(
@@ -106,14 +106,14 @@ public open class CfnClassifier(
    * A classifier for comma-separated values (CSV).
    */
   public open fun csvClassifier(`value`: IResolvable) {
-    unwrap(this).setCsvClassifier(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCsvClassifier(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A classifier for comma-separated values (CSV).
    */
   public open fun csvClassifier(`value`: CsvClassifierProperty) {
-    unwrap(this).setCsvClassifier(`value`.let(CsvClassifierProperty::unwrap))
+    unwrap(this).setCsvClassifier(`value`.let(CsvClassifierProperty.Companion::unwrap))
   }
 
   /**
@@ -133,14 +133,14 @@ public open class CfnClassifier(
    * A classifier that uses `grok` .
    */
   public open fun grokClassifier(`value`: IResolvable) {
-    unwrap(this).setGrokClassifier(`value`.let(IResolvable::unwrap))
+    unwrap(this).setGrokClassifier(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A classifier that uses `grok` .
    */
   public open fun grokClassifier(`value`: GrokClassifierProperty) {
-    unwrap(this).setGrokClassifier(`value`.let(GrokClassifierProperty::unwrap))
+    unwrap(this).setGrokClassifier(`value`.let(GrokClassifierProperty.Companion::unwrap))
   }
 
   /**
@@ -157,7 +157,7 @@ public open class CfnClassifier(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -169,14 +169,14 @@ public open class CfnClassifier(
    * A classifier for JSON content.
    */
   public open fun jsonClassifier(`value`: IResolvable) {
-    unwrap(this).setJsonClassifier(`value`.let(IResolvable::unwrap))
+    unwrap(this).setJsonClassifier(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A classifier for JSON content.
    */
   public open fun jsonClassifier(`value`: JsonClassifierProperty) {
-    unwrap(this).setJsonClassifier(`value`.let(JsonClassifierProperty::unwrap))
+    unwrap(this).setJsonClassifier(`value`.let(JsonClassifierProperty.Companion::unwrap))
   }
 
   /**
@@ -196,14 +196,14 @@ public open class CfnClassifier(
    * A classifier for XML content.
    */
   public open fun xmlClassifier(`value`: IResolvable) {
-    unwrap(this).setXmlClassifier(`value`.let(IResolvable::unwrap))
+    unwrap(this).setXmlClassifier(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A classifier for XML content.
    */
   public open fun xmlClassifier(`value`: XMLClassifierProperty) {
-    unwrap(this).setXmlClassifier(`value`.let(XMLClassifierProperty::unwrap))
+    unwrap(this).setXmlClassifier(`value`.let(XMLClassifierProperty.Companion::unwrap))
   }
 
   /**
@@ -338,7 +338,7 @@ public open class CfnClassifier(
      * @param csvClassifier A classifier for comma-separated values (CSV). 
      */
     override fun csvClassifier(csvClassifier: IResolvable) {
-      cdkBuilder.csvClassifier(csvClassifier.let(IResolvable::unwrap))
+      cdkBuilder.csvClassifier(csvClassifier.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -348,7 +348,7 @@ public open class CfnClassifier(
      * @param csvClassifier A classifier for comma-separated values (CSV). 
      */
     override fun csvClassifier(csvClassifier: CsvClassifierProperty) {
-      cdkBuilder.csvClassifier(csvClassifier.let(CsvClassifierProperty::unwrap))
+      cdkBuilder.csvClassifier(csvClassifier.let(CsvClassifierProperty.Companion::unwrap))
     }
 
     /**
@@ -369,7 +369,7 @@ public open class CfnClassifier(
      * @param grokClassifier A classifier that uses `grok` . 
      */
     override fun grokClassifier(grokClassifier: IResolvable) {
-      cdkBuilder.grokClassifier(grokClassifier.let(IResolvable::unwrap))
+      cdkBuilder.grokClassifier(grokClassifier.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -379,7 +379,7 @@ public open class CfnClassifier(
      * @param grokClassifier A classifier that uses `grok` . 
      */
     override fun grokClassifier(grokClassifier: GrokClassifierProperty) {
-      cdkBuilder.grokClassifier(grokClassifier.let(GrokClassifierProperty::unwrap))
+      cdkBuilder.grokClassifier(grokClassifier.let(GrokClassifierProperty.Companion::unwrap))
     }
 
     /**
@@ -400,7 +400,7 @@ public open class CfnClassifier(
      * @param jsonClassifier A classifier for JSON content. 
      */
     override fun jsonClassifier(jsonClassifier: IResolvable) {
-      cdkBuilder.jsonClassifier(jsonClassifier.let(IResolvable::unwrap))
+      cdkBuilder.jsonClassifier(jsonClassifier.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -410,7 +410,7 @@ public open class CfnClassifier(
      * @param jsonClassifier A classifier for JSON content. 
      */
     override fun jsonClassifier(jsonClassifier: JsonClassifierProperty) {
-      cdkBuilder.jsonClassifier(jsonClassifier.let(JsonClassifierProperty::unwrap))
+      cdkBuilder.jsonClassifier(jsonClassifier.let(JsonClassifierProperty.Companion::unwrap))
     }
 
     /**
@@ -431,7 +431,7 @@ public open class CfnClassifier(
      * @param xmlClassifier A classifier for XML content. 
      */
     override fun xmlClassifier(xmlClassifier: IResolvable) {
-      cdkBuilder.xmlClassifier(xmlClassifier.let(IResolvable::unwrap))
+      cdkBuilder.xmlClassifier(xmlClassifier.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -441,7 +441,7 @@ public open class CfnClassifier(
      * @param xmlClassifier A classifier for XML content. 
      */
     override fun xmlClassifier(xmlClassifier: XMLClassifierProperty) {
-      cdkBuilder.xmlClassifier(xmlClassifier.let(XMLClassifierProperty::unwrap))
+      cdkBuilder.xmlClassifier(xmlClassifier.let(XMLClassifierProperty.Companion::unwrap))
     }
 
     /**
@@ -682,7 +682,7 @@ public open class CfnClassifier(
        * @param allowSingleColumn Enables the processing of files that contain only one column.
        */
       override fun allowSingleColumn(allowSingleColumn: IResolvable) {
-        cdkBuilder.allowSingleColumn(allowSingleColumn.let(IResolvable::unwrap))
+        cdkBuilder.allowSingleColumn(allowSingleColumn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -722,7 +722,7 @@ public open class CfnClassifier(
        * @param customDatatypeConfigured Enables the configuration of custom data types.
        */
       override fun customDatatypeConfigured(customDatatypeConfigured: IResolvable) {
-        cdkBuilder.customDatatypeConfigured(customDatatypeConfigured.let(IResolvable::unwrap))
+        cdkBuilder.customDatatypeConfigured(customDatatypeConfigured.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -747,7 +747,7 @@ public open class CfnClassifier(
        * The default value is `true` .
        */
       override fun disableValueTrimming(disableValueTrimming: IResolvable) {
-        cdkBuilder.disableValueTrimming(disableValueTrimming.let(IResolvable::unwrap))
+        cdkBuilder.disableValueTrimming(disableValueTrimming.let(IResolvable.Companion::unwrap))
       }
 
       /**

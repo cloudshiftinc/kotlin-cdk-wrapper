@@ -45,7 +45,7 @@ public abstract class TargetGroupBase(
    * @param healthCheck 
    */
   public open fun configureHealthCheck(healthCheck: HealthCheck) {
-    unwrap(this).configureHealthCheck(healthCheck.let(HealthCheck::unwrap))
+    unwrap(this).configureHealthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
   }
 
   /**
@@ -77,7 +77,7 @@ public abstract class TargetGroupBase(
    * Health check for the members of this target group.
    */
   public open fun healthCheck(`value`: HealthCheck) {
-    unwrap(this).setHealthCheck(`value`.let(HealthCheck::unwrap))
+    unwrap(this).setHealthCheck(`value`.let(HealthCheck.Companion::unwrap))
   }
 
   /**

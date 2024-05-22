@@ -36,7 +36,7 @@ public open class Queue(
   cdkObject: software.amazon.awscdk.services.sqs.Queue,
 ) : QueueBase(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.sqs.Queue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.sqs.Queue(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -45,8 +45,8 @@ public open class Queue(
     id: String,
     props: QueueProps,
   ) :
-      this(software.amazon.awscdk.services.sqs.Queue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(QueueProps::unwrap))
+      this(software.amazon.awscdk.services.sqs.Queue(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(QueueProps.Companion::unwrap))
   )
 
   public constructor(
@@ -384,7 +384,7 @@ public open class Queue(
      * again. 
      */
     override fun dataKeyReuse(dataKeyReuse: Duration) {
-      cdkBuilder.dataKeyReuse(dataKeyReuse.let(Duration::unwrap))
+      cdkBuilder.dataKeyReuse(dataKeyReuse.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -396,7 +396,7 @@ public open class Queue(
      * number of times. 
      */
     override fun deadLetterQueue(deadLetterQueue: DeadLetterQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(DeadLetterQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(DeadLetterQueue.Companion::unwrap))
     }
 
     /**
@@ -424,7 +424,7 @@ public open class Queue(
      * deduplication occurs at the message group or queue level. 
      */
     override fun deduplicationScope(deduplicationScope: DeduplicationScope) {
-      cdkBuilder.deduplicationScope(deduplicationScope.let(DeduplicationScope::unwrap))
+      cdkBuilder.deduplicationScope(deduplicationScope.let(DeduplicationScope.Companion::unwrap))
     }
 
     /**
@@ -439,7 +439,7 @@ public open class Queue(
      * delayed. 
      */
     override fun deliveryDelay(deliveryDelay: Duration) {
-      cdkBuilder.deliveryDelay(deliveryDelay.let(Duration::unwrap))
+      cdkBuilder.deliveryDelay(deliveryDelay.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -453,7 +453,7 @@ public open class Queue(
      * @param encryption Whether the contents of the queue are encrypted, and by what type of key. 
      */
     override fun encryption(encryption: QueueEncryption) {
-      cdkBuilder.encryption(encryption.let(QueueEncryption::unwrap))
+      cdkBuilder.encryption(encryption.let(QueueEncryption.Companion::unwrap))
     }
 
     /**
@@ -471,7 +471,7 @@ public open class Queue(
      * @param encryptionMasterKey External KMS key to use for queue encryption. 
      */
     override fun encryptionMasterKey(encryptionMasterKey: IKey) {
-      cdkBuilder.encryptionMasterKey(encryptionMasterKey.let(IKey::unwrap))
+      cdkBuilder.encryptionMasterKey(encryptionMasterKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -509,7 +509,7 @@ public open class Queue(
      * queue throughput quota applies to the entire queue or per message group. 
      */
     override fun fifoThroughputLimit(fifoThroughputLimit: FifoThroughputLimit) {
-      cdkBuilder.fifoThroughputLimit(fifoThroughputLimit.let(FifoThroughputLimit::unwrap))
+      cdkBuilder.fifoThroughputLimit(fifoThroughputLimit.let(FifoThroughputLimit.Companion::unwrap))
     }
 
     /**
@@ -553,7 +553,7 @@ public open class Queue(
      * @param receiveMessageWaitTime Default wait time for ReceiveMessage calls. 
      */
     override fun receiveMessageWaitTime(receiveMessageWaitTime: Duration) {
-      cdkBuilder.receiveMessageWaitTime(receiveMessageWaitTime.let(Duration::unwrap))
+      cdkBuilder.receiveMessageWaitTime(receiveMessageWaitTime.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -566,7 +566,7 @@ public open class Queue(
      * dead-letter queue redrive permission and which source queues can specify dead-letter queues. 
      */
     override fun redriveAllowPolicy(redriveAllowPolicy: RedriveAllowPolicy) {
-      cdkBuilder.redriveAllowPolicy(redriveAllowPolicy.let(RedriveAllowPolicy::unwrap))
+      cdkBuilder.redriveAllowPolicy(redriveAllowPolicy.let(RedriveAllowPolicy.Companion::unwrap))
     }
 
     /**
@@ -596,7 +596,7 @@ public open class Queue(
      * @param removalPolicy Policy to apply when the queue is removed from the stack. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -610,7 +610,7 @@ public open class Queue(
      * @param retentionPeriod The number of seconds that Amazon SQS retains a message. 
      */
     override fun retentionPeriod(retentionPeriod: Duration) {
-      cdkBuilder.retentionPeriod(retentionPeriod.let(Duration::unwrap))
+      cdkBuilder.retentionPeriod(retentionPeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -628,7 +628,7 @@ public open class Queue(
      * @param visibilityTimeout Timeout of processing a single message. 
      */
     override fun visibilityTimeout(visibilityTimeout: Duration) {
-      cdkBuilder.visibilityTimeout(visibilityTimeout.let(Duration::unwrap))
+      cdkBuilder.visibilityTimeout(visibilityTimeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.sqs.Queue = cdkBuilder.build()
@@ -640,7 +640,7 @@ public open class Queue(
       id: String,
       queueArn: String,
     ): IQueue =
-        software.amazon.awscdk.services.sqs.Queue.fromQueueArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.sqs.Queue.fromQueueArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, queueArn).let(IQueue::wrap)
 
     public fun fromQueueAttributes(
@@ -648,8 +648,8 @@ public open class Queue(
       id: String,
       attrs: QueueAttributes,
     ): IQueue =
-        software.amazon.awscdk.services.sqs.Queue.fromQueueAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(QueueAttributes::unwrap)).let(IQueue::wrap)
+        software.amazon.awscdk.services.sqs.Queue.fromQueueAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(QueueAttributes.Companion::unwrap)).let(IQueue::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9e7908d25798651fbd0c90d97212232d58887dfc0aa75b4d5f4c6e87ff68d1bd")

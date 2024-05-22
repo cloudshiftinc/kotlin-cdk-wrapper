@@ -56,8 +56,8 @@ public open class CfnDomain(
     id: String,
     props: CfnDomainProps,
   ) :
-      this(software.amazon.awscdk.services.amplify.CfnDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDomainProps::unwrap))
+      this(software.amazon.awscdk.services.amplify.CfnDomain(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDomainProps.Companion::unwrap))
   )
 
   public constructor(
@@ -194,14 +194,14 @@ public open class CfnDomain(
    * The type of SSL/TLS certificate to use for your custom domain.
    */
   public open fun certificateSettings(`value`: IResolvable) {
-    unwrap(this).setCertificateSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCertificateSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The type of SSL/TLS certificate to use for your custom domain.
    */
   public open fun certificateSettings(`value`: CertificateSettingsProperty) {
-    unwrap(this).setCertificateSettings(`value`.let(CertificateSettingsProperty::unwrap))
+    unwrap(this).setCertificateSettings(`value`.let(CertificateSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -240,7 +240,7 @@ public open class CfnDomain(
    * Enables the automated creation of subdomains for branches.
    */
   public open fun enableAutoSubDomain(`value`: IResolvable) {
-    unwrap(this).setEnableAutoSubDomain(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableAutoSubDomain(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -249,7 +249,7 @@ public open class CfnDomain(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -261,7 +261,7 @@ public open class CfnDomain(
    * The setting for the subdomain.
    */
   public open fun subDomainSettings(`value`: IResolvable) {
-    unwrap(this).setSubDomainSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSubDomainSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -462,7 +462,7 @@ public open class CfnDomain(
      * @param certificateSettings The type of SSL/TLS certificate to use for your custom domain. 
      */
     override fun certificateSettings(certificateSettings: IResolvable) {
-      cdkBuilder.certificateSettings(certificateSettings.let(IResolvable::unwrap))
+      cdkBuilder.certificateSettings(certificateSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -475,7 +475,7 @@ public open class CfnDomain(
      * @param certificateSettings The type of SSL/TLS certificate to use for your custom domain. 
      */
     override fun certificateSettings(certificateSettings: CertificateSettingsProperty) {
-      cdkBuilder.certificateSettings(certificateSettings.let(CertificateSettingsProperty::unwrap))
+      cdkBuilder.certificateSettings(certificateSettings.let(CertificateSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -520,7 +520,7 @@ public open class CfnDomain(
      * @param enableAutoSubDomain Enables the automated creation of subdomains for branches. 
      */
     override fun enableAutoSubDomain(enableAutoSubDomain: IResolvable) {
-      cdkBuilder.enableAutoSubDomain(enableAutoSubDomain.let(IResolvable::unwrap))
+      cdkBuilder.enableAutoSubDomain(enableAutoSubDomain.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -530,7 +530,7 @@ public open class CfnDomain(
      * @param subDomainSettings The setting for the subdomain. 
      */
     override fun subDomainSettings(subDomainSettings: IResolvable) {
-      cdkBuilder.subDomainSettings(subDomainSettings.let(IResolvable::unwrap))
+      cdkBuilder.subDomainSettings(subDomainSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**

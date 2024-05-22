@@ -52,8 +52,8 @@ public open class SubnetGroup(
     id: String,
     props: SubnetGroupProps,
   ) :
-      this(software.amazon.awscdk.services.rds.SubnetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SubnetGroupProps::unwrap))
+      this(software.amazon.awscdk.services.rds.SubnetGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SubnetGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -154,7 +154,7 @@ public open class SubnetGroup(
      * stack or replaced during an update. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -174,7 +174,7 @@ public open class SubnetGroup(
      * @param vpc The VPC to place the subnet group in. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -185,7 +185,7 @@ public open class SubnetGroup(
      * @param vpcSubnets Which subnets within the VPC to associate with this group. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -209,7 +209,7 @@ public open class SubnetGroup(
       id: String,
       subnetGroupName: String,
     ): ISubnetGroup =
-        software.amazon.awscdk.services.rds.SubnetGroup.fromSubnetGroupName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.rds.SubnetGroup.fromSubnetGroupName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, subnetGroupName).let(ISubnetGroup::wrap)
 
     public operator fun invoke(

@@ -278,6 +278,9 @@ public open class AuroraPostgresEngineVersion(
     public val VER_16_1: AuroraPostgresEngineVersion =
         AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_16_1)
 
+    public val VER_16_2: AuroraPostgresEngineVersion =
+        AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_16_2)
+
     public val VER_9_6_11: AuroraPostgresEngineVersion =
         AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_9_6_11)
 
@@ -317,7 +320,7 @@ public open class AuroraPostgresEngineVersion(
     ): AuroraPostgresEngineVersion =
         software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.of(auroraPostgresFullVersion,
         auroraPostgresMajorVersion,
-        auroraPostgresFeatures.let(AuroraPostgresEngineFeatures::unwrap)).let(AuroraPostgresEngineVersion::wrap)
+        auroraPostgresFeatures.let(AuroraPostgresEngineFeatures.Companion::unwrap)).let(AuroraPostgresEngineVersion::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ef8f32dd92680ee16644cf106bac65a4efdbe548075bf1504d89001bc8aa9096")

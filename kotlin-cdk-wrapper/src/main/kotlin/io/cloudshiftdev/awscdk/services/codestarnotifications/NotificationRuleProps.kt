@@ -136,7 +136,7 @@ public interface NotificationRuleProps : NotificationRuleOptions {
      * the service for the resource for which the notification is created.
      */
     override fun detailType(detailType: DetailType) {
-      cdkBuilder.detailType(detailType.let(DetailType::unwrap))
+      cdkBuilder.detailType(detailType.let(DetailType.Companion::unwrap))
     }
 
     /**
@@ -178,14 +178,14 @@ public interface NotificationRuleProps : NotificationRuleOptions {
      * CodeBuild, and repositories in AWS CodeCommit in this L2 constructor.
      */
     override fun source(source: INotificationRuleSource) {
-      cdkBuilder.source(source.let(INotificationRuleSource::unwrap))
+      cdkBuilder.source(source.let(INotificationRuleSource.Companion::unwrap))
     }
 
     /**
      * @param targets The targets to register for the notification destination.
      */
     override fun targets(targets: List<INotificationRuleTarget>) {
-      cdkBuilder.targets(targets.map(INotificationRuleTarget::unwrap))
+      cdkBuilder.targets(targets.map(INotificationRuleTarget.Companion::unwrap))
     }
 
     /**

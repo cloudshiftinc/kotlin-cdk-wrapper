@@ -67,8 +67,8 @@ public open class CfnDBSecurityGroup(
     id: String,
     props: CfnDBSecurityGroupProps,
   ) :
-      this(software.amazon.awscdk.services.rds.CfnDBSecurityGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDBSecurityGroupProps::unwrap))
+      this(software.amazon.awscdk.services.rds.CfnDBSecurityGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDBSecurityGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -92,7 +92,7 @@ public open class CfnDBSecurityGroup(
    * Ingress rules to be applied to the DB security group.
    */
   public open fun dbSecurityGroupIngress(`value`: IResolvable) {
-    unwrap(this).setDbSecurityGroupIngress(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDbSecurityGroupIngress(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -142,7 +142,7 @@ public open class CfnDBSecurityGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -160,7 +160,7 @@ public open class CfnDBSecurityGroup(
    * An optional array of key-value pairs to apply to this DB security group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -251,7 +251,7 @@ public open class CfnDBSecurityGroup(
      * @param dbSecurityGroupIngress Ingress rules to be applied to the DB security group. 
      */
     override fun dbSecurityGroupIngress(dbSecurityGroupIngress: IResolvable) {
-      cdkBuilder.dbSecurityGroupIngress(dbSecurityGroupIngress.let(IResolvable::unwrap))
+      cdkBuilder.dbSecurityGroupIngress(dbSecurityGroupIngress.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -307,7 +307,7 @@ public open class CfnDBSecurityGroup(
      * @param tags An optional array of key-value pairs to apply to this DB security group. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -210,7 +210,7 @@ public interface CfnTransitGatewayVpcAttachmentProps {
      * @param tags The tags for the VPC attachment.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

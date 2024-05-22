@@ -70,7 +70,7 @@ public open class CfnInfluxDBInstance(
   cdkObject: software.amazon.awscdk.services.timestream.CfnInfluxDBInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.timestream.CfnInfluxDBInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.timestream.CfnInfluxDBInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -79,8 +79,8 @@ public open class CfnInfluxDBInstance(
     id: String,
     props: CfnInfluxDBInstanceProps,
   ) :
-      this(software.amazon.awscdk.services.timestream.CfnInfluxDBInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInfluxDBInstanceProps::unwrap))
+      this(software.amazon.awscdk.services.timestream.CfnInfluxDBInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInfluxDBInstanceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -223,7 +223,7 @@ public open class CfnInfluxDBInstance(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -235,14 +235,14 @@ public open class CfnInfluxDBInstance(
    * Configuration for sending InfluxDB engine logs to a specified S3 bucket.
    */
   public open fun logDeliveryConfiguration(`value`: IResolvable) {
-    unwrap(this).setLogDeliveryConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLogDeliveryConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration for sending InfluxDB engine logs to a specified S3 bucket.
    */
   public open fun logDeliveryConfiguration(`value`: LogDeliveryConfigurationProperty) {
-    unwrap(this).setLogDeliveryConfiguration(`value`.let(LogDeliveryConfigurationProperty::unwrap))
+    unwrap(this).setLogDeliveryConfiguration(`value`.let(LogDeliveryConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -308,7 +308,7 @@ public open class CfnInfluxDBInstance(
    * Configures the DB instance with a public IP to facilitate access.
    */
   public open fun publiclyAccessible(`value`: IResolvable) {
-    unwrap(this).setPubliclyAccessible(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPubliclyAccessible(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -320,7 +320,7 @@ public open class CfnInfluxDBInstance(
    * A list of key-value pairs to associate with the DB instance.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -698,7 +698,7 @@ public open class CfnInfluxDBInstance(
      * S3 bucket. 
      */
     override fun logDeliveryConfiguration(logDeliveryConfiguration: IResolvable) {
-      cdkBuilder.logDeliveryConfiguration(logDeliveryConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.logDeliveryConfiguration(logDeliveryConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -710,7 +710,7 @@ public open class CfnInfluxDBInstance(
      */
     override
         fun logDeliveryConfiguration(logDeliveryConfiguration: LogDeliveryConfigurationProperty) {
-      cdkBuilder.logDeliveryConfiguration(logDeliveryConfiguration.let(LogDeliveryConfigurationProperty::unwrap))
+      cdkBuilder.logDeliveryConfiguration(logDeliveryConfiguration.let(LogDeliveryConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -789,7 +789,7 @@ public open class CfnInfluxDBInstance(
      * @param publiclyAccessible Configures the DB instance with a public IP to facilitate access. 
      */
     override fun publiclyAccessible(publiclyAccessible: IResolvable) {
-      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
+      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -799,7 +799,7 @@ public open class CfnInfluxDBInstance(
      * @param tags A list of key-value pairs to associate with the DB instance. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -957,14 +957,14 @@ public open class CfnInfluxDBInstance(
        * @param s3Configuration Configuration for S3 bucket log delivery. 
        */
       override fun s3Configuration(s3Configuration: IResolvable) {
-        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3Configuration Configuration for S3 bucket log delivery. 
        */
       override fun s3Configuration(s3Configuration: S3ConfigurationProperty) {
-        cdkBuilder.s3Configuration(s3Configuration.let(S3ConfigurationProperty::unwrap))
+        cdkBuilder.s3Configuration(s3Configuration.let(S3ConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1086,7 +1086,7 @@ public open class CfnInfluxDBInstance(
        * @param enabled Indicates whether log delivery to the S3 bucket is enabled. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

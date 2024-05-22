@@ -46,7 +46,7 @@ public open class Source(
 
     public fun asset(path: String, options: AssetOptions): ISource =
         software.amazon.awscdk.services.s3.deployment.Source.asset(path,
-        options.let(AssetOptions::unwrap)).let(ISource::wrap)
+        options.let(AssetOptions.Companion::unwrap)).let(ISource::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0b77eb868095f325ddfb755b455f0094b4fee540fdd33a0edf9ca830bf8cdb1d")
@@ -54,7 +54,7 @@ public open class Source(
         AssetOptions(options))
 
     public fun bucket(bucket: IBucket, zipObjectKey: String): ISource =
-        software.amazon.awscdk.services.s3.deployment.Source.bucket(bucket.let(IBucket::unwrap),
+        software.amazon.awscdk.services.s3.deployment.Source.bucket(bucket.let(IBucket.Companion::unwrap),
         zipObjectKey).let(ISource::wrap)
 
     public fun `data`(objectKey: String, `data`: String): ISource =

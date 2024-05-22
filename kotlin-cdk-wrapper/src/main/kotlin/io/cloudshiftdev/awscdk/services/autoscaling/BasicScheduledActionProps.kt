@@ -206,7 +206,7 @@ public interface BasicScheduledActionProps {
      * For more information about cron expressions, see https://en.wikipedia.org/wiki/Cron.
      */
     override fun schedule(schedule: Schedule) {
-      cdkBuilder.schedule(schedule.let(Schedule::unwrap))
+      cdkBuilder.schedule(schedule.let(Schedule.Companion::unwrap))
     }
 
     /**

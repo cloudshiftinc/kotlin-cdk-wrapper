@@ -295,7 +295,7 @@ public interface CfnFeatureProps {
      * that they are to be served.
      */
     override fun entityOverrides(entityOverrides: IResolvable) {
-      cdkBuilder.entityOverrides(entityOverrides.let(IResolvable::unwrap))
+      cdkBuilder.entityOverrides(entityOverrides.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -358,7 +358,7 @@ public interface CfnFeatureProps {
      * resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -384,7 +384,7 @@ public interface CfnFeatureProps {
      * value ( `BooleanValue` , `DoubleValue` , `LongValue` or `StringValue` ).
      */
     override fun variations(variations: IResolvable) {
-      cdkBuilder.variations(variations.let(IResolvable::unwrap))
+      cdkBuilder.variations(variations.let(IResolvable.Companion::unwrap))
     }
 
     /**

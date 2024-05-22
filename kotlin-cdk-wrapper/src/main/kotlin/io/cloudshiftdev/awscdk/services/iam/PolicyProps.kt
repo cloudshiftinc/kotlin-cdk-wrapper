@@ -216,7 +216,7 @@ public interface PolicyProps {
      * against the empty default `PolicyDocument`.
      */
     override fun document(document: PolicyDocument) {
-      cdkBuilder.document(document.let(PolicyDocument::unwrap))
+      cdkBuilder.document(document.let(PolicyDocument.Companion::unwrap))
     }
 
     /**
@@ -251,7 +251,7 @@ public interface PolicyProps {
      * You can also use `attachToGroup(group)` to attach this policy to a group.
      */
     override fun groups(groups: List<IGroup>) {
-      cdkBuilder.groups(groups.map(IGroup::unwrap))
+      cdkBuilder.groups(groups.map(IGroup.Companion::unwrap))
     }
 
     /**
@@ -275,7 +275,7 @@ public interface PolicyProps {
      * You can also use `attachToRole(role)` to attach this policy to a role.
      */
     override fun roles(roles: List<IRole>) {
-      cdkBuilder.roles(roles.map(IRole::unwrap))
+      cdkBuilder.roles(roles.map(IRole.Companion::unwrap))
     }
 
     /**
@@ -289,7 +289,7 @@ public interface PolicyProps {
      * You can also use `addStatements(...statement)` to add permissions later.
      */
     override fun statements(statements: List<PolicyStatement>) {
-      cdkBuilder.statements(statements.map(PolicyStatement::unwrap))
+      cdkBuilder.statements(statements.map(PolicyStatement.Companion::unwrap))
     }
 
     /**
@@ -304,7 +304,7 @@ public interface PolicyProps {
      * You can also use `attachToUser(user)` to attach this policy to a user.
      */
     override fun users(users: List<IUser>) {
-      cdkBuilder.users(users.map(IUser::unwrap))
+      cdkBuilder.users(users.map(IUser.Companion::unwrap))
     }
 
     /**

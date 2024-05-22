@@ -103,14 +103,14 @@ public interface WebSocketRouteProps : WebSocketRouteOptions {
      * You can only set authorizer to a $connect route.
      */
     override fun authorizer(authorizer: IWebSocketRouteAuthorizer) {
-      cdkBuilder.authorizer(authorizer.let(IWebSocketRouteAuthorizer::unwrap))
+      cdkBuilder.authorizer(authorizer.let(IWebSocketRouteAuthorizer.Companion::unwrap))
     }
 
     /**
      * @param integration The integration to be configured on this route. 
      */
     override fun integration(integration: WebSocketRouteIntegration) {
-      cdkBuilder.integration(integration.let(WebSocketRouteIntegration::unwrap))
+      cdkBuilder.integration(integration.let(WebSocketRouteIntegration.Companion::unwrap))
     }
 
     /**
@@ -131,7 +131,7 @@ public interface WebSocketRouteProps : WebSocketRouteOptions {
      * @param webSocketApi The API the route is associated with. 
      */
     override fun webSocketApi(webSocketApi: IWebSocketApi) {
-      cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi::unwrap))
+      cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.WebSocketRouteProps =

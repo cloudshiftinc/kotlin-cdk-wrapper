@@ -197,7 +197,8 @@ public interface ISecurityGroup : IResource, IPeer {
      * @param remoteRule
      */
     override fun addEgressRule(peer: IPeer, connection: Port) {
-      unwrap(this).addEgressRule(peer.let(IPeer::unwrap), connection.let(Port::unwrap))
+      unwrap(this).addEgressRule(peer.let(IPeer.Companion::unwrap),
+          connection.let(Port.Companion::unwrap))
     }
 
     /**
@@ -238,7 +239,8 @@ public interface ISecurityGroup : IResource, IPeer {
       connection: Port,
       description: String,
     ) {
-      unwrap(this).addEgressRule(peer.let(IPeer::unwrap), connection.let(Port::unwrap), description)
+      unwrap(this).addEgressRule(peer.let(IPeer.Companion::unwrap),
+          connection.let(Port.Companion::unwrap), description)
     }
 
     /**
@@ -261,8 +263,8 @@ public interface ISecurityGroup : IResource, IPeer {
       description: String,
       remoteRule: Boolean,
     ) {
-      unwrap(this).addEgressRule(peer.let(IPeer::unwrap), connection.let(Port::unwrap), description,
-          remoteRule)
+      unwrap(this).addEgressRule(peer.let(IPeer.Companion::unwrap),
+          connection.let(Port.Companion::unwrap), description, remoteRule)
     }
 
     /**
@@ -280,7 +282,8 @@ public interface ISecurityGroup : IResource, IPeer {
      * @param remoteRule
      */
     override fun addIngressRule(peer: IPeer, connection: Port) {
-      unwrap(this).addIngressRule(peer.let(IPeer::unwrap), connection.let(Port::unwrap))
+      unwrap(this).addIngressRule(peer.let(IPeer.Companion::unwrap),
+          connection.let(Port.Companion::unwrap))
     }
 
     /**
@@ -321,8 +324,8 @@ public interface ISecurityGroup : IResource, IPeer {
       connection: Port,
       description: String,
     ) {
-      unwrap(this).addIngressRule(peer.let(IPeer::unwrap), connection.let(Port::unwrap),
-          description)
+      unwrap(this).addIngressRule(peer.let(IPeer.Companion::unwrap),
+          connection.let(Port.Companion::unwrap), description)
     }
 
     /**
@@ -345,8 +348,8 @@ public interface ISecurityGroup : IResource, IPeer {
       description: String,
       remoteRule: Boolean,
     ) {
-      unwrap(this).addIngressRule(peer.let(IPeer::unwrap), connection.let(Port::unwrap),
-          description, remoteRule)
+      unwrap(this).addIngressRule(peer.let(IPeer.Companion::unwrap),
+          connection.let(Port.Companion::unwrap), description, remoteRule)
     }
 
     /**
@@ -368,7 +371,7 @@ public interface ISecurityGroup : IResource, IPeer {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**

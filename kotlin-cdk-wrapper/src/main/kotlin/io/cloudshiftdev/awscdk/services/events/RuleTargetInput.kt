@@ -13,23 +13,22 @@ import kotlin.String
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.iam.*;
- * import io.cloudshiftdev.awscdk.services.stepfunctions.*;
+ * import io.cloudshiftdev.awscdk.services.appsync.*;
+ * GraphqlApi api = GraphqlApi.Builder.create(this, "api")
+ * .name("api")
+ * .definition(Definition.fromFile("schema.graphql"))
+ * .authorizationConfig(AuthorizationConfig.builder()
+ * .defaultAuthorization(AuthorizationMode.builder().authorizationType(AuthorizationType.IAM).build())
+ * .build())
+ * .build();
  * Rule rule = Rule.Builder.create(this, "Rule")
- * .schedule(Schedule.rate(Duration.minutes(1)))
+ * .schedule(Schedule.rate(Duration.hours(1)))
  * .build();
- * Queue dlq = new Queue(this, "DeadLetterQueue");
- * Role role = Role.Builder.create(this, "Role")
- * .assumedBy(new ServicePrincipal("events.amazonaws.com"))
- * .build();
- * StateMachine stateMachine = StateMachine.Builder.create(this, "SM")
- * .definition(Wait.Builder.create(this,
- * "Hello").time(WaitTime.duration(Duration.seconds(10))).build())
- * .build();
- * rule.addTarget(SfnStateMachine.Builder.create(stateMachine)
- * .input(RuleTargetInput.fromObject(Map.of("SomeParam", "SomeValue")))
- * .deadLetterQueue(dlq)
- * .role(role)
+ * rule.addTarget(AppSync.Builder.create(api)
+ * .graphQLOperation("mutation Publish($message: String!){ publish(message: $message) { message }
+ * }")
+ * .variables(RuleTargetInput.fromObject(Map.of(
+ * "message", "hello world")))
  * .build());
  * ```
  */
@@ -42,7 +41,7 @@ public abstract class RuleTargetInput(
    * @param rule 
    */
   public open fun bind(rule: IRule): RuleTargetInputProperties =
-      unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetInputProperties::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap)).let(RuleTargetInputProperties::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.RuleTargetInput,

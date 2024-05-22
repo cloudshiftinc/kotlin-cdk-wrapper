@@ -127,7 +127,7 @@ public interface IpInstanceProps : IpInstanceBaseProps {
      * @param service The Cloudmap service this resource is registered to. 
      */
     override fun service(service: IService) {
-      cdkBuilder.service(service.let(IService::unwrap))
+      cdkBuilder.service(service.let(IService.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.servicediscovery.IpInstanceProps =

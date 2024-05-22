@@ -641,7 +641,7 @@ public interface CfnDataSetProps {
      * Currently, only geospatial hierarchy is supported.
      */
     override fun columnGroups(columnGroups: IResolvable) {
-      cdkBuilder.columnGroups(columnGroups.let(IResolvable::unwrap))
+      cdkBuilder.columnGroups(columnGroups.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -665,7 +665,7 @@ public interface CfnDataSetProps {
      * `ColumnLevelPermissionRule` .
      */
     override fun columnLevelPermissionRules(columnLevelPermissionRules: IResolvable) {
-      cdkBuilder.columnLevelPermissionRules(columnLevelPermissionRules.let(IResolvable::unwrap))
+      cdkBuilder.columnLevelPermissionRules(columnLevelPermissionRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -695,7 +695,7 @@ public interface CfnDataSetProps {
      * @param dataSetRefreshProperties The refresh properties of a dataset.
      */
     override fun dataSetRefreshProperties(dataSetRefreshProperties: IResolvable) {
-      cdkBuilder.dataSetRefreshProperties(dataSetRefreshProperties.let(IResolvable::unwrap))
+      cdkBuilder.dataSetRefreshProperties(dataSetRefreshProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -703,7 +703,7 @@ public interface CfnDataSetProps {
      */
     override
         fun dataSetRefreshProperties(dataSetRefreshProperties: CfnDataSet.DataSetRefreshPropertiesProperty) {
-      cdkBuilder.dataSetRefreshProperties(dataSetRefreshProperties.let(CfnDataSet.DataSetRefreshPropertiesProperty::unwrap))
+      cdkBuilder.dataSetRefreshProperties(dataSetRefreshProperties.let(CfnDataSet.DataSetRefreshPropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -721,7 +721,7 @@ public interface CfnDataSetProps {
      * reference this dataset as a source.
      */
     override fun dataSetUsageConfiguration(dataSetUsageConfiguration: IResolvable) {
-      cdkBuilder.dataSetUsageConfiguration(dataSetUsageConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.dataSetUsageConfiguration(dataSetUsageConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -730,7 +730,7 @@ public interface CfnDataSetProps {
      */
     override
         fun dataSetUsageConfiguration(dataSetUsageConfiguration: CfnDataSet.DataSetUsageConfigurationProperty) {
-      cdkBuilder.dataSetUsageConfiguration(dataSetUsageConfiguration.let(CfnDataSet.DataSetUsageConfigurationProperty::unwrap))
+      cdkBuilder.dataSetUsageConfiguration(dataSetUsageConfiguration.let(CfnDataSet.DataSetUsageConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -748,7 +748,7 @@ public interface CfnDataSetProps {
      * @param datasetParameters The parameters that are declared in a dataset.
      */
     override fun datasetParameters(datasetParameters: IResolvable) {
-      cdkBuilder.datasetParameters(datasetParameters.let(IResolvable::unwrap))
+      cdkBuilder.datasetParameters(datasetParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -768,7 +768,7 @@ public interface CfnDataSetProps {
      * @param fieldFolders The folder that contains fields and nested subfolders for your dataset.
      */
     override fun fieldFolders(fieldFolders: IResolvable) {
-      cdkBuilder.fieldFolders(fieldFolders.let(IResolvable::unwrap))
+      cdkBuilder.fieldFolders(fieldFolders.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -790,7 +790,7 @@ public interface CfnDataSetProps {
      * The default is to wait for SPICE ingestion to finish with timeout of 36 hours.
      */
     override fun ingestionWaitPolicy(ingestionWaitPolicy: IResolvable) {
-      cdkBuilder.ingestionWaitPolicy(ingestionWaitPolicy.let(IResolvable::unwrap))
+      cdkBuilder.ingestionWaitPolicy(ingestionWaitPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -798,7 +798,7 @@ public interface CfnDataSetProps {
      * The default is to wait for SPICE ingestion to finish with timeout of 36 hours.
      */
     override fun ingestionWaitPolicy(ingestionWaitPolicy: CfnDataSet.IngestionWaitPolicyProperty) {
-      cdkBuilder.ingestionWaitPolicy(ingestionWaitPolicy.let(CfnDataSet.IngestionWaitPolicyProperty::unwrap))
+      cdkBuilder.ingestionWaitPolicy(ingestionWaitPolicy.let(CfnDataSet.IngestionWaitPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -816,7 +816,7 @@ public interface CfnDataSetProps {
      * physical tables.
      */
     override fun logicalTableMap(logicalTableMap: IResolvable) {
-      cdkBuilder.logicalTableMap(logicalTableMap.let(IResolvable::unwrap))
+      cdkBuilder.logicalTableMap(logicalTableMap.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -838,7 +838,7 @@ public interface CfnDataSetProps {
      * @param permissions A list of resource permissions on the dataset.
      */
     override fun permissions(permissions: IResolvable) {
-      cdkBuilder.permissions(permissions.let(IResolvable::unwrap))
+      cdkBuilder.permissions(permissions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -858,7 +858,7 @@ public interface CfnDataSetProps {
      * data sources.
      */
     override fun physicalTableMap(physicalTableMap: IResolvable) {
-      cdkBuilder.physicalTableMap(physicalTableMap.let(IResolvable::unwrap))
+      cdkBuilder.physicalTableMap(physicalTableMap.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -874,7 +874,7 @@ public interface CfnDataSetProps {
      * want to create.
      */
     override fun rowLevelPermissionDataSet(rowLevelPermissionDataSet: IResolvable) {
-      cdkBuilder.rowLevelPermissionDataSet(rowLevelPermissionDataSet.let(IResolvable::unwrap))
+      cdkBuilder.rowLevelPermissionDataSet(rowLevelPermissionDataSet.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -883,7 +883,7 @@ public interface CfnDataSetProps {
      */
     override
         fun rowLevelPermissionDataSet(rowLevelPermissionDataSet: CfnDataSet.RowLevelPermissionDataSetProperty) {
-      cdkBuilder.rowLevelPermissionDataSet(rowLevelPermissionDataSet.let(CfnDataSet.RowLevelPermissionDataSetProperty::unwrap))
+      cdkBuilder.rowLevelPermissionDataSet(rowLevelPermissionDataSet.let(CfnDataSet.RowLevelPermissionDataSetProperty.Companion::unwrap))
     }
 
     /**
@@ -903,7 +903,7 @@ public interface CfnDataSetProps {
      */
     override
         fun rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration: IResolvable) {
-      cdkBuilder.rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -912,7 +912,7 @@ public interface CfnDataSetProps {
      */
     override
         fun rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration: CfnDataSet.RowLevelPermissionTagConfigurationProperty) {
-      cdkBuilder.rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration.let(CfnDataSet.RowLevelPermissionTagConfigurationProperty::unwrap))
+      cdkBuilder.rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration.let(CfnDataSet.RowLevelPermissionTagConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -931,7 +931,7 @@ public interface CfnDataSetProps {
      * the dataset.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

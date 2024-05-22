@@ -32,13 +32,13 @@ public open class FunctionUrlOrigin(
   cdkObject: software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOrigin,
 ) : OriginBase(cdkObject) {
   public constructor(lambdaFunctionUrl: CloudshiftdevAwscdkServicesLambdaIFunctionUrl) :
-      this(software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOrigin(lambdaFunctionUrl.let(CloudshiftdevAwscdkServicesLambdaIFunctionUrl::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOrigin(lambdaFunctionUrl.let(CloudshiftdevAwscdkServicesLambdaIFunctionUrl.Companion::unwrap))
   )
 
   public constructor(lambdaFunctionUrl: CloudshiftdevAwscdkServicesLambdaIFunctionUrl,
       props: FunctionUrlOriginProps) :
-      this(software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOrigin(lambdaFunctionUrl.let(CloudshiftdevAwscdkServicesLambdaIFunctionUrl::unwrap),
-      props.let(FunctionUrlOriginProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOrigin(lambdaFunctionUrl.let(CloudshiftdevAwscdkServicesLambdaIFunctionUrl.Companion::unwrap),
+      props.let(FunctionUrlOriginProps.Companion::unwrap))
   )
 
   public constructor(lambdaFunctionUrl: CloudshiftdevAwscdkServicesLambdaIFunctionUrl,
@@ -202,7 +202,7 @@ public open class FunctionUrlOrigin(
      * a connection to the origin. 
      */
     override fun connectionTimeout(connectionTimeout: Duration) {
-      cdkBuilder.connectionTimeout(connectionTimeout.let(Duration::unwrap))
+      cdkBuilder.connectionTimeout(connectionTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -234,7 +234,7 @@ public open class FunctionUrlOrigin(
      * the origin. 
      */
     override fun keepaliveTimeout(keepaliveTimeout: Duration) {
-      cdkBuilder.keepaliveTimeout(keepaliveTimeout.let(Duration::unwrap))
+      cdkBuilder.keepaliveTimeout(keepaliveTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -308,7 +308,7 @@ public open class FunctionUrlOrigin(
      * origin. 
      */
     override fun readTimeout(readTimeout: Duration) {
-      cdkBuilder.readTimeout(readTimeout.let(Duration::unwrap))
+      cdkBuilder.readTimeout(readTimeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOrigin =

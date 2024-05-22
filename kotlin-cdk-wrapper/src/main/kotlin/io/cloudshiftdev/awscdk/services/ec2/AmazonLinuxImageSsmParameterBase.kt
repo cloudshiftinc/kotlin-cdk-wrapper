@@ -18,7 +18,7 @@ public abstract class AmazonLinuxImageSsmParameterBase(
    * @param scope 
    */
   public override fun image(scope: Construct): MachineImageConfig =
-      unwrap(this).getImage(scope.let(Construct::unwrap)).let(MachineImageConfig::wrap)
+      unwrap(this).getImage(scope.let(Construct.Companion::unwrap)).let(MachineImageConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ec2.AmazonLinuxImageSsmParameterBase,

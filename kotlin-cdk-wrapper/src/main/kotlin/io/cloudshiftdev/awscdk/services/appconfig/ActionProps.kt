@@ -123,7 +123,7 @@ public interface ActionProps {
      * @param actionPoints The action points that will trigger the extension action. 
      */
     override fun actionPoints(actionPoints: List<ActionPoint>) {
-      cdkBuilder.actionPoints(actionPoints.map(ActionPoint::unwrap))
+      cdkBuilder.actionPoints(actionPoints.map(ActionPoint.Companion::unwrap))
     }
 
     /**
@@ -143,14 +143,14 @@ public interface ActionProps {
      * @param eventDestination The event destination for the action. 
      */
     override fun eventDestination(eventDestination: IEventDestination) {
-      cdkBuilder.eventDestination(eventDestination.let(IEventDestination::unwrap))
+      cdkBuilder.eventDestination(eventDestination.let(IEventDestination.Companion::unwrap))
     }
 
     /**
      * @param executionRole The execution role for the action.
      */
     override fun executionRole(executionRole: IRole) {
-      cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
+      cdkBuilder.executionRole(executionRole.let(IRole.Companion::unwrap))
     }
 
     /**

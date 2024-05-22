@@ -39,11 +39,11 @@ public abstract class Endpoint(
 
   public companion object {
     public fun fromKinesisStream(stream: IStream): Endpoint =
-        software.amazon.awscdk.services.cloudfront.Endpoint.fromKinesisStream(stream.let(IStream::unwrap)).let(Endpoint::wrap)
+        software.amazon.awscdk.services.cloudfront.Endpoint.fromKinesisStream(stream.let(IStream.Companion::unwrap)).let(Endpoint::wrap)
 
     public fun fromKinesisStream(stream: IStream, role: IRole): Endpoint =
-        software.amazon.awscdk.services.cloudfront.Endpoint.fromKinesisStream(stream.let(IStream::unwrap),
-        role.let(IRole::unwrap)).let(Endpoint::wrap)
+        software.amazon.awscdk.services.cloudfront.Endpoint.fromKinesisStream(stream.let(IStream.Companion::unwrap),
+        role.let(IRole.Companion::unwrap)).let(Endpoint::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.Endpoint): Endpoint =
         CdkObjectWrappers.wrap(cdkObject) as? Endpoint ?: Wrapper(cdkObject)

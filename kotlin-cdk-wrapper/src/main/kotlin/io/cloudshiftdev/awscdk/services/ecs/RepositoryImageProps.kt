@@ -55,7 +55,7 @@ public interface RepositoryImageProps {
      * The supported value is the full ARN of an AWS Secrets Manager secret.
      */
     override fun credentials(credentials: ISecret) {
-      cdkBuilder.credentials(credentials.let(ISecret::unwrap))
+      cdkBuilder.credentials(credentials.let(ISecret.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.RepositoryImageProps =

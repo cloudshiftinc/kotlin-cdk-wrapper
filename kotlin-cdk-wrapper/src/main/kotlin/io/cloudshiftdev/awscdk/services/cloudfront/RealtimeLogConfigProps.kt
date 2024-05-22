@@ -107,7 +107,7 @@ public interface RealtimeLogConfigProps {
      * sending real-time log data for this real-time log configuration. 
      */
     override fun endPoints(endPoints: List<Endpoint>) {
-      cdkBuilder.endPoints(endPoints.map(Endpoint::unwrap))
+      cdkBuilder.endPoints(endPoints.map(Endpoint.Companion::unwrap))
     }
 
     /**

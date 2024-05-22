@@ -167,8 +167,8 @@ public open class CfnCluster(
     id: String,
     props: CfnClusterProps,
   ) :
-      this(software.amazon.awscdk.services.msk.CfnCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnClusterProps::unwrap))
+      this(software.amazon.awscdk.services.msk.CfnCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -192,14 +192,14 @@ public open class CfnCluster(
    * Information about the broker nodes in the cluster.
    */
   public open fun brokerNodeGroupInfo(`value`: IResolvable) {
-    unwrap(this).setBrokerNodeGroupInfo(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBrokerNodeGroupInfo(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information about the broker nodes in the cluster.
    */
   public open fun brokerNodeGroupInfo(`value`: BrokerNodeGroupInfoProperty) {
-    unwrap(this).setBrokerNodeGroupInfo(`value`.let(BrokerNodeGroupInfoProperty::unwrap))
+    unwrap(this).setBrokerNodeGroupInfo(`value`.let(BrokerNodeGroupInfoProperty.Companion::unwrap))
   }
 
   /**
@@ -219,14 +219,14 @@ public open class CfnCluster(
    * VPC connection control settings for brokers.
    */
   public open fun clientAuthentication(`value`: IResolvable) {
-    unwrap(this).setClientAuthentication(`value`.let(IResolvable::unwrap))
+    unwrap(this).setClientAuthentication(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * VPC connection control settings for brokers.
    */
   public open fun clientAuthentication(`value`: ClientAuthenticationProperty) {
-    unwrap(this).setClientAuthentication(`value`.let(ClientAuthenticationProperty::unwrap))
+    unwrap(this).setClientAuthentication(`value`.let(ClientAuthenticationProperty.Companion::unwrap))
   }
 
   /**
@@ -258,14 +258,14 @@ public open class CfnCluster(
    * Represents the configuration that you want MSK to use for the cluster.
    */
   public open fun configurationInfo(`value`: IResolvable) {
-    unwrap(this).setConfigurationInfo(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfigurationInfo(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Represents the configuration that you want MSK to use for the cluster.
    */
   public open fun configurationInfo(`value`: ConfigurationInfoProperty) {
-    unwrap(this).setConfigurationInfo(`value`.let(ConfigurationInfoProperty::unwrap))
+    unwrap(this).setConfigurationInfo(`value`.let(ConfigurationInfoProperty.Companion::unwrap))
   }
 
   /**
@@ -297,14 +297,14 @@ public open class CfnCluster(
    * Includes all encryption-related information.
    */
   public open fun encryptionInfo(`value`: IResolvable) {
-    unwrap(this).setEncryptionInfo(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEncryptionInfo(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Includes all encryption-related information.
    */
   public open fun encryptionInfo(`value`: EncryptionInfoProperty) {
-    unwrap(this).setEncryptionInfo(`value`.let(EncryptionInfoProperty::unwrap))
+    unwrap(this).setEncryptionInfo(`value`.let(EncryptionInfoProperty.Companion::unwrap))
   }
 
   /**
@@ -333,7 +333,7 @@ public open class CfnCluster(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -357,14 +357,14 @@ public open class CfnCluster(
    * Logging Info details.
    */
   public open fun loggingInfo(`value`: IResolvable) {
-    unwrap(this).setLoggingInfo(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoggingInfo(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Logging Info details.
    */
   public open fun loggingInfo(`value`: LoggingInfoProperty) {
-    unwrap(this).setLoggingInfo(`value`.let(LoggingInfoProperty::unwrap))
+    unwrap(this).setLoggingInfo(`value`.let(LoggingInfoProperty.Companion::unwrap))
   }
 
   /**
@@ -396,14 +396,14 @@ public open class CfnCluster(
    * The settings for open monitoring.
    */
   public open fun openMonitoring(`value`: IResolvable) {
-    unwrap(this).setOpenMonitoring(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOpenMonitoring(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The settings for open monitoring.
    */
   public open fun openMonitoring(`value`: OpenMonitoringProperty) {
-    unwrap(this).setOpenMonitoring(`value`.let(OpenMonitoringProperty::unwrap))
+    unwrap(this).setOpenMonitoring(`value`.let(OpenMonitoringProperty.Companion::unwrap))
   }
 
   /**
@@ -684,7 +684,7 @@ public open class CfnCluster(
      * @param brokerNodeGroupInfo Information about the broker nodes in the cluster. 
      */
     override fun brokerNodeGroupInfo(brokerNodeGroupInfo: IResolvable) {
-      cdkBuilder.brokerNodeGroupInfo(brokerNodeGroupInfo.let(IResolvable::unwrap))
+      cdkBuilder.brokerNodeGroupInfo(brokerNodeGroupInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -694,7 +694,7 @@ public open class CfnCluster(
      * @param brokerNodeGroupInfo Information about the broker nodes in the cluster. 
      */
     override fun brokerNodeGroupInfo(brokerNodeGroupInfo: BrokerNodeGroupInfoProperty) {
-      cdkBuilder.brokerNodeGroupInfo(brokerNodeGroupInfo.let(BrokerNodeGroupInfoProperty::unwrap))
+      cdkBuilder.brokerNodeGroupInfo(brokerNodeGroupInfo.let(BrokerNodeGroupInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -716,7 +716,7 @@ public open class CfnCluster(
      * @param clientAuthentication VPC connection control settings for brokers. 
      */
     override fun clientAuthentication(clientAuthentication: IResolvable) {
-      cdkBuilder.clientAuthentication(clientAuthentication.let(IResolvable::unwrap))
+      cdkBuilder.clientAuthentication(clientAuthentication.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -726,7 +726,7 @@ public open class CfnCluster(
      * @param clientAuthentication VPC connection control settings for brokers. 
      */
     override fun clientAuthentication(clientAuthentication: ClientAuthenticationProperty) {
-      cdkBuilder.clientAuthentication(clientAuthentication.let(ClientAuthenticationProperty::unwrap))
+      cdkBuilder.clientAuthentication(clientAuthentication.let(ClientAuthenticationProperty.Companion::unwrap))
     }
 
     /**
@@ -759,7 +759,7 @@ public open class CfnCluster(
      * cluster. 
      */
     override fun configurationInfo(configurationInfo: IResolvable) {
-      cdkBuilder.configurationInfo(configurationInfo.let(IResolvable::unwrap))
+      cdkBuilder.configurationInfo(configurationInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -770,7 +770,7 @@ public open class CfnCluster(
      * cluster. 
      */
     override fun configurationInfo(configurationInfo: ConfigurationInfoProperty) {
-      cdkBuilder.configurationInfo(configurationInfo.let(ConfigurationInfoProperty::unwrap))
+      cdkBuilder.configurationInfo(configurationInfo.let(ConfigurationInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -802,7 +802,7 @@ public open class CfnCluster(
      * @param encryptionInfo Includes all encryption-related information. 
      */
     override fun encryptionInfo(encryptionInfo: IResolvable) {
-      cdkBuilder.encryptionInfo(encryptionInfo.let(IResolvable::unwrap))
+      cdkBuilder.encryptionInfo(encryptionInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -812,7 +812,7 @@ public open class CfnCluster(
      * @param encryptionInfo Includes all encryption-related information. 
      */
     override fun encryptionInfo(encryptionInfo: EncryptionInfoProperty) {
-      cdkBuilder.encryptionInfo(encryptionInfo.let(EncryptionInfoProperty::unwrap))
+      cdkBuilder.encryptionInfo(encryptionInfo.let(EncryptionInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -857,7 +857,7 @@ public open class CfnCluster(
      * @param loggingInfo Logging Info details. 
      */
     override fun loggingInfo(loggingInfo: IResolvable) {
-      cdkBuilder.loggingInfo(loggingInfo.let(IResolvable::unwrap))
+      cdkBuilder.loggingInfo(loggingInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -867,7 +867,7 @@ public open class CfnCluster(
      * @param loggingInfo Logging Info details. 
      */
     override fun loggingInfo(loggingInfo: LoggingInfoProperty) {
-      cdkBuilder.loggingInfo(loggingInfo.let(LoggingInfoProperty::unwrap))
+      cdkBuilder.loggingInfo(loggingInfo.let(LoggingInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -898,7 +898,7 @@ public open class CfnCluster(
      * @param openMonitoring The settings for open monitoring. 
      */
     override fun openMonitoring(openMonitoring: IResolvable) {
-      cdkBuilder.openMonitoring(openMonitoring.let(IResolvable::unwrap))
+      cdkBuilder.openMonitoring(openMonitoring.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -908,7 +908,7 @@ public open class CfnCluster(
      * @param openMonitoring The settings for open monitoring. 
      */
     override fun openMonitoring(openMonitoring: OpenMonitoringProperty) {
-      cdkBuilder.openMonitoring(openMonitoring.let(OpenMonitoringProperty::unwrap))
+      cdkBuilder.openMonitoring(openMonitoring.let(OpenMonitoringProperty.Companion::unwrap))
     }
 
     /**
@@ -1087,14 +1087,14 @@ public open class CfnCluster(
        * @param cloudWatchLogs Details of the CloudWatch Logs destination for broker logs.
        */
       override fun cloudWatchLogs(cloudWatchLogs: IResolvable) {
-        cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param cloudWatchLogs Details of the CloudWatch Logs destination for broker logs.
        */
       override fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsProperty) {
-        cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(CloudWatchLogsProperty::unwrap))
+        cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(CloudWatchLogsProperty.Companion::unwrap))
       }
 
       /**
@@ -1110,7 +1110,7 @@ public open class CfnCluster(
        * destination for broker logs.
        */
       override fun firehose(firehose: IResolvable) {
-        cdkBuilder.firehose(firehose.let(IResolvable::unwrap))
+        cdkBuilder.firehose(firehose.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1118,7 +1118,7 @@ public open class CfnCluster(
        * destination for broker logs.
        */
       override fun firehose(firehose: FirehoseProperty) {
-        cdkBuilder.firehose(firehose.let(FirehoseProperty::unwrap))
+        cdkBuilder.firehose(firehose.let(FirehoseProperty.Companion::unwrap))
       }
 
       /**
@@ -1134,14 +1134,14 @@ public open class CfnCluster(
        * @param s3 Details of the Amazon S3 destination for broker logs.
        */
       override fun s3(s3: IResolvable) {
-        cdkBuilder.s3(s3.let(IResolvable::unwrap))
+        cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3 Details of the Amazon S3 destination for broker logs.
        */
       override fun s3(s3: S3Property) {
-        cdkBuilder.s3(s3.let(S3Property::unwrap))
+        cdkBuilder.s3(s3.let(S3Property.Companion::unwrap))
       }
 
       /**
@@ -1464,14 +1464,14 @@ public open class CfnCluster(
        * @param connectivityInfo Information about the cluster's connectivity setting.
        */
       override fun connectivityInfo(connectivityInfo: IResolvable) {
-        cdkBuilder.connectivityInfo(connectivityInfo.let(IResolvable::unwrap))
+        cdkBuilder.connectivityInfo(connectivityInfo.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param connectivityInfo Information about the cluster's connectivity setting.
        */
       override fun connectivityInfo(connectivityInfo: ConnectivityInfoProperty) {
-        cdkBuilder.connectivityInfo(connectivityInfo.let(ConnectivityInfoProperty::unwrap))
+        cdkBuilder.connectivityInfo(connectivityInfo.let(ConnectivityInfoProperty.Companion::unwrap))
       }
 
       /**
@@ -1520,7 +1520,7 @@ public open class CfnCluster(
        * nodes.
        */
       override fun storageInfo(storageInfo: IResolvable) {
-        cdkBuilder.storageInfo(storageInfo.let(IResolvable::unwrap))
+        cdkBuilder.storageInfo(storageInfo.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1528,7 +1528,7 @@ public open class CfnCluster(
        * nodes.
        */
       override fun storageInfo(storageInfo: StorageInfoProperty) {
-        cdkBuilder.storageInfo(storageInfo.let(StorageInfoProperty::unwrap))
+        cdkBuilder.storageInfo(storageInfo.let(StorageInfoProperty.Companion::unwrap))
       }
 
       /**
@@ -1772,7 +1772,7 @@ public open class CfnCluster(
        * `TLS_PLAINTEXT` , then you must also set `unauthenticated` to true.
        */
       override fun sasl(sasl: IResolvable) {
-        cdkBuilder.sasl(sasl.let(IResolvable::unwrap))
+        cdkBuilder.sasl(sasl.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1782,7 +1782,7 @@ public open class CfnCluster(
        * `TLS_PLAINTEXT` , then you must also set `unauthenticated` to true.
        */
       override fun sasl(sasl: SaslProperty) {
-        cdkBuilder.sasl(sasl.let(SaslProperty::unwrap))
+        cdkBuilder.sasl(sasl.let(SaslProperty.Companion::unwrap))
       }
 
       /**
@@ -1801,7 +1801,7 @@ public open class CfnCluster(
        * `inCluster` to true and `clientBroker` to `TLS` .
        */
       override fun tls(tls: IResolvable) {
-        cdkBuilder.tls(tls.let(IResolvable::unwrap))
+        cdkBuilder.tls(tls.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1810,7 +1810,7 @@ public open class CfnCluster(
        * `inCluster` to true and `clientBroker` to `TLS` .
        */
       override fun tls(tls: TlsProperty) {
-        cdkBuilder.tls(tls.let(TlsProperty::unwrap))
+        cdkBuilder.tls(tls.let(TlsProperty.Companion::unwrap))
       }
 
       /**
@@ -1826,14 +1826,14 @@ public open class CfnCluster(
        * @param unauthenticated Details for ClientAuthentication using no authentication.
        */
       override fun unauthenticated(unauthenticated: IResolvable) {
-        cdkBuilder.unauthenticated(unauthenticated.let(IResolvable::unwrap))
+        cdkBuilder.unauthenticated(unauthenticated.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param unauthenticated Details for ClientAuthentication using no authentication.
        */
       override fun unauthenticated(unauthenticated: UnauthenticatedProperty) {
-        cdkBuilder.unauthenticated(unauthenticated.let(UnauthenticatedProperty::unwrap))
+        cdkBuilder.unauthenticated(unauthenticated.let(UnauthenticatedProperty.Companion::unwrap))
       }
 
       /**
@@ -1973,7 +1973,7 @@ public open class CfnCluster(
        * destination. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2227,14 +2227,14 @@ public open class CfnCluster(
        * @param publicAccess Access control settings for the cluster's brokers.
        */
       override fun publicAccess(publicAccess: IResolvable) {
-        cdkBuilder.publicAccess(publicAccess.let(IResolvable::unwrap))
+        cdkBuilder.publicAccess(publicAccess.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param publicAccess Access control settings for the cluster's brokers.
        */
       override fun publicAccess(publicAccess: PublicAccessProperty) {
-        cdkBuilder.publicAccess(publicAccess.let(PublicAccessProperty::unwrap))
+        cdkBuilder.publicAccess(publicAccess.let(PublicAccessProperty.Companion::unwrap))
       }
 
       /**
@@ -2249,14 +2249,14 @@ public open class CfnCluster(
        * @param vpcConnectivity VPC connection control settings for brokers.
        */
       override fun vpcConnectivity(vpcConnectivity: IResolvable) {
-        cdkBuilder.vpcConnectivity(vpcConnectivity.let(IResolvable::unwrap))
+        cdkBuilder.vpcConnectivity(vpcConnectivity.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param vpcConnectivity VPC connection control settings for brokers.
        */
       override fun vpcConnectivity(vpcConnectivity: VpcConnectivityProperty) {
-        cdkBuilder.vpcConnectivity(vpcConnectivity.let(VpcConnectivityProperty::unwrap))
+        cdkBuilder.vpcConnectivity(vpcConnectivity.let(VpcConnectivityProperty.Companion::unwrap))
       }
 
       /**
@@ -2380,14 +2380,14 @@ public open class CfnCluster(
        * @param provisionedThroughput EBS volume provisioned throughput information.
        */
       override fun provisionedThroughput(provisionedThroughput: IResolvable) {
-        cdkBuilder.provisionedThroughput(provisionedThroughput.let(IResolvable::unwrap))
+        cdkBuilder.provisionedThroughput(provisionedThroughput.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param provisionedThroughput EBS volume provisioned throughput information.
        */
       override fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty) {
-        cdkBuilder.provisionedThroughput(provisionedThroughput.let(ProvisionedThroughputProperty::unwrap))
+        cdkBuilder.provisionedThroughput(provisionedThroughput.let(ProvisionedThroughputProperty.Companion::unwrap))
       }
 
       /**
@@ -2666,7 +2666,7 @@ public open class CfnCluster(
        * The default value is true.
        */
       override fun inCluster(inCluster: IResolvable) {
-        cdkBuilder.inCluster(inCluster.let(IResolvable::unwrap))
+        cdkBuilder.inCluster(inCluster.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.msk.CfnCluster.EncryptionInTransitProperty
@@ -2813,14 +2813,14 @@ public open class CfnCluster(
        * @param encryptionAtRest The data-volume encryption details.
        */
       override fun encryptionAtRest(encryptionAtRest: IResolvable) {
-        cdkBuilder.encryptionAtRest(encryptionAtRest.let(IResolvable::unwrap))
+        cdkBuilder.encryptionAtRest(encryptionAtRest.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param encryptionAtRest The data-volume encryption details.
        */
       override fun encryptionAtRest(encryptionAtRest: EncryptionAtRestProperty) {
-        cdkBuilder.encryptionAtRest(encryptionAtRest.let(EncryptionAtRestProperty::unwrap))
+        cdkBuilder.encryptionAtRest(encryptionAtRest.let(EncryptionAtRestProperty.Companion::unwrap))
       }
 
       /**
@@ -2835,14 +2835,14 @@ public open class CfnCluster(
        * @param encryptionInTransit The details for encryption in transit.
        */
       override fun encryptionInTransit(encryptionInTransit: IResolvable) {
-        cdkBuilder.encryptionInTransit(encryptionInTransit.let(IResolvable::unwrap))
+        cdkBuilder.encryptionInTransit(encryptionInTransit.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param encryptionInTransit The details for encryption in transit.
        */
       override fun encryptionInTransit(encryptionInTransit: EncryptionInTransitProperty) {
-        cdkBuilder.encryptionInTransit(encryptionInTransit.let(EncryptionInTransitProperty::unwrap))
+        cdkBuilder.encryptionInTransit(encryptionInTransit.let(EncryptionInTransitProperty.Companion::unwrap))
       }
 
       /**
@@ -2978,7 +2978,7 @@ public open class CfnCluster(
        * Firehose delivery stream. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.msk.CfnCluster.FirehoseProperty =
@@ -3075,7 +3075,7 @@ public open class CfnCluster(
        * @param enabled SASL/IAM authentication is enabled or not. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.msk.CfnCluster.IamProperty =
@@ -3164,7 +3164,7 @@ public open class CfnCluster(
        * @param enabledInBroker Indicates whether you want to enable or disable the JMX Exporter. 
        */
       override fun enabledInBroker(enabledInBroker: IResolvable) {
-        cdkBuilder.enabledInBroker(enabledInBroker.let(IResolvable::unwrap))
+        cdkBuilder.enabledInBroker(enabledInBroker.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.msk.CfnCluster.JmxExporterProperty =
@@ -3284,7 +3284,7 @@ public open class CfnCluster(
        * This configuration specifies the details of these destinations.
        */
       override fun brokerLogs(brokerLogs: IResolvable) {
-        cdkBuilder.brokerLogs(brokerLogs.let(IResolvable::unwrap))
+        cdkBuilder.brokerLogs(brokerLogs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3293,7 +3293,7 @@ public open class CfnCluster(
        * This configuration specifies the details of these destinations.
        */
       override fun brokerLogs(brokerLogs: BrokerLogsProperty) {
-        cdkBuilder.brokerLogs(brokerLogs.let(BrokerLogsProperty::unwrap))
+        cdkBuilder.brokerLogs(brokerLogs.let(BrokerLogsProperty.Companion::unwrap))
       }
 
       /**
@@ -3396,7 +3396,7 @@ public open class CfnCluster(
        * @param enabledInBroker Indicates whether you want to enable or disable the Node Exporter. 
        */
       override fun enabledInBroker(enabledInBroker: IResolvable) {
-        cdkBuilder.enabledInBroker(enabledInBroker.let(IResolvable::unwrap))
+        cdkBuilder.enabledInBroker(enabledInBroker.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.msk.CfnCluster.NodeExporterProperty =
@@ -3495,14 +3495,14 @@ public open class CfnCluster(
        * @param prometheus Prometheus exporter settings. 
        */
       override fun prometheus(prometheus: IResolvable) {
-        cdkBuilder.prometheus(prometheus.let(IResolvable::unwrap))
+        cdkBuilder.prometheus(prometheus.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param prometheus Prometheus exporter settings. 
        */
       override fun prometheus(prometheus: PrometheusProperty) {
-        cdkBuilder.prometheus(prometheus.let(PrometheusProperty::unwrap))
+        cdkBuilder.prometheus(prometheus.let(PrometheusProperty.Companion::unwrap))
       }
 
       /**
@@ -3631,14 +3631,14 @@ public open class CfnCluster(
        * @param jmxExporter Indicates whether you want to enable or disable the JMX Exporter.
        */
       override fun jmxExporter(jmxExporter: IResolvable) {
-        cdkBuilder.jmxExporter(jmxExporter.let(IResolvable::unwrap))
+        cdkBuilder.jmxExporter(jmxExporter.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param jmxExporter Indicates whether you want to enable or disable the JMX Exporter.
        */
       override fun jmxExporter(jmxExporter: JmxExporterProperty) {
-        cdkBuilder.jmxExporter(jmxExporter.let(JmxExporterProperty::unwrap))
+        cdkBuilder.jmxExporter(jmxExporter.let(JmxExporterProperty.Companion::unwrap))
       }
 
       /**
@@ -3653,14 +3653,14 @@ public open class CfnCluster(
        * @param nodeExporter Indicates whether you want to enable or disable the Node Exporter.
        */
       override fun nodeExporter(nodeExporter: IResolvable) {
-        cdkBuilder.nodeExporter(nodeExporter.let(IResolvable::unwrap))
+        cdkBuilder.nodeExporter(nodeExporter.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param nodeExporter Indicates whether you want to enable or disable the Node Exporter.
        */
       override fun nodeExporter(nodeExporter: NodeExporterProperty) {
-        cdkBuilder.nodeExporter(nodeExporter.let(NodeExporterProperty::unwrap))
+        cdkBuilder.nodeExporter(nodeExporter.let(NodeExporterProperty.Companion::unwrap))
       }
 
       /**
@@ -3783,7 +3783,7 @@ public open class CfnCluster(
        * @param enabled Provisioned throughput is enabled or not.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4015,7 +4015,7 @@ public open class CfnCluster(
        * destination. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4157,14 +4157,14 @@ public open class CfnCluster(
        * @param iam Details for ClientAuthentication using IAM.
        */
       override fun iam(iam: IResolvable) {
-        cdkBuilder.iam(iam.let(IResolvable::unwrap))
+        cdkBuilder.iam(iam.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param iam Details for ClientAuthentication using IAM.
        */
       override fun iam(iam: IamProperty) {
-        cdkBuilder.iam(iam.let(IamProperty::unwrap))
+        cdkBuilder.iam(iam.let(IamProperty.Companion::unwrap))
       }
 
       /**
@@ -4178,14 +4178,14 @@ public open class CfnCluster(
        * @param scram Details for SASL/SCRAM client authentication.
        */
       override fun scram(scram: IResolvable) {
-        cdkBuilder.scram(scram.let(IResolvable::unwrap))
+        cdkBuilder.scram(scram.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param scram Details for SASL/SCRAM client authentication.
        */
       override fun scram(scram: ScramProperty) {
-        cdkBuilder.scram(scram.let(ScramProperty::unwrap))
+        cdkBuilder.scram(scram.let(ScramProperty.Companion::unwrap))
       }
 
       /**
@@ -4288,7 +4288,7 @@ public open class CfnCluster(
        * @param enabled SASL/SCRAM authentication is enabled or not. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.msk.CfnCluster.ScramProperty =
@@ -4383,14 +4383,14 @@ public open class CfnCluster(
        * @param ebsStorageInfo EBS volume information.
        */
       override fun ebsStorageInfo(ebsStorageInfo: IResolvable) {
-        cdkBuilder.ebsStorageInfo(ebsStorageInfo.let(IResolvable::unwrap))
+        cdkBuilder.ebsStorageInfo(ebsStorageInfo.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param ebsStorageInfo EBS volume information.
        */
       override fun ebsStorageInfo(ebsStorageInfo: EBSStorageInfoProperty) {
-        cdkBuilder.ebsStorageInfo(ebsStorageInfo.let(EBSStorageInfoProperty::unwrap))
+        cdkBuilder.ebsStorageInfo(ebsStorageInfo.let(EBSStorageInfoProperty.Companion::unwrap))
       }
 
       /**
@@ -4520,7 +4520,7 @@ public open class CfnCluster(
        * @param enabled TLS authentication is enabled or not.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.msk.CfnCluster.TlsProperty =
@@ -4617,7 +4617,7 @@ public open class CfnCluster(
        * @param enabled Unauthenticated is enabled or not. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.msk.CfnCluster.UnauthenticatedProperty =
@@ -4745,14 +4745,14 @@ public open class CfnCluster(
        * @param sasl Details for VpcConnectivity ClientAuthentication using SASL.
        */
       override fun sasl(sasl: IResolvable) {
-        cdkBuilder.sasl(sasl.let(IResolvable::unwrap))
+        cdkBuilder.sasl(sasl.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sasl Details for VpcConnectivity ClientAuthentication using SASL.
        */
       override fun sasl(sasl: VpcConnectivitySaslProperty) {
-        cdkBuilder.sasl(sasl.let(VpcConnectivitySaslProperty::unwrap))
+        cdkBuilder.sasl(sasl.let(VpcConnectivitySaslProperty.Companion::unwrap))
       }
 
       /**
@@ -4767,14 +4767,14 @@ public open class CfnCluster(
        * @param tls Details for VpcConnectivity ClientAuthentication using TLS.
        */
       override fun tls(tls: IResolvable) {
-        cdkBuilder.tls(tls.let(IResolvable::unwrap))
+        cdkBuilder.tls(tls.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param tls Details for VpcConnectivity ClientAuthentication using TLS.
        */
       override fun tls(tls: VpcConnectivityTlsProperty) {
-        cdkBuilder.tls(tls.let(VpcConnectivityTlsProperty::unwrap))
+        cdkBuilder.tls(tls.let(VpcConnectivityTlsProperty.Companion::unwrap))
       }
 
       /**
@@ -4883,7 +4883,7 @@ public open class CfnCluster(
        * @param enabled SASL/IAM authentication is enabled or not. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityIamProperty
@@ -4989,7 +4989,7 @@ public open class CfnCluster(
        * @param clientAuthentication VPC connection control settings for brokers.
        */
       override fun clientAuthentication(clientAuthentication: IResolvable) {
-        cdkBuilder.clientAuthentication(clientAuthentication.let(IResolvable::unwrap))
+        cdkBuilder.clientAuthentication(clientAuthentication.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4997,7 +4997,7 @@ public open class CfnCluster(
        */
       override
           fun clientAuthentication(clientAuthentication: VpcConnectivityClientAuthenticationProperty) {
-        cdkBuilder.clientAuthentication(clientAuthentication.let(VpcConnectivityClientAuthenticationProperty::unwrap))
+        cdkBuilder.clientAuthentication(clientAuthentication.let(VpcConnectivityClientAuthenticationProperty.Companion::unwrap))
       }
 
       /**
@@ -5128,14 +5128,14 @@ public open class CfnCluster(
        * @param iam Details for ClientAuthentication using IAM for VpcConnectivity.
        */
       override fun iam(iam: IResolvable) {
-        cdkBuilder.iam(iam.let(IResolvable::unwrap))
+        cdkBuilder.iam(iam.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param iam Details for ClientAuthentication using IAM for VpcConnectivity.
        */
       override fun iam(iam: VpcConnectivityIamProperty) {
-        cdkBuilder.iam(iam.let(VpcConnectivityIamProperty::unwrap))
+        cdkBuilder.iam(iam.let(VpcConnectivityIamProperty.Companion::unwrap))
       }
 
       /**
@@ -5150,14 +5150,14 @@ public open class CfnCluster(
        * @param scram Details for SASL/SCRAM client authentication for VpcConnectivity.
        */
       override fun scram(scram: IResolvable) {
-        cdkBuilder.scram(scram.let(IResolvable::unwrap))
+        cdkBuilder.scram(scram.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param scram Details for SASL/SCRAM client authentication for VpcConnectivity.
        */
       override fun scram(scram: VpcConnectivityScramProperty) {
-        cdkBuilder.scram(scram.let(VpcConnectivityScramProperty::unwrap))
+        cdkBuilder.scram(scram.let(VpcConnectivityScramProperty.Companion::unwrap))
       }
 
       /**
@@ -5265,7 +5265,7 @@ public open class CfnCluster(
        * @param enabled SASL/SCRAM authentication is enabled or not. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -5358,7 +5358,7 @@ public open class CfnCluster(
        * @param enabled TLS authentication is enabled or not. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.msk.CfnCluster.VpcConnectivityTlsProperty

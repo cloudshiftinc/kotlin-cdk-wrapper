@@ -261,7 +261,7 @@ public interface AuthenticateOidcOptions {
      * @param clientSecret The OAuth 2.0 client secret. 
      */
     override fun clientSecret(clientSecret: SecretValue) {
-      cdkBuilder.clientSecret(clientSecret.let(SecretValue::unwrap))
+      cdkBuilder.clientSecret(clientSecret.let(SecretValue.Companion::unwrap))
     }
 
     /**
@@ -276,14 +276,14 @@ public interface AuthenticateOidcOptions {
      * @param next What action to execute next. 
      */
     override fun next(next: ListenerAction) {
-      cdkBuilder.next(next.let(ListenerAction::unwrap))
+      cdkBuilder.next(next.let(ListenerAction.Companion::unwrap))
     }
 
     /**
      * @param onUnauthenticatedRequest The behavior if the user is not authenticated.
      */
     override fun onUnauthenticatedRequest(onUnauthenticatedRequest: UnauthenticatedAction) {
-      cdkBuilder.onUnauthenticatedRequest(onUnauthenticatedRequest.let(UnauthenticatedAction::unwrap))
+      cdkBuilder.onUnauthenticatedRequest(onUnauthenticatedRequest.let(UnauthenticatedAction.Companion::unwrap))
     }
 
     /**
@@ -306,7 +306,7 @@ public interface AuthenticateOidcOptions {
      * @param sessionTimeout The maximum duration of the authentication session.
      */
     override fun sessionTimeout(sessionTimeout: Duration) {
-      cdkBuilder.sessionTimeout(sessionTimeout.let(Duration::unwrap))
+      cdkBuilder.sessionTimeout(sessionTimeout.let(Duration.Companion::unwrap))
     }
 
     /**

@@ -30,7 +30,7 @@ public open class InstanceProfile(
   cdkObject: software.amazon.awscdk.services.iam.InstanceProfile,
 ) : Resource(cdkObject), IInstanceProfile {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.iam.InstanceProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.iam.InstanceProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -39,8 +39,8 @@ public open class InstanceProfile(
     id: String,
     props: InstanceProfileProps,
   ) :
-      this(software.amazon.awscdk.services.iam.InstanceProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(InstanceProfileProps::unwrap))
+      this(software.amazon.awscdk.services.iam.InstanceProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(InstanceProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -157,7 +157,7 @@ public open class InstanceProfile(
      * 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.iam.InstanceProfile = cdkBuilder.build()
@@ -169,7 +169,7 @@ public open class InstanceProfile(
       id: String,
       instanceProfileArn: String,
     ): IInstanceProfile =
-        software.amazon.awscdk.services.iam.InstanceProfile.fromInstanceProfileArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.iam.InstanceProfile.fromInstanceProfileArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, instanceProfileArn).let(IInstanceProfile::wrap)
 
     public fun fromInstanceProfileAttributes(
@@ -177,8 +177,8 @@ public open class InstanceProfile(
       id: String,
       attrs: InstanceProfileAttributes,
     ): IInstanceProfile =
-        software.amazon.awscdk.services.iam.InstanceProfile.fromInstanceProfileAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(InstanceProfileAttributes::unwrap)).let(IInstanceProfile::wrap)
+        software.amazon.awscdk.services.iam.InstanceProfile.fromInstanceProfileAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(InstanceProfileAttributes.Companion::unwrap)).let(IInstanceProfile::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("461d32d27355084613f43815133d12090dc7e621f74293219d07f03997428f89")
@@ -193,7 +193,7 @@ public open class InstanceProfile(
       id: String,
       instanceProfileName: String,
     ): IInstanceProfile =
-        software.amazon.awscdk.services.iam.InstanceProfile.fromInstanceProfileName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.iam.InstanceProfile.fromInstanceProfileName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, instanceProfileName).let(IInstanceProfile::wrap)
 
     public operator fun invoke(

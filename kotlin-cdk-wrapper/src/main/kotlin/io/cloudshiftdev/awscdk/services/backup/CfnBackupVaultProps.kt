@@ -228,7 +228,7 @@ public interface CfnBackupVaultProps {
      * Lock](https://docs.aws.amazon.com/aws-backup/latest/devguide/vault-lock.html) .
      */
     override fun lockConfiguration(lockConfiguration: IResolvable) {
-      cdkBuilder.lockConfiguration(lockConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.lockConfiguration(lockConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -237,7 +237,7 @@ public interface CfnBackupVaultProps {
      */
     override
         fun lockConfiguration(lockConfiguration: CfnBackupVault.LockConfigurationTypeProperty) {
-      cdkBuilder.lockConfiguration(lockConfiguration.let(CfnBackupVault.LockConfigurationTypeProperty::unwrap))
+      cdkBuilder.lockConfiguration(lockConfiguration.let(CfnBackupVault.LockConfigurationTypeProperty.Companion::unwrap))
     }
 
     /**
@@ -254,14 +254,14 @@ public interface CfnBackupVaultProps {
      * @param notifications The SNS event notifications for the specified backup vault.
      */
     override fun notifications(notifications: IResolvable) {
-      cdkBuilder.notifications(notifications.let(IResolvable::unwrap))
+      cdkBuilder.notifications(notifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param notifications The SNS event notifications for the specified backup vault.
      */
     override fun notifications(notifications: CfnBackupVault.NotificationObjectTypeProperty) {
-      cdkBuilder.notifications(notifications.let(CfnBackupVault.NotificationObjectTypeProperty::unwrap))
+      cdkBuilder.notifications(notifications.let(CfnBackupVault.NotificationObjectTypeProperty.Companion::unwrap))
     }
 
     /**

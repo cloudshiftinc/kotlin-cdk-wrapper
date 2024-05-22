@@ -91,14 +91,14 @@ public interface TlsValidation {
      * SANs must be in the FQDN or URI format.
      */
     override fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNames) {
-      cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(SubjectAlternativeNames::unwrap))
+      cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(SubjectAlternativeNames.Companion::unwrap))
     }
 
     /**
      * @param trust Reference to where to retrieve the trust chain. 
      */
     override fun trust(trust: TlsValidationTrust) {
-      cdkBuilder.trust(trust.let(TlsValidationTrust::unwrap))
+      cdkBuilder.trust(trust.let(TlsValidationTrust.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appmesh.TlsValidation = cdkBuilder.build()

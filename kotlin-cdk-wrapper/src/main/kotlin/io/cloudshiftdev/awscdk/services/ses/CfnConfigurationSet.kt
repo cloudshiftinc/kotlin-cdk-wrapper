@@ -84,7 +84,7 @@ public open class CfnConfigurationSet(
   cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ses.CfnConfigurationSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ses.CfnConfigurationSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -93,8 +93,8 @@ public open class CfnConfigurationSet(
     id: String,
     props: CfnConfigurationSetProps,
   ) :
-      this(software.amazon.awscdk.services.ses.CfnConfigurationSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConfigurationSetProps::unwrap))
+      this(software.amazon.awscdk.services.ses.CfnConfigurationSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConfigurationSetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -115,7 +115,7 @@ public open class CfnConfigurationSet(
    * Security (TLS).
    */
   public open fun deliveryOptions(`value`: IResolvable) {
-    unwrap(this).setDeliveryOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeliveryOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -123,7 +123,7 @@ public open class CfnConfigurationSet(
    * Security (TLS).
    */
   public open fun deliveryOptions(`value`: DeliveryOptionsProperty) {
-    unwrap(this).setDeliveryOptions(`value`.let(DeliveryOptionsProperty::unwrap))
+    unwrap(this).setDeliveryOptions(`value`.let(DeliveryOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -141,7 +141,7 @@ public open class CfnConfigurationSet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -169,14 +169,14 @@ public open class CfnConfigurationSet(
    * An object that represents the reputation settings for the configuration set.
    */
   public open fun reputationOptions(`value`: IResolvable) {
-    unwrap(this).setReputationOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setReputationOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An object that represents the reputation settings for the configuration set.
    */
   public open fun reputationOptions(`value`: ReputationOptionsProperty) {
-    unwrap(this).setReputationOptions(`value`.let(ReputationOptionsProperty::unwrap))
+    unwrap(this).setReputationOptions(`value`.let(ReputationOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -198,7 +198,7 @@ public open class CfnConfigurationSet(
    * configuration set.
    */
   public open fun sendingOptions(`value`: IResolvable) {
-    unwrap(this).setSendingOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSendingOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -206,7 +206,7 @@ public open class CfnConfigurationSet(
    * configuration set.
    */
   public open fun sendingOptions(`value`: SendingOptionsProperty) {
-    unwrap(this).setSendingOptions(`value`.let(SendingOptionsProperty::unwrap))
+    unwrap(this).setSendingOptions(`value`.let(SendingOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -227,14 +227,14 @@ public open class CfnConfigurationSet(
    * An object that contains information about the suppression list preferences for your account.
    */
   public open fun suppressionOptions(`value`: IResolvable) {
-    unwrap(this).setSuppressionOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSuppressionOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An object that contains information about the suppression list preferences for your account.
    */
   public open fun suppressionOptions(`value`: SuppressionOptionsProperty) {
-    unwrap(this).setSuppressionOptions(`value`.let(SuppressionOptionsProperty::unwrap))
+    unwrap(this).setSuppressionOptions(`value`.let(SuppressionOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -254,14 +254,14 @@ public open class CfnConfigurationSet(
    * The name of the custom open and click tracking domain associated with the configuration set.
    */
   public open fun trackingOptions(`value`: IResolvable) {
-    unwrap(this).setTrackingOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTrackingOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The name of the custom open and click tracking domain associated with the configuration set.
    */
   public open fun trackingOptions(`value`: TrackingOptionsProperty) {
-    unwrap(this).setTrackingOptions(`value`.let(TrackingOptionsProperty::unwrap))
+    unwrap(this).setTrackingOptions(`value`.let(TrackingOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -281,14 +281,14 @@ public open class CfnConfigurationSet(
    * The Virtual Deliverability Manager (VDM) options that apply to the configuration set.
    */
   public open fun vdmOptions(`value`: IResolvable) {
-    unwrap(this).setVdmOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVdmOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The Virtual Deliverability Manager (VDM) options that apply to the configuration set.
    */
   public open fun vdmOptions(`value`: VdmOptionsProperty) {
-    unwrap(this).setVdmOptions(`value`.let(VdmOptionsProperty::unwrap))
+    unwrap(this).setVdmOptions(`value`.let(VdmOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -513,7 +513,7 @@ public open class CfnConfigurationSet(
      * to use Transport Layer Security (TLS). 
      */
     override fun deliveryOptions(deliveryOptions: IResolvable) {
-      cdkBuilder.deliveryOptions(deliveryOptions.let(IResolvable::unwrap))
+      cdkBuilder.deliveryOptions(deliveryOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -525,7 +525,7 @@ public open class CfnConfigurationSet(
      * to use Transport Layer Security (TLS). 
      */
     override fun deliveryOptions(deliveryOptions: DeliveryOptionsProperty) {
-      cdkBuilder.deliveryOptions(deliveryOptions.let(DeliveryOptionsProperty::unwrap))
+      cdkBuilder.deliveryOptions(deliveryOptions.let(DeliveryOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -563,7 +563,7 @@ public open class CfnConfigurationSet(
      * configuration set. 
      */
     override fun reputationOptions(reputationOptions: IResolvable) {
-      cdkBuilder.reputationOptions(reputationOptions.let(IResolvable::unwrap))
+      cdkBuilder.reputationOptions(reputationOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -574,7 +574,7 @@ public open class CfnConfigurationSet(
      * configuration set. 
      */
     override fun reputationOptions(reputationOptions: ReputationOptionsProperty) {
-      cdkBuilder.reputationOptions(reputationOptions.let(ReputationOptionsProperty::unwrap))
+      cdkBuilder.reputationOptions(reputationOptions.let(ReputationOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -598,7 +598,7 @@ public open class CfnConfigurationSet(
      * you send using the configuration set. 
      */
     override fun sendingOptions(sendingOptions: IResolvable) {
-      cdkBuilder.sendingOptions(sendingOptions.let(IResolvable::unwrap))
+      cdkBuilder.sendingOptions(sendingOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -610,7 +610,7 @@ public open class CfnConfigurationSet(
      * you send using the configuration set. 
      */
     override fun sendingOptions(sendingOptions: SendingOptionsProperty) {
-      cdkBuilder.sendingOptions(sendingOptions.let(SendingOptionsProperty::unwrap))
+      cdkBuilder.sendingOptions(sendingOptions.let(SendingOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -634,7 +634,7 @@ public open class CfnConfigurationSet(
      * preferences for your account. 
      */
     override fun suppressionOptions(suppressionOptions: IResolvable) {
-      cdkBuilder.suppressionOptions(suppressionOptions.let(IResolvable::unwrap))
+      cdkBuilder.suppressionOptions(suppressionOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -645,7 +645,7 @@ public open class CfnConfigurationSet(
      * preferences for your account. 
      */
     override fun suppressionOptions(suppressionOptions: SuppressionOptionsProperty) {
-      cdkBuilder.suppressionOptions(suppressionOptions.let(SuppressionOptionsProperty::unwrap))
+      cdkBuilder.suppressionOptions(suppressionOptions.let(SuppressionOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -669,7 +669,7 @@ public open class CfnConfigurationSet(
      * the configuration set. 
      */
     override fun trackingOptions(trackingOptions: IResolvable) {
-      cdkBuilder.trackingOptions(trackingOptions.let(IResolvable::unwrap))
+      cdkBuilder.trackingOptions(trackingOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -680,7 +680,7 @@ public open class CfnConfigurationSet(
      * the configuration set. 
      */
     override fun trackingOptions(trackingOptions: TrackingOptionsProperty) {
-      cdkBuilder.trackingOptions(trackingOptions.let(TrackingOptionsProperty::unwrap))
+      cdkBuilder.trackingOptions(trackingOptions.let(TrackingOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -703,7 +703,7 @@ public open class CfnConfigurationSet(
      * configuration set. 
      */
     override fun vdmOptions(vdmOptions: IResolvable) {
-      cdkBuilder.vdmOptions(vdmOptions.let(IResolvable::unwrap))
+      cdkBuilder.vdmOptions(vdmOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -714,7 +714,7 @@ public open class CfnConfigurationSet(
      * configuration set. 
      */
     override fun vdmOptions(vdmOptions: VdmOptionsProperty) {
-      cdkBuilder.vdmOptions(vdmOptions.let(VdmOptionsProperty::unwrap))
+      cdkBuilder.vdmOptions(vdmOptions.let(VdmOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -1150,7 +1150,7 @@ public open class CfnConfigurationSet(
        * reputation metrics are not published. The default value is `false` .
        */
       override fun reputationMetricsEnabled(reputationMetricsEnabled: IResolvable) {
-        cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled.let(IResolvable::unwrap))
+        cdkBuilder.reputationMetricsEnabled(reputationMetricsEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1254,7 +1254,7 @@ public open class CfnConfigurationSet(
        * If `false` , email sending is disabled for the configuration set.
        */
       override fun sendingEnabled(sendingEnabled: IResolvable) {
-        cdkBuilder.sendingEnabled(sendingEnabled.let(IResolvable::unwrap))
+        cdkBuilder.sendingEnabled(sendingEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1608,14 +1608,14 @@ public open class CfnConfigurationSet(
        * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
        */
       override fun dashboardOptions(dashboardOptions: IResolvable) {
-        cdkBuilder.dashboardOptions(dashboardOptions.let(IResolvable::unwrap))
+        cdkBuilder.dashboardOptions(dashboardOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dashboardOptions Settings for your VDM configuration as applicable to the Dashboard.
        */
       override fun dashboardOptions(dashboardOptions: DashboardOptionsProperty) {
-        cdkBuilder.dashboardOptions(dashboardOptions.let(DashboardOptionsProperty::unwrap))
+        cdkBuilder.dashboardOptions(dashboardOptions.let(DashboardOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -1630,14 +1630,14 @@ public open class CfnConfigurationSet(
        * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
        */
       override fun guardianOptions(guardianOptions: IResolvable) {
-        cdkBuilder.guardianOptions(guardianOptions.let(IResolvable::unwrap))
+        cdkBuilder.guardianOptions(guardianOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param guardianOptions Settings for your VDM configuration as applicable to the Guardian.
        */
       override fun guardianOptions(guardianOptions: GuardianOptionsProperty) {
-        cdkBuilder.guardianOptions(guardianOptions.let(GuardianOptionsProperty::unwrap))
+        cdkBuilder.guardianOptions(guardianOptions.let(GuardianOptionsProperty.Companion::unwrap))
       }
 
       /**

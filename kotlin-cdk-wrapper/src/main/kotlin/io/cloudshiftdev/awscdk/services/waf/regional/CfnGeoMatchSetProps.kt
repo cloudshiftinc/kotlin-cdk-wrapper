@@ -89,7 +89,7 @@ public interface CfnGeoMatchSetProps {
      * country that you want AWS WAF to search for.
      */
     override fun geoMatchConstraints(geoMatchConstraints: IResolvable) {
-      cdkBuilder.geoMatchConstraints(geoMatchConstraints.let(IResolvable::unwrap))
+      cdkBuilder.geoMatchConstraints(geoMatchConstraints.let(IResolvable.Companion::unwrap))
     }
 
     /**

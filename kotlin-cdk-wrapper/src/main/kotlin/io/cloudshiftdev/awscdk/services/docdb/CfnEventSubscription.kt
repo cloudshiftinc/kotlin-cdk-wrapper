@@ -64,8 +64,8 @@ public open class CfnEventSubscription(
     id: String,
     props: CfnEventSubscriptionProps,
   ) :
-      this(software.amazon.awscdk.services.docdb.CfnEventSubscription(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEventSubscriptionProps::unwrap))
+      this(software.amazon.awscdk.services.docdb.CfnEventSubscription(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEventSubscriptionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -96,7 +96,7 @@ public open class CfnEventSubscription(
    * A Boolean value;
    */
   public open fun enabled(`value`: IResolvable) {
-    unwrap(this).setEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -122,7 +122,7 @@ public open class CfnEventSubscription(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -329,7 +329,7 @@ public open class CfnEventSubscription(
      * @param enabled A Boolean value;. 
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -32,12 +32,12 @@ public open class CfnEipEndpoint(
   cdkObject: software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpoint,
 ) : CdkObject(cdkObject), IEndpoint {
   public constructor(eip: CloudshiftdevAwscdkServicesEc2CfnEIP) :
-      this(software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpoint(eip.let(CloudshiftdevAwscdkServicesEc2CfnEIP::unwrap))
+      this(software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpoint(eip.let(CloudshiftdevAwscdkServicesEc2CfnEIP.Companion::unwrap))
   )
 
   public constructor(eip: CloudshiftdevAwscdkServicesEc2CfnEIP, options: CfnEipEndpointProps) :
-      this(software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpoint(eip.let(CloudshiftdevAwscdkServicesEc2CfnEIP::unwrap),
-      options.let(CfnEipEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.globalaccelerator.endpoints.CfnEipEndpoint(eip.let(CloudshiftdevAwscdkServicesEc2CfnEIP.Companion::unwrap),
+      options.let(CfnEipEndpointProps.Companion::unwrap))
   )
 
   public constructor(eip: CloudshiftdevAwscdkServicesEc2CfnEIP,

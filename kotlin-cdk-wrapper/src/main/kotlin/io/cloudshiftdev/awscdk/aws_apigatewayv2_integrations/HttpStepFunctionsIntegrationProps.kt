@@ -119,14 +119,14 @@ public interface HttpStepFunctionsIntegrationProps {
      * Conversely, when the subtype is `STOP_EXECUTION`, the `ExecutionArn` must be specified.
      */
     override fun parameterMapping(parameterMapping: ParameterMapping) {
-      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping::unwrap))
+      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping.Companion::unwrap))
     }
 
     /**
      * @param stateMachine Statemachine that Integrates with API Gateway. 
      */
     override fun stateMachine(stateMachine: StateMachine) {
-      cdkBuilder.stateMachine(stateMachine.let(StateMachine::unwrap))
+      cdkBuilder.stateMachine(stateMachine.let(StateMachine.Companion::unwrap))
     }
 
     /**
@@ -134,7 +134,7 @@ public interface HttpStepFunctionsIntegrationProps {
      * Only subtypes starting with STEPFUNCTIONS_ can be specified.
      */
     override fun subtype(subtype: HttpIntegrationSubtype) {
-      cdkBuilder.subtype(subtype.let(HttpIntegrationSubtype::unwrap))
+      cdkBuilder.subtype(subtype.let(HttpIntegrationSubtype.Companion::unwrap))
     }
 
     public fun build():

@@ -308,8 +308,8 @@ public open class CfnVirtualNode(
     id: String,
     props: CfnVirtualNodeProps,
   ) :
-      this(software.amazon.awscdk.services.appmesh.CfnVirtualNode(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVirtualNodeProps::unwrap))
+      this(software.amazon.awscdk.services.appmesh.CfnVirtualNode(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVirtualNodeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -368,7 +368,7 @@ public open class CfnVirtualNode(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -404,14 +404,14 @@ public open class CfnVirtualNode(
    * The virtual node specification to apply.
    */
   public open fun spec(`value`: IResolvable) {
-    unwrap(this).setSpec(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSpec(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The virtual node specification to apply.
    */
   public open fun spec(`value`: VirtualNodeSpecProperty) {
-    unwrap(this).setSpec(`value`.let(VirtualNodeSpecProperty::unwrap))
+    unwrap(this).setSpec(`value`.let(VirtualNodeSpecProperty.Companion::unwrap))
   }
 
   /**
@@ -439,7 +439,7 @@ public open class CfnVirtualNode(
    * organization.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -588,7 +588,7 @@ public open class CfnVirtualNode(
      * @param spec The virtual node specification to apply. 
      */
     override fun spec(spec: IResolvable) {
-      cdkBuilder.spec(spec.let(IResolvable::unwrap))
+      cdkBuilder.spec(spec.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -598,7 +598,7 @@ public open class CfnVirtualNode(
      * @param spec The virtual node specification to apply. 
      */
     override fun spec(spec: VirtualNodeSpecProperty) {
-      cdkBuilder.spec(spec.let(VirtualNodeSpecProperty::unwrap))
+      cdkBuilder.spec(spec.let(VirtualNodeSpecProperty.Companion::unwrap))
     }
 
     /**
@@ -625,7 +625,7 @@ public open class CfnVirtualNode(
      * categorization and organization. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -742,14 +742,14 @@ public open class CfnVirtualNode(
        * @param file The file object to send virtual node access logs to.
        */
       override fun `file`(`file`: IResolvable) {
-        cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
+        cdkBuilder.`file`(`file`.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param file The file object to send virtual node access logs to.
        */
       override fun `file`(`file`: FileAccessLogProperty) {
-        cdkBuilder.`file`(`file`.let(FileAccessLogProperty::unwrap))
+        cdkBuilder.`file`(`file`.let(FileAccessLogProperty.Companion::unwrap))
       }
 
       /**
@@ -1040,7 +1040,7 @@ public open class CfnVirtualNode(
        * Only instances that match all of the specified key/value pairs will be returned.
        */
       override fun attributes(attributes: IResolvable) {
-        cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1234,14 +1234,14 @@ public open class CfnVirtualNode(
        * @param clientPolicy A reference to an object that represents a client policy.
        */
       override fun clientPolicy(clientPolicy: IResolvable) {
-        cdkBuilder.clientPolicy(clientPolicy.let(IResolvable::unwrap))
+        cdkBuilder.clientPolicy(clientPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param clientPolicy A reference to an object that represents a client policy.
        */
       override fun clientPolicy(clientPolicy: ClientPolicyProperty) {
-        cdkBuilder.clientPolicy(clientPolicy.let(ClientPolicyProperty::unwrap))
+        cdkBuilder.clientPolicy(clientPolicy.let(ClientPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -1381,14 +1381,14 @@ public open class CfnVirtualNode(
        * @param virtualService Specifies a virtual service to use as a backend.
        */
       override fun virtualService(virtualService: IResolvable) {
-        cdkBuilder.virtualService(virtualService.let(IResolvable::unwrap))
+        cdkBuilder.virtualService(virtualService.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param virtualService Specifies a virtual service to use as a backend.
        */
       override fun virtualService(virtualService: VirtualServiceBackendProperty) {
-        cdkBuilder.virtualService(virtualService.let(VirtualServiceBackendProperty::unwrap))
+        cdkBuilder.virtualService(virtualService.let(VirtualServiceBackendProperty.Companion::unwrap))
       }
 
       /**
@@ -1524,7 +1524,7 @@ public open class CfnVirtualNode(
        * policy.
        */
       override fun tls(tls: IResolvable) {
-        cdkBuilder.tls(tls.let(IResolvable::unwrap))
+        cdkBuilder.tls(tls.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1532,7 +1532,7 @@ public open class CfnVirtualNode(
        * policy.
        */
       override fun tls(tls: ClientPolicyTlsProperty) {
-        cdkBuilder.tls(tls.let(ClientPolicyTlsProperty::unwrap))
+        cdkBuilder.tls(tls.let(ClientPolicyTlsProperty.Companion::unwrap))
       }
 
       /**
@@ -1731,14 +1731,14 @@ public open class CfnVirtualNode(
        * @param certificate A reference to an object that represents a client's TLS certificate.
        */
       override fun certificate(certificate: IResolvable) {
-        cdkBuilder.certificate(certificate.let(IResolvable::unwrap))
+        cdkBuilder.certificate(certificate.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param certificate A reference to an object that represents a client's TLS certificate.
        */
       override fun certificate(certificate: ClientTlsCertificateProperty) {
-        cdkBuilder.certificate(certificate.let(ClientTlsCertificateProperty::unwrap))
+        cdkBuilder.certificate(certificate.let(ClientTlsCertificateProperty.Companion::unwrap))
       }
 
       /**
@@ -1762,14 +1762,14 @@ public open class CfnVirtualNode(
        * The default is `True` , if a value isn't specified.
        */
       override fun enforce(enforce: IResolvable) {
-        cdkBuilder.enforce(enforce.let(IResolvable::unwrap))
+        cdkBuilder.enforce(enforce.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param ports One or more ports that the policy is enforced for.
        */
       override fun ports(ports: IResolvable) {
-        cdkBuilder.ports(ports.let(IResolvable::unwrap))
+        cdkBuilder.ports(ports.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1788,14 +1788,14 @@ public open class CfnVirtualNode(
        * @param validation A reference to an object that represents a TLS validation context. 
        */
       override fun validation(validation: IResolvable) {
-        cdkBuilder.validation(validation.let(IResolvable::unwrap))
+        cdkBuilder.validation(validation.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param validation A reference to an object that represents a TLS validation context. 
        */
       override fun validation(validation: TlsValidationContextProperty) {
-        cdkBuilder.validation(validation.let(TlsValidationContextProperty::unwrap))
+        cdkBuilder.validation(validation.let(TlsValidationContextProperty.Companion::unwrap))
       }
 
       /**
@@ -1970,7 +1970,7 @@ public open class CfnVirtualNode(
        * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) .
        */
       override fun `file`(`file`: IResolvable) {
-        cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
+        cdkBuilder.`file`(`file`.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1980,7 +1980,7 @@ public open class CfnVirtualNode(
        * (TLS)](https://docs.aws.amazon.com/app-mesh/latest/userguide/tls.html) .
        */
       override fun `file`(`file`: ListenerTlsFileCertificateProperty) {
-        cdkBuilder.`file`(`file`.let(ListenerTlsFileCertificateProperty::unwrap))
+        cdkBuilder.`file`(`file`.let(ListenerTlsFileCertificateProperty.Companion::unwrap))
       }
 
       /**
@@ -1999,7 +1999,7 @@ public open class CfnVirtualNode(
        * certificate.
        */
       override fun sds(sds: IResolvable) {
-        cdkBuilder.sds(sds.let(IResolvable::unwrap))
+        cdkBuilder.sds(sds.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2007,7 +2007,7 @@ public open class CfnVirtualNode(
        * certificate.
        */
       override fun sds(sds: ListenerTlsSdsCertificateProperty) {
-        cdkBuilder.sds(sds.let(ListenerTlsSdsCertificateProperty::unwrap))
+        cdkBuilder.sds(sds.let(ListenerTlsSdsCertificateProperty.Companion::unwrap))
       }
 
       /**
@@ -2419,7 +2419,7 @@ public open class CfnVirtualNode(
        * The format is either `json_format` or `text_format` .
        */
       override fun format(format: IResolvable) {
-        cdkBuilder.format(format.let(IResolvable::unwrap))
+        cdkBuilder.format(format.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2427,7 +2427,7 @@ public open class CfnVirtualNode(
        * The format is either `json_format` or `text_format` .
        */
       override fun format(format: LoggingFormatProperty) {
-        cdkBuilder.format(format.let(LoggingFormatProperty::unwrap))
+        cdkBuilder.format(format.let(LoggingFormatProperty.Companion::unwrap))
       }
 
       /**
@@ -2622,7 +2622,7 @@ public open class CfnVirtualNode(
        * is none.
        */
       override fun idle(idle: IResolvable) {
-        cdkBuilder.idle(idle.let(IResolvable::unwrap))
+        cdkBuilder.idle(idle.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2631,7 +2631,7 @@ public open class CfnVirtualNode(
        * is none.
        */
       override fun idle(idle: DurationProperty) {
-        cdkBuilder.idle(idle.let(DurationProperty::unwrap))
+        cdkBuilder.idle(idle.let(DurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2652,7 +2652,7 @@ public open class CfnVirtualNode(
        * should be greater than 15 seconds for the source and destination virtual node and the route.
        */
       override fun perRequest(perRequest: IResolvable) {
-        cdkBuilder.perRequest(perRequest.let(IResolvable::unwrap))
+        cdkBuilder.perRequest(perRequest.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2663,7 +2663,7 @@ public open class CfnVirtualNode(
        * should be greater than 15 seconds for the source and destination virtual node and the route.
        */
       override fun perRequest(perRequest: DurationProperty) {
-        cdkBuilder.perRequest(perRequest.let(DurationProperty::unwrap))
+        cdkBuilder.perRequest(perRequest.let(DurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3125,7 +3125,7 @@ public open class CfnVirtualNode(
        * is none.
        */
       override fun idle(idle: IResolvable) {
-        cdkBuilder.idle(idle.let(IResolvable::unwrap))
+        cdkBuilder.idle(idle.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3134,7 +3134,7 @@ public open class CfnVirtualNode(
        * is none.
        */
       override fun idle(idle: DurationProperty) {
-        cdkBuilder.idle(idle.let(DurationProperty::unwrap))
+        cdkBuilder.idle(idle.let(DurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3155,7 +3155,7 @@ public open class CfnVirtualNode(
        * should be greater than 15 seconds for the source and destination virtual node and the route.
        */
       override fun perRequest(perRequest: IResolvable) {
-        cdkBuilder.perRequest(perRequest.let(IResolvable::unwrap))
+        cdkBuilder.perRequest(perRequest.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3166,7 +3166,7 @@ public open class CfnVirtualNode(
        * should be greater than 15 seconds for the source and destination virtual node and the route.
        */
       override fun perRequest(perRequest: DurationProperty) {
-        cdkBuilder.perRequest(perRequest.let(DurationProperty::unwrap))
+        cdkBuilder.perRequest(perRequest.let(DurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3630,14 +3630,14 @@ public open class CfnVirtualNode(
        * @param connectionPool The connection pool information for the listener.
        */
       override fun connectionPool(connectionPool: IResolvable) {
-        cdkBuilder.connectionPool(connectionPool.let(IResolvable::unwrap))
+        cdkBuilder.connectionPool(connectionPool.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param connectionPool The connection pool information for the listener.
        */
       override fun connectionPool(connectionPool: VirtualNodeConnectionPoolProperty) {
-        cdkBuilder.connectionPool(connectionPool.let(VirtualNodeConnectionPoolProperty::unwrap))
+        cdkBuilder.connectionPool(connectionPool.let(VirtualNodeConnectionPoolProperty.Companion::unwrap))
       }
 
       /**
@@ -3653,14 +3653,14 @@ public open class CfnVirtualNode(
        * @param healthCheck The health check information for the listener.
        */
       override fun healthCheck(healthCheck: IResolvable) {
-        cdkBuilder.healthCheck(healthCheck.let(IResolvable::unwrap))
+        cdkBuilder.healthCheck(healthCheck.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param healthCheck The health check information for the listener.
        */
       override fun healthCheck(healthCheck: HealthCheckProperty) {
-        cdkBuilder.healthCheck(healthCheck.let(HealthCheckProperty::unwrap))
+        cdkBuilder.healthCheck(healthCheck.let(HealthCheckProperty.Companion::unwrap))
       }
 
       /**
@@ -3675,14 +3675,14 @@ public open class CfnVirtualNode(
        * @param outlierDetection The outlier detection information for the listener.
        */
       override fun outlierDetection(outlierDetection: IResolvable) {
-        cdkBuilder.outlierDetection(outlierDetection.let(IResolvable::unwrap))
+        cdkBuilder.outlierDetection(outlierDetection.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param outlierDetection The outlier detection information for the listener.
        */
       override fun outlierDetection(outlierDetection: OutlierDetectionProperty) {
-        cdkBuilder.outlierDetection(outlierDetection.let(OutlierDetectionProperty::unwrap))
+        cdkBuilder.outlierDetection(outlierDetection.let(OutlierDetectionProperty.Companion::unwrap))
       }
 
       /**
@@ -3697,14 +3697,14 @@ public open class CfnVirtualNode(
        * @param portMapping The port mapping information for the listener. 
        */
       override fun portMapping(portMapping: IResolvable) {
-        cdkBuilder.portMapping(portMapping.let(IResolvable::unwrap))
+        cdkBuilder.portMapping(portMapping.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param portMapping The port mapping information for the listener. 
        */
       override fun portMapping(portMapping: PortMappingProperty) {
-        cdkBuilder.portMapping(portMapping.let(PortMappingProperty::unwrap))
+        cdkBuilder.portMapping(portMapping.let(PortMappingProperty.Companion::unwrap))
       }
 
       /**
@@ -3719,14 +3719,14 @@ public open class CfnVirtualNode(
        * @param timeout An object that represents timeouts for different protocols.
        */
       override fun timeout(timeout: IResolvable) {
-        cdkBuilder.timeout(timeout.let(IResolvable::unwrap))
+        cdkBuilder.timeout(timeout.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param timeout An object that represents timeouts for different protocols.
        */
       override fun timeout(timeout: ListenerTimeoutProperty) {
-        cdkBuilder.timeout(timeout.let(ListenerTimeoutProperty::unwrap))
+        cdkBuilder.timeout(timeout.let(ListenerTimeoutProperty.Companion::unwrap))
       }
 
       /**
@@ -3742,7 +3742,7 @@ public open class CfnVirtualNode(
        * properties for a listener.
        */
       override fun tls(tls: IResolvable) {
-        cdkBuilder.tls(tls.let(IResolvable::unwrap))
+        cdkBuilder.tls(tls.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3750,7 +3750,7 @@ public open class CfnVirtualNode(
        * properties for a listener.
        */
       override fun tls(tls: ListenerTlsProperty) {
-        cdkBuilder.tls(tls.let(ListenerTlsProperty::unwrap))
+        cdkBuilder.tls(tls.let(ListenerTlsProperty.Companion::unwrap))
       }
 
       /**
@@ -3994,14 +3994,14 @@ public open class CfnVirtualNode(
        * @param grpc An object that represents types of timeouts.
        */
       override fun grpc(grpc: IResolvable) {
-        cdkBuilder.grpc(grpc.let(IResolvable::unwrap))
+        cdkBuilder.grpc(grpc.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param grpc An object that represents types of timeouts.
        */
       override fun grpc(grpc: GrpcTimeoutProperty) {
-        cdkBuilder.grpc(grpc.let(GrpcTimeoutProperty::unwrap))
+        cdkBuilder.grpc(grpc.let(GrpcTimeoutProperty.Companion::unwrap))
       }
 
       /**
@@ -4016,14 +4016,14 @@ public open class CfnVirtualNode(
        * @param http An object that represents types of timeouts.
        */
       override fun http(http: IResolvable) {
-        cdkBuilder.http(http.let(IResolvable::unwrap))
+        cdkBuilder.http(http.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param http An object that represents types of timeouts.
        */
       override fun http(http: HttpTimeoutProperty) {
-        cdkBuilder.http(http.let(HttpTimeoutProperty::unwrap))
+        cdkBuilder.http(http.let(HttpTimeoutProperty.Companion::unwrap))
       }
 
       /**
@@ -4038,14 +4038,14 @@ public open class CfnVirtualNode(
        * @param http2 An object that represents types of timeouts.
        */
       override fun http2(http2: IResolvable) {
-        cdkBuilder.http2(http2.let(IResolvable::unwrap))
+        cdkBuilder.http2(http2.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param http2 An object that represents types of timeouts.
        */
       override fun http2(http2: HttpTimeoutProperty) {
-        cdkBuilder.http2(http2.let(HttpTimeoutProperty::unwrap))
+        cdkBuilder.http2(http2.let(HttpTimeoutProperty.Companion::unwrap))
       }
 
       /**
@@ -4060,14 +4060,14 @@ public open class CfnVirtualNode(
        * @param tcp An object that represents types of timeouts.
        */
       override fun tcp(tcp: IResolvable) {
-        cdkBuilder.tcp(tcp.let(IResolvable::unwrap))
+        cdkBuilder.tcp(tcp.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param tcp An object that represents types of timeouts.
        */
       override fun tcp(tcp: TcpTimeoutProperty) {
-        cdkBuilder.tcp(tcp.let(TcpTimeoutProperty::unwrap))
+        cdkBuilder.tcp(tcp.let(TcpTimeoutProperty.Companion::unwrap))
       }
 
       /**
@@ -4353,14 +4353,14 @@ public open class CfnVirtualNode(
        * @param acm A reference to an object that represents an AWS Certificate Manager certificate.
        */
       override fun acm(acm: IResolvable) {
-        cdkBuilder.acm(acm.let(IResolvable::unwrap))
+        cdkBuilder.acm(acm.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param acm A reference to an object that represents an AWS Certificate Manager certificate.
        */
       override fun acm(acm: ListenerTlsAcmCertificateProperty) {
-        cdkBuilder.acm(acm.let(ListenerTlsAcmCertificateProperty::unwrap))
+        cdkBuilder.acm(acm.let(ListenerTlsAcmCertificateProperty.Companion::unwrap))
       }
 
       /**
@@ -4375,14 +4375,14 @@ public open class CfnVirtualNode(
        * @param file A reference to an object that represents a local file certificate.
        */
       override fun `file`(`file`: IResolvable) {
-        cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
+        cdkBuilder.`file`(`file`.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param file A reference to an object that represents a local file certificate.
        */
       override fun `file`(`file`: ListenerTlsFileCertificateProperty) {
-        cdkBuilder.`file`(`file`.let(ListenerTlsFileCertificateProperty::unwrap))
+        cdkBuilder.`file`(`file`.let(ListenerTlsFileCertificateProperty.Companion::unwrap))
       }
 
       /**
@@ -4398,7 +4398,7 @@ public open class CfnVirtualNode(
        * certificate.
        */
       override fun sds(sds: IResolvable) {
-        cdkBuilder.sds(sds.let(IResolvable::unwrap))
+        cdkBuilder.sds(sds.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4406,7 +4406,7 @@ public open class CfnVirtualNode(
        * certificate.
        */
       override fun sds(sds: ListenerTlsSdsCertificateProperty) {
-        cdkBuilder.sds(sds.let(ListenerTlsSdsCertificateProperty::unwrap))
+        cdkBuilder.sds(sds.let(ListenerTlsSdsCertificateProperty.Companion::unwrap))
       }
 
       /**
@@ -4723,7 +4723,7 @@ public open class CfnVirtualNode(
        * Security (TLS) certificate. 
        */
       override fun certificate(certificate: IResolvable) {
-        cdkBuilder.certificate(certificate.let(IResolvable::unwrap))
+        cdkBuilder.certificate(certificate.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4731,7 +4731,7 @@ public open class CfnVirtualNode(
        * Security (TLS) certificate. 
        */
       override fun certificate(certificate: ListenerTlsCertificateProperty) {
-        cdkBuilder.certificate(certificate.let(ListenerTlsCertificateProperty::unwrap))
+        cdkBuilder.certificate(certificate.let(ListenerTlsCertificateProperty.Companion::unwrap))
       }
 
       /**
@@ -4758,7 +4758,7 @@ public open class CfnVirtualNode(
        * Security (TLS) validation context.
        */
       override fun validation(validation: IResolvable) {
-        cdkBuilder.validation(validation.let(IResolvable::unwrap))
+        cdkBuilder.validation(validation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4766,7 +4766,7 @@ public open class CfnVirtualNode(
        * Security (TLS) validation context.
        */
       override fun validation(validation: ListenerTlsValidationContextProperty) {
-        cdkBuilder.validation(validation.let(ListenerTlsValidationContextProperty::unwrap))
+        cdkBuilder.validation(validation.let(ListenerTlsValidationContextProperty.Companion::unwrap))
       }
 
       /**
@@ -5031,7 +5031,7 @@ public open class CfnVirtualNode(
        * listener's Transport Layer Security (TLS) validation context.
        */
       override fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
-        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(IResolvable::unwrap))
+        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5040,7 +5040,7 @@ public open class CfnVirtualNode(
        */
       override
           fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty) {
-        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(SubjectAlternativeNamesProperty::unwrap))
+        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(SubjectAlternativeNamesProperty.Companion::unwrap))
       }
 
       /**
@@ -5058,7 +5058,7 @@ public open class CfnVirtualNode(
        * Transport Layer Security (TLS) certificate. 
        */
       override fun trust(trust: IResolvable) {
-        cdkBuilder.trust(trust.let(IResolvable::unwrap))
+        cdkBuilder.trust(trust.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5066,7 +5066,7 @@ public open class CfnVirtualNode(
        * Transport Layer Security (TLS) certificate. 
        */
       override fun trust(trust: ListenerTlsValidationContextTrustProperty) {
-        cdkBuilder.trust(trust.let(ListenerTlsValidationContextTrustProperty::unwrap))
+        cdkBuilder.trust(trust.let(ListenerTlsValidationContextTrustProperty.Companion::unwrap))
       }
 
       /**
@@ -5218,7 +5218,7 @@ public open class CfnVirtualNode(
        * trust for a local file.
        */
       override fun `file`(`file`: IResolvable) {
-        cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
+        cdkBuilder.`file`(`file`.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5226,7 +5226,7 @@ public open class CfnVirtualNode(
        * trust for a local file.
        */
       override fun `file`(`file`: TlsValidationContextFileTrustProperty) {
-        cdkBuilder.`file`(`file`.let(TlsValidationContextFileTrustProperty::unwrap))
+        cdkBuilder.`file`(`file`.let(TlsValidationContextFileTrustProperty.Companion::unwrap))
       }
 
       /**
@@ -5243,7 +5243,7 @@ public open class CfnVirtualNode(
        * (TLS) Secret Discovery Service validation context trust.
        */
       override fun sds(sds: IResolvable) {
-        cdkBuilder.sds(sds.let(IResolvable::unwrap))
+        cdkBuilder.sds(sds.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5251,7 +5251,7 @@ public open class CfnVirtualNode(
        * (TLS) Secret Discovery Service validation context trust.
        */
       override fun sds(sds: TlsValidationContextSdsTrustProperty) {
-        cdkBuilder.sds(sds.let(TlsValidationContextSdsTrustProperty::unwrap))
+        cdkBuilder.sds(sds.let(TlsValidationContextSdsTrustProperty.Companion::unwrap))
       }
 
       /**
@@ -5377,7 +5377,7 @@ public open class CfnVirtualNode(
        * @param json The logging format for JSON.
        */
       override fun json(json: IResolvable) {
-        cdkBuilder.json(json.let(IResolvable::unwrap))
+        cdkBuilder.json(json.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5508,14 +5508,14 @@ public open class CfnVirtualNode(
        * @param accessLog The access log configuration for a virtual node.
        */
       override fun accessLog(accessLog: IResolvable) {
-        cdkBuilder.accessLog(accessLog.let(IResolvable::unwrap))
+        cdkBuilder.accessLog(accessLog.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param accessLog The access log configuration for a virtual node.
        */
       override fun accessLog(accessLog: AccessLogProperty) {
-        cdkBuilder.accessLog(accessLog.let(AccessLogProperty::unwrap))
+        cdkBuilder.accessLog(accessLog.let(AccessLogProperty.Companion::unwrap))
       }
 
       /**
@@ -5676,14 +5676,14 @@ public open class CfnVirtualNode(
        * @param baseEjectionDuration The base amount of time for which a host is ejected. 
        */
       override fun baseEjectionDuration(baseEjectionDuration: IResolvable) {
-        cdkBuilder.baseEjectionDuration(baseEjectionDuration.let(IResolvable::unwrap))
+        cdkBuilder.baseEjectionDuration(baseEjectionDuration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param baseEjectionDuration The base amount of time for which a host is ejected. 
        */
       override fun baseEjectionDuration(baseEjectionDuration: DurationProperty) {
-        cdkBuilder.baseEjectionDuration(baseEjectionDuration.let(DurationProperty::unwrap))
+        cdkBuilder.baseEjectionDuration(baseEjectionDuration.let(DurationProperty.Companion::unwrap))
       }
 
       /**
@@ -5698,14 +5698,14 @@ public open class CfnVirtualNode(
        * @param interval The time interval between ejection sweep analysis. 
        */
       override fun interval(interval: IResolvable) {
-        cdkBuilder.interval(interval.let(IResolvable::unwrap))
+        cdkBuilder.interval(interval.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param interval The time interval between ejection sweep analysis. 
        */
       override fun interval(interval: DurationProperty) {
-        cdkBuilder.interval(interval.let(DurationProperty::unwrap))
+        cdkBuilder.interval(interval.let(DurationProperty.Companion::unwrap))
       }
 
       /**
@@ -5998,14 +5998,14 @@ public open class CfnVirtualNode(
        * @param awsCloudMap Specifies any AWS Cloud Map information for the virtual node.
        */
       override fun awsCloudMap(awsCloudMap: IResolvable) {
-        cdkBuilder.awsCloudMap(awsCloudMap.let(IResolvable::unwrap))
+        cdkBuilder.awsCloudMap(awsCloudMap.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param awsCloudMap Specifies any AWS Cloud Map information for the virtual node.
        */
       override fun awsCloudMap(awsCloudMap: AwsCloudMapServiceDiscoveryProperty) {
-        cdkBuilder.awsCloudMap(awsCloudMap.let(AwsCloudMapServiceDiscoveryProperty::unwrap))
+        cdkBuilder.awsCloudMap(awsCloudMap.let(AwsCloudMapServiceDiscoveryProperty.Companion::unwrap))
       }
 
       /**
@@ -6020,14 +6020,14 @@ public open class CfnVirtualNode(
        * @param dns Specifies the DNS information for the virtual node.
        */
       override fun dns(dns: IResolvable) {
-        cdkBuilder.dns(dns.let(IResolvable::unwrap))
+        cdkBuilder.dns(dns.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dns Specifies the DNS information for the virtual node.
        */
       override fun dns(dns: DnsServiceDiscoveryProperty) {
-        cdkBuilder.dns(dns.let(DnsServiceDiscoveryProperty::unwrap))
+        cdkBuilder.dns(dns.let(DnsServiceDiscoveryProperty.Companion::unwrap))
       }
 
       /**
@@ -6234,14 +6234,14 @@ public open class CfnVirtualNode(
        * @param match An object that represents the criteria for determining a SANs match. 
        */
       override fun match(match: IResolvable) {
-        cdkBuilder.match(match.let(IResolvable::unwrap))
+        cdkBuilder.match(match.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param match An object that represents the criteria for determining a SANs match. 
        */
       override fun match(match: SubjectAlternativeNameMatchersProperty) {
-        cdkBuilder.match(match.let(SubjectAlternativeNameMatchersProperty::unwrap))
+        cdkBuilder.match(match.let(SubjectAlternativeNameMatchersProperty.Companion::unwrap))
       }
 
       /**
@@ -6356,7 +6356,7 @@ public open class CfnVirtualNode(
        * is none.
        */
       override fun idle(idle: IResolvable) {
-        cdkBuilder.idle(idle.let(IResolvable::unwrap))
+        cdkBuilder.idle(idle.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6365,7 +6365,7 @@ public open class CfnVirtualNode(
        * is none.
        */
       override fun idle(idle: DurationProperty) {
-        cdkBuilder.idle(idle.let(DurationProperty::unwrap))
+        cdkBuilder.idle(idle.let(DurationProperty.Companion::unwrap))
       }
 
       /**
@@ -6740,7 +6740,7 @@ public open class CfnVirtualNode(
        * discovery name.
        */
       override fun subjectAlternativeNames(subjectAlternativeNames: IResolvable) {
-        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(IResolvable::unwrap))
+        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6755,7 +6755,7 @@ public open class CfnVirtualNode(
        */
       override
           fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNamesProperty) {
-        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(SubjectAlternativeNamesProperty::unwrap))
+        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(SubjectAlternativeNamesProperty.Companion::unwrap))
       }
 
       /**
@@ -6779,7 +6779,7 @@ public open class CfnVirtualNode(
        * Transport Layer Security (TLS) certificate. 
        */
       override fun trust(trust: IResolvable) {
-        cdkBuilder.trust(trust.let(IResolvable::unwrap))
+        cdkBuilder.trust(trust.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6787,7 +6787,7 @@ public open class CfnVirtualNode(
        * Transport Layer Security (TLS) certificate. 
        */
       override fun trust(trust: TlsValidationContextTrustProperty) {
-        cdkBuilder.trust(trust.let(TlsValidationContextTrustProperty::unwrap))
+        cdkBuilder.trust(trust.let(TlsValidationContextTrustProperty.Companion::unwrap))
       }
 
       /**
@@ -7068,7 +7068,7 @@ public open class CfnVirtualNode(
        * validation context trust for an AWS Certificate Manager certificate.
        */
       override fun acm(acm: IResolvable) {
-        cdkBuilder.acm(acm.let(IResolvable::unwrap))
+        cdkBuilder.acm(acm.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7076,7 +7076,7 @@ public open class CfnVirtualNode(
        * validation context trust for an AWS Certificate Manager certificate.
        */
       override fun acm(acm: TlsValidationContextAcmTrustProperty) {
-        cdkBuilder.acm(acm.let(TlsValidationContextAcmTrustProperty::unwrap))
+        cdkBuilder.acm(acm.let(TlsValidationContextAcmTrustProperty.Companion::unwrap))
       }
 
       /**
@@ -7093,7 +7093,7 @@ public open class CfnVirtualNode(
        * trust for a local file.
        */
       override fun `file`(`file`: IResolvable) {
-        cdkBuilder.`file`(`file`.let(IResolvable::unwrap))
+        cdkBuilder.`file`(`file`.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7101,7 +7101,7 @@ public open class CfnVirtualNode(
        * trust for a local file.
        */
       override fun `file`(`file`: TlsValidationContextFileTrustProperty) {
-        cdkBuilder.`file`(`file`.let(TlsValidationContextFileTrustProperty::unwrap))
+        cdkBuilder.`file`(`file`.let(TlsValidationContextFileTrustProperty.Companion::unwrap))
       }
 
       /**
@@ -7118,7 +7118,7 @@ public open class CfnVirtualNode(
        * Discovery Service validation context trust.
        */
       override fun sds(sds: IResolvable) {
-        cdkBuilder.sds(sds.let(IResolvable::unwrap))
+        cdkBuilder.sds(sds.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7126,7 +7126,7 @@ public open class CfnVirtualNode(
        * Discovery Service validation context trust.
        */
       override fun sds(sds: TlsValidationContextSdsTrustProperty) {
-        cdkBuilder.sds(sds.let(TlsValidationContextSdsTrustProperty::unwrap))
+        cdkBuilder.sds(sds.let(TlsValidationContextSdsTrustProperty.Companion::unwrap))
       }
 
       /**
@@ -7338,14 +7338,14 @@ public open class CfnVirtualNode(
        * @param grpc An object that represents a type of connection pool.
        */
       override fun grpc(grpc: IResolvable) {
-        cdkBuilder.grpc(grpc.let(IResolvable::unwrap))
+        cdkBuilder.grpc(grpc.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param grpc An object that represents a type of connection pool.
        */
       override fun grpc(grpc: VirtualNodeGrpcConnectionPoolProperty) {
-        cdkBuilder.grpc(grpc.let(VirtualNodeGrpcConnectionPoolProperty::unwrap))
+        cdkBuilder.grpc(grpc.let(VirtualNodeGrpcConnectionPoolProperty.Companion::unwrap))
       }
 
       /**
@@ -7360,14 +7360,14 @@ public open class CfnVirtualNode(
        * @param http An object that represents a type of connection pool.
        */
       override fun http(http: IResolvable) {
-        cdkBuilder.http(http.let(IResolvable::unwrap))
+        cdkBuilder.http(http.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param http An object that represents a type of connection pool.
        */
       override fun http(http: VirtualNodeHttpConnectionPoolProperty) {
-        cdkBuilder.http(http.let(VirtualNodeHttpConnectionPoolProperty::unwrap))
+        cdkBuilder.http(http.let(VirtualNodeHttpConnectionPoolProperty.Companion::unwrap))
       }
 
       /**
@@ -7382,14 +7382,14 @@ public open class CfnVirtualNode(
        * @param http2 An object that represents a type of connection pool.
        */
       override fun http2(http2: IResolvable) {
-        cdkBuilder.http2(http2.let(IResolvable::unwrap))
+        cdkBuilder.http2(http2.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param http2 An object that represents a type of connection pool.
        */
       override fun http2(http2: VirtualNodeHttp2ConnectionPoolProperty) {
-        cdkBuilder.http2(http2.let(VirtualNodeHttp2ConnectionPoolProperty::unwrap))
+        cdkBuilder.http2(http2.let(VirtualNodeHttp2ConnectionPoolProperty.Companion::unwrap))
       }
 
       /**
@@ -7404,14 +7404,14 @@ public open class CfnVirtualNode(
        * @param tcp An object that represents a type of connection pool.
        */
       override fun tcp(tcp: IResolvable) {
-        cdkBuilder.tcp(tcp.let(IResolvable::unwrap))
+        cdkBuilder.tcp(tcp.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param tcp An object that represents a type of connection pool.
        */
       override fun tcp(tcp: VirtualNodeTcpConnectionPoolProperty) {
-        cdkBuilder.tcp(tcp.let(VirtualNodeTcpConnectionPoolProperty::unwrap))
+        cdkBuilder.tcp(tcp.let(VirtualNodeTcpConnectionPoolProperty.Companion::unwrap))
       }
 
       /**
@@ -8185,14 +8185,14 @@ public open class CfnVirtualNode(
        * @param backendDefaults A reference to an object that represents the defaults for backends.
        */
       override fun backendDefaults(backendDefaults: IResolvable) {
-        cdkBuilder.backendDefaults(backendDefaults.let(IResolvable::unwrap))
+        cdkBuilder.backendDefaults(backendDefaults.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param backendDefaults A reference to an object that represents the defaults for backends.
        */
       override fun backendDefaults(backendDefaults: BackendDefaultsProperty) {
-        cdkBuilder.backendDefaults(backendDefaults.let(BackendDefaultsProperty::unwrap))
+        cdkBuilder.backendDefaults(backendDefaults.let(BackendDefaultsProperty.Companion::unwrap))
       }
 
       /**
@@ -8212,7 +8212,7 @@ public open class CfnVirtualNode(
        * if it doesn't already exist.
        */
       override fun backends(backends: IResolvable) {
-        cdkBuilder.backends(backends.let(IResolvable::unwrap))
+        cdkBuilder.backends(backends.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8243,7 +8243,7 @@ public open class CfnVirtualNode(
        * You can specify one listener.
        */
       override fun listeners(listeners: IResolvable) {
-        cdkBuilder.listeners(listeners.let(IResolvable::unwrap))
+        cdkBuilder.listeners(listeners.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8266,14 +8266,14 @@ public open class CfnVirtualNode(
        * @param logging The inbound and outbound access logging information for the virtual node.
        */
       override fun logging(logging: IResolvable) {
-        cdkBuilder.logging(logging.let(IResolvable::unwrap))
+        cdkBuilder.logging(logging.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param logging The inbound and outbound access logging information for the virtual node.
        */
       override fun logging(logging: LoggingProperty) {
-        cdkBuilder.logging(logging.let(LoggingProperty::unwrap))
+        cdkBuilder.logging(logging.let(LoggingProperty.Companion::unwrap))
       }
 
       /**
@@ -8290,7 +8290,7 @@ public open class CfnVirtualNode(
        * specify a `listener` , then you must specify service discovery information.
        */
       override fun serviceDiscovery(serviceDiscovery: IResolvable) {
-        cdkBuilder.serviceDiscovery(serviceDiscovery.let(IResolvable::unwrap))
+        cdkBuilder.serviceDiscovery(serviceDiscovery.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8299,7 +8299,7 @@ public open class CfnVirtualNode(
        * specify a `listener` , then you must specify service discovery information.
        */
       override fun serviceDiscovery(serviceDiscovery: ServiceDiscoveryProperty) {
-        cdkBuilder.serviceDiscovery(serviceDiscovery.let(ServiceDiscoveryProperty::unwrap))
+        cdkBuilder.serviceDiscovery(serviceDiscovery.let(ServiceDiscoveryProperty.Companion::unwrap))
       }
 
       /**
@@ -8597,7 +8597,7 @@ public open class CfnVirtualNode(
        * backend.
        */
       override fun clientPolicy(clientPolicy: IResolvable) {
-        cdkBuilder.clientPolicy(clientPolicy.let(IResolvable::unwrap))
+        cdkBuilder.clientPolicy(clientPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8605,7 +8605,7 @@ public open class CfnVirtualNode(
        * backend.
        */
       override fun clientPolicy(clientPolicy: ClientPolicyProperty) {
-        cdkBuilder.clientPolicy(clientPolicy.let(ClientPolicyProperty::unwrap))
+        cdkBuilder.clientPolicy(clientPolicy.let(ClientPolicyProperty.Companion::unwrap))
       }
 
       /**

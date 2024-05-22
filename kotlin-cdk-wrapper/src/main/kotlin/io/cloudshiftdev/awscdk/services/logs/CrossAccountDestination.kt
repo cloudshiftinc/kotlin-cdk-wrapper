@@ -49,8 +49,8 @@ public open class CrossAccountDestination(
     id: String,
     props: CrossAccountDestinationProps,
   ) :
-      this(software.amazon.awscdk.services.logs.CrossAccountDestination(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CrossAccountDestinationProps::unwrap))
+      this(software.amazon.awscdk.services.logs.CrossAccountDestination(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CrossAccountDestinationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -64,7 +64,7 @@ public open class CrossAccountDestination(
    * @param statement 
    */
   public open fun addToPolicy(statement: PolicyStatement) {
-    unwrap(this).addToPolicy(statement.let(PolicyStatement::unwrap))
+    unwrap(this).addToPolicy(statement.let(PolicyStatement.Companion::unwrap))
   }
 
   /**
@@ -90,8 +90,8 @@ public open class CrossAccountDestination(
    */
   public override fun bind(scope: CloudshiftdevConstructsConstruct, sourceLogGroup: ILogGroup):
       LogSubscriptionDestinationConfig =
-      unwrap(this).bind(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      sourceLogGroup.let(ILogGroup::unwrap)).let(LogSubscriptionDestinationConfig::wrap)
+      unwrap(this).bind(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      sourceLogGroup.let(ILogGroup.Companion::unwrap)).let(LogSubscriptionDestinationConfig::wrap)
 
   /**
    * The ARN of this CrossAccountDestination object.
@@ -166,7 +166,7 @@ public open class CrossAccountDestination(
      * @param role The role to assume that grants permissions to write to 'target'. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**

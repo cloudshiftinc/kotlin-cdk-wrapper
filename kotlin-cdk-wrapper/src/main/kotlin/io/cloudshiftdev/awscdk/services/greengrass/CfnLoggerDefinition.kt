@@ -77,8 +77,8 @@ public open class CfnLoggerDefinition(
     id: String,
     props: CfnLoggerDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.greengrass.CfnLoggerDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLoggerDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.greengrass.CfnLoggerDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLoggerDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -122,14 +122,14 @@ public open class CfnLoggerDefinition(
    * The logger definition version to include when the logger definition is created.
    */
   public open fun initialVersion(`value`: IResolvable) {
-    unwrap(this).setInitialVersion(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInitialVersion(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The logger definition version to include when the logger definition is created.
    */
   public open fun initialVersion(`value`: LoggerDefinitionVersionProperty) {
-    unwrap(this).setInitialVersion(`value`.let(LoggerDefinitionVersionProperty::unwrap))
+    unwrap(this).setInitialVersion(`value`.let(LoggerDefinitionVersionProperty.Companion::unwrap))
   }
 
   /**
@@ -146,7 +146,7 @@ public open class CfnLoggerDefinition(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -297,7 +297,7 @@ public open class CfnLoggerDefinition(
      * created. 
      */
     override fun initialVersion(initialVersion: IResolvable) {
-      cdkBuilder.initialVersion(initialVersion.let(IResolvable::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -318,7 +318,7 @@ public open class CfnLoggerDefinition(
      * created. 
      */
     override fun initialVersion(initialVersion: LoggerDefinitionVersionProperty) {
-      cdkBuilder.initialVersion(initialVersion.let(LoggerDefinitionVersionProperty::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(LoggerDefinitionVersionProperty.Companion::unwrap))
     }
 
     /**
@@ -478,7 +478,7 @@ public open class CfnLoggerDefinition(
        * @param loggers The loggers in this version. 
        */
       override fun loggers(loggers: IResolvable) {
-        cdkBuilder.loggers(loggers.let(IResolvable::unwrap))
+        cdkBuilder.loggers(loggers.let(IResolvable.Companion::unwrap))
       }
 
       /**

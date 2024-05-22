@@ -131,8 +131,8 @@ public open class CfnModelExplainabilityJobDefinition(
     id: String,
     props: CfnModelExplainabilityJobDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnModelExplainabilityJobDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnModelExplainabilityJobDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnModelExplainabilityJobDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -170,7 +170,7 @@ public open class CfnModelExplainabilityJobDefinition(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -194,14 +194,14 @@ public open class CfnModelExplainabilityJobDefinition(
    * Identifies the resources to deploy for a monitoring job.
    */
   public open fun jobResources(`value`: IResolvable) {
-    unwrap(this).setJobResources(`value`.let(IResolvable::unwrap))
+    unwrap(this).setJobResources(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Identifies the resources to deploy for a monitoring job.
    */
   public open fun jobResources(`value`: MonitoringResourcesProperty) {
-    unwrap(this).setJobResources(`value`.let(MonitoringResourcesProperty::unwrap))
+    unwrap(this).setJobResources(`value`.let(MonitoringResourcesProperty.Companion::unwrap))
   }
 
   /**
@@ -222,7 +222,7 @@ public open class CfnModelExplainabilityJobDefinition(
    * Configures the model explainability job to run a specified Docker container image.
    */
   public open fun modelExplainabilityAppSpecification(`value`: IResolvable) {
-    unwrap(this).setModelExplainabilityAppSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setModelExplainabilityAppSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -230,7 +230,7 @@ public open class CfnModelExplainabilityJobDefinition(
    */
   public open
       fun modelExplainabilityAppSpecification(`value`: ModelExplainabilityAppSpecificationProperty) {
-    unwrap(this).setModelExplainabilityAppSpecification(`value`.let(ModelExplainabilityAppSpecificationProperty::unwrap))
+    unwrap(this).setModelExplainabilityAppSpecification(`value`.let(ModelExplainabilityAppSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -253,7 +253,7 @@ public open class CfnModelExplainabilityJobDefinition(
    * The baseline configuration for a model explainability job.
    */
   public open fun modelExplainabilityBaselineConfig(`value`: IResolvable) {
-    unwrap(this).setModelExplainabilityBaselineConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setModelExplainabilityBaselineConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -261,7 +261,7 @@ public open class CfnModelExplainabilityJobDefinition(
    */
   public open
       fun modelExplainabilityBaselineConfig(`value`: ModelExplainabilityBaselineConfigProperty) {
-    unwrap(this).setModelExplainabilityBaselineConfig(`value`.let(ModelExplainabilityBaselineConfigProperty::unwrap))
+    unwrap(this).setModelExplainabilityBaselineConfig(`value`.let(ModelExplainabilityBaselineConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -282,14 +282,14 @@ public open class CfnModelExplainabilityJobDefinition(
    * Inputs for the model explainability job.
    */
   public open fun modelExplainabilityJobInput(`value`: IResolvable) {
-    unwrap(this).setModelExplainabilityJobInput(`value`.let(IResolvable::unwrap))
+    unwrap(this).setModelExplainabilityJobInput(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Inputs for the model explainability job.
    */
   public open fun modelExplainabilityJobInput(`value`: ModelExplainabilityJobInputProperty) {
-    unwrap(this).setModelExplainabilityJobInput(`value`.let(ModelExplainabilityJobInputProperty::unwrap))
+    unwrap(this).setModelExplainabilityJobInput(`value`.let(ModelExplainabilityJobInputProperty.Companion::unwrap))
   }
 
   /**
@@ -311,14 +311,14 @@ public open class CfnModelExplainabilityJobDefinition(
    * The output configuration for monitoring jobs.
    */
   public open fun modelExplainabilityJobOutputConfig(`value`: IResolvable) {
-    unwrap(this).setModelExplainabilityJobOutputConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setModelExplainabilityJobOutputConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The output configuration for monitoring jobs.
    */
   public open fun modelExplainabilityJobOutputConfig(`value`: MonitoringOutputConfigProperty) {
-    unwrap(this).setModelExplainabilityJobOutputConfig(`value`.let(MonitoringOutputConfigProperty::unwrap))
+    unwrap(this).setModelExplainabilityJobOutputConfig(`value`.let(MonitoringOutputConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -339,14 +339,14 @@ public open class CfnModelExplainabilityJobDefinition(
    * Networking options for a model explainability job.
    */
   public open fun networkConfig(`value`: IResolvable) {
-    unwrap(this).setNetworkConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNetworkConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Networking options for a model explainability job.
    */
   public open fun networkConfig(`value`: NetworkConfigProperty) {
-    unwrap(this).setNetworkConfig(`value`.let(NetworkConfigProperty::unwrap))
+    unwrap(this).setNetworkConfig(`value`.let(NetworkConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -380,14 +380,14 @@ public open class CfnModelExplainabilityJobDefinition(
    * A time limit for how long the monitoring job is allowed to run before stopping.
    */
   public open fun stoppingCondition(`value`: IResolvable) {
-    unwrap(this).setStoppingCondition(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStoppingCondition(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A time limit for how long the monitoring job is allowed to run before stopping.
    */
   public open fun stoppingCondition(`value`: StoppingConditionProperty) {
-    unwrap(this).setStoppingCondition(`value`.let(StoppingConditionProperty::unwrap))
+    unwrap(this).setStoppingCondition(`value`.let(StoppingConditionProperty.Companion::unwrap))
   }
 
   /**
@@ -413,7 +413,7 @@ public open class CfnModelExplainabilityJobDefinition(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -717,7 +717,7 @@ public open class CfnModelExplainabilityJobDefinition(
      * @param jobResources Identifies the resources to deploy for a monitoring job. 
      */
     override fun jobResources(jobResources: IResolvable) {
-      cdkBuilder.jobResources(jobResources.let(IResolvable::unwrap))
+      cdkBuilder.jobResources(jobResources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -727,7 +727,7 @@ public open class CfnModelExplainabilityJobDefinition(
      * @param jobResources Identifies the resources to deploy for a monitoring job. 
      */
     override fun jobResources(jobResources: MonitoringResourcesProperty) {
-      cdkBuilder.jobResources(jobResources.let(MonitoringResourcesProperty::unwrap))
+      cdkBuilder.jobResources(jobResources.let(MonitoringResourcesProperty.Companion::unwrap))
     }
 
     /**
@@ -750,7 +750,7 @@ public open class CfnModelExplainabilityJobDefinition(
      */
     override
         fun modelExplainabilityAppSpecification(modelExplainabilityAppSpecification: IResolvable) {
-      cdkBuilder.modelExplainabilityAppSpecification(modelExplainabilityAppSpecification.let(IResolvable::unwrap))
+      cdkBuilder.modelExplainabilityAppSpecification(modelExplainabilityAppSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -762,7 +762,7 @@ public open class CfnModelExplainabilityJobDefinition(
      */
     override
         fun modelExplainabilityAppSpecification(modelExplainabilityAppSpecification: ModelExplainabilityAppSpecificationProperty) {
-      cdkBuilder.modelExplainabilityAppSpecification(modelExplainabilityAppSpecification.let(ModelExplainabilityAppSpecificationProperty::unwrap))
+      cdkBuilder.modelExplainabilityAppSpecification(modelExplainabilityAppSpecification.let(ModelExplainabilityAppSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -787,7 +787,7 @@ public open class CfnModelExplainabilityJobDefinition(
      * explainability job. 
      */
     override fun modelExplainabilityBaselineConfig(modelExplainabilityBaselineConfig: IResolvable) {
-      cdkBuilder.modelExplainabilityBaselineConfig(modelExplainabilityBaselineConfig.let(IResolvable::unwrap))
+      cdkBuilder.modelExplainabilityBaselineConfig(modelExplainabilityBaselineConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -799,7 +799,7 @@ public open class CfnModelExplainabilityJobDefinition(
      */
     override
         fun modelExplainabilityBaselineConfig(modelExplainabilityBaselineConfig: ModelExplainabilityBaselineConfigProperty) {
-      cdkBuilder.modelExplainabilityBaselineConfig(modelExplainabilityBaselineConfig.let(ModelExplainabilityBaselineConfigProperty::unwrap))
+      cdkBuilder.modelExplainabilityBaselineConfig(modelExplainabilityBaselineConfig.let(ModelExplainabilityBaselineConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -823,7 +823,7 @@ public open class CfnModelExplainabilityJobDefinition(
      * @param modelExplainabilityJobInput Inputs for the model explainability job. 
      */
     override fun modelExplainabilityJobInput(modelExplainabilityJobInput: IResolvable) {
-      cdkBuilder.modelExplainabilityJobInput(modelExplainabilityJobInput.let(IResolvable::unwrap))
+      cdkBuilder.modelExplainabilityJobInput(modelExplainabilityJobInput.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -834,7 +834,7 @@ public open class CfnModelExplainabilityJobDefinition(
      */
     override
         fun modelExplainabilityJobInput(modelExplainabilityJobInput: ModelExplainabilityJobInputProperty) {
-      cdkBuilder.modelExplainabilityJobInput(modelExplainabilityJobInput.let(ModelExplainabilityJobInputProperty::unwrap))
+      cdkBuilder.modelExplainabilityJobInput(modelExplainabilityJobInput.let(ModelExplainabilityJobInputProperty.Companion::unwrap))
     }
 
     /**
@@ -858,7 +858,7 @@ public open class CfnModelExplainabilityJobDefinition(
      */
     override
         fun modelExplainabilityJobOutputConfig(modelExplainabilityJobOutputConfig: IResolvable) {
-      cdkBuilder.modelExplainabilityJobOutputConfig(modelExplainabilityJobOutputConfig.let(IResolvable::unwrap))
+      cdkBuilder.modelExplainabilityJobOutputConfig(modelExplainabilityJobOutputConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -869,7 +869,7 @@ public open class CfnModelExplainabilityJobDefinition(
      */
     override
         fun modelExplainabilityJobOutputConfig(modelExplainabilityJobOutputConfig: MonitoringOutputConfigProperty) {
-      cdkBuilder.modelExplainabilityJobOutputConfig(modelExplainabilityJobOutputConfig.let(MonitoringOutputConfigProperty::unwrap))
+      cdkBuilder.modelExplainabilityJobOutputConfig(modelExplainabilityJobOutputConfig.let(MonitoringOutputConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -892,7 +892,7 @@ public open class CfnModelExplainabilityJobDefinition(
      * @param networkConfig Networking options for a model explainability job. 
      */
     override fun networkConfig(networkConfig: IResolvable) {
-      cdkBuilder.networkConfig(networkConfig.let(IResolvable::unwrap))
+      cdkBuilder.networkConfig(networkConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -902,7 +902,7 @@ public open class CfnModelExplainabilityJobDefinition(
      * @param networkConfig Networking options for a model explainability job. 
      */
     override fun networkConfig(networkConfig: NetworkConfigProperty) {
-      cdkBuilder.networkConfig(networkConfig.let(NetworkConfigProperty::unwrap))
+      cdkBuilder.networkConfig(networkConfig.let(NetworkConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -936,7 +936,7 @@ public open class CfnModelExplainabilityJobDefinition(
      * before stopping. 
      */
     override fun stoppingCondition(stoppingCondition: IResolvable) {
-      cdkBuilder.stoppingCondition(stoppingCondition.let(IResolvable::unwrap))
+      cdkBuilder.stoppingCondition(stoppingCondition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -947,7 +947,7 @@ public open class CfnModelExplainabilityJobDefinition(
      * before stopping. 
      */
     override fun stoppingCondition(stoppingCondition: StoppingConditionProperty) {
-      cdkBuilder.stoppingCondition(stoppingCondition.let(StoppingConditionProperty::unwrap))
+      cdkBuilder.stoppingCondition(stoppingCondition.let(StoppingConditionProperty.Companion::unwrap))
     }
 
     /**
@@ -973,7 +973,7 @@ public open class CfnModelExplainabilityJobDefinition(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1194,14 +1194,14 @@ public open class CfnModelExplainabilityJobDefinition(
        * @param datasetFormat The dataset format for your batch transform job. 
        */
       override fun datasetFormat(datasetFormat: IResolvable) {
-        cdkBuilder.datasetFormat(datasetFormat.let(IResolvable::unwrap))
+        cdkBuilder.datasetFormat(datasetFormat.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param datasetFormat The dataset format for your batch transform job. 
        */
       override fun datasetFormat(datasetFormat: DatasetFormatProperty) {
-        cdkBuilder.datasetFormat(datasetFormat.let(DatasetFormatProperty::unwrap))
+        cdkBuilder.datasetFormat(datasetFormat.let(DatasetFormatProperty.Companion::unwrap))
       }
 
       /**
@@ -1677,7 +1677,7 @@ public open class CfnModelExplainabilityJobDefinition(
        * @param header A boolean flag indicating if given CSV has header.
        */
       override fun `header`(`header`: IResolvable) {
-        cdkBuilder.`header`(`header`.let(IResolvable::unwrap))
+        cdkBuilder.`header`(`header`.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1817,14 +1817,14 @@ public open class CfnModelExplainabilityJobDefinition(
        * @param csv The CSV format.
        */
       override fun csv(csv: IResolvable) {
-        cdkBuilder.csv(csv.let(IResolvable::unwrap))
+        cdkBuilder.csv(csv.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param csv The CSV format.
        */
       override fun csv(csv: CsvProperty) {
-        cdkBuilder.csv(csv.let(CsvProperty::unwrap))
+        cdkBuilder.csv(csv.let(CsvProperty.Companion::unwrap))
       }
 
       /**
@@ -1838,14 +1838,14 @@ public open class CfnModelExplainabilityJobDefinition(
        * @param json The Json format.
        */
       override fun json(json: IResolvable) {
-        cdkBuilder.json(json.let(IResolvable::unwrap))
+        cdkBuilder.json(json.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param json The Json format.
        */
       override fun json(json: JsonProperty) {
-        cdkBuilder.json(json.let(JsonProperty::unwrap))
+        cdkBuilder.json(json.let(JsonProperty.Companion::unwrap))
       }
 
       /**
@@ -1866,7 +1866,7 @@ public open class CfnModelExplainabilityJobDefinition(
        * @param parquet A flag indicating if the dataset format is Parquet.
        */
       override fun parquet(parquet: IResolvable) {
-        cdkBuilder.parquet(parquet.let(IResolvable::unwrap))
+        cdkBuilder.parquet(parquet.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2251,7 +2251,7 @@ public open class CfnModelExplainabilityJobDefinition(
        * @param line A boolean flag indicating if it is JSON line format.
        */
       override fun line(line: IResolvable) {
-        cdkBuilder.line(line.let(IResolvable::unwrap))
+        cdkBuilder.line(line.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2383,7 +2383,7 @@ public open class CfnModelExplainabilityJobDefinition(
        * @param environment Sets the environment variables in the Docker container.
        */
       override fun environment(environment: IResolvable) {
-        cdkBuilder.environment(environment.let(IResolvable::unwrap))
+        cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2534,14 +2534,14 @@ public open class CfnModelExplainabilityJobDefinition(
        * @param constraintsResource The constraints resource for a model explainability job.
        */
       override fun constraintsResource(constraintsResource: IResolvable) {
-        cdkBuilder.constraintsResource(constraintsResource.let(IResolvable::unwrap))
+        cdkBuilder.constraintsResource(constraintsResource.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param constraintsResource The constraints resource for a model explainability job.
        */
       override fun constraintsResource(constraintsResource: ConstraintsResourceProperty) {
-        cdkBuilder.constraintsResource(constraintsResource.let(ConstraintsResourceProperty::unwrap))
+        cdkBuilder.constraintsResource(constraintsResource.let(ConstraintsResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -2706,14 +2706,14 @@ public open class CfnModelExplainabilityJobDefinition(
        * @param batchTransformInput Input object for the batch transform job.
        */
       override fun batchTransformInput(batchTransformInput: IResolvable) {
-        cdkBuilder.batchTransformInput(batchTransformInput.let(IResolvable::unwrap))
+        cdkBuilder.batchTransformInput(batchTransformInput.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param batchTransformInput Input object for the batch transform job.
        */
       override fun batchTransformInput(batchTransformInput: BatchTransformInputProperty) {
-        cdkBuilder.batchTransformInput(batchTransformInput.let(BatchTransformInputProperty::unwrap))
+        cdkBuilder.batchTransformInput(batchTransformInput.let(BatchTransformInputProperty.Companion::unwrap))
       }
 
       /**
@@ -2729,14 +2729,14 @@ public open class CfnModelExplainabilityJobDefinition(
        * @param endpointInput Input object for the endpoint.
        */
       override fun endpointInput(endpointInput: IResolvable) {
-        cdkBuilder.endpointInput(endpointInput.let(IResolvable::unwrap))
+        cdkBuilder.endpointInput(endpointInput.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param endpointInput Input object for the endpoint.
        */
       override fun endpointInput(endpointInput: EndpointInputProperty) {
-        cdkBuilder.endpointInput(endpointInput.let(EndpointInputProperty::unwrap))
+        cdkBuilder.endpointInput(endpointInput.let(EndpointInputProperty.Companion::unwrap))
       }
 
       /**
@@ -2882,7 +2882,7 @@ public open class CfnModelExplainabilityJobDefinition(
        * This is where the output of the periodic monitoring jobs is uploaded.
        */
       override fun monitoringOutputs(monitoringOutputs: IResolvable) {
-        cdkBuilder.monitoringOutputs(monitoringOutputs.let(IResolvable::unwrap))
+        cdkBuilder.monitoringOutputs(monitoringOutputs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3010,7 +3010,7 @@ public open class CfnModelExplainabilityJobDefinition(
        * saved. 
        */
       override fun s3Output(s3Output: IResolvable) {
-        cdkBuilder.s3Output(s3Output.let(IResolvable::unwrap))
+        cdkBuilder.s3Output(s3Output.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3018,7 +3018,7 @@ public open class CfnModelExplainabilityJobDefinition(
        * saved. 
        */
       override fun s3Output(s3Output: S3OutputProperty) {
-        cdkBuilder.s3Output(s3Output.let(S3OutputProperty::unwrap))
+        cdkBuilder.s3Output(s3Output.let(S3OutputProperty.Companion::unwrap))
       }
 
       /**
@@ -3131,7 +3131,7 @@ public open class CfnModelExplainabilityJobDefinition(
        * job. 
        */
       override fun clusterConfig(clusterConfig: IResolvable) {
-        cdkBuilder.clusterConfig(clusterConfig.let(IResolvable::unwrap))
+        cdkBuilder.clusterConfig(clusterConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3139,7 +3139,7 @@ public open class CfnModelExplainabilityJobDefinition(
        * job. 
        */
       override fun clusterConfig(clusterConfig: ClusterConfigProperty) {
-        cdkBuilder.clusterConfig(clusterConfig.let(ClusterConfigProperty::unwrap))
+        cdkBuilder.clusterConfig(clusterConfig.let(ClusterConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -3318,7 +3318,7 @@ public open class CfnModelExplainabilityJobDefinition(
        */
       override
           fun enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption: IResolvable) {
-        cdkBuilder.enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption.let(IResolvable::unwrap))
+        cdkBuilder.enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3334,7 +3334,7 @@ public open class CfnModelExplainabilityJobDefinition(
        * from the containers used for the processing job.
        */
       override fun enableNetworkIsolation(enableNetworkIsolation: IResolvable) {
-        cdkBuilder.enableNetworkIsolation(enableNetworkIsolation.let(IResolvable::unwrap))
+        cdkBuilder.enableNetworkIsolation(enableNetworkIsolation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3342,7 +3342,7 @@ public open class CfnModelExplainabilityJobDefinition(
        * Control access to and from your training and model containers by configuring the VPC.
        */
       override fun vpcConfig(vpcConfig: IResolvable) {
-        cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+        cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3350,7 +3350,7 @@ public open class CfnModelExplainabilityJobDefinition(
        * Control access to and from your training and model containers by configuring the VPC.
        */
       override fun vpcConfig(vpcConfig: VpcConfigProperty) {
-        cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
+        cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty.Companion::unwrap))
       }
 
       /**

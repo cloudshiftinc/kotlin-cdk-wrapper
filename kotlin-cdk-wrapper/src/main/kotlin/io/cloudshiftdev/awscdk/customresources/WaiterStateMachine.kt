@@ -61,8 +61,8 @@ public open class WaiterStateMachine(
     id: String,
     props: WaiterStateMachineProps,
   ) :
-      this(software.amazon.awscdk.customresources.WaiterStateMachine(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(WaiterStateMachineProps::unwrap))
+      this(software.amazon.awscdk.customresources.WaiterStateMachine(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(WaiterStateMachineProps.Companion::unwrap))
   )
 
   public constructor(
@@ -78,7 +78,7 @@ public open class WaiterStateMachine(
    * @param identity 
    */
   public open fun grantStartExecution(identity: IGrantable): Grant =
-      unwrap(this).grantStartExecution(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantStartExecution(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The ARN of the state machine.
@@ -191,7 +191,7 @@ public open class WaiterStateMachine(
      * @param interval The interval to wait between attempts. 
      */
     override fun interval(interval: Duration) {
-      cdkBuilder.interval(interval.let(Duration::unwrap))
+      cdkBuilder.interval(interval.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -201,7 +201,7 @@ public open class WaiterStateMachine(
      * 'incomplete'. 
      */
     override fun isCompleteHandler(isCompleteHandler: IFunction) {
-      cdkBuilder.isCompleteHandler(isCompleteHandler.let(IFunction::unwrap))
+      cdkBuilder.isCompleteHandler(isCompleteHandler.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -213,7 +213,7 @@ public open class WaiterStateMachine(
      * 
      */
     override fun logOptions(logOptions: LogOptions) {
-      cdkBuilder.logOptions(logOptions.let(LogOptions::unwrap))
+      cdkBuilder.logOptions(logOptions.let(LogOptions.Companion::unwrap))
     }
 
     /**
@@ -244,7 +244,7 @@ public open class WaiterStateMachine(
      * @param timeoutHandler The handler to call if the waiter times out and is incomplete. 
      */
     override fun timeoutHandler(timeoutHandler: IFunction) {
-      cdkBuilder.timeoutHandler(timeoutHandler.let(IFunction::unwrap))
+      cdkBuilder.timeoutHandler(timeoutHandler.let(IFunction.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.customresources.WaiterStateMachine =

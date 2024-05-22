@@ -47,8 +47,8 @@ public open class GatewayVpcEndpoint(
     id: String,
     props: GatewayVpcEndpointProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.GatewayVpcEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(GatewayVpcEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.GatewayVpcEndpoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(GatewayVpcEndpointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -159,7 +159,7 @@ public open class GatewayVpcEndpoint(
      * @param service The service to use for this gateway VPC endpoint. 
      */
     override fun service(service: IGatewayVpcEndpointService) {
-      cdkBuilder.service(service.let(IGatewayVpcEndpointService::unwrap))
+      cdkBuilder.service(service.let(IGatewayVpcEndpointService.Companion::unwrap))
     }
 
     /**
@@ -184,7 +184,7 @@ public open class GatewayVpcEndpoint(
      * @param subnets Where to add endpoint routing. 
      */
     override fun subnets(subnets: List<SubnetSelection>) {
-      cdkBuilder.subnets(subnets.map(SubnetSelection::unwrap))
+      cdkBuilder.subnets(subnets.map(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -216,7 +216,7 @@ public open class GatewayVpcEndpoint(
      * @param vpc The VPC network in which the gateway endpoint will be used. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.GatewayVpcEndpoint = cdkBuilder.build()
@@ -228,7 +228,7 @@ public open class GatewayVpcEndpoint(
       id: String,
       gatewayVpcEndpointId: String,
     ): IGatewayVpcEndpoint =
-        software.amazon.awscdk.services.ec2.GatewayVpcEndpoint.fromGatewayVpcEndpointId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ec2.GatewayVpcEndpoint.fromGatewayVpcEndpointId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, gatewayVpcEndpointId).let(IGatewayVpcEndpoint::wrap)
 
     public operator fun invoke(

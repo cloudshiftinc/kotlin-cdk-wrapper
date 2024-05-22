@@ -38,7 +38,7 @@ public open class ReportGroup(
   cdkObject: software.amazon.awscdk.services.codebuild.ReportGroup,
 ) : Resource(cdkObject), IReportGroup {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.codebuild.ReportGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.codebuild.ReportGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -47,8 +47,8 @@ public open class ReportGroup(
     id: String,
     props: ReportGroupProps,
   ) :
-      this(software.amazon.awscdk.services.codebuild.ReportGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ReportGroupProps::unwrap))
+      this(software.amazon.awscdk.services.codebuild.ReportGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ReportGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -64,7 +64,7 @@ public open class ReportGroup(
    * @param identity 
    */
   public override fun grantWrite(identity: IGrantable): Grant =
-      unwrap(this).grantWrite(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantWrite(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The ARN of the ReportGroup.
@@ -152,7 +152,7 @@ public open class ReportGroup(
      * @param exportBucket An optional S3 bucket to export the reports to. 
      */
     override fun exportBucket(exportBucket: IBucket) {
-      cdkBuilder.exportBucket(exportBucket.let(IBucket::unwrap))
+      cdkBuilder.exportBucket(exportBucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -166,7 +166,7 @@ public open class ReportGroup(
      * @param removalPolicy What to do when this resource is deleted from a stack. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -191,7 +191,7 @@ public open class ReportGroup(
      * @param type The type of report group. This can be one of the following values:. 
      */
     override fun type(type: ReportGroupType) {
-      cdkBuilder.type(type.let(ReportGroupType::unwrap))
+      cdkBuilder.type(type.let(ReportGroupType.Companion::unwrap))
     }
 
     /**
@@ -218,7 +218,7 @@ public open class ReportGroup(
       id: String,
       reportGroupName: String,
     ): IReportGroup =
-        software.amazon.awscdk.services.codebuild.ReportGroup.fromReportGroupName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.codebuild.ReportGroup.fromReportGroupName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, reportGroupName).let(IReportGroup::wrap)
 
     public operator fun invoke(

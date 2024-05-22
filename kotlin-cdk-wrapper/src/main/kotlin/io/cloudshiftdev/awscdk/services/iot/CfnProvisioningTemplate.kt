@@ -60,8 +60,8 @@ public open class CfnProvisioningTemplate(
     id: String,
     props: CfnProvisioningTemplateProps,
   ) :
-      this(software.amazon.awscdk.services.iot.CfnProvisioningTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnProvisioningTemplateProps::unwrap))
+      this(software.amazon.awscdk.services.iot.CfnProvisioningTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnProvisioningTemplateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -104,7 +104,7 @@ public open class CfnProvisioningTemplate(
    * True to enable the fleet provisioning template, otherwise false.
    */
   public open fun enabled(`value`: IResolvable) {
-    unwrap(this).setEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -113,7 +113,7 @@ public open class CfnProvisioningTemplate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -125,14 +125,14 @@ public open class CfnProvisioningTemplate(
    * Creates a pre-provisioning hook template.
    */
   public open fun preProvisioningHook(`value`: IResolvable) {
-    unwrap(this).setPreProvisioningHook(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPreProvisioningHook(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Creates a pre-provisioning hook template.
    */
   public open fun preProvisioningHook(`value`: ProvisioningHookProperty) {
-    unwrap(this).setPreProvisioningHook(`value`.let(ProvisioningHookProperty::unwrap))
+    unwrap(this).setPreProvisioningHook(`value`.let(ProvisioningHookProperty.Companion::unwrap))
   }
 
   /**
@@ -170,7 +170,7 @@ public open class CfnProvisioningTemplate(
    * Metadata that can be used to manage the fleet provisioning template.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -355,7 +355,7 @@ public open class CfnProvisioningTemplate(
      * @param enabled True to enable the fleet provisioning template, otherwise false. 
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -365,7 +365,7 @@ public open class CfnProvisioningTemplate(
      * @param preProvisioningHook Creates a pre-provisioning hook template. 
      */
     override fun preProvisioningHook(preProvisioningHook: IResolvable) {
-      cdkBuilder.preProvisioningHook(preProvisioningHook.let(IResolvable::unwrap))
+      cdkBuilder.preProvisioningHook(preProvisioningHook.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -375,7 +375,7 @@ public open class CfnProvisioningTemplate(
      * @param preProvisioningHook Creates a pre-provisioning hook template. 
      */
     override fun preProvisioningHook(preProvisioningHook: ProvisioningHookProperty) {
-      cdkBuilder.preProvisioningHook(preProvisioningHook.let(ProvisioningHookProperty::unwrap))
+      cdkBuilder.preProvisioningHook(preProvisioningHook.let(ProvisioningHookProperty.Companion::unwrap))
     }
 
     /**
@@ -410,7 +410,7 @@ public open class CfnProvisioningTemplate(
      * @param tags Metadata that can be used to manage the fleet provisioning template. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

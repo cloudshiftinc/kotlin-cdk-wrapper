@@ -76,8 +76,8 @@ public open class CfnApp(
     id: String,
     props: CfnAppProps,
   ) :
-      this(software.amazon.awscdk.services.opsworks.CfnApp(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAppProps::unwrap))
+      this(software.amazon.awscdk.services.opsworks.CfnApp(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAppProps.Companion::unwrap))
   )
 
   public constructor(
@@ -96,14 +96,14 @@ public open class CfnApp(
    * A `Source` object that specifies the app repository.
    */
   public open fun appSource(`value`: IResolvable) {
-    unwrap(this).setAppSource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAppSource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A `Source` object that specifies the app repository.
    */
   public open fun appSource(`value`: SourceProperty) {
-    unwrap(this).setAppSource(`value`.let(SourceProperty::unwrap))
+    unwrap(this).setAppSource(`value`.let(SourceProperty.Companion::unwrap))
   }
 
   /**
@@ -128,7 +128,7 @@ public open class CfnApp(
    * One or more user-defined key/value pairs to be added to the stack attributes.
    */
   public open fun attributes(`value`: IResolvable) {
-    unwrap(this).setAttributes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -147,7 +147,7 @@ public open class CfnApp(
    * The app's data source.
    */
   public open fun dataSources(`value`: IResolvable) {
-    unwrap(this).setDataSources(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataSources(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -207,7 +207,7 @@ public open class CfnApp(
    * Whether to enable SSL for the app.
    */
   public open fun enableSsl(`value`: IResolvable) {
-    unwrap(this).setEnableSsl(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableSsl(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -221,7 +221,7 @@ public open class CfnApp(
    * with the app.
    */
   public open fun environment(`value`: IResolvable) {
-    unwrap(this).setEnvironment(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnvironment(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -244,7 +244,7 @@ public open class CfnApp(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -280,14 +280,14 @@ public open class CfnApp(
    * An `SslConfiguration` object with the SSL configuration.
    */
   public open fun sslConfiguration(`value`: IResolvable) {
-    unwrap(this).setSslConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSslConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An `SslConfiguration` object with the SSL configuration.
    */
   public open fun sslConfiguration(`value`: SslConfigurationProperty) {
-    unwrap(this).setSslConfiguration(`value`.let(SslConfigurationProperty::unwrap))
+    unwrap(this).setSslConfiguration(`value`.let(SslConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -592,7 +592,7 @@ public open class CfnApp(
      * @param appSource A `Source` object that specifies the app repository. 
      */
     override fun appSource(appSource: IResolvable) {
-      cdkBuilder.appSource(appSource.let(IResolvable::unwrap))
+      cdkBuilder.appSource(appSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -602,7 +602,7 @@ public open class CfnApp(
      * @param appSource A `Source` object that specifies the app repository. 
      */
     override fun appSource(appSource: SourceProperty) {
-      cdkBuilder.appSource(appSource.let(SourceProperty::unwrap))
+      cdkBuilder.appSource(appSource.let(SourceProperty.Companion::unwrap))
     }
 
     /**
@@ -624,7 +624,7 @@ public open class CfnApp(
      * attributes. 
      */
     override fun attributes(attributes: IResolvable) {
-      cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+      cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -645,7 +645,7 @@ public open class CfnApp(
      * @param dataSources The app's data source. 
      */
     override fun dataSources(dataSources: IResolvable) {
-      cdkBuilder.dataSources(dataSources.let(IResolvable::unwrap))
+      cdkBuilder.dataSources(dataSources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -715,7 +715,7 @@ public open class CfnApp(
      * @param enableSsl Whether to enable SSL for the app. 
      */
     override fun enableSsl(enableSsl: IResolvable) {
-      cdkBuilder.enableSsl(enableSsl.let(IResolvable::unwrap))
+      cdkBuilder.enableSsl(enableSsl.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -742,7 +742,7 @@ public open class CfnApp(
      * variables to be associated with the app. 
      */
     override fun environment(environment: IResolvable) {
-      cdkBuilder.environment(environment.let(IResolvable::unwrap))
+      cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -824,7 +824,7 @@ public open class CfnApp(
      * @param sslConfiguration An `SslConfiguration` object with the SSL configuration. 
      */
     override fun sslConfiguration(sslConfiguration: IResolvable) {
-      cdkBuilder.sslConfiguration(sslConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.sslConfiguration(sslConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -834,7 +834,7 @@ public open class CfnApp(
      * @param sslConfiguration An `SslConfiguration` object with the SSL configuration. 
      */
     override fun sslConfiguration(sslConfiguration: SslConfigurationProperty) {
-      cdkBuilder.sslConfiguration(sslConfiguration.let(SslConfigurationProperty::unwrap))
+      cdkBuilder.sslConfiguration(sslConfiguration.let(SslConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1147,7 +1147,7 @@ public open class CfnApp(
        * `*****FILTERED*****` instead of the actual value. The default value for `Secure` is `false` .
        */
       override fun secure(secure: IResolvable) {
-        cdkBuilder.secure(secure.let(IResolvable::unwrap))
+        cdkBuilder.secure(secure.let(IResolvable.Companion::unwrap))
       }
 
       /**

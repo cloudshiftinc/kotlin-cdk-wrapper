@@ -208,7 +208,7 @@ public interface CfnLocationFSxONTAPProps {
      * FSx file system.
      */
     override fun protocol(protocol: IResolvable) {
-      cdkBuilder.protocol(protocol.let(IResolvable::unwrap))
+      cdkBuilder.protocol(protocol.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -216,7 +216,7 @@ public interface CfnLocationFSxONTAPProps {
      * FSx file system.
      */
     override fun protocol(protocol: CfnLocationFSxONTAP.ProtocolProperty) {
-      cdkBuilder.protocol(protocol.let(CfnLocationFSxONTAP.ProtocolProperty::unwrap))
+      cdkBuilder.protocol(protocol.let(CfnLocationFSxONTAP.ProtocolProperty.Companion::unwrap))
     }
 
     /**
@@ -288,7 +288,7 @@ public interface CfnLocationFSxONTAPProps {
      * We recommend creating at least a name tag for your location.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

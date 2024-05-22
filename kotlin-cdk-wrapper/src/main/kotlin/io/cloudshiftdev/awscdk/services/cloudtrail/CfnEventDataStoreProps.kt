@@ -574,7 +574,7 @@ public interface CfnEventDataStoreProps {
      * in the CloudTrail User Guide.
      */
     override fun advancedEventSelectors(advancedEventSelectors: IResolvable) {
-      cdkBuilder.advancedEventSelectors(advancedEventSelectors.let(IResolvable::unwrap))
+      cdkBuilder.advancedEventSelectors(advancedEventSelectors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -666,7 +666,7 @@ public interface CfnEventDataStoreProps {
      * Lake query federation is enabled.
      */
     override fun federationEnabled(federationEnabled: IResolvable) {
-      cdkBuilder.federationEnabled(federationEnabled.let(IResolvable::unwrap))
+      cdkBuilder.federationEnabled(federationEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -695,7 +695,7 @@ public interface CfnEventDataStoreProps {
      * The default is true.
      */
     override fun ingestionEnabled(ingestionEnabled: IResolvable) {
-      cdkBuilder.ingestionEnabled(ingestionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.ingestionEnabled(ingestionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -710,7 +710,7 @@ public interface CfnEventDataStoreProps {
      * codes. The error is shown if the API call is unsuccessful.
      */
     override fun insightSelectors(insightSelectors: IResolvable) {
-      cdkBuilder.insightSelectors(insightSelectors.let(IResolvable::unwrap))
+      cdkBuilder.insightSelectors(insightSelectors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -796,7 +796,7 @@ public interface CfnEventDataStoreProps {
      * Regions, or only from the Region in which the event data store is created.
      */
     override fun multiRegionEnabled(multiRegionEnabled: IResolvable) {
-      cdkBuilder.multiRegionEnabled(multiRegionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.multiRegionEnabled(multiRegionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -819,7 +819,7 @@ public interface CfnEventDataStoreProps {
      * an organization in AWS Organizations .
      */
     override fun organizationEnabled(organizationEnabled: IResolvable) {
-      cdkBuilder.organizationEnabled(organizationEnabled.let(IResolvable::unwrap))
+      cdkBuilder.organizationEnabled(organizationEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -848,7 +848,7 @@ public interface CfnEventDataStoreProps {
      * @param tags A list of tags.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -873,7 +873,7 @@ public interface CfnEventDataStoreProps {
      * termination protection is disabled.
      */
     override fun terminationProtectionEnabled(terminationProtectionEnabled: IResolvable) {
-      cdkBuilder.terminationProtectionEnabled(terminationProtectionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.terminationProtectionEnabled(terminationProtectionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudtrail.CfnEventDataStoreProps =

@@ -38,8 +38,8 @@ public open class CfnDeployment(
     id: String,
     props: CfnDeploymentProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.CfnDeployment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDeploymentProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.CfnDeployment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDeploymentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -84,7 +84,7 @@ public open class CfnDeployment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

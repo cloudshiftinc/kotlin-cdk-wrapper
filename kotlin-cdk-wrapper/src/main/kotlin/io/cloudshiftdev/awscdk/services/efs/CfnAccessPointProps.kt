@@ -183,7 +183,7 @@ public interface CfnAccessPointProps {
      * .
      */
     override fun accessPointTags(accessPointTags: List<CfnAccessPoint.AccessPointTagProperty>) {
-      cdkBuilder.accessPointTags(accessPointTags.map(CfnAccessPoint.AccessPointTagProperty::unwrap))
+      cdkBuilder.accessPointTags(accessPointTags.map(CfnAccessPoint.AccessPointTagProperty.Companion::unwrap))
     }
 
     /**
@@ -217,7 +217,7 @@ public interface CfnAccessPointProps {
      * access point.
      */
     override fun posixUser(posixUser: IResolvable) {
-      cdkBuilder.posixUser(posixUser.let(IResolvable::unwrap))
+      cdkBuilder.posixUser(posixUser.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -226,7 +226,7 @@ public interface CfnAccessPointProps {
      * access point.
      */
     override fun posixUser(posixUser: CfnAccessPoint.PosixUserProperty) {
-      cdkBuilder.posixUser(posixUser.let(CfnAccessPoint.PosixUserProperty::unwrap))
+      cdkBuilder.posixUser(posixUser.let(CfnAccessPoint.PosixUserProperty.Companion::unwrap))
     }
 
     /**
@@ -244,7 +244,7 @@ public interface CfnAccessPointProps {
      * the root directory to NFS clients using the access point.
      */
     override fun rootDirectory(rootDirectory: IResolvable) {
-      cdkBuilder.rootDirectory(rootDirectory.let(IResolvable::unwrap))
+      cdkBuilder.rootDirectory(rootDirectory.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -252,7 +252,7 @@ public interface CfnAccessPointProps {
      * the root directory to NFS clients using the access point.
      */
     override fun rootDirectory(rootDirectory: CfnAccessPoint.RootDirectoryProperty) {
-      cdkBuilder.rootDirectory(rootDirectory.let(CfnAccessPoint.RootDirectoryProperty::unwrap))
+      cdkBuilder.rootDirectory(rootDirectory.let(CfnAccessPoint.RootDirectoryProperty.Companion::unwrap))
     }
 
     /**

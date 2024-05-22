@@ -42,8 +42,8 @@ public open class CfnOriginEndpointPolicy(
     id: String,
     props: CfnOriginEndpointPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpointPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnOriginEndpointPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpointPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnOriginEndpointPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -83,7 +83,7 @@ public open class CfnOriginEndpointPolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

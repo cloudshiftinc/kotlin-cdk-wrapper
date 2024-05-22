@@ -62,12 +62,12 @@ public open class PrimaryKey(
   cdkObject: software.amazon.awscdk.services.appsync.PrimaryKey,
 ) : CdkObject(cdkObject) {
   public constructor(pkey: Assign) :
-      this(software.amazon.awscdk.services.appsync.PrimaryKey(pkey.let(Assign::unwrap))
+      this(software.amazon.awscdk.services.appsync.PrimaryKey(pkey.let(Assign.Companion::unwrap))
   )
 
   public constructor(pkey: Assign, skey: Assign) :
-      this(software.amazon.awscdk.services.appsync.PrimaryKey(pkey.let(Assign::unwrap),
-      skey.let(Assign::unwrap))
+      this(software.amazon.awscdk.services.appsync.PrimaryKey(pkey.let(Assign.Companion::unwrap),
+      skey.let(Assign.Companion::unwrap))
   )
 
   /**

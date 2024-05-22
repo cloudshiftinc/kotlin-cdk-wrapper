@@ -95,7 +95,7 @@ public interface SparkSubmitJobDriver {
      * Length Constraints: Minimum length of 1. Maximum length of 256.
      */
     override fun entryPoint(entryPoint: TaskInput) {
-      cdkBuilder.entryPoint(entryPoint.let(TaskInput::unwrap))
+      cdkBuilder.entryPoint(entryPoint.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -104,7 +104,7 @@ public interface SparkSubmitJobDriver {
      * Length Constraints: Minimum length of 1. Maximum length of 10280.
      */
     override fun entryPointArguments(entryPointArguments: TaskInput) {
-      cdkBuilder.entryPointArguments(entryPointArguments.let(TaskInput::unwrap))
+      cdkBuilder.entryPointArguments(entryPointArguments.let(TaskInput.Companion::unwrap))
     }
 
     /**

@@ -50,7 +50,7 @@ public interface BatchHttpRouteOptions {
      * @param integration The integration to be configured on this route. 
      */
     override fun integration(integration: HttpRouteIntegration) {
-      cdkBuilder.integration(integration.let(HttpRouteIntegration::unwrap))
+      cdkBuilder.integration(integration.let(HttpRouteIntegration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.BatchHttpRouteOptions =

@@ -617,7 +617,7 @@ public interface BucketDeploymentProps {
      * deployment.
      */
     override fun accessControl(accessControl: BucketAccessControl) {
-      cdkBuilder.accessControl(accessControl.let(BucketAccessControl::unwrap))
+      cdkBuilder.accessControl(accessControl.let(BucketAccessControl.Companion::unwrap))
     }
 
     /**
@@ -625,7 +625,7 @@ public interface BucketDeploymentProps {
      * deployment.
      */
     override fun cacheControl(cacheControl: List<CacheControl>) {
-      cdkBuilder.cacheControl(cacheControl.map(CacheControl::unwrap))
+      cdkBuilder.cacheControl(cacheControl.map(CacheControl.Companion::unwrap))
     }
 
     /**
@@ -671,7 +671,7 @@ public interface BucketDeploymentProps {
      * @param destinationBucket The S3 bucket to sync the contents of the zip file to. 
      */
     override fun destinationBucket(destinationBucket: IBucket) {
-      cdkBuilder.destinationBucket(destinationBucket.let(IBucket::unwrap))
+      cdkBuilder.destinationBucket(destinationBucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -688,7 +688,7 @@ public interface BucketDeploymentProps {
      * files are uploaded to the destination bucket.
      */
     override fun distribution(distribution: IDistribution) {
-      cdkBuilder.distribution(distribution.let(IDistribution::unwrap))
+      cdkBuilder.distribution(distribution.let(IDistribution.Companion::unwrap))
     }
 
     /**
@@ -708,7 +708,7 @@ public interface BucketDeploymentProps {
      * @param ephemeralStorageSize The size of the AWS Lambda function’s /tmp directory in MiB.
      */
     override fun ephemeralStorageSize(ephemeralStorageSize: Size) {
-      cdkBuilder.ephemeralStorageSize(ephemeralStorageSize.let(Size::unwrap))
+      cdkBuilder.ephemeralStorageSize(ephemeralStorageSize.let(Size.Companion::unwrap))
     }
 
     /**
@@ -739,7 +739,7 @@ public interface BucketDeploymentProps {
      * @param expires System-defined expires metadata to be set on all objects in the deployment.
      */
     override fun expires(expires: Expiration) {
-      cdkBuilder.expires(expires.let(Expiration::unwrap))
+      cdkBuilder.expires(expires.let(Expiration.Companion::unwrap))
     }
 
     /**
@@ -776,7 +776,7 @@ public interface BucketDeploymentProps {
      * If you are deploying to another type of region, please check regional availability first.
      */
     override fun logGroup(logGroup: ILogGroup) {
-      cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
+      cdkBuilder.logGroup(logGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -787,7 +787,7 @@ public interface BucketDeploymentProps {
      * function to send logs to it.
      */
     override fun logRetention(logRetention: RetentionDays) {
-      cdkBuilder.logRetention(logRetention.let(RetentionDays::unwrap))
+      cdkBuilder.logRetention(logRetention.let(RetentionDays.Companion::unwrap))
     }
 
     /**
@@ -830,7 +830,7 @@ public interface BucketDeploymentProps {
      * @param role Execution role associated with this function.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -838,7 +838,7 @@ public interface BucketDeploymentProps {
      * all objects in the deployment.
      */
     override fun serverSideEncryption(serverSideEncryption: ServerSideEncryption) {
-      cdkBuilder.serverSideEncryption(serverSideEncryption.let(ServerSideEncryption::unwrap))
+      cdkBuilder.serverSideEncryption(serverSideEncryption.let(ServerSideEncryption.Companion::unwrap))
     }
 
     /**
@@ -873,7 +873,7 @@ public interface BucketDeploymentProps {
      * @param sources The sources from which to deploy the contents of this bucket. 
      */
     override fun sources(sources: List<ISource>) {
-      cdkBuilder.sources(sources.map(ISource::unwrap))
+      cdkBuilder.sources(sources.map(ISource.Companion::unwrap))
     }
 
     /**
@@ -886,7 +886,7 @@ public interface BucketDeploymentProps {
      * the deployment.
      */
     override fun storageClass(storageClass: StorageClass) {
-      cdkBuilder.storageClass(storageClass.let(StorageClass::unwrap))
+      cdkBuilder.storageClass(storageClass.let(StorageClass.Companion::unwrap))
     }
 
     /**
@@ -903,7 +903,7 @@ public interface BucketDeploymentProps {
      * This is required if `useEfs` is set.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -911,7 +911,7 @@ public interface BucketDeploymentProps {
      * Only used if 'vpc' is supplied.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

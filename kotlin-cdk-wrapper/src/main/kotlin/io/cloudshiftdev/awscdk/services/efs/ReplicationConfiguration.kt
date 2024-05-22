@@ -71,7 +71,7 @@ public abstract class ReplicationConfiguration(
 
   public companion object {
     public fun existingFileSystem(destinationFileSystem: IFileSystem): ReplicationConfiguration =
-        software.amazon.awscdk.services.efs.ReplicationConfiguration.existingFileSystem(destinationFileSystem.let(IFileSystem::unwrap)).let(ReplicationConfiguration::wrap)
+        software.amazon.awscdk.services.efs.ReplicationConfiguration.existingFileSystem(destinationFileSystem.let(IFileSystem.Companion::unwrap)).let(ReplicationConfiguration::wrap)
 
     public fun oneZoneFileSystem(region: String, availabilityZone: String): ReplicationConfiguration
         = software.amazon.awscdk.services.efs.ReplicationConfiguration.oneZoneFileSystem(region,
@@ -83,7 +83,7 @@ public abstract class ReplicationConfiguration(
       kmsKey: IKey,
     ): ReplicationConfiguration =
         software.amazon.awscdk.services.efs.ReplicationConfiguration.oneZoneFileSystem(region,
-        availabilityZone, kmsKey.let(IKey::unwrap)).let(ReplicationConfiguration::wrap)
+        availabilityZone, kmsKey.let(IKey.Companion::unwrap)).let(ReplicationConfiguration::wrap)
 
     public fun regionalFileSystem(): ReplicationConfiguration =
         software.amazon.awscdk.services.efs.ReplicationConfiguration.regionalFileSystem().let(ReplicationConfiguration::wrap)
@@ -93,7 +93,7 @@ public abstract class ReplicationConfiguration(
 
     public fun regionalFileSystem(region: String, kmsKey: IKey): ReplicationConfiguration =
         software.amazon.awscdk.services.efs.ReplicationConfiguration.regionalFileSystem(region,
-        kmsKey.let(IKey::unwrap)).let(ReplicationConfiguration::wrap)
+        kmsKey.let(IKey.Companion::unwrap)).let(ReplicationConfiguration::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.efs.ReplicationConfiguration):
         ReplicationConfiguration = CdkObjectWrappers.wrap(cdkObject) as? ReplicationConfiguration ?:

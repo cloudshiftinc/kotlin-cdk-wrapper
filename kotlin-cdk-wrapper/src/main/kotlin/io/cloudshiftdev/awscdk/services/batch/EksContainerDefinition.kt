@@ -42,8 +42,8 @@ public open class EksContainerDefinition(
     id: String,
     props: EksContainerDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.batch.EksContainerDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EksContainerDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.batch.EksContainerDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EksContainerDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -61,7 +61,7 @@ public open class EksContainerDefinition(
    * @param volume 
    */
   public override fun addVolume(volume: EksVolume) {
-    unwrap(this).addVolume(volume.let(EksVolume::unwrap))
+    unwrap(this).addVolume(volume.let(EksVolume.Companion::unwrap))
   }
 
   /**
@@ -810,7 +810,7 @@ public open class EksContainerDefinition(
      * @param image The image that this container will run. 
      */
     override fun image(image: ContainerImage) {
-      cdkBuilder.image(image.let(ContainerImage::unwrap))
+      cdkBuilder.image(image.let(ContainerImage.Companion::unwrap))
     }
 
     /**
@@ -822,7 +822,7 @@ public open class EksContainerDefinition(
      * @param imagePullPolicy The image pull policy for this container. 
      */
     override fun imagePullPolicy(imagePullPolicy: ImagePullPolicy) {
-      cdkBuilder.imagePullPolicy(imagePullPolicy.let(ImagePullPolicy::unwrap))
+      cdkBuilder.imagePullPolicy(imagePullPolicy.let(ImagePullPolicy.Companion::unwrap))
     }
 
     /**
@@ -844,7 +844,7 @@ public open class EksContainerDefinition(
      * @param memoryLimit The amount (in MiB) of memory to present to the container. 
      */
     override fun memoryLimit(memoryLimit: Size) {
-      cdkBuilder.memoryLimit(memoryLimit.let(Size::unwrap))
+      cdkBuilder.memoryLimit(memoryLimit.let(Size.Companion::unwrap))
     }
 
     /**
@@ -873,7 +873,7 @@ public open class EksContainerDefinition(
      * @param memoryReservation The soft limit (in MiB) of memory to reserve for the container. 
      */
     override fun memoryReservation(memoryReservation: Size) {
-      cdkBuilder.memoryReservation(memoryReservation.let(Size::unwrap))
+      cdkBuilder.memoryReservation(memoryReservation.let(Size.Companion::unwrap))
     }
 
     /**
@@ -990,7 +990,7 @@ public open class EksContainerDefinition(
      * @param volumes The Volumes to mount to this container. 
      */
     override fun volumes(volumes: List<EksVolume>) {
-      cdkBuilder.volumes(volumes.map(EksVolume::unwrap))
+      cdkBuilder.volumes(volumes.map(EksVolume.Companion::unwrap))
     }
 
     /**

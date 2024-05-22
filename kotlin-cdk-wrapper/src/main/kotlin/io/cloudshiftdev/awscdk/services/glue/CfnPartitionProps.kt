@@ -177,14 +177,14 @@ public interface CfnPartitionProps {
      * @param partitionInput The structure used to create and update a partition. 
      */
     override fun partitionInput(partitionInput: IResolvable) {
-      cdkBuilder.partitionInput(partitionInput.let(IResolvable::unwrap))
+      cdkBuilder.partitionInput(partitionInput.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param partitionInput The structure used to create and update a partition. 
      */
     override fun partitionInput(partitionInput: CfnPartition.PartitionInputProperty) {
-      cdkBuilder.partitionInput(partitionInput.let(CfnPartition.PartitionInputProperty::unwrap))
+      cdkBuilder.partitionInput(partitionInput.let(CfnPartition.PartitionInputProperty.Companion::unwrap))
     }
 
     /**

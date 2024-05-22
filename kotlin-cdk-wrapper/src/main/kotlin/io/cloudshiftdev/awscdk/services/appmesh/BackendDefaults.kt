@@ -79,7 +79,7 @@ public interface BackendDefaults {
      * @param tlsClientPolicy TLS properties for Client policy for backend defaults.
      */
     override fun tlsClientPolicy(tlsClientPolicy: TlsClientPolicy) {
-      cdkBuilder.tlsClientPolicy(tlsClientPolicy.let(TlsClientPolicy::unwrap))
+      cdkBuilder.tlsClientPolicy(tlsClientPolicy.let(TlsClientPolicy.Companion::unwrap))
     }
 
     /**

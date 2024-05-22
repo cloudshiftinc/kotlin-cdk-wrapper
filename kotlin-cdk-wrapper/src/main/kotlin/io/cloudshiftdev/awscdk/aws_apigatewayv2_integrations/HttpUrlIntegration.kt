@@ -47,7 +47,7 @@ public open class HttpUrlIntegration(
     url: String,
     props: HttpUrlIntegrationProps,
   ) : this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegration(id, url,
-      props.let(HttpUrlIntegrationProps::unwrap))
+      props.let(HttpUrlIntegrationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -63,7 +63,7 @@ public open class HttpUrlIntegration(
    * @param _options 
    */
   public override fun bind(options: HttpRouteIntegrationBindOptions): HttpRouteIntegrationConfig =
-      unwrap(this).bind(options.let(HttpRouteIntegrationBindOptions::unwrap)).let(HttpRouteIntegrationConfig::wrap)
+      unwrap(this).bind(options.let(HttpRouteIntegrationBindOptions.Companion::unwrap)).let(HttpRouteIntegrationConfig::wrap)
 
   /**
    * Bind this integration to the route.
@@ -119,7 +119,7 @@ public open class HttpUrlIntegration(
      * @param method The HTTP method that must be used to invoke the underlying HTTP proxy. 
      */
     override fun method(method: HttpMethod) {
-      cdkBuilder.method(method.let(HttpMethod::unwrap))
+      cdkBuilder.method(method.let(HttpMethod.Companion::unwrap))
     }
 
     /**
@@ -132,7 +132,7 @@ public open class HttpUrlIntegration(
      * backend. 
      */
     override fun parameterMapping(parameterMapping: ParameterMapping) {
-      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping::unwrap))
+      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.aws_apigatewayv2_integrations.HttpUrlIntegration =

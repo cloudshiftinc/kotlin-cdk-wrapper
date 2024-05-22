@@ -314,7 +314,7 @@ public interface CfnConfigurationTemplateProps {
      * the *AWS Elastic Beanstalk Developer Guide* .
      */
     override fun optionSettings(optionSettings: IResolvable) {
-      cdkBuilder.optionSettings(optionSettings.let(IResolvable::unwrap))
+      cdkBuilder.optionSettings(optionSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -389,7 +389,7 @@ public interface CfnConfigurationTemplateProps {
      * stack of the source configuration template must match the specified solution stack name.
      */
     override fun sourceConfiguration(sourceConfiguration: IResolvable) {
-      cdkBuilder.sourceConfiguration(sourceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.sourceConfiguration(sourceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -408,7 +408,7 @@ public interface CfnConfigurationTemplateProps {
      */
     override
         fun sourceConfiguration(sourceConfiguration: CfnConfigurationTemplate.SourceConfigurationProperty) {
-      cdkBuilder.sourceConfiguration(sourceConfiguration.let(CfnConfigurationTemplate.SourceConfigurationProperty::unwrap))
+      cdkBuilder.sourceConfiguration(sourceConfiguration.let(CfnConfigurationTemplate.SourceConfigurationProperty.Companion::unwrap))
     }
 
     /**

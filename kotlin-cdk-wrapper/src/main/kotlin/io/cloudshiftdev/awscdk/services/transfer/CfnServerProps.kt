@@ -826,7 +826,7 @@ public interface CfnServerProps {
      * assigned to your endpoint.
      */
     override fun endpointDetails(endpointDetails: IResolvable) {
-      cdkBuilder.endpointDetails(endpointDetails.let(IResolvable::unwrap))
+      cdkBuilder.endpointDetails(endpointDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -838,7 +838,7 @@ public interface CfnServerProps {
      * assigned to your endpoint.
      */
     override fun endpointDetails(endpointDetails: CfnServer.EndpointDetailsProperty) {
-      cdkBuilder.endpointDetails(endpointDetails.let(CfnServer.EndpointDetailsProperty::unwrap))
+      cdkBuilder.endpointDetails(endpointDetails.let(CfnServer.EndpointDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -889,7 +889,7 @@ public interface CfnServerProps {
      * Gateway URL. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED` .
      */
     override fun identityProviderDetails(identityProviderDetails: IResolvable) {
-      cdkBuilder.identityProviderDetails(identityProviderDetails.let(IResolvable::unwrap))
+      cdkBuilder.identityProviderDetails(identityProviderDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -901,7 +901,7 @@ public interface CfnServerProps {
      */
     override
         fun identityProviderDetails(identityProviderDetails: CfnServer.IdentityProviderDetailsProperty) {
-      cdkBuilder.identityProviderDetails(identityProviderDetails.let(CfnServer.IdentityProviderDetailsProperty::unwrap))
+      cdkBuilder.identityProviderDetails(identityProviderDetails.let(CfnServer.IdentityProviderDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -995,7 +995,7 @@ public interface CfnServerProps {
      * *Allowed values* : One or more of `SFTP` , `FTPS` , `FTP` , `AS2`
      */
     override fun protocolDetails(protocolDetails: IResolvable) {
-      cdkBuilder.protocolDetails(protocolDetails.let(IResolvable::unwrap))
+      cdkBuilder.protocolDetails(protocolDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1019,7 +1019,7 @@ public interface CfnServerProps {
      * *Allowed values* : One or more of `SFTP` , `FTPS` , `FTP` , `AS2`
      */
     override fun protocolDetails(protocolDetails: CfnServer.ProtocolDetailsProperty) {
-      cdkBuilder.protocolDetails(protocolDetails.let(CfnServer.ProtocolDetailsProperty::unwrap))
+      cdkBuilder.protocolDetails(protocolDetails.let(CfnServer.ProtocolDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -1120,7 +1120,7 @@ public interface CfnServerProps {
      * mapping to have a file target.
      */
     override fun s3StorageOptions(s3StorageOptions: IResolvable) {
-      cdkBuilder.s3StorageOptions(s3StorageOptions.let(IResolvable::unwrap))
+      cdkBuilder.s3StorageOptions(s3StorageOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1131,7 +1131,7 @@ public interface CfnServerProps {
      * mapping to have a file target.
      */
     override fun s3StorageOptions(s3StorageOptions: CfnServer.S3StorageOptionsProperty) {
-      cdkBuilder.s3StorageOptions(s3StorageOptions.let(CfnServer.S3StorageOptionsProperty::unwrap))
+      cdkBuilder.s3StorageOptions(s3StorageOptions.let(CfnServer.S3StorageOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -1195,7 +1195,7 @@ public interface CfnServerProps {
      * @param tags Key-value pairs that can be used to group and search for servers.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1211,7 +1211,7 @@ public interface CfnServerProps {
      * A partial upload occurs when a file is open when the session disconnects.
      */
     override fun workflowDetails(workflowDetails: IResolvable) {
-      cdkBuilder.workflowDetails(workflowDetails.let(IResolvable::unwrap))
+      cdkBuilder.workflowDetails(workflowDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1222,7 +1222,7 @@ public interface CfnServerProps {
      * A partial upload occurs when a file is open when the session disconnects.
      */
     override fun workflowDetails(workflowDetails: CfnServer.WorkflowDetailsProperty) {
-      cdkBuilder.workflowDetails(workflowDetails.let(CfnServer.WorkflowDetailsProperty::unwrap))
+      cdkBuilder.workflowDetails(workflowDetails.let(CfnServer.WorkflowDetailsProperty.Companion::unwrap))
     }
 
     /**

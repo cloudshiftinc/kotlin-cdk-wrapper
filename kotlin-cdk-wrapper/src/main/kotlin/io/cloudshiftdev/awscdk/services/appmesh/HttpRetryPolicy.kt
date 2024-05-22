@@ -128,7 +128,7 @@ public interface HttpRetryPolicy {
      * for at least one types of retry events.
      */
     override fun httpRetryEvents(httpRetryEvents: List<HttpRetryEvent>) {
-      cdkBuilder.httpRetryEvents(httpRetryEvents.map(HttpRetryEvent::unwrap))
+      cdkBuilder.httpRetryEvents(httpRetryEvents.map(HttpRetryEvent.Companion::unwrap))
     }
 
     /**
@@ -150,7 +150,7 @@ public interface HttpRetryPolicy {
      * @param retryTimeout The timeout for each retry attempt. 
      */
     override fun retryTimeout(retryTimeout: Duration) {
-      cdkBuilder.retryTimeout(retryTimeout.let(Duration::unwrap))
+      cdkBuilder.retryTimeout(retryTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -161,7 +161,7 @@ public interface HttpRetryPolicy {
      * one types of retry events.
      */
     override fun tcpRetryEvents(tcpRetryEvents: List<TcpRetryEvent>) {
-      cdkBuilder.tcpRetryEvents(tcpRetryEvents.map(TcpRetryEvent::unwrap))
+      cdkBuilder.tcpRetryEvents(tcpRetryEvents.map(TcpRetryEvent.Companion::unwrap))
     }
 
     /**

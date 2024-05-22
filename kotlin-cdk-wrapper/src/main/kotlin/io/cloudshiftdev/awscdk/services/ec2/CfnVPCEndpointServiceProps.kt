@@ -153,7 +153,7 @@ public interface CfnVPCEndpointServiceProps {
      * endpoint to your service must be accepted.
      */
     override fun acceptanceRequired(acceptanceRequired: IResolvable) {
-      cdkBuilder.acceptanceRequired(acceptanceRequired.let(IResolvable::unwrap))
+      cdkBuilder.acceptanceRequired(acceptanceRequired.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -169,7 +169,7 @@ public interface CfnVPCEndpointServiceProps {
      * Insights rules provided by AWS PrivateLink .
      */
     override fun contributorInsightsEnabled(contributorInsightsEnabled: IResolvable) {
-      cdkBuilder.contributorInsightsEnabled(contributorInsightsEnabled.let(IResolvable::unwrap))
+      cdkBuilder.contributorInsightsEnabled(contributorInsightsEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**

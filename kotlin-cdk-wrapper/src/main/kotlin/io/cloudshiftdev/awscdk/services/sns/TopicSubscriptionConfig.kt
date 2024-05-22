@@ -176,7 +176,7 @@ public interface TopicSubscriptionConfig : SubscriptionOptions {
      * If not passed no dead letter queue is enabled.
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -208,7 +208,7 @@ public interface TopicSubscriptionConfig : SubscriptionOptions {
      * @param protocol What type of subscription to add. 
      */
     override fun protocol(protocol: SubscriptionProtocol) {
-      cdkBuilder.protocol(protocol.let(SubscriptionProtocol::unwrap))
+      cdkBuilder.protocol(protocol.let(SubscriptionProtocol.Companion::unwrap))
     }
 
     /**
@@ -249,7 +249,7 @@ public interface TopicSubscriptionConfig : SubscriptionOptions {
      * If this is undefined, the subscription will be created on the topic's stack.
      */
     override fun subscriberScope(subscriberScope: Construct) {
-      cdkBuilder.subscriberScope(subscriberScope.let(Construct::unwrap))
+      cdkBuilder.subscriberScope(subscriberScope.let(Construct.Companion::unwrap))
     }
 
     /**
@@ -260,7 +260,7 @@ public interface TopicSubscriptionConfig : SubscriptionOptions {
      * in order for the subscription to successfully deliver messages.
      */
     override fun subscriptionDependency(subscriptionDependency: IDependable) {
-      cdkBuilder.subscriptionDependency(subscriptionDependency.let(IDependable::unwrap))
+      cdkBuilder.subscriptionDependency(subscriptionDependency.let(IDependable.Companion::unwrap))
     }
 
     /**

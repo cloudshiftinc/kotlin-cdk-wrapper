@@ -100,8 +100,8 @@ public open class CfnConfiguredTable(
     id: String,
     props: CfnConfiguredTableProps,
   ) :
-      this(software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConfiguredTableProps::unwrap))
+      this(software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConfiguredTableProps.Companion::unwrap))
   )
 
   public constructor(
@@ -149,7 +149,7 @@ public open class CfnConfiguredTable(
    * The entire created analysis rule.
    */
   public open fun analysisRules(`value`: IResolvable) {
-    unwrap(this).setAnalysisRules(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAnalysisRules(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -204,7 +204,7 @@ public open class CfnConfiguredTable(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -228,14 +228,14 @@ public open class CfnConfiguredTable(
    * The AWS Glue table that this configured table represents.
    */
   public open fun tableReference(`value`: IResolvable) {
-    unwrap(this).setTableReference(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTableReference(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The AWS Glue table that this configured table represents.
    */
   public open fun tableReference(`value`: TableReferenceProperty) {
-    unwrap(this).setTableReference(`value`.let(TableReferenceProperty::unwrap))
+    unwrap(this).setTableReference(`value`.let(TableReferenceProperty.Companion::unwrap))
   }
 
   /**
@@ -255,7 +255,7 @@ public open class CfnConfiguredTable(
    * An optional label that you can assign to a resource when you create it.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -434,7 +434,7 @@ public open class CfnConfiguredTable(
      * @param analysisRules The entire created analysis rule. 
      */
     override fun analysisRules(analysisRules: IResolvable) {
-      cdkBuilder.analysisRules(analysisRules.let(IResolvable::unwrap))
+      cdkBuilder.analysisRules(analysisRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -483,7 +483,7 @@ public open class CfnConfiguredTable(
      * @param tableReference The AWS Glue table that this configured table represents. 
      */
     override fun tableReference(tableReference: IResolvable) {
-      cdkBuilder.tableReference(tableReference.let(IResolvable::unwrap))
+      cdkBuilder.tableReference(tableReference.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -493,7 +493,7 @@ public open class CfnConfiguredTable(
      * @param tableReference The AWS Glue table that this configured table represents. 
      */
     override fun tableReference(tableReference: TableReferenceProperty) {
-      cdkBuilder.tableReference(tableReference.let(TableReferenceProperty::unwrap))
+      cdkBuilder.tableReference(tableReference.let(TableReferenceProperty.Companion::unwrap))
     }
 
     /**
@@ -518,7 +518,7 @@ public open class CfnConfiguredTable(
      * @param tags An optional label that you can assign to a resource when you create it. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1038,7 +1038,7 @@ public open class CfnConfiguredTable(
        * queries. 
        */
       override fun aggregateColumns(aggregateColumns: IResolvable) {
-        cdkBuilder.aggregateColumns(aggregateColumns.let(IResolvable::unwrap))
+        cdkBuilder.aggregateColumns(aggregateColumns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1117,7 +1117,7 @@ public open class CfnConfiguredTable(
        * aggregation function is applied to it) for each output row to be returned. 
        */
       override fun outputConstraints(outputConstraints: IResolvable) {
-        cdkBuilder.outputConstraints(outputConstraints.let(IResolvable::unwrap))
+        cdkBuilder.outputConstraints(outputConstraints.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1378,14 +1378,14 @@ public open class CfnConfiguredTable(
        * @param differentialPrivacy The differential privacy configuration.
        */
       override fun differentialPrivacy(differentialPrivacy: IResolvable) {
-        cdkBuilder.differentialPrivacy(differentialPrivacy.let(IResolvable::unwrap))
+        cdkBuilder.differentialPrivacy(differentialPrivacy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param differentialPrivacy The differential privacy configuration.
        */
       override fun differentialPrivacy(differentialPrivacy: DifferentialPrivacyProperty) {
-        cdkBuilder.differentialPrivacy(differentialPrivacy.let(DifferentialPrivacyProperty::unwrap))
+        cdkBuilder.differentialPrivacy(differentialPrivacy.let(DifferentialPrivacyProperty.Companion::unwrap))
       }
 
       /**
@@ -1742,14 +1742,14 @@ public open class CfnConfiguredTable(
        * @param policy A policy that describes the associated data usage limitations. 
        */
       override fun policy(policy: IResolvable) {
-        cdkBuilder.policy(policy.let(IResolvable::unwrap))
+        cdkBuilder.policy(policy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param policy A policy that describes the associated data usage limitations. 
        */
       override fun policy(policy: ConfiguredTableAnalysisRulePolicyProperty) {
-        cdkBuilder.policy(policy.let(ConfiguredTableAnalysisRulePolicyProperty::unwrap))
+        cdkBuilder.policy(policy.let(ConfiguredTableAnalysisRulePolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -1900,14 +1900,14 @@ public open class CfnConfiguredTable(
        * @param v1 Controls on the query specifications that can be run on a configured table. 
        */
       override fun v1(v1: IResolvable) {
-        cdkBuilder.v1(v1.let(IResolvable::unwrap))
+        cdkBuilder.v1(v1.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param v1 Controls on the query specifications that can be run on a configured table. 
        */
       override fun v1(v1: ConfiguredTableAnalysisRulePolicyV1Property) {
-        cdkBuilder.v1(v1.let(ConfiguredTableAnalysisRulePolicyV1Property::unwrap))
+        cdkBuilder.v1(v1.let(ConfiguredTableAnalysisRulePolicyV1Property.Companion::unwrap))
       }
 
       /**
@@ -2095,7 +2095,7 @@ public open class CfnConfiguredTable(
        * table.
        */
       override fun aggregation(aggregation: IResolvable) {
-        cdkBuilder.aggregation(aggregation.let(IResolvable::unwrap))
+        cdkBuilder.aggregation(aggregation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2103,7 +2103,7 @@ public open class CfnConfiguredTable(
        * table.
        */
       override fun aggregation(aggregation: AnalysisRuleAggregationProperty) {
-        cdkBuilder.aggregation(aggregation.let(AnalysisRuleAggregationProperty::unwrap))
+        cdkBuilder.aggregation(aggregation.let(AnalysisRuleAggregationProperty.Companion::unwrap))
       }
 
       /**
@@ -2119,14 +2119,14 @@ public open class CfnConfiguredTable(
        * @param custom Analysis rule type that enables custom SQL queries on a configured table.
        */
       override fun custom(custom: IResolvable) {
-        cdkBuilder.custom(custom.let(IResolvable::unwrap))
+        cdkBuilder.custom(custom.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param custom Analysis rule type that enables custom SQL queries on a configured table.
        */
       override fun custom(custom: AnalysisRuleCustomProperty) {
-        cdkBuilder.custom(custom.let(AnalysisRuleCustomProperty::unwrap))
+        cdkBuilder.custom(custom.let(AnalysisRuleCustomProperty.Companion::unwrap))
       }
 
       /**
@@ -2141,14 +2141,14 @@ public open class CfnConfiguredTable(
        * @param list Analysis rule type that enables only list queries on a configured table.
        */
       override fun list(list: IResolvable) {
-        cdkBuilder.list(list.let(IResolvable::unwrap))
+        cdkBuilder.list(list.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param list Analysis rule type that enables only list queries on a configured table.
        */
       override fun list(list: AnalysisRuleListProperty) {
-        cdkBuilder.list(list.let(AnalysisRuleListProperty::unwrap))
+        cdkBuilder.list(list.let(AnalysisRuleListProperty.Companion::unwrap))
       }
 
       /**
@@ -2382,7 +2382,7 @@ public open class CfnConfiguredTable(
        * must configure the same column as the user identifier column in both analysis rules.
        */
       override fun columns(columns: IResolvable) {
-        cdkBuilder.columns(columns.let(IResolvable::unwrap))
+        cdkBuilder.columns(columns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2616,7 +2616,7 @@ public open class CfnConfiguredTable(
        * reference. 
        */
       override fun glue(glue: IResolvable) {
-        cdkBuilder.glue(glue.let(IResolvable::unwrap))
+        cdkBuilder.glue(glue.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2624,7 +2624,7 @@ public open class CfnConfiguredTable(
        * reference. 
        */
       override fun glue(glue: GlueTableReferenceProperty) {
-        cdkBuilder.glue(glue.let(GlueTableReferenceProperty::unwrap))
+        cdkBuilder.glue(glue.let(GlueTableReferenceProperty.Companion::unwrap))
       }
 
       /**

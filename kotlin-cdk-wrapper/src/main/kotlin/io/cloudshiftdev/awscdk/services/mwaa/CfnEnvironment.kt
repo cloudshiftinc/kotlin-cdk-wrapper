@@ -100,8 +100,8 @@ public open class CfnEnvironment(
     id: String,
     props: CfnEnvironmentProps,
   ) :
-      this(software.amazon.awscdk.services.mwaa.CfnEnvironment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEnvironmentProps::unwrap))
+      this(software.amazon.awscdk.services.mwaa.CfnEnvironment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEnvironmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -256,7 +256,7 @@ public open class CfnEnvironment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -282,7 +282,7 @@ public open class CfnEnvironment(
    * `TaskLogs` , `WebserverLogs` , `WorkerLogs` .
    */
   public open fun loggingConfiguration(`value`: IResolvable) {
-    unwrap(this).setLoggingConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoggingConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -290,7 +290,7 @@ public open class CfnEnvironment(
    * `TaskLogs` , `WebserverLogs` , `WorkerLogs` .
    */
   public open fun loggingConfiguration(`value`: LoggingConfigurationProperty) {
-    unwrap(this).setLoggingConfiguration(`value`.let(LoggingConfigurationProperty::unwrap))
+    unwrap(this).setLoggingConfiguration(`value`.let(LoggingConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -349,7 +349,7 @@ public open class CfnEnvironment(
    * resources for your environment.
    */
   public open fun networkConfiguration(`value`: IResolvable) {
-    unwrap(this).setNetworkConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNetworkConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -357,7 +357,7 @@ public open class CfnEnvironment(
    * resources for your environment.
    */
   public open fun networkConfiguration(`value`: NetworkConfigurationProperty) {
-    unwrap(this).setNetworkConfiguration(`value`.let(NetworkConfigurationProperty::unwrap))
+    unwrap(this).setNetworkConfiguration(`value`.let(NetworkConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -1022,7 +1022,7 @@ public open class CfnEnvironment(
      * `DagProcessingLogs` , `SchedulerLogs` , `TaskLogs` , `WebserverLogs` , `WorkerLogs` . 
      */
     override fun loggingConfiguration(loggingConfiguration: IResolvable) {
-      cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1034,7 +1034,7 @@ public open class CfnEnvironment(
      * `DagProcessingLogs` , `SchedulerLogs` , `TaskLogs` , `WebserverLogs` , `WorkerLogs` . 
      */
     override fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty) {
-      cdkBuilder.loggingConfiguration(loggingConfiguration.let(LoggingConfigurationProperty::unwrap))
+      cdkBuilder.loggingConfiguration(loggingConfiguration.let(LoggingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1103,7 +1103,7 @@ public open class CfnEnvironment(
      * traffic between the AWS resources for your environment. 
      */
     override fun networkConfiguration(networkConfiguration: IResolvable) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1118,7 +1118,7 @@ public open class CfnEnvironment(
      * traffic between the AWS resources for your environment. 
      */
     override fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1538,7 +1538,7 @@ public open class CfnEnvironment(
        * logging level to send.
        */
       override fun dagProcessingLogs(dagProcessingLogs: IResolvable) {
-        cdkBuilder.dagProcessingLogs(dagProcessingLogs.let(IResolvable::unwrap))
+        cdkBuilder.dagProcessingLogs(dagProcessingLogs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1546,7 +1546,7 @@ public open class CfnEnvironment(
        * logging level to send.
        */
       override fun dagProcessingLogs(dagProcessingLogs: ModuleLoggingConfigurationProperty) {
-        cdkBuilder.dagProcessingLogs(dagProcessingLogs.let(ModuleLoggingConfigurationProperty::unwrap))
+        cdkBuilder.dagProcessingLogs(dagProcessingLogs.let(ModuleLoggingConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1564,7 +1564,7 @@ public open class CfnEnvironment(
        * level to send.
        */
       override fun schedulerLogs(schedulerLogs: IResolvable) {
-        cdkBuilder.schedulerLogs(schedulerLogs.let(IResolvable::unwrap))
+        cdkBuilder.schedulerLogs(schedulerLogs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1572,7 +1572,7 @@ public open class CfnEnvironment(
        * level to send.
        */
       override fun schedulerLogs(schedulerLogs: ModuleLoggingConfigurationProperty) {
-        cdkBuilder.schedulerLogs(schedulerLogs.let(ModuleLoggingConfigurationProperty::unwrap))
+        cdkBuilder.schedulerLogs(schedulerLogs.let(ModuleLoggingConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1590,7 +1590,7 @@ public open class CfnEnvironment(
        * send.
        */
       override fun taskLogs(taskLogs: IResolvable) {
-        cdkBuilder.taskLogs(taskLogs.let(IResolvable::unwrap))
+        cdkBuilder.taskLogs(taskLogs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1598,7 +1598,7 @@ public open class CfnEnvironment(
        * send.
        */
       override fun taskLogs(taskLogs: ModuleLoggingConfigurationProperty) {
-        cdkBuilder.taskLogs(taskLogs.let(ModuleLoggingConfigurationProperty::unwrap))
+        cdkBuilder.taskLogs(taskLogs.let(ModuleLoggingConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1615,7 +1615,7 @@ public open class CfnEnvironment(
        * level to send.
        */
       override fun webserverLogs(webserverLogs: IResolvable) {
-        cdkBuilder.webserverLogs(webserverLogs.let(IResolvable::unwrap))
+        cdkBuilder.webserverLogs(webserverLogs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1623,7 +1623,7 @@ public open class CfnEnvironment(
        * level to send.
        */
       override fun webserverLogs(webserverLogs: ModuleLoggingConfigurationProperty) {
-        cdkBuilder.webserverLogs(webserverLogs.let(ModuleLoggingConfigurationProperty::unwrap))
+        cdkBuilder.webserverLogs(webserverLogs.let(ModuleLoggingConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1641,7 +1641,7 @@ public open class CfnEnvironment(
        * send.
        */
       override fun workerLogs(workerLogs: IResolvable) {
-        cdkBuilder.workerLogs(workerLogs.let(IResolvable::unwrap))
+        cdkBuilder.workerLogs(workerLogs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1649,7 +1649,7 @@ public open class CfnEnvironment(
        * send.
        */
       override fun workerLogs(workerLogs: ModuleLoggingConfigurationProperty) {
-        cdkBuilder.workerLogs(workerLogs.let(ModuleLoggingConfigurationProperty::unwrap))
+        cdkBuilder.workerLogs(workerLogs.let(ModuleLoggingConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1845,7 +1845,7 @@ public open class CfnEnvironment(
        * `DagProcessingLogs` ) in CloudWatch Logs.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**

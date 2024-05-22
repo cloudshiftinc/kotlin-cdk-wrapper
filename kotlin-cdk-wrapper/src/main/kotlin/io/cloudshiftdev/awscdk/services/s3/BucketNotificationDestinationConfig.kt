@@ -93,7 +93,7 @@ public interface BucketNotificationDestinationConfig {
      * notification can be configured (for example, the SNS Topic Policy resource).
      */
     override fun dependencies(dependencies: List<IDependable>) {
-      cdkBuilder.dependencies(dependencies.map(IDependable::unwrap))
+      cdkBuilder.dependencies(dependencies.map(IDependable.Companion::unwrap))
     }
 
     /**
@@ -107,7 +107,7 @@ public interface BucketNotificationDestinationConfig {
      * @param type The notification type. 
      */
     override fun type(type: BucketNotificationDestinationType) {
-      cdkBuilder.type(type.let(BucketNotificationDestinationType::unwrap))
+      cdkBuilder.type(type.let(BucketNotificationDestinationType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.s3.BucketNotificationDestinationConfig =

@@ -52,8 +52,8 @@ public open class UserPoolResourceServer(
     id: String,
     props: UserPoolResourceServerProps,
   ) :
-      this(software.amazon.awscdk.services.cognito.UserPoolResourceServer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(UserPoolResourceServerProps::unwrap))
+      this(software.amazon.awscdk.services.cognito.UserPoolResourceServer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(UserPoolResourceServerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -140,7 +140,7 @@ public open class UserPoolResourceServer(
      * @param scopes Oauth scopes. 
      */
     override fun scopes(scopes: List<ResourceServerScope>) {
-      cdkBuilder.scopes(scopes.map(ResourceServerScope::unwrap))
+      cdkBuilder.scopes(scopes.map(ResourceServerScope.Companion::unwrap))
     }
 
     /**
@@ -158,7 +158,7 @@ public open class UserPoolResourceServer(
      * @param userPool The user pool to add this resource server to. 
      */
     override fun userPool(userPool: IUserPool) {
-      cdkBuilder.userPool(userPool.let(IUserPool::unwrap))
+      cdkBuilder.userPool(userPool.let(IUserPool.Companion::unwrap))
     }
 
     /**
@@ -182,7 +182,7 @@ public open class UserPoolResourceServer(
       id: String,
       userPoolResourceServerId: String,
     ): IUserPoolResourceServer =
-        software.amazon.awscdk.services.cognito.UserPoolResourceServer.fromUserPoolResourceServerId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.cognito.UserPoolResourceServer.fromUserPoolResourceServerId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, userPoolResourceServerId).let(IUserPoolResourceServer::wrap)
 
     public operator fun invoke(

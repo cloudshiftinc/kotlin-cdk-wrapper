@@ -237,7 +237,7 @@ public interface CfnRoutingProfileProps {
      * for this routing profile. 
      */
     override fun mediaConcurrencies(mediaConcurrencies: IResolvable) {
-      cdkBuilder.mediaConcurrencies(mediaConcurrencies.let(IResolvable::unwrap))
+      cdkBuilder.mediaConcurrencies(mediaConcurrencies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -267,7 +267,7 @@ public interface CfnRoutingProfileProps {
      * If no queue is added, the agent can make only outbound calls.
      */
     override fun queueConfigs(queueConfigs: IResolvable) {
-      cdkBuilder.queueConfigs(queueConfigs.let(IResolvable::unwrap))
+      cdkBuilder.queueConfigs(queueConfigs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -289,7 +289,7 @@ public interface CfnRoutingProfileProps {
      * For example, { "Tags": {"key1":"value1", "key2":"value2"} }.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

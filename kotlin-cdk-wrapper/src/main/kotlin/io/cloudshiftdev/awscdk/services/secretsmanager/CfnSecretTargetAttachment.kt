@@ -50,8 +50,8 @@ public open class CfnSecretTargetAttachment(
     id: String,
     props: CfnSecretTargetAttachmentProps,
   ) :
-      this(software.amazon.awscdk.services.secretsmanager.CfnSecretTargetAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSecretTargetAttachmentProps::unwrap))
+      this(software.amazon.awscdk.services.secretsmanager.CfnSecretTargetAttachment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSecretTargetAttachmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -72,7 +72,7 @@ public open class CfnSecretTargetAttachment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

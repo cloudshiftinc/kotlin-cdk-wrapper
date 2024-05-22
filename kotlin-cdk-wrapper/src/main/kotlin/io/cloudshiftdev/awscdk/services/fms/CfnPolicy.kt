@@ -104,8 +104,8 @@ public open class CfnPolicy(
     id: String,
     props: CfnPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.fms.CfnPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.fms.CfnPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -153,7 +153,7 @@ public open class CfnPolicy(
    * If `true` , Firewall Manager performs cleanup according to the policy type.
    */
   public open fun deleteAllPolicyResources(`value`: IResolvable) {
-    unwrap(this).setDeleteAllPolicyResources(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeleteAllPolicyResources(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -167,7 +167,7 @@ public open class CfnPolicy(
    * the policy.
    */
   public open fun excludeMap(`value`: IResolvable) {
-    unwrap(this).setExcludeMap(`value`.let(IResolvable::unwrap))
+    unwrap(this).setExcludeMap(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -175,7 +175,7 @@ public open class CfnPolicy(
    * the policy.
    */
   public open fun excludeMap(`value`: IEMapProperty) {
-    unwrap(this).setExcludeMap(`value`.let(IEMapProperty::unwrap))
+    unwrap(this).setExcludeMap(`value`.let(IEMapProperty.Companion::unwrap))
   }
 
   /**
@@ -203,7 +203,7 @@ public open class CfnPolicy(
    * Used only when tags are specified in the `ResourceTags` property.
    */
   public open fun excludeResourceTags(`value`: IResolvable) {
-    unwrap(this).setExcludeResourceTags(`value`.let(IResolvable::unwrap))
+    unwrap(this).setExcludeResourceTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -217,7 +217,7 @@ public open class CfnPolicy(
    * the policy.
    */
   public open fun includeMap(`value`: IResolvable) {
-    unwrap(this).setIncludeMap(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIncludeMap(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -225,7 +225,7 @@ public open class CfnPolicy(
    * the policy.
    */
   public open fun includeMap(`value`: IEMapProperty) {
-    unwrap(this).setIncludeMap(`value`.let(IEMapProperty::unwrap))
+    unwrap(this).setIncludeMap(`value`.let(IEMapProperty.Companion::unwrap))
   }
 
   /**
@@ -243,16 +243,16 @@ public open class CfnPolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
-   * The definition of the AWS Network Firewall firewall policy.
+   * Your description of the AWS Firewall Manager policy.
    */
   public open fun policyDescription(): String? = unwrap(this).getPolicyDescription()
 
   /**
-   * The definition of the AWS Network Firewall firewall policy.
+   * Your description of the AWS Firewall Manager policy.
    */
   public open fun policyDescription(`value`: String) {
     unwrap(this).setPolicyDescription(`value`)
@@ -286,7 +286,7 @@ public open class CfnPolicy(
    * Indicates if the policy should be automatically applied to new resources.
    */
   public open fun remediationEnabled(`value`: IResolvable) {
-    unwrap(this).setRemediationEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRemediationEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -317,7 +317,7 @@ public open class CfnPolicy(
    * explicitly exclude them.
    */
   public open fun resourceTags(`value`: IResolvable) {
-    unwrap(this).setResourceTags(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResourceTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -387,7 +387,7 @@ public open class CfnPolicy(
    * when those accounts leave policy scope.
    */
   public open fun resourcesCleanUp(`value`: IResolvable) {
-    unwrap(this).setResourcesCleanUp(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResourcesCleanUp(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -399,14 +399,14 @@ public open class CfnPolicy(
    * Details about the security service that is being used to protect the resources.
    */
   public open fun securityServicePolicyData(`value`: IResolvable) {
-    unwrap(this).setSecurityServicePolicyData(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSecurityServicePolicyData(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Details about the security service that is being used to protect the resources.
    */
   public open fun securityServicePolicyData(`value`: SecurityServicePolicyDataProperty) {
-    unwrap(this).setSecurityServicePolicyData(`value`.let(SecurityServicePolicyDataProperty::unwrap))
+    unwrap(this).setSecurityServicePolicyData(`value`.let(SecurityServicePolicyDataProperty.Companion::unwrap))
   }
 
   /**
@@ -428,7 +428,7 @@ public open class CfnPolicy(
    * A collection of key:value pairs associated with an AWS resource.
    */
   public open fun tags(`value`: List<PolicyTagProperty>) {
-    unwrap(this).setTags(`value`.map(PolicyTagProperty::unwrap))
+    unwrap(this).setTags(`value`.map(PolicyTagProperty.Companion::unwrap))
   }
 
   /**
@@ -696,10 +696,10 @@ public open class CfnPolicy(
     public fun includeMap(includeMap: IEMapProperty.Builder.() -> Unit)
 
     /**
-     * The definition of the AWS Network Firewall firewall policy.
+     * Your description of the AWS Firewall Manager policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-policydescription)
-     * @param policyDescription The definition of the AWS Network Firewall firewall policy. 
+     * @param policyDescription Your description of the AWS Firewall Manager policy. 
      */
     public fun policyDescription(policyDescription: String)
 
@@ -1495,7 +1495,7 @@ public open class CfnPolicy(
      * performs cleanup according to the policy type. 
      */
     override fun deleteAllPolicyResources(deleteAllPolicyResources: IResolvable) {
-      cdkBuilder.deleteAllPolicyResources(deleteAllPolicyResources.let(IResolvable::unwrap))
+      cdkBuilder.deleteAllPolicyResources(deleteAllPolicyResources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1525,7 +1525,7 @@ public open class CfnPolicy(
      * (OUs) to exclude from the policy. 
      */
     override fun excludeMap(excludeMap: IResolvable) {
-      cdkBuilder.excludeMap(excludeMap.let(IResolvable::unwrap))
+      cdkBuilder.excludeMap(excludeMap.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1555,7 +1555,7 @@ public open class CfnPolicy(
      * (OUs) to exclude from the policy. 
      */
     override fun excludeMap(excludeMap: IEMapProperty) {
-      cdkBuilder.excludeMap(excludeMap.let(IEMapProperty::unwrap))
+      cdkBuilder.excludeMap(excludeMap.let(IEMapProperty.Companion::unwrap))
     }
 
     /**
@@ -1612,7 +1612,7 @@ public open class CfnPolicy(
      * @param excludeResourceTags Used only when tags are specified in the `ResourceTags` property. 
      */
     override fun excludeResourceTags(excludeResourceTags: IResolvable) {
-      cdkBuilder.excludeResourceTags(excludeResourceTags.let(IResolvable::unwrap))
+      cdkBuilder.excludeResourceTags(excludeResourceTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1642,7 +1642,7 @@ public open class CfnPolicy(
      * (OUs) to include in the policy. 
      */
     override fun includeMap(includeMap: IResolvable) {
-      cdkBuilder.includeMap(includeMap.let(IResolvable::unwrap))
+      cdkBuilder.includeMap(includeMap.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1672,7 +1672,7 @@ public open class CfnPolicy(
      * (OUs) to include in the policy. 
      */
     override fun includeMap(includeMap: IEMapProperty) {
-      cdkBuilder.includeMap(includeMap.let(IEMapProperty::unwrap))
+      cdkBuilder.includeMap(includeMap.let(IEMapProperty.Companion::unwrap))
     }
 
     /**
@@ -1707,10 +1707,10 @@ public open class CfnPolicy(
         includeMap(IEMapProperty(includeMap))
 
     /**
-     * The definition of the AWS Network Firewall firewall policy.
+     * Your description of the AWS Firewall Manager policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fms-policy.html#cfn-fms-policy-policydescription)
-     * @param policyDescription The definition of the AWS Network Firewall firewall policy. 
+     * @param policyDescription Your description of the AWS Firewall Manager policy. 
      */
     override fun policyDescription(policyDescription: String) {
       cdkBuilder.policyDescription(policyDescription)
@@ -1745,7 +1745,7 @@ public open class CfnPolicy(
      * resources. 
      */
     override fun remediationEnabled(remediationEnabled: IResolvable) {
-      cdkBuilder.remediationEnabled(remediationEnabled.let(IResolvable::unwrap))
+      cdkBuilder.remediationEnabled(remediationEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1779,7 +1779,7 @@ public open class CfnPolicy(
      * in the policy scope or explicitly exclude them. 
      */
     override fun resourceTags(resourceTags: IResolvable) {
-      cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
+      cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1905,7 +1905,7 @@ public open class CfnPolicy(
      * Manager is managing for accounts when those accounts leave policy scope. 
      */
     override fun resourcesCleanUp(resourcesCleanUp: IResolvable) {
-      cdkBuilder.resourcesCleanUp(resourcesCleanUp.let(IResolvable::unwrap))
+      cdkBuilder.resourcesCleanUp(resourcesCleanUp.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2082,7 +2082,7 @@ public open class CfnPolicy(
      * protect the resources. 
      */
     override fun securityServicePolicyData(securityServicePolicyData: IResolvable) {
-      cdkBuilder.securityServicePolicyData(securityServicePolicyData.let(IResolvable::unwrap))
+      cdkBuilder.securityServicePolicyData(securityServicePolicyData.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2260,7 +2260,7 @@ public open class CfnPolicy(
      */
     override
         fun securityServicePolicyData(securityServicePolicyData: SecurityServicePolicyDataProperty) {
-      cdkBuilder.securityServicePolicyData(securityServicePolicyData.let(SecurityServicePolicyDataProperty::unwrap))
+      cdkBuilder.securityServicePolicyData(securityServicePolicyData.let(SecurityServicePolicyDataProperty.Companion::unwrap))
     }
 
     /**
@@ -2454,7 +2454,7 @@ public open class CfnPolicy(
      * @param tags A collection of key:value pairs associated with an AWS resource. 
      */
     override fun tags(tags: List<PolicyTagProperty>) {
-      cdkBuilder.tags(tags.map(PolicyTagProperty::unwrap))
+      cdkBuilder.tags(tags.map(PolicyTagProperty.Companion::unwrap))
     }
 
     /**
@@ -2734,8 +2734,8 @@ public open class CfnPolicy(
   }
 
   /**
-   * Contains the AWS Network Firewall firewall policy options to configure the policy's deployment
-   * model and third-party firewall policy settings.
+   * Contains the settings to configure a network ACL policy, a AWS Network Firewall firewall policy
+   * deployment model, or a third-party firewall policy.
    *
    * Example:
    *
@@ -2825,14 +2825,14 @@ public open class CfnPolicy(
        * @param networkFirewallPolicy Defines the deployment model to use for the firewall policy.
        */
       override fun networkFirewallPolicy(networkFirewallPolicy: IResolvable) {
-        cdkBuilder.networkFirewallPolicy(networkFirewallPolicy.let(IResolvable::unwrap))
+        cdkBuilder.networkFirewallPolicy(networkFirewallPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param networkFirewallPolicy Defines the deployment model to use for the firewall policy.
        */
       override fun networkFirewallPolicy(networkFirewallPolicy: NetworkFirewallPolicyProperty) {
-        cdkBuilder.networkFirewallPolicy(networkFirewallPolicy.let(NetworkFirewallPolicyProperty::unwrap))
+        cdkBuilder.networkFirewallPolicy(networkFirewallPolicy.let(NetworkFirewallPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -2849,7 +2849,7 @@ public open class CfnPolicy(
        * policy.
        */
       override fun thirdPartyFirewallPolicy(thirdPartyFirewallPolicy: IResolvable) {
-        cdkBuilder.thirdPartyFirewallPolicy(thirdPartyFirewallPolicy.let(IResolvable::unwrap))
+        cdkBuilder.thirdPartyFirewallPolicy(thirdPartyFirewallPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2858,7 +2858,7 @@ public open class CfnPolicy(
        */
       override
           fun thirdPartyFirewallPolicy(thirdPartyFirewallPolicy: ThirdPartyFirewallPolicyProperty) {
-        cdkBuilder.thirdPartyFirewallPolicy(thirdPartyFirewallPolicy.let(ThirdPartyFirewallPolicyProperty::unwrap))
+        cdkBuilder.thirdPartyFirewallPolicy(thirdPartyFirewallPolicy.let(ThirdPartyFirewallPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -3344,8 +3344,8 @@ public open class CfnPolicy(
     public fun managedServiceData(): String? = unwrap(this).getManagedServiceData()
 
     /**
-     * Contains the Network Firewall firewall policy options to configure a centralized deployment
-     * model.
+     * Contains the settings to configure a network ACL policy, a AWS Network Firewall firewall
+     * policy deployment model, or a third-party firewall policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-securityservicepolicydata.html#cfn-fms-policy-securityservicepolicydata-policyoption)
      */
@@ -3529,20 +3529,20 @@ public open class CfnPolicy(
       public fun managedServiceData(managedServiceData: String)
 
       /**
-       * @param policyOption Contains the Network Firewall firewall policy options to configure a
-       * centralized deployment model.
+       * @param policyOption Contains the settings to configure a network ACL policy, a AWS Network
+       * Firewall firewall policy deployment model, or a third-party firewall policy.
        */
       public fun policyOption(policyOption: IResolvable)
 
       /**
-       * @param policyOption Contains the Network Firewall firewall policy options to configure a
-       * centralized deployment model.
+       * @param policyOption Contains the settings to configure a network ACL policy, a AWS Network
+       * Firewall firewall policy deployment model, or a third-party firewall policy.
        */
       public fun policyOption(policyOption: PolicyOptionProperty)
 
       /**
-       * @param policyOption Contains the Network Firewall firewall policy options to configure a
-       * centralized deployment model.
+       * @param policyOption Contains the settings to configure a network ACL policy, a AWS Network
+       * Firewall firewall policy deployment model, or a third-party firewall policy.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f802adb0072e9aff9070aaec6a8b5cccadf0cb1794bb55ea6dcb6d68e66c7c85")
@@ -3726,24 +3726,24 @@ public open class CfnPolicy(
       }
 
       /**
-       * @param policyOption Contains the Network Firewall firewall policy options to configure a
-       * centralized deployment model.
+       * @param policyOption Contains the settings to configure a network ACL policy, a AWS Network
+       * Firewall firewall policy deployment model, or a third-party firewall policy.
        */
       override fun policyOption(policyOption: IResolvable) {
-        cdkBuilder.policyOption(policyOption.let(IResolvable::unwrap))
+        cdkBuilder.policyOption(policyOption.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param policyOption Contains the Network Firewall firewall policy options to configure a
-       * centralized deployment model.
+       * @param policyOption Contains the settings to configure a network ACL policy, a AWS Network
+       * Firewall firewall policy deployment model, or a third-party firewall policy.
        */
       override fun policyOption(policyOption: PolicyOptionProperty) {
-        cdkBuilder.policyOption(policyOption.let(PolicyOptionProperty::unwrap))
+        cdkBuilder.policyOption(policyOption.let(PolicyOptionProperty.Companion::unwrap))
       }
 
       /**
-       * @param policyOption Contains the Network Firewall firewall policy options to configure a
-       * centralized deployment model.
+       * @param policyOption Contains the settings to configure a network ACL policy, a AWS Network
+       * Firewall firewall policy deployment model, or a third-party firewall policy.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f802adb0072e9aff9070aaec6a8b5cccadf0cb1794bb55ea6dcb6d68e66c7c85")
@@ -3932,8 +3932,8 @@ public open class CfnPolicy(
       override fun managedServiceData(): String? = unwrap(this).getManagedServiceData()
 
       /**
-       * Contains the Network Firewall firewall policy options to configure a centralized deployment
-       * model.
+       * Contains the settings to configure a network ACL policy, a AWS Network Firewall firewall
+       * policy deployment model, or a third-party firewall policy.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-securityservicepolicydata.html#cfn-fms-policy-securityservicepolicydata-policyoption)
        */

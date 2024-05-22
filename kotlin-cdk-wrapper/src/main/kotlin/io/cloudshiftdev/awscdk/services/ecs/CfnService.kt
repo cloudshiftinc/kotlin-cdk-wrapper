@@ -183,7 +183,7 @@ public open class CfnService(
   cdkObject: software.amazon.awscdk.services.ecs.CfnService,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ecs.CfnService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ecs.CfnService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -192,8 +192,8 @@ public open class CfnService(
     id: String,
     props: CfnServiceProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.CfnService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnServiceProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.CfnService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnServiceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -222,7 +222,7 @@ public open class CfnService(
    * The capacity provider strategy to use for the service.
    */
   public open fun capacityProviderStrategy(`value`: IResolvable) {
-    unwrap(this).setCapacityProviderStrategy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCapacityProviderStrategy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -261,7 +261,7 @@ public open class CfnService(
    * ordering of stopping and starting tasks.
    */
   public open fun deploymentConfiguration(`value`: IResolvable) {
-    unwrap(this).setDeploymentConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeploymentConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -269,7 +269,7 @@ public open class CfnService(
    * ordering of stopping and starting tasks.
    */
   public open fun deploymentConfiguration(`value`: DeploymentConfigurationProperty) {
-    unwrap(this).setDeploymentConfiguration(`value`.let(DeploymentConfigurationProperty::unwrap))
+    unwrap(this).setDeploymentConfiguration(`value`.let(DeploymentConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -291,14 +291,14 @@ public open class CfnService(
    * The deployment controller to use for the service.
    */
   public open fun deploymentController(`value`: IResolvable) {
-    unwrap(this).setDeploymentController(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeploymentController(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The deployment controller to use for the service.
    */
   public open fun deploymentController(`value`: DeploymentControllerProperty) {
-    unwrap(this).setDeploymentController(`value`.let(DeploymentControllerProperty::unwrap))
+    unwrap(this).setDeploymentController(`value`.let(DeploymentControllerProperty.Companion::unwrap))
   }
 
   /**
@@ -339,7 +339,7 @@ public open class CfnService(
    * Specifies whether to turn on Amazon ECS managed tags for the tasks within the service.
    */
   public open fun enableEcsManagedTags(`value`: IResolvable) {
-    unwrap(this).setEnableEcsManagedTags(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableEcsManagedTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -358,7 +358,7 @@ public open class CfnService(
    * Determines whether the execute command functionality is turned on for the service.
    */
   public open fun enableExecuteCommand(`value`: IResolvable) {
-    unwrap(this).setEnableExecuteCommand(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableExecuteCommand(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -382,7 +382,7 @@ public open class CfnService(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -406,7 +406,7 @@ public open class CfnService(
    * A list of load balancer objects to associate with the service.
    */
   public open fun loadBalancers(`value`: IResolvable) {
-    unwrap(this).setLoadBalancers(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoadBalancers(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -430,14 +430,14 @@ public open class CfnService(
    * The network configuration for the service.
    */
   public open fun networkConfiguration(`value`: IResolvable) {
-    unwrap(this).setNetworkConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNetworkConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The network configuration for the service.
    */
   public open fun networkConfiguration(`value`: NetworkConfigurationProperty) {
-    unwrap(this).setNetworkConfiguration(`value`.let(NetworkConfigurationProperty::unwrap))
+    unwrap(this).setNetworkConfiguration(`value`.let(NetworkConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -457,7 +457,7 @@ public open class CfnService(
    * An array of placement constraint objects to use for tasks in your service.
    */
   public open fun placementConstraints(`value`: IResolvable) {
-    unwrap(this).setPlacementConstraints(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPlacementConstraints(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -482,7 +482,7 @@ public open class CfnService(
    * The placement strategy objects to use for tasks in your service.
    */
   public open fun placementStrategies(`value`: IResolvable) {
-    unwrap(this).setPlacementStrategies(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPlacementStrategies(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -566,7 +566,7 @@ public open class CfnService(
    * and connected from, other services within a namespace.
    */
   public open fun serviceConnectConfiguration(`value`: IResolvable) {
-    unwrap(this).setServiceConnectConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setServiceConnectConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -574,7 +574,7 @@ public open class CfnService(
    * and connected from, other services within a namespace.
    */
   public open fun serviceConnectConfiguration(`value`: ServiceConnectConfigurationProperty) {
-    unwrap(this).setServiceConnectConfiguration(`value`.let(ServiceConnectConfigurationProperty::unwrap))
+    unwrap(this).setServiceConnectConfiguration(`value`.let(ServiceConnectConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -614,7 +614,7 @@ public open class CfnService(
    * discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html) .
    */
   public open fun serviceRegistries(`value`: IResolvable) {
-    unwrap(this).setServiceRegistries(`value`.let(IResolvable::unwrap))
+    unwrap(this).setServiceRegistries(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -650,7 +650,7 @@ public open class CfnService(
    * The metadata that you apply to the service to help you categorize and organize them.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -683,7 +683,7 @@ public open class CfnService(
    * at launch time.
    */
   public open fun volumeConfigurations(`value`: IResolvable) {
-    unwrap(this).setVolumeConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVolumeConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -1433,7 +1433,7 @@ public open class CfnService(
      * @param capacityProviderStrategy The capacity provider strategy to use for the service. 
      */
     override fun capacityProviderStrategy(capacityProviderStrategy: IResolvable) {
-      cdkBuilder.capacityProviderStrategy(capacityProviderStrategy.let(IResolvable::unwrap))
+      cdkBuilder.capacityProviderStrategy(capacityProviderStrategy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1490,7 +1490,7 @@ public open class CfnService(
      * during the deployment and the ordering of stopping and starting tasks. 
      */
     override fun deploymentConfiguration(deploymentConfiguration: IResolvable) {
-      cdkBuilder.deploymentConfiguration(deploymentConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.deploymentConfiguration(deploymentConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1502,7 +1502,7 @@ public open class CfnService(
      * during the deployment and the ordering of stopping and starting tasks. 
      */
     override fun deploymentConfiguration(deploymentConfiguration: DeploymentConfigurationProperty) {
-      cdkBuilder.deploymentConfiguration(deploymentConfiguration.let(DeploymentConfigurationProperty::unwrap))
+      cdkBuilder.deploymentConfiguration(deploymentConfiguration.let(DeploymentConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1528,7 +1528,7 @@ public open class CfnService(
      * @param deploymentController The deployment controller to use for the service. 
      */
     override fun deploymentController(deploymentController: IResolvable) {
-      cdkBuilder.deploymentController(deploymentController.let(IResolvable::unwrap))
+      cdkBuilder.deploymentController(deploymentController.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1540,7 +1540,7 @@ public open class CfnService(
      * @param deploymentController The deployment controller to use for the service. 
      */
     override fun deploymentController(deploymentController: DeploymentControllerProperty) {
-      cdkBuilder.deploymentController(deploymentController.let(DeploymentControllerProperty::unwrap))
+      cdkBuilder.deploymentController(deploymentController.let(DeploymentControllerProperty.Companion::unwrap))
     }
 
     /**
@@ -1605,7 +1605,7 @@ public open class CfnService(
      * tasks within the service. 
      */
     override fun enableEcsManagedTags(enableEcsManagedTags: IResolvable) {
-      cdkBuilder.enableEcsManagedTags(enableEcsManagedTags.let(IResolvable::unwrap))
+      cdkBuilder.enableEcsManagedTags(enableEcsManagedTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1633,7 +1633,7 @@ public open class CfnService(
      * for the service. 
      */
     override fun enableExecuteCommand(enableExecuteCommand: IResolvable) {
-      cdkBuilder.enableExecuteCommand(enableExecuteCommand.let(IResolvable::unwrap))
+      cdkBuilder.enableExecuteCommand(enableExecuteCommand.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1690,7 +1690,7 @@ public open class CfnService(
      * @param loadBalancers A list of load balancer objects to associate with the service. 
      */
     override fun loadBalancers(loadBalancers: IResolvable) {
-      cdkBuilder.loadBalancers(loadBalancers.let(IResolvable::unwrap))
+      cdkBuilder.loadBalancers(loadBalancers.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1737,7 +1737,7 @@ public open class CfnService(
      * @param networkConfiguration The network configuration for the service. 
      */
     override fun networkConfiguration(networkConfiguration: IResolvable) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1753,7 +1753,7 @@ public open class CfnService(
      * @param networkConfiguration The network configuration for the service. 
      */
     override fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1785,7 +1785,7 @@ public open class CfnService(
      * service. 
      */
     override fun placementConstraints(placementConstraints: IResolvable) {
-      cdkBuilder.placementConstraints(placementConstraints.let(IResolvable::unwrap))
+      cdkBuilder.placementConstraints(placementConstraints.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1824,7 +1824,7 @@ public open class CfnService(
      * @param placementStrategies The placement strategy objects to use for tasks in your service. 
      */
     override fun placementStrategies(placementStrategies: IResolvable) {
-      cdkBuilder.placementStrategies(placementStrategies.let(IResolvable::unwrap))
+      cdkBuilder.placementStrategies(placementStrategies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1974,7 +1974,7 @@ public open class CfnService(
      * to services, and be discovered by, and connected from, other services within a namespace. 
      */
     override fun serviceConnectConfiguration(serviceConnectConfiguration: IResolvable) {
-      cdkBuilder.serviceConnectConfiguration(serviceConnectConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.serviceConnectConfiguration(serviceConnectConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1995,7 +1995,7 @@ public open class CfnService(
      */
     override
         fun serviceConnectConfiguration(serviceConnectConfiguration: ServiceConnectConfigurationProperty) {
-      cdkBuilder.serviceConnectConfiguration(serviceConnectConfiguration.let(ServiceConnectConfigurationProperty::unwrap))
+      cdkBuilder.serviceConnectConfiguration(serviceConnectConfiguration.let(ServiceConnectConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -2058,7 +2058,7 @@ public open class CfnService(
      * 
      */
     override fun serviceRegistries(serviceRegistries: IResolvable) {
-      cdkBuilder.serviceRegistries(serviceRegistries.let(IResolvable::unwrap))
+      cdkBuilder.serviceRegistries(serviceRegistries.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2121,7 +2121,7 @@ public open class CfnService(
      * them. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -2177,7 +2177,7 @@ public open class CfnService(
      * as a volume that is configured at launch time. 
      */
     override fun volumeConfigurations(volumeConfigurations: IResolvable) {
-      cdkBuilder.volumeConfigurations(volumeConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.volumeConfigurations(volumeConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2826,7 +2826,7 @@ public open class CfnService(
        * deployment process. 
        */
       override fun enable(enable: IResolvable) {
-        cdkBuilder.enable(enable.let(IResolvable::unwrap))
+        cdkBuilder.enable(enable.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2846,7 +2846,7 @@ public open class CfnService(
        * last deployment that completed successfully.
        */
       override fun rollback(rollback: IResolvable) {
-        cdkBuilder.rollback(rollback.let(IResolvable::unwrap))
+        cdkBuilder.rollback(rollback.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.ecs.CfnService.DeploymentAlarmsProperty =
@@ -3003,7 +3003,7 @@ public open class CfnService(
        * service. 
        */
       override fun enable(enable: IResolvable) {
-        cdkBuilder.enable(enable.let(IResolvable::unwrap))
+        cdkBuilder.enable(enable.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3023,7 +3023,7 @@ public open class CfnService(
        * deployment that completed successfully.
        */
       override fun rollback(rollback: IResolvable) {
-        cdkBuilder.rollback(rollback.let(IResolvable::unwrap))
+        cdkBuilder.rollback(rollback.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -3344,14 +3344,14 @@ public open class CfnService(
        * @param alarms Information about the CloudWatch alarms.
        */
       override fun alarms(alarms: IResolvable) {
-        cdkBuilder.alarms(alarms.let(IResolvable::unwrap))
+        cdkBuilder.alarms(alarms.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param alarms Information about the CloudWatch alarms.
        */
       override fun alarms(alarms: DeploymentAlarmsProperty) {
-        cdkBuilder.alarms(alarms.let(DeploymentAlarmsProperty::unwrap))
+        cdkBuilder.alarms(alarms.let(DeploymentAlarmsProperty.Companion::unwrap))
       }
 
       /**
@@ -3374,7 +3374,7 @@ public open class CfnService(
        * in the *Amazon Elastic Container Service Developer Guide*
        */
       override fun deploymentCircuitBreaker(deploymentCircuitBreaker: IResolvable) {
-        cdkBuilder.deploymentCircuitBreaker(deploymentCircuitBreaker.let(IResolvable::unwrap))
+        cdkBuilder.deploymentCircuitBreaker(deploymentCircuitBreaker.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3390,7 +3390,7 @@ public open class CfnService(
        */
       override
           fun deploymentCircuitBreaker(deploymentCircuitBreaker: DeploymentCircuitBreakerProperty) {
-        cdkBuilder.deploymentCircuitBreaker(deploymentCircuitBreaker.let(DeploymentCircuitBreakerProperty::unwrap))
+        cdkBuilder.deploymentCircuitBreaker(deploymentCircuitBreaker.let(DeploymentCircuitBreakerProperty.Companion::unwrap))
       }
 
       /**
@@ -3861,7 +3861,7 @@ public open class CfnService(
        * `AmazonECSCreated` and `AmazonECSManaged` are reserved tags that can't be used.
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**
@@ -4447,7 +4447,7 @@ public open class CfnService(
        * '{{.Server.APIVersion}}'`
        */
       override fun options(options: IResolvable) {
-        cdkBuilder.options(options.let(IResolvable::unwrap))
+        cdkBuilder.options(options.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4468,7 +4468,7 @@ public open class CfnService(
        * in the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun secretOptions(secretOptions: IResolvable) {
-        cdkBuilder.secretOptions(secretOptions.let(IResolvable::unwrap))
+        cdkBuilder.secretOptions(secretOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4648,7 +4648,7 @@ public open class CfnService(
        * All specified subnets and security groups must be from the same VPC.
        */
       override fun awsvpcConfiguration(awsvpcConfiguration: IResolvable) {
-        cdkBuilder.awsvpcConfiguration(awsvpcConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.awsvpcConfiguration(awsvpcConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4658,7 +4658,7 @@ public open class CfnService(
        * All specified subnets and security groups must be from the same VPC.
        */
       override fun awsvpcConfiguration(awsvpcConfiguration: AwsVpcConfigurationProperty) {
-        cdkBuilder.awsvpcConfiguration(awsvpcConfiguration.let(AwsVpcConfigurationProperty::unwrap))
+        cdkBuilder.awsvpcConfiguration(awsvpcConfiguration.let(AwsVpcConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -5782,7 +5782,7 @@ public open class CfnService(
        * @param enabled Specifies whether to use Service Connect with this service. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5828,7 +5828,7 @@ public open class CfnService(
        * Logstash to send Gelf logs to.
        */
       override fun logConfiguration(logConfiguration: IResolvable) {
-        cdkBuilder.logConfiguration(logConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.logConfiguration(logConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5874,7 +5874,7 @@ public open class CfnService(
        * Logstash to send Gelf logs to.
        */
       override fun logConfiguration(logConfiguration: LogConfigurationProperty) {
-        cdkBuilder.logConfiguration(logConfiguration.let(LogConfigurationProperty::unwrap))
+        cdkBuilder.logConfiguration(logConfiguration.let(LogConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -5952,7 +5952,7 @@ public open class CfnService(
        * service.
        */
       override fun services(services: IResolvable) {
-        cdkBuilder.services(services.let(IResolvable::unwrap))
+        cdkBuilder.services(services.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6356,7 +6356,7 @@ public open class CfnService(
        * `port` .
        */
       override fun clientAliases(clientAliases: IResolvable) {
-        cdkBuilder.clientAliases(clientAliases.let(IResolvable::unwrap))
+        cdkBuilder.clientAliases(clientAliases.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6433,7 +6433,7 @@ public open class CfnService(
        * Connect.
        */
       override fun timeout(timeout: IResolvable) {
-        cdkBuilder.timeout(timeout.let(IResolvable::unwrap))
+        cdkBuilder.timeout(timeout.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6441,7 +6441,7 @@ public open class CfnService(
        * Connect.
        */
       override fun timeout(timeout: TimeoutConfigurationProperty) {
-        cdkBuilder.timeout(timeout.let(TimeoutConfigurationProperty::unwrap))
+        cdkBuilder.timeout(timeout.let(TimeoutConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -6458,7 +6458,7 @@ public open class CfnService(
        * configuration.
        */
       override fun tls(tls: IResolvable) {
-        cdkBuilder.tls(tls.let(IResolvable::unwrap))
+        cdkBuilder.tls(tls.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6466,7 +6466,7 @@ public open class CfnService(
        * configuration.
        */
       override fun tls(tls: ServiceConnectTlsConfigurationProperty) {
-        cdkBuilder.tls(tls.let(ServiceConnectTlsConfigurationProperty::unwrap))
+        cdkBuilder.tls(tls.let(ServiceConnectTlsConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -6750,7 +6750,7 @@ public open class CfnService(
        * @param issuerCertificateAuthority The signer certificate authority. 
        */
       override fun issuerCertificateAuthority(issuerCertificateAuthority: IResolvable) {
-        cdkBuilder.issuerCertificateAuthority(issuerCertificateAuthority.let(IResolvable::unwrap))
+        cdkBuilder.issuerCertificateAuthority(issuerCertificateAuthority.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6758,7 +6758,7 @@ public open class CfnService(
        */
       override
           fun issuerCertificateAuthority(issuerCertificateAuthority: ServiceConnectTlsCertificateAuthorityProperty) {
-        cdkBuilder.issuerCertificateAuthority(issuerCertificateAuthority.let(ServiceConnectTlsCertificateAuthorityProperty::unwrap))
+        cdkBuilder.issuerCertificateAuthority(issuerCertificateAuthority.let(ServiceConnectTlsCertificateAuthorityProperty.Companion::unwrap))
       }
 
       /**
@@ -7242,7 +7242,7 @@ public open class CfnService(
        * *Amazon EC2 API Reference* .
        */
       override fun encrypted(encrypted: IResolvable) {
-        cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
+        cdkBuilder.encrypted(encrypted.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7352,7 +7352,7 @@ public open class CfnService(
        * *Amazon EC2 API Reference* .
        */
       override fun tagSpecifications(tagSpecifications: IResolvable) {
-        cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable::unwrap))
+        cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7969,7 +7969,7 @@ public open class CfnService(
        * console once they are created.
        */
       override fun managedEbsVolume(managedEbsVolume: IResolvable) {
-        cdkBuilder.managedEbsVolume(managedEbsVolume.let(IResolvable::unwrap))
+        cdkBuilder.managedEbsVolume(managedEbsVolume.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7981,7 +7981,7 @@ public open class CfnService(
        */
       override
           fun managedEbsVolume(managedEbsVolume: ServiceManagedEBSVolumeConfigurationProperty) {
-        cdkBuilder.managedEbsVolume(managedEbsVolume.let(ServiceManagedEBSVolumeConfigurationProperty::unwrap))
+        cdkBuilder.managedEbsVolume(managedEbsVolume.let(ServiceManagedEBSVolumeConfigurationProperty.Companion::unwrap))
       }
 
       /**

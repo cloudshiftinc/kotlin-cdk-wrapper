@@ -60,7 +60,7 @@ public interface IVirtualRouter : IResource {
      * @param props 
      */
     override fun addRoute(id: String, props: RouteBaseProps): Route = unwrap(this).addRoute(id,
-        props.let(RouteBaseProps::unwrap)).let(Route::wrap)
+        props.let(RouteBaseProps.Companion::unwrap)).let(Route::wrap)
 
     /**
      * Add a single route to the router.
@@ -87,7 +87,7 @@ public interface IVirtualRouter : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**

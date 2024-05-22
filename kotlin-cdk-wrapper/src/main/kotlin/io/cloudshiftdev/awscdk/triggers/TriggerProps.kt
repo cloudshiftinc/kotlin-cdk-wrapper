@@ -123,7 +123,7 @@ public interface TriggerProps : TriggerOptions {
      * You can also use `trigger.executeAfter()` to add additional dependencies.
      */
     override fun executeAfter(executeAfter: List<Construct>) {
-      cdkBuilder.executeAfter(executeAfter.map(Construct::unwrap))
+      cdkBuilder.executeAfter(executeAfter.map(Construct.Companion::unwrap))
     }
 
     /**
@@ -142,7 +142,7 @@ public interface TriggerProps : TriggerOptions {
      * You can also use `trigger.executeBefore()` to add additional dependants.
      */
     override fun executeBefore(executeBefore: List<Construct>) {
-      cdkBuilder.executeBefore(executeBefore.map(Construct::unwrap))
+      cdkBuilder.executeBefore(executeBefore.map(Construct.Companion::unwrap))
     }
 
     /**
@@ -169,21 +169,21 @@ public interface TriggerProps : TriggerOptions {
      * @param handler The AWS Lambda function of the handler to execute. 
      */
     override fun handler(handler: Function) {
-      cdkBuilder.handler(handler.let(Function::unwrap))
+      cdkBuilder.handler(handler.let(Function.Companion::unwrap))
     }
 
     /**
      * @param invocationType The invocation type to invoke the Lambda function with.
      */
     override fun invocationType(invocationType: InvocationType) {
-      cdkBuilder.invocationType(invocationType.let(InvocationType::unwrap))
+      cdkBuilder.invocationType(invocationType.let(InvocationType.Companion::unwrap))
     }
 
     /**
      * @param timeout The timeout of the invocation call of the Lambda function to be triggered.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.triggers.TriggerProps = cdkBuilder.build()

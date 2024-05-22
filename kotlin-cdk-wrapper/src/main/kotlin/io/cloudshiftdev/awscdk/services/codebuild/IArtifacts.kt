@@ -43,8 +43,8 @@ public interface IArtifacts {
      * @param project the Project this Artifacts is used in. 
      */
     override fun bind(scope: Construct, project: IProject): ArtifactsConfig =
-        unwrap(this).bind(scope.let(Construct::unwrap),
-        project.let(IProject::unwrap)).let(ArtifactsConfig::wrap)
+        unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+        project.let(IProject.Companion::unwrap)).let(ArtifactsConfig::wrap)
 
     /**
      * The artifact identifier.

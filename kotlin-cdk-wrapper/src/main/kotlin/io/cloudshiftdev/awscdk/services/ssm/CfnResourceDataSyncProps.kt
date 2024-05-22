@@ -246,14 +246,14 @@ public interface CfnResourceDataSyncProps {
      * @param s3Destination Configuration information for the target S3 bucket.
      */
     override fun s3Destination(s3Destination: IResolvable) {
-      cdkBuilder.s3Destination(s3Destination.let(IResolvable::unwrap))
+      cdkBuilder.s3Destination(s3Destination.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param s3Destination Configuration information for the target S3 bucket.
      */
     override fun s3Destination(s3Destination: CfnResourceDataSync.S3DestinationProperty) {
-      cdkBuilder.s3Destination(s3Destination.let(CfnResourceDataSync.S3DestinationProperty::unwrap))
+      cdkBuilder.s3Destination(s3Destination.let(CfnResourceDataSync.S3DestinationProperty.Companion::unwrap))
     }
 
     /**
@@ -284,14 +284,14 @@ public interface CfnResourceDataSyncProps {
      * @param syncSource Information about the source where the data was synchronized.
      */
     override fun syncSource(syncSource: IResolvable) {
-      cdkBuilder.syncSource(syncSource.let(IResolvable::unwrap))
+      cdkBuilder.syncSource(syncSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param syncSource Information about the source where the data was synchronized.
      */
     override fun syncSource(syncSource: CfnResourceDataSync.SyncSourceProperty) {
-      cdkBuilder.syncSource(syncSource.let(CfnResourceDataSync.SyncSourceProperty::unwrap))
+      cdkBuilder.syncSource(syncSource.let(CfnResourceDataSync.SyncSourceProperty.Companion::unwrap))
     }
 
     /**

@@ -318,14 +318,14 @@ public interface CfnLaunchProps {
      * @param executionStatus A structure that you can use to start and stop the launch.
      */
     override fun executionStatus(executionStatus: IResolvable) {
-      cdkBuilder.executionStatus(executionStatus.let(IResolvable::unwrap))
+      cdkBuilder.executionStatus(executionStatus.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param executionStatus A structure that you can use to start and stop the launch.
      */
     override fun executionStatus(executionStatus: CfnLaunch.ExecutionStatusObjectProperty) {
-      cdkBuilder.executionStatus(executionStatus.let(CfnLaunch.ExecutionStatusObjectProperty::unwrap))
+      cdkBuilder.executionStatus(executionStatus.let(CfnLaunch.ExecutionStatusObjectProperty.Companion::unwrap))
     }
 
     /**
@@ -343,7 +343,7 @@ public interface CfnLaunchProps {
      * You can up to five launch groups in a launch.
      */
     override fun groups(groups: IResolvable) {
-      cdkBuilder.groups(groups.let(IResolvable::unwrap))
+      cdkBuilder.groups(groups.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -368,7 +368,7 @@ public interface CfnLaunchProps {
      * You can have up to three metric monitors in the array.
      */
     override fun metricMonitors(metricMonitors: IResolvable) {
-      cdkBuilder.metricMonitors(metricMonitors.let(IResolvable::unwrap))
+      cdkBuilder.metricMonitors(metricMonitors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -418,7 +418,7 @@ public interface CfnLaunchProps {
      * percentages among the feature variations during each step of the launch. 
      */
     override fun scheduledSplitsConfig(scheduledSplitsConfig: IResolvable) {
-      cdkBuilder.scheduledSplitsConfig(scheduledSplitsConfig.let(IResolvable::unwrap))
+      cdkBuilder.scheduledSplitsConfig(scheduledSplitsConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -451,7 +451,7 @@ public interface CfnLaunchProps {
      * resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -81,7 +81,7 @@ public interface AddApplicationTargetGroupsProps : AddRuleProps {
      * @param conditions Rule applies if matches the conditions.
      */
     override fun conditions(conditions: List<ListenerCondition>) {
-      cdkBuilder.conditions(conditions.map(ListenerCondition::unwrap))
+      cdkBuilder.conditions(conditions.map(ListenerCondition.Companion::unwrap))
     }
 
     /**
@@ -106,7 +106,7 @@ public interface AddApplicationTargetGroupsProps : AddRuleProps {
      * @param targetGroups Target groups to forward requests to. 
      */
     override fun targetGroups(targetGroups: List<IApplicationTargetGroup>) {
-      cdkBuilder.targetGroups(targetGroups.map(IApplicationTargetGroup::unwrap))
+      cdkBuilder.targetGroups(targetGroups.map(IApplicationTargetGroup.Companion::unwrap))
     }
 
     /**

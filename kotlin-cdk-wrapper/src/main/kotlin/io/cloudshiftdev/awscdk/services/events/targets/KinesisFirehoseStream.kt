@@ -36,13 +36,13 @@ public open class KinesisFirehoseStream(
   cdkObject: software.amazon.awscdk.services.events.targets.KinesisFirehoseStream,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(stream: CloudshiftdevAwscdkServicesKinesisfirehoseCfnDeliveryStream) :
-      this(software.amazon.awscdk.services.events.targets.KinesisFirehoseStream(stream.let(CloudshiftdevAwscdkServicesKinesisfirehoseCfnDeliveryStream::unwrap))
+      this(software.amazon.awscdk.services.events.targets.KinesisFirehoseStream(stream.let(CloudshiftdevAwscdkServicesKinesisfirehoseCfnDeliveryStream.Companion::unwrap))
   )
 
   public constructor(stream: CloudshiftdevAwscdkServicesKinesisfirehoseCfnDeliveryStream,
       props: KinesisFirehoseStreamProps) :
-      this(software.amazon.awscdk.services.events.targets.KinesisFirehoseStream(stream.let(CloudshiftdevAwscdkServicesKinesisfirehoseCfnDeliveryStream::unwrap),
-      props.let(KinesisFirehoseStreamProps::unwrap))
+      this(software.amazon.awscdk.services.events.targets.KinesisFirehoseStream(stream.let(CloudshiftdevAwscdkServicesKinesisfirehoseCfnDeliveryStream.Companion::unwrap),
+      props.let(KinesisFirehoseStreamProps.Companion::unwrap))
   )
 
   public constructor(stream: CloudshiftdevAwscdkServicesKinesisfirehoseCfnDeliveryStream,
@@ -58,7 +58,7 @@ public open class KinesisFirehoseStream(
    * @param _id
    */
   public override fun bind(rule: IRule): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap)).let(RuleTargetConfig::wrap)
 
   /**
    * Returns a RuleTarget that can be used to trigger this Firehose Stream as a result from a Event
@@ -68,7 +68,7 @@ public open class KinesisFirehoseStream(
    * @param _id
    */
   public override fun bind(rule: IRule, id: String): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap), id).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap), id).let(RuleTargetConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.events.targets.KinesisFirehoseStream].
@@ -104,7 +104,7 @@ public open class KinesisFirehoseStream(
      * @param message The message to send to the stream. 
      */
     override fun message(message: RuleTargetInput) {
-      cdkBuilder.message(message.let(RuleTargetInput::unwrap))
+      cdkBuilder.message(message.let(RuleTargetInput.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.events.targets.KinesisFirehoseStream =

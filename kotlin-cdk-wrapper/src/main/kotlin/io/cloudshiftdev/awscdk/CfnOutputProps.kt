@@ -125,7 +125,7 @@ public interface CfnOutputProps {
      * to `false`, this output value will not be included in the stack.
      */
     override fun condition(condition: CfnCondition) {
-      cdkBuilder.condition(condition.let(CfnCondition::unwrap))
+      cdkBuilder.condition(condition.let(CfnCondition.Companion::unwrap))
     }
 
     /**

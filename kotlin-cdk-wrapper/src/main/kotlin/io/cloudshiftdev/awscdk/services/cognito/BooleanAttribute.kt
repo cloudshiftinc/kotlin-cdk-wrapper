@@ -40,7 +40,7 @@ public open class BooleanAttribute(
   )
 
   public constructor(props: CustomAttributeProps) :
-      this(software.amazon.awscdk.services.cognito.BooleanAttribute(props.let(CustomAttributeProps::unwrap))
+      this(software.amazon.awscdk.services.cognito.BooleanAttribute(props.let(CustomAttributeProps.Companion::unwrap))
   )
 
   public constructor(props: CustomAttributeProps.Builder.() -> Unit) :

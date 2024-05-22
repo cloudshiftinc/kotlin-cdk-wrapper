@@ -48,8 +48,8 @@ public open class SageMakerCreateEndpointConfig(
     id: String,
     props: SageMakerCreateEndpointConfigProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateEndpointConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SageMakerCreateEndpointConfigProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.SageMakerCreateEndpointConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SageMakerCreateEndpointConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -315,7 +315,7 @@ public open class SageMakerCreateEndpointConfig(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -353,7 +353,7 @@ public open class SageMakerCreateEndpointConfig(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -367,7 +367,7 @@ public open class SageMakerCreateEndpointConfig(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -402,7 +402,7 @@ public open class SageMakerCreateEndpointConfig(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -415,7 +415,7 @@ public open class SageMakerCreateEndpointConfig(
      * the storage volume attached to the ML compute instance that hosts the endpoint. 
      */
     override fun kmsKey(kmsKey: IKey) {
-      cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -446,7 +446,7 @@ public open class SageMakerCreateEndpointConfig(
      * want to host at this endpoint. 
      */
     override fun productionVariants(productionVariants: List<ProductionVariant>) {
-      cdkBuilder.productionVariants(productionVariants.map(ProductionVariant::unwrap))
+      cdkBuilder.productionVariants(productionVariants.map(ProductionVariant.Companion::unwrap))
     }
 
     /**
@@ -513,7 +513,7 @@ public open class SageMakerCreateEndpointConfig(
      * @param tags Tags to be applied to the endpoint configuration. 
      */
     override fun tags(tags: TaskInput) {
-      cdkBuilder.tags(tags.let(TaskInput::unwrap))
+      cdkBuilder.tags(tags.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -527,7 +527,7 @@ public open class SageMakerCreateEndpointConfig(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -540,7 +540,7 @@ public open class SageMakerCreateEndpointConfig(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build():

@@ -116,8 +116,8 @@ public open class CfnRule(
     id: String,
     props: CfnRuleProps,
   ) :
-      this(software.amazon.awscdk.services.connect.CfnRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRuleProps::unwrap))
+      this(software.amazon.awscdk.services.connect.CfnRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -136,14 +136,14 @@ public open class CfnRule(
    * A list of actions to be run when the rule is triggered.
    */
   public open fun actions(`value`: IResolvable) {
-    unwrap(this).setActions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setActions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A list of actions to be run when the rule is triggered.
    */
   public open fun actions(`value`: ActionsProperty) {
-    unwrap(this).setActions(`value`.let(ActionsProperty::unwrap))
+    unwrap(this).setActions(`value`.let(ActionsProperty.Companion::unwrap))
   }
 
   /**
@@ -177,7 +177,7 @@ public open class CfnRule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -231,7 +231,7 @@ public open class CfnRule(
    * The tags used to organize, track, or control access for this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -248,14 +248,14 @@ public open class CfnRule(
    * The event source to trigger the rule.
    */
   public open fun triggerEventSource(`value`: IResolvable) {
-    unwrap(this).setTriggerEventSource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTriggerEventSource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The event source to trigger the rule.
    */
   public open fun triggerEventSource(`value`: RuleTriggerEventSourceProperty) {
-    unwrap(this).setTriggerEventSource(`value`.let(RuleTriggerEventSourceProperty::unwrap))
+    unwrap(this).setTriggerEventSource(`value`.let(RuleTriggerEventSourceProperty.Companion::unwrap))
   }
 
   /**
@@ -393,7 +393,7 @@ public open class CfnRule(
      * @param actions A list of actions to be run when the rule is triggered. 
      */
     override fun actions(actions: IResolvable) {
-      cdkBuilder.actions(actions.let(IResolvable::unwrap))
+      cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -403,7 +403,7 @@ public open class CfnRule(
      * @param actions A list of actions to be run when the rule is triggered. 
      */
     override fun actions(actions: ActionsProperty) {
-      cdkBuilder.actions(actions.let(ActionsProperty::unwrap))
+      cdkBuilder.actions(actions.let(ActionsProperty.Companion::unwrap))
     }
 
     /**
@@ -468,7 +468,7 @@ public open class CfnRule(
      * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -488,7 +488,7 @@ public open class CfnRule(
      * @param triggerEventSource The event source to trigger the rule. 
      */
     override fun triggerEventSource(triggerEventSource: IResolvable) {
-      cdkBuilder.triggerEventSource(triggerEventSource.let(IResolvable::unwrap))
+      cdkBuilder.triggerEventSource(triggerEventSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -498,7 +498,7 @@ public open class CfnRule(
      * @param triggerEventSource The event source to trigger the rule. 
      */
     override fun triggerEventSource(triggerEventSource: RuleTriggerEventSourceProperty) {
-      cdkBuilder.triggerEventSource(triggerEventSource.let(RuleTriggerEventSourceProperty::unwrap))
+      cdkBuilder.triggerEventSource(triggerEventSource.let(RuleTriggerEventSourceProperty.Companion::unwrap))
     }
 
     /**
@@ -808,14 +808,14 @@ public open class CfnRule(
        * The syntax can be empty, for example, `{}` .
        */
       override fun assignContactCategoryActions(assignContactCategoryActions: IResolvable) {
-        cdkBuilder.assignContactCategoryActions(assignContactCategoryActions.let(IResolvable::unwrap))
+        cdkBuilder.assignContactCategoryActions(assignContactCategoryActions.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param createCaseActions This action will create a case when a rule is triggered.
        */
       override fun createCaseActions(createCaseActions: IResolvable) {
-        cdkBuilder.createCaseActions(createCaseActions.let(IResolvable::unwrap))
+        cdkBuilder.createCaseActions(createCaseActions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -851,14 +851,14 @@ public open class CfnRule(
        * triggered.
        */
       override fun endAssociatedTasksActions(endAssociatedTasksActions: IResolvable) {
-        cdkBuilder.endAssociatedTasksActions(endAssociatedTasksActions.let(IResolvable::unwrap))
+        cdkBuilder.endAssociatedTasksActions(endAssociatedTasksActions.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param eventBridgeActions Information about the EventBridge action.
        */
       override fun eventBridgeActions(eventBridgeActions: IResolvable) {
-        cdkBuilder.eventBridgeActions(eventBridgeActions.let(IResolvable::unwrap))
+        cdkBuilder.eventBridgeActions(eventBridgeActions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -878,7 +878,7 @@ public open class CfnRule(
        * @param sendNotificationActions Information about the send notification action.
        */
       override fun sendNotificationActions(sendNotificationActions: IResolvable) {
-        cdkBuilder.sendNotificationActions(sendNotificationActions.let(IResolvable::unwrap))
+        cdkBuilder.sendNotificationActions(sendNotificationActions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -900,7 +900,7 @@ public open class CfnRule(
        * `OnZendeskTicketCreate` | `OnZendeskTicketStatusUpdate` | `OnSalesforceCaseCreate`
        */
       override fun taskActions(taskActions: IResolvable) {
-        cdkBuilder.taskActions(taskActions.let(IResolvable::unwrap))
+        cdkBuilder.taskActions(taskActions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -923,7 +923,7 @@ public open class CfnRule(
        * @param updateCaseActions This action will update a case when a rule is triggered.
        */
       override fun updateCaseActions(updateCaseActions: IResolvable) {
-        cdkBuilder.updateCaseActions(updateCaseActions.let(IResolvable::unwrap))
+        cdkBuilder.updateCaseActions(updateCaseActions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1094,7 +1094,7 @@ public open class CfnRule(
        * @param fields An array of case fields. 
        */
       override fun fields(fields: IResolvable) {
-        cdkBuilder.fields(fields.let(IResolvable::unwrap))
+        cdkBuilder.fields(fields.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1317,14 +1317,14 @@ public open class CfnRule(
        * @param value The value of the field. 
        */
       override fun `value`(`value`: IResolvable) {
-        cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
+        cdkBuilder.`value`(`value`.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param value The value of the field. 
        */
       override fun `value`(`value`: FieldValueProperty) {
-        cdkBuilder.`value`(`value`.let(FieldValueProperty::unwrap))
+        cdkBuilder.`value`(`value`.let(FieldValueProperty.Companion::unwrap))
       }
 
       /**
@@ -1460,7 +1460,7 @@ public open class CfnRule(
        * @param booleanValue the value to be set.
        */
       override fun booleanValue(booleanValue: IResolvable) {
-        cdkBuilder.booleanValue(booleanValue.let(IResolvable::unwrap))
+        cdkBuilder.booleanValue(booleanValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1620,7 +1620,7 @@ public open class CfnRule(
        * specified tags will be notified.
        */
       override fun userTags(userTags: IResolvable) {
-        cdkBuilder.userTags(userTags.let(IResolvable::unwrap))
+        cdkBuilder.userTags(userTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2084,14 +2084,14 @@ public open class CfnRule(
        * @param recipient Notification recipient. 
        */
       override fun recipient(recipient: IResolvable) {
-        cdkBuilder.recipient(recipient.let(IResolvable::unwrap))
+        cdkBuilder.recipient(recipient.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param recipient Notification recipient. 
        */
       override fun recipient(recipient: NotificationRecipientTypeProperty) {
-        cdkBuilder.recipient(recipient.let(NotificationRecipientTypeProperty::unwrap))
+        cdkBuilder.recipient(recipient.let(NotificationRecipientTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -2332,7 +2332,7 @@ public open class CfnRule(
        * `Value` field.)
        */
       override fun references(references: IResolvable) {
-        cdkBuilder.references(references.let(IResolvable::unwrap))
+        cdkBuilder.references(references.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2471,7 +2471,7 @@ public open class CfnRule(
        * @param fields An array of case fields. 
        */
       override fun fields(fields: IResolvable) {
-        cdkBuilder.fields(fields.let(IResolvable::unwrap))
+        cdkBuilder.fields(fields.let(IResolvable.Companion::unwrap))
       }
 
       /**

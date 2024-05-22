@@ -83,7 +83,7 @@ public interface IApplicationLoadBalancer : ILoadBalancerV2, IConnectable {
      */
     override fun addListener(id: String, props: BaseApplicationListenerProps): ApplicationListener =
         unwrap(this).addListener(id,
-        props.let(BaseApplicationListenerProps::unwrap)).let(ApplicationListener::wrap)
+        props.let(BaseApplicationListenerProps.Companion::unwrap)).let(ApplicationListener::wrap)
 
     /**
      * Add a new listener to this load balancer.
@@ -110,7 +110,7 @@ public interface IApplicationLoadBalancer : ILoadBalancerV2, IConnectable {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**

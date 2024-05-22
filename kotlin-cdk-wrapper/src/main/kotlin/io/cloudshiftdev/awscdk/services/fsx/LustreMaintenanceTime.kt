@@ -28,7 +28,7 @@ public open class LustreMaintenanceTime(
   cdkObject: software.amazon.awscdk.services.fsx.LustreMaintenanceTime,
 ) : CdkObject(cdkObject) {
   public constructor(props: LustreMaintenanceTimeProps) :
-      this(software.amazon.awscdk.services.fsx.LustreMaintenanceTime(props.let(LustreMaintenanceTimeProps::unwrap))
+      this(software.amazon.awscdk.services.fsx.LustreMaintenanceTime(props.let(LustreMaintenanceTimeProps.Companion::unwrap))
   )
 
   public constructor(props: LustreMaintenanceTimeProps.Builder.() -> Unit) :
@@ -78,7 +78,7 @@ public open class LustreMaintenanceTime(
      * @param day The day of the week for maintenance to be performed. 
      */
     override fun day(day: Weekday) {
-      cdkBuilder.day(day.let(Weekday::unwrap))
+      cdkBuilder.day(day.let(Weekday.Companion::unwrap))
     }
 
     /**

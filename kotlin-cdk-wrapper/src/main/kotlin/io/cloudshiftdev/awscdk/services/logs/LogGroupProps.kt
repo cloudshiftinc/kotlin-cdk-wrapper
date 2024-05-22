@@ -55,7 +55,7 @@ public interface LogGroupProps {
   /**
    * The KMS customer managed key to encrypt the log group with.
    *
-   * Default: Server-side encrpytion managed by the CloudWatch Logs service
+   * Default: Server-side encryption managed by the CloudWatch Logs service
    */
   public fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 
@@ -160,7 +160,7 @@ public interface LogGroupProps {
      * @param dataProtectionPolicy Data Protection Policy for this log group.
      */
     override fun dataProtectionPolicy(dataProtectionPolicy: DataProtectionPolicy) {
-      cdkBuilder.dataProtectionPolicy(dataProtectionPolicy.let(DataProtectionPolicy::unwrap))
+      cdkBuilder.dataProtectionPolicy(dataProtectionPolicy.let(DataProtectionPolicy.Companion::unwrap))
     }
 
     /**
@@ -176,7 +176,7 @@ public interface LogGroupProps {
      * @param encryptionKey The KMS customer managed key to encrypt the log group with.
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -187,7 +187,7 @@ public interface LogGroupProps {
      * be changed once the log group is created.
      */
     override fun logGroupClass(logGroupClass: LogGroupClass) {
-      cdkBuilder.logGroupClass(logGroupClass.let(LogGroupClass::unwrap))
+      cdkBuilder.logGroupClass(logGroupClass.let(LogGroupClass.Companion::unwrap))
     }
 
     /**
@@ -205,7 +205,7 @@ public interface LogGroupProps {
      * logs.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -213,7 +213,7 @@ public interface LogGroupProps {
      * To retain all logs, set this value to RetentionDays.INFINITE.
      */
     override fun retention(retention: RetentionDays) {
-      cdkBuilder.retention(retention.let(RetentionDays::unwrap))
+      cdkBuilder.retention(retention.let(RetentionDays.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.logs.LogGroupProps = cdkBuilder.build()
@@ -233,7 +233,7 @@ public interface LogGroupProps {
     /**
      * The KMS customer managed key to encrypt the log group with.
      *
-     * Default: Server-side encrpytion managed by the CloudWatch Logs service
+     * Default: Server-side encryption managed by the CloudWatch Logs service
      */
     override fun encryptionKey(): IKey? = unwrap(this).getEncryptionKey()?.let(IKey::wrap)
 

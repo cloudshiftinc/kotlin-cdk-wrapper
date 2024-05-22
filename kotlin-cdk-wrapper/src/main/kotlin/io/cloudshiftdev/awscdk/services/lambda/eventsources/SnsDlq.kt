@@ -27,7 +27,7 @@ public open class SnsDlq(
   cdkObject: software.amazon.awscdk.services.lambda.eventsources.SnsDlq,
 ) : CdkObject(cdkObject), IEventSourceDlq {
   public constructor(topic: ITopic) :
-      this(software.amazon.awscdk.services.lambda.eventsources.SnsDlq(topic.let(ITopic::unwrap))
+      this(software.amazon.awscdk.services.lambda.eventsources.SnsDlq(topic.let(ITopic.Companion::unwrap))
   )
 
   /**
@@ -37,8 +37,8 @@ public open class SnsDlq(
    * @param targetHandler 
    */
   public override fun bind(target: IEventSourceMapping, targetHandler: IFunction):
-      DlqDestinationConfig = unwrap(this).bind(target.let(IEventSourceMapping::unwrap),
-      targetHandler.let(IFunction::unwrap)).let(DlqDestinationConfig::wrap)
+      DlqDestinationConfig = unwrap(this).bind(target.let(IEventSourceMapping.Companion::unwrap),
+      targetHandler.let(IFunction.Companion::unwrap)).let(DlqDestinationConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.eventsources.SnsDlq): SnsDlq

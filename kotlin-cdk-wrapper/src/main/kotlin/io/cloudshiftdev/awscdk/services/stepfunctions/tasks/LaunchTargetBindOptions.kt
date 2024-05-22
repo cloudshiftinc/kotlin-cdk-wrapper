@@ -68,14 +68,14 @@ public interface LaunchTargetBindOptions {
      * tasks and services.
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
      * @param taskDefinition Task definition to run Docker containers in Amazon ECS. 
      */
     override fun taskDefinition(taskDefinition: ITaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(ITaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(ITaskDefinition.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.LaunchTargetBindOptions

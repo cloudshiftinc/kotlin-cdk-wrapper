@@ -55,7 +55,7 @@ public abstract class EnvironmentFile(
    * @param scope The binding scope. 
    */
   public open fun bind(scope: Construct): EnvironmentFileConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(EnvironmentFileConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(EnvironmentFileConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.ecs.EnvironmentFile,
@@ -67,7 +67,7 @@ public abstract class EnvironmentFile(
 
     public fun fromAsset(path: String, options: AssetOptions): AssetEnvironmentFile =
         software.amazon.awscdk.services.ecs.EnvironmentFile.fromAsset(path,
-        options.let(AssetOptions::unwrap)).let(AssetEnvironmentFile::wrap)
+        options.let(AssetOptions.Companion::unwrap)).let(AssetEnvironmentFile::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("edeec1152b0bf37aee91af633844d9f37c3d95bf602d5a2e342201186b0d53ef")
@@ -75,7 +75,7 @@ public abstract class EnvironmentFile(
         AssetEnvironmentFile = fromAsset(path, AssetOptions(options))
 
     public fun fromBucket(bucket: IBucket, key: String): S3EnvironmentFile =
-        software.amazon.awscdk.services.ecs.EnvironmentFile.fromBucket(bucket.let(IBucket::unwrap),
+        software.amazon.awscdk.services.ecs.EnvironmentFile.fromBucket(bucket.let(IBucket.Companion::unwrap),
         key).let(S3EnvironmentFile::wrap)
 
     public fun fromBucket(
@@ -83,7 +83,7 @@ public abstract class EnvironmentFile(
       key: String,
       objectVersion: String,
     ): S3EnvironmentFile =
-        software.amazon.awscdk.services.ecs.EnvironmentFile.fromBucket(bucket.let(IBucket::unwrap),
+        software.amazon.awscdk.services.ecs.EnvironmentFile.fromBucket(bucket.let(IBucket.Companion::unwrap),
         key, objectVersion).let(S3EnvironmentFile::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.EnvironmentFile):

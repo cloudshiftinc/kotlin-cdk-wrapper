@@ -40,8 +40,8 @@ public open class PublicKey(
     id: String,
     props: PublicKeyProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.PublicKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(PublicKeyProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.PublicKey(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(PublicKeyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -146,7 +146,7 @@ public open class PublicKey(
       id: String,
       publicKeyId: String,
     ): IPublicKey =
-        software.amazon.awscdk.services.cloudfront.PublicKey.fromPublicKeyId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.cloudfront.PublicKey.fromPublicKeyId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, publicKeyId).let(IPublicKey::wrap)
 
     public operator fun invoke(

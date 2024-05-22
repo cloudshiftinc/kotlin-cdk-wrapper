@@ -105,7 +105,7 @@ public open class LinuxBuildImage(
    * @param env 
    */
   public override fun validate(env: BuildEnvironment): List<String> =
-      unwrap(this).validate(env.let(BuildEnvironment::unwrap))
+      unwrap(this).validate(env.let(BuildEnvironment.Companion::unwrap))
 
   /**
    * Allows the image a chance to validate whether the passed configuration is correct.
@@ -168,8 +168,8 @@ public open class LinuxBuildImage(
       id: String,
       props: DockerImageAssetProps,
     ): IBuildImage =
-        software.amazon.awscdk.services.codebuild.LinuxBuildImage.fromAsset(scope.let(Construct::unwrap),
-        id, props.let(DockerImageAssetProps::unwrap)).let(IBuildImage::wrap)
+        software.amazon.awscdk.services.codebuild.LinuxBuildImage.fromAsset(scope.let(Construct.Companion::unwrap),
+        id, props.let(DockerImageAssetProps.Companion::unwrap)).let(IBuildImage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("66f4338ab15382a1d0a2efb8183796cd48bca3922530d07a2c878008262c08ef")
@@ -187,7 +187,7 @@ public open class LinuxBuildImage(
 
     public fun fromDockerRegistry(name: String, options: DockerImageOptions): IBuildImage =
         software.amazon.awscdk.services.codebuild.LinuxBuildImage.fromDockerRegistry(name,
-        options.let(DockerImageOptions::unwrap)).let(IBuildImage::wrap)
+        options.let(DockerImageOptions.Companion::unwrap)).let(IBuildImage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e9dfa00b9fda484ff06b60ab8b92ae7805fa8054bf1b7155a5e6cb7e59c4680f")
@@ -195,10 +195,10 @@ public open class LinuxBuildImage(
         IBuildImage = fromDockerRegistry(name, DockerImageOptions(options))
 
     public fun fromEcrRepository(repository: IRepository): IBuildImage =
-        software.amazon.awscdk.services.codebuild.LinuxBuildImage.fromEcrRepository(repository.let(IRepository::unwrap)).let(IBuildImage::wrap)
+        software.amazon.awscdk.services.codebuild.LinuxBuildImage.fromEcrRepository(repository.let(IRepository.Companion::unwrap)).let(IBuildImage::wrap)
 
     public fun fromEcrRepository(repository: IRepository, tagOrDigest: String): IBuildImage =
-        software.amazon.awscdk.services.codebuild.LinuxBuildImage.fromEcrRepository(repository.let(IRepository::unwrap),
+        software.amazon.awscdk.services.codebuild.LinuxBuildImage.fromEcrRepository(repository.let(IRepository.Companion::unwrap),
         tagOrDigest).let(IBuildImage::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.LinuxBuildImage):

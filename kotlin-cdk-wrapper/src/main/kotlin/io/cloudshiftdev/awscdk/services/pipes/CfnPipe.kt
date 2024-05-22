@@ -330,8 +330,8 @@ public open class CfnPipe(
     id: String,
     props: CfnPipeProps,
   ) :
-      this(software.amazon.awscdk.services.pipes.CfnPipe(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPipeProps::unwrap))
+      this(software.amazon.awscdk.services.pipes.CfnPipe(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPipeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -413,14 +413,14 @@ public open class CfnPipe(
    * The parameters required to set up enrichment on your pipe.
    */
   public open fun enrichmentParameters(`value`: IResolvable) {
-    unwrap(this).setEnrichmentParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnrichmentParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The parameters required to set up enrichment on your pipe.
    */
   public open fun enrichmentParameters(`value`: PipeEnrichmentParametersProperty) {
-    unwrap(this).setEnrichmentParameters(`value`.let(PipeEnrichmentParametersProperty::unwrap))
+    unwrap(this).setEnrichmentParameters(`value`.let(PipeEnrichmentParametersProperty.Companion::unwrap))
   }
 
   /**
@@ -438,7 +438,7 @@ public open class CfnPipe(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -450,14 +450,14 @@ public open class CfnPipe(
    * The logging configuration settings for the pipe.
    */
   public open fun logConfiguration(`value`: IResolvable) {
-    unwrap(this).setLogConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLogConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The logging configuration settings for the pipe.
    */
   public open fun logConfiguration(`value`: PipeLogConfigurationProperty) {
-    unwrap(this).setLogConfiguration(`value`.let(PipeLogConfigurationProperty::unwrap))
+    unwrap(this).setLogConfiguration(`value`.let(PipeLogConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -513,14 +513,14 @@ public open class CfnPipe(
    * The parameters required to set up a source for your pipe.
    */
   public open fun sourceParameters(`value`: IResolvable) {
-    unwrap(this).setSourceParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSourceParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The parameters required to set up a source for your pipe.
    */
   public open fun sourceParameters(`value`: PipeSourceParametersProperty) {
-    unwrap(this).setSourceParameters(`value`.let(PipeSourceParametersProperty::unwrap))
+    unwrap(this).setSourceParameters(`value`.let(PipeSourceParametersProperty.Companion::unwrap))
   }
 
   /**
@@ -569,14 +569,14 @@ public open class CfnPipe(
    * The parameters required to set up a target for your pipe.
    */
   public open fun targetParameters(`value`: IResolvable) {
-    unwrap(this).setTargetParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTargetParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The parameters required to set up a target for your pipe.
    */
   public open fun targetParameters(`value`: PipeTargetParametersProperty) {
-    unwrap(this).setTargetParameters(`value`.let(PipeTargetParametersProperty::unwrap))
+    unwrap(this).setTargetParameters(`value`.let(PipeTargetParametersProperty.Companion::unwrap))
   }
 
   /**
@@ -821,7 +821,7 @@ public open class CfnPipe(
      * @param enrichmentParameters The parameters required to set up enrichment on your pipe. 
      */
     override fun enrichmentParameters(enrichmentParameters: IResolvable) {
-      cdkBuilder.enrichmentParameters(enrichmentParameters.let(IResolvable::unwrap))
+      cdkBuilder.enrichmentParameters(enrichmentParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -831,7 +831,7 @@ public open class CfnPipe(
      * @param enrichmentParameters The parameters required to set up enrichment on your pipe. 
      */
     override fun enrichmentParameters(enrichmentParameters: PipeEnrichmentParametersProperty) {
-      cdkBuilder.enrichmentParameters(enrichmentParameters.let(PipeEnrichmentParametersProperty::unwrap))
+      cdkBuilder.enrichmentParameters(enrichmentParameters.let(PipeEnrichmentParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -853,7 +853,7 @@ public open class CfnPipe(
      * @param logConfiguration The logging configuration settings for the pipe. 
      */
     override fun logConfiguration(logConfiguration: IResolvable) {
-      cdkBuilder.logConfiguration(logConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.logConfiguration(logConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -863,7 +863,7 @@ public open class CfnPipe(
      * @param logConfiguration The logging configuration settings for the pipe. 
      */
     override fun logConfiguration(logConfiguration: PipeLogConfigurationProperty) {
-      cdkBuilder.logConfiguration(logConfiguration.let(PipeLogConfigurationProperty::unwrap))
+      cdkBuilder.logConfiguration(logConfiguration.let(PipeLogConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -915,7 +915,7 @@ public open class CfnPipe(
      * @param sourceParameters The parameters required to set up a source for your pipe. 
      */
     override fun sourceParameters(sourceParameters: IResolvable) {
-      cdkBuilder.sourceParameters(sourceParameters.let(IResolvable::unwrap))
+      cdkBuilder.sourceParameters(sourceParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -925,7 +925,7 @@ public open class CfnPipe(
      * @param sourceParameters The parameters required to set up a source for your pipe. 
      */
     override fun sourceParameters(sourceParameters: PipeSourceParametersProperty) {
-      cdkBuilder.sourceParameters(sourceParameters.let(PipeSourceParametersProperty::unwrap))
+      cdkBuilder.sourceParameters(sourceParameters.let(PipeSourceParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -972,7 +972,7 @@ public open class CfnPipe(
      * @param targetParameters The parameters required to set up a target for your pipe. 
      */
     override fun targetParameters(targetParameters: IResolvable) {
-      cdkBuilder.targetParameters(targetParameters.let(IResolvable::unwrap))
+      cdkBuilder.targetParameters(targetParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -987,7 +987,7 @@ public open class CfnPipe(
      * @param targetParameters The parameters required to set up a target for your pipe. 
      */
     override fun targetParameters(targetParameters: PipeTargetParametersProperty) {
-      cdkBuilder.targetParameters(targetParameters.let(PipeTargetParametersProperty::unwrap))
+      cdkBuilder.targetParameters(targetParameters.let(PipeTargetParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -1493,7 +1493,7 @@ public open class CfnPipe(
        * for variables that AWS Batch sets.
        */
       override fun environment(environment: IResolvable) {
-        cdkBuilder.environment(environment.let(IResolvable::unwrap))
+        cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1536,7 +1536,7 @@ public open class CfnPipe(
        * `MEMORY` , and `VCPU` .
        */
       override fun resourceRequirements(resourceRequirements: IResolvable) {
-        cdkBuilder.resourceRequirements(resourceRequirements.let(IResolvable::unwrap))
+        cdkBuilder.resourceRequirements(resourceRequirements.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3046,7 +3046,7 @@ public open class CfnPipe(
        * You must also specify a container name.
        */
       override fun environment(environment: IResolvable) {
-        cdkBuilder.environment(environment.let(IResolvable::unwrap))
+        cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3072,7 +3072,7 @@ public open class CfnPipe(
        * container, instead of the value from the container definition.
        */
       override fun environmentFiles(environmentFiles: IResolvable) {
-        cdkBuilder.environmentFiles(environmentFiles.let(IResolvable::unwrap))
+        cdkBuilder.environmentFiles(environmentFiles.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3123,7 +3123,7 @@ public open class CfnPipe(
        * The only supported resource is a GPU.
        */
       override fun resourceRequirements(resourceRequirements: IResolvable) {
-        cdkBuilder.resourceRequirements(resourceRequirements.let(IResolvable::unwrap))
+        cdkBuilder.resourceRequirements(resourceRequirements.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4109,7 +4109,7 @@ public open class CfnPipe(
        * @param containerOverrides One or more container overrides that are sent to a task.
        */
       override fun containerOverrides(containerOverrides: IResolvable) {
-        cdkBuilder.containerOverrides(containerOverrides.let(IResolvable::unwrap))
+        cdkBuilder.containerOverrides(containerOverrides.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4142,7 +4142,7 @@ public open class CfnPipe(
        * * Windows platform version `1.0.0` or later.
        */
       override fun ephemeralStorage(ephemeralStorage: IResolvable) {
-        cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable::unwrap))
+        cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4155,7 +4155,7 @@ public open class CfnPipe(
        * * Windows platform version `1.0.0` or later.
        */
       override fun ephemeralStorage(ephemeralStorage: EcsEphemeralStorageProperty) {
-        cdkBuilder.ephemeralStorage(ephemeralStorage.let(EcsEphemeralStorageProperty::unwrap))
+        cdkBuilder.ephemeralStorage(ephemeralStorage.let(EcsEphemeralStorageProperty.Companion::unwrap))
       }
 
       /**
@@ -4189,7 +4189,7 @@ public open class CfnPipe(
        * task.
        */
       override fun inferenceAcceleratorOverrides(inferenceAcceleratorOverrides: IResolvable) {
-        cdkBuilder.inferenceAcceleratorOverrides(inferenceAcceleratorOverrides.let(IResolvable::unwrap))
+        cdkBuilder.inferenceAcceleratorOverrides(inferenceAcceleratorOverrides.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4381,7 +4381,7 @@ public open class CfnPipe(
        * @param filters The event patterns.
        */
       override fun filters(filters: IResolvable) {
-        cdkBuilder.filters(filters.let(IResolvable::unwrap))
+        cdkBuilder.filters(filters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4861,7 +4861,7 @@ public open class CfnPipe(
        * This structure is relevant only for ECS tasks that use the `awsvpc` network mode.
        */
       override fun awsvpcConfiguration(awsvpcConfiguration: IResolvable) {
-        cdkBuilder.awsvpcConfiguration(awsvpcConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.awsvpcConfiguration(awsvpcConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4870,7 +4870,7 @@ public open class CfnPipe(
        * This structure is relevant only for ECS tasks that use the `awsvpc` network mode.
        */
       override fun awsvpcConfiguration(awsvpcConfiguration: AwsVpcConfigurationProperty) {
-        cdkBuilder.awsvpcConfiguration(awsvpcConfiguration.let(AwsVpcConfigurationProperty::unwrap))
+        cdkBuilder.awsvpcConfiguration(awsvpcConfiguration.let(AwsVpcConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -5024,7 +5024,7 @@ public open class CfnPipe(
        * API Gateway REST API or EventBridge ApiDestination.
        */
       override fun headerParameters(headerParameters: IResolvable) {
-        cdkBuilder.headerParameters(headerParameters.let(IResolvable::unwrap))
+        cdkBuilder.headerParameters(headerParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5055,7 +5055,7 @@ public open class CfnPipe(
        * request invoking the API Gateway REST API or EventBridge ApiDestination.
        */
       override fun queryStringParameters(queryStringParameters: IResolvable) {
-        cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable::unwrap))
+        cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5235,7 +5235,7 @@ public open class CfnPipe(
        * Connection take precedence.
        */
       override fun httpParameters(httpParameters: IResolvable) {
-        cdkBuilder.httpParameters(httpParameters.let(IResolvable::unwrap))
+        cdkBuilder.httpParameters(httpParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5248,7 +5248,7 @@ public open class CfnPipe(
        * Connection take precedence.
        */
       override fun httpParameters(httpParameters: PipeEnrichmentHttpParametersProperty) {
-        cdkBuilder.httpParameters(httpParameters.let(PipeEnrichmentHttpParametersProperty::unwrap))
+        cdkBuilder.httpParameters(httpParameters.let(PipeEnrichmentHttpParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -5514,7 +5514,7 @@ public open class CfnPipe(
        * @param cloudwatchLogsLogDestination The logging configuration settings for the pipe.
        */
       override fun cloudwatchLogsLogDestination(cloudwatchLogsLogDestination: IResolvable) {
-        cdkBuilder.cloudwatchLogsLogDestination(cloudwatchLogsLogDestination.let(IResolvable::unwrap))
+        cdkBuilder.cloudwatchLogsLogDestination(cloudwatchLogsLogDestination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5522,7 +5522,7 @@ public open class CfnPipe(
        */
       override
           fun cloudwatchLogsLogDestination(cloudwatchLogsLogDestination: CloudwatchLogsLogDestinationProperty) {
-        cdkBuilder.cloudwatchLogsLogDestination(cloudwatchLogsLogDestination.let(CloudwatchLogsLogDestinationProperty::unwrap))
+        cdkBuilder.cloudwatchLogsLogDestination(cloudwatchLogsLogDestination.let(CloudwatchLogsLogDestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -5540,7 +5540,7 @@ public open class CfnPipe(
        * the pipe.
        */
       override fun firehoseLogDestination(firehoseLogDestination: IResolvable) {
-        cdkBuilder.firehoseLogDestination(firehoseLogDestination.let(IResolvable::unwrap))
+        cdkBuilder.firehoseLogDestination(firehoseLogDestination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5548,7 +5548,7 @@ public open class CfnPipe(
        * the pipe.
        */
       override fun firehoseLogDestination(firehoseLogDestination: FirehoseLogDestinationProperty) {
-        cdkBuilder.firehoseLogDestination(firehoseLogDestination.let(FirehoseLogDestinationProperty::unwrap))
+        cdkBuilder.firehoseLogDestination(firehoseLogDestination.let(FirehoseLogDestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -5602,14 +5602,14 @@ public open class CfnPipe(
        * @param s3LogDestination The Amazon S3 logging configuration settings for the pipe.
        */
       override fun s3LogDestination(s3LogDestination: IResolvable) {
-        cdkBuilder.s3LogDestination(s3LogDestination.let(IResolvable::unwrap))
+        cdkBuilder.s3LogDestination(s3LogDestination.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3LogDestination The Amazon S3 logging configuration settings for the pipe.
        */
       override fun s3LogDestination(s3LogDestination: S3LogDestinationProperty) {
-        cdkBuilder.s3LogDestination(s3LogDestination.let(S3LogDestinationProperty::unwrap))
+        cdkBuilder.s3LogDestination(s3LogDestination.let(S3LogDestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -5802,14 +5802,14 @@ public open class CfnPipe(
        * @param credentials The credentials needed to access the resource. 
        */
       override fun credentials(credentials: IResolvable) {
-        cdkBuilder.credentials(credentials.let(IResolvable::unwrap))
+        cdkBuilder.credentials(credentials.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param credentials The credentials needed to access the resource. 
        */
       override fun credentials(credentials: MQBrokerAccessCredentialsProperty) {
-        cdkBuilder.credentials(credentials.let(MQBrokerAccessCredentialsProperty::unwrap))
+        cdkBuilder.credentials(credentials.let(MQBrokerAccessCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -6078,14 +6078,14 @@ public open class CfnPipe(
        * @param deadLetterConfig Define the target queue to send dead-letter queue events to.
        */
       override fun deadLetterConfig(deadLetterConfig: IResolvable) {
-        cdkBuilder.deadLetterConfig(deadLetterConfig.let(IResolvable::unwrap))
+        cdkBuilder.deadLetterConfig(deadLetterConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param deadLetterConfig Define the target queue to send dead-letter queue events to.
        */
       override fun deadLetterConfig(deadLetterConfig: DeadLetterConfigProperty) {
-        cdkBuilder.deadLetterConfig(deadLetterConfig.let(DeadLetterConfigProperty::unwrap))
+        cdkBuilder.deadLetterConfig(deadLetterConfig.let(DeadLetterConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -6451,14 +6451,14 @@ public open class CfnPipe(
        * @param deadLetterConfig Define the target queue to send dead-letter queue events to.
        */
       override fun deadLetterConfig(deadLetterConfig: IResolvable) {
-        cdkBuilder.deadLetterConfig(deadLetterConfig.let(IResolvable::unwrap))
+        cdkBuilder.deadLetterConfig(deadLetterConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param deadLetterConfig Define the target queue to send dead-letter queue events to.
        */
       override fun deadLetterConfig(deadLetterConfig: DeadLetterConfigProperty) {
-        cdkBuilder.deadLetterConfig(deadLetterConfig.let(DeadLetterConfigProperty::unwrap))
+        cdkBuilder.deadLetterConfig(deadLetterConfig.let(DeadLetterConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -6783,14 +6783,14 @@ public open class CfnPipe(
        * @param credentials The credentials needed to access the resource.
        */
       override fun credentials(credentials: IResolvable) {
-        cdkBuilder.credentials(credentials.let(IResolvable::unwrap))
+        cdkBuilder.credentials(credentials.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param credentials The credentials needed to access the resource.
        */
       override fun credentials(credentials: MSKAccessCredentialsProperty) {
-        cdkBuilder.credentials(credentials.let(MSKAccessCredentialsProperty::unwrap))
+        cdkBuilder.credentials(credentials.let(MSKAccessCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -7277,7 +7277,7 @@ public open class CfnPipe(
        * @param activeMqBrokerParameters The parameters for using an Active MQ broker as a source.
        */
       override fun activeMqBrokerParameters(activeMqBrokerParameters: IResolvable) {
-        cdkBuilder.activeMqBrokerParameters(activeMqBrokerParameters.let(IResolvable::unwrap))
+        cdkBuilder.activeMqBrokerParameters(activeMqBrokerParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7285,7 +7285,7 @@ public open class CfnPipe(
        */
       override
           fun activeMqBrokerParameters(activeMqBrokerParameters: PipeSourceActiveMQBrokerParametersProperty) {
-        cdkBuilder.activeMqBrokerParameters(activeMqBrokerParameters.let(PipeSourceActiveMQBrokerParametersProperty::unwrap))
+        cdkBuilder.activeMqBrokerParameters(activeMqBrokerParameters.let(PipeSourceActiveMQBrokerParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -7302,7 +7302,7 @@ public open class CfnPipe(
        * @param dynamoDbStreamParameters The parameters for using a DynamoDB stream as a source.
        */
       override fun dynamoDbStreamParameters(dynamoDbStreamParameters: IResolvable) {
-        cdkBuilder.dynamoDbStreamParameters(dynamoDbStreamParameters.let(IResolvable::unwrap))
+        cdkBuilder.dynamoDbStreamParameters(dynamoDbStreamParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7310,7 +7310,7 @@ public open class CfnPipe(
        */
       override
           fun dynamoDbStreamParameters(dynamoDbStreamParameters: PipeSourceDynamoDBStreamParametersProperty) {
-        cdkBuilder.dynamoDbStreamParameters(dynamoDbStreamParameters.let(PipeSourceDynamoDBStreamParametersProperty::unwrap))
+        cdkBuilder.dynamoDbStreamParameters(dynamoDbStreamParameters.let(PipeSourceDynamoDBStreamParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -7333,7 +7333,7 @@ public open class CfnPipe(
        * in the *Amazon EventBridge User Guide* .
        */
       override fun filterCriteria(filterCriteria: IResolvable) {
-        cdkBuilder.filterCriteria(filterCriteria.let(IResolvable::unwrap))
+        cdkBuilder.filterCriteria(filterCriteria.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7346,7 +7346,7 @@ public open class CfnPipe(
        * in the *Amazon EventBridge User Guide* .
        */
       override fun filterCriteria(filterCriteria: FilterCriteriaProperty) {
-        cdkBuilder.filterCriteria(filterCriteria.let(FilterCriteriaProperty::unwrap))
+        cdkBuilder.filterCriteria(filterCriteria.let(FilterCriteriaProperty.Companion::unwrap))
       }
 
       /**
@@ -7367,7 +7367,7 @@ public open class CfnPipe(
        * @param kinesisStreamParameters The parameters for using a Kinesis stream as a source.
        */
       override fun kinesisStreamParameters(kinesisStreamParameters: IResolvable) {
-        cdkBuilder.kinesisStreamParameters(kinesisStreamParameters.let(IResolvable::unwrap))
+        cdkBuilder.kinesisStreamParameters(kinesisStreamParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7375,7 +7375,7 @@ public open class CfnPipe(
        */
       override
           fun kinesisStreamParameters(kinesisStreamParameters: PipeSourceKinesisStreamParametersProperty) {
-        cdkBuilder.kinesisStreamParameters(kinesisStreamParameters.let(PipeSourceKinesisStreamParametersProperty::unwrap))
+        cdkBuilder.kinesisStreamParameters(kinesisStreamParameters.let(PipeSourceKinesisStreamParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -7392,7 +7392,7 @@ public open class CfnPipe(
        * @param managedStreamingKafkaParameters The parameters for using an MSK stream as a source.
        */
       override fun managedStreamingKafkaParameters(managedStreamingKafkaParameters: IResolvable) {
-        cdkBuilder.managedStreamingKafkaParameters(managedStreamingKafkaParameters.let(IResolvable::unwrap))
+        cdkBuilder.managedStreamingKafkaParameters(managedStreamingKafkaParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7400,7 +7400,7 @@ public open class CfnPipe(
        */
       override
           fun managedStreamingKafkaParameters(managedStreamingKafkaParameters: PipeSourceManagedStreamingKafkaParametersProperty) {
-        cdkBuilder.managedStreamingKafkaParameters(managedStreamingKafkaParameters.let(PipeSourceManagedStreamingKafkaParametersProperty::unwrap))
+        cdkBuilder.managedStreamingKafkaParameters(managedStreamingKafkaParameters.let(PipeSourceManagedStreamingKafkaParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -7417,7 +7417,7 @@ public open class CfnPipe(
        * @param rabbitMqBrokerParameters The parameters for using a Rabbit MQ broker as a source.
        */
       override fun rabbitMqBrokerParameters(rabbitMqBrokerParameters: IResolvable) {
-        cdkBuilder.rabbitMqBrokerParameters(rabbitMqBrokerParameters.let(IResolvable::unwrap))
+        cdkBuilder.rabbitMqBrokerParameters(rabbitMqBrokerParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7425,7 +7425,7 @@ public open class CfnPipe(
        */
       override
           fun rabbitMqBrokerParameters(rabbitMqBrokerParameters: PipeSourceRabbitMQBrokerParametersProperty) {
-        cdkBuilder.rabbitMqBrokerParameters(rabbitMqBrokerParameters.let(PipeSourceRabbitMQBrokerParametersProperty::unwrap))
+        cdkBuilder.rabbitMqBrokerParameters(rabbitMqBrokerParameters.let(PipeSourceRabbitMQBrokerParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -7450,7 +7450,7 @@ public open class CfnPipe(
        * *Amazon EventBridge User Guide* .
        */
       override fun selfManagedKafkaParameters(selfManagedKafkaParameters: IResolvable) {
-        cdkBuilder.selfManagedKafkaParameters(selfManagedKafkaParameters.let(IResolvable::unwrap))
+        cdkBuilder.selfManagedKafkaParameters(selfManagedKafkaParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7466,7 +7466,7 @@ public open class CfnPipe(
        */
       override
           fun selfManagedKafkaParameters(selfManagedKafkaParameters: PipeSourceSelfManagedKafkaParametersProperty) {
-        cdkBuilder.selfManagedKafkaParameters(selfManagedKafkaParameters.let(PipeSourceSelfManagedKafkaParametersProperty::unwrap))
+        cdkBuilder.selfManagedKafkaParameters(selfManagedKafkaParameters.let(PipeSourceSelfManagedKafkaParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -7491,14 +7491,14 @@ public open class CfnPipe(
        * @param sqsQueueParameters The parameters for using a Amazon SQS stream as a source.
        */
       override fun sqsQueueParameters(sqsQueueParameters: IResolvable) {
-        cdkBuilder.sqsQueueParameters(sqsQueueParameters.let(IResolvable::unwrap))
+        cdkBuilder.sqsQueueParameters(sqsQueueParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sqsQueueParameters The parameters for using a Amazon SQS stream as a source.
        */
       override fun sqsQueueParameters(sqsQueueParameters: PipeSourceSqsQueueParametersProperty) {
-        cdkBuilder.sqsQueueParameters(sqsQueueParameters.let(PipeSourceSqsQueueParametersProperty::unwrap))
+        cdkBuilder.sqsQueueParameters(sqsQueueParameters.let(PipeSourceSqsQueueParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -7730,14 +7730,14 @@ public open class CfnPipe(
        * @param credentials The credentials needed to access the resource. 
        */
       override fun credentials(credentials: IResolvable) {
-        cdkBuilder.credentials(credentials.let(IResolvable::unwrap))
+        cdkBuilder.credentials(credentials.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param credentials The credentials needed to access the resource. 
        */
       override fun credentials(credentials: MQBrokerAccessCredentialsProperty) {
-        cdkBuilder.credentials(credentials.let(MQBrokerAccessCredentialsProperty::unwrap))
+        cdkBuilder.credentials(credentials.let(MQBrokerAccessCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -8066,7 +8066,7 @@ public open class CfnPipe(
        * @param credentials The credentials needed to access the resource.
        */
       override fun credentials(credentials: IResolvable) {
-        cdkBuilder.credentials(credentials.let(IResolvable::unwrap))
+        cdkBuilder.credentials(credentials.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8074,7 +8074,7 @@ public open class CfnPipe(
        */
       override
           fun credentials(credentials: SelfManagedKafkaAccessConfigurationCredentialsProperty) {
-        cdkBuilder.credentials(credentials.let(SelfManagedKafkaAccessConfigurationCredentialsProperty::unwrap))
+        cdkBuilder.credentials(credentials.let(SelfManagedKafkaAccessConfigurationCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -8121,7 +8121,7 @@ public open class CfnPipe(
        * whether a public IP address is to be used.
        */
       override fun vpc(vpc: IResolvable) {
-        cdkBuilder.vpc(vpc.let(IResolvable::unwrap))
+        cdkBuilder.vpc(vpc.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8129,7 +8129,7 @@ public open class CfnPipe(
        * whether a public IP address is to be used.
        */
       override fun vpc(vpc: SelfManagedKafkaAccessConfigurationVpcProperty) {
-        cdkBuilder.vpc(vpc.let(SelfManagedKafkaAccessConfigurationVpcProperty::unwrap))
+        cdkBuilder.vpc(vpc.let(SelfManagedKafkaAccessConfigurationVpcProperty.Companion::unwrap))
       }
 
       /**
@@ -8610,7 +8610,7 @@ public open class CfnPipe(
        * becomes an array job. This parameter is used only if the target is an AWS Batch job.
        */
       override fun arrayProperties(arrayProperties: IResolvable) {
-        cdkBuilder.arrayProperties(arrayProperties.let(IResolvable::unwrap))
+        cdkBuilder.arrayProperties(arrayProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8620,7 +8620,7 @@ public open class CfnPipe(
        * becomes an array job. This parameter is used only if the target is an AWS Batch job.
        */
       override fun arrayProperties(arrayProperties: BatchArrayPropertiesProperty) {
-        cdkBuilder.arrayProperties(arrayProperties.let(BatchArrayPropertiesProperty::unwrap))
+        cdkBuilder.arrayProperties(arrayProperties.let(BatchArrayPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -8639,14 +8639,14 @@ public open class CfnPipe(
        * @param containerOverrides The overrides that are sent to a container.
        */
       override fun containerOverrides(containerOverrides: IResolvable) {
-        cdkBuilder.containerOverrides(containerOverrides.let(IResolvable::unwrap))
+        cdkBuilder.containerOverrides(containerOverrides.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param containerOverrides The overrides that are sent to a container.
        */
       override fun containerOverrides(containerOverrides: BatchContainerOverridesProperty) {
-        cdkBuilder.containerOverrides(containerOverrides.let(BatchContainerOverridesProperty::unwrap))
+        cdkBuilder.containerOverrides(containerOverrides.let(BatchContainerOverridesProperty.Companion::unwrap))
       }
 
       /**
@@ -8667,7 +8667,7 @@ public open class CfnPipe(
        * index child of each dependency to complete before it can begin.
        */
       override fun dependsOn(dependsOn: IResolvable) {
-        cdkBuilder.dependsOn(dependsOn.let(IResolvable::unwrap))
+        cdkBuilder.dependsOn(dependsOn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8718,7 +8718,7 @@ public open class CfnPipe(
        * any corresponding parameter defaults from the job definition.
        */
       override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8737,7 +8737,7 @@ public open class CfnPipe(
        * definition.
        */
       override fun retryStrategy(retryStrategy: IResolvable) {
-        cdkBuilder.retryStrategy(retryStrategy.let(IResolvable::unwrap))
+        cdkBuilder.retryStrategy(retryStrategy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8746,7 +8746,7 @@ public open class CfnPipe(
        * definition.
        */
       override fun retryStrategy(retryStrategy: BatchRetryStrategyProperty) {
-        cdkBuilder.retryStrategy(retryStrategy.let(BatchRetryStrategyProperty::unwrap))
+        cdkBuilder.retryStrategy(retryStrategy.let(BatchRetryStrategyProperty.Companion::unwrap))
       }
 
       /**
@@ -9459,7 +9459,7 @@ public open class CfnPipe(
        * `defaultCapacityProviderStrategy` for the cluster is used.
        */
       override fun capacityProviderStrategy(capacityProviderStrategy: IResolvable) {
-        cdkBuilder.capacityProviderStrategy(capacityProviderStrategy.let(IResolvable::unwrap))
+        cdkBuilder.capacityProviderStrategy(capacityProviderStrategy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9500,7 +9500,7 @@ public open class CfnPipe(
        * the Amazon Elastic Container Service Developer Guide.
        */
       override fun enableEcsManagedTags(enableEcsManagedTags: IResolvable) {
-        cdkBuilder.enableEcsManagedTags(enableEcsManagedTags.let(IResolvable::unwrap))
+        cdkBuilder.enableEcsManagedTags(enableEcsManagedTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9518,7 +9518,7 @@ public open class CfnPipe(
        * If true, this enables execute command functionality on all containers in the task.
        */
       override fun enableExecuteCommand(enableExecuteCommand: IResolvable) {
-        cdkBuilder.enableExecuteCommand(enableExecuteCommand.let(IResolvable::unwrap))
+        cdkBuilder.enableExecuteCommand(enableExecuteCommand.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9552,7 +9552,7 @@ public open class CfnPipe(
        * network mode, the task fails.
        */
       override fun networkConfiguration(networkConfiguration: IResolvable) {
-        cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9566,7 +9566,7 @@ public open class CfnPipe(
        * network mode, the task fails.
        */
       override fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
-        cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty::unwrap))
+        cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -9589,14 +9589,14 @@ public open class CfnPipe(
        * @param overrides The overrides that are associated with a task.
        */
       override fun overrides(overrides: IResolvable) {
-        cdkBuilder.overrides(overrides.let(IResolvable::unwrap))
+        cdkBuilder.overrides(overrides.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param overrides The overrides that are associated with a task.
        */
       override fun overrides(overrides: EcsTaskOverrideProperty) {
-        cdkBuilder.overrides(overrides.let(EcsTaskOverrideProperty::unwrap))
+        cdkBuilder.overrides(overrides.let(EcsTaskOverrideProperty.Companion::unwrap))
       }
 
       /**
@@ -9613,7 +9613,7 @@ public open class CfnPipe(
        * and those specified at runtime).
        */
       override fun placementConstraints(placementConstraints: IResolvable) {
-        cdkBuilder.placementConstraints(placementConstraints.let(IResolvable::unwrap))
+        cdkBuilder.placementConstraints(placementConstraints.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9638,7 +9638,7 @@ public open class CfnPipe(
        * You can specify a maximum of five strategy rules per task.
        */
       override fun placementStrategy(placementStrategy: IResolvable) {
-        cdkBuilder.placementStrategy(placementStrategy.let(IResolvable::unwrap))
+        cdkBuilder.placementStrategy(placementStrategy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9696,7 +9696,7 @@ public open class CfnPipe(
        * in the Amazon ECS API Reference.
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**
@@ -10255,7 +10255,7 @@ public open class CfnPipe(
        * API Gateway REST API or EventBridge ApiDestination.
        */
       override fun headerParameters(headerParameters: IResolvable) {
-        cdkBuilder.headerParameters(headerParameters.let(IResolvable::unwrap))
+        cdkBuilder.headerParameters(headerParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10286,7 +10286,7 @@ public open class CfnPipe(
        * request invoking the API Gateway REST API or EventBridge ApiDestination.
        */
       override fun queryStringParameters(queryStringParameters: IResolvable) {
-        cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable::unwrap))
+        cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10962,14 +10962,14 @@ public open class CfnPipe(
        * @param batchJobParameters The parameters for using an AWS Batch job as a target.
        */
       override fun batchJobParameters(batchJobParameters: IResolvable) {
-        cdkBuilder.batchJobParameters(batchJobParameters.let(IResolvable::unwrap))
+        cdkBuilder.batchJobParameters(batchJobParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param batchJobParameters The parameters for using an AWS Batch job as a target.
        */
       override fun batchJobParameters(batchJobParameters: PipeTargetBatchJobParametersProperty) {
-        cdkBuilder.batchJobParameters(batchJobParameters.let(PipeTargetBatchJobParametersProperty::unwrap))
+        cdkBuilder.batchJobParameters(batchJobParameters.let(PipeTargetBatchJobParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -10986,7 +10986,7 @@ public open class CfnPipe(
        * target.
        */
       override fun cloudWatchLogsParameters(cloudWatchLogsParameters: IResolvable) {
-        cdkBuilder.cloudWatchLogsParameters(cloudWatchLogsParameters.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchLogsParameters(cloudWatchLogsParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10995,7 +10995,7 @@ public open class CfnPipe(
        */
       override
           fun cloudWatchLogsParameters(cloudWatchLogsParameters: PipeTargetCloudWatchLogsParametersProperty) {
-        cdkBuilder.cloudWatchLogsParameters(cloudWatchLogsParameters.let(PipeTargetCloudWatchLogsParametersProperty::unwrap))
+        cdkBuilder.cloudWatchLogsParameters(cloudWatchLogsParameters.let(PipeTargetCloudWatchLogsParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -11013,14 +11013,14 @@ public open class CfnPipe(
        * @param ecsTaskParameters The parameters for using an Amazon ECS task as a target.
        */
       override fun ecsTaskParameters(ecsTaskParameters: IResolvable) {
-        cdkBuilder.ecsTaskParameters(ecsTaskParameters.let(IResolvable::unwrap))
+        cdkBuilder.ecsTaskParameters(ecsTaskParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param ecsTaskParameters The parameters for using an Amazon ECS task as a target.
        */
       override fun ecsTaskParameters(ecsTaskParameters: PipeTargetEcsTaskParametersProperty) {
-        cdkBuilder.ecsTaskParameters(ecsTaskParameters.let(PipeTargetEcsTaskParametersProperty::unwrap))
+        cdkBuilder.ecsTaskParameters(ecsTaskParameters.let(PipeTargetEcsTaskParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -11037,7 +11037,7 @@ public open class CfnPipe(
        * target.
        */
       override fun eventBridgeEventBusParameters(eventBridgeEventBusParameters: IResolvable) {
-        cdkBuilder.eventBridgeEventBusParameters(eventBridgeEventBusParameters.let(IResolvable::unwrap))
+        cdkBuilder.eventBridgeEventBusParameters(eventBridgeEventBusParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11046,7 +11046,7 @@ public open class CfnPipe(
        */
       override
           fun eventBridgeEventBusParameters(eventBridgeEventBusParameters: PipeTargetEventBridgeEventBusParametersProperty) {
-        cdkBuilder.eventBridgeEventBusParameters(eventBridgeEventBusParameters.let(PipeTargetEventBridgeEventBusParametersProperty::unwrap))
+        cdkBuilder.eventBridgeEventBusParameters(eventBridgeEventBusParameters.let(PipeTargetEventBridgeEventBusParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -11065,7 +11065,7 @@ public open class CfnPipe(
        * Gateway REST APIs or EventBridge ApiDestinations.
        */
       override fun httpParameters(httpParameters: IResolvable) {
-        cdkBuilder.httpParameters(httpParameters.let(IResolvable::unwrap))
+        cdkBuilder.httpParameters(httpParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11073,7 +11073,7 @@ public open class CfnPipe(
        * Gateway REST APIs or EventBridge ApiDestinations.
        */
       override fun httpParameters(httpParameters: PipeTargetHttpParametersProperty) {
-        cdkBuilder.httpParameters(httpParameters.let(PipeTargetHttpParametersProperty::unwrap))
+        cdkBuilder.httpParameters(httpParameters.let(PipeTargetHttpParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -11102,7 +11102,7 @@ public open class CfnPipe(
        * @param kinesisStreamParameters The parameters for using a Kinesis stream as a target.
        */
       override fun kinesisStreamParameters(kinesisStreamParameters: IResolvable) {
-        cdkBuilder.kinesisStreamParameters(kinesisStreamParameters.let(IResolvable::unwrap))
+        cdkBuilder.kinesisStreamParameters(kinesisStreamParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11110,7 +11110,7 @@ public open class CfnPipe(
        */
       override
           fun kinesisStreamParameters(kinesisStreamParameters: PipeTargetKinesisStreamParametersProperty) {
-        cdkBuilder.kinesisStreamParameters(kinesisStreamParameters.let(PipeTargetKinesisStreamParametersProperty::unwrap))
+        cdkBuilder.kinesisStreamParameters(kinesisStreamParameters.let(PipeTargetKinesisStreamParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -11127,7 +11127,7 @@ public open class CfnPipe(
        * @param lambdaFunctionParameters The parameters for using a Lambda function as a target.
        */
       override fun lambdaFunctionParameters(lambdaFunctionParameters: IResolvable) {
-        cdkBuilder.lambdaFunctionParameters(lambdaFunctionParameters.let(IResolvable::unwrap))
+        cdkBuilder.lambdaFunctionParameters(lambdaFunctionParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11135,7 +11135,7 @@ public open class CfnPipe(
        */
       override
           fun lambdaFunctionParameters(lambdaFunctionParameters: PipeTargetLambdaFunctionParametersProperty) {
-        cdkBuilder.lambdaFunctionParameters(lambdaFunctionParameters.let(PipeTargetLambdaFunctionParametersProperty::unwrap))
+        cdkBuilder.lambdaFunctionParameters(lambdaFunctionParameters.let(PipeTargetLambdaFunctionParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -11153,7 +11153,7 @@ public open class CfnPipe(
        * Amazon Redshift cluster to invoke the Amazon Redshift Data API BatchExecuteStatement.
        */
       override fun redshiftDataParameters(redshiftDataParameters: IResolvable) {
-        cdkBuilder.redshiftDataParameters(redshiftDataParameters.let(IResolvable::unwrap))
+        cdkBuilder.redshiftDataParameters(redshiftDataParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11162,7 +11162,7 @@ public open class CfnPipe(
        */
       override
           fun redshiftDataParameters(redshiftDataParameters: PipeTargetRedshiftDataParametersProperty) {
-        cdkBuilder.redshiftDataParameters(redshiftDataParameters.let(PipeTargetRedshiftDataParametersProperty::unwrap))
+        cdkBuilder.redshiftDataParameters(redshiftDataParameters.let(PipeTargetRedshiftDataParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -11181,7 +11181,7 @@ public open class CfnPipe(
        * target.
        */
       override fun sageMakerPipelineParameters(sageMakerPipelineParameters: IResolvable) {
-        cdkBuilder.sageMakerPipelineParameters(sageMakerPipelineParameters.let(IResolvable::unwrap))
+        cdkBuilder.sageMakerPipelineParameters(sageMakerPipelineParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11190,7 +11190,7 @@ public open class CfnPipe(
        */
       override
           fun sageMakerPipelineParameters(sageMakerPipelineParameters: PipeTargetSageMakerPipelineParametersProperty) {
-        cdkBuilder.sageMakerPipelineParameters(sageMakerPipelineParameters.let(PipeTargetSageMakerPipelineParametersProperty::unwrap))
+        cdkBuilder.sageMakerPipelineParameters(sageMakerPipelineParameters.let(PipeTargetSageMakerPipelineParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -11208,14 +11208,14 @@ public open class CfnPipe(
        * @param sqsQueueParameters The parameters for using a Amazon SQS stream as a target.
        */
       override fun sqsQueueParameters(sqsQueueParameters: IResolvable) {
-        cdkBuilder.sqsQueueParameters(sqsQueueParameters.let(IResolvable::unwrap))
+        cdkBuilder.sqsQueueParameters(sqsQueueParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sqsQueueParameters The parameters for using a Amazon SQS stream as a target.
        */
       override fun sqsQueueParameters(sqsQueueParameters: PipeTargetSqsQueueParametersProperty) {
-        cdkBuilder.sqsQueueParameters(sqsQueueParameters.let(PipeTargetSqsQueueParametersProperty::unwrap))
+        cdkBuilder.sqsQueueParameters(sqsQueueParameters.let(PipeTargetSqsQueueParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -11233,7 +11233,7 @@ public open class CfnPipe(
        */
       override
           fun stepFunctionStateMachineParameters(stepFunctionStateMachineParameters: IResolvable) {
-        cdkBuilder.stepFunctionStateMachineParameters(stepFunctionStateMachineParameters.let(IResolvable::unwrap))
+        cdkBuilder.stepFunctionStateMachineParameters(stepFunctionStateMachineParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11242,7 +11242,7 @@ public open class CfnPipe(
        */
       override
           fun stepFunctionStateMachineParameters(stepFunctionStateMachineParameters: PipeTargetStateMachineParametersProperty) {
-        cdkBuilder.stepFunctionStateMachineParameters(stepFunctionStateMachineParameters.let(PipeTargetStateMachineParametersProperty::unwrap))
+        cdkBuilder.stepFunctionStateMachineParameters(stepFunctionStateMachineParameters.let(PipeTargetStateMachineParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -11569,7 +11569,7 @@ public open class CfnPipe(
        * statement runs.
        */
       override fun withEvent(withEvent: IResolvable) {
-        cdkBuilder.withEvent(withEvent.let(IResolvable::unwrap))
+        cdkBuilder.withEvent(withEvent.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -11715,7 +11715,7 @@ public open class CfnPipe(
        * Building Pipeline execution.
        */
       override fun pipelineParameterList(pipelineParameterList: IResolvable) {
-        cdkBuilder.pipelineParameterList(pipelineParameterList.let(IResolvable::unwrap))
+        cdkBuilder.pipelineParameterList(pipelineParameterList.let(IResolvable.Companion::unwrap))
       }
 
       /**

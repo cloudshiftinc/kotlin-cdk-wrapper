@@ -86,7 +86,7 @@ public interface SnsTopicProps : TargetBaseProps {
      * dead letter queue.
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -96,14 +96,14 @@ public interface SnsTopicProps : TargetBaseProps {
      * Maximum value of 86400.
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param message The message to send to the topic.
      */
     override fun message(message: RuleTargetInput) {
-      cdkBuilder.message(message.let(RuleTargetInput::unwrap))
+      cdkBuilder.message(message.let(RuleTargetInput.Companion::unwrap))
     }
 
     /**

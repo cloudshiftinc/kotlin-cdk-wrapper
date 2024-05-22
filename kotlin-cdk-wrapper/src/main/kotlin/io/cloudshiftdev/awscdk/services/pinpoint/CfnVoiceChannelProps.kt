@@ -89,7 +89,7 @@ public interface CfnVoiceChannelProps {
      * @param enabled Specifies whether to enable the voice channel for the application.
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.pinpoint.CfnVoiceChannelProps =

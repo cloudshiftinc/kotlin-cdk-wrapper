@@ -68,8 +68,8 @@ public open class CfnVPCCidrBlock(
     id: String,
     props: CfnVPCCidrBlockProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnVPCCidrBlock(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVPCCidrBlockProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnVPCCidrBlock(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVPCCidrBlockProps.Companion::unwrap))
   )
 
   public constructor(
@@ -96,7 +96,7 @@ public open class CfnVPCCidrBlock(
    * Requests an Amazon-provided IPv6 CIDR block with a /56 prefix length for the VPC.
    */
   public open fun amazonProvidedIpv6CidrBlock(`value`: IResolvable) {
-    unwrap(this).setAmazonProvidedIpv6CidrBlock(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAmazonProvidedIpv6CidrBlock(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -122,7 +122,7 @@ public open class CfnVPCCidrBlock(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -363,7 +363,7 @@ public open class CfnVPCCidrBlock(
      * prefix length for the VPC. 
      */
     override fun amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock: IResolvable) {
-      cdkBuilder.amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock.let(IResolvable::unwrap))
+      cdkBuilder.amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock.let(IResolvable.Companion::unwrap))
     }
 
     /**

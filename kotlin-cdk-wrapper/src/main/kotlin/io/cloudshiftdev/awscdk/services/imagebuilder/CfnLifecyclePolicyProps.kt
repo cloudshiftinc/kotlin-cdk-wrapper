@@ -240,7 +240,7 @@ public interface CfnLifecyclePolicyProps {
      * @param policyDetails Configuration details for the lifecycle policy rules. 
      */
     override fun policyDetails(policyDetails: IResolvable) {
-      cdkBuilder.policyDetails(policyDetails.let(IResolvable::unwrap))
+      cdkBuilder.policyDetails(policyDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -261,7 +261,7 @@ public interface CfnLifecyclePolicyProps {
      * applies to. 
      */
     override fun resourceSelection(resourceSelection: IResolvable) {
-      cdkBuilder.resourceSelection(resourceSelection.let(IResolvable::unwrap))
+      cdkBuilder.resourceSelection(resourceSelection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -270,7 +270,7 @@ public interface CfnLifecyclePolicyProps {
      */
     override
         fun resourceSelection(resourceSelection: CfnLifecyclePolicy.ResourceSelectionProperty) {
-      cdkBuilder.resourceSelection(resourceSelection.let(CfnLifecyclePolicy.ResourceSelectionProperty::unwrap))
+      cdkBuilder.resourceSelection(resourceSelection.let(CfnLifecyclePolicy.ResourceSelectionProperty.Companion::unwrap))
     }
 
     /**

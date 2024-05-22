@@ -181,7 +181,7 @@ public interface CfnSubscriptionDefinitionProps {
      * resource and specify the ID of this subscription definition.
      */
     override fun initialVersion(initialVersion: IResolvable) {
-      cdkBuilder.initialVersion(initialVersion.let(IResolvable::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -199,7 +199,7 @@ public interface CfnSubscriptionDefinitionProps {
      */
     override
         fun initialVersion(initialVersion: CfnSubscriptionDefinition.SubscriptionDefinitionVersionProperty) {
-      cdkBuilder.initialVersion(initialVersion.let(CfnSubscriptionDefinition.SubscriptionDefinitionVersionProperty::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(CfnSubscriptionDefinition.SubscriptionDefinitionVersionProperty.Companion::unwrap))
     }
 
     /**

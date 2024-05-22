@@ -84,7 +84,7 @@ public interface ResourceAttributes {
      * @param restApi The rest API that this resource is part of. 
      */
     override fun restApi(restApi: IRestApi) {
-      cdkBuilder.restApi(restApi.let(IRestApi::unwrap))
+      cdkBuilder.restApi(restApi.let(IRestApi.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.ResourceAttributes =

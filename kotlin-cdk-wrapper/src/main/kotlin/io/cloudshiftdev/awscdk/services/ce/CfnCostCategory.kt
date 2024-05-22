@@ -45,8 +45,8 @@ public open class CfnCostCategory(
     id: String,
     props: CfnCostCategoryProps,
   ) :
-      this(software.amazon.awscdk.services.ce.CfnCostCategory(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCostCategoryProps::unwrap))
+      this(software.amazon.awscdk.services.ce.CfnCostCategory(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCostCategoryProps.Companion::unwrap))
   )
 
   public constructor(
@@ -84,7 +84,7 @@ public open class CfnCostCategory(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

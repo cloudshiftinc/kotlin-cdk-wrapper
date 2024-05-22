@@ -777,14 +777,14 @@ public interface CfnFunctionProps {
      * @param code The code for the function. 
      */
     override fun code(code: IResolvable) {
-      cdkBuilder.code(code.let(IResolvable::unwrap))
+      cdkBuilder.code(code.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param code The code for the function. 
      */
     override fun code(code: CfnFunction.CodeProperty) {
-      cdkBuilder.code(code.let(CfnFunction.CodeProperty::unwrap))
+      cdkBuilder.code(code.let(CfnFunction.CodeProperty.Companion::unwrap))
     }
 
     /**
@@ -812,7 +812,7 @@ public interface CfnFunctionProps {
      * queues](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-dlq) .
      */
     override fun deadLetterConfig(deadLetterConfig: IResolvable) {
-      cdkBuilder.deadLetterConfig(deadLetterConfig.let(IResolvable::unwrap))
+      cdkBuilder.deadLetterConfig(deadLetterConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -822,7 +822,7 @@ public interface CfnFunctionProps {
      * queues](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-dlq) .
      */
     override fun deadLetterConfig(deadLetterConfig: CfnFunction.DeadLetterConfigProperty) {
-      cdkBuilder.deadLetterConfig(deadLetterConfig.let(CfnFunction.DeadLetterConfigProperty::unwrap))
+      cdkBuilder.deadLetterConfig(deadLetterConfig.let(CfnFunction.DeadLetterConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -849,7 +849,7 @@ public interface CfnFunctionProps {
      * execution.
      */
     override fun environment(environment: IResolvable) {
-      cdkBuilder.environment(environment.let(IResolvable::unwrap))
+      cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -857,7 +857,7 @@ public interface CfnFunctionProps {
      * execution.
      */
     override fun environment(environment: CfnFunction.EnvironmentProperty) {
-      cdkBuilder.environment(environment.let(CfnFunction.EnvironmentProperty::unwrap))
+      cdkBuilder.environment(environment.let(CfnFunction.EnvironmentProperty.Companion::unwrap))
     }
 
     /**
@@ -874,7 +874,7 @@ public interface CfnFunctionProps {
      * The default value is 512, but it can be any whole number between 512 and 10,240 MB.
      */
     override fun ephemeralStorage(ephemeralStorage: IResolvable) {
-      cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable::unwrap))
+      cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -882,7 +882,7 @@ public interface CfnFunctionProps {
      * The default value is 512, but it can be any whole number between 512 and 10,240 MB.
      */
     override fun ephemeralStorage(ephemeralStorage: CfnFunction.EphemeralStorageProperty) {
-      cdkBuilder.ephemeralStorage(ephemeralStorage.let(CfnFunction.EphemeralStorageProperty::unwrap))
+      cdkBuilder.ephemeralStorage(ephemeralStorage.let(CfnFunction.EphemeralStorageProperty.Companion::unwrap))
     }
 
     /**
@@ -908,7 +908,7 @@ public interface CfnFunctionProps {
      * .
      */
     override fun fileSystemConfigs(fileSystemConfigs: IResolvable) {
-      cdkBuilder.fileSystemConfigs(fileSystemConfigs.let(IResolvable::unwrap))
+      cdkBuilder.fileSystemConfigs(fileSystemConfigs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -973,7 +973,7 @@ public interface CfnFunctionProps {
      * settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms) .
      */
     override fun imageConfig(imageConfig: IResolvable) {
-      cdkBuilder.imageConfig(imageConfig.let(IResolvable::unwrap))
+      cdkBuilder.imageConfig(imageConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -983,7 +983,7 @@ public interface CfnFunctionProps {
      * settings](https://docs.aws.amazon.com/lambda/latest/dg/images-create.html#images-parms) .
      */
     override fun imageConfig(imageConfig: CfnFunction.ImageConfigProperty) {
-      cdkBuilder.imageConfig(imageConfig.let(CfnFunction.ImageConfigProperty::unwrap))
+      cdkBuilder.imageConfig(imageConfig.let(CfnFunction.ImageConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1032,14 +1032,14 @@ public interface CfnFunctionProps {
      * @param loggingConfig The function's Amazon CloudWatch Logs configuration settings.
      */
     override fun loggingConfig(loggingConfig: IResolvable) {
-      cdkBuilder.loggingConfig(loggingConfig.let(IResolvable::unwrap))
+      cdkBuilder.loggingConfig(loggingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param loggingConfig The function's Amazon CloudWatch Logs configuration settings.
      */
     override fun loggingConfig(loggingConfig: CfnFunction.LoggingConfigProperty) {
-      cdkBuilder.loggingConfig(loggingConfig.let(CfnFunction.LoggingConfigProperty::unwrap))
+      cdkBuilder.loggingConfig(loggingConfig.let(CfnFunction.LoggingConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1105,7 +1105,7 @@ public interface CfnFunctionProps {
      * updates](https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html) .
      */
     override fun runtimeManagementConfig(runtimeManagementConfig: IResolvable) {
-      cdkBuilder.runtimeManagementConfig(runtimeManagementConfig.let(IResolvable::unwrap))
+      cdkBuilder.runtimeManagementConfig(runtimeManagementConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1116,7 +1116,7 @@ public interface CfnFunctionProps {
      */
     override
         fun runtimeManagementConfig(runtimeManagementConfig: CfnFunction.RuntimeManagementConfigProperty) {
-      cdkBuilder.runtimeManagementConfig(runtimeManagementConfig.let(CfnFunction.RuntimeManagementConfigProperty::unwrap))
+      cdkBuilder.runtimeManagementConfig(runtimeManagementConfig.let(CfnFunction.RuntimeManagementConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1137,7 +1137,7 @@ public interface CfnFunctionProps {
      * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting.
      */
     override fun snapStart(snapStart: IResolvable) {
-      cdkBuilder.snapStart(snapStart.let(IResolvable::unwrap))
+      cdkBuilder.snapStart(snapStart.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1145,7 +1145,7 @@ public interface CfnFunctionProps {
      * SnapStart](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html) setting.
      */
     override fun snapStart(snapStart: CfnFunction.SnapStartProperty) {
-      cdkBuilder.snapStart(snapStart.let(CfnFunction.SnapStartProperty::unwrap))
+      cdkBuilder.snapStart(snapStart.let(CfnFunction.SnapStartProperty.Companion::unwrap))
     }
 
     /**
@@ -1162,7 +1162,7 @@ public interface CfnFunctionProps {
      * apply to the function.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1187,7 +1187,7 @@ public interface CfnFunctionProps {
      * with [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) .
      */
     override fun tracingConfig(tracingConfig: IResolvable) {
-      cdkBuilder.tracingConfig(tracingConfig.let(IResolvable::unwrap))
+      cdkBuilder.tracingConfig(tracingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1195,7 +1195,7 @@ public interface CfnFunctionProps {
      * with [X-Ray](https://docs.aws.amazon.com/lambda/latest/dg/services-xray.html) .
      */
     override fun tracingConfig(tracingConfig: CfnFunction.TracingConfigProperty) {
-      cdkBuilder.tracingConfig(tracingConfig.let(CfnFunction.TracingConfigProperty::unwrap))
+      cdkBuilder.tracingConfig(tracingConfig.let(CfnFunction.TracingConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1215,7 +1215,7 @@ public interface CfnFunctionProps {
      * VPC](https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html) .
      */
     override fun vpcConfig(vpcConfig: IResolvable) {
-      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1226,7 +1226,7 @@ public interface CfnFunctionProps {
      * VPC](https://docs.aws.amazon.com/lambda/latest/dg/configuration-vpc.html) .
      */
     override fun vpcConfig(vpcConfig: CfnFunction.VpcConfigProperty) {
-      cdkBuilder.vpcConfig(vpcConfig.let(CfnFunction.VpcConfigProperty::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(CfnFunction.VpcConfigProperty.Companion::unwrap))
     }
 
     /**

@@ -84,7 +84,7 @@ public interface ExtensionProps : ExtensionOptions {
      * @param actions The actions for the extension. 
      */
     override fun actions(actions: List<Action>) {
-      cdkBuilder.actions(actions.map(Action::unwrap))
+      cdkBuilder.actions(actions.map(Action.Companion::unwrap))
     }
 
     /**
@@ -120,7 +120,7 @@ public interface ExtensionProps : ExtensionOptions {
      * @param parameters The parameters accepted for the extension.
      */
     override fun parameters(parameters: List<Parameter>) {
-      cdkBuilder.parameters(parameters.map(Parameter::unwrap))
+      cdkBuilder.parameters(parameters.map(Parameter.Companion::unwrap))
     }
 
     /**

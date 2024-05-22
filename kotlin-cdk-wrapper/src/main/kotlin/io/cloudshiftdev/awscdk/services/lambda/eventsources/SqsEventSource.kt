@@ -34,12 +34,12 @@ public open class SqsEventSource(
   cdkObject: software.amazon.awscdk.services.lambda.eventsources.SqsEventSource,
 ) : CdkObject(cdkObject), IEventSource {
   public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue) :
-      this(software.amazon.awscdk.services.lambda.eventsources.SqsEventSource(queue.let(CloudshiftdevAwscdkServicesSqsIQueue::unwrap))
+      this(software.amazon.awscdk.services.lambda.eventsources.SqsEventSource(queue.let(CloudshiftdevAwscdkServicesSqsIQueue.Companion::unwrap))
   )
 
   public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue, props: SqsEventSourceProps) :
-      this(software.amazon.awscdk.services.lambda.eventsources.SqsEventSource(queue.let(CloudshiftdevAwscdkServicesSqsIQueue::unwrap),
-      props.let(SqsEventSourceProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.eventsources.SqsEventSource(queue.let(CloudshiftdevAwscdkServicesSqsIQueue.Companion::unwrap),
+      props.let(SqsEventSourceProps.Companion::unwrap))
   )
 
   public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue,
@@ -52,7 +52,7 @@ public open class SqsEventSource(
    * @param target 
    */
   public override fun bind(target: IFunction) {
-    unwrap(this).bind(target.let(IFunction::unwrap))
+    unwrap(this).bind(target.let(IFunction.Companion::unwrap))
   }
 
   /**
@@ -230,7 +230,7 @@ public open class SqsEventSource(
      * function. 
      */
     override fun maxBatchingWindow(maxBatchingWindow: Duration) {
-      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration::unwrap))
+      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration.Companion::unwrap))
     }
 
     /**

@@ -31,7 +31,7 @@ public open class CfnMapping(
   cdkObject: software.amazon.awscdk.CfnMapping,
 ) : CfnRefElement(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.CfnMapping(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.CfnMapping(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -39,8 +39,9 @@ public open class CfnMapping(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
     props: CfnMappingProps,
-  ) : this(software.amazon.awscdk.CfnMapping(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMappingProps::unwrap))
+  ) :
+      this(software.amazon.awscdk.CfnMapping(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMappingProps.Companion::unwrap))
   )
 
   public constructor(

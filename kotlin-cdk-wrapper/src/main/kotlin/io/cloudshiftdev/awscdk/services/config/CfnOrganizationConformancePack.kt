@@ -57,8 +57,8 @@ public open class CfnOrganizationConformancePack(
     id: String,
     props: CfnOrganizationConformancePackProps,
   ) :
-      this(software.amazon.awscdk.services.config.CfnOrganizationConformancePack(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnOrganizationConformancePackProps::unwrap))
+      this(software.amazon.awscdk.services.config.CfnOrganizationConformancePack(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnOrganizationConformancePackProps.Companion::unwrap))
   )
 
   public constructor(
@@ -78,7 +78,7 @@ public open class CfnOrganizationConformancePack(
    * A list of `ConformancePackInputParameter` objects.
    */
   public open fun conformancePackInputParameters(`value`: IResolvable) {
-    unwrap(this).setConformancePackInputParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConformancePackInputParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -143,7 +143,7 @@ public open class CfnOrganizationConformancePack(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -302,7 +302,7 @@ public open class CfnOrganizationConformancePack(
      * @param conformancePackInputParameters A list of `ConformancePackInputParameter` objects. 
      */
     override fun conformancePackInputParameters(conformancePackInputParameters: IResolvable) {
-      cdkBuilder.conformancePackInputParameters(conformancePackInputParameters.let(IResolvable::unwrap))
+      cdkBuilder.conformancePackInputParameters(conformancePackInputParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**

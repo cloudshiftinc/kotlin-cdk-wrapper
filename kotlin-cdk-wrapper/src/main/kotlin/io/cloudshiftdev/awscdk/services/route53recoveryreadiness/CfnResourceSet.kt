@@ -83,8 +83,8 @@ public open class CfnResourceSet(
     id: String,
     props: CfnResourceSetProps,
   ) :
-      this(software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnResourceSetProps::unwrap))
+      this(software.amazon.awscdk.services.route53recoveryreadiness.CfnResourceSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnResourceSetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -105,7 +105,7 @@ public open class CfnResourceSet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -145,7 +145,7 @@ public open class CfnResourceSet(
    * A list of resource objects in the resource set.
    */
   public open fun resources(`value`: IResolvable) {
-    unwrap(this).setResources(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResources(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -175,7 +175,7 @@ public open class CfnResourceSet(
    * A tag to associate with the parameters for a resource set.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -306,7 +306,7 @@ public open class CfnResourceSet(
      * @param resources A list of resource objects in the resource set. 
      */
     override fun resources(resources: IResolvable) {
-      cdkBuilder.resources(resources.let(IResolvable::unwrap))
+      cdkBuilder.resources(resources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -334,7 +334,7 @@ public open class CfnResourceSet(
      * @param tags A tag to associate with the parameters for a resource set. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -524,14 +524,14 @@ public open class CfnResourceSet(
        * @param targetResource The target resource that the Route 53 record points to.
        */
       override fun targetResource(targetResource: IResolvable) {
-        cdkBuilder.targetResource(targetResource.let(IResolvable::unwrap))
+        cdkBuilder.targetResource(targetResource.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param targetResource The target resource that the Route 53 record points to.
        */
       override fun targetResource(targetResource: TargetResourceProperty) {
-        cdkBuilder.targetResource(targetResource.let(TargetResourceProperty::unwrap))
+        cdkBuilder.targetResource(targetResource.let(TargetResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -947,7 +947,7 @@ public open class CfnResourceSet(
        * `ResourceSetType` setting.
        */
       override fun dnsTargetResource(dnsTargetResource: IResolvable) {
-        cdkBuilder.dnsTargetResource(dnsTargetResource.let(IResolvable::unwrap))
+        cdkBuilder.dnsTargetResource(dnsTargetResource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -957,7 +957,7 @@ public open class CfnResourceSet(
        * `ResourceSetType` setting.
        */
       override fun dnsTargetResource(dnsTargetResource: DNSTargetResourceProperty) {
-        cdkBuilder.dnsTargetResource(dnsTargetResource.let(DNSTargetResourceProperty::unwrap))
+        cdkBuilder.dnsTargetResource(dnsTargetResource.let(DNSTargetResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -1149,14 +1149,14 @@ public open class CfnResourceSet(
        * @param nlbResource The Network Load Balancer resource that a DNS target resource points to.
        */
       override fun nlbResource(nlbResource: IResolvable) {
-        cdkBuilder.nlbResource(nlbResource.let(IResolvable::unwrap))
+        cdkBuilder.nlbResource(nlbResource.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param nlbResource The Network Load Balancer resource that a DNS target resource points to.
        */
       override fun nlbResource(nlbResource: NLBResourceProperty) {
-        cdkBuilder.nlbResource(nlbResource.let(NLBResourceProperty::unwrap))
+        cdkBuilder.nlbResource(nlbResource.let(NLBResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -1171,14 +1171,14 @@ public open class CfnResourceSet(
        * @param r53Resource The Route 53 resource that a DNS target resource record points to.
        */
       override fun r53Resource(r53Resource: IResolvable) {
-        cdkBuilder.r53Resource(r53Resource.let(IResolvable::unwrap))
+        cdkBuilder.r53Resource(r53Resource.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param r53Resource The Route 53 resource that a DNS target resource record points to.
        */
       override fun r53Resource(r53Resource: R53ResourceRecordProperty) {
-        cdkBuilder.r53Resource(r53Resource.let(R53ResourceRecordProperty::unwrap))
+        cdkBuilder.r53Resource(r53Resource.let(R53ResourceRecordProperty.Companion::unwrap))
       }
 
       /**

@@ -70,14 +70,14 @@ public interface ProcessorConfig {
      * You must provide this field if you specified `DISTRIBUTED` for the `mode` sub-field.
      */
     override fun executionType(executionType: ProcessorType) {
-      cdkBuilder.executionType(executionType.let(ProcessorType::unwrap))
+      cdkBuilder.executionType(executionType.let(ProcessorType.Companion::unwrap))
     }
 
     /**
      * @param mode Specifies the execution mode for the Map workflow.
      */
     override fun mode(mode: ProcessorMode) {
-      cdkBuilder.mode(mode.let(ProcessorMode::unwrap))
+      cdkBuilder.mode(mode.let(ProcessorMode.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.ProcessorConfig =

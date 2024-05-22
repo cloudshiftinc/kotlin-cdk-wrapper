@@ -47,8 +47,8 @@ public open class ServiceAccount(
     id: String,
     props: ServiceAccountProps,
   ) :
-      this(software.amazon.awscdk.services.eks.ServiceAccount(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ServiceAccountProps::unwrap))
+      this(software.amazon.awscdk.services.eks.ServiceAccount(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ServiceAccountProps.Companion::unwrap))
   )
 
   public constructor(
@@ -64,7 +64,7 @@ public open class ServiceAccount(
    * @param statement 
    */
   public override fun addToPrincipalPolicy(statement: PolicyStatement): AddToPrincipalPolicyResult =
-      unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement::unwrap)).let(AddToPrincipalPolicyResult::wrap)
+      unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToPrincipalPolicyResult::wrap)
 
   /**
    * Add to the policy of this principal.
@@ -187,7 +187,7 @@ public open class ServiceAccount(
      * @param cluster The cluster to apply the patch to. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**

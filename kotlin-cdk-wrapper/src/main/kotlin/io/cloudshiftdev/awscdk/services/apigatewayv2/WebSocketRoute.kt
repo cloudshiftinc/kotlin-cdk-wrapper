@@ -41,8 +41,8 @@ public open class WebSocketRoute(
     id: String,
     props: WebSocketRouteProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.WebSocketRoute(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(WebSocketRouteProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.WebSocketRoute(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(WebSocketRouteProps.Companion::unwrap))
   )
 
   public constructor(
@@ -157,7 +157,7 @@ public open class WebSocketRoute(
      * @param authorizer The authorize to this route. 
      */
     override fun authorizer(authorizer: IWebSocketRouteAuthorizer) {
-      cdkBuilder.authorizer(authorizer.let(IWebSocketRouteAuthorizer::unwrap))
+      cdkBuilder.authorizer(authorizer.let(IWebSocketRouteAuthorizer.Companion::unwrap))
     }
 
     /**
@@ -166,7 +166,7 @@ public open class WebSocketRoute(
      * @param integration The integration to be configured on this route. 
      */
     override fun integration(integration: WebSocketRouteIntegration) {
-      cdkBuilder.integration(integration.let(WebSocketRouteIntegration::unwrap))
+      cdkBuilder.integration(integration.let(WebSocketRouteIntegration.Companion::unwrap))
     }
 
     /**
@@ -195,7 +195,7 @@ public open class WebSocketRoute(
      * @param webSocketApi The API the route is associated with. 
      */
     override fun webSocketApi(webSocketApi: IWebSocketApi) {
-      cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi::unwrap))
+      cdkBuilder.webSocketApi(webSocketApi.let(IWebSocketApi.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.WebSocketRoute =

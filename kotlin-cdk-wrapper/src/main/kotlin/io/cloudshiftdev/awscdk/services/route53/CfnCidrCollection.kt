@@ -46,8 +46,8 @@ public open class CfnCidrCollection(
     id: String,
     props: CfnCidrCollectionProps,
   ) :
-      this(software.amazon.awscdk.services.route53.CfnCidrCollection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCidrCollectionProps::unwrap))
+      this(software.amazon.awscdk.services.route53.CfnCidrCollection(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCidrCollectionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -73,7 +73,7 @@ public open class CfnCidrCollection(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -85,7 +85,7 @@ public open class CfnCidrCollection(
    * A complex type that contains information about the list of CIDR locations.
    */
   public open fun locations(`value`: IResolvable) {
-    unwrap(this).setLocations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLocations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -164,7 +164,7 @@ public open class CfnCidrCollection(
      * @param locations A complex type that contains information about the list of CIDR locations. 
      */
     override fun locations(locations: IResolvable) {
-      cdkBuilder.locations(locations.let(IResolvable::unwrap))
+      cdkBuilder.locations(locations.let(IResolvable.Companion::unwrap))
     }
 
     /**

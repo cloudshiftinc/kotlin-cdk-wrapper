@@ -39,8 +39,8 @@ public open class EventBridgeDataSource(
     id: String,
     props: EventBridgeDataSourceProps,
   ) :
-      this(software.amazon.awscdk.services.appsync.EventBridgeDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EventBridgeDataSourceProps::unwrap))
+      this(software.amazon.awscdk.services.appsync.EventBridgeDataSource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EventBridgeDataSourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -111,7 +111,7 @@ public open class EventBridgeDataSource(
      * @param api The API to attach this data source to. 
      */
     override fun api(api: IGraphqlApi) {
-      cdkBuilder.api(api.let(IGraphqlApi::unwrap))
+      cdkBuilder.api(api.let(IGraphqlApi.Companion::unwrap))
     }
 
     /**
@@ -131,7 +131,7 @@ public open class EventBridgeDataSource(
      * @param eventBus The EventBridge EventBus. 
      */
     override fun eventBus(eventBus: IEventBus) {
-      cdkBuilder.eventBus(eventBus.let(IEventBus::unwrap))
+      cdkBuilder.eventBus(eventBus.let(IEventBus.Companion::unwrap))
     }
 
     /**
@@ -154,7 +154,7 @@ public open class EventBridgeDataSource(
      * source. 
      */
     override fun serviceRole(serviceRole: IRole) {
-      cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
+      cdkBuilder.serviceRole(serviceRole.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appsync.EventBridgeDataSource =

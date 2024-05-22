@@ -53,8 +53,8 @@ public open class ScalableTaskCount(
     id: String,
     props: ScalableTaskCountProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.ScalableTaskCount(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ScalableTaskCountProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.ScalableTaskCount(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ScalableTaskCountProps.Companion::unwrap))
   )
 
   public constructor(
@@ -71,7 +71,7 @@ public open class ScalableTaskCount(
    * @param props 
    */
   public open fun scaleOnCpuUtilization(id: String, props: CpuUtilizationScalingProps) {
-    unwrap(this).scaleOnCpuUtilization(id, props.let(CpuUtilizationScalingProps::unwrap))
+    unwrap(this).scaleOnCpuUtilization(id, props.let(CpuUtilizationScalingProps.Companion::unwrap))
   }
 
   /**
@@ -93,7 +93,8 @@ public open class ScalableTaskCount(
    * @param props 
    */
   public open fun scaleOnMemoryUtilization(id: String, props: MemoryUtilizationScalingProps) {
-    unwrap(this).scaleOnMemoryUtilization(id, props.let(MemoryUtilizationScalingProps::unwrap))
+    unwrap(this).scaleOnMemoryUtilization(id,
+        props.let(MemoryUtilizationScalingProps.Companion::unwrap))
   }
 
   /**
@@ -115,7 +116,7 @@ public open class ScalableTaskCount(
    * @param props 
    */
   public open fun scaleOnMetric(id: String, props: BasicStepScalingPolicyProps) {
-    unwrap(this).scaleOnMetric(id, props.let(BasicStepScalingPolicyProps::unwrap))
+    unwrap(this).scaleOnMetric(id, props.let(BasicStepScalingPolicyProps.Companion::unwrap))
   }
 
   /**
@@ -136,7 +137,7 @@ public open class ScalableTaskCount(
    * @param props 
    */
   public open fun scaleOnRequestCount(id: String, props: RequestCountScalingProps) {
-    unwrap(this).scaleOnRequestCount(id, props.let(RequestCountScalingProps::unwrap))
+    unwrap(this).scaleOnRequestCount(id, props.let(RequestCountScalingProps.Companion::unwrap))
   }
 
   /**
@@ -158,7 +159,7 @@ public open class ScalableTaskCount(
    * @param props 
    */
   public open fun scaleOnSchedule(id: String, props: ScalingSchedule) {
-    unwrap(this).scaleOnSchedule(id, props.let(ScalingSchedule::unwrap))
+    unwrap(this).scaleOnSchedule(id, props.let(ScalingSchedule.Companion::unwrap))
   }
 
   /**
@@ -179,7 +180,7 @@ public open class ScalableTaskCount(
    * @param props 
    */
   public open fun scaleToTrackCustomMetric(id: String, props: TrackCustomMetricProps) {
-    unwrap(this).scaleToTrackCustomMetric(id, props.let(TrackCustomMetricProps::unwrap))
+    unwrap(this).scaleToTrackCustomMetric(id, props.let(TrackCustomMetricProps.Companion::unwrap))
   }
 
   /**
@@ -295,7 +296,7 @@ public open class ScalableTaskCount(
      * @param role Role to use for scaling. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -304,7 +305,7 @@ public open class ScalableTaskCount(
      * @param serviceNamespace Service namespace of the scalable attribute. 
      */
     override fun serviceNamespace(serviceNamespace: ServiceNamespace) {
-      cdkBuilder.serviceNamespace(serviceNamespace.let(ServiceNamespace::unwrap))
+      cdkBuilder.serviceNamespace(serviceNamespace.let(ServiceNamespace.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.ScalableTaskCount = cdkBuilder.build()

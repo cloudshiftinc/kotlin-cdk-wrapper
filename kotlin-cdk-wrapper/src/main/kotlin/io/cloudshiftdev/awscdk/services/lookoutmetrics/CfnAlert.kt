@@ -55,8 +55,8 @@ public open class CfnAlert(
     id: String,
     props: CfnAlertProps,
   ) :
-      this(software.amazon.awscdk.services.lookoutmetrics.CfnAlert(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAlertProps::unwrap))
+      this(software.amazon.awscdk.services.lookoutmetrics.CfnAlert(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAlertProps.Companion::unwrap))
   )
 
   public constructor(
@@ -75,14 +75,14 @@ public open class CfnAlert(
    * Action that will be triggered when there is an alert.
    */
   public open fun action(`value`: IResolvable) {
-    unwrap(this).setAction(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAction(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Action that will be triggered when there is an alert.
    */
   public open fun action(`value`: ActionProperty) {
-    unwrap(this).setAction(`value`.let(ActionProperty::unwrap))
+    unwrap(this).setAction(`value`.let(ActionProperty.Companion::unwrap))
   }
 
   /**
@@ -154,7 +154,7 @@ public open class CfnAlert(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -236,7 +236,7 @@ public open class CfnAlert(
      * @param action Action that will be triggered when there is an alert. 
      */
     override fun action(action: IResolvable) {
-      cdkBuilder.action(action.let(IResolvable::unwrap))
+      cdkBuilder.action(action.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -246,7 +246,7 @@ public open class CfnAlert(
      * @param action Action that will be triggered when there is an alert. 
      */
     override fun action(action: ActionProperty) {
-      cdkBuilder.action(action.let(ActionProperty::unwrap))
+      cdkBuilder.action(action.let(ActionProperty.Companion::unwrap))
     }
 
     /**
@@ -412,14 +412,14 @@ public open class CfnAlert(
        * @param lambdaConfiguration A configuration for an AWS Lambda channel.
        */
       override fun lambdaConfiguration(lambdaConfiguration: IResolvable) {
-        cdkBuilder.lambdaConfiguration(lambdaConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.lambdaConfiguration(lambdaConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param lambdaConfiguration A configuration for an AWS Lambda channel.
        */
       override fun lambdaConfiguration(lambdaConfiguration: LambdaConfigurationProperty) {
-        cdkBuilder.lambdaConfiguration(lambdaConfiguration.let(LambdaConfigurationProperty::unwrap))
+        cdkBuilder.lambdaConfiguration(lambdaConfiguration.let(LambdaConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -435,14 +435,14 @@ public open class CfnAlert(
        * @param snsConfiguration A configuration for an Amazon SNS channel.
        */
       override fun snsConfiguration(snsConfiguration: IResolvable) {
-        cdkBuilder.snsConfiguration(snsConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.snsConfiguration(snsConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param snsConfiguration A configuration for an Amazon SNS channel.
        */
       override fun snsConfiguration(snsConfiguration: SNSConfigurationProperty) {
-        cdkBuilder.snsConfiguration(snsConfiguration.let(SNSConfigurationProperty::unwrap))
+        cdkBuilder.snsConfiguration(snsConfiguration.let(SNSConfigurationProperty.Companion::unwrap))
       }
 
       /**

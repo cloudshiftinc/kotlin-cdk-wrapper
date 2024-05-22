@@ -62,8 +62,8 @@ public open class CfnReportPlan(
     id: String,
     props: CfnReportPlanProps,
   ) :
-      this(software.amazon.awscdk.services.backup.CfnReportPlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnReportPlanProps::unwrap))
+      this(software.amazon.awscdk.services.backup.CfnReportPlan(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnReportPlanProps.Companion::unwrap))
   )
 
   public constructor(
@@ -90,7 +90,7 @@ public open class CfnReportPlan(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -141,7 +141,7 @@ public open class CfnReportPlan(
    * The tags to assign to your report plan.
    */
   public open fun reportPlanTags(`value`: List<CfnTag>) {
-    unwrap(this).setReportPlanTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setReportPlanTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -285,7 +285,7 @@ public open class CfnReportPlan(
      * @param reportPlanTags The tags to assign to your report plan. 
      */
     override fun reportPlanTags(reportPlanTags: List<CfnTag>) {
-      cdkBuilder.reportPlanTags(reportPlanTags.map(CfnTag::unwrap))
+      cdkBuilder.reportPlanTags(reportPlanTags.map(CfnTag.Companion::unwrap))
     }
 
     /**

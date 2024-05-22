@@ -292,7 +292,7 @@ public interface CfnComponentProps {
      * You can't specify `tags` as a valid property for `bindingProperties` .
      */
     override fun bindingProperties(bindingProperties: IResolvable) {
-      cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
+      cdkBuilder.bindingProperties(bindingProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -308,7 +308,7 @@ public interface CfnComponentProps {
      * @param children A list of the component's `ComponentChild` instances.
      */
     override fun children(children: IResolvable) {
-      cdkBuilder.children(children.let(IResolvable::unwrap))
+      cdkBuilder.children(children.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -329,7 +329,7 @@ public interface CfnComponentProps {
      * `collectionProperties` .
      */
     override fun collectionProperties(collectionProperties: IResolvable) {
-      cdkBuilder.collectionProperties(collectionProperties.let(IResolvable::unwrap))
+      cdkBuilder.collectionProperties(collectionProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -362,7 +362,7 @@ public interface CfnComponentProps {
      * components.
      */
     override fun events(events: IResolvable) {
-      cdkBuilder.events(events.let(IResolvable::unwrap))
+      cdkBuilder.events(events.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -395,7 +395,7 @@ public interface CfnComponentProps {
      * You can't specify `tags` as a valid property for `properties` .
      */
     override fun properties(properties: IResolvable) {
-      cdkBuilder.properties(properties.let(IResolvable::unwrap))
+      cdkBuilder.properties(properties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -432,7 +432,7 @@ public interface CfnComponentProps {
      * A variant is a unique style configuration of a main component.
      */
     override fun variants(variants: IResolvable) {
-      cdkBuilder.variants(variants.let(IResolvable::unwrap))
+      cdkBuilder.variants(variants.let(IResolvable.Companion::unwrap))
     }
 
     /**

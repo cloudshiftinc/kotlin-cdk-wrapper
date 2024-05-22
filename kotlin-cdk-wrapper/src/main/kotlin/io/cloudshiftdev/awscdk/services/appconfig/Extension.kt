@@ -38,8 +38,8 @@ public open class Extension(
     id: String,
     props: ExtensionProps,
   ) :
-      this(software.amazon.awscdk.services.appconfig.Extension(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ExtensionProps::unwrap))
+      this(software.amazon.awscdk.services.appconfig.Extension(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ExtensionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -173,7 +173,7 @@ public open class Extension(
      * @param actions The actions for the extension. 
      */
     override fun actions(actions: List<Action>) {
-      cdkBuilder.actions(actions.map(Action::unwrap))
+      cdkBuilder.actions(actions.map(Action.Companion::unwrap))
     }
 
     /**
@@ -228,7 +228,7 @@ public open class Extension(
      * @param parameters The parameters accepted for the extension. 
      */
     override fun parameters(parameters: List<Parameter>) {
-      cdkBuilder.parameters(parameters.map(Parameter::unwrap))
+      cdkBuilder.parameters(parameters.map(Parameter.Companion::unwrap))
     }
 
     /**
@@ -249,7 +249,7 @@ public open class Extension(
       id: String,
       extensionArn: String,
     ): IExtension =
-        software.amazon.awscdk.services.appconfig.Extension.fromExtensionArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.appconfig.Extension.fromExtensionArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, extensionArn).let(IExtension::wrap)
 
     public fun fromExtensionAttributes(
@@ -257,8 +257,8 @@ public open class Extension(
       id: String,
       attrs: ExtensionAttributes,
     ): IExtension =
-        software.amazon.awscdk.services.appconfig.Extension.fromExtensionAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(ExtensionAttributes::unwrap)).let(IExtension::wrap)
+        software.amazon.awscdk.services.appconfig.Extension.fromExtensionAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(ExtensionAttributes.Companion::unwrap)).let(IExtension::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ce882774c42632542413b4d9b2d595e936136045b89164d48d255b70c42f21ec")

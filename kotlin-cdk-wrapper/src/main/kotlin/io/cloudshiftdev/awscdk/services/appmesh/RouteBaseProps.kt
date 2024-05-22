@@ -77,7 +77,7 @@ public interface RouteBaseProps {
      * @param routeSpec Protocol specific spec. 
      */
     override fun routeSpec(routeSpec: RouteSpec) {
-      cdkBuilder.routeSpec(routeSpec.let(RouteSpec::unwrap))
+      cdkBuilder.routeSpec(routeSpec.let(RouteSpec.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appmesh.RouteBaseProps = cdkBuilder.build()

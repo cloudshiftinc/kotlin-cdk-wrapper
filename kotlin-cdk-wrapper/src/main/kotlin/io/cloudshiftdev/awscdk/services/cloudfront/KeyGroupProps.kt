@@ -93,7 +93,7 @@ public interface KeyGroupProps {
      * @param items A list of public keys to add to the key group. 
      */
     override fun items(items: List<IPublicKey>) {
-      cdkBuilder.items(items.map(IPublicKey::unwrap))
+      cdkBuilder.items(items.map(IPublicKey.Companion::unwrap))
     }
 
     /**

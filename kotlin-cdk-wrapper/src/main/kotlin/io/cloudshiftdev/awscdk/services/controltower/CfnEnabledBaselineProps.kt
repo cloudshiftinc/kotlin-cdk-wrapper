@@ -153,7 +153,7 @@ public interface CfnEnabledBaselineProps {
      * These parameters configure the behavior of the baseline.
      */
     override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -174,7 +174,7 @@ public interface CfnEnabledBaselineProps {
      * @param tags Tags associated with input to `EnableBaseline` .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

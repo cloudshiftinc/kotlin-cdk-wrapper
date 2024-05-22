@@ -115,7 +115,7 @@ public interface GatewayResponseOptions {
      * @param type Response type to associate with gateway response. 
      */
     override fun type(type: ResponseType) {
-      cdkBuilder.type(type.let(ResponseType::unwrap))
+      cdkBuilder.type(type.let(ResponseType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.GatewayResponseOptions =

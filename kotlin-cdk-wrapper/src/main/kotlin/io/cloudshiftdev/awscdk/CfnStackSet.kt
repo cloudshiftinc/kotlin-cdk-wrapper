@@ -91,8 +91,9 @@ public open class CfnStackSet(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
     props: CfnStackSetProps,
-  ) : this(software.amazon.awscdk.CfnStackSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStackSetProps::unwrap))
+  ) :
+      this(software.amazon.awscdk.CfnStackSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStackSetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -130,7 +131,7 @@ public open class CfnStackSet(
    * Organizations accounts that are added to a target organization or organizational unit (OU).
    */
   public open fun autoDeployment(`value`: IResolvable) {
-    unwrap(this).setAutoDeployment(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoDeployment(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -138,7 +139,7 @@ public open class CfnStackSet(
    * Organizations accounts that are added to a target organization or organizational unit (OU).
    */
   public open fun autoDeployment(`value`: AutoDeploymentProperty) {
-    unwrap(this).setAutoDeployment(`value`.let(AutoDeploymentProperty::unwrap))
+    unwrap(this).setAutoDeployment(`value`.let(AutoDeploymentProperty.Companion::unwrap))
   }
 
   /**
@@ -211,7 +212,7 @@ public open class CfnStackSet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -237,14 +238,14 @@ public open class CfnStackSet(
    * The user-specified preferences for how AWS CloudFormation performs a stack set operation.
    */
   public open fun operationPreferences(`value`: IResolvable) {
-    unwrap(this).setOperationPreferences(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOperationPreferences(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The user-specified preferences for how AWS CloudFormation performs a stack set operation.
    */
   public open fun operationPreferences(`value`: OperationPreferencesProperty) {
-    unwrap(this).setOperationPreferences(`value`.let(OperationPreferencesProperty::unwrap))
+    unwrap(this).setOperationPreferences(`value`.let(OperationPreferencesProperty.Companion::unwrap))
   }
 
   /**
@@ -264,7 +265,7 @@ public open class CfnStackSet(
    * The input parameters for the stack set template.
    */
   public open fun parameters(`value`: IResolvable) {
-    unwrap(this).setParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -300,7 +301,7 @@ public open class CfnStackSet(
    * A group of stack instances with parameters in some specific accounts and Regions.
    */
   public open fun stackInstancesGroup(`value`: IResolvable) {
-    unwrap(this).setStackInstancesGroup(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStackInstancesGroup(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -343,7 +344,7 @@ public open class CfnStackSet(
    * Key-value pairs to associate with this stack.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -759,7 +760,7 @@ public open class CfnStackSet(
      * organizational unit (OU). 
      */
     override fun autoDeployment(autoDeployment: IResolvable) {
-      cdkBuilder.autoDeployment(autoDeployment.let(IResolvable::unwrap))
+      cdkBuilder.autoDeployment(autoDeployment.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -772,7 +773,7 @@ public open class CfnStackSet(
      * organizational unit (OU). 
      */
     override fun autoDeployment(autoDeployment: AutoDeploymentProperty) {
-      cdkBuilder.autoDeployment(autoDeployment.let(AutoDeploymentProperty::unwrap))
+      cdkBuilder.autoDeployment(autoDeployment.let(AutoDeploymentProperty.Companion::unwrap))
     }
 
     /**
@@ -917,7 +918,7 @@ public open class CfnStackSet(
      * performs a stack set operation. 
      */
     override fun operationPreferences(operationPreferences: IResolvable) {
-      cdkBuilder.operationPreferences(operationPreferences.let(IResolvable::unwrap))
+      cdkBuilder.operationPreferences(operationPreferences.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -928,7 +929,7 @@ public open class CfnStackSet(
      * performs a stack set operation. 
      */
     override fun operationPreferences(operationPreferences: OperationPreferencesProperty) {
-      cdkBuilder.operationPreferences(operationPreferences.let(OperationPreferencesProperty::unwrap))
+      cdkBuilder.operationPreferences(operationPreferences.let(OperationPreferencesProperty.Companion::unwrap))
     }
 
     /**
@@ -951,7 +952,7 @@ public open class CfnStackSet(
      * @param parameters The input parameters for the stack set template. 
      */
     override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -998,7 +999,7 @@ public open class CfnStackSet(
      * accounts and Regions. 
      */
     override fun stackInstancesGroup(stackInstancesGroup: IResolvable) {
-      cdkBuilder.stackInstancesGroup(stackInstancesGroup.let(IResolvable::unwrap))
+      cdkBuilder.stackInstancesGroup(stackInstancesGroup.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1051,7 +1052,7 @@ public open class CfnStackSet(
      * @param tags Key-value pairs to associate with this stack. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1229,7 +1230,7 @@ public open class CfnStackSet(
        * instances from the account in the specified Regions.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1249,7 +1250,7 @@ public open class CfnStackSet(
        * .
        */
       override fun retainStacksOnAccountRemoval(retainStacksOnAccountRemoval: IResolvable) {
-        cdkBuilder.retainStacksOnAccountRemoval(retainStacksOnAccountRemoval.let(IResolvable::unwrap))
+        cdkBuilder.retainStacksOnAccountRemoval(retainStacksOnAccountRemoval.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.CfnStackSet.AutoDeploymentProperty =
@@ -1677,7 +1678,7 @@ public open class CfnStackSet(
        * When `false` (default), StackSets performs one operation at a time in request order.
        */
       override fun active(active: IResolvable) {
-        cdkBuilder.active(active.let(IResolvable::unwrap))
+        cdkBuilder.active(active.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.CfnStackSet.ManagedExecutionProperty =
@@ -2355,7 +2356,7 @@ public open class CfnStackSet(
        * stack instances in the specified Regions. 
        */
       override fun deploymentTargets(deploymentTargets: IResolvable) {
-        cdkBuilder.deploymentTargets(deploymentTargets.let(IResolvable::unwrap))
+        cdkBuilder.deploymentTargets(deploymentTargets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2363,7 +2364,7 @@ public open class CfnStackSet(
        * stack instances in the specified Regions. 
        */
       override fun deploymentTargets(deploymentTargets: DeploymentTargetsProperty) {
-        cdkBuilder.deploymentTargets(deploymentTargets.let(DeploymentTargetsProperty::unwrap))
+        cdkBuilder.deploymentTargets(deploymentTargets.let(DeploymentTargetsProperty.Companion::unwrap))
       }
 
       /**
@@ -2381,7 +2382,7 @@ public open class CfnStackSet(
        * in the selected stack instances.
        */
       override fun parameterOverrides(parameterOverrides: IResolvable) {
-        cdkBuilder.parameterOverrides(parameterOverrides.let(IResolvable::unwrap))
+        cdkBuilder.parameterOverrides(parameterOverrides.let(IResolvable.Companion::unwrap))
       }
 
       /**

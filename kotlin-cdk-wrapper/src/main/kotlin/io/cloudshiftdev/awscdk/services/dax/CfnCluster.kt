@@ -64,8 +64,8 @@ public open class CfnCluster(
     id: String,
     props: CfnClusterProps,
   ) :
-      this(software.amazon.awscdk.services.dax.CfnCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnClusterProps::unwrap))
+      this(software.amazon.awscdk.services.dax.CfnCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -190,7 +190,7 @@ public open class CfnCluster(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -282,14 +282,14 @@ public open class CfnCluster(
    * Represents the settings used to enable server-side encryption on the cluster.
    */
   public open fun sseSpecification(`value`: IResolvable) {
-    unwrap(this).setSseSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSseSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Represents the settings used to enable server-side encryption on the cluster.
    */
   public open fun sseSpecification(`value`: SSESpecificationProperty) {
-    unwrap(this).setSseSpecification(`value`.let(SSESpecificationProperty::unwrap))
+    unwrap(this).setSseSpecification(`value`.let(SSESpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -738,7 +738,7 @@ public open class CfnCluster(
      * cluster. 
      */
     override fun sseSpecification(sseSpecification: IResolvable) {
-      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -749,7 +749,7 @@ public open class CfnCluster(
      * cluster. 
      */
     override fun sseSpecification(sseSpecification: SSESpecificationProperty) {
-      cdkBuilder.sseSpecification(sseSpecification.let(SSESpecificationProperty::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(SSESpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -873,7 +873,7 @@ public open class CfnCluster(
        * (false) on the cluster.
        */
       override fun sseEnabled(sseEnabled: IResolvable) {
-        cdkBuilder.sseEnabled(sseEnabled.let(IResolvable::unwrap))
+        cdkBuilder.sseEnabled(sseEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.dax.CfnCluster.SSESpecificationProperty =

@@ -258,7 +258,7 @@ public interface CfnApplicationSettingsProps {
      * custom Lambda function settings for the campaign.
      */
     override fun campaignHook(campaignHook: IResolvable) {
-      cdkBuilder.campaignHook(campaignHook.let(IResolvable::unwrap))
+      cdkBuilder.campaignHook(campaignHook.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -268,7 +268,7 @@ public interface CfnApplicationSettingsProps {
      * custom Lambda function settings for the campaign.
      */
     override fun campaignHook(campaignHook: CfnApplicationSettings.CampaignHookProperty) {
-      cdkBuilder.campaignHook(campaignHook.let(CfnApplicationSettings.CampaignHookProperty::unwrap))
+      cdkBuilder.campaignHook(campaignHook.let(CfnApplicationSettings.CampaignHookProperty.Companion::unwrap))
     }
 
     /**
@@ -294,7 +294,7 @@ public interface CfnApplicationSettingsProps {
      * @param cloudWatchMetricsEnabled the value to be set.
      */
     override fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable) {
-      cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled.let(IResolvable::unwrap))
+      cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -303,7 +303,7 @@ public interface CfnApplicationSettingsProps {
      * limits for the campaign.
      */
     override fun limits(limits: IResolvable) {
-      cdkBuilder.limits(limits.let(IResolvable::unwrap))
+      cdkBuilder.limits(limits.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -312,7 +312,7 @@ public interface CfnApplicationSettingsProps {
      * limits for the campaign.
      */
     override fun limits(limits: CfnApplicationSettings.LimitsProperty) {
-      cdkBuilder.limits(limits.let(CfnApplicationSettings.LimitsProperty::unwrap))
+      cdkBuilder.limits(limits.let(CfnApplicationSettings.LimitsProperty.Companion::unwrap))
     }
 
     /**
@@ -345,7 +345,7 @@ public interface CfnApplicationSettingsProps {
      * resource to define a custom quiet time for the campaign.
      */
     override fun quietTime(quietTime: IResolvable) {
-      cdkBuilder.quietTime(quietTime.let(IResolvable::unwrap))
+      cdkBuilder.quietTime(quietTime.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -368,7 +368,7 @@ public interface CfnApplicationSettingsProps {
      * resource to define a custom quiet time for the campaign.
      */
     override fun quietTime(quietTime: CfnApplicationSettings.QuietTimeProperty) {
-      cdkBuilder.quietTime(quietTime.let(CfnApplicationSettings.QuietTimeProperty::unwrap))
+      cdkBuilder.quietTime(quietTime.let(CfnApplicationSettings.QuietTimeProperty.Companion::unwrap))
     }
 
     /**

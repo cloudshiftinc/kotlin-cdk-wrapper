@@ -43,7 +43,7 @@ public open class CfnLayerVersion(
   cdkObject: software.amazon.awscdk.services.sam.CfnLayerVersion,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.sam.CfnLayerVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.sam.CfnLayerVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -52,8 +52,8 @@ public open class CfnLayerVersion(
     id: String,
     props: CfnLayerVersionProps,
   ) :
-      this(software.amazon.awscdk.services.sam.CfnLayerVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLayerVersionProps::unwrap))
+      this(software.amazon.awscdk.services.sam.CfnLayerVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLayerVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -98,14 +98,14 @@ public open class CfnLayerVersion(
    *
    */
   public open fun contentUri(`value`: IResolvable) {
-    unwrap(this).setContentUri(`value`.let(IResolvable::unwrap))
+    unwrap(this).setContentUri(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun contentUri(`value`: S3LocationProperty) {
-    unwrap(this).setContentUri(`value`.let(S3LocationProperty::unwrap))
+    unwrap(this).setContentUri(`value`.let(S3LocationProperty.Companion::unwrap))
   }
 
   /**
@@ -134,7 +134,7 @@ public open class CfnLayerVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -276,7 +276,7 @@ public open class CfnLayerVersion(
      * @param contentUri 
      */
     override fun contentUri(contentUri: IResolvable) {
-      cdkBuilder.contentUri(contentUri.let(IResolvable::unwrap))
+      cdkBuilder.contentUri(contentUri.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -284,7 +284,7 @@ public open class CfnLayerVersion(
      * @param contentUri 
      */
     override fun contentUri(contentUri: S3LocationProperty) {
-      cdkBuilder.contentUri(contentUri.let(S3LocationProperty::unwrap))
+      cdkBuilder.contentUri(contentUri.let(S3LocationProperty.Companion::unwrap))
     }
 
     /**

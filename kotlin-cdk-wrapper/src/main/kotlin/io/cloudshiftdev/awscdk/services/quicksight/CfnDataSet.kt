@@ -264,7 +264,7 @@ public open class CfnDataSet(
   cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSet,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.quicksight.CfnDataSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.quicksight.CfnDataSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -273,8 +273,8 @@ public open class CfnDataSet(
     id: String,
     props: CfnDataSetProps,
   ) :
-      this(software.amazon.awscdk.services.quicksight.CfnDataSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDataSetProps::unwrap))
+      this(software.amazon.awscdk.services.quicksight.CfnDataSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDataSetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -338,7 +338,7 @@ public open class CfnDataSet(
    * Groupings of columns that work together in certain Amazon QuickSight features.
    */
   public open fun columnGroups(`value`: IResolvable) {
-    unwrap(this).setColumnGroups(`value`.let(IResolvable::unwrap))
+    unwrap(this).setColumnGroups(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -362,7 +362,7 @@ public open class CfnDataSet(
    * A set of one or more definitions of a `ColumnLevelPermissionRule` .
    */
   public open fun columnLevelPermissionRules(`value`: IResolvable) {
-    unwrap(this).setColumnLevelPermissionRules(`value`.let(IResolvable::unwrap))
+    unwrap(this).setColumnLevelPermissionRules(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -399,14 +399,14 @@ public open class CfnDataSet(
    * The refresh properties of a dataset.
    */
   public open fun dataSetRefreshProperties(`value`: IResolvable) {
-    unwrap(this).setDataSetRefreshProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataSetRefreshProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The refresh properties of a dataset.
    */
   public open fun dataSetRefreshProperties(`value`: DataSetRefreshPropertiesProperty) {
-    unwrap(this).setDataSetRefreshProperties(`value`.let(DataSetRefreshPropertiesProperty::unwrap))
+    unwrap(this).setDataSetRefreshProperties(`value`.let(DataSetRefreshPropertiesProperty.Companion::unwrap))
   }
 
   /**
@@ -427,14 +427,14 @@ public open class CfnDataSet(
    * The usage configuration to apply to child datasets that reference this dataset as a source.
    */
   public open fun dataSetUsageConfiguration(`value`: IResolvable) {
-    unwrap(this).setDataSetUsageConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataSetUsageConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The usage configuration to apply to child datasets that reference this dataset as a source.
    */
   public open fun dataSetUsageConfiguration(`value`: DataSetUsageConfigurationProperty) {
-    unwrap(this).setDataSetUsageConfiguration(`value`.let(DataSetUsageConfigurationProperty::unwrap))
+    unwrap(this).setDataSetUsageConfiguration(`value`.let(DataSetUsageConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -455,7 +455,7 @@ public open class CfnDataSet(
    * The parameters that are declared in a dataset.
    */
   public open fun datasetParameters(`value`: IResolvable) {
-    unwrap(this).setDatasetParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDatasetParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -479,7 +479,7 @@ public open class CfnDataSet(
    * The folder that contains fields and nested subfolders for your dataset.
    */
   public open fun fieldFolders(`value`: IResolvable) {
-    unwrap(this).setFieldFolders(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFieldFolders(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -510,14 +510,14 @@ public open class CfnDataSet(
    * The wait policy to use when creating or updating a Dataset.
    */
   public open fun ingestionWaitPolicy(`value`: IResolvable) {
-    unwrap(this).setIngestionWaitPolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIngestionWaitPolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The wait policy to use when creating or updating a Dataset.
    */
   public open fun ingestionWaitPolicy(`value`: IngestionWaitPolicyProperty) {
-    unwrap(this).setIngestionWaitPolicy(`value`.let(IngestionWaitPolicyProperty::unwrap))
+    unwrap(this).setIngestionWaitPolicy(`value`.let(IngestionWaitPolicyProperty.Companion::unwrap))
   }
 
   /**
@@ -534,7 +534,7 @@ public open class CfnDataSet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -546,7 +546,7 @@ public open class CfnDataSet(
    * Configures the combination and transformation of the data from the physical tables.
    */
   public open fun logicalTableMap(`value`: IResolvable) {
-    unwrap(this).setLogicalTableMap(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLogicalTableMap(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -577,7 +577,7 @@ public open class CfnDataSet(
    * A list of resource permissions on the dataset.
    */
   public open fun permissions(`value`: IResolvable) {
-    unwrap(this).setPermissions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPermissions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -601,7 +601,7 @@ public open class CfnDataSet(
    * Declares the physical tables that are available in the underlying data sources.
    */
   public open fun physicalTableMap(`value`: IResolvable) {
-    unwrap(this).setPhysicalTableMap(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPhysicalTableMap(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -620,14 +620,14 @@ public open class CfnDataSet(
    * The row-level security configuration for the data that you want to create.
    */
   public open fun rowLevelPermissionDataSet(`value`: IResolvable) {
-    unwrap(this).setRowLevelPermissionDataSet(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRowLevelPermissionDataSet(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The row-level security configuration for the data that you want to create.
    */
   public open fun rowLevelPermissionDataSet(`value`: RowLevelPermissionDataSetProperty) {
-    unwrap(this).setRowLevelPermissionDataSet(`value`.let(RowLevelPermissionDataSetProperty::unwrap))
+    unwrap(this).setRowLevelPermissionDataSet(`value`.let(RowLevelPermissionDataSetProperty.Companion::unwrap))
   }
 
   /**
@@ -649,7 +649,7 @@ public open class CfnDataSet(
    * The element you can use to define tags for row-level security.
    */
   public open fun rowLevelPermissionTagConfiguration(`value`: IResolvable) {
-    unwrap(this).setRowLevelPermissionTagConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRowLevelPermissionTagConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -657,7 +657,7 @@ public open class CfnDataSet(
    */
   public open
       fun rowLevelPermissionTagConfiguration(`value`: RowLevelPermissionTagConfigurationProperty) {
-    unwrap(this).setRowLevelPermissionTagConfiguration(`value`.let(RowLevelPermissionTagConfigurationProperty::unwrap))
+    unwrap(this).setRowLevelPermissionTagConfiguration(`value`.let(RowLevelPermissionTagConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -684,7 +684,7 @@ public open class CfnDataSet(
    * Contains a map of the key-value pairs for the resource tag or tags assigned to the dataset.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -1090,7 +1090,7 @@ public open class CfnDataSet(
      * features. 
      */
     override fun columnGroups(columnGroups: IResolvable) {
-      cdkBuilder.columnGroups(columnGroups.let(IResolvable::unwrap))
+      cdkBuilder.columnGroups(columnGroups.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1125,7 +1125,7 @@ public open class CfnDataSet(
      * `ColumnLevelPermissionRule` . 
      */
     override fun columnLevelPermissionRules(columnLevelPermissionRules: IResolvable) {
-      cdkBuilder.columnLevelPermissionRules(columnLevelPermissionRules.let(IResolvable::unwrap))
+      cdkBuilder.columnLevelPermissionRules(columnLevelPermissionRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1168,7 +1168,7 @@ public open class CfnDataSet(
      * @param dataSetRefreshProperties The refresh properties of a dataset. 
      */
     override fun dataSetRefreshProperties(dataSetRefreshProperties: IResolvable) {
-      cdkBuilder.dataSetRefreshProperties(dataSetRefreshProperties.let(IResolvable::unwrap))
+      cdkBuilder.dataSetRefreshProperties(dataSetRefreshProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1179,7 +1179,7 @@ public open class CfnDataSet(
      */
     override
         fun dataSetRefreshProperties(dataSetRefreshProperties: DataSetRefreshPropertiesProperty) {
-      cdkBuilder.dataSetRefreshProperties(dataSetRefreshProperties.let(DataSetRefreshPropertiesProperty::unwrap))
+      cdkBuilder.dataSetRefreshProperties(dataSetRefreshProperties.let(DataSetRefreshPropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -1202,7 +1202,7 @@ public open class CfnDataSet(
      * reference this dataset as a source. 
      */
     override fun dataSetUsageConfiguration(dataSetUsageConfiguration: IResolvable) {
-      cdkBuilder.dataSetUsageConfiguration(dataSetUsageConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.dataSetUsageConfiguration(dataSetUsageConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1214,7 +1214,7 @@ public open class CfnDataSet(
      */
     override
         fun dataSetUsageConfiguration(dataSetUsageConfiguration: DataSetUsageConfigurationProperty) {
-      cdkBuilder.dataSetUsageConfiguration(dataSetUsageConfiguration.let(DataSetUsageConfigurationProperty::unwrap))
+      cdkBuilder.dataSetUsageConfiguration(dataSetUsageConfiguration.let(DataSetUsageConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1238,7 +1238,7 @@ public open class CfnDataSet(
      * @param datasetParameters The parameters that are declared in a dataset. 
      */
     override fun datasetParameters(datasetParameters: IResolvable) {
-      cdkBuilder.datasetParameters(datasetParameters.let(IResolvable::unwrap))
+      cdkBuilder.datasetParameters(datasetParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1267,7 +1267,7 @@ public open class CfnDataSet(
      * @param fieldFolders The folder that contains fields and nested subfolders for your dataset. 
      */
     override fun fieldFolders(fieldFolders: IResolvable) {
-      cdkBuilder.fieldFolders(fieldFolders.let(IResolvable::unwrap))
+      cdkBuilder.fieldFolders(fieldFolders.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1299,7 +1299,7 @@ public open class CfnDataSet(
      * @param ingestionWaitPolicy The wait policy to use when creating or updating a Dataset. 
      */
     override fun ingestionWaitPolicy(ingestionWaitPolicy: IResolvable) {
-      cdkBuilder.ingestionWaitPolicy(ingestionWaitPolicy.let(IResolvable::unwrap))
+      cdkBuilder.ingestionWaitPolicy(ingestionWaitPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1311,7 +1311,7 @@ public open class CfnDataSet(
      * @param ingestionWaitPolicy The wait policy to use when creating or updating a Dataset. 
      */
     override fun ingestionWaitPolicy(ingestionWaitPolicy: IngestionWaitPolicyProperty) {
-      cdkBuilder.ingestionWaitPolicy(ingestionWaitPolicy.let(IngestionWaitPolicyProperty::unwrap))
+      cdkBuilder.ingestionWaitPolicy(ingestionWaitPolicy.let(IngestionWaitPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -1336,7 +1336,7 @@ public open class CfnDataSet(
      * physical tables. 
      */
     override fun logicalTableMap(logicalTableMap: IResolvable) {
-      cdkBuilder.logicalTableMap(logicalTableMap.let(IResolvable::unwrap))
+      cdkBuilder.logicalTableMap(logicalTableMap.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1367,7 +1367,7 @@ public open class CfnDataSet(
      * @param permissions A list of resource permissions on the dataset. 
      */
     override fun permissions(permissions: IResolvable) {
-      cdkBuilder.permissions(permissions.let(IResolvable::unwrap))
+      cdkBuilder.permissions(permissions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1396,7 +1396,7 @@ public open class CfnDataSet(
      * data sources. 
      */
     override fun physicalTableMap(physicalTableMap: IResolvable) {
-      cdkBuilder.physicalTableMap(physicalTableMap.let(IResolvable::unwrap))
+      cdkBuilder.physicalTableMap(physicalTableMap.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1418,7 +1418,7 @@ public open class CfnDataSet(
      * want to create. 
      */
     override fun rowLevelPermissionDataSet(rowLevelPermissionDataSet: IResolvable) {
-      cdkBuilder.rowLevelPermissionDataSet(rowLevelPermissionDataSet.let(IResolvable::unwrap))
+      cdkBuilder.rowLevelPermissionDataSet(rowLevelPermissionDataSet.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1430,7 +1430,7 @@ public open class CfnDataSet(
      */
     override
         fun rowLevelPermissionDataSet(rowLevelPermissionDataSet: RowLevelPermissionDataSetProperty) {
-      cdkBuilder.rowLevelPermissionDataSet(rowLevelPermissionDataSet.let(RowLevelPermissionDataSetProperty::unwrap))
+      cdkBuilder.rowLevelPermissionDataSet(rowLevelPermissionDataSet.let(RowLevelPermissionDataSetProperty.Companion::unwrap))
     }
 
     /**
@@ -1456,7 +1456,7 @@ public open class CfnDataSet(
      */
     override
         fun rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration: IResolvable) {
-      cdkBuilder.rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1468,7 +1468,7 @@ public open class CfnDataSet(
      */
     override
         fun rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration: RowLevelPermissionTagConfigurationProperty) {
-      cdkBuilder.rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration.let(RowLevelPermissionTagConfigurationProperty::unwrap))
+      cdkBuilder.rowLevelPermissionTagConfiguration(rowLevelPermissionTagConfiguration.let(RowLevelPermissionTagConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1493,7 +1493,7 @@ public open class CfnDataSet(
      * the dataset. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1994,14 +1994,14 @@ public open class CfnDataSet(
        * @param geoSpatialColumnGroup Geospatial column group that denotes a hierarchy.
        */
       override fun geoSpatialColumnGroup(geoSpatialColumnGroup: IResolvable) {
-        cdkBuilder.geoSpatialColumnGroup(geoSpatialColumnGroup.let(IResolvable::unwrap))
+        cdkBuilder.geoSpatialColumnGroup(geoSpatialColumnGroup.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param geoSpatialColumnGroup Geospatial column group that denotes a hierarchy.
        */
       override fun geoSpatialColumnGroup(geoSpatialColumnGroup: GeoSpatialColumnGroupProperty) {
-        cdkBuilder.geoSpatialColumnGroup(geoSpatialColumnGroup.let(GeoSpatialColumnGroupProperty::unwrap))
+        cdkBuilder.geoSpatialColumnGroup(geoSpatialColumnGroup.let(GeoSpatialColumnGroupProperty.Companion::unwrap))
       }
 
       /**
@@ -2259,14 +2259,14 @@ public open class CfnDataSet(
        * @param columnDescription A description for a column.
        */
       override fun columnDescription(columnDescription: IResolvable) {
-        cdkBuilder.columnDescription(columnDescription.let(IResolvable::unwrap))
+        cdkBuilder.columnDescription(columnDescription.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param columnDescription A description for a column.
        */
       override fun columnDescription(columnDescription: ColumnDescriptionProperty) {
-        cdkBuilder.columnDescription(columnDescription.let(ColumnDescriptionProperty::unwrap))
+        cdkBuilder.columnDescription(columnDescription.let(ColumnDescriptionProperty.Companion::unwrap))
       }
 
       /**
@@ -2387,7 +2387,7 @@ public open class CfnDataSet(
        * @param columns Calculated columns to create. 
        */
       override fun columns(columns: IResolvable) {
-        cdkBuilder.columns(columns.let(IResolvable::unwrap))
+        cdkBuilder.columns(columns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2534,7 +2534,7 @@ public open class CfnDataSet(
        * @param columns The column schema from the SQL query result set. 
        */
       override fun columns(columns: IResolvable) {
-        cdkBuilder.columns(columns.let(IResolvable::unwrap))
+        cdkBuilder.columns(columns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2691,14 +2691,14 @@ public open class CfnDataSet(
        * @param refreshConfiguration The refresh configuration for a dataset.
        */
       override fun refreshConfiguration(refreshConfiguration: IResolvable) {
-        cdkBuilder.refreshConfiguration(refreshConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.refreshConfiguration(refreshConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param refreshConfiguration The refresh configuration for a dataset.
        */
       override fun refreshConfiguration(refreshConfiguration: RefreshConfigurationProperty) {
-        cdkBuilder.refreshConfiguration(refreshConfiguration.let(RefreshConfigurationProperty::unwrap))
+        cdkBuilder.refreshConfiguration(refreshConfiguration.let(RefreshConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2829,7 +2829,7 @@ public open class CfnDataSet(
        * direct query can use this dataset as a source.
        */
       override fun disableUseAsDirectQuerySource(disableUseAsDirectQuerySource: IResolvable) {
-        cdkBuilder.disableUseAsDirectQuerySource(disableUseAsDirectQuerySource.let(IResolvable::unwrap))
+        cdkBuilder.disableUseAsDirectQuerySource(disableUseAsDirectQuerySource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2845,7 +2845,7 @@ public open class CfnDataSet(
        * stored in QuickSight can use this dataset as a source.
        */
       override fun disableUseAsImportedSource(disableUseAsImportedSource: IResolvable) {
-        cdkBuilder.disableUseAsImportedSource(disableUseAsImportedSource.let(IResolvable::unwrap))
+        cdkBuilder.disableUseAsImportedSource(disableUseAsImportedSource.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -3062,7 +3062,7 @@ public open class CfnDataSet(
        * @param dateTimeDatasetParameter A date time parameter that is created in the dataset.
        */
       override fun dateTimeDatasetParameter(dateTimeDatasetParameter: IResolvable) {
-        cdkBuilder.dateTimeDatasetParameter(dateTimeDatasetParameter.let(IResolvable::unwrap))
+        cdkBuilder.dateTimeDatasetParameter(dateTimeDatasetParameter.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3070,7 +3070,7 @@ public open class CfnDataSet(
        */
       override
           fun dateTimeDatasetParameter(dateTimeDatasetParameter: DateTimeDatasetParameterProperty) {
-        cdkBuilder.dateTimeDatasetParameter(dateTimeDatasetParameter.let(DateTimeDatasetParameterProperty::unwrap))
+        cdkBuilder.dateTimeDatasetParameter(dateTimeDatasetParameter.let(DateTimeDatasetParameterProperty.Companion::unwrap))
       }
 
       /**
@@ -3087,7 +3087,7 @@ public open class CfnDataSet(
        * @param decimalDatasetParameter A decimal parameter that is created in the dataset.
        */
       override fun decimalDatasetParameter(decimalDatasetParameter: IResolvable) {
-        cdkBuilder.decimalDatasetParameter(decimalDatasetParameter.let(IResolvable::unwrap))
+        cdkBuilder.decimalDatasetParameter(decimalDatasetParameter.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3095,7 +3095,7 @@ public open class CfnDataSet(
        */
       override
           fun decimalDatasetParameter(decimalDatasetParameter: DecimalDatasetParameterProperty) {
-        cdkBuilder.decimalDatasetParameter(decimalDatasetParameter.let(DecimalDatasetParameterProperty::unwrap))
+        cdkBuilder.decimalDatasetParameter(decimalDatasetParameter.let(DecimalDatasetParameterProperty.Companion::unwrap))
       }
 
       /**
@@ -3111,7 +3111,7 @@ public open class CfnDataSet(
        * @param integerDatasetParameter An integer parameter that is created in the dataset.
        */
       override fun integerDatasetParameter(integerDatasetParameter: IResolvable) {
-        cdkBuilder.integerDatasetParameter(integerDatasetParameter.let(IResolvable::unwrap))
+        cdkBuilder.integerDatasetParameter(integerDatasetParameter.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3119,7 +3119,7 @@ public open class CfnDataSet(
        */
       override
           fun integerDatasetParameter(integerDatasetParameter: IntegerDatasetParameterProperty) {
-        cdkBuilder.integerDatasetParameter(integerDatasetParameter.let(IntegerDatasetParameterProperty::unwrap))
+        cdkBuilder.integerDatasetParameter(integerDatasetParameter.let(IntegerDatasetParameterProperty.Companion::unwrap))
       }
 
       /**
@@ -3135,14 +3135,14 @@ public open class CfnDataSet(
        * @param stringDatasetParameter A string parameter that is created in the dataset.
        */
       override fun stringDatasetParameter(stringDatasetParameter: IResolvable) {
-        cdkBuilder.stringDatasetParameter(stringDatasetParameter.let(IResolvable::unwrap))
+        cdkBuilder.stringDatasetParameter(stringDatasetParameter.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param stringDatasetParameter A string parameter that is created in the dataset.
        */
       override fun stringDatasetParameter(stringDatasetParameter: StringDatasetParameterProperty) {
-        cdkBuilder.stringDatasetParameter(stringDatasetParameter.let(StringDatasetParameterProperty::unwrap))
+        cdkBuilder.stringDatasetParameter(stringDatasetParameter.let(StringDatasetParameterProperty.Companion::unwrap))
       }
 
       /**
@@ -3437,7 +3437,7 @@ public open class CfnDataSet(
        * This structure only accepts static values.
        */
       override fun defaultValues(defaultValues: IResolvable) {
-        cdkBuilder.defaultValues(defaultValues.let(IResolvable::unwrap))
+        cdkBuilder.defaultValues(defaultValues.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3445,7 +3445,7 @@ public open class CfnDataSet(
        * This structure only accepts static values.
        */
       override fun defaultValues(defaultValues: DateTimeDatasetParameterDefaultValuesProperty) {
-        cdkBuilder.defaultValues(defaultValues.let(DateTimeDatasetParameterDefaultValuesProperty::unwrap))
+        cdkBuilder.defaultValues(defaultValues.let(DateTimeDatasetParameterDefaultValuesProperty.Companion::unwrap))
       }
 
       /**
@@ -3611,7 +3611,7 @@ public open class CfnDataSet(
        * @param staticValues A list of static default values for a given decimal parameter.
        */
       override fun staticValues(staticValues: IResolvable) {
-        cdkBuilder.staticValues(staticValues.let(IResolvable::unwrap))
+        cdkBuilder.staticValues(staticValues.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3772,7 +3772,7 @@ public open class CfnDataSet(
        * This structure only accepts static values.
        */
       override fun defaultValues(defaultValues: IResolvable) {
-        cdkBuilder.defaultValues(defaultValues.let(IResolvable::unwrap))
+        cdkBuilder.defaultValues(defaultValues.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3780,7 +3780,7 @@ public open class CfnDataSet(
        * This structure only accepts static values.
        */
       override fun defaultValues(defaultValues: DecimalDatasetParameterDefaultValuesProperty) {
-        cdkBuilder.defaultValues(defaultValues.let(DecimalDatasetParameterDefaultValuesProperty::unwrap))
+        cdkBuilder.defaultValues(defaultValues.let(DecimalDatasetParameterDefaultValuesProperty.Companion::unwrap))
       }
 
       /**
@@ -4294,14 +4294,14 @@ public open class CfnDataSet(
        * @param lookbackWindow The lookback window setup for an incremental refresh configuration.
        */
       override fun lookbackWindow(lookbackWindow: IResolvable) {
-        cdkBuilder.lookbackWindow(lookbackWindow.let(IResolvable::unwrap))
+        cdkBuilder.lookbackWindow(lookbackWindow.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param lookbackWindow The lookback window setup for an incremental refresh configuration.
        */
       override fun lookbackWindow(lookbackWindow: LookbackWindowProperty) {
-        cdkBuilder.lookbackWindow(lookbackWindow.let(LookbackWindowProperty::unwrap))
+        cdkBuilder.lookbackWindow(lookbackWindow.let(LookbackWindowProperty.Companion::unwrap))
       }
 
       /**
@@ -4448,7 +4448,7 @@ public open class CfnDataSet(
        * Default (true). Applicable only when `DataSetImportMode` mode is set to SPICE.
        */
       override fun waitForSpiceIngestion(waitForSpiceIngestion: IResolvable) {
-        cdkBuilder.waitForSpiceIngestion(waitForSpiceIngestion.let(IResolvable::unwrap))
+        cdkBuilder.waitForSpiceIngestion(waitForSpiceIngestion.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -4700,7 +4700,7 @@ public open class CfnDataSet(
        * @param staticValues A list of static default values for a given integer parameter.
        */
       override fun staticValues(staticValues: IResolvable) {
-        cdkBuilder.staticValues(staticValues.let(IResolvable::unwrap))
+        cdkBuilder.staticValues(staticValues.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4861,7 +4861,7 @@ public open class CfnDataSet(
        * This structure only accepts static values.
        */
       override fun defaultValues(defaultValues: IResolvable) {
-        cdkBuilder.defaultValues(defaultValues.let(IResolvable::unwrap))
+        cdkBuilder.defaultValues(defaultValues.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4869,7 +4869,7 @@ public open class CfnDataSet(
        * This structure only accepts static values.
        */
       override fun defaultValues(defaultValues: IntegerDatasetParameterDefaultValuesProperty) {
-        cdkBuilder.defaultValues(defaultValues.let(IntegerDatasetParameterDefaultValuesProperty::unwrap))
+        cdkBuilder.defaultValues(defaultValues.let(IntegerDatasetParameterDefaultValuesProperty.Companion::unwrap))
       }
 
       /**
@@ -5103,14 +5103,14 @@ public open class CfnDataSet(
        * @param leftJoinKeyProperties Join key properties of the left operand.
        */
       override fun leftJoinKeyProperties(leftJoinKeyProperties: IResolvable) {
-        cdkBuilder.leftJoinKeyProperties(leftJoinKeyProperties.let(IResolvable::unwrap))
+        cdkBuilder.leftJoinKeyProperties(leftJoinKeyProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param leftJoinKeyProperties Join key properties of the left operand.
        */
       override fun leftJoinKeyProperties(leftJoinKeyProperties: JoinKeyPropertiesProperty) {
-        cdkBuilder.leftJoinKeyProperties(leftJoinKeyProperties.let(JoinKeyPropertiesProperty::unwrap))
+        cdkBuilder.leftJoinKeyProperties(leftJoinKeyProperties.let(JoinKeyPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -5140,14 +5140,14 @@ public open class CfnDataSet(
        * @param rightJoinKeyProperties Join key properties of the right operand.
        */
       override fun rightJoinKeyProperties(rightJoinKeyProperties: IResolvable) {
-        cdkBuilder.rightJoinKeyProperties(rightJoinKeyProperties.let(IResolvable::unwrap))
+        cdkBuilder.rightJoinKeyProperties(rightJoinKeyProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param rightJoinKeyProperties Join key properties of the right operand.
        */
       override fun rightJoinKeyProperties(rightJoinKeyProperties: JoinKeyPropertiesProperty) {
-        cdkBuilder.rightJoinKeyProperties(rightJoinKeyProperties.let(JoinKeyPropertiesProperty::unwrap))
+        cdkBuilder.rightJoinKeyProperties(rightJoinKeyProperties.let(JoinKeyPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -5309,7 +5309,7 @@ public open class CfnDataSet(
        * This is used by Amazon QuickSight to optimize query performance.
        */
       override fun uniqueKey(uniqueKey: IResolvable) {
-        cdkBuilder.uniqueKey(uniqueKey.let(IResolvable::unwrap))
+        cdkBuilder.uniqueKey(uniqueKey.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -5520,7 +5520,7 @@ public open class CfnDataSet(
        * For this structure to be valid, only one of the attributes can be non-null.
        */
       override fun dataTransforms(dataTransforms: IResolvable) {
-        cdkBuilder.dataTransforms(dataTransforms.let(IResolvable::unwrap))
+        cdkBuilder.dataTransforms(dataTransforms.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5542,14 +5542,14 @@ public open class CfnDataSet(
        * @param source Source of this logical table. 
        */
       override fun source(source: IResolvable) {
-        cdkBuilder.source(source.let(IResolvable::unwrap))
+        cdkBuilder.source(source.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param source Source of this logical table. 
        */
       override fun source(source: LogicalTableSourceProperty) {
-        cdkBuilder.source(source.let(LogicalTableSourceProperty::unwrap))
+        cdkBuilder.source(source.let(LogicalTableSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -5713,14 +5713,14 @@ public open class CfnDataSet(
        * @param joinInstruction Specifies the result of a join of two logical tables.
        */
       override fun joinInstruction(joinInstruction: IResolvable) {
-        cdkBuilder.joinInstruction(joinInstruction.let(IResolvable::unwrap))
+        cdkBuilder.joinInstruction(joinInstruction.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param joinInstruction Specifies the result of a join of two logical tables.
        */
       override fun joinInstruction(joinInstruction: JoinInstructionProperty) {
-        cdkBuilder.joinInstruction(joinInstruction.let(JoinInstructionProperty::unwrap))
+        cdkBuilder.joinInstruction(joinInstruction.let(JoinInstructionProperty.Companion::unwrap))
       }
 
       /**
@@ -6065,7 +6065,7 @@ public open class CfnDataSet(
        * @param decimalStaticValues A list of static default values for a given decimal parameter.
        */
       override fun decimalStaticValues(decimalStaticValues: IResolvable) {
-        cdkBuilder.decimalStaticValues(decimalStaticValues.let(IResolvable::unwrap))
+        cdkBuilder.decimalStaticValues(decimalStaticValues.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6085,7 +6085,7 @@ public open class CfnDataSet(
        * @param integerStaticValues A list of static default values for a given integer parameter.
        */
       override fun integerStaticValues(integerStaticValues: IResolvable) {
-        cdkBuilder.integerStaticValues(integerStaticValues.let(IResolvable::unwrap))
+        cdkBuilder.integerStaticValues(integerStaticValues.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6425,14 +6425,14 @@ public open class CfnDataSet(
        * @param newDefaultValues The new default values for the parameter.
        */
       override fun newDefaultValues(newDefaultValues: IResolvable) {
-        cdkBuilder.newDefaultValues(newDefaultValues.let(IResolvable::unwrap))
+        cdkBuilder.newDefaultValues(newDefaultValues.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param newDefaultValues The new default values for the parameter.
        */
       override fun newDefaultValues(newDefaultValues: NewDefaultValuesProperty) {
-        cdkBuilder.newDefaultValues(newDefaultValues.let(NewDefaultValuesProperty::unwrap))
+        cdkBuilder.newDefaultValues(newDefaultValues.let(NewDefaultValuesProperty.Companion::unwrap))
       }
 
       /**
@@ -6654,14 +6654,14 @@ public open class CfnDataSet(
        * @param customSql A physical table type built from the results of the custom SQL query.
        */
       override fun customSql(customSql: IResolvable) {
-        cdkBuilder.customSql(customSql.let(IResolvable::unwrap))
+        cdkBuilder.customSql(customSql.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param customSql A physical table type built from the results of the custom SQL query.
        */
       override fun customSql(customSql: CustomSqlProperty) {
-        cdkBuilder.customSql(customSql.let(CustomSqlProperty::unwrap))
+        cdkBuilder.customSql(customSql.let(CustomSqlProperty.Companion::unwrap))
       }
 
       /**
@@ -6676,14 +6676,14 @@ public open class CfnDataSet(
        * @param relationalTable A physical table type for relational data sources.
        */
       override fun relationalTable(relationalTable: IResolvable) {
-        cdkBuilder.relationalTable(relationalTable.let(IResolvable::unwrap))
+        cdkBuilder.relationalTable(relationalTable.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param relationalTable A physical table type for relational data sources.
        */
       override fun relationalTable(relationalTable: RelationalTableProperty) {
-        cdkBuilder.relationalTable(relationalTable.let(RelationalTableProperty::unwrap))
+        cdkBuilder.relationalTable(relationalTable.let(RelationalTableProperty.Companion::unwrap))
       }
 
       /**
@@ -6698,14 +6698,14 @@ public open class CfnDataSet(
        * @param s3Source A physical table type for as S3 data source.
        */
       override fun s3Source(s3Source: IResolvable) {
-        cdkBuilder.s3Source(s3Source.let(IResolvable::unwrap))
+        cdkBuilder.s3Source(s3Source.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3Source A physical table type for as S3 data source.
        */
       override fun s3Source(s3Source: S3SourceProperty) {
-        cdkBuilder.s3Source(s3Source.let(S3SourceProperty::unwrap))
+        cdkBuilder.s3Source(s3Source.let(S3SourceProperty.Companion::unwrap))
       }
 
       /**
@@ -6923,14 +6923,14 @@ public open class CfnDataSet(
        * @param incrementalRefresh The incremental refresh for the dataset.
        */
       override fun incrementalRefresh(incrementalRefresh: IResolvable) {
-        cdkBuilder.incrementalRefresh(incrementalRefresh.let(IResolvable::unwrap))
+        cdkBuilder.incrementalRefresh(incrementalRefresh.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param incrementalRefresh The incremental refresh for the dataset.
        */
       override fun incrementalRefresh(incrementalRefresh: IncrementalRefreshProperty) {
-        cdkBuilder.incrementalRefresh(incrementalRefresh.let(IncrementalRefreshProperty::unwrap))
+        cdkBuilder.incrementalRefresh(incrementalRefresh.let(IncrementalRefreshProperty.Companion::unwrap))
       }
 
       /**
@@ -7105,7 +7105,7 @@ public open class CfnDataSet(
        * @param inputColumns The column schema of the table. 
        */
       override fun inputColumns(inputColumns: IResolvable) {
-        cdkBuilder.inputColumns(inputColumns.let(IResolvable::unwrap))
+        cdkBuilder.inputColumns(inputColumns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7809,7 +7809,7 @@ public open class CfnDataSet(
        * and columns that they are assigned to. 
        */
       override fun tagRules(tagRules: IResolvable) {
-        cdkBuilder.tagRules(tagRules.let(IResolvable::unwrap))
+        cdkBuilder.tagRules(tagRules.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8185,7 +8185,7 @@ public open class CfnDataSet(
        * For files that aren't JSON, only `STRING` data types are supported in input columns.
        */
       override fun inputColumns(inputColumns: IResolvable) {
-        cdkBuilder.inputColumns(inputColumns.let(IResolvable::unwrap))
+        cdkBuilder.inputColumns(inputColumns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8209,14 +8209,14 @@ public open class CfnDataSet(
        * @param uploadSettings Information about the format for the S3 source file or files.
        */
       override fun uploadSettings(uploadSettings: IResolvable) {
-        cdkBuilder.uploadSettings(uploadSettings.let(IResolvable::unwrap))
+        cdkBuilder.uploadSettings(uploadSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param uploadSettings Information about the format for the S3 source file or files.
        */
       override fun uploadSettings(uploadSettings: UploadSettingsProperty) {
-        cdkBuilder.uploadSettings(uploadSettings.let(UploadSettingsProperty::unwrap))
+        cdkBuilder.uploadSettings(uploadSettings.let(UploadSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -8485,7 +8485,7 @@ public open class CfnDataSet(
        * This structure only accepts static values.
        */
       override fun defaultValues(defaultValues: IResolvable) {
-        cdkBuilder.defaultValues(defaultValues.let(IResolvable::unwrap))
+        cdkBuilder.defaultValues(defaultValues.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8493,7 +8493,7 @@ public open class CfnDataSet(
        * This structure only accepts static values.
        */
       override fun defaultValues(defaultValues: StringDatasetParameterDefaultValuesProperty) {
-        cdkBuilder.defaultValues(defaultValues.let(StringDatasetParameterDefaultValuesProperty::unwrap))
+        cdkBuilder.defaultValues(defaultValues.let(StringDatasetParameterDefaultValuesProperty.Companion::unwrap))
       }
 
       /**
@@ -8671,7 +8671,7 @@ public open class CfnDataSet(
        * This is not tags for the AWS tagging feature.
        */
       override fun tags(tags: List<ColumnTagProperty>) {
-        cdkBuilder.tags(tags.map(ColumnTagProperty::unwrap))
+        cdkBuilder.tags(tags.map(ColumnTagProperty.Companion::unwrap))
       }
 
       /**
@@ -8998,7 +8998,7 @@ public open class CfnDataSet(
        * type.
        */
       override fun castColumnTypeOperation(castColumnTypeOperation: IResolvable) {
-        cdkBuilder.castColumnTypeOperation(castColumnTypeOperation.let(IResolvable::unwrap))
+        cdkBuilder.castColumnTypeOperation(castColumnTypeOperation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9007,7 +9007,7 @@ public open class CfnDataSet(
        */
       override
           fun castColumnTypeOperation(castColumnTypeOperation: CastColumnTypeOperationProperty) {
-        cdkBuilder.castColumnTypeOperation(castColumnTypeOperation.let(CastColumnTypeOperationProperty::unwrap))
+        cdkBuilder.castColumnTypeOperation(castColumnTypeOperation.let(CastColumnTypeOperationProperty.Companion::unwrap))
       }
 
       /**
@@ -9025,7 +9025,7 @@ public open class CfnDataSet(
        * Columns created in one such operation form a lexical closure.
        */
       override fun createColumnsOperation(createColumnsOperation: IResolvable) {
-        cdkBuilder.createColumnsOperation(createColumnsOperation.let(IResolvable::unwrap))
+        cdkBuilder.createColumnsOperation(createColumnsOperation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9033,7 +9033,7 @@ public open class CfnDataSet(
        * Columns created in one such operation form a lexical closure.
        */
       override fun createColumnsOperation(createColumnsOperation: CreateColumnsOperationProperty) {
-        cdkBuilder.createColumnsOperation(createColumnsOperation.let(CreateColumnsOperationProperty::unwrap))
+        cdkBuilder.createColumnsOperation(createColumnsOperation.let(CreateColumnsOperationProperty.Companion::unwrap))
       }
 
       /**
@@ -9050,14 +9050,14 @@ public open class CfnDataSet(
        * @param filterOperation An operation that filters rows based on some condition.
        */
       override fun filterOperation(filterOperation: IResolvable) {
-        cdkBuilder.filterOperation(filterOperation.let(IResolvable::unwrap))
+        cdkBuilder.filterOperation(filterOperation.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param filterOperation An operation that filters rows based on some condition.
        */
       override fun filterOperation(filterOperation: FilterOperationProperty) {
-        cdkBuilder.filterOperation(filterOperation.let(FilterOperationProperty::unwrap))
+        cdkBuilder.filterOperation(filterOperation.let(FilterOperationProperty.Companion::unwrap))
       }
 
       /**
@@ -9074,7 +9074,7 @@ public open class CfnDataSet(
        */
       override
           fun overrideDatasetParameterOperation(overrideDatasetParameterOperation: IResolvable) {
-        cdkBuilder.overrideDatasetParameterOperation(overrideDatasetParameterOperation.let(IResolvable::unwrap))
+        cdkBuilder.overrideDatasetParameterOperation(overrideDatasetParameterOperation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9083,7 +9083,7 @@ public open class CfnDataSet(
        */
       override
           fun overrideDatasetParameterOperation(overrideDatasetParameterOperation: OverrideDatasetParameterOperationProperty) {
-        cdkBuilder.overrideDatasetParameterOperation(overrideDatasetParameterOperation.let(OverrideDatasetParameterOperationProperty::unwrap))
+        cdkBuilder.overrideDatasetParameterOperation(overrideDatasetParameterOperation.let(OverrideDatasetParameterOperationProperty.Companion::unwrap))
       }
 
       /**
@@ -9102,7 +9102,7 @@ public open class CfnDataSet(
        * Operations that come after a projection can only refer to projected columns.
        */
       override fun projectOperation(projectOperation: IResolvable) {
-        cdkBuilder.projectOperation(projectOperation.let(IResolvable::unwrap))
+        cdkBuilder.projectOperation(projectOperation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9110,7 +9110,7 @@ public open class CfnDataSet(
        * Operations that come after a projection can only refer to projected columns.
        */
       override fun projectOperation(projectOperation: ProjectOperationProperty) {
-        cdkBuilder.projectOperation(projectOperation.let(ProjectOperationProperty::unwrap))
+        cdkBuilder.projectOperation(projectOperation.let(ProjectOperationProperty.Companion::unwrap))
       }
 
       /**
@@ -9126,14 +9126,14 @@ public open class CfnDataSet(
        * @param renameColumnOperation An operation that renames a column.
        */
       override fun renameColumnOperation(renameColumnOperation: IResolvable) {
-        cdkBuilder.renameColumnOperation(renameColumnOperation.let(IResolvable::unwrap))
+        cdkBuilder.renameColumnOperation(renameColumnOperation.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param renameColumnOperation An operation that renames a column.
        */
       override fun renameColumnOperation(renameColumnOperation: RenameColumnOperationProperty) {
-        cdkBuilder.renameColumnOperation(renameColumnOperation.let(RenameColumnOperationProperty::unwrap))
+        cdkBuilder.renameColumnOperation(renameColumnOperation.let(RenameColumnOperationProperty.Companion::unwrap))
       }
 
       /**
@@ -9149,14 +9149,14 @@ public open class CfnDataSet(
        * @param tagColumnOperation An operation that tags a column with additional information.
        */
       override fun tagColumnOperation(tagColumnOperation: IResolvable) {
-        cdkBuilder.tagColumnOperation(tagColumnOperation.let(IResolvable::unwrap))
+        cdkBuilder.tagColumnOperation(tagColumnOperation.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param tagColumnOperation An operation that tags a column with additional information.
        */
       override fun tagColumnOperation(tagColumnOperation: TagColumnOperationProperty) {
-        cdkBuilder.tagColumnOperation(tagColumnOperation.let(TagColumnOperationProperty::unwrap))
+        cdkBuilder.tagColumnOperation(tagColumnOperation.let(TagColumnOperationProperty.Companion::unwrap))
       }
 
       /**
@@ -9362,7 +9362,7 @@ public open class CfnDataSet(
        * row.
        */
       override fun containsHeader(containsHeader: IResolvable) {
-        cdkBuilder.containsHeader(containsHeader.let(IResolvable::unwrap))
+        cdkBuilder.containsHeader(containsHeader.let(IResolvable.Companion::unwrap))
       }
 
       /**

@@ -77,7 +77,7 @@ public interface ThrottlingPerMethod {
      * throttling settings. 
      */
     override fun method(method: Method) {
-      cdkBuilder.method(method.let(Method::unwrap))
+      cdkBuilder.method(method.let(Method.Companion::unwrap))
     }
 
     /**
@@ -85,7 +85,7 @@ public interface ThrottlingPerMethod {
      * capacity. 
      */
     override fun throttle(throttle: ThrottleSettings) {
-      cdkBuilder.throttle(throttle.let(ThrottleSettings::unwrap))
+      cdkBuilder.throttle(throttle.let(ThrottleSettings.Companion::unwrap))
     }
 
     /**

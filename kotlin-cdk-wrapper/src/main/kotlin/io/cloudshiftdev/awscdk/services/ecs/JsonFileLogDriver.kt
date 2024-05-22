@@ -37,7 +37,7 @@ public open class JsonFileLogDriver(
   )
 
   public constructor(props: JsonFileLogDriverProps) :
-      this(software.amazon.awscdk.services.ecs.JsonFileLogDriver(props.let(JsonFileLogDriverProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.JsonFileLogDriver(props.let(JsonFileLogDriverProps.Companion::unwrap))
   )
 
   public constructor(props: JsonFileLogDriverProps.Builder.() -> Unit) :
@@ -51,8 +51,8 @@ public open class JsonFileLogDriver(
    * @param _containerDefinition 
    */
   public override fun bind(scope: Construct, containerDefinition: ContainerDefinition):
-      LogDriverConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      containerDefinition.let(ContainerDefinition::unwrap)).let(LogDriverConfig::wrap)
+      LogDriverConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      containerDefinition.let(ContainerDefinition.Companion::unwrap)).let(LogDriverConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.JsonFileLogDriver].

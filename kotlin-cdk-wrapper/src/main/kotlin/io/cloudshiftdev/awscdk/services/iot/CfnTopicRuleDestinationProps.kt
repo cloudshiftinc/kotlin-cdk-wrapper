@@ -142,7 +142,7 @@ public interface CfnTopicRuleDestinationProps {
      * @param httpUrlProperties Properties of the HTTP URL.
      */
     override fun httpUrlProperties(httpUrlProperties: IResolvable) {
-      cdkBuilder.httpUrlProperties(httpUrlProperties.let(IResolvable::unwrap))
+      cdkBuilder.httpUrlProperties(httpUrlProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -150,7 +150,7 @@ public interface CfnTopicRuleDestinationProps {
      */
     override
         fun httpUrlProperties(httpUrlProperties: CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty) {
-      cdkBuilder.httpUrlProperties(httpUrlProperties.let(CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty::unwrap))
+      cdkBuilder.httpUrlProperties(httpUrlProperties.let(CfnTopicRuleDestination.HttpUrlDestinationSummaryProperty.Companion::unwrap))
     }
 
     /**
@@ -187,7 +187,7 @@ public interface CfnTopicRuleDestinationProps {
      * @param vpcProperties Properties of the virtual private cloud (VPC) connection.
      */
     override fun vpcProperties(vpcProperties: IResolvable) {
-      cdkBuilder.vpcProperties(vpcProperties.let(IResolvable::unwrap))
+      cdkBuilder.vpcProperties(vpcProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -195,7 +195,7 @@ public interface CfnTopicRuleDestinationProps {
      */
     override
         fun vpcProperties(vpcProperties: CfnTopicRuleDestination.VpcDestinationPropertiesProperty) {
-      cdkBuilder.vpcProperties(vpcProperties.let(CfnTopicRuleDestination.VpcDestinationPropertiesProperty::unwrap))
+      cdkBuilder.vpcProperties(vpcProperties.let(CfnTopicRuleDestination.VpcDestinationPropertiesProperty.Companion::unwrap))
     }
 
     /**

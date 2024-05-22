@@ -355,14 +355,14 @@ public interface CfnAppProps {
      * @param appSource A `Source` object that specifies the app repository.
      */
     override fun appSource(appSource: IResolvable) {
-      cdkBuilder.appSource(appSource.let(IResolvable::unwrap))
+      cdkBuilder.appSource(appSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param appSource A `Source` object that specifies the app repository.
      */
     override fun appSource(appSource: CfnApp.SourceProperty) {
-      cdkBuilder.appSource(appSource.let(CfnApp.SourceProperty::unwrap))
+      cdkBuilder.appSource(appSource.let(CfnApp.SourceProperty.Companion::unwrap))
     }
 
     /**
@@ -378,7 +378,7 @@ public interface CfnAppProps {
      * attributes.
      */
     override fun attributes(attributes: IResolvable) {
-      cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+      cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -393,7 +393,7 @@ public interface CfnAppProps {
      * @param dataSources The app's data source.
      */
     override fun dataSources(dataSources: IResolvable) {
-      cdkBuilder.dataSources(dataSources.let(IResolvable::unwrap))
+      cdkBuilder.dataSources(dataSources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -440,7 +440,7 @@ public interface CfnAppProps {
      * @param enableSsl Whether to enable SSL for the app.
      */
     override fun enableSsl(enableSsl: IResolvable) {
-      cdkBuilder.enableSsl(enableSsl.let(IResolvable::unwrap))
+      cdkBuilder.enableSsl(enableSsl.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -461,7 +461,7 @@ public interface CfnAppProps {
      * version.
      */
     override fun environment(environment: IResolvable) {
-      cdkBuilder.environment(environment.let(IResolvable::unwrap))
+      cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -522,14 +522,14 @@ public interface CfnAppProps {
      * @param sslConfiguration An `SslConfiguration` object with the SSL configuration.
      */
     override fun sslConfiguration(sslConfiguration: IResolvable) {
-      cdkBuilder.sslConfiguration(sslConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.sslConfiguration(sslConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param sslConfiguration An `SslConfiguration` object with the SSL configuration.
      */
     override fun sslConfiguration(sslConfiguration: CfnApp.SslConfigurationProperty) {
-      cdkBuilder.sslConfiguration(sslConfiguration.let(CfnApp.SslConfigurationProperty::unwrap))
+      cdkBuilder.sslConfiguration(sslConfiguration.let(CfnApp.SslConfigurationProperty.Companion::unwrap))
     }
 
     /**

@@ -124,14 +124,14 @@ public interface MultiUserHostedRotationOptions : SingleUserHostedRotationOption
      * @param masterSecret The master secret for a multi user rotation scheme. 
      */
     override fun masterSecret(masterSecret: ISecret) {
-      cdkBuilder.masterSecret(masterSecret.let(ISecret::unwrap))
+      cdkBuilder.masterSecret(masterSecret.let(ISecret.Companion::unwrap))
     }
 
     /**
      * @param securityGroups A list of security groups for the Lambda created to rotate the secret.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -144,14 +144,14 @@ public interface MultiUserHostedRotationOptions : SingleUserHostedRotationOption
      * @param vpc The VPC where the Lambda rotation function will run.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
      * @param vpcSubnets The type of subnets in the VPC where the Lambda rotation function will run.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

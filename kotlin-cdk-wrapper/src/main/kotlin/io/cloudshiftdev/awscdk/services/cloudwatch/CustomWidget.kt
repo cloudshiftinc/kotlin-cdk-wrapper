@@ -30,7 +30,7 @@ public open class CustomWidget(
   cdkObject: software.amazon.awscdk.services.cloudwatch.CustomWidget,
 ) : ConcreteWidget(cdkObject) {
   public constructor(props: CustomWidgetProps) :
-      this(software.amazon.awscdk.services.cloudwatch.CustomWidget(props.let(CustomWidgetProps::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.CustomWidget(props.let(CustomWidgetProps.Companion::unwrap))
   )
 
   public constructor(props: CustomWidgetProps.Builder.() -> Unit) : this(CustomWidgetProps(props)

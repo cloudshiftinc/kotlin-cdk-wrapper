@@ -83,14 +83,14 @@ public interface CloudFormationRuleConstraintOptions : CommonConstraintOptions {
      * Configures the language for error messages from service catalog.
      */
     override fun messageLanguage(messageLanguage: MessageLanguage) {
-      cdkBuilder.messageLanguage(messageLanguage.let(MessageLanguage::unwrap))
+      cdkBuilder.messageLanguage(messageLanguage.let(MessageLanguage.Companion::unwrap))
     }
 
     /**
      * @param rule The rule with condition and assertions to apply to template. 
      */
     override fun rule(rule: TemplateRule) {
-      cdkBuilder.rule(rule.let(TemplateRule::unwrap))
+      cdkBuilder.rule(rule.let(TemplateRule.Companion::unwrap))
     }
 
     /**

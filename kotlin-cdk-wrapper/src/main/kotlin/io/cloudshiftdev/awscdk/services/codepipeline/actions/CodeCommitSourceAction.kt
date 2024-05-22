@@ -74,7 +74,7 @@ public open class CodeCommitSourceAction(
   cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeCommitSourceAction,
 ) : Action(cdkObject) {
   public constructor(props: CodeCommitSourceActionProps) :
-      this(software.amazon.awscdk.services.codepipeline.actions.CodeCommitSourceAction(props.let(CodeCommitSourceActionProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.actions.CodeCommitSourceAction(props.let(CodeCommitSourceActionProps.Companion::unwrap))
   )
 
   public constructor(props: CodeCommitSourceActionProps.Builder.() -> Unit) :
@@ -269,7 +269,7 @@ public open class CodeCommitSourceAction(
      * CodeCommit source action. 
      */
     override fun customEventRule(customEventRule: ICustomEventRule) {
-      cdkBuilder.customEventRule(customEventRule.let(ICustomEventRule::unwrap))
+      cdkBuilder.customEventRule(customEventRule.let(ICustomEventRule.Companion::unwrap))
     }
 
     /**
@@ -282,14 +282,14 @@ public open class CodeCommitSourceAction(
      * @param eventRole Role to be used by on commit event rule. 
      */
     override fun eventRole(eventRole: IRole) {
-      cdkBuilder.eventRole(eventRole.let(IRole::unwrap))
+      cdkBuilder.eventRole(eventRole.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param output 
      */
     override fun output(output: Artifact) {
-      cdkBuilder.output(output.let(Artifact::unwrap))
+      cdkBuilder.output(output.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -298,7 +298,7 @@ public open class CodeCommitSourceAction(
      * @param repository The CodeCommit repository. 
      */
     override fun repository(repository: IRepository) {
-      cdkBuilder.repository(repository.let(IRepository::unwrap))
+      cdkBuilder.repository(repository.let(IRepository.Companion::unwrap))
     }
 
     /**
@@ -315,7 +315,7 @@ public open class CodeCommitSourceAction(
      * @param role The Role in which context's this Action will be executing in. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -340,7 +340,7 @@ public open class CodeCommitSourceAction(
      * @param trigger How should CodePipeline detect source changes for this Action. 
      */
     override fun trigger(trigger: CodeCommitTrigger) {
-      cdkBuilder.trigger(trigger.let(CodeCommitTrigger::unwrap))
+      cdkBuilder.trigger(trigger.let(CodeCommitTrigger.Companion::unwrap))
     }
 
     /**

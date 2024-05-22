@@ -373,7 +373,7 @@ public interface CfnCertificateAuthorityProps {
      * certificate signing request (CSR).
      */
     override fun csrExtensions(csrExtensions: IResolvable) {
-      cdkBuilder.csrExtensions(csrExtensions.let(IResolvable::unwrap))
+      cdkBuilder.csrExtensions(csrExtensions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -381,7 +381,7 @@ public interface CfnCertificateAuthorityProps {
      * certificate signing request (CSR).
      */
     override fun csrExtensions(csrExtensions: CfnCertificateAuthority.CsrExtensionsProperty) {
-      cdkBuilder.csrExtensions(csrExtensions.let(CfnCertificateAuthority.CsrExtensionsProperty::unwrap))
+      cdkBuilder.csrExtensions(csrExtensions.let(CfnCertificateAuthority.CsrExtensionsProperty.Companion::unwrap))
     }
 
     /**
@@ -450,7 +450,7 @@ public interface CfnCertificateAuthorityProps {
      * prefix such as "http://" or "https://".
      */
     override fun revocationConfiguration(revocationConfiguration: IResolvable) {
-      cdkBuilder.revocationConfiguration(revocationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.revocationConfiguration(revocationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -481,7 +481,7 @@ public interface CfnCertificateAuthorityProps {
      */
     override
         fun revocationConfiguration(revocationConfiguration: CfnCertificateAuthority.RevocationConfigurationProperty) {
-      cdkBuilder.revocationConfiguration(revocationConfiguration.let(CfnCertificateAuthority.RevocationConfigurationProperty::unwrap))
+      cdkBuilder.revocationConfiguration(revocationConfiguration.let(CfnCertificateAuthority.RevocationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -532,7 +532,7 @@ public interface CfnCertificateAuthorityProps {
      * CA. 
      */
     override fun subject(subject: IResolvable) {
-      cdkBuilder.subject(subject.let(IResolvable::unwrap))
+      cdkBuilder.subject(subject.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -540,7 +540,7 @@ public interface CfnCertificateAuthorityProps {
      * CA. 
      */
     override fun subject(subject: CfnCertificateAuthority.SubjectProperty) {
-      cdkBuilder.subject(subject.let(CfnCertificateAuthority.SubjectProperty::unwrap))
+      cdkBuilder.subject(subject.let(CfnCertificateAuthority.SubjectProperty.Companion::unwrap))
     }
 
     /**
@@ -559,7 +559,7 @@ public interface CfnCertificateAuthorityProps {
      * Tags](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_iam-tags.html) .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

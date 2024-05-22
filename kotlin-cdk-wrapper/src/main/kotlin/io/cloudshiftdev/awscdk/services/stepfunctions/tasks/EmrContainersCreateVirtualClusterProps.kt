@@ -195,7 +195,7 @@ public interface EmrContainersCreateVirtualClusterProps : TaskStateBaseProps {
      * This enables cross-account resource invocations.
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -212,7 +212,7 @@ public interface EmrContainersCreateVirtualClusterProps : TaskStateBaseProps {
      * @param eksCluster EKS Cluster or task input that contains the name of the cluster. 
      */
     override fun eksCluster(eksCluster: EksClusterInput) {
-      cdkBuilder.eksCluster(eksCluster.let(EksClusterInput::unwrap))
+      cdkBuilder.eksCluster(eksCluster.let(EksClusterInput.Companion::unwrap))
     }
 
     /**
@@ -228,7 +228,7 @@ public interface EmrContainersCreateVirtualClusterProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -237,7 +237,7 @@ public interface EmrContainersCreateVirtualClusterProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -258,7 +258,7 @@ public interface EmrContainersCreateVirtualClusterProps : TaskStateBaseProps {
      * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -310,7 +310,7 @@ public interface EmrContainersCreateVirtualClusterProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -319,7 +319,7 @@ public interface EmrContainersCreateVirtualClusterProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**

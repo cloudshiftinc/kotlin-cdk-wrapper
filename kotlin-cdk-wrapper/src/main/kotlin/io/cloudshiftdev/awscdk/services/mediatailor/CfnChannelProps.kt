@@ -298,7 +298,7 @@ public interface CfnChannelProps {
      * MediaTailor doesn't support filler slate for channels using the `LOOP` `PlaybackMode` .
      */
     override fun fillerSlate(fillerSlate: IResolvable) {
-      cdkBuilder.fillerSlate(fillerSlate.let(IResolvable::unwrap))
+      cdkBuilder.fillerSlate(fillerSlate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -307,7 +307,7 @@ public interface CfnChannelProps {
      * MediaTailor doesn't support filler slate for channels using the `LOOP` `PlaybackMode` .
      */
     override fun fillerSlate(fillerSlate: CfnChannel.SlateSourceProperty) {
-      cdkBuilder.fillerSlate(fillerSlate.let(CfnChannel.SlateSourceProperty::unwrap))
+      cdkBuilder.fillerSlate(fillerSlate.let(CfnChannel.SlateSourceProperty.Companion::unwrap))
     }
 
     /**
@@ -324,14 +324,14 @@ public interface CfnChannelProps {
      * @param logConfiguration The log configuration.
      */
     override fun logConfiguration(logConfiguration: IResolvable) {
-      cdkBuilder.logConfiguration(logConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.logConfiguration(logConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param logConfiguration The log configuration.
      */
     override fun logConfiguration(logConfiguration: CfnChannel.LogConfigurationForChannelProperty) {
-      cdkBuilder.logConfiguration(logConfiguration.let(CfnChannel.LogConfigurationForChannelProperty::unwrap))
+      cdkBuilder.logConfiguration(logConfiguration.let(CfnChannel.LogConfigurationForChannelProperty.Companion::unwrap))
     }
 
     /**
@@ -347,7 +347,7 @@ public interface CfnChannelProps {
      * @param outputs The channel's output properties. 
      */
     override fun outputs(outputs: IResolvable) {
-      cdkBuilder.outputs(outputs.let(IResolvable::unwrap))
+      cdkBuilder.outputs(outputs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -381,7 +381,7 @@ public interface CfnChannelProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -405,7 +405,7 @@ public interface CfnChannelProps {
      * @param timeShiftConfiguration The configuration for time-shifted viewing.
      */
     override fun timeShiftConfiguration(timeShiftConfiguration: IResolvable) {
-      cdkBuilder.timeShiftConfiguration(timeShiftConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.timeShiftConfiguration(timeShiftConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -413,7 +413,7 @@ public interface CfnChannelProps {
      */
     override
         fun timeShiftConfiguration(timeShiftConfiguration: CfnChannel.TimeShiftConfigurationProperty) {
-      cdkBuilder.timeShiftConfiguration(timeShiftConfiguration.let(CfnChannel.TimeShiftConfigurationProperty::unwrap))
+      cdkBuilder.timeShiftConfiguration(timeShiftConfiguration.let(CfnChannel.TimeShiftConfigurationProperty.Companion::unwrap))
     }
 
     /**

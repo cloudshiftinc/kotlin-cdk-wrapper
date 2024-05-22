@@ -293,7 +293,7 @@ public interface IEksContainerDefinition : IConstruct {
      * @param volume 
      */
     override fun addVolume(volume: EksVolume) {
-      unwrap(this).addVolume(volume.let(EksVolume::unwrap))
+      unwrap(this).addVolume(volume.let(EksVolume.Companion::unwrap))
     }
 
     /**

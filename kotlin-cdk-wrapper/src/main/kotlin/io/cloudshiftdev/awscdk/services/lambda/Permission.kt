@@ -235,7 +235,7 @@ public interface Permission {
      * permissions for.
      */
     override fun functionUrlAuthType(functionUrlAuthType: FunctionUrlAuthType) {
-      cdkBuilder.functionUrlAuthType(functionUrlAuthType.let(FunctionUrlAuthType::unwrap))
+      cdkBuilder.functionUrlAuthType(functionUrlAuthType.let(FunctionUrlAuthType.Companion::unwrap))
     }
 
     /**
@@ -267,7 +267,7 @@ public interface Permission {
      * or an OrganizationPrincipal.
      */
     override fun principal(principal: IPrincipal) {
-      cdkBuilder.principal(principal.let(IPrincipal::unwrap))
+      cdkBuilder.principal(principal.let(IPrincipal.Companion::unwrap))
     }
 
     /**
@@ -278,7 +278,7 @@ public interface Permission {
      * to sit closer to the consumer of this permission (i.e., the caller).
      */
     override fun scope(scope: Construct) {
-      cdkBuilder.scope(scope.let(Construct::unwrap))
+      cdkBuilder.scope(scope.let(Construct.Companion::unwrap))
     }
 
     /**

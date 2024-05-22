@@ -55,8 +55,8 @@ public open class DatabaseProxy(
     id: String,
     props: DatabaseProxyProps,
   ) :
-      this(software.amazon.awscdk.services.rds.DatabaseProxy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DatabaseProxyProps::unwrap))
+      this(software.amazon.awscdk.services.rds.DatabaseProxy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DatabaseProxyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -100,7 +100,7 @@ public open class DatabaseProxy(
    * @param dbUser
    */
   public override fun grantConnect(grantee: IGrantable): Grant =
-      unwrap(this).grantConnect(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantConnect(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant the given identity connection access to the proxy.
@@ -109,7 +109,7 @@ public open class DatabaseProxy(
    * @param dbUser
    */
   public override fun grantConnect(grantee: IGrantable, dbUser: String): Grant =
-      unwrap(this).grantConnect(grantee.let(IGrantable::unwrap), dbUser).let(Grant::wrap)
+      unwrap(this).grantConnect(grantee.let(IGrantable.Companion::unwrap), dbUser).let(Grant::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.rds.DatabaseProxy].
@@ -401,7 +401,7 @@ public open class DatabaseProxy(
      * the connection pool. 
      */
     override fun borrowTimeout(borrowTimeout: Duration) {
-      cdkBuilder.borrowTimeout(borrowTimeout.let(Duration::unwrap))
+      cdkBuilder.borrowTimeout(borrowTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -414,7 +414,7 @@ public open class DatabaseProxy(
      * in as a specific database user. 
      */
     override fun clientPasswordAuthType(clientPasswordAuthType: ClientPasswordAuthType) {
-      cdkBuilder.clientPasswordAuthType(clientPasswordAuthType.let(ClientPasswordAuthType::unwrap))
+      cdkBuilder.clientPasswordAuthType(clientPasswordAuthType.let(ClientPasswordAuthType.Companion::unwrap))
     }
 
     /**
@@ -479,7 +479,7 @@ public open class DatabaseProxy(
      * before the proxy disconnects it. 
      */
     override fun idleClientTimeout(idleClientTimeout: Duration) {
-      cdkBuilder.idleClientTimeout(idleClientTimeout.let(Duration::unwrap))
+      cdkBuilder.idleClientTimeout(idleClientTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -548,7 +548,7 @@ public open class DatabaseProxy(
      * @param proxyTarget DB proxy target: Instance or Cluster. 
      */
     override fun proxyTarget(proxyTarget: ProxyTarget) {
-      cdkBuilder.proxyTarget(proxyTarget.let(ProxyTarget::unwrap))
+      cdkBuilder.proxyTarget(proxyTarget.let(ProxyTarget.Companion::unwrap))
     }
 
     /**
@@ -574,7 +574,7 @@ public open class DatabaseProxy(
      * @param role IAM role that the proxy uses to access secrets in AWS Secrets Manager. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -587,7 +587,7 @@ public open class DatabaseProxy(
      * Aurora DB cluster. 
      */
     override fun secrets(secrets: List<ISecret>) {
-      cdkBuilder.secrets(secrets.map(ISecret::unwrap))
+      cdkBuilder.secrets(secrets.map(ISecret.Companion::unwrap))
     }
 
     /**
@@ -609,7 +609,7 @@ public open class DatabaseProxy(
      * @param securityGroups One or more VPC security groups to associate with the new proxy. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -635,7 +635,7 @@ public open class DatabaseProxy(
      * underlying database connection. 
      */
     override fun sessionPinningFilters(sessionPinningFilters: List<SessionPinningFilter>) {
-      cdkBuilder.sessionPinningFilters(sessionPinningFilters.map(SessionPinningFilter::unwrap))
+      cdkBuilder.sessionPinningFilters(sessionPinningFilters.map(SessionPinningFilter.Companion::unwrap))
     }
 
     /**
@@ -659,7 +659,7 @@ public open class DatabaseProxy(
      * @param vpc The VPC to associate with the new proxy. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -670,7 +670,7 @@ public open class DatabaseProxy(
      * @param vpcSubnets The subnets used by the proxy. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -694,8 +694,8 @@ public open class DatabaseProxy(
       id: String,
       attrs: DatabaseProxyAttributes,
     ): IDatabaseProxy =
-        software.amazon.awscdk.services.rds.DatabaseProxy.fromDatabaseProxyAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(DatabaseProxyAttributes::unwrap)).let(IDatabaseProxy::wrap)
+        software.amazon.awscdk.services.rds.DatabaseProxy.fromDatabaseProxyAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(DatabaseProxyAttributes.Companion::unwrap)).let(IDatabaseProxy::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("50bb2976434c4f162188800dac01b8399c67e7a4e265d1b82be88c202cf9c451")

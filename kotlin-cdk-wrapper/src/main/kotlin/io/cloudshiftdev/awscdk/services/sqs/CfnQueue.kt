@@ -86,7 +86,7 @@ public open class CfnQueue(
   cdkObject: software.amazon.awscdk.services.sqs.CfnQueue,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.sqs.CfnQueue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.sqs.CfnQueue(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -95,8 +95,8 @@ public open class CfnQueue(
     id: String,
     props: CfnQueueProps,
   ) :
-      this(software.amazon.awscdk.services.sqs.CfnQueue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnQueueProps::unwrap))
+      this(software.amazon.awscdk.services.sqs.CfnQueue(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnQueueProps.Companion::unwrap))
   )
 
   public constructor(
@@ -141,7 +141,7 @@ public open class CfnQueue(
    * For first-in-first-out (FIFO) queues, specifies whether to enable content-based deduplication.
    */
   public open fun contentBasedDeduplication(`value`: IResolvable) {
-    unwrap(this).setContentBasedDeduplication(`value`.let(IResolvable::unwrap))
+    unwrap(this).setContentBasedDeduplication(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -186,7 +186,7 @@ public open class CfnQueue(
    * If set to true, creates a FIFO queue.
    */
   public open fun fifoQueue(`value`: IResolvable) {
-    unwrap(this).setFifoQueue(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFifoQueue(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -209,7 +209,7 @@ public open class CfnQueue(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -336,7 +336,7 @@ public open class CfnQueue(
    * Enables server-side queue encryption using SQS owned encryption keys.
    */
   public open fun sqsManagedSseEnabled(`value`: IResolvable) {
-    unwrap(this).setSqsManagedSseEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSqsManagedSseEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -354,7 +354,7 @@ public open class CfnQueue(
    * The tags that you attach to this queue.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -775,7 +775,7 @@ public open class CfnQueue(
      * enable content-based deduplication. 
      */
     override fun contentBasedDeduplication(contentBasedDeduplication: IResolvable) {
-      cdkBuilder.contentBasedDeduplication(contentBasedDeduplication.let(IResolvable::unwrap))
+      cdkBuilder.contentBasedDeduplication(contentBasedDeduplication.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -841,7 +841,7 @@ public open class CfnQueue(
      * @param fifoQueue If set to true, creates a FIFO queue. 
      */
     override fun fifoQueue(fifoQueue: IResolvable) {
-      cdkBuilder.fifoQueue(fifoQueue.let(IResolvable::unwrap))
+      cdkBuilder.fifoQueue(fifoQueue.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1082,7 +1082,7 @@ public open class CfnQueue(
      * keys. 
      */
     override fun sqsManagedSseEnabled(sqsManagedSseEnabled: IResolvable) {
-      cdkBuilder.sqsManagedSseEnabled(sqsManagedSseEnabled.let(IResolvable::unwrap))
+      cdkBuilder.sqsManagedSseEnabled(sqsManagedSseEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1096,7 +1096,7 @@ public open class CfnQueue(
      * @param tags The tags that you attach to this queue. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

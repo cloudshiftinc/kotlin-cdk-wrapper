@@ -153,7 +153,7 @@ public interface CfnDBProxyTargetGroupProps {
      * connection pool associated with a `DBProxyTargetGroup` .
      */
     override fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: IResolvable) {
-      cdkBuilder.connectionPoolConfigurationInfo(connectionPoolConfigurationInfo.let(IResolvable::unwrap))
+      cdkBuilder.connectionPoolConfigurationInfo(connectionPoolConfigurationInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -162,7 +162,7 @@ public interface CfnDBProxyTargetGroupProps {
      */
     override
         fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: CfnDBProxyTargetGroup.ConnectionPoolConfigurationInfoFormatProperty) {
-      cdkBuilder.connectionPoolConfigurationInfo(connectionPoolConfigurationInfo.let(CfnDBProxyTargetGroup.ConnectionPoolConfigurationInfoFormatProperty::unwrap))
+      cdkBuilder.connectionPoolConfigurationInfo(connectionPoolConfigurationInfo.let(CfnDBProxyTargetGroup.ConnectionPoolConfigurationInfoFormatProperty.Companion::unwrap))
     }
 
     /**

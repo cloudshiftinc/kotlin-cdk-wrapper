@@ -31,12 +31,12 @@ public open class SqsSubscription(
   cdkObject: software.amazon.awscdk.services.sns.subscriptions.SqsSubscription,
 ) : CdkObject(cdkObject), ITopicSubscription {
   public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue) :
-      this(software.amazon.awscdk.services.sns.subscriptions.SqsSubscription(queue.let(CloudshiftdevAwscdkServicesSqsIQueue::unwrap))
+      this(software.amazon.awscdk.services.sns.subscriptions.SqsSubscription(queue.let(CloudshiftdevAwscdkServicesSqsIQueue.Companion::unwrap))
   )
 
   public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue, props: SqsSubscriptionProps) :
-      this(software.amazon.awscdk.services.sns.subscriptions.SqsSubscription(queue.let(CloudshiftdevAwscdkServicesSqsIQueue::unwrap),
-      props.let(SqsSubscriptionProps::unwrap))
+      this(software.amazon.awscdk.services.sns.subscriptions.SqsSubscription(queue.let(CloudshiftdevAwscdkServicesSqsIQueue.Companion::unwrap),
+      props.let(SqsSubscriptionProps.Companion::unwrap))
   )
 
   public constructor(queue: CloudshiftdevAwscdkServicesSqsIQueue,
@@ -49,7 +49,7 @@ public open class SqsSubscription(
    * @param topic 
    */
   public override fun bind(topic: ITopic): TopicSubscriptionConfig =
-      unwrap(this).bind(topic.let(ITopic::unwrap)).let(TopicSubscriptionConfig::wrap)
+      unwrap(this).bind(topic.let(ITopic.Companion::unwrap)).let(TopicSubscriptionConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.sns.subscriptions.SqsSubscription].
@@ -117,7 +117,7 @@ public open class SqsSubscription(
      * @param deadLetterQueue Queue to be used as dead letter queue. 
      */
     override fun deadLetterQueue(deadLetterQueue: CloudshiftdevAwscdkServicesSqsIQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(CloudshiftdevAwscdkServicesSqsIQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(CloudshiftdevAwscdkServicesSqsIQueue.Companion::unwrap))
     }
 
     /**

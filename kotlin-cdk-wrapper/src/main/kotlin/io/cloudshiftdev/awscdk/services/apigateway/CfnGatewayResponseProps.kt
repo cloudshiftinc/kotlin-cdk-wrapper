@@ -126,7 +126,7 @@ public interface CfnGatewayResponseProps {
      * GatewayResponse as a string-to-string map of key-value pairs.
      */
     override fun responseParameters(responseParameters: IResolvable) {
-      cdkBuilder.responseParameters(responseParameters.let(IResolvable::unwrap))
+      cdkBuilder.responseParameters(responseParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -142,7 +142,7 @@ public interface CfnGatewayResponseProps {
      * of key-value pairs.
      */
     override fun responseTemplates(responseTemplates: IResolvable) {
-      cdkBuilder.responseTemplates(responseTemplates.let(IResolvable::unwrap))
+      cdkBuilder.responseTemplates(responseTemplates.let(IResolvable.Companion::unwrap))
     }
 
     /**

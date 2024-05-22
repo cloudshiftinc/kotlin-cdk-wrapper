@@ -80,8 +80,8 @@ public open class CfnVerifiedAccessEndpoint(
     id: String,
     props: CfnVerifiedAccessEndpointProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVerifiedAccessEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnVerifiedAccessEndpoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVerifiedAccessEndpointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -209,7 +209,7 @@ public open class CfnVerifiedAccessEndpoint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -221,14 +221,14 @@ public open class CfnVerifiedAccessEndpoint(
    * The load balancer details if creating the AWS Verified Access endpoint as `load-balancer` type.
    */
   public open fun loadBalancerOptions(`value`: IResolvable) {
-    unwrap(this).setLoadBalancerOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoadBalancerOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The load balancer details if creating the AWS Verified Access endpoint as `load-balancer` type.
    */
   public open fun loadBalancerOptions(`value`: LoadBalancerOptionsProperty) {
-    unwrap(this).setLoadBalancerOptions(`value`.let(LoadBalancerOptionsProperty::unwrap))
+    unwrap(this).setLoadBalancerOptions(`value`.let(LoadBalancerOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -248,14 +248,14 @@ public open class CfnVerifiedAccessEndpoint(
    * The options for network-interface type endpoint.
    */
   public open fun networkInterfaceOptions(`value`: IResolvable) {
-    unwrap(this).setNetworkInterfaceOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNetworkInterfaceOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The options for network-interface type endpoint.
    */
   public open fun networkInterfaceOptions(`value`: NetworkInterfaceOptionsProperty) {
-    unwrap(this).setNetworkInterfaceOptions(`value`.let(NetworkInterfaceOptionsProperty::unwrap))
+    unwrap(this).setNetworkInterfaceOptions(`value`.let(NetworkInterfaceOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -295,7 +295,7 @@ public open class CfnVerifiedAccessEndpoint(
    * The status of the Verified Access policy.
    */
   public open fun policyEnabled(`value`: IResolvable) {
-    unwrap(this).setPolicyEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPolicyEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -326,14 +326,14 @@ public open class CfnVerifiedAccessEndpoint(
    * The options for additional server side encryption.
    */
   public open fun sseSpecification(`value`: IResolvable) {
-    unwrap(this).setSseSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSseSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The options for additional server side encryption.
    */
   public open fun sseSpecification(`value`: SseSpecificationProperty) {
-    unwrap(this).setSseSpecification(`value`.let(SseSpecificationProperty::unwrap))
+    unwrap(this).setSseSpecification(`value`.let(SseSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -359,7 +359,7 @@ public open class CfnVerifiedAccessEndpoint(
    * The tags.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -673,7 +673,7 @@ public open class CfnVerifiedAccessEndpoint(
      * endpoint as `load-balancer` type. 
      */
     override fun loadBalancerOptions(loadBalancerOptions: IResolvable) {
-      cdkBuilder.loadBalancerOptions(loadBalancerOptions.let(IResolvable::unwrap))
+      cdkBuilder.loadBalancerOptions(loadBalancerOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -685,7 +685,7 @@ public open class CfnVerifiedAccessEndpoint(
      * endpoint as `load-balancer` type. 
      */
     override fun loadBalancerOptions(loadBalancerOptions: LoadBalancerOptionsProperty) {
-      cdkBuilder.loadBalancerOptions(loadBalancerOptions.let(LoadBalancerOptionsProperty::unwrap))
+      cdkBuilder.loadBalancerOptions(loadBalancerOptions.let(LoadBalancerOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -709,7 +709,7 @@ public open class CfnVerifiedAccessEndpoint(
      * @param networkInterfaceOptions The options for network-interface type endpoint. 
      */
     override fun networkInterfaceOptions(networkInterfaceOptions: IResolvable) {
-      cdkBuilder.networkInterfaceOptions(networkInterfaceOptions.let(IResolvable::unwrap))
+      cdkBuilder.networkInterfaceOptions(networkInterfaceOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -719,7 +719,7 @@ public open class CfnVerifiedAccessEndpoint(
      * @param networkInterfaceOptions The options for network-interface type endpoint. 
      */
     override fun networkInterfaceOptions(networkInterfaceOptions: NetworkInterfaceOptionsProperty) {
-      cdkBuilder.networkInterfaceOptions(networkInterfaceOptions.let(NetworkInterfaceOptionsProperty::unwrap))
+      cdkBuilder.networkInterfaceOptions(networkInterfaceOptions.let(NetworkInterfaceOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -761,7 +761,7 @@ public open class CfnVerifiedAccessEndpoint(
      * @param policyEnabled The status of the Verified Access policy. 
      */
     override fun policyEnabled(policyEnabled: IResolvable) {
-      cdkBuilder.policyEnabled(policyEnabled.let(IResolvable::unwrap))
+      cdkBuilder.policyEnabled(policyEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -790,7 +790,7 @@ public open class CfnVerifiedAccessEndpoint(
      * @param sseSpecification The options for additional server side encryption. 
      */
     override fun sseSpecification(sseSpecification: IResolvable) {
-      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -800,7 +800,7 @@ public open class CfnVerifiedAccessEndpoint(
      * @param sseSpecification The options for additional server side encryption. 
      */
     override fun sseSpecification(sseSpecification: SseSpecificationProperty) {
-      cdkBuilder.sseSpecification(sseSpecification.let(SseSpecificationProperty::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(SseSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -821,7 +821,7 @@ public open class CfnVerifiedAccessEndpoint(
      * @param tags The tags. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1263,7 +1263,7 @@ public open class CfnVerifiedAccessEndpoint(
        * Valid values: `True` | `False`
        */
       override fun customerManagedKeyEnabled(customerManagedKeyEnabled: IResolvable) {
-        cdkBuilder.customerManagedKeyEnabled(customerManagedKeyEnabled.let(IResolvable::unwrap))
+        cdkBuilder.customerManagedKeyEnabled(customerManagedKeyEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**

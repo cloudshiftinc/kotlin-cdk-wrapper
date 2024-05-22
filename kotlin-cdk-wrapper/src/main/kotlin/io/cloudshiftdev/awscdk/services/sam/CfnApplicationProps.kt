@@ -136,14 +136,14 @@ public interface CfnApplicationProps {
      * @param location the value to be set. 
      */
     override fun location(location: IResolvable) {
-      cdkBuilder.location(location.let(IResolvable::unwrap))
+      cdkBuilder.location(location.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param location the value to be set. 
      */
     override fun location(location: CfnApplication.ApplicationLocationProperty) {
-      cdkBuilder.location(location.let(CfnApplication.ApplicationLocationProperty::unwrap))
+      cdkBuilder.location(location.let(CfnApplication.ApplicationLocationProperty.Companion::unwrap))
     }
 
     /**
@@ -171,7 +171,7 @@ public interface CfnApplicationProps {
      * @param parameters the value to be set.
      */
     override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**

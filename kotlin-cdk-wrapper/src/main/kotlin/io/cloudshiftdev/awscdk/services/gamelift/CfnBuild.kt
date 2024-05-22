@@ -50,7 +50,7 @@ public open class CfnBuild(
   cdkObject: software.amazon.awscdk.services.gamelift.CfnBuild,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.gamelift.CfnBuild(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.gamelift.CfnBuild(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -59,8 +59,8 @@ public open class CfnBuild(
     id: String,
     props: CfnBuildProps,
   ) :
-      this(software.amazon.awscdk.services.gamelift.CfnBuild(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnBuildProps::unwrap))
+      this(software.amazon.awscdk.services.gamelift.CfnBuild(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnBuildProps.Companion::unwrap))
   )
 
   public constructor(
@@ -81,7 +81,7 @@ public open class CfnBuild(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -129,14 +129,14 @@ public open class CfnBuild(
    * Information indicating where your game build files are stored.
    */
   public open fun storageLocation(`value`: IResolvable) {
-    unwrap(this).setStorageLocation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStorageLocation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information indicating where your game build files are stored.
    */
   public open fun storageLocation(`value`: StorageLocationProperty) {
-    unwrap(this).setStorageLocation(`value`.let(StorageLocationProperty::unwrap))
+    unwrap(this).setStorageLocation(`value`.let(StorageLocationProperty.Companion::unwrap))
   }
 
   /**
@@ -337,7 +337,7 @@ public open class CfnBuild(
      * @param storageLocation Information indicating where your game build files are stored. 
      */
     override fun storageLocation(storageLocation: IResolvable) {
-      cdkBuilder.storageLocation(storageLocation.let(IResolvable::unwrap))
+      cdkBuilder.storageLocation(storageLocation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -355,7 +355,7 @@ public open class CfnBuild(
      * @param storageLocation Information indicating where your game build files are stored. 
      */
     override fun storageLocation(storageLocation: StorageLocationProperty) {
-      cdkBuilder.storageLocation(storageLocation.let(StorageLocationProperty::unwrap))
+      cdkBuilder.storageLocation(storageLocation.let(StorageLocationProperty.Companion::unwrap))
     }
 
     /**

@@ -25,7 +25,7 @@ public open class Succeed(
   cdkObject: software.amazon.awscdk.services.stepfunctions.Succeed,
 ) : State(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.stepfunctions.Succeed(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.stepfunctions.Succeed(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -34,8 +34,8 @@ public open class Succeed(
     id: String,
     props: SucceedProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.Succeed(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SucceedProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.Succeed(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SucceedProps.Companion::unwrap))
   )
 
   public constructor(

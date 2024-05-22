@@ -27,7 +27,7 @@ public interface IListProducer {
      * @param context 
      */
     override fun produce(context: IResolveContext): List<String> =
-        unwrap(this).produce(context.let(IResolveContext::unwrap)) ?: emptyList()
+        unwrap(this).produce(context.let(IResolveContext.Companion::unwrap)) ?: emptyList()
   }
 
   public companion object {

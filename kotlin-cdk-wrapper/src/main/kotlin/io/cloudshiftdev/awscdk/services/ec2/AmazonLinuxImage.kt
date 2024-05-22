@@ -43,7 +43,7 @@ public open class AmazonLinuxImage(
   )
 
   public constructor(props: AmazonLinuxImageProps) :
-      this(software.amazon.awscdk.services.ec2.AmazonLinuxImage(props.let(AmazonLinuxImageProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.AmazonLinuxImage(props.let(AmazonLinuxImageProps.Companion::unwrap))
   )
 
   public constructor(props: AmazonLinuxImageProps.Builder.() -> Unit) :
@@ -56,7 +56,7 @@ public open class AmazonLinuxImage(
    * @param scope 
    */
   public override fun image(scope: Construct): MachineImageConfig =
-      unwrap(this).getImage(scope.let(Construct::unwrap)).let(MachineImageConfig::wrap)
+      unwrap(this).getImage(scope.let(Construct.Companion::unwrap)).let(MachineImageConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.AmazonLinuxImage].
@@ -187,7 +187,7 @@ public open class AmazonLinuxImage(
      * @param cpuType CPU Type. 
      */
     override fun cpuType(cpuType: AmazonLinuxCpuType) {
-      cdkBuilder.cpuType(cpuType.let(AmazonLinuxCpuType::unwrap))
+      cdkBuilder.cpuType(cpuType.let(AmazonLinuxCpuType.Companion::unwrap))
     }
 
     /**
@@ -198,7 +198,7 @@ public open class AmazonLinuxImage(
      * @param edition What edition of Amazon Linux to use. 
      */
     override fun edition(edition: AmazonLinuxEdition) {
-      cdkBuilder.edition(edition.let(AmazonLinuxEdition::unwrap))
+      cdkBuilder.edition(edition.let(AmazonLinuxEdition.Companion::unwrap))
     }
 
     /**
@@ -209,7 +209,7 @@ public open class AmazonLinuxImage(
      * @param generation What generation of Amazon Linux to use. 
      */
     override fun generation(generation: AmazonLinuxGeneration) {
-      cdkBuilder.generation(generation.let(AmazonLinuxGeneration::unwrap))
+      cdkBuilder.generation(generation.let(AmazonLinuxGeneration.Companion::unwrap))
     }
 
     /**
@@ -220,7 +220,7 @@ public open class AmazonLinuxImage(
      * @param kernel What kernel version of Amazon Linux to use. 
      */
     override fun kernel(kernel: AmazonLinuxKernel) {
-      cdkBuilder.kernel(kernel.let(AmazonLinuxKernel::unwrap))
+      cdkBuilder.kernel(kernel.let(AmazonLinuxKernel.Companion::unwrap))
     }
 
     /**
@@ -231,7 +231,7 @@ public open class AmazonLinuxImage(
      * @param storage What storage backed image to use. 
      */
     override fun storage(storage: AmazonLinuxStorage) {
-      cdkBuilder.storage(storage.let(AmazonLinuxStorage::unwrap))
+      cdkBuilder.storage(storage.let(AmazonLinuxStorage.Companion::unwrap))
     }
 
     /**
@@ -242,7 +242,7 @@ public open class AmazonLinuxImage(
      * @param userData Initial user data. 
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     /**
@@ -253,7 +253,7 @@ public open class AmazonLinuxImage(
      * @param virtualization Virtualization type. 
      */
     override fun virtualization(virtualization: AmazonLinuxVirt) {
-      cdkBuilder.virtualization(virtualization.let(AmazonLinuxVirt::unwrap))
+      cdkBuilder.virtualization(virtualization.let(AmazonLinuxVirt.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.AmazonLinuxImage = cdkBuilder.build()
@@ -264,7 +264,7 @@ public open class AmazonLinuxImage(
         software.amazon.awscdk.services.ec2.AmazonLinuxImage.ssmParameterName()
 
     public fun ssmParameterName(props: AmazonLinuxImageProps): String =
-        software.amazon.awscdk.services.ec2.AmazonLinuxImage.ssmParameterName(props.let(AmazonLinuxImageProps::unwrap))
+        software.amazon.awscdk.services.ec2.AmazonLinuxImage.ssmParameterName(props.let(AmazonLinuxImageProps.Companion::unwrap))
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a404935d97c75dc9dc41179b9d410bc64c050dd220fa58e9d9cf3299786d4f3b")

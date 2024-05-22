@@ -56,8 +56,8 @@ public open class CfnDataCatalog(
     id: String,
     props: CfnDataCatalogProps,
   ) :
-      this(software.amazon.awscdk.services.athena.CfnDataCatalog(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDataCatalogProps::unwrap))
+      this(software.amazon.awscdk.services.athena.CfnDataCatalog(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDataCatalogProps.Companion::unwrap))
   )
 
   public constructor(
@@ -85,7 +85,7 @@ public open class CfnDataCatalog(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -109,7 +109,7 @@ public open class CfnDataCatalog(
    * Specifies the Lambda function or functions to use for the data catalog.
    */
   public open fun parameters(`value`: IResolvable) {
-    unwrap(this).setParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -134,7 +134,7 @@ public open class CfnDataCatalog(
    * The tags (key-value pairs) to associate with this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -344,7 +344,7 @@ public open class CfnDataCatalog(
      * @param parameters Specifies the Lambda function or functions to use for the data catalog. 
      */
     override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -392,7 +392,7 @@ public open class CfnDataCatalog(
      * @param tags The tags (key-value pairs) to associate with this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

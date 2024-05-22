@@ -121,7 +121,7 @@ public interface VerticalAnnotation {
      * @param fill Add shading before or after the annotation.
      */
     override fun fill(fill: VerticalShading) {
-      cdkBuilder.fill(fill.let(VerticalShading::unwrap))
+      cdkBuilder.fill(fill.let(VerticalShading.Companion::unwrap))
     }
 
     /**

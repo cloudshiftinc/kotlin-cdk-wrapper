@@ -57,7 +57,7 @@ public abstract class BaseService(
    * @param volume 
    */
   public open fun addVolume(volume: ServiceManagedVolume) {
-    unwrap(this).addVolume(volume.let(ServiceManagedVolume::unwrap))
+    unwrap(this).addVolume(volume.let(ServiceManagedVolume.Companion::unwrap))
   }
 
   /**
@@ -66,7 +66,7 @@ public abstract class BaseService(
    * @param options 
    */
   public open fun associateCloudMapService(options: AssociateCloudMapServiceOptions) {
-    unwrap(this).associateCloudMapService(options.let(AssociateCloudMapServiceOptions::unwrap))
+    unwrap(this).associateCloudMapService(options.let(AssociateCloudMapServiceOptions.Companion::unwrap))
   }
 
   /**
@@ -90,7 +90,7 @@ public abstract class BaseService(
    */
   public override fun attachToApplicationTargetGroup(targetGroup: IApplicationTargetGroup):
       LoadBalancerTargetProps =
-      unwrap(this).attachToApplicationTargetGroup(targetGroup.let(IApplicationTargetGroup::unwrap)).let(LoadBalancerTargetProps::wrap)
+      unwrap(this).attachToApplicationTargetGroup(targetGroup.let(IApplicationTargetGroup.Companion::unwrap)).let(LoadBalancerTargetProps::wrap)
 
   /**
    * Registers the service as a target of a Classic Load Balancer (CLB).
@@ -100,7 +100,7 @@ public abstract class BaseService(
    * @param loadBalancer 
    */
   public override fun attachToClassicLB(loadBalancer: LoadBalancer) {
-    unwrap(this).attachToClassicLB(loadBalancer.let(LoadBalancer::unwrap))
+    unwrap(this).attachToClassicLB(loadBalancer.let(LoadBalancer.Companion::unwrap))
   }
 
   /**
@@ -113,7 +113,7 @@ public abstract class BaseService(
    */
   public override fun attachToNetworkTargetGroup(targetGroup: INetworkTargetGroup):
       LoadBalancerTargetProps =
-      unwrap(this).attachToNetworkTargetGroup(targetGroup.let(INetworkTargetGroup::unwrap)).let(LoadBalancerTargetProps::wrap)
+      unwrap(this).attachToNetworkTargetGroup(targetGroup.let(INetworkTargetGroup.Companion::unwrap)).let(LoadBalancerTargetProps::wrap)
 
   /**
    * An attribute representing the minimum and maximum task count for an AutoScalingGroup.
@@ -121,7 +121,7 @@ public abstract class BaseService(
    * @param props 
    */
   public open fun autoScaleTaskCount(props: EnableScalingProps): ScalableTaskCount =
-      unwrap(this).autoScaleTaskCount(props.let(EnableScalingProps::unwrap)).let(ScalableTaskCount::wrap)
+      unwrap(this).autoScaleTaskCount(props.let(EnableScalingProps.Companion::unwrap)).let(ScalableTaskCount::wrap)
 
   /**
    * An attribute representing the minimum and maximum task count for an AutoScalingGroup.
@@ -157,7 +157,7 @@ public abstract class BaseService(
    * @param options 
    */
   public open fun enableCloudMap(options: CloudMapOptions): Service =
-      unwrap(this).enableCloudMap(options.let(CloudMapOptions::unwrap)).let(Service::wrap)
+      unwrap(this).enableCloudMap(options.let(CloudMapOptions.Companion::unwrap)).let(Service::wrap)
 
   /**
    * Enable CloudMap service discovery for the service.
@@ -257,7 +257,8 @@ public abstract class BaseService(
    */
   public open fun enableDeploymentAlarms(alarmNames: List<String>,
       options: DeploymentAlarmOptions) {
-    unwrap(this).enableDeploymentAlarms(alarmNames, options.let(DeploymentAlarmOptions::unwrap))
+    unwrap(this).enableDeploymentAlarms(alarmNames,
+        options.let(DeploymentAlarmOptions.Companion::unwrap))
   }
 
   /**
@@ -307,7 +308,7 @@ public abstract class BaseService(
    * @param config
    */
   public open fun enableServiceConnect(config: ServiceConnectProps) {
-    unwrap(this).enableServiceConnect(config.let(ServiceConnectProps::unwrap))
+    unwrap(this).enableServiceConnect(config.let(ServiceConnectProps.Companion::unwrap))
   }
 
   /**
@@ -347,7 +348,7 @@ public abstract class BaseService(
    * @param options 
    */
   public open fun loadBalancerTarget(options: LoadBalancerTargetOptions): IEcsLoadBalancerTarget =
-      unwrap(this).loadBalancerTarget(options.let(LoadBalancerTargetOptions::unwrap)).let(IEcsLoadBalancerTarget::wrap)
+      unwrap(this).loadBalancerTarget(options.let(LoadBalancerTargetOptions.Companion::unwrap)).let(IEcsLoadBalancerTarget::wrap)
 
   /**
    * Return a load balancing target for a specific container and port.
@@ -396,7 +397,7 @@ public abstract class BaseService(
    * @param props
    */
   public open fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * This method returns the specified CloudWatch metric name for this service.
@@ -427,7 +428,7 @@ public abstract class BaseService(
    * @param props
    */
   public open fun metricCpuUtilization(props: MetricOptions): Metric =
-      unwrap(this).metricCpuUtilization(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricCpuUtilization(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * This method returns the CloudWatch metric for this service's CPU utilization.
@@ -459,7 +460,7 @@ public abstract class BaseService(
    * @param props
    */
   public open fun metricMemoryUtilization(props: MetricOptions): Metric =
-      unwrap(this).metricMemoryUtilization(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricMemoryUtilization(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * This method returns the CloudWatch metric for this service's memory utilization.
@@ -557,7 +558,7 @@ public abstract class BaseService(
       id: String,
       serviceArn: String,
     ): IBaseService =
-        software.amazon.awscdk.services.ecs.BaseService.fromServiceArnWithCluster(scope.let(Construct::unwrap),
+        software.amazon.awscdk.services.ecs.BaseService.fromServiceArnWithCluster(scope.let(Construct.Companion::unwrap),
         id, serviceArn).let(IBaseService::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecs.BaseService): BaseService =

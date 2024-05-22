@@ -142,8 +142,8 @@ public open class CfnRuleGroup(
     id: String,
     props: CfnRuleGroupProps,
   ) :
-      this(software.amazon.awscdk.services.networkfirewall.CfnRuleGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRuleGroupProps::unwrap))
+      this(software.amazon.awscdk.services.networkfirewall.CfnRuleGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRuleGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -193,7 +193,7 @@ public open class CfnRuleGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -205,14 +205,14 @@ public open class CfnRuleGroup(
    * An object that defines the rule group rules.
    */
   public open fun ruleGroup(`value`: IResolvable) {
-    unwrap(this).setRuleGroup(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRuleGroup(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An object that defines the rule group rules.
    */
   public open fun ruleGroup(`value`: RuleGroupProperty) {
-    unwrap(this).setRuleGroup(`value`.let(RuleGroupProperty::unwrap))
+    unwrap(this).setRuleGroup(`value`.let(RuleGroupProperty.Companion::unwrap))
   }
 
   /**
@@ -250,7 +250,7 @@ public open class CfnRuleGroup(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -405,7 +405,7 @@ public open class CfnRuleGroup(
      * @param ruleGroup An object that defines the rule group rules. 
      */
     override fun ruleGroup(ruleGroup: IResolvable) {
-      cdkBuilder.ruleGroup(ruleGroup.let(IResolvable::unwrap))
+      cdkBuilder.ruleGroup(ruleGroup.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -415,7 +415,7 @@ public open class CfnRuleGroup(
      * @param ruleGroup An object that defines the rule group rules. 
      */
     override fun ruleGroup(ruleGroup: RuleGroupProperty) {
-      cdkBuilder.ruleGroup(ruleGroup.let(RuleGroupProperty::unwrap))
+      cdkBuilder.ruleGroup(ruleGroup.let(RuleGroupProperty.Companion::unwrap))
     }
 
     /**
@@ -452,7 +452,7 @@ public open class CfnRuleGroup(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -603,7 +603,7 @@ public open class CfnRuleGroup(
        * publishes metrics for the packet and forwards it.
        */
       override fun publishMetricAction(publishMetricAction: IResolvable) {
-        cdkBuilder.publishMetricAction(publishMetricAction.let(IResolvable::unwrap))
+        cdkBuilder.publishMetricAction(publishMetricAction.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -617,7 +617,7 @@ public open class CfnRuleGroup(
        * publishes metrics for the packet and forwards it.
        */
       override fun publishMetricAction(publishMetricAction: PublishMetricActionProperty) {
-        cdkBuilder.publishMetricAction(publishMetricAction.let(PublishMetricActionProperty::unwrap))
+        cdkBuilder.publishMetricAction(publishMetricAction.let(PublishMetricActionProperty.Companion::unwrap))
       }
 
       /**
@@ -933,14 +933,14 @@ public open class CfnRuleGroup(
        * @param actionDefinition The custom action associated with the action name. 
        */
       override fun actionDefinition(actionDefinition: IResolvable) {
-        cdkBuilder.actionDefinition(actionDefinition.let(IResolvable::unwrap))
+        cdkBuilder.actionDefinition(actionDefinition.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param actionDefinition The custom action associated with the action name. 
        */
       override fun actionDefinition(actionDefinition: ActionDefinitionProperty) {
-        cdkBuilder.actionDefinition(actionDefinition.let(ActionDefinitionProperty::unwrap))
+        cdkBuilder.actionDefinition(actionDefinition.let(ActionDefinitionProperty.Companion::unwrap))
       }
 
       /**
@@ -1974,7 +1974,7 @@ public open class CfnRuleGroup(
        * example `1990:1994` .
        */
       override fun destinationPorts(destinationPorts: IResolvable) {
-        cdkBuilder.destinationPorts(destinationPorts.let(IResolvable::unwrap))
+        cdkBuilder.destinationPorts(destinationPorts.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2006,7 +2006,7 @@ public open class CfnRuleGroup(
        * If not specified, this matches with any destination address.
        */
       override fun destinations(destinations: IResolvable) {
-        cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
+        cdkBuilder.destinations(destinations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2032,7 +2032,7 @@ public open class CfnRuleGroup(
        * If not specified, this matches with any protocol.
        */
       override fun protocols(protocols: IResolvable) {
-        cdkBuilder.protocols(protocols.let(IResolvable::unwrap))
+        cdkBuilder.protocols(protocols.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2060,7 +2060,7 @@ public open class CfnRuleGroup(
        * example `1990:1994` .
        */
       override fun sourcePorts(sourcePorts: IResolvable) {
-        cdkBuilder.sourcePorts(sourcePorts.let(IResolvable::unwrap))
+        cdkBuilder.sourcePorts(sourcePorts.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2090,7 +2090,7 @@ public open class CfnRuleGroup(
        * If not specified, this matches with any source address.
        */
       override fun sources(sources: IResolvable) {
-        cdkBuilder.sources(sources.let(IResolvable::unwrap))
+        cdkBuilder.sources(sources.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2113,7 +2113,7 @@ public open class CfnRuleGroup(
        * (TCP).
        */
       override fun tcpFlags(tcpFlags: IResolvable) {
-        cdkBuilder.tcpFlags(tcpFlags.let(IResolvable::unwrap))
+        cdkBuilder.tcpFlags(tcpFlags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2495,7 +2495,7 @@ public open class CfnRuleGroup(
        * @param dimensions the value to be set. 
        */
       override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+        cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2598,7 +2598,7 @@ public open class CfnRuleGroup(
        * @param ipSetReferences The IP set references to use in the stateful rule group.
        */
       override fun ipSetReferences(ipSetReferences: IResolvable) {
-        cdkBuilder.ipSetReferences(ipSetReferences.let(IResolvable::unwrap))
+        cdkBuilder.ipSetReferences(ipSetReferences.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2900,7 +2900,7 @@ public open class CfnRuleGroup(
        * port number, protocol, and TCP flags.
        */
       override fun matchAttributes(matchAttributes: IResolvable) {
-        cdkBuilder.matchAttributes(matchAttributes.let(IResolvable::unwrap))
+        cdkBuilder.matchAttributes(matchAttributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2910,7 +2910,7 @@ public open class CfnRuleGroup(
        * port number, protocol, and TCP flags.
        */
       override fun matchAttributes(matchAttributes: MatchAttributesProperty) {
-        cdkBuilder.matchAttributes(matchAttributes.let(MatchAttributesProperty::unwrap))
+        cdkBuilder.matchAttributes(matchAttributes.let(MatchAttributesProperty.Companion::unwrap))
       }
 
       /**
@@ -3244,14 +3244,14 @@ public open class CfnRuleGroup(
        * @param referenceSets The reference sets for the stateful rule group.
        */
       override fun referenceSets(referenceSets: IResolvable) {
-        cdkBuilder.referenceSets(referenceSets.let(IResolvable::unwrap))
+        cdkBuilder.referenceSets(referenceSets.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param referenceSets The reference sets for the stateful rule group.
        */
       override fun referenceSets(referenceSets: ReferenceSetsProperty) {
-        cdkBuilder.referenceSets(referenceSets.let(ReferenceSetsProperty::unwrap))
+        cdkBuilder.referenceSets(referenceSets.let(ReferenceSetsProperty.Companion::unwrap))
       }
 
       /**
@@ -3267,7 +3267,7 @@ public open class CfnRuleGroup(
        * You can only use these for stateful rule groups.
        */
       override fun ruleVariables(ruleVariables: IResolvable) {
-        cdkBuilder.ruleVariables(ruleVariables.let(IResolvable::unwrap))
+        cdkBuilder.ruleVariables(ruleVariables.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3275,7 +3275,7 @@ public open class CfnRuleGroup(
        * You can only use these for stateful rule groups.
        */
       override fun ruleVariables(ruleVariables: RuleVariablesProperty) {
-        cdkBuilder.ruleVariables(ruleVariables.let(RuleVariablesProperty::unwrap))
+        cdkBuilder.ruleVariables(ruleVariables.let(RuleVariablesProperty.Companion::unwrap))
       }
 
       /**
@@ -3291,14 +3291,14 @@ public open class CfnRuleGroup(
        * @param rulesSource The stateful rules or stateless rules for the rule group. 
        */
       override fun rulesSource(rulesSource: IResolvable) {
-        cdkBuilder.rulesSource(rulesSource.let(IResolvable::unwrap))
+        cdkBuilder.rulesSource(rulesSource.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param rulesSource The stateful rules or stateless rules for the rule group. 
        */
       override fun rulesSource(rulesSource: RulesSourceProperty) {
-        cdkBuilder.rulesSource(rulesSource.let(RulesSourceProperty::unwrap))
+        cdkBuilder.rulesSource(rulesSource.let(RulesSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -3319,7 +3319,7 @@ public open class CfnRuleGroup(
        * in the *AWS Network Firewall Developer Guide* .
        */
       override fun statefulRuleOptions(statefulRuleOptions: IResolvable) {
-        cdkBuilder.statefulRuleOptions(statefulRuleOptions.let(IResolvable::unwrap))
+        cdkBuilder.statefulRuleOptions(statefulRuleOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3332,7 +3332,7 @@ public open class CfnRuleGroup(
        * in the *AWS Network Firewall Developer Guide* .
        */
       override fun statefulRuleOptions(statefulRuleOptions: StatefulRuleOptionsProperty) {
-        cdkBuilder.statefulRuleOptions(statefulRuleOptions.let(StatefulRuleOptionsProperty::unwrap))
+        cdkBuilder.statefulRuleOptions(statefulRuleOptions.let(StatefulRuleOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -3659,7 +3659,7 @@ public open class CfnRuleGroup(
        * @param ipSets A list of IP addresses and address ranges, in CIDR notation.
        */
       override fun ipSets(ipSets: IResolvable) {
-        cdkBuilder.ipSets(ipSets.let(IResolvable::unwrap))
+        cdkBuilder.ipSets(ipSets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3673,7 +3673,7 @@ public open class CfnRuleGroup(
        * @param portSets A list of port ranges.
        */
       override fun portSets(portSets: IResolvable) {
-        cdkBuilder.portSets(portSets.let(IResolvable::unwrap))
+        cdkBuilder.portSets(portSets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4168,14 +4168,14 @@ public open class CfnRuleGroup(
        * @param rulesSourceList Stateful inspection criteria for a domain list rule group.
        */
       override fun rulesSourceList(rulesSourceList: IResolvable) {
-        cdkBuilder.rulesSourceList(rulesSourceList.let(IResolvable::unwrap))
+        cdkBuilder.rulesSourceList(rulesSourceList.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param rulesSourceList Stateful inspection criteria for a domain list rule group.
        */
       override fun rulesSourceList(rulesSourceList: RulesSourceListProperty) {
-        cdkBuilder.rulesSourceList(rulesSourceList.let(RulesSourceListProperty::unwrap))
+        cdkBuilder.rulesSourceList(rulesSourceList.let(RulesSourceListProperty.Companion::unwrap))
       }
 
       /**
@@ -4212,7 +4212,7 @@ public open class CfnRuleGroup(
        * .
        */
       override fun statefulRules(statefulRules: IResolvable) {
-        cdkBuilder.statefulRules(statefulRules.let(IResolvable::unwrap))
+        cdkBuilder.statefulRules(statefulRules.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4245,7 +4245,7 @@ public open class CfnRuleGroup(
        * stateless rule group.
        */
       override fun statelessRulesAndCustomActions(statelessRulesAndCustomActions: IResolvable) {
-        cdkBuilder.statelessRulesAndCustomActions(statelessRulesAndCustomActions.let(IResolvable::unwrap))
+        cdkBuilder.statelessRulesAndCustomActions(statelessRulesAndCustomActions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4254,7 +4254,7 @@ public open class CfnRuleGroup(
        */
       override
           fun statelessRulesAndCustomActions(statelessRulesAndCustomActions: StatelessRulesAndCustomActionsProperty) {
-        cdkBuilder.statelessRulesAndCustomActions(statelessRulesAndCustomActions.let(StatelessRulesAndCustomActionsProperty::unwrap))
+        cdkBuilder.statelessRulesAndCustomActions(statelessRulesAndCustomActions.let(StatelessRulesAndCustomActionsProperty.Companion::unwrap))
       }
 
       /**
@@ -4649,7 +4649,7 @@ public open class CfnRuleGroup(
        * flows. 
        */
       override fun `header`(`header`: IResolvable) {
-        cdkBuilder.`header`(`header`.let(IResolvable::unwrap))
+        cdkBuilder.`header`(`header`.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4657,7 +4657,7 @@ public open class CfnRuleGroup(
        * flows. 
        */
       override fun `header`(`header`: HeaderProperty) {
-        cdkBuilder.`header`(`header`.let(HeaderProperty::unwrap))
+        cdkBuilder.`header`(`header`.let(HeaderProperty.Companion::unwrap))
       }
 
       /**
@@ -4674,7 +4674,7 @@ public open class CfnRuleGroup(
        * settings. 
        */
       override fun ruleOptions(ruleOptions: IResolvable) {
-        cdkBuilder.ruleOptions(ruleOptions.let(IResolvable::unwrap))
+        cdkBuilder.ruleOptions(ruleOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4910,7 +4910,7 @@ public open class CfnRuleGroup(
        * action to take on a packet that matches the criteria. 
        */
       override fun ruleDefinition(ruleDefinition: IResolvable) {
-        cdkBuilder.ruleDefinition(ruleDefinition.let(IResolvable::unwrap))
+        cdkBuilder.ruleDefinition(ruleDefinition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4918,7 +4918,7 @@ public open class CfnRuleGroup(
        * action to take on a packet that matches the criteria. 
        */
       override fun ruleDefinition(ruleDefinition: RuleDefinitionProperty) {
-        cdkBuilder.ruleDefinition(ruleDefinition.let(RuleDefinitionProperty::unwrap))
+        cdkBuilder.ruleDefinition(ruleDefinition.let(RuleDefinitionProperty.Companion::unwrap))
       }
 
       /**
@@ -5126,7 +5126,7 @@ public open class CfnRuleGroup(
        * stateless rule `RuleGroup.RuleDefinition` `Actions` specification.
        */
       override fun customActions(customActions: IResolvable) {
-        cdkBuilder.customActions(customActions.let(IResolvable::unwrap))
+        cdkBuilder.customActions(customActions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5155,7 +5155,7 @@ public open class CfnRuleGroup(
        * 
        */
       override fun statelessRules(statelessRules: IResolvable) {
-        cdkBuilder.statelessRules(statelessRules.let(IResolvable::unwrap))
+        cdkBuilder.statelessRules(statelessRules.let(IResolvable.Companion::unwrap))
       }
 
       /**

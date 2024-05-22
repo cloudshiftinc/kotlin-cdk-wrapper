@@ -316,7 +316,7 @@ public interface AwsSdkCall {
      * * Caught and uncaught errors
      */
     override fun logging(logging: Logging) {
-      cdkBuilder.logging(logging.let(Logging::unwrap))
+      cdkBuilder.logging(logging.let(Logging.Companion::unwrap))
     }
 
     /**
@@ -356,7 +356,7 @@ public interface AwsSdkCall {
      * In onUpdate, you can omit this to passthrough it from request.
      */
     override fun physicalResourceId(physicalResourceId: PhysicalResourceId) {
-      cdkBuilder.physicalResourceId(physicalResourceId.let(PhysicalResourceId::unwrap))
+      cdkBuilder.physicalResourceId(physicalResourceId.let(PhysicalResourceId.Companion::unwrap))
     }
 
     /**

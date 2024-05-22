@@ -86,7 +86,7 @@ public interface EmailSubscriptionProps : SubscriptionProps {
      * If not passed no dead letter queue is enabled.
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**

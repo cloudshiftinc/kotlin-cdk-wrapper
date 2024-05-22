@@ -224,7 +224,7 @@ public interface ResponseSecurityHeadersBehavior {
      */
     override
         fun contentSecurityPolicy(contentSecurityPolicy: ResponseHeadersContentSecurityPolicy) {
-      cdkBuilder.contentSecurityPolicy(contentSecurityPolicy.let(ResponseHeadersContentSecurityPolicy::unwrap))
+      cdkBuilder.contentSecurityPolicy(contentSecurityPolicy.let(ResponseHeadersContentSecurityPolicy.Companion::unwrap))
     }
 
     /**
@@ -242,7 +242,7 @@ public interface ResponseSecurityHeadersBehavior {
      * HTTP response header with its value set to nosniff.
      */
     override fun contentTypeOptions(contentTypeOptions: ResponseHeadersContentTypeOptions) {
-      cdkBuilder.contentTypeOptions(contentTypeOptions.let(ResponseHeadersContentTypeOptions::unwrap))
+      cdkBuilder.contentTypeOptions(contentTypeOptions.let(ResponseHeadersContentTypeOptions.Companion::unwrap))
     }
 
     /**
@@ -260,7 +260,7 @@ public interface ResponseSecurityHeadersBehavior {
      * header and the header’s value.
      */
     override fun frameOptions(frameOptions: ResponseHeadersFrameOptions) {
-      cdkBuilder.frameOptions(frameOptions.let(ResponseHeadersFrameOptions::unwrap))
+      cdkBuilder.frameOptions(frameOptions.let(ResponseHeadersFrameOptions.Companion::unwrap))
     }
 
     /**
@@ -277,7 +277,7 @@ public interface ResponseSecurityHeadersBehavior {
      * response header and the header’s value.
      */
     override fun referrerPolicy(referrerPolicy: ResponseHeadersReferrerPolicy) {
-      cdkBuilder.referrerPolicy(referrerPolicy.let(ResponseHeadersReferrerPolicy::unwrap))
+      cdkBuilder.referrerPolicy(referrerPolicy.let(ResponseHeadersReferrerPolicy.Companion::unwrap))
     }
 
     /**
@@ -295,7 +295,7 @@ public interface ResponseSecurityHeadersBehavior {
      */
     override
         fun strictTransportSecurity(strictTransportSecurity: ResponseHeadersStrictTransportSecurity) {
-      cdkBuilder.strictTransportSecurity(strictTransportSecurity.let(ResponseHeadersStrictTransportSecurity::unwrap))
+      cdkBuilder.strictTransportSecurity(strictTransportSecurity.let(ResponseHeadersStrictTransportSecurity.Companion::unwrap))
     }
 
     /**
@@ -314,7 +314,7 @@ public interface ResponseSecurityHeadersBehavior {
      * response header and the header’s value.
      */
     override fun xssProtection(xssProtection: ResponseHeadersXSSProtection) {
-      cdkBuilder.xssProtection(xssProtection.let(ResponseHeadersXSSProtection::unwrap))
+      cdkBuilder.xssProtection(xssProtection.let(ResponseHeadersXSSProtection.Companion::unwrap))
     }
 
     /**

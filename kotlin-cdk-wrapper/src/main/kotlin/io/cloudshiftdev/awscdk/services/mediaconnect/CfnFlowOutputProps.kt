@@ -335,14 +335,14 @@ public interface CfnFlowOutputProps {
      * @param encryption The encryption credentials that you want to use for the output.
      */
     override fun encryption(encryption: IResolvable) {
-      cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
+      cdkBuilder.encryption(encryption.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param encryption The encryption credentials that you want to use for the output.
      */
     override fun encryption(encryption: CfnFlowOutput.EncryptionProperty) {
-      cdkBuilder.encryption(encryption.let(CfnFlowOutput.EncryptionProperty::unwrap))
+      cdkBuilder.encryption(encryption.let(CfnFlowOutput.EncryptionProperty.Companion::unwrap))
     }
 
     /**
@@ -429,7 +429,7 @@ public interface CfnFlowOutputProps {
      * @param vpcInterfaceAttachment The VPC interface that you want to send your output to.
      */
     override fun vpcInterfaceAttachment(vpcInterfaceAttachment: IResolvable) {
-      cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(IResolvable::unwrap))
+      cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -437,7 +437,7 @@ public interface CfnFlowOutputProps {
      */
     override
         fun vpcInterfaceAttachment(vpcInterfaceAttachment: CfnFlowOutput.VpcInterfaceAttachmentProperty) {
-      cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(CfnFlowOutput.VpcInterfaceAttachmentProperty::unwrap))
+      cdkBuilder.vpcInterfaceAttachment(vpcInterfaceAttachment.let(CfnFlowOutput.VpcInterfaceAttachmentProperty.Companion::unwrap))
     }
 
     /**

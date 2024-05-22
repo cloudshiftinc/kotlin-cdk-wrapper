@@ -70,8 +70,8 @@ public open class CfnDirectoryBucket(
     id: String,
     props: CfnDirectoryBucketProps,
   ) :
-      this(software.amazon.awscdk.services.s3express.CfnDirectoryBucket(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDirectoryBucketProps::unwrap))
+      this(software.amazon.awscdk.services.s3express.CfnDirectoryBucket(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDirectoryBucketProps.Companion::unwrap))
   )
 
   public constructor(
@@ -119,7 +119,7 @@ public open class CfnDirectoryBucket(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

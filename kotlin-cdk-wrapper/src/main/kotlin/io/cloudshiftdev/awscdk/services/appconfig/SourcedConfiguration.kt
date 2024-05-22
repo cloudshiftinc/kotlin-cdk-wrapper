@@ -38,8 +38,8 @@ public open class SourcedConfiguration(
     id: String,
     props: SourcedConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.appconfig.SourcedConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SourcedConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.appconfig.SourcedConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SourcedConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -55,7 +55,7 @@ public open class SourcedConfiguration(
    * @param extension The extension to create an association for. 
    */
   public override fun addExtension(extension: IExtension) {
-    unwrap(this).addExtension(extension.let(IExtension::unwrap))
+    unwrap(this).addExtension(extension.let(IExtension.Companion::unwrap))
   }
 
   /**
@@ -116,8 +116,8 @@ public open class SourcedConfiguration(
    * @param options Options for the extension.
    */
   public override fun on(actionPoint: ActionPoint, eventDestination: IEventDestination) {
-    unwrap(this).on(actionPoint.let(ActionPoint::unwrap),
-        eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).on(actionPoint.let(ActionPoint.Companion::unwrap),
+        eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -133,8 +133,9 @@ public open class SourcedConfiguration(
     eventDestination: IEventDestination,
     options: ExtensionOptions,
   ) {
-    unwrap(this).on(actionPoint.let(ActionPoint::unwrap),
-        eventDestination.let(IEventDestination::unwrap), options.let(ExtensionOptions::unwrap))
+    unwrap(this).on(actionPoint.let(ActionPoint.Companion::unwrap),
+        eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -161,7 +162,7 @@ public open class SourcedConfiguration(
    * @param options Options for the extension.
    */
   public override fun onDeploymentBaking(eventDestination: IEventDestination) {
-    unwrap(this).onDeploymentBaking(eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).onDeploymentBaking(eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -173,8 +174,8 @@ public open class SourcedConfiguration(
    */
   public override fun onDeploymentBaking(eventDestination: IEventDestination,
       options: ExtensionOptions) {
-    unwrap(this).onDeploymentBaking(eventDestination.let(IEventDestination::unwrap),
-        options.let(ExtensionOptions::unwrap))
+    unwrap(this).onDeploymentBaking(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -198,7 +199,7 @@ public open class SourcedConfiguration(
    * @param options Options for the extension.
    */
   public override fun onDeploymentComplete(eventDestination: IEventDestination) {
-    unwrap(this).onDeploymentComplete(eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).onDeploymentComplete(eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -210,8 +211,8 @@ public open class SourcedConfiguration(
    */
   public override fun onDeploymentComplete(eventDestination: IEventDestination,
       options: ExtensionOptions) {
-    unwrap(this).onDeploymentComplete(eventDestination.let(IEventDestination::unwrap),
-        options.let(ExtensionOptions::unwrap))
+    unwrap(this).onDeploymentComplete(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -235,7 +236,7 @@ public open class SourcedConfiguration(
    * @param options Options for the extension.
    */
   public override fun onDeploymentRolledBack(eventDestination: IEventDestination) {
-    unwrap(this).onDeploymentRolledBack(eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).onDeploymentRolledBack(eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -247,8 +248,8 @@ public open class SourcedConfiguration(
    */
   public override fun onDeploymentRolledBack(eventDestination: IEventDestination,
       options: ExtensionOptions) {
-    unwrap(this).onDeploymentRolledBack(eventDestination.let(IEventDestination::unwrap),
-        options.let(ExtensionOptions::unwrap))
+    unwrap(this).onDeploymentRolledBack(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -272,7 +273,7 @@ public open class SourcedConfiguration(
    * @param options Options for the extension.
    */
   public override fun onDeploymentStart(eventDestination: IEventDestination) {
-    unwrap(this).onDeploymentStart(eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).onDeploymentStart(eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -284,8 +285,8 @@ public open class SourcedConfiguration(
    */
   public override fun onDeploymentStart(eventDestination: IEventDestination,
       options: ExtensionOptions) {
-    unwrap(this).onDeploymentStart(eventDestination.let(IEventDestination::unwrap),
-        options.let(ExtensionOptions::unwrap))
+    unwrap(this).onDeploymentStart(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -309,7 +310,7 @@ public open class SourcedConfiguration(
    * @param options Options for the extension.
    */
   public override fun onDeploymentStep(eventDestination: IEventDestination) {
-    unwrap(this).onDeploymentStep(eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).onDeploymentStep(eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -321,8 +322,8 @@ public open class SourcedConfiguration(
    */
   public override fun onDeploymentStep(eventDestination: IEventDestination,
       options: ExtensionOptions) {
-    unwrap(this).onDeploymentStep(eventDestination.let(IEventDestination::unwrap),
-        options.let(ExtensionOptions::unwrap))
+    unwrap(this).onDeploymentStep(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -346,7 +347,7 @@ public open class SourcedConfiguration(
    * @param options Options for the extension.
    */
   public override fun preCreateHostedConfigurationVersion(eventDestination: IEventDestination) {
-    unwrap(this).preCreateHostedConfigurationVersion(eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).preCreateHostedConfigurationVersion(eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -358,8 +359,8 @@ public open class SourcedConfiguration(
    */
   public override fun preCreateHostedConfigurationVersion(eventDestination: IEventDestination,
       options: ExtensionOptions) {
-    unwrap(this).preCreateHostedConfigurationVersion(eventDestination.let(IEventDestination::unwrap),
-        options.let(ExtensionOptions::unwrap))
+    unwrap(this).preCreateHostedConfigurationVersion(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -383,7 +384,7 @@ public open class SourcedConfiguration(
    * @param options Options for the extension.
    */
   public override fun preStartDeployment(eventDestination: IEventDestination) {
-    unwrap(this).preStartDeployment(eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).preStartDeployment(eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -395,8 +396,8 @@ public open class SourcedConfiguration(
    */
   public override fun preStartDeployment(eventDestination: IEventDestination,
       options: ExtensionOptions) {
-    unwrap(this).preStartDeployment(eventDestination.let(IEventDestination::unwrap),
-        options.let(ExtensionOptions::unwrap))
+    unwrap(this).preStartDeployment(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -591,7 +592,7 @@ public open class SourcedConfiguration(
      * @param application The application associated with the configuration. 
      */
     override fun application(application: IApplication) {
-      cdkBuilder.application(application.let(IApplication::unwrap))
+      cdkBuilder.application(application.let(IApplication.Companion::unwrap))
     }
 
     /**
@@ -608,7 +609,7 @@ public open class SourcedConfiguration(
      * @param deployTo The list of environments to deploy the configuration to. 
      */
     override fun deployTo(deployTo: List<IEnvironment>) {
-      cdkBuilder.deployTo(deployTo.map(IEnvironment::unwrap))
+      cdkBuilder.deployTo(deployTo.map(IEnvironment.Companion::unwrap))
     }
 
     /**
@@ -634,7 +635,7 @@ public open class SourcedConfiguration(
      * @param deploymentKey The deployment key of the configuration. 
      */
     override fun deploymentKey(deploymentKey: IKey) {
-      cdkBuilder.deploymentKey(deploymentKey.let(IKey::unwrap))
+      cdkBuilder.deploymentKey(deploymentKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -646,7 +647,7 @@ public open class SourcedConfiguration(
      * @param deploymentStrategy The deployment strategy for the configuration. 
      */
     override fun deploymentStrategy(deploymentStrategy: IDeploymentStrategy) {
-      cdkBuilder.deploymentStrategy(deploymentStrategy.let(IDeploymentStrategy::unwrap))
+      cdkBuilder.deploymentStrategy(deploymentStrategy.let(IDeploymentStrategy.Companion::unwrap))
     }
 
     /**
@@ -666,7 +667,7 @@ public open class SourcedConfiguration(
      * @param location The location where the configuration is stored. 
      */
     override fun location(location: ConfigurationSource) {
-      cdkBuilder.location(location.let(ConfigurationSource::unwrap))
+      cdkBuilder.location(location.let(ConfigurationSource.Companion::unwrap))
     }
 
     /**
@@ -688,7 +689,7 @@ public open class SourcedConfiguration(
      * @param retrievalRole The IAM role to retrieve the configuration. 
      */
     override fun retrievalRole(retrievalRole: IRole) {
-      cdkBuilder.retrievalRole(retrievalRole.let(IRole::unwrap))
+      cdkBuilder.retrievalRole(retrievalRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -699,7 +700,7 @@ public open class SourcedConfiguration(
      * @param type The type of configuration. 
      */
     override fun type(type: ConfigurationType) {
-      cdkBuilder.type(type.let(ConfigurationType::unwrap))
+      cdkBuilder.type(type.let(ConfigurationType.Companion::unwrap))
     }
 
     /**
@@ -710,7 +711,7 @@ public open class SourcedConfiguration(
      * @param validators The validators for the configuration. 
      */
     override fun validators(validators: List<IValidator>) {
-      cdkBuilder.validators(validators.map(IValidator::unwrap))
+      cdkBuilder.validators(validators.map(IValidator.Companion::unwrap))
     }
 
     /**

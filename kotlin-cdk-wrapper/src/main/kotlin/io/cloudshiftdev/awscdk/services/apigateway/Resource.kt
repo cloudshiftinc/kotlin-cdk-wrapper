@@ -32,8 +32,8 @@ public open class Resource(
     id: String,
     props: ResourceProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.Resource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ResourceProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.Resource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ResourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -205,7 +205,7 @@ public open class Resource(
      * all child resources. 
      */
     override fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions) {
-      cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions::unwrap))
+      cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions.Companion::unwrap))
     }
 
     /**
@@ -234,7 +234,7 @@ public open class Resource(
      * this API unless an integration is specified. 
      */
     override fun defaultIntegration(defaultIntegration: Integration) {
-      cdkBuilder.defaultIntegration(defaultIntegration.let(Integration::unwrap))
+      cdkBuilder.defaultIntegration(defaultIntegration.let(Integration.Companion::unwrap))
     }
 
     /**
@@ -261,7 +261,7 @@ public open class Resource(
      * this API unless custom options are specified. 
      */
     override fun defaultMethodOptions(defaultMethodOptions: MethodOptions) {
-      cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions::unwrap))
+      cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions.Companion::unwrap))
     }
 
     /**
@@ -287,7 +287,7 @@ public open class Resource(
      * @param parent The parent resource of this resource. 
      */
     override fun parent(parent: IResource) {
-      cdkBuilder.parent(parent.let(IResource::unwrap))
+      cdkBuilder.parent(parent.let(IResource.Companion::unwrap))
     }
 
     /**
@@ -308,8 +308,8 @@ public open class Resource(
       id: String,
       attrs: ResourceAttributes,
     ): IResource =
-        software.amazon.awscdk.services.apigateway.Resource.fromResourceAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(ResourceAttributes::unwrap)).let(IResource::wrap)
+        software.amazon.awscdk.services.apigateway.Resource.fromResourceAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(ResourceAttributes.Companion::unwrap)).let(IResource::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("dc2cd864e2b32bee5456bf8bcb5d9271b8ba7faa17a2e56e903d053de2ee6379")

@@ -106,7 +106,7 @@ public interface SecureStringParameterAttributes : CommonStringParameterAttribut
      * @param encryptionKey The encryption key that is used to encrypt this parameter.
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**

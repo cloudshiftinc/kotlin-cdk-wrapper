@@ -160,7 +160,7 @@ public interface IMesh : IResource {
      */
     override fun addVirtualGateway(id: String, props: VirtualGatewayBaseProps): VirtualGateway =
         unwrap(this).addVirtualGateway(id,
-        props.let(VirtualGatewayBaseProps::unwrap)).let(VirtualGateway::wrap)
+        props.let(VirtualGatewayBaseProps.Companion::unwrap)).let(VirtualGateway::wrap)
 
     /**
      * Creates a new VirtualGateway in this Mesh.
@@ -199,7 +199,7 @@ public interface IMesh : IResource {
      */
     override fun addVirtualNode(id: String, props: VirtualNodeBaseProps): VirtualNode =
         unwrap(this).addVirtualNode(id,
-        props.let(VirtualNodeBaseProps::unwrap)).let(VirtualNode::wrap)
+        props.let(VirtualNodeBaseProps.Companion::unwrap)).let(VirtualNode::wrap)
 
     /**
      * Creates a new VirtualNode in this Mesh.
@@ -238,7 +238,7 @@ public interface IMesh : IResource {
      */
     override fun addVirtualRouter(id: String, props: VirtualRouterBaseProps): VirtualRouter =
         unwrap(this).addVirtualRouter(id,
-        props.let(VirtualRouterBaseProps::unwrap)).let(VirtualRouter::wrap)
+        props.let(VirtualRouterBaseProps.Companion::unwrap)).let(VirtualRouter::wrap)
 
     /**
      * Creates a new VirtualRouter in this Mesh.
@@ -268,7 +268,7 @@ public interface IMesh : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**

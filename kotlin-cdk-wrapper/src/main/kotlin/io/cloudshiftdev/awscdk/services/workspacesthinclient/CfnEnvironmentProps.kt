@@ -239,14 +239,14 @@ public interface CfnEnvironmentProps {
      * @param maintenanceWindow A specification for a time window to apply software updates.
      */
     override fun maintenanceWindow(maintenanceWindow: IResolvable) {
-      cdkBuilder.maintenanceWindow(maintenanceWindow.let(IResolvable::unwrap))
+      cdkBuilder.maintenanceWindow(maintenanceWindow.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param maintenanceWindow A specification for a time window to apply software updates.
      */
     override fun maintenanceWindow(maintenanceWindow: CfnEnvironment.MaintenanceWindowProperty) {
-      cdkBuilder.maintenanceWindow(maintenanceWindow.let(CfnEnvironment.MaintenanceWindowProperty::unwrap))
+      cdkBuilder.maintenanceWindow(maintenanceWindow.let(CfnEnvironment.MaintenanceWindowProperty.Companion::unwrap))
     }
 
     /**
@@ -287,7 +287,7 @@ public interface CfnEnvironmentProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

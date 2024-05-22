@@ -83,7 +83,7 @@ public interface LambdaFunctionAssociation {
      * request lifecycle. 
      */
     override fun eventType(eventType: LambdaEdgeEventType) {
-      cdkBuilder.eventType(eventType.let(LambdaEdgeEventType::unwrap))
+      cdkBuilder.eventType(eventType.let(LambdaEdgeEventType.Companion::unwrap))
     }
 
     /**
@@ -100,7 +100,7 @@ public interface LambdaFunctionAssociation {
      * @param lambdaFunction A version of the lambda to associate. 
      */
     override fun lambdaFunction(lambdaFunction: IVersion) {
-      cdkBuilder.lambdaFunction(lambdaFunction.let(IVersion::unwrap))
+      cdkBuilder.lambdaFunction(lambdaFunction.let(IVersion.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.LambdaFunctionAssociation =

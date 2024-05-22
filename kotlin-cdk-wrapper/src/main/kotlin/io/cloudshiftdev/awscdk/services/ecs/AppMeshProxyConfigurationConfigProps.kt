@@ -88,7 +88,7 @@ public interface AppMeshProxyConfigurationConfigProps {
      * Network Interface (CNI) plugin. 
      */
     override fun properties(properties: AppMeshProxyConfigurationProps) {
-      cdkBuilder.properties(properties.let(AppMeshProxyConfigurationProps::unwrap))
+      cdkBuilder.properties(properties.let(AppMeshProxyConfigurationProps.Companion::unwrap))
     }
 
     /**

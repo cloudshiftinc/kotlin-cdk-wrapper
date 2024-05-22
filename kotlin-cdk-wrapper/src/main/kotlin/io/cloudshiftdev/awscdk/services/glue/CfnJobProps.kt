@@ -534,14 +534,14 @@ public interface CfnJobProps {
      * @param command The code that executes a job. 
      */
     override fun command(command: IResolvable) {
-      cdkBuilder.command(command.let(IResolvable::unwrap))
+      cdkBuilder.command(command.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param command The code that executes a job. 
      */
     override fun command(command: CfnJob.JobCommandProperty) {
-      cdkBuilder.command(command.let(CfnJob.JobCommandProperty::unwrap))
+      cdkBuilder.command(command.let(CfnJob.JobCommandProperty.Companion::unwrap))
     }
 
     /**
@@ -556,14 +556,14 @@ public interface CfnJobProps {
      * @param connections The connections used for this job.
      */
     override fun connections(connections: IResolvable) {
-      cdkBuilder.connections(connections.let(IResolvable::unwrap))
+      cdkBuilder.connections(connections.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param connections The connections used for this job.
      */
     override fun connections(connections: CfnJob.ConnectionsListProperty) {
-      cdkBuilder.connections(connections.let(CfnJob.ConnectionsListProperty::unwrap))
+      cdkBuilder.connections(connections.let(CfnJob.ConnectionsListProperty.Companion::unwrap))
     }
 
     /**
@@ -620,14 +620,14 @@ public interface CfnJobProps {
      * @param executionProperty The maximum number of concurrent runs that are allowed for this job.
      */
     override fun executionProperty(executionProperty: IResolvable) {
-      cdkBuilder.executionProperty(executionProperty.let(IResolvable::unwrap))
+      cdkBuilder.executionProperty(executionProperty.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param executionProperty The maximum number of concurrent runs that are allowed for this job.
      */
     override fun executionProperty(executionProperty: CfnJob.ExecutionPropertyProperty) {
-      cdkBuilder.executionProperty(executionProperty.let(CfnJob.ExecutionPropertyProperty::unwrap))
+      cdkBuilder.executionProperty(executionProperty.let(CfnJob.ExecutionPropertyProperty.Companion::unwrap))
     }
 
     /**
@@ -708,14 +708,14 @@ public interface CfnJobProps {
      * @param notificationProperty Specifies configuration properties of a notification.
      */
     override fun notificationProperty(notificationProperty: IResolvable) {
-      cdkBuilder.notificationProperty(notificationProperty.let(IResolvable::unwrap))
+      cdkBuilder.notificationProperty(notificationProperty.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param notificationProperty Specifies configuration properties of a notification.
      */
     override fun notificationProperty(notificationProperty: CfnJob.NotificationPropertyProperty) {
-      cdkBuilder.notificationProperty(notificationProperty.let(CfnJob.NotificationPropertyProperty::unwrap))
+      cdkBuilder.notificationProperty(notificationProperty.let(CfnJob.NotificationPropertyProperty.Companion::unwrap))
     }
 
     /**

@@ -100,14 +100,14 @@ public interface MutualTlsValidation {
      * SANs must be in the FQDN or URI format.
      */
     override fun subjectAlternativeNames(subjectAlternativeNames: SubjectAlternativeNames) {
-      cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(SubjectAlternativeNames::unwrap))
+      cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.let(SubjectAlternativeNames.Companion::unwrap))
     }
 
     /**
      * @param trust Reference to where to retrieve the trust chain. 
      */
     override fun trust(trust: MutualTlsValidationTrust) {
-      cdkBuilder.trust(trust.let(MutualTlsValidationTrust::unwrap))
+      cdkBuilder.trust(trust.let(MutualTlsValidationTrust.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appmesh.MutualTlsValidation =

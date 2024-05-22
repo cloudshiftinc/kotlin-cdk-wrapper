@@ -46,8 +46,8 @@ public open class CfnIdentityProvider(
     id: String,
     props: CfnIdentityProviderProps,
   ) :
-      this(software.amazon.awscdk.services.workspacesweb.CfnIdentityProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnIdentityProviderProps::unwrap))
+      this(software.amazon.awscdk.services.workspacesweb.CfnIdentityProvider(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnIdentityProviderProps.Companion::unwrap))
   )
 
   public constructor(
@@ -75,7 +75,7 @@ public open class CfnIdentityProvider(
    * The following list describes the provider detail keys for each identity provider type.
    */
   public open fun identityProviderDetails(`value`: IResolvable) {
-    unwrap(this).setIdentityProviderDetails(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIdentityProviderDetails(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -117,7 +117,7 @@ public open class CfnIdentityProvider(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -295,7 +295,7 @@ public open class CfnIdentityProvider(
      * the provider detail keys for each identity provider type. 
      */
     override fun identityProviderDetails(identityProviderDetails: IResolvable) {
-      cdkBuilder.identityProviderDetails(identityProviderDetails.let(IResolvable::unwrap))
+      cdkBuilder.identityProviderDetails(identityProviderDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**

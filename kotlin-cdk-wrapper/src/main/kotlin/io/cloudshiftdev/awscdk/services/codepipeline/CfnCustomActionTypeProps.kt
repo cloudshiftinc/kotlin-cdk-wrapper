@@ -272,7 +272,7 @@ public interface CfnCustomActionTypeProps {
      * .
      */
     override fun configurationProperties(configurationProperties: IResolvable) {
-      cdkBuilder.configurationProperties(configurationProperties.let(IResolvable::unwrap))
+      cdkBuilder.configurationProperties(configurationProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -305,7 +305,7 @@ public interface CfnCustomActionTypeProps {
      * commit ID. 
      */
     override fun inputArtifactDetails(inputArtifactDetails: IResolvable) {
-      cdkBuilder.inputArtifactDetails(inputArtifactDetails.let(IResolvable::unwrap))
+      cdkBuilder.inputArtifactDetails(inputArtifactDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -314,7 +314,7 @@ public interface CfnCustomActionTypeProps {
      */
     override
         fun inputArtifactDetails(inputArtifactDetails: CfnCustomActionType.ArtifactDetailsProperty) {
-      cdkBuilder.inputArtifactDetails(inputArtifactDetails.let(CfnCustomActionType.ArtifactDetailsProperty::unwrap))
+      cdkBuilder.inputArtifactDetails(inputArtifactDetails.let(CfnCustomActionType.ArtifactDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -333,7 +333,7 @@ public interface CfnCustomActionTypeProps {
      * commit ID. 
      */
     override fun outputArtifactDetails(outputArtifactDetails: IResolvable) {
-      cdkBuilder.outputArtifactDetails(outputArtifactDetails.let(IResolvable::unwrap))
+      cdkBuilder.outputArtifactDetails(outputArtifactDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -342,7 +342,7 @@ public interface CfnCustomActionTypeProps {
      */
     override
         fun outputArtifactDetails(outputArtifactDetails: CfnCustomActionType.ArtifactDetailsProperty) {
-      cdkBuilder.outputArtifactDetails(outputArtifactDetails.let(CfnCustomActionType.ArtifactDetailsProperty::unwrap))
+      cdkBuilder.outputArtifactDetails(outputArtifactDetails.let(CfnCustomActionType.ArtifactDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -367,14 +367,14 @@ public interface CfnCustomActionTypeProps {
      * @param settings URLs that provide users information about this custom action.
      */
     override fun settings(settings: IResolvable) {
-      cdkBuilder.settings(settings.let(IResolvable::unwrap))
+      cdkBuilder.settings(settings.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param settings URLs that provide users information about this custom action.
      */
     override fun settings(settings: CfnCustomActionType.SettingsProperty) {
-      cdkBuilder.settings(settings.let(CfnCustomActionType.SettingsProperty::unwrap))
+      cdkBuilder.settings(settings.let(CfnCustomActionType.SettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -389,7 +389,7 @@ public interface CfnCustomActionTypeProps {
      * @param tags The tags for the custom action.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

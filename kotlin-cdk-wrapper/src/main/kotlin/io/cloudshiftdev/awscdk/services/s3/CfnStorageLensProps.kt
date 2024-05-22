@@ -176,7 +176,7 @@ public interface CfnStorageLensProps {
      * configuration. 
      */
     override fun storageLensConfiguration(storageLensConfiguration: IResolvable) {
-      cdkBuilder.storageLensConfiguration(storageLensConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.storageLensConfiguration(storageLensConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -185,7 +185,7 @@ public interface CfnStorageLensProps {
      */
     override
         fun storageLensConfiguration(storageLensConfiguration: CfnStorageLens.StorageLensConfigurationProperty) {
-      cdkBuilder.storageLensConfiguration(storageLensConfiguration.let(CfnStorageLens.StorageLensConfigurationProperty::unwrap))
+      cdkBuilder.storageLensConfiguration(storageLensConfiguration.let(CfnStorageLens.StorageLensConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -203,7 +203,7 @@ public interface CfnStorageLensProps {
      * @param tags A set of tags (key–value pairs) to associate with the Storage Lens configuration.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

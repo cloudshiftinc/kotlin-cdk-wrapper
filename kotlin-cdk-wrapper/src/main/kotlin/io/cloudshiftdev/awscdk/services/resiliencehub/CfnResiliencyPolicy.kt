@@ -63,8 +63,8 @@ public open class CfnResiliencyPolicy(
     id: String,
     props: CfnResiliencyPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnResiliencyPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.resiliencehub.CfnResiliencyPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnResiliencyPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -99,7 +99,7 @@ public open class CfnResiliencyPolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -111,7 +111,7 @@ public open class CfnResiliencyPolicy(
    * The resiliency policy.
    */
   public open fun policy(`value`: IResolvable) {
-    unwrap(this).setPolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -271,7 +271,7 @@ public open class CfnResiliencyPolicy(
      * @param policy The resiliency policy. 
      */
     override fun policy(policy: IResolvable) {
-      cdkBuilder.policy(policy.let(IResolvable::unwrap))
+      cdkBuilder.policy(policy.let(IResolvable.Companion::unwrap))
     }
 
     /**

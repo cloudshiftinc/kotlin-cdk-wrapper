@@ -40,7 +40,7 @@ public abstract class HttpRoutePathMatch(
    * @param scope 
    */
   public open fun bind(scope: Construct): HttpRoutePathMatchConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(HttpRoutePathMatchConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(HttpRoutePathMatchConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.HttpRoutePathMatch,

@@ -48,7 +48,7 @@ public open class LogGroup(
   cdkObject: software.amazon.awscdk.services.logs.LogGroup,
 ) : Resource(cdkObject), ILogGroup {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.logs.LogGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.logs.LogGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -57,8 +57,8 @@ public open class LogGroup(
     id: String,
     props: LogGroupProps,
   ) :
-      this(software.amazon.awscdk.services.logs.LogGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(LogGroupProps::unwrap))
+      this(software.amazon.awscdk.services.logs.LogGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(LogGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -76,7 +76,7 @@ public open class LogGroup(
    */
   public override fun addMetricFilter(id: String, props: MetricFilterOptions): MetricFilter =
       unwrap(this).addMetricFilter(id,
-      props.let(MetricFilterOptions::unwrap)).let(MetricFilter::wrap)
+      props.let(MetricFilterOptions.Companion::unwrap)).let(MetricFilter::wrap)
 
   /**
    * Create a new Metric Filter on this Log Group.
@@ -105,7 +105,7 @@ public open class LogGroup(
    * @param props Properties for creating the LogStream.
    */
   public override fun addStream(id: String, props: StreamOptions): LogStream =
-      unwrap(this).addStream(id, props.let(StreamOptions::unwrap)).let(LogStream::wrap)
+      unwrap(this).addStream(id, props.let(StreamOptions.Companion::unwrap)).let(LogStream::wrap)
 
   /**
    * Create a new Log Stream for this Log Group.
@@ -126,7 +126,7 @@ public open class LogGroup(
    */
   public override fun addSubscriptionFilter(id: String, props: SubscriptionFilterOptions):
       SubscriptionFilter = unwrap(this).addSubscriptionFilter(id,
-      props.let(SubscriptionFilterOptions::unwrap)).let(SubscriptionFilter::wrap)
+      props.let(SubscriptionFilterOptions.Companion::unwrap)).let(SubscriptionFilter::wrap)
 
   /**
    * Create a new Subscription Filter on this Log Group.
@@ -151,7 +151,7 @@ public open class LogGroup(
    * @param statement The policy statement to add. 
    */
   public override fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
-      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement::unwrap)).let(AddToResourcePolicyResult::wrap)
+      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
 
   /**
    * Adds a statement to the resource policy associated with this log group.
@@ -195,8 +195,8 @@ public open class LogGroup(
    * @param actions 
    */
   public override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
-      as String}.toTypedArray()).let(Grant::wrap)
+      unwrap(this).grant(grantee.let(IGrantable.Companion::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Give permissions to read and filter events from this log group.
@@ -204,7 +204,7 @@ public open class LogGroup(
    * @param grantee 
    */
   public override fun grantRead(grantee: IGrantable): Grant =
-      unwrap(this).grantRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Give permissions to create and write to streams in this log group.
@@ -212,7 +212,7 @@ public open class LogGroup(
    * @param grantee 
    */
   public override fun grantWrite(grantee: IGrantable): Grant =
-      unwrap(this).grantWrite(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantWrite(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The ARN of this log group.
@@ -259,7 +259,7 @@ public open class LogGroup(
     /**
      * The KMS customer managed key to encrypt the log group with.
      *
-     * Default: Server-side encrpytion managed by the CloudWatch Logs service
+     * Default: Server-side encryption managed by the CloudWatch Logs service
      *
      * @param encryptionKey The KMS customer managed key to encrypt the log group with. 
      */
@@ -329,7 +329,7 @@ public open class LogGroup(
      * @param dataProtectionPolicy Data Protection Policy for this log group. 
      */
     override fun dataProtectionPolicy(dataProtectionPolicy: DataProtectionPolicy) {
-      cdkBuilder.dataProtectionPolicy(dataProtectionPolicy.let(DataProtectionPolicy::unwrap))
+      cdkBuilder.dataProtectionPolicy(dataProtectionPolicy.let(DataProtectionPolicy.Companion::unwrap))
     }
 
     /**
@@ -348,12 +348,12 @@ public open class LogGroup(
     /**
      * The KMS customer managed key to encrypt the log group with.
      *
-     * Default: Server-side encrpytion managed by the CloudWatch Logs service
+     * Default: Server-side encryption managed by the CloudWatch Logs service
      *
      * @param encryptionKey The KMS customer managed key to encrypt the log group with. 
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -369,7 +369,7 @@ public open class LogGroup(
      * INFREQUENT_ACCESS. 
      */
     override fun logGroupClass(logGroupClass: LogGroupClass) {
-      cdkBuilder.logGroupClass(logGroupClass.let(LogGroupClass::unwrap))
+      cdkBuilder.logGroupClass(logGroupClass.let(LogGroupClass.Companion::unwrap))
     }
 
     /**
@@ -396,7 +396,7 @@ public open class LogGroup(
      * @param removalPolicy Determine the removal policy of this log group. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -409,7 +409,7 @@ public open class LogGroup(
      * @param retention How long, in days, the log contents will be retained. 
      */
     override fun retention(retention: RetentionDays) {
-      cdkBuilder.retention(retention.let(RetentionDays::unwrap))
+      cdkBuilder.retention(retention.let(RetentionDays.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.logs.LogGroup = cdkBuilder.build()
@@ -421,7 +421,7 @@ public open class LogGroup(
       id: String,
       logGroupArn: String,
     ): ILogGroup =
-        software.amazon.awscdk.services.logs.LogGroup.fromLogGroupArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.logs.LogGroup.fromLogGroupArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, logGroupArn).let(ILogGroup::wrap)
 
     public fun fromLogGroupName(
@@ -429,7 +429,7 @@ public open class LogGroup(
       id: String,
       logGroupName: String,
     ): ILogGroup =
-        software.amazon.awscdk.services.logs.LogGroup.fromLogGroupName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.logs.LogGroup.fromLogGroupName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, logGroupName).let(ILogGroup::wrap)
 
     public operator fun invoke(

@@ -40,7 +40,7 @@ public open class SyslogLogDriver(
   )
 
   public constructor(props: SyslogLogDriverProps) :
-      this(software.amazon.awscdk.services.ecs.SyslogLogDriver(props.let(SyslogLogDriverProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.SyslogLogDriver(props.let(SyslogLogDriverProps.Companion::unwrap))
   )
 
   public constructor(props: SyslogLogDriverProps.Builder.() -> Unit) :
@@ -54,8 +54,8 @@ public open class SyslogLogDriver(
    * @param _containerDefinition 
    */
   public override fun bind(scope: Construct, containerDefinition: ContainerDefinition):
-      LogDriverConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      containerDefinition.let(ContainerDefinition::unwrap)).let(LogDriverConfig::wrap)
+      LogDriverConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      containerDefinition.let(ContainerDefinition.Companion::unwrap)).let(LogDriverConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.SyslogLogDriver].

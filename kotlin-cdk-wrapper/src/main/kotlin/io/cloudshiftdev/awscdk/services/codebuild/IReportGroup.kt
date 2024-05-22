@@ -52,7 +52,7 @@ public interface IReportGroup : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -73,7 +73,7 @@ public interface IReportGroup : IResource {
      * @param identity 
      */
     override fun grantWrite(identity: IGrantable): Grant =
-        unwrap(this).grantWrite(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantWrite(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 

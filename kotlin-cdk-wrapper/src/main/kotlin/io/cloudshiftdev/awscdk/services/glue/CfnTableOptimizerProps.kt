@@ -155,7 +155,7 @@ public interface CfnTableOptimizerProps {
      * @param tableOptimizerConfiguration Specifies configuration details of a table optimizer. 
      */
     override fun tableOptimizerConfiguration(tableOptimizerConfiguration: IResolvable) {
-      cdkBuilder.tableOptimizerConfiguration(tableOptimizerConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.tableOptimizerConfiguration(tableOptimizerConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -163,7 +163,7 @@ public interface CfnTableOptimizerProps {
      */
     override
         fun tableOptimizerConfiguration(tableOptimizerConfiguration: CfnTableOptimizer.TableOptimizerConfigurationProperty) {
-      cdkBuilder.tableOptimizerConfiguration(tableOptimizerConfiguration.let(CfnTableOptimizer.TableOptimizerConfigurationProperty::unwrap))
+      cdkBuilder.tableOptimizerConfiguration(tableOptimizerConfiguration.let(CfnTableOptimizer.TableOptimizerConfigurationProperty.Companion::unwrap))
     }
 
     /**

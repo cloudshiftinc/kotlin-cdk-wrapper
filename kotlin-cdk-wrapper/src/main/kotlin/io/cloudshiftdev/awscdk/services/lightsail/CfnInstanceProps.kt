@@ -414,7 +414,7 @@ public interface CfnInstanceProps {
      * is automatically disabled before the instance is deleted.
      */
     override fun addOns(addOns: IResolvable) {
-      cdkBuilder.addOns(addOns.let(IResolvable::unwrap))
+      cdkBuilder.addOns(addOns.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -464,7 +464,7 @@ public interface CfnInstanceProps {
      * public IP address of your instance if a static IP isn't attached to it.
      */
     override fun hardware(hardware: IResolvable) {
-      cdkBuilder.hardware(hardware.let(IResolvable::unwrap))
+      cdkBuilder.hardware(hardware.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -475,7 +475,7 @@ public interface CfnInstanceProps {
      * public IP address of your instance if a static IP isn't attached to it.
      */
     override fun hardware(hardware: CfnInstance.HardwareProperty) {
-      cdkBuilder.hardware(hardware.let(CfnInstance.HardwareProperty::unwrap))
+      cdkBuilder.hardware(hardware.let(CfnInstance.HardwareProperty.Companion::unwrap))
     }
 
     /**
@@ -512,7 +512,7 @@ public interface CfnInstanceProps {
      * update instance request.
      */
     override fun location(location: IResolvable) {
-      cdkBuilder.location(location.let(IResolvable::unwrap))
+      cdkBuilder.location(location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -522,7 +522,7 @@ public interface CfnInstanceProps {
      * update instance request.
      */
     override fun location(location: CfnInstance.LocationProperty) {
-      cdkBuilder.location(location.let(CfnInstance.LocationProperty::unwrap))
+      cdkBuilder.location(location.let(CfnInstance.LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -541,7 +541,7 @@ public interface CfnInstanceProps {
      * instance.
      */
     override fun networking(networking: IResolvable) {
-      cdkBuilder.networking(networking.let(IResolvable::unwrap))
+      cdkBuilder.networking(networking.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -549,7 +549,7 @@ public interface CfnInstanceProps {
      * instance.
      */
     override fun networking(networking: CfnInstance.NetworkingProperty) {
-      cdkBuilder.networking(networking.let(CfnInstance.NetworkingProperty::unwrap))
+      cdkBuilder.networking(networking.let(CfnInstance.NetworkingProperty.Companion::unwrap))
     }
 
     /**
@@ -568,7 +568,7 @@ public interface CfnInstanceProps {
      * instance request.
      */
     override fun state(state: IResolvable) {
-      cdkBuilder.state(state.let(IResolvable::unwrap))
+      cdkBuilder.state(state.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -578,7 +578,7 @@ public interface CfnInstanceProps {
      * instance request.
      */
     override fun state(state: CfnInstance.StateProperty) {
-      cdkBuilder.state(state.let(CfnInstance.StateProperty::unwrap))
+      cdkBuilder.state(state.let(CfnInstance.StateProperty.Companion::unwrap))
     }
 
     /**
@@ -602,7 +602,7 @@ public interface CfnInstanceProps {
      * The `Value` of `Tags` is optional for Lightsail resources.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

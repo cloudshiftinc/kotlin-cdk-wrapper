@@ -245,7 +245,7 @@ public interface GaugeWidgetProps : MetricWidgetProps {
      * @param annotations Annotations for the left Y axis.
      */
     override fun annotations(annotations: List<HorizontalAnnotation>) {
-      cdkBuilder.annotations(annotations.map(HorizontalAnnotation::unwrap))
+      cdkBuilder.annotations(annotations.map(HorizontalAnnotation.Companion::unwrap))
     }
 
     /**
@@ -275,7 +275,7 @@ public interface GaugeWidgetProps : MetricWidgetProps {
      * @param leftYAxis Left Y axis.
      */
     override fun leftYAxis(leftYAxis: YAxisProps) {
-      cdkBuilder.leftYAxis(leftYAxis.let(YAxisProps::unwrap))
+      cdkBuilder.leftYAxis(leftYAxis.let(YAxisProps.Companion::unwrap))
     }
 
     /**
@@ -290,7 +290,7 @@ public interface GaugeWidgetProps : MetricWidgetProps {
      * @param legendPosition Position of the legend.
      */
     override fun legendPosition(legendPosition: LegendPosition) {
-      cdkBuilder.legendPosition(legendPosition.let(LegendPosition::unwrap))
+      cdkBuilder.legendPosition(legendPosition.let(LegendPosition.Companion::unwrap))
     }
 
     /**
@@ -304,7 +304,7 @@ public interface GaugeWidgetProps : MetricWidgetProps {
      * @param metrics Metrics to display on left Y axis.
      */
     override fun metrics(metrics: List<IMetric>) {
-      cdkBuilder.metrics(metrics.map(IMetric::unwrap))
+      cdkBuilder.metrics(metrics.map(IMetric.Companion::unwrap))
     }
 
     /**
@@ -318,7 +318,7 @@ public interface GaugeWidgetProps : MetricWidgetProps {
      * This default can be overridden within each metric definition.
      */
     override fun period(period: Duration) {
-      cdkBuilder.period(period.let(Duration::unwrap))
+      cdkBuilder.period(period.let(Duration.Companion::unwrap))
     }
 
     /**

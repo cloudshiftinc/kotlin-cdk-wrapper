@@ -270,7 +270,7 @@ public interface CfnDistributionProps {
      * @param distributionConfig The distribution's configuration. 
      */
     override fun distributionConfig(distributionConfig: IResolvable) {
-      cdkBuilder.distributionConfig(distributionConfig.let(IResolvable::unwrap))
+      cdkBuilder.distributionConfig(distributionConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -278,7 +278,7 @@ public interface CfnDistributionProps {
      */
     override
         fun distributionConfig(distributionConfig: CfnDistribution.DistributionConfigProperty) {
-      cdkBuilder.distributionConfig(distributionConfig.let(CfnDistribution.DistributionConfigProperty::unwrap))
+      cdkBuilder.distributionConfig(distributionConfig.let(CfnDistribution.DistributionConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -294,7 +294,7 @@ public interface CfnDistributionProps {
      * @param tags A complex type that contains zero or more `Tag` elements.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

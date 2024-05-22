@@ -55,7 +55,7 @@ public interface GrantInvokeOptions {
      * @param httpMethods The HTTP methods to allow.
      */
     override fun httpMethods(httpMethods: List<HttpMethod>) {
-      cdkBuilder.httpMethods(httpMethods.map(HttpMethod::unwrap))
+      cdkBuilder.httpMethods(httpMethods.map(HttpMethod.Companion::unwrap))
     }
 
     /**

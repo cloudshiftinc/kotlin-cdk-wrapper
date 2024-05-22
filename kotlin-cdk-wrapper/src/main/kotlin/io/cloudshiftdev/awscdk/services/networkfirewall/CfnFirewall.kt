@@ -65,8 +65,8 @@ public open class CfnFirewall(
     id: String,
     props: CfnFirewallProps,
   ) :
-      this(software.amazon.awscdk.services.networkfirewall.CfnFirewall(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFirewallProps::unwrap))
+      this(software.amazon.awscdk.services.networkfirewall.CfnFirewall(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFirewallProps.Companion::unwrap))
   )
 
   public constructor(
@@ -112,7 +112,7 @@ public open class CfnFirewall(
    * A flag indicating whether it is possible to delete the firewall.
    */
   public open fun deleteProtection(`value`: IResolvable) {
-    unwrap(this).setDeleteProtection(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeleteProtection(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -171,7 +171,7 @@ public open class CfnFirewall(
    * association.
    */
   public open fun firewallPolicyChangeProtection(`value`: IResolvable) {
-    unwrap(this).setFirewallPolicyChangeProtection(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFirewallPolicyChangeProtection(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -180,7 +180,7 @@ public open class CfnFirewall(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -202,7 +202,7 @@ public open class CfnFirewall(
    * associations.
    */
   public open fun subnetChangeProtection(`value`: IResolvable) {
-    unwrap(this).setSubnetChangeProtection(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSubnetChangeProtection(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -214,7 +214,7 @@ public open class CfnFirewall(
    * The public subnets that Network Firewall is using for the firewall.
    */
   public open fun subnetMappings(`value`: IResolvable) {
-    unwrap(this).setSubnetMappings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSubnetMappings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -244,7 +244,7 @@ public open class CfnFirewall(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -473,7 +473,7 @@ public open class CfnFirewall(
      * @param deleteProtection A flag indicating whether it is possible to delete the firewall. 
      */
     override fun deleteProtection(deleteProtection: IResolvable) {
-      cdkBuilder.deleteProtection(deleteProtection.let(IResolvable::unwrap))
+      cdkBuilder.deleteProtection(deleteProtection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -538,7 +538,7 @@ public open class CfnFirewall(
      * against a change to the firewall policy association. 
      */
     override fun firewallPolicyChangeProtection(firewallPolicyChangeProtection: IResolvable) {
-      cdkBuilder.firewallPolicyChangeProtection(firewallPolicyChangeProtection.let(IResolvable::unwrap))
+      cdkBuilder.firewallPolicyChangeProtection(firewallPolicyChangeProtection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -570,7 +570,7 @@ public open class CfnFirewall(
      * changes to the subnet associations. 
      */
     override fun subnetChangeProtection(subnetChangeProtection: IResolvable) {
-      cdkBuilder.subnetChangeProtection(subnetChangeProtection.let(IResolvable::unwrap))
+      cdkBuilder.subnetChangeProtection(subnetChangeProtection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -582,7 +582,7 @@ public open class CfnFirewall(
      * @param subnetMappings The public subnets that Network Firewall is using for the firewall. 
      */
     override fun subnetMappings(subnetMappings: IResolvable) {
-      cdkBuilder.subnetMappings(subnetMappings.let(IResolvable::unwrap))
+      cdkBuilder.subnetMappings(subnetMappings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -619,7 +619,7 @@ public open class CfnFirewall(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

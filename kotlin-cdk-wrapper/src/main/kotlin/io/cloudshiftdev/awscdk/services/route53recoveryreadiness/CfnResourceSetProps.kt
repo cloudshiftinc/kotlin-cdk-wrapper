@@ -178,7 +178,7 @@ public interface CfnResourceSetProps {
      * @param resources A list of resource objects in the resource set. 
      */
     override fun resources(resources: IResolvable) {
-      cdkBuilder.resources(resources.let(IResolvable::unwrap))
+      cdkBuilder.resources(resources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -197,7 +197,7 @@ public interface CfnResourceSetProps {
      * @param tags A tag to associate with the parameters for a resource set.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

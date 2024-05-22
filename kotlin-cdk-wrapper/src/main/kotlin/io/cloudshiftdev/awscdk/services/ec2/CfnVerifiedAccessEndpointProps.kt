@@ -361,7 +361,7 @@ public interface CfnVerifiedAccessEndpointProps {
      * endpoint as `load-balancer` type.
      */
     override fun loadBalancerOptions(loadBalancerOptions: IResolvable) {
-      cdkBuilder.loadBalancerOptions(loadBalancerOptions.let(IResolvable::unwrap))
+      cdkBuilder.loadBalancerOptions(loadBalancerOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -370,7 +370,7 @@ public interface CfnVerifiedAccessEndpointProps {
      */
     override
         fun loadBalancerOptions(loadBalancerOptions: CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty) {
-      cdkBuilder.loadBalancerOptions(loadBalancerOptions.let(CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty::unwrap))
+      cdkBuilder.loadBalancerOptions(loadBalancerOptions.let(CfnVerifiedAccessEndpoint.LoadBalancerOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -388,7 +388,7 @@ public interface CfnVerifiedAccessEndpointProps {
      * @param networkInterfaceOptions The options for network-interface type endpoint.
      */
     override fun networkInterfaceOptions(networkInterfaceOptions: IResolvable) {
-      cdkBuilder.networkInterfaceOptions(networkInterfaceOptions.let(IResolvable::unwrap))
+      cdkBuilder.networkInterfaceOptions(networkInterfaceOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -396,7 +396,7 @@ public interface CfnVerifiedAccessEndpointProps {
      */
     override
         fun networkInterfaceOptions(networkInterfaceOptions: CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty) {
-      cdkBuilder.networkInterfaceOptions(networkInterfaceOptions.let(CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty::unwrap))
+      cdkBuilder.networkInterfaceOptions(networkInterfaceOptions.let(CfnVerifiedAccessEndpoint.NetworkInterfaceOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -427,7 +427,7 @@ public interface CfnVerifiedAccessEndpointProps {
      * @param policyEnabled The status of the Verified Access policy.
      */
     override fun policyEnabled(policyEnabled: IResolvable) {
-      cdkBuilder.policyEnabled(policyEnabled.let(IResolvable::unwrap))
+      cdkBuilder.policyEnabled(policyEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -447,7 +447,7 @@ public interface CfnVerifiedAccessEndpointProps {
      * @param sseSpecification The options for additional server side encryption.
      */
     override fun sseSpecification(sseSpecification: IResolvable) {
-      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -455,7 +455,7 @@ public interface CfnVerifiedAccessEndpointProps {
      */
     override
         fun sseSpecification(sseSpecification: CfnVerifiedAccessEndpoint.SseSpecificationProperty) {
-      cdkBuilder.sseSpecification(sseSpecification.let(CfnVerifiedAccessEndpoint.SseSpecificationProperty::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(CfnVerifiedAccessEndpoint.SseSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -472,7 +472,7 @@ public interface CfnVerifiedAccessEndpointProps {
      * @param tags The tags.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

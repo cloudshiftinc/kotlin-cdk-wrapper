@@ -275,7 +275,7 @@ public interface ServiceManagedEBSVolumeConfiguration {
      * The available filesystem types are ext3, ext4, and xfs.
      */
     override fun fileSystemType(fileSystemType: FileSystemType) {
-      cdkBuilder.fileSystemType(fileSystemType.let(FileSystemType::unwrap))
+      cdkBuilder.fileSystemType(fileSystemType.let(FileSystemType.Companion::unwrap))
     }
 
     /**
@@ -301,7 +301,7 @@ public interface ServiceManagedEBSVolumeConfiguration {
      * @param kmsKeyId AWS Key Management Service key to use for Amazon EBS encryption.
      */
     override fun kmsKeyId(kmsKeyId: IKey) {
-      cdkBuilder.kmsKeyId(kmsKeyId.let(IKey::unwrap))
+      cdkBuilder.kmsKeyId(kmsKeyId.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -309,7 +309,7 @@ public interface ServiceManagedEBSVolumeConfiguration {
      * This role is required to create and manage the Amazon EBS volume.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -325,7 +325,7 @@ public interface ServiceManagedEBSVolumeConfiguration {
      * * standard: 1-1,024
      */
     override fun size(size: Size) {
-      cdkBuilder.size(size.let(Size::unwrap))
+      cdkBuilder.size(size.let(Size.Companion::unwrap))
     }
 
     /**
@@ -341,7 +341,7 @@ public interface ServiceManagedEBSVolumeConfiguration {
      * those tags to the volume.
      */
     override fun tagSpecifications(tagSpecifications: List<EBSTagSpecification>) {
-      cdkBuilder.tagSpecifications(tagSpecifications.map(EBSTagSpecification::unwrap))
+      cdkBuilder.tagSpecifications(tagSpecifications.map(EBSTagSpecification.Companion::unwrap))
     }
 
     /**
@@ -364,7 +364,7 @@ public interface ServiceManagedEBSVolumeConfiguration {
      * @param volumeType The volume type.
      */
     override fun volumeType(volumeType: EbsDeviceVolumeType) {
-      cdkBuilder.volumeType(volumeType.let(EbsDeviceVolumeType::unwrap))
+      cdkBuilder.volumeType(volumeType.let(EbsDeviceVolumeType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.ServiceManagedEBSVolumeConfiguration =

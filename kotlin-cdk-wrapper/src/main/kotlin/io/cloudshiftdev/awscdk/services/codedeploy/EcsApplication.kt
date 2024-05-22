@@ -24,7 +24,7 @@ public open class EcsApplication(
   cdkObject: software.amazon.awscdk.services.codedeploy.EcsApplication,
 ) : Resource(cdkObject), IEcsApplication {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.codedeploy.EcsApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.codedeploy.EcsApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -33,8 +33,8 @@ public open class EcsApplication(
     id: String,
     props: EcsApplicationProps,
   ) :
-      this(software.amazon.awscdk.services.codedeploy.EcsApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EcsApplicationProps::unwrap))
+      this(software.amazon.awscdk.services.codedeploy.EcsApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EcsApplicationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -97,7 +97,7 @@ public open class EcsApplication(
       id: String,
       ecsApplicationArn: String,
     ): IEcsApplication =
-        software.amazon.awscdk.services.codedeploy.EcsApplication.fromEcsApplicationArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.codedeploy.EcsApplication.fromEcsApplicationArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, ecsApplicationArn).let(IEcsApplication::wrap)
 
     public fun fromEcsApplicationName(
@@ -105,7 +105,7 @@ public open class EcsApplication(
       id: String,
       ecsApplicationName: String,
     ): IEcsApplication =
-        software.amazon.awscdk.services.codedeploy.EcsApplication.fromEcsApplicationName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.codedeploy.EcsApplication.fromEcsApplicationName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, ecsApplicationName).let(IEcsApplication::wrap)
 
     public operator fun invoke(

@@ -28,7 +28,7 @@ public interface IPostProcessor {
      * @param context 
      */
     override fun postProcess(input: Any, context: IResolveContext): Any =
-        unwrap(this).postProcess(input, context.let(IResolveContext::unwrap))
+        unwrap(this).postProcess(input, context.let(IResolveContext.Companion::unwrap))
   }
 
   public companion object {

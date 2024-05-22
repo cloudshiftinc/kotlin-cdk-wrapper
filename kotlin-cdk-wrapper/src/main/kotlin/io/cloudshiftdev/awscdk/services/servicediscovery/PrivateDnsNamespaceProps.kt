@@ -84,7 +84,7 @@ public interface PrivateDnsNamespaceProps : BaseNamespaceProps {
      * @param vpc The Amazon VPC that you want to associate the namespace with. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.servicediscovery.PrivateDnsNamespaceProps =

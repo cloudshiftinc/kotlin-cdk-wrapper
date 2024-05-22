@@ -44,8 +44,8 @@ public open class DynamoEventSource(
 ) : StreamEventSource(cdkObject) {
   public constructor(table: CloudshiftdevAwscdkServicesDynamodbITable,
       props: DynamoEventSourceProps) :
-      this(software.amazon.awscdk.services.lambda.eventsources.DynamoEventSource(table.let(CloudshiftdevAwscdkServicesDynamodbITable::unwrap),
-      props.let(DynamoEventSourceProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.eventsources.DynamoEventSource(table.let(CloudshiftdevAwscdkServicesDynamodbITable.Companion::unwrap),
+      props.let(DynamoEventSourceProps.Companion::unwrap))
   )
 
   public constructor(table: CloudshiftdevAwscdkServicesDynamodbITable,
@@ -58,7 +58,7 @@ public open class DynamoEventSource(
    * @param target 
    */
   public override fun bind(target: IFunction) {
-    unwrap(this).bind(target.let(IFunction::unwrap))
+    unwrap(this).bind(target.let(IFunction.Companion::unwrap))
   }
 
   /**
@@ -324,7 +324,7 @@ public open class DynamoEventSource(
      * function. 
      */
     override fun maxBatchingWindow(maxBatchingWindow: Duration) {
-      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration::unwrap))
+      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -345,7 +345,7 @@ public open class DynamoEventSource(
      * processing. 
      */
     override fun maxRecordAge(maxRecordAge: Duration) {
-      cdkBuilder.maxRecordAge(maxRecordAge.let(Duration::unwrap))
+      cdkBuilder.maxRecordAge(maxRecordAge.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -356,7 +356,7 @@ public open class DynamoEventSource(
      * @param onFailure An Amazon SQS queue or Amazon SNS topic destination for discarded records. 
      */
     override fun onFailure(onFailure: IEventSourceDlq) {
-      cdkBuilder.onFailure(onFailure.let(IEventSourceDlq::unwrap))
+      cdkBuilder.onFailure(onFailure.let(IEventSourceDlq.Companion::unwrap))
     }
 
     /**
@@ -410,7 +410,7 @@ public open class DynamoEventSource(
      * @param startingPosition Where to begin consuming the stream. 
      */
     override fun startingPosition(startingPosition: StartingPosition) {
-      cdkBuilder.startingPosition(startingPosition.let(StartingPosition::unwrap))
+      cdkBuilder.startingPosition(startingPosition.let(StartingPosition.Companion::unwrap))
     }
 
     /**
@@ -423,7 +423,7 @@ public open class DynamoEventSource(
      * Kinesis Valid Range: 0 - 15 minutes. 
      */
     override fun tumblingWindow(tumblingWindow: Duration) {
-      cdkBuilder.tumblingWindow(tumblingWindow.let(Duration::unwrap))
+      cdkBuilder.tumblingWindow(tumblingWindow.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lambda.eventsources.DynamoEventSource =

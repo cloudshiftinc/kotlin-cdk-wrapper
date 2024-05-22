@@ -638,7 +638,7 @@ public interface DomainProps {
      * @param accessPolicies Domain access policies.
      */
     override fun accessPolicies(accessPolicies: List<PolicyStatement>) {
-      cdkBuilder.accessPolicies(accessPolicies.map(PolicyStatement::unwrap))
+      cdkBuilder.accessPolicies(accessPolicies.map(PolicyStatement.Companion::unwrap))
     }
 
     /**
@@ -669,7 +669,7 @@ public interface DomainProps {
      * @param capacity The cluster capacity configuration for the Amazon OpenSearch Service domain.
      */
     override fun capacity(capacity: CapacityConfig) {
-      cdkBuilder.capacity(capacity.let(CapacityConfig::unwrap))
+      cdkBuilder.capacity(capacity.let(CapacityConfig.Companion::unwrap))
     }
 
     /**
@@ -685,7 +685,7 @@ public interface DomainProps {
      * authentication for OpenSearch Dashboards.
      */
     override fun cognitoDashboardsAuth(cognitoDashboardsAuth: CognitoOptions) {
-      cdkBuilder.cognitoDashboardsAuth(cognitoDashboardsAuth.let(CognitoOptions::unwrap))
+      cdkBuilder.cognitoDashboardsAuth(cognitoDashboardsAuth.let(CognitoOptions.Companion::unwrap))
     }
 
     /**
@@ -711,7 +711,7 @@ public interface DomainProps {
      * the certificate
      */
     override fun customEndpoint(customEndpoint: CustomEndpointOptions) {
-      cdkBuilder.customEndpoint(customEndpoint.let(CustomEndpointOptions::unwrap))
+      cdkBuilder.customEndpoint(customEndpoint.let(CustomEndpointOptions.Companion::unwrap))
     }
 
     /**
@@ -736,7 +736,7 @@ public interface DomainProps {
      * attached to data nodes in the Amazon OpenSearch Service domain.
      */
     override fun ebs(ebs: EbsOptions) {
-      cdkBuilder.ebs(ebs.let(EbsOptions::unwrap))
+      cdkBuilder.ebs(ebs.let(EbsOptions.Companion::unwrap))
     }
 
     /**
@@ -767,7 +767,7 @@ public interface DomainProps {
      * @param encryptionAtRest Encryption at rest options for the cluster.
      */
     override fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptions) {
-      cdkBuilder.encryptionAtRest(encryptionAtRest.let(EncryptionAtRestOptions::unwrap))
+      cdkBuilder.encryptionAtRest(encryptionAtRest.let(EncryptionAtRestOptions.Companion::unwrap))
     }
 
     /**
@@ -793,7 +793,7 @@ public interface DomainProps {
      * enforced HTTPS.
      */
     override fun fineGrainedAccessControl(fineGrainedAccessControl: AdvancedSecurityOptions) {
-      cdkBuilder.fineGrainedAccessControl(fineGrainedAccessControl.let(AdvancedSecurityOptions::unwrap))
+      cdkBuilder.fineGrainedAccessControl(fineGrainedAccessControl.let(AdvancedSecurityOptions.Companion::unwrap))
     }
 
     /**
@@ -817,14 +817,14 @@ public interface DomainProps {
      * If you set your IP address type to dual stack, you can't change your address type later.
      */
     override fun ipAddressType(ipAddressType: IpAddressType) {
-      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType::unwrap))
+      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType.Companion::unwrap))
     }
 
     /**
      * @param logging Configuration log publishing configuration options.
      */
     override fun logging(logging: LoggingOptions) {
-      cdkBuilder.logging(logging.let(LoggingOptions::unwrap))
+      cdkBuilder.logging(logging.let(LoggingOptions.Companion::unwrap))
     }
 
     /**
@@ -864,7 +864,7 @@ public interface DomainProps {
      * be set to 9:00 A.M.
      */
     override fun offPeakWindowStart(offPeakWindowStart: WindowStartTime) {
-      cdkBuilder.offPeakWindowStart(offPeakWindowStart.let(WindowStartTime::unwrap))
+      cdkBuilder.offPeakWindowStart(offPeakWindowStart.let(WindowStartTime.Companion::unwrap))
     }
 
     /**
@@ -883,7 +883,7 @@ public interface DomainProps {
      * @param removalPolicy Policy to apply when the domain is removed from the stack.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -892,7 +892,7 @@ public interface DomainProps {
      * Only used if `vpc` is specified.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -923,7 +923,7 @@ public interface DomainProps {
      * @param tlsSecurityPolicy The minimum TLS version required for traffic to the domain.
      */
     override fun tlsSecurityPolicy(tlsSecurityPolicy: TLSSecurityPolicy) {
-      cdkBuilder.tlsSecurityPolicy(tlsSecurityPolicy.let(TLSSecurityPolicy::unwrap))
+      cdkBuilder.tlsSecurityPolicy(tlsSecurityPolicy.let(TLSSecurityPolicy.Companion::unwrap))
     }
 
     /**
@@ -946,14 +946,14 @@ public interface DomainProps {
      * @param version The Elasticsearch/OpenSearch version that your domain will leverage. 
      */
     override fun version(version: EngineVersion) {
-      cdkBuilder.version(version.let(EngineVersion::unwrap))
+      cdkBuilder.version(version.let(EngineVersion.Companion::unwrap))
     }
 
     /**
      * @param vpc Place the domain inside this VPC.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -966,7 +966,7 @@ public interface DomainProps {
      * Only used if `vpc` is specified.
      */
     override fun vpcSubnets(vpcSubnets: List<SubnetSelection>) {
-      cdkBuilder.vpcSubnets(vpcSubnets.map(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.map(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -986,7 +986,7 @@ public interface DomainProps {
      * Service domain.
      */
     override fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig) {
-      cdkBuilder.zoneAwareness(zoneAwareness.let(ZoneAwarenessConfig::unwrap))
+      cdkBuilder.zoneAwareness(zoneAwareness.let(ZoneAwarenessConfig.Companion::unwrap))
     }
 
     /**

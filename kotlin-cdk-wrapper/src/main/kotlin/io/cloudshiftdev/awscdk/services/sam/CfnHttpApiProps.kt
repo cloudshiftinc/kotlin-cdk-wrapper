@@ -349,14 +349,14 @@ public interface CfnHttpApiProps {
      * @param accessLogSetting the value to be set.
      */
     override fun accessLogSetting(accessLogSetting: IResolvable) {
-      cdkBuilder.accessLogSetting(accessLogSetting.let(IResolvable::unwrap))
+      cdkBuilder.accessLogSetting(accessLogSetting.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param accessLogSetting the value to be set.
      */
     override fun accessLogSetting(accessLogSetting: CfnHttpApi.AccessLogSettingProperty) {
-      cdkBuilder.accessLogSetting(accessLogSetting.let(CfnHttpApi.AccessLogSettingProperty::unwrap))
+      cdkBuilder.accessLogSetting(accessLogSetting.let(CfnHttpApi.AccessLogSettingProperty.Companion::unwrap))
     }
 
     /**
@@ -372,14 +372,14 @@ public interface CfnHttpApiProps {
      * @param auth the value to be set.
      */
     override fun auth(auth: IResolvable) {
-      cdkBuilder.auth(auth.let(IResolvable::unwrap))
+      cdkBuilder.auth(auth.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param auth the value to be set.
      */
     override fun auth(auth: CfnHttpApi.HttpApiAuthProperty) {
-      cdkBuilder.auth(auth.let(CfnHttpApi.HttpApiAuthProperty::unwrap))
+      cdkBuilder.auth(auth.let(CfnHttpApi.HttpApiAuthProperty.Companion::unwrap))
     }
 
     /**
@@ -401,14 +401,14 @@ public interface CfnHttpApiProps {
      * @param corsConfiguration the value to be set.
      */
     override fun corsConfiguration(corsConfiguration: IResolvable) {
-      cdkBuilder.corsConfiguration(corsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.corsConfiguration(corsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param corsConfiguration the value to be set.
      */
     override fun corsConfiguration(corsConfiguration: CfnHttpApi.CorsConfigurationObjectProperty) {
-      cdkBuilder.corsConfiguration(corsConfiguration.let(CfnHttpApi.CorsConfigurationObjectProperty::unwrap))
+      cdkBuilder.corsConfiguration(corsConfiguration.let(CfnHttpApi.CorsConfigurationObjectProperty.Companion::unwrap))
     }
 
     /**
@@ -424,14 +424,14 @@ public interface CfnHttpApiProps {
      * @param defaultRouteSettings the value to be set.
      */
     override fun defaultRouteSettings(defaultRouteSettings: IResolvable) {
-      cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(IResolvable::unwrap))
+      cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param defaultRouteSettings the value to be set.
      */
     override fun defaultRouteSettings(defaultRouteSettings: CfnHttpApi.RouteSettingsProperty) {
-      cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(CfnHttpApi.RouteSettingsProperty::unwrap))
+      cdkBuilder.defaultRouteSettings(defaultRouteSettings.let(CfnHttpApi.RouteSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -461,14 +461,14 @@ public interface CfnHttpApiProps {
      * @param definitionUri the value to be set.
      */
     override fun definitionUri(definitionUri: IResolvable) {
-      cdkBuilder.definitionUri(definitionUri.let(IResolvable::unwrap))
+      cdkBuilder.definitionUri(definitionUri.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param definitionUri the value to be set.
      */
     override fun definitionUri(definitionUri: CfnHttpApi.S3LocationProperty) {
-      cdkBuilder.definitionUri(definitionUri.let(CfnHttpApi.S3LocationProperty::unwrap))
+      cdkBuilder.definitionUri(definitionUri.let(CfnHttpApi.S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -497,21 +497,21 @@ public interface CfnHttpApiProps {
      * @param disableExecuteApiEndpoint the value to be set.
      */
     override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable) {
-      cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint.let(IResolvable::unwrap))
+      cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param domain the value to be set.
      */
     override fun domain(domain: IResolvable) {
-      cdkBuilder.domain(domain.let(IResolvable::unwrap))
+      cdkBuilder.domain(domain.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param domain the value to be set.
      */
     override fun domain(domain: CfnHttpApi.HttpApiDomainConfigurationProperty) {
-      cdkBuilder.domain(domain.let(CfnHttpApi.HttpApiDomainConfigurationProperty::unwrap))
+      cdkBuilder.domain(domain.let(CfnHttpApi.HttpApiDomainConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -533,21 +533,21 @@ public interface CfnHttpApiProps {
      * @param failOnWarnings the value to be set.
      */
     override fun failOnWarnings(failOnWarnings: IResolvable) {
-      cdkBuilder.failOnWarnings(failOnWarnings.let(IResolvable::unwrap))
+      cdkBuilder.failOnWarnings(failOnWarnings.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param routeSettings the value to be set.
      */
     override fun routeSettings(routeSettings: IResolvable) {
-      cdkBuilder.routeSettings(routeSettings.let(IResolvable::unwrap))
+      cdkBuilder.routeSettings(routeSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param routeSettings the value to be set.
      */
     override fun routeSettings(routeSettings: CfnHttpApi.RouteSettingsProperty) {
-      cdkBuilder.routeSettings(routeSettings.let(CfnHttpApi.RouteSettingsProperty::unwrap))
+      cdkBuilder.routeSettings(routeSettings.let(CfnHttpApi.RouteSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -569,7 +569,7 @@ public interface CfnHttpApiProps {
      * @param stageVariables the value to be set.
      */
     override fun stageVariables(stageVariables: IResolvable) {
-      cdkBuilder.stageVariables(stageVariables.let(IResolvable::unwrap))
+      cdkBuilder.stageVariables(stageVariables.let(IResolvable.Companion::unwrap))
     }
 
     /**

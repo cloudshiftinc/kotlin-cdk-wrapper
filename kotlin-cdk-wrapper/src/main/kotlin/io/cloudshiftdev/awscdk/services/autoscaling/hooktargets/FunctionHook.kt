@@ -34,12 +34,12 @@ public open class FunctionHook(
   cdkObject: software.amazon.awscdk.services.autoscaling.hooktargets.FunctionHook,
 ) : CdkObject(cdkObject), ILifecycleHookTarget {
   public constructor(fn: IFunction) :
-      this(software.amazon.awscdk.services.autoscaling.hooktargets.FunctionHook(fn.let(IFunction::unwrap))
+      this(software.amazon.awscdk.services.autoscaling.hooktargets.FunctionHook(fn.let(IFunction.Companion::unwrap))
   )
 
   public constructor(fn: IFunction, encryptionKey: IKey) :
-      this(software.amazon.awscdk.services.autoscaling.hooktargets.FunctionHook(fn.let(IFunction::unwrap),
-      encryptionKey.let(IKey::unwrap))
+      this(software.amazon.awscdk.services.autoscaling.hooktargets.FunctionHook(fn.let(IFunction.Companion::unwrap),
+      encryptionKey.let(IKey.Companion::unwrap))
   )
 
   /**
@@ -53,8 +53,8 @@ public open class FunctionHook(
    * @param options 
    */
   public override fun bind(scope: Construct, options: BindHookTargetOptions):
-      LifecycleHookTargetConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      options.let(BindHookTargetOptions::unwrap)).let(LifecycleHookTargetConfig::wrap)
+      LifecycleHookTargetConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      options.let(BindHookTargetOptions.Companion::unwrap)).let(LifecycleHookTargetConfig::wrap)
 
   /**
    * If the `IRole` does not exist in `options`, will create an `IRole` and an SNS Topic and attach

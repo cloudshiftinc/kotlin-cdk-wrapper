@@ -65,8 +65,8 @@ public open class CfnProject(
     id: String,
     props: CfnProjectProps,
   ) :
-      this(software.amazon.awscdk.services.evidently.CfnProject(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnProjectProps::unwrap))
+      this(software.amazon.awscdk.services.evidently.CfnProject(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnProjectProps.Companion::unwrap))
   )
 
   public constructor(
@@ -85,14 +85,14 @@ public open class CfnProject(
    * Use this parameter if the project will use *client-side evaluation powered by AWS AppConfig* .
    */
   public open fun appConfigResource(`value`: IResolvable) {
-    unwrap(this).setAppConfigResource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAppConfigResource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Use this parameter if the project will use *client-side evaluation powered by AWS AppConfig* .
    */
   public open fun appConfigResource(`value`: AppConfigResourceObjectProperty) {
-    unwrap(this).setAppConfigResource(`value`.let(AppConfigResourceObjectProperty::unwrap))
+    unwrap(this).setAppConfigResource(`value`.let(AppConfigResourceObjectProperty.Companion::unwrap))
   }
 
   /**
@@ -121,7 +121,7 @@ public open class CfnProject(
    * longer term storage, if you choose to do so.
    */
   public open fun dataDelivery(`value`: IResolvable) {
-    unwrap(this).setDataDelivery(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataDelivery(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -129,7 +129,7 @@ public open class CfnProject(
    * longer term storage, if you choose to do so.
    */
   public open fun dataDelivery(`value`: DataDeliveryObjectProperty) {
-    unwrap(this).setDataDelivery(`value`.let(DataDeliveryObjectProperty::unwrap))
+    unwrap(this).setDataDelivery(`value`.let(DataDeliveryObjectProperty.Companion::unwrap))
   }
 
   /**
@@ -159,7 +159,7 @@ public open class CfnProject(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -189,7 +189,7 @@ public open class CfnProject(
    * Assigns one or more tags (key-value pairs) to the project.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -409,7 +409,7 @@ public open class CfnProject(
      * powered by AWS AppConfig* . 
      */
     override fun appConfigResource(appConfigResource: IResolvable) {
-      cdkBuilder.appConfigResource(appConfigResource.let(IResolvable::unwrap))
+      cdkBuilder.appConfigResource(appConfigResource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -434,7 +434,7 @@ public open class CfnProject(
      * powered by AWS AppConfig* . 
      */
     override fun appConfigResource(appConfigResource: AppConfigResourceObjectProperty) {
-      cdkBuilder.appConfigResource(appConfigResource.let(AppConfigResourceObjectProperty::unwrap))
+      cdkBuilder.appConfigResource(appConfigResource.let(AppConfigResourceObjectProperty.Companion::unwrap))
     }
 
     /**
@@ -478,7 +478,7 @@ public open class CfnProject(
      * evaluation events for longer term storage, if you choose to do so. 
      */
     override fun dataDelivery(dataDelivery: IResolvable) {
-      cdkBuilder.dataDelivery(dataDelivery.let(IResolvable::unwrap))
+      cdkBuilder.dataDelivery(dataDelivery.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -495,7 +495,7 @@ public open class CfnProject(
      * evaluation events for longer term storage, if you choose to do so. 
      */
     override fun dataDelivery(dataDelivery: DataDeliveryObjectProperty) {
-      cdkBuilder.dataDelivery(dataDelivery.let(DataDeliveryObjectProperty::unwrap))
+      cdkBuilder.dataDelivery(dataDelivery.let(DataDeliveryObjectProperty.Companion::unwrap))
     }
 
     /**
@@ -557,7 +557,7 @@ public open class CfnProject(
      * @param tags Assigns one or more tags (key-value pairs) to the project. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -807,7 +807,7 @@ public open class CfnProject(
        * stores the bucket name and bucket prefix.
        */
       override fun s3(s3: IResolvable) {
-        cdkBuilder.s3(s3.let(IResolvable::unwrap))
+        cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -815,7 +815,7 @@ public open class CfnProject(
        * stores the bucket name and bucket prefix.
        */
       override fun s3(s3: S3DestinationProperty) {
-        cdkBuilder.s3(s3.let(S3DestinationProperty::unwrap))
+        cdkBuilder.s3(s3.let(S3DestinationProperty.Companion::unwrap))
       }
 
       /**

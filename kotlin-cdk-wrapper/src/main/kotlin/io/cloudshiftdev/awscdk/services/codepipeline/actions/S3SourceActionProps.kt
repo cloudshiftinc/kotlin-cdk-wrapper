@@ -155,7 +155,7 @@ public interface S3SourceActionProps : CommonAwsActionProps {
      * the encryption key at import time by using `Bucket.fromBucketAttributes()` method.
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -169,7 +169,7 @@ public interface S3SourceActionProps : CommonAwsActionProps {
      * @param output the value to be set. 
      */
     override fun output(output: Artifact) {
-      cdkBuilder.output(output.let(Artifact::unwrap))
+      cdkBuilder.output(output.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -181,7 +181,7 @@ public interface S3SourceActionProps : CommonAwsActionProps {
      * method in the `ActionBindOptions.role` property.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -199,7 +199,7 @@ public interface S3SourceActionProps : CommonAwsActionProps {
      * as otherwise the CloudWatch Events will not be emitted.
      */
     override fun trigger(trigger: S3Trigger) {
-      cdkBuilder.trigger(trigger.let(S3Trigger::unwrap))
+      cdkBuilder.trigger(trigger.let(S3Trigger.Companion::unwrap))
     }
 
     /**

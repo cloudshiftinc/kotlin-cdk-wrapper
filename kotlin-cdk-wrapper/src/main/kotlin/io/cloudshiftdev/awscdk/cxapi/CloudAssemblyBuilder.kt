@@ -38,7 +38,7 @@ public open class CloudAssemblyBuilder(
 
   public constructor(outdir: String, props: CloudAssemblyBuilderProps) :
       this(software.amazon.awscdk.cxapi.CloudAssemblyBuilder(outdir,
-      props.let(CloudAssemblyBuilderProps::unwrap))
+      props.let(CloudAssemblyBuilderProps.Companion::unwrap))
   )
 
   public constructor(outdir: String, props: CloudAssemblyBuilderProps.Builder.() -> Unit) :
@@ -52,7 +52,7 @@ public open class CloudAssemblyBuilder(
    * @param manifest The artifact manifest. 
    */
   public open fun addArtifact(id: String, manifest: ArtifactManifest) {
-    unwrap(this).addArtifact(id, manifest.let(ArtifactManifest::unwrap))
+    unwrap(this).addArtifact(id, manifest.let(ArtifactManifest.Companion::unwrap))
   }
 
   /**
@@ -72,7 +72,7 @@ public open class CloudAssemblyBuilder(
    * @param missing Missing context information. 
    */
   public open fun addMissing(missing: MissingContext) {
-    unwrap(this).addMissing(missing.let(MissingContext::unwrap))
+    unwrap(this).addMissing(missing.let(MissingContext.Companion::unwrap))
   }
 
   /**
@@ -106,7 +106,7 @@ public open class CloudAssemblyBuilder(
    * @param options
    */
   public open fun buildAssembly(options: AssemblyBuildOptions): CloudAssembly =
-      unwrap(this).buildAssembly(options.let(AssemblyBuildOptions::unwrap)).let(CloudAssembly::wrap)
+      unwrap(this).buildAssembly(options.let(AssemblyBuildOptions.Companion::unwrap)).let(CloudAssembly::wrap)
 
   /**
    * Finalizes the cloud assembly into the output directory returns a `CloudAssembly` object that
@@ -190,7 +190,7 @@ public open class CloudAssemblyBuilder(
      * @param parentBuilder If this builder is for a nested assembly, the parent assembly builder. 
      */
     override fun parentBuilder(parentBuilder: CloudAssemblyBuilder) {
-      cdkBuilder.parentBuilder(parentBuilder.let(CloudAssemblyBuilder::unwrap))
+      cdkBuilder.parentBuilder(parentBuilder.let(CloudAssemblyBuilder.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.cxapi.CloudAssemblyBuilder = cdkBuilder.build()

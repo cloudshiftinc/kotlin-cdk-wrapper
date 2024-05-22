@@ -206,8 +206,8 @@ public open class CfnOriginEndpoint(
     id: String,
     props: CfnOriginEndpointProps,
   ) :
-      this(software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnOriginEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.mediapackage.CfnOriginEndpoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnOriginEndpointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -238,14 +238,14 @@ public open class CfnOriginEndpoint(
    * Parameters for CDN authorization.
    */
   public open fun authorization(`value`: IResolvable) {
-    unwrap(this).setAuthorization(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAuthorization(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Parameters for CDN authorization.
    */
   public open fun authorization(`value`: AuthorizationProperty) {
-    unwrap(this).setAuthorization(`value`.let(AuthorizationProperty::unwrap))
+    unwrap(this).setAuthorization(`value`.let(AuthorizationProperty.Companion::unwrap))
   }
 
   /**
@@ -277,14 +277,14 @@ public open class CfnOriginEndpoint(
    * Parameters for Common Media Application Format (CMAF) packaging.
    */
   public open fun cmafPackage(`value`: IResolvable) {
-    unwrap(this).setCmafPackage(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCmafPackage(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Parameters for Common Media Application Format (CMAF) packaging.
    */
   public open fun cmafPackage(`value`: CmafPackageProperty) {
-    unwrap(this).setCmafPackage(`value`.let(CmafPackageProperty::unwrap))
+    unwrap(this).setCmafPackage(`value`.let(CmafPackageProperty.Companion::unwrap))
   }
 
   /**
@@ -304,14 +304,14 @@ public open class CfnOriginEndpoint(
    * Parameters for DASH packaging.
    */
   public open fun dashPackage(`value`: IResolvable) {
-    unwrap(this).setDashPackage(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDashPackage(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Parameters for DASH packaging.
    */
   public open fun dashPackage(`value`: DashPackageProperty) {
-    unwrap(this).setDashPackage(`value`.let(DashPackageProperty::unwrap))
+    unwrap(this).setDashPackage(`value`.let(DashPackageProperty.Companion::unwrap))
   }
 
   /**
@@ -345,14 +345,14 @@ public open class CfnOriginEndpoint(
    * Parameters for Apple HLS packaging.
    */
   public open fun hlsPackage(`value`: IResolvable) {
-    unwrap(this).setHlsPackage(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHlsPackage(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Parameters for Apple HLS packaging.
    */
   public open fun hlsPackage(`value`: HlsPackageProperty) {
-    unwrap(this).setHlsPackage(`value`.let(HlsPackageProperty::unwrap))
+    unwrap(this).setHlsPackage(`value`.let(HlsPackageProperty.Companion::unwrap))
   }
 
   /**
@@ -381,7 +381,7 @@ public open class CfnOriginEndpoint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -407,14 +407,14 @@ public open class CfnOriginEndpoint(
    * Parameters for Microsoft Smooth Streaming packaging.
    */
   public open fun mssPackage(`value`: IResolvable) {
-    unwrap(this).setMssPackage(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMssPackage(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Parameters for Microsoft Smooth Streaming packaging.
    */
   public open fun mssPackage(`value`: MssPackageProperty) {
-    unwrap(this).setMssPackage(`value`.let(MssPackageProperty::unwrap))
+    unwrap(this).setMssPackage(`value`.let(MssPackageProperty.Companion::unwrap))
   }
 
   /**
@@ -464,7 +464,7 @@ public open class CfnOriginEndpoint(
    * The tags to assign to the endpoint.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -761,7 +761,7 @@ public open class CfnOriginEndpoint(
      * @param authorization Parameters for CDN authorization. 
      */
     override fun authorization(authorization: IResolvable) {
-      cdkBuilder.authorization(authorization.let(IResolvable::unwrap))
+      cdkBuilder.authorization(authorization.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -771,7 +771,7 @@ public open class CfnOriginEndpoint(
      * @param authorization Parameters for CDN authorization. 
      */
     override fun authorization(authorization: AuthorizationProperty) {
-      cdkBuilder.authorization(authorization.let(AuthorizationProperty::unwrap))
+      cdkBuilder.authorization(authorization.let(AuthorizationProperty.Companion::unwrap))
     }
 
     /**
@@ -802,7 +802,7 @@ public open class CfnOriginEndpoint(
      * @param cmafPackage Parameters for Common Media Application Format (CMAF) packaging. 
      */
     override fun cmafPackage(cmafPackage: IResolvable) {
-      cdkBuilder.cmafPackage(cmafPackage.let(IResolvable::unwrap))
+      cdkBuilder.cmafPackage(cmafPackage.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -812,7 +812,7 @@ public open class CfnOriginEndpoint(
      * @param cmafPackage Parameters for Common Media Application Format (CMAF) packaging. 
      */
     override fun cmafPackage(cmafPackage: CmafPackageProperty) {
-      cdkBuilder.cmafPackage(cmafPackage.let(CmafPackageProperty::unwrap))
+      cdkBuilder.cmafPackage(cmafPackage.let(CmafPackageProperty.Companion::unwrap))
     }
 
     /**
@@ -833,7 +833,7 @@ public open class CfnOriginEndpoint(
      * @param dashPackage Parameters for DASH packaging. 
      */
     override fun dashPackage(dashPackage: IResolvable) {
-      cdkBuilder.dashPackage(dashPackage.let(IResolvable::unwrap))
+      cdkBuilder.dashPackage(dashPackage.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -843,7 +843,7 @@ public open class CfnOriginEndpoint(
      * @param dashPackage Parameters for DASH packaging. 
      */
     override fun dashPackage(dashPackage: DashPackageProperty) {
-      cdkBuilder.dashPackage(dashPackage.let(DashPackageProperty::unwrap))
+      cdkBuilder.dashPackage(dashPackage.let(DashPackageProperty.Companion::unwrap))
     }
 
     /**
@@ -876,7 +876,7 @@ public open class CfnOriginEndpoint(
      * @param hlsPackage Parameters for Apple HLS packaging. 
      */
     override fun hlsPackage(hlsPackage: IResolvable) {
-      cdkBuilder.hlsPackage(hlsPackage.let(IResolvable::unwrap))
+      cdkBuilder.hlsPackage(hlsPackage.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -886,7 +886,7 @@ public open class CfnOriginEndpoint(
      * @param hlsPackage Parameters for Apple HLS packaging. 
      */
     override fun hlsPackage(hlsPackage: HlsPackageProperty) {
-      cdkBuilder.hlsPackage(hlsPackage.let(HlsPackageProperty::unwrap))
+      cdkBuilder.hlsPackage(hlsPackage.let(HlsPackageProperty.Companion::unwrap))
     }
 
     /**
@@ -931,7 +931,7 @@ public open class CfnOriginEndpoint(
      * @param mssPackage Parameters for Microsoft Smooth Streaming packaging. 
      */
     override fun mssPackage(mssPackage: IResolvable) {
-      cdkBuilder.mssPackage(mssPackage.let(IResolvable::unwrap))
+      cdkBuilder.mssPackage(mssPackage.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -941,7 +941,7 @@ public open class CfnOriginEndpoint(
      * @param mssPackage Parameters for Microsoft Smooth Streaming packaging. 
      */
     override fun mssPackage(mssPackage: MssPackageProperty) {
-      cdkBuilder.mssPackage(mssPackage.let(MssPackageProperty::unwrap))
+      cdkBuilder.mssPackage(mssPackage.let(MssPackageProperty.Companion::unwrap))
     }
 
     /**
@@ -994,7 +994,7 @@ public open class CfnOriginEndpoint(
      * @param tags The tags to assign to the endpoint. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1327,14 +1327,14 @@ public open class CfnOriginEndpoint(
        * @param spekeKeyProvider Parameters for the SPEKE key provider. 
        */
       override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
-        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable::unwrap))
+        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param spekeKeyProvider Parameters for the SPEKE key provider. 
        */
       override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
-        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty::unwrap))
+        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty.Companion::unwrap))
       }
 
       /**
@@ -1585,14 +1585,14 @@ public open class CfnOriginEndpoint(
        * @param encryption Parameters for encrypting content.
        */
       override fun encryption(encryption: IResolvable) {
-        cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
+        cdkBuilder.encryption(encryption.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param encryption Parameters for encrypting content.
        */
       override fun encryption(encryption: CmafEncryptionProperty) {
-        cdkBuilder.encryption(encryption.let(CmafEncryptionProperty::unwrap))
+        cdkBuilder.encryption(encryption.let(CmafEncryptionProperty.Companion::unwrap))
       }
 
       /**
@@ -1608,7 +1608,7 @@ public open class CfnOriginEndpoint(
        * endpoint.
        */
       override fun hlsManifests(hlsManifests: IResolvable) {
-        cdkBuilder.hlsManifests(hlsManifests.let(IResolvable::unwrap))
+        cdkBuilder.hlsManifests(hlsManifests.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1648,7 +1648,7 @@ public open class CfnOriginEndpoint(
        * bitrate.
        */
       override fun streamSelection(streamSelection: IResolvable) {
-        cdkBuilder.streamSelection(streamSelection.let(IResolvable::unwrap))
+        cdkBuilder.streamSelection(streamSelection.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1656,7 +1656,7 @@ public open class CfnOriginEndpoint(
        * bitrate.
        */
       override fun streamSelection(streamSelection: StreamSelectionProperty) {
-        cdkBuilder.streamSelection(streamSelection.let(StreamSelectionProperty::unwrap))
+        cdkBuilder.streamSelection(streamSelection.let(StreamSelectionProperty.Companion::unwrap))
       }
 
       /**
@@ -1829,14 +1829,14 @@ public open class CfnOriginEndpoint(
        * @param spekeKeyProvider Parameters for the SPEKE key provider. 
        */
       override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
-        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable::unwrap))
+        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param spekeKeyProvider Parameters for the SPEKE key provider. 
        */
       override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
-        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty::unwrap))
+        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty.Companion::unwrap))
       }
 
       /**
@@ -2381,14 +2381,14 @@ public open class CfnOriginEndpoint(
        * @param encryption Parameters for encrypting content.
        */
       override fun encryption(encryption: IResolvable) {
-        cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
+        cdkBuilder.encryption(encryption.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param encryption Parameters for encrypting content.
        */
       override fun encryption(encryption: DashEncryptionProperty) {
-        cdkBuilder.encryption(encryption.let(DashEncryptionProperty::unwrap))
+        cdkBuilder.encryption(encryption.let(DashEncryptionProperty.Companion::unwrap))
       }
 
       /**
@@ -2414,7 +2414,7 @@ public open class CfnOriginEndpoint(
        * the other tracks. If false, this extra stream is not included.
        */
       override fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
-        cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream.let(IResolvable::unwrap))
+        cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2532,7 +2532,7 @@ public open class CfnOriginEndpoint(
        * bitrate.
        */
       override fun streamSelection(streamSelection: IResolvable) {
-        cdkBuilder.streamSelection(streamSelection.let(IResolvable::unwrap))
+        cdkBuilder.streamSelection(streamSelection.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2540,7 +2540,7 @@ public open class CfnOriginEndpoint(
        * bitrate.
        */
       override fun streamSelection(streamSelection: StreamSelectionProperty) {
-        cdkBuilder.streamSelection(streamSelection.let(StreamSelectionProperty::unwrap))
+        cdkBuilder.streamSelection(streamSelection.let(StreamSelectionProperty.Companion::unwrap))
       }
 
       /**
@@ -3213,21 +3213,21 @@ public open class CfnOriginEndpoint(
        * This might result in an increase in client requests to the DRM server.
        */
       override fun repeatExtXKey(repeatExtXKey: IResolvable) {
-        cdkBuilder.repeatExtXKey(repeatExtXKey.let(IResolvable::unwrap))
+        cdkBuilder.repeatExtXKey(repeatExtXKey.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param spekeKeyProvider Parameters for the SPEKE key provider. 
        */
       override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
-        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable::unwrap))
+        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param spekeKeyProvider Parameters for the SPEKE key provider. 
        */
       override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
-        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty::unwrap))
+        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty.Companion::unwrap))
       }
 
       /**
@@ -3655,7 +3655,7 @@ public open class CfnOriginEndpoint(
        * tracks. If false, this extra stream is not included.
        */
       override fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
-        cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream.let(IResolvable::unwrap))
+        cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4267,14 +4267,14 @@ public open class CfnOriginEndpoint(
        * @param encryption Parameters for encrypting content.
        */
       override fun encryption(encryption: IResolvable) {
-        cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
+        cdkBuilder.encryption(encryption.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param encryption Parameters for encrypting content.
        */
       override fun encryption(encryption: HlsEncryptionProperty) {
-        cdkBuilder.encryption(encryption.let(HlsEncryptionProperty::unwrap))
+        cdkBuilder.encryption(encryption.let(HlsEncryptionProperty.Companion::unwrap))
       }
 
       /**
@@ -4298,7 +4298,7 @@ public open class CfnOriginEndpoint(
        * broadcasting (DVB) subtitles into the output.
        */
       override fun includeDvbSubtitles(includeDvbSubtitles: IResolvable) {
-        cdkBuilder.includeDvbSubtitles(includeDvbSubtitles.let(IResolvable::unwrap))
+        cdkBuilder.includeDvbSubtitles(includeDvbSubtitles.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4316,7 +4316,7 @@ public open class CfnOriginEndpoint(
        * tracks. If false, this extra stream is not included.
        */
       override fun includeIframeOnlyStream(includeIframeOnlyStream: IResolvable) {
-        cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream.let(IResolvable::unwrap))
+        cdkBuilder.includeIframeOnlyStream(includeIframeOnlyStream.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4364,7 +4364,7 @@ public open class CfnOriginEndpoint(
        * bitrate.
        */
       override fun streamSelection(streamSelection: IResolvable) {
-        cdkBuilder.streamSelection(streamSelection.let(IResolvable::unwrap))
+        cdkBuilder.streamSelection(streamSelection.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4372,7 +4372,7 @@ public open class CfnOriginEndpoint(
        * bitrate.
        */
       override fun streamSelection(streamSelection: StreamSelectionProperty) {
-        cdkBuilder.streamSelection(streamSelection.let(StreamSelectionProperty::unwrap))
+        cdkBuilder.streamSelection(streamSelection.let(StreamSelectionProperty.Companion::unwrap))
       }
 
       /**
@@ -4399,7 +4399,7 @@ public open class CfnOriginEndpoint(
        * All other tracks in the stream can be used with any audio rendition from the group.
        */
       override fun useAudioRenditionGroup(useAudioRenditionGroup: IResolvable) {
-        cdkBuilder.useAudioRenditionGroup(useAudioRenditionGroup.let(IResolvable::unwrap))
+        cdkBuilder.useAudioRenditionGroup(useAudioRenditionGroup.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -4628,14 +4628,14 @@ public open class CfnOriginEndpoint(
        * @param spekeKeyProvider Parameters for the SPEKE key provider. 
        */
       override fun spekeKeyProvider(spekeKeyProvider: IResolvable) {
-        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable::unwrap))
+        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param spekeKeyProvider Parameters for the SPEKE key provider. 
        */
       override fun spekeKeyProvider(spekeKeyProvider: SpekeKeyProviderProperty) {
-        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty::unwrap))
+        cdkBuilder.spekeKeyProvider(spekeKeyProvider.let(SpekeKeyProviderProperty.Companion::unwrap))
       }
 
       /**
@@ -4811,14 +4811,14 @@ public open class CfnOriginEndpoint(
        * @param encryption Parameters for encrypting content.
        */
       override fun encryption(encryption: IResolvable) {
-        cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
+        cdkBuilder.encryption(encryption.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param encryption Parameters for encrypting content.
        */
       override fun encryption(encryption: MssEncryptionProperty) {
-        cdkBuilder.encryption(encryption.let(MssEncryptionProperty::unwrap))
+        cdkBuilder.encryption(encryption.let(MssEncryptionProperty.Companion::unwrap))
       }
 
       /**
@@ -4849,7 +4849,7 @@ public open class CfnOriginEndpoint(
        * bitrate.
        */
       override fun streamSelection(streamSelection: IResolvable) {
-        cdkBuilder.streamSelection(streamSelection.let(IResolvable::unwrap))
+        cdkBuilder.streamSelection(streamSelection.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4857,7 +4857,7 @@ public open class CfnOriginEndpoint(
        * bitrate.
        */
       override fun streamSelection(streamSelection: StreamSelectionProperty) {
-        cdkBuilder.streamSelection(streamSelection.let(StreamSelectionProperty::unwrap))
+        cdkBuilder.streamSelection(streamSelection.let(StreamSelectionProperty.Companion::unwrap))
       }
 
       /**
@@ -5108,7 +5108,7 @@ public open class CfnOriginEndpoint(
        * presets to use.
        */
       override fun encryptionContractConfiguration(encryptionContractConfiguration: IResolvable) {
-        cdkBuilder.encryptionContractConfiguration(encryptionContractConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.encryptionContractConfiguration(encryptionContractConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5120,7 +5120,7 @@ public open class CfnOriginEndpoint(
        */
       override
           fun encryptionContractConfiguration(encryptionContractConfiguration: EncryptionContractConfigurationProperty) {
-        cdkBuilder.encryptionContractConfiguration(encryptionContractConfiguration.let(EncryptionContractConfigurationProperty::unwrap))
+        cdkBuilder.encryptionContractConfiguration(encryptionContractConfiguration.let(EncryptionContractConfigurationProperty.Companion::unwrap))
       }
 
       /**

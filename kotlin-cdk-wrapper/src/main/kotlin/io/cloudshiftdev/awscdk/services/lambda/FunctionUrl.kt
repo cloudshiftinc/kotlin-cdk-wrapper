@@ -36,8 +36,8 @@ public open class FunctionUrl(
     id: String,
     props: FunctionUrlProps,
   ) :
-      this(software.amazon.awscdk.services.lambda.FunctionUrl(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(FunctionUrlProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.FunctionUrl(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(FunctionUrlProps.Companion::unwrap))
   )
 
   public constructor(
@@ -58,7 +58,7 @@ public open class FunctionUrl(
    * @param grantee 
    */
   public override fun grantInvokeUrl(grantee: IGrantable): Grant =
-      unwrap(this).grantInvokeUrl(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantInvokeUrl(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The url of the Lambda function.
@@ -133,7 +133,7 @@ public open class FunctionUrl(
      * @param authType The type of authentication that your function URL uses. 
      */
     override fun authType(authType: FunctionUrlAuthType) {
-      cdkBuilder.authType(authType.let(FunctionUrlAuthType::unwrap))
+      cdkBuilder.authType(authType.let(FunctionUrlAuthType.Companion::unwrap))
     }
 
     /**
@@ -144,7 +144,7 @@ public open class FunctionUrl(
      * @param cors The cross-origin resource sharing (CORS) settings for your function URL. 
      */
     override fun cors(cors: FunctionUrlCorsOptions) {
-      cdkBuilder.cors(cors.let(FunctionUrlCorsOptions::unwrap))
+      cdkBuilder.cors(cors.let(FunctionUrlCorsOptions.Companion::unwrap))
     }
 
     /**
@@ -167,7 +167,7 @@ public open class FunctionUrl(
      * @param function The function to which this url refers. 
      */
     override fun function(function: IFunction) {
-      cdkBuilder.function(function.let(IFunction::unwrap))
+      cdkBuilder.function(function.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -178,7 +178,7 @@ public open class FunctionUrl(
      * @param invokeMode The type of invocation mode that your Lambda function uses. 
      */
     override fun invokeMode(invokeMode: InvokeMode) {
-      cdkBuilder.invokeMode(invokeMode.let(InvokeMode::unwrap))
+      cdkBuilder.invokeMode(invokeMode.let(InvokeMode.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lambda.FunctionUrl = cdkBuilder.build()

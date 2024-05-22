@@ -107,7 +107,7 @@ public interface ImportSourceSpecification {
      * @param bucket The S3 bucket that is being imported from. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -121,14 +121,14 @@ public interface ImportSourceSpecification {
      * @param compressionType The compression type of the imported data.
      */
     override fun compressionType(compressionType: InputCompressionType) {
-      cdkBuilder.compressionType(compressionType.let(InputCompressionType::unwrap))
+      cdkBuilder.compressionType(compressionType.let(InputCompressionType.Companion::unwrap))
     }
 
     /**
      * @param inputFormat The format of the imported data. 
      */
     override fun inputFormat(inputFormat: InputFormat) {
-      cdkBuilder.inputFormat(inputFormat.let(InputFormat::unwrap))
+      cdkBuilder.inputFormat(inputFormat.let(InputFormat.Companion::unwrap))
     }
 
     /**

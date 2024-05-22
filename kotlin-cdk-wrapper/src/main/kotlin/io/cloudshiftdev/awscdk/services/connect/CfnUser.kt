@@ -80,8 +80,8 @@ public open class CfnUser(
     id: String,
     props: CfnUserProps,
   ) :
-      this(software.amazon.awscdk.services.connect.CfnUser(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnUserProps::unwrap))
+      this(software.amazon.awscdk.services.connect.CfnUser(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnUserProps.Companion::unwrap))
   )
 
   public constructor(
@@ -129,14 +129,14 @@ public open class CfnUser(
    * Information about the user identity.
    */
   public open fun identityInfo(`value`: IResolvable) {
-    unwrap(this).setIdentityInfo(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIdentityInfo(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information about the user identity.
    */
   public open fun identityInfo(`value`: UserIdentityInfoProperty) {
-    unwrap(this).setIdentityInfo(`value`.let(UserIdentityInfoProperty::unwrap))
+    unwrap(this).setIdentityInfo(`value`.let(UserIdentityInfoProperty.Companion::unwrap))
   }
 
   /**
@@ -153,7 +153,7 @@ public open class CfnUser(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -189,14 +189,14 @@ public open class CfnUser(
    * Information about the phone configuration for the user.
    */
   public open fun phoneConfig(`value`: IResolvable) {
-    unwrap(this).setPhoneConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPhoneConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information about the phone configuration for the user.
    */
   public open fun phoneConfig(`value`: UserPhoneConfigProperty) {
-    unwrap(this).setPhoneConfig(`value`.let(UserPhoneConfigProperty::unwrap))
+    unwrap(this).setPhoneConfig(`value`.let(UserPhoneConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -252,7 +252,7 @@ public open class CfnUser(
    * The tags.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -271,7 +271,7 @@ public open class CfnUser(
    * their level of skill in a specified area.
    */
   public open fun userProficiencies(`value`: IResolvable) {
-    unwrap(this).setUserProficiencies(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUserProficiencies(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -504,7 +504,7 @@ public open class CfnUser(
      * @param identityInfo Information about the user identity. 
      */
     override fun identityInfo(identityInfo: IResolvable) {
-      cdkBuilder.identityInfo(identityInfo.let(IResolvable::unwrap))
+      cdkBuilder.identityInfo(identityInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -514,7 +514,7 @@ public open class CfnUser(
      * @param identityInfo Information about the user identity. 
      */
     override fun identityInfo(identityInfo: UserIdentityInfoProperty) {
-      cdkBuilder.identityInfo(identityInfo.let(UserIdentityInfoProperty::unwrap))
+      cdkBuilder.identityInfo(identityInfo.let(UserIdentityInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -555,7 +555,7 @@ public open class CfnUser(
      * @param phoneConfig Information about the phone configuration for the user. 
      */
     override fun phoneConfig(phoneConfig: IResolvable) {
-      cdkBuilder.phoneConfig(phoneConfig.let(IResolvable::unwrap))
+      cdkBuilder.phoneConfig(phoneConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -565,7 +565,7 @@ public open class CfnUser(
      * @param phoneConfig Information about the phone configuration for the user. 
      */
     override fun phoneConfig(phoneConfig: UserPhoneConfigProperty) {
-      cdkBuilder.phoneConfig(phoneConfig.let(UserPhoneConfigProperty::unwrap))
+      cdkBuilder.phoneConfig(phoneConfig.let(UserPhoneConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -615,7 +615,7 @@ public open class CfnUser(
      * @param tags The tags. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -635,7 +635,7 @@ public open class CfnUser(
      * value that indicates how their level of skill in a specified area. 
      */
     override fun userProficiencies(userProficiencies: IResolvable) {
-      cdkBuilder.userProficiencies(userProficiencies.let(IResolvable::unwrap))
+      cdkBuilder.userProficiencies(userProficiencies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1060,7 +1060,7 @@ public open class CfnUser(
        * @param autoAccept The Auto accept setting.
        */
       override fun autoAccept(autoAccept: IResolvable) {
-        cdkBuilder.autoAccept(autoAccept.let(IResolvable::unwrap))
+        cdkBuilder.autoAccept(autoAccept.let(IResolvable.Companion::unwrap))
       }
 
       /**

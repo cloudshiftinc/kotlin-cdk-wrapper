@@ -104,14 +104,14 @@ public interface AddApplicationActionProps : AddRuleProps {
      * @param action Action to perform. 
      */
     override fun action(action: ListenerAction) {
-      cdkBuilder.action(action.let(ListenerAction::unwrap))
+      cdkBuilder.action(action.let(ListenerAction.Companion::unwrap))
     }
 
     /**
      * @param conditions Rule applies if matches the conditions.
      */
     override fun conditions(conditions: List<ListenerCondition>) {
-      cdkBuilder.conditions(conditions.map(ListenerCondition::unwrap))
+      cdkBuilder.conditions(conditions.map(ListenerCondition.Companion::unwrap))
     }
 
     /**

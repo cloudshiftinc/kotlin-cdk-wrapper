@@ -119,7 +119,7 @@ public interface HttpGatewayListenerOptions {
      * @param connectionPool Connection pool for http listeners.
      */
     override fun connectionPool(connectionPool: HttpConnectionPool) {
-      cdkBuilder.connectionPool(connectionPool.let(HttpConnectionPool::unwrap))
+      cdkBuilder.connectionPool(connectionPool.let(HttpConnectionPool.Companion::unwrap))
     }
 
     /**
@@ -134,7 +134,7 @@ public interface HttpGatewayListenerOptions {
      * @param healthCheck The health check information for the listener.
      */
     override fun healthCheck(healthCheck: HealthCheck) {
-      cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
     }
 
     /**
@@ -148,7 +148,7 @@ public interface HttpGatewayListenerOptions {
      * @param tls Represents the configuration for enabling TLS on a listener.
      */
     override fun tls(tls: ListenerTlsOptions) {
-      cdkBuilder.tls(tls.let(ListenerTlsOptions::unwrap))
+      cdkBuilder.tls(tls.let(ListenerTlsOptions.Companion::unwrap))
     }
 
     /**

@@ -262,7 +262,7 @@ public interface AppProps {
      * information, see the README of the main CDK package.
      */
     override fun defaultStackSynthesizer(defaultStackSynthesizer: IReusableStackSynthesizer) {
-      cdkBuilder.defaultStackSynthesizer(defaultStackSynthesizer.let(IReusableStackSynthesizer::unwrap))
+      cdkBuilder.defaultStackSynthesizer(defaultStackSynthesizer.let(IReusableStackSynthesizer.Companion::unwrap))
     }
 
     /**
@@ -281,7 +281,7 @@ public interface AppProps {
      * @param policyValidationBeta1 Validation plugins to run after synthesis.
      */
     override fun policyValidationBeta1(policyValidationBeta1: List<IPolicyValidationPluginBeta1>) {
-      cdkBuilder.policyValidationBeta1(policyValidationBeta1.map(IPolicyValidationPluginBeta1::unwrap))
+      cdkBuilder.policyValidationBeta1(policyValidationBeta1.map(IPolicyValidationPluginBeta1.Companion::unwrap))
     }
 
     /**

@@ -141,7 +141,7 @@ public interface CfnEncoderConfigurationProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -159,7 +159,7 @@ public interface CfnEncoderConfigurationProps {
      * property type for more information.
      */
     override fun video(video: IResolvable) {
-      cdkBuilder.video(video.let(IResolvable::unwrap))
+      cdkBuilder.video(video.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -169,7 +169,7 @@ public interface CfnEncoderConfigurationProps {
      * property type for more information.
      */
     override fun video(video: CfnEncoderConfiguration.VideoProperty) {
-      cdkBuilder.video(video.let(CfnEncoderConfiguration.VideoProperty::unwrap))
+      cdkBuilder.video(video.let(CfnEncoderConfiguration.VideoProperty.Companion::unwrap))
     }
 
     /**

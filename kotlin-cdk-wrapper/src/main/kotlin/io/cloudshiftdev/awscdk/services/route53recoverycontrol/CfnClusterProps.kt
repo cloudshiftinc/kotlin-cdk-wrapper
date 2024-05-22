@@ -90,7 +90,7 @@ public interface CfnClusterProps {
      * @param tags The tags associated with the cluster.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

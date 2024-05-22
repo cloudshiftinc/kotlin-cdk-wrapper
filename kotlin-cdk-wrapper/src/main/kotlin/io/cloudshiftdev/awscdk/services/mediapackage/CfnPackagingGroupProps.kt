@@ -136,14 +136,14 @@ public interface CfnPackagingGroupProps {
      * @param authorization Parameters for CDN authorization.
      */
     override fun authorization(authorization: IResolvable) {
-      cdkBuilder.authorization(authorization.let(IResolvable::unwrap))
+      cdkBuilder.authorization(authorization.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param authorization Parameters for CDN authorization.
      */
     override fun authorization(authorization: CfnPackagingGroup.AuthorizationProperty) {
-      cdkBuilder.authorization(authorization.let(CfnPackagingGroup.AuthorizationProperty::unwrap))
+      cdkBuilder.authorization(authorization.let(CfnPackagingGroup.AuthorizationProperty.Companion::unwrap))
     }
 
     /**
@@ -159,14 +159,14 @@ public interface CfnPackagingGroupProps {
      * @param egressAccessLogs The configuration parameters for egress access logging.
      */
     override fun egressAccessLogs(egressAccessLogs: IResolvable) {
-      cdkBuilder.egressAccessLogs(egressAccessLogs.let(IResolvable::unwrap))
+      cdkBuilder.egressAccessLogs(egressAccessLogs.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param egressAccessLogs The configuration parameters for egress access logging.
      */
     override fun egressAccessLogs(egressAccessLogs: CfnPackagingGroup.LogConfigurationProperty) {
-      cdkBuilder.egressAccessLogs(egressAccessLogs.let(CfnPackagingGroup.LogConfigurationProperty::unwrap))
+      cdkBuilder.egressAccessLogs(egressAccessLogs.let(CfnPackagingGroup.LogConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -189,7 +189,7 @@ public interface CfnPackagingGroupProps {
      * @param tags The tags to assign to the packaging group.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

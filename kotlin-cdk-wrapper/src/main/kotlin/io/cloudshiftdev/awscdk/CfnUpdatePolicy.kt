@@ -212,7 +212,7 @@ public interface CfnUpdatePolicy {
      */
     override
         fun autoScalingReplacingUpdate(autoScalingReplacingUpdate: CfnAutoScalingReplacingUpdate) {
-      cdkBuilder.autoScalingReplacingUpdate(autoScalingReplacingUpdate.let(CfnAutoScalingReplacingUpdate::unwrap))
+      cdkBuilder.autoScalingReplacingUpdate(autoScalingReplacingUpdate.let(CfnAutoScalingReplacingUpdate.Companion::unwrap))
     }
 
     /**
@@ -237,7 +237,7 @@ public interface CfnUpdatePolicy {
      * group in batches or all at once.
      */
     override fun autoScalingRollingUpdate(autoScalingRollingUpdate: CfnAutoScalingRollingUpdate) {
-      cdkBuilder.autoScalingRollingUpdate(autoScalingRollingUpdate.let(CfnAutoScalingRollingUpdate::unwrap))
+      cdkBuilder.autoScalingRollingUpdate(autoScalingRollingUpdate.let(CfnAutoScalingRollingUpdate.Companion::unwrap))
     }
 
     /**
@@ -260,7 +260,7 @@ public interface CfnUpdatePolicy {
      */
     override
         fun autoScalingScheduledAction(autoScalingScheduledAction: CfnAutoScalingScheduledAction) {
-      cdkBuilder.autoScalingScheduledAction(autoScalingScheduledAction.let(CfnAutoScalingScheduledAction::unwrap))
+      cdkBuilder.autoScalingScheduledAction(autoScalingScheduledAction.let(CfnAutoScalingScheduledAction.Companion::unwrap))
     }
 
     /**
@@ -280,7 +280,7 @@ public interface CfnUpdatePolicy {
      */
     override
         fun codeDeployLambdaAliasUpdate(codeDeployLambdaAliasUpdate: CfnCodeDeployLambdaAliasUpdate) {
-      cdkBuilder.codeDeployLambdaAliasUpdate(codeDeployLambdaAliasUpdate.let(CfnCodeDeployLambdaAliasUpdate::unwrap))
+      cdkBuilder.codeDeployLambdaAliasUpdate(codeDeployLambdaAliasUpdate.let(CfnCodeDeployLambdaAliasUpdate.Companion::unwrap))
     }
 
     /**

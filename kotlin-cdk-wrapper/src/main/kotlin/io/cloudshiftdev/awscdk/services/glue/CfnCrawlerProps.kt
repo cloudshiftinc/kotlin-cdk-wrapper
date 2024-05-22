@@ -441,7 +441,7 @@ public interface CfnCrawlerProps {
      * credentials for the crawler instead of the IAM role credentials.
      */
     override fun lakeFormationConfiguration(lakeFormationConfiguration: IResolvable) {
-      cdkBuilder.lakeFormationConfiguration(lakeFormationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.lakeFormationConfiguration(lakeFormationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -450,7 +450,7 @@ public interface CfnCrawlerProps {
      */
     override
         fun lakeFormationConfiguration(lakeFormationConfiguration: CfnCrawler.LakeFormationConfigurationProperty) {
-      cdkBuilder.lakeFormationConfiguration(lakeFormationConfiguration.let(CfnCrawler.LakeFormationConfigurationProperty::unwrap))
+      cdkBuilder.lakeFormationConfiguration(lakeFormationConfiguration.let(CfnCrawler.LakeFormationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -476,7 +476,7 @@ public interface CfnCrawlerProps {
      * crawl only folders that were added since the last crawler run.
      */
     override fun recrawlPolicy(recrawlPolicy: IResolvable) {
-      cdkBuilder.recrawlPolicy(recrawlPolicy.let(IResolvable::unwrap))
+      cdkBuilder.recrawlPolicy(recrawlPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -484,7 +484,7 @@ public interface CfnCrawlerProps {
      * crawl only folders that were added since the last crawler run.
      */
     override fun recrawlPolicy(recrawlPolicy: CfnCrawler.RecrawlPolicyProperty) {
-      cdkBuilder.recrawlPolicy(recrawlPolicy.let(CfnCrawler.RecrawlPolicyProperty::unwrap))
+      cdkBuilder.recrawlPolicy(recrawlPolicy.let(CfnCrawler.RecrawlPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -508,14 +508,14 @@ public interface CfnCrawlerProps {
      * @param schedule For scheduled crawlers, the schedule when the crawler runs.
      */
     override fun schedule(schedule: IResolvable) {
-      cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
+      cdkBuilder.schedule(schedule.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param schedule For scheduled crawlers, the schedule when the crawler runs.
      */
     override fun schedule(schedule: CfnCrawler.ScheduleProperty) {
-      cdkBuilder.schedule(schedule.let(CfnCrawler.ScheduleProperty::unwrap))
+      cdkBuilder.schedule(schedule.let(CfnCrawler.ScheduleProperty.Companion::unwrap))
     }
 
     /**
@@ -537,7 +537,7 @@ public interface CfnCrawlerProps {
      * The SchemaChangePolicy consists of two components, `UpdateBehavior` and `DeleteBehavior` .
      */
     override fun schemaChangePolicy(schemaChangePolicy: IResolvable) {
-      cdkBuilder.schemaChangePolicy(schemaChangePolicy.let(IResolvable::unwrap))
+      cdkBuilder.schemaChangePolicy(schemaChangePolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -551,7 +551,7 @@ public interface CfnCrawlerProps {
      * The SchemaChangePolicy consists of two components, `UpdateBehavior` and `DeleteBehavior` .
      */
     override fun schemaChangePolicy(schemaChangePolicy: CfnCrawler.SchemaChangePolicyProperty) {
-      cdkBuilder.schemaChangePolicy(schemaChangePolicy.let(CfnCrawler.SchemaChangePolicyProperty::unwrap))
+      cdkBuilder.schemaChangePolicy(schemaChangePolicy.let(CfnCrawler.SchemaChangePolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -588,14 +588,14 @@ public interface CfnCrawlerProps {
      * @param targets A collection of targets to crawl. 
      */
     override fun targets(targets: IResolvable) {
-      cdkBuilder.targets(targets.let(IResolvable::unwrap))
+      cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param targets A collection of targets to crawl. 
      */
     override fun targets(targets: CfnCrawler.TargetsProperty) {
-      cdkBuilder.targets(targets.let(CfnCrawler.TargetsProperty::unwrap))
+      cdkBuilder.targets(targets.let(CfnCrawler.TargetsProperty.Companion::unwrap))
     }
 
     /**

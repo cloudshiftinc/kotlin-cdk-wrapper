@@ -93,8 +93,8 @@ public open class CfnContainer(
     id: String,
     props: CfnContainerProps,
   ) :
-      this(software.amazon.awscdk.services.lightsail.CfnContainer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnContainerProps::unwrap))
+      this(software.amazon.awscdk.services.lightsail.CfnContainer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnContainerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -136,14 +136,14 @@ public open class CfnContainer(
    * An object that describes the current container deployment of the container service.
    */
   public open fun containerServiceDeployment(`value`: IResolvable) {
-    unwrap(this).setContainerServiceDeployment(`value`.let(IResolvable::unwrap))
+    unwrap(this).setContainerServiceDeployment(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An object that describes the current container deployment of the container service.
    */
   public open fun containerServiceDeployment(`value`: ContainerServiceDeploymentProperty) {
-    unwrap(this).setContainerServiceDeployment(`value`.let(ContainerServiceDeploymentProperty::unwrap))
+    unwrap(this).setContainerServiceDeployment(`value`.let(ContainerServiceDeploymentProperty.Companion::unwrap))
   }
 
   /**
@@ -161,7 +161,7 @@ public open class CfnContainer(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -180,7 +180,7 @@ public open class CfnContainer(
    * A Boolean value indicating whether the container service is disabled.
    */
   public open fun isDisabled(`value`: IResolvable) {
-    unwrap(this).setIsDisabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIsDisabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -208,7 +208,7 @@ public open class CfnContainer(
    * repositories.
    */
   public open fun privateRegistryAccess(`value`: IResolvable) {
-    unwrap(this).setPrivateRegistryAccess(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPrivateRegistryAccess(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -217,7 +217,7 @@ public open class CfnContainer(
    * repositories.
    */
   public open fun privateRegistryAccess(`value`: PrivateRegistryAccessProperty) {
-    unwrap(this).setPrivateRegistryAccess(`value`.let(PrivateRegistryAccessProperty::unwrap))
+    unwrap(this).setPrivateRegistryAccess(`value`.let(PrivateRegistryAccessProperty.Companion::unwrap))
   }
 
   /**
@@ -239,7 +239,7 @@ public open class CfnContainer(
    * The public domain name of the container service, such as `example.com` and `www.example.com` .
    */
   public open fun publicDomainNames(`value`: IResolvable) {
-    unwrap(this).setPublicDomainNames(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPublicDomainNames(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -293,7 +293,7 @@ public open class CfnContainer(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -559,7 +559,7 @@ public open class CfnContainer(
      * of the container service. 
      */
     override fun containerServiceDeployment(containerServiceDeployment: IResolvable) {
-      cdkBuilder.containerServiceDeployment(containerServiceDeployment.let(IResolvable::unwrap))
+      cdkBuilder.containerServiceDeployment(containerServiceDeployment.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -571,7 +571,7 @@ public open class CfnContainer(
      */
     override
         fun containerServiceDeployment(containerServiceDeployment: ContainerServiceDeploymentProperty) {
-      cdkBuilder.containerServiceDeployment(containerServiceDeployment.let(ContainerServiceDeploymentProperty::unwrap))
+      cdkBuilder.containerServiceDeployment(containerServiceDeployment.let(ContainerServiceDeploymentProperty.Companion::unwrap))
     }
 
     /**
@@ -605,7 +605,7 @@ public open class CfnContainer(
      * @param isDisabled A Boolean value indicating whether the container service is disabled. 
      */
     override fun isDisabled(isDisabled: IResolvable) {
-      cdkBuilder.isDisabled(isDisabled.let(IResolvable::unwrap))
+      cdkBuilder.isDisabled(isDisabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -637,7 +637,7 @@ public open class CfnContainer(
      * Registry ( Amazon ECR ) private repositories. 
      */
     override fun privateRegistryAccess(privateRegistryAccess: IResolvable) {
-      cdkBuilder.privateRegistryAccess(privateRegistryAccess.let(IResolvable::unwrap))
+      cdkBuilder.privateRegistryAccess(privateRegistryAccess.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -656,7 +656,7 @@ public open class CfnContainer(
      * Registry ( Amazon ECR ) private repositories. 
      */
     override fun privateRegistryAccess(privateRegistryAccess: PrivateRegistryAccessProperty) {
-      cdkBuilder.privateRegistryAccess(privateRegistryAccess.let(PrivateRegistryAccessProperty::unwrap))
+      cdkBuilder.privateRegistryAccess(privateRegistryAccess.let(PrivateRegistryAccessProperty.Companion::unwrap))
     }
 
     /**
@@ -704,7 +704,7 @@ public open class CfnContainer(
      * `example.com` and `www.example.com` . 
      */
     override fun publicDomainNames(publicDomainNames: IResolvable) {
-      cdkBuilder.publicDomainNames(publicDomainNames.let(IResolvable::unwrap))
+      cdkBuilder.publicDomainNames(publicDomainNames.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -797,7 +797,7 @@ public open class CfnContainer(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1014,7 +1014,7 @@ public open class CfnContainer(
        * @param environment The environment variables of the container.
        */
       override fun environment(environment: IResolvable) {
-        cdkBuilder.environment(environment.let(IResolvable::unwrap))
+        cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1052,7 +1052,7 @@ public open class CfnContainer(
        * container.
        */
       override fun ports(ports: IResolvable) {
-        cdkBuilder.ports(ports.let(IResolvable::unwrap))
+        cdkBuilder.ports(ports.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1255,7 +1255,7 @@ public open class CfnContainer(
        * deployment.
        */
       override fun containers(containers: IResolvable) {
-        cdkBuilder.containers(containers.let(IResolvable::unwrap))
+        cdkBuilder.containers(containers.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1276,14 +1276,14 @@ public open class CfnContainer(
        * @param publicEndpoint An object that describes the endpoint of the deployment.
        */
       override fun publicEndpoint(publicEndpoint: IResolvable) {
-        cdkBuilder.publicEndpoint(publicEndpoint.let(IResolvable::unwrap))
+        cdkBuilder.publicEndpoint(publicEndpoint.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param publicEndpoint An object that describes the endpoint of the deployment.
        */
       override fun publicEndpoint(publicEndpoint: PublicEndpointProperty) {
-        cdkBuilder.publicEndpoint(publicEndpoint.let(PublicEndpointProperty::unwrap))
+        cdkBuilder.publicEndpoint(publicEndpoint.let(PublicEndpointProperty.Companion::unwrap))
       }
 
       /**
@@ -1410,7 +1410,7 @@ public open class CfnContainer(
        * @param isActive A boolean value that indicates whether the `ECRImagePullerRole` is active.
        */
       override fun isActive(isActive: IResolvable) {
-        cdkBuilder.isActive(isActive.let(IResolvable::unwrap))
+        cdkBuilder.isActive(isActive.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2046,7 +2046,7 @@ public open class CfnContainer(
        * If the role is activated, the Amazon Resource Name (ARN) of the role is also listed.
        */
       override fun ecrImagePullerRole(ecrImagePullerRole: IResolvable) {
-        cdkBuilder.ecrImagePullerRole(ecrImagePullerRole.let(IResolvable::unwrap))
+        cdkBuilder.ecrImagePullerRole(ecrImagePullerRole.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2055,7 +2055,7 @@ public open class CfnContainer(
        * If the role is activated, the Amazon Resource Name (ARN) of the role is also listed.
        */
       override fun ecrImagePullerRole(ecrImagePullerRole: EcrImagePullerRoleProperty) {
-        cdkBuilder.ecrImagePullerRole(ecrImagePullerRole.let(EcrImagePullerRoleProperty::unwrap))
+        cdkBuilder.ecrImagePullerRole(ecrImagePullerRole.let(EcrImagePullerRoleProperty.Companion::unwrap))
       }
 
       /**
@@ -2340,7 +2340,7 @@ public open class CfnContainer(
        * container.
        */
       override fun healthCheckConfig(healthCheckConfig: IResolvable) {
-        cdkBuilder.healthCheckConfig(healthCheckConfig.let(IResolvable::unwrap))
+        cdkBuilder.healthCheckConfig(healthCheckConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2348,7 +2348,7 @@ public open class CfnContainer(
        * container.
        */
       override fun healthCheckConfig(healthCheckConfig: HealthCheckConfigProperty) {
-        cdkBuilder.healthCheckConfig(healthCheckConfig.let(HealthCheckConfigProperty::unwrap))
+        cdkBuilder.healthCheckConfig(healthCheckConfig.let(HealthCheckConfigProperty.Companion::unwrap))
       }
 
       /**

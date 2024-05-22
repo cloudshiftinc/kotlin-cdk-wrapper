@@ -57,8 +57,8 @@ public open class CfnAssistantAssociation(
     id: String,
     props: CfnAssistantAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.wisdom.CfnAssistantAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAssistantAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.wisdom.CfnAssistantAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAssistantAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -89,14 +89,14 @@ public open class CfnAssistantAssociation(
    * The identifier of the associated resource.
    */
   public open fun association(`value`: IResolvable) {
-    unwrap(this).setAssociation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAssociation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The identifier of the associated resource.
    */
   public open fun association(`value`: AssociationDataProperty) {
-    unwrap(this).setAssociation(`value`.let(AssociationDataProperty::unwrap))
+    unwrap(this).setAssociation(`value`.let(AssociationDataProperty.Companion::unwrap))
   }
 
   /**
@@ -142,7 +142,7 @@ public open class CfnAssistantAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -160,7 +160,7 @@ public open class CfnAssistantAssociation(
    * The tags used to organize, track, or control access for this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -256,7 +256,7 @@ public open class CfnAssistantAssociation(
      * @param association The identifier of the associated resource. 
      */
     override fun association(association: IResolvable) {
-      cdkBuilder.association(association.let(IResolvable::unwrap))
+      cdkBuilder.association(association.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -266,7 +266,7 @@ public open class CfnAssistantAssociation(
      * @param association The identifier of the associated resource. 
      */
     override fun association(association: AssociationDataProperty) {
-      cdkBuilder.association(association.let(AssociationDataProperty::unwrap))
+      cdkBuilder.association(association.let(AssociationDataProperty.Companion::unwrap))
     }
 
     /**
@@ -297,7 +297,7 @@ public open class CfnAssistantAssociation(
      * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

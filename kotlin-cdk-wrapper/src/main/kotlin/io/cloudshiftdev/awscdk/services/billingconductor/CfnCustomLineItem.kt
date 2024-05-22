@@ -79,8 +79,8 @@ public open class CfnCustomLineItem(
     id: String,
     props: CfnCustomLineItemProps,
   ) :
-      this(software.amazon.awscdk.services.billingconductor.CfnCustomLineItem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCustomLineItemProps::unwrap))
+      this(software.amazon.awscdk.services.billingconductor.CfnCustomLineItem(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCustomLineItemProps.Companion::unwrap))
   )
 
   public constructor(
@@ -158,14 +158,14 @@ public open class CfnCustomLineItem(
    * A time range for which the custom line item is effective.
    */
   public open fun billingPeriodRange(`value`: IResolvable) {
-    unwrap(this).setBillingPeriodRange(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBillingPeriodRange(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A time range for which the custom line item is effective.
    */
   public open fun billingPeriodRange(`value`: BillingPeriodRangeProperty) {
-    unwrap(this).setBillingPeriodRange(`value`.let(BillingPeriodRangeProperty::unwrap))
+    unwrap(this).setBillingPeriodRange(`value`.let(BillingPeriodRangeProperty.Companion::unwrap))
   }
 
   /**
@@ -186,14 +186,14 @@ public open class CfnCustomLineItem(
    * The charge details of a custom line item.
    */
   public open fun customLineItemChargeDetails(`value`: IResolvable) {
-    unwrap(this).setCustomLineItemChargeDetails(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCustomLineItemChargeDetails(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The charge details of a custom line item.
    */
   public open fun customLineItemChargeDetails(`value`: CustomLineItemChargeDetailsProperty) {
-    unwrap(this).setCustomLineItemChargeDetails(`value`.let(CustomLineItemChargeDetailsProperty::unwrap))
+    unwrap(this).setCustomLineItemChargeDetails(`value`.let(CustomLineItemChargeDetailsProperty.Companion::unwrap))
   }
 
   /**
@@ -223,7 +223,7 @@ public open class CfnCustomLineItem(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -253,7 +253,7 @@ public open class CfnCustomLineItem(
    * A map that contains tag keys and tag values that are attached to a custom line item.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -418,7 +418,7 @@ public open class CfnCustomLineItem(
      * @param billingPeriodRange A time range for which the custom line item is effective. 
      */
     override fun billingPeriodRange(billingPeriodRange: IResolvable) {
-      cdkBuilder.billingPeriodRange(billingPeriodRange.let(IResolvable::unwrap))
+      cdkBuilder.billingPeriodRange(billingPeriodRange.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -428,7 +428,7 @@ public open class CfnCustomLineItem(
      * @param billingPeriodRange A time range for which the custom line item is effective. 
      */
     override fun billingPeriodRange(billingPeriodRange: BillingPeriodRangeProperty) {
-      cdkBuilder.billingPeriodRange(billingPeriodRange.let(BillingPeriodRangeProperty::unwrap))
+      cdkBuilder.billingPeriodRange(billingPeriodRange.let(BillingPeriodRangeProperty.Companion::unwrap))
     }
 
     /**
@@ -452,7 +452,7 @@ public open class CfnCustomLineItem(
      * @param customLineItemChargeDetails The charge details of a custom line item. 
      */
     override fun customLineItemChargeDetails(customLineItemChargeDetails: IResolvable) {
-      cdkBuilder.customLineItemChargeDetails(customLineItemChargeDetails.let(IResolvable::unwrap))
+      cdkBuilder.customLineItemChargeDetails(customLineItemChargeDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -465,7 +465,7 @@ public open class CfnCustomLineItem(
      */
     override
         fun customLineItemChargeDetails(customLineItemChargeDetails: CustomLineItemChargeDetailsProperty) {
-      cdkBuilder.customLineItemChargeDetails(customLineItemChargeDetails.let(CustomLineItemChargeDetailsProperty::unwrap))
+      cdkBuilder.customLineItemChargeDetails(customLineItemChargeDetails.let(CustomLineItemChargeDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -513,7 +513,7 @@ public open class CfnCustomLineItem(
      * item. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -814,7 +814,7 @@ public open class CfnCustomLineItem(
        * custom line item.
        */
       override fun flat(flat: IResolvable) {
-        cdkBuilder.flat(flat.let(IResolvable::unwrap))
+        cdkBuilder.flat(flat.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -822,7 +822,7 @@ public open class CfnCustomLineItem(
        * custom line item.
        */
       override fun flat(flat: CustomLineItemFlatChargeDetailsProperty) {
-        cdkBuilder.flat(flat.let(CustomLineItemFlatChargeDetailsProperty::unwrap))
+        cdkBuilder.flat(flat.let(CustomLineItemFlatChargeDetailsProperty.Companion::unwrap))
       }
 
       /**
@@ -838,7 +838,7 @@ public open class CfnCustomLineItem(
        * @param lineItemFilters A representation of the line item filter.
        */
       override fun lineItemFilters(lineItemFilters: IResolvable) {
-        cdkBuilder.lineItemFilters(lineItemFilters.let(IResolvable::unwrap))
+        cdkBuilder.lineItemFilters(lineItemFilters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -859,7 +859,7 @@ public open class CfnCustomLineItem(
        * details of a percentage custom line item.
        */
       override fun percentage(percentage: IResolvable) {
-        cdkBuilder.percentage(percentage.let(IResolvable::unwrap))
+        cdkBuilder.percentage(percentage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -867,7 +867,7 @@ public open class CfnCustomLineItem(
        * details of a percentage custom line item.
        */
       override fun percentage(percentage: CustomLineItemPercentageChargeDetailsProperty) {
-        cdkBuilder.percentage(percentage.let(CustomLineItemPercentageChargeDetailsProperty::unwrap))
+        cdkBuilder.percentage(percentage.let(CustomLineItemPercentageChargeDetailsProperty.Companion::unwrap))
       }
 
       /**

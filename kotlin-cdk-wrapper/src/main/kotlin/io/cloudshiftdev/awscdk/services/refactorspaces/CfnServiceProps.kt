@@ -228,14 +228,14 @@ public interface CfnServiceProps {
      * @param lambdaEndpoint A summary of the configuration for the AWS Lambda endpoint type.
      */
     override fun lambdaEndpoint(lambdaEndpoint: IResolvable) {
-      cdkBuilder.lambdaEndpoint(lambdaEndpoint.let(IResolvable::unwrap))
+      cdkBuilder.lambdaEndpoint(lambdaEndpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param lambdaEndpoint A summary of the configuration for the AWS Lambda endpoint type.
      */
     override fun lambdaEndpoint(lambdaEndpoint: CfnService.LambdaEndpointInputProperty) {
-      cdkBuilder.lambdaEndpoint(lambdaEndpoint.let(CfnService.LambdaEndpointInputProperty::unwrap))
+      cdkBuilder.lambdaEndpoint(lambdaEndpoint.let(CfnService.LambdaEndpointInputProperty.Companion::unwrap))
     }
 
     /**
@@ -258,7 +258,7 @@ public interface CfnServiceProps {
      * @param tags The tags assigned to the service.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -270,14 +270,14 @@ public interface CfnServiceProps {
      * @param urlEndpoint The summary of the configuration for the URL endpoint type.
      */
     override fun urlEndpoint(urlEndpoint: IResolvable) {
-      cdkBuilder.urlEndpoint(urlEndpoint.let(IResolvable::unwrap))
+      cdkBuilder.urlEndpoint(urlEndpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param urlEndpoint The summary of the configuration for the URL endpoint type.
      */
     override fun urlEndpoint(urlEndpoint: CfnService.UrlEndpointInputProperty) {
-      cdkBuilder.urlEndpoint(urlEndpoint.let(CfnService.UrlEndpointInputProperty::unwrap))
+      cdkBuilder.urlEndpoint(urlEndpoint.let(CfnService.UrlEndpointInputProperty.Companion::unwrap))
     }
 
     /**

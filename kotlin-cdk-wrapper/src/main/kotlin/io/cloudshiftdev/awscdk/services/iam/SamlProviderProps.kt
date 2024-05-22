@@ -81,7 +81,7 @@ public interface SamlProviderProps {
      * your organization's IdP. 
      */
     override fun metadataDocument(metadataDocument: SamlMetadataDocument) {
-      cdkBuilder.metadataDocument(metadataDocument.let(SamlMetadataDocument::unwrap))
+      cdkBuilder.metadataDocument(metadataDocument.let(SamlMetadataDocument.Companion::unwrap))
     }
 
     /**

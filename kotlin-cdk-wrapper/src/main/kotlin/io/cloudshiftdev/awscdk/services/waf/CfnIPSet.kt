@@ -64,8 +64,8 @@ public open class CfnIPSet(
     id: String,
     props: CfnIPSetProps,
   ) :
-      this(software.amazon.awscdk.services.waf.CfnIPSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnIPSetProps::unwrap))
+      this(software.amazon.awscdk.services.waf.CfnIPSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnIPSetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -86,7 +86,7 @@ public open class CfnIPSet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -100,7 +100,7 @@ public open class CfnIPSet(
    * requests originate from.
    */
   public open fun ipSetDescriptors(`value`: IResolvable) {
-    unwrap(this).setIpSetDescriptors(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIpSetDescriptors(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -207,7 +207,7 @@ public open class CfnIPSet(
      * CIDR notation) that web requests originate from. 
      */
     override fun ipSetDescriptors(ipSetDescriptors: IResolvable) {
-      cdkBuilder.ipSetDescriptors(ipSetDescriptors.let(IResolvable::unwrap))
+      cdkBuilder.ipSetDescriptors(ipSetDescriptors.let(IResolvable.Companion::unwrap))
     }
 
     /**

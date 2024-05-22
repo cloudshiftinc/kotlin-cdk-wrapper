@@ -77,8 +77,8 @@ public open class CfnMatchmakingConfiguration(
     id: String,
     props: CfnMatchmakingConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.gamelift.CfnMatchmakingConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMatchmakingConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.gamelift.CfnMatchmakingConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMatchmakingConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -107,7 +107,7 @@ public open class CfnMatchmakingConfiguration(
    * accepted by the matched players.
    */
   public open fun acceptanceRequired(`value`: IResolvable) {
-    unwrap(this).setAcceptanceRequired(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAcceptanceRequired(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -217,7 +217,7 @@ public open class CfnMatchmakingConfiguration(
    * A set of custom properties for a game session, formatted as key-value pairs.
    */
   public open fun gameProperties(`value`: IResolvable) {
-    unwrap(this).setGameProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setGameProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -287,7 +287,7 @@ public open class CfnMatchmakingConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -371,7 +371,7 @@ public open class CfnMatchmakingConfiguration(
    * A list of labels to assign to the new matchmaking configuration resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -722,7 +722,7 @@ public open class CfnMatchmakingConfiguration(
      * configuration must be accepted by the matched players. 
      */
     override fun acceptanceRequired(acceptanceRequired: IResolvable) {
-      cdkBuilder.acceptanceRequired(acceptanceRequired.let(IResolvable::unwrap))
+      cdkBuilder.acceptanceRequired(acceptanceRequired.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -837,7 +837,7 @@ public open class CfnMatchmakingConfiguration(
      * pairs. 
      */
     override fun gameProperties(gameProperties: IResolvable) {
-      cdkBuilder.gameProperties(gameProperties.let(IResolvable::unwrap))
+      cdkBuilder.gameProperties(gameProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1014,7 +1014,7 @@ public open class CfnMatchmakingConfiguration(
      * @param tags A list of labels to assign to the new matchmaking configuration resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

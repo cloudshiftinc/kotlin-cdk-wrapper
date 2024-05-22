@@ -64,8 +64,8 @@ public open class CfnJobQueue(
     id: String,
     props: CfnJobQueueProps,
   ) :
-      this(software.amazon.awscdk.services.batch.CfnJobQueue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnJobQueueProps::unwrap))
+      this(software.amazon.awscdk.services.batch.CfnJobQueue(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnJobQueueProps.Companion::unwrap))
   )
 
   public constructor(
@@ -90,7 +90,7 @@ public open class CfnJobQueue(
    * The set of compute environments mapped to a job queue and their order relative to each other.
    */
   public open fun computeEnvironmentOrder(`value`: IResolvable) {
-    unwrap(this).setComputeEnvironmentOrder(`value`.let(IResolvable::unwrap))
+    unwrap(this).setComputeEnvironmentOrder(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -112,7 +112,7 @@ public open class CfnJobQueue(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -138,7 +138,7 @@ public open class CfnJobQueue(
    * the specified state longer than specified times.
    */
   public open fun jobStateTimeLimitActions(`value`: IResolvable) {
-    unwrap(this).setJobStateTimeLimitActions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setJobStateTimeLimitActions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -401,7 +401,7 @@ public open class CfnJobQueue(
      * their order relative to each other. 
      */
     override fun computeEnvironmentOrder(computeEnvironmentOrder: IResolvable) {
-      cdkBuilder.computeEnvironmentOrder(computeEnvironmentOrder.let(IResolvable::unwrap))
+      cdkBuilder.computeEnvironmentOrder(computeEnvironmentOrder.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -473,7 +473,7 @@ public open class CfnJobQueue(
      * at the head of the job queue in the specified state longer than specified times. 
      */
     override fun jobStateTimeLimitActions(jobStateTimeLimitActions: IResolvable) {
-      cdkBuilder.jobStateTimeLimitActions(jobStateTimeLimitActions.let(IResolvable::unwrap))
+      cdkBuilder.jobStateTimeLimitActions(jobStateTimeLimitActions.let(IResolvable.Companion::unwrap))
     }
 
     /**

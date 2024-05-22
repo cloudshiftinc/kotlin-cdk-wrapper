@@ -148,14 +148,14 @@ public interface PlacementGroupProps {
      * You can use host level spread placement groups only with AWS Outposts.
      */
     override fun spreadLevel(spreadLevel: PlacementGroupSpreadLevel) {
-      cdkBuilder.spreadLevel(spreadLevel.let(PlacementGroupSpreadLevel::unwrap))
+      cdkBuilder.spreadLevel(spreadLevel.let(PlacementGroupSpreadLevel.Companion::unwrap))
     }
 
     /**
      * @param strategy Which strategy to use when launching instances.
      */
     override fun strategy(strategy: PlacementGroupStrategy) {
-      cdkBuilder.strategy(strategy.let(PlacementGroupStrategy::unwrap))
+      cdkBuilder.strategy(strategy.let(PlacementGroupStrategy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.PlacementGroupProps = cdkBuilder.build()

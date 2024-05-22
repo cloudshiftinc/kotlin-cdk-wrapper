@@ -87,7 +87,7 @@ public interface HttpGatewayRouteSpecOptions : CommonGatewayRouteSpecOptions {
      * When path match is defined, this may optionally determine the path rewrite configuration.
      */
     override fun match(match: HttpGatewayRouteMatch) {
-      cdkBuilder.match(match.let(HttpGatewayRouteMatch::unwrap))
+      cdkBuilder.match(match.let(HttpGatewayRouteMatch.Companion::unwrap))
     }
 
     /**
@@ -113,7 +113,7 @@ public interface HttpGatewayRouteSpecOptions : CommonGatewayRouteSpecOptions {
      * @param routeTarget The VirtualService this GatewayRoute directs traffic to. 
      */
     override fun routeTarget(routeTarget: IVirtualService) {
-      cdkBuilder.routeTarget(routeTarget.let(IVirtualService::unwrap))
+      cdkBuilder.routeTarget(routeTarget.let(IVirtualService.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appmesh.HttpGatewayRouteSpecOptions =

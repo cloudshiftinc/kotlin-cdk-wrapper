@@ -921,7 +921,7 @@ public interface CfnAppProps {
      * assessment failure* events.
      */
     override fun eventSubscriptions(eventSubscriptions: IResolvable) {
-      cdkBuilder.eventSubscriptions(eventSubscriptions.let(IResolvable::unwrap))
+      cdkBuilder.eventSubscriptions(eventSubscriptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -955,7 +955,7 @@ public interface CfnAppProps {
      * while creating the application, importing its resources, and running an assessment.
      */
     override fun permissionModel(permissionModel: IResolvable) {
-      cdkBuilder.permissionModel(permissionModel.let(IResolvable::unwrap))
+      cdkBuilder.permissionModel(permissionModel.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -963,7 +963,7 @@ public interface CfnAppProps {
      * while creating the application, importing its resources, and running an assessment.
      */
     override fun permissionModel(permissionModel: CfnApp.PermissionModelProperty) {
-      cdkBuilder.permissionModel(permissionModel.let(CfnApp.PermissionModelProperty::unwrap))
+      cdkBuilder.permissionModel(permissionModel.let(CfnApp.PermissionModelProperty.Companion::unwrap))
     }
 
     /**
@@ -987,7 +987,7 @@ public interface CfnAppProps {
      * @param resourceMappings An array of `ResourceMapping` objects. 
      */
     override fun resourceMappings(resourceMappings: IResolvable) {
-      cdkBuilder.resourceMappings(resourceMappings.let(IResolvable::unwrap))
+      cdkBuilder.resourceMappings(resourceMappings.let(IResolvable.Companion::unwrap))
     }
 
     /**

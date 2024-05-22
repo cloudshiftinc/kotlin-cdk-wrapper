@@ -139,7 +139,7 @@ public interface CfnResponseHeadersPolicyProps {
      * @param responseHeadersPolicyConfig A response headers policy configuration. 
      */
     override fun responseHeadersPolicyConfig(responseHeadersPolicyConfig: IResolvable) {
-      cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig.let(IResolvable::unwrap))
+      cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -147,7 +147,7 @@ public interface CfnResponseHeadersPolicyProps {
      */
     override
         fun responseHeadersPolicyConfig(responseHeadersPolicyConfig: CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty) {
-      cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig.let(CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty::unwrap))
+      cdkBuilder.responseHeadersPolicyConfig(responseHeadersPolicyConfig.let(CfnResponseHeadersPolicy.ResponseHeadersPolicyConfigProperty.Companion::unwrap))
     }
 
     /**

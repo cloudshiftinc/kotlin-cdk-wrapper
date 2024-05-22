@@ -501,21 +501,21 @@ public interface CfnClusterProps {
      * engine version upgrades after launch.
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param clusterEndpoint The cluster 's configuration endpoint.
      */
     override fun clusterEndpoint(clusterEndpoint: IResolvable) {
-      cdkBuilder.clusterEndpoint(clusterEndpoint.let(IResolvable::unwrap))
+      cdkBuilder.clusterEndpoint(clusterEndpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param clusterEndpoint The cluster 's configuration endpoint.
      */
     override fun clusterEndpoint(clusterEndpoint: CfnCluster.EndpointProperty) {
-      cdkBuilder.clusterEndpoint(clusterEndpoint.let(CfnCluster.EndpointProperty::unwrap))
+      cdkBuilder.clusterEndpoint(clusterEndpoint.let(CfnCluster.EndpointProperty.Companion::unwrap))
     }
 
     /**
@@ -713,7 +713,7 @@ public interface CfnClusterProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -735,7 +735,7 @@ public interface CfnClusterProps {
      * @param tlsEnabled A flag to indicate if In-transit encryption is enabled.
      */
     override fun tlsEnabled(tlsEnabled: IResolvable) {
-      cdkBuilder.tlsEnabled(tlsEnabled.let(IResolvable::unwrap))
+      cdkBuilder.tlsEnabled(tlsEnabled.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.memorydb.CfnClusterProps =

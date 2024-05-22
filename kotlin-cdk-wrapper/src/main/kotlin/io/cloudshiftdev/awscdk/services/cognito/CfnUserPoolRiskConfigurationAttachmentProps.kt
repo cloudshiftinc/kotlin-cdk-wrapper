@@ -222,7 +222,7 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
      * takeover.
      */
     override fun accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration: IResolvable) {
-      cdkBuilder.accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -232,7 +232,7 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
      */
     override
         fun accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration: CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty) {
-      cdkBuilder.accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration.let(CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty::unwrap))
+      cdkBuilder.accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration.let(CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty.Companion::unwrap))
     }
 
     /**
@@ -262,7 +262,7 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
      */
     override
         fun compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration: IResolvable) {
-      cdkBuilder.compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -271,7 +271,7 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
      */
     override
         fun compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration: CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty) {
-      cdkBuilder.compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration.let(CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty::unwrap))
+      cdkBuilder.compromisedCredentialsRiskConfiguration(compromisedCredentialsRiskConfiguration.let(CfnUserPoolRiskConfigurationAttachment.CompromisedCredentialsRiskConfigurationTypeProperty.Companion::unwrap))
     }
 
     /**
@@ -289,7 +289,7 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
      * @param riskExceptionConfiguration The configuration to override the risk decision.
      */
     override fun riskExceptionConfiguration(riskExceptionConfiguration: IResolvable) {
-      cdkBuilder.riskExceptionConfiguration(riskExceptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.riskExceptionConfiguration(riskExceptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -297,7 +297,7 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
      */
     override
         fun riskExceptionConfiguration(riskExceptionConfiguration: CfnUserPoolRiskConfigurationAttachment.RiskExceptionConfigurationTypeProperty) {
-      cdkBuilder.riskExceptionConfiguration(riskExceptionConfiguration.let(CfnUserPoolRiskConfigurationAttachment.RiskExceptionConfigurationTypeProperty::unwrap))
+      cdkBuilder.riskExceptionConfiguration(riskExceptionConfiguration.let(CfnUserPoolRiskConfigurationAttachment.RiskExceptionConfigurationTypeProperty.Companion::unwrap))
     }
 
     /**

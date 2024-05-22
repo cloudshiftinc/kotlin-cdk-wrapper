@@ -76,8 +76,8 @@ public open class CfnVerifiedAccessTrustProvider(
     id: String,
     props: CfnVerifiedAccessTrustProviderProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVerifiedAccessTrustProviderProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnVerifiedAccessTrustProvider(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVerifiedAccessTrustProviderProps.Companion::unwrap))
   )
 
   public constructor(
@@ -124,14 +124,14 @@ public open class CfnVerifiedAccessTrustProvider(
    * The options for device-identity trust provider.
    */
   public open fun deviceOptions(`value`: IResolvable) {
-    unwrap(this).setDeviceOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeviceOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The options for device-identity trust provider.
    */
   public open fun deviceOptions(`value`: DeviceOptionsProperty) {
-    unwrap(this).setDeviceOptions(`value`.let(DeviceOptionsProperty::unwrap))
+    unwrap(this).setDeviceOptions(`value`.let(DeviceOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -160,7 +160,7 @@ public open class CfnVerifiedAccessTrustProvider(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -172,14 +172,14 @@ public open class CfnVerifiedAccessTrustProvider(
    * The options for an OpenID Connect-compatible user-identity trust provider.
    */
   public open fun oidcOptions(`value`: IResolvable) {
-    unwrap(this).setOidcOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOidcOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The options for an OpenID Connect-compatible user-identity trust provider.
    */
   public open fun oidcOptions(`value`: OidcOptionsProperty) {
-    unwrap(this).setOidcOptions(`value`.let(OidcOptionsProperty::unwrap))
+    unwrap(this).setOidcOptions(`value`.let(OidcOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -211,14 +211,14 @@ public open class CfnVerifiedAccessTrustProvider(
    * The options for additional server side encryption.
    */
   public open fun sseSpecification(`value`: IResolvable) {
-    unwrap(this).setSseSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSseSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The options for additional server side encryption.
    */
   public open fun sseSpecification(`value`: SseSpecificationProperty) {
-    unwrap(this).setSseSpecification(`value`.let(SseSpecificationProperty::unwrap))
+    unwrap(this).setSseSpecification(`value`.let(SseSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -244,7 +244,7 @@ public open class CfnVerifiedAccessTrustProvider(
    * The tags.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -444,7 +444,7 @@ public open class CfnVerifiedAccessTrustProvider(
      * @param deviceOptions The options for device-identity trust provider. 
      */
     override fun deviceOptions(deviceOptions: IResolvable) {
-      cdkBuilder.deviceOptions(deviceOptions.let(IResolvable::unwrap))
+      cdkBuilder.deviceOptions(deviceOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -454,7 +454,7 @@ public open class CfnVerifiedAccessTrustProvider(
      * @param deviceOptions The options for device-identity trust provider. 
      */
     override fun deviceOptions(deviceOptions: DeviceOptionsProperty) {
-      cdkBuilder.deviceOptions(deviceOptions.let(DeviceOptionsProperty::unwrap))
+      cdkBuilder.deviceOptions(deviceOptions.let(DeviceOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -486,7 +486,7 @@ public open class CfnVerifiedAccessTrustProvider(
      * 
      */
     override fun oidcOptions(oidcOptions: IResolvable) {
-      cdkBuilder.oidcOptions(oidcOptions.let(IResolvable::unwrap))
+      cdkBuilder.oidcOptions(oidcOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -497,7 +497,7 @@ public open class CfnVerifiedAccessTrustProvider(
      * 
      */
     override fun oidcOptions(oidcOptions: OidcOptionsProperty) {
-      cdkBuilder.oidcOptions(oidcOptions.let(OidcOptionsProperty::unwrap))
+      cdkBuilder.oidcOptions(oidcOptions.let(OidcOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -529,7 +529,7 @@ public open class CfnVerifiedAccessTrustProvider(
      * @param sseSpecification The options for additional server side encryption. 
      */
     override fun sseSpecification(sseSpecification: IResolvable) {
-      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -539,7 +539,7 @@ public open class CfnVerifiedAccessTrustProvider(
      * @param sseSpecification The options for additional server side encryption. 
      */
     override fun sseSpecification(sseSpecification: SseSpecificationProperty) {
-      cdkBuilder.sseSpecification(sseSpecification.let(SseSpecificationProperty::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(SseSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -560,7 +560,7 @@ public open class CfnVerifiedAccessTrustProvider(
      * @param tags The tags. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1056,7 +1056,7 @@ public open class CfnVerifiedAccessTrustProvider(
        * Valid values: `True` | `False`
        */
       override fun customerManagedKeyEnabled(customerManagedKeyEnabled: IResolvable) {
-        cdkBuilder.customerManagedKeyEnabled(customerManagedKeyEnabled.let(IResolvable::unwrap))
+        cdkBuilder.customerManagedKeyEnabled(customerManagedKeyEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**

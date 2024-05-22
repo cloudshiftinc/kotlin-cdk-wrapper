@@ -93,7 +93,7 @@ public interface DefinitionConfig {
      * @param definitionS3Location the value to be set.
      */
     override fun definitionS3Location(definitionS3Location: CfnStateMachine.S3LocationProperty) {
-      cdkBuilder.definitionS3Location(definitionS3Location.let(CfnStateMachine.S3LocationProperty::unwrap))
+      cdkBuilder.definitionS3Location(definitionS3Location.let(CfnStateMachine.S3LocationProperty.Companion::unwrap))
     }
 
     /**

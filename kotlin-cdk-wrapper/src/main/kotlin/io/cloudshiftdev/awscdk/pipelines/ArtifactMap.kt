@@ -29,7 +29,7 @@ public open class ArtifactMap(
    * @param x 
    */
   public open fun toCodePipeline(x: FileSet): Artifact =
-      unwrap(this).toCodePipeline(x.let(FileSet::unwrap)).let(Artifact::wrap)
+      unwrap(this).toCodePipeline(x.let(FileSet.Companion::unwrap)).let(Artifact::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.pipelines.ArtifactMap): ArtifactMap =

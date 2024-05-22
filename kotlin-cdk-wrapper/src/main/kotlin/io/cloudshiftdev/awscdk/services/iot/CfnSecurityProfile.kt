@@ -106,7 +106,7 @@ public open class CfnSecurityProfile(
   cdkObject: software.amazon.awscdk.services.iot.CfnSecurityProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.iot.CfnSecurityProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.iot.CfnSecurityProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -115,8 +115,8 @@ public open class CfnSecurityProfile(
     id: String,
     props: CfnSecurityProfileProps,
   ) :
-      this(software.amazon.awscdk.services.iot.CfnSecurityProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSecurityProfileProps::unwrap))
+      this(software.amazon.awscdk.services.iot.CfnSecurityProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSecurityProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -136,7 +136,7 @@ public open class CfnSecurityProfile(
    * A list of metrics whose data is retained (stored).
    */
   public open fun additionalMetricsToRetainV2(`value`: IResolvable) {
-    unwrap(this).setAdditionalMetricsToRetainV2(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAdditionalMetricsToRetainV2(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -161,7 +161,7 @@ public open class CfnSecurityProfile(
    * Specifies the destinations to which alerts are sent.
    */
   public open fun alertTargets(`value`: IResolvable) {
-    unwrap(this).setAlertTargets(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAlertTargets(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -185,7 +185,7 @@ public open class CfnSecurityProfile(
    * Specifies the behaviors that, when violated by a device (thing), cause an alert.
    */
   public open fun behaviors(`value`: IResolvable) {
-    unwrap(this).setBehaviors(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBehaviors(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -206,7 +206,7 @@ public open class CfnSecurityProfile(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -218,14 +218,14 @@ public open class CfnSecurityProfile(
    * Specifies the MQTT topic and role ARN required for metric export.
    */
   public open fun metricsExportConfig(`value`: IResolvable) {
-    unwrap(this).setMetricsExportConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMetricsExportConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the MQTT topic and role ARN required for metric export.
    */
   public open fun metricsExportConfig(`value`: MetricsExportConfigProperty) {
-    unwrap(this).setMetricsExportConfig(`value`.let(MetricsExportConfigProperty::unwrap))
+    unwrap(this).setMetricsExportConfig(`value`.let(MetricsExportConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -276,7 +276,7 @@ public open class CfnSecurityProfile(
    * Metadata that can be used to manage the security profile.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -487,7 +487,7 @@ public open class CfnSecurityProfile(
      * @param additionalMetricsToRetainV2 A list of metrics whose data is retained (stored). 
      */
     override fun additionalMetricsToRetainV2(additionalMetricsToRetainV2: IResolvable) {
-      cdkBuilder.additionalMetricsToRetainV2(additionalMetricsToRetainV2.let(IResolvable::unwrap))
+      cdkBuilder.additionalMetricsToRetainV2(additionalMetricsToRetainV2.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -527,7 +527,7 @@ public open class CfnSecurityProfile(
      * @param alertTargets Specifies the destinations to which alerts are sent. 
      */
     override fun alertTargets(alertTargets: IResolvable) {
-      cdkBuilder.alertTargets(alertTargets.let(IResolvable::unwrap))
+      cdkBuilder.alertTargets(alertTargets.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -551,7 +551,7 @@ public open class CfnSecurityProfile(
      * alert. 
      */
     override fun behaviors(behaviors: IResolvable) {
-      cdkBuilder.behaviors(behaviors.let(IResolvable::unwrap))
+      cdkBuilder.behaviors(behaviors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -581,7 +581,7 @@ public open class CfnSecurityProfile(
      * @param metricsExportConfig Specifies the MQTT topic and role ARN required for metric export. 
      */
     override fun metricsExportConfig(metricsExportConfig: IResolvable) {
-      cdkBuilder.metricsExportConfig(metricsExportConfig.let(IResolvable::unwrap))
+      cdkBuilder.metricsExportConfig(metricsExportConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -591,7 +591,7 @@ public open class CfnSecurityProfile(
      * @param metricsExportConfig Specifies the MQTT topic and role ARN required for metric export. 
      */
     override fun metricsExportConfig(metricsExportConfig: MetricsExportConfigProperty) {
-      cdkBuilder.metricsExportConfig(metricsExportConfig.let(MetricsExportConfigProperty::unwrap))
+      cdkBuilder.metricsExportConfig(metricsExportConfig.let(MetricsExportConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -633,7 +633,7 @@ public open class CfnSecurityProfile(
      * @param tags Metadata that can be used to manage the security profile. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1058,14 +1058,14 @@ public open class CfnSecurityProfile(
        * @param mlDetectionConfig The confidence level of the detection model.
        */
       override fun mlDetectionConfig(mlDetectionConfig: IResolvable) {
-        cdkBuilder.mlDetectionConfig(mlDetectionConfig.let(IResolvable::unwrap))
+        cdkBuilder.mlDetectionConfig(mlDetectionConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param mlDetectionConfig The confidence level of the detection model.
        */
       override fun mlDetectionConfig(mlDetectionConfig: MachineLearningDetectionConfigProperty) {
-        cdkBuilder.mlDetectionConfig(mlDetectionConfig.let(MachineLearningDetectionConfigProperty::unwrap))
+        cdkBuilder.mlDetectionConfig(mlDetectionConfig.let(MachineLearningDetectionConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1082,7 +1082,7 @@ public open class CfnSecurityProfile(
        * value by which a behavior is determined to be in compliance or in violation of the behavior.
        */
       override fun statisticalThreshold(statisticalThreshold: IResolvable) {
-        cdkBuilder.statisticalThreshold(statisticalThreshold.let(IResolvable::unwrap))
+        cdkBuilder.statisticalThreshold(statisticalThreshold.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1090,7 +1090,7 @@ public open class CfnSecurityProfile(
        * value by which a behavior is determined to be in compliance or in violation of the behavior.
        */
       override fun statisticalThreshold(statisticalThreshold: StatisticalThresholdProperty) {
-        cdkBuilder.statisticalThreshold(statisticalThreshold.let(StatisticalThresholdProperty::unwrap))
+        cdkBuilder.statisticalThreshold(statisticalThreshold.let(StatisticalThresholdProperty.Companion::unwrap))
       }
 
       /**
@@ -1107,14 +1107,14 @@ public open class CfnSecurityProfile(
        * @param value The value to be compared with the `metric` .
        */
       override fun `value`(`value`: IResolvable) {
-        cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
+        cdkBuilder.`value`(`value`.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param value The value to be compared with the `metric` .
        */
       override fun `value`(`value`: MetricValueProperty) {
-        cdkBuilder.`value`(`value`.let(MetricValueProperty::unwrap))
+        cdkBuilder.`value`(`value`.let(MetricValueProperty.Companion::unwrap))
       }
 
       /**
@@ -1418,7 +1418,7 @@ public open class CfnSecurityProfile(
        * Device Defender detects that a device is behaving anomalously.
        */
       override fun criteria(criteria: IResolvable) {
-        cdkBuilder.criteria(criteria.let(IResolvable::unwrap))
+        cdkBuilder.criteria(criteria.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1429,7 +1429,7 @@ public open class CfnSecurityProfile(
        * Device Defender detects that a device is behaving anomalously.
        */
       override fun criteria(criteria: BehaviorCriteriaProperty) {
-        cdkBuilder.criteria(criteria.let(BehaviorCriteriaProperty::unwrap))
+        cdkBuilder.criteria(criteria.let(BehaviorCriteriaProperty.Companion::unwrap))
       }
 
       /**
@@ -1457,7 +1457,7 @@ public open class CfnSecurityProfile(
        * true.
        */
       override fun exportMetric(exportMetric: IResolvable) {
-        cdkBuilder.exportMetric(exportMetric.let(IResolvable::unwrap))
+        cdkBuilder.exportMetric(exportMetric.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1471,14 +1471,14 @@ public open class CfnSecurityProfile(
        * @param metricDimension The dimension of the metric.
        */
       override fun metricDimension(metricDimension: IResolvable) {
-        cdkBuilder.metricDimension(metricDimension.let(IResolvable::unwrap))
+        cdkBuilder.metricDimension(metricDimension.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param metricDimension The dimension of the metric.
        */
       override fun metricDimension(metricDimension: MetricDimensionProperty) {
-        cdkBuilder.metricDimension(metricDimension.let(MetricDimensionProperty::unwrap))
+        cdkBuilder.metricDimension(metricDimension.let(MetricDimensionProperty.Companion::unwrap))
       }
 
       /**
@@ -1509,7 +1509,7 @@ public open class CfnSecurityProfile(
        * If you set the value to `true` , alerts will be suppressed.
        */
       override fun suppressAlerts(suppressAlerts: IResolvable) {
-        cdkBuilder.suppressAlerts(suppressAlerts.let(IResolvable::unwrap))
+        cdkBuilder.suppressAlerts(suppressAlerts.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.iot.CfnSecurityProfile.BehaviorProperty =
@@ -1910,7 +1910,7 @@ public open class CfnSecurityProfile(
        * when it's true.
        */
       override fun exportMetric(exportMetric: IResolvable) {
-        cdkBuilder.exportMetric(exportMetric.let(IResolvable::unwrap))
+        cdkBuilder.exportMetric(exportMetric.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1924,14 +1924,14 @@ public open class CfnSecurityProfile(
        * @param metricDimension The dimension of the metric.
        */
       override fun metricDimension(metricDimension: IResolvable) {
-        cdkBuilder.metricDimension(metricDimension.let(IResolvable::unwrap))
+        cdkBuilder.metricDimension(metricDimension.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param metricDimension The dimension of the metric.
        */
       override fun metricDimension(metricDimension: MetricDimensionProperty) {
-        cdkBuilder.metricDimension(metricDimension.let(MetricDimensionProperty::unwrap))
+        cdkBuilder.metricDimension(metricDimension.let(MetricDimensionProperty.Companion::unwrap))
       }
 
       /**
@@ -2167,7 +2167,7 @@ public open class CfnSecurityProfile(
        * @param numbers The numeric value of a metric.
        */
       override fun numbers(numbers: IResolvable) {
-        cdkBuilder.numbers(numbers.let(IResolvable::unwrap))
+        cdkBuilder.numbers(numbers.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2187,7 +2187,7 @@ public open class CfnSecurityProfile(
        * set to be compared with the `metric` .
        */
       override fun ports(ports: IResolvable) {
-        cdkBuilder.ports(ports.let(IResolvable::unwrap))
+        cdkBuilder.ports(ports.let(IResolvable.Companion::unwrap))
       }
 
       /**

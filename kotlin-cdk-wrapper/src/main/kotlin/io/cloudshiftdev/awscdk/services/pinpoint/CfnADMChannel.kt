@@ -50,8 +50,8 @@ public open class CfnADMChannel(
     id: String,
     props: CfnADMChannelProps,
   ) :
-      this(software.amazon.awscdk.services.pinpoint.CfnADMChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnADMChannelProps::unwrap))
+      this(software.amazon.awscdk.services.pinpoint.CfnADMChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnADMChannelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -120,7 +120,7 @@ public open class CfnADMChannel(
    * Specifies whether to enable the ADM channel for the application.
    */
   public open fun enabled(`value`: IResolvable) {
-    unwrap(this).setEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -129,7 +129,7 @@ public open class CfnADMChannel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -236,7 +236,7 @@ public open class CfnADMChannel(
      * @param enabled Specifies whether to enable the ADM channel for the application. 
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.pinpoint.CfnADMChannel = cdkBuilder.build()

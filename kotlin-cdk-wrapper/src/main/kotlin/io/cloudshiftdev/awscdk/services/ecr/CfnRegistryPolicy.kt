@@ -44,8 +44,8 @@ public open class CfnRegistryPolicy(
     id: String,
     props: CfnRegistryPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.ecr.CfnRegistryPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRegistryPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.ecr.CfnRegistryPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRegistryPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -66,7 +66,7 @@ public open class CfnRegistryPolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

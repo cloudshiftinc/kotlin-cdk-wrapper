@@ -53,8 +53,8 @@ public open class CfnResourceCollection(
     id: String,
     props: CfnResourceCollectionProps,
   ) :
-      this(software.amazon.awscdk.services.devopsguru.CfnResourceCollection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnResourceCollectionProps::unwrap))
+      this(software.amazon.awscdk.services.devopsguru.CfnResourceCollection(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnResourceCollectionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -78,7 +78,7 @@ public open class CfnResourceCollection(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -92,7 +92,7 @@ public open class CfnResourceCollection(
    * behavior by DevOps Guru.
    */
   public open fun resourceCollectionFilter(`value`: IResolvable) {
-    unwrap(this).setResourceCollectionFilter(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResourceCollectionFilter(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -100,7 +100,7 @@ public open class CfnResourceCollection(
    * behavior by DevOps Guru.
    */
   public open fun resourceCollectionFilter(`value`: ResourceCollectionFilterProperty) {
-    unwrap(this).setResourceCollectionFilter(`value`.let(ResourceCollectionFilterProperty::unwrap))
+    unwrap(this).setResourceCollectionFilter(`value`.let(ResourceCollectionFilterProperty.Companion::unwrap))
   }
 
   /**
@@ -168,7 +168,7 @@ public open class CfnResourceCollection(
      * resources are analyzed for anomalous behavior by DevOps Guru. 
      */
     override fun resourceCollectionFilter(resourceCollectionFilter: IResolvable) {
-      cdkBuilder.resourceCollectionFilter(resourceCollectionFilter.let(IResolvable::unwrap))
+      cdkBuilder.resourceCollectionFilter(resourceCollectionFilter.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -181,7 +181,7 @@ public open class CfnResourceCollection(
      */
     override
         fun resourceCollectionFilter(resourceCollectionFilter: ResourceCollectionFilterProperty) {
-      cdkBuilder.resourceCollectionFilter(resourceCollectionFilter.let(ResourceCollectionFilterProperty::unwrap))
+      cdkBuilder.resourceCollectionFilter(resourceCollectionFilter.let(ResourceCollectionFilterProperty.Companion::unwrap))
     }
 
     /**
@@ -512,7 +512,7 @@ public open class CfnResourceCollection(
        * *AWS CloudFormation User Guide* .
        */
       override fun cloudFormation(cloudFormation: IResolvable) {
-        cdkBuilder.cloudFormation(cloudFormation.let(IResolvable::unwrap))
+        cdkBuilder.cloudFormation(cloudFormation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -523,7 +523,7 @@ public open class CfnResourceCollection(
        * *AWS CloudFormation User Guide* .
        */
       override fun cloudFormation(cloudFormation: CloudFormationCollectionFilterProperty) {
-        cdkBuilder.cloudFormation(cloudFormation.let(CloudFormationCollectionFilterProperty::unwrap))
+        cdkBuilder.cloudFormation(cloudFormation.let(CloudFormationCollectionFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -571,7 +571,7 @@ public open class CfnResourceCollection(
        * `Devops-Guru-production-application/RDS` or `Devops-Guru-production-application/containers` .
        */
       override fun tags(tags: List<TagCollectionProperty>) {
-        cdkBuilder.tags(tags.map(TagCollectionProperty::unwrap))
+        cdkBuilder.tags(tags.map(TagCollectionProperty.Companion::unwrap))
       }
 
       /**

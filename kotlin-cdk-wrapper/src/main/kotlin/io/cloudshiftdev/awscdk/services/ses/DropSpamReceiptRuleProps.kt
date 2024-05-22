@@ -102,7 +102,7 @@ public interface DropSpamReceiptRuleProps : ReceiptRuleProps {
      * the recipient email addresses or domains specified in the receipt rule.
      */
     override fun actions(actions: List<IReceiptRuleAction>) {
-      cdkBuilder.actions(actions.map(IReceiptRuleAction::unwrap))
+      cdkBuilder.actions(actions.map(IReceiptRuleAction.Companion::unwrap))
     }
 
     /**
@@ -115,7 +115,7 @@ public interface DropSpamReceiptRuleProps : ReceiptRuleProps {
      * @param after An existing rule after which the new rule will be placed.
      */
     override fun after(after: IReceiptRule) {
-      cdkBuilder.after(after.let(IReceiptRule::unwrap))
+      cdkBuilder.after(after.let(IReceiptRule.Companion::unwrap))
     }
 
     /**
@@ -148,7 +148,7 @@ public interface DropSpamReceiptRuleProps : ReceiptRuleProps {
      * @param ruleSet The name of the rule set that the receipt rule will be added to. 
      */
     override fun ruleSet(ruleSet: IReceiptRuleSet) {
-      cdkBuilder.ruleSet(ruleSet.let(IReceiptRuleSet::unwrap))
+      cdkBuilder.ruleSet(ruleSet.let(IReceiptRuleSet.Companion::unwrap))
     }
 
     /**
@@ -163,7 +163,7 @@ public interface DropSpamReceiptRuleProps : ReceiptRuleProps {
      * connection encrypted with Transport Layer Security (TLS).
      */
     override fun tlsPolicy(tlsPolicy: TlsPolicy) {
-      cdkBuilder.tlsPolicy(tlsPolicy.let(TlsPolicy::unwrap))
+      cdkBuilder.tlsPolicy(tlsPolicy.let(TlsPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ses.DropSpamReceiptRuleProps =

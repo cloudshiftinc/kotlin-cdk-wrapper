@@ -80,7 +80,7 @@ public interface LambdaDataSourceProps : BackedDataSourceProps {
      * @param api The API to attach this data source to. 
      */
     override fun api(api: IGraphqlApi) {
-      cdkBuilder.api(api.let(IGraphqlApi::unwrap))
+      cdkBuilder.api(api.let(IGraphqlApi.Companion::unwrap))
     }
 
     /**
@@ -94,7 +94,7 @@ public interface LambdaDataSourceProps : BackedDataSourceProps {
      * @param lambdaFunction The Lambda function to call to interact with this data source. 
      */
     override fun lambdaFunction(lambdaFunction: IFunction) {
-      cdkBuilder.lambdaFunction(lambdaFunction.let(IFunction::unwrap))
+      cdkBuilder.lambdaFunction(lambdaFunction.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -109,7 +109,7 @@ public interface LambdaDataSourceProps : BackedDataSourceProps {
      * source.
      */
     override fun serviceRole(serviceRole: IRole) {
-      cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
+      cdkBuilder.serviceRole(serviceRole.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appsync.LambdaDataSourceProps =

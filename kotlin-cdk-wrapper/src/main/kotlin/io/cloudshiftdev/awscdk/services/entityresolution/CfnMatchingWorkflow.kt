@@ -94,8 +94,8 @@ public open class CfnMatchingWorkflow(
     id: String,
     props: CfnMatchingWorkflowProps,
   ) :
-      this(software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMatchingWorkflowProps::unwrap))
+      this(software.amazon.awscdk.services.entityresolution.CfnMatchingWorkflow(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMatchingWorkflowProps.Companion::unwrap))
   )
 
   public constructor(
@@ -147,7 +147,7 @@ public open class CfnMatchingWorkflow(
    * A list of `InputSource` objects, which have the fields `InputSourceARN` and `SchemaName` .
    */
   public open fun inputSourceConfig(`value`: IResolvable) {
-    unwrap(this).setInputSourceConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInputSourceConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -168,7 +168,7 @@ public open class CfnMatchingWorkflow(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -182,7 +182,7 @@ public open class CfnMatchingWorkflow(
    * `ApplyNormalization` , and `Output` .
    */
   public open fun outputSourceConfig(`value`: IResolvable) {
-    unwrap(this).setOutputSourceConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOutputSourceConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -209,14 +209,14 @@ public open class CfnMatchingWorkflow(
    * An object which defines the `resolutionType` and the `ruleBasedProperties` .
    */
   public open fun resolutionTechniques(`value`: IResolvable) {
-    unwrap(this).setResolutionTechniques(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResolutionTechniques(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An object which defines the `resolutionType` and the `ruleBasedProperties` .
    */
   public open fun resolutionTechniques(`value`: ResolutionTechniquesProperty) {
-    unwrap(this).setResolutionTechniques(`value`.let(ResolutionTechniquesProperty::unwrap))
+    unwrap(this).setResolutionTechniques(`value`.let(ResolutionTechniquesProperty.Companion::unwrap))
   }
 
   /**
@@ -248,7 +248,7 @@ public open class CfnMatchingWorkflow(
    * The tags used to organize, track, or control access for this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -433,7 +433,7 @@ public open class CfnMatchingWorkflow(
      * `InputSourceARN` and `SchemaName` . 
      */
     override fun inputSourceConfig(inputSourceConfig: IResolvable) {
-      cdkBuilder.inputSourceConfig(inputSourceConfig.let(IResolvable::unwrap))
+      cdkBuilder.inputSourceConfig(inputSourceConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -466,7 +466,7 @@ public open class CfnMatchingWorkflow(
      * `OutputS3Path` , `ApplyNormalization` , and `Output` . 
      */
     override fun outputSourceConfig(outputSourceConfig: IResolvable) {
-      cdkBuilder.outputSourceConfig(outputSourceConfig.let(IResolvable::unwrap))
+      cdkBuilder.outputSourceConfig(outputSourceConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -500,7 +500,7 @@ public open class CfnMatchingWorkflow(
      * `ruleBasedProperties` . 
      */
     override fun resolutionTechniques(resolutionTechniques: IResolvable) {
-      cdkBuilder.resolutionTechniques(resolutionTechniques.let(IResolvable::unwrap))
+      cdkBuilder.resolutionTechniques(resolutionTechniques.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -511,7 +511,7 @@ public open class CfnMatchingWorkflow(
      * `ruleBasedProperties` . 
      */
     override fun resolutionTechniques(resolutionTechniques: ResolutionTechniquesProperty) {
-      cdkBuilder.resolutionTechniques(resolutionTechniques.let(ResolutionTechniquesProperty::unwrap))
+      cdkBuilder.resolutionTechniques(resolutionTechniques.let(ResolutionTechniquesProperty.Companion::unwrap))
     }
 
     /**
@@ -547,7 +547,7 @@ public open class CfnMatchingWorkflow(
      * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -701,7 +701,7 @@ public open class CfnMatchingWorkflow(
        * the output to (123)-456-7890.
        */
       override fun applyNormalization(applyNormalization: IResolvable) {
-        cdkBuilder.applyNormalization(applyNormalization.let(IResolvable::unwrap))
+        cdkBuilder.applyNormalization(applyNormalization.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -940,7 +940,7 @@ public open class CfnMatchingWorkflow(
        * @param hashed Enables the ability to hash the column values in the output.
        */
       override fun hashed(hashed: IResolvable) {
-        cdkBuilder.hashed(hashed.let(IResolvable::unwrap))
+        cdkBuilder.hashed(hashed.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1144,7 +1144,7 @@ public open class CfnMatchingWorkflow(
        * the output to (123)-456-7890.
        */
       override fun applyNormalization(applyNormalization: IResolvable) {
-        cdkBuilder.applyNormalization(applyNormalization.let(IResolvable::unwrap))
+        cdkBuilder.applyNormalization(applyNormalization.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1162,7 +1162,7 @@ public open class CfnMatchingWorkflow(
        * values of the column should be hashed.
        */
       override fun output(output: IResolvable) {
-        cdkBuilder.output(output.let(IResolvable::unwrap))
+        cdkBuilder.output(output.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1363,7 +1363,7 @@ public open class CfnMatchingWorkflow(
        * Your information won't be saved permanently.
        */
       override fun intermediateSourceConfiguration(intermediateSourceConfiguration: IResolvable) {
-        cdkBuilder.intermediateSourceConfiguration(intermediateSourceConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.intermediateSourceConfiguration(intermediateSourceConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1373,7 +1373,7 @@ public open class CfnMatchingWorkflow(
        */
       override
           fun intermediateSourceConfiguration(intermediateSourceConfiguration: IntermediateSourceConfigurationProperty) {
-        cdkBuilder.intermediateSourceConfiguration(intermediateSourceConfiguration.let(IntermediateSourceConfigurationProperty::unwrap))
+        cdkBuilder.intermediateSourceConfiguration(intermediateSourceConfiguration.let(IntermediateSourceConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1393,7 +1393,7 @@ public open class CfnMatchingWorkflow(
        * service.
        */
       override fun providerConfiguration(providerConfiguration: IResolvable) {
-        cdkBuilder.providerConfiguration(providerConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.providerConfiguration(providerConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1581,14 +1581,14 @@ public open class CfnMatchingWorkflow(
        * @param providerProperties The properties of the provider service.
        */
       override fun providerProperties(providerProperties: IResolvable) {
-        cdkBuilder.providerProperties(providerProperties.let(IResolvable::unwrap))
+        cdkBuilder.providerProperties(providerProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param providerProperties The properties of the provider service.
        */
       override fun providerProperties(providerProperties: ProviderPropertiesProperty) {
-        cdkBuilder.providerProperties(providerProperties.let(ProviderPropertiesProperty::unwrap))
+        cdkBuilder.providerProperties(providerProperties.let(ProviderPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -1613,7 +1613,7 @@ public open class CfnMatchingWorkflow(
        * has a field `Rules` , which is a list of rule objects.
        */
       override fun ruleBasedProperties(ruleBasedProperties: IResolvable) {
-        cdkBuilder.ruleBasedProperties(ruleBasedProperties.let(IResolvable::unwrap))
+        cdkBuilder.ruleBasedProperties(ruleBasedProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1621,7 +1621,7 @@ public open class CfnMatchingWorkflow(
        * has a field `Rules` , which is a list of rule objects.
        */
       override fun ruleBasedProperties(ruleBasedProperties: RuleBasedPropertiesProperty) {
-        cdkBuilder.ruleBasedProperties(ruleBasedProperties.let(RuleBasedPropertiesProperty::unwrap))
+        cdkBuilder.ruleBasedProperties(ruleBasedProperties.let(RuleBasedPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -1790,7 +1790,7 @@ public open class CfnMatchingWorkflow(
        * `MatchingKeys` . 
        */
       override fun rules(rules: IResolvable) {
-        cdkBuilder.rules(rules.let(IResolvable::unwrap))
+        cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
       }
 
       /**

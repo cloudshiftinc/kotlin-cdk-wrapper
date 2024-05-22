@@ -34,7 +34,7 @@ public open class Ec2TaskDefinition(
   cdkObject: software.amazon.awscdk.services.ecs.Ec2TaskDefinition,
 ) : TaskDefinition(cdkObject), IEc2TaskDefinition {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ecs.Ec2TaskDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ecs.Ec2TaskDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -43,8 +43,8 @@ public open class Ec2TaskDefinition(
     id: String,
     props: Ec2TaskDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.Ec2TaskDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(Ec2TaskDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.Ec2TaskDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(Ec2TaskDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -65,7 +65,7 @@ public open class Ec2TaskDefinition(
    */
   public override fun addContainer(id: String, props: ContainerDefinitionOptions):
       ContainerDefinition = unwrap(this).addContainer(id,
-      props.let(ContainerDefinitionOptions::unwrap)).let(ContainerDefinition::wrap)
+      props.let(ContainerDefinitionOptions.Companion::unwrap)).let(ContainerDefinition::wrap)
 
   /**
    * Tasks running in AWSVPC networking mode requires an additional environment variable for the
@@ -262,7 +262,7 @@ public open class Ec2TaskDefinition(
      * permission to call AWS APIs on your behalf. 
      */
     override fun executionRole(executionRole: IRole) {
-      cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
+      cdkBuilder.executionRole(executionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -289,7 +289,7 @@ public open class Ec2TaskDefinition(
      * task. 
      */
     override fun inferenceAccelerators(inferenceAccelerators: List<InferenceAccelerator>) {
-      cdkBuilder.inferenceAccelerators(inferenceAccelerators.map(InferenceAccelerator::unwrap))
+      cdkBuilder.inferenceAccelerators(inferenceAccelerators.map(InferenceAccelerator.Companion::unwrap))
     }
 
     /**
@@ -315,7 +315,7 @@ public open class Ec2TaskDefinition(
      * @param ipcMode The IPC resource namespace to use for the containers in the task. 
      */
     override fun ipcMode(ipcMode: IpcMode) {
-      cdkBuilder.ipcMode(ipcMode.let(IpcMode::unwrap))
+      cdkBuilder.ipcMode(ipcMode.let(IpcMode.Companion::unwrap))
     }
 
     /**
@@ -328,7 +328,7 @@ public open class Ec2TaskDefinition(
      * @param networkMode The Docker networking mode to use for the containers in the task. 
      */
     override fun networkMode(networkMode: NetworkMode) {
-      cdkBuilder.networkMode(networkMode.let(NetworkMode::unwrap))
+      cdkBuilder.networkMode(networkMode.let(NetworkMode.Companion::unwrap))
     }
 
     /**
@@ -341,7 +341,7 @@ public open class Ec2TaskDefinition(
      * @param pidMode The process namespace to use for the containers in the task. 
      */
     override fun pidMode(pidMode: PidMode) {
-      cdkBuilder.pidMode(pidMode.let(PidMode::unwrap))
+      cdkBuilder.pidMode(pidMode.let(PidMode.Companion::unwrap))
     }
 
     /**
@@ -356,7 +356,7 @@ public open class Ec2TaskDefinition(
      * @param placementConstraints An array of placement constraint objects to use for the task. 
      */
     override fun placementConstraints(placementConstraints: List<PlacementConstraint>) {
-      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint::unwrap))
+      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint.Companion::unwrap))
     }
 
     /**
@@ -381,7 +381,7 @@ public open class Ec2TaskDefinition(
      * @param proxyConfiguration The configuration details for the App Mesh proxy. 
      */
     override fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
-      cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfiguration::unwrap))
+      cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfiguration.Companion::unwrap))
     }
 
     /**
@@ -394,7 +394,7 @@ public open class Ec2TaskDefinition(
      * call AWS APIs on your behalf. 
      */
     override fun taskRole(taskRole: IRole) {
-      cdkBuilder.taskRole(taskRole.let(IRole::unwrap))
+      cdkBuilder.taskRole(taskRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -409,7 +409,7 @@ public open class Ec2TaskDefinition(
      * @param volumes The list of volume definitions for the task. 
      */
     override fun volumes(volumes: List<Volume>) {
-      cdkBuilder.volumes(volumes.map(Volume::unwrap))
+      cdkBuilder.volumes(volumes.map(Volume.Companion::unwrap))
     }
 
     /**
@@ -434,7 +434,7 @@ public open class Ec2TaskDefinition(
       id: String,
       ec2TaskDefinitionArn: String,
     ): IEc2TaskDefinition =
-        software.amazon.awscdk.services.ecs.Ec2TaskDefinition.fromEc2TaskDefinitionArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ecs.Ec2TaskDefinition.fromEc2TaskDefinitionArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, ec2TaskDefinitionArn).let(IEc2TaskDefinition::wrap)
 
     public fun fromEc2TaskDefinitionAttributes(
@@ -442,8 +442,8 @@ public open class Ec2TaskDefinition(
       id: String,
       attrs: Ec2TaskDefinitionAttributes,
     ): IEc2TaskDefinition =
-        software.amazon.awscdk.services.ecs.Ec2TaskDefinition.fromEc2TaskDefinitionAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(Ec2TaskDefinitionAttributes::unwrap)).let(IEc2TaskDefinition::wrap)
+        software.amazon.awscdk.services.ecs.Ec2TaskDefinition.fromEc2TaskDefinitionAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(Ec2TaskDefinitionAttributes.Companion::unwrap)).let(IEc2TaskDefinition::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("831e03cd1177ff8a7b26c4aea6d55da95fb064478c439f83bd74f417450d0e79")

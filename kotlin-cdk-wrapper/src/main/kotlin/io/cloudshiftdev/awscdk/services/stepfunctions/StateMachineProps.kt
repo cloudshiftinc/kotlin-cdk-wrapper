@@ -206,14 +206,14 @@ public interface StateMachineProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun definition(definition: IChainable) {
-      cdkBuilder.definition(definition.let(IChainable::unwrap))
+      cdkBuilder.definition(definition.let(IChainable.Companion::unwrap))
     }
 
     /**
      * @param definitionBody Definition for this state machine.
      */
     override fun definitionBody(definitionBody: DefinitionBody) {
-      cdkBuilder.definitionBody(definitionBody.let(DefinitionBody::unwrap))
+      cdkBuilder.definitionBody(definitionBody.let(DefinitionBody.Companion::unwrap))
     }
 
     /**
@@ -227,7 +227,7 @@ public interface StateMachineProps {
      * @param logs Defines what execution history events are logged and where they are logged.
      */
     override fun logs(logs: LogOptions) {
-      cdkBuilder.logs(logs.let(LogOptions::unwrap))
+      cdkBuilder.logs(logs.let(LogOptions.Companion::unwrap))
     }
 
     /**
@@ -241,14 +241,14 @@ public interface StateMachineProps {
      * @param removalPolicy The removal policy to apply to state machine.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
      * @param role The execution role for the state machine service.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -262,14 +262,14 @@ public interface StateMachineProps {
      * @param stateMachineType Type of the state machine.
      */
     override fun stateMachineType(stateMachineType: StateMachineType) {
-      cdkBuilder.stateMachineType(stateMachineType.let(StateMachineType::unwrap))
+      cdkBuilder.stateMachineType(stateMachineType.let(StateMachineType.Companion::unwrap))
     }
 
     /**
      * @param timeout Maximum run time for this state machine.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**

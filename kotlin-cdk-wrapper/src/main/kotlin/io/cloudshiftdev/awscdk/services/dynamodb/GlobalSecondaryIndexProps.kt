@@ -148,7 +148,7 @@ public interface GlobalSecondaryIndexProps : SecondaryIndexProps, SchemaOptions 
      * @param partitionKey Partition key attribute definition. 
      */
     override fun partitionKey(partitionKey: Attribute) {
-      cdkBuilder.partitionKey(partitionKey.let(Attribute::unwrap))
+      cdkBuilder.partitionKey(partitionKey.let(Attribute.Companion::unwrap))
     }
 
     /**
@@ -163,7 +163,7 @@ public interface GlobalSecondaryIndexProps : SecondaryIndexProps, SchemaOptions 
      * @param projectionType The set of attributes that are projected into the secondary index.
      */
     override fun projectionType(projectionType: ProjectionType) {
-      cdkBuilder.projectionType(projectionType.let(ProjectionType::unwrap))
+      cdkBuilder.projectionType(projectionType.let(ProjectionType.Companion::unwrap))
     }
 
     /**
@@ -178,7 +178,7 @@ public interface GlobalSecondaryIndexProps : SecondaryIndexProps, SchemaOptions 
      * @param sortKey Sort key attribute definition.
      */
     override fun sortKey(sortKey: Attribute) {
-      cdkBuilder.sortKey(sortKey.let(Attribute::unwrap))
+      cdkBuilder.sortKey(sortKey.let(Attribute.Companion::unwrap))
     }
 
     /**

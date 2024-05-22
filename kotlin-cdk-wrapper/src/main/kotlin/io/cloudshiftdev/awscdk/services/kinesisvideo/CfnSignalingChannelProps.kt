@@ -35,7 +35,10 @@ import kotlin.collections.List
  */
 public interface CfnSignalingChannelProps {
   /**
-   * The period of time a signaling channel retains undelivered messages before they are discarded.
+   * The period of time (in seconds) a signaling channel retains undelivered messages before they
+   * are discarded.
+   *
+   * Use `API_UpdateSignalingChannel` to update this value.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisvideo-signalingchannel.html#cfn-kinesisvideo-signalingchannel-messagettlseconds)
    */
@@ -76,8 +79,9 @@ public interface CfnSignalingChannelProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param messageTtlSeconds The period of time a signaling channel retains undelivered messages
-     * before they are discarded.
+     * @param messageTtlSeconds The period of time (in seconds) a signaling channel retains
+     * undelivered messages before they are discarded.
+     * Use `API_UpdateSignalingChannel` to update this value.
      */
     public fun messageTtlSeconds(messageTtlSeconds: Number)
 
@@ -116,8 +120,9 @@ public interface CfnSignalingChannelProps {
         software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannelProps.builder()
 
     /**
-     * @param messageTtlSeconds The period of time a signaling channel retains undelivered messages
-     * before they are discarded.
+     * @param messageTtlSeconds The period of time (in seconds) a signaling channel retains
+     * undelivered messages before they are discarded.
+     * Use `API_UpdateSignalingChannel` to update this value.
      */
     override fun messageTtlSeconds(messageTtlSeconds: Number) {
       cdkBuilder.messageTtlSeconds(messageTtlSeconds)
@@ -138,7 +143,7 @@ public interface CfnSignalingChannelProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -165,8 +170,10 @@ public interface CfnSignalingChannelProps {
     cdkObject: software.amazon.awscdk.services.kinesisvideo.CfnSignalingChannelProps,
   ) : CdkObject(cdkObject), CfnSignalingChannelProps {
     /**
-     * The period of time a signaling channel retains undelivered messages before they are
-     * discarded.
+     * The period of time (in seconds) a signaling channel retains undelivered messages before they
+     * are discarded.
+     *
+     * Use `API_UpdateSignalingChannel` to update this value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisvideo-signalingchannel.html#cfn-kinesisvideo-signalingchannel-messagettlseconds)
      */

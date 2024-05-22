@@ -44,8 +44,8 @@ public open class CfnTransitGatewayRegistration(
     id: String,
     props: CfnTransitGatewayRegistrationProps,
   ) :
-      this(software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRegistration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTransitGatewayRegistrationProps::unwrap))
+      this(software.amazon.awscdk.services.networkmanager.CfnTransitGatewayRegistration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTransitGatewayRegistrationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -73,7 +73,7 @@ public open class CfnTransitGatewayRegistration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

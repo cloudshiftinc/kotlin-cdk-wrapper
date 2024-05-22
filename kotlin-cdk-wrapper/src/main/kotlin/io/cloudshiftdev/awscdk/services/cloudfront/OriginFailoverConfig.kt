@@ -70,7 +70,7 @@ public interface OriginFailoverConfig {
      * @param failoverOrigin The origin to use as the fallback origin. 
      */
     override fun failoverOrigin(failoverOrigin: IOrigin) {
-      cdkBuilder.failoverOrigin(failoverOrigin.let(IOrigin::unwrap))
+      cdkBuilder.failoverOrigin(failoverOrigin.let(IOrigin.Companion::unwrap))
     }
 
     /**

@@ -68,8 +68,8 @@ public open class CfnApiDestination(
     id: String,
     props: CfnApiDestinationProps,
   ) :
-      this(software.amazon.awscdk.services.events.CfnApiDestination(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApiDestinationProps::unwrap))
+      this(software.amazon.awscdk.services.events.CfnApiDestination(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApiDestinationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -126,7 +126,7 @@ public open class CfnApiDestination(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

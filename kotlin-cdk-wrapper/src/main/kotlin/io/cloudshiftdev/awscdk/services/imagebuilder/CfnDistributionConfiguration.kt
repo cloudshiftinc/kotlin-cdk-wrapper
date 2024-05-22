@@ -81,8 +81,8 @@ public open class CfnDistributionConfiguration(
     id: String,
     props: CfnDistributionConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDistributionConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.imagebuilder.CfnDistributionConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDistributionConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -129,7 +129,7 @@ public open class CfnDistributionConfiguration(
    * objects.
    */
   public open fun distributions(`value`: IResolvable) {
-    unwrap(this).setDistributions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDistributions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -152,7 +152,7 @@ public open class CfnDistributionConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -273,7 +273,7 @@ public open class CfnDistributionConfiguration(
      * array of Distribution objects. 
      */
     override fun distributions(distributions: IResolvable) {
-      cdkBuilder.distributions(distributions.let(IResolvable::unwrap))
+      cdkBuilder.distributions(distributions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -495,7 +495,7 @@ public open class CfnDistributionConfiguration(
        * @param amiTags The tags to apply to AMIs distributed to this Region.
        */
       override fun amiTags(amiTags: IResolvable) {
-        cdkBuilder.amiTags(amiTags.let(IResolvable::unwrap))
+        cdkBuilder.amiTags(amiTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -525,7 +525,7 @@ public open class CfnDistributionConfiguration(
        * account s can use the AMI to launch instances.
        */
       override fun launchPermissionConfiguration(launchPermissionConfiguration: IResolvable) {
-        cdkBuilder.launchPermissionConfiguration(launchPermissionConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.launchPermissionConfiguration(launchPermissionConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -534,7 +534,7 @@ public open class CfnDistributionConfiguration(
        */
       override
           fun launchPermissionConfiguration(launchPermissionConfiguration: LaunchPermissionConfigurationProperty) {
-        cdkBuilder.launchPermissionConfiguration(launchPermissionConfiguration.let(LaunchPermissionConfigurationProperty::unwrap))
+        cdkBuilder.launchPermissionConfiguration(launchPermissionConfiguration.let(LaunchPermissionConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -760,7 +760,7 @@ public open class CfnDistributionConfiguration(
        * configuration.
        */
       override fun targetRepository(targetRepository: IResolvable) {
-        cdkBuilder.targetRepository(targetRepository.let(IResolvable::unwrap))
+        cdkBuilder.targetRepository(targetRepository.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -768,7 +768,7 @@ public open class CfnDistributionConfiguration(
        * configuration.
        */
       override fun targetRepository(targetRepository: TargetContainerRepositoryProperty) {
-        cdkBuilder.targetRepository(targetRepository.let(TargetContainerRepositoryProperty::unwrap))
+        cdkBuilder.targetRepository(targetRepository.let(TargetContainerRepositoryProperty.Companion::unwrap))
       }
 
       /**
@@ -1042,7 +1042,7 @@ public open class CfnDistributionConfiguration(
        * distribution.
        */
       override fun fastLaunchConfigurations(fastLaunchConfigurations: IResolvable) {
-        cdkBuilder.fastLaunchConfigurations(fastLaunchConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.fastLaunchConfigurations(fastLaunchConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1065,7 +1065,7 @@ public open class CfnDistributionConfiguration(
        * apply to image distribution for specified accounts.
        */
       override fun launchTemplateConfigurations(launchTemplateConfigurations: IResolvable) {
-        cdkBuilder.launchTemplateConfigurations(launchTemplateConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.launchTemplateConfigurations(launchTemplateConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1369,7 +1369,7 @@ public open class CfnDistributionConfiguration(
        * Set to `true` to start using Windows faster launching, or `false` to stop using it.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1377,7 +1377,7 @@ public open class CfnDistributionConfiguration(
        * when it launches Windows instances to create pre-provisioned snapshots.
        */
       override fun launchTemplate(launchTemplate: IResolvable) {
-        cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
+        cdkBuilder.launchTemplate(launchTemplate.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1385,7 +1385,7 @@ public open class CfnDistributionConfiguration(
        * when it launches Windows instances to create pre-provisioned snapshots.
        */
       override fun launchTemplate(launchTemplate: FastLaunchLaunchTemplateSpecificationProperty) {
-        cdkBuilder.launchTemplate(launchTemplate.let(FastLaunchLaunchTemplateSpecificationProperty::unwrap))
+        cdkBuilder.launchTemplate(launchTemplate.let(FastLaunchLaunchTemplateSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -1412,7 +1412,7 @@ public open class CfnDistributionConfiguration(
        * enabled.
        */
       override fun snapshotConfiguration(snapshotConfiguration: IResolvable) {
-        cdkBuilder.snapshotConfiguration(snapshotConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.snapshotConfiguration(snapshotConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1422,7 +1422,7 @@ public open class CfnDistributionConfiguration(
        */
       override
           fun snapshotConfiguration(snapshotConfiguration: FastLaunchSnapshotConfigurationProperty) {
-        cdkBuilder.snapshotConfiguration(snapshotConfiguration.let(FastLaunchSnapshotConfigurationProperty::unwrap))
+        cdkBuilder.snapshotConfiguration(snapshotConfiguration.let(FastLaunchSnapshotConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2105,7 +2105,7 @@ public open class CfnDistributionConfiguration(
        * template for the specified account.
        */
       override fun defaultVersion(setDefaultVersion: IResolvable) {
-        cdkBuilder.setDefaultVersion(setDefaultVersion.let(IResolvable::unwrap))
+        cdkBuilder.setDefaultVersion(setDefaultVersion.let(IResolvable.Companion::unwrap))
       }
 
       /**

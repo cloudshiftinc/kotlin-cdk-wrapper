@@ -145,7 +145,7 @@ public interface ApplicationLoadBalancerProps {
      * @param domainZone The Route53 hosted zone for the domain, e.g. "example.com.".
      */
     override fun domainZone(domainZone: IHostedZone) {
-      cdkBuilder.domainZone(domainZone.let(IHostedZone::unwrap))
+      cdkBuilder.domainZone(domainZone.let(IHostedZone.Companion::unwrap))
     }
 
     /**
@@ -153,14 +153,14 @@ public interface ApplicationLoadBalancerProps {
      * Can be between 1 and 4000 seconds.
      */
     override fun idleTimeout(idleTimeout: Duration) {
-      cdkBuilder.idleTimeout(idleTimeout.let(Duration::unwrap))
+      cdkBuilder.idleTimeout(idleTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param listeners Listeners (at least one listener) attached to this load balancer. 
      */
     override fun listeners(listeners: List<ApplicationListenerProps>) {
-      cdkBuilder.listeners(listeners.map(ApplicationListenerProps::unwrap))
+      cdkBuilder.listeners(listeners.map(ApplicationListenerProps.Companion::unwrap))
     }
 
     /**

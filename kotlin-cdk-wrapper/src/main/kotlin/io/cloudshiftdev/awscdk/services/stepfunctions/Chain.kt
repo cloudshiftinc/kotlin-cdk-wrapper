@@ -56,7 +56,7 @@ public open class Chain(
    * @param next 
    */
   public open fun next(next: IChainable): Chain =
-      unwrap(this).next(next.let(IChainable::unwrap)).let(Chain::wrap)
+      unwrap(this).next(next.let(IChainable.Companion::unwrap)).let(Chain::wrap)
 
   /**
    * The start state of this chain.
@@ -93,7 +93,7 @@ public open class Chain(
    * @param props
    */
   public open fun toSingleState(id: String, props: ParallelProps): Parallel =
-      unwrap(this).toSingleState(id, props.let(ParallelProps::unwrap)).let(Parallel::wrap)
+      unwrap(this).toSingleState(id, props.let(ParallelProps.Companion::unwrap)).let(Parallel::wrap)
 
   /**
    * Return a single state that encompasses all states in the chain.
@@ -119,15 +119,16 @@ public open class Chain(
       endStates: List<INextable>,
       lastAdded: IChainable,
     ): Chain =
-        software.amazon.awscdk.services.stepfunctions.Chain.custom(startState.let(State::unwrap),
-        endStates.map(INextable::unwrap), lastAdded.let(IChainable::unwrap)).let(Chain::wrap)
+        software.amazon.awscdk.services.stepfunctions.Chain.custom(startState.let(State.Companion::unwrap),
+        endStates.map(INextable.Companion::unwrap),
+        lastAdded.let(IChainable.Companion::unwrap)).let(Chain::wrap)
 
     public fun sequence(start: IChainable, next: IChainable): Chain =
-        software.amazon.awscdk.services.stepfunctions.Chain.sequence(start.let(IChainable::unwrap),
-        next.let(IChainable::unwrap)).let(Chain::wrap)
+        software.amazon.awscdk.services.stepfunctions.Chain.sequence(start.let(IChainable.Companion::unwrap),
+        next.let(IChainable.Companion::unwrap)).let(Chain::wrap)
 
     public fun start(state: IChainable): Chain =
-        software.amazon.awscdk.services.stepfunctions.Chain.start(state.let(IChainable::unwrap)).let(Chain::wrap)
+        software.amazon.awscdk.services.stepfunctions.Chain.start(state.let(IChainable.Companion::unwrap)).let(Chain::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.Chain): Chain =
         Chain(cdkObject)

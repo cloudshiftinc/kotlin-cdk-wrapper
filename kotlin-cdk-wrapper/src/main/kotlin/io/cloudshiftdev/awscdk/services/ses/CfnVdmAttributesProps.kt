@@ -104,7 +104,7 @@ public interface CfnVdmAttributesProps {
      * applicable to the Dashboard.
      */
     override fun dashboardAttributes(dashboardAttributes: IResolvable) {
-      cdkBuilder.dashboardAttributes(dashboardAttributes.let(IResolvable::unwrap))
+      cdkBuilder.dashboardAttributes(dashboardAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -113,7 +113,7 @@ public interface CfnVdmAttributesProps {
      */
     override
         fun dashboardAttributes(dashboardAttributes: CfnVdmAttributes.DashboardAttributesProperty) {
-      cdkBuilder.dashboardAttributes(dashboardAttributes.let(CfnVdmAttributes.DashboardAttributesProperty::unwrap))
+      cdkBuilder.dashboardAttributes(dashboardAttributes.let(CfnVdmAttributes.DashboardAttributesProperty.Companion::unwrap))
     }
 
     /**
@@ -132,7 +132,7 @@ public interface CfnVdmAttributesProps {
      * applicable to the Guardian.
      */
     override fun guardianAttributes(guardianAttributes: IResolvable) {
-      cdkBuilder.guardianAttributes(guardianAttributes.let(IResolvable::unwrap))
+      cdkBuilder.guardianAttributes(guardianAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -141,7 +141,7 @@ public interface CfnVdmAttributesProps {
      */
     override
         fun guardianAttributes(guardianAttributes: CfnVdmAttributes.GuardianAttributesProperty) {
-      cdkBuilder.guardianAttributes(guardianAttributes.let(CfnVdmAttributes.GuardianAttributesProperty::unwrap))
+      cdkBuilder.guardianAttributes(guardianAttributes.let(CfnVdmAttributes.GuardianAttributesProperty.Companion::unwrap))
     }
 
     /**

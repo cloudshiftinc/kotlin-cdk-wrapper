@@ -38,7 +38,7 @@ public open class CfnResolverQueryLoggingConfigAssociation(
   cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfigAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfigAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfigAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -47,8 +47,8 @@ public open class CfnResolverQueryLoggingConfigAssociation(
     id: String,
     props: CfnResolverQueryLoggingConfigAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfigAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnResolverQueryLoggingConfigAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.route53resolver.CfnResolverQueryLoggingConfigAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnResolverQueryLoggingConfigAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -105,7 +105,7 @@ public open class CfnResolverQueryLoggingConfigAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

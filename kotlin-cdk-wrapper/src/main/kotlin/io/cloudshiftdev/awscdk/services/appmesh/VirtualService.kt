@@ -40,8 +40,8 @@ public open class VirtualService(
     id: String,
     props: VirtualServiceProps,
   ) :
-      this(software.amazon.awscdk.services.appmesh.VirtualService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(VirtualServiceProps::unwrap))
+      this(software.amazon.awscdk.services.appmesh.VirtualService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(VirtualServiceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -125,7 +125,7 @@ public open class VirtualService(
      * as its provider. 
      */
     override fun virtualServiceProvider(virtualServiceProvider: VirtualServiceProvider) {
-      cdkBuilder.virtualServiceProvider(virtualServiceProvider.let(VirtualServiceProvider::unwrap))
+      cdkBuilder.virtualServiceProvider(virtualServiceProvider.let(VirtualServiceProvider.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appmesh.VirtualService = cdkBuilder.build()
@@ -137,7 +137,7 @@ public open class VirtualService(
       id: String,
       virtualServiceArn: String,
     ): IVirtualService =
-        software.amazon.awscdk.services.appmesh.VirtualService.fromVirtualServiceArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.appmesh.VirtualService.fromVirtualServiceArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, virtualServiceArn).let(IVirtualService::wrap)
 
     public fun fromVirtualServiceAttributes(
@@ -145,8 +145,8 @@ public open class VirtualService(
       id: String,
       attrs: VirtualServiceAttributes,
     ): IVirtualService =
-        software.amazon.awscdk.services.appmesh.VirtualService.fromVirtualServiceAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(VirtualServiceAttributes::unwrap)).let(IVirtualService::wrap)
+        software.amazon.awscdk.services.appmesh.VirtualService.fromVirtualServiceAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(VirtualServiceAttributes.Companion::unwrap)).let(IVirtualService::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e44e83423747896d1527f34cf795fa3dd9a184057172c64cd142a5e0717c08e8")

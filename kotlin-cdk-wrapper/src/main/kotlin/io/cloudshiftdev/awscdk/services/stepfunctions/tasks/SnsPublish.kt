@@ -59,8 +59,8 @@ public open class SnsPublish(
     id: String,
     props: SnsPublishProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.SnsPublish(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SnsPublishProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.SnsPublish(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SnsPublishProps.Companion::unwrap))
   )
 
   public constructor(
@@ -366,7 +366,7 @@ public open class SnsPublish(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -395,7 +395,7 @@ public open class SnsPublish(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -409,7 +409,7 @@ public open class SnsPublish(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -444,7 +444,7 @@ public open class SnsPublish(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -457,7 +457,7 @@ public open class SnsPublish(
      * @param message The message you want to send. 
      */
     override fun message(message: TaskInput) {
-      cdkBuilder.message(message.let(TaskInput::unwrap))
+      cdkBuilder.message(message.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -617,7 +617,7 @@ public open class SnsPublish(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -630,7 +630,7 @@ public open class SnsPublish(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -639,7 +639,7 @@ public open class SnsPublish(
      * @param topic The SNS topic that the task will publish to. 
      */
     override fun topic(topic: ITopic) {
-      cdkBuilder.topic(topic.let(ITopic::unwrap))
+      cdkBuilder.topic(topic.let(ITopic.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.SnsPublish =

@@ -178,7 +178,7 @@ public interface LoggingOptions {
      * @param appLogGroup Log Amazon OpenSearch Service application logs to this log group.
      */
     override fun appLogGroup(appLogGroup: ILogGroup) {
-      cdkBuilder.appLogGroup(appLogGroup.let(ILogGroup::unwrap))
+      cdkBuilder.appLogGroup(appLogGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -194,7 +194,7 @@ public interface LoggingOptions {
      * @param auditLogGroup Log Amazon OpenSearch Service audit logs to this log group.
      */
     override fun auditLogGroup(auditLogGroup: ILogGroup) {
-      cdkBuilder.auditLogGroup(auditLogGroup.let(ILogGroup::unwrap))
+      cdkBuilder.auditLogGroup(auditLogGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -210,7 +210,7 @@ public interface LoggingOptions {
      * @param slowIndexLogGroup Log slow indices to this log group.
      */
     override fun slowIndexLogGroup(slowIndexLogGroup: ILogGroup) {
-      cdkBuilder.slowIndexLogGroup(slowIndexLogGroup.let(ILogGroup::unwrap))
+      cdkBuilder.slowIndexLogGroup(slowIndexLogGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -226,7 +226,7 @@ public interface LoggingOptions {
      * @param slowSearchLogGroup Log slow searches to this log group.
      */
     override fun slowSearchLogGroup(slowSearchLogGroup: ILogGroup) {
-      cdkBuilder.slowSearchLogGroup(slowSearchLogGroup.let(ILogGroup::unwrap))
+      cdkBuilder.slowSearchLogGroup(slowSearchLogGroup.let(ILogGroup.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.opensearchservice.LoggingOptions =

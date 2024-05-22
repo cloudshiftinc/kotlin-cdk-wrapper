@@ -255,7 +255,7 @@ public interface CfnScheduledActionProps {
      * scheduled action, see `ScheduledAction` .
      */
     override fun enable(enable: IResolvable) {
-      cdkBuilder.enable(enable.let(IResolvable::unwrap))
+      cdkBuilder.enable(enable.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -327,7 +327,7 @@ public interface CfnScheduledActionProps {
      * ".
      */
     override fun targetAction(targetAction: IResolvable) {
-      cdkBuilder.targetAction(targetAction.let(IResolvable::unwrap))
+      cdkBuilder.targetAction(targetAction.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -338,7 +338,7 @@ public interface CfnScheduledActionProps {
      * ".
      */
     override fun targetAction(targetAction: CfnScheduledAction.ScheduledActionTypeProperty) {
-      cdkBuilder.targetAction(targetAction.let(CfnScheduledAction.ScheduledActionTypeProperty::unwrap))
+      cdkBuilder.targetAction(targetAction.let(CfnScheduledAction.ScheduledActionTypeProperty.Companion::unwrap))
     }
 
     /**

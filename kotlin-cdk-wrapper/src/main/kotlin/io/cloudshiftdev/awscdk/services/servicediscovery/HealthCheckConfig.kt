@@ -127,7 +127,7 @@ public interface HealthCheckConfig {
      * Cannot be modified once created. Supported values are HTTP, HTTPS, and TCP.
      */
     override fun type(type: HealthCheckType) {
-      cdkBuilder.type(type.let(HealthCheckType::unwrap))
+      cdkBuilder.type(type.let(HealthCheckType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.servicediscovery.HealthCheckConfig =

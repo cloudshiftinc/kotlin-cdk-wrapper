@@ -214,7 +214,7 @@ public interface RateLimitedApiKeyProps : ApiKeyProps {
      * @param apiStages API Stages to be associated with the RateLimitedApiKey.
      */
     override fun apiStages(apiStages: List<UsagePlanPerApiStage>) {
-      cdkBuilder.apiStages(apiStages.map(UsagePlanPerApiStage::unwrap))
+      cdkBuilder.apiStages(apiStages.map(UsagePlanPerApiStage.Companion::unwrap))
     }
 
     /**
@@ -237,7 +237,7 @@ public interface RateLimitedApiKeyProps : ApiKeyProps {
      * You can add CORS at the resource-level using `addCorsPreflight`.
      */
     override fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions) {
-      cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions::unwrap))
+      cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions.Companion::unwrap))
     }
 
     /**
@@ -256,7 +256,7 @@ public interface RateLimitedApiKeyProps : ApiKeyProps {
      * this API unless an integration is specified.
      */
     override fun defaultIntegration(defaultIntegration: Integration) {
-      cdkBuilder.defaultIntegration(defaultIntegration.let(Integration::unwrap))
+      cdkBuilder.defaultIntegration(defaultIntegration.let(Integration.Companion::unwrap))
     }
 
     /**
@@ -273,7 +273,7 @@ public interface RateLimitedApiKeyProps : ApiKeyProps {
      * this API unless custom options are specified.
      */
     override fun defaultMethodOptions(defaultMethodOptions: MethodOptions) {
-      cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions::unwrap))
+      cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions.Companion::unwrap))
     }
 
     /**
@@ -311,7 +311,7 @@ public interface RateLimitedApiKeyProps : ApiKeyProps {
      * @param quota Number of requests clients can make in a given time period.
      */
     override fun quota(quota: QuotaSettings) {
-      cdkBuilder.quota(quota.let(QuotaSettings::unwrap))
+      cdkBuilder.quota(quota.let(QuotaSettings.Companion::unwrap))
     }
 
     /**
@@ -327,7 +327,7 @@ public interface RateLimitedApiKeyProps : ApiKeyProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun resources(resources: List<IRestApi>) {
-      cdkBuilder.resources(resources.map(IRestApi::unwrap))
+      cdkBuilder.resources(resources.map(IRestApi.Companion::unwrap))
     }
 
     /**
@@ -341,7 +341,7 @@ public interface RateLimitedApiKeyProps : ApiKeyProps {
      * @param stages A list of Stages this api key is associated with.
      */
     override fun stages(stages: List<IStage>) {
-      cdkBuilder.stages(stages.map(IStage::unwrap))
+      cdkBuilder.stages(stages.map(IStage.Companion::unwrap))
     }
 
     /**
@@ -353,7 +353,7 @@ public interface RateLimitedApiKeyProps : ApiKeyProps {
      * @param throttle Overall throttle settings for the API.
      */
     override fun throttle(throttle: ThrottleSettings) {
-      cdkBuilder.throttle(throttle.let(ThrottleSettings::unwrap))
+      cdkBuilder.throttle(throttle.let(ThrottleSettings.Companion::unwrap))
     }
 
     /**

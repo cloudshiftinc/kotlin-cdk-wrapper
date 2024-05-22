@@ -281,7 +281,7 @@ public interface AddApplicationTargetsProps : AddRuleProps {
      * @param conditions Rule applies if matches the conditions.
      */
     override fun conditions(conditions: List<ListenerCondition>) {
-      cdkBuilder.conditions(conditions.map(ListenerCondition::unwrap))
+      cdkBuilder.conditions(conditions.map(ListenerCondition.Companion::unwrap))
     }
 
     /**
@@ -296,14 +296,14 @@ public interface AddApplicationTargetsProps : AddRuleProps {
      * The range is 0-3600 seconds.
      */
     override fun deregistrationDelay(deregistrationDelay: Duration) {
-      cdkBuilder.deregistrationDelay(deregistrationDelay.let(Duration::unwrap))
+      cdkBuilder.deregistrationDelay(deregistrationDelay.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param healthCheck Health check configuration.
      */
     override fun healthCheck(healthCheck: HealthCheck) {
-      cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
     }
 
     /**
@@ -320,7 +320,7 @@ public interface AddApplicationTargetsProps : AddRuleProps {
      */
     override
         fun loadBalancingAlgorithmType(loadBalancingAlgorithmType: TargetGroupLoadBalancingAlgorithmType) {
-      cdkBuilder.loadBalancingAlgorithmType(loadBalancingAlgorithmType.let(TargetGroupLoadBalancingAlgorithmType::unwrap))
+      cdkBuilder.loadBalancingAlgorithmType(loadBalancingAlgorithmType.let(TargetGroupLoadBalancingAlgorithmType.Companion::unwrap))
     }
 
     /**
@@ -346,14 +346,14 @@ public interface AddApplicationTargetsProps : AddRuleProps {
      * @param protocol The protocol to use.
      */
     override fun protocol(protocol: ApplicationProtocol) {
-      cdkBuilder.protocol(protocol.let(ApplicationProtocol::unwrap))
+      cdkBuilder.protocol(protocol.let(ApplicationProtocol.Companion::unwrap))
     }
 
     /**
      * @param protocolVersion The protocol version to use.
      */
     override fun protocolVersion(protocolVersion: ApplicationProtocolVersion) {
-      cdkBuilder.protocolVersion(protocolVersion.let(ApplicationProtocolVersion::unwrap))
+      cdkBuilder.protocolVersion(protocolVersion.let(ApplicationProtocolVersion.Companion::unwrap))
     }
 
     /**
@@ -362,7 +362,7 @@ public interface AddApplicationTargetsProps : AddRuleProps {
      * The range is 30-900 seconds (15 minutes).
      */
     override fun slowStart(slowStart: Duration) {
-      cdkBuilder.slowStart(slowStart.let(Duration::unwrap))
+      cdkBuilder.slowStart(slowStart.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -373,7 +373,7 @@ public interface AddApplicationTargetsProps : AddRuleProps {
      * 1 second and the maximum value is 7 days (604800 seconds).
      */
     override fun stickinessCookieDuration(stickinessCookieDuration: Duration) {
-      cdkBuilder.stickinessCookieDuration(stickinessCookieDuration.let(Duration::unwrap))
+      cdkBuilder.stickinessCookieDuration(stickinessCookieDuration.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -405,7 +405,7 @@ public interface AddApplicationTargetsProps : AddRuleProps {
      * target. All target must be of the same type.
      */
     override fun targets(targets: List<IApplicationLoadBalancerTarget>) {
-      cdkBuilder.targets(targets.map(IApplicationLoadBalancerTarget::unwrap))
+      cdkBuilder.targets(targets.map(IApplicationLoadBalancerTarget.Companion::unwrap))
     }
 
     /**

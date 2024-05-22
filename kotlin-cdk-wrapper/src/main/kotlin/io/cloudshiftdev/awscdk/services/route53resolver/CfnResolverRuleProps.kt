@@ -227,7 +227,7 @@ public interface CfnResolverRuleProps {
      * Each tag consists of a key and an optional value, both of which you define.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -242,7 +242,7 @@ public interface CfnResolverRuleProps {
      * Typically, these are the IP addresses of DNS resolvers on your network.
      */
     override fun targetIps(targetIps: IResolvable) {
-      cdkBuilder.targetIps(targetIps.let(IResolvable::unwrap))
+      cdkBuilder.targetIps(targetIps.let(IResolvable.Companion::unwrap))
     }
 
     /**

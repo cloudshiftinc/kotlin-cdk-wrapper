@@ -44,8 +44,8 @@ public open class CfnTagOption(
     id: String,
     props: CfnTagOptionProps,
   ) :
-      this(software.amazon.awscdk.services.servicecatalog.CfnTagOption(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTagOptionProps::unwrap))
+      this(software.amazon.awscdk.services.servicecatalog.CfnTagOption(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTagOptionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -71,7 +71,7 @@ public open class CfnTagOption(
    * The TagOption active state.
    */
   public open fun active(`value`: IResolvable) {
-    unwrap(this).setActive(`value`.let(IResolvable::unwrap))
+    unwrap(this).setActive(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -85,7 +85,7 @@ public open class CfnTagOption(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -174,7 +174,7 @@ public open class CfnTagOption(
      * @param active The TagOption active state. 
      */
     override fun active(active: IResolvable) {
-      cdkBuilder.active(active.let(IResolvable::unwrap))
+      cdkBuilder.active(active.let(IResolvable.Companion::unwrap))
     }
 
     /**

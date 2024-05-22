@@ -60,8 +60,8 @@ public open class CfnBackupSelection(
     id: String,
     props: CfnBackupSelectionProps,
   ) :
-      this(software.amazon.awscdk.services.backup.CfnBackupSelection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnBackupSelectionProps::unwrap))
+      this(software.amazon.awscdk.services.backup.CfnBackupSelection(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnBackupSelectionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -107,14 +107,14 @@ public open class CfnBackupSelection(
    * Specifies the body of a request to assign a set of resources to a backup plan.
    */
   public open fun backupSelection(`value`: IResolvable) {
-    unwrap(this).setBackupSelection(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBackupSelection(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the body of a request to assign a set of resources to a backup plan.
    */
   public open fun backupSelection(`value`: BackupSelectionResourceTypeProperty) {
-    unwrap(this).setBackupSelection(`value`.let(BackupSelectionResourceTypeProperty::unwrap))
+    unwrap(this).setBackupSelection(`value`.let(BackupSelectionResourceTypeProperty.Companion::unwrap))
   }
 
   /**
@@ -131,7 +131,7 @@ public open class CfnBackupSelection(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -219,7 +219,7 @@ public open class CfnBackupSelection(
      * backup plan. 
      */
     override fun backupSelection(backupSelection: IResolvable) {
-      cdkBuilder.backupSelection(backupSelection.let(IResolvable::unwrap))
+      cdkBuilder.backupSelection(backupSelection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -234,7 +234,7 @@ public open class CfnBackupSelection(
      * backup plan. 
      */
     override fun backupSelection(backupSelection: BackupSelectionResourceTypeProperty) {
-      cdkBuilder.backupSelection(backupSelection.let(BackupSelectionResourceTypeProperty::unwrap))
+      cdkBuilder.backupSelection(backupSelection.let(BackupSelectionResourceTypeProperty.Companion::unwrap))
     }
 
     /**
@@ -536,7 +536,7 @@ public open class CfnBackupSelection(
        * `StringLike` , `StringNotEquals` , and `StringNotLike` .
        */
       override fun listOfTags(listOfTags: IResolvable) {
-        cdkBuilder.listOfTags(listOfTags.let(IResolvable::unwrap))
+        cdkBuilder.listOfTags(listOfTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1166,7 +1166,7 @@ public open class CfnBackupSelection(
        * Also called "exact matching."
        */
       override fun stringEquals(stringEquals: IResolvable) {
-        cdkBuilder.stringEquals(stringEquals.let(IResolvable::unwrap))
+        cdkBuilder.stringEquals(stringEquals.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1192,7 +1192,7 @@ public open class CfnBackupSelection(
        * For example, "prod*" or "*rod*" matches the tag value "production".
        */
       override fun stringLike(stringLike: IResolvable) {
-        cdkBuilder.stringLike(stringLike.let(IResolvable::unwrap))
+        cdkBuilder.stringLike(stringLike.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1217,7 +1217,7 @@ public open class CfnBackupSelection(
        * Also called "negated matching."
        */
       override fun stringNotEquals(stringNotEquals: IResolvable) {
-        cdkBuilder.stringNotEquals(stringNotEquals.let(IResolvable::unwrap))
+        cdkBuilder.stringNotEquals(stringNotEquals.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1242,7 +1242,7 @@ public open class CfnBackupSelection(
        * values with the use of a wildcard character (*) anywhere in the string.
        */
       override fun stringNotLike(stringNotLike: IResolvable) {
-        cdkBuilder.stringNotLike(stringNotLike.let(IResolvable::unwrap))
+        cdkBuilder.stringNotLike(stringNotLike.let(IResolvable.Companion::unwrap))
       }
 
       /**

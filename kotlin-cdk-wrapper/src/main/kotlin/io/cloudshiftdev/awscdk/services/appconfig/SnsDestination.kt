@@ -27,7 +27,7 @@ public open class SnsDestination(
   cdkObject: software.amazon.awscdk.services.appconfig.SnsDestination,
 ) : CdkObject(cdkObject), IEventDestination {
   public constructor(topic: ITopic) :
-      this(software.amazon.awscdk.services.appconfig.SnsDestination(topic.let(ITopic::unwrap))
+      this(software.amazon.awscdk.services.appconfig.SnsDestination(topic.let(ITopic.Companion::unwrap))
   )
 
   /**

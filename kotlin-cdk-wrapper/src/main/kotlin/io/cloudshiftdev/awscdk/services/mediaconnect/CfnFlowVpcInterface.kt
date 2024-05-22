@@ -56,8 +56,8 @@ public open class CfnFlowVpcInterface(
     id: String,
     props: CfnFlowVpcInterfaceProps,
   ) :
-      this(software.amazon.awscdk.services.mediaconnect.CfnFlowVpcInterface(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFlowVpcInterfaceProps::unwrap))
+      this(software.amazon.awscdk.services.mediaconnect.CfnFlowVpcInterface(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFlowVpcInterfaceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -91,7 +91,7 @@ public open class CfnFlowVpcInterface(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

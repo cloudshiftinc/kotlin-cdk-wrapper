@@ -281,7 +281,7 @@ public interface CfnLicenseProps {
      * @param consumptionConfiguration Configuration for consumption of the license. 
      */
     override fun consumptionConfiguration(consumptionConfiguration: IResolvable) {
-      cdkBuilder.consumptionConfiguration(consumptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.consumptionConfiguration(consumptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -289,7 +289,7 @@ public interface CfnLicenseProps {
      */
     override
         fun consumptionConfiguration(consumptionConfiguration: CfnLicense.ConsumptionConfigurationProperty) {
-      cdkBuilder.consumptionConfiguration(consumptionConfiguration.let(CfnLicense.ConsumptionConfigurationProperty::unwrap))
+      cdkBuilder.consumptionConfiguration(consumptionConfiguration.let(CfnLicense.ConsumptionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -306,7 +306,7 @@ public interface CfnLicenseProps {
      * @param entitlements License entitlements. 
      */
     override fun entitlements(entitlements: IResolvable) {
-      cdkBuilder.entitlements(entitlements.let(IResolvable::unwrap))
+      cdkBuilder.entitlements(entitlements.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -332,14 +332,14 @@ public interface CfnLicenseProps {
      * @param issuer License issuer. 
      */
     override fun issuer(issuer: IResolvable) {
-      cdkBuilder.issuer(issuer.let(IResolvable::unwrap))
+      cdkBuilder.issuer(issuer.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param issuer License issuer. 
      */
     override fun issuer(issuer: CfnLicense.IssuerDataProperty) {
-      cdkBuilder.issuer(issuer.let(CfnLicense.IssuerDataProperty::unwrap))
+      cdkBuilder.issuer(issuer.let(CfnLicense.IssuerDataProperty.Companion::unwrap))
     }
 
     /**
@@ -354,7 +354,7 @@ public interface CfnLicenseProps {
      * @param licenseMetadata License metadata.
      */
     override fun licenseMetadata(licenseMetadata: IResolvable) {
-      cdkBuilder.licenseMetadata(licenseMetadata.let(IResolvable::unwrap))
+      cdkBuilder.licenseMetadata(licenseMetadata.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -403,7 +403,7 @@ public interface CfnLicenseProps {
      * 
      */
     override fun validity(validity: IResolvable) {
-      cdkBuilder.validity(validity.let(IResolvable::unwrap))
+      cdkBuilder.validity(validity.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -411,7 +411,7 @@ public interface CfnLicenseProps {
      * 
      */
     override fun validity(validity: CfnLicense.ValidityDateFormatProperty) {
-      cdkBuilder.validity(validity.let(CfnLicense.ValidityDateFormatProperty::unwrap))
+      cdkBuilder.validity(validity.let(CfnLicense.ValidityDateFormatProperty.Companion::unwrap))
     }
 
     /**

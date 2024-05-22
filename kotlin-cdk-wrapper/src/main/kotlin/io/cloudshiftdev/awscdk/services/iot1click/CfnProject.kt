@@ -58,8 +58,8 @@ public open class CfnProject(
     id: String,
     props: CfnProjectProps,
   ) :
-      this(software.amazon.awscdk.services.iot1click.CfnProject(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnProjectProps::unwrap))
+      this(software.amazon.awscdk.services.iot1click.CfnProject(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnProjectProps.Companion::unwrap))
   )
 
   public constructor(
@@ -103,7 +103,7 @@ public open class CfnProject(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -115,14 +115,14 @@ public open class CfnProject(
    * An object describing the project's placement specifications.
    */
   public open fun placementTemplate(`value`: IResolvable) {
-    unwrap(this).setPlacementTemplate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPlacementTemplate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An object describing the project's placement specifications.
    */
   public open fun placementTemplate(`value`: PlacementTemplateProperty) {
-    unwrap(this).setPlacementTemplate(`value`.let(PlacementTemplateProperty::unwrap))
+    unwrap(this).setPlacementTemplate(`value`.let(PlacementTemplateProperty.Companion::unwrap))
   }
 
   /**
@@ -217,7 +217,7 @@ public open class CfnProject(
      * @param placementTemplate An object describing the project's placement specifications. 
      */
     override fun placementTemplate(placementTemplate: IResolvable) {
-      cdkBuilder.placementTemplate(placementTemplate.let(IResolvable::unwrap))
+      cdkBuilder.placementTemplate(placementTemplate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -227,7 +227,7 @@ public open class CfnProject(
      * @param placementTemplate An object describing the project's placement specifications. 
      */
     override fun placementTemplate(placementTemplate: PlacementTemplateProperty) {
-      cdkBuilder.placementTemplate(placementTemplate.let(PlacementTemplateProperty::unwrap))
+      cdkBuilder.placementTemplate(placementTemplate.let(PlacementTemplateProperty.Companion::unwrap))
     }
 
     /**
@@ -469,7 +469,7 @@ public open class CfnProject(
        * ) template.
        */
       override fun deviceTemplates(deviceTemplates: IResolvable) {
-        cdkBuilder.deviceTemplates(deviceTemplates.let(IResolvable::unwrap))
+        cdkBuilder.deviceTemplates(deviceTemplates.let(IResolvable.Companion::unwrap))
       }
 
       /**

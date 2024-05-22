@@ -116,7 +116,7 @@ public interface NetworkAclProps {
      * `associateWithSubnets()`.
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -133,7 +133,7 @@ public interface NetworkAclProps {
      * @param vpc The VPC in which to create the NetworkACL. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.NetworkAclProps = cdkBuilder.build()

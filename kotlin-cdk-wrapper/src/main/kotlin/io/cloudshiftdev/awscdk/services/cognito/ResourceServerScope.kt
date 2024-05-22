@@ -45,7 +45,7 @@ public open class ResourceServerScope(
   cdkObject: software.amazon.awscdk.services.cognito.ResourceServerScope,
 ) : CdkObject(cdkObject) {
   public constructor(props: ResourceServerScopeProps) :
-      this(software.amazon.awscdk.services.cognito.ResourceServerScope(props.let(ResourceServerScopeProps::unwrap))
+      this(software.amazon.awscdk.services.cognito.ResourceServerScope(props.let(ResourceServerScopeProps.Companion::unwrap))
   )
 
   public constructor(props: ResourceServerScopeProps.Builder.() -> Unit) :

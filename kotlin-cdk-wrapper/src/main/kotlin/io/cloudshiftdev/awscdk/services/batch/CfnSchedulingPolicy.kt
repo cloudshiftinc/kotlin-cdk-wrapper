@@ -56,7 +56,7 @@ public open class CfnSchedulingPolicy(
   cdkObject: software.amazon.awscdk.services.batch.CfnSchedulingPolicy,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.batch.CfnSchedulingPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.batch.CfnSchedulingPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -65,8 +65,8 @@ public open class CfnSchedulingPolicy(
     id: String,
     props: CfnSchedulingPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.batch.CfnSchedulingPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSchedulingPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.batch.CfnSchedulingPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSchedulingPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -91,14 +91,14 @@ public open class CfnSchedulingPolicy(
    * The fair share policy of the scheduling policy.
    */
   public open fun fairsharePolicy(`value`: IResolvable) {
-    unwrap(this).setFairsharePolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFairsharePolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The fair share policy of the scheduling policy.
    */
   public open fun fairsharePolicy(`value`: FairsharePolicyProperty) {
-    unwrap(this).setFairsharePolicy(`value`.let(FairsharePolicyProperty::unwrap))
+    unwrap(this).setFairsharePolicy(`value`.let(FairsharePolicyProperty.Companion::unwrap))
   }
 
   /**
@@ -115,7 +115,7 @@ public open class CfnSchedulingPolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -225,7 +225,7 @@ public open class CfnSchedulingPolicy(
      * @param fairsharePolicy The fair share policy of the scheduling policy. 
      */
     override fun fairsharePolicy(fairsharePolicy: IResolvable) {
-      cdkBuilder.fairsharePolicy(fairsharePolicy.let(IResolvable::unwrap))
+      cdkBuilder.fairsharePolicy(fairsharePolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -235,7 +235,7 @@ public open class CfnSchedulingPolicy(
      * @param fairsharePolicy The fair share policy of the scheduling policy. 
      */
     override fun fairsharePolicy(fairsharePolicy: FairsharePolicyProperty) {
-      cdkBuilder.fairsharePolicy(fairsharePolicy.let(FairsharePolicyProperty::unwrap))
+      cdkBuilder.fairsharePolicy(fairsharePolicy.let(FairsharePolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -467,7 +467,7 @@ public open class CfnSchedulingPolicy(
        * Fair share identifiers that aren't included have a default weight of `1.0` .
        */
       override fun shareDistribution(shareDistribution: IResolvable) {
-        cdkBuilder.shareDistribution(shareDistribution.let(IResolvable::unwrap))
+        cdkBuilder.shareDistribution(shareDistribution.let(IResolvable.Companion::unwrap))
       }
 
       /**

@@ -54,7 +54,7 @@ public open class CustomDataIdentifier(
   public override fun name(): String = unwrap(this).getName()
 
   /**
-   * * the regular expresssion to detect and mask log events for.
+   * * the regular expression to detect and mask log events for.
    */
   public open fun regex(): String = unwrap(this).getRegex()
 

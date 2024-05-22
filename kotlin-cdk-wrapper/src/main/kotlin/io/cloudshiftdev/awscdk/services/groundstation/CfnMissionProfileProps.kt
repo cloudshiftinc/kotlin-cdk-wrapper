@@ -233,7 +233,7 @@ public interface CfnMissionProfileProps {
      * Each list of config ARNs is an edge, with a "from" config and a "to" config.
      */
     override fun dataflowEdges(dataflowEdges: IResolvable) {
-      cdkBuilder.dataflowEdges(dataflowEdges.let(IResolvable::unwrap))
+      cdkBuilder.dataflowEdges(dataflowEdges.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -271,14 +271,14 @@ public interface CfnMissionProfileProps {
      * @param streamsKmsKey the value to be set.
      */
     override fun streamsKmsKey(streamsKmsKey: IResolvable) {
-      cdkBuilder.streamsKmsKey(streamsKmsKey.let(IResolvable::unwrap))
+      cdkBuilder.streamsKmsKey(streamsKmsKey.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param streamsKmsKey the value to be set.
      */
     override fun streamsKmsKey(streamsKmsKey: CfnMissionProfile.StreamsKmsKeyProperty) {
-      cdkBuilder.streamsKmsKey(streamsKmsKey.let(CfnMissionProfile.StreamsKmsKeyProperty::unwrap))
+      cdkBuilder.streamsKmsKey(streamsKmsKey.let(CfnMissionProfile.StreamsKmsKeyProperty.Companion::unwrap))
     }
 
     /**
@@ -302,7 +302,7 @@ public interface CfnMissionProfileProps {
      * @param tags Tags assigned to the mission profile.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

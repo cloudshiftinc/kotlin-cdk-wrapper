@@ -46,8 +46,8 @@ public open class BackupSelection(
     id: String,
     props: BackupSelectionProps,
   ) :
-      this(software.amazon.awscdk.services.backup.BackupSelection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(BackupSelectionProps::unwrap))
+      this(software.amazon.awscdk.services.backup.BackupSelection(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(BackupSelectionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -182,7 +182,7 @@ public open class BackupSelection(
      * @param backupPlan The backup plan for this selection. 
      */
     override fun backupPlan(backupPlan: IBackupPlan) {
-      cdkBuilder.backupPlan(backupPlan.let(IBackupPlan::unwrap))
+      cdkBuilder.backupPlan(backupPlan.let(IBackupPlan.Companion::unwrap))
     }
 
     /**
@@ -220,7 +220,7 @@ public open class BackupSelection(
      * @param resources The resources to backup. 
      */
     override fun resources(resources: List<BackupResource>) {
-      cdkBuilder.resources(resources.map(BackupResource::unwrap))
+      cdkBuilder.resources(resources.map(BackupResource.Companion::unwrap))
     }
 
     /**
@@ -245,7 +245,7 @@ public open class BackupSelection(
      * resources. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.backup.BackupSelection = cdkBuilder.build()

@@ -97,8 +97,8 @@ public open class CfnStack(
     id: String,
     props: CfnStackProps,
   ) :
-      this(software.amazon.awscdk.services.opsworks.CfnStack(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStackProps::unwrap))
+      this(software.amazon.awscdk.services.opsworks.CfnStack(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStackProps.Companion::unwrap))
   )
 
   public constructor(
@@ -138,7 +138,7 @@ public open class CfnStack(
    * One or more user-defined key-value pairs to be added to the stack attributes.
    */
   public open fun attributes(`value`: IResolvable) {
-    unwrap(this).setAttributes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -161,7 +161,7 @@ public open class CfnStack(
    * Stack](https://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-creating.html) .
    */
   public open fun chefConfiguration(`value`: IResolvable) {
-    unwrap(this).setChefConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setChefConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -170,7 +170,7 @@ public open class CfnStack(
    * Stack](https://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-creating.html) .
    */
   public open fun chefConfiguration(`value`: ChefConfigurationProperty) {
-    unwrap(this).setChefConfiguration(`value`.let(ChefConfigurationProperty::unwrap))
+    unwrap(this).setChefConfiguration(`value`.let(ChefConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -222,7 +222,7 @@ public open class CfnStack(
    * permissions.
    */
   public open fun clonePermissions(`value`: IResolvable) {
-    unwrap(this).setClonePermissions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setClonePermissions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -234,14 +234,14 @@ public open class CfnStack(
    * The configuration manager.
    */
   public open fun configurationManager(`value`: IResolvable) {
-    unwrap(this).setConfigurationManager(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfigurationManager(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration manager.
    */
   public open fun configurationManager(`value`: StackConfigurationManagerProperty) {
-    unwrap(this).setConfigurationManager(`value`.let(StackConfigurationManagerProperty::unwrap))
+    unwrap(this).setConfigurationManager(`value`.let(StackConfigurationManagerProperty.Companion::unwrap))
   }
 
   /**
@@ -262,14 +262,14 @@ public open class CfnStack(
    * Contains the information required to retrieve an app or cookbook from a repository.
    */
   public open fun customCookbooksSource(`value`: IResolvable) {
-    unwrap(this).setCustomCookbooksSource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCustomCookbooksSource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Contains the information required to retrieve an app or cookbook from a repository.
    */
   public open fun customCookbooksSource(`value`: SourceProperty) {
-    unwrap(this).setCustomCookbooksSource(`value`.let(SourceProperty::unwrap))
+    unwrap(this).setCustomCookbooksSource(`value`.let(SourceProperty.Companion::unwrap))
   }
 
   /**
@@ -391,7 +391,7 @@ public open class CfnStack(
    * A list of Elastic IP addresses to register with the AWS OpsWorks stack.
    */
   public open fun elasticIps(`value`: IResolvable) {
-    unwrap(this).setElasticIps(`value`.let(IResolvable::unwrap))
+    unwrap(this).setElasticIps(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -424,7 +424,7 @@ public open class CfnStack(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -450,7 +450,7 @@ public open class CfnStack(
    * AWS OpsWorks stack.
    */
   public open fun rdsDbInstances(`value`: IResolvable) {
-    unwrap(this).setRdsDbInstances(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRdsDbInstances(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -510,7 +510,7 @@ public open class CfnStack(
    * A map that contains tag keys and tag values that are attached to a stack or layer.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -534,7 +534,7 @@ public open class CfnStack(
    * Whether the stack uses custom cookbooks.
    */
   public open fun useCustomCookbooks(`value`: IResolvable) {
-    unwrap(this).setUseCustomCookbooks(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUseCustomCookbooks(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -553,7 +553,7 @@ public open class CfnStack(
    * Whether to associate the AWS OpsWorks Stacks built-in security groups with the stack's layers.
    */
   public open fun useOpsworksSecurityGroups(`value`: IResolvable) {
-    unwrap(this).setUseOpsworksSecurityGroups(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUseOpsworksSecurityGroups(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -1230,7 +1230,7 @@ public open class CfnStack(
      * attributes. 
      */
     override fun attributes(attributes: IResolvable) {
-      cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+      cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1255,7 +1255,7 @@ public open class CfnStack(
      * New Stack](https://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-creating.html) . 
      */
     override fun chefConfiguration(chefConfiguration: IResolvable) {
-      cdkBuilder.chefConfiguration(chefConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.chefConfiguration(chefConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1269,7 +1269,7 @@ public open class CfnStack(
      * New Stack](https://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks-creating.html) . 
      */
     override fun chefConfiguration(chefConfiguration: ChefConfigurationProperty) {
-      cdkBuilder.chefConfiguration(chefConfiguration.let(ChefConfigurationProperty::unwrap))
+      cdkBuilder.chefConfiguration(chefConfiguration.let(ChefConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1330,7 +1330,7 @@ public open class CfnStack(
      * the source stack's permissions. 
      */
     override fun clonePermissions(clonePermissions: IResolvable) {
-      cdkBuilder.clonePermissions(clonePermissions.let(IResolvable::unwrap))
+      cdkBuilder.clonePermissions(clonePermissions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1344,7 +1344,7 @@ public open class CfnStack(
      * @param configurationManager The configuration manager. 
      */
     override fun configurationManager(configurationManager: IResolvable) {
-      cdkBuilder.configurationManager(configurationManager.let(IResolvable::unwrap))
+      cdkBuilder.configurationManager(configurationManager.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1358,7 +1358,7 @@ public open class CfnStack(
      * @param configurationManager The configuration manager. 
      */
     override fun configurationManager(configurationManager: StackConfigurationManagerProperty) {
-      cdkBuilder.configurationManager(configurationManager.let(StackConfigurationManagerProperty::unwrap))
+      cdkBuilder.configurationManager(configurationManager.let(StackConfigurationManagerProperty.Companion::unwrap))
     }
 
     /**
@@ -1390,7 +1390,7 @@ public open class CfnStack(
      * from a repository. 
      */
     override fun customCookbooksSource(customCookbooksSource: IResolvable) {
-      cdkBuilder.customCookbooksSource(customCookbooksSource.let(IResolvable::unwrap))
+      cdkBuilder.customCookbooksSource(customCookbooksSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1406,7 +1406,7 @@ public open class CfnStack(
      * from a repository. 
      */
     override fun customCookbooksSource(customCookbooksSource: SourceProperty) {
-      cdkBuilder.customCookbooksSource(customCookbooksSource.let(SourceProperty::unwrap))
+      cdkBuilder.customCookbooksSource(customCookbooksSource.let(SourceProperty.Companion::unwrap))
     }
 
     /**
@@ -1588,7 +1588,7 @@ public open class CfnStack(
      * @param elasticIps A list of Elastic IP addresses to register with the AWS OpsWorks stack. 
      */
     override fun elasticIps(elasticIps: IResolvable) {
-      cdkBuilder.elasticIps(elasticIps.let(IResolvable::unwrap))
+      cdkBuilder.elasticIps(elasticIps.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1674,7 +1674,7 @@ public open class CfnStack(
      * to register with the AWS OpsWorks stack. 
      */
     override fun rdsDbInstances(rdsDbInstances: IResolvable) {
-      cdkBuilder.rdsDbInstances(rdsDbInstances.let(IResolvable::unwrap))
+      cdkBuilder.rdsDbInstances(rdsDbInstances.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1754,7 +1754,7 @@ public open class CfnStack(
      * layer. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1791,7 +1791,7 @@ public open class CfnStack(
      * @param useCustomCookbooks Whether the stack uses custom cookbooks. 
      */
     override fun useCustomCookbooks(useCustomCookbooks: IResolvable) {
-      cdkBuilder.useCustomCookbooks(useCustomCookbooks.let(IResolvable::unwrap))
+      cdkBuilder.useCustomCookbooks(useCustomCookbooks.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1845,7 +1845,7 @@ public open class CfnStack(
      * security groups with the stack's layers. 
      */
     override fun useOpsworksSecurityGroups(useOpsworksSecurityGroups: IResolvable) {
-      cdkBuilder.useOpsworksSecurityGroups(useOpsworksSecurityGroups.let(IResolvable::unwrap))
+      cdkBuilder.useOpsworksSecurityGroups(useOpsworksSecurityGroups.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1978,7 +1978,7 @@ public open class CfnStack(
        * @param manageBerkshelf Whether to enable Berkshelf.
        */
       override fun manageBerkshelf(manageBerkshelf: IResolvable) {
-        cdkBuilder.manageBerkshelf(manageBerkshelf.let(IResolvable::unwrap))
+        cdkBuilder.manageBerkshelf(manageBerkshelf.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

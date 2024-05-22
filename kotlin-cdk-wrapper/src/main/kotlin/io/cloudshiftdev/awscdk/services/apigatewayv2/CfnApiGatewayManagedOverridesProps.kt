@@ -175,7 +175,7 @@ public interface CfnApiGatewayManagedOverridesProps {
      * integration.
      */
     override fun integration(integration: IResolvable) {
-      cdkBuilder.integration(integration.let(IResolvable::unwrap))
+      cdkBuilder.integration(integration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -184,7 +184,7 @@ public interface CfnApiGatewayManagedOverridesProps {
      */
     override
         fun integration(integration: CfnApiGatewayManagedOverrides.IntegrationOverridesProperty) {
-      cdkBuilder.integration(integration.let(CfnApiGatewayManagedOverrides.IntegrationOverridesProperty::unwrap))
+      cdkBuilder.integration(integration.let(CfnApiGatewayManagedOverrides.IntegrationOverridesProperty.Companion::unwrap))
     }
 
     /**
@@ -201,14 +201,14 @@ public interface CfnApiGatewayManagedOverridesProps {
      * @param route Overrides the route configuration for an API Gateway-managed route.
      */
     override fun route(route: IResolvable) {
-      cdkBuilder.route(route.let(IResolvable::unwrap))
+      cdkBuilder.route(route.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param route Overrides the route configuration for an API Gateway-managed route.
      */
     override fun route(route: CfnApiGatewayManagedOverrides.RouteOverridesProperty) {
-      cdkBuilder.route(route.let(CfnApiGatewayManagedOverrides.RouteOverridesProperty::unwrap))
+      cdkBuilder.route(route.let(CfnApiGatewayManagedOverrides.RouteOverridesProperty.Companion::unwrap))
     }
 
     /**
@@ -224,14 +224,14 @@ public interface CfnApiGatewayManagedOverridesProps {
      * @param stage Overrides the stage configuration for an API Gateway-managed stage.
      */
     override fun stage(stage: IResolvable) {
-      cdkBuilder.stage(stage.let(IResolvable::unwrap))
+      cdkBuilder.stage(stage.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param stage Overrides the stage configuration for an API Gateway-managed stage.
      */
     override fun stage(stage: CfnApiGatewayManagedOverrides.StageOverridesProperty) {
-      cdkBuilder.stage(stage.let(CfnApiGatewayManagedOverrides.StageOverridesProperty::unwrap))
+      cdkBuilder.stage(stage.let(CfnApiGatewayManagedOverrides.StageOverridesProperty.Companion::unwrap))
     }
 
     /**

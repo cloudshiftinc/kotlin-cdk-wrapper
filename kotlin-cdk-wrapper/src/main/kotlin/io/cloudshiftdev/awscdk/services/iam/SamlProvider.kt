@@ -31,8 +31,8 @@ public open class SamlProvider(
     id: String,
     props: SamlProviderProps,
   ) :
-      this(software.amazon.awscdk.services.iam.SamlProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SamlProviderProps::unwrap))
+      this(software.amazon.awscdk.services.iam.SamlProvider(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SamlProviderProps.Companion::unwrap))
   )
 
   public constructor(
@@ -104,7 +104,7 @@ public open class SamlProvider(
      * your organization's IdP. 
      */
     override fun metadataDocument(metadataDocument: SamlMetadataDocument) {
-      cdkBuilder.metadataDocument(metadataDocument.let(SamlMetadataDocument::unwrap))
+      cdkBuilder.metadataDocument(metadataDocument.let(SamlMetadataDocument.Companion::unwrap))
     }
 
     /**
@@ -133,7 +133,7 @@ public open class SamlProvider(
       id: String,
       samlProviderArn: String,
     ): ISamlProvider =
-        software.amazon.awscdk.services.iam.SamlProvider.fromSamlProviderArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.iam.SamlProvider.fromSamlProviderArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, samlProviderArn).let(ISamlProvider::wrap)
 
     public operator fun invoke(

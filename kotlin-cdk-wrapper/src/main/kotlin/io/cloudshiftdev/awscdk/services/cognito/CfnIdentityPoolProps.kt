@@ -272,7 +272,7 @@ public interface CfnIdentityPoolProps {
      * @param allowClassicFlow Enables the Basic (Classic) authentication flow.
      */
     override fun allowClassicFlow(allowClassicFlow: IResolvable) {
-      cdkBuilder.allowClassicFlow(allowClassicFlow.let(IResolvable::unwrap))
+      cdkBuilder.allowClassicFlow(allowClassicFlow.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -288,7 +288,7 @@ public interface CfnIdentityPoolProps {
      * unauthenticated logins. 
      */
     override fun allowUnauthenticatedIdentities(allowUnauthenticatedIdentities: IResolvable) {
-      cdkBuilder.allowUnauthenticatedIdentities(allowUnauthenticatedIdentities.let(IResolvable::unwrap))
+      cdkBuilder.allowUnauthenticatedIdentities(allowUnauthenticatedIdentities.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -302,7 +302,7 @@ public interface CfnIdentityPoolProps {
      * @param cognitoIdentityProviders The Amazon Cognito user pools and their client IDs.
      */
     override fun cognitoIdentityProviders(cognitoIdentityProviders: IResolvable) {
-      cdkBuilder.cognitoIdentityProviders(cognitoIdentityProviders.let(IResolvable::unwrap))
+      cdkBuilder.cognitoIdentityProviders(cognitoIdentityProviders.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -322,14 +322,14 @@ public interface CfnIdentityPoolProps {
      * @param cognitoStreams Configuration options for configuring Amazon Cognito streams.
      */
     override fun cognitoStreams(cognitoStreams: IResolvable) {
-      cdkBuilder.cognitoStreams(cognitoStreams.let(IResolvable::unwrap))
+      cdkBuilder.cognitoStreams(cognitoStreams.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param cognitoStreams Configuration options for configuring Amazon Cognito streams.
      */
     override fun cognitoStreams(cognitoStreams: CfnIdentityPool.CognitoStreamsProperty) {
-      cdkBuilder.cognitoStreams(cognitoStreams.let(CfnIdentityPool.CognitoStreamsProperty::unwrap))
+      cdkBuilder.cognitoStreams(cognitoStreams.let(CfnIdentityPool.CognitoStreamsProperty.Companion::unwrap))
     }
 
     /**
@@ -386,14 +386,14 @@ public interface CfnIdentityPoolProps {
      * @param pushSync The configuration options to be applied to the identity pool.
      */
     override fun pushSync(pushSync: IResolvable) {
-      cdkBuilder.pushSync(pushSync.let(IResolvable::unwrap))
+      cdkBuilder.pushSync(pushSync.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param pushSync The configuration options to be applied to the identity pool.
      */
     override fun pushSync(pushSync: CfnIdentityPool.PushSyncProperty) {
-      cdkBuilder.pushSync(pushSync.let(CfnIdentityPool.PushSyncProperty::unwrap))
+      cdkBuilder.pushSync(pushSync.let(CfnIdentityPool.PushSyncProperty.Companion::unwrap))
     }
 
     /**

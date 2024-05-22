@@ -34,8 +34,8 @@ public open class NoneDataSource(
     id: String,
     props: NoneDataSourceProps,
   ) :
-      this(software.amazon.awscdk.services.appsync.NoneDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(NoneDataSourceProps::unwrap))
+      this(software.amazon.awscdk.services.appsync.NoneDataSource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(NoneDataSourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -89,7 +89,7 @@ public open class NoneDataSource(
      * @param api The API to attach this data source to. 
      */
     override fun api(api: IGraphqlApi) {
-      cdkBuilder.api(api.let(IGraphqlApi::unwrap))
+      cdkBuilder.api(api.let(IGraphqlApi.Companion::unwrap))
     }
 
     /**

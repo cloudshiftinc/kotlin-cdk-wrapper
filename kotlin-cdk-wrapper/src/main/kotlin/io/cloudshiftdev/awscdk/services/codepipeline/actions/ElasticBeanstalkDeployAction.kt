@@ -34,7 +34,7 @@ public open class ElasticBeanstalkDeployAction(
   cdkObject: software.amazon.awscdk.services.codepipeline.actions.ElasticBeanstalkDeployAction,
 ) : Action(cdkObject) {
   public constructor(props: ElasticBeanstalkDeployActionProps) :
-      this(software.amazon.awscdk.services.codepipeline.actions.ElasticBeanstalkDeployAction(props.let(ElasticBeanstalkDeployActionProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.actions.ElasticBeanstalkDeployAction(props.let(ElasticBeanstalkDeployActionProps.Companion::unwrap))
   )
 
   public constructor(props: ElasticBeanstalkDeployActionProps.Builder.() -> Unit) :
@@ -157,7 +157,7 @@ public open class ElasticBeanstalkDeployAction(
      * @param input The source to use as input for deployment. 
      */
     override fun input(input: Artifact) {
-      cdkBuilder.input(input.let(Artifact::unwrap))
+      cdkBuilder.input(input.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -174,7 +174,7 @@ public open class ElasticBeanstalkDeployAction(
      * @param role The Role in which context's this Action will be executing in. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**

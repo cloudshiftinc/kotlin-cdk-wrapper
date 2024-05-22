@@ -331,7 +331,7 @@ public interface CfnPushTemplateProps {
      * `Default` ).
      */
     override fun adm(adm: IResolvable) {
-      cdkBuilder.adm(adm.let(IResolvable::unwrap))
+      cdkBuilder.adm(adm.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -340,7 +340,7 @@ public interface CfnPushTemplateProps {
      * `Default` ).
      */
     override fun adm(adm: CfnPushTemplate.AndroidPushNotificationTemplateProperty) {
-      cdkBuilder.adm(adm.let(CfnPushTemplate.AndroidPushNotificationTemplateProperty::unwrap))
+      cdkBuilder.adm(adm.let(CfnPushTemplate.AndroidPushNotificationTemplateProperty.Companion::unwrap))
     }
 
     /**
@@ -361,7 +361,7 @@ public interface CfnPushTemplateProps {
      * `Default` ).
      */
     override fun apns(apns: IResolvable) {
-      cdkBuilder.apns(apns.let(IResolvable::unwrap))
+      cdkBuilder.apns(apns.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -371,7 +371,7 @@ public interface CfnPushTemplateProps {
      * `Default` ).
      */
     override fun apns(apns: CfnPushTemplate.APNSPushNotificationTemplateProperty) {
-      cdkBuilder.apns(apns.let(CfnPushTemplate.APNSPushNotificationTemplateProperty::unwrap))
+      cdkBuilder.apns(apns.let(CfnPushTemplate.APNSPushNotificationTemplateProperty.Companion::unwrap))
     }
 
     /**
@@ -392,7 +392,7 @@ public interface CfnPushTemplateProps {
      * `Default` ).
      */
     override fun baidu(baidu: IResolvable) {
-      cdkBuilder.baidu(baidu.let(IResolvable::unwrap))
+      cdkBuilder.baidu(baidu.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -401,7 +401,7 @@ public interface CfnPushTemplateProps {
      * `Default` ).
      */
     override fun baidu(baidu: CfnPushTemplate.AndroidPushNotificationTemplateProperty) {
-      cdkBuilder.baidu(baidu.let(CfnPushTemplate.AndroidPushNotificationTemplateProperty::unwrap))
+      cdkBuilder.baidu(baidu.let(CfnPushTemplate.AndroidPushNotificationTemplateProperty.Companion::unwrap))
     }
 
     /**
@@ -431,7 +431,7 @@ public interface CfnPushTemplateProps {
      * @param defaultValue The default message template to use for push notification channels.
      */
     override fun defaultValue(defaultValue: IResolvable) {
-      cdkBuilder.defaultValue(defaultValue.let(IResolvable::unwrap))
+      cdkBuilder.defaultValue(defaultValue.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -439,7 +439,7 @@ public interface CfnPushTemplateProps {
      */
     override
         fun defaultValue(defaultValue: CfnPushTemplate.DefaultPushNotificationTemplateProperty) {
-      cdkBuilder.defaultValue(defaultValue.let(CfnPushTemplate.DefaultPushNotificationTemplateProperty::unwrap))
+      cdkBuilder.defaultValue(defaultValue.let(CfnPushTemplate.DefaultPushNotificationTemplateProperty.Companion::unwrap))
     }
 
     /**
@@ -459,7 +459,7 @@ public interface CfnPushTemplateProps {
      * `Default` ).
      */
     override fun gcm(gcm: IResolvable) {
-      cdkBuilder.gcm(gcm.let(IResolvable::unwrap))
+      cdkBuilder.gcm(gcm.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -470,7 +470,7 @@ public interface CfnPushTemplateProps {
      * `Default` ).
      */
     override fun gcm(gcm: CfnPushTemplate.AndroidPushNotificationTemplateProperty) {
-      cdkBuilder.gcm(gcm.let(CfnPushTemplate.AndroidPushNotificationTemplateProperty::unwrap))
+      cdkBuilder.gcm(gcm.let(CfnPushTemplate.AndroidPushNotificationTemplateProperty.Companion::unwrap))
     }
 
     /**

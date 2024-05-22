@@ -54,8 +54,8 @@ public open class CfnNetworkInsightsAnalysis(
     id: String,
     props: CfnNetworkInsightsAnalysisProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnNetworkInsightsAnalysisProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnNetworkInsightsAnalysis(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnNetworkInsightsAnalysisProps.Companion::unwrap))
   )
 
   public constructor(
@@ -172,7 +172,7 @@ public open class CfnNetworkInsightsAnalysis(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -202,7 +202,7 @@ public open class CfnNetworkInsightsAnalysis(
    * The tags to apply.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -342,7 +342,7 @@ public open class CfnNetworkInsightsAnalysis(
      * @param tags The tags to apply. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -500,14 +500,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param component The path component.
        */
       override fun component(component: IResolvable) {
-        cdkBuilder.component(component.let(IResolvable::unwrap))
+        cdkBuilder.component(component.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param component The path component.
        */
       override fun component(component: AnalysisComponentProperty) {
-        cdkBuilder.component(component.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.component(component.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -522,7 +522,7 @@ public open class CfnNetworkInsightsAnalysis(
        * @param loadBalancers The load balancers.
        */
       override fun loadBalancers(loadBalancers: IResolvable) {
-        cdkBuilder.loadBalancers(loadBalancers.let(IResolvable::unwrap))
+        cdkBuilder.loadBalancers(loadBalancers.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -853,21 +853,21 @@ public open class CfnNetworkInsightsAnalysis(
        * @param egress Indicates whether the rule is an outbound rule.
        */
       override fun egress(egress: IResolvable) {
-        cdkBuilder.egress(egress.let(IResolvable::unwrap))
+        cdkBuilder.egress(egress.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param portRange The range of ports.
        */
       override fun portRange(portRange: IResolvable) {
-        cdkBuilder.portRange(portRange.let(IResolvable::unwrap))
+        cdkBuilder.portRange(portRange.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param portRange The range of ports.
        */
       override fun portRange(portRange: PortRangeProperty) {
-        cdkBuilder.portRange(portRange.let(PortRangeProperty::unwrap))
+        cdkBuilder.portRange(portRange.let(PortRangeProperty.Companion::unwrap))
       }
 
       /**
@@ -1302,14 +1302,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param instance Information about the instance.
        */
       override fun instance(instance: IResolvable) {
-        cdkBuilder.instance(instance.let(IResolvable::unwrap))
+        cdkBuilder.instance(instance.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param instance Information about the instance.
        */
       override fun instance(instance: AnalysisComponentProperty) {
-        cdkBuilder.instance(instance.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.instance(instance.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -1534,7 +1534,7 @@ public open class CfnNetworkInsightsAnalysis(
        * @param destinationPortRanges The destination port ranges.
        */
       override fun destinationPortRanges(destinationPortRanges: IResolvable) {
-        cdkBuilder.destinationPortRanges(destinationPortRanges.let(IResolvable::unwrap))
+        cdkBuilder.destinationPortRanges(destinationPortRanges.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1574,7 +1574,7 @@ public open class CfnNetworkInsightsAnalysis(
        * @param sourcePortRanges The source port ranges.
        */
       override fun sourcePortRanges(sourcePortRanges: IResolvable) {
-        cdkBuilder.sourcePortRanges(sourcePortRanges.let(IResolvable::unwrap))
+        cdkBuilder.sourcePortRanges(sourcePortRanges.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2182,14 +2182,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param portRange The port range.
        */
       override fun portRange(portRange: IResolvable) {
-        cdkBuilder.portRange(portRange.let(IResolvable::unwrap))
+        cdkBuilder.portRange(portRange.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param portRange The port range.
        */
       override fun portRange(portRange: PortRangeProperty) {
-        cdkBuilder.portRange(portRange.let(PortRangeProperty::unwrap))
+        cdkBuilder.portRange(portRange.let(PortRangeProperty.Companion::unwrap))
       }
 
       /**
@@ -3583,14 +3583,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param acl The network ACL.
        */
       override fun acl(acl: IResolvable) {
-        cdkBuilder.acl(acl.let(IResolvable::unwrap))
+        cdkBuilder.acl(acl.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param acl The network ACL.
        */
       override fun acl(acl: AnalysisComponentProperty) {
-        cdkBuilder.acl(acl.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.acl(acl.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -3605,14 +3605,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param aclRule The network ACL rule.
        */
       override fun aclRule(aclRule: IResolvable) {
-        cdkBuilder.aclRule(aclRule.let(IResolvable::unwrap))
+        cdkBuilder.aclRule(aclRule.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param aclRule The network ACL rule.
        */
       override fun aclRule(aclRule: AnalysisAclRuleProperty) {
-        cdkBuilder.aclRule(aclRule.let(AnalysisAclRuleProperty::unwrap))
+        cdkBuilder.aclRule(aclRule.let(AnalysisAclRuleProperty.Companion::unwrap))
       }
 
       /**
@@ -3646,14 +3646,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param attachedTo The resource to which the component is attached.
        */
       override fun attachedTo(attachedTo: IResolvable) {
-        cdkBuilder.attachedTo(attachedTo.let(IResolvable::unwrap))
+        cdkBuilder.attachedTo(attachedTo.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param attachedTo The resource to which the component is attached.
        */
       override fun attachedTo(attachedTo: AnalysisComponentProperty) {
-        cdkBuilder.attachedTo(attachedTo.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.attachedTo(attachedTo.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -3693,7 +3693,7 @@ public open class CfnNetworkInsightsAnalysis(
        * @param classicLoadBalancerListener The listener for a Classic Load Balancer.
        */
       override fun classicLoadBalancerListener(classicLoadBalancerListener: IResolvable) {
-        cdkBuilder.classicLoadBalancerListener(classicLoadBalancerListener.let(IResolvable::unwrap))
+        cdkBuilder.classicLoadBalancerListener(classicLoadBalancerListener.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3701,7 +3701,7 @@ public open class CfnNetworkInsightsAnalysis(
        */
       override
           fun classicLoadBalancerListener(classicLoadBalancerListener: AnalysisLoadBalancerListenerProperty) {
-        cdkBuilder.classicLoadBalancerListener(classicLoadBalancerListener.let(AnalysisLoadBalancerListenerProperty::unwrap))
+        cdkBuilder.classicLoadBalancerListener(classicLoadBalancerListener.let(AnalysisLoadBalancerListenerProperty.Companion::unwrap))
       }
 
       /**
@@ -3718,14 +3718,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param component The component.
        */
       override fun component(component: IResolvable) {
-        cdkBuilder.component(component.let(IResolvable::unwrap))
+        cdkBuilder.component(component.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param component The component.
        */
       override fun component(component: AnalysisComponentProperty) {
-        cdkBuilder.component(component.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.component(component.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -3754,14 +3754,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param customerGateway The customer gateway.
        */
       override fun customerGateway(customerGateway: IResolvable) {
-        cdkBuilder.customerGateway(customerGateway.let(IResolvable::unwrap))
+        cdkBuilder.customerGateway(customerGateway.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param customerGateway The customer gateway.
        */
       override fun customerGateway(customerGateway: AnalysisComponentProperty) {
-        cdkBuilder.customerGateway(customerGateway.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.customerGateway(customerGateway.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -3776,14 +3776,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param destination The destination.
        */
       override fun destination(destination: IResolvable) {
-        cdkBuilder.destination(destination.let(IResolvable::unwrap))
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param destination The destination.
        */
       override fun destination(destination: AnalysisComponentProperty) {
-        cdkBuilder.destination(destination.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.destination(destination.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -3798,14 +3798,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param destinationVpc The destination VPC.
        */
       override fun destinationVpc(destinationVpc: IResolvable) {
-        cdkBuilder.destinationVpc(destinationVpc.let(IResolvable::unwrap))
+        cdkBuilder.destinationVpc(destinationVpc.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param destinationVpc The destination VPC.
        */
       override fun destinationVpc(destinationVpc: AnalysisComponentProperty) {
-        cdkBuilder.destinationVpc(destinationVpc.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.destinationVpc(destinationVpc.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -3829,7 +3829,7 @@ public open class CfnNetworkInsightsAnalysis(
        * @param elasticLoadBalancerListener The load balancer listener.
        */
       override fun elasticLoadBalancerListener(elasticLoadBalancerListener: IResolvable) {
-        cdkBuilder.elasticLoadBalancerListener(elasticLoadBalancerListener.let(IResolvable::unwrap))
+        cdkBuilder.elasticLoadBalancerListener(elasticLoadBalancerListener.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3837,7 +3837,7 @@ public open class CfnNetworkInsightsAnalysis(
        */
       override
           fun elasticLoadBalancerListener(elasticLoadBalancerListener: AnalysisComponentProperty) {
-        cdkBuilder.elasticLoadBalancerListener(elasticLoadBalancerListener.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.elasticLoadBalancerListener(elasticLoadBalancerListener.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -3860,14 +3860,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param ingressRouteTable The route table.
        */
       override fun ingressRouteTable(ingressRouteTable: IResolvable) {
-        cdkBuilder.ingressRouteTable(ingressRouteTable.let(IResolvable::unwrap))
+        cdkBuilder.ingressRouteTable(ingressRouteTable.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param ingressRouteTable The route table.
        */
       override fun ingressRouteTable(ingressRouteTable: AnalysisComponentProperty) {
-        cdkBuilder.ingressRouteTable(ingressRouteTable.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.ingressRouteTable(ingressRouteTable.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -3883,14 +3883,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param internetGateway The internet gateway.
        */
       override fun internetGateway(internetGateway: IResolvable) {
-        cdkBuilder.internetGateway(internetGateway.let(IResolvable::unwrap))
+        cdkBuilder.internetGateway(internetGateway.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param internetGateway The internet gateway.
        */
       override fun internetGateway(internetGateway: AnalysisComponentProperty) {
-        cdkBuilder.internetGateway(internetGateway.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.internetGateway(internetGateway.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -3919,14 +3919,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param loadBalancerTarget The target.
        */
       override fun loadBalancerTarget(loadBalancerTarget: IResolvable) {
-        cdkBuilder.loadBalancerTarget(loadBalancerTarget.let(IResolvable::unwrap))
+        cdkBuilder.loadBalancerTarget(loadBalancerTarget.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param loadBalancerTarget The target.
        */
       override fun loadBalancerTarget(loadBalancerTarget: AnalysisLoadBalancerTargetProperty) {
-        cdkBuilder.loadBalancerTarget(loadBalancerTarget.let(AnalysisLoadBalancerTargetProperty::unwrap))
+        cdkBuilder.loadBalancerTarget(loadBalancerTarget.let(AnalysisLoadBalancerTargetProperty.Companion::unwrap))
       }
 
       /**
@@ -3942,14 +3942,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param loadBalancerTargetGroup The target group.
        */
       override fun loadBalancerTargetGroup(loadBalancerTargetGroup: IResolvable) {
-        cdkBuilder.loadBalancerTargetGroup(loadBalancerTargetGroup.let(IResolvable::unwrap))
+        cdkBuilder.loadBalancerTargetGroup(loadBalancerTargetGroup.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param loadBalancerTargetGroup The target group.
        */
       override fun loadBalancerTargetGroup(loadBalancerTargetGroup: AnalysisComponentProperty) {
-        cdkBuilder.loadBalancerTargetGroup(loadBalancerTargetGroup.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.loadBalancerTargetGroup(loadBalancerTargetGroup.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -3965,7 +3965,7 @@ public open class CfnNetworkInsightsAnalysis(
        * @param loadBalancerTargetGroups The target groups.
        */
       override fun loadBalancerTargetGroups(loadBalancerTargetGroups: IResolvable) {
-        cdkBuilder.loadBalancerTargetGroups(loadBalancerTargetGroups.let(IResolvable::unwrap))
+        cdkBuilder.loadBalancerTargetGroups(loadBalancerTargetGroups.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3999,14 +3999,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param natGateway The NAT gateway.
        */
       override fun natGateway(natGateway: IResolvable) {
-        cdkBuilder.natGateway(natGateway.let(IResolvable::unwrap))
+        cdkBuilder.natGateway(natGateway.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param natGateway The NAT gateway.
        */
       override fun natGateway(natGateway: AnalysisComponentProperty) {
-        cdkBuilder.natGateway(natGateway.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.natGateway(natGateway.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -4021,14 +4021,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param networkInterface The network interface.
        */
       override fun networkInterface(networkInterface: IResolvable) {
-        cdkBuilder.networkInterface(networkInterface.let(IResolvable::unwrap))
+        cdkBuilder.networkInterface(networkInterface.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param networkInterface The network interface.
        */
       override fun networkInterface(networkInterface: AnalysisComponentProperty) {
-        cdkBuilder.networkInterface(networkInterface.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.networkInterface(networkInterface.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -4057,7 +4057,7 @@ public open class CfnNetworkInsightsAnalysis(
        * @param portRanges The port ranges.
        */
       override fun portRanges(portRanges: IResolvable) {
-        cdkBuilder.portRanges(portRanges.let(IResolvable::unwrap))
+        cdkBuilder.portRanges(portRanges.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4076,14 +4076,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param prefixList The prefix list.
        */
       override fun prefixList(prefixList: IResolvable) {
-        cdkBuilder.prefixList(prefixList.let(IResolvable::unwrap))
+        cdkBuilder.prefixList(prefixList.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param prefixList The prefix list.
        */
       override fun prefixList(prefixList: AnalysisComponentProperty) {
-        cdkBuilder.prefixList(prefixList.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.prefixList(prefixList.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -4110,14 +4110,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param routeTable The route table.
        */
       override fun routeTable(routeTable: IResolvable) {
-        cdkBuilder.routeTable(routeTable.let(IResolvable::unwrap))
+        cdkBuilder.routeTable(routeTable.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param routeTable The route table.
        */
       override fun routeTable(routeTable: AnalysisComponentProperty) {
-        cdkBuilder.routeTable(routeTable.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.routeTable(routeTable.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -4132,14 +4132,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param routeTableRoute The route table route.
        */
       override fun routeTableRoute(routeTableRoute: IResolvable) {
-        cdkBuilder.routeTableRoute(routeTableRoute.let(IResolvable::unwrap))
+        cdkBuilder.routeTableRoute(routeTableRoute.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param routeTableRoute The route table route.
        */
       override fun routeTableRoute(routeTableRoute: AnalysisRouteTableRouteProperty) {
-        cdkBuilder.routeTableRoute(routeTableRoute.let(AnalysisRouteTableRouteProperty::unwrap))
+        cdkBuilder.routeTableRoute(routeTableRoute.let(AnalysisRouteTableRouteProperty.Companion::unwrap))
       }
 
       /**
@@ -4155,14 +4155,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param securityGroup The security group.
        */
       override fun securityGroup(securityGroup: IResolvable) {
-        cdkBuilder.securityGroup(securityGroup.let(IResolvable::unwrap))
+        cdkBuilder.securityGroup(securityGroup.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param securityGroup The security group.
        */
       override fun securityGroup(securityGroup: AnalysisComponentProperty) {
-        cdkBuilder.securityGroup(securityGroup.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.securityGroup(securityGroup.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -4177,14 +4177,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param securityGroupRule The security group rule.
        */
       override fun securityGroupRule(securityGroupRule: IResolvable) {
-        cdkBuilder.securityGroupRule(securityGroupRule.let(IResolvable::unwrap))
+        cdkBuilder.securityGroupRule(securityGroupRule.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param securityGroupRule The security group rule.
        */
       override fun securityGroupRule(securityGroupRule: AnalysisSecurityGroupRuleProperty) {
-        cdkBuilder.securityGroupRule(securityGroupRule.let(AnalysisSecurityGroupRuleProperty::unwrap))
+        cdkBuilder.securityGroupRule(securityGroupRule.let(AnalysisSecurityGroupRuleProperty.Companion::unwrap))
       }
 
       /**
@@ -4200,7 +4200,7 @@ public open class CfnNetworkInsightsAnalysis(
        * @param securityGroups The security groups.
        */
       override fun securityGroups(securityGroups: IResolvable) {
-        cdkBuilder.securityGroups(securityGroups.let(IResolvable::unwrap))
+        cdkBuilder.securityGroups(securityGroups.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4220,14 +4220,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param sourceVpc The source VPC.
        */
       override fun sourceVpc(sourceVpc: IResolvable) {
-        cdkBuilder.sourceVpc(sourceVpc.let(IResolvable::unwrap))
+        cdkBuilder.sourceVpc(sourceVpc.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sourceVpc The source VPC.
        */
       override fun sourceVpc(sourceVpc: AnalysisComponentProperty) {
-        cdkBuilder.sourceVpc(sourceVpc.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.sourceVpc(sourceVpc.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -4249,14 +4249,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param subnet The subnet.
        */
       override fun subnet(subnet: IResolvable) {
-        cdkBuilder.subnet(subnet.let(IResolvable::unwrap))
+        cdkBuilder.subnet(subnet.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param subnet The subnet.
        */
       override fun subnet(subnet: AnalysisComponentProperty) {
-        cdkBuilder.subnet(subnet.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.subnet(subnet.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -4271,14 +4271,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param subnetRouteTable The route table for the subnet.
        */
       override fun subnetRouteTable(subnetRouteTable: IResolvable) {
-        cdkBuilder.subnetRouteTable(subnetRouteTable.let(IResolvable::unwrap))
+        cdkBuilder.subnetRouteTable(subnetRouteTable.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param subnetRouteTable The route table for the subnet.
        */
       override fun subnetRouteTable(subnetRouteTable: AnalysisComponentProperty) {
-        cdkBuilder.subnetRouteTable(subnetRouteTable.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.subnetRouteTable(subnetRouteTable.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -4293,14 +4293,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param transitGateway The transit gateway.
        */
       override fun transitGateway(transitGateway: IResolvable) {
-        cdkBuilder.transitGateway(transitGateway.let(IResolvable::unwrap))
+        cdkBuilder.transitGateway(transitGateway.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param transitGateway The transit gateway.
        */
       override fun transitGateway(transitGateway: AnalysisComponentProperty) {
-        cdkBuilder.transitGateway(transitGateway.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.transitGateway(transitGateway.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -4315,14 +4315,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param transitGatewayAttachment The transit gateway attachment.
        */
       override fun transitGatewayAttachment(transitGatewayAttachment: IResolvable) {
-        cdkBuilder.transitGatewayAttachment(transitGatewayAttachment.let(IResolvable::unwrap))
+        cdkBuilder.transitGatewayAttachment(transitGatewayAttachment.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param transitGatewayAttachment The transit gateway attachment.
        */
       override fun transitGatewayAttachment(transitGatewayAttachment: AnalysisComponentProperty) {
-        cdkBuilder.transitGatewayAttachment(transitGatewayAttachment.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.transitGatewayAttachment(transitGatewayAttachment.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -4338,14 +4338,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param transitGatewayRouteTable The transit gateway route table.
        */
       override fun transitGatewayRouteTable(transitGatewayRouteTable: IResolvable) {
-        cdkBuilder.transitGatewayRouteTable(transitGatewayRouteTable.let(IResolvable::unwrap))
+        cdkBuilder.transitGatewayRouteTable(transitGatewayRouteTable.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param transitGatewayRouteTable The transit gateway route table.
        */
       override fun transitGatewayRouteTable(transitGatewayRouteTable: AnalysisComponentProperty) {
-        cdkBuilder.transitGatewayRouteTable(transitGatewayRouteTable.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.transitGatewayRouteTable(transitGatewayRouteTable.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -4361,7 +4361,7 @@ public open class CfnNetworkInsightsAnalysis(
        * @param transitGatewayRouteTableRoute The transit gateway route table route.
        */
       override fun transitGatewayRouteTableRoute(transitGatewayRouteTableRoute: IResolvable) {
-        cdkBuilder.transitGatewayRouteTableRoute(transitGatewayRouteTableRoute.let(IResolvable::unwrap))
+        cdkBuilder.transitGatewayRouteTableRoute(transitGatewayRouteTableRoute.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4369,7 +4369,7 @@ public open class CfnNetworkInsightsAnalysis(
        */
       override
           fun transitGatewayRouteTableRoute(transitGatewayRouteTableRoute: TransitGatewayRouteTableRouteProperty) {
-        cdkBuilder.transitGatewayRouteTableRoute(transitGatewayRouteTableRoute.let(TransitGatewayRouteTableRouteProperty::unwrap))
+        cdkBuilder.transitGatewayRouteTableRoute(transitGatewayRouteTableRoute.let(TransitGatewayRouteTableRouteProperty.Companion::unwrap))
       }
 
       /**
@@ -4386,14 +4386,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param vpc The component VPC.
        */
       override fun vpc(vpc: IResolvable) {
-        cdkBuilder.vpc(vpc.let(IResolvable::unwrap))
+        cdkBuilder.vpc(vpc.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param vpc The component VPC.
        */
       override fun vpc(vpc: AnalysisComponentProperty) {
-        cdkBuilder.vpc(vpc.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.vpc(vpc.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -4408,14 +4408,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param vpcEndpoint The VPC endpoint.
        */
       override fun vpcEndpoint(vpcEndpoint: IResolvable) {
-        cdkBuilder.vpcEndpoint(vpcEndpoint.let(IResolvable::unwrap))
+        cdkBuilder.vpcEndpoint(vpcEndpoint.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param vpcEndpoint The VPC endpoint.
        */
       override fun vpcEndpoint(vpcEndpoint: AnalysisComponentProperty) {
-        cdkBuilder.vpcEndpoint(vpcEndpoint.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.vpcEndpoint(vpcEndpoint.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -4430,14 +4430,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param vpcPeeringConnection The VPC peering connection.
        */
       override fun vpcPeeringConnection(vpcPeeringConnection: IResolvable) {
-        cdkBuilder.vpcPeeringConnection(vpcPeeringConnection.let(IResolvable::unwrap))
+        cdkBuilder.vpcPeeringConnection(vpcPeeringConnection.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param vpcPeeringConnection The VPC peering connection.
        */
       override fun vpcPeeringConnection(vpcPeeringConnection: AnalysisComponentProperty) {
-        cdkBuilder.vpcPeeringConnection(vpcPeeringConnection.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.vpcPeeringConnection(vpcPeeringConnection.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -4453,14 +4453,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param vpnConnection The VPN connection.
        */
       override fun vpnConnection(vpnConnection: IResolvable) {
-        cdkBuilder.vpnConnection(vpnConnection.let(IResolvable::unwrap))
+        cdkBuilder.vpnConnection(vpnConnection.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param vpnConnection The VPN connection.
        */
       override fun vpnConnection(vpnConnection: AnalysisComponentProperty) {
-        cdkBuilder.vpnConnection(vpnConnection.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.vpnConnection(vpnConnection.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -4475,14 +4475,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param vpnGateway The VPN gateway.
        */
       override fun vpnGateway(vpnGateway: IResolvable) {
-        cdkBuilder.vpnGateway(vpnGateway.let(IResolvable::unwrap))
+        cdkBuilder.vpnGateway(vpnGateway.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param vpnGateway The VPN gateway.
        */
       override fun vpnGateway(vpnGateway: AnalysisComponentProperty) {
-        cdkBuilder.vpnGateway(vpnGateway.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.vpnGateway(vpnGateway.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -5605,14 +5605,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param aclRule The network ACL rule.
        */
       override fun aclRule(aclRule: IResolvable) {
-        cdkBuilder.aclRule(aclRule.let(IResolvable::unwrap))
+        cdkBuilder.aclRule(aclRule.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param aclRule The network ACL rule.
        */
       override fun aclRule(aclRule: AnalysisAclRuleProperty) {
-        cdkBuilder.aclRule(aclRule.let(AnalysisAclRuleProperty::unwrap))
+        cdkBuilder.aclRule(aclRule.let(AnalysisAclRuleProperty.Companion::unwrap))
       }
 
       /**
@@ -5627,7 +5627,7 @@ public open class CfnNetworkInsightsAnalysis(
        * @param additionalDetails The additional details.
        */
       override fun additionalDetails(additionalDetails: IResolvable) {
-        cdkBuilder.additionalDetails(additionalDetails.let(IResolvable::unwrap))
+        cdkBuilder.additionalDetails(additionalDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5647,14 +5647,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param component The component.
        */
       override fun component(component: IResolvable) {
-        cdkBuilder.component(component.let(IResolvable::unwrap))
+        cdkBuilder.component(component.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param component The component.
        */
       override fun component(component: AnalysisComponentProperty) {
-        cdkBuilder.component(component.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.component(component.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -5669,14 +5669,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param destinationVpc The destination VPC.
        */
       override fun destinationVpc(destinationVpc: IResolvable) {
-        cdkBuilder.destinationVpc(destinationVpc.let(IResolvable::unwrap))
+        cdkBuilder.destinationVpc(destinationVpc.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param destinationVpc The destination VPC.
        */
       override fun destinationVpc(destinationVpc: AnalysisComponentProperty) {
-        cdkBuilder.destinationVpc(destinationVpc.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.destinationVpc(destinationVpc.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -5691,7 +5691,7 @@ public open class CfnNetworkInsightsAnalysis(
        * @param elasticLoadBalancerListener The load balancer listener.
        */
       override fun elasticLoadBalancerListener(elasticLoadBalancerListener: IResolvable) {
-        cdkBuilder.elasticLoadBalancerListener(elasticLoadBalancerListener.let(IResolvable::unwrap))
+        cdkBuilder.elasticLoadBalancerListener(elasticLoadBalancerListener.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5699,7 +5699,7 @@ public open class CfnNetworkInsightsAnalysis(
        */
       override
           fun elasticLoadBalancerListener(elasticLoadBalancerListener: AnalysisComponentProperty) {
-        cdkBuilder.elasticLoadBalancerListener(elasticLoadBalancerListener.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.elasticLoadBalancerListener(elasticLoadBalancerListener.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -5715,7 +5715,7 @@ public open class CfnNetworkInsightsAnalysis(
        * @param explanations The explanation codes.
        */
       override fun explanations(explanations: IResolvable) {
-        cdkBuilder.explanations(explanations.let(IResolvable::unwrap))
+        cdkBuilder.explanations(explanations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5735,14 +5735,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param inboundHeader The inbound header.
        */
       override fun inboundHeader(inboundHeader: IResolvable) {
-        cdkBuilder.inboundHeader(inboundHeader.let(IResolvable::unwrap))
+        cdkBuilder.inboundHeader(inboundHeader.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param inboundHeader The inbound header.
        */
       override fun inboundHeader(inboundHeader: AnalysisPacketHeaderProperty) {
-        cdkBuilder.inboundHeader(inboundHeader.let(AnalysisPacketHeaderProperty::unwrap))
+        cdkBuilder.inboundHeader(inboundHeader.let(AnalysisPacketHeaderProperty.Companion::unwrap))
       }
 
       /**
@@ -5757,14 +5757,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param outboundHeader The outbound header.
        */
       override fun outboundHeader(outboundHeader: IResolvable) {
-        cdkBuilder.outboundHeader(outboundHeader.let(IResolvable::unwrap))
+        cdkBuilder.outboundHeader(outboundHeader.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param outboundHeader The outbound header.
        */
       override fun outboundHeader(outboundHeader: AnalysisPacketHeaderProperty) {
-        cdkBuilder.outboundHeader(outboundHeader.let(AnalysisPacketHeaderProperty::unwrap))
+        cdkBuilder.outboundHeader(outboundHeader.let(AnalysisPacketHeaderProperty.Companion::unwrap))
       }
 
       /**
@@ -5779,14 +5779,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param routeTableRoute The route table route.
        */
       override fun routeTableRoute(routeTableRoute: IResolvable) {
-        cdkBuilder.routeTableRoute(routeTableRoute.let(IResolvable::unwrap))
+        cdkBuilder.routeTableRoute(routeTableRoute.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param routeTableRoute The route table route.
        */
       override fun routeTableRoute(routeTableRoute: AnalysisRouteTableRouteProperty) {
-        cdkBuilder.routeTableRoute(routeTableRoute.let(AnalysisRouteTableRouteProperty::unwrap))
+        cdkBuilder.routeTableRoute(routeTableRoute.let(AnalysisRouteTableRouteProperty.Companion::unwrap))
       }
 
       /**
@@ -5802,14 +5802,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param securityGroupRule The security group rule.
        */
       override fun securityGroupRule(securityGroupRule: IResolvable) {
-        cdkBuilder.securityGroupRule(securityGroupRule.let(IResolvable::unwrap))
+        cdkBuilder.securityGroupRule(securityGroupRule.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param securityGroupRule The security group rule.
        */
       override fun securityGroupRule(securityGroupRule: AnalysisSecurityGroupRuleProperty) {
-        cdkBuilder.securityGroupRule(securityGroupRule.let(AnalysisSecurityGroupRuleProperty::unwrap))
+        cdkBuilder.securityGroupRule(securityGroupRule.let(AnalysisSecurityGroupRuleProperty.Companion::unwrap))
       }
 
       /**
@@ -5839,14 +5839,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param sourceVpc The source VPC.
        */
       override fun sourceVpc(sourceVpc: IResolvable) {
-        cdkBuilder.sourceVpc(sourceVpc.let(IResolvable::unwrap))
+        cdkBuilder.sourceVpc(sourceVpc.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sourceVpc The source VPC.
        */
       override fun sourceVpc(sourceVpc: AnalysisComponentProperty) {
-        cdkBuilder.sourceVpc(sourceVpc.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.sourceVpc(sourceVpc.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -5861,14 +5861,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param subnet The subnet.
        */
       override fun subnet(subnet: IResolvable) {
-        cdkBuilder.subnet(subnet.let(IResolvable::unwrap))
+        cdkBuilder.subnet(subnet.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param subnet The subnet.
        */
       override fun subnet(subnet: AnalysisComponentProperty) {
-        cdkBuilder.subnet(subnet.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.subnet(subnet.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -5883,14 +5883,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param transitGateway The transit gateway.
        */
       override fun transitGateway(transitGateway: IResolvable) {
-        cdkBuilder.transitGateway(transitGateway.let(IResolvable::unwrap))
+        cdkBuilder.transitGateway(transitGateway.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param transitGateway The transit gateway.
        */
       override fun transitGateway(transitGateway: AnalysisComponentProperty) {
-        cdkBuilder.transitGateway(transitGateway.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.transitGateway(transitGateway.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**
@@ -5905,7 +5905,7 @@ public open class CfnNetworkInsightsAnalysis(
        * @param transitGatewayRouteTableRoute The route in a transit gateway route table.
        */
       override fun transitGatewayRouteTableRoute(transitGatewayRouteTableRoute: IResolvable) {
-        cdkBuilder.transitGatewayRouteTableRoute(transitGatewayRouteTableRoute.let(IResolvable::unwrap))
+        cdkBuilder.transitGatewayRouteTableRoute(transitGatewayRouteTableRoute.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5913,7 +5913,7 @@ public open class CfnNetworkInsightsAnalysis(
        */
       override
           fun transitGatewayRouteTableRoute(transitGatewayRouteTableRoute: TransitGatewayRouteTableRouteProperty) {
-        cdkBuilder.transitGatewayRouteTableRoute(transitGatewayRouteTableRoute.let(TransitGatewayRouteTableRouteProperty::unwrap))
+        cdkBuilder.transitGatewayRouteTableRoute(transitGatewayRouteTableRoute.let(TransitGatewayRouteTableRouteProperty.Companion::unwrap))
       }
 
       /**
@@ -5930,14 +5930,14 @@ public open class CfnNetworkInsightsAnalysis(
        * @param vpc The component VPC.
        */
       override fun vpc(vpc: IResolvable) {
-        cdkBuilder.vpc(vpc.let(IResolvable::unwrap))
+        cdkBuilder.vpc(vpc.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param vpc The component VPC.
        */
       override fun vpc(vpc: AnalysisComponentProperty) {
-        cdkBuilder.vpc(vpc.let(AnalysisComponentProperty::unwrap))
+        cdkBuilder.vpc(vpc.let(AnalysisComponentProperty.Companion::unwrap))
       }
 
       /**

@@ -213,7 +213,7 @@ public interface CfnReplicatorProps {
      * @param kafkaClusters Specifies a list of Kafka clusters which are targets of the replicator. 
      */
     override fun kafkaClusters(kafkaClusters: IResolvable) {
-      cdkBuilder.kafkaClusters(kafkaClusters.let(IResolvable::unwrap))
+      cdkBuilder.kafkaClusters(kafkaClusters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -234,7 +234,7 @@ public interface CfnReplicatorProps {
      * targets a given source cluster to target cluster replication flow. 
      */
     override fun replicationInfoList(replicationInfoList: IResolvable) {
-      cdkBuilder.replicationInfoList(replicationInfoList.let(IResolvable::unwrap))
+      cdkBuilder.replicationInfoList(replicationInfoList.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -271,7 +271,7 @@ public interface CfnReplicatorProps {
      * @param tags A collection of tags associated with a resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

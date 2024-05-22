@@ -44,8 +44,8 @@ public open class CfnDevice(
     id: String,
     props: CfnDeviceProps,
   ) :
-      this(software.amazon.awscdk.services.iot1click.CfnDevice(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDeviceProps::unwrap))
+      this(software.amazon.awscdk.services.iot1click.CfnDevice(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDeviceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -99,7 +99,7 @@ public open class CfnDevice(
    * A Boolean value indicating whether the device is enabled ( `true` ) or not ( `false` ).
    */
   public open fun enabled(`value`: IResolvable) {
-    unwrap(this).setEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -108,7 +108,7 @@ public open class CfnDevice(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -179,7 +179,7 @@ public open class CfnDevice(
      * `false` ). 
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.iot1click.CfnDevice = cdkBuilder.build()

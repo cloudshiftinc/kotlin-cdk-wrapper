@@ -77,8 +77,8 @@ public open class ServerlessCluster(
     id: String,
     props: ServerlessClusterProps,
   ) :
-      this(software.amazon.awscdk.services.rds.ServerlessCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ServerlessClusterProps::unwrap))
+      this(software.amazon.awscdk.services.rds.ServerlessCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ServerlessClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -96,7 +96,7 @@ public open class ServerlessCluster(
    */
   public open fun addRotationMultiUser(id: String, options: RotationMultiUserOptions):
       SecretRotation = unwrap(this).addRotationMultiUser(id,
-      options.let(RotationMultiUserOptions::unwrap)).let(SecretRotation::wrap)
+      options.let(RotationMultiUserOptions.Companion::unwrap)).let(SecretRotation::wrap)
 
   /**
    * Adds the multi user rotation to this cluster.
@@ -124,7 +124,7 @@ public open class ServerlessCluster(
    * @param options
    */
   public open fun addRotationSingleUser(options: RotationSingleUserOptions): SecretRotation =
-      unwrap(this).addRotationSingleUser(options.let(RotationSingleUserOptions::unwrap)).let(SecretRotation::wrap)
+      unwrap(this).addRotationSingleUser(options.let(RotationSingleUserOptions.Companion::unwrap)).let(SecretRotation::wrap)
 
   /**
    * Adds the single user rotation of the master password to this cluster.
@@ -177,7 +177,7 @@ public open class ServerlessCluster(
    * @param grantee The principal to grant access to. 
    */
   public override fun grantDataApiAccess(grantee: IGrantable): Grant =
-      unwrap(this).grantDataApiAccess(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantDataApiAccess(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The secret attached to this cluster.
@@ -404,7 +404,7 @@ public open class ServerlessCluster(
      * @param backupRetention The number of days during which automatic DB snapshots are retained. 
      */
     override fun backupRetention(backupRetention: Duration) {
-      cdkBuilder.backupRetention(backupRetention.let(Duration::unwrap))
+      cdkBuilder.backupRetention(backupRetention.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -437,7 +437,7 @@ public open class ServerlessCluster(
      * @param credentials Credentials for the administrative user. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -482,7 +482,7 @@ public open class ServerlessCluster(
      * @param engine What kind of database to start. 
      */
     override fun engine(engine: IClusterEngine) {
-      cdkBuilder.engine(engine.let(IClusterEngine::unwrap))
+      cdkBuilder.engine(engine.let(IClusterEngine.Companion::unwrap))
     }
 
     /**
@@ -493,7 +493,7 @@ public open class ServerlessCluster(
      * @param parameterGroup Additional parameters to pass to the database engine. 
      */
     override fun parameterGroup(parameterGroup: IParameterGroup) {
-      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup::unwrap))
+      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup.Companion::unwrap))
     }
 
     /**
@@ -507,7 +507,7 @@ public open class ServerlessCluster(
      * removed from the stack or replaced during an update. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -520,7 +520,7 @@ public open class ServerlessCluster(
      * @param scaling Scaling configuration of an Aurora Serverless database cluster. 
      */
     override fun scaling(scaling: ServerlessScalingOptions) {
-      cdkBuilder.scaling(scaling.let(ServerlessScalingOptions::unwrap))
+      cdkBuilder.scaling(scaling.let(ServerlessScalingOptions.Companion::unwrap))
     }
 
     /**
@@ -547,7 +547,7 @@ public open class ServerlessCluster(
      * @param securityGroups Security group. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -570,7 +570,7 @@ public open class ServerlessCluster(
      * @param storageEncryptionKey The KMS key for storage encryption. 
      */
     override fun storageEncryptionKey(storageEncryptionKey: IKey) {
-      cdkBuilder.storageEncryptionKey(storageEncryptionKey.let(IKey::unwrap))
+      cdkBuilder.storageEncryptionKey(storageEncryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -583,7 +583,7 @@ public open class ServerlessCluster(
      * @param subnetGroup Existing subnet group for the cluster. 
      */
     override fun subnetGroup(subnetGroup: ISubnetGroup) {
-      cdkBuilder.subnetGroup(subnetGroup.let(ISubnetGroup::unwrap))
+      cdkBuilder.subnetGroup(subnetGroup.let(ISubnetGroup.Companion::unwrap))
     }
 
     /**
@@ -594,7 +594,7 @@ public open class ServerlessCluster(
      * @param vpc The VPC that this Aurora Serverless cluster has been created in. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -607,7 +607,7 @@ public open class ServerlessCluster(
      * @param vpcSubnets Where to place the instances within the VPC. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -633,8 +633,8 @@ public open class ServerlessCluster(
       id: String,
       attrs: ServerlessClusterAttributes,
     ): IServerlessCluster =
-        software.amazon.awscdk.services.rds.ServerlessCluster.fromServerlessClusterAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(ServerlessClusterAttributes::unwrap)).let(IServerlessCluster::wrap)
+        software.amazon.awscdk.services.rds.ServerlessCluster.fromServerlessClusterAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(ServerlessClusterAttributes.Companion::unwrap)).let(IServerlessCluster::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5ad4c7ad78796d5cee14bd7dd4458c72f8f8535fcd3845598fc5ea0c2c77997f")

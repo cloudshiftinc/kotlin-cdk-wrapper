@@ -60,8 +60,8 @@ public open class CfnEndpoint(
     id: String,
     props: CfnEndpointProps,
   ) :
-      this(software.amazon.awscdk.services.s3outposts.CfnEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.s3outposts.CfnEndpoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEndpointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -135,14 +135,14 @@ public open class CfnEndpoint(
    * The failure reason, if any, for a create or delete endpoint operation.
    */
   public open fun failedReason(`value`: IResolvable) {
-    unwrap(this).setFailedReason(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFailedReason(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The failure reason, if any, for a create or delete endpoint operation.
    */
   public open fun failedReason(`value`: FailedReasonProperty) {
-    unwrap(this).setFailedReason(`value`.let(FailedReasonProperty::unwrap))
+    unwrap(this).setFailedReason(`value`.let(FailedReasonProperty.Companion::unwrap))
   }
 
   /**
@@ -159,7 +159,7 @@ public open class CfnEndpoint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -332,7 +332,7 @@ public open class CfnEndpoint(
      * @param failedReason The failure reason, if any, for a create or delete endpoint operation. 
      */
     override fun failedReason(failedReason: IResolvable) {
-      cdkBuilder.failedReason(failedReason.let(IResolvable::unwrap))
+      cdkBuilder.failedReason(failedReason.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -342,7 +342,7 @@ public open class CfnEndpoint(
      * @param failedReason The failure reason, if any, for a create or delete endpoint operation. 
      */
     override fun failedReason(failedReason: FailedReasonProperty) {
-      cdkBuilder.failedReason(failedReason.let(FailedReasonProperty::unwrap))
+      cdkBuilder.failedReason(failedReason.let(FailedReasonProperty.Companion::unwrap))
     }
 
     /**

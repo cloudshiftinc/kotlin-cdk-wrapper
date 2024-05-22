@@ -117,8 +117,8 @@ public open class CfnResourceDefinition(
     id: String,
     props: CfnResourceDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.greengrass.CfnResourceDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnResourceDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.greengrass.CfnResourceDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnResourceDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -162,14 +162,14 @@ public open class CfnResourceDefinition(
    * The resource definition version to include when the resource definition is created.
    */
   public open fun initialVersion(`value`: IResolvable) {
-    unwrap(this).setInitialVersion(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInitialVersion(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The resource definition version to include when the resource definition is created.
    */
   public open fun initialVersion(`value`: ResourceDefinitionVersionProperty) {
-    unwrap(this).setInitialVersion(`value`.let(ResourceDefinitionVersionProperty::unwrap))
+    unwrap(this).setInitialVersion(`value`.let(ResourceDefinitionVersionProperty.Companion::unwrap))
   }
 
   /**
@@ -186,7 +186,7 @@ public open class CfnResourceDefinition(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -341,7 +341,7 @@ public open class CfnResourceDefinition(
      * is created. 
      */
     override fun initialVersion(initialVersion: IResolvable) {
-      cdkBuilder.initialVersion(initialVersion.let(IResolvable::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -363,7 +363,7 @@ public open class CfnResourceDefinition(
      * is created. 
      */
     override fun initialVersion(initialVersion: ResourceDefinitionVersionProperty) {
-      cdkBuilder.initialVersion(initialVersion.let(ResourceDefinitionVersionProperty::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(ResourceDefinitionVersionProperty.Companion::unwrap))
     }
 
     /**
@@ -544,7 +544,7 @@ public open class CfnResourceDefinition(
        * This gives the Lambda process the file access permissions of the Linux group.
        */
       override fun autoAddGroupOwner(autoAddGroupOwner: IResolvable) {
-        cdkBuilder.autoAddGroupOwner(autoAddGroupOwner.let(IResolvable::unwrap))
+        cdkBuilder.autoAddGroupOwner(autoAddGroupOwner.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -696,7 +696,7 @@ public open class CfnResourceDefinition(
        * to the Lambda function process.
        */
       override fun groupOwnerSetting(groupOwnerSetting: IResolvable) {
-        cdkBuilder.groupOwnerSetting(groupOwnerSetting.let(IResolvable::unwrap))
+        cdkBuilder.groupOwnerSetting(groupOwnerSetting.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -704,7 +704,7 @@ public open class CfnResourceDefinition(
        * to the Lambda function process.
        */
       override fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty) {
-        cdkBuilder.groupOwnerSetting(groupOwnerSetting.let(GroupOwnerSettingProperty::unwrap))
+        cdkBuilder.groupOwnerSetting(groupOwnerSetting.let(GroupOwnerSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -884,7 +884,7 @@ public open class CfnResourceDefinition(
        * to the Lambda function process.
        */
       override fun groupOwnerSetting(groupOwnerSetting: IResolvable) {
-        cdkBuilder.groupOwnerSetting(groupOwnerSetting.let(IResolvable::unwrap))
+        cdkBuilder.groupOwnerSetting(groupOwnerSetting.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -892,7 +892,7 @@ public open class CfnResourceDefinition(
        * to the Lambda function process.
        */
       override fun groupOwnerSetting(groupOwnerSetting: GroupOwnerSettingProperty) {
-        cdkBuilder.groupOwnerSetting(groupOwnerSetting.let(GroupOwnerSettingProperty::unwrap))
+        cdkBuilder.groupOwnerSetting(groupOwnerSetting.let(GroupOwnerSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -1190,7 +1190,7 @@ public open class CfnResourceDefinition(
        * @param localDeviceResourceData Settings for a local device resource.
        */
       override fun localDeviceResourceData(localDeviceResourceData: IResolvable) {
-        cdkBuilder.localDeviceResourceData(localDeviceResourceData.let(IResolvable::unwrap))
+        cdkBuilder.localDeviceResourceData(localDeviceResourceData.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1198,7 +1198,7 @@ public open class CfnResourceDefinition(
        */
       override
           fun localDeviceResourceData(localDeviceResourceData: LocalDeviceResourceDataProperty) {
-        cdkBuilder.localDeviceResourceData(localDeviceResourceData.let(LocalDeviceResourceDataProperty::unwrap))
+        cdkBuilder.localDeviceResourceData(localDeviceResourceData.let(LocalDeviceResourceDataProperty.Companion::unwrap))
       }
 
       /**
@@ -1214,7 +1214,7 @@ public open class CfnResourceDefinition(
        * @param localVolumeResourceData Settings for a local volume resource.
        */
       override fun localVolumeResourceData(localVolumeResourceData: IResolvable) {
-        cdkBuilder.localVolumeResourceData(localVolumeResourceData.let(IResolvable::unwrap))
+        cdkBuilder.localVolumeResourceData(localVolumeResourceData.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1222,7 +1222,7 @@ public open class CfnResourceDefinition(
        */
       override
           fun localVolumeResourceData(localVolumeResourceData: LocalVolumeResourceDataProperty) {
-        cdkBuilder.localVolumeResourceData(localVolumeResourceData.let(LocalVolumeResourceDataProperty::unwrap))
+        cdkBuilder.localVolumeResourceData(localVolumeResourceData.let(LocalVolumeResourceDataProperty.Companion::unwrap))
       }
 
       /**
@@ -1240,7 +1240,7 @@ public open class CfnResourceDefinition(
        */
       override
           fun s3MachineLearningModelResourceData(s3MachineLearningModelResourceData: IResolvable) {
-        cdkBuilder.s3MachineLearningModelResourceData(s3MachineLearningModelResourceData.let(IResolvable::unwrap))
+        cdkBuilder.s3MachineLearningModelResourceData(s3MachineLearningModelResourceData.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1249,7 +1249,7 @@ public open class CfnResourceDefinition(
        */
       override
           fun s3MachineLearningModelResourceData(s3MachineLearningModelResourceData: S3MachineLearningModelResourceDataProperty) {
-        cdkBuilder.s3MachineLearningModelResourceData(s3MachineLearningModelResourceData.let(S3MachineLearningModelResourceDataProperty::unwrap))
+        cdkBuilder.s3MachineLearningModelResourceData(s3MachineLearningModelResourceData.let(S3MachineLearningModelResourceDataProperty.Companion::unwrap))
       }
 
       /**
@@ -1269,7 +1269,7 @@ public open class CfnResourceDefinition(
        */
       override
           fun sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData: IResolvable) {
-        cdkBuilder.sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData.let(IResolvable::unwrap))
+        cdkBuilder.sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1278,7 +1278,7 @@ public open class CfnResourceDefinition(
        */
       override
           fun sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData: SageMakerMachineLearningModelResourceDataProperty) {
-        cdkBuilder.sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData.let(SageMakerMachineLearningModelResourceDataProperty::unwrap))
+        cdkBuilder.sageMakerMachineLearningModelResourceData(sageMakerMachineLearningModelResourceData.let(SageMakerMachineLearningModelResourceDataProperty.Companion::unwrap))
       }
 
       /**
@@ -1296,7 +1296,7 @@ public open class CfnResourceDefinition(
        * @param secretsManagerSecretResourceData Settings for a secret resource.
        */
       override fun secretsManagerSecretResourceData(secretsManagerSecretResourceData: IResolvable) {
-        cdkBuilder.secretsManagerSecretResourceData(secretsManagerSecretResourceData.let(IResolvable::unwrap))
+        cdkBuilder.secretsManagerSecretResourceData(secretsManagerSecretResourceData.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1304,7 +1304,7 @@ public open class CfnResourceDefinition(
        */
       override
           fun secretsManagerSecretResourceData(secretsManagerSecretResourceData: SecretsManagerSecretResourceDataProperty) {
-        cdkBuilder.secretsManagerSecretResourceData(secretsManagerSecretResourceData.let(SecretsManagerSecretResourceDataProperty::unwrap))
+        cdkBuilder.secretsManagerSecretResourceData(secretsManagerSecretResourceData.let(SecretsManagerSecretResourceDataProperty.Companion::unwrap))
       }
 
       /**
@@ -1498,7 +1498,7 @@ public open class CfnResourceDefinition(
        * @param resources The resources in this version. 
        */
       override fun resources(resources: IResolvable) {
-        cdkBuilder.resources(resources.let(IResolvable::unwrap))
+        cdkBuilder.resources(resources.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1894,7 +1894,7 @@ public open class CfnResourceDefinition(
        * Only one resource type can be defined for a `ResourceDataContainer` instance.
        */
       override fun resourceDataContainer(resourceDataContainer: IResolvable) {
-        cdkBuilder.resourceDataContainer(resourceDataContainer.let(IResolvable::unwrap))
+        cdkBuilder.resourceDataContainer(resourceDataContainer.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1908,7 +1908,7 @@ public open class CfnResourceDefinition(
        * Only one resource type can be defined for a `ResourceDataContainer` instance.
        */
       override fun resourceDataContainer(resourceDataContainer: ResourceDataContainerProperty) {
-        cdkBuilder.resourceDataContainer(resourceDataContainer.let(ResourceDataContainerProperty::unwrap))
+        cdkBuilder.resourceDataContainer(resourceDataContainer.let(ResourceDataContainerProperty.Companion::unwrap))
       }
 
       /**
@@ -2114,7 +2114,7 @@ public open class CfnResourceDefinition(
        * in the *Developer Guide* .
        */
       override fun ownerSetting(ownerSetting: IResolvable) {
-        cdkBuilder.ownerSetting(ownerSetting.let(IResolvable::unwrap))
+        cdkBuilder.ownerSetting(ownerSetting.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2124,7 +2124,7 @@ public open class CfnResourceDefinition(
        * in the *Developer Guide* .
        */
       override fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty) {
-        cdkBuilder.ownerSetting(ownerSetting.let(ResourceDownloadOwnerSettingProperty::unwrap))
+        cdkBuilder.ownerSetting(ownerSetting.let(ResourceDownloadOwnerSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -2327,7 +2327,7 @@ public open class CfnResourceDefinition(
        * in the *Developer Guide* .
        */
       override fun ownerSetting(ownerSetting: IResolvable) {
-        cdkBuilder.ownerSetting(ownerSetting.let(IResolvable::unwrap))
+        cdkBuilder.ownerSetting(ownerSetting.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2337,7 +2337,7 @@ public open class CfnResourceDefinition(
        * in the *Developer Guide* .
        */
       override fun ownerSetting(ownerSetting: ResourceDownloadOwnerSettingProperty) {
-        cdkBuilder.ownerSetting(ownerSetting.let(ResourceDownloadOwnerSettingProperty::unwrap))
+        cdkBuilder.ownerSetting(ownerSetting.let(ResourceDownloadOwnerSettingProperty.Companion::unwrap))
       }
 
       /**

@@ -229,7 +229,7 @@ public interface CfnEventBusPolicyProps {
      * The `Condition` is a JSON string which must contain `Type` , `Key` , and `Value` fields.
      */
     override fun condition(condition: IResolvable) {
-      cdkBuilder.condition(condition.let(IResolvable::unwrap))
+      cdkBuilder.condition(condition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -245,7 +245,7 @@ public interface CfnEventBusPolicyProps {
      * The `Condition` is a JSON string which must contain `Type` , `Key` , and `Value` fields.
      */
     override fun condition(condition: CfnEventBusPolicy.ConditionProperty) {
-      cdkBuilder.condition(condition.let(CfnEventBusPolicy.ConditionProperty::unwrap))
+      cdkBuilder.condition(condition.let(CfnEventBusPolicy.ConditionProperty.Companion::unwrap))
     }
 
     /**

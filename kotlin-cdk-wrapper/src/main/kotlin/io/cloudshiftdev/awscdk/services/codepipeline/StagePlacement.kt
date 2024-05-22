@@ -72,7 +72,7 @@ public interface StagePlacement {
      * child Stage, if it had one).
      */
     override fun justAfter(justAfter: IStage) {
-      cdkBuilder.justAfter(justAfter.let(IStage::unwrap))
+      cdkBuilder.justAfter(justAfter.let(IStage.Companion::unwrap))
     }
 
     /**
@@ -80,7 +80,7 @@ public interface StagePlacement {
      * parent Stage, if it had one).
      */
     override fun rightBefore(rightBefore: IStage) {
-      cdkBuilder.rightBefore(rightBefore.let(IStage::unwrap))
+      cdkBuilder.rightBefore(rightBefore.let(IStage.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codepipeline.StagePlacement =

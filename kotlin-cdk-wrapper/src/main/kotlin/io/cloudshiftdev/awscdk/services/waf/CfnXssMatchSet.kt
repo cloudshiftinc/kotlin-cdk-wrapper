@@ -65,8 +65,8 @@ public open class CfnXssMatchSet(
     id: String,
     props: CfnXssMatchSetProps,
   ) :
-      this(software.amazon.awscdk.services.waf.CfnXssMatchSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnXssMatchSetProps::unwrap))
+      this(software.amazon.awscdk.services.waf.CfnXssMatchSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnXssMatchSetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -87,7 +87,7 @@ public open class CfnXssMatchSet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -111,7 +111,7 @@ public open class CfnXssMatchSet(
    * Specifies the parts of web requests that you want to inspect for cross-site scripting attacks.
    */
   public open fun xssMatchTuples(`value`: IResolvable) {
-    unwrap(this).setXssMatchTuples(`value`.let(IResolvable::unwrap))
+    unwrap(this).setXssMatchTuples(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -196,7 +196,7 @@ public open class CfnXssMatchSet(
      * cross-site scripting attacks. 
      */
     override fun xssMatchTuples(xssMatchTuples: IResolvable) {
-      cdkBuilder.xssMatchTuples(xssMatchTuples.let(IResolvable::unwrap))
+      cdkBuilder.xssMatchTuples(xssMatchTuples.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -684,7 +684,7 @@ public open class CfnXssMatchSet(
        * header or a query string. 
        */
       override fun fieldToMatch(fieldToMatch: IResolvable) {
-        cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable::unwrap))
+        cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -692,7 +692,7 @@ public open class CfnXssMatchSet(
        * header or a query string. 
        */
       override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
-        cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty::unwrap))
+        cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty.Companion::unwrap))
       }
 
       /**

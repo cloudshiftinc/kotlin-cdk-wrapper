@@ -69,8 +69,8 @@ public open class CfnSimulation(
     id: String,
     props: CfnSimulationProps,
   ) :
-      this(software.amazon.awscdk.services.simspaceweaver.CfnSimulation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSimulationProps::unwrap))
+      this(software.amazon.awscdk.services.simspaceweaver.CfnSimulation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSimulationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -93,7 +93,7 @@ public open class CfnSimulation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -145,14 +145,14 @@ public open class CfnSimulation(
    * The location of the simulation schema in Amazon Simple Storage Service ( Amazon S3 ).
    */
   public open fun schemaS3Location(`value`: IResolvable) {
-    unwrap(this).setSchemaS3Location(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSchemaS3Location(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The location of the simulation schema in Amazon Simple Storage Service ( Amazon S3 ).
    */
   public open fun schemaS3Location(`value`: S3LocationProperty) {
-    unwrap(this).setSchemaS3Location(`value`.let(S3LocationProperty::unwrap))
+    unwrap(this).setSchemaS3Location(`value`.let(S3LocationProperty.Companion::unwrap))
   }
 
   /**
@@ -172,14 +172,14 @@ public open class CfnSimulation(
    * The location of the snapshot in Amazon Simple Storage Service ( Amazon S3 ).
    */
   public open fun snapshotS3Location(`value`: IResolvable) {
-    unwrap(this).setSnapshotS3Location(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSnapshotS3Location(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The location of the snapshot in Amazon Simple Storage Service ( Amazon S3 ).
    */
   public open fun snapshotS3Location(`value`: S3LocationProperty) {
-    unwrap(this).setSnapshotS3Location(`value`.let(S3LocationProperty::unwrap))
+    unwrap(this).setSnapshotS3Location(`value`.let(S3LocationProperty.Companion::unwrap))
   }
 
   /**
@@ -400,7 +400,7 @@ public open class CfnSimulation(
      * Service ( Amazon S3 ). 
      */
     override fun schemaS3Location(schemaS3Location: IResolvable) {
-      cdkBuilder.schemaS3Location(schemaS3Location.let(IResolvable::unwrap))
+      cdkBuilder.schemaS3Location(schemaS3Location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -418,7 +418,7 @@ public open class CfnSimulation(
      * Service ( Amazon S3 ). 
      */
     override fun schemaS3Location(schemaS3Location: S3LocationProperty) {
-      cdkBuilder.schemaS3Location(schemaS3Location.let(S3LocationProperty::unwrap))
+      cdkBuilder.schemaS3Location(schemaS3Location.let(S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -455,7 +455,7 @@ public open class CfnSimulation(
      * Amazon S3 ). 
      */
     override fun snapshotS3Location(snapshotS3Location: IResolvable) {
-      cdkBuilder.snapshotS3Location(snapshotS3Location.let(IResolvable::unwrap))
+      cdkBuilder.snapshotS3Location(snapshotS3Location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -473,7 +473,7 @@ public open class CfnSimulation(
      * Amazon S3 ). 
      */
     override fun snapshotS3Location(snapshotS3Location: S3LocationProperty) {
-      cdkBuilder.snapshotS3Location(snapshotS3Location.let(S3LocationProperty::unwrap))
+      cdkBuilder.snapshotS3Location(snapshotS3Location.let(S3LocationProperty.Companion::unwrap))
     }
 
     /**

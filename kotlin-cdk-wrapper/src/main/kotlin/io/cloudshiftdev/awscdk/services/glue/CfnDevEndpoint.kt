@@ -62,8 +62,8 @@ public open class CfnDevEndpoint(
     id: String,
     props: CfnDevEndpointProps,
   ) :
-      this(software.amazon.awscdk.services.glue.CfnDevEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDevEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.glue.CfnDevEndpoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDevEndpointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -148,7 +148,7 @@ public open class CfnDevEndpoint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

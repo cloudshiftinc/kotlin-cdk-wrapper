@@ -301,8 +301,8 @@ public open class CfnSpotFleet(
     id: String,
     props: CfnSpotFleetProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnSpotFleet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSpotFleetProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnSpotFleet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSpotFleetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -323,7 +323,7 @@ public open class CfnSpotFleet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -335,14 +335,14 @@ public open class CfnSpotFleet(
    * Describes the configuration of a Spot Fleet request.
    */
   public open fun spotFleetRequestConfigData(`value`: IResolvable) {
-    unwrap(this).setSpotFleetRequestConfigData(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSpotFleetRequestConfigData(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Describes the configuration of a Spot Fleet request.
    */
   public open fun spotFleetRequestConfigData(`value`: SpotFleetRequestConfigDataProperty) {
-    unwrap(this).setSpotFleetRequestConfigData(`value`.let(SpotFleetRequestConfigDataProperty::unwrap))
+    unwrap(this).setSpotFleetRequestConfigData(`value`.let(SpotFleetRequestConfigDataProperty.Companion::unwrap))
   }
 
   /**
@@ -402,7 +402,7 @@ public open class CfnSpotFleet(
      * @param spotFleetRequestConfigData Describes the configuration of a Spot Fleet request. 
      */
     override fun spotFleetRequestConfigData(spotFleetRequestConfigData: IResolvable) {
-      cdkBuilder.spotFleetRequestConfigData(spotFleetRequestConfigData.let(IResolvable::unwrap))
+      cdkBuilder.spotFleetRequestConfigData(spotFleetRequestConfigData.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -413,7 +413,7 @@ public open class CfnSpotFleet(
      */
     override
         fun spotFleetRequestConfigData(spotFleetRequestConfigData: SpotFleetRequestConfigDataProperty) {
-      cdkBuilder.spotFleetRequestConfigData(spotFleetRequestConfigData.let(SpotFleetRequestConfigDataProperty::unwrap))
+      cdkBuilder.spotFleetRequestConfigData(spotFleetRequestConfigData.let(SpotFleetRequestConfigDataProperty.Companion::unwrap))
     }
 
     /**
@@ -974,7 +974,7 @@ public open class CfnSpotFleet(
        * launched.
        */
       override fun ebs(ebs: IResolvable) {
-        cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
+        cdkBuilder.ebs(ebs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -982,7 +982,7 @@ public open class CfnSpotFleet(
        * launched.
        */
       override fun ebs(ebs: EbsBlockDeviceProperty) {
-        cdkBuilder.ebs(ebs.let(EbsBlockDeviceProperty::unwrap))
+        cdkBuilder.ebs(ebs.let(EbsBlockDeviceProperty.Companion::unwrap))
       }
 
       /**
@@ -1232,7 +1232,7 @@ public open class CfnSpotFleet(
        * @param classicLoadBalancers One or more Classic Load Balancers. 
        */
       override fun classicLoadBalancers(classicLoadBalancers: IResolvable) {
-        cdkBuilder.classicLoadBalancers(classicLoadBalancers.let(IResolvable::unwrap))
+        cdkBuilder.classicLoadBalancers(classicLoadBalancers.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1544,7 +1544,7 @@ public open class CfnSpotFleet(
        * in the *Amazon EC2 User Guide* .
        */
       override fun deleteOnTermination(deleteOnTermination: IResolvable) {
-        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
+        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1592,7 +1592,7 @@ public open class CfnSpotFleet(
        * .
        */
       override fun encrypted(encrypted: IResolvable) {
-        cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
+        cdkBuilder.encrypted(encrypted.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2555,7 +2555,7 @@ public open class CfnSpotFleet(
        * Address* tab on the [Amazon VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
        */
       override fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
-        cdkBuilder.associatePublicIpAddress(associatePublicIpAddress.let(IResolvable::unwrap))
+        cdkBuilder.associatePublicIpAddress(associatePublicIpAddress.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2571,7 +2571,7 @@ public open class CfnSpotFleet(
        * instance is terminated.
        */
       override fun deleteOnTermination(deleteOnTermination: IResolvable) {
-        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
+        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2624,7 +2624,7 @@ public open class CfnSpotFleet(
        * to launch.
        */
       override fun ipv6Addresses(ipv6Addresses: IResolvable) {
-        cdkBuilder.ipv6Addresses(ipv6Addresses.let(IResolvable::unwrap))
+        cdkBuilder.ipv6Addresses(ipv6Addresses.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2663,7 +2663,7 @@ public open class CfnSpotFleet(
        * request.
        */
       override fun privateIpAddresses(privateIpAddresses: IResolvable) {
-        cdkBuilder.privateIpAddresses(privateIpAddresses.let(IResolvable::unwrap))
+        cdkBuilder.privateIpAddresses(privateIpAddresses.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4002,7 +4002,7 @@ public open class CfnSpotFleet(
        * Default: No minimum or maximum limits
        */
       override fun acceleratorCount(acceleratorCount: IResolvable) {
-        cdkBuilder.acceleratorCount(acceleratorCount.let(IResolvable::unwrap))
+        cdkBuilder.acceleratorCount(acceleratorCount.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4013,7 +4013,7 @@ public open class CfnSpotFleet(
        * Default: No minimum or maximum limits
        */
       override fun acceleratorCount(acceleratorCount: AcceleratorCountRequestProperty) {
-        cdkBuilder.acceleratorCount(acceleratorCount.let(AcceleratorCountRequestProperty::unwrap))
+        cdkBuilder.acceleratorCount(acceleratorCount.let(AcceleratorCountRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4105,7 +4105,7 @@ public open class CfnSpotFleet(
        * Default: No minimum or maximum limits
        */
       override fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable) {
-        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(IResolvable::unwrap))
+        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4115,7 +4115,7 @@ public open class CfnSpotFleet(
        */
       override
           fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBRequestProperty) {
-        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(AcceleratorTotalMemoryMiBRequestProperty::unwrap))
+        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(AcceleratorTotalMemoryMiBRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4219,7 +4219,7 @@ public open class CfnSpotFleet(
        * Default: No minimum or maximum limits
        */
       override fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: IResolvable) {
-        cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(IResolvable::unwrap))
+        cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4233,7 +4233,7 @@ public open class CfnSpotFleet(
        */
       override
           fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsRequestProperty) {
-        cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(BaselineEbsBandwidthMbpsRequestProperty::unwrap))
+        cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(BaselineEbsBandwidthMbpsRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4452,7 +4452,7 @@ public open class CfnSpotFleet(
        * Default: No minimum or maximum limits
        */
       override fun memoryGiBPerVCpu(memoryGiBPerVCpu: IResolvable) {
-        cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(IResolvable::unwrap))
+        cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4460,7 +4460,7 @@ public open class CfnSpotFleet(
        * Default: No minimum or maximum limits
        */
       override fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuRequestProperty) {
-        cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(MemoryGiBPerVCpuRequestProperty::unwrap))
+        cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(MemoryGiBPerVCpuRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4477,14 +4477,14 @@ public open class CfnSpotFleet(
        * @param memoryMiB The minimum and maximum amount of memory, in MiB.
        */
       override fun memoryMiB(memoryMiB: IResolvable) {
-        cdkBuilder.memoryMiB(memoryMiB.let(IResolvable::unwrap))
+        cdkBuilder.memoryMiB(memoryMiB.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param memoryMiB The minimum and maximum amount of memory, in MiB.
        */
       override fun memoryMiB(memoryMiB: MemoryMiBRequestProperty) {
-        cdkBuilder.memoryMiB(memoryMiB.let(MemoryMiBRequestProperty::unwrap))
+        cdkBuilder.memoryMiB(memoryMiB.let(MemoryMiBRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4505,7 +4505,7 @@ public open class CfnSpotFleet(
        * Default: No minimum or maximum limits
        */
       override fun networkBandwidthGbps(networkBandwidthGbps: IResolvable) {
-        cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(IResolvable::unwrap))
+        cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4518,7 +4518,7 @@ public open class CfnSpotFleet(
        * Default: No minimum or maximum limits
        */
       override fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsRequestProperty) {
-        cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(NetworkBandwidthGbpsRequestProperty::unwrap))
+        cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(NetworkBandwidthGbpsRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4541,7 +4541,7 @@ public open class CfnSpotFleet(
        * Default: No minimum or maximum limits
        */
       override fun networkInterfaceCount(networkInterfaceCount: IResolvable) {
-        cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(IResolvable::unwrap))
+        cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4550,7 +4550,7 @@ public open class CfnSpotFleet(
        */
       override
           fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountRequestProperty) {
-        cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(NetworkInterfaceCountRequestProperty::unwrap))
+        cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(NetworkInterfaceCountRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4616,7 +4616,7 @@ public open class CfnSpotFleet(
        * Default: `false`
        */
       override fun requireHibernateSupport(requireHibernateSupport: IResolvable) {
-        cdkBuilder.requireHibernateSupport(requireHibernateSupport.let(IResolvable::unwrap))
+        cdkBuilder.requireHibernateSupport(requireHibernateSupport.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4663,7 +4663,7 @@ public open class CfnSpotFleet(
        * Default: No minimum or maximum limits
        */
       override fun totalLocalStorageGb(totalLocalStorageGb: IResolvable) {
-        cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(IResolvable::unwrap))
+        cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4671,7 +4671,7 @@ public open class CfnSpotFleet(
        * Default: No minimum or maximum limits
        */
       override fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBRequestProperty) {
-        cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(TotalLocalStorageGBRequestProperty::unwrap))
+        cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(TotalLocalStorageGBRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -4688,14 +4688,14 @@ public open class CfnSpotFleet(
        * @param vCpuCount The minimum and maximum number of vCPUs.
        */
       override fun vCpuCount(vCpuCount: IResolvable) {
-        cdkBuilder.vCpuCount(vCpuCount.let(IResolvable::unwrap))
+        cdkBuilder.vCpuCount(vCpuCount.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param vCpuCount The minimum and maximum number of vCPUs.
        */
       override fun vCpuCount(vCpuCount: VCpuCountRangeRequestProperty) {
-        cdkBuilder.vCpuCount(vCpuCount.let(VCpuCountRangeRequestProperty::unwrap))
+        cdkBuilder.vCpuCount(vCpuCount.let(VCpuCountRangeRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -5300,7 +5300,7 @@ public open class CfnSpotFleet(
        * because you can't specify a network interface ID in a Spot Fleet.
        */
       override fun launchTemplateSpecification(launchTemplateSpecification: IResolvable) {
-        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(IResolvable::unwrap))
+        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5310,7 +5310,7 @@ public open class CfnSpotFleet(
        */
       override
           fun launchTemplateSpecification(launchTemplateSpecification: FleetLaunchTemplateSpecificationProperty) {
-        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(FleetLaunchTemplateSpecificationProperty::unwrap))
+        cdkBuilder.launchTemplateSpecification(launchTemplateSpecification.let(FleetLaunchTemplateSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -5330,7 +5330,7 @@ public open class CfnSpotFleet(
        * template.
        */
       override fun overrides(overrides: IResolvable) {
-        cdkBuilder.overrides(overrides.let(IResolvable::unwrap))
+        cdkBuilder.overrides(overrides.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5674,7 +5674,7 @@ public open class CfnSpotFleet(
        * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
        */
       override fun instanceRequirements(instanceRequirements: IResolvable) {
-        cdkBuilder.instanceRequirements(instanceRequirements.let(IResolvable::unwrap))
+        cdkBuilder.instanceRequirements(instanceRequirements.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5688,7 +5688,7 @@ public open class CfnSpotFleet(
        * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
        */
       override fun instanceRequirements(instanceRequirements: InstanceRequirementsRequestProperty) {
-        cdkBuilder.instanceRequirements(instanceRequirements.let(InstanceRequirementsRequestProperty::unwrap))
+        cdkBuilder.instanceRequirements(instanceRequirements.let(InstanceRequirementsRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -5970,7 +5970,7 @@ public open class CfnSpotFleet(
        * @param classicLoadBalancersConfig The Classic Load Balancers.
        */
       override fun classicLoadBalancersConfig(classicLoadBalancersConfig: IResolvable) {
-        cdkBuilder.classicLoadBalancersConfig(classicLoadBalancersConfig.let(IResolvable::unwrap))
+        cdkBuilder.classicLoadBalancersConfig(classicLoadBalancersConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5978,7 +5978,7 @@ public open class CfnSpotFleet(
        */
       override
           fun classicLoadBalancersConfig(classicLoadBalancersConfig: ClassicLoadBalancersConfigProperty) {
-        cdkBuilder.classicLoadBalancersConfig(classicLoadBalancersConfig.let(ClassicLoadBalancersConfigProperty::unwrap))
+        cdkBuilder.classicLoadBalancersConfig(classicLoadBalancersConfig.let(ClassicLoadBalancersConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -5995,14 +5995,14 @@ public open class CfnSpotFleet(
        * @param targetGroupsConfig The target groups.
        */
       override fun targetGroupsConfig(targetGroupsConfig: IResolvable) {
-        cdkBuilder.targetGroupsConfig(targetGroupsConfig.let(IResolvable::unwrap))
+        cdkBuilder.targetGroupsConfig(targetGroupsConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param targetGroupsConfig The target groups.
        */
       override fun targetGroupsConfig(targetGroupsConfig: TargetGroupsConfigProperty) {
-        cdkBuilder.targetGroupsConfig(targetGroupsConfig.let(TargetGroupsConfigProperty::unwrap))
+        cdkBuilder.targetGroupsConfig(targetGroupsConfig.let(TargetGroupsConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -6629,7 +6629,7 @@ public open class CfnSpotFleet(
        * Only one IPv4 address can be designated as primary.
        */
       override fun primary(primary: IResolvable) {
-        cdkBuilder.primary(primary.let(IResolvable::unwrap))
+        cdkBuilder.primary(primary.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7446,7 +7446,7 @@ public open class CfnSpotFleet(
        * and its encryption status is used for the volume encryption status.
        */
       override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
-        cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable::unwrap))
+        cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7489,21 +7489,21 @@ public open class CfnSpotFleet(
        * Default: `false`
        */
       override fun ebsOptimized(ebsOptimized: IResolvable) {
-        cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
+        cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param iamInstanceProfile The IAM instance profile.
        */
       override fun iamInstanceProfile(iamInstanceProfile: IResolvable) {
-        cdkBuilder.iamInstanceProfile(iamInstanceProfile.let(IResolvable::unwrap))
+        cdkBuilder.iamInstanceProfile(iamInstanceProfile.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param iamInstanceProfile The IAM instance profile.
        */
       override fun iamInstanceProfile(iamInstanceProfile: IamInstanceProfileSpecificationProperty) {
-        cdkBuilder.iamInstanceProfile(iamInstanceProfile.let(IamInstanceProfileSpecificationProperty::unwrap))
+        cdkBuilder.iamInstanceProfile(iamInstanceProfile.let(IamInstanceProfileSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -7531,7 +7531,7 @@ public open class CfnSpotFleet(
        * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
        */
       override fun instanceRequirements(instanceRequirements: IResolvable) {
-        cdkBuilder.instanceRequirements(instanceRequirements.let(IResolvable::unwrap))
+        cdkBuilder.instanceRequirements(instanceRequirements.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7543,7 +7543,7 @@ public open class CfnSpotFleet(
        * If you specify `InstanceRequirements` , you can't specify `InstanceType` .
        */
       override fun instanceRequirements(instanceRequirements: InstanceRequirementsRequestProperty) {
-        cdkBuilder.instanceRequirements(instanceRequirements.let(InstanceRequirementsRequestProperty::unwrap))
+        cdkBuilder.instanceRequirements(instanceRequirements.let(InstanceRequirementsRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -7585,14 +7585,14 @@ public open class CfnSpotFleet(
        * @param monitoring Enable or disable monitoring for the instances.
        */
       override fun monitoring(monitoring: IResolvable) {
-        cdkBuilder.monitoring(monitoring.let(IResolvable::unwrap))
+        cdkBuilder.monitoring(monitoring.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param monitoring Enable or disable monitoring for the instances.
        */
       override fun monitoring(monitoring: SpotFleetMonitoringProperty) {
-        cdkBuilder.monitoring(monitoring.let(SpotFleetMonitoringProperty::unwrap))
+        cdkBuilder.monitoring(monitoring.let(SpotFleetMonitoringProperty.Companion::unwrap))
       }
 
       /**
@@ -7607,7 +7607,7 @@ public open class CfnSpotFleet(
        * @param networkInterfaces The network interfaces.
        */
       override fun networkInterfaces(networkInterfaces: IResolvable) {
-        cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable::unwrap))
+        cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7627,14 +7627,14 @@ public open class CfnSpotFleet(
        * @param placement The placement information.
        */
       override fun placement(placement: IResolvable) {
-        cdkBuilder.placement(placement.let(IResolvable::unwrap))
+        cdkBuilder.placement(placement.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param placement The placement information.
        */
       override fun placement(placement: SpotPlacementProperty) {
-        cdkBuilder.placement(placement.let(SpotPlacementProperty::unwrap))
+        cdkBuilder.placement(placement.let(SpotPlacementProperty.Companion::unwrap))
       }
 
       /**
@@ -7661,7 +7661,7 @@ public open class CfnSpotFleet(
        * network interface instead of using this parameter.
        */
       override fun securityGroups(securityGroups: IResolvable) {
-        cdkBuilder.securityGroups(securityGroups.let(IResolvable::unwrap))
+        cdkBuilder.securityGroups(securityGroups.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7711,7 +7711,7 @@ public open class CfnSpotFleet(
        * @param tagSpecifications The tags to apply during creation.
        */
       override fun tagSpecifications(tagSpecifications: IResolvable) {
-        cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable::unwrap))
+        cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8015,7 +8015,7 @@ public open class CfnSpotFleet(
        * Default: `false`
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -9102,7 +9102,7 @@ public open class CfnSpotFleet(
        * If you specify `LaunchSpecifications` , you can't specify `LaunchTemplateConfigs` .
        */
       override fun launchSpecifications(launchSpecifications: IResolvable) {
-        cdkBuilder.launchSpecifications(launchSpecifications.let(IResolvable::unwrap))
+        cdkBuilder.launchSpecifications(launchSpecifications.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9125,7 +9125,7 @@ public open class CfnSpotFleet(
        * If you specify `LaunchTemplateConfigs` , you can't specify `LaunchSpecifications` .
        */
       override fun launchTemplateConfigs(launchTemplateConfigs: IResolvable) {
-        cdkBuilder.launchTemplateConfigs(launchTemplateConfigs.let(IResolvable::unwrap))
+        cdkBuilder.launchTemplateConfigs(launchTemplateConfigs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9153,7 +9153,7 @@ public open class CfnSpotFleet(
        * instance types: C1, CC1, CC2, CG1, CG2, CR1, CS1, G1, G2, HI1, HS1, M1, M2, M3, and T1.
        */
       override fun loadBalancersConfig(loadBalancersConfig: IResolvable) {
-        cdkBuilder.loadBalancersConfig(loadBalancersConfig.let(IResolvable::unwrap))
+        cdkBuilder.loadBalancersConfig(loadBalancersConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9166,7 +9166,7 @@ public open class CfnSpotFleet(
        * instance types: C1, CC1, CC2, CG1, CG2, CR1, CS1, G1, G2, HI1, HS1, M1, M2, M3, and T1.
        */
       override fun loadBalancersConfig(loadBalancersConfig: LoadBalancersConfigProperty) {
-        cdkBuilder.loadBalancersConfig(loadBalancersConfig.let(LoadBalancersConfigProperty::unwrap))
+        cdkBuilder.loadBalancersConfig(loadBalancersConfig.let(LoadBalancersConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -9243,7 +9243,7 @@ public open class CfnSpotFleet(
        * instances.
        */
       override fun replaceUnhealthyInstances(replaceUnhealthyInstances: IResolvable) {
-        cdkBuilder.replaceUnhealthyInstances(replaceUnhealthyInstances.let(IResolvable::unwrap))
+        cdkBuilder.replaceUnhealthyInstances(replaceUnhealthyInstances.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9251,7 +9251,7 @@ public open class CfnSpotFleet(
        * at an elevated risk of being interrupted.
        */
       override fun spotMaintenanceStrategies(spotMaintenanceStrategies: IResolvable) {
-        cdkBuilder.spotMaintenanceStrategies(spotMaintenanceStrategies.let(IResolvable::unwrap))
+        cdkBuilder.spotMaintenanceStrategies(spotMaintenanceStrategies.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9260,7 +9260,7 @@ public open class CfnSpotFleet(
        */
       override
           fun spotMaintenanceStrategies(spotMaintenanceStrategies: SpotMaintenanceStrategiesProperty) {
-        cdkBuilder.spotMaintenanceStrategies(spotMaintenanceStrategies.let(SpotMaintenanceStrategiesProperty::unwrap))
+        cdkBuilder.spotMaintenanceStrategies(spotMaintenanceStrategies.let(SpotMaintenanceStrategiesProperty.Companion::unwrap))
       }
 
       /**
@@ -9324,7 +9324,7 @@ public open class CfnSpotFleet(
        * .
        */
       override fun tagSpecifications(tagSpecifications: IResolvable) {
-        cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable::unwrap))
+        cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9391,7 +9391,7 @@ public open class CfnSpotFleet(
        * terminated when the Spot Fleet request expires.
        */
       override fun terminateInstancesWithExpiration(terminateInstancesWithExpiration: IResolvable) {
-        cdkBuilder.terminateInstancesWithExpiration(terminateInstancesWithExpiration.let(IResolvable::unwrap))
+        cdkBuilder.terminateInstancesWithExpiration(terminateInstancesWithExpiration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9862,7 +9862,7 @@ public open class CfnSpotFleet(
        * @param tags The tags.
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**
@@ -10001,7 +10001,7 @@ public open class CfnSpotFleet(
        * in the *Amazon EC2 User Guide for Linux Instances* .
        */
       override fun capacityRebalance(capacityRebalance: IResolvable) {
-        cdkBuilder.capacityRebalance(capacityRebalance.let(IResolvable::unwrap))
+        cdkBuilder.capacityRebalance(capacityRebalance.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10012,7 +10012,7 @@ public open class CfnSpotFleet(
        * in the *Amazon EC2 User Guide for Linux Instances* .
        */
       override fun capacityRebalance(capacityRebalance: SpotCapacityRebalanceProperty) {
-        cdkBuilder.capacityRebalance(capacityRebalance.let(SpotCapacityRebalanceProperty::unwrap))
+        cdkBuilder.capacityRebalance(capacityRebalance.let(SpotCapacityRebalanceProperty.Companion::unwrap))
       }
 
       /**
@@ -10360,7 +10360,7 @@ public open class CfnSpotFleet(
        * @param targetGroups One or more target groups. 
        */
       override fun targetGroups(targetGroups: IResolvable) {
-        cdkBuilder.targetGroups(targetGroups.let(IResolvable::unwrap))
+        cdkBuilder.targetGroups(targetGroups.let(IResolvable.Companion::unwrap))
       }
 
       /**

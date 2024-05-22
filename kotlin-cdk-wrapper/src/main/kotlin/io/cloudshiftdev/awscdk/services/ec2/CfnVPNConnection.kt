@@ -68,8 +68,8 @@ public open class CfnVPNConnection(
     id: String,
     props: CfnVPNConnectionProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnVPNConnection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVPNConnectionProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnVPNConnection(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVPNConnectionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -102,7 +102,7 @@ public open class CfnVPNConnection(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -121,7 +121,7 @@ public open class CfnVPNConnection(
    * Indicates whether the VPN connection uses static routes only.
    */
   public open fun staticRoutesOnly(`value`: IResolvable) {
-    unwrap(this).setStaticRoutesOnly(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStaticRoutesOnly(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -139,7 +139,7 @@ public open class CfnVPNConnection(
    * Any tags assigned to the VPN connection.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -193,7 +193,7 @@ public open class CfnVPNConnection(
    * The tunnel options for the VPN connection.
    */
   public open fun vpnTunnelOptionsSpecifications(`value`: IResolvable) {
-    unwrap(this).setVpnTunnelOptionsSpecifications(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpnTunnelOptionsSpecifications(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -362,7 +362,7 @@ public open class CfnVPNConnection(
      * @param staticRoutesOnly Indicates whether the VPN connection uses static routes only. 
      */
     override fun staticRoutesOnly(staticRoutesOnly: IResolvable) {
-      cdkBuilder.staticRoutesOnly(staticRoutesOnly.let(IResolvable::unwrap))
+      cdkBuilder.staticRoutesOnly(staticRoutesOnly.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -372,7 +372,7 @@ public open class CfnVPNConnection(
      * @param tags Any tags assigned to the VPN connection. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -425,7 +425,7 @@ public open class CfnVPNConnection(
      * @param vpnTunnelOptionsSpecifications The tunnel options for the VPN connection. 
      */
     override fun vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications: IResolvable) {
-      cdkBuilder.vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**

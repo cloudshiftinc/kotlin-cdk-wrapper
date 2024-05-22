@@ -36,7 +36,7 @@ public open class LinuxParameters(
   cdkObject: software.amazon.awscdk.services.ecs.LinuxParameters,
 ) : CloudshiftdevConstructsConstruct(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ecs.LinuxParameters(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ecs.LinuxParameters(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -45,8 +45,8 @@ public open class LinuxParameters(
     id: String,
     props: LinuxParametersProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.LinuxParameters(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(LinuxParametersProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.LinuxParameters(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(LinuxParametersProps.Companion::unwrap))
   )
 
   public constructor(
@@ -222,7 +222,7 @@ public open class LinuxParameters(
      * @param maxSwap The total amount of swap memory a container can use. 
      */
     override fun maxSwap(maxSwap: Size) {
-      cdkBuilder.maxSwap(maxSwap.let(Size::unwrap))
+      cdkBuilder.maxSwap(maxSwap.let(Size.Companion::unwrap))
     }
 
     /**

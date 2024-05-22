@@ -12,11 +12,11 @@ import io.cloudshiftdev.constructs.Node
 import kotlin.String
 
 /**
- * Virtual Deliverablity Manager (VDM) attributes.
+ * Virtual Deliverability Manager (VDM) attributes.
  */
 public interface IVdmAttributes : IResource {
   /**
-   * The name of the resource behind the Virtual Deliverablity Manager attributes.
+   * The name of the resource behind the Virtual Deliverability Manager attributes.
    */
   public fun vdmAttributesName(): String
 
@@ -37,7 +37,7 @@ public interface IVdmAttributes : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -60,7 +60,7 @@ public interface IVdmAttributes : IResource {
     override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
     /**
-     * The name of the resource behind the Virtual Deliverablity Manager attributes.
+     * The name of the resource behind the Virtual Deliverability Manager attributes.
      */
     override fun vdmAttributesName(): String = unwrap(this).getVdmAttributesName()
   }

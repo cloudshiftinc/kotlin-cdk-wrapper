@@ -108,7 +108,7 @@ public interface LoadBalancerContextResponse {
      * @param ipAddressType Type of IP address. 
      */
     override fun ipAddressType(ipAddressType: LoadBalancerIpAddressType) {
-      cdkBuilder.ipAddressType(ipAddressType.let(LoadBalancerIpAddressType::unwrap))
+      cdkBuilder.ipAddressType(ipAddressType.let(LoadBalancerIpAddressType.Companion::unwrap))
     }
 
     /**

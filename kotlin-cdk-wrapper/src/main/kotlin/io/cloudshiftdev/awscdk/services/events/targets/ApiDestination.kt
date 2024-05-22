@@ -44,13 +44,13 @@ public open class ApiDestination(
   cdkObject: software.amazon.awscdk.services.events.targets.ApiDestination,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(apiDestination: CloudshiftdevAwscdkServicesEventsIApiDestination) :
-      this(software.amazon.awscdk.services.events.targets.ApiDestination(apiDestination.let(CloudshiftdevAwscdkServicesEventsIApiDestination::unwrap))
+      this(software.amazon.awscdk.services.events.targets.ApiDestination(apiDestination.let(CloudshiftdevAwscdkServicesEventsIApiDestination.Companion::unwrap))
   )
 
   public constructor(apiDestination: CloudshiftdevAwscdkServicesEventsIApiDestination,
       props: ApiDestinationProps) :
-      this(software.amazon.awscdk.services.events.targets.ApiDestination(apiDestination.let(CloudshiftdevAwscdkServicesEventsIApiDestination::unwrap),
-      props.let(ApiDestinationProps::unwrap))
+      this(software.amazon.awscdk.services.events.targets.ApiDestination(apiDestination.let(CloudshiftdevAwscdkServicesEventsIApiDestination.Companion::unwrap),
+      props.let(ApiDestinationProps.Companion::unwrap))
   )
 
   public constructor(apiDestination: CloudshiftdevAwscdkServicesEventsIApiDestination,
@@ -65,7 +65,7 @@ public open class ApiDestination(
    * @param _id
    */
   public override fun bind(rule: IRule): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap)).let(RuleTargetConfig::wrap)
 
   /**
    * Returns a RuleTarget that can be used to trigger API destinations from an EventBridge event.
@@ -74,7 +74,7 @@ public open class ApiDestination(
    * @param _id
    */
   public override fun bind(rule: IRule, id: String): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap), id).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap), id).let(RuleTargetConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.events.targets.ApiDestination].
@@ -223,7 +223,7 @@ public open class ApiDestination(
      * 
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -234,7 +234,7 @@ public open class ApiDestination(
      * @param event The event to send. 
      */
     override fun event(event: RuleTargetInput) {
-      cdkBuilder.event(event.let(RuleTargetInput::unwrap))
+      cdkBuilder.event(event.let(RuleTargetInput.Companion::unwrap))
     }
 
     /**
@@ -245,7 +245,7 @@ public open class ApiDestination(
      * @param eventRole The role to assume before invoking the target. 
      */
     override fun eventRole(eventRole: IRole) {
-      cdkBuilder.eventRole(eventRole.let(IRole::unwrap))
+      cdkBuilder.eventRole(eventRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -276,7 +276,7 @@ public open class ApiDestination(
      * processing. 
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**

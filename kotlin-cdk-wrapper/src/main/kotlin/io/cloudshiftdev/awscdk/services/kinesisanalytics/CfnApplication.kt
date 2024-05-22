@@ -93,8 +93,8 @@ public open class CfnApplication(
     id: String,
     props: CfnApplicationProps,
   ) :
-      this(software.amazon.awscdk.services.kinesisanalytics.CfnApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApplicationProps::unwrap))
+      this(software.amazon.awscdk.services.kinesisanalytics.CfnApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApplicationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -154,7 +154,7 @@ public open class CfnApplication(
    * Use this parameter to configure the application input.
    */
   public open fun inputs(`value`: IResolvable) {
-    unwrap(this).setInputs(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInputs(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -175,7 +175,7 @@ public open class CfnApplication(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -360,7 +360,7 @@ public open class CfnApplication(
      * @param inputs Use this parameter to configure the application input. 
      */
     override fun inputs(inputs: IResolvable) {
-      cdkBuilder.inputs(inputs.let(IResolvable::unwrap))
+      cdkBuilder.inputs(inputs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -877,7 +877,7 @@ public open class CfnApplication(
        * application code.
        */
       override fun inputLambdaProcessor(inputLambdaProcessor: IResolvable) {
-        cdkBuilder.inputLambdaProcessor(inputLambdaProcessor.let(IResolvable::unwrap))
+        cdkBuilder.inputLambdaProcessor(inputLambdaProcessor.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -887,7 +887,7 @@ public open class CfnApplication(
        * application code.
        */
       override fun inputLambdaProcessor(inputLambdaProcessor: InputLambdaProcessorProperty) {
-        cdkBuilder.inputLambdaProcessor(inputLambdaProcessor.let(InputLambdaProcessorProperty::unwrap))
+        cdkBuilder.inputLambdaProcessor(inputLambdaProcessor.let(InputLambdaProcessorProperty.Companion::unwrap))
       }
 
       /**
@@ -1243,7 +1243,7 @@ public open class CfnApplication(
        * Input](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/how-it-works-input.html) .
        */
       override fun inputParallelism(inputParallelism: IResolvable) {
-        cdkBuilder.inputParallelism(inputParallelism.let(IResolvable::unwrap))
+        cdkBuilder.inputParallelism(inputParallelism.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1254,7 +1254,7 @@ public open class CfnApplication(
        * Input](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/how-it-works-input.html) .
        */
       override fun inputParallelism(inputParallelism: InputParallelismProperty) {
-        cdkBuilder.inputParallelism(inputParallelism.let(InputParallelismProperty::unwrap))
+        cdkBuilder.inputParallelism(inputParallelism.let(InputParallelismProperty.Companion::unwrap))
       }
 
       /**
@@ -1279,7 +1279,7 @@ public open class CfnApplication(
        * .
        */
       override fun inputProcessingConfiguration(inputProcessingConfiguration: IResolvable) {
-        cdkBuilder.inputProcessingConfiguration(inputProcessingConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.inputProcessingConfiguration(inputProcessingConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1293,7 +1293,7 @@ public open class CfnApplication(
        */
       override
           fun inputProcessingConfiguration(inputProcessingConfiguration: InputProcessingConfigurationProperty) {
-        cdkBuilder.inputProcessingConfiguration(inputProcessingConfiguration.let(InputProcessingConfigurationProperty::unwrap))
+        cdkBuilder.inputProcessingConfiguration(inputProcessingConfiguration.let(InputProcessingConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1319,7 +1319,7 @@ public open class CfnApplication(
        * Also used to describe the format of the reference data source.
        */
       override fun inputSchema(inputSchema: IResolvable) {
-        cdkBuilder.inputSchema(inputSchema.let(IResolvable::unwrap))
+        cdkBuilder.inputSchema(inputSchema.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1329,7 +1329,7 @@ public open class CfnApplication(
        * Also used to describe the format of the reference data source.
        */
       override fun inputSchema(inputSchema: InputSchemaProperty) {
-        cdkBuilder.inputSchema(inputSchema.let(InputSchemaProperty::unwrap))
+        cdkBuilder.inputSchema(inputSchema.let(InputSchemaProperty.Companion::unwrap))
       }
 
       /**
@@ -1350,7 +1350,7 @@ public open class CfnApplication(
        * Note: Either `KinesisStreamsInput` or `KinesisFirehoseInput` is required.
        */
       override fun kinesisFirehoseInput(kinesisFirehoseInput: IResolvable) {
-        cdkBuilder.kinesisFirehoseInput(kinesisFirehoseInput.let(IResolvable::unwrap))
+        cdkBuilder.kinesisFirehoseInput(kinesisFirehoseInput.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1360,7 +1360,7 @@ public open class CfnApplication(
        * Note: Either `KinesisStreamsInput` or `KinesisFirehoseInput` is required.
        */
       override fun kinesisFirehoseInput(kinesisFirehoseInput: KinesisFirehoseInputProperty) {
-        cdkBuilder.kinesisFirehoseInput(kinesisFirehoseInput.let(KinesisFirehoseInputProperty::unwrap))
+        cdkBuilder.kinesisFirehoseInput(kinesisFirehoseInput.let(KinesisFirehoseInputProperty.Companion::unwrap))
       }
 
       /**
@@ -1382,7 +1382,7 @@ public open class CfnApplication(
        * Note: Either `KinesisStreamsInput` or `KinesisFirehoseInput` is required.
        */
       override fun kinesisStreamsInput(kinesisStreamsInput: IResolvable) {
-        cdkBuilder.kinesisStreamsInput(kinesisStreamsInput.let(IResolvable::unwrap))
+        cdkBuilder.kinesisStreamsInput(kinesisStreamsInput.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1392,7 +1392,7 @@ public open class CfnApplication(
        * Note: Either `KinesisStreamsInput` or `KinesisFirehoseInput` is required.
        */
       override fun kinesisStreamsInput(kinesisStreamsInput: KinesisStreamsInputProperty) {
-        cdkBuilder.kinesisStreamsInput(kinesisStreamsInput.let(KinesisStreamsInputProperty::unwrap))
+        cdkBuilder.kinesisStreamsInput(kinesisStreamsInput.let(KinesisStreamsInputProperty.Companion::unwrap))
       }
 
       /**
@@ -1629,7 +1629,7 @@ public open class CfnApplication(
        * @param recordColumns A list of `RecordColumn` objects. 
        */
       override fun recordColumns(recordColumns: IResolvable) {
-        cdkBuilder.recordColumns(recordColumns.let(IResolvable::unwrap))
+        cdkBuilder.recordColumns(recordColumns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1657,14 +1657,14 @@ public open class CfnApplication(
        * @param recordFormat Specifies the format of the records on the streaming source. 
        */
       override fun recordFormat(recordFormat: IResolvable) {
-        cdkBuilder.recordFormat(recordFormat.let(IResolvable::unwrap))
+        cdkBuilder.recordFormat(recordFormat.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param recordFormat Specifies the format of the records on the streaming source. 
        */
       override fun recordFormat(recordFormat: RecordFormatProperty) {
-        cdkBuilder.recordFormat(recordFormat.let(RecordFormatProperty::unwrap))
+        cdkBuilder.recordFormat(recordFormat.let(RecordFormatProperty.Companion::unwrap))
       }
 
       /**
@@ -2153,7 +2153,7 @@ public open class CfnApplication(
        * uses delimiters (for example, CSV).
        */
       override fun csvMappingParameters(csvMappingParameters: IResolvable) {
-        cdkBuilder.csvMappingParameters(csvMappingParameters.let(IResolvable::unwrap))
+        cdkBuilder.csvMappingParameters(csvMappingParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2161,7 +2161,7 @@ public open class CfnApplication(
        * uses delimiters (for example, CSV).
        */
       override fun csvMappingParameters(csvMappingParameters: CSVMappingParametersProperty) {
-        cdkBuilder.csvMappingParameters(csvMappingParameters.let(CSVMappingParametersProperty::unwrap))
+        cdkBuilder.csvMappingParameters(csvMappingParameters.let(CSVMappingParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -2179,7 +2179,7 @@ public open class CfnApplication(
        * record format on the streaming source.
        */
       override fun jsonMappingParameters(jsonMappingParameters: IResolvable) {
-        cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(IResolvable::unwrap))
+        cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2187,7 +2187,7 @@ public open class CfnApplication(
        * record format on the streaming source.
        */
       override fun jsonMappingParameters(jsonMappingParameters: JSONMappingParametersProperty) {
-        cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(JSONMappingParametersProperty::unwrap))
+        cdkBuilder.jsonMappingParameters(jsonMappingParameters.let(JSONMappingParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -2493,7 +2493,7 @@ public open class CfnApplication(
        * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
        */
       override fun mappingParameters(mappingParameters: IResolvable) {
-        cdkBuilder.mappingParameters(mappingParameters.let(IResolvable::unwrap))
+        cdkBuilder.mappingParameters(mappingParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2502,7 +2502,7 @@ public open class CfnApplication(
        * (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming source.
        */
       override fun mappingParameters(mappingParameters: MappingParametersProperty) {
-        cdkBuilder.mappingParameters(mappingParameters.let(MappingParametersProperty::unwrap))
+        cdkBuilder.mappingParameters(mappingParameters.let(MappingParametersProperty.Companion::unwrap))
       }
 
       /**

@@ -169,14 +169,14 @@ public interface CfnCisScanConfigurationProps {
      * @param schedule The CIS scan configuration's schedule.
      */
     override fun schedule(schedule: IResolvable) {
-      cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
+      cdkBuilder.schedule(schedule.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param schedule The CIS scan configuration's schedule.
      */
     override fun schedule(schedule: CfnCisScanConfiguration.ScheduleProperty) {
-      cdkBuilder.schedule(schedule.let(CfnCisScanConfiguration.ScheduleProperty::unwrap))
+      cdkBuilder.schedule(schedule.let(CfnCisScanConfiguration.ScheduleProperty.Companion::unwrap))
     }
 
     /**
@@ -205,14 +205,14 @@ public interface CfnCisScanConfigurationProps {
      * @param targets The CIS scan configuration's targets.
      */
     override fun targets(targets: IResolvable) {
-      cdkBuilder.targets(targets.let(IResolvable::unwrap))
+      cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param targets The CIS scan configuration's targets.
      */
     override fun targets(targets: CfnCisScanConfiguration.CisTargetsProperty) {
-      cdkBuilder.targets(targets.let(CfnCisScanConfiguration.CisTargetsProperty::unwrap))
+      cdkBuilder.targets(targets.let(CfnCisScanConfiguration.CisTargetsProperty.Companion::unwrap))
     }
 
     /**

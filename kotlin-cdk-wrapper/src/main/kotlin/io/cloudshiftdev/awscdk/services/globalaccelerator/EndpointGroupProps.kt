@@ -144,7 +144,7 @@ public interface EndpointGroupProps : EndpointGroupOptions {
      * @param endpoints Initial list of endpoints for this group.
      */
     override fun endpoints(endpoints: List<IEndpoint>) {
-      cdkBuilder.endpoints(endpoints.map(IEndpoint::unwrap))
+      cdkBuilder.endpoints(endpoints.map(IEndpoint.Companion::unwrap))
     }
 
     /**
@@ -157,7 +157,7 @@ public interface EndpointGroupProps : EndpointGroupOptions {
      * Must be either 10 or 30 seconds.
      */
     override fun healthCheckInterval(healthCheckInterval: Duration) {
-      cdkBuilder.healthCheckInterval(healthCheckInterval.let(Duration::unwrap))
+      cdkBuilder.healthCheckInterval(healthCheckInterval.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -178,7 +178,7 @@ public interface EndpointGroupProps : EndpointGroupOptions {
      * @param healthCheckProtocol The protocol used to perform health checks.
      */
     override fun healthCheckProtocol(healthCheckProtocol: HealthCheckProtocol) {
-      cdkBuilder.healthCheckProtocol(healthCheckProtocol.let(HealthCheckProtocol::unwrap))
+      cdkBuilder.healthCheckProtocol(healthCheckProtocol.let(HealthCheckProtocol.Companion::unwrap))
     }
 
     /**
@@ -193,7 +193,7 @@ public interface EndpointGroupProps : EndpointGroupOptions {
      * @param listener The Amazon Resource Name (ARN) of the listener. 
      */
     override fun listener(listener: IListener) {
-      cdkBuilder.listener(listener.let(IListener::unwrap))
+      cdkBuilder.listener(listener.let(IListener.Companion::unwrap))
     }
 
     /**
@@ -202,7 +202,7 @@ public interface EndpointGroupProps : EndpointGroupOptions {
      * that traffic arrives on at the listener.
      */
     override fun portOverrides(portOverrides: List<PortOverride>) {
-      cdkBuilder.portOverrides(portOverrides.map(PortOverride::unwrap))
+      cdkBuilder.portOverrides(portOverrides.map(PortOverride.Companion::unwrap))
     }
 
     /**

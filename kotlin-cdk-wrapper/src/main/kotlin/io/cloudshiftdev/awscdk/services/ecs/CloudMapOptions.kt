@@ -143,14 +143,14 @@ public interface CloudMapOptions {
      * to the ECS service.
      */
     override fun cloudMapNamespace(cloudMapNamespace: INamespace) {
-      cdkBuilder.cloudMapNamespace(cloudMapNamespace.let(INamespace::unwrap))
+      cdkBuilder.cloudMapNamespace(cloudMapNamespace.let(INamespace.Companion::unwrap))
     }
 
     /**
      * @param container The container to point to for a SRV record.
      */
     override fun container(container: ContainerDefinition) {
-      cdkBuilder.container(container.let(ContainerDefinition::unwrap))
+      cdkBuilder.container(container.let(ContainerDefinition.Companion::unwrap))
     }
 
     /**
@@ -165,7 +165,7 @@ public interface CloudMapOptions {
      * The supported record types are A or SRV.
      */
     override fun dnsRecordType(dnsRecordType: DnsRecordType) {
-      cdkBuilder.dnsRecordType(dnsRecordType.let(DnsRecordType::unwrap))
+      cdkBuilder.dnsRecordType(dnsRecordType.let(DnsRecordType.Companion::unwrap))
     }
 
     /**
@@ -173,7 +173,7 @@ public interface CloudMapOptions {
      * record.
      */
     override fun dnsTtl(dnsTtl: Duration) {
-      cdkBuilder.dnsTtl(dnsTtl.let(Duration::unwrap))
+      cdkBuilder.dnsTtl(dnsTtl.let(Duration.Companion::unwrap))
     }
 
     /**

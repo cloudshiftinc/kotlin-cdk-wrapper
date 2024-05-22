@@ -117,7 +117,7 @@ public open class Annotations(
 
   public companion object {
     public fun fromStack(stack: Stack): Annotations =
-        software.amazon.awscdk.assertions.Annotations.fromStack(stack.let(Stack::unwrap)).let(Annotations::wrap)
+        software.amazon.awscdk.assertions.Annotations.fromStack(stack.let(Stack.Companion::unwrap)).let(Annotations::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.assertions.Annotations): Annotations =
         Annotations(cdkObject)

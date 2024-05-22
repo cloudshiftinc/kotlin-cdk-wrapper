@@ -141,7 +141,7 @@ public interface CfnStepProps {
      * then waits for the job to finish or fail before executing subsequent steps.
      */
     override fun hadoopJarStep(hadoopJarStep: IResolvable) {
-      cdkBuilder.hadoopJarStep(hadoopJarStep.let(IResolvable::unwrap))
+      cdkBuilder.hadoopJarStep(hadoopJarStep.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -151,7 +151,7 @@ public interface CfnStepProps {
      * then waits for the job to finish or fail before executing subsequent steps.
      */
     override fun hadoopJarStep(hadoopJarStep: CfnStep.HadoopJarStepConfigProperty) {
-      cdkBuilder.hadoopJarStep(hadoopJarStep.let(CfnStep.HadoopJarStepConfigProperty::unwrap))
+      cdkBuilder.hadoopJarStep(hadoopJarStep.let(CfnStep.HadoopJarStepConfigProperty.Companion::unwrap))
     }
 
     /**

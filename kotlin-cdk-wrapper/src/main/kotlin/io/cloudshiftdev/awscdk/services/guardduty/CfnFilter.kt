@@ -73,8 +73,8 @@ public open class CfnFilter(
     id: String,
     props: CfnFilterProps,
   ) :
-      this(software.amazon.awscdk.services.guardduty.CfnFilter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFilterProps::unwrap))
+      this(software.amazon.awscdk.services.guardduty.CfnFilter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFilterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -129,14 +129,14 @@ public open class CfnFilter(
    * Represents the criteria to be used in the filter for querying findings.
    */
   public open fun findingCriteria(`value`: IResolvable) {
-    unwrap(this).setFindingCriteria(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFindingCriteria(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Represents the criteria to be used in the filter for querying findings.
    */
   public open fun findingCriteria(`value`: FindingCriteriaProperty) {
-    unwrap(this).setFindingCriteria(`value`.let(FindingCriteriaProperty::unwrap))
+    unwrap(this).setFindingCriteria(`value`.let(FindingCriteriaProperty.Companion::unwrap))
   }
 
   /**
@@ -153,7 +153,7 @@ public open class CfnFilter(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -195,7 +195,7 @@ public open class CfnFilter(
    * The tags to be added to a new filter resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -376,7 +376,7 @@ public open class CfnFilter(
      * findings. 
      */
     override fun findingCriteria(findingCriteria: IResolvable) {
-      cdkBuilder.findingCriteria(findingCriteria.let(IResolvable::unwrap))
+      cdkBuilder.findingCriteria(findingCriteria.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -387,7 +387,7 @@ public open class CfnFilter(
      * findings. 
      */
     override fun findingCriteria(findingCriteria: FindingCriteriaProperty) {
-      cdkBuilder.findingCriteria(findingCriteria.let(FindingCriteriaProperty::unwrap))
+      cdkBuilder.findingCriteria(findingCriteria.let(FindingCriteriaProperty.Companion::unwrap))
     }
 
     /**
@@ -446,7 +446,7 @@ public open class CfnFilter(
      * @param tags The tags to be added to a new filter resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1369,14 +1369,14 @@ public open class CfnFilter(
        * @param itemType the value to be set.
        */
       override fun itemType(itemType: IResolvable) {
-        cdkBuilder.itemType(itemType.let(IResolvable::unwrap))
+        cdkBuilder.itemType(itemType.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param itemType the value to be set.
        */
       override fun itemType(itemType: ConditionProperty) {
-        cdkBuilder.itemType(itemType.let(ConditionProperty::unwrap))
+        cdkBuilder.itemType(itemType.let(ConditionProperty.Companion::unwrap))
       }
 
       /**

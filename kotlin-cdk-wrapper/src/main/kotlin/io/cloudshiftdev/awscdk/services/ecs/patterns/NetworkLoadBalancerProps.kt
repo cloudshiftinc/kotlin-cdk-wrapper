@@ -122,14 +122,14 @@ public interface NetworkLoadBalancerProps {
      * @param domainZone The Route53 hosted zone for the domain, e.g. "example.com.".
      */
     override fun domainZone(domainZone: IHostedZone) {
-      cdkBuilder.domainZone(domainZone.let(IHostedZone::unwrap))
+      cdkBuilder.domainZone(domainZone.let(IHostedZone.Companion::unwrap))
     }
 
     /**
      * @param listeners Listeners (at least one listener) attached to this load balancer. 
      */
     override fun listeners(listeners: List<NetworkListenerProps>) {
-      cdkBuilder.listeners(listeners.map(NetworkListenerProps::unwrap))
+      cdkBuilder.listeners(listeners.map(NetworkListenerProps.Companion::unwrap))
     }
 
     /**

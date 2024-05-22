@@ -49,8 +49,8 @@ public open class SpecRestApi(
     id: String,
     props: SpecRestApiProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.SpecRestApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SpecRestApiProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.SpecRestApi(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SpecRestApiProps.Companion::unwrap))
   )
 
   public constructor(
@@ -341,7 +341,7 @@ public open class SpecRestApi(
      * @param apiDefinition An OpenAPI definition compatible with API Gateway. 
      */
     override fun apiDefinition(apiDefinition: ApiDefinition) {
-      cdkBuilder.apiDefinition(apiDefinition.let(ApiDefinition::unwrap))
+      cdkBuilder.apiDefinition(apiDefinition.let(ApiDefinition.Companion::unwrap))
     }
 
     /**
@@ -368,7 +368,7 @@ public open class SpecRestApi(
      * this resource is removed from the application. 
      */
     override fun cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy: RemovalPolicy) {
-      cdkBuilder.cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -412,7 +412,7 @@ public open class SpecRestApi(
      * deployment when `deploy` is enabled. 
      */
     override fun deployOptions(deployOptions: StageOptions) {
-      cdkBuilder.deployOptions(deployOptions.let(StageOptions::unwrap))
+      cdkBuilder.deployOptions(deployOptions.let(StageOptions.Companion::unwrap))
     }
 
     /**
@@ -467,7 +467,7 @@ public open class SpecRestApi(
      * @param domainName Configure a custom domain name and map it to this API. 
      */
     override fun domainName(domainName: DomainNameOptions) {
-      cdkBuilder.domainName(domainName.let(DomainNameOptions::unwrap))
+      cdkBuilder.domainName(domainName.let(DomainNameOptions.Companion::unwrap))
     }
 
     /**
@@ -504,7 +504,7 @@ public open class SpecRestApi(
      * @param endpointTypes A list of the endpoint types of the API. 
      */
     override fun endpointTypes(endpointTypes: List<EndpointType>) {
-      cdkBuilder.endpointTypes(endpointTypes.map(EndpointType::unwrap))
+      cdkBuilder.endpointTypes(endpointTypes.map(EndpointType.Companion::unwrap))
     }
 
     /**
@@ -550,7 +550,7 @@ public open class SpecRestApi(
      * compression (when undefined) on an API. 
      */
     override fun minCompressionSize(minCompressionSize: Size) {
-      cdkBuilder.minCompressionSize(minCompressionSize.let(Size::unwrap))
+      cdkBuilder.minCompressionSize(minCompressionSize.let(Size.Companion::unwrap))
     }
 
     /**
@@ -573,7 +573,7 @@ public open class SpecRestApi(
      * @param policy A policy document that contains the permissions for this RestApi. 
      */
     override fun policy(policy: PolicyDocument) {
-      cdkBuilder.policy(policy.let(PolicyDocument::unwrap))
+      cdkBuilder.policy(policy.let(PolicyDocument.Companion::unwrap))
     }
 
     /**

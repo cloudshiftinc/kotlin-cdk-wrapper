@@ -48,7 +48,7 @@ public open class InstanceIdTarget(
    */
   public override fun attachToApplicationTargetGroup(targetGroup: IApplicationTargetGroup):
       LoadBalancerTargetProps =
-      unwrap(this).attachToApplicationTargetGroup(targetGroup.let(IApplicationTargetGroup::unwrap)).let(LoadBalancerTargetProps::wrap)
+      unwrap(this).attachToApplicationTargetGroup(targetGroup.let(IApplicationTargetGroup.Companion::unwrap)).let(LoadBalancerTargetProps::wrap)
 
   /**
    * Register this instance target with a load balancer.
@@ -60,7 +60,7 @@ public open class InstanceIdTarget(
    */
   public override fun attachToNetworkTargetGroup(targetGroup: INetworkTargetGroup):
       LoadBalancerTargetProps =
-      unwrap(this).attachToNetworkTargetGroup(targetGroup.let(INetworkTargetGroup::unwrap)).let(LoadBalancerTargetProps::wrap)
+      unwrap(this).attachToNetworkTargetGroup(targetGroup.let(INetworkTargetGroup.Companion::unwrap)).let(LoadBalancerTargetProps::wrap)
 
   public companion object {
     internal

@@ -40,7 +40,7 @@ public open class InitService(
 
     public fun enable(serviceName: String, options: InitServiceOptions): InitService =
         software.amazon.awscdk.services.ec2.InitService.enable(serviceName,
-        options.let(InitServiceOptions::unwrap)).let(InitService::wrap)
+        options.let(InitServiceOptions.Companion::unwrap)).let(InitService::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("10bbc0c71562733d4b9a50998191a25878d7052cdaf06c2ca0587057e675eaa4")
@@ -49,7 +49,7 @@ public open class InitService(
 
     public fun systemdConfigFile(serviceName: String, options: SystemdConfigFileOptions): InitFile =
         software.amazon.awscdk.services.ec2.InitService.systemdConfigFile(serviceName,
-        options.let(SystemdConfigFileOptions::unwrap)).let(InitFile::wrap)
+        options.let(SystemdConfigFileOptions.Companion::unwrap)).let(InitFile::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("94f4c1fe20f9f8f0e59c6c286975e52200644f0f4c93a57d9a76f59085948606")

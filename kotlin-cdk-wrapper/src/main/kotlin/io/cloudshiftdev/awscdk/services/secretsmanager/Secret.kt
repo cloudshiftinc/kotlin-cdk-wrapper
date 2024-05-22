@@ -43,7 +43,7 @@ public open class Secret(
   cdkObject: software.amazon.awscdk.services.secretsmanager.Secret,
 ) : Resource(cdkObject), ISecret {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.secretsmanager.Secret(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.secretsmanager.Secret(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -52,8 +52,8 @@ public open class Secret(
     id: String,
     props: SecretProps,
   ) :
-      this(software.amazon.awscdk.services.secretsmanager.Secret(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SecretProps::unwrap))
+      this(software.amazon.awscdk.services.secretsmanager.Secret(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SecretProps.Companion::unwrap))
   )
 
   public constructor(
@@ -82,7 +82,7 @@ public open class Secret(
    * value.
    */
   public open fun addReplicaRegion(region: String, encryptionKey: IKey) {
-    unwrap(this).addReplicaRegion(region, encryptionKey.let(IKey::unwrap))
+    unwrap(this).addReplicaRegion(region, encryptionKey.let(IKey.Companion::unwrap))
   }
 
   /**
@@ -93,7 +93,7 @@ public open class Secret(
    */
   public override fun addRotationSchedule(id: String, options: RotationScheduleOptions):
       RotationSchedule = unwrap(this).addRotationSchedule(id,
-      options.let(RotationScheduleOptions::unwrap)).let(RotationSchedule::wrap)
+      options.let(RotationScheduleOptions.Companion::unwrap)).let(RotationSchedule::wrap)
 
   /**
    * Adds a rotation schedule to the secret.
@@ -117,7 +117,7 @@ public open class Secret(
    * @param statement 
    */
   public override fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
-      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement::unwrap)).let(AddToResourcePolicyResult::wrap)
+      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
 
   /**
    * Adds a statement to the IAM resource policy associated with this secret.
@@ -140,7 +140,7 @@ public open class Secret(
    * @param target The target to attach. 
    */
   public override fun attach(target: ISecretAttachmentTarget): ISecret =
-      unwrap(this).attach(target.let(ISecretAttachmentTarget::unwrap)).let(ISecret::wrap)
+      unwrap(this).attach(target.let(ISecretAttachmentTarget.Companion::unwrap)).let(ISecret::wrap)
 
   /**
    * Denies the `DeleteSecret` action to all principals within the current account.
@@ -169,7 +169,7 @@ public open class Secret(
    * @param versionStages
    */
   public override fun grantRead(grantee: IGrantable): Grant =
-      unwrap(this).grantRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grants reading the secret value to some role.
@@ -178,7 +178,8 @@ public open class Secret(
    * @param versionStages
    */
   public override fun grantRead(grantee: IGrantable, versionStages: List<String>): Grant =
-      unwrap(this).grantRead(grantee.let(IGrantable::unwrap), versionStages).let(Grant::wrap)
+      unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap),
+      versionStages).let(Grant::wrap)
 
   /**
    * Grants writing and updating the secret value to some role.
@@ -186,7 +187,7 @@ public open class Secret(
    * @param grantee 
    */
   public override fun grantWrite(grantee: IGrantable): Grant =
-      unwrap(this).grantWrite(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantWrite(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The ARN of the secret in AWS Secrets Manager.
@@ -440,7 +441,7 @@ public open class Secret(
      * value. 
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -455,7 +456,7 @@ public open class Secret(
      * @param generateSecretString Configuration for how to generate a secret value. 
      */
     override fun generateSecretString(generateSecretString: SecretStringGenerator) {
-      cdkBuilder.generateSecretString(generateSecretString.let(SecretStringGenerator::unwrap))
+      cdkBuilder.generateSecretString(generateSecretString.let(SecretStringGenerator.Companion::unwrap))
     }
 
     /**
@@ -483,7 +484,7 @@ public open class Secret(
      * @param removalPolicy Policy to apply when the secret is removed from this stack. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -494,7 +495,7 @@ public open class Secret(
      * @param replicaRegions A list of regions where to replicate this secret. 
      */
     override fun replicaRegions(replicaRegions: List<ReplicaRegion>) {
-      cdkBuilder.replicaRegions(replicaRegions.map(ReplicaRegion::unwrap))
+      cdkBuilder.replicaRegions(replicaRegions.map(ReplicaRegion.Companion::unwrap))
     }
 
     /**
@@ -590,7 +591,7 @@ public open class Secret(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun secretStringBeta1(secretStringBeta1: SecretStringValueBeta1) {
-      cdkBuilder.secretStringBeta1(secretStringBeta1.let(SecretStringValueBeta1::unwrap))
+      cdkBuilder.secretStringBeta1(secretStringBeta1.let(SecretStringValueBeta1.Companion::unwrap))
     }
 
     /**
@@ -618,7 +619,7 @@ public open class Secret(
      * @param secretStringValue Initial value for the secret. 
      */
     override fun secretStringValue(secretStringValue: SecretValue) {
-      cdkBuilder.secretStringValue(secretStringValue.let(SecretValue::unwrap))
+      cdkBuilder.secretStringValue(secretStringValue.let(SecretValue.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.secretsmanager.Secret = cdkBuilder.build()
@@ -630,8 +631,8 @@ public open class Secret(
       id: String,
       attrs: SecretAttributes,
     ): ISecret =
-        software.amazon.awscdk.services.secretsmanager.Secret.fromSecretAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(SecretAttributes::unwrap)).let(ISecret::wrap)
+        software.amazon.awscdk.services.secretsmanager.Secret.fromSecretAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(SecretAttributes.Companion::unwrap)).let(ISecret::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bcc9143f7f368629afa8c68f5cc797692785ded40710919292c6e0847b43e61e")
@@ -646,7 +647,7 @@ public open class Secret(
       id: String,
       secretCompleteArn: String,
     ): ISecret =
-        software.amazon.awscdk.services.secretsmanager.Secret.fromSecretCompleteArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.secretsmanager.Secret.fromSecretCompleteArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, secretCompleteArn).let(ISecret::wrap)
 
     public fun fromSecretNameV2(
@@ -654,7 +655,7 @@ public open class Secret(
       id: String,
       secretName: String,
     ): ISecret =
-        software.amazon.awscdk.services.secretsmanager.Secret.fromSecretNameV2(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.secretsmanager.Secret.fromSecretNameV2(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, secretName).let(ISecret::wrap)
 
     public fun fromSecretPartialArn(
@@ -662,7 +663,7 @@ public open class Secret(
       id: String,
       secretPartialArn: String,
     ): ISecret =
-        software.amazon.awscdk.services.secretsmanager.Secret.fromSecretPartialArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.secretsmanager.Secret.fromSecretPartialArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, secretPartialArn).let(ISecret::wrap)
 
     public fun isSecret(x: Any): Boolean =

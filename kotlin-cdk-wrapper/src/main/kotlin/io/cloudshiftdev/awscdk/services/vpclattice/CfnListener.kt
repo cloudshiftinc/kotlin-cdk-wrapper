@@ -70,8 +70,8 @@ public open class CfnListener(
     id: String,
     props: CfnListenerProps,
   ) :
-      this(software.amazon.awscdk.services.vpclattice.CfnListener(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnListenerProps::unwrap))
+      this(software.amazon.awscdk.services.vpclattice.CfnListener(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnListenerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -110,14 +110,14 @@ public open class CfnListener(
    * The action for the default rule.
    */
   public open fun defaultAction(`value`: IResolvable) {
-    unwrap(this).setDefaultAction(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefaultAction(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The action for the default rule.
    */
   public open fun defaultAction(`value`: DefaultActionProperty) {
-    unwrap(this).setDefaultAction(`value`.let(DefaultActionProperty::unwrap))
+    unwrap(this).setDefaultAction(`value`.let(DefaultActionProperty.Companion::unwrap))
   }
 
   /**
@@ -134,7 +134,7 @@ public open class CfnListener(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -200,7 +200,7 @@ public open class CfnListener(
    * The tags for the listener.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -320,7 +320,7 @@ public open class CfnListener(
      * @param defaultAction The action for the default rule. 
      */
     override fun defaultAction(defaultAction: IResolvable) {
-      cdkBuilder.defaultAction(defaultAction.let(IResolvable::unwrap))
+      cdkBuilder.defaultAction(defaultAction.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -332,7 +332,7 @@ public open class CfnListener(
      * @param defaultAction The action for the default rule. 
      */
     override fun defaultAction(defaultAction: DefaultActionProperty) {
-      cdkBuilder.defaultAction(defaultAction.let(DefaultActionProperty::unwrap))
+      cdkBuilder.defaultAction(defaultAction.let(DefaultActionProperty.Companion::unwrap))
     }
 
     /**
@@ -405,7 +405,7 @@ public open class CfnListener(
      * @param tags The tags for the listener. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -536,14 +536,14 @@ public open class CfnListener(
        * @param fixedResponse Describes an action that returns a custom HTTP response.
        */
       override fun fixedResponse(fixedResponse: IResolvable) {
-        cdkBuilder.fixedResponse(fixedResponse.let(IResolvable::unwrap))
+        cdkBuilder.fixedResponse(fixedResponse.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param fixedResponse Describes an action that returns a custom HTTP response.
        */
       override fun fixedResponse(fixedResponse: FixedResponseProperty) {
-        cdkBuilder.fixedResponse(fixedResponse.let(FixedResponseProperty::unwrap))
+        cdkBuilder.fixedResponse(fixedResponse.let(FixedResponseProperty.Companion::unwrap))
       }
 
       /**
@@ -559,7 +559,7 @@ public open class CfnListener(
        * You can use forward actions to route requests to one or more target groups.
        */
       override fun forward(forward: IResolvable) {
-        cdkBuilder.forward(forward.let(IResolvable::unwrap))
+        cdkBuilder.forward(forward.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -567,7 +567,7 @@ public open class CfnListener(
        * You can use forward actions to route requests to one or more target groups.
        */
       override fun forward(forward: ForwardProperty) {
-        cdkBuilder.forward(forward.let(ForwardProperty::unwrap))
+        cdkBuilder.forward(forward.let(ForwardProperty.Companion::unwrap))
       }
 
       /**
@@ -804,7 +804,7 @@ public open class CfnListener(
        * need to set the weight; 100% of the traffic goes to that target group.
        */
       override fun targetGroups(targetGroups: IResolvable) {
-        cdkBuilder.targetGroups(targetGroups.let(IResolvable::unwrap))
+        cdkBuilder.targetGroups(targetGroups.let(IResolvable.Companion::unwrap))
       }
 
       /**

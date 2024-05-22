@@ -90,7 +90,7 @@ public interface CfnAccountProps {
      * in the API reference.
      */
     override fun expiryEventsConfiguration(expiryEventsConfiguration: IResolvable) {
-      cdkBuilder.expiryEventsConfiguration(expiryEventsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.expiryEventsConfiguration(expiryEventsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -102,7 +102,7 @@ public interface CfnAccountProps {
      */
     override
         fun expiryEventsConfiguration(expiryEventsConfiguration: CfnAccount.ExpiryEventsConfigurationProperty) {
-      cdkBuilder.expiryEventsConfiguration(expiryEventsConfiguration.let(CfnAccount.ExpiryEventsConfigurationProperty::unwrap))
+      cdkBuilder.expiryEventsConfiguration(expiryEventsConfiguration.let(CfnAccount.ExpiryEventsConfigurationProperty.Companion::unwrap))
     }
 
     /**

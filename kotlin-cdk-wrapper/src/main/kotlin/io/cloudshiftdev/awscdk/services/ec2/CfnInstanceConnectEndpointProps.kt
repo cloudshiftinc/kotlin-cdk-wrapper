@@ -182,7 +182,7 @@ public interface CfnInstanceConnectEndpointProps {
      * Default: `true`
      */
     override fun preserveClientIp(preserveClientIp: IResolvable) {
-      cdkBuilder.preserveClientIp(preserveClientIp.let(IResolvable::unwrap))
+      cdkBuilder.preserveClientIp(preserveClientIp.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -213,7 +213,7 @@ public interface CfnInstanceConnectEndpointProps {
      * @param tags The tags to apply to the EC2 Instance Connect Endpoint during creation.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

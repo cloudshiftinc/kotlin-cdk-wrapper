@@ -133,7 +133,7 @@ public interface CfnMemberInvitationProps {
      * If set to true, the member account does not receive an invitation email.
      */
     override fun disableEmailNotification(disableEmailNotification: IResolvable) {
-      cdkBuilder.disableEmailNotification(disableEmailNotification.let(IResolvable::unwrap))
+      cdkBuilder.disableEmailNotification(disableEmailNotification.let(IResolvable.Companion::unwrap))
     }
 
     /**

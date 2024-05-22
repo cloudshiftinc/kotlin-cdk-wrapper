@@ -138,7 +138,7 @@ public interface DockerVolumeConfiguration {
      * @param scope The scope for the Docker volume that determines its lifecycle. 
      */
     override fun scope(scope: Scope) {
-      cdkBuilder.scope(scope.let(Scope::unwrap))
+      cdkBuilder.scope(scope.let(Scope.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.DockerVolumeConfiguration =

@@ -48,8 +48,8 @@ public interface ISource {
      * @param project 
      */
     override fun bind(scope: Construct, project: IProject): SourceConfig =
-        unwrap(this).bind(scope.let(Construct::unwrap),
-        project.let(IProject::unwrap)).let(SourceConfig::wrap)
+        unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+        project.let(IProject.Companion::unwrap)).let(SourceConfig::wrap)
 
     /**
      *

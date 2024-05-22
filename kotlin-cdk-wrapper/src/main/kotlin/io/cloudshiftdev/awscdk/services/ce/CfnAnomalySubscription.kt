@@ -72,8 +72,8 @@ public open class CfnAnomalySubscription(
     id: String,
     props: CfnAnomalySubscriptionProps,
   ) :
-      this(software.amazon.awscdk.services.ce.CfnAnomalySubscription(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAnomalySubscriptionProps::unwrap))
+      this(software.amazon.awscdk.services.ce.CfnAnomalySubscription(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAnomalySubscriptionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -111,7 +111,7 @@ public open class CfnAnomalySubscription(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -140,7 +140,7 @@ public open class CfnAnomalySubscription(
    * Tags to assign to subscription.
    */
   public open fun resourceTags(`value`: IResolvable) {
-    unwrap(this).setResourceTags(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResourceTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -164,7 +164,7 @@ public open class CfnAnomalySubscription(
    * A list of subscribers to notify.
    */
   public open fun subscribers(`value`: IResolvable) {
-    unwrap(this).setSubscribers(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSubscribers(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -421,7 +421,7 @@ public open class CfnAnomalySubscription(
      * @param resourceTags Tags to assign to subscription. 
      */
     override fun resourceTags(resourceTags: IResolvable) {
-      cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
+      cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -449,7 +449,7 @@ public open class CfnAnomalySubscription(
      * @param subscribers A list of subscribers to notify. 
      */
     override fun subscribers(subscribers: IResolvable) {
-      cdkBuilder.subscribers(subscribers.let(IResolvable::unwrap))
+      cdkBuilder.subscribers(subscribers.let(IResolvable.Companion::unwrap))
     }
 
     /**

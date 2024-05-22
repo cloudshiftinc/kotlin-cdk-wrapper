@@ -116,7 +116,7 @@ public interface RoutingRule {
      * @param condition Specifies a condition that must be met for the specified redirect to apply.
      */
     override fun condition(condition: RoutingRuleCondition) {
-      cdkBuilder.condition(condition.let(RoutingRuleCondition::unwrap))
+      cdkBuilder.condition(condition.let(RoutingRuleCondition.Companion::unwrap))
     }
 
     /**
@@ -145,14 +145,14 @@ public interface RoutingRule {
      * @param protocol Protocol to use when redirecting requests.
      */
     override fun protocol(protocol: RedirectProtocol) {
-      cdkBuilder.protocol(protocol.let(RedirectProtocol::unwrap))
+      cdkBuilder.protocol(protocol.let(RedirectProtocol.Companion::unwrap))
     }
 
     /**
      * @param replaceKey Specifies the object key prefix to use in the redirect request.
      */
     override fun replaceKey(replaceKey: ReplaceKey) {
-      cdkBuilder.replaceKey(replaceKey.let(ReplaceKey::unwrap))
+      cdkBuilder.replaceKey(replaceKey.let(ReplaceKey.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.s3.RoutingRule = cdkBuilder.build()

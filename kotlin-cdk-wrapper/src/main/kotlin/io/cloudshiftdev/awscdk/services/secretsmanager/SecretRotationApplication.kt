@@ -40,7 +40,7 @@ public open class SecretRotationApplication(
     semanticVersion: String,
     options: SecretRotationApplicationOptions,
   ) : this(software.amazon.awscdk.services.secretsmanager.SecretRotationApplication(applicationId,
-      semanticVersion, options.let(SecretRotationApplicationOptions::unwrap))
+      semanticVersion, options.let(SecretRotationApplicationOptions.Companion::unwrap))
   )
 
   public constructor(

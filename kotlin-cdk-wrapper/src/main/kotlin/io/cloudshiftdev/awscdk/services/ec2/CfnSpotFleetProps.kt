@@ -301,7 +301,7 @@ public interface CfnSpotFleetProps {
      * @param spotFleetRequestConfigData Describes the configuration of a Spot Fleet request. 
      */
     override fun spotFleetRequestConfigData(spotFleetRequestConfigData: IResolvable) {
-      cdkBuilder.spotFleetRequestConfigData(spotFleetRequestConfigData.let(IResolvable::unwrap))
+      cdkBuilder.spotFleetRequestConfigData(spotFleetRequestConfigData.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -309,7 +309,7 @@ public interface CfnSpotFleetProps {
      */
     override
         fun spotFleetRequestConfigData(spotFleetRequestConfigData: CfnSpotFleet.SpotFleetRequestConfigDataProperty) {
-      cdkBuilder.spotFleetRequestConfigData(spotFleetRequestConfigData.let(CfnSpotFleet.SpotFleetRequestConfigDataProperty::unwrap))
+      cdkBuilder.spotFleetRequestConfigData(spotFleetRequestConfigData.let(CfnSpotFleet.SpotFleetRequestConfigDataProperty.Companion::unwrap))
     }
 
     /**

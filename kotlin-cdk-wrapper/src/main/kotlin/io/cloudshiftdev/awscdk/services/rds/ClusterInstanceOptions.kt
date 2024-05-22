@@ -304,7 +304,7 @@ public interface ClusterInstanceOptions {
      * For RDS DB engines:
      */
     override fun caCertificate(caCertificate: CaCertificate) {
-      cdkBuilder.caCertificate(caCertificate.let(CaCertificate::unwrap))
+      cdkBuilder.caCertificate(caCertificate.let(CaCertificate.Companion::unwrap))
     }
 
     /**
@@ -336,7 +336,7 @@ public interface ClusterInstanceOptions {
      * provide this and just use the cluster parameter group
      */
     override fun parameterGroup(parameterGroup: IParameterGroup) {
-      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup::unwrap))
+      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup.Companion::unwrap))
     }
 
     /**
@@ -353,7 +353,7 @@ public interface ClusterInstanceOptions {
      * data.
      */
     override fun performanceInsightEncryptionKey(performanceInsightEncryptionKey: IKey) {
-      cdkBuilder.performanceInsightEncryptionKey(performanceInsightEncryptionKey.let(IKey::unwrap))
+      cdkBuilder.performanceInsightEncryptionKey(performanceInsightEncryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -362,7 +362,7 @@ public interface ClusterInstanceOptions {
      */
     override
         fun performanceInsightRetention(performanceInsightRetention: PerformanceInsightRetention) {
-      cdkBuilder.performanceInsightRetention(performanceInsightRetention.let(PerformanceInsightRetention::unwrap))
+      cdkBuilder.performanceInsightRetention(performanceInsightRetention.let(PerformanceInsightRetention.Companion::unwrap))
     }
 
     /**

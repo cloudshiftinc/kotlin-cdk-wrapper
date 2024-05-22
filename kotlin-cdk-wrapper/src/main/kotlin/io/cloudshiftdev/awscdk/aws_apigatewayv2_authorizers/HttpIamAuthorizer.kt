@@ -42,7 +42,7 @@ public open class HttpIamAuthorizer(
    * @param _options 
    */
   public override fun bind(options: HttpRouteAuthorizerBindOptions): HttpRouteAuthorizerConfig =
-      unwrap(this).bind(options.let(HttpRouteAuthorizerBindOptions::unwrap)).let(HttpRouteAuthorizerConfig::wrap)
+      unwrap(this).bind(options.let(HttpRouteAuthorizerBindOptions.Companion::unwrap)).let(HttpRouteAuthorizerConfig::wrap)
 
   /**
    * Bind this authorizer to a specified Http route.

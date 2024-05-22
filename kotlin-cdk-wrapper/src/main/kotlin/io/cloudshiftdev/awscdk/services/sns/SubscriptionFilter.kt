@@ -64,7 +64,7 @@ public open class SubscriptionFilter(
         software.amazon.awscdk.services.sns.SubscriptionFilter.existsFilter().let(SubscriptionFilter::wrap)
 
     public fun numericFilter(numericConditions: NumericConditions): SubscriptionFilter =
-        software.amazon.awscdk.services.sns.SubscriptionFilter.numericFilter(numericConditions.let(NumericConditions::unwrap)).let(SubscriptionFilter::wrap)
+        software.amazon.awscdk.services.sns.SubscriptionFilter.numericFilter(numericConditions.let(NumericConditions.Companion::unwrap)).let(SubscriptionFilter::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("08b13c81c934ff078dc391d7a0eb0f646b8df38ba151db3e20855b7921211d74")
@@ -72,7 +72,7 @@ public open class SubscriptionFilter(
         SubscriptionFilter = numericFilter(NumericConditions(numericConditions))
 
     public fun stringFilter(stringConditions: StringConditions): SubscriptionFilter =
-        software.amazon.awscdk.services.sns.SubscriptionFilter.stringFilter(stringConditions.let(StringConditions::unwrap)).let(SubscriptionFilter::wrap)
+        software.amazon.awscdk.services.sns.SubscriptionFilter.stringFilter(stringConditions.let(StringConditions.Companion::unwrap)).let(SubscriptionFilter::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("645f93eeb9cc40dcde00a6b98ee9cc4e331957514b7b2805c9615b8abf1b48d4")

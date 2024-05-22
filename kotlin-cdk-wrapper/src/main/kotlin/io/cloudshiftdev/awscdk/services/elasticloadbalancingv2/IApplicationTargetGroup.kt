@@ -123,7 +123,7 @@ public interface IApplicationTargetGroup : ITargetGroup {
      * @param portRange
      */
     override fun registerConnectable(connectable: IConnectable) {
-      unwrap(this).registerConnectable(connectable.let(IConnectable::unwrap))
+      unwrap(this).registerConnectable(connectable.let(IConnectable.Companion::unwrap))
     }
 
     /**
@@ -135,8 +135,8 @@ public interface IApplicationTargetGroup : ITargetGroup {
      * @param portRange
      */
     override fun registerConnectable(connectable: IConnectable, portRange: Port) {
-      unwrap(this).registerConnectable(connectable.let(IConnectable::unwrap),
-          portRange.let(Port::unwrap))
+      unwrap(this).registerConnectable(connectable.let(IConnectable.Companion::unwrap),
+          portRange.let(Port.Companion::unwrap))
     }
 
     /**
@@ -161,7 +161,7 @@ public interface IApplicationTargetGroup : ITargetGroup {
      * @param associatingConstruct
      */
     override fun registerListener(listener: IApplicationListener) {
-      unwrap(this).registerListener(listener.let(IApplicationListener::unwrap))
+      unwrap(this).registerListener(listener.let(IApplicationListener.Companion::unwrap))
     }
 
     /**
@@ -174,8 +174,8 @@ public interface IApplicationTargetGroup : ITargetGroup {
      */
     override fun registerListener(listener: IApplicationListener,
         associatingConstruct: IConstruct) {
-      unwrap(this).registerListener(listener.let(IApplicationListener::unwrap),
-          associatingConstruct.let(IConstruct::unwrap))
+      unwrap(this).registerListener(listener.let(IApplicationListener.Companion::unwrap),
+          associatingConstruct.let(IConstruct.Companion::unwrap))
     }
 
     /**

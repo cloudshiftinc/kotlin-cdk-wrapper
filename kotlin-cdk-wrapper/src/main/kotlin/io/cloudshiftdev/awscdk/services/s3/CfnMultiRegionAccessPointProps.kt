@@ -153,7 +153,7 @@ public interface CfnMultiRegionAccessPointProps {
      * in the *Amazon S3 User Guide* .
      */
     override fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: IResolvable) {
-      cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -166,7 +166,7 @@ public interface CfnMultiRegionAccessPointProps {
      */
     override
         fun publicAccessBlockConfiguration(publicAccessBlockConfiguration: CfnMultiRegionAccessPoint.PublicAccessBlockConfigurationProperty) {
-      cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration.let(CfnMultiRegionAccessPoint.PublicAccessBlockConfigurationProperty::unwrap))
+      cdkBuilder.publicAccessBlockConfiguration(publicAccessBlockConfiguration.let(CfnMultiRegionAccessPoint.PublicAccessBlockConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -189,7 +189,7 @@ public interface CfnMultiRegionAccessPointProps {
      * Access Point. 
      */
     override fun regions(regions: IResolvable) {
-      cdkBuilder.regions(regions.let(IResolvable::unwrap))
+      cdkBuilder.regions(regions.let(IResolvable.Companion::unwrap))
     }
 
     /**

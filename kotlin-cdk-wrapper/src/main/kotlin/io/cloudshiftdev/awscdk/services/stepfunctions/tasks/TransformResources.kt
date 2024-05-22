@@ -98,7 +98,7 @@ public interface TransformResources {
      * @param instanceType ML compute instance type for the transform job. 
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -106,7 +106,7 @@ public interface TransformResources {
      * storage volume attached to the ML compute instance(s).
      */
     override fun volumeEncryptionKey(volumeEncryptionKey: IKey) {
-      cdkBuilder.volumeEncryptionKey(volumeEncryptionKey.let(IKey::unwrap))
+      cdkBuilder.volumeEncryptionKey(volumeEncryptionKey.let(IKey.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.TransformResources =

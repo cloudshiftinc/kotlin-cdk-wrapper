@@ -390,14 +390,14 @@ public interface CfnFormProps {
      * @param cta The `FormCTA` object that stores the call to action configuration for the form.
      */
     override fun cta(cta: IResolvable) {
-      cdkBuilder.cta(cta.let(IResolvable::unwrap))
+      cdkBuilder.cta(cta.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param cta The `FormCTA` object that stores the call to action configuration for the form.
      */
     override fun cta(cta: CfnForm.FormCTAProperty) {
-      cdkBuilder.cta(cta.let(CfnForm.FormCTAProperty::unwrap))
+      cdkBuilder.cta(cta.let(CfnForm.FormCTAProperty.Companion::unwrap))
     }
 
     /**
@@ -412,14 +412,14 @@ public interface CfnFormProps {
      * @param dataType The type of data source to use to create the form.
      */
     override fun dataType(dataType: IResolvable) {
-      cdkBuilder.dataType(dataType.let(IResolvable::unwrap))
+      cdkBuilder.dataType(dataType.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param dataType The type of data source to use to create the form.
      */
     override fun dataType(dataType: CfnForm.FormDataTypeConfigProperty) {
-      cdkBuilder.dataType(dataType.let(CfnForm.FormDataTypeConfigProperty::unwrap))
+      cdkBuilder.dataType(dataType.let(CfnForm.FormDataTypeConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -441,7 +441,7 @@ public interface CfnFormProps {
      * @param fields The configuration information for the form's fields.
      */
     override fun fields(fields: IResolvable) {
-      cdkBuilder.fields(fields.let(IResolvable::unwrap))
+      cdkBuilder.fields(fields.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -485,7 +485,7 @@ public interface CfnFormProps {
      * These elements are not associated with any data.
      */
     override fun sectionalElements(sectionalElements: IResolvable) {
-      cdkBuilder.sectionalElements(sectionalElements.let(IResolvable::unwrap))
+      cdkBuilder.sectionalElements(sectionalElements.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -501,14 +501,14 @@ public interface CfnFormProps {
      * @param style The configuration for the form's style.
      */
     override fun style(style: IResolvable) {
-      cdkBuilder.style(style.let(IResolvable::unwrap))
+      cdkBuilder.style(style.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param style The configuration for the form's style.
      */
     override fun style(style: CfnForm.FormStyleProperty) {
-      cdkBuilder.style(style.let(CfnForm.FormStyleProperty::unwrap))
+      cdkBuilder.style(style.let(CfnForm.FormStyleProperty.Companion::unwrap))
     }
 
     /**

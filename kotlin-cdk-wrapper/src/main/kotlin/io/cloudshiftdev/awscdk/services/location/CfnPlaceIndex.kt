@@ -66,8 +66,8 @@ public open class CfnPlaceIndex(
     id: String,
     props: CfnPlaceIndexProps,
   ) :
-      this(software.amazon.awscdk.services.location.CfnPlaceIndex(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPlaceIndexProps::unwrap))
+      this(software.amazon.awscdk.services.location.CfnPlaceIndex(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPlaceIndexProps.Companion::unwrap))
   )
 
   public constructor(
@@ -136,14 +136,14 @@ public open class CfnPlaceIndex(
    * Specifies the data storage option requesting Places.
    */
   public open fun dataSourceConfiguration(`value`: IResolvable) {
-    unwrap(this).setDataSourceConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataSourceConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the data storage option requesting Places.
    */
   public open fun dataSourceConfiguration(`value`: DataSourceConfigurationProperty) {
-    unwrap(this).setDataSourceConfiguration(`value`.let(DataSourceConfigurationProperty::unwrap))
+    unwrap(this).setDataSourceConfiguration(`value`.let(DataSourceConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -185,7 +185,7 @@ public open class CfnPlaceIndex(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -213,7 +213,7 @@ public open class CfnPlaceIndex(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -406,7 +406,7 @@ public open class CfnPlaceIndex(
      * @param dataSourceConfiguration Specifies the data storage option requesting Places. 
      */
     override fun dataSourceConfiguration(dataSourceConfiguration: IResolvable) {
-      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -416,7 +416,7 @@ public open class CfnPlaceIndex(
      * @param dataSourceConfiguration Specifies the data storage option requesting Places. 
      */
     override fun dataSourceConfiguration(dataSourceConfiguration: DataSourceConfigurationProperty) {
-      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(DataSourceConfigurationProperty::unwrap))
+      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(DataSourceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -478,7 +478,7 @@ public open class CfnPlaceIndex(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -215,14 +215,14 @@ public interface CfnTaskDefinitionProps {
      * If `false` , the task must be created by calling `CreateWirelessGatewayTask` .
      */
     override fun autoCreateTasks(autoCreateTasks: IResolvable) {
-      cdkBuilder.autoCreateTasks(autoCreateTasks.let(IResolvable::unwrap))
+      cdkBuilder.autoCreateTasks(autoCreateTasks.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param loRaWanUpdateGatewayTaskEntry LoRaWANUpdateGatewayTaskEntry object.
      */
     override fun loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry: IResolvable) {
-      cdkBuilder.loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry.let(IResolvable::unwrap))
+      cdkBuilder.loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -230,7 +230,7 @@ public interface CfnTaskDefinitionProps {
      */
     override
         fun loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry: CfnTaskDefinition.LoRaWANUpdateGatewayTaskEntryProperty) {
-      cdkBuilder.loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry.let(CfnTaskDefinition.LoRaWANUpdateGatewayTaskEntryProperty::unwrap))
+      cdkBuilder.loRaWanUpdateGatewayTaskEntry(loRaWanUpdateGatewayTaskEntry.let(CfnTaskDefinition.LoRaWANUpdateGatewayTaskEntryProperty.Companion::unwrap))
     }
 
     /**
@@ -255,7 +255,7 @@ public interface CfnTaskDefinitionProps {
      * Tags can have a minimum of 0 and a maximum of 50 items.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -276,14 +276,14 @@ public interface CfnTaskDefinitionProps {
      * @param update Information about the gateways to update.
      */
     override fun update(update: IResolvable) {
-      cdkBuilder.update(update.let(IResolvable::unwrap))
+      cdkBuilder.update(update.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param update Information about the gateways to update.
      */
     override fun update(update: CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty) {
-      cdkBuilder.update(update.let(CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty::unwrap))
+      cdkBuilder.update(update.let(CfnTaskDefinition.UpdateWirelessGatewayTaskCreateProperty.Companion::unwrap))
     }
 
     /**

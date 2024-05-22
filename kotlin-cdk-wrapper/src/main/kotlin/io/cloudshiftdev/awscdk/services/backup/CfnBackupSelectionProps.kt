@@ -121,7 +121,7 @@ public interface CfnBackupSelectionProps {
      * array of tags used to identify a set of resources.
      */
     override fun backupSelection(backupSelection: IResolvable) {
-      cdkBuilder.backupSelection(backupSelection.let(IResolvable::unwrap))
+      cdkBuilder.backupSelection(backupSelection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -133,7 +133,7 @@ public interface CfnBackupSelectionProps {
      */
     override
         fun backupSelection(backupSelection: CfnBackupSelection.BackupSelectionResourceTypeProperty) {
-      cdkBuilder.backupSelection(backupSelection.let(CfnBackupSelection.BackupSelectionResourceTypeProperty::unwrap))
+      cdkBuilder.backupSelection(backupSelection.let(CfnBackupSelection.BackupSelectionResourceTypeProperty.Companion::unwrap))
     }
 
     /**

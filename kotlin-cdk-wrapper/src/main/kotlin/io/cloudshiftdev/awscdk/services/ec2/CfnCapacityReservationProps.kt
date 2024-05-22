@@ -359,7 +359,7 @@ public interface CfnCapacityReservationProps {
      * types. Additional usage charges apply when using an EBS- optimized instance.
      */
     override fun ebsOptimized(ebsOptimized: IResolvable) {
-      cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
+      cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -403,7 +403,7 @@ public interface CfnCapacityReservationProps {
      * @param ephemeralStorage *Deprecated.*.
      */
     override fun ephemeralStorage(ephemeralStorage: IResolvable) {
-      cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable::unwrap))
+      cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -471,7 +471,7 @@ public interface CfnCapacityReservationProps {
      * @param tagSpecifications The tags to apply to the Capacity Reservation during launch.
      */
     override fun tagSpecifications(tagSpecifications: IResolvable) {
-      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -261,7 +261,7 @@ public interface CfnKnowledgeBaseProps {
      * @param renderingConfiguration Information about how to render the content.
      */
     override fun renderingConfiguration(renderingConfiguration: IResolvable) {
-      cdkBuilder.renderingConfiguration(renderingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.renderingConfiguration(renderingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -269,7 +269,7 @@ public interface CfnKnowledgeBaseProps {
      */
     override
         fun renderingConfiguration(renderingConfiguration: CfnKnowledgeBase.RenderingConfigurationProperty) {
-      cdkBuilder.renderingConfiguration(renderingConfiguration.let(CfnKnowledgeBase.RenderingConfigurationProperty::unwrap))
+      cdkBuilder.renderingConfiguration(renderingConfiguration.let(CfnKnowledgeBase.RenderingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -294,7 +294,7 @@ public interface CfnKnowledgeBaseProps {
      * Key Management Service Developer Guide* .
      */
     override fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
-      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -310,7 +310,7 @@ public interface CfnKnowledgeBaseProps {
      */
     override
         fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty) {
-      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty::unwrap))
+      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(CfnKnowledgeBase.ServerSideEncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -336,7 +336,7 @@ public interface CfnKnowledgeBaseProps {
      * Only set this argument for EXTERNAL knowledge bases.
      */
     override fun sourceConfiguration(sourceConfiguration: IResolvable) {
-      cdkBuilder.sourceConfiguration(sourceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.sourceConfiguration(sourceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -345,7 +345,7 @@ public interface CfnKnowledgeBaseProps {
      */
     override
         fun sourceConfiguration(sourceConfiguration: CfnKnowledgeBase.SourceConfigurationProperty) {
-      cdkBuilder.sourceConfiguration(sourceConfiguration.let(CfnKnowledgeBase.SourceConfigurationProperty::unwrap))
+      cdkBuilder.sourceConfiguration(sourceConfiguration.let(CfnKnowledgeBase.SourceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -363,7 +363,7 @@ public interface CfnKnowledgeBaseProps {
      * @param tags The tags used to organize, track, or control access for this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

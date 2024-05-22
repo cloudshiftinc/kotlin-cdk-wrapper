@@ -31,7 +31,7 @@ public open class AwsIntegration(
   cdkObject: software.amazon.awscdk.services.apigateway.AwsIntegration,
 ) : Integration(cdkObject) {
   public constructor(props: AwsIntegrationProps) :
-      this(software.amazon.awscdk.services.apigateway.AwsIntegration(props.let(AwsIntegrationProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.AwsIntegration(props.let(AwsIntegrationProps.Companion::unwrap))
   )
 
   public constructor(props: AwsIntegrationProps.Builder.() -> Unit) :
@@ -45,7 +45,7 @@ public open class AwsIntegration(
    * @param method 
    */
   public override fun bind(method: Method): IntegrationConfig =
-      unwrap(this).bind(method.let(Method::unwrap)).let(IntegrationConfig::wrap)
+      unwrap(this).bind(method.let(Method.Companion::unwrap)).let(IntegrationConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.apigateway.AwsIntegration].
@@ -190,7 +190,7 @@ public open class AwsIntegration(
      * @param options Integration options, such as content handling, request/response mapping, etc. 
      */
     override fun options(options: IntegrationOptions) {
-      cdkBuilder.options(options.let(IntegrationOptions::unwrap))
+      cdkBuilder.options(options.let(IntegrationOptions.Companion::unwrap))
     }
 
     /**

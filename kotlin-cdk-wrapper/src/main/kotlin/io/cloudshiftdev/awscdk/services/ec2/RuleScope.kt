@@ -66,7 +66,7 @@ public interface RuleScope {
      * @param scope The SecurityGroup in which a rule should be scoped. 
      */
     override fun scope(scope: ISecurityGroup) {
-      cdkBuilder.scope(scope.let(ISecurityGroup::unwrap))
+      cdkBuilder.scope(scope.let(ISecurityGroup.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.RuleScope = cdkBuilder.build()

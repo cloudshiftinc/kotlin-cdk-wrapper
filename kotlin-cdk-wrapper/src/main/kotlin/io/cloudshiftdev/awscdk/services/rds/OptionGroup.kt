@@ -92,8 +92,8 @@ public open class OptionGroup(
     id: String,
     props: OptionGroupProps,
   ) :
-      this(software.amazon.awscdk.services.rds.OptionGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(OptionGroupProps::unwrap))
+      this(software.amazon.awscdk.services.rds.OptionGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(OptionGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -111,7 +111,7 @@ public open class OptionGroup(
    * @param configuration 
    */
   public override fun addConfiguration(configuration: OptionConfiguration): Boolean =
-      unwrap(this).addConfiguration(configuration.let(OptionConfiguration::unwrap))
+      unwrap(this).addConfiguration(configuration.let(OptionConfiguration.Companion::unwrap))
 
   /**
    * Adds a configuration to this OptionGroup.
@@ -185,7 +185,7 @@ public open class OptionGroup(
      * @param configurations The configurations for this option group. 
      */
     override fun configurations(configurations: List<OptionConfiguration>) {
-      cdkBuilder.configurations(configurations.map(OptionConfiguration::unwrap))
+      cdkBuilder.configurations(configurations.map(OptionConfiguration.Companion::unwrap))
     }
 
     /**
@@ -213,7 +213,7 @@ public open class OptionGroup(
      * @param engine The database engine that this option group is associated with. 
      */
     override fun engine(engine: IInstanceEngine) {
-      cdkBuilder.engine(engine.let(IInstanceEngine::unwrap))
+      cdkBuilder.engine(engine.let(IInstanceEngine.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.OptionGroup = cdkBuilder.build()
@@ -225,7 +225,7 @@ public open class OptionGroup(
       id: String,
       optionGroupName: String,
     ): IOptionGroup =
-        software.amazon.awscdk.services.rds.OptionGroup.fromOptionGroupName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.rds.OptionGroup.fromOptionGroupName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, optionGroupName).let(IOptionGroup::wrap)
 
     public operator fun invoke(

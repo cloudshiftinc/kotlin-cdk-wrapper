@@ -220,7 +220,7 @@ public interface CfnInstanceStorageConfigProps {
      * @param kinesisFirehoseConfig The configuration of the Kinesis Firehose delivery stream.
      */
     override fun kinesisFirehoseConfig(kinesisFirehoseConfig: IResolvable) {
-      cdkBuilder.kinesisFirehoseConfig(kinesisFirehoseConfig.let(IResolvable::unwrap))
+      cdkBuilder.kinesisFirehoseConfig(kinesisFirehoseConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -228,7 +228,7 @@ public interface CfnInstanceStorageConfigProps {
      */
     override
         fun kinesisFirehoseConfig(kinesisFirehoseConfig: CfnInstanceStorageConfig.KinesisFirehoseConfigProperty) {
-      cdkBuilder.kinesisFirehoseConfig(kinesisFirehoseConfig.let(CfnInstanceStorageConfig.KinesisFirehoseConfigProperty::unwrap))
+      cdkBuilder.kinesisFirehoseConfig(kinesisFirehoseConfig.let(CfnInstanceStorageConfig.KinesisFirehoseConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -245,7 +245,7 @@ public interface CfnInstanceStorageConfigProps {
      * @param kinesisStreamConfig The configuration of the Kinesis data stream.
      */
     override fun kinesisStreamConfig(kinesisStreamConfig: IResolvable) {
-      cdkBuilder.kinesisStreamConfig(kinesisStreamConfig.let(IResolvable::unwrap))
+      cdkBuilder.kinesisStreamConfig(kinesisStreamConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -253,7 +253,7 @@ public interface CfnInstanceStorageConfigProps {
      */
     override
         fun kinesisStreamConfig(kinesisStreamConfig: CfnInstanceStorageConfig.KinesisStreamConfigProperty) {
-      cdkBuilder.kinesisStreamConfig(kinesisStreamConfig.let(CfnInstanceStorageConfig.KinesisStreamConfigProperty::unwrap))
+      cdkBuilder.kinesisStreamConfig(kinesisStreamConfig.let(CfnInstanceStorageConfig.KinesisStreamConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -270,7 +270,7 @@ public interface CfnInstanceStorageConfigProps {
      * @param kinesisVideoStreamConfig The configuration of the Kinesis video stream.
      */
     override fun kinesisVideoStreamConfig(kinesisVideoStreamConfig: IResolvable) {
-      cdkBuilder.kinesisVideoStreamConfig(kinesisVideoStreamConfig.let(IResolvable::unwrap))
+      cdkBuilder.kinesisVideoStreamConfig(kinesisVideoStreamConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -278,7 +278,7 @@ public interface CfnInstanceStorageConfigProps {
      */
     override
         fun kinesisVideoStreamConfig(kinesisVideoStreamConfig: CfnInstanceStorageConfig.KinesisVideoStreamConfigProperty) {
-      cdkBuilder.kinesisVideoStreamConfig(kinesisVideoStreamConfig.let(CfnInstanceStorageConfig.KinesisVideoStreamConfigProperty::unwrap))
+      cdkBuilder.kinesisVideoStreamConfig(kinesisVideoStreamConfig.let(CfnInstanceStorageConfig.KinesisVideoStreamConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -304,14 +304,14 @@ public interface CfnInstanceStorageConfigProps {
      * @param s3Config The S3 bucket configuration.
      */
     override fun s3Config(s3Config: IResolvable) {
-      cdkBuilder.s3Config(s3Config.let(IResolvable::unwrap))
+      cdkBuilder.s3Config(s3Config.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param s3Config The S3 bucket configuration.
      */
     override fun s3Config(s3Config: CfnInstanceStorageConfig.S3ConfigProperty) {
-      cdkBuilder.s3Config(s3Config.let(CfnInstanceStorageConfig.S3ConfigProperty::unwrap))
+      cdkBuilder.s3Config(s3Config.let(CfnInstanceStorageConfig.S3ConfigProperty.Companion::unwrap))
     }
 
     /**

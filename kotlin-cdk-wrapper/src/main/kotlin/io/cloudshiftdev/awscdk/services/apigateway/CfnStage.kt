@@ -85,8 +85,8 @@ public open class CfnStage(
     id: String,
     props: CfnStageProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.CfnStage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStageProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.CfnStage(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStageProps.Companion::unwrap))
   )
 
   public constructor(
@@ -105,14 +105,14 @@ public open class CfnStage(
    * Access log settings, including the access log format and access log destination ARN.
    */
   public open fun accessLogSetting(`value`: IResolvable) {
-    unwrap(this).setAccessLogSetting(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccessLogSetting(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Access log settings, including the access log format and access log destination ARN.
    */
   public open fun accessLogSetting(`value`: AccessLogSettingProperty) {
-    unwrap(this).setAccessLogSetting(`value`.let(AccessLogSettingProperty::unwrap))
+    unwrap(this).setAccessLogSetting(`value`.let(AccessLogSettingProperty.Companion::unwrap))
   }
 
   /**
@@ -139,7 +139,7 @@ public open class CfnStage(
    * Specifies whether a cache cluster is enabled for the stage.
    */
   public open fun cacheClusterEnabled(`value`: IResolvable) {
-    unwrap(this).setCacheClusterEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCacheClusterEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -163,14 +163,14 @@ public open class CfnStage(
    * Settings for the canary deployment in this stage.
    */
   public open fun canarySetting(`value`: IResolvable) {
-    unwrap(this).setCanarySetting(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCanarySetting(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Settings for the canary deployment in this stage.
    */
   public open fun canarySetting(`value`: CanarySettingProperty) {
-    unwrap(this).setCanarySetting(`value`.let(CanarySettingProperty::unwrap))
+    unwrap(this).setCanarySetting(`value`.let(CanarySettingProperty.Companion::unwrap))
   }
 
   /**
@@ -235,7 +235,7 @@ public open class CfnStage(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -247,7 +247,7 @@ public open class CfnStage(
    * A map that defines the method settings for a Stage resource.
    */
   public open fun methodSettings(`value`: IResolvable) {
-    unwrap(this).setMethodSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMethodSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -303,7 +303,7 @@ public open class CfnStage(
    * The collection of tags.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -327,7 +327,7 @@ public open class CfnStage(
    * Specifies whether active tracing with X-ray is enabled for the Stage.
    */
   public open fun tracingEnabled(`value`: IResolvable) {
-    unwrap(this).setTracingEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTracingEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -341,7 +341,7 @@ public open class CfnStage(
    * key and the variable value is the value.
    */
   public open fun variables(`value`: IResolvable) {
-    unwrap(this).setVariables(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVariables(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -611,7 +611,7 @@ public open class CfnStage(
      * destination ARN. 
      */
     override fun accessLogSetting(accessLogSetting: IResolvable) {
-      cdkBuilder.accessLogSetting(accessLogSetting.let(IResolvable::unwrap))
+      cdkBuilder.accessLogSetting(accessLogSetting.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -622,7 +622,7 @@ public open class CfnStage(
      * destination ARN. 
      */
     override fun accessLogSetting(accessLogSetting: AccessLogSettingProperty) {
-      cdkBuilder.accessLogSetting(accessLogSetting.let(AccessLogSettingProperty::unwrap))
+      cdkBuilder.accessLogSetting(accessLogSetting.let(AccessLogSettingProperty.Companion::unwrap))
     }
 
     /**
@@ -658,7 +658,7 @@ public open class CfnStage(
      * @param cacheClusterEnabled Specifies whether a cache cluster is enabled for the stage. 
      */
     override fun cacheClusterEnabled(cacheClusterEnabled: IResolvable) {
-      cdkBuilder.cacheClusterEnabled(cacheClusterEnabled.let(IResolvable::unwrap))
+      cdkBuilder.cacheClusterEnabled(cacheClusterEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -682,7 +682,7 @@ public open class CfnStage(
      * @param canarySetting Settings for the canary deployment in this stage. 
      */
     override fun canarySetting(canarySetting: IResolvable) {
-      cdkBuilder.canarySetting(canarySetting.let(IResolvable::unwrap))
+      cdkBuilder.canarySetting(canarySetting.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -692,7 +692,7 @@ public open class CfnStage(
      * @param canarySetting Settings for the canary deployment in this stage. 
      */
     override fun canarySetting(canarySetting: CanarySettingProperty) {
-      cdkBuilder.canarySetting(canarySetting.let(CanarySettingProperty::unwrap))
+      cdkBuilder.canarySetting(canarySetting.let(CanarySettingProperty.Companion::unwrap))
     }
 
     /**
@@ -757,7 +757,7 @@ public open class CfnStage(
      * @param methodSettings A map that defines the method settings for a Stage resource. 
      */
     override fun methodSettings(methodSettings: IResolvable) {
-      cdkBuilder.methodSettings(methodSettings.let(IResolvable::unwrap))
+      cdkBuilder.methodSettings(methodSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -821,7 +821,7 @@ public open class CfnStage(
      * @param tags The collection of tags. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -851,7 +851,7 @@ public open class CfnStage(
      * @param tracingEnabled Specifies whether active tracing with X-ray is enabled for the Stage. 
      */
     override fun tracingEnabled(tracingEnabled: IResolvable) {
-      cdkBuilder.tracingEnabled(tracingEnabled.let(IResolvable::unwrap))
+      cdkBuilder.tracingEnabled(tracingEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -866,7 +866,7 @@ public open class CfnStage(
      * variable name is the key and the variable value is the value. 
      */
     override fun variables(variables: IResolvable) {
-      cdkBuilder.variables(variables.let(IResolvable::unwrap))
+      cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1170,7 +1170,7 @@ public open class CfnStage(
        * names and their values.
        */
       override fun stageVariableOverrides(stageVariableOverrides: IResolvable) {
-        cdkBuilder.stageVariableOverrides(stageVariableOverrides.let(IResolvable::unwrap))
+        cdkBuilder.stageVariableOverrides(stageVariableOverrides.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1196,7 +1196,7 @@ public open class CfnStage(
        * stage cache or not.
        */
       override fun useStageCache(useStageCache: IResolvable) {
-        cdkBuilder.useStageCache(useStageCache.let(IResolvable::unwrap))
+        cdkBuilder.useStageCache(useStageCache.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.apigateway.CfnStage.CanarySettingProperty
@@ -1498,7 +1498,7 @@ public open class CfnStage(
        * @param cacheDataEncrypted Specifies whether the cached responses are encrypted.
        */
       override fun cacheDataEncrypted(cacheDataEncrypted: IResolvable) {
-        cdkBuilder.cacheDataEncrypted(cacheDataEncrypted.let(IResolvable::unwrap))
+        cdkBuilder.cacheDataEncrypted(cacheDataEncrypted.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1525,7 +1525,7 @@ public open class CfnStage(
        * A cache cluster must be enabled on the stage for responses to be cached.
        */
       override fun cachingEnabled(cachingEnabled: IResolvable) {
-        cdkBuilder.cachingEnabled(cachingEnabled.let(IResolvable::unwrap))
+        cdkBuilder.cachingEnabled(cachingEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1545,7 +1545,7 @@ public open class CfnStage(
        * recommend that you don't enable this option for production APIs.
        */
       override fun dataTraceEnabled(dataTraceEnabled: IResolvable) {
-        cdkBuilder.dataTraceEnabled(dataTraceEnabled.let(IResolvable::unwrap))
+        cdkBuilder.dataTraceEnabled(dataTraceEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1582,7 +1582,7 @@ public open class CfnStage(
        * method.
        */
       override fun metricsEnabled(metricsEnabled: IResolvable) {
-        cdkBuilder.metricsEnabled(metricsEnabled.let(IResolvable::unwrap))
+        cdkBuilder.metricsEnabled(metricsEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**

@@ -28,13 +28,13 @@ public open class LambdaIntegration(
   cdkObject: software.amazon.awscdk.services.apigateway.LambdaIntegration,
 ) : AwsIntegration(cdkObject) {
   public constructor(handler: CloudshiftdevAwscdkServicesLambdaIFunction) :
-      this(software.amazon.awscdk.services.apigateway.LambdaIntegration(handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap))
+      this(software.amazon.awscdk.services.apigateway.LambdaIntegration(handler.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap))
   )
 
   public constructor(handler: CloudshiftdevAwscdkServicesLambdaIFunction,
       options: LambdaIntegrationOptions) :
-      this(software.amazon.awscdk.services.apigateway.LambdaIntegration(handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap),
-      options.let(LambdaIntegrationOptions::unwrap))
+      this(software.amazon.awscdk.services.apigateway.LambdaIntegration(handler.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap),
+      options.let(LambdaIntegrationOptions.Companion::unwrap))
   )
 
   public constructor(handler: CloudshiftdevAwscdkServicesLambdaIFunction,
@@ -49,7 +49,7 @@ public open class LambdaIntegration(
    * @param method 
    */
   public override fun bind(method: Method): IntegrationConfig =
-      unwrap(this).bind(method.let(Method::unwrap)).let(IntegrationConfig::wrap)
+      unwrap(this).bind(method.let(Method.Companion::unwrap)).let(IntegrationConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.apigateway.LambdaIntegration].
@@ -314,7 +314,7 @@ public open class LambdaIntegration(
      * @param connectionType The type of network connection to the integration endpoint. 
      */
     override fun connectionType(connectionType: ConnectionType) {
-      cdkBuilder.connectionType(connectionType.let(ConnectionType::unwrap))
+      cdkBuilder.connectionType(connectionType.let(ConnectionType.Companion::unwrap))
     }
 
     /**
@@ -328,7 +328,7 @@ public open class LambdaIntegration(
      * @param contentHandling Specifies how to handle request payload content type conversions. 
      */
     override fun contentHandling(contentHandling: ContentHandling) {
-      cdkBuilder.contentHandling(contentHandling.let(ContentHandling::unwrap))
+      cdkBuilder.contentHandling(contentHandling.let(ContentHandling.Companion::unwrap))
     }
 
     /**
@@ -353,7 +353,7 @@ public open class LambdaIntegration(
      * @param credentialsRole An IAM role that API Gateway assumes. 
      */
     override fun credentialsRole(credentialsRole: IRole) {
-      cdkBuilder.credentialsRole(credentialsRole.let(IRole::unwrap))
+      cdkBuilder.credentialsRole(credentialsRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -369,7 +369,7 @@ public open class LambdaIntegration(
      * completes processing a request. 
      */
     override fun integrationResponses(integrationResponses: List<IntegrationResponse>) {
-      cdkBuilder.integrationResponses(integrationResponses.map(IntegrationResponse::unwrap))
+      cdkBuilder.integrationResponses(integrationResponses.map(IntegrationResponse.Companion::unwrap))
     }
 
     /**
@@ -400,7 +400,7 @@ public open class LambdaIntegration(
      * requestTemplates property on the Integration resource. 
      */
     override fun passthroughBehavior(passthroughBehavior: PassthroughBehavior) {
-      cdkBuilder.passthroughBehavior(passthroughBehavior.let(PassthroughBehavior::unwrap))
+      cdkBuilder.passthroughBehavior(passthroughBehavior.let(PassthroughBehavior.Companion::unwrap))
     }
 
     /**
@@ -467,7 +467,7 @@ public open class LambdaIntegration(
      * response. 
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -478,7 +478,7 @@ public open class LambdaIntegration(
      * @param vpcLink The VpcLink used for the integration. 
      */
     override fun vpcLink(vpcLink: IVpcLink) {
-      cdkBuilder.vpcLink(vpcLink.let(IVpcLink::unwrap))
+      cdkBuilder.vpcLink(vpcLink.let(IVpcLink.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.LambdaIntegration =

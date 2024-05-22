@@ -146,7 +146,7 @@ public interface CustomAttributeConfig {
      * @param numberConstraints The constraints for a custom attribute of the 'Number' data type.
      */
     override fun numberConstraints(numberConstraints: NumberAttributeConstraints) {
-      cdkBuilder.numberConstraints(numberConstraints.let(NumberAttributeConstraints::unwrap))
+      cdkBuilder.numberConstraints(numberConstraints.let(NumberAttributeConstraints.Companion::unwrap))
     }
 
     /**
@@ -162,7 +162,7 @@ public interface CustomAttributeConfig {
      * @param stringConstraints The constraints for a custom attribute of 'String' data type.
      */
     override fun stringConstraints(stringConstraints: StringAttributeConstraints) {
-      cdkBuilder.stringConstraints(stringConstraints.let(StringAttributeConstraints::unwrap))
+      cdkBuilder.stringConstraints(stringConstraints.let(StringAttributeConstraints.Companion::unwrap))
     }
 
     /**

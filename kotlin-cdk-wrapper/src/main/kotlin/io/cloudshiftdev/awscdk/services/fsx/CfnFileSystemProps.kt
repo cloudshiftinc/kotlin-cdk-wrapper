@@ -697,7 +697,7 @@ public interface CfnFileSystemProps {
      * * `ImportPath`
      */
     override fun lustreConfiguration(lustreConfiguration: IResolvable) {
-      cdkBuilder.lustreConfiguration(lustreConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.lustreConfiguration(lustreConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -713,7 +713,7 @@ public interface CfnFileSystemProps {
      */
     override
         fun lustreConfiguration(lustreConfiguration: CfnFileSystem.LustreConfigurationProperty) {
-      cdkBuilder.lustreConfiguration(lustreConfiguration.let(CfnFileSystem.LustreConfigurationProperty::unwrap))
+      cdkBuilder.lustreConfiguration(lustreConfiguration.let(CfnFileSystem.LustreConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -738,7 +738,7 @@ public interface CfnFileSystemProps {
      * that you are creating.
      */
     override fun ontapConfiguration(ontapConfiguration: IResolvable) {
-      cdkBuilder.ontapConfiguration(ontapConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.ontapConfiguration(ontapConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -746,7 +746,7 @@ public interface CfnFileSystemProps {
      * that you are creating.
      */
     override fun ontapConfiguration(ontapConfiguration: CfnFileSystem.OntapConfigurationProperty) {
-      cdkBuilder.ontapConfiguration(ontapConfiguration.let(CfnFileSystem.OntapConfigurationProperty::unwrap))
+      cdkBuilder.ontapConfiguration(ontapConfiguration.let(CfnFileSystem.OntapConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -764,7 +764,7 @@ public interface CfnFileSystemProps {
      * system that you are creating.
      */
     override fun openZfsConfiguration(openZfsConfiguration: IResolvable) {
-      cdkBuilder.openZfsConfiguration(openZfsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.openZfsConfiguration(openZfsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -773,7 +773,7 @@ public interface CfnFileSystemProps {
      */
     override
         fun openZfsConfiguration(openZfsConfiguration: CfnFileSystem.OpenZFSConfigurationProperty) {
-      cdkBuilder.openZfsConfiguration(openZfsConfiguration.let(CfnFileSystem.OpenZFSConfigurationProperty::unwrap))
+      cdkBuilder.openZfsConfiguration(openZfsConfiguration.let(CfnFileSystem.OpenZFSConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -909,7 +909,7 @@ public interface CfnFileSystemProps {
      * FSx for Lustre User Guide* .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -926,7 +926,7 @@ public interface CfnFileSystemProps {
      * This value is required if `FileSystemType` is set to `WINDOWS` .
      */
     override fun windowsConfiguration(windowsConfiguration: IResolvable) {
-      cdkBuilder.windowsConfiguration(windowsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.windowsConfiguration(windowsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -936,7 +936,7 @@ public interface CfnFileSystemProps {
      */
     override
         fun windowsConfiguration(windowsConfiguration: CfnFileSystem.WindowsConfigurationProperty) {
-      cdkBuilder.windowsConfiguration(windowsConfiguration.let(CfnFileSystem.WindowsConfigurationProperty::unwrap))
+      cdkBuilder.windowsConfiguration(windowsConfiguration.let(CfnFileSystem.WindowsConfigurationProperty.Companion::unwrap))
     }
 
     /**

@@ -37,13 +37,13 @@ public open class LambdaDestination(
   cdkObject: software.amazon.awscdk.services.lambda.destinations.LambdaDestination,
 ) : CdkObject(cdkObject), IDestination {
   public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction) :
-      this(software.amazon.awscdk.services.lambda.destinations.LambdaDestination(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap))
+      this(software.amazon.awscdk.services.lambda.destinations.LambdaDestination(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap))
   )
 
   public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction,
       options: LambdaDestinationOptions) :
-      this(software.amazon.awscdk.services.lambda.destinations.LambdaDestination(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap),
-      options.let(LambdaDestinationOptions::unwrap))
+      this(software.amazon.awscdk.services.lambda.destinations.LambdaDestination(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap),
+      options.let(LambdaDestinationOptions.Companion::unwrap))
   )
 
   public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction,
@@ -59,8 +59,8 @@ public open class LambdaDestination(
    * @param options
    */
   public override fun bind(scope: Construct, fn: CloudshiftdevAwscdkServicesLambdaIFunction):
-      DestinationConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      fn.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap)).let(DestinationConfig::wrap)
+      DestinationConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      fn.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap)).let(DestinationConfig::wrap)
 
   /**
    * Returns a destination configuration.
@@ -73,9 +73,9 @@ public open class LambdaDestination(
     scope: Construct,
     fn: CloudshiftdevAwscdkServicesLambdaIFunction,
     options: DestinationOptions,
-  ): DestinationConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      fn.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap),
-      options.let(DestinationOptions::unwrap)).let(DestinationConfig::wrap)
+  ): DestinationConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      fn.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap),
+      options.let(DestinationOptions.Companion::unwrap)).let(DestinationConfig::wrap)
 
   /**
    * Returns a destination configuration.

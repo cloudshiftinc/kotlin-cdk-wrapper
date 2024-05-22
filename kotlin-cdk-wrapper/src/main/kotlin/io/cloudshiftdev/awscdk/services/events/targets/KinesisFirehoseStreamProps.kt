@@ -56,7 +56,7 @@ public interface KinesisFirehoseStreamProps {
      * Must be a valid JSON text passed to the target stream.
      */
     override fun message(message: RuleTargetInput) {
-      cdkBuilder.message(message.let(RuleTargetInput::unwrap))
+      cdkBuilder.message(message.let(RuleTargetInput.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.events.targets.KinesisFirehoseStreamProps =

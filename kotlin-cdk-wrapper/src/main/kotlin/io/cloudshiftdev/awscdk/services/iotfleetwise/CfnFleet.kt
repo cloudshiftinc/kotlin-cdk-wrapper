@@ -54,8 +54,8 @@ public open class CfnFleet(
     id: String,
     props: CfnFleetProps,
   ) :
-      this(software.amazon.awscdk.services.iotfleetwise.CfnFleet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFleetProps::unwrap))
+      this(software.amazon.awscdk.services.iotfleetwise.CfnFleet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFleetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -111,7 +111,7 @@ public open class CfnFleet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -141,7 +141,7 @@ public open class CfnFleet(
    * (Optional) Metadata that can be used to manage the fleet.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -239,7 +239,7 @@ public open class CfnFleet(
      * @param tags (Optional) Metadata that can be used to manage the fleet. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

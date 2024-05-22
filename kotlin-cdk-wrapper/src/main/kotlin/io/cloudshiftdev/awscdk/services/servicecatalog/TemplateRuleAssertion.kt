@@ -65,7 +65,7 @@ public interface TemplateRuleAssertion {
      * @param assertValue The assertion condition. 
      */
     override fun assertValue(assertValue: ICfnRuleConditionExpression) {
-      cdkBuilder.assertValue(assertValue.let(ICfnRuleConditionExpression::unwrap))
+      cdkBuilder.assertValue(assertValue.let(ICfnRuleConditionExpression.Companion::unwrap))
     }
 
     /**

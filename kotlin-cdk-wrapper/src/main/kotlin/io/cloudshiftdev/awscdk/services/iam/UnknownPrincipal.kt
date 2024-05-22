@@ -38,7 +38,7 @@ public open class UnknownPrincipal(
   cdkObject: software.amazon.awscdk.services.iam.UnknownPrincipal,
 ) : CdkObject(cdkObject), IPrincipal {
   public constructor(props: UnknownPrincipalProps) :
-      this(software.amazon.awscdk.services.iam.UnknownPrincipal(props.let(UnknownPrincipalProps::unwrap))
+      this(software.amazon.awscdk.services.iam.UnknownPrincipal(props.let(UnknownPrincipalProps.Companion::unwrap))
   )
 
   public constructor(props: UnknownPrincipalProps.Builder.() -> Unit) :
@@ -51,7 +51,7 @@ public open class UnknownPrincipal(
    * @param statement 
    */
   public open fun addToPolicy(statement: PolicyStatement): Boolean =
-      unwrap(this).addToPolicy(statement.let(PolicyStatement::unwrap))
+      unwrap(this).addToPolicy(statement.let(PolicyStatement.Companion::unwrap))
 
   /**
    * Add to the policy of this principal.
@@ -69,7 +69,7 @@ public open class UnknownPrincipal(
    * @param statement 
    */
   public override fun addToPrincipalPolicy(statement: PolicyStatement): AddToPrincipalPolicyResult =
-      unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement::unwrap)).let(AddToPrincipalPolicyResult::wrap)
+      unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToPrincipalPolicyResult::wrap)
 
   /**
    * Add to the policy of this principal.
@@ -121,7 +121,7 @@ public open class UnknownPrincipal(
      * @param resource The resource the role proxy is for. 
      */
     override fun resource(resource: IConstruct) {
-      cdkBuilder.resource(resource.let(IConstruct::unwrap))
+      cdkBuilder.resource(resource.let(IConstruct.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.iam.UnknownPrincipal = cdkBuilder.build()

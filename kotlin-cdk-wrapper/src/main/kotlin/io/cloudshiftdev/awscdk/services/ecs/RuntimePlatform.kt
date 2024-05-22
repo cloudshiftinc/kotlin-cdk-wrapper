@@ -70,14 +70,14 @@ public interface RuntimePlatform {
      * @param cpuArchitecture The CpuArchitecture for Fargate Runtime Platform.
      */
     override fun cpuArchitecture(cpuArchitecture: CpuArchitecture) {
-      cdkBuilder.cpuArchitecture(cpuArchitecture.let(CpuArchitecture::unwrap))
+      cdkBuilder.cpuArchitecture(cpuArchitecture.let(CpuArchitecture.Companion::unwrap))
     }
 
     /**
      * @param operatingSystemFamily The operating system for Fargate Runtime Platform.
      */
     override fun operatingSystemFamily(operatingSystemFamily: OperatingSystemFamily) {
-      cdkBuilder.operatingSystemFamily(operatingSystemFamily.let(OperatingSystemFamily::unwrap))
+      cdkBuilder.operatingSystemFamily(operatingSystemFamily.let(OperatingSystemFamily.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.RuntimePlatform = cdkBuilder.build()

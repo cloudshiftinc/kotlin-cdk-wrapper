@@ -96,7 +96,7 @@ public interface CfnPublicKeyProps {
      * . 
      */
     override fun publicKeyConfig(publicKeyConfig: IResolvable) {
-      cdkBuilder.publicKeyConfig(publicKeyConfig.let(IResolvable::unwrap))
+      cdkBuilder.publicKeyConfig(publicKeyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -108,7 +108,7 @@ public interface CfnPublicKeyProps {
      * . 
      */
     override fun publicKeyConfig(publicKeyConfig: CfnPublicKey.PublicKeyConfigProperty) {
-      cdkBuilder.publicKeyConfig(publicKeyConfig.let(CfnPublicKey.PublicKeyConfigProperty::unwrap))
+      cdkBuilder.publicKeyConfig(publicKeyConfig.let(CfnPublicKey.PublicKeyConfigProperty.Companion::unwrap))
     }
 
     /**

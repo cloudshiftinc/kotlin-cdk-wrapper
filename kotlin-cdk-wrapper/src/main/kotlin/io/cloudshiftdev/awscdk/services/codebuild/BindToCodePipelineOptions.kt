@@ -52,7 +52,7 @@ public interface BindToCodePipelineOptions {
      * project. 
      */
     override fun artifactBucket(artifactBucket: IBucket) {
-      cdkBuilder.artifactBucket(artifactBucket.let(IBucket::unwrap))
+      cdkBuilder.artifactBucket(artifactBucket.let(IBucket.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codebuild.BindToCodePipelineOptions =

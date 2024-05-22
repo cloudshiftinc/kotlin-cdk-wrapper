@@ -67,8 +67,8 @@ public open class EmrCreateCluster(
     id: String,
     props: EmrCreateClusterProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EmrCreateClusterProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EmrCreateCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EmrCreateClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -544,7 +544,7 @@ public open class EmrCreateCluster(
      * configure when launching the cluster. 
      */
     override fun applications(applications: List<ApplicationConfigProperty>) {
-      cdkBuilder.applications(applications.map(ApplicationConfigProperty::unwrap))
+      cdkBuilder.applications(applications.map(ApplicationConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -567,7 +567,7 @@ public open class EmrCreateCluster(
      * @param autoScalingRole An IAM role for automatic scaling policies. 
      */
     override fun autoScalingRole(autoScalingRole: IRole) {
-      cdkBuilder.autoScalingRole(autoScalingRole.let(IRole::unwrap))
+      cdkBuilder.autoScalingRole(autoScalingRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -579,7 +579,7 @@ public open class EmrCreateCluster(
      * cluster nodes. 
      */
     override fun bootstrapActions(bootstrapActions: List<BootstrapActionConfigProperty>) {
-      cdkBuilder.bootstrapActions(bootstrapActions.map(BootstrapActionConfigProperty::unwrap))
+      cdkBuilder.bootstrapActions(bootstrapActions.map(BootstrapActionConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -606,7 +606,7 @@ public open class EmrCreateCluster(
      * @param clusterRole Also called instance profile and EC2 role. 
      */
     override fun clusterRole(clusterRole: IRole) {
-      cdkBuilder.clusterRole(clusterRole.let(IRole::unwrap))
+      cdkBuilder.clusterRole(clusterRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -629,7 +629,7 @@ public open class EmrCreateCluster(
      * creating. 
      */
     override fun configurations(configurations: List<ConfigurationProperty>) {
-      cdkBuilder.configurations(configurations.map(ConfigurationProperty::unwrap))
+      cdkBuilder.configurations(configurations.map(ConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -655,7 +655,7 @@ public open class EmrCreateCluster(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -694,7 +694,7 @@ public open class EmrCreateCluster(
      * for each EC2 instance. 
      */
     override fun ebsRootVolumeSize(ebsRootVolumeSize: Size) {
-      cdkBuilder.ebsRootVolumeSize(ebsRootVolumeSize.let(Size::unwrap))
+      cdkBuilder.ebsRootVolumeSize(ebsRootVolumeSize.let(Size.Companion::unwrap))
     }
 
     /**
@@ -707,7 +707,7 @@ public open class EmrCreateCluster(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -721,7 +721,7 @@ public open class EmrCreateCluster(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -745,7 +745,7 @@ public open class EmrCreateCluster(
      * @param instances A specification of the number and type of Amazon EC2 instances. 
      */
     override fun instances(instances: InstancesConfigProperty) {
-      cdkBuilder.instances(instances.let(InstancesConfigProperty::unwrap))
+      cdkBuilder.instances(instances.let(InstancesConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -775,7 +775,7 @@ public open class EmrCreateCluster(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -788,7 +788,7 @@ public open class EmrCreateCluster(
      * is enabled using a security configuration. 
      */
     override fun kerberosAttributes(kerberosAttributes: KerberosAttributesProperty) {
-      cdkBuilder.kerberosAttributes(kerberosAttributes.let(KerberosAttributesProperty::unwrap))
+      cdkBuilder.kerberosAttributes(kerberosAttributes.let(KerberosAttributesProperty.Companion::unwrap))
     }
 
     /**
@@ -896,7 +896,7 @@ public open class EmrCreateCluster(
      * when an automatic scale-in activity occurs or an instance group is resized. 
      */
     override fun scaleDownBehavior(scaleDownBehavior: EmrClusterScaleDownBehavior) {
-      cdkBuilder.scaleDownBehavior(scaleDownBehavior.let(EmrClusterScaleDownBehavior::unwrap))
+      cdkBuilder.scaleDownBehavior(scaleDownBehavior.let(EmrClusterScaleDownBehavior.Companion::unwrap))
     }
 
     /**
@@ -920,7 +920,7 @@ public open class EmrCreateCluster(
      * resources on your behalf. 
      */
     override fun serviceRole(serviceRole: IRole) {
-      cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
+      cdkBuilder.serviceRole(serviceRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -972,7 +972,7 @@ public open class EmrCreateCluster(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -985,7 +985,7 @@ public open class EmrCreateCluster(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -1327,7 +1327,7 @@ public open class EmrCreateCluster(
        * group to grow above or below these limits.
        */
       override fun constraints(constraints: ScalingConstraintsProperty) {
-        cdkBuilder.constraints(constraints.let(ScalingConstraintsProperty::unwrap))
+        cdkBuilder.constraints(constraints.let(ScalingConstraintsProperty.Companion::unwrap))
       }
 
       /**
@@ -1345,7 +1345,7 @@ public open class EmrCreateCluster(
        * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
        */
       override fun rules(rules: List<ScalingRuleProperty>) {
-        cdkBuilder.rules(rules.map(ScalingRuleProperty::unwrap))
+        cdkBuilder.rules(rules.map(ScalingRuleProperty.Companion::unwrap))
       }
 
       /**
@@ -1472,7 +1472,7 @@ public open class EmrCreateCluster(
        */
       override
           fun scriptBootstrapAction(scriptBootstrapAction: ScriptBootstrapActionConfigProperty) {
-        cdkBuilder.scriptBootstrapAction(scriptBootstrapAction.let(ScriptBootstrapActionConfigProperty::unwrap))
+        cdkBuilder.scriptBootstrapAction(scriptBootstrapAction.let(ScriptBootstrapActionConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1728,14 +1728,14 @@ public open class EmrCreateCluster(
        * the value specified by Threshold. 
        */
       override fun comparisonOperator(comparisonOperator: CloudWatchAlarmComparisonOperator) {
-        cdkBuilder.comparisonOperator(comparisonOperator.let(CloudWatchAlarmComparisonOperator::unwrap))
+        cdkBuilder.comparisonOperator(comparisonOperator.let(CloudWatchAlarmComparisonOperator.Companion::unwrap))
       }
 
       /**
        * @param dimensions A CloudWatch metric dimension.
        */
       override fun dimensions(dimensions: List<MetricDimensionProperty>) {
-        cdkBuilder.dimensions(dimensions.map(MetricDimensionProperty::unwrap))
+        cdkBuilder.dimensions(dimensions.map(MetricDimensionProperty.Companion::unwrap))
       }
 
       /**
@@ -1773,14 +1773,14 @@ public open class EmrCreateCluster(
        * an EMR CloudWatch metric is specified, specify 300.
        */
       override fun period(period: Duration) {
-        cdkBuilder.period(period.let(Duration::unwrap))
+        cdkBuilder.period(period.let(Duration.Companion::unwrap))
       }
 
       /**
        * @param statistic The statistic to apply to the metric associated with the alarm.
        */
       override fun statistic(statistic: CloudWatchAlarmStatistic) {
-        cdkBuilder.statistic(statistic.let(CloudWatchAlarmStatistic::unwrap))
+        cdkBuilder.statistic(statistic.let(CloudWatchAlarmStatistic.Companion::unwrap))
       }
 
       /**
@@ -1796,7 +1796,7 @@ public open class EmrCreateCluster(
        * specified in the CloudWatch metric.
        */
       override fun unit(unit: CloudWatchAlarmUnit) {
-        cdkBuilder.unit(unit.let(CloudWatchAlarmUnit::unwrap))
+        cdkBuilder.unit(unit.let(CloudWatchAlarmUnit.Companion::unwrap))
       }
 
       public fun build():
@@ -2120,7 +2120,7 @@ public open class EmrCreateCluster(
        * object.
        */
       override fun configurations(configurations: List<ConfigurationProperty>) {
-        cdkBuilder.configurations(configurations.map(ConfigurationProperty::unwrap))
+        cdkBuilder.configurations(configurations.map(ConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2266,7 +2266,7 @@ public open class EmrCreateCluster(
        * (GiB) that will be requested for the EBS volume attached to an EC2 instance in the cluster. 
        */
       override fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty) {
-        cdkBuilder.volumeSpecification(volumeSpecification.let(VolumeSpecificationProperty::unwrap))
+        cdkBuilder.volumeSpecification(volumeSpecification.let(VolumeSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -2445,7 +2445,7 @@ public open class EmrCreateCluster(
        */
       override
           fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<EbsBlockDeviceConfigProperty>) {
-        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.map(EbsBlockDeviceConfigProperty::unwrap))
+        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.map(EbsBlockDeviceConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2735,7 +2735,7 @@ public open class EmrCreateCluster(
        * Valid values are MASTER,CORE,and TASK.
        */
       override fun instanceFleetType(instanceFleetType: InstanceRoleType) {
-        cdkBuilder.instanceFleetType(instanceFleetType.let(InstanceRoleType::unwrap))
+        cdkBuilder.instanceFleetType(instanceFleetType.let(InstanceRoleType.Companion::unwrap))
       }
 
       /**
@@ -2743,7 +2743,7 @@ public open class EmrCreateCluster(
        * in the instance fleet.
        */
       override fun instanceTypeConfigs(instanceTypeConfigs: List<InstanceTypeConfigProperty>) {
-        cdkBuilder.instanceTypeConfigs(instanceTypeConfigs.map(InstanceTypeConfigProperty::unwrap))
+        cdkBuilder.instanceTypeConfigs(instanceTypeConfigs.map(InstanceTypeConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2758,7 +2758,7 @@ public open class EmrCreateCluster(
        */
       override
           fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty) {
-        cdkBuilder.launchSpecifications(launchSpecifications.let(InstanceFleetProvisioningSpecificationsProperty::unwrap))
+        cdkBuilder.launchSpecifications(launchSpecifications.let(InstanceFleetProvisioningSpecificationsProperty.Companion::unwrap))
       }
 
       /**
@@ -3029,7 +3029,7 @@ public open class EmrCreateCluster(
        */
       override
           fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty) {
-        cdkBuilder.onDemandSpecification(onDemandSpecification.let(OnDemandProvisioningSpecificationProperty::unwrap))
+        cdkBuilder.onDemandSpecification(onDemandSpecification.let(OnDemandProvisioningSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -3052,7 +3052,7 @@ public open class EmrCreateCluster(
        * determines the defined duration and provisioning timeout behavior.
        */
       override fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty) {
-        cdkBuilder.spotSpecification(spotSpecification.let(SpotProvisioningSpecificationProperty::unwrap))
+        cdkBuilder.spotSpecification(spotSpecification.let(SpotProvisioningSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -3350,7 +3350,7 @@ public open class EmrCreateCluster(
        * instance group in an Amazon EMR cluster.
        */
       override fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty) {
-        cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(AutoScalingPolicyProperty::unwrap))
+        cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(AutoScalingPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -3376,7 +3376,7 @@ public open class EmrCreateCluster(
        * group.
        */
       override fun configurations(configurations: List<ConfigurationProperty>) {
-        cdkBuilder.configurations(configurations.map(ConfigurationProperty::unwrap))
+        cdkBuilder.configurations(configurations.map(ConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3391,7 +3391,7 @@ public open class EmrCreateCluster(
        * the instance group.
        */
       override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
-        cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty::unwrap))
+        cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3414,7 +3414,7 @@ public open class EmrCreateCluster(
        * @param instanceRole The role of the instance group in the cluster. 
        */
       override fun instanceRole(instanceRole: InstanceRoleType) {
-        cdkBuilder.instanceRole(instanceRole.let(InstanceRoleType::unwrap))
+        cdkBuilder.instanceRole(instanceRole.let(InstanceRoleType.Companion::unwrap))
       }
 
       /**
@@ -3428,7 +3428,7 @@ public open class EmrCreateCluster(
        * @param market Market type of the EC2 instances used to create a cluster node.
        */
       override fun market(market: InstanceMarket) {
-        cdkBuilder.market(market.let(InstanceMarket::unwrap))
+        cdkBuilder.market(market.let(InstanceMarket.Companion::unwrap))
       }
 
       /**
@@ -3765,7 +3765,7 @@ public open class EmrCreateCluster(
        * cluster.
        */
       override fun configurations(configurations: List<ConfigurationProperty>) {
-        cdkBuilder.configurations(configurations.map(ConfigurationProperty::unwrap))
+        cdkBuilder.configurations(configurations.map(ConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3781,7 +3781,7 @@ public open class EmrCreateCluster(
        * each instance as defined by InstanceType.
        */
       override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
-        cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty::unwrap))
+        cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -4307,7 +4307,7 @@ public open class EmrCreateCluster(
        * excluding 5.0.x versions.
        */
       override fun instanceFleets(instanceFleets: List<InstanceFleetConfigProperty>) {
-        cdkBuilder.instanceFleets(instanceFleets.map(InstanceFleetConfigProperty::unwrap))
+        cdkBuilder.instanceFleets(instanceFleets.map(InstanceFleetConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -4323,7 +4323,7 @@ public open class EmrCreateCluster(
        * @param instanceGroups Configuration for the instance groups in a cluster.
        */
       override fun instanceGroups(instanceGroups: List<InstanceGroupConfigProperty>) {
-        cdkBuilder.instanceGroups(instanceGroups.map(InstanceGroupConfigProperty::unwrap))
+        cdkBuilder.instanceGroups(instanceGroups.map(InstanceGroupConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -4343,7 +4343,7 @@ public open class EmrCreateCluster(
        * @param placement The Availability Zone in which the cluster runs.
        */
       override fun placement(placement: PlacementTypeProperty) {
-        cdkBuilder.placement(placement.let(PlacementTypeProperty::unwrap))
+        cdkBuilder.placement(placement.let(PlacementTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -4974,7 +4974,7 @@ public open class EmrCreateCluster(
        * first.
        */
       override fun allocationStrategy(allocationStrategy: OnDemandAllocationStrategy) {
-        cdkBuilder.allocationStrategy(allocationStrategy.let(OnDemandAllocationStrategy::unwrap))
+        cdkBuilder.allocationStrategy(allocationStrategy.let(OnDemandAllocationStrategy.Companion::unwrap))
       }
 
       public fun build():
@@ -5250,7 +5250,7 @@ public open class EmrCreateCluster(
        * Instance groups use the market type specified for the group.
        */
       override fun market(market: InstanceMarket) {
-        cdkBuilder.market(market.let(InstanceMarket::unwrap))
+        cdkBuilder.market(market.let(InstanceMarket.Companion::unwrap))
       }
 
       /**
@@ -5259,7 +5259,7 @@ public open class EmrCreateCluster(
        */
       override
           fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty) {
-        cdkBuilder.simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration.let(SimpleScalingPolicyConfigurationProperty::unwrap))
+        cdkBuilder.simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration.let(SimpleScalingPolicyConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -5601,7 +5601,7 @@ public open class EmrCreateCluster(
        * @param action The conditions that trigger an automatic scaling activity. 
        */
       override fun action(action: ScalingActionProperty) {
-        cdkBuilder.action(action.let(ScalingActionProperty::unwrap))
+        cdkBuilder.action(action.let(ScalingActionProperty.Companion::unwrap))
       }
 
       /**
@@ -5632,7 +5632,7 @@ public open class EmrCreateCluster(
        * activity is triggered. 
        */
       override fun trigger(trigger: ScalingTriggerProperty) {
-        cdkBuilder.trigger(trigger.let(ScalingTriggerProperty::unwrap))
+        cdkBuilder.trigger(trigger.let(ScalingTriggerProperty.Companion::unwrap))
       }
 
       /**
@@ -5779,7 +5779,7 @@ public open class EmrCreateCluster(
        */
       override
           fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty) {
-        cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition.let(CloudWatchAlarmDefinitionProperty::unwrap))
+        cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition.let(CloudWatchAlarmDefinitionProperty.Companion::unwrap))
       }
 
       /**
@@ -6046,7 +6046,7 @@ public open class EmrCreateCluster(
        * scaling activity is triggered.
        */
       override fun adjustmentType(adjustmentType: ScalingAdjustmentType) {
-        cdkBuilder.adjustmentType(adjustmentType.let(ScalingAdjustmentType::unwrap))
+        cdkBuilder.adjustmentType(adjustmentType.let(ScalingAdjustmentType.Companion::unwrap))
       }
 
       /**
@@ -6306,7 +6306,7 @@ public open class EmrCreateCluster(
        * @param allocationStrategy Specifies the strategy to use in launching Spot Instance fleets.
        */
       override fun allocationStrategy(allocationStrategy: SpotAllocationStrategy) {
-        cdkBuilder.allocationStrategy(allocationStrategy.let(SpotAllocationStrategy::unwrap))
+        cdkBuilder.allocationStrategy(allocationStrategy.let(SpotAllocationStrategy.Companion::unwrap))
       }
 
       /**
@@ -6329,7 +6329,7 @@ public open class EmrCreateCluster(
        * You must specify one of `timeout` and `timeoutDurationMinutes`.
        */
       override fun timeout(timeout: Duration) {
-        cdkBuilder.timeout(timeout.let(Duration::unwrap))
+        cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
       }
 
       /**
@@ -6337,7 +6337,7 @@ public open class EmrCreateCluster(
        * the TimeoutDurationMinutes has expired. 
        */
       override fun timeoutAction(timeoutAction: SpotTimeoutAction) {
-        cdkBuilder.timeoutAction(timeoutAction.let(SpotTimeoutAction::unwrap))
+        cdkBuilder.timeoutAction(timeoutAction.let(SpotTimeoutAction.Companion::unwrap))
       }
 
       /**
@@ -6547,7 +6547,7 @@ public open class EmrCreateCluster(
        * Maximum size is 1TiB
        */
       override fun volumeSize(volumeSize: Size) {
-        cdkBuilder.volumeSize(volumeSize.let(Size::unwrap))
+        cdkBuilder.volumeSize(volumeSize.let(Size.Companion::unwrap))
       }
 
       /**
@@ -6555,7 +6555,7 @@ public open class EmrCreateCluster(
        * Volume types supported are gp2, io1, standard.
        */
       override fun volumeType(volumeType: EbsBlockDeviceVolumeType) {
-        cdkBuilder.volumeType(volumeType.let(EbsBlockDeviceVolumeType::unwrap))
+        cdkBuilder.volumeType(volumeType.let(EbsBlockDeviceVolumeType.Companion::unwrap))
       }
 
       public fun build():

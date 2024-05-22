@@ -40,8 +40,8 @@ public open class CfnResourcePolicy(
     id: String,
     props: CfnResourcePolicyProps,
   ) :
-      this(software.amazon.awscdk.services.logs.CfnResourcePolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnResourcePolicyProps::unwrap))
+      this(software.amazon.awscdk.services.logs.CfnResourcePolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnResourcePolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -57,7 +57,7 @@ public open class CfnResourcePolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

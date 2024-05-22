@@ -120,14 +120,14 @@ public interface CfnRefreshScheduleProps {
      * @param schedule The refresh schedule of a dataset.
      */
     override fun schedule(schedule: IResolvable) {
-      cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
+      cdkBuilder.schedule(schedule.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param schedule The refresh schedule of a dataset.
      */
     override fun schedule(schedule: CfnRefreshSchedule.RefreshScheduleMapProperty) {
-      cdkBuilder.schedule(schedule.let(CfnRefreshSchedule.RefreshScheduleMapProperty::unwrap))
+      cdkBuilder.schedule(schedule.let(CfnRefreshSchedule.RefreshScheduleMapProperty.Companion::unwrap))
     }
 
     /**

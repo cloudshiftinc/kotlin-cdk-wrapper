@@ -57,7 +57,7 @@ public abstract class BuildSpec(
    * @param scope
    */
   public open fun toBuildSpec(scope: Construct): String =
-      unwrap(this).toBuildSpec(scope.let(Construct::unwrap))
+      unwrap(this).toBuildSpec(scope.let(Construct.Companion::unwrap))
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codebuild.BuildSpec,

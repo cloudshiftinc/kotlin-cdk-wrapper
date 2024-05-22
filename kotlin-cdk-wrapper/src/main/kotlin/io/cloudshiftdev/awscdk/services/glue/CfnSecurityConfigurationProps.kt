@@ -100,7 +100,7 @@ public interface CfnSecurityConfigurationProps {
      * configuration. 
      */
     override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -109,7 +109,7 @@ public interface CfnSecurityConfigurationProps {
      */
     override
         fun encryptionConfiguration(encryptionConfiguration: CfnSecurityConfiguration.EncryptionConfigurationProperty) {
-      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(CfnSecurityConfiguration.EncryptionConfigurationProperty::unwrap))
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(CfnSecurityConfiguration.EncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**

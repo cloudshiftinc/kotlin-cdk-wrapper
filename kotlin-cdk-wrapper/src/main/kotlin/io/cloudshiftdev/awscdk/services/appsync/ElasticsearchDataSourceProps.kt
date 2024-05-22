@@ -88,7 +88,7 @@ public interface ElasticsearchDataSourceProps : BackedDataSourceProps {
      * @param api The API to attach this data source to. 
      */
     override fun api(api: IGraphqlApi) {
-      cdkBuilder.api(api.let(IGraphqlApi::unwrap))
+      cdkBuilder.api(api.let(IGraphqlApi.Companion::unwrap))
     }
 
     /**
@@ -103,7 +103,7 @@ public interface ElasticsearchDataSourceProps : BackedDataSourceProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun domain(domain: IDomain) {
-      cdkBuilder.domain(domain.let(IDomain::unwrap))
+      cdkBuilder.domain(domain.let(IDomain.Companion::unwrap))
     }
 
     /**
@@ -118,7 +118,7 @@ public interface ElasticsearchDataSourceProps : BackedDataSourceProps {
      * source.
      */
     override fun serviceRole(serviceRole: IRole) {
-      cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
+      cdkBuilder.serviceRole(serviceRole.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appsync.ElasticsearchDataSourceProps =

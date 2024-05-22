@@ -40,7 +40,7 @@ public interface ResultConfiguration {
   /**
    * Encryption option used if enabled in S3.
    *
-   * Default: - SSE_S3 encrpytion is enabled with default encryption key
+   * Default: - SSE_S3 encryption is enabled with default encryption key
    */
   public fun encryptionConfiguration(): EncryptionConfiguration? =
       unwrap(this).getEncryptionConfiguration()?.let(EncryptionConfiguration::wrap)
@@ -96,7 +96,7 @@ public interface ResultConfiguration {
      * @param encryptionConfiguration Encryption option used if enabled in S3.
      */
     override fun encryptionConfiguration(encryptionConfiguration: EncryptionConfiguration) {
-      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfiguration::unwrap))
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfiguration.Companion::unwrap))
     }
 
     /**
@@ -113,7 +113,7 @@ public interface ResultConfiguration {
      * Example value: `s3://query-results-bucket/folder/`
      */
     override fun outputLocation(outputLocation: Location) {
-      cdkBuilder.outputLocation(outputLocation.let(Location::unwrap))
+      cdkBuilder.outputLocation(outputLocation.let(Location.Companion::unwrap))
     }
 
     /**
@@ -135,7 +135,7 @@ public interface ResultConfiguration {
     /**
      * Encryption option used if enabled in S3.
      *
-     * Default: - SSE_S3 encrpytion is enabled with default encryption key
+     * Default: - SSE_S3 encryption is enabled with default encryption key
      */
     override fun encryptionConfiguration(): EncryptionConfiguration? =
         unwrap(this).getEncryptionConfiguration()?.let(EncryptionConfiguration::wrap)

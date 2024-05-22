@@ -128,7 +128,7 @@ public interface IRule : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -166,7 +166,8 @@ public interface IRule : IResource {
      * @param options
      */
     override fun onComplianceChange(id: String, options: OnEventOptions): Rule =
-        unwrap(this).onComplianceChange(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+        unwrap(this).onComplianceChange(id,
+        options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * Defines a EventBridge event rule which triggers for rule compliance events.
@@ -200,7 +201,7 @@ public interface IRule : IResource {
      * @param options
      */
     override fun onEvent(id: String, options: OnEventOptions): Rule = unwrap(this).onEvent(id,
-        options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+        options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * Defines an EventBridge event rule which triggers for rule events.
@@ -232,7 +233,8 @@ public interface IRule : IResource {
      * @param options
      */
     override fun onReEvaluationStatus(id: String, options: OnEventOptions): Rule =
-        unwrap(this).onReEvaluationStatus(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+        unwrap(this).onReEvaluationStatus(id,
+        options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * Defines a EventBridge event rule which triggers for rule re-evaluation status events.

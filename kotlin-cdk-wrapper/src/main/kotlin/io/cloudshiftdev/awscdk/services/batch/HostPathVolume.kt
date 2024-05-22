@@ -32,7 +32,7 @@ public open class HostPathVolume(
   cdkObject: software.amazon.awscdk.services.batch.HostPathVolume,
 ) : EksVolume(cdkObject) {
   public constructor(options: HostPathVolumeOptions) :
-      this(software.amazon.awscdk.services.batch.HostPathVolume(options.let(HostPathVolumeOptions::unwrap))
+      this(software.amazon.awscdk.services.batch.HostPathVolume(options.let(HostPathVolumeOptions.Companion::unwrap))
   )
 
   public constructor(options: HostPathVolumeOptions.Builder.() -> Unit) :

@@ -248,7 +248,7 @@ public interface CfnTrackerProps {
      * @param eventBridgeEnabled the value to be set.
      */
     override fun eventBridgeEnabled(eventBridgeEnabled: IResolvable) {
-      cdkBuilder.eventBridgeEnabled(eventBridgeEnabled.let(IResolvable::unwrap))
+      cdkBuilder.eventBridgeEnabled(eventBridgeEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -262,7 +262,7 @@ public interface CfnTrackerProps {
      * @param kmsKeyEnableGeospatialQueries the value to be set.
      */
     override fun kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries: IResolvable) {
-      cdkBuilder.kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries.let(IResolvable::unwrap))
+      cdkBuilder.kmsKeyEnableGeospatialQueries(kmsKeyEnableGeospatialQueries.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -321,7 +321,7 @@ public interface CfnTrackerProps {
      * @param tags An array of key-value pairs to apply to this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

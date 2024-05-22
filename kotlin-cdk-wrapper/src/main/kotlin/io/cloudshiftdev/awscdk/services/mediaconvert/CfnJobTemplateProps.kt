@@ -370,7 +370,7 @@ public interface CfnJobTemplateProps {
      * *AWS Elemental MediaConvert User Guide* .
      */
     override fun accelerationSettings(accelerationSettings: IResolvable) {
-      cdkBuilder.accelerationSettings(accelerationSettings.let(IResolvable::unwrap))
+      cdkBuilder.accelerationSettings(accelerationSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -384,7 +384,7 @@ public interface CfnJobTemplateProps {
      */
     override
         fun accelerationSettings(accelerationSettings: CfnJobTemplate.AccelerationSettingsProperty) {
-      cdkBuilder.accelerationSettings(accelerationSettings.let(CfnJobTemplate.AccelerationSettingsProperty::unwrap))
+      cdkBuilder.accelerationSettings(accelerationSettings.let(CfnJobTemplate.AccelerationSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -427,7 +427,7 @@ public interface CfnJobTemplateProps {
      * in the *AWS Elemental MediaConvert User Guide* .
      */
     override fun hopDestinations(hopDestinations: IResolvable) {
-      cdkBuilder.hopDestinations(hopDestinations.let(IResolvable::unwrap))
+      cdkBuilder.hopDestinations(hopDestinations.let(IResolvable.Companion::unwrap))
     }
 
     /**

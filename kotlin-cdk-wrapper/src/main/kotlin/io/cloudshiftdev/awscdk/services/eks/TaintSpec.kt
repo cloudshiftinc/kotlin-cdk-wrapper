@@ -75,7 +75,7 @@ public interface TaintSpec {
      * @param effect Effect type.
      */
     override fun effect(effect: TaintEffect) {
-      cdkBuilder.effect(effect.let(TaintEffect::unwrap))
+      cdkBuilder.effect(effect.let(TaintEffect.Companion::unwrap))
     }
 
     /**

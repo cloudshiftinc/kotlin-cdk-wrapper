@@ -106,7 +106,7 @@ public interface ApplicationConfiguration {
      * Length Constraints: Minimum length of 1. Maximum length of 1024.
      */
     override fun classification(classification: Classification) {
-      cdkBuilder.classification(classification.let(Classification::unwrap))
+      cdkBuilder.classification(classification.let(Classification.Companion::unwrap))
     }
 
     /**
@@ -115,7 +115,7 @@ public interface ApplicationConfiguration {
      * Array Members: Maximum number of 100 items.
      */
     override fun nestedConfig(nestedConfig: List<ApplicationConfiguration>) {
-      cdkBuilder.nestedConfig(nestedConfig.map(ApplicationConfiguration::unwrap))
+      cdkBuilder.nestedConfig(nestedConfig.map(ApplicationConfiguration.Companion::unwrap))
     }
 
     /**

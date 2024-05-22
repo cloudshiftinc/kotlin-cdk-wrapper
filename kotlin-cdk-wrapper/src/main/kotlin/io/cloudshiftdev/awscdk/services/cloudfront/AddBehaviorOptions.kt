@@ -240,7 +240,7 @@ public interface AddBehaviorOptions {
      * @param allowedMethods HTTP methods to allow for this behavior.
      */
     override fun allowedMethods(allowedMethods: AllowedMethods) {
-      cdkBuilder.allowedMethods(allowedMethods.let(AllowedMethods::unwrap))
+      cdkBuilder.allowedMethods(allowedMethods.let(AllowedMethods.Companion::unwrap))
     }
 
     /**
@@ -249,14 +249,14 @@ public interface AddBehaviorOptions {
      * and the time-to-live (TTL) values for the cache.
      */
     override fun cachePolicy(cachePolicy: ICachePolicy) {
-      cdkBuilder.cachePolicy(cachePolicy.let(ICachePolicy::unwrap))
+      cdkBuilder.cachePolicy(cachePolicy.let(ICachePolicy.Companion::unwrap))
     }
 
     /**
      * @param cachedMethods HTTP methods to cache for this behavior.
      */
     override fun cachedMethods(cachedMethods: CachedMethods) {
-      cdkBuilder.cachedMethods(cachedMethods.let(CachedMethods::unwrap))
+      cdkBuilder.cachedMethods(cachedMethods.let(CachedMethods.Companion::unwrap))
     }
 
     /**
@@ -274,7 +274,7 @@ public interface AddBehaviorOptions {
      * @param edgeLambdas The Lambda&#64;Edge functions to invoke before serving the contents.
      */
     override fun edgeLambdas(edgeLambdas: List<EdgeLambda>) {
-      cdkBuilder.edgeLambdas(edgeLambdas.map(EdgeLambda::unwrap))
+      cdkBuilder.edgeLambdas(edgeLambdas.map(EdgeLambda.Companion::unwrap))
     }
 
     /**
@@ -287,7 +287,7 @@ public interface AddBehaviorOptions {
      * @param functionAssociations The CloudFront functions to invoke before serving the contents.
      */
     override fun functionAssociations(functionAssociations: List<FunctionAssociation>) {
-      cdkBuilder.functionAssociations(functionAssociations.map(FunctionAssociation::unwrap))
+      cdkBuilder.functionAssociations(functionAssociations.map(FunctionAssociation.Companion::unwrap))
     }
 
     /**
@@ -302,7 +302,7 @@ public interface AddBehaviorOptions {
      * are included in requests that CloudFront sends to the origin.
      */
     override fun originRequestPolicy(originRequestPolicy: IOriginRequestPolicy) {
-      cdkBuilder.originRequestPolicy(originRequestPolicy.let(IOriginRequestPolicy::unwrap))
+      cdkBuilder.originRequestPolicy(originRequestPolicy.let(IOriginRequestPolicy.Companion::unwrap))
     }
 
     /**
@@ -310,7 +310,7 @@ public interface AddBehaviorOptions {
      * behavior.
      */
     override fun realtimeLogConfig(realtimeLogConfig: IRealtimeLogConfig) {
-      cdkBuilder.realtimeLogConfig(realtimeLogConfig.let(IRealtimeLogConfig::unwrap))
+      cdkBuilder.realtimeLogConfig(realtimeLogConfig.let(IRealtimeLogConfig.Companion::unwrap))
     }
 
     /**
@@ -318,7 +318,7 @@ public interface AddBehaviorOptions {
      * The response headers policy determines which headers are included in responses
      */
     override fun responseHeadersPolicy(responseHeadersPolicy: IResponseHeadersPolicy) {
-      cdkBuilder.responseHeadersPolicy(responseHeadersPolicy.let(IResponseHeadersPolicy::unwrap))
+      cdkBuilder.responseHeadersPolicy(responseHeadersPolicy.let(IResponseHeadersPolicy.Companion::unwrap))
     }
 
     /**
@@ -334,7 +334,7 @@ public interface AddBehaviorOptions {
      * or signed cookies.
      */
     override fun trustedKeyGroups(trustedKeyGroups: List<IKeyGroup>) {
-      cdkBuilder.trustedKeyGroups(trustedKeyGroups.map(IKeyGroup::unwrap))
+      cdkBuilder.trustedKeyGroups(trustedKeyGroups.map(IKeyGroup.Companion::unwrap))
     }
 
     /**
@@ -349,7 +349,7 @@ public interface AddBehaviorOptions {
      * by this behavior.
      */
     override fun viewerProtocolPolicy(viewerProtocolPolicy: ViewerProtocolPolicy) {
-      cdkBuilder.viewerProtocolPolicy(viewerProtocolPolicy.let(ViewerProtocolPolicy::unwrap))
+      cdkBuilder.viewerProtocolPolicy(viewerProtocolPolicy.let(ViewerProtocolPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.AddBehaviorOptions =

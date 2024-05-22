@@ -31,7 +31,7 @@ public interface IEcsLoadBalancerTarget : IApplicationLoadBalancerTarget,
      */
     override fun attachToApplicationTargetGroup(targetGroup: IApplicationTargetGroup):
         LoadBalancerTargetProps =
-        unwrap(this).attachToApplicationTargetGroup(targetGroup.let(IApplicationTargetGroup::unwrap)).let(LoadBalancerTargetProps::wrap)
+        unwrap(this).attachToApplicationTargetGroup(targetGroup.let(IApplicationTargetGroup.Companion::unwrap)).let(LoadBalancerTargetProps::wrap)
 
     /**
      * Attach load-balanced target to a classic ELB.
@@ -40,7 +40,7 @@ public interface IEcsLoadBalancerTarget : IApplicationLoadBalancerTarget,
      * target to. 
      */
     override fun attachToClassicLB(loadBalancer: LoadBalancer) {
-      unwrap(this).attachToClassicLB(loadBalancer.let(LoadBalancer::unwrap))
+      unwrap(this).attachToClassicLB(loadBalancer.let(LoadBalancer.Companion::unwrap))
     }
 
     /**
@@ -53,7 +53,7 @@ public interface IEcsLoadBalancerTarget : IApplicationLoadBalancerTarget,
      */
     override fun attachToNetworkTargetGroup(targetGroup: INetworkTargetGroup):
         LoadBalancerTargetProps =
-        unwrap(this).attachToNetworkTargetGroup(targetGroup.let(INetworkTargetGroup::unwrap)).let(LoadBalancerTargetProps::wrap)
+        unwrap(this).attachToNetworkTargetGroup(targetGroup.let(INetworkTargetGroup.Companion::unwrap)).let(LoadBalancerTargetProps::wrap)
 
     /**
      * The network connections associated with this resource.

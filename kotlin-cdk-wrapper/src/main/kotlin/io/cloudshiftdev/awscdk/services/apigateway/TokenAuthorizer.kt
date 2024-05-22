@@ -38,8 +38,8 @@ public open class TokenAuthorizer(
     id: String,
     props: TokenAuthorizerProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.TokenAuthorizer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(TokenAuthorizerProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.TokenAuthorizer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(TokenAuthorizerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -163,7 +163,7 @@ public open class TokenAuthorizer(
      * Lambda-based authorizer. 
      */
     override fun assumeRole(assumeRole: IRole) {
-      cdkBuilder.assumeRole(assumeRole.let(IRole::unwrap))
+      cdkBuilder.assumeRole(assumeRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -192,7 +192,7 @@ public open class TokenAuthorizer(
      * @param handler The handler for the authorizer lambda function. 
      */
     override fun handler(handler: IFunction) {
-      cdkBuilder.handler(handler.let(IFunction::unwrap))
+      cdkBuilder.handler(handler.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -222,7 +222,7 @@ public open class TokenAuthorizer(
      * @param resultsCacheTtl How long APIGateway should cache the results. 
      */
     override fun resultsCacheTtl(resultsCacheTtl: Duration) {
-      cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration::unwrap))
+      cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration.Companion::unwrap))
     }
 
     /**

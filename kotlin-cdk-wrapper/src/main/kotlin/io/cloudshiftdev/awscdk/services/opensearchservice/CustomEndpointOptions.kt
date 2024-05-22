@@ -74,7 +74,7 @@ public interface CustomEndpointOptions {
      * @param certificate The certificate to use.
      */
     override fun certificate(certificate: ICertificate) {
-      cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
+      cdkBuilder.certificate(certificate.let(ICertificate.Companion::unwrap))
     }
 
     /**
@@ -88,7 +88,7 @@ public interface CustomEndpointOptions {
      * @param hostedZone The hosted zone in Route53 to create the CNAME record in.
      */
     override fun hostedZone(hostedZone: IHostedZone) {
-      cdkBuilder.hostedZone(hostedZone.let(IHostedZone::unwrap))
+      cdkBuilder.hostedZone(hostedZone.let(IHostedZone.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.opensearchservice.CustomEndpointOptions =

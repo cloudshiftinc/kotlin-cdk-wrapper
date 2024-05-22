@@ -261,7 +261,7 @@ public interface ShellStepProps {
      * to other directories as well.
      */
     override fun input(input: IFileSetProducer) {
-      cdkBuilder.input(input.let(IFileSetProducer::unwrap))
+      cdkBuilder.input(input.let(IFileSetProducer.Companion::unwrap))
     }
 
     /**

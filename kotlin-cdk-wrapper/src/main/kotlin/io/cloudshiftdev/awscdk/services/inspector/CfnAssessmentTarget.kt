@@ -34,7 +34,7 @@ public open class CfnAssessmentTarget(
   cdkObject: software.amazon.awscdk.services.inspector.CfnAssessmentTarget,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.inspector.CfnAssessmentTarget(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.inspector.CfnAssessmentTarget(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -43,8 +43,8 @@ public open class CfnAssessmentTarget(
     id: String,
     props: CfnAssessmentTargetProps,
   ) :
-      this(software.amazon.awscdk.services.inspector.CfnAssessmentTarget(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAssessmentTargetProps::unwrap))
+      this(software.amazon.awscdk.services.inspector.CfnAssessmentTarget(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAssessmentTargetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -77,7 +77,7 @@ public open class CfnAssessmentTarget(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

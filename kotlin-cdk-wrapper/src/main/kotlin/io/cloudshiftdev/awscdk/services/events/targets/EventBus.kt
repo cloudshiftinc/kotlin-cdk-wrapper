@@ -31,12 +31,12 @@ public open class EventBus(
   cdkObject: software.amazon.awscdk.services.events.targets.EventBus,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(eventBus: CloudshiftdevAwscdkServicesEventsIEventBus) :
-      this(software.amazon.awscdk.services.events.targets.EventBus(eventBus.let(CloudshiftdevAwscdkServicesEventsIEventBus::unwrap))
+      this(software.amazon.awscdk.services.events.targets.EventBus(eventBus.let(CloudshiftdevAwscdkServicesEventsIEventBus.Companion::unwrap))
   )
 
   public constructor(eventBus: CloudshiftdevAwscdkServicesEventsIEventBus, props: EventBusProps) :
-      this(software.amazon.awscdk.services.events.targets.EventBus(eventBus.let(CloudshiftdevAwscdkServicesEventsIEventBus::unwrap),
-      props.let(EventBusProps::unwrap))
+      this(software.amazon.awscdk.services.events.targets.EventBus(eventBus.let(CloudshiftdevAwscdkServicesEventsIEventBus.Companion::unwrap),
+      props.let(EventBusProps.Companion::unwrap))
   )
 
   public constructor(eventBus: CloudshiftdevAwscdkServicesEventsIEventBus,
@@ -52,7 +52,7 @@ public open class EventBus(
    * @param _id
    */
   public override fun bind(rule: IRule): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap)).let(RuleTargetConfig::wrap)
 
   /**
    * Returns the rule target specification.
@@ -63,7 +63,7 @@ public open class EventBus(
    * @param _id
    */
   public override fun bind(rule: IRule, id: String): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap), id).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap), id).let(RuleTargetConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.events.targets.EventBus].
@@ -125,7 +125,7 @@ public open class EventBus(
      * 
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -136,7 +136,7 @@ public open class EventBus(
      * @param role Role to be used to publish the event. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.events.targets.EventBus = cdkBuilder.build()

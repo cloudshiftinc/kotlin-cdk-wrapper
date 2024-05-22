@@ -51,8 +51,8 @@ public open class CfnSourceCredential(
     id: String,
     props: CfnSourceCredentialProps,
   ) :
-      this(software.amazon.awscdk.services.codebuild.CfnSourceCredential(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSourceCredentialProps::unwrap))
+      this(software.amazon.awscdk.services.codebuild.CfnSourceCredential(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSourceCredentialProps.Companion::unwrap))
   )
 
   public constructor(
@@ -85,7 +85,7 @@ public open class CfnSourceCredential(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

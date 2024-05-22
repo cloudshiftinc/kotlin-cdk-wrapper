@@ -186,14 +186,14 @@ public interface CfnConnectAttachmentProps {
      * @param options Options for connecting an attachment. 
      */
     override fun options(options: IResolvable) {
-      cdkBuilder.options(options.let(IResolvable::unwrap))
+      cdkBuilder.options(options.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param options Options for connecting an attachment. 
      */
     override fun options(options: CfnConnectAttachment.ConnectAttachmentOptionsProperty) {
-      cdkBuilder.options(options.let(CfnConnectAttachment.ConnectAttachmentOptionsProperty::unwrap))
+      cdkBuilder.options(options.let(CfnConnectAttachment.ConnectAttachmentOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -210,7 +210,7 @@ public interface CfnConnectAttachmentProps {
      * In some cases, the segment change must first be evaluated and accepted.
      */
     override fun proposedSegmentChange(proposedSegmentChange: IResolvable) {
-      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(IResolvable::unwrap))
+      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -219,7 +219,7 @@ public interface CfnConnectAttachmentProps {
      */
     override
         fun proposedSegmentChange(proposedSegmentChange: CfnConnectAttachment.ProposedSegmentChangeProperty) {
-      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(CfnConnectAttachment.ProposedSegmentChangeProperty::unwrap))
+      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(CfnConnectAttachment.ProposedSegmentChangeProperty.Companion::unwrap))
     }
 
     /**
@@ -237,7 +237,7 @@ public interface CfnConnectAttachmentProps {
      * @param tags Tags for the attachment.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

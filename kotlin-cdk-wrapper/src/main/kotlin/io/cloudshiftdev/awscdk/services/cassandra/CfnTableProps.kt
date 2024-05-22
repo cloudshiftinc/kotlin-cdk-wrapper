@@ -592,7 +592,7 @@ public interface CfnTableProps {
      * provisioned capacity mode.
      */
     override fun autoScalingSpecifications(autoScalingSpecifications: IResolvable) {
-      cdkBuilder.autoScalingSpecifications(autoScalingSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.autoScalingSpecifications(autoScalingSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -601,7 +601,7 @@ public interface CfnTableProps {
      */
     override
         fun autoScalingSpecifications(autoScalingSpecifications: CfnTable.AutoScalingSpecificationProperty) {
-      cdkBuilder.autoScalingSpecifications(autoScalingSpecifications.let(CfnTable.AutoScalingSpecificationProperty::unwrap))
+      cdkBuilder.autoScalingSpecifications(autoScalingSpecifications.let(CfnTable.AutoScalingSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -626,7 +626,7 @@ public interface CfnTableProps {
      * If you don't specify a value for this property, then the table will use on-demand mode.
      */
     override fun billingMode(billingMode: IResolvable) {
-      cdkBuilder.billingMode(billingMode.let(IResolvable::unwrap))
+      cdkBuilder.billingMode(billingMode.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -640,7 +640,7 @@ public interface CfnTableProps {
      * If you don't specify a value for this property, then the table will use on-demand mode.
      */
     override fun billingMode(billingMode: CfnTable.BillingModeProperty) {
-      cdkBuilder.billingMode(billingMode.let(CfnTable.BillingModeProperty::unwrap))
+      cdkBuilder.billingMode(billingMode.let(CfnTable.BillingModeProperty.Companion::unwrap))
     }
 
     /**
@@ -681,14 +681,14 @@ public interface CfnTableProps {
      * After client-side timestamps are enabled for a table, you can't disable this setting.
      */
     override fun clientSideTimestampsEnabled(clientSideTimestampsEnabled: IResolvable) {
-      cdkBuilder.clientSideTimestampsEnabled(clientSideTimestampsEnabled.let(IResolvable::unwrap))
+      cdkBuilder.clientSideTimestampsEnabled(clientSideTimestampsEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param clusteringKeyColumns One or more columns that determine how the table data is sorted.
      */
     override fun clusteringKeyColumns(clusteringKeyColumns: IResolvable) {
-      cdkBuilder.clusteringKeyColumns(clusteringKeyColumns.let(IResolvable::unwrap))
+      cdkBuilder.clusteringKeyColumns(clusteringKeyColumns.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -734,7 +734,7 @@ public interface CfnTableProps {
      * *Amazon Keyspaces Developer Guide* .
      */
     override fun encryptionSpecification(encryptionSpecification: IResolvable) {
-      cdkBuilder.encryptionSpecification(encryptionSpecification.let(IResolvable::unwrap))
+      cdkBuilder.encryptionSpecification(encryptionSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -754,7 +754,7 @@ public interface CfnTableProps {
      */
     override
         fun encryptionSpecification(encryptionSpecification: CfnTable.EncryptionSpecificationProperty) {
-      cdkBuilder.encryptionSpecification(encryptionSpecification.let(CfnTable.EncryptionSpecificationProperty::unwrap))
+      cdkBuilder.encryptionSpecification(encryptionSpecification.let(CfnTable.EncryptionSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -793,7 +793,7 @@ public interface CfnTableProps {
      * Every table must have a partition key.
      */
     override fun partitionKeyColumns(partitionKeyColumns: IResolvable) {
-      cdkBuilder.partitionKeyColumns(partitionKeyColumns.let(IResolvable::unwrap))
+      cdkBuilder.partitionKeyColumns(partitionKeyColumns.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -830,7 +830,7 @@ public interface CfnTableProps {
      * not specified, the default is `PointInTimeRecoveryEnabled=false` .
      */
     override fun pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled: IResolvable) {
-      cdkBuilder.pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled.let(IResolvable::unwrap))
+      cdkBuilder.pointInTimeRecoveryEnabled(pointInTimeRecoveryEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -839,7 +839,7 @@ public interface CfnTableProps {
      * You can add regular columns to existing tables by adding them to the template.
      */
     override fun regularColumns(regularColumns: IResolvable) {
-      cdkBuilder.regularColumns(regularColumns.let(IResolvable::unwrap))
+      cdkBuilder.regularColumns(regularColumns.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -870,7 +870,7 @@ public interface CfnTableProps {
      * (Optional)
      */
     override fun replicaSpecifications(replicaSpecifications: IResolvable) {
-      cdkBuilder.replicaSpecifications(replicaSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.replicaSpecifications(replicaSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -927,7 +927,7 @@ public interface CfnTableProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

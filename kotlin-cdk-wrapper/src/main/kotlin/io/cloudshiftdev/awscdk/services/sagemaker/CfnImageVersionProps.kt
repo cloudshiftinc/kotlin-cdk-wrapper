@@ -236,7 +236,7 @@ public interface CfnImageVersionProps {
      * @param horovod Indicates Horovod compatibility.
      */
     override fun horovod(horovod: IResolvable) {
-      cdkBuilder.horovod(horovod.let(IResolvable::unwrap))
+      cdkBuilder.horovod(horovod.let(IResolvable.Companion::unwrap))
     }
 
     /**

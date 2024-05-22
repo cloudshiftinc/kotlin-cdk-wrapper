@@ -85,7 +85,7 @@ public interface TemplateRule {
      * @param assertions A list of assertions that make up the rule. 
      */
     override fun assertions(assertions: List<TemplateRuleAssertion>) {
-      cdkBuilder.assertions(assertions.map(TemplateRuleAssertion::unwrap))
+      cdkBuilder.assertions(assertions.map(TemplateRuleAssertion.Companion::unwrap))
     }
 
     /**
@@ -98,7 +98,7 @@ public interface TemplateRule {
      * @param condition Specify when to apply rule with a rule-specific intrinsic function.
      */
     override fun condition(condition: ICfnRuleConditionExpression) {
-      cdkBuilder.condition(condition.let(ICfnRuleConditionExpression::unwrap))
+      cdkBuilder.condition(condition.let(ICfnRuleConditionExpression.Companion::unwrap))
     }
 
     /**

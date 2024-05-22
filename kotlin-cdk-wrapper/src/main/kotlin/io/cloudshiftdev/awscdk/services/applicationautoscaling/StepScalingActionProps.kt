@@ -139,7 +139,7 @@ public interface StepScalingActionProps {
      * @param adjustmentType How the adjustment numbers are interpreted.
      */
     override fun adjustmentType(adjustmentType: AdjustmentType) {
-      cdkBuilder.adjustmentType(adjustmentType.let(AdjustmentType::unwrap))
+      cdkBuilder.adjustmentType(adjustmentType.let(AdjustmentType.Companion::unwrap))
     }
 
     /**
@@ -151,14 +151,14 @@ public interface StepScalingActionProps {
      * ignored.
      */
     override fun cooldown(cooldown: Duration) {
-      cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
+      cdkBuilder.cooldown(cooldown.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param metricAggregationType The aggregation type for the CloudWatch metrics.
      */
     override fun metricAggregationType(metricAggregationType: MetricAggregationType) {
-      cdkBuilder.metricAggregationType(metricAggregationType.let(MetricAggregationType::unwrap))
+      cdkBuilder.metricAggregationType(metricAggregationType.let(MetricAggregationType.Companion::unwrap))
     }
 
     /**
@@ -182,7 +182,7 @@ public interface StepScalingActionProps {
      * @param scalingTarget The scalable target. 
      */
     override fun scalingTarget(scalingTarget: IScalableTarget) {
-      cdkBuilder.scalingTarget(scalingTarget.let(IScalableTarget::unwrap))
+      cdkBuilder.scalingTarget(scalingTarget.let(IScalableTarget.Companion::unwrap))
     }
 
     public fun build():

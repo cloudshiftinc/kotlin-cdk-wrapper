@@ -135,7 +135,7 @@ public interface InterfaceVpcEndpointProps : InterfaceVpcEndpointOptions {
      * @param securityGroups The security groups to associate with this interface VPC endpoint.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -148,7 +148,7 @@ public interface InterfaceVpcEndpointProps : InterfaceVpcEndpointOptions {
      * @param service The service to use for this interface VPC endpoint. 
      */
     override fun service(service: IInterfaceVpcEndpointService) {
-      cdkBuilder.service(service.let(IInterfaceVpcEndpointService::unwrap))
+      cdkBuilder.service(service.let(IInterfaceVpcEndpointService.Companion::unwrap))
     }
 
     /**
@@ -157,7 +157,7 @@ public interface InterfaceVpcEndpointProps : InterfaceVpcEndpointOptions {
      * per availability zone.
      */
     override fun subnets(subnets: SubnetSelection) {
-      cdkBuilder.subnets(subnets.let(SubnetSelection::unwrap))
+      cdkBuilder.subnets(subnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -174,7 +174,7 @@ public interface InterfaceVpcEndpointProps : InterfaceVpcEndpointOptions {
      * @param vpc The VPC network in which the interface endpoint will be used. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.InterfaceVpcEndpointProps =

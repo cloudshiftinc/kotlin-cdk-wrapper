@@ -204,7 +204,7 @@ public interface ScheduledEc2TaskProps : ScheduledTaskBaseProps {
      * both cluster and vpc.
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -228,7 +228,7 @@ public interface ScheduledEc2TaskProps : ScheduledTaskBaseProps {
      * If no value is specified, the tags are not propagated.
      */
     override fun propagateTags(propagateTags: PropagatedTagSource) {
-      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource.Companion::unwrap))
     }
 
     /**
@@ -247,7 +247,7 @@ public interface ScheduledEc2TaskProps : ScheduledTaskBaseProps {
      * in the Amazon CloudWatch User Guide.
      */
     override fun schedule(schedule: Schedule) {
-      cdkBuilder.schedule(schedule.let(Schedule::unwrap))
+      cdkBuilder.schedule(schedule.let(Schedule.Companion::unwrap))
     }
 
     /**
@@ -258,7 +258,7 @@ public interface ScheduledEc2TaskProps : ScheduledTaskBaseProps {
      */
     override
         fun scheduledEc2TaskDefinitionOptions(scheduledEc2TaskDefinitionOptions: ScheduledEc2TaskDefinitionOptions) {
-      cdkBuilder.scheduledEc2TaskDefinitionOptions(scheduledEc2TaskDefinitionOptions.let(ScheduledEc2TaskDefinitionOptions::unwrap))
+      cdkBuilder.scheduledEc2TaskDefinitionOptions(scheduledEc2TaskDefinitionOptions.let(ScheduledEc2TaskDefinitionOptions.Companion::unwrap))
     }
 
     /**
@@ -282,7 +282,7 @@ public interface ScheduledEc2TaskProps : ScheduledTaskBaseProps {
      */
     override
         fun scheduledEc2TaskImageOptions(scheduledEc2TaskImageOptions: ScheduledEc2TaskImageOptions) {
-      cdkBuilder.scheduledEc2TaskImageOptions(scheduledEc2TaskImageOptions.let(ScheduledEc2TaskImageOptions::unwrap))
+      cdkBuilder.scheduledEc2TaskImageOptions(scheduledEc2TaskImageOptions.let(ScheduledEc2TaskImageOptions.Companion::unwrap))
     }
 
     /**
@@ -302,7 +302,7 @@ public interface ScheduledEc2TaskProps : ScheduledTaskBaseProps {
      * @param securityGroups Existing security groups to use for your service.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -316,7 +316,7 @@ public interface ScheduledEc2TaskProps : ScheduledTaskBaseProps {
      * (Only applicable in case the TaskDefinition is configured for AwsVpc networking)
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -333,7 +333,7 @@ public interface ScheduledEc2TaskProps : ScheduledTaskBaseProps {
      * Each tag consists of a key and an optional value, both of which you define.
      */
     override fun tags(tags: List<Tag>) {
-      cdkBuilder.tags(tags.map(Tag::unwrap))
+      cdkBuilder.tags(tags.map(Tag.Companion::unwrap))
     }
 
     /**
@@ -349,7 +349,7 @@ public interface ScheduledEc2TaskProps : ScheduledTaskBaseProps {
      * both vpc and cluster.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.patterns.ScheduledEc2TaskProps =

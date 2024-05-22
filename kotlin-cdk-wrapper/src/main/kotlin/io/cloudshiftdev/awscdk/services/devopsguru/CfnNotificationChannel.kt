@@ -64,8 +64,8 @@ public open class CfnNotificationChannel(
     id: String,
     props: CfnNotificationChannelProps,
   ) :
-      this(software.amazon.awscdk.services.devopsguru.CfnNotificationChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnNotificationChannelProps::unwrap))
+      this(software.amazon.awscdk.services.devopsguru.CfnNotificationChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnNotificationChannelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -91,7 +91,7 @@ public open class CfnNotificationChannel(
    * channels.
    */
   public open fun config(`value`: IResolvable) {
-    unwrap(this).setConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -99,7 +99,7 @@ public open class CfnNotificationChannel(
    * channels.
    */
   public open fun config(`value`: NotificationChannelConfigProperty) {
-    unwrap(this).setConfig(`value`.let(NotificationChannelConfigProperty::unwrap))
+    unwrap(this).setConfig(`value`.let(NotificationChannelConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -117,7 +117,7 @@ public open class CfnNotificationChannel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -175,7 +175,7 @@ public open class CfnNotificationChannel(
      * notification channels. 
      */
     override fun config(config: IResolvable) {
-      cdkBuilder.config(config.let(IResolvable::unwrap))
+      cdkBuilder.config(config.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -187,7 +187,7 @@ public open class CfnNotificationChannel(
      * notification channels. 
      */
     override fun config(config: NotificationChannelConfigProperty) {
-      cdkBuilder.config(config.let(NotificationChannelConfigProperty::unwrap))
+      cdkBuilder.config(config.let(NotificationChannelConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -382,7 +382,7 @@ public open class CfnNotificationChannel(
        * notifications for all message types of `High` or `Medium` severity.
        */
       override fun filters(filters: IResolvable) {
-        cdkBuilder.filters(filters.let(IResolvable::unwrap))
+        cdkBuilder.filters(filters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -392,7 +392,7 @@ public open class CfnNotificationChannel(
        * notifications for all message types of `High` or `Medium` severity.
        */
       override fun filters(filters: NotificationFilterConfigProperty) {
-        cdkBuilder.filters(filters.let(NotificationFilterConfigProperty::unwrap))
+        cdkBuilder.filters(filters.let(NotificationFilterConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -422,7 +422,7 @@ public open class CfnNotificationChannel(
        * topics](https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html) .
        */
       override fun sns(sns: IResolvable) {
-        cdkBuilder.sns(sns.let(IResolvable::unwrap))
+        cdkBuilder.sns(sns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -441,7 +441,7 @@ public open class CfnNotificationChannel(
        * topics](https://docs.aws.amazon.com/devops-guru/latest/userguide/sns-kms-permissions.html) .
        */
       override fun sns(sns: SnsChannelConfigProperty) {
-        cdkBuilder.sns(sns.let(SnsChannelConfigProperty::unwrap))
+        cdkBuilder.sns(sns.let(SnsChannelConfigProperty.Companion::unwrap))
       }
 
       /**

@@ -195,14 +195,14 @@ public interface HttpRouteIntegrationConfig {
      * @param connectionType The type of the network connection to the integration endpoint.
      */
     override fun connectionType(connectionType: HttpConnectionType) {
-      cdkBuilder.connectionType(connectionType.let(HttpConnectionType::unwrap))
+      cdkBuilder.connectionType(connectionType.let(HttpConnectionType.Companion::unwrap))
     }
 
     /**
      * @param credentials The credentials with which to invoke the integration.
      */
     override fun credentials(credentials: IntegrationCredentials) {
-      cdkBuilder.credentials(credentials.let(IntegrationCredentials::unwrap))
+      cdkBuilder.credentials(credentials.let(IntegrationCredentials.Companion::unwrap))
     }
 
     /**
@@ -210,7 +210,7 @@ public interface HttpRouteIntegrationConfig {
      * Required for `HttpIntegrationType.HTTP_PROXY`
      */
     override fun method(method: HttpMethod) {
-      cdkBuilder.method(method.let(HttpMethod::unwrap))
+      cdkBuilder.method(method.let(HttpMethod.Companion::unwrap))
     }
 
     /**
@@ -218,14 +218,14 @@ public interface HttpRouteIntegrationConfig {
      * backend.
      */
     override fun parameterMapping(parameterMapping: ParameterMapping) {
-      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping::unwrap))
+      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping.Companion::unwrap))
     }
 
     /**
      * @param payloadFormatVersion Payload format version in the case of lambda proxy integration. 
      */
     override fun payloadFormatVersion(payloadFormatVersion: PayloadFormatVersion) {
-      cdkBuilder.payloadFormatVersion(payloadFormatVersion.let(PayloadFormatVersion::unwrap))
+      cdkBuilder.payloadFormatVersion(payloadFormatVersion.let(PayloadFormatVersion.Companion::unwrap))
     }
 
     /**
@@ -240,14 +240,14 @@ public interface HttpRouteIntegrationConfig {
      * @param subtype Integration subtype.
      */
     override fun subtype(subtype: HttpIntegrationSubtype) {
-      cdkBuilder.subtype(subtype.let(HttpIntegrationSubtype::unwrap))
+      cdkBuilder.subtype(subtype.let(HttpIntegrationSubtype.Companion::unwrap))
     }
 
     /**
      * @param type Integration type. 
      */
     override fun type(type: HttpIntegrationType) {
-      cdkBuilder.type(type.let(HttpIntegrationType::unwrap))
+      cdkBuilder.type(type.let(HttpIntegrationType.Companion::unwrap))
     }
 
     /**

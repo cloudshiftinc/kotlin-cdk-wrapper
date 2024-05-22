@@ -54,8 +54,8 @@ public open class CfnAssistant(
     id: String,
     props: CfnAssistantProps,
   ) :
-      this(software.amazon.awscdk.services.wisdom.CfnAssistant(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAssistantProps::unwrap))
+      this(software.amazon.awscdk.services.wisdom.CfnAssistant(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAssistantProps.Companion::unwrap))
   )
 
   public constructor(
@@ -93,7 +93,7 @@ public open class CfnAssistant(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -118,7 +118,7 @@ public open class CfnAssistant(
    * The configuration information for the customer managed key used for encryption.
    */
   public open fun serverSideEncryptionConfiguration(`value`: IResolvable) {
-    unwrap(this).setServerSideEncryptionConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setServerSideEncryptionConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -126,7 +126,7 @@ public open class CfnAssistant(
    */
   public open
       fun serverSideEncryptionConfiguration(`value`: ServerSideEncryptionConfigurationProperty) {
-    unwrap(this).setServerSideEncryptionConfiguration(`value`.let(ServerSideEncryptionConfigurationProperty::unwrap))
+    unwrap(this).setServerSideEncryptionConfiguration(`value`.let(ServerSideEncryptionConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -153,7 +153,7 @@ public open class CfnAssistant(
    * The tags used to organize, track, or control access for this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -317,7 +317,7 @@ public open class CfnAssistant(
      * managed key used for encryption. 
      */
     override fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
-      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -337,7 +337,7 @@ public open class CfnAssistant(
      */
     override
         fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty) {
-      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(ServerSideEncryptionConfigurationProperty::unwrap))
+      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(ServerSideEncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -369,7 +369,7 @@ public open class CfnAssistant(
      * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

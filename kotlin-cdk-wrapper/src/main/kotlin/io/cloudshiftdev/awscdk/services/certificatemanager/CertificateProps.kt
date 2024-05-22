@@ -173,7 +173,7 @@ public interface CertificateProps {
      * certificate uses to encrypt data.
      */
     override fun keyAlgorithm(keyAlgorithm: KeyAlgorithm) {
-      cdkBuilder.keyAlgorithm(keyAlgorithm.let(KeyAlgorithm::unwrap))
+      cdkBuilder.keyAlgorithm(keyAlgorithm.let(KeyAlgorithm.Companion::unwrap))
     }
 
     /**
@@ -208,7 +208,7 @@ public interface CertificateProps {
      * @param validation How to validate this certificate.
      */
     override fun validation(validation: CertificateValidation) {
-      cdkBuilder.validation(validation.let(CertificateValidation::unwrap))
+      cdkBuilder.validation(validation.let(CertificateValidation.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.certificatemanager.CertificateProps =

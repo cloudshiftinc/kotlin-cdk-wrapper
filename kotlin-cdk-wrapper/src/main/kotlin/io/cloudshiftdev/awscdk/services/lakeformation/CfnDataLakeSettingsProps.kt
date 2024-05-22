@@ -484,7 +484,7 @@ public interface CfnDataLakeSettingsProps {
      * @param admins A list of AWS Lake Formation principals.
      */
     override fun admins(admins: IResolvable) {
-      cdkBuilder.admins(admins.let(IResolvable::unwrap))
+      cdkBuilder.admins(admins.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -530,7 +530,7 @@ public interface CfnDataLakeSettingsProps {
      * .
      */
     override fun allowExternalDataFiltering(allowExternalDataFiltering: IResolvable) {
-      cdkBuilder.allowExternalDataFiltering(allowExternalDataFiltering.let(IResolvable::unwrap))
+      cdkBuilder.allowExternalDataFiltering(allowExternalDataFiltering.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -556,7 +556,7 @@ public interface CfnDataLakeSettingsProps {
      * [](https://docs.aws.amazon.com/lake-formation/latest/dg/using-cred-vending.html)
      */
     override fun allowFullTableExternalDataAccess(allowFullTableExternalDataAccess: IResolvable) {
-      cdkBuilder.allowFullTableExternalDataAccess(allowFullTableExternalDataAccess.let(IResolvable::unwrap))
+      cdkBuilder.allowFullTableExternalDataAccess(allowFullTableExternalDataAccess.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -598,7 +598,7 @@ public interface CfnDataLakeSettingsProps {
      * lake](https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html) .
      */
     override fun createDatabaseDefaultPermissions(createDatabaseDefaultPermissions: IResolvable) {
-      cdkBuilder.createDatabaseDefaultPermissions(createDatabaseDefaultPermissions.let(IResolvable::unwrap))
+      cdkBuilder.createDatabaseDefaultPermissions(createDatabaseDefaultPermissions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -654,7 +654,7 @@ public interface CfnDataLakeSettingsProps {
      * lake](https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html) .
      */
     override fun createTableDefaultPermissions(createTableDefaultPermissions: IResolvable) {
-      cdkBuilder.createTableDefaultPermissions(createTableDefaultPermissions.let(IResolvable::unwrap))
+      cdkBuilder.createTableDefaultPermissions(createTableDefaultPermissions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -699,7 +699,7 @@ public interface CfnDataLakeSettingsProps {
      * EMR clusters or third-party engines that are allwed to perform data filtering.
      */
     override fun externalDataFilteringAllowList(externalDataFilteringAllowList: IResolvable) {
-      cdkBuilder.externalDataFilteringAllowList(externalDataFilteringAllowList.let(IResolvable::unwrap))
+      cdkBuilder.externalDataFilteringAllowList(externalDataFilteringAllowList.let(IResolvable.Companion::unwrap))
     }
 
     /**

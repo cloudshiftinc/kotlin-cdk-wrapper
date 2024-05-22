@@ -106,7 +106,7 @@ public interface UserPoolResourceServerOptions {
      * @param scopes Oauth scopes.
      */
     override fun scopes(scopes: List<ResourceServerScope>) {
-      cdkBuilder.scopes(scopes.map(ResourceServerScope::unwrap))
+      cdkBuilder.scopes(scopes.map(ResourceServerScope.Companion::unwrap))
     }
 
     /**

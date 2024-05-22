@@ -35,7 +35,7 @@ public open class RemoveTag(
   )
 
   public constructor(key: String, props: TagProps) : this(software.amazon.awscdk.RemoveTag(key,
-      props.let(TagProps::unwrap))
+      props.let(TagProps.Companion::unwrap))
   )
 
   public constructor(key: String, props: TagProps.Builder.() -> Unit) : this(key, TagProps(props)
@@ -52,7 +52,7 @@ public open class RemoveTag(
    * @param construct 
    */
   public override fun visit(construct: IConstruct) {
-    unwrap(this).visit(construct.let(IConstruct::unwrap))
+    unwrap(this).visit(construct.let(IConstruct.Companion::unwrap))
   }
 
   /**

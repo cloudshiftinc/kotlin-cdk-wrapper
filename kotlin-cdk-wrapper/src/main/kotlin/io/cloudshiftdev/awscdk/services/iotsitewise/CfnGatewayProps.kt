@@ -178,7 +178,7 @@ public interface CfnGatewayProps {
      * .
      */
     override fun gatewayCapabilitySummaries(gatewayCapabilitySummaries: IResolvable) {
-      cdkBuilder.gatewayCapabilitySummaries(gatewayCapabilitySummaries.let(IResolvable::unwrap))
+      cdkBuilder.gatewayCapabilitySummaries(gatewayCapabilitySummaries.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -216,7 +216,7 @@ public interface CfnGatewayProps {
      * You can only specify one platform in a gateway.
      */
     override fun gatewayPlatform(gatewayPlatform: IResolvable) {
-      cdkBuilder.gatewayPlatform(gatewayPlatform.let(IResolvable::unwrap))
+      cdkBuilder.gatewayPlatform(gatewayPlatform.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -224,7 +224,7 @@ public interface CfnGatewayProps {
      * You can only specify one platform in a gateway.
      */
     override fun gatewayPlatform(gatewayPlatform: CfnGateway.GatewayPlatformProperty) {
-      cdkBuilder.gatewayPlatform(gatewayPlatform.let(CfnGateway.GatewayPlatformProperty::unwrap))
+      cdkBuilder.gatewayPlatform(gatewayPlatform.let(CfnGateway.GatewayPlatformProperty.Companion::unwrap))
     }
 
     /**
@@ -244,7 +244,7 @@ public interface CfnGatewayProps {
      * *AWS IoT SiteWise User Guide* .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

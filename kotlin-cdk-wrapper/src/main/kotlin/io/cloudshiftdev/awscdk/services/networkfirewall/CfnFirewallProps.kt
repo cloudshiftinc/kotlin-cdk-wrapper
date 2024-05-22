@@ -271,7 +271,7 @@ public interface CfnFirewallProps {
      * firewall, the operation initializes this flag to `TRUE` .
      */
     override fun deleteProtection(deleteProtection: IResolvable) {
-      cdkBuilder.deleteProtection(deleteProtection.let(IResolvable::unwrap))
+      cdkBuilder.deleteProtection(deleteProtection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -315,7 +315,7 @@ public interface CfnFirewallProps {
      * that is in use. When you create a firewall, the operation initializes this setting to `TRUE` .
      */
     override fun firewallPolicyChangeProtection(firewallPolicyChangeProtection: IResolvable) {
-      cdkBuilder.firewallPolicyChangeProtection(firewallPolicyChangeProtection.let(IResolvable::unwrap))
+      cdkBuilder.firewallPolicyChangeProtection(firewallPolicyChangeProtection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -337,7 +337,7 @@ public interface CfnFirewallProps {
      * `TRUE` .
      */
     override fun subnetChangeProtection(subnetChangeProtection: IResolvable) {
-      cdkBuilder.subnetChangeProtection(subnetChangeProtection.let(IResolvable::unwrap))
+      cdkBuilder.subnetChangeProtection(subnetChangeProtection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -345,7 +345,7 @@ public interface CfnFirewallProps {
      * Each subnet must belong to a different Availability Zone.
      */
     override fun subnetMappings(subnetMappings: IResolvable) {
-      cdkBuilder.subnetMappings(subnetMappings.let(IResolvable::unwrap))
+      cdkBuilder.subnetMappings(subnetMappings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -370,7 +370,7 @@ public interface CfnFirewallProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

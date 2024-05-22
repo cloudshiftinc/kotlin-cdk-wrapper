@@ -51,7 +51,7 @@ public abstract class VirtualGatewayListener(
    * @param scope 
    */
   public open fun bind(scope: Construct): VirtualGatewayListenerConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(VirtualGatewayListenerConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(VirtualGatewayListenerConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.VirtualGatewayListener,
@@ -62,7 +62,7 @@ public abstract class VirtualGatewayListener(
         software.amazon.awscdk.services.appmesh.VirtualGatewayListener.grpc().let(VirtualGatewayListener::wrap)
 
     public fun grpc(options: GrpcGatewayListenerOptions): VirtualGatewayListener =
-        software.amazon.awscdk.services.appmesh.VirtualGatewayListener.grpc(options.let(GrpcGatewayListenerOptions::unwrap)).let(VirtualGatewayListener::wrap)
+        software.amazon.awscdk.services.appmesh.VirtualGatewayListener.grpc(options.let(GrpcGatewayListenerOptions.Companion::unwrap)).let(VirtualGatewayListener::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4c01751a5e2e288f90df20e4cd61f27e3431457469c92025e16e8fd398a5cfc1")
@@ -73,7 +73,7 @@ public abstract class VirtualGatewayListener(
         software.amazon.awscdk.services.appmesh.VirtualGatewayListener.http().let(VirtualGatewayListener::wrap)
 
     public fun http(options: HttpGatewayListenerOptions): VirtualGatewayListener =
-        software.amazon.awscdk.services.appmesh.VirtualGatewayListener.http(options.let(HttpGatewayListenerOptions::unwrap)).let(VirtualGatewayListener::wrap)
+        software.amazon.awscdk.services.appmesh.VirtualGatewayListener.http(options.let(HttpGatewayListenerOptions.Companion::unwrap)).let(VirtualGatewayListener::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e3f87df441b98375a0dafe3e4a9a89ee3b4c94b2e99b57c680528e510e64fdc2")
@@ -84,7 +84,7 @@ public abstract class VirtualGatewayListener(
         software.amazon.awscdk.services.appmesh.VirtualGatewayListener.http2().let(VirtualGatewayListener::wrap)
 
     public fun http2(options: Http2GatewayListenerOptions): VirtualGatewayListener =
-        software.amazon.awscdk.services.appmesh.VirtualGatewayListener.http2(options.let(Http2GatewayListenerOptions::unwrap)).let(VirtualGatewayListener::wrap)
+        software.amazon.awscdk.services.appmesh.VirtualGatewayListener.http2(options.let(Http2GatewayListenerOptions.Companion::unwrap)).let(VirtualGatewayListener::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3bb1b3f4a5fbf16fa10c35003a5e5a3132977ba20e14b0989bbe0962df103fc6")

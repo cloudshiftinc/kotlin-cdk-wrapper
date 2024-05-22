@@ -45,7 +45,7 @@ public abstract class Resource(
    * @param policy 
    */
   public override fun applyRemovalPolicy(policy: RemovalPolicy) {
-    unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+    unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
   }
 
   /**
@@ -72,10 +72,10 @@ public abstract class Resource(
 
   public companion object {
     public fun isOwnedResource(construct: IConstruct): Boolean =
-        software.amazon.awscdk.Resource.isOwnedResource(construct.let(IConstruct::unwrap))
+        software.amazon.awscdk.Resource.isOwnedResource(construct.let(IConstruct.Companion::unwrap))
 
     public fun isResource(construct: IConstruct): Boolean =
-        software.amazon.awscdk.Resource.isResource(construct.let(IConstruct::unwrap))
+        software.amazon.awscdk.Resource.isResource(construct.let(IConstruct.Companion::unwrap))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.Resource): Resource =
         CdkObjectWrappers.wrap(cdkObject) as? Resource ?: Wrapper(cdkObject)

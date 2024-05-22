@@ -120,8 +120,8 @@ public open class CfnConfigRule(
     id: String,
     props: CfnConfigRuleProps,
   ) :
-      this(software.amazon.awscdk.services.config.CfnConfigRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConfigRuleProps::unwrap))
+      this(software.amazon.awscdk.services.config.CfnConfigRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConfigRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -158,7 +158,7 @@ public open class CfnConfigRule(
    * contributors that affect the compliance.
    */
   public open fun compliance(`value`: IResolvable) {
-    unwrap(this).setCompliance(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCompliance(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -166,7 +166,7 @@ public open class CfnConfigRule(
    * contributors that affect the compliance.
    */
   public open fun compliance(`value`: ComplianceProperty) {
-    unwrap(this).setCompliance(`value`.let(ComplianceProperty::unwrap))
+    unwrap(this).setCompliance(`value`.let(ComplianceProperty.Companion::unwrap))
   }
 
   /**
@@ -211,7 +211,7 @@ public open class CfnConfigRule(
    * The modes the AWS Config rule can be evaluated in.
    */
   public open fun evaluationModes(`value`: IResolvable) {
-    unwrap(this).setEvaluationModes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEvaluationModes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -244,7 +244,7 @@ public open class CfnConfigRule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -268,14 +268,14 @@ public open class CfnConfigRule(
    * Defines which resources can trigger an evaluation for the rule.
    */
   public open fun scope(`value`: IResolvable) {
-    unwrap(this).setScope(`value`.let(IResolvable::unwrap))
+    unwrap(this).setScope(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Defines which resources can trigger an evaluation for the rule.
    */
   public open fun scope(`value`: ScopeProperty) {
-    unwrap(this).setScope(`value`.let(ScopeProperty::unwrap))
+    unwrap(this).setScope(`value`.let(ScopeProperty.Companion::unwrap))
   }
 
   /**
@@ -299,7 +299,7 @@ public open class CfnConfigRule(
    * the function to evaluate your AWS resources.
    */
   public open fun source(`value`: IResolvable) {
-    unwrap(this).setSource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -308,7 +308,7 @@ public open class CfnConfigRule(
    * the function to evaluate your AWS resources.
    */
   public open fun source(`value`: SourceProperty) {
-    unwrap(this).setSource(`value`.let(SourceProperty::unwrap))
+    unwrap(this).setSource(`value`.let(SourceProperty.Companion::unwrap))
   }
 
   /**
@@ -550,7 +550,7 @@ public open class CfnConfigRule(
      * provides the number of contributors that affect the compliance. 
      */
     override fun compliance(compliance: IResolvable) {
-      cdkBuilder.compliance(compliance.let(IResolvable::unwrap))
+      cdkBuilder.compliance(compliance.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -562,7 +562,7 @@ public open class CfnConfigRule(
      * provides the number of contributors that affect the compliance. 
      */
     override fun compliance(compliance: ComplianceProperty) {
-      cdkBuilder.compliance(compliance.let(ComplianceProperty::unwrap))
+      cdkBuilder.compliance(compliance.let(ComplianceProperty.Companion::unwrap))
     }
 
     /**
@@ -612,7 +612,7 @@ public open class CfnConfigRule(
      * @param evaluationModes The modes the AWS Config rule can be evaluated in. 
      */
     override fun evaluationModes(evaluationModes: IResolvable) {
-      cdkBuilder.evaluationModes(evaluationModes.let(IResolvable::unwrap))
+      cdkBuilder.evaluationModes(evaluationModes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -691,7 +691,7 @@ public open class CfnConfigRule(
      * @param scope Defines which resources can trigger an evaluation for the rule. 
      */
     override fun scope(scope: IResolvable) {
-      cdkBuilder.scope(scope.let(IResolvable::unwrap))
+      cdkBuilder.scope(scope.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -710,7 +710,7 @@ public open class CfnConfigRule(
      * @param scope Defines which resources can trigger an evaluation for the rule. 
      */
     override fun scope(scope: ScopeProperty) {
-      cdkBuilder.scope(scope.let(ScopeProperty::unwrap))
+      cdkBuilder.scope(scope.let(ScopeProperty.Companion::unwrap))
     }
 
     /**
@@ -743,7 +743,7 @@ public open class CfnConfigRule(
      * notifications that cause the function to evaluate your AWS resources. 
      */
     override fun source(source: IResolvable) {
-      cdkBuilder.source(source.let(IResolvable::unwrap))
+      cdkBuilder.source(source.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -757,7 +757,7 @@ public open class CfnConfigRule(
      * notifications that cause the function to evaluate your AWS resources. 
      */
     override fun source(source: SourceProperty) {
-      cdkBuilder.source(source.let(SourceProperty::unwrap))
+      cdkBuilder.source(source.let(SourceProperty.Companion::unwrap))
     }
 
     /**
@@ -1034,7 +1034,7 @@ public open class CfnConfigRule(
        * The default value is `false` .
        */
       override fun enableDebugLogDelivery(enableDebugLogDelivery: IResolvable) {
-        cdkBuilder.enableDebugLogDelivery(enableDebugLogDelivery.let(IResolvable::unwrap))
+        cdkBuilder.enableDebugLogDelivery(enableDebugLogDelivery.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1879,7 +1879,7 @@ public open class CfnConfigRule(
        * Required when owner is set to `CUSTOM_POLICY` .
        */
       override fun customPolicyDetails(customPolicyDetails: IResolvable) {
-        cdkBuilder.customPolicyDetails(customPolicyDetails.let(IResolvable::unwrap))
+        cdkBuilder.customPolicyDetails(customPolicyDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1888,7 +1888,7 @@ public open class CfnConfigRule(
        * Required when owner is set to `CUSTOM_POLICY` .
        */
       override fun customPolicyDetails(customPolicyDetails: CustomPolicyDetailsProperty) {
-        cdkBuilder.customPolicyDetails(customPolicyDetails.let(CustomPolicyDetailsProperty::unwrap))
+        cdkBuilder.customPolicyDetails(customPolicyDetails.let(CustomPolicyDetailsProperty.Companion::unwrap))
       }
 
       /**
@@ -1929,7 +1929,7 @@ public open class CfnConfigRule(
        * `OversizedConfigurationItemChangeNotification` .
        */
       override fun sourceDetails(sourceDetails: IResolvable) {
-        cdkBuilder.sourceDetails(sourceDetails.let(IResolvable::unwrap))
+        cdkBuilder.sourceDetails(sourceDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**

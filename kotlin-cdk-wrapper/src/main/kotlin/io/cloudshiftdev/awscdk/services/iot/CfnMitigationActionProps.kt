@@ -152,7 +152,7 @@ public interface CfnMitigationActionProps {
      * The parameters vary, depending on the kind of action you apply.
      */
     override fun actionParams(actionParams: IResolvable) {
-      cdkBuilder.actionParams(actionParams.let(IResolvable::unwrap))
+      cdkBuilder.actionParams(actionParams.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -160,7 +160,7 @@ public interface CfnMitigationActionProps {
      * The parameters vary, depending on the kind of action you apply.
      */
     override fun actionParams(actionParams: CfnMitigationAction.ActionParamsProperty) {
-      cdkBuilder.actionParams(actionParams.let(CfnMitigationAction.ActionParamsProperty::unwrap))
+      cdkBuilder.actionParams(actionParams.let(CfnMitigationAction.ActionParamsProperty.Companion::unwrap))
     }
 
     /**
@@ -184,7 +184,7 @@ public interface CfnMitigationActionProps {
      * @param tags Metadata that can be used to manage the mitigation action.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

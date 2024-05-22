@@ -367,7 +367,7 @@ public interface CfnCertificateProps {
      * records in Route53.
      */
     override fun domainValidationOptions(domainValidationOptions: IResolvable) {
-      cdkBuilder.domainValidationOptions(domainValidationOptions.let(IResolvable::unwrap))
+      cdkBuilder.domainValidationOptions(domainValidationOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -450,7 +450,7 @@ public interface CfnCertificateProps {
      * @param tags Key-value pairs that can identify the certificate.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

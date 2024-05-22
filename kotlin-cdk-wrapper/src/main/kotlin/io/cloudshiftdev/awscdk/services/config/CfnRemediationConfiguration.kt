@@ -61,8 +61,8 @@ public open class CfnRemediationConfiguration(
     id: String,
     props: CfnRemediationConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.config.CfnRemediationConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRemediationConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.config.CfnRemediationConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRemediationConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -93,7 +93,7 @@ public open class CfnRemediationConfiguration(
    * The remediation is triggered automatically.
    */
   public open fun automatic(`value`: IResolvable) {
-    unwrap(this).setAutomatic(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutomatic(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -117,14 +117,14 @@ public open class CfnRemediationConfiguration(
    * An ExecutionControls object.
    */
   public open fun executionControls(`value`: IResolvable) {
-    unwrap(this).setExecutionControls(`value`.let(IResolvable::unwrap))
+    unwrap(this).setExecutionControls(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An ExecutionControls object.
    */
   public open fun executionControls(`value`: ExecutionControlsProperty) {
-    unwrap(this).setExecutionControls(`value`.let(ExecutionControlsProperty::unwrap))
+    unwrap(this).setExecutionControls(`value`.let(ExecutionControlsProperty.Companion::unwrap))
   }
 
   /**
@@ -141,7 +141,7 @@ public open class CfnRemediationConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -414,7 +414,7 @@ public open class CfnRemediationConfiguration(
      * @param automatic The remediation is triggered automatically. 
      */
     override fun automatic(automatic: IResolvable) {
-      cdkBuilder.automatic(automatic.let(IResolvable::unwrap))
+      cdkBuilder.automatic(automatic.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -434,7 +434,7 @@ public open class CfnRemediationConfiguration(
      * @param executionControls An ExecutionControls object. 
      */
     override fun executionControls(executionControls: IResolvable) {
-      cdkBuilder.executionControls(executionControls.let(IResolvable::unwrap))
+      cdkBuilder.executionControls(executionControls.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -444,7 +444,7 @@ public open class CfnRemediationConfiguration(
      * @param executionControls An ExecutionControls object. 
      */
     override fun executionControls(executionControls: ExecutionControlsProperty) {
-      cdkBuilder.executionControls(executionControls.let(ExecutionControlsProperty::unwrap))
+      cdkBuilder.executionControls(executionControls.let(ExecutionControlsProperty.Companion::unwrap))
     }
 
     /**
@@ -645,14 +645,14 @@ public open class CfnRemediationConfiguration(
        * @param ssmControls A SsmControls object.
        */
       override fun ssmControls(ssmControls: IResolvable) {
-        cdkBuilder.ssmControls(ssmControls.let(IResolvable::unwrap))
+        cdkBuilder.ssmControls(ssmControls.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param ssmControls A SsmControls object.
        */
       override fun ssmControls(ssmControls: SsmControlsProperty) {
-        cdkBuilder.ssmControls(ssmControls.let(SsmControlsProperty::unwrap))
+        cdkBuilder.ssmControls(ssmControls.let(SsmControlsProperty.Companion::unwrap))
       }
 
       /**
@@ -787,14 +787,14 @@ public open class CfnRemediationConfiguration(
        * @param resourceValue The value is dynamic and changes at run-time.
        */
       override fun resourceValue(resourceValue: IResolvable) {
-        cdkBuilder.resourceValue(resourceValue.let(IResolvable::unwrap))
+        cdkBuilder.resourceValue(resourceValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param resourceValue The value is dynamic and changes at run-time.
        */
       override fun resourceValue(resourceValue: ResourceValueProperty) {
-        cdkBuilder.resourceValue(resourceValue.let(ResourceValueProperty::unwrap))
+        cdkBuilder.resourceValue(resourceValue.let(ResourceValueProperty.Companion::unwrap))
       }
 
       /**
@@ -809,14 +809,14 @@ public open class CfnRemediationConfiguration(
        * @param staticValue The value is static and does not change at run-time.
        */
       override fun staticValue(staticValue: IResolvable) {
-        cdkBuilder.staticValue(staticValue.let(IResolvable::unwrap))
+        cdkBuilder.staticValue(staticValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param staticValue The value is static and does not change at run-time.
        */
       override fun staticValue(staticValue: StaticValueProperty) {
-        cdkBuilder.staticValue(staticValue.let(StaticValueProperty::unwrap))
+        cdkBuilder.staticValue(staticValue.let(StaticValueProperty.Companion::unwrap))
       }
 
       /**

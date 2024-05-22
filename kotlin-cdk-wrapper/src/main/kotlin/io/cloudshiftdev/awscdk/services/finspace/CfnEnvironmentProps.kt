@@ -239,7 +239,7 @@ public interface CfnEnvironmentProps {
      * @param federationParameters Configuration information when authentication mode is FEDERATED.
      */
     override fun federationParameters(federationParameters: IResolvable) {
-      cdkBuilder.federationParameters(federationParameters.let(IResolvable::unwrap))
+      cdkBuilder.federationParameters(federationParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -247,7 +247,7 @@ public interface CfnEnvironmentProps {
      */
     override
         fun federationParameters(federationParameters: CfnEnvironment.FederationParametersProperty) {
-      cdkBuilder.federationParameters(federationParameters.let(CfnEnvironment.FederationParametersProperty::unwrap))
+      cdkBuilder.federationParameters(federationParameters.let(CfnEnvironment.FederationParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -278,7 +278,7 @@ public interface CfnEnvironmentProps {
      * @param superuserParameters Configuration information for the superuser.
      */
     override fun superuserParameters(superuserParameters: IResolvable) {
-      cdkBuilder.superuserParameters(superuserParameters.let(IResolvable::unwrap))
+      cdkBuilder.superuserParameters(superuserParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -286,7 +286,7 @@ public interface CfnEnvironmentProps {
      */
     override
         fun superuserParameters(superuserParameters: CfnEnvironment.SuperuserParametersProperty) {
-      cdkBuilder.superuserParameters(superuserParameters.let(CfnEnvironment.SuperuserParametersProperty::unwrap))
+      cdkBuilder.superuserParameters(superuserParameters.let(CfnEnvironment.SuperuserParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -302,7 +302,7 @@ public interface CfnEnvironmentProps {
      * @param tags An array of key-value pairs to apply to this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

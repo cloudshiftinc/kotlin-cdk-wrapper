@@ -50,8 +50,8 @@ public open class CfnDatasetGroup(
     id: String,
     props: CfnDatasetGroupProps,
   ) :
-      this(software.amazon.awscdk.services.personalize.CfnDatasetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDatasetGroupProps::unwrap))
+      this(software.amazon.awscdk.services.personalize.CfnDatasetGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDatasetGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -84,7 +84,7 @@ public open class CfnDatasetGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

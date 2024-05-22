@@ -459,7 +459,7 @@ public interface CfnStudioProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -485,7 +485,7 @@ public interface CfnStudioProps {
      * The default value is `false` .
      */
     override fun trustedIdentityPropagationEnabled(trustedIdentityPropagationEnabled: IResolvable) {
-      cdkBuilder.trustedIdentityPropagationEnabled(trustedIdentityPropagationEnabled.let(IResolvable::unwrap))
+      cdkBuilder.trustedIdentityPropagationEnabled(trustedIdentityPropagationEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**

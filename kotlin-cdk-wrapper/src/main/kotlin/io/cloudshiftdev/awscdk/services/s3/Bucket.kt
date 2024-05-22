@@ -38,7 +38,7 @@ public open class Bucket(
   cdkObject: software.amazon.awscdk.services.s3.Bucket,
 ) : BucketBase(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.s3.Bucket(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.s3.Bucket(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -47,8 +47,8 @@ public open class Bucket(
     id: String,
     props: BucketProps,
   ) :
-      this(software.amazon.awscdk.services.s3.Bucket(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(BucketProps::unwrap))
+      this(software.amazon.awscdk.services.s3.Bucket(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(BucketProps.Companion::unwrap))
   )
 
   public constructor(
@@ -64,7 +64,7 @@ public open class Bucket(
    * @param rule The CORS configuration rule to add. 
    */
   public open fun addCorsRule(rule: CorsRule) {
-    unwrap(this).addCorsRule(rule.let(CorsRule::unwrap))
+    unwrap(this).addCorsRule(rule.let(CorsRule.Companion::unwrap))
   }
 
   /**
@@ -82,7 +82,7 @@ public open class Bucket(
    * @param inventory configuration to add. 
    */
   public open fun addInventory(inventory: Inventory) {
-    unwrap(this).addInventory(inventory.let(Inventory::unwrap))
+    unwrap(this).addInventory(inventory.let(Inventory.Companion::unwrap))
   }
 
   /**
@@ -101,7 +101,7 @@ public open class Bucket(
    * @param rule The rule to add. 
    */
   public open fun addLifecycleRule(rule: LifecycleRule) {
-    unwrap(this).addLifecycleRule(rule.let(LifecycleRule::unwrap))
+    unwrap(this).addLifecycleRule(rule.let(LifecycleRule.Companion::unwrap))
   }
 
   /**
@@ -120,7 +120,7 @@ public open class Bucket(
    * @param metric The metric configuration to add. 
    */
   public open fun addMetric(metric: BucketMetrics) {
-    unwrap(this).addMetric(metric.let(BucketMetrics::unwrap))
+    unwrap(this).addMetric(metric.let(BucketMetrics.Companion::unwrap))
   }
 
   /**
@@ -195,7 +195,7 @@ public open class Bucket(
    * first call to addToResourcePolicy(s).
    */
   public override fun policy(`value`: BucketPolicy) {
-    unwrap(this).setPolicy(`value`.let(BucketPolicy::unwrap))
+    unwrap(this).setPolicy(`value`.let(BucketPolicy.Companion::unwrap))
   }
 
   /**
@@ -223,6 +223,11 @@ public open class Bucket(
      * switching this to `false` in a CDK version *before* `1.126.0` will lead to
      * all objects in the bucket being deleted. Be sure to update your bucket resources
      * by deploying with CDK version `1.126.0` or later **before** switching this value to `false`.
+     *
+     * Setting `autoDeleteObjects` to true on a bucket will add `s3:PutBucketPolicy` to the
+     * bucket policy. This is because during bucket deletion, the custom resource provider
+     * needs to update the bucket policy by adding a deny policy for `s3:PutObject` to
+     * prevent race conditions with external bucket writers.
      *
      * Default: false
      *
@@ -647,7 +652,7 @@ public open class Bucket(
      * 
      */
     override fun accessControl(accessControl: BucketAccessControl) {
-      cdkBuilder.accessControl(accessControl.let(BucketAccessControl::unwrap))
+      cdkBuilder.accessControl(accessControl.let(BucketAccessControl.Companion::unwrap))
     }
 
     /**
@@ -660,6 +665,11 @@ public open class Bucket(
      * switching this to `false` in a CDK version *before* `1.126.0` will lead to
      * all objects in the bucket being deleted. Be sure to update your bucket resources
      * by deploying with CDK version `1.126.0` or later **before** switching this value to `false`.
+     *
+     * Setting `autoDeleteObjects` to true on a bucket will add `s3:PutBucketPolicy` to the
+     * bucket policy. This is because during bucket deletion, the custom resource provider
+     * needs to update the bucket policy by adding a deny policy for `s3:PutObject` to
+     * prevent race conditions with external bucket writers.
      *
      * Default: false
      *
@@ -680,7 +690,7 @@ public open class Bucket(
      * @param blockPublicAccess The block public access configuration of this bucket. 
      */
     override fun blockPublicAccess(blockPublicAccess: BlockPublicAccess) {
-      cdkBuilder.blockPublicAccess(blockPublicAccess.let(BlockPublicAccess::unwrap))
+      cdkBuilder.blockPublicAccess(blockPublicAccess.let(BlockPublicAccess.Companion::unwrap))
     }
 
     /**
@@ -738,7 +748,7 @@ public open class Bucket(
      * @param cors The CORS configuration of this bucket. 
      */
     override fun cors(cors: List<CorsRule>) {
-      cdkBuilder.cors(cors.map(CorsRule::unwrap))
+      cdkBuilder.cors(cors.map(CorsRule.Companion::unwrap))
     }
 
     /**
@@ -764,7 +774,7 @@ public open class Bucket(
      * @param encryption The kind of server-side encryption to apply to this bucket. 
      */
     override fun encryption(encryption: BucketEncryption) {
-      cdkBuilder.encryption(encryption.let(BucketEncryption::unwrap))
+      cdkBuilder.encryption(encryption.let(BucketEncryption.Companion::unwrap))
     }
 
     /**
@@ -779,7 +789,7 @@ public open class Bucket(
      * @param encryptionKey External KMS key to use for bucket encryption. 
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -818,7 +828,7 @@ public open class Bucket(
      */
     override
         fun intelligentTieringConfigurations(intelligentTieringConfigurations: List<IntelligentTieringConfiguration>) {
-      cdkBuilder.intelligentTieringConfigurations(intelligentTieringConfigurations.map(IntelligentTieringConfiguration::unwrap))
+      cdkBuilder.intelligentTieringConfigurations(intelligentTieringConfigurations.map(IntelligentTieringConfiguration.Companion::unwrap))
     }
 
     /**
@@ -842,7 +852,7 @@ public open class Bucket(
      * @param inventories The inventory configuration of the bucket. 
      */
     override fun inventories(inventories: List<Inventory>) {
-      cdkBuilder.inventories(inventories.map(Inventory::unwrap))
+      cdkBuilder.inventories(inventories.map(Inventory.Companion::unwrap))
     }
 
     /**
@@ -864,7 +874,7 @@ public open class Bucket(
      * @param lifecycleRules Rules that define how Amazon S3 manages objects during their lifetime. 
      */
     override fun lifecycleRules(lifecycleRules: List<LifecycleRule>) {
-      cdkBuilder.lifecycleRules(lifecycleRules.map(LifecycleRule::unwrap))
+      cdkBuilder.lifecycleRules(lifecycleRules.map(LifecycleRule.Companion::unwrap))
     }
 
     /**
@@ -886,7 +896,7 @@ public open class Bucket(
      * @param metrics The metrics configuration of this bucket. 
      */
     override fun metrics(metrics: List<BucketMetrics>) {
-      cdkBuilder.metrics(metrics.map(BucketMetrics::unwrap))
+      cdkBuilder.metrics(metrics.map(BucketMetrics.Companion::unwrap))
     }
 
     /**
@@ -921,7 +931,7 @@ public open class Bucket(
      * @param notificationsHandlerRole The role to be used by the notifications handler. 
      */
     override fun notificationsHandlerRole(notificationsHandlerRole: IRole) {
-      cdkBuilder.notificationsHandlerRole(notificationsHandlerRole.let(IRole::unwrap))
+      cdkBuilder.notificationsHandlerRole(notificationsHandlerRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -936,7 +946,7 @@ public open class Bucket(
      * @param objectLockDefaultRetention The default retention mode and rules for S3 Object Lock. 
      */
     override fun objectLockDefaultRetention(objectLockDefaultRetention: ObjectLockRetention) {
-      cdkBuilder.objectLockDefaultRetention(objectLockDefaultRetention.let(ObjectLockRetention::unwrap))
+      cdkBuilder.objectLockDefaultRetention(objectLockDefaultRetention.let(ObjectLockRetention.Companion::unwrap))
     }
 
     /**
@@ -963,7 +973,7 @@ public open class Bucket(
      * @param objectOwnership The objectOwnership of the bucket. 
      */
     override fun objectOwnership(objectOwnership: ObjectOwnership) {
-      cdkBuilder.objectOwnership(objectOwnership.let(ObjectOwnership::unwrap))
+      cdkBuilder.objectOwnership(objectOwnership.let(ObjectOwnership.Companion::unwrap))
     }
 
     /**
@@ -987,7 +997,7 @@ public open class Bucket(
      * @param removalPolicy Policy to apply when the bucket is removed from this stack. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -999,7 +1009,7 @@ public open class Bucket(
      * @param serverAccessLogsBucket Destination bucket for the server access logs. 
      */
     override fun serverAccessLogsBucket(serverAccessLogsBucket: IBucket) {
-      cdkBuilder.serverAccessLogsBucket(serverAccessLogsBucket.let(IBucket::unwrap))
+      cdkBuilder.serverAccessLogsBucket(serverAccessLogsBucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -1025,7 +1035,7 @@ public open class Bucket(
      * @param targetObjectKeyFormat Optional key format for log objects. 
      */
     override fun targetObjectKeyFormat(targetObjectKeyFormat: TargetObjectKeyFormat) {
-      cdkBuilder.targetObjectKeyFormat(targetObjectKeyFormat.let(TargetObjectKeyFormat::unwrap))
+      cdkBuilder.targetObjectKeyFormat(targetObjectKeyFormat.let(TargetObjectKeyFormat.Companion::unwrap))
     }
 
     /**
@@ -1089,7 +1099,7 @@ public open class Bucket(
      * of a bucket. 
      */
     override fun websiteRedirect(websiteRedirect: RedirectTarget) {
-      cdkBuilder.websiteRedirect(websiteRedirect.let(RedirectTarget::unwrap))
+      cdkBuilder.websiteRedirect(websiteRedirect.let(RedirectTarget.Companion::unwrap))
     }
 
     /**
@@ -1117,7 +1127,7 @@ public open class Bucket(
      * behavior. 
      */
     override fun websiteRoutingRules(websiteRoutingRules: List<RoutingRule>) {
-      cdkBuilder.websiteRoutingRules(websiteRoutingRules.map(RoutingRule::unwrap))
+      cdkBuilder.websiteRoutingRules(websiteRoutingRules.map(RoutingRule.Companion::unwrap))
     }
 
     /**
@@ -1140,7 +1150,7 @@ public open class Bucket(
       id: String,
       bucketArn: String,
     ): IBucket =
-        software.amazon.awscdk.services.s3.Bucket.fromBucketArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.s3.Bucket.fromBucketArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, bucketArn).let(IBucket::wrap)
 
     public fun fromBucketAttributes(
@@ -1148,8 +1158,8 @@ public open class Bucket(
       id: String,
       attrs: BucketAttributes,
     ): IBucket =
-        software.amazon.awscdk.services.s3.Bucket.fromBucketAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(BucketAttributes::unwrap)).let(IBucket::wrap)
+        software.amazon.awscdk.services.s3.Bucket.fromBucketAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(BucketAttributes.Companion::unwrap)).let(IBucket::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("96286ce29bc8d60c796534f12d61ae60bbe0c84544eedd51a7ea87dce6b107b8")
@@ -1164,11 +1174,11 @@ public open class Bucket(
       id: String,
       bucketName: String,
     ): IBucket =
-        software.amazon.awscdk.services.s3.Bucket.fromBucketName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.s3.Bucket.fromBucketName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, bucketName).let(IBucket::wrap)
 
     public fun fromCfnBucket(cfnBucket: CfnBucket): IBucket =
-        software.amazon.awscdk.services.s3.Bucket.fromCfnBucket(cfnBucket.let(CfnBucket::unwrap)).let(IBucket::wrap)
+        software.amazon.awscdk.services.s3.Bucket.fromCfnBucket(cfnBucket.let(CfnBucket.Companion::unwrap)).let(IBucket::wrap)
 
     public fun validateBucketName(physicalName: String) {
       software.amazon.awscdk.services.s3.Bucket.validateBucketName(physicalName)

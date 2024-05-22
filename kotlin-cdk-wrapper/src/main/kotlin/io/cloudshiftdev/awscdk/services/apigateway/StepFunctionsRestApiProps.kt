@@ -495,7 +495,7 @@ public interface StepFunctionsRestApiProps : RestApiProps {
      * plan.
      */
     override fun apiKeySourceType(apiKeySourceType: ApiKeySourceType) {
-      cdkBuilder.apiKeySourceType(apiKeySourceType.let(ApiKeySourceType::unwrap))
+      cdkBuilder.apiKeySourceType(apiKeySourceType.let(ApiKeySourceType.Companion::unwrap))
     }
 
     /**
@@ -533,7 +533,7 @@ public interface StepFunctionsRestApiProps : RestApiProps {
      * @param cloneFrom The ID of the API Gateway RestApi resource that you want to clone.
      */
     override fun cloneFrom(cloneFrom: IRestApi) {
-      cdkBuilder.cloneFrom(cloneFrom.let(IRestApi::unwrap))
+      cdkBuilder.cloneFrom(cloneFrom.let(IRestApi.Companion::unwrap))
     }
 
     /**
@@ -549,7 +549,7 @@ public interface StepFunctionsRestApiProps : RestApiProps {
      * Requires `cloudWatchRole` to be enabled.
      */
     override fun cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy: RemovalPolicy) {
-      cdkBuilder.cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -558,7 +558,7 @@ public interface StepFunctionsRestApiProps : RestApiProps {
      * You can add CORS at the resource-level using `addCorsPreflight`.
      */
     override fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions) {
-      cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions::unwrap))
+      cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions.Companion::unwrap))
     }
 
     /**
@@ -577,7 +577,7 @@ public interface StepFunctionsRestApiProps : RestApiProps {
      * this API unless an integration is specified.
      */
     override fun defaultIntegration(defaultIntegration: Integration) {
-      cdkBuilder.defaultIntegration(defaultIntegration.let(Integration::unwrap))
+      cdkBuilder.defaultIntegration(defaultIntegration.let(Integration.Companion::unwrap))
     }
 
     /**
@@ -594,7 +594,7 @@ public interface StepFunctionsRestApiProps : RestApiProps {
      * this API unless custom options are specified.
      */
     override fun defaultMethodOptions(defaultMethodOptions: MethodOptions) {
-      cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions::unwrap))
+      cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions.Companion::unwrap))
     }
 
     /**
@@ -635,7 +635,7 @@ public interface StepFunctionsRestApiProps : RestApiProps {
      * this value cannot be set.
      */
     override fun deployOptions(deployOptions: StageOptions) {
-      cdkBuilder.deployOptions(deployOptions.let(StageOptions::unwrap))
+      cdkBuilder.deployOptions(deployOptions.let(StageOptions.Companion::unwrap))
     }
 
     /**
@@ -670,7 +670,7 @@ public interface StepFunctionsRestApiProps : RestApiProps {
      * @param domainName Configure a custom domain name and map it to this API.
      */
     override fun domainName(domainName: DomainNameOptions) {
-      cdkBuilder.domainName(domainName.let(DomainNameOptions::unwrap))
+      cdkBuilder.domainName(domainName.let(DomainNameOptions.Companion::unwrap))
     }
 
     /**
@@ -686,7 +686,7 @@ public interface StepFunctionsRestApiProps : RestApiProps {
      * types of a REST API.
      */
     override fun endpointConfiguration(endpointConfiguration: EndpointConfiguration) {
-      cdkBuilder.endpointConfiguration(endpointConfiguration.let(EndpointConfiguration::unwrap))
+      cdkBuilder.endpointConfiguration(endpointConfiguration.let(EndpointConfiguration.Companion::unwrap))
     }
 
     /**
@@ -712,7 +712,7 @@ public interface StepFunctionsRestApiProps : RestApiProps {
      * an API.
      */
     override fun endpointTypes(endpointTypes: List<EndpointType>) {
-      cdkBuilder.endpointTypes(endpointTypes.map(EndpointType::unwrap))
+      cdkBuilder.endpointTypes(endpointTypes.map(EndpointType.Companion::unwrap))
     }
 
     /**
@@ -757,7 +757,7 @@ public interface StepFunctionsRestApiProps : RestApiProps {
      * payload size.
      */
     override fun minCompressionSize(minCompressionSize: Size) {
-      cdkBuilder.minCompressionSize(minCompressionSize.let(Size::unwrap))
+      cdkBuilder.minCompressionSize(minCompressionSize.let(Size.Companion::unwrap))
     }
 
     /**
@@ -801,7 +801,7 @@ public interface StepFunctionsRestApiProps : RestApiProps {
      * @param policy A policy document that contains the permissions for this RestApi.
      */
     override fun policy(policy: PolicyDocument) {
-      cdkBuilder.policy(policy.let(PolicyDocument::unwrap))
+      cdkBuilder.policy(policy.let(PolicyDocument.Companion::unwrap))
     }
 
     /**
@@ -840,7 +840,7 @@ public interface StepFunctionsRestApiProps : RestApiProps {
      * }
      */
     override fun requestContext(requestContext: RequestContext) {
-      cdkBuilder.requestContext(requestContext.let(RequestContext::unwrap))
+      cdkBuilder.requestContext(requestContext.let(RequestContext.Companion::unwrap))
     }
 
     /**
@@ -882,7 +882,7 @@ public interface StepFunctionsRestApiProps : RestApiProps {
      * machine.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -891,7 +891,7 @@ public interface StepFunctionsRestApiProps : RestApiProps {
      * this API, unless specified otherwise in `addMethod`.
      */
     override fun stateMachine(stateMachine: IStateMachine) {
-      cdkBuilder.stateMachine(stateMachine.let(IStateMachine::unwrap))
+      cdkBuilder.stateMachine(stateMachine.let(IStateMachine.Companion::unwrap))
     }
 
     /**

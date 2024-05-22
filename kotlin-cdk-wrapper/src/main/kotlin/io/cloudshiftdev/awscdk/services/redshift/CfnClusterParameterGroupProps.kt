@@ -196,7 +196,7 @@ public interface CfnClusterParameterGroupProps {
      * the wlm_json_configuration parameter.
      */
     override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -227,7 +227,7 @@ public interface CfnClusterParameterGroupProps {
      * @param tags The list of tags for the cluster parameter group.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

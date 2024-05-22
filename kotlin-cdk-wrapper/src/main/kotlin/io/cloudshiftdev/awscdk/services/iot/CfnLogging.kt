@@ -37,8 +37,8 @@ public open class CfnLogging(
     id: String,
     props: CfnLoggingProps,
   ) :
-      this(software.amazon.awscdk.services.iot.CfnLogging(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLoggingProps::unwrap))
+      this(software.amazon.awscdk.services.iot.CfnLogging(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLoggingProps.Companion::unwrap))
   )
 
   public constructor(
@@ -78,7 +78,7 @@ public open class CfnLogging(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

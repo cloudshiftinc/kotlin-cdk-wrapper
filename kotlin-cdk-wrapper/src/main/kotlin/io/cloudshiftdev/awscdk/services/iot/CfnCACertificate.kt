@@ -60,8 +60,8 @@ public open class CfnCACertificate(
     id: String,
     props: CfnCACertificateProps,
   ) :
-      this(software.amazon.awscdk.services.iot.CfnCACertificate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCACertificateProps::unwrap))
+      this(software.amazon.awscdk.services.iot.CfnCACertificate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCACertificateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -129,7 +129,7 @@ public open class CfnCACertificate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -141,14 +141,14 @@ public open class CfnCACertificate(
    * Information about the registration configuration.
    */
   public open fun registrationConfig(`value`: IResolvable) {
-    unwrap(this).setRegistrationConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRegistrationConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information about the registration configuration.
    */
   public open fun registrationConfig(`value`: RegistrationConfigProperty) {
-    unwrap(this).setRegistrationConfig(`value`.let(RegistrationConfigProperty::unwrap))
+    unwrap(this).setRegistrationConfig(`value`.let(RegistrationConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -175,7 +175,7 @@ public open class CfnCACertificate(
    * If true, removes auto registration.
    */
   public open fun removeAutoRegistration(`value`: IResolvable) {
-    unwrap(this).setRemoveAutoRegistration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRemoveAutoRegistration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -205,7 +205,7 @@ public open class CfnCACertificate(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -406,7 +406,7 @@ public open class CfnCACertificate(
      * @param registrationConfig Information about the registration configuration. 
      */
     override fun registrationConfig(registrationConfig: IResolvable) {
-      cdkBuilder.registrationConfig(registrationConfig.let(IResolvable::unwrap))
+      cdkBuilder.registrationConfig(registrationConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -416,7 +416,7 @@ public open class CfnCACertificate(
      * @param registrationConfig Information about the registration configuration. 
      */
     override fun registrationConfig(registrationConfig: RegistrationConfigProperty) {
-      cdkBuilder.registrationConfig(registrationConfig.let(RegistrationConfigProperty::unwrap))
+      cdkBuilder.registrationConfig(registrationConfig.let(RegistrationConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -448,7 +448,7 @@ public open class CfnCACertificate(
      * @param removeAutoRegistration If true, removes auto registration. 
      */
     override fun removeAutoRegistration(removeAutoRegistration: IResolvable) {
-      cdkBuilder.removeAutoRegistration(removeAutoRegistration.let(IResolvable::unwrap))
+      cdkBuilder.removeAutoRegistration(removeAutoRegistration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -474,7 +474,7 @@ public open class CfnCACertificate(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

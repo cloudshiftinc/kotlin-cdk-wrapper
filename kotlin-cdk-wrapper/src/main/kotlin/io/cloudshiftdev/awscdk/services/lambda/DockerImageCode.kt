@@ -29,11 +29,11 @@ public abstract class DockerImageCode(
 
   public companion object {
     public fun fromEcr(repository: IRepository): DockerImageCode =
-        software.amazon.awscdk.services.lambda.DockerImageCode.fromEcr(repository.let(IRepository::unwrap)).let(DockerImageCode::wrap)
+        software.amazon.awscdk.services.lambda.DockerImageCode.fromEcr(repository.let(IRepository.Companion::unwrap)).let(DockerImageCode::wrap)
 
     public fun fromEcr(repository: IRepository, props: EcrImageCodeProps): DockerImageCode =
-        software.amazon.awscdk.services.lambda.DockerImageCode.fromEcr(repository.let(IRepository::unwrap),
-        props.let(EcrImageCodeProps::unwrap)).let(DockerImageCode::wrap)
+        software.amazon.awscdk.services.lambda.DockerImageCode.fromEcr(repository.let(IRepository.Companion::unwrap),
+        props.let(EcrImageCodeProps.Companion::unwrap)).let(DockerImageCode::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a068e59d0ef7e88c3a454c3b30641e7c445a629e3f5358d04033959b44107e55")
@@ -45,7 +45,7 @@ public abstract class DockerImageCode(
 
     public fun fromImageAsset(directory: String, props: AssetImageCodeProps): DockerImageCode =
         software.amazon.awscdk.services.lambda.DockerImageCode.fromImageAsset(directory,
-        props.let(AssetImageCodeProps::unwrap)).let(DockerImageCode::wrap)
+        props.let(AssetImageCodeProps.Companion::unwrap)).let(DockerImageCode::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("67c92a6cf6fedc397b1923c153f0cd368aa267b7db106768981b7d93178e52bc")

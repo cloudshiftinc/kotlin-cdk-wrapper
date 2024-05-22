@@ -42,8 +42,8 @@ public open class ExternalService(
     id: String,
     props: ExternalServiceProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.ExternalService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ExternalServiceProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.ExternalService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ExternalServiceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -60,7 +60,7 @@ public open class ExternalService(
    * @param _options 
    */
   public override fun associateCloudMapService(options: AssociateCloudMapServiceOptions) {
-    unwrap(this).associateCloudMapService(options.let(AssociateCloudMapServiceOptions::unwrap))
+    unwrap(this).associateCloudMapService(options.let(AssociateCloudMapServiceOptions.Companion::unwrap))
   }
 
   /**
@@ -83,7 +83,7 @@ public open class ExternalService(
    */
   public override fun attachToApplicationTargetGroup(targetGroup: IApplicationTargetGroup):
       LoadBalancerTargetProps =
-      unwrap(this).attachToApplicationTargetGroup(targetGroup.let(IApplicationTargetGroup::unwrap)).let(LoadBalancerTargetProps::wrap)
+      unwrap(this).attachToApplicationTargetGroup(targetGroup.let(IApplicationTargetGroup.Companion::unwrap)).let(LoadBalancerTargetProps::wrap)
 
   /**
    * Overriden method to throw error as `autoScaleTaskCount` is not supported for external service.
@@ -91,7 +91,7 @@ public open class ExternalService(
    * @param _props 
    */
   public override fun autoScaleTaskCount(props: EnableScalingProps): ScalableTaskCount =
-      unwrap(this).autoScaleTaskCount(props.let(EnableScalingProps::unwrap)).let(ScalableTaskCount::wrap)
+      unwrap(this).autoScaleTaskCount(props.let(EnableScalingProps.Companion::unwrap)).let(ScalableTaskCount::wrap)
 
   /**
    * Overriden method to throw error as `autoScaleTaskCount` is not supported for external service.
@@ -109,7 +109,7 @@ public open class ExternalService(
    * @param _options 
    */
   public override fun enableCloudMap(options: CloudMapOptions): Service =
-      unwrap(this).enableCloudMap(options.let(CloudMapOptions::unwrap)).let(Service::wrap)
+      unwrap(this).enableCloudMap(options.let(CloudMapOptions.Companion::unwrap)).let(Service::wrap)
 
   /**
    * Overriden method to throw error as `enableCloudMap` is not supported for external service.
@@ -128,7 +128,7 @@ public open class ExternalService(
    */
   public override fun loadBalancerTarget(options: LoadBalancerTargetOptions): IEcsLoadBalancerTarget
       =
-      unwrap(this).loadBalancerTarget(options.let(LoadBalancerTargetOptions::unwrap)).let(IEcsLoadBalancerTarget::wrap)
+      unwrap(this).loadBalancerTarget(options.let(LoadBalancerTargetOptions.Companion::unwrap)).let(IEcsLoadBalancerTarget::wrap)
 
   /**
    * Overriden method to throw error as `loadBalancerTarget` is not supported for external service.
@@ -495,7 +495,7 @@ public open class ExternalService(
      */
     override
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>) {
-      cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy::unwrap))
+      cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy.Companion::unwrap))
     }
 
     /**
@@ -521,7 +521,7 @@ public open class ExternalService(
      * @param circuitBreaker Whether to enable the deployment circuit breaker. 
      */
     override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
-      cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker::unwrap))
+      cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker.Companion::unwrap))
     }
 
     /**
@@ -548,7 +548,7 @@ public open class ExternalService(
      * discovery. 
      */
     override fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
-      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions::unwrap))
+      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions.Companion::unwrap))
     }
 
     /**
@@ -570,7 +570,7 @@ public open class ExternalService(
      * @param cluster The name of the cluster that hosts the service. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -583,7 +583,7 @@ public open class ExternalService(
      * at least one enters a state of alarm during the deployment or bake time. 
      */
     override fun deploymentAlarms(deploymentAlarms: DeploymentAlarmConfig) {
-      cdkBuilder.deploymentAlarms(deploymentAlarms.let(DeploymentAlarmConfig::unwrap))
+      cdkBuilder.deploymentAlarms(deploymentAlarms.let(DeploymentAlarmConfig.Companion::unwrap))
     }
 
     /**
@@ -612,7 +612,7 @@ public open class ExternalService(
      * @param deploymentController Specifies which deployment controller to use for the service. 
      */
     override fun deploymentController(deploymentController: DeploymentController) {
-      cdkBuilder.deploymentController(deploymentController.let(DeploymentController::unwrap))
+      cdkBuilder.deploymentController(deploymentController.let(DeploymentController.Companion::unwrap))
     }
 
     /**
@@ -684,7 +684,7 @@ public open class ExternalService(
      * started. 
      */
     override fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
-      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration::unwrap))
+      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -727,7 +727,7 @@ public open class ExternalService(
      * service to the tasks in the service. 
      */
     override fun propagateTags(propagateTags: PropagatedTagSource) {
-      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource.Companion::unwrap))
     }
 
     /**
@@ -740,7 +740,7 @@ public open class ExternalService(
      * @param securityGroups The security groups to associate with the service. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -764,7 +764,7 @@ public open class ExternalService(
      * @param serviceConnectConfiguration Configuration for Service Connect. 
      */
     override fun serviceConnectConfiguration(serviceConnectConfiguration: ServiceConnectProps) {
-      cdkBuilder.serviceConnectConfiguration(serviceConnectConfiguration.let(ServiceConnectProps::unwrap))
+      cdkBuilder.serviceConnectConfiguration(serviceConnectConfiguration.let(ServiceConnectProps.Companion::unwrap))
     }
 
     /**
@@ -800,7 +800,7 @@ public open class ExternalService(
      * @param taskDefinition The task definition to use for tasks in the service. 
      */
     override fun taskDefinition(taskDefinition: TaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(TaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(TaskDefinition.Companion::unwrap))
     }
 
     /**
@@ -812,7 +812,7 @@ public open class ExternalService(
      * latest active task revision. 
      */
     override fun taskDefinitionRevision(taskDefinitionRevision: TaskDefinitionRevision) {
-      cdkBuilder.taskDefinitionRevision(taskDefinitionRevision.let(TaskDefinitionRevision::unwrap))
+      cdkBuilder.taskDefinitionRevision(taskDefinitionRevision.let(TaskDefinitionRevision.Companion::unwrap))
     }
 
     /**
@@ -826,7 +826,7 @@ public open class ExternalService(
      * @param volumeConfigurations Configuration details for a volume used by the service. 
      */
     override fun volumeConfigurations(volumeConfigurations: List<ServiceManagedVolume>) {
-      cdkBuilder.volumeConfigurations(volumeConfigurations.map(ServiceManagedVolume::unwrap))
+      cdkBuilder.volumeConfigurations(volumeConfigurations.map(ServiceManagedVolume.Companion::unwrap))
     }
 
     /**
@@ -851,7 +851,7 @@ public open class ExternalService(
       id: String,
       externalServiceArn: String,
     ): IExternalService =
-        software.amazon.awscdk.services.ecs.ExternalService.fromExternalServiceArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ecs.ExternalService.fromExternalServiceArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, externalServiceArn).let(IExternalService::wrap)
 
     public fun fromExternalServiceAttributes(
@@ -859,8 +859,8 @@ public open class ExternalService(
       id: String,
       attrs: ExternalServiceAttributes,
     ): IBaseService =
-        software.amazon.awscdk.services.ecs.ExternalService.fromExternalServiceAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(ExternalServiceAttributes::unwrap)).let(IBaseService::wrap)
+        software.amazon.awscdk.services.ecs.ExternalService.fromExternalServiceAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(ExternalServiceAttributes.Companion::unwrap)).let(IBaseService::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9c821c053693b374d19971efb06539e7456849cba31705ede4c6c0f7fb4674de")

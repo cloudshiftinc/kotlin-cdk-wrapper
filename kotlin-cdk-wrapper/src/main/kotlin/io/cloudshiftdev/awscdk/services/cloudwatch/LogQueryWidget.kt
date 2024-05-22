@@ -28,7 +28,7 @@ public open class LogQueryWidget(
   cdkObject: software.amazon.awscdk.services.cloudwatch.LogQueryWidget,
 ) : ConcreteWidget(cdkObject) {
   public constructor(props: LogQueryWidgetProps) :
-      this(software.amazon.awscdk.services.cloudwatch.LogQueryWidget(props.let(LogQueryWidgetProps::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.LogQueryWidget(props.let(LogQueryWidgetProps.Companion::unwrap))
   )
 
   public constructor(props: LogQueryWidgetProps.Builder.() -> Unit) :
@@ -239,7 +239,7 @@ public open class LogQueryWidget(
      * @param view The type of view to use. 
      */
     override fun view(view: LogQueryVisualizationType) {
-      cdkBuilder.view(view.let(LogQueryVisualizationType::unwrap))
+      cdkBuilder.view(view.let(LogQueryVisualizationType.Companion::unwrap))
     }
 
     /**

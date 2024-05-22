@@ -65,7 +65,7 @@ public interface DeploymentController {
      * @param type The deployment controller type to use.
      */
     override fun type(type: DeploymentControllerType) {
-      cdkBuilder.type(type.let(DeploymentControllerType::unwrap))
+      cdkBuilder.type(type.let(DeploymentControllerType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.DeploymentController =

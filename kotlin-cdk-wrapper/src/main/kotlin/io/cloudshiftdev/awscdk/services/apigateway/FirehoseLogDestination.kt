@@ -34,7 +34,7 @@ public open class FirehoseLogDestination(
   cdkObject: software.amazon.awscdk.services.apigateway.FirehoseLogDestination,
 ) : CdkObject(cdkObject), IAccessLogDestination {
   public constructor(stream: CfnDeliveryStream) :
-      this(software.amazon.awscdk.services.apigateway.FirehoseLogDestination(stream.let(CfnDeliveryStream::unwrap))
+      this(software.amazon.awscdk.services.apigateway.FirehoseLogDestination(stream.let(CfnDeliveryStream.Companion::unwrap))
   )
 
   /**
@@ -43,7 +43,7 @@ public open class FirehoseLogDestination(
    * @param _stage 
    */
   public override fun bind(stage: IStage): AccessLogDestinationConfig =
-      unwrap(this).bind(stage.let(IStage::unwrap)).let(AccessLogDestinationConfig::wrap)
+      unwrap(this).bind(stage.let(IStage.Companion::unwrap)).let(AccessLogDestinationConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigateway.FirehoseLogDestination):

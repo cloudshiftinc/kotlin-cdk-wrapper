@@ -121,8 +121,8 @@ public open class CfnWorkGroup(
     id: String,
     props: CfnWorkGroupProps,
   ) :
-      this(software.amazon.awscdk.services.athena.CfnWorkGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnWorkGroupProps::unwrap))
+      this(software.amazon.awscdk.services.athena.CfnWorkGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnWorkGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -181,7 +181,7 @@ public open class CfnWorkGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -215,7 +215,7 @@ public open class CfnWorkGroup(
    * queries.
    */
   public open fun recursiveDeleteOption(`value`: IResolvable) {
-    unwrap(this).setRecursiveDeleteOption(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRecursiveDeleteOption(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -245,7 +245,7 @@ public open class CfnWorkGroup(
    * The tags (key-value pairs) to associate with this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -268,7 +268,7 @@ public open class CfnWorkGroup(
    * (cutoff) per query, if it is specified.
    */
   public open fun workGroupConfiguration(`value`: IResolvable) {
-    unwrap(this).setWorkGroupConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setWorkGroupConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -278,7 +278,7 @@ public open class CfnWorkGroup(
    * (cutoff) per query, if it is specified.
    */
   public open fun workGroupConfiguration(`value`: WorkGroupConfigurationProperty) {
-    unwrap(this).setWorkGroupConfiguration(`value`.let(WorkGroupConfigurationProperty::unwrap))
+    unwrap(this).setWorkGroupConfiguration(`value`.let(WorkGroupConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -317,7 +317,7 @@ public open class CfnWorkGroup(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun workGroupConfigurationUpdates(`value`: IResolvable) {
-    unwrap(this).setWorkGroupConfigurationUpdates(`value`.let(IResolvable::unwrap))
+    unwrap(this).setWorkGroupConfigurationUpdates(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -331,7 +331,7 @@ public open class CfnWorkGroup(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun workGroupConfigurationUpdates(`value`: WorkGroupConfigurationUpdatesProperty) {
-    unwrap(this).setWorkGroupConfigurationUpdates(`value`.let(WorkGroupConfigurationUpdatesProperty::unwrap))
+    unwrap(this).setWorkGroupConfigurationUpdates(`value`.let(WorkGroupConfigurationUpdatesProperty.Companion::unwrap))
   }
 
   /**
@@ -584,7 +584,7 @@ public open class CfnWorkGroup(
      * workgroup contains any named queries. 
      */
     override fun recursiveDeleteOption(recursiveDeleteOption: IResolvable) {
-      cdkBuilder.recursiveDeleteOption(recursiveDeleteOption.let(IResolvable::unwrap))
+      cdkBuilder.recursiveDeleteOption(recursiveDeleteOption.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -604,7 +604,7 @@ public open class CfnWorkGroup(
      * @param tags The tags (key-value pairs) to associate with this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -631,7 +631,7 @@ public open class CfnWorkGroup(
      * amount of bytes scanned (cutoff) per query, if it is specified. 
      */
     override fun workGroupConfiguration(workGroupConfiguration: IResolvable) {
-      cdkBuilder.workGroupConfiguration(workGroupConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.workGroupConfiguration(workGroupConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -650,7 +650,7 @@ public open class CfnWorkGroup(
      * amount of bytes scanned (cutoff) per query, if it is specified. 
      */
     override fun workGroupConfiguration(workGroupConfiguration: WorkGroupConfigurationProperty) {
-      cdkBuilder.workGroupConfiguration(workGroupConfiguration.let(WorkGroupConfigurationProperty::unwrap))
+      cdkBuilder.workGroupConfiguration(workGroupConfiguration.let(WorkGroupConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -691,7 +691,7 @@ public open class CfnWorkGroup(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun workGroupConfigurationUpdates(workGroupConfigurationUpdates: IResolvable) {
-      cdkBuilder.workGroupConfigurationUpdates(workGroupConfigurationUpdates.let(IResolvable::unwrap))
+      cdkBuilder.workGroupConfigurationUpdates(workGroupConfigurationUpdates.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -712,7 +712,7 @@ public open class CfnWorkGroup(
     @Deprecated(message = "deprecated in CDK")
     override
         fun workGroupConfigurationUpdates(workGroupConfigurationUpdates: WorkGroupConfigurationUpdatesProperty) {
-      cdkBuilder.workGroupConfigurationUpdates(workGroupConfigurationUpdates.let(WorkGroupConfigurationUpdatesProperty::unwrap))
+      cdkBuilder.workGroupConfigurationUpdates(workGroupConfigurationUpdates.let(WorkGroupConfigurationUpdatesProperty.Companion::unwrap))
     }
 
     /**
@@ -1445,7 +1445,7 @@ public open class CfnWorkGroup(
        * storing query results specified in the workgroup. See `EnforceWorkGroupConfiguration` .
        */
       override fun aclConfiguration(aclConfiguration: IResolvable) {
-        cdkBuilder.aclConfiguration(aclConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.aclConfiguration(aclConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1457,7 +1457,7 @@ public open class CfnWorkGroup(
        * storing query results specified in the workgroup. See `EnforceWorkGroupConfiguration` .
        */
       override fun aclConfiguration(aclConfiguration: AclConfigurationProperty) {
-        cdkBuilder.aclConfiguration(aclConfiguration.let(AclConfigurationProperty::unwrap))
+        cdkBuilder.aclConfiguration(aclConfiguration.let(AclConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1483,7 +1483,7 @@ public open class CfnWorkGroup(
        * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1497,7 +1497,7 @@ public open class CfnWorkGroup(
        */
       override
           fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
-        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty::unwrap))
+        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1942,14 +1942,14 @@ public open class CfnWorkGroup(
        * @param aclConfiguration The ACL configuration for the query results.
        */
       override fun aclConfiguration(aclConfiguration: IResolvable) {
-        cdkBuilder.aclConfiguration(aclConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.aclConfiguration(aclConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param aclConfiguration The ACL configuration for the query results.
        */
       override fun aclConfiguration(aclConfiguration: AclConfigurationProperty) {
-        cdkBuilder.aclConfiguration(aclConfiguration.let(AclConfigurationProperty::unwrap))
+        cdkBuilder.aclConfiguration(aclConfiguration.let(AclConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1964,7 +1964,7 @@ public open class CfnWorkGroup(
        * @param encryptionConfiguration The encryption configuration for the query results.
        */
       override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1972,7 +1972,7 @@ public open class CfnWorkGroup(
        */
       override
           fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
-        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty::unwrap))
+        cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2039,7 +2039,7 @@ public open class CfnWorkGroup(
        * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       override fun removeAclConfiguration(removeAclConfiguration: IResolvable) {
-        cdkBuilder.removeAclConfiguration(removeAclConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.removeAclConfiguration(removeAclConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2067,7 +2067,7 @@ public open class CfnWorkGroup(
        * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       override fun removeEncryptionConfiguration(removeEncryptionConfiguration: IResolvable) {
-        cdkBuilder.removeEncryptionConfiguration(removeEncryptionConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.removeEncryptionConfiguration(removeEncryptionConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2093,7 +2093,7 @@ public open class CfnWorkGroup(
        * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       override fun removeExpectedBucketOwner(removeExpectedBucketOwner: IResolvable) {
-        cdkBuilder.removeExpectedBucketOwner(removeExpectedBucketOwner.let(IResolvable::unwrap))
+        cdkBuilder.removeExpectedBucketOwner(removeExpectedBucketOwner.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2121,7 +2121,7 @@ public open class CfnWorkGroup(
        * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       override fun removeOutputLocation(removeOutputLocation: IResolvable) {
-        cdkBuilder.removeOutputLocation(removeOutputLocation.let(IResolvable::unwrap))
+        cdkBuilder.removeOutputLocation(removeOutputLocation.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2583,7 +2583,7 @@ public open class CfnWorkGroup(
        */
       override
           fun customerContentEncryptionConfiguration(customerContentEncryptionConfiguration: IResolvable) {
-        cdkBuilder.customerContentEncryptionConfiguration(customerContentEncryptionConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.customerContentEncryptionConfiguration(customerContentEncryptionConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2593,7 +2593,7 @@ public open class CfnWorkGroup(
        */
       override
           fun customerContentEncryptionConfiguration(customerContentEncryptionConfiguration: CustomerContentEncryptionConfigurationProperty) {
-        cdkBuilder.customerContentEncryptionConfiguration(customerContentEncryptionConfiguration.let(CustomerContentEncryptionConfigurationProperty::unwrap))
+        cdkBuilder.customerContentEncryptionConfiguration(customerContentEncryptionConfiguration.let(CustomerContentEncryptionConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2627,21 +2627,21 @@ public open class CfnWorkGroup(
        * Settings](https://docs.aws.amazon.com/athena/latest/ug/workgroups-settings-override.html) .
        */
       override fun enforceWorkGroupConfiguration(enforceWorkGroupConfiguration: IResolvable) {
-        cdkBuilder.enforceWorkGroupConfiguration(enforceWorkGroupConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.enforceWorkGroupConfiguration(enforceWorkGroupConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param engineVersion The engine version that all queries running on the workgroup use.
        */
       override fun engineVersion(engineVersion: IResolvable) {
-        cdkBuilder.engineVersion(engineVersion.let(IResolvable::unwrap))
+        cdkBuilder.engineVersion(engineVersion.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param engineVersion The engine version that all queries running on the workgroup use.
        */
       override fun engineVersion(engineVersion: EngineVersionProperty) {
-        cdkBuilder.engineVersion(engineVersion.let(EngineVersionProperty::unwrap))
+        cdkBuilder.engineVersion(engineVersion.let(EngineVersionProperty.Companion::unwrap))
       }
 
       /**
@@ -2674,7 +2674,7 @@ public open class CfnWorkGroup(
        * enabled for the workgroup.
        */
       override fun publishCloudWatchMetricsEnabled(publishCloudWatchMetricsEnabled: IResolvable) {
-        cdkBuilder.publishCloudWatchMetricsEnabled(publishCloudWatchMetricsEnabled.let(IResolvable::unwrap))
+        cdkBuilder.publishCloudWatchMetricsEnabled(publishCloudWatchMetricsEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2700,7 +2700,7 @@ public open class CfnWorkGroup(
        * *Amazon Simple Storage Service Developer Guide* .
        */
       override fun requesterPaysEnabled(requesterPaysEnabled: IResolvable) {
-        cdkBuilder.requesterPaysEnabled(requesterPaysEnabled.let(IResolvable::unwrap))
+        cdkBuilder.requesterPaysEnabled(requesterPaysEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2710,7 +2710,7 @@ public open class CfnWorkGroup(
        * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
        */
       override fun resultConfiguration(resultConfiguration: IResolvable) {
-        cdkBuilder.resultConfiguration(resultConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.resultConfiguration(resultConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2720,7 +2720,7 @@ public open class CfnWorkGroup(
        * History](https://docs.aws.amazon.com/athena/latest/ug/querying.html) .
        */
       override fun resultConfiguration(resultConfiguration: ResultConfigurationProperty) {
-        cdkBuilder.resultConfiguration(resultConfiguration.let(ResultConfigurationProperty::unwrap))
+        cdkBuilder.resultConfiguration(resultConfiguration.let(ResultConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3180,7 +3180,7 @@ public open class CfnWorkGroup(
        */
       override
           fun customerContentEncryptionConfiguration(customerContentEncryptionConfiguration: IResolvable) {
-        cdkBuilder.customerContentEncryptionConfiguration(customerContentEncryptionConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.customerContentEncryptionConfiguration(customerContentEncryptionConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3189,7 +3189,7 @@ public open class CfnWorkGroup(
        */
       override
           fun customerContentEncryptionConfiguration(customerContentEncryptionConfiguration: CustomerContentEncryptionConfigurationProperty) {
-        cdkBuilder.customerContentEncryptionConfiguration(customerContentEncryptionConfiguration.let(CustomerContentEncryptionConfigurationProperty::unwrap))
+        cdkBuilder.customerContentEncryptionConfiguration(customerContentEncryptionConfiguration.let(CustomerContentEncryptionConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3218,21 +3218,21 @@ public open class CfnWorkGroup(
        * If set to "false", client-side settings are used
        */
       override fun enforceWorkGroupConfiguration(enforceWorkGroupConfiguration: IResolvable) {
-        cdkBuilder.enforceWorkGroupConfiguration(enforceWorkGroupConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.enforceWorkGroupConfiguration(enforceWorkGroupConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param engineVersion The Athena engine version for running queries.
        */
       override fun engineVersion(engineVersion: IResolvable) {
-        cdkBuilder.engineVersion(engineVersion.let(IResolvable::unwrap))
+        cdkBuilder.engineVersion(engineVersion.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param engineVersion The Athena engine version for running queries.
        */
       override fun engineVersion(engineVersion: EngineVersionProperty) {
-        cdkBuilder.engineVersion(engineVersion.let(EngineVersionProperty::unwrap))
+        cdkBuilder.engineVersion(engineVersion.let(EngineVersionProperty.Companion::unwrap))
       }
 
       /**
@@ -3263,7 +3263,7 @@ public open class CfnWorkGroup(
        * enabled for the workgroup.
        */
       override fun publishCloudWatchMetricsEnabled(publishCloudWatchMetricsEnabled: IResolvable) {
-        cdkBuilder.publishCloudWatchMetricsEnabled(publishCloudWatchMetricsEnabled.let(IResolvable::unwrap))
+        cdkBuilder.publishCloudWatchMetricsEnabled(publishCloudWatchMetricsEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3279,7 +3279,7 @@ public open class CfnWorkGroup(
        * query is removed.
        */
       override fun removeBytesScannedCutoffPerQuery(removeBytesScannedCutoffPerQuery: IResolvable) {
-        cdkBuilder.removeBytesScannedCutoffPerQuery(removeBytesScannedCutoffPerQuery.let(IResolvable::unwrap))
+        cdkBuilder.removeBytesScannedCutoffPerQuery(removeBytesScannedCutoffPerQuery.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3295,7 +3295,7 @@ public open class CfnWorkGroup(
        */
       override
           fun removeCustomerContentEncryptionConfiguration(removeCustomerContentEncryptionConfiguration: IResolvable) {
-        cdkBuilder.removeCustomerContentEncryptionConfiguration(removeCustomerContentEncryptionConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.removeCustomerContentEncryptionConfiguration(removeCustomerContentEncryptionConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3315,7 +3315,7 @@ public open class CfnWorkGroup(
        * queries that retrieve data from Requester Pays buckets cause an error.
        */
       override fun requesterPaysEnabled(requesterPaysEnabled: IResolvable) {
-        cdkBuilder.requesterPaysEnabled(requesterPaysEnabled.let(IResolvable::unwrap))
+        cdkBuilder.requesterPaysEnabled(requesterPaysEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3324,7 +3324,7 @@ public open class CfnWorkGroup(
        * Includes the updated results location and an updated option for encrypting query results.
        */
       override fun resultConfigurationUpdates(resultConfigurationUpdates: IResolvable) {
-        cdkBuilder.resultConfigurationUpdates(resultConfigurationUpdates.let(IResolvable::unwrap))
+        cdkBuilder.resultConfigurationUpdates(resultConfigurationUpdates.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3334,7 +3334,7 @@ public open class CfnWorkGroup(
        */
       override
           fun resultConfigurationUpdates(resultConfigurationUpdates: ResultConfigurationUpdatesProperty) {
-        cdkBuilder.resultConfigurationUpdates(resultConfigurationUpdates.let(ResultConfigurationUpdatesProperty::unwrap))
+        cdkBuilder.resultConfigurationUpdates(resultConfigurationUpdates.let(ResultConfigurationUpdatesProperty.Companion::unwrap))
       }
 
       /**

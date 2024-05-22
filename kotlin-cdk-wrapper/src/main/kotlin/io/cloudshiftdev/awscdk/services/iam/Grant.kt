@@ -59,7 +59,7 @@ public open class Grant(
    * @param rhs 
    */
   public open fun combine(rhs: Grant): Grant =
-      unwrap(this).combine(rhs.let(Grant::unwrap)).let(Grant::wrap)
+      unwrap(this).combine(rhs.let(Grant.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * (deprecated) The statement that was added to the principal's policy.
@@ -98,7 +98,7 @@ public open class Grant(
 
   public companion object {
     public fun addToPrincipal(options: GrantOnPrincipalOptions): Grant =
-        software.amazon.awscdk.services.iam.Grant.addToPrincipal(options.let(GrantOnPrincipalOptions::unwrap)).let(Grant::wrap)
+        software.amazon.awscdk.services.iam.Grant.addToPrincipal(options.let(GrantOnPrincipalOptions.Companion::unwrap)).let(Grant::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("262301c1f5f1f4891aa3e11b1e5bf888d6abb225c4d4d928a53142ee7c436374")
@@ -106,7 +106,7 @@ public open class Grant(
         addToPrincipal(GrantOnPrincipalOptions(options))
 
     public fun addToPrincipalAndResource(options: GrantOnPrincipalAndResourceOptions): Grant =
-        software.amazon.awscdk.services.iam.Grant.addToPrincipalAndResource(options.let(GrantOnPrincipalAndResourceOptions::unwrap)).let(Grant::wrap)
+        software.amazon.awscdk.services.iam.Grant.addToPrincipalAndResource(options.let(GrantOnPrincipalAndResourceOptions.Companion::unwrap)).let(Grant::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ebcdd9f0c9e9ff70d6e4e619f79e7f55ccb8089bca3d40830d66eeb4ac507a76")
@@ -115,7 +115,7 @@ public open class Grant(
         Grant = addToPrincipalAndResource(GrantOnPrincipalAndResourceOptions(options))
 
     public fun addToPrincipalOrResource(options: GrantWithResourceOptions): Grant =
-        software.amazon.awscdk.services.iam.Grant.addToPrincipalOrResource(options.let(GrantWithResourceOptions::unwrap)).let(Grant::wrap)
+        software.amazon.awscdk.services.iam.Grant.addToPrincipalOrResource(options.let(GrantWithResourceOptions.Companion::unwrap)).let(Grant::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("13c508b7e078720e89980b7918f884c74f03eef6e6b2164e4eb9df04ee787328")
@@ -123,7 +123,7 @@ public open class Grant(
         = addToPrincipalOrResource(GrantWithResourceOptions(options))
 
     public fun drop(grantee: IGrantable, intent: String): Grant =
-        software.amazon.awscdk.services.iam.Grant.drop(grantee.let(IGrantable::unwrap),
+        software.amazon.awscdk.services.iam.Grant.drop(grantee.let(IGrantable.Companion::unwrap),
         intent).let(Grant::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.Grant): Grant =

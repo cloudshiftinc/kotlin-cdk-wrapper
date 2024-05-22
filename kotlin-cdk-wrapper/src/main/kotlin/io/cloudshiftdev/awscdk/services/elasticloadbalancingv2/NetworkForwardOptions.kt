@@ -56,7 +56,7 @@ public interface NetworkForwardOptions {
      * Range between 1 second and 7 days.
      */
     override fun stickinessDuration(stickinessDuration: Duration) {
-      cdkBuilder.stickinessDuration(stickinessDuration.let(Duration::unwrap))
+      cdkBuilder.stickinessDuration(stickinessDuration.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.elasticloadbalancingv2.NetworkForwardOptions

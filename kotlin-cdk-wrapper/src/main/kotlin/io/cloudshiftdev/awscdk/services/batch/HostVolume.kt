@@ -34,7 +34,7 @@ public open class HostVolume(
   cdkObject: software.amazon.awscdk.services.batch.HostVolume,
 ) : EcsVolume(cdkObject) {
   public constructor(options: HostVolumeOptions) :
-      this(software.amazon.awscdk.services.batch.HostVolume(options.let(HostVolumeOptions::unwrap))
+      this(software.amazon.awscdk.services.batch.HostVolume(options.let(HostVolumeOptions.Companion::unwrap))
   )
 
   public constructor(options: HostVolumeOptions.Builder.() -> Unit) :

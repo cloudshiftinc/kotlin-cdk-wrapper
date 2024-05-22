@@ -158,7 +158,7 @@ public interface SourcedConfigurationOptions : ConfigurationOptions {
      * `IEnvironment.addDeployments` methods.
      */
     override fun deployTo(deployTo: List<IEnvironment>) {
-      cdkBuilder.deployTo(deployTo.map(IEnvironment::unwrap))
+      cdkBuilder.deployTo(deployTo.map(IEnvironment.Companion::unwrap))
     }
 
     /**
@@ -175,14 +175,14 @@ public interface SourcedConfigurationOptions : ConfigurationOptions {
      * @param deploymentKey The deployment key of the configuration.
      */
     override fun deploymentKey(deploymentKey: IKey) {
-      cdkBuilder.deploymentKey(deploymentKey.let(IKey::unwrap))
+      cdkBuilder.deploymentKey(deploymentKey.let(IKey.Companion::unwrap))
     }
 
     /**
      * @param deploymentStrategy The deployment strategy for the configuration.
      */
     override fun deploymentStrategy(deploymentStrategy: IDeploymentStrategy) {
-      cdkBuilder.deploymentStrategy(deploymentStrategy.let(IDeploymentStrategy::unwrap))
+      cdkBuilder.deploymentStrategy(deploymentStrategy.let(IDeploymentStrategy.Companion::unwrap))
     }
 
     /**
@@ -196,7 +196,7 @@ public interface SourcedConfigurationOptions : ConfigurationOptions {
      * @param location The location where the configuration is stored. 
      */
     override fun location(location: ConfigurationSource) {
-      cdkBuilder.location(location.let(ConfigurationSource::unwrap))
+      cdkBuilder.location(location.let(ConfigurationSource.Companion::unwrap))
     }
 
     /**
@@ -210,21 +210,21 @@ public interface SourcedConfigurationOptions : ConfigurationOptions {
      * @param retrievalRole The IAM role to retrieve the configuration.
      */
     override fun retrievalRole(retrievalRole: IRole) {
-      cdkBuilder.retrievalRole(retrievalRole.let(IRole::unwrap))
+      cdkBuilder.retrievalRole(retrievalRole.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param type The type of configuration.
      */
     override fun type(type: ConfigurationType) {
-      cdkBuilder.type(type.let(ConfigurationType::unwrap))
+      cdkBuilder.type(type.let(ConfigurationType.Companion::unwrap))
     }
 
     /**
      * @param validators The validators for the configuration.
      */
     override fun validators(validators: List<IValidator>) {
-      cdkBuilder.validators(validators.map(IValidator::unwrap))
+      cdkBuilder.validators(validators.map(IValidator.Companion::unwrap))
     }
 
     /**

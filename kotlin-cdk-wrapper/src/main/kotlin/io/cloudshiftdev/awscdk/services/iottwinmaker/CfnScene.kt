@@ -50,8 +50,8 @@ public open class CfnScene(
     id: String,
     props: CfnSceneProps,
   ) :
-      this(software.amazon.awscdk.services.iottwinmaker.CfnScene(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSceneProps::unwrap))
+      this(software.amazon.awscdk.services.iottwinmaker.CfnScene(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSceneProps.Companion::unwrap))
   )
 
   public constructor(
@@ -129,7 +129,7 @@ public open class CfnScene(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -153,7 +153,7 @@ public open class CfnScene(
    * The scene metadata.
    */
   public open fun sceneMetadata(`value`: IResolvable) {
-    unwrap(this).setSceneMetadata(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSceneMetadata(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -335,7 +335,7 @@ public open class CfnScene(
      * @param sceneMetadata The scene metadata. 
      */
     override fun sceneMetadata(sceneMetadata: IResolvable) {
-      cdkBuilder.sceneMetadata(sceneMetadata.let(IResolvable::unwrap))
+      cdkBuilder.sceneMetadata(sceneMetadata.let(IResolvable.Companion::unwrap))
     }
 
     /**

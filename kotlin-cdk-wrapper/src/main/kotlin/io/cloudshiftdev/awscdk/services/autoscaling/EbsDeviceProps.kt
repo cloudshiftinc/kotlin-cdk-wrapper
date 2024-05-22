@@ -130,7 +130,7 @@ public interface EbsDeviceProps : EbsDeviceSnapshotOptions {
      * @param volumeType The EBS volume type.
      */
     override fun volumeType(volumeType: EbsDeviceVolumeType) {
-      cdkBuilder.volumeType(volumeType.let(EbsDeviceVolumeType::unwrap))
+      cdkBuilder.volumeType(volumeType.let(EbsDeviceVolumeType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.autoscaling.EbsDeviceProps =

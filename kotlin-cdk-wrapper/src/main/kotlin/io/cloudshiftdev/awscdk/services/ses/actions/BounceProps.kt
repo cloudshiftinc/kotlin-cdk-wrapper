@@ -98,7 +98,7 @@ public interface BounceProps {
      * @param template The template containing the message, reply code and status code. 
      */
     override fun template(template: BounceTemplate) {
-      cdkBuilder.template(template.let(BounceTemplate::unwrap))
+      cdkBuilder.template(template.let(BounceTemplate.Companion::unwrap))
     }
 
     /**
@@ -113,7 +113,7 @@ public interface BounceProps {
      * @param topic The SNS topic to notify when the bounce action is taken.
      */
     override fun topic(topic: ITopic) {
-      cdkBuilder.topic(topic.let(ITopic::unwrap))
+      cdkBuilder.topic(topic.let(ITopic.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ses.actions.BounceProps = cdkBuilder.build()

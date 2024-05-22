@@ -49,8 +49,8 @@ public open class BastionHostLinux(
     id: String,
     props: BastionHostLinuxProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.BastionHostLinux(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(BastionHostLinuxProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.BastionHostLinux(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(BastionHostLinuxProps.Companion::unwrap))
   )
 
   public constructor(
@@ -332,7 +332,7 @@ public open class BastionHostLinux(
      * virtual devices and EBS volumes. 
      */
     override fun blockDevices(blockDevices: List<BlockDevice>) {
-      cdkBuilder.blockDevices(blockDevices.map(BlockDevice::unwrap))
+      cdkBuilder.blockDevices(blockDevices.map(BlockDevice.Companion::unwrap))
     }
 
     /**
@@ -361,7 +361,7 @@ public open class BastionHostLinux(
      * @param init Apply the given CloudFormation Init configuration to the instance at startup. 
      */
     override fun `init`(`init`: CloudFormationInit) {
-      cdkBuilder.`init`(`init`.let(CloudFormationInit::unwrap))
+      cdkBuilder.`init`(`init`.let(CloudFormationInit.Companion::unwrap))
     }
 
     /**
@@ -374,7 +374,7 @@ public open class BastionHostLinux(
      * @param initOptions Use the given options for applying CloudFormation Init. 
      */
     override fun initOptions(initOptions: ApplyCloudFormationInitOptions) {
-      cdkBuilder.initOptions(initOptions.let(ApplyCloudFormationInitOptions::unwrap))
+      cdkBuilder.initOptions(initOptions.let(ApplyCloudFormationInitOptions.Companion::unwrap))
     }
 
     /**
@@ -410,7 +410,7 @@ public open class BastionHostLinux(
      * @param instanceType Type of instance to launch. 
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -422,7 +422,7 @@ public open class BastionHostLinux(
      * @param machineImage The machine image to use, assumed to have SSM Agent preinstalled. 
      */
     override fun machineImage(machineImage: IMachineImage) {
-      cdkBuilder.machineImage(machineImage.let(IMachineImage::unwrap))
+      cdkBuilder.machineImage(machineImage.let(IMachineImage.Companion::unwrap))
     }
 
     /**
@@ -444,7 +444,7 @@ public open class BastionHostLinux(
      * @param securityGroup Security Group to assign to this instance. 
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -459,7 +459,7 @@ public open class BastionHostLinux(
      * @param subnetSelection Select the subnets to run the bastion host in. 
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -484,7 +484,7 @@ public open class BastionHostLinux(
      * @param vpc VPC to launch the instance in. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.BastionHostLinux = cdkBuilder.build()

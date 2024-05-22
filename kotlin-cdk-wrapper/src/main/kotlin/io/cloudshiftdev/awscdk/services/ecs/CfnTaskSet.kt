@@ -93,8 +93,8 @@ public open class CfnTaskSet(
     id: String,
     props: CfnTaskSetProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.CfnTaskSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTaskSetProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.CfnTaskSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTaskSetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -147,7 +147,7 @@ public open class CfnTaskSet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -171,7 +171,7 @@ public open class CfnTaskSet(
    * A load balancer object representing the load balancer to use with the task set.
    */
   public open fun loadBalancers(`value`: IResolvable) {
-    unwrap(this).setLoadBalancers(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoadBalancers(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -195,14 +195,14 @@ public open class CfnTaskSet(
    * The network configuration for the task set.
    */
   public open fun networkConfiguration(`value`: IResolvable) {
-    unwrap(this).setNetworkConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNetworkConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The network configuration for the task set.
    */
   public open fun networkConfiguration(`value`: NetworkConfigurationProperty) {
-    unwrap(this).setNetworkConfiguration(`value`.let(NetworkConfigurationProperty::unwrap))
+    unwrap(this).setNetworkConfiguration(`value`.let(NetworkConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -236,7 +236,7 @@ public open class CfnTaskSet(
    * task set.
    */
   public open fun scale(`value`: IResolvable) {
-    unwrap(this).setScale(`value`.let(IResolvable::unwrap))
+    unwrap(this).setScale(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -244,7 +244,7 @@ public open class CfnTaskSet(
    * task set.
    */
   public open fun scale(`value`: ScaleProperty) {
-    unwrap(this).setScale(`value`.let(ScaleProperty::unwrap))
+    unwrap(this).setScale(`value`.let(ScaleProperty.Companion::unwrap))
   }
 
   /**
@@ -277,7 +277,7 @@ public open class CfnTaskSet(
    * The details of the service discovery registries to assign to this task set.
    */
   public open fun serviceRegistries(`value`: IResolvable) {
-    unwrap(this).setServiceRegistries(`value`.let(IResolvable::unwrap))
+    unwrap(this).setServiceRegistries(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -301,7 +301,7 @@ public open class CfnTaskSet(
    * The metadata that you apply to the task set to help you categorize and organize them.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -626,7 +626,7 @@ public open class CfnTaskSet(
      * task set. 
      */
     override fun loadBalancers(loadBalancers: IResolvable) {
-      cdkBuilder.loadBalancers(loadBalancers.let(IResolvable::unwrap))
+      cdkBuilder.loadBalancers(loadBalancers.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -663,7 +663,7 @@ public open class CfnTaskSet(
      * @param networkConfiguration The network configuration for the task set. 
      */
     override fun networkConfiguration(networkConfiguration: IResolvable) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -673,7 +673,7 @@ public open class CfnTaskSet(
      * @param networkConfiguration The network configuration for the task set. 
      */
     override fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -710,7 +710,7 @@ public open class CfnTaskSet(
      * running in the task set. 
      */
     override fun scale(scale: IResolvable) {
-      cdkBuilder.scale(scale.let(IResolvable::unwrap))
+      cdkBuilder.scale(scale.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -722,7 +722,7 @@ public open class CfnTaskSet(
      * running in the task set. 
      */
     override fun scale(scale: ScaleProperty) {
-      cdkBuilder.scale(scale.let(ScaleProperty::unwrap))
+      cdkBuilder.scale(scale.let(ScaleProperty.Companion::unwrap))
     }
 
     /**
@@ -759,7 +759,7 @@ public open class CfnTaskSet(
      * task set. 
      */
     override fun serviceRegistries(serviceRegistries: IResolvable) {
-      cdkBuilder.serviceRegistries(serviceRegistries.let(IResolvable::unwrap))
+      cdkBuilder.serviceRegistries(serviceRegistries.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -809,7 +809,7 @@ public open class CfnTaskSet(
      * them. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1429,7 +1429,7 @@ public open class CfnTaskSet(
        * All specified subnets and security groups must be from the same VPC.
        */
       override fun awsVpcConfiguration(awsVpcConfiguration: IResolvable) {
-        cdkBuilder.awsVpcConfiguration(awsVpcConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.awsVpcConfiguration(awsVpcConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1439,7 +1439,7 @@ public open class CfnTaskSet(
        * All specified subnets and security groups must be from the same VPC.
        */
       override fun awsVpcConfiguration(awsVpcConfiguration: AwsVpcConfigurationProperty) {
-        cdkBuilder.awsVpcConfiguration(awsVpcConfiguration.let(AwsVpcConfigurationProperty::unwrap))
+        cdkBuilder.awsVpcConfiguration(awsVpcConfiguration.let(AwsVpcConfigurationProperty.Companion::unwrap))
       }
 
       /**

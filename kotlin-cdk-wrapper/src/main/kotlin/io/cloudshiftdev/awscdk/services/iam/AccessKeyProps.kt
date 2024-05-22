@@ -101,7 +101,7 @@ public interface AccessKeyProps {
      * to make API calls; An Inactive key cannot.
      */
     override fun status(status: AccessKeyStatus) {
-      cdkBuilder.status(status.let(AccessKeyStatus::unwrap))
+      cdkBuilder.status(status.let(AccessKeyStatus.Companion::unwrap))
     }
 
     /**
@@ -111,7 +111,7 @@ public interface AccessKeyProps {
      * user.
      */
     override fun user(user: IUser) {
-      cdkBuilder.user(user.let(IUser::unwrap))
+      cdkBuilder.user(user.let(IUser.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.iam.AccessKeyProps = cdkBuilder.build()

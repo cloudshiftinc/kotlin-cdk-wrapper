@@ -561,7 +561,7 @@ public interface CfnTopicRuleProps {
      * For the cli-input-json file use format: "tags": "key1=value1&amp;key2=value2..."
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -579,14 +579,14 @@ public interface CfnTopicRuleProps {
      * @param topicRulePayload The rule payload. 
      */
     override fun topicRulePayload(topicRulePayload: IResolvable) {
-      cdkBuilder.topicRulePayload(topicRulePayload.let(IResolvable::unwrap))
+      cdkBuilder.topicRulePayload(topicRulePayload.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param topicRulePayload The rule payload. 
      */
     override fun topicRulePayload(topicRulePayload: CfnTopicRule.TopicRulePayloadProperty) {
-      cdkBuilder.topicRulePayload(topicRulePayload.let(CfnTopicRule.TopicRulePayloadProperty::unwrap))
+      cdkBuilder.topicRulePayload(topicRulePayload.let(CfnTopicRule.TopicRulePayloadProperty.Companion::unwrap))
     }
 
     /**

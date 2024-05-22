@@ -251,14 +251,14 @@ public interface AuthenticateCognitoActionProps {
      * (weighted)forward, fixedResponse or redirect action.
      */
     override fun next(next: ListenerAction) {
-      cdkBuilder.next(next.let(ListenerAction::unwrap))
+      cdkBuilder.next(next.let(ListenerAction.Companion::unwrap))
     }
 
     /**
      * @param onUnauthenticatedRequest The behavior if the user is not authenticated.
      */
     override fun onUnauthenticatedRequest(onUnauthenticatedRequest: UnauthenticatedAction) {
-      cdkBuilder.onUnauthenticatedRequest(onUnauthenticatedRequest.let(UnauthenticatedAction::unwrap))
+      cdkBuilder.onUnauthenticatedRequest(onUnauthenticatedRequest.let(UnauthenticatedAction.Companion::unwrap))
     }
 
     /**
@@ -281,21 +281,21 @@ public interface AuthenticateCognitoActionProps {
      * @param sessionTimeout The maximum duration of the authentication session.
      */
     override fun sessionTimeout(sessionTimeout: Duration) {
-      cdkBuilder.sessionTimeout(sessionTimeout.let(Duration::unwrap))
+      cdkBuilder.sessionTimeout(sessionTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param userPool The Amazon Cognito user pool. 
      */
     override fun userPool(userPool: IUserPool) {
-      cdkBuilder.userPool(userPool.let(IUserPool::unwrap))
+      cdkBuilder.userPool(userPool.let(IUserPool.Companion::unwrap))
     }
 
     /**
      * @param userPoolClient The Amazon Cognito user pool client. 
      */
     override fun userPoolClient(userPoolClient: IUserPoolClient) {
-      cdkBuilder.userPoolClient(userPoolClient.let(IUserPoolClient::unwrap))
+      cdkBuilder.userPoolClient(userPoolClient.let(IUserPoolClient.Companion::unwrap))
     }
 
     /**
@@ -303,7 +303,7 @@ public interface AuthenticateCognitoActionProps {
      * user pool. 
      */
     override fun userPoolDomain(userPoolDomain: IUserPoolDomain) {
-      cdkBuilder.userPoolDomain(userPoolDomain.let(IUserPoolDomain::unwrap))
+      cdkBuilder.userPoolDomain(userPoolDomain.let(IUserPoolDomain.Companion::unwrap))
     }
 
     public fun build():

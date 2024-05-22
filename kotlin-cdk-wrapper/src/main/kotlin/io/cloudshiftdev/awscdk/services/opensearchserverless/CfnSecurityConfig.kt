@@ -51,7 +51,7 @@ public open class CfnSecurityConfig(
   cdkObject: software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -60,8 +60,8 @@ public open class CfnSecurityConfig(
     id: String,
     props: CfnSecurityConfigProps,
   ) :
-      this(software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSecurityConfigProps::unwrap))
+      this(software.amazon.awscdk.services.opensearchserverless.CfnSecurityConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSecurityConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -96,7 +96,7 @@ public open class CfnSecurityConfig(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -120,14 +120,14 @@ public open class CfnSecurityConfig(
    * SAML options for the security configuration in the form of a key-value map.
    */
   public open fun samlOptions(`value`: IResolvable) {
-    unwrap(this).setSamlOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSamlOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * SAML options for the security configuration in the form of a key-value map.
    */
   public open fun samlOptions(`value`: SamlConfigOptionsProperty) {
-    unwrap(this).setSamlOptions(`value`.let(SamlConfigOptionsProperty::unwrap))
+    unwrap(this).setSamlOptions(`value`.let(SamlConfigOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -248,7 +248,7 @@ public open class CfnSecurityConfig(
      * map. 
      */
     override fun samlOptions(samlOptions: IResolvable) {
-      cdkBuilder.samlOptions(samlOptions.let(IResolvable::unwrap))
+      cdkBuilder.samlOptions(samlOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -259,7 +259,7 @@ public open class CfnSecurityConfig(
      * map. 
      */
     override fun samlOptions(samlOptions: SamlConfigOptionsProperty) {
-      cdkBuilder.samlOptions(samlOptions.let(SamlConfigOptionsProperty::unwrap))
+      cdkBuilder.samlOptions(samlOptions.let(SamlConfigOptionsProperty.Companion::unwrap))
     }
 
     /**

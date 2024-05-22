@@ -54,8 +54,8 @@ public open class TopicPolicy(
     id: String,
     props: TopicPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.sns.TopicPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(TopicPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.sns.TopicPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(TopicPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -153,7 +153,7 @@ public open class TopicPolicy(
      * @param policyDocument IAM policy document to apply to topic(s). 
      */
     override fun policyDocument(policyDocument: PolicyDocument) {
-      cdkBuilder.policyDocument(policyDocument.let(PolicyDocument::unwrap))
+      cdkBuilder.policyDocument(policyDocument.let(PolicyDocument.Companion::unwrap))
     }
 
     /**
@@ -174,7 +174,7 @@ public open class TopicPolicy(
      * @param topics The set of topics this policy applies to. 
      */
     override fun topics(topics: List<ITopic>) {
-      cdkBuilder.topics(topics.map(ITopic::unwrap))
+      cdkBuilder.topics(topics.map(ITopic.Companion::unwrap))
     }
 
     /**

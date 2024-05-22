@@ -70,8 +70,8 @@ public open class CfnParameter(
     id: String,
     props: CfnParameterProps,
   ) :
-      this(software.amazon.awscdk.services.ssm.CfnParameter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnParameterProps::unwrap))
+      this(software.amazon.awscdk.services.ssm.CfnParameter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnParameterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -135,7 +135,7 @@ public open class CfnParameter(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

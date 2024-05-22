@@ -257,7 +257,7 @@ public interface EcsFargateContainerDefinitionProps : EcsContainerDefinitionProp
      * @param ephemeralStorageSize The size for ephemeral storage.
      */
     override fun ephemeralStorageSize(ephemeralStorageSize: Size) {
-      cdkBuilder.ephemeralStorageSize(ephemeralStorageSize.let(Size::unwrap))
+      cdkBuilder.ephemeralStorageSize(ephemeralStorageSize.let(Size.Companion::unwrap))
     }
 
     /**
@@ -265,42 +265,42 @@ public interface EcsFargateContainerDefinitionProps : EcsContainerDefinitionProp
      * API calls on your behalf.
      */
     override fun executionRole(executionRole: IRole) {
-      cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
+      cdkBuilder.executionRole(executionRole.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param fargateCpuArchitecture The vCPU architecture of Fargate Runtime.
      */
     override fun fargateCpuArchitecture(fargateCpuArchitecture: CpuArchitecture) {
-      cdkBuilder.fargateCpuArchitecture(fargateCpuArchitecture.let(CpuArchitecture::unwrap))
+      cdkBuilder.fargateCpuArchitecture(fargateCpuArchitecture.let(CpuArchitecture.Companion::unwrap))
     }
 
     /**
      * @param fargateOperatingSystemFamily The operating system for the compute environment.
      */
     override fun fargateOperatingSystemFamily(fargateOperatingSystemFamily: OperatingSystemFamily) {
-      cdkBuilder.fargateOperatingSystemFamily(fargateOperatingSystemFamily.let(OperatingSystemFamily::unwrap))
+      cdkBuilder.fargateOperatingSystemFamily(fargateOperatingSystemFamily.let(OperatingSystemFamily.Companion::unwrap))
     }
 
     /**
      * @param fargatePlatformVersion Which version of Fargate to use when running this container.
      */
     override fun fargatePlatformVersion(fargatePlatformVersion: FargatePlatformVersion) {
-      cdkBuilder.fargatePlatformVersion(fargatePlatformVersion.let(FargatePlatformVersion::unwrap))
+      cdkBuilder.fargatePlatformVersion(fargatePlatformVersion.let(FargatePlatformVersion.Companion::unwrap))
     }
 
     /**
      * @param image The image that this container will run. 
      */
     override fun image(image: ContainerImage) {
-      cdkBuilder.image(image.let(ContainerImage::unwrap))
+      cdkBuilder.image(image.let(ContainerImage.Companion::unwrap))
     }
 
     /**
      * @param jobRole The role that the container can assume.
      */
     override fun jobRole(jobRole: IRole) {
-      cdkBuilder.jobRole(jobRole.let(IRole::unwrap))
+      cdkBuilder.jobRole(jobRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -308,14 +308,14 @@ public interface EcsFargateContainerDefinitionProps : EcsContainerDefinitionProp
      * as details for device mappings.
      */
     override fun linuxParameters(linuxParameters: LinuxParameters) {
-      cdkBuilder.linuxParameters(linuxParameters.let(LinuxParameters::unwrap))
+      cdkBuilder.linuxParameters(linuxParameters.let(LinuxParameters.Companion::unwrap))
     }
 
     /**
      * @param logging The loging configuration for this Job.
      */
     override fun logging(logging: LogDriver) {
-      cdkBuilder.logging(logging.let(LogDriver::unwrap))
+      cdkBuilder.logging(logging.let(LogDriver.Companion::unwrap))
     }
 
     /**
@@ -324,7 +324,7 @@ public interface EcsFargateContainerDefinitionProps : EcsContainerDefinitionProp
      * You must specify at least 4 MiB of memory for a job.
      */
     override fun memory(memory: Size) {
-      cdkBuilder.memory(memory.let(Size::unwrap))
+      cdkBuilder.memory(memory.let(Size.Companion::unwrap))
     }
 
     /**
@@ -355,7 +355,7 @@ public interface EcsFargateContainerDefinitionProps : EcsContainerDefinitionProp
      * Automatically added to the job definition.
      */
     override fun volumes(volumes: List<EcsVolume>) {
-      cdkBuilder.volumes(volumes.map(EcsVolume::unwrap))
+      cdkBuilder.volumes(volumes.map(EcsVolume.Companion::unwrap))
     }
 
     /**

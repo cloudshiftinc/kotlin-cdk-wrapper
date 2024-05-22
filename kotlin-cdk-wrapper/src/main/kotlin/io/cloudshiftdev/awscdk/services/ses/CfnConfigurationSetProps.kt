@@ -255,7 +255,7 @@ public interface CfnConfigurationSetProps {
      * to use Transport Layer Security (TLS).
      */
     override fun deliveryOptions(deliveryOptions: IResolvable) {
-      cdkBuilder.deliveryOptions(deliveryOptions.let(IResolvable::unwrap))
+      cdkBuilder.deliveryOptions(deliveryOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -263,7 +263,7 @@ public interface CfnConfigurationSetProps {
      * to use Transport Layer Security (TLS).
      */
     override fun deliveryOptions(deliveryOptions: CfnConfigurationSet.DeliveryOptionsProperty) {
-      cdkBuilder.deliveryOptions(deliveryOptions.let(CfnConfigurationSet.DeliveryOptionsProperty::unwrap))
+      cdkBuilder.deliveryOptions(deliveryOptions.let(CfnConfigurationSet.DeliveryOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -291,7 +291,7 @@ public interface CfnConfigurationSetProps {
      * configuration set.
      */
     override fun reputationOptions(reputationOptions: IResolvable) {
-      cdkBuilder.reputationOptions(reputationOptions.let(IResolvable::unwrap))
+      cdkBuilder.reputationOptions(reputationOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -300,7 +300,7 @@ public interface CfnConfigurationSetProps {
      */
     override
         fun reputationOptions(reputationOptions: CfnConfigurationSet.ReputationOptionsProperty) {
-      cdkBuilder.reputationOptions(reputationOptions.let(CfnConfigurationSet.ReputationOptionsProperty::unwrap))
+      cdkBuilder.reputationOptions(reputationOptions.let(CfnConfigurationSet.ReputationOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -318,7 +318,7 @@ public interface CfnConfigurationSetProps {
      * you send using the configuration set.
      */
     override fun sendingOptions(sendingOptions: IResolvable) {
-      cdkBuilder.sendingOptions(sendingOptions.let(IResolvable::unwrap))
+      cdkBuilder.sendingOptions(sendingOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -326,7 +326,7 @@ public interface CfnConfigurationSetProps {
      * you send using the configuration set.
      */
     override fun sendingOptions(sendingOptions: CfnConfigurationSet.SendingOptionsProperty) {
-      cdkBuilder.sendingOptions(sendingOptions.let(CfnConfigurationSet.SendingOptionsProperty::unwrap))
+      cdkBuilder.sendingOptions(sendingOptions.let(CfnConfigurationSet.SendingOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -344,7 +344,7 @@ public interface CfnConfigurationSetProps {
      * preferences for your account.
      */
     override fun suppressionOptions(suppressionOptions: IResolvable) {
-      cdkBuilder.suppressionOptions(suppressionOptions.let(IResolvable::unwrap))
+      cdkBuilder.suppressionOptions(suppressionOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -353,7 +353,7 @@ public interface CfnConfigurationSetProps {
      */
     override
         fun suppressionOptions(suppressionOptions: CfnConfigurationSet.SuppressionOptionsProperty) {
-      cdkBuilder.suppressionOptions(suppressionOptions.let(CfnConfigurationSet.SuppressionOptionsProperty::unwrap))
+      cdkBuilder.suppressionOptions(suppressionOptions.let(CfnConfigurationSet.SuppressionOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -372,7 +372,7 @@ public interface CfnConfigurationSetProps {
      * the configuration set.
      */
     override fun trackingOptions(trackingOptions: IResolvable) {
-      cdkBuilder.trackingOptions(trackingOptions.let(IResolvable::unwrap))
+      cdkBuilder.trackingOptions(trackingOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -380,7 +380,7 @@ public interface CfnConfigurationSetProps {
      * the configuration set.
      */
     override fun trackingOptions(trackingOptions: CfnConfigurationSet.TrackingOptionsProperty) {
-      cdkBuilder.trackingOptions(trackingOptions.let(CfnConfigurationSet.TrackingOptionsProperty::unwrap))
+      cdkBuilder.trackingOptions(trackingOptions.let(CfnConfigurationSet.TrackingOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -398,7 +398,7 @@ public interface CfnConfigurationSetProps {
      * configuration set.
      */
     override fun vdmOptions(vdmOptions: IResolvable) {
-      cdkBuilder.vdmOptions(vdmOptions.let(IResolvable::unwrap))
+      cdkBuilder.vdmOptions(vdmOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -406,7 +406,7 @@ public interface CfnConfigurationSetProps {
      * configuration set.
      */
     override fun vdmOptions(vdmOptions: CfnConfigurationSet.VdmOptionsProperty) {
-      cdkBuilder.vdmOptions(vdmOptions.let(CfnConfigurationSet.VdmOptionsProperty::unwrap))
+      cdkBuilder.vdmOptions(vdmOptions.let(CfnConfigurationSet.VdmOptionsProperty.Companion::unwrap))
     }
 
     /**

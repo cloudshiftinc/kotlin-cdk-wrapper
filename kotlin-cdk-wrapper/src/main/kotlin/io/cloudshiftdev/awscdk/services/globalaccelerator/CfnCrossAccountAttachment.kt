@@ -76,8 +76,8 @@ public open class CfnCrossAccountAttachment(
     id: String,
     props: CfnCrossAccountAttachmentProps,
   ) :
-      this(software.amazon.awscdk.services.globalaccelerator.CfnCrossAccountAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCrossAccountAttachmentProps::unwrap))
+      this(software.amazon.awscdk.services.globalaccelerator.CfnCrossAccountAttachment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCrossAccountAttachmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -88,7 +88,7 @@ public open class CfnCrossAccountAttachment(
   )
 
   /**
-   * The Amazon Resource Name (ARN) of the attachment.
+   * The Amazon Resource Name (ARN) of the cross-account attachment.
    */
   public open fun attrAttachmentArn(): String = unwrap(this).getAttrAttachmentArn()
 
@@ -104,76 +104,76 @@ public open class CfnCrossAccountAttachment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
-   * The Friendly identifier of the attachment.
+   * The name of the cross-account attachment.
    */
   public open fun name(): String = unwrap(this).getName()
 
   /**
-   * The Friendly identifier of the attachment.
+   * The name of the cross-account attachment.
    */
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
   }
 
   /**
-   * Principals to share the resources with.
+   * The principals included in the cross-account attachment.
    */
   public open fun principals(): List<String> = unwrap(this).getPrincipals() ?: emptyList()
 
   /**
-   * Principals to share the resources with.
+   * The principals included in the cross-account attachment.
    */
   public open fun principals(`value`: List<String>) {
     unwrap(this).setPrincipals(`value`)
   }
 
   /**
-   * Principals to share the resources with.
+   * The principals included in the cross-account attachment.
    */
   public open fun principals(vararg `value`: String): Unit = principals(`value`.toList())
 
   /**
-   * Resources shared using the attachment.
+   * The resources included in the cross-account attachment.
    */
   public open fun resources(): Any? = unwrap(this).getResources()
 
   /**
-   * Resources shared using the attachment.
+   * The resources included in the cross-account attachment.
    */
   public open fun resources(`value`: IResolvable) {
-    unwrap(this).setResources(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResources(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Resources shared using the attachment.
+   * The resources included in the cross-account attachment.
    */
   public open fun resources(`value`: List<Any>) {
     unwrap(this).setResources(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * Resources shared using the attachment.
+   * The resources included in the cross-account attachment.
    */
   public open fun resources(vararg `value`: Any): Unit = resources(`value`.toList())
 
   /**
-   *
+   * Add tags for a cross-account attachment.
    */
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   *
+   * Add tags for a cross-account attachment.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   *
+   * Add tags for a cross-account attachment.
    */
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
@@ -184,62 +184,74 @@ public open class CfnCrossAccountAttachment(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The Friendly identifier of the attachment.
+     * The name of the cross-account attachment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-crossaccountattachment.html#cfn-globalaccelerator-crossaccountattachment-name)
-     * @param name The Friendly identifier of the attachment. 
+     * @param name The name of the cross-account attachment. 
      */
     public fun name(name: String)
 
     /**
-     * Principals to share the resources with.
+     * The principals included in the cross-account attachment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-crossaccountattachment.html#cfn-globalaccelerator-crossaccountattachment-principals)
-     * @param principals Principals to share the resources with. 
+     * @param principals The principals included in the cross-account attachment. 
      */
     public fun principals(principals: List<String>)
 
     /**
-     * Principals to share the resources with.
+     * The principals included in the cross-account attachment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-crossaccountattachment.html#cfn-globalaccelerator-crossaccountattachment-principals)
-     * @param principals Principals to share the resources with. 
+     * @param principals The principals included in the cross-account attachment. 
      */
     public fun principals(vararg principals: String)
 
     /**
-     * Resources shared using the attachment.
+     * The resources included in the cross-account attachment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-crossaccountattachment.html#cfn-globalaccelerator-crossaccountattachment-resources)
-     * @param resources Resources shared using the attachment. 
+     * @param resources The resources included in the cross-account attachment. 
      */
     public fun resources(resources: IResolvable)
 
     /**
-     * Resources shared using the attachment.
+     * The resources included in the cross-account attachment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-crossaccountattachment.html#cfn-globalaccelerator-crossaccountattachment-resources)
-     * @param resources Resources shared using the attachment. 
+     * @param resources The resources included in the cross-account attachment. 
      */
     public fun resources(resources: List<Any>)
 
     /**
-     * Resources shared using the attachment.
+     * The resources included in the cross-account attachment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-crossaccountattachment.html#cfn-globalaccelerator-crossaccountattachment-resources)
-     * @param resources Resources shared using the attachment. 
+     * @param resources The resources included in the cross-account attachment. 
      */
     public fun resources(vararg resources: Any)
 
     /**
+     * Add tags for a cross-account attachment.
+     *
+     * For more information, see [Tagging in AWS Global
+     * Accelerator](https://docs.aws.amazon.com/global-accelerator/latest/dg/tagging-in-global-accelerator.html)
+     * in the *AWS Global Accelerator Developer Guide* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-crossaccountattachment.html#cfn-globalaccelerator-crossaccountattachment-tags)
-     * @param tags 
+     * @param tags Add tags for a cross-account attachment. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
+     * Add tags for a cross-account attachment.
+     *
+     * For more information, see [Tagging in AWS Global
+     * Accelerator](https://docs.aws.amazon.com/global-accelerator/latest/dg/tagging-in-global-accelerator.html)
+     * in the *AWS Global Accelerator Developer Guide* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-crossaccountattachment.html#cfn-globalaccelerator-crossaccountattachment-tags)
-     * @param tags 
+     * @param tags Add tags for a cross-account attachment. 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -254,72 +266,84 @@ public open class CfnCrossAccountAttachment(
         id)
 
     /**
-     * The Friendly identifier of the attachment.
+     * The name of the cross-account attachment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-crossaccountattachment.html#cfn-globalaccelerator-crossaccountattachment-name)
-     * @param name The Friendly identifier of the attachment. 
+     * @param name The name of the cross-account attachment. 
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
     /**
-     * Principals to share the resources with.
+     * The principals included in the cross-account attachment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-crossaccountattachment.html#cfn-globalaccelerator-crossaccountattachment-principals)
-     * @param principals Principals to share the resources with. 
+     * @param principals The principals included in the cross-account attachment. 
      */
     override fun principals(principals: List<String>) {
       cdkBuilder.principals(principals)
     }
 
     /**
-     * Principals to share the resources with.
+     * The principals included in the cross-account attachment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-crossaccountattachment.html#cfn-globalaccelerator-crossaccountattachment-principals)
-     * @param principals Principals to share the resources with. 
+     * @param principals The principals included in the cross-account attachment. 
      */
     override fun principals(vararg principals: String): Unit = principals(principals.toList())
 
     /**
-     * Resources shared using the attachment.
+     * The resources included in the cross-account attachment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-crossaccountattachment.html#cfn-globalaccelerator-crossaccountattachment-resources)
-     * @param resources Resources shared using the attachment. 
+     * @param resources The resources included in the cross-account attachment. 
      */
     override fun resources(resources: IResolvable) {
-      cdkBuilder.resources(resources.let(IResolvable::unwrap))
+      cdkBuilder.resources(resources.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Resources shared using the attachment.
+     * The resources included in the cross-account attachment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-crossaccountattachment.html#cfn-globalaccelerator-crossaccountattachment-resources)
-     * @param resources Resources shared using the attachment. 
+     * @param resources The resources included in the cross-account attachment. 
      */
     override fun resources(resources: List<Any>) {
       cdkBuilder.resources(resources.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * Resources shared using the attachment.
+     * The resources included in the cross-account attachment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-crossaccountattachment.html#cfn-globalaccelerator-crossaccountattachment-resources)
-     * @param resources Resources shared using the attachment. 
+     * @param resources The resources included in the cross-account attachment. 
      */
     override fun resources(vararg resources: Any): Unit = resources(resources.toList())
 
     /**
+     * Add tags for a cross-account attachment.
+     *
+     * For more information, see [Tagging in AWS Global
+     * Accelerator](https://docs.aws.amazon.com/global-accelerator/latest/dg/tagging-in-global-accelerator.html)
+     * in the *AWS Global Accelerator Developer Guide* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-crossaccountattachment.html#cfn-globalaccelerator-crossaccountattachment-tags)
-     * @param tags 
+     * @param tags Add tags for a cross-account attachment. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
+     * Add tags for a cross-account attachment.
+     *
+     * For more information, see [Tagging in AWS Global
+     * Accelerator](https://docs.aws.amazon.com/global-accelerator/latest/dg/tagging-in-global-accelerator.html)
+     * in the *AWS Global Accelerator Developer Guide* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-globalaccelerator-crossaccountattachment.html#cfn-globalaccelerator-crossaccountattachment-tags)
-     * @param tags 
+     * @param tags Add tags for a cross-account attachment. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 

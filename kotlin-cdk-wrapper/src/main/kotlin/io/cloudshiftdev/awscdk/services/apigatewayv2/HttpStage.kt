@@ -34,8 +34,8 @@ public open class HttpStage(
     id: String,
     props: HttpStageProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.HttpStage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(HttpStageProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.HttpStage(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(HttpStageProps.Companion::unwrap))
   )
 
   public constructor(
@@ -71,7 +71,7 @@ public open class HttpStage(
    * @param props
    */
   public override fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Return the given named metric for this HTTP Api Gateway Stage.
@@ -98,7 +98,7 @@ public open class HttpStage(
    * @param props
    */
   public override fun metricClientError(props: MetricOptions): Metric =
-      unwrap(this).metricClientError(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricClientError(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of client-side errors captured in a given period.
@@ -123,7 +123,7 @@ public open class HttpStage(
    * @param props
    */
   public override fun metricCount(props: MetricOptions): Metric =
-      unwrap(this).metricCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the total number API requests in a given period.
@@ -149,7 +149,7 @@ public open class HttpStage(
    * @param props
    */
   public override fun metricDataProcessed(props: MetricOptions): Metric =
-      unwrap(this).metricDataProcessed(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricDataProcessed(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the amount of data processed in bytes.
@@ -177,7 +177,7 @@ public open class HttpStage(
    * @param props
    */
   public override fun metricIntegrationLatency(props: MetricOptions): Metric =
-      unwrap(this).metricIntegrationLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricIntegrationLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the time between when API Gateway relays a request to the backend and when it
@@ -209,7 +209,7 @@ public open class HttpStage(
    * @param props
    */
   public override fun metricLatency(props: MetricOptions): Metric =
-      unwrap(this).metricLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The time between when API Gateway receives a request from a client and when it returns a
@@ -238,7 +238,7 @@ public open class HttpStage(
    * @param props
    */
   public override fun metricServerError(props: MetricOptions): Metric =
-      unwrap(this).metricServerError(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricServerError(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the number of server-side errors captured in a given period.
@@ -362,7 +362,7 @@ public open class HttpStage(
      * @param domainMapping The options for custom domain and api mapping. 
      */
     override fun domainMapping(domainMapping: DomainMappingOptions) {
-      cdkBuilder.domainMapping(domainMapping.let(DomainMappingOptions::unwrap))
+      cdkBuilder.domainMapping(domainMapping.let(DomainMappingOptions.Companion::unwrap))
     }
 
     /**
@@ -383,7 +383,7 @@ public open class HttpStage(
      * @param httpApi The HTTP API to which this stage is associated. 
      */
     override fun httpApi(httpApi: IHttpApi) {
-      cdkBuilder.httpApi(httpApi.let(IHttpApi::unwrap))
+      cdkBuilder.httpApi(httpApi.let(IHttpApi.Companion::unwrap))
     }
 
     /**
@@ -408,7 +408,7 @@ public open class HttpStage(
      * @param throttle Throttle settings for the routes of this stage. 
      */
     override fun throttle(throttle: ThrottleSettings) {
-      cdkBuilder.throttle(throttle.let(ThrottleSettings::unwrap))
+      cdkBuilder.throttle(throttle.let(ThrottleSettings.Companion::unwrap))
     }
 
     /**
@@ -432,8 +432,8 @@ public open class HttpStage(
       id: String,
       attrs: HttpStageAttributes,
     ): IHttpStage =
-        software.amazon.awscdk.services.apigatewayv2.HttpStage.fromHttpStageAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(HttpStageAttributes::unwrap)).let(IHttpStage::wrap)
+        software.amazon.awscdk.services.apigatewayv2.HttpStage.fromHttpStageAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(HttpStageAttributes.Companion::unwrap)).let(IHttpStage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("575259e563e823f79320eb804445610337a793b8fc45079d0015386ccc1dc845")

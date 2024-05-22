@@ -575,7 +575,7 @@ public interface CfnFlowProps {
      * data in the destination connector. 
      */
     override fun destinationFlowConfigList(destinationFlowConfigList: IResolvable) {
-      cdkBuilder.destinationFlowConfigList(destinationFlowConfigList.let(IResolvable::unwrap))
+      cdkBuilder.destinationFlowConfigList(destinationFlowConfigList.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -635,7 +635,7 @@ public interface CfnFlowProps {
      * When Amazon AppFlow catalogs your data, it stores metadata in a data catalog.
      */
     override fun metadataCatalogConfig(metadataCatalogConfig: IResolvable) {
-      cdkBuilder.metadataCatalogConfig(metadataCatalogConfig.let(IResolvable::unwrap))
+      cdkBuilder.metadataCatalogConfig(metadataCatalogConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -645,7 +645,7 @@ public interface CfnFlowProps {
      */
     override
         fun metadataCatalogConfig(metadataCatalogConfig: CfnFlow.MetadataCatalogConfigProperty) {
-      cdkBuilder.metadataCatalogConfig(metadataCatalogConfig.let(CfnFlow.MetadataCatalogConfigProperty::unwrap))
+      cdkBuilder.metadataCatalogConfig(metadataCatalogConfig.let(CfnFlow.MetadataCatalogConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -664,7 +664,7 @@ public interface CfnFlowProps {
      * used in the flow. 
      */
     override fun sourceFlowConfig(sourceFlowConfig: IResolvable) {
-      cdkBuilder.sourceFlowConfig(sourceFlowConfig.let(IResolvable::unwrap))
+      cdkBuilder.sourceFlowConfig(sourceFlowConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -672,7 +672,7 @@ public interface CfnFlowProps {
      * used in the flow. 
      */
     override fun sourceFlowConfig(sourceFlowConfig: CfnFlow.SourceFlowConfigProperty) {
-      cdkBuilder.sourceFlowConfig(sourceFlowConfig.let(CfnFlow.SourceFlowConfigProperty::unwrap))
+      cdkBuilder.sourceFlowConfig(sourceFlowConfig.let(CfnFlow.SourceFlowConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -689,7 +689,7 @@ public interface CfnFlowProps {
      * @param tags The tags used to organize, track, or control access for your flow.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -702,7 +702,7 @@ public interface CfnFlowProps {
      * flow run. 
      */
     override fun tasks(tasks: IResolvable) {
-      cdkBuilder.tasks(tasks.let(IResolvable::unwrap))
+      cdkBuilder.tasks(tasks.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -724,7 +724,7 @@ public interface CfnFlowProps {
      * specified flow. 
      */
     override fun triggerConfig(triggerConfig: IResolvable) {
-      cdkBuilder.triggerConfig(triggerConfig.let(IResolvable::unwrap))
+      cdkBuilder.triggerConfig(triggerConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -732,7 +732,7 @@ public interface CfnFlowProps {
      * specified flow. 
      */
     override fun triggerConfig(triggerConfig: CfnFlow.TriggerConfigProperty) {
-      cdkBuilder.triggerConfig(triggerConfig.let(CfnFlow.TriggerConfigProperty::unwrap))
+      cdkBuilder.triggerConfig(triggerConfig.let(CfnFlow.TriggerConfigProperty.Companion::unwrap))
     }
 
     /**

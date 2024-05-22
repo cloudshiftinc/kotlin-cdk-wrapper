@@ -57,8 +57,8 @@ public open class CfnProfilingGroup(
     id: String,
     props: CfnProfilingGroupProps,
   ) :
-      this(software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnProfilingGroupProps::unwrap))
+      this(software.amazon.awscdk.services.codeguruprofiler.CfnProfilingGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnProfilingGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -90,7 +90,7 @@ public open class CfnProfilingGroup(
    * Adds anomaly notifications for a profiling group.
    */
   public open fun anomalyDetectionNotificationConfiguration(`value`: IResolvable) {
-    unwrap(this).setAnomalyDetectionNotificationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAnomalyDetectionNotificationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -129,7 +129,7 @@ public open class CfnProfilingGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -159,7 +159,7 @@ public open class CfnProfilingGroup(
    * A list of tags to add to the created profiling group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -305,7 +305,7 @@ public open class CfnProfilingGroup(
      */
     override
         fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: IResolvable) {
-      cdkBuilder.anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -363,7 +363,7 @@ public open class CfnProfilingGroup(
      * @param tags A list of tags to add to the created profiling group. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

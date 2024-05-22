@@ -173,7 +173,7 @@ public interface AssemblyManifest {
      * cloud assembly is not complete and should not be deployed.
      */
     override fun missing(missing: List<MissingContext>) {
-      cdkBuilder.missing(missing.map(MissingContext::unwrap))
+      cdkBuilder.missing(missing.map(MissingContext.Companion::unwrap))
     }
 
     /**
@@ -187,7 +187,7 @@ public interface AssemblyManifest {
      * @param runtime Runtime information.
      */
     override fun runtime(runtime: RuntimeInfo) {
-      cdkBuilder.runtime(runtime.let(RuntimeInfo::unwrap))
+      cdkBuilder.runtime(runtime.let(RuntimeInfo.Companion::unwrap))
     }
 
     /**

@@ -59,7 +59,7 @@ public interface VirtualRouterAttributes {
      * @param mesh The Mesh which the VirtualRouter belongs to. 
      */
     override fun mesh(mesh: IMesh) {
-      cdkBuilder.mesh(mesh.let(IMesh::unwrap))
+      cdkBuilder.mesh(mesh.let(IMesh.Companion::unwrap))
     }
 
     /**

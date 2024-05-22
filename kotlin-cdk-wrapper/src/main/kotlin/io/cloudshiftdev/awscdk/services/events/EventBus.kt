@@ -37,7 +37,7 @@ public open class EventBus(
   cdkObject: software.amazon.awscdk.services.events.EventBus,
 ) : Resource(cdkObject), IEventBus {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.events.EventBus(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.events.EventBus(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -46,8 +46,8 @@ public open class EventBus(
     id: String,
     props: EventBusProps,
   ) :
-      this(software.amazon.awscdk.services.events.EventBus(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EventBusProps::unwrap))
+      this(software.amazon.awscdk.services.events.EventBus(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EventBusProps.Companion::unwrap))
   )
 
   public constructor(
@@ -63,7 +63,7 @@ public open class EventBus(
    * @param statement 
    */
   public open fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
-      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement::unwrap)).let(AddToResourcePolicyResult::wrap)
+      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
 
   /**
    * Adds a statement to the IAM resource policy associated with this event bus.
@@ -86,7 +86,7 @@ public open class EventBus(
    * @param props 
    */
   public override fun archive(id: String, props: BaseArchiveProps): Archive =
-      unwrap(this).archive(id, props.let(BaseArchiveProps::unwrap)).let(Archive::wrap)
+      unwrap(this).archive(id, props.let(BaseArchiveProps.Companion::unwrap)).let(Archive::wrap)
 
   /**
    * Create an EventBridge archive to send events to.
@@ -131,7 +131,7 @@ public open class EventBus(
    * @param grantee 
    */
   public override fun grantPutEventsTo(grantee: IGrantable): Grant =
-      unwrap(this).grantPutEventsTo(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantPutEventsTo(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.events.EventBus].
@@ -203,7 +203,7 @@ public open class EventBus(
       id: String,
       eventBusArn: String,
     ): IEventBus =
-        software.amazon.awscdk.services.events.EventBus.fromEventBusArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.events.EventBus.fromEventBusArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, eventBusArn).let(IEventBus::wrap)
 
     public fun fromEventBusAttributes(
@@ -211,8 +211,8 @@ public open class EventBus(
       id: String,
       attrs: EventBusAttributes,
     ): IEventBus =
-        software.amazon.awscdk.services.events.EventBus.fromEventBusAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(EventBusAttributes::unwrap)).let(IEventBus::wrap)
+        software.amazon.awscdk.services.events.EventBus.fromEventBusAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(EventBusAttributes.Companion::unwrap)).let(IEventBus::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("db4baaedf19a8aa6a12b5ee830180ece463210cfe7437dd4c219388fb552b137")
@@ -227,11 +227,11 @@ public open class EventBus(
       id: String,
       eventBusName: String,
     ): IEventBus =
-        software.amazon.awscdk.services.events.EventBus.fromEventBusName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.events.EventBus.fromEventBusName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, eventBusName).let(IEventBus::wrap)
 
     public fun grantAllPutEvents(grantee: IGrantable): Grant =
-        software.amazon.awscdk.services.events.EventBus.grantAllPutEvents(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        software.amazon.awscdk.services.events.EventBus.grantAllPutEvents(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,

@@ -223,7 +223,7 @@ public interface SageMakerCreateEndpointConfigProps : TaskStateBaseProps {
      * This enables cross-account resource invocations.
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -249,7 +249,7 @@ public interface SageMakerCreateEndpointConfigProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -258,7 +258,7 @@ public interface SageMakerCreateEndpointConfigProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -279,7 +279,7 @@ public interface SageMakerCreateEndpointConfigProps : TaskStateBaseProps {
      * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -287,7 +287,7 @@ public interface SageMakerCreateEndpointConfigProps : TaskStateBaseProps {
      * the storage volume attached to the ML compute instance that hosts the endpoint.
      */
     override fun kmsKey(kmsKey: IKey) {
-      cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -308,7 +308,7 @@ public interface SageMakerCreateEndpointConfigProps : TaskStateBaseProps {
      * the models by specifying variant weights.
      */
     override fun productionVariants(productionVariants: List<ProductionVariant>) {
-      cdkBuilder.productionVariants(productionVariants.map(ProductionVariant::unwrap))
+      cdkBuilder.productionVariants(productionVariants.map(ProductionVariant.Companion::unwrap))
     }
 
     /**
@@ -351,7 +351,7 @@ public interface SageMakerCreateEndpointConfigProps : TaskStateBaseProps {
      * @param tags Tags to be applied to the endpoint configuration.
      */
     override fun tags(tags: TaskInput) {
-      cdkBuilder.tags(tags.let(TaskInput::unwrap))
+      cdkBuilder.tags(tags.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -360,7 +360,7 @@ public interface SageMakerCreateEndpointConfigProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -369,7 +369,7 @@ public interface SageMakerCreateEndpointConfigProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build():

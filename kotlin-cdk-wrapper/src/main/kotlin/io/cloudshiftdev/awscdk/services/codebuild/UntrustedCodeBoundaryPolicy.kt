@@ -39,7 +39,7 @@ public open class UntrustedCodeBoundaryPolicy(
   cdkObject: software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicy,
 ) : ManagedPolicy(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -48,8 +48,8 @@ public open class UntrustedCodeBoundaryPolicy(
     id: String,
     props: UntrustedCodeBoundaryPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(UntrustedCodeBoundaryPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.codebuild.UntrustedCodeBoundaryPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(UntrustedCodeBoundaryPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -109,7 +109,7 @@ public open class UntrustedCodeBoundaryPolicy(
      * @param additionalStatements Additional statements to add to the default set of statements. 
      */
     override fun additionalStatements(additionalStatements: List<PolicyStatement>) {
-      cdkBuilder.additionalStatements(additionalStatements.map(PolicyStatement::unwrap))
+      cdkBuilder.additionalStatements(additionalStatements.map(PolicyStatement.Companion::unwrap))
     }
 
     /**

@@ -90,8 +90,8 @@ public open class CfnConfigurationRecorder(
     id: String,
     props: CfnConfigurationRecorderProps,
   ) :
-      this(software.amazon.awscdk.services.config.CfnConfigurationRecorder(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConfigurationRecorderProps::unwrap))
+      this(software.amazon.awscdk.services.config.CfnConfigurationRecorder(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConfigurationRecorderProps.Companion::unwrap))
   )
 
   public constructor(
@@ -112,7 +112,7 @@ public open class CfnConfigurationRecorder(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -142,14 +142,14 @@ public open class CfnConfigurationRecorder(
    * Specifies which resource types AWS Config records for configuration changes.
    */
   public open fun recordingGroup(`value`: IResolvable) {
-    unwrap(this).setRecordingGroup(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRecordingGroup(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies which resource types AWS Config records for configuration changes.
    */
   public open fun recordingGroup(`value`: RecordingGroupProperty) {
-    unwrap(this).setRecordingGroup(`value`.let(RecordingGroupProperty::unwrap))
+    unwrap(this).setRecordingGroup(`value`.let(RecordingGroupProperty.Companion::unwrap))
   }
 
   /**
@@ -169,14 +169,14 @@ public open class CfnConfigurationRecorder(
    * Specifies the default recording frequency that AWS Config uses to record configuration changes.
    */
   public open fun recordingMode(`value`: IResolvable) {
-    unwrap(this).setRecordingMode(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRecordingMode(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the default recording frequency that AWS Config uses to record configuration changes.
    */
   public open fun recordingMode(`value`: RecordingModeProperty) {
-    unwrap(this).setRecordingMode(`value`.let(RecordingModeProperty::unwrap))
+    unwrap(this).setRecordingMode(`value`.let(RecordingModeProperty.Companion::unwrap))
   }
 
   /**
@@ -458,7 +458,7 @@ public open class CfnConfigurationRecorder(
      * changes. 
      */
     override fun recordingGroup(recordingGroup: IResolvable) {
-      cdkBuilder.recordingGroup(recordingGroup.let(IResolvable::unwrap))
+      cdkBuilder.recordingGroup(recordingGroup.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -486,7 +486,7 @@ public open class CfnConfigurationRecorder(
      * changes. 
      */
     override fun recordingGroup(recordingGroup: RecordingGroupProperty) {
-      cdkBuilder.recordingGroup(recordingGroup.let(RecordingGroupProperty::unwrap))
+      cdkBuilder.recordingGroup(recordingGroup.let(RecordingGroupProperty.Companion::unwrap))
     }
 
     /**
@@ -542,7 +542,7 @@ public open class CfnConfigurationRecorder(
      * configuration changes. 
      */
     override fun recordingMode(recordingMode: IResolvable) {
-      cdkBuilder.recordingMode(recordingMode.let(IResolvable::unwrap))
+      cdkBuilder.recordingMode(recordingMode.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -569,7 +569,7 @@ public open class CfnConfigurationRecorder(
      * configuration changes. 
      */
     override fun recordingMode(recordingMode: RecordingModeProperty) {
-      cdkBuilder.recordingMode(recordingMode.let(RecordingModeProperty::unwrap))
+      cdkBuilder.recordingMode(recordingMode.let(RecordingModeProperty.Companion::unwrap))
     }
 
     /**
@@ -1633,7 +1633,7 @@ public open class CfnConfigurationRecorder(
        * to see if a resource type is supported in the AWS Region where you set up AWS Config .
        */
       override fun allSupported(allSupported: IResolvable) {
-        cdkBuilder.allSupported(allSupported.let(IResolvable::unwrap))
+        cdkBuilder.allSupported(allSupported.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1644,7 +1644,7 @@ public open class CfnConfigurationRecorder(
        * to `EXCLUSION_BY_RESOURCE_TYPES` .
        */
       override fun exclusionByResourceTypes(exclusionByResourceTypes: IResolvable) {
-        cdkBuilder.exclusionByResourceTypes(exclusionByResourceTypes.let(IResolvable::unwrap))
+        cdkBuilder.exclusionByResourceTypes(exclusionByResourceTypes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1656,7 +1656,7 @@ public open class CfnConfigurationRecorder(
        */
       override
           fun exclusionByResourceTypes(exclusionByResourceTypes: ExclusionByResourceTypesProperty) {
-        cdkBuilder.exclusionByResourceTypes(exclusionByResourceTypes.let(ExclusionByResourceTypesProperty::unwrap))
+        cdkBuilder.exclusionByResourceTypes(exclusionByResourceTypes.let(ExclusionByResourceTypesProperty.Companion::unwrap))
       }
 
       /**
@@ -1812,7 +1812,7 @@ public open class CfnConfigurationRecorder(
        * `ResourceTypes` field in addition to setting the `IncludeGlobalResourceTypes` field to false.
        */
       override fun includeGlobalResourceTypes(includeGlobalResourceTypes: IResolvable) {
-        cdkBuilder.includeGlobalResourceTypes(includeGlobalResourceTypes.let(IResolvable::unwrap))
+        cdkBuilder.includeGlobalResourceTypes(includeGlobalResourceTypes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1888,7 +1888,7 @@ public open class CfnConfigurationRecorder(
        * * Middle East (UAE)
        */
       override fun recordingStrategy(recordingStrategy: IResolvable) {
-        cdkBuilder.recordingStrategy(recordingStrategy.let(IResolvable::unwrap))
+        cdkBuilder.recordingStrategy(recordingStrategy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1964,7 +1964,7 @@ public open class CfnConfigurationRecorder(
        * * Middle East (UAE)
        */
       override fun recordingStrategy(recordingStrategy: RecordingStrategyProperty) {
-        cdkBuilder.recordingStrategy(recordingStrategy.let(RecordingStrategyProperty::unwrap))
+        cdkBuilder.recordingStrategy(recordingStrategy.let(RecordingStrategyProperty.Companion::unwrap))
       }
 
       /**
@@ -2749,7 +2749,7 @@ public open class CfnConfigurationRecorder(
        * override.
        */
       override fun recordingModeOverrides(recordingModeOverrides: IResolvable) {
-        cdkBuilder.recordingModeOverrides(recordingModeOverrides.let(IResolvable::unwrap))
+        cdkBuilder.recordingModeOverrides(recordingModeOverrides.let(IResolvable.Companion::unwrap))
       }
 
       /**

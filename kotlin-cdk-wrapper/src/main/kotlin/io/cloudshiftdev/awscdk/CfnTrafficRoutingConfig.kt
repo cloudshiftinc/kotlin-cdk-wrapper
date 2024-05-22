@@ -103,7 +103,7 @@ public interface CfnTrafficRoutingConfig {
      * `CfnTrafficRoutingType.TIME_BASED_CANARY`.
      */
     override fun timeBasedCanary(timeBasedCanary: CfnTrafficRoutingTimeBasedCanary) {
-      cdkBuilder.timeBasedCanary(timeBasedCanary.let(CfnTrafficRoutingTimeBasedCanary::unwrap))
+      cdkBuilder.timeBasedCanary(timeBasedCanary.let(CfnTrafficRoutingTimeBasedCanary.Companion::unwrap))
     }
 
     /**
@@ -121,7 +121,7 @@ public interface CfnTrafficRoutingConfig {
      * `CfnTrafficRoutingType.TIME_BASED_LINEAR`.
      */
     override fun timeBasedLinear(timeBasedLinear: CfnTrafficRoutingTimeBasedLinear) {
-      cdkBuilder.timeBasedLinear(timeBasedLinear.let(CfnTrafficRoutingTimeBasedLinear::unwrap))
+      cdkBuilder.timeBasedLinear(timeBasedLinear.let(CfnTrafficRoutingTimeBasedLinear.Companion::unwrap))
     }
 
     /**
@@ -138,7 +138,7 @@ public interface CfnTrafficRoutingConfig {
      * @param type The type of traffic shifting used by the blue-green deployment configuration. 
      */
     override fun type(type: CfnTrafficRoutingType) {
-      cdkBuilder.type(type.let(CfnTrafficRoutingType::unwrap))
+      cdkBuilder.type(type.let(CfnTrafficRoutingType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.CfnTrafficRoutingConfig = cdkBuilder.build()

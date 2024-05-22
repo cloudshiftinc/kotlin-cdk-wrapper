@@ -134,7 +134,7 @@ public interface CfnCodeDeployBlueGreenEcsAttributes {
      * @param trafficRouting The traffic routing configuration. 
      */
     override fun trafficRouting(trafficRouting: CfnTrafficRouting) {
-      cdkBuilder.trafficRouting(trafficRouting.let(CfnTrafficRouting::unwrap))
+      cdkBuilder.trafficRouting(trafficRouting.let(CfnTrafficRouting.Companion::unwrap))
     }
 
     /**

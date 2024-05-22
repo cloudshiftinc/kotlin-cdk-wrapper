@@ -193,14 +193,14 @@ public interface AddNetworkTargetsProps {
      * The range is 0-3600 seconds.
      */
     override fun deregistrationDelay(deregistrationDelay: Duration) {
-      cdkBuilder.deregistrationDelay(deregistrationDelay.let(Duration::unwrap))
+      cdkBuilder.deregistrationDelay(deregistrationDelay.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param healthCheck Health check configuration.
      */
     override fun healthCheck(healthCheck: HealthCheck) {
-      cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
     }
 
     /**
@@ -229,7 +229,7 @@ public interface AddNetworkTargetsProps {
      * @param protocol Protocol for target group, expects TCP, TLS, UDP, or TCP_UDP.
      */
     override fun protocol(protocol: Protocol) {
-      cdkBuilder.protocol(protocol.let(Protocol::unwrap))
+      cdkBuilder.protocol(protocol.let(Protocol.Companion::unwrap))
     }
 
     /**
@@ -256,7 +256,7 @@ public interface AddNetworkTargetsProps {
      * target must be of the same type.
      */
     override fun targets(targets: List<INetworkLoadBalancerTarget>) {
-      cdkBuilder.targets(targets.map(INetworkLoadBalancerTarget::unwrap))
+      cdkBuilder.targets(targets.map(INetworkLoadBalancerTarget.Companion::unwrap))
     }
 
     /**

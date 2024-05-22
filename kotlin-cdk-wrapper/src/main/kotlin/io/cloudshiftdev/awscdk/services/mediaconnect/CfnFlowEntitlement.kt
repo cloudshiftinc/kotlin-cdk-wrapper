@@ -66,8 +66,8 @@ public open class CfnFlowEntitlement(
     id: String,
     props: CfnFlowEntitlementProps,
   ) :
-      this(software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFlowEntitlementProps::unwrap))
+      this(software.amazon.awscdk.services.mediaconnect.CfnFlowEntitlement(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFlowEntitlementProps.Companion::unwrap))
   )
 
   public constructor(
@@ -120,7 +120,7 @@ public open class CfnFlowEntitlement(
    * entitlement.
    */
   public open fun encryption(`value`: IResolvable) {
-    unwrap(this).setEncryption(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEncryption(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -128,7 +128,7 @@ public open class CfnFlowEntitlement(
    * entitlement.
    */
   public open fun encryption(`value`: EncryptionProperty) {
-    unwrap(this).setEncryption(`value`.let(EncryptionProperty::unwrap))
+    unwrap(this).setEncryption(`value`.let(EncryptionProperty.Companion::unwrap))
   }
 
   /**
@@ -172,7 +172,7 @@ public open class CfnFlowEntitlement(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -361,7 +361,7 @@ public open class CfnFlowEntitlement(
      * associated with the entitlement. 
      */
     override fun encryption(encryption: IResolvable) {
-      cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
+      cdkBuilder.encryption(encryption.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -373,7 +373,7 @@ public open class CfnFlowEntitlement(
      * associated with the entitlement. 
      */
     override fun encryption(encryption: EncryptionProperty) {
-      cdkBuilder.encryption(encryption.let(EncryptionProperty::unwrap))
+      cdkBuilder.encryption(encryption.let(EncryptionProperty.Companion::unwrap))
     }
 
     /**

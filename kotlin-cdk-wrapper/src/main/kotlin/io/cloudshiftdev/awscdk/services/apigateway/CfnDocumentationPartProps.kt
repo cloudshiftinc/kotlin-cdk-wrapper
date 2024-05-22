@@ -108,7 +108,7 @@ public interface CfnDocumentationPartProps {
      * part. 
      */
     override fun location(location: IResolvable) {
-      cdkBuilder.location(location.let(IResolvable::unwrap))
+      cdkBuilder.location(location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -116,7 +116,7 @@ public interface CfnDocumentationPartProps {
      * part. 
      */
     override fun location(location: CfnDocumentationPart.LocationProperty) {
-      cdkBuilder.location(location.let(CfnDocumentationPart.LocationProperty::unwrap))
+      cdkBuilder.location(location.let(CfnDocumentationPart.LocationProperty.Companion::unwrap))
     }
 
     /**

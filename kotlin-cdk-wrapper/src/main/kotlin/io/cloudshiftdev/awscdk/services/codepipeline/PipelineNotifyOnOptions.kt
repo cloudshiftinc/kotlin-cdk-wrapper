@@ -96,7 +96,7 @@ public interface PipelineNotifyOnOptions : NotificationRuleOptions {
      * the service for the resource for which the notification is created.
      */
     override fun detailType(detailType: DetailType) {
-      cdkBuilder.detailType(detailType.let(DetailType::unwrap))
+      cdkBuilder.detailType(detailType.let(DetailType.Companion::unwrap))
     }
 
     /**
@@ -114,7 +114,7 @@ public interface PipelineNotifyOnOptions : NotificationRuleOptions {
      * Console User Guide.
      */
     override fun events(events: List<PipelineNotificationEvents>) {
-      cdkBuilder.events(events.map(PipelineNotificationEvents::unwrap))
+      cdkBuilder.events(events.map(PipelineNotificationEvents.Companion::unwrap))
     }
 
     /**

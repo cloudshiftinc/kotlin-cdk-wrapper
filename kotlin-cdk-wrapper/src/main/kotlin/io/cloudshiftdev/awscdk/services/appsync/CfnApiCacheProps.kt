@@ -244,7 +244,7 @@ public interface CfnApiCacheProps {
      * You cannot update this setting after creation.
      */
     override fun atRestEncryptionEnabled(atRestEncryptionEnabled: IResolvable) {
-      cdkBuilder.atRestEncryptionEnabled(atRestEncryptionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.atRestEncryptionEnabled(atRestEncryptionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -275,7 +275,7 @@ public interface CfnApiCacheProps {
      * You cannot update this setting after creation.
      */
     override fun transitEncryptionEnabled(transitEncryptionEnabled: IResolvable) {
-      cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.transitEncryptionEnabled(transitEncryptionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**

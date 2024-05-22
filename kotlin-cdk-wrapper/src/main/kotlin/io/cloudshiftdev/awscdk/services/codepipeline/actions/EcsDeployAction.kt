@@ -45,7 +45,7 @@ public open class EcsDeployAction(
   cdkObject: software.amazon.awscdk.services.codepipeline.actions.EcsDeployAction,
 ) : Action(cdkObject) {
   public constructor(props: EcsDeployActionProps) :
-      this(software.amazon.awscdk.services.codepipeline.actions.EcsDeployAction(props.let(EcsDeployActionProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.actions.EcsDeployAction(props.let(EcsDeployActionProps.Companion::unwrap))
   )
 
   public constructor(props: EcsDeployActionProps.Builder.() -> Unit) :
@@ -187,7 +187,7 @@ public open class EcsDeployAction(
      * @param deploymentTimeout Timeout for the ECS deployment in minutes. 
      */
     override fun deploymentTimeout(deploymentTimeout: Duration) {
-      cdkBuilder.deploymentTimeout(deploymentTimeout.let(Duration::unwrap))
+      cdkBuilder.deploymentTimeout(deploymentTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -206,7 +206,7 @@ public open class EcsDeployAction(
      * @param imageFile The name of the JSON image definitions file to use for deployments. 
      */
     override fun imageFile(imageFile: ArtifactPath) {
-      cdkBuilder.imageFile(imageFile.let(ArtifactPath::unwrap))
+      cdkBuilder.imageFile(imageFile.let(ArtifactPath.Companion::unwrap))
     }
 
     /**
@@ -226,7 +226,7 @@ public open class EcsDeployAction(
      * deployments. 
      */
     override fun input(input: Artifact) {
-      cdkBuilder.input(input.let(Artifact::unwrap))
+      cdkBuilder.input(input.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -243,7 +243,7 @@ public open class EcsDeployAction(
      * @param role The Role in which context's this Action will be executing in. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -266,7 +266,7 @@ public open class EcsDeployAction(
      * @param service The ECS Service to deploy. 
      */
     override fun service(service: IBaseService) {
-      cdkBuilder.service(service.let(IBaseService::unwrap))
+      cdkBuilder.service(service.let(IBaseService.Companion::unwrap))
     }
 
     /**

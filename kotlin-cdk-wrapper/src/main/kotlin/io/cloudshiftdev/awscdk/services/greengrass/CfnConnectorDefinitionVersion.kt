@@ -64,8 +64,8 @@ public open class CfnConnectorDefinitionVersion(
     id: String,
     props: CfnConnectorDefinitionVersionProps,
   ) :
-      this(software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConnectorDefinitionVersionProps::unwrap))
+      this(software.amazon.awscdk.services.greengrass.CfnConnectorDefinitionVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConnectorDefinitionVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -101,7 +101,7 @@ public open class CfnConnectorDefinitionVersion(
    * The connectors in this version.
    */
   public open fun connectors(`value`: IResolvable) {
-    unwrap(this).setConnectors(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConnectors(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -122,7 +122,7 @@ public open class CfnConnectorDefinitionVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -208,7 +208,7 @@ public open class CfnConnectorDefinitionVersion(
      * @param connectors The connectors in this version. 
      */
     override fun connectors(connectors: IResolvable) {
-      cdkBuilder.connectors(connectors.let(IResolvable::unwrap))
+      cdkBuilder.connectors(connectors.let(IResolvable.Companion::unwrap))
     }
 
     /**

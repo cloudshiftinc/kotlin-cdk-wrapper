@@ -151,7 +151,7 @@ public interface BaseServiceProps {
      * See: https://docs.aws.amazon.com/cloud-map/latest/api/API_HealthCheckCustomConfig.html
      */
     override fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig) {
-      cdkBuilder.customHealthCheck(customHealthCheck.let(HealthCheckCustomConfig::unwrap))
+      cdkBuilder.customHealthCheck(customHealthCheck.let(HealthCheckCustomConfig.Companion::unwrap))
     }
 
     /**
@@ -181,7 +181,7 @@ public interface BaseServiceProps {
      * this service.
      */
     override fun healthCheck(healthCheck: HealthCheckConfig) {
-      cdkBuilder.healthCheck(healthCheck.let(HealthCheckConfig::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(HealthCheckConfig.Companion::unwrap))
     }
 
     /**

@@ -53,8 +53,8 @@ public open class CfnAccessLogSubscription(
     id: String,
     props: CfnAccessLogSubscriptionProps,
   ) :
-      this(software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscription(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAccessLogSubscriptionProps::unwrap))
+      this(software.amazon.awscdk.services.vpclattice.CfnAccessLogSubscription(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAccessLogSubscriptionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -102,7 +102,7 @@ public open class CfnAccessLogSubscription(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -132,7 +132,7 @@ public open class CfnAccessLogSubscription(
    * The tags for the access log subscription.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -222,7 +222,7 @@ public open class CfnAccessLogSubscription(
      * @param tags The tags for the access log subscription. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

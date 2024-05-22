@@ -183,14 +183,14 @@ public interface CfnRouteProps {
      * @param defaultRoute Configuration for the default route type.
      */
     override fun defaultRoute(defaultRoute: IResolvable) {
-      cdkBuilder.defaultRoute(defaultRoute.let(IResolvable::unwrap))
+      cdkBuilder.defaultRoute(defaultRoute.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param defaultRoute Configuration for the default route type.
      */
     override fun defaultRoute(defaultRoute: CfnRoute.DefaultRouteInputProperty) {
-      cdkBuilder.defaultRoute(defaultRoute.let(CfnRoute.DefaultRouteInputProperty::unwrap))
+      cdkBuilder.defaultRoute(defaultRoute.let(CfnRoute.DefaultRouteInputProperty.Companion::unwrap))
     }
 
     /**
@@ -226,7 +226,7 @@ public interface CfnRouteProps {
      * @param tags The tags assigned to the route.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -238,14 +238,14 @@ public interface CfnRouteProps {
      * @param uriPathRoute The configuration for the URI path route type.
      */
     override fun uriPathRoute(uriPathRoute: IResolvable) {
-      cdkBuilder.uriPathRoute(uriPathRoute.let(IResolvable::unwrap))
+      cdkBuilder.uriPathRoute(uriPathRoute.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param uriPathRoute The configuration for the URI path route type.
      */
     override fun uriPathRoute(uriPathRoute: CfnRoute.UriPathRouteInputProperty) {
-      cdkBuilder.uriPathRoute(uriPathRoute.let(CfnRoute.UriPathRouteInputProperty::unwrap))
+      cdkBuilder.uriPathRoute(uriPathRoute.let(CfnRoute.UriPathRouteInputProperty.Companion::unwrap))
     }
 
     /**

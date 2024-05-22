@@ -67,8 +67,8 @@ public open class CfnReplicationConfiguration(
     id: String,
     props: CfnReplicationConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.ecr.CfnReplicationConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnReplicationConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.ecr.CfnReplicationConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnReplicationConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -89,7 +89,7 @@ public open class CfnReplicationConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -101,14 +101,14 @@ public open class CfnReplicationConfiguration(
    * The replication configuration for a registry.
    */
   public open fun replicationConfiguration(`value`: IResolvable) {
-    unwrap(this).setReplicationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setReplicationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The replication configuration for a registry.
    */
   public open fun replicationConfiguration(`value`: ReplicationConfigurationProperty) {
-    unwrap(this).setReplicationConfiguration(`value`.let(ReplicationConfigurationProperty::unwrap))
+    unwrap(this).setReplicationConfiguration(`value`.let(ReplicationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -167,7 +167,7 @@ public open class CfnReplicationConfiguration(
      * @param replicationConfiguration The replication configuration for a registry. 
      */
     override fun replicationConfiguration(replicationConfiguration: IResolvable) {
-      cdkBuilder.replicationConfiguration(replicationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.replicationConfiguration(replicationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -178,7 +178,7 @@ public open class CfnReplicationConfiguration(
      */
     override
         fun replicationConfiguration(replicationConfiguration: ReplicationConfigurationProperty) {
-      cdkBuilder.replicationConfiguration(replicationConfiguration.let(ReplicationConfigurationProperty::unwrap))
+      cdkBuilder.replicationConfiguration(replicationConfiguration.let(ReplicationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -289,7 +289,7 @@ public open class CfnReplicationConfiguration(
        * filters for a replication configuration. 
        */
       override fun rules(rules: IResolvable) {
-        cdkBuilder.rules(rules.let(IResolvable::unwrap))
+        cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -563,7 +563,7 @@ public open class CfnReplicationConfiguration(
        * rule. 
        */
       override fun destinations(destinations: IResolvable) {
-        cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
+        cdkBuilder.destinations(destinations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -588,7 +588,7 @@ public open class CfnReplicationConfiguration(
        * which repositories in a private registry are replicated.
        */
       override fun repositoryFilters(repositoryFilters: IResolvable) {
-        cdkBuilder.repositoryFilters(repositoryFilters.let(IResolvable::unwrap))
+        cdkBuilder.repositoryFilters(repositoryFilters.let(IResolvable.Companion::unwrap))
       }
 
       /**

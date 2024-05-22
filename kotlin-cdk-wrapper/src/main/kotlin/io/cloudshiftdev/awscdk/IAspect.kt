@@ -26,7 +26,7 @@ public interface IAspect {
      * @param node 
      */
     override fun visit(node: IConstruct) {
-      unwrap(this).visit(node.let(IConstruct::unwrap))
+      unwrap(this).visit(node.let(IConstruct.Companion::unwrap))
     }
   }
 

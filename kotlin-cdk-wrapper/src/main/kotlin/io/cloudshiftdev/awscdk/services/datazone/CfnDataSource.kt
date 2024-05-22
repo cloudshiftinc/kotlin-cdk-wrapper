@@ -106,8 +106,8 @@ public open class CfnDataSource(
     id: String,
     props: CfnDataSourceProps,
   ) :
-      this(software.amazon.awscdk.services.datazone.CfnDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDataSourceProps::unwrap))
+      this(software.amazon.awscdk.services.datazone.CfnDataSource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDataSourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -126,7 +126,7 @@ public open class CfnDataSource(
    * The metadata forms attached to the assets that the data source works with.
    */
   public open fun assetFormsInput(`value`: IResolvable) {
-    unwrap(this).setAssetFormsInput(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAssetFormsInput(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -201,14 +201,14 @@ public open class CfnDataSource(
    * The configuration of the data source.
    */
   public open fun configuration(`value`: IResolvable) {
-    unwrap(this).setConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration of the data source.
    */
   public open fun configuration(`value`: DataSourceConfigurationInputProperty) {
-    unwrap(this).setConfiguration(`value`.let(DataSourceConfigurationInputProperty::unwrap))
+    unwrap(this).setConfiguration(`value`.let(DataSourceConfigurationInputProperty.Companion::unwrap))
   }
 
   /**
@@ -275,7 +275,7 @@ public open class CfnDataSource(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -321,7 +321,7 @@ public open class CfnDataSource(
    * automatically published to the catalog.
    */
   public open fun publishOnImport(`value`: IResolvable) {
-    unwrap(this).setPublishOnImport(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPublishOnImport(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -333,14 +333,14 @@ public open class CfnDataSource(
    * Specifies whether the business name generation is to be enabled for this data source.
    */
   public open fun recommendation(`value`: IResolvable) {
-    unwrap(this).setRecommendation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRecommendation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies whether the business name generation is to be enabled for this data source.
    */
   public open fun recommendation(`value`: RecommendationConfigurationProperty) {
-    unwrap(this).setRecommendation(`value`.let(RecommendationConfigurationProperty::unwrap))
+    unwrap(this).setRecommendation(`value`.let(RecommendationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -360,14 +360,14 @@ public open class CfnDataSource(
    * The schedule of the data source runs.
    */
   public open fun schedule(`value`: IResolvable) {
-    unwrap(this).setSchedule(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSchedule(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The schedule of the data source runs.
    */
   public open fun schedule(`value`: ScheduleConfigurationProperty) {
-    unwrap(this).setSchedule(`value`.let(ScheduleConfigurationProperty::unwrap))
+    unwrap(this).setSchedule(`value`.let(ScheduleConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -600,7 +600,7 @@ public open class CfnDataSource(
      * with. 
      */
     override fun assetFormsInput(assetFormsInput: IResolvable) {
-      cdkBuilder.assetFormsInput(assetFormsInput.let(IResolvable::unwrap))
+      cdkBuilder.assetFormsInput(assetFormsInput.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -631,7 +631,7 @@ public open class CfnDataSource(
      * @param configuration The configuration of the data source. 
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -641,7 +641,7 @@ public open class CfnDataSource(
      * @param configuration The configuration of the data source. 
      */
     override fun configuration(configuration: DataSourceConfigurationInputProperty) {
-      cdkBuilder.configuration(configuration.let(DataSourceConfigurationInputProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(DataSourceConfigurationInputProperty.Companion::unwrap))
     }
 
     /**
@@ -741,7 +741,7 @@ public open class CfnDataSource(
      * inventory are to be also automatically published to the catalog. 
      */
     override fun publishOnImport(publishOnImport: IResolvable) {
-      cdkBuilder.publishOnImport(publishOnImport.let(IResolvable::unwrap))
+      cdkBuilder.publishOnImport(publishOnImport.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -752,7 +752,7 @@ public open class CfnDataSource(
      * this data source. 
      */
     override fun recommendation(recommendation: IResolvable) {
-      cdkBuilder.recommendation(recommendation.let(IResolvable::unwrap))
+      cdkBuilder.recommendation(recommendation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -763,7 +763,7 @@ public open class CfnDataSource(
      * this data source. 
      */
     override fun recommendation(recommendation: RecommendationConfigurationProperty) {
-      cdkBuilder.recommendation(recommendation.let(RecommendationConfigurationProperty::unwrap))
+      cdkBuilder.recommendation(recommendation.let(RecommendationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -786,7 +786,7 @@ public open class CfnDataSource(
      * @param schedule The schedule of the data source runs. 
      */
     override fun schedule(schedule: IResolvable) {
-      cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
+      cdkBuilder.schedule(schedule.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -796,7 +796,7 @@ public open class CfnDataSource(
      * @param schedule The schedule of the data source runs. 
      */
     override fun schedule(schedule: ScheduleConfigurationProperty) {
-      cdkBuilder.schedule(schedule.let(ScheduleConfigurationProperty::unwrap))
+      cdkBuilder.schedule(schedule.let(ScheduleConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -966,14 +966,14 @@ public open class CfnDataSource(
        * @param glueRunConfiguration The configuration of the AWS Glue data source.
        */
       override fun glueRunConfiguration(glueRunConfiguration: IResolvable) {
-        cdkBuilder.glueRunConfiguration(glueRunConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.glueRunConfiguration(glueRunConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param glueRunConfiguration The configuration of the AWS Glue data source.
        */
       override fun glueRunConfiguration(glueRunConfiguration: GlueRunConfigurationInputProperty) {
-        cdkBuilder.glueRunConfiguration(glueRunConfiguration.let(GlueRunConfigurationInputProperty::unwrap))
+        cdkBuilder.glueRunConfiguration(glueRunConfiguration.let(GlueRunConfigurationInputProperty.Companion::unwrap))
       }
 
       /**
@@ -989,7 +989,7 @@ public open class CfnDataSource(
        * @param redshiftRunConfiguration The configuration of the Amazon Redshift data source.
        */
       override fun redshiftRunConfiguration(redshiftRunConfiguration: IResolvable) {
-        cdkBuilder.redshiftRunConfiguration(redshiftRunConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.redshiftRunConfiguration(redshiftRunConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -997,7 +997,7 @@ public open class CfnDataSource(
        */
       override
           fun redshiftRunConfiguration(redshiftRunConfiguration: RedshiftRunConfigurationInputProperty) {
-        cdkBuilder.redshiftRunConfiguration(redshiftRunConfiguration.let(RedshiftRunConfigurationInputProperty::unwrap))
+        cdkBuilder.redshiftRunConfiguration(redshiftRunConfiguration.let(RedshiftRunConfigurationInputProperty.Companion::unwrap))
       }
 
       /**
@@ -1435,7 +1435,7 @@ public open class CfnDataSource(
        * metrics as part of the data source run.
        */
       override fun autoImportDataQualityResult(autoImportDataQualityResult: IResolvable) {
-        cdkBuilder.autoImportDataQualityResult(autoImportDataQualityResult.let(IResolvable::unwrap))
+        cdkBuilder.autoImportDataQualityResult(autoImportDataQualityResult.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1451,7 +1451,7 @@ public open class CfnDataSource(
        * configuration details of the AWS Glue data source. 
        */
       override fun relationalFilterConfigurations(relationalFilterConfigurations: IResolvable) {
-        cdkBuilder.relationalFilterConfigurations(relationalFilterConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.relationalFilterConfigurations(relationalFilterConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1585,7 +1585,7 @@ public open class CfnDataSource(
        * to be enabled or not as part of the recommendation configuration.
        */
       override fun enableBusinessNameGeneration(enableBusinessNameGeneration: IResolvable) {
-        cdkBuilder.enableBusinessNameGeneration(enableBusinessNameGeneration.let(IResolvable::unwrap))
+        cdkBuilder.enableBusinessNameGeneration(enableBusinessNameGeneration.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1954,7 +1954,7 @@ public open class CfnDataSource(
        * Amazon Redshift cluster. 
        */
       override fun redshiftCredentialConfiguration(redshiftCredentialConfiguration: IResolvable) {
-        cdkBuilder.redshiftCredentialConfiguration(redshiftCredentialConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.redshiftCredentialConfiguration(redshiftCredentialConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1963,7 +1963,7 @@ public open class CfnDataSource(
        */
       override
           fun redshiftCredentialConfiguration(redshiftCredentialConfiguration: RedshiftCredentialConfigurationProperty) {
-        cdkBuilder.redshiftCredentialConfiguration(redshiftCredentialConfiguration.let(RedshiftCredentialConfigurationProperty::unwrap))
+        cdkBuilder.redshiftCredentialConfiguration(redshiftCredentialConfiguration.let(RedshiftCredentialConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1982,7 +1982,7 @@ public open class CfnDataSource(
        * configuration of an Amazon Redshift data source run. 
        */
       override fun redshiftStorage(redshiftStorage: IResolvable) {
-        cdkBuilder.redshiftStorage(redshiftStorage.let(IResolvable::unwrap))
+        cdkBuilder.redshiftStorage(redshiftStorage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1990,7 +1990,7 @@ public open class CfnDataSource(
        * configuration of an Amazon Redshift data source run. 
        */
       override fun redshiftStorage(redshiftStorage: RedshiftStorageProperty) {
-        cdkBuilder.redshiftStorage(redshiftStorage.let(RedshiftStorageProperty::unwrap))
+        cdkBuilder.redshiftStorage(redshiftStorage.let(RedshiftStorageProperty.Companion::unwrap))
       }
 
       /**
@@ -2007,7 +2007,7 @@ public open class CfnDataSource(
        * configuration details of the AWS Glue data source. 
        */
       override fun relationalFilterConfigurations(relationalFilterConfigurations: IResolvable) {
-        cdkBuilder.relationalFilterConfigurations(relationalFilterConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.relationalFilterConfigurations(relationalFilterConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2262,14 +2262,14 @@ public open class CfnDataSource(
        * @param redshiftClusterSource The details of the Amazon Redshift cluster source.
        */
       override fun redshiftClusterSource(redshiftClusterSource: IResolvable) {
-        cdkBuilder.redshiftClusterSource(redshiftClusterSource.let(IResolvable::unwrap))
+        cdkBuilder.redshiftClusterSource(redshiftClusterSource.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param redshiftClusterSource The details of the Amazon Redshift cluster source.
        */
       override fun redshiftClusterSource(redshiftClusterSource: RedshiftClusterStorageProperty) {
-        cdkBuilder.redshiftClusterSource(redshiftClusterSource.let(RedshiftClusterStorageProperty::unwrap))
+        cdkBuilder.redshiftClusterSource(redshiftClusterSource.let(RedshiftClusterStorageProperty.Companion::unwrap))
       }
 
       /**
@@ -2286,7 +2286,7 @@ public open class CfnDataSource(
        * source.
        */
       override fun redshiftServerlessSource(redshiftServerlessSource: IResolvable) {
-        cdkBuilder.redshiftServerlessSource(redshiftServerlessSource.let(IResolvable::unwrap))
+        cdkBuilder.redshiftServerlessSource(redshiftServerlessSource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2295,7 +2295,7 @@ public open class CfnDataSource(
        */
       override
           fun redshiftServerlessSource(redshiftServerlessSource: RedshiftServerlessStorageProperty) {
-        cdkBuilder.redshiftServerlessSource(redshiftServerlessSource.let(RedshiftServerlessStorageProperty::unwrap))
+        cdkBuilder.redshiftServerlessSource(redshiftServerlessSource.let(RedshiftServerlessStorageProperty.Companion::unwrap))
       }
 
       /**
@@ -2450,7 +2450,7 @@ public open class CfnDataSource(
        * configuration for the data source.
        */
       override fun filterExpressions(filterExpressions: IResolvable) {
-        cdkBuilder.filterExpressions(filterExpressions.let(IResolvable::unwrap))
+        cdkBuilder.filterExpressions(filterExpressions.let(IResolvable.Companion::unwrap))
       }
 
       /**

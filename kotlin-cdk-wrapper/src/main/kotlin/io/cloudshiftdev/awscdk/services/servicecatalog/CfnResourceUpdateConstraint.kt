@@ -41,8 +41,8 @@ public open class CfnResourceUpdateConstraint(
     id: String,
     props: CfnResourceUpdateConstraintProps,
   ) :
-      this(software.amazon.awscdk.services.servicecatalog.CfnResourceUpdateConstraint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnResourceUpdateConstraintProps::unwrap))
+      this(software.amazon.awscdk.services.servicecatalog.CfnResourceUpdateConstraint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnResourceUpdateConstraintProps.Companion::unwrap))
   )
 
   public constructor(
@@ -87,7 +87,7 @@ public open class CfnResourceUpdateConstraint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

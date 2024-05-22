@@ -167,7 +167,7 @@ public interface FunctionAttributes {
      * and defaults to X86_64).
      */
     override fun architecture(architecture: Architecture) {
-      cdkBuilder.architecture(architecture.let(Architecture::unwrap))
+      cdkBuilder.architecture(architecture.let(Architecture.Companion::unwrap))
     }
 
     /**
@@ -183,7 +183,7 @@ public interface FunctionAttributes {
      * If the role is not specified, any role-related operations will no-op.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -207,7 +207,7 @@ public interface FunctionAttributes {
      * to this Lambda.
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**

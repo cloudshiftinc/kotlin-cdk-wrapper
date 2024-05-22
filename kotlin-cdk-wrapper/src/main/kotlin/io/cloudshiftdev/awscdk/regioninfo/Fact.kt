@@ -36,11 +36,12 @@ public open class Fact(
     public fun regions(): List<String> = software.amazon.awscdk.regioninfo.Fact.getRegions()
 
     public fun register(fact: IFact) {
-      software.amazon.awscdk.regioninfo.Fact.register(fact.let(IFact::unwrap))
+      software.amazon.awscdk.regioninfo.Fact.register(fact.let(IFact.Companion::unwrap))
     }
 
     public fun register(fact: IFact, allowReplacing: Boolean) {
-      software.amazon.awscdk.regioninfo.Fact.register(fact.let(IFact::unwrap), allowReplacing)
+      software.amazon.awscdk.regioninfo.Fact.register(fact.let(IFact.Companion::unwrap),
+          allowReplacing)
     }
 
     public fun requireFact(region: String, name: String): String =

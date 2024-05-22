@@ -36,7 +36,7 @@ public abstract class HttpRouteIntegration(
    * @param options 
    */
   public open fun bind(options: HttpRouteIntegrationBindOptions): HttpRouteIntegrationConfig =
-      unwrap(this).bind(options.let(HttpRouteIntegrationBindOptions::unwrap)).let(HttpRouteIntegrationConfig::wrap)
+      unwrap(this).bind(options.let(HttpRouteIntegrationBindOptions.Companion::unwrap)).let(HttpRouteIntegrationConfig::wrap)
 
   /**
    * Bind this integration to the route.

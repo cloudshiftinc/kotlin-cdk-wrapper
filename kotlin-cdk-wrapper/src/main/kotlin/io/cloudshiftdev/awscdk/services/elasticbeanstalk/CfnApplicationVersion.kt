@@ -58,8 +58,8 @@ public open class CfnApplicationVersion(
     id: String,
     props: CfnApplicationVersionProps,
   ) :
-      this(software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApplicationVersionProps::unwrap))
+      this(software.amazon.awscdk.services.elasticbeanstalk.CfnApplicationVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApplicationVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -104,7 +104,7 @@ public open class CfnApplicationVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -116,14 +116,14 @@ public open class CfnApplicationVersion(
    * The Amazon S3 bucket and key that identify the location of the source bundle for this version.
    */
   public open fun sourceBundle(`value`: IResolvable) {
-    unwrap(this).setSourceBundle(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSourceBundle(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The Amazon S3 bucket and key that identify the location of the source bundle for this version.
    */
   public open fun sourceBundle(`value`: SourceBundleProperty) {
-    unwrap(this).setSourceBundle(`value`.let(SourceBundleProperty::unwrap))
+    unwrap(this).setSourceBundle(`value`.let(SourceBundleProperty.Companion::unwrap))
   }
 
   /**
@@ -246,7 +246,7 @@ public open class CfnApplicationVersion(
      * bundle for this version. 
      */
     override fun sourceBundle(sourceBundle: IResolvable) {
-      cdkBuilder.sourceBundle(sourceBundle.let(IResolvable::unwrap))
+      cdkBuilder.sourceBundle(sourceBundle.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -262,7 +262,7 @@ public open class CfnApplicationVersion(
      * bundle for this version. 
      */
     override fun sourceBundle(sourceBundle: SourceBundleProperty) {
-      cdkBuilder.sourceBundle(sourceBundle.let(SourceBundleProperty::unwrap))
+      cdkBuilder.sourceBundle(sourceBundle.let(SourceBundleProperty.Companion::unwrap))
     }
 
     /**

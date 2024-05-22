@@ -39,7 +39,7 @@ public open class CfnComponent(
   cdkObject: software.amazon.awscdk.services.amplifyuibuilder.CfnComponent,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.amplifyuibuilder.CfnComponent(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.amplifyuibuilder.CfnComponent(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -48,8 +48,8 @@ public open class CfnComponent(
     id: String,
     props: CfnComponentProps,
   ) :
-      this(software.amazon.awscdk.services.amplifyuibuilder.CfnComponent(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnComponentProps::unwrap))
+      this(software.amazon.awscdk.services.amplifyuibuilder.CfnComponent(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnComponentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -95,7 +95,7 @@ public open class CfnComponent(
    * The information to connect a component's properties to data at runtime.
    */
   public open fun bindingProperties(`value`: IResolvable) {
-    unwrap(this).setBindingProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBindingProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -114,7 +114,7 @@ public open class CfnComponent(
    * A list of the component's `ComponentChild` instances.
    */
   public open fun children(`value`: IResolvable) {
-    unwrap(this).setChildren(`value`.let(IResolvable::unwrap))
+    unwrap(this).setChildren(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -138,7 +138,7 @@ public open class CfnComponent(
    * The data binding configuration for the component's properties.
    */
   public open fun collectionProperties(`value`: IResolvable) {
-    unwrap(this).setCollectionProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCollectionProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -181,7 +181,7 @@ public open class CfnComponent(
    * Describes the events that can be raised on the component.
    */
   public open fun events(`value`: IResolvable) {
-    unwrap(this).setEvents(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEvents(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -197,7 +197,7 @@ public open class CfnComponent(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -235,7 +235,7 @@ public open class CfnComponent(
    * Describes the component's properties.
    */
   public open fun properties(`value`: IResolvable) {
-    unwrap(this).setProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -295,7 +295,7 @@ public open class CfnComponent(
    * A list of the component's variants.
    */
   public open fun variants(`value`: IResolvable) {
-    unwrap(this).setVariants(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVariants(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -554,7 +554,7 @@ public open class CfnComponent(
      * runtime. 
      */
     override fun bindingProperties(bindingProperties: IResolvable) {
-      cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
+      cdkBuilder.bindingProperties(bindingProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -577,7 +577,7 @@ public open class CfnComponent(
      * @param children A list of the component's `ComponentChild` instances. 
      */
     override fun children(children: IResolvable) {
-      cdkBuilder.children(children.let(IResolvable::unwrap))
+      cdkBuilder.children(children.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -608,7 +608,7 @@ public open class CfnComponent(
      * @param collectionProperties The data binding configuration for the component's properties. 
      */
     override fun collectionProperties(collectionProperties: IResolvable) {
-      cdkBuilder.collectionProperties(collectionProperties.let(IResolvable::unwrap))
+      cdkBuilder.collectionProperties(collectionProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -657,7 +657,7 @@ public open class CfnComponent(
      * @param events Describes the events that can be raised on the component. 
      */
     override fun events(events: IResolvable) {
-      cdkBuilder.events(events.let(IResolvable::unwrap))
+      cdkBuilder.events(events.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -706,7 +706,7 @@ public open class CfnComponent(
      * @param properties Describes the component's properties. 
      */
     override fun properties(properties: IResolvable) {
-      cdkBuilder.properties(properties.let(IResolvable::unwrap))
+      cdkBuilder.properties(properties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -760,7 +760,7 @@ public open class CfnComponent(
      * @param variants A list of the component's variants. 
      */
     override fun variants(variants: IResolvable) {
-      cdkBuilder.variants(variants.let(IResolvable::unwrap))
+      cdkBuilder.variants(variants.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1376,7 +1376,7 @@ public open class CfnComponent(
        * Specify this value for a navigation action.
        */
       override fun anchor(anchor: IResolvable) {
-        cdkBuilder.anchor(anchor.let(IResolvable::unwrap))
+        cdkBuilder.anchor(anchor.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1384,7 +1384,7 @@ public open class CfnComponent(
        * Specify this value for a navigation action.
        */
       override fun anchor(anchor: ComponentPropertyProperty) {
-        cdkBuilder.anchor(anchor.let(ComponentPropertyProperty::unwrap))
+        cdkBuilder.anchor(anchor.let(ComponentPropertyProperty.Companion::unwrap))
       }
 
       /**
@@ -1402,7 +1402,7 @@ public open class CfnComponent(
        * Use when the action performs an operation on an Amplify DataStore model.
        */
       override fun fields(fields: IResolvable) {
-        cdkBuilder.fields(fields.let(IResolvable::unwrap))
+        cdkBuilder.fields(fields.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1419,7 +1419,7 @@ public open class CfnComponent(
        * Specify this value for an auth sign out action.
        */
       override fun global(global: IResolvable) {
-        cdkBuilder.global(global.let(IResolvable::unwrap))
+        cdkBuilder.global(global.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1427,7 +1427,7 @@ public open class CfnComponent(
        * Specify this value for an auth sign out action.
        */
       override fun global(global: ComponentPropertyProperty) {
-        cdkBuilder.global(global.let(ComponentPropertyProperty::unwrap))
+        cdkBuilder.global(global.let(ComponentPropertyProperty.Companion::unwrap))
       }
 
       /**
@@ -1443,14 +1443,14 @@ public open class CfnComponent(
        * @param id The unique ID of the component that the `ActionParameters` apply to.
        */
       override fun id(id: IResolvable) {
-        cdkBuilder.id(id.let(IResolvable::unwrap))
+        cdkBuilder.id(id.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param id The unique ID of the component that the `ActionParameters` apply to.
        */
       override fun id(id: ComponentPropertyProperty) {
-        cdkBuilder.id(id.let(ComponentPropertyProperty::unwrap))
+        cdkBuilder.id(id.let(ComponentPropertyProperty.Companion::unwrap))
       }
 
       /**
@@ -1473,14 +1473,14 @@ public open class CfnComponent(
        * @param state A key-value pair that specifies the state property name and its initial value.
        */
       override fun state(state: IResolvable) {
-        cdkBuilder.state(state.let(IResolvable::unwrap))
+        cdkBuilder.state(state.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param state A key-value pair that specifies the state property name and its initial value.
        */
       override fun state(state: MutationActionSetStateParameterProperty) {
-        cdkBuilder.state(state.let(MutationActionSetStateParameterProperty::unwrap))
+        cdkBuilder.state(state.let(MutationActionSetStateParameterProperty.Companion::unwrap))
       }
 
       /**
@@ -1495,14 +1495,14 @@ public open class CfnComponent(
        * @param target The element within the same component to modify when the action occurs.
        */
       override fun target(target: IResolvable) {
-        cdkBuilder.target(target.let(IResolvable::unwrap))
+        cdkBuilder.target(target.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param target The element within the same component to modify when the action occurs.
        */
       override fun target(target: ComponentPropertyProperty) {
-        cdkBuilder.target(target.let(ComponentPropertyProperty::unwrap))
+        cdkBuilder.target(target.let(ComponentPropertyProperty.Companion::unwrap))
       }
 
       /**
@@ -1518,7 +1518,7 @@ public open class CfnComponent(
        * Valid values are `url` and `anchor` . This value is required for a navigation action.
        */
       override fun type(type: IResolvable) {
-        cdkBuilder.type(type.let(IResolvable::unwrap))
+        cdkBuilder.type(type.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1526,7 +1526,7 @@ public open class CfnComponent(
        * Valid values are `url` and `anchor` . This value is required for a navigation action.
        */
       override fun type(type: ComponentPropertyProperty) {
-        cdkBuilder.type(type.let(ComponentPropertyProperty::unwrap))
+        cdkBuilder.type(type.let(ComponentPropertyProperty.Companion::unwrap))
       }
 
       /**
@@ -1543,7 +1543,7 @@ public open class CfnComponent(
        * Specify this value for a navigation action.
        */
       override fun url(url: IResolvable) {
-        cdkBuilder.url(url.let(IResolvable::unwrap))
+        cdkBuilder.url(url.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1551,7 +1551,7 @@ public open class CfnComponent(
        * Specify this value for a navigation action.
        */
       override fun url(url: ComponentPropertyProperty) {
-        cdkBuilder.url(url.let(ComponentPropertyProperty::unwrap))
+        cdkBuilder.url(url.let(ComponentPropertyProperty.Companion::unwrap))
       }
 
       /**
@@ -1861,7 +1861,7 @@ public open class CfnComponent(
        * @param predicates A list of predicates for binding a component's properties to data.
        */
       override fun predicates(predicates: IResolvable) {
-        cdkBuilder.predicates(predicates.let(IResolvable::unwrap))
+        cdkBuilder.predicates(predicates.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2081,7 +2081,7 @@ public open class CfnComponent(
        * @param bindingProperties Describes the properties to customize with data at runtime.
        */
       override fun bindingProperties(bindingProperties: IResolvable) {
-        cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
+        cdkBuilder.bindingProperties(bindingProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2089,7 +2089,7 @@ public open class CfnComponent(
        */
       override
           fun bindingProperties(bindingProperties: ComponentBindingPropertiesValuePropertiesProperty) {
-        cdkBuilder.bindingProperties(bindingProperties.let(ComponentBindingPropertiesValuePropertiesProperty::unwrap))
+        cdkBuilder.bindingProperties(bindingProperties.let(ComponentBindingPropertiesValuePropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -2655,7 +2655,7 @@ public open class CfnComponent(
        * @param children The list of `ComponentChild` instances for this component.
        */
       override fun children(children: IResolvable) {
-        cdkBuilder.children(children.let(IResolvable::unwrap))
+        cdkBuilder.children(children.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2683,7 +2683,7 @@ public open class CfnComponent(
        * to components.
        */
       override fun events(events: IResolvable) {
-        cdkBuilder.events(events.let(IResolvable::unwrap))
+        cdkBuilder.events(events.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2707,7 +2707,7 @@ public open class CfnComponent(
        * You can't specify `tags` as a valid property for `properties` .
        */
       override fun properties(properties: IResolvable) {
-        cdkBuilder.properties(properties.let(IResolvable::unwrap))
+        cdkBuilder.properties(properties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3014,14 +3014,14 @@ public open class CfnComponent(
        * @param elseValue The value to assign to the property if the condition is not met.
        */
       override fun elseValue(elseValue: IResolvable) {
-        cdkBuilder.elseValue(elseValue.let(IResolvable::unwrap))
+        cdkBuilder.elseValue(elseValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param elseValue The value to assign to the property if the condition is not met.
        */
       override fun elseValue(elseValue: ComponentPropertyProperty) {
-        cdkBuilder.elseValue(elseValue.let(ComponentPropertyProperty::unwrap))
+        cdkBuilder.elseValue(elseValue.let(ComponentPropertyProperty.Companion::unwrap))
       }
 
       /**
@@ -3073,14 +3073,14 @@ public open class CfnComponent(
        * @param then The value to assign to the property if the condition is met.
        */
       override fun then(then: IResolvable) {
-        cdkBuilder.then(then.let(IResolvable::unwrap))
+        cdkBuilder.then(then.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param then The value to assign to the property if the condition is met.
        */
       override fun then(then: ComponentPropertyProperty) {
-        cdkBuilder.then(then.let(ComponentPropertyProperty::unwrap))
+        cdkBuilder.then(then.let(ComponentPropertyProperty.Companion::unwrap))
       }
 
       /**
@@ -3330,7 +3330,7 @@ public open class CfnComponent(
        * Use this property to retrieve only a subset of the data in a collection.
        */
       override fun predicate(predicate: IResolvable) {
-        cdkBuilder.predicate(predicate.let(IResolvable::unwrap))
+        cdkBuilder.predicate(predicate.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3338,7 +3338,7 @@ public open class CfnComponent(
        * Use this property to retrieve only a subset of the data in a collection.
        */
       override fun predicate(predicate: PredicateProperty) {
-        cdkBuilder.predicate(predicate.let(PredicateProperty::unwrap))
+        cdkBuilder.predicate(predicate.let(PredicateProperty.Companion::unwrap))
       }
 
       /**
@@ -3354,7 +3354,7 @@ public open class CfnComponent(
        * @param sort Describes how to sort the component's properties.
        */
       override fun sort(sort: IResolvable) {
-        cdkBuilder.sort(sort.let(IResolvable::unwrap))
+        cdkBuilder.sort(sort.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3838,14 +3838,14 @@ public open class CfnComponent(
        * @param parameters Describes information about the action.
        */
       override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param parameters Describes information about the action.
        */
       override fun parameters(parameters: ActionParametersProperty) {
-        cdkBuilder.parameters(parameters.let(ActionParametersProperty::unwrap))
+        cdkBuilder.parameters(parameters.let(ActionParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -4354,7 +4354,7 @@ public open class CfnComponent(
        * @param bindingProperties The information to bind the component property to data at runtime.
        */
       override fun bindingProperties(bindingProperties: IResolvable) {
-        cdkBuilder.bindingProperties(bindingProperties.let(IResolvable::unwrap))
+        cdkBuilder.bindingProperties(bindingProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4362,7 +4362,7 @@ public open class CfnComponent(
        */
       override
           fun bindingProperties(bindingProperties: ComponentPropertyBindingPropertiesProperty) {
-        cdkBuilder.bindingProperties(bindingProperties.let(ComponentPropertyBindingPropertiesProperty::unwrap))
+        cdkBuilder.bindingProperties(bindingProperties.let(ComponentPropertyBindingPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -4378,7 +4378,7 @@ public open class CfnComponent(
        * @param bindings The information to bind the component property to form data.
        */
       override fun bindings(bindings: IResolvable) {
-        cdkBuilder.bindings(bindings.let(IResolvable::unwrap))
+        cdkBuilder.bindings(bindings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4394,7 +4394,7 @@ public open class CfnComponent(
        * Use this for collection components.
        */
       override fun collectionBindingProperties(collectionBindingProperties: IResolvable) {
-        cdkBuilder.collectionBindingProperties(collectionBindingProperties.let(IResolvable::unwrap))
+        cdkBuilder.collectionBindingProperties(collectionBindingProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4404,7 +4404,7 @@ public open class CfnComponent(
        */
       override
           fun collectionBindingProperties(collectionBindingProperties: ComponentPropertyBindingPropertiesProperty) {
-        cdkBuilder.collectionBindingProperties(collectionBindingProperties.let(ComponentPropertyBindingPropertiesProperty::unwrap))
+        cdkBuilder.collectionBindingProperties(collectionBindingProperties.let(ComponentPropertyBindingPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -4431,7 +4431,7 @@ public open class CfnComponent(
        * to this component property.
        */
       override fun concat(concat: IResolvable) {
-        cdkBuilder.concat(concat.let(IResolvable::unwrap))
+        cdkBuilder.concat(concat.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4453,7 +4453,7 @@ public open class CfnComponent(
        * property.
        */
       override fun condition(condition: IResolvable) {
-        cdkBuilder.condition(condition.let(IResolvable::unwrap))
+        cdkBuilder.condition(condition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4461,7 +4461,7 @@ public open class CfnComponent(
        * property.
        */
       override fun condition(condition: ComponentConditionPropertyProperty) {
-        cdkBuilder.condition(condition.let(ComponentConditionPropertyProperty::unwrap))
+        cdkBuilder.condition(condition.let(ComponentConditionPropertyProperty.Companion::unwrap))
       }
 
       /**
@@ -4486,7 +4486,7 @@ public open class CfnComponent(
        * after importing it.
        */
       override fun configured(configured: IResolvable) {
-        cdkBuilder.configured(configured.let(IResolvable::unwrap))
+        cdkBuilder.configured(configured.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4766,7 +4766,7 @@ public open class CfnComponent(
        * @param variantValues The combination of variants that comprise this variant.
        */
       override fun variantValues(variantValues: IResolvable) {
-        cdkBuilder.variantValues(variantValues.let(IResolvable::unwrap))
+        cdkBuilder.variantValues(variantValues.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5065,14 +5065,14 @@ public open class CfnComponent(
        * @param set The state configuration to assign to the property. 
        */
       override fun `set`(`set`: IResolvable) {
-        cdkBuilder.`set`(`set`.let(IResolvable::unwrap))
+        cdkBuilder.`set`(`set`.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param set The state configuration to assign to the property. 
        */
       override fun `set`(`set`: ComponentPropertyProperty) {
-        cdkBuilder.`set`(`set`.let(ComponentPropertyProperty::unwrap))
+        cdkBuilder.`set`(`set`.let(ComponentPropertyProperty.Companion::unwrap))
       }
 
       /**
@@ -5264,7 +5264,7 @@ public open class CfnComponent(
        * @param and A list of predicates to combine logically.
        */
       override fun and(and: IResolvable) {
-        cdkBuilder.and(and.let(IResolvable::unwrap))
+        cdkBuilder.and(and.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5311,7 +5311,7 @@ public open class CfnComponent(
        * @param or A list of predicates to combine logically.
        */
       override fun or(or: IResolvable) {
-        cdkBuilder.or(or.let(IResolvable::unwrap))
+        cdkBuilder.or(or.let(IResolvable.Companion::unwrap))
       }
 
       /**

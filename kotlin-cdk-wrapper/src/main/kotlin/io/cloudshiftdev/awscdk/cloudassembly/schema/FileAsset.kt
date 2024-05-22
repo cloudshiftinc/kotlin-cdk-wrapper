@@ -86,7 +86,7 @@ public interface FileAsset {
      * @param source Source description for file assets. 
      */
     override fun source(source: FileSource) {
-      cdkBuilder.source(source.let(FileSource::unwrap))
+      cdkBuilder.source(source.let(FileSource.Companion::unwrap))
     }
 
     /**

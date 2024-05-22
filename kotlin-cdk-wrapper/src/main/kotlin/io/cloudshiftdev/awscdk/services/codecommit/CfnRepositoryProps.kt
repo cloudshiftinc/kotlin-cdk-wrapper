@@ -248,7 +248,7 @@ public interface CfnRepositoryProps {
      * existing repository.
      */
     override fun code(code: IResolvable) {
-      cdkBuilder.code(code.let(IResolvable::unwrap))
+      cdkBuilder.code(code.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -263,7 +263,7 @@ public interface CfnRepositoryProps {
      * existing repository.
      */
     override fun code(code: CfnRepository.CodeProperty) {
-      cdkBuilder.code(code.let(CfnRepository.CodeProperty::unwrap))
+      cdkBuilder.code(code.let(CfnRepository.CodeProperty.Companion::unwrap))
     }
 
     /**
@@ -323,7 +323,7 @@ public interface CfnRepositoryProps {
      * @param tags One or more tag key-value pairs to use when tagging this repository.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -335,7 +335,7 @@ public interface CfnRepositoryProps {
      * @param triggers The JSON block of configuration information for each trigger.
      */
     override fun triggers(triggers: IResolvable) {
-      cdkBuilder.triggers(triggers.let(IResolvable::unwrap))
+      cdkBuilder.triggers(triggers.let(IResolvable.Companion::unwrap))
     }
 
     /**

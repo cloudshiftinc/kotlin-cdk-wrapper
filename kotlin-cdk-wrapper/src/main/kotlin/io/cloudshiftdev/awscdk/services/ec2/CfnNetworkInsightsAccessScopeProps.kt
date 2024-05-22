@@ -184,7 +184,7 @@ public interface CfnNetworkInsightsAccessScopeProps {
      * @param excludePaths The paths to exclude.
      */
     override fun excludePaths(excludePaths: IResolvable) {
-      cdkBuilder.excludePaths(excludePaths.let(IResolvable::unwrap))
+      cdkBuilder.excludePaths(excludePaths.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -203,7 +203,7 @@ public interface CfnNetworkInsightsAccessScopeProps {
      * @param matchPaths The paths to match.
      */
     override fun matchPaths(matchPaths: IResolvable) {
-      cdkBuilder.matchPaths(matchPaths.let(IResolvable::unwrap))
+      cdkBuilder.matchPaths(matchPaths.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -222,7 +222,7 @@ public interface CfnNetworkInsightsAccessScopeProps {
      * @param tags The tags.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

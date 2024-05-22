@@ -30,7 +30,7 @@ public abstract class Code(
    * @param scope the binding scope. 
    */
   public open fun bind(scope: Construct): CodeConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(CodeConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(CodeConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codecommit.Code,
@@ -38,10 +38,10 @@ public abstract class Code(
 
   public companion object {
     public fun fromAsset(asset: Asset): Code =
-        software.amazon.awscdk.services.codecommit.Code.fromAsset(asset.let(Asset::unwrap)).let(Code::wrap)
+        software.amazon.awscdk.services.codecommit.Code.fromAsset(asset.let(Asset.Companion::unwrap)).let(Code::wrap)
 
     public fun fromAsset(asset: Asset, branch: String): Code =
-        software.amazon.awscdk.services.codecommit.Code.fromAsset(asset.let(Asset::unwrap),
+        software.amazon.awscdk.services.codecommit.Code.fromAsset(asset.let(Asset.Companion::unwrap),
         branch).let(Code::wrap)
 
     public fun fromDirectory(directoryPath: String): Code =

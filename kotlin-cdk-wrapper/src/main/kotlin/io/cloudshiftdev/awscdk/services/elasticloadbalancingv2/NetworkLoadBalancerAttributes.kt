@@ -161,7 +161,7 @@ public interface NetworkLoadBalancerAttributes {
      * @param vpc The VPC to associate with the load balancer.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build():

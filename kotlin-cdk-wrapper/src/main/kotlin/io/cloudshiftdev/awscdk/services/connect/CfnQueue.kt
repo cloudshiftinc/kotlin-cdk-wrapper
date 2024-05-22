@@ -61,8 +61,8 @@ public open class CfnQueue(
     id: String,
     props: CfnQueueProps,
   ) :
-      this(software.amazon.awscdk.services.connect.CfnQueue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnQueueProps::unwrap))
+      this(software.amazon.awscdk.services.connect.CfnQueue(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnQueueProps.Companion::unwrap))
   )
 
   public constructor(
@@ -118,7 +118,7 @@ public open class CfnQueue(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -166,14 +166,14 @@ public open class CfnQueue(
    * The outbound caller ID name, number, and outbound whisper flow.
    */
   public open fun outboundCallerConfig(`value`: IResolvable) {
-    unwrap(this).setOutboundCallerConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOutboundCallerConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The outbound caller ID name, number, and outbound whisper flow.
    */
   public open fun outboundCallerConfig(`value`: OutboundCallerConfigProperty) {
-    unwrap(this).setOutboundCallerConfig(`value`.let(OutboundCallerConfigProperty::unwrap))
+    unwrap(this).setOutboundCallerConfig(`value`.let(OutboundCallerConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -227,7 +227,7 @@ public open class CfnQueue(
    * The tags used to organize, track, or control access for this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -422,7 +422,7 @@ public open class CfnQueue(
      * @param outboundCallerConfig The outbound caller ID name, number, and outbound whisper flow. 
      */
     override fun outboundCallerConfig(outboundCallerConfig: IResolvable) {
-      cdkBuilder.outboundCallerConfig(outboundCallerConfig.let(IResolvable::unwrap))
+      cdkBuilder.outboundCallerConfig(outboundCallerConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -432,7 +432,7 @@ public open class CfnQueue(
      * @param outboundCallerConfig The outbound caller ID name, number, and outbound whisper flow. 
      */
     override fun outboundCallerConfig(outboundCallerConfig: OutboundCallerConfigProperty) {
-      cdkBuilder.outboundCallerConfig(outboundCallerConfig.let(OutboundCallerConfigProperty::unwrap))
+      cdkBuilder.outboundCallerConfig(outboundCallerConfig.let(OutboundCallerConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -489,7 +489,7 @@ public open class CfnQueue(
      * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

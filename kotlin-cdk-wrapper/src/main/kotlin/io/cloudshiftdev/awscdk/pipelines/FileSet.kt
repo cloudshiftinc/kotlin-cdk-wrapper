@@ -50,7 +50,7 @@ public open class FileSet(
   )
 
   public constructor(id: String, producer: Step) : this(software.amazon.awscdk.pipelines.FileSet(id,
-      producer.let(Step::unwrap))
+      producer.let(Step.Companion::unwrap))
   )
 
   /**
@@ -85,7 +85,7 @@ public open class FileSet(
    * @param producer
    */
   public open fun producedBy(producer: Step) {
-    unwrap(this).producedBy(producer.let(Step::unwrap))
+    unwrap(this).producedBy(producer.let(Step.Companion::unwrap))
   }
 
   /**

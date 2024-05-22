@@ -26,7 +26,7 @@ public open class EventBridgeDestination(
   cdkObject: software.amazon.awscdk.services.appconfig.EventBridgeDestination,
 ) : CdkObject(cdkObject), IEventDestination {
   public constructor(bus: IEventBus) :
-      this(software.amazon.awscdk.services.appconfig.EventBridgeDestination(bus.let(IEventBus::unwrap))
+      this(software.amazon.awscdk.services.appconfig.EventBridgeDestination(bus.let(IEventBus.Companion::unwrap))
   )
 
   /**

@@ -55,7 +55,7 @@ public open class Match(
    * @param context 
    */
   public override fun resolve(context: IResolveContext): Any =
-      unwrap(this).resolve(context.let(IResolveContext::unwrap))
+      unwrap(this).resolve(context.let(IResolveContext.Companion::unwrap))
 
   public companion object {
     public fun allOf(matchers: Any): List<String> =

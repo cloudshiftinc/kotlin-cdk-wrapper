@@ -57,7 +57,8 @@ public open class App(
   public constructor() : this(software.amazon.awscdk.App()
   )
 
-  public constructor(props: AppProps) : this(software.amazon.awscdk.App(props.let(AppProps::unwrap))
+  public constructor(props: AppProps) :
+      this(software.amazon.awscdk.App(props.let(AppProps.Companion::unwrap))
   )
 
   public constructor(props: AppProps.Builder.() -> Unit) : this(AppProps(props)
@@ -266,7 +267,7 @@ public open class App(
      * App. 
      */
     override fun defaultStackSynthesizer(defaultStackSynthesizer: IReusableStackSynthesizer) {
-      cdkBuilder.defaultStackSynthesizer(defaultStackSynthesizer.let(IReusableStackSynthesizer::unwrap))
+      cdkBuilder.defaultStackSynthesizer(defaultStackSynthesizer.let(IReusableStackSynthesizer.Companion::unwrap))
     }
 
     /**
@@ -295,7 +296,7 @@ public open class App(
      * @param policyValidationBeta1 Validation plugins to run after synthesis. 
      */
     override fun policyValidationBeta1(policyValidationBeta1: List<IPolicyValidationPluginBeta1>) {
-      cdkBuilder.policyValidationBeta1(policyValidationBeta1.map(IPolicyValidationPluginBeta1::unwrap))
+      cdkBuilder.policyValidationBeta1(policyValidationBeta1.map(IPolicyValidationPluginBeta1.Companion::unwrap))
     }
 
     /**

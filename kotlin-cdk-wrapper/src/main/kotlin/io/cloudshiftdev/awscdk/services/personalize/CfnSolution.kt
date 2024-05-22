@@ -21,10 +21,21 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * An object that provides information about a solution.
+ * After you create a solution, you can’t change its configuration.
  *
- * A solution includes the custom recipe, customized parameters, and trained models (Solution
- * Versions) that Amazon Personalize uses to generate recommendations.
+ * By default, all new solutions use automatic training. With automatic training, you incur training
+ * costs while your solution is active. You can't stop automatic training for a solution. To avoid
+ * unnecessary costs, make sure to delete the solution when you are finished. For information about
+ * training costs, see [Amazon Personalize
+ * pricing](https://docs.aws.amazon.com/https://aws.amazon.com/personalize/pricing/) .
+ *
+ * An object that provides information about a solution. A solution includes the custom recipe,
+ * customized parameters, and trained models (Solution Versions) that Amazon Personalize uses to
+ * generate recommendations.
+ *
+ * After you create a solution, you can’t change its configuration. If you need to make changes, you
+ * can [clone the solution](https://docs.aws.amazon.com/personalize/latest/dg/cloning-solution.html)
+ * with the Amazon Personalize console or create a new one.
  *
  * Example:
  *
@@ -64,8 +75,8 @@ public open class CfnSolution(
     id: String,
     props: CfnSolutionProps,
   ) :
-      this(software.amazon.awscdk.services.personalize.CfnSolution(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSolutionProps::unwrap))
+      this(software.amazon.awscdk.services.personalize.CfnSolution(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSolutionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -110,7 +121,7 @@ public open class CfnSolution(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -141,7 +152,7 @@ public open class CfnSolution(
    * We don't recommend enabling automated machine learning.
    */
   public open fun performAutoMl(`value`: IResolvable) {
-    unwrap(this).setPerformAutoMl(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPerformAutoMl(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -160,7 +171,7 @@ public open class CfnSolution(
    * Whether to perform hyperparameter optimization (HPO) on the chosen recipe.
    */
   public open fun performHpo(`value`: IResolvable) {
-    unwrap(this).setPerformHpo(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPerformHpo(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -184,14 +195,14 @@ public open class CfnSolution(
    * Describes the configuration properties for the solution.
    */
   public open fun solutionConfig(`value`: IResolvable) {
-    unwrap(this).setSolutionConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSolutionConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Describes the configuration properties for the solution.
    */
   public open fun solutionConfig(`value`: SolutionConfigProperty) {
-    unwrap(this).setSolutionConfig(`value`.let(SolutionConfigProperty::unwrap))
+    unwrap(this).setSolutionConfig(`value`.let(SolutionConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -400,7 +411,7 @@ public open class CfnSolution(
      * @param performAutoMl We don't recommend enabling automated machine learning. 
      */
     override fun performAutoMl(performAutoMl: IResolvable) {
-      cdkBuilder.performAutoMl(performAutoMl.let(IResolvable::unwrap))
+      cdkBuilder.performAutoMl(performAutoMl.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -424,7 +435,7 @@ public open class CfnSolution(
      * @param performHpo Whether to perform hyperparameter optimization (HPO) on the chosen recipe. 
      */
     override fun performHpo(performHpo: IResolvable) {
-      cdkBuilder.performHpo(performHpo.let(IResolvable::unwrap))
+      cdkBuilder.performHpo(performHpo.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -446,7 +457,7 @@ public open class CfnSolution(
      * @param solutionConfig Describes the configuration properties for the solution. 
      */
     override fun solutionConfig(solutionConfig: IResolvable) {
-      cdkBuilder.solutionConfig(solutionConfig.let(IResolvable::unwrap))
+      cdkBuilder.solutionConfig(solutionConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -456,7 +467,7 @@ public open class CfnSolution(
      * @param solutionConfig Describes the configuration properties for the solution. 
      */
     override fun solutionConfig(solutionConfig: SolutionConfigProperty) {
-      cdkBuilder.solutionConfig(solutionConfig.let(SolutionConfigProperty::unwrap))
+      cdkBuilder.solutionConfig(solutionConfig.let(SolutionConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -621,7 +632,7 @@ public open class CfnSolution(
        * hyperparameter.
        */
       override fun categoricalHyperParameterRanges(categoricalHyperParameterRanges: IResolvable) {
-        cdkBuilder.categoricalHyperParameterRanges(categoricalHyperParameterRanges.let(IResolvable::unwrap))
+        cdkBuilder.categoricalHyperParameterRanges(categoricalHyperParameterRanges.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -644,7 +655,7 @@ public open class CfnSolution(
        * hyperparameter.
        */
       override fun continuousHyperParameterRanges(continuousHyperParameterRanges: IResolvable) {
-        cdkBuilder.continuousHyperParameterRanges(continuousHyperParameterRanges.let(IResolvable::unwrap))
+        cdkBuilder.continuousHyperParameterRanges(continuousHyperParameterRanges.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -667,7 +678,7 @@ public open class CfnSolution(
        * hyperparameter.
        */
       override fun integerHyperParameterRanges(integerHyperParameterRanges: IResolvable) {
-        cdkBuilder.integerHyperParameterRanges(integerHyperParameterRanges.let(IResolvable::unwrap))
+        cdkBuilder.integerHyperParameterRanges(integerHyperParameterRanges.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1258,7 +1269,7 @@ public open class CfnSolution(
        * @param algorithmHyperParameterRanges The hyperparameters and their allowable ranges.
        */
       override fun algorithmHyperParameterRanges(algorithmHyperParameterRanges: IResolvable) {
-        cdkBuilder.algorithmHyperParameterRanges(algorithmHyperParameterRanges.let(IResolvable::unwrap))
+        cdkBuilder.algorithmHyperParameterRanges(algorithmHyperParameterRanges.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1266,7 +1277,7 @@ public open class CfnSolution(
        */
       override
           fun algorithmHyperParameterRanges(algorithmHyperParameterRanges: AlgorithmHyperParameterRangesProperty) {
-        cdkBuilder.algorithmHyperParameterRanges(algorithmHyperParameterRanges.let(AlgorithmHyperParameterRangesProperty::unwrap))
+        cdkBuilder.algorithmHyperParameterRanges(algorithmHyperParameterRanges.let(AlgorithmHyperParameterRangesProperty.Companion::unwrap))
       }
 
       /**
@@ -1285,7 +1296,7 @@ public open class CfnSolution(
        * Amazon Personalize doesn't support configuring the `hpoObjective` at this time.
        */
       override fun hpoObjective(hpoObjective: IResolvable) {
-        cdkBuilder.hpoObjective(hpoObjective.let(IResolvable::unwrap))
+        cdkBuilder.hpoObjective(hpoObjective.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1294,7 +1305,7 @@ public open class CfnSolution(
        * Amazon Personalize doesn't support configuring the `hpoObjective` at this time.
        */
       override fun hpoObjective(hpoObjective: HpoObjectiveProperty) {
-        cdkBuilder.hpoObjective(hpoObjective.let(HpoObjectiveProperty::unwrap))
+        cdkBuilder.hpoObjective(hpoObjective.let(HpoObjectiveProperty.Companion::unwrap))
       }
 
       /**
@@ -1311,14 +1322,14 @@ public open class CfnSolution(
        * @param hpoResourceConfig Describes the resource configuration for HPO.
        */
       override fun hpoResourceConfig(hpoResourceConfig: IResolvable) {
-        cdkBuilder.hpoResourceConfig(hpoResourceConfig.let(IResolvable::unwrap))
+        cdkBuilder.hpoResourceConfig(hpoResourceConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param hpoResourceConfig Describes the resource configuration for HPO.
        */
       override fun hpoResourceConfig(hpoResourceConfig: HpoResourceConfigProperty) {
-        cdkBuilder.hpoResourceConfig(hpoResourceConfig.let(HpoResourceConfigProperty::unwrap))
+        cdkBuilder.hpoResourceConfig(hpoResourceConfig.let(HpoResourceConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1907,7 +1918,7 @@ public open class CfnSolution(
        * @param algorithmHyperParameters Lists the algorithm hyperparameters and their values.
        */
       override fun algorithmHyperParameters(algorithmHyperParameters: IResolvable) {
-        cdkBuilder.algorithmHyperParameters(algorithmHyperParameters.let(IResolvable::unwrap))
+        cdkBuilder.algorithmHyperParameters(algorithmHyperParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1938,7 +1949,7 @@ public open class CfnSolution(
        * @param featureTransformationParameters Lists the feature transformation parameters.
        */
       override fun featureTransformationParameters(featureTransformationParameters: IResolvable) {
-        cdkBuilder.featureTransformationParameters(featureTransformationParameters.let(IResolvable::unwrap))
+        cdkBuilder.featureTransformationParameters(featureTransformationParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**

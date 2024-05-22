@@ -79,7 +79,7 @@ public interface BlockDevice {
      * Supply a value like `BlockDeviceVolume.ebs(15)`, `BlockDeviceVolume.ephemeral(0)`.
      */
     override fun volume(volume: BlockDeviceVolume) {
-      cdkBuilder.volume(volume.let(BlockDeviceVolume::unwrap))
+      cdkBuilder.volume(volume.let(BlockDeviceVolume.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.autoscaling.BlockDevice = cdkBuilder.build()

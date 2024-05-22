@@ -75,7 +75,7 @@ public interface FirelensConfig {
      * @param options Firelens options.
      */
     override fun options(options: FirelensOptions) {
-      cdkBuilder.options(options.let(FirelensOptions::unwrap))
+      cdkBuilder.options(options.let(FirelensOptions.Companion::unwrap))
     }
 
     /**
@@ -90,7 +90,7 @@ public interface FirelensConfig {
      * @param type The log router to use. 
      */
     override fun type(type: FirelensLogRouterType) {
-      cdkBuilder.type(type.let(FirelensLogRouterType::unwrap))
+      cdkBuilder.type(type.let(FirelensLogRouterType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.FirelensConfig = cdkBuilder.build()

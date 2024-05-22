@@ -415,7 +415,7 @@ public interface CfnJobDefinitionProps {
      * `eksProperties` , `ecsProperties` , or `nodeProperties` .
      */
     override fun containerProperties(containerProperties: IResolvable) {
-      cdkBuilder.containerProperties(containerProperties.let(IResolvable::unwrap))
+      cdkBuilder.containerProperties(containerProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -425,7 +425,7 @@ public interface CfnJobDefinitionProps {
      */
     override
         fun containerProperties(containerProperties: CfnJobDefinition.ContainerPropertiesProperty) {
-      cdkBuilder.containerProperties(containerProperties.let(CfnJobDefinition.ContainerPropertiesProperty::unwrap))
+      cdkBuilder.containerProperties(containerProperties.let(CfnJobDefinition.ContainerPropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -446,7 +446,7 @@ public interface CfnJobDefinitionProps {
      * `containerProperties` , `eksProperties` , or `nodeProperties` .
      */
     override fun ecsProperties(ecsProperties: IResolvable) {
-      cdkBuilder.ecsProperties(ecsProperties.let(IResolvable::unwrap))
+      cdkBuilder.ecsProperties(ecsProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -455,7 +455,7 @@ public interface CfnJobDefinitionProps {
      * `containerProperties` , `eksProperties` , or `nodeProperties` .
      */
     override fun ecsProperties(ecsProperties: CfnJobDefinition.EcsPropertiesProperty) {
-      cdkBuilder.ecsProperties(ecsProperties.let(CfnJobDefinition.EcsPropertiesProperty::unwrap))
+      cdkBuilder.ecsProperties(ecsProperties.let(CfnJobDefinition.EcsPropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -475,7 +475,7 @@ public interface CfnJobDefinitionProps {
      * `containerProperties` , `ecsProperties` , or `nodeProperties` .
      */
     override fun eksProperties(eksProperties: IResolvable) {
-      cdkBuilder.eksProperties(eksProperties.let(IResolvable::unwrap))
+      cdkBuilder.eksProperties(eksProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -484,7 +484,7 @@ public interface CfnJobDefinitionProps {
      * `containerProperties` , `ecsProperties` , or `nodeProperties` .
      */
     override fun eksProperties(eksProperties: CfnJobDefinition.EksPropertiesProperty) {
-      cdkBuilder.eksProperties(eksProperties.let(CfnJobDefinition.EksPropertiesProperty::unwrap))
+      cdkBuilder.eksProperties(eksProperties.let(CfnJobDefinition.EksPropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -516,7 +516,7 @@ public interface CfnJobDefinitionProps {
      * `containerProperties` instead.
      */
     override fun nodeProperties(nodeProperties: IResolvable) {
-      cdkBuilder.nodeProperties(nodeProperties.let(IResolvable::unwrap))
+      cdkBuilder.nodeProperties(nodeProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -530,7 +530,7 @@ public interface CfnJobDefinitionProps {
      * `containerProperties` instead.
      */
     override fun nodeProperties(nodeProperties: CfnJobDefinition.NodePropertiesProperty) {
-      cdkBuilder.nodeProperties(nodeProperties.let(CfnJobDefinition.NodePropertiesProperty::unwrap))
+      cdkBuilder.nodeProperties(nodeProperties.let(CfnJobDefinition.NodePropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -600,7 +600,7 @@ public interface CfnJobDefinitionProps {
      * over 50, the job is moved to the `FAILED` state.
      */
     override fun propagateTags(propagateTags: IResolvable) {
-      cdkBuilder.propagateTags(propagateTags.let(IResolvable::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -608,7 +608,7 @@ public interface CfnJobDefinitionProps {
      * job definition.
      */
     override fun retryStrategy(retryStrategy: IResolvable) {
-      cdkBuilder.retryStrategy(retryStrategy.let(IResolvable::unwrap))
+      cdkBuilder.retryStrategy(retryStrategy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -616,7 +616,7 @@ public interface CfnJobDefinitionProps {
      * job definition.
      */
     override fun retryStrategy(retryStrategy: CfnJobDefinition.RetryStrategyProperty) {
-      cdkBuilder.retryStrategy(retryStrategy.let(CfnJobDefinition.RetryStrategyProperty::unwrap))
+      cdkBuilder.retryStrategy(retryStrategy.let(CfnJobDefinition.RetryStrategyProperty.Companion::unwrap))
     }
 
     /**
@@ -651,7 +651,7 @@ public interface CfnJobDefinitionProps {
      * finished.
      */
     override fun timeout(timeout: IResolvable) {
-      cdkBuilder.timeout(timeout.let(IResolvable::unwrap))
+      cdkBuilder.timeout(timeout.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -660,7 +660,7 @@ public interface CfnJobDefinitionProps {
      * finished.
      */
     override fun timeout(timeout: CfnJobDefinition.TimeoutProperty) {
-      cdkBuilder.timeout(timeout.let(CfnJobDefinition.TimeoutProperty::unwrap))
+      cdkBuilder.timeout(timeout.let(CfnJobDefinition.TimeoutProperty.Companion::unwrap))
     }
 
     /**

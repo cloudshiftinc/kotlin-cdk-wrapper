@@ -103,7 +103,7 @@ public interface SubscriptionProps : SubscriptionOptions {
      * If not passed no dead letter queue is enabled.
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -135,7 +135,7 @@ public interface SubscriptionProps : SubscriptionOptions {
      * @param protocol What type of subscription to add. 
      */
     override fun protocol(protocol: SubscriptionProtocol) {
-      cdkBuilder.protocol(protocol.let(SubscriptionProtocol::unwrap))
+      cdkBuilder.protocol(protocol.let(SubscriptionProtocol.Companion::unwrap))
     }
 
     /**
@@ -168,7 +168,7 @@ public interface SubscriptionProps : SubscriptionOptions {
      * @param topic The topic to subscribe to. 
      */
     override fun topic(topic: ITopic) {
-      cdkBuilder.topic(topic.let(ITopic::unwrap))
+      cdkBuilder.topic(topic.let(ITopic.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.sns.SubscriptionProps = cdkBuilder.build()

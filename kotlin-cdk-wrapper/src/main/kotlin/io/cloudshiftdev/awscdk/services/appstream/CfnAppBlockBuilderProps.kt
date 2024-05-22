@@ -244,7 +244,7 @@ public interface CfnAppBlockBuilderProps {
      * @param accessEndpoints The access endpoints of the app block builder.
      */
     override fun accessEndpoints(accessEndpoints: IResolvable) {
-      cdkBuilder.accessEndpoints(accessEndpoints.let(IResolvable::unwrap))
+      cdkBuilder.accessEndpoints(accessEndpoints.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -302,7 +302,7 @@ public interface CfnAppBlockBuilderProps {
      * the app block builder.
      */
     override fun enableDefaultInternetAccess(enableDefaultInternetAccess: IResolvable) {
-      cdkBuilder.enableDefaultInternetAccess(enableDefaultInternetAccess.let(IResolvable::unwrap))
+      cdkBuilder.enableDefaultInternetAccess(enableDefaultInternetAccess.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -338,7 +338,7 @@ public interface CfnAppBlockBuilderProps {
      * @param tags The tags of the app block builder.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -350,14 +350,14 @@ public interface CfnAppBlockBuilderProps {
      * @param vpcConfig The VPC configuration for the app block builder. 
      */
     override fun vpcConfig(vpcConfig: IResolvable) {
-      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param vpcConfig The VPC configuration for the app block builder. 
      */
     override fun vpcConfig(vpcConfig: CfnAppBlockBuilder.VpcConfigProperty) {
-      cdkBuilder.vpcConfig(vpcConfig.let(CfnAppBlockBuilder.VpcConfigProperty::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(CfnAppBlockBuilder.VpcConfigProperty.Companion::unwrap))
     }
 
     /**

@@ -266,7 +266,7 @@ public interface NetworkLoadBalancedTaskImageOptions {
      * container agent permission to call AWS APIs on your behalf.
      */
     override fun executionRole(executionRole: IRole) {
-      cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
+      cdkBuilder.executionRole(executionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -282,14 +282,14 @@ public interface NetworkLoadBalancedTaskImageOptions {
      * Image or taskDefinition must be specified, but not both.
      */
     override fun image(image: ContainerImage) {
-      cdkBuilder.image(image.let(ContainerImage::unwrap))
+      cdkBuilder.image(image.let(ContainerImage.Companion::unwrap))
     }
 
     /**
      * @param logDriver The log driver to use.
      */
     override fun logDriver(logDriver: LogDriver) {
-      cdkBuilder.logDriver(logDriver.let(LogDriver::unwrap))
+      cdkBuilder.logDriver(logDriver.let(LogDriver.Companion::unwrap))
     }
 
     /**
@@ -304,7 +304,7 @@ public interface NetworkLoadBalancedTaskImageOptions {
      * to call AWS APIs on your behalf.
      */
     override fun taskRole(taskRole: IRole) {
-      cdkBuilder.taskRole(taskRole.let(IRole::unwrap))
+      cdkBuilder.taskRole(taskRole.let(IRole.Companion::unwrap))
     }
 
     public fun build():

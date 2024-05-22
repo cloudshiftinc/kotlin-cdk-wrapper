@@ -39,7 +39,7 @@ public interface ISecretTargetAttachment : ISecret {
      */
     override fun addRotationSchedule(id: String, options: RotationScheduleOptions): RotationSchedule
         = unwrap(this).addRotationSchedule(id,
-        options.let(RotationScheduleOptions::unwrap)).let(RotationSchedule::wrap)
+        options.let(RotationScheduleOptions.Companion::unwrap)).let(RotationSchedule::wrap)
 
     /**
      * Adds a rotation schedule to the secret.
@@ -63,7 +63,7 @@ public interface ISecretTargetAttachment : ISecret {
      * @param statement 
      */
     override fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
-        unwrap(this).addToResourcePolicy(statement.let(PolicyStatement::unwrap)).let(AddToResourcePolicyResult::wrap)
+        unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
 
     /**
      * Adds a statement to the IAM resource policy associated with this secret.
@@ -93,7 +93,7 @@ public interface ISecretTargetAttachment : ISecret {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -103,7 +103,7 @@ public interface ISecretTargetAttachment : ISecret {
      * @param target The target to attach. 
      */
     override fun attach(target: ISecretAttachmentTarget): ISecret =
-        unwrap(this).attach(target.let(ISecretAttachmentTarget::unwrap)).let(ISecret::wrap)
+        unwrap(this).attach(target.let(ISecretAttachmentTarget.Companion::unwrap)).let(ISecret::wrap)
 
     /**
      * Denies the `DeleteSecret` action to all principals within the current account.
@@ -139,7 +139,7 @@ public interface ISecretTargetAttachment : ISecret {
      * @param versionStages the version stages the grant is limited to.
      */
     override fun grantRead(grantee: IGrantable): Grant =
-        unwrap(this).grantRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grants reading the secret value to some role.
@@ -148,7 +148,8 @@ public interface ISecretTargetAttachment : ISecret {
      * @param versionStages the version stages the grant is limited to.
      */
     override fun grantRead(grantee: IGrantable, versionStages: List<String>): Grant =
-        unwrap(this).grantRead(grantee.let(IGrantable::unwrap), versionStages).let(Grant::wrap)
+        unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap),
+        versionStages).let(Grant::wrap)
 
     /**
      * Grants writing and updating the secret value to some role.
@@ -156,7 +157,7 @@ public interface ISecretTargetAttachment : ISecret {
      * @param grantee the principal being granted permission. 
      */
     override fun grantWrite(grantee: IGrantable): Grant =
-        unwrap(this).grantWrite(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantWrite(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 

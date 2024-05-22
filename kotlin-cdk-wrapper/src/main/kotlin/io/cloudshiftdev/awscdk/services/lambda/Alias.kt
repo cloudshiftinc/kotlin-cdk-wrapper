@@ -48,8 +48,8 @@ public open class Alias(
     id: String,
     props: AliasProps,
   ) :
-      this(software.amazon.awscdk.services.lambda.Alias(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(AliasProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.Alias(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(AliasProps.Companion::unwrap))
   )
 
   public constructor(
@@ -68,7 +68,7 @@ public open class Alias(
    * @param options Autoscaling options. 
    */
   public open fun addAutoScaling(options: AutoScalingOptions): IScalableFunctionAttribute =
-      unwrap(this).addAutoScaling(options.let(AutoScalingOptions::unwrap)).let(IScalableFunctionAttribute::wrap)
+      unwrap(this).addAutoScaling(options.let(AutoScalingOptions.Companion::unwrap)).let(IScalableFunctionAttribute::wrap)
 
   /**
    * Configure provisioned concurrency autoscaling on a function alias.
@@ -137,7 +137,7 @@ public open class Alias(
    * @param props
    */
   public override fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Return the given named metric for this Function.
@@ -316,7 +316,7 @@ public open class Alias(
      * @param additionalVersions Additional versions with individual weights this alias points to. 
      */
     override fun additionalVersions(additionalVersions: List<VersionWeight>) {
-      cdkBuilder.additionalVersions(additionalVersions.map(VersionWeight::unwrap))
+      cdkBuilder.additionalVersions(additionalVersions.map(VersionWeight.Companion::unwrap))
     }
 
     /**
@@ -373,7 +373,7 @@ public open class Alias(
      * processing. 
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -384,7 +384,7 @@ public open class Alias(
      * @param onFailure The destination for failed invocations. 
      */
     override fun onFailure(onFailure: IDestination) {
-      cdkBuilder.onFailure(onFailure.let(IDestination::unwrap))
+      cdkBuilder.onFailure(onFailure.let(IDestination.Companion::unwrap))
     }
 
     /**
@@ -395,7 +395,7 @@ public open class Alias(
      * @param onSuccess The destination for successful invocations. 
      */
     override fun onSuccess(onSuccess: IDestination) {
-      cdkBuilder.onSuccess(onSuccess.let(IDestination::unwrap))
+      cdkBuilder.onSuccess(onSuccess.let(IDestination.Companion::unwrap))
     }
 
     /**
@@ -433,7 +433,7 @@ public open class Alias(
      * @param version Function version this alias refers to. 
      */
     override fun version(version: IVersion) {
-      cdkBuilder.version(version.let(IVersion::unwrap))
+      cdkBuilder.version(version.let(IVersion.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lambda.Alias = cdkBuilder.build()
@@ -445,8 +445,8 @@ public open class Alias(
       id: String,
       attrs: AliasAttributes,
     ): IAlias =
-        software.amazon.awscdk.services.lambda.Alias.fromAliasAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(AliasAttributes::unwrap)).let(IAlias::wrap)
+        software.amazon.awscdk.services.lambda.Alias.fromAliasAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(AliasAttributes.Companion::unwrap)).let(IAlias::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("33308014d704af36d994cc374bcae095f260400d1c1da242bd71dc6553c34889")

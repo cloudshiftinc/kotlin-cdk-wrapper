@@ -130,7 +130,7 @@ public interface EventCommonOptions {
      * This helps dealing with cycles that often arise in these situations.
      */
     override fun crossStackScope(crossStackScope: Construct) {
-      cdkBuilder.crossStackScope(crossStackScope.let(Construct::unwrap))
+      cdkBuilder.crossStackScope(crossStackScope.let(Construct.Companion::unwrap))
     }
 
     /**
@@ -147,7 +147,7 @@ public interface EventCommonOptions {
      * on top of that filtering.
      */
     override fun eventPattern(eventPattern: EventPattern) {
-      cdkBuilder.eventPattern(eventPattern.let(EventPattern::unwrap))
+      cdkBuilder.eventPattern(eventPattern.let(EventPattern.Companion::unwrap))
     }
 
     /**

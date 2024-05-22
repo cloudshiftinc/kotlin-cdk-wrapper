@@ -190,7 +190,7 @@ public interface InterfaceVpcEndpointOptions {
      * @param securityGroups The security groups to associate with this interface VPC endpoint.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -203,7 +203,7 @@ public interface InterfaceVpcEndpointOptions {
      * @param service The service to use for this interface VPC endpoint. 
      */
     override fun service(service: IInterfaceVpcEndpointService) {
-      cdkBuilder.service(service.let(IInterfaceVpcEndpointService::unwrap))
+      cdkBuilder.service(service.let(IInterfaceVpcEndpointService.Companion::unwrap))
     }
 
     /**
@@ -212,7 +212,7 @@ public interface InterfaceVpcEndpointOptions {
      * per availability zone.
      */
     override fun subnets(subnets: SubnetSelection) {
-      cdkBuilder.subnets(subnets.let(SubnetSelection::unwrap))
+      cdkBuilder.subnets(subnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

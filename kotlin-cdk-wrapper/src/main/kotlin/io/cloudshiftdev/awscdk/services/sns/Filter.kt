@@ -19,7 +19,7 @@ public open class Filter(
   cdkObject: software.amazon.awscdk.services.sns.Filter,
 ) : FilterOrPolicy(cdkObject) {
   public constructor(filterDoc: SubscriptionFilter) :
-      this(software.amazon.awscdk.services.sns.Filter(filterDoc.let(SubscriptionFilter::unwrap))
+      this(software.amazon.awscdk.services.sns.Filter(filterDoc.let(SubscriptionFilter.Companion::unwrap))
   )
 
   /**

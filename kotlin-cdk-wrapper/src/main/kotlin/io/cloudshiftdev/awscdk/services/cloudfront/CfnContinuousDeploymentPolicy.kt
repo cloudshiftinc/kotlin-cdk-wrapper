@@ -87,8 +87,8 @@ public open class CfnContinuousDeploymentPolicy(
     id: String,
     props: CfnContinuousDeploymentPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnContinuousDeploymentPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.CfnContinuousDeploymentPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnContinuousDeploymentPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -118,7 +118,7 @@ public open class CfnContinuousDeploymentPolicy(
    * Contains the configuration for a continuous deployment policy.
    */
   public open fun continuousDeploymentPolicyConfig(`value`: IResolvable) {
-    unwrap(this).setContinuousDeploymentPolicyConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setContinuousDeploymentPolicyConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -126,7 +126,7 @@ public open class CfnContinuousDeploymentPolicy(
    */
   public open
       fun continuousDeploymentPolicyConfig(`value`: ContinuousDeploymentPolicyConfigProperty) {
-    unwrap(this).setContinuousDeploymentPolicyConfig(`value`.let(ContinuousDeploymentPolicyConfigProperty::unwrap))
+    unwrap(this).setContinuousDeploymentPolicyConfig(`value`.let(ContinuousDeploymentPolicyConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -144,7 +144,7 @@ public open class CfnContinuousDeploymentPolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -202,7 +202,7 @@ public open class CfnContinuousDeploymentPolicy(
      * deployment policy. 
      */
     override fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: IResolvable) {
-      cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig.let(IResolvable::unwrap))
+      cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -214,7 +214,7 @@ public open class CfnContinuousDeploymentPolicy(
      */
     override
         fun continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig: ContinuousDeploymentPolicyConfigProperty) {
-      cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig.let(ContinuousDeploymentPolicyConfigProperty::unwrap))
+      cdkBuilder.continuousDeploymentPolicyConfig(continuousDeploymentPolicyConfig.let(ContinuousDeploymentPolicyConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -494,7 +494,7 @@ public open class CfnContinuousDeploymentPolicy(
        * `false` , this policy is not enabled and has no effect.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -505,7 +505,7 @@ public open class CfnContinuousDeploymentPolicy(
        * distribution.
        */
       override fun singleHeaderPolicyConfig(singleHeaderPolicyConfig: IResolvable) {
-        cdkBuilder.singleHeaderPolicyConfig(singleHeaderPolicyConfig.let(IResolvable::unwrap))
+        cdkBuilder.singleHeaderPolicyConfig(singleHeaderPolicyConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -517,7 +517,7 @@ public open class CfnContinuousDeploymentPolicy(
        */
       override
           fun singleHeaderPolicyConfig(singleHeaderPolicyConfig: SingleHeaderPolicyConfigProperty) {
-        cdkBuilder.singleHeaderPolicyConfig(singleHeaderPolicyConfig.let(SingleHeaderPolicyConfigProperty::unwrap))
+        cdkBuilder.singleHeaderPolicyConfig(singleHeaderPolicyConfig.let(SingleHeaderPolicyConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -539,7 +539,7 @@ public open class CfnContinuousDeploymentPolicy(
        * requests that are sent to the staging distribution.
        */
       override fun singleWeightPolicyConfig(singleWeightPolicyConfig: IResolvable) {
-        cdkBuilder.singleWeightPolicyConfig(singleWeightPolicyConfig.let(IResolvable::unwrap))
+        cdkBuilder.singleWeightPolicyConfig(singleWeightPolicyConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -548,7 +548,7 @@ public open class CfnContinuousDeploymentPolicy(
        */
       override
           fun singleWeightPolicyConfig(singleWeightPolicyConfig: SingleWeightPolicyConfigProperty) {
-        cdkBuilder.singleWeightPolicyConfig(singleWeightPolicyConfig.let(SingleWeightPolicyConfigProperty::unwrap))
+        cdkBuilder.singleWeightPolicyConfig(singleWeightPolicyConfig.let(SingleWeightPolicyConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -582,7 +582,7 @@ public open class CfnContinuousDeploymentPolicy(
        * primary to staging distributions.
        */
       override fun trafficConfig(trafficConfig: IResolvable) {
-        cdkBuilder.trafficConfig(trafficConfig.let(IResolvable::unwrap))
+        cdkBuilder.trafficConfig(trafficConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -590,7 +590,7 @@ public open class CfnContinuousDeploymentPolicy(
        * primary to staging distributions.
        */
       override fun trafficConfig(trafficConfig: TrafficConfigProperty) {
-        cdkBuilder.trafficConfig(trafficConfig.let(TrafficConfigProperty::unwrap))
+        cdkBuilder.trafficConfig(trafficConfig.let(TrafficConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1142,7 +1142,7 @@ public open class CfnContinuousDeploymentPolicy(
        * Define the session duration using TTL values.
        */
       override fun sessionStickinessConfig(sessionStickinessConfig: IResolvable) {
-        cdkBuilder.sessionStickinessConfig(sessionStickinessConfig.let(IResolvable::unwrap))
+        cdkBuilder.sessionStickinessConfig(sessionStickinessConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1154,7 +1154,7 @@ public open class CfnContinuousDeploymentPolicy(
        */
       override
           fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty) {
-        cdkBuilder.sessionStickinessConfig(sessionStickinessConfig.let(SessionStickinessConfigProperty::unwrap))
+        cdkBuilder.sessionStickinessConfig(sessionStickinessConfig.let(SessionStickinessConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1297,7 +1297,7 @@ public open class CfnContinuousDeploymentPolicy(
        * @param sessionStickinessConfig the value to be set.
        */
       override fun sessionStickinessConfig(sessionStickinessConfig: IResolvable) {
-        cdkBuilder.sessionStickinessConfig(sessionStickinessConfig.let(IResolvable::unwrap))
+        cdkBuilder.sessionStickinessConfig(sessionStickinessConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1305,7 +1305,7 @@ public open class CfnContinuousDeploymentPolicy(
        */
       override
           fun sessionStickinessConfig(sessionStickinessConfig: SessionStickinessConfigProperty) {
-        cdkBuilder.sessionStickinessConfig(sessionStickinessConfig.let(SessionStickinessConfigProperty::unwrap))
+        cdkBuilder.sessionStickinessConfig(sessionStickinessConfig.let(SessionStickinessConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1476,7 +1476,7 @@ public open class CfnContinuousDeploymentPolicy(
        * distribution.
        */
       override fun singleHeaderConfig(singleHeaderConfig: IResolvable) {
-        cdkBuilder.singleHeaderConfig(singleHeaderConfig.let(IResolvable::unwrap))
+        cdkBuilder.singleHeaderConfig(singleHeaderConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1484,7 +1484,7 @@ public open class CfnContinuousDeploymentPolicy(
        * distribution.
        */
       override fun singleHeaderConfig(singleHeaderConfig: SingleHeaderConfigProperty) {
-        cdkBuilder.singleHeaderConfig(singleHeaderConfig.let(SingleHeaderConfigProperty::unwrap))
+        cdkBuilder.singleHeaderConfig(singleHeaderConfig.let(SingleHeaderConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1502,7 +1502,7 @@ public open class CfnContinuousDeploymentPolicy(
        * distribution.
        */
       override fun singleWeightConfig(singleWeightConfig: IResolvable) {
-        cdkBuilder.singleWeightConfig(singleWeightConfig.let(IResolvable::unwrap))
+        cdkBuilder.singleWeightConfig(singleWeightConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1510,7 +1510,7 @@ public open class CfnContinuousDeploymentPolicy(
        * distribution.
        */
       override fun singleWeightConfig(singleWeightConfig: SingleWeightConfigProperty) {
-        cdkBuilder.singleWeightConfig(singleWeightConfig.let(SingleWeightConfigProperty::unwrap))
+        cdkBuilder.singleWeightConfig(singleWeightConfig.let(SingleWeightConfigProperty.Companion::unwrap))
       }
 
       /**

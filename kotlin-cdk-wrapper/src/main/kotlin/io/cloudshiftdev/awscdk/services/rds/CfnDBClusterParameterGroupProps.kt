@@ -230,7 +230,7 @@ public interface CfnDBClusterParameterGroupProps {
      * @param tags An optional array of key-value pairs to apply to this DB cluster parameter group.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

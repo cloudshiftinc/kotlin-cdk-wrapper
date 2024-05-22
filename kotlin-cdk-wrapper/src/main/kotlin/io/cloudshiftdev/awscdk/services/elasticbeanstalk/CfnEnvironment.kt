@@ -73,8 +73,8 @@ public open class CfnEnvironment(
     id: String,
     props: CfnEnvironmentProps,
   ) :
-      this(software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEnvironmentProps::unwrap))
+      this(software.amazon.awscdk.services.elasticbeanstalk.CfnEnvironment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEnvironmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -152,7 +152,7 @@ public open class CfnEnvironment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -178,7 +178,7 @@ public open class CfnEnvironment(
    * Key-value pairs defining configuration options for this environment, such as the instance type.
    */
   public open fun optionSettings(`value`: IResolvable) {
-    unwrap(this).setOptionSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOptionSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -232,7 +232,7 @@ public open class CfnEnvironment(
    * Specifies the tags applied to resources in the environment.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -261,14 +261,14 @@ public open class CfnEnvironment(
    * Specifies the tier to use in creating this environment.
    */
   public open fun tier(`value`: IResolvable) {
-    unwrap(this).setTier(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTier(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the tier to use in creating this environment.
    */
   public open fun tier(`value`: TierProperty) {
-    unwrap(this).setTier(`value`.let(TierProperty::unwrap))
+    unwrap(this).setTier(`value`.let(TierProperty.Companion::unwrap))
   }
 
   /**
@@ -628,7 +628,7 @@ public open class CfnEnvironment(
      * such as the instance type. 
      */
     override fun optionSettings(optionSettings: IResolvable) {
-      cdkBuilder.optionSettings(optionSettings.let(IResolvable::unwrap))
+      cdkBuilder.optionSettings(optionSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -714,7 +714,7 @@ public open class CfnEnvironment(
      * @param tags Specifies the tags applied to resources in the environment. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -751,7 +751,7 @@ public open class CfnEnvironment(
      * @param tier Specifies the tier to use in creating this environment. 
      */
     override fun tier(tier: IResolvable) {
-      cdkBuilder.tier(tier.let(IResolvable::unwrap))
+      cdkBuilder.tier(tier.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -765,7 +765,7 @@ public open class CfnEnvironment(
      * @param tier Specifies the tier to use in creating this environment. 
      */
     override fun tier(tier: TierProperty) {
-      cdkBuilder.tier(tier.let(TierProperty::unwrap))
+      cdkBuilder.tier(tier.let(TierProperty.Companion::unwrap))
     }
 
     /**

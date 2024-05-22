@@ -68,8 +68,8 @@ public open class CfnMembership(
     id: String,
     props: CfnMembershipProps,
   ) :
-      this(software.amazon.awscdk.services.cleanrooms.CfnMembership(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMembershipProps::unwrap))
+      this(software.amazon.awscdk.services.cleanrooms.CfnMembership(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMembershipProps.Companion::unwrap))
   )
 
   public constructor(
@@ -139,7 +139,7 @@ public open class CfnMembership(
    * results.
    */
   public open fun defaultResultConfiguration(`value`: IResolvable) {
-    unwrap(this).setDefaultResultConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefaultResultConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -148,7 +148,7 @@ public open class CfnMembership(
    */
   public open
       fun defaultResultConfiguration(`value`: MembershipProtectedQueryResultConfigurationProperty) {
-    unwrap(this).setDefaultResultConfiguration(`value`.let(MembershipProtectedQueryResultConfigurationProperty::unwrap))
+    unwrap(this).setDefaultResultConfiguration(`value`.let(MembershipProtectedQueryResultConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -168,7 +168,7 @@ public open class CfnMembership(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -180,14 +180,14 @@ public open class CfnMembership(
    * The payment responsibilities accepted by the collaboration member.
    */
   public open fun paymentConfiguration(`value`: IResolvable) {
-    unwrap(this).setPaymentConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPaymentConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The payment responsibilities accepted by the collaboration member.
    */
   public open fun paymentConfiguration(`value`: MembershipPaymentConfigurationProperty) {
-    unwrap(this).setPaymentConfiguration(`value`.let(MembershipPaymentConfigurationProperty::unwrap))
+    unwrap(this).setPaymentConfiguration(`value`.let(MembershipPaymentConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -220,7 +220,7 @@ public open class CfnMembership(
    * An optional label that you can assign to a resource when you create it.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -365,7 +365,7 @@ public open class CfnMembership(
      * specified by the member who can receive results. 
      */
     override fun defaultResultConfiguration(defaultResultConfiguration: IResolvable) {
-      cdkBuilder.defaultResultConfiguration(defaultResultConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.defaultResultConfiguration(defaultResultConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -378,7 +378,7 @@ public open class CfnMembership(
      */
     override
         fun defaultResultConfiguration(defaultResultConfiguration: MembershipProtectedQueryResultConfigurationProperty) {
-      cdkBuilder.defaultResultConfiguration(defaultResultConfiguration.let(MembershipProtectedQueryResultConfigurationProperty::unwrap))
+      cdkBuilder.defaultResultConfiguration(defaultResultConfiguration.let(MembershipProtectedQueryResultConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -404,7 +404,7 @@ public open class CfnMembership(
      * member. 
      */
     override fun paymentConfiguration(paymentConfiguration: IResolvable) {
-      cdkBuilder.paymentConfiguration(paymentConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.paymentConfiguration(paymentConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -416,7 +416,7 @@ public open class CfnMembership(
      */
     override
         fun paymentConfiguration(paymentConfiguration: MembershipPaymentConfigurationProperty) {
-      cdkBuilder.paymentConfiguration(paymentConfiguration.let(MembershipPaymentConfigurationProperty::unwrap))
+      cdkBuilder.paymentConfiguration(paymentConfiguration.let(MembershipPaymentConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -454,7 +454,7 @@ public open class CfnMembership(
      * @param tags An optional label that you can assign to a resource when you create it. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -559,7 +559,7 @@ public open class CfnMembership(
        * query compute costs. 
        */
       override fun queryCompute(queryCompute: IResolvable) {
-        cdkBuilder.queryCompute(queryCompute.let(IResolvable::unwrap))
+        cdkBuilder.queryCompute(queryCompute.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -567,7 +567,7 @@ public open class CfnMembership(
        * query compute costs. 
        */
       override fun queryCompute(queryCompute: MembershipQueryComputePaymentConfigProperty) {
-        cdkBuilder.queryCompute(queryCompute.let(MembershipQueryComputePaymentConfigProperty::unwrap))
+        cdkBuilder.queryCompute(queryCompute.let(MembershipQueryComputePaymentConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -679,14 +679,14 @@ public open class CfnMembership(
        * @param s3 Required configuration for a protected query with an `S3` output type. 
        */
       override fun s3(s3: IResolvable) {
-        cdkBuilder.s3(s3.let(IResolvable::unwrap))
+        cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3 Required configuration for a protected query with an `S3` output type. 
        */
       override fun s3(s3: ProtectedQueryS3OutputConfigurationProperty) {
-        cdkBuilder.s3(s3.let(ProtectedQueryS3OutputConfigurationProperty::unwrap))
+        cdkBuilder.s3(s3.let(ProtectedQueryS3OutputConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -816,7 +816,7 @@ public open class CfnMembership(
        * @param outputConfiguration Configuration for protected query results. 
        */
       override fun outputConfiguration(outputConfiguration: IResolvable) {
-        cdkBuilder.outputConfiguration(outputConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.outputConfiguration(outputConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -824,7 +824,7 @@ public open class CfnMembership(
        */
       override
           fun outputConfiguration(outputConfiguration: MembershipProtectedQueryOutputConfigurationProperty) {
-        cdkBuilder.outputConfiguration(outputConfiguration.let(MembershipProtectedQueryOutputConfigurationProperty::unwrap))
+        cdkBuilder.outputConfiguration(outputConfiguration.let(MembershipProtectedQueryOutputConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -996,7 +996,7 @@ public open class CfnMembership(
        * costs.
        */
       override fun isResponsible(isResponsible: IResolvable) {
-        cdkBuilder.isResponsible(isResponsible.let(IResolvable::unwrap))
+        cdkBuilder.isResponsible(isResponsible.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

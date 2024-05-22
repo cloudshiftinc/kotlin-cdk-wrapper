@@ -104,14 +104,14 @@ public interface CopyOptions {
      * @param follow A strategy for how to handle symlinks.
      */
     override fun follow(follow: SymlinkFollowMode) {
-      cdkBuilder.follow(follow.let(SymlinkFollowMode::unwrap))
+      cdkBuilder.follow(follow.let(SymlinkFollowMode.Companion::unwrap))
     }
 
     /**
      * @param ignoreMode The ignore behavior to use for `exclude` patterns.
      */
     override fun ignoreMode(ignoreMode: IgnoreMode) {
-      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode::unwrap))
+      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.CopyOptions = cdkBuilder.build()

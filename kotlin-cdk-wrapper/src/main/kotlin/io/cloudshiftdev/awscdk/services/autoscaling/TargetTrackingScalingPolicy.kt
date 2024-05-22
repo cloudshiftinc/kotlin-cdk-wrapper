@@ -45,8 +45,8 @@ public open class TargetTrackingScalingPolicy(
     id: String,
     props: TargetTrackingScalingPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.autoscaling.TargetTrackingScalingPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(TargetTrackingScalingPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.autoscaling.TargetTrackingScalingPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(TargetTrackingScalingPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -168,7 +168,7 @@ public open class TargetTrackingScalingPolicy(
      * @param autoScalingGroup 
      */
     override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
-      cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup::unwrap))
+      cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup.Companion::unwrap))
     }
 
     /**
@@ -179,7 +179,7 @@ public open class TargetTrackingScalingPolicy(
      * @param cooldown Period after a scaling completes before another scaling activity can start. 
      */
     override fun cooldown(cooldown: Duration) {
-      cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
+      cdkBuilder.cooldown(cooldown.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -195,7 +195,7 @@ public open class TargetTrackingScalingPolicy(
      * @param customMetric A custom metric for application autoscaling. 
      */
     override fun customMetric(customMetric: IMetric) {
-      cdkBuilder.customMetric(customMetric.let(IMetric::unwrap))
+      cdkBuilder.customMetric(customMetric.let(IMetric.Companion::unwrap))
     }
 
     /**
@@ -223,7 +223,7 @@ public open class TargetTrackingScalingPolicy(
      * metrics to CloudWatch. 
      */
     override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
-      cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup.let(Duration::unwrap))
+      cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -239,7 +239,7 @@ public open class TargetTrackingScalingPolicy(
      * @param predefinedMetric A predefined metric for application autoscaling. 
      */
     override fun predefinedMetric(predefinedMetric: PredefinedMetric) {
-      cdkBuilder.predefinedMetric(predefinedMetric.let(PredefinedMetric::unwrap))
+      cdkBuilder.predefinedMetric(predefinedMetric.let(PredefinedMetric.Companion::unwrap))
     }
 
     /**

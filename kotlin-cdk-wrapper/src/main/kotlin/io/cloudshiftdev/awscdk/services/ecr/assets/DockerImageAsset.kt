@@ -43,8 +43,8 @@ public open class DockerImageAsset(
     id: String,
     props: DockerImageAssetProps,
   ) :
-      this(software.amazon.awscdk.services.ecr.assets.DockerImageAsset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DockerImageAssetProps::unwrap))
+      this(software.amazon.awscdk.services.ecr.assets.DockerImageAsset(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DockerImageAssetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -71,7 +71,7 @@ public open class DockerImageAsset(
    * @param resourceProperty The property name where this asset is referenced. 
    */
   public open fun addResourceMetadata(resource: CfnResource, resourceProperty: String) {
-    unwrap(this).addResourceMetadata(resource.let(CfnResource::unwrap), resourceProperty)
+    unwrap(this).addResourceMetadata(resource.let(CfnResource.Companion::unwrap), resourceProperty)
   }
 
   /**
@@ -117,7 +117,7 @@ public open class DockerImageAsset(
    * Repository where the image is stored.
    */
   public open fun repository(`value`: IRepository) {
-    unwrap(this).setRepository(`value`.let(IRepository::unwrap))
+    unwrap(this).setRepository(`value`.let(IRepository.Companion::unwrap))
   }
 
   /**
@@ -469,7 +469,7 @@ public open class DockerImageAsset(
      * @param cacheFrom Cache from options to pass to the `docker build` command. 
      */
     override fun cacheFrom(cacheFrom: List<DockerCacheOption>) {
-      cdkBuilder.cacheFrom(cacheFrom.map(DockerCacheOption::unwrap))
+      cdkBuilder.cacheFrom(cacheFrom.map(DockerCacheOption.Companion::unwrap))
     }
 
     /**
@@ -492,7 +492,7 @@ public open class DockerImageAsset(
      * @param cacheTo Cache to options to pass to the `docker build` command. 
      */
     override fun cacheTo(cacheTo: DockerCacheOption) {
-      cdkBuilder.cacheTo(cacheTo.let(DockerCacheOption::unwrap))
+      cdkBuilder.cacheTo(cacheTo.let(DockerCacheOption.Companion::unwrap))
     }
 
     /**
@@ -577,7 +577,7 @@ public open class DockerImageAsset(
      * @param followSymlinks A strategy for how to handle symlinks. 
      */
     override fun followSymlinks(followSymlinks: SymlinkFollowMode) {
-      cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode::unwrap))
+      cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode.Companion::unwrap))
     }
 
     /**
@@ -588,7 +588,7 @@ public open class DockerImageAsset(
      * @param ignoreMode The ignore behavior to use for `exclude` patterns. 
      */
     override fun ignoreMode(ignoreMode: IgnoreMode) {
-      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode::unwrap))
+      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode.Companion::unwrap))
     }
 
     /**
@@ -600,7 +600,7 @@ public open class DockerImageAsset(
      * hash. 
      */
     override fun invalidation(invalidation: DockerImageAssetInvalidationOptions) {
-      cdkBuilder.invalidation(invalidation.let(DockerImageAssetInvalidationOptions::unwrap))
+      cdkBuilder.invalidation(invalidation.let(DockerImageAssetInvalidationOptions.Companion::unwrap))
     }
 
     /**
@@ -627,7 +627,7 @@ public open class DockerImageAsset(
      * @param networkMode Networking mode for the RUN commands during build. 
      */
     override fun networkMode(networkMode: NetworkMode) {
-      cdkBuilder.networkMode(networkMode.let(NetworkMode::unwrap))
+      cdkBuilder.networkMode(networkMode.let(NetworkMode.Companion::unwrap))
     }
 
     /**
@@ -662,7 +662,7 @@ public open class DockerImageAsset(
      * @param platform Platform to build for. 
      */
     override fun platform(platform: Platform) {
-      cdkBuilder.platform(platform.let(Platform::unwrap))
+      cdkBuilder.platform(platform.let(Platform.Companion::unwrap))
     }
 
     /**

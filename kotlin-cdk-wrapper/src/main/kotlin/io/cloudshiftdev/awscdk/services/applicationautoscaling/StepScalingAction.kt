@@ -48,8 +48,8 @@ public open class StepScalingAction(
     id: String,
     props: StepScalingActionProps,
   ) :
-      this(software.amazon.awscdk.services.applicationautoscaling.StepScalingAction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(StepScalingActionProps::unwrap))
+      this(software.amazon.awscdk.services.applicationautoscaling.StepScalingAction(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(StepScalingActionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -65,7 +65,7 @@ public open class StepScalingAction(
    * @param adjustment 
    */
   public open fun addAdjustment(adjustment: AdjustmentTier) {
-    unwrap(this).addAdjustment(adjustment.let(AdjustmentTier::unwrap))
+    unwrap(this).addAdjustment(adjustment.let(AdjustmentTier.Companion::unwrap))
   }
 
   /**
@@ -170,7 +170,7 @@ public open class StepScalingAction(
      * @param adjustmentType How the adjustment numbers are interpreted. 
      */
     override fun adjustmentType(adjustmentType: AdjustmentType) {
-      cdkBuilder.adjustmentType(adjustmentType.let(AdjustmentType::unwrap))
+      cdkBuilder.adjustmentType(adjustmentType.let(AdjustmentType.Companion::unwrap))
     }
 
     /**
@@ -188,7 +188,7 @@ public open class StepScalingAction(
      * @param cooldown Grace period after scaling activity. 
      */
     override fun cooldown(cooldown: Duration) {
-      cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
+      cdkBuilder.cooldown(cooldown.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -199,7 +199,7 @@ public open class StepScalingAction(
      * @param metricAggregationType The aggregation type for the CloudWatch metrics. 
      */
     override fun metricAggregationType(metricAggregationType: MetricAggregationType) {
-      cdkBuilder.metricAggregationType(metricAggregationType.let(MetricAggregationType::unwrap))
+      cdkBuilder.metricAggregationType(metricAggregationType.let(MetricAggregationType.Companion::unwrap))
     }
 
     /**
@@ -234,7 +234,7 @@ public open class StepScalingAction(
      * @param scalingTarget The scalable target. 
      */
     override fun scalingTarget(scalingTarget: IScalableTarget) {
-      cdkBuilder.scalingTarget(scalingTarget.let(IScalableTarget::unwrap))
+      cdkBuilder.scalingTarget(scalingTarget.let(IScalableTarget.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.applicationautoscaling.StepScalingAction =

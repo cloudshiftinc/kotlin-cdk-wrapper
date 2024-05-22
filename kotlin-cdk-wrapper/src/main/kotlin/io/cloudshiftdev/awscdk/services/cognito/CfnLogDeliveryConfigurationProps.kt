@@ -86,7 +86,7 @@ public interface CfnLogDeliveryConfigurationProps {
      * @param logConfigurations The detailed activity logging destination of a user pool.
      */
     override fun logConfigurations(logConfigurations: IResolvable) {
-      cdkBuilder.logConfigurations(logConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.logConfigurations(logConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**

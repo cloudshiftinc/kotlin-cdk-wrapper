@@ -96,7 +96,7 @@ public interface HttpStageOptions : StageOptions {
      * @param domainMapping The options for custom domain and api mapping.
      */
     override fun domainMapping(domainMapping: DomainMappingOptions) {
-      cdkBuilder.domainMapping(domainMapping.let(DomainMappingOptions::unwrap))
+      cdkBuilder.domainMapping(domainMapping.let(DomainMappingOptions.Companion::unwrap))
     }
 
     /**
@@ -119,7 +119,7 @@ public interface HttpStageOptions : StageOptions {
      * @param throttle Throttle settings for the routes of this stage.
      */
     override fun throttle(throttle: ThrottleSettings) {
-      cdkBuilder.throttle(throttle.let(ThrottleSettings::unwrap))
+      cdkBuilder.throttle(throttle.let(ThrottleSettings.Companion::unwrap))
     }
 
     /**

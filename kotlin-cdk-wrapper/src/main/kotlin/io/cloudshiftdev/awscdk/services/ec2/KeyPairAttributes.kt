@@ -64,7 +64,7 @@ public interface KeyPairAttributes {
      * @param type The type of the key pair.
      */
     override fun type(type: KeyPairType) {
-      cdkBuilder.type(type.let(KeyPairType::unwrap))
+      cdkBuilder.type(type.let(KeyPairType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.KeyPairAttributes = cdkBuilder.build()

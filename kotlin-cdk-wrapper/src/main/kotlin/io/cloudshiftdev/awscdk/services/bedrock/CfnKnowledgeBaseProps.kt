@@ -30,6 +30,41 @@ import kotlin.jvm.JvmName
  * .build())
  * .name("name")
  * .roleArn("roleArn")
+ * .storageConfiguration(StorageConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .opensearchServerlessConfiguration(OpenSearchServerlessConfigurationProperty.builder()
+ * .collectionArn("collectionArn")
+ * .fieldMapping(OpenSearchServerlessFieldMappingProperty.builder()
+ * .metadataField("metadataField")
+ * .textField("textField")
+ * .vectorField("vectorField")
+ * .build())
+ * .vectorIndexName("vectorIndexName")
+ * .build())
+ * .pineconeConfiguration(PineconeConfigurationProperty.builder()
+ * .connectionString("connectionString")
+ * .credentialsSecretArn("credentialsSecretArn")
+ * .fieldMapping(PineconeFieldMappingProperty.builder()
+ * .metadataField("metadataField")
+ * .textField("textField")
+ * .build())
+ * // the properties below are optional
+ * .namespace("namespace")
+ * .build())
+ * .rdsConfiguration(RdsConfigurationProperty.builder()
+ * .credentialsSecretArn("credentialsSecretArn")
+ * .databaseName("databaseName")
+ * .fieldMapping(RdsFieldMappingProperty.builder()
+ * .metadataField("metadataField")
+ * .primaryKeyField("primaryKeyField")
+ * .textField("textField")
+ * .vectorField("vectorField")
+ * .build())
+ * .resourceArn("resourceArn")
+ * .tableName("tableName")
+ * .build())
+ * .build())
  * // the properties below are optional
  * .description("description")
  * .tags(Map.of(
@@ -68,6 +103,13 @@ public interface CfnKnowledgeBaseProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-knowledgebase.html#cfn-bedrock-knowledgebase-rolearn)
    */
   public fun roleArn(): String
+
+  /**
+   * Contains details about the storage configuration of the knowledge base.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-knowledgebase.html#cfn-bedrock-knowledgebase-storageconfiguration)
+   */
+  public fun storageConfiguration(): Any
 
   /**
    * Metadata that you can assign to a resource as key-value pairs. For more information, see the
@@ -126,6 +168,28 @@ public interface CfnKnowledgeBaseProps {
     public fun roleArn(roleArn: String)
 
     /**
+     * @param storageConfiguration Contains details about the storage configuration of the knowledge
+     * base. 
+     */
+    public fun storageConfiguration(storageConfiguration: IResolvable)
+
+    /**
+     * @param storageConfiguration Contains details about the storage configuration of the knowledge
+     * base. 
+     */
+    public
+        fun storageConfiguration(storageConfiguration: CfnKnowledgeBase.StorageConfigurationProperty)
+
+    /**
+     * @param storageConfiguration Contains details about the storage configuration of the knowledge
+     * base. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("939a094bee2276eca705c0c724260f1173e535fbdddfe2f5d334b31351b6eb0a")
+    public
+        fun storageConfiguration(storageConfiguration: CfnKnowledgeBase.StorageConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * @param tags Metadata that you can assign to a resource as key-value pairs. For more
      * information, see the following resources:.
      * * [Tag naming limits and
@@ -152,7 +216,7 @@ public interface CfnKnowledgeBaseProps {
      * knowledge base. 
      */
     override fun knowledgeBaseConfiguration(knowledgeBaseConfiguration: IResolvable) {
-      cdkBuilder.knowledgeBaseConfiguration(knowledgeBaseConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.knowledgeBaseConfiguration(knowledgeBaseConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -161,7 +225,7 @@ public interface CfnKnowledgeBaseProps {
      */
     override
         fun knowledgeBaseConfiguration(knowledgeBaseConfiguration: CfnKnowledgeBase.KnowledgeBaseConfigurationProperty) {
-      cdkBuilder.knowledgeBaseConfiguration(knowledgeBaseConfiguration.let(CfnKnowledgeBase.KnowledgeBaseConfigurationProperty::unwrap))
+      cdkBuilder.knowledgeBaseConfiguration(knowledgeBaseConfiguration.let(CfnKnowledgeBase.KnowledgeBaseConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -189,6 +253,34 @@ public interface CfnKnowledgeBaseProps {
     override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
+
+    /**
+     * @param storageConfiguration Contains details about the storage configuration of the knowledge
+     * base. 
+     */
+    override fun storageConfiguration(storageConfiguration: IResolvable) {
+      cdkBuilder.storageConfiguration(storageConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param storageConfiguration Contains details about the storage configuration of the knowledge
+     * base. 
+     */
+    override
+        fun storageConfiguration(storageConfiguration: CfnKnowledgeBase.StorageConfigurationProperty) {
+      cdkBuilder.storageConfiguration(storageConfiguration.let(CfnKnowledgeBase.StorageConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param storageConfiguration Contains details about the storage configuration of the knowledge
+     * base. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("939a094bee2276eca705c0c724260f1173e535fbdddfe2f5d334b31351b6eb0a")
+    override
+        fun storageConfiguration(storageConfiguration: CfnKnowledgeBase.StorageConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        storageConfiguration(CfnKnowledgeBase.StorageConfigurationProperty(storageConfiguration))
 
     /**
      * @param tags Metadata that you can assign to a resource as key-value pairs. For more
@@ -237,6 +329,13 @@ public interface CfnKnowledgeBaseProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-knowledgebase.html#cfn-bedrock-knowledgebase-rolearn)
      */
     override fun roleArn(): String = unwrap(this).getRoleArn()
+
+    /**
+     * Contains details about the storage configuration of the knowledge base.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-knowledgebase.html#cfn-bedrock-knowledgebase-storageconfiguration)
+     */
+    override fun storageConfiguration(): Any = unwrap(this).getStorageConfiguration()
 
     /**
      * Metadata that you can assign to a resource as key-value pairs. For more information, see the

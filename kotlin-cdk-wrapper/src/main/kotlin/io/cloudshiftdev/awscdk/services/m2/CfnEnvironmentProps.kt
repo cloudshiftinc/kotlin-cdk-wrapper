@@ -307,7 +307,7 @@ public interface CfnEnvironmentProps {
      * @param highAvailabilityConfig Defines the details of a high availability configuration.
      */
     override fun highAvailabilityConfig(highAvailabilityConfig: IResolvable) {
-      cdkBuilder.highAvailabilityConfig(highAvailabilityConfig.let(IResolvable::unwrap))
+      cdkBuilder.highAvailabilityConfig(highAvailabilityConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -315,7 +315,7 @@ public interface CfnEnvironmentProps {
      */
     override
         fun highAvailabilityConfig(highAvailabilityConfig: CfnEnvironment.HighAvailabilityConfigProperty) {
-      cdkBuilder.highAvailabilityConfig(highAvailabilityConfig.let(CfnEnvironment.HighAvailabilityConfigProperty::unwrap))
+      cdkBuilder.highAvailabilityConfig(highAvailabilityConfig.let(CfnEnvironment.HighAvailabilityConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -373,7 +373,7 @@ public interface CfnEnvironmentProps {
      * @param publiclyAccessible Specifies whether the runtime environment is publicly accessible.
      */
     override fun publiclyAccessible(publiclyAccessible: IResolvable) {
-      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
+      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -395,7 +395,7 @@ public interface CfnEnvironmentProps {
      * @param storageConfigurations Defines the storage configuration for a runtime environment.
      */
     override fun storageConfigurations(storageConfigurations: IResolvable) {
-      cdkBuilder.storageConfigurations(storageConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.storageConfigurations(storageConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**

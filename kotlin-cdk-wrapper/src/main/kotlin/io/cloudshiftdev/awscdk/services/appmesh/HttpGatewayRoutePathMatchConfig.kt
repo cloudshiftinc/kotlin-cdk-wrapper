@@ -145,7 +145,7 @@ public interface HttpGatewayRoutePathMatchConfig {
      */
     override
         fun prefixPathRewrite(prefixPathRewrite: CfnGatewayRoute.HttpGatewayRoutePrefixRewriteProperty) {
-      cdkBuilder.prefixPathRewrite(prefixPathRewrite.let(CfnGatewayRoute.HttpGatewayRoutePrefixRewriteProperty::unwrap))
+      cdkBuilder.prefixPathRewrite(prefixPathRewrite.let(CfnGatewayRoute.HttpGatewayRoutePrefixRewriteProperty.Companion::unwrap))
     }
 
     /**
@@ -164,7 +164,7 @@ public interface HttpGatewayRoutePathMatchConfig {
      * the request.
      */
     override fun wholePathMatch(wholePathMatch: CfnGatewayRoute.HttpPathMatchProperty) {
-      cdkBuilder.wholePathMatch(wholePathMatch.let(CfnGatewayRoute.HttpPathMatchProperty::unwrap))
+      cdkBuilder.wholePathMatch(wholePathMatch.let(CfnGatewayRoute.HttpPathMatchProperty.Companion::unwrap))
     }
 
     /**
@@ -183,7 +183,7 @@ public interface HttpGatewayRoutePathMatchConfig {
      */
     override
         fun wholePathRewrite(wholePathRewrite: CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty) {
-      cdkBuilder.wholePathRewrite(wholePathRewrite.let(CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty::unwrap))
+      cdkBuilder.wholePathRewrite(wholePathRewrite.let(CfnGatewayRoute.HttpGatewayRoutePathRewriteProperty.Companion::unwrap))
     }
 
     /**

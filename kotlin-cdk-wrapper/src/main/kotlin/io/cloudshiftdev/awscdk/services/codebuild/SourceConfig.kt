@@ -120,7 +120,7 @@ public interface SourceConfig {
      * @param buildTriggers the value to be set.
      */
     override fun buildTriggers(buildTriggers: CfnProject.ProjectTriggersProperty) {
-      cdkBuilder.buildTriggers(buildTriggers.let(CfnProject.ProjectTriggersProperty::unwrap))
+      cdkBuilder.buildTriggers(buildTriggers.let(CfnProject.ProjectTriggersProperty.Companion::unwrap))
     }
 
     /**
@@ -136,7 +136,7 @@ public interface SourceConfig {
      * @param sourceProperty the value to be set. 
      */
     override fun sourceProperty(sourceProperty: CfnProject.SourceProperty) {
-      cdkBuilder.sourceProperty(sourceProperty.let(CfnProject.SourceProperty::unwrap))
+      cdkBuilder.sourceProperty(sourceProperty.let(CfnProject.SourceProperty.Companion::unwrap))
     }
 
     /**

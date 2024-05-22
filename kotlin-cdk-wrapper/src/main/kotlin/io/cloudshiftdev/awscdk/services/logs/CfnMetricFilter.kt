@@ -62,8 +62,8 @@ public open class CfnMetricFilter(
     id: String,
     props: CfnMetricFilterProps,
   ) :
-      this(software.amazon.awscdk.services.logs.CfnMetricFilter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMetricFilterProps::unwrap))
+      this(software.amazon.awscdk.services.logs.CfnMetricFilter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMetricFilterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -103,7 +103,7 @@ public open class CfnMetricFilter(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -127,7 +127,7 @@ public open class CfnMetricFilter(
    * The metric transformations.
    */
   public open fun metricTransformations(`value`: IResolvable) {
-    unwrap(this).setMetricTransformations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMetricTransformations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -249,7 +249,7 @@ public open class CfnMetricFilter(
      * @param metricTransformations The metric transformations. 
      */
     override fun metricTransformations(metricTransformations: IResolvable) {
-      cdkBuilder.metricTransformations(metricTransformations.let(IResolvable::unwrap))
+      cdkBuilder.metricTransformations(metricTransformations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -681,7 +681,7 @@ public open class CfnMetricFilter(
        * .
        */
       override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+        cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
       }
 
       /**

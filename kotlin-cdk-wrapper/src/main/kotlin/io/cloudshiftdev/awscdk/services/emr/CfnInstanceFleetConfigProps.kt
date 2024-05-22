@@ -299,7 +299,7 @@ public interface CfnInstanceFleetConfigProps {
      * excluding 5.0.x versions.
      */
     override fun instanceTypeConfigs(instanceTypeConfigs: IResolvable) {
-      cdkBuilder.instanceTypeConfigs(instanceTypeConfigs.let(IResolvable::unwrap))
+      cdkBuilder.instanceTypeConfigs(instanceTypeConfigs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -327,7 +327,7 @@ public interface CfnInstanceFleetConfigProps {
      * @param launchSpecifications The launch specification for the instance fleet.
      */
     override fun launchSpecifications(launchSpecifications: IResolvable) {
-      cdkBuilder.launchSpecifications(launchSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.launchSpecifications(launchSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -335,7 +335,7 @@ public interface CfnInstanceFleetConfigProps {
      */
     override
         fun launchSpecifications(launchSpecifications: CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty) {
-      cdkBuilder.launchSpecifications(launchSpecifications.let(CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty::unwrap))
+      cdkBuilder.launchSpecifications(launchSpecifications.let(CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty.Companion::unwrap))
     }
 
     /**

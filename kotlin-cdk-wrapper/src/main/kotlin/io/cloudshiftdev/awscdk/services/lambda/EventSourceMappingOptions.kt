@@ -526,7 +526,7 @@ public interface EventSourceMappingOptions {
      * Maximum of Duration.minutes(5)
      */
     override fun maxBatchingWindow(maxBatchingWindow: Duration) {
-      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration::unwrap))
+      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -546,14 +546,14 @@ public interface EventSourceMappingOptions {
      * * Maximum value of 7 days
      */
     override fun maxRecordAge(maxRecordAge: Duration) {
-      cdkBuilder.maxRecordAge(maxRecordAge.let(Duration::unwrap))
+      cdkBuilder.maxRecordAge(maxRecordAge.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param onFailure An Amazon SQS queue or Amazon SNS topic destination for discarded records.
      */
     override fun onFailure(onFailure: IEventSourceDlq) {
-      cdkBuilder.onFailure(onFailure.let(IEventSourceDlq::unwrap))
+      cdkBuilder.onFailure(onFailure.let(IEventSourceDlq.Companion::unwrap))
     }
 
     /**
@@ -595,7 +595,7 @@ public interface EventSourceMappingOptions {
      */
     override
         fun sourceAccessConfigurations(sourceAccessConfigurations: List<SourceAccessConfiguration>) {
-      cdkBuilder.sourceAccessConfigurations(sourceAccessConfigurations.map(SourceAccessConfiguration::unwrap))
+      cdkBuilder.sourceAccessConfigurations(sourceAccessConfigurations.map(SourceAccessConfiguration.Companion::unwrap))
     }
 
     /**
@@ -611,7 +611,7 @@ public interface EventSourceMappingOptions {
      * should start reading.
      */
     override fun startingPosition(startingPosition: StartingPosition) {
-      cdkBuilder.startingPosition(startingPosition.let(StartingPosition::unwrap))
+      cdkBuilder.startingPosition(startingPosition.let(StartingPosition.Companion::unwrap))
     }
 
     /**
@@ -634,7 +634,7 @@ public interface EventSourceMappingOptions {
      * Kinesis.
      */
     override fun tumblingWindow(tumblingWindow: Duration) {
-      cdkBuilder.tumblingWindow(tumblingWindow.let(Duration::unwrap))
+      cdkBuilder.tumblingWindow(tumblingWindow.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lambda.EventSourceMappingOptions =

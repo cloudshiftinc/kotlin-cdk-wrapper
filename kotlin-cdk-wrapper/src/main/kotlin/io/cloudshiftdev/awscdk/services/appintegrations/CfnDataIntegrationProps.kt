@@ -211,7 +211,7 @@ public interface CfnDataIntegrationProps {
      * @param fileConfiguration The configuration for what files should be pulled from the source.
      */
     override fun fileConfiguration(fileConfiguration: IResolvable) {
-      cdkBuilder.fileConfiguration(fileConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.fileConfiguration(fileConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -219,7 +219,7 @@ public interface CfnDataIntegrationProps {
      */
     override
         fun fileConfiguration(fileConfiguration: CfnDataIntegration.FileConfigurationProperty) {
-      cdkBuilder.fileConfiguration(fileConfiguration.let(CfnDataIntegration.FileConfigurationProperty::unwrap))
+      cdkBuilder.fileConfiguration(fileConfiguration.let(CfnDataIntegration.FileConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -256,14 +256,14 @@ public interface CfnDataIntegrationProps {
      * @param scheduleConfig The name of the data and how often it should be pulled from the source.
      */
     override fun scheduleConfig(scheduleConfig: IResolvable) {
-      cdkBuilder.scheduleConfig(scheduleConfig.let(IResolvable::unwrap))
+      cdkBuilder.scheduleConfig(scheduleConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param scheduleConfig The name of the data and how often it should be pulled from the source.
      */
     override fun scheduleConfig(scheduleConfig: CfnDataIntegration.ScheduleConfigProperty) {
-      cdkBuilder.scheduleConfig(scheduleConfig.let(CfnDataIntegration.ScheduleConfigProperty::unwrap))
+      cdkBuilder.scheduleConfig(scheduleConfig.let(CfnDataIntegration.ScheduleConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -289,7 +289,7 @@ public interface CfnDataIntegrationProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

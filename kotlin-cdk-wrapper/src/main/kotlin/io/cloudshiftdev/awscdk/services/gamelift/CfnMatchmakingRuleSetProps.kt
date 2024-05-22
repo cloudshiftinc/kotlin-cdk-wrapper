@@ -139,7 +139,7 @@ public interface CfnMatchmakingRuleSetProps {
      * stated. See the AWS General Reference for actual tagging limits.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

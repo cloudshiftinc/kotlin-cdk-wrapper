@@ -386,7 +386,7 @@ public interface CfnModelCardProps {
      * .
      */
     override fun content(content: IResolvable) {
-      cdkBuilder.content(content.let(IResolvable::unwrap))
+      cdkBuilder.content(content.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -396,7 +396,7 @@ public interface CfnModelCardProps {
      * .
      */
     override fun content(content: CfnModelCard.ContentProperty) {
-      cdkBuilder.content(content.let(CfnModelCard.ContentProperty::unwrap))
+      cdkBuilder.content(content.let(CfnModelCard.ContentProperty.Companion::unwrap))
     }
 
     /**
@@ -421,7 +421,7 @@ public interface CfnModelCardProps {
      * * Model Card
      */
     override fun createdBy(createdBy: IResolvable) {
-      cdkBuilder.createdBy(createdBy.let(IResolvable::unwrap))
+      cdkBuilder.createdBy(createdBy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -435,7 +435,7 @@ public interface CfnModelCardProps {
      * * Model Card
      */
     override fun createdBy(createdBy: CfnModelCard.UserContextProperty) {
-      cdkBuilder.createdBy(createdBy.let(CfnModelCard.UserContextProperty::unwrap))
+      cdkBuilder.createdBy(createdBy.let(CfnModelCard.UserContextProperty.Companion::unwrap))
     }
 
     /**
@@ -458,7 +458,7 @@ public interface CfnModelCardProps {
      * trial, trial component, lineage group, project, or model card.
      */
     override fun lastModifiedBy(lastModifiedBy: IResolvable) {
-      cdkBuilder.lastModifiedBy(lastModifiedBy.let(IResolvable::unwrap))
+      cdkBuilder.lastModifiedBy(lastModifiedBy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -466,7 +466,7 @@ public interface CfnModelCardProps {
      * trial, trial component, lineage group, project, or model card.
      */
     override fun lastModifiedBy(lastModifiedBy: CfnModelCard.UserContextProperty) {
-      cdkBuilder.lastModifiedBy(lastModifiedBy.let(CfnModelCard.UserContextProperty::unwrap))
+      cdkBuilder.lastModifiedBy(lastModifiedBy.let(CfnModelCard.UserContextProperty.Companion::unwrap))
     }
 
     /**
@@ -504,14 +504,14 @@ public interface CfnModelCardProps {
      * @param securityConfig The security configuration used to protect model card data.
      */
     override fun securityConfig(securityConfig: IResolvable) {
-      cdkBuilder.securityConfig(securityConfig.let(IResolvable::unwrap))
+      cdkBuilder.securityConfig(securityConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param securityConfig The security configuration used to protect model card data.
      */
     override fun securityConfig(securityConfig: CfnModelCard.SecurityConfigProperty) {
-      cdkBuilder.securityConfig(securityConfig.let(CfnModelCard.SecurityConfigProperty::unwrap))
+      cdkBuilder.securityConfig(securityConfig.let(CfnModelCard.SecurityConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -527,7 +527,7 @@ public interface CfnModelCardProps {
      * @param tags Key-value pairs used to manage metadata for the model card.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

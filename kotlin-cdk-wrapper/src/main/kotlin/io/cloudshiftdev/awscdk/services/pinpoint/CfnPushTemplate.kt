@@ -96,8 +96,8 @@ public open class CfnPushTemplate(
     id: String,
     props: CfnPushTemplateProps,
   ) :
-      this(software.amazon.awscdk.services.pinpoint.CfnPushTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPushTemplateProps::unwrap))
+      this(software.amazon.awscdk.services.pinpoint.CfnPushTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPushTemplateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -116,14 +116,14 @@ public open class CfnPushTemplate(
    * The message template to use for the ADM (Amazon Device Messaging) channel.
    */
   public open fun adm(`value`: IResolvable) {
-    unwrap(this).setAdm(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAdm(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The message template to use for the ADM (Amazon Device Messaging) channel.
    */
   public open fun adm(`value`: AndroidPushNotificationTemplateProperty) {
-    unwrap(this).setAdm(`value`.let(AndroidPushNotificationTemplateProperty::unwrap))
+    unwrap(this).setAdm(`value`.let(AndroidPushNotificationTemplateProperty.Companion::unwrap))
   }
 
   /**
@@ -143,14 +143,14 @@ public open class CfnPushTemplate(
    * The message template to use for the APNs (Apple Push Notification service) channel.
    */
   public open fun apns(`value`: IResolvable) {
-    unwrap(this).setApns(`value`.let(IResolvable::unwrap))
+    unwrap(this).setApns(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The message template to use for the APNs (Apple Push Notification service) channel.
    */
   public open fun apns(`value`: APNSPushNotificationTemplateProperty) {
-    unwrap(this).setApns(`value`.let(APNSPushNotificationTemplateProperty::unwrap))
+    unwrap(this).setApns(`value`.let(APNSPushNotificationTemplateProperty.Companion::unwrap))
   }
 
   /**
@@ -180,14 +180,14 @@ public open class CfnPushTemplate(
    * The message template to use for the Baidu (Baidu Cloud Push) channel.
    */
   public open fun baidu(`value`: IResolvable) {
-    unwrap(this).setBaidu(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBaidu(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The message template to use for the Baidu (Baidu Cloud Push) channel.
    */
   public open fun baidu(`value`: AndroidPushNotificationTemplateProperty) {
-    unwrap(this).setBaidu(`value`.let(AndroidPushNotificationTemplateProperty::unwrap))
+    unwrap(this).setBaidu(`value`.let(AndroidPushNotificationTemplateProperty.Companion::unwrap))
   }
 
   /**
@@ -221,14 +221,14 @@ public open class CfnPushTemplate(
    * The default message template to use for push notification channels.
    */
   public open fun defaultValue(`value`: IResolvable) {
-    unwrap(this).setDefaultValue(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefaultValue(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The default message template to use for push notification channels.
    */
   public open fun defaultValue(`value`: DefaultPushNotificationTemplateProperty) {
-    unwrap(this).setDefaultValue(`value`.let(DefaultPushNotificationTemplateProperty::unwrap))
+    unwrap(this).setDefaultValue(`value`.let(DefaultPushNotificationTemplateProperty.Companion::unwrap))
   }
 
   /**
@@ -250,7 +250,7 @@ public open class CfnPushTemplate(
    * the Firebase Cloud Messaging (FCM), formerly Google Cloud Messaging (GCM), service.
    */
   public open fun gcm(`value`: IResolvable) {
-    unwrap(this).setGcm(`value`.let(IResolvable::unwrap))
+    unwrap(this).setGcm(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -258,7 +258,7 @@ public open class CfnPushTemplate(
    * the Firebase Cloud Messaging (FCM), formerly Google Cloud Messaging (GCM), service.
    */
   public open fun gcm(`value`: AndroidPushNotificationTemplateProperty) {
-    unwrap(this).setGcm(`value`.let(AndroidPushNotificationTemplateProperty::unwrap))
+    unwrap(this).setGcm(`value`.let(AndroidPushNotificationTemplateProperty.Companion::unwrap))
   }
 
   /**
@@ -276,7 +276,7 @@ public open class CfnPushTemplate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -567,7 +567,7 @@ public open class CfnPushTemplate(
      * @param adm The message template to use for the ADM (Amazon Device Messaging) channel. 
      */
     override fun adm(adm: IResolvable) {
-      cdkBuilder.adm(adm.let(IResolvable::unwrap))
+      cdkBuilder.adm(adm.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -580,7 +580,7 @@ public open class CfnPushTemplate(
      * @param adm The message template to use for the ADM (Amazon Device Messaging) channel. 
      */
     override fun adm(adm: AndroidPushNotificationTemplateProperty) {
-      cdkBuilder.adm(adm.let(AndroidPushNotificationTemplateProperty::unwrap))
+      cdkBuilder.adm(adm.let(AndroidPushNotificationTemplateProperty.Companion::unwrap))
     }
 
     /**
@@ -608,7 +608,7 @@ public open class CfnPushTemplate(
      * channel. 
      */
     override fun apns(apns: IResolvable) {
-      cdkBuilder.apns(apns.let(IResolvable::unwrap))
+      cdkBuilder.apns(apns.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -622,7 +622,7 @@ public open class CfnPushTemplate(
      * channel. 
      */
     override fun apns(apns: APNSPushNotificationTemplateProperty) {
-      cdkBuilder.apns(apns.let(APNSPushNotificationTemplateProperty::unwrap))
+      cdkBuilder.apns(apns.let(APNSPushNotificationTemplateProperty.Companion::unwrap))
     }
 
     /**
@@ -650,7 +650,7 @@ public open class CfnPushTemplate(
      * @param baidu The message template to use for the Baidu (Baidu Cloud Push) channel. 
      */
     override fun baidu(baidu: IResolvable) {
-      cdkBuilder.baidu(baidu.let(IResolvable::unwrap))
+      cdkBuilder.baidu(baidu.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -663,7 +663,7 @@ public open class CfnPushTemplate(
      * @param baidu The message template to use for the Baidu (Baidu Cloud Push) channel. 
      */
     override fun baidu(baidu: AndroidPushNotificationTemplateProperty) {
-      cdkBuilder.baidu(baidu.let(AndroidPushNotificationTemplateProperty::unwrap))
+      cdkBuilder.baidu(baidu.let(AndroidPushNotificationTemplateProperty.Companion::unwrap))
     }
 
     /**
@@ -704,7 +704,7 @@ public open class CfnPushTemplate(
      * @param defaultValue The default message template to use for push notification channels. 
      */
     override fun defaultValue(defaultValue: IResolvable) {
-      cdkBuilder.defaultValue(defaultValue.let(IResolvable::unwrap))
+      cdkBuilder.defaultValue(defaultValue.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -714,7 +714,7 @@ public open class CfnPushTemplate(
      * @param defaultValue The default message template to use for push notification channels. 
      */
     override fun defaultValue(defaultValue: DefaultPushNotificationTemplateProperty) {
-      cdkBuilder.defaultValue(defaultValue.let(DefaultPushNotificationTemplateProperty::unwrap))
+      cdkBuilder.defaultValue(defaultValue.let(DefaultPushNotificationTemplateProperty.Companion::unwrap))
     }
 
     /**
@@ -742,7 +742,7 @@ public open class CfnPushTemplate(
      * service. 
      */
     override fun gcm(gcm: IResolvable) {
-      cdkBuilder.gcm(gcm.let(IResolvable::unwrap))
+      cdkBuilder.gcm(gcm.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -758,7 +758,7 @@ public open class CfnPushTemplate(
      * service. 
      */
     override fun gcm(gcm: AndroidPushNotificationTemplateProperty) {
-      cdkBuilder.gcm(gcm.let(AndroidPushNotificationTemplateProperty::unwrap))
+      cdkBuilder.gcm(gcm.let(AndroidPushNotificationTemplateProperty.Companion::unwrap))
     }
 
     /**

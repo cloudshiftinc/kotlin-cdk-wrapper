@@ -102,8 +102,8 @@ public open class CfnTagAssociation(
     id: String,
     props: CfnTagAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.lakeformation.CfnTagAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTagAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.lakeformation.CfnTagAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTagAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -140,7 +140,7 @@ public open class CfnTagAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -152,7 +152,7 @@ public open class CfnTagAssociation(
    * A structure containing an LF-tag key-value pair.
    */
   public open fun lfTags(`value`: IResolvable) {
-    unwrap(this).setLfTags(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLfTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -176,14 +176,14 @@ public open class CfnTagAssociation(
    * UTF-8 string (valid values: `DATABASE | TABLE` ).
    */
   public open fun resource(`value`: IResolvable) {
-    unwrap(this).setResource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * UTF-8 string (valid values: `DATABASE | TABLE` ).
    */
   public open fun resource(`value`: ResourceProperty) {
-    unwrap(this).setResource(`value`.let(ResourceProperty::unwrap))
+    unwrap(this).setResource(`value`.let(ResourceProperty.Companion::unwrap))
   }
 
   /**
@@ -270,7 +270,7 @@ public open class CfnTagAssociation(
      * @param lfTags A structure containing an LF-tag key-value pair. 
      */
     override fun lfTags(lfTags: IResolvable) {
-      cdkBuilder.lfTags(lfTags.let(IResolvable::unwrap))
+      cdkBuilder.lfTags(lfTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -300,7 +300,7 @@ public open class CfnTagAssociation(
      * @param resource UTF-8 string (valid values: `DATABASE | TABLE` ). 
      */
     override fun resource(resource: IResolvable) {
-      cdkBuilder.resource(resource.let(IResolvable::unwrap))
+      cdkBuilder.resource(resource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -312,7 +312,7 @@ public open class CfnTagAssociation(
      * @param resource UTF-8 string (valid values: `DATABASE | TABLE` ). 
      */
     override fun resource(resource: ResourceProperty) {
-      cdkBuilder.resource(resource.let(ResourceProperty::unwrap))
+      cdkBuilder.resource(resource.let(ResourceProperty.Companion::unwrap))
     }
 
     /**
@@ -867,7 +867,7 @@ public open class CfnTagAssociation(
        * into a logical group. You can Grant and Revoke database permissions to a principal.
        */
       override fun database(database: IResolvable) {
-        cdkBuilder.database(database.let(IResolvable::unwrap))
+        cdkBuilder.database(database.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -876,7 +876,7 @@ public open class CfnTagAssociation(
        * into a logical group. You can Grant and Revoke database permissions to a principal.
        */
       override fun database(database: DatabaseResourceProperty) {
-        cdkBuilder.database(database.let(DatabaseResourceProperty::unwrap))
+        cdkBuilder.database(database.let(DatabaseResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -895,7 +895,7 @@ public open class CfnTagAssociation(
        * privileges to a principal.
        */
       override fun table(table: IResolvable) {
-        cdkBuilder.table(table.let(IResolvable::unwrap))
+        cdkBuilder.table(table.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -904,7 +904,7 @@ public open class CfnTagAssociation(
        * privileges to a principal.
        */
       override fun table(table: TableResourceProperty) {
-        cdkBuilder.table(table.let(TableResourceProperty::unwrap))
+        cdkBuilder.table(table.let(TableResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -923,7 +923,7 @@ public open class CfnTagAssociation(
        * table in the Data Catalog and the underlying data in Amazon S3.
        */
       override fun tableWithColumns(tableWithColumns: IResolvable) {
-        cdkBuilder.tableWithColumns(tableWithColumns.let(IResolvable::unwrap))
+        cdkBuilder.tableWithColumns(tableWithColumns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -932,7 +932,7 @@ public open class CfnTagAssociation(
        * table in the Data Catalog and the underlying data in Amazon S3.
        */
       override fun tableWithColumns(tableWithColumns: TableWithColumnsResourceProperty) {
-        cdkBuilder.tableWithColumns(tableWithColumns.let(TableWithColumnsResourceProperty::unwrap))
+        cdkBuilder.tableWithColumns(tableWithColumns.let(TableWithColumnsResourceProperty.Companion::unwrap))
       }
 
       /**

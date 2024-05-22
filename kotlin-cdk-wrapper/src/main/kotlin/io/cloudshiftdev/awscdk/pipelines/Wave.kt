@@ -34,7 +34,7 @@ public open class Wave(
   )
 
   public constructor(id: String, props: WaveProps) : this(software.amazon.awscdk.pipelines.Wave(id,
-      props.let(WaveProps::unwrap))
+      props.let(WaveProps.Companion::unwrap))
   )
 
   public constructor(id: String, props: WaveProps.Builder.() -> Unit) : this(id, WaveProps(props)
@@ -70,7 +70,7 @@ public open class Wave(
    * @param options
    */
   public open fun addStage(stage: Stage): StageDeployment =
-      unwrap(this).addStage(stage.let(Stage::unwrap)).let(StageDeployment::wrap)
+      unwrap(this).addStage(stage.let(Stage.Companion::unwrap)).let(StageDeployment::wrap)
 
   /**
    * Add a Stage to this wave.
@@ -82,8 +82,8 @@ public open class Wave(
    * @param options
    */
   public open fun addStage(stage: Stage, options: AddStageOpts): StageDeployment =
-      unwrap(this).addStage(stage.let(Stage::unwrap),
-      options.let(AddStageOpts::unwrap)).let(StageDeployment::wrap)
+      unwrap(this).addStage(stage.let(Stage.Companion::unwrap),
+      options.let(AddStageOpts.Companion::unwrap)).let(StageDeployment::wrap)
 
   /**
    * Add a Stage to this wave.
@@ -176,7 +176,7 @@ public open class Wave(
      * @param post Additional steps to run after all of the stages in the wave. 
      */
     override fun post(post: List<Step>) {
-      cdkBuilder.post(post.map(Step::unwrap))
+      cdkBuilder.post(post.map(Step.Companion::unwrap))
     }
 
     /**
@@ -196,7 +196,7 @@ public open class Wave(
      * @param pre Additional steps to run before any of the stages in the wave. 
      */
     override fun pre(pre: List<Step>) {
-      cdkBuilder.pre(pre.map(Step::unwrap))
+      cdkBuilder.pre(pre.map(Step.Companion::unwrap))
     }
 
     /**

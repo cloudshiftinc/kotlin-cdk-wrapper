@@ -278,7 +278,7 @@ public interface IExtensible {
      * @param extension The extension to create an association for. 
      */
     override fun addExtension(extension: IExtension) {
-      unwrap(this).addExtension(extension.let(IExtension::unwrap))
+      unwrap(this).addExtension(extension.let(IExtension.Companion::unwrap))
     }
 
     /**
@@ -290,8 +290,8 @@ public interface IExtensible {
      * @param options Options for the extension.
      */
     override fun on(actionPoint: ActionPoint, eventDestination: IEventDestination) {
-      unwrap(this).on(actionPoint.let(ActionPoint::unwrap),
-          eventDestination.let(IEventDestination::unwrap))
+      unwrap(this).on(actionPoint.let(ActionPoint.Companion::unwrap),
+          eventDestination.let(IEventDestination.Companion::unwrap))
     }
 
     /**
@@ -307,8 +307,9 @@ public interface IExtensible {
       eventDestination: IEventDestination,
       options: ExtensionOptions,
     ) {
-      unwrap(this).on(actionPoint.let(ActionPoint::unwrap),
-          eventDestination.let(IEventDestination::unwrap), options.let(ExtensionOptions::unwrap))
+      unwrap(this).on(actionPoint.let(ActionPoint.Companion::unwrap),
+          eventDestination.let(IEventDestination.Companion::unwrap),
+          options.let(ExtensionOptions.Companion::unwrap))
     }
 
     /**
@@ -335,7 +336,7 @@ public interface IExtensible {
      * @param options Options for the extension.
      */
     override fun onDeploymentBaking(eventDestination: IEventDestination) {
-      unwrap(this).onDeploymentBaking(eventDestination.let(IEventDestination::unwrap))
+      unwrap(this).onDeploymentBaking(eventDestination.let(IEventDestination.Companion::unwrap))
     }
 
     /**
@@ -347,8 +348,8 @@ public interface IExtensible {
      */
     override fun onDeploymentBaking(eventDestination: IEventDestination,
         options: ExtensionOptions) {
-      unwrap(this).onDeploymentBaking(eventDestination.let(IEventDestination::unwrap),
-          options.let(ExtensionOptions::unwrap))
+      unwrap(this).onDeploymentBaking(eventDestination.let(IEventDestination.Companion::unwrap),
+          options.let(ExtensionOptions.Companion::unwrap))
     }
 
     /**
@@ -372,7 +373,7 @@ public interface IExtensible {
      * @param options Options for the extension.
      */
     override fun onDeploymentComplete(eventDestination: IEventDestination) {
-      unwrap(this).onDeploymentComplete(eventDestination.let(IEventDestination::unwrap))
+      unwrap(this).onDeploymentComplete(eventDestination.let(IEventDestination.Companion::unwrap))
     }
 
     /**
@@ -384,8 +385,8 @@ public interface IExtensible {
      */
     override fun onDeploymentComplete(eventDestination: IEventDestination,
         options: ExtensionOptions) {
-      unwrap(this).onDeploymentComplete(eventDestination.let(IEventDestination::unwrap),
-          options.let(ExtensionOptions::unwrap))
+      unwrap(this).onDeploymentComplete(eventDestination.let(IEventDestination.Companion::unwrap),
+          options.let(ExtensionOptions.Companion::unwrap))
     }
 
     /**
@@ -409,7 +410,7 @@ public interface IExtensible {
      * @param options Options for the extension.
      */
     override fun onDeploymentRolledBack(eventDestination: IEventDestination) {
-      unwrap(this).onDeploymentRolledBack(eventDestination.let(IEventDestination::unwrap))
+      unwrap(this).onDeploymentRolledBack(eventDestination.let(IEventDestination.Companion::unwrap))
     }
 
     /**
@@ -421,8 +422,8 @@ public interface IExtensible {
      */
     override fun onDeploymentRolledBack(eventDestination: IEventDestination,
         options: ExtensionOptions) {
-      unwrap(this).onDeploymentRolledBack(eventDestination.let(IEventDestination::unwrap),
-          options.let(ExtensionOptions::unwrap))
+      unwrap(this).onDeploymentRolledBack(eventDestination.let(IEventDestination.Companion::unwrap),
+          options.let(ExtensionOptions.Companion::unwrap))
     }
 
     /**
@@ -446,7 +447,7 @@ public interface IExtensible {
      * @param options Options for the extension.
      */
     override fun onDeploymentStart(eventDestination: IEventDestination) {
-      unwrap(this).onDeploymentStart(eventDestination.let(IEventDestination::unwrap))
+      unwrap(this).onDeploymentStart(eventDestination.let(IEventDestination.Companion::unwrap))
     }
 
     /**
@@ -457,8 +458,8 @@ public interface IExtensible {
      * @param options Options for the extension.
      */
     override fun onDeploymentStart(eventDestination: IEventDestination, options: ExtensionOptions) {
-      unwrap(this).onDeploymentStart(eventDestination.let(IEventDestination::unwrap),
-          options.let(ExtensionOptions::unwrap))
+      unwrap(this).onDeploymentStart(eventDestination.let(IEventDestination.Companion::unwrap),
+          options.let(ExtensionOptions.Companion::unwrap))
     }
 
     /**
@@ -482,7 +483,7 @@ public interface IExtensible {
      * @param options Options for the extension.
      */
     override fun onDeploymentStep(eventDestination: IEventDestination) {
-      unwrap(this).onDeploymentStep(eventDestination.let(IEventDestination::unwrap))
+      unwrap(this).onDeploymentStep(eventDestination.let(IEventDestination.Companion::unwrap))
     }
 
     /**
@@ -493,8 +494,8 @@ public interface IExtensible {
      * @param options Options for the extension.
      */
     override fun onDeploymentStep(eventDestination: IEventDestination, options: ExtensionOptions) {
-      unwrap(this).onDeploymentStep(eventDestination.let(IEventDestination::unwrap),
-          options.let(ExtensionOptions::unwrap))
+      unwrap(this).onDeploymentStep(eventDestination.let(IEventDestination.Companion::unwrap),
+          options.let(ExtensionOptions.Companion::unwrap))
     }
 
     /**
@@ -518,7 +519,7 @@ public interface IExtensible {
      * @param options Options for the extension.
      */
     override fun preCreateHostedConfigurationVersion(eventDestination: IEventDestination) {
-      unwrap(this).preCreateHostedConfigurationVersion(eventDestination.let(IEventDestination::unwrap))
+      unwrap(this).preCreateHostedConfigurationVersion(eventDestination.let(IEventDestination.Companion::unwrap))
     }
 
     /**
@@ -530,8 +531,8 @@ public interface IExtensible {
      */
     override fun preCreateHostedConfigurationVersion(eventDestination: IEventDestination,
         options: ExtensionOptions) {
-      unwrap(this).preCreateHostedConfigurationVersion(eventDestination.let(IEventDestination::unwrap),
-          options.let(ExtensionOptions::unwrap))
+      unwrap(this).preCreateHostedConfigurationVersion(eventDestination.let(IEventDestination.Companion::unwrap),
+          options.let(ExtensionOptions.Companion::unwrap))
     }
 
     /**
@@ -555,7 +556,7 @@ public interface IExtensible {
      * @param options Options for the extension.
      */
     override fun preStartDeployment(eventDestination: IEventDestination) {
-      unwrap(this).preStartDeployment(eventDestination.let(IEventDestination::unwrap))
+      unwrap(this).preStartDeployment(eventDestination.let(IEventDestination.Companion::unwrap))
     }
 
     /**
@@ -567,8 +568,8 @@ public interface IExtensible {
      */
     override fun preStartDeployment(eventDestination: IEventDestination,
         options: ExtensionOptions) {
-      unwrap(this).preStartDeployment(eventDestination.let(IEventDestination::unwrap),
-          options.let(ExtensionOptions::unwrap))
+      unwrap(this).preStartDeployment(eventDestination.let(IEventDestination.Companion::unwrap),
+          options.let(ExtensionOptions.Companion::unwrap))
     }
 
     /**

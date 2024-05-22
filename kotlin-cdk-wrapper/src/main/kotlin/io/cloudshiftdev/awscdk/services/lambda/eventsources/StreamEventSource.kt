@@ -19,7 +19,7 @@ public abstract class StreamEventSource(
    * @param _target 
    */
   public override fun bind(target: IFunction) {
-    unwrap(this).bind(target.let(IFunction::unwrap))
+    unwrap(this).bind(target.let(IFunction.Companion::unwrap))
   }
 
   private class Wrapper(

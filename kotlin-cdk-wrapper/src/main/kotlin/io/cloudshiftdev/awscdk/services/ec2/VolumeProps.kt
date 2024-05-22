@@ -386,7 +386,7 @@ public interface VolumeProps {
      * ```
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -408,7 +408,7 @@ public interface VolumeProps {
      * @param removalPolicy Policy to apply when the volume is removed from the stack.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -419,7 +419,7 @@ public interface VolumeProps {
      * for details on the allowable size for each type of volume.
      */
     override fun size(size: Size) {
-      cdkBuilder.size(size.let(Size::unwrap))
+      cdkBuilder.size(size.let(Size.Companion::unwrap))
     }
 
     /**
@@ -450,7 +450,7 @@ public interface VolumeProps {
      * what type of storage to use to form the EBS Volume.
      */
     override fun volumeType(volumeType: EbsDeviceVolumeType) {
-      cdkBuilder.volumeType(volumeType.let(EbsDeviceVolumeType::unwrap))
+      cdkBuilder.volumeType(volumeType.let(EbsDeviceVolumeType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.VolumeProps = cdkBuilder.build()

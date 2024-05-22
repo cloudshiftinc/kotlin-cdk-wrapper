@@ -115,8 +115,8 @@ public open class CfnCrawler(
     id: String,
     props: CfnCrawlerProps,
   ) :
-      this(software.amazon.awscdk.services.glue.CfnCrawler(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCrawlerProps::unwrap))
+      this(software.amazon.awscdk.services.glue.CfnCrawler(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCrawlerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -206,7 +206,7 @@ public open class CfnCrawler(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -220,7 +220,7 @@ public open class CfnCrawler(
    * of the IAM role credentials.
    */
   public open fun lakeFormationConfiguration(`value`: IResolvable) {
-    unwrap(this).setLakeFormationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLakeFormationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -228,7 +228,7 @@ public open class CfnCrawler(
    * of the IAM role credentials.
    */
   public open fun lakeFormationConfiguration(`value`: LakeFormationConfigurationProperty) {
-    unwrap(this).setLakeFormationConfiguration(`value`.let(LakeFormationConfigurationProperty::unwrap))
+    unwrap(this).setLakeFormationConfiguration(`value`.let(LakeFormationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -264,7 +264,7 @@ public open class CfnCrawler(
    * that were added since the last crawler run.
    */
   public open fun recrawlPolicy(`value`: IResolvable) {
-    unwrap(this).setRecrawlPolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRecrawlPolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -272,7 +272,7 @@ public open class CfnCrawler(
    * that were added since the last crawler run.
    */
   public open fun recrawlPolicy(`value`: RecrawlPolicyProperty) {
-    unwrap(this).setRecrawlPolicy(`value`.let(RecrawlPolicyProperty::unwrap))
+    unwrap(this).setRecrawlPolicy(`value`.let(RecrawlPolicyProperty.Companion::unwrap))
   }
 
   /**
@@ -307,14 +307,14 @@ public open class CfnCrawler(
    * For scheduled crawlers, the schedule when the crawler runs.
    */
   public open fun schedule(`value`: IResolvable) {
-    unwrap(this).setSchedule(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSchedule(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * For scheduled crawlers, the schedule when the crawler runs.
    */
   public open fun schedule(`value`: ScheduleProperty) {
-    unwrap(this).setSchedule(`value`.let(ScheduleProperty::unwrap))
+    unwrap(this).setSchedule(`value`.let(ScheduleProperty.Companion::unwrap))
   }
 
   /**
@@ -334,14 +334,14 @@ public open class CfnCrawler(
    * The policy that specifies update and delete behaviors for the crawler.
    */
   public open fun schemaChangePolicy(`value`: IResolvable) {
-    unwrap(this).setSchemaChangePolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSchemaChangePolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The policy that specifies update and delete behaviors for the crawler.
    */
   public open fun schemaChangePolicy(`value`: SchemaChangePolicyProperty) {
-    unwrap(this).setSchemaChangePolicy(`value`.let(SchemaChangePolicyProperty::unwrap))
+    unwrap(this).setSchemaChangePolicy(`value`.let(SchemaChangePolicyProperty.Companion::unwrap))
   }
 
   /**
@@ -390,14 +390,14 @@ public open class CfnCrawler(
    * A collection of targets to crawl.
    */
   public open fun targets(`value`: IResolvable) {
-    unwrap(this).setTargets(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTargets(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A collection of targets to crawl.
    */
   public open fun targets(`value`: TargetsProperty) {
-    unwrap(this).setTargets(`value`.let(TargetsProperty::unwrap))
+    unwrap(this).setTargets(`value`.let(TargetsProperty.Companion::unwrap))
   }
 
   /**
@@ -756,7 +756,7 @@ public open class CfnCrawler(
      * credentials for the crawler instead of the IAM role credentials. 
      */
     override fun lakeFormationConfiguration(lakeFormationConfiguration: IResolvable) {
-      cdkBuilder.lakeFormationConfiguration(lakeFormationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.lakeFormationConfiguration(lakeFormationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -769,7 +769,7 @@ public open class CfnCrawler(
      */
     override
         fun lakeFormationConfiguration(lakeFormationConfiguration: LakeFormationConfigurationProperty) {
-      cdkBuilder.lakeFormationConfiguration(lakeFormationConfiguration.let(LakeFormationConfigurationProperty::unwrap))
+      cdkBuilder.lakeFormationConfiguration(lakeFormationConfiguration.let(LakeFormationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -806,7 +806,7 @@ public open class CfnCrawler(
      * crawl only folders that were added since the last crawler run. 
      */
     override fun recrawlPolicy(recrawlPolicy: IResolvable) {
-      cdkBuilder.recrawlPolicy(recrawlPolicy.let(IResolvable::unwrap))
+      cdkBuilder.recrawlPolicy(recrawlPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -818,7 +818,7 @@ public open class CfnCrawler(
      * crawl only folders that were added since the last crawler run. 
      */
     override fun recrawlPolicy(recrawlPolicy: RecrawlPolicyProperty) {
-      cdkBuilder.recrawlPolicy(recrawlPolicy.let(RecrawlPolicyProperty::unwrap))
+      cdkBuilder.recrawlPolicy(recrawlPolicy.let(RecrawlPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -853,7 +853,7 @@ public open class CfnCrawler(
      * @param schedule For scheduled crawlers, the schedule when the crawler runs. 
      */
     override fun schedule(schedule: IResolvable) {
-      cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
+      cdkBuilder.schedule(schedule.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -863,7 +863,7 @@ public open class CfnCrawler(
      * @param schedule For scheduled crawlers, the schedule when the crawler runs. 
      */
     override fun schedule(schedule: ScheduleProperty) {
-      cdkBuilder.schedule(schedule.let(ScheduleProperty::unwrap))
+      cdkBuilder.schedule(schedule.let(ScheduleProperty.Companion::unwrap))
     }
 
     /**
@@ -892,7 +892,7 @@ public open class CfnCrawler(
      * crawler. 
      */
     override fun schemaChangePolicy(schemaChangePolicy: IResolvable) {
-      cdkBuilder.schemaChangePolicy(schemaChangePolicy.let(IResolvable::unwrap))
+      cdkBuilder.schemaChangePolicy(schemaChangePolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -910,7 +910,7 @@ public open class CfnCrawler(
      * crawler. 
      */
     override fun schemaChangePolicy(schemaChangePolicy: SchemaChangePolicyProperty) {
-      cdkBuilder.schemaChangePolicy(schemaChangePolicy.let(SchemaChangePolicyProperty::unwrap))
+      cdkBuilder.schemaChangePolicy(schemaChangePolicy.let(SchemaChangePolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -960,7 +960,7 @@ public open class CfnCrawler(
      * @param targets A collection of targets to crawl. 
      */
     override fun targets(targets: IResolvable) {
-      cdkBuilder.targets(targets.let(IResolvable::unwrap))
+      cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -970,7 +970,7 @@ public open class CfnCrawler(
      * @param targets A collection of targets to crawl. 
      */
     override fun targets(targets: TargetsProperty) {
-      cdkBuilder.targets(targets.let(TargetsProperty::unwrap))
+      cdkBuilder.targets(targets.let(TargetsProperty.Companion::unwrap))
     }
 
     /**
@@ -1346,7 +1346,7 @@ public open class CfnCrawler(
        * directly.
        */
       override fun createNativeDeltaTable(createNativeDeltaTable: IResolvable) {
-        cdkBuilder.createNativeDeltaTable(createNativeDeltaTable.let(IResolvable::unwrap))
+        cdkBuilder.createNativeDeltaTable(createNativeDeltaTable.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1372,7 +1372,7 @@ public open class CfnCrawler(
        * @param writeManifest Specifies whether to write the manifest files to the Delta table path.
        */
       override fun writeManifest(writeManifest: IResolvable) {
-        cdkBuilder.writeManifest(writeManifest.let(IResolvable::unwrap))
+        cdkBuilder.writeManifest(writeManifest.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.glue.CfnCrawler.DeltaTargetProperty =
@@ -1949,7 +1949,7 @@ public open class CfnCrawler(
        * for the crawler instead of the IAM role credentials.
        */
       override fun useLakeFormationCredentials(useLakeFormationCredentials: IResolvable) {
-        cdkBuilder.useLakeFormationCredentials(useLakeFormationCredentials.let(IResolvable::unwrap))
+        cdkBuilder.useLakeFormationCredentials(useLakeFormationCredentials.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2985,7 +2985,7 @@ public open class CfnCrawler(
        * @param catalogTargets Specifies AWS Glue Data Catalog targets.
        */
       override fun catalogTargets(catalogTargets: IResolvable) {
-        cdkBuilder.catalogTargets(catalogTargets.let(IResolvable::unwrap))
+        cdkBuilder.catalogTargets(catalogTargets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3005,7 +3005,7 @@ public open class CfnCrawler(
        * @param deltaTargets Specifies an array of Delta data store targets.
        */
       override fun deltaTargets(deltaTargets: IResolvable) {
-        cdkBuilder.deltaTargets(deltaTargets.let(IResolvable::unwrap))
+        cdkBuilder.deltaTargets(deltaTargets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3025,7 +3025,7 @@ public open class CfnCrawler(
        * @param dynamoDbTargets Specifies Amazon DynamoDB targets.
        */
       override fun dynamoDbTargets(dynamoDbTargets: IResolvable) {
-        cdkBuilder.dynamoDbTargets(dynamoDbTargets.let(IResolvable::unwrap))
+        cdkBuilder.dynamoDbTargets(dynamoDbTargets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3045,7 +3045,7 @@ public open class CfnCrawler(
        * @param icebergTargets Specifies Apache Iceberg data store targets.
        */
       override fun icebergTargets(icebergTargets: IResolvable) {
-        cdkBuilder.icebergTargets(icebergTargets.let(IResolvable::unwrap))
+        cdkBuilder.icebergTargets(icebergTargets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3065,7 +3065,7 @@ public open class CfnCrawler(
        * @param jdbcTargets Specifies JDBC targets.
        */
       override fun jdbcTargets(jdbcTargets: IResolvable) {
-        cdkBuilder.jdbcTargets(jdbcTargets.let(IResolvable::unwrap))
+        cdkBuilder.jdbcTargets(jdbcTargets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3084,7 +3084,7 @@ public open class CfnCrawler(
        * @param mongoDbTargets A list of Mongo DB targets.
        */
       override fun mongoDbTargets(mongoDbTargets: IResolvable) {
-        cdkBuilder.mongoDbTargets(mongoDbTargets.let(IResolvable::unwrap))
+        cdkBuilder.mongoDbTargets(mongoDbTargets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3104,7 +3104,7 @@ public open class CfnCrawler(
        * @param s3Targets Specifies Amazon Simple Storage Service (Amazon S3) targets.
        */
       override fun s3Targets(s3Targets: IResolvable) {
-        cdkBuilder.s3Targets(s3Targets.let(IResolvable::unwrap))
+        cdkBuilder.s3Targets(s3Targets.let(IResolvable.Companion::unwrap))
       }
 
       /**

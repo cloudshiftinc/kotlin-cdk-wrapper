@@ -31,7 +31,7 @@ public open class CodeStarConnectionsSourceAction(
   cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeStarConnectionsSourceAction,
 ) : Action(cdkObject) {
   public constructor(props: CodeStarConnectionsSourceActionProps) :
-      this(software.amazon.awscdk.services.codepipeline.actions.CodeStarConnectionsSourceAction(props.let(CodeStarConnectionsSourceActionProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.actions.CodeStarConnectionsSourceAction(props.let(CodeStarConnectionsSourceActionProps.Companion::unwrap))
   )
 
   public constructor(props: CodeStarConnectionsSourceActionProps.Builder.() -> Unit) :
@@ -262,7 +262,7 @@ public open class CodeStarConnectionsSourceAction(
      * @param output The output artifact that this action produces. 
      */
     override fun output(output: Artifact) {
-      cdkBuilder.output(output.let(Artifact::unwrap))
+      cdkBuilder.output(output.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -309,7 +309,7 @@ public open class CodeStarConnectionsSourceAction(
      * @param role The Role in which context's this Action will be executing in. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**

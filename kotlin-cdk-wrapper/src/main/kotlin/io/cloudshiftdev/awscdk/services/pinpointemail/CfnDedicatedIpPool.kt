@@ -40,7 +40,7 @@ public open class CfnDedicatedIpPool(
   cdkObject: software.amazon.awscdk.services.pinpointemail.CfnDedicatedIpPool,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.pinpointemail.CfnDedicatedIpPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.pinpointemail.CfnDedicatedIpPool(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -49,8 +49,8 @@ public open class CfnDedicatedIpPool(
     id: String,
     props: CfnDedicatedIpPoolProps,
   ) :
-      this(software.amazon.awscdk.services.pinpointemail.CfnDedicatedIpPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDedicatedIpPoolProps::unwrap))
+      this(software.amazon.awscdk.services.pinpointemail.CfnDedicatedIpPool(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDedicatedIpPoolProps.Companion::unwrap))
   )
 
   public constructor(
@@ -77,7 +77,7 @@ public open class CfnDedicatedIpPool(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -103,7 +103,7 @@ public open class CfnDedicatedIpPool(
    * IP pool.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -172,7 +172,7 @@ public open class CfnDedicatedIpPool(
      * the dedicated IP pool. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

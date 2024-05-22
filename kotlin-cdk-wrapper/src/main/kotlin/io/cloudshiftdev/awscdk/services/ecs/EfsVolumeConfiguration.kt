@@ -134,7 +134,7 @@ public interface EfsVolumeConfiguration {
      * system.
      */
     override fun authorizationConfig(authorizationConfig: AuthorizationConfig) {
-      cdkBuilder.authorizationConfig(authorizationConfig.let(AuthorizationConfig::unwrap))
+      cdkBuilder.authorizationConfig(authorizationConfig.let(AuthorizationConfig.Companion::unwrap))
     }
 
     /**

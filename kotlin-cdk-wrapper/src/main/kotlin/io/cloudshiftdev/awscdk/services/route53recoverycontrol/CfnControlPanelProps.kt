@@ -107,7 +107,7 @@ public interface CfnControlPanelProps {
      * @param tags The tags associated with the control panel.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

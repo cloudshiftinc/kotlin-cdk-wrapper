@@ -36,8 +36,8 @@ public open class SsmIncidentAction(
    * @param _alarm 
    */
   public override fun bind(scope: Construct, alarm: IAlarm): AlarmActionConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap),
-      alarm.let(IAlarm::unwrap)).let(AlarmActionConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      alarm.let(IAlarm.Companion::unwrap)).let(AlarmActionConfig::wrap)
 
   public companion object {
     internal

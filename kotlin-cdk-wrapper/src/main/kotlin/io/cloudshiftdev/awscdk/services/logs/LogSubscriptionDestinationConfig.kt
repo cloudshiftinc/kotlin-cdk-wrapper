@@ -73,7 +73,7 @@ public interface LogSubscriptionDestinationConfig {
      * @param role The role to assume to write log events to the destination.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.logs.LogSubscriptionDestinationConfig =

@@ -806,7 +806,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun activeConnectionCount(props: MetricOptions): Metric =
-        unwrap(this).activeConnectionCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).activeConnectionCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The total number of concurrent TCP connections active from clients to the load balancer and
@@ -847,7 +847,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun clientTlsNegotiationErrorCount(props: MetricOptions): Metric =
-        unwrap(this).clientTlsNegotiationErrorCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).clientTlsNegotiationErrorCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of TLS connections initiated by the client that did not establish a session with
@@ -882,7 +882,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun consumedLCUs(props: MetricOptions): Metric =
-        unwrap(this).consumedLCUs(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).consumedLCUs(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of load balancer capacity units (LCU) used by your load balancer.
@@ -916,7 +916,8 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun custom(metricName: String, props: MetricOptions): Metric =
-        unwrap(this).custom(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).custom(metricName,
+        props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Return the given named metric for this Application Load Balancer.
@@ -956,7 +957,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun elbAuthError(props: MetricOptions): Metric =
-        unwrap(this).elbAuthError(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).elbAuthError(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of user authentications that could not be completed.
@@ -993,7 +994,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun elbAuthFailure(props: MetricOptions): Metric =
-        unwrap(this).elbAuthFailure(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).elbAuthFailure(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of user authentications that could not be completed because the IdP denied access
@@ -1029,7 +1030,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun elbAuthLatency(props: MetricOptions): Metric =
-        unwrap(this).elbAuthLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).elbAuthLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The time elapsed, in milliseconds, to query the IdP for the ID token and user info.
@@ -1068,7 +1069,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun elbAuthSuccess(props: MetricOptions): Metric =
-        unwrap(this).elbAuthSuccess(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).elbAuthSuccess(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of authenticate actions that were successful.
@@ -1096,7 +1097,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun httpCodeElb(code: HttpCodeElb): Metric =
-        unwrap(this).httpCodeElb(code.let(HttpCodeElb::unwrap)).let(Metric::wrap)
+        unwrap(this).httpCodeElb(code.let(HttpCodeElb.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of HTTP 3xx/4xx/5xx codes that originate from the load balancer.
@@ -1109,8 +1110,8 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun httpCodeElb(code: HttpCodeElb, props: MetricOptions): Metric =
-        unwrap(this).httpCodeElb(code.let(HttpCodeElb::unwrap),
-        props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).httpCodeElb(code.let(HttpCodeElb.Companion::unwrap),
+        props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of HTTP 3xx/4xx/5xx codes that originate from the load balancer.
@@ -1139,7 +1140,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun httpCodeTarget(code: HttpCodeTarget): Metric =
-        unwrap(this).httpCodeTarget(code.let(HttpCodeTarget::unwrap)).let(Metric::wrap)
+        unwrap(this).httpCodeTarget(code.let(HttpCodeTarget.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of HTTP 2xx/3xx/4xx/5xx response codes generated by all targets in the load
@@ -1153,8 +1154,8 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun httpCodeTarget(code: HttpCodeTarget, props: MetricOptions): Metric =
-        unwrap(this).httpCodeTarget(code.let(HttpCodeTarget::unwrap),
-        props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).httpCodeTarget(code.let(HttpCodeTarget.Companion::unwrap),
+        props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of HTTP 2xx/3xx/4xx/5xx response codes generated by all targets in the load
@@ -1190,7 +1191,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun httpFixedResponseCount(props: MetricOptions): Metric =
-        unwrap(this).httpFixedResponseCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).httpFixedResponseCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of fixed-response actions that were successful.
@@ -1221,7 +1222,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun httpRedirectCount(props: MetricOptions): Metric =
-        unwrap(this).httpRedirectCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).httpRedirectCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of redirect actions that were successful.
@@ -1255,7 +1256,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun httpRedirectUrlLimitExceededCount(props: MetricOptions): Metric =
-        unwrap(this).httpRedirectUrlLimitExceededCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).httpRedirectUrlLimitExceededCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of redirect actions that couldn't be completed because the URL in the response
@@ -1287,7 +1288,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun ipv6ProcessedBytes(props: MetricOptions): Metric =
-        unwrap(this).ipv6ProcessedBytes(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).ipv6ProcessedBytes(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The total number of bytes processed by the load balancer over IPv6.
@@ -1318,7 +1319,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun ipv6RequestCount(props: MetricOptions): Metric =
-        unwrap(this).ipv6RequestCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).ipv6RequestCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of IPv6 requests received by the load balancer.
@@ -1351,7 +1352,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun newConnectionCount(props: MetricOptions): Metric =
-        unwrap(this).newConnectionCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).newConnectionCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The total number of new TCP connections established from clients to the load balancer and
@@ -1383,7 +1384,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun processedBytes(props: MetricOptions): Metric =
-        unwrap(this).processedBytes(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).processedBytes(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The total number of bytes processed by the load balancer over IPv4 and IPv6.
@@ -1417,7 +1418,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun rejectedConnectionCount(props: MetricOptions): Metric =
-        unwrap(this).rejectedConnectionCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).rejectedConnectionCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of connections that were rejected because the load balancer had reached its
@@ -1455,7 +1456,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun requestCount(props: MetricOptions): Metric =
-        unwrap(this).requestCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).requestCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of requests processed over IPv4 and IPv6.
@@ -1491,7 +1492,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun ruleEvaluations(props: MetricOptions): Metric =
-        unwrap(this).ruleEvaluations(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).ruleEvaluations(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of rules processed by the load balancer given a request rate averaged over an
@@ -1526,7 +1527,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun targetConnectionErrorCount(props: MetricOptions): Metric =
-        unwrap(this).targetConnectionErrorCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).targetConnectionErrorCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of connections that were not successfully established between the load balancer
@@ -1560,7 +1561,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun targetResponseTime(props: MetricOptions): Metric =
-        unwrap(this).targetResponseTime(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).targetResponseTime(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The time elapsed, in seconds, after the request leaves the load balancer until a response
@@ -1599,7 +1600,7 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     override fun targetTLSNegotiationErrorCount(props: MetricOptions): Metric =
-        unwrap(this).targetTLSNegotiationErrorCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).targetTLSNegotiationErrorCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of TLS connections initiated by the load balancer that did not establish a session

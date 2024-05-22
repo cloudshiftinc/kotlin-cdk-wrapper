@@ -30,7 +30,7 @@ public open class Action(
   cdkObject: software.amazon.awscdk.services.appconfig.Action,
 ) : CdkObject(cdkObject) {
   public constructor(props: ActionProps) :
-      this(software.amazon.awscdk.services.appconfig.Action(props.let(ActionProps::unwrap))
+      this(software.amazon.awscdk.services.appconfig.Action(props.let(ActionProps.Companion::unwrap))
   )
 
   public constructor(props: ActionProps.Builder.() -> Unit) : this(ActionProps(props)
@@ -147,7 +147,7 @@ public open class Action(
      * @param actionPoints The action points that will trigger the extension action. 
      */
     override fun actionPoints(actionPoints: List<ActionPoint>) {
-      cdkBuilder.actionPoints(actionPoints.map(ActionPoint::unwrap))
+      cdkBuilder.actionPoints(actionPoints.map(ActionPoint.Companion::unwrap))
     }
 
     /**
@@ -175,7 +175,7 @@ public open class Action(
      * @param eventDestination The event destination for the action. 
      */
     override fun eventDestination(eventDestination: IEventDestination) {
-      cdkBuilder.eventDestination(eventDestination.let(IEventDestination::unwrap))
+      cdkBuilder.eventDestination(eventDestination.let(IEventDestination.Companion::unwrap))
     }
 
     /**
@@ -186,7 +186,7 @@ public open class Action(
      * @param executionRole The execution role for the action. 
      */
     override fun executionRole(executionRole: IRole) {
-      cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
+      cdkBuilder.executionRole(executionRole.let(IRole.Companion::unwrap))
     }
 
     /**

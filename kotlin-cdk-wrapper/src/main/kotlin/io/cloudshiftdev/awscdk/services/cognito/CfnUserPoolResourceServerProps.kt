@@ -136,7 +136,7 @@ public interface CfnUserPoolResourceServerProps {
      * Each scope is a map with keys `ScopeName` and `ScopeDescription` .
      */
     override fun scopes(scopes: IResolvable) {
-      cdkBuilder.scopes(scopes.let(IResolvable::unwrap))
+      cdkBuilder.scopes(scopes.let(IResolvable.Companion::unwrap))
     }
 
     /**

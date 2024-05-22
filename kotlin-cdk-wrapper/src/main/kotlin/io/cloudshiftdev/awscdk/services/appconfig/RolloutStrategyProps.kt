@@ -101,7 +101,7 @@ public interface RolloutStrategyProps {
      * the total amount of time for a deployment to last.
      */
     override fun deploymentDuration(deploymentDuration: Duration) {
-      cdkBuilder.deploymentDuration(deploymentDuration.let(Duration::unwrap))
+      cdkBuilder.deploymentDuration(deploymentDuration.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -113,7 +113,7 @@ public interface RolloutStrategyProps {
      * the deployment.
      */
     override fun finalBakeTime(finalBakeTime: Duration) {
-      cdkBuilder.finalBakeTime(finalBakeTime.let(Duration::unwrap))
+      cdkBuilder.finalBakeTime(finalBakeTime.let(Duration.Companion::unwrap))
     }
 
     /**

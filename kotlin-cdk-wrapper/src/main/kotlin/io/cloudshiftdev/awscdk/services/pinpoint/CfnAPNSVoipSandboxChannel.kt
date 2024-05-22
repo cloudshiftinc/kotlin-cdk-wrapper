@@ -56,8 +56,8 @@ public open class CfnAPNSVoipSandboxChannel(
     id: String,
     props: CfnAPNSVoipSandboxChannelProps,
   ) :
-      this(software.amazon.awscdk.services.pinpoint.CfnAPNSVoipSandboxChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAPNSVoipSandboxChannelProps::unwrap))
+      this(software.amazon.awscdk.services.pinpoint.CfnAPNSVoipSandboxChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAPNSVoipSandboxChannelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -141,7 +141,7 @@ public open class CfnAPNSVoipSandboxChannel(
    * Specifies whether the APNs VoIP sandbox channel is enabled for the application.
    */
   public open fun enabled(`value`: IResolvable) {
-    unwrap(this).setEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -150,7 +150,7 @@ public open class CfnAPNSVoipSandboxChannel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -385,7 +385,7 @@ public open class CfnAPNSVoipSandboxChannel(
      * application. 
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**

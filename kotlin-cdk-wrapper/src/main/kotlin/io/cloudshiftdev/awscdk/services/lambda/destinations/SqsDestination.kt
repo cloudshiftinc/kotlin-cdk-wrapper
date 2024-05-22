@@ -34,7 +34,7 @@ public open class SqsDestination(
   cdkObject: software.amazon.awscdk.services.lambda.destinations.SqsDestination,
 ) : CdkObject(cdkObject), IDestination {
   public constructor(queue: IQueue) :
-      this(software.amazon.awscdk.services.lambda.destinations.SqsDestination(queue.let(IQueue::unwrap))
+      this(software.amazon.awscdk.services.lambda.destinations.SqsDestination(queue.let(IQueue.Companion::unwrap))
   )
 
   /**
@@ -45,8 +45,8 @@ public open class SqsDestination(
    * @param _options
    */
   public override fun bind(scope: Construct, fn: IFunction): DestinationConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap),
-      fn.let(IFunction::unwrap)).let(DestinationConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      fn.let(IFunction.Companion::unwrap)).let(DestinationConfig::wrap)
 
   /**
    * Returns a destination configuration.
@@ -59,8 +59,9 @@ public open class SqsDestination(
     scope: Construct,
     fn: IFunction,
     options: DestinationOptions,
-  ): DestinationConfig = unwrap(this).bind(scope.let(Construct::unwrap), fn.let(IFunction::unwrap),
-      options.let(DestinationOptions::unwrap)).let(DestinationConfig::wrap)
+  ): DestinationConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      fn.let(IFunction.Companion::unwrap),
+      options.let(DestinationOptions.Companion::unwrap)).let(DestinationConfig::wrap)
 
   /**
    * Returns a destination configuration.

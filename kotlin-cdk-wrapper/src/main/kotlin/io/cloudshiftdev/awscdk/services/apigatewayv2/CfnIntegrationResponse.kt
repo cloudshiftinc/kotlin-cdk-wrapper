@@ -51,8 +51,8 @@ public open class CfnIntegrationResponse(
     id: String,
     props: CfnIntegrationResponseProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.CfnIntegrationResponse(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnIntegrationResponseProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.CfnIntegrationResponse(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnIntegrationResponseProps.Companion::unwrap))
   )
 
   public constructor(
@@ -97,7 +97,7 @@ public open class CfnIntegrationResponse(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

@@ -100,7 +100,7 @@ public interface CfnResourcePolicyProps {
      * policy lockout safety check.
      */
     override fun bypassPolicyLockoutCheck(bypassPolicyLockoutCheck: IResolvable) {
-      cdkBuilder.bypassPolicyLockoutCheck(bypassPolicyLockoutCheck.let(IResolvable::unwrap))
+      cdkBuilder.bypassPolicyLockoutCheck(bypassPolicyLockoutCheck.let(IResolvable.Companion::unwrap))
     }
 
     /**

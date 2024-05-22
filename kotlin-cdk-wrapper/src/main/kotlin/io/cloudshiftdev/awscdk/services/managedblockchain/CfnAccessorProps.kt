@@ -164,7 +164,7 @@ public interface CfnAccessorProps {
      * in the *Amazon Managed Blockchain Hyperledger Fabric Developer Guide* .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

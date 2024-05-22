@@ -49,7 +49,7 @@ public abstract class Identity(
         software.amazon.awscdk.services.ses.Identity.email(email).let(Identity::wrap)
 
     public fun publicHostedZone(hostedZone: IPublicHostedZone): Identity =
-        software.amazon.awscdk.services.ses.Identity.publicHostedZone(hostedZone.let(IPublicHostedZone::unwrap)).let(Identity::wrap)
+        software.amazon.awscdk.services.ses.Identity.publicHostedZone(hostedZone.let(IPublicHostedZone.Companion::unwrap)).let(Identity::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ses.Identity): Identity =
         CdkObjectWrappers.wrap(cdkObject) as? Identity ?: Wrapper(cdkObject)

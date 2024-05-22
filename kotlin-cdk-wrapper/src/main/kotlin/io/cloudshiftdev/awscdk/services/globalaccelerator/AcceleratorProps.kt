@@ -156,7 +156,7 @@ public interface AcceleratorProps {
      * For a standard accelerator, the value can be IPV4 or DUAL_STACK.
      */
     override fun ipAddressType(ipAddressType: IpAddressType) {
-      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType::unwrap))
+      cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType.Companion::unwrap))
     }
 
     /**

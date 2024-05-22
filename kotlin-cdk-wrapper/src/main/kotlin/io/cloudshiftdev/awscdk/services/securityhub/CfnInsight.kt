@@ -519,8 +519,8 @@ public open class CfnInsight(
     id: String,
     props: CfnInsightProps,
   ) :
-      this(software.amazon.awscdk.services.securityhub.CfnInsight(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInsightProps::unwrap))
+      this(software.amazon.awscdk.services.securityhub.CfnInsight(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInsightProps.Companion::unwrap))
   )
 
   public constructor(
@@ -544,14 +544,14 @@ public open class CfnInsight(
    * One or more attributes used to filter the findings included in the insight.
    */
   public open fun filters(`value`: IResolvable) {
-    unwrap(this).setFilters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFilters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * One or more attributes used to filter the findings included in the insight.
    */
   public open fun filters(`value`: AwsSecurityFindingFiltersProperty) {
-    unwrap(this).setFilters(`value`.let(AwsSecurityFindingFiltersProperty::unwrap))
+    unwrap(this).setFilters(`value`.let(AwsSecurityFindingFiltersProperty.Companion::unwrap))
   }
 
   /**
@@ -580,7 +580,7 @@ public open class CfnInsight(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -677,7 +677,7 @@ public open class CfnInsight(
      * @param filters One or more attributes used to filter the findings included in the insight. 
      */
     override fun filters(filters: IResolvable) {
-      cdkBuilder.filters(filters.let(IResolvable::unwrap))
+      cdkBuilder.filters(filters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -691,7 +691,7 @@ public open class CfnInsight(
      * @param filters One or more attributes used to filter the findings included in the insight. 
      */
     override fun filters(filters: AwsSecurityFindingFiltersProperty) {
-      cdkBuilder.filters(filters.let(AwsSecurityFindingFiltersProperty::unwrap))
+      cdkBuilder.filters(filters.let(AwsSecurityFindingFiltersProperty.Companion::unwrap))
     }
 
     /**
@@ -4367,7 +4367,7 @@ public open class CfnInsight(
        * @param awsAccountId The AWS account ID in which a finding is generated.
        */
       override fun awsAccountId(awsAccountId: IResolvable) {
-        cdkBuilder.awsAccountId(awsAccountId.let(IResolvable::unwrap))
+        cdkBuilder.awsAccountId(awsAccountId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4387,7 +4387,7 @@ public open class CfnInsight(
        * @param awsAccountName The name of the AWS account in which a finding is generated.
        */
       override fun awsAccountName(awsAccountName: IResolvable) {
-        cdkBuilder.awsAccountName(awsAccountName.let(IResolvable::unwrap))
+        cdkBuilder.awsAccountName(awsAccountName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4408,7 +4408,7 @@ public open class CfnInsight(
        * (product) that generates findings.
        */
       override fun companyName(companyName: IResolvable) {
-        cdkBuilder.companyName(companyName.let(IResolvable::unwrap))
+        cdkBuilder.companyName(companyName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4434,7 +4434,7 @@ public open class CfnInsight(
        * API response.
        */
       override fun complianceAssociatedStandardsId(complianceAssociatedStandardsId: IResolvable) {
-        cdkBuilder.complianceAssociatedStandardsId(complianceAssociatedStandardsId.let(IResolvable::unwrap))
+        cdkBuilder.complianceAssociatedStandardsId(complianceAssociatedStandardsId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4466,7 +4466,7 @@ public open class CfnInsight(
        * APIGateway.5.
        */
       override fun complianceSecurityControlId(complianceSecurityControlId: IResolvable) {
-        cdkBuilder.complianceSecurityControlId(complianceSecurityControlId.let(IResolvable::unwrap))
+        cdkBuilder.complianceSecurityControlId(complianceSecurityControlId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4491,7 +4491,7 @@ public open class CfnInsight(
        */
       override
           fun complianceSecurityControlParametersName(complianceSecurityControlParametersName: IResolvable) {
-        cdkBuilder.complianceSecurityControlParametersName(complianceSecurityControlParametersName.let(IResolvable::unwrap))
+        cdkBuilder.complianceSecurityControlParametersName(complianceSecurityControlParametersName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4515,7 +4515,7 @@ public open class CfnInsight(
        */
       override
           fun complianceSecurityControlParametersValue(complianceSecurityControlParametersValue: IResolvable) {
-        cdkBuilder.complianceSecurityControlParametersValue(complianceSecurityControlParametersValue.let(IResolvable::unwrap))
+        cdkBuilder.complianceSecurityControlParametersValue(complianceSecurityControlParametersValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4541,7 +4541,7 @@ public open class CfnInsight(
        * Contains security standard-related finding details.
        */
       override fun complianceStatus(complianceStatus: IResolvable) {
-        cdkBuilder.complianceStatus(complianceStatus.let(IResolvable::unwrap))
+        cdkBuilder.complianceStatus(complianceStatus.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4570,7 +4570,7 @@ public open class CfnInsight(
        * confidence and 100 means 100 percent confidence.
        */
       override fun confidence(confidence: IResolvable) {
-        cdkBuilder.confidence(confidence.let(IResolvable::unwrap))
+        cdkBuilder.confidence(confidence.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4610,7 +4610,7 @@ public open class CfnInsight(
        * )
        */
       override fun createdAt(createdAt: IResolvable) {
-        cdkBuilder.createdAt(createdAt.let(IResolvable::unwrap))
+        cdkBuilder.createdAt(createdAt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4654,7 +4654,7 @@ public open class CfnInsight(
        * reserved for the most critical resources.
        */
       override fun criticality(criticality: IResolvable) {
-        cdkBuilder.criticality(criticality.let(IResolvable::unwrap))
+        cdkBuilder.criticality(criticality.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4679,7 +4679,7 @@ public open class CfnInsight(
        * @param description A finding's description.
        */
       override fun description(description: IResolvable) {
-        cdkBuilder.description(description.let(IResolvable::unwrap))
+        cdkBuilder.description(description.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4704,7 +4704,7 @@ public open class CfnInsight(
        * confidence and 100 means 100 percent confidence.
        */
       override fun findingProviderFieldsConfidence(findingProviderFieldsConfidence: IResolvable) {
-        cdkBuilder.findingProviderFieldsConfidence(findingProviderFieldsConfidence.let(IResolvable::unwrap))
+        cdkBuilder.findingProviderFieldsConfidence(findingProviderFieldsConfidence.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4739,7 +4739,7 @@ public open class CfnInsight(
        * reserved for the most critical resources.
        */
       override fun findingProviderFieldsCriticality(findingProviderFieldsCriticality: IResolvable) {
-        cdkBuilder.findingProviderFieldsCriticality(findingProviderFieldsCriticality.let(IResolvable::unwrap))
+        cdkBuilder.findingProviderFieldsCriticality(findingProviderFieldsCriticality.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4767,7 +4767,7 @@ public open class CfnInsight(
        */
       override
           fun findingProviderFieldsRelatedFindingsId(findingProviderFieldsRelatedFindingsId: IResolvable) {
-        cdkBuilder.findingProviderFieldsRelatedFindingsId(findingProviderFieldsRelatedFindingsId.let(IResolvable::unwrap))
+        cdkBuilder.findingProviderFieldsRelatedFindingsId(findingProviderFieldsRelatedFindingsId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4793,7 +4793,7 @@ public open class CfnInsight(
        */
       override
           fun findingProviderFieldsRelatedFindingsProductArn(findingProviderFieldsRelatedFindingsProductArn: IResolvable) {
-        cdkBuilder.findingProviderFieldsRelatedFindingsProductArn(findingProviderFieldsRelatedFindingsProductArn.let(IResolvable::unwrap))
+        cdkBuilder.findingProviderFieldsRelatedFindingsProductArn(findingProviderFieldsRelatedFindingsProductArn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4819,7 +4819,7 @@ public open class CfnInsight(
        */
       override
           fun findingProviderFieldsSeverityLabel(findingProviderFieldsSeverityLabel: IResolvable) {
-        cdkBuilder.findingProviderFieldsSeverityLabel(findingProviderFieldsSeverityLabel.let(IResolvable::unwrap))
+        cdkBuilder.findingProviderFieldsSeverityLabel(findingProviderFieldsSeverityLabel.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4845,7 +4845,7 @@ public open class CfnInsight(
        */
       override
           fun findingProviderFieldsSeverityOriginal(findingProviderFieldsSeverityOriginal: IResolvable) {
-        cdkBuilder.findingProviderFieldsSeverityOriginal(findingProviderFieldsSeverityOriginal.let(IResolvable::unwrap))
+        cdkBuilder.findingProviderFieldsSeverityOriginal(findingProviderFieldsSeverityOriginal.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4874,7 +4874,7 @@ public open class CfnInsight(
        * Behaviors | Sensitive Data Identifications
        */
       override fun findingProviderFieldsTypes(findingProviderFieldsTypes: IResolvable) {
-        cdkBuilder.findingProviderFieldsTypes(findingProviderFieldsTypes.let(IResolvable::unwrap))
+        cdkBuilder.findingProviderFieldsTypes(findingProviderFieldsTypes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4915,7 +4915,7 @@ public open class CfnInsight(
        * )
        */
       override fun firstObservedAt(firstObservedAt: IResolvable) {
-        cdkBuilder.firstObservedAt(firstObservedAt.let(IResolvable::unwrap))
+        cdkBuilder.firstObservedAt(firstObservedAt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4960,7 +4960,7 @@ public open class CfnInsight(
        * check, a detector, a plugin, etc.
        */
       override fun generatorId(generatorId: IResolvable) {
-        cdkBuilder.generatorId(generatorId.let(IResolvable::unwrap))
+        cdkBuilder.generatorId(generatorId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4985,7 +4985,7 @@ public open class CfnInsight(
        * @param id The security findings provider-specific identifier for a finding.
        */
       override fun id(id: IResolvable) {
-        cdkBuilder.id(id.let(IResolvable::unwrap))
+        cdkBuilder.id(id.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5005,7 +5005,7 @@ public open class CfnInsight(
        * A keyword for a finding.
        */
       override fun keyword(keyword: IResolvable) {
-        cdkBuilder.keyword(keyword.let(IResolvable::unwrap))
+        cdkBuilder.keyword(keyword.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5037,7 +5037,7 @@ public open class CfnInsight(
        * )
        */
       override fun lastObservedAt(lastObservedAt: IResolvable) {
-        cdkBuilder.lastObservedAt(lastObservedAt.let(IResolvable::unwrap))
+        cdkBuilder.lastObservedAt(lastObservedAt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5079,7 +5079,7 @@ public open class CfnInsight(
        * @param malwareName The name of the malware that was observed.
        */
       override fun malwareName(malwareName: IResolvable) {
-        cdkBuilder.malwareName(malwareName.let(IResolvable::unwrap))
+        cdkBuilder.malwareName(malwareName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5098,7 +5098,7 @@ public open class CfnInsight(
        * @param malwarePath The filesystem path of the malware that was observed.
        */
       override fun malwarePath(malwarePath: IResolvable) {
-        cdkBuilder.malwarePath(malwarePath.let(IResolvable::unwrap))
+        cdkBuilder.malwarePath(malwarePath.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5117,7 +5117,7 @@ public open class CfnInsight(
        * @param malwareState The state of the malware that was observed.
        */
       override fun malwareState(malwareState: IResolvable) {
-        cdkBuilder.malwareState(malwareState.let(IResolvable::unwrap))
+        cdkBuilder.malwareState(malwareState.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5137,7 +5137,7 @@ public open class CfnInsight(
        * @param malwareType The type of the malware that was observed.
        */
       override fun malwareType(malwareType: IResolvable) {
-        cdkBuilder.malwareType(malwareType.let(IResolvable::unwrap))
+        cdkBuilder.malwareType(malwareType.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5157,7 +5157,7 @@ public open class CfnInsight(
        * a finding.
        */
       override fun networkDestinationDomain(networkDestinationDomain: IResolvable) {
-        cdkBuilder.networkDestinationDomain(networkDestinationDomain.let(IResolvable::unwrap))
+        cdkBuilder.networkDestinationDomain(networkDestinationDomain.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5180,7 +5180,7 @@ public open class CfnInsight(
        * about a finding.
        */
       override fun networkDestinationIpV4(networkDestinationIpV4: IResolvable) {
-        cdkBuilder.networkDestinationIpV4(networkDestinationIpV4.let(IResolvable::unwrap))
+        cdkBuilder.networkDestinationIpV4(networkDestinationIpV4.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5203,7 +5203,7 @@ public open class CfnInsight(
        * about a finding.
        */
       override fun networkDestinationIpV6(networkDestinationIpV6: IResolvable) {
-        cdkBuilder.networkDestinationIpV6(networkDestinationIpV6.let(IResolvable::unwrap))
+        cdkBuilder.networkDestinationIpV6(networkDestinationIpV6.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5226,7 +5226,7 @@ public open class CfnInsight(
        * finding.
        */
       override fun networkDestinationPort(networkDestinationPort: IResolvable) {
-        cdkBuilder.networkDestinationPort(networkDestinationPort.let(IResolvable::unwrap))
+        cdkBuilder.networkDestinationPort(networkDestinationPort.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5249,7 +5249,7 @@ public open class CfnInsight(
        * finding.
        */
       override fun networkDirection(networkDirection: IResolvable) {
-        cdkBuilder.networkDirection(networkDirection.let(IResolvable::unwrap))
+        cdkBuilder.networkDirection(networkDirection.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5271,7 +5271,7 @@ public open class CfnInsight(
        * @param networkProtocol The protocol of network-related information about a finding.
        */
       override fun networkProtocol(networkProtocol: IResolvable) {
-        cdkBuilder.networkProtocol(networkProtocol.let(IResolvable::unwrap))
+        cdkBuilder.networkProtocol(networkProtocol.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5292,7 +5292,7 @@ public open class CfnInsight(
        * finding.
        */
       override fun networkSourceDomain(networkSourceDomain: IResolvable) {
-        cdkBuilder.networkSourceDomain(networkSourceDomain.let(IResolvable::unwrap))
+        cdkBuilder.networkSourceDomain(networkSourceDomain.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5315,7 +5315,7 @@ public open class CfnInsight(
        * finding.
        */
       override fun networkSourceIpV4(networkSourceIpV4: IResolvable) {
-        cdkBuilder.networkSourceIpV4(networkSourceIpV4.let(IResolvable::unwrap))
+        cdkBuilder.networkSourceIpV4(networkSourceIpV4.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5338,7 +5338,7 @@ public open class CfnInsight(
        * finding.
        */
       override fun networkSourceIpV6(networkSourceIpV6: IResolvable) {
-        cdkBuilder.networkSourceIpV6(networkSourceIpV6.let(IResolvable::unwrap))
+        cdkBuilder.networkSourceIpV6(networkSourceIpV6.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5361,7 +5361,7 @@ public open class CfnInsight(
        * information about a finding.
        */
       override fun networkSourceMac(networkSourceMac: IResolvable) {
-        cdkBuilder.networkSourceMac(networkSourceMac.let(IResolvable::unwrap))
+        cdkBuilder.networkSourceMac(networkSourceMac.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5383,7 +5383,7 @@ public open class CfnInsight(
        * @param networkSourcePort The source port of network-related information about a finding.
        */
       override fun networkSourcePort(networkSourcePort: IResolvable) {
-        cdkBuilder.networkSourcePort(networkSourcePort.let(IResolvable::unwrap))
+        cdkBuilder.networkSourcePort(networkSourcePort.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5403,7 +5403,7 @@ public open class CfnInsight(
        * @param noteText The text of a note.
        */
       override fun noteText(noteText: IResolvable) {
-        cdkBuilder.noteText(noteText.let(IResolvable::unwrap))
+        cdkBuilder.noteText(noteText.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5422,7 +5422,7 @@ public open class CfnInsight(
        * @param noteUpdatedAt The timestamp of when the note was updated.
        */
       override fun noteUpdatedAt(noteUpdatedAt: IResolvable) {
-        cdkBuilder.noteUpdatedAt(noteUpdatedAt.let(IResolvable::unwrap))
+        cdkBuilder.noteUpdatedAt(noteUpdatedAt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5442,7 +5442,7 @@ public open class CfnInsight(
        * @param noteUpdatedBy The principal that created a note.
        */
       override fun noteUpdatedBy(noteUpdatedBy: IResolvable) {
-        cdkBuilder.noteUpdatedBy(noteUpdatedBy.let(IResolvable::unwrap))
+        cdkBuilder.noteUpdatedBy(noteUpdatedBy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5472,7 +5472,7 @@ public open class CfnInsight(
        * )
        */
       override fun processLaunchedAt(processLaunchedAt: IResolvable) {
-        cdkBuilder.processLaunchedAt(processLaunchedAt.let(IResolvable::unwrap))
+        cdkBuilder.processLaunchedAt(processLaunchedAt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5512,7 +5512,7 @@ public open class CfnInsight(
        * @param processName The name of the process.
        */
       override fun processName(processName: IResolvable) {
-        cdkBuilder.processName(processName.let(IResolvable::unwrap))
+        cdkBuilder.processName(processName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5532,7 +5532,7 @@ public open class CfnInsight(
        * This field accepts positive integers between `O` and `2147483647` .
        */
       override fun processParentPid(processParentPid: IResolvable) {
-        cdkBuilder.processParentPid(processParentPid.let(IResolvable::unwrap))
+        cdkBuilder.processParentPid(processParentPid.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5554,7 +5554,7 @@ public open class CfnInsight(
        * @param processPath The path to the process executable.
        */
       override fun processPath(processPath: IResolvable) {
-        cdkBuilder.processPath(processPath.let(IResolvable::unwrap))
+        cdkBuilder.processPath(processPath.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5573,7 +5573,7 @@ public open class CfnInsight(
        * @param processPid The process ID.
        */
       override fun processPid(processPid: IResolvable) {
-        cdkBuilder.processPid(processPid.let(IResolvable::unwrap))
+        cdkBuilder.processPid(processPid.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5602,7 +5602,7 @@ public open class CfnInsight(
        * )
        */
       override fun processTerminatedAt(processTerminatedAt: IResolvable) {
-        cdkBuilder.processTerminatedAt(processTerminatedAt.let(IResolvable::unwrap))
+        cdkBuilder.processTerminatedAt(processTerminatedAt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5644,7 +5644,7 @@ public open class CfnInsight(
        * findings) is registered with Security Hub.
        */
       override fun productArn(productArn: IResolvable) {
-        cdkBuilder.productArn(productArn.let(IResolvable::unwrap))
+        cdkBuilder.productArn(productArn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5668,7 +5668,7 @@ public open class CfnInsight(
        * solution-specific details that aren't part of the defined `AwsSecurityFinding` format.
        */
       override fun productFields(productFields: IResolvable) {
-        cdkBuilder.productFields(productFields.let(IResolvable::unwrap))
+        cdkBuilder.productFields(productFields.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5690,7 +5690,7 @@ public open class CfnInsight(
        * @param productName The name of the solution (product) that generates findings.
        */
       override fun productName(productName: IResolvable) {
-        cdkBuilder.productName(productName.let(IResolvable::unwrap))
+        cdkBuilder.productName(productName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5710,7 +5710,7 @@ public open class CfnInsight(
        * finding.
        */
       override fun recommendationText(recommendationText: IResolvable) {
-        cdkBuilder.recommendationText(recommendationText.let(IResolvable::unwrap))
+        cdkBuilder.recommendationText(recommendationText.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5732,7 +5732,7 @@ public open class CfnInsight(
        * @param recordState The updated record state for the finding.
        */
       override fun recordState(recordState: IResolvable) {
-        cdkBuilder.recordState(recordState.let(IResolvable::unwrap))
+        cdkBuilder.recordState(recordState.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5751,7 +5751,7 @@ public open class CfnInsight(
        * @param region The Region from which the finding was generated.
        */
       override fun region(region: IResolvable) {
-        cdkBuilder.region(region.let(IResolvable::unwrap))
+        cdkBuilder.region(region.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5770,7 +5770,7 @@ public open class CfnInsight(
        * @param relatedFindingsId The solution-generated identifier for a related finding.
        */
       override fun relatedFindingsId(relatedFindingsId: IResolvable) {
-        cdkBuilder.relatedFindingsId(relatedFindingsId.let(IResolvable::unwrap))
+        cdkBuilder.relatedFindingsId(relatedFindingsId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5790,7 +5790,7 @@ public open class CfnInsight(
        * @param relatedFindingsProductArn The ARN of the solution that generated a related finding.
        */
       override fun relatedFindingsProductArn(relatedFindingsProductArn: IResolvable) {
-        cdkBuilder.relatedFindingsProductArn(relatedFindingsProductArn.let(IResolvable::unwrap))
+        cdkBuilder.relatedFindingsProductArn(relatedFindingsProductArn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5810,7 +5810,7 @@ public open class CfnInsight(
        * @param resourceApplicationArn The ARN of the application that is related to a finding.
        */
       override fun resourceApplicationArn(resourceApplicationArn: IResolvable) {
-        cdkBuilder.resourceApplicationArn(resourceApplicationArn.let(IResolvable::unwrap))
+        cdkBuilder.resourceApplicationArn(resourceApplicationArn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5830,7 +5830,7 @@ public open class CfnInsight(
        * @param resourceApplicationName The name of the application that is related to a finding.
        */
       override fun resourceApplicationName(resourceApplicationName: IResolvable) {
-        cdkBuilder.resourceApplicationName(resourceApplicationName.let(IResolvable::unwrap))
+        cdkBuilder.resourceApplicationName(resourceApplicationName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5851,7 +5851,7 @@ public open class CfnInsight(
        */
       override
           fun resourceAwsEc2InstanceIamInstanceProfileArn(resourceAwsEc2InstanceIamInstanceProfileArn: IResolvable) {
-        cdkBuilder.resourceAwsEc2InstanceIamInstanceProfileArn(resourceAwsEc2InstanceIamInstanceProfileArn.let(IResolvable::unwrap))
+        cdkBuilder.resourceAwsEc2InstanceIamInstanceProfileArn(resourceAwsEc2InstanceIamInstanceProfileArn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5873,7 +5873,7 @@ public open class CfnInsight(
        * @param resourceAwsEc2InstanceImageId The Amazon Machine Image (AMI) ID of the instance.
        */
       override fun resourceAwsEc2InstanceImageId(resourceAwsEc2InstanceImageId: IResolvable) {
-        cdkBuilder.resourceAwsEc2InstanceImageId(resourceAwsEc2InstanceImageId.let(IResolvable::unwrap))
+        cdkBuilder.resourceAwsEc2InstanceImageId(resourceAwsEc2InstanceImageId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5894,7 +5894,7 @@ public open class CfnInsight(
        */
       override
           fun resourceAwsEc2InstanceIpV4Addresses(resourceAwsEc2InstanceIpV4Addresses: IResolvable) {
-        cdkBuilder.resourceAwsEc2InstanceIpV4Addresses(resourceAwsEc2InstanceIpV4Addresses.let(IResolvable::unwrap))
+        cdkBuilder.resourceAwsEc2InstanceIpV4Addresses(resourceAwsEc2InstanceIpV4Addresses.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5917,7 +5917,7 @@ public open class CfnInsight(
        */
       override
           fun resourceAwsEc2InstanceIpV6Addresses(resourceAwsEc2InstanceIpV6Addresses: IResolvable) {
-        cdkBuilder.resourceAwsEc2InstanceIpV6Addresses(resourceAwsEc2InstanceIpV6Addresses.let(IResolvable::unwrap))
+        cdkBuilder.resourceAwsEc2InstanceIpV6Addresses(resourceAwsEc2InstanceIpV6Addresses.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5939,7 +5939,7 @@ public open class CfnInsight(
        * @param resourceAwsEc2InstanceKeyName The key name associated with the instance.
        */
       override fun resourceAwsEc2InstanceKeyName(resourceAwsEc2InstanceKeyName: IResolvable) {
-        cdkBuilder.resourceAwsEc2InstanceKeyName(resourceAwsEc2InstanceKeyName.let(IResolvable::unwrap))
+        cdkBuilder.resourceAwsEc2InstanceKeyName(resourceAwsEc2InstanceKeyName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5959,7 +5959,7 @@ public open class CfnInsight(
        * @param resourceAwsEc2InstanceLaunchedAt The date and time the instance was launched.
        */
       override fun resourceAwsEc2InstanceLaunchedAt(resourceAwsEc2InstanceLaunchedAt: IResolvable) {
-        cdkBuilder.resourceAwsEc2InstanceLaunchedAt(resourceAwsEc2InstanceLaunchedAt.let(IResolvable::unwrap))
+        cdkBuilder.resourceAwsEc2InstanceLaunchedAt(resourceAwsEc2InstanceLaunchedAt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5980,7 +5980,7 @@ public open class CfnInsight(
        * launched in.
        */
       override fun resourceAwsEc2InstanceSubnetId(resourceAwsEc2InstanceSubnetId: IResolvable) {
-        cdkBuilder.resourceAwsEc2InstanceSubnetId(resourceAwsEc2InstanceSubnetId.let(IResolvable::unwrap))
+        cdkBuilder.resourceAwsEc2InstanceSubnetId(resourceAwsEc2InstanceSubnetId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6002,7 +6002,7 @@ public open class CfnInsight(
        * @param resourceAwsEc2InstanceType The instance type of the instance.
        */
       override fun resourceAwsEc2InstanceType(resourceAwsEc2InstanceType: IResolvable) {
-        cdkBuilder.resourceAwsEc2InstanceType(resourceAwsEc2InstanceType.let(IResolvable::unwrap))
+        cdkBuilder.resourceAwsEc2InstanceType(resourceAwsEc2InstanceType.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6023,7 +6023,7 @@ public open class CfnInsight(
        * in.
        */
       override fun resourceAwsEc2InstanceVpcId(resourceAwsEc2InstanceVpcId: IResolvable) {
-        cdkBuilder.resourceAwsEc2InstanceVpcId(resourceAwsEc2InstanceVpcId.let(IResolvable::unwrap))
+        cdkBuilder.resourceAwsEc2InstanceVpcId(resourceAwsEc2InstanceVpcId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6046,7 +6046,7 @@ public open class CfnInsight(
        * related to a finding.
        */
       override fun resourceAwsIamAccessKeyCreatedAt(resourceAwsIamAccessKeyCreatedAt: IResolvable) {
-        cdkBuilder.resourceAwsIamAccessKeyCreatedAt(resourceAwsIamAccessKeyCreatedAt.let(IResolvable::unwrap))
+        cdkBuilder.resourceAwsIamAccessKeyCreatedAt(resourceAwsIamAccessKeyCreatedAt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6070,7 +6070,7 @@ public open class CfnInsight(
        */
       override
           fun resourceAwsIamAccessKeyPrincipalName(resourceAwsIamAccessKeyPrincipalName: IResolvable) {
-        cdkBuilder.resourceAwsIamAccessKeyPrincipalName(resourceAwsIamAccessKeyPrincipalName.let(IResolvable::unwrap))
+        cdkBuilder.resourceAwsIamAccessKeyPrincipalName(resourceAwsIamAccessKeyPrincipalName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6094,7 +6094,7 @@ public open class CfnInsight(
        * @param resourceAwsIamAccessKeyStatus The status of the IAM access key related to a finding.
        */
       override fun resourceAwsIamAccessKeyStatus(resourceAwsIamAccessKeyStatus: IResolvable) {
-        cdkBuilder.resourceAwsIamAccessKeyStatus(resourceAwsIamAccessKeyStatus.let(IResolvable::unwrap))
+        cdkBuilder.resourceAwsIamAccessKeyStatus(resourceAwsIamAccessKeyStatus.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6115,7 +6115,7 @@ public open class CfnInsight(
        * The username associated with the IAM access key related to a finding.
        */
       override fun resourceAwsIamAccessKeyUserName(resourceAwsIamAccessKeyUserName: IResolvable) {
-        cdkBuilder.resourceAwsIamAccessKeyUserName(resourceAwsIamAccessKeyUserName.let(IResolvable::unwrap))
+        cdkBuilder.resourceAwsIamAccessKeyUserName(resourceAwsIamAccessKeyUserName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6137,7 +6137,7 @@ public open class CfnInsight(
        * @param resourceAwsIamUserUserName The name of an IAM user.
        */
       override fun resourceAwsIamUserUserName(resourceAwsIamUserUserName: IResolvable) {
-        cdkBuilder.resourceAwsIamUserUserName(resourceAwsIamUserUserName.let(IResolvable::unwrap))
+        cdkBuilder.resourceAwsIamUserUserName(resourceAwsIamUserUserName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6157,7 +6157,7 @@ public open class CfnInsight(
        * @param resourceAwsS3BucketOwnerId The canonical user ID of the owner of the S3 bucket.
        */
       override fun resourceAwsS3BucketOwnerId(resourceAwsS3BucketOwnerId: IResolvable) {
-        cdkBuilder.resourceAwsS3BucketOwnerId(resourceAwsS3BucketOwnerId.let(IResolvable::unwrap))
+        cdkBuilder.resourceAwsS3BucketOwnerId(resourceAwsS3BucketOwnerId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6177,7 +6177,7 @@ public open class CfnInsight(
        * @param resourceAwsS3BucketOwnerName The display name of the owner of the S3 bucket.
        */
       override fun resourceAwsS3BucketOwnerName(resourceAwsS3BucketOwnerName: IResolvable) {
-        cdkBuilder.resourceAwsS3BucketOwnerName(resourceAwsS3BucketOwnerName.let(IResolvable::unwrap))
+        cdkBuilder.resourceAwsS3BucketOwnerName(resourceAwsS3BucketOwnerName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6197,7 +6197,7 @@ public open class CfnInsight(
        * @param resourceContainerImageId The identifier of the image related to a finding.
        */
       override fun resourceContainerImageId(resourceContainerImageId: IResolvable) {
-        cdkBuilder.resourceContainerImageId(resourceContainerImageId.let(IResolvable::unwrap))
+        cdkBuilder.resourceContainerImageId(resourceContainerImageId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6217,7 +6217,7 @@ public open class CfnInsight(
        * @param resourceContainerImageName The name of the image related to a finding.
        */
       override fun resourceContainerImageName(resourceContainerImageName: IResolvable) {
-        cdkBuilder.resourceContainerImageName(resourceContainerImageName.let(IResolvable::unwrap))
+        cdkBuilder.resourceContainerImageName(resourceContainerImageName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6248,7 +6248,7 @@ public open class CfnInsight(
        * )
        */
       override fun resourceContainerLaunchedAt(resourceContainerLaunchedAt: IResolvable) {
-        cdkBuilder.resourceContainerLaunchedAt(resourceContainerLaunchedAt.let(IResolvable::unwrap))
+        cdkBuilder.resourceContainerLaunchedAt(resourceContainerLaunchedAt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6290,7 +6290,7 @@ public open class CfnInsight(
        * @param resourceContainerName The name of the container related to a finding.
        */
       override fun resourceContainerName(resourceContainerName: IResolvable) {
-        cdkBuilder.resourceContainerName(resourceContainerName.let(IResolvable::unwrap))
+        cdkBuilder.resourceContainerName(resourceContainerName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6311,7 +6311,7 @@ public open class CfnInsight(
        * for the resource type defined.
        */
       override fun resourceDetailsOther(resourceDetailsOther: IResolvable) {
-        cdkBuilder.resourceDetailsOther(resourceDetailsOther.let(IResolvable::unwrap))
+        cdkBuilder.resourceDetailsOther(resourceDetailsOther.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6333,7 +6333,7 @@ public open class CfnInsight(
        * @param resourceId The canonical identifier for the given resource type.
        */
       override fun resourceId(resourceId: IResolvable) {
-        cdkBuilder.resourceId(resourceId.let(IResolvable::unwrap))
+        cdkBuilder.resourceId(resourceId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6352,7 +6352,7 @@ public open class CfnInsight(
        * @param resourcePartition The canonical AWS partition name that the Region is assigned to.
        */
       override fun resourcePartition(resourcePartition: IResolvable) {
-        cdkBuilder.resourcePartition(resourcePartition.let(IResolvable::unwrap))
+        cdkBuilder.resourcePartition(resourcePartition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6373,7 +6373,7 @@ public open class CfnInsight(
        * located.
        */
       override fun resourceRegion(resourceRegion: IResolvable) {
-        cdkBuilder.resourceRegion(resourceRegion.let(IResolvable::unwrap))
+        cdkBuilder.resourceRegion(resourceRegion.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6396,7 +6396,7 @@ public open class CfnInsight(
        * was processed.
        */
       override fun resourceTags(resourceTags: IResolvable) {
-        cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
+        cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6418,7 +6418,7 @@ public open class CfnInsight(
        * @param resourceType Specifies the type of the resource that details are provided for.
        */
       override fun resourceType(resourceType: IResolvable) {
-        cdkBuilder.resourceType(resourceType.let(IResolvable::unwrap))
+        cdkBuilder.resourceType(resourceType.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6438,7 +6438,7 @@ public open class CfnInsight(
        * @param sample Indicates whether or not sample findings are included in the filter results.
        */
       override fun sample(sample: IResolvable) {
-        cdkBuilder.sample(sample.let(IResolvable::unwrap))
+        cdkBuilder.sample(sample.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6457,7 +6457,7 @@ public open class CfnInsight(
        * @param severityLabel The label of a finding's severity.
        */
       override fun severityLabel(severityLabel: IResolvable) {
-        cdkBuilder.severityLabel(severityLabel.let(IResolvable::unwrap))
+        cdkBuilder.severityLabel(severityLabel.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6486,7 +6486,7 @@ public open class CfnInsight(
        * * `CRITICAL` - 90
        */
       override fun severityNormalized(severityNormalized: IResolvable) {
-        cdkBuilder.severityNormalized(severityNormalized.let(IResolvable::unwrap))
+        cdkBuilder.severityNormalized(severityNormalized.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6527,7 +6527,7 @@ public open class CfnInsight(
        * generated the finding.
        */
       override fun severityProduct(severityProduct: IResolvable) {
-        cdkBuilder.severityProduct(severityProduct.let(IResolvable::unwrap))
+        cdkBuilder.severityProduct(severityProduct.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6554,7 +6554,7 @@ public open class CfnInsight(
        * findings provider's solution.
        */
       override fun sourceUrl(sourceUrl: IResolvable) {
-        cdkBuilder.sourceUrl(sourceUrl.let(IResolvable::unwrap))
+        cdkBuilder.sourceUrl(sourceUrl.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6575,7 +6575,7 @@ public open class CfnInsight(
        * @param threatIntelIndicatorCategory The category of a threat intelligence indicator.
        */
       override fun threatIntelIndicatorCategory(threatIntelIndicatorCategory: IResolvable) {
-        cdkBuilder.threatIntelIndicatorCategory(threatIntelIndicatorCategory.let(IResolvable::unwrap))
+        cdkBuilder.threatIntelIndicatorCategory(threatIntelIndicatorCategory.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6597,7 +6597,7 @@ public open class CfnInsight(
        */
       override
           fun threatIntelIndicatorLastObservedAt(threatIntelIndicatorLastObservedAt: IResolvable) {
-        cdkBuilder.threatIntelIndicatorLastObservedAt(threatIntelIndicatorLastObservedAt.let(IResolvable::unwrap))
+        cdkBuilder.threatIntelIndicatorLastObservedAt(threatIntelIndicatorLastObservedAt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6621,7 +6621,7 @@ public open class CfnInsight(
        * @param threatIntelIndicatorSource The source of the threat intelligence.
        */
       override fun threatIntelIndicatorSource(threatIntelIndicatorSource: IResolvable) {
-        cdkBuilder.threatIntelIndicatorSource(threatIntelIndicatorSource.let(IResolvable::unwrap))
+        cdkBuilder.threatIntelIndicatorSource(threatIntelIndicatorSource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6642,7 +6642,7 @@ public open class CfnInsight(
        * intelligence.
        */
       override fun threatIntelIndicatorSourceUrl(threatIntelIndicatorSourceUrl: IResolvable) {
-        cdkBuilder.threatIntelIndicatorSourceUrl(threatIntelIndicatorSourceUrl.let(IResolvable::unwrap))
+        cdkBuilder.threatIntelIndicatorSourceUrl(threatIntelIndicatorSourceUrl.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6664,7 +6664,7 @@ public open class CfnInsight(
        * @param threatIntelIndicatorType The type of a threat intelligence indicator.
        */
       override fun threatIntelIndicatorType(threatIntelIndicatorType: IResolvable) {
-        cdkBuilder.threatIntelIndicatorType(threatIntelIndicatorType.let(IResolvable::unwrap))
+        cdkBuilder.threatIntelIndicatorType(threatIntelIndicatorType.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6684,7 +6684,7 @@ public open class CfnInsight(
        * @param threatIntelIndicatorValue The value of a threat intelligence indicator.
        */
       override fun threatIntelIndicatorValue(threatIntelIndicatorValue: IResolvable) {
-        cdkBuilder.threatIntelIndicatorValue(threatIntelIndicatorValue.let(IResolvable::unwrap))
+        cdkBuilder.threatIntelIndicatorValue(threatIntelIndicatorValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6704,7 +6704,7 @@ public open class CfnInsight(
        * @param title A finding's title.
        */
       override fun title(title: IResolvable) {
-        cdkBuilder.title(title.let(IResolvable::unwrap))
+        cdkBuilder.title(title.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6724,7 +6724,7 @@ public open class CfnInsight(
        * a finding.
        */
       override fun type(type: IResolvable) {
-        cdkBuilder.type(type.let(IResolvable::unwrap))
+        cdkBuilder.type(type.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6756,7 +6756,7 @@ public open class CfnInsight(
        * )
        */
       override fun updatedAt(updatedAt: IResolvable) {
-        cdkBuilder.updatedAt(updatedAt.let(IResolvable::unwrap))
+        cdkBuilder.updatedAt(updatedAt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6798,7 +6798,7 @@ public open class CfnInsight(
        * These are custom, user-defined fields added to a finding.
        */
       override fun userDefinedFields(userDefinedFields: IResolvable) {
-        cdkBuilder.userDefinedFields(userDefinedFields.let(IResolvable::unwrap))
+        cdkBuilder.userDefinedFields(userDefinedFields.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6820,7 +6820,7 @@ public open class CfnInsight(
        * @param verificationState The veracity of a finding.
        */
       override fun verificationState(verificationState: IResolvable) {
-        cdkBuilder.verificationState(verificationState.let(IResolvable::unwrap))
+        cdkBuilder.verificationState(verificationState.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6842,7 +6842,7 @@ public open class CfnInsight(
        * You can filter findings by this field only if you use Security Hub and Amazon Inspector.
        */
       override fun vulnerabilitiesExploitAvailable(vulnerabilitiesExploitAvailable: IResolvable) {
-        cdkBuilder.vulnerabilitiesExploitAvailable(vulnerabilitiesExploitAvailable.let(IResolvable::unwrap))
+        cdkBuilder.vulnerabilitiesExploitAvailable(vulnerabilitiesExploitAvailable.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6868,7 +6868,7 @@ public open class CfnInsight(
        * You can filter findings by this field only if you use Security Hub and Amazon Inspector.
        */
       override fun vulnerabilitiesFixAvailable(vulnerabilitiesFixAvailable: IResolvable) {
-        cdkBuilder.vulnerabilitiesFixAvailable(vulnerabilitiesFixAvailable.let(IResolvable::unwrap))
+        cdkBuilder.vulnerabilitiesFixAvailable(vulnerabilitiesFixAvailable.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6894,7 +6894,7 @@ public open class CfnInsight(
        * use `WorkflowStatus` .
        */
       override fun workflowState(workflowState: IResolvable) {
-        cdkBuilder.workflowState(workflowState.let(IResolvable::unwrap))
+        cdkBuilder.workflowState(workflowState.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6953,7 +6953,7 @@ public open class CfnInsight(
        * automatically sets the workflow status to `RESOLVED` .
        */
       override fun workflowStatus(workflowStatus: IResolvable) {
-        cdkBuilder.workflowStatus(workflowStatus.let(IResolvable::unwrap))
+        cdkBuilder.workflowStatus(workflowStatus.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8073,7 +8073,7 @@ public open class CfnInsight(
        * @param value The value of the boolean. 
        */
       override fun `value`(`value`: IResolvable) {
-        cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
+        cdkBuilder.`value`(`value`.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -8235,14 +8235,14 @@ public open class CfnInsight(
        * @param dateRange A date range for the date filter.
        */
       override fun dateRange(dateRange: IResolvable) {
-        cdkBuilder.dateRange(dateRange.let(IResolvable::unwrap))
+        cdkBuilder.dateRange(dateRange.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dateRange A date range for the date filter.
        */
       override fun dateRange(dateRange: DateRangeProperty) {
-        cdkBuilder.dateRange(dateRange.let(DateRangeProperty::unwrap))
+        cdkBuilder.dateRange(dateRange.let(DateRangeProperty.Companion::unwrap))
       }
 
       /**

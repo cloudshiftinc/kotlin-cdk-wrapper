@@ -45,7 +45,7 @@ public open class MathExpression(
   cdkObject: software.amazon.awscdk.services.cloudwatch.MathExpression,
 ) : CdkObject(cdkObject), IMetric {
   public constructor(props: MathExpressionProps) :
-      this(software.amazon.awscdk.services.cloudwatch.MathExpression(props.let(MathExpressionProps::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.MathExpression(props.let(MathExpressionProps.Companion::unwrap))
   )
 
   public constructor(props: MathExpressionProps.Builder.() -> Unit) :
@@ -72,8 +72,8 @@ public open class MathExpression(
     scope: Construct,
     id: String,
     props: CreateAlarmOptions,
-  ): Alarm = unwrap(this).createAlarm(scope.let(Construct::unwrap), id,
-      props.let(CreateAlarmOptions::unwrap)).let(Alarm::wrap)
+  ): Alarm = unwrap(this).createAlarm(scope.let(Construct.Companion::unwrap), id,
+      props.let(CreateAlarmOptions.Companion::unwrap)).let(Alarm::wrap)
 
   /**
    * Make a new Alarm for this metric.
@@ -151,7 +151,7 @@ public open class MathExpression(
    * @param props The set of properties to change. 
    */
   public open fun with(props: MathExpressionOptions): MathExpression =
-      unwrap(this).with(props.let(MathExpressionOptions::unwrap)).let(MathExpression::wrap)
+      unwrap(this).with(props.let(MathExpressionOptions.Companion::unwrap)).let(MathExpression::wrap)
 
   /**
    * Return a copy of Metric with properties changed.
@@ -340,7 +340,7 @@ public open class MathExpression(
      * @param period The period over which the expression's statistics are applied. 
      */
     override fun period(period: Duration) {
-      cdkBuilder.period(period.let(Duration::unwrap))
+      cdkBuilder.period(period.let(Duration.Companion::unwrap))
     }
 
     /**

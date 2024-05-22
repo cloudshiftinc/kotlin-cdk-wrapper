@@ -41,8 +41,8 @@ public open class CfnAttributeGroupAssociation(
     id: String,
     props: CfnAttributeGroupAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroupAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAttributeGroupAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.servicecatalogappregistry.CfnAttributeGroupAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAttributeGroupAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -98,7 +98,7 @@ public open class CfnAttributeGroupAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

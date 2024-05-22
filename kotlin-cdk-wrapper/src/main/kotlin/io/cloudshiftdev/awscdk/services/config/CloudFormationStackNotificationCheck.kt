@@ -37,7 +37,7 @@ public open class CloudFormationStackNotificationCheck(
   cdkObject: software.amazon.awscdk.services.config.CloudFormationStackNotificationCheck,
 ) : ManagedRule(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.config.CloudFormationStackNotificationCheck(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.config.CloudFormationStackNotificationCheck(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -46,8 +46,8 @@ public open class CloudFormationStackNotificationCheck(
     id: String,
     props: CloudFormationStackNotificationCheckProps,
   ) :
-      this(software.amazon.awscdk.services.config.CloudFormationStackNotificationCheck(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CloudFormationStackNotificationCheckProps::unwrap))
+      this(software.amazon.awscdk.services.config.CloudFormationStackNotificationCheck(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CloudFormationStackNotificationCheckProps.Companion::unwrap))
   )
 
   public constructor(
@@ -184,7 +184,7 @@ public open class CloudFormationStackNotificationCheck(
      * evaluations. 
      */
     override fun maximumExecutionFrequency(maximumExecutionFrequency: MaximumExecutionFrequency) {
-      cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency.let(MaximumExecutionFrequency::unwrap))
+      cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency.let(MaximumExecutionFrequency.Companion::unwrap))
     }
 
     /**
@@ -196,7 +196,7 @@ public open class CloudFormationStackNotificationCheck(
      * @param ruleScope Defines which resources trigger an evaluation for an AWS Config rule. 
      */
     override fun ruleScope(ruleScope: RuleScope) {
-      cdkBuilder.ruleScope(ruleScope.let(RuleScope::unwrap))
+      cdkBuilder.ruleScope(ruleScope.let(RuleScope.Companion::unwrap))
     }
 
     /**
@@ -209,7 +209,7 @@ public open class CloudFormationStackNotificationCheck(
      * @param topics A list of allowed topics. 
      */
     override fun topics(topics: List<ITopic>) {
-      cdkBuilder.topics(topics.map(ITopic::unwrap))
+      cdkBuilder.topics(topics.map(ITopic.Companion::unwrap))
     }
 
     /**

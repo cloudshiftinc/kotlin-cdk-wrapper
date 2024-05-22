@@ -69,8 +69,8 @@ public open class CfnPermissionSet(
     id: String,
     props: CfnPermissionSetProps,
   ) :
-      this(software.amazon.awscdk.services.sso.CfnPermissionSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPermissionSetProps::unwrap))
+      this(software.amazon.awscdk.services.sso.CfnPermissionSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPermissionSetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -98,7 +98,7 @@ public open class CfnPermissionSet(
    * permission set.
    */
   public open fun customerManagedPolicyReferences(`value`: IResolvable) {
-    unwrap(this).setCustomerManagedPolicyReferences(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCustomerManagedPolicyReferences(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -146,7 +146,7 @@ public open class CfnPermissionSet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -201,7 +201,7 @@ public open class CfnPermissionSet(
    * as a permissions boundary.
    */
   public open fun permissionsBoundary(`value`: IResolvable) {
-    unwrap(this).setPermissionsBoundary(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPermissionsBoundary(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -209,7 +209,7 @@ public open class CfnPermissionSet(
    * as a permissions boundary.
    */
   public open fun permissionsBoundary(`value`: PermissionsBoundaryProperty) {
-    unwrap(this).setPermissionsBoundary(`value`.let(PermissionsBoundaryProperty::unwrap))
+    unwrap(this).setPermissionsBoundary(`value`.let(PermissionsBoundaryProperty.Companion::unwrap))
   }
 
   /**
@@ -260,7 +260,7 @@ public open class CfnPermissionSet(
    * The tags to attach to the new `PermissionSet` .
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -490,7 +490,7 @@ public open class CfnPermissionSet(
      * policies that you have attached to your permission set. 
      */
     override fun customerManagedPolicyReferences(customerManagedPolicyReferences: IResolvable) {
-      cdkBuilder.customerManagedPolicyReferences(customerManagedPolicyReferences.let(IResolvable::unwrap))
+      cdkBuilder.customerManagedPolicyReferences(customerManagedPolicyReferences.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -609,7 +609,7 @@ public open class CfnPermissionSet(
      * policy that you want to set as a permissions boundary. 
      */
     override fun permissionsBoundary(permissionsBoundary: IResolvable) {
-      cdkBuilder.permissionsBoundary(permissionsBoundary.let(IResolvable::unwrap))
+      cdkBuilder.permissionsBoundary(permissionsBoundary.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -636,7 +636,7 @@ public open class CfnPermissionSet(
      * policy that you want to set as a permissions boundary. 
      */
     override fun permissionsBoundary(permissionsBoundary: PermissionsBoundaryProperty) {
-      cdkBuilder.permissionsBoundary(permissionsBoundary.let(PermissionsBoundaryProperty::unwrap))
+      cdkBuilder.permissionsBoundary(permissionsBoundary.let(PermissionsBoundaryProperty.Companion::unwrap))
     }
 
     /**
@@ -697,7 +697,7 @@ public open class CfnPermissionSet(
      * @param tags The tags to attach to the new `PermissionSet` . 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -978,7 +978,7 @@ public open class CfnPermissionSet(
        * want to deploy your permission set.
        */
       override fun customerManagedPolicyReference(customerManagedPolicyReference: IResolvable) {
-        cdkBuilder.customerManagedPolicyReference(customerManagedPolicyReference.let(IResolvable::unwrap))
+        cdkBuilder.customerManagedPolicyReference(customerManagedPolicyReference.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -989,7 +989,7 @@ public open class CfnPermissionSet(
        */
       override
           fun customerManagedPolicyReference(customerManagedPolicyReference: CustomerManagedPolicyReferenceProperty) {
-        cdkBuilder.customerManagedPolicyReference(customerManagedPolicyReference.let(CustomerManagedPolicyReferenceProperty::unwrap))
+        cdkBuilder.customerManagedPolicyReference(customerManagedPolicyReference.let(CustomerManagedPolicyReferenceProperty.Companion::unwrap))
       }
 
       /**

@@ -183,7 +183,7 @@ public interface CfnAnalysisTemplateProps {
      * @param analysisParameters The parameters of the analysis template.
      */
     override fun analysisParameters(analysisParameters: IResolvable) {
-      cdkBuilder.analysisParameters(analysisParameters.let(IResolvable::unwrap))
+      cdkBuilder.analysisParameters(analysisParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -231,14 +231,14 @@ public interface CfnAnalysisTemplateProps {
      * @param source The source of the analysis template. 
      */
     override fun source(source: IResolvable) {
-      cdkBuilder.source(source.let(IResolvable::unwrap))
+      cdkBuilder.source(source.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param source The source of the analysis template. 
      */
     override fun source(source: CfnAnalysisTemplate.AnalysisSourceProperty) {
-      cdkBuilder.source(source.let(CfnAnalysisTemplate.AnalysisSourceProperty::unwrap))
+      cdkBuilder.source(source.let(CfnAnalysisTemplate.AnalysisSourceProperty.Companion::unwrap))
     }
 
     /**
@@ -256,7 +256,7 @@ public interface CfnAnalysisTemplateProps {
      * resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -104,8 +104,8 @@ public open class CfnInstance(
     id: String,
     props: CfnInstanceProps,
   ) :
-      this(software.amazon.awscdk.services.lightsail.CfnInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInstanceProps::unwrap))
+      this(software.amazon.awscdk.services.lightsail.CfnInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInstanceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -124,7 +124,7 @@ public open class CfnInstance(
    * An array of add-ons for the instance.
    */
   public open fun addOns(`value`: IResolvable) {
-    unwrap(this).setAddOns(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAddOns(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -268,7 +268,7 @@ public open class CfnInstance(
    * RAM.
    */
   public open fun hardware(`value`: IResolvable) {
-    unwrap(this).setHardware(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHardware(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -276,7 +276,7 @@ public open class CfnInstance(
    * RAM.
    */
   public open fun hardware(`value`: HardwareProperty) {
-    unwrap(this).setHardware(`value`.let(HardwareProperty::unwrap))
+    unwrap(this).setHardware(`value`.let(HardwareProperty.Companion::unwrap))
   }
 
   /**
@@ -294,7 +294,7 @@ public open class CfnInstance(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -330,14 +330,14 @@ public open class CfnInstance(
    * The location for the instance, such as the AWS Region and Availability Zone.
    */
   public open fun location(`value`: IResolvable) {
-    unwrap(this).setLocation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLocation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The location for the instance, such as the AWS Region and Availability Zone.
    */
   public open fun location(`value`: LocationProperty) {
-    unwrap(this).setLocation(`value`.let(LocationProperty::unwrap))
+    unwrap(this).setLocation(`value`.let(LocationProperty.Companion::unwrap))
   }
 
   /**
@@ -357,14 +357,14 @@ public open class CfnInstance(
    * The public ports and the monthly amount of data transfer allocated for the instance.
    */
   public open fun networking(`value`: IResolvable) {
-    unwrap(this).setNetworking(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNetworking(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The public ports and the monthly amount of data transfer allocated for the instance.
    */
   public open fun networking(`value`: NetworkingProperty) {
-    unwrap(this).setNetworking(`value`.let(NetworkingProperty::unwrap))
+    unwrap(this).setNetworking(`value`.let(NetworkingProperty.Companion::unwrap))
   }
 
   /**
@@ -384,14 +384,14 @@ public open class CfnInstance(
    * The status code and the state (for example, `running` ) of the instance.
    */
   public open fun state(`value`: IResolvable) {
-    unwrap(this).setState(`value`.let(IResolvable::unwrap))
+    unwrap(this).setState(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The status code and the state (for example, `running` ) of the instance.
    */
   public open fun state(`value`: StateProperty) {
-    unwrap(this).setState(`value`.let(StateProperty::unwrap))
+    unwrap(this).setState(`value`.let(StateProperty.Companion::unwrap))
   }
 
   /**
@@ -417,7 +417,7 @@ public open class CfnInstance(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -750,7 +750,7 @@ public open class CfnInstance(
      * @param addOns An array of add-ons for the instance. 
      */
     override fun addOns(addOns: IResolvable) {
-      cdkBuilder.addOns(addOns.let(IResolvable::unwrap))
+      cdkBuilder.addOns(addOns.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -825,7 +825,7 @@ public open class CfnInstance(
      * disks, and amount of RAM. 
      */
     override fun hardware(hardware: IResolvable) {
-      cdkBuilder.hardware(hardware.let(IResolvable::unwrap))
+      cdkBuilder.hardware(hardware.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -842,7 +842,7 @@ public open class CfnInstance(
      * disks, and amount of RAM. 
      */
     override fun hardware(hardware: HardwareProperty) {
-      cdkBuilder.hardware(hardware.let(HardwareProperty::unwrap))
+      cdkBuilder.hardware(hardware.let(HardwareProperty.Companion::unwrap))
     }
 
     /**
@@ -897,7 +897,7 @@ public open class CfnInstance(
      * @param location The location for the instance, such as the AWS Region and Availability Zone. 
      */
     override fun location(location: IResolvable) {
-      cdkBuilder.location(location.let(IResolvable::unwrap))
+      cdkBuilder.location(location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -912,7 +912,7 @@ public open class CfnInstance(
      * @param location The location for the instance, such as the AWS Region and Availability Zone. 
      */
     override fun location(location: LocationProperty) {
-      cdkBuilder.location(location.let(LocationProperty::unwrap))
+      cdkBuilder.location(location.let(LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -939,7 +939,7 @@ public open class CfnInstance(
      * instance. 
      */
     override fun networking(networking: IResolvable) {
-      cdkBuilder.networking(networking.let(IResolvable::unwrap))
+      cdkBuilder.networking(networking.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -950,7 +950,7 @@ public open class CfnInstance(
      * instance. 
      */
     override fun networking(networking: NetworkingProperty) {
-      cdkBuilder.networking(networking.let(NetworkingProperty::unwrap))
+      cdkBuilder.networking(networking.let(NetworkingProperty.Companion::unwrap))
     }
 
     /**
@@ -977,7 +977,7 @@ public open class CfnInstance(
      * @param state The status code and the state (for example, `running` ) of the instance. 
      */
     override fun state(state: IResolvable) {
-      cdkBuilder.state(state.let(IResolvable::unwrap))
+      cdkBuilder.state(state.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -992,7 +992,7 @@ public open class CfnInstance(
      * @param state The status code and the state (for example, `running` ) of the instance. 
      */
     override fun state(state: StateProperty) {
-      cdkBuilder.state(state.let(StateProperty::unwrap))
+      cdkBuilder.state(state.let(StateProperty.Companion::unwrap))
     }
 
     /**
@@ -1025,7 +1025,7 @@ public open class CfnInstance(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1197,7 +1197,7 @@ public open class CfnInstance(
        * the daily time when an automatic snapshot will be created.
        */
       override fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: IResolvable) {
-        cdkBuilder.autoSnapshotAddOnRequest(autoSnapshotAddOnRequest.let(IResolvable::unwrap))
+        cdkBuilder.autoSnapshotAddOnRequest(autoSnapshotAddOnRequest.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1205,7 +1205,7 @@ public open class CfnInstance(
        * the daily time when an automatic snapshot will be created.
        */
       override fun autoSnapshotAddOnRequest(autoSnapshotAddOnRequest: AutoSnapshotAddOnProperty) {
-        cdkBuilder.autoSnapshotAddOnRequest(autoSnapshotAddOnRequest.let(AutoSnapshotAddOnProperty::unwrap))
+        cdkBuilder.autoSnapshotAddOnRequest(autoSnapshotAddOnRequest.let(AutoSnapshotAddOnProperty.Companion::unwrap))
       }
 
       /**
@@ -1572,7 +1572,7 @@ public open class CfnInstance(
        * operating system loaded on it).
        */
       override fun isSystemDisk(isSystemDisk: IResolvable) {
-        cdkBuilder.isSystemDisk(isSystemDisk.let(IResolvable::unwrap))
+        cdkBuilder.isSystemDisk(isSystemDisk.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1798,7 +1798,7 @@ public open class CfnInstance(
        * the public IP address of your instance if a static IP isn't attached to it.
        */
       override fun disks(disks: IResolvable) {
-        cdkBuilder.disks(disks.let(IResolvable::unwrap))
+        cdkBuilder.disks(disks.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2181,7 +2181,7 @@ public open class CfnInstance(
        * instance.
        */
       override fun monthlyTransfer(monthlyTransfer: IResolvable) {
-        cdkBuilder.monthlyTransfer(monthlyTransfer.let(IResolvable::unwrap))
+        cdkBuilder.monthlyTransfer(monthlyTransfer.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2189,7 +2189,7 @@ public open class CfnInstance(
        * instance.
        */
       override fun monthlyTransfer(monthlyTransfer: MonthlyTransferProperty) {
-        cdkBuilder.monthlyTransfer(monthlyTransfer.let(MonthlyTransferProperty::unwrap))
+        cdkBuilder.monthlyTransfer(monthlyTransfer.let(MonthlyTransferProperty.Companion::unwrap))
       }
 
       /**
@@ -2205,7 +2205,7 @@ public open class CfnInstance(
        * @param ports An array of ports to open on the instance. 
        */
       override fun ports(ports: IResolvable) {
-        cdkBuilder.ports(ports.let(IResolvable::unwrap))
+        cdkBuilder.ports(ports.let(IResolvable.Companion::unwrap))
       }
 
       /**

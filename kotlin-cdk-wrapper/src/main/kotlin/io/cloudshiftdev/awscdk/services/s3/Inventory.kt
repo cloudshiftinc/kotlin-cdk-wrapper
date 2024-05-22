@@ -171,7 +171,7 @@ public interface Inventory {
      * @param destination The destination of the inventory. 
      */
     override fun destination(destination: InventoryDestination) {
-      cdkBuilder.destination(destination.let(InventoryDestination::unwrap))
+      cdkBuilder.destination(destination.let(InventoryDestination.Companion::unwrap))
     }
 
     /**
@@ -193,14 +193,14 @@ public interface Inventory {
      * @param format The format of the inventory.
      */
     override fun format(format: InventoryFormat) {
-      cdkBuilder.format(format.let(InventoryFormat::unwrap))
+      cdkBuilder.format(format.let(InventoryFormat.Companion::unwrap))
     }
 
     /**
      * @param frequency Frequency at which the inventory should be generated.
      */
     override fun frequency(frequency: InventoryFrequency) {
-      cdkBuilder.frequency(frequency.let(InventoryFrequency::unwrap))
+      cdkBuilder.frequency(frequency.let(InventoryFrequency.Companion::unwrap))
     }
 
     /**
@@ -208,7 +208,7 @@ public interface Inventory {
      * the current one.
      */
     override fun includeObjectVersions(includeObjectVersions: InventoryObjectVersion) {
-      cdkBuilder.includeObjectVersions(includeObjectVersions.let(InventoryObjectVersion::unwrap))
+      cdkBuilder.includeObjectVersions(includeObjectVersions.let(InventoryObjectVersion.Companion::unwrap))
     }
 
     /**

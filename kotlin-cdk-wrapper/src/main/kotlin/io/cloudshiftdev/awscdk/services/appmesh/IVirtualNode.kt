@@ -60,7 +60,7 @@ public interface IVirtualNode : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -81,7 +81,7 @@ public interface IVirtualNode : IResource {
      * @param identity 
      */
     override fun grantStreamAggregatedResources(identity: IGrantable): Grant =
-        unwrap(this).grantStreamAggregatedResources(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantStreamAggregatedResources(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * The Mesh which the VirtualNode belongs to.

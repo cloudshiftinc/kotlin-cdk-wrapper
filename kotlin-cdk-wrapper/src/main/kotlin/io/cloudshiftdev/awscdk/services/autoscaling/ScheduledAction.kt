@@ -43,8 +43,8 @@ public open class ScheduledAction(
     id: String,
     props: ScheduledActionProps,
   ) :
-      this(software.amazon.awscdk.services.autoscaling.ScheduledAction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ScheduledActionProps::unwrap))
+      this(software.amazon.awscdk.services.autoscaling.ScheduledAction(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ScheduledActionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -169,7 +169,7 @@ public open class ScheduledAction(
      * @param autoScalingGroup The AutoScalingGroup to apply the scheduled actions to. 
      */
     override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
-      cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup::unwrap))
+      cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup.Companion::unwrap))
     }
 
     /**
@@ -238,7 +238,7 @@ public open class ScheduledAction(
      * @param schedule When to perform this action. 
      */
     override fun schedule(schedule: Schedule) {
-      cdkBuilder.schedule(schedule.let(Schedule::unwrap))
+      cdkBuilder.schedule(schedule.let(Schedule.Companion::unwrap))
     }
 
     /**

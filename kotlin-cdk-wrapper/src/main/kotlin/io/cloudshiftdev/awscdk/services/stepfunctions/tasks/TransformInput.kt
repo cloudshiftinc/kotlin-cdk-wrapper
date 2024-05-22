@@ -110,7 +110,7 @@ public interface TransformInput {
      * @param compressionType The compression type of the transform data.
      */
     override fun compressionType(compressionType: CompressionType) {
-      cdkBuilder.compressionType(compressionType.let(CompressionType::unwrap))
+      cdkBuilder.compressionType(compressionType.let(CompressionType.Companion::unwrap))
     }
 
     /**
@@ -124,14 +124,14 @@ public interface TransformInput {
      * @param splitType Method to use to split the transform job's data files into smaller batches.
      */
     override fun splitType(splitType: SplitType) {
-      cdkBuilder.splitType(splitType.let(SplitType::unwrap))
+      cdkBuilder.splitType(splitType.let(SplitType.Companion::unwrap))
     }
 
     /**
      * @param transformDataSource S3 location of the channel data. 
      */
     override fun transformDataSource(transformDataSource: TransformDataSource) {
-      cdkBuilder.transformDataSource(transformDataSource.let(TransformDataSource::unwrap))
+      cdkBuilder.transformDataSource(transformDataSource.let(TransformDataSource.Companion::unwrap))
     }
 
     /**

@@ -49,7 +49,7 @@ public abstract class TaskRole(
 
   public companion object {
     public fun fromRole(role: IRole): TaskRole =
-        software.amazon.awscdk.services.stepfunctions.TaskRole.fromRole(role.let(IRole::unwrap)).let(TaskRole::wrap)
+        software.amazon.awscdk.services.stepfunctions.TaskRole.fromRole(role.let(IRole.Companion::unwrap)).let(TaskRole::wrap)
 
     public fun fromRoleArnJsonPath(expression: String): TaskRole =
         software.amazon.awscdk.services.stepfunctions.TaskRole.fromRoleArnJsonPath(expression).let(TaskRole::wrap)

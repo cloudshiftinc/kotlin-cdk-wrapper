@@ -26,8 +26,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * The minimum required properties for specifying a launch template are as follows:
  *
  * * You must specify at least one property for the launch template data.
- * * You do not need to specify a name for the launch template. If you do not specify a name, AWS
- * CloudFormation creates the name for you.
+ * * You can optionally specify a name for the launch template. If you do not specify a name, AWS
+ * CloudFormation creates a name for you.
  *
  * A launch template can contain some or all of the configuration information to launch an instance.
  * When you launch an instance using a launch template, instance properties that are not specified in
@@ -71,8 +71,8 @@ public open class CfnLaunchTemplate(
     id: String,
     props: CfnLaunchTemplateProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnLaunchTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLaunchTemplateProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnLaunchTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLaunchTemplateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -107,7 +107,7 @@ public open class CfnLaunchTemplate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -119,14 +119,14 @@ public open class CfnLaunchTemplate(
    * The information for the launch template.
    */
   public open fun launchTemplateData(`value`: IResolvable) {
-    unwrap(this).setLaunchTemplateData(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLaunchTemplateData(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The information for the launch template.
    */
   public open fun launchTemplateData(`value`: LaunchTemplateDataProperty) {
-    unwrap(this).setLaunchTemplateData(`value`.let(LaunchTemplateDataProperty::unwrap))
+    unwrap(this).setLaunchTemplateData(`value`.let(LaunchTemplateDataProperty.Companion::unwrap))
   }
 
   /**
@@ -158,7 +158,7 @@ public open class CfnLaunchTemplate(
    * The tags to apply to the launch template on creation.
    */
   public open fun tagSpecifications(`value`: IResolvable) {
-    unwrap(this).setTagSpecifications(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTagSpecifications(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -292,7 +292,7 @@ public open class CfnLaunchTemplate(
      * @param launchTemplateData The information for the launch template. 
      */
     override fun launchTemplateData(launchTemplateData: IResolvable) {
-      cdkBuilder.launchTemplateData(launchTemplateData.let(IResolvable::unwrap))
+      cdkBuilder.launchTemplateData(launchTemplateData.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -302,7 +302,7 @@ public open class CfnLaunchTemplate(
      * @param launchTemplateData The information for the launch template. 
      */
     override fun launchTemplateData(launchTemplateData: LaunchTemplateDataProperty) {
-      cdkBuilder.launchTemplateData(launchTemplateData.let(LaunchTemplateDataProperty::unwrap))
+      cdkBuilder.launchTemplateData(launchTemplateData.let(LaunchTemplateDataProperty.Companion::unwrap))
     }
 
     /**
@@ -341,7 +341,7 @@ public open class CfnLaunchTemplate(
      * @param tagSpecifications The tags to apply to the launch template on creation. 
      */
     override fun tagSpecifications(tagSpecifications: IResolvable) {
-      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -916,7 +916,7 @@ public open class CfnLaunchTemplate(
        * launched.
        */
       override fun ebs(ebs: IResolvable) {
-        cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
+        cdkBuilder.ebs(ebs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -924,7 +924,7 @@ public open class CfnLaunchTemplate(
        * launched.
        */
       override fun ebs(ebs: EbsProperty) {
-        cdkBuilder.ebs(ebs.let(EbsProperty::unwrap))
+        cdkBuilder.ebs(ebs.let(EbsProperty.Companion::unwrap))
       }
 
       /**
@@ -1121,7 +1121,7 @@ public open class CfnLaunchTemplate(
        * Capacity Reservation group.
        */
       override fun capacityReservationTarget(capacityReservationTarget: IResolvable) {
-        cdkBuilder.capacityReservationTarget(capacityReservationTarget.let(IResolvable::unwrap))
+        cdkBuilder.capacityReservationTarget(capacityReservationTarget.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1130,7 +1130,7 @@ public open class CfnLaunchTemplate(
        */
       override
           fun capacityReservationTarget(capacityReservationTarget: CapacityReservationTargetProperty) {
-        cdkBuilder.capacityReservationTarget(capacityReservationTarget.let(CapacityReservationTargetProperty::unwrap))
+        cdkBuilder.capacityReservationTarget(capacityReservationTarget.let(CapacityReservationTargetProperty.Companion::unwrap))
       }
 
       /**
@@ -1970,7 +1970,7 @@ public open class CfnLaunchTemplate(
        * termination.
        */
       override fun deleteOnTermination(deleteOnTermination: IResolvable) {
-        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
+        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1988,7 +1988,7 @@ public open class CfnLaunchTemplate(
        * you are creating a volume from a snapshot, you can't specify an encryption value.
        */
       override fun encrypted(encrypted: IResolvable) {
-        cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
+        cdkBuilder.encrypted(encrypted.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2381,21 +2381,21 @@ public open class CfnLaunchTemplate(
        * @param enaSrdEnabled Indicates whether ENA Express is enabled for the network interface.
        */
       override fun enaSrdEnabled(enaSrdEnabled: IResolvable) {
-        cdkBuilder.enaSrdEnabled(enaSrdEnabled.let(IResolvable::unwrap))
+        cdkBuilder.enaSrdEnabled(enaSrdEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
        */
       override fun enaSrdUdpSpecification(enaSrdUdpSpecification: IResolvable) {
-        cdkBuilder.enaSrdUdpSpecification(enaSrdUdpSpecification.let(IResolvable::unwrap))
+        cdkBuilder.enaSrdUdpSpecification(enaSrdUdpSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param enaSrdUdpSpecification Configures ENA Express for UDP network traffic.
        */
       override fun enaSrdUdpSpecification(enaSrdUdpSpecification: EnaSrdUdpSpecificationProperty) {
-        cdkBuilder.enaSrdUdpSpecification(enaSrdUdpSpecification.let(EnaSrdUdpSpecificationProperty::unwrap))
+        cdkBuilder.enaSrdUdpSpecification(enaSrdUdpSpecification.let(EnaSrdUdpSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -2521,7 +2521,7 @@ public open class CfnLaunchTemplate(
        * To specify this setting, you must first enable ENA Express.
        */
       override fun enaSrdUdpEnabled(enaSrdUdpEnabled: IResolvable) {
-        cdkBuilder.enaSrdUdpEnabled(enaSrdUdpEnabled.let(IResolvable::unwrap))
+        cdkBuilder.enaSrdUdpEnabled(enaSrdUdpEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2626,7 +2626,7 @@ public open class CfnLaunchTemplate(
        * otherwise, it is not enabled for AWS Nitro Enclaves.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2741,7 +2741,7 @@ public open class CfnLaunchTemplate(
        * Default: `false`
        */
       override fun configured(configured: IResolvable) {
-        cdkBuilder.configured(configured.let(IResolvable::unwrap))
+        cdkBuilder.configured(configured.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2985,14 +2985,14 @@ public open class CfnLaunchTemplate(
        * @param spotOptions The options for Spot Instances.
        */
       override fun spotOptions(spotOptions: IResolvable) {
-        cdkBuilder.spotOptions(spotOptions.let(IResolvable::unwrap))
+        cdkBuilder.spotOptions(spotOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param spotOptions The options for Spot Instances.
        */
       override fun spotOptions(spotOptions: SpotOptionsProperty) {
-        cdkBuilder.spotOptions(spotOptions.let(SpotOptionsProperty::unwrap))
+        cdkBuilder.spotOptions(spotOptions.let(SpotOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -4176,7 +4176,7 @@ public open class CfnLaunchTemplate(
        * Default: No minimum or maximum limits
        */
       override fun acceleratorCount(acceleratorCount: IResolvable) {
-        cdkBuilder.acceleratorCount(acceleratorCount.let(IResolvable::unwrap))
+        cdkBuilder.acceleratorCount(acceleratorCount.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4187,7 +4187,7 @@ public open class CfnLaunchTemplate(
        * Default: No minimum or maximum limits
        */
       override fun acceleratorCount(acceleratorCount: AcceleratorCountProperty) {
-        cdkBuilder.acceleratorCount(acceleratorCount.let(AcceleratorCountProperty::unwrap))
+        cdkBuilder.acceleratorCount(acceleratorCount.let(AcceleratorCountProperty.Companion::unwrap))
       }
 
       /**
@@ -4278,7 +4278,7 @@ public open class CfnLaunchTemplate(
        * Default: No minimum or maximum limits
        */
       override fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: IResolvable) {
-        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(IResolvable::unwrap))
+        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4288,7 +4288,7 @@ public open class CfnLaunchTemplate(
        */
       override
           fun acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB: AcceleratorTotalMemoryMiBProperty) {
-        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(AcceleratorTotalMemoryMiBProperty::unwrap))
+        cdkBuilder.acceleratorTotalMemoryMiB(acceleratorTotalMemoryMiB.let(AcceleratorTotalMemoryMiBProperty.Companion::unwrap))
       }
 
       /**
@@ -4392,7 +4392,7 @@ public open class CfnLaunchTemplate(
        * Default: No minimum or maximum limits
        */
       override fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: IResolvable) {
-        cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(IResolvable::unwrap))
+        cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4406,7 +4406,7 @@ public open class CfnLaunchTemplate(
        */
       override
           fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsProperty) {
-        cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(BaselineEbsBandwidthMbpsProperty::unwrap))
+        cdkBuilder.baselineEbsBandwidthMbps(baselineEbsBandwidthMbps.let(BaselineEbsBandwidthMbpsProperty.Companion::unwrap))
       }
 
       /**
@@ -4625,7 +4625,7 @@ public open class CfnLaunchTemplate(
        * Default: No minimum or maximum limits
        */
       override fun memoryGiBPerVCpu(memoryGiBPerVCpu: IResolvable) {
-        cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(IResolvable::unwrap))
+        cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4633,7 +4633,7 @@ public open class CfnLaunchTemplate(
        * Default: No minimum or maximum limits
        */
       override fun memoryGiBPerVCpu(memoryGiBPerVCpu: MemoryGiBPerVCpuProperty) {
-        cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(MemoryGiBPerVCpuProperty::unwrap))
+        cdkBuilder.memoryGiBPerVCpu(memoryGiBPerVCpu.let(MemoryGiBPerVCpuProperty.Companion::unwrap))
       }
 
       /**
@@ -4649,14 +4649,14 @@ public open class CfnLaunchTemplate(
        * @param memoryMiB The minimum and maximum amount of memory, in MiB.
        */
       override fun memoryMiB(memoryMiB: IResolvable) {
-        cdkBuilder.memoryMiB(memoryMiB.let(IResolvable::unwrap))
+        cdkBuilder.memoryMiB(memoryMiB.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param memoryMiB The minimum and maximum amount of memory, in MiB.
        */
       override fun memoryMiB(memoryMiB: MemoryMiBProperty) {
-        cdkBuilder.memoryMiB(memoryMiB.let(MemoryMiBProperty::unwrap))
+        cdkBuilder.memoryMiB(memoryMiB.let(MemoryMiBProperty.Companion::unwrap))
       }
 
       /**
@@ -4673,7 +4673,7 @@ public open class CfnLaunchTemplate(
        * Default: No minimum or maximum limits
        */
       override fun networkBandwidthGbps(networkBandwidthGbps: IResolvable) {
-        cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(IResolvable::unwrap))
+        cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4682,7 +4682,7 @@ public open class CfnLaunchTemplate(
        * Default: No minimum or maximum limits
        */
       override fun networkBandwidthGbps(networkBandwidthGbps: NetworkBandwidthGbpsProperty) {
-        cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(NetworkBandwidthGbpsProperty::unwrap))
+        cdkBuilder.networkBandwidthGbps(networkBandwidthGbps.let(NetworkBandwidthGbpsProperty.Companion::unwrap))
       }
 
       /**
@@ -4701,7 +4701,7 @@ public open class CfnLaunchTemplate(
        * Default: No minimum or maximum limits
        */
       override fun networkInterfaceCount(networkInterfaceCount: IResolvable) {
-        cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(IResolvable::unwrap))
+        cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4709,7 +4709,7 @@ public open class CfnLaunchTemplate(
        * Default: No minimum or maximum limits
        */
       override fun networkInterfaceCount(networkInterfaceCount: NetworkInterfaceCountProperty) {
-        cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(NetworkInterfaceCountProperty::unwrap))
+        cdkBuilder.networkInterfaceCount(networkInterfaceCount.let(NetworkInterfaceCountProperty.Companion::unwrap))
       }
 
       /**
@@ -4775,7 +4775,7 @@ public open class CfnLaunchTemplate(
        * Default: `false`
        */
       override fun requireHibernateSupport(requireHibernateSupport: IResolvable) {
-        cdkBuilder.requireHibernateSupport(requireHibernateSupport.let(IResolvable::unwrap))
+        cdkBuilder.requireHibernateSupport(requireHibernateSupport.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4822,7 +4822,7 @@ public open class CfnLaunchTemplate(
        * Default: No minimum or maximum limits
        */
       override fun totalLocalStorageGb(totalLocalStorageGb: IResolvable) {
-        cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(IResolvable::unwrap))
+        cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4830,7 +4830,7 @@ public open class CfnLaunchTemplate(
        * Default: No minimum or maximum limits
        */
       override fun totalLocalStorageGb(totalLocalStorageGb: TotalLocalStorageGBProperty) {
-        cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(TotalLocalStorageGBProperty::unwrap))
+        cdkBuilder.totalLocalStorageGb(totalLocalStorageGb.let(TotalLocalStorageGBProperty.Companion::unwrap))
       }
 
       /**
@@ -4847,14 +4847,14 @@ public open class CfnLaunchTemplate(
        * @param vCpuCount The minimum and maximum number of vCPUs.
        */
       override fun vCpuCount(vCpuCount: IResolvable) {
-        cdkBuilder.vCpuCount(vCpuCount.let(IResolvable::unwrap))
+        cdkBuilder.vCpuCount(vCpuCount.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param vCpuCount The minimum and maximum number of vCPUs.
        */
       override fun vCpuCount(vCpuCount: VCpuCountProperty) {
-        cdkBuilder.vCpuCount(vCpuCount.let(VCpuCountProperty::unwrap))
+        cdkBuilder.vCpuCount(vCpuCount.let(VCpuCountProperty.Companion::unwrap))
       }
 
       /**
@@ -6959,7 +6959,7 @@ public open class CfnLaunchTemplate(
        * @param blockDeviceMappings The block device mapping.
        */
       override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
-        cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable::unwrap))
+        cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6982,7 +6982,7 @@ public open class CfnLaunchTemplate(
        * matching attributes (instance type, platform, Availability Zone).
        */
       override fun capacityReservationSpecification(capacityReservationSpecification: IResolvable) {
-        cdkBuilder.capacityReservationSpecification(capacityReservationSpecification.let(IResolvable::unwrap))
+        cdkBuilder.capacityReservationSpecification(capacityReservationSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6993,7 +6993,7 @@ public open class CfnLaunchTemplate(
        */
       override
           fun capacityReservationSpecification(capacityReservationSpecification: CapacityReservationSpecificationProperty) {
-        cdkBuilder.capacityReservationSpecification(capacityReservationSpecification.let(CapacityReservationSpecificationProperty::unwrap))
+        cdkBuilder.capacityReservationSpecification(capacityReservationSpecification.let(CapacityReservationSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -7016,7 +7016,7 @@ public open class CfnLaunchTemplate(
        * the *Amazon Elastic Compute Cloud User Guide* .
        */
       override fun cpuOptions(cpuOptions: IResolvable) {
-        cdkBuilder.cpuOptions(cpuOptions.let(IResolvable::unwrap))
+        cdkBuilder.cpuOptions(cpuOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7026,7 +7026,7 @@ public open class CfnLaunchTemplate(
        * the *Amazon Elastic Compute Cloud User Guide* .
        */
       override fun cpuOptions(cpuOptions: CpuOptionsProperty) {
-        cdkBuilder.cpuOptions(cpuOptions.let(CpuOptionsProperty::unwrap))
+        cdkBuilder.cpuOptions(cpuOptions.let(CpuOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -7045,7 +7045,7 @@ public open class CfnLaunchTemplate(
        * Valid only for T instances.
        */
       override fun creditSpecification(creditSpecification: IResolvable) {
-        cdkBuilder.creditSpecification(creditSpecification.let(IResolvable::unwrap))
+        cdkBuilder.creditSpecification(creditSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7053,7 +7053,7 @@ public open class CfnLaunchTemplate(
        * Valid only for T instances.
        */
       override fun creditSpecification(creditSpecification: CreditSpecificationProperty) {
-        cdkBuilder.creditSpecification(creditSpecification.let(CreditSpecificationProperty::unwrap))
+        cdkBuilder.creditSpecification(creditSpecification.let(CreditSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -7083,7 +7083,7 @@ public open class CfnLaunchTemplate(
        * in the *Amazon Elastic Compute Cloud User Guide* .
        */
       override fun disableApiStop(disableApiStop: IResolvable) {
-        cdkBuilder.disableApiStop(disableApiStop.let(IResolvable::unwrap))
+        cdkBuilder.disableApiStop(disableApiStop.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7107,7 +7107,7 @@ public open class CfnLaunchTemplate(
        * terminate the instance by running the shutdown command from the instance.
        */
       override fun disableApiTermination(disableApiTermination: IResolvable) {
-        cdkBuilder.disableApiTermination(disableApiTermination.let(IResolvable::unwrap))
+        cdkBuilder.disableApiTermination(disableApiTermination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7129,7 +7129,7 @@ public open class CfnLaunchTemplate(
        * instance.
        */
       override fun ebsOptimized(ebsOptimized: IResolvable) {
-        cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
+        cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7139,7 +7139,7 @@ public open class CfnLaunchTemplate(
        * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
        */
       override fun elasticGpuSpecifications(elasticGpuSpecifications: IResolvable) {
-        cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications.let(IResolvable::unwrap))
+        cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7178,7 +7178,7 @@ public open class CfnLaunchTemplate(
        * current customers and will be able to continue using the service.
        */
       override fun elasticInferenceAccelerators(elasticInferenceAccelerators: IResolvable) {
-        cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators.let(IResolvable::unwrap))
+        cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7229,7 +7229,7 @@ public open class CfnLaunchTemplate(
        * You can't enable AWS Nitro Enclaves and hibernation on the same instance.
        */
       override fun enclaveOptions(enclaveOptions: IResolvable) {
-        cdkBuilder.enclaveOptions(enclaveOptions.let(IResolvable::unwrap))
+        cdkBuilder.enclaveOptions(enclaveOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7241,7 +7241,7 @@ public open class CfnLaunchTemplate(
        * You can't enable AWS Nitro Enclaves and hibernation on the same instance.
        */
       override fun enclaveOptions(enclaveOptions: EnclaveOptionsProperty) {
-        cdkBuilder.enclaveOptions(enclaveOptions.let(EnclaveOptionsProperty::unwrap))
+        cdkBuilder.enclaveOptions(enclaveOptions.let(EnclaveOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -7266,7 +7266,7 @@ public open class CfnLaunchTemplate(
        * Elastic Compute Cloud User Guide* .
        */
       override fun hibernationOptions(hibernationOptions: IResolvable) {
-        cdkBuilder.hibernationOptions(hibernationOptions.let(IResolvable::unwrap))
+        cdkBuilder.hibernationOptions(hibernationOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7278,7 +7278,7 @@ public open class CfnLaunchTemplate(
        * Elastic Compute Cloud User Guide* .
        */
       override fun hibernationOptions(hibernationOptions: HibernationOptionsProperty) {
-        cdkBuilder.hibernationOptions(hibernationOptions.let(HibernationOptionsProperty::unwrap))
+        cdkBuilder.hibernationOptions(hibernationOptions.let(HibernationOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -7300,7 +7300,7 @@ public open class CfnLaunchTemplate(
        * profile.
        */
       override fun iamInstanceProfile(iamInstanceProfile: IResolvable) {
-        cdkBuilder.iamInstanceProfile(iamInstanceProfile.let(IResolvable::unwrap))
+        cdkBuilder.iamInstanceProfile(iamInstanceProfile.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7308,7 +7308,7 @@ public open class CfnLaunchTemplate(
        * profile.
        */
       override fun iamInstanceProfile(iamInstanceProfile: IamInstanceProfileProperty) {
-        cdkBuilder.iamInstanceProfile(iamInstanceProfile.let(IamInstanceProfileProperty::unwrap))
+        cdkBuilder.iamInstanceProfile(iamInstanceProfile.let(IamInstanceProfileProperty.Companion::unwrap))
       }
 
       /**
@@ -7355,14 +7355,14 @@ public open class CfnLaunchTemplate(
        * @param instanceMarketOptions The market (purchasing) option for the instances.
        */
       override fun instanceMarketOptions(instanceMarketOptions: IResolvable) {
-        cdkBuilder.instanceMarketOptions(instanceMarketOptions.let(IResolvable::unwrap))
+        cdkBuilder.instanceMarketOptions(instanceMarketOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param instanceMarketOptions The market (purchasing) option for the instances.
        */
       override fun instanceMarketOptions(instanceMarketOptions: InstanceMarketOptionsProperty) {
-        cdkBuilder.instanceMarketOptions(instanceMarketOptions.let(InstanceMarketOptionsProperty::unwrap))
+        cdkBuilder.instanceMarketOptions(instanceMarketOptions.let(InstanceMarketOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -7417,7 +7417,7 @@ public open class CfnLaunchTemplate(
        * *Amazon EC2 User Guide* .
        */
       override fun instanceRequirements(instanceRequirements: IResolvable) {
-        cdkBuilder.instanceRequirements(instanceRequirements.let(IResolvable::unwrap))
+        cdkBuilder.instanceRequirements(instanceRequirements.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7463,7 +7463,7 @@ public open class CfnLaunchTemplate(
        * *Amazon EC2 User Guide* .
        */
       override fun instanceRequirements(instanceRequirements: InstanceRequirementsProperty) {
-        cdkBuilder.instanceRequirements(instanceRequirements.let(InstanceRequirementsProperty::unwrap))
+        cdkBuilder.instanceRequirements(instanceRequirements.let(InstanceRequirementsProperty.Companion::unwrap))
       }
 
       /**
@@ -7553,7 +7553,7 @@ public open class CfnLaunchTemplate(
        * @param licenseSpecifications The license configurations.
        */
       override fun licenseSpecifications(licenseSpecifications: IResolvable) {
-        cdkBuilder.licenseSpecifications(licenseSpecifications.let(IResolvable::unwrap))
+        cdkBuilder.licenseSpecifications(licenseSpecifications.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7573,14 +7573,14 @@ public open class CfnLaunchTemplate(
        * @param maintenanceOptions The maintenance options of your instance.
        */
       override fun maintenanceOptions(maintenanceOptions: IResolvable) {
-        cdkBuilder.maintenanceOptions(maintenanceOptions.let(IResolvable::unwrap))
+        cdkBuilder.maintenanceOptions(maintenanceOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param maintenanceOptions The maintenance options of your instance.
        */
       override fun maintenanceOptions(maintenanceOptions: MaintenanceOptionsProperty) {
-        cdkBuilder.maintenanceOptions(maintenanceOptions.let(MaintenanceOptionsProperty::unwrap))
+        cdkBuilder.maintenanceOptions(maintenanceOptions.let(MaintenanceOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -7599,7 +7599,7 @@ public open class CfnLaunchTemplate(
        * *Amazon Elastic Compute Cloud User Guide* .
        */
       override fun metadataOptions(metadataOptions: IResolvable) {
-        cdkBuilder.metadataOptions(metadataOptions.let(IResolvable::unwrap))
+        cdkBuilder.metadataOptions(metadataOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7609,7 +7609,7 @@ public open class CfnLaunchTemplate(
        * *Amazon Elastic Compute Cloud User Guide* .
        */
       override fun metadataOptions(metadataOptions: MetadataOptionsProperty) {
-        cdkBuilder.metadataOptions(metadataOptions.let(MetadataOptionsProperty::unwrap))
+        cdkBuilder.metadataOptions(metadataOptions.let(MetadataOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -7627,14 +7627,14 @@ public open class CfnLaunchTemplate(
        * @param monitoring The monitoring for the instance.
        */
       override fun monitoring(monitoring: IResolvable) {
-        cdkBuilder.monitoring(monitoring.let(IResolvable::unwrap))
+        cdkBuilder.monitoring(monitoring.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param monitoring The monitoring for the instance.
        */
       override fun monitoring(monitoring: MonitoringProperty) {
-        cdkBuilder.monitoring(monitoring.let(MonitoringProperty::unwrap))
+        cdkBuilder.monitoring(monitoring.let(MonitoringProperty.Companion::unwrap))
       }
 
       /**
@@ -7649,7 +7649,7 @@ public open class CfnLaunchTemplate(
        * @param networkInterfaces The network interfaces for the instance.
        */
       override fun networkInterfaces(networkInterfaces: IResolvable) {
-        cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable::unwrap))
+        cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7669,14 +7669,14 @@ public open class CfnLaunchTemplate(
        * @param placement The placement for the instance.
        */
       override fun placement(placement: IResolvable) {
-        cdkBuilder.placement(placement.let(IResolvable::unwrap))
+        cdkBuilder.placement(placement.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param placement The placement for the instance.
        */
       override fun placement(placement: PlacementProperty) {
-        cdkBuilder.placement(placement.let(PlacementProperty::unwrap))
+        cdkBuilder.placement(placement.let(PlacementProperty.Companion::unwrap))
       }
 
       /**
@@ -7695,7 +7695,7 @@ public open class CfnLaunchTemplate(
        * *Amazon Elastic Compute Cloud User Guide* .
        */
       override fun privateDnsNameOptions(privateDnsNameOptions: IResolvable) {
-        cdkBuilder.privateDnsNameOptions(privateDnsNameOptions.let(IResolvable::unwrap))
+        cdkBuilder.privateDnsNameOptions(privateDnsNameOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7706,7 +7706,7 @@ public open class CfnLaunchTemplate(
        * *Amazon Elastic Compute Cloud User Guide* .
        */
       override fun privateDnsNameOptions(privateDnsNameOptions: PrivateDnsNameOptionsProperty) {
-        cdkBuilder.privateDnsNameOptions(privateDnsNameOptions.let(PrivateDnsNameOptionsProperty::unwrap))
+        cdkBuilder.privateDnsNameOptions(privateDnsNameOptions.let(PrivateDnsNameOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -7787,7 +7787,7 @@ public open class CfnLaunchTemplate(
        * .
        */
       override fun tagSpecifications(tagSpecifications: IResolvable) {
-        cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable::unwrap))
+        cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8473,7 +8473,7 @@ public open class CfnLaunchTemplate(
        * @param tags The tags for the resource.
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**
@@ -9326,7 +9326,7 @@ public open class CfnLaunchTemplate(
        * Otherwise, basic monitoring is enabled.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.ec2.CfnLaunchTemplate.MonitoringProperty =
@@ -9726,6 +9726,10 @@ public open class CfnLaunchTemplate(
     /**
      * The device index for the network interface attachment.
      *
+     * Each network interface requires a device index. If you create a launch template that includes
+     * secondary network interfaces but not a primary network interface, then you must add a primary
+     * network interface as a launch parameter when you launch an instance from the template.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html#cfn-ec2-launchtemplate-networkinterface-deviceindex)
      */
     public fun deviceIndex(): Number? = unwrap(this).getDeviceIndex()
@@ -9958,6 +9962,9 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param deviceIndex The device index for the network interface attachment.
+       * Each network interface requires a device index. If you create a launch template that
+       * includes secondary network interfaces but not a primary network interface, then you must add a
+       * primary network interface as a launch parameter when you launch an instance from the template.
        */
       public fun deviceIndex(deviceIndex: Number)
 
@@ -10169,7 +10176,7 @@ public open class CfnLaunchTemplate(
        * in the *AWS Wavelength Developer Guide* .
        */
       override fun associateCarrierIpAddress(associateCarrierIpAddress: IResolvable) {
-        cdkBuilder.associateCarrierIpAddress(associateCarrierIpAddress.let(IResolvable::unwrap))
+        cdkBuilder.associateCarrierIpAddress(associateCarrierIpAddress.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10191,7 +10198,7 @@ public open class CfnLaunchTemplate(
        * Address* tab on the [Amazon VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
        */
       override fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
-        cdkBuilder.associatePublicIpAddress(associatePublicIpAddress.let(IResolvable::unwrap))
+        cdkBuilder.associatePublicIpAddress(associatePublicIpAddress.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10199,7 +10206,7 @@ public open class CfnLaunchTemplate(
        * interface.
        */
       override fun connectionTrackingSpecification(connectionTrackingSpecification: IResolvable) {
-        cdkBuilder.connectionTrackingSpecification(connectionTrackingSpecification.let(IResolvable::unwrap))
+        cdkBuilder.connectionTrackingSpecification(connectionTrackingSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10208,7 +10215,7 @@ public open class CfnLaunchTemplate(
        */
       override
           fun connectionTrackingSpecification(connectionTrackingSpecification: ConnectionTrackingSpecificationProperty) {
-        cdkBuilder.connectionTrackingSpecification(connectionTrackingSpecification.let(ConnectionTrackingSpecificationProperty::unwrap))
+        cdkBuilder.connectionTrackingSpecification(connectionTrackingSpecification.let(ConnectionTrackingSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -10235,7 +10242,7 @@ public open class CfnLaunchTemplate(
        * instance is terminated.
        */
       override fun deleteOnTermination(deleteOnTermination: IResolvable) {
-        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
+        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10247,6 +10254,9 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param deviceIndex The device index for the network interface attachment.
+       * Each network interface requires a device index. If you create a launch template that
+       * includes secondary network interfaces but not a primary network interface, then you must add a
+       * primary network interface as a launch parameter when you launch an instance from the template.
        */
       override fun deviceIndex(deviceIndex: Number) {
         cdkBuilder.deviceIndex(deviceIndex)
@@ -10256,14 +10266,14 @@ public open class CfnLaunchTemplate(
        * @param enaSrdSpecification The ENA Express configuration for the network interface.
        */
       override fun enaSrdSpecification(enaSrdSpecification: IResolvable) {
-        cdkBuilder.enaSrdSpecification(enaSrdSpecification.let(IResolvable::unwrap))
+        cdkBuilder.enaSrdSpecification(enaSrdSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param enaSrdSpecification The ENA Express configuration for the network interface.
        */
       override fun enaSrdSpecification(enaSrdSpecification: EnaSrdSpecificationProperty) {
-        cdkBuilder.enaSrdSpecification(enaSrdSpecification.let(EnaSrdSpecificationProperty::unwrap))
+        cdkBuilder.enaSrdSpecification(enaSrdSpecification.let(EnaSrdSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -10315,7 +10325,7 @@ public open class CfnLaunchTemplate(
        * You cannot use this option if you use the `Ipv4PrefixCount` option.
        */
       override fun ipv4Prefixes(ipv4Prefixes: IResolvable) {
-        cdkBuilder.ipv4Prefixes(ipv4Prefixes.let(IResolvable::unwrap))
+        cdkBuilder.ipv4Prefixes(ipv4Prefixes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10348,7 +10358,7 @@ public open class CfnLaunchTemplate(
        * You can't use this option if you're specifying a number of IPv6 addresses.
        */
       override fun ipv6Addresses(ipv6Addresses: IResolvable) {
-        cdkBuilder.ipv6Addresses(ipv6Addresses.let(IResolvable::unwrap))
+        cdkBuilder.ipv6Addresses(ipv6Addresses.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10382,7 +10392,7 @@ public open class CfnLaunchTemplate(
        * You cannot use this option if you use the `Ipv6PrefixCount` option.
        */
       override fun ipv6Prefixes(ipv6Prefixes: IResolvable) {
-        cdkBuilder.ipv6Prefixes(ipv6Prefixes.let(IResolvable::unwrap))
+        cdkBuilder.ipv6Prefixes(ipv6Prefixes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10435,7 +10445,7 @@ public open class CfnLaunchTemplate(
        * [RunInstances](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RunInstances.html) .
        */
       override fun primaryIpv6(primaryIpv6: IResolvable) {
-        cdkBuilder.primaryIpv6(primaryIpv6.let(IResolvable::unwrap))
+        cdkBuilder.primaryIpv6(primaryIpv6.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10449,7 +10459,7 @@ public open class CfnLaunchTemplate(
        * @param privateIpAddresses One or more private IPv4 addresses.
        */
       override fun privateIpAddresses(privateIpAddresses: IResolvable) {
-        cdkBuilder.privateIpAddresses(privateIpAddresses.let(IResolvable::unwrap))
+        cdkBuilder.privateIpAddresses(privateIpAddresses.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10536,6 +10546,10 @@ public open class CfnLaunchTemplate(
 
       /**
        * The device index for the network interface attachment.
+       *
+       * Each network interface requires a device index. If you create a launch template that
+       * includes secondary network interfaces but not a primary network interface, then you must add a
+       * primary network interface as a launch parameter when you launch an instance from the template.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html#cfn-ec2-launchtemplate-networkinterface-deviceindex)
        */
@@ -11149,7 +11163,7 @@ public open class CfnLaunchTemplate(
        * instance hostnames with DNS A records.
        */
       override fun enableResourceNameDnsARecord(enableResourceNameDnsARecord: IResolvable) {
-        cdkBuilder.enableResourceNameDnsARecord(enableResourceNameDnsARecord.let(IResolvable::unwrap))
+        cdkBuilder.enableResourceNameDnsARecord(enableResourceNameDnsARecord.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11165,7 +11179,7 @@ public open class CfnLaunchTemplate(
        * instance hostnames with DNS AAAA records.
        */
       override fun enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord: IResolvable) {
-        cdkBuilder.enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord.let(IResolvable::unwrap))
+        cdkBuilder.enableResourceNameDnsAaaaRecord(enableResourceNameDnsAaaaRecord.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11321,7 +11335,7 @@ public open class CfnLaunchTemplate(
        * Only one IPv4 address can be designated as primary.
        */
       override fun primary(primary: IResolvable) {
-        cdkBuilder.primary(primary.let(IResolvable::unwrap))
+        cdkBuilder.primary(primary.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11750,7 +11764,7 @@ public open class CfnLaunchTemplate(
        * @param tags The tags to apply to the resource.
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**

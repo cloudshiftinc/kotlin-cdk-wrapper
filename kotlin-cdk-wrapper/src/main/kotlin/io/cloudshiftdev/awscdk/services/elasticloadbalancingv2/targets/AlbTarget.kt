@@ -46,7 +46,7 @@ public open class AlbTarget(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbTarget,
 ) : AlbArnTarget(cdkObject) {
   public constructor(alb: IApplicationLoadBalancer, port: Number) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbTarget(alb.let(IApplicationLoadBalancer::unwrap),
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.targets.AlbTarget(alb.let(IApplicationLoadBalancer.Companion::unwrap),
       port)
   )
 

@@ -29,7 +29,7 @@ public open class BackupPlanRule(
   cdkObject: software.amazon.awscdk.services.backup.BackupPlanRule,
 ) : CdkObject(cdkObject) {
   public constructor(props: BackupPlanRuleProps) :
-      this(software.amazon.awscdk.services.backup.BackupPlanRule(props.let(BackupPlanRuleProps::unwrap))
+      this(software.amazon.awscdk.services.backup.BackupPlanRule(props.let(BackupPlanRuleProps.Companion::unwrap))
   )
 
   public constructor(props: BackupPlanRuleProps.Builder.() -> Unit) :
@@ -181,7 +181,7 @@ public open class BackupPlanRule(
      * @param backupVault The backup vault where backups are. 
      */
     override fun backupVault(backupVault: IBackupVault) {
-      cdkBuilder.backupVault(backupVault.let(IBackupVault::unwrap))
+      cdkBuilder.backupVault(backupVault.let(IBackupVault.Companion::unwrap))
     }
 
     /**
@@ -194,7 +194,7 @@ public open class BackupPlanRule(
      * must be completed or it is canceled by AWS Backup. 
      */
     override fun completionWindow(completionWindow: Duration) {
-      cdkBuilder.completionWindow(completionWindow.let(Duration::unwrap))
+      cdkBuilder.completionWindow(completionWindow.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -205,7 +205,7 @@ public open class BackupPlanRule(
      * @param copyActions Copy operations to perform on recovery points created by this rule. 
      */
     override fun copyActions(copyActions: List<BackupPlanCopyActionProps>) {
-      cdkBuilder.copyActions(copyActions.map(BackupPlanCopyActionProps::unwrap))
+      cdkBuilder.copyActions(copyActions.map(BackupPlanCopyActionProps.Companion::unwrap))
     }
 
     /**
@@ -228,7 +228,7 @@ public open class BackupPlanRule(
      * @param deleteAfter Specifies the duration after creation that a recovery point is deleted. 
      */
     override fun deleteAfter(deleteAfter: Duration) {
-      cdkBuilder.deleteAfter(deleteAfter.let(Duration::unwrap))
+      cdkBuilder.deleteAfter(deleteAfter.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -259,7 +259,7 @@ public open class BackupPlanRule(
      * moved to cold storage. 
      */
     override fun moveToColdStorageAfter(moveToColdStorageAfter: Duration) {
-      cdkBuilder.moveToColdStorageAfter(moveToColdStorageAfter.let(Duration::unwrap))
+      cdkBuilder.moveToColdStorageAfter(moveToColdStorageAfter.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -297,7 +297,7 @@ public open class BackupPlanRule(
      * job. 
      */
     override fun scheduleExpression(scheduleExpression: Schedule) {
-      cdkBuilder.scheduleExpression(scheduleExpression.let(Schedule::unwrap))
+      cdkBuilder.scheduleExpression(scheduleExpression.let(Schedule.Companion::unwrap))
     }
 
     /**
@@ -310,7 +310,7 @@ public open class BackupPlanRule(
      * doesn't start successfully. 
      */
     override fun startWindow(startWindow: Duration) {
-      cdkBuilder.startWindow(startWindow.let(Duration::unwrap))
+      cdkBuilder.startWindow(startWindow.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.backup.BackupPlanRule = cdkBuilder.build()
@@ -321,31 +321,31 @@ public open class BackupPlanRule(
         software.amazon.awscdk.services.backup.BackupPlanRule.daily().let(BackupPlanRule::wrap)
 
     public fun daily(backupVault: IBackupVault): BackupPlanRule =
-        software.amazon.awscdk.services.backup.BackupPlanRule.daily(backupVault.let(IBackupVault::unwrap)).let(BackupPlanRule::wrap)
+        software.amazon.awscdk.services.backup.BackupPlanRule.daily(backupVault.let(IBackupVault.Companion::unwrap)).let(BackupPlanRule::wrap)
 
     public fun monthly1Year(): BackupPlanRule =
         software.amazon.awscdk.services.backup.BackupPlanRule.monthly1Year().let(BackupPlanRule::wrap)
 
     public fun monthly1Year(backupVault: IBackupVault): BackupPlanRule =
-        software.amazon.awscdk.services.backup.BackupPlanRule.monthly1Year(backupVault.let(IBackupVault::unwrap)).let(BackupPlanRule::wrap)
+        software.amazon.awscdk.services.backup.BackupPlanRule.monthly1Year(backupVault.let(IBackupVault.Companion::unwrap)).let(BackupPlanRule::wrap)
 
     public fun monthly5Year(): BackupPlanRule =
         software.amazon.awscdk.services.backup.BackupPlanRule.monthly5Year().let(BackupPlanRule::wrap)
 
     public fun monthly5Year(backupVault: IBackupVault): BackupPlanRule =
-        software.amazon.awscdk.services.backup.BackupPlanRule.monthly5Year(backupVault.let(IBackupVault::unwrap)).let(BackupPlanRule::wrap)
+        software.amazon.awscdk.services.backup.BackupPlanRule.monthly5Year(backupVault.let(IBackupVault.Companion::unwrap)).let(BackupPlanRule::wrap)
 
     public fun monthly7Year(): BackupPlanRule =
         software.amazon.awscdk.services.backup.BackupPlanRule.monthly7Year().let(BackupPlanRule::wrap)
 
     public fun monthly7Year(backupVault: IBackupVault): BackupPlanRule =
-        software.amazon.awscdk.services.backup.BackupPlanRule.monthly7Year(backupVault.let(IBackupVault::unwrap)).let(BackupPlanRule::wrap)
+        software.amazon.awscdk.services.backup.BackupPlanRule.monthly7Year(backupVault.let(IBackupVault.Companion::unwrap)).let(BackupPlanRule::wrap)
 
     public fun weekly(): BackupPlanRule =
         software.amazon.awscdk.services.backup.BackupPlanRule.weekly().let(BackupPlanRule::wrap)
 
     public fun weekly(backupVault: IBackupVault): BackupPlanRule =
-        software.amazon.awscdk.services.backup.BackupPlanRule.weekly(backupVault.let(IBackupVault::unwrap)).let(BackupPlanRule::wrap)
+        software.amazon.awscdk.services.backup.BackupPlanRule.weekly(backupVault.let(IBackupVault.Companion::unwrap)).let(BackupPlanRule::wrap)
 
     public operator fun invoke(block: Builder.() -> Unit = {}): BackupPlanRule {
       val builderImpl = BuilderImpl()

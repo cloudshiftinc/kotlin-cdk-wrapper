@@ -69,7 +69,7 @@ public open class CfnReplicationConfig(
   cdkObject: software.amazon.awscdk.services.dms.CfnReplicationConfig,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.dms.CfnReplicationConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.dms.CfnReplicationConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -78,8 +78,8 @@ public open class CfnReplicationConfig(
     id: String,
     props: CfnReplicationConfigProps,
   ) :
-      this(software.amazon.awscdk.services.dms.CfnReplicationConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnReplicationConfigProps::unwrap))
+      this(software.amazon.awscdk.services.dms.CfnReplicationConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnReplicationConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -109,14 +109,14 @@ public open class CfnReplicationConfig(
    * Configuration parameters for provisioning an AWS DMS Serverless replication.
    */
   public open fun computeConfig(`value`: IResolvable) {
-    unwrap(this).setComputeConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setComputeConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration parameters for provisioning an AWS DMS Serverless replication.
    */
   public open fun computeConfig(`value`: ComputeConfigProperty) {
-    unwrap(this).setComputeConfig(`value`.let(ComputeConfigProperty::unwrap))
+    unwrap(this).setComputeConfig(`value`.let(ComputeConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -133,7 +133,7 @@ public open class CfnReplicationConfig(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -240,7 +240,7 @@ public open class CfnReplicationConfig(
    * One or more optional tags associated with resources used by the AWS DMS Serverless replication.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -442,7 +442,7 @@ public open class CfnReplicationConfig(
      * replication. 
      */
     override fun computeConfig(computeConfig: IResolvable) {
-      cdkBuilder.computeConfig(computeConfig.let(IResolvable::unwrap))
+      cdkBuilder.computeConfig(computeConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -453,7 +453,7 @@ public open class CfnReplicationConfig(
      * replication. 
      */
     override fun computeConfig(computeConfig: ComputeConfigProperty) {
-      cdkBuilder.computeConfig(computeConfig.let(ComputeConfigProperty::unwrap))
+      cdkBuilder.computeConfig(computeConfig.let(ComputeConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -588,7 +588,7 @@ public open class CfnReplicationConfig(
      * Serverless replication. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -962,7 +962,7 @@ public open class CfnReplicationConfig(
        * .
        */
       override fun multiAz(multiAz: IResolvable) {
-        cdkBuilder.multiAz(multiAz.let(IResolvable::unwrap))
+        cdkBuilder.multiAz(multiAz.let(IResolvable.Companion::unwrap))
       }
 
       /**

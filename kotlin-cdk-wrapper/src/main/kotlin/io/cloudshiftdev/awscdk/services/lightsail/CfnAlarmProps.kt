@@ -321,7 +321,7 @@ public interface CfnAlarmProps {
      * @param notificationEnabled A Boolean value indicating whether the alarm is enabled.
      */
     override fun notificationEnabled(notificationEnabled: IResolvable) {
-      cdkBuilder.notificationEnabled(notificationEnabled.let(IResolvable::unwrap))
+      cdkBuilder.notificationEnabled(notificationEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**

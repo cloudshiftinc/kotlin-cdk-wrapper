@@ -49,8 +49,8 @@ public open class CfnCloudFrontOriginAccessIdentity(
     id: String,
     props: CfnCloudFrontOriginAccessIdentityProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.CfnCloudFrontOriginAccessIdentity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCloudFrontOriginAccessIdentityProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.CfnCloudFrontOriginAccessIdentity(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCloudFrontOriginAccessIdentityProps.Companion::unwrap))
   )
 
   public constructor(
@@ -85,7 +85,7 @@ public open class CfnCloudFrontOriginAccessIdentity(
    * The current configuration information for the identity.
    */
   public open fun cloudFrontOriginAccessIdentityConfig(`value`: IResolvable) {
-    unwrap(this).setCloudFrontOriginAccessIdentityConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCloudFrontOriginAccessIdentityConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -93,7 +93,7 @@ public open class CfnCloudFrontOriginAccessIdentity(
    */
   public open
       fun cloudFrontOriginAccessIdentityConfig(`value`: CloudFrontOriginAccessIdentityConfigProperty) {
-    unwrap(this).setCloudFrontOriginAccessIdentityConfig(`value`.let(CloudFrontOriginAccessIdentityConfigProperty::unwrap))
+    unwrap(this).setCloudFrontOriginAccessIdentityConfig(`value`.let(CloudFrontOriginAccessIdentityConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -112,7 +112,7 @@ public open class CfnCloudFrontOriginAccessIdentity(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -172,7 +172,7 @@ public open class CfnCloudFrontOriginAccessIdentity(
      */
     override
         fun cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig: IResolvable) {
-      cdkBuilder.cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig.let(IResolvable::unwrap))
+      cdkBuilder.cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -184,7 +184,7 @@ public open class CfnCloudFrontOriginAccessIdentity(
      */
     override
         fun cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig: CloudFrontOriginAccessIdentityConfigProperty) {
-      cdkBuilder.cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig.let(CloudFrontOriginAccessIdentityConfigProperty::unwrap))
+      cdkBuilder.cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig.let(CloudFrontOriginAccessIdentityConfigProperty.Companion::unwrap))
     }
 
     /**

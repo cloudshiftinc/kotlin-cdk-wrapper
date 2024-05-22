@@ -38,7 +38,7 @@ public open class JsonNull(
    * @param _ctx 
    */
   public override fun resolve(ctx: IResolveContext): Any =
-      unwrap(this).resolve(ctx.let(IResolveContext::unwrap))
+      unwrap(this).resolve(ctx.let(IResolveContext.Companion::unwrap))
 
   /**
    * Obtains the JSON representation of this object (`null`).

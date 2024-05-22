@@ -79,7 +79,7 @@ public interface DockerVolume {
      * Only applicable for macOS
      */
     override fun consistency(consistency: DockerVolumeConsistency) {
-      cdkBuilder.consistency(consistency.let(DockerVolumeConsistency::unwrap))
+      cdkBuilder.consistency(consistency.let(DockerVolumeConsistency.Companion::unwrap))
     }
 
     /**

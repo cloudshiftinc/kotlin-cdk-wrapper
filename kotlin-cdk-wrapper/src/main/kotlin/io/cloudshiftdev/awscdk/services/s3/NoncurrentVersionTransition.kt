@@ -92,7 +92,7 @@ public interface NoncurrentVersionTransition {
      * @param storageClass The storage class to which you want the object to transition. 
      */
     override fun storageClass(storageClass: StorageClass) {
-      cdkBuilder.storageClass(storageClass.let(StorageClass::unwrap))
+      cdkBuilder.storageClass(storageClass.let(StorageClass.Companion::unwrap))
     }
 
     /**
@@ -100,7 +100,7 @@ public interface NoncurrentVersionTransition {
      * transitioned to the specified storage class. 
      */
     override fun transitionAfter(transitionAfter: Duration) {
-      cdkBuilder.transitionAfter(transitionAfter.let(Duration::unwrap))
+      cdkBuilder.transitionAfter(transitionAfter.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.s3.NoncurrentVersionTransition =

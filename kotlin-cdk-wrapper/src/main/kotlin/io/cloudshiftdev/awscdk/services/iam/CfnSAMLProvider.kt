@@ -67,8 +67,8 @@ public open class CfnSAMLProvider(
     id: String,
     props: CfnSAMLProviderProps,
   ) :
-      this(software.amazon.awscdk.services.iam.CfnSAMLProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSAMLProviderProps::unwrap))
+      this(software.amazon.awscdk.services.iam.CfnSAMLProvider(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSAMLProviderProps.Companion::unwrap))
   )
 
   public constructor(
@@ -89,7 +89,7 @@ public open class CfnSAMLProvider(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -137,7 +137,7 @@ public open class CfnSAMLProvider(
    * A list of tags that you want to attach to the new IAM SAML provider.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -278,7 +278,7 @@ public open class CfnSAMLProvider(
      * @param tags A list of tags that you want to attach to the new IAM SAML provider. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

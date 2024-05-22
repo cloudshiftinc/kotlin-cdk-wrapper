@@ -76,7 +76,7 @@ public open class CfnUsagePlan(
   cdkObject: software.amazon.awscdk.services.apigateway.CfnUsagePlan,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.apigateway.CfnUsagePlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.apigateway.CfnUsagePlan(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -85,8 +85,8 @@ public open class CfnUsagePlan(
     id: String,
     props: CfnUsagePlanProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.CfnUsagePlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnUsagePlanProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.CfnUsagePlan(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnUsagePlanProps.Companion::unwrap))
   )
 
   public constructor(
@@ -105,7 +105,7 @@ public open class CfnUsagePlan(
    * The associated API stages of a usage plan.
    */
   public open fun apiStages(`value`: IResolvable) {
-    unwrap(this).setApiStages(`value`.let(IResolvable::unwrap))
+    unwrap(this).setApiStages(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -145,7 +145,7 @@ public open class CfnUsagePlan(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -157,14 +157,14 @@ public open class CfnUsagePlan(
    * The target maximum number of permitted requests per a given unit time interval.
    */
   public open fun quota(`value`: IResolvable) {
-    unwrap(this).setQuota(`value`.let(IResolvable::unwrap))
+    unwrap(this).setQuota(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The target maximum number of permitted requests per a given unit time interval.
    */
   public open fun quota(`value`: QuotaSettingsProperty) {
-    unwrap(this).setQuota(`value`.let(QuotaSettingsProperty::unwrap))
+    unwrap(this).setQuota(`value`.let(QuotaSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -190,7 +190,7 @@ public open class CfnUsagePlan(
    * The collection of tags.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -207,14 +207,14 @@ public open class CfnUsagePlan(
    * A map containing method level throttling information for API stage in a usage plan.
    */
   public open fun throttle(`value`: IResolvable) {
-    unwrap(this).setThrottle(`value`.let(IResolvable::unwrap))
+    unwrap(this).setThrottle(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A map containing method level throttling information for API stage in a usage plan.
    */
   public open fun throttle(`value`: ThrottleSettingsProperty) {
-    unwrap(this).setThrottle(`value`.let(ThrottleSettingsProperty::unwrap))
+    unwrap(this).setThrottle(`value`.let(ThrottleSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -372,7 +372,7 @@ public open class CfnUsagePlan(
      * @param apiStages The associated API stages of a usage plan. 
      */
     override fun apiStages(apiStages: IResolvable) {
-      cdkBuilder.apiStages(apiStages.let(IResolvable::unwrap))
+      cdkBuilder.apiStages(apiStages.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -410,7 +410,7 @@ public open class CfnUsagePlan(
      * @param quota The target maximum number of permitted requests per a given unit time interval. 
      */
     override fun quota(quota: IResolvable) {
-      cdkBuilder.quota(quota.let(IResolvable::unwrap))
+      cdkBuilder.quota(quota.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -420,7 +420,7 @@ public open class CfnUsagePlan(
      * @param quota The target maximum number of permitted requests per a given unit time interval. 
      */
     override fun quota(quota: QuotaSettingsProperty) {
-      cdkBuilder.quota(quota.let(QuotaSettingsProperty::unwrap))
+      cdkBuilder.quota(quota.let(QuotaSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -443,7 +443,7 @@ public open class CfnUsagePlan(
      * @param tags The collection of tags. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -464,7 +464,7 @@ public open class CfnUsagePlan(
      * plan. 
      */
     override fun throttle(throttle: IResolvable) {
-      cdkBuilder.throttle(throttle.let(IResolvable::unwrap))
+      cdkBuilder.throttle(throttle.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -475,7 +475,7 @@ public open class CfnUsagePlan(
      * plan. 
      */
     override fun throttle(throttle: ThrottleSettingsProperty) {
-      cdkBuilder.throttle(throttle.let(ThrottleSettingsProperty::unwrap))
+      cdkBuilder.throttle(throttle.let(ThrottleSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -620,7 +620,7 @@ public open class CfnUsagePlan(
        * plan.
        */
       override fun throttle(throttle: IResolvable) {
-        cdkBuilder.throttle(throttle.let(IResolvable::unwrap))
+        cdkBuilder.throttle(throttle.let(IResolvable.Companion::unwrap))
       }
 
       /**

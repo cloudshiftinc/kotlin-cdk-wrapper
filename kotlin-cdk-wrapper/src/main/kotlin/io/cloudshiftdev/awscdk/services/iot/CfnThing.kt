@@ -46,7 +46,7 @@ public open class CfnThing(
   cdkObject: software.amazon.awscdk.services.iot.CfnThing,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.iot.CfnThing(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.iot.CfnThing(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -55,8 +55,8 @@ public open class CfnThing(
     id: String,
     props: CfnThingProps,
   ) :
-      this(software.amazon.awscdk.services.iot.CfnThing(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnThingProps::unwrap))
+      this(software.amazon.awscdk.services.iot.CfnThing(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnThingProps.Companion::unwrap))
   )
 
   public constructor(
@@ -86,14 +86,14 @@ public open class CfnThing(
    * A string that contains up to three key value pairs.
    */
   public open fun attributePayload(`value`: IResolvable) {
-    unwrap(this).setAttributePayload(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAttributePayload(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A string that contains up to three key value pairs.
    */
   public open fun attributePayload(`value`: AttributePayloadProperty) {
-    unwrap(this).setAttributePayload(`value`.let(AttributePayloadProperty::unwrap))
+    unwrap(this).setAttributePayload(`value`.let(AttributePayloadProperty.Companion::unwrap))
   }
 
   /**
@@ -110,7 +110,7 @@ public open class CfnThing(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -190,7 +190,7 @@ public open class CfnThing(
      * @param attributePayload A string that contains up to three key value pairs. 
      */
     override fun attributePayload(attributePayload: IResolvable) {
-      cdkBuilder.attributePayload(attributePayload.let(IResolvable::unwrap))
+      cdkBuilder.attributePayload(attributePayload.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -202,7 +202,7 @@ public open class CfnThing(
      * @param attributePayload A string that contains up to three key value pairs. 
      */
     override fun attributePayload(attributePayload: AttributePayloadProperty) {
-      cdkBuilder.attributePayload(attributePayload.let(AttributePayloadProperty::unwrap))
+      cdkBuilder.attributePayload(attributePayload.let(AttributePayloadProperty.Companion::unwrap))
     }
 
     /**
@@ -317,7 +317,7 @@ public open class CfnThing(
        * `{\"attributes\":{\"string1\":\"string2\"}}`
        */
       override fun attributes(attributes: IResolvable) {
-        cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
       }
 
       /**

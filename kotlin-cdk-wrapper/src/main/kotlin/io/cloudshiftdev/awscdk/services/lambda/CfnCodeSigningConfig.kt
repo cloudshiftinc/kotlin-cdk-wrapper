@@ -50,8 +50,8 @@ public open class CfnCodeSigningConfig(
     id: String,
     props: CfnCodeSigningConfigProps,
   ) :
-      this(software.amazon.awscdk.services.lambda.CfnCodeSigningConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCodeSigningConfigProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.CfnCodeSigningConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCodeSigningConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -70,14 +70,14 @@ public open class CfnCodeSigningConfig(
    * List of allowed publishers.
    */
   public open fun allowedPublishers(`value`: IResolvable) {
-    unwrap(this).setAllowedPublishers(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAllowedPublishers(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * List of allowed publishers.
    */
   public open fun allowedPublishers(`value`: AllowedPublishersProperty) {
-    unwrap(this).setAllowedPublishers(`value`.let(AllowedPublishersProperty::unwrap))
+    unwrap(this).setAllowedPublishers(`value`.let(AllowedPublishersProperty.Companion::unwrap))
   }
 
   /**
@@ -109,7 +109,7 @@ public open class CfnCodeSigningConfig(
    * expiry.
    */
   public open fun codeSigningPolicies(`value`: IResolvable) {
-    unwrap(this).setCodeSigningPolicies(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCodeSigningPolicies(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -117,7 +117,7 @@ public open class CfnCodeSigningConfig(
    * expiry.
    */
   public open fun codeSigningPolicies(`value`: CodeSigningPoliciesProperty) {
-    unwrap(this).setCodeSigningPolicies(`value`.let(CodeSigningPoliciesProperty::unwrap))
+    unwrap(this).setCodeSigningPolicies(`value`.let(CodeSigningPoliciesProperty.Companion::unwrap))
   }
 
   /**
@@ -147,7 +147,7 @@ public open class CfnCodeSigningConfig(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -237,7 +237,7 @@ public open class CfnCodeSigningConfig(
      * @param allowedPublishers List of allowed publishers. 
      */
     override fun allowedPublishers(allowedPublishers: IResolvable) {
-      cdkBuilder.allowedPublishers(allowedPublishers.let(IResolvable::unwrap))
+      cdkBuilder.allowedPublishers(allowedPublishers.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -247,7 +247,7 @@ public open class CfnCodeSigningConfig(
      * @param allowedPublishers List of allowed publishers. 
      */
     override fun allowedPublishers(allowedPublishers: AllowedPublishersProperty) {
-      cdkBuilder.allowedPublishers(allowedPublishers.let(AllowedPublishersProperty::unwrap))
+      cdkBuilder.allowedPublishers(allowedPublishers.let(AllowedPublishersProperty.Companion::unwrap))
     }
 
     /**
@@ -270,7 +270,7 @@ public open class CfnCodeSigningConfig(
      * signature mismatch or expiry. 
      */
     override fun codeSigningPolicies(codeSigningPolicies: IResolvable) {
-      cdkBuilder.codeSigningPolicies(codeSigningPolicies.let(IResolvable::unwrap))
+      cdkBuilder.codeSigningPolicies(codeSigningPolicies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -282,7 +282,7 @@ public open class CfnCodeSigningConfig(
      * signature mismatch or expiry. 
      */
     override fun codeSigningPolicies(codeSigningPolicies: CodeSigningPoliciesProperty) {
-      cdkBuilder.codeSigningPolicies(codeSigningPolicies.let(CodeSigningPoliciesProperty::unwrap))
+      cdkBuilder.codeSigningPolicies(codeSigningPolicies.let(CodeSigningPoliciesProperty.Companion::unwrap))
     }
 
     /**

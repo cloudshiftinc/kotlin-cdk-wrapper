@@ -133,7 +133,7 @@ public interface HttpRouteSpecOptions : RouteSpecOptionsBase {
      * @param match The criterion for determining a request match for this Route.
      */
     override fun match(match: HttpRouteMatch) {
-      cdkBuilder.match(match.let(HttpRouteMatch::unwrap))
+      cdkBuilder.match(match.let(HttpRouteMatch.Companion::unwrap))
     }
 
     /**
@@ -158,7 +158,7 @@ public interface HttpRouteSpecOptions : RouteSpecOptionsBase {
      * @param retryPolicy The retry policy.
      */
     override fun retryPolicy(retryPolicy: HttpRetryPolicy) {
-      cdkBuilder.retryPolicy(retryPolicy.let(HttpRetryPolicy::unwrap))
+      cdkBuilder.retryPolicy(retryPolicy.let(HttpRetryPolicy.Companion::unwrap))
     }
 
     /**
@@ -173,7 +173,7 @@ public interface HttpRouteSpecOptions : RouteSpecOptionsBase {
      * @param timeout An object that represents a http timeout.
      */
     override fun timeout(timeout: HttpTimeout) {
-      cdkBuilder.timeout(timeout.let(HttpTimeout::unwrap))
+      cdkBuilder.timeout(timeout.let(HttpTimeout.Companion::unwrap))
     }
 
     /**
@@ -189,7 +189,7 @@ public interface HttpRouteSpecOptions : RouteSpecOptionsBase {
      * route. 
      */
     override fun weightedTargets(weightedTargets: List<WeightedTarget>) {
-      cdkBuilder.weightedTargets(weightedTargets.map(WeightedTarget::unwrap))
+      cdkBuilder.weightedTargets(weightedTargets.map(WeightedTarget.Companion::unwrap))
     }
 
     /**

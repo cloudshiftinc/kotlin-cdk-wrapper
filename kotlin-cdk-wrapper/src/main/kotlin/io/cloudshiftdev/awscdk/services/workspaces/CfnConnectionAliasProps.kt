@@ -90,7 +90,7 @@ public interface CfnConnectionAliasProps {
      * @param tags The tags to associate with the connection alias.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -115,7 +115,7 @@ public interface SelfManagedDeploymentProps {
      * `AWSCloudFormationStackSetAdministrationRole`.
      */
     override fun administrationRole(administrationRole: IRole) {
-      cdkBuilder.administrationRole(administrationRole.let(IRole::unwrap))
+      cdkBuilder.administrationRole(administrationRole.let(IRole.Companion::unwrap))
     }
 
     /**

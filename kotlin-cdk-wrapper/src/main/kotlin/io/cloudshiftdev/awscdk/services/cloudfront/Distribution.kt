@@ -50,8 +50,8 @@ public open class Distribution(
     id: String,
     props: DistributionProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.Distribution(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DistributionProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.Distribution(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DistributionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -70,7 +70,7 @@ public open class Distribution(
    * @param behaviorOptions the options for the behavior at this path.
    */
   public open fun addBehavior(pathPattern: String, origin: IOrigin) {
-    unwrap(this).addBehavior(pathPattern, origin.let(IOrigin::unwrap))
+    unwrap(this).addBehavior(pathPattern, origin.let(IOrigin.Companion::unwrap))
   }
 
   /**
@@ -86,8 +86,8 @@ public open class Distribution(
     origin: IOrigin,
     behaviorOptions: AddBehaviorOptions,
   ) {
-    unwrap(this).addBehavior(pathPattern, origin.let(IOrigin::unwrap),
-        behaviorOptions.let(AddBehaviorOptions::unwrap))
+    unwrap(this).addBehavior(pathPattern, origin.let(IOrigin.Companion::unwrap),
+        behaviorOptions.let(AddBehaviorOptions.Companion::unwrap))
   }
 
   /**
@@ -128,8 +128,8 @@ public open class Distribution(
    * @param actions The set of actions to allow (i.e. "cloudfront:ListInvalidations"). 
    */
   public override fun grant(identity: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(identity.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
-      as String}.toTypedArray()).let(Grant::wrap)
+      unwrap(this).grant(identity.let(IGrantable.Companion::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Grant to create invalidations for this bucket to an IAM principal (Role/Group/User).
@@ -137,7 +137,7 @@ public open class Distribution(
    * @param identity The principal. 
    */
   public override fun grantCreateInvalidation(identity: IGrantable): Grant =
-      unwrap(this).grantCreateInvalidation(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantCreateInvalidation(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Return the given named metric for this Distribution.
@@ -155,7 +155,7 @@ public open class Distribution(
    * @param props
    */
   public open fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Return the given named metric for this Distribution.
@@ -191,7 +191,7 @@ public open class Distribution(
    * @param props
    */
   public open fun metric401ErrorRate(props: MetricOptions): Metric =
-      unwrap(this).metric401ErrorRate(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric401ErrorRate(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the percentage of all viewer requests for which the response's HTTP status code is
@@ -231,7 +231,7 @@ public open class Distribution(
    * @param props
    */
   public open fun metric403ErrorRate(props: MetricOptions): Metric =
-      unwrap(this).metric403ErrorRate(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric403ErrorRate(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the percentage of all viewer requests for which the response's HTTP status code is
@@ -271,7 +271,7 @@ public open class Distribution(
    * @param props
    */
   public open fun metric404ErrorRate(props: MetricOptions): Metric =
-      unwrap(this).metric404ErrorRate(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric404ErrorRate(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the percentage of all viewer requests for which the response's HTTP status code is
@@ -307,7 +307,7 @@ public open class Distribution(
    * @param props
    */
   public open fun metric4xxErrorRate(props: MetricOptions): Metric =
-      unwrap(this).metric4xxErrorRate(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric4xxErrorRate(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the percentage of all viewer requests for which the response's HTTP status code is
@@ -345,7 +345,7 @@ public open class Distribution(
    * @param props
    */
   public open fun metric502ErrorRate(props: MetricOptions): Metric =
-      unwrap(this).metric502ErrorRate(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric502ErrorRate(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the percentage of all viewer requests for which the response's HTTP status code is
@@ -385,7 +385,7 @@ public open class Distribution(
    * @param props
    */
   public open fun metric503ErrorRate(props: MetricOptions): Metric =
-      unwrap(this).metric503ErrorRate(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric503ErrorRate(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the percentage of all viewer requests for which the response's HTTP status code is
@@ -425,7 +425,7 @@ public open class Distribution(
    * @param props
    */
   public open fun metric504ErrorRate(props: MetricOptions): Metric =
-      unwrap(this).metric504ErrorRate(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric504ErrorRate(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the percentage of all viewer requests for which the response's HTTP status code is
@@ -461,7 +461,7 @@ public open class Distribution(
    * @param props
    */
   public open fun metric5xxErrorRate(props: MetricOptions): Metric =
-      unwrap(this).metric5xxErrorRate(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric5xxErrorRate(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the percentage of all viewer requests for which the response's HTTP status code is
@@ -494,7 +494,7 @@ public open class Distribution(
    * @param props
    */
   public open fun metricBytesDownloaded(props: MetricOptions): Metric =
-      unwrap(this).metricBytesDownloaded(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricBytesDownloaded(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the total number of bytes downloaded by viewers for GET, HEAD, and OPTIONS requests.
@@ -528,7 +528,7 @@ public open class Distribution(
    * @param props
    */
   public open fun metricBytesUploaded(props: MetricOptions): Metric =
-      unwrap(this).metricBytesUploaded(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricBytesUploaded(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the total number of bytes that viewers uploaded to your origin with CloudFront,
@@ -570,7 +570,7 @@ public open class Distribution(
    * @param props
    */
   public open fun metricCacheHitRate(props: MetricOptions): Metric =
-      unwrap(this).metricCacheHitRate(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricCacheHitRate(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the percentage of all cacheable requests for which CloudFront served the content
@@ -619,7 +619,7 @@ public open class Distribution(
    * @param props
    */
   public open fun metricOriginLatency(props: MetricOptions): Metric =
-      unwrap(this).metricOriginLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricOriginLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the total time spent from when CloudFront receives a request to when it starts
@@ -658,7 +658,7 @@ public open class Distribution(
    * @param props
    */
   public open fun metricRequests(props: MetricOptions): Metric =
-      unwrap(this).metricRequests(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricRequests(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the total number of viewer requests received by CloudFront, for all HTTP methods and
@@ -693,7 +693,7 @@ public open class Distribution(
    * @param props
    */
   public open fun metricTotalErrorRate(props: MetricOptions): Metric =
-      unwrap(this).metricTotalErrorRate(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricTotalErrorRate(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Metric for the percentage of all viewer requests for which the response's HTTP status code is
@@ -1032,7 +1032,7 @@ public open class Distribution(
      * @param certificate A certificate to associate with the distribution. 
      */
     override fun certificate(certificate: ICertificate) {
-      cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
+      cdkBuilder.certificate(certificate.let(ICertificate.Companion::unwrap))
     }
 
     /**
@@ -1052,7 +1052,7 @@ public open class Distribution(
      * @param defaultBehavior The default behavior for the distribution. 
      */
     override fun defaultBehavior(defaultBehavior: BehaviorOptions) {
-      cdkBuilder.defaultBehavior(defaultBehavior.let(BehaviorOptions::unwrap))
+      cdkBuilder.defaultBehavior(defaultBehavior.let(BehaviorOptions.Companion::unwrap))
     }
 
     /**
@@ -1160,7 +1160,7 @@ public open class Distribution(
      * PageNotFound). 
      */
     override fun errorResponses(errorResponses: List<ErrorResponse>) {
-      cdkBuilder.errorResponses(errorResponses.map(ErrorResponse::unwrap))
+      cdkBuilder.errorResponses(errorResponses.map(ErrorResponse.Companion::unwrap))
     }
 
     /**
@@ -1182,7 +1182,7 @@ public open class Distribution(
      * @param geoRestriction Controls the countries in which your content is distributed. 
      */
     override fun geoRestriction(geoRestriction: GeoRestriction) {
-      cdkBuilder.geoRestriction(geoRestriction.let(GeoRestriction::unwrap))
+      cdkBuilder.geoRestriction(geoRestriction.let(GeoRestriction.Companion::unwrap))
     }
 
     /**
@@ -1197,7 +1197,7 @@ public open class Distribution(
      * communicate with CloudFront. 
      */
     override fun httpVersion(httpVersion: HttpVersion) {
-      cdkBuilder.httpVersion(httpVersion.let(HttpVersion::unwrap))
+      cdkBuilder.httpVersion(httpVersion.let(HttpVersion.Companion::unwrap))
     }
 
     /**
@@ -1211,7 +1211,7 @@ public open class Distribution(
      * @param logBucket The Amazon S3 bucket to store the access logs in. 
      */
     override fun logBucket(logBucket: IBucket) {
-      cdkBuilder.logBucket(logBucket.let(IBucket::unwrap))
+      cdkBuilder.logBucket(logBucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -1254,7 +1254,7 @@ public open class Distribution(
      * CloudFront to use for HTTPS connections. 
      */
     override fun minimumProtocolVersion(minimumProtocolVersion: SecurityPolicyProtocol) {
-      cdkBuilder.minimumProtocolVersion(minimumProtocolVersion.let(SecurityPolicyProtocol::unwrap))
+      cdkBuilder.minimumProtocolVersion(minimumProtocolVersion.let(SecurityPolicyProtocol.Companion::unwrap))
     }
 
     /**
@@ -1273,7 +1273,7 @@ public open class Distribution(
      * pay for CloudFront service. 
      */
     override fun priceClass(priceClass: PriceClass) {
-      cdkBuilder.priceClass(priceClass.let(PriceClass::unwrap))
+      cdkBuilder.priceClass(priceClass.let(PriceClass.Companion::unwrap))
     }
 
     /**
@@ -1316,7 +1316,7 @@ public open class Distribution(
      * @param sslSupportMethod The SSL method CloudFront will use for your distribution. 
      */
     override fun sslSupportMethod(sslSupportMethod: SSLMethod) {
-      cdkBuilder.sslSupportMethod(sslSupportMethod.let(SSLMethod::unwrap))
+      cdkBuilder.sslSupportMethod(sslSupportMethod.let(SSLMethod.Companion::unwrap))
     }
 
     /**
@@ -1348,8 +1348,8 @@ public open class Distribution(
       id: String,
       attrs: DistributionAttributes,
     ): IDistribution =
-        software.amazon.awscdk.services.cloudfront.Distribution.fromDistributionAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(DistributionAttributes::unwrap)).let(IDistribution::wrap)
+        software.amazon.awscdk.services.cloudfront.Distribution.fromDistributionAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(DistributionAttributes.Companion::unwrap)).let(IDistribution::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("13b637f527f535354a6fcac80fa4eef953671068e33f43e905ddf0f27899b7fd")

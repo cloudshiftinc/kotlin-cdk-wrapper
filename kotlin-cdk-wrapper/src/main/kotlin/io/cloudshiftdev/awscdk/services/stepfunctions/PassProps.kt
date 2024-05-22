@@ -185,7 +185,7 @@ public interface PassProps {
      * Can be used to inject or replace the current execution state.
      */
     override fun result(result: Result) {
-      cdkBuilder.result(result.let(Result::unwrap))
+      cdkBuilder.result(result.let(Result.Companion::unwrap))
     }
 
     /**

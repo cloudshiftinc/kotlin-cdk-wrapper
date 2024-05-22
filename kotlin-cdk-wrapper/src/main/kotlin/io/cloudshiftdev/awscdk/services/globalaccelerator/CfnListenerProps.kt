@@ -186,7 +186,7 @@ public interface CfnListenerProps {
      * accelerator. 
      */
     override fun portRanges(portRanges: IResolvable) {
-      cdkBuilder.portRanges(portRanges.let(IResolvable::unwrap))
+      cdkBuilder.portRanges(portRanges.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -68,8 +68,8 @@ public interface IClusterEngine : IEngine {
      * @param options 
      */
     override fun bindToCluster(scope: Construct, options: ClusterEngineBindOptions):
-        ClusterEngineConfig = unwrap(this).bindToCluster(scope.let(Construct::unwrap),
-        options.let(ClusterEngineBindOptions::unwrap)).let(ClusterEngineConfig::wrap)
+        ClusterEngineConfig = unwrap(this).bindToCluster(scope.let(Construct.Companion::unwrap),
+        options.let(ClusterEngineBindOptions.Companion::unwrap)).let(ClusterEngineConfig::wrap)
 
     /**
      * Method called when the engine is used to create a new cluster.

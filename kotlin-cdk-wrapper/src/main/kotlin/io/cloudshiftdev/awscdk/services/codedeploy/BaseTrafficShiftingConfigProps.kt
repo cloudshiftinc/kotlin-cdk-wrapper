@@ -62,7 +62,7 @@ public interface BaseTrafficShiftingConfigProps {
      * @param interval The amount of time between traffic shifts. 
      */
     override fun interval(interval: Duration) {
-      cdkBuilder.interval(interval.let(Duration::unwrap))
+      cdkBuilder.interval(interval.let(Duration.Companion::unwrap))
     }
 
     /**

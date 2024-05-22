@@ -50,8 +50,8 @@ public open class CfnPublicKey(
     id: String,
     props: CfnPublicKeyProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.CfnPublicKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPublicKeyProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.CfnPublicKey(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPublicKeyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -77,7 +77,7 @@ public open class CfnPublicKey(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -97,7 +97,7 @@ public open class CfnPublicKey(
    * .
    */
   public open fun publicKeyConfig(`value`: IResolvable) {
-    unwrap(this).setPublicKeyConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPublicKeyConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -108,7 +108,7 @@ public open class CfnPublicKey(
    * .
    */
   public open fun publicKeyConfig(`value`: PublicKeyConfigProperty) {
-    unwrap(this).setPublicKeyConfig(`value`.let(PublicKeyConfigProperty::unwrap))
+    unwrap(this).setPublicKeyConfig(`value`.let(PublicKeyConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -205,7 +205,7 @@ public open class CfnPublicKey(
      * . 
      */
     override fun publicKeyConfig(publicKeyConfig: IResolvable) {
-      cdkBuilder.publicKeyConfig(publicKeyConfig.let(IResolvable::unwrap))
+      cdkBuilder.publicKeyConfig(publicKeyConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -224,7 +224,7 @@ public open class CfnPublicKey(
      * . 
      */
     override fun publicKeyConfig(publicKeyConfig: PublicKeyConfigProperty) {
-      cdkBuilder.publicKeyConfig(publicKeyConfig.let(PublicKeyConfigProperty::unwrap))
+      cdkBuilder.publicKeyConfig(publicKeyConfig.let(PublicKeyConfigProperty.Companion::unwrap))
     }
 
     /**

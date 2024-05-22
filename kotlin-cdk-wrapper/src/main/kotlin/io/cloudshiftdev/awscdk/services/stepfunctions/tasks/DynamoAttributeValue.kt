@@ -62,7 +62,7 @@ public open class DynamoAttributeValue(
         software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.fromBoolean(`value`).let(DynamoAttributeValue::wrap)
 
     public fun fromList(`value`: List<DynamoAttributeValue>): DynamoAttributeValue =
-        software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.fromList(`value`.map(DynamoAttributeValue::unwrap)).let(DynamoAttributeValue::wrap)
+        software.amazon.awscdk.services.stepfunctions.tasks.DynamoAttributeValue.fromList(`value`.map(DynamoAttributeValue.Companion::unwrap)).let(DynamoAttributeValue::wrap)
 
     public fun fromList(vararg `value`: DynamoAttributeValue): DynamoAttributeValue =
         fromList(`value`.toList())

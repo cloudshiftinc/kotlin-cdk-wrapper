@@ -45,8 +45,8 @@ public open class CfnProject(
     id: String,
     props: CfnProjectProps,
   ) :
-      this(software.amazon.awscdk.services.datazone.CfnProject(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnProjectProps::unwrap))
+      this(software.amazon.awscdk.services.datazone.CfnProject(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnProjectProps.Companion::unwrap))
   )
 
   public constructor(
@@ -128,7 +128,7 @@ public open class CfnProject(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

@@ -39,8 +39,8 @@ public abstract class Artifacts(
    * @param _project 
    */
   public override fun bind(scope: Construct, project: IProject): ArtifactsConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap),
-      project.let(IProject::unwrap)).let(ArtifactsConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      project.let(IProject.Companion::unwrap)).let(ArtifactsConfig::wrap)
 
   /**
    * The artifact identifier.
@@ -60,7 +60,7 @@ public abstract class Artifacts(
 
   public companion object {
     public fun s3(props: S3ArtifactsProps): IArtifacts =
-        software.amazon.awscdk.services.codebuild.Artifacts.s3(props.let(S3ArtifactsProps::unwrap)).let(IArtifacts::wrap)
+        software.amazon.awscdk.services.codebuild.Artifacts.s3(props.let(S3ArtifactsProps.Companion::unwrap)).let(IArtifacts::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d63d027642e646b44f6750fe1ce755acaee0627a88e8371711800562702f65de")

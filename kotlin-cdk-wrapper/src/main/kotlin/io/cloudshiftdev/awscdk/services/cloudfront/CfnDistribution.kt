@@ -49,8 +49,8 @@ public open class CfnDistribution(
     id: String,
     props: CfnDistributionProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.CfnDistribution(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDistributionProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.CfnDistribution(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDistributionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -81,14 +81,14 @@ public open class CfnDistribution(
    * The distribution's configuration.
    */
   public open fun distributionConfig(`value`: IResolvable) {
-    unwrap(this).setDistributionConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDistributionConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The distribution's configuration.
    */
   public open fun distributionConfig(`value`: DistributionConfigProperty) {
-    unwrap(this).setDistributionConfig(`value`.let(DistributionConfigProperty::unwrap))
+    unwrap(this).setDistributionConfig(`value`.let(DistributionConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -105,7 +105,7 @@ public open class CfnDistribution(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -123,7 +123,7 @@ public open class CfnDistribution(
    * A complex type that contains zero or more `Tag` elements.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -193,7 +193,7 @@ public open class CfnDistribution(
      * @param distributionConfig The distribution's configuration. 
      */
     override fun distributionConfig(distributionConfig: IResolvable) {
-      cdkBuilder.distributionConfig(distributionConfig.let(IResolvable::unwrap))
+      cdkBuilder.distributionConfig(distributionConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -203,7 +203,7 @@ public open class CfnDistribution(
      * @param distributionConfig The distribution's configuration. 
      */
     override fun distributionConfig(distributionConfig: DistributionConfigProperty) {
-      cdkBuilder.distributionConfig(distributionConfig.let(DistributionConfigProperty::unwrap))
+      cdkBuilder.distributionConfig(distributionConfig.let(DistributionConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -225,7 +225,7 @@ public open class CfnDistribution(
      * @param tags A complex type that contains zero or more `Tag` elements. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -276,9 +276,10 @@ public open class CfnDistribution(
    * in the *Amazon CloudFront Developer Guide* .
    *
    * If you don't want to specify any cache behaviors, include only an empty `CacheBehaviors`
-   * element. For more information, see
+   * element. Don't specify an empty individual `CacheBehavior` element, because this is invalid. For
+   * more information, see
    * [CacheBehaviors](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CacheBehaviors.html)
-   * . Don't include an empty `CacheBehavior` element because this is invalid.
+   * .
    *
    * To delete all cache behaviors in an existing distribution, update the distribution
    * configuration and include only an empty `CacheBehaviors` element.
@@ -1233,7 +1234,7 @@ public open class CfnDistribution(
        * in the *Amazon CloudFront Developer Guide* .
        */
       override fun compress(compress: IResolvable) {
-        cdkBuilder.compress(compress.let(IResolvable::unwrap))
+        cdkBuilder.compress(compress.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1294,7 +1295,7 @@ public open class CfnDistribution(
        * headers.
        */
       override fun forwardedValues(forwardedValues: IResolvable) {
-        cdkBuilder.forwardedValues(forwardedValues.let(IResolvable::unwrap))
+        cdkBuilder.forwardedValues(forwardedValues.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1325,7 +1326,7 @@ public open class CfnDistribution(
        * headers.
        */
       override fun forwardedValues(forwardedValues: ForwardedValuesProperty) {
-        cdkBuilder.forwardedValues(forwardedValues.let(ForwardedValuesProperty::unwrap))
+        cdkBuilder.forwardedValues(forwardedValues.let(ForwardedValuesProperty.Companion::unwrap))
       }
 
       /**
@@ -1367,7 +1368,7 @@ public open class CfnDistribution(
        * behavior.
        */
       override fun functionAssociations(functionAssociations: IResolvable) {
-        cdkBuilder.functionAssociations(functionAssociations.let(IResolvable::unwrap))
+        cdkBuilder.functionAssociations(functionAssociations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1394,7 +1395,7 @@ public open class CfnDistribution(
        * function associations for a cache behavior.
        */
       override fun lambdaFunctionAssociations(lambdaFunctionAssociations: IResolvable) {
-        cdkBuilder.lambdaFunctionAssociations(lambdaFunctionAssociations.let(IResolvable::unwrap))
+        cdkBuilder.lambdaFunctionAssociations(lambdaFunctionAssociations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1529,7 +1530,7 @@ public open class CfnDistribution(
        * content matches the value of `PathPattern` .
        */
       override fun smoothStreaming(smoothStreaming: IResolvable) {
-        cdkBuilder.smoothStreaming(smoothStreaming.let(IResolvable::unwrap))
+        cdkBuilder.smoothStreaming(smoothStreaming.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3999,7 +4000,7 @@ public open class CfnDistribution(
        * in the *Amazon CloudFront Developer Guide* .
        */
       override fun compress(compress: IResolvable) {
-        cdkBuilder.compress(compress.let(IResolvable::unwrap))
+        cdkBuilder.compress(compress.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4060,7 +4061,7 @@ public open class CfnDistribution(
        * headers.
        */
       override fun forwardedValues(forwardedValues: IResolvable) {
-        cdkBuilder.forwardedValues(forwardedValues.let(IResolvable::unwrap))
+        cdkBuilder.forwardedValues(forwardedValues.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4091,7 +4092,7 @@ public open class CfnDistribution(
        * headers.
        */
       override fun forwardedValues(forwardedValues: ForwardedValuesProperty) {
-        cdkBuilder.forwardedValues(forwardedValues.let(ForwardedValuesProperty::unwrap))
+        cdkBuilder.forwardedValues(forwardedValues.let(ForwardedValuesProperty.Companion::unwrap))
       }
 
       /**
@@ -4133,7 +4134,7 @@ public open class CfnDistribution(
        * behavior.
        */
       override fun functionAssociations(functionAssociations: IResolvable) {
-        cdkBuilder.functionAssociations(functionAssociations.let(IResolvable::unwrap))
+        cdkBuilder.functionAssociations(functionAssociations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4160,7 +4161,7 @@ public open class CfnDistribution(
        * function associations for a cache behavior.
        */
       override fun lambdaFunctionAssociations(lambdaFunctionAssociations: IResolvable) {
-        cdkBuilder.lambdaFunctionAssociations(lambdaFunctionAssociations.let(IResolvable::unwrap))
+        cdkBuilder.lambdaFunctionAssociations(lambdaFunctionAssociations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4273,7 +4274,7 @@ public open class CfnDistribution(
        * content matches the value of `PathPattern` .
        */
       override fun smoothStreaming(smoothStreaming: IResolvable) {
-        cdkBuilder.smoothStreaming(smoothStreaming.let(IResolvable::unwrap))
+        cdkBuilder.smoothStreaming(smoothStreaming.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5662,7 +5663,7 @@ public open class CfnDistribution(
        * @param cacheBehaviors A complex type that contains zero or more `CacheBehavior` elements.
        */
       override fun cacheBehaviors(cacheBehaviors: IResolvable) {
-        cdkBuilder.cacheBehaviors(cacheBehaviors.let(IResolvable::unwrap))
+        cdkBuilder.cacheBehaviors(cacheBehaviors.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5717,7 +5718,7 @@ public open class CfnDistribution(
        * in the *Amazon CloudFront Developer Guide* .
        */
       override fun customErrorResponses(customErrorResponses: IResolvable) {
-        cdkBuilder.customErrorResponses(customErrorResponses.let(IResolvable::unwrap))
+        cdkBuilder.customErrorResponses(customErrorResponses.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5751,14 +5752,14 @@ public open class CfnDistribution(
        * @param customOrigin the value to be set.
        */
       override fun customOrigin(customOrigin: IResolvable) {
-        cdkBuilder.customOrigin(customOrigin.let(IResolvable::unwrap))
+        cdkBuilder.customOrigin(customOrigin.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param customOrigin the value to be set.
        */
       override fun customOrigin(customOrigin: LegacyCustomOriginProperty) {
-        cdkBuilder.customOrigin(customOrigin.let(LegacyCustomOriginProperty::unwrap))
+        cdkBuilder.customOrigin(customOrigin.let(LegacyCustomOriginProperty.Companion::unwrap))
       }
 
       /**
@@ -5776,7 +5777,7 @@ public open class CfnDistribution(
        * You must create exactly one default cache behavior.
        */
       override fun defaultCacheBehavior(defaultCacheBehavior: IResolvable) {
-        cdkBuilder.defaultCacheBehavior(defaultCacheBehavior.let(IResolvable::unwrap))
+        cdkBuilder.defaultCacheBehavior(defaultCacheBehavior.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5786,7 +5787,7 @@ public open class CfnDistribution(
        * You must create exactly one default cache behavior.
        */
       override fun defaultCacheBehavior(defaultCacheBehavior: DefaultCacheBehaviorProperty) {
-        cdkBuilder.defaultCacheBehavior(defaultCacheBehavior.let(DefaultCacheBehaviorProperty::unwrap))
+        cdkBuilder.defaultCacheBehavior(defaultCacheBehavior.let(DefaultCacheBehaviorProperty.Companion::unwrap))
       }
 
       /**
@@ -5838,7 +5839,7 @@ public open class CfnDistribution(
        * @param enabled From this field, you can enable or disable the selected distribution. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5934,7 +5935,7 @@ public open class CfnDistribution(
        * traffic to your distribution regardless of the IP address format of the viewer request.
        */
       override fun ipv6Enabled(ipv6Enabled: IResolvable) {
-        cdkBuilder.ipv6Enabled(ipv6Enabled.let(IResolvable::unwrap))
+        cdkBuilder.ipv6Enabled(ipv6Enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5945,7 +5946,7 @@ public open class CfnDistribution(
        * the *Amazon CloudFront Developer Guide* .
        */
       override fun logging(logging: IResolvable) {
-        cdkBuilder.logging(logging.let(IResolvable::unwrap))
+        cdkBuilder.logging(logging.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5956,7 +5957,7 @@ public open class CfnDistribution(
        * the *Amazon CloudFront Developer Guide* .
        */
       override fun logging(logging: LoggingProperty) {
-        cdkBuilder.logging(logging.let(LoggingProperty::unwrap))
+        cdkBuilder.logging(logging.let(LoggingProperty.Companion::unwrap))
       }
 
       /**
@@ -5976,7 +5977,7 @@ public open class CfnDistribution(
        * distribution.
        */
       override fun originGroups(originGroups: IResolvable) {
-        cdkBuilder.originGroups(originGroups.let(IResolvable::unwrap))
+        cdkBuilder.originGroups(originGroups.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5984,7 +5985,7 @@ public open class CfnDistribution(
        * distribution.
        */
       override fun originGroups(originGroups: OriginGroupsProperty) {
-        cdkBuilder.originGroups(originGroups.let(OriginGroupsProperty::unwrap))
+        cdkBuilder.originGroups(originGroups.let(OriginGroupsProperty.Companion::unwrap))
       }
 
       /**
@@ -6001,7 +6002,7 @@ public open class CfnDistribution(
        * distribution.
        */
       override fun origins(origins: IResolvable) {
-        cdkBuilder.origins(origins.let(IResolvable::unwrap))
+        cdkBuilder.origins(origins.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6044,7 +6045,7 @@ public open class CfnDistribution(
        * distribution of your content.
        */
       override fun restrictions(restrictions: IResolvable) {
-        cdkBuilder.restrictions(restrictions.let(IResolvable::unwrap))
+        cdkBuilder.restrictions(restrictions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6052,7 +6053,7 @@ public open class CfnDistribution(
        * distribution of your content.
        */
       override fun restrictions(restrictions: RestrictionsProperty) {
-        cdkBuilder.restrictions(restrictions.let(RestrictionsProperty::unwrap))
+        cdkBuilder.restrictions(restrictions.let(RestrictionsProperty.Companion::unwrap))
       }
 
       /**
@@ -6068,14 +6069,14 @@ public open class CfnDistribution(
        * @param s3Origin the value to be set.
        */
       override fun s3Origin(s3Origin: IResolvable) {
-        cdkBuilder.s3Origin(s3Origin.let(IResolvable::unwrap))
+        cdkBuilder.s3Origin(s3Origin.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3Origin the value to be set.
        */
       override fun s3Origin(s3Origin: LegacyS3OriginProperty) {
-        cdkBuilder.s3Origin(s3Origin.let(LegacyS3OriginProperty::unwrap))
+        cdkBuilder.s3Origin(s3Origin.let(LegacyS3OriginProperty.Companion::unwrap))
       }
 
       /**
@@ -6101,7 +6102,7 @@ public open class CfnDistribution(
        * this is not a staging distribution.
        */
       override fun staging(staging: IResolvable) {
-        cdkBuilder.staging(staging.let(IResolvable::unwrap))
+        cdkBuilder.staging(staging.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6109,7 +6110,7 @@ public open class CfnDistribution(
        * configuration for communicating with viewers.
        */
       override fun viewerCertificate(viewerCertificate: IResolvable) {
-        cdkBuilder.viewerCertificate(viewerCertificate.let(IResolvable::unwrap))
+        cdkBuilder.viewerCertificate(viewerCertificate.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6117,7 +6118,7 @@ public open class CfnDistribution(
        * configuration for communicating with viewers.
        */
       override fun viewerCertificate(viewerCertificate: ViewerCertificateProperty) {
-        cdkBuilder.viewerCertificate(viewerCertificate.let(ViewerCertificateProperty::unwrap))
+        cdkBuilder.viewerCertificate(viewerCertificate.let(ViewerCertificateProperty.Companion::unwrap))
       }
 
       /**
@@ -6873,7 +6874,7 @@ public open class CfnDistribution(
        * the *Amazon CloudFront Developer Guide* .
        */
       override fun cookies(cookies: IResolvable) {
-        cdkBuilder.cookies(cookies.let(IResolvable::unwrap))
+        cdkBuilder.cookies(cookies.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6897,7 +6898,7 @@ public open class CfnDistribution(
        * the *Amazon CloudFront Developer Guide* .
        */
       override fun cookies(cookies: CookiesProperty) {
-        cdkBuilder.cookies(cookies.let(CookiesProperty::unwrap))
+        cdkBuilder.cookies(cookies.let(CookiesProperty.Companion::unwrap))
       }
 
       /**
@@ -7054,7 +7055,7 @@ public open class CfnDistribution(
        * in the *Amazon CloudFront Developer Guide* .
        */
       override fun queryString(queryString: IResolvable) {
-        cdkBuilder.queryString(queryString.let(IResolvable::unwrap))
+        cdkBuilder.queryString(queryString.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7734,7 +7735,7 @@ public open class CfnDistribution(
        * in the Amazon CloudFront Developer Guide.
        */
       override fun includeBody(includeBody: IResolvable) {
-        cdkBuilder.includeBody(includeBody.let(IResolvable::unwrap))
+        cdkBuilder.includeBody(includeBody.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8237,7 +8238,7 @@ public open class CfnDistribution(
        * distribution, specify `false` for `IncludeCookies` .
        */
       override fun includeCookies(includeCookies: IResolvable) {
-        cdkBuilder.includeCookies(includeCookies.let(IResolvable::unwrap))
+        cdkBuilder.includeCookies(includeCookies.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8504,7 +8505,7 @@ public open class CfnDistribution(
        * trigger CloudFront to failover to the second origin. 
        */
       override fun statusCodes(statusCodes: IResolvable) {
-        cdkBuilder.statusCodes(statusCodes.let(IResolvable::unwrap))
+        cdkBuilder.statusCodes(statusCodes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8512,7 +8513,7 @@ public open class CfnDistribution(
        * trigger CloudFront to failover to the second origin. 
        */
       override fun statusCodes(statusCodes: StatusCodesProperty) {
-        cdkBuilder.statusCodes(statusCodes.let(StatusCodesProperty::unwrap))
+        cdkBuilder.statusCodes(statusCodes.let(StatusCodesProperty.Companion::unwrap))
       }
 
       /**
@@ -8712,7 +8713,7 @@ public open class CfnDistribution(
        * @param items Items (origins) in an origin group. 
        */
       override fun items(items: IResolvable) {
-        cdkBuilder.items(items.let(IResolvable::unwrap))
+        cdkBuilder.items(items.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8893,7 +8894,7 @@ public open class CfnDistribution(
        * criteria for an origin group. 
        */
       override fun failoverCriteria(failoverCriteria: IResolvable) {
-        cdkBuilder.failoverCriteria(failoverCriteria.let(IResolvable::unwrap))
+        cdkBuilder.failoverCriteria(failoverCriteria.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8901,7 +8902,7 @@ public open class CfnDistribution(
        * criteria for an origin group. 
        */
       override fun failoverCriteria(failoverCriteria: OriginGroupFailoverCriteriaProperty) {
-        cdkBuilder.failoverCriteria(failoverCriteria.let(OriginGroupFailoverCriteriaProperty::unwrap))
+        cdkBuilder.failoverCriteria(failoverCriteria.let(OriginGroupFailoverCriteriaProperty.Companion::unwrap))
       }
 
       /**
@@ -8926,7 +8927,7 @@ public open class CfnDistribution(
        * group. 
        */
       override fun members(members: IResolvable) {
-        cdkBuilder.members(members.let(IResolvable::unwrap))
+        cdkBuilder.members(members.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8934,7 +8935,7 @@ public open class CfnDistribution(
        * group. 
        */
       override fun members(members: OriginGroupMembersProperty) {
-        cdkBuilder.members(members.let(OriginGroupMembersProperty::unwrap))
+        cdkBuilder.members(members.let(OriginGroupMembersProperty.Companion::unwrap))
       }
 
       /**
@@ -9076,7 +9077,7 @@ public open class CfnDistribution(
        * @param items The items (origin groups) in a distribution.
        */
       override fun items(items: IResolvable) {
-        cdkBuilder.items(items.let(IResolvable::unwrap))
+        cdkBuilder.items(items.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9554,7 +9555,7 @@ public open class CfnDistribution(
        * instead.
        */
       override fun customOriginConfig(customOriginConfig: IResolvable) {
-        cdkBuilder.customOriginConfig(customOriginConfig.let(IResolvable::unwrap))
+        cdkBuilder.customOriginConfig(customOriginConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9565,7 +9566,7 @@ public open class CfnDistribution(
        * instead.
        */
       override fun customOriginConfig(customOriginConfig: CustomOriginConfigProperty) {
-        cdkBuilder.customOriginConfig(customOriginConfig.let(CustomOriginConfigProperty::unwrap))
+        cdkBuilder.customOriginConfig(customOriginConfig.let(CustomOriginConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -9620,7 +9621,7 @@ public open class CfnDistribution(
        * in the *Amazon CloudFront Developer Guide* .
        */
       override fun originCustomHeaders(originCustomHeaders: IResolvable) {
-        cdkBuilder.originCustomHeaders(originCustomHeaders.let(IResolvable::unwrap))
+        cdkBuilder.originCustomHeaders(originCustomHeaders.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9663,7 +9664,7 @@ public open class CfnDistribution(
        * in the *Amazon CloudFront Developer Guide* .
        */
       override fun originShield(originShield: IResolvable) {
-        cdkBuilder.originShield(originShield.let(IResolvable::unwrap))
+        cdkBuilder.originShield(originShield.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9674,7 +9675,7 @@ public open class CfnDistribution(
        * in the *Amazon CloudFront Developer Guide* .
        */
       override fun originShield(originShield: OriginShieldProperty) {
-        cdkBuilder.originShield(originShield.let(OriginShieldProperty::unwrap))
+        cdkBuilder.originShield(originShield.let(OriginShieldProperty.Companion::unwrap))
       }
 
       /**
@@ -9696,7 +9697,7 @@ public open class CfnDistribution(
        * static website hosting, use the `CustomOriginConfig` type instead.
        */
       override fun s3OriginConfig(s3OriginConfig: IResolvable) {
-        cdkBuilder.s3OriginConfig(s3OriginConfig.let(IResolvable::unwrap))
+        cdkBuilder.s3OriginConfig(s3OriginConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9706,7 +9707,7 @@ public open class CfnDistribution(
        * static website hosting, use the `CustomOriginConfig` type instead.
        */
       override fun s3OriginConfig(s3OriginConfig: S3OriginConfigProperty) {
-        cdkBuilder.s3OriginConfig(s3OriginConfig.let(S3OriginConfigProperty::unwrap))
+        cdkBuilder.s3OriginConfig(s3OriginConfig.let(S3OriginConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -9981,7 +9982,7 @@ public open class CfnDistribution(
        * origin from multiple edge locations or regional edge caches.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10140,7 +10141,7 @@ public open class CfnDistribution(
        * property from your stack template.
        */
       override fun geoRestriction(geoRestriction: IResolvable) {
-        cdkBuilder.geoRestriction(geoRestriction.let(IResolvable::unwrap))
+        cdkBuilder.geoRestriction(geoRestriction.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10152,7 +10153,7 @@ public open class CfnDistribution(
        * property from your stack template.
        */
       override fun geoRestriction(geoRestriction: GeoRestrictionProperty) {
-        cdkBuilder.geoRestriction(geoRestriction.let(GeoRestrictionProperty::unwrap))
+        cdkBuilder.geoRestriction(geoRestriction.let(GeoRestrictionProperty.Companion::unwrap))
       }
 
       /**
@@ -10470,7 +10471,7 @@ public open class CfnDistribution(
        * @param items The items (status codes) for an origin group. 
        */
       override fun items(items: IResolvable) {
-        cdkBuilder.items(items.let(IResolvable::unwrap))
+        cdkBuilder.items(items.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10863,7 +10864,7 @@ public open class CfnDistribution(
        * * `SslSupportMethod`
        */
       override fun cloudFrontDefaultCertificate(cloudFrontDefaultCertificate: IResolvable) {
-        cdkBuilder.cloudFrontDefaultCertificate(cloudFrontDefaultCertificate.let(IResolvable::unwrap))
+        cdkBuilder.cloudFrontDefaultCertificate(cloudFrontDefaultCertificate.let(IResolvable.Companion::unwrap))
       }
 
       /**

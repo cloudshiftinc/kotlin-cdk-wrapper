@@ -296,7 +296,7 @@ public interface CfnDomainConfigurationProps {
      * @param authorizerConfig An object that specifies the authorization service for a domain.
      */
     override fun authorizerConfig(authorizerConfig: IResolvable) {
-      cdkBuilder.authorizerConfig(authorizerConfig.let(IResolvable::unwrap))
+      cdkBuilder.authorizerConfig(authorizerConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -304,7 +304,7 @@ public interface CfnDomainConfigurationProps {
      */
     override
         fun authorizerConfig(authorizerConfig: CfnDomainConfiguration.AuthorizerConfigProperty) {
-      cdkBuilder.authorizerConfig(authorizerConfig.let(CfnDomainConfiguration.AuthorizerConfigProperty::unwrap))
+      cdkBuilder.authorizerConfig(authorizerConfig.let(CfnDomainConfiguration.AuthorizerConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -366,7 +366,7 @@ public interface CfnDomainConfigurationProps {
      * from the AWS IoT Core Developer Guide.
      */
     override fun serverCertificateConfig(serverCertificateConfig: IResolvable) {
-      cdkBuilder.serverCertificateConfig(serverCertificateConfig.let(IResolvable::unwrap))
+      cdkBuilder.serverCertificateConfig(serverCertificateConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -377,7 +377,7 @@ public interface CfnDomainConfigurationProps {
      */
     override
         fun serverCertificateConfig(serverCertificateConfig: CfnDomainConfiguration.ServerCertificateConfigProperty) {
-      cdkBuilder.serverCertificateConfig(serverCertificateConfig.let(CfnDomainConfiguration.ServerCertificateConfigProperty::unwrap))
+      cdkBuilder.serverCertificateConfig(serverCertificateConfig.let(CfnDomainConfiguration.ServerCertificateConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -413,7 +413,7 @@ public interface CfnDomainConfigurationProps {
      * For the cli-input-json file use format: "tags": "key1=value1&amp;key2=value2..."
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -432,14 +432,14 @@ public interface CfnDomainConfigurationProps {
      * @param tlsConfig An object that specifies the TLS configuration for a domain.
      */
     override fun tlsConfig(tlsConfig: IResolvable) {
-      cdkBuilder.tlsConfig(tlsConfig.let(IResolvable::unwrap))
+      cdkBuilder.tlsConfig(tlsConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param tlsConfig An object that specifies the TLS configuration for a domain.
      */
     override fun tlsConfig(tlsConfig: CfnDomainConfiguration.TlsConfigProperty) {
-      cdkBuilder.tlsConfig(tlsConfig.let(CfnDomainConfiguration.TlsConfigProperty::unwrap))
+      cdkBuilder.tlsConfig(tlsConfig.let(CfnDomainConfiguration.TlsConfigProperty.Companion::unwrap))
     }
 
     /**

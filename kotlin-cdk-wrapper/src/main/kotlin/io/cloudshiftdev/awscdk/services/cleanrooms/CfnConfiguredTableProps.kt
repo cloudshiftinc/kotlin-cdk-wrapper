@@ -254,7 +254,7 @@ public interface CfnConfiguredTableProps {
      * @param analysisRules The entire created analysis rule.
      */
     override fun analysisRules(analysisRules: IResolvable) {
-      cdkBuilder.analysisRules(analysisRules.let(IResolvable::unwrap))
+      cdkBuilder.analysisRules(analysisRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -288,14 +288,14 @@ public interface CfnConfiguredTableProps {
      * @param tableReference The AWS Glue table that this configured table represents. 
      */
     override fun tableReference(tableReference: IResolvable) {
-      cdkBuilder.tableReference(tableReference.let(IResolvable::unwrap))
+      cdkBuilder.tableReference(tableReference.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param tableReference The AWS Glue table that this configured table represents. 
      */
     override fun tableReference(tableReference: CfnConfiguredTable.TableReferenceProperty) {
-      cdkBuilder.tableReference(tableReference.let(CfnConfiguredTable.TableReferenceProperty::unwrap))
+      cdkBuilder.tableReference(tableReference.let(CfnConfiguredTable.TableReferenceProperty.Companion::unwrap))
     }
 
     /**
@@ -314,7 +314,7 @@ public interface CfnConfiguredTableProps {
      * resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

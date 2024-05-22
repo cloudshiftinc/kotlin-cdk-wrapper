@@ -75,7 +75,7 @@ public interface EksOptimizedImageProps {
      * @param cpuArch What cpu architecture to retrieve the image for (arm64 or x86_64).
      */
     override fun cpuArch(cpuArch: CpuArch) {
-      cdkBuilder.cpuArch(cpuArch.let(CpuArch::unwrap))
+      cdkBuilder.cpuArch(cpuArch.let(CpuArch.Companion::unwrap))
     }
 
     /**
@@ -89,7 +89,7 @@ public interface EksOptimizedImageProps {
      * @param nodeType What instance type to retrieve the image for (standard or GPU-optimized).
      */
     override fun nodeType(nodeType: NodeType) {
-      cdkBuilder.nodeType(nodeType.let(NodeType::unwrap))
+      cdkBuilder.nodeType(nodeType.let(NodeType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.eks.EksOptimizedImageProps =

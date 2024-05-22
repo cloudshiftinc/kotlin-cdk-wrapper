@@ -111,8 +111,8 @@ public open class CfnTheme(
     id: String,
     props: CfnThemeProps,
   ) :
-      this(software.amazon.awscdk.services.quicksight.CfnTheme(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnThemeProps::unwrap))
+      this(software.amazon.awscdk.services.quicksight.CfnTheme(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnThemeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -143,7 +143,7 @@ public open class CfnTheme(
   public open fun attrType(): String = unwrap(this).getAttrType()
 
   /**
-   *
+   * A version of a theme.</p>.
    */
   public open fun attrVersion(): IResolvable = unwrap(this).getAttrVersion().let(IResolvable::wrap)
 
@@ -247,14 +247,14 @@ public open class CfnTheme(
    * The theme configuration, which contains the theme display properties.
    */
   public open fun configuration(`value`: IResolvable) {
-    unwrap(this).setConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The theme configuration, which contains the theme display properties.
    */
   public open fun configuration(`value`: ThemeConfigurationProperty) {
-    unwrap(this).setConfiguration(`value`.let(ThemeConfigurationProperty::unwrap))
+    unwrap(this).setConfiguration(`value`.let(ThemeConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -271,7 +271,7 @@ public open class CfnTheme(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -295,7 +295,7 @@ public open class CfnTheme(
    * A valid grouping of resource permissions to apply to the new theme.
    */
   public open fun permissions(`value`: IResolvable) {
-    unwrap(this).setPermissions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPermissions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -325,7 +325,7 @@ public open class CfnTheme(
    * A map of the key-value pairs for the resource tag or tags that you want to add to the resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -519,7 +519,7 @@ public open class CfnTheme(
      * @param configuration The theme configuration, which contains the theme display properties. 
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -529,7 +529,7 @@ public open class CfnTheme(
      * @param configuration The theme configuration, which contains the theme display properties. 
      */
     override fun configuration(configuration: ThemeConfigurationProperty) {
-      cdkBuilder.configuration(configuration.let(ThemeConfigurationProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(ThemeConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -560,7 +560,7 @@ public open class CfnTheme(
      * @param permissions A valid grouping of resource permissions to apply to the new theme. 
      */
     override fun permissions(permissions: IResolvable) {
-      cdkBuilder.permissions(permissions.let(IResolvable::unwrap))
+      cdkBuilder.permissions(permissions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -590,7 +590,7 @@ public open class CfnTheme(
      * the resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -708,7 +708,7 @@ public open class CfnTheme(
        * @param show The option to enable display of borders for visuals.
        */
       override fun show(show: IResolvable) {
-        cdkBuilder.show(show.let(IResolvable::unwrap))
+        cdkBuilder.show(show.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.BorderStyleProperty =
@@ -1047,7 +1047,7 @@ public open class CfnTheme(
        * tiles.
        */
       override fun show(show: IResolvable) {
-        cdkBuilder.show(show.let(IResolvable::unwrap))
+        cdkBuilder.show(show.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.GutterStyleProperty =
@@ -1139,7 +1139,7 @@ public open class CfnTheme(
        * @param show This Boolean value controls whether to display sheet margins.
        */
       override fun show(show: IResolvable) {
-        cdkBuilder.show(show.let(IResolvable::unwrap))
+        cdkBuilder.show(show.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.quicksight.CfnTheme.MarginStyleProperty =
@@ -1440,14 +1440,14 @@ public open class CfnTheme(
        * @param tile The display options for tiles.
        */
       override fun tile(tile: IResolvable) {
-        cdkBuilder.tile(tile.let(IResolvable::unwrap))
+        cdkBuilder.tile(tile.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param tile The display options for tiles.
        */
       override fun tile(tile: TileStyleProperty) {
-        cdkBuilder.tile(tile.let(TileStyleProperty::unwrap))
+        cdkBuilder.tile(tile.let(TileStyleProperty.Companion::unwrap))
       }
 
       /**
@@ -1462,14 +1462,14 @@ public open class CfnTheme(
        * @param tileLayout The layout options for tiles.
        */
       override fun tileLayout(tileLayout: IResolvable) {
-        cdkBuilder.tileLayout(tileLayout.let(IResolvable::unwrap))
+        cdkBuilder.tileLayout(tileLayout.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param tileLayout The layout options for tiles.
        */
       override fun tileLayout(tileLayout: TileLayoutStyleProperty) {
-        cdkBuilder.tileLayout(tileLayout.let(TileLayoutStyleProperty::unwrap))
+        cdkBuilder.tileLayout(tileLayout.let(TileLayoutStyleProperty.Companion::unwrap))
       }
 
       /**
@@ -1693,14 +1693,14 @@ public open class CfnTheme(
        * @param dataColorPalette Color properties that apply to chart data colors.
        */
       override fun dataColorPalette(dataColorPalette: IResolvable) {
-        cdkBuilder.dataColorPalette(dataColorPalette.let(IResolvable::unwrap))
+        cdkBuilder.dataColorPalette(dataColorPalette.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dataColorPalette Color properties that apply to chart data colors.
        */
       override fun dataColorPalette(dataColorPalette: DataColorPaletteProperty) {
-        cdkBuilder.dataColorPalette(dataColorPalette.let(DataColorPaletteProperty::unwrap))
+        cdkBuilder.dataColorPalette(dataColorPalette.let(DataColorPaletteProperty.Companion::unwrap))
       }
 
       /**
@@ -1715,14 +1715,14 @@ public open class CfnTheme(
        * @param sheet Display options related to sheets.
        */
       override fun sheet(sheet: IResolvable) {
-        cdkBuilder.sheet(sheet.let(IResolvable::unwrap))
+        cdkBuilder.sheet(sheet.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sheet Display options related to sheets.
        */
       override fun sheet(sheet: SheetStyleProperty) {
-        cdkBuilder.sheet(sheet.let(SheetStyleProperty::unwrap))
+        cdkBuilder.sheet(sheet.let(SheetStyleProperty.Companion::unwrap))
       }
 
       /**
@@ -1737,14 +1737,14 @@ public open class CfnTheme(
        * @param typography the value to be set.
        */
       override fun typography(typography: IResolvable) {
-        cdkBuilder.typography(typography.let(IResolvable::unwrap))
+        cdkBuilder.typography(typography.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param typography the value to be set.
        */
       override fun typography(typography: TypographyProperty) {
-        cdkBuilder.typography(typography.let(TypographyProperty::unwrap))
+        cdkBuilder.typography(typography.let(TypographyProperty.Companion::unwrap))
       }
 
       /**
@@ -1760,7 +1760,7 @@ public open class CfnTheme(
        * colors that apply to data.
        */
       override fun uiColorPalette(uiColorPalette: IResolvable) {
-        cdkBuilder.uiColorPalette(uiColorPalette.let(IResolvable::unwrap))
+        cdkBuilder.uiColorPalette(uiColorPalette.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1768,7 +1768,7 @@ public open class CfnTheme(
        * colors that apply to data.
        */
       override fun uiColorPalette(uiColorPalette: UIColorPaletteProperty) {
-        cdkBuilder.uiColorPalette(uiColorPalette.let(UIColorPaletteProperty::unwrap))
+        cdkBuilder.uiColorPalette(uiColorPalette.let(UIColorPaletteProperty.Companion::unwrap))
       }
 
       /**
@@ -2169,7 +2169,7 @@ public open class CfnTheme(
        * properties.
        */
       override fun configuration(configuration: IResolvable) {
-        cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+        cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2177,7 +2177,7 @@ public open class CfnTheme(
        * properties.
        */
       override fun configuration(configuration: ThemeConfigurationProperty) {
-        cdkBuilder.configuration(configuration.let(ThemeConfigurationProperty::unwrap))
+        cdkBuilder.configuration(configuration.let(ThemeConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2207,7 +2207,7 @@ public open class CfnTheme(
        * @param errors Errors associated with the theme.
        */
       override fun errors(errors: IResolvable) {
-        cdkBuilder.errors(errors.let(IResolvable::unwrap))
+        cdkBuilder.errors(errors.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2405,14 +2405,14 @@ public open class CfnTheme(
        * @param gutter The gutter settings that apply between tiles.
        */
       override fun gutter(gutter: IResolvable) {
-        cdkBuilder.gutter(gutter.let(IResolvable::unwrap))
+        cdkBuilder.gutter(gutter.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param gutter The gutter settings that apply between tiles.
        */
       override fun gutter(gutter: GutterStyleProperty) {
-        cdkBuilder.gutter(gutter.let(GutterStyleProperty::unwrap))
+        cdkBuilder.gutter(gutter.let(GutterStyleProperty.Companion::unwrap))
       }
 
       /**
@@ -2427,14 +2427,14 @@ public open class CfnTheme(
        * @param margin The margin settings that apply around the outside edge of sheets.
        */
       override fun margin(margin: IResolvable) {
-        cdkBuilder.margin(margin.let(IResolvable::unwrap))
+        cdkBuilder.margin(margin.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param margin The margin settings that apply around the outside edge of sheets.
        */
       override fun margin(margin: MarginStyleProperty) {
-        cdkBuilder.margin(margin.let(MarginStyleProperty::unwrap))
+        cdkBuilder.margin(margin.let(MarginStyleProperty.Companion::unwrap))
       }
 
       /**
@@ -2544,14 +2544,14 @@ public open class CfnTheme(
        * @param border The border around a tile.
        */
       override fun border(border: IResolvable) {
-        cdkBuilder.border(border.let(IResolvable::unwrap))
+        cdkBuilder.border(border.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param border The border around a tile.
        */
       override fun border(border: BorderStyleProperty) {
-        cdkBuilder.border(border.let(BorderStyleProperty::unwrap))
+        cdkBuilder.border(border.let(BorderStyleProperty.Companion::unwrap))
       }
 
       /**
@@ -2651,7 +2651,7 @@ public open class CfnTheme(
        * @param fontFamilies Determines the list of font families.
        */
       override fun fontFamilies(fontFamilies: IResolvable) {
-        cdkBuilder.fontFamilies(fontFamilies.let(IResolvable::unwrap))
+        cdkBuilder.fontFamilies(fontFamilies.let(IResolvable.Companion::unwrap))
       }
 
       /**

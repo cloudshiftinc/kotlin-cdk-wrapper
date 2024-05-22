@@ -128,14 +128,14 @@ public interface CfnAssistantAssociationProps {
      * @param association The identifier of the associated resource. 
      */
     override fun association(association: IResolvable) {
-      cdkBuilder.association(association.let(IResolvable::unwrap))
+      cdkBuilder.association(association.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param association The identifier of the associated resource. 
      */
     override fun association(association: CfnAssistantAssociation.AssociationDataProperty) {
-      cdkBuilder.association(association.let(CfnAssistantAssociation.AssociationDataProperty::unwrap))
+      cdkBuilder.association(association.let(CfnAssistantAssociation.AssociationDataProperty.Companion::unwrap))
     }
 
     /**
@@ -158,7 +158,7 @@ public interface CfnAssistantAssociationProps {
      * @param tags The tags used to organize, track, or control access for this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

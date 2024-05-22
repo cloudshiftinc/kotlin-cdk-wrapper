@@ -69,7 +69,7 @@ public interface HttpAlbIntegrationProps : HttpPrivateIntegrationOptions {
      * @param method The HTTP method that must be used to invoke the underlying HTTP proxy.
      */
     override fun method(method: HttpMethod) {
-      cdkBuilder.method(method.let(HttpMethod::unwrap))
+      cdkBuilder.method(method.let(HttpMethod.Companion::unwrap))
     }
 
     /**
@@ -77,7 +77,7 @@ public interface HttpAlbIntegrationProps : HttpPrivateIntegrationOptions {
      * backend.
      */
     override fun parameterMapping(parameterMapping: ParameterMapping) {
-      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping::unwrap))
+      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping.Companion::unwrap))
     }
 
     /**
@@ -92,7 +92,7 @@ public interface HttpAlbIntegrationProps : HttpPrivateIntegrationOptions {
      * @param vpcLink The vpc link to be used for the private integration.
      */
     override fun vpcLink(vpcLink: IVpcLink) {
-      cdkBuilder.vpcLink(vpcLink.let(IVpcLink::unwrap))
+      cdkBuilder.vpcLink(vpcLink.let(IVpcLink.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.aws_apigatewayv2_integrations.HttpAlbIntegrationProps

@@ -21,13 +21,10 @@ import kotlin.jvm.JvmName
  * .vpc(vpc)
  * .instanceType(instanceType)
  * .machineImage(machineImage)
- * // ...
+ * .ebsOptimized(true)
  * .blockDevices(List.of(BlockDevice.builder()
- * .deviceName("/dev/sda1")
- * .volume(BlockDeviceVolume.ebs(50))
- * .build(), BlockDevice.builder()
- * .deviceName("/dev/sdm")
- * .volume(BlockDeviceVolume.ebs(100))
+ * .deviceName("/dev/xvda")
+ * .volume(BlockDeviceVolume.ebs(8))
  * .build()))
  * .build();
  * ```
@@ -52,7 +49,7 @@ public open class BlockDeviceVolume(
 
     public fun ebs(volumeSize: Number, options: EbsDeviceOptions): BlockDeviceVolume =
         software.amazon.awscdk.services.ec2.BlockDeviceVolume.ebs(volumeSize,
-        options.let(EbsDeviceOptions::unwrap)).let(BlockDeviceVolume::wrap)
+        options.let(EbsDeviceOptions.Companion::unwrap)).let(BlockDeviceVolume::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("752c4bbe99b63409bb36621fc7c2f80a68d0a3d98e54b7fdf84efac755ccb9a5")
@@ -65,7 +62,7 @@ public open class BlockDeviceVolume(
     public fun ebsFromSnapshot(snapshotId: String, options: EbsDeviceSnapshotOptions):
         BlockDeviceVolume =
         software.amazon.awscdk.services.ec2.BlockDeviceVolume.ebsFromSnapshot(snapshotId,
-        options.let(EbsDeviceSnapshotOptions::unwrap)).let(BlockDeviceVolume::wrap)
+        options.let(EbsDeviceSnapshotOptions.Companion::unwrap)).let(BlockDeviceVolume::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a06bb97efa2e3c952c8db689f1830dcb411a8f0fb88ce4a16e8ca7ccdd50ae02")

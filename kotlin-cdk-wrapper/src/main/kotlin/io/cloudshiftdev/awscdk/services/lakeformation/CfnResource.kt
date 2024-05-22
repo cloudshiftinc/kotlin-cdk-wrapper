@@ -50,8 +50,8 @@ public open class CfnResource(
     id: String,
     props: CfnResourceProps,
   ) :
-      this(software.amazon.awscdk.services.lakeformation.CfnResource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnResourceProps::unwrap))
+      this(software.amazon.awscdk.services.lakeformation.CfnResource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnResourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -85,7 +85,7 @@ public open class CfnResource(
    * Lake Formation permissions as well as Amazon S3 bucket policies.
    */
   public open fun hybridAccessEnabled(`value`: IResolvable) {
-    unwrap(this).setHybridAccessEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHybridAccessEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -94,7 +94,7 @@ public open class CfnResource(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -140,7 +140,7 @@ public open class CfnResource(
    * .
    */
   public open fun useServiceLinkedRole(`value`: IResolvable) {
-    unwrap(this).setUseServiceLinkedRole(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUseServiceLinkedRole(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -159,7 +159,7 @@ public open class CfnResource(
    * Allows Lake Formation to assume a role to access tables in a federated database.
    */
   public open fun withFederation(`value`: IResolvable) {
-    unwrap(this).setWithFederation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setWithFederation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -274,7 +274,7 @@ public open class CfnResource(
      * 
      */
     override fun hybridAccessEnabled(hybridAccessEnabled: IResolvable) {
-      cdkBuilder.hybridAccessEnabled(hybridAccessEnabled.let(IResolvable::unwrap))
+      cdkBuilder.hybridAccessEnabled(hybridAccessEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -318,7 +318,7 @@ public open class CfnResource(
      * this caller with the Data Catalog . 
      */
     override fun useServiceLinkedRole(useServiceLinkedRole: IResolvable) {
-      cdkBuilder.useServiceLinkedRole(useServiceLinkedRole.let(IResolvable::unwrap))
+      cdkBuilder.useServiceLinkedRole(useServiceLinkedRole.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -340,7 +340,7 @@ public open class CfnResource(
      * database. 
      */
     override fun withFederation(withFederation: IResolvable) {
-      cdkBuilder.withFederation(withFederation.let(IResolvable::unwrap))
+      cdkBuilder.withFederation(withFederation.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lakeformation.CfnResource =

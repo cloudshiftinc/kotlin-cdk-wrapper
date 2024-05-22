@@ -93,7 +93,7 @@ public interface PortProps {
      * @param protocol The protocol for the range. 
      */
     override fun protocol(protocol: Protocol) {
-      cdkBuilder.protocol(protocol.let(Protocol::unwrap))
+      cdkBuilder.protocol(protocol.let(Protocol.Companion::unwrap))
     }
 
     /**

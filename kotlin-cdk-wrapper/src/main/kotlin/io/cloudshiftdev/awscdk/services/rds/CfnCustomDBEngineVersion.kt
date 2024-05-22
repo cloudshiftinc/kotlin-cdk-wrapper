@@ -58,8 +58,8 @@ public open class CfnCustomDBEngineVersion(
     id: String,
     props: CfnCustomDBEngineVersionProps,
   ) :
-      this(software.amazon.awscdk.services.rds.CfnCustomDBEngineVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCustomDBEngineVersionProps::unwrap))
+      this(software.amazon.awscdk.services.rds.CfnCustomDBEngineVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCustomDBEngineVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -160,7 +160,7 @@ public open class CfnCustomDBEngineVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -225,7 +225,7 @@ public open class CfnCustomDBEngineVersion(
    * A list of tags.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -249,7 +249,7 @@ public open class CfnCustomDBEngineVersion(
    * Specifies whether to use the latest service-provided Amazon Machine Image (AMI) for the CEV.
    */
   public open fun useAwsProvidedLatestImage(`value`: IResolvable) {
-    unwrap(this).setUseAwsProvidedLatestImage(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUseAwsProvidedLatestImage(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -616,7 +616,7 @@ public open class CfnCustomDBEngineVersion(
      * @param tags A list of tags. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -654,7 +654,7 @@ public open class CfnCustomDBEngineVersion(
      * Machine Image (AMI) for the CEV. 
      */
     override fun useAwsProvidedLatestImage(useAwsProvidedLatestImage: IResolvable) {
-      cdkBuilder.useAwsProvidedLatestImage(useAwsProvidedLatestImage.let(IResolvable::unwrap))
+      cdkBuilder.useAwsProvidedLatestImage(useAwsProvidedLatestImage.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.CfnCustomDBEngineVersion =

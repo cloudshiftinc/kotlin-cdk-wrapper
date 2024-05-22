@@ -157,7 +157,7 @@ public interface CorsPreflightOptions {
      * @param allowMethods Represents a collection of allowed HTTP methods.
      */
     override fun allowMethods(allowMethods: List<CorsHttpMethod>) {
-      cdkBuilder.allowMethods(allowMethods.map(CorsHttpMethod::unwrap))
+      cdkBuilder.allowMethods(allowMethods.map(CorsHttpMethod.Companion::unwrap))
     }
 
     /**
@@ -196,7 +196,7 @@ public interface CorsPreflightOptions {
      * @param maxAge The duration that the browser should cache preflight request results.
      */
     override fun maxAge(maxAge: Duration) {
-      cdkBuilder.maxAge(maxAge.let(Duration::unwrap))
+      cdkBuilder.maxAge(maxAge.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.CorsPreflightOptions =

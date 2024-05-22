@@ -52,8 +52,8 @@ public open class CfnRuleGroupsNamespace(
     id: String,
     props: CfnRuleGroupsNamespaceProps,
   ) :
-      this(software.amazon.awscdk.services.aps.CfnRuleGroupsNamespace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRuleGroupsNamespaceProps::unwrap))
+      this(software.amazon.awscdk.services.aps.CfnRuleGroupsNamespace(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRuleGroupsNamespaceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -90,7 +90,7 @@ public open class CfnRuleGroupsNamespace(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -120,7 +120,7 @@ public open class CfnRuleGroupsNamespace(
    * The list of tag keys and values that are associated with the rule groups namespace.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -231,7 +231,7 @@ public open class CfnRuleGroupsNamespace(
      * namespace. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

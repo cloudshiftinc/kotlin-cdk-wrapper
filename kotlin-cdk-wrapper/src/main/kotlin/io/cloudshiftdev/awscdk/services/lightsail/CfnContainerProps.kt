@@ -349,7 +349,7 @@ public interface CfnContainerProps {
      * of the container service.
      */
     override fun containerServiceDeployment(containerServiceDeployment: IResolvable) {
-      cdkBuilder.containerServiceDeployment(containerServiceDeployment.let(IResolvable::unwrap))
+      cdkBuilder.containerServiceDeployment(containerServiceDeployment.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -358,7 +358,7 @@ public interface CfnContainerProps {
      */
     override
         fun containerServiceDeployment(containerServiceDeployment: CfnContainer.ContainerServiceDeploymentProperty) {
-      cdkBuilder.containerServiceDeployment(containerServiceDeployment.let(CfnContainer.ContainerServiceDeploymentProperty::unwrap))
+      cdkBuilder.containerServiceDeployment(containerServiceDeployment.let(CfnContainer.ContainerServiceDeploymentProperty.Companion::unwrap))
     }
 
     /**
@@ -383,7 +383,7 @@ public interface CfnContainerProps {
      * @param isDisabled A Boolean value indicating whether the container service is disabled.
      */
     override fun isDisabled(isDisabled: IResolvable) {
-      cdkBuilder.isDisabled(isDisabled.let(IResolvable::unwrap))
+      cdkBuilder.isDisabled(isDisabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -405,7 +405,7 @@ public interface CfnContainerProps {
      * in the *Amazon Lightsail Developer Guide* .
      */
     override fun privateRegistryAccess(privateRegistryAccess: IResolvable) {
-      cdkBuilder.privateRegistryAccess(privateRegistryAccess.let(IResolvable::unwrap))
+      cdkBuilder.privateRegistryAccess(privateRegistryAccess.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -419,7 +419,7 @@ public interface CfnContainerProps {
      */
     override
         fun privateRegistryAccess(privateRegistryAccess: CfnContainer.PrivateRegistryAccessProperty) {
-      cdkBuilder.privateRegistryAccess(privateRegistryAccess.let(CfnContainer.PrivateRegistryAccessProperty::unwrap))
+      cdkBuilder.privateRegistryAccess(privateRegistryAccess.let(CfnContainer.PrivateRegistryAccessProperty.Companion::unwrap))
     }
 
     /**
@@ -456,7 +456,7 @@ public interface CfnContainerProps {
      * container service.
      */
     override fun publicDomainNames(publicDomainNames: IResolvable) {
-      cdkBuilder.publicDomainNames(publicDomainNames.let(IResolvable::unwrap))
+      cdkBuilder.publicDomainNames(publicDomainNames.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -525,7 +525,7 @@ public interface CfnContainerProps {
      * The `Value` of `Tags` is optional for Lightsail resources.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

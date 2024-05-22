@@ -80,8 +80,8 @@ public open class CfnMitigationAction(
     id: String,
     props: CfnMitigationActionProps,
   ) :
-      this(software.amazon.awscdk.services.iot.CfnMitigationAction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMitigationActionProps::unwrap))
+      this(software.amazon.awscdk.services.iot.CfnMitigationAction(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMitigationActionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -112,14 +112,14 @@ public open class CfnMitigationAction(
    * The set of parameters for this mitigation action.
    */
   public open fun actionParams(`value`: IResolvable) {
-    unwrap(this).setActionParams(`value`.let(IResolvable::unwrap))
+    unwrap(this).setActionParams(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The set of parameters for this mitigation action.
    */
   public open fun actionParams(`value`: ActionParamsProperty) {
-    unwrap(this).setActionParams(`value`.let(ActionParamsProperty::unwrap))
+    unwrap(this).setActionParams(`value`.let(ActionParamsProperty.Companion::unwrap))
   }
 
   /**
@@ -146,7 +146,7 @@ public open class CfnMitigationAction(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -176,7 +176,7 @@ public open class CfnMitigationAction(
    * Metadata that can be used to manage the mitigation action.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -280,7 +280,7 @@ public open class CfnMitigationAction(
      * @param actionParams The set of parameters for this mitigation action. 
      */
     override fun actionParams(actionParams: IResolvable) {
-      cdkBuilder.actionParams(actionParams.let(IResolvable::unwrap))
+      cdkBuilder.actionParams(actionParams.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -292,7 +292,7 @@ public open class CfnMitigationAction(
      * @param actionParams The set of parameters for this mitigation action. 
      */
     override fun actionParams(actionParams: ActionParamsProperty) {
-      cdkBuilder.actionParams(actionParams.let(ActionParamsProperty::unwrap))
+      cdkBuilder.actionParams(actionParams.let(ActionParamsProperty.Companion::unwrap))
     }
 
     /**
@@ -325,7 +325,7 @@ public open class CfnMitigationAction(
      * @param tags Metadata that can be used to manage the mitigation action. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -602,7 +602,7 @@ public open class CfnMitigationAction(
        * devices.
        */
       override fun addThingsToThingGroupParams(addThingsToThingGroupParams: IResolvable) {
-        cdkBuilder.addThingsToThingGroupParams(addThingsToThingGroupParams.let(IResolvable::unwrap))
+        cdkBuilder.addThingsToThingGroupParams(addThingsToThingGroupParams.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -611,7 +611,7 @@ public open class CfnMitigationAction(
        */
       override
           fun addThingsToThingGroupParams(addThingsToThingGroupParams: AddThingsToThingGroupParamsProperty) {
-        cdkBuilder.addThingsToThingGroupParams(addThingsToThingGroupParams.let(AddThingsToThingGroupParamsProperty::unwrap))
+        cdkBuilder.addThingsToThingGroupParams(addThingsToThingGroupParams.let(AddThingsToThingGroupParamsProperty.Companion::unwrap))
       }
 
       /**
@@ -631,7 +631,7 @@ public open class CfnMitigationAction(
        * You cannot specify a logging level of `DISABLED` .
        */
       override fun enableIoTLoggingParams(enableIoTLoggingParams: IResolvable) {
-        cdkBuilder.enableIoTLoggingParams(enableIoTLoggingParams.let(IResolvable::unwrap))
+        cdkBuilder.enableIoTLoggingParams(enableIoTLoggingParams.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -640,7 +640,7 @@ public open class CfnMitigationAction(
        * You cannot specify a logging level of `DISABLED` .
        */
       override fun enableIoTLoggingParams(enableIoTLoggingParams: EnableIoTLoggingParamsProperty) {
-        cdkBuilder.enableIoTLoggingParams(enableIoTLoggingParams.let(EnableIoTLoggingParamsProperty::unwrap))
+        cdkBuilder.enableIoTLoggingParams(enableIoTLoggingParams.let(EnableIoTLoggingParamsProperty.Companion::unwrap))
       }
 
       /**
@@ -659,7 +659,7 @@ public open class CfnMitigationAction(
        * published.
        */
       override fun publishFindingToSnsParams(publishFindingToSnsParams: IResolvable) {
-        cdkBuilder.publishFindingToSnsParams(publishFindingToSnsParams.let(IResolvable::unwrap))
+        cdkBuilder.publishFindingToSnsParams(publishFindingToSnsParams.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -668,7 +668,7 @@ public open class CfnMitigationAction(
        */
       override
           fun publishFindingToSnsParams(publishFindingToSnsParams: PublishFindingToSnsParamsProperty) {
-        cdkBuilder.publishFindingToSnsParams(publishFindingToSnsParams.let(PublishFindingToSnsParamsProperty::unwrap))
+        cdkBuilder.publishFindingToSnsParams(publishFindingToSnsParams.let(PublishFindingToSnsParamsProperty.Companion::unwrap))
       }
 
       /**
@@ -689,7 +689,7 @@ public open class CfnMitigationAction(
        */
       override
           fun replaceDefaultPolicyVersionParams(replaceDefaultPolicyVersionParams: IResolvable) {
-        cdkBuilder.replaceDefaultPolicyVersionParams(replaceDefaultPolicyVersionParams.let(IResolvable::unwrap))
+        cdkBuilder.replaceDefaultPolicyVersionParams(replaceDefaultPolicyVersionParams.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -699,7 +699,7 @@ public open class CfnMitigationAction(
        */
       override
           fun replaceDefaultPolicyVersionParams(replaceDefaultPolicyVersionParams: ReplaceDefaultPolicyVersionParamsProperty) {
-        cdkBuilder.replaceDefaultPolicyVersionParams(replaceDefaultPolicyVersionParams.let(ReplaceDefaultPolicyVersionParamsProperty::unwrap))
+        cdkBuilder.replaceDefaultPolicyVersionParams(replaceDefaultPolicyVersionParams.let(ReplaceDefaultPolicyVersionParamsProperty.Companion::unwrap))
       }
 
       /**
@@ -719,7 +719,7 @@ public open class CfnMitigationAction(
        * Only a value of `DEACTIVATE` is currently supported.
        */
       override fun updateCaCertificateParams(updateCaCertificateParams: IResolvable) {
-        cdkBuilder.updateCaCertificateParams(updateCaCertificateParams.let(IResolvable::unwrap))
+        cdkBuilder.updateCaCertificateParams(updateCaCertificateParams.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -728,7 +728,7 @@ public open class CfnMitigationAction(
        */
       override
           fun updateCaCertificateParams(updateCaCertificateParams: UpdateCACertificateParamsProperty) {
-        cdkBuilder.updateCaCertificateParams(updateCaCertificateParams.let(UpdateCACertificateParamsProperty::unwrap))
+        cdkBuilder.updateCaCertificateParams(updateCaCertificateParams.let(UpdateCACertificateParamsProperty.Companion::unwrap))
       }
 
       /**
@@ -747,7 +747,7 @@ public open class CfnMitigationAction(
        * Only a value of `DEACTIVATE` is currently supported.
        */
       override fun updateDeviceCertificateParams(updateDeviceCertificateParams: IResolvable) {
-        cdkBuilder.updateDeviceCertificateParams(updateDeviceCertificateParams.let(IResolvable::unwrap))
+        cdkBuilder.updateDeviceCertificateParams(updateDeviceCertificateParams.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -756,7 +756,7 @@ public open class CfnMitigationAction(
        */
       override
           fun updateDeviceCertificateParams(updateDeviceCertificateParams: UpdateDeviceCertificateParamsProperty) {
-        cdkBuilder.updateDeviceCertificateParams(updateDeviceCertificateParams.let(UpdateDeviceCertificateParamsProperty::unwrap))
+        cdkBuilder.updateDeviceCertificateParams(updateDeviceCertificateParams.let(UpdateDeviceCertificateParamsProperty.Companion::unwrap))
       }
 
       /**
@@ -941,7 +941,7 @@ public open class CfnMitigationAction(
        * triggered the mitigation action even if they are part of one or more dynamic thing groups.
        */
       override fun overrideDynamicGroups(overrideDynamicGroups: IResolvable) {
-        cdkBuilder.overrideDynamicGroups(overrideDynamicGroups.let(IResolvable::unwrap))
+        cdkBuilder.overrideDynamicGroups(overrideDynamicGroups.let(IResolvable.Companion::unwrap))
       }
 
       /**

@@ -38,7 +38,7 @@ public open class CfnPullThroughCacheRule(
   cdkObject: software.amazon.awscdk.services.ecr.CfnPullThroughCacheRule,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ecr.CfnPullThroughCacheRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ecr.CfnPullThroughCacheRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -47,8 +47,8 @@ public open class CfnPullThroughCacheRule(
     id: String,
     props: CfnPullThroughCacheRuleProps,
   ) :
-      this(software.amazon.awscdk.services.ecr.CfnPullThroughCacheRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPullThroughCacheRuleProps::unwrap))
+      this(software.amazon.awscdk.services.ecr.CfnPullThroughCacheRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPullThroughCacheRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -88,7 +88,7 @@ public open class CfnPullThroughCacheRule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

@@ -94,7 +94,7 @@ public interface StageOptions : StageProps {
      * You can always add more Actions later by calling `IStage#addAction`.
      */
     override fun actions(actions: List<IAction>) {
-      cdkBuilder.actions(actions.map(IAction::unwrap))
+      cdkBuilder.actions(actions.map(IAction.Companion::unwrap))
     }
 
     /**
@@ -107,7 +107,7 @@ public interface StageOptions : StageProps {
      * @param placement the value to be set.
      */
     override fun placement(placement: StagePlacement) {
-      cdkBuilder.placement(placement.let(StagePlacement::unwrap))
+      cdkBuilder.placement(placement.let(StagePlacement.Companion::unwrap))
     }
 
     /**

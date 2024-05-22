@@ -84,8 +84,8 @@ public open class CfnPermissions(
     id: String,
     props: CfnPermissionsProps,
   ) :
-      this(software.amazon.awscdk.services.lakeformation.CfnPermissions(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPermissionsProps::unwrap))
+      this(software.amazon.awscdk.services.lakeformation.CfnPermissions(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPermissionsProps.Companion::unwrap))
   )
 
   public constructor(
@@ -109,14 +109,14 @@ public open class CfnPermissions(
    * The AWS Lake Formation principal.
    */
   public open fun dataLakePrincipal(`value`: IResolvable) {
-    unwrap(this).setDataLakePrincipal(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataLakePrincipal(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The AWS Lake Formation principal.
    */
   public open fun dataLakePrincipal(`value`: DataLakePrincipalProperty) {
-    unwrap(this).setDataLakePrincipal(`value`.let(DataLakePrincipalProperty::unwrap))
+    unwrap(this).setDataLakePrincipal(`value`.let(DataLakePrincipalProperty.Companion::unwrap))
   }
 
   /**
@@ -133,7 +133,7 @@ public open class CfnPermissions(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -181,14 +181,14 @@ public open class CfnPermissions(
    * A structure for the resource.
    */
   public open fun resource(`value`: IResolvable) {
-    unwrap(this).setResource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A structure for the resource.
    */
   public open fun resource(`value`: ResourceProperty) {
-    unwrap(this).setResource(`value`.let(ResourceProperty::unwrap))
+    unwrap(this).setResource(`value`.let(ResourceProperty.Companion::unwrap))
   }
 
   /**
@@ -305,7 +305,7 @@ public open class CfnPermissions(
      * @param dataLakePrincipal The AWS Lake Formation principal. 
      */
     override fun dataLakePrincipal(dataLakePrincipal: IResolvable) {
-      cdkBuilder.dataLakePrincipal(dataLakePrincipal.let(IResolvable::unwrap))
+      cdkBuilder.dataLakePrincipal(dataLakePrincipal.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -315,7 +315,7 @@ public open class CfnPermissions(
      * @param dataLakePrincipal The AWS Lake Formation principal. 
      */
     override fun dataLakePrincipal(dataLakePrincipal: DataLakePrincipalProperty) {
-      cdkBuilder.dataLakePrincipal(dataLakePrincipal.let(DataLakePrincipalProperty::unwrap))
+      cdkBuilder.dataLakePrincipal(dataLakePrincipal.let(DataLakePrincipalProperty.Companion::unwrap))
     }
 
     /**
@@ -375,7 +375,7 @@ public open class CfnPermissions(
      * @param resource A structure for the resource. 
      */
     override fun resource(resource: IResolvable) {
-      cdkBuilder.resource(resource.let(IResolvable::unwrap))
+      cdkBuilder.resource(resource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -385,7 +385,7 @@ public open class CfnPermissions(
      * @param resource A structure for the resource. 
      */
     override fun resource(resource: ResourceProperty) {
-      cdkBuilder.resource(resource.let(ResourceProperty::unwrap))
+      cdkBuilder.resource(resource.let(ResourceProperty.Companion::unwrap))
     }
 
     /**
@@ -1021,7 +1021,7 @@ public open class CfnPermissions(
        * granted or revoked.
        */
       override fun dataLocationResource(dataLocationResource: IResolvable) {
-        cdkBuilder.dataLocationResource(dataLocationResource.let(IResolvable::unwrap))
+        cdkBuilder.dataLocationResource(dataLocationResource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1029,7 +1029,7 @@ public open class CfnPermissions(
        * granted or revoked.
        */
       override fun dataLocationResource(dataLocationResource: DataLocationResourceProperty) {
-        cdkBuilder.dataLocationResource(dataLocationResource.let(DataLocationResourceProperty::unwrap))
+        cdkBuilder.dataLocationResource(dataLocationResource.let(DataLocationResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -1046,14 +1046,14 @@ public open class CfnPermissions(
        * @param databaseResource A structure for the database object.
        */
       override fun databaseResource(databaseResource: IResolvable) {
-        cdkBuilder.databaseResource(databaseResource.let(IResolvable::unwrap))
+        cdkBuilder.databaseResource(databaseResource.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param databaseResource A structure for the database object.
        */
       override fun databaseResource(databaseResource: DatabaseResourceProperty) {
-        cdkBuilder.databaseResource(databaseResource.let(DatabaseResourceProperty::unwrap))
+        cdkBuilder.databaseResource(databaseResource.let(DatabaseResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -1070,7 +1070,7 @@ public open class CfnPermissions(
        * privileges to a principal.
        */
       override fun tableResource(tableResource: IResolvable) {
-        cdkBuilder.tableResource(tableResource.let(IResolvable::unwrap))
+        cdkBuilder.tableResource(tableResource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1079,7 +1079,7 @@ public open class CfnPermissions(
        * privileges to a principal.
        */
       override fun tableResource(tableResource: TableResourceProperty) {
-        cdkBuilder.tableResource(tableResource.let(TableResourceProperty::unwrap))
+        cdkBuilder.tableResource(tableResource.let(TableResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -1097,7 +1097,7 @@ public open class CfnPermissions(
        * This object is only used when granting a SELECT permission.
        */
       override fun tableWithColumnsResource(tableWithColumnsResource: IResolvable) {
-        cdkBuilder.tableWithColumnsResource(tableWithColumnsResource.let(IResolvable::unwrap))
+        cdkBuilder.tableWithColumnsResource(tableWithColumnsResource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1106,7 +1106,7 @@ public open class CfnPermissions(
        */
       override
           fun tableWithColumnsResource(tableWithColumnsResource: TableWithColumnsResourceProperty) {
-        cdkBuilder.tableWithColumnsResource(tableWithColumnsResource.let(TableWithColumnsResourceProperty::unwrap))
+        cdkBuilder.tableWithColumnsResource(tableWithColumnsResource.let(TableWithColumnsResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -1322,7 +1322,7 @@ public open class CfnPermissions(
        * will have permission changes applied.
        */
       override fun tableWildcard(tableWildcard: IResolvable) {
-        cdkBuilder.tableWildcard(tableWildcard.let(IResolvable::unwrap))
+        cdkBuilder.tableWildcard(tableWildcard.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1331,7 +1331,7 @@ public open class CfnPermissions(
        * will have permission changes applied.
        */
       override fun tableWildcard(tableWildcard: TableWildcardProperty) {
-        cdkBuilder.tableWildcard(tableWildcard.let(TableWildcardProperty::unwrap))
+        cdkBuilder.tableWildcard(tableWildcard.let(TableWildcardProperty.Companion::unwrap))
       }
 
       /**
@@ -1625,7 +1625,7 @@ public open class CfnPermissions(
        * At least one of `ColumnNames` or `ColumnWildcard` is required.
        */
       override fun columnWildcard(columnWildcard: IResolvable) {
-        cdkBuilder.columnWildcard(columnWildcard.let(IResolvable::unwrap))
+        cdkBuilder.columnWildcard(columnWildcard.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1633,7 +1633,7 @@ public open class CfnPermissions(
        * At least one of `ColumnNames` or `ColumnWildcard` is required.
        */
       override fun columnWildcard(columnWildcard: ColumnWildcardProperty) {
-        cdkBuilder.columnWildcard(columnWildcard.let(ColumnWildcardProperty::unwrap))
+        cdkBuilder.columnWildcard(columnWildcard.let(ColumnWildcardProperty.Companion::unwrap))
       }
 
       /**

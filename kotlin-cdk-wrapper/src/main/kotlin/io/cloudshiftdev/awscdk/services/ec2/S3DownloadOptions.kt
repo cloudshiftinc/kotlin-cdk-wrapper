@@ -92,7 +92,7 @@ public interface S3DownloadOptions {
      * @param bucket Name of the S3 bucket to download from. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**

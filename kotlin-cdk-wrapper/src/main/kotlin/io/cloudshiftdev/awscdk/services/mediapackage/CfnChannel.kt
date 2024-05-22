@@ -68,8 +68,8 @@ public open class CfnChannel(
     id: String,
     props: CfnChannelProps,
   ) :
-      this(software.amazon.awscdk.services.mediapackage.CfnChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnChannelProps::unwrap))
+      this(software.amazon.awscdk.services.mediapackage.CfnChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnChannelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -107,14 +107,14 @@ public open class CfnChannel(
    * Configures egress access logs.
    */
   public open fun egressAccessLogs(`value`: IResolvable) {
-    unwrap(this).setEgressAccessLogs(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEgressAccessLogs(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configures egress access logs.
    */
   public open fun egressAccessLogs(`value`: LogConfigurationProperty) {
-    unwrap(this).setEgressAccessLogs(`value`.let(LogConfigurationProperty::unwrap))
+    unwrap(this).setEgressAccessLogs(`value`.let(LogConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -134,14 +134,14 @@ public open class CfnChannel(
    * The input URL where the source stream should be sent.
    */
   public open fun hlsIngest(`value`: IResolvable) {
-    unwrap(this).setHlsIngest(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHlsIngest(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The input URL where the source stream should be sent.
    */
   public open fun hlsIngest(`value`: HlsIngestProperty) {
-    unwrap(this).setHlsIngest(`value`.let(HlsIngestProperty::unwrap))
+    unwrap(this).setHlsIngest(`value`.let(HlsIngestProperty.Companion::unwrap))
   }
 
   /**
@@ -173,14 +173,14 @@ public open class CfnChannel(
    * Configures ingress access logs.
    */
   public open fun ingressAccessLogs(`value`: IResolvable) {
-    unwrap(this).setIngressAccessLogs(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIngressAccessLogs(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configures ingress access logs.
    */
   public open fun ingressAccessLogs(`value`: LogConfigurationProperty) {
-    unwrap(this).setIngressAccessLogs(`value`.let(LogConfigurationProperty::unwrap))
+    unwrap(this).setIngressAccessLogs(`value`.let(LogConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -197,7 +197,7 @@ public open class CfnChannel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -215,7 +215,7 @@ public open class CfnChannel(
    * The tags to assign to the channel.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -367,7 +367,7 @@ public open class CfnChannel(
      * @param egressAccessLogs Configures egress access logs. 
      */
     override fun egressAccessLogs(egressAccessLogs: IResolvable) {
-      cdkBuilder.egressAccessLogs(egressAccessLogs.let(IResolvable::unwrap))
+      cdkBuilder.egressAccessLogs(egressAccessLogs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -377,7 +377,7 @@ public open class CfnChannel(
      * @param egressAccessLogs Configures egress access logs. 
      */
     override fun egressAccessLogs(egressAccessLogs: LogConfigurationProperty) {
-      cdkBuilder.egressAccessLogs(egressAccessLogs.let(LogConfigurationProperty::unwrap))
+      cdkBuilder.egressAccessLogs(egressAccessLogs.let(LogConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -398,7 +398,7 @@ public open class CfnChannel(
      * @param hlsIngest The input URL where the source stream should be sent. 
      */
     override fun hlsIngest(hlsIngest: IResolvable) {
-      cdkBuilder.hlsIngest(hlsIngest.let(IResolvable::unwrap))
+      cdkBuilder.hlsIngest(hlsIngest.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -408,7 +408,7 @@ public open class CfnChannel(
      * @param hlsIngest The input URL where the source stream should be sent. 
      */
     override fun hlsIngest(hlsIngest: HlsIngestProperty) {
-      cdkBuilder.hlsIngest(hlsIngest.let(HlsIngestProperty::unwrap))
+      cdkBuilder.hlsIngest(hlsIngest.let(HlsIngestProperty.Companion::unwrap))
     }
 
     /**
@@ -439,7 +439,7 @@ public open class CfnChannel(
      * @param ingressAccessLogs Configures ingress access logs. 
      */
     override fun ingressAccessLogs(ingressAccessLogs: IResolvable) {
-      cdkBuilder.ingressAccessLogs(ingressAccessLogs.let(IResolvable::unwrap))
+      cdkBuilder.ingressAccessLogs(ingressAccessLogs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -449,7 +449,7 @@ public open class CfnChannel(
      * @param ingressAccessLogs Configures ingress access logs. 
      */
     override fun ingressAccessLogs(ingressAccessLogs: LogConfigurationProperty) {
-      cdkBuilder.ingressAccessLogs(ingressAccessLogs.let(LogConfigurationProperty::unwrap))
+      cdkBuilder.ingressAccessLogs(ingressAccessLogs.let(LogConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -470,7 +470,7 @@ public open class CfnChannel(
      * @param tags The tags to assign to the channel. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -564,7 +564,7 @@ public open class CfnChannel(
        * @param ingestEndpoints The input URL where the source stream should be sent.
        */
       override fun ingestEndpoints(ingestEndpoints: IResolvable) {
-        cdkBuilder.ingestEndpoints(ingestEndpoints.let(IResolvable::unwrap))
+        cdkBuilder.ingestEndpoints(ingestEndpoints.let(IResolvable.Companion::unwrap))
       }
 
       /**

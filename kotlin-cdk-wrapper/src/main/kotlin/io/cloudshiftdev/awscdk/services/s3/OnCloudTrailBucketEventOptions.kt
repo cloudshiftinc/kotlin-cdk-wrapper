@@ -125,7 +125,7 @@ public interface OnCloudTrailBucketEventOptions : OnEventOptions {
      * This helps dealing with cycles that often arise in these situations.
      */
     override fun crossStackScope(crossStackScope: Construct) {
-      cdkBuilder.crossStackScope(crossStackScope.let(Construct::unwrap))
+      cdkBuilder.crossStackScope(crossStackScope.let(Construct.Companion::unwrap))
     }
 
     /**
@@ -142,7 +142,7 @@ public interface OnCloudTrailBucketEventOptions : OnEventOptions {
      * on top of that filtering.
      */
     override fun eventPattern(eventPattern: EventPattern) {
-      cdkBuilder.eventPattern(eventPattern.let(EventPattern::unwrap))
+      cdkBuilder.eventPattern(eventPattern.let(EventPattern.Companion::unwrap))
     }
 
     /**
@@ -179,7 +179,7 @@ public interface OnCloudTrailBucketEventOptions : OnEventOptions {
      * @param target The target to register for the event.
      */
     override fun target(target: IRuleTarget) {
-      cdkBuilder.target(target.let(IRuleTarget::unwrap))
+      cdkBuilder.target(target.let(IRuleTarget.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.s3.OnCloudTrailBucketEventOptions =

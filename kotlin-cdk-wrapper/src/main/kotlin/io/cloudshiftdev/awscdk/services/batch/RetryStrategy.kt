@@ -31,8 +31,8 @@ public open class RetryStrategy(
   cdkObject: software.amazon.awscdk.services.batch.RetryStrategy,
 ) : CdkObject(cdkObject) {
   public constructor(action: Action, on: Reason) :
-      this(software.amazon.awscdk.services.batch.RetryStrategy(action.let(Action::unwrap),
-      on.let(Reason::unwrap))
+      this(software.amazon.awscdk.services.batch.RetryStrategy(action.let(Action.Companion::unwrap),
+      on.let(Reason.Companion::unwrap))
   )
 
   /**
@@ -47,8 +47,8 @@ public open class RetryStrategy(
 
   public companion object {
     public fun of(action: Action, on: Reason): RetryStrategy =
-        software.amazon.awscdk.services.batch.RetryStrategy.of(action.let(Action::unwrap),
-        on.let(Reason::unwrap)).let(RetryStrategy::wrap)
+        software.amazon.awscdk.services.batch.RetryStrategy.of(action.let(Action.Companion::unwrap),
+        on.let(Reason.Companion::unwrap)).let(RetryStrategy::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.batch.RetryStrategy): RetryStrategy
         = RetryStrategy(cdkObject)

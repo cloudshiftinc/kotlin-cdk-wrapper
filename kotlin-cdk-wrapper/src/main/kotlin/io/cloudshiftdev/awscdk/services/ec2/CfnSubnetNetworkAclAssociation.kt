@@ -47,8 +47,8 @@ public open class CfnSubnetNetworkAclAssociation(
     id: String,
     props: CfnSubnetNetworkAclAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnSubnetNetworkAclAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSubnetNetworkAclAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnSubnetNetworkAclAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSubnetNetworkAclAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -69,7 +69,7 @@ public open class CfnSubnetNetworkAclAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

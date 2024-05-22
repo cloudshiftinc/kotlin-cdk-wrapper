@@ -48,8 +48,8 @@ public open class CfnRequestValidator(
     id: String,
     props: CfnRequestValidatorProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.CfnRequestValidator(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRequestValidatorProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.CfnRequestValidator(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRequestValidatorProps.Companion::unwrap))
   )
 
   public constructor(
@@ -72,7 +72,7 @@ public open class CfnRequestValidator(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -118,7 +118,7 @@ public open class CfnRequestValidator(
    * schema.
    */
   public open fun validateRequestBody(`value`: IResolvable) {
-    unwrap(this).setValidateRequestBody(`value`.let(IResolvable::unwrap))
+    unwrap(this).setValidateRequestBody(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -140,7 +140,7 @@ public open class CfnRequestValidator(
    * ).
    */
   public open fun validateRequestParameters(`value`: IResolvable) {
-    unwrap(this).setValidateRequestParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setValidateRequestParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -253,7 +253,7 @@ public open class CfnRequestValidator(
      * according to the configured Model schema. 
      */
     override fun validateRequestBody(validateRequestBody: IResolvable) {
-      cdkBuilder.validateRequestBody(validateRequestBody.let(IResolvable::unwrap))
+      cdkBuilder.validateRequestBody(validateRequestBody.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -277,7 +277,7 @@ public open class CfnRequestValidator(
      * parameters ( `true` ) or not ( `false` ). 
      */
     override fun validateRequestParameters(validateRequestParameters: IResolvable) {
-      cdkBuilder.validateRequestParameters(validateRequestParameters.let(IResolvable::unwrap))
+      cdkBuilder.validateRequestParameters(validateRequestParameters.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.CfnRequestValidator =

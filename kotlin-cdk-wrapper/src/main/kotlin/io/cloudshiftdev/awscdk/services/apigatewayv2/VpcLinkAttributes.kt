@@ -59,7 +59,7 @@ public interface VpcLinkAttributes {
      * @param vpc The VPC to which this VPC link is associated with. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**

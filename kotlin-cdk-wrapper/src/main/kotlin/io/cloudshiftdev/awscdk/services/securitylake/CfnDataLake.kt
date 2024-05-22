@@ -75,7 +75,7 @@ public open class CfnDataLake(
   cdkObject: software.amazon.awscdk.services.securitylake.CfnDataLake,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.securitylake.CfnDataLake(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.securitylake.CfnDataLake(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -84,8 +84,8 @@ public open class CfnDataLake(
     id: String,
     props: CfnDataLakeProps,
   ) :
-      this(software.amazon.awscdk.services.securitylake.CfnDataLake(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDataLakeProps::unwrap))
+      this(software.amazon.awscdk.services.securitylake.CfnDataLake(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDataLakeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -120,14 +120,14 @@ public open class CfnDataLake(
    * Provides encryption details of the Amazon Security Lake object.
    */
   public open fun encryptionConfiguration(`value`: IResolvable) {
-    unwrap(this).setEncryptionConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEncryptionConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Provides encryption details of the Amazon Security Lake object.
    */
   public open fun encryptionConfiguration(`value`: EncryptionConfigurationProperty) {
-    unwrap(this).setEncryptionConfiguration(`value`.let(EncryptionConfigurationProperty::unwrap))
+    unwrap(this).setEncryptionConfiguration(`value`.let(EncryptionConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -145,7 +145,7 @@ public open class CfnDataLake(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -159,7 +159,7 @@ public open class CfnDataLake(
    * amount of time.
    */
   public open fun lifecycleConfiguration(`value`: IResolvable) {
-    unwrap(this).setLifecycleConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLifecycleConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -167,7 +167,7 @@ public open class CfnDataLake(
    * amount of time.
    */
   public open fun lifecycleConfiguration(`value`: LifecycleConfigurationProperty) {
-    unwrap(this).setLifecycleConfiguration(`value`.let(LifecycleConfigurationProperty::unwrap))
+    unwrap(this).setLifecycleConfiguration(`value`.let(LifecycleConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -201,14 +201,14 @@ public open class CfnDataLake(
    * Provides replication details of Amazon Security Lake object.
    */
   public open fun replicationConfiguration(`value`: IResolvable) {
-    unwrap(this).setReplicationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setReplicationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Provides replication details of Amazon Security Lake object.
    */
   public open fun replicationConfiguration(`value`: ReplicationConfigurationProperty) {
-    unwrap(this).setReplicationConfiguration(`value`.let(ReplicationConfigurationProperty::unwrap))
+    unwrap(this).setReplicationConfiguration(`value`.let(ReplicationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -229,7 +229,7 @@ public open class CfnDataLake(
    * An array of objects, one for each tag to associate with the data lake configuration.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -399,7 +399,7 @@ public open class CfnDataLake(
      * object. 
      */
     override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -410,7 +410,7 @@ public open class CfnDataLake(
      * object. 
      */
     override fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
-      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty::unwrap))
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -440,7 +440,7 @@ public open class CfnDataLake(
      * AWS Regions for your preferred amount of time. 
      */
     override fun lifecycleConfiguration(lifecycleConfiguration: IResolvable) {
-      cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -457,7 +457,7 @@ public open class CfnDataLake(
      * AWS Regions for your preferred amount of time. 
      */
     override fun lifecycleConfiguration(lifecycleConfiguration: LifecycleConfigurationProperty) {
-      cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(LifecycleConfigurationProperty::unwrap))
+      cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(LifecycleConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -500,7 +500,7 @@ public open class CfnDataLake(
      * @param replicationConfiguration Provides replication details of Amazon Security Lake object. 
      */
     override fun replicationConfiguration(replicationConfiguration: IResolvable) {
-      cdkBuilder.replicationConfiguration(replicationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.replicationConfiguration(replicationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -511,7 +511,7 @@ public open class CfnDataLake(
      */
     override
         fun replicationConfiguration(replicationConfiguration: ReplicationConfigurationProperty) {
-      cdkBuilder.replicationConfiguration(replicationConfiguration.let(ReplicationConfigurationProperty::unwrap))
+      cdkBuilder.replicationConfiguration(replicationConfiguration.let(ReplicationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -537,7 +537,7 @@ public open class CfnDataLake(
      * configuration. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -876,14 +876,14 @@ public open class CfnDataLake(
        * @param expiration Provides data expiration details of the Amazon Security Lake object.
        */
       override fun expiration(expiration: IResolvable) {
-        cdkBuilder.expiration(expiration.let(IResolvable::unwrap))
+        cdkBuilder.expiration(expiration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param expiration Provides data expiration details of the Amazon Security Lake object.
        */
       override fun expiration(expiration: ExpirationProperty) {
-        cdkBuilder.expiration(expiration.let(ExpirationProperty::unwrap))
+        cdkBuilder.expiration(expiration.let(ExpirationProperty.Companion::unwrap))
       }
 
       /**
@@ -901,7 +901,7 @@ public open class CfnDataLake(
        * different storage class.
        */
       override fun transitions(transitions: IResolvable) {
-        cdkBuilder.transitions(transitions.let(IResolvable::unwrap))
+        cdkBuilder.transitions(transitions.let(IResolvable.Companion::unwrap))
       }
 
       /**

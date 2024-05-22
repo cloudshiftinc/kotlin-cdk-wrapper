@@ -359,7 +359,7 @@ public interface CfnDatasetProps {
      * @param actions The `DatasetAction` objects that automatically create the dataset contents. 
      */
     override fun actions(actions: IResolvable) {
-      cdkBuilder.actions(actions.let(IResolvable::unwrap))
+      cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -379,7 +379,7 @@ public interface CfnDatasetProps {
      * destinations specified here.
      */
     override fun contentDeliveryRules(contentDeliveryRules: IResolvable) {
-      cdkBuilder.contentDeliveryRules(contentDeliveryRules.let(IResolvable::unwrap))
+      cdkBuilder.contentDeliveryRules(contentDeliveryRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -412,7 +412,7 @@ public interface CfnDatasetProps {
      * filter.
      */
     override fun lateDataRules(lateDataRules: IResolvable) {
-      cdkBuilder.lateDataRules(lateDataRules.let(IResolvable::unwrap))
+      cdkBuilder.lateDataRules(lateDataRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -441,7 +441,7 @@ public interface CfnDatasetProps {
      * How long, in days, message data is kept for the dataset.
      */
     override fun retentionPeriod(retentionPeriod: IResolvable) {
-      cdkBuilder.retentionPeriod(retentionPeriod.let(IResolvable::unwrap))
+      cdkBuilder.retentionPeriod(retentionPeriod.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -449,7 +449,7 @@ public interface CfnDatasetProps {
      * How long, in days, message data is kept for the dataset.
      */
     override fun retentionPeriod(retentionPeriod: CfnDataset.RetentionPeriodProperty) {
-      cdkBuilder.retentionPeriod(retentionPeriod.let(CfnDataset.RetentionPeriodProperty::unwrap))
+      cdkBuilder.retentionPeriod(retentionPeriod.let(CfnDataset.RetentionPeriodProperty.Companion::unwrap))
     }
 
     /**
@@ -469,7 +469,7 @@ public interface CfnDatasetProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -485,7 +485,7 @@ public interface CfnDatasetProps {
      * updated.
      */
     override fun triggers(triggers: IResolvable) {
-      cdkBuilder.triggers(triggers.let(IResolvable::unwrap))
+      cdkBuilder.triggers(triggers.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -512,7 +512,7 @@ public interface CfnDatasetProps {
      * in the *AWS IoT Analytics User Guide* .
      */
     override fun versioningConfiguration(versioningConfiguration: IResolvable) {
-      cdkBuilder.versioningConfiguration(versioningConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.versioningConfiguration(versioningConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -526,7 +526,7 @@ public interface CfnDatasetProps {
      */
     override
         fun versioningConfiguration(versioningConfiguration: CfnDataset.VersioningConfigurationProperty) {
-      cdkBuilder.versioningConfiguration(versioningConfiguration.let(CfnDataset.VersioningConfigurationProperty::unwrap))
+      cdkBuilder.versioningConfiguration(versioningConfiguration.let(CfnDataset.VersioningConfigurationProperty.Companion::unwrap))
     }
 
     /**

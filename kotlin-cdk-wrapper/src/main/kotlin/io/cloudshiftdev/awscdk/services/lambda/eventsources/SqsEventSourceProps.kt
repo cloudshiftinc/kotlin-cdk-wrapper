@@ -187,7 +187,7 @@ public interface SqsEventSourceProps {
      * Valid Range: Minimum value of 0 minutes. Maximum value of 5 minutes.
      */
     override fun maxBatchingWindow(maxBatchingWindow: Duration) {
-      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration::unwrap))
+      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration.Companion::unwrap))
     }
 
     /**

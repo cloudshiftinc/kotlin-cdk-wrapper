@@ -146,7 +146,7 @@ public interface CfnConfigurationAggregatorProps {
      * aggregated.
      */
     override fun accountAggregationSources(accountAggregationSources: IResolvable) {
-      cdkBuilder.accountAggregationSources(accountAggregationSources.let(IResolvable::unwrap))
+      cdkBuilder.accountAggregationSources(accountAggregationSources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -176,7 +176,7 @@ public interface CfnConfigurationAggregatorProps {
      * aggregated.
      */
     override fun organizationAggregationSource(organizationAggregationSource: IResolvable) {
-      cdkBuilder.organizationAggregationSource(organizationAggregationSource.let(IResolvable::unwrap))
+      cdkBuilder.organizationAggregationSource(organizationAggregationSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -185,7 +185,7 @@ public interface CfnConfigurationAggregatorProps {
      */
     override
         fun organizationAggregationSource(organizationAggregationSource: CfnConfigurationAggregator.OrganizationAggregationSourceProperty) {
-      cdkBuilder.organizationAggregationSource(organizationAggregationSource.let(CfnConfigurationAggregator.OrganizationAggregationSourceProperty::unwrap))
+      cdkBuilder.organizationAggregationSource(organizationAggregationSource.let(CfnConfigurationAggregator.OrganizationAggregationSourceProperty.Companion::unwrap))
     }
 
     /**
@@ -203,7 +203,7 @@ public interface CfnConfigurationAggregatorProps {
      * @param tags An array of tag object.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

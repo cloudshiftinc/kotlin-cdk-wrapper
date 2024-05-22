@@ -66,8 +66,8 @@ public open class CfnAnnotationStore(
     id: String,
     props: CfnAnnotationStoreProps,
   ) :
-      this(software.amazon.awscdk.services.omics.CfnAnnotationStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAnnotationStoreProps::unwrap))
+      this(software.amazon.awscdk.services.omics.CfnAnnotationStore(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAnnotationStoreProps.Companion::unwrap))
   )
 
   public constructor(
@@ -131,7 +131,7 @@ public open class CfnAnnotationStore(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -155,14 +155,14 @@ public open class CfnAnnotationStore(
    * The genome reference for the store's annotations.
    */
   public open fun reference(`value`: IResolvable) {
-    unwrap(this).setReference(`value`.let(IResolvable::unwrap))
+    unwrap(this).setReference(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The genome reference for the store's annotations.
    */
   public open fun reference(`value`: ReferenceItemProperty) {
-    unwrap(this).setReference(`value`.let(ReferenceItemProperty::unwrap))
+    unwrap(this).setReference(`value`.let(ReferenceItemProperty.Companion::unwrap))
   }
 
   /**
@@ -182,14 +182,14 @@ public open class CfnAnnotationStore(
    * The store's server-side encryption (SSE) settings.
    */
   public open fun sseConfig(`value`: IResolvable) {
-    unwrap(this).setSseConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSseConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The store's server-side encryption (SSE) settings.
    */
   public open fun sseConfig(`value`: SseConfigProperty) {
-    unwrap(this).setSseConfig(`value`.let(SseConfigProperty::unwrap))
+    unwrap(this).setSseConfig(`value`.let(SseConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -221,14 +221,14 @@ public open class CfnAnnotationStore(
    * File parsing options for the annotation store.
    */
   public open fun storeOptions(`value`: IResolvable) {
-    unwrap(this).setStoreOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStoreOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * File parsing options for the annotation store.
    */
   public open fun storeOptions(`value`: StoreOptionsProperty) {
-    unwrap(this).setStoreOptions(`value`.let(StoreOptionsProperty::unwrap))
+    unwrap(this).setStoreOptions(`value`.let(StoreOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -406,7 +406,7 @@ public open class CfnAnnotationStore(
      * @param reference The genome reference for the store's annotations. 
      */
     override fun reference(reference: IResolvable) {
-      cdkBuilder.reference(reference.let(IResolvable::unwrap))
+      cdkBuilder.reference(reference.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -416,7 +416,7 @@ public open class CfnAnnotationStore(
      * @param reference The genome reference for the store's annotations. 
      */
     override fun reference(reference: ReferenceItemProperty) {
-      cdkBuilder.reference(reference.let(ReferenceItemProperty::unwrap))
+      cdkBuilder.reference(reference.let(ReferenceItemProperty.Companion::unwrap))
     }
 
     /**
@@ -437,7 +437,7 @@ public open class CfnAnnotationStore(
      * @param sseConfig The store's server-side encryption (SSE) settings. 
      */
     override fun sseConfig(sseConfig: IResolvable) {
-      cdkBuilder.sseConfig(sseConfig.let(IResolvable::unwrap))
+      cdkBuilder.sseConfig(sseConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -447,7 +447,7 @@ public open class CfnAnnotationStore(
      * @param sseConfig The store's server-side encryption (SSE) settings. 
      */
     override fun sseConfig(sseConfig: SseConfigProperty) {
-      cdkBuilder.sseConfig(sseConfig.let(SseConfigProperty::unwrap))
+      cdkBuilder.sseConfig(sseConfig.let(SseConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -478,7 +478,7 @@ public open class CfnAnnotationStore(
      * @param storeOptions File parsing options for the annotation store. 
      */
     override fun storeOptions(storeOptions: IResolvable) {
-      cdkBuilder.storeOptions(storeOptions.let(IResolvable::unwrap))
+      cdkBuilder.storeOptions(storeOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -488,7 +488,7 @@ public open class CfnAnnotationStore(
      * @param storeOptions File parsing options for the annotation store. 
      */
     override fun storeOptions(storeOptions: StoreOptionsProperty) {
-      cdkBuilder.storeOptions(storeOptions.let(StoreOptionsProperty::unwrap))
+      cdkBuilder.storeOptions(storeOptions.let(StoreOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -788,14 +788,14 @@ public open class CfnAnnotationStore(
        * @param tsvStoreOptions Formatting options for a TSV file. 
        */
       override fun tsvStoreOptions(tsvStoreOptions: IResolvable) {
-        cdkBuilder.tsvStoreOptions(tsvStoreOptions.let(IResolvable::unwrap))
+        cdkBuilder.tsvStoreOptions(tsvStoreOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param tsvStoreOptions Formatting options for a TSV file. 
        */
       override fun tsvStoreOptions(tsvStoreOptions: TsvStoreOptionsProperty) {
-        cdkBuilder.tsvStoreOptions(tsvStoreOptions.let(TsvStoreOptionsProperty::unwrap))
+        cdkBuilder.tsvStoreOptions(tsvStoreOptions.let(TsvStoreOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -924,7 +924,7 @@ public open class CfnAnnotationStore(
        * @param formatToHeader The store's header key to column name mapping.
        */
       override fun formatToHeader(formatToHeader: IResolvable) {
-        cdkBuilder.formatToHeader(formatToHeader.let(IResolvable::unwrap))
+        cdkBuilder.formatToHeader(formatToHeader.let(IResolvable.Companion::unwrap))
       }
 
       /**

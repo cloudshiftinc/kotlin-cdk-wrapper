@@ -473,7 +473,7 @@ public interface CfnWebACLProps {
      * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
      */
     override fun associationConfig(associationConfig: IResolvable) {
-      cdkBuilder.associationConfig(associationConfig.let(IResolvable::unwrap))
+      cdkBuilder.associationConfig(associationConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -493,7 +493,7 @@ public interface CfnWebACLProps {
      * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
      */
     override fun associationConfig(associationConfig: CfnWebACL.AssociationConfigProperty) {
-      cdkBuilder.associationConfig(associationConfig.let(CfnWebACL.AssociationConfigProperty::unwrap))
+      cdkBuilder.associationConfig(associationConfig.let(CfnWebACL.AssociationConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -524,7 +524,7 @@ public interface CfnWebACLProps {
      * If you don't specify this, AWS WAF uses its default settings for `CaptchaConfig` .
      */
     override fun captchaConfig(captchaConfig: IResolvable) {
-      cdkBuilder.captchaConfig(captchaConfig.let(IResolvable::unwrap))
+      cdkBuilder.captchaConfig(captchaConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -533,7 +533,7 @@ public interface CfnWebACLProps {
      * If you don't specify this, AWS WAF uses its default settings for `CaptchaConfig` .
      */
     override fun captchaConfig(captchaConfig: CfnWebACL.CaptchaConfigProperty) {
-      cdkBuilder.captchaConfig(captchaConfig.let(CfnWebACL.CaptchaConfigProperty::unwrap))
+      cdkBuilder.captchaConfig(captchaConfig.let(CfnWebACL.CaptchaConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -552,7 +552,7 @@ public interface CfnWebACLProps {
      * If you don't specify this, AWS WAF uses its default settings for `ChallengeConfig` .
      */
     override fun challengeConfig(challengeConfig: IResolvable) {
-      cdkBuilder.challengeConfig(challengeConfig.let(IResolvable::unwrap))
+      cdkBuilder.challengeConfig(challengeConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -561,7 +561,7 @@ public interface CfnWebACLProps {
      * If you don't specify this, AWS WAF uses its default settings for `ChallengeConfig` .
      */
     override fun challengeConfig(challengeConfig: CfnWebACL.ChallengeConfigProperty) {
-      cdkBuilder.challengeConfig(challengeConfig.let(CfnWebACL.ChallengeConfigProperty::unwrap))
+      cdkBuilder.challengeConfig(challengeConfig.let(CfnWebACL.ChallengeConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -591,7 +591,7 @@ public interface CfnWebACLProps {
      * *AWS WAF Developer Guide* .
      */
     override fun customResponseBodies(customResponseBodies: IResolvable) {
-      cdkBuilder.customResponseBodies(customResponseBodies.let(IResolvable::unwrap))
+      cdkBuilder.customResponseBodies(customResponseBodies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -618,7 +618,7 @@ public interface CfnWebACLProps {
      * match. 
      */
     override fun defaultAction(defaultAction: IResolvable) {
-      cdkBuilder.defaultAction(defaultAction.let(IResolvable::unwrap))
+      cdkBuilder.defaultAction(defaultAction.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -626,7 +626,7 @@ public interface CfnWebACLProps {
      * match. 
      */
     override fun defaultAction(defaultAction: CfnWebACL.DefaultActionProperty) {
-      cdkBuilder.defaultAction(defaultAction.let(CfnWebACL.DefaultActionProperty::unwrap))
+      cdkBuilder.defaultAction(defaultAction.let(CfnWebACL.DefaultActionProperty.Companion::unwrap))
     }
 
     /**
@@ -659,7 +659,7 @@ public interface CfnWebACLProps {
      * requests, and parameters that govern how AWS WAF handles them.
      */
     override fun rules(rules: IResolvable) {
-      cdkBuilder.rules(rules.let(IResolvable::unwrap))
+      cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -708,7 +708,7 @@ public interface CfnWebACLProps {
      * AWS CloudFormation , you can only add tags to AWS WAF resources during resource creation.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -751,7 +751,7 @@ public interface CfnWebACLProps {
      * collection. 
      */
     override fun visibilityConfig(visibilityConfig: IResolvable) {
-      cdkBuilder.visibilityConfig(visibilityConfig.let(IResolvable::unwrap))
+      cdkBuilder.visibilityConfig(visibilityConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -759,7 +759,7 @@ public interface CfnWebACLProps {
      * collection. 
      */
     override fun visibilityConfig(visibilityConfig: CfnWebACL.VisibilityConfigProperty) {
-      cdkBuilder.visibilityConfig(visibilityConfig.let(CfnWebACL.VisibilityConfigProperty::unwrap))
+      cdkBuilder.visibilityConfig(visibilityConfig.let(CfnWebACL.VisibilityConfigProperty.Companion::unwrap))
     }
 
     /**

@@ -586,7 +586,7 @@ public interface CfnScalingPolicyProps {
      * @param stepScalingPolicyConfiguration A step scaling policy.
      */
     override fun stepScalingPolicyConfiguration(stepScalingPolicyConfiguration: IResolvable) {
-      cdkBuilder.stepScalingPolicyConfiguration(stepScalingPolicyConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.stepScalingPolicyConfiguration(stepScalingPolicyConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -594,7 +594,7 @@ public interface CfnScalingPolicyProps {
      */
     override
         fun stepScalingPolicyConfiguration(stepScalingPolicyConfiguration: CfnScalingPolicy.StepScalingPolicyConfigurationProperty) {
-      cdkBuilder.stepScalingPolicyConfiguration(stepScalingPolicyConfiguration.let(CfnScalingPolicy.StepScalingPolicyConfigurationProperty::unwrap))
+      cdkBuilder.stepScalingPolicyConfiguration(stepScalingPolicyConfiguration.let(CfnScalingPolicy.StepScalingPolicyConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -612,7 +612,7 @@ public interface CfnScalingPolicyProps {
      */
     override
         fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: IResolvable) {
-      cdkBuilder.targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -620,7 +620,7 @@ public interface CfnScalingPolicyProps {
      */
     override
         fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: CfnScalingPolicy.TargetTrackingScalingPolicyConfigurationProperty) {
-      cdkBuilder.targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration.let(CfnScalingPolicy.TargetTrackingScalingPolicyConfigurationProperty::unwrap))
+      cdkBuilder.targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration.let(CfnScalingPolicy.TargetTrackingScalingPolicyConfigurationProperty.Companion::unwrap))
     }
 
     /**

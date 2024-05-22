@@ -115,28 +115,28 @@ public interface ServiceAttributes {
      * @param discoveryType the value to be set.
      */
     override fun discoveryType(discoveryType: DiscoveryType) {
-      cdkBuilder.discoveryType(discoveryType.let(DiscoveryType::unwrap))
+      cdkBuilder.discoveryType(discoveryType.let(DiscoveryType.Companion::unwrap))
     }
 
     /**
      * @param dnsRecordType the value to be set. 
      */
     override fun dnsRecordType(dnsRecordType: DnsRecordType) {
-      cdkBuilder.dnsRecordType(dnsRecordType.let(DnsRecordType::unwrap))
+      cdkBuilder.dnsRecordType(dnsRecordType.let(DnsRecordType.Companion::unwrap))
     }
 
     /**
      * @param namespace the value to be set. 
      */
     override fun namespace(namespace: INamespace) {
-      cdkBuilder.namespace(namespace.let(INamespace::unwrap))
+      cdkBuilder.namespace(namespace.let(INamespace.Companion::unwrap))
     }
 
     /**
      * @param routingPolicy the value to be set. 
      */
     override fun routingPolicy(routingPolicy: RoutingPolicy) {
-      cdkBuilder.routingPolicy(routingPolicy.let(RoutingPolicy::unwrap))
+      cdkBuilder.routingPolicy(routingPolicy.let(RoutingPolicy.Companion::unwrap))
     }
 
     /**

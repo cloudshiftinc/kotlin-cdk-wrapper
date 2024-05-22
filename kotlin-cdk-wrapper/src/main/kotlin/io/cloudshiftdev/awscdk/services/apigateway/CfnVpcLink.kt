@@ -51,8 +51,8 @@ public open class CfnVpcLink(
     id: String,
     props: CfnVpcLinkProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.CfnVpcLink(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVpcLinkProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.CfnVpcLink(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVpcLinkProps.Companion::unwrap))
   )
 
   public constructor(
@@ -87,7 +87,7 @@ public open class CfnVpcLink(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -117,7 +117,7 @@ public open class CfnVpcLink(
    * An array of arbitrary tags (key-value pairs) to associate with the VPC link.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -234,7 +234,7 @@ public open class CfnVpcLink(
      * @param tags An array of arbitrary tags (key-value pairs) to associate with the VPC link. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

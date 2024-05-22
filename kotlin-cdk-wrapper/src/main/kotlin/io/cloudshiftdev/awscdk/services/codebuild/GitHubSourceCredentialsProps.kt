@@ -45,7 +45,7 @@ public interface GitHubSourceCredentialsProps {
      * @param accessToken The personal access token to use when contacting the GitHub API. 
      */
     override fun accessToken(accessToken: SecretValue) {
-      cdkBuilder.accessToken(accessToken.let(SecretValue::unwrap))
+      cdkBuilder.accessToken(accessToken.let(SecretValue.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codebuild.GitHubSourceCredentialsProps =

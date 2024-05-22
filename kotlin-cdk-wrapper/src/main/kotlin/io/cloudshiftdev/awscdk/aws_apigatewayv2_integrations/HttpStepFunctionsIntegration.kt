@@ -57,7 +57,7 @@ public open class HttpStepFunctionsIntegration(
 ) : HttpRouteIntegration(cdkObject) {
   public constructor(id: String, props: HttpStepFunctionsIntegrationProps) :
       this(software.amazon.awscdk.aws_apigatewayv2_integrations.HttpStepFunctionsIntegration(id,
-      props.let(HttpStepFunctionsIntegrationProps::unwrap))
+      props.let(HttpStepFunctionsIntegrationProps.Companion::unwrap))
   )
 
   public constructor(id: String, props: HttpStepFunctionsIntegrationProps.Builder.() -> Unit) :
@@ -70,7 +70,7 @@ public open class HttpStepFunctionsIntegration(
    * @param options 
    */
   public override fun bind(options: HttpRouteIntegrationBindOptions): HttpRouteIntegrationConfig =
-      unwrap(this).bind(options.let(HttpRouteIntegrationBindOptions::unwrap)).let(HttpRouteIntegrationConfig::wrap)
+      unwrap(this).bind(options.let(HttpRouteIntegrationBindOptions.Companion::unwrap)).let(HttpRouteIntegrationConfig::wrap)
 
   /**
    * Bind this integration to the route.
@@ -143,7 +143,7 @@ public open class HttpStepFunctionsIntegration(
      * backend. 
      */
     override fun parameterMapping(parameterMapping: ParameterMapping) {
-      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping::unwrap))
+      cdkBuilder.parameterMapping(parameterMapping.let(ParameterMapping.Companion::unwrap))
     }
 
     /**
@@ -152,7 +152,7 @@ public open class HttpStepFunctionsIntegration(
      * @param stateMachine Statemachine that Integrates with API Gateway. 
      */
     override fun stateMachine(stateMachine: StateMachine) {
-      cdkBuilder.stateMachine(stateMachine.let(StateMachine::unwrap))
+      cdkBuilder.stateMachine(stateMachine.let(StateMachine.Companion::unwrap))
     }
 
     /**
@@ -165,7 +165,7 @@ public open class HttpStepFunctionsIntegration(
      * @param subtype The subtype of the HTTP integration. 
      */
     override fun subtype(subtype: HttpIntegrationSubtype) {
-      cdkBuilder.subtype(subtype.let(HttpIntegrationSubtype::unwrap))
+      cdkBuilder.subtype(subtype.let(HttpIntegrationSubtype.Companion::unwrap))
     }
 
     public fun build():

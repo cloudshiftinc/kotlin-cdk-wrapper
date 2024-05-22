@@ -80,8 +80,8 @@ public open class CfnDeployment(
     id: String,
     props: CfnDeploymentProps,
   ) :
-      this(software.amazon.awscdk.services.appconfig.CfnDeployment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDeploymentProps::unwrap))
+      this(software.amazon.awscdk.services.appconfig.CfnDeployment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDeploymentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -173,7 +173,7 @@ public open class CfnDeployment(
    * `PRE_START_DEPLOYMENT` actions.
    */
   public open fun dynamicExtensionParameters(`value`: IResolvable) {
-    unwrap(this).setDynamicExtensionParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDynamicExtensionParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -209,7 +209,7 @@ public open class CfnDeployment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -235,7 +235,7 @@ public open class CfnDeployment(
    * Metadata to assign to the deployment.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -433,7 +433,7 @@ public open class CfnDeployment(
      * pass to associated extensions with `PRE_START_DEPLOYMENT` actions. 
      */
     override fun dynamicExtensionParameters(dynamicExtensionParameters: IResolvable) {
-      cdkBuilder.dynamicExtensionParameters(dynamicExtensionParameters.let(IResolvable::unwrap))
+      cdkBuilder.dynamicExtensionParameters(dynamicExtensionParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -491,7 +491,7 @@ public open class CfnDeployment(
      * @param tags Metadata to assign to the deployment. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

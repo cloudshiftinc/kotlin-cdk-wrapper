@@ -263,7 +263,7 @@ public interface CfnJobQueueProps {
      * single job queue.
      */
     override fun computeEnvironmentOrder(computeEnvironmentOrder: IResolvable) {
-      cdkBuilder.computeEnvironmentOrder(computeEnvironmentOrder.let(IResolvable::unwrap))
+      cdkBuilder.computeEnvironmentOrder(computeEnvironmentOrder.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -316,7 +316,7 @@ public interface CfnJobQueueProps {
      * AWS Batch will perform each action after `maxTimeSeconds` has passed.
      */
     override fun jobStateTimeLimitActions(jobStateTimeLimitActions: IResolvable) {
-      cdkBuilder.jobStateTimeLimitActions(jobStateTimeLimitActions.let(IResolvable::unwrap))
+      cdkBuilder.jobStateTimeLimitActions(jobStateTimeLimitActions.let(IResolvable.Companion::unwrap))
     }
 
     /**

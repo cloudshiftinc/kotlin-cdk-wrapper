@@ -63,8 +63,8 @@ public open class Version(
     id: String,
     props: VersionProps,
   ) :
-      this(software.amazon.awscdk.services.lambda.Version(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(VersionProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.Version(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(VersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -96,7 +96,7 @@ public open class Version(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun addAlias(aliasName: String, options: AliasOptions): Alias =
-      unwrap(this).addAlias(aliasName, options.let(AliasOptions::unwrap)).let(Alias::wrap)
+      unwrap(this).addAlias(aliasName, options.let(AliasOptions.Companion::unwrap)).let(Alias::wrap)
 
   /**
    * (deprecated) Defines an alias for this version.
@@ -160,7 +160,7 @@ public open class Version(
    * @param props
    */
   public override fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Return the given named metric for this Function.
@@ -319,7 +319,7 @@ public open class Version(
      * @param lambda Function to get the value of. 
      */
     override fun lambda(lambda: IFunction) {
-      cdkBuilder.lambda(lambda.let(IFunction::unwrap))
+      cdkBuilder.lambda(lambda.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -334,7 +334,7 @@ public open class Version(
      * processing. 
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -345,7 +345,7 @@ public open class Version(
      * @param onFailure The destination for failed invocations. 
      */
     override fun onFailure(onFailure: IDestination) {
-      cdkBuilder.onFailure(onFailure.let(IDestination::unwrap))
+      cdkBuilder.onFailure(onFailure.let(IDestination.Companion::unwrap))
     }
 
     /**
@@ -356,7 +356,7 @@ public open class Version(
      * @param onSuccess The destination for successful invocations. 
      */
     override fun onSuccess(onSuccess: IDestination) {
-      cdkBuilder.onSuccess(onSuccess.let(IDestination::unwrap))
+      cdkBuilder.onSuccess(onSuccess.let(IDestination.Companion::unwrap))
     }
 
     /**
@@ -380,7 +380,7 @@ public open class Version(
      * created. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -407,7 +407,7 @@ public open class Version(
       id: String,
       versionArn: String,
     ): IVersion =
-        software.amazon.awscdk.services.lambda.Version.fromVersionArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.lambda.Version.fromVersionArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, versionArn).let(IVersion::wrap)
 
     public fun fromVersionAttributes(
@@ -415,8 +415,8 @@ public open class Version(
       id: String,
       attrs: VersionAttributes,
     ): IVersion =
-        software.amazon.awscdk.services.lambda.Version.fromVersionAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(VersionAttributes::unwrap)).let(IVersion::wrap)
+        software.amazon.awscdk.services.lambda.Version.fromVersionAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(VersionAttributes.Companion::unwrap)).let(IVersion::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("eb465a0d3cfc3652ccdc9929ccc263eba569adee02088db50e59eb21d89d2830")

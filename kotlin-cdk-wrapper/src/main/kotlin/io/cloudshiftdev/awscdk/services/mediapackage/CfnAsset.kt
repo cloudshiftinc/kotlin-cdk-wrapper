@@ -60,8 +60,8 @@ public open class CfnAsset(
     id: String,
     props: CfnAssetProps,
   ) :
-      this(software.amazon.awscdk.services.mediapackage.CfnAsset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAssetProps::unwrap))
+      this(software.amazon.awscdk.services.mediapackage.CfnAsset(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAssetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -92,7 +92,7 @@ public open class CfnAsset(
    * List of playback endpoints that are available for this asset.
    */
   public open fun egressEndpoints(`value`: IResolvable) {
-    unwrap(this).setEgressEndpoints(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEgressEndpoints(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -125,7 +125,7 @@ public open class CfnAsset(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -193,7 +193,7 @@ public open class CfnAsset(
    * The tags to assign to the asset.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -306,7 +306,7 @@ public open class CfnAsset(
      * @param egressEndpoints List of playback endpoints that are available for this asset. 
      */
     override fun egressEndpoints(egressEndpoints: IResolvable) {
-      cdkBuilder.egressEndpoints(egressEndpoints.let(IResolvable::unwrap))
+      cdkBuilder.egressEndpoints(egressEndpoints.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -390,7 +390,7 @@ public open class CfnAsset(
      * @param tags The tags to assign to the asset. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

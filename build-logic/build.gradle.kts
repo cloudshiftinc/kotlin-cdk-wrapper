@@ -1,6 +1,3 @@
-import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins { `kotlin-dsl` }
 
 dependencies {
@@ -40,16 +37,6 @@ dependencies {
 
     // workaround for using version catalog in precompiled script plugins
     implementation(files(libs.javaClass.superclass.protectionDomain.codeSource.location))
-}
-
-// https://kotlinlang.org/docs/whatsnew19.html#try-the-k2-compiler-in-your-project
-if (GradleVersion.current() < GradleVersion.version("8.3")) {
-    tasks.withType<KotlinCompile>().configureEach {
-        compilerOptions {
-            languageVersion.set(KotlinVersion.KOTLIN_1_9)
-            apiVersion.set(KotlinVersion.KOTLIN_1_9)
-        }
-    }
 }
 
 fun DependencyHandlerScope.plugin(id: String, version: String) = "$id:$id.gradle.plugin:$version"

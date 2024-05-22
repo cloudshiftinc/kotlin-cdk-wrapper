@@ -81,8 +81,8 @@ public open class CfnFindingsFilter(
     id: String,
     props: CfnFindingsFilterProps,
   ) :
-      this(software.amazon.awscdk.services.macie.CfnFindingsFilter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFindingsFilterProps::unwrap))
+      this(software.amazon.awscdk.services.macie.CfnFindingsFilter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFindingsFilterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -155,14 +155,14 @@ public open class CfnFindingsFilter(
    * The criteria to use to filter findings.
    */
   public open fun findingCriteria(`value`: IResolvable) {
-    unwrap(this).setFindingCriteria(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFindingCriteria(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The criteria to use to filter findings.
    */
   public open fun findingCriteria(`value`: FindingCriteriaProperty) {
-    unwrap(this).setFindingCriteria(`value`.let(FindingCriteriaProperty::unwrap))
+    unwrap(this).setFindingCriteria(`value`.let(FindingCriteriaProperty.Companion::unwrap))
   }
 
   /**
@@ -179,7 +179,7 @@ public open class CfnFindingsFilter(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -221,7 +221,7 @@ public open class CfnFindingsFilter(
    * An array of key-value pairs to apply to the findings filter.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -377,7 +377,7 @@ public open class CfnFindingsFilter(
      * @param findingCriteria The criteria to use to filter findings. 
      */
     override fun findingCriteria(findingCriteria: IResolvable) {
-      cdkBuilder.findingCriteria(findingCriteria.let(IResolvable::unwrap))
+      cdkBuilder.findingCriteria(findingCriteria.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -387,7 +387,7 @@ public open class CfnFindingsFilter(
      * @param findingCriteria The criteria to use to filter findings. 
      */
     override fun findingCriteria(findingCriteria: FindingCriteriaProperty) {
-      cdkBuilder.findingCriteria(findingCriteria.let(FindingCriteriaProperty::unwrap))
+      cdkBuilder.findingCriteria(findingCriteria.let(FindingCriteriaProperty.Companion::unwrap))
     }
 
     /**
@@ -440,7 +440,7 @@ public open class CfnFindingsFilter(
      * @param tags An array of key-value pairs to apply to the findings filter. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -818,7 +818,7 @@ public open class CfnFindingsFilter(
        * values to use to filter the results.
        */
       override fun criterion(criterion: IResolvable) {
-        cdkBuilder.criterion(criterion.let(IResolvable::unwrap))
+        cdkBuilder.criterion(criterion.let(IResolvable.Companion::unwrap))
       }
 
       /**

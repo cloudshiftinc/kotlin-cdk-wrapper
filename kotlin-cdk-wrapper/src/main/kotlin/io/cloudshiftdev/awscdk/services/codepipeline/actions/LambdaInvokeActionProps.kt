@@ -198,7 +198,7 @@ public interface LambdaInvokeActionProps : CommonAwsActionProps {
      * under the `'CodePipeline.job'.data.inputArtifacts` path.
      */
     override fun inputs(inputs: List<Artifact>) {
-      cdkBuilder.inputs(inputs.map(Artifact::unwrap))
+      cdkBuilder.inputs(inputs.map(Artifact.Companion::unwrap))
     }
 
     /**
@@ -213,7 +213,7 @@ public interface LambdaInvokeActionProps : CommonAwsActionProps {
      * @param lambda The lambda function to invoke. 
      */
     override fun lambda(lambda: IFunction) {
-      cdkBuilder.lambda(lambda.let(IFunction::unwrap))
+      cdkBuilder.lambda(lambda.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -225,7 +225,7 @@ public interface LambdaInvokeActionProps : CommonAwsActionProps {
      * provided locations.
      */
     override fun outputs(outputs: List<Artifact>) {
-      cdkBuilder.outputs(outputs.map(Artifact::unwrap))
+      cdkBuilder.outputs(outputs.map(Artifact.Companion::unwrap))
     }
 
     /**
@@ -247,7 +247,7 @@ public interface LambdaInvokeActionProps : CommonAwsActionProps {
      * method in the `ActionBindOptions.role` property.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**

@@ -36,7 +36,8 @@ public open class AdotLambdaLayerJavaScriptSdkVersion(
    * @param architecture The architecture of the Lambda layer (either X86_64 or ARM_64). 
    */
   public open fun layerArn(scope: IConstruct, architecture: Architecture): String =
-      unwrap(this).layerArn(scope.let(IConstruct::unwrap), architecture.let(Architecture::unwrap))
+      unwrap(this).layerArn(scope.let(IConstruct.Companion::unwrap),
+      architecture.let(Architecture.Companion::unwrap))
 
   public companion object {
     public val LATEST: AdotLambdaLayerJavaScriptSdkVersion =

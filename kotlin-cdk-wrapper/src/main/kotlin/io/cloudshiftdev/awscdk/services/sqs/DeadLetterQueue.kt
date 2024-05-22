@@ -72,7 +72,7 @@ public interface DeadLetterQueue {
      * maxReceiveCount is exceeded. 
      */
     override fun queue(queue: IQueue) {
-      cdkBuilder.queue(queue.let(IQueue::unwrap))
+      cdkBuilder.queue(queue.let(IQueue.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.sqs.DeadLetterQueue = cdkBuilder.build()

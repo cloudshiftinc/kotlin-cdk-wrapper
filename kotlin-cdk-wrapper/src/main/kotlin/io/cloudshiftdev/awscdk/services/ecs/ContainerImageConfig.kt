@@ -80,7 +80,7 @@ public interface ContainerImageConfig {
      */
     override
         fun repositoryCredentials(repositoryCredentials: CfnTaskDefinition.RepositoryCredentialsProperty) {
-      cdkBuilder.repositoryCredentials(repositoryCredentials.let(CfnTaskDefinition.RepositoryCredentialsProperty::unwrap))
+      cdkBuilder.repositoryCredentials(repositoryCredentials.let(CfnTaskDefinition.RepositoryCredentialsProperty.Companion::unwrap))
     }
 
     /**

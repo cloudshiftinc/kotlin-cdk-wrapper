@@ -35,13 +35,13 @@ public open class KinesisDestination(
   cdkObject: software.amazon.awscdk.services.logs.destinations.KinesisDestination,
 ) : CdkObject(cdkObject), ILogSubscriptionDestination {
   public constructor(stream: CloudshiftdevAwscdkServicesKinesisIStream) :
-      this(software.amazon.awscdk.services.logs.destinations.KinesisDestination(stream.let(CloudshiftdevAwscdkServicesKinesisIStream::unwrap))
+      this(software.amazon.awscdk.services.logs.destinations.KinesisDestination(stream.let(CloudshiftdevAwscdkServicesKinesisIStream.Companion::unwrap))
   )
 
   public constructor(stream: CloudshiftdevAwscdkServicesKinesisIStream,
       props: KinesisDestinationProps) :
-      this(software.amazon.awscdk.services.logs.destinations.KinesisDestination(stream.let(CloudshiftdevAwscdkServicesKinesisIStream::unwrap),
-      props.let(KinesisDestinationProps::unwrap))
+      this(software.amazon.awscdk.services.logs.destinations.KinesisDestination(stream.let(CloudshiftdevAwscdkServicesKinesisIStream.Companion::unwrap),
+      props.let(KinesisDestinationProps.Companion::unwrap))
   )
 
   public constructor(stream: CloudshiftdevAwscdkServicesKinesisIStream,
@@ -63,8 +63,8 @@ public open class KinesisDestination(
    * @param _sourceLogGroup 
    */
   public override fun bind(scope: Construct, sourceLogGroup: ILogGroup):
-      LogSubscriptionDestinationConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      sourceLogGroup.let(ILogGroup::unwrap)).let(LogSubscriptionDestinationConfig::wrap)
+      LogSubscriptionDestinationConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      sourceLogGroup.let(ILogGroup.Companion::unwrap)).let(LogSubscriptionDestinationConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.logs.destinations.KinesisDestination].
@@ -96,7 +96,7 @@ public open class KinesisDestination(
      * @param role The role to assume to write log events to the destination. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.logs.destinations.KinesisDestination =

@@ -228,7 +228,7 @@ public interface CustomResourceProps {
      * @param removalPolicy The policy to apply when this resource is removed from the application.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**

@@ -103,8 +103,8 @@ public open class CfnEndpoint(
     id: String,
     props: CfnEndpointProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnEndpoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEndpointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -135,7 +135,7 @@ public open class CfnEndpoint(
    * and rollback configurations.
    */
   public open fun deploymentConfig(`value`: IResolvable) {
-    unwrap(this).setDeploymentConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeploymentConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -143,7 +143,7 @@ public open class CfnEndpoint(
    * and rollback configurations.
    */
   public open fun deploymentConfig(`value`: DeploymentConfigProperty) {
-    unwrap(this).setDeploymentConfig(`value`.let(DeploymentConfigProperty::unwrap))
+    unwrap(this).setDeploymentConfig(`value`.let(DeploymentConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -213,7 +213,7 @@ public open class CfnEndpoint(
    * creating new endpoint resources or when `RetainAllVariantProperties` is set to `false` .
    */
   public open fun excludeRetainedVariantProperties(`value`: IResolvable) {
-    unwrap(this).setExcludeRetainedVariantProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setExcludeRetainedVariantProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -247,7 +247,7 @@ public open class CfnEndpoint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -269,7 +269,7 @@ public open class CfnEndpoint(
    * as the instance count or the variant weight.
    */
   public open fun retainAllVariantProperties(`value`: IResolvable) {
-    unwrap(this).setRetainAllVariantProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRetainAllVariantProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -288,7 +288,7 @@ public open class CfnEndpoint(
    * Specifies whether to reuse the last deployment configuration.
    */
   public open fun retainDeploymentConfig(`value`: IResolvable) {
-    unwrap(this).setRetainDeploymentConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRetainDeploymentConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -306,7 +306,7 @@ public open class CfnEndpoint(
    * A list of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -538,7 +538,7 @@ public open class CfnEndpoint(
      * desired deployment strategy and rollback configurations. 
      */
     override fun deploymentConfig(deploymentConfig: IResolvable) {
-      cdkBuilder.deploymentConfig(deploymentConfig.let(IResolvable::unwrap))
+      cdkBuilder.deploymentConfig(deploymentConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -550,7 +550,7 @@ public open class CfnEndpoint(
      * desired deployment strategy and rollback configurations. 
      */
     override fun deploymentConfig(deploymentConfig: DeploymentConfigProperty) {
-      cdkBuilder.deploymentConfig(deploymentConfig.let(DeploymentConfigProperty::unwrap))
+      cdkBuilder.deploymentConfig(deploymentConfig.let(DeploymentConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -619,7 +619,7 @@ public open class CfnEndpoint(
      * when creating new endpoint resources or when `RetainAllVariantProperties` is set to `false` . 
      */
     override fun excludeRetainedVariantProperties(excludeRetainedVariantProperties: IResolvable) {
-      cdkBuilder.excludeRetainedVariantProperties(excludeRetainedVariantProperties.let(IResolvable::unwrap))
+      cdkBuilder.excludeRetainedVariantProperties(excludeRetainedVariantProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -698,7 +698,7 @@ public open class CfnEndpoint(
      * retention of variant properties, such as the instance count or the variant weight. 
      */
     override fun retainAllVariantProperties(retainAllVariantProperties: IResolvable) {
-      cdkBuilder.retainAllVariantProperties(retainAllVariantProperties.let(IResolvable::unwrap))
+      cdkBuilder.retainAllVariantProperties(retainAllVariantProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -722,7 +722,7 @@ public open class CfnEndpoint(
      * @param retainDeploymentConfig Specifies whether to reuse the last deployment configuration. 
      */
     override fun retainDeploymentConfig(retainDeploymentConfig: IResolvable) {
-      cdkBuilder.retainDeploymentConfig(retainDeploymentConfig.let(IResolvable::unwrap))
+      cdkBuilder.retainDeploymentConfig(retainDeploymentConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -738,7 +738,7 @@ public open class CfnEndpoint(
      * @param tags A list of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -924,7 +924,7 @@ public open class CfnEndpoint(
        * If any alarms are tripped during a deployment, SageMaker rolls back the deployment.
        */
       override fun alarms(alarms: IResolvable) {
-        cdkBuilder.alarms(alarms.let(IResolvable::unwrap))
+        cdkBuilder.alarms(alarms.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1119,7 +1119,7 @@ public open class CfnEndpoint(
        * from the old fleet to the new fleet during an endpoint deployment. 
        */
       override fun trafficRoutingConfiguration(trafficRoutingConfiguration: IResolvable) {
-        cdkBuilder.trafficRoutingConfiguration(trafficRoutingConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.trafficRoutingConfiguration(trafficRoutingConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1128,7 +1128,7 @@ public open class CfnEndpoint(
        */
       override
           fun trafficRoutingConfiguration(trafficRoutingConfiguration: TrafficRoutingConfigProperty) {
-        cdkBuilder.trafficRoutingConfiguration(trafficRoutingConfiguration.let(TrafficRoutingConfigProperty::unwrap))
+        cdkBuilder.trafficRoutingConfiguration(trafficRoutingConfiguration.let(TrafficRoutingConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1499,7 +1499,7 @@ public open class CfnEndpoint(
        * deployment failures and recovery.
        */
       override fun autoRollbackConfiguration(autoRollbackConfiguration: IResolvable) {
-        cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1508,7 +1508,7 @@ public open class CfnEndpoint(
        */
       override
           fun autoRollbackConfiguration(autoRollbackConfiguration: AutoRollbackConfigProperty) {
-        cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(AutoRollbackConfigProperty::unwrap))
+        cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(AutoRollbackConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1530,7 +1530,7 @@ public open class CfnEndpoint(
        * deployment strategy with all at once traffic shifting by default.
        */
       override fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: IResolvable) {
-        cdkBuilder.blueGreenUpdatePolicy(blueGreenUpdatePolicy.let(IResolvable::unwrap))
+        cdkBuilder.blueGreenUpdatePolicy(blueGreenUpdatePolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1542,7 +1542,7 @@ public open class CfnEndpoint(
        * deployment strategy with all at once traffic shifting by default.
        */
       override fun blueGreenUpdatePolicy(blueGreenUpdatePolicy: BlueGreenUpdatePolicyProperty) {
-        cdkBuilder.blueGreenUpdatePolicy(blueGreenUpdatePolicy.let(BlueGreenUpdatePolicyProperty::unwrap))
+        cdkBuilder.blueGreenUpdatePolicy(blueGreenUpdatePolicy.let(BlueGreenUpdatePolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -1564,7 +1564,7 @@ public open class CfnEndpoint(
        * endpoint.
        */
       override fun rollingUpdatePolicy(rollingUpdatePolicy: IResolvable) {
-        cdkBuilder.rollingUpdatePolicy(rollingUpdatePolicy.let(IResolvable::unwrap))
+        cdkBuilder.rollingUpdatePolicy(rollingUpdatePolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1572,7 +1572,7 @@ public open class CfnEndpoint(
        * endpoint.
        */
       override fun rollingUpdatePolicy(rollingUpdatePolicy: RollingUpdatePolicyProperty) {
-        cdkBuilder.rollingUpdatePolicy(rollingUpdatePolicy.let(RollingUpdatePolicyProperty::unwrap))
+        cdkBuilder.rollingUpdatePolicy(rollingUpdatePolicy.let(RollingUpdatePolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -1789,7 +1789,7 @@ public open class CfnEndpoint(
        * Value must be between 5% to 50% of the variant's total instance count.
        */
       override fun maximumBatchSize(maximumBatchSize: IResolvable) {
-        cdkBuilder.maximumBatchSize(maximumBatchSize.let(IResolvable::unwrap))
+        cdkBuilder.maximumBatchSize(maximumBatchSize.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1798,7 +1798,7 @@ public open class CfnEndpoint(
        * Value must be between 5% to 50% of the variant's total instance count.
        */
       override fun maximumBatchSize(maximumBatchSize: CapacitySizeProperty) {
-        cdkBuilder.maximumBatchSize(maximumBatchSize.let(CapacitySizeProperty::unwrap))
+        cdkBuilder.maximumBatchSize(maximumBatchSize.let(CapacitySizeProperty.Companion::unwrap))
       }
 
       /**
@@ -1827,7 +1827,7 @@ public open class CfnEndpoint(
        * at once during rollback.
        */
       override fun rollbackMaximumBatchSize(rollbackMaximumBatchSize: IResolvable) {
-        cdkBuilder.rollbackMaximumBatchSize(rollbackMaximumBatchSize.let(IResolvable::unwrap))
+        cdkBuilder.rollbackMaximumBatchSize(rollbackMaximumBatchSize.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1838,7 +1838,7 @@ public open class CfnEndpoint(
        * at once during rollback.
        */
       override fun rollbackMaximumBatchSize(rollbackMaximumBatchSize: CapacitySizeProperty) {
-        cdkBuilder.rollbackMaximumBatchSize(rollbackMaximumBatchSize.let(CapacitySizeProperty::unwrap))
+        cdkBuilder.rollbackMaximumBatchSize(rollbackMaximumBatchSize.let(CapacitySizeProperty.Companion::unwrap))
       }
 
       /**
@@ -2077,7 +2077,7 @@ public open class CfnEndpoint(
        * `Value` must be less than or equal to 50% of the variant's total instance count.
        */
       override fun canarySize(canarySize: IResolvable) {
-        cdkBuilder.canarySize(canarySize.let(IResolvable::unwrap))
+        cdkBuilder.canarySize(canarySize.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2086,7 +2086,7 @@ public open class CfnEndpoint(
        * `Value` must be less than or equal to 50% of the variant's total instance count.
        */
       override fun canarySize(canarySize: CapacitySizeProperty) {
-        cdkBuilder.canarySize(canarySize.let(CapacitySizeProperty::unwrap))
+        cdkBuilder.canarySize(canarySize.let(CapacitySizeProperty.Companion::unwrap))
       }
 
       /**
@@ -2105,7 +2105,7 @@ public open class CfnEndpoint(
        * `Value` must be 10-50% of the variant's total instance count.
        */
       override fun linearStepSize(linearStepSize: IResolvable) {
-        cdkBuilder.linearStepSize(linearStepSize.let(IResolvable::unwrap))
+        cdkBuilder.linearStepSize(linearStepSize.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2114,7 +2114,7 @@ public open class CfnEndpoint(
        * `Value` must be 10-50% of the variant's total instance count.
        */
       override fun linearStepSize(linearStepSize: CapacitySizeProperty) {
-        cdkBuilder.linearStepSize(linearStepSize.let(CapacitySizeProperty::unwrap))
+        cdkBuilder.linearStepSize(linearStepSize.let(CapacitySizeProperty.Companion::unwrap))
       }
 
       /**

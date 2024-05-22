@@ -154,7 +154,7 @@ public interface CfnVehicleProps {
      * For example: `"engine Type"` : `"v6"`
      */
     override fun attributes(attributes: IResolvable) {
-      cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+      cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -192,7 +192,7 @@ public interface CfnVehicleProps {
      * @param tags (Optional) Metadata which can be used to manage the vehicle.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

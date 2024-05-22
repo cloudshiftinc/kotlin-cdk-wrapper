@@ -922,7 +922,7 @@ public interface IStream : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -949,7 +949,7 @@ public interface IStream : IResource {
      * @param actions 
      */
     override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-        unwrap(this).grant(grantee.let(IGrantable::unwrap),
+        unwrap(this).grant(grantee.let(IGrantable.Companion::unwrap),
         *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
     /**
@@ -962,7 +962,7 @@ public interface IStream : IResource {
      * @param grantee 
      */
     override fun grantRead(grantee: IGrantable): Grant =
-        unwrap(this).grantRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grants read/write permissions for this stream and its contents to an IAM principal
@@ -974,7 +974,7 @@ public interface IStream : IResource {
      * @param grantee 
      */
     override fun grantReadWrite(grantee: IGrantable): Grant =
-        unwrap(this).grantReadWrite(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantReadWrite(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grant write permissions for this stream and its contents to an IAM principal
@@ -986,7 +986,7 @@ public interface IStream : IResource {
      * @param grantee 
      */
     override fun grantWrite(grantee: IGrantable): Grant =
-        unwrap(this).grantWrite(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantWrite(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Return stream metric based from its metric name.
@@ -1004,7 +1004,8 @@ public interface IStream : IResource {
      * @param props properties of the metric.
      */
     override fun metric(metricName: String, props: MetricOptions): Metric =
-        unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metric(metricName,
+        props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Return stream metric based from its metric name.
@@ -1046,7 +1047,7 @@ public interface IStream : IResource {
      * @param props properties of the metric.
      */
     override fun metricGetRecords(props: MetricOptions): Metric =
-        unwrap(this).metricGetRecords(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricGetRecords(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of records retrieved from the shard, measured over the specified time period.
@@ -1098,7 +1099,7 @@ public interface IStream : IResource {
      * @param props properties of the metric.
      */
     override fun metricGetRecordsBytes(props: MetricOptions): Metric =
-        unwrap(this).metricGetRecordsBytes(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricGetRecordsBytes(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of bytes retrieved from the Kinesis stream, measured over the specified time
@@ -1155,7 +1156,7 @@ public interface IStream : IResource {
      * @param props properties of the metric.
      */
     override fun metricGetRecordsIteratorAgeMilliseconds(props: MetricOptions): Metric =
-        unwrap(this).metricGetRecordsIteratorAgeMilliseconds(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricGetRecordsIteratorAgeMilliseconds(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The age of the last record in all GetRecords calls made against a Kinesis stream, measured
@@ -1198,7 +1199,7 @@ public interface IStream : IResource {
      * @param props properties of the metric.
      */
     override fun metricGetRecordsLatency(props: MetricOptions): Metric =
-        unwrap(this).metricGetRecordsLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricGetRecordsLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The time taken per GetRecords operation, measured over the specified time period.
@@ -1235,7 +1236,7 @@ public interface IStream : IResource {
      * @param props properties of the metric.
      */
     override fun metricGetRecordsSuccess(props: MetricOptions): Metric =
-        unwrap(this).metricGetRecordsSuccess(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricGetRecordsSuccess(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of successful GetRecords operations per stream, measured over the specified time
@@ -1281,7 +1282,7 @@ public interface IStream : IResource {
      * @param props properties of the metric.
      */
     override fun metricIncomingBytes(props: MetricOptions): Metric =
-        unwrap(this).metricIncomingBytes(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricIncomingBytes(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of bytes successfully put to the Kinesis stream over the specified time period.
@@ -1331,7 +1332,7 @@ public interface IStream : IResource {
      * @param props properties of the metric.
      */
     override fun metricIncomingRecords(props: MetricOptions): Metric =
-        unwrap(this).metricIncomingRecords(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricIncomingRecords(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of records successfully put to the Kinesis stream over the specified time period.
@@ -1373,7 +1374,7 @@ public interface IStream : IResource {
      * @param props properties of the metric.
      */
     override fun metricPutRecordBytes(props: MetricOptions): Metric =
-        unwrap(this).metricPutRecordBytes(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricPutRecordBytes(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of bytes put to the Kinesis stream using the PutRecord operation over the
@@ -1409,7 +1410,7 @@ public interface IStream : IResource {
      * @param props properties of the metric.
      */
     override fun metricPutRecordLatency(props: MetricOptions): Metric =
-        unwrap(this).metricPutRecordLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricPutRecordLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The time taken per PutRecord operation, measured over the specified time period.
@@ -1452,7 +1453,7 @@ public interface IStream : IResource {
      * @param props properties of the metric.
      */
     override fun metricPutRecordSuccess(props: MetricOptions): Metric =
-        unwrap(this).metricPutRecordSuccess(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricPutRecordSuccess(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of successful PutRecord operations per Kinesis stream, measured over the specified
@@ -1493,7 +1494,7 @@ public interface IStream : IResource {
      * @param props properties of the metric.
      */
     override fun metricPutRecordsBytes(props: MetricOptions): Metric =
-        unwrap(this).metricPutRecordsBytes(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricPutRecordsBytes(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of bytes put to the Kinesis stream using the PutRecords operation over the
@@ -1535,7 +1536,7 @@ public interface IStream : IResource {
      * @param props properties of the metric.
      */
     override fun metricPutRecordsFailedRecords(props: MetricOptions): Metric =
-        unwrap(this).metricPutRecordsFailedRecords(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricPutRecordsFailedRecords(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of records rejected due to internal failures in a PutRecords operation per Kinesis
@@ -1573,7 +1574,7 @@ public interface IStream : IResource {
      * @param props properties of the metric.
      */
     override fun metricPutRecordsLatency(props: MetricOptions): Metric =
-        unwrap(this).metricPutRecordsLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricPutRecordsLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The time taken per PutRecords operation, measured over the specified time period.
@@ -1610,7 +1611,7 @@ public interface IStream : IResource {
      * @param props properties of the metric.
      */
     override fun metricPutRecordsSuccess(props: MetricOptions): Metric =
-        unwrap(this).metricPutRecordsSuccess(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricPutRecordsSuccess(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of PutRecords operations where at least one record succeeded, per Kinesis stream,
@@ -1648,7 +1649,7 @@ public interface IStream : IResource {
      * @param props properties of the metric.
      */
     override fun metricPutRecordsSuccessfulRecords(props: MetricOptions): Metric =
-        unwrap(this).metricPutRecordsSuccessfulRecords(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricPutRecordsSuccessfulRecords(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of successful records in a PutRecords operation per Kinesis data stream, measured
@@ -1686,7 +1687,7 @@ public interface IStream : IResource {
      * @param props properties of the metric.
      */
     override fun metricPutRecordsThrottledRecords(props: MetricOptions): Metric =
-        unwrap(this).metricPutRecordsThrottledRecords(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricPutRecordsThrottledRecords(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of records rejected due to throttling in a PutRecords operation per Kinesis data
@@ -1724,7 +1725,7 @@ public interface IStream : IResource {
      * @param props properties of the metric.
      */
     override fun metricPutRecordsTotalRecords(props: MetricOptions): Metric =
-        unwrap(this).metricPutRecordsTotalRecords(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricPutRecordsTotalRecords(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The total number of records sent in a PutRecords operation per Kinesis data stream, measured
@@ -1782,7 +1783,7 @@ public interface IStream : IResource {
      * @param props properties of the metric.
      */
     override fun metricReadProvisionedThroughputExceeded(props: MetricOptions): Metric =
-        unwrap(this).metricReadProvisionedThroughputExceeded(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricReadProvisionedThroughputExceeded(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of GetRecords calls throttled for the stream over the specified time period.
@@ -1852,7 +1853,7 @@ public interface IStream : IResource {
      * @param props properties of the metric.
      */
     override fun metricWriteProvisionedThroughputExceeded(props: MetricOptions): Metric =
-        unwrap(this).metricWriteProvisionedThroughputExceeded(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricWriteProvisionedThroughputExceeded(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of records rejected due to throttling for the stream over the specified time

@@ -259,7 +259,7 @@ public interface CfnWebhookProps {
      * valid CIDR range. For UNAUTHENTICATED, no properties can be set.
      */
     override fun authenticationConfiguration(authenticationConfiguration: IResolvable) {
-      cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -271,7 +271,7 @@ public interface CfnWebhookProps {
      */
     override
         fun authenticationConfiguration(authenticationConfiguration: CfnWebhook.WebhookAuthConfigurationProperty) {
-      cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(CfnWebhook.WebhookAuthConfigurationProperty::unwrap))
+      cdkBuilder.authenticationConfiguration(authenticationConfiguration.let(CfnWebhook.WebhookAuthConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -294,7 +294,7 @@ public interface CfnWebhookProps {
      * All defined rules must pass for the request to be accepted and the pipeline started.
      */
     override fun filters(filters: IResolvable) {
-      cdkBuilder.filters(filters.let(IResolvable::unwrap))
+      cdkBuilder.filters(filters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -333,7 +333,7 @@ public interface CfnWebhookProps {
      * and the external tool with events to be detected.
      */
     override fun registerWithThirdParty(registerWithThirdParty: IResolvable) {
-      cdkBuilder.registerWithThirdParty(registerWithThirdParty.let(IResolvable::unwrap))
+      cdkBuilder.registerWithThirdParty(registerWithThirdParty.let(IResolvable.Companion::unwrap))
     }
 
     /**

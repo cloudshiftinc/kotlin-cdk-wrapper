@@ -180,7 +180,7 @@ public interface CfnImageProps {
      * *Array Members* : Minimum number of 0 items. Maximum number of 50 items.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

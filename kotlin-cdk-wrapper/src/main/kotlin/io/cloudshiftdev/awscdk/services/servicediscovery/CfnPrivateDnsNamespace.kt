@@ -68,8 +68,8 @@ public open class CfnPrivateDnsNamespace(
     id: String,
     props: CfnPrivateDnsNamespaceProps,
   ) :
-      this(software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPrivateDnsNamespaceProps::unwrap))
+      this(software.amazon.awscdk.services.servicediscovery.CfnPrivateDnsNamespace(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPrivateDnsNamespaceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -112,7 +112,7 @@ public open class CfnPrivateDnsNamespace(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -136,14 +136,14 @@ public open class CfnPrivateDnsNamespace(
    * Properties for the private DNS namespace.
    */
   public open fun properties(`value`: IResolvable) {
-    unwrap(this).setProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Properties for the private DNS namespace.
    */
   public open fun properties(`value`: PropertiesProperty) {
-    unwrap(this).setProperties(`value`.let(PropertiesProperty::unwrap))
+    unwrap(this).setProperties(`value`.let(PropertiesProperty.Companion::unwrap))
   }
 
   /**
@@ -169,7 +169,7 @@ public open class CfnPrivateDnsNamespace(
    * The tags for the namespace.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -312,7 +312,7 @@ public open class CfnPrivateDnsNamespace(
      * @param properties Properties for the private DNS namespace. 
      */
     override fun properties(properties: IResolvable) {
-      cdkBuilder.properties(properties.let(IResolvable::unwrap))
+      cdkBuilder.properties(properties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -322,7 +322,7 @@ public open class CfnPrivateDnsNamespace(
      * @param properties Properties for the private DNS namespace. 
      */
     override fun properties(properties: PropertiesProperty) {
-      cdkBuilder.properties(properties.let(PropertiesProperty::unwrap))
+      cdkBuilder.properties(properties.let(PropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -347,7 +347,7 @@ public open class CfnPrivateDnsNamespace(
      * @param tags The tags for the namespace. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -463,7 +463,7 @@ public open class CfnPrivateDnsNamespace(
        * private DNS namespace.
        */
       override fun soa(soa: IResolvable) {
-        cdkBuilder.soa(soa.let(IResolvable::unwrap))
+        cdkBuilder.soa(soa.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -471,7 +471,7 @@ public open class CfnPrivateDnsNamespace(
        * private DNS namespace.
        */
       override fun soa(soa: SOAProperty) {
-        cdkBuilder.soa(soa.let(SOAProperty::unwrap))
+        cdkBuilder.soa(soa.let(SOAProperty.Companion::unwrap))
       }
 
       /**
@@ -580,14 +580,14 @@ public open class CfnPrivateDnsNamespace(
        * @param dnsProperties DNS properties for the private DNS namespace.
        */
       override fun dnsProperties(dnsProperties: IResolvable) {
-        cdkBuilder.dnsProperties(dnsProperties.let(IResolvable::unwrap))
+        cdkBuilder.dnsProperties(dnsProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dnsProperties DNS properties for the private DNS namespace.
        */
       override fun dnsProperties(dnsProperties: PrivateDnsPropertiesMutableProperty) {
-        cdkBuilder.dnsProperties(dnsProperties.let(PrivateDnsPropertiesMutableProperty::unwrap))
+        cdkBuilder.dnsProperties(dnsProperties.let(PrivateDnsPropertiesMutableProperty.Companion::unwrap))
       }
 
       /**

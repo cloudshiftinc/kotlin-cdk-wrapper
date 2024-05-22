@@ -90,8 +90,8 @@ public open class CfnUserPoolClient(
     id: String,
     props: CfnUserPoolClientProps,
   ) :
-      this(software.amazon.awscdk.services.cognito.CfnUserPoolClient(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnUserPoolClientProps::unwrap))
+      this(software.amazon.awscdk.services.cognito.CfnUserPoolClient(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnUserPoolClientProps.Companion::unwrap))
   )
 
   public constructor(
@@ -149,7 +149,7 @@ public open class CfnUserPoolClient(
    * Set to `true` to use OAuth 2.0 features in your user pool app client.
    */
   public open fun allowedOAuthFlowsUserPoolClient(`value`: IResolvable) {
-    unwrap(this).setAllowedOAuthFlowsUserPoolClient(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAllowedOAuthFlowsUserPoolClient(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -182,7 +182,7 @@ public open class CfnUserPoolClient(
    * Pinpoint campaign.
    */
   public open fun analyticsConfiguration(`value`: IResolvable) {
-    unwrap(this).setAnalyticsConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAnalyticsConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -190,7 +190,7 @@ public open class CfnUserPoolClient(
    * Pinpoint campaign.
    */
   public open fun analyticsConfiguration(`value`: AnalyticsConfigurationProperty) {
-    unwrap(this).setAnalyticsConfiguration(`value`.let(AnalyticsConfigurationProperty::unwrap))
+    unwrap(this).setAnalyticsConfiguration(`value`.let(AnalyticsConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -292,7 +292,7 @@ public open class CfnUserPoolClient(
    * Activates the propagation of additional user context data.
    */
   public open fun enablePropagateAdditionalUserContextData(`value`: IResolvable) {
-    unwrap(this).setEnablePropagateAdditionalUserContextData(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnablePropagateAdditionalUserContextData(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -323,7 +323,7 @@ public open class CfnUserPoolClient(
    * .
    */
   public open fun enableTokenRevocation(`value`: IResolvable) {
-    unwrap(this).setEnableTokenRevocation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableTokenRevocation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -364,7 +364,7 @@ public open class CfnUserPoolClient(
    * created.
    */
   public open fun generateSecret(`value`: IResolvable) {
-    unwrap(this).setGenerateSecret(`value`.let(IResolvable::unwrap))
+    unwrap(this).setGenerateSecret(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -385,7 +385,7 @@ public open class CfnUserPoolClient(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -479,14 +479,14 @@ public open class CfnUserPoolClient(
    * The units in which the validity times are represented.
    */
   public open fun tokenValidityUnits(`value`: IResolvable) {
-    unwrap(this).setTokenValidityUnits(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTokenValidityUnits(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The units in which the validity times are represented.
    */
   public open fun tokenValidityUnits(`value`: TokenValidityUnitsProperty) {
-    unwrap(this).setTokenValidityUnits(`value`.let(TokenValidityUnitsProperty::unwrap))
+    unwrap(this).setTokenValidityUnits(`value`.let(TokenValidityUnitsProperty.Companion::unwrap))
   }
 
   /**
@@ -1308,7 +1308,7 @@ public open class CfnUserPoolClient(
      * pool app client. 
      */
     override fun allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient: IResolvable) {
-      cdkBuilder.allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient.let(IResolvable::unwrap))
+      cdkBuilder.allowedOAuthFlowsUserPoolClient(allowedOAuthFlowsUserPoolClient.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1354,7 +1354,7 @@ public open class CfnUserPoolClient(
      * and sending them to your Amazon Pinpoint campaign. 
      */
     override fun analyticsConfiguration(analyticsConfiguration: IResolvable) {
-      cdkBuilder.analyticsConfiguration(analyticsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.analyticsConfiguration(analyticsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1373,7 +1373,7 @@ public open class CfnUserPoolClient(
      * and sending them to your Amazon Pinpoint campaign. 
      */
     override fun analyticsConfiguration(analyticsConfiguration: AnalyticsConfigurationProperty) {
-      cdkBuilder.analyticsConfiguration(analyticsConfiguration.let(AnalyticsConfigurationProperty::unwrap))
+      cdkBuilder.analyticsConfiguration(analyticsConfiguration.let(AnalyticsConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1527,7 +1527,7 @@ public open class CfnUserPoolClient(
      */
     override
         fun enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData: IResolvable) {
-      cdkBuilder.enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData.let(IResolvable::unwrap))
+      cdkBuilder.enablePropagateAdditionalUserContextData(enablePropagateAdditionalUserContextData.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1563,7 +1563,7 @@ public open class CfnUserPoolClient(
      * . 
      */
     override fun enableTokenRevocation(enableTokenRevocation: IResolvable) {
-      cdkBuilder.enableTokenRevocation(enableTokenRevocation.let(IResolvable::unwrap))
+      cdkBuilder.enableTokenRevocation(enableTokenRevocation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1662,7 +1662,7 @@ public open class CfnUserPoolClient(
      * pool client being created. 
      */
     override fun generateSecret(generateSecret: IResolvable) {
-      cdkBuilder.generateSecret(generateSecret.let(IResolvable::unwrap))
+      cdkBuilder.generateSecret(generateSecret.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1826,7 +1826,7 @@ public open class CfnUserPoolClient(
      * @param tokenValidityUnits The units in which the validity times are represented. 
      */
     override fun tokenValidityUnits(tokenValidityUnits: IResolvable) {
-      cdkBuilder.tokenValidityUnits(tokenValidityUnits.let(IResolvable::unwrap))
+      cdkBuilder.tokenValidityUnits(tokenValidityUnits.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1838,7 +1838,7 @@ public open class CfnUserPoolClient(
      * @param tokenValidityUnits The units in which the validity times are represented. 
      */
     override fun tokenValidityUnits(tokenValidityUnits: TokenValidityUnitsProperty) {
-      cdkBuilder.tokenValidityUnits(tokenValidityUnits.let(TokenValidityUnitsProperty::unwrap))
+      cdkBuilder.tokenValidityUnits(tokenValidityUnits.let(TokenValidityUnitsProperty.Companion::unwrap))
     }
 
     /**
@@ -2113,7 +2113,7 @@ public open class CfnUserPoolClient(
        * the events that it publishes to Amazon Pinpoint analytics.
        */
       override fun userDataShared(userDataShared: IResolvable) {
-        cdkBuilder.userDataShared(userDataShared.let(IResolvable::unwrap))
+        cdkBuilder.userDataShared(userDataShared.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

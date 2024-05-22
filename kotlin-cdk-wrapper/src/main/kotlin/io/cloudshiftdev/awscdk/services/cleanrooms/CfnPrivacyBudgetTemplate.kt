@@ -57,8 +57,8 @@ public open class CfnPrivacyBudgetTemplate(
     id: String,
     props: CfnPrivacyBudgetTemplateProps,
   ) :
-      this(software.amazon.awscdk.services.cleanrooms.CfnPrivacyBudgetTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPrivacyBudgetTemplateProps::unwrap))
+      this(software.amazon.awscdk.services.cleanrooms.CfnPrivacyBudgetTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPrivacyBudgetTemplateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -122,7 +122,7 @@ public open class CfnPrivacyBudgetTemplate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -146,14 +146,14 @@ public open class CfnPrivacyBudgetTemplate(
    * Specifies the epislon and noise parameters for the privacy budget template.
    */
   public open fun parameters(`value`: IResolvable) {
-    unwrap(this).setParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the epislon and noise parameters for the privacy budget template.
    */
   public open fun parameters(`value`: ParametersProperty) {
-    unwrap(this).setParameters(`value`.let(ParametersProperty::unwrap))
+    unwrap(this).setParameters(`value`.let(ParametersProperty.Companion::unwrap))
   }
 
   /**
@@ -185,7 +185,7 @@ public open class CfnPrivacyBudgetTemplate(
    * An arbitrary set of tags (key-value pairs) for this cleanrooms privacy budget template.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -323,7 +323,7 @@ public open class CfnPrivacyBudgetTemplate(
      * 
      */
     override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -334,7 +334,7 @@ public open class CfnPrivacyBudgetTemplate(
      * 
      */
     override fun parameters(parameters: ParametersProperty) {
-      cdkBuilder.parameters(parameters.let(ParametersProperty::unwrap))
+      cdkBuilder.parameters(parameters.let(ParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -367,7 +367,7 @@ public open class CfnPrivacyBudgetTemplate(
      * template. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

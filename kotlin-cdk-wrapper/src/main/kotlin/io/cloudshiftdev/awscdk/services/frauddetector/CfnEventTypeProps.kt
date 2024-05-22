@@ -216,7 +216,7 @@ public interface CfnEventTypeProps {
      * @param entityTypes The event type entity types. 
      */
     override fun entityTypes(entityTypes: IResolvable) {
-      cdkBuilder.entityTypes(entityTypes.let(IResolvable::unwrap))
+      cdkBuilder.entityTypes(entityTypes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -235,7 +235,7 @@ public interface CfnEventTypeProps {
      * @param eventVariables The event type event variables. 
      */
     override fun eventVariables(eventVariables: IResolvable) {
-      cdkBuilder.eventVariables(eventVariables.let(IResolvable::unwrap))
+      cdkBuilder.eventVariables(eventVariables.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -255,7 +255,7 @@ public interface CfnEventTypeProps {
      * @param labels The event type labels. 
      */
     override fun labels(labels: IResolvable) {
-      cdkBuilder.labels(labels.let(IResolvable::unwrap))
+      cdkBuilder.labels(labels.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -285,7 +285,7 @@ public interface CfnEventTypeProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

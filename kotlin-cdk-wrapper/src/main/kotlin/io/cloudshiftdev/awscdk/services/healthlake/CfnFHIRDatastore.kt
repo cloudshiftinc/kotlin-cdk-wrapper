@@ -75,8 +75,8 @@ public open class CfnFHIRDatastore(
     id: String,
     props: CfnFHIRDatastoreProps,
   ) :
-      this(software.amazon.awscdk.services.healthlake.CfnFHIRDatastore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFHIRDatastoreProps::unwrap))
+      this(software.amazon.awscdk.services.healthlake.CfnFHIRDatastore(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFHIRDatastoreProps.Companion::unwrap))
   )
 
   public constructor(
@@ -161,14 +161,14 @@ public open class CfnFHIRDatastore(
    * The identity provider configuration that you gave when the data store was created.
    */
   public open fun identityProviderConfiguration(`value`: IResolvable) {
-    unwrap(this).setIdentityProviderConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIdentityProviderConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The identity provider configuration that you gave when the data store was created.
    */
   public open fun identityProviderConfiguration(`value`: IdentityProviderConfigurationProperty) {
-    unwrap(this).setIdentityProviderConfiguration(`value`.let(IdentityProviderConfigurationProperty::unwrap))
+    unwrap(this).setIdentityProviderConfiguration(`value`.let(IdentityProviderConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -186,7 +186,7 @@ public open class CfnFHIRDatastore(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -198,14 +198,14 @@ public open class CfnFHIRDatastore(
    * The preloaded data configuration for the data store.
    */
   public open fun preloadDataConfig(`value`: IResolvable) {
-    unwrap(this).setPreloadDataConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPreloadDataConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The preloaded data configuration for the data store.
    */
   public open fun preloadDataConfig(`value`: PreloadDataConfigProperty) {
-    unwrap(this).setPreloadDataConfig(`value`.let(PreloadDataConfigProperty::unwrap))
+    unwrap(this).setPreloadDataConfig(`value`.let(PreloadDataConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -227,7 +227,7 @@ public open class CfnFHIRDatastore(
    * for creating a data store.
    */
   public open fun sseConfiguration(`value`: IResolvable) {
-    unwrap(this).setSseConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSseConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -235,7 +235,7 @@ public open class CfnFHIRDatastore(
    * for creating a data store.
    */
   public open fun sseConfiguration(`value`: SseConfigurationProperty) {
-    unwrap(this).setSseConfiguration(`value`.let(SseConfigurationProperty::unwrap))
+    unwrap(this).setSseConfiguration(`value`.let(SseConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -262,7 +262,7 @@ public open class CfnFHIRDatastore(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -450,7 +450,7 @@ public open class CfnFHIRDatastore(
      * the data store was created. 
      */
     override fun identityProviderConfiguration(identityProviderConfiguration: IResolvable) {
-      cdkBuilder.identityProviderConfiguration(identityProviderConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.identityProviderConfiguration(identityProviderConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -462,7 +462,7 @@ public open class CfnFHIRDatastore(
      */
     override
         fun identityProviderConfiguration(identityProviderConfiguration: IdentityProviderConfigurationProperty) {
-      cdkBuilder.identityProviderConfiguration(identityProviderConfiguration.let(IdentityProviderConfigurationProperty::unwrap))
+      cdkBuilder.identityProviderConfiguration(identityProviderConfiguration.let(IdentityProviderConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -488,7 +488,7 @@ public open class CfnFHIRDatastore(
      * @param preloadDataConfig The preloaded data configuration for the data store. 
      */
     override fun preloadDataConfig(preloadDataConfig: IResolvable) {
-      cdkBuilder.preloadDataConfig(preloadDataConfig.let(IResolvable::unwrap))
+      cdkBuilder.preloadDataConfig(preloadDataConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -500,7 +500,7 @@ public open class CfnFHIRDatastore(
      * @param preloadDataConfig The preloaded data configuration for the data store. 
      */
     override fun preloadDataConfig(preloadDataConfig: PreloadDataConfigProperty) {
-      cdkBuilder.preloadDataConfig(preloadDataConfig.let(PreloadDataConfigProperty::unwrap))
+      cdkBuilder.preloadDataConfig(preloadDataConfig.let(PreloadDataConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -525,7 +525,7 @@ public open class CfnFHIRDatastore(
      * encryption key specified for creating a data store. 
      */
     override fun sseConfiguration(sseConfiguration: IResolvable) {
-      cdkBuilder.sseConfiguration(sseConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.sseConfiguration(sseConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -537,7 +537,7 @@ public open class CfnFHIRDatastore(
      * encryption key specified for creating a data store. 
      */
     override fun sseConfiguration(sseConfiguration: SseConfigurationProperty) {
-      cdkBuilder.sseConfiguration(sseConfiguration.let(SseConfigurationProperty::unwrap))
+      cdkBuilder.sseConfiguration(sseConfiguration.let(SseConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -564,7 +564,7 @@ public open class CfnFHIRDatastore(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -864,7 +864,7 @@ public open class CfnFHIRDatastore(
        * created the data store.
        */
       override fun fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled: IResolvable) {
-        cdkBuilder.fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled.let(IResolvable::unwrap))
+        cdkBuilder.fineGrainedAuthorizationEnabled(fineGrainedAuthorizationEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1266,7 +1266,7 @@ public open class CfnFHIRDatastore(
        * provided encryption key (CMK). 
        */
       override fun kmsEncryptionConfig(kmsEncryptionConfig: IResolvable) {
-        cdkBuilder.kmsEncryptionConfig(kmsEncryptionConfig.let(IResolvable::unwrap))
+        cdkBuilder.kmsEncryptionConfig(kmsEncryptionConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1274,7 +1274,7 @@ public open class CfnFHIRDatastore(
        * provided encryption key (CMK). 
        */
       override fun kmsEncryptionConfig(kmsEncryptionConfig: KmsEncryptionConfigProperty) {
-        cdkBuilder.kmsEncryptionConfig(kmsEncryptionConfig.let(KmsEncryptionConfigProperty::unwrap))
+        cdkBuilder.kmsEncryptionConfig(kmsEncryptionConfig.let(KmsEncryptionConfigProperty.Companion::unwrap))
       }
 
       /**

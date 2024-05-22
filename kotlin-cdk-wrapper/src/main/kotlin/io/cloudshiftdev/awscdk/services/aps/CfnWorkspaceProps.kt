@@ -210,7 +210,7 @@ public interface CfnWorkspaceProps {
      * workspace.
      */
     override fun loggingConfiguration(loggingConfiguration: IResolvable) {
-      cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -219,7 +219,7 @@ public interface CfnWorkspaceProps {
      */
     override
         fun loggingConfiguration(loggingConfiguration: CfnWorkspace.LoggingConfigurationProperty) {
-      cdkBuilder.loggingConfiguration(loggingConfiguration.let(CfnWorkspace.LoggingConfigurationProperty::unwrap))
+      cdkBuilder.loggingConfiguration(loggingConfiguration.let(CfnWorkspace.LoggingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -236,7 +236,7 @@ public interface CfnWorkspaceProps {
      * @param tags The list of tag keys and values that are associated with the workspace.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

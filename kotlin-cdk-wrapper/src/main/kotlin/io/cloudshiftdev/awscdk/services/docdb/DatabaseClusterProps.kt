@@ -13,6 +13,7 @@ import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.logs.RetentionDays
+import io.cloudshiftdev.awscdk.services.rds.CaCertificate
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -35,7 +36,7 @@ import kotlin.jvm.JvmName
  * .subnetType(SubnetType.PUBLIC)
  * .build())
  * .vpc(vpc)
- * .removalPolicy(RemovalPolicy.SNAPSHOT)
+ * .caCertificate(CaCertificate.RDS_CA_RSA4096_G1)
  * .build();
  * ```
  */
@@ -50,6 +51,18 @@ public interface DatabaseClusterProps {
    * [Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/backup-restore.db-cluster-snapshots.html#backup-restore.backup-window)
    */
   public fun backup(): BackupProps? = unwrap(this).getBackup()?.let(BackupProps::wrap)
+
+  /**
+   * The identifier of the CA certificate used for the instances.
+   *
+   * Specifying or updating this property triggers a reboot.
+   *
+   * Default: - DocumentDB will choose a certificate authority
+   *
+   * [Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/ca_cert_rotation.html)
+   */
+  public fun caCertificate(): CaCertificate? =
+      unwrap(this).getCaCertificate()?.let(CaCertificate::wrap)
 
   /**
    * The number of days log events are kept in CloudWatch Logs.
@@ -71,6 +84,13 @@ public interface DatabaseClusterProps {
    */
   public fun cloudWatchLogsRetentionRole(): IRole? =
       unwrap(this).getCloudWatchLogsRetentionRole()?.let(IRole::wrap)
+
+  /**
+   * Whether to copy tags to the snapshot when a snapshot is created.
+   *
+   * Default: - false
+   */
+  public fun copyTagsToSnapshot(): Boolean? = unwrap(this).getCopyTagsToSnapshot()
 
   /**
    * An optional identifier for the cluster.
@@ -285,6 +305,12 @@ public interface DatabaseClusterProps {
     public fun backup(backup: BackupProps.Builder.() -> Unit)
 
     /**
+     * @param caCertificate The identifier of the CA certificate used for the instances.
+     * Specifying or updating this property triggers a reboot.
+     */
+    public fun caCertificate(caCertificate: CaCertificate)
+
+    /**
      * @param cloudWatchLogsRetention The number of days log events are kept in CloudWatch Logs.
      * When updating
      * this property, unsetting it doesn't remove the log retention policy. To
@@ -297,6 +323,11 @@ public interface DatabaseClusterProps {
      * custom resource that sets the retention policy.
      */
     public fun cloudWatchLogsRetentionRole(cloudWatchLogsRetentionRole: IRole)
+
+    /**
+     * @param copyTagsToSnapshot Whether to copy tags to the snapshot when a snapshot is created.
+     */
+    public fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean)
 
     /**
      * @param dbClusterName An optional identifier for the cluster.
@@ -453,7 +484,7 @@ public interface DatabaseClusterProps {
      * @param backup Backup settings.
      */
     override fun backup(backup: BackupProps) {
-      cdkBuilder.backup(backup.let(BackupProps::unwrap))
+      cdkBuilder.backup(backup.let(BackupProps.Companion::unwrap))
     }
 
     /**
@@ -464,13 +495,21 @@ public interface DatabaseClusterProps {
     override fun backup(backup: BackupProps.Builder.() -> Unit): Unit = backup(BackupProps(backup))
 
     /**
+     * @param caCertificate The identifier of the CA certificate used for the instances.
+     * Specifying or updating this property triggers a reboot.
+     */
+    override fun caCertificate(caCertificate: CaCertificate) {
+      cdkBuilder.caCertificate(caCertificate.let(CaCertificate.Companion::unwrap))
+    }
+
+    /**
      * @param cloudWatchLogsRetention The number of days log events are kept in CloudWatch Logs.
      * When updating
      * this property, unsetting it doesn't remove the log retention policy. To
      * remove the retention policy, set the value to `Infinity`.
      */
     override fun cloudWatchLogsRetention(cloudWatchLogsRetention: RetentionDays) {
-      cdkBuilder.cloudWatchLogsRetention(cloudWatchLogsRetention.let(RetentionDays::unwrap))
+      cdkBuilder.cloudWatchLogsRetention(cloudWatchLogsRetention.let(RetentionDays.Companion::unwrap))
     }
 
     /**
@@ -478,7 +517,14 @@ public interface DatabaseClusterProps {
      * custom resource that sets the retention policy.
      */
     override fun cloudWatchLogsRetentionRole(cloudWatchLogsRetentionRole: IRole) {
-      cdkBuilder.cloudWatchLogsRetentionRole(cloudWatchLogsRetentionRole.let(IRole::unwrap))
+      cdkBuilder.cloudWatchLogsRetentionRole(cloudWatchLogsRetentionRole.let(IRole.Companion::unwrap))
+    }
+
+    /**
+     * @param copyTagsToSnapshot Whether to copy tags to the snapshot when a snapshot is created.
+     */
+    override fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
+      cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot)
     }
 
     /**
@@ -545,14 +591,14 @@ public interface DatabaseClusterProps {
      * Cannot be set to `SNAPSHOT`.
      */
     override fun instanceRemovalPolicy(instanceRemovalPolicy: RemovalPolicy) {
-      cdkBuilder.instanceRemovalPolicy(instanceRemovalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.instanceRemovalPolicy(instanceRemovalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
      * @param instanceType What type of instance to start for the replicas. 
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -566,14 +612,14 @@ public interface DatabaseClusterProps {
      * @param kmsKey The KMS key for storage encryption.
      */
     override fun kmsKey(kmsKey: IKey) {
-      cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     /**
      * @param masterUser Username and password for the administrative user. 
      */
     override fun masterUser(masterUser: Login) {
-      cdkBuilder.masterUser(masterUser.let(Login::unwrap))
+      cdkBuilder.masterUser(masterUser.let(Login.Companion::unwrap))
     }
 
     /**
@@ -588,7 +634,7 @@ public interface DatabaseClusterProps {
      * @param parameterGroup The DB parameter group to associate with the instance.
      */
     override fun parameterGroup(parameterGroup: IClusterParameterGroup) {
-      cdkBuilder.parameterGroup(parameterGroup.let(IClusterParameterGroup::unwrap))
+      cdkBuilder.parameterGroup(parameterGroup.let(IClusterParameterGroup.Companion::unwrap))
     }
 
     /**
@@ -622,14 +668,14 @@ public interface DatabaseClusterProps {
      * Use the `instanceRemovalPolicy` and `securityGroupRemovalPolicy` to change the behavior.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
      * @param securityGroup Security group.
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -638,7 +684,7 @@ public interface DatabaseClusterProps {
      * Cannot be set to `SNAPSHOT`.
      */
     override fun securityGroupRemovalPolicy(securityGroupRemovalPolicy: RemovalPolicy) {
-      cdkBuilder.securityGroupRemovalPolicy(securityGroupRemovalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.securityGroupRemovalPolicy(securityGroupRemovalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -653,14 +699,14 @@ public interface DatabaseClusterProps {
      * Must be at least 2 subnets in two different AZs.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
      * @param vpcSubnets Where to place the instances within the VPC.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -690,6 +736,18 @@ public interface DatabaseClusterProps {
     override fun backup(): BackupProps? = unwrap(this).getBackup()?.let(BackupProps::wrap)
 
     /**
+     * The identifier of the CA certificate used for the instances.
+     *
+     * Specifying or updating this property triggers a reboot.
+     *
+     * Default: - DocumentDB will choose a certificate authority
+     *
+     * [Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/ca_cert_rotation.html)
+     */
+    override fun caCertificate(): CaCertificate? =
+        unwrap(this).getCaCertificate()?.let(CaCertificate::wrap)
+
+    /**
      * The number of days log events are kept in CloudWatch Logs.
      *
      * When updating
@@ -709,6 +767,13 @@ public interface DatabaseClusterProps {
      */
     override fun cloudWatchLogsRetentionRole(): IRole? =
         unwrap(this).getCloudWatchLogsRetentionRole()?.let(IRole::wrap)
+
+    /**
+     * Whether to copy tags to the snapshot when a snapshot is created.
+     *
+     * Default: - false
+     */
+    override fun copyTagsToSnapshot(): Boolean? = unwrap(this).getCopyTagsToSnapshot()
 
     /**
      * An optional identifier for the cluster.

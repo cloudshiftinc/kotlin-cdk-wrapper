@@ -265,7 +265,7 @@ public interface CfnDatastoreProps {
      * @param datastorePartitions Information about the partition dimensions in a data store.
      */
     override fun datastorePartitions(datastorePartitions: IResolvable) {
-      cdkBuilder.datastorePartitions(datastorePartitions.let(IResolvable::unwrap))
+      cdkBuilder.datastorePartitions(datastorePartitions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -273,7 +273,7 @@ public interface CfnDatastoreProps {
      */
     override
         fun datastorePartitions(datastorePartitions: CfnDatastore.DatastorePartitionsProperty) {
-      cdkBuilder.datastorePartitions(datastorePartitions.let(CfnDatastore.DatastorePartitionsProperty::unwrap))
+      cdkBuilder.datastorePartitions(datastorePartitions.let(CfnDatastore.DatastorePartitionsProperty.Companion::unwrap))
     }
 
     /**
@@ -289,14 +289,14 @@ public interface CfnDatastoreProps {
      * @param datastoreStorage Where data store data is stored.
      */
     override fun datastoreStorage(datastoreStorage: IResolvable) {
-      cdkBuilder.datastoreStorage(datastoreStorage.let(IResolvable::unwrap))
+      cdkBuilder.datastoreStorage(datastoreStorage.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param datastoreStorage Where data store data is stored.
      */
     override fun datastoreStorage(datastoreStorage: CfnDatastore.DatastoreStorageProperty) {
-      cdkBuilder.datastoreStorage(datastoreStorage.let(CfnDatastore.DatastoreStorageProperty::unwrap))
+      cdkBuilder.datastoreStorage(datastoreStorage.let(CfnDatastore.DatastoreStorageProperty.Companion::unwrap))
     }
 
     /**
@@ -317,7 +317,7 @@ public interface CfnDatastoreProps {
      * You can't change the file format after you create the data store.
      */
     override fun fileFormatConfiguration(fileFormatConfiguration: IResolvable) {
-      cdkBuilder.fileFormatConfiguration(fileFormatConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.fileFormatConfiguration(fileFormatConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -330,7 +330,7 @@ public interface CfnDatastoreProps {
      */
     override
         fun fileFormatConfiguration(fileFormatConfiguration: CfnDatastore.FileFormatConfigurationProperty) {
-      cdkBuilder.fileFormatConfiguration(fileFormatConfiguration.let(CfnDatastore.FileFormatConfigurationProperty::unwrap))
+      cdkBuilder.fileFormatConfiguration(fileFormatConfiguration.let(CfnDatastore.FileFormatConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -353,7 +353,7 @@ public interface CfnDatastoreProps {
      * When `customerManagedS3` storage is selected, this parameter is ignored.
      */
     override fun retentionPeriod(retentionPeriod: IResolvable) {
-      cdkBuilder.retentionPeriod(retentionPeriod.let(IResolvable::unwrap))
+      cdkBuilder.retentionPeriod(retentionPeriod.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -361,7 +361,7 @@ public interface CfnDatastoreProps {
      * When `customerManagedS3` storage is selected, this parameter is ignored.
      */
     override fun retentionPeriod(retentionPeriod: CfnDatastore.RetentionPeriodProperty) {
-      cdkBuilder.retentionPeriod(retentionPeriod.let(CfnDatastore.RetentionPeriodProperty::unwrap))
+      cdkBuilder.retentionPeriod(retentionPeriod.let(CfnDatastore.RetentionPeriodProperty.Companion::unwrap))
     }
 
     /**
@@ -381,7 +381,7 @@ public interface CfnDatastoreProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

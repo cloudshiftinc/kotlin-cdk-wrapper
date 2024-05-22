@@ -157,7 +157,7 @@ public interface CfnExecutionPlanProps {
      * capacity](https://docs.aws.amazon.com/kendra/latest/dg/adjusting-capacity.html) .
      */
     override fun capacityUnits(capacityUnits: IResolvable) {
-      cdkBuilder.capacityUnits(capacityUnits.let(IResolvable::unwrap))
+      cdkBuilder.capacityUnits(capacityUnits.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -169,7 +169,7 @@ public interface CfnExecutionPlanProps {
      * capacity](https://docs.aws.amazon.com/kendra/latest/dg/adjusting-capacity.html) .
      */
     override fun capacityUnits(capacityUnits: CfnExecutionPlan.CapacityUnitsConfigurationProperty) {
-      cdkBuilder.capacityUnits(capacityUnits.let(CfnExecutionPlan.CapacityUnitsConfigurationProperty::unwrap))
+      cdkBuilder.capacityUnits(capacityUnits.let(CfnExecutionPlan.CapacityUnitsConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -208,7 +208,7 @@ public interface CfnExecutionPlanProps {
      * period, colon, equal, plus, and asperand.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

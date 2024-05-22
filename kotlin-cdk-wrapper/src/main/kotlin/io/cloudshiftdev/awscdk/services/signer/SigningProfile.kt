@@ -40,8 +40,8 @@ public open class SigningProfile(
     id: String,
     props: SigningProfileProps,
   ) :
-      this(software.amazon.awscdk.services.signer.SigningProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SigningProfileProps::unwrap))
+      this(software.amazon.awscdk.services.signer.SigningProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SigningProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -119,7 +119,7 @@ public open class SigningProfile(
      * @param platform The Signing Platform available for signing profile. 
      */
     override fun platform(platform: Platform) {
-      cdkBuilder.platform(platform.let(Platform::unwrap))
+      cdkBuilder.platform(platform.let(Platform.Companion::unwrap))
     }
 
     /**
@@ -131,7 +131,7 @@ public open class SigningProfile(
      * profile. 
      */
     override fun signatureValidity(signatureValidity: Duration) {
-      cdkBuilder.signatureValidity(signatureValidity.let(Duration::unwrap))
+      cdkBuilder.signatureValidity(signatureValidity.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -154,8 +154,8 @@ public open class SigningProfile(
       id: String,
       attrs: SigningProfileAttributes,
     ): ISigningProfile =
-        software.amazon.awscdk.services.signer.SigningProfile.fromSigningProfileAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(SigningProfileAttributes::unwrap)).let(ISigningProfile::wrap)
+        software.amazon.awscdk.services.signer.SigningProfile.fromSigningProfileAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(SigningProfileAttributes.Companion::unwrap)).let(ISigningProfile::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b7ac374b72df751b648ef3dd93a9aca2073cdf94c77389bfa8e98d03374e43a0")

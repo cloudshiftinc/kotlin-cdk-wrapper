@@ -186,7 +186,7 @@ public interface CfnRestoreTestingPlanProps {
      * recovery point types or backup vaults. 
      */
     override fun recoveryPointSelection(recoveryPointSelection: IResolvable) {
-      cdkBuilder.recoveryPointSelection(recoveryPointSelection.let(IResolvable::unwrap))
+      cdkBuilder.recoveryPointSelection(recoveryPointSelection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -195,7 +195,7 @@ public interface CfnRestoreTestingPlanProps {
      */
     override
         fun recoveryPointSelection(recoveryPointSelection: CfnRestoreTestingPlan.RestoreTestingRecoveryPointSelectionProperty) {
-      cdkBuilder.recoveryPointSelection(recoveryPointSelection.let(CfnRestoreTestingPlan.RestoreTestingRecoveryPointSelectionProperty::unwrap))
+      cdkBuilder.recoveryPointSelection(recoveryPointSelection.let(CfnRestoreTestingPlan.RestoreTestingRecoveryPointSelectionProperty.Companion::unwrap))
     }
 
     /**
@@ -253,7 +253,7 @@ public interface CfnRestoreTestingPlanProps {
      * _ : /.`
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

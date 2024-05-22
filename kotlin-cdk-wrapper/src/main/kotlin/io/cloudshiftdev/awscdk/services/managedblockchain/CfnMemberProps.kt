@@ -161,14 +161,14 @@ public interface CfnMemberProps {
      * @param memberConfiguration Configuration properties of the member. 
      */
     override fun memberConfiguration(memberConfiguration: IResolvable) {
-      cdkBuilder.memberConfiguration(memberConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.memberConfiguration(memberConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param memberConfiguration Configuration properties of the member. 
      */
     override fun memberConfiguration(memberConfiguration: CfnMember.MemberConfigurationProperty) {
-      cdkBuilder.memberConfiguration(memberConfiguration.let(CfnMember.MemberConfigurationProperty::unwrap))
+      cdkBuilder.memberConfiguration(memberConfiguration.let(CfnMember.MemberConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -185,7 +185,7 @@ public interface CfnMemberProps {
      * belongs.
      */
     override fun networkConfiguration(networkConfiguration: IResolvable) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -194,7 +194,7 @@ public interface CfnMemberProps {
      */
     override
         fun networkConfiguration(networkConfiguration: CfnMember.NetworkConfigurationProperty) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(CfnMember.NetworkConfigurationProperty::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(CfnMember.NetworkConfigurationProperty.Companion::unwrap))
     }
 
     /**

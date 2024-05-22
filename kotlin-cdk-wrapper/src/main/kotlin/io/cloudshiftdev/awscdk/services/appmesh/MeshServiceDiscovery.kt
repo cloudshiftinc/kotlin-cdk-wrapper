@@ -54,7 +54,7 @@ public interface MeshServiceDiscovery {
      * @param ipPreference IP preference applied to all Virtual Nodes in the Mesh.
      */
     override fun ipPreference(ipPreference: IpPreference) {
-      cdkBuilder.ipPreference(ipPreference.let(IpPreference::unwrap))
+      cdkBuilder.ipPreference(ipPreference.let(IpPreference.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appmesh.MeshServiceDiscovery =

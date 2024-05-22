@@ -54,8 +54,8 @@ public open class CfnTransitGatewayVpcAttachment(
     id: String,
     props: CfnTransitGatewayVpcAttachmentProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnTransitGatewayVpcAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTransitGatewayVpcAttachmentProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnTransitGatewayVpcAttachment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTransitGatewayVpcAttachmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -93,7 +93,7 @@ public open class CfnTransitGatewayVpcAttachment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -157,7 +157,7 @@ public open class CfnTransitGatewayVpcAttachment(
    * The tags for the VPC attachment.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -372,7 +372,7 @@ public open class CfnTransitGatewayVpcAttachment(
      * @param tags The tags for the VPC attachment. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -93,7 +93,7 @@ public interface IJobDefinition : IResource {
      * @param strategy 
      */
     override fun addRetryStrategy(strategy: RetryStrategy) {
-      unwrap(this).addRetryStrategy(strategy.let(RetryStrategy::unwrap))
+      unwrap(this).addRetryStrategy(strategy.let(RetryStrategy.Companion::unwrap))
     }
 
     /**
@@ -110,7 +110,7 @@ public interface IJobDefinition : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**

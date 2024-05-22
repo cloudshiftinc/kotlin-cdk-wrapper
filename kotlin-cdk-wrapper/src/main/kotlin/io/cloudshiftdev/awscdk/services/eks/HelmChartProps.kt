@@ -45,6 +45,14 @@ public interface HelmChartProps : HelmChartOptions {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param atomic Whether or not Helm should treat this operation as atomic;.
+     * if set, upgrade process rolls back changes
+     * made in case of failed upgrade. The --wait flag will be set automatically if --atomic is
+     * used.
+     */
+    public fun atomic(atomic: Boolean)
+
+    /**
      * @param chart The name of the chart.
      * Either this or `chartAsset` must be specified.
      */
@@ -122,6 +130,16 @@ public interface HelmChartProps : HelmChartOptions {
         software.amazon.awscdk.services.eks.HelmChartProps.builder()
 
     /**
+     * @param atomic Whether or not Helm should treat this operation as atomic;.
+     * if set, upgrade process rolls back changes
+     * made in case of failed upgrade. The --wait flag will be set automatically if --atomic is
+     * used.
+     */
+    override fun atomic(atomic: Boolean) {
+      cdkBuilder.atomic(atomic)
+    }
+
+    /**
      * @param chart The name of the chart.
      * Either this or `chartAsset` must be specified.
      */
@@ -134,7 +152,7 @@ public interface HelmChartProps : HelmChartOptions {
      * Either this or `chart` must be specified.
      */
     override fun chartAsset(chartAsset: Asset) {
-      cdkBuilder.chartAsset(chartAsset.let(Asset::unwrap))
+      cdkBuilder.chartAsset(chartAsset.let(Asset.Companion::unwrap))
     }
 
     /**
@@ -142,7 +160,7 @@ public interface HelmChartProps : HelmChartOptions {
      * [disable-awslint:ref-via-interface]
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -186,7 +204,7 @@ public interface HelmChartProps : HelmChartOptions {
      * Maximum 15 minutes.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -223,6 +241,17 @@ public interface HelmChartProps : HelmChartOptions {
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.eks.HelmChartProps,
   ) : CdkObject(cdkObject), HelmChartProps {
+    /**
+     * Whether or not Helm should treat this operation as atomic;
+     *
+     * if set, upgrade process rolls back changes
+     * made in case of failed upgrade. The --wait flag will be set automatically if --atomic is
+     * used.
+     *
+     * Default: false
+     */
+    override fun atomic(): Boolean? = unwrap(this).getAtomic()
+
     /**
      * The name of the chart.
      *

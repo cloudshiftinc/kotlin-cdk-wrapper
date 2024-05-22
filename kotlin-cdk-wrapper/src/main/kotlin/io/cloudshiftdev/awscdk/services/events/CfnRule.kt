@@ -205,7 +205,7 @@ public open class CfnRule(
   cdkObject: software.amazon.awscdk.services.events.CfnRule,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.events.CfnRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.events.CfnRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -214,8 +214,8 @@ public open class CfnRule(
     id: String,
     props: CfnRuleProps,
   ) :
-      this(software.amazon.awscdk.services.events.CfnRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRuleProps::unwrap))
+      this(software.amazon.awscdk.services.events.CfnRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -272,7 +272,7 @@ public open class CfnRule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -334,7 +334,7 @@ public open class CfnRule(
    * associated with the rule.
    */
   public open fun targets(`value`: IResolvable) {
-    unwrap(this).setTargets(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTargets(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -977,7 +977,7 @@ public open class CfnRule(
      * they are already associated with the rule. 
      */
     override fun targets(targets: IResolvable) {
-      cdkBuilder.targets(targets.let(IResolvable::unwrap))
+      cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1741,7 +1741,7 @@ public open class CfnRule(
        * becomes an array job. This parameter is used only if the target is an AWS Batch job.
        */
       override fun arrayProperties(arrayProperties: IResolvable) {
-        cdkBuilder.arrayProperties(arrayProperties.let(IResolvable::unwrap))
+        cdkBuilder.arrayProperties(arrayProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1751,7 +1751,7 @@ public open class CfnRule(
        * becomes an array job. This parameter is used only if the target is an AWS Batch job.
        */
       override fun arrayProperties(arrayProperties: BatchArrayPropertiesProperty) {
-        cdkBuilder.arrayProperties(arrayProperties.let(BatchArrayPropertiesProperty::unwrap))
+        cdkBuilder.arrayProperties(arrayProperties.let(BatchArrayPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -1791,7 +1791,7 @@ public open class CfnRule(
        * the job definition.
        */
       override fun retryStrategy(retryStrategy: IResolvable) {
-        cdkBuilder.retryStrategy(retryStrategy.let(IResolvable::unwrap))
+        cdkBuilder.retryStrategy(retryStrategy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1802,7 +1802,7 @@ public open class CfnRule(
        * the job definition.
        */
       override fun retryStrategy(retryStrategy: BatchRetryStrategyProperty) {
-        cdkBuilder.retryStrategy(retryStrategy.let(BatchRetryStrategyProperty::unwrap))
+        cdkBuilder.retryStrategy(retryStrategy.let(BatchRetryStrategyProperty.Companion::unwrap))
       }
 
       /**
@@ -2652,7 +2652,7 @@ public open class CfnRule(
        * `defaultCapacityProviderStrategy` for the cluster is used.
        */
       override fun capacityProviderStrategy(capacityProviderStrategy: IResolvable) {
-        cdkBuilder.capacityProviderStrategy(capacityProviderStrategy.let(IResolvable::unwrap))
+        cdkBuilder.capacityProviderStrategy(capacityProviderStrategy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2693,7 +2693,7 @@ public open class CfnRule(
        * the Amazon Elastic Container Service Developer Guide.
        */
       override fun enableEcsManagedTags(enableEcsManagedTags: IResolvable) {
-        cdkBuilder.enableEcsManagedTags(enableEcsManagedTags.let(IResolvable::unwrap))
+        cdkBuilder.enableEcsManagedTags(enableEcsManagedTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2711,7 +2711,7 @@ public open class CfnRule(
        * If true, this enables execute command functionality on all containers in the task.
        */
       override fun enableExecuteCommand(enableExecuteCommand: IResolvable) {
-        cdkBuilder.enableExecuteCommand(enableExecuteCommand.let(IResolvable::unwrap))
+        cdkBuilder.enableExecuteCommand(enableExecuteCommand.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2745,7 +2745,7 @@ public open class CfnRule(
        * network mode, the task fails.
        */
       override fun networkConfiguration(networkConfiguration: IResolvable) {
-        cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2759,7 +2759,7 @@ public open class CfnRule(
        * network mode, the task fails.
        */
       override fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
-        cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty::unwrap))
+        cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2784,7 +2784,7 @@ public open class CfnRule(
        * and those specified at runtime).
        */
       override fun placementConstraints(placementConstraints: IResolvable) {
-        cdkBuilder.placementConstraints(placementConstraints.let(IResolvable::unwrap))
+        cdkBuilder.placementConstraints(placementConstraints.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2809,7 +2809,7 @@ public open class CfnRule(
        * You can specify a maximum of five strategy rules per task.
        */
       override fun placementStrategies(placementStrategies: IResolvable) {
-        cdkBuilder.placementStrategies(placementStrategies.let(IResolvable::unwrap))
+        cdkBuilder.placementStrategies(placementStrategies.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2867,7 +2867,7 @@ public open class CfnRule(
        * in the Amazon ECS API Reference.
        */
       override fun tagList(tagList: IResolvable) {
-        cdkBuilder.tagList(tagList.let(IResolvable::unwrap))
+        cdkBuilder.tagList(tagList.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3182,7 +3182,7 @@ public open class CfnRule(
        * API Gateway API or EventBridge ApiDestination.
        */
       override fun headerParameters(headerParameters: IResolvable) {
-        cdkBuilder.headerParameters(headerParameters.let(IResolvable::unwrap))
+        cdkBuilder.headerParameters(headerParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3213,7 +3213,7 @@ public open class CfnRule(
        * request invoking the API Gateway API or EventBridge ApiDestination.
        */
       override fun queryStringParameters(queryStringParameters: IResolvable) {
-        cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable::unwrap))
+        cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3462,7 +3462,7 @@ public open class CfnRule(
        * The keys cannot start with " AWS ."
        */
       override fun inputPathsMap(inputPathsMap: IResolvable) {
-        cdkBuilder.inputPathsMap(inputPathsMap.let(IResolvable::unwrap))
+        cdkBuilder.inputPathsMap(inputPathsMap.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3801,7 +3801,7 @@ public open class CfnRule(
        * This structure is relevant only for ECS tasks that use the `awsvpc` network mode.
        */
       override fun awsVpcConfiguration(awsVpcConfiguration: IResolvable) {
-        cdkBuilder.awsVpcConfiguration(awsVpcConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.awsVpcConfiguration(awsVpcConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3810,7 +3810,7 @@ public open class CfnRule(
        * This structure is relevant only for ECS tasks that use the `awsvpc` network mode.
        */
       override fun awsVpcConfiguration(awsVpcConfiguration: AwsVpcConfigurationProperty) {
-        cdkBuilder.awsVpcConfiguration(awsVpcConfiguration.let(AwsVpcConfigurationProperty::unwrap))
+        cdkBuilder.awsVpcConfiguration(awsVpcConfiguration.let(AwsVpcConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -4388,7 +4388,7 @@ public open class CfnRule(
        * statement runs.
        */
       override fun withEvent(withEvent: IResolvable) {
-        cdkBuilder.withEvent(withEvent.let(IResolvable::unwrap))
+        cdkBuilder.withEvent(withEvent.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -4664,7 +4664,7 @@ public open class CfnRule(
        * which specifies either an array of InstanceIds or a tag. 
        */
       override fun runCommandTargets(runCommandTargets: IResolvable) {
-        cdkBuilder.runCommandTargets(runCommandTargets.let(IResolvable::unwrap))
+        cdkBuilder.runCommandTargets(runCommandTargets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5021,7 +5021,7 @@ public open class CfnRule(
        * Building Pipeline execution.
        */
       override fun pipelineParameterList(pipelineParameterList: IResolvable) {
-        cdkBuilder.pipelineParameterList(pipelineParameterList.let(IResolvable::unwrap))
+        cdkBuilder.pipelineParameterList(pipelineParameterList.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5929,7 +5929,7 @@ public open class CfnRule(
        * event target is an AWS AppSync API.
        */
       override fun appSyncParameters(appSyncParameters: IResolvable) {
-        cdkBuilder.appSyncParameters(appSyncParameters.let(IResolvable::unwrap))
+        cdkBuilder.appSyncParameters(appSyncParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5937,7 +5937,7 @@ public open class CfnRule(
        * event target is an AWS AppSync API.
        */
       override fun appSyncParameters(appSyncParameters: AppSyncParametersProperty) {
-        cdkBuilder.appSyncParameters(appSyncParameters.let(AppSyncParametersProperty::unwrap))
+        cdkBuilder.appSyncParameters(appSyncParameters.let(AppSyncParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -5965,7 +5965,7 @@ public open class CfnRule(
        * Guide* .
        */
       override fun batchParameters(batchParameters: IResolvable) {
-        cdkBuilder.batchParameters(batchParameters.let(IResolvable::unwrap))
+        cdkBuilder.batchParameters(batchParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5976,7 +5976,7 @@ public open class CfnRule(
        * Guide* .
        */
       override fun batchParameters(batchParameters: BatchParametersProperty) {
-        cdkBuilder.batchParameters(batchParameters.let(BatchParametersProperty::unwrap))
+        cdkBuilder.batchParameters(batchParameters.let(BatchParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -5996,7 +5996,7 @@ public open class CfnRule(
        * dead-letter queue events to.
        */
       override fun deadLetterConfig(deadLetterConfig: IResolvable) {
-        cdkBuilder.deadLetterConfig(deadLetterConfig.let(IResolvable::unwrap))
+        cdkBuilder.deadLetterConfig(deadLetterConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6004,7 +6004,7 @@ public open class CfnRule(
        * dead-letter queue events to.
        */
       override fun deadLetterConfig(deadLetterConfig: DeadLetterConfigProperty) {
-        cdkBuilder.deadLetterConfig(deadLetterConfig.let(DeadLetterConfigProperty::unwrap))
+        cdkBuilder.deadLetterConfig(deadLetterConfig.let(DeadLetterConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -6024,7 +6024,7 @@ public open class CfnRule(
        * in the *Amazon EC2 Container Service Developer Guide* .
        */
       override fun ecsParameters(ecsParameters: IResolvable) {
-        cdkBuilder.ecsParameters(ecsParameters.let(IResolvable::unwrap))
+        cdkBuilder.ecsParameters(ecsParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6035,7 +6035,7 @@ public open class CfnRule(
        * in the *Amazon EC2 Container Service Developer Guide* .
        */
       override fun ecsParameters(ecsParameters: EcsParametersProperty) {
-        cdkBuilder.ecsParameters(ecsParameters.let(EcsParametersProperty::unwrap))
+        cdkBuilder.ecsParameters(ecsParameters.let(EcsParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -6060,7 +6060,7 @@ public open class CfnRule(
        * Connection take precedence.
        */
       override fun httpParameters(httpParameters: IResolvable) {
-        cdkBuilder.httpParameters(httpParameters.let(IResolvable::unwrap))
+        cdkBuilder.httpParameters(httpParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6073,7 +6073,7 @@ public open class CfnRule(
        * Connection take precedence.
        */
       override fun httpParameters(httpParameters: HttpParametersProperty) {
-        cdkBuilder.httpParameters(httpParameters.let(HttpParametersProperty::unwrap))
+        cdkBuilder.httpParameters(httpParameters.let(HttpParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -6126,7 +6126,7 @@ public open class CfnRule(
        * customized input to the target.
        */
       override fun inputTransformer(inputTransformer: IResolvable) {
-        cdkBuilder.inputTransformer(inputTransformer.let(IResolvable::unwrap))
+        cdkBuilder.inputTransformer(inputTransformer.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6136,7 +6136,7 @@ public open class CfnRule(
        * customized input to the target.
        */
       override fun inputTransformer(inputTransformer: InputTransformerProperty) {
-        cdkBuilder.inputTransformer(inputTransformer.let(InputTransformerProperty::unwrap))
+        cdkBuilder.inputTransformer(inputTransformer.let(InputTransformerProperty.Companion::unwrap))
       }
 
       /**
@@ -6157,7 +6157,7 @@ public open class CfnRule(
        * key.
        */
       override fun kinesisParameters(kinesisParameters: IResolvable) {
-        cdkBuilder.kinesisParameters(kinesisParameters.let(IResolvable::unwrap))
+        cdkBuilder.kinesisParameters(kinesisParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6167,7 +6167,7 @@ public open class CfnRule(
        * key.
        */
       override fun kinesisParameters(kinesisParameters: KinesisParametersProperty) {
-        cdkBuilder.kinesisParameters(kinesisParameters.let(KinesisParametersProperty::unwrap))
+        cdkBuilder.kinesisParameters(kinesisParameters.let(KinesisParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -6190,7 +6190,7 @@ public open class CfnRule(
        * events.
        */
       override fun redshiftDataParameters(redshiftDataParameters: IResolvable) {
-        cdkBuilder.redshiftDataParameters(redshiftDataParameters.let(IResolvable::unwrap))
+        cdkBuilder.redshiftDataParameters(redshiftDataParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6201,7 +6201,7 @@ public open class CfnRule(
        * events.
        */
       override fun redshiftDataParameters(redshiftDataParameters: RedshiftDataParametersProperty) {
-        cdkBuilder.redshiftDataParameters(redshiftDataParameters.let(RedshiftDataParametersProperty::unwrap))
+        cdkBuilder.redshiftDataParameters(redshiftDataParameters.let(RedshiftDataParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -6222,7 +6222,7 @@ public open class CfnRule(
        * use for the dead-letter queue.
        */
       override fun retryPolicy(retryPolicy: IResolvable) {
-        cdkBuilder.retryPolicy(retryPolicy.let(IResolvable::unwrap))
+        cdkBuilder.retryPolicy(retryPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6230,7 +6230,7 @@ public open class CfnRule(
        * use for the dead-letter queue.
        */
       override fun retryPolicy(retryPolicy: RetryPolicyProperty) {
-        cdkBuilder.retryPolicy(retryPolicy.let(RetryPolicyProperty::unwrap))
+        cdkBuilder.retryPolicy(retryPolicy.let(RetryPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -6256,7 +6256,7 @@ public open class CfnRule(
        * EC2 Run Command.
        */
       override fun runCommandParameters(runCommandParameters: IResolvable) {
-        cdkBuilder.runCommandParameters(runCommandParameters.let(IResolvable::unwrap))
+        cdkBuilder.runCommandParameters(runCommandParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6264,7 +6264,7 @@ public open class CfnRule(
        * EC2 Run Command.
        */
       override fun runCommandParameters(runCommandParameters: RunCommandParametersProperty) {
-        cdkBuilder.runCommandParameters(runCommandParameters.let(RunCommandParametersProperty::unwrap))
+        cdkBuilder.runCommandParameters(runCommandParameters.let(RunCommandParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -6284,7 +6284,7 @@ public open class CfnRule(
        * parameters to start a pipeline execution based on EventBridge events.
        */
       override fun sageMakerPipelineParameters(sageMakerPipelineParameters: IResolvable) {
-        cdkBuilder.sageMakerPipelineParameters(sageMakerPipelineParameters.let(IResolvable::unwrap))
+        cdkBuilder.sageMakerPipelineParameters(sageMakerPipelineParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6295,7 +6295,7 @@ public open class CfnRule(
        */
       override
           fun sageMakerPipelineParameters(sageMakerPipelineParameters: SageMakerPipelineParametersProperty) {
-        cdkBuilder.sageMakerPipelineParameters(sageMakerPipelineParameters.let(SageMakerPipelineParametersProperty::unwrap))
+        cdkBuilder.sageMakerPipelineParameters(sageMakerPipelineParameters.let(SageMakerPipelineParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -6317,7 +6317,7 @@ public open class CfnRule(
        * deduplication enabled.
        */
       override fun sqsParameters(sqsParameters: IResolvable) {
-        cdkBuilder.sqsParameters(sqsParameters.let(IResolvable::unwrap))
+        cdkBuilder.sqsParameters(sqsParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6326,7 +6326,7 @@ public open class CfnRule(
        * deduplication enabled.
        */
       override fun sqsParameters(sqsParameters: SqsParametersProperty) {
-        cdkBuilder.sqsParameters(sqsParameters.let(SqsParametersProperty::unwrap))
+        cdkBuilder.sqsParameters(sqsParameters.let(SqsParametersProperty.Companion::unwrap))
       }
 
       /**

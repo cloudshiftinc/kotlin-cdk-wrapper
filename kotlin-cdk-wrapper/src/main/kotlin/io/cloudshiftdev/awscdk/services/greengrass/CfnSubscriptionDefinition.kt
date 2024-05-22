@@ -74,8 +74,8 @@ public open class CfnSubscriptionDefinition(
     id: String,
     props: CfnSubscriptionDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSubscriptionDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSubscriptionDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -119,14 +119,14 @@ public open class CfnSubscriptionDefinition(
    * The subscription definition version to include when the subscription definition is created.
    */
   public open fun initialVersion(`value`: IResolvable) {
-    unwrap(this).setInitialVersion(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInitialVersion(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The subscription definition version to include when the subscription definition is created.
    */
   public open fun initialVersion(`value`: SubscriptionDefinitionVersionProperty) {
-    unwrap(this).setInitialVersion(`value`.let(SubscriptionDefinitionVersionProperty::unwrap))
+    unwrap(this).setInitialVersion(`value`.let(SubscriptionDefinitionVersionProperty.Companion::unwrap))
   }
 
   /**
@@ -143,7 +143,7 @@ public open class CfnSubscriptionDefinition(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -301,7 +301,7 @@ public open class CfnSubscriptionDefinition(
      * definition is created. 
      */
     override fun initialVersion(initialVersion: IResolvable) {
-      cdkBuilder.initialVersion(initialVersion.let(IResolvable::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -323,7 +323,7 @@ public open class CfnSubscriptionDefinition(
      * definition is created. 
      */
     override fun initialVersion(initialVersion: SubscriptionDefinitionVersionProperty) {
-      cdkBuilder.initialVersion(initialVersion.let(SubscriptionDefinitionVersionProperty::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(SubscriptionDefinitionVersionProperty.Companion::unwrap))
     }
 
     /**
@@ -484,7 +484,7 @@ public open class CfnSubscriptionDefinition(
        * @param subscriptions The subscriptions in this version. 
        */
       override fun subscriptions(subscriptions: IResolvable) {
-        cdkBuilder.subscriptions(subscriptions.let(IResolvable::unwrap))
+        cdkBuilder.subscriptions(subscriptions.let(IResolvable.Companion::unwrap))
       }
 
       /**

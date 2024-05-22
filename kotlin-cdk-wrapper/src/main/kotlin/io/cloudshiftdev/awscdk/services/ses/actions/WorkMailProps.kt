@@ -84,7 +84,7 @@ public interface WorkMailProps {
      * @param topic The SNS topic to notify when the WorkMail action is taken.
      */
     override fun topic(topic: ITopic) {
-      cdkBuilder.topic(topic.let(ITopic::unwrap))
+      cdkBuilder.topic(topic.let(ITopic.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ses.actions.WorkMailProps =

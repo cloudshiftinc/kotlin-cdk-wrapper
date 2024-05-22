@@ -24,7 +24,7 @@ public open class LambdaApplication(
   cdkObject: software.amazon.awscdk.services.codedeploy.LambdaApplication,
 ) : Resource(cdkObject), ILambdaApplication {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.codedeploy.LambdaApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.codedeploy.LambdaApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -33,8 +33,8 @@ public open class LambdaApplication(
     id: String,
     props: LambdaApplicationProps,
   ) :
-      this(software.amazon.awscdk.services.codedeploy.LambdaApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(LambdaApplicationProps::unwrap))
+      this(software.amazon.awscdk.services.codedeploy.LambdaApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(LambdaApplicationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -97,7 +97,7 @@ public open class LambdaApplication(
       id: String,
       lambdaApplicationArn: String,
     ): ILambdaApplication =
-        software.amazon.awscdk.services.codedeploy.LambdaApplication.fromLambdaApplicationArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.codedeploy.LambdaApplication.fromLambdaApplicationArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, lambdaApplicationArn).let(ILambdaApplication::wrap)
 
     public fun fromLambdaApplicationName(
@@ -105,7 +105,7 @@ public open class LambdaApplication(
       id: String,
       lambdaApplicationName: String,
     ): ILambdaApplication =
-        software.amazon.awscdk.services.codedeploy.LambdaApplication.fromLambdaApplicationName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.codedeploy.LambdaApplication.fromLambdaApplicationName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, lambdaApplicationName).let(ILambdaApplication::wrap)
 
     public operator fun invoke(

@@ -43,7 +43,7 @@ public open class HttpLambdaAuthorizer(
 ) : CdkObject(cdkObject), IHttpRouteAuthorizer {
   public constructor(id: String, handler: CloudshiftdevAwscdkServicesLambdaIFunction) :
       this(software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpLambdaAuthorizer(id,
-      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap))
+      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap))
   )
 
   public constructor(
@@ -51,8 +51,8 @@ public open class HttpLambdaAuthorizer(
     handler: CloudshiftdevAwscdkServicesLambdaIFunction,
     props: HttpLambdaAuthorizerProps,
   ) : this(software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpLambdaAuthorizer(id,
-      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap),
-      props.let(HttpLambdaAuthorizerProps::unwrap))
+      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap),
+      props.let(HttpLambdaAuthorizerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -68,7 +68,7 @@ public open class HttpLambdaAuthorizer(
    * @param options 
    */
   public override fun bind(options: HttpRouteAuthorizerBindOptions): HttpRouteAuthorizerConfig =
-      unwrap(this).bind(options.let(HttpRouteAuthorizerBindOptions::unwrap)).let(HttpRouteAuthorizerConfig::wrap)
+      unwrap(this).bind(options.let(HttpRouteAuthorizerBindOptions.Companion::unwrap)).let(HttpRouteAuthorizerConfig::wrap)
 
   /**
    * Bind this authorizer to a specified Http route.
@@ -205,7 +205,7 @@ public open class HttpLambdaAuthorizer(
      * @param responseTypes The types of responses the lambda can return. 
      */
     override fun responseTypes(responseTypes: List<HttpLambdaResponseType>) {
-      cdkBuilder.responseTypes(responseTypes.map(HttpLambdaResponseType::unwrap))
+      cdkBuilder.responseTypes(responseTypes.map(HttpLambdaResponseType.Companion::unwrap))
     }
 
     /**
@@ -233,7 +233,7 @@ public open class HttpLambdaAuthorizer(
      * @param resultsCacheTtl How long APIGateway should cache the results. 
      */
     override fun resultsCacheTtl(resultsCacheTtl: Duration) {
-      cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration::unwrap))
+      cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpLambdaAuthorizer =

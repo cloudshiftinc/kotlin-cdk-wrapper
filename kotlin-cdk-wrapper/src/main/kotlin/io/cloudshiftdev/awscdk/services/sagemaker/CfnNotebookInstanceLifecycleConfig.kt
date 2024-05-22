@@ -48,7 +48,7 @@ public open class CfnNotebookInstanceLifecycleConfig(
   cdkObject: software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -57,8 +57,8 @@ public open class CfnNotebookInstanceLifecycleConfig(
     id: String,
     props: CfnNotebookInstanceLifecycleConfigProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnNotebookInstanceLifecycleConfigProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnNotebookInstanceLifecycleConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnNotebookInstanceLifecycleConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -85,7 +85,7 @@ public open class CfnNotebookInstanceLifecycleConfig(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -110,7 +110,7 @@ public open class CfnNotebookInstanceLifecycleConfig(
    * A shell script that runs only once, when you create a notebook instance.
    */
   public open fun onCreate(`value`: IResolvable) {
-    unwrap(this).setOnCreate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOnCreate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -136,7 +136,7 @@ public open class CfnNotebookInstanceLifecycleConfig(
    * the notebook instance.
    */
   public open fun onStart(`value`: IResolvable) {
-    unwrap(this).setOnStart(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOnStart(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -262,7 +262,7 @@ public open class CfnNotebookInstanceLifecycleConfig(
      * @param onCreate A shell script that runs only once, when you create a notebook instance. 
      */
     override fun onCreate(onCreate: IResolvable) {
-      cdkBuilder.onCreate(onCreate.let(IResolvable::unwrap))
+      cdkBuilder.onCreate(onCreate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -298,7 +298,7 @@ public open class CfnNotebookInstanceLifecycleConfig(
      * when you create the notebook instance. 
      */
     override fun onStart(onStart: IResolvable) {
-      cdkBuilder.onStart(onStart.let(IResolvable::unwrap))
+      cdkBuilder.onStart(onStart.let(IResolvable.Companion::unwrap))
     }
 
     /**

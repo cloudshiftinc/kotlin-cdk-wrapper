@@ -178,7 +178,7 @@ public interface CfnObservabilityConfigurationProps {
      * A tag is a key-value pair.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -194,7 +194,7 @@ public interface CfnObservabilityConfigurationProps {
      * If you don't specify it, App Runner doesn't enable tracing.
      */
     override fun traceConfiguration(traceConfiguration: IResolvable) {
-      cdkBuilder.traceConfiguration(traceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.traceConfiguration(traceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -204,7 +204,7 @@ public interface CfnObservabilityConfigurationProps {
      */
     override
         fun traceConfiguration(traceConfiguration: CfnObservabilityConfiguration.TraceConfigurationProperty) {
-      cdkBuilder.traceConfiguration(traceConfiguration.let(CfnObservabilityConfiguration.TraceConfigurationProperty::unwrap))
+      cdkBuilder.traceConfiguration(traceConfiguration.let(CfnObservabilityConfiguration.TraceConfigurationProperty.Companion::unwrap))
     }
 
     /**

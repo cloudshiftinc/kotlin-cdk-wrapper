@@ -40,8 +40,8 @@ public open class CfnAccessPointPolicy(
     id: String,
     props: CfnAccessPointPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.s3objectlambda.CfnAccessPointPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAccessPointPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.s3objectlambda.CfnAccessPointPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAccessPointPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -57,7 +57,7 @@ public open class CfnAccessPointPolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

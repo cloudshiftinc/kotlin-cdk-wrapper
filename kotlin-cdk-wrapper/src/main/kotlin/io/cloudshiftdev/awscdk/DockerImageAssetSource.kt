@@ -390,7 +390,7 @@ public interface DockerImageAssetSource {
      * @param dockerCacheFrom Cache from options to pass to the `docker build` command.
      */
     override fun dockerCacheFrom(dockerCacheFrom: List<DockerCacheOption>) {
-      cdkBuilder.dockerCacheFrom(dockerCacheFrom.map(DockerCacheOption::unwrap))
+      cdkBuilder.dockerCacheFrom(dockerCacheFrom.map(DockerCacheOption.Companion::unwrap))
     }
 
     /**
@@ -403,7 +403,7 @@ public interface DockerImageAssetSource {
      * @param dockerCacheTo Cache to options to pass to the `docker build` command.
      */
     override fun dockerCacheTo(dockerCacheTo: DockerCacheOption) {
-      cdkBuilder.dockerCacheTo(dockerCacheTo.let(DockerCacheOption::unwrap))
+      cdkBuilder.dockerCacheTo(dockerCacheTo.let(DockerCacheOption.Companion::unwrap))
     }
 
     /**

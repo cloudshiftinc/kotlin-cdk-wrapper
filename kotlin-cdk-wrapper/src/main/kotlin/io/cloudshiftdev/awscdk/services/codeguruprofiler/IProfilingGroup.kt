@@ -68,7 +68,7 @@ public interface IProfilingGroup : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -94,7 +94,7 @@ public interface IProfilingGroup : IResource {
      * @param grantee Principal to grant publish rights to. 
      */
     override fun grantPublish(grantee: IGrantable): Grant =
-        unwrap(this).grantPublish(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantPublish(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grant access to read profiling information from the Profiling Group to the given identity.
@@ -107,7 +107,7 @@ public interface IProfilingGroup : IResource {
      * @param grantee Principal to grant read rights to. 
      */
     override fun grantRead(grantee: IGrantable): Grant =
-        unwrap(this).grantRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 

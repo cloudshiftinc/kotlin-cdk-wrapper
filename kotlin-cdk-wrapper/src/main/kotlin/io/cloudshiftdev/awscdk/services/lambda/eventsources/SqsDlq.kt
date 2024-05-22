@@ -34,7 +34,7 @@ public open class SqsDlq(
   cdkObject: software.amazon.awscdk.services.lambda.eventsources.SqsDlq,
 ) : CdkObject(cdkObject), IEventSourceDlq {
   public constructor(queue: IQueue) :
-      this(software.amazon.awscdk.services.lambda.eventsources.SqsDlq(queue.let(IQueue::unwrap))
+      this(software.amazon.awscdk.services.lambda.eventsources.SqsDlq(queue.let(IQueue.Companion::unwrap))
   )
 
   /**
@@ -44,8 +44,8 @@ public open class SqsDlq(
    * @param targetHandler 
    */
   public override fun bind(target: IEventSourceMapping, targetHandler: IFunction):
-      DlqDestinationConfig = unwrap(this).bind(target.let(IEventSourceMapping::unwrap),
-      targetHandler.let(IFunction::unwrap)).let(DlqDestinationConfig::wrap)
+      DlqDestinationConfig = unwrap(this).bind(target.let(IEventSourceMapping.Companion::unwrap),
+      targetHandler.let(IFunction.Companion::unwrap)).let(DlqDestinationConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.eventsources.SqsDlq): SqsDlq

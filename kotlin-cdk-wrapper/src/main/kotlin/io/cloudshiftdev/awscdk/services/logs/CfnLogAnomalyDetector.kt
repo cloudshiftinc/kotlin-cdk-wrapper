@@ -57,7 +57,7 @@ public open class CfnLogAnomalyDetector(
   cdkObject: software.amazon.awscdk.services.logs.CfnLogAnomalyDetector,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.logs.CfnLogAnomalyDetector(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.logs.CfnLogAnomalyDetector(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -66,8 +66,8 @@ public open class CfnLogAnomalyDetector(
     id: String,
     props: CfnLogAnomalyDetectorProps,
   ) :
-      this(software.amazon.awscdk.services.logs.CfnLogAnomalyDetector(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLogAnomalyDetectorProps::unwrap))
+      this(software.amazon.awscdk.services.logs.CfnLogAnomalyDetector(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLogAnomalyDetectorProps.Companion::unwrap))
   )
 
   public constructor(
@@ -167,7 +167,7 @@ public open class CfnLogAnomalyDetector(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

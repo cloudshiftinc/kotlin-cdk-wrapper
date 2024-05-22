@@ -247,7 +247,7 @@ public interface CfnAnomalySubscriptionProps {
      * @param resourceTags Tags to assign to subscription.
      */
     override fun resourceTags(resourceTags: IResolvable) {
-      cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
+      cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -266,7 +266,7 @@ public interface CfnAnomalySubscriptionProps {
      * @param subscribers A list of subscribers to notify. 
      */
     override fun subscribers(subscribers: IResolvable) {
-      cdkBuilder.subscribers(subscribers.let(IResolvable::unwrap))
+      cdkBuilder.subscribers(subscribers.let(IResolvable.Companion::unwrap))
     }
 
     /**

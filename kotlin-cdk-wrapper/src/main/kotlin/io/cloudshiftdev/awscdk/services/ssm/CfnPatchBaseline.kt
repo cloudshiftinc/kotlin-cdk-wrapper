@@ -92,8 +92,8 @@ public open class CfnPatchBaseline(
     id: String,
     props: CfnPatchBaselineProps,
   ) :
-      this(software.amazon.awscdk.services.ssm.CfnPatchBaseline(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPatchBaselineProps::unwrap))
+      this(software.amazon.awscdk.services.ssm.CfnPatchBaseline(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPatchBaselineProps.Companion::unwrap))
   )
 
   public constructor(
@@ -112,14 +112,14 @@ public open class CfnPatchBaseline(
    * A set of rules used to include patches in the baseline.
    */
   public open fun approvalRules(`value`: IResolvable) {
-    unwrap(this).setApprovalRules(`value`.let(IResolvable::unwrap))
+    unwrap(this).setApprovalRules(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A set of rules used to include patches in the baseline.
    */
   public open fun approvalRules(`value`: RuleGroupProperty) {
-    unwrap(this).setApprovalRules(`value`.let(RuleGroupProperty::unwrap))
+    unwrap(this).setApprovalRules(`value`.let(RuleGroupProperty.Companion::unwrap))
   }
 
   /**
@@ -180,7 +180,7 @@ public open class CfnPatchBaseline(
    * applied to the managed nodes.
    */
   public open fun approvedPatchesEnableNonSecurity(`value`: IResolvable) {
-    unwrap(this).setApprovedPatchesEnableNonSecurity(`value`.let(IResolvable::unwrap))
+    unwrap(this).setApprovedPatchesEnableNonSecurity(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -204,7 +204,7 @@ public open class CfnPatchBaseline(
    * Set the baseline as default baseline.
    */
   public open fun defaultBaseline(`value`: IResolvable) {
-    unwrap(this).setDefaultBaseline(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefaultBaseline(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -228,14 +228,14 @@ public open class CfnPatchBaseline(
    * A set of global filters used to include patches in the baseline.
    */
   public open fun globalFilters(`value`: IResolvable) {
-    unwrap(this).setGlobalFilters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setGlobalFilters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A set of global filters used to include patches in the baseline.
    */
   public open fun globalFilters(`value`: PatchFilterGroupProperty) {
-    unwrap(this).setGlobalFilters(`value`.let(PatchFilterGroupProperty::unwrap))
+    unwrap(this).setGlobalFilters(`value`.let(PatchFilterGroupProperty.Companion::unwrap))
   }
 
   /**
@@ -252,7 +252,7 @@ public open class CfnPatchBaseline(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -336,7 +336,7 @@ public open class CfnPatchBaseline(
    * systems and source repositories.
    */
   public open fun sources(`value`: IResolvable) {
-    unwrap(this).setSources(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSources(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -368,7 +368,7 @@ public open class CfnPatchBaseline(
    * Optional metadata that you assign to a resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -689,7 +689,7 @@ public open class CfnPatchBaseline(
      * @param approvalRules A set of rules used to include patches in the baseline. 
      */
     override fun approvalRules(approvalRules: IResolvable) {
-      cdkBuilder.approvalRules(approvalRules.let(IResolvable::unwrap))
+      cdkBuilder.approvalRules(approvalRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -699,7 +699,7 @@ public open class CfnPatchBaseline(
      * @param approvalRules A set of rules used to include patches in the baseline. 
      */
     override fun approvalRules(approvalRules: RuleGroupProperty) {
-      cdkBuilder.approvalRules(approvalRules.let(RuleGroupProperty::unwrap))
+      cdkBuilder.approvalRules(approvalRules.let(RuleGroupProperty.Companion::unwrap))
     }
 
     /**
@@ -786,7 +786,7 @@ public open class CfnPatchBaseline(
      * includes non-security updates that should be applied to the managed nodes. 
      */
     override fun approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity: IResolvable) {
-      cdkBuilder.approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity.let(IResolvable::unwrap))
+      cdkBuilder.approvedPatchesEnableNonSecurity(approvedPatchesEnableNonSecurity.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -814,7 +814,7 @@ public open class CfnPatchBaseline(
      * @param defaultBaseline Set the baseline as default baseline. 
      */
     override fun defaultBaseline(defaultBaseline: IResolvable) {
-      cdkBuilder.defaultBaseline(defaultBaseline.let(IResolvable::unwrap))
+      cdkBuilder.defaultBaseline(defaultBaseline.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -834,7 +834,7 @@ public open class CfnPatchBaseline(
      * @param globalFilters A set of global filters used to include patches in the baseline. 
      */
     override fun globalFilters(globalFilters: IResolvable) {
-      cdkBuilder.globalFilters(globalFilters.let(IResolvable::unwrap))
+      cdkBuilder.globalFilters(globalFilters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -844,7 +844,7 @@ public open class CfnPatchBaseline(
      * @param globalFilters A set of global filters used to include patches in the baseline. 
      */
     override fun globalFilters(globalFilters: PatchFilterGroupProperty) {
-      cdkBuilder.globalFilters(globalFilters.let(PatchFilterGroupProperty::unwrap))
+      cdkBuilder.globalFilters(globalFilters.let(PatchFilterGroupProperty.Companion::unwrap))
     }
 
     /**
@@ -962,7 +962,7 @@ public open class CfnPatchBaseline(
      * target operating systems and source repositories. 
      */
     override fun sources(sources: IResolvable) {
-      cdkBuilder.sources(sources.let(IResolvable::unwrap))
+      cdkBuilder.sources(sources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1002,7 +1002,7 @@ public open class CfnPatchBaseline(
      * @param tags Optional metadata that you assign to a resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1105,7 +1105,7 @@ public open class CfnPatchBaseline(
        * @param patchFilters The set of patch filters that make up the group.
        */
       override fun patchFilters(patchFilters: IResolvable) {
-        cdkBuilder.patchFilters(patchFilters.let(IResolvable::unwrap))
+        cdkBuilder.patchFilters(patchFilters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1611,7 +1611,7 @@ public open class CfnPatchBaseline(
        * @param patchRules The rules that make up the rule group.
        */
       override fun patchRules(patchRules: IResolvable) {
-        cdkBuilder.patchRules(patchRules.let(IResolvable::unwrap))
+        cdkBuilder.patchRules(patchRules.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1866,21 +1866,21 @@ public open class CfnPatchBaseline(
        * The default value is `false` . Applies to Linux managed nodes only.
        */
       override fun enableNonSecurity(enableNonSecurity: IResolvable) {
-        cdkBuilder.enableNonSecurity(enableNonSecurity.let(IResolvable::unwrap))
+        cdkBuilder.enableNonSecurity(enableNonSecurity.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param patchFilterGroup The patch filter group that defines the criteria for the rule.
        */
       override fun patchFilterGroup(patchFilterGroup: IResolvable) {
-        cdkBuilder.patchFilterGroup(patchFilterGroup.let(IResolvable::unwrap))
+        cdkBuilder.patchFilterGroup(patchFilterGroup.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param patchFilterGroup The patch filter group that defines the criteria for the rule.
        */
       override fun patchFilterGroup(patchFilterGroup: PatchFilterGroupProperty) {
-        cdkBuilder.patchFilterGroup(patchFilterGroup.let(PatchFilterGroupProperty::unwrap))
+        cdkBuilder.patchFilterGroup(patchFilterGroup.let(PatchFilterGroupProperty.Companion::unwrap))
       }
 
       /**

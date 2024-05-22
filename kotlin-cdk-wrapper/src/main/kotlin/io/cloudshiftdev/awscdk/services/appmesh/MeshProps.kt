@@ -90,7 +90,7 @@ public interface MeshProps {
      * @param egressFilter Egress filter to be applied to the Mesh.
      */
     override fun egressFilter(egressFilter: MeshFilterType) {
-      cdkBuilder.egressFilter(egressFilter.let(MeshFilterType::unwrap))
+      cdkBuilder.egressFilter(egressFilter.let(MeshFilterType.Companion::unwrap))
     }
 
     /**
@@ -104,7 +104,7 @@ public interface MeshProps {
      * @param serviceDiscovery Defines how upstream clients will discover VirtualNodes in the Mesh.
      */
     override fun serviceDiscovery(serviceDiscovery: MeshServiceDiscovery) {
-      cdkBuilder.serviceDiscovery(serviceDiscovery.let(MeshServiceDiscovery::unwrap))
+      cdkBuilder.serviceDiscovery(serviceDiscovery.let(MeshServiceDiscovery.Companion::unwrap))
     }
 
     /**

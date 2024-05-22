@@ -66,7 +66,7 @@ public interface GatewayRouteAttributes {
      * @param virtualGateway The VirtualGateway this GatewayRoute is associated with. 
      */
     override fun virtualGateway(virtualGateway: IVirtualGateway) {
-      cdkBuilder.virtualGateway(virtualGateway.let(IVirtualGateway::unwrap))
+      cdkBuilder.virtualGateway(virtualGateway.let(IVirtualGateway.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appmesh.GatewayRouteAttributes =

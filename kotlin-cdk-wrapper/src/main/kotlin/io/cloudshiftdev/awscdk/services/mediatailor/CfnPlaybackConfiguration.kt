@@ -90,8 +90,8 @@ public open class CfnPlaybackConfiguration(
     id: String,
     props: CfnPlaybackConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPlaybackConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.mediatailor.CfnPlaybackConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPlaybackConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -158,14 +158,14 @@ public open class CfnPlaybackConfiguration(
    * The configuration for avail suppression, also known as ad suppression.
    */
   public open fun availSuppression(`value`: IResolvable) {
-    unwrap(this).setAvailSuppression(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAvailSuppression(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration for avail suppression, also known as ad suppression.
    */
   public open fun availSuppression(`value`: AvailSuppressionProperty) {
-    unwrap(this).setAvailSuppression(`value`.let(AvailSuppressionProperty::unwrap))
+    unwrap(this).setAvailSuppression(`value`.let(AvailSuppressionProperty.Companion::unwrap))
   }
 
   /**
@@ -185,14 +185,14 @@ public open class CfnPlaybackConfiguration(
    * The configuration for bumpers.
    */
   public open fun bumper(`value`: IResolvable) {
-    unwrap(this).setBumper(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBumper(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration for bumpers.
    */
   public open fun bumper(`value`: BumperProperty) {
-    unwrap(this).setBumper(`value`.let(BumperProperty::unwrap))
+    unwrap(this).setBumper(`value`.let(BumperProperty.Companion::unwrap))
   }
 
   /**
@@ -214,7 +214,7 @@ public open class CfnPlaybackConfiguration(
    * content and ad segment management.
    */
   public open fun cdnConfiguration(`value`: IResolvable) {
-    unwrap(this).setCdnConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCdnConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -222,7 +222,7 @@ public open class CfnPlaybackConfiguration(
    * content and ad segment management.
    */
   public open fun cdnConfiguration(`value`: CdnConfigurationProperty) {
-    unwrap(this).setCdnConfiguration(`value`.let(CdnConfigurationProperty::unwrap))
+    unwrap(this).setCdnConfiguration(`value`.let(CdnConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -243,7 +243,7 @@ public open class CfnPlaybackConfiguration(
    * The player parameters and aliases used as dynamic variables during session initialization.
    */
   public open fun configurationAliases(`value`: IResolvable) {
-    unwrap(this).setConfigurationAliases(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfigurationAliases(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -262,14 +262,14 @@ public open class CfnPlaybackConfiguration(
    * The configuration for a DASH source.
    */
   public open fun dashConfiguration(`value`: IResolvable) {
-    unwrap(this).setDashConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDashConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration for a DASH source.
    */
   public open fun dashConfiguration(`value`: DashConfigurationProperty) {
-    unwrap(this).setDashConfiguration(`value`.let(DashConfigurationProperty::unwrap))
+    unwrap(this).setDashConfiguration(`value`.let(DashConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -289,14 +289,14 @@ public open class CfnPlaybackConfiguration(
    * The configuration for HLS content.
    */
   public open fun hlsConfiguration(`value`: IResolvable) {
-    unwrap(this).setHlsConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHlsConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration for HLS content.
    */
   public open fun hlsConfiguration(`value`: HlsConfigurationProperty) {
-    unwrap(this).setHlsConfiguration(`value`.let(HlsConfigurationProperty::unwrap))
+    unwrap(this).setHlsConfiguration(`value`.let(HlsConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -313,7 +313,7 @@ public open class CfnPlaybackConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -325,14 +325,14 @@ public open class CfnPlaybackConfiguration(
    * The configuration for pre-roll ad insertion.
    */
   public open fun livePreRollConfiguration(`value`: IResolvable) {
-    unwrap(this).setLivePreRollConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLivePreRollConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration for pre-roll ad insertion.
    */
   public open fun livePreRollConfiguration(`value`: LivePreRollConfigurationProperty) {
-    unwrap(this).setLivePreRollConfiguration(`value`.let(LivePreRollConfigurationProperty::unwrap))
+    unwrap(this).setLivePreRollConfiguration(`value`.let(LivePreRollConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -353,14 +353,14 @@ public open class CfnPlaybackConfiguration(
    * The configuration for manifest processing rules.
    */
   public open fun manifestProcessingRules(`value`: IResolvable) {
-    unwrap(this).setManifestProcessingRules(`value`.let(IResolvable::unwrap))
+    unwrap(this).setManifestProcessingRules(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration for manifest processing rules.
    */
   public open fun manifestProcessingRules(`value`: ManifestProcessingRulesProperty) {
-    unwrap(this).setManifestProcessingRules(`value`.let(ManifestProcessingRulesProperty::unwrap))
+    unwrap(this).setManifestProcessingRules(`value`.let(ManifestProcessingRulesProperty.Companion::unwrap))
   }
 
   /**
@@ -424,7 +424,7 @@ public open class CfnPlaybackConfiguration(
    * The tags to assign to the playback configuration.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -845,7 +845,7 @@ public open class CfnPlaybackConfiguration(
      * suppression. 
      */
     override fun availSuppression(availSuppression: IResolvable) {
-      cdkBuilder.availSuppression(availSuppression.let(IResolvable::unwrap))
+      cdkBuilder.availSuppression(availSuppression.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -859,7 +859,7 @@ public open class CfnPlaybackConfiguration(
      * suppression. 
      */
     override fun availSuppression(availSuppression: AvailSuppressionProperty) {
-      cdkBuilder.availSuppression(availSuppression.let(AvailSuppressionProperty::unwrap))
+      cdkBuilder.availSuppression(availSuppression.let(AvailSuppressionProperty.Companion::unwrap))
     }
 
     /**
@@ -888,7 +888,7 @@ public open class CfnPlaybackConfiguration(
      * @param bumper The configuration for bumpers. 
      */
     override fun bumper(bumper: IResolvable) {
-      cdkBuilder.bumper(bumper.let(IResolvable::unwrap))
+      cdkBuilder.bumper(bumper.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -902,7 +902,7 @@ public open class CfnPlaybackConfiguration(
      * @param bumper The configuration for bumpers. 
      */
     override fun bumper(bumper: BumperProperty) {
-      cdkBuilder.bumper(bumper.let(BumperProperty::unwrap))
+      cdkBuilder.bumper(bumper.let(BumperProperty.Companion::unwrap))
     }
 
     /**
@@ -929,7 +929,7 @@ public open class CfnPlaybackConfiguration(
      * Amazon CloudFront, for content and ad segment management. 
      */
     override fun cdnConfiguration(cdnConfiguration: IResolvable) {
-      cdkBuilder.cdnConfiguration(cdnConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.cdnConfiguration(cdnConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -941,7 +941,7 @@ public open class CfnPlaybackConfiguration(
      * Amazon CloudFront, for content and ad segment management. 
      */
     override fun cdnConfiguration(cdnConfiguration: CdnConfigurationProperty) {
-      cdkBuilder.cdnConfiguration(cdnConfiguration.let(CdnConfigurationProperty::unwrap))
+      cdkBuilder.cdnConfiguration(cdnConfiguration.let(CdnConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -968,7 +968,7 @@ public open class CfnPlaybackConfiguration(
      * during session initialization. 
      */
     override fun configurationAliases(configurationAliases: IResolvable) {
-      cdkBuilder.configurationAliases(configurationAliases.let(IResolvable::unwrap))
+      cdkBuilder.configurationAliases(configurationAliases.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -992,7 +992,7 @@ public open class CfnPlaybackConfiguration(
      * @param dashConfiguration The configuration for a DASH source. 
      */
     override fun dashConfiguration(dashConfiguration: IResolvable) {
-      cdkBuilder.dashConfiguration(dashConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.dashConfiguration(dashConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1002,7 +1002,7 @@ public open class CfnPlaybackConfiguration(
      * @param dashConfiguration The configuration for a DASH source. 
      */
     override fun dashConfiguration(dashConfiguration: DashConfigurationProperty) {
-      cdkBuilder.dashConfiguration(dashConfiguration.let(DashConfigurationProperty::unwrap))
+      cdkBuilder.dashConfiguration(dashConfiguration.let(DashConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1023,7 +1023,7 @@ public open class CfnPlaybackConfiguration(
      * @param hlsConfiguration The configuration for HLS content. 
      */
     override fun hlsConfiguration(hlsConfiguration: IResolvable) {
-      cdkBuilder.hlsConfiguration(hlsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.hlsConfiguration(hlsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1033,7 +1033,7 @@ public open class CfnPlaybackConfiguration(
      * @param hlsConfiguration The configuration for HLS content. 
      */
     override fun hlsConfiguration(hlsConfiguration: HlsConfigurationProperty) {
-      cdkBuilder.hlsConfiguration(hlsConfiguration.let(HlsConfigurationProperty::unwrap))
+      cdkBuilder.hlsConfiguration(hlsConfiguration.let(HlsConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1054,7 +1054,7 @@ public open class CfnPlaybackConfiguration(
      * @param livePreRollConfiguration The configuration for pre-roll ad insertion. 
      */
     override fun livePreRollConfiguration(livePreRollConfiguration: IResolvable) {
-      cdkBuilder.livePreRollConfiguration(livePreRollConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.livePreRollConfiguration(livePreRollConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1065,7 +1065,7 @@ public open class CfnPlaybackConfiguration(
      */
     override
         fun livePreRollConfiguration(livePreRollConfiguration: LivePreRollConfigurationProperty) {
-      cdkBuilder.livePreRollConfiguration(livePreRollConfiguration.let(LivePreRollConfigurationProperty::unwrap))
+      cdkBuilder.livePreRollConfiguration(livePreRollConfiguration.let(LivePreRollConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1090,7 +1090,7 @@ public open class CfnPlaybackConfiguration(
      * @param manifestProcessingRules The configuration for manifest processing rules. 
      */
     override fun manifestProcessingRules(manifestProcessingRules: IResolvable) {
-      cdkBuilder.manifestProcessingRules(manifestProcessingRules.let(IResolvable::unwrap))
+      cdkBuilder.manifestProcessingRules(manifestProcessingRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1103,7 +1103,7 @@ public open class CfnPlaybackConfiguration(
      * @param manifestProcessingRules The configuration for manifest processing rules. 
      */
     override fun manifestProcessingRules(manifestProcessingRules: ManifestProcessingRulesProperty) {
-      cdkBuilder.manifestProcessingRules(manifestProcessingRules.let(ManifestProcessingRulesProperty::unwrap))
+      cdkBuilder.manifestProcessingRules(manifestProcessingRules.let(ManifestProcessingRulesProperty.Companion::unwrap))
     }
 
     /**
@@ -1177,7 +1177,7 @@ public open class CfnPlaybackConfiguration(
      * @param tags The tags to assign to the playback configuration. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1309,7 +1309,7 @@ public open class CfnPlaybackConfiguration(
        * @param enabled Enables ad marker passthrough for your configuration.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2273,7 +2273,7 @@ public open class CfnPlaybackConfiguration(
        * `60` , but no ads are filled for that ad break, MediaTailor will not set the value to `0` .
        */
       override fun adMarkerPassthrough(adMarkerPassthrough: IResolvable) {
-        cdkBuilder.adMarkerPassthrough(adMarkerPassthrough.let(IResolvable::unwrap))
+        cdkBuilder.adMarkerPassthrough(adMarkerPassthrough.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2284,7 +2284,7 @@ public open class CfnPlaybackConfiguration(
        * `60` , but no ads are filled for that ad break, MediaTailor will not set the value to `0` .
        */
       override fun adMarkerPassthrough(adMarkerPassthrough: AdMarkerPassthroughProperty) {
-        cdkBuilder.adMarkerPassthrough(adMarkerPassthrough.let(AdMarkerPassthroughProperty::unwrap))
+        cdkBuilder.adMarkerPassthrough(adMarkerPassthrough.let(AdMarkerPassthroughProperty.Companion::unwrap))
       }
 
       /**

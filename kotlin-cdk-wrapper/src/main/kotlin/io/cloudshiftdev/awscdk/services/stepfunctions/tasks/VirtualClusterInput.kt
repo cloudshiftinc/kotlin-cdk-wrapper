@@ -40,7 +40,7 @@ public open class VirtualClusterInput(
 
   public companion object {
     public fun fromTaskInput(taskInput: TaskInput): VirtualClusterInput =
-        software.amazon.awscdk.services.stepfunctions.tasks.VirtualClusterInput.fromTaskInput(taskInput.let(TaskInput::unwrap)).let(VirtualClusterInput::wrap)
+        software.amazon.awscdk.services.stepfunctions.tasks.VirtualClusterInput.fromTaskInput(taskInput.let(TaskInput.Companion::unwrap)).let(VirtualClusterInput::wrap)
 
     public fun fromVirtualClusterId(virtualClusterId: String): VirtualClusterInput =
         software.amazon.awscdk.services.stepfunctions.tasks.VirtualClusterInput.fromVirtualClusterId(virtualClusterId).let(VirtualClusterInput::wrap)

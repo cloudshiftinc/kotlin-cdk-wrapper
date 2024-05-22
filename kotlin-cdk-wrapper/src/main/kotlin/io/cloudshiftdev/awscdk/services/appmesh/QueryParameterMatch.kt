@@ -41,7 +41,7 @@ public abstract class QueryParameterMatch(
    * @param scope 
    */
   public open fun bind(scope: Construct): QueryParameterMatchConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(QueryParameterMatchConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(QueryParameterMatchConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.QueryParameterMatch,

@@ -33,7 +33,7 @@ public open class AmazonLinux2022ImageSsmParameter(
   cdkObject: software.amazon.awscdk.services.ec2.AmazonLinux2022ImageSsmParameter,
 ) : AmazonLinuxImageSsmParameterBase(cdkObject) {
   public constructor(props: AmazonLinux2022ImageSsmParameterProps) :
-      this(software.amazon.awscdk.services.ec2.AmazonLinux2022ImageSsmParameter(props.let(AmazonLinux2022ImageSsmParameterProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.AmazonLinux2022ImageSsmParameter(props.let(AmazonLinux2022ImageSsmParameterProps.Companion::unwrap))
   )
 
   public constructor(props: AmazonLinux2022ImageSsmParameterProps.Builder.() -> Unit) :
@@ -143,7 +143,7 @@ public open class AmazonLinux2022ImageSsmParameter(
      * @param cpuType CPU Type. 
      */
     override fun cpuType(cpuType: AmazonLinuxCpuType) {
-      cdkBuilder.cpuType(cpuType.let(AmazonLinuxCpuType::unwrap))
+      cdkBuilder.cpuType(cpuType.let(AmazonLinuxCpuType.Companion::unwrap))
     }
 
     /**
@@ -154,7 +154,7 @@ public open class AmazonLinux2022ImageSsmParameter(
      * @param edition What edition of Amazon Linux to use. 
      */
     override fun edition(edition: AmazonLinuxEdition) {
-      cdkBuilder.edition(edition.let(AmazonLinuxEdition::unwrap))
+      cdkBuilder.edition(edition.let(AmazonLinuxEdition.Companion::unwrap))
     }
 
     /**
@@ -165,7 +165,7 @@ public open class AmazonLinux2022ImageSsmParameter(
      * @param kernel What kernel version of Amazon Linux to use. 
      */
     override fun kernel(kernel: AmazonLinux2022Kernel) {
-      cdkBuilder.kernel(kernel.let(AmazonLinux2022Kernel::unwrap))
+      cdkBuilder.kernel(kernel.let(AmazonLinux2022Kernel.Companion::unwrap))
     }
 
     /**
@@ -176,7 +176,7 @@ public open class AmazonLinux2022ImageSsmParameter(
      * @param userData Initial user data. 
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.AmazonLinux2022ImageSsmParameter =
@@ -185,7 +185,7 @@ public open class AmazonLinux2022ImageSsmParameter(
 
   public companion object {
     public fun ssmParameterName(props: AmazonLinux2022ImageSsmParameterProps): String =
-        software.amazon.awscdk.services.ec2.AmazonLinux2022ImageSsmParameter.ssmParameterName(props.let(AmazonLinux2022ImageSsmParameterProps::unwrap))
+        software.amazon.awscdk.services.ec2.AmazonLinux2022ImageSsmParameter.ssmParameterName(props.let(AmazonLinux2022ImageSsmParameterProps.Companion::unwrap))
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("79850475ae55dd29e05eb4cc855fc428956da78811c64ccf69535565eb81e4ad")

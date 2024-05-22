@@ -314,7 +314,7 @@ public interface CfnDetectorProps {
      * You must provide the ARNs of all the models you want to associate.
      */
     override fun associatedModels(associatedModels: IResolvable) {
-      cdkBuilder.associatedModels(associatedModels.let(IResolvable::unwrap))
+      cdkBuilder.associatedModels(associatedModels.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -360,14 +360,14 @@ public interface CfnDetectorProps {
      * @param eventType The event type associated with this detector. 
      */
     override fun eventType(eventType: IResolvable) {
-      cdkBuilder.eventType(eventType.let(IResolvable::unwrap))
+      cdkBuilder.eventType(eventType.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param eventType The event type associated with this detector. 
      */
     override fun eventType(eventType: CfnDetector.EventTypeProperty) {
-      cdkBuilder.eventType(eventType.let(CfnDetector.EventTypeProperty::unwrap))
+      cdkBuilder.eventType(eventType.let(CfnDetector.EventTypeProperty.Companion::unwrap))
     }
 
     /**
@@ -401,7 +401,7 @@ public interface CfnDetectorProps {
      * @param rules The rules to include in the detector version. 
      */
     override fun rules(rules: IResolvable) {
-      cdkBuilder.rules(rules.let(IResolvable::unwrap))
+      cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -423,7 +423,7 @@ public interface CfnDetectorProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

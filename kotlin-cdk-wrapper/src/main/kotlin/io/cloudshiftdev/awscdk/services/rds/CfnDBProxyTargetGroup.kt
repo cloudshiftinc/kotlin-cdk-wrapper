@@ -85,8 +85,8 @@ public open class CfnDBProxyTargetGroup(
     id: String,
     props: CfnDBProxyTargetGroupProps,
   ) :
-      this(software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDBProxyTargetGroupProps::unwrap))
+      this(software.amazon.awscdk.services.rds.CfnDBProxyTargetGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDBProxyTargetGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -113,7 +113,7 @@ public open class CfnDBProxyTargetGroup(
    * `DBProxyTargetGroup` .
    */
   public open fun connectionPoolConfigurationInfo(`value`: IResolvable) {
-    unwrap(this).setConnectionPoolConfigurationInfo(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConnectionPoolConfigurationInfo(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -122,7 +122,7 @@ public open class CfnDBProxyTargetGroup(
    */
   public open
       fun connectionPoolConfigurationInfo(`value`: ConnectionPoolConfigurationInfoFormatProperty) {
-    unwrap(this).setConnectionPoolConfigurationInfo(`value`.let(ConnectionPoolConfigurationInfoFormatProperty::unwrap))
+    unwrap(this).setConnectionPoolConfigurationInfo(`value`.let(ConnectionPoolConfigurationInfoFormatProperty.Companion::unwrap))
   }
 
   /**
@@ -191,7 +191,7 @@ public open class CfnDBProxyTargetGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -315,7 +315,7 @@ public open class CfnDBProxyTargetGroup(
      * connection pool associated with a `DBProxyTargetGroup` . 
      */
     override fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: IResolvable) {
-      cdkBuilder.connectionPoolConfigurationInfo(connectionPoolConfigurationInfo.let(IResolvable::unwrap))
+      cdkBuilder.connectionPoolConfigurationInfo(connectionPoolConfigurationInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -328,7 +328,7 @@ public open class CfnDBProxyTargetGroup(
      */
     override
         fun connectionPoolConfigurationInfo(connectionPoolConfigurationInfo: ConnectionPoolConfigurationInfoFormatProperty) {
-      cdkBuilder.connectionPoolConfigurationInfo(connectionPoolConfigurationInfo.let(ConnectionPoolConfigurationInfoFormatProperty::unwrap))
+      cdkBuilder.connectionPoolConfigurationInfo(connectionPoolConfigurationInfo.let(ConnectionPoolConfigurationInfoFormatProperty.Companion::unwrap))
     }
 
     /**

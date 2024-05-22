@@ -160,7 +160,7 @@ public interface CfnStorageLensGroupProps {
      * displayed. 
      */
     override fun filter(filter: IResolvable) {
-      cdkBuilder.filter(filter.let(IResolvable::unwrap))
+      cdkBuilder.filter(filter.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -168,7 +168,7 @@ public interface CfnStorageLensGroupProps {
      * displayed. 
      */
     override fun filter(filter: CfnStorageLensGroup.FilterProperty) {
-      cdkBuilder.filter(filter.let(CfnStorageLensGroup.FilterProperty::unwrap))
+      cdkBuilder.filter(filter.let(CfnStorageLensGroup.FilterProperty.Companion::unwrap))
     }
 
     /**
@@ -193,7 +193,7 @@ public interface CfnStorageLensGroupProps {
      * This parameter is optional.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

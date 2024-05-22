@@ -108,7 +108,7 @@ public interface MatchFailure {
      * @param matcher The matcher that had the failure. 
      */
     override fun matcher(matcher: Matcher) {
-      cdkBuilder.matcher(matcher.let(Matcher::unwrap))
+      cdkBuilder.matcher(matcher.let(Matcher.Companion::unwrap))
     }
 
     /**

@@ -262,7 +262,7 @@ public open class CfnTaskDefinition(
   cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ecs.CfnTaskDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ecs.CfnTaskDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -271,8 +271,8 @@ public open class CfnTaskDefinition(
     id: String,
     props: CfnTaskDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.CfnTaskDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTaskDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.CfnTaskDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTaskDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -298,7 +298,7 @@ public open class CfnTaskDefinition(
    * up your task.
    */
   public open fun containerDefinitions(`value`: IResolvable) {
-    unwrap(this).setContainerDefinitions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setContainerDefinitions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -337,14 +337,14 @@ public open class CfnTaskDefinition(
    * The ephemeral storage settings to use for tasks run with the task definition.
    */
   public open fun ephemeralStorage(`value`: IResolvable) {
-    unwrap(this).setEphemeralStorage(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEphemeralStorage(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The ephemeral storage settings to use for tasks run with the task definition.
    */
   public open fun ephemeralStorage(`value`: EphemeralStorageProperty) {
-    unwrap(this).setEphemeralStorage(`value`.let(EphemeralStorageProperty::unwrap))
+    unwrap(this).setEphemeralStorage(`value`.let(EphemeralStorageProperty.Companion::unwrap))
   }
 
   /**
@@ -390,7 +390,7 @@ public open class CfnTaskDefinition(
    * The Elastic Inference accelerators to use for the containers in the task.
    */
   public open fun inferenceAccelerators(`value`: IResolvable) {
-    unwrap(this).setInferenceAccelerators(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInferenceAccelerators(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -412,7 +412,7 @@ public open class CfnTaskDefinition(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -472,7 +472,7 @@ public open class CfnTaskDefinition(
    * An array of placement constraint objects to use for tasks.
    */
   public open fun placementConstraints(`value`: IResolvable) {
-    unwrap(this).setPlacementConstraints(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPlacementConstraints(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -497,14 +497,14 @@ public open class CfnTaskDefinition(
    * The configuration details for the App Mesh proxy.
    */
   public open fun proxyConfiguration(`value`: IResolvable) {
-    unwrap(this).setProxyConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProxyConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration details for the App Mesh proxy.
    */
   public open fun proxyConfiguration(`value`: ProxyConfigurationProperty) {
-    unwrap(this).setProxyConfiguration(`value`.let(ProxyConfigurationProperty::unwrap))
+    unwrap(this).setProxyConfiguration(`value`.let(ProxyConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -543,14 +543,14 @@ public open class CfnTaskDefinition(
    * The operating system that your tasks definitions run on.
    */
   public open fun runtimePlatform(`value`: IResolvable) {
-    unwrap(this).setRuntimePlatform(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRuntimePlatform(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The operating system that your tasks definitions run on.
    */
   public open fun runtimePlatform(`value`: RuntimePlatformProperty) {
-    unwrap(this).setRuntimePlatform(`value`.let(RuntimePlatformProperty::unwrap))
+    unwrap(this).setRuntimePlatform(`value`.let(RuntimePlatformProperty.Companion::unwrap))
   }
 
   /**
@@ -576,7 +576,7 @@ public open class CfnTaskDefinition(
    * The metadata that you apply to the task definition to help you categorize and organize them.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -607,7 +607,7 @@ public open class CfnTaskDefinition(
    * The list of data volume definitions for the task.
    */
   public open fun volumes(`value`: IResolvable) {
-    unwrap(this).setVolumes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVolumes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -1055,9 +1055,6 @@ public open class CfnTaskDefinition(
      *
      * A platform family is specified only for tasks using the Fargate launch type.
      *
-     * When you specify a task definition in a service, this value must match the `runtimePlatform`
-     * value of the service.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-runtimeplatform)
      * @param runtimePlatform The operating system that your tasks definitions run on. 
      */
@@ -1068,9 +1065,6 @@ public open class CfnTaskDefinition(
      *
      * A platform family is specified only for tasks using the Fargate launch type.
      *
-     * When you specify a task definition in a service, this value must match the `runtimePlatform`
-     * value of the service.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-runtimeplatform)
      * @param runtimePlatform The operating system that your tasks definitions run on. 
      */
@@ -1080,9 +1074,6 @@ public open class CfnTaskDefinition(
      * The operating system that your tasks definitions run on.
      *
      * A platform family is specified only for tasks using the Fargate launch type.
-     *
-     * When you specify a task definition in a service, this value must match the `runtimePlatform`
-     * value of the service.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-runtimeplatform)
      * @param runtimePlatform The operating system that your tasks definitions run on. 
@@ -1223,7 +1214,7 @@ public open class CfnTaskDefinition(
      * different containers that make up your task. 
      */
     override fun containerDefinitions(containerDefinitions: IResolvable) {
-      cdkBuilder.containerDefinitions(containerDefinitions.let(IResolvable::unwrap))
+      cdkBuilder.containerDefinitions(containerDefinitions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1298,7 +1289,7 @@ public open class CfnTaskDefinition(
      * definition. 
      */
     override fun ephemeralStorage(ephemeralStorage: IResolvable) {
-      cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable::unwrap))
+      cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1309,7 +1300,7 @@ public open class CfnTaskDefinition(
      * definition. 
      */
     override fun ephemeralStorage(ephemeralStorage: EphemeralStorageProperty) {
-      cdkBuilder.ephemeralStorage(ephemeralStorage.let(EphemeralStorageProperty::unwrap))
+      cdkBuilder.ephemeralStorage(ephemeralStorage.let(EphemeralStorageProperty.Companion::unwrap))
     }
 
     /**
@@ -1371,7 +1362,7 @@ public open class CfnTaskDefinition(
      * the task. 
      */
     override fun inferenceAccelerators(inferenceAccelerators: IResolvable) {
-      cdkBuilder.inferenceAccelerators(inferenceAccelerators.let(IResolvable::unwrap))
+      cdkBuilder.inferenceAccelerators(inferenceAccelerators.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1561,7 +1552,7 @@ public open class CfnTaskDefinition(
      * @param placementConstraints An array of placement constraint objects to use for tasks. 
      */
     override fun placementConstraints(placementConstraints: IResolvable) {
-      cdkBuilder.placementConstraints(placementConstraints.let(IResolvable::unwrap))
+      cdkBuilder.placementConstraints(placementConstraints.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1606,7 +1597,7 @@ public open class CfnTaskDefinition(
      * @param proxyConfiguration The configuration details for the App Mesh proxy. 
      */
     override fun proxyConfiguration(proxyConfiguration: IResolvable) {
-      cdkBuilder.proxyConfiguration(proxyConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.proxyConfiguration(proxyConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1624,7 +1615,7 @@ public open class CfnTaskDefinition(
      * @param proxyConfiguration The configuration details for the App Mesh proxy. 
      */
     override fun proxyConfiguration(proxyConfiguration: ProxyConfigurationProperty) {
-      cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfigurationProperty::unwrap))
+      cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1681,38 +1672,29 @@ public open class CfnTaskDefinition(
      *
      * A platform family is specified only for tasks using the Fargate launch type.
      *
-     * When you specify a task definition in a service, this value must match the `runtimePlatform`
-     * value of the service.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-runtimeplatform)
      * @param runtimePlatform The operating system that your tasks definitions run on. 
      */
     override fun runtimePlatform(runtimePlatform: IResolvable) {
-      cdkBuilder.runtimePlatform(runtimePlatform.let(IResolvable::unwrap))
+      cdkBuilder.runtimePlatform(runtimePlatform.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * The operating system that your tasks definitions run on.
      *
      * A platform family is specified only for tasks using the Fargate launch type.
-     *
-     * When you specify a task definition in a service, this value must match the `runtimePlatform`
-     * value of the service.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-runtimeplatform)
      * @param runtimePlatform The operating system that your tasks definitions run on. 
      */
     override fun runtimePlatform(runtimePlatform: RuntimePlatformProperty) {
-      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatformProperty::unwrap))
+      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatformProperty.Companion::unwrap))
     }
 
     /**
      * The operating system that your tasks definitions run on.
      *
      * A platform family is specified only for tasks using the Fargate launch type.
-     *
-     * When you specify a task definition in a service, this value must match the `runtimePlatform`
-     * value of the service.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-runtimeplatform)
      * @param runtimePlatform The operating system that your tasks definitions run on. 
@@ -1742,7 +1724,7 @@ public open class CfnTaskDefinition(
      * organize them. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1804,7 +1786,7 @@ public open class CfnTaskDefinition(
      * @param volumes The list of data volume definitions for the task. 
      */
     override fun volumes(volumes: IResolvable) {
-      cdkBuilder.volumes(volumes.let(IResolvable::unwrap))
+      cdkBuilder.volumes(volumes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4988,7 +4970,7 @@ public open class CfnTaskDefinition(
        * on the on the GitHub website.
        */
       override fun dependsOn(dependsOn: IResolvable) {
-        cdkBuilder.dependsOn(dependsOn.let(IResolvable::unwrap))
+        cdkBuilder.dependsOn(dependsOn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5086,7 +5068,7 @@ public open class CfnTaskDefinition(
        * This parameter is not supported for Windows containers.
        */
       override fun disableNetworking(disableNetworking: IResolvable) {
-        cdkBuilder.disableNetworking(disableNetworking.let(IResolvable::unwrap))
+        cdkBuilder.disableNetworking(disableNetworking.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5168,7 +5150,7 @@ public open class CfnTaskDefinition(
        * '{{.Server.APIVersion}}'`
        */
       override fun dockerLabels(dockerLabels: IResolvable) {
-        cdkBuilder.dockerLabels(dockerLabels.let(IResolvable::unwrap))
+        cdkBuilder.dockerLabels(dockerLabels.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5334,7 +5316,7 @@ public open class CfnTaskDefinition(
        * such as credential data.
        */
       override fun environment(environment: IResolvable) {
-        cdkBuilder.environment(environment.let(IResolvable::unwrap))
+        cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5393,7 +5375,7 @@ public open class CfnTaskDefinition(
        * in the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun environmentFiles(environmentFiles: IResolvable) {
-        cdkBuilder.environmentFiles(environmentFiles.let(IResolvable::unwrap))
+        cdkBuilder.environmentFiles(environmentFiles.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5480,7 +5462,7 @@ public open class CfnTaskDefinition(
        * in the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun essential(essential: IResolvable) {
-        cdkBuilder.essential(essential.let(IResolvable::unwrap))
+        cdkBuilder.essential(essential.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5499,7 +5481,7 @@ public open class CfnTaskDefinition(
        * network mode.
        */
       override fun extraHosts(extraHosts: IResolvable) {
-        cdkBuilder.extraHosts(extraHosts.let(IResolvable::unwrap))
+        cdkBuilder.extraHosts(extraHosts.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5546,7 +5528,7 @@ public open class CfnTaskDefinition(
        * the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun firelensConfiguration(firelensConfiguration: IResolvable) {
-        cdkBuilder.firelensConfiguration(firelensConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.firelensConfiguration(firelensConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5557,7 +5539,7 @@ public open class CfnTaskDefinition(
        * the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun firelensConfiguration(firelensConfiguration: FirelensConfigurationProperty) {
-        cdkBuilder.firelensConfiguration(firelensConfiguration.let(FirelensConfigurationProperty::unwrap))
+        cdkBuilder.firelensConfiguration(firelensConfiguration.let(FirelensConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -5585,7 +5567,7 @@ public open class CfnTaskDefinition(
        * .
        */
       override fun healthCheck(healthCheck: IResolvable) {
-        cdkBuilder.healthCheck(healthCheck.let(IResolvable::unwrap))
+        cdkBuilder.healthCheck(healthCheck.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5600,7 +5582,7 @@ public open class CfnTaskDefinition(
        * .
        */
       override fun healthCheck(healthCheck: HealthCheckProperty) {
-        cdkBuilder.healthCheck(healthCheck.let(HealthCheckProperty::unwrap))
+        cdkBuilder.healthCheck(healthCheck.let(HealthCheckProperty.Companion::unwrap))
       }
 
       /**
@@ -5696,7 +5678,7 @@ public open class CfnTaskDefinition(
        * .
        */
       override fun interactive(interactive: IResolvable) {
-        cdkBuilder.interactive(interactive.let(IResolvable::unwrap))
+        cdkBuilder.interactive(interactive.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5758,7 +5740,7 @@ public open class CfnTaskDefinition(
        * This parameter is not supported for Windows containers.
        */
       override fun linuxParameters(linuxParameters: IResolvable) {
-        cdkBuilder.linuxParameters(linuxParameters.let(IResolvable::unwrap))
+        cdkBuilder.linuxParameters(linuxParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5770,7 +5752,7 @@ public open class CfnTaskDefinition(
        * This parameter is not supported for Windows containers.
        */
       override fun linuxParameters(linuxParameters: LinuxParametersProperty) {
-        cdkBuilder.linuxParameters(linuxParameters.let(LinuxParametersProperty::unwrap))
+        cdkBuilder.linuxParameters(linuxParameters.let(LinuxParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -5825,7 +5807,7 @@ public open class CfnTaskDefinition(
        * in the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun logConfiguration(logConfiguration: IResolvable) {
-        cdkBuilder.logConfiguration(logConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.logConfiguration(logConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5867,7 +5849,7 @@ public open class CfnTaskDefinition(
        * in the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun logConfiguration(logConfiguration: LogConfigurationProperty) {
-        cdkBuilder.logConfiguration(logConfiguration.let(LogConfigurationProperty::unwrap))
+        cdkBuilder.logConfiguration(logConfiguration.let(LogConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -5995,7 +5977,7 @@ public open class CfnTaskDefinition(
        * across drives.
        */
       override fun mountPoints(mountPoints: IResolvable) {
-        cdkBuilder.mountPoints(mountPoints.let(IResolvable::unwrap))
+        cdkBuilder.mountPoints(mountPoints.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6081,7 +6063,7 @@ public open class CfnTaskDefinition(
        * responses.
        */
       override fun portMappings(portMappings: IResolvable) {
-        cdkBuilder.portMappings(portMappings.let(IResolvable::unwrap))
+        cdkBuilder.portMappings(portMappings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6186,7 +6168,7 @@ public open class CfnTaskDefinition(
        * This parameter is not supported for Windows containers or tasks run on AWS Fargate .
        */
       override fun privileged(privileged: IResolvable) {
-        cdkBuilder.privileged(privileged.let(IResolvable::unwrap))
+        cdkBuilder.privileged(privileged.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6214,7 +6196,7 @@ public open class CfnTaskDefinition(
        * .
        */
       override fun pseudoTerminal(pseudoTerminal: IResolvable) {
-        cdkBuilder.pseudoTerminal(pseudoTerminal.let(IResolvable::unwrap))
+        cdkBuilder.pseudoTerminal(pseudoTerminal.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6250,21 +6232,21 @@ public open class CfnTaskDefinition(
        * This parameter is not supported for Windows containers.
        */
       override fun readonlyRootFilesystem(readonlyRootFilesystem: IResolvable) {
-        cdkBuilder.readonlyRootFilesystem(readonlyRootFilesystem.let(IResolvable::unwrap))
+        cdkBuilder.readonlyRootFilesystem(readonlyRootFilesystem.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param repositoryCredentials The private repository authentication credentials to use.
        */
       override fun repositoryCredentials(repositoryCredentials: IResolvable) {
-        cdkBuilder.repositoryCredentials(repositoryCredentials.let(IResolvable::unwrap))
+        cdkBuilder.repositoryCredentials(repositoryCredentials.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param repositoryCredentials The private repository authentication credentials to use.
        */
       override fun repositoryCredentials(repositoryCredentials: RepositoryCredentialsProperty) {
-        cdkBuilder.repositoryCredentials(repositoryCredentials.let(RepositoryCredentialsProperty::unwrap))
+        cdkBuilder.repositoryCredentials(repositoryCredentials.let(RepositoryCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -6281,7 +6263,7 @@ public open class CfnTaskDefinition(
        * The only supported resource is a GPU.
        */
       override fun resourceRequirements(resourceRequirements: IResolvable) {
-        cdkBuilder.resourceRequirements(resourceRequirements.let(IResolvable::unwrap))
+        cdkBuilder.resourceRequirements(resourceRequirements.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6306,7 +6288,7 @@ public open class CfnTaskDefinition(
        * in the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun secrets(secrets: IResolvable) {
-        cdkBuilder.secrets(secrets.let(IResolvable::unwrap))
+        cdkBuilder.secrets(secrets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6414,7 +6396,7 @@ public open class CfnTaskDefinition(
        * lived connections.
        */
       override fun systemControls(systemControls: IResolvable) {
-        cdkBuilder.systemControls(systemControls.let(IResolvable::unwrap))
+        cdkBuilder.systemControls(systemControls.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6465,7 +6447,7 @@ public open class CfnTaskDefinition(
        * This parameter is not supported for Windows containers.
        */
       override fun ulimits(ulimits: IResolvable) {
-        cdkBuilder.ulimits(ulimits.let(IResolvable::unwrap))
+        cdkBuilder.ulimits(ulimits.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6553,7 +6535,7 @@ public open class CfnTaskDefinition(
        * .
        */
       override fun volumesFrom(volumesFrom: IResolvable) {
-        cdkBuilder.volumesFrom(volumesFrom.let(IResolvable::unwrap))
+        cdkBuilder.volumesFrom(volumesFrom.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8143,7 +8125,7 @@ public open class CfnTaskDefinition(
        * This field is only used if the `scope` is `shared` .
        */
       override fun autoprovision(autoprovision: IResolvable) {
-        cdkBuilder.autoprovision(autoprovision.let(IResolvable::unwrap))
+        cdkBuilder.autoprovision(autoprovision.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8177,7 +8159,7 @@ public open class CfnTaskDefinition(
        * .
        */
       override fun driverOpts(driverOpts: IResolvable) {
-        cdkBuilder.driverOpts(driverOpts.let(IResolvable::unwrap))
+        cdkBuilder.driverOpts(driverOpts.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8205,7 +8187,7 @@ public open class CfnTaskDefinition(
        * .
        */
       override fun labels(labels: IResolvable) {
-        cdkBuilder.labels(labels.let(IResolvable::unwrap))
+        cdkBuilder.labels(labels.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8499,7 +8481,7 @@ public open class CfnTaskDefinition(
        * system.
        */
       override fun authorizationConfig(authorizationConfig: IResolvable) {
-        cdkBuilder.authorizationConfig(authorizationConfig.let(IResolvable::unwrap))
+        cdkBuilder.authorizationConfig(authorizationConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8507,7 +8489,7 @@ public open class CfnTaskDefinition(
        * system.
        */
       override fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty) {
-        cdkBuilder.authorizationConfig(authorizationConfig.let(AuthorizationConfigProperty::unwrap))
+        cdkBuilder.authorizationConfig(authorizationConfig.let(AuthorizationConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -9097,7 +9079,7 @@ public open class CfnTaskDefinition(
        * Windows File Server file system.
        */
       override fun authorizationConfig(authorizationConfig: IResolvable) {
-        cdkBuilder.authorizationConfig(authorizationConfig.let(IResolvable::unwrap))
+        cdkBuilder.authorizationConfig(authorizationConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9105,7 +9087,7 @@ public open class CfnTaskDefinition(
        * Windows File Server file system.
        */
       override fun authorizationConfig(authorizationConfig: FSxAuthorizationConfigProperty) {
-        cdkBuilder.authorizationConfig(authorizationConfig.let(FSxAuthorizationConfigProperty::unwrap))
+        cdkBuilder.authorizationConfig(authorizationConfig.let(FSxAuthorizationConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -9290,7 +9272,7 @@ public open class CfnTaskDefinition(
        * * `config-file-value` , which is either an S3 ARN or a file path
        */
       override fun options(options: IResolvable) {
-        cdkBuilder.options(options.let(IResolvable::unwrap))
+        cdkBuilder.options(options.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10952,7 +10934,7 @@ public open class CfnTaskDefinition(
        * versions but the `add` parameter is only supported if using platform version 1.4.0 or later.
        */
       override fun capabilities(capabilities: IResolvable) {
-        cdkBuilder.capabilities(capabilities.let(IResolvable::unwrap))
+        cdkBuilder.capabilities(capabilities.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10963,7 +10945,7 @@ public open class CfnTaskDefinition(
        * versions but the `add` parameter is only supported if using platform version 1.4.0 or later.
        */
       override fun capabilities(capabilities: KernelCapabilitiesProperty) {
-        cdkBuilder.capabilities(capabilities.let(KernelCapabilitiesProperty::unwrap))
+        cdkBuilder.capabilities(capabilities.let(KernelCapabilitiesProperty.Companion::unwrap))
       }
 
       /**
@@ -10993,7 +10975,7 @@ public open class CfnTaskDefinition(
        * supported.
        */
       override fun devices(devices: IResolvable) {
-        cdkBuilder.devices(devices.let(IResolvable::unwrap))
+        cdkBuilder.devices(devices.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11055,7 +11037,7 @@ public open class CfnTaskDefinition(
        * '{{.Server.APIVersion}}'`
        */
       override fun initProcessEnabled(initProcessEnabled: IResolvable) {
-        cdkBuilder.initProcessEnabled(initProcessEnabled.let(IResolvable::unwrap))
+        cdkBuilder.initProcessEnabled(initProcessEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11124,7 +11106,7 @@ public open class CfnTaskDefinition(
        * supported.
        */
       override fun tmpfs(tmpfs: IResolvable) {
-        cdkBuilder.tmpfs(tmpfs.let(IResolvable::unwrap))
+        cdkBuilder.tmpfs(tmpfs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11499,7 +11481,7 @@ public open class CfnTaskDefinition(
        * '{{.Server.APIVersion}}'`
        */
       override fun options(options: IResolvable) {
-        cdkBuilder.options(options.let(IResolvable::unwrap))
+        cdkBuilder.options(options.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11520,7 +11502,7 @@ public open class CfnTaskDefinition(
        * in the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun secretOptions(secretOptions: IResolvable) {
-        cdkBuilder.secretOptions(secretOptions.let(IResolvable::unwrap))
+        cdkBuilder.secretOptions(secretOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11726,7 +11708,7 @@ public open class CfnTaskDefinition(
        * `false` .
        */
       override fun readOnly(readOnly: IResolvable) {
-        cdkBuilder.readOnly(readOnly.let(IResolvable::unwrap))
+        cdkBuilder.readOnly(readOnly.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12631,7 +12613,7 @@ public open class CfnTaskDefinition(
        * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
        */
       override fun proxyConfigurationProperties(proxyConfigurationProperties: IResolvable) {
-        cdkBuilder.proxyConfigurationProperties(proxyConfigurationProperties.let(IResolvable::unwrap))
+        cdkBuilder.proxyConfigurationProperties(proxyConfigurationProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14043,7 +14025,7 @@ public open class CfnTaskDefinition(
        * `false` .
        */
       override fun readOnly(readOnly: IResolvable) {
-        cdkBuilder.readOnly(readOnly.let(IResolvable::unwrap))
+        cdkBuilder.readOnly(readOnly.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14431,7 +14413,7 @@ public open class CfnTaskDefinition(
        * or `StartTask` APIs.
        */
       override fun configuredAtLaunch(configuredAtLaunch: IResolvable) {
-        cdkBuilder.configuredAtLaunch(configuredAtLaunch.let(IResolvable::unwrap))
+        cdkBuilder.configuredAtLaunch(configuredAtLaunch.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14443,7 +14425,7 @@ public open class CfnTaskDefinition(
        * Docker volumes aren't supported by tasks run on AWS Fargate .
        */
       override fun dockerVolumeConfiguration(dockerVolumeConfiguration: IResolvable) {
-        cdkBuilder.dockerVolumeConfiguration(dockerVolumeConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.dockerVolumeConfiguration(dockerVolumeConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14456,7 +14438,7 @@ public open class CfnTaskDefinition(
        */
       override
           fun dockerVolumeConfiguration(dockerVolumeConfiguration: DockerVolumeConfigurationProperty) {
-        cdkBuilder.dockerVolumeConfiguration(dockerVolumeConfiguration.let(DockerVolumeConfigurationProperty::unwrap))
+        cdkBuilder.dockerVolumeConfiguration(dockerVolumeConfiguration.let(DockerVolumeConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -14479,7 +14461,7 @@ public open class CfnTaskDefinition(
        * File System file system for task storage.
        */
       override fun efsVolumeConfiguration(efsVolumeConfiguration: IResolvable) {
-        cdkBuilder.efsVolumeConfiguration(efsVolumeConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.efsVolumeConfiguration(efsVolumeConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14487,7 +14469,7 @@ public open class CfnTaskDefinition(
        * File System file system for task storage.
        */
       override fun efsVolumeConfiguration(efsVolumeConfiguration: EFSVolumeConfigurationProperty) {
-        cdkBuilder.efsVolumeConfiguration(efsVolumeConfiguration.let(EFSVolumeConfigurationProperty::unwrap))
+        cdkBuilder.efsVolumeConfiguration(efsVolumeConfiguration.let(EFSVolumeConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -14506,7 +14488,7 @@ public open class CfnTaskDefinition(
        */
       override
           fun fSxWindowsFileServerVolumeConfiguration(fSxWindowsFileServerVolumeConfiguration: IResolvable) {
-        cdkBuilder.fSxWindowsFileServerVolumeConfiguration(fSxWindowsFileServerVolumeConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.fSxWindowsFileServerVolumeConfiguration(fSxWindowsFileServerVolumeConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14515,7 +14497,7 @@ public open class CfnTaskDefinition(
        */
       override
           fun fSxWindowsFileServerVolumeConfiguration(fSxWindowsFileServerVolumeConfiguration: FSxWindowsFileServerVolumeConfigurationProperty) {
-        cdkBuilder.fSxWindowsFileServerVolumeConfiguration(fSxWindowsFileServerVolumeConfiguration.let(FSxWindowsFileServerVolumeConfigurationProperty::unwrap))
+        cdkBuilder.fSxWindowsFileServerVolumeConfiguration(fSxWindowsFileServerVolumeConfiguration.let(FSxWindowsFileServerVolumeConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -14542,7 +14524,7 @@ public open class CfnTaskDefinition(
        * `D:\my\path:C:\my\path` or `D:\:C:\my\path` .
        */
       override fun host(host: IResolvable) {
-        cdkBuilder.host(host.let(IResolvable::unwrap))
+        cdkBuilder.host(host.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14558,7 +14540,7 @@ public open class CfnTaskDefinition(
        * `D:\my\path:C:\my\path` or `D:\:C:\my\path` .
        */
       override fun host(host: HostVolumePropertiesProperty) {
-        cdkBuilder.host(host.let(HostVolumePropertiesProperty::unwrap))
+        cdkBuilder.host(host.let(HostVolumePropertiesProperty.Companion::unwrap))
       }
 
       /**

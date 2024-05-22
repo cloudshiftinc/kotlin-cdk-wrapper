@@ -125,7 +125,7 @@ public interface CfnWorkerConfigurationProps {
      * @param tags A collection of tags associated with a resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

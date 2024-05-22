@@ -44,7 +44,7 @@ public abstract class FunctionBase(
    * @param source 
    */
   public override fun addEventSource(source: IEventSource) {
-    unwrap(this).addEventSource(source.let(IEventSource::unwrap))
+    unwrap(this).addEventSource(source.let(IEventSource.Companion::unwrap))
   }
 
   /**
@@ -55,7 +55,7 @@ public abstract class FunctionBase(
    */
   public override fun addEventSourceMapping(id: String, options: EventSourceMappingOptions):
       EventSourceMapping = unwrap(this).addEventSourceMapping(id,
-      options.let(EventSourceMappingOptions::unwrap)).let(EventSourceMapping::wrap)
+      options.let(EventSourceMappingOptions.Companion::unwrap)).let(EventSourceMapping::wrap)
 
   /**
    * Adds an event source that maps to this AWS Lambda function.
@@ -83,7 +83,7 @@ public abstract class FunctionBase(
    * @param options
    */
   public override fun addFunctionUrl(options: FunctionUrlOptions): FunctionUrl =
-      unwrap(this).addFunctionUrl(options.let(FunctionUrlOptions::unwrap)).let(FunctionUrl::wrap)
+      unwrap(this).addFunctionUrl(options.let(FunctionUrlOptions.Companion::unwrap)).let(FunctionUrl::wrap)
 
   /**
    * Adds a url to this lambda function.
@@ -103,7 +103,7 @@ public abstract class FunctionBase(
    * @param permission The permission to grant to this Lambda function. 
    */
   public override fun addPermission(id: String, permission: Permission) {
-    unwrap(this).addPermission(id, permission.let(Permission::unwrap))
+    unwrap(this).addPermission(id, permission.let(Permission.Companion::unwrap))
   }
 
   /**
@@ -124,7 +124,7 @@ public abstract class FunctionBase(
    * @param statement 
    */
   public override fun addToRolePolicy(statement: PolicyStatement) {
-    unwrap(this).addToRolePolicy(statement.let(PolicyStatement::unwrap))
+    unwrap(this).addToRolePolicy(statement.let(PolicyStatement.Companion::unwrap))
   }
 
   /**
@@ -149,7 +149,7 @@ public abstract class FunctionBase(
    * @param options 
    */
   public override fun configureAsyncInvoke(options: EventInvokeConfigOptions) {
-    unwrap(this).configureAsyncInvoke(options.let(EventInvokeConfigOptions::unwrap))
+    unwrap(this).configureAsyncInvoke(options.let(EventInvokeConfigOptions.Companion::unwrap))
   }
 
   /**
@@ -183,7 +183,8 @@ public abstract class FunctionBase(
    * @param action 
    */
   public open fun considerWarningOnInvokeFunctionPermissions(scope: Construct, action: String) {
-    unwrap(this).considerWarningOnInvokeFunctionPermissions(scope.let(Construct::unwrap), action)
+    unwrap(this).considerWarningOnInvokeFunctionPermissions(scope.let(Construct.Companion::unwrap),
+        action)
   }
 
   /**
@@ -202,7 +203,7 @@ public abstract class FunctionBase(
    * @param grantee 
    */
   public override fun grantInvoke(grantee: IGrantable): Grant =
-      unwrap(this).grantInvoke(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantInvoke(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant multiple principals the ability to invoke this Lambda via CompositePrincipal.
@@ -211,7 +212,7 @@ public abstract class FunctionBase(
    */
   public override fun grantInvokeCompositePrincipal(compositePrincipal: CompositePrincipal):
       List<Grant> =
-      unwrap(this).grantInvokeCompositePrincipal(compositePrincipal.let(CompositePrincipal::unwrap)).map(Grant::wrap)
+      unwrap(this).grantInvokeCompositePrincipal(compositePrincipal.let(CompositePrincipal.Companion::unwrap)).map(Grant::wrap)
 
   /**
    * Grant the given identity permissions to invoke this Lambda Function URL.
@@ -219,7 +220,7 @@ public abstract class FunctionBase(
    * @param grantee 
    */
   public override fun grantInvokeUrl(grantee: IGrantable): Grant =
-      unwrap(this).grantInvokeUrl(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantInvokeUrl(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The principal this Lambda Function is running as.
@@ -263,7 +264,7 @@ public abstract class FunctionBase(
    * @param props
    */
   public override fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Return the given named metric for this Function.
@@ -293,7 +294,7 @@ public abstract class FunctionBase(
    * @param props
    */
   public override fun metricDuration(props: MetricOptions): Metric =
-      unwrap(this).metricDuration(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricDuration(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * How long execution of this Lambda takes.
@@ -324,7 +325,7 @@ public abstract class FunctionBase(
    * @param props
    */
   public override fun metricErrors(props: MetricOptions): Metric =
-      unwrap(this).metricErrors(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricErrors(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * How many invocations of this Lambda fail.
@@ -356,7 +357,7 @@ public abstract class FunctionBase(
    * @param props
    */
   public override fun metricInvocations(props: MetricOptions): Metric =
-      unwrap(this).metricInvocations(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricInvocations(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * How often this Lambda is invoked.
@@ -387,7 +388,7 @@ public abstract class FunctionBase(
    * @param props
    */
   public override fun metricThrottles(props: MetricOptions): Metric =
-      unwrap(this).metricThrottles(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricThrottles(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * How often this Lambda is throttled.

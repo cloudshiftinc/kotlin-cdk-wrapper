@@ -254,7 +254,7 @@ public interface CfnWirelessDeviceProps {
      * Must be at least one of OtaaV10x, OtaaV11, AbpV11, or AbpV10x.
      */
     override fun loRaWan(loRaWan: IResolvable) {
-      cdkBuilder.loRaWan(loRaWan.let(IResolvable::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -262,7 +262,7 @@ public interface CfnWirelessDeviceProps {
      * Must be at least one of OtaaV10x, OtaaV11, AbpV11, or AbpV10x.
      */
     override fun loRaWan(loRaWan: CfnWirelessDevice.LoRaWANDeviceProperty) {
-      cdkBuilder.loRaWan(loRaWan.let(CfnWirelessDevice.LoRaWANDeviceProperty::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(CfnWirelessDevice.LoRaWANDeviceProperty.Companion::unwrap))
     }
 
     /**
@@ -294,7 +294,7 @@ public interface CfnWirelessDeviceProps {
      * Tags can have a minimum of 0 and a maximum of 50 items.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

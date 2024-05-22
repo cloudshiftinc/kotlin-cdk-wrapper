@@ -304,7 +304,7 @@ public interface CfnMonitoringScheduleProps {
      * there was one.
      */
     override fun lastMonitoringExecutionSummary(lastMonitoringExecutionSummary: IResolvable) {
-      cdkBuilder.lastMonitoringExecutionSummary(lastMonitoringExecutionSummary.let(IResolvable::unwrap))
+      cdkBuilder.lastMonitoringExecutionSummary(lastMonitoringExecutionSummary.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -313,7 +313,7 @@ public interface CfnMonitoringScheduleProps {
      */
     override
         fun lastMonitoringExecutionSummary(lastMonitoringExecutionSummary: CfnMonitoringSchedule.MonitoringExecutionSummaryProperty) {
-      cdkBuilder.lastMonitoringExecutionSummary(lastMonitoringExecutionSummary.let(CfnMonitoringSchedule.MonitoringExecutionSummaryProperty::unwrap))
+      cdkBuilder.lastMonitoringExecutionSummary(lastMonitoringExecutionSummary.let(CfnMonitoringSchedule.MonitoringExecutionSummaryProperty.Companion::unwrap))
     }
 
     /**
@@ -332,7 +332,7 @@ public interface CfnMonitoringScheduleProps {
      * schedule and defines the monitoring job. 
      */
     override fun monitoringScheduleConfig(monitoringScheduleConfig: IResolvable) {
-      cdkBuilder.monitoringScheduleConfig(monitoringScheduleConfig.let(IResolvable::unwrap))
+      cdkBuilder.monitoringScheduleConfig(monitoringScheduleConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -341,7 +341,7 @@ public interface CfnMonitoringScheduleProps {
      */
     override
         fun monitoringScheduleConfig(monitoringScheduleConfig: CfnMonitoringSchedule.MonitoringScheduleConfigProperty) {
-      cdkBuilder.monitoringScheduleConfig(monitoringScheduleConfig.let(CfnMonitoringSchedule.MonitoringScheduleConfigProperty::unwrap))
+      cdkBuilder.monitoringScheduleConfig(monitoringScheduleConfig.let(CfnMonitoringSchedule.MonitoringScheduleConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -376,7 +376,7 @@ public interface CfnMonitoringScheduleProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

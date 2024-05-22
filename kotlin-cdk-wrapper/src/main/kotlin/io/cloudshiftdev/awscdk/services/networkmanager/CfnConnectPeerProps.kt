@@ -163,14 +163,14 @@ public interface CfnConnectPeerProps {
      * @param bgpOptions Describes the BGP options.
      */
     override fun bgpOptions(bgpOptions: IResolvable) {
-      cdkBuilder.bgpOptions(bgpOptions.let(IResolvable::unwrap))
+      cdkBuilder.bgpOptions(bgpOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param bgpOptions Describes the BGP options.
      */
     override fun bgpOptions(bgpOptions: CfnConnectPeer.BgpOptionsProperty) {
-      cdkBuilder.bgpOptions(bgpOptions.let(CfnConnectPeer.BgpOptionsProperty::unwrap))
+      cdkBuilder.bgpOptions(bgpOptions.let(CfnConnectPeer.BgpOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -226,7 +226,7 @@ public interface CfnConnectPeerProps {
      * @param tags The list of key-value tags associated with the Connect peer.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

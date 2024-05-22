@@ -90,8 +90,8 @@ public open class CfnBridge(
     id: String,
     props: CfnBridgeProps,
   ) :
-      this(software.amazon.awscdk.services.mediaconnect.CfnBridge(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnBridgeProps::unwrap))
+      this(software.amazon.awscdk.services.mediaconnect.CfnBridge(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnBridgeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -122,14 +122,14 @@ public open class CfnBridge(
    * Create a bridge with the egress bridge type.
    */
   public open fun egressGatewayBridge(`value`: IResolvable) {
-    unwrap(this).setEgressGatewayBridge(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEgressGatewayBridge(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Create a bridge with the egress bridge type.
    */
   public open fun egressGatewayBridge(`value`: EgressGatewayBridgeProperty) {
-    unwrap(this).setEgressGatewayBridge(`value`.let(EgressGatewayBridgeProperty::unwrap))
+    unwrap(this).setEgressGatewayBridge(`value`.let(EgressGatewayBridgeProperty.Companion::unwrap))
   }
 
   /**
@@ -149,14 +149,14 @@ public open class CfnBridge(
    * Create a bridge with the ingress bridge type.
    */
   public open fun ingressGatewayBridge(`value`: IResolvable) {
-    unwrap(this).setIngressGatewayBridge(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIngressGatewayBridge(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Create a bridge with the ingress bridge type.
    */
   public open fun ingressGatewayBridge(`value`: IngressGatewayBridgeProperty) {
-    unwrap(this).setIngressGatewayBridge(`value`.let(IngressGatewayBridgeProperty::unwrap))
+    unwrap(this).setIngressGatewayBridge(`value`.let(IngressGatewayBridgeProperty.Companion::unwrap))
   }
 
   /**
@@ -173,7 +173,7 @@ public open class CfnBridge(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -197,7 +197,7 @@ public open class CfnBridge(
    * The outputs that you want to add to this bridge.
    */
   public open fun outputs(`value`: IResolvable) {
-    unwrap(this).setOutputs(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOutputs(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -233,14 +233,14 @@ public open class CfnBridge(
    * The settings for source failover.
    */
   public open fun sourceFailoverConfig(`value`: IResolvable) {
-    unwrap(this).setSourceFailoverConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSourceFailoverConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The settings for source failover.
    */
   public open fun sourceFailoverConfig(`value`: FailoverConfigProperty) {
-    unwrap(this).setSourceFailoverConfig(`value`.let(FailoverConfigProperty::unwrap))
+    unwrap(this).setSourceFailoverConfig(`value`.let(FailoverConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -260,7 +260,7 @@ public open class CfnBridge(
    * The sources that you want to add to this bridge.
    */
   public open fun sources(`value`: IResolvable) {
-    unwrap(this).setSources(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSources(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -462,7 +462,7 @@ public open class CfnBridge(
      * @param egressGatewayBridge Create a bridge with the egress bridge type. 
      */
     override fun egressGatewayBridge(egressGatewayBridge: IResolvable) {
-      cdkBuilder.egressGatewayBridge(egressGatewayBridge.let(IResolvable::unwrap))
+      cdkBuilder.egressGatewayBridge(egressGatewayBridge.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -475,7 +475,7 @@ public open class CfnBridge(
      * @param egressGatewayBridge Create a bridge with the egress bridge type. 
      */
     override fun egressGatewayBridge(egressGatewayBridge: EgressGatewayBridgeProperty) {
-      cdkBuilder.egressGatewayBridge(egressGatewayBridge.let(EgressGatewayBridgeProperty::unwrap))
+      cdkBuilder.egressGatewayBridge(egressGatewayBridge.let(EgressGatewayBridgeProperty.Companion::unwrap))
     }
 
     /**
@@ -503,7 +503,7 @@ public open class CfnBridge(
      * @param ingressGatewayBridge Create a bridge with the ingress bridge type. 
      */
     override fun ingressGatewayBridge(ingressGatewayBridge: IResolvable) {
-      cdkBuilder.ingressGatewayBridge(ingressGatewayBridge.let(IResolvable::unwrap))
+      cdkBuilder.ingressGatewayBridge(ingressGatewayBridge.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -516,7 +516,7 @@ public open class CfnBridge(
      * @param ingressGatewayBridge Create a bridge with the ingress bridge type. 
      */
     override fun ingressGatewayBridge(ingressGatewayBridge: IngressGatewayBridgeProperty) {
-      cdkBuilder.ingressGatewayBridge(ingressGatewayBridge.let(IngressGatewayBridgeProperty::unwrap))
+      cdkBuilder.ingressGatewayBridge(ingressGatewayBridge.let(IngressGatewayBridgeProperty.Companion::unwrap))
     }
 
     /**
@@ -553,7 +553,7 @@ public open class CfnBridge(
      * @param outputs The outputs that you want to add to this bridge. 
      */
     override fun outputs(outputs: IResolvable) {
-      cdkBuilder.outputs(outputs.let(IResolvable::unwrap))
+      cdkBuilder.outputs(outputs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -591,7 +591,7 @@ public open class CfnBridge(
      * @param sourceFailoverConfig The settings for source failover. 
      */
     override fun sourceFailoverConfig(sourceFailoverConfig: IResolvable) {
-      cdkBuilder.sourceFailoverConfig(sourceFailoverConfig.let(IResolvable::unwrap))
+      cdkBuilder.sourceFailoverConfig(sourceFailoverConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -601,7 +601,7 @@ public open class CfnBridge(
      * @param sourceFailoverConfig The settings for source failover. 
      */
     override fun sourceFailoverConfig(sourceFailoverConfig: FailoverConfigProperty) {
-      cdkBuilder.sourceFailoverConfig(sourceFailoverConfig.let(FailoverConfigProperty::unwrap))
+      cdkBuilder.sourceFailoverConfig(sourceFailoverConfig.let(FailoverConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -623,7 +623,7 @@ public open class CfnBridge(
      * @param sources The sources that you want to add to this bridge. 
      */
     override fun sources(sources: IResolvable) {
-      cdkBuilder.sources(sources.let(IResolvable::unwrap))
+      cdkBuilder.sources(sources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -767,7 +767,7 @@ public open class CfnBridge(
        * source.
        */
       override fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: IResolvable) {
-        cdkBuilder.flowVpcInterfaceAttachment(flowVpcInterfaceAttachment.let(IResolvable::unwrap))
+        cdkBuilder.flowVpcInterfaceAttachment(flowVpcInterfaceAttachment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -776,7 +776,7 @@ public open class CfnBridge(
        */
       override
           fun flowVpcInterfaceAttachment(flowVpcInterfaceAttachment: VpcInterfaceAttachmentProperty) {
-        cdkBuilder.flowVpcInterfaceAttachment(flowVpcInterfaceAttachment.let(VpcInterfaceAttachmentProperty::unwrap))
+        cdkBuilder.flowVpcInterfaceAttachment(flowVpcInterfaceAttachment.let(VpcInterfaceAttachmentProperty.Companion::unwrap))
       }
 
       /**
@@ -1331,7 +1331,7 @@ public open class CfnBridge(
        * A network output is delivered to your premises.
        */
       override fun networkOutput(networkOutput: IResolvable) {
-        cdkBuilder.networkOutput(networkOutput.let(IResolvable::unwrap))
+        cdkBuilder.networkOutput(networkOutput.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1339,7 +1339,7 @@ public open class CfnBridge(
        * A network output is delivered to your premises.
        */
       override fun networkOutput(networkOutput: BridgeNetworkOutputProperty) {
-        cdkBuilder.networkOutput(networkOutput.let(BridgeNetworkOutputProperty::unwrap))
+        cdkBuilder.networkOutput(networkOutput.let(BridgeNetworkOutputProperty.Companion::unwrap))
       }
 
       /**
@@ -1492,7 +1492,7 @@ public open class CfnBridge(
        * A flow source originates in MediaConnect as an existing cloud flow.
        */
       override fun flowSource(flowSource: IResolvable) {
-        cdkBuilder.flowSource(flowSource.let(IResolvable::unwrap))
+        cdkBuilder.flowSource(flowSource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1500,7 +1500,7 @@ public open class CfnBridge(
        * A flow source originates in MediaConnect as an existing cloud flow.
        */
       override fun flowSource(flowSource: BridgeFlowSourceProperty) {
-        cdkBuilder.flowSource(flowSource.let(BridgeFlowSourceProperty::unwrap))
+        cdkBuilder.flowSource(flowSource.let(BridgeFlowSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -1517,7 +1517,7 @@ public open class CfnBridge(
        * A network source originates at your premises.
        */
       override fun networkSource(networkSource: IResolvable) {
-        cdkBuilder.networkSource(networkSource.let(IResolvable::unwrap))
+        cdkBuilder.networkSource(networkSource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1525,7 +1525,7 @@ public open class CfnBridge(
        * A network source originates at your premises.
        */
       override fun networkSource(networkSource: BridgeNetworkSourceProperty) {
-        cdkBuilder.networkSource(networkSource.let(BridgeNetworkSourceProperty::unwrap))
+        cdkBuilder.networkSource(networkSource.let(BridgeNetworkSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -1782,7 +1782,7 @@ public open class CfnBridge(
        * setting only applies when Failover Mode is set to FAILOVER.
        */
       override fun sourcePriority(sourcePriority: IResolvable) {
-        cdkBuilder.sourcePriority(sourcePriority.let(IResolvable::unwrap))
+        cdkBuilder.sourcePriority(sourcePriority.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1791,7 +1791,7 @@ public open class CfnBridge(
        * setting only applies when Failover Mode is set to FAILOVER.
        */
       override fun sourcePriority(sourcePriority: SourcePriorityProperty) {
-        cdkBuilder.sourcePriority(sourcePriority.let(SourcePriorityProperty::unwrap))
+        cdkBuilder.sourcePriority(sourcePriority.let(SourcePriorityProperty.Companion::unwrap))
       }
 
       /**

@@ -50,8 +50,8 @@ public open class SqsSendMessage(
     id: String,
     props: SqsSendMessageProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.SqsSendMessage(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SqsSendMessageProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.SqsSendMessage(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SqsSendMessageProps.Companion::unwrap))
   )
 
   public constructor(
@@ -314,7 +314,7 @@ public open class SqsSendMessage(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -345,7 +345,7 @@ public open class SqsSendMessage(
      * @param delay The length of time, for which to delay a message. 
      */
     override fun delay(delay: Duration) {
-      cdkBuilder.delay(delay.let(Duration::unwrap))
+      cdkBuilder.delay(delay.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -358,7 +358,7 @@ public open class SqsSendMessage(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -372,7 +372,7 @@ public open class SqsSendMessage(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -407,7 +407,7 @@ public open class SqsSendMessage(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -416,7 +416,7 @@ public open class SqsSendMessage(
      * @param messageBody The text message to send to the queue. 
      */
     override fun messageBody(messageBody: TaskInput) {
-      cdkBuilder.messageBody(messageBody.let(TaskInput::unwrap))
+      cdkBuilder.messageBody(messageBody.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -470,7 +470,7 @@ public open class SqsSendMessage(
      * @param queue The SQS queue that messages will be sent to. 
      */
     override fun queue(queue: IQueue) {
-      cdkBuilder.queue(queue.let(IQueue::unwrap))
+      cdkBuilder.queue(queue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -526,7 +526,7 @@ public open class SqsSendMessage(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -539,7 +539,7 @@ public open class SqsSendMessage(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.SqsSendMessage =

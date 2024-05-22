@@ -384,7 +384,7 @@ public interface CfnTaskSetProps {
      * Balancer.
      */
     override fun loadBalancers(loadBalancers: IResolvable) {
-      cdkBuilder.loadBalancers(loadBalancers.let(IResolvable::unwrap))
+      cdkBuilder.loadBalancers(loadBalancers.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -410,7 +410,7 @@ public interface CfnTaskSetProps {
      * @param networkConfiguration The network configuration for the task set.
      */
     override fun networkConfiguration(networkConfiguration: IResolvable) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -418,7 +418,7 @@ public interface CfnTaskSetProps {
      */
     override
         fun networkConfiguration(networkConfiguration: CfnTaskSet.NetworkConfigurationProperty) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(CfnTaskSet.NetworkConfigurationProperty::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(CfnTaskSet.NetworkConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -444,7 +444,7 @@ public interface CfnTaskSetProps {
      * running in the task set.
      */
     override fun scale(scale: IResolvable) {
-      cdkBuilder.scale(scale.let(IResolvable::unwrap))
+      cdkBuilder.scale(scale.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -452,7 +452,7 @@ public interface CfnTaskSetProps {
      * running in the task set.
      */
     override fun scale(scale: CfnTaskSet.ScaleProperty) {
-      cdkBuilder.scale(scale.let(CfnTaskSet.ScaleProperty::unwrap))
+      cdkBuilder.scale(scale.let(CfnTaskSet.ScaleProperty.Companion::unwrap))
     }
 
     /**
@@ -479,7 +479,7 @@ public interface CfnTaskSetProps {
      * discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html) .
      */
     override fun serviceRegistries(serviceRegistries: IResolvable) {
-      cdkBuilder.serviceRegistries(serviceRegistries.let(IResolvable::unwrap))
+      cdkBuilder.serviceRegistries(serviceRegistries.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -517,7 +517,7 @@ public interface CfnTaskSetProps {
      * numbers, and spaces representable in UTF-8, and the following characters: + - = . _ : /
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

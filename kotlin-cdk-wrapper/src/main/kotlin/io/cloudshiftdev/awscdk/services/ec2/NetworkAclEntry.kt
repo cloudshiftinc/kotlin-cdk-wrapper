@@ -42,8 +42,8 @@ public open class NetworkAclEntry(
     id: String,
     props: NetworkAclEntryProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.NetworkAclEntry(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(NetworkAclEntryProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.NetworkAclEntry(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(NetworkAclEntryProps.Companion::unwrap))
   )
 
   public constructor(
@@ -144,7 +144,7 @@ public open class NetworkAclEntry(
      * @param cidr The CIDR range to allow or deny. 
      */
     override fun cidr(cidr: AclCidr) {
-      cdkBuilder.cidr(cidr.let(AclCidr::unwrap))
+      cdkBuilder.cidr(cidr.let(AclCidr.Companion::unwrap))
     }
 
     /**
@@ -155,7 +155,7 @@ public open class NetworkAclEntry(
      * @param direction Traffic direction, with respect to the subnet, this rule applies to. 
      */
     override fun direction(direction: TrafficDirection) {
-      cdkBuilder.direction(direction.let(TrafficDirection::unwrap))
+      cdkBuilder.direction(direction.let(TrafficDirection.Companion::unwrap))
     }
 
     /**
@@ -164,7 +164,7 @@ public open class NetworkAclEntry(
      * @param networkAcl The network ACL this entry applies to. 
      */
     override fun networkAcl(networkAcl: INetworkAcl) {
-      cdkBuilder.networkAcl(networkAcl.let(INetworkAcl::unwrap))
+      cdkBuilder.networkAcl(networkAcl.let(INetworkAcl.Companion::unwrap))
     }
 
     /**
@@ -193,7 +193,7 @@ public open class NetworkAclEntry(
      * "allow" or "deny". 
      */
     override fun ruleAction(ruleAction: Action) {
-      cdkBuilder.ruleAction(ruleAction.let(Action::unwrap))
+      cdkBuilder.ruleAction(ruleAction.let(Action.Companion::unwrap))
     }
 
     /**
@@ -215,7 +215,7 @@ public open class NetworkAclEntry(
      * @param traffic What kind of traffic this ACL rule applies to. 
      */
     override fun traffic(traffic: AclTraffic) {
-      cdkBuilder.traffic(traffic.let(AclTraffic::unwrap))
+      cdkBuilder.traffic(traffic.let(AclTraffic.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.NetworkAclEntry = cdkBuilder.build()

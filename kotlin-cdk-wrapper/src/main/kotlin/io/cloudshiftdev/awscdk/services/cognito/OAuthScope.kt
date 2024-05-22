@@ -74,8 +74,8 @@ public open class OAuthScope(
 
     public fun resourceServer(server: IUserPoolResourceServer, scope: ResourceServerScope):
         OAuthScope =
-        software.amazon.awscdk.services.cognito.OAuthScope.resourceServer(server.let(IUserPoolResourceServer::unwrap),
-        scope.let(ResourceServerScope::unwrap)).let(OAuthScope::wrap)
+        software.amazon.awscdk.services.cognito.OAuthScope.resourceServer(server.let(IUserPoolResourceServer.Companion::unwrap),
+        scope.let(ResourceServerScope.Companion::unwrap)).let(OAuthScope::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c2241fe1fc36b62c6e9f4841e3de3020478022df0a2d31740f2035d92b882fd4")

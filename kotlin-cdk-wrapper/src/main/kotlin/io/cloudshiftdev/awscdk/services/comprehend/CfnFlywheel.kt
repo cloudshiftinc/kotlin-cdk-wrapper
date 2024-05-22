@@ -93,8 +93,8 @@ public open class CfnFlywheel(
     id: String,
     props: CfnFlywheelProps,
   ) :
-      this(software.amazon.awscdk.services.comprehend.CfnFlywheel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFlywheelProps::unwrap))
+      this(software.amazon.awscdk.services.comprehend.CfnFlywheel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFlywheelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -156,14 +156,14 @@ public open class CfnFlywheel(
    * Data security configuration.
    */
   public open fun dataSecurityConfig(`value`: IResolvable) {
-    unwrap(this).setDataSecurityConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataSecurityConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Data security configuration.
    */
   public open fun dataSecurityConfig(`value`: DataSecurityConfigProperty) {
-    unwrap(this).setDataSecurityConfig(`value`.let(DataSecurityConfigProperty::unwrap))
+    unwrap(this).setDataSecurityConfig(`value`.let(DataSecurityConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -192,7 +192,7 @@ public open class CfnFlywheel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -222,7 +222,7 @@ public open class CfnFlywheel(
    * Tags associated with the endpoint being created.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -239,14 +239,14 @@ public open class CfnFlywheel(
    * Configuration about the model associated with a flywheel.
    */
   public open fun taskConfig(`value`: IResolvable) {
-    unwrap(this).setTaskConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTaskConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configuration about the model associated with a flywheel.
    */
   public open fun taskConfig(`value`: TaskConfigProperty) {
-    unwrap(this).setTaskConfig(`value`.let(TaskConfigProperty::unwrap))
+    unwrap(this).setTaskConfig(`value`.let(TaskConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -425,7 +425,7 @@ public open class CfnFlywheel(
      * @param dataSecurityConfig Data security configuration. 
      */
     override fun dataSecurityConfig(dataSecurityConfig: IResolvable) {
-      cdkBuilder.dataSecurityConfig(dataSecurityConfig.let(IResolvable::unwrap))
+      cdkBuilder.dataSecurityConfig(dataSecurityConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -435,7 +435,7 @@ public open class CfnFlywheel(
      * @param dataSecurityConfig Data security configuration. 
      */
     override fun dataSecurityConfig(dataSecurityConfig: DataSecurityConfigProperty) {
-      cdkBuilder.dataSecurityConfig(dataSecurityConfig.let(DataSecurityConfigProperty::unwrap))
+      cdkBuilder.dataSecurityConfig(dataSecurityConfig.let(DataSecurityConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -480,7 +480,7 @@ public open class CfnFlywheel(
      * @param tags Tags associated with the endpoint being created. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -501,7 +501,7 @@ public open class CfnFlywheel(
      * @param taskConfig Configuration about the model associated with a flywheel. 
      */
     override fun taskConfig(taskConfig: IResolvable) {
-      cdkBuilder.taskConfig(taskConfig.let(IResolvable::unwrap))
+      cdkBuilder.taskConfig(taskConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -511,7 +511,7 @@ public open class CfnFlywheel(
      * @param taskConfig Configuration about the model associated with a flywheel. 
      */
     override fun taskConfig(taskConfig: TaskConfigProperty) {
-      cdkBuilder.taskConfig(taskConfig.let(TaskConfigProperty::unwrap))
+      cdkBuilder.taskConfig(taskConfig.let(TaskConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -707,7 +707,7 @@ public open class CfnFlywheel(
        * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
        */
       override fun vpcConfig(vpcConfig: IResolvable) {
-        cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+        cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -717,7 +717,7 @@ public open class CfnFlywheel(
        * VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html) .
        */
       override fun vpcConfig(vpcConfig: VpcConfigProperty) {
-        cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
+        cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -978,7 +978,7 @@ public open class CfnFlywheel(
        * @param entityTypes Up to 25 entity types that the model is trained to recognize.
        */
       override fun entityTypes(entityTypes: IResolvable) {
-        cdkBuilder.entityTypes(entityTypes.let(IResolvable::unwrap))
+        cdkBuilder.entityTypes(entityTypes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1238,7 +1238,7 @@ public open class CfnFlywheel(
        * model.
        */
       override fun documentClassificationConfig(documentClassificationConfig: IResolvable) {
-        cdkBuilder.documentClassificationConfig(documentClassificationConfig.let(IResolvable::unwrap))
+        cdkBuilder.documentClassificationConfig(documentClassificationConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1247,7 +1247,7 @@ public open class CfnFlywheel(
        */
       override
           fun documentClassificationConfig(documentClassificationConfig: DocumentClassificationConfigProperty) {
-        cdkBuilder.documentClassificationConfig(documentClassificationConfig.let(DocumentClassificationConfigProperty::unwrap))
+        cdkBuilder.documentClassificationConfig(documentClassificationConfig.let(DocumentClassificationConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1265,7 +1265,7 @@ public open class CfnFlywheel(
        * @param entityRecognitionConfig Configuration required for an entity recognition model.
        */
       override fun entityRecognitionConfig(entityRecognitionConfig: IResolvable) {
-        cdkBuilder.entityRecognitionConfig(entityRecognitionConfig.let(IResolvable::unwrap))
+        cdkBuilder.entityRecognitionConfig(entityRecognitionConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1273,7 +1273,7 @@ public open class CfnFlywheel(
        */
       override
           fun entityRecognitionConfig(entityRecognitionConfig: EntityRecognitionConfigProperty) {
-        cdkBuilder.entityRecognitionConfig(entityRecognitionConfig.let(EntityRecognitionConfigProperty::unwrap))
+        cdkBuilder.entityRecognitionConfig(entityRecognitionConfig.let(EntityRecognitionConfigProperty.Companion::unwrap))
       }
 
       /**

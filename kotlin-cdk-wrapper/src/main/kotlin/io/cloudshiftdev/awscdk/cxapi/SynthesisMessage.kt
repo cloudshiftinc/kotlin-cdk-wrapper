@@ -81,7 +81,7 @@ public interface SynthesisMessage {
      * @param entry the value to be set. 
      */
     override fun entry(entry: MetadataEntry) {
-      cdkBuilder.entry(entry.let(MetadataEntry::unwrap))
+      cdkBuilder.entry(entry.let(MetadataEntry.Companion::unwrap))
     }
 
     /**
@@ -102,7 +102,7 @@ public interface SynthesisMessage {
      * @param level the value to be set. 
      */
     override fun level(level: SynthesisMessageLevel) {
-      cdkBuilder.level(level.let(SynthesisMessageLevel::unwrap))
+      cdkBuilder.level(level.let(SynthesisMessageLevel.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.cxapi.SynthesisMessage = cdkBuilder.build()

@@ -93,7 +93,7 @@ public interface CfnSizeConstraintSetProps {
      * @param sizeConstraints The size constraint and the part of the web request to check. 
      */
     override fun sizeConstraints(sizeConstraints: IResolvable) {
-      cdkBuilder.sizeConstraints(sizeConstraints.let(IResolvable::unwrap))
+      cdkBuilder.sizeConstraints(sizeConstraints.let(IResolvable.Companion::unwrap))
     }
 
     /**

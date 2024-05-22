@@ -394,7 +394,7 @@ public interface CfnExperimentProps {
      * You can use up to three metrics in an experiment.
      */
     override fun metricGoals(metricGoals: IResolvable) {
-      cdkBuilder.metricGoals(metricGoals.let(IResolvable::unwrap))
+      cdkBuilder.metricGoals(metricGoals.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -427,7 +427,7 @@ public interface CfnExperimentProps {
      * specifies how much experiment traffic is allocated to each variation.
      */
     override fun onlineAbConfig(onlineAbConfig: IResolvable) {
-      cdkBuilder.onlineAbConfig(onlineAbConfig.let(IResolvable::unwrap))
+      cdkBuilder.onlineAbConfig(onlineAbConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -437,7 +437,7 @@ public interface CfnExperimentProps {
      * specifies how much experiment traffic is allocated to each variation.
      */
     override fun onlineAbConfig(onlineAbConfig: CfnExperiment.OnlineAbConfigObjectProperty) {
-      cdkBuilder.onlineAbConfig(onlineAbConfig.let(CfnExperiment.OnlineAbConfigObjectProperty::unwrap))
+      cdkBuilder.onlineAbConfig(onlineAbConfig.let(CfnExperiment.OnlineAbConfigObjectProperty.Companion::unwrap))
     }
 
     /**
@@ -484,21 +484,21 @@ public interface CfnExperimentProps {
      * You can't use this parameter if the experiment is currently running.
      */
     override fun removeSegment(removeSegment: IResolvable) {
-      cdkBuilder.removeSegment(removeSegment.let(IResolvable::unwrap))
+      cdkBuilder.removeSegment(removeSegment.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param runningStatus A structure that you can use to start and stop the experiment.
      */
     override fun runningStatus(runningStatus: IResolvable) {
-      cdkBuilder.runningStatus(runningStatus.let(IResolvable::unwrap))
+      cdkBuilder.runningStatus(runningStatus.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param runningStatus A structure that you can use to start and stop the experiment.
      */
     override fun runningStatus(runningStatus: CfnExperiment.RunningStatusObjectProperty) {
-      cdkBuilder.runningStatus(runningStatus.let(CfnExperiment.RunningStatusObjectProperty::unwrap))
+      cdkBuilder.runningStatus(runningStatus.let(CfnExperiment.RunningStatusObjectProperty.Companion::unwrap))
     }
 
     /**
@@ -551,7 +551,7 @@ public interface CfnExperimentProps {
      * resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -575,7 +575,7 @@ public interface CfnExperimentProps {
      * variation used in the experiment. 
      */
     override fun treatments(treatments: IResolvable) {
-      cdkBuilder.treatments(treatments.let(IResolvable::unwrap))
+      cdkBuilder.treatments(treatments.let(IResolvable.Companion::unwrap))
     }
 
     /**

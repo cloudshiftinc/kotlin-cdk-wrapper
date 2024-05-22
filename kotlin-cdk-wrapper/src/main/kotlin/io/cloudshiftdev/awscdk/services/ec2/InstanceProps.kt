@@ -105,6 +105,18 @@ public interface InstanceProps {
   public fun detailedMonitoring(): Boolean? = unwrap(this).getDetailedMonitoring()
 
   /**
+   * Indicates whether the instance is optimized for Amazon EBS I/O.
+   *
+   * This optimization provides dedicated throughput to Amazon EBS and an optimized configuration
+   * stack to provide optimal Amazon EBS I/O performance.
+   * This optimization isn't available with all instance types.
+   * Additional usage charges apply when using an EBS-optimized instance.
+   *
+   * Default: false
+   */
+  public fun ebsOptimized(): Boolean? = unwrap(this).getEbsOptimized()
+
+  /**
    * Apply the given CloudFormation Init configuration to the instance at startup.
    *
    * Default: - no CloudFormation init
@@ -351,6 +363,15 @@ public interface InstanceProps {
     public fun detailedMonitoring(detailedMonitoring: Boolean)
 
     /**
+     * @param ebsOptimized Indicates whether the instance is optimized for Amazon EBS I/O.
+     * This optimization provides dedicated throughput to Amazon EBS and an optimized configuration
+     * stack to provide optimal Amazon EBS I/O performance.
+     * This optimization isn't available with all instance types.
+     * Additional usage charges apply when using an EBS-optimized instance.
+     */
+    public fun ebsOptimized(ebsOptimized: Boolean)
+
+    /**
      * @param init Apply the given CloudFormation Init configuration to the instance at startup.
      */
     public fun `init`(`init`: CloudFormationInit)
@@ -542,7 +563,7 @@ public interface InstanceProps {
      * instance store volumes to attach to an instance when it is launched.
      */
     override fun blockDevices(blockDevices: List<BlockDevice>) {
-      cdkBuilder.blockDevices(blockDevices.map(BlockDevice::unwrap))
+      cdkBuilder.blockDevices(blockDevices.map(BlockDevice.Companion::unwrap))
     }
 
     /**
@@ -562,7 +583,7 @@ public interface InstanceProps {
      * The unlimited CPU credit option is not supported for T3 instances with a dedicated host.
      */
     override fun creditSpecification(creditSpecification: CpuCredits) {
-      cdkBuilder.creditSpecification(creditSpecification.let(CpuCredits::unwrap))
+      cdkBuilder.creditSpecification(creditSpecification.let(CpuCredits.Companion::unwrap))
     }
 
     /**
@@ -574,10 +595,21 @@ public interface InstanceProps {
     }
 
     /**
+     * @param ebsOptimized Indicates whether the instance is optimized for Amazon EBS I/O.
+     * This optimization provides dedicated throughput to Amazon EBS and an optimized configuration
+     * stack to provide optimal Amazon EBS I/O performance.
+     * This optimization isn't available with all instance types.
+     * Additional usage charges apply when using an EBS-optimized instance.
+     */
+    override fun ebsOptimized(ebsOptimized: Boolean) {
+      cdkBuilder.ebsOptimized(ebsOptimized)
+    }
+
+    /**
      * @param init Apply the given CloudFormation Init configuration to the instance at startup.
      */
     override fun `init`(`init`: CloudFormationInit) {
-      cdkBuilder.`init`(`init`.let(CloudFormationInit::unwrap))
+      cdkBuilder.`init`(`init`.let(CloudFormationInit.Companion::unwrap))
     }
 
     /**
@@ -585,7 +617,7 @@ public interface InstanceProps {
      * Describes the configsets to use and the timeout to wait
      */
     override fun initOptions(initOptions: ApplyCloudFormationInitOptions) {
-      cdkBuilder.initOptions(initOptions.let(ApplyCloudFormationInitOptions::unwrap))
+      cdkBuilder.initOptions(initOptions.let(ApplyCloudFormationInitOptions.Companion::unwrap))
     }
 
     /**
@@ -608,7 +640,7 @@ public interface InstanceProps {
      * @param instanceType Type of instance to launch. 
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -625,14 +657,14 @@ public interface InstanceProps {
      * @param keyPair The SSH keypair to grant access to the instance.
      */
     override fun keyPair(keyPair: IKeyPair) {
-      cdkBuilder.keyPair(keyPair.let(IKeyPair::unwrap))
+      cdkBuilder.keyPair(keyPair.let(IKeyPair.Companion::unwrap))
     }
 
     /**
      * @param machineImage AMI to launch. 
      */
     override fun machineImage(machineImage: IMachineImage) {
-      cdkBuilder.machineImage(machineImage.let(IMachineImage::unwrap))
+      cdkBuilder.machineImage(machineImage.let(IMachineImage.Companion::unwrap))
     }
 
     /**
@@ -662,7 +694,7 @@ public interface InstanceProps {
      * The maximum value is 43200 (12 hours).
      */
     override fun resourceSignalTimeout(resourceSignalTimeout: Duration) {
-      cdkBuilder.resourceSignalTimeout(resourceSignalTimeout.let(Duration::unwrap))
+      cdkBuilder.resourceSignalTimeout(resourceSignalTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -671,14 +703,14 @@ public interface InstanceProps {
      * The role must be assumable by the service principal `ec2.amazonaws.com`:
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param securityGroup Security Group to assign to this instance.
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -714,7 +746,7 @@ public interface InstanceProps {
      * The UserData may still be mutated after creation.
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     /**
@@ -740,14 +772,14 @@ public interface InstanceProps {
      * @param vpc VPC to launch the instance in. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
      * @param vpcSubnets Where to place the instance within the VPC.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -832,6 +864,18 @@ public interface InstanceProps {
      * [Documentation](http://aws.amazon.com/cloudwatch/pricing/)
      */
     override fun detailedMonitoring(): Boolean? = unwrap(this).getDetailedMonitoring()
+
+    /**
+     * Indicates whether the instance is optimized for Amazon EBS I/O.
+     *
+     * This optimization provides dedicated throughput to Amazon EBS and an optimized configuration
+     * stack to provide optimal Amazon EBS I/O performance.
+     * This optimization isn't available with all instance types.
+     * Additional usage charges apply when using an EBS-optimized instance.
+     *
+     * Default: false
+     */
+    override fun ebsOptimized(): Boolean? = unwrap(this).getEbsOptimized()
 
     /**
      * Apply the given CloudFormation Init configuration to the instance at startup.

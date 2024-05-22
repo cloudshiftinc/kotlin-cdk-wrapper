@@ -203,7 +203,7 @@ public interface PublicHostedZoneProps : CommonHostedZoneProps {
     @Deprecated(message = "deprecated in CDK")
     override
         fun crossAccountZoneDelegationPrincipal(crossAccountZoneDelegationPrincipal: IPrincipal) {
-      cdkBuilder.crossAccountZoneDelegationPrincipal(crossAccountZoneDelegationPrincipal.let(IPrincipal::unwrap))
+      cdkBuilder.crossAccountZoneDelegationPrincipal(crossAccountZoneDelegationPrincipal.let(IPrincipal.Companion::unwrap))
     }
 
     /**

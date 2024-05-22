@@ -40,15 +40,17 @@ public open class CfnRule(
   cdkObject: software.amazon.awscdk.CfnRule,
 ) : CfnRefElement(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.CfnRule(scope.let(CloudshiftdevConstructsConstruct::unwrap), id)
+      this(software.amazon.awscdk.CfnRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id)
   )
 
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
     props: CfnRuleProps,
-  ) : this(software.amazon.awscdk.CfnRule(scope.let(CloudshiftdevConstructsConstruct::unwrap), id,
-      props.let(CfnRuleProps::unwrap))
+  ) :
+      this(software.amazon.awscdk.CfnRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -65,7 +67,7 @@ public open class CfnRule(
    * @param description The description of the assertion. 
    */
   public open fun addAssertion(condition: ICfnConditionExpression, description: String) {
-    unwrap(this).addAssertion(condition.let(ICfnConditionExpression::unwrap), description)
+    unwrap(this).addAssertion(condition.let(ICfnConditionExpression.Companion::unwrap), description)
   }
 
   /**
@@ -119,7 +121,7 @@ public open class CfnRule(
      * @param assertions Assertions which define the rule. 
      */
     override fun assertions(assertions: List<CfnRuleAssertion>) {
-      cdkBuilder.assertions(assertions.map(CfnRuleAssertion::unwrap))
+      cdkBuilder.assertions(assertions.map(CfnRuleAssertion.Companion::unwrap))
     }
 
     /**
@@ -143,7 +145,7 @@ public open class CfnRule(
      * @param ruleCondition If the rule condition evaluates to false, the rule doesn't take effect. 
      */
     override fun ruleCondition(ruleCondition: ICfnConditionExpression) {
-      cdkBuilder.ruleCondition(ruleCondition.let(ICfnConditionExpression::unwrap))
+      cdkBuilder.ruleCondition(ruleCondition.let(ICfnConditionExpression.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.CfnRule = cdkBuilder.build()

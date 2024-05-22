@@ -54,7 +54,7 @@ public interface IResolvable {
      * @param context 
      */
     override fun resolve(context: IResolveContext): Any =
-        unwrap(this).resolve(context.let(IResolveContext::unwrap))
+        unwrap(this).resolve(context.let(IResolveContext.Companion::unwrap))
 
     /**
      * Return a string representation of this resolvable object.

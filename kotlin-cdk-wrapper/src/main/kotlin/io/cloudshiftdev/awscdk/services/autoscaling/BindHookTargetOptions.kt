@@ -74,7 +74,7 @@ public interface BindHookTargetOptions {
      * [disable-awslint:ref-via-interface]
      */
     override fun lifecycleHook(lifecycleHook: LifecycleHook) {
-      cdkBuilder.lifecycleHook(lifecycleHook.let(LifecycleHook::unwrap))
+      cdkBuilder.lifecycleHook(lifecycleHook.let(LifecycleHook.Companion::unwrap))
     }
 
     /**
@@ -82,7 +82,7 @@ public interface BindHookTargetOptions {
      * [disable-awslint:ref-via-interface]
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.autoscaling.BindHookTargetOptions =

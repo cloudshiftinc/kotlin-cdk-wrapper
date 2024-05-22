@@ -264,7 +264,7 @@ public interface HealthCheck {
      * Must be 5 to 300 seconds
      */
     override fun interval(interval: Duration) {
-      cdkBuilder.interval(interval.let(Duration::unwrap))
+      cdkBuilder.interval(interval.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -290,7 +290,7 @@ public interface HealthCheck {
      * The TLS, UDP, and TCP_UDP protocols are not supported for health checks.
      */
     override fun protocol(protocol: Protocol) {
-      cdkBuilder.protocol(protocol.let(Protocol::unwrap))
+      cdkBuilder.protocol(protocol.let(Protocol.Companion::unwrap))
     }
 
     /**
@@ -299,7 +299,7 @@ public interface HealthCheck {
      * Must be 2 to 120 seconds.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**

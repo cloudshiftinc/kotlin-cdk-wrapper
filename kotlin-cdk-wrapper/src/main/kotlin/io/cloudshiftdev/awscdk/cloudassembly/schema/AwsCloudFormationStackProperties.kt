@@ -289,7 +289,7 @@ public interface AwsCloudFormationStackProperties {
      * @param lookupRole The role to use to look up values from the target AWS account.
      */
     override fun lookupRole(lookupRole: BootstrapRole) {
-      cdkBuilder.lookupRole(lookupRole.let(BootstrapRole::unwrap))
+      cdkBuilder.lookupRole(lookupRole.let(BootstrapRole.Companion::unwrap))
     }
 
     /**

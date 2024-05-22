@@ -54,6 +54,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .answerMachineDetectionConfig(AnswerMachineDetectionConfigProperty.builder()
  * .enableAnswerMachineDetection(false)
+ * // the properties below are optional
+ * .awaitAnswerMachinePrompt(false)
  * .build())
  * .connectQueueArn("connectQueueArn")
  * .connectSourcePhoneNumber("connectSourcePhoneNumber")
@@ -76,8 +78,8 @@ public open class CfnCampaign(
     id: String,
     props: CfnCampaignProps,
   ) :
-      this(software.amazon.awscdk.services.connectcampaigns.CfnCampaign(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCampaignProps::unwrap))
+      this(software.amazon.awscdk.services.connectcampaigns.CfnCampaign(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCampaignProps.Companion::unwrap))
   )
 
   public constructor(
@@ -113,14 +115,14 @@ public open class CfnCampaign(
    * Contains information about the dialer configuration.
    */
   public open fun dialerConfig(`value`: IResolvable) {
-    unwrap(this).setDialerConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDialerConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Contains information about the dialer configuration.
    */
   public open fun dialerConfig(`value`: DialerConfigProperty) {
-    unwrap(this).setDialerConfig(`value`.let(DialerConfigProperty::unwrap))
+    unwrap(this).setDialerConfig(`value`.let(DialerConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -137,7 +139,7 @@ public open class CfnCampaign(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -161,14 +163,14 @@ public open class CfnCampaign(
    * Contains information about the outbound call configuration.
    */
   public open fun outboundCallConfig(`value`: IResolvable) {
-    unwrap(this).setOutboundCallConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOutboundCallConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Contains information about the outbound call configuration.
    */
   public open fun outboundCallConfig(`value`: OutboundCallConfigProperty) {
-    unwrap(this).setOutboundCallConfig(`value`.let(OutboundCallConfigProperty::unwrap))
+    unwrap(this).setOutboundCallConfig(`value`.let(OutboundCallConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -194,7 +196,7 @@ public open class CfnCampaign(
    * The tags used to organize, track, or control access for this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -320,7 +322,7 @@ public open class CfnCampaign(
      * @param dialerConfig Contains information about the dialer configuration. 
      */
     override fun dialerConfig(dialerConfig: IResolvable) {
-      cdkBuilder.dialerConfig(dialerConfig.let(IResolvable::unwrap))
+      cdkBuilder.dialerConfig(dialerConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -330,7 +332,7 @@ public open class CfnCampaign(
      * @param dialerConfig Contains information about the dialer configuration. 
      */
     override fun dialerConfig(dialerConfig: DialerConfigProperty) {
-      cdkBuilder.dialerConfig(dialerConfig.let(DialerConfigProperty::unwrap))
+      cdkBuilder.dialerConfig(dialerConfig.let(DialerConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -361,7 +363,7 @@ public open class CfnCampaign(
      * @param outboundCallConfig Contains information about the outbound call configuration. 
      */
     override fun outboundCallConfig(outboundCallConfig: IResolvable) {
-      cdkBuilder.outboundCallConfig(outboundCallConfig.let(IResolvable::unwrap))
+      cdkBuilder.outboundCallConfig(outboundCallConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -371,7 +373,7 @@ public open class CfnCampaign(
      * @param outboundCallConfig Contains information about the outbound call configuration. 
      */
     override fun outboundCallConfig(outboundCallConfig: OutboundCallConfigProperty) {
-      cdkBuilder.outboundCallConfig(outboundCallConfig.let(OutboundCallConfigProperty::unwrap))
+      cdkBuilder.outboundCallConfig(outboundCallConfig.let(OutboundCallConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -395,7 +397,7 @@ public open class CfnCampaign(
      * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -530,12 +532,21 @@ public open class CfnCampaign(
    * AnswerMachineDetectionConfigProperty answerMachineDetectionConfigProperty =
    * AnswerMachineDetectionConfigProperty.builder()
    * .enableAnswerMachineDetection(false)
+   * // the properties below are optional
+   * .awaitAnswerMachinePrompt(false)
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-answermachinedetectionconfig.html)
    */
   public interface AnswerMachineDetectionConfigProperty {
+    /**
+     * Whether waiting for answer machine prompt is enabled.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-answermachinedetectionconfig.html#cfn-connectcampaigns-campaign-answermachinedetectionconfig-awaitanswermachineprompt)
+     */
+    public fun awaitAnswerMachinePrompt(): Any? = unwrap(this).getAwaitAnswerMachinePrompt()
+
     /**
      * Whether answering machine detection is enabled.
      *
@@ -548,6 +559,16 @@ public open class CfnCampaign(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param awaitAnswerMachinePrompt Whether waiting for answer machine prompt is enabled.
+       */
+      public fun awaitAnswerMachinePrompt(awaitAnswerMachinePrompt: Boolean)
+
+      /**
+       * @param awaitAnswerMachinePrompt Whether waiting for answer machine prompt is enabled.
+       */
+      public fun awaitAnswerMachinePrompt(awaitAnswerMachinePrompt: IResolvable)
+
       /**
        * @param enableAnswerMachineDetection Whether answering machine detection is enabled. 
        */
@@ -566,6 +587,20 @@ public open class CfnCampaign(
           software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AnswerMachineDetectionConfigProperty.builder()
 
       /**
+       * @param awaitAnswerMachinePrompt Whether waiting for answer machine prompt is enabled.
+       */
+      override fun awaitAnswerMachinePrompt(awaitAnswerMachinePrompt: Boolean) {
+        cdkBuilder.awaitAnswerMachinePrompt(awaitAnswerMachinePrompt)
+      }
+
+      /**
+       * @param awaitAnswerMachinePrompt Whether waiting for answer machine prompt is enabled.
+       */
+      override fun awaitAnswerMachinePrompt(awaitAnswerMachinePrompt: IResolvable) {
+        cdkBuilder.awaitAnswerMachinePrompt(awaitAnswerMachinePrompt.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
        * @param enableAnswerMachineDetection Whether answering machine detection is enabled. 
        */
       override fun enableAnswerMachineDetection(enableAnswerMachineDetection: Boolean) {
@@ -576,7 +611,7 @@ public open class CfnCampaign(
        * @param enableAnswerMachineDetection Whether answering machine detection is enabled. 
        */
       override fun enableAnswerMachineDetection(enableAnswerMachineDetection: IResolvable) {
-        cdkBuilder.enableAnswerMachineDetection(enableAnswerMachineDetection.let(IResolvable::unwrap))
+        cdkBuilder.enableAnswerMachineDetection(enableAnswerMachineDetection.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -587,6 +622,13 @@ public open class CfnCampaign(
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.connectcampaigns.CfnCampaign.AnswerMachineDetectionConfigProperty,
     ) : CdkObject(cdkObject), AnswerMachineDetectionConfigProperty {
+      /**
+       * Whether waiting for answer machine prompt is enabled.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connectcampaigns-campaign-answermachinedetectionconfig.html#cfn-connectcampaigns-campaign-answermachinedetectionconfig-awaitanswermachineprompt)
+       */
+      override fun awaitAnswerMachinePrompt(): Any? = unwrap(this).getAwaitAnswerMachinePrompt()
+
       /**
        * Whether answering machine detection is enabled.
        *
@@ -735,14 +777,14 @@ public open class CfnCampaign(
        * @param agentlessDialerConfig The configuration of the agentless dialer.
        */
       override fun agentlessDialerConfig(agentlessDialerConfig: IResolvable) {
-        cdkBuilder.agentlessDialerConfig(agentlessDialerConfig.let(IResolvable::unwrap))
+        cdkBuilder.agentlessDialerConfig(agentlessDialerConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param agentlessDialerConfig The configuration of the agentless dialer.
        */
       override fun agentlessDialerConfig(agentlessDialerConfig: AgentlessDialerConfigProperty) {
-        cdkBuilder.agentlessDialerConfig(agentlessDialerConfig.let(AgentlessDialerConfigProperty::unwrap))
+        cdkBuilder.agentlessDialerConfig(agentlessDialerConfig.let(AgentlessDialerConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -758,14 +800,14 @@ public open class CfnCampaign(
        * @param predictiveDialerConfig The configuration of the predictive dialer.
        */
       override fun predictiveDialerConfig(predictiveDialerConfig: IResolvable) {
-        cdkBuilder.predictiveDialerConfig(predictiveDialerConfig.let(IResolvable::unwrap))
+        cdkBuilder.predictiveDialerConfig(predictiveDialerConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param predictiveDialerConfig The configuration of the predictive dialer.
        */
       override fun predictiveDialerConfig(predictiveDialerConfig: PredictiveDialerConfigProperty) {
-        cdkBuilder.predictiveDialerConfig(predictiveDialerConfig.let(PredictiveDialerConfigProperty::unwrap))
+        cdkBuilder.predictiveDialerConfig(predictiveDialerConfig.let(PredictiveDialerConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -781,7 +823,7 @@ public open class CfnCampaign(
        * @param progressiveDialerConfig The configuration of the progressive dialer.
        */
       override fun progressiveDialerConfig(progressiveDialerConfig: IResolvable) {
-        cdkBuilder.progressiveDialerConfig(progressiveDialerConfig.let(IResolvable::unwrap))
+        cdkBuilder.progressiveDialerConfig(progressiveDialerConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -789,7 +831,7 @@ public open class CfnCampaign(
        */
       override
           fun progressiveDialerConfig(progressiveDialerConfig: ProgressiveDialerConfigProperty) {
-        cdkBuilder.progressiveDialerConfig(progressiveDialerConfig.let(ProgressiveDialerConfigProperty::unwrap))
+        cdkBuilder.progressiveDialerConfig(progressiveDialerConfig.let(ProgressiveDialerConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -863,6 +905,8 @@ public open class CfnCampaign(
    * // the properties below are optional
    * .answerMachineDetectionConfig(AnswerMachineDetectionConfigProperty.builder()
    * .enableAnswerMachineDetection(false)
+   * // the properties below are optional
+   * .awaitAnswerMachinePrompt(false)
    * .build())
    * .connectQueueArn("connectQueueArn")
    * .connectSourcePhoneNumber("connectSourcePhoneNumber")
@@ -953,7 +997,7 @@ public open class CfnCampaign(
        * @param answerMachineDetectionConfig Whether answering machine detection has been enabled.
        */
       override fun answerMachineDetectionConfig(answerMachineDetectionConfig: IResolvable) {
-        cdkBuilder.answerMachineDetectionConfig(answerMachineDetectionConfig.let(IResolvable::unwrap))
+        cdkBuilder.answerMachineDetectionConfig(answerMachineDetectionConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -961,7 +1005,7 @@ public open class CfnCampaign(
        */
       override
           fun answerMachineDetectionConfig(answerMachineDetectionConfig: AnswerMachineDetectionConfigProperty) {
-        cdkBuilder.answerMachineDetectionConfig(answerMachineDetectionConfig.let(AnswerMachineDetectionConfigProperty::unwrap))
+        cdkBuilder.answerMachineDetectionConfig(answerMachineDetectionConfig.let(AnswerMachineDetectionConfigProperty.Companion::unwrap))
       }
 
       /**

@@ -57,7 +57,7 @@ public open class CfnLogGroup(
   cdkObject: software.amazon.awscdk.services.logs.CfnLogGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.logs.CfnLogGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.logs.CfnLogGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -66,8 +66,8 @@ public open class CfnLogGroup(
     id: String,
     props: CfnLogGroupProps,
   ) :
-      this(software.amazon.awscdk.services.logs.CfnLogGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLogGroupProps::unwrap))
+      this(software.amazon.awscdk.services.logs.CfnLogGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLogGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -101,7 +101,7 @@ public open class CfnLogGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -171,7 +171,7 @@ public open class CfnLogGroup(
    * An array of key-value pairs to apply to the log group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -407,7 +407,7 @@ public open class CfnLogGroup(
      * @param tags An array of key-value pairs to apply to the log group. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

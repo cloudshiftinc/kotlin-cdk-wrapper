@@ -128,7 +128,7 @@ public interface CfnDBSecurityGroupProps {
      * @param dbSecurityGroupIngress Ingress rules to be applied to the DB security group. 
      */
     override fun dbSecurityGroupIngress(dbSecurityGroupIngress: IResolvable) {
-      cdkBuilder.dbSecurityGroupIngress(dbSecurityGroupIngress.let(IResolvable::unwrap))
+      cdkBuilder.dbSecurityGroupIngress(dbSecurityGroupIngress.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -166,7 +166,7 @@ public interface CfnDBSecurityGroupProps {
      * @param tags An optional array of key-value pairs to apply to this DB security group.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -141,7 +141,7 @@ public interface MethodProps {
      * @param integration The backend system that the method calls when it receives a request.
      */
     override fun integration(integration: Integration) {
-      cdkBuilder.integration(integration.let(Integration::unwrap))
+      cdkBuilder.integration(integration.let(Integration.Companion::unwrap))
     }
 
     /**
@@ -156,7 +156,7 @@ public interface MethodProps {
      * @param options Method options.
      */
     override fun options(options: MethodOptions) {
-      cdkBuilder.options(options.let(MethodOptions::unwrap))
+      cdkBuilder.options(options.let(MethodOptions.Companion::unwrap))
     }
 
     /**
@@ -173,7 +173,7 @@ public interface MethodProps {
      * specify the `RestApi` object.
      */
     override fun resource(resource: IResource) {
-      cdkBuilder.resource(resource.let(IResource::unwrap))
+      cdkBuilder.resource(resource.let(IResource.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.MethodProps = cdkBuilder.build()

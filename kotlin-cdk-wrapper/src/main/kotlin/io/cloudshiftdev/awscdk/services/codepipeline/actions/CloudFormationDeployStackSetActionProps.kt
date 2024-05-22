@@ -290,7 +290,7 @@ public interface CloudFormationDeployStackSetActionProps : CommonAwsActionProps,
      * stack directly from a template containing macros.
      */
     override fun cfnCapabilities(cfnCapabilities: List<CfnCapabilities>) {
-      cdkBuilder.cfnCapabilities(cfnCapabilities.map(CfnCapabilities::unwrap))
+      cdkBuilder.cfnCapabilities(cfnCapabilities.map(CfnCapabilities.Companion::unwrap))
     }
 
     /**
@@ -320,7 +320,7 @@ public interface CloudFormationDeployStackSetActionProps : CommonAwsActionProps,
      * the stack set.
      */
     override fun deploymentModel(deploymentModel: StackSetDeploymentModel) {
-      cdkBuilder.deploymentModel(deploymentModel.let(StackSetDeploymentModel::unwrap))
+      cdkBuilder.deploymentModel(deploymentModel.let(StackSetDeploymentModel.Companion::unwrap))
     }
 
     /**
@@ -363,7 +363,7 @@ public interface CloudFormationDeployStackSetActionProps : CommonAwsActionProps,
      * These parameters are shared between all instances of the stack set.
      */
     override fun parameters(parameters: StackSetParameters) {
-      cdkBuilder.parameters(parameters.let(StackSetParameters::unwrap))
+      cdkBuilder.parameters(parameters.let(StackSetParameters.Companion::unwrap))
     }
 
     /**
@@ -375,7 +375,7 @@ public interface CloudFormationDeployStackSetActionProps : CommonAwsActionProps,
      * method in the `ActionBindOptions.role` property.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -391,7 +391,7 @@ public interface CloudFormationDeployStackSetActionProps : CommonAwsActionProps,
      * You can specify either AWS Accounts Ids or AWS Organizations Organizational Units.
      */
     override fun stackInstances(stackInstances: StackInstances) {
-      cdkBuilder.stackInstances(stackInstances.let(StackInstances::unwrap))
+      cdkBuilder.stackInstances(stackInstances.let(StackInstances.Companion::unwrap))
     }
 
     /**
@@ -424,7 +424,7 @@ public interface CloudFormationDeployStackSetActionProps : CommonAwsActionProps,
      * Enter the path to the source artifact name and template file.
      */
     override fun template(template: StackSetTemplate) {
-      cdkBuilder.template(template.let(StackSetTemplate::unwrap))
+      cdkBuilder.template(template.let(StackSetTemplate.Companion::unwrap))
     }
 
     /**

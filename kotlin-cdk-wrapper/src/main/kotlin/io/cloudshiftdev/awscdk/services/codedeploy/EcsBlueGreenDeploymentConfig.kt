@@ -224,7 +224,7 @@ public interface EcsBlueGreenDeploymentConfig {
      * during a blue-green deployment. 
      */
     override fun blueTargetGroup(blueTargetGroup: ITargetGroup) {
-      cdkBuilder.blueTargetGroup(blueTargetGroup.let(ITargetGroup::unwrap))
+      cdkBuilder.blueTargetGroup(blueTargetGroup.let(ITargetGroup.Companion::unwrap))
     }
 
     /**
@@ -249,7 +249,7 @@ public interface EcsBlueGreenDeploymentConfig {
      * re-route production traffic to the 'green' ECS task set.
      */
     override fun deploymentApprovalWaitTime(deploymentApprovalWaitTime: Duration) {
-      cdkBuilder.deploymentApprovalWaitTime(deploymentApprovalWaitTime.let(Duration::unwrap))
+      cdkBuilder.deploymentApprovalWaitTime(deploymentApprovalWaitTime.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -257,7 +257,7 @@ public interface EcsBlueGreenDeploymentConfig {
      * set during a blue-green deployment. 
      */
     override fun greenTargetGroup(greenTargetGroup: ITargetGroup) {
-      cdkBuilder.greenTargetGroup(greenTargetGroup.let(ITargetGroup::unwrap))
+      cdkBuilder.greenTargetGroup(greenTargetGroup.let(ITargetGroup.Companion::unwrap))
     }
 
     /**
@@ -266,7 +266,7 @@ public interface EcsBlueGreenDeploymentConfig {
      * deployment. 
      */
     override fun listener(listener: IListener) {
-      cdkBuilder.listener(listener.let(IListener::unwrap))
+      cdkBuilder.listener(listener.let(IListener.Companion::unwrap))
     }
 
     /**
@@ -284,7 +284,7 @@ public interface EcsBlueGreenDeploymentConfig {
      * routed to the 'green' ECS task set.
      */
     override fun terminationWaitTime(terminationWaitTime: Duration) {
-      cdkBuilder.terminationWaitTime(terminationWaitTime.let(Duration::unwrap))
+      cdkBuilder.terminationWaitTime(terminationWaitTime.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -305,7 +305,7 @@ public interface EcsBlueGreenDeploymentConfig {
      * and will skip the AfterAllowTestTraffic hook.
      */
     override fun testListener(testListener: IListener) {
-      cdkBuilder.testListener(testListener.let(IListener::unwrap))
+      cdkBuilder.testListener(testListener.let(IListener.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codedeploy.EcsBlueGreenDeploymentConfig =

@@ -200,7 +200,7 @@ public interface ApplicationTargetProps {
      * Only applicable when using application load balancers.
      */
     override fun protocol(protocol: Protocol) {
-      cdkBuilder.protocol(protocol.let(Protocol::unwrap))
+      cdkBuilder.protocol(protocol.let(Protocol.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.patterns.ApplicationTargetProps =

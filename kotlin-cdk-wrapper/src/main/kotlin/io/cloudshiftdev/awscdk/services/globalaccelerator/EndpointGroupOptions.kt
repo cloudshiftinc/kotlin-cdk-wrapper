@@ -205,7 +205,7 @@ public interface EndpointGroupOptions {
      * @param endpoints Initial list of endpoints for this group.
      */
     override fun endpoints(endpoints: List<IEndpoint>) {
-      cdkBuilder.endpoints(endpoints.map(IEndpoint::unwrap))
+      cdkBuilder.endpoints(endpoints.map(IEndpoint.Companion::unwrap))
     }
 
     /**
@@ -218,7 +218,7 @@ public interface EndpointGroupOptions {
      * Must be either 10 or 30 seconds.
      */
     override fun healthCheckInterval(healthCheckInterval: Duration) {
-      cdkBuilder.healthCheckInterval(healthCheckInterval.let(Duration::unwrap))
+      cdkBuilder.healthCheckInterval(healthCheckInterval.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -239,7 +239,7 @@ public interface EndpointGroupOptions {
      * @param healthCheckProtocol The protocol used to perform health checks.
      */
     override fun healthCheckProtocol(healthCheckProtocol: HealthCheckProtocol) {
-      cdkBuilder.healthCheckProtocol(healthCheckProtocol.let(HealthCheckProtocol::unwrap))
+      cdkBuilder.healthCheckProtocol(healthCheckProtocol.let(HealthCheckProtocol.Companion::unwrap))
     }
 
     /**
@@ -256,7 +256,7 @@ public interface EndpointGroupOptions {
      * that traffic arrives on at the listener.
      */
     override fun portOverrides(portOverrides: List<PortOverride>) {
-      cdkBuilder.portOverrides(portOverrides.map(PortOverride::unwrap))
+      cdkBuilder.portOverrides(portOverrides.map(PortOverride.Companion::unwrap))
     }
 
     /**

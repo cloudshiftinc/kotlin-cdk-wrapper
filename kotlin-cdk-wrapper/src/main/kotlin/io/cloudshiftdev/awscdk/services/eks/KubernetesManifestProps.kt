@@ -179,7 +179,7 @@ public interface KubernetesManifestProps : KubernetesManifestOptions {
      * [disable-awslint:ref-via-interface]
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -195,7 +195,7 @@ public interface KubernetesManifestProps : KubernetesManifestOptions {
      * Only applicable if `ingressAlb` is set to `true`.
      */
     override fun ingressAlbScheme(ingressAlbScheme: AlbScheme) {
-      cdkBuilder.ingressAlbScheme(ingressAlbScheme.let(AlbScheme::unwrap))
+      cdkBuilder.ingressAlbScheme(ingressAlbScheme.let(AlbScheme.Companion::unwrap))
     }
 
     /**

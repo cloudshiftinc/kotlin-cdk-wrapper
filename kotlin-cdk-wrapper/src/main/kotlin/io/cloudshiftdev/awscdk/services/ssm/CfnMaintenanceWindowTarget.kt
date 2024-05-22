@@ -55,8 +55,8 @@ public open class CfnMaintenanceWindowTarget(
     id: String,
     props: CfnMaintenanceWindowTargetProps,
   ) :
-      this(software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTarget(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMaintenanceWindowTargetProps::unwrap))
+      this(software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTarget(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMaintenanceWindowTargetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -89,7 +89,7 @@ public open class CfnMaintenanceWindowTarget(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -139,7 +139,7 @@ public open class CfnMaintenanceWindowTarget(
    * The targets to register with the maintenance window.
    */
   public open fun targets(`value`: IResolvable) {
-    unwrap(this).setTargets(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTargets(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -310,7 +310,7 @@ public open class CfnMaintenanceWindowTarget(
      * @param targets The targets to register with the maintenance window. 
      */
     override fun targets(targets: IResolvable) {
-      cdkBuilder.targets(targets.let(IResolvable::unwrap))
+      cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
     }
 
     /**

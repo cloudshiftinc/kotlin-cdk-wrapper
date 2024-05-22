@@ -53,8 +53,8 @@ public open class CfnHttpNamespace(
     id: String,
     props: CfnHttpNamespaceProps,
   ) :
-      this(software.amazon.awscdk.services.servicediscovery.CfnHttpNamespace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnHttpNamespaceProps::unwrap))
+      this(software.amazon.awscdk.services.servicediscovery.CfnHttpNamespace(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnHttpNamespaceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -93,7 +93,7 @@ public open class CfnHttpNamespace(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -123,7 +123,7 @@ public open class CfnHttpNamespace(
    * The tags for the namespace.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -216,7 +216,7 @@ public open class CfnHttpNamespace(
      * @param tags The tags for the namespace. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

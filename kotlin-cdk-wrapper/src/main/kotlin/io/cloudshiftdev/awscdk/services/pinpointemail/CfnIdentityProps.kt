@@ -223,7 +223,7 @@ public interface CfnIdentityProps {
      * `amazonses.com` domain.
      */
     override fun dkimSigningEnabled(dkimSigningEnabled: IResolvable) {
-      cdkBuilder.dkimSigningEnabled(dkimSigningEnabled.let(IResolvable::unwrap))
+      cdkBuilder.dkimSigningEnabled(dkimSigningEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -263,7 +263,7 @@ public interface CfnIdentityProps {
      * (even if this setting is disabled).
      */
     override fun feedbackForwardingEnabled(feedbackForwardingEnabled: IResolvable) {
-      cdkBuilder.feedbackForwardingEnabled(feedbackForwardingEnabled.let(IResolvable::unwrap))
+      cdkBuilder.feedbackForwardingEnabled(feedbackForwardingEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -271,7 +271,7 @@ public interface CfnIdentityProps {
      * for an email identity.
      */
     override fun mailFromAttributes(mailFromAttributes: IResolvable) {
-      cdkBuilder.mailFromAttributes(mailFromAttributes.let(IResolvable::unwrap))
+      cdkBuilder.mailFromAttributes(mailFromAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -279,7 +279,7 @@ public interface CfnIdentityProps {
      * for an email identity.
      */
     override fun mailFromAttributes(mailFromAttributes: CfnIdentity.MailFromAttributesProperty) {
-      cdkBuilder.mailFromAttributes(mailFromAttributes.let(CfnIdentity.MailFromAttributesProperty::unwrap))
+      cdkBuilder.mailFromAttributes(mailFromAttributes.let(CfnIdentity.MailFromAttributesProperty.Companion::unwrap))
     }
 
     /**
@@ -305,7 +305,7 @@ public interface CfnIdentityProps {
      * the email identity.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

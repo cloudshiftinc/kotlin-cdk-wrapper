@@ -141,7 +141,7 @@ public interface TableOptionsV2 {
      * @param kinesisStream Kinesis Data Stream to capture item level changes.
      */
     override fun kinesisStream(kinesisStream: IStream) {
-      cdkBuilder.kinesisStream(kinesisStream.let(IStream::unwrap))
+      cdkBuilder.kinesisStream(kinesisStream.let(IStream.Companion::unwrap))
     }
 
     /**
@@ -155,14 +155,14 @@ public interface TableOptionsV2 {
      * @param tableClass The table class.
      */
     override fun tableClass(tableClass: TableClass) {
-      cdkBuilder.tableClass(tableClass.let(TableClass::unwrap))
+      cdkBuilder.tableClass(tableClass.let(TableClass.Companion::unwrap))
     }
 
     /**
      * @param tags Tags to be applied to the table or replica table.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

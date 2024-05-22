@@ -74,8 +74,8 @@ public open class CfnConfigurationTemplate(
     id: String,
     props: CfnConfigurationTemplateProps,
   ) :
-      this(software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConfigurationTemplateProps::unwrap))
+      this(software.amazon.awscdk.services.elasticbeanstalk.CfnConfigurationTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConfigurationTemplateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -134,7 +134,7 @@ public open class CfnConfigurationTemplate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -146,7 +146,7 @@ public open class CfnConfigurationTemplate(
    * Option values for the Elastic Beanstalk configuration, such as the instance type.
    */
   public open fun optionSettings(`value`: IResolvable) {
-    unwrap(this).setOptionSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOptionSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -196,14 +196,14 @@ public open class CfnConfigurationTemplate(
    * An Elastic Beanstalk configuration template to base this one on.
    */
   public open fun sourceConfiguration(`value`: IResolvable) {
-    unwrap(this).setSourceConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSourceConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An Elastic Beanstalk configuration template to base this one on.
    */
   public open fun sourceConfiguration(`value`: SourceConfigurationProperty) {
-    unwrap(this).setSourceConfiguration(`value`.let(SourceConfigurationProperty::unwrap))
+    unwrap(this).setSourceConfiguration(`value`.let(SourceConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -452,7 +452,7 @@ public open class CfnConfigurationTemplate(
      * instance type. 
      */
     override fun optionSettings(optionSettings: IResolvable) {
-      cdkBuilder.optionSettings(optionSettings.let(IResolvable::unwrap))
+      cdkBuilder.optionSettings(optionSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -549,7 +549,7 @@ public open class CfnConfigurationTemplate(
      * @param sourceConfiguration An Elastic Beanstalk configuration template to base this one on. 
      */
     override fun sourceConfiguration(sourceConfiguration: IResolvable) {
-      cdkBuilder.sourceConfiguration(sourceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.sourceConfiguration(sourceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -571,7 +571,7 @@ public open class CfnConfigurationTemplate(
      * @param sourceConfiguration An Elastic Beanstalk configuration template to base this one on. 
      */
     override fun sourceConfiguration(sourceConfiguration: SourceConfigurationProperty) {
-      cdkBuilder.sourceConfiguration(sourceConfiguration.let(SourceConfigurationProperty::unwrap))
+      cdkBuilder.sourceConfiguration(sourceConfiguration.let(SourceConfigurationProperty.Companion::unwrap))
     }
 
     /**

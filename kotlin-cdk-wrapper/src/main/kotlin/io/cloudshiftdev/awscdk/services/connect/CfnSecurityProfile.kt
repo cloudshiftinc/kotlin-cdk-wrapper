@@ -63,8 +63,8 @@ public open class CfnSecurityProfile(
     id: String,
     props: CfnSecurityProfileProps,
   ) :
-      this(software.amazon.awscdk.services.connect.CfnSecurityProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSecurityProfileProps::unwrap))
+      this(software.amazon.awscdk.services.connect.CfnSecurityProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSecurityProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -100,7 +100,7 @@ public open class CfnSecurityProfile(
    * Connect.
    */
   public open fun allowedAccessControlTags(`value`: IResolvable) {
-    unwrap(this).setAllowedAccessControlTags(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAllowedAccessControlTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -127,7 +127,7 @@ public open class CfnSecurityProfile(
    * A list of third-party applications that the security profile will give access to.
    */
   public open fun applications(`value`: IResolvable) {
-    unwrap(this).setApplications(`value`.let(IResolvable::unwrap))
+    unwrap(this).setApplications(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -204,7 +204,7 @@ public open class CfnSecurityProfile(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -276,7 +276,7 @@ public open class CfnSecurityProfile(
    * The tags used to organize, track, or control access for this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -494,7 +494,7 @@ public open class CfnSecurityProfile(
      * access to resources in Amazon Connect. 
      */
     override fun allowedAccessControlTags(allowedAccessControlTags: IResolvable) {
-      cdkBuilder.allowedAccessControlTags(allowedAccessControlTags.let(IResolvable::unwrap))
+      cdkBuilder.allowedAccessControlTags(allowedAccessControlTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -528,7 +528,7 @@ public open class CfnSecurityProfile(
      * access to. 
      */
     override fun applications(applications: IResolvable) {
-      cdkBuilder.applications(applications.let(IResolvable::unwrap))
+      cdkBuilder.applications(applications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -662,7 +662,7 @@ public open class CfnSecurityProfile(
      * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

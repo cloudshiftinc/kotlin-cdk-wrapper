@@ -40,7 +40,7 @@ public abstract class PrincipalBase(
    * @param document 
    */
   public override fun addToAssumeRolePolicy(document: PolicyDocument) {
-    unwrap(this).addToAssumeRolePolicy(document.let(PolicyDocument::unwrap))
+    unwrap(this).addToAssumeRolePolicy(document.let(PolicyDocument.Companion::unwrap))
   }
 
   /**
@@ -62,7 +62,7 @@ public abstract class PrincipalBase(
    * @param statement 
    */
   public open fun addToPolicy(statement: PolicyStatement): Boolean =
-      unwrap(this).addToPolicy(statement.let(PolicyStatement::unwrap))
+      unwrap(this).addToPolicy(statement.let(PolicyStatement.Companion::unwrap))
 
   /**
    * Add to the policy of this principal.
@@ -80,7 +80,7 @@ public abstract class PrincipalBase(
    * @param _statement 
    */
   public override fun addToPrincipalPolicy(statement: PolicyStatement): AddToPrincipalPolicyResult =
-      unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement::unwrap)).let(AddToPrincipalPolicyResult::wrap)
+      unwrap(this).addToPrincipalPolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToPrincipalPolicyResult::wrap)
 
   /**
    * Add to the policy of this principal.

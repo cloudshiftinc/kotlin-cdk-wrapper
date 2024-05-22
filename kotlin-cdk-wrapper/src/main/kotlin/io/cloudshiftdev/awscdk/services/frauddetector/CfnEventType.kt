@@ -96,8 +96,8 @@ public open class CfnEventType(
     id: String,
     props: CfnEventTypeProps,
   ) :
-      this(software.amazon.awscdk.services.frauddetector.CfnEventType(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEventTypeProps::unwrap))
+      this(software.amazon.awscdk.services.frauddetector.CfnEventType(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEventTypeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -143,7 +143,7 @@ public open class CfnEventType(
    * The event type entity types.
    */
   public open fun entityTypes(`value`: IResolvable) {
-    unwrap(this).setEntityTypes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEntityTypes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -167,7 +167,7 @@ public open class CfnEventType(
    * The event type event variables.
    */
   public open fun eventVariables(`value`: IResolvable) {
-    unwrap(this).setEventVariables(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEventVariables(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -188,7 +188,7 @@ public open class CfnEventType(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -200,7 +200,7 @@ public open class CfnEventType(
    * The event type labels.
    */
   public open fun labels(`value`: IResolvable) {
-    unwrap(this).setLabels(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLabels(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -242,7 +242,7 @@ public open class CfnEventType(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -394,7 +394,7 @@ public open class CfnEventType(
      * @param entityTypes The event type entity types. 
      */
     override fun entityTypes(entityTypes: IResolvable) {
-      cdkBuilder.entityTypes(entityTypes.let(IResolvable::unwrap))
+      cdkBuilder.entityTypes(entityTypes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -422,7 +422,7 @@ public open class CfnEventType(
      * @param eventVariables The event type event variables. 
      */
     override fun eventVariables(eventVariables: IResolvable) {
-      cdkBuilder.eventVariables(eventVariables.let(IResolvable::unwrap))
+      cdkBuilder.eventVariables(eventVariables.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -451,7 +451,7 @@ public open class CfnEventType(
      * @param labels The event type labels. 
      */
     override fun labels(labels: IResolvable) {
-      cdkBuilder.labels(labels.let(IResolvable::unwrap))
+      cdkBuilder.labels(labels.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -495,7 +495,7 @@ public open class CfnEventType(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -766,7 +766,7 @@ public open class CfnEventType(
        * execute any changes to the variables.
        */
       override fun `inline`(`inline`: IResolvable) {
-        cdkBuilder.`inline`(`inline`.let(IResolvable::unwrap))
+        cdkBuilder.`inline`(`inline`.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -791,7 +791,7 @@ public open class CfnEventType(
        * .
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**
@@ -1225,7 +1225,7 @@ public open class CfnEventType(
        * execute any changes to the variables.
        */
       override fun `inline`(`inline`: IResolvable) {
-        cdkBuilder.`inline`(`inline`.let(IResolvable::unwrap))
+        cdkBuilder.`inline`(`inline`.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1249,7 +1249,7 @@ public open class CfnEventType(
        * .
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**
@@ -1629,7 +1629,7 @@ public open class CfnEventType(
        * any changes to the variables.
        */
       override fun `inline`(`inline`: IResolvable) {
-        cdkBuilder.`inline`(`inline`.let(IResolvable::unwrap))
+        cdkBuilder.`inline`(`inline`.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1653,7 +1653,7 @@ public open class CfnEventType(
        * .
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**

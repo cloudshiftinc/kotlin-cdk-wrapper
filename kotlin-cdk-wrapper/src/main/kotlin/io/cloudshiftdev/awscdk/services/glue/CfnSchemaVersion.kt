@@ -46,8 +46,8 @@ public open class CfnSchemaVersion(
     id: String,
     props: CfnSchemaVersionProps,
   ) :
-      this(software.amazon.awscdk.services.glue.CfnSchemaVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSchemaVersionProps::unwrap))
+      this(software.amazon.awscdk.services.glue.CfnSchemaVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSchemaVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -68,7 +68,7 @@ public open class CfnSchemaVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -80,14 +80,14 @@ public open class CfnSchemaVersion(
    * The schema that includes the schema version.
    */
   public open fun schema(`value`: IResolvable) {
-    unwrap(this).setSchema(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSchema(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The schema that includes the schema version.
    */
   public open fun schema(`value`: SchemaProperty) {
-    unwrap(this).setSchema(`value`.let(SchemaProperty::unwrap))
+    unwrap(this).setSchema(`value`.let(SchemaProperty.Companion::unwrap))
   }
 
   /**
@@ -164,7 +164,7 @@ public open class CfnSchemaVersion(
      * @param schema The schema that includes the schema version. 
      */
     override fun schema(schema: IResolvable) {
-      cdkBuilder.schema(schema.let(IResolvable::unwrap))
+      cdkBuilder.schema(schema.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -174,7 +174,7 @@ public open class CfnSchemaVersion(
      * @param schema The schema that includes the schema version. 
      */
     override fun schema(schema: SchemaProperty) {
-      cdkBuilder.schema(schema.let(SchemaProperty::unwrap))
+      cdkBuilder.schema(schema.let(SchemaProperty.Companion::unwrap))
     }
 
     /**

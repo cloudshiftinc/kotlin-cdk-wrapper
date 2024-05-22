@@ -48,8 +48,8 @@ public open class Provider(
     id: String,
     props: ProviderProps,
   ) :
-      this(software.amazon.awscdk.customresources.Provider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ProviderProps::unwrap))
+      this(software.amazon.awscdk.customresources.Provider(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ProviderProps.Companion::unwrap))
   )
 
   public constructor(
@@ -335,7 +335,7 @@ public open class Provider(
      * operation is complete. 
      */
     override fun isCompleteHandler(isCompleteHandler: IFunction) {
-      cdkBuilder.isCompleteHandler(isCompleteHandler.let(IFunction::unwrap))
+      cdkBuilder.isCompleteHandler(isCompleteHandler.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -350,7 +350,7 @@ public open class Provider(
      * lambda function. 
      */
     override fun logGroup(logGroup: ILogGroup) {
-      cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
+      cdkBuilder.logGroup(logGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -369,7 +369,7 @@ public open class Provider(
      * @param logRetention The number of days framework log events are kept in CloudWatch Logs. 
      */
     override fun logRetention(logRetention: RetentionDays) {
-      cdkBuilder.logRetention(logRetention.let(RetentionDays::unwrap))
+      cdkBuilder.logRetention(logRetention.let(RetentionDays.Companion::unwrap))
     }
 
     /**
@@ -385,7 +385,7 @@ public open class Provider(
      * (CREATE/UPDATE/DELETE). 
      */
     override fun onEventHandler(onEventHandler: IFunction) {
-      cdkBuilder.onEventHandler(onEventHandler.let(IFunction::unwrap))
+      cdkBuilder.onEventHandler(onEventHandler.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -397,7 +397,7 @@ public open class Provider(
      * environment variables. 
      */
     override fun providerFunctionEnvEncryption(providerFunctionEnvEncryption: IKey) {
-      cdkBuilder.providerFunctionEnvEncryption(providerFunctionEnvEncryption.let(IKey::unwrap))
+      cdkBuilder.providerFunctionEnvEncryption(providerFunctionEnvEncryption.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -427,7 +427,7 @@ public open class Provider(
      * resource has been stabilized. 
      */
     override fun queryInterval(queryInterval: Duration) {
-      cdkBuilder.queryInterval(queryInterval.let(Duration::unwrap))
+      cdkBuilder.queryInterval(queryInterval.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -441,7 +441,7 @@ public open class Provider(
      * @param role AWS Lambda execution role. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -456,7 +456,7 @@ public open class Provider(
      * @param securityGroups Security groups to attach to the provider functions. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -483,7 +483,7 @@ public open class Provider(
      * @param totalTimeout Total timeout for the entire operation. 
      */
     override fun totalTimeout(totalTimeout: Duration) {
-      cdkBuilder.totalTimeout(totalTimeout.let(Duration::unwrap))
+      cdkBuilder.totalTimeout(totalTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -494,7 +494,7 @@ public open class Provider(
      * @param vpc The vpc to provision the lambda functions in. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -508,7 +508,7 @@ public open class Provider(
      * @param vpcSubnets Which subnets from the VPC to place the lambda functions in. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -537,7 +537,7 @@ public open class Provider(
      * machine are logged and where they are logged. 
      */
     override fun waiterStateMachineLogOptions(waiterStateMachineLogOptions: LogOptions) {
-      cdkBuilder.waiterStateMachineLogOptions(waiterStateMachineLogOptions.let(LogOptions::unwrap))
+      cdkBuilder.waiterStateMachineLogOptions(waiterStateMachineLogOptions.let(LogOptions.Companion::unwrap))
     }
 
     /**

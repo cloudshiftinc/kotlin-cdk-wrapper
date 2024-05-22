@@ -71,7 +71,7 @@ public interface IDatabaseProxy : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -111,7 +111,7 @@ public interface IDatabaseProxy : IResource {
      * @param dbUser the name of the database user to allow connecting as to the proxy.
      */
     override fun grantConnect(grantee: IGrantable): Grant =
-        unwrap(this).grantConnect(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantConnect(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grant the given identity connection access to the proxy.
@@ -123,7 +123,8 @@ public interface IDatabaseProxy : IResource {
      * @param dbUser the name of the database user to allow connecting as to the proxy.
      */
     override fun grantConnect(grantee: IGrantable, dbUser: String): Grant =
-        unwrap(this).grantConnect(grantee.let(IGrantable::unwrap), dbUser).let(Grant::wrap)
+        unwrap(this).grantConnect(grantee.let(IGrantable.Companion::unwrap),
+        dbUser).let(Grant::wrap)
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 

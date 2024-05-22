@@ -67,7 +67,7 @@ public interface SubscriptionFilterProps : SubscriptionFilterOptions {
      * For example, a Kinesis stream or a Lambda function.
      */
     override fun destination(destination: ILogSubscriptionDestination) {
-      cdkBuilder.destination(destination.let(ILogSubscriptionDestination::unwrap))
+      cdkBuilder.destination(destination.let(ILogSubscriptionDestination.Companion::unwrap))
     }
 
     /**
@@ -81,14 +81,14 @@ public interface SubscriptionFilterProps : SubscriptionFilterOptions {
      * @param filterPattern Log events matching this pattern will be sent to the destination. 
      */
     override fun filterPattern(filterPattern: IFilterPattern) {
-      cdkBuilder.filterPattern(filterPattern.let(IFilterPattern::unwrap))
+      cdkBuilder.filterPattern(filterPattern.let(IFilterPattern.Companion::unwrap))
     }
 
     /**
      * @param logGroup The log group to create the subscription on. 
      */
     override fun logGroup(logGroup: ILogGroup) {
-      cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
+      cdkBuilder.logGroup(logGroup.let(ILogGroup.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.logs.SubscriptionFilterProps =

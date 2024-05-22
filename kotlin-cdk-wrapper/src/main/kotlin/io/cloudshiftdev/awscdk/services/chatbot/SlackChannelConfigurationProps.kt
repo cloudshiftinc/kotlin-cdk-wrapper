@@ -226,7 +226,7 @@ public interface SlackChannelConfigurationProps {
      * guardrails.
      */
     override fun guardrailPolicies(guardrailPolicies: List<IManagedPolicy>) {
-      cdkBuilder.guardrailPolicies(guardrailPolicies.map(IManagedPolicy::unwrap))
+      cdkBuilder.guardrailPolicies(guardrailPolicies.map(IManagedPolicy.Companion::unwrap))
     }
 
     /**
@@ -243,7 +243,7 @@ public interface SlackChannelConfigurationProps {
      * remove the retention policy, set the value to `INFINITE`.
      */
     override fun logRetention(logRetention: RetentionDays) {
-      cdkBuilder.logRetention(logRetention.let(RetentionDays::unwrap))
+      cdkBuilder.logRetention(logRetention.let(RetentionDays.Companion::unwrap))
     }
 
     /**
@@ -252,7 +252,7 @@ public interface SlackChannelConfigurationProps {
      * These options control the retry policy when interacting with CloudWatch APIs.
      */
     override fun logRetentionRetryOptions(logRetentionRetryOptions: LogRetentionRetryOptions) {
-      cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions.let(LogRetentionRetryOptions::unwrap))
+      cdkBuilder.logRetentionRetryOptions(logRetentionRetryOptions.let(LogRetentionRetryOptions.Companion::unwrap))
     }
 
     /**
@@ -271,7 +271,7 @@ public interface SlackChannelConfigurationProps {
      * resource that sets the retention policy.
      */
     override fun logRetentionRole(logRetentionRole: IRole) {
-      cdkBuilder.logRetentionRole(logRetentionRole.let(IRole::unwrap))
+      cdkBuilder.logRetentionRole(logRetentionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -279,14 +279,14 @@ public interface SlackChannelConfigurationProps {
      * This property affects the log entries pushed to Amazon CloudWatch Logs.
      */
     override fun loggingLevel(loggingLevel: LoggingLevel) {
-      cdkBuilder.loggingLevel(loggingLevel.let(LoggingLevel::unwrap))
+      cdkBuilder.loggingLevel(loggingLevel.let(LoggingLevel.Companion::unwrap))
     }
 
     /**
      * @param notificationTopics The SNS topics that deliver notifications to AWS Chatbot.
      */
     override fun notificationTopics(notificationTopics: List<ITopic>) {
-      cdkBuilder.notificationTopics(notificationTopics.map(ITopic::unwrap))
+      cdkBuilder.notificationTopics(notificationTopics.map(ITopic.Companion::unwrap))
     }
 
     /**
@@ -299,7 +299,7 @@ public interface SlackChannelConfigurationProps {
      * @param role The permission role of Slack channel configuration.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**

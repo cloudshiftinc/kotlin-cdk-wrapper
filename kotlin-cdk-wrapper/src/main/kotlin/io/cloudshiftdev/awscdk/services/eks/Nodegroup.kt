@@ -88,8 +88,8 @@ public open class Nodegroup(
     id: String,
     props: NodegroupProps,
   ) :
-      this(software.amazon.awscdk.services.eks.Nodegroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(NodegroupProps::unwrap))
+      this(software.amazon.awscdk.services.eks.Nodegroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(NodegroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -462,7 +462,7 @@ public open class Nodegroup(
      * @param amiType The AMI type for your node group. 
      */
     override fun amiType(amiType: NodegroupAmiType) {
-      cdkBuilder.amiType(amiType.let(NodegroupAmiType::unwrap))
+      cdkBuilder.amiType(amiType.let(NodegroupAmiType.Companion::unwrap))
     }
 
     /**
@@ -473,7 +473,7 @@ public open class Nodegroup(
      * @param capacityType The capacity type of the nodegroup. 
      */
     override fun capacityType(capacityType: CapacityType) {
-      cdkBuilder.capacityType(capacityType.let(CapacityType::unwrap))
+      cdkBuilder.capacityType(capacityType.let(CapacityType.Companion::unwrap))
     }
 
     /**
@@ -482,7 +482,7 @@ public open class Nodegroup(
      * @param cluster Cluster resource. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -539,7 +539,7 @@ public open class Nodegroup(
      * @param instanceTypes The instance types to use for your node group. 
      */
     override fun instanceTypes(instanceTypes: List<InstanceType>) {
-      cdkBuilder.instanceTypes(instanceTypes.map(InstanceType::unwrap))
+      cdkBuilder.instanceTypes(instanceTypes.map(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -575,7 +575,7 @@ public open class Nodegroup(
      * @param launchTemplateSpec Launch template specification used for the nodegroup. 
      */
     override fun launchTemplateSpec(launchTemplateSpec: LaunchTemplateSpec) {
-      cdkBuilder.launchTemplateSpec(launchTemplateSpec.let(LaunchTemplateSpec::unwrap))
+      cdkBuilder.launchTemplateSpec(launchTemplateSpec.let(LaunchTemplateSpec.Companion::unwrap))
     }
 
     /**
@@ -671,7 +671,7 @@ public open class Nodegroup(
      * @param nodeRole The IAM role to associate with your node group. 
      */
     override fun nodeRole(nodeRole: IRole) {
-      cdkBuilder.nodeRole(nodeRole.let(IRole::unwrap))
+      cdkBuilder.nodeRole(nodeRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -712,7 +712,7 @@ public open class Nodegroup(
      * @param remoteAccess The remote access (SSH) configuration to use with your node group. 
      */
     override fun remoteAccess(remoteAccess: NodegroupRemoteAccess) {
-      cdkBuilder.remoteAccess(remoteAccess.let(NodegroupRemoteAccess::unwrap))
+      cdkBuilder.remoteAccess(remoteAccess.let(NodegroupRemoteAccess.Companion::unwrap))
     }
 
     /**
@@ -747,7 +747,7 @@ public open class Nodegroup(
      * group. 
      */
     override fun subnets(subnets: SubnetSelection) {
-      cdkBuilder.subnets(subnets.let(SubnetSelection::unwrap))
+      cdkBuilder.subnets(subnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -795,7 +795,7 @@ public open class Nodegroup(
      * are created. 
      */
     override fun taints(taints: List<TaintSpec>) {
-      cdkBuilder.taints(taints.map(TaintSpec::unwrap))
+      cdkBuilder.taints(taints.map(TaintSpec.Companion::unwrap))
     }
 
     /**
@@ -817,7 +817,7 @@ public open class Nodegroup(
       id: String,
       nodegroupName: String,
     ): INodegroup =
-        software.amazon.awscdk.services.eks.Nodegroup.fromNodegroupName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.eks.Nodegroup.fromNodegroupName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, nodegroupName).let(INodegroup::wrap)
 
     public operator fun invoke(

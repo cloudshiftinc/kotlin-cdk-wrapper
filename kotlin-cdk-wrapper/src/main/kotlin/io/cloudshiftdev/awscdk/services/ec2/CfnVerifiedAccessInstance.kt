@@ -74,7 +74,7 @@ public open class CfnVerifiedAccessInstance(
   cdkObject: software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -83,8 +83,8 @@ public open class CfnVerifiedAccessInstance(
     id: String,
     props: CfnVerifiedAccessInstanceProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVerifiedAccessInstanceProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnVerifiedAccessInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVerifiedAccessInstanceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -141,7 +141,7 @@ public open class CfnVerifiedAccessInstance(
    * instance.
    */
   public open fun fipsEnabled(`value`: IResolvable) {
-    unwrap(this).setFipsEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFipsEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -150,7 +150,7 @@ public open class CfnVerifiedAccessInstance(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -162,14 +162,14 @@ public open class CfnVerifiedAccessInstance(
    * The logging configuration for the Verified Access instances.
    */
   public open fun loggingConfigurations(`value`: IResolvable) {
-    unwrap(this).setLoggingConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoggingConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The logging configuration for the Verified Access instances.
    */
   public open fun loggingConfigurations(`value`: VerifiedAccessLogsProperty) {
-    unwrap(this).setLoggingConfigurations(`value`.let(VerifiedAccessLogsProperty::unwrap))
+    unwrap(this).setLoggingConfigurations(`value`.let(VerifiedAccessLogsProperty.Companion::unwrap))
   }
 
   /**
@@ -195,7 +195,7 @@ public open class CfnVerifiedAccessInstance(
    * The tags.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -232,7 +232,7 @@ public open class CfnVerifiedAccessInstance(
    * The IDs of the AWS Verified Access trust providers.
    */
   public open fun verifiedAccessTrustProviders(`value`: IResolvable) {
-    unwrap(this).setVerifiedAccessTrustProviders(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVerifiedAccessTrustProviders(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -403,7 +403,7 @@ public open class CfnVerifiedAccessInstance(
      * (FIPS) is enabled on the instance. 
      */
     override fun fipsEnabled(fipsEnabled: IResolvable) {
-      cdkBuilder.fipsEnabled(fipsEnabled.let(IResolvable::unwrap))
+      cdkBuilder.fipsEnabled(fipsEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -413,7 +413,7 @@ public open class CfnVerifiedAccessInstance(
      * @param loggingConfigurations The logging configuration for the Verified Access instances. 
      */
     override fun loggingConfigurations(loggingConfigurations: IResolvable) {
-      cdkBuilder.loggingConfigurations(loggingConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.loggingConfigurations(loggingConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -423,7 +423,7 @@ public open class CfnVerifiedAccessInstance(
      * @param loggingConfigurations The logging configuration for the Verified Access instances. 
      */
     override fun loggingConfigurations(loggingConfigurations: VerifiedAccessLogsProperty) {
-      cdkBuilder.loggingConfigurations(loggingConfigurations.let(VerifiedAccessLogsProperty::unwrap))
+      cdkBuilder.loggingConfigurations(loggingConfigurations.let(VerifiedAccessLogsProperty.Companion::unwrap))
     }
 
     /**
@@ -445,7 +445,7 @@ public open class CfnVerifiedAccessInstance(
      * @param tags The tags. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -482,7 +482,7 @@ public open class CfnVerifiedAccessInstance(
      * @param verifiedAccessTrustProviders The IDs of the AWS Verified Access trust providers. 
      */
     override fun verifiedAccessTrustProviders(verifiedAccessTrustProviders: IResolvable) {
-      cdkBuilder.verifiedAccessTrustProviders(verifiedAccessTrustProviders.let(IResolvable::unwrap))
+      cdkBuilder.verifiedAccessTrustProviders(verifiedAccessTrustProviders.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -599,7 +599,7 @@ public open class CfnVerifiedAccessInstance(
        * @param enabled Indicates whether logging is enabled.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -727,7 +727,7 @@ public open class CfnVerifiedAccessInstance(
        * @param enabled Indicates whether logging is enabled.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -880,7 +880,7 @@ public open class CfnVerifiedAccessInstance(
        * @param enabled Indicates whether logging is enabled.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1098,14 +1098,14 @@ public open class CfnVerifiedAccessInstance(
        * @param cloudWatchLogs CloudWatch Logs logging destination.
        */
       override fun cloudWatchLogs(cloudWatchLogs: IResolvable) {
-        cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param cloudWatchLogs CloudWatch Logs logging destination.
        */
       override fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsProperty) {
-        cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(CloudWatchLogsProperty::unwrap))
+        cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(CloudWatchLogsProperty.Companion::unwrap))
       }
 
       /**
@@ -1129,21 +1129,21 @@ public open class CfnVerifiedAccessInstance(
        * in the logs.
        */
       override fun includeTrustContext(includeTrustContext: IResolvable) {
-        cdkBuilder.includeTrustContext(includeTrustContext.let(IResolvable::unwrap))
+        cdkBuilder.includeTrustContext(includeTrustContext.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param kinesisDataFirehose Kinesis logging destination.
        */
       override fun kinesisDataFirehose(kinesisDataFirehose: IResolvable) {
-        cdkBuilder.kinesisDataFirehose(kinesisDataFirehose.let(IResolvable::unwrap))
+        cdkBuilder.kinesisDataFirehose(kinesisDataFirehose.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param kinesisDataFirehose Kinesis logging destination.
        */
       override fun kinesisDataFirehose(kinesisDataFirehose: KinesisDataFirehoseProperty) {
-        cdkBuilder.kinesisDataFirehose(kinesisDataFirehose.let(KinesisDataFirehoseProperty::unwrap))
+        cdkBuilder.kinesisDataFirehose(kinesisDataFirehose.let(KinesisDataFirehoseProperty.Companion::unwrap))
       }
 
       /**
@@ -1167,14 +1167,14 @@ public open class CfnVerifiedAccessInstance(
        * @param s3 Amazon S3 logging options.
        */
       override fun s3(s3: IResolvable) {
-        cdkBuilder.s3(s3.let(IResolvable::unwrap))
+        cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3 Amazon S3 logging options.
        */
       override fun s3(s3: S3Property) {
-        cdkBuilder.s3(s3.let(S3Property::unwrap))
+        cdkBuilder.s3(s3.let(S3Property.Companion::unwrap))
       }
 
       /**

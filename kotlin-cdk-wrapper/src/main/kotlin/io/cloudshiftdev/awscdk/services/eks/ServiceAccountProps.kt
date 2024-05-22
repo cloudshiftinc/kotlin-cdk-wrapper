@@ -87,7 +87,7 @@ public interface ServiceAccountProps : ServiceAccountOptions {
      * @param cluster The cluster to apply the patch to. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**

@@ -92,8 +92,8 @@ public open class CfnApp(
     id: String,
     props: CfnAppProps,
   ) :
-      this(software.amazon.awscdk.services.resiliencehub.CfnApp(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAppProps::unwrap))
+      this(software.amazon.awscdk.services.resiliencehub.CfnApp(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAppProps.Companion::unwrap))
   )
 
   public constructor(
@@ -159,7 +159,7 @@ public open class CfnApp(
    * The list of events you would like to subscribe and get notification for.
    */
   public open fun eventSubscriptions(`value`: IResolvable) {
-    unwrap(this).setEventSubscriptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEventSubscriptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -181,7 +181,7 @@ public open class CfnApp(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -207,7 +207,7 @@ public open class CfnApp(
    * application, importing its resources, and running an assessment.
    */
   public open fun permissionModel(`value`: IResolvable) {
-    unwrap(this).setPermissionModel(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPermissionModel(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -215,7 +215,7 @@ public open class CfnApp(
    * application, importing its resources, and running an assessment.
    */
   public open fun permissionModel(`value`: PermissionModelProperty) {
-    unwrap(this).setPermissionModel(`value`.let(PermissionModelProperty::unwrap))
+    unwrap(this).setPermissionModel(`value`.let(PermissionModelProperty.Companion::unwrap))
   }
 
   /**
@@ -248,7 +248,7 @@ public open class CfnApp(
    * An array of `ResourceMapping` objects.
    */
   public open fun resourceMappings(`value`: IResolvable) {
-    unwrap(this).setResourceMappings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResourceMappings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -924,7 +924,7 @@ public open class CfnApp(
      * for. 
      */
     override fun eventSubscriptions(eventSubscriptions: IResolvable) {
-      cdkBuilder.eventSubscriptions(eventSubscriptions.let(IResolvable::unwrap))
+      cdkBuilder.eventSubscriptions(eventSubscriptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -973,7 +973,7 @@ public open class CfnApp(
      * while creating the application, importing its resources, and running an assessment. 
      */
     override fun permissionModel(permissionModel: IResolvable) {
-      cdkBuilder.permissionModel(permissionModel.let(IResolvable::unwrap))
+      cdkBuilder.permissionModel(permissionModel.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -985,7 +985,7 @@ public open class CfnApp(
      * while creating the application, importing its resources, and running an assessment. 
      */
     override fun permissionModel(permissionModel: PermissionModelProperty) {
-      cdkBuilder.permissionModel(permissionModel.let(PermissionModelProperty::unwrap))
+      cdkBuilder.permissionModel(permissionModel.let(PermissionModelProperty.Companion::unwrap))
     }
 
     /**
@@ -1018,7 +1018,7 @@ public open class CfnApp(
      * @param resourceMappings An array of `ResourceMapping` objects. 
      */
     override fun resourceMappings(resourceMappings: IResolvable) {
-      cdkBuilder.resourceMappings(resourceMappings.let(IResolvable::unwrap))
+      cdkBuilder.resourceMappings(resourceMappings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1938,14 +1938,14 @@ public open class CfnApp(
        * @param physicalResourceId Identifier of the physical resource. 
        */
       override fun physicalResourceId(physicalResourceId: IResolvable) {
-        cdkBuilder.physicalResourceId(physicalResourceId.let(IResolvable::unwrap))
+        cdkBuilder.physicalResourceId(physicalResourceId.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param physicalResourceId Identifier of the physical resource. 
        */
       override fun physicalResourceId(physicalResourceId: PhysicalResourceIdProperty) {
-        cdkBuilder.physicalResourceId(physicalResourceId.let(PhysicalResourceIdProperty::unwrap))
+        cdkBuilder.physicalResourceId(physicalResourceId.let(PhysicalResourceIdProperty.Companion::unwrap))
       }
 
       /**

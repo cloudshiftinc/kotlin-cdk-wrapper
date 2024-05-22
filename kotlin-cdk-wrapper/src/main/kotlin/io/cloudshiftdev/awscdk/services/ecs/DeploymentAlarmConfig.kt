@@ -87,7 +87,7 @@ public interface DeploymentAlarmConfig : DeploymentAlarmOptions {
      * @param behavior Default rollback on alarm.
      */
     override fun behavior(behavior: AlarmBehavior) {
-      cdkBuilder.behavior(behavior.let(AlarmBehavior::unwrap))
+      cdkBuilder.behavior(behavior.let(AlarmBehavior.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.DeploymentAlarmConfig =

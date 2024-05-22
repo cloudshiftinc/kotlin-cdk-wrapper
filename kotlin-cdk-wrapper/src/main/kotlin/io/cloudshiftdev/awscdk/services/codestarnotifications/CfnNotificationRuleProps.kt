@@ -329,7 +329,7 @@ public interface CfnNotificationRuleProps {
      * clients to associate with the notification rule. 
      */
     override fun targets(targets: IResolvable) {
-      cdkBuilder.targets(targets.let(IResolvable::unwrap))
+      cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
     }
 
     /**

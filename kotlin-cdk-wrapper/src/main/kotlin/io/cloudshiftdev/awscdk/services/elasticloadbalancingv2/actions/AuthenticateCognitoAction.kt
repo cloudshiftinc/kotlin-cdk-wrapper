@@ -78,7 +78,7 @@ public open class AuthenticateCognitoAction(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.actions.AuthenticateCognitoAction,
 ) : ListenerAction(cdkObject) {
   public constructor(options: AuthenticateCognitoActionProps) :
-      this(software.amazon.awscdk.services.elasticloadbalancingv2.actions.AuthenticateCognitoAction(options.let(AuthenticateCognitoActionProps::unwrap))
+      this(software.amazon.awscdk.services.elasticloadbalancingv2.actions.AuthenticateCognitoAction(options.let(AuthenticateCognitoActionProps.Companion::unwrap))
   )
 
   public constructor(options: AuthenticateCognitoActionProps.Builder.() -> Unit) :
@@ -93,7 +93,8 @@ public open class AuthenticateCognitoAction(
    * @param associatingConstruct
    */
   public override fun bind(scope: Construct, listener: IApplicationListener) {
-    unwrap(this).bind(scope.let(Construct::unwrap), listener.let(IApplicationListener::unwrap))
+    unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+        listener.let(IApplicationListener.Companion::unwrap))
   }
 
   /**
@@ -108,8 +109,9 @@ public open class AuthenticateCognitoAction(
     listener: IApplicationListener,
     associatingConstruct: IConstruct,
   ) {
-    unwrap(this).bind(scope.let(Construct::unwrap), listener.let(IApplicationListener::unwrap),
-        associatingConstruct.let(IConstruct::unwrap))
+    unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+        listener.let(IApplicationListener.Companion::unwrap),
+        associatingConstruct.let(IConstruct.Companion::unwrap))
   }
 
   /**
@@ -263,7 +265,7 @@ public open class AuthenticateCognitoAction(
      * @param next What action to execute next. 
      */
     override fun next(next: ListenerAction) {
-      cdkBuilder.next(next.let(ListenerAction::unwrap))
+      cdkBuilder.next(next.let(ListenerAction.Companion::unwrap))
     }
 
     /**
@@ -274,7 +276,7 @@ public open class AuthenticateCognitoAction(
      * @param onUnauthenticatedRequest The behavior if the user is not authenticated. 
      */
     override fun onUnauthenticatedRequest(onUnauthenticatedRequest: UnauthenticatedAction) {
-      cdkBuilder.onUnauthenticatedRequest(onUnauthenticatedRequest.let(UnauthenticatedAction::unwrap))
+      cdkBuilder.onUnauthenticatedRequest(onUnauthenticatedRequest.let(UnauthenticatedAction.Companion::unwrap))
     }
 
     /**
@@ -310,7 +312,7 @@ public open class AuthenticateCognitoAction(
      * @param sessionTimeout The maximum duration of the authentication session. 
      */
     override fun sessionTimeout(sessionTimeout: Duration) {
-      cdkBuilder.sessionTimeout(sessionTimeout.let(Duration::unwrap))
+      cdkBuilder.sessionTimeout(sessionTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -319,7 +321,7 @@ public open class AuthenticateCognitoAction(
      * @param userPool The Amazon Cognito user pool. 
      */
     override fun userPool(userPool: IUserPool) {
-      cdkBuilder.userPool(userPool.let(IUserPool::unwrap))
+      cdkBuilder.userPool(userPool.let(IUserPool.Companion::unwrap))
     }
 
     /**
@@ -328,7 +330,7 @@ public open class AuthenticateCognitoAction(
      * @param userPoolClient The Amazon Cognito user pool client. 
      */
     override fun userPoolClient(userPoolClient: IUserPoolClient) {
-      cdkBuilder.userPoolClient(userPoolClient.let(IUserPoolClient::unwrap))
+      cdkBuilder.userPoolClient(userPoolClient.let(IUserPoolClient.Companion::unwrap))
     }
 
     /**
@@ -338,7 +340,7 @@ public open class AuthenticateCognitoAction(
      * user pool. 
      */
     override fun userPoolDomain(userPoolDomain: IUserPoolDomain) {
-      cdkBuilder.userPoolDomain(userPoolDomain.let(IUserPoolDomain::unwrap))
+      cdkBuilder.userPoolDomain(userPoolDomain.let(IUserPoolDomain.Companion::unwrap))
     }
 
     public fun build():

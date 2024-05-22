@@ -273,14 +273,14 @@ public interface CfnFaqProps {
      * @param s3Path The Amazon Simple Storage Service (Amazon S3) location of the FAQ input data. 
      */
     override fun s3Path(s3Path: IResolvable) {
-      cdkBuilder.s3Path(s3Path.let(IResolvable::unwrap))
+      cdkBuilder.s3Path(s3Path.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param s3Path The Amazon Simple Storage Service (Amazon S3) location of the FAQ input data. 
      */
     override fun s3Path(s3Path: CfnFaq.S3PathProperty) {
-      cdkBuilder.s3Path(s3Path.let(CfnFaq.S3PathProperty::unwrap))
+      cdkBuilder.s3Path(s3Path.let(CfnFaq.S3PathProperty.Companion::unwrap))
     }
 
     /**
@@ -298,7 +298,7 @@ public interface CfnFaqProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

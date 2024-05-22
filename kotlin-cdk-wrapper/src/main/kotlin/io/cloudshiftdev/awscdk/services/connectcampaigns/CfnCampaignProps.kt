@@ -45,6 +45,8 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .answerMachineDetectionConfig(AnswerMachineDetectionConfigProperty.builder()
  * .enableAnswerMachineDetection(false)
+ * // the properties below are optional
+ * .awaitAnswerMachinePrompt(false)
  * .build())
  * .connectQueueArn("connectQueueArn")
  * .connectSourcePhoneNumber("connectSourcePhoneNumber")
@@ -176,14 +178,14 @@ public interface CfnCampaignProps {
      * @param dialerConfig Contains information about the dialer configuration. 
      */
     override fun dialerConfig(dialerConfig: IResolvable) {
-      cdkBuilder.dialerConfig(dialerConfig.let(IResolvable::unwrap))
+      cdkBuilder.dialerConfig(dialerConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param dialerConfig Contains information about the dialer configuration. 
      */
     override fun dialerConfig(dialerConfig: CfnCampaign.DialerConfigProperty) {
-      cdkBuilder.dialerConfig(dialerConfig.let(CfnCampaign.DialerConfigProperty::unwrap))
+      cdkBuilder.dialerConfig(dialerConfig.let(CfnCampaign.DialerConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -205,14 +207,14 @@ public interface CfnCampaignProps {
      * @param outboundCallConfig Contains information about the outbound call configuration. 
      */
     override fun outboundCallConfig(outboundCallConfig: IResolvable) {
-      cdkBuilder.outboundCallConfig(outboundCallConfig.let(IResolvable::unwrap))
+      cdkBuilder.outboundCallConfig(outboundCallConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param outboundCallConfig Contains information about the outbound call configuration. 
      */
     override fun outboundCallConfig(outboundCallConfig: CfnCampaign.OutboundCallConfigProperty) {
-      cdkBuilder.outboundCallConfig(outboundCallConfig.let(CfnCampaign.OutboundCallConfigProperty::unwrap))
+      cdkBuilder.outboundCallConfig(outboundCallConfig.let(CfnCampaign.OutboundCallConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -229,7 +231,7 @@ public interface CfnCampaignProps {
      * For example, { "tags": {"key1":"value1", "key2":"value2"} }.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

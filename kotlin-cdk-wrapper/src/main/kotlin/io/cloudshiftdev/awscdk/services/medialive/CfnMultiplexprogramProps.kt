@@ -248,7 +248,7 @@ public interface CfnMultiplexprogramProps {
      * @param multiplexProgramSettings Multiplex Program settings configuration.
      */
     override fun multiplexProgramSettings(multiplexProgramSettings: IResolvable) {
-      cdkBuilder.multiplexProgramSettings(multiplexProgramSettings.let(IResolvable::unwrap))
+      cdkBuilder.multiplexProgramSettings(multiplexProgramSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -256,7 +256,7 @@ public interface CfnMultiplexprogramProps {
      */
     override
         fun multiplexProgramSettings(multiplexProgramSettings: CfnMultiplexprogram.MultiplexProgramSettingsProperty) {
-      cdkBuilder.multiplexProgramSettings(multiplexProgramSettings.let(CfnMultiplexprogram.MultiplexProgramSettingsProperty::unwrap))
+      cdkBuilder.multiplexProgramSettings(multiplexProgramSettings.let(CfnMultiplexprogram.MultiplexProgramSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -273,7 +273,7 @@ public interface CfnMultiplexprogramProps {
      * @param packetIdentifiersMap Packet identifiers map for a given Multiplex program.
      */
     override fun packetIdentifiersMap(packetIdentifiersMap: IResolvable) {
-      cdkBuilder.packetIdentifiersMap(packetIdentifiersMap.let(IResolvable::unwrap))
+      cdkBuilder.packetIdentifiersMap(packetIdentifiersMap.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -281,7 +281,7 @@ public interface CfnMultiplexprogramProps {
      */
     override
         fun packetIdentifiersMap(packetIdentifiersMap: CfnMultiplexprogram.MultiplexProgramPacketIdentifiersMapProperty) {
-      cdkBuilder.packetIdentifiersMap(packetIdentifiersMap.let(CfnMultiplexprogram.MultiplexProgramPacketIdentifiersMapProperty::unwrap))
+      cdkBuilder.packetIdentifiersMap(packetIdentifiersMap.let(CfnMultiplexprogram.MultiplexProgramPacketIdentifiersMapProperty.Companion::unwrap))
     }
 
     /**
@@ -302,7 +302,7 @@ public interface CfnMultiplexprogramProps {
      * active at one time.
      */
     override fun pipelineDetails(pipelineDetails: IResolvable) {
-      cdkBuilder.pipelineDetails(pipelineDetails.let(IResolvable::unwrap))
+      cdkBuilder.pipelineDetails(pipelineDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**

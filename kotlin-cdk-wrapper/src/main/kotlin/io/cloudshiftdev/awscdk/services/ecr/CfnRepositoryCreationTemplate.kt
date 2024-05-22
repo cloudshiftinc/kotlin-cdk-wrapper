@@ -58,8 +58,8 @@ public open class CfnRepositoryCreationTemplate(
     id: String,
     props: CfnRepositoryCreationTemplateProps,
   ) :
-      this(software.amazon.awscdk.services.ecr.CfnRepositoryCreationTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRepositoryCreationTemplateProps::unwrap))
+      this(software.amazon.awscdk.services.ecr.CfnRepositoryCreationTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRepositoryCreationTemplateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -124,7 +124,7 @@ public open class CfnRepositoryCreationTemplate(
    * This determines how the contents of your repository are encrypted at rest.
    */
   public open fun encryptionConfiguration(`value`: IResolvable) {
-    unwrap(this).setEncryptionConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEncryptionConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -133,7 +133,7 @@ public open class CfnRepositoryCreationTemplate(
    * This determines how the contents of your repository are encrypted at rest.
    */
   public open fun encryptionConfiguration(`value`: EncryptionConfigurationProperty) {
-    unwrap(this).setEncryptionConfiguration(`value`.let(EncryptionConfigurationProperty::unwrap))
+    unwrap(this).setEncryptionConfiguration(`value`.let(EncryptionConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -165,7 +165,7 @@ public open class CfnRepositoryCreationTemplate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -213,7 +213,7 @@ public open class CfnRepositoryCreationTemplate(
    * The tags attached to the resource.
    */
   public open fun resourceTags(`value`: IResolvable) {
-    unwrap(this).setResourceTags(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResourceTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -450,7 +450,7 @@ public open class CfnRepositoryCreationTemplate(
      * determines how the contents of your repository are encrypted at rest. 
      */
     override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -473,7 +473,7 @@ public open class CfnRepositoryCreationTemplate(
      * determines how the contents of your repository are encrypted at rest. 
      */
     override fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
-      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty::unwrap))
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -554,7 +554,7 @@ public open class CfnRepositoryCreationTemplate(
      * @param resourceTags The tags attached to the resource. 
      */
     override fun resourceTags(resourceTags: IResolvable) {
-      cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
+      cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
     }
 
     /**

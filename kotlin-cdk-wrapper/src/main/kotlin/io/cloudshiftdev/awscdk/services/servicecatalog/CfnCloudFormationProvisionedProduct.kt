@@ -76,7 +76,7 @@ public open class CfnCloudFormationProvisionedProduct(
   cdkObject: software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -85,8 +85,8 @@ public open class CfnCloudFormationProvisionedProduct(
     id: String,
     props: CfnCloudFormationProvisionedProductProps,
   ) :
-      this(software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCloudFormationProvisionedProductProps::unwrap))
+      this(software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProvisionedProduct(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCloudFormationProvisionedProductProps.Companion::unwrap))
   )
 
   public constructor(
@@ -135,7 +135,7 @@ public open class CfnCloudFormationProvisionedProduct(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -250,7 +250,7 @@ public open class CfnCloudFormationProvisionedProduct(
    * Parameters specified by the administrator that are required for provisioning the product.
    */
   public open fun provisioningParameters(`value`: IResolvable) {
-    unwrap(this).setProvisioningParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProvisioningParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -277,7 +277,7 @@ public open class CfnCloudFormationProvisionedProduct(
    * product.
    */
   public open fun provisioningPreferences(`value`: IResolvable) {
-    unwrap(this).setProvisioningPreferences(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProvisioningPreferences(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -285,7 +285,7 @@ public open class CfnCloudFormationProvisionedProduct(
    * product.
    */
   public open fun provisioningPreferences(`value`: ProvisioningPreferencesProperty) {
-    unwrap(this).setProvisioningPreferences(`value`.let(ProvisioningPreferencesProperty::unwrap))
+    unwrap(this).setProvisioningPreferences(`value`.let(ProvisioningPreferencesProperty.Companion::unwrap))
   }
 
   /**
@@ -313,7 +313,7 @@ public open class CfnCloudFormationProvisionedProduct(
    * One or more tags.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -720,7 +720,7 @@ public open class CfnCloudFormationProvisionedProduct(
      * provisioning the product. 
      */
     override fun provisioningParameters(provisioningParameters: IResolvable) {
-      cdkBuilder.provisioningParameters(provisioningParameters.let(IResolvable::unwrap))
+      cdkBuilder.provisioningParameters(provisioningParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -753,7 +753,7 @@ public open class CfnCloudFormationProvisionedProduct(
      * product or updating a provisioned product. 
      */
     override fun provisioningPreferences(provisioningPreferences: IResolvable) {
-      cdkBuilder.provisioningPreferences(provisioningPreferences.let(IResolvable::unwrap))
+      cdkBuilder.provisioningPreferences(provisioningPreferences.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -765,7 +765,7 @@ public open class CfnCloudFormationProvisionedProduct(
      * product or updating a provisioned product. 
      */
     override fun provisioningPreferences(provisioningPreferences: ProvisioningPreferencesProperty) {
-      cdkBuilder.provisioningPreferences(provisioningPreferences.let(ProvisioningPreferencesProperty::unwrap))
+      cdkBuilder.provisioningPreferences(provisioningPreferences.let(ProvisioningPreferencesProperty.Companion::unwrap))
     }
 
     /**
@@ -796,7 +796,7 @@ public open class CfnCloudFormationProvisionedProduct(
      * @param tags One or more tags. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

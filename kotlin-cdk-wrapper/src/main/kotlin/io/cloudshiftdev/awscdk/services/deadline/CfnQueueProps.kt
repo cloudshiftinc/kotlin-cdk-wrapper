@@ -271,7 +271,7 @@ public interface CfnQueueProps {
      * These are the Amazon S3 bucket name and the Amazon S3 prefix.
      */
     override fun jobAttachmentSettings(jobAttachmentSettings: IResolvable) {
-      cdkBuilder.jobAttachmentSettings(jobAttachmentSettings.let(IResolvable::unwrap))
+      cdkBuilder.jobAttachmentSettings(jobAttachmentSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -280,7 +280,7 @@ public interface CfnQueueProps {
      */
     override
         fun jobAttachmentSettings(jobAttachmentSettings: CfnQueue.JobAttachmentSettingsProperty) {
-      cdkBuilder.jobAttachmentSettings(jobAttachmentSettings.let(CfnQueue.JobAttachmentSettingsProperty::unwrap))
+      cdkBuilder.jobAttachmentSettings(jobAttachmentSettings.let(CfnQueue.JobAttachmentSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -297,14 +297,14 @@ public interface CfnQueueProps {
      * @param jobRunAsUser Identifies the user for a job.
      */
     override fun jobRunAsUser(jobRunAsUser: IResolvable) {
-      cdkBuilder.jobRunAsUser(jobRunAsUser.let(IResolvable::unwrap))
+      cdkBuilder.jobRunAsUser(jobRunAsUser.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param jobRunAsUser Identifies the user for a job.
      */
     override fun jobRunAsUser(jobRunAsUser: CfnQueue.JobRunAsUserProperty) {
-      cdkBuilder.jobRunAsUser(jobRunAsUser.let(CfnQueue.JobRunAsUserProperty::unwrap))
+      cdkBuilder.jobRunAsUser(jobRunAsUser.let(CfnQueue.JobRunAsUserProperty.Companion::unwrap))
     }
 
     /**

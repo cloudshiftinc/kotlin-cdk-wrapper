@@ -41,12 +41,12 @@ public open class WindowsImage(
   cdkObject: software.amazon.awscdk.services.ec2.WindowsImage,
 ) : GenericSSMParameterImage(cdkObject) {
   public constructor(version: WindowsVersion) :
-      this(software.amazon.awscdk.services.ec2.WindowsImage(version.let(WindowsVersion::unwrap))
+      this(software.amazon.awscdk.services.ec2.WindowsImage(version.let(WindowsVersion.Companion::unwrap))
   )
 
   public constructor(version: WindowsVersion, props: WindowsImageProps) :
-      this(software.amazon.awscdk.services.ec2.WindowsImage(version.let(WindowsVersion::unwrap),
-      props.let(WindowsImageProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.WindowsImage(version.let(WindowsVersion.Companion::unwrap),
+      props.let(WindowsImageProps.Companion::unwrap))
   )
 
   public constructor(version: WindowsVersion, props: WindowsImageProps.Builder.() -> Unit) :
@@ -82,7 +82,7 @@ public open class WindowsImage(
      * @param userData Initial user data. 
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.WindowsImage = cdkBuilder.build()

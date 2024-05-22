@@ -132,21 +132,21 @@ public interface S3DataSource {
      * @param s3DataDistributionType S3 Data Distribution Type.
      */
     override fun s3DataDistributionType(s3DataDistributionType: S3DataDistributionType) {
-      cdkBuilder.s3DataDistributionType(s3DataDistributionType.let(S3DataDistributionType::unwrap))
+      cdkBuilder.s3DataDistributionType(s3DataDistributionType.let(S3DataDistributionType.Companion::unwrap))
     }
 
     /**
      * @param s3DataType S3 Data Type.
      */
     override fun s3DataType(s3DataType: S3DataType) {
-      cdkBuilder.s3DataType(s3DataType.let(S3DataType::unwrap))
+      cdkBuilder.s3DataType(s3DataType.let(S3DataType.Companion::unwrap))
     }
 
     /**
      * @param s3Location S3 Uri. 
      */
     override fun s3Location(s3Location: S3Location) {
-      cdkBuilder.s3Location(s3Location.let(S3Location::unwrap))
+      cdkBuilder.s3Location(s3Location.let(S3Location.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.S3DataSource =

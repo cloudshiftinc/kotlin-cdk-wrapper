@@ -100,7 +100,7 @@ public interface Device {
      * By default, the container has permissions for read, write, and mknod for the device.
      */
     override fun permissions(permissions: List<DevicePermission>) {
-      cdkBuilder.permissions(permissions.map(DevicePermission::unwrap))
+      cdkBuilder.permissions(permissions.map(DevicePermission.Companion::unwrap))
     }
 
     /**

@@ -89,7 +89,7 @@ public interface FileSystemAttributes {
      * @param securityGroup The security group of the file system. 
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.efs.FileSystemAttributes =

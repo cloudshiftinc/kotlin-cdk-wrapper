@@ -22,7 +22,8 @@ public open class SortKeyStep(
   cdkObject: software.amazon.awscdk.services.appsync.SortKeyStep,
 ) : CdkObject(cdkObject) {
   public constructor(pkey: Assign, skey: String) :
-      this(software.amazon.awscdk.services.appsync.SortKeyStep(pkey.let(Assign::unwrap), skey)
+      this(software.amazon.awscdk.services.appsync.SortKeyStep(pkey.let(Assign.Companion::unwrap),
+      skey)
   )
 
   /**

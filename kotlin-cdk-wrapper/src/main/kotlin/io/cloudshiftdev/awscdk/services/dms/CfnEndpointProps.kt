@@ -1364,7 +1364,7 @@ public interface CfnEndpointProps {
      * *AWS Database Migration Service User Guide* .
      */
     override fun docDbSettings(docDbSettings: IResolvable) {
-      cdkBuilder.docDbSettings(docDbSettings.let(IResolvable::unwrap))
+      cdkBuilder.docDbSettings(docDbSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1377,7 +1377,7 @@ public interface CfnEndpointProps {
      * *AWS Database Migration Service User Guide* .
      */
     override fun docDbSettings(docDbSettings: CfnEndpoint.DocDbSettingsProperty) {
-      cdkBuilder.docDbSettings(docDbSettings.let(CfnEndpoint.DocDbSettingsProperty::unwrap))
+      cdkBuilder.docDbSettings(docDbSettings.let(CfnEndpoint.DocDbSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -1401,7 +1401,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun dynamoDbSettings(dynamoDbSettings: IResolvable) {
-      cdkBuilder.dynamoDbSettings(dynamoDbSettings.let(IResolvable::unwrap))
+      cdkBuilder.dynamoDbSettings(dynamoDbSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1411,7 +1411,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun dynamoDbSettings(dynamoDbSettings: CfnEndpoint.DynamoDbSettingsProperty) {
-      cdkBuilder.dynamoDbSettings(dynamoDbSettings.let(CfnEndpoint.DynamoDbSettingsProperty::unwrap))
+      cdkBuilder.dynamoDbSettings(dynamoDbSettings.let(CfnEndpoint.DynamoDbSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -1434,7 +1434,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun elasticsearchSettings(elasticsearchSettings: IResolvable) {
-      cdkBuilder.elasticsearchSettings(elasticsearchSettings.let(IResolvable::unwrap))
+      cdkBuilder.elasticsearchSettings(elasticsearchSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1446,7 +1446,7 @@ public interface CfnEndpointProps {
      */
     override
         fun elasticsearchSettings(elasticsearchSettings: CfnEndpoint.ElasticsearchSettingsProperty) {
-      cdkBuilder.elasticsearchSettings(elasticsearchSettings.let(CfnEndpoint.ElasticsearchSettingsProperty::unwrap))
+      cdkBuilder.elasticsearchSettings(elasticsearchSettings.let(CfnEndpoint.ElasticsearchSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -1512,7 +1512,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun gcpMySqlSettings(gcpMySqlSettings: IResolvable) {
-      cdkBuilder.gcpMySqlSettings(gcpMySqlSettings.let(IResolvable::unwrap))
+      cdkBuilder.gcpMySqlSettings(gcpMySqlSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1523,7 +1523,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun gcpMySqlSettings(gcpMySqlSettings: CfnEndpoint.GcpMySQLSettingsProperty) {
-      cdkBuilder.gcpMySqlSettings(gcpMySqlSettings.let(CfnEndpoint.GcpMySQLSettingsProperty::unwrap))
+      cdkBuilder.gcpMySqlSettings(gcpMySqlSettings.let(CfnEndpoint.GcpMySQLSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -1547,7 +1547,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun ibmDb2Settings(ibmDb2Settings: IResolvable) {
-      cdkBuilder.ibmDb2Settings(ibmDb2Settings.let(IResolvable::unwrap))
+      cdkBuilder.ibmDb2Settings(ibmDb2Settings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1558,7 +1558,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun ibmDb2Settings(ibmDb2Settings: CfnEndpoint.IbmDb2SettingsProperty) {
-      cdkBuilder.ibmDb2Settings(ibmDb2Settings.let(CfnEndpoint.IbmDb2SettingsProperty::unwrap))
+      cdkBuilder.ibmDb2Settings(ibmDb2Settings.let(CfnEndpoint.IbmDb2SettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -1582,7 +1582,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun kafkaSettings(kafkaSettings: IResolvable) {
-      cdkBuilder.kafkaSettings(kafkaSettings.let(IResolvable::unwrap))
+      cdkBuilder.kafkaSettings(kafkaSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1593,7 +1593,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun kafkaSettings(kafkaSettings: CfnEndpoint.KafkaSettingsProperty) {
-      cdkBuilder.kafkaSettings(kafkaSettings.let(CfnEndpoint.KafkaSettingsProperty::unwrap))
+      cdkBuilder.kafkaSettings(kafkaSettings.let(CfnEndpoint.KafkaSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -1617,7 +1617,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun kinesisSettings(kinesisSettings: IResolvable) {
-      cdkBuilder.kinesisSettings(kinesisSettings.let(IResolvable::unwrap))
+      cdkBuilder.kinesisSettings(kinesisSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1629,7 +1629,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun kinesisSettings(kinesisSettings: CfnEndpoint.KinesisSettingsProperty) {
-      cdkBuilder.kinesisSettings(kinesisSettings.let(CfnEndpoint.KinesisSettingsProperty::unwrap))
+      cdkBuilder.kinesisSettings(kinesisSettings.let(CfnEndpoint.KinesisSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -1670,7 +1670,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun microsoftSqlServerSettings(microsoftSqlServerSettings: IResolvable) {
-      cdkBuilder.microsoftSqlServerSettings(microsoftSqlServerSettings.let(IResolvable::unwrap))
+      cdkBuilder.microsoftSqlServerSettings(microsoftSqlServerSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1685,7 +1685,7 @@ public interface CfnEndpointProps {
      */
     override
         fun microsoftSqlServerSettings(microsoftSqlServerSettings: CfnEndpoint.MicrosoftSqlServerSettingsProperty) {
-      cdkBuilder.microsoftSqlServerSettings(microsoftSqlServerSettings.let(CfnEndpoint.MicrosoftSqlServerSettingsProperty::unwrap))
+      cdkBuilder.microsoftSqlServerSettings(microsoftSqlServerSettings.let(CfnEndpoint.MicrosoftSqlServerSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -1713,7 +1713,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun mongoDbSettings(mongoDbSettings: IResolvable) {
-      cdkBuilder.mongoDbSettings(mongoDbSettings.let(IResolvable::unwrap))
+      cdkBuilder.mongoDbSettings(mongoDbSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1724,7 +1724,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun mongoDbSettings(mongoDbSettings: CfnEndpoint.MongoDbSettingsProperty) {
-      cdkBuilder.mongoDbSettings(mongoDbSettings.let(CfnEndpoint.MongoDbSettingsProperty::unwrap))
+      cdkBuilder.mongoDbSettings(mongoDbSettings.let(CfnEndpoint.MongoDbSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -1750,7 +1750,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun mySqlSettings(mySqlSettings: IResolvable) {
-      cdkBuilder.mySqlSettings(mySqlSettings.let(IResolvable::unwrap))
+      cdkBuilder.mySqlSettings(mySqlSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1763,7 +1763,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun mySqlSettings(mySqlSettings: CfnEndpoint.MySqlSettingsProperty) {
-      cdkBuilder.mySqlSettings(mySqlSettings.let(CfnEndpoint.MySqlSettingsProperty::unwrap))
+      cdkBuilder.mySqlSettings(mySqlSettings.let(CfnEndpoint.MySqlSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -1788,7 +1788,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun neptuneSettings(neptuneSettings: IResolvable) {
-      cdkBuilder.neptuneSettings(neptuneSettings.let(IResolvable::unwrap))
+      cdkBuilder.neptuneSettings(neptuneSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1799,7 +1799,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun neptuneSettings(neptuneSettings: CfnEndpoint.NeptuneSettingsProperty) {
-      cdkBuilder.neptuneSettings(neptuneSettings.let(CfnEndpoint.NeptuneSettingsProperty::unwrap))
+      cdkBuilder.neptuneSettings(neptuneSettings.let(CfnEndpoint.NeptuneSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -1825,7 +1825,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun oracleSettings(oracleSettings: IResolvable) {
-      cdkBuilder.oracleSettings(oracleSettings.let(IResolvable::unwrap))
+      cdkBuilder.oracleSettings(oracleSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1838,7 +1838,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun oracleSettings(oracleSettings: CfnEndpoint.OracleSettingsProperty) {
-      cdkBuilder.oracleSettings(oracleSettings.let(CfnEndpoint.OracleSettingsProperty::unwrap))
+      cdkBuilder.oracleSettings(oracleSettings.let(CfnEndpoint.OracleSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -1881,7 +1881,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun postgreSqlSettings(postgreSqlSettings: IResolvable) {
-      cdkBuilder.postgreSqlSettings(postgreSqlSettings.let(IResolvable::unwrap))
+      cdkBuilder.postgreSqlSettings(postgreSqlSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1895,7 +1895,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun postgreSqlSettings(postgreSqlSettings: CfnEndpoint.PostgreSqlSettingsProperty) {
-      cdkBuilder.postgreSqlSettings(postgreSqlSettings.let(CfnEndpoint.PostgreSqlSettingsProperty::unwrap))
+      cdkBuilder.postgreSqlSettings(postgreSqlSettings.let(CfnEndpoint.PostgreSqlSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -1922,7 +1922,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun redisSettings(redisSettings: IResolvable) {
-      cdkBuilder.redisSettings(redisSettings.let(IResolvable::unwrap))
+      cdkBuilder.redisSettings(redisSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1933,7 +1933,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun redisSettings(redisSettings: CfnEndpoint.RedisSettingsProperty) {
-      cdkBuilder.redisSettings(redisSettings.let(CfnEndpoint.RedisSettingsProperty::unwrap))
+      cdkBuilder.redisSettings(redisSettings.let(CfnEndpoint.RedisSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -1956,7 +1956,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun redshiftSettings(redshiftSettings: IResolvable) {
-      cdkBuilder.redshiftSettings(redshiftSettings.let(IResolvable::unwrap))
+      cdkBuilder.redshiftSettings(redshiftSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1967,7 +1967,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun redshiftSettings(redshiftSettings: CfnEndpoint.RedshiftSettingsProperty) {
-      cdkBuilder.redshiftSettings(redshiftSettings.let(CfnEndpoint.RedshiftSettingsProperty::unwrap))
+      cdkBuilder.redshiftSettings(redshiftSettings.let(CfnEndpoint.RedshiftSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -2009,7 +2009,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun s3Settings(s3Settings: IResolvable) {
-      cdkBuilder.s3Settings(s3Settings.let(IResolvable::unwrap))
+      cdkBuilder.s3Settings(s3Settings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2022,7 +2022,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun s3Settings(s3Settings: CfnEndpoint.S3SettingsProperty) {
-      cdkBuilder.s3Settings(s3Settings.let(CfnEndpoint.S3SettingsProperty::unwrap))
+      cdkBuilder.s3Settings(s3Settings.let(CfnEndpoint.S3SettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -2066,7 +2066,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun sybaseSettings(sybaseSettings: IResolvable) {
-      cdkBuilder.sybaseSettings(sybaseSettings.let(IResolvable::unwrap))
+      cdkBuilder.sybaseSettings(sybaseSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2079,7 +2079,7 @@ public interface CfnEndpointProps {
      * in the *AWS Database Migration Service User Guide* .
      */
     override fun sybaseSettings(sybaseSettings: CfnEndpoint.SybaseSettingsProperty) {
-      cdkBuilder.sybaseSettings(sybaseSettings.let(CfnEndpoint.SybaseSettingsProperty::unwrap))
+      cdkBuilder.sybaseSettings(sybaseSettings.let(CfnEndpoint.SybaseSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -2101,7 +2101,7 @@ public interface CfnEndpointProps {
      * @param tags One or more tags to be assigned to the endpoint.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

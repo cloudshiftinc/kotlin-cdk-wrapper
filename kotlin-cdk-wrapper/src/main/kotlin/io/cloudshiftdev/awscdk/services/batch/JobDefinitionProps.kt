@@ -171,7 +171,7 @@ public interface JobDefinitionProps {
      * @param retryStrategies Defines the retry behavior for this job.
      */
     override fun retryStrategies(retryStrategies: List<RetryStrategy>) {
-      cdkBuilder.retryStrategies(retryStrategies.map(RetryStrategy::unwrap))
+      cdkBuilder.retryStrategies(retryStrategies.map(RetryStrategy.Companion::unwrap))
     }
 
     /**
@@ -196,7 +196,7 @@ public interface JobDefinitionProps {
      * Batch terminates your jobs if they aren't finished.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.batch.JobDefinitionProps =

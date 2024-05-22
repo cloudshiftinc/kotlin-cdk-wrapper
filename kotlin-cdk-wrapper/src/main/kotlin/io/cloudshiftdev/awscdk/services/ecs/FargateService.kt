@@ -54,8 +54,8 @@ public open class FargateService(
     id: String,
     props: FargateServiceProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.FargateService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(FargateServiceProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.FargateService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(FargateServiceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -461,7 +461,7 @@ public open class FargateService(
      */
     override
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>) {
-      cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy::unwrap))
+      cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy.Companion::unwrap))
     }
 
     /**
@@ -487,7 +487,7 @@ public open class FargateService(
      * @param circuitBreaker Whether to enable the deployment circuit breaker. 
      */
     override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
-      cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker::unwrap))
+      cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker.Companion::unwrap))
     }
 
     /**
@@ -514,7 +514,7 @@ public open class FargateService(
      * discovery. 
      */
     override fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
-      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions::unwrap))
+      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions.Companion::unwrap))
     }
 
     /**
@@ -536,7 +536,7 @@ public open class FargateService(
      * @param cluster The name of the cluster that hosts the service. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -549,7 +549,7 @@ public open class FargateService(
      * at least one enters a state of alarm during the deployment or bake time. 
      */
     override fun deploymentAlarms(deploymentAlarms: DeploymentAlarmConfig) {
-      cdkBuilder.deploymentAlarms(deploymentAlarms.let(DeploymentAlarmConfig::unwrap))
+      cdkBuilder.deploymentAlarms(deploymentAlarms.let(DeploymentAlarmConfig.Companion::unwrap))
     }
 
     /**
@@ -578,7 +578,7 @@ public open class FargateService(
      * @param deploymentController Specifies which deployment controller to use for the service. 
      */
     override fun deploymentController(deploymentController: DeploymentController) {
-      cdkBuilder.deploymentController(deploymentController.let(DeploymentController::unwrap))
+      cdkBuilder.deploymentController(deploymentController.let(DeploymentController.Companion::unwrap))
     }
 
     /**
@@ -650,7 +650,7 @@ public open class FargateService(
      * started. 
      */
     override fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
-      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration::unwrap))
+      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -694,7 +694,7 @@ public open class FargateService(
      * @param platformVersion The platform version on which to run your service. 
      */
     override fun platformVersion(platformVersion: FargatePlatformVersion) {
-      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion::unwrap))
+      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion.Companion::unwrap))
     }
 
     /**
@@ -710,7 +710,7 @@ public open class FargateService(
      * service to the tasks in the service. 
      */
     override fun propagateTags(propagateTags: PropagatedTagSource) {
-      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource.Companion::unwrap))
     }
 
     /**
@@ -723,7 +723,7 @@ public open class FargateService(
      * @param securityGroups The security groups to associate with the service. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -747,7 +747,7 @@ public open class FargateService(
      * @param serviceConnectConfiguration Configuration for Service Connect. 
      */
     override fun serviceConnectConfiguration(serviceConnectConfiguration: ServiceConnectProps) {
-      cdkBuilder.serviceConnectConfiguration(serviceConnectConfiguration.let(ServiceConnectProps::unwrap))
+      cdkBuilder.serviceConnectConfiguration(serviceConnectConfiguration.let(ServiceConnectProps.Companion::unwrap))
     }
 
     /**
@@ -783,7 +783,7 @@ public open class FargateService(
      * @param taskDefinition The task definition to use for tasks in the service. 
      */
     override fun taskDefinition(taskDefinition: TaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(TaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(TaskDefinition.Companion::unwrap))
     }
 
     /**
@@ -795,7 +795,7 @@ public open class FargateService(
      * latest active task revision. 
      */
     override fun taskDefinitionRevision(taskDefinitionRevision: TaskDefinitionRevision) {
-      cdkBuilder.taskDefinitionRevision(taskDefinitionRevision.let(TaskDefinitionRevision::unwrap))
+      cdkBuilder.taskDefinitionRevision(taskDefinitionRevision.let(TaskDefinitionRevision.Companion::unwrap))
     }
 
     /**
@@ -809,7 +809,7 @@ public open class FargateService(
      * @param volumeConfigurations Configuration details for a volume used by the service. 
      */
     override fun volumeConfigurations(volumeConfigurations: List<ServiceManagedVolume>) {
-      cdkBuilder.volumeConfigurations(volumeConfigurations.map(ServiceManagedVolume::unwrap))
+      cdkBuilder.volumeConfigurations(volumeConfigurations.map(ServiceManagedVolume.Companion::unwrap))
     }
 
     /**
@@ -834,7 +834,7 @@ public open class FargateService(
      * @param vpcSubnets The subnets to associate with the service. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -859,7 +859,7 @@ public open class FargateService(
       id: String,
       fargateServiceArn: String,
     ): IFargateService =
-        software.amazon.awscdk.services.ecs.FargateService.fromFargateServiceArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ecs.FargateService.fromFargateServiceArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, fargateServiceArn).let(IFargateService::wrap)
 
     public fun fromFargateServiceAttributes(
@@ -867,8 +867,8 @@ public open class FargateService(
       id: String,
       attrs: FargateServiceAttributes,
     ): IBaseService =
-        software.amazon.awscdk.services.ecs.FargateService.fromFargateServiceAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(FargateServiceAttributes::unwrap)).let(IBaseService::wrap)
+        software.amazon.awscdk.services.ecs.FargateService.fromFargateServiceAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(FargateServiceAttributes.Companion::unwrap)).let(IBaseService::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3c5efe0a0970d19a1c51a45728e582eb1f09f35537ee09070a9268210df4858a")

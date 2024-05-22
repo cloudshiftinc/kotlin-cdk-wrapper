@@ -113,8 +113,8 @@ public open class CfnGraphQLApi(
     id: String,
     props: CfnGraphQLApiProps,
   ) :
-      this(software.amazon.awscdk.services.appsync.CfnGraphQLApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGraphQLApiProps::unwrap))
+      this(software.amazon.awscdk.services.appsync.CfnGraphQLApi(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGraphQLApiProps.Companion::unwrap))
   )
 
   public constructor(
@@ -134,7 +134,7 @@ public open class CfnGraphQLApi(
    * A list of additional authentication providers for the `GraphqlApi` API.
    */
   public open fun additionalAuthenticationProviders(`value`: IResolvable) {
-    unwrap(this).setAdditionalAuthenticationProviders(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAdditionalAuthenticationProviders(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -230,14 +230,14 @@ public open class CfnGraphQLApi(
    * Enables and controls the enhanced metrics feature.
    */
   public open fun enhancedMetricsConfig(`value`: IResolvable) {
-    unwrap(this).setEnhancedMetricsConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnhancedMetricsConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Enables and controls the enhanced metrics feature.
    */
   public open fun enhancedMetricsConfig(`value`: EnhancedMetricsConfigProperty) {
-    unwrap(this).setEnhancedMetricsConfig(`value`.let(EnhancedMetricsConfigProperty::unwrap))
+    unwrap(this).setEnhancedMetricsConfig(`value`.let(EnhancedMetricsConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -266,7 +266,7 @@ public open class CfnGraphQLApi(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -292,7 +292,7 @@ public open class CfnGraphQLApi(
    * using the `AWS_LAMBDA` authorizer mode.
    */
   public open fun lambdaAuthorizerConfig(`value`: IResolvable) {
-    unwrap(this).setLambdaAuthorizerConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLambdaAuthorizerConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -300,7 +300,7 @@ public open class CfnGraphQLApi(
    * using the `AWS_LAMBDA` authorizer mode.
    */
   public open fun lambdaAuthorizerConfig(`value`: LambdaAuthorizerConfigProperty) {
-    unwrap(this).setLambdaAuthorizerConfig(`value`.let(LambdaAuthorizerConfigProperty::unwrap))
+    unwrap(this).setLambdaAuthorizerConfig(`value`.let(LambdaAuthorizerConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -322,14 +322,14 @@ public open class CfnGraphQLApi(
    * The Amazon CloudWatch Logs configuration.
    */
   public open fun logConfig(`value`: IResolvable) {
-    unwrap(this).setLogConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLogConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The Amazon CloudWatch Logs configuration.
    */
   public open fun logConfig(`value`: LogConfigProperty) {
-    unwrap(this).setLogConfig(`value`.let(LogConfigProperty::unwrap))
+    unwrap(this).setLogConfig(`value`.let(LogConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -373,14 +373,14 @@ public open class CfnGraphQLApi(
    * The OpenID Connect configuration.
    */
   public open fun openIdConnectConfig(`value`: IResolvable) {
-    unwrap(this).setOpenIdConnectConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOpenIdConnectConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The OpenID Connect configuration.
    */
   public open fun openIdConnectConfig(`value`: OpenIDConnectConfigProperty) {
-    unwrap(this).setOpenIdConnectConfig(`value`.let(OpenIDConnectConfigProperty::unwrap))
+    unwrap(this).setOpenIdConnectConfig(`value`.let(OpenIDConnectConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -442,7 +442,7 @@ public open class CfnGraphQLApi(
    * An arbitrary set of tags (key-value pairs) for this GraphQL API.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -461,7 +461,7 @@ public open class CfnGraphQLApi(
    * endpoint.
    */
   public open fun userPoolConfig(`value`: IResolvable) {
-    unwrap(this).setUserPoolConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUserPoolConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -469,7 +469,7 @@ public open class CfnGraphQLApi(
    * endpoint.
    */
   public open fun userPoolConfig(`value`: UserPoolConfigProperty) {
-    unwrap(this).setUserPoolConfig(`value`.let(UserPoolConfigProperty::unwrap))
+    unwrap(this).setUserPoolConfig(`value`.let(UserPoolConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -509,7 +509,7 @@ public open class CfnGraphQLApi(
    * A flag indicating whether to use AWS X-Ray tracing for this `GraphqlApi` .
    */
   public open fun xrayEnabled(`value`: IResolvable) {
-    unwrap(this).setXrayEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setXrayEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -907,7 +907,7 @@ public open class CfnGraphQLApi(
      * the `GraphqlApi` API. 
      */
     override fun additionalAuthenticationProviders(additionalAuthenticationProviders: IResolvable) {
-      cdkBuilder.additionalAuthenticationProviders(additionalAuthenticationProviders.let(IResolvable::unwrap))
+      cdkBuilder.additionalAuthenticationProviders(additionalAuthenticationProviders.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -981,7 +981,7 @@ public open class CfnGraphQLApi(
      * @param enhancedMetricsConfig Enables and controls the enhanced metrics feature. 
      */
     override fun enhancedMetricsConfig(enhancedMetricsConfig: IResolvable) {
-      cdkBuilder.enhancedMetricsConfig(enhancedMetricsConfig.let(IResolvable::unwrap))
+      cdkBuilder.enhancedMetricsConfig(enhancedMetricsConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1000,7 +1000,7 @@ public open class CfnGraphQLApi(
      * @param enhancedMetricsConfig Enables and controls the enhanced metrics feature. 
      */
     override fun enhancedMetricsConfig(enhancedMetricsConfig: EnhancedMetricsConfigProperty) {
-      cdkBuilder.enhancedMetricsConfig(enhancedMetricsConfig.let(EnhancedMetricsConfigProperty::unwrap))
+      cdkBuilder.enhancedMetricsConfig(enhancedMetricsConfig.let(EnhancedMetricsConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1072,7 +1072,7 @@ public open class CfnGraphQLApi(
      * authorize AWS AppSync API access when using the `AWS_LAMBDA` authorizer mode. 
      */
     override fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: IResolvable) {
-      cdkBuilder.lambdaAuthorizerConfig(lambdaAuthorizerConfig.let(IResolvable::unwrap))
+      cdkBuilder.lambdaAuthorizerConfig(lambdaAuthorizerConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1086,7 +1086,7 @@ public open class CfnGraphQLApi(
      * authorize AWS AppSync API access when using the `AWS_LAMBDA` authorizer mode. 
      */
     override fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: LambdaAuthorizerConfigProperty) {
-      cdkBuilder.lambdaAuthorizerConfig(lambdaAuthorizerConfig.let(LambdaAuthorizerConfigProperty::unwrap))
+      cdkBuilder.lambdaAuthorizerConfig(lambdaAuthorizerConfig.let(LambdaAuthorizerConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1112,7 +1112,7 @@ public open class CfnGraphQLApi(
      * @param logConfig The Amazon CloudWatch Logs configuration. 
      */
     override fun logConfig(logConfig: IResolvable) {
-      cdkBuilder.logConfig(logConfig.let(IResolvable::unwrap))
+      cdkBuilder.logConfig(logConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1122,7 +1122,7 @@ public open class CfnGraphQLApi(
      * @param logConfig The Amazon CloudWatch Logs configuration. 
      */
     override fun logConfig(logConfig: LogConfigProperty) {
-      cdkBuilder.logConfig(logConfig.let(LogConfigProperty::unwrap))
+      cdkBuilder.logConfig(logConfig.let(LogConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1168,7 +1168,7 @@ public open class CfnGraphQLApi(
      * @param openIdConnectConfig The OpenID Connect configuration. 
      */
     override fun openIdConnectConfig(openIdConnectConfig: IResolvable) {
-      cdkBuilder.openIdConnectConfig(openIdConnectConfig.let(IResolvable::unwrap))
+      cdkBuilder.openIdConnectConfig(openIdConnectConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1178,7 +1178,7 @@ public open class CfnGraphQLApi(
      * @param openIdConnectConfig The OpenID Connect configuration. 
      */
     override fun openIdConnectConfig(openIdConnectConfig: OpenIDConnectConfigProperty) {
-      cdkBuilder.openIdConnectConfig(openIdConnectConfig.let(OpenIDConnectConfigProperty::unwrap))
+      cdkBuilder.openIdConnectConfig(openIdConnectConfig.let(OpenIDConnectConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1243,7 +1243,7 @@ public open class CfnGraphQLApi(
      * @param tags An arbitrary set of tags (key-value pairs) for this GraphQL API. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1263,7 +1263,7 @@ public open class CfnGraphQLApi(
      * pools with your GraphQL endpoint. 
      */
     override fun userPoolConfig(userPoolConfig: IResolvable) {
-      cdkBuilder.userPoolConfig(userPoolConfig.let(IResolvable::unwrap))
+      cdkBuilder.userPoolConfig(userPoolConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1275,7 +1275,7 @@ public open class CfnGraphQLApi(
      * pools with your GraphQL endpoint. 
      */
     override fun userPoolConfig(userPoolConfig: UserPoolConfigProperty) {
-      cdkBuilder.userPoolConfig(userPoolConfig.let(UserPoolConfigProperty::unwrap))
+      cdkBuilder.userPoolConfig(userPoolConfig.let(UserPoolConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1326,7 +1326,7 @@ public open class CfnGraphQLApi(
      * 
      */
     override fun xrayEnabled(xrayEnabled: IResolvable) {
-      cdkBuilder.xrayEnabled(xrayEnabled.let(IResolvable::unwrap))
+      cdkBuilder.xrayEnabled(xrayEnabled.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appsync.CfnGraphQLApi = cdkBuilder.build()
@@ -1507,14 +1507,14 @@ public open class CfnGraphQLApi(
        * @param lambdaAuthorizerConfig Configuration for AWS Lambda function authorization.
        */
       override fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: IResolvable) {
-        cdkBuilder.lambdaAuthorizerConfig(lambdaAuthorizerConfig.let(IResolvable::unwrap))
+        cdkBuilder.lambdaAuthorizerConfig(lambdaAuthorizerConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param lambdaAuthorizerConfig Configuration for AWS Lambda function authorization.
        */
       override fun lambdaAuthorizerConfig(lambdaAuthorizerConfig: LambdaAuthorizerConfigProperty) {
-        cdkBuilder.lambdaAuthorizerConfig(lambdaAuthorizerConfig.let(LambdaAuthorizerConfigProperty::unwrap))
+        cdkBuilder.lambdaAuthorizerConfig(lambdaAuthorizerConfig.let(LambdaAuthorizerConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1530,14 +1530,14 @@ public open class CfnGraphQLApi(
        * @param openIdConnectConfig The OIDC configuration.
        */
       override fun openIdConnectConfig(openIdConnectConfig: IResolvable) {
-        cdkBuilder.openIdConnectConfig(openIdConnectConfig.let(IResolvable::unwrap))
+        cdkBuilder.openIdConnectConfig(openIdConnectConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param openIdConnectConfig The OIDC configuration.
        */
       override fun openIdConnectConfig(openIdConnectConfig: OpenIDConnectConfigProperty) {
-        cdkBuilder.openIdConnectConfig(openIdConnectConfig.let(OpenIDConnectConfigProperty::unwrap))
+        cdkBuilder.openIdConnectConfig(openIdConnectConfig.let(OpenIDConnectConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1553,14 +1553,14 @@ public open class CfnGraphQLApi(
        * @param userPoolConfig The Amazon Cognito user pool configuration.
        */
       override fun userPoolConfig(userPoolConfig: IResolvable) {
-        cdkBuilder.userPoolConfig(userPoolConfig.let(IResolvable::unwrap))
+        cdkBuilder.userPoolConfig(userPoolConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param userPoolConfig The Amazon Cognito user pool configuration.
        */
       override fun userPoolConfig(userPoolConfig: CognitoUserPoolConfigProperty) {
-        cdkBuilder.userPoolConfig(userPoolConfig.let(CognitoUserPoolConfigProperty::unwrap))
+        cdkBuilder.userPoolConfig(userPoolConfig.let(CognitoUserPoolConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2375,7 +2375,7 @@ public open class CfnGraphQLApi(
        * as headers, context, and evaluated mapping templates, regardless of logging level.
        */
       override fun excludeVerboseContent(excludeVerboseContent: IResolvable) {
-        cdkBuilder.excludeVerboseContent(excludeVerboseContent.let(IResolvable::unwrap))
+        cdkBuilder.excludeVerboseContent(excludeVerboseContent.let(IResolvable.Companion::unwrap))
       }
 
       /**

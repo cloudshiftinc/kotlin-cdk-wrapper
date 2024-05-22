@@ -24,6 +24,7 @@ import kotlin.jvm.JvmName
  * AwsCustomResource.Builder.create(this, "Customized")
  * .role(myRole) // must be assumable by the `lambda.amazonaws.com` service principal
  * .timeout(Duration.minutes(10)) // defaults to 2 minutes
+ * .memorySize(1025) // defaults to 512 if installLatestAwsSdk is true
  * .logGroup(LogGroup.Builder.create(this, "AwsCustomResourceLogs")
  * .retention(RetentionDays.ONE_DAY)
  * .build())
@@ -54,7 +55,7 @@ public open class Duration(
    * @param rhs 
    */
   public open fun minus(rhs: Duration): Duration =
-      unwrap(this).minus(rhs.let(Duration::unwrap)).let(Duration::wrap)
+      unwrap(this).minus(rhs.let(Duration.Companion::unwrap)).let(Duration::wrap)
 
   /**
    * Add two Durations together.
@@ -62,7 +63,7 @@ public open class Duration(
    * @param rhs 
    */
   public open fun plus(rhs: Duration): Duration =
-      unwrap(this).plus(rhs.let(Duration::unwrap)).let(Duration::wrap)
+      unwrap(this).plus(rhs.let(Duration.Companion::unwrap)).let(Duration::wrap)
 
   /**
    * Return the total number of days in this Duration.
@@ -79,7 +80,7 @@ public open class Duration(
    * @param opts
    */
   public open fun toDays(opts: TimeConversionOptions): Number =
-      unwrap(this).toDays(opts.let(TimeConversionOptions::unwrap))
+      unwrap(this).toDays(opts.let(TimeConversionOptions.Companion::unwrap))
 
   /**
    * Return the total number of days in this Duration.
@@ -107,7 +108,7 @@ public open class Duration(
    * @param opts
    */
   public open fun toHours(opts: TimeConversionOptions): Number =
-      unwrap(this).toHours(opts.let(TimeConversionOptions::unwrap))
+      unwrap(this).toHours(opts.let(TimeConversionOptions.Companion::unwrap))
 
   /**
    * Return the total number of hours in this Duration.
@@ -148,7 +149,7 @@ public open class Duration(
    * @param opts
    */
   public open fun toMilliseconds(opts: TimeConversionOptions): Number =
-      unwrap(this).toMilliseconds(opts.let(TimeConversionOptions::unwrap))
+      unwrap(this).toMilliseconds(opts.let(TimeConversionOptions.Companion::unwrap))
 
   /**
    * Return the total number of milliseconds in this Duration.
@@ -176,7 +177,7 @@ public open class Duration(
    * @param opts
    */
   public open fun toMinutes(opts: TimeConversionOptions): Number =
-      unwrap(this).toMinutes(opts.let(TimeConversionOptions::unwrap))
+      unwrap(this).toMinutes(opts.let(TimeConversionOptions.Companion::unwrap))
 
   /**
    * Return the total number of minutes in this Duration.
@@ -204,7 +205,7 @@ public open class Duration(
    * @param opts
    */
   public open fun toSeconds(opts: TimeConversionOptions): Number =
-      unwrap(this).toSeconds(opts.let(TimeConversionOptions::unwrap))
+      unwrap(this).toSeconds(opts.let(TimeConversionOptions.Companion::unwrap))
 
   /**
    * Return the total number of seconds in this Duration.

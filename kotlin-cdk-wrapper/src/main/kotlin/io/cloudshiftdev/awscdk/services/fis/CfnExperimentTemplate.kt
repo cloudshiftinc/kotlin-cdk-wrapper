@@ -106,8 +106,8 @@ public open class CfnExperimentTemplate(
     id: String,
     props: CfnExperimentTemplateProps,
   ) :
-      this(software.amazon.awscdk.services.fis.CfnExperimentTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnExperimentTemplateProps::unwrap))
+      this(software.amazon.awscdk.services.fis.CfnExperimentTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnExperimentTemplateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -126,7 +126,7 @@ public open class CfnExperimentTemplate(
    * The actions for the experiment.
    */
   public open fun actions(`value`: IResolvable) {
-    unwrap(this).setActions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setActions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -137,7 +137,7 @@ public open class CfnExperimentTemplate(
   }
 
   /**
-   *
+   * The ID of the experiment template.
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
@@ -162,14 +162,14 @@ public open class CfnExperimentTemplate(
    * The experiment options for an experiment template.
    */
   public open fun experimentOptions(`value`: IResolvable) {
-    unwrap(this).setExperimentOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setExperimentOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The experiment options for an experiment template.
    */
   public open fun experimentOptions(`value`: ExperimentTemplateExperimentOptionsProperty) {
-    unwrap(this).setExperimentOptions(`value`.let(ExperimentTemplateExperimentOptionsProperty::unwrap))
+    unwrap(this).setExperimentOptions(`value`.let(ExperimentTemplateExperimentOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -187,7 +187,7 @@ public open class CfnExperimentTemplate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -199,14 +199,14 @@ public open class CfnExperimentTemplate(
    * The configuration for experiment logging.
    */
   public open fun logConfiguration(`value`: IResolvable) {
-    unwrap(this).setLogConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLogConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration for experiment logging.
    */
   public open fun logConfiguration(`value`: ExperimentTemplateLogConfigurationProperty) {
-    unwrap(this).setLogConfiguration(`value`.let(ExperimentTemplateLogConfigurationProperty::unwrap))
+    unwrap(this).setLogConfiguration(`value`.let(ExperimentTemplateLogConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -239,7 +239,7 @@ public open class CfnExperimentTemplate(
    * The stop conditions for the experiment.
    */
   public open fun stopConditions(`value`: IResolvable) {
-    unwrap(this).setStopConditions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStopConditions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -280,7 +280,7 @@ public open class CfnExperimentTemplate(
    * The targets for the experiment.
    */
   public open fun targets(`value`: IResolvable) {
-    unwrap(this).setTargets(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTargets(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -444,7 +444,7 @@ public open class CfnExperimentTemplate(
      * @param actions The actions for the experiment. 
      */
     override fun actions(actions: IResolvable) {
-      cdkBuilder.actions(actions.let(IResolvable::unwrap))
+      cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -474,7 +474,7 @@ public open class CfnExperimentTemplate(
      * @param experimentOptions The experiment options for an experiment template. 
      */
     override fun experimentOptions(experimentOptions: IResolvable) {
-      cdkBuilder.experimentOptions(experimentOptions.let(IResolvable::unwrap))
+      cdkBuilder.experimentOptions(experimentOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -484,7 +484,7 @@ public open class CfnExperimentTemplate(
      * @param experimentOptions The experiment options for an experiment template. 
      */
     override fun experimentOptions(experimentOptions: ExperimentTemplateExperimentOptionsProperty) {
-      cdkBuilder.experimentOptions(experimentOptions.let(ExperimentTemplateExperimentOptionsProperty::unwrap))
+      cdkBuilder.experimentOptions(experimentOptions.let(ExperimentTemplateExperimentOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -506,7 +506,7 @@ public open class CfnExperimentTemplate(
      * @param logConfiguration The configuration for experiment logging. 
      */
     override fun logConfiguration(logConfiguration: IResolvable) {
-      cdkBuilder.logConfiguration(logConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.logConfiguration(logConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -516,7 +516,7 @@ public open class CfnExperimentTemplate(
      * @param logConfiguration The configuration for experiment logging. 
      */
     override fun logConfiguration(logConfiguration: ExperimentTemplateLogConfigurationProperty) {
-      cdkBuilder.logConfiguration(logConfiguration.let(ExperimentTemplateLogConfigurationProperty::unwrap))
+      cdkBuilder.logConfiguration(logConfiguration.let(ExperimentTemplateLogConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -548,7 +548,7 @@ public open class CfnExperimentTemplate(
      * @param stopConditions The stop conditions for the experiment. 
      */
     override fun stopConditions(stopConditions: IResolvable) {
-      cdkBuilder.stopConditions(stopConditions.let(IResolvable::unwrap))
+      cdkBuilder.stopConditions(stopConditions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -587,7 +587,7 @@ public open class CfnExperimentTemplate(
      * @param targets The targets for the experiment. 
      */
     override fun targets(targets: IResolvable) {
-      cdkBuilder.targets(targets.let(IResolvable::unwrap))
+      cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -847,7 +847,7 @@ public open class CfnExperimentTemplate(
        * @param parameters The parameters for the action.
        */
       override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -875,7 +875,7 @@ public open class CfnExperimentTemplate(
        * @param targets The targets for the action.
        */
       override fun targets(targets: IResolvable) {
-        cdkBuilder.targets(targets.let(IResolvable::unwrap))
+        cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1599,7 +1599,7 @@ public open class CfnExperimentTemplate(
        * @param filters The filters to apply to identify target resources using specific attributes.
        */
       override fun filters(filters: IResolvable) {
-        cdkBuilder.filters(filters.let(IResolvable::unwrap))
+        cdkBuilder.filters(filters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1618,7 +1618,7 @@ public open class CfnExperimentTemplate(
        * @param parameters The parameters for the resource type.
        */
       override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1645,7 +1645,7 @@ public open class CfnExperimentTemplate(
        * @param resourceTags The tags for the target resources.
        */
       override fun resourceTags(resourceTags: IResolvable) {
-        cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
+        cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
       }
 
       /**

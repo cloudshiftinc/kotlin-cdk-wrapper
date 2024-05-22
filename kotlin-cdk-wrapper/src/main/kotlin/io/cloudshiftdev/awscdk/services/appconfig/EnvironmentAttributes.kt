@@ -107,7 +107,7 @@ public interface EnvironmentAttributes {
      * @param application The application associated with the environment. 
      */
     override fun application(application: IApplication) {
-      cdkBuilder.application(application.let(IApplication::unwrap))
+      cdkBuilder.application(application.let(IApplication.Companion::unwrap))
     }
 
     /**
@@ -128,7 +128,7 @@ public interface EnvironmentAttributes {
      * @param monitors The monitors for the environment.
      */
     override fun monitors(monitors: List<Monitor>) {
-      cdkBuilder.monitors(monitors.map(Monitor::unwrap))
+      cdkBuilder.monitors(monitors.map(Monitor.Companion::unwrap))
     }
 
     /**

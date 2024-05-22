@@ -85,8 +85,8 @@ public open class CfnIdentitySource(
     id: String,
     props: CfnIdentitySourceProps,
   ) :
-      this(software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnIdentitySourceProps::unwrap))
+      this(software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnIdentitySourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -135,14 +135,14 @@ public open class CfnIdentitySource(
    * Contains configuration information about an identity source.
    */
   public open fun configuration(`value`: IResolvable) {
-    unwrap(this).setConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Contains configuration information about an identity source.
    */
   public open fun configuration(`value`: IdentitySourceConfigurationProperty) {
-    unwrap(this).setConfiguration(`value`.let(IdentitySourceConfigurationProperty::unwrap))
+    unwrap(this).setConfiguration(`value`.let(IdentitySourceConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -159,7 +159,7 @@ public open class CfnIdentitySource(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -258,7 +258,7 @@ public open class CfnIdentitySource(
      * @param configuration Contains configuration information about an identity source. 
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -268,7 +268,7 @@ public open class CfnIdentitySource(
      * @param configuration Contains configuration information about an identity source. 
      */
     override fun configuration(configuration: IdentitySourceConfigurationProperty) {
-      cdkBuilder.configuration(configuration.let(IdentitySourceConfigurationProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(IdentitySourceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -561,7 +561,7 @@ public open class CfnIdentitySource(
        * Amazon Cognito user pool identity source.
        */
       override fun groupConfiguration(groupConfiguration: IResolvable) {
-        cdkBuilder.groupConfiguration(groupConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.groupConfiguration(groupConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -569,7 +569,7 @@ public open class CfnIdentitySource(
        * Amazon Cognito user pool identity source.
        */
       override fun groupConfiguration(groupConfiguration: CognitoGroupConfigurationProperty) {
-        cdkBuilder.groupConfiguration(groupConfiguration.let(CognitoGroupConfigurationProperty::unwrap))
+        cdkBuilder.groupConfiguration(groupConfiguration.let(CognitoGroupConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -731,7 +731,7 @@ public open class CfnIdentitySource(
        * Cognito user pool used as an identity provider for Verified Permissions . 
        */
       override fun cognitoUserPoolConfiguration(cognitoUserPoolConfiguration: IResolvable) {
-        cdkBuilder.cognitoUserPoolConfiguration(cognitoUserPoolConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.cognitoUserPoolConfiguration(cognitoUserPoolConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -741,7 +741,7 @@ public open class CfnIdentitySource(
        */
       override
           fun cognitoUserPoolConfiguration(cognitoUserPoolConfiguration: CognitoUserPoolConfigurationProperty) {
-        cdkBuilder.cognitoUserPoolConfiguration(cognitoUserPoolConfiguration.let(CognitoUserPoolConfigurationProperty::unwrap))
+        cdkBuilder.cognitoUserPoolConfiguration(cognitoUserPoolConfiguration.let(CognitoUserPoolConfigurationProperty.Companion::unwrap))
       }
 
       /**

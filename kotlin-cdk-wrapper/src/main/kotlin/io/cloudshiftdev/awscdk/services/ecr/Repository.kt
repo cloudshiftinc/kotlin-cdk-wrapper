@@ -23,21 +23,24 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.ecr.*;
- * Service.Builder.create(this, "Service")
- * .source(Source.fromEcr(EcrProps.builder()
- * .imageConfiguration(ImageConfiguration.builder().port(80).build())
- * .repository(Repository.fromRepositoryName(this, "NginxRepository", "nginx"))
- * .tagOrDigest("latest")
- * .build()))
+ * import io.cloudshiftdev.awscdk.services.lambda.*;
+ * import io.cloudshiftdev.awscdk.services.events.targets.LambdaFunction;
+ * Repository repo = new Repository(this, "Repo");
+ * Function lambdaHandler = Function.Builder.create(this, "LambdaFunction")
+ * .runtime(Runtime.PYTHON_3_12)
+ * .code(Code.fromInline("# dummy func"))
+ * .handler("index.handler")
  * .build();
+ * repo.onEvent("OnEventTargetLambda", OnEventOptions.builder()
+ * .target(new LambdaFunction(lambdaHandler))
+ * .build());
  * ```
  */
 public open class Repository(
   cdkObject: software.amazon.awscdk.services.ecr.Repository,
 ) : RepositoryBase(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ecr.Repository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ecr.Repository(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -46,8 +49,8 @@ public open class Repository(
     id: String,
     props: RepositoryProps,
   ) :
-      this(software.amazon.awscdk.services.ecr.Repository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(RepositoryProps::unwrap))
+      this(software.amazon.awscdk.services.ecr.Repository(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(RepositoryProps.Companion::unwrap))
   )
 
   public constructor(
@@ -66,7 +69,7 @@ public open class Repository(
    * @param rule 
    */
   public open fun addLifecycleRule(rule: LifecycleRule) {
-    unwrap(this).addLifecycleRule(rule.let(LifecycleRule::unwrap))
+    unwrap(this).addLifecycleRule(rule.let(LifecycleRule.Companion::unwrap))
   }
 
   /**
@@ -92,7 +95,7 @@ public open class Repository(
    * @param statement 
    */
   public override fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
-      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement::unwrap)).let(AddToResourcePolicyResult::wrap)
+      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
 
   /**
    * Add a policy statement to the repository's resource policy.
@@ -303,7 +306,7 @@ public open class Repository(
      * @param encryption The kind of server-side encryption to apply to this repository. 
      */
     override fun encryption(encryption: RepositoryEncryption) {
-      cdkBuilder.encryption(encryption.let(RepositoryEncryption::unwrap))
+      cdkBuilder.encryption(encryption.let(RepositoryEncryption.Companion::unwrap))
     }
 
     /**
@@ -318,7 +321,7 @@ public open class Repository(
      * @param encryptionKey External KMS key to use for repository encryption. 
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -343,7 +346,7 @@ public open class Repository(
      * @param imageTagMutability The tag mutability setting for the repository. 
      */
     override fun imageTagMutability(imageTagMutability: TagMutability) {
-      cdkBuilder.imageTagMutability(imageTagMutability.let(TagMutability::unwrap))
+      cdkBuilder.imageTagMutability(imageTagMutability.let(TagMutability.Companion::unwrap))
     }
 
     /**
@@ -367,7 +370,7 @@ public open class Repository(
      * @param lifecycleRules Life cycle rules to apply to this registry. 
      */
     override fun lifecycleRules(lifecycleRules: List<LifecycleRule>) {
-      cdkBuilder.lifecycleRules(lifecycleRules.map(LifecycleRule::unwrap))
+      cdkBuilder.lifecycleRules(lifecycleRules.map(LifecycleRule.Companion::unwrap))
     }
 
     /**
@@ -389,7 +392,7 @@ public open class Repository(
      * deleted. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -418,21 +421,21 @@ public open class Repository(
   public companion object {
     public fun arnForLocalRepository(repositoryName: String, scope: IConstruct): String =
         software.amazon.awscdk.services.ecr.Repository.arnForLocalRepository(repositoryName,
-        scope.let(IConstruct::unwrap))
+        scope.let(IConstruct.Companion::unwrap))
 
     public fun arnForLocalRepository(
       repositoryName: String,
       scope: IConstruct,
       account: String,
     ): String = software.amazon.awscdk.services.ecr.Repository.arnForLocalRepository(repositoryName,
-        scope.let(IConstruct::unwrap), account)
+        scope.let(IConstruct.Companion::unwrap), account)
 
     public fun fromRepositoryArn(
       scope: CloudshiftdevConstructsConstruct,
       id: String,
       repositoryArn: String,
     ): IRepository =
-        software.amazon.awscdk.services.ecr.Repository.fromRepositoryArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ecr.Repository.fromRepositoryArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, repositoryArn).let(IRepository::wrap)
 
     public fun fromRepositoryAttributes(
@@ -440,8 +443,8 @@ public open class Repository(
       id: String,
       attrs: RepositoryAttributes,
     ): IRepository =
-        software.amazon.awscdk.services.ecr.Repository.fromRepositoryAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(RepositoryAttributes::unwrap)).let(IRepository::wrap)
+        software.amazon.awscdk.services.ecr.Repository.fromRepositoryAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(RepositoryAttributes.Companion::unwrap)).let(IRepository::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("405954211f1a7ef3be4216b322ae86130da7e17ded90391dc304207d9ba2e528")
@@ -456,7 +459,7 @@ public open class Repository(
       id: String,
       repositoryName: String,
     ): IRepository =
-        software.amazon.awscdk.services.ecr.Repository.fromRepositoryName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ecr.Repository.fromRepositoryName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, repositoryName).let(IRepository::wrap)
 
     public operator fun invoke(

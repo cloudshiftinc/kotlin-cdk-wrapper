@@ -27,7 +27,7 @@ public interface INextable {
      * @param state 
      */
     override fun next(state: IChainable): Chain =
-        unwrap(this).next(state.let(IChainable::unwrap)).let(Chain::wrap)
+        unwrap(this).next(state.let(IChainable.Companion::unwrap)).let(Chain::wrap)
   }
 
   public companion object {

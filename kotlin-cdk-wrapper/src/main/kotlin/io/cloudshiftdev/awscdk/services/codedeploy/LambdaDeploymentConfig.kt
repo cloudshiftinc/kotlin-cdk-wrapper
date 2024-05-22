@@ -36,7 +36,7 @@ public open class LambdaDeploymentConfig(
   cdkObject: software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig,
 ) : BaseDeploymentConfig(cdkObject), ILambdaDeploymentConfig {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -45,8 +45,8 @@ public open class LambdaDeploymentConfig(
     id: String,
     props: LambdaDeploymentConfigProps,
   ) :
-      this(software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(LambdaDeploymentConfigProps::unwrap))
+      this(software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(LambdaDeploymentConfigProps.Companion::unwrap))
   )
 
   public constructor(
@@ -113,7 +113,7 @@ public open class LambdaDeploymentConfig(
      * target group to the 'green' target group during a deployment. 
      */
     override fun trafficRouting(trafficRouting: TrafficRouting) {
-      cdkBuilder.trafficRouting(trafficRouting.let(TrafficRouting::unwrap))
+      cdkBuilder.trafficRouting(trafficRouting.let(TrafficRouting.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig =
@@ -154,8 +154,9 @@ public open class LambdaDeploymentConfig(
       id: String,
       props: LambdaDeploymentConfigImportProps,
     ): ILambdaDeploymentConfig =
-        software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.doImport(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, props.let(LambdaDeploymentConfigImportProps::unwrap)).let(ILambdaDeploymentConfig::wrap)
+        software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.doImport(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        props.let(LambdaDeploymentConfigImportProps.Companion::unwrap)).let(ILambdaDeploymentConfig::wrap)
 
     @Deprecated(message = "deprecated in CDK")
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -171,7 +172,7 @@ public open class LambdaDeploymentConfig(
       id: String,
       lambdaDeploymentConfigName: String,
     ): ILambdaDeploymentConfig =
-        software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.fromLambdaDeploymentConfigName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig.fromLambdaDeploymentConfigName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, lambdaDeploymentConfigName).let(ILambdaDeploymentConfig::wrap)
 
     public operator fun invoke(

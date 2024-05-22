@@ -165,7 +165,7 @@ public open class Annotations(
 
   public companion object {
     public fun of(scope: IConstruct): Annotations =
-        software.amazon.awscdk.Annotations.of(scope.let(IConstruct::unwrap)).let(Annotations::wrap)
+        software.amazon.awscdk.Annotations.of(scope.let(IConstruct.Companion::unwrap)).let(Annotations::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.Annotations): Annotations =
         Annotations(cdkObject)

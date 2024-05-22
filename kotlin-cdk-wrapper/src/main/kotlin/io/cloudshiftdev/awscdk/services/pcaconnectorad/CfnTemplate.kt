@@ -293,8 +293,8 @@ public open class CfnTemplate(
     id: String,
     props: CfnTemplateProps,
   ) :
-      this(software.amazon.awscdk.services.pcaconnectorad.CfnTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTemplateProps::unwrap))
+      this(software.amazon.awscdk.services.pcaconnectorad.CfnTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTemplateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -342,14 +342,14 @@ public open class CfnTemplate(
    * Template configuration to define the information included in certificates.
    */
   public open fun definition(`value`: IResolvable) {
-    unwrap(this).setDefinition(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefinition(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Template configuration to define the information included in certificates.
    */
   public open fun definition(`value`: TemplateDefinitionProperty) {
-    unwrap(this).setDefinition(`value`.let(TemplateDefinitionProperty::unwrap))
+    unwrap(this).setDefinition(`value`.let(TemplateDefinitionProperty.Companion::unwrap))
   }
 
   /**
@@ -366,7 +366,7 @@ public open class CfnTemplate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -398,7 +398,7 @@ public open class CfnTemplate(
    * This setting allows the major version of a template to be increased automatically.
    */
   public open fun reenrollAllCertificateHolders(`value`: IResolvable) {
-    unwrap(this).setReenrollAllCertificateHolders(`value`.let(IResolvable::unwrap))
+    unwrap(this).setReenrollAllCertificateHolders(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -539,7 +539,7 @@ public open class CfnTemplate(
      * @param definition Template configuration to define the information included in certificates. 
      */
     override fun definition(definition: IResolvable) {
-      cdkBuilder.definition(definition.let(IResolvable::unwrap))
+      cdkBuilder.definition(definition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -552,7 +552,7 @@ public open class CfnTemplate(
      * @param definition Template configuration to define the information included in certificates. 
      */
     override fun definition(definition: TemplateDefinitionProperty) {
-      cdkBuilder.definition(definition.let(TemplateDefinitionProperty::unwrap))
+      cdkBuilder.definition(definition.let(TemplateDefinitionProperty.Companion::unwrap))
     }
 
     /**
@@ -606,7 +606,7 @@ public open class CfnTemplate(
      * be increased automatically. 
      */
     override fun reenrollAllCertificateHolders(reenrollAllCertificateHolders: IResolvable) {
-      cdkBuilder.reenrollAllCertificateHolders(reenrollAllCertificateHolders.let(IResolvable::unwrap))
+      cdkBuilder.reenrollAllCertificateHolders(reenrollAllCertificateHolders.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -728,14 +728,14 @@ public open class CfnTemplate(
        * @param critical Marks the application policy extension as critical.
        */
       override fun critical(critical: IResolvable) {
-        cdkBuilder.critical(critical.let(IResolvable::unwrap))
+        cdkBuilder.critical(critical.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param policies Application policies describe what the certificate can be used for. 
        */
       override fun policies(policies: IResolvable) {
-        cdkBuilder.policies(policies.let(IResolvable::unwrap))
+        cdkBuilder.policies(policies.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1032,7 +1032,7 @@ public open class CfnTemplate(
        * when a new certificate will be requested. 
        */
       override fun renewalPeriod(renewalPeriod: IResolvable) {
-        cdkBuilder.renewalPeriod(renewalPeriod.let(IResolvable::unwrap))
+        cdkBuilder.renewalPeriod(renewalPeriod.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1040,7 +1040,7 @@ public open class CfnTemplate(
        * when a new certificate will be requested. 
        */
       override fun renewalPeriod(renewalPeriod: ValidityPeriodProperty) {
-        cdkBuilder.renewalPeriod(renewalPeriod.let(ValidityPeriodProperty::unwrap))
+        cdkBuilder.renewalPeriod(renewalPeriod.let(ValidityPeriodProperty.Companion::unwrap))
       }
 
       /**
@@ -1064,7 +1064,7 @@ public open class CfnTemplate(
        * ValidityNotBefore value.
        */
       override fun validityPeriod(validityPeriod: IResolvable) {
-        cdkBuilder.validityPeriod(validityPeriod.let(IResolvable::unwrap))
+        cdkBuilder.validityPeriod(validityPeriod.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1079,7 +1079,7 @@ public open class CfnTemplate(
        * ValidityNotBefore value.
        */
       override fun validityPeriod(validityPeriod: ValidityPeriodProperty) {
-        cdkBuilder.validityPeriod(validityPeriod.let(ValidityPeriodProperty::unwrap))
+        cdkBuilder.validityPeriod(validityPeriod.let(ValidityPeriodProperty.Companion::unwrap))
       }
 
       /**
@@ -1299,7 +1299,7 @@ public open class CfnTemplate(
        */
       override
           fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: IResolvable) {
-        cdkBuilder.enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull.let(IResolvable::unwrap))
+        cdkBuilder.enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1313,7 +1313,7 @@ public open class CfnTemplate(
        * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
        */
       override fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: IResolvable) {
-        cdkBuilder.includeSymmetricAlgorithms(includeSymmetricAlgorithms.let(IResolvable::unwrap))
+        cdkBuilder.includeSymmetricAlgorithms(includeSymmetricAlgorithms.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1333,7 +1333,7 @@ public open class CfnTemplate(
        * Kerberos elevation-of-privilege vulnerability.
        */
       override fun noSecurityExtension(noSecurityExtension: IResolvable) {
-        cdkBuilder.noSecurityExtension(noSecurityExtension.let(IResolvable::unwrap))
+        cdkBuilder.noSecurityExtension(noSecurityExtension.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1351,7 +1351,7 @@ public open class CfnTemplate(
        */
       override
           fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: IResolvable) {
-        cdkBuilder.removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore.let(IResolvable::unwrap))
+        cdkBuilder.removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1367,7 +1367,7 @@ public open class CfnTemplate(
        * the private key associated with the certificate is used.
        */
       override fun userInteractionRequired(userInteractionRequired: IResolvable) {
-        cdkBuilder.userInteractionRequired(userInteractionRequired.let(IResolvable::unwrap))
+        cdkBuilder.userInteractionRequired(userInteractionRequired.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1589,7 +1589,7 @@ public open class CfnTemplate(
        */
       override
           fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: IResolvable) {
-        cdkBuilder.enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull.let(IResolvable::unwrap))
+        cdkBuilder.enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1603,7 +1603,7 @@ public open class CfnTemplate(
        * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
        */
       override fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: IResolvable) {
-        cdkBuilder.includeSymmetricAlgorithms(includeSymmetricAlgorithms.let(IResolvable::unwrap))
+        cdkBuilder.includeSymmetricAlgorithms(includeSymmetricAlgorithms.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1623,7 +1623,7 @@ public open class CfnTemplate(
        * Kerberos elevation-of-privilege vulnerability.
        */
       override fun noSecurityExtension(noSecurityExtension: IResolvable) {
-        cdkBuilder.noSecurityExtension(noSecurityExtension.let(IResolvable::unwrap))
+        cdkBuilder.noSecurityExtension(noSecurityExtension.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1641,7 +1641,7 @@ public open class CfnTemplate(
        */
       override
           fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: IResolvable) {
-        cdkBuilder.removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore.let(IResolvable::unwrap))
+        cdkBuilder.removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1657,7 +1657,7 @@ public open class CfnTemplate(
        * the private key associated with the certificate is used.
        */
       override fun userInteractionRequired(userInteractionRequired: IResolvable) {
-        cdkBuilder.userInteractionRequired(userInteractionRequired.let(IResolvable::unwrap))
+        cdkBuilder.userInteractionRequired(userInteractionRequired.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1879,7 +1879,7 @@ public open class CfnTemplate(
        */
       override
           fun enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull: IResolvable) {
-        cdkBuilder.enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull.let(IResolvable::unwrap))
+        cdkBuilder.enableKeyReuseOnNtTokenKeysetStorageFull(enableKeyReuseOnNtTokenKeysetStorageFull.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1893,7 +1893,7 @@ public open class CfnTemplate(
        * @param includeSymmetricAlgorithms Include symmetric algorithms allowed by the subject.
        */
       override fun includeSymmetricAlgorithms(includeSymmetricAlgorithms: IResolvable) {
-        cdkBuilder.includeSymmetricAlgorithms(includeSymmetricAlgorithms.let(IResolvable::unwrap))
+        cdkBuilder.includeSymmetricAlgorithms(includeSymmetricAlgorithms.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1913,7 +1913,7 @@ public open class CfnTemplate(
        * Kerberos elevation-of-privilege vulnerability.
        */
       override fun noSecurityExtension(noSecurityExtension: IResolvable) {
-        cdkBuilder.noSecurityExtension(noSecurityExtension.let(IResolvable::unwrap))
+        cdkBuilder.noSecurityExtension(noSecurityExtension.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1931,7 +1931,7 @@ public open class CfnTemplate(
        */
       override
           fun removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore: IResolvable) {
-        cdkBuilder.removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore.let(IResolvable::unwrap))
+        cdkBuilder.removeInvalidCertificateFromPersonalStore(removeInvalidCertificateFromPersonalStore.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1947,7 +1947,7 @@ public open class CfnTemplate(
        * the private key associated with the certificate is used.
        */
       override fun userInteractionRequired(userInteractionRequired: IResolvable) {
-        cdkBuilder.userInteractionRequired(userInteractionRequired.let(IResolvable::unwrap))
+        cdkBuilder.userInteractionRequired(userInteractionRequired.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2126,7 +2126,7 @@ public open class CfnTemplate(
        * and its purpose.
        */
       override fun applicationPolicies(applicationPolicies: IResolvable) {
-        cdkBuilder.applicationPolicies(applicationPolicies.let(IResolvable::unwrap))
+        cdkBuilder.applicationPolicies(applicationPolicies.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2134,7 +2134,7 @@ public open class CfnTemplate(
        * and its purpose.
        */
       override fun applicationPolicies(applicationPolicies: ApplicationPoliciesProperty) {
-        cdkBuilder.applicationPolicies(applicationPolicies.let(ApplicationPoliciesProperty::unwrap))
+        cdkBuilder.applicationPolicies(applicationPolicies.let(ApplicationPoliciesProperty.Companion::unwrap))
       }
 
       /**
@@ -2152,7 +2152,7 @@ public open class CfnTemplate(
        * certificate signing) of the key contained in the certificate. 
        */
       override fun keyUsage(keyUsage: IResolvable) {
-        cdkBuilder.keyUsage(keyUsage.let(IResolvable::unwrap))
+        cdkBuilder.keyUsage(keyUsage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2160,7 +2160,7 @@ public open class CfnTemplate(
        * certificate signing) of the key contained in the certificate. 
        */
       override fun keyUsage(keyUsage: KeyUsageProperty) {
-        cdkBuilder.keyUsage(keyUsage.let(KeyUsageProperty::unwrap))
+        cdkBuilder.keyUsage(keyUsage.let(KeyUsageProperty.Companion::unwrap))
       }
 
       /**
@@ -2322,7 +2322,7 @@ public open class CfnTemplate(
        * and its purpose.
        */
       override fun applicationPolicies(applicationPolicies: IResolvable) {
-        cdkBuilder.applicationPolicies(applicationPolicies.let(IResolvable::unwrap))
+        cdkBuilder.applicationPolicies(applicationPolicies.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2330,7 +2330,7 @@ public open class CfnTemplate(
        * and its purpose.
        */
       override fun applicationPolicies(applicationPolicies: ApplicationPoliciesProperty) {
-        cdkBuilder.applicationPolicies(applicationPolicies.let(ApplicationPoliciesProperty::unwrap))
+        cdkBuilder.applicationPolicies(applicationPolicies.let(ApplicationPoliciesProperty.Companion::unwrap))
       }
 
       /**
@@ -2348,7 +2348,7 @@ public open class CfnTemplate(
        * certificate signing) of the key contained in the certificate. 
        */
       override fun keyUsage(keyUsage: IResolvable) {
-        cdkBuilder.keyUsage(keyUsage.let(IResolvable::unwrap))
+        cdkBuilder.keyUsage(keyUsage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2356,7 +2356,7 @@ public open class CfnTemplate(
        * certificate signing) of the key contained in the certificate. 
        */
       override fun keyUsage(keyUsage: KeyUsageProperty) {
-        cdkBuilder.keyUsage(keyUsage.let(KeyUsageProperty::unwrap))
+        cdkBuilder.keyUsage(keyUsage.let(KeyUsageProperty.Companion::unwrap))
       }
 
       /**
@@ -2518,7 +2518,7 @@ public open class CfnTemplate(
        * and its purpose.
        */
       override fun applicationPolicies(applicationPolicies: IResolvable) {
-        cdkBuilder.applicationPolicies(applicationPolicies.let(IResolvable::unwrap))
+        cdkBuilder.applicationPolicies(applicationPolicies.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2526,7 +2526,7 @@ public open class CfnTemplate(
        * and its purpose.
        */
       override fun applicationPolicies(applicationPolicies: ApplicationPoliciesProperty) {
-        cdkBuilder.applicationPolicies(applicationPolicies.let(ApplicationPoliciesProperty::unwrap))
+        cdkBuilder.applicationPolicies(applicationPolicies.let(ApplicationPoliciesProperty.Companion::unwrap))
       }
 
       /**
@@ -2544,7 +2544,7 @@ public open class CfnTemplate(
        * of the key contained in the certificate. 
        */
       override fun keyUsage(keyUsage: IResolvable) {
-        cdkBuilder.keyUsage(keyUsage.let(IResolvable::unwrap))
+        cdkBuilder.keyUsage(keyUsage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2552,7 +2552,7 @@ public open class CfnTemplate(
        * of the key contained in the certificate. 
        */
       override fun keyUsage(keyUsage: KeyUsageProperty) {
-        cdkBuilder.keyUsage(keyUsage.let(KeyUsageProperty::unwrap))
+        cdkBuilder.keyUsage(keyUsage.let(KeyUsageProperty.Companion::unwrap))
       }
 
       /**
@@ -2692,7 +2692,7 @@ public open class CfnTemplate(
        * Set to TRUE to allow autoenrollment.
        */
       override fun autoEnrollment(autoEnrollment: IResolvable) {
-        cdkBuilder.autoEnrollment(autoEnrollment.let(IResolvable::unwrap))
+        cdkBuilder.autoEnrollment(autoEnrollment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2708,7 +2708,7 @@ public open class CfnTemplate(
        * Set to TRUE if the template is for machines. Set to FALSE if the template is for users.
        */
       override fun machineType(machineType: IResolvable) {
-        cdkBuilder.machineType(machineType.let(IResolvable::unwrap))
+        cdkBuilder.machineType(machineType.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2842,7 +2842,7 @@ public open class CfnTemplate(
        * Set to TRUE to allow autoenrollment.
        */
       override fun autoEnrollment(autoEnrollment: IResolvable) {
-        cdkBuilder.autoEnrollment(autoEnrollment.let(IResolvable::unwrap))
+        cdkBuilder.autoEnrollment(autoEnrollment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2858,7 +2858,7 @@ public open class CfnTemplate(
        * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
        */
       override fun machineType(machineType: IResolvable) {
-        cdkBuilder.machineType(machineType.let(IResolvable::unwrap))
+        cdkBuilder.machineType(machineType.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2992,7 +2992,7 @@ public open class CfnTemplate(
        * Set to TRUE to allow autoenrollment.
        */
       override fun autoEnrollment(autoEnrollment: IResolvable) {
-        cdkBuilder.autoEnrollment(autoEnrollment.let(IResolvable::unwrap))
+        cdkBuilder.autoEnrollment(autoEnrollment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3008,7 +3008,7 @@ public open class CfnTemplate(
        * Set to TRUE if the template is for machines. Set to FALSE if the template is for users
        */
       override fun machineType(machineType: IResolvable) {
-        cdkBuilder.machineType(machineType.let(IResolvable::unwrap))
+        cdkBuilder.machineType(machineType.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -3200,7 +3200,7 @@ public open class CfnTemplate(
        * for directly enciphering raw user data without the use of an intermediate symmetric cipher.
        */
       override fun dataEncipherment(dataEncipherment: IResolvable) {
-        cdkBuilder.dataEncipherment(dataEncipherment.let(IResolvable::unwrap))
+        cdkBuilder.dataEncipherment(dataEncipherment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3216,7 +3216,7 @@ public open class CfnTemplate(
        * used for verifying digital signatures.
        */
       override fun digitalSignature(digitalSignature: IResolvable) {
-        cdkBuilder.digitalSignature(digitalSignature.let(IResolvable::unwrap))
+        cdkBuilder.digitalSignature(digitalSignature.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3232,7 +3232,7 @@ public open class CfnTemplate(
        * agreement.
        */
       override fun keyAgreement(keyAgreement: IResolvable) {
-        cdkBuilder.keyAgreement(keyAgreement.let(IResolvable::unwrap))
+        cdkBuilder.keyAgreement(keyAgreement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3248,7 +3248,7 @@ public open class CfnTemplate(
        * enciphering private or secret keys, i.e., for key transport.
        */
       override fun keyEncipherment(keyEncipherment: IResolvable) {
-        cdkBuilder.keyEncipherment(keyEncipherment.let(IResolvable::unwrap))
+        cdkBuilder.keyEncipherment(keyEncipherment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3264,7 +3264,7 @@ public open class CfnTemplate(
        * verify digital signatures.
        */
       override fun nonRepudiation(nonRepudiation: IResolvable) {
-        cdkBuilder.nonRepudiation(nonRepudiation.let(IResolvable::unwrap))
+        cdkBuilder.nonRepudiation(nonRepudiation.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -3426,7 +3426,7 @@ public open class CfnTemplate(
        * @param critical Sets the key usage extension to critical.
        */
       override fun critical(critical: IResolvable) {
-        cdkBuilder.critical(critical.let(IResolvable::unwrap))
+        cdkBuilder.critical(critical.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3434,7 +3434,7 @@ public open class CfnTemplate(
        * of the key contained in the certificate. 
        */
       override fun usageFlags(usageFlags: IResolvable) {
-        cdkBuilder.usageFlags(usageFlags.let(IResolvable::unwrap))
+        cdkBuilder.usageFlags(usageFlags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3442,7 +3442,7 @@ public open class CfnTemplate(
        * of the key contained in the certificate. 
        */
       override fun usageFlags(usageFlags: KeyUsageFlagsProperty) {
-        cdkBuilder.usageFlags(usageFlags.let(KeyUsageFlagsProperty::unwrap))
+        cdkBuilder.usageFlags(usageFlags.let(KeyUsageFlagsProperty.Companion::unwrap))
       }
 
       /**
@@ -3590,7 +3590,7 @@ public open class CfnTemplate(
        * @param decrypt Allows key for encryption and decryption.
        */
       override fun decrypt(decrypt: IResolvable) {
-        cdkBuilder.decrypt(decrypt.let(IResolvable::unwrap))
+        cdkBuilder.decrypt(decrypt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3604,7 +3604,7 @@ public open class CfnTemplate(
        * @param keyAgreement Allows key exchange without encryption.
        */
       override fun keyAgreement(keyAgreement: IResolvable) {
-        cdkBuilder.keyAgreement(keyAgreement.let(IResolvable::unwrap))
+        cdkBuilder.keyAgreement(keyAgreement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3618,7 +3618,7 @@ public open class CfnTemplate(
        * @param sign Allow key use for digital signature.
        */
       override fun sign(sign: IResolvable) {
-        cdkBuilder.sign(sign.let(IResolvable::unwrap))
+        cdkBuilder.sign(sign.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -3758,7 +3758,7 @@ public open class CfnTemplate(
        * You can use property flags or property type but not both.
        */
       override fun propertyFlags(propertyFlags: IResolvable) {
-        cdkBuilder.propertyFlags(propertyFlags.let(IResolvable::unwrap))
+        cdkBuilder.propertyFlags(propertyFlags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3767,7 +3767,7 @@ public open class CfnTemplate(
        * You can use property flags or property type but not both.
        */
       override fun propertyFlags(propertyFlags: KeyUsagePropertyFlagsProperty) {
-        cdkBuilder.propertyFlags(propertyFlags.let(KeyUsagePropertyFlagsProperty::unwrap))
+        cdkBuilder.propertyFlags(propertyFlags.let(KeyUsagePropertyFlagsProperty.Companion::unwrap))
       }
 
       /**
@@ -4161,7 +4161,7 @@ public open class CfnTemplate(
        * You can specify specific purposes using property flags or all by using property type ALL.
        */
       override fun keyUsageProperty(keyUsageProperty: IResolvable) {
-        cdkBuilder.keyUsageProperty(keyUsageProperty.let(IResolvable::unwrap))
+        cdkBuilder.keyUsageProperty(keyUsageProperty.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4170,7 +4170,7 @@ public open class CfnTemplate(
        * You can specify specific purposes using property flags or all by using property type ALL.
        */
       override fun keyUsageProperty(keyUsageProperty: KeyUsagePropertyProperty) {
-        cdkBuilder.keyUsageProperty(keyUsageProperty.let(KeyUsagePropertyProperty::unwrap))
+        cdkBuilder.keyUsageProperty(keyUsageProperty.let(KeyUsagePropertyProperty.Companion::unwrap))
       }
 
       /**
@@ -4425,7 +4425,7 @@ public open class CfnTemplate(
        * You can specify specific purposes using property flags or all by using property type ALL.
        */
       override fun keyUsageProperty(keyUsageProperty: IResolvable) {
-        cdkBuilder.keyUsageProperty(keyUsageProperty.let(IResolvable::unwrap))
+        cdkBuilder.keyUsageProperty(keyUsageProperty.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4434,7 +4434,7 @@ public open class CfnTemplate(
        * You can specify specific purposes using property flags or all by using property type ALL.
        */
       override fun keyUsageProperty(keyUsageProperty: KeyUsagePropertyProperty) {
-        cdkBuilder.keyUsageProperty(keyUsageProperty.let(KeyUsagePropertyProperty::unwrap))
+        cdkBuilder.keyUsageProperty(keyUsageProperty.let(KeyUsagePropertyProperty.Companion::unwrap))
       }
 
       /**
@@ -4620,7 +4620,7 @@ public open class CfnTemplate(
        * @param exportableKey Allows the private key to be exported.
        */
       override fun exportableKey(exportableKey: IResolvable) {
-        cdkBuilder.exportableKey(exportableKey.let(IResolvable::unwrap))
+        cdkBuilder.exportableKey(exportableKey.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4636,7 +4636,7 @@ public open class CfnTemplate(
        * enrollment.
        */
       override fun strongKeyProtectionRequired(strongKeyProtectionRequired: IResolvable) {
-        cdkBuilder.strongKeyProtectionRequired(strongKeyProtectionRequired.let(IResolvable::unwrap))
+        cdkBuilder.strongKeyProtectionRequired(strongKeyProtectionRequired.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -4812,7 +4812,7 @@ public open class CfnTemplate(
        * @param exportableKey Allows the private key to be exported.
        */
       override fun exportableKey(exportableKey: IResolvable) {
-        cdkBuilder.exportableKey(exportableKey.let(IResolvable::unwrap))
+        cdkBuilder.exportableKey(exportableKey.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4831,7 +4831,7 @@ public open class CfnTemplate(
        */
       override
           fun requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm: IResolvable) {
-        cdkBuilder.requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm.let(IResolvable::unwrap))
+        cdkBuilder.requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4847,7 +4847,7 @@ public open class CfnTemplate(
        * enrollment.
        */
       override fun strongKeyProtectionRequired(strongKeyProtectionRequired: IResolvable) {
-        cdkBuilder.strongKeyProtectionRequired(strongKeyProtectionRequired.let(IResolvable::unwrap))
+        cdkBuilder.strongKeyProtectionRequired(strongKeyProtectionRequired.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -5077,7 +5077,7 @@ public open class CfnTemplate(
        * @param exportableKey Allows the private key to be exported.
        */
       override fun exportableKey(exportableKey: IResolvable) {
-        cdkBuilder.exportableKey(exportableKey.let(IResolvable::unwrap))
+        cdkBuilder.exportableKey(exportableKey.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5096,7 +5096,7 @@ public open class CfnTemplate(
        */
       override
           fun requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm: IResolvable) {
-        cdkBuilder.requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm.let(IResolvable::unwrap))
+        cdkBuilder.requireAlternateSignatureAlgorithm(requireAlternateSignatureAlgorithm.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5110,7 +5110,7 @@ public open class CfnTemplate(
        * @param requireSameKeyRenewal Renew certificate using the same private key.
        */
       override fun requireSameKeyRenewal(requireSameKeyRenewal: IResolvable) {
-        cdkBuilder.requireSameKeyRenewal(requireSameKeyRenewal.let(IResolvable::unwrap))
+        cdkBuilder.requireSameKeyRenewal(requireSameKeyRenewal.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5126,7 +5126,7 @@ public open class CfnTemplate(
        * enrollment.
        */
       override fun strongKeyProtectionRequired(strongKeyProtectionRequired: IResolvable) {
-        cdkBuilder.strongKeyProtectionRequired(strongKeyProtectionRequired.let(IResolvable::unwrap))
+        cdkBuilder.strongKeyProtectionRequired(strongKeyProtectionRequired.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5146,7 +5146,7 @@ public open class CfnTemplate(
        * Providers.
        */
       override fun useLegacyProvider(useLegacyProvider: IResolvable) {
-        cdkBuilder.useLegacyProvider(useLegacyProvider.let(IResolvable::unwrap))
+        cdkBuilder.useLegacyProvider(useLegacyProvider.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -5454,7 +5454,7 @@ public open class CfnTemplate(
        * @param requireCommonName Include the common name in the subject name.
        */
       override fun requireCommonName(requireCommonName: IResolvable) {
-        cdkBuilder.requireCommonName(requireCommonName.let(IResolvable::unwrap))
+        cdkBuilder.requireCommonName(requireCommonName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5468,7 +5468,7 @@ public open class CfnTemplate(
        * @param requireDirectoryPath Include the directory path in the subject name.
        */
       override fun requireDirectoryPath(requireDirectoryPath: IResolvable) {
-        cdkBuilder.requireDirectoryPath(requireDirectoryPath.let(IResolvable::unwrap))
+        cdkBuilder.requireDirectoryPath(requireDirectoryPath.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5482,7 +5482,7 @@ public open class CfnTemplate(
        * @param requireDnsAsCn Include the DNS as common name in the subject name.
        */
       override fun requireDnsAsCn(requireDnsAsCn: IResolvable) {
-        cdkBuilder.requireDnsAsCn(requireDnsAsCn.let(IResolvable::unwrap))
+        cdkBuilder.requireDnsAsCn(requireDnsAsCn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5496,7 +5496,7 @@ public open class CfnTemplate(
        * @param requireEmail Include the subject's email in the subject name.
        */
       override fun requireEmail(requireEmail: IResolvable) {
-        cdkBuilder.requireEmail(requireEmail.let(IResolvable::unwrap))
+        cdkBuilder.requireEmail(requireEmail.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5512,7 +5512,7 @@ public open class CfnTemplate(
        * alternate name.
        */
       override fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: IResolvable) {
-        cdkBuilder.sanRequireDirectoryGuid(sanRequireDirectoryGuid.let(IResolvable::unwrap))
+        cdkBuilder.sanRequireDirectoryGuid(sanRequireDirectoryGuid.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5526,7 +5526,7 @@ public open class CfnTemplate(
        * @param sanRequireDns Include the DNS in the subject alternate name.
        */
       override fun sanRequireDns(sanRequireDns: IResolvable) {
-        cdkBuilder.sanRequireDns(sanRequireDns.let(IResolvable::unwrap))
+        cdkBuilder.sanRequireDns(sanRequireDns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5540,7 +5540,7 @@ public open class CfnTemplate(
        * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
        */
       override fun sanRequireDomainDns(sanRequireDomainDns: IResolvable) {
-        cdkBuilder.sanRequireDomainDns(sanRequireDomainDns.let(IResolvable::unwrap))
+        cdkBuilder.sanRequireDomainDns(sanRequireDomainDns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5554,7 +5554,7 @@ public open class CfnTemplate(
        * @param sanRequireEmail Include the subject's email in the subject alternate name.
        */
       override fun sanRequireEmail(sanRequireEmail: IResolvable) {
-        cdkBuilder.sanRequireEmail(sanRequireEmail.let(IResolvable::unwrap))
+        cdkBuilder.sanRequireEmail(sanRequireEmail.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5570,7 +5570,7 @@ public open class CfnTemplate(
        * name.
        */
       override fun sanRequireSpn(sanRequireSpn: IResolvable) {
-        cdkBuilder.sanRequireSpn(sanRequireSpn.let(IResolvable::unwrap))
+        cdkBuilder.sanRequireSpn(sanRequireSpn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5584,7 +5584,7 @@ public open class CfnTemplate(
        * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
        */
       override fun sanRequireUpn(sanRequireUpn: IResolvable) {
-        cdkBuilder.sanRequireUpn(sanRequireUpn.let(IResolvable::unwrap))
+        cdkBuilder.sanRequireUpn(sanRequireUpn.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -5914,7 +5914,7 @@ public open class CfnTemplate(
        * @param requireCommonName Include the common name in the subject name.
        */
       override fun requireCommonName(requireCommonName: IResolvable) {
-        cdkBuilder.requireCommonName(requireCommonName.let(IResolvable::unwrap))
+        cdkBuilder.requireCommonName(requireCommonName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5928,7 +5928,7 @@ public open class CfnTemplate(
        * @param requireDirectoryPath Include the directory path in the subject name.
        */
       override fun requireDirectoryPath(requireDirectoryPath: IResolvable) {
-        cdkBuilder.requireDirectoryPath(requireDirectoryPath.let(IResolvable::unwrap))
+        cdkBuilder.requireDirectoryPath(requireDirectoryPath.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5942,7 +5942,7 @@ public open class CfnTemplate(
        * @param requireDnsAsCn Include the DNS as common name in the subject name.
        */
       override fun requireDnsAsCn(requireDnsAsCn: IResolvable) {
-        cdkBuilder.requireDnsAsCn(requireDnsAsCn.let(IResolvable::unwrap))
+        cdkBuilder.requireDnsAsCn(requireDnsAsCn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5956,7 +5956,7 @@ public open class CfnTemplate(
        * @param requireEmail Include the subject's email in the subject name.
        */
       override fun requireEmail(requireEmail: IResolvable) {
-        cdkBuilder.requireEmail(requireEmail.let(IResolvable::unwrap))
+        cdkBuilder.requireEmail(requireEmail.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5972,7 +5972,7 @@ public open class CfnTemplate(
        * alternate name.
        */
       override fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: IResolvable) {
-        cdkBuilder.sanRequireDirectoryGuid(sanRequireDirectoryGuid.let(IResolvable::unwrap))
+        cdkBuilder.sanRequireDirectoryGuid(sanRequireDirectoryGuid.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5986,7 +5986,7 @@ public open class CfnTemplate(
        * @param sanRequireDns Include the DNS in the subject alternate name.
        */
       override fun sanRequireDns(sanRequireDns: IResolvable) {
-        cdkBuilder.sanRequireDns(sanRequireDns.let(IResolvable::unwrap))
+        cdkBuilder.sanRequireDns(sanRequireDns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6000,7 +6000,7 @@ public open class CfnTemplate(
        * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
        */
       override fun sanRequireDomainDns(sanRequireDomainDns: IResolvable) {
-        cdkBuilder.sanRequireDomainDns(sanRequireDomainDns.let(IResolvable::unwrap))
+        cdkBuilder.sanRequireDomainDns(sanRequireDomainDns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6014,7 +6014,7 @@ public open class CfnTemplate(
        * @param sanRequireEmail Include the subject's email in the subject alternate name.
        */
       override fun sanRequireEmail(sanRequireEmail: IResolvable) {
-        cdkBuilder.sanRequireEmail(sanRequireEmail.let(IResolvable::unwrap))
+        cdkBuilder.sanRequireEmail(sanRequireEmail.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6030,7 +6030,7 @@ public open class CfnTemplate(
        * name.
        */
       override fun sanRequireSpn(sanRequireSpn: IResolvable) {
-        cdkBuilder.sanRequireSpn(sanRequireSpn.let(IResolvable::unwrap))
+        cdkBuilder.sanRequireSpn(sanRequireSpn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6044,7 +6044,7 @@ public open class CfnTemplate(
        * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
        */
       override fun sanRequireUpn(sanRequireUpn: IResolvable) {
-        cdkBuilder.sanRequireUpn(sanRequireUpn.let(IResolvable::unwrap))
+        cdkBuilder.sanRequireUpn(sanRequireUpn.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -6374,7 +6374,7 @@ public open class CfnTemplate(
        * @param requireCommonName Include the common name in the subject name.
        */
       override fun requireCommonName(requireCommonName: IResolvable) {
-        cdkBuilder.requireCommonName(requireCommonName.let(IResolvable::unwrap))
+        cdkBuilder.requireCommonName(requireCommonName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6388,7 +6388,7 @@ public open class CfnTemplate(
        * @param requireDirectoryPath Include the directory path in the subject name.
        */
       override fun requireDirectoryPath(requireDirectoryPath: IResolvable) {
-        cdkBuilder.requireDirectoryPath(requireDirectoryPath.let(IResolvable::unwrap))
+        cdkBuilder.requireDirectoryPath(requireDirectoryPath.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6402,7 +6402,7 @@ public open class CfnTemplate(
        * @param requireDnsAsCn Include the DNS as common name in the subject name.
        */
       override fun requireDnsAsCn(requireDnsAsCn: IResolvable) {
-        cdkBuilder.requireDnsAsCn(requireDnsAsCn.let(IResolvable::unwrap))
+        cdkBuilder.requireDnsAsCn(requireDnsAsCn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6416,7 +6416,7 @@ public open class CfnTemplate(
        * @param requireEmail Include the subject's email in the subject name.
        */
       override fun requireEmail(requireEmail: IResolvable) {
-        cdkBuilder.requireEmail(requireEmail.let(IResolvable::unwrap))
+        cdkBuilder.requireEmail(requireEmail.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6432,7 +6432,7 @@ public open class CfnTemplate(
        * alternate name.
        */
       override fun sanRequireDirectoryGuid(sanRequireDirectoryGuid: IResolvable) {
-        cdkBuilder.sanRequireDirectoryGuid(sanRequireDirectoryGuid.let(IResolvable::unwrap))
+        cdkBuilder.sanRequireDirectoryGuid(sanRequireDirectoryGuid.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6446,7 +6446,7 @@ public open class CfnTemplate(
        * @param sanRequireDns Include the DNS in the subject alternate name.
        */
       override fun sanRequireDns(sanRequireDns: IResolvable) {
-        cdkBuilder.sanRequireDns(sanRequireDns.let(IResolvable::unwrap))
+        cdkBuilder.sanRequireDns(sanRequireDns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6460,7 +6460,7 @@ public open class CfnTemplate(
        * @param sanRequireDomainDns Include the domain DNS in the subject alternate name.
        */
       override fun sanRequireDomainDns(sanRequireDomainDns: IResolvable) {
-        cdkBuilder.sanRequireDomainDns(sanRequireDomainDns.let(IResolvable::unwrap))
+        cdkBuilder.sanRequireDomainDns(sanRequireDomainDns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6474,7 +6474,7 @@ public open class CfnTemplate(
        * @param sanRequireEmail Include the subject's email in the subject alternate name.
        */
       override fun sanRequireEmail(sanRequireEmail: IResolvable) {
-        cdkBuilder.sanRequireEmail(sanRequireEmail.let(IResolvable::unwrap))
+        cdkBuilder.sanRequireEmail(sanRequireEmail.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6490,7 +6490,7 @@ public open class CfnTemplate(
        * name.
        */
       override fun sanRequireSpn(sanRequireSpn: IResolvable) {
-        cdkBuilder.sanRequireSpn(sanRequireSpn.let(IResolvable::unwrap))
+        cdkBuilder.sanRequireSpn(sanRequireSpn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6504,7 +6504,7 @@ public open class CfnTemplate(
        * @param sanRequireUpn Include the user principal name (UPN) in the subject alternate name.
        */
       override fun sanRequireUpn(sanRequireUpn: IResolvable) {
-        cdkBuilder.sanRequireUpn(sanRequireUpn.let(IResolvable::unwrap))
+        cdkBuilder.sanRequireUpn(sanRequireUpn.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -6987,7 +6987,7 @@ public open class CfnTemplate(
        * enrollment options, key usage extensions, application policies, and cryptography settings.
        */
       override fun templateV2(templateV2: IResolvable) {
-        cdkBuilder.templateV2(templateV2.let(IResolvable::unwrap))
+        cdkBuilder.templateV2(templateV2.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6997,7 +6997,7 @@ public open class CfnTemplate(
        * enrollment options, key usage extensions, application policies, and cryptography settings.
        */
       override fun templateV2(templateV2: TemplateV2Property) {
-        cdkBuilder.templateV2(templateV2.let(TemplateV2Property::unwrap))
+        cdkBuilder.templateV2(templateV2.let(TemplateV2Property.Companion::unwrap))
       }
 
       /**
@@ -7018,7 +7018,7 @@ public open class CfnTemplate(
        * enrollment options, key usage extensions, application policies, and cryptography settings.
        */
       override fun templateV3(templateV3: IResolvable) {
-        cdkBuilder.templateV3(templateV3.let(IResolvable::unwrap))
+        cdkBuilder.templateV3(templateV3.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7028,7 +7028,7 @@ public open class CfnTemplate(
        * enrollment options, key usage extensions, application policies, and cryptography settings.
        */
       override fun templateV3(templateV3: TemplateV3Property) {
-        cdkBuilder.templateV3(templateV3.let(TemplateV3Property::unwrap))
+        cdkBuilder.templateV3(templateV3.let(TemplateV3Property.Companion::unwrap))
       }
 
       /**
@@ -7049,7 +7049,7 @@ public open class CfnTemplate(
        * enrollment options, key usage extensions, application policies, and cryptography settings.
        */
       override fun templateV4(templateV4: IResolvable) {
-        cdkBuilder.templateV4(templateV4.let(IResolvable::unwrap))
+        cdkBuilder.templateV4(templateV4.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7059,7 +7059,7 @@ public open class CfnTemplate(
        * enrollment options, key usage extensions, application policies, and cryptography settings.
        */
       override fun templateV4(templateV4: TemplateV4Property) {
-        cdkBuilder.templateV4(templateV4.let(TemplateV4Property::unwrap))
+        cdkBuilder.templateV4(templateV4.let(TemplateV4Property.Companion::unwrap))
       }
 
       /**
@@ -7455,7 +7455,7 @@ public open class CfnTemplate(
        * of a certificate. 
        */
       override fun certificateValidity(certificateValidity: IResolvable) {
-        cdkBuilder.certificateValidity(certificateValidity.let(IResolvable::unwrap))
+        cdkBuilder.certificateValidity(certificateValidity.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7463,7 +7463,7 @@ public open class CfnTemplate(
        * of a certificate. 
        */
       override fun certificateValidity(certificateValidity: CertificateValidityProperty) {
-        cdkBuilder.certificateValidity(certificateValidity.let(CertificateValidityProperty::unwrap))
+        cdkBuilder.certificateValidity(certificateValidity.let(CertificateValidityProperty.Companion::unwrap))
       }
 
       /**
@@ -7481,7 +7481,7 @@ public open class CfnTemplate(
        * such as using the existing private key and deleting expired or revoked certificates. 
        */
       override fun enrollmentFlags(enrollmentFlags: IResolvable) {
-        cdkBuilder.enrollmentFlags(enrollmentFlags.let(IResolvable::unwrap))
+        cdkBuilder.enrollmentFlags(enrollmentFlags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7489,7 +7489,7 @@ public open class CfnTemplate(
        * such as using the existing private key and deleting expired or revoked certificates. 
        */
       override fun enrollmentFlags(enrollmentFlags: EnrollmentFlagsV2Property) {
-        cdkBuilder.enrollmentFlags(enrollmentFlags.let(EnrollmentFlagsV2Property::unwrap))
+        cdkBuilder.enrollmentFlags(enrollmentFlags.let(EnrollmentFlagsV2Property.Companion::unwrap))
       }
 
       /**
@@ -7506,7 +7506,7 @@ public open class CfnTemplate(
        * a template. 
        */
       override fun extensions(extensions: IResolvable) {
-        cdkBuilder.extensions(extensions.let(IResolvable::unwrap))
+        cdkBuilder.extensions(extensions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7514,7 +7514,7 @@ public open class CfnTemplate(
        * a template. 
        */
       override fun extensions(extensions: ExtensionsV2Property) {
-        cdkBuilder.extensions(extensions.let(ExtensionsV2Property::unwrap))
+        cdkBuilder.extensions(extensions.let(ExtensionsV2Property.Companion::unwrap))
       }
 
       /**
@@ -7531,7 +7531,7 @@ public open class CfnTemplate(
        * users and if the template can be used with autoenrollment. 
        */
       override fun generalFlags(generalFlags: IResolvable) {
-        cdkBuilder.generalFlags(generalFlags.let(IResolvable::unwrap))
+        cdkBuilder.generalFlags(generalFlags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7539,7 +7539,7 @@ public open class CfnTemplate(
        * users and if the template can be used with autoenrollment. 
        */
       override fun generalFlags(generalFlags: GeneralFlagsV2Property) {
-        cdkBuilder.generalFlags(generalFlags.let(GeneralFlagsV2Property::unwrap))
+        cdkBuilder.generalFlags(generalFlags.let(GeneralFlagsV2Property.Companion::unwrap))
       }
 
       /**
@@ -7558,7 +7558,7 @@ public open class CfnTemplate(
        * V2 templates allow you to use Legacy Cryptographic Service Providers.
        */
       override fun privateKeyAttributes(privateKeyAttributes: IResolvable) {
-        cdkBuilder.privateKeyAttributes(privateKeyAttributes.let(IResolvable::unwrap))
+        cdkBuilder.privateKeyAttributes(privateKeyAttributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7568,7 +7568,7 @@ public open class CfnTemplate(
        * V2 templates allow you to use Legacy Cryptographic Service Providers.
        */
       override fun privateKeyAttributes(privateKeyAttributes: PrivateKeyAttributesV2Property) {
-        cdkBuilder.privateKeyAttributes(privateKeyAttributes.let(PrivateKeyAttributesV2Property::unwrap))
+        cdkBuilder.privateKeyAttributes(privateKeyAttributes.let(PrivateKeyAttributesV2Property.Companion::unwrap))
       }
 
       /**
@@ -7588,7 +7588,7 @@ public open class CfnTemplate(
        * if the private key can be exported, and if user input is required when using a private key. 
        */
       override fun privateKeyFlags(privateKeyFlags: IResolvable) {
-        cdkBuilder.privateKeyFlags(privateKeyFlags.let(IResolvable::unwrap))
+        cdkBuilder.privateKeyFlags(privateKeyFlags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7596,7 +7596,7 @@ public open class CfnTemplate(
        * if the private key can be exported, and if user input is required when using a private key. 
        */
       override fun privateKeyFlags(privateKeyFlags: PrivateKeyFlagsV2Property) {
-        cdkBuilder.privateKeyFlags(privateKeyFlags.let(PrivateKeyFlagsV2Property::unwrap))
+        cdkBuilder.privateKeyFlags(privateKeyFlags.let(PrivateKeyFlagsV2Property.Companion::unwrap))
       }
 
       /**
@@ -7613,7 +7613,7 @@ public open class CfnTemplate(
        * name that is included in a certificate. 
        */
       override fun subjectNameFlags(subjectNameFlags: IResolvable) {
-        cdkBuilder.subjectNameFlags(subjectNameFlags.let(IResolvable::unwrap))
+        cdkBuilder.subjectNameFlags(subjectNameFlags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7621,7 +7621,7 @@ public open class CfnTemplate(
        * name that is included in a certificate. 
        */
       override fun subjectNameFlags(subjectNameFlags: SubjectNameFlagsV2Property) {
-        cdkBuilder.subjectNameFlags(subjectNameFlags.let(SubjectNameFlagsV2Property::unwrap))
+        cdkBuilder.subjectNameFlags(subjectNameFlags.let(SubjectNameFlagsV2Property.Companion::unwrap))
       }
 
       /**
@@ -8092,7 +8092,7 @@ public open class CfnTemplate(
        * of a certificate. 
        */
       override fun certificateValidity(certificateValidity: IResolvable) {
-        cdkBuilder.certificateValidity(certificateValidity.let(IResolvable::unwrap))
+        cdkBuilder.certificateValidity(certificateValidity.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8100,7 +8100,7 @@ public open class CfnTemplate(
        * of a certificate. 
        */
       override fun certificateValidity(certificateValidity: CertificateValidityProperty) {
-        cdkBuilder.certificateValidity(certificateValidity.let(CertificateValidityProperty::unwrap))
+        cdkBuilder.certificateValidity(certificateValidity.let(CertificateValidityProperty.Companion::unwrap))
       }
 
       /**
@@ -8118,7 +8118,7 @@ public open class CfnTemplate(
        * such as using the existing private key and deleting expired or revoked certificates. 
        */
       override fun enrollmentFlags(enrollmentFlags: IResolvable) {
-        cdkBuilder.enrollmentFlags(enrollmentFlags.let(IResolvable::unwrap))
+        cdkBuilder.enrollmentFlags(enrollmentFlags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8126,7 +8126,7 @@ public open class CfnTemplate(
        * such as using the existing private key and deleting expired or revoked certificates. 
        */
       override fun enrollmentFlags(enrollmentFlags: EnrollmentFlagsV3Property) {
-        cdkBuilder.enrollmentFlags(enrollmentFlags.let(EnrollmentFlagsV3Property::unwrap))
+        cdkBuilder.enrollmentFlags(enrollmentFlags.let(EnrollmentFlagsV3Property.Companion::unwrap))
       }
 
       /**
@@ -8143,7 +8143,7 @@ public open class CfnTemplate(
        * a template. 
        */
       override fun extensions(extensions: IResolvable) {
-        cdkBuilder.extensions(extensions.let(IResolvable::unwrap))
+        cdkBuilder.extensions(extensions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8151,7 +8151,7 @@ public open class CfnTemplate(
        * a template. 
        */
       override fun extensions(extensions: ExtensionsV3Property) {
-        cdkBuilder.extensions(extensions.let(ExtensionsV3Property::unwrap))
+        cdkBuilder.extensions(extensions.let(ExtensionsV3Property.Companion::unwrap))
       }
 
       /**
@@ -8168,7 +8168,7 @@ public open class CfnTemplate(
        * users and if the template can be used with autoenrollment. 
        */
       override fun generalFlags(generalFlags: IResolvable) {
-        cdkBuilder.generalFlags(generalFlags.let(IResolvable::unwrap))
+        cdkBuilder.generalFlags(generalFlags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8176,7 +8176,7 @@ public open class CfnTemplate(
        * users and if the template can be used with autoenrollment. 
        */
       override fun generalFlags(generalFlags: GeneralFlagsV3Property) {
-        cdkBuilder.generalFlags(generalFlags.let(GeneralFlagsV3Property::unwrap))
+        cdkBuilder.generalFlags(generalFlags.let(GeneralFlagsV3Property.Companion::unwrap))
       }
 
       /**
@@ -8202,7 +8202,7 @@ public open class CfnTemplate(
        * V3 templates allow you to use Key Storage Providers.
        */
       override fun privateKeyAttributes(privateKeyAttributes: IResolvable) {
-        cdkBuilder.privateKeyAttributes(privateKeyAttributes.let(IResolvable::unwrap))
+        cdkBuilder.privateKeyAttributes(privateKeyAttributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8212,7 +8212,7 @@ public open class CfnTemplate(
        * V3 templates allow you to use Key Storage Providers.
        */
       override fun privateKeyAttributes(privateKeyAttributes: PrivateKeyAttributesV3Property) {
-        cdkBuilder.privateKeyAttributes(privateKeyAttributes.let(PrivateKeyAttributesV3Property::unwrap))
+        cdkBuilder.privateKeyAttributes(privateKeyAttributes.let(PrivateKeyAttributesV3Property.Companion::unwrap))
       }
 
       /**
@@ -8233,7 +8233,7 @@ public open class CfnTemplate(
        * an alternate signature algorithm should be used. 
        */
       override fun privateKeyFlags(privateKeyFlags: IResolvable) {
-        cdkBuilder.privateKeyFlags(privateKeyFlags.let(IResolvable::unwrap))
+        cdkBuilder.privateKeyFlags(privateKeyFlags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8242,7 +8242,7 @@ public open class CfnTemplate(
        * an alternate signature algorithm should be used. 
        */
       override fun privateKeyFlags(privateKeyFlags: PrivateKeyFlagsV3Property) {
-        cdkBuilder.privateKeyFlags(privateKeyFlags.let(PrivateKeyFlagsV3Property::unwrap))
+        cdkBuilder.privateKeyFlags(privateKeyFlags.let(PrivateKeyFlagsV3Property.Companion::unwrap))
       }
 
       /**
@@ -8260,7 +8260,7 @@ public open class CfnTemplate(
        * name that is included in a certificate. 
        */
       override fun subjectNameFlags(subjectNameFlags: IResolvable) {
-        cdkBuilder.subjectNameFlags(subjectNameFlags.let(IResolvable::unwrap))
+        cdkBuilder.subjectNameFlags(subjectNameFlags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8268,7 +8268,7 @@ public open class CfnTemplate(
        * name that is included in a certificate. 
        */
       override fun subjectNameFlags(subjectNameFlags: SubjectNameFlagsV3Property) {
-        cdkBuilder.subjectNameFlags(subjectNameFlags.let(SubjectNameFlagsV3Property::unwrap))
+        cdkBuilder.subjectNameFlags(subjectNameFlags.let(SubjectNameFlagsV3Property.Companion::unwrap))
       }
 
       /**
@@ -8759,7 +8759,7 @@ public open class CfnTemplate(
        * of a certificate. 
        */
       override fun certificateValidity(certificateValidity: IResolvable) {
-        cdkBuilder.certificateValidity(certificateValidity.let(IResolvable::unwrap))
+        cdkBuilder.certificateValidity(certificateValidity.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8767,7 +8767,7 @@ public open class CfnTemplate(
        * of a certificate. 
        */
       override fun certificateValidity(certificateValidity: CertificateValidityProperty) {
-        cdkBuilder.certificateValidity(certificateValidity.let(CertificateValidityProperty::unwrap))
+        cdkBuilder.certificateValidity(certificateValidity.let(CertificateValidityProperty.Companion::unwrap))
       }
 
       /**
@@ -8785,7 +8785,7 @@ public open class CfnTemplate(
        * using the existing private key and deleting expired or revoked certificates. 
        */
       override fun enrollmentFlags(enrollmentFlags: IResolvable) {
-        cdkBuilder.enrollmentFlags(enrollmentFlags.let(IResolvable::unwrap))
+        cdkBuilder.enrollmentFlags(enrollmentFlags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8793,7 +8793,7 @@ public open class CfnTemplate(
        * using the existing private key and deleting expired or revoked certificates. 
        */
       override fun enrollmentFlags(enrollmentFlags: EnrollmentFlagsV4Property) {
-        cdkBuilder.enrollmentFlags(enrollmentFlags.let(EnrollmentFlagsV4Property::unwrap))
+        cdkBuilder.enrollmentFlags(enrollmentFlags.let(EnrollmentFlagsV4Property.Companion::unwrap))
       }
 
       /**
@@ -8810,7 +8810,7 @@ public open class CfnTemplate(
        * a template. 
        */
       override fun extensions(extensions: IResolvable) {
-        cdkBuilder.extensions(extensions.let(IResolvable::unwrap))
+        cdkBuilder.extensions(extensions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8818,7 +8818,7 @@ public open class CfnTemplate(
        * a template. 
        */
       override fun extensions(extensions: ExtensionsV4Property) {
-        cdkBuilder.extensions(extensions.let(ExtensionsV4Property::unwrap))
+        cdkBuilder.extensions(extensions.let(ExtensionsV4Property.Companion::unwrap))
       }
 
       /**
@@ -8835,7 +8835,7 @@ public open class CfnTemplate(
        * users and if the template can be used with autoenrollment. 
        */
       override fun generalFlags(generalFlags: IResolvable) {
-        cdkBuilder.generalFlags(generalFlags.let(IResolvable::unwrap))
+        cdkBuilder.generalFlags(generalFlags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8843,7 +8843,7 @@ public open class CfnTemplate(
        * users and if the template can be used with autoenrollment. 
        */
       override fun generalFlags(generalFlags: GeneralFlagsV4Property) {
-        cdkBuilder.generalFlags(generalFlags.let(GeneralFlagsV4Property::unwrap))
+        cdkBuilder.generalFlags(generalFlags.let(GeneralFlagsV4Property.Companion::unwrap))
       }
 
       /**
@@ -8871,7 +8871,7 @@ public open class CfnTemplate(
        * Providers. You specify the cryptography provider category in private key flags.
        */
       override fun privateKeyAttributes(privateKeyAttributes: IResolvable) {
-        cdkBuilder.privateKeyAttributes(privateKeyAttributes.let(IResolvable::unwrap))
+        cdkBuilder.privateKeyAttributes(privateKeyAttributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8882,7 +8882,7 @@ public open class CfnTemplate(
        * Providers. You specify the cryptography provider category in private key flags.
        */
       override fun privateKeyAttributes(privateKeyAttributes: PrivateKeyAttributesV4Property) {
-        cdkBuilder.privateKeyAttributes(privateKeyAttributes.let(PrivateKeyAttributesV4Property::unwrap))
+        cdkBuilder.privateKeyAttributes(privateKeyAttributes.let(PrivateKeyAttributesV4Property.Companion::unwrap))
       }
 
       /**
@@ -8905,7 +8905,7 @@ public open class CfnTemplate(
        * private key. 
        */
       override fun privateKeyFlags(privateKeyFlags: IResolvable) {
-        cdkBuilder.privateKeyFlags(privateKeyFlags.let(IResolvable::unwrap))
+        cdkBuilder.privateKeyFlags(privateKeyFlags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8915,7 +8915,7 @@ public open class CfnTemplate(
        * private key. 
        */
       override fun privateKeyFlags(privateKeyFlags: PrivateKeyFlagsV4Property) {
-        cdkBuilder.privateKeyFlags(privateKeyFlags.let(PrivateKeyFlagsV4Property::unwrap))
+        cdkBuilder.privateKeyFlags(privateKeyFlags.let(PrivateKeyFlagsV4Property.Companion::unwrap))
       }
 
       /**
@@ -8934,7 +8934,7 @@ public open class CfnTemplate(
        * name that is included in a certificate. 
        */
       override fun subjectNameFlags(subjectNameFlags: IResolvable) {
-        cdkBuilder.subjectNameFlags(subjectNameFlags.let(IResolvable::unwrap))
+        cdkBuilder.subjectNameFlags(subjectNameFlags.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8942,7 +8942,7 @@ public open class CfnTemplate(
        * name that is included in a certificate. 
        */
       override fun subjectNameFlags(subjectNameFlags: SubjectNameFlagsV4Property) {
-        cdkBuilder.subjectNameFlags(subjectNameFlags.let(SubjectNameFlagsV4Property::unwrap))
+        cdkBuilder.subjectNameFlags(subjectNameFlags.let(SubjectNameFlagsV4Property.Companion::unwrap))
       }
 
       /**

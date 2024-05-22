@@ -59,6 +59,41 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .name("name")
  * .roleArn("roleArn")
+ * .storageConfiguration(StorageConfigurationProperty.builder()
+ * .type("type")
+ * // the properties below are optional
+ * .opensearchServerlessConfiguration(OpenSearchServerlessConfigurationProperty.builder()
+ * .collectionArn("collectionArn")
+ * .fieldMapping(OpenSearchServerlessFieldMappingProperty.builder()
+ * .metadataField("metadataField")
+ * .textField("textField")
+ * .vectorField("vectorField")
+ * .build())
+ * .vectorIndexName("vectorIndexName")
+ * .build())
+ * .pineconeConfiguration(PineconeConfigurationProperty.builder()
+ * .connectionString("connectionString")
+ * .credentialsSecretArn("credentialsSecretArn")
+ * .fieldMapping(PineconeFieldMappingProperty.builder()
+ * .metadataField("metadataField")
+ * .textField("textField")
+ * .build())
+ * // the properties below are optional
+ * .namespace("namespace")
+ * .build())
+ * .rdsConfiguration(RdsConfigurationProperty.builder()
+ * .credentialsSecretArn("credentialsSecretArn")
+ * .databaseName("databaseName")
+ * .fieldMapping(RdsFieldMappingProperty.builder()
+ * .metadataField("metadataField")
+ * .primaryKeyField("primaryKeyField")
+ * .textField("textField")
+ * .vectorField("vectorField")
+ * .build())
+ * .resourceArn("resourceArn")
+ * .tableName("tableName")
+ * .build())
+ * .build())
  * // the properties below are optional
  * .description("description")
  * .tags(Map.of(
@@ -76,8 +111,8 @@ public open class CfnKnowledgeBase(
     id: String,
     props: CfnKnowledgeBaseProps,
   ) :
-      this(software.amazon.awscdk.services.bedrock.CfnKnowledgeBase(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnKnowledgeBaseProps::unwrap))
+      this(software.amazon.awscdk.services.bedrock.CfnKnowledgeBase(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnKnowledgeBaseProps.Companion::unwrap))
   )
 
   public constructor(
@@ -141,7 +176,7 @@ public open class CfnKnowledgeBase(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -153,14 +188,14 @@ public open class CfnKnowledgeBase(
    * Contains details about the embeddings configuration of the knowledge base.
    */
   public open fun knowledgeBaseConfiguration(`value`: IResolvable) {
-    unwrap(this).setKnowledgeBaseConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKnowledgeBaseConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Contains details about the embeddings configuration of the knowledge base.
    */
   public open fun knowledgeBaseConfiguration(`value`: KnowledgeBaseConfigurationProperty) {
-    unwrap(this).setKnowledgeBaseConfiguration(`value`.let(KnowledgeBaseConfigurationProperty::unwrap))
+    unwrap(this).setKnowledgeBaseConfiguration(`value`.let(KnowledgeBaseConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -197,6 +232,33 @@ public open class CfnKnowledgeBase(
   public open fun roleArn(`value`: String) {
     unwrap(this).setRoleArn(`value`)
   }
+
+  /**
+   * Contains details about the storage configuration of the knowledge base.
+   */
+  public open fun storageConfiguration(): Any = unwrap(this).getStorageConfiguration()
+
+  /**
+   * Contains details about the storage configuration of the knowledge base.
+   */
+  public open fun storageConfiguration(`value`: IResolvable) {
+    unwrap(this).setStorageConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Contains details about the storage configuration of the knowledge base.
+   */
+  public open fun storageConfiguration(`value`: StorageConfigurationProperty) {
+    unwrap(this).setStorageConfiguration(`value`.let(StorageConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * Contains details about the storage configuration of the knowledge base.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("4527c78dd25dbb2dcd971fd51d54f2eb5157cadc320a92f88d2736379c0fc4ee")
+  public open fun storageConfiguration(`value`: StorageConfigurationProperty.Builder.() -> Unit):
+      Unit = storageConfiguration(StorageConfigurationProperty(`value`))
 
   /**
    * Metadata that you can assign to a resource as key-value pairs.
@@ -277,6 +339,36 @@ public open class CfnKnowledgeBase(
     public fun roleArn(roleArn: String)
 
     /**
+     * Contains details about the storage configuration of the knowledge base.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-knowledgebase.html#cfn-bedrock-knowledgebase-storageconfiguration)
+     * @param storageConfiguration Contains details about the storage configuration of the knowledge
+     * base. 
+     */
+    public fun storageConfiguration(storageConfiguration: IResolvable)
+
+    /**
+     * Contains details about the storage configuration of the knowledge base.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-knowledgebase.html#cfn-bedrock-knowledgebase-storageconfiguration)
+     * @param storageConfiguration Contains details about the storage configuration of the knowledge
+     * base. 
+     */
+    public fun storageConfiguration(storageConfiguration: StorageConfigurationProperty)
+
+    /**
+     * Contains details about the storage configuration of the knowledge base.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-knowledgebase.html#cfn-bedrock-knowledgebase-storageconfiguration)
+     * @param storageConfiguration Contains details about the storage configuration of the knowledge
+     * base. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b8b5f130ccb5166c35b1122274e227f33658a3c8ab9e144fa73149a3df603ce0")
+    public
+        fun storageConfiguration(storageConfiguration: StorageConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * Metadata that you can assign to a resource as key-value pairs. For more information, see the
      * following resources:.
      *
@@ -317,7 +409,7 @@ public open class CfnKnowledgeBase(
      * knowledge base. 
      */
     override fun knowledgeBaseConfiguration(knowledgeBaseConfiguration: IResolvable) {
-      cdkBuilder.knowledgeBaseConfiguration(knowledgeBaseConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.knowledgeBaseConfiguration(knowledgeBaseConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -329,7 +421,7 @@ public open class CfnKnowledgeBase(
      */
     override
         fun knowledgeBaseConfiguration(knowledgeBaseConfiguration: KnowledgeBaseConfigurationProperty) {
-      cdkBuilder.knowledgeBaseConfiguration(knowledgeBaseConfiguration.let(KnowledgeBaseConfigurationProperty::unwrap))
+      cdkBuilder.knowledgeBaseConfiguration(knowledgeBaseConfiguration.let(KnowledgeBaseConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -367,6 +459,41 @@ public open class CfnKnowledgeBase(
     override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
+
+    /**
+     * Contains details about the storage configuration of the knowledge base.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-knowledgebase.html#cfn-bedrock-knowledgebase-storageconfiguration)
+     * @param storageConfiguration Contains details about the storage configuration of the knowledge
+     * base. 
+     */
+    override fun storageConfiguration(storageConfiguration: IResolvable) {
+      cdkBuilder.storageConfiguration(storageConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Contains details about the storage configuration of the knowledge base.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-knowledgebase.html#cfn-bedrock-knowledgebase-storageconfiguration)
+     * @param storageConfiguration Contains details about the storage configuration of the knowledge
+     * base. 
+     */
+    override fun storageConfiguration(storageConfiguration: StorageConfigurationProperty) {
+      cdkBuilder.storageConfiguration(storageConfiguration.let(StorageConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * Contains details about the storage configuration of the knowledge base.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-knowledgebase.html#cfn-bedrock-knowledgebase-storageconfiguration)
+     * @param storageConfiguration Contains details about the storage configuration of the knowledge
+     * base. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b8b5f130ccb5166c35b1122274e227f33658a3c8ab9e144fa73149a3df603ce0")
+    override
+        fun storageConfiguration(storageConfiguration: StorageConfigurationProperty.Builder.() -> Unit):
+        Unit = storageConfiguration(StorageConfigurationProperty(storageConfiguration))
 
     /**
      * Metadata that you can assign to a resource as key-value pairs. For more information, see the
@@ -498,7 +625,7 @@ public open class CfnKnowledgeBase(
        * that'sused to convert the data source. 
        */
       override fun vectorKnowledgeBaseConfiguration(vectorKnowledgeBaseConfiguration: IResolvable) {
-        cdkBuilder.vectorKnowledgeBaseConfiguration(vectorKnowledgeBaseConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.vectorKnowledgeBaseConfiguration(vectorKnowledgeBaseConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -507,7 +634,7 @@ public open class CfnKnowledgeBase(
        */
       override
           fun vectorKnowledgeBaseConfiguration(vectorKnowledgeBaseConfiguration: VectorKnowledgeBaseConfigurationProperty) {
-        cdkBuilder.vectorKnowledgeBaseConfiguration(vectorKnowledgeBaseConfiguration.let(VectorKnowledgeBaseConfigurationProperty::unwrap))
+        cdkBuilder.vectorKnowledgeBaseConfiguration(vectorKnowledgeBaseConfiguration.let(VectorKnowledgeBaseConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -561,6 +688,1403 @@ public open class CfnKnowledgeBase(
           software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.KnowledgeBaseConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.KnowledgeBaseConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains details about the storage configuration of the knowledge base in Amazon OpenSearch
+   * Service.
+   *
+   * For more information, see [Create a vector index in Amazon OpenSearch
+   * Service](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-oss.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * OpenSearchServerlessConfigurationProperty openSearchServerlessConfigurationProperty =
+   * OpenSearchServerlessConfigurationProperty.builder()
+   * .collectionArn("collectionArn")
+   * .fieldMapping(OpenSearchServerlessFieldMappingProperty.builder()
+   * .metadataField("metadataField")
+   * .textField("textField")
+   * .vectorField("vectorField")
+   * .build())
+   * .vectorIndexName("vectorIndexName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchserverlessconfiguration.html)
+   */
+  public interface OpenSearchServerlessConfigurationProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the OpenSearch Service vector store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchserverlessconfiguration.html#cfn-bedrock-knowledgebase-opensearchserverlessconfiguration-collectionarn)
+     */
+    public fun collectionArn(): String
+
+    /**
+     * Contains the names of the fields to which to map information about the vector store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchserverlessconfiguration.html#cfn-bedrock-knowledgebase-opensearchserverlessconfiguration-fieldmapping)
+     */
+    public fun fieldMapping(): Any
+
+    /**
+     * The name of the vector store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchserverlessconfiguration.html#cfn-bedrock-knowledgebase-opensearchserverlessconfiguration-vectorindexname)
+     */
+    public fun vectorIndexName(): String
+
+    /**
+     * A builder for [OpenSearchServerlessConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param collectionArn The Amazon Resource Name (ARN) of the OpenSearch Service vector store.
+       * 
+       */
+      public fun collectionArn(collectionArn: String)
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      public fun fieldMapping(fieldMapping: IResolvable)
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      public fun fieldMapping(fieldMapping: OpenSearchServerlessFieldMappingProperty)
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9563aeefd0e9e5b661bf7ca65f0095830e098ad42194668f3f9045ec181e49de")
+      public
+          fun fieldMapping(fieldMapping: OpenSearchServerlessFieldMappingProperty.Builder.() -> Unit)
+
+      /**
+       * @param vectorIndexName The name of the vector store. 
+       */
+      public fun vectorIndexName(vectorIndexName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchServerlessConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchServerlessConfigurationProperty.builder()
+
+      /**
+       * @param collectionArn The Amazon Resource Name (ARN) of the OpenSearch Service vector store.
+       * 
+       */
+      override fun collectionArn(collectionArn: String) {
+        cdkBuilder.collectionArn(collectionArn)
+      }
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      override fun fieldMapping(fieldMapping: IResolvable) {
+        cdkBuilder.fieldMapping(fieldMapping.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      override fun fieldMapping(fieldMapping: OpenSearchServerlessFieldMappingProperty) {
+        cdkBuilder.fieldMapping(fieldMapping.let(OpenSearchServerlessFieldMappingProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9563aeefd0e9e5b661bf7ca65f0095830e098ad42194668f3f9045ec181e49de")
+      override
+          fun fieldMapping(fieldMapping: OpenSearchServerlessFieldMappingProperty.Builder.() -> Unit):
+          Unit = fieldMapping(OpenSearchServerlessFieldMappingProperty(fieldMapping))
+
+      /**
+       * @param vectorIndexName The name of the vector store. 
+       */
+      override fun vectorIndexName(vectorIndexName: String) {
+        cdkBuilder.vectorIndexName(vectorIndexName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchServerlessConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchServerlessConfigurationProperty,
+    ) : CdkObject(cdkObject), OpenSearchServerlessConfigurationProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the OpenSearch Service vector store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchserverlessconfiguration.html#cfn-bedrock-knowledgebase-opensearchserverlessconfiguration-collectionarn)
+       */
+      override fun collectionArn(): String = unwrap(this).getCollectionArn()
+
+      /**
+       * Contains the names of the fields to which to map information about the vector store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchserverlessconfiguration.html#cfn-bedrock-knowledgebase-opensearchserverlessconfiguration-fieldmapping)
+       */
+      override fun fieldMapping(): Any = unwrap(this).getFieldMapping()
+
+      /**
+       * The name of the vector store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchserverlessconfiguration.html#cfn-bedrock-knowledgebase-opensearchserverlessconfiguration-vectorindexname)
+       */
+      override fun vectorIndexName(): String = unwrap(this).getVectorIndexName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          OpenSearchServerlessConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchServerlessConfigurationProperty):
+          OpenSearchServerlessConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OpenSearchServerlessConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OpenSearchServerlessConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchServerlessConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchServerlessConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains the names of the fields to which to map information about the vector store.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * OpenSearchServerlessFieldMappingProperty openSearchServerlessFieldMappingProperty =
+   * OpenSearchServerlessFieldMappingProperty.builder()
+   * .metadataField("metadataField")
+   * .textField("textField")
+   * .vectorField("vectorField")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchserverlessfieldmapping.html)
+   */
+  public interface OpenSearchServerlessFieldMappingProperty {
+    /**
+     * The name of the field in which Amazon Bedrock stores metadata about the vector store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchserverlessfieldmapping.html#cfn-bedrock-knowledgebase-opensearchserverlessfieldmapping-metadatafield)
+     */
+    public fun metadataField(): String
+
+    /**
+     * The name of the field in which Amazon Bedrock stores the raw text from your data.
+     *
+     * The text is split according to the chunking strategy you choose.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchserverlessfieldmapping.html#cfn-bedrock-knowledgebase-opensearchserverlessfieldmapping-textfield)
+     */
+    public fun textField(): String
+
+    /**
+     * The name of the field in which Amazon Bedrock stores the vector embeddings for your data
+     * sources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchserverlessfieldmapping.html#cfn-bedrock-knowledgebase-opensearchserverlessfieldmapping-vectorfield)
+     */
+    public fun vectorField(): String
+
+    /**
+     * A builder for [OpenSearchServerlessFieldMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param metadataField The name of the field in which Amazon Bedrock stores metadata about
+       * the vector store. 
+       */
+      public fun metadataField(metadataField: String)
+
+      /**
+       * @param textField The name of the field in which Amazon Bedrock stores the raw text from
+       * your data. 
+       * The text is split according to the chunking strategy you choose.
+       */
+      public fun textField(textField: String)
+
+      /**
+       * @param vectorField The name of the field in which Amazon Bedrock stores the vector
+       * embeddings for your data sources. 
+       */
+      public fun vectorField(vectorField: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchServerlessFieldMappingProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchServerlessFieldMappingProperty.builder()
+
+      /**
+       * @param metadataField The name of the field in which Amazon Bedrock stores metadata about
+       * the vector store. 
+       */
+      override fun metadataField(metadataField: String) {
+        cdkBuilder.metadataField(metadataField)
+      }
+
+      /**
+       * @param textField The name of the field in which Amazon Bedrock stores the raw text from
+       * your data. 
+       * The text is split according to the chunking strategy you choose.
+       */
+      override fun textField(textField: String) {
+        cdkBuilder.textField(textField)
+      }
+
+      /**
+       * @param vectorField The name of the field in which Amazon Bedrock stores the vector
+       * embeddings for your data sources. 
+       */
+      override fun vectorField(vectorField: String) {
+        cdkBuilder.vectorField(vectorField)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchServerlessFieldMappingProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchServerlessFieldMappingProperty,
+    ) : CdkObject(cdkObject), OpenSearchServerlessFieldMappingProperty {
+      /**
+       * The name of the field in which Amazon Bedrock stores metadata about the vector store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchserverlessfieldmapping.html#cfn-bedrock-knowledgebase-opensearchserverlessfieldmapping-metadatafield)
+       */
+      override fun metadataField(): String = unwrap(this).getMetadataField()
+
+      /**
+       * The name of the field in which Amazon Bedrock stores the raw text from your data.
+       *
+       * The text is split according to the chunking strategy you choose.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchserverlessfieldmapping.html#cfn-bedrock-knowledgebase-opensearchserverlessfieldmapping-textfield)
+       */
+      override fun textField(): String = unwrap(this).getTextField()
+
+      /**
+       * The name of the field in which Amazon Bedrock stores the vector embeddings for your data
+       * sources.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-opensearchserverlessfieldmapping.html#cfn-bedrock-knowledgebase-opensearchserverlessfieldmapping-vectorfield)
+       */
+      override fun vectorField(): String = unwrap(this).getVectorField()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          OpenSearchServerlessFieldMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchServerlessFieldMappingProperty):
+          OpenSearchServerlessFieldMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OpenSearchServerlessFieldMappingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OpenSearchServerlessFieldMappingProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchServerlessFieldMappingProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.OpenSearchServerlessFieldMappingProperty
+    }
+  }
+
+  /**
+   * Contains details about the storage configuration of the knowledge base in Pinecone.
+   *
+   * For more information, see [Create a vector index in
+   * Pinecone](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-pinecone.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * PineconeConfigurationProperty pineconeConfigurationProperty =
+   * PineconeConfigurationProperty.builder()
+   * .connectionString("connectionString")
+   * .credentialsSecretArn("credentialsSecretArn")
+   * .fieldMapping(PineconeFieldMappingProperty.builder()
+   * .metadataField("metadataField")
+   * .textField("textField")
+   * .build())
+   * // the properties below are optional
+   * .namespace("namespace")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-pineconeconfiguration.html)
+   */
+  public interface PineconeConfigurationProperty {
+    /**
+     * The endpoint URL for your index management page.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-pineconeconfiguration.html#cfn-bedrock-knowledgebase-pineconeconfiguration-connectionstring)
+     */
+    public fun connectionString(): String
+
+    /**
+     * The Amazon Resource Name (ARN) of the secret that you created in AWS Secrets Manager that is
+     * linked to your Pinecone API key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-pineconeconfiguration.html#cfn-bedrock-knowledgebase-pineconeconfiguration-credentialssecretarn)
+     */
+    public fun credentialsSecretArn(): String
+
+    /**
+     * Contains the names of the fields to which to map information about the vector store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-pineconeconfiguration.html#cfn-bedrock-knowledgebase-pineconeconfiguration-fieldmapping)
+     */
+    public fun fieldMapping(): Any
+
+    /**
+     * The namespace to be used to write new data to your database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-pineconeconfiguration.html#cfn-bedrock-knowledgebase-pineconeconfiguration-namespace)
+     */
+    public fun namespace(): String? = unwrap(this).getNamespace()
+
+    /**
+     * A builder for [PineconeConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param connectionString The endpoint URL for your index management page. 
+       */
+      public fun connectionString(connectionString: String)
+
+      /**
+       * @param credentialsSecretArn The Amazon Resource Name (ARN) of the secret that you created
+       * in AWS Secrets Manager that is linked to your Pinecone API key. 
+       */
+      public fun credentialsSecretArn(credentialsSecretArn: String)
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      public fun fieldMapping(fieldMapping: IResolvable)
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      public fun fieldMapping(fieldMapping: PineconeFieldMappingProperty)
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7ffbf056f34eed9fee60b10349505326f63292225d9fe7d0d4ce1d77123bf3ba")
+      public fun fieldMapping(fieldMapping: PineconeFieldMappingProperty.Builder.() -> Unit)
+
+      /**
+       * @param namespace The namespace to be used to write new data to your database.
+       */
+      public fun namespace(namespace: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.PineconeConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.PineconeConfigurationProperty.builder()
+
+      /**
+       * @param connectionString The endpoint URL for your index management page. 
+       */
+      override fun connectionString(connectionString: String) {
+        cdkBuilder.connectionString(connectionString)
+      }
+
+      /**
+       * @param credentialsSecretArn The Amazon Resource Name (ARN) of the secret that you created
+       * in AWS Secrets Manager that is linked to your Pinecone API key. 
+       */
+      override fun credentialsSecretArn(credentialsSecretArn: String) {
+        cdkBuilder.credentialsSecretArn(credentialsSecretArn)
+      }
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      override fun fieldMapping(fieldMapping: IResolvable) {
+        cdkBuilder.fieldMapping(fieldMapping.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      override fun fieldMapping(fieldMapping: PineconeFieldMappingProperty) {
+        cdkBuilder.fieldMapping(fieldMapping.let(PineconeFieldMappingProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7ffbf056f34eed9fee60b10349505326f63292225d9fe7d0d4ce1d77123bf3ba")
+      override fun fieldMapping(fieldMapping: PineconeFieldMappingProperty.Builder.() -> Unit): Unit
+          = fieldMapping(PineconeFieldMappingProperty(fieldMapping))
+
+      /**
+       * @param namespace The namespace to be used to write new data to your database.
+       */
+      override fun namespace(namespace: String) {
+        cdkBuilder.namespace(namespace)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.PineconeConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.PineconeConfigurationProperty,
+    ) : CdkObject(cdkObject), PineconeConfigurationProperty {
+      /**
+       * The endpoint URL for your index management page.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-pineconeconfiguration.html#cfn-bedrock-knowledgebase-pineconeconfiguration-connectionstring)
+       */
+      override fun connectionString(): String = unwrap(this).getConnectionString()
+
+      /**
+       * The Amazon Resource Name (ARN) of the secret that you created in AWS Secrets Manager that
+       * is linked to your Pinecone API key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-pineconeconfiguration.html#cfn-bedrock-knowledgebase-pineconeconfiguration-credentialssecretarn)
+       */
+      override fun credentialsSecretArn(): String = unwrap(this).getCredentialsSecretArn()
+
+      /**
+       * Contains the names of the fields to which to map information about the vector store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-pineconeconfiguration.html#cfn-bedrock-knowledgebase-pineconeconfiguration-fieldmapping)
+       */
+      override fun fieldMapping(): Any = unwrap(this).getFieldMapping()
+
+      /**
+       * The namespace to be used to write new data to your database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-pineconeconfiguration.html#cfn-bedrock-knowledgebase-pineconeconfiguration-namespace)
+       */
+      override fun namespace(): String? = unwrap(this).getNamespace()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PineconeConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.PineconeConfigurationProperty):
+          PineconeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PineconeConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PineconeConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.PineconeConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.PineconeConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains the names of the fields to which to map information about the vector store.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * PineconeFieldMappingProperty pineconeFieldMappingProperty =
+   * PineconeFieldMappingProperty.builder()
+   * .metadataField("metadataField")
+   * .textField("textField")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-pineconefieldmapping.html)
+   */
+  public interface PineconeFieldMappingProperty {
+    /**
+     * The name of the field in which Amazon Bedrock stores metadata about the vector store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-pineconefieldmapping.html#cfn-bedrock-knowledgebase-pineconefieldmapping-metadatafield)
+     */
+    public fun metadataField(): String
+
+    /**
+     * The name of the field in which Amazon Bedrock stores the raw text from your data.
+     *
+     * The text is split according to the chunking strategy you choose.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-pineconefieldmapping.html#cfn-bedrock-knowledgebase-pineconefieldmapping-textfield)
+     */
+    public fun textField(): String
+
+    /**
+     * A builder for [PineconeFieldMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param metadataField The name of the field in which Amazon Bedrock stores metadata about
+       * the vector store. 
+       */
+      public fun metadataField(metadataField: String)
+
+      /**
+       * @param textField The name of the field in which Amazon Bedrock stores the raw text from
+       * your data. 
+       * The text is split according to the chunking strategy you choose.
+       */
+      public fun textField(textField: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.PineconeFieldMappingProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.PineconeFieldMappingProperty.builder()
+
+      /**
+       * @param metadataField The name of the field in which Amazon Bedrock stores metadata about
+       * the vector store. 
+       */
+      override fun metadataField(metadataField: String) {
+        cdkBuilder.metadataField(metadataField)
+      }
+
+      /**
+       * @param textField The name of the field in which Amazon Bedrock stores the raw text from
+       * your data. 
+       * The text is split according to the chunking strategy you choose.
+       */
+      override fun textField(textField: String) {
+        cdkBuilder.textField(textField)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.PineconeFieldMappingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.PineconeFieldMappingProperty,
+    ) : CdkObject(cdkObject), PineconeFieldMappingProperty {
+      /**
+       * The name of the field in which Amazon Bedrock stores metadata about the vector store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-pineconefieldmapping.html#cfn-bedrock-knowledgebase-pineconefieldmapping-metadatafield)
+       */
+      override fun metadataField(): String = unwrap(this).getMetadataField()
+
+      /**
+       * The name of the field in which Amazon Bedrock stores the raw text from your data.
+       *
+       * The text is split according to the chunking strategy you choose.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-pineconefieldmapping.html#cfn-bedrock-knowledgebase-pineconefieldmapping-textfield)
+       */
+      override fun textField(): String = unwrap(this).getTextField()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PineconeFieldMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.PineconeFieldMappingProperty):
+          PineconeFieldMappingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PineconeFieldMappingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PineconeFieldMappingProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.PineconeFieldMappingProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.PineconeFieldMappingProperty
+    }
+  }
+
+  /**
+   * Contains details about the storage configuration of the knowledge base in Amazon RDS.
+   *
+   * For more information, see [Create a vector index in Amazon
+   * RDS](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-rds.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * RdsConfigurationProperty rdsConfigurationProperty = RdsConfigurationProperty.builder()
+   * .credentialsSecretArn("credentialsSecretArn")
+   * .databaseName("databaseName")
+   * .fieldMapping(RdsFieldMappingProperty.builder()
+   * .metadataField("metadataField")
+   * .primaryKeyField("primaryKeyField")
+   * .textField("textField")
+   * .vectorField("vectorField")
+   * .build())
+   * .resourceArn("resourceArn")
+   * .tableName("tableName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsconfiguration.html)
+   */
+  public interface RdsConfigurationProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the secret that you created in AWS Secrets Manager that is
+     * linked to your Amazon RDS database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsconfiguration.html#cfn-bedrock-knowledgebase-rdsconfiguration-credentialssecretarn)
+     */
+    public fun credentialsSecretArn(): String
+
+    /**
+     * The name of your Amazon RDS database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsconfiguration.html#cfn-bedrock-knowledgebase-rdsconfiguration-databasename)
+     */
+    public fun databaseName(): String
+
+    /**
+     * Contains the names of the fields to which to map information about the vector store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsconfiguration.html#cfn-bedrock-knowledgebase-rdsconfiguration-fieldmapping)
+     */
+    public fun fieldMapping(): Any
+
+    /**
+     * The Amazon Resource Name (ARN) of the vector store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsconfiguration.html#cfn-bedrock-knowledgebase-rdsconfiguration-resourcearn)
+     */
+    public fun resourceArn(): String
+
+    /**
+     * The name of the table in the database.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsconfiguration.html#cfn-bedrock-knowledgebase-rdsconfiguration-tablename)
+     */
+    public fun tableName(): String
+
+    /**
+     * A builder for [RdsConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param credentialsSecretArn The Amazon Resource Name (ARN) of the secret that you created
+       * in AWS Secrets Manager that is linked to your Amazon RDS database. 
+       */
+      public fun credentialsSecretArn(credentialsSecretArn: String)
+
+      /**
+       * @param databaseName The name of your Amazon RDS database. 
+       */
+      public fun databaseName(databaseName: String)
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      public fun fieldMapping(fieldMapping: IResolvable)
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      public fun fieldMapping(fieldMapping: RdsFieldMappingProperty)
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f70f239eb7b16bf37db6ff1c31e551302695b9b6758f2d88eb674c8aa2a244eb")
+      public fun fieldMapping(fieldMapping: RdsFieldMappingProperty.Builder.() -> Unit)
+
+      /**
+       * @param resourceArn The Amazon Resource Name (ARN) of the vector store. 
+       */
+      public fun resourceArn(resourceArn: String)
+
+      /**
+       * @param tableName The name of the table in the database. 
+       */
+      public fun tableName(tableName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RdsConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RdsConfigurationProperty.builder()
+
+      /**
+       * @param credentialsSecretArn The Amazon Resource Name (ARN) of the secret that you created
+       * in AWS Secrets Manager that is linked to your Amazon RDS database. 
+       */
+      override fun credentialsSecretArn(credentialsSecretArn: String) {
+        cdkBuilder.credentialsSecretArn(credentialsSecretArn)
+      }
+
+      /**
+       * @param databaseName The name of your Amazon RDS database. 
+       */
+      override fun databaseName(databaseName: String) {
+        cdkBuilder.databaseName(databaseName)
+      }
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      override fun fieldMapping(fieldMapping: IResolvable) {
+        cdkBuilder.fieldMapping(fieldMapping.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      override fun fieldMapping(fieldMapping: RdsFieldMappingProperty) {
+        cdkBuilder.fieldMapping(fieldMapping.let(RdsFieldMappingProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param fieldMapping Contains the names of the fields to which to map information about the
+       * vector store. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f70f239eb7b16bf37db6ff1c31e551302695b9b6758f2d88eb674c8aa2a244eb")
+      override fun fieldMapping(fieldMapping: RdsFieldMappingProperty.Builder.() -> Unit): Unit =
+          fieldMapping(RdsFieldMappingProperty(fieldMapping))
+
+      /**
+       * @param resourceArn The Amazon Resource Name (ARN) of the vector store. 
+       */
+      override fun resourceArn(resourceArn: String) {
+        cdkBuilder.resourceArn(resourceArn)
+      }
+
+      /**
+       * @param tableName The name of the table in the database. 
+       */
+      override fun tableName(tableName: String) {
+        cdkBuilder.tableName(tableName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RdsConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RdsConfigurationProperty,
+    ) : CdkObject(cdkObject), RdsConfigurationProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the secret that you created in AWS Secrets Manager that
+       * is linked to your Amazon RDS database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsconfiguration.html#cfn-bedrock-knowledgebase-rdsconfiguration-credentialssecretarn)
+       */
+      override fun credentialsSecretArn(): String = unwrap(this).getCredentialsSecretArn()
+
+      /**
+       * The name of your Amazon RDS database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsconfiguration.html#cfn-bedrock-knowledgebase-rdsconfiguration-databasename)
+       */
+      override fun databaseName(): String = unwrap(this).getDatabaseName()
+
+      /**
+       * Contains the names of the fields to which to map information about the vector store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsconfiguration.html#cfn-bedrock-knowledgebase-rdsconfiguration-fieldmapping)
+       */
+      override fun fieldMapping(): Any = unwrap(this).getFieldMapping()
+
+      /**
+       * The Amazon Resource Name (ARN) of the vector store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsconfiguration.html#cfn-bedrock-knowledgebase-rdsconfiguration-resourcearn)
+       */
+      override fun resourceArn(): String = unwrap(this).getResourceArn()
+
+      /**
+       * The name of the table in the database.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsconfiguration.html#cfn-bedrock-knowledgebase-rdsconfiguration-tablename)
+       */
+      override fun tableName(): String = unwrap(this).getTableName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RdsConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RdsConfigurationProperty):
+          RdsConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as? RdsConfigurationProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RdsConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RdsConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RdsConfigurationProperty
+    }
+  }
+
+  /**
+   * Contains the names of the fields to which to map information about the vector store.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * RdsFieldMappingProperty rdsFieldMappingProperty = RdsFieldMappingProperty.builder()
+   * .metadataField("metadataField")
+   * .primaryKeyField("primaryKeyField")
+   * .textField("textField")
+   * .vectorField("vectorField")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsfieldmapping.html)
+   */
+  public interface RdsFieldMappingProperty {
+    /**
+     * The name of the field in which Amazon Bedrock stores metadata about the vector store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsfieldmapping.html#cfn-bedrock-knowledgebase-rdsfieldmapping-metadatafield)
+     */
+    public fun metadataField(): String
+
+    /**
+     * The name of the field in which Amazon Bedrock stores the ID for each entry.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsfieldmapping.html#cfn-bedrock-knowledgebase-rdsfieldmapping-primarykeyfield)
+     */
+    public fun primaryKeyField(): String
+
+    /**
+     * The name of the field in which Amazon Bedrock stores the raw text from your data.
+     *
+     * The text is split according to the chunking strategy you choose.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsfieldmapping.html#cfn-bedrock-knowledgebase-rdsfieldmapping-textfield)
+     */
+    public fun textField(): String
+
+    /**
+     * The name of the field in which Amazon Bedrock stores the vector embeddings for your data
+     * sources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsfieldmapping.html#cfn-bedrock-knowledgebase-rdsfieldmapping-vectorfield)
+     */
+    public fun vectorField(): String
+
+    /**
+     * A builder for [RdsFieldMappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param metadataField The name of the field in which Amazon Bedrock stores metadata about
+       * the vector store. 
+       */
+      public fun metadataField(metadataField: String)
+
+      /**
+       * @param primaryKeyField The name of the field in which Amazon Bedrock stores the ID for each
+       * entry. 
+       */
+      public fun primaryKeyField(primaryKeyField: String)
+
+      /**
+       * @param textField The name of the field in which Amazon Bedrock stores the raw text from
+       * your data. 
+       * The text is split according to the chunking strategy you choose.
+       */
+      public fun textField(textField: String)
+
+      /**
+       * @param vectorField The name of the field in which Amazon Bedrock stores the vector
+       * embeddings for your data sources. 
+       */
+      public fun vectorField(vectorField: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RdsFieldMappingProperty.Builder =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RdsFieldMappingProperty.builder()
+
+      /**
+       * @param metadataField The name of the field in which Amazon Bedrock stores metadata about
+       * the vector store. 
+       */
+      override fun metadataField(metadataField: String) {
+        cdkBuilder.metadataField(metadataField)
+      }
+
+      /**
+       * @param primaryKeyField The name of the field in which Amazon Bedrock stores the ID for each
+       * entry. 
+       */
+      override fun primaryKeyField(primaryKeyField: String) {
+        cdkBuilder.primaryKeyField(primaryKeyField)
+      }
+
+      /**
+       * @param textField The name of the field in which Amazon Bedrock stores the raw text from
+       * your data. 
+       * The text is split according to the chunking strategy you choose.
+       */
+      override fun textField(textField: String) {
+        cdkBuilder.textField(textField)
+      }
+
+      /**
+       * @param vectorField The name of the field in which Amazon Bedrock stores the vector
+       * embeddings for your data sources. 
+       */
+      override fun vectorField(vectorField: String) {
+        cdkBuilder.vectorField(vectorField)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RdsFieldMappingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RdsFieldMappingProperty,
+    ) : CdkObject(cdkObject), RdsFieldMappingProperty {
+      /**
+       * The name of the field in which Amazon Bedrock stores metadata about the vector store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsfieldmapping.html#cfn-bedrock-knowledgebase-rdsfieldmapping-metadatafield)
+       */
+      override fun metadataField(): String = unwrap(this).getMetadataField()
+
+      /**
+       * The name of the field in which Amazon Bedrock stores the ID for each entry.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsfieldmapping.html#cfn-bedrock-knowledgebase-rdsfieldmapping-primarykeyfield)
+       */
+      override fun primaryKeyField(): String = unwrap(this).getPrimaryKeyField()
+
+      /**
+       * The name of the field in which Amazon Bedrock stores the raw text from your data.
+       *
+       * The text is split according to the chunking strategy you choose.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsfieldmapping.html#cfn-bedrock-knowledgebase-rdsfieldmapping-textfield)
+       */
+      override fun textField(): String = unwrap(this).getTextField()
+
+      /**
+       * The name of the field in which Amazon Bedrock stores the vector embeddings for your data
+       * sources.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-rdsfieldmapping.html#cfn-bedrock-knowledgebase-rdsfieldmapping-vectorfield)
+       */
+      override fun vectorField(): String = unwrap(this).getVectorField()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RdsFieldMappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RdsFieldMappingProperty):
+          RdsFieldMappingProperty = CdkObjectWrappers.wrap(cdkObject) as? RdsFieldMappingProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RdsFieldMappingProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RdsFieldMappingProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.RdsFieldMappingProperty
+    }
+  }
+
+  /**
+   * Contains the storage configuration of the knowledge base.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * StorageConfigurationProperty storageConfigurationProperty =
+   * StorageConfigurationProperty.builder()
+   * .type("type")
+   * // the properties below are optional
+   * .opensearchServerlessConfiguration(OpenSearchServerlessConfigurationProperty.builder()
+   * .collectionArn("collectionArn")
+   * .fieldMapping(OpenSearchServerlessFieldMappingProperty.builder()
+   * .metadataField("metadataField")
+   * .textField("textField")
+   * .vectorField("vectorField")
+   * .build())
+   * .vectorIndexName("vectorIndexName")
+   * .build())
+   * .pineconeConfiguration(PineconeConfigurationProperty.builder()
+   * .connectionString("connectionString")
+   * .credentialsSecretArn("credentialsSecretArn")
+   * .fieldMapping(PineconeFieldMappingProperty.builder()
+   * .metadataField("metadataField")
+   * .textField("textField")
+   * .build())
+   * // the properties below are optional
+   * .namespace("namespace")
+   * .build())
+   * .rdsConfiguration(RdsConfigurationProperty.builder()
+   * .credentialsSecretArn("credentialsSecretArn")
+   * .databaseName("databaseName")
+   * .fieldMapping(RdsFieldMappingProperty.builder()
+   * .metadataField("metadataField")
+   * .primaryKeyField("primaryKeyField")
+   * .textField("textField")
+   * .vectorField("vectorField")
+   * .build())
+   * .resourceArn("resourceArn")
+   * .tableName("tableName")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-storageconfiguration.html)
+   */
+  public interface StorageConfigurationProperty {
+    /**
+     * Contains the storage configuration of the knowledge base in Amazon OpenSearch Service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-storageconfiguration.html#cfn-bedrock-knowledgebase-storageconfiguration-opensearchserverlessconfiguration)
+     */
+    public fun opensearchServerlessConfiguration(): Any? =
+        unwrap(this).getOpensearchServerlessConfiguration()
+
+    /**
+     * Contains the storage configuration of the knowledge base in Pinecone.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-storageconfiguration.html#cfn-bedrock-knowledgebase-storageconfiguration-pineconeconfiguration)
+     */
+    public fun pineconeConfiguration(): Any? = unwrap(this).getPineconeConfiguration()
+
+    /**
+     * Contains details about the storage configuration of the knowledge base in Amazon RDS.
+     *
+     * For more information, see [Create a vector index in Amazon
+     * RDS](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-rds.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-storageconfiguration.html#cfn-bedrock-knowledgebase-storageconfiguration-rdsconfiguration)
+     */
+    public fun rdsConfiguration(): Any? = unwrap(this).getRdsConfiguration()
+
+    /**
+     * The vector store service in which the knowledge base is stored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-storageconfiguration.html#cfn-bedrock-knowledgebase-storageconfiguration-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [StorageConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param opensearchServerlessConfiguration Contains the storage configuration of the
+       * knowledge base in Amazon OpenSearch Service.
+       */
+      public fun opensearchServerlessConfiguration(opensearchServerlessConfiguration: IResolvable)
+
+      /**
+       * @param opensearchServerlessConfiguration Contains the storage configuration of the
+       * knowledge base in Amazon OpenSearch Service.
+       */
+      public
+          fun opensearchServerlessConfiguration(opensearchServerlessConfiguration: OpenSearchServerlessConfigurationProperty)
+
+      /**
+       * @param opensearchServerlessConfiguration Contains the storage configuration of the
+       * knowledge base in Amazon OpenSearch Service.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c2349201097292d6fc5e2b1e8974fe674db7d759d9896e39714fe2468984ff92")
+      public
+          fun opensearchServerlessConfiguration(opensearchServerlessConfiguration: OpenSearchServerlessConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param pineconeConfiguration Contains the storage configuration of the knowledge base in
+       * Pinecone.
+       */
+      public fun pineconeConfiguration(pineconeConfiguration: IResolvable)
+
+      /**
+       * @param pineconeConfiguration Contains the storage configuration of the knowledge base in
+       * Pinecone.
+       */
+      public fun pineconeConfiguration(pineconeConfiguration: PineconeConfigurationProperty)
+
+      /**
+       * @param pineconeConfiguration Contains the storage configuration of the knowledge base in
+       * Pinecone.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a22403fbaf2e6d610970325f96c7f16c6647e86f6f8e1a50c36756a1cafeed9f")
+      public
+          fun pineconeConfiguration(pineconeConfiguration: PineconeConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param rdsConfiguration Contains details about the storage configuration of the knowledge
+       * base in Amazon RDS.
+       * For more information, see [Create a vector index in Amazon
+       * RDS](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-rds.html) .
+       */
+      public fun rdsConfiguration(rdsConfiguration: IResolvable)
+
+      /**
+       * @param rdsConfiguration Contains details about the storage configuration of the knowledge
+       * base in Amazon RDS.
+       * For more information, see [Create a vector index in Amazon
+       * RDS](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-rds.html) .
+       */
+      public fun rdsConfiguration(rdsConfiguration: RdsConfigurationProperty)
+
+      /**
+       * @param rdsConfiguration Contains details about the storage configuration of the knowledge
+       * base in Amazon RDS.
+       * For more information, see [Create a vector index in Amazon
+       * RDS](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-rds.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d66149e07a8a7503180a19c82354dd95fe43aefcc711bc8ebee57f706573f9d3")
+      public fun rdsConfiguration(rdsConfiguration: RdsConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param type The vector store service in which the knowledge base is stored. 
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.StorageConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.StorageConfigurationProperty.builder()
+
+      /**
+       * @param opensearchServerlessConfiguration Contains the storage configuration of the
+       * knowledge base in Amazon OpenSearch Service.
+       */
+      override
+          fun opensearchServerlessConfiguration(opensearchServerlessConfiguration: IResolvable) {
+        cdkBuilder.opensearchServerlessConfiguration(opensearchServerlessConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param opensearchServerlessConfiguration Contains the storage configuration of the
+       * knowledge base in Amazon OpenSearch Service.
+       */
+      override
+          fun opensearchServerlessConfiguration(opensearchServerlessConfiguration: OpenSearchServerlessConfigurationProperty) {
+        cdkBuilder.opensearchServerlessConfiguration(opensearchServerlessConfiguration.let(OpenSearchServerlessConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param opensearchServerlessConfiguration Contains the storage configuration of the
+       * knowledge base in Amazon OpenSearch Service.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c2349201097292d6fc5e2b1e8974fe674db7d759d9896e39714fe2468984ff92")
+      override
+          fun opensearchServerlessConfiguration(opensearchServerlessConfiguration: OpenSearchServerlessConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          opensearchServerlessConfiguration(OpenSearchServerlessConfigurationProperty(opensearchServerlessConfiguration))
+
+      /**
+       * @param pineconeConfiguration Contains the storage configuration of the knowledge base in
+       * Pinecone.
+       */
+      override fun pineconeConfiguration(pineconeConfiguration: IResolvable) {
+        cdkBuilder.pineconeConfiguration(pineconeConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param pineconeConfiguration Contains the storage configuration of the knowledge base in
+       * Pinecone.
+       */
+      override fun pineconeConfiguration(pineconeConfiguration: PineconeConfigurationProperty) {
+        cdkBuilder.pineconeConfiguration(pineconeConfiguration.let(PineconeConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param pineconeConfiguration Contains the storage configuration of the knowledge base in
+       * Pinecone.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a22403fbaf2e6d610970325f96c7f16c6647e86f6f8e1a50c36756a1cafeed9f")
+      override
+          fun pineconeConfiguration(pineconeConfiguration: PineconeConfigurationProperty.Builder.() -> Unit):
+          Unit = pineconeConfiguration(PineconeConfigurationProperty(pineconeConfiguration))
+
+      /**
+       * @param rdsConfiguration Contains details about the storage configuration of the knowledge
+       * base in Amazon RDS.
+       * For more information, see [Create a vector index in Amazon
+       * RDS](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-rds.html) .
+       */
+      override fun rdsConfiguration(rdsConfiguration: IResolvable) {
+        cdkBuilder.rdsConfiguration(rdsConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param rdsConfiguration Contains details about the storage configuration of the knowledge
+       * base in Amazon RDS.
+       * For more information, see [Create a vector index in Amazon
+       * RDS](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-rds.html) .
+       */
+      override fun rdsConfiguration(rdsConfiguration: RdsConfigurationProperty) {
+        cdkBuilder.rdsConfiguration(rdsConfiguration.let(RdsConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param rdsConfiguration Contains details about the storage configuration of the knowledge
+       * base in Amazon RDS.
+       * For more information, see [Create a vector index in Amazon
+       * RDS](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-rds.html) .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d66149e07a8a7503180a19c82354dd95fe43aefcc711bc8ebee57f706573f9d3")
+      override fun rdsConfiguration(rdsConfiguration: RdsConfigurationProperty.Builder.() -> Unit):
+          Unit = rdsConfiguration(RdsConfigurationProperty(rdsConfiguration))
+
+      /**
+       * @param type The vector store service in which the knowledge base is stored. 
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.StorageConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.StorageConfigurationProperty,
+    ) : CdkObject(cdkObject), StorageConfigurationProperty {
+      /**
+       * Contains the storage configuration of the knowledge base in Amazon OpenSearch Service.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-storageconfiguration.html#cfn-bedrock-knowledgebase-storageconfiguration-opensearchserverlessconfiguration)
+       */
+      override fun opensearchServerlessConfiguration(): Any? =
+          unwrap(this).getOpensearchServerlessConfiguration()
+
+      /**
+       * Contains the storage configuration of the knowledge base in Pinecone.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-storageconfiguration.html#cfn-bedrock-knowledgebase-storageconfiguration-pineconeconfiguration)
+       */
+      override fun pineconeConfiguration(): Any? = unwrap(this).getPineconeConfiguration()
+
+      /**
+       * Contains details about the storage configuration of the knowledge base in Amazon RDS.
+       *
+       * For more information, see [Create a vector index in Amazon
+       * RDS](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base-setup-rds.html) .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-storageconfiguration.html#cfn-bedrock-knowledgebase-storageconfiguration-rdsconfiguration)
+       */
+      override fun rdsConfiguration(): Any? = unwrap(this).getRdsConfiguration()
+
+      /**
+       * The vector store service in which the knowledge base is stored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-storageconfiguration.html#cfn-bedrock-knowledgebase-storageconfiguration-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StorageConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.StorageConfigurationProperty):
+          StorageConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StorageConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StorageConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.StorageConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.StorageConfigurationProperty
     }
   }
 

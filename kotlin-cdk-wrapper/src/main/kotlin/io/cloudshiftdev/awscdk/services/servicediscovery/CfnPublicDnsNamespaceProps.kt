@@ -158,14 +158,14 @@ public interface CfnPublicDnsNamespaceProps {
      * @param properties Properties for the public DNS namespace.
      */
     override fun properties(properties: IResolvable) {
-      cdkBuilder.properties(properties.let(IResolvable::unwrap))
+      cdkBuilder.properties(properties.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param properties Properties for the public DNS namespace.
      */
     override fun properties(properties: CfnPublicDnsNamespace.PropertiesProperty) {
-      cdkBuilder.properties(properties.let(CfnPublicDnsNamespace.PropertiesProperty::unwrap))
+      cdkBuilder.properties(properties.let(CfnPublicDnsNamespace.PropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -184,7 +184,7 @@ public interface CfnPublicDnsNamespaceProps {
      * characters.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

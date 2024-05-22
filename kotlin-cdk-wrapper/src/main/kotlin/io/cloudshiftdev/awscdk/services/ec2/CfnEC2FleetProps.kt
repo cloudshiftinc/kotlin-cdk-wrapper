@@ -498,7 +498,7 @@ public interface CfnEC2FleetProps {
      * @param launchTemplateConfigs The configuration for the EC2 Fleet. 
      */
     override fun launchTemplateConfigs(launchTemplateConfigs: IResolvable) {
-      cdkBuilder.launchTemplateConfigs(launchTemplateConfigs.let(IResolvable::unwrap))
+      cdkBuilder.launchTemplateConfigs(launchTemplateConfigs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -518,14 +518,14 @@ public interface CfnEC2FleetProps {
      * @param onDemandOptions Describes the configuration of On-Demand Instances in an EC2 Fleet.
      */
     override fun onDemandOptions(onDemandOptions: IResolvable) {
-      cdkBuilder.onDemandOptions(onDemandOptions.let(IResolvable::unwrap))
+      cdkBuilder.onDemandOptions(onDemandOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param onDemandOptions Describes the configuration of On-Demand Instances in an EC2 Fleet.
      */
     override fun onDemandOptions(onDemandOptions: CfnEC2Fleet.OnDemandOptionsRequestProperty) {
-      cdkBuilder.onDemandOptions(onDemandOptions.let(CfnEC2Fleet.OnDemandOptionsRequestProperty::unwrap))
+      cdkBuilder.onDemandOptions(onDemandOptions.let(CfnEC2Fleet.OnDemandOptionsRequestProperty.Companion::unwrap))
     }
 
     /**
@@ -556,21 +556,21 @@ public interface CfnEC2FleetProps {
      * in the *Amazon EC2 User Guide* .
      */
     override fun replaceUnhealthyInstances(replaceUnhealthyInstances: IResolvable) {
-      cdkBuilder.replaceUnhealthyInstances(replaceUnhealthyInstances.let(IResolvable::unwrap))
+      cdkBuilder.replaceUnhealthyInstances(replaceUnhealthyInstances.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param spotOptions Describes the configuration of Spot Instances in an EC2 Fleet.
      */
     override fun spotOptions(spotOptions: IResolvable) {
-      cdkBuilder.spotOptions(spotOptions.let(IResolvable::unwrap))
+      cdkBuilder.spotOptions(spotOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param spotOptions Describes the configuration of Spot Instances in an EC2 Fleet.
      */
     override fun spotOptions(spotOptions: CfnEC2Fleet.SpotOptionsRequestProperty) {
-      cdkBuilder.spotOptions(spotOptions.let(CfnEC2Fleet.SpotOptionsRequestProperty::unwrap))
+      cdkBuilder.spotOptions(spotOptions.let(CfnEC2Fleet.SpotOptionsRequestProperty.Companion::unwrap))
     }
 
     /**
@@ -596,7 +596,7 @@ public interface CfnEC2FleetProps {
      * .
      */
     override fun tagSpecifications(tagSpecifications: IResolvable) {
-      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -636,7 +636,7 @@ public interface CfnEC2FleetProps {
      * @param targetCapacitySpecification The number of units to request. 
      */
     override fun targetCapacitySpecification(targetCapacitySpecification: IResolvable) {
-      cdkBuilder.targetCapacitySpecification(targetCapacitySpecification.let(IResolvable::unwrap))
+      cdkBuilder.targetCapacitySpecification(targetCapacitySpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -644,7 +644,7 @@ public interface CfnEC2FleetProps {
      */
     override
         fun targetCapacitySpecification(targetCapacitySpecification: CfnEC2Fleet.TargetCapacitySpecificationRequestProperty) {
-      cdkBuilder.targetCapacitySpecification(targetCapacitySpecification.let(CfnEC2Fleet.TargetCapacitySpecificationRequestProperty::unwrap))
+      cdkBuilder.targetCapacitySpecification(targetCapacitySpecification.let(CfnEC2Fleet.TargetCapacitySpecificationRequestProperty.Companion::unwrap))
     }
 
     /**
@@ -670,7 +670,7 @@ public interface CfnEC2FleetProps {
      * terminated when the EC2 Fleet expires.
      */
     override fun terminateInstancesWithExpiration(terminateInstancesWithExpiration: IResolvable) {
-      cdkBuilder.terminateInstancesWithExpiration(terminateInstancesWithExpiration.let(IResolvable::unwrap))
+      cdkBuilder.terminateInstancesWithExpiration(terminateInstancesWithExpiration.let(IResolvable.Companion::unwrap))
     }
 
     /**

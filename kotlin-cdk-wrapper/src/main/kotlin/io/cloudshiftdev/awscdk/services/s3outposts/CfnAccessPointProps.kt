@@ -138,7 +138,7 @@ public interface CfnAccessPointProps {
      * if one exists. 
      */
     override fun vpcConfiguration(vpcConfiguration: IResolvable) {
-      cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfiguration(vpcConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -146,7 +146,7 @@ public interface CfnAccessPointProps {
      * if one exists. 
      */
     override fun vpcConfiguration(vpcConfiguration: CfnAccessPoint.VpcConfigurationProperty) {
-      cdkBuilder.vpcConfiguration(vpcConfiguration.let(CfnAccessPoint.VpcConfigurationProperty::unwrap))
+      cdkBuilder.vpcConfiguration(vpcConfiguration.let(CfnAccessPoint.VpcConfigurationProperty.Companion::unwrap))
     }
 
     /**

@@ -14,20 +14,12 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * Bucket s3Bucket;
- * // Add a cloudfront Function to a Distribution
- * Function cfFunction = Function.Builder.create(this, "Function")
+ * KeyValueStore store = new KeyValueStore(this, "KeyValueStore");
+ * Function.Builder.create(this, "Function")
  * .code(FunctionCode.fromInline("function handler(event) { return event.request }"))
+ * // Note that JS_2_0 must be used for Key Value Store support
  * .runtime(FunctionRuntime.JS_2_0)
- * .build();
- * Distribution.Builder.create(this, "distro")
- * .defaultBehavior(BehaviorOptions.builder()
- * .origin(new S3Origin(s3Bucket))
- * .functionAssociations(List.of(FunctionAssociation.builder()
- * .function(cfFunction)
- * .eventType(FunctionEventType.VIEWER_REQUEST)
- * .build()))
- * .build())
+ * .keyValueStore(store)
  * .build();
  * ```
  */
@@ -45,7 +37,7 @@ public abstract class FunctionCode(
 
   public companion object {
     public fun fromFile(options: FileCodeOptions): FunctionCode =
-        software.amazon.awscdk.services.cloudfront.FunctionCode.fromFile(options.let(FileCodeOptions::unwrap)).let(FunctionCode::wrap)
+        software.amazon.awscdk.services.cloudfront.FunctionCode.fromFile(options.let(FileCodeOptions.Companion::unwrap)).let(FunctionCode::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f53d4fdd60d88d1066ce14701c44b6e6aab79d38ec5e6f1245ba33b34e1e75d7")

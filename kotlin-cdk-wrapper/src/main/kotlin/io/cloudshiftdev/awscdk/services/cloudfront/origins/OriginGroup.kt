@@ -39,7 +39,7 @@ public open class OriginGroup(
   cdkObject: software.amazon.awscdk.services.cloudfront.origins.OriginGroup,
 ) : CdkObject(cdkObject), IOrigin {
   public constructor(props: OriginGroupProps) :
-      this(software.amazon.awscdk.services.cloudfront.origins.OriginGroup(props.let(OriginGroupProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.origins.OriginGroup(props.let(OriginGroupProps.Companion::unwrap))
   )
 
   public constructor(props: OriginGroupProps.Builder.() -> Unit) : this(OriginGroupProps(props)
@@ -52,8 +52,8 @@ public open class OriginGroup(
    * @param options 
    */
   public override fun bind(scope: Construct, options: OriginBindOptions): OriginBindConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap),
-      options.let(OriginBindOptions::unwrap)).let(OriginBindConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      options.let(OriginBindOptions.Companion::unwrap)).let(OriginBindConfig::wrap)
 
   /**
    * The method called when a given Origin is added (for the first time) to a Distribution.
@@ -118,7 +118,7 @@ public open class OriginGroup(
      * @param fallbackOrigin The fallback origin that should serve requests when the primary fails. 
      */
     override fun fallbackOrigin(fallbackOrigin: IOrigin) {
-      cdkBuilder.fallbackOrigin(fallbackOrigin.let(IOrigin::unwrap))
+      cdkBuilder.fallbackOrigin(fallbackOrigin.let(IOrigin.Companion::unwrap))
     }
 
     /**
@@ -152,7 +152,7 @@ public open class OriginGroup(
      * @param primaryOrigin The primary origin that should serve requests for this group. 
      */
     override fun primaryOrigin(primaryOrigin: IOrigin) {
-      cdkBuilder.primaryOrigin(primaryOrigin.let(IOrigin::unwrap))
+      cdkBuilder.primaryOrigin(primaryOrigin.let(IOrigin.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.origins.OriginGroup =

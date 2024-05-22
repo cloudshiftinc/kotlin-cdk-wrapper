@@ -68,8 +68,8 @@ public open class CfnConnectAttachment(
     id: String,
     props: CfnConnectAttachmentProps,
   ) :
-      this(software.amazon.awscdk.services.networkmanager.CfnConnectAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConnectAttachmentProps::unwrap))
+      this(software.amazon.awscdk.services.networkmanager.CfnConnectAttachment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConnectAttachmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -165,7 +165,7 @@ public open class CfnConnectAttachment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -177,14 +177,14 @@ public open class CfnConnectAttachment(
    * Options for connecting an attachment.
    */
   public open fun options(`value`: IResolvable) {
-    unwrap(this).setOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Options for connecting an attachment.
    */
   public open fun options(`value`: ConnectAttachmentOptionsProperty) {
-    unwrap(this).setOptions(`value`.let(ConnectAttachmentOptionsProperty::unwrap))
+    unwrap(this).setOptions(`value`.let(ConnectAttachmentOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -204,14 +204,14 @@ public open class CfnConnectAttachment(
    * Describes a proposed segment change.
    */
   public open fun proposedSegmentChange(`value`: IResolvable) {
-    unwrap(this).setProposedSegmentChange(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProposedSegmentChange(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Describes a proposed segment change.
    */
   public open fun proposedSegmentChange(`value`: ProposedSegmentChangeProperty) {
-    unwrap(this).setProposedSegmentChange(`value`.let(ProposedSegmentChangeProperty::unwrap))
+    unwrap(this).setProposedSegmentChange(`value`.let(ProposedSegmentChangeProperty.Companion::unwrap))
   }
 
   /**
@@ -237,7 +237,7 @@ public open class CfnConnectAttachment(
    * Tags for the attachment.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -398,7 +398,7 @@ public open class CfnConnectAttachment(
      * @param options Options for connecting an attachment. 
      */
     override fun options(options: IResolvable) {
-      cdkBuilder.options(options.let(IResolvable::unwrap))
+      cdkBuilder.options(options.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -408,7 +408,7 @@ public open class CfnConnectAttachment(
      * @param options Options for connecting an attachment. 
      */
     override fun options(options: ConnectAttachmentOptionsProperty) {
-      cdkBuilder.options(options.let(ConnectAttachmentOptionsProperty::unwrap))
+      cdkBuilder.options(options.let(ConnectAttachmentOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -431,7 +431,7 @@ public open class CfnConnectAttachment(
      * @param proposedSegmentChange Describes a proposed segment change. 
      */
     override fun proposedSegmentChange(proposedSegmentChange: IResolvable) {
-      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(IResolvable::unwrap))
+      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -443,7 +443,7 @@ public open class CfnConnectAttachment(
      * @param proposedSegmentChange Describes a proposed segment change. 
      */
     override fun proposedSegmentChange(proposedSegmentChange: ProposedSegmentChangeProperty) {
-      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(ProposedSegmentChangeProperty::unwrap))
+      cdkBuilder.proposedSegmentChange(proposedSegmentChange.let(ProposedSegmentChangeProperty.Companion::unwrap))
     }
 
     /**
@@ -467,7 +467,7 @@ public open class CfnConnectAttachment(
      * @param tags Tags for the attachment. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -695,7 +695,7 @@ public open class CfnConnectAttachment(
        * @param tags The list of key-value tags that changed for the segment.
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**

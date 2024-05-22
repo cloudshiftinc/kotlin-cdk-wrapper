@@ -44,8 +44,8 @@ public open class HttpDataSource(
     id: String,
     props: HttpDataSourceProps,
   ) :
-      this(software.amazon.awscdk.services.appsync.HttpDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(HttpDataSourceProps::unwrap))
+      this(software.amazon.awscdk.services.appsync.HttpDataSource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(HttpDataSourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -128,7 +128,7 @@ public open class HttpDataSource(
      * @param api The API to attach this data source to. 
      */
     override fun api(api: IGraphqlApi) {
-      cdkBuilder.api(api.let(IGraphqlApi::unwrap))
+      cdkBuilder.api(api.let(IGraphqlApi.Companion::unwrap))
     }
 
     /**
@@ -140,7 +140,7 @@ public open class HttpDataSource(
      * authorization. 
      */
     override fun authorizationConfig(authorizationConfig: AwsIamConfig) {
-      cdkBuilder.authorizationConfig(authorizationConfig.let(AwsIamConfig::unwrap))
+      cdkBuilder.authorizationConfig(authorizationConfig.let(AwsIamConfig.Companion::unwrap))
     }
 
     /**

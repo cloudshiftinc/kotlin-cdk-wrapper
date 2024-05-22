@@ -43,7 +43,7 @@ public open class S3SourceAction(
   cdkObject: software.amazon.awscdk.services.codepipeline.actions.S3SourceAction,
 ) : Action(cdkObject) {
   public constructor(props: S3SourceActionProps) :
-      this(software.amazon.awscdk.services.codepipeline.actions.S3SourceAction(props.let(S3SourceActionProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.actions.S3SourceAction(props.let(S3SourceActionProps.Companion::unwrap))
   )
 
   public constructor(props: S3SourceActionProps.Builder.() -> Unit) :
@@ -177,7 +177,7 @@ public open class S3SourceAction(
      * @param bucket The Amazon S3 bucket that stores the source code. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -199,7 +199,7 @@ public open class S3SourceAction(
      * @param output 
      */
     override fun output(output: Artifact) {
-      cdkBuilder.output(output.let(Artifact::unwrap))
+      cdkBuilder.output(output.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -216,7 +216,7 @@ public open class S3SourceAction(
      * @param role The Role in which context's this Action will be executing in. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -246,7 +246,7 @@ public open class S3SourceAction(
      * @param trigger How should CodePipeline detect source changes for this Action. 
      */
     override fun trigger(trigger: S3Trigger) {
-      cdkBuilder.trigger(trigger.let(S3Trigger::unwrap))
+      cdkBuilder.trigger(trigger.let(S3Trigger.Companion::unwrap))
     }
 
     /**

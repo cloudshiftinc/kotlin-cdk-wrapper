@@ -34,13 +34,13 @@ public open class LambdaDestination(
   cdkObject: software.amazon.awscdk.services.logs.destinations.LambdaDestination,
 ) : CdkObject(cdkObject), ILogSubscriptionDestination {
   public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction) :
-      this(software.amazon.awscdk.services.logs.destinations.LambdaDestination(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap))
+      this(software.amazon.awscdk.services.logs.destinations.LambdaDestination(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap))
   )
 
   public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction,
       options: LambdaDestinationOptions) :
-      this(software.amazon.awscdk.services.logs.destinations.LambdaDestination(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap),
-      options.let(LambdaDestinationOptions::unwrap))
+      this(software.amazon.awscdk.services.logs.destinations.LambdaDestination(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap),
+      options.let(LambdaDestinationOptions.Companion::unwrap))
   )
 
   public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction,
@@ -62,8 +62,8 @@ public open class LambdaDestination(
    * @param logGroup 
    */
   public override fun bind(scope: Construct, logGroup: ILogGroup): LogSubscriptionDestinationConfig
-      = unwrap(this).bind(scope.let(Construct::unwrap),
-      logGroup.let(ILogGroup::unwrap)).let(LogSubscriptionDestinationConfig::wrap)
+      = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      logGroup.let(ILogGroup.Companion::unwrap)).let(LogSubscriptionDestinationConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.logs.destinations.LambdaDestination].

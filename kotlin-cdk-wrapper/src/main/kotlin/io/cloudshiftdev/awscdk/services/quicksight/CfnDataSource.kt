@@ -378,7 +378,7 @@ public open class CfnDataSource(
   cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.quicksight.CfnDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.quicksight.CfnDataSource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -387,8 +387,8 @@ public open class CfnDataSource(
     id: String,
     props: CfnDataSourceProps,
   ) :
-      this(software.amazon.awscdk.services.quicksight.CfnDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDataSourceProps::unwrap))
+      this(software.amazon.awscdk.services.quicksight.CfnDataSource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDataSourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -410,7 +410,7 @@ public open class CfnDataSource(
    * with this data source.
    */
   public open fun alternateDataSourceParameters(`value`: IResolvable) {
-    unwrap(this).setAlternateDataSourceParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAlternateDataSourceParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -469,14 +469,14 @@ public open class CfnDataSource(
    * The credentials Amazon QuickSight that uses to connect to your underlying source.
    */
   public open fun credentials(`value`: IResolvable) {
-    unwrap(this).setCredentials(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCredentials(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The credentials Amazon QuickSight that uses to connect to your underlying source.
    */
   public open fun credentials(`value`: DataSourceCredentialsProperty) {
-    unwrap(this).setCredentials(`value`.let(DataSourceCredentialsProperty::unwrap))
+    unwrap(this).setCredentials(`value`.let(DataSourceCredentialsProperty.Companion::unwrap))
   }
 
   /**
@@ -508,14 +508,14 @@ public open class CfnDataSource(
    * The parameters that Amazon QuickSight uses to connect to your underlying source.
    */
   public open fun dataSourceParameters(`value`: IResolvable) {
-    unwrap(this).setDataSourceParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataSourceParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The parameters that Amazon QuickSight uses to connect to your underlying source.
    */
   public open fun dataSourceParameters(`value`: DataSourceParametersProperty) {
-    unwrap(this).setDataSourceParameters(`value`.let(DataSourceParametersProperty::unwrap))
+    unwrap(this).setDataSourceParameters(`value`.let(DataSourceParametersProperty.Companion::unwrap))
   }
 
   /**
@@ -535,14 +535,14 @@ public open class CfnDataSource(
    * Error information from the last update or the creation of the data source.
    */
   public open fun errorInfo(`value`: IResolvable) {
-    unwrap(this).setErrorInfo(`value`.let(IResolvable::unwrap))
+    unwrap(this).setErrorInfo(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Error information from the last update or the creation of the data source.
    */
   public open fun errorInfo(`value`: DataSourceErrorInfoProperty) {
-    unwrap(this).setErrorInfo(`value`.let(DataSourceErrorInfoProperty::unwrap))
+    unwrap(this).setErrorInfo(`value`.let(DataSourceErrorInfoProperty.Companion::unwrap))
   }
 
   /**
@@ -559,7 +559,7 @@ public open class CfnDataSource(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -583,7 +583,7 @@ public open class CfnDataSource(
    * A list of resource permissions on the data source.
    */
   public open fun permissions(`value`: IResolvable) {
-    unwrap(this).setPermissions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPermissions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -609,7 +609,7 @@ public open class CfnDataSource(
    * underlying source.
    */
   public open fun sslProperties(`value`: IResolvable) {
-    unwrap(this).setSslProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSslProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -617,7 +617,7 @@ public open class CfnDataSource(
    * underlying source.
    */
   public open fun sslProperties(`value`: SslPropertiesProperty) {
-    unwrap(this).setSslProperties(`value`.let(SslPropertiesProperty::unwrap))
+    unwrap(this).setSslProperties(`value`.let(SslPropertiesProperty.Companion::unwrap))
   }
 
   /**
@@ -644,7 +644,7 @@ public open class CfnDataSource(
    * Contains a map of the key-value pairs for the resource tag or tags assigned to the data source.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -679,7 +679,7 @@ public open class CfnDataSource(
    * to your underlying source.
    */
   public open fun vpcConnectionProperties(`value`: IResolvable) {
-    unwrap(this).setVpcConnectionProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcConnectionProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -687,7 +687,7 @@ public open class CfnDataSource(
    * to your underlying source.
    */
   public open fun vpcConnectionProperties(`value`: VpcConnectionPropertiesProperty) {
-    unwrap(this).setVpcConnectionProperties(`value`.let(VpcConnectionPropertiesProperty::unwrap))
+    unwrap(this).setVpcConnectionProperties(`value`.let(VpcConnectionPropertiesProperty.Companion::unwrap))
   }
 
   /**
@@ -1021,7 +1021,7 @@ public open class CfnDataSource(
      * to share for the credentials stored with this data source. 
      */
     override fun alternateDataSourceParameters(alternateDataSourceParameters: IResolvable) {
-      cdkBuilder.alternateDataSourceParameters(alternateDataSourceParameters.let(IResolvable::unwrap))
+      cdkBuilder.alternateDataSourceParameters(alternateDataSourceParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1083,7 +1083,7 @@ public open class CfnDataSource(
      * source. 
      */
     override fun credentials(credentials: IResolvable) {
-      cdkBuilder.credentials(credentials.let(IResolvable::unwrap))
+      cdkBuilder.credentials(credentials.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1096,7 +1096,7 @@ public open class CfnDataSource(
      * source. 
      */
     override fun credentials(credentials: DataSourceCredentialsProperty) {
-      cdkBuilder.credentials(credentials.let(DataSourceCredentialsProperty::unwrap))
+      cdkBuilder.credentials(credentials.let(DataSourceCredentialsProperty.Companion::unwrap))
     }
 
     /**
@@ -1133,7 +1133,7 @@ public open class CfnDataSource(
      * underlying source. 
      */
     override fun dataSourceParameters(dataSourceParameters: IResolvable) {
-      cdkBuilder.dataSourceParameters(dataSourceParameters.let(IResolvable::unwrap))
+      cdkBuilder.dataSourceParameters(dataSourceParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1144,7 +1144,7 @@ public open class CfnDataSource(
      * underlying source. 
      */
     override fun dataSourceParameters(dataSourceParameters: DataSourceParametersProperty) {
-      cdkBuilder.dataSourceParameters(dataSourceParameters.let(DataSourceParametersProperty::unwrap))
+      cdkBuilder.dataSourceParameters(dataSourceParameters.let(DataSourceParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -1167,7 +1167,7 @@ public open class CfnDataSource(
      * @param errorInfo Error information from the last update or the creation of the data source. 
      */
     override fun errorInfo(errorInfo: IResolvable) {
-      cdkBuilder.errorInfo(errorInfo.let(IResolvable::unwrap))
+      cdkBuilder.errorInfo(errorInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1177,7 +1177,7 @@ public open class CfnDataSource(
      * @param errorInfo Error information from the last update or the creation of the data source. 
      */
     override fun errorInfo(errorInfo: DataSourceErrorInfoProperty) {
-      cdkBuilder.errorInfo(errorInfo.let(DataSourceErrorInfoProperty::unwrap))
+      cdkBuilder.errorInfo(errorInfo.let(DataSourceErrorInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -1208,7 +1208,7 @@ public open class CfnDataSource(
      * @param permissions A list of resource permissions on the data source. 
      */
     override fun permissions(permissions: IResolvable) {
-      cdkBuilder.permissions(permissions.let(IResolvable::unwrap))
+      cdkBuilder.permissions(permissions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1238,7 +1238,7 @@ public open class CfnDataSource(
      * connects to your underlying source. 
      */
     override fun sslProperties(sslProperties: IResolvable) {
-      cdkBuilder.sslProperties(sslProperties.let(IResolvable::unwrap))
+      cdkBuilder.sslProperties(sslProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1250,7 +1250,7 @@ public open class CfnDataSource(
      * connects to your underlying source. 
      */
     override fun sslProperties(sslProperties: SslPropertiesProperty) {
-      cdkBuilder.sslProperties(sslProperties.let(SslPropertiesProperty::unwrap))
+      cdkBuilder.sslProperties(sslProperties.let(SslPropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -1275,7 +1275,7 @@ public open class CfnDataSource(
      * the data source. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1310,7 +1310,7 @@ public open class CfnDataSource(
      * a VPC connection when connecting to your underlying source. 
      */
     override fun vpcConnectionProperties(vpcConnectionProperties: IResolvable) {
-      cdkBuilder.vpcConnectionProperties(vpcConnectionProperties.let(IResolvable::unwrap))
+      cdkBuilder.vpcConnectionProperties(vpcConnectionProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1322,7 +1322,7 @@ public open class CfnDataSource(
      * a VPC connection when connecting to your underlying source. 
      */
     override fun vpcConnectionProperties(vpcConnectionProperties: VpcConnectionPropertiesProperty) {
-      cdkBuilder.vpcConnectionProperties(vpcConnectionProperties.let(VpcConnectionPropertiesProperty::unwrap))
+      cdkBuilder.vpcConnectionProperties(vpcConnectionProperties.let(VpcConnectionPropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -2160,7 +2160,7 @@ public open class CfnDataSource(
        * these `Credentials` is automatically allowed.
        */
       override fun alternateDataSourceParameters(alternateDataSourceParameters: IResolvable) {
-        cdkBuilder.alternateDataSourceParameters(alternateDataSourceParameters.let(IResolvable::unwrap))
+        cdkBuilder.alternateDataSourceParameters(alternateDataSourceParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2491,7 +2491,7 @@ public open class CfnDataSource(
        * .
        */
       override fun credentialPair(credentialPair: IResolvable) {
-        cdkBuilder.credentialPair(credentialPair.let(IResolvable::unwrap))
+        cdkBuilder.credentialPair(credentialPair.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2501,7 +2501,7 @@ public open class CfnDataSource(
        * .
        */
       override fun credentialPair(credentialPair: CredentialPairProperty) {
-        cdkBuilder.credentialPair(credentialPair.let(CredentialPairProperty::unwrap))
+        cdkBuilder.credentialPair(credentialPair.let(CredentialPairProperty.Companion::unwrap))
       }
 
       /**
@@ -3325,7 +3325,7 @@ public open class CfnDataSource(
        * @param amazonElasticsearchParameters The parameters for OpenSearch.
        */
       override fun amazonElasticsearchParameters(amazonElasticsearchParameters: IResolvable) {
-        cdkBuilder.amazonElasticsearchParameters(amazonElasticsearchParameters.let(IResolvable::unwrap))
+        cdkBuilder.amazonElasticsearchParameters(amazonElasticsearchParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3333,7 +3333,7 @@ public open class CfnDataSource(
        */
       override
           fun amazonElasticsearchParameters(amazonElasticsearchParameters: AmazonElasticsearchParametersProperty) {
-        cdkBuilder.amazonElasticsearchParameters(amazonElasticsearchParameters.let(AmazonElasticsearchParametersProperty::unwrap))
+        cdkBuilder.amazonElasticsearchParameters(amazonElasticsearchParameters.let(AmazonElasticsearchParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3350,7 +3350,7 @@ public open class CfnDataSource(
        * @param amazonOpenSearchParameters The parameters for OpenSearch.
        */
       override fun amazonOpenSearchParameters(amazonOpenSearchParameters: IResolvable) {
-        cdkBuilder.amazonOpenSearchParameters(amazonOpenSearchParameters.let(IResolvable::unwrap))
+        cdkBuilder.amazonOpenSearchParameters(amazonOpenSearchParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3358,7 +3358,7 @@ public open class CfnDataSource(
        */
       override
           fun amazonOpenSearchParameters(amazonOpenSearchParameters: AmazonOpenSearchParametersProperty) {
-        cdkBuilder.amazonOpenSearchParameters(amazonOpenSearchParameters.let(AmazonOpenSearchParametersProperty::unwrap))
+        cdkBuilder.amazonOpenSearchParameters(amazonOpenSearchParameters.let(AmazonOpenSearchParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3375,14 +3375,14 @@ public open class CfnDataSource(
        * @param athenaParameters The parameters for Amazon Athena.
        */
       override fun athenaParameters(athenaParameters: IResolvable) {
-        cdkBuilder.athenaParameters(athenaParameters.let(IResolvable::unwrap))
+        cdkBuilder.athenaParameters(athenaParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param athenaParameters The parameters for Amazon Athena.
        */
       override fun athenaParameters(athenaParameters: AthenaParametersProperty) {
-        cdkBuilder.athenaParameters(athenaParameters.let(AthenaParametersProperty::unwrap))
+        cdkBuilder.athenaParameters(athenaParameters.let(AthenaParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3397,14 +3397,14 @@ public open class CfnDataSource(
        * @param auroraParameters The parameters for Amazon Aurora MySQL.
        */
       override fun auroraParameters(auroraParameters: IResolvable) {
-        cdkBuilder.auroraParameters(auroraParameters.let(IResolvable::unwrap))
+        cdkBuilder.auroraParameters(auroraParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param auroraParameters The parameters for Amazon Aurora MySQL.
        */
       override fun auroraParameters(auroraParameters: AuroraParametersProperty) {
-        cdkBuilder.auroraParameters(auroraParameters.let(AuroraParametersProperty::unwrap))
+        cdkBuilder.auroraParameters(auroraParameters.let(AuroraParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3419,7 +3419,7 @@ public open class CfnDataSource(
        * @param auroraPostgreSqlParameters The parameters for Amazon Aurora.
        */
       override fun auroraPostgreSqlParameters(auroraPostgreSqlParameters: IResolvable) {
-        cdkBuilder.auroraPostgreSqlParameters(auroraPostgreSqlParameters.let(IResolvable::unwrap))
+        cdkBuilder.auroraPostgreSqlParameters(auroraPostgreSqlParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3427,7 +3427,7 @@ public open class CfnDataSource(
        */
       override
           fun auroraPostgreSqlParameters(auroraPostgreSqlParameters: AuroraPostgreSqlParametersProperty) {
-        cdkBuilder.auroraPostgreSqlParameters(auroraPostgreSqlParameters.let(AuroraPostgreSqlParametersProperty::unwrap))
+        cdkBuilder.auroraPostgreSqlParameters(auroraPostgreSqlParameters.let(AuroraPostgreSqlParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3445,7 +3445,7 @@ public open class CfnDataSource(
        * Databricks data source.
        */
       override fun databricksParameters(databricksParameters: IResolvable) {
-        cdkBuilder.databricksParameters(databricksParameters.let(IResolvable::unwrap))
+        cdkBuilder.databricksParameters(databricksParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3453,7 +3453,7 @@ public open class CfnDataSource(
        * Databricks data source.
        */
       override fun databricksParameters(databricksParameters: DatabricksParametersProperty) {
-        cdkBuilder.databricksParameters(databricksParameters.let(DatabricksParametersProperty::unwrap))
+        cdkBuilder.databricksParameters(databricksParameters.let(DatabricksParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3470,14 +3470,14 @@ public open class CfnDataSource(
        * @param mariaDbParameters The parameters for MariaDB.
        */
       override fun mariaDbParameters(mariaDbParameters: IResolvable) {
-        cdkBuilder.mariaDbParameters(mariaDbParameters.let(IResolvable::unwrap))
+        cdkBuilder.mariaDbParameters(mariaDbParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param mariaDbParameters The parameters for MariaDB.
        */
       override fun mariaDbParameters(mariaDbParameters: MariaDbParametersProperty) {
-        cdkBuilder.mariaDbParameters(mariaDbParameters.let(MariaDbParametersProperty::unwrap))
+        cdkBuilder.mariaDbParameters(mariaDbParameters.let(MariaDbParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3493,14 +3493,14 @@ public open class CfnDataSource(
        * @param mySqlParameters The parameters for MySQL.
        */
       override fun mySqlParameters(mySqlParameters: IResolvable) {
-        cdkBuilder.mySqlParameters(mySqlParameters.let(IResolvable::unwrap))
+        cdkBuilder.mySqlParameters(mySqlParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param mySqlParameters The parameters for MySQL.
        */
       override fun mySqlParameters(mySqlParameters: MySqlParametersProperty) {
-        cdkBuilder.mySqlParameters(mySqlParameters.let(MySqlParametersProperty::unwrap))
+        cdkBuilder.mySqlParameters(mySqlParameters.let(MySqlParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3515,14 +3515,14 @@ public open class CfnDataSource(
        * @param oracleParameters Oracle parameters.
        */
       override fun oracleParameters(oracleParameters: IResolvable) {
-        cdkBuilder.oracleParameters(oracleParameters.let(IResolvable::unwrap))
+        cdkBuilder.oracleParameters(oracleParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param oracleParameters Oracle parameters.
        */
       override fun oracleParameters(oracleParameters: OracleParametersProperty) {
-        cdkBuilder.oracleParameters(oracleParameters.let(OracleParametersProperty::unwrap))
+        cdkBuilder.oracleParameters(oracleParameters.let(OracleParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3537,14 +3537,14 @@ public open class CfnDataSource(
        * @param postgreSqlParameters The parameters for PostgreSQL.
        */
       override fun postgreSqlParameters(postgreSqlParameters: IResolvable) {
-        cdkBuilder.postgreSqlParameters(postgreSqlParameters.let(IResolvable::unwrap))
+        cdkBuilder.postgreSqlParameters(postgreSqlParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param postgreSqlParameters The parameters for PostgreSQL.
        */
       override fun postgreSqlParameters(postgreSqlParameters: PostgreSqlParametersProperty) {
-        cdkBuilder.postgreSqlParameters(postgreSqlParameters.let(PostgreSqlParametersProperty::unwrap))
+        cdkBuilder.postgreSqlParameters(postgreSqlParameters.let(PostgreSqlParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3560,14 +3560,14 @@ public open class CfnDataSource(
        * @param prestoParameters The parameters for Presto.
        */
       override fun prestoParameters(prestoParameters: IResolvable) {
-        cdkBuilder.prestoParameters(prestoParameters.let(IResolvable::unwrap))
+        cdkBuilder.prestoParameters(prestoParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param prestoParameters The parameters for Presto.
        */
       override fun prestoParameters(prestoParameters: PrestoParametersProperty) {
-        cdkBuilder.prestoParameters(prestoParameters.let(PrestoParametersProperty::unwrap))
+        cdkBuilder.prestoParameters(prestoParameters.let(PrestoParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3582,14 +3582,14 @@ public open class CfnDataSource(
        * @param rdsParameters The parameters for Amazon RDS.
        */
       override fun rdsParameters(rdsParameters: IResolvable) {
-        cdkBuilder.rdsParameters(rdsParameters.let(IResolvable::unwrap))
+        cdkBuilder.rdsParameters(rdsParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param rdsParameters The parameters for Amazon RDS.
        */
       override fun rdsParameters(rdsParameters: RdsParametersProperty) {
-        cdkBuilder.rdsParameters(rdsParameters.let(RdsParametersProperty::unwrap))
+        cdkBuilder.rdsParameters(rdsParameters.let(RdsParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3604,14 +3604,14 @@ public open class CfnDataSource(
        * @param redshiftParameters The parameters for Amazon Redshift.
        */
       override fun redshiftParameters(redshiftParameters: IResolvable) {
-        cdkBuilder.redshiftParameters(redshiftParameters.let(IResolvable::unwrap))
+        cdkBuilder.redshiftParameters(redshiftParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param redshiftParameters The parameters for Amazon Redshift.
        */
       override fun redshiftParameters(redshiftParameters: RedshiftParametersProperty) {
-        cdkBuilder.redshiftParameters(redshiftParameters.let(RedshiftParametersProperty::unwrap))
+        cdkBuilder.redshiftParameters(redshiftParameters.let(RedshiftParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3627,14 +3627,14 @@ public open class CfnDataSource(
        * @param s3Parameters The parameters for S3.
        */
       override fun s3Parameters(s3Parameters: IResolvable) {
-        cdkBuilder.s3Parameters(s3Parameters.let(IResolvable::unwrap))
+        cdkBuilder.s3Parameters(s3Parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3Parameters The parameters for S3.
        */
       override fun s3Parameters(s3Parameters: S3ParametersProperty) {
-        cdkBuilder.s3Parameters(s3Parameters.let(S3ParametersProperty::unwrap))
+        cdkBuilder.s3Parameters(s3Parameters.let(S3ParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3649,14 +3649,14 @@ public open class CfnDataSource(
        * @param snowflakeParameters The parameters for Snowflake.
        */
       override fun snowflakeParameters(snowflakeParameters: IResolvable) {
-        cdkBuilder.snowflakeParameters(snowflakeParameters.let(IResolvable::unwrap))
+        cdkBuilder.snowflakeParameters(snowflakeParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param snowflakeParameters The parameters for Snowflake.
        */
       override fun snowflakeParameters(snowflakeParameters: SnowflakeParametersProperty) {
-        cdkBuilder.snowflakeParameters(snowflakeParameters.let(SnowflakeParametersProperty::unwrap))
+        cdkBuilder.snowflakeParameters(snowflakeParameters.let(SnowflakeParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3672,14 +3672,14 @@ public open class CfnDataSource(
        * @param sparkParameters The parameters for Spark.
        */
       override fun sparkParameters(sparkParameters: IResolvable) {
-        cdkBuilder.sparkParameters(sparkParameters.let(IResolvable::unwrap))
+        cdkBuilder.sparkParameters(sparkParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sparkParameters The parameters for Spark.
        */
       override fun sparkParameters(sparkParameters: SparkParametersProperty) {
-        cdkBuilder.sparkParameters(sparkParameters.let(SparkParametersProperty::unwrap))
+        cdkBuilder.sparkParameters(sparkParameters.let(SparkParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3694,14 +3694,14 @@ public open class CfnDataSource(
        * @param sqlServerParameters The parameters for SQL Server.
        */
       override fun sqlServerParameters(sqlServerParameters: IResolvable) {
-        cdkBuilder.sqlServerParameters(sqlServerParameters.let(IResolvable::unwrap))
+        cdkBuilder.sqlServerParameters(sqlServerParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sqlServerParameters The parameters for SQL Server.
        */
       override fun sqlServerParameters(sqlServerParameters: SqlServerParametersProperty) {
-        cdkBuilder.sqlServerParameters(sqlServerParameters.let(SqlServerParametersProperty::unwrap))
+        cdkBuilder.sqlServerParameters(sqlServerParameters.let(SqlServerParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3718,7 +3718,7 @@ public open class CfnDataSource(
        * source.
        */
       override fun starburstParameters(starburstParameters: IResolvable) {
-        cdkBuilder.starburstParameters(starburstParameters.let(IResolvable::unwrap))
+        cdkBuilder.starburstParameters(starburstParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3726,7 +3726,7 @@ public open class CfnDataSource(
        * source.
        */
       override fun starburstParameters(starburstParameters: StarburstParametersProperty) {
-        cdkBuilder.starburstParameters(starburstParameters.let(StarburstParametersProperty::unwrap))
+        cdkBuilder.starburstParameters(starburstParameters.let(StarburstParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3743,14 +3743,14 @@ public open class CfnDataSource(
        * @param teradataParameters The parameters for Teradata.
        */
       override fun teradataParameters(teradataParameters: IResolvable) {
-        cdkBuilder.teradataParameters(teradataParameters.let(IResolvable::unwrap))
+        cdkBuilder.teradataParameters(teradataParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param teradataParameters The parameters for Teradata.
        */
       override fun teradataParameters(teradataParameters: TeradataParametersProperty) {
-        cdkBuilder.teradataParameters(teradataParameters.let(TeradataParametersProperty::unwrap))
+        cdkBuilder.teradataParameters(teradataParameters.let(TeradataParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -3766,14 +3766,14 @@ public open class CfnDataSource(
        * @param trinoParameters The parameters that are required to connect to a Trino data source.
        */
       override fun trinoParameters(trinoParameters: IResolvable) {
-        cdkBuilder.trinoParameters(trinoParameters.let(IResolvable::unwrap))
+        cdkBuilder.trinoParameters(trinoParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param trinoParameters The parameters that are required to connect to a Trino data source.
        */
       override fun trinoParameters(trinoParameters: TrinoParametersProperty) {
-        cdkBuilder.trinoParameters(trinoParameters.let(TrinoParametersProperty::unwrap))
+        cdkBuilder.trinoParameters(trinoParameters.let(TrinoParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -5412,7 +5412,7 @@ public open class CfnDataSource(
        * This is NULL if the manifest file was uploaded into Amazon QuickSight.
        */
       override fun manifestFileLocation(manifestFileLocation: IResolvable) {
-        cdkBuilder.manifestFileLocation(manifestFileLocation.let(IResolvable::unwrap))
+        cdkBuilder.manifestFileLocation(manifestFileLocation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5420,7 +5420,7 @@ public open class CfnDataSource(
        * This is NULL if the manifest file was uploaded into Amazon QuickSight.
        */
       override fun manifestFileLocation(manifestFileLocation: ManifestFileLocationProperty) {
-        cdkBuilder.manifestFileLocation(manifestFileLocation.let(ManifestFileLocationProperty::unwrap))
+        cdkBuilder.manifestFileLocation(manifestFileLocation.let(ManifestFileLocationProperty.Companion::unwrap))
       }
 
       /**
@@ -5930,7 +5930,7 @@ public open class CfnDataSource(
        * @param disableSsl A Boolean option to control whether SSL should be disabled.
        */
       override fun disableSsl(disableSsl: IResolvable) {
-        cdkBuilder.disableSsl(disableSsl.let(IResolvable::unwrap))
+        cdkBuilder.disableSsl(disableSsl.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

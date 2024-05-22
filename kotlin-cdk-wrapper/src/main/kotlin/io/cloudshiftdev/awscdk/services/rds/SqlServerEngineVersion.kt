@@ -18,6 +18,7 @@ import kotlin.String
  * .engine(DatabaseInstanceEngine.sqlServerEe(SqlServerEeInstanceEngineProps.builder()
  * .version(SqlServerEngineVersion.VER_11)
  * .build()))
+ * .name("my-parameter-group")
  * .parameters(Map.of(
  * "locks", "100"))
  * .build();

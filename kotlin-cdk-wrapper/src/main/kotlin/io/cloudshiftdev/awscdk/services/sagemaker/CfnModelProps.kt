@@ -348,7 +348,7 @@ public interface CfnModelProps {
      * @param containers Specifies the containers in the inference pipeline.
      */
     override fun containers(containers: IResolvable) {
-      cdkBuilder.containers(containers.let(IResolvable::unwrap))
+      cdkBuilder.containers(containers.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -376,7 +376,7 @@ public interface CfnModelProps {
      * No inbound or outbound network calls can be made to or from the model container.
      */
     override fun enableNetworkIsolation(enableNetworkIsolation: IResolvable) {
-      cdkBuilder.enableNetworkIsolation(enableNetworkIsolation.let(IResolvable::unwrap))
+      cdkBuilder.enableNetworkIsolation(enableNetworkIsolation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -399,7 +399,7 @@ public interface CfnModelProps {
      * endpoint are called.
      */
     override fun inferenceExecutionConfig(inferenceExecutionConfig: IResolvable) {
-      cdkBuilder.inferenceExecutionConfig(inferenceExecutionConfig.let(IResolvable::unwrap))
+      cdkBuilder.inferenceExecutionConfig(inferenceExecutionConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -408,7 +408,7 @@ public interface CfnModelProps {
      */
     override
         fun inferenceExecutionConfig(inferenceExecutionConfig: CfnModel.InferenceExecutionConfigProperty) {
-      cdkBuilder.inferenceExecutionConfig(inferenceExecutionConfig.let(CfnModel.InferenceExecutionConfigProperty::unwrap))
+      cdkBuilder.inferenceExecutionConfig(inferenceExecutionConfig.let(CfnModel.InferenceExecutionConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -435,7 +435,7 @@ public interface CfnModelProps {
      * deployed for predictions.
      */
     override fun primaryContainer(primaryContainer: IResolvable) {
-      cdkBuilder.primaryContainer(primaryContainer.let(IResolvable::unwrap))
+      cdkBuilder.primaryContainer(primaryContainer.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -444,7 +444,7 @@ public interface CfnModelProps {
      * deployed for predictions.
      */
     override fun primaryContainer(primaryContainer: CfnModel.ContainerDefinitionProperty) {
-      cdkBuilder.primaryContainer(primaryContainer.let(CfnModel.ContainerDefinitionProperty::unwrap))
+      cdkBuilder.primaryContainer(primaryContainer.let(CfnModel.ContainerDefinitionProperty.Companion::unwrap))
     }
 
     /**
@@ -467,7 +467,7 @@ public interface CfnModelProps {
      * in the *AWS Billing and Cost Management User Guide* .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -491,7 +491,7 @@ public interface CfnModelProps {
      * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/batch-vpc.html) .
      */
     override fun vpcConfig(vpcConfig: IResolvable) {
-      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -505,7 +505,7 @@ public interface CfnModelProps {
      * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/batch-vpc.html) .
      */
     override fun vpcConfig(vpcConfig: CfnModel.VpcConfigProperty) {
-      cdkBuilder.vpcConfig(vpcConfig.let(CfnModel.VpcConfigProperty::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(CfnModel.VpcConfigProperty.Companion::unwrap))
     }
 
     /**

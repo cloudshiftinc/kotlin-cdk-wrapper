@@ -201,7 +201,7 @@ public interface CfnDiskProps {
      * automatically disabled before the disk is deleted.
      */
     override fun addOns(addOns: IResolvable) {
-      cdkBuilder.addOns(addOns.let(IResolvable::unwrap))
+      cdkBuilder.addOns(addOns.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -241,14 +241,14 @@ public interface CfnDiskProps {
      * @param location The AWS Region and Availability Zone where the disk is located.
      */
     override fun location(location: IResolvable) {
-      cdkBuilder.location(location.let(IResolvable::unwrap))
+      cdkBuilder.location(location.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param location The AWS Region and Availability Zone where the disk is located.
      */
     override fun location(location: CfnDisk.LocationProperty) {
-      cdkBuilder.location(location.let(CfnDisk.LocationProperty::unwrap))
+      cdkBuilder.location(location.let(CfnDisk.LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -276,7 +276,7 @@ public interface CfnDiskProps {
      * The `Value` of `Tags` is optional for Lightsail resources.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

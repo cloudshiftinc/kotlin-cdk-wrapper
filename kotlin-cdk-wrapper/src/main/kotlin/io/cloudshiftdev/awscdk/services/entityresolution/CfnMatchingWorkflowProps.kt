@@ -237,7 +237,7 @@ public interface CfnMatchingWorkflowProps {
      * `InputSourceARN` and `SchemaName` . 
      */
     override fun inputSourceConfig(inputSourceConfig: IResolvable) {
-      cdkBuilder.inputSourceConfig(inputSourceConfig.let(IResolvable::unwrap))
+      cdkBuilder.inputSourceConfig(inputSourceConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -260,7 +260,7 @@ public interface CfnMatchingWorkflowProps {
      * `OutputS3Path` , `ApplyNormalization` , and `Output` . 
      */
     override fun outputSourceConfig(outputSourceConfig: IResolvable) {
-      cdkBuilder.outputSourceConfig(outputSourceConfig.let(IResolvable::unwrap))
+      cdkBuilder.outputSourceConfig(outputSourceConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -283,7 +283,7 @@ public interface CfnMatchingWorkflowProps {
      * `ruleBasedProperties` . 
      */
     override fun resolutionTechniques(resolutionTechniques: IResolvable) {
-      cdkBuilder.resolutionTechniques(resolutionTechniques.let(IResolvable::unwrap))
+      cdkBuilder.resolutionTechniques(resolutionTechniques.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -292,7 +292,7 @@ public interface CfnMatchingWorkflowProps {
      */
     override
         fun resolutionTechniques(resolutionTechniques: CfnMatchingWorkflow.ResolutionTechniquesProperty) {
-      cdkBuilder.resolutionTechniques(resolutionTechniques.let(CfnMatchingWorkflow.ResolutionTechniquesProperty::unwrap))
+      cdkBuilder.resolutionTechniques(resolutionTechniques.let(CfnMatchingWorkflow.ResolutionTechniquesProperty.Companion::unwrap))
     }
 
     /**
@@ -319,7 +319,7 @@ public interface CfnMatchingWorkflowProps {
      * @param tags The tags used to organize, track, or control access for this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

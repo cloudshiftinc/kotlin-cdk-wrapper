@@ -230,7 +230,7 @@ public interface CfnVPCCidrBlockProps {
      * You cannot specify the range of IPv6 addresses or the size of the CIDR block.
      */
     override fun amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock: IResolvable) {
-      cdkBuilder.amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock.let(IResolvable::unwrap))
+      cdkBuilder.amazonProvidedIpv6CidrBlock(amazonProvidedIpv6CidrBlock.let(IResolvable.Companion::unwrap))
     }
 
     /**

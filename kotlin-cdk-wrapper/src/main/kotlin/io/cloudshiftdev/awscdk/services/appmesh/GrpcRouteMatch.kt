@@ -111,7 +111,7 @@ public interface GrpcRouteMatch {
      * All specified metadata must match for the route to match.
      */
     override fun metadata(metadata: List<HeaderMatch>) {
-      cdkBuilder.metadata(metadata.map(HeaderMatch::unwrap))
+      cdkBuilder.metadata(metadata.map(HeaderMatch.Companion::unwrap))
     }
 
     /**

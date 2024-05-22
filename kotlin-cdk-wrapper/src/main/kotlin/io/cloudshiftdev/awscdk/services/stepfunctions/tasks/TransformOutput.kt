@@ -114,7 +114,7 @@ public interface TransformOutput {
      * object.
      */
     override fun assembleWith(assembleWith: AssembleWith) {
-      cdkBuilder.assembleWith(assembleWith.let(AssembleWith::unwrap))
+      cdkBuilder.assembleWith(assembleWith.let(AssembleWith.Companion::unwrap))
     }
 
     /**
@@ -122,7 +122,7 @@ public interface TransformOutput {
      * rest using Amazon S3 server-side encryption.
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**

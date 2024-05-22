@@ -85,8 +85,8 @@ public open class CfnDBProxy(
     id: String,
     props: CfnDBProxyProps,
   ) :
-      this(software.amazon.awscdk.services.rds.CfnDBProxy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDBProxyProps::unwrap))
+      this(software.amazon.awscdk.services.rds.CfnDBProxy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDBProxyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -120,7 +120,7 @@ public open class CfnDBProxy(
    * The authorization mechanism that the proxy uses.
    */
   public open fun auth(`value`: IResolvable) {
-    unwrap(this).setAuth(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAuth(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -169,7 +169,7 @@ public open class CfnDBProxy(
    * Specifies whether the proxy includes detailed information about SQL statements in its logs.
    */
   public open fun debugLogging(`value`: IResolvable) {
-    unwrap(this).setDebugLogging(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDebugLogging(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -204,7 +204,7 @@ public open class CfnDBProxy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -226,7 +226,7 @@ public open class CfnDBProxy(
    * proxy.
    */
   public open fun requireTls(`value`: IResolvable) {
-    unwrap(this).setRequireTls(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRequireTls(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -253,7 +253,7 @@ public open class CfnDBProxy(
    * An optional set of key-value pairs to associate arbitrary data of your choosing with the proxy.
    */
   public open fun tags(`value`: List<TagFormatProperty>) {
-    unwrap(this).setTags(`value`.map(TagFormatProperty::unwrap))
+    unwrap(this).setTags(`value`.map(TagFormatProperty.Companion::unwrap))
   }
 
   /**
@@ -503,7 +503,7 @@ public open class CfnDBProxy(
      * @param auth The authorization mechanism that the proxy uses. 
      */
     override fun auth(auth: IResolvable) {
-      cdkBuilder.auth(auth.let(IResolvable::unwrap))
+      cdkBuilder.auth(auth.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -569,7 +569,7 @@ public open class CfnDBProxy(
      * statements in its logs. 
      */
     override fun debugLogging(debugLogging: IResolvable) {
-      cdkBuilder.debugLogging(debugLogging.let(IResolvable::unwrap))
+      cdkBuilder.debugLogging(debugLogging.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -629,7 +629,7 @@ public open class CfnDBProxy(
      * connections to the proxy. 
      */
     override fun requireTls(requireTls: IResolvable) {
-      cdkBuilder.requireTls(requireTls.let(IResolvable::unwrap))
+      cdkBuilder.requireTls(requireTls.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -653,7 +653,7 @@ public open class CfnDBProxy(
      * with the proxy. 
      */
     override fun tags(tags: List<TagFormatProperty>) {
-      cdkBuilder.tags(tags.map(TagFormatProperty::unwrap))
+      cdkBuilder.tags(tags.map(TagFormatProperty.Companion::unwrap))
     }
 
     /**

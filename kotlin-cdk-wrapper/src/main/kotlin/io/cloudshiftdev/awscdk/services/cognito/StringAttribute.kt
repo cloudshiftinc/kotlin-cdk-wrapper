@@ -41,7 +41,7 @@ public open class StringAttribute(
   )
 
   public constructor(props: StringAttributeProps) :
-      this(software.amazon.awscdk.services.cognito.StringAttribute(props.let(StringAttributeProps::unwrap))
+      this(software.amazon.awscdk.services.cognito.StringAttribute(props.let(StringAttributeProps.Companion::unwrap))
   )
 
   public constructor(props: StringAttributeProps.Builder.() -> Unit) :

@@ -22,6 +22,7 @@ import kotlin.Boolean
 import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import kotlin.jvm.JvmName
 import io.cloudshiftdev.awscdk.services.elasticsearch.IDomain as ElasticsearchIDomain
 import io.cloudshiftdev.awscdk.services.opensearchservice.IDomain as OpensearchserviceIDomain
@@ -513,6 +514,21 @@ public interface IGraphqlApi : IResource {
    */
   public fun grantSubscription(grantee: IGrantable, vararg fields: String): Grant
 
+  /**
+   * The GraphQL endpoint ARN.
+   */
+  public fun graphQLEndpointArn(): String
+
+  /**
+   * The Authorization Types for this GraphQL Api.
+   */
+  public fun modes(): List<AuthorizationType>
+
+  /**
+   * the visibility of the API.
+   */
+  public fun visibility(): Visibility
+
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.IGraphqlApi,
   ) : CdkObject(cdkObject), IGraphqlApi {
@@ -525,7 +541,7 @@ public interface IGraphqlApi : IResource {
      */
     override fun addDynamoDbDataSource(id: String, table: ITable): DynamoDbDataSource =
         unwrap(this).addDynamoDbDataSource(id,
-        table.let(ITable::unwrap)).let(DynamoDbDataSource::wrap)
+        table.let(ITable.Companion::unwrap)).let(DynamoDbDataSource::wrap)
 
     /**
      * add a new DynamoDB data source to this API.
@@ -538,8 +554,9 @@ public interface IGraphqlApi : IResource {
       id: String,
       table: ITable,
       options: DataSourceOptions,
-    ): DynamoDbDataSource = unwrap(this).addDynamoDbDataSource(id, table.let(ITable::unwrap),
-        options.let(DataSourceOptions::unwrap)).let(DynamoDbDataSource::wrap)
+    ): DynamoDbDataSource = unwrap(this).addDynamoDbDataSource(id,
+        table.let(ITable.Companion::unwrap),
+        options.let(DataSourceOptions.Companion::unwrap)).let(DynamoDbDataSource::wrap)
 
     /**
      * add a new DynamoDB data source to this API.
@@ -567,7 +584,7 @@ public interface IGraphqlApi : IResource {
     @Deprecated(message = "deprecated in CDK")
     override fun addElasticsearchDataSource(id: String, domain: ElasticsearchIDomain):
         ElasticsearchDataSource = unwrap(this).addElasticsearchDataSource(id,
-        domain.let(ElasticsearchIDomain::unwrap)).let(ElasticsearchDataSource::wrap)
+        domain.let(ElasticsearchIDomain.Companion::unwrap)).let(ElasticsearchDataSource::wrap)
 
     /**
      * (deprecated) add a new elasticsearch data source to this API.
@@ -583,8 +600,8 @@ public interface IGraphqlApi : IResource {
       domain: ElasticsearchIDomain,
       options: DataSourceOptions,
     ): ElasticsearchDataSource = unwrap(this).addElasticsearchDataSource(id,
-        domain.let(ElasticsearchIDomain::unwrap),
-        options.let(DataSourceOptions::unwrap)).let(ElasticsearchDataSource::wrap)
+        domain.let(ElasticsearchIDomain.Companion::unwrap),
+        options.let(DataSourceOptions.Companion::unwrap)).let(ElasticsearchDataSource::wrap)
 
     /**
      * (deprecated) add a new elasticsearch data source to this API.
@@ -612,7 +629,7 @@ public interface IGraphqlApi : IResource {
      */
     override fun addEventBridgeDataSource(id: String, eventBus: IEventBus): EventBridgeDataSource =
         unwrap(this).addEventBridgeDataSource(id,
-        eventBus.let(IEventBus::unwrap)).let(EventBridgeDataSource::wrap)
+        eventBus.let(IEventBus.Companion::unwrap)).let(EventBridgeDataSource::wrap)
 
     /**
      * Add an EventBridge data source to this api.
@@ -626,8 +643,8 @@ public interface IGraphqlApi : IResource {
       eventBus: IEventBus,
       options: DataSourceOptions,
     ): EventBridgeDataSource = unwrap(this).addEventBridgeDataSource(id,
-        eventBus.let(IEventBus::unwrap),
-        options.let(DataSourceOptions::unwrap)).let(EventBridgeDataSource::wrap)
+        eventBus.let(IEventBus.Companion::unwrap),
+        options.let(DataSourceOptions.Companion::unwrap)).let(EventBridgeDataSource::wrap)
 
     /**
      * Add an EventBridge data source to this api.
@@ -666,7 +683,7 @@ public interface IGraphqlApi : IResource {
       endpoint: String,
       options: HttpDataSourceOptions,
     ): HttpDataSource = unwrap(this).addHttpDataSource(id, endpoint,
-        options.let(HttpDataSourceOptions::unwrap)).let(HttpDataSource::wrap)
+        options.let(HttpDataSourceOptions.Companion::unwrap)).let(HttpDataSource::wrap)
 
     /**
      * add a new http data source to this API.
@@ -692,7 +709,7 @@ public interface IGraphqlApi : IResource {
      */
     override fun addLambdaDataSource(id: String, lambdaFunction: IFunction): LambdaDataSource =
         unwrap(this).addLambdaDataSource(id,
-        lambdaFunction.let(IFunction::unwrap)).let(LambdaDataSource::wrap)
+        lambdaFunction.let(IFunction.Companion::unwrap)).let(LambdaDataSource::wrap)
 
     /**
      * add a new Lambda data source to this API.
@@ -706,8 +723,8 @@ public interface IGraphqlApi : IResource {
       lambdaFunction: IFunction,
       options: DataSourceOptions,
     ): LambdaDataSource = unwrap(this).addLambdaDataSource(id,
-        lambdaFunction.let(IFunction::unwrap),
-        options.let(DataSourceOptions::unwrap)).let(LambdaDataSource::wrap)
+        lambdaFunction.let(IFunction.Companion::unwrap),
+        options.let(DataSourceOptions.Companion::unwrap)).let(LambdaDataSource::wrap)
 
     /**
      * add a new Lambda data source to this API.
@@ -747,7 +764,7 @@ public interface IGraphqlApi : IResource {
      */
     override fun addNoneDataSource(id: String, options: DataSourceOptions): NoneDataSource =
         unwrap(this).addNoneDataSource(id,
-        options.let(DataSourceOptions::unwrap)).let(NoneDataSource::wrap)
+        options.let(DataSourceOptions.Companion::unwrap)).let(NoneDataSource::wrap)
 
     /**
      * add a new dummy data source to this API.
@@ -772,7 +789,7 @@ public interface IGraphqlApi : IResource {
      */
     override fun addOpenSearchDataSource(id: String, domain: OpensearchserviceIDomain):
         OpenSearchDataSource = unwrap(this).addOpenSearchDataSource(id,
-        domain.let(OpensearchserviceIDomain::unwrap)).let(OpenSearchDataSource::wrap)
+        domain.let(OpensearchserviceIDomain.Companion::unwrap)).let(OpenSearchDataSource::wrap)
 
     /**
      * Add a new OpenSearch data source to this API.
@@ -786,8 +803,8 @@ public interface IGraphqlApi : IResource {
       domain: OpensearchserviceIDomain,
       options: DataSourceOptions,
     ): OpenSearchDataSource = unwrap(this).addOpenSearchDataSource(id,
-        domain.let(OpensearchserviceIDomain::unwrap),
-        options.let(DataSourceOptions::unwrap)).let(OpenSearchDataSource::wrap)
+        domain.let(OpensearchserviceIDomain.Companion::unwrap),
+        options.let(DataSourceOptions.Companion::unwrap)).let(OpenSearchDataSource::wrap)
 
     /**
      * Add a new OpenSearch data source to this API.
@@ -819,8 +836,8 @@ public interface IGraphqlApi : IResource {
       serverlessCluster: IServerlessCluster,
       secretStore: ISecret,
     ): RdsDataSource = unwrap(this).addRdsDataSource(id,
-        serverlessCluster.let(IServerlessCluster::unwrap),
-        secretStore.let(ISecret::unwrap)).let(RdsDataSource::wrap)
+        serverlessCluster.let(IServerlessCluster.Companion::unwrap),
+        secretStore.let(ISecret.Companion::unwrap)).let(RdsDataSource::wrap)
 
     /**
      * add a new Rds data source to this API.
@@ -838,8 +855,8 @@ public interface IGraphqlApi : IResource {
       secretStore: ISecret,
       databaseName: String,
     ): RdsDataSource = unwrap(this).addRdsDataSource(id,
-        serverlessCluster.let(IServerlessCluster::unwrap), secretStore.let(ISecret::unwrap),
-        databaseName).let(RdsDataSource::wrap)
+        serverlessCluster.let(IServerlessCluster.Companion::unwrap),
+        secretStore.let(ISecret.Companion::unwrap), databaseName).let(RdsDataSource::wrap)
 
     /**
      * add a new Rds data source to this API.
@@ -858,8 +875,9 @@ public interface IGraphqlApi : IResource {
       databaseName: String,
       options: DataSourceOptions,
     ): RdsDataSource = unwrap(this).addRdsDataSource(id,
-        serverlessCluster.let(IServerlessCluster::unwrap), secretStore.let(ISecret::unwrap),
-        databaseName, options.let(DataSourceOptions::unwrap)).let(RdsDataSource::wrap)
+        serverlessCluster.let(IServerlessCluster.Companion::unwrap),
+        secretStore.let(ISecret.Companion::unwrap), databaseName,
+        options.let(DataSourceOptions.Companion::unwrap)).let(RdsDataSource::wrap)
 
     /**
      * add a new Rds data source to this API.
@@ -897,8 +915,8 @@ public interface IGraphqlApi : IResource {
       serverlessCluster: IDatabaseCluster,
       secretStore: ISecret,
     ): RdsDataSource = unwrap(this).addRdsDataSourceV2(id,
-        serverlessCluster.let(IDatabaseCluster::unwrap),
-        secretStore.let(ISecret::unwrap)).let(RdsDataSource::wrap)
+        serverlessCluster.let(IDatabaseCluster.Companion::unwrap),
+        secretStore.let(ISecret.Companion::unwrap)).let(RdsDataSource::wrap)
 
     /**
      * add a new Rds Serverless V2 data source to this API.
@@ -916,8 +934,8 @@ public interface IGraphqlApi : IResource {
       secretStore: ISecret,
       databaseName: String,
     ): RdsDataSource = unwrap(this).addRdsDataSourceV2(id,
-        serverlessCluster.let(IDatabaseCluster::unwrap), secretStore.let(ISecret::unwrap),
-        databaseName).let(RdsDataSource::wrap)
+        serverlessCluster.let(IDatabaseCluster.Companion::unwrap),
+        secretStore.let(ISecret.Companion::unwrap), databaseName).let(RdsDataSource::wrap)
 
     /**
      * add a new Rds Serverless V2 data source to this API.
@@ -936,8 +954,9 @@ public interface IGraphqlApi : IResource {
       databaseName: String,
       options: DataSourceOptions,
     ): RdsDataSource = unwrap(this).addRdsDataSourceV2(id,
-        serverlessCluster.let(IDatabaseCluster::unwrap), secretStore.let(ISecret::unwrap),
-        databaseName, options.let(DataSourceOptions::unwrap)).let(RdsDataSource::wrap)
+        serverlessCluster.let(IDatabaseCluster.Companion::unwrap),
+        secretStore.let(ISecret.Companion::unwrap), databaseName,
+        options.let(DataSourceOptions.Companion::unwrap)).let(RdsDataSource::wrap)
 
     /**
      * add a new Rds Serverless V2 data source to this API.
@@ -966,7 +985,7 @@ public interface IGraphqlApi : IResource {
      * @param construct the dependee. 
      */
     override fun addSchemaDependency(construct: CfnResource): Boolean =
-        unwrap(this).addSchemaDependency(construct.let(CfnResource::unwrap))
+        unwrap(this).addSchemaDependency(construct.let(CfnResource.Companion::unwrap))
 
     /**
      * an unique AWS AppSync GraphQL API identifier i.e. 'lxz775lwdrgcndgz3nurvac7oa'.
@@ -987,7 +1006,7 @@ public interface IGraphqlApi : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -1003,7 +1022,7 @@ public interface IGraphqlApi : IResource {
      */
     override fun createResolver(id: String, props: ExtendedResolverProps): Resolver =
         unwrap(this).createResolver(id,
-        props.let(ExtendedResolverProps::unwrap)).let(Resolver::wrap)
+        props.let(ExtendedResolverProps.Companion::unwrap)).let(Resolver::wrap)
 
     /**
      * creates a new resolver for this datasource and API using the given properties.
@@ -1040,8 +1059,8 @@ public interface IGraphqlApi : IResource {
       grantee: IGrantable,
       resources: IamResource,
       vararg actions: String,
-    ): Grant = unwrap(this).grant(grantee.let(IGrantable::unwrap),
-        resources.let(IamResource::unwrap), *actions.map{CdkObjectWrappers.unwrap(it) as
+    ): Grant = unwrap(this).grant(grantee.let(IGrantable.Companion::unwrap),
+        resources.let(IamResource.Companion::unwrap), *actions.map{CdkObjectWrappers.unwrap(it) as
         String}.toTypedArray()).let(Grant::wrap)
 
     /**
@@ -1052,7 +1071,7 @@ public interface IGraphqlApi : IResource {
      * @param fields The fields to grant access to that are Mutations (leave blank for all). 
      */
     override fun grantMutation(grantee: IGrantable, vararg fields: String): Grant =
-        unwrap(this).grantMutation(grantee.let(IGrantable::unwrap),
+        unwrap(this).grantMutation(grantee.let(IGrantable.Companion::unwrap),
         *fields.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
     /**
@@ -1063,7 +1082,7 @@ public interface IGraphqlApi : IResource {
      * @param fields The fields to grant access to that are Queries (leave blank for all). 
      */
     override fun grantQuery(grantee: IGrantable, vararg fields: String): Grant =
-        unwrap(this).grantQuery(grantee.let(IGrantable::unwrap),
+        unwrap(this).grantQuery(grantee.let(IGrantable.Companion::unwrap),
         *fields.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
     /**
@@ -1074,8 +1093,19 @@ public interface IGraphqlApi : IResource {
      * @param fields The fields to grant access to that are Subscriptions (leave blank for all). 
      */
     override fun grantSubscription(grantee: IGrantable, vararg fields: String): Grant =
-        unwrap(this).grantSubscription(grantee.let(IGrantable::unwrap),
+        unwrap(this).grantSubscription(grantee.let(IGrantable.Companion::unwrap),
         *fields.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
+
+    /**
+     * The GraphQL endpoint ARN.
+     */
+    override fun graphQLEndpointArn(): String = unwrap(this).getGraphQLEndpointArn()
+
+    /**
+     * The Authorization Types for this GraphQL Api.
+     */
+    override fun modes(): List<AuthorizationType> =
+        unwrap(this).getModes().map(AuthorizationType::wrap)
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
@@ -1083,6 +1113,11 @@ public interface IGraphqlApi : IResource {
      * The stack in which this resource is defined.
      */
     override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
+
+    /**
+     * the visibility of the API.
+     */
+    override fun visibility(): Visibility = unwrap(this).getVisibility().let(Visibility::wrap)
   }
 
   public companion object {

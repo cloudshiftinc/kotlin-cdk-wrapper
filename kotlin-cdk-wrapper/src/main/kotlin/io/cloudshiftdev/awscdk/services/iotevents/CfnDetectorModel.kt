@@ -71,8 +71,8 @@ public open class CfnDetectorModel(
     id: String,
     props: CfnDetectorModelProps,
   ) :
-      this(software.amazon.awscdk.services.iotevents.CfnDetectorModel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDetectorModelProps::unwrap))
+      this(software.amazon.awscdk.services.iotevents.CfnDetectorModel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDetectorModelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -91,14 +91,14 @@ public open class CfnDetectorModel(
    * Information that defines how a detector operates.
    */
   public open fun detectorModelDefinition(`value`: IResolvable) {
-    unwrap(this).setDetectorModelDefinition(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDetectorModelDefinition(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information that defines how a detector operates.
    */
   public open fun detectorModelDefinition(`value`: DetectorModelDefinitionProperty) {
-    unwrap(this).setDetectorModelDefinition(`value`.let(DetectorModelDefinitionProperty::unwrap))
+    unwrap(this).setDetectorModelDefinition(`value`.let(DetectorModelDefinitionProperty.Companion::unwrap))
   }
 
   /**
@@ -152,7 +152,7 @@ public open class CfnDetectorModel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -194,7 +194,7 @@ public open class CfnDetectorModel(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -323,7 +323,7 @@ public open class CfnDetectorModel(
      * @param detectorModelDefinition Information that defines how a detector operates. 
      */
     override fun detectorModelDefinition(detectorModelDefinition: IResolvable) {
-      cdkBuilder.detectorModelDefinition(detectorModelDefinition.let(IResolvable::unwrap))
+      cdkBuilder.detectorModelDefinition(detectorModelDefinition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -333,7 +333,7 @@ public open class CfnDetectorModel(
      * @param detectorModelDefinition Information that defines how a detector operates. 
      */
     override fun detectorModelDefinition(detectorModelDefinition: DetectorModelDefinitionProperty) {
-      cdkBuilder.detectorModelDefinition(detectorModelDefinition.let(DetectorModelDefinitionProperty::unwrap))
+      cdkBuilder.detectorModelDefinition(detectorModelDefinition.let(DetectorModelDefinitionProperty.Companion::unwrap))
     }
 
     /**
@@ -419,7 +419,7 @@ public open class CfnDetectorModel(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -991,14 +991,14 @@ public open class CfnDetectorModel(
        * @param clearTimer Information needed to clear the timer.
        */
       override fun clearTimer(clearTimer: IResolvable) {
-        cdkBuilder.clearTimer(clearTimer.let(IResolvable::unwrap))
+        cdkBuilder.clearTimer(clearTimer.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param clearTimer Information needed to clear the timer.
        */
       override fun clearTimer(clearTimer: ClearTimerProperty) {
-        cdkBuilder.clearTimer(clearTimer.let(ClearTimerProperty::unwrap))
+        cdkBuilder.clearTimer(clearTimer.let(ClearTimerProperty.Companion::unwrap))
       }
 
       /**
@@ -1020,7 +1020,7 @@ public open class CfnDetectorModel(
        * in *AWS IoT Events Developer Guide* .
        */
       override fun dynamoDBv2(dynamoDBv2: IResolvable) {
-        cdkBuilder.dynamoDBv2(dynamoDBv2.let(IResolvable::unwrap))
+        cdkBuilder.dynamoDBv2(dynamoDBv2.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1034,7 +1034,7 @@ public open class CfnDetectorModel(
        * in *AWS IoT Events Developer Guide* .
        */
       override fun dynamoDBv2(dynamoDBv2: DynamoDBv2Property) {
-        cdkBuilder.dynamoDBv2(dynamoDBv2.let(DynamoDBv2Property::unwrap))
+        cdkBuilder.dynamoDBv2(dynamoDBv2.let(DynamoDBv2Property.Companion::unwrap))
       }
 
       /**
@@ -1063,7 +1063,7 @@ public open class CfnDetectorModel(
        * in *AWS IoT Events Developer Guide* .
        */
       override fun dynamoDb(dynamoDb: IResolvable) {
-        cdkBuilder.dynamoDb(dynamoDb.let(IResolvable::unwrap))
+        cdkBuilder.dynamoDb(dynamoDb.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1077,7 +1077,7 @@ public open class CfnDetectorModel(
        * in *AWS IoT Events Developer Guide* .
        */
       override fun dynamoDb(dynamoDb: DynamoDBProperty) {
-        cdkBuilder.dynamoDb(dynamoDb.let(DynamoDBProperty::unwrap))
+        cdkBuilder.dynamoDb(dynamoDb.let(DynamoDBProperty.Companion::unwrap))
       }
 
       /**
@@ -1100,7 +1100,7 @@ public open class CfnDetectorModel(
        * triggered the action to an Amazon Kinesis Data Firehose delivery stream.
        */
       override fun firehose(firehose: IResolvable) {
-        cdkBuilder.firehose(firehose.let(IResolvable::unwrap))
+        cdkBuilder.firehose(firehose.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1108,7 +1108,7 @@ public open class CfnDetectorModel(
        * triggered the action to an Amazon Kinesis Data Firehose delivery stream.
        */
       override fun firehose(firehose: FirehoseProperty) {
-        cdkBuilder.firehose(firehose.let(FirehoseProperty::unwrap))
+        cdkBuilder.firehose(firehose.let(FirehoseProperty.Companion::unwrap))
       }
 
       /**
@@ -1125,7 +1125,7 @@ public open class CfnDetectorModel(
        * model instance and the event that triggered the action.
        */
       override fun iotEvents(iotEvents: IResolvable) {
-        cdkBuilder.iotEvents(iotEvents.let(IResolvable::unwrap))
+        cdkBuilder.iotEvents(iotEvents.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1133,7 +1133,7 @@ public open class CfnDetectorModel(
        * model instance and the event that triggered the action.
        */
       override fun iotEvents(iotEvents: IotEventsProperty) {
-        cdkBuilder.iotEvents(iotEvents.let(IotEventsProperty::unwrap))
+        cdkBuilder.iotEvents(iotEvents.let(IotEventsProperty.Companion::unwrap))
       }
 
       /**
@@ -1150,7 +1150,7 @@ public open class CfnDetectorModel(
        * triggered the action to an asset property in AWS IoT SiteWise .
        */
       override fun iotSiteWise(iotSiteWise: IResolvable) {
-        cdkBuilder.iotSiteWise(iotSiteWise.let(IResolvable::unwrap))
+        cdkBuilder.iotSiteWise(iotSiteWise.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1158,7 +1158,7 @@ public open class CfnDetectorModel(
        * triggered the action to an asset property in AWS IoT SiteWise .
        */
       override fun iotSiteWise(iotSiteWise: IotSiteWiseProperty) {
-        cdkBuilder.iotSiteWise(iotSiteWise.let(IotSiteWiseProperty::unwrap))
+        cdkBuilder.iotSiteWise(iotSiteWise.let(IotSiteWiseProperty.Companion::unwrap))
       }
 
       /**
@@ -1175,7 +1175,7 @@ public open class CfnDetectorModel(
        * message broker.
        */
       override fun iotTopicPublish(iotTopicPublish: IResolvable) {
-        cdkBuilder.iotTopicPublish(iotTopicPublish.let(IResolvable::unwrap))
+        cdkBuilder.iotTopicPublish(iotTopicPublish.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1183,7 +1183,7 @@ public open class CfnDetectorModel(
        * message broker.
        */
       override fun iotTopicPublish(iotTopicPublish: IotTopicPublishProperty) {
-        cdkBuilder.iotTopicPublish(iotTopicPublish.let(IotTopicPublishProperty::unwrap))
+        cdkBuilder.iotTopicPublish(iotTopicPublish.let(IotTopicPublishProperty.Companion::unwrap))
       }
 
       /**
@@ -1200,7 +1200,7 @@ public open class CfnDetectorModel(
        * instance and the event that triggered the action.
        */
       override fun lambda(lambda: IResolvable) {
-        cdkBuilder.lambda(lambda.let(IResolvable::unwrap))
+        cdkBuilder.lambda(lambda.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1208,7 +1208,7 @@ public open class CfnDetectorModel(
        * instance and the event that triggered the action.
        */
       override fun lambda(lambda: LambdaProperty) {
-        cdkBuilder.lambda(lambda.let(LambdaProperty::unwrap))
+        cdkBuilder.lambda(lambda.let(LambdaProperty.Companion::unwrap))
       }
 
       /**
@@ -1224,14 +1224,14 @@ public open class CfnDetectorModel(
        * @param resetTimer Information needed to reset the timer.
        */
       override fun resetTimer(resetTimer: IResolvable) {
-        cdkBuilder.resetTimer(resetTimer.let(IResolvable::unwrap))
+        cdkBuilder.resetTimer(resetTimer.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param resetTimer Information needed to reset the timer.
        */
       override fun resetTimer(resetTimer: ResetTimerProperty) {
-        cdkBuilder.resetTimer(resetTimer.let(ResetTimerProperty::unwrap))
+        cdkBuilder.resetTimer(resetTimer.let(ResetTimerProperty.Companion::unwrap))
       }
 
       /**
@@ -1246,14 +1246,14 @@ public open class CfnDetectorModel(
        * @param sns Sends an Amazon SNS message.
        */
       override fun sns(sns: IResolvable) {
-        cdkBuilder.sns(sns.let(IResolvable::unwrap))
+        cdkBuilder.sns(sns.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sns Sends an Amazon SNS message.
        */
       override fun sns(sns: SnsProperty) {
-        cdkBuilder.sns(sns.let(SnsProperty::unwrap))
+        cdkBuilder.sns(sns.let(SnsProperty.Companion::unwrap))
       }
 
       /**
@@ -1267,14 +1267,14 @@ public open class CfnDetectorModel(
        * @param sqs Sends an Amazon SNS message.
        */
       override fun sqs(sqs: IResolvable) {
-        cdkBuilder.sqs(sqs.let(IResolvable::unwrap))
+        cdkBuilder.sqs(sqs.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sqs Sends an Amazon SNS message.
        */
       override fun sqs(sqs: SqsProperty) {
-        cdkBuilder.sqs(sqs.let(SqsProperty::unwrap))
+        cdkBuilder.sqs(sqs.let(SqsProperty.Companion::unwrap))
       }
 
       /**
@@ -1288,14 +1288,14 @@ public open class CfnDetectorModel(
        * @param setTimer Information needed to set the timer.
        */
       override fun timer(setTimer: IResolvable) {
-        cdkBuilder.setTimer(setTimer.let(IResolvable::unwrap))
+        cdkBuilder.setTimer(setTimer.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param setTimer Information needed to set the timer.
        */
       override fun timer(setTimer: SetTimerProperty) {
-        cdkBuilder.setTimer(setTimer.let(SetTimerProperty::unwrap))
+        cdkBuilder.setTimer(setTimer.let(SetTimerProperty.Companion::unwrap))
       }
 
       /**
@@ -1310,14 +1310,14 @@ public open class CfnDetectorModel(
        * @param setVariable Sets a variable to a specified value.
        */
       override fun variable(setVariable: IResolvable) {
-        cdkBuilder.setVariable(setVariable.let(IResolvable::unwrap))
+        cdkBuilder.setVariable(setVariable.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param setVariable Sets a variable to a specified value.
        */
       override fun variable(setVariable: SetVariableProperty) {
-        cdkBuilder.setVariable(setVariable.let(SetVariableProperty::unwrap))
+        cdkBuilder.setVariable(setVariable.let(SetVariableProperty.Companion::unwrap))
       }
 
       /**
@@ -1748,7 +1748,7 @@ public open class CfnDetectorModel(
        * The default is the current event time.
        */
       override fun timestamp(timestamp: IResolvable) {
-        cdkBuilder.timestamp(timestamp.let(IResolvable::unwrap))
+        cdkBuilder.timestamp(timestamp.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1756,7 +1756,7 @@ public open class CfnDetectorModel(
        * The default is the current event time.
        */
       override fun timestamp(timestamp: AssetPropertyTimestampProperty) {
-        cdkBuilder.timestamp(timestamp.let(AssetPropertyTimestampProperty::unwrap))
+        cdkBuilder.timestamp(timestamp.let(AssetPropertyTimestampProperty.Companion::unwrap))
       }
 
       /**
@@ -1772,14 +1772,14 @@ public open class CfnDetectorModel(
        * @param value The value to send to an asset property. 
        */
       override fun `value`(`value`: IResolvable) {
-        cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
+        cdkBuilder.`value`(`value`.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param value The value to send to an asset property. 
        */
       override fun `value`(`value`: AssetPropertyVariantProperty) {
-        cdkBuilder.`value`(`value`.let(AssetPropertyVariantProperty::unwrap))
+        cdkBuilder.`value`(`value`.let(AssetPropertyVariantProperty.Companion::unwrap))
       }
 
       /**
@@ -2213,7 +2213,7 @@ public open class CfnDetectorModel(
        * @param states Information about the states of the detector. 
        */
       override fun states(states: IResolvable) {
-        cdkBuilder.states(states.let(IResolvable::unwrap))
+        cdkBuilder.states(states.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2606,7 +2606,7 @@ public open class CfnDetectorModel(
        * `contentExpression` .
        */
       override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+        cdkBuilder.payload(payload.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2617,7 +2617,7 @@ public open class CfnDetectorModel(
        * `contentExpression` .
        */
       override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+        cdkBuilder.payload(payload.let(PayloadProperty.Companion::unwrap))
       }
 
       /**
@@ -2939,7 +2939,7 @@ public open class CfnDetectorModel(
        * `contentExpression` .
        */
       override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+        cdkBuilder.payload(payload.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2950,7 +2950,7 @@ public open class CfnDetectorModel(
        * `contentExpression` .
        */
       override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+        cdkBuilder.payload(payload.let(PayloadProperty.Companion::unwrap))
       }
 
       /**
@@ -3219,7 +3219,7 @@ public open class CfnDetectorModel(
        * @param actions The actions to be performed.
        */
       override fun actions(actions: IResolvable) {
-        cdkBuilder.actions(actions.let(IResolvable::unwrap))
+        cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3407,7 +3407,7 @@ public open class CfnDetectorModel(
        * Data Firehose delivery stream.
        */
       override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+        cdkBuilder.payload(payload.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3415,7 +3415,7 @@ public open class CfnDetectorModel(
        * Data Firehose delivery stream.
        */
       override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+        cdkBuilder.payload(payload.let(PayloadProperty.Companion::unwrap))
       }
 
       /**
@@ -3573,7 +3573,7 @@ public open class CfnDetectorModel(
        * Events input.
        */
       override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+        cdkBuilder.payload(payload.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3581,7 +3581,7 @@ public open class CfnDetectorModel(
        * Events input.
        */
       override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+        cdkBuilder.payload(payload.let(PayloadProperty.Companion::unwrap))
       }
 
       /**
@@ -3824,7 +3824,7 @@ public open class CfnDetectorModel(
        * This value contains timestamp, quality, and value (TQV) information.
        */
       override fun propertyValue(propertyValue: IResolvable) {
-        cdkBuilder.propertyValue(propertyValue.let(IResolvable::unwrap))
+        cdkBuilder.propertyValue(propertyValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3832,7 +3832,7 @@ public open class CfnDetectorModel(
        * This value contains timestamp, quality, and value (TQV) information.
        */
       override fun propertyValue(propertyValue: AssetPropertyValueProperty) {
-        cdkBuilder.propertyValue(propertyValue.let(AssetPropertyValueProperty::unwrap))
+        cdkBuilder.propertyValue(propertyValue.let(AssetPropertyValueProperty.Companion::unwrap))
       }
 
       /**
@@ -4003,7 +4003,7 @@ public open class CfnDetectorModel(
        * IoT Core topic.
        */
       override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+        cdkBuilder.payload(payload.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4011,7 +4011,7 @@ public open class CfnDetectorModel(
        * IoT Core topic.
        */
       override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+        cdkBuilder.payload(payload.let(PayloadProperty.Companion::unwrap))
       }
 
       /**
@@ -4152,7 +4152,7 @@ public open class CfnDetectorModel(
        * function.
        */
       override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+        cdkBuilder.payload(payload.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4160,7 +4160,7 @@ public open class CfnDetectorModel(
        * function.
        */
       override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+        cdkBuilder.payload(payload.let(PayloadProperty.Companion::unwrap))
       }
 
       /**
@@ -4389,7 +4389,7 @@ public open class CfnDetectorModel(
        * `condition` is `TRUE` .
        */
       override fun events(events: IResolvable) {
-        cdkBuilder.events(events.let(IResolvable::unwrap))
+        cdkBuilder.events(events.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4617,7 +4617,7 @@ public open class CfnDetectorModel(
        * `condition` is `TRUE` .
        */
       override fun events(events: IResolvable) {
-        cdkBuilder.events(events.let(IResolvable::unwrap))
+        cdkBuilder.events(events.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4986,7 +4986,7 @@ public open class CfnDetectorModel(
        * @param events Specifies the actions performed when the `condition` evaluates to TRUE.
        */
       override fun events(events: IResolvable) {
-        cdkBuilder.events(events.let(IResolvable::unwrap))
+        cdkBuilder.events(events.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5006,7 +5006,7 @@ public open class CfnDetectorModel(
        * `condition` evaluates to TRUE.
        */
       override fun transitionEvents(transitionEvents: IResolvable) {
-        cdkBuilder.transitionEvents(transitionEvents.let(IResolvable::unwrap))
+        cdkBuilder.transitionEvents(transitionEvents.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5632,7 +5632,7 @@ public open class CfnDetectorModel(
        * SNS push notification.
        */
       override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+        cdkBuilder.payload(payload.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5640,7 +5640,7 @@ public open class CfnDetectorModel(
        * SNS push notification.
        */
       override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+        cdkBuilder.payload(payload.let(PayloadProperty.Companion::unwrap))
       }
 
       /**
@@ -5802,7 +5802,7 @@ public open class CfnDetectorModel(
        * SQS queue.
        */
       override fun payload(payload: IResolvable) {
-        cdkBuilder.payload(payload.let(IResolvable::unwrap))
+        cdkBuilder.payload(payload.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5810,7 +5810,7 @@ public open class CfnDetectorModel(
        * SQS queue.
        */
       override fun payload(payload: PayloadProperty) {
-        cdkBuilder.payload(payload.let(PayloadProperty::unwrap))
+        cdkBuilder.payload(payload.let(PayloadProperty.Companion::unwrap))
       }
 
       /**
@@ -5844,7 +5844,7 @@ public open class CfnDetectorModel(
        * Otherwise, set this to FALSE.
        */
       override fun useBase64(useBase64: IResolvable) {
-        cdkBuilder.useBase64(useBase64.let(IResolvable::unwrap))
+        cdkBuilder.useBase64(useBase64.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.iotevents.CfnDetectorModel.SqsProperty =
@@ -6016,7 +6016,7 @@ public open class CfnDetectorModel(
        * TRUE.
        */
       override fun onEnter(onEnter: IResolvable) {
-        cdkBuilder.onEnter(onEnter.let(IResolvable::unwrap))
+        cdkBuilder.onEnter(onEnter.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6024,7 +6024,7 @@ public open class CfnDetectorModel(
        * TRUE.
        */
       override fun onEnter(onEnter: OnEnterProperty) {
-        cdkBuilder.onEnter(onEnter.let(OnEnterProperty::unwrap))
+        cdkBuilder.onEnter(onEnter.let(OnEnterProperty.Companion::unwrap))
       }
 
       /**
@@ -6041,7 +6041,7 @@ public open class CfnDetectorModel(
        * is `TRUE` .
        */
       override fun onExit(onExit: IResolvable) {
-        cdkBuilder.onExit(onExit.let(IResolvable::unwrap))
+        cdkBuilder.onExit(onExit.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6049,7 +6049,7 @@ public open class CfnDetectorModel(
        * is `TRUE` .
        */
       override fun onExit(onExit: OnExitProperty) {
-        cdkBuilder.onExit(onExit.let(OnExitProperty::unwrap))
+        cdkBuilder.onExit(onExit.let(OnExitProperty.Companion::unwrap))
       }
 
       /**
@@ -6066,7 +6066,7 @@ public open class CfnDetectorModel(
        * `actions` .
        */
       override fun onInput(onInput: IResolvable) {
-        cdkBuilder.onInput(onInput.let(IResolvable::unwrap))
+        cdkBuilder.onInput(onInput.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6074,7 +6074,7 @@ public open class CfnDetectorModel(
        * `actions` .
        */
       override fun onInput(onInput: OnInputProperty) {
-        cdkBuilder.onInput(onInput.let(OnInputProperty::unwrap))
+        cdkBuilder.onInput(onInput.let(OnInputProperty.Companion::unwrap))
       }
 
       /**
@@ -6360,7 +6360,7 @@ public open class CfnDetectorModel(
        * @param actions The actions to be performed.
        */
       override fun actions(actions: IResolvable) {
-        cdkBuilder.actions(actions.let(IResolvable::unwrap))
+        cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
       }
 
       /**

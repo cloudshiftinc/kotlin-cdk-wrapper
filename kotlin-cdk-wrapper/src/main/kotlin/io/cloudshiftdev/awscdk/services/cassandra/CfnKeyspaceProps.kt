@@ -181,7 +181,7 @@ public interface CfnKeyspaceProps {
      * replicated in.
      */
     override fun replicationSpecification(replicationSpecification: IResolvable) {
-      cdkBuilder.replicationSpecification(replicationSpecification.let(IResolvable::unwrap))
+      cdkBuilder.replicationSpecification(replicationSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -196,7 +196,7 @@ public interface CfnKeyspaceProps {
      */
     override
         fun replicationSpecification(replicationSpecification: CfnKeyspace.ReplicationSpecificationProperty) {
-      cdkBuilder.replicationSpecification(replicationSpecification.let(CfnKeyspace.ReplicationSpecificationProperty::unwrap))
+      cdkBuilder.replicationSpecification(replicationSpecification.let(CfnKeyspace.ReplicationSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -223,7 +223,7 @@ public interface CfnKeyspaceProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -45,13 +45,13 @@ public open class LambdaFunction(
   cdkObject: software.amazon.awscdk.services.events.targets.LambdaFunction,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(handler: CloudshiftdevAwscdkServicesLambdaIFunction) :
-      this(software.amazon.awscdk.services.events.targets.LambdaFunction(handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap))
+      this(software.amazon.awscdk.services.events.targets.LambdaFunction(handler.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap))
   )
 
   public constructor(handler: CloudshiftdevAwscdkServicesLambdaIFunction,
       props: LambdaFunctionProps) :
-      this(software.amazon.awscdk.services.events.targets.LambdaFunction(handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap),
-      props.let(LambdaFunctionProps::unwrap))
+      this(software.amazon.awscdk.services.events.targets.LambdaFunction(handler.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap),
+      props.let(LambdaFunctionProps.Companion::unwrap))
   )
 
   public constructor(handler: CloudshiftdevAwscdkServicesLambdaIFunction,
@@ -66,7 +66,7 @@ public open class LambdaFunction(
    * @param _id
    */
   public override fun bind(rule: IRule): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap)).let(RuleTargetConfig::wrap)
 
   /**
    * Returns a RuleTarget that can be used to trigger this Lambda as a result from an EventBridge
@@ -76,7 +76,7 @@ public open class LambdaFunction(
    * @param _id
    */
   public override fun bind(rule: IRule, id: String): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap), id).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap), id).let(RuleTargetConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.events.targets.LambdaFunction].
@@ -166,7 +166,7 @@ public open class LambdaFunction(
      * 
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -179,7 +179,7 @@ public open class LambdaFunction(
      * @param event The event to send to the Lambda. 
      */
     override fun event(event: RuleTargetInput) {
-      cdkBuilder.event(event.let(RuleTargetInput::unwrap))
+      cdkBuilder.event(event.let(RuleTargetInput.Companion::unwrap))
     }
 
     /**
@@ -194,7 +194,7 @@ public open class LambdaFunction(
      * processing. 
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**

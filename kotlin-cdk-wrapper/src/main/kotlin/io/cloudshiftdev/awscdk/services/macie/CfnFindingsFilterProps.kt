@@ -209,14 +209,14 @@ public interface CfnFindingsFilterProps {
      * @param findingCriteria The criteria to use to filter findings. 
      */
     override fun findingCriteria(findingCriteria: IResolvable) {
-      cdkBuilder.findingCriteria(findingCriteria.let(IResolvable::unwrap))
+      cdkBuilder.findingCriteria(findingCriteria.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param findingCriteria The criteria to use to filter findings. 
      */
     override fun findingCriteria(findingCriteria: CfnFindingsFilter.FindingCriteriaProperty) {
-      cdkBuilder.findingCriteria(findingCriteria.let(CfnFindingsFilter.FindingCriteriaProperty::unwrap))
+      cdkBuilder.findingCriteria(findingCriteria.let(CfnFindingsFilter.FindingCriteriaProperty.Companion::unwrap))
     }
 
     /**
@@ -254,7 +254,7 @@ public interface CfnFindingsFilterProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

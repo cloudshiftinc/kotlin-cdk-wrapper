@@ -38,8 +38,8 @@ public open class PrivateSubnet(
     id: String,
     props: PrivateSubnetProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.PrivateSubnet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(PrivateSubnetProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.PrivateSubnet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(PrivateSubnetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -189,8 +189,8 @@ public open class PrivateSubnet(
       id: String,
       attrs: PrivateSubnetAttributes,
     ): IPrivateSubnet =
-        software.amazon.awscdk.services.ec2.PrivateSubnet.fromPrivateSubnetAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(PrivateSubnetAttributes::unwrap)).let(IPrivateSubnet::wrap)
+        software.amazon.awscdk.services.ec2.PrivateSubnet.fromPrivateSubnetAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(PrivateSubnetAttributes.Companion::unwrap)).let(IPrivateSubnet::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("24d7ca2097dfebaf7ccfe38c8086fab72cd4d0c9e67486c526078a5dfdb71435")

@@ -67,7 +67,7 @@ public open class CfnRepository(
   cdkObject: software.amazon.awscdk.services.ecr.CfnRepository,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ecr.CfnRepository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ecr.CfnRepository(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -76,8 +76,8 @@ public open class CfnRepository(
     id: String,
     props: CfnRepositoryProps,
   ) :
-      this(software.amazon.awscdk.services.ecr.CfnRepository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRepositoryProps::unwrap))
+      this(software.amazon.awscdk.services.ecr.CfnRepository(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRepositoryProps.Companion::unwrap))
   )
 
   public constructor(
@@ -117,7 +117,7 @@ public open class CfnRepository(
    * If true, deleting the repository force deletes the contents of the repository.
    */
   public open fun emptyOnDelete(`value`: IResolvable) {
-    unwrap(this).setEmptyOnDelete(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEmptyOnDelete(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -129,14 +129,14 @@ public open class CfnRepository(
    * The encryption configuration for the repository.
    */
   public open fun encryptionConfiguration(`value`: IResolvable) {
-    unwrap(this).setEncryptionConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEncryptionConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The encryption configuration for the repository.
    */
   public open fun encryptionConfiguration(`value`: EncryptionConfigurationProperty) {
-    unwrap(this).setEncryptionConfiguration(`value`.let(EncryptionConfigurationProperty::unwrap))
+    unwrap(this).setEncryptionConfiguration(`value`.let(EncryptionConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -157,14 +157,14 @@ public open class CfnRepository(
    * The image scanning configuration for the repository.
    */
   public open fun imageScanningConfiguration(`value`: IResolvable) {
-    unwrap(this).setImageScanningConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setImageScanningConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The image scanning configuration for the repository.
    */
   public open fun imageScanningConfiguration(`value`: ImageScanningConfigurationProperty) {
-    unwrap(this).setImageScanningConfiguration(`value`.let(ImageScanningConfigurationProperty::unwrap))
+    unwrap(this).setImageScanningConfiguration(`value`.let(ImageScanningConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -194,7 +194,7 @@ public open class CfnRepository(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -206,14 +206,14 @@ public open class CfnRepository(
    * Creates or updates a lifecycle policy.
    */
   public open fun lifecyclePolicy(`value`: IResolvable) {
-    unwrap(this).setLifecyclePolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLifecyclePolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Creates or updates a lifecycle policy.
    */
   public open fun lifecyclePolicy(`value`: LifecyclePolicyProperty) {
-    unwrap(this).setLifecyclePolicy(`value`.let(LifecyclePolicyProperty::unwrap))
+    unwrap(this).setLifecyclePolicy(`value`.let(LifecyclePolicyProperty.Companion::unwrap))
   }
 
   /**
@@ -263,7 +263,7 @@ public open class CfnRepository(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -497,7 +497,7 @@ public open class CfnRepository(
      * repository. 
      */
     override fun emptyOnDelete(emptyOnDelete: IResolvable) {
-      cdkBuilder.emptyOnDelete(emptyOnDelete.let(IResolvable::unwrap))
+      cdkBuilder.emptyOnDelete(emptyOnDelete.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -509,7 +509,7 @@ public open class CfnRepository(
      * @param encryptionConfiguration The encryption configuration for the repository. 
      */
     override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -521,7 +521,7 @@ public open class CfnRepository(
      * @param encryptionConfiguration The encryption configuration for the repository. 
      */
     override fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
-      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty::unwrap))
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -548,7 +548,7 @@ public open class CfnRepository(
      * @param imageScanningConfiguration The image scanning configuration for the repository. 
      */
     override fun imageScanningConfiguration(imageScanningConfiguration: IResolvable) {
-      cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -562,7 +562,7 @@ public open class CfnRepository(
      */
     override
         fun imageScanningConfiguration(imageScanningConfiguration: ImageScanningConfigurationProperty) {
-      cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(ImageScanningConfigurationProperty::unwrap))
+      cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(ImageScanningConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -605,7 +605,7 @@ public open class CfnRepository(
      * @param lifecyclePolicy Creates or updates a lifecycle policy. 
      */
     override fun lifecyclePolicy(lifecyclePolicy: IResolvable) {
-      cdkBuilder.lifecyclePolicy(lifecyclePolicy.let(IResolvable::unwrap))
+      cdkBuilder.lifecyclePolicy(lifecyclePolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -618,7 +618,7 @@ public open class CfnRepository(
      * @param lifecyclePolicy Creates or updates a lifecycle policy. 
      */
     override fun lifecyclePolicy(lifecyclePolicy: LifecyclePolicyProperty) {
-      cdkBuilder.lifecyclePolicy(lifecyclePolicy.let(LifecyclePolicyProperty::unwrap))
+      cdkBuilder.lifecyclePolicy(lifecyclePolicy.let(LifecyclePolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -681,7 +681,7 @@ public open class CfnRepository(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -992,7 +992,7 @@ public open class CfnRepository(
        * started.
        */
       override fun scanOnPush(scanOnPush: IResolvable) {
-        cdkBuilder.scanOnPush(scanOnPush.let(IResolvable::unwrap))
+        cdkBuilder.scanOnPush(scanOnPush.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

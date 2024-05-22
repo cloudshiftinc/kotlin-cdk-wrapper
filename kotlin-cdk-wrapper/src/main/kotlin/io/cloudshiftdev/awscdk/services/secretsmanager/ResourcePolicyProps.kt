@@ -48,7 +48,7 @@ public interface ResourcePolicyProps {
      * @param secret The secret to attach a resource-based permissions policy. 
      */
     override fun secret(secret: ISecret) {
-      cdkBuilder.secret(secret.let(ISecret::unwrap))
+      cdkBuilder.secret(secret.let(ISecret.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.secretsmanager.ResourcePolicyProps =

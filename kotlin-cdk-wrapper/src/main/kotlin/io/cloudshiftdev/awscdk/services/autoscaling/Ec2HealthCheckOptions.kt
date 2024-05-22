@@ -54,7 +54,7 @@ public interface Ec2HealthCheckOptions {
      * EC2 instance that has come into service.
      */
     override fun grace(grace: Duration) {
-      cdkBuilder.grace(grace.let(Duration::unwrap))
+      cdkBuilder.grace(grace.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.autoscaling.Ec2HealthCheckOptions =

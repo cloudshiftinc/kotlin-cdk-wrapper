@@ -50,8 +50,8 @@ public open class Wait(
     id: String,
     props: WaitProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.Wait(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(WaitProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.Wait(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(WaitProps.Companion::unwrap))
   )
 
   public constructor(
@@ -73,7 +73,7 @@ public open class Wait(
    * @param next 
    */
   public override fun next(next: IChainable): Chain =
-      unwrap(this).next(next.let(IChainable::unwrap)).let(Chain::wrap)
+      unwrap(this).next(next.let(IChainable.Companion::unwrap)).let(Chain::wrap)
 
   /**
    * Return the Amazon States Language object for this state.
@@ -146,7 +146,7 @@ public open class Wait(
      * @param time Wait duration. 
      */
     override fun time(time: WaitTime) {
-      cdkBuilder.time(time.let(WaitTime::unwrap))
+      cdkBuilder.time(time.let(WaitTime.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.Wait = cdkBuilder.build()

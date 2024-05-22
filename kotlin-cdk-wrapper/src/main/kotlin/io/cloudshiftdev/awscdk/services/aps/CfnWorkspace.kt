@@ -50,7 +50,7 @@ public open class CfnWorkspace(
   cdkObject: software.amazon.awscdk.services.aps.CfnWorkspace,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.aps.CfnWorkspace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.aps.CfnWorkspace(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -59,8 +59,8 @@ public open class CfnWorkspace(
     id: String,
     props: CfnWorkspaceProps,
   ) :
-      this(software.amazon.awscdk.services.aps.CfnWorkspace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnWorkspaceProps::unwrap))
+      this(software.amazon.awscdk.services.aps.CfnWorkspace(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnWorkspaceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -126,7 +126,7 @@ public open class CfnWorkspace(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -152,14 +152,14 @@ public open class CfnWorkspace(
    * Contains information about the logging configuration for the workspace.
    */
   public open fun loggingConfiguration(`value`: IResolvable) {
-    unwrap(this).setLoggingConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoggingConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Contains information about the logging configuration for the workspace.
    */
   public open fun loggingConfiguration(`value`: LoggingConfigurationProperty) {
-    unwrap(this).setLoggingConfiguration(`value`.let(LoggingConfigurationProperty::unwrap))
+    unwrap(this).setLoggingConfiguration(`value`.let(LoggingConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -185,7 +185,7 @@ public open class CfnWorkspace(
    * The list of tag keys and values that are associated with the workspace.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -358,7 +358,7 @@ public open class CfnWorkspace(
      * workspace. 
      */
     override fun loggingConfiguration(loggingConfiguration: IResolvable) {
-      cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -369,7 +369,7 @@ public open class CfnWorkspace(
      * workspace. 
      */
     override fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty) {
-      cdkBuilder.loggingConfiguration(loggingConfiguration.let(LoggingConfigurationProperty::unwrap))
+      cdkBuilder.loggingConfiguration(loggingConfiguration.let(LoggingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -392,7 +392,7 @@ public open class CfnWorkspace(
      * @param tags The list of tag keys and values that are associated with the workspace. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -20,6 +20,7 @@ import kotlin.Unit
  * .engine(DatabaseInstanceEngine.sqlServerEe(SqlServerEeInstanceEngineProps.builder()
  * .version(SqlServerEngineVersion.VER_11)
  * .build()))
+ * .name("my-parameter-group")
  * .parameters(Map.of(
  * "locks", "100"))
  * .build();
@@ -56,7 +57,7 @@ public interface SqlServerEeInstanceEngineProps {
      * @param version The exact version of the engine to use. 
      */
     override fun version(version: SqlServerEngineVersion) {
-      cdkBuilder.version(version.let(SqlServerEngineVersion::unwrap))
+      cdkBuilder.version(version.let(SqlServerEngineVersion.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.SqlServerEeInstanceEngineProps =

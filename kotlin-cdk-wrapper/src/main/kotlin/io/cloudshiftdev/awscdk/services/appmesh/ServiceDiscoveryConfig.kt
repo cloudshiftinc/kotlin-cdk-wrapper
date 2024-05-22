@@ -93,7 +93,7 @@ public interface ServiceDiscoveryConfig {
      * @param cloudmap Cloud Map based Service Discovery.
      */
     override fun cloudmap(cloudmap: CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty) {
-      cdkBuilder.cloudmap(cloudmap.let(CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty::unwrap))
+      cdkBuilder.cloudmap(cloudmap.let(CfnVirtualNode.AwsCloudMapServiceDiscoveryProperty.Companion::unwrap))
     }
 
     /**
@@ -109,7 +109,7 @@ public interface ServiceDiscoveryConfig {
      * @param dns DNS based Service Discovery.
      */
     override fun dns(dns: CfnVirtualNode.DnsServiceDiscoveryProperty) {
-      cdkBuilder.dns(dns.let(CfnVirtualNode.DnsServiceDiscoveryProperty::unwrap))
+      cdkBuilder.dns(dns.let(CfnVirtualNode.DnsServiceDiscoveryProperty.Companion::unwrap))
     }
 
     /**

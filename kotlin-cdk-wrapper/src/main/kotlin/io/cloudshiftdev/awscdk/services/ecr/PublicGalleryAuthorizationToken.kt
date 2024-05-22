@@ -22,7 +22,7 @@ public open class PublicGalleryAuthorizationToken(
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun grantRead(grantee: IGrantable) {
-      software.amazon.awscdk.services.ecr.PublicGalleryAuthorizationToken.grantRead(grantee.let(IGrantable::unwrap))
+      software.amazon.awscdk.services.ecr.PublicGalleryAuthorizationToken.grantRead(grantee.let(IGrantable.Companion::unwrap))
     }
 
     internal

@@ -82,8 +82,8 @@ public open class CfnChannel(
     id: String,
     props: CfnChannelProps,
   ) :
-      this(software.amazon.awscdk.services.mediatailor.CfnChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnChannelProps::unwrap))
+      this(software.amazon.awscdk.services.mediatailor.CfnChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnChannelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -142,14 +142,14 @@ public open class CfnChannel(
    * The slate used to fill gaps between programs in the schedule.
    */
   public open fun fillerSlate(`value`: IResolvable) {
-    unwrap(this).setFillerSlate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFillerSlate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The slate used to fill gaps between programs in the schedule.
    */
   public open fun fillerSlate(`value`: SlateSourceProperty) {
-    unwrap(this).setFillerSlate(`value`.let(SlateSourceProperty::unwrap))
+    unwrap(this).setFillerSlate(`value`.let(SlateSourceProperty.Companion::unwrap))
   }
 
   /**
@@ -166,7 +166,7 @@ public open class CfnChannel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -178,14 +178,14 @@ public open class CfnChannel(
    * The log configuration.
    */
   public open fun logConfiguration(`value`: IResolvable) {
-    unwrap(this).setLogConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLogConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The log configuration.
    */
   public open fun logConfiguration(`value`: LogConfigurationForChannelProperty) {
-    unwrap(this).setLogConfiguration(`value`.let(LogConfigurationForChannelProperty::unwrap))
+    unwrap(this).setLogConfiguration(`value`.let(LogConfigurationForChannelProperty.Companion::unwrap))
   }
 
   /**
@@ -205,7 +205,7 @@ public open class CfnChannel(
    * The channel's output properties.
    */
   public open fun outputs(`value`: IResolvable) {
-    unwrap(this).setOutputs(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOutputs(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -241,7 +241,7 @@ public open class CfnChannel(
    * The tags to assign to the channel.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -270,14 +270,14 @@ public open class CfnChannel(
    * The configuration for time-shifted viewing.
    */
   public open fun timeShiftConfiguration(`value`: IResolvable) {
-    unwrap(this).setTimeShiftConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTimeShiftConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration for time-shifted viewing.
    */
   public open fun timeShiftConfiguration(`value`: TimeShiftConfigurationProperty) {
-    unwrap(this).setTimeShiftConfiguration(`value`.let(TimeShiftConfigurationProperty::unwrap))
+    unwrap(this).setTimeShiftConfiguration(`value`.let(TimeShiftConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -526,7 +526,7 @@ public open class CfnChannel(
      * @param fillerSlate The slate used to fill gaps between programs in the schedule. 
      */
     override fun fillerSlate(fillerSlate: IResolvable) {
-      cdkBuilder.fillerSlate(fillerSlate.let(IResolvable::unwrap))
+      cdkBuilder.fillerSlate(fillerSlate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -539,7 +539,7 @@ public open class CfnChannel(
      * @param fillerSlate The slate used to fill gaps between programs in the schedule. 
      */
     override fun fillerSlate(fillerSlate: SlateSourceProperty) {
-      cdkBuilder.fillerSlate(fillerSlate.let(SlateSourceProperty::unwrap))
+      cdkBuilder.fillerSlate(fillerSlate.let(SlateSourceProperty.Companion::unwrap))
     }
 
     /**
@@ -563,7 +563,7 @@ public open class CfnChannel(
      * @param logConfiguration The log configuration. 
      */
     override fun logConfiguration(logConfiguration: IResolvable) {
-      cdkBuilder.logConfiguration(logConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.logConfiguration(logConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -573,7 +573,7 @@ public open class CfnChannel(
      * @param logConfiguration The log configuration. 
      */
     override fun logConfiguration(logConfiguration: LogConfigurationForChannelProperty) {
-      cdkBuilder.logConfiguration(logConfiguration.let(LogConfigurationForChannelProperty::unwrap))
+      cdkBuilder.logConfiguration(logConfiguration.let(LogConfigurationForChannelProperty.Companion::unwrap))
     }
 
     /**
@@ -595,7 +595,7 @@ public open class CfnChannel(
      * @param outputs The channel's output properties. 
      */
     override fun outputs(outputs: IResolvable) {
-      cdkBuilder.outputs(outputs.let(IResolvable::unwrap))
+      cdkBuilder.outputs(outputs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -643,7 +643,7 @@ public open class CfnChannel(
      * @param tags The tags to assign to the channel. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -678,7 +678,7 @@ public open class CfnChannel(
      * @param timeShiftConfiguration The configuration for time-shifted viewing. 
      */
     override fun timeShiftConfiguration(timeShiftConfiguration: IResolvable) {
-      cdkBuilder.timeShiftConfiguration(timeShiftConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.timeShiftConfiguration(timeShiftConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -688,7 +688,7 @@ public open class CfnChannel(
      * @param timeShiftConfiguration The configuration for time-shifted viewing. 
      */
     override fun timeShiftConfiguration(timeShiftConfiguration: TimeShiftConfigurationProperty) {
-      cdkBuilder.timeShiftConfiguration(timeShiftConfiguration.let(TimeShiftConfigurationProperty::unwrap))
+      cdkBuilder.timeShiftConfiguration(timeShiftConfiguration.let(TimeShiftConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1284,14 +1284,14 @@ public open class CfnChannel(
        * @param dashPlaylistSettings DASH manifest configuration parameters.
        */
       override fun dashPlaylistSettings(dashPlaylistSettings: IResolvable) {
-        cdkBuilder.dashPlaylistSettings(dashPlaylistSettings.let(IResolvable::unwrap))
+        cdkBuilder.dashPlaylistSettings(dashPlaylistSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dashPlaylistSettings DASH manifest configuration parameters.
        */
       override fun dashPlaylistSettings(dashPlaylistSettings: DashPlaylistSettingsProperty) {
-        cdkBuilder.dashPlaylistSettings(dashPlaylistSettings.let(DashPlaylistSettingsProperty::unwrap))
+        cdkBuilder.dashPlaylistSettings(dashPlaylistSettings.let(DashPlaylistSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -1307,14 +1307,14 @@ public open class CfnChannel(
        * @param hlsPlaylistSettings HLS playlist configuration parameters.
        */
       override fun hlsPlaylistSettings(hlsPlaylistSettings: IResolvable) {
-        cdkBuilder.hlsPlaylistSettings(hlsPlaylistSettings.let(IResolvable::unwrap))
+        cdkBuilder.hlsPlaylistSettings(hlsPlaylistSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param hlsPlaylistSettings HLS playlist configuration parameters.
        */
       override fun hlsPlaylistSettings(hlsPlaylistSettings: HlsPlaylistSettingsProperty) {
-        cdkBuilder.hlsPlaylistSettings(hlsPlaylistSettings.let(HlsPlaylistSettingsProperty::unwrap))
+        cdkBuilder.hlsPlaylistSettings(hlsPlaylistSettings.let(HlsPlaylistSettingsProperty.Companion::unwrap))
       }
 
       /**

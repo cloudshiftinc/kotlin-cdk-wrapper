@@ -406,7 +406,7 @@ public interface CfnSubnetProps {
      * If you specify `AssignIpv6AddressOnCreation` , you must also specify an IPv6 CIDR block.
      */
     override fun assignIpv6AddressOnCreation(assignIpv6AddressOnCreation: IResolvable) {
-      cdkBuilder.assignIpv6AddressOnCreation(assignIpv6AddressOnCreation.let(IResolvable::unwrap))
+      cdkBuilder.assignIpv6AddressOnCreation(assignIpv6AddressOnCreation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -451,7 +451,7 @@ public interface CfnSubnetProps {
      * in the *Amazon Virtual Private Cloud User Guide* .
      */
     override fun enableDns64(enableDns64: IResolvable) {
-      cdkBuilder.enableDns64(enableDns64.let(IResolvable::unwrap))
+      cdkBuilder.enableDns64(enableDns64.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -523,7 +523,7 @@ public interface CfnSubnetProps {
      * *Amazon Virtual Private Cloud User Guide* .
      */
     override fun ipv6Native(ipv6Native: IResolvable) {
-      cdkBuilder.ipv6Native(ipv6Native.let(IResolvable::unwrap))
+      cdkBuilder.ipv6Native(ipv6Native.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -552,7 +552,7 @@ public interface CfnSubnetProps {
      * tab on the [VPC pricing page](https://docs.aws.amazon.com/vpc/pricing/) .
      */
     override fun mapPublicIpOnLaunch(mapPublicIpOnLaunch: IResolvable) {
-      cdkBuilder.mapPublicIpOnLaunch(mapPublicIpOnLaunch.let(IResolvable::unwrap))
+      cdkBuilder.mapPublicIpOnLaunch(mapPublicIpOnLaunch.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -583,7 +583,7 @@ public interface CfnSubnetProps {
      * @param tags Any tags assigned to the subnet.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

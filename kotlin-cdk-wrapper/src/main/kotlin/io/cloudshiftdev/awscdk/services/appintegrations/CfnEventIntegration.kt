@@ -59,8 +59,8 @@ public open class CfnEventIntegration(
     id: String,
     props: CfnEventIntegrationProps,
   ) :
-      this(software.amazon.awscdk.services.appintegrations.CfnEventIntegration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEventIntegrationProps::unwrap))
+      this(software.amazon.awscdk.services.appintegrations.CfnEventIntegration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEventIntegrationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -108,14 +108,14 @@ public open class CfnEventIntegration(
    * The event integration filter.
    */
   public open fun eventFilter(`value`: IResolvable) {
-    unwrap(this).setEventFilter(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEventFilter(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The event integration filter.
    */
   public open fun eventFilter(`value`: EventFilterProperty) {
-    unwrap(this).setEventFilter(`value`.let(EventFilterProperty::unwrap))
+    unwrap(this).setEventFilter(`value`.let(EventFilterProperty.Companion::unwrap))
   }
 
   /**
@@ -132,7 +132,7 @@ public open class CfnEventIntegration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -162,7 +162,7 @@ public open class CfnEventIntegration(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -286,7 +286,7 @@ public open class CfnEventIntegration(
      * @param eventFilter The event integration filter. 
      */
     override fun eventFilter(eventFilter: IResolvable) {
-      cdkBuilder.eventFilter(eventFilter.let(IResolvable::unwrap))
+      cdkBuilder.eventFilter(eventFilter.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -296,7 +296,7 @@ public open class CfnEventIntegration(
      * @param eventFilter The event integration filter. 
      */
     override fun eventFilter(eventFilter: EventFilterProperty) {
-      cdkBuilder.eventFilter(eventFilter.let(EventFilterProperty::unwrap))
+      cdkBuilder.eventFilter(eventFilter.let(EventFilterProperty.Companion::unwrap))
     }
 
     /**
@@ -331,7 +331,7 @@ public open class CfnEventIntegration(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

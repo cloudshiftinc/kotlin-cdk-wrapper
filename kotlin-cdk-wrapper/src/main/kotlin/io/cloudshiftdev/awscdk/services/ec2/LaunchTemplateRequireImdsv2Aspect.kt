@@ -34,7 +34,7 @@ public open class LaunchTemplateRequireImdsv2Aspect(
   )
 
   public constructor(props: LaunchTemplateRequireImdsv2AspectProps) :
-      this(software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2Aspect(props.let(LaunchTemplateRequireImdsv2AspectProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.LaunchTemplateRequireImdsv2Aspect(props.let(LaunchTemplateRequireImdsv2AspectProps.Companion::unwrap))
   )
 
   public constructor(props: LaunchTemplateRequireImdsv2AspectProps.Builder.() -> Unit) :
@@ -47,7 +47,7 @@ public open class LaunchTemplateRequireImdsv2Aspect(
    * @param node 
    */
   public override fun visit(node: IConstruct) {
-    unwrap(this).visit(node.let(IConstruct::unwrap))
+    unwrap(this).visit(node.let(IConstruct.Companion::unwrap))
   }
 
   /**

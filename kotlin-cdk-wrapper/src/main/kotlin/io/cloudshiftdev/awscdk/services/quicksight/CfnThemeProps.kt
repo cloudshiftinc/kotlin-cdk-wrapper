@@ -259,14 +259,14 @@ public interface CfnThemeProps {
      * @param configuration The theme configuration, which contains the theme display properties. 
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param configuration The theme configuration, which contains the theme display properties. 
      */
     override fun configuration(configuration: CfnTheme.ThemeConfigurationProperty) {
-      cdkBuilder.configuration(configuration.let(CfnTheme.ThemeConfigurationProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(CfnTheme.ThemeConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -289,7 +289,7 @@ public interface CfnThemeProps {
      * @param permissions A valid grouping of resource permissions to apply to the new theme.
      */
     override fun permissions(permissions: IResolvable) {
-      cdkBuilder.permissions(permissions.let(IResolvable::unwrap))
+      cdkBuilder.permissions(permissions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -309,7 +309,7 @@ public interface CfnThemeProps {
      * the resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

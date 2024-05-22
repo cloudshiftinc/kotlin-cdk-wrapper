@@ -211,7 +211,7 @@ public interface SpecRestApiProps : RestApiBaseProps {
      * @param apiDefinition An OpenAPI definition compatible with API Gateway. 
      */
     override fun apiDefinition(apiDefinition: ApiDefinition) {
-      cdkBuilder.apiDefinition(apiDefinition.let(ApiDefinition::unwrap))
+      cdkBuilder.apiDefinition(apiDefinition.let(ApiDefinition.Companion::unwrap))
     }
 
     /**
@@ -227,7 +227,7 @@ public interface SpecRestApiProps : RestApiBaseProps {
      * Requires `cloudWatchRole` to be enabled.
      */
     override fun cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy: RemovalPolicy) {
-      cdkBuilder.cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -259,7 +259,7 @@ public interface SpecRestApiProps : RestApiBaseProps {
      * this value cannot be set.
      */
     override fun deployOptions(deployOptions: StageOptions) {
-      cdkBuilder.deployOptions(deployOptions.let(StageOptions::unwrap))
+      cdkBuilder.deployOptions(deployOptions.let(StageOptions.Companion::unwrap))
     }
 
     /**
@@ -294,7 +294,7 @@ public interface SpecRestApiProps : RestApiBaseProps {
      * @param domainName Configure a custom domain name and map it to this API.
      */
     override fun domainName(domainName: DomainNameOptions) {
-      cdkBuilder.domainName(domainName.let(DomainNameOptions::unwrap))
+      cdkBuilder.domainName(domainName.let(DomainNameOptions.Companion::unwrap))
     }
 
     /**
@@ -318,7 +318,7 @@ public interface SpecRestApiProps : RestApiBaseProps {
      * an API.
      */
     override fun endpointTypes(endpointTypes: List<EndpointType>) {
-      cdkBuilder.endpointTypes(endpointTypes.map(EndpointType::unwrap))
+      cdkBuilder.endpointTypes(endpointTypes.map(EndpointType.Companion::unwrap))
     }
 
     /**
@@ -347,7 +347,7 @@ public interface SpecRestApiProps : RestApiBaseProps {
      * payload size.
      */
     override fun minCompressionSize(minCompressionSize: Size) {
-      cdkBuilder.minCompressionSize(minCompressionSize.let(Size::unwrap))
+      cdkBuilder.minCompressionSize(minCompressionSize.let(Size.Companion::unwrap))
     }
 
     /**
@@ -361,7 +361,7 @@ public interface SpecRestApiProps : RestApiBaseProps {
      * @param policy A policy document that contains the permissions for this RestApi.
      */
     override fun policy(policy: PolicyDocument) {
-      cdkBuilder.policy(policy.let(PolicyDocument::unwrap))
+      cdkBuilder.policy(policy.let(PolicyDocument.Companion::unwrap))
     }
 
     /**

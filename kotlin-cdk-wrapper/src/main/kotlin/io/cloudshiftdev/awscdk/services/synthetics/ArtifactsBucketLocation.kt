@@ -71,7 +71,7 @@ public interface ArtifactsBucketLocation {
      * @param bucket The s3 location that stores the data of each run. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**

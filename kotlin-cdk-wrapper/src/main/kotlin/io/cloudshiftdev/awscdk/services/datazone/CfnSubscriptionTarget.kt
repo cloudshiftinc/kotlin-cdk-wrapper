@@ -60,8 +60,8 @@ public open class CfnSubscriptionTarget(
     id: String,
     props: CfnSubscriptionTargetProps,
   ) :
-      this(software.amazon.awscdk.services.datazone.CfnSubscriptionTarget(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSubscriptionTargetProps::unwrap))
+      this(software.amazon.awscdk.services.datazone.CfnSubscriptionTarget(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSubscriptionTargetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -177,7 +177,7 @@ public open class CfnSubscriptionTarget(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -225,7 +225,7 @@ public open class CfnSubscriptionTarget(
    * The configuration of the subscription target.
    */
   public open fun subscriptionTargetConfig(`value`: IResolvable) {
-    unwrap(this).setSubscriptionTargetConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSubscriptionTargetConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -471,7 +471,7 @@ public open class CfnSubscriptionTarget(
      * @param subscriptionTargetConfig The configuration of the subscription target. 
      */
     override fun subscriptionTargetConfig(subscriptionTargetConfig: IResolvable) {
-      cdkBuilder.subscriptionTargetConfig(subscriptionTargetConfig.let(IResolvable::unwrap))
+      cdkBuilder.subscriptionTargetConfig(subscriptionTargetConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**

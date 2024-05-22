@@ -56,7 +56,7 @@ public interface ElbHealthCheckOptions {
      * This option is required for ELB health checks.
      */
     override fun grace(grace: Duration) {
-      cdkBuilder.grace(grace.let(Duration::unwrap))
+      cdkBuilder.grace(grace.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.autoscaling.ElbHealthCheckOptions =

@@ -62,8 +62,8 @@ public open class CfnNotificationRule(
     id: String,
     props: CfnNotificationRuleProps,
   ) :
-      this(software.amazon.awscdk.services.codestarnotifications.CfnNotificationRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnNotificationRuleProps::unwrap))
+      this(software.amazon.awscdk.services.codestarnotifications.CfnNotificationRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnNotificationRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -137,7 +137,7 @@ public open class CfnNotificationRule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -216,7 +216,7 @@ public open class CfnNotificationRule(
    * associate with the notification rule.
    */
   public open fun targets(`value`: IResolvable) {
-    unwrap(this).setTargets(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTargets(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -523,7 +523,7 @@ public open class CfnNotificationRule(
      * clients to associate with the notification rule. 
      */
     override fun targets(targets: IResolvable) {
-      cdkBuilder.targets(targets.let(IResolvable::unwrap))
+      cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
     }
 
     /**

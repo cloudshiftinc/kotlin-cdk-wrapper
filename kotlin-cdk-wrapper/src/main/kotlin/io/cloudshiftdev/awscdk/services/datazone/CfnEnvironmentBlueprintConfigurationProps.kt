@@ -191,7 +191,7 @@ public interface CfnEnvironmentBlueprintConfigurationProps {
      * @param regionalParameters The regional parameters of the environment blueprint.
      */
     override fun regionalParameters(regionalParameters: IResolvable) {
-      cdkBuilder.regionalParameters(regionalParameters.let(IResolvable::unwrap))
+      cdkBuilder.regionalParameters(regionalParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**

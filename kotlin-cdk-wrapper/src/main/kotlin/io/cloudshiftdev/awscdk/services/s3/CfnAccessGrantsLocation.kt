@@ -60,7 +60,7 @@ public open class CfnAccessGrantsLocation(
   cdkObject: software.amazon.awscdk.services.s3.CfnAccessGrantsLocation,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.s3.CfnAccessGrantsLocation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.s3.CfnAccessGrantsLocation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -69,8 +69,8 @@ public open class CfnAccessGrantsLocation(
     id: String,
     props: CfnAccessGrantsLocationProps,
   ) :
-      this(software.amazon.awscdk.services.s3.CfnAccessGrantsLocation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAccessGrantsLocationProps::unwrap))
+      this(software.amazon.awscdk.services.s3.CfnAccessGrantsLocation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAccessGrantsLocationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -120,7 +120,7 @@ public open class CfnAccessGrantsLocation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -144,7 +144,7 @@ public open class CfnAccessGrantsLocation(
    * The AWS resource tags that you are adding to the S3 Access Grants location.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -251,7 +251,7 @@ public open class CfnAccessGrantsLocation(
      * @param tags The AWS resource tags that you are adding to the S3 Access Grants location. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

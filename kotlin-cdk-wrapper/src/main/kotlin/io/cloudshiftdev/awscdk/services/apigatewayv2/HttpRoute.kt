@@ -44,8 +44,8 @@ public open class HttpRoute(
     id: String,
     props: HttpRouteProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.HttpRoute(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(HttpRouteProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.HttpRoute(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(HttpRouteProps.Companion::unwrap))
   )
 
   public constructor(
@@ -65,7 +65,7 @@ public open class HttpRoute(
    * @param options
    */
   public override fun grantInvoke(grantee: IGrantable): Grant =
-      unwrap(this).grantInvoke(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantInvoke(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant access to invoke the route.
@@ -77,8 +77,8 @@ public open class HttpRoute(
    * @param options
    */
   public override fun grantInvoke(grantee: IGrantable, options: GrantInvokeOptions): Grant =
-      unwrap(this).grantInvoke(grantee.let(IGrantable::unwrap),
-      options.let(GrantInvokeOptions::unwrap)).let(Grant::wrap)
+      unwrap(this).grantInvoke(grantee.let(IGrantable.Companion::unwrap),
+      options.let(GrantInvokeOptions.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant access to invoke the route.
@@ -215,7 +215,7 @@ public open class HttpRoute(
      * @param authorizer Authorizer for a WebSocket API or an HTTP API. 
      */
     override fun authorizer(authorizer: IHttpRouteAuthorizer) {
-      cdkBuilder.authorizer(authorizer.let(IHttpRouteAuthorizer::unwrap))
+      cdkBuilder.authorizer(authorizer.let(IHttpRouteAuthorizer.Companion::unwrap))
     }
 
     /**
@@ -224,7 +224,7 @@ public open class HttpRoute(
      * @param httpApi the API the route is associated with. 
      */
     override fun httpApi(httpApi: IHttpApi) {
-      cdkBuilder.httpApi(httpApi.let(IHttpApi::unwrap))
+      cdkBuilder.httpApi(httpApi.let(IHttpApi.Companion::unwrap))
     }
 
     /**
@@ -233,7 +233,7 @@ public open class HttpRoute(
      * @param integration The integration to be configured on this route. 
      */
     override fun integration(integration: HttpRouteIntegration) {
-      cdkBuilder.integration(integration.let(HttpRouteIntegration::unwrap))
+      cdkBuilder.integration(integration.let(HttpRouteIntegration.Companion::unwrap))
     }
 
     /**
@@ -244,7 +244,7 @@ public open class HttpRoute(
      * @param routeKey The key to this route. 
      */
     override fun routeKey(routeKey: HttpRouteKey) {
-      cdkBuilder.routeKey(routeKey.let(HttpRouteKey::unwrap))
+      cdkBuilder.routeKey(routeKey.let(HttpRouteKey.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.HttpRoute = cdkBuilder.build()

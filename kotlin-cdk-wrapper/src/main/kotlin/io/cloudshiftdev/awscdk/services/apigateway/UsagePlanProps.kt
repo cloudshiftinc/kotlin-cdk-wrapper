@@ -126,7 +126,7 @@ public interface UsagePlanProps {
      * @param apiStages API Stages to be associated with the usage plan.
      */
     override fun apiStages(apiStages: List<UsagePlanPerApiStage>) {
-      cdkBuilder.apiStages(apiStages.map(UsagePlanPerApiStage::unwrap))
+      cdkBuilder.apiStages(apiStages.map(UsagePlanPerApiStage.Companion::unwrap))
     }
 
     /**
@@ -153,7 +153,7 @@ public interface UsagePlanProps {
      * @param quota Number of requests clients can make in a given time period.
      */
     override fun quota(quota: QuotaSettings) {
-      cdkBuilder.quota(quota.let(QuotaSettings::unwrap))
+      cdkBuilder.quota(quota.let(QuotaSettings.Companion::unwrap))
     }
 
     /**
@@ -167,7 +167,7 @@ public interface UsagePlanProps {
      * @param throttle Overall throttle settings for the API.
      */
     override fun throttle(throttle: ThrottleSettings) {
-      cdkBuilder.throttle(throttle.let(ThrottleSettings::unwrap))
+      cdkBuilder.throttle(throttle.let(ThrottleSettings.Companion::unwrap))
     }
 
     /**

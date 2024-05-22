@@ -153,14 +153,14 @@ public interface CfnVariantStoreProps {
      * @param reference The genome reference for the store's variants. 
      */
     override fun reference(reference: IResolvable) {
-      cdkBuilder.reference(reference.let(IResolvable::unwrap))
+      cdkBuilder.reference(reference.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param reference The genome reference for the store's variants. 
      */
     override fun reference(reference: CfnVariantStore.ReferenceItemProperty) {
-      cdkBuilder.reference(reference.let(CfnVariantStore.ReferenceItemProperty::unwrap))
+      cdkBuilder.reference(reference.let(CfnVariantStore.ReferenceItemProperty.Companion::unwrap))
     }
 
     /**
@@ -175,14 +175,14 @@ public interface CfnVariantStoreProps {
      * @param sseConfig Server-side encryption (SSE) settings for the store.
      */
     override fun sseConfig(sseConfig: IResolvable) {
-      cdkBuilder.sseConfig(sseConfig.let(IResolvable::unwrap))
+      cdkBuilder.sseConfig(sseConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param sseConfig Server-side encryption (SSE) settings for the store.
      */
     override fun sseConfig(sseConfig: CfnVariantStore.SseConfigProperty) {
-      cdkBuilder.sseConfig(sseConfig.let(CfnVariantStore.SseConfigProperty::unwrap))
+      cdkBuilder.sseConfig(sseConfig.let(CfnVariantStore.SseConfigProperty.Companion::unwrap))
     }
 
     /**

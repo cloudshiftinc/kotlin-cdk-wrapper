@@ -212,7 +212,7 @@ public interface CfnInstanceProfileProps {
      * The default value is `false` for private devices.
      */
     override fun packageCleanup(packageCleanup: IResolvable) {
-      cdkBuilder.packageCleanup(packageCleanup.let(IResolvable::unwrap))
+      cdkBuilder.packageCleanup(packageCleanup.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -228,7 +228,7 @@ public interface CfnInstanceProfileProps {
      * The default value is `true` .
      */
     override fun rebootAfterUse(rebootAfterUse: IResolvable) {
-      cdkBuilder.rebootAfterUse(rebootAfterUse.let(IResolvable::unwrap))
+      cdkBuilder.rebootAfterUse(rebootAfterUse.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -238,7 +238,7 @@ public interface CfnInstanceProfileProps {
      * in the *guide* .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

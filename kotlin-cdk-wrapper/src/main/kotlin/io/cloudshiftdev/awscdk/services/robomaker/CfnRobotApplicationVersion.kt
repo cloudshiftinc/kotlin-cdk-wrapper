@@ -38,8 +38,8 @@ public open class CfnRobotApplicationVersion(
     id: String,
     props: CfnRobotApplicationVersionProps,
   ) :
-      this(software.amazon.awscdk.services.robomaker.CfnRobotApplicationVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRobotApplicationVersionProps::unwrap))
+      this(software.amazon.awscdk.services.robomaker.CfnRobotApplicationVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRobotApplicationVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -89,7 +89,7 @@ public open class CfnRobotApplicationVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

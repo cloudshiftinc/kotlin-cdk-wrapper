@@ -46,8 +46,8 @@ public open class CfnRoutingControl(
     id: String,
     props: CfnRoutingControlProps,
   ) :
-      this(software.amazon.awscdk.services.route53recoverycontrol.CfnRoutingControl(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRoutingControlProps::unwrap))
+      this(software.amazon.awscdk.services.route53recoverycontrol.CfnRoutingControl(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRoutingControlProps.Companion::unwrap))
   )
 
   public constructor(
@@ -99,7 +99,7 @@ public open class CfnRoutingControl(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

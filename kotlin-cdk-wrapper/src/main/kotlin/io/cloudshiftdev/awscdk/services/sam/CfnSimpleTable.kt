@@ -56,7 +56,7 @@ public open class CfnSimpleTable(
   cdkObject: software.amazon.awscdk.services.sam.CfnSimpleTable,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.sam.CfnSimpleTable(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.sam.CfnSimpleTable(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -65,8 +65,8 @@ public open class CfnSimpleTable(
     id: String,
     props: CfnSimpleTableProps,
   ) :
-      this(software.amazon.awscdk.services.sam.CfnSimpleTable(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSimpleTableProps::unwrap))
+      this(software.amazon.awscdk.services.sam.CfnSimpleTable(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSimpleTableProps.Companion::unwrap))
   )
 
   public constructor(
@@ -82,7 +82,7 @@ public open class CfnSimpleTable(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -94,14 +94,14 @@ public open class CfnSimpleTable(
    *
    */
   public open fun primaryKey(`value`: IResolvable) {
-    unwrap(this).setPrimaryKey(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPrimaryKey(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun primaryKey(`value`: PrimaryKeyProperty) {
-    unwrap(this).setPrimaryKey(`value`.let(PrimaryKeyProperty::unwrap))
+    unwrap(this).setPrimaryKey(`value`.let(PrimaryKeyProperty.Companion::unwrap))
   }
 
   /**
@@ -121,14 +121,14 @@ public open class CfnSimpleTable(
    *
    */
   public open fun provisionedThroughput(`value`: IResolvable) {
-    unwrap(this).setProvisionedThroughput(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProvisionedThroughput(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun provisionedThroughput(`value`: ProvisionedThroughputProperty) {
-    unwrap(this).setProvisionedThroughput(`value`.let(ProvisionedThroughputProperty::unwrap))
+    unwrap(this).setProvisionedThroughput(`value`.let(ProvisionedThroughputProperty.Companion::unwrap))
   }
 
   /**
@@ -148,14 +148,14 @@ public open class CfnSimpleTable(
    *
    */
   public open fun sseSpecification(`value`: IResolvable) {
-    unwrap(this).setSseSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSseSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    *
    */
   public open fun sseSpecification(`value`: SSESpecificationProperty) {
-    unwrap(this).setSseSpecification(`value`.let(SSESpecificationProperty::unwrap))
+    unwrap(this).setSseSpecification(`value`.let(SSESpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -286,7 +286,7 @@ public open class CfnSimpleTable(
      * @param primaryKey 
      */
     override fun primaryKey(primaryKey: IResolvable) {
-      cdkBuilder.primaryKey(primaryKey.let(IResolvable::unwrap))
+      cdkBuilder.primaryKey(primaryKey.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -294,7 +294,7 @@ public open class CfnSimpleTable(
      * @param primaryKey 
      */
     override fun primaryKey(primaryKey: PrimaryKeyProperty) {
-      cdkBuilder.primaryKey(primaryKey.let(PrimaryKeyProperty::unwrap))
+      cdkBuilder.primaryKey(primaryKey.let(PrimaryKeyProperty.Companion::unwrap))
     }
 
     /**
@@ -311,7 +311,7 @@ public open class CfnSimpleTable(
      * @param provisionedThroughput 
      */
     override fun provisionedThroughput(provisionedThroughput: IResolvable) {
-      cdkBuilder.provisionedThroughput(provisionedThroughput.let(IResolvable::unwrap))
+      cdkBuilder.provisionedThroughput(provisionedThroughput.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -319,7 +319,7 @@ public open class CfnSimpleTable(
      * @param provisionedThroughput 
      */
     override fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty) {
-      cdkBuilder.provisionedThroughput(provisionedThroughput.let(ProvisionedThroughputProperty::unwrap))
+      cdkBuilder.provisionedThroughput(provisionedThroughput.let(ProvisionedThroughputProperty.Companion::unwrap))
     }
 
     /**
@@ -337,7 +337,7 @@ public open class CfnSimpleTable(
      * @param sseSpecification 
      */
     override fun sseSpecification(sseSpecification: IResolvable) {
-      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -345,7 +345,7 @@ public open class CfnSimpleTable(
      * @param sseSpecification 
      */
     override fun sseSpecification(sseSpecification: SSESpecificationProperty) {
-      cdkBuilder.sseSpecification(sseSpecification.let(SSESpecificationProperty::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(SSESpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -649,7 +649,7 @@ public open class CfnSimpleTable(
        * @param sseEnabled the value to be set.
        */
       override fun sseEnabled(sseEnabled: IResolvable) {
-        cdkBuilder.sseEnabled(sseEnabled.let(IResolvable::unwrap))
+        cdkBuilder.sseEnabled(sseEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

@@ -56,7 +56,7 @@ public open class CfnStateMachineAlias(
   cdkObject: software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -65,8 +65,8 @@ public open class CfnStateMachineAlias(
     id: String,
     props: CfnStateMachineAliasProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStateMachineAliasProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.CfnStateMachineAlias(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStateMachineAliasProps.Companion::unwrap))
   )
 
   public constructor(
@@ -92,14 +92,14 @@ public open class CfnStateMachineAlias(
    * The settings that enable gradual state machine deployments.
    */
   public open fun deploymentPreference(`value`: IResolvable) {
-    unwrap(this).setDeploymentPreference(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeploymentPreference(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The settings that enable gradual state machine deployments.
    */
   public open fun deploymentPreference(`value`: DeploymentPreferenceProperty) {
-    unwrap(this).setDeploymentPreference(`value`.let(DeploymentPreferenceProperty::unwrap))
+    unwrap(this).setDeploymentPreference(`value`.let(DeploymentPreferenceProperty.Companion::unwrap))
   }
 
   /**
@@ -128,7 +128,7 @@ public open class CfnStateMachineAlias(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -152,7 +152,7 @@ public open class CfnStateMachineAlias(
    * The routing configuration of an alias.
    */
   public open fun routingConfiguration(`value`: IResolvable) {
-    unwrap(this).setRoutingConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRoutingConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -465,7 +465,7 @@ public open class CfnStateMachineAlias(
      * @param deploymentPreference The settings that enable gradual state machine deployments. 
      */
     override fun deploymentPreference(deploymentPreference: IResolvable) {
-      cdkBuilder.deploymentPreference(deploymentPreference.let(IResolvable::unwrap))
+      cdkBuilder.deploymentPreference(deploymentPreference.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -517,7 +517,7 @@ public open class CfnStateMachineAlias(
      * @param deploymentPreference The settings that enable gradual state machine deployments. 
      */
     override fun deploymentPreference(deploymentPreference: DeploymentPreferenceProperty) {
-      cdkBuilder.deploymentPreference(deploymentPreference.let(DeploymentPreferenceProperty::unwrap))
+      cdkBuilder.deploymentPreference(deploymentPreference.let(DeploymentPreferenceProperty.Companion::unwrap))
     }
 
     /**
@@ -616,7 +616,7 @@ public open class CfnStateMachineAlias(
      * @param routingConfiguration The routing configuration of an alias. 
      */
     override fun routingConfiguration(routingConfiguration: IResolvable) {
-      cdkBuilder.routingConfiguration(routingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.routingConfiguration(routingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**

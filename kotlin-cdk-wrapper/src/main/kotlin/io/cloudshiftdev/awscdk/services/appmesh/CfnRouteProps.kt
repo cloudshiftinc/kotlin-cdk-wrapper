@@ -394,14 +394,14 @@ public interface CfnRouteProps {
      * @param spec The route specification to apply. 
      */
     override fun spec(spec: IResolvable) {
-      cdkBuilder.spec(spec.let(IResolvable::unwrap))
+      cdkBuilder.spec(spec.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param spec The route specification to apply. 
      */
     override fun spec(spec: CfnRoute.RouteSpecProperty) {
-      cdkBuilder.spec(spec.let(CfnRoute.RouteSpecProperty::unwrap))
+      cdkBuilder.spec(spec.let(CfnRoute.RouteSpecProperty.Companion::unwrap))
     }
 
     /**
@@ -420,7 +420,7 @@ public interface CfnRouteProps {
      * characters.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

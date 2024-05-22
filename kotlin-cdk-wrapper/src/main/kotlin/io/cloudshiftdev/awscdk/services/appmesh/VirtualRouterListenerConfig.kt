@@ -60,7 +60,7 @@ public interface VirtualRouterListenerConfig {
      * @param listener Single listener config for a VirtualRouter. 
      */
     override fun listener(listener: CfnVirtualRouter.VirtualRouterListenerProperty) {
-      cdkBuilder.listener(listener.let(CfnVirtualRouter.VirtualRouterListenerProperty::unwrap))
+      cdkBuilder.listener(listener.let(CfnVirtualRouter.VirtualRouterListenerProperty.Companion::unwrap))
     }
 
     /**

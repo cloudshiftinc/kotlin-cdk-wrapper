@@ -42,8 +42,8 @@ public open class CfnUserProfile(
     id: String,
     props: CfnUserProfileProps,
   ) :
-      this(software.amazon.awscdk.services.opsworks.CfnUserProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnUserProfileProps::unwrap))
+      this(software.amazon.awscdk.services.opsworks.CfnUserProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnUserProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -69,7 +69,7 @@ public open class CfnUserProfile(
    * Whether users can specify their own SSH public key through the My Settings page.
    */
   public open fun allowSelfManagement(`value`: IResolvable) {
-    unwrap(this).setAllowSelfManagement(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAllowSelfManagement(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -100,7 +100,7 @@ public open class CfnUserProfile(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -217,7 +217,7 @@ public open class CfnUserProfile(
      * Settings page. 
      */
     override fun allowSelfManagement(allowSelfManagement: IResolvable) {
-      cdkBuilder.allowSelfManagement(allowSelfManagement.let(IResolvable::unwrap))
+      cdkBuilder.allowSelfManagement(allowSelfManagement.let(IResolvable.Companion::unwrap))
     }
 
     /**

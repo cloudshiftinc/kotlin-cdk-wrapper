@@ -101,6 +101,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .skipResourceInUseCheckOnDelete(false)
  * .tags(Map.of(
  * "tagsKey", "tags"))
+ * .testAliasTags(Map.of(
+ * "testAliasTagsKey", "testAliasTags"))
  * .build();
  * ```
  *
@@ -114,8 +116,8 @@ public open class CfnAgent(
     id: String,
     props: CfnAgentProps,
   ) :
-      this(software.amazon.awscdk.services.bedrock.CfnAgent(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAgentProps::unwrap))
+      this(software.amazon.awscdk.services.bedrock.CfnAgent(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAgentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -134,7 +136,7 @@ public open class CfnAgent(
    * The action groups that belong to an agent.
    */
   public open fun actionGroups(`value`: IResolvable) {
-    unwrap(this).setActionGroups(`value`.let(IResolvable::unwrap))
+    unwrap(this).setActionGroups(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -247,7 +249,7 @@ public open class CfnAgent(
    * to the agent.
    */
   public open fun autoPrepare(`value`: IResolvable) {
-    unwrap(this).setAutoPrepare(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoPrepare(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -312,7 +314,7 @@ public open class CfnAgent(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -336,7 +338,7 @@ public open class CfnAgent(
    * The knowledge bases associated with the agent.
    */
   public open fun knowledgeBases(`value`: IResolvable) {
-    unwrap(this).setKnowledgeBases(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKnowledgeBases(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -361,14 +363,14 @@ public open class CfnAgent(
    * Contains configurations to override prompt templates in different parts of an agent sequence.
    */
   public open fun promptOverrideConfiguration(`value`: IResolvable) {
-    unwrap(this).setPromptOverrideConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPromptOverrideConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Contains configurations to override prompt templates in different parts of an agent sequence.
    */
   public open fun promptOverrideConfiguration(`value`: PromptOverrideConfigurationProperty) {
-    unwrap(this).setPromptOverrideConfiguration(`value`.let(PromptOverrideConfigurationProperty::unwrap))
+    unwrap(this).setPromptOverrideConfiguration(`value`.let(PromptOverrideConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -397,7 +399,7 @@ public open class CfnAgent(
    * Specifies whether to delete the resource even if it's in use.
    */
   public open fun skipResourceInUseCheckOnDelete(`value`: IResolvable) {
-    unwrap(this).setSkipResourceInUseCheckOnDelete(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSkipResourceInUseCheckOnDelete(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -414,6 +416,25 @@ public open class CfnAgent(
    */
   public open fun tags(`value`: Map<String, String>) {
     unwrap(this).setTags(`value`)
+  }
+
+  /**
+   * A map of tag keys and values.
+   */
+  public open fun testAliasTags(): Any? = unwrap(this).getTestAliasTags()
+
+  /**
+   * A map of tag keys and values.
+   */
+  public open fun testAliasTags(`value`: IResolvable) {
+    unwrap(this).setTestAliasTags(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * A map of tag keys and values.
+   */
+  public open fun testAliasTags(`value`: Map<String, String>) {
+    unwrap(this).setTestAliasTags(`value`)
   }
 
   /**
@@ -645,6 +666,22 @@ public open class CfnAgent(
      * information, see the following resources:. 
      */
     public fun tags(tags: Map<String, String>)
+
+    /**
+     * A map of tag keys and values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-testaliastags)
+     * @param testAliasTags A map of tag keys and values. 
+     */
+    public fun testAliasTags(testAliasTags: IResolvable)
+
+    /**
+     * A map of tag keys and values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-testaliastags)
+     * @param testAliasTags A map of tag keys and values. 
+     */
+    public fun testAliasTags(testAliasTags: Map<String, String>)
   }
 
   private class BuilderImpl(
@@ -661,7 +698,7 @@ public open class CfnAgent(
      * @param actionGroups The action groups that belong to an agent. 
      */
     override fun actionGroups(actionGroups: IResolvable) {
-      cdkBuilder.actionGroups(actionGroups.let(IResolvable::unwrap))
+      cdkBuilder.actionGroups(actionGroups.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -735,7 +772,7 @@ public open class CfnAgent(
      * after making changes to the agent. 
      */
     override fun autoPrepare(autoPrepare: IResolvable) {
-      cdkBuilder.autoPrepare(autoPrepare.let(IResolvable::unwrap))
+      cdkBuilder.autoPrepare(autoPrepare.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -803,7 +840,7 @@ public open class CfnAgent(
      * @param knowledgeBases The knowledge bases associated with the agent. 
      */
     override fun knowledgeBases(knowledgeBases: IResolvable) {
-      cdkBuilder.knowledgeBases(knowledgeBases.let(IResolvable::unwrap))
+      cdkBuilder.knowledgeBases(knowledgeBases.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -836,7 +873,7 @@ public open class CfnAgent(
      * different parts of an agent sequence. 
      */
     override fun promptOverrideConfiguration(promptOverrideConfiguration: IResolvable) {
-      cdkBuilder.promptOverrideConfiguration(promptOverrideConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.promptOverrideConfiguration(promptOverrideConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -851,7 +888,7 @@ public open class CfnAgent(
      */
     override
         fun promptOverrideConfiguration(promptOverrideConfiguration: PromptOverrideConfigurationProperty) {
-      cdkBuilder.promptOverrideConfiguration(promptOverrideConfiguration.let(PromptOverrideConfigurationProperty::unwrap))
+      cdkBuilder.promptOverrideConfiguration(promptOverrideConfiguration.let(PromptOverrideConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -898,7 +935,7 @@ public open class CfnAgent(
      * in use. 
      */
     override fun skipResourceInUseCheckOnDelete(skipResourceInUseCheckOnDelete: IResolvable) {
-      cdkBuilder.skipResourceInUseCheckOnDelete(skipResourceInUseCheckOnDelete.let(IResolvable::unwrap))
+      cdkBuilder.skipResourceInUseCheckOnDelete(skipResourceInUseCheckOnDelete.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -916,6 +953,26 @@ public open class CfnAgent(
      */
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
+    }
+
+    /**
+     * A map of tag keys and values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-testaliastags)
+     * @param testAliasTags A map of tag keys and values. 
+     */
+    override fun testAliasTags(testAliasTags: IResolvable) {
+      cdkBuilder.testAliasTags(testAliasTags.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * A map of tag keys and values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-testaliastags)
+     * @param testAliasTags A map of tag keys and values. 
+     */
+    override fun testAliasTags(testAliasTags: Map<String, String>) {
+      cdkBuilder.testAliasTags(testAliasTags)
     }
 
     public fun build(): software.amazon.awscdk.services.bedrock.CfnAgent = cdkBuilder.build()
@@ -1049,7 +1106,7 @@ public open class CfnAgent(
        * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
        */
       override fun s3(s3: IResolvable) {
-        cdkBuilder.s3(s3.let(IResolvable::unwrap))
+        cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1059,7 +1116,7 @@ public open class CfnAgent(
        * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
        */
       override fun s3(s3: S3IdentifierProperty) {
-        cdkBuilder.s3(s3.let(S3IdentifierProperty::unwrap))
+        cdkBuilder.s3(s3.let(S3IdentifierProperty.Companion::unwrap))
       }
 
       /**
@@ -1414,7 +1471,7 @@ public open class CfnAgent(
        * the business logic that is carried out upon invoking the action.
        */
       override fun actionGroupExecutor(actionGroupExecutor: IResolvable) {
-        cdkBuilder.actionGroupExecutor(actionGroupExecutor.let(IResolvable::unwrap))
+        cdkBuilder.actionGroupExecutor(actionGroupExecutor.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1422,7 +1479,7 @@ public open class CfnAgent(
        * the business logic that is carried out upon invoking the action.
        */
       override fun actionGroupExecutor(actionGroupExecutor: ActionGroupExecutorProperty) {
-        cdkBuilder.actionGroupExecutor(actionGroupExecutor.let(ActionGroupExecutorProperty::unwrap))
+        cdkBuilder.actionGroupExecutor(actionGroupExecutor.let(ActionGroupExecutorProperty.Companion::unwrap))
       }
 
       /**
@@ -1459,7 +1516,7 @@ public open class CfnAgent(
        * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
        */
       override fun apiSchema(apiSchema: IResolvable) {
-        cdkBuilder.apiSchema(apiSchema.let(IResolvable::unwrap))
+        cdkBuilder.apiSchema(apiSchema.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1469,7 +1526,7 @@ public open class CfnAgent(
        * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
        */
       override fun apiSchema(apiSchema: APISchemaProperty) {
-        cdkBuilder.apiSchema(apiSchema.let(APISchemaProperty::unwrap))
+        cdkBuilder.apiSchema(apiSchema.let(APISchemaProperty.Companion::unwrap))
       }
 
       /**
@@ -1520,7 +1577,7 @@ public open class CfnAgent(
        * By default, this value is `false` .
        */
       override fun skipResourceInUseCheckOnDelete(skipResourceInUseCheckOnDelete: IResolvable) {
-        cdkBuilder.skipResourceInUseCheckOnDelete(skipResourceInUseCheckOnDelete.let(IResolvable::unwrap))
+        cdkBuilder.skipResourceInUseCheckOnDelete(skipResourceInUseCheckOnDelete.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.bedrock.CfnAgent.AgentActionGroupProperty
@@ -1771,10 +1828,12 @@ public open class CfnAgent(
   }
 
   /**
-   * Contains inference parameters to use when the agent invokes a foundation model in the part of
-   * the agent sequence defined by the `promptType` .
+   * Specifications about the inference parameters that were provided alongside the prompt.
    *
-   * For more information, see [Inference parameters for foundation
+   * These are specified in the
+   * [PromptOverrideConfiguration](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_PromptOverrideConfiguration.html)
+   * object that was set when the agent was created or updated. For more information, see [Inference
+   * parameters for foundation
    * models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) .
    *
    * Example:
@@ -1797,7 +1856,7 @@ public open class CfnAgent(
    */
   public interface InferenceConfigurationProperty {
     /**
-     * The maximum number of tokens to allow in the generated response.
+     * The maximum number of tokens allowed in the generated response.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-inferenceconfiguration.html#cfn-bedrock-agent-inferenceconfiguration-maximumlength)
      */
@@ -1854,7 +1913,7 @@ public open class CfnAgent(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param maximumLength The maximum number of tokens to allow in the generated response.
+       * @param maximumLength The maximum number of tokens allowed in the generated response.
        */
       public fun maximumLength(maximumLength: Number)
 
@@ -1906,7 +1965,7 @@ public open class CfnAgent(
           software.amazon.awscdk.services.bedrock.CfnAgent.InferenceConfigurationProperty.builder()
 
       /**
-       * @param maximumLength The maximum number of tokens to allow in the generated response.
+       * @param maximumLength The maximum number of tokens allowed in the generated response.
        */
       override fun maximumLength(maximumLength: Number) {
         cdkBuilder.maximumLength(maximumLength)
@@ -1971,7 +2030,7 @@ public open class CfnAgent(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnAgent.InferenceConfigurationProperty,
     ) : CdkObject(cdkObject), InferenceConfigurationProperty {
       /**
-       * The maximum number of tokens to allow in the generated response.
+       * The maximum number of tokens allowed in the generated response.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-inferenceconfiguration.html#cfn-bedrock-agent-inferenceconfiguration-maximumlength)
        */
@@ -2241,7 +2300,7 @@ public open class CfnAgent(
        * models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) .
        */
       override fun inferenceConfiguration(inferenceConfiguration: IResolvable) {
-        cdkBuilder.inferenceConfiguration(inferenceConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.inferenceConfiguration(inferenceConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2251,7 +2310,7 @@ public open class CfnAgent(
        * models](https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters.html) .
        */
       override fun inferenceConfiguration(inferenceConfiguration: InferenceConfigurationProperty) {
-        cdkBuilder.inferenceConfiguration(inferenceConfiguration.let(InferenceConfigurationProperty::unwrap))
+        cdkBuilder.inferenceConfiguration(inferenceConfiguration.let(InferenceConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2523,7 +2582,7 @@ public open class CfnAgent(
        * prompts](https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html) .
        */
       override fun promptConfigurations(promptConfigurations: IResolvable) {
-        cdkBuilder.promptConfigurations(promptConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.promptConfigurations(promptConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**

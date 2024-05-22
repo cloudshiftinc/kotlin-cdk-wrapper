@@ -52,8 +52,8 @@ public open class CfnInstanceProfile(
     id: String,
     props: CfnInstanceProfileProps,
   ) :
-      this(software.amazon.awscdk.services.devicefarm.CfnInstanceProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInstanceProfileProps::unwrap))
+      this(software.amazon.awscdk.services.devicefarm.CfnInstanceProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInstanceProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -112,7 +112,7 @@ public open class CfnInstanceProfile(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -143,7 +143,7 @@ public open class CfnInstanceProfile(
    * When set to `true` , Device Farm removes app packages after a test run.
    */
   public open fun packageCleanup(`value`: IResolvable) {
-    unwrap(this).setPackageCleanup(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPackageCleanup(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -162,7 +162,7 @@ public open class CfnInstanceProfile(
    * When set to `true` , Device Farm reboots the instance after a test run.
    */
   public open fun rebootAfterUse(`value`: IResolvable) {
-    unwrap(this).setRebootAfterUse(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRebootAfterUse(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -180,7 +180,7 @@ public open class CfnInstanceProfile(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -379,7 +379,7 @@ public open class CfnInstanceProfile(
      * 
      */
     override fun packageCleanup(packageCleanup: IResolvable) {
-      cdkBuilder.packageCleanup(packageCleanup.let(IResolvable::unwrap))
+      cdkBuilder.packageCleanup(packageCleanup.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -405,7 +405,7 @@ public open class CfnInstanceProfile(
      * 
      */
     override fun rebootAfterUse(rebootAfterUse: IResolvable) {
-      cdkBuilder.rebootAfterUse(rebootAfterUse.let(IResolvable::unwrap))
+      cdkBuilder.rebootAfterUse(rebootAfterUse.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -419,7 +419,7 @@ public open class CfnInstanceProfile(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

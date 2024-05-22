@@ -142,7 +142,7 @@ public interface CfnReplicationSubnetGroupProps {
      * @param tags One or more tags to be assigned to the subnet group.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

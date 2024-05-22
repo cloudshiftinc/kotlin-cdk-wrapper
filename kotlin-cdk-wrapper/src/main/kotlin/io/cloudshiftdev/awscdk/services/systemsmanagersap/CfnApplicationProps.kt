@@ -176,7 +176,7 @@ public interface CfnApplicationProps {
      * @param credentials The credentials of the SAP application.
      */
     override fun credentials(credentials: IResolvable) {
-      cdkBuilder.credentials(credentials.let(IResolvable::unwrap))
+      cdkBuilder.credentials(credentials.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -221,7 +221,7 @@ public interface CfnApplicationProps {
      * @param tags The tags on the application.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

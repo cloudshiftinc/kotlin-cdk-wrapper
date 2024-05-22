@@ -181,7 +181,7 @@ public interface TableAttributesV2 {
      * @param encryptionKey KMS encryption key for the table.
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**

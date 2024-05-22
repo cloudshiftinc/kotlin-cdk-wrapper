@@ -112,21 +112,21 @@ public interface InstanceEngineBindOptions {
      * @param optionGroup The option group of the database.
      */
     override fun optionGroup(optionGroup: IOptionGroup) {
-      cdkBuilder.optionGroup(optionGroup.let(IOptionGroup::unwrap))
+      cdkBuilder.optionGroup(optionGroup.let(IOptionGroup.Companion::unwrap))
     }
 
     /**
      * @param s3ExportRole The role used for S3 exporting.
      */
     override fun s3ExportRole(s3ExportRole: IRole) {
-      cdkBuilder.s3ExportRole(s3ExportRole.let(IRole::unwrap))
+      cdkBuilder.s3ExportRole(s3ExportRole.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param s3ImportRole The role used for S3 importing.
      */
     override fun s3ImportRole(s3ImportRole: IRole) {
-      cdkBuilder.s3ImportRole(s3ImportRole.let(IRole::unwrap))
+      cdkBuilder.s3ImportRole(s3ImportRole.let(IRole.Companion::unwrap))
     }
 
     /**

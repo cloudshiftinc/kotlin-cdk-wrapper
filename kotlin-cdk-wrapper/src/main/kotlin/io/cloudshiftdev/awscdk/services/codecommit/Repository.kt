@@ -13,6 +13,7 @@ import io.cloudshiftdev.awscdk.services.events.OnEventOptions
 import io.cloudshiftdev.awscdk.services.events.Rule
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
+import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -63,8 +64,8 @@ public open class Repository(
     id: String,
     props: RepositoryProps,
   ) :
-      this(software.amazon.awscdk.services.codecommit.Repository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(RepositoryProps::unwrap))
+      this(software.amazon.awscdk.services.codecommit.Repository(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(RepositoryProps.Companion::unwrap))
   )
 
   public constructor(
@@ -81,7 +82,7 @@ public open class Repository(
    */
   public override fun bindAsNotificationRuleSource(scope: CloudshiftdevConstructsConstruct):
       NotificationRuleSourceConfig =
-      unwrap(this).bindAsNotificationRuleSource(scope.let(CloudshiftdevConstructsConstruct::unwrap)).let(NotificationRuleSourceConfig::wrap)
+      unwrap(this).bindAsNotificationRuleSource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap)).let(NotificationRuleSourceConfig::wrap)
 
   /**
    * Grant the given principal identity permissions to perform the actions on this repository.
@@ -90,8 +91,8 @@ public open class Repository(
    * @param actions 
    */
   public override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
-      as String}.toTypedArray()).let(Grant::wrap)
+      unwrap(this).grant(grantee.let(IGrantable.Companion::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Grant the given identity permissions to pull this repository.
@@ -99,7 +100,7 @@ public open class Repository(
    * @param grantee 
    */
   public override fun grantPull(grantee: IGrantable): Grant =
-      unwrap(this).grantPull(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantPull(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant the given identity permissions to pull and push this repository.
@@ -107,7 +108,7 @@ public open class Repository(
    * @param grantee 
    */
   public override fun grantPullPush(grantee: IGrantable): Grant =
-      unwrap(this).grantPullPush(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantPullPush(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant the given identity permissions to read this repository.
@@ -115,7 +116,7 @@ public open class Repository(
    * @param grantee 
    */
   public override fun grantRead(grantee: IGrantable): Grant =
-      unwrap(this).grantRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Defines a CodeStar Notification rule which triggers when a pull request is merged.
@@ -126,7 +127,7 @@ public open class Repository(
    */
   public open fun notifiyOnPullRequestMerged(id: String, target: INotificationRuleTarget):
       INotificationRule = unwrap(this).notifiyOnPullRequestMerged(id,
-      target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar Notification rule which triggers when a pull request is merged.
@@ -140,8 +141,8 @@ public open class Repository(
     target: INotificationRuleTarget,
     options: NotificationRuleOptions,
   ): INotificationRule = unwrap(this).notifiyOnPullRequestMerged(id,
-      target.let(INotificationRuleTarget::unwrap),
-      options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap),
+      options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar Notification rule which triggers when a pull request is merged.
@@ -173,7 +174,8 @@ public open class Repository(
    * @param options Trigger options to run actions.
    */
   public open fun notify(arn: String, options: RepositoryTriggerOptions): Repository =
-      unwrap(this).notify(arn, options.let(RepositoryTriggerOptions::unwrap)).let(Repository::wrap)
+      unwrap(this).notify(arn,
+      options.let(RepositoryTriggerOptions.Companion::unwrap)).let(Repository::wrap)
 
   /**
    * Create a trigger to notify another service to run actions on repository events.
@@ -201,8 +203,9 @@ public open class Repository(
     id: String,
     target: INotificationRuleTarget,
     options: RepositoryNotifyOnOptions,
-  ): INotificationRule = unwrap(this).notifyOn(id, target.let(INotificationRuleTarget::unwrap),
-      options.let(RepositoryNotifyOnOptions::unwrap)).let(INotificationRule::wrap)
+  ): INotificationRule = unwrap(this).notifyOn(id,
+      target.let(INotificationRuleTarget.Companion::unwrap),
+      options.let(RepositoryNotifyOnOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar Notification rule triggered when the project events specified by you are
@@ -232,7 +235,7 @@ public open class Repository(
    */
   public override fun notifyOnApprovalRuleOverridden(id: String, target: INotificationRuleTarget):
       INotificationRule = unwrap(this).notifyOnApprovalRuleOverridden(id,
-      target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar Notification rule which triggers when an approval rule is overridden.
@@ -246,8 +249,8 @@ public open class Repository(
     target: INotificationRuleTarget,
     options: NotificationRuleOptions,
   ): INotificationRule = unwrap(this).notifyOnApprovalRuleOverridden(id,
-      target.let(INotificationRuleTarget::unwrap),
-      options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap),
+      options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar Notification rule which triggers when an approval rule is overridden.
@@ -274,7 +277,7 @@ public open class Repository(
    */
   public override fun notifyOnApprovalStatusChanged(id: String, target: INotificationRuleTarget):
       INotificationRule = unwrap(this).notifyOnApprovalStatusChanged(id,
-      target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar Notification rule which triggers when an approval status is changed.
@@ -288,8 +291,8 @@ public open class Repository(
     target: INotificationRuleTarget,
     options: NotificationRuleOptions,
   ): INotificationRule = unwrap(this).notifyOnApprovalStatusChanged(id,
-      target.let(INotificationRuleTarget::unwrap),
-      options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap),
+      options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar Notification rule which triggers when an approval status is changed.
@@ -315,7 +318,7 @@ public open class Repository(
    */
   public override fun notifyOnBranchOrTagCreated(id: String, target: INotificationRuleTarget):
       INotificationRule = unwrap(this).notifyOnBranchOrTagCreated(id,
-      target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar Notification rule which triggers when a new branch or tag is created.
@@ -329,8 +332,8 @@ public open class Repository(
     target: INotificationRuleTarget,
     options: NotificationRuleOptions,
   ): INotificationRule = unwrap(this).notifyOnBranchOrTagCreated(id,
-      target.let(INotificationRuleTarget::unwrap),
-      options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap),
+      options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar Notification rule which triggers when a new branch or tag is created.
@@ -356,7 +359,7 @@ public open class Repository(
    */
   public override fun notifyOnBranchOrTagDeleted(id: String, target: INotificationRuleTarget):
       INotificationRule = unwrap(this).notifyOnBranchOrTagDeleted(id,
-      target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar Notification rule which triggers when a branch or tag is deleted.
@@ -370,8 +373,8 @@ public open class Repository(
     target: INotificationRuleTarget,
     options: NotificationRuleOptions,
   ): INotificationRule = unwrap(this).notifyOnBranchOrTagDeleted(id,
-      target.let(INotificationRuleTarget::unwrap),
-      options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap),
+      options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar Notification rule which triggers when a branch or tag is deleted.
@@ -397,7 +400,7 @@ public open class Repository(
    */
   public override fun notifyOnPullRequestComment(id: String, target: INotificationRuleTarget):
       INotificationRule = unwrap(this).notifyOnPullRequestComment(id,
-      target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar Notification rule which triggers when a comment is made on a pull request.
@@ -411,8 +414,8 @@ public open class Repository(
     target: INotificationRuleTarget,
     options: NotificationRuleOptions,
   ): INotificationRule = unwrap(this).notifyOnPullRequestComment(id,
-      target.let(INotificationRuleTarget::unwrap),
-      options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap),
+      options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar Notification rule which triggers when a comment is made on a pull request.
@@ -438,7 +441,7 @@ public open class Repository(
    */
   public override fun notifyOnPullRequestCreated(id: String, target: INotificationRuleTarget):
       INotificationRule = unwrap(this).notifyOnPullRequestCreated(id,
-      target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar Notification rule which triggers when a pull request is created.
@@ -452,8 +455,8 @@ public open class Repository(
     target: INotificationRuleTarget,
     options: NotificationRuleOptions,
   ): INotificationRule = unwrap(this).notifyOnPullRequestCreated(id,
-      target.let(INotificationRuleTarget::unwrap),
-      options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap),
+      options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar Notification rule which triggers when a pull request is created.
@@ -479,7 +482,7 @@ public open class Repository(
    */
   public override fun notifyOnPullRequestMerged(id: String, target: INotificationRuleTarget):
       INotificationRule = unwrap(this).notifyOnPullRequestMerged(id,
-      target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar Notification rule which triggers when a pull request is merged.
@@ -493,8 +496,8 @@ public open class Repository(
     target: INotificationRuleTarget,
     options: NotificationRuleOptions,
   ): INotificationRule = unwrap(this).notifyOnPullRequestMerged(id,
-      target.let(INotificationRuleTarget::unwrap),
-      options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+      target.let(INotificationRuleTarget.Companion::unwrap),
+      options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
   /**
    * Defines a CodeStar Notification rule which triggers when a pull request is merged.
@@ -527,7 +530,8 @@ public open class Repository(
    * @param options
    */
   public override fun onCommentOnCommit(id: String, options: OnEventOptions): Rule =
-      unwrap(this).onCommentOnCommit(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      unwrap(this).onCommentOnCommit(id,
+      options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines a CloudWatch event rule which triggers when a comment is made on a commit.
@@ -556,7 +560,8 @@ public open class Repository(
    * @param options
    */
   public override fun onCommentOnPullRequest(id: String, options: OnEventOptions): Rule =
-      unwrap(this).onCommentOnPullRequest(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      unwrap(this).onCommentOnPullRequest(id,
+      options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines a CloudWatch event rule which triggers when a comment is made on a pull request.
@@ -585,7 +590,7 @@ public open class Repository(
    * @param options
    */
   public override fun onCommit(id: String, options: OnCommitOptions): Rule =
-      unwrap(this).onCommit(id, options.let(OnCommitOptions::unwrap)).let(Rule::wrap)
+      unwrap(this).onCommit(id, options.let(OnCommitOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines a CloudWatch event rule which triggers when a commit is pushed to a branch.
@@ -619,7 +624,7 @@ public open class Repository(
    * @param options
    */
   public override fun onEvent(id: String, options: OnEventOptions): Rule = unwrap(this).onEvent(id,
-      options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines a CloudWatch event rule which triggers for repository events.
@@ -651,7 +656,8 @@ public open class Repository(
    * @param options
    */
   public override fun onPullRequestStateChange(id: String, options: OnEventOptions): Rule =
-      unwrap(this).onPullRequestStateChange(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      unwrap(this).onPullRequestStateChange(id,
+      options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines a CloudWatch event rule which triggers when a pull request state is changed.
@@ -683,7 +689,8 @@ public open class Repository(
    * @param options
    */
   public override fun onReferenceCreated(id: String, options: OnEventOptions): Rule =
-      unwrap(this).onReferenceCreated(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      unwrap(this).onReferenceCreated(id,
+      options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines a CloudWatch event rule which triggers when a reference is created (i.e. a new
@@ -715,7 +722,8 @@ public open class Repository(
    * @param options
    */
   public override fun onReferenceDeleted(id: String, options: OnEventOptions): Rule =
-      unwrap(this).onReferenceDeleted(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      unwrap(this).onReferenceDeleted(id,
+      options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines a CloudWatch event rule which triggers when a reference is delete (i.e. a branch/tag is
@@ -747,7 +755,8 @@ public open class Repository(
    * @param options
    */
   public override fun onReferenceUpdated(id: String, options: OnEventOptions): Rule =
-      unwrap(this).onReferenceUpdated(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      unwrap(this).onReferenceUpdated(id,
+      options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines a CloudWatch event rule which triggers when a reference is updated (i.e. a commit is
@@ -779,7 +788,7 @@ public open class Repository(
    * @param options
    */
   public override fun onStateChange(id: String, options: OnEventOptions): Rule =
-      unwrap(this).onStateChange(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+      unwrap(this).onStateChange(id, options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
   /**
    * Defines a CloudWatch event rule which triggers when a "CodeCommit Repository State Change"
@@ -850,6 +859,15 @@ public open class Repository(
     public fun description(description: String)
 
     /**
+     * The customer managed key used to encrypt and decrypt the data in repository.
+     *
+     * Default: - Use an AWS managed key
+     *
+     * @param kmsKey The customer managed key used to encrypt and decrypt the data in repository. 
+     */
+    public fun kmsKey(kmsKey: IKey)
+
+    /**
      * Name of the repository.
      *
      * This property is required for all CodeCommit repositories.
@@ -874,7 +892,7 @@ public open class Repository(
      * @param code The contents with which to initialize the repository after it has been created. 
      */
     override fun code(code: Code) {
-      cdkBuilder.code(code.let(Code::unwrap))
+      cdkBuilder.code(code.let(Code.Companion::unwrap))
     }
 
     /**
@@ -889,6 +907,17 @@ public open class Repository(
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
+    }
+
+    /**
+     * The customer managed key used to encrypt and decrypt the data in repository.
+     *
+     * Default: - Use an AWS managed key
+     *
+     * @param kmsKey The customer managed key used to encrypt and decrypt the data in repository. 
+     */
+    override fun kmsKey(kmsKey: IKey) {
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -911,7 +940,7 @@ public open class Repository(
       id: String,
       repositoryArn: String,
     ): IRepository =
-        software.amazon.awscdk.services.codecommit.Repository.fromRepositoryArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.codecommit.Repository.fromRepositoryArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, repositoryArn).let(IRepository::wrap)
 
     public fun fromRepositoryName(
@@ -919,7 +948,7 @@ public open class Repository(
       id: String,
       repositoryName: String,
     ): IRepository =
-        software.amazon.awscdk.services.codecommit.Repository.fromRepositoryName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.codecommit.Repository.fromRepositoryName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, repositoryName).let(IRepository::wrap)
 
     public operator fun invoke(

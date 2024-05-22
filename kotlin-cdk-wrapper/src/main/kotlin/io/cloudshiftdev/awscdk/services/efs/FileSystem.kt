@@ -57,8 +57,8 @@ public open class FileSystem(
     id: String,
     props: FileSystemProps,
   ) :
-      this(software.amazon.awscdk.services.efs.FileSystem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(FileSystemProps::unwrap))
+      this(software.amazon.awscdk.services.efs.FileSystem(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(FileSystemProps.Companion::unwrap))
   )
 
   public constructor(
@@ -85,7 +85,7 @@ public open class FileSystem(
    */
   public open fun addAccessPoint(id: String, accessPointOptions: AccessPointOptions): AccessPoint =
       unwrap(this).addAccessPoint(id,
-      accessPointOptions.let(AccessPointOptions::unwrap)).let(AccessPoint::wrap)
+      accessPointOptions.let(AccessPointOptions.Companion::unwrap)).let(AccessPoint::wrap)
 
   /**
    * create access point from this filesystem.
@@ -109,7 +109,7 @@ public open class FileSystem(
    * @param statement The policy statement to add. 
    */
   public override fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
-      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement::unwrap)).let(AddToResourcePolicyResult::wrap)
+      unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
 
   /**
    * Adds a statement to the resource policy associated with this file system.
@@ -148,8 +148,8 @@ public open class FileSystem(
    * @param actions The actions to grant. 
    */
   public override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
-      as String}.toTypedArray()).let(Grant::wrap)
+      unwrap(this).grant(grantee.let(IGrantable.Companion::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Grant read permissions for this file system to an IAM principal.
@@ -157,7 +157,7 @@ public open class FileSystem(
    * @param grantee The principal to grant read to. 
    */
   public override fun grantRead(grantee: IGrantable): Grant =
-      unwrap(this).grantRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant read and write permissions for this file system to an IAM principal.
@@ -165,7 +165,7 @@ public open class FileSystem(
    * @param grantee The principal to grant read and write to. 
    */
   public override fun grantReadWrite(grantee: IGrantable): Grant =
-      unwrap(this).grantReadWrite(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantReadWrite(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * As root user, grant read and write permissions for this file system to an IAM principal.
@@ -173,7 +173,7 @@ public open class FileSystem(
    * @param grantee The principal to grant root access to. 
    */
   public override fun grantRootAccess(grantee: IGrantable): Grant =
-      unwrap(this).grantRootAccess(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantRootAccess(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Dependable that can be depended upon to ensure the mount targets of the filesystem are ready.
@@ -475,7 +475,7 @@ public open class FileSystem(
      * access to an EFS file system. 
      */
     override fun fileSystemPolicy(fileSystemPolicy: PolicyDocument) {
-      cdkBuilder.fileSystemPolicy(fileSystemPolicy.let(PolicyDocument::unwrap))
+      cdkBuilder.fileSystemPolicy(fileSystemPolicy.let(PolicyDocument.Companion::unwrap))
     }
 
     /**
@@ -502,7 +502,7 @@ public open class FileSystem(
      * @param kmsKey The KMS key used for encryption. 
      */
     override fun kmsKey(kmsKey: IKey) {
-      cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -515,7 +515,7 @@ public open class FileSystem(
      * Infrequent Access (IA) storage class. 
      */
     override fun lifecyclePolicy(lifecyclePolicy: LifecyclePolicy) {
-      cdkBuilder.lifecyclePolicy(lifecyclePolicy.let(LifecyclePolicy::unwrap))
+      cdkBuilder.lifecyclePolicy(lifecyclePolicy.let(LifecyclePolicy.Companion::unwrap))
     }
 
     /**
@@ -543,7 +543,7 @@ public open class FileSystem(
      */
     override
         fun outOfInfrequentAccessPolicy(outOfInfrequentAccessPolicy: OutOfInfrequentAccessPolicy) {
-      cdkBuilder.outOfInfrequentAccessPolicy(outOfInfrequentAccessPolicy.let(OutOfInfrequentAccessPolicy::unwrap))
+      cdkBuilder.outOfInfrequentAccessPolicy(outOfInfrequentAccessPolicy.let(OutOfInfrequentAccessPolicy.Companion::unwrap))
     }
 
     /**
@@ -558,7 +558,7 @@ public open class FileSystem(
      * @param performanceMode The performance mode that the file system will operate under. 
      */
     override fun performanceMode(performanceMode: PerformanceMode) {
-      cdkBuilder.performanceMode(performanceMode.let(PerformanceMode::unwrap))
+      cdkBuilder.performanceMode(performanceMode.let(PerformanceMode.Companion::unwrap))
     }
 
     /**
@@ -572,7 +572,7 @@ public open class FileSystem(
      * @param provisionedThroughputPerSecond Provisioned throughput for the file system. 
      */
     override fun provisionedThroughputPerSecond(provisionedThroughputPerSecond: Size) {
-      cdkBuilder.provisionedThroughputPerSecond(provisionedThroughputPerSecond.let(Size::unwrap))
+      cdkBuilder.provisionedThroughputPerSecond(provisionedThroughputPerSecond.let(Size.Companion::unwrap))
     }
 
     /**
@@ -583,7 +583,7 @@ public open class FileSystem(
      * @param removalPolicy The removal policy to apply to the file system. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -594,7 +594,7 @@ public open class FileSystem(
      * @param replicationConfiguration Replication configuration for the file system. 
      */
     override fun replicationConfiguration(replicationConfiguration: ReplicationConfiguration) {
-      cdkBuilder.replicationConfiguration(replicationConfiguration.let(ReplicationConfiguration::unwrap))
+      cdkBuilder.replicationConfiguration(replicationConfiguration.let(ReplicationConfiguration.Companion::unwrap))
     }
 
     /**
@@ -610,7 +610,7 @@ public open class FileSystem(
      */
     override
         fun replicationOverwriteProtection(replicationOverwriteProtection: ReplicationOverwriteProtection) {
-      cdkBuilder.replicationOverwriteProtection(replicationOverwriteProtection.let(ReplicationOverwriteProtection::unwrap))
+      cdkBuilder.replicationOverwriteProtection(replicationOverwriteProtection.let(ReplicationOverwriteProtection.Companion::unwrap))
     }
 
     /**
@@ -621,7 +621,7 @@ public open class FileSystem(
      * @param securityGroup Security Group to assign to this file system. 
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -632,7 +632,7 @@ public open class FileSystem(
      * @param throughputMode Enum to mention the throughput mode of the file system. 
      */
     override fun throughputMode(throughputMode: ThroughputMode) {
-      cdkBuilder.throughputMode(throughputMode.let(ThroughputMode::unwrap))
+      cdkBuilder.throughputMode(throughputMode.let(ThroughputMode.Companion::unwrap))
     }
 
     /**
@@ -648,7 +648,7 @@ public open class FileSystem(
      * storage (the Standard storage class) at which to move them to Archive storage. 
      */
     override fun transitionToArchivePolicy(transitionToArchivePolicy: LifecyclePolicy) {
-      cdkBuilder.transitionToArchivePolicy(transitionToArchivePolicy.let(LifecyclePolicy::unwrap))
+      cdkBuilder.transitionToArchivePolicy(transitionToArchivePolicy.let(LifecyclePolicy.Companion::unwrap))
     }
 
     /**
@@ -657,7 +657,7 @@ public open class FileSystem(
      * @param vpc VPC to launch the file system in. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -668,7 +668,7 @@ public open class FileSystem(
      * @param vpcSubnets Which subnets to place the mount target in the VPC. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -694,8 +694,8 @@ public open class FileSystem(
       id: String,
       attrs: FileSystemAttributes,
     ): IFileSystem =
-        software.amazon.awscdk.services.efs.FileSystem.fromFileSystemAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(FileSystemAttributes::unwrap)).let(IFileSystem::wrap)
+        software.amazon.awscdk.services.efs.FileSystem.fromFileSystemAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(FileSystemAttributes.Companion::unwrap)).let(IFileSystem::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("67c7f8559a1a02511e0302ffd8ca4a5cf064c784eb6e462c6fc3b5500a867d2b")

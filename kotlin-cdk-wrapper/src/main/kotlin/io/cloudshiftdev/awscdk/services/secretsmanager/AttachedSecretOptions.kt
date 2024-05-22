@@ -48,7 +48,7 @@ public interface AttachedSecretOptions {
      * @param target The target to attach the secret to. 
      */
     override fun target(target: ISecretAttachmentTarget) {
-      cdkBuilder.target(target.let(ISecretAttachmentTarget::unwrap))
+      cdkBuilder.target(target.let(ISecretAttachmentTarget.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.secretsmanager.AttachedSecretOptions =

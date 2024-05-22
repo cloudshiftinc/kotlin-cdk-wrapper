@@ -173,7 +173,7 @@ public interface ModelProps : ModelOptions {
      * the deployment when the model of the REST API changes.
      */
     override fun restApi(restApi: IRestApi) {
-      cdkBuilder.restApi(restApi.let(IRestApi::unwrap))
+      cdkBuilder.restApi(restApi.let(IRestApi.Companion::unwrap))
     }
 
     /**
@@ -181,7 +181,7 @@ public interface ModelProps : ModelOptions {
      * Specify null ({}) if you don't want to specify a schema.
      */
     override fun schema(schema: JsonSchema) {
-      cdkBuilder.schema(schema.let(JsonSchema::unwrap))
+      cdkBuilder.schema(schema.let(JsonSchema.Companion::unwrap))
     }
 
     /**

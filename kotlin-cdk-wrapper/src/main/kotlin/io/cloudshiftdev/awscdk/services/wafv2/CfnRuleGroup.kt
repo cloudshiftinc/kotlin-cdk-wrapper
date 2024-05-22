@@ -507,8 +507,8 @@ public open class CfnRuleGroup(
     id: String,
     props: CfnRuleGroupProps,
   ) :
-      this(software.amazon.awscdk.services.wafv2.CfnRuleGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRuleGroupProps::unwrap))
+      this(software.amazon.awscdk.services.wafv2.CfnRuleGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRuleGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -551,7 +551,7 @@ public open class CfnRuleGroup(
    * The labels that one or more rules in this rule group add to matching web requests.
    */
   public open fun availableLabels(`value`: IResolvable) {
-    unwrap(this).setAvailableLabels(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAvailableLabels(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -587,7 +587,7 @@ public open class CfnRuleGroup(
    * The labels that one or more rules in this rule group match against in label match statements.
    */
   public open fun consumedLabels(`value`: IResolvable) {
-    unwrap(this).setConsumedLabels(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConsumedLabels(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -611,7 +611,7 @@ public open class CfnRuleGroup(
    * A map of custom response keys and content bodies.
    */
   public open fun customResponseBodies(`value`: IResolvable) {
-    unwrap(this).setCustomResponseBodies(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCustomResponseBodies(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -639,7 +639,7 @@ public open class CfnRuleGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -663,7 +663,7 @@ public open class CfnRuleGroup(
    * The rule statements used to identify the web requests that you want to allow, block, or count.
    */
   public open fun rules(`value`: IResolvable) {
-    unwrap(this).setRules(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRules(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -705,7 +705,7 @@ public open class CfnRuleGroup(
    * Key:value pairs associated with an AWS resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -722,14 +722,14 @@ public open class CfnRuleGroup(
    * Defines and enables Amazon CloudWatch metrics and web request sample collection.
    */
   public open fun visibilityConfig(`value`: IResolvable) {
-    unwrap(this).setVisibilityConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVisibilityConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Defines and enables Amazon CloudWatch metrics and web request sample collection.
    */
   public open fun visibilityConfig(`value`: VisibilityConfigProperty) {
-    unwrap(this).setVisibilityConfig(`value`.let(VisibilityConfigProperty::unwrap))
+    unwrap(this).setVisibilityConfig(`value`.let(VisibilityConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -1031,7 +1031,7 @@ public open class CfnRuleGroup(
      * web requests. 
      */
     override fun availableLabels(availableLabels: IResolvable) {
-      cdkBuilder.availableLabels(availableLabels.let(IResolvable::unwrap))
+      cdkBuilder.availableLabels(availableLabels.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1090,7 +1090,7 @@ public open class CfnRuleGroup(
      * label match statements. 
      */
     override fun consumedLabels(consumedLabels: IResolvable) {
-      cdkBuilder.consumedLabels(consumedLabels.let(IResolvable::unwrap))
+      cdkBuilder.consumedLabels(consumedLabels.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1140,7 +1140,7 @@ public open class CfnRuleGroup(
      * @param customResponseBodies A map of custom response keys and content bodies. 
      */
     override fun customResponseBodies(customResponseBodies: IResolvable) {
-      cdkBuilder.customResponseBodies(customResponseBodies.let(IResolvable::unwrap))
+      cdkBuilder.customResponseBodies(customResponseBodies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1200,7 +1200,7 @@ public open class CfnRuleGroup(
      * block, or count. 
      */
     override fun rules(rules: IResolvable) {
-      cdkBuilder.rules(rules.let(IResolvable::unwrap))
+      cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1268,7 +1268,7 @@ public open class CfnRuleGroup(
      * @param tags Key:value pairs associated with an AWS resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1296,7 +1296,7 @@ public open class CfnRuleGroup(
      * collection. 
      */
     override fun visibilityConfig(visibilityConfig: IResolvable) {
-      cdkBuilder.visibilityConfig(visibilityConfig.let(IResolvable::unwrap))
+      cdkBuilder.visibilityConfig(visibilityConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1307,7 +1307,7 @@ public open class CfnRuleGroup(
      * collection. 
      */
     override fun visibilityConfig(visibilityConfig: VisibilityConfigProperty) {
-      cdkBuilder.visibilityConfig(visibilityConfig.let(VisibilityConfigProperty::unwrap))
+      cdkBuilder.visibilityConfig(visibilityConfig.let(VisibilityConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1407,14 +1407,14 @@ public open class CfnRuleGroup(
        * @param customRequestHandling Custom request handling.
        */
       override fun customRequestHandling(customRequestHandling: IResolvable) {
-        cdkBuilder.customRequestHandling(customRequestHandling.let(IResolvable::unwrap))
+        cdkBuilder.customRequestHandling(customRequestHandling.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param customRequestHandling Custom request handling.
        */
       override fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty) {
-        cdkBuilder.customRequestHandling(customRequestHandling.let(CustomRequestHandlingProperty::unwrap))
+        cdkBuilder.customRequestHandling(customRequestHandling.let(CustomRequestHandlingProperty.Companion::unwrap))
       }
 
       /**
@@ -1907,7 +1907,7 @@ public open class CfnRuleGroup(
        * You can use any statements that can be nested.
        */
       override fun statements(statements: IResolvable) {
-        cdkBuilder.statements(statements.let(IResolvable::unwrap))
+        cdkBuilder.statements(statements.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2023,14 +2023,14 @@ public open class CfnRuleGroup(
        * @param customResponse Custom response.
        */
       override fun customResponse(customResponse: IResolvable) {
-        cdkBuilder.customResponse(customResponse.let(IResolvable::unwrap))
+        cdkBuilder.customResponse(customResponse.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param customResponse Custom response.
        */
       override fun customResponse(customResponse: CustomResponseProperty) {
-        cdkBuilder.customResponse(customResponse.let(CustomResponseProperty::unwrap))
+        cdkBuilder.customResponse(customResponse.let(CustomResponseProperty.Companion::unwrap))
       }
 
       /**
@@ -2540,14 +2540,14 @@ public open class CfnRuleGroup(
        * @param fieldToMatch The part of the web request that you want AWS WAF to inspect. 
        */
       override fun fieldToMatch(fieldToMatch: IResolvable) {
-        cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable::unwrap))
+        cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param fieldToMatch The part of the web request that you want AWS WAF to inspect. 
        */
       override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
-        cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty::unwrap))
+        cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -2638,7 +2638,7 @@ public open class CfnRuleGroup(
        * starting from the lowest priority setting, before inspecting the content for a match.
        */
       override fun textTransformations(textTransformations: IResolvable) {
-        cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
+        cdkBuilder.textTransformations(textTransformations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2849,7 +2849,7 @@ public open class CfnRuleGroup(
        * valid after the client successfully solves a `CAPTCHA` puzzle.
        */
       override fun immunityTimeProperty(immunityTimeProperty: IResolvable) {
-        cdkBuilder.immunityTimeProperty(immunityTimeProperty.let(IResolvable::unwrap))
+        cdkBuilder.immunityTimeProperty(immunityTimeProperty.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2857,7 +2857,7 @@ public open class CfnRuleGroup(
        * valid after the client successfully solves a `CAPTCHA` puzzle.
        */
       override fun immunityTimeProperty(immunityTimeProperty: ImmunityTimePropertyProperty) {
-        cdkBuilder.immunityTimeProperty(immunityTimeProperty.let(ImmunityTimePropertyProperty::unwrap))
+        cdkBuilder.immunityTimeProperty(immunityTimeProperty.let(ImmunityTimePropertyProperty.Companion::unwrap))
       }
 
       /**
@@ -2966,14 +2966,14 @@ public open class CfnRuleGroup(
        * @param customRequestHandling Custom request handling.
        */
       override fun customRequestHandling(customRequestHandling: IResolvable) {
-        cdkBuilder.customRequestHandling(customRequestHandling.let(IResolvable::unwrap))
+        cdkBuilder.customRequestHandling(customRequestHandling.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param customRequestHandling Custom request handling.
        */
       override fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty) {
-        cdkBuilder.customRequestHandling(customRequestHandling.let(CustomRequestHandlingProperty::unwrap))
+        cdkBuilder.customRequestHandling(customRequestHandling.let(CustomRequestHandlingProperty.Companion::unwrap))
       }
 
       /**
@@ -3083,7 +3083,7 @@ public open class CfnRuleGroup(
        * valid after the client successfully responds to a challenge.
        */
       override fun immunityTimeProperty(immunityTimeProperty: IResolvable) {
-        cdkBuilder.immunityTimeProperty(immunityTimeProperty.let(IResolvable::unwrap))
+        cdkBuilder.immunityTimeProperty(immunityTimeProperty.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3091,7 +3091,7 @@ public open class CfnRuleGroup(
        * valid after the client successfully responds to a challenge.
        */
       override fun immunityTimeProperty(immunityTimeProperty: ImmunityTimePropertyProperty) {
-        cdkBuilder.immunityTimeProperty(immunityTimeProperty.let(ImmunityTimePropertyProperty::unwrap))
+        cdkBuilder.immunityTimeProperty(immunityTimeProperty.let(ImmunityTimePropertyProperty.Companion::unwrap))
       }
 
       /**
@@ -3201,14 +3201,14 @@ public open class CfnRuleGroup(
        * @param customRequestHandling Custom request handling.
        */
       override fun customRequestHandling(customRequestHandling: IResolvable) {
-        cdkBuilder.customRequestHandling(customRequestHandling.let(IResolvable::unwrap))
+        cdkBuilder.customRequestHandling(customRequestHandling.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param customRequestHandling Custom request handling.
        */
       override fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty) {
-        cdkBuilder.customRequestHandling(customRequestHandling.let(CustomRequestHandlingProperty::unwrap))
+        cdkBuilder.customRequestHandling(customRequestHandling.let(CustomRequestHandlingProperty.Companion::unwrap))
       }
 
       /**
@@ -3584,7 +3584,7 @@ public open class CfnRuleGroup(
        * Example JSON: `"MatchPattern": { "IncludedCookies": [ "session-id-time", "session-id" ] }`
        */
       override fun matchPattern(matchPattern: IResolvable) {
-        cdkBuilder.matchPattern(matchPattern.let(IResolvable::unwrap))
+        cdkBuilder.matchPattern(matchPattern.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3596,7 +3596,7 @@ public open class CfnRuleGroup(
        * Example JSON: `"MatchPattern": { "IncludedCookies": [ "session-id-time", "session-id" ] }`
        */
       override fun matchPattern(matchPattern: CookieMatchPatternProperty) {
-        cdkBuilder.matchPattern(matchPattern.let(CookieMatchPatternProperty::unwrap))
+        cdkBuilder.matchPattern(matchPattern.let(CookieMatchPatternProperty.Companion::unwrap))
       }
 
       /**
@@ -3777,14 +3777,14 @@ public open class CfnRuleGroup(
        * @param customRequestHandling Custom request handling.
        */
       override fun customRequestHandling(customRequestHandling: IResolvable) {
-        cdkBuilder.customRequestHandling(customRequestHandling.let(IResolvable::unwrap))
+        cdkBuilder.customRequestHandling(customRequestHandling.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param customRequestHandling Custom request handling.
        */
       override fun customRequestHandling(customRequestHandling: CustomRequestHandlingProperty) {
-        cdkBuilder.customRequestHandling(customRequestHandling.let(CustomRequestHandlingProperty::unwrap))
+        cdkBuilder.customRequestHandling(customRequestHandling.let(CustomRequestHandlingProperty.Companion::unwrap))
       }
 
       /**
@@ -4045,7 +4045,7 @@ public open class CfnRuleGroup(
        * Developer Guide* .
        */
       override fun insertHeaders(insertHeaders: IResolvable) {
-        cdkBuilder.insertHeaders(insertHeaders.let(IResolvable::unwrap))
+        cdkBuilder.insertHeaders(insertHeaders.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4424,7 +4424,7 @@ public open class CfnRuleGroup(
        * Developer Guide* .
        */
       override fun responseHeaders(responseHeaders: IResolvable) {
-        cdkBuilder.responseHeaders(responseHeaders.let(IResolvable::unwrap))
+        cdkBuilder.responseHeaders(responseHeaders.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5136,7 +5136,7 @@ public open class CfnRuleGroup(
        * configuration.
        */
       override fun body(body: IResolvable) {
-        cdkBuilder.body(body.let(IResolvable::unwrap))
+        cdkBuilder.body(body.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5159,7 +5159,7 @@ public open class CfnRuleGroup(
        * configuration.
        */
       override fun body(body: BodyProperty) {
-        cdkBuilder.body(body.let(BodyProperty::unwrap))
+        cdkBuilder.body(body.let(BodyProperty.Companion::unwrap))
       }
 
       /**
@@ -5196,7 +5196,7 @@ public open class CfnRuleGroup(
        * matching filters to the cookies that it receives from the underlying host service.
        */
       override fun cookies(cookies: IResolvable) {
-        cdkBuilder.cookies(cookies.let(IResolvable::unwrap))
+        cdkBuilder.cookies(cookies.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5210,7 +5210,7 @@ public open class CfnRuleGroup(
        * matching filters to the cookies that it receives from the underlying host service.
        */
       override fun cookies(cookies: CookiesProperty) {
-        cdkBuilder.cookies(cookies.let(CookiesProperty::unwrap))
+        cdkBuilder.cookies(cookies.let(CookiesProperty.Companion::unwrap))
       }
 
       /**
@@ -5239,7 +5239,7 @@ public open class CfnRuleGroup(
        * matching filters to the headers that it receives from the underlying host service.
        */
       override fun headers(headers: IResolvable) {
-        cdkBuilder.headers(headers.let(IResolvable::unwrap))
+        cdkBuilder.headers(headers.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5253,7 +5253,7 @@ public open class CfnRuleGroup(
        * matching filters to the headers that it receives from the underlying host service.
        */
       override fun headers(headers: HeadersProperty) {
-        cdkBuilder.headers(headers.let(HeadersProperty::unwrap))
+        cdkBuilder.headers(headers.let(HeadersProperty.Companion::unwrap))
       }
 
       /**
@@ -5293,7 +5293,7 @@ public open class CfnRuleGroup(
        * specification, to match with any future requests that have the same TLS configuration.
        */
       override fun ja3Fingerprint(ja3Fingerprint: IResolvable) {
-        cdkBuilder.ja3Fingerprint(ja3Fingerprint.let(IResolvable::unwrap))
+        cdkBuilder.ja3Fingerprint(ja3Fingerprint.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5318,7 +5318,7 @@ public open class CfnRuleGroup(
        * specification, to match with any future requests that have the same TLS configuration.
        */
       override fun ja3Fingerprint(ja3Fingerprint: JA3FingerprintProperty) {
-        cdkBuilder.ja3Fingerprint(ja3Fingerprint.let(JA3FingerprintProperty::unwrap))
+        cdkBuilder.ja3Fingerprint(ja3Fingerprint.let(JA3FingerprintProperty.Companion::unwrap))
       }
 
       /**
@@ -5367,7 +5367,7 @@ public open class CfnRuleGroup(
        * configuration.
        */
       override fun jsonBody(jsonBody: IResolvable) {
-        cdkBuilder.jsonBody(jsonBody.let(IResolvable::unwrap))
+        cdkBuilder.jsonBody(jsonBody.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5390,7 +5390,7 @@ public open class CfnRuleGroup(
        * configuration.
        */
       override fun jsonBody(jsonBody: JsonBodyProperty) {
-        cdkBuilder.jsonBody(jsonBody.let(JsonBodyProperty::unwrap))
+        cdkBuilder.jsonBody(jsonBody.let(JsonBodyProperty.Companion::unwrap))
       }
 
       /**
@@ -6039,7 +6039,7 @@ public open class CfnRuleGroup(
        * web request at all.
        */
       override fun forwardedIpConfig(forwardedIpConfig: IResolvable) {
-        cdkBuilder.forwardedIpConfig(forwardedIpConfig.let(IResolvable::unwrap))
+        cdkBuilder.forwardedIpConfig(forwardedIpConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6052,7 +6052,7 @@ public open class CfnRuleGroup(
        * web request at all.
        */
       override fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty) {
-        cdkBuilder.forwardedIpConfig(forwardedIpConfig.let(ForwardedIPConfigurationProperty::unwrap))
+        cdkBuilder.forwardedIpConfig(forwardedIpConfig.let(ForwardedIPConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -6460,7 +6460,7 @@ public open class CfnRuleGroup(
        * Example JSON: `"MatchPattern": { "ExcludedHeaders": [ "KeyToExclude1", "KeyToExclude2" ] }`
        */
       override fun matchPattern(matchPattern: IResolvable) {
-        cdkBuilder.matchPattern(matchPattern.let(IResolvable::unwrap))
+        cdkBuilder.matchPattern(matchPattern.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6472,7 +6472,7 @@ public open class CfnRuleGroup(
        * Example JSON: `"MatchPattern": { "ExcludedHeaders": [ "KeyToExclude1", "KeyToExclude2" ] }`
        */
       override fun matchPattern(matchPattern: HeaderMatchPatternProperty) {
-        cdkBuilder.matchPattern(matchPattern.let(HeaderMatchPatternProperty::unwrap))
+        cdkBuilder.matchPattern(matchPattern.let(HeaderMatchPatternProperty.Companion::unwrap))
       }
 
       /**
@@ -6983,7 +6983,7 @@ public open class CfnRuleGroup(
        * web request at all.
        */
       override fun ipSetForwardedIpConfig(ipSetForwardedIpConfig: IResolvable) {
-        cdkBuilder.ipSetForwardedIpConfig(ipSetForwardedIpConfig.let(IResolvable::unwrap))
+        cdkBuilder.ipSetForwardedIpConfig(ipSetForwardedIpConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6998,7 +6998,7 @@ public open class CfnRuleGroup(
        */
       override
           fun ipSetForwardedIpConfig(ipSetForwardedIpConfig: IPSetForwardedIPConfigurationProperty) {
-        cdkBuilder.ipSetForwardedIpConfig(ipSetForwardedIpConfig.let(IPSetForwardedIPConfigurationProperty::unwrap))
+        cdkBuilder.ipSetForwardedIpConfig(ipSetForwardedIpConfig.let(IPSetForwardedIPConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -7536,7 +7536,7 @@ public open class CfnRuleGroup(
        * AWS WAF inspects the results of these pattern matches against the rule inspection criteria.
        */
       override fun matchPattern(matchPattern: IResolvable) {
-        cdkBuilder.matchPattern(matchPattern.let(IResolvable::unwrap))
+        cdkBuilder.matchPattern(matchPattern.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7544,7 +7544,7 @@ public open class CfnRuleGroup(
        * AWS WAF inspects the results of these pattern matches against the rule inspection criteria.
        */
       override fun matchPattern(matchPattern: JsonMatchPatternProperty) {
-        cdkBuilder.matchPattern(matchPattern.let(JsonMatchPatternProperty::unwrap))
+        cdkBuilder.matchPattern(matchPattern.let(JsonMatchPatternProperty.Companion::unwrap))
       }
 
       /**
@@ -8680,7 +8680,7 @@ public open class CfnRuleGroup(
        * You can use any statement that can be nested.
        */
       override fun statement(statement: IResolvable) {
-        cdkBuilder.statement(statement.let(IResolvable::unwrap))
+        cdkBuilder.statement(statement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8688,7 +8688,7 @@ public open class CfnRuleGroup(
        * You can use any statement that can be nested.
        */
       override fun statement(statement: StatementProperty) {
-        cdkBuilder.statement(statement.let(StatementProperty::unwrap))
+        cdkBuilder.statement(statement.let(StatementProperty.Companion::unwrap))
       }
 
       /**
@@ -9185,7 +9185,7 @@ public open class CfnRuleGroup(
        * You can use any statements that can be nested.
        */
       override fun statements(statements: IResolvable) {
-        cdkBuilder.statements(statements.let(IResolvable::unwrap))
+        cdkBuilder.statements(statements.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9620,7 +9620,7 @@ public open class CfnRuleGroup(
        * single cookie as your custom key, then each value fully defines an aggregation instance.
        */
       override fun cookie(cookie: IResolvable) {
-        cdkBuilder.cookie(cookie.let(IResolvable::unwrap))
+        cdkBuilder.cookie(cookie.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9629,7 +9629,7 @@ public open class CfnRuleGroup(
        * single cookie as your custom key, then each value fully defines an aggregation instance.
        */
       override fun cookie(cookie: RateLimitCookieProperty) {
-        cdkBuilder.cookie(cookie.let(RateLimitCookieProperty::unwrap))
+        cdkBuilder.cookie(cookie.let(RateLimitCookieProperty.Companion::unwrap))
       }
 
       /**
@@ -9663,7 +9663,7 @@ public open class CfnRuleGroup(
        * single header as your custom key, then each value fully defines an aggregation instance.
        */
       override fun `header`(`header`: IResolvable) {
-        cdkBuilder.`header`(`header`.let(IResolvable::unwrap))
+        cdkBuilder.`header`(`header`.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9672,7 +9672,7 @@ public open class CfnRuleGroup(
        * single header as your custom key, then each value fully defines an aggregation instance.
        */
       override fun `header`(`header`: RateLimitHeaderProperty) {
-        cdkBuilder.`header`(`header`.let(RateLimitHeaderProperty::unwrap))
+        cdkBuilder.`header`(`header`.let(RateLimitHeaderProperty.Companion::unwrap))
       }
 
       /**
@@ -9719,7 +9719,7 @@ public open class CfnRuleGroup(
        * in the *AWS WAF Developer Guide* .
        */
       override fun labelNamespace(labelNamespace: IResolvable) {
-        cdkBuilder.labelNamespace(labelNamespace.let(IResolvable::unwrap))
+        cdkBuilder.labelNamespace(labelNamespace.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9736,7 +9736,7 @@ public open class CfnRuleGroup(
        * in the *AWS WAF Developer Guide* .
        */
       override fun labelNamespace(labelNamespace: RateLimitLabelNamespaceProperty) {
-        cdkBuilder.labelNamespace(labelNamespace.let(RateLimitLabelNamespaceProperty::unwrap))
+        cdkBuilder.labelNamespace(labelNamespace.let(RateLimitLabelNamespaceProperty.Companion::unwrap))
       }
 
       /**
@@ -9765,7 +9765,7 @@ public open class CfnRuleGroup(
        * aggregation instance.
        */
       override fun queryArgument(queryArgument: IResolvable) {
-        cdkBuilder.queryArgument(queryArgument.let(IResolvable::unwrap))
+        cdkBuilder.queryArgument(queryArgument.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9775,7 +9775,7 @@ public open class CfnRuleGroup(
        * aggregation instance.
        */
       override fun queryArgument(queryArgument: RateLimitQueryArgumentProperty) {
-        cdkBuilder.queryArgument(queryArgument.let(RateLimitQueryArgumentProperty::unwrap))
+        cdkBuilder.queryArgument(queryArgument.let(RateLimitQueryArgumentProperty.Companion::unwrap))
       }
 
       /**
@@ -9795,7 +9795,7 @@ public open class CfnRuleGroup(
        * string as your custom key, then each string fully defines an aggregation instance.
        */
       override fun queryString(queryString: IResolvable) {
-        cdkBuilder.queryString(queryString.let(IResolvable::unwrap))
+        cdkBuilder.queryString(queryString.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9804,7 +9804,7 @@ public open class CfnRuleGroup(
        * string as your custom key, then each string fully defines an aggregation instance.
        */
       override fun queryString(queryString: RateLimitQueryStringProperty) {
-        cdkBuilder.queryString(queryString.let(RateLimitQueryStringProperty::unwrap))
+        cdkBuilder.queryString(queryString.let(RateLimitQueryStringProperty.Companion::unwrap))
       }
 
       /**
@@ -9823,7 +9823,7 @@ public open class CfnRuleGroup(
        * path as your custom key, then each URI path fully defines an aggregation instance.
        */
       override fun uriPath(uriPath: IResolvable) {
-        cdkBuilder.uriPath(uriPath.let(IResolvable::unwrap))
+        cdkBuilder.uriPath(uriPath.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9832,7 +9832,7 @@ public open class CfnRuleGroup(
        * path as your custom key, then each URI path fully defines an aggregation instance.
        */
       override fun uriPath(uriPath: RateLimitUriPathProperty) {
-        cdkBuilder.uriPath(uriPath.let(RateLimitUriPathProperty::unwrap))
+        cdkBuilder.uriPath(uriPath.let(RateLimitUriPathProperty.Companion::unwrap))
       }
 
       /**
@@ -10782,7 +10782,7 @@ public open class CfnRuleGroup(
        * @param customKeys Specifies the aggregate keys to use in a rate-base rule.
        */
       override fun customKeys(customKeys: IResolvable) {
-        cdkBuilder.customKeys(customKeys.let(IResolvable::unwrap))
+        cdkBuilder.customKeys(customKeys.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10826,7 +10826,7 @@ public open class CfnRuleGroup(
        * This is required if you specify a forwarded IP in the rule's aggregate key settings.
        */
       override fun forwardedIpConfig(forwardedIpConfig: IResolvable) {
-        cdkBuilder.forwardedIpConfig(forwardedIpConfig.let(IResolvable::unwrap))
+        cdkBuilder.forwardedIpConfig(forwardedIpConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10842,7 +10842,7 @@ public open class CfnRuleGroup(
        * This is required if you specify a forwarded IP in the rule's aggregate key settings.
        */
       override fun forwardedIpConfig(forwardedIpConfig: ForwardedIPConfigurationProperty) {
-        cdkBuilder.forwardedIpConfig(forwardedIpConfig.let(ForwardedIPConfigurationProperty::unwrap))
+        cdkBuilder.forwardedIpConfig(forwardedIpConfig.let(ForwardedIPConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -10889,7 +10889,7 @@ public open class CfnRuleGroup(
        * statement.
        */
       override fun scopeDownStatement(scopeDownStatement: IResolvable) {
-        cdkBuilder.scopeDownStatement(scopeDownStatement.let(IResolvable::unwrap))
+        cdkBuilder.scopeDownStatement(scopeDownStatement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10901,7 +10901,7 @@ public open class CfnRuleGroup(
        * statement.
        */
       override fun scopeDownStatement(scopeDownStatement: StatementProperty) {
-        cdkBuilder.scopeDownStatement(scopeDownStatement.let(StatementProperty::unwrap))
+        cdkBuilder.scopeDownStatement(scopeDownStatement.let(StatementProperty.Companion::unwrap))
       }
 
       /**
@@ -11171,7 +11171,7 @@ public open class CfnRuleGroup(
        * contents.
        */
       override fun textTransformations(textTransformations: IResolvable) {
-        cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
+        cdkBuilder.textTransformations(textTransformations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11364,7 +11364,7 @@ public open class CfnRuleGroup(
        * contents.
        */
       override fun textTransformations(textTransformations: IResolvable) {
-        cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
+        cdkBuilder.textTransformations(textTransformations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11654,7 +11654,7 @@ public open class CfnRuleGroup(
        * contents.
        */
       override fun textTransformations(textTransformations: IResolvable) {
-        cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
+        cdkBuilder.textTransformations(textTransformations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11829,7 +11829,7 @@ public open class CfnRuleGroup(
        * contents.
        */
       override fun textTransformations(textTransformations: IResolvable) {
-        cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
+        cdkBuilder.textTransformations(textTransformations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11996,7 +11996,7 @@ public open class CfnRuleGroup(
        * contents.
        */
       override fun textTransformations(textTransformations: IResolvable) {
-        cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
+        cdkBuilder.textTransformations(textTransformations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12229,14 +12229,14 @@ public open class CfnRuleGroup(
        * @param fieldToMatch The part of the web request that you want AWS WAF to inspect. 
        */
       override fun fieldToMatch(fieldToMatch: IResolvable) {
-        cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable::unwrap))
+        cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param fieldToMatch The part of the web request that you want AWS WAF to inspect. 
        */
       override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
-        cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty::unwrap))
+        cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -12262,7 +12262,7 @@ public open class CfnRuleGroup(
        * starting from the lowest priority setting, before inspecting the content for a match.
        */
       override fun textTransformations(textTransformations: IResolvable) {
-        cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
+        cdkBuilder.textTransformations(textTransformations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12518,14 +12518,14 @@ public open class CfnRuleGroup(
        * @param fieldToMatch The part of the web request that you want AWS WAF to inspect. 
        */
       override fun fieldToMatch(fieldToMatch: IResolvable) {
-        cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable::unwrap))
+        cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param fieldToMatch The part of the web request that you want AWS WAF to inspect. 
        */
       override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
-        cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty::unwrap))
+        cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -12544,7 +12544,7 @@ public open class CfnRuleGroup(
        * starting from the lowest priority setting, before inspecting the content for a match.
        */
       override fun textTransformations(textTransformations: IResolvable) {
-        cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
+        cdkBuilder.textTransformations(textTransformations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13645,7 +13645,7 @@ public open class CfnRuleGroup(
        * Settings at the web ACL level can override the rule action setting.
        */
       override fun action(action: IResolvable) {
-        cdkBuilder.action(action.let(IResolvable::unwrap))
+        cdkBuilder.action(action.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13654,7 +13654,7 @@ public open class CfnRuleGroup(
        * Settings at the web ACL level can override the rule action setting.
        */
       override fun action(action: RuleActionProperty) {
-        cdkBuilder.action(action.let(RuleActionProperty::unwrap))
+        cdkBuilder.action(action.let(RuleActionProperty.Companion::unwrap))
       }
 
       /**
@@ -13673,7 +13673,7 @@ public open class CfnRuleGroup(
        * web ACL.
        */
       override fun captchaConfig(captchaConfig: IResolvable) {
-        cdkBuilder.captchaConfig(captchaConfig.let(IResolvable::unwrap))
+        cdkBuilder.captchaConfig(captchaConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13682,7 +13682,7 @@ public open class CfnRuleGroup(
        * web ACL.
        */
       override fun captchaConfig(captchaConfig: CaptchaConfigProperty) {
-        cdkBuilder.captchaConfig(captchaConfig.let(CaptchaConfigProperty::unwrap))
+        cdkBuilder.captchaConfig(captchaConfig.let(CaptchaConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -13701,7 +13701,7 @@ public open class CfnRuleGroup(
        * web ACL.
        */
       override fun challengeConfig(challengeConfig: IResolvable) {
-        cdkBuilder.challengeConfig(challengeConfig.let(IResolvable::unwrap))
+        cdkBuilder.challengeConfig(challengeConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13710,7 +13710,7 @@ public open class CfnRuleGroup(
        * web ACL.
        */
       override fun challengeConfig(challengeConfig: ChallengeConfigProperty) {
-        cdkBuilder.challengeConfig(challengeConfig.let(ChallengeConfigProperty::unwrap))
+        cdkBuilder.challengeConfig(challengeConfig.let(ChallengeConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -13764,7 +13764,7 @@ public open class CfnRuleGroup(
        * For example, `myLabelName` or `nameSpace1:nameSpace2:myLabelName` .
        */
       override fun ruleLabels(ruleLabels: IResolvable) {
-        cdkBuilder.ruleLabels(ruleLabels.let(IResolvable::unwrap))
+        cdkBuilder.ruleLabels(ruleLabels.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13818,7 +13818,7 @@ public open class CfnRuleGroup(
        * `ByteMatchStatement` or `SizeConstraintStatement` . 
        */
       override fun statement(statement: IResolvable) {
-        cdkBuilder.statement(statement.let(IResolvable::unwrap))
+        cdkBuilder.statement(statement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13826,7 +13826,7 @@ public open class CfnRuleGroup(
        * `ByteMatchStatement` or `SizeConstraintStatement` . 
        */
       override fun statement(statement: StatementProperty) {
-        cdkBuilder.statement(statement.let(StatementProperty::unwrap))
+        cdkBuilder.statement(statement.let(StatementProperty.Companion::unwrap))
       }
 
       /**
@@ -13846,7 +13846,7 @@ public open class CfnRuleGroup(
        * the metric name.
        */
       override fun visibilityConfig(visibilityConfig: IResolvable) {
-        cdkBuilder.visibilityConfig(visibilityConfig.let(IResolvable::unwrap))
+        cdkBuilder.visibilityConfig(visibilityConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13857,7 +13857,7 @@ public open class CfnRuleGroup(
        * the metric name.
        */
       override fun visibilityConfig(visibilityConfig: VisibilityConfigProperty) {
-        cdkBuilder.visibilityConfig(visibilityConfig.let(VisibilityConfigProperty::unwrap))
+        cdkBuilder.visibilityConfig(visibilityConfig.let(VisibilityConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -14366,14 +14366,14 @@ public open class CfnRuleGroup(
        * @param fieldToMatch The part of the web request that you want AWS WAF to inspect. 
        */
       override fun fieldToMatch(fieldToMatch: IResolvable) {
-        cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable::unwrap))
+        cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param fieldToMatch The part of the web request that you want AWS WAF to inspect. 
        */
       override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
-        cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty::unwrap))
+        cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -14399,7 +14399,7 @@ public open class CfnRuleGroup(
        * starting from the lowest priority setting, before inspecting the content for a match.
        */
       override fun textTransformations(textTransformations: IResolvable) {
-        cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
+        cdkBuilder.textTransformations(textTransformations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14669,14 +14669,14 @@ public open class CfnRuleGroup(
        * @param fieldToMatch The part of the web request that you want AWS WAF to inspect. 
        */
       override fun fieldToMatch(fieldToMatch: IResolvable) {
-        cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable::unwrap))
+        cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param fieldToMatch The part of the web request that you want AWS WAF to inspect. 
        */
       override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
-        cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty::unwrap))
+        cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -14713,7 +14713,7 @@ public open class CfnRuleGroup(
        * starting from the lowest priority setting, before inspecting the content for a match.
        */
       override fun textTransformations(textTransformations: IResolvable) {
-        cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
+        cdkBuilder.textTransformations(textTransformations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16176,7 +16176,7 @@ public open class CfnRuleGroup(
        * You provide more than one `Statement` within the `AndStatement` .
        */
       override fun andStatement(andStatement: IResolvable) {
-        cdkBuilder.andStatement(andStatement.let(IResolvable::unwrap))
+        cdkBuilder.andStatement(andStatement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16185,7 +16185,7 @@ public open class CfnRuleGroup(
        * You provide more than one `Statement` within the `AndStatement` .
        */
       override fun andStatement(andStatement: AndStatementProperty) {
-        cdkBuilder.andStatement(andStatement.let(AndStatementProperty::unwrap))
+        cdkBuilder.andStatement(andStatement.let(AndStatementProperty.Companion::unwrap))
       }
 
       /**
@@ -16207,7 +16207,7 @@ public open class CfnRuleGroup(
        * is called a string match statement.
        */
       override fun byteMatchStatement(byteMatchStatement: IResolvable) {
-        cdkBuilder.byteMatchStatement(byteMatchStatement.let(IResolvable::unwrap))
+        cdkBuilder.byteMatchStatement(byteMatchStatement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16219,7 +16219,7 @@ public open class CfnRuleGroup(
        * is called a string match statement.
        */
       override fun byteMatchStatement(byteMatchStatement: ByteMatchStatementProperty) {
-        cdkBuilder.byteMatchStatement(byteMatchStatement.let(ByteMatchStatementProperty::unwrap))
+        cdkBuilder.byteMatchStatement(byteMatchStatement.let(ByteMatchStatementProperty.Companion::unwrap))
       }
 
       /**
@@ -16267,7 +16267,7 @@ public open class CfnRuleGroup(
        * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
        */
       override fun geoMatchStatement(geoMatchStatement: IResolvable) {
-        cdkBuilder.geoMatchStatement(geoMatchStatement.let(IResolvable::unwrap))
+        cdkBuilder.geoMatchStatement(geoMatchStatement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16301,7 +16301,7 @@ public open class CfnRuleGroup(
        * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) .
        */
       override fun geoMatchStatement(geoMatchStatement: GeoMatchStatementProperty) {
-        cdkBuilder.geoMatchStatement(geoMatchStatement.let(GeoMatchStatementProperty::unwrap))
+        cdkBuilder.geoMatchStatement(geoMatchStatement.let(GeoMatchStatementProperty.Companion::unwrap))
       }
 
       /**
@@ -16351,7 +16351,7 @@ public open class CfnRuleGroup(
        * update the referenced set, AWS WAF automatically updates all rules that reference it.
        */
       override fun ipSetReferenceStatement(ipSetReferenceStatement: IResolvable) {
-        cdkBuilder.ipSetReferenceStatement(ipSetReferenceStatement.let(IResolvable::unwrap))
+        cdkBuilder.ipSetReferenceStatement(ipSetReferenceStatement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16366,7 +16366,7 @@ public open class CfnRuleGroup(
        */
       override
           fun ipSetReferenceStatement(ipSetReferenceStatement: IPSetReferenceStatementProperty) {
-        cdkBuilder.ipSetReferenceStatement(ipSetReferenceStatement.let(IPSetReferenceStatementProperty::unwrap))
+        cdkBuilder.ipSetReferenceStatement(ipSetReferenceStatement.let(IPSetReferenceStatementProperty.Companion::unwrap))
       }
 
       /**
@@ -16396,7 +16396,7 @@ public open class CfnRuleGroup(
        * search for labels that were added in the same context as the label match statement.
        */
       override fun labelMatchStatement(labelMatchStatement: IResolvable) {
-        cdkBuilder.labelMatchStatement(labelMatchStatement.let(IResolvable::unwrap))
+        cdkBuilder.labelMatchStatement(labelMatchStatement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16410,7 +16410,7 @@ public open class CfnRuleGroup(
        * search for labels that were added in the same context as the label match statement.
        */
       override fun labelMatchStatement(labelMatchStatement: LabelMatchStatementProperty) {
-        cdkBuilder.labelMatchStatement(labelMatchStatement.let(LabelMatchStatementProperty::unwrap))
+        cdkBuilder.labelMatchStatement(labelMatchStatement.let(LabelMatchStatementProperty.Companion::unwrap))
       }
 
       /**
@@ -16435,7 +16435,7 @@ public open class CfnRuleGroup(
        * You provide one `Statement` within the `NotStatement` .
        */
       override fun notStatement(notStatement: IResolvable) {
-        cdkBuilder.notStatement(notStatement.let(IResolvable::unwrap))
+        cdkBuilder.notStatement(notStatement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16444,7 +16444,7 @@ public open class CfnRuleGroup(
        * You provide one `Statement` within the `NotStatement` .
        */
       override fun notStatement(notStatement: NotStatementProperty) {
-        cdkBuilder.notStatement(notStatement.let(NotStatementProperty::unwrap))
+        cdkBuilder.notStatement(notStatement.let(NotStatementProperty.Companion::unwrap))
       }
 
       /**
@@ -16463,7 +16463,7 @@ public open class CfnRuleGroup(
        * You provide more than one `Statement` within the `OrStatement` .
        */
       override fun orStatement(orStatement: IResolvable) {
-        cdkBuilder.orStatement(orStatement.let(IResolvable::unwrap))
+        cdkBuilder.orStatement(orStatement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16472,7 +16472,7 @@ public open class CfnRuleGroup(
        * You provide more than one `Statement` within the `OrStatement` .
        */
       override fun orStatement(orStatement: OrStatementProperty) {
-        cdkBuilder.orStatement(orStatement.let(OrStatementProperty::unwrap))
+        cdkBuilder.orStatement(orStatement.let(OrStatementProperty.Companion::unwrap))
       }
 
       /**
@@ -16565,7 +16565,7 @@ public open class CfnRuleGroup(
        * of the rate-based rule that gets its own tracking and management by AWS WAF .
        */
       override fun rateBasedStatement(rateBasedStatement: IResolvable) {
-        cdkBuilder.rateBasedStatement(rateBasedStatement.let(IResolvable::unwrap))
+        cdkBuilder.rateBasedStatement(rateBasedStatement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16648,7 +16648,7 @@ public open class CfnRuleGroup(
        * of the rate-based rule that gets its own tracking and management by AWS WAF .
        */
       override fun rateBasedStatement(rateBasedStatement: RateBasedStatementProperty) {
-        cdkBuilder.rateBasedStatement(rateBasedStatement.let(RateBasedStatementProperty::unwrap))
+        cdkBuilder.rateBasedStatement(rateBasedStatement.let(RateBasedStatementProperty.Companion::unwrap))
       }
 
       /**
@@ -16741,7 +16741,7 @@ public open class CfnRuleGroup(
        * match against a single regular expression.
        */
       override fun regexMatchStatement(regexMatchStatement: IResolvable) {
-        cdkBuilder.regexMatchStatement(regexMatchStatement.let(IResolvable::unwrap))
+        cdkBuilder.regexMatchStatement(regexMatchStatement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16749,7 +16749,7 @@ public open class CfnRuleGroup(
        * match against a single regular expression.
        */
       override fun regexMatchStatement(regexMatchStatement: RegexMatchStatementProperty) {
-        cdkBuilder.regexMatchStatement(regexMatchStatement.let(RegexMatchStatementProperty::unwrap))
+        cdkBuilder.regexMatchStatement(regexMatchStatement.let(RegexMatchStatementProperty.Companion::unwrap))
       }
 
       /**
@@ -16776,7 +16776,7 @@ public open class CfnRuleGroup(
        */
       override
           fun regexPatternSetReferenceStatement(regexPatternSetReferenceStatement: IResolvable) {
-        cdkBuilder.regexPatternSetReferenceStatement(regexPatternSetReferenceStatement.let(IResolvable::unwrap))
+        cdkBuilder.regexPatternSetReferenceStatement(regexPatternSetReferenceStatement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16793,7 +16793,7 @@ public open class CfnRuleGroup(
        */
       override
           fun regexPatternSetReferenceStatement(regexPatternSetReferenceStatement: RegexPatternSetReferenceStatementProperty) {
-        cdkBuilder.regexPatternSetReferenceStatement(regexPatternSetReferenceStatement.let(RegexPatternSetReferenceStatementProperty::unwrap))
+        cdkBuilder.regexPatternSetReferenceStatement(regexPatternSetReferenceStatement.let(RegexPatternSetReferenceStatementProperty.Companion::unwrap))
       }
 
       /**
@@ -16833,7 +16833,7 @@ public open class CfnRuleGroup(
        * URI counts as one character. For example, the URI `/logo.jpg` is nine characters long.
        */
       override fun sizeConstraintStatement(sizeConstraintStatement: IResolvable) {
-        cdkBuilder.sizeConstraintStatement(sizeConstraintStatement.let(IResolvable::unwrap))
+        cdkBuilder.sizeConstraintStatement(sizeConstraintStatement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16855,7 +16855,7 @@ public open class CfnRuleGroup(
        */
       override
           fun sizeConstraintStatement(sizeConstraintStatement: SizeConstraintStatementProperty) {
-        cdkBuilder.sizeConstraintStatement(sizeConstraintStatement.let(SizeConstraintStatementProperty::unwrap))
+        cdkBuilder.sizeConstraintStatement(sizeConstraintStatement.let(SizeConstraintStatementProperty.Companion::unwrap))
       }
 
       /**
@@ -16887,7 +16887,7 @@ public open class CfnRuleGroup(
        * database or extract data from it.
        */
       override fun sqliMatchStatement(sqliMatchStatement: IResolvable) {
-        cdkBuilder.sqliMatchStatement(sqliMatchStatement.let(IResolvable::unwrap))
+        cdkBuilder.sqliMatchStatement(sqliMatchStatement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16896,7 +16896,7 @@ public open class CfnRuleGroup(
        * database or extract data from it.
        */
       override fun sqliMatchStatement(sqliMatchStatement: SqliMatchStatementProperty) {
-        cdkBuilder.sqliMatchStatement(sqliMatchStatement.let(SqliMatchStatementProperty::unwrap))
+        cdkBuilder.sqliMatchStatement(sqliMatchStatement.let(SqliMatchStatementProperty.Companion::unwrap))
       }
 
       /**
@@ -16917,7 +16917,7 @@ public open class CfnRuleGroup(
        * inject malicious client-site scripts into other legitimate web browsers.
        */
       override fun xssMatchStatement(xssMatchStatement: IResolvable) {
-        cdkBuilder.xssMatchStatement(xssMatchStatement.let(IResolvable::unwrap))
+        cdkBuilder.xssMatchStatement(xssMatchStatement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16927,7 +16927,7 @@ public open class CfnRuleGroup(
        * inject malicious client-site scripts into other legitimate web browsers.
        */
       override fun xssMatchStatement(xssMatchStatement: XssMatchStatementProperty) {
-        cdkBuilder.xssMatchStatement(xssMatchStatement.let(XssMatchStatementProperty::unwrap))
+        cdkBuilder.xssMatchStatement(xssMatchStatement.let(XssMatchStatementProperty.Companion::unwrap))
       }
 
       /**
@@ -17525,7 +17525,7 @@ public open class CfnRuleGroup(
        * the *AWS WAF Developer Guide* .
        */
       override fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable) {
-        cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -17563,7 +17563,7 @@ public open class CfnRuleGroup(
        * from request sampling is by disabling sampling in the web ACL visibility configuration.
        */
       override fun sampledRequestsEnabled(sampledRequestsEnabled: IResolvable) {
-        cdkBuilder.sampledRequestsEnabled(sampledRequestsEnabled.let(IResolvable::unwrap))
+        cdkBuilder.sampledRequestsEnabled(sampledRequestsEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -17787,14 +17787,14 @@ public open class CfnRuleGroup(
        * @param fieldToMatch The part of the web request that you want AWS WAF to inspect. 
        */
       override fun fieldToMatch(fieldToMatch: IResolvable) {
-        cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable::unwrap))
+        cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param fieldToMatch The part of the web request that you want AWS WAF to inspect. 
        */
       override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
-        cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty::unwrap))
+        cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty.Companion::unwrap))
       }
 
       /**
@@ -17813,7 +17813,7 @@ public open class CfnRuleGroup(
        * starting from the lowest priority setting, before inspecting the content for a match.
        */
       override fun textTransformations(textTransformations: IResolvable) {
-        cdkBuilder.textTransformations(textTransformations.let(IResolvable::unwrap))
+        cdkBuilder.textTransformations(textTransformations.let(IResolvable.Companion::unwrap))
       }
 
       /**

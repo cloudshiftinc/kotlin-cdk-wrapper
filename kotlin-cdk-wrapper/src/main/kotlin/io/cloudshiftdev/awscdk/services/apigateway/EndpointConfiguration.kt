@@ -74,7 +74,7 @@ public interface EndpointConfiguration {
      * @param types A list of endpoint types of an API or its custom domain name. 
      */
     override fun types(types: List<EndpointType>) {
-      cdkBuilder.types(types.map(EndpointType::unwrap))
+      cdkBuilder.types(types.map(EndpointType.Companion::unwrap))
     }
 
     /**
@@ -86,7 +86,7 @@ public interface EndpointConfiguration {
      * @param vpcEndpoints A list of VPC Endpoints against which to create Route53 ALIASes.
      */
     override fun vpcEndpoints(vpcEndpoints: List<IVpcEndpoint>) {
-      cdkBuilder.vpcEndpoints(vpcEndpoints.map(IVpcEndpoint::unwrap))
+      cdkBuilder.vpcEndpoints(vpcEndpoints.map(IVpcEndpoint.Companion::unwrap))
     }
 
     /**

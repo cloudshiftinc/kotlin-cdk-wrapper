@@ -169,7 +169,7 @@ public interface InitFileOptions {
      * @param serviceRestartHandles Restart the given service after this file has been written.
      */
     override fun serviceRestartHandles(serviceRestartHandles: List<InitServiceRestartHandle>) {
-      cdkBuilder.serviceRestartHandles(serviceRestartHandles.map(InitServiceRestartHandle::unwrap))
+      cdkBuilder.serviceRestartHandles(serviceRestartHandles.map(InitServiceRestartHandle.Companion::unwrap))
     }
 
     /**

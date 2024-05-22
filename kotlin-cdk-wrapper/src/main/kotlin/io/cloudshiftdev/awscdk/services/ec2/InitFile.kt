@@ -56,7 +56,7 @@ public abstract class InitFile(
       path: String,
       options: InitFileAssetOptions,
     ): InitFile = software.amazon.awscdk.services.ec2.InitFile.fromAsset(targetFileName, path,
-        options.let(InitFileAssetOptions::unwrap)).let(InitFile::wrap)
+        options.let(InitFileAssetOptions.Companion::unwrap)).let(InitFile::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0cd84052c5af85eab4abafad0cb4955b8e98fcbabce662031d8126c0cdc4b88c")
@@ -68,14 +68,15 @@ public abstract class InitFile(
 
     public fun fromExistingAsset(targetFileName: String, asset: Asset): InitFile =
         software.amazon.awscdk.services.ec2.InitFile.fromExistingAsset(targetFileName,
-        asset.let(Asset::unwrap)).let(InitFile::wrap)
+        asset.let(Asset.Companion::unwrap)).let(InitFile::wrap)
 
     public fun fromExistingAsset(
       targetFileName: String,
       asset: Asset,
       options: InitFileOptions,
     ): InitFile = software.amazon.awscdk.services.ec2.InitFile.fromExistingAsset(targetFileName,
-        asset.let(Asset::unwrap), options.let(InitFileOptions::unwrap)).let(InitFile::wrap)
+        asset.let(Asset.Companion::unwrap),
+        options.let(InitFileOptions.Companion::unwrap)).let(InitFile::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0682e870032d4be19d8855aec193f92aa7b2efdbf7f3b392bbd49c301fc76c76")
@@ -94,7 +95,7 @@ public abstract class InitFile(
       sourceFileName: String,
       options: InitFileOptions,
     ): InitFile = software.amazon.awscdk.services.ec2.InitFile.fromFileInline(targetFileName,
-        sourceFileName, options.let(InitFileOptions::unwrap)).let(InitFile::wrap)
+        sourceFileName, options.let(InitFileOptions.Companion::unwrap)).let(InitFile::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("878f71ef5b9479902b6f46c0620a740d1dd2326dd7d170f10504747a5c1695db")
@@ -114,7 +115,7 @@ public abstract class InitFile(
       options: InitFileOptions,
     ): InitFile = software.amazon.awscdk.services.ec2.InitFile.fromObject(fileName,
         obj.mapValues{CdkObjectWrappers.unwrap(it.value)},
-        options.let(InitFileOptions::unwrap)).let(InitFile::wrap)
+        options.let(InitFileOptions.Companion::unwrap)).let(InitFile::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e345663b9fbc8b23594aa30cc8848b9da053d6333bfcfbd85dd18b77055b3770")
@@ -129,7 +130,7 @@ public abstract class InitFile(
       bucket: IBucket,
       key: String,
     ): InitFile = software.amazon.awscdk.services.ec2.InitFile.fromS3Object(fileName,
-        bucket.let(IBucket::unwrap), key).let(InitFile::wrap)
+        bucket.let(IBucket.Companion::unwrap), key).let(InitFile::wrap)
 
     public fun fromS3Object(
       fileName: String,
@@ -137,7 +138,8 @@ public abstract class InitFile(
       key: String,
       options: InitFileOptions,
     ): InitFile = software.amazon.awscdk.services.ec2.InitFile.fromS3Object(fileName,
-        bucket.let(IBucket::unwrap), key, options.let(InitFileOptions::unwrap)).let(InitFile::wrap)
+        bucket.let(IBucket.Companion::unwrap), key,
+        options.let(InitFileOptions.Companion::unwrap)).let(InitFile::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7f2f70a96955a6a69821f6e2b7f68daedd0264960b582a110c3ca98032e0efc4")
@@ -157,7 +159,7 @@ public abstract class InitFile(
       content: String,
       options: InitFileOptions,
     ): InitFile = software.amazon.awscdk.services.ec2.InitFile.fromString(fileName, content,
-        options.let(InitFileOptions::unwrap)).let(InitFile::wrap)
+        options.let(InitFileOptions.Companion::unwrap)).let(InitFile::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3a466a510cb9df44b5f954405749e107dcaa57db1fb0afcbb5e451b71e178ea0")
@@ -175,7 +177,7 @@ public abstract class InitFile(
       url: String,
       options: InitFileOptions,
     ): InitFile = software.amazon.awscdk.services.ec2.InitFile.fromUrl(fileName, url,
-        options.let(InitFileOptions::unwrap)).let(InitFile::wrap)
+        options.let(InitFileOptions.Companion::unwrap)).let(InitFile::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4fa29a032d33c25fa83792a2cbb96ea2ed59be37f14328bc2301abf27ec7b3b7")
@@ -193,7 +195,7 @@ public abstract class InitFile(
       target: String,
       options: InitFileOptions,
     ): InitFile = software.amazon.awscdk.services.ec2.InitFile.symlink(fileName, target,
-        options.let(InitFileOptions::unwrap)).let(InitFile::wrap)
+        options.let(InitFileOptions.Companion::unwrap)).let(InitFile::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("243018c22471ae1eb11927c0b3d7fb02d0d91fdcfb0faab2cf57e3c5d3e3f66b")

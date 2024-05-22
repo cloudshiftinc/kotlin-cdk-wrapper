@@ -79,7 +79,7 @@ public open class CfnApi(
   cdkObject: software.amazon.awscdk.services.apigatewayv2.CfnApi,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.apigatewayv2.CfnApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.apigatewayv2.CfnApi(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -88,8 +88,8 @@ public open class CfnApi(
     id: String,
     props: CfnApiProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.CfnApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApiProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.CfnApi(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApiProps.Companion::unwrap))
   )
 
   public constructor(
@@ -156,14 +156,14 @@ public open class CfnApi(
    * The S3 location of an OpenAPI definition.
    */
   public open fun bodyS3Location(`value`: IResolvable) {
-    unwrap(this).setBodyS3Location(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBodyS3Location(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The S3 location of an OpenAPI definition.
    */
   public open fun bodyS3Location(`value`: BodyS3LocationProperty) {
-    unwrap(this).setBodyS3Location(`value`.let(BodyS3LocationProperty::unwrap))
+    unwrap(this).setBodyS3Location(`value`.let(BodyS3LocationProperty.Companion::unwrap))
   }
 
   /**
@@ -183,14 +183,14 @@ public open class CfnApi(
    * A CORS configuration.
    */
   public open fun corsConfiguration(`value`: IResolvable) {
-    unwrap(this).setCorsConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCorsConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A CORS configuration.
    */
   public open fun corsConfiguration(`value`: CorsProperty) {
-    unwrap(this).setCorsConfiguration(`value`.let(CorsProperty::unwrap))
+    unwrap(this).setCorsConfiguration(`value`.let(CorsProperty.Companion::unwrap))
   }
 
   /**
@@ -241,7 +241,7 @@ public open class CfnApi(
    * Specifies whether clients can invoke your API by using the default `execute-api` endpoint.
    */
   public open fun disableExecuteApiEndpoint(`value`: IResolvable) {
-    unwrap(this).setDisableExecuteApiEndpoint(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDisableExecuteApiEndpoint(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -260,7 +260,7 @@ public open class CfnApi(
    * Avoid validating models when creating a deployment.
    */
   public open fun disableSchemaValidation(`value`: IResolvable) {
-    unwrap(this).setDisableSchemaValidation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDisableSchemaValidation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -279,7 +279,7 @@ public open class CfnApi(
    * Specifies whether to rollback the API creation when a warning is encountered.
    */
   public open fun failOnWarnings(`value`: IResolvable) {
-    unwrap(this).setFailOnWarnings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFailOnWarnings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -288,7 +288,7 @@ public open class CfnApi(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -734,7 +734,7 @@ public open class CfnApi(
      * @param bodyS3Location The S3 location of an OpenAPI definition. 
      */
     override fun bodyS3Location(bodyS3Location: IResolvable) {
-      cdkBuilder.bodyS3Location(bodyS3Location.let(IResolvable::unwrap))
+      cdkBuilder.bodyS3Location(bodyS3Location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -749,7 +749,7 @@ public open class CfnApi(
      * @param bodyS3Location The S3 location of an OpenAPI definition. 
      */
     override fun bodyS3Location(bodyS3Location: BodyS3LocationProperty) {
-      cdkBuilder.bodyS3Location(bodyS3Location.let(BodyS3LocationProperty::unwrap))
+      cdkBuilder.bodyS3Location(bodyS3Location.let(BodyS3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -779,7 +779,7 @@ public open class CfnApi(
      * @param corsConfiguration A CORS configuration. 
      */
     override fun corsConfiguration(corsConfiguration: IResolvable) {
-      cdkBuilder.corsConfiguration(corsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.corsConfiguration(corsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -793,7 +793,7 @@ public open class CfnApi(
      * @param corsConfiguration A CORS configuration. 
      */
     override fun corsConfiguration(corsConfiguration: CorsProperty) {
-      cdkBuilder.corsConfiguration(corsConfiguration.let(CorsProperty::unwrap))
+      cdkBuilder.corsConfiguration(corsConfiguration.let(CorsProperty.Companion::unwrap))
     }
 
     /**
@@ -865,7 +865,7 @@ public open class CfnApi(
      * default `execute-api` endpoint. 
      */
     override fun disableExecuteApiEndpoint(disableExecuteApiEndpoint: IResolvable) {
-      cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint.let(IResolvable::unwrap))
+      cdkBuilder.disableExecuteApiEndpoint(disableExecuteApiEndpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -889,7 +889,7 @@ public open class CfnApi(
      * @param disableSchemaValidation Avoid validating models when creating a deployment. 
      */
     override fun disableSchemaValidation(disableSchemaValidation: IResolvable) {
-      cdkBuilder.disableSchemaValidation(disableSchemaValidation.let(IResolvable::unwrap))
+      cdkBuilder.disableSchemaValidation(disableSchemaValidation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -915,7 +915,7 @@ public open class CfnApi(
      * encountered. 
      */
     override fun failOnWarnings(failOnWarnings: IResolvable) {
-      cdkBuilder.failOnWarnings(failOnWarnings.let(IResolvable::unwrap))
+      cdkBuilder.failOnWarnings(failOnWarnings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1379,7 +1379,7 @@ public open class CfnApi(
        * Supported only for HTTP APIs.
        */
       override fun allowCredentials(allowCredentials: IResolvable) {
-        cdkBuilder.allowCredentials(allowCredentials.let(IResolvable::unwrap))
+        cdkBuilder.allowCredentials(allowCredentials.let(IResolvable.Companion::unwrap))
       }
 
       /**

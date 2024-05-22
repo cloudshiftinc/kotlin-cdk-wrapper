@@ -26,10 +26,10 @@ public open class ComparablePrincipal(
 
   public companion object {
     public fun dedupeStringFor(x: IPrincipal): String? =
-        software.amazon.awscdk.services.iam.ComparablePrincipal.dedupeStringFor(x.let(IPrincipal::unwrap))
+        software.amazon.awscdk.services.iam.ComparablePrincipal.dedupeStringFor(x.let(IPrincipal.Companion::unwrap))
 
     public fun isComparablePrincipal(x: IPrincipal): Boolean =
-        software.amazon.awscdk.services.iam.ComparablePrincipal.isComparablePrincipal(x.let(IPrincipal::unwrap))
+        software.amazon.awscdk.services.iam.ComparablePrincipal.isComparablePrincipal(x.let(IPrincipal.Companion::unwrap))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.ComparablePrincipal):
         ComparablePrincipal = ComparablePrincipal(cdkObject)

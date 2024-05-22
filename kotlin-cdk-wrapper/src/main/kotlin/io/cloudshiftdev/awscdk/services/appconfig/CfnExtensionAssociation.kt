@@ -58,7 +58,7 @@ public open class CfnExtensionAssociation(
   cdkObject: software.amazon.awscdk.services.appconfig.CfnExtensionAssociation,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.appconfig.CfnExtensionAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.appconfig.CfnExtensionAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -67,8 +67,8 @@ public open class CfnExtensionAssociation(
     id: String,
     props: CfnExtensionAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.appconfig.CfnExtensionAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnExtensionAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.appconfig.CfnExtensionAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnExtensionAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -128,7 +128,7 @@ public open class CfnExtensionAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -140,7 +140,7 @@ public open class CfnExtensionAssociation(
    * The parameter names and values defined in the extensions.
    */
   public open fun parameters(`value`: IResolvable) {
-    unwrap(this).setParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -177,7 +177,7 @@ public open class CfnExtensionAssociation(
    * Adds one or more tags for the specified extension association.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -302,7 +302,7 @@ public open class CfnExtensionAssociation(
      * @param parameters The parameter names and values defined in the extensions. 
      */
     override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -338,7 +338,7 @@ public open class CfnExtensionAssociation(
      * @param tags Adds one or more tags for the specified extension association. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

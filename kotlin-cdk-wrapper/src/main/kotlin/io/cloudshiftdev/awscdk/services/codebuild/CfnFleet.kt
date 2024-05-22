@@ -44,7 +44,7 @@ public open class CfnFleet(
   cdkObject: software.amazon.awscdk.services.codebuild.CfnFleet,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.codebuild.CfnFleet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.codebuild.CfnFleet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -53,8 +53,8 @@ public open class CfnFleet(
     id: String,
     props: CfnFleetProps,
   ) :
-      this(software.amazon.awscdk.services.codebuild.CfnFleet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFleetProps::unwrap))
+      this(software.amazon.awscdk.services.codebuild.CfnFleet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFleetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -123,7 +123,7 @@ public open class CfnFleet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -147,7 +147,7 @@ public open class CfnFleet(
    * A list of tag key and value pairs associated with this compute fleet.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -384,7 +384,7 @@ public open class CfnFleet(
      * @param tags A list of tag key and value pairs associated with this compute fleet. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

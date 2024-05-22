@@ -50,8 +50,8 @@ public open class CfnTableOptimizer(
     id: String,
     props: CfnTableOptimizerProps,
   ) :
-      this(software.amazon.awscdk.services.glue.CfnTableOptimizer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTableOptimizerProps::unwrap))
+      this(software.amazon.awscdk.services.glue.CfnTableOptimizer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTableOptimizerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -96,7 +96,7 @@ public open class CfnTableOptimizer(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -120,14 +120,14 @@ public open class CfnTableOptimizer(
    * Specifies configuration details of a table optimizer.
    */
   public open fun tableOptimizerConfiguration(`value`: IResolvable) {
-    unwrap(this).setTableOptimizerConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTableOptimizerConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies configuration details of a table optimizer.
    */
   public open fun tableOptimizerConfiguration(`value`: TableOptimizerConfigurationProperty) {
-    unwrap(this).setTableOptimizerConfiguration(`value`.let(TableOptimizerConfigurationProperty::unwrap))
+    unwrap(this).setTableOptimizerConfiguration(`value`.let(TableOptimizerConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -271,7 +271,7 @@ public open class CfnTableOptimizer(
      * @param tableOptimizerConfiguration Specifies configuration details of a table optimizer. 
      */
     override fun tableOptimizerConfiguration(tableOptimizerConfiguration: IResolvable) {
-      cdkBuilder.tableOptimizerConfiguration(tableOptimizerConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.tableOptimizerConfiguration(tableOptimizerConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -282,7 +282,7 @@ public open class CfnTableOptimizer(
      */
     override
         fun tableOptimizerConfiguration(tableOptimizerConfiguration: TableOptimizerConfigurationProperty) {
-      cdkBuilder.tableOptimizerConfiguration(tableOptimizerConfiguration.let(TableOptimizerConfigurationProperty::unwrap))
+      cdkBuilder.tableOptimizerConfiguration(tableOptimizerConfiguration.let(TableOptimizerConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -407,7 +407,7 @@ public open class CfnTableOptimizer(
        * @param enabled Whether the table optimization is enabled. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**

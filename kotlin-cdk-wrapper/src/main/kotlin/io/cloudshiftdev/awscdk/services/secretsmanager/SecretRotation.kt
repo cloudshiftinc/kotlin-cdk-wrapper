@@ -43,8 +43,8 @@ public open class SecretRotation(
     id: String,
     props: SecretRotationProps,
   ) :
-      this(software.amazon.awscdk.services.secretsmanager.SecretRotation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SecretRotationProps::unwrap))
+      this(software.amazon.awscdk.services.secretsmanager.SecretRotation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SecretRotationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -204,7 +204,7 @@ public open class SecretRotation(
      * @param application The serverless application for the rotation. 
      */
     override fun application(application: SecretRotationApplication) {
-      cdkBuilder.application(application.let(SecretRotationApplication::unwrap))
+      cdkBuilder.application(application.let(SecretRotationApplication.Companion::unwrap))
     }
 
     /**
@@ -217,7 +217,7 @@ public open class SecretRotation(
      * Secrets Manager triggers the next automatic rotation. 
      */
     override fun automaticallyAfter(automaticallyAfter: Duration) {
-      cdkBuilder.automaticallyAfter(automaticallyAfter.let(Duration::unwrap))
+      cdkBuilder.automaticallyAfter(automaticallyAfter.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -233,7 +233,7 @@ public open class SecretRotation(
      * @param endpoint The VPC interface endpoint to use for the Secrets Manager API. 
      */
     override fun endpoint(endpoint: IInterfaceVpcEndpoint) {
-      cdkBuilder.endpoint(endpoint.let(IInterfaceVpcEndpoint::unwrap))
+      cdkBuilder.endpoint(endpoint.let(IInterfaceVpcEndpoint.Companion::unwrap))
     }
 
     /**
@@ -255,7 +255,7 @@ public open class SecretRotation(
      * @param masterSecret The master secret for a multi user rotation scheme. 
      */
     override fun masterSecret(masterSecret: ISecret) {
-      cdkBuilder.masterSecret(masterSecret.let(ISecret::unwrap))
+      cdkBuilder.masterSecret(masterSecret.let(ISecret.Companion::unwrap))
     }
 
     /**
@@ -295,7 +295,7 @@ public open class SecretRotation(
      * @param secret The secret to rotate. It must be a JSON string with the following format:. 
      */
     override fun secret(secret: ISecret) {
-      cdkBuilder.secret(secret.let(ISecret::unwrap))
+      cdkBuilder.secret(secret.let(ISecret.Companion::unwrap))
     }
 
     /**
@@ -306,7 +306,7 @@ public open class SecretRotation(
      * @param securityGroup The security group for the Lambda rotation function. 
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -315,7 +315,7 @@ public open class SecretRotation(
      * @param target The target service or database. 
      */
     override fun target(target: IConnectable) {
-      cdkBuilder.target(target.let(IConnectable::unwrap))
+      cdkBuilder.target(target.let(IConnectable.Companion::unwrap))
     }
 
     /**
@@ -324,7 +324,7 @@ public open class SecretRotation(
      * @param vpc The VPC where the Lambda rotation function will run. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -336,7 +336,7 @@ public open class SecretRotation(
      * 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

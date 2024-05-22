@@ -50,7 +50,7 @@ public abstract class Billing(
         software.amazon.awscdk.services.dynamodb.Billing.onDemand().let(Billing::wrap)
 
     public fun provisioned(props: ThroughputProps): Billing =
-        software.amazon.awscdk.services.dynamodb.Billing.provisioned(props.let(ThroughputProps::unwrap)).let(Billing::wrap)
+        software.amazon.awscdk.services.dynamodb.Billing.provisioned(props.let(ThroughputProps.Companion::unwrap)).let(Billing::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4a809155c8ce7d1be4bf74289d5a94ae5c101cc12d650e3fdd8528190ca8597a")

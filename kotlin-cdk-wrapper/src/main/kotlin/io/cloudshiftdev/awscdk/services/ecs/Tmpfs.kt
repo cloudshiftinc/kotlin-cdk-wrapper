@@ -94,7 +94,7 @@ public interface Tmpfs {
      * [TmpfsMountOptions](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_Tmpfs.html).
      */
     override fun mountOptions(mountOptions: List<TmpfsMountOption>) {
-      cdkBuilder.mountOptions(mountOptions.map(TmpfsMountOption::unwrap))
+      cdkBuilder.mountOptions(mountOptions.map(TmpfsMountOption.Companion::unwrap))
     }
 
     /**

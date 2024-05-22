@@ -69,14 +69,14 @@ public interface Ec2TaskDefinitionAttributes : CommonTaskDefinitionAttributes {
      * Some tasks do not have an execution role.
      */
     override fun executionRole(executionRole: IRole) {
-      cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
+      cdkBuilder.executionRole(executionRole.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param networkMode The networking mode to use for the containers in the task.
      */
     override fun networkMode(networkMode: NetworkMode) {
-      cdkBuilder.networkMode(networkMode.let(NetworkMode::unwrap))
+      cdkBuilder.networkMode(networkMode.let(NetworkMode.Companion::unwrap))
     }
 
     /**
@@ -91,7 +91,7 @@ public interface Ec2TaskDefinitionAttributes : CommonTaskDefinitionAttributes {
      * call AWS APIs on your behalf.
      */
     override fun taskRole(taskRole: IRole) {
-      cdkBuilder.taskRole(taskRole.let(IRole::unwrap))
+      cdkBuilder.taskRole(taskRole.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.Ec2TaskDefinitionAttributes =

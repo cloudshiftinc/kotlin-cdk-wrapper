@@ -40,10 +40,11 @@ import kotlin.collections.List
  * .key("key")
  * .build())
  * .build())
+ * .type("type")
+ * // the properties below are optional
  * .name("name")
  * .overwriteExisting("overwriteExisting")
  * .sourceFileLocation("sourceFileLocation")
- * .type("type")
  * .build())
  * .deleteStepDetails(deleteStepDetails)
  * .tagStepDetails(tagStepDetails)
@@ -65,10 +66,11 @@ import kotlin.collections.List
  * .key("key")
  * .build())
  * .build())
+ * .type("type")
+ * // the properties below are optional
  * .name("name")
  * .overwriteExisting("overwriteExisting")
  * .sourceFileLocation("sourceFileLocation")
- * .type("type")
  * .build())
  * .deleteStepDetails(deleteStepDetails)
  * .tagStepDetails(tagStepDetails)
@@ -187,7 +189,7 @@ public interface CfnWorkflowProps {
      * during execution of the workflow.
      */
     override fun onExceptionSteps(onExceptionSteps: IResolvable) {
-      cdkBuilder.onExceptionSteps(onExceptionSteps.let(IResolvable::unwrap))
+      cdkBuilder.onExceptionSteps(onExceptionSteps.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -209,7 +211,7 @@ public interface CfnWorkflowProps {
      * @param steps Specifies the details for the steps that are in the specified workflow. 
      */
     override fun steps(steps: IResolvable) {
-      cdkBuilder.steps(steps.let(IResolvable::unwrap))
+      cdkBuilder.steps(steps.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -229,7 +231,7 @@ public interface CfnWorkflowProps {
      * Tags are metadata attached to workflows for any purpose.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

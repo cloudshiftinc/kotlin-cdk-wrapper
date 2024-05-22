@@ -77,7 +77,7 @@ public interface IFileSystem : IConnectable, IResourceWithPolicy {
      * @param statement 
      */
     override fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
-        unwrap(this).addToResourcePolicy(statement.let(PolicyStatement::unwrap)).let(AddToResourcePolicyResult::wrap)
+        unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
 
     /**
      * Add a statement to the resource's resource policy.
@@ -103,7 +103,7 @@ public interface IFileSystem : IConnectable, IResourceWithPolicy {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -140,7 +140,7 @@ public interface IFileSystem : IConnectable, IResourceWithPolicy {
      * @param actions 
      */
     override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-        unwrap(this).grant(grantee.let(IGrantable::unwrap),
+        unwrap(this).grant(grantee.let(IGrantable.Companion::unwrap),
         *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
     /**
@@ -149,7 +149,7 @@ public interface IFileSystem : IConnectable, IResourceWithPolicy {
      * @param grantee The principal to grant read to. 
      */
     override fun grantRead(grantee: IGrantable): Grant =
-        unwrap(this).grantRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grant read and write permissions for this file system to an IAM principal.
@@ -157,7 +157,7 @@ public interface IFileSystem : IConnectable, IResourceWithPolicy {
      * @param grantee The principal to grant read and write to. 
      */
     override fun grantReadWrite(grantee: IGrantable): Grant =
-        unwrap(this).grantReadWrite(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantReadWrite(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * As root user, grant read and write permissions for this file system to an IAM principal.
@@ -165,7 +165,7 @@ public interface IFileSystem : IConnectable, IResourceWithPolicy {
      * @param grantee The principal to grant root access to. 
      */
     override fun grantRootAccess(grantee: IGrantable): Grant =
-        unwrap(this).grantRootAccess(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantRootAccess(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Dependable that can be depended upon to ensure the mount targets of the filesystem are ready.

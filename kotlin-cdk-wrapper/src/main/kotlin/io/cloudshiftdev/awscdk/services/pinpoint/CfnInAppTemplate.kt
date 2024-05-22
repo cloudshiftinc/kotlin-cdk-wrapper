@@ -113,8 +113,8 @@ public open class CfnInAppTemplate(
     id: String,
     props: CfnInAppTemplateProps,
   ) :
-      this(software.amazon.awscdk.services.pinpoint.CfnInAppTemplate(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInAppTemplateProps::unwrap))
+      this(software.amazon.awscdk.services.pinpoint.CfnInAppTemplate(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInAppTemplateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -140,7 +140,7 @@ public open class CfnInAppTemplate(
    * and body text, text colors, background colors, images, buttons, and behaviors.
    */
   public open fun content(`value`: IResolvable) {
-    unwrap(this).setContent(`value`.let(IResolvable::unwrap))
+    unwrap(this).setContent(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -175,7 +175,7 @@ public open class CfnInAppTemplate(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -345,7 +345,7 @@ public open class CfnInAppTemplate(
      * behaviors. 
      */
     override fun content(content: IResolvable) {
-      cdkBuilder.content(content.let(IResolvable::unwrap))
+      cdkBuilder.content(content.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -786,7 +786,7 @@ public open class CfnInAppTemplate(
        * This button configuration overrides the default button configuration.
        */
       override fun android(android: IResolvable) {
-        cdkBuilder.android(android.let(IResolvable::unwrap))
+        cdkBuilder.android(android.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -795,7 +795,7 @@ public open class CfnInAppTemplate(
        * This button configuration overrides the default button configuration.
        */
       override fun android(android: OverrideButtonConfigurationProperty) {
-        cdkBuilder.android(android.let(OverrideButtonConfigurationProperty::unwrap))
+        cdkBuilder.android(android.let(OverrideButtonConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -815,7 +815,7 @@ public open class CfnInAppTemplate(
        * web browser users.
        */
       override fun defaultConfig(defaultConfig: IResolvable) {
-        cdkBuilder.defaultConfig(defaultConfig.let(IResolvable::unwrap))
+        cdkBuilder.defaultConfig(defaultConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -825,7 +825,7 @@ public open class CfnInAppTemplate(
        * web browser users.
        */
       override fun defaultConfig(defaultConfig: DefaultButtonConfigurationProperty) {
-        cdkBuilder.defaultConfig(defaultConfig.let(DefaultButtonConfigurationProperty::unwrap))
+        cdkBuilder.defaultConfig(defaultConfig.let(DefaultButtonConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -845,7 +845,7 @@ public open class CfnInAppTemplate(
        * This button configuration overrides the default button configuration.
        */
       override fun ios(ios: IResolvable) {
-        cdkBuilder.ios(ios.let(IResolvable::unwrap))
+        cdkBuilder.ios(ios.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -853,7 +853,7 @@ public open class CfnInAppTemplate(
        * This button configuration overrides the default button configuration.
        */
       override fun ios(ios: OverrideButtonConfigurationProperty) {
-        cdkBuilder.ios(ios.let(OverrideButtonConfigurationProperty::unwrap))
+        cdkBuilder.ios(ios.let(OverrideButtonConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -871,7 +871,7 @@ public open class CfnInAppTemplate(
        * This button configuration overrides the default button configuration.
        */
       override fun web(web: IResolvable) {
-        cdkBuilder.web(web.let(IResolvable::unwrap))
+        cdkBuilder.web(web.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -880,7 +880,7 @@ public open class CfnInAppTemplate(
        * This button configuration overrides the default button configuration.
        */
       override fun web(web: OverrideButtonConfigurationProperty) {
-        cdkBuilder.web(web.let(OverrideButtonConfigurationProperty::unwrap))
+        cdkBuilder.web(web.let(OverrideButtonConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1589,7 +1589,7 @@ public open class CfnInAppTemplate(
        * title text of the in-app message.
        */
       override fun bodyConfig(bodyConfig: IResolvable) {
-        cdkBuilder.bodyConfig(bodyConfig.let(IResolvable::unwrap))
+        cdkBuilder.bodyConfig(bodyConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1597,7 +1597,7 @@ public open class CfnInAppTemplate(
        * title text of the in-app message.
        */
       override fun bodyConfig(bodyConfig: BodyConfigProperty) {
-        cdkBuilder.bodyConfig(bodyConfig.let(BodyConfigProperty::unwrap))
+        cdkBuilder.bodyConfig(bodyConfig.let(BodyConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1614,7 +1614,7 @@ public open class CfnInAppTemplate(
        * title text of the in-app message.
        */
       override fun headerConfig(headerConfig: IResolvable) {
-        cdkBuilder.headerConfig(headerConfig.let(IResolvable::unwrap))
+        cdkBuilder.headerConfig(headerConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1622,7 +1622,7 @@ public open class CfnInAppTemplate(
        * title text of the in-app message.
        */
       override fun headerConfig(headerConfig: HeaderConfigProperty) {
-        cdkBuilder.headerConfig(headerConfig.let(HeaderConfigProperty::unwrap))
+        cdkBuilder.headerConfig(headerConfig.let(HeaderConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1646,7 +1646,7 @@ public open class CfnInAppTemplate(
        * button in an in-app message.
        */
       override fun primaryBtn(primaryBtn: IResolvable) {
-        cdkBuilder.primaryBtn(primaryBtn.let(IResolvable::unwrap))
+        cdkBuilder.primaryBtn(primaryBtn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1654,7 +1654,7 @@ public open class CfnInAppTemplate(
        * button in an in-app message.
        */
       override fun primaryBtn(primaryBtn: ButtonConfigProperty) {
-        cdkBuilder.primaryBtn(primaryBtn.let(ButtonConfigProperty::unwrap))
+        cdkBuilder.primaryBtn(primaryBtn.let(ButtonConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1671,7 +1671,7 @@ public open class CfnInAppTemplate(
        * button in an in-app message.
        */
       override fun secondaryBtn(secondaryBtn: IResolvable) {
-        cdkBuilder.secondaryBtn(secondaryBtn.let(IResolvable::unwrap))
+        cdkBuilder.secondaryBtn(secondaryBtn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1679,7 +1679,7 @@ public open class CfnInAppTemplate(
        * button in an in-app message.
        */
       override fun secondaryBtn(secondaryBtn: ButtonConfigProperty) {
-        cdkBuilder.secondaryBtn(secondaryBtn.let(ButtonConfigProperty::unwrap))
+        cdkBuilder.secondaryBtn(secondaryBtn.let(ButtonConfigProperty.Companion::unwrap))
       }
 
       /**

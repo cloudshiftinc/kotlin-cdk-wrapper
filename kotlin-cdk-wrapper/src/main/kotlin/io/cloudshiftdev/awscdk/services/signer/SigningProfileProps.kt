@@ -83,7 +83,7 @@ public interface SigningProfileProps {
      * @param platform The Signing Platform available for signing profile. 
      */
     override fun platform(platform: Platform) {
-      cdkBuilder.platform(platform.let(Platform::unwrap))
+      cdkBuilder.platform(platform.let(Platform.Companion::unwrap))
     }
 
     /**
@@ -91,7 +91,7 @@ public interface SigningProfileProps {
      * profile.
      */
     override fun signatureValidity(signatureValidity: Duration) {
-      cdkBuilder.signatureValidity(signatureValidity.let(Duration::unwrap))
+      cdkBuilder.signatureValidity(signatureValidity.let(Duration.Companion::unwrap))
     }
 
     /**

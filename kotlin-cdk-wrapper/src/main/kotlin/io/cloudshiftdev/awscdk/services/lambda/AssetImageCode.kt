@@ -84,7 +84,7 @@ public open class AssetImageCode(
 ) : Code(cdkObject) {
   public constructor(directory: String, props: AssetImageCodeProps) :
       this(software.amazon.awscdk.services.lambda.AssetImageCode(directory,
-      props.let(AssetImageCodeProps::unwrap))
+      props.let(AssetImageCodeProps.Companion::unwrap))
   )
 
   public constructor(directory: String, props: AssetImageCodeProps.Builder.() -> Unit) :
@@ -98,7 +98,7 @@ public open class AssetImageCode(
    * @param scope 
    */
   public override fun bind(scope: Construct): CodeConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(CodeConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(CodeConfig::wrap)
 
   /**
    * Called after the CFN function resource has been created to allow the code class to bind to it.
@@ -110,7 +110,7 @@ public open class AssetImageCode(
    * @param options
    */
   public override fun bindToResource(resource: CfnResource) {
-    unwrap(this).bindToResource(resource.let(CfnResource::unwrap))
+    unwrap(this).bindToResource(resource.let(CfnResource.Companion::unwrap))
   }
 
   /**
@@ -123,8 +123,8 @@ public open class AssetImageCode(
    * @param options
    */
   public override fun bindToResource(resource: CfnResource, options: ResourceBindOptions) {
-    unwrap(this).bindToResource(resource.let(CfnResource::unwrap),
-        options.let(ResourceBindOptions::unwrap))
+    unwrap(this).bindToResource(resource.let(CfnResource.Companion::unwrap),
+        options.let(ResourceBindOptions.Companion::unwrap))
   }
 
   /**
@@ -550,7 +550,7 @@ public open class AssetImageCode(
      * @param cacheFrom Cache from options to pass to the `docker build` command. 
      */
     override fun cacheFrom(cacheFrom: List<DockerCacheOption>) {
-      cdkBuilder.cacheFrom(cacheFrom.map(DockerCacheOption::unwrap))
+      cdkBuilder.cacheFrom(cacheFrom.map(DockerCacheOption.Companion::unwrap))
     }
 
     /**
@@ -573,7 +573,7 @@ public open class AssetImageCode(
      * @param cacheTo Cache to options to pass to the `docker build` command. 
      */
     override fun cacheTo(cacheTo: DockerCacheOption) {
-      cdkBuilder.cacheTo(cacheTo.let(DockerCacheOption::unwrap))
+      cdkBuilder.cacheTo(cacheTo.let(DockerCacheOption.Companion::unwrap))
     }
 
     /**
@@ -702,7 +702,7 @@ public open class AssetImageCode(
      * @param followSymlinks A strategy for how to handle symlinks. 
      */
     override fun followSymlinks(followSymlinks: SymlinkFollowMode) {
-      cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode::unwrap))
+      cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode.Companion::unwrap))
     }
 
     /**
@@ -713,7 +713,7 @@ public open class AssetImageCode(
      * @param ignoreMode The ignore behavior to use for `exclude` patterns. 
      */
     override fun ignoreMode(ignoreMode: IgnoreMode) {
-      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode::unwrap))
+      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode.Companion::unwrap))
     }
 
     /**
@@ -725,7 +725,7 @@ public open class AssetImageCode(
      * hash. 
      */
     override fun invalidation(invalidation: DockerImageAssetInvalidationOptions) {
-      cdkBuilder.invalidation(invalidation.let(DockerImageAssetInvalidationOptions::unwrap))
+      cdkBuilder.invalidation(invalidation.let(DockerImageAssetInvalidationOptions.Companion::unwrap))
     }
 
     /**
@@ -752,7 +752,7 @@ public open class AssetImageCode(
      * @param networkMode Networking mode for the RUN commands during build. 
      */
     override fun networkMode(networkMode: NetworkMode) {
-      cdkBuilder.networkMode(networkMode.let(NetworkMode::unwrap))
+      cdkBuilder.networkMode(networkMode.let(NetworkMode.Companion::unwrap))
     }
 
     /**
@@ -787,7 +787,7 @@ public open class AssetImageCode(
      * @param platform Platform to build for. 
      */
     override fun platform(platform: Platform) {
-      cdkBuilder.platform(platform.let(Platform::unwrap))
+      cdkBuilder.platform(platform.let(Platform.Companion::unwrap))
     }
 
     /**

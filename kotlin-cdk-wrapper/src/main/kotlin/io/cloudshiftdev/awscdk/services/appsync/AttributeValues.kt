@@ -65,7 +65,7 @@ public open class AttributeValues(
 
   public constructor(container: String, assignments: List<Assign>) :
       this(software.amazon.awscdk.services.appsync.AttributeValues(container,
-      assignments.map(Assign::unwrap))
+      assignments.map(Assign.Companion::unwrap))
   )
 
   /**

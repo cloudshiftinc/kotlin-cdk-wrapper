@@ -59,7 +59,7 @@ public open class CfnHub(
   cdkObject: software.amazon.awscdk.services.securityhub.CfnHub,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.securityhub.CfnHub(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.securityhub.CfnHub(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -68,8 +68,8 @@ public open class CfnHub(
     id: String,
     props: CfnHubProps,
   ) :
-      this(software.amazon.awscdk.services.securityhub.CfnHub(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnHubProps::unwrap))
+      this(software.amazon.awscdk.services.securityhub.CfnHub(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnHubProps.Companion::unwrap))
   )
 
   public constructor(
@@ -105,7 +105,7 @@ public open class CfnHub(
    * Whether to automatically enable new controls when they are added to standards that are enabled.
    */
   public open fun autoEnableControls(`value`: IResolvable) {
-    unwrap(this).setAutoEnableControls(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoEnableControls(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -139,7 +139,7 @@ public open class CfnHub(
    * enabled.
    */
   public open fun enableDefaultStandards(`value`: IResolvable) {
-    unwrap(this).setEnableDefaultStandards(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableDefaultStandards(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -148,7 +148,7 @@ public open class CfnHub(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -301,7 +301,7 @@ public open class CfnHub(
      * standards that are enabled. 
      */
     override fun autoEnableControls(autoEnableControls: IResolvable) {
-      cdkBuilder.autoEnableControls(autoEnableControls.let(IResolvable::unwrap))
+      cdkBuilder.autoEnableControls(autoEnableControls.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -362,7 +362,7 @@ public open class CfnHub(
      * designated as automatically enabled. 
      */
     override fun enableDefaultStandards(enableDefaultStandards: IResolvable) {
-      cdkBuilder.enableDefaultStandards(enableDefaultStandards.let(IResolvable::unwrap))
+      cdkBuilder.enableDefaultStandards(enableDefaultStandards.let(IResolvable.Companion::unwrap))
     }
 
     /**

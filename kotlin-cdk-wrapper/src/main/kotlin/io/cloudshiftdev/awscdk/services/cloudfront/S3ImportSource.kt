@@ -57,7 +57,7 @@ public open class S3ImportSource(
   cdkObject: software.amazon.awscdk.services.cloudfront.S3ImportSource,
 ) : ImportSource(cdkObject) {
   public constructor(bucket: IBucket, key: String) :
-      this(software.amazon.awscdk.services.cloudfront.S3ImportSource(bucket.let(IBucket::unwrap),
+      this(software.amazon.awscdk.services.cloudfront.S3ImportSource(bucket.let(IBucket.Companion::unwrap),
       key)
   )
 

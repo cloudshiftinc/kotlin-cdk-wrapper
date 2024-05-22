@@ -234,7 +234,7 @@ public interface CfnProtectionProps {
      */
     override
         fun applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration: IResolvable) {
-      cdkBuilder.applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -250,7 +250,7 @@ public interface CfnProtectionProps {
      */
     override
         fun applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration: CfnProtection.ApplicationLayerAutomaticResponseConfigurationProperty) {
-      cdkBuilder.applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration.let(CfnProtection.ApplicationLayerAutomaticResponseConfigurationProperty::unwrap))
+      cdkBuilder.applicationLayerAutomaticResponseConfiguration(applicationLayerAutomaticResponseConfiguration.let(CfnProtection.ApplicationLayerAutomaticResponseConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -327,7 +327,7 @@ public interface CfnProtectionProps {
      * as "test," "development," or "production"). You can add up to 50 tags to each AWS resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

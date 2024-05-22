@@ -50,8 +50,8 @@ public abstract class HealthCheck(
    * @param options 
    */
   public open fun bind(scope: Construct, options: HealthCheckBindOptions): HealthCheckConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap),
-      options.let(HealthCheckBindOptions::unwrap)).let(HealthCheckConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      options.let(HealthCheckBindOptions.Companion::unwrap)).let(HealthCheckConfig::wrap)
 
   /**
    * Called when the AccessLog type is initialized.
@@ -76,7 +76,7 @@ public abstract class HealthCheck(
         software.amazon.awscdk.services.appmesh.HealthCheck.grpc().let(HealthCheck::wrap)
 
     public fun grpc(options: GrpcHealthCheckOptions): HealthCheck =
-        software.amazon.awscdk.services.appmesh.HealthCheck.grpc(options.let(GrpcHealthCheckOptions::unwrap)).let(HealthCheck::wrap)
+        software.amazon.awscdk.services.appmesh.HealthCheck.grpc(options.let(GrpcHealthCheckOptions.Companion::unwrap)).let(HealthCheck::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ca4aa5f646cab38266ec9a00ad9f89bc1ca43aeacd9b12580cb2e1f842fcd263")
@@ -87,7 +87,7 @@ public abstract class HealthCheck(
         software.amazon.awscdk.services.appmesh.HealthCheck.http().let(HealthCheck::wrap)
 
     public fun http(options: HttpHealthCheckOptions): HealthCheck =
-        software.amazon.awscdk.services.appmesh.HealthCheck.http(options.let(HttpHealthCheckOptions::unwrap)).let(HealthCheck::wrap)
+        software.amazon.awscdk.services.appmesh.HealthCheck.http(options.let(HttpHealthCheckOptions.Companion::unwrap)).let(HealthCheck::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c354f1fe3451f953e1691c5d04b8c36b09946d906547a0b8b5f34bc696285e76")
@@ -98,7 +98,7 @@ public abstract class HealthCheck(
         software.amazon.awscdk.services.appmesh.HealthCheck.http2().let(HealthCheck::wrap)
 
     public fun http2(options: HttpHealthCheckOptions): HealthCheck =
-        software.amazon.awscdk.services.appmesh.HealthCheck.http2(options.let(HttpHealthCheckOptions::unwrap)).let(HealthCheck::wrap)
+        software.amazon.awscdk.services.appmesh.HealthCheck.http2(options.let(HttpHealthCheckOptions.Companion::unwrap)).let(HealthCheck::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("80291b38f690382fada9f5ea7fa44011f91859a26b6f5446e003b9e2d9c09e27")
@@ -109,7 +109,7 @@ public abstract class HealthCheck(
         software.amazon.awscdk.services.appmesh.HealthCheck.tcp().let(HealthCheck::wrap)
 
     public fun tcp(options: TcpHealthCheckOptions): HealthCheck =
-        software.amazon.awscdk.services.appmesh.HealthCheck.tcp(options.let(TcpHealthCheckOptions::unwrap)).let(HealthCheck::wrap)
+        software.amazon.awscdk.services.appmesh.HealthCheck.tcp(options.let(TcpHealthCheckOptions.Companion::unwrap)).let(HealthCheck::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("40dcb0b765391f6b0f9a4c2e59045f055eda8aec8e9f36cd3ee748c070b37b90")

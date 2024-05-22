@@ -36,8 +36,8 @@ public open class StringParameter(
     id: String,
     props: StringParameterProps,
   ) :
-      this(software.amazon.awscdk.services.ssm.StringParameter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(StringParameterProps::unwrap))
+      this(software.amazon.awscdk.services.ssm.StringParameter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(StringParameterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -61,7 +61,7 @@ public open class StringParameter(
    * @param grantee 
    */
   public override fun grantRead(grantee: IGrantable): Grant =
-      unwrap(this).grantRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grants write (PutParameter) permissions on the SSM Parameter.
@@ -69,7 +69,7 @@ public open class StringParameter(
    * @param grantee 
    */
   public override fun grantWrite(grantee: IGrantable): Grant =
-      unwrap(this).grantWrite(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantWrite(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The ARN of the SSM Parameter resource.
@@ -214,7 +214,7 @@ public open class StringParameter(
      * @param dataType The data type of the parameter, such as `text` or `aws:ec2:image`. 
      */
     override fun dataType(dataType: ParameterDataType) {
-      cdkBuilder.dataType(dataType.let(ParameterDataType::unwrap))
+      cdkBuilder.dataType(dataType.let(ParameterDataType.Companion::unwrap))
     }
 
     /**
@@ -278,7 +278,7 @@ public open class StringParameter(
      * @param tier The tier of the string parameter. 
      */
     override fun tier(tier: ParameterTier) {
-      cdkBuilder.tier(tier.let(ParameterTier::unwrap))
+      cdkBuilder.tier(tier.let(ParameterTier.Companion::unwrap))
     }
 
     /**
@@ -291,7 +291,7 @@ public open class StringParameter(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun type(type: ParameterType) {
-      cdkBuilder.type(type.let(ParameterType::unwrap))
+      cdkBuilder.type(type.let(ParameterType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ssm.StringParameter = cdkBuilder.build()
@@ -303,8 +303,9 @@ public open class StringParameter(
       id: String,
       attrs: SecureStringParameterAttributes,
     ): IStringParameter =
-        software.amazon.awscdk.services.ssm.StringParameter.fromSecureStringParameterAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(SecureStringParameterAttributes::unwrap)).let(IStringParameter::wrap)
+        software.amazon.awscdk.services.ssm.StringParameter.fromSecureStringParameterAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        attrs.let(SecureStringParameterAttributes.Companion::unwrap)).let(IStringParameter::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("64b1b55fdfa5b42ba90555680348f37a5f7eb9a70ce7485030f807e3bdaace4a")
@@ -320,8 +321,8 @@ public open class StringParameter(
       id: String,
       attrs: StringParameterAttributes,
     ): IStringParameter =
-        software.amazon.awscdk.services.ssm.StringParameter.fromStringParameterAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(StringParameterAttributes::unwrap)).let(IStringParameter::wrap)
+        software.amazon.awscdk.services.ssm.StringParameter.fromStringParameterAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(StringParameterAttributes.Companion::unwrap)).let(IStringParameter::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("123d9102253eb9c07606d49a45b8ce2ebe4db6917a9f117b688a1772ac6e5f30")
@@ -336,7 +337,7 @@ public open class StringParameter(
       id: String,
       stringParameterName: String,
     ): IStringParameter =
-        software.amazon.awscdk.services.ssm.StringParameter.fromStringParameterName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ssm.StringParameter.fromStringParameterName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, stringParameterName).let(IStringParameter::wrap)
 
     @Deprecated(message = "deprecated in CDK")
@@ -345,12 +346,12 @@ public open class StringParameter(
       parameterName: String,
       version: Number,
     ): String =
-        software.amazon.awscdk.services.ssm.StringParameter.valueForSecureStringParameter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ssm.StringParameter.valueForSecureStringParameter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         parameterName, version)
 
     public fun valueForStringParameter(scope: CloudshiftdevConstructsConstruct,
         parameterName: String): String =
-        software.amazon.awscdk.services.ssm.StringParameter.valueForStringParameter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ssm.StringParameter.valueForStringParameter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         parameterName)
 
     public fun valueForStringParameter(
@@ -358,13 +359,13 @@ public open class StringParameter(
       parameterName: String,
       version: Number,
     ): String =
-        software.amazon.awscdk.services.ssm.StringParameter.valueForStringParameter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ssm.StringParameter.valueForStringParameter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         parameterName, version)
 
     @Deprecated(message = "deprecated in CDK")
     public fun valueForTypedStringParameter(scope: CloudshiftdevConstructsConstruct,
         parameterName: String): String =
-        software.amazon.awscdk.services.ssm.StringParameter.valueForTypedStringParameter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ssm.StringParameter.valueForTypedStringParameter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         parameterName)
 
     @Deprecated(message = "deprecated in CDK")
@@ -373,8 +374,8 @@ public open class StringParameter(
       parameterName: String,
       type: ParameterType,
     ): String =
-        software.amazon.awscdk.services.ssm.StringParameter.valueForTypedStringParameter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        parameterName, type.let(ParameterType::unwrap))
+        software.amazon.awscdk.services.ssm.StringParameter.valueForTypedStringParameter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        parameterName, type.let(ParameterType.Companion::unwrap))
 
     @Deprecated(message = "deprecated in CDK")
     public fun valueForTypedStringParameter(
@@ -383,12 +384,12 @@ public open class StringParameter(
       type: ParameterType,
       version: Number,
     ): String =
-        software.amazon.awscdk.services.ssm.StringParameter.valueForTypedStringParameter(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        parameterName, type.let(ParameterType::unwrap), version)
+        software.amazon.awscdk.services.ssm.StringParameter.valueForTypedStringParameter(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        parameterName, type.let(ParameterType.Companion::unwrap), version)
 
     public fun valueForTypedStringParameterV2(scope: CloudshiftdevConstructsConstruct,
         parameterName: String): String =
-        software.amazon.awscdk.services.ssm.StringParameter.valueForTypedStringParameterV2(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ssm.StringParameter.valueForTypedStringParameterV2(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         parameterName)
 
     public fun valueForTypedStringParameterV2(
@@ -396,8 +397,8 @@ public open class StringParameter(
       parameterName: String,
       type: ParameterValueType,
     ): String =
-        software.amazon.awscdk.services.ssm.StringParameter.valueForTypedStringParameterV2(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        parameterName, type.let(ParameterValueType::unwrap))
+        software.amazon.awscdk.services.ssm.StringParameter.valueForTypedStringParameterV2(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        parameterName, type.let(ParameterValueType.Companion::unwrap))
 
     public fun valueForTypedStringParameterV2(
       scope: CloudshiftdevConstructsConstruct,
@@ -405,12 +406,12 @@ public open class StringParameter(
       type: ParameterValueType,
       version: Number,
     ): String =
-        software.amazon.awscdk.services.ssm.StringParameter.valueForTypedStringParameterV2(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        parameterName, type.let(ParameterValueType::unwrap), version)
+        software.amazon.awscdk.services.ssm.StringParameter.valueForTypedStringParameterV2(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        parameterName, type.let(ParameterValueType.Companion::unwrap), version)
 
     public fun valueFromLookup(scope: CloudshiftdevConstructsConstruct, parameterName: String):
         String =
-        software.amazon.awscdk.services.ssm.StringParameter.valueFromLookup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ssm.StringParameter.valueFromLookup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         parameterName)
 
     public operator fun invoke(

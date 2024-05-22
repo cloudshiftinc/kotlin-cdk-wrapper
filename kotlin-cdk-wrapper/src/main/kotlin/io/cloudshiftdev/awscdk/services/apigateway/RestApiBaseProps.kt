@@ -389,7 +389,7 @@ public interface RestApiBaseProps {
      * Requires `cloudWatchRole` to be enabled.
      */
     override fun cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy: RemovalPolicy) {
-      cdkBuilder.cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -421,7 +421,7 @@ public interface RestApiBaseProps {
      * this value cannot be set.
      */
     override fun deployOptions(deployOptions: StageOptions) {
-      cdkBuilder.deployOptions(deployOptions.let(StageOptions::unwrap))
+      cdkBuilder.deployOptions(deployOptions.let(StageOptions.Companion::unwrap))
     }
 
     /**
@@ -456,7 +456,7 @@ public interface RestApiBaseProps {
      * @param domainName Configure a custom domain name and map it to this API.
      */
     override fun domainName(domainName: DomainNameOptions) {
-      cdkBuilder.domainName(domainName.let(DomainNameOptions::unwrap))
+      cdkBuilder.domainName(domainName.let(DomainNameOptions.Companion::unwrap))
     }
 
     /**
@@ -480,7 +480,7 @@ public interface RestApiBaseProps {
      * an API.
      */
     override fun endpointTypes(endpointTypes: List<EndpointType>) {
-      cdkBuilder.endpointTypes(endpointTypes.map(EndpointType::unwrap))
+      cdkBuilder.endpointTypes(endpointTypes.map(EndpointType.Companion::unwrap))
     }
 
     /**
@@ -510,7 +510,7 @@ public interface RestApiBaseProps {
      * @param policy A policy document that contains the permissions for this RestApi.
      */
     override fun policy(policy: PolicyDocument) {
-      cdkBuilder.policy(policy.let(PolicyDocument::unwrap))
+      cdkBuilder.policy(policy.let(PolicyDocument.Companion::unwrap))
     }
 
     /**

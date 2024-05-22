@@ -167,7 +167,7 @@ public interface Channel {
      * @param compressionType Compression type if training data is compressed.
      */
     override fun compressionType(compressionType: CompressionType) {
-      cdkBuilder.compressionType(compressionType.let(CompressionType::unwrap))
+      cdkBuilder.compressionType(compressionType.let(CompressionType.Companion::unwrap))
     }
 
     /**
@@ -181,7 +181,7 @@ public interface Channel {
      * @param dataSource Location of the channel data. 
      */
     override fun dataSource(dataSource: DataSource) {
-      cdkBuilder.dataSource(dataSource.let(DataSource::unwrap))
+      cdkBuilder.dataSource(dataSource.let(DataSource.Companion::unwrap))
     }
 
     /**
@@ -196,7 +196,7 @@ public interface Channel {
      * @param inputMode Input mode to use for the data channel in a training job.
      */
     override fun inputMode(inputMode: InputMode) {
-      cdkBuilder.inputMode(inputMode.let(InputMode::unwrap))
+      cdkBuilder.inputMode(inputMode.let(InputMode.Companion::unwrap))
     }
 
     /**
@@ -206,14 +206,14 @@ public interface Channel {
      * If the input data is already in RecordIO format, you don't need to set this attribute.
      */
     override fun recordWrapperType(recordWrapperType: RecordWrapperType) {
-      cdkBuilder.recordWrapperType(recordWrapperType.let(RecordWrapperType::unwrap))
+      cdkBuilder.recordWrapperType(recordWrapperType.let(RecordWrapperType.Companion::unwrap))
     }
 
     /**
      * @param shuffleConfig Shuffle config option for input data in a channel.
      */
     override fun shuffleConfig(shuffleConfig: ShuffleConfig) {
-      cdkBuilder.shuffleConfig(shuffleConfig.let(ShuffleConfig::unwrap))
+      cdkBuilder.shuffleConfig(shuffleConfig.let(ShuffleConfig.Companion::unwrap))
     }
 
     /**

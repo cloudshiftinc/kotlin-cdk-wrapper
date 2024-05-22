@@ -40,7 +40,7 @@ public abstract class NatProvider(
    * @param options 
    */
   public open fun configureNat(options: ConfigureNatOptions) {
-    unwrap(this).configureNat(options.let(ConfigureNatOptions::unwrap))
+    unwrap(this).configureNat(options.let(ConfigureNatOptions.Companion::unwrap))
   }
 
   /**
@@ -63,7 +63,7 @@ public abstract class NatProvider(
    * @param subnet 
    */
   public open fun configureSubnet(subnet: PrivateSubnet) {
-    unwrap(this).configureSubnet(subnet.let(PrivateSubnet::unwrap))
+    unwrap(this).configureSubnet(subnet.let(PrivateSubnet.Companion::unwrap))
   }
 
   /**
@@ -81,7 +81,7 @@ public abstract class NatProvider(
         software.amazon.awscdk.services.ec2.NatProvider.gateway().let(NatProvider::wrap)
 
     public fun gateway(props: NatGatewayProps): NatProvider =
-        software.amazon.awscdk.services.ec2.NatProvider.gateway(props.let(NatGatewayProps::unwrap)).let(NatProvider::wrap)
+        software.amazon.awscdk.services.ec2.NatProvider.gateway(props.let(NatGatewayProps.Companion::unwrap)).let(NatProvider::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("64b0328c12f8c57b834fc161debeb09c1a129907450a628bafc6db79ec2ad8b0")
@@ -90,7 +90,7 @@ public abstract class NatProvider(
 
     @Deprecated(message = "deprecated in CDK")
     public fun instance(props: NatInstanceProps): NatInstanceProvider =
-        software.amazon.awscdk.services.ec2.NatProvider.instance(props.let(NatInstanceProps::unwrap)).let(NatInstanceProvider::wrap)
+        software.amazon.awscdk.services.ec2.NatProvider.instance(props.let(NatInstanceProps.Companion::unwrap)).let(NatInstanceProvider::wrap)
 
     @Deprecated(message = "deprecated in CDK")
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -99,7 +99,7 @@ public abstract class NatProvider(
         instance(NatInstanceProps(props))
 
     public fun instanceV2(props: NatInstanceProps): NatInstanceProviderV2 =
-        software.amazon.awscdk.services.ec2.NatProvider.instanceV2(props.let(NatInstanceProps::unwrap)).let(NatInstanceProviderV2::wrap)
+        software.amazon.awscdk.services.ec2.NatProvider.instanceV2(props.let(NatInstanceProps.Companion::unwrap)).let(NatInstanceProviderV2::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("68043635bfbcb6b4bfd37b41f8eae5b1f4bc7b843f1638eed2cd515d86b18eda")

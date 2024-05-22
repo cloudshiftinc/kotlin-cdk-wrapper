@@ -191,7 +191,7 @@ public interface CfnDataflowEndpointGroupProps {
      * endpoint. 
      */
     override fun endpointDetails(endpointDetails: IResolvable) {
-      cdkBuilder.endpointDetails(endpointDetails.let(IResolvable::unwrap))
+      cdkBuilder.endpointDetails(endpointDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -213,7 +213,7 @@ public interface CfnDataflowEndpointGroupProps {
      * @param tags Tags assigned to a resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

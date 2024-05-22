@@ -282,7 +282,7 @@ public interface CfnDBProxyProps {
      * @param auth The authorization mechanism that the proxy uses. 
      */
     override fun auth(auth: IResolvable) {
-      cdkBuilder.auth(auth.let(IResolvable::unwrap))
+      cdkBuilder.auth(auth.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -330,7 +330,7 @@ public interface CfnDBProxyProps {
      * appears in the logs.
      */
     override fun debugLogging(debugLogging: IResolvable) {
-      cdkBuilder.debugLogging(debugLogging.let(IResolvable::unwrap))
+      cdkBuilder.debugLogging(debugLogging.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -371,7 +371,7 @@ public interface CfnDBProxyProps {
      * By enabling this setting, you can enforce encrypted TLS connections to the proxy.
      */
     override fun requireTls(requireTls: IResolvable) {
-      cdkBuilder.requireTls(requireTls.let(IResolvable::unwrap))
+      cdkBuilder.requireTls(requireTls.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -387,7 +387,7 @@ public interface CfnDBProxyProps {
      * with the proxy.
      */
     override fun tags(tags: List<CfnDBProxy.TagFormatProperty>) {
-      cdkBuilder.tags(tags.map(CfnDBProxy.TagFormatProperty::unwrap))
+      cdkBuilder.tags(tags.map(CfnDBProxy.TagFormatProperty.Companion::unwrap))
     }
 
     /**

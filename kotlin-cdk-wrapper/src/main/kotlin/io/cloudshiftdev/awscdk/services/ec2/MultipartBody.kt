@@ -44,7 +44,7 @@ public abstract class MultipartBody(
     public val SHELL_SCRIPT: String = software.amazon.awscdk.services.ec2.MultipartBody.SHELL_SCRIPT
 
     public fun fromRawBody(opts: MultipartBodyOptions): MultipartBody =
-        software.amazon.awscdk.services.ec2.MultipartBody.fromRawBody(opts.let(MultipartBodyOptions::unwrap)).let(MultipartBody::wrap)
+        software.amazon.awscdk.services.ec2.MultipartBody.fromRawBody(opts.let(MultipartBodyOptions.Companion::unwrap)).let(MultipartBody::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("54f5c817affa2ea65b6f6e9daed61c40a521ab0a2012d40d517e7d3debe1b445")
@@ -52,10 +52,10 @@ public abstract class MultipartBody(
         fromRawBody(MultipartBodyOptions(opts))
 
     public fun fromUserData(userData: UserData): MultipartBody =
-        software.amazon.awscdk.services.ec2.MultipartBody.fromUserData(userData.let(UserData::unwrap)).let(MultipartBody::wrap)
+        software.amazon.awscdk.services.ec2.MultipartBody.fromUserData(userData.let(UserData.Companion::unwrap)).let(MultipartBody::wrap)
 
     public fun fromUserData(userData: UserData, contentType: String): MultipartBody =
-        software.amazon.awscdk.services.ec2.MultipartBody.fromUserData(userData.let(UserData::unwrap),
+        software.amazon.awscdk.services.ec2.MultipartBody.fromUserData(userData.let(UserData.Companion::unwrap),
         contentType).let(MultipartBody::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.MultipartBody): MultipartBody =

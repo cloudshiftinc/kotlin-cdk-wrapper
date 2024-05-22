@@ -255,7 +255,7 @@ public interface CfnNetworkAclEntryProps {
      * By default, AWS CloudFormation specifies `false` .
      */
     override fun egress(egress: IResolvable) {
-      cdkBuilder.egress(egress.let(IResolvable::unwrap))
+      cdkBuilder.egress(egress.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -263,7 +263,7 @@ public interface CfnNetworkAclEntryProps {
      * Required if specifying 1 (ICMP) for the protocol parameter.
      */
     override fun icmp(icmp: IResolvable) {
-      cdkBuilder.icmp(icmp.let(IResolvable::unwrap))
+      cdkBuilder.icmp(icmp.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -271,7 +271,7 @@ public interface CfnNetworkAclEntryProps {
      * Required if specifying 1 (ICMP) for the protocol parameter.
      */
     override fun icmp(icmp: CfnNetworkAclEntry.IcmpProperty) {
-      cdkBuilder.icmp(icmp.let(CfnNetworkAclEntry.IcmpProperty::unwrap))
+      cdkBuilder.icmp(icmp.let(CfnNetworkAclEntry.IcmpProperty.Companion::unwrap))
     }
 
     /**
@@ -303,7 +303,7 @@ public interface CfnNetworkAclEntryProps {
      * Required if specifying 6 (TCP) or 17 (UDP) for the protocol parameter.
      */
     override fun portRange(portRange: IResolvable) {
-      cdkBuilder.portRange(portRange.let(IResolvable::unwrap))
+      cdkBuilder.portRange(portRange.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -311,7 +311,7 @@ public interface CfnNetworkAclEntryProps {
      * Required if specifying 6 (TCP) or 17 (UDP) for the protocol parameter.
      */
     override fun portRange(portRange: CfnNetworkAclEntry.PortRangeProperty) {
-      cdkBuilder.portRange(portRange.let(CfnNetworkAclEntry.PortRangeProperty::unwrap))
+      cdkBuilder.portRange(portRange.let(CfnNetworkAclEntry.PortRangeProperty.Companion::unwrap))
     }
 
     /**

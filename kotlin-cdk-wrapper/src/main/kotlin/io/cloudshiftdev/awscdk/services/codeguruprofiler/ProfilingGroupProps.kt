@@ -60,7 +60,7 @@ public interface ProfilingGroupProps {
      * @param computePlatform The compute platform of the profiling group.
      */
     override fun computePlatform(computePlatform: ComputePlatform) {
-      cdkBuilder.computePlatform(computePlatform.let(ComputePlatform::unwrap))
+      cdkBuilder.computePlatform(computePlatform.let(ComputePlatform.Companion::unwrap))
     }
 
     /**

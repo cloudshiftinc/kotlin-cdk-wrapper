@@ -169,7 +169,7 @@ public interface CfnAnalyzerProps {
      * analyzer for an AWS organization or account.
      */
     override fun analyzerConfiguration(analyzerConfiguration: IResolvable) {
-      cdkBuilder.analyzerConfiguration(analyzerConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.analyzerConfiguration(analyzerConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -178,7 +178,7 @@ public interface CfnAnalyzerProps {
      */
     override
         fun analyzerConfiguration(analyzerConfiguration: CfnAnalyzer.AnalyzerConfigurationProperty) {
-      cdkBuilder.analyzerConfiguration(analyzerConfiguration.let(CfnAnalyzer.AnalyzerConfigurationProperty::unwrap))
+      cdkBuilder.analyzerConfiguration(analyzerConfiguration.let(CfnAnalyzer.AnalyzerConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -204,7 +204,7 @@ public interface CfnAnalyzerProps {
      * Archive rules automatically archive findings that meet the criteria you define for the rule.
      */
     override fun archiveRules(archiveRules: IResolvable) {
-      cdkBuilder.archiveRules(archiveRules.let(IResolvable::unwrap))
+      cdkBuilder.archiveRules(archiveRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -225,7 +225,7 @@ public interface CfnAnalyzerProps {
      * @param tags An array of key-value pairs to apply to the analyzer.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

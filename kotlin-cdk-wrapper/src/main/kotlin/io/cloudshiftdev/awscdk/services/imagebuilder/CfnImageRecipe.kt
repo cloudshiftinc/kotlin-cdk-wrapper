@@ -86,8 +86,8 @@ public open class CfnImageRecipe(
     id: String,
     props: CfnImageRecipeProps,
   ) :
-      this(software.amazon.awscdk.services.imagebuilder.CfnImageRecipe(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnImageRecipeProps::unwrap))
+      this(software.amazon.awscdk.services.imagebuilder.CfnImageRecipe(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnImageRecipeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -109,7 +109,7 @@ public open class CfnImageRecipe(
    * test your image configuration.
    */
   public open fun additionalInstanceConfiguration(`value`: IResolvable) {
-    unwrap(this).setAdditionalInstanceConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAdditionalInstanceConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -118,7 +118,7 @@ public open class CfnImageRecipe(
    */
   public open
       fun additionalInstanceConfiguration(`value`: AdditionalInstanceConfigurationProperty) {
-    unwrap(this).setAdditionalInstanceConfiguration(`value`.let(AdditionalInstanceConfigurationProperty::unwrap))
+    unwrap(this).setAdditionalInstanceConfiguration(`value`.let(AdditionalInstanceConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -153,7 +153,7 @@ public open class CfnImageRecipe(
    * The block device mappings to apply when creating images from this recipe.
    */
   public open fun blockDeviceMappings(`value`: IResolvable) {
-    unwrap(this).setBlockDeviceMappings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBlockDeviceMappings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -178,7 +178,7 @@ public open class CfnImageRecipe(
    * The components of the image recipe.
    */
   public open fun components(`value`: IResolvable) {
-    unwrap(this).setComponents(`value`.let(IResolvable::unwrap))
+    unwrap(this).setComponents(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -211,7 +211,7 @@ public open class CfnImageRecipe(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -460,7 +460,7 @@ public open class CfnImageRecipe(
      * temporary Amazon EC2 instances to build and test your image configuration. 
      */
     override fun additionalInstanceConfiguration(additionalInstanceConfiguration: IResolvable) {
-      cdkBuilder.additionalInstanceConfiguration(additionalInstanceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.additionalInstanceConfiguration(additionalInstanceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -476,7 +476,7 @@ public open class CfnImageRecipe(
      */
     override
         fun additionalInstanceConfiguration(additionalInstanceConfiguration: AdditionalInstanceConfigurationProperty) {
-      cdkBuilder.additionalInstanceConfiguration(additionalInstanceConfiguration.let(AdditionalInstanceConfigurationProperty::unwrap))
+      cdkBuilder.additionalInstanceConfiguration(additionalInstanceConfiguration.let(AdditionalInstanceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -505,7 +505,7 @@ public open class CfnImageRecipe(
      * recipe. 
      */
     override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
-      cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable::unwrap))
+      cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -540,7 +540,7 @@ public open class CfnImageRecipe(
      * @param components The components of the image recipe. 
      */
     override fun components(components: IResolvable) {
-      cdkBuilder.components(components.let(IResolvable::unwrap))
+      cdkBuilder.components(components.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -775,7 +775,7 @@ public open class CfnImageRecipe(
        * instance.
        */
       override fun systemsManagerAgent(systemsManagerAgent: IResolvable) {
-        cdkBuilder.systemsManagerAgent(systemsManagerAgent.let(IResolvable::unwrap))
+        cdkBuilder.systemsManagerAgent(systemsManagerAgent.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -783,7 +783,7 @@ public open class CfnImageRecipe(
        * instance.
        */
       override fun systemsManagerAgent(systemsManagerAgent: SystemsManagerAgentProperty) {
-        cdkBuilder.systemsManagerAgent(systemsManagerAgent.let(SystemsManagerAgentProperty::unwrap))
+        cdkBuilder.systemsManagerAgent(systemsManagerAgent.let(SystemsManagerAgentProperty.Companion::unwrap))
       }
 
       /**
@@ -961,7 +961,7 @@ public open class CfnImageRecipe(
        * component for a specific recipe.
        */
       override fun parameters(parameters: IResolvable) {
-        cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+        cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1295,7 +1295,7 @@ public open class CfnImageRecipe(
        * @param deleteOnTermination Configures delete on termination of the associated device.
        */
       override fun deleteOnTermination(deleteOnTermination: IResolvable) {
-        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
+        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1309,7 +1309,7 @@ public open class CfnImageRecipe(
        * @param encrypted Use to configure device encryption.
        */
       override fun encrypted(encrypted: IResolvable) {
-        cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
+        cdkBuilder.encrypted(encrypted.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1559,14 +1559,14 @@ public open class CfnImageRecipe(
        * @param ebs Use to manage Amazon EBS-specific configuration for this mapping.
        */
       override fun ebs(ebs: IResolvable) {
-        cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
+        cdkBuilder.ebs(ebs.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param ebs Use to manage Amazon EBS-specific configuration for this mapping.
        */
       override fun ebs(ebs: EbsInstanceBlockDeviceSpecificationProperty) {
-        cdkBuilder.ebs(ebs.let(EbsInstanceBlockDeviceSpecificationProperty::unwrap))
+        cdkBuilder.ebs(ebs.let(EbsInstanceBlockDeviceSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -1731,7 +1731,7 @@ public open class CfnImageRecipe(
        * false.
        */
       override fun uninstallAfterBuild(uninstallAfterBuild: IResolvable) {
-        cdkBuilder.uninstallAfterBuild(uninstallAfterBuild.let(IResolvable::unwrap))
+        cdkBuilder.uninstallAfterBuild(uninstallAfterBuild.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

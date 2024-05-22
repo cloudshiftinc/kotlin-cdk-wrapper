@@ -90,8 +90,8 @@ public open class CfnLoggingConfiguration(
     id: String,
     props: CfnLoggingConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLoggingConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.wafv2.CfnLoggingConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLoggingConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -116,7 +116,7 @@ public open class CfnLoggingConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -158,7 +158,7 @@ public open class CfnLoggingConfiguration(
    * The parts of the request that you want to keep out of the logs.
    */
   public open fun redactedFields(`value`: IResolvable) {
-    unwrap(this).setRedactedFields(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRedactedFields(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -378,7 +378,7 @@ public open class CfnLoggingConfiguration(
      * @param redactedFields The parts of the request that you want to keep out of the logs. 
      */
     override fun redactedFields(redactedFields: IResolvable) {
-      cdkBuilder.redactedFields(redactedFields.let(IResolvable::unwrap))
+      cdkBuilder.redactedFields(redactedFields.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -676,7 +676,7 @@ public open class CfnLoggingConfiguration(
        * This is the action setting that a log record must contain in order to meet the condition.
        */
       override fun actionCondition(actionCondition: IResolvable) {
-        cdkBuilder.actionCondition(actionCondition.let(IResolvable::unwrap))
+        cdkBuilder.actionCondition(actionCondition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -684,7 +684,7 @@ public open class CfnLoggingConfiguration(
        * This is the action setting that a log record must contain in order to meet the condition.
        */
       override fun actionCondition(actionCondition: ActionConditionProperty) {
-        cdkBuilder.actionCondition(actionCondition.let(ActionConditionProperty::unwrap))
+        cdkBuilder.actionCondition(actionCondition.let(ActionConditionProperty.Companion::unwrap))
       }
 
       /**
@@ -703,7 +703,7 @@ public open class CfnLoggingConfiguration(
        * prefix identifies the rule group or web ACL context of the rule that added the label.
        */
       override fun labelNameCondition(labelNameCondition: IResolvable) {
-        cdkBuilder.labelNameCondition(labelNameCondition.let(IResolvable::unwrap))
+        cdkBuilder.labelNameCondition(labelNameCondition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -713,7 +713,7 @@ public open class CfnLoggingConfiguration(
        * prefix identifies the rule group or web ACL context of the rule that added the label.
        */
       override fun labelNameCondition(labelNameCondition: LabelNameConditionProperty) {
-        cdkBuilder.labelNameCondition(labelNameCondition.let(LabelNameConditionProperty::unwrap))
+        cdkBuilder.labelNameCondition(labelNameCondition.let(LabelNameConditionProperty.Companion::unwrap))
       }
 
       /**
@@ -1118,7 +1118,7 @@ public open class CfnLoggingConfiguration(
        * @param conditions Match conditions for the filter. 
        */
       override fun conditions(conditions: IResolvable) {
-        cdkBuilder.conditions(conditions.let(IResolvable::unwrap))
+        cdkBuilder.conditions(conditions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1279,14 +1279,14 @@ public open class CfnLoggingConfiguration(
        * @param matchPattern the value to be set. 
        */
       override fun matchPattern(matchPattern: IResolvable) {
-        cdkBuilder.matchPattern(matchPattern.let(IResolvable::unwrap))
+        cdkBuilder.matchPattern(matchPattern.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param matchPattern the value to be set. 
        */
       override fun matchPattern(matchPattern: MatchPatternProperty) {
-        cdkBuilder.matchPattern(matchPattern.let(MatchPatternProperty::unwrap))
+        cdkBuilder.matchPattern(matchPattern.let(MatchPatternProperty.Companion::unwrap))
       }
 
       /**
@@ -1536,7 +1536,7 @@ public open class CfnLoggingConfiguration(
        * @param filters The filters that you want to apply to the logs. 
        */
       override fun filters(filters: IResolvable) {
-        cdkBuilder.filters(filters.let(IResolvable::unwrap))
+        cdkBuilder.filters(filters.let(IResolvable.Companion::unwrap))
       }
 
       /**

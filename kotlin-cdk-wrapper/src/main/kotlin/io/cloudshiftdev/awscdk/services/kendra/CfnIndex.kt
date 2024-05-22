@@ -103,8 +103,8 @@ public open class CfnIndex(
     id: String,
     props: CfnIndexProps,
   ) :
-      this(software.amazon.awscdk.services.kendra.CfnIndex(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnIndexProps::unwrap))
+      this(software.amazon.awscdk.services.kendra.CfnIndex(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnIndexProps.Companion::unwrap))
   )
 
   public constructor(
@@ -137,14 +137,14 @@ public open class CfnIndex(
    * Specifies additional capacity units configured for your Enterprise Edition index.
    */
   public open fun capacityUnits(`value`: IResolvable) {
-    unwrap(this).setCapacityUnits(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCapacityUnits(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies additional capacity units configured for your Enterprise Edition index.
    */
   public open fun capacityUnits(`value`: CapacityUnitsConfigurationProperty) {
-    unwrap(this).setCapacityUnits(`value`.let(CapacityUnitsConfigurationProperty::unwrap))
+    unwrap(this).setCapacityUnits(`value`.let(CapacityUnitsConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -177,7 +177,7 @@ public open class CfnIndex(
    * Specifies the properties of an index field.
    */
   public open fun documentMetadataConfigurations(`value`: IResolvable) {
-    unwrap(this).setDocumentMetadataConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDocumentMetadataConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -211,7 +211,7 @@ public open class CfnIndex(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -252,7 +252,7 @@ public open class CfnIndex(
    * Amazon Kendra.
    */
   public open fun serverSideEncryptionConfiguration(`value`: IResolvable) {
-    unwrap(this).setServerSideEncryptionConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setServerSideEncryptionConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -261,7 +261,7 @@ public open class CfnIndex(
    */
   public open
       fun serverSideEncryptionConfiguration(`value`: ServerSideEncryptionConfigurationProperty) {
-    unwrap(this).setServerSideEncryptionConfiguration(`value`.let(ServerSideEncryptionConfigurationProperty::unwrap))
+    unwrap(this).setServerSideEncryptionConfiguration(`value`.let(ServerSideEncryptionConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -289,7 +289,7 @@ public open class CfnIndex(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -318,7 +318,7 @@ public open class CfnIndex(
    * Defines the type of user token used for the index.
    */
   public open fun userTokenConfigurations(`value`: IResolvable) {
-    unwrap(this).setUserTokenConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUserTokenConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -577,7 +577,7 @@ public open class CfnIndex(
      * Edition index. 
      */
     override fun capacityUnits(capacityUnits: IResolvable) {
-      cdkBuilder.capacityUnits(capacityUnits.let(IResolvable::unwrap))
+      cdkBuilder.capacityUnits(capacityUnits.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -590,7 +590,7 @@ public open class CfnIndex(
      * Edition index. 
      */
     override fun capacityUnits(capacityUnits: CapacityUnitsConfigurationProperty) {
-      cdkBuilder.capacityUnits(capacityUnits.let(CapacityUnitsConfigurationProperty::unwrap))
+      cdkBuilder.capacityUnits(capacityUnits.let(CapacityUnitsConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -629,7 +629,7 @@ public open class CfnIndex(
      * @param documentMetadataConfigurations Specifies the properties of an index field. 
      */
     override fun documentMetadataConfigurations(documentMetadataConfigurations: IResolvable) {
-      cdkBuilder.documentMetadataConfigurations(documentMetadataConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.documentMetadataConfigurations(documentMetadataConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -709,7 +709,7 @@ public open class CfnIndex(
      * (CMK) to use to encrypt data indexed by Amazon Kendra. 
      */
     override fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: IResolvable) {
-      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -724,7 +724,7 @@ public open class CfnIndex(
      */
     override
         fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: ServerSideEncryptionConfigurationProperty) {
-      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(ServerSideEncryptionConfigurationProperty::unwrap))
+      cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.let(ServerSideEncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -755,7 +755,7 @@ public open class CfnIndex(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -799,7 +799,7 @@ public open class CfnIndex(
      * @param userTokenConfigurations Defines the type of user token used for the index. 
      */
     override fun userTokenConfigurations(userTokenConfigurations: IResolvable) {
-      cdkBuilder.userTokenConfigurations(userTokenConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.userTokenConfigurations(userTokenConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1148,7 +1148,7 @@ public open class CfnIndex(
        * results.
        */
       override fun relevance(relevance: IResolvable) {
-        cdkBuilder.relevance(relevance.let(IResolvable::unwrap))
+        cdkBuilder.relevance(relevance.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1156,7 +1156,7 @@ public open class CfnIndex(
        * results.
        */
       override fun relevance(relevance: RelevanceProperty) {
-        cdkBuilder.relevance(relevance.let(RelevanceProperty::unwrap))
+        cdkBuilder.relevance(relevance.let(RelevanceProperty.Companion::unwrap))
       }
 
       /**
@@ -1172,14 +1172,14 @@ public open class CfnIndex(
        * @param search Provides information about how the field is used during a search.
        */
       override fun search(search: IResolvable) {
-        cdkBuilder.search(search.let(IResolvable::unwrap))
+        cdkBuilder.search(search.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param search Provides information about how the field is used during a search.
        */
       override fun search(search: SearchProperty) {
-        cdkBuilder.search(search.let(SearchProperty::unwrap))
+        cdkBuilder.search(search.let(SearchProperty.Companion::unwrap))
       }
 
       /**
@@ -1825,7 +1825,7 @@ public open class CfnIndex(
        * 31, document 1 is "fresher" than document 2. Only applies to `DATE` fields.
        */
       override fun freshness(freshness: IResolvable) {
-        cdkBuilder.freshness(freshness.let(IResolvable::unwrap))
+        cdkBuilder.freshness(freshness.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1862,7 +1862,7 @@ public open class CfnIndex(
        * of a document.
        */
       override fun valueImportanceItems(valueImportanceItems: IResolvable) {
-        cdkBuilder.valueImportanceItems(valueImportanceItems.let(IResolvable::unwrap))
+        cdkBuilder.valueImportanceItems(valueImportanceItems.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2120,7 +2120,7 @@ public open class CfnIndex(
        * The default is `true` .
        */
       override fun displayable(displayable: IResolvable) {
-        cdkBuilder.displayable(displayable.let(IResolvable::unwrap))
+        cdkBuilder.displayable(displayable.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2138,7 +2138,7 @@ public open class CfnIndex(
        * The default is `false` .
        */
       override fun facetable(facetable: IResolvable) {
-        cdkBuilder.facetable(facetable.let(IResolvable::unwrap))
+        cdkBuilder.facetable(facetable.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2158,7 +2158,7 @@ public open class CfnIndex(
        * `false` for number and date fields.
        */
       override fun searchable(searchable: IResolvable) {
-        cdkBuilder.searchable(searchable.let(IResolvable::unwrap))
+        cdkBuilder.searchable(searchable.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2174,7 +2174,7 @@ public open class CfnIndex(
        * The default is `false` .
        */
       override fun sortable(sortable: IResolvable) {
-        cdkBuilder.sortable(sortable.let(IResolvable::unwrap))
+        cdkBuilder.sortable(sortable.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.kendra.CfnIndex.SearchProperty =
@@ -2432,7 +2432,7 @@ public open class CfnIndex(
        * @param jsonTokenTypeConfiguration Information about the JSON token type configuration.
        */
       override fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: IResolvable) {
-        cdkBuilder.jsonTokenTypeConfiguration(jsonTokenTypeConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.jsonTokenTypeConfiguration(jsonTokenTypeConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2440,7 +2440,7 @@ public open class CfnIndex(
        */
       override
           fun jsonTokenTypeConfiguration(jsonTokenTypeConfiguration: JsonTokenTypeConfigurationProperty) {
-        cdkBuilder.jsonTokenTypeConfiguration(jsonTokenTypeConfiguration.let(JsonTokenTypeConfigurationProperty::unwrap))
+        cdkBuilder.jsonTokenTypeConfiguration(jsonTokenTypeConfiguration.let(JsonTokenTypeConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2457,7 +2457,7 @@ public open class CfnIndex(
        * @param jwtTokenTypeConfiguration Information about the JWT token type configuration.
        */
       override fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: IResolvable) {
-        cdkBuilder.jwtTokenTypeConfiguration(jwtTokenTypeConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.jwtTokenTypeConfiguration(jwtTokenTypeConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2465,7 +2465,7 @@ public open class CfnIndex(
        */
       override
           fun jwtTokenTypeConfiguration(jwtTokenTypeConfiguration: JwtTokenTypeConfigurationProperty) {
-        cdkBuilder.jwtTokenTypeConfiguration(jwtTokenTypeConfiguration.let(JwtTokenTypeConfigurationProperty::unwrap))
+        cdkBuilder.jwtTokenTypeConfiguration(jwtTokenTypeConfiguration.let(JwtTokenTypeConfigurationProperty.Companion::unwrap))
       }
 
       /**

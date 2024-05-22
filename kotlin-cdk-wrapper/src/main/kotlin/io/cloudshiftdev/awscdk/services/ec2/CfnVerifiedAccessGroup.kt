@@ -63,8 +63,8 @@ public open class CfnVerifiedAccessGroup(
     id: String,
     props: CfnVerifiedAccessGroupProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVerifiedAccessGroupProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnVerifiedAccessGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVerifiedAccessGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -118,7 +118,7 @@ public open class CfnVerifiedAccessGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -149,7 +149,7 @@ public open class CfnVerifiedAccessGroup(
    * The status of the Verified Access policy.
    */
   public open fun policyEnabled(`value`: IResolvable) {
-    unwrap(this).setPolicyEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPolicyEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -161,14 +161,14 @@ public open class CfnVerifiedAccessGroup(
    * The options for additional server side encryption.
    */
   public open fun sseSpecification(`value`: IResolvable) {
-    unwrap(this).setSseSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSseSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The options for additional server side encryption.
    */
   public open fun sseSpecification(`value`: SseSpecificationProperty) {
-    unwrap(this).setSseSpecification(`value`.let(SseSpecificationProperty::unwrap))
+    unwrap(this).setSseSpecification(`value`.let(SseSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -194,7 +194,7 @@ public open class CfnVerifiedAccessGroup(
    * The tags.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -346,7 +346,7 @@ public open class CfnVerifiedAccessGroup(
      * @param policyEnabled The status of the Verified Access policy. 
      */
     override fun policyEnabled(policyEnabled: IResolvable) {
-      cdkBuilder.policyEnabled(policyEnabled.let(IResolvable::unwrap))
+      cdkBuilder.policyEnabled(policyEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -356,7 +356,7 @@ public open class CfnVerifiedAccessGroup(
      * @param sseSpecification The options for additional server side encryption. 
      */
     override fun sseSpecification(sseSpecification: IResolvable) {
-      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -366,7 +366,7 @@ public open class CfnVerifiedAccessGroup(
      * @param sseSpecification The options for additional server side encryption. 
      */
     override fun sseSpecification(sseSpecification: SseSpecificationProperty) {
-      cdkBuilder.sseSpecification(sseSpecification.let(SseSpecificationProperty::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(SseSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -387,7 +387,7 @@ public open class CfnVerifiedAccessGroup(
      * @param tags The tags. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -517,7 +517,7 @@ public open class CfnVerifiedAccessGroup(
        * Valid values: `True` | `False`
        */
       override fun customerManagedKeyEnabled(customerManagedKeyEnabled: IResolvable) {
-        cdkBuilder.customerManagedKeyEnabled(customerManagedKeyEnabled.let(IResolvable::unwrap))
+        cdkBuilder.customerManagedKeyEnabled(customerManagedKeyEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**

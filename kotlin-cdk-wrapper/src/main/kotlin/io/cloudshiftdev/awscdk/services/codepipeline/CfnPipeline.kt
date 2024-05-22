@@ -159,8 +159,8 @@ public open class CfnPipeline(
     id: String,
     props: CfnPipelineProps,
   ) :
-      this(software.amazon.awscdk.services.codepipeline.CfnPipeline(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPipelineProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.CfnPipeline(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPipelineProps.Companion::unwrap))
   )
 
   public constructor(
@@ -179,14 +179,14 @@ public open class CfnPipeline(
    * The S3 bucket where artifacts for the pipeline are stored.
    */
   public open fun artifactStore(`value`: IResolvable) {
-    unwrap(this).setArtifactStore(`value`.let(IResolvable::unwrap))
+    unwrap(this).setArtifactStore(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The S3 bucket where artifacts for the pipeline are stored.
    */
   public open fun artifactStore(`value`: ArtifactStoreProperty) {
-    unwrap(this).setArtifactStore(`value`.let(ArtifactStoreProperty::unwrap))
+    unwrap(this).setArtifactStore(`value`.let(ArtifactStoreProperty.Companion::unwrap))
   }
 
   /**
@@ -206,7 +206,7 @@ public open class CfnPipeline(
    * A mapping of `artifactStore` objects and their corresponding AWS Regions.
    */
   public open fun artifactStores(`value`: IResolvable) {
-    unwrap(this).setArtifactStores(`value`.let(IResolvable::unwrap))
+    unwrap(this).setArtifactStores(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -245,7 +245,7 @@ public open class CfnPipeline(
    * Represents the input of a `DisableStageTransition` action.
    */
   public open fun disableInboundStageTransitions(`value`: IResolvable) {
-    unwrap(this).setDisableInboundStageTransitions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDisableInboundStageTransitions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -279,7 +279,7 @@ public open class CfnPipeline(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -324,7 +324,7 @@ public open class CfnPipeline(
    * Indicates whether to rerun the CodePipeline pipeline after you update it.
    */
   public open fun restartExecutionOnUpdate(`value`: IResolvable) {
-    unwrap(this).setRestartExecutionOnUpdate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRestartExecutionOnUpdate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -350,7 +350,7 @@ public open class CfnPipeline(
    * Represents information about a stage and its definition.
    */
   public open fun stages(`value`: IResolvable) {
-    unwrap(this).setStages(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStages(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -380,7 +380,7 @@ public open class CfnPipeline(
    * Specifies the tags applied to the pipeline.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -399,7 +399,7 @@ public open class CfnPipeline(
    * pipeline.
    */
   public open fun triggers(`value`: IResolvable) {
-    unwrap(this).setTriggers(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTriggers(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -425,7 +425,7 @@ public open class CfnPipeline(
    * A list that defines the pipeline variables for a pipeline resource.
    */
   public open fun variables(`value`: IResolvable) {
-    unwrap(this).setVariables(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVariables(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -778,7 +778,7 @@ public open class CfnPipeline(
      * @param artifactStore The S3 bucket where artifacts for the pipeline are stored. 
      */
     override fun artifactStore(artifactStore: IResolvable) {
-      cdkBuilder.artifactStore(artifactStore.let(IResolvable::unwrap))
+      cdkBuilder.artifactStore(artifactStore.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -793,7 +793,7 @@ public open class CfnPipeline(
      * @param artifactStore The S3 bucket where artifacts for the pipeline are stored. 
      */
     override fun artifactStore(artifactStore: ArtifactStoreProperty) {
-      cdkBuilder.artifactStore(artifactStore.let(ArtifactStoreProperty::unwrap))
+      cdkBuilder.artifactStore(artifactStore.let(ArtifactStoreProperty.Companion::unwrap))
     }
 
     /**
@@ -828,7 +828,7 @@ public open class CfnPipeline(
      * Regions. 
      */
     override fun artifactStores(artifactStores: IResolvable) {
-      cdkBuilder.artifactStores(artifactStores.let(IResolvable::unwrap))
+      cdkBuilder.artifactStores(artifactStores.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -876,7 +876,7 @@ public open class CfnPipeline(
      * action. 
      */
     override fun disableInboundStageTransitions(disableInboundStageTransitions: IResolvable) {
-      cdkBuilder.disableInboundStageTransitions(disableInboundStageTransitions.let(IResolvable::unwrap))
+      cdkBuilder.disableInboundStageTransitions(disableInboundStageTransitions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -972,7 +972,7 @@ public open class CfnPipeline(
      * you update it. 
      */
     override fun restartExecutionOnUpdate(restartExecutionOnUpdate: IResolvable) {
-      cdkBuilder.restartExecutionOnUpdate(restartExecutionOnUpdate.let(IResolvable::unwrap))
+      cdkBuilder.restartExecutionOnUpdate(restartExecutionOnUpdate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -995,7 +995,7 @@ public open class CfnPipeline(
      * @param stages Represents information about a stage and its definition. 
      */
     override fun stages(stages: IResolvable) {
-      cdkBuilder.stages(stages.let(IResolvable::unwrap))
+      cdkBuilder.stages(stages.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1023,7 +1023,7 @@ public open class CfnPipeline(
      * @param tags Specifies the tags applied to the pipeline. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1048,7 +1048,7 @@ public open class CfnPipeline(
      * starts the pipeline. 
      */
     override fun triggers(triggers: IResolvable) {
-      cdkBuilder.triggers(triggers.let(IResolvable::unwrap))
+      cdkBuilder.triggers(triggers.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1093,7 +1093,7 @@ public open class CfnPipeline(
      * @param variables A list that defines the pipeline variables for a pipeline resource. 
      */
     override fun variables(variables: IResolvable) {
-      cdkBuilder.variables(variables.let(IResolvable::unwrap))
+      cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1470,14 +1470,14 @@ public open class CfnPipeline(
        * @param actionTypeId Specifies the action type and the provider of the action. 
        */
       override fun actionTypeId(actionTypeId: IResolvable) {
-        cdkBuilder.actionTypeId(actionTypeId.let(IResolvable::unwrap))
+        cdkBuilder.actionTypeId(actionTypeId.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param actionTypeId Specifies the action type and the provider of the action. 
        */
       override fun actionTypeId(actionTypeId: ActionTypeIdProperty) {
-        cdkBuilder.actionTypeId(actionTypeId.let(ActionTypeIdProperty::unwrap))
+        cdkBuilder.actionTypeId(actionTypeId.let(ActionTypeIdProperty.Companion::unwrap))
       }
 
       /**
@@ -1528,7 +1528,7 @@ public open class CfnPipeline(
        * in the *AWS CodePipeline User Guide* .
        */
       override fun inputArtifacts(inputArtifacts: IResolvable) {
-        cdkBuilder.inputArtifacts(inputArtifacts.let(IResolvable::unwrap))
+        cdkBuilder.inputArtifacts(inputArtifacts.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1593,7 +1593,7 @@ public open class CfnPipeline(
        * the *AWS CodePipeline User Guide* .
        */
       override fun outputArtifacts(outputArtifacts: IResolvable) {
-        cdkBuilder.outputArtifacts(outputArtifacts.let(IResolvable::unwrap))
+        cdkBuilder.outputArtifacts(outputArtifacts.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2149,7 +2149,7 @@ public open class CfnPipeline(
        * `artifactStores` .
        */
       override fun artifactStore(artifactStore: IResolvable) {
-        cdkBuilder.artifactStore(artifactStore.let(IResolvable::unwrap))
+        cdkBuilder.artifactStore(artifactStore.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2161,7 +2161,7 @@ public open class CfnPipeline(
        * `artifactStores` .
        */
       override fun artifactStore(artifactStore: ArtifactStoreProperty) {
-        cdkBuilder.artifactStore(artifactStore.let(ArtifactStoreProperty::unwrap))
+        cdkBuilder.artifactStore(artifactStore.let(ArtifactStoreProperty.Companion::unwrap))
       }
 
       /**
@@ -2355,7 +2355,7 @@ public open class CfnPipeline(
        * .
        */
       override fun encryptionKey(encryptionKey: IResolvable) {
-        cdkBuilder.encryptionKey(encryptionKey.let(IResolvable::unwrap))
+        cdkBuilder.encryptionKey(encryptionKey.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2367,7 +2367,7 @@ public open class CfnPipeline(
        * .
        */
       override fun encryptionKey(encryptionKey: EncryptionKeyProperty) {
-        cdkBuilder.encryptionKey(encryptionKey.let(EncryptionKeyProperty::unwrap))
+        cdkBuilder.encryptionKey(encryptionKey.let(EncryptionKeyProperty.Companion::unwrap))
       }
 
       /**
@@ -3001,7 +3001,7 @@ public open class CfnPipeline(
        * specified as pull requests.
        */
       override fun pullRequest(pullRequest: IResolvable) {
-        cdkBuilder.pullRequest(pullRequest.let(IResolvable::unwrap))
+        cdkBuilder.pullRequest(pullRequest.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3023,7 +3023,7 @@ public open class CfnPipeline(
        * pushing Git tags, is specified with details.
        */
       override fun push(push: IResolvable) {
-        cdkBuilder.push(push.let(IResolvable::unwrap))
+        cdkBuilder.push(push.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3370,7 +3370,7 @@ public open class CfnPipeline(
        * configuration.
        */
       override fun branches(branches: IResolvable) {
-        cdkBuilder.branches(branches.let(IResolvable::unwrap))
+        cdkBuilder.branches(branches.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3378,7 +3378,7 @@ public open class CfnPipeline(
        * configuration.
        */
       override fun branches(branches: GitBranchFilterCriteriaProperty) {
-        cdkBuilder.branches(branches.let(GitBranchFilterCriteriaProperty::unwrap))
+        cdkBuilder.branches(branches.let(GitBranchFilterCriteriaProperty.Companion::unwrap))
       }
 
       /**
@@ -3409,7 +3409,7 @@ public open class CfnPipeline(
        * trigger configuration.
        */
       override fun filePaths(filePaths: IResolvable) {
-        cdkBuilder.filePaths(filePaths.let(IResolvable::unwrap))
+        cdkBuilder.filePaths(filePaths.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3417,7 +3417,7 @@ public open class CfnPipeline(
        * trigger configuration.
        */
       override fun filePaths(filePaths: GitFilePathFilterCriteriaProperty) {
-        cdkBuilder.filePaths(filePaths.let(GitFilePathFilterCriteriaProperty::unwrap))
+        cdkBuilder.filePaths(filePaths.let(GitFilePathFilterCriteriaProperty.Companion::unwrap))
       }
 
       /**
@@ -3598,7 +3598,7 @@ public open class CfnPipeline(
        * configuration.
        */
       override fun branches(branches: IResolvable) {
-        cdkBuilder.branches(branches.let(IResolvable::unwrap))
+        cdkBuilder.branches(branches.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3606,7 +3606,7 @@ public open class CfnPipeline(
        * configuration.
        */
       override fun branches(branches: GitBranchFilterCriteriaProperty) {
-        cdkBuilder.branches(branches.let(GitBranchFilterCriteriaProperty::unwrap))
+        cdkBuilder.branches(branches.let(GitBranchFilterCriteriaProperty.Companion::unwrap))
       }
 
       /**
@@ -3623,7 +3623,7 @@ public open class CfnPipeline(
        * configuration.
        */
       override fun filePaths(filePaths: IResolvable) {
-        cdkBuilder.filePaths(filePaths.let(IResolvable::unwrap))
+        cdkBuilder.filePaths(filePaths.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3631,7 +3631,7 @@ public open class CfnPipeline(
        * configuration.
        */
       override fun filePaths(filePaths: GitFilePathFilterCriteriaProperty) {
-        cdkBuilder.filePaths(filePaths.let(GitFilePathFilterCriteriaProperty::unwrap))
+        cdkBuilder.filePaths(filePaths.let(GitFilePathFilterCriteriaProperty.Companion::unwrap))
       }
 
       /**
@@ -3647,7 +3647,7 @@ public open class CfnPipeline(
        * @param tags The field that contains the details for the Git tags trigger configuration.
        */
       override fun tags(tags: GitTagFilterCriteriaProperty) {
-        cdkBuilder.tags(tags.let(GitTagFilterCriteriaProperty::unwrap))
+        cdkBuilder.tags(tags.let(GitTagFilterCriteriaProperty.Companion::unwrap))
       }
 
       /**
@@ -4190,7 +4190,7 @@ public open class CfnPipeline(
        * repository event that starts the pipeline, such as Git tags.
        */
       override fun gitConfiguration(gitConfiguration: IResolvable) {
-        cdkBuilder.gitConfiguration(gitConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.gitConfiguration(gitConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4198,7 +4198,7 @@ public open class CfnPipeline(
        * repository event that starts the pipeline, such as Git tags.
        */
       override fun gitConfiguration(gitConfiguration: GitConfigurationProperty) {
-        cdkBuilder.gitConfiguration(gitConfiguration.let(GitConfigurationProperty::unwrap))
+        cdkBuilder.gitConfiguration(gitConfiguration.let(GitConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -4379,7 +4379,7 @@ public open class CfnPipeline(
        * @param actions The actions included in a stage. 
        */
       override fun actions(actions: IResolvable) {
-        cdkBuilder.actions(actions.let(IResolvable::unwrap))
+        cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4398,7 +4398,7 @@ public open class CfnPipeline(
        * @param blockers Reserved for future use.
        */
       override fun blockers(blockers: IResolvable) {
-        cdkBuilder.blockers(blockers.let(IResolvable::unwrap))
+        cdkBuilder.blockers(blockers.let(IResolvable.Companion::unwrap))
       }
 
       /**

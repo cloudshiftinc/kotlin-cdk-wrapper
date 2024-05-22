@@ -72,8 +72,8 @@ public open class CfnBranch(
     id: String,
     props: CfnBranchProps,
   ) :
-      this(software.amazon.awscdk.services.amplify.CfnBranch(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnBranchProps::unwrap))
+      this(software.amazon.awscdk.services.amplify.CfnBranch(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnBranchProps.Companion::unwrap))
   )
 
   public constructor(
@@ -114,14 +114,14 @@ public open class CfnBranch(
    * Specifies the backend for a `Branch` of an Amplify app.
    */
   public open fun backend(`value`: IResolvable) {
-    unwrap(this).setBackend(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBackend(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the backend for a `Branch` of an Amplify app.
    */
   public open fun backend(`value`: BackendProperty) {
-    unwrap(this).setBackend(`value`.let(BackendProperty::unwrap))
+    unwrap(this).setBackend(`value`.let(BackendProperty.Companion::unwrap))
   }
 
   /**
@@ -141,14 +141,14 @@ public open class CfnBranch(
    * The basic authorization credentials for a branch of an Amplify app.
    */
   public open fun basicAuthConfig(`value`: IResolvable) {
-    unwrap(this).setBasicAuthConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBasicAuthConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The basic authorization credentials for a branch of an Amplify app.
    */
   public open fun basicAuthConfig(`value`: BasicAuthConfigProperty) {
-    unwrap(this).setBasicAuthConfig(`value`.let(BasicAuthConfigProperty::unwrap))
+    unwrap(this).setBasicAuthConfig(`value`.let(BasicAuthConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -211,7 +211,7 @@ public open class CfnBranch(
    * Enables auto building for the branch.
    */
   public open fun enableAutoBuild(`value`: IResolvable) {
-    unwrap(this).setEnableAutoBuild(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableAutoBuild(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -230,7 +230,7 @@ public open class CfnBranch(
    * Enables performance mode for the branch.
    */
   public open fun enablePerformanceMode(`value`: IResolvable) {
-    unwrap(this).setEnablePerformanceMode(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnablePerformanceMode(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -252,7 +252,7 @@ public open class CfnBranch(
    * branch.
    */
   public open fun enablePullRequestPreview(`value`: IResolvable) {
-    unwrap(this).setEnablePullRequestPreview(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnablePullRequestPreview(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -264,7 +264,7 @@ public open class CfnBranch(
    * The environment variables for the branch.
    */
   public open fun environmentVariables(`value`: IResolvable) {
-    unwrap(this).setEnvironmentVariables(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnvironmentVariables(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -298,7 +298,7 @@ public open class CfnBranch(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -343,7 +343,7 @@ public open class CfnBranch(
    * The tag for the branch.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -637,7 +637,7 @@ public open class CfnBranch(
      * @param backend Specifies the backend for a `Branch` of an Amplify app. 
      */
     override fun backend(backend: IResolvable) {
-      cdkBuilder.backend(backend.let(IResolvable::unwrap))
+      cdkBuilder.backend(backend.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -647,7 +647,7 @@ public open class CfnBranch(
      * @param backend Specifies the backend for a `Branch` of an Amplify app. 
      */
     override fun backend(backend: BackendProperty) {
-      cdkBuilder.backend(backend.let(BackendProperty::unwrap))
+      cdkBuilder.backend(backend.let(BackendProperty.Companion::unwrap))
     }
 
     /**
@@ -671,7 +671,7 @@ public open class CfnBranch(
      * @param basicAuthConfig The basic authorization credentials for a branch of an Amplify app. 
      */
     override fun basicAuthConfig(basicAuthConfig: IResolvable) {
-      cdkBuilder.basicAuthConfig(basicAuthConfig.let(IResolvable::unwrap))
+      cdkBuilder.basicAuthConfig(basicAuthConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -684,7 +684,7 @@ public open class CfnBranch(
      * @param basicAuthConfig The basic authorization credentials for a branch of an Amplify app. 
      */
     override fun basicAuthConfig(basicAuthConfig: BasicAuthConfigProperty) {
-      cdkBuilder.basicAuthConfig(basicAuthConfig.let(BasicAuthConfigProperty::unwrap))
+      cdkBuilder.basicAuthConfig(basicAuthConfig.let(BasicAuthConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -748,7 +748,7 @@ public open class CfnBranch(
      * @param enableAutoBuild Enables auto building for the branch. 
      */
     override fun enableAutoBuild(enableAutoBuild: IResolvable) {
-      cdkBuilder.enableAutoBuild(enableAutoBuild.let(IResolvable::unwrap))
+      cdkBuilder.enableAutoBuild(enableAutoBuild.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -776,7 +776,7 @@ public open class CfnBranch(
      * @param enablePerformanceMode Enables performance mode for the branch. 
      */
     override fun enablePerformanceMode(enablePerformanceMode: IResolvable) {
-      cdkBuilder.enablePerformanceMode(enablePerformanceMode.let(IResolvable::unwrap))
+      cdkBuilder.enablePerformanceMode(enablePerformanceMode.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -824,7 +824,7 @@ public open class CfnBranch(
      * pull request that is made for this branch. 
      */
     override fun enablePullRequestPreview(enablePullRequestPreview: IResolvable) {
-      cdkBuilder.enablePullRequestPreview(enablePullRequestPreview.let(IResolvable::unwrap))
+      cdkBuilder.enablePullRequestPreview(enablePullRequestPreview.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -834,7 +834,7 @@ public open class CfnBranch(
      * @param environmentVariables The environment variables for the branch. 
      */
     override fun environmentVariables(environmentVariables: IResolvable) {
-      cdkBuilder.environmentVariables(environmentVariables.let(IResolvable::unwrap))
+      cdkBuilder.environmentVariables(environmentVariables.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -908,7 +908,7 @@ public open class CfnBranch(
      * @param tags The tag for the branch. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1102,7 +1102,7 @@ public open class CfnBranch(
        * @param enableBasicAuth Enables basic authorization for the branch.
        */
       override fun enableBasicAuth(enableBasicAuth: IResolvable) {
-        cdkBuilder.enableBasicAuth(enableBasicAuth.let(IResolvable::unwrap))
+        cdkBuilder.enableBasicAuth(enableBasicAuth.let(IResolvable.Companion::unwrap))
       }
 
       /**

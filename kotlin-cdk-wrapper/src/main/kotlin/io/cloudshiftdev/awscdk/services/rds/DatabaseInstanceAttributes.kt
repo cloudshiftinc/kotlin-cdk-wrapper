@@ -123,7 +123,7 @@ public interface DatabaseInstanceAttributes {
      * @param engine The engine of the existing database Instance.
      */
     override fun engine(engine: IInstanceEngine) {
-      cdkBuilder.engine(engine.let(IInstanceEngine::unwrap))
+      cdkBuilder.engine(engine.let(IInstanceEngine.Companion::unwrap))
     }
 
     /**
@@ -160,7 +160,7 @@ public interface DatabaseInstanceAttributes {
      * @param securityGroups The security groups of the instance. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**

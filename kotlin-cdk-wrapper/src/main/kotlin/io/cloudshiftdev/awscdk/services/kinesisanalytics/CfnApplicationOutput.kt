@@ -81,8 +81,8 @@ public open class CfnApplicationOutput(
     id: String,
     props: CfnApplicationOutputProps,
   ) :
-      this(software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApplicationOutputProps::unwrap))
+      this(software.amazon.awscdk.services.kinesisanalytics.CfnApplicationOutput(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApplicationOutputProps.Companion::unwrap))
   )
 
   public constructor(
@@ -115,7 +115,7 @@ public open class CfnApplicationOutput(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -127,14 +127,14 @@ public open class CfnApplicationOutput(
    * An array of objects, each describing one output configuration.
    */
   public open fun output(`value`: IResolvable) {
-    unwrap(this).setOutput(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOutput(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An array of objects, each describing one output configuration.
    */
   public open fun output(`value`: OutputProperty) {
-    unwrap(this).setOutput(`value`.let(OutputProperty::unwrap))
+    unwrap(this).setOutput(`value`.let(OutputProperty.Companion::unwrap))
   }
 
   /**
@@ -229,7 +229,7 @@ public open class CfnApplicationOutput(
      * @param output An array of objects, each describing one output configuration. 
      */
     override fun output(output: IResolvable) {
-      cdkBuilder.output(output.let(IResolvable::unwrap))
+      cdkBuilder.output(output.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -243,7 +243,7 @@ public open class CfnApplicationOutput(
      * @param output An array of objects, each describing one output configuration. 
      */
     override fun output(output: OutputProperty) {
-      cdkBuilder.output(output.let(OutputProperty::unwrap))
+      cdkBuilder.output(output.let(OutputProperty.Companion::unwrap))
     }
 
     /**
@@ -952,7 +952,7 @@ public open class CfnApplicationOutput(
        * Output](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/how-it-works-output.html) .
        */
       override fun destinationSchema(destinationSchema: IResolvable) {
-        cdkBuilder.destinationSchema(destinationSchema.let(IResolvable::unwrap))
+        cdkBuilder.destinationSchema(destinationSchema.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -962,7 +962,7 @@ public open class CfnApplicationOutput(
        * Output](https://docs.aws.amazon.com/kinesisanalytics/latest/dev/how-it-works-output.html) .
        */
       override fun destinationSchema(destinationSchema: DestinationSchemaProperty) {
-        cdkBuilder.destinationSchema(destinationSchema.let(DestinationSchemaProperty::unwrap))
+        cdkBuilder.destinationSchema(destinationSchema.let(DestinationSchemaProperty.Companion::unwrap))
       }
 
       /**
@@ -982,7 +982,7 @@ public open class CfnApplicationOutput(
        * destination.
        */
       override fun kinesisFirehoseOutput(kinesisFirehoseOutput: IResolvable) {
-        cdkBuilder.kinesisFirehoseOutput(kinesisFirehoseOutput.let(IResolvable::unwrap))
+        cdkBuilder.kinesisFirehoseOutput(kinesisFirehoseOutput.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -990,7 +990,7 @@ public open class CfnApplicationOutput(
        * destination.
        */
       override fun kinesisFirehoseOutput(kinesisFirehoseOutput: KinesisFirehoseOutputProperty) {
-        cdkBuilder.kinesisFirehoseOutput(kinesisFirehoseOutput.let(KinesisFirehoseOutputProperty::unwrap))
+        cdkBuilder.kinesisFirehoseOutput(kinesisFirehoseOutput.let(KinesisFirehoseOutputProperty.Companion::unwrap))
       }
 
       /**
@@ -1007,14 +1007,14 @@ public open class CfnApplicationOutput(
        * @param kinesisStreamsOutput Identifies an Amazon Kinesis stream as the destination.
        */
       override fun kinesisStreamsOutput(kinesisStreamsOutput: IResolvable) {
-        cdkBuilder.kinesisStreamsOutput(kinesisStreamsOutput.let(IResolvable::unwrap))
+        cdkBuilder.kinesisStreamsOutput(kinesisStreamsOutput.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param kinesisStreamsOutput Identifies an Amazon Kinesis stream as the destination.
        */
       override fun kinesisStreamsOutput(kinesisStreamsOutput: KinesisStreamsOutputProperty) {
-        cdkBuilder.kinesisStreamsOutput(kinesisStreamsOutput.let(KinesisStreamsOutputProperty::unwrap))
+        cdkBuilder.kinesisStreamsOutput(kinesisStreamsOutput.let(KinesisStreamsOutputProperty.Companion::unwrap))
       }
 
       /**
@@ -1030,14 +1030,14 @@ public open class CfnApplicationOutput(
        * @param lambdaOutput Identifies an AWS Lambda function as the destination.
        */
       override fun lambdaOutput(lambdaOutput: IResolvable) {
-        cdkBuilder.lambdaOutput(lambdaOutput.let(IResolvable::unwrap))
+        cdkBuilder.lambdaOutput(lambdaOutput.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param lambdaOutput Identifies an AWS Lambda function as the destination.
        */
       override fun lambdaOutput(lambdaOutput: LambdaOutputProperty) {
-        cdkBuilder.lambdaOutput(lambdaOutput.let(LambdaOutputProperty::unwrap))
+        cdkBuilder.lambdaOutput(lambdaOutput.let(LambdaOutputProperty.Companion::unwrap))
       }
 
       /**

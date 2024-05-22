@@ -66,8 +66,8 @@ public open class CfnTrustAnchor(
     id: String,
     props: CfnTrustAnchorProps,
   ) :
-      this(software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTrustAnchorProps::unwrap))
+      this(software.amazon.awscdk.services.rolesanywhere.CfnTrustAnchor(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTrustAnchorProps.Companion::unwrap))
   )
 
   public constructor(
@@ -103,7 +103,7 @@ public open class CfnTrustAnchor(
    * Indicates whether the trust anchor is enabled.
    */
   public open fun enabled(`value`: IResolvable) {
-    unwrap(this).setEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -112,7 +112,7 @@ public open class CfnTrustAnchor(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -136,7 +136,7 @@ public open class CfnTrustAnchor(
    * A list of notification settings to be associated to the trust anchor.
    */
   public open fun notificationSettings(`value`: IResolvable) {
-    unwrap(this).setNotificationSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNotificationSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -161,14 +161,14 @@ public open class CfnTrustAnchor(
    * The trust anchor type and its related certificate data.
    */
   public open fun source(`value`: IResolvable) {
-    unwrap(this).setSource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The trust anchor type and its related certificate data.
    */
   public open fun source(`value`: SourceProperty) {
-    unwrap(this).setSource(`value`.let(SourceProperty::unwrap))
+    unwrap(this).setSource(`value`.let(SourceProperty.Companion::unwrap))
   }
 
   /**
@@ -194,7 +194,7 @@ public open class CfnTrustAnchor(
    * The tags to attach to the trust anchor.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -325,7 +325,7 @@ public open class CfnTrustAnchor(
      * @param enabled Indicates whether the trust anchor is enabled. 
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -346,7 +346,7 @@ public open class CfnTrustAnchor(
      * anchor. 
      */
     override fun notificationSettings(notificationSettings: IResolvable) {
-      cdkBuilder.notificationSettings(notificationSettings.let(IResolvable::unwrap))
+      cdkBuilder.notificationSettings(notificationSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -377,7 +377,7 @@ public open class CfnTrustAnchor(
      * @param source The trust anchor type and its related certificate data. 
      */
     override fun source(source: IResolvable) {
-      cdkBuilder.source(source.let(IResolvable::unwrap))
+      cdkBuilder.source(source.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -387,7 +387,7 @@ public open class CfnTrustAnchor(
      * @param source The trust anchor type and its related certificate data. 
      */
     override fun source(source: SourceProperty) {
-      cdkBuilder.source(source.let(SourceProperty::unwrap))
+      cdkBuilder.source(source.let(SourceProperty.Companion::unwrap))
     }
 
     /**
@@ -408,7 +408,7 @@ public open class CfnTrustAnchor(
      * @param tags The tags to attach to the trust anchor. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -574,7 +574,7 @@ public open class CfnTrustAnchor(
        * @param enabled Indicates whether the notification setting is enabled. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -871,7 +871,7 @@ public open class CfnTrustAnchor(
        * on its type.
        */
       override fun sourceData(sourceData: IResolvable) {
-        cdkBuilder.sourceData(sourceData.let(IResolvable::unwrap))
+        cdkBuilder.sourceData(sourceData.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -879,7 +879,7 @@ public open class CfnTrustAnchor(
        * on its type.
        */
       override fun sourceData(sourceData: SourceDataProperty) {
-        cdkBuilder.sourceData(sourceData.let(SourceDataProperty::unwrap))
+        cdkBuilder.sourceData(sourceData.let(SourceDataProperty.Companion::unwrap))
       }
 
       /**

@@ -31,7 +31,7 @@ public open class ListenerCertificate(
         software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCertificate.fromArn(certificateArn).let(ListenerCertificate::wrap)
 
     public fun fromCertificateManager(acmCertificate: ICertificate): ListenerCertificate =
-        software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCertificate.fromCertificateManager(acmCertificate.let(ICertificate::unwrap)).let(ListenerCertificate::wrap)
+        software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCertificate.fromCertificateManager(acmCertificate.let(ICertificate.Companion::unwrap)).let(ListenerCertificate::wrap)
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ListenerCertificate):

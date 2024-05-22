@@ -839,7 +839,7 @@ public interface CfnDeploymentGroupProps {
      * with the deployment group.
      */
     override fun alarmConfiguration(alarmConfiguration: IResolvable) {
-      cdkBuilder.alarmConfiguration(alarmConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.alarmConfiguration(alarmConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -848,7 +848,7 @@ public interface CfnDeploymentGroupProps {
      */
     override
         fun alarmConfiguration(alarmConfiguration: CfnDeploymentGroup.AlarmConfigurationProperty) {
-      cdkBuilder.alarmConfiguration(alarmConfiguration.let(CfnDeploymentGroup.AlarmConfigurationProperty::unwrap))
+      cdkBuilder.alarmConfiguration(alarmConfiguration.let(CfnDeploymentGroup.AlarmConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -875,7 +875,7 @@ public interface CfnDeploymentGroupProps {
      * If you specify this property, don't specify the `Deployment` property.
      */
     override fun autoRollbackConfiguration(autoRollbackConfiguration: IResolvable) {
-      cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -885,7 +885,7 @@ public interface CfnDeploymentGroupProps {
      */
     override
         fun autoRollbackConfiguration(autoRollbackConfiguration: CfnDeploymentGroup.AutoRollbackConfigurationProperty) {
-      cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(CfnDeploymentGroup.AutoRollbackConfigurationProperty::unwrap))
+      cdkBuilder.autoRollbackConfiguration(autoRollbackConfiguration.let(CfnDeploymentGroup.AutoRollbackConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -922,7 +922,7 @@ public interface CfnDeploymentGroupProps {
      * deployment group.
      */
     override fun blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration: IResolvable) {
-      cdkBuilder.blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -931,7 +931,7 @@ public interface CfnDeploymentGroupProps {
      */
     override
         fun blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration: CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty) {
-      cdkBuilder.blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration.let(CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty::unwrap))
+      cdkBuilder.blueGreenDeploymentConfiguration(blueGreenDeploymentConfiguration.let(CfnDeploymentGroup.BlueGreenDeploymentConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -952,7 +952,7 @@ public interface CfnDeploymentGroupProps {
      * `AutoRollbackConfiguration` property.
      */
     override fun deployment(deployment: IResolvable) {
-      cdkBuilder.deployment(deployment.let(IResolvable::unwrap))
+      cdkBuilder.deployment(deployment.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -962,7 +962,7 @@ public interface CfnDeploymentGroupProps {
      * `AutoRollbackConfiguration` property.
      */
     override fun deployment(deployment: CfnDeploymentGroup.DeploymentProperty) {
-      cdkBuilder.deployment(deployment.let(CfnDeploymentGroup.DeploymentProperty::unwrap))
+      cdkBuilder.deployment(deployment.let(CfnDeploymentGroup.DeploymentProperty.Companion::unwrap))
     }
 
     /**
@@ -1020,7 +1020,7 @@ public interface CfnDeploymentGroupProps {
      * for more information.
      */
     override fun deploymentStyle(deploymentStyle: IResolvable) {
-      cdkBuilder.deploymentStyle(deploymentStyle.let(IResolvable::unwrap))
+      cdkBuilder.deploymentStyle(deploymentStyle.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1038,7 +1038,7 @@ public interface CfnDeploymentGroupProps {
      * for more information.
      */
     override fun deploymentStyle(deploymentStyle: CfnDeploymentGroup.DeploymentStyleProperty) {
-      cdkBuilder.deploymentStyle(deploymentStyle.let(CfnDeploymentGroup.DeploymentStyleProperty::unwrap))
+      cdkBuilder.deploymentStyle(deploymentStyle.let(CfnDeploymentGroup.DeploymentStyleProperty.Companion::unwrap))
     }
 
     /**
@@ -1070,7 +1070,7 @@ public interface CfnDeploymentGroupProps {
      * You can specify `EC2TagFilters` or `Ec2TagSet` , but not both.
      */
     override fun ec2TagFilters(ec2TagFilters: IResolvable) {
-      cdkBuilder.ec2TagFilters(ec2TagFilters.let(IResolvable::unwrap))
+      cdkBuilder.ec2TagFilters(ec2TagFilters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1102,7 +1102,7 @@ public interface CfnDeploymentGroupProps {
      * Cannot be used in the same call as `ec2TagFilter` .
      */
     override fun ec2TagSet(ec2TagSet: IResolvable) {
-      cdkBuilder.ec2TagSet(ec2TagSet.let(IResolvable::unwrap))
+      cdkBuilder.ec2TagSet(ec2TagSet.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1111,7 +1111,7 @@ public interface CfnDeploymentGroupProps {
      * Cannot be used in the same call as `ec2TagFilter` .
      */
     override fun ec2TagSet(ec2TagSet: CfnDeploymentGroup.EC2TagSetProperty) {
-      cdkBuilder.ec2TagSet(ec2TagSet.let(CfnDeploymentGroup.EC2TagSetProperty::unwrap))
+      cdkBuilder.ec2TagSet(ec2TagSet.let(CfnDeploymentGroup.EC2TagSetProperty.Companion::unwrap))
     }
 
     /**
@@ -1131,7 +1131,7 @@ public interface CfnDeploymentGroupProps {
      * `&lt;clustername&gt;:&lt;servicename&gt;` .
      */
     override fun ecsServices(ecsServices: IResolvable) {
-      cdkBuilder.ecsServices(ecsServices.let(IResolvable::unwrap))
+      cdkBuilder.ecsServices(ecsServices.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1159,7 +1159,7 @@ public interface CfnDeploymentGroupProps {
      * in the *AWS CodeDeploy User Guide* .
      */
     override fun loadBalancerInfo(loadBalancerInfo: IResolvable) {
-      cdkBuilder.loadBalancerInfo(loadBalancerInfo.let(IResolvable::unwrap))
+      cdkBuilder.loadBalancerInfo(loadBalancerInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1169,7 +1169,7 @@ public interface CfnDeploymentGroupProps {
      * in the *AWS CodeDeploy User Guide* .
      */
     override fun loadBalancerInfo(loadBalancerInfo: CfnDeploymentGroup.LoadBalancerInfoProperty) {
-      cdkBuilder.loadBalancerInfo(loadBalancerInfo.let(CfnDeploymentGroup.LoadBalancerInfoProperty::unwrap))
+      cdkBuilder.loadBalancerInfo(loadBalancerInfo.let(CfnDeploymentGroup.LoadBalancerInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -1196,7 +1196,7 @@ public interface CfnDeploymentGroupProps {
      * You can specify `OnPremisesInstanceTagFilters` or `OnPremisesInstanceTagSet` , but not both.
      */
     override fun onPremisesInstanceTagFilters(onPremisesInstanceTagFilters: IResolvable) {
-      cdkBuilder.onPremisesInstanceTagFilters(onPremisesInstanceTagFilters.let(IResolvable::unwrap))
+      cdkBuilder.onPremisesInstanceTagFilters(onPremisesInstanceTagFilters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1235,7 +1235,7 @@ public interface CfnDeploymentGroupProps {
      * You can specify `OnPremisesInstanceTagFilters` or `OnPremisesInstanceTagSet` , but not both.
      */
     override fun onPremisesTagSet(onPremisesTagSet: IResolvable) {
-      cdkBuilder.onPremisesTagSet(onPremisesTagSet.let(IResolvable::unwrap))
+      cdkBuilder.onPremisesTagSet(onPremisesTagSet.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1245,7 +1245,7 @@ public interface CfnDeploymentGroupProps {
      * You can specify `OnPremisesInstanceTagFilters` or `OnPremisesInstanceTagSet` , but not both.
      */
     override fun onPremisesTagSet(onPremisesTagSet: CfnDeploymentGroup.OnPremisesTagSetProperty) {
-      cdkBuilder.onPremisesTagSet(onPremisesTagSet.let(CfnDeploymentGroup.OnPremisesTagSetProperty::unwrap))
+      cdkBuilder.onPremisesTagSet(onPremisesTagSet.let(CfnDeploymentGroup.OnPremisesTagSetProperty.Companion::unwrap))
     }
 
     /**
@@ -1297,7 +1297,7 @@ public interface CfnDeploymentGroupProps {
      * Each tag consists of a key and an optional value, both of which you define.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1326,7 +1326,7 @@ public interface CfnDeploymentGroupProps {
      * in the *AWS CodeDeploy User Guide* .
      */
     override fun terminationHookEnabled(terminationHookEnabled: IResolvable) {
-      cdkBuilder.terminationHookEnabled(terminationHookEnabled.let(IResolvable::unwrap))
+      cdkBuilder.terminationHookEnabled(terminationHookEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1334,7 +1334,7 @@ public interface CfnDeploymentGroupProps {
      * Duplicates are not allowed
      */
     override fun triggerConfigurations(triggerConfigurations: IResolvable) {
-      cdkBuilder.triggerConfigurations(triggerConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.triggerConfigurations(triggerConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**

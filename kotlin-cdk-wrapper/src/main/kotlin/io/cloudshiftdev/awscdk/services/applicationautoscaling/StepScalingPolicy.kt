@@ -58,8 +58,8 @@ public open class StepScalingPolicy(
     id: String,
     props: StepScalingPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.applicationautoscaling.StepScalingPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(StepScalingPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.applicationautoscaling.StepScalingPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(StepScalingPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -233,7 +233,7 @@ public open class StepScalingPolicy(
      * @param adjustmentType How the adjustment numbers inside 'intervals' are interpreted. 
      */
     override fun adjustmentType(adjustmentType: AdjustmentType) {
-      cdkBuilder.adjustmentType(adjustmentType.let(AdjustmentType::unwrap))
+      cdkBuilder.adjustmentType(adjustmentType.let(AdjustmentType.Companion::unwrap))
     }
 
     /**
@@ -250,7 +250,7 @@ public open class StepScalingPolicy(
      * @param cooldown Grace period after scaling activity. 
      */
     override fun cooldown(cooldown: Duration) {
-      cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
+      cdkBuilder.cooldown(cooldown.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -295,7 +295,7 @@ public open class StepScalingPolicy(
      * @param metric Metric to scale on. 
      */
     override fun metric(metric: IMetric) {
-      cdkBuilder.metric(metric.let(IMetric::unwrap))
+      cdkBuilder.metric(metric.let(IMetric.Companion::unwrap))
     }
 
     /**
@@ -310,7 +310,7 @@ public open class StepScalingPolicy(
      * periods. 
      */
     override fun metricAggregationType(metricAggregationType: MetricAggregationType) {
-      cdkBuilder.metricAggregationType(metricAggregationType.let(MetricAggregationType::unwrap))
+      cdkBuilder.metricAggregationType(metricAggregationType.let(MetricAggregationType.Companion::unwrap))
     }
 
     /**
@@ -338,7 +338,7 @@ public open class StepScalingPolicy(
      * @param scalingSteps The intervals for scaling. 
      */
     override fun scalingSteps(scalingSteps: List<ScalingInterval>) {
-      cdkBuilder.scalingSteps(scalingSteps.map(ScalingInterval::unwrap))
+      cdkBuilder.scalingSteps(scalingSteps.map(ScalingInterval.Companion::unwrap))
     }
 
     /**
@@ -359,7 +359,7 @@ public open class StepScalingPolicy(
      * @param scalingTarget The scaling target. 
      */
     override fun scalingTarget(scalingTarget: IScalableTarget) {
-      cdkBuilder.scalingTarget(scalingTarget.let(IScalableTarget::unwrap))
+      cdkBuilder.scalingTarget(scalingTarget.let(IScalableTarget.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.applicationautoscaling.StepScalingPolicy =

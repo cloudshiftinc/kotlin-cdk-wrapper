@@ -406,7 +406,7 @@ public interface CfnServiceProps {
      * By default, App Runner uses an AWS managed key .
      */
     override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -416,7 +416,7 @@ public interface CfnServiceProps {
      */
     override
         fun encryptionConfiguration(encryptionConfiguration: CfnService.EncryptionConfigurationProperty) {
-      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(CfnService.EncryptionConfigurationProperty::unwrap))
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(CfnService.EncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -436,7 +436,7 @@ public interface CfnServiceProps {
      * performs to monitor the health of the App Runner service.
      */
     override fun healthCheckConfiguration(healthCheckConfiguration: IResolvable) {
-      cdkBuilder.healthCheckConfiguration(healthCheckConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.healthCheckConfiguration(healthCheckConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -445,7 +445,7 @@ public interface CfnServiceProps {
      */
     override
         fun healthCheckConfiguration(healthCheckConfiguration: CfnService.HealthCheckConfigurationProperty) {
-      cdkBuilder.healthCheckConfiguration(healthCheckConfiguration.let(CfnService.HealthCheckConfigurationProperty::unwrap))
+      cdkBuilder.healthCheckConfiguration(healthCheckConfiguration.let(CfnService.HealthCheckConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -464,7 +464,7 @@ public interface CfnServiceProps {
      * service.
      */
     override fun instanceConfiguration(instanceConfiguration: IResolvable) {
-      cdkBuilder.instanceConfiguration(instanceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.instanceConfiguration(instanceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -473,7 +473,7 @@ public interface CfnServiceProps {
      */
     override
         fun instanceConfiguration(instanceConfiguration: CfnService.InstanceConfigurationProperty) {
-      cdkBuilder.instanceConfiguration(instanceConfiguration.let(CfnService.InstanceConfigurationProperty::unwrap))
+      cdkBuilder.instanceConfiguration(instanceConfiguration.let(CfnService.InstanceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -492,7 +492,7 @@ public interface CfnServiceProps {
      * application that the App Runner service runs.
      */
     override fun networkConfiguration(networkConfiguration: IResolvable) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -501,7 +501,7 @@ public interface CfnServiceProps {
      */
     override
         fun networkConfiguration(networkConfiguration: CfnService.NetworkConfigurationProperty) {
-      cdkBuilder.networkConfiguration(networkConfiguration.let(CfnService.NetworkConfigurationProperty::unwrap))
+      cdkBuilder.networkConfiguration(networkConfiguration.let(CfnService.NetworkConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -518,7 +518,7 @@ public interface CfnServiceProps {
      * @param observabilityConfiguration The observability configuration of your service.
      */
     override fun observabilityConfiguration(observabilityConfiguration: IResolvable) {
-      cdkBuilder.observabilityConfiguration(observabilityConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.observabilityConfiguration(observabilityConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -526,7 +526,7 @@ public interface CfnServiceProps {
      */
     override
         fun observabilityConfiguration(observabilityConfiguration: CfnService.ServiceObservabilityConfigurationProperty) {
-      cdkBuilder.observabilityConfiguration(observabilityConfiguration.let(CfnService.ServiceObservabilityConfigurationProperty::unwrap))
+      cdkBuilder.observabilityConfiguration(observabilityConfiguration.let(CfnService.ServiceObservabilityConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -555,7 +555,7 @@ public interface CfnServiceProps {
      * It can be a code or an image repository.
      */
     override fun sourceConfiguration(sourceConfiguration: IResolvable) {
-      cdkBuilder.sourceConfiguration(sourceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.sourceConfiguration(sourceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -563,7 +563,7 @@ public interface CfnServiceProps {
      * It can be a code or an image repository.
      */
     override fun sourceConfiguration(sourceConfiguration: CfnService.SourceConfigurationProperty) {
-      cdkBuilder.sourceConfiguration(sourceConfiguration.let(CfnService.SourceConfigurationProperty::unwrap))
+      cdkBuilder.sourceConfiguration(sourceConfiguration.let(CfnService.SourceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -582,7 +582,7 @@ public interface CfnServiceProps {
      * A tag is a key-value pair.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

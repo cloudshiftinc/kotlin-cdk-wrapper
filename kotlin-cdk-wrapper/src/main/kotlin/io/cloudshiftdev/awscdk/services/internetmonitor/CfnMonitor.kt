@@ -94,8 +94,8 @@ public open class CfnMonitor(
     id: String,
     props: CfnMonitorProps,
   ) :
-      this(software.amazon.awscdk.services.internetmonitor.CfnMonitor(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMonitorProps::unwrap))
+      this(software.amazon.awscdk.services.internetmonitor.CfnMonitor(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMonitorProps.Companion::unwrap))
   )
 
   public constructor(
@@ -147,7 +147,7 @@ public open class CfnMonitor(
    * availability issue, across an application's geographies.
    */
   public open fun healthEventsConfig(`value`: IResolvable) {
-    unwrap(this).setHealthEventsConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHealthEventsConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -156,7 +156,7 @@ public open class CfnMonitor(
    * availability issue, across an application's geographies.
    */
   public open fun healthEventsConfig(`value`: HealthEventsConfigProperty) {
-    unwrap(this).setHealthEventsConfig(`value`.let(HealthEventsConfigProperty::unwrap))
+    unwrap(this).setHealthEventsConfig(`value`.let(HealthEventsConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -188,7 +188,7 @@ public open class CfnMonitor(
    * of monitors, when you've set up cross-account sharing in Internet Monitor.
    */
   public open fun includeLinkedAccounts(`value`: IResolvable) {
-    unwrap(this).setIncludeLinkedAccounts(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIncludeLinkedAccounts(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -197,7 +197,7 @@ public open class CfnMonitor(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -212,7 +212,7 @@ public open class CfnMonitor(
    * limit) to another location, such as an Amazon S3 bucket.
    */
   public open fun internetMeasurementsLogDelivery(`value`: IResolvable) {
-    unwrap(this).setInternetMeasurementsLogDelivery(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInternetMeasurementsLogDelivery(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -221,7 +221,7 @@ public open class CfnMonitor(
    */
   public open
       fun internetMeasurementsLogDelivery(`value`: InternetMeasurementsLogDeliveryProperty) {
-    unwrap(this).setInternetMeasurementsLogDelivery(`value`.let(InternetMeasurementsLogDeliveryProperty::unwrap))
+    unwrap(this).setInternetMeasurementsLogDelivery(`value`.let(InternetMeasurementsLogDeliveryProperty.Companion::unwrap))
   }
 
   /**
@@ -359,7 +359,7 @@ public open class CfnMonitor(
    * The tags for a monitor, listed as a set of *key:value* pairs.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -789,7 +789,7 @@ public open class CfnMonitor(
      * overall performance or availability issue, across an application's geographies. 
      */
     override fun healthEventsConfig(healthEventsConfig: IResolvable) {
-      cdkBuilder.healthEventsConfig(healthEventsConfig.let(IResolvable::unwrap))
+      cdkBuilder.healthEventsConfig(healthEventsConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -822,7 +822,7 @@ public open class CfnMonitor(
      * overall performance or availability issue, across an application's geographies. 
      */
     override fun healthEventsConfig(healthEventsConfig: HealthEventsConfigProperty) {
-      cdkBuilder.healthEventsConfig(healthEventsConfig.let(HealthEventsConfigProperty::unwrap))
+      cdkBuilder.healthEventsConfig(healthEventsConfig.let(HealthEventsConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -893,7 +893,7 @@ public open class CfnMonitor(
      * Monitor. 
      */
     override fun includeLinkedAccounts(includeLinkedAccounts: IResolvable) {
-      cdkBuilder.includeLinkedAccounts(includeLinkedAccounts.let(IResolvable::unwrap))
+      cdkBuilder.includeLinkedAccounts(includeLinkedAccounts.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -909,7 +909,7 @@ public open class CfnMonitor(
      * bucket. 
      */
     override fun internetMeasurementsLogDelivery(internetMeasurementsLogDelivery: IResolvable) {
-      cdkBuilder.internetMeasurementsLogDelivery(internetMeasurementsLogDelivery.let(IResolvable::unwrap))
+      cdkBuilder.internetMeasurementsLogDelivery(internetMeasurementsLogDelivery.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -926,7 +926,7 @@ public open class CfnMonitor(
      */
     override
         fun internetMeasurementsLogDelivery(internetMeasurementsLogDelivery: InternetMeasurementsLogDeliveryProperty) {
-      cdkBuilder.internetMeasurementsLogDelivery(internetMeasurementsLogDelivery.let(InternetMeasurementsLogDeliveryProperty::unwrap))
+      cdkBuilder.internetMeasurementsLogDelivery(internetMeasurementsLogDelivery.let(InternetMeasurementsLogDeliveryProperty.Companion::unwrap))
     }
 
     /**
@@ -1134,7 +1134,7 @@ public open class CfnMonitor(
      * @param tags The tags for a monitor, listed as a set of *key:value* pairs. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1344,7 +1344,7 @@ public open class CfnMonitor(
        */
       override
           fun availabilityLocalHealthEventsConfig(availabilityLocalHealthEventsConfig: IResolvable) {
-        cdkBuilder.availabilityLocalHealthEventsConfig(availabilityLocalHealthEventsConfig.let(IResolvable::unwrap))
+        cdkBuilder.availabilityLocalHealthEventsConfig(availabilityLocalHealthEventsConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1354,7 +1354,7 @@ public open class CfnMonitor(
        */
       override
           fun availabilityLocalHealthEventsConfig(availabilityLocalHealthEventsConfig: LocalHealthEventsConfigProperty) {
-        cdkBuilder.availabilityLocalHealthEventsConfig(availabilityLocalHealthEventsConfig.let(LocalHealthEventsConfigProperty::unwrap))
+        cdkBuilder.availabilityLocalHealthEventsConfig(availabilityLocalHealthEventsConfig.let(LocalHealthEventsConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1386,7 +1386,7 @@ public open class CfnMonitor(
        */
       override
           fun performanceLocalHealthEventsConfig(performanceLocalHealthEventsConfig: IResolvable) {
-        cdkBuilder.performanceLocalHealthEventsConfig(performanceLocalHealthEventsConfig.let(IResolvable::unwrap))
+        cdkBuilder.performanceLocalHealthEventsConfig(performanceLocalHealthEventsConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1396,7 +1396,7 @@ public open class CfnMonitor(
        */
       override
           fun performanceLocalHealthEventsConfig(performanceLocalHealthEventsConfig: LocalHealthEventsConfigProperty) {
-        cdkBuilder.performanceLocalHealthEventsConfig(performanceLocalHealthEventsConfig.let(LocalHealthEventsConfigProperty::unwrap))
+        cdkBuilder.performanceLocalHealthEventsConfig(performanceLocalHealthEventsConfig.let(LocalHealthEventsConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1555,7 +1555,7 @@ public open class CfnMonitor(
        * internet measurements to Amazon S3.
        */
       override fun s3Config(s3Config: IResolvable) {
-        cdkBuilder.s3Config(s3Config.let(IResolvable::unwrap))
+        cdkBuilder.s3Config(s3Config.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1563,7 +1563,7 @@ public open class CfnMonitor(
        * internet measurements to Amazon S3.
        */
       override fun s3Config(s3Config: S3ConfigProperty) {
-        cdkBuilder.s3Config(s3Config.let(S3ConfigProperty::unwrap))
+        cdkBuilder.s3Config(s3Config.let(S3ConfigProperty.Companion::unwrap))
       }
 
       /**

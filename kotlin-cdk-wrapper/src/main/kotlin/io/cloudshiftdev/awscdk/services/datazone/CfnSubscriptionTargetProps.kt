@@ -250,7 +250,7 @@ public interface CfnSubscriptionTargetProps {
      * @param subscriptionTargetConfig The configuration of the subscription target. 
      */
     override fun subscriptionTargetConfig(subscriptionTargetConfig: IResolvable) {
-      cdkBuilder.subscriptionTargetConfig(subscriptionTargetConfig.let(IResolvable::unwrap))
+      cdkBuilder.subscriptionTargetConfig(subscriptionTargetConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**

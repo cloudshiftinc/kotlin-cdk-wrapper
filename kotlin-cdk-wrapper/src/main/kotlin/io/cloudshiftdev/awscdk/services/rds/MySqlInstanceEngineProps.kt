@@ -56,7 +56,7 @@ public interface MySqlInstanceEngineProps {
      * @param version The exact version of the engine to use. 
      */
     override fun version(version: MysqlEngineVersion) {
-      cdkBuilder.version(version.let(MysqlEngineVersion::unwrap))
+      cdkBuilder.version(version.let(MysqlEngineVersion.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.MySqlInstanceEngineProps =

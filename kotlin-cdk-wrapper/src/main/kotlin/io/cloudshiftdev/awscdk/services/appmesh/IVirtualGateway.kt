@@ -71,7 +71,7 @@ public interface IVirtualGateway : IResource {
      */
     override fun addGatewayRoute(id: String, route: GatewayRouteBaseProps): GatewayRoute =
         unwrap(this).addGatewayRoute(id,
-        route.let(GatewayRouteBaseProps::unwrap)).let(GatewayRoute::wrap)
+        route.let(GatewayRouteBaseProps.Companion::unwrap)).let(GatewayRoute::wrap)
 
     /**
      * Utility method to add a new GatewayRoute to the VirtualGateway.
@@ -98,7 +98,7 @@ public interface IVirtualGateway : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -119,7 +119,7 @@ public interface IVirtualGateway : IResource {
      * @param identity 
      */
     override fun grantStreamAggregatedResources(identity: IGrantable): Grant =
-        unwrap(this).grantStreamAggregatedResources(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantStreamAggregatedResources(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * The Mesh which the VirtualGateway belongs to.

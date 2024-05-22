@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -42,7 +43,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .browserSettingsArn("browserSettingsArn")
  * .customerManagedKey("customerManagedKey")
  * .displayName("displayName")
+ * .instanceType("instanceType")
  * .ipAccessSettingsArn("ipAccessSettingsArn")
+ * .maxConcurrentSessions(123)
  * .networkSettingsArn("networkSettingsArn")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -60,7 +63,7 @@ public open class CfnPortal(
   cdkObject: software.amazon.awscdk.services.workspacesweb.CfnPortal,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.workspacesweb.CfnPortal(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.workspacesweb.CfnPortal(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -69,8 +72,8 @@ public open class CfnPortal(
     id: String,
     props: CfnPortalProps,
   ) :
-      this(software.amazon.awscdk.services.workspacesweb.CfnPortal(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPortalProps::unwrap))
+      this(software.amazon.awscdk.services.workspacesweb.CfnPortal(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPortalProps.Companion::unwrap))
   )
 
   public constructor(
@@ -90,7 +93,7 @@ public open class CfnPortal(
    * The additional encryption context of the portal.
    */
   public open fun additionalEncryptionContext(`value`: IResolvable) {
-    unwrap(this).setAdditionalEncryptionContext(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAdditionalEncryptionContext(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -205,7 +208,19 @@ public open class CfnPortal(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
+  }
+
+  /**
+   * The type and resources of the underlying instance.
+   */
+  public open fun instanceType(): String? = unwrap(this).getInstanceType()
+
+  /**
+   * The type and resources of the underlying instance.
+   */
+  public open fun instanceType(`value`: String) {
+    unwrap(this).setInstanceType(`value`)
   }
 
   /**
@@ -218,6 +233,18 @@ public open class CfnPortal(
    */
   public open fun ipAccessSettingsArn(`value`: String) {
     unwrap(this).setIpAccessSettingsArn(`value`)
+  }
+
+  /**
+   * The maximum number of concurrent sessions for the portal.
+   */
+  public open fun maxConcurrentSessions(): Number? = unwrap(this).getMaxConcurrentSessions()
+
+  /**
+   * The maximum number of concurrent sessions for the portal.
+   */
+  public open fun maxConcurrentSessions(`value`: Number) {
+    unwrap(this).setMaxConcurrentSessions(`value`)
   }
 
   /**
@@ -241,7 +268,7 @@ public open class CfnPortal(
    * The tags to add to the web portal.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -367,6 +394,14 @@ public open class CfnPortal(
     public fun displayName(displayName: String)
 
     /**
+     * The type and resources of the underlying instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-portal.html#cfn-workspacesweb-portal-instancetype)
+     * @param instanceType The type and resources of the underlying instance. 
+     */
+    public fun instanceType(instanceType: String)
+
+    /**
      * The ARN of the IP access settings that is associated with the web portal.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-portal.html#cfn-workspacesweb-portal-ipaccesssettingsarn)
@@ -374,6 +409,14 @@ public open class CfnPortal(
      * portal. 
      */
     public fun ipAccessSettingsArn(ipAccessSettingsArn: String)
+
+    /**
+     * The maximum number of concurrent sessions for the portal.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-portal.html#cfn-workspacesweb-portal-maxconcurrentsessions)
+     * @param maxConcurrentSessions The maximum number of concurrent sessions for the portal. 
+     */
+    public fun maxConcurrentSessions(maxConcurrentSessions: Number)
 
     /**
      * The ARN of the network settings that is associated with the web portal.
@@ -444,7 +487,7 @@ public open class CfnPortal(
      * @param additionalEncryptionContext The additional encryption context of the portal. 
      */
     override fun additionalEncryptionContext(additionalEncryptionContext: IResolvable) {
-      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable::unwrap))
+      cdkBuilder.additionalEncryptionContext(additionalEncryptionContext.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -525,6 +568,16 @@ public open class CfnPortal(
     }
 
     /**
+     * The type and resources of the underlying instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-portal.html#cfn-workspacesweb-portal-instancetype)
+     * @param instanceType The type and resources of the underlying instance. 
+     */
+    override fun instanceType(instanceType: String) {
+      cdkBuilder.instanceType(instanceType)
+    }
+
+    /**
      * The ARN of the IP access settings that is associated with the web portal.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-portal.html#cfn-workspacesweb-portal-ipaccesssettingsarn)
@@ -533,6 +586,16 @@ public open class CfnPortal(
      */
     override fun ipAccessSettingsArn(ipAccessSettingsArn: String) {
       cdkBuilder.ipAccessSettingsArn(ipAccessSettingsArn)
+    }
+
+    /**
+     * The maximum number of concurrent sessions for the portal.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-portal.html#cfn-workspacesweb-portal-maxconcurrentsessions)
+     * @param maxConcurrentSessions The maximum number of concurrent sessions for the portal. 
+     */
+    override fun maxConcurrentSessions(maxConcurrentSessions: Number) {
+      cdkBuilder.maxConcurrentSessions(maxConcurrentSessions)
     }
 
     /**
@@ -555,7 +618,7 @@ public open class CfnPortal(
      * @param tags The tags to add to the web portal. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

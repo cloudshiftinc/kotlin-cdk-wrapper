@@ -64,7 +64,7 @@ public interface AliasAttributes {
      * @param aliasVersion the value to be set. 
      */
     override fun aliasVersion(aliasVersion: IVersion) {
-      cdkBuilder.aliasVersion(aliasVersion.let(IVersion::unwrap))
+      cdkBuilder.aliasVersion(aliasVersion.let(IVersion.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lambda.AliasAttributes = cdkBuilder.build()

@@ -93,7 +93,7 @@ public interface CfnTagOptionProps {
      * @param active The TagOption active state.
      */
     override fun active(active: IResolvable) {
-      cdkBuilder.active(active.let(IResolvable::unwrap))
+      cdkBuilder.active(active.let(IResolvable.Companion::unwrap))
     }
 
     /**

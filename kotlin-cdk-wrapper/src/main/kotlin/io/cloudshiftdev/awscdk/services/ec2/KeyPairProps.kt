@@ -151,7 +151,7 @@ public interface KeyPairProps : ResourceProps {
      * @param format The format of the key pair.
      */
     override fun format(format: KeyPairFormat) {
-      cdkBuilder.format(format.let(KeyPairFormat::unwrap))
+      cdkBuilder.format(format.let(KeyPairFormat.Companion::unwrap))
     }
 
     /**
@@ -197,7 +197,7 @@ public interface KeyPairProps : ResourceProps {
      * @param type The type of key pair.
      */
     override fun type(type: KeyPairType) {
-      cdkBuilder.type(type.let(KeyPairType::unwrap))
+      cdkBuilder.type(type.let(KeyPairType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.KeyPairProps = cdkBuilder.build()

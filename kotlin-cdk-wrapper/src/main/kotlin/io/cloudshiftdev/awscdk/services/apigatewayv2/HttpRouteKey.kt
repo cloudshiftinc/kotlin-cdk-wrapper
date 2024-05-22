@@ -48,7 +48,7 @@ public open class HttpRouteKey(
 
     public fun with(path: String, method: HttpMethod): HttpRouteKey =
         software.amazon.awscdk.services.apigatewayv2.HttpRouteKey.with(path,
-        method.let(HttpMethod::unwrap)).let(HttpRouteKey::wrap)
+        method.let(HttpMethod.Companion::unwrap)).let(HttpRouteKey::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.apigatewayv2.HttpRouteKey):
         HttpRouteKey = HttpRouteKey(cdkObject)

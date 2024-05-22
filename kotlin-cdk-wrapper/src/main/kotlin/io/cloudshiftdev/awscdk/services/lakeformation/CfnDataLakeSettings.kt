@@ -96,7 +96,7 @@ public open class CfnDataLakeSettings(
   cdkObject: software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -105,8 +105,8 @@ public open class CfnDataLakeSettings(
     id: String,
     props: CfnDataLakeSettingsProps,
   ) :
-      this(software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDataLakeSettingsProps::unwrap))
+      this(software.amazon.awscdk.services.lakeformation.CfnDataLakeSettings(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDataLakeSettingsProps.Companion::unwrap))
   )
 
   public constructor(
@@ -125,7 +125,7 @@ public open class CfnDataLakeSettings(
    * A list of AWS Lake Formation principals.
    */
   public open fun admins(`value`: IResolvable) {
-    unwrap(this).setAdmins(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAdmins(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -159,7 +159,7 @@ public open class CfnDataLakeSettings(
    * by Lake Formation .
    */
   public open fun allowExternalDataFiltering(`value`: IResolvable) {
-    unwrap(this).setAllowExternalDataFiltering(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAllowExternalDataFiltering(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -182,7 +182,7 @@ public open class CfnDataLakeSettings(
    * if the user has full table access.
    */
   public open fun allowFullTableExternalDataAccess(`value`: IResolvable) {
-    unwrap(this).setAllowFullTableExternalDataAccess(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAllowFullTableExternalDataAccess(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -224,7 +224,7 @@ public open class CfnDataLakeSettings(
    * permissions or exclusively by IAM permissions.
    */
   public open fun createDatabaseDefaultPermissions(`value`: IResolvable) {
-    unwrap(this).setCreateDatabaseDefaultPermissions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCreateDatabaseDefaultPermissions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -254,7 +254,7 @@ public open class CfnDataLakeSettings(
    * permissions or exclusively by IAM permissions.
    */
   public open fun createTableDefaultPermissions(`value`: IResolvable) {
-    unwrap(this).setCreateTableDefaultPermissions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCreateTableDefaultPermissions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -284,7 +284,7 @@ public open class CfnDataLakeSettings(
    * are allwed to perform data filtering.
    */
   public open fun externalDataFilteringAllowList(`value`: IResolvable) {
-    unwrap(this).setExternalDataFilteringAllowList(`value`.let(IResolvable::unwrap))
+    unwrap(this).setExternalDataFilteringAllowList(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -308,7 +308,7 @@ public open class CfnDataLakeSettings(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -719,7 +719,7 @@ public open class CfnDataLakeSettings(
      * @param admins A list of AWS Lake Formation principals. 
      */
     override fun admins(admins: IResolvable) {
-      cdkBuilder.admins(admins.let(IResolvable::unwrap))
+      cdkBuilder.admins(admins.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -781,7 +781,7 @@ public open class CfnDataLakeSettings(
      * query engines to access data managed by Lake Formation . 
      */
     override fun allowExternalDataFiltering(allowExternalDataFiltering: IResolvable) {
-      cdkBuilder.allowExternalDataFiltering(allowExternalDataFiltering.let(IResolvable::unwrap))
+      cdkBuilder.allowExternalDataFiltering(allowExternalDataFiltering.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -817,7 +817,7 @@ public open class CfnDataLakeSettings(
      * get credentials without IAM session tags if the user has full table access. 
      */
     override fun allowFullTableExternalDataAccess(allowFullTableExternalDataAccess: IResolvable) {
-      cdkBuilder.allowFullTableExternalDataAccess(allowFullTableExternalDataAccess.let(IResolvable::unwrap))
+      cdkBuilder.allowFullTableExternalDataAccess(allowFullTableExternalDataAccess.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -874,7 +874,7 @@ public open class CfnDataLakeSettings(
      * database is managed by Lake Formation permissions or exclusively by IAM permissions. 
      */
     override fun createDatabaseDefaultPermissions(createDatabaseDefaultPermissions: IResolvable) {
-      cdkBuilder.createDatabaseDefaultPermissions(createDatabaseDefaultPermissions.let(IResolvable::unwrap))
+      cdkBuilder.createDatabaseDefaultPermissions(createDatabaseDefaultPermissions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -945,7 +945,7 @@ public open class CfnDataLakeSettings(
      * table is managed by Lake Formation permissions or exclusively by IAM permissions. 
      */
     override fun createTableDefaultPermissions(createTableDefaultPermissions: IResolvable) {
-      cdkBuilder.createTableDefaultPermissions(createTableDefaultPermissions.let(IResolvable::unwrap))
+      cdkBuilder.createTableDefaultPermissions(createTableDefaultPermissions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1004,7 +1004,7 @@ public open class CfnDataLakeSettings(
      * EMR clusters or third-party engines that are allwed to perform data filtering. 
      */
     override fun externalDataFilteringAllowList(externalDataFilteringAllowList: IResolvable) {
-      cdkBuilder.externalDataFilteringAllowList(externalDataFilteringAllowList.let(IResolvable::unwrap))
+      cdkBuilder.externalDataFilteringAllowList(externalDataFilteringAllowList.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1289,14 +1289,14 @@ public open class CfnDataLakeSettings(
        * @param principal The principal who is granted permissions. 
        */
       override fun principal(principal: IResolvable) {
-        cdkBuilder.principal(principal.let(IResolvable::unwrap))
+        cdkBuilder.principal(principal.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param principal The principal who is granted permissions. 
        */
       override fun principal(principal: DataLakePrincipalProperty) {
-        cdkBuilder.principal(principal.let(DataLakePrincipalProperty::unwrap))
+        cdkBuilder.principal(principal.let(DataLakePrincipalProperty.Companion::unwrap))
       }
 
       /**

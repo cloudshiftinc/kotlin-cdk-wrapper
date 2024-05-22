@@ -120,8 +120,8 @@ public open class CfnConnector(
     id: String,
     props: CfnConnectorProps,
   ) :
-      this(software.amazon.awscdk.services.kafkaconnect.CfnConnector(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnConnectorProps::unwrap))
+      this(software.amazon.awscdk.services.kafkaconnect.CfnConnector(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnConnectorProps.Companion::unwrap))
   )
 
   public constructor(
@@ -145,14 +145,14 @@ public open class CfnConnector(
    * The connector's compute capacity settings.
    */
   public open fun capacity(`value`: IResolvable) {
-    unwrap(this).setCapacity(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCapacity(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The connector's compute capacity settings.
    */
   public open fun capacity(`value`: CapacityProperty) {
-    unwrap(this).setCapacity(`value`.let(CapacityProperty::unwrap))
+    unwrap(this).setCapacity(`value`.let(CapacityProperty.Companion::unwrap))
   }
 
   /**
@@ -178,7 +178,7 @@ public open class CfnConnector(
    * The configuration of the connector.
    */
   public open fun connectorConfiguration(`value`: IResolvable) {
-    unwrap(this).setConnectorConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConnectorConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -218,7 +218,7 @@ public open class CfnConnector(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -230,14 +230,14 @@ public open class CfnConnector(
    * The details of the Apache Kafka cluster to which the connector is connected.
    */
   public open fun kafkaCluster(`value`: IResolvable) {
-    unwrap(this).setKafkaCluster(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKafkaCluster(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The details of the Apache Kafka cluster to which the connector is connected.
    */
   public open fun kafkaCluster(`value`: KafkaClusterProperty) {
-    unwrap(this).setKafkaCluster(`value`.let(KafkaClusterProperty::unwrap))
+    unwrap(this).setKafkaCluster(`value`.let(KafkaClusterProperty.Companion::unwrap))
   }
 
   /**
@@ -258,7 +258,7 @@ public open class CfnConnector(
    * The type of client authentication used to connect to the Apache Kafka cluster.
    */
   public open fun kafkaClusterClientAuthentication(`value`: IResolvable) {
-    unwrap(this).setKafkaClusterClientAuthentication(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKafkaClusterClientAuthentication(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -266,7 +266,7 @@ public open class CfnConnector(
    */
   public open
       fun kafkaClusterClientAuthentication(`value`: KafkaClusterClientAuthenticationProperty) {
-    unwrap(this).setKafkaClusterClientAuthentication(`value`.let(KafkaClusterClientAuthenticationProperty::unwrap))
+    unwrap(this).setKafkaClusterClientAuthentication(`value`.let(KafkaClusterClientAuthenticationProperty.Companion::unwrap))
   }
 
   /**
@@ -288,7 +288,7 @@ public open class CfnConnector(
    * Details of encryption in transit to the Apache Kafka cluster.
    */
   public open fun kafkaClusterEncryptionInTransit(`value`: IResolvable) {
-    unwrap(this).setKafkaClusterEncryptionInTransit(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKafkaClusterEncryptionInTransit(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -296,7 +296,7 @@ public open class CfnConnector(
    */
   public open
       fun kafkaClusterEncryptionInTransit(`value`: KafkaClusterEncryptionInTransitProperty) {
-    unwrap(this).setKafkaClusterEncryptionInTransit(`value`.let(KafkaClusterEncryptionInTransitProperty::unwrap))
+    unwrap(this).setKafkaClusterEncryptionInTransit(`value`.let(KafkaClusterEncryptionInTransitProperty.Companion::unwrap))
   }
 
   /**
@@ -329,14 +329,14 @@ public open class CfnConnector(
    * The settings for delivering connector logs to Amazon CloudWatch Logs.
    */
   public open fun logDelivery(`value`: IResolvable) {
-    unwrap(this).setLogDelivery(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLogDelivery(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The settings for delivering connector logs to Amazon CloudWatch Logs.
    */
   public open fun logDelivery(`value`: LogDeliveryProperty) {
-    unwrap(this).setLogDelivery(`value`.let(LogDeliveryProperty::unwrap))
+    unwrap(this).setLogDelivery(`value`.let(LogDeliveryProperty.Companion::unwrap))
   }
 
   /**
@@ -356,7 +356,7 @@ public open class CfnConnector(
    * Specifies which plugin to use for the connector.
    */
   public open fun plugins(`value`: IResolvable) {
-    unwrap(this).setPlugins(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPlugins(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -394,7 +394,7 @@ public open class CfnConnector(
    * A collection of tags associated with a resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -411,14 +411,14 @@ public open class CfnConnector(
    * The worker configurations that are in use with the connector.
    */
   public open fun workerConfiguration(`value`: IResolvable) {
-    unwrap(this).setWorkerConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setWorkerConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The worker configurations that are in use with the connector.
    */
   public open fun workerConfiguration(`value`: WorkerConfigurationProperty) {
-    unwrap(this).setWorkerConfiguration(`value`.let(WorkerConfigurationProperty::unwrap))
+    unwrap(this).setWorkerConfiguration(`value`.let(WorkerConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -726,7 +726,7 @@ public open class CfnConnector(
      * @param capacity The connector's compute capacity settings. 
      */
     override fun capacity(capacity: IResolvable) {
-      cdkBuilder.capacity(capacity.let(IResolvable::unwrap))
+      cdkBuilder.capacity(capacity.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -736,7 +736,7 @@ public open class CfnConnector(
      * @param capacity The connector's compute capacity settings. 
      */
     override fun capacity(capacity: CapacityProperty) {
-      cdkBuilder.capacity(capacity.let(CapacityProperty::unwrap))
+      cdkBuilder.capacity(capacity.let(CapacityProperty.Companion::unwrap))
     }
 
     /**
@@ -757,7 +757,7 @@ public open class CfnConnector(
      * @param connectorConfiguration The configuration of the connector. 
      */
     override fun connectorConfiguration(connectorConfiguration: IResolvable) {
-      cdkBuilder.connectorConfiguration(connectorConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.connectorConfiguration(connectorConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -798,7 +798,7 @@ public open class CfnConnector(
      * connected. 
      */
     override fun kafkaCluster(kafkaCluster: IResolvable) {
-      cdkBuilder.kafkaCluster(kafkaCluster.let(IResolvable::unwrap))
+      cdkBuilder.kafkaCluster(kafkaCluster.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -809,7 +809,7 @@ public open class CfnConnector(
      * connected. 
      */
     override fun kafkaCluster(kafkaCluster: KafkaClusterProperty) {
-      cdkBuilder.kafkaCluster(kafkaCluster.let(KafkaClusterProperty::unwrap))
+      cdkBuilder.kafkaCluster(kafkaCluster.let(KafkaClusterProperty.Companion::unwrap))
     }
 
     /**
@@ -834,7 +834,7 @@ public open class CfnConnector(
      * the Apache Kafka cluster. 
      */
     override fun kafkaClusterClientAuthentication(kafkaClusterClientAuthentication: IResolvable) {
-      cdkBuilder.kafkaClusterClientAuthentication(kafkaClusterClientAuthentication.let(IResolvable::unwrap))
+      cdkBuilder.kafkaClusterClientAuthentication(kafkaClusterClientAuthentication.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -848,7 +848,7 @@ public open class CfnConnector(
      */
     override
         fun kafkaClusterClientAuthentication(kafkaClusterClientAuthentication: KafkaClusterClientAuthenticationProperty) {
-      cdkBuilder.kafkaClusterClientAuthentication(kafkaClusterClientAuthentication.let(KafkaClusterClientAuthenticationProperty::unwrap))
+      cdkBuilder.kafkaClusterClientAuthentication(kafkaClusterClientAuthentication.let(KafkaClusterClientAuthenticationProperty.Companion::unwrap))
     }
 
     /**
@@ -875,7 +875,7 @@ public open class CfnConnector(
      * cluster. 
      */
     override fun kafkaClusterEncryptionInTransit(kafkaClusterEncryptionInTransit: IResolvable) {
-      cdkBuilder.kafkaClusterEncryptionInTransit(kafkaClusterEncryptionInTransit.let(IResolvable::unwrap))
+      cdkBuilder.kafkaClusterEncryptionInTransit(kafkaClusterEncryptionInTransit.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -887,7 +887,7 @@ public open class CfnConnector(
      */
     override
         fun kafkaClusterEncryptionInTransit(kafkaClusterEncryptionInTransit: KafkaClusterEncryptionInTransitProperty) {
-      cdkBuilder.kafkaClusterEncryptionInTransit(kafkaClusterEncryptionInTransit.let(KafkaClusterEncryptionInTransitProperty::unwrap))
+      cdkBuilder.kafkaClusterEncryptionInTransit(kafkaClusterEncryptionInTransit.let(KafkaClusterEncryptionInTransitProperty.Companion::unwrap))
     }
 
     /**
@@ -923,7 +923,7 @@ public open class CfnConnector(
      * @param logDelivery The settings for delivering connector logs to Amazon CloudWatch Logs. 
      */
     override fun logDelivery(logDelivery: IResolvable) {
-      cdkBuilder.logDelivery(logDelivery.let(IResolvable::unwrap))
+      cdkBuilder.logDelivery(logDelivery.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -933,7 +933,7 @@ public open class CfnConnector(
      * @param logDelivery The settings for delivering connector logs to Amazon CloudWatch Logs. 
      */
     override fun logDelivery(logDelivery: LogDeliveryProperty) {
-      cdkBuilder.logDelivery(logDelivery.let(LogDeliveryProperty::unwrap))
+      cdkBuilder.logDelivery(logDelivery.let(LogDeliveryProperty.Companion::unwrap))
     }
 
     /**
@@ -957,7 +957,7 @@ public open class CfnConnector(
      * @param plugins Specifies which plugin to use for the connector. 
      */
     override fun plugins(plugins: IResolvable) {
-      cdkBuilder.plugins(plugins.let(IResolvable::unwrap))
+      cdkBuilder.plugins(plugins.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1003,7 +1003,7 @@ public open class CfnConnector(
      * @param tags A collection of tags associated with a resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1021,7 +1021,7 @@ public open class CfnConnector(
      * @param workerConfiguration The worker configurations that are in use with the connector. 
      */
     override fun workerConfiguration(workerConfiguration: IResolvable) {
-      cdkBuilder.workerConfiguration(workerConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.workerConfiguration(workerConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1031,7 +1031,7 @@ public open class CfnConnector(
      * @param workerConfiguration The worker configurations that are in use with the connector. 
      */
     override fun workerConfiguration(workerConfiguration: WorkerConfigurationProperty) {
-      cdkBuilder.workerConfiguration(workerConfiguration.let(WorkerConfigurationProperty::unwrap))
+      cdkBuilder.workerConfiguration(workerConfiguration.let(WorkerConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1155,7 +1155,7 @@ public open class CfnConnector(
        * cluster. 
        */
       override fun vpc(vpc: IResolvable) {
-        cdkBuilder.vpc(vpc.let(IResolvable::unwrap))
+        cdkBuilder.vpc(vpc.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1163,7 +1163,7 @@ public open class CfnConnector(
        * cluster. 
        */
       override fun vpc(vpc: VpcProperty) {
-        cdkBuilder.vpc(vpc.let(VpcProperty::unwrap))
+        cdkBuilder.vpc(vpc.let(VpcProperty.Companion::unwrap))
       }
 
       /**
@@ -1366,14 +1366,14 @@ public open class CfnConnector(
        * @param scaleInPolicy The sacle-in policy for the connector. 
        */
       override fun scaleInPolicy(scaleInPolicy: IResolvable) {
-        cdkBuilder.scaleInPolicy(scaleInPolicy.let(IResolvable::unwrap))
+        cdkBuilder.scaleInPolicy(scaleInPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param scaleInPolicy The sacle-in policy for the connector. 
        */
       override fun scaleInPolicy(scaleInPolicy: ScaleInPolicyProperty) {
-        cdkBuilder.scaleInPolicy(scaleInPolicy.let(ScaleInPolicyProperty::unwrap))
+        cdkBuilder.scaleInPolicy(scaleInPolicy.let(ScaleInPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -1388,14 +1388,14 @@ public open class CfnConnector(
        * @param scaleOutPolicy The sacle-out policy for the connector. 
        */
       override fun scaleOutPolicy(scaleOutPolicy: IResolvable) {
-        cdkBuilder.scaleOutPolicy(scaleOutPolicy.let(IResolvable::unwrap))
+        cdkBuilder.scaleOutPolicy(scaleOutPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param scaleOutPolicy The sacle-out policy for the connector. 
        */
       override fun scaleOutPolicy(scaleOutPolicy: ScaleOutPolicyProperty) {
-        cdkBuilder.scaleOutPolicy(scaleOutPolicy.let(ScaleOutPolicyProperty::unwrap))
+        cdkBuilder.scaleOutPolicy(scaleOutPolicy.let(ScaleOutPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -1566,14 +1566,14 @@ public open class CfnConnector(
        * @param autoScaling Information about the auto scaling parameters for the connector.
        */
       override fun autoScaling(autoScaling: IResolvable) {
-        cdkBuilder.autoScaling(autoScaling.let(IResolvable::unwrap))
+        cdkBuilder.autoScaling(autoScaling.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param autoScaling Information about the auto scaling parameters for the connector.
        */
       override fun autoScaling(autoScaling: AutoScalingProperty) {
-        cdkBuilder.autoScaling(autoScaling.let(AutoScalingProperty::unwrap))
+        cdkBuilder.autoScaling(autoScaling.let(AutoScalingProperty.Companion::unwrap))
       }
 
       /**
@@ -1588,14 +1588,14 @@ public open class CfnConnector(
        * @param provisionedCapacity Details about a fixed capacity allocated to a connector.
        */
       override fun provisionedCapacity(provisionedCapacity: IResolvable) {
-        cdkBuilder.provisionedCapacity(provisionedCapacity.let(IResolvable::unwrap))
+        cdkBuilder.provisionedCapacity(provisionedCapacity.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param provisionedCapacity Details about a fixed capacity allocated to a connector.
        */
       override fun provisionedCapacity(provisionedCapacity: ProvisionedCapacityProperty) {
-        cdkBuilder.provisionedCapacity(provisionedCapacity.let(ProvisionedCapacityProperty::unwrap))
+        cdkBuilder.provisionedCapacity(provisionedCapacity.let(ProvisionedCapacityProperty.Companion::unwrap))
       }
 
       /**
@@ -1720,7 +1720,7 @@ public open class CfnConnector(
        * @param enabled Whether log delivery to Amazon CloudWatch Logs is enabled. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1966,7 +1966,7 @@ public open class CfnConnector(
        * Firehose. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2251,14 +2251,14 @@ public open class CfnConnector(
        * @param apacheKafkaCluster The Apache Kafka cluster to which the connector is connected. 
        */
       override fun apacheKafkaCluster(apacheKafkaCluster: IResolvable) {
-        cdkBuilder.apacheKafkaCluster(apacheKafkaCluster.let(IResolvable::unwrap))
+        cdkBuilder.apacheKafkaCluster(apacheKafkaCluster.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param apacheKafkaCluster The Apache Kafka cluster to which the connector is connected. 
        */
       override fun apacheKafkaCluster(apacheKafkaCluster: ApacheKafkaClusterProperty) {
-        cdkBuilder.apacheKafkaCluster(apacheKafkaCluster.let(ApacheKafkaClusterProperty::unwrap))
+        cdkBuilder.apacheKafkaCluster(apacheKafkaCluster.let(ApacheKafkaClusterProperty.Companion::unwrap))
       }
 
       /**
@@ -2383,7 +2383,7 @@ public open class CfnConnector(
        * This configuration specifies the details of these destinations.
        */
       override fun workerLogDelivery(workerLogDelivery: IResolvable) {
-        cdkBuilder.workerLogDelivery(workerLogDelivery.let(IResolvable::unwrap))
+        cdkBuilder.workerLogDelivery(workerLogDelivery.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2391,7 +2391,7 @@ public open class CfnConnector(
        * This configuration specifies the details of these destinations.
        */
       override fun workerLogDelivery(workerLogDelivery: WorkerLogDeliveryProperty) {
-        cdkBuilder.workerLogDelivery(workerLogDelivery.let(WorkerLogDeliveryProperty::unwrap))
+        cdkBuilder.workerLogDelivery(workerLogDelivery.let(WorkerLogDeliveryProperty.Companion::unwrap))
       }
 
       /**
@@ -2499,14 +2499,14 @@ public open class CfnConnector(
        * @param customPlugin Details about a custom plugin. 
        */
       override fun customPlugin(customPlugin: IResolvable) {
-        cdkBuilder.customPlugin(customPlugin.let(IResolvable::unwrap))
+        cdkBuilder.customPlugin(customPlugin.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param customPlugin Details about a custom plugin. 
        */
       override fun customPlugin(customPlugin: CustomPluginProperty) {
-        cdkBuilder.customPlugin(customPlugin.let(CustomPluginProperty::unwrap))
+        cdkBuilder.customPlugin(customPlugin.let(CustomPluginProperty.Companion::unwrap))
       }
 
       /**
@@ -2762,7 +2762,7 @@ public open class CfnConnector(
        * destination. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3349,14 +3349,14 @@ public open class CfnConnector(
        * @param cloudWatchLogs Details about delivering logs to Amazon CloudWatch Logs.
        */
       override fun cloudWatchLogs(cloudWatchLogs: IResolvable) {
-        cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param cloudWatchLogs Details about delivering logs to Amazon CloudWatch Logs.
        */
       override fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsLogDeliveryProperty) {
-        cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(CloudWatchLogsLogDeliveryProperty::unwrap))
+        cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(CloudWatchLogsLogDeliveryProperty.Companion::unwrap))
       }
 
       /**
@@ -3372,14 +3372,14 @@ public open class CfnConnector(
        * @param firehose Details about delivering logs to Amazon Kinesis Data Firehose.
        */
       override fun firehose(firehose: IResolvable) {
-        cdkBuilder.firehose(firehose.let(IResolvable::unwrap))
+        cdkBuilder.firehose(firehose.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param firehose Details about delivering logs to Amazon Kinesis Data Firehose.
        */
       override fun firehose(firehose: FirehoseLogDeliveryProperty) {
-        cdkBuilder.firehose(firehose.let(FirehoseLogDeliveryProperty::unwrap))
+        cdkBuilder.firehose(firehose.let(FirehoseLogDeliveryProperty.Companion::unwrap))
       }
 
       /**
@@ -3394,14 +3394,14 @@ public open class CfnConnector(
        * @param s3 Details about delivering logs to Amazon S3.
        */
       override fun s3(s3: IResolvable) {
-        cdkBuilder.s3(s3.let(IResolvable::unwrap))
+        cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3 Details about delivering logs to Amazon S3.
        */
       override fun s3(s3: S3LogDeliveryProperty) {
-        cdkBuilder.s3(s3.let(S3LogDeliveryProperty::unwrap))
+        cdkBuilder.s3(s3.let(S3LogDeliveryProperty.Companion::unwrap))
       }
 
       /**

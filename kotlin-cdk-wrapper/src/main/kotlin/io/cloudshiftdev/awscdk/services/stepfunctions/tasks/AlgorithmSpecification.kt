@@ -135,7 +135,7 @@ public interface AlgorithmSpecification {
      * Each object specifies the metric name and regular expressions used to parse algorithm logs.
      */
     override fun metricDefinitions(metricDefinitions: List<MetricDefinition>) {
-      cdkBuilder.metricDefinitions(metricDefinitions.map(MetricDefinition::unwrap))
+      cdkBuilder.metricDefinitions(metricDefinitions.map(MetricDefinition.Companion::unwrap))
     }
 
     /**
@@ -149,14 +149,14 @@ public interface AlgorithmSpecification {
      * @param trainingImage Registry path of the Docker image that contains the training algorithm.
      */
     override fun trainingImage(trainingImage: DockerImage) {
-      cdkBuilder.trainingImage(trainingImage.let(DockerImage::unwrap))
+      cdkBuilder.trainingImage(trainingImage.let(DockerImage.Companion::unwrap))
     }
 
     /**
      * @param trainingInputMode Input mode that the algorithm supports.
      */
     override fun trainingInputMode(trainingInputMode: InputMode) {
-      cdkBuilder.trainingInputMode(trainingInputMode.let(InputMode::unwrap))
+      cdkBuilder.trainingInputMode(trainingInputMode.let(InputMode.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.AlgorithmSpecification =

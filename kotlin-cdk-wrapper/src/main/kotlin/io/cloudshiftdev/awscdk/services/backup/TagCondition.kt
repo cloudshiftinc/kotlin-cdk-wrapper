@@ -93,7 +93,7 @@ public interface TagCondition {
      * a selection.
      */
     override fun operation(operation: TagOperation) {
-      cdkBuilder.operation(operation.let(TagOperation::unwrap))
+      cdkBuilder.operation(operation.let(TagOperation.Companion::unwrap))
     }
 
     /**

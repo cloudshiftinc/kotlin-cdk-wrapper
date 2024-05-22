@@ -142,7 +142,7 @@ public interface CfnSourceApiAssociationProps {
      * @param sourceApiAssociationConfig The `SourceApiAssociationConfig` object data.
      */
     override fun sourceApiAssociationConfig(sourceApiAssociationConfig: IResolvable) {
-      cdkBuilder.sourceApiAssociationConfig(sourceApiAssociationConfig.let(IResolvable::unwrap))
+      cdkBuilder.sourceApiAssociationConfig(sourceApiAssociationConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -150,7 +150,7 @@ public interface CfnSourceApiAssociationProps {
      */
     override
         fun sourceApiAssociationConfig(sourceApiAssociationConfig: CfnSourceApiAssociation.SourceApiAssociationConfigProperty) {
-      cdkBuilder.sourceApiAssociationConfig(sourceApiAssociationConfig.let(CfnSourceApiAssociation.SourceApiAssociationConfigProperty::unwrap))
+      cdkBuilder.sourceApiAssociationConfig(sourceApiAssociationConfig.let(CfnSourceApiAssociation.SourceApiAssociationConfigProperty.Companion::unwrap))
     }
 
     /**

@@ -69,7 +69,7 @@ public interface IEcsEc2ContainerDefinition : IEcsContainerDefinition {
      * @param ulimit 
      */
     override fun addUlimit(ulimit: Ulimit) {
-      unwrap(this).addUlimit(ulimit.let(Ulimit::unwrap))
+      unwrap(this).addUlimit(ulimit.let(Ulimit.Companion::unwrap))
     }
 
     /**
@@ -87,7 +87,7 @@ public interface IEcsEc2ContainerDefinition : IEcsContainerDefinition {
      * @param volume 
      */
     override fun addVolume(volume: EcsVolume) {
-      unwrap(this).addVolume(volume.let(EcsVolume::unwrap))
+      unwrap(this).addVolume(volume.let(EcsVolume.Companion::unwrap))
     }
 
     /**

@@ -292,7 +292,7 @@ public interface ApplyCloudFormationInitOptions {
      * @param timeout Timeout waiting for the configuration to be applied.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.ApplyCloudFormationInitOptions =

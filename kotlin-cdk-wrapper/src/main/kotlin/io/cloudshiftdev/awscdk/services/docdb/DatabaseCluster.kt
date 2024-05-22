@@ -14,6 +14,7 @@ import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.logs.RetentionDays
+import io.cloudshiftdev.awscdk.services.rds.CaCertificate
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
 import io.cloudshiftdev.awscdk.services.secretsmanager.SecretAttachmentTargetProps
 import io.cloudshiftdev.awscdk.services.secretsmanager.SecretRotation
@@ -44,7 +45,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .subnetType(SubnetType.PUBLIC)
  * .build())
  * .vpc(vpc)
- * .removalPolicy(RemovalPolicy.SNAPSHOT)
+ * .caCertificate(CaCertificate.RDS_CA_RSA4096_G1)
  * .build();
  * ```
  */
@@ -56,8 +57,8 @@ public open class DatabaseCluster(
     id: String,
     props: DatabaseClusterProps,
   ) :
-      this(software.amazon.awscdk.services.docdb.DatabaseCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DatabaseClusterProps::unwrap))
+      this(software.amazon.awscdk.services.docdb.DatabaseCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DatabaseClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -75,7 +76,7 @@ public open class DatabaseCluster(
    */
   public open fun addRotationMultiUser(id: String, options: RotationMultiUserOptions):
       SecretRotation = unwrap(this).addRotationMultiUser(id,
-      options.let(RotationMultiUserOptions::unwrap)).let(SecretRotation::wrap)
+      options.let(RotationMultiUserOptions.Companion::unwrap)).let(SecretRotation::wrap)
 
   /**
    * Adds the multi user rotation to this cluster.
@@ -105,7 +106,7 @@ public open class DatabaseCluster(
    * Secrets Manager triggers the next automatic rotation.
    */
   public open fun addRotationSingleUser(automaticallyAfter: Duration): SecretRotation =
-      unwrap(this).addRotationSingleUser(automaticallyAfter.let(Duration::unwrap)).let(SecretRotation::wrap)
+      unwrap(this).addRotationSingleUser(automaticallyAfter.let(Duration.Companion::unwrap)).let(SecretRotation::wrap)
 
   /**
    * Adds security groups to this cluster.
@@ -208,6 +209,18 @@ public open class DatabaseCluster(
     public fun backup(backup: BackupProps.Builder.() -> Unit)
 
     /**
+     * The identifier of the CA certificate used for the instances.
+     *
+     * Specifying or updating this property triggers a reboot.
+     *
+     * Default: - DocumentDB will choose a certificate authority
+     *
+     * [Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/ca_cert_rotation.html)
+     * @param caCertificate The identifier of the CA certificate used for the instances. 
+     */
+    public fun caCertificate(caCertificate: CaCertificate)
+
+    /**
      * The number of days log events are kept in CloudWatch Logs.
      *
      * When updating
@@ -230,6 +243,15 @@ public open class DatabaseCluster(
      * custom resource that sets the retention policy. 
      */
     public fun cloudWatchLogsRetentionRole(cloudWatchLogsRetentionRole: IRole)
+
+    /**
+     * Whether to copy tags to the snapshot when a snapshot is created.
+     *
+     * Default: - false
+     *
+     * @param copyTagsToSnapshot Whether to copy tags to the snapshot when a snapshot is created. 
+     */
+    public fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean)
 
     /**
      * An optional identifier for the cluster.
@@ -501,7 +523,7 @@ public open class DatabaseCluster(
      * @param backup Backup settings. 
      */
     override fun backup(backup: BackupProps) {
-      cdkBuilder.backup(backup.let(BackupProps::unwrap))
+      cdkBuilder.backup(backup.let(BackupProps.Companion::unwrap))
     }
 
     /**
@@ -519,6 +541,20 @@ public open class DatabaseCluster(
     override fun backup(backup: BackupProps.Builder.() -> Unit): Unit = backup(BackupProps(backup))
 
     /**
+     * The identifier of the CA certificate used for the instances.
+     *
+     * Specifying or updating this property triggers a reboot.
+     *
+     * Default: - DocumentDB will choose a certificate authority
+     *
+     * [Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/ca_cert_rotation.html)
+     * @param caCertificate The identifier of the CA certificate used for the instances. 
+     */
+    override fun caCertificate(caCertificate: CaCertificate) {
+      cdkBuilder.caCertificate(caCertificate.let(CaCertificate.Companion::unwrap))
+    }
+
+    /**
      * The number of days log events are kept in CloudWatch Logs.
      *
      * When updating
@@ -530,7 +566,7 @@ public open class DatabaseCluster(
      * @param cloudWatchLogsRetention The number of days log events are kept in CloudWatch Logs. 
      */
     override fun cloudWatchLogsRetention(cloudWatchLogsRetention: RetentionDays) {
-      cdkBuilder.cloudWatchLogsRetention(cloudWatchLogsRetention.let(RetentionDays::unwrap))
+      cdkBuilder.cloudWatchLogsRetention(cloudWatchLogsRetention.let(RetentionDays.Companion::unwrap))
     }
 
     /**
@@ -543,7 +579,18 @@ public open class DatabaseCluster(
      * custom resource that sets the retention policy. 
      */
     override fun cloudWatchLogsRetentionRole(cloudWatchLogsRetentionRole: IRole) {
-      cdkBuilder.cloudWatchLogsRetentionRole(cloudWatchLogsRetentionRole.let(IRole::unwrap))
+      cdkBuilder.cloudWatchLogsRetentionRole(cloudWatchLogsRetentionRole.let(IRole.Companion::unwrap))
+    }
+
+    /**
+     * Whether to copy tags to the snapshot when a snapshot is created.
+     *
+     * Default: - false
+     *
+     * @param copyTagsToSnapshot Whether to copy tags to the snapshot when a snapshot is created. 
+     */
+    override fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
+      cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot)
     }
 
     /**
@@ -654,7 +701,7 @@ public open class DatabaseCluster(
      * @param instanceRemovalPolicy The removal policy to apply to the cluster's instances. 
      */
     override fun instanceRemovalPolicy(instanceRemovalPolicy: RemovalPolicy) {
-      cdkBuilder.instanceRemovalPolicy(instanceRemovalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.instanceRemovalPolicy(instanceRemovalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -663,7 +710,7 @@ public open class DatabaseCluster(
      * @param instanceType What type of instance to start for the replicas. 
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -685,7 +732,7 @@ public open class DatabaseCluster(
      * @param kmsKey The KMS key for storage encryption. 
      */
     override fun kmsKey(kmsKey: IKey) {
-      cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -694,7 +741,7 @@ public open class DatabaseCluster(
      * @param masterUser Username and password for the administrative user. 
      */
     override fun masterUser(masterUser: Login) {
-      cdkBuilder.masterUser(masterUser.let(Login::unwrap))
+      cdkBuilder.masterUser(masterUser.let(Login.Companion::unwrap))
     }
 
     /**
@@ -715,7 +762,7 @@ public open class DatabaseCluster(
      * @param parameterGroup The DB parameter group to associate with the instance. 
      */
     override fun parameterGroup(parameterGroup: IClusterParameterGroup) {
-      cdkBuilder.parameterGroup(parameterGroup.let(IClusterParameterGroup::unwrap))
+      cdkBuilder.parameterGroup(parameterGroup.let(IClusterParameterGroup.Companion::unwrap))
     }
 
     /**
@@ -766,7 +813,7 @@ public open class DatabaseCluster(
      * removed or replaced during a stack update, or when the stack is deleted. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -777,7 +824,7 @@ public open class DatabaseCluster(
      * @param securityGroup Security group. 
      */
     override fun securityGroup(securityGroup: CloudshiftdevAwscdkServicesEc2ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(CloudshiftdevAwscdkServicesEc2ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(CloudshiftdevAwscdkServicesEc2ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -793,7 +840,7 @@ public open class DatabaseCluster(
      * group. 
      */
     override fun securityGroupRemovalPolicy(securityGroupRemovalPolicy: RemovalPolicy) {
-      cdkBuilder.securityGroupRemovalPolicy(securityGroupRemovalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.securityGroupRemovalPolicy(securityGroupRemovalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -815,7 +862,7 @@ public open class DatabaseCluster(
      * @param vpc What subnets to run the DocumentDB instances in. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -826,7 +873,7 @@ public open class DatabaseCluster(
      * @param vpcSubnets Where to place the instances within the VPC. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -856,8 +903,8 @@ public open class DatabaseCluster(
       id: String,
       attrs: DatabaseClusterAttributes,
     ): IDatabaseCluster =
-        software.amazon.awscdk.services.docdb.DatabaseCluster.fromDatabaseClusterAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(DatabaseClusterAttributes::unwrap)).let(IDatabaseCluster::wrap)
+        software.amazon.awscdk.services.docdb.DatabaseCluster.fromDatabaseClusterAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(DatabaseClusterAttributes.Companion::unwrap)).let(IDatabaseCluster::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e421efc8468697cbb6411872efd05956c0ff05aff40cd5e11355e43937395e19")

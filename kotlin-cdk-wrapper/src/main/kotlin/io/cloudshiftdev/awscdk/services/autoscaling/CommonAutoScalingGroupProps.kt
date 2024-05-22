@@ -6,8 +6,10 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import io.cloudshiftdev.awscdk.services.ec2.IKeyPair
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -33,6 +35,7 @@ import kotlin.jvm.JvmName
  * BlockDeviceVolume blockDeviceVolume;
  * GroupMetrics groupMetrics;
  * HealthCheck healthCheck;
+ * KeyPair keyPair;
  * ScalingEvents scalingEvents;
  * Signals signals;
  * Subnet subnet;
@@ -56,6 +59,7 @@ import kotlin.jvm.JvmName
  * .ignoreUnmodifiedSizeProperties(false)
  * .instanceMonitoring(Monitoring.BASIC)
  * .keyName("keyName")
+ * .keyPair(keyPair)
  * .maxCapacity(123)
  * .maxInstanceLifetime(Duration.minutes(30))
  * .minCapacity(123)
@@ -238,14 +242,34 @@ public interface CommonAutoScalingGroupProps {
       unwrap(this).getInstanceMonitoring()?.let(Monitoring::wrap)
 
   /**
-   * Name of SSH keypair to grant access to instances.
+   * (deprecated) Name of SSH keypair to grant access to instances.
    *
    * `launchTemplate` and `mixedInstancesPolicy` must not be specified when this property is
    * specified
    *
+   * You can either specify `keyPair` or `keyName`, not both.
+   *
+   * Default: - No SSH access will be possible.
+   *
+   * * Use `keyPair` instead -
+   * https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_ec2-readme.html#using-an-existing-ec2-key-pair
+   */
+  @Deprecated(message = "deprecated in CDK")
+  public fun keyName(): String? = unwrap(this).getKeyName()
+
+  /**
+   * The SSH keypair to grant access to the instance.
+   *
+   * Feature flag `AUTOSCALING_GENERATE_LAUNCH_TEMPLATE` must be enabled to use this property.
+   *
+   * `launchTemplate` and `mixedInstancesPolicy` must not be specified when this property is
+   * specified.
+   *
+   * You can either specify `keyPair` or `keyName`, not both.
+   *
    * Default: - No SSH access will be possible.
    */
-  public fun keyName(): String? = unwrap(this).getKeyName()
+  public fun keyPair(): IKeyPair? = unwrap(this).getKeyPair()?.let(IKeyPair::wrap)
 
   /**
    * Maximum number of instances in the fleet.
@@ -548,8 +572,24 @@ public interface CommonAutoScalingGroupProps {
      * @param keyName Name of SSH keypair to grant access to instances.
      * `launchTemplate` and `mixedInstancesPolicy` must not be specified when this property is
      * specified
+     *
+     * You can either specify `keyPair` or `keyName`, not both.
+     * @deprecated - Use `keyPair` instead -
+     * https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_ec2-readme.html#using-an-existing-ec2-key-pair
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun keyName(keyName: String)
+
+    /**
+     * @param keyPair The SSH keypair to grant access to the instance.
+     * Feature flag `AUTOSCALING_GENERATE_LAUNCH_TEMPLATE` must be enabled to use this property.
+     *
+     * `launchTemplate` and `mixedInstancesPolicy` must not be specified when this property is
+     * specified.
+     *
+     * You can either specify `keyPair` or `keyName`, not both.
+     */
+    public fun keyPair(keyPair: IKeyPair)
 
     /**
      * @param maxCapacity Maximum number of instances in the fleet.
@@ -735,7 +775,7 @@ public interface CommonAutoScalingGroupProps {
      * specified
      */
     override fun blockDevices(blockDevices: List<BlockDevice>) {
-      cdkBuilder.blockDevices(blockDevices.map(BlockDevice::unwrap))
+      cdkBuilder.blockDevices(blockDevices.map(BlockDevice.Companion::unwrap))
     }
 
     /**
@@ -767,7 +807,7 @@ public interface CommonAutoScalingGroupProps {
      * @param cooldown Default scaling cooldown for this AutoScalingGroup.
      */
     override fun cooldown(cooldown: Duration) {
-      cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
+      cdkBuilder.cooldown(cooldown.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -787,7 +827,7 @@ public interface CommonAutoScalingGroupProps {
      * Default instance warmup will not be added if no value is specified
      */
     override fun defaultInstanceWarmup(defaultInstanceWarmup: Duration) {
-      cdkBuilder.defaultInstanceWarmup(defaultInstanceWarmup.let(Duration::unwrap))
+      cdkBuilder.defaultInstanceWarmup(defaultInstanceWarmup.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -806,7 +846,7 @@ public interface CommonAutoScalingGroupProps {
      * Group metrics are reported in a granularity of 1 minute at no additional charge.
      */
     override fun groupMetrics(groupMetrics: List<GroupMetrics>) {
-      cdkBuilder.groupMetrics(groupMetrics.map(GroupMetrics::unwrap))
+      cdkBuilder.groupMetrics(groupMetrics.map(GroupMetrics.Companion::unwrap))
     }
 
     /**
@@ -822,7 +862,7 @@ public interface CommonAutoScalingGroupProps {
      * @param healthCheck Configuration for health checks.
      */
     override fun healthCheck(healthCheck: HealthCheck) {
-      cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
     }
 
     /**
@@ -850,16 +890,34 @@ public interface CommonAutoScalingGroupProps {
      * specified
      */
     override fun instanceMonitoring(instanceMonitoring: Monitoring) {
-      cdkBuilder.instanceMonitoring(instanceMonitoring.let(Monitoring::unwrap))
+      cdkBuilder.instanceMonitoring(instanceMonitoring.let(Monitoring.Companion::unwrap))
     }
 
     /**
      * @param keyName Name of SSH keypair to grant access to instances.
      * `launchTemplate` and `mixedInstancesPolicy` must not be specified when this property is
      * specified
+     *
+     * You can either specify `keyPair` or `keyName`, not both.
+     * @deprecated - Use `keyPair` instead -
+     * https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_ec2-readme.html#using-an-existing-ec2-key-pair
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun keyName(keyName: String) {
       cdkBuilder.keyName(keyName)
+    }
+
+    /**
+     * @param keyPair The SSH keypair to grant access to the instance.
+     * Feature flag `AUTOSCALING_GENERATE_LAUNCH_TEMPLATE` must be enabled to use this property.
+     *
+     * `launchTemplate` and `mixedInstancesPolicy` must not be specified when this property is
+     * specified.
+     *
+     * You can either specify `keyPair` or `keyName`, not both.
+     */
+    override fun keyPair(keyPair: IKeyPair) {
+      cdkBuilder.keyPair(keyPair.let(IKeyPair.Companion::unwrap))
     }
 
     /**
@@ -881,7 +939,7 @@ public interface CommonAutoScalingGroupProps {
      * leave this property undefined.
      */
     override fun maxInstanceLifetime(maxInstanceLifetime: Duration) {
-      cdkBuilder.maxInstanceLifetime(maxInstanceLifetime.let(Duration::unwrap))
+      cdkBuilder.maxInstanceLifetime(maxInstanceLifetime.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -912,7 +970,7 @@ public interface CommonAutoScalingGroupProps {
      * an SNS topic(s).
      */
     override fun notifications(notifications: List<NotificationConfiguration>) {
-      cdkBuilder.notifications(notifications.map(NotificationConfiguration::unwrap))
+      cdkBuilder.notifications(notifications.map(NotificationConfiguration.Companion::unwrap))
     }
 
     /**
@@ -941,7 +999,7 @@ public interface CommonAutoScalingGroupProps {
      * https://github.com/awslabs/aws-cloudformation-templates/blob/master/aws/services/AutoScaling/AutoScalingRollingUpdates.yaml
      */
     override fun signals(signals: Signals) {
-      cdkBuilder.signals(signals.let(Signals::unwrap))
+      cdkBuilder.signals(signals.let(Signals.Companion::unwrap))
     }
 
     /**
@@ -980,7 +1038,7 @@ public interface CommonAutoScalingGroupProps {
      * The policies are executed in the order that you list them.
      */
     override fun terminationPolicies(terminationPolicies: List<TerminationPolicy>) {
-      cdkBuilder.terminationPolicies(terminationPolicies.map(TerminationPolicy::unwrap))
+      cdkBuilder.terminationPolicies(terminationPolicies.map(TerminationPolicy.Companion::unwrap))
     }
 
     /**
@@ -1011,14 +1069,14 @@ public interface CommonAutoScalingGroupProps {
      * is done and only new instances are launched with the new config.
      */
     override fun updatePolicy(updatePolicy: UpdatePolicy) {
-      cdkBuilder.updatePolicy(updatePolicy.let(UpdatePolicy::unwrap))
+      cdkBuilder.updatePolicy(updatePolicy.let(UpdatePolicy.Companion::unwrap))
     }
 
     /**
      * @param vpcSubnets Where to place instances within the VPC.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -1191,14 +1249,34 @@ public interface CommonAutoScalingGroupProps {
         unwrap(this).getInstanceMonitoring()?.let(Monitoring::wrap)
 
     /**
-     * Name of SSH keypair to grant access to instances.
+     * (deprecated) Name of SSH keypair to grant access to instances.
      *
      * `launchTemplate` and `mixedInstancesPolicy` must not be specified when this property is
      * specified
      *
+     * You can either specify `keyPair` or `keyName`, not both.
+     *
+     * Default: - No SSH access will be possible.
+     *
+     * * Use `keyPair` instead -
+     * https://docs.aws.amazon.com/cdk/api/v2/docs/aws-cdk-lib.aws_ec2-readme.html#using-an-existing-ec2-key-pair
+     */
+    @Deprecated(message = "deprecated in CDK")
+    override fun keyName(): String? = unwrap(this).getKeyName()
+
+    /**
+     * The SSH keypair to grant access to the instance.
+     *
+     * Feature flag `AUTOSCALING_GENERATE_LAUNCH_TEMPLATE` must be enabled to use this property.
+     *
+     * `launchTemplate` and `mixedInstancesPolicy` must not be specified when this property is
+     * specified.
+     *
+     * You can either specify `keyPair` or `keyName`, not both.
+     *
      * Default: - No SSH access will be possible.
      */
-    override fun keyName(): String? = unwrap(this).getKeyName()
+    override fun keyPair(): IKeyPair? = unwrap(this).getKeyPair()?.let(IKeyPair::wrap)
 
     /**
      * Maximum number of instances in the fleet.

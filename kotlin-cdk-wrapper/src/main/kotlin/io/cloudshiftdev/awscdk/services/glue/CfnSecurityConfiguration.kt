@@ -61,8 +61,8 @@ public open class CfnSecurityConfiguration(
     id: String,
     props: CfnSecurityConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.glue.CfnSecurityConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSecurityConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.glue.CfnSecurityConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSecurityConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -86,14 +86,14 @@ public open class CfnSecurityConfiguration(
    * The encryption configuration associated with this security configuration.
    */
   public open fun encryptionConfiguration(`value`: IResolvable) {
-    unwrap(this).setEncryptionConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEncryptionConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The encryption configuration associated with this security configuration.
    */
   public open fun encryptionConfiguration(`value`: EncryptionConfigurationProperty) {
-    unwrap(this).setEncryptionConfiguration(`value`.let(EncryptionConfigurationProperty::unwrap))
+    unwrap(this).setEncryptionConfiguration(`value`.let(EncryptionConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -111,7 +111,7 @@ public open class CfnSecurityConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -185,7 +185,7 @@ public open class CfnSecurityConfiguration(
      * configuration. 
      */
     override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -196,7 +196,7 @@ public open class CfnSecurityConfiguration(
      * configuration. 
      */
     override fun encryptionConfiguration(encryptionConfiguration: EncryptionConfigurationProperty) {
-      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty::unwrap))
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(EncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -479,14 +479,14 @@ public open class CfnSecurityConfiguration(
        * @param cloudWatchEncryption The encryption configuration for Amazon CloudWatch.
        */
       override fun cloudWatchEncryption(cloudWatchEncryption: IResolvable) {
-        cdkBuilder.cloudWatchEncryption(cloudWatchEncryption.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchEncryption(cloudWatchEncryption.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param cloudWatchEncryption The encryption configuration for Amazon CloudWatch.
        */
       override fun cloudWatchEncryption(cloudWatchEncryption: CloudWatchEncryptionProperty) {
-        cdkBuilder.cloudWatchEncryption(cloudWatchEncryption.let(CloudWatchEncryptionProperty::unwrap))
+        cdkBuilder.cloudWatchEncryption(cloudWatchEncryption.let(CloudWatchEncryptionProperty.Companion::unwrap))
       }
 
       /**
@@ -502,14 +502,14 @@ public open class CfnSecurityConfiguration(
        * @param jobBookmarksEncryption The encryption configuration for job bookmarks.
        */
       override fun jobBookmarksEncryption(jobBookmarksEncryption: IResolvable) {
-        cdkBuilder.jobBookmarksEncryption(jobBookmarksEncryption.let(IResolvable::unwrap))
+        cdkBuilder.jobBookmarksEncryption(jobBookmarksEncryption.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param jobBookmarksEncryption The encryption configuration for job bookmarks.
        */
       override fun jobBookmarksEncryption(jobBookmarksEncryption: JobBookmarksEncryptionProperty) {
-        cdkBuilder.jobBookmarksEncryption(jobBookmarksEncryption.let(JobBookmarksEncryptionProperty::unwrap))
+        cdkBuilder.jobBookmarksEncryption(jobBookmarksEncryption.let(JobBookmarksEncryptionProperty.Companion::unwrap))
       }
 
       /**
@@ -526,7 +526,7 @@ public open class CfnSecurityConfiguration(
        * S3) data.
        */
       override fun s3Encryptions(s3Encryptions: IResolvable) {
-        cdkBuilder.s3Encryptions(s3Encryptions.let(IResolvable::unwrap))
+        cdkBuilder.s3Encryptions(s3Encryptions.let(IResolvable.Companion::unwrap))
       }
 
       /**

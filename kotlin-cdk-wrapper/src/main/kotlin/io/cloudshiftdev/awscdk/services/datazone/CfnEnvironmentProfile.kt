@@ -52,8 +52,8 @@ public open class CfnEnvironmentProfile(
     id: String,
     props: CfnEnvironmentProfileProps,
   ) :
-      this(software.amazon.awscdk.services.datazone.CfnEnvironmentProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEnvironmentProfileProps::unwrap))
+      this(software.amazon.awscdk.services.datazone.CfnEnvironmentProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEnvironmentProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -166,7 +166,7 @@ public open class CfnEnvironmentProfile(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -202,7 +202,7 @@ public open class CfnEnvironmentProfile(
    * The user parameters of this Amazon DataZone environment profile.
    */
   public open fun userParameters(`value`: IResolvable) {
-    unwrap(this).setUserParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUserParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -391,7 +391,7 @@ public open class CfnEnvironmentProfile(
      * @param userParameters The user parameters of this Amazon DataZone environment profile. 
      */
     override fun userParameters(userParameters: IResolvable) {
-      cdkBuilder.userParameters(userParameters.let(IResolvable::unwrap))
+      cdkBuilder.userParameters(userParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -42,7 +42,7 @@ public abstract class ClientVpnRouteTarget(
         software.amazon.awscdk.services.ec2.ClientVpnRouteTarget.local().let(ClientVpnRouteTarget::wrap)
 
     public fun subnet(subnet: ISubnet): ClientVpnRouteTarget =
-        software.amazon.awscdk.services.ec2.ClientVpnRouteTarget.subnet(subnet.let(ISubnet::unwrap)).let(ClientVpnRouteTarget::wrap)
+        software.amazon.awscdk.services.ec2.ClientVpnRouteTarget.subnet(subnet.let(ISubnet.Companion::unwrap)).let(ClientVpnRouteTarget::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.ClientVpnRouteTarget):
         ClientVpnRouteTarget = CdkObjectWrappers.wrap(cdkObject) as? ClientVpnRouteTarget ?:

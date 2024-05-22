@@ -100,21 +100,21 @@ public interface BasePathMappingProps : BasePathMappingOptions {
      * @param domainName The DomainName to associate with this base path mapping. 
      */
     override fun domainName(domainName: IDomainName) {
-      cdkBuilder.domainName(domainName.let(IDomainName::unwrap))
+      cdkBuilder.domainName(domainName.let(IDomainName.Companion::unwrap))
     }
 
     /**
      * @param restApi The RestApi resource to target. 
      */
     override fun restApi(restApi: IRestApi) {
-      cdkBuilder.restApi(restApi.let(IRestApi::unwrap))
+      cdkBuilder.restApi(restApi.let(IRestApi.Companion::unwrap))
     }
 
     /**
      * @param stage The Deployment stage of API [disable-awslint:ref-via-interface].
      */
     override fun stage(stage: Stage) {
-      cdkBuilder.stage(stage.let(Stage::unwrap))
+      cdkBuilder.stage(stage.let(Stage.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.BasePathMappingProps =

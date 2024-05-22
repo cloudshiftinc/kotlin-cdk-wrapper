@@ -259,14 +259,14 @@ public interface CfnFuotaTaskProps {
      * @param loRaWan The LoRaWAN information used with a FUOTA task. 
      */
     override fun loRaWan(loRaWan: IResolvable) {
-      cdkBuilder.loRaWan(loRaWan.let(IResolvable::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param loRaWan The LoRaWAN information used with a FUOTA task. 
      */
     override fun loRaWan(loRaWan: CfnFuotaTask.LoRaWANProperty) {
-      cdkBuilder.loRaWan(loRaWan.let(CfnFuotaTask.LoRaWANProperty::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(CfnFuotaTask.LoRaWANProperty.Companion::unwrap))
     }
 
     /**
@@ -289,7 +289,7 @@ public interface CfnFuotaTaskProps {
      * Tags can have a minimum of 0 and a maximum of 50 items.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

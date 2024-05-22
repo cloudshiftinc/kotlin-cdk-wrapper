@@ -47,12 +47,12 @@ public open class ViewerCertificate(
 
   public companion object {
     public fun fromAcmCertificate(certificate: ICertificate): ViewerCertificate =
-        software.amazon.awscdk.services.cloudfront.ViewerCertificate.fromAcmCertificate(certificate.let(ICertificate::unwrap)).let(ViewerCertificate::wrap)
+        software.amazon.awscdk.services.cloudfront.ViewerCertificate.fromAcmCertificate(certificate.let(ICertificate.Companion::unwrap)).let(ViewerCertificate::wrap)
 
     public fun fromAcmCertificate(certificate: ICertificate, options: ViewerCertificateOptions):
         ViewerCertificate =
-        software.amazon.awscdk.services.cloudfront.ViewerCertificate.fromAcmCertificate(certificate.let(ICertificate::unwrap),
-        options.let(ViewerCertificateOptions::unwrap)).let(ViewerCertificate::wrap)
+        software.amazon.awscdk.services.cloudfront.ViewerCertificate.fromAcmCertificate(certificate.let(ICertificate.Companion::unwrap),
+        options.let(ViewerCertificateOptions.Companion::unwrap)).let(ViewerCertificate::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("37a713b410c630c403273ca75ff975e19693092baa3512aa6babed5368bff2c2")
@@ -69,7 +69,7 @@ public open class ViewerCertificate(
     public fun fromIamCertificate(iamCertificateId: String, options: ViewerCertificateOptions):
         ViewerCertificate =
         software.amazon.awscdk.services.cloudfront.ViewerCertificate.fromIamCertificate(iamCertificateId,
-        options.let(ViewerCertificateOptions::unwrap)).let(ViewerCertificate::wrap)
+        options.let(ViewerCertificateOptions.Companion::unwrap)).let(ViewerCertificate::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("91f45eef37d3170a3df7ffdb2bc432e638538104218ba15a6c1b22fcdace2dd1")

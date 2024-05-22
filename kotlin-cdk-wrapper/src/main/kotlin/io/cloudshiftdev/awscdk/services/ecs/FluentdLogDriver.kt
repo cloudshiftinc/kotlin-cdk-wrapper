@@ -42,7 +42,7 @@ public open class FluentdLogDriver(
   )
 
   public constructor(props: FluentdLogDriverProps) :
-      this(software.amazon.awscdk.services.ecs.FluentdLogDriver(props.let(FluentdLogDriverProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.FluentdLogDriver(props.let(FluentdLogDriverProps.Companion::unwrap))
   )
 
   public constructor(props: FluentdLogDriverProps.Builder.() -> Unit) :
@@ -56,8 +56,8 @@ public open class FluentdLogDriver(
    * @param _containerDefinition 
    */
   public override fun bind(scope: Construct, containerDefinition: ContainerDefinition):
-      LogDriverConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      containerDefinition.let(ContainerDefinition::unwrap)).let(LogDriverConfig::wrap)
+      LogDriverConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      containerDefinition.let(ContainerDefinition.Companion::unwrap)).let(LogDriverConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.FluentdLogDriver].
@@ -338,7 +338,7 @@ public open class FluentdLogDriver(
      * @param retryWait How long to wait between retries. 
      */
     override fun retryWait(retryWait: Duration) {
-      cdkBuilder.retryWait(retryWait.let(Duration::unwrap))
+      cdkBuilder.retryWait(retryWait.let(Duration.Companion::unwrap))
     }
 
     /**

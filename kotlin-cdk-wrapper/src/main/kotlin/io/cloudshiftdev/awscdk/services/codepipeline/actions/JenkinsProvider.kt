@@ -33,8 +33,8 @@ public open class JenkinsProvider(
     id: String,
     props: JenkinsProviderProps,
   ) :
-      this(software.amazon.awscdk.services.codepipeline.actions.JenkinsProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(JenkinsProviderProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.actions.JenkinsProvider(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(JenkinsProviderProps.Companion::unwrap))
   )
 
   public constructor(
@@ -207,8 +207,8 @@ public open class JenkinsProvider(
       id: String,
       attrs: JenkinsProviderAttributes,
     ): IJenkinsProvider =
-        software.amazon.awscdk.services.codepipeline.actions.JenkinsProvider.fromJenkinsProviderAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(JenkinsProviderAttributes::unwrap)).let(IJenkinsProvider::wrap)
+        software.amazon.awscdk.services.codepipeline.actions.JenkinsProvider.fromJenkinsProviderAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(JenkinsProviderAttributes.Companion::unwrap)).let(IJenkinsProvider::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0d90bec4732ec43072405e8717ccd4c0c26b54a0f0ed3221b659c8cb4a9e3db6")

@@ -66,8 +66,8 @@ public open class CfnQuickConnect(
     id: String,
     props: CfnQuickConnectProps,
   ) :
-      this(software.amazon.awscdk.services.connect.CfnQuickConnect(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnQuickConnectProps::unwrap))
+      this(software.amazon.awscdk.services.connect.CfnQuickConnect(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnQuickConnectProps.Companion::unwrap))
   )
 
   public constructor(
@@ -108,7 +108,7 @@ public open class CfnQuickConnect(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -144,14 +144,14 @@ public open class CfnQuickConnect(
    * Contains information about the quick connect.
    */
   public open fun quickConnectConfig(`value`: IResolvable) {
-    unwrap(this).setQuickConnectConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setQuickConnectConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Contains information about the quick connect.
    */
   public open fun quickConnectConfig(`value`: QuickConnectConfigProperty) {
-    unwrap(this).setQuickConnectConfig(`value`.let(QuickConnectConfigProperty::unwrap))
+    unwrap(this).setQuickConnectConfig(`value`.let(QuickConnectConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -177,7 +177,7 @@ public open class CfnQuickConnect(
    * The tags used to organize, track, or control access for this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -305,7 +305,7 @@ public open class CfnQuickConnect(
      * @param quickConnectConfig Contains information about the quick connect. 
      */
     override fun quickConnectConfig(quickConnectConfig: IResolvable) {
-      cdkBuilder.quickConnectConfig(quickConnectConfig.let(IResolvable::unwrap))
+      cdkBuilder.quickConnectConfig(quickConnectConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -315,7 +315,7 @@ public open class CfnQuickConnect(
      * @param quickConnectConfig Contains information about the quick connect. 
      */
     override fun quickConnectConfig(quickConnectConfig: QuickConnectConfigProperty) {
-      cdkBuilder.quickConnectConfig(quickConnectConfig.let(QuickConnectConfigProperty::unwrap))
+      cdkBuilder.quickConnectConfig(quickConnectConfig.let(QuickConnectConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -339,7 +339,7 @@ public open class CfnQuickConnect(
      * @param tags The tags used to organize, track, or control access for this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -722,7 +722,7 @@ public open class CfnQuickConnect(
        * This is required only if QuickConnectType is PHONE_NUMBER.
        */
       override fun phoneConfig(phoneConfig: IResolvable) {
-        cdkBuilder.phoneConfig(phoneConfig.let(IResolvable::unwrap))
+        cdkBuilder.phoneConfig(phoneConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -730,7 +730,7 @@ public open class CfnQuickConnect(
        * This is required only if QuickConnectType is PHONE_NUMBER.
        */
       override fun phoneConfig(phoneConfig: PhoneNumberQuickConnectConfigProperty) {
-        cdkBuilder.phoneConfig(phoneConfig.let(PhoneNumberQuickConnectConfigProperty::unwrap))
+        cdkBuilder.phoneConfig(phoneConfig.let(PhoneNumberQuickConnectConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -748,7 +748,7 @@ public open class CfnQuickConnect(
        * This is required only if QuickConnectType is QUEUE.
        */
       override fun queueConfig(queueConfig: IResolvable) {
-        cdkBuilder.queueConfig(queueConfig.let(IResolvable::unwrap))
+        cdkBuilder.queueConfig(queueConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -756,7 +756,7 @@ public open class CfnQuickConnect(
        * This is required only if QuickConnectType is QUEUE.
        */
       override fun queueConfig(queueConfig: QueueQuickConnectConfigProperty) {
-        cdkBuilder.queueConfig(queueConfig.let(QueueQuickConnectConfigProperty::unwrap))
+        cdkBuilder.queueConfig(queueConfig.let(QueueQuickConnectConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -782,7 +782,7 @@ public open class CfnQuickConnect(
        * This is required only if QuickConnectType is USER.
        */
       override fun userConfig(userConfig: IResolvable) {
-        cdkBuilder.userConfig(userConfig.let(IResolvable::unwrap))
+        cdkBuilder.userConfig(userConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -790,7 +790,7 @@ public open class CfnQuickConnect(
        * This is required only if QuickConnectType is USER.
        */
       override fun userConfig(userConfig: UserQuickConnectConfigProperty) {
-        cdkBuilder.userConfig(userConfig.let(UserQuickConnectConfigProperty::unwrap))
+        cdkBuilder.userConfig(userConfig.let(UserQuickConnectConfigProperty.Companion::unwrap))
       }
 
       /**

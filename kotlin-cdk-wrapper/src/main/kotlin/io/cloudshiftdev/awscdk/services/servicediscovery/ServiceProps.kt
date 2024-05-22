@@ -150,7 +150,7 @@ public interface ServiceProps : DnsServiceProps {
      * See: https://docs.aws.amazon.com/cloud-map/latest/api/API_HealthCheckCustomConfig.html
      */
     override fun customHealthCheck(customHealthCheck: HealthCheckCustomConfig) {
-      cdkBuilder.customHealthCheck(customHealthCheck.let(HealthCheckCustomConfig::unwrap))
+      cdkBuilder.customHealthCheck(customHealthCheck.let(HealthCheckCustomConfig.Companion::unwrap))
     }
 
     /**
@@ -174,7 +174,7 @@ public interface ServiceProps : DnsServiceProps {
      * @param discoveryType Controls how instances within this service can be discovered.
      */
     override fun discoveryType(discoveryType: DiscoveryType) {
-      cdkBuilder.discoveryType(discoveryType.let(DiscoveryType::unwrap))
+      cdkBuilder.discoveryType(discoveryType.let(DiscoveryType.Companion::unwrap))
     }
 
     /**
@@ -183,7 +183,7 @@ public interface ServiceProps : DnsServiceProps {
      * include A, AAAA, A and AAAA (A_AAAA), CNAME, and SRV.
      */
     override fun dnsRecordType(dnsRecordType: DnsRecordType) {
-      cdkBuilder.dnsRecordType(dnsRecordType.let(DnsRecordType::unwrap))
+      cdkBuilder.dnsRecordType(dnsRecordType.let(DnsRecordType.Companion::unwrap))
     }
 
     /**
@@ -191,7 +191,7 @@ public interface ServiceProps : DnsServiceProps {
      * settings for this record.
      */
     override fun dnsTtl(dnsTtl: Duration) {
-      cdkBuilder.dnsTtl(dnsTtl.let(Duration::unwrap))
+      cdkBuilder.dnsTtl(dnsTtl.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -204,7 +204,7 @@ public interface ServiceProps : DnsServiceProps {
      * this service.
      */
     override fun healthCheck(healthCheck: HealthCheckConfig) {
-      cdkBuilder.healthCheck(healthCheck.let(HealthCheckConfig::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(HealthCheckConfig.Companion::unwrap))
     }
 
     /**
@@ -242,7 +242,7 @@ public interface ServiceProps : DnsServiceProps {
      * @param namespace The namespace that you want to use for DNS configuration. 
      */
     override fun namespace(namespace: INamespace) {
-      cdkBuilder.namespace(namespace.let(INamespace::unwrap))
+      cdkBuilder.namespace(namespace.let(INamespace.Companion::unwrap))
     }
 
     /**
@@ -250,7 +250,7 @@ public interface ServiceProps : DnsServiceProps {
      * Cloud Map creates when you register an instance and specify this service.
      */
     override fun routingPolicy(routingPolicy: RoutingPolicy) {
-      cdkBuilder.routingPolicy(routingPolicy.let(RoutingPolicy::unwrap))
+      cdkBuilder.routingPolicy(routingPolicy.let(RoutingPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.servicediscovery.ServiceProps =

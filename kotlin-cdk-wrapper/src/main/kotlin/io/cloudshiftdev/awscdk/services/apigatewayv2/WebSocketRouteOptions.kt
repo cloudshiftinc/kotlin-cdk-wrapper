@@ -82,14 +82,14 @@ public interface WebSocketRouteOptions {
      * You can only set authorizer to a $connect route.
      */
     override fun authorizer(authorizer: IWebSocketRouteAuthorizer) {
-      cdkBuilder.authorizer(authorizer.let(IWebSocketRouteAuthorizer::unwrap))
+      cdkBuilder.authorizer(authorizer.let(IWebSocketRouteAuthorizer.Companion::unwrap))
     }
 
     /**
      * @param integration The integration to be configured on this route. 
      */
     override fun integration(integration: WebSocketRouteIntegration) {
-      cdkBuilder.integration(integration.let(WebSocketRouteIntegration::unwrap))
+      cdkBuilder.integration(integration.let(WebSocketRouteIntegration.Companion::unwrap))
     }
 
     /**

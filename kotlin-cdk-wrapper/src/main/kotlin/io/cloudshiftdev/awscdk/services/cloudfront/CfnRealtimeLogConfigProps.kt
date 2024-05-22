@@ -145,7 +145,7 @@ public interface CfnRealtimeLogConfigProps {
      * sending real-time log data for this real-time log configuration. 
      */
     override fun endPoints(endPoints: IResolvable) {
-      cdkBuilder.endPoints(endPoints.let(IResolvable::unwrap))
+      cdkBuilder.endPoints(endPoints.let(IResolvable.Companion::unwrap))
     }
 
     /**

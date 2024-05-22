@@ -326,7 +326,7 @@ public interface IPipeline : IResource, INotificationRuleSource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -335,7 +335,7 @@ public interface IPipeline : IResource, INotificationRuleSource {
      * @param scope 
      */
     override fun bindAsNotificationRuleSource(scope: Construct): NotificationRuleSourceConfig =
-        unwrap(this).bindAsNotificationRuleSource(scope.let(Construct::unwrap)).let(NotificationRuleSourceConfig::wrap)
+        unwrap(this).bindAsNotificationRuleSource(scope.let(Construct.Companion::unwrap)).let(NotificationRuleSourceConfig::wrap)
 
     /**
      * The environment this resource belongs to.
@@ -368,8 +368,9 @@ public interface IPipeline : IResource, INotificationRuleSource {
       id: String,
       target: INotificationRuleTarget,
       options: PipelineNotifyOnOptions,
-    ): INotificationRule = unwrap(this).notifyOn(id, target.let(INotificationRuleTarget::unwrap),
-        options.let(PipelineNotifyOnOptions::unwrap)).let(INotificationRule::wrap)
+    ): INotificationRule = unwrap(this).notifyOn(id,
+        target.let(INotificationRuleTarget.Companion::unwrap),
+        options.let(PipelineNotifyOnOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Defines a CodeStar notification rule triggered when the pipeline events emitted by you
@@ -403,7 +404,7 @@ public interface IPipeline : IResource, INotificationRuleSource {
      */
     override fun notifyOnAnyActionStateChange(id: String, target: INotificationRuleTarget):
         INotificationRule = unwrap(this).notifyOnAnyActionStateChange(id,
-        target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Define an notification rule triggered by the set of the "Action execution" events emitted
@@ -419,8 +420,8 @@ public interface IPipeline : IResource, INotificationRuleSource {
       target: INotificationRuleTarget,
       options: NotificationRuleOptions,
     ): INotificationRule = unwrap(this).notifyOnAnyActionStateChange(id,
-        target.let(INotificationRuleTarget::unwrap),
-        options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap),
+        options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Define an notification rule triggered by the set of the "Action execution" events emitted
@@ -451,7 +452,7 @@ public interface IPipeline : IResource, INotificationRuleSource {
      */
     override fun notifyOnAnyManualApprovalStateChange(id: String, target: INotificationRuleTarget):
         INotificationRule = unwrap(this).notifyOnAnyManualApprovalStateChange(id,
-        target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Define an notification rule triggered by the set of the "Manual approval" events emitted from
@@ -467,8 +468,8 @@ public interface IPipeline : IResource, INotificationRuleSource {
       target: INotificationRuleTarget,
       options: NotificationRuleOptions,
     ): INotificationRule = unwrap(this).notifyOnAnyManualApprovalStateChange(id,
-        target.let(INotificationRuleTarget::unwrap),
-        options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap),
+        options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Define an notification rule triggered by the set of the "Manual approval" events emitted from
@@ -499,7 +500,7 @@ public interface IPipeline : IResource, INotificationRuleSource {
      */
     override fun notifyOnAnyStageStateChange(id: String, target: INotificationRuleTarget):
         INotificationRule = unwrap(this).notifyOnAnyStageStateChange(id,
-        target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Define an notification rule triggered by the set of the "Stage execution" events emitted from
@@ -515,8 +516,8 @@ public interface IPipeline : IResource, INotificationRuleSource {
       target: INotificationRuleTarget,
       options: NotificationRuleOptions,
     ): INotificationRule = unwrap(this).notifyOnAnyStageStateChange(id,
-        target.let(INotificationRuleTarget::unwrap),
-        options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap),
+        options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Define an notification rule triggered by the set of the "Stage execution" events emitted from
@@ -546,7 +547,7 @@ public interface IPipeline : IResource, INotificationRuleSource {
      */
     override fun notifyOnExecutionStateChange(id: String, target: INotificationRuleTarget):
         INotificationRule = unwrap(this).notifyOnExecutionStateChange(id,
-        target.let(INotificationRuleTarget::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Define an notification rule triggered by the set of the "Pipeline execution" events emitted
@@ -562,8 +563,8 @@ public interface IPipeline : IResource, INotificationRuleSource {
       target: INotificationRuleTarget,
       options: NotificationRuleOptions,
     ): INotificationRule = unwrap(this).notifyOnExecutionStateChange(id,
-        target.let(INotificationRuleTarget::unwrap),
-        options.let(NotificationRuleOptions::unwrap)).let(INotificationRule::wrap)
+        target.let(INotificationRuleTarget.Companion::unwrap),
+        options.let(NotificationRuleOptions.Companion::unwrap)).let(INotificationRule::wrap)
 
     /**
      * Define an notification rule triggered by the set of the "Pipeline execution" events emitted
@@ -598,7 +599,7 @@ public interface IPipeline : IResource, INotificationRuleSource {
      * @param options Additional options to pass to the event rule.
      */
     override fun onEvent(id: String, options: OnEventOptions): Rule = unwrap(this).onEvent(id,
-        options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+        options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * Define an event rule triggered by this CodePipeline.
@@ -628,7 +629,8 @@ public interface IPipeline : IResource, INotificationRuleSource {
      * @param options Additional options to pass to the event rule.
      */
     override fun onStateChange(id: String, options: OnEventOptions): Rule =
-        unwrap(this).onStateChange(id, options.let(OnEventOptions::unwrap)).let(Rule::wrap)
+        unwrap(this).onStateChange(id,
+        options.let(OnEventOptions.Companion::unwrap)).let(Rule::wrap)
 
     /**
      * Define an event rule triggered by the "CodePipeline Pipeline Execution State Change" event

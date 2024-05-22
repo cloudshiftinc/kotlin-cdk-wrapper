@@ -57,8 +57,8 @@ public open class CfnLocationNFS(
     id: String,
     props: CfnLocationNFSProps,
   ) :
-      this(software.amazon.awscdk.services.datasync.CfnLocationNFS(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLocationNFSProps::unwrap))
+      this(software.amazon.awscdk.services.datasync.CfnLocationNFS(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLocationNFSProps.Companion::unwrap))
   )
 
   public constructor(
@@ -84,7 +84,7 @@ public open class CfnLocationNFS(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -96,14 +96,14 @@ public open class CfnLocationNFS(
    * Specifies the options that DataSync can use to mount your NFS file server.
    */
   public open fun mountOptions(`value`: IResolvable) {
-    unwrap(this).setMountOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMountOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the options that DataSync can use to mount your NFS file server.
    */
   public open fun mountOptions(`value`: MountOptionsProperty) {
-    unwrap(this).setMountOptions(`value`.let(MountOptionsProperty::unwrap))
+    unwrap(this).setMountOptions(`value`.let(MountOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -125,7 +125,7 @@ public open class CfnLocationNFS(
    * file server.
    */
   public open fun onPremConfig(`value`: IResolvable) {
-    unwrap(this).setOnPremConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOnPremConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -133,7 +133,7 @@ public open class CfnLocationNFS(
    * file server.
    */
   public open fun onPremConfig(`value`: OnPremConfigProperty) {
-    unwrap(this).setOnPremConfig(`value`.let(OnPremConfigProperty::unwrap))
+    unwrap(this).setOnPremConfig(`value`.let(OnPremConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -186,7 +186,7 @@ public open class CfnLocationNFS(
    * Specifies labels that help you categorize, filter, and search for your AWS resources.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -331,7 +331,7 @@ public open class CfnLocationNFS(
      * server. 
      */
     override fun mountOptions(mountOptions: IResolvable) {
-      cdkBuilder.mountOptions(mountOptions.let(IResolvable::unwrap))
+      cdkBuilder.mountOptions(mountOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -342,7 +342,7 @@ public open class CfnLocationNFS(
      * server. 
      */
     override fun mountOptions(mountOptions: MountOptionsProperty) {
-      cdkBuilder.mountOptions(mountOptions.let(MountOptionsProperty::unwrap))
+      cdkBuilder.mountOptions(mountOptions.let(MountOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -369,7 +369,7 @@ public open class CfnLocationNFS(
      * to connect to your NFS file server. 
      */
     override fun onPremConfig(onPremConfig: IResolvable) {
-      cdkBuilder.onPremConfig(onPremConfig.let(IResolvable::unwrap))
+      cdkBuilder.onPremConfig(onPremConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -384,7 +384,7 @@ public open class CfnLocationNFS(
      * to connect to your NFS file server. 
      */
     override fun onPremConfig(onPremConfig: OnPremConfigProperty) {
-      cdkBuilder.onPremConfig(onPremConfig.let(OnPremConfigProperty::unwrap))
+      cdkBuilder.onPremConfig(onPremConfig.let(OnPremConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -441,7 +441,7 @@ public open class CfnLocationNFS(
      * resources. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -50,8 +50,8 @@ public open class OpenIdConnectProvider(
     id: String,
     props: OpenIdConnectProviderProps,
   ) :
-      this(software.amazon.awscdk.services.eks.OpenIdConnectProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(OpenIdConnectProviderProps::unwrap))
+      this(software.amazon.awscdk.services.eks.OpenIdConnectProvider(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(OpenIdConnectProviderProps.Companion::unwrap))
   )
 
   public constructor(

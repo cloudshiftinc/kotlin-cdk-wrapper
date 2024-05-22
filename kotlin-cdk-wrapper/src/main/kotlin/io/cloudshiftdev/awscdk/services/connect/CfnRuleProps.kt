@@ -234,14 +234,14 @@ public interface CfnRuleProps {
      * @param actions A list of actions to be run when the rule is triggered. 
      */
     override fun actions(actions: IResolvable) {
-      cdkBuilder.actions(actions.let(IResolvable::unwrap))
+      cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param actions A list of actions to be run when the rule is triggered. 
      */
     override fun actions(actions: CfnRule.ActionsProperty) {
-      cdkBuilder.actions(actions.let(CfnRule.ActionsProperty::unwrap))
+      cdkBuilder.actions(actions.let(CfnRule.ActionsProperty.Companion::unwrap))
     }
 
     /**
@@ -286,7 +286,7 @@ public interface CfnRuleProps {
      * For example, { "tags": {"key1":"value1", "key2":"value2"} }.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -299,14 +299,14 @@ public interface CfnRuleProps {
      * @param triggerEventSource The event source to trigger the rule. 
      */
     override fun triggerEventSource(triggerEventSource: IResolvable) {
-      cdkBuilder.triggerEventSource(triggerEventSource.let(IResolvable::unwrap))
+      cdkBuilder.triggerEventSource(triggerEventSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param triggerEventSource The event source to trigger the rule. 
      */
     override fun triggerEventSource(triggerEventSource: CfnRule.RuleTriggerEventSourceProperty) {
-      cdkBuilder.triggerEventSource(triggerEventSource.let(CfnRule.RuleTriggerEventSourceProperty::unwrap))
+      cdkBuilder.triggerEventSource(triggerEventSource.let(CfnRule.RuleTriggerEventSourceProperty.Companion::unwrap))
     }
 
     /**

@@ -1190,7 +1190,7 @@ public interface CfnRecordSetProps {
      * in the *Amazon Route 53 Developer Guide* .
      */
     override fun aliasTarget(aliasTarget: IResolvable) {
-      cdkBuilder.aliasTarget(aliasTarget.let(IResolvable::unwrap))
+      cdkBuilder.aliasTarget(aliasTarget.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1206,7 +1206,7 @@ public interface CfnRecordSetProps {
      * in the *Amazon Route 53 Developer Guide* .
      */
     override fun aliasTarget(aliasTarget: CfnRecordSet.AliasTargetProperty) {
-      cdkBuilder.aliasTarget(aliasTarget.let(CfnRecordSet.AliasTargetProperty::unwrap))
+      cdkBuilder.aliasTarget(aliasTarget.let(CfnRecordSet.AliasTargetProperty.Companion::unwrap))
     }
 
     /**
@@ -1233,7 +1233,7 @@ public interface CfnRecordSetProps {
      * `CollectionId` is still required for default record.
      */
     override fun cidrRoutingConfig(cidrRoutingConfig: IResolvable) {
-      cdkBuilder.cidrRoutingConfig(cidrRoutingConfig.let(IResolvable::unwrap))
+      cdkBuilder.cidrRoutingConfig(cidrRoutingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1243,7 +1243,7 @@ public interface CfnRecordSetProps {
      * `CollectionId` is still required for default record.
      */
     override fun cidrRoutingConfig(cidrRoutingConfig: CfnRecordSet.CidrRoutingConfigProperty) {
-      cdkBuilder.cidrRoutingConfig(cidrRoutingConfig.let(CfnRecordSet.CidrRoutingConfigProperty::unwrap))
+      cdkBuilder.cidrRoutingConfig(cidrRoutingConfig.let(CfnRecordSet.CidrRoutingConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1343,7 +1343,7 @@ public interface CfnRecordSetProps {
      * `Name` and `Type` elements as geolocation resource record sets.
      */
     override fun geoLocation(geoLocation: IResolvable) {
-      cdkBuilder.geoLocation(geoLocation.let(IResolvable::unwrap))
+      cdkBuilder.geoLocation(geoLocation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1381,7 +1381,7 @@ public interface CfnRecordSetProps {
      * `Name` and `Type` elements as geolocation resource record sets.
      */
     override fun geoLocation(geoLocation: CfnRecordSet.GeoLocationProperty) {
-      cdkBuilder.geoLocation(geoLocation.let(CfnRecordSet.GeoLocationProperty::unwrap))
+      cdkBuilder.geoLocation(geoLocation.let(CfnRecordSet.GeoLocationProperty.Companion::unwrap))
     }
 
     /**
@@ -1429,7 +1429,7 @@ public interface CfnRecordSetProps {
      * query and your resources.
      */
     override fun geoProximityLocation(geoProximityLocation: IResolvable) {
-      cdkBuilder.geoProximityLocation(geoProximityLocation.let(IResolvable::unwrap))
+      cdkBuilder.geoProximityLocation(geoProximityLocation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1439,7 +1439,7 @@ public interface CfnRecordSetProps {
      */
     override
         fun geoProximityLocation(geoProximityLocation: CfnRecordSet.GeoProximityLocationProperty) {
-      cdkBuilder.geoProximityLocation(geoProximityLocation.let(CfnRecordSet.GeoProximityLocationProperty::unwrap))
+      cdkBuilder.geoProximityLocation(geoProximityLocation.let(CfnRecordSet.GeoProximityLocationProperty.Companion::unwrap))
     }
 
     /**
@@ -1643,7 +1643,7 @@ public interface CfnRecordSetProps {
      * You can't create multivalue answer alias records.
      */
     override fun multiValueAnswer(multiValueAnswer: IResolvable) {
-      cdkBuilder.multiValueAnswer(multiValueAnswer.let(IResolvable::unwrap))
+      cdkBuilder.multiValueAnswer(multiValueAnswer.let(IResolvable.Companion::unwrap))
     }
 
     /**

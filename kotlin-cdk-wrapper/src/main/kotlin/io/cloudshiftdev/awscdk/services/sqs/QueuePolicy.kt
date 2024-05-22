@@ -45,8 +45,8 @@ public open class QueuePolicy(
     id: String,
     props: QueuePolicyProps,
   ) :
-      this(software.amazon.awscdk.services.sqs.QueuePolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(QueuePolicyProps::unwrap))
+      this(software.amazon.awscdk.services.sqs.QueuePolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(QueuePolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -101,7 +101,7 @@ public open class QueuePolicy(
      * @param queues The set of queues this policy applies to. 
      */
     override fun queues(queues: List<IQueue>) {
-      cdkBuilder.queues(queues.map(IQueue::unwrap))
+      cdkBuilder.queues(queues.map(IQueue.Companion::unwrap))
     }
 
     /**

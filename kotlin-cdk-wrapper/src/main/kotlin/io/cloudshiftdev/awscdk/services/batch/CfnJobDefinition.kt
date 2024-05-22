@@ -43,8 +43,8 @@ public open class CfnJobDefinition(
     id: String,
     props: CfnJobDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.batch.CfnJobDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnJobDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.batch.CfnJobDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnJobDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -68,14 +68,14 @@ public open class CfnJobDefinition(
    * An object with properties specific to Amazon ECS-based jobs.
    */
   public open fun containerProperties(`value`: IResolvable) {
-    unwrap(this).setContainerProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setContainerProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An object with properties specific to Amazon ECS-based jobs.
    */
   public open fun containerProperties(`value`: ContainerPropertiesProperty) {
-    unwrap(this).setContainerProperties(`value`.let(ContainerPropertiesProperty::unwrap))
+    unwrap(this).setContainerProperties(`value`.let(ContainerPropertiesProperty.Companion::unwrap))
   }
 
   /**
@@ -99,7 +99,7 @@ public open class CfnJobDefinition(
    * `containerProperties` , `eksProperties` , or `nodeProperties` .
    */
   public open fun ecsProperties(`value`: IResolvable) {
-    unwrap(this).setEcsProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEcsProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -108,7 +108,7 @@ public open class CfnJobDefinition(
    * `containerProperties` , `eksProperties` , or `nodeProperties` .
    */
   public open fun ecsProperties(`value`: EcsPropertiesProperty) {
-    unwrap(this).setEcsProperties(`value`.let(EcsPropertiesProperty::unwrap))
+    unwrap(this).setEcsProperties(`value`.let(EcsPropertiesProperty.Companion::unwrap))
   }
 
   /**
@@ -130,14 +130,14 @@ public open class CfnJobDefinition(
    * An object with properties that are specific to Amazon EKS-based jobs.
    */
   public open fun eksProperties(`value`: IResolvable) {
-    unwrap(this).setEksProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEksProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An object with properties that are specific to Amazon EKS-based jobs.
    */
   public open fun eksProperties(`value`: EksPropertiesProperty) {
-    unwrap(this).setEksProperties(`value`.let(EksPropertiesProperty::unwrap))
+    unwrap(this).setEksProperties(`value`.let(EksPropertiesProperty.Companion::unwrap))
   }
 
   /**
@@ -154,7 +154,7 @@ public open class CfnJobDefinition(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -178,14 +178,14 @@ public open class CfnJobDefinition(
    * An object with properties that are specific to multi-node parallel jobs.
    */
   public open fun nodeProperties(`value`: IResolvable) {
-    unwrap(this).setNodeProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNodeProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An object with properties that are specific to multi-node parallel jobs.
    */
   public open fun nodeProperties(`value`: NodePropertiesProperty) {
-    unwrap(this).setNodeProperties(`value`.let(NodePropertiesProperty::unwrap))
+    unwrap(this).setNodeProperties(`value`.let(NodePropertiesProperty.Companion::unwrap))
   }
 
   /**
@@ -246,7 +246,7 @@ public open class CfnJobDefinition(
    * Amazon ECS task.
    */
   public open fun propagateTags(`value`: IResolvable) {
-    unwrap(this).setPropagateTags(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPropagateTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -258,14 +258,14 @@ public open class CfnJobDefinition(
    * The retry strategy to use for failed jobs that are submitted with this job definition.
    */
   public open fun retryStrategy(`value`: IResolvable) {
-    unwrap(this).setRetryStrategy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRetryStrategy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The retry strategy to use for failed jobs that are submitted with this job definition.
    */
   public open fun retryStrategy(`value`: RetryStrategyProperty) {
-    unwrap(this).setRetryStrategy(`value`.let(RetryStrategyProperty::unwrap))
+    unwrap(this).setRetryStrategy(`value`.let(RetryStrategyProperty.Companion::unwrap))
   }
 
   /**
@@ -314,14 +314,14 @@ public open class CfnJobDefinition(
    * The timeout time for jobs that are submitted with this job definition.
    */
   public open fun timeout(`value`: IResolvable) {
-    unwrap(this).setTimeout(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTimeout(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The timeout time for jobs that are submitted with this job definition.
    */
   public open fun timeout(`value`: TimeoutProperty) {
-    unwrap(this).setTimeout(`value`.let(TimeoutProperty::unwrap))
+    unwrap(this).setTimeout(`value`.let(TimeoutProperty.Companion::unwrap))
   }
 
   /**
@@ -707,7 +707,7 @@ public open class CfnJobDefinition(
      * @param containerProperties An object with properties specific to Amazon ECS-based jobs. 
      */
     override fun containerProperties(containerProperties: IResolvable) {
-      cdkBuilder.containerProperties(containerProperties.let(IResolvable::unwrap))
+      cdkBuilder.containerProperties(containerProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -720,7 +720,7 @@ public open class CfnJobDefinition(
      * @param containerProperties An object with properties specific to Amazon ECS-based jobs. 
      */
     override fun containerProperties(containerProperties: ContainerPropertiesProperty) {
-      cdkBuilder.containerProperties(containerProperties.let(ContainerPropertiesProperty::unwrap))
+      cdkBuilder.containerProperties(containerProperties.let(ContainerPropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -749,7 +749,7 @@ public open class CfnJobDefinition(
      * `containerProperties` , `eksProperties` , or `nodeProperties` . 
      */
     override fun ecsProperties(ecsProperties: IResolvable) {
-      cdkBuilder.ecsProperties(ecsProperties.let(IResolvable::unwrap))
+      cdkBuilder.ecsProperties(ecsProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -763,7 +763,7 @@ public open class CfnJobDefinition(
      * `containerProperties` , `eksProperties` , or `nodeProperties` . 
      */
     override fun ecsProperties(ecsProperties: EcsPropertiesProperty) {
-      cdkBuilder.ecsProperties(ecsProperties.let(EcsPropertiesProperty::unwrap))
+      cdkBuilder.ecsProperties(ecsProperties.let(EcsPropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -791,7 +791,7 @@ public open class CfnJobDefinition(
      * @param eksProperties An object with properties that are specific to Amazon EKS-based jobs. 
      */
     override fun eksProperties(eksProperties: IResolvable) {
-      cdkBuilder.eksProperties(eksProperties.let(IResolvable::unwrap))
+      cdkBuilder.eksProperties(eksProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -804,7 +804,7 @@ public open class CfnJobDefinition(
      * @param eksProperties An object with properties that are specific to Amazon EKS-based jobs. 
      */
     override fun eksProperties(eksProperties: EksPropertiesProperty) {
-      cdkBuilder.eksProperties(eksProperties.let(EksPropertiesProperty::unwrap))
+      cdkBuilder.eksProperties(eksProperties.let(EksPropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -847,7 +847,7 @@ public open class CfnJobDefinition(
      * jobs. 
      */
     override fun nodeProperties(nodeProperties: IResolvable) {
-      cdkBuilder.nodeProperties(nodeProperties.let(IResolvable::unwrap))
+      cdkBuilder.nodeProperties(nodeProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -866,7 +866,7 @@ public open class CfnJobDefinition(
      * jobs. 
      */
     override fun nodeProperties(nodeProperties: NodePropertiesProperty) {
-      cdkBuilder.nodeProperties(nodeProperties.let(NodePropertiesProperty::unwrap))
+      cdkBuilder.nodeProperties(nodeProperties.let(NodePropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -962,7 +962,7 @@ public open class CfnJobDefinition(
      * to the corresponding Amazon ECS task. 
      */
     override fun propagateTags(propagateTags: IResolvable) {
-      cdkBuilder.propagateTags(propagateTags.let(IResolvable::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -973,7 +973,7 @@ public open class CfnJobDefinition(
      * job definition. 
      */
     override fun retryStrategy(retryStrategy: IResolvable) {
-      cdkBuilder.retryStrategy(retryStrategy.let(IResolvable::unwrap))
+      cdkBuilder.retryStrategy(retryStrategy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -984,7 +984,7 @@ public open class CfnJobDefinition(
      * job definition. 
      */
     override fun retryStrategy(retryStrategy: RetryStrategyProperty) {
-      cdkBuilder.retryStrategy(retryStrategy.let(RetryStrategyProperty::unwrap))
+      cdkBuilder.retryStrategy(retryStrategy.let(RetryStrategyProperty.Companion::unwrap))
     }
 
     /**
@@ -1032,7 +1032,7 @@ public open class CfnJobDefinition(
      * @param timeout The timeout time for jobs that are submitted with this job definition. 
      */
     override fun timeout(timeout: IResolvable) {
-      cdkBuilder.timeout(timeout.let(IResolvable::unwrap))
+      cdkBuilder.timeout(timeout.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1045,7 +1045,7 @@ public open class CfnJobDefinition(
      * @param timeout The timeout time for jobs that are submitted with this job definition. 
      */
     override fun timeout(timeout: TimeoutProperty) {
-      cdkBuilder.timeout(timeout.let(TimeoutProperty::unwrap))
+      cdkBuilder.timeout(timeout.let(TimeoutProperty.Companion::unwrap))
     }
 
     /**
@@ -2407,7 +2407,7 @@ public open class CfnJobDefinition(
        * convention is reserved for variables that AWS Batch sets.
        */
       override fun environment(environment: IResolvable) {
-        cdkBuilder.environment(environment.let(IResolvable::unwrap))
+        cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2450,7 +2450,7 @@ public open class CfnJobDefinition(
        * the default amount, for tasks hosted on AWS Fargate .
        */
       override fun ephemeralStorage(ephemeralStorage: IResolvable) {
-        cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable::unwrap))
+        cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2459,7 +2459,7 @@ public open class CfnJobDefinition(
        * the default amount, for tasks hosted on AWS Fargate .
        */
       override fun ephemeralStorage(ephemeralStorage: EphemeralStorageProperty) {
-        cdkBuilder.ephemeralStorage(ephemeralStorage.let(EphemeralStorageProperty::unwrap))
+        cdkBuilder.ephemeralStorage(ephemeralStorage.let(EphemeralStorageProperty.Companion::unwrap))
       }
 
       /**
@@ -2490,7 +2490,7 @@ public open class CfnJobDefinition(
        * Jobs that are running on Amazon EC2 resources must not specify this parameter.
        */
       override fun fargatePlatformConfiguration(fargatePlatformConfiguration: IResolvable) {
-        cdkBuilder.fargatePlatformConfiguration(fargatePlatformConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.fargatePlatformConfiguration(fargatePlatformConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2500,7 +2500,7 @@ public open class CfnJobDefinition(
        */
       override
           fun fargatePlatformConfiguration(fargatePlatformConfiguration: FargatePlatformConfigurationProperty) {
-        cdkBuilder.fargatePlatformConfiguration(fargatePlatformConfiguration.let(FargatePlatformConfigurationProperty::unwrap))
+        cdkBuilder.fargatePlatformConfiguration(fargatePlatformConfiguration.let(FargatePlatformConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2579,7 +2579,7 @@ public open class CfnJobDefinition(
        * as details for device mappings.
        */
       override fun linuxParameters(linuxParameters: IResolvable) {
-        cdkBuilder.linuxParameters(linuxParameters.let(IResolvable::unwrap))
+        cdkBuilder.linuxParameters(linuxParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2587,7 +2587,7 @@ public open class CfnJobDefinition(
        * as details for device mappings.
        */
       override fun linuxParameters(linuxParameters: LinuxParametersProperty) {
-        cdkBuilder.linuxParameters(linuxParameters.let(LinuxParametersProperty::unwrap))
+        cdkBuilder.linuxParameters(linuxParameters.let(LinuxParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -2637,7 +2637,7 @@ public open class CfnJobDefinition(
        * in the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun logConfiguration(logConfiguration: IResolvable) {
-        cdkBuilder.logConfiguration(logConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.logConfiguration(logConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2678,7 +2678,7 @@ public open class CfnJobDefinition(
        * in the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun logConfiguration(logConfiguration: LogConfigurationProperty) {
-        cdkBuilder.logConfiguration(logConfiguration.let(LogConfigurationProperty::unwrap))
+        cdkBuilder.logConfiguration(logConfiguration.let(LogConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2746,7 +2746,7 @@ public open class CfnJobDefinition(
        * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) .
        */
       override fun mountPoints(mountPoints: IResolvable) {
-        cdkBuilder.mountPoints(mountPoints.let(IResolvable::unwrap))
+        cdkBuilder.mountPoints(mountPoints.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2779,7 +2779,7 @@ public open class CfnJobDefinition(
        * Jobs that are running on Amazon EC2 resources must not specify this parameter.
        */
       override fun networkConfiguration(networkConfiguration: IResolvable) {
-        cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2788,7 +2788,7 @@ public open class CfnJobDefinition(
        * Jobs that are running on Amazon EC2 resources must not specify this parameter.
        */
       override fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
-        cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty::unwrap))
+        cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2837,7 +2837,7 @@ public open class CfnJobDefinition(
        * be provided, or specified as false.
        */
       override fun privileged(privileged: IResolvable) {
-        cdkBuilder.privileged(privileged.let(IResolvable::unwrap))
+        cdkBuilder.privileged(privileged.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2863,21 +2863,21 @@ public open class CfnJobDefinition(
        * `--read-only` option to `docker run` .
        */
       override fun readonlyRootFilesystem(readonlyRootFilesystem: IResolvable) {
-        cdkBuilder.readonlyRootFilesystem(readonlyRootFilesystem.let(IResolvable::unwrap))
+        cdkBuilder.readonlyRootFilesystem(readonlyRootFilesystem.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param repositoryCredentials The private repository authentication credentials to use.
        */
       override fun repositoryCredentials(repositoryCredentials: IResolvable) {
-        cdkBuilder.repositoryCredentials(repositoryCredentials.let(IResolvable::unwrap))
+        cdkBuilder.repositoryCredentials(repositoryCredentials.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param repositoryCredentials The private repository authentication credentials to use.
        */
       override fun repositoryCredentials(repositoryCredentials: RepositoryCredentialsProperty) {
-        cdkBuilder.repositoryCredentials(repositoryCredentials.let(RepositoryCredentialsProperty::unwrap))
+        cdkBuilder.repositoryCredentials(repositoryCredentials.let(RepositoryCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -2894,7 +2894,7 @@ public open class CfnJobDefinition(
        * The supported resources include `GPU` , `MEMORY` , and `VCPU` .
        */
       override fun resourceRequirements(resourceRequirements: IResolvable) {
-        cdkBuilder.resourceRequirements(resourceRequirements.let(IResolvable::unwrap))
+        cdkBuilder.resourceRequirements(resourceRequirements.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2917,7 +2917,7 @@ public open class CfnJobDefinition(
        * AWS Batch jobs on Fargate.
        */
       override fun runtimePlatform(runtimePlatform: IResolvable) {
-        cdkBuilder.runtimePlatform(runtimePlatform.let(IResolvable::unwrap))
+        cdkBuilder.runtimePlatform(runtimePlatform.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2925,7 +2925,7 @@ public open class CfnJobDefinition(
        * AWS Batch jobs on Fargate.
        */
       override fun runtimePlatform(runtimePlatform: RuntimePlatformProperty) {
-        cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatformProperty::unwrap))
+        cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatformProperty.Companion::unwrap))
       }
 
       /**
@@ -2944,7 +2944,7 @@ public open class CfnJobDefinition(
        * the *AWS Batch User Guide* .
        */
       override fun secrets(secrets: IResolvable) {
-        cdkBuilder.secrets(secrets.let(IResolvable::unwrap))
+        cdkBuilder.secrets(secrets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2979,7 +2979,7 @@ public open class CfnJobDefinition(
        * be provided.
        */
       override fun ulimits(ulimits: IResolvable) {
-        cdkBuilder.ulimits(ulimits.let(IResolvable::unwrap))
+        cdkBuilder.ulimits(ulimits.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3051,7 +3051,7 @@ public open class CfnJobDefinition(
        * @param volumes A list of data volumes used in a job.
        */
       override fun volumes(volumes: IResolvable) {
-        cdkBuilder.volumes(volumes.let(IResolvable::unwrap))
+        cdkBuilder.volumes(volumes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3781,7 +3781,7 @@ public open class CfnJobDefinition(
        * This object is currently limited to one element.
        */
       override fun taskProperties(taskProperties: IResolvable) {
-        cdkBuilder.taskProperties(taskProperties.let(IResolvable::unwrap))
+        cdkBuilder.taskProperties(taskProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4263,7 +4263,7 @@ public open class CfnJobDefinition(
        * @param containers This object is a list of containers.
        */
       override fun containers(containers: IResolvable) {
-        cdkBuilder.containers(containers.let(IResolvable::unwrap))
+        cdkBuilder.containers(containers.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4284,7 +4284,7 @@ public open class CfnJobDefinition(
        * the default amount, for tasks hosted on AWS Fargate .
        */
       override fun ephemeralStorage(ephemeralStorage: IResolvable) {
-        cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable::unwrap))
+        cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4293,7 +4293,7 @@ public open class CfnJobDefinition(
        * the default amount, for tasks hosted on AWS Fargate .
        */
       override fun ephemeralStorage(ephemeralStorage: EphemeralStorageProperty) {
-        cdkBuilder.ephemeralStorage(ephemeralStorage.let(EphemeralStorageProperty::unwrap))
+        cdkBuilder.ephemeralStorage(ephemeralStorage.let(EphemeralStorageProperty.Companion::unwrap))
       }
 
       /**
@@ -4346,7 +4346,7 @@ public open class CfnJobDefinition(
        * Jobs that are running on Amazon EC2 resources must not specify this parameter.
        */
       override fun networkConfiguration(networkConfiguration: IResolvable) {
-        cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4355,7 +4355,7 @@ public open class CfnJobDefinition(
        * Jobs that are running on Amazon EC2 resources must not specify this parameter.
        */
       override fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
-        cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty::unwrap))
+        cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -4407,7 +4407,7 @@ public open class CfnJobDefinition(
        * AWS Batch jobs on Fargate.
        */
       override fun runtimePlatform(runtimePlatform: IResolvable) {
-        cdkBuilder.runtimePlatform(runtimePlatform.let(IResolvable::unwrap))
+        cdkBuilder.runtimePlatform(runtimePlatform.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4415,7 +4415,7 @@ public open class CfnJobDefinition(
        * AWS Batch jobs on Fargate.
        */
       override fun runtimePlatform(runtimePlatform: RuntimePlatformProperty) {
-        cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatformProperty::unwrap))
+        cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatformProperty.Companion::unwrap))
       }
 
       /**
@@ -4443,7 +4443,7 @@ public open class CfnJobDefinition(
        * @param volumes A list of volumes that are associated with the job.
        */
       override fun volumes(volumes: IResolvable) {
-        cdkBuilder.volumes(volumes.let(IResolvable::unwrap))
+        cdkBuilder.volumes(volumes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4774,7 +4774,7 @@ public open class CfnJobDefinition(
        * system.
        */
       override fun authorizationConfig(authorizationConfig: IResolvable) {
-        cdkBuilder.authorizationConfig(authorizationConfig.let(IResolvable::unwrap))
+        cdkBuilder.authorizationConfig(authorizationConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4782,7 +4782,7 @@ public open class CfnJobDefinition(
        * system.
        */
       override fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty) {
-        cdkBuilder.authorizationConfig(authorizationConfig.let(AuthorizationConfigProperty::unwrap))
+        cdkBuilder.authorizationConfig(authorizationConfig.let(AuthorizationConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -5533,7 +5533,7 @@ public open class CfnJobDefinition(
        * for variables that AWS Batch sets.
        */
       override fun env(env: IResolvable) {
-        cdkBuilder.env(env.let(IResolvable::unwrap))
+        cdkBuilder.env(env.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5590,7 +5590,7 @@ public open class CfnJobDefinition(
        * in the *Kubernetes documentation* .
        */
       override fun resources(resources: IResolvable) {
-        cdkBuilder.resources(resources.let(IResolvable::unwrap))
+        cdkBuilder.resources(resources.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5601,7 +5601,7 @@ public open class CfnJobDefinition(
        * in the *Kubernetes documentation* .
        */
       override fun resources(resources: ResourcesProperty) {
-        cdkBuilder.resources(resources.let(ResourcesProperty::unwrap))
+        cdkBuilder.resources(resources.let(ResourcesProperty.Companion::unwrap))
       }
 
       /**
@@ -5623,7 +5623,7 @@ public open class CfnJobDefinition(
        * in the *Kubernetes documentation* .
        */
       override fun securityContext(securityContext: IResolvable) {
-        cdkBuilder.securityContext(securityContext.let(IResolvable::unwrap))
+        cdkBuilder.securityContext(securityContext.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5633,7 +5633,7 @@ public open class CfnJobDefinition(
        * in the *Kubernetes documentation* .
        */
       override fun securityContext(securityContext: SecurityContextProperty) {
-        cdkBuilder.securityContext(securityContext.let(SecurityContextProperty::unwrap))
+        cdkBuilder.securityContext(securityContext.let(SecurityContextProperty.Companion::unwrap))
       }
 
       /**
@@ -5655,7 +5655,7 @@ public open class CfnJobDefinition(
        * the *Kubernetes documentation* .
        */
       override fun volumeMounts(volumeMounts: IResolvable) {
-        cdkBuilder.volumeMounts(volumeMounts.let(IResolvable::unwrap))
+        cdkBuilder.volumeMounts(volumeMounts.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5943,7 +5943,7 @@ public open class CfnJobDefinition(
        * Otherwise, the container can write to the volume. The default value is `false` .
        */
       override fun readOnly(readOnly: IResolvable) {
-        cdkBuilder.readOnly(readOnly.let(IResolvable::unwrap))
+        cdkBuilder.readOnly(readOnly.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -6144,14 +6144,14 @@ public open class CfnJobDefinition(
        * @param podProperties The properties for the Kubernetes pod resources of a job.
        */
       override fun podProperties(podProperties: IResolvable) {
-        cdkBuilder.podProperties(podProperties.let(IResolvable::unwrap))
+        cdkBuilder.podProperties(podProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param podProperties The properties for the Kubernetes pod resources of a job.
        */
       override fun podProperties(podProperties: PodPropertiesProperty) {
-        cdkBuilder.podProperties(podProperties.let(PodPropertiesProperty::unwrap))
+        cdkBuilder.podProperties(podProperties.let(PodPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -6277,7 +6277,7 @@ public open class CfnJobDefinition(
        * @param optional Specifies whether the secret or the secret's keys must be defined.
        */
       override fun optional(optional: IResolvable) {
-        cdkBuilder.optional(optional.let(IResolvable::unwrap))
+        cdkBuilder.optional(optional.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6512,7 +6512,7 @@ public open class CfnJobDefinition(
        * in the *Kubernetes documentation* .
        */
       override fun emptyDir(emptyDir: IResolvable) {
-        cdkBuilder.emptyDir(emptyDir.let(IResolvable::unwrap))
+        cdkBuilder.emptyDir(emptyDir.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6522,7 +6522,7 @@ public open class CfnJobDefinition(
        * in the *Kubernetes documentation* .
        */
       override fun emptyDir(emptyDir: EmptyDirProperty) {
-        cdkBuilder.emptyDir(emptyDir.let(EmptyDirProperty::unwrap))
+        cdkBuilder.emptyDir(emptyDir.let(EmptyDirProperty.Companion::unwrap))
       }
 
       /**
@@ -6543,7 +6543,7 @@ public open class CfnJobDefinition(
        * in the *Kubernetes documentation* .
        */
       override fun hostPath(hostPath: IResolvable) {
-        cdkBuilder.hostPath(hostPath.let(IResolvable::unwrap))
+        cdkBuilder.hostPath(hostPath.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6553,7 +6553,7 @@ public open class CfnJobDefinition(
        * in the *Kubernetes documentation* .
        */
       override fun hostPath(hostPath: HostPathProperty) {
-        cdkBuilder.hostPath(hostPath.let(HostPathProperty::unwrap))
+        cdkBuilder.hostPath(hostPath.let(HostPathProperty.Companion::unwrap))
       }
 
       /**
@@ -6584,7 +6584,7 @@ public open class CfnJobDefinition(
        * in the *Kubernetes documentation* .
        */
       override fun secret(secret: IResolvable) {
-        cdkBuilder.secret(secret.let(IResolvable::unwrap))
+        cdkBuilder.secret(secret.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6594,7 +6594,7 @@ public open class CfnJobDefinition(
        * in the *Kubernetes documentation* .
        */
       override fun secret(secret: EksSecretProperty) {
-        cdkBuilder.secret(secret.let(EksSecretProperty::unwrap))
+        cdkBuilder.secret(secret.let(EksSecretProperty.Companion::unwrap))
       }
 
       /**
@@ -7828,7 +7828,7 @@ public open class CfnJobDefinition(
        * provide it for these jobs.
        */
       override fun devices(devices: IResolvable) {
-        cdkBuilder.devices(devices.let(IResolvable::unwrap))
+        cdkBuilder.devices(devices.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7888,7 +7888,7 @@ public open class CfnJobDefinition(
        * version"`
        */
       override fun initProcessEnabled(initProcessEnabled: IResolvable) {
-        cdkBuilder.initProcessEnabled(initProcessEnabled.let(IResolvable::unwrap))
+        cdkBuilder.initProcessEnabled(initProcessEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7974,7 +7974,7 @@ public open class CfnJobDefinition(
        * provide this parameter for this resource type.
        */
       override fun tmpfs(tmpfs: IResolvable) {
-        cdkBuilder.tmpfs(tmpfs.let(IResolvable::unwrap))
+        cdkBuilder.tmpfs(tmpfs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8449,7 +8449,7 @@ public open class CfnJobDefinition(
        * the *AWS Batch User Guide* .
        */
       override fun secretOptions(secretOptions: IResolvable) {
-        cdkBuilder.secretOptions(secretOptions.let(IResolvable::unwrap))
+        cdkBuilder.secretOptions(secretOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8782,7 +8782,7 @@ public open class CfnJobDefinition(
        * Otherwise, the container can write to the volume. The default value is `false` .
        */
       override fun readOnly(readOnly: IResolvable) {
-        cdkBuilder.readOnly(readOnly.let(IResolvable::unwrap))
+        cdkBuilder.readOnly(readOnly.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9254,7 +9254,7 @@ public open class CfnJobDefinition(
        * with a multi-node parallel job. 
        */
       override fun nodeRangeProperties(nodeRangeProperties: IResolvable) {
-        cdkBuilder.nodeRangeProperties(nodeRangeProperties.let(IResolvable::unwrap))
+        cdkBuilder.nodeRangeProperties(nodeRangeProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9671,14 +9671,14 @@ public open class CfnJobDefinition(
        * @param container The container details for the node range.
        */
       override fun container(container: IResolvable) {
-        cdkBuilder.container(container.let(IResolvable::unwrap))
+        cdkBuilder.container(container.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param container The container details for the node range.
        */
       override fun container(container: ContainerPropertiesProperty) {
-        cdkBuilder.container(container.let(ContainerPropertiesProperty::unwrap))
+        cdkBuilder.container(container.let(ContainerPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -9694,7 +9694,7 @@ public open class CfnJobDefinition(
        * a multi-node parallel job.
        */
       override fun ecsProperties(ecsProperties: IResolvable) {
-        cdkBuilder.ecsProperties(ecsProperties.let(IResolvable::unwrap))
+        cdkBuilder.ecsProperties(ecsProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9702,7 +9702,7 @@ public open class CfnJobDefinition(
        * a multi-node parallel job.
        */
       override fun ecsProperties(ecsProperties: EcsPropertiesProperty) {
-        cdkBuilder.ecsProperties(ecsProperties.let(EcsPropertiesProperty::unwrap))
+        cdkBuilder.ecsProperties(ecsProperties.let(EcsPropertiesProperty.Companion::unwrap))
       }
 
       /**
@@ -10221,7 +10221,7 @@ public open class CfnJobDefinition(
        * @param containers The properties of the container that's used on the Amazon EKS pod.
        */
       override fun containers(containers: IResolvable) {
-        cdkBuilder.containers(containers.let(IResolvable::unwrap))
+        cdkBuilder.containers(containers.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10276,14 +10276,14 @@ public open class CfnJobDefinition(
        * in the *Kubernetes documentation* .
        */
       override fun hostNetwork(hostNetwork: IResolvable) {
-        cdkBuilder.hostNetwork(hostNetwork.let(IResolvable::unwrap))
+        cdkBuilder.hostNetwork(hostNetwork.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param imagePullSecrets the value to be set.
        */
       override fun imagePullSecrets(imagePullSecrets: IResolvable) {
-        cdkBuilder.imagePullSecrets(imagePullSecrets.let(IResolvable::unwrap))
+        cdkBuilder.imagePullSecrets(imagePullSecrets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10311,7 +10311,7 @@ public open class CfnJobDefinition(
        * This object is limited to 10 elements
        */
       override fun initContainers(initContainers: IResolvable) {
-        cdkBuilder.initContainers(initContainers.let(IResolvable::unwrap))
+        cdkBuilder.initContainers(initContainers.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10350,7 +10350,7 @@ public open class CfnJobDefinition(
        * in the *Kubernetes documentation* .
        */
       override fun metadata(metadata: IResolvable) {
-        cdkBuilder.metadata(metadata.let(IResolvable::unwrap))
+        cdkBuilder.metadata(metadata.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10360,7 +10360,7 @@ public open class CfnJobDefinition(
        * in the *Kubernetes documentation* .
        */
       override fun metadata(metadata: MetadataProperty) {
-        cdkBuilder.metadata(metadata.let(MetadataProperty::unwrap))
+        cdkBuilder.metadata(metadata.let(MetadataProperty.Companion::unwrap))
       }
 
       /**
@@ -10407,14 +10407,14 @@ public open class CfnJobDefinition(
        * .
        */
       override fun shareProcessNamespace(shareProcessNamespace: IResolvable) {
-        cdkBuilder.shareProcessNamespace(shareProcessNamespace.let(IResolvable::unwrap))
+        cdkBuilder.shareProcessNamespace(shareProcessNamespace.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param volumes Specifies the volumes for a job definition that uses Amazon EKS resources.
        */
       override fun volumes(volumes: IResolvable) {
-        cdkBuilder.volumes(volumes.let(IResolvable::unwrap))
+        cdkBuilder.volumes(volumes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11310,7 +11310,7 @@ public open class CfnJobDefinition(
        * none of the listed conditions match, then the job is retried.
        */
       override fun evaluateOnExit(evaluateOnExit: IResolvable) {
-        cdkBuilder.evaluateOnExit(evaluateOnExit.let(IResolvable::unwrap))
+        cdkBuilder.evaluateOnExit(evaluateOnExit.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11854,7 +11854,7 @@ public open class CfnJobDefinition(
        * @param allowPrivilegeEscalation the value to be set.
        */
       override fun allowPrivilegeEscalation(allowPrivilegeEscalation: IResolvable) {
-        cdkBuilder.allowPrivilegeEscalation(allowPrivilegeEscalation.let(IResolvable::unwrap))
+        cdkBuilder.allowPrivilegeEscalation(allowPrivilegeEscalation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11868,7 +11868,7 @@ public open class CfnJobDefinition(
        * @param privileged the value to be set.
        */
       override fun privileged(privileged: IResolvable) {
-        cdkBuilder.privileged(privileged.let(IResolvable::unwrap))
+        cdkBuilder.privileged(privileged.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11882,7 +11882,7 @@ public open class CfnJobDefinition(
        * @param readOnlyRootFilesystem the value to be set.
        */
       override fun readOnlyRootFilesystem(readOnlyRootFilesystem: IResolvable) {
-        cdkBuilder.readOnlyRootFilesystem(readOnlyRootFilesystem.let(IResolvable::unwrap))
+        cdkBuilder.readOnlyRootFilesystem(readOnlyRootFilesystem.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11903,7 +11903,7 @@ public open class CfnJobDefinition(
        * @param runAsNonRoot the value to be set.
        */
       override fun runAsNonRoot(runAsNonRoot: IResolvable) {
-        cdkBuilder.runAsNonRoot(runAsNonRoot.let(IResolvable::unwrap))
+        cdkBuilder.runAsNonRoot(runAsNonRoot.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13110,7 +13110,7 @@ public open class CfnJobDefinition(
        * @param dependsOn A list of containers that this container depends on.
        */
       override fun dependsOn(dependsOn: IResolvable) {
-        cdkBuilder.dependsOn(dependsOn.let(IResolvable::unwrap))
+        cdkBuilder.dependsOn(dependsOn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13140,7 +13140,7 @@ public open class CfnJobDefinition(
        * convention is reserved for variables that AWS Batch sets.
        */
       override fun environment(environment: IResolvable) {
-        cdkBuilder.environment(environment.let(IResolvable::unwrap))
+        cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13212,7 +13212,7 @@ public open class CfnJobDefinition(
        * in the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun essential(essential: IResolvable) {
-        cdkBuilder.essential(essential.let(IResolvable::unwrap))
+        cdkBuilder.essential(essential.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13241,7 +13241,7 @@ public open class CfnJobDefinition(
        * .
        */
       override fun linuxParameters(linuxParameters: IResolvable) {
-        cdkBuilder.linuxParameters(linuxParameters.let(IResolvable::unwrap))
+        cdkBuilder.linuxParameters(linuxParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13252,7 +13252,7 @@ public open class CfnJobDefinition(
        * .
        */
       override fun linuxParameters(linuxParameters: LinuxParametersProperty) {
-        cdkBuilder.linuxParameters(linuxParameters.let(LinuxParametersProperty::unwrap))
+        cdkBuilder.linuxParameters(linuxParameters.let(LinuxParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -13306,7 +13306,7 @@ public open class CfnJobDefinition(
        * in the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun logConfiguration(logConfiguration: IResolvable) {
-        cdkBuilder.logConfiguration(logConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.logConfiguration(logConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13348,7 +13348,7 @@ public open class CfnJobDefinition(
        * in the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun logConfiguration(logConfiguration: LogConfigurationProperty) {
-        cdkBuilder.logConfiguration(logConfiguration.let(LogConfigurationProperty::unwrap))
+        cdkBuilder.logConfiguration(logConfiguration.let(LogConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -13409,7 +13409,7 @@ public open class CfnJobDefinition(
        * across drives.
        */
       override fun mountPoints(mountPoints: IResolvable) {
-        cdkBuilder.mountPoints(mountPoints.let(IResolvable::unwrap))
+        cdkBuilder.mountPoints(mountPoints.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13488,7 +13488,7 @@ public open class CfnJobDefinition(
        * This parameter is not supported for Windows containers or tasks run on Fargate.
        */
       override fun privileged(privileged: IResolvable) {
-        cdkBuilder.privileged(privileged.let(IResolvable::unwrap))
+        cdkBuilder.privileged(privileged.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13524,21 +13524,21 @@ public open class CfnJobDefinition(
        * This parameter is not supported for Windows containers.
        */
       override fun readonlyRootFilesystem(readonlyRootFilesystem: IResolvable) {
-        cdkBuilder.readonlyRootFilesystem(readonlyRootFilesystem.let(IResolvable::unwrap))
+        cdkBuilder.readonlyRootFilesystem(readonlyRootFilesystem.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param repositoryCredentials The private repository authentication credentials to use.
        */
       override fun repositoryCredentials(repositoryCredentials: IResolvable) {
-        cdkBuilder.repositoryCredentials(repositoryCredentials.let(IResolvable::unwrap))
+        cdkBuilder.repositoryCredentials(repositoryCredentials.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param repositoryCredentials The private repository authentication credentials to use.
        */
       override fun repositoryCredentials(repositoryCredentials: RepositoryCredentialsProperty) {
-        cdkBuilder.repositoryCredentials(repositoryCredentials.let(RepositoryCredentialsProperty::unwrap))
+        cdkBuilder.repositoryCredentials(repositoryCredentials.let(RepositoryCredentialsProperty.Companion::unwrap))
       }
 
       /**
@@ -13555,7 +13555,7 @@ public open class CfnJobDefinition(
        * The only supported resource is a GPU.
        */
       override fun resourceRequirements(resourceRequirements: IResolvable) {
-        cdkBuilder.resourceRequirements(resourceRequirements.let(IResolvable::unwrap))
+        cdkBuilder.resourceRequirements(resourceRequirements.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13580,7 +13580,7 @@ public open class CfnJobDefinition(
        * in the Amazon Elastic Container Service Developer Guide.
        */
       override fun secrets(secrets: IResolvable) {
-        cdkBuilder.secrets(secrets.let(IResolvable::unwrap))
+        cdkBuilder.secrets(secrets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13627,7 +13627,7 @@ public open class CfnJobDefinition(
        * This parameter is not supported for Windows containers.
        */
       override fun ulimits(ulimits: IResolvable) {
-        cdkBuilder.ulimits(ulimits.let(IResolvable::unwrap))
+        cdkBuilder.ulimits(ulimits.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14786,7 +14786,7 @@ public open class CfnJobDefinition(
        * Batch User Guide* .
        */
       override fun efsVolumeConfiguration(efsVolumeConfiguration: IResolvable) {
-        cdkBuilder.efsVolumeConfiguration(efsVolumeConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.efsVolumeConfiguration(efsVolumeConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14797,7 +14797,7 @@ public open class CfnJobDefinition(
        * Batch User Guide* .
        */
       override fun efsVolumeConfiguration(efsVolumeConfiguration: EfsVolumeConfigurationProperty) {
-        cdkBuilder.efsVolumeConfiguration(efsVolumeConfiguration.let(EfsVolumeConfigurationProperty::unwrap))
+        cdkBuilder.efsVolumeConfiguration(efsVolumeConfiguration.let(EfsVolumeConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -14825,7 +14825,7 @@ public open class CfnJobDefinition(
        * be provided.
        */
       override fun host(host: IResolvable) {
-        cdkBuilder.host(host.let(IResolvable::unwrap))
+        cdkBuilder.host(host.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14840,7 +14840,7 @@ public open class CfnJobDefinition(
        * be provided.
        */
       override fun host(host: VolumesHostProperty) {
-        cdkBuilder.host(host.let(VolumesHostProperty::unwrap))
+        cdkBuilder.host(host.let(VolumesHostProperty.Companion::unwrap))
       }
 
       /**

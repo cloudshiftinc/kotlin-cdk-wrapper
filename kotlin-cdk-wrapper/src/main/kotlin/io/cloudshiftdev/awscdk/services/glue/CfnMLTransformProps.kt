@@ -441,14 +441,14 @@ public interface CfnMLTransformProps {
      * @param inputRecordTables A list of AWS Glue table definitions used by the transform. 
      */
     override fun inputRecordTables(inputRecordTables: IResolvable) {
-      cdkBuilder.inputRecordTables(inputRecordTables.let(IResolvable::unwrap))
+      cdkBuilder.inputRecordTables(inputRecordTables.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param inputRecordTables A list of AWS Glue table definitions used by the transform. 
      */
     override fun inputRecordTables(inputRecordTables: CfnMLTransform.InputRecordTablesProperty) {
-      cdkBuilder.inputRecordTables(inputRecordTables.let(CfnMLTransform.InputRecordTablesProperty::unwrap))
+      cdkBuilder.inputRecordTables(inputRecordTables.let(CfnMLTransform.InputRecordTablesProperty.Companion::unwrap))
     }
 
     /**
@@ -553,7 +553,7 @@ public interface CfnMLTransformProps {
      * KMS key.
      */
     override fun transformEncryption(transformEncryption: IResolvable) {
-      cdkBuilder.transformEncryption(transformEncryption.let(IResolvable::unwrap))
+      cdkBuilder.transformEncryption(transformEncryption.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -568,7 +568,7 @@ public interface CfnMLTransformProps {
      */
     override
         fun transformEncryption(transformEncryption: CfnMLTransform.TransformEncryptionProperty) {
-      cdkBuilder.transformEncryption(transformEncryption.let(CfnMLTransform.TransformEncryptionProperty::unwrap))
+      cdkBuilder.transformEncryption(transformEncryption.let(CfnMLTransform.TransformEncryptionProperty.Companion::unwrap))
     }
 
     /**
@@ -592,7 +592,7 @@ public interface CfnMLTransformProps {
      * machine learning transform. 
      */
     override fun transformParameters(transformParameters: IResolvable) {
-      cdkBuilder.transformParameters(transformParameters.let(IResolvable::unwrap))
+      cdkBuilder.transformParameters(transformParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -601,7 +601,7 @@ public interface CfnMLTransformProps {
      */
     override
         fun transformParameters(transformParameters: CfnMLTransform.TransformParametersProperty) {
-      cdkBuilder.transformParameters(transformParameters.let(CfnMLTransform.TransformParametersProperty::unwrap))
+      cdkBuilder.transformParameters(transformParameters.let(CfnMLTransform.TransformParametersProperty.Companion::unwrap))
     }
 
     /**

@@ -168,7 +168,7 @@ public interface CfnTrustAnchorProps {
      * @param enabled Indicates whether the trust anchor is enabled.
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -183,7 +183,7 @@ public interface CfnTrustAnchorProps {
      * anchor.
      */
     override fun notificationSettings(notificationSettings: IResolvable) {
-      cdkBuilder.notificationSettings(notificationSettings.let(IResolvable::unwrap))
+      cdkBuilder.notificationSettings(notificationSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -205,14 +205,14 @@ public interface CfnTrustAnchorProps {
      * @param source The trust anchor type and its related certificate data. 
      */
     override fun source(source: IResolvable) {
-      cdkBuilder.source(source.let(IResolvable::unwrap))
+      cdkBuilder.source(source.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param source The trust anchor type and its related certificate data. 
      */
     override fun source(source: CfnTrustAnchor.SourceProperty) {
-      cdkBuilder.source(source.let(CfnTrustAnchor.SourceProperty::unwrap))
+      cdkBuilder.source(source.let(CfnTrustAnchor.SourceProperty.Companion::unwrap))
     }
 
     /**
@@ -227,7 +227,7 @@ public interface CfnTrustAnchorProps {
      * @param tags The tags to attach to the trust anchor.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -122,7 +122,7 @@ public interface CommonGrantOptions {
      * @param grantee The principal to grant to. 
      */
     override fun grantee(grantee: IGrantable) {
-      cdkBuilder.grantee(grantee.let(IGrantable::unwrap))
+      cdkBuilder.grantee(grantee.let(IGrantable.Companion::unwrap))
     }
 
     /**

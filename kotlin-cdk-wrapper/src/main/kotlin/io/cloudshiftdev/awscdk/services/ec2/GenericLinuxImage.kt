@@ -44,7 +44,7 @@ public open class GenericLinuxImage(
 
   public constructor(amiMap: Map<String, String>, props: GenericLinuxImageProps) :
       this(software.amazon.awscdk.services.ec2.GenericLinuxImage(amiMap,
-      props.let(GenericLinuxImageProps::unwrap))
+      props.let(GenericLinuxImageProps.Companion::unwrap))
   )
 
   public constructor(amiMap: Map<String, String>, props: GenericLinuxImageProps.Builder.() -> Unit)
@@ -57,7 +57,7 @@ public open class GenericLinuxImage(
    * @param scope 
    */
   public override fun image(scope: Construct): MachineImageConfig =
-      unwrap(this).getImage(scope.let(Construct::unwrap)).let(MachineImageConfig::wrap)
+      unwrap(this).getImage(scope.let(Construct.Companion::unwrap)).let(MachineImageConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ec2.GenericLinuxImage].
@@ -88,7 +88,7 @@ public open class GenericLinuxImage(
      * @param userData Initial user data. 
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.GenericLinuxImage = cdkBuilder.build()

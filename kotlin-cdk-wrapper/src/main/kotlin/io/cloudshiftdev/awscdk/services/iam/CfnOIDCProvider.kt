@@ -77,8 +77,8 @@ public open class CfnOIDCProvider(
     id: String,
     props: CfnOIDCProviderProps,
   ) :
-      this(software.amazon.awscdk.services.iam.CfnOIDCProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnOIDCProviderProps::unwrap))
+      this(software.amazon.awscdk.services.iam.CfnOIDCProvider(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnOIDCProviderProps.Companion::unwrap))
   )
 
   public constructor(
@@ -119,7 +119,7 @@ public open class CfnOIDCProvider(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -137,7 +137,7 @@ public open class CfnOIDCProvider(
    * A list of tags that are attached to the specified IAM OIDC provider.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -324,7 +324,7 @@ public open class CfnOIDCProvider(
      * @param tags A list of tags that are attached to the specified IAM OIDC provider. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

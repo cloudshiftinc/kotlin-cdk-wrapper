@@ -105,7 +105,7 @@ public interface TcpRouteSpecOptions : RouteSpecOptionsBase {
      * @param timeout An object that represents a tcp timeout.
      */
     override fun timeout(timeout: TcpTimeout) {
-      cdkBuilder.timeout(timeout.let(TcpTimeout::unwrap))
+      cdkBuilder.timeout(timeout.let(TcpTimeout.Companion::unwrap))
     }
 
     /**
@@ -121,7 +121,7 @@ public interface TcpRouteSpecOptions : RouteSpecOptionsBase {
      * route. 
      */
     override fun weightedTargets(weightedTargets: List<WeightedTarget>) {
-      cdkBuilder.weightedTargets(weightedTargets.map(WeightedTarget::unwrap))
+      cdkBuilder.weightedTargets(weightedTargets.map(WeightedTarget.Companion::unwrap))
     }
 
     /**

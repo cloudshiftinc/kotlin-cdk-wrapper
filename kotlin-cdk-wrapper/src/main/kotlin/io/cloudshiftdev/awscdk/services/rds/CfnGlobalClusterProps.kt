@@ -202,7 +202,7 @@ public interface CfnGlobalClusterProps {
      * The global database can't be deleted when deletion protection is enabled.
      */
     override fun deletionProtection(deletionProtection: IResolvable) {
-      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable::unwrap))
+      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -273,7 +273,7 @@ public interface CfnGlobalClusterProps {
      * uses the setting from the source DB cluster.
      */
     override fun storageEncrypted(storageEncrypted: IResolvable) {
-      cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable::unwrap))
+      cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.CfnGlobalClusterProps =

@@ -66,7 +66,7 @@ public interface CfnRuleAssertion {
      * @param assertValue The assertion. 
      */
     override fun assertValue(assertValue: ICfnConditionExpression) {
-      cdkBuilder.assertValue(assertValue.let(ICfnConditionExpression::unwrap))
+      cdkBuilder.assertValue(assertValue.let(ICfnConditionExpression.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.CfnRuleAssertion = cdkBuilder.build()

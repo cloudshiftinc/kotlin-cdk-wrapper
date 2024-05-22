@@ -396,14 +396,14 @@ public interface CfnVirtualNodeProps {
      * @param spec The virtual node specification to apply. 
      */
     override fun spec(spec: IResolvable) {
-      cdkBuilder.spec(spec.let(IResolvable::unwrap))
+      cdkBuilder.spec(spec.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param spec The virtual node specification to apply. 
      */
     override fun spec(spec: CfnVirtualNode.VirtualNodeSpecProperty) {
-      cdkBuilder.spec(spec.let(CfnVirtualNode.VirtualNodeSpecProperty::unwrap))
+      cdkBuilder.spec(spec.let(CfnVirtualNode.VirtualNodeSpecProperty.Companion::unwrap))
     }
 
     /**
@@ -422,7 +422,7 @@ public interface CfnVirtualNodeProps {
      * characters.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

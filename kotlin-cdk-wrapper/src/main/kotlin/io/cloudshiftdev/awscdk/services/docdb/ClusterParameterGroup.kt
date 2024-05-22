@@ -38,8 +38,8 @@ public open class ClusterParameterGroup(
     id: String,
     props: ClusterParameterGroupProps,
   ) :
-      this(software.amazon.awscdk.services.docdb.ClusterParameterGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ClusterParameterGroupProps::unwrap))
+      this(software.amazon.awscdk.services.docdb.ClusterParameterGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ClusterParameterGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -149,7 +149,7 @@ public open class ClusterParameterGroup(
       id: String,
       parameterGroupName: String,
     ): IClusterParameterGroup =
-        software.amazon.awscdk.services.docdb.ClusterParameterGroup.fromParameterGroupName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.docdb.ClusterParameterGroup.fromParameterGroupName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, parameterGroupName).let(IClusterParameterGroup::wrap)
 
     public operator fun invoke(

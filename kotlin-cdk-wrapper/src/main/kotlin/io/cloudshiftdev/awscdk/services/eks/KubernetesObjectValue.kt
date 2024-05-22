@@ -44,8 +44,8 @@ public open class KubernetesObjectValue(
     id: String,
     props: KubernetesObjectValueProps,
   ) :
-      this(software.amazon.awscdk.services.eks.KubernetesObjectValue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(KubernetesObjectValueProps::unwrap))
+      this(software.amazon.awscdk.services.eks.KubernetesObjectValue(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(KubernetesObjectValueProps.Companion::unwrap))
   )
 
   public constructor(
@@ -132,7 +132,7 @@ public open class KubernetesObjectValue(
      * @param cluster The EKS cluster to fetch attributes from. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -184,7 +184,7 @@ public open class KubernetesObjectValue(
      * @param timeout Timeout for waiting on a value. 
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.eks.KubernetesObjectValue =

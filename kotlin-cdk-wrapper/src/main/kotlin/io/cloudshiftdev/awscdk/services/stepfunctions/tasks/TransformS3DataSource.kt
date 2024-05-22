@@ -77,7 +77,7 @@ public interface TransformS3DataSource {
      * @param s3DataType S3 Data Type.
      */
     override fun s3DataType(s3DataType: S3DataType) {
-      cdkBuilder.s3DataType(s3DataType.let(S3DataType::unwrap))
+      cdkBuilder.s3DataType(s3DataType.let(S3DataType.Companion::unwrap))
     }
 
     /**

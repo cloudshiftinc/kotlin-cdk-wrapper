@@ -66,7 +66,7 @@ public interface WeightedTargetGroup {
      * @param targetGroup The target group. 
      */
     override fun targetGroup(targetGroup: IApplicationTargetGroup) {
-      cdkBuilder.targetGroup(targetGroup.let(IApplicationTargetGroup::unwrap))
+      cdkBuilder.targetGroup(targetGroup.let(IApplicationTargetGroup.Companion::unwrap))
     }
 
     /**

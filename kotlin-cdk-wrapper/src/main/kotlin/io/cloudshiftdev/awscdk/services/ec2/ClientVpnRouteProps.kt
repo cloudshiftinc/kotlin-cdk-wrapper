@@ -92,7 +92,7 @@ public interface ClientVpnRouteProps : ClientVpnRouteOptions {
      * @param clientVpnEndpoint The client VPN endpoint to which to add the route.
      */
     override fun clientVpnEndpoint(clientVpnEndpoint: IClientVpnEndpoint) {
-      cdkBuilder.clientVpnEndpoint(clientVpnEndpoint.let(IClientVpnEndpoint::unwrap))
+      cdkBuilder.clientVpnEndpoint(clientVpnEndpoint.let(IClientVpnEndpoint.Companion::unwrap))
     }
 
     /**
@@ -106,7 +106,7 @@ public interface ClientVpnRouteProps : ClientVpnRouteOptions {
      * @param target The target for the route. 
      */
     override fun target(target: ClientVpnRouteTarget) {
-      cdkBuilder.target(target.let(ClientVpnRouteTarget::unwrap))
+      cdkBuilder.target(target.let(ClientVpnRouteTarget.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.ClientVpnRouteProps = cdkBuilder.build()

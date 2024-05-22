@@ -65,8 +65,8 @@ public open class CfnLoggerDefinitionVersion(
     id: String,
     props: CfnLoggerDefinitionVersionProps,
   ) :
-      this(software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLoggerDefinitionVersionProps::unwrap))
+      this(software.amazon.awscdk.services.greengrass.CfnLoggerDefinitionVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLoggerDefinitionVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -87,7 +87,7 @@ public open class CfnLoggerDefinitionVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -111,7 +111,7 @@ public open class CfnLoggerDefinitionVersion(
    * The loggers in this version.
    */
   public open fun loggers(`value`: IResolvable) {
-    unwrap(this).setLoggers(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoggers(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -194,7 +194,7 @@ public open class CfnLoggerDefinitionVersion(
      * @param loggers The loggers in this version. 
      */
     override fun loggers(loggers: IResolvable) {
-      cdkBuilder.loggers(loggers.let(IResolvable::unwrap))
+      cdkBuilder.loggers(loggers.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -58,10 +58,10 @@ public abstract class Definition(
         software.amazon.awscdk.services.appsync.Definition.fromFile(filePath).let(Definition::wrap)
 
     public fun fromSchema(schema: ISchema): Definition =
-        software.amazon.awscdk.services.appsync.Definition.fromSchema(schema.let(ISchema::unwrap)).let(Definition::wrap)
+        software.amazon.awscdk.services.appsync.Definition.fromSchema(schema.let(ISchema.Companion::unwrap)).let(Definition::wrap)
 
     public fun fromSourceApis(sourceApiOptions: SourceApiOptions): Definition =
-        software.amazon.awscdk.services.appsync.Definition.fromSourceApis(sourceApiOptions.let(SourceApiOptions::unwrap)).let(Definition::wrap)
+        software.amazon.awscdk.services.appsync.Definition.fromSourceApis(sourceApiOptions.let(SourceApiOptions.Companion::unwrap)).let(Definition::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("aae93d17b87ff21ca3a374a60527cb8f6be9ab31106f23892d60fec15b2534c1")

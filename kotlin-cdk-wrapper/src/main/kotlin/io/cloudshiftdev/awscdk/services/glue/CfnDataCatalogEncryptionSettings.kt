@@ -56,8 +56,8 @@ public open class CfnDataCatalogEncryptionSettings(
     id: String,
     props: CfnDataCatalogEncryptionSettingsProps,
   ) :
-      this(software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDataCatalogEncryptionSettingsProps::unwrap))
+      this(software.amazon.awscdk.services.glue.CfnDataCatalogEncryptionSettings(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDataCatalogEncryptionSettingsProps.Companion::unwrap))
   )
 
   public constructor(
@@ -94,14 +94,14 @@ public open class CfnDataCatalogEncryptionSettings(
    * Contains configuration information for maintaining Data Catalog security.
    */
   public open fun dataCatalogEncryptionSettings(`value`: IResolvable) {
-    unwrap(this).setDataCatalogEncryptionSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataCatalogEncryptionSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Contains configuration information for maintaining Data Catalog security.
    */
   public open fun dataCatalogEncryptionSettings(`value`: DataCatalogEncryptionSettingsProperty) {
-    unwrap(this).setDataCatalogEncryptionSettings(`value`.let(DataCatalogEncryptionSettingsProperty::unwrap))
+    unwrap(this).setDataCatalogEncryptionSettings(`value`.let(DataCatalogEncryptionSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -119,7 +119,7 @@ public open class CfnDataCatalogEncryptionSettings(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -194,7 +194,7 @@ public open class CfnDataCatalogEncryptionSettings(
      * Catalog security. 
      */
     override fun dataCatalogEncryptionSettings(dataCatalogEncryptionSettings: IResolvable) {
-      cdkBuilder.dataCatalogEncryptionSettings(dataCatalogEncryptionSettings.let(IResolvable::unwrap))
+      cdkBuilder.dataCatalogEncryptionSettings(dataCatalogEncryptionSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -206,7 +206,7 @@ public open class CfnDataCatalogEncryptionSettings(
      */
     override
         fun dataCatalogEncryptionSettings(dataCatalogEncryptionSettings: DataCatalogEncryptionSettingsProperty) {
-      cdkBuilder.dataCatalogEncryptionSettings(dataCatalogEncryptionSettings.let(DataCatalogEncryptionSettingsProperty::unwrap))
+      cdkBuilder.dataCatalogEncryptionSettings(dataCatalogEncryptionSettings.let(DataCatalogEncryptionSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -369,7 +369,7 @@ public open class CfnDataCatalogEncryptionSettings(
        */
       override
           fun returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted: IResolvable) {
-        cdkBuilder.returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted.let(IResolvable::unwrap))
+        cdkBuilder.returnConnectionPasswordEncrypted(returnConnectionPasswordEncrypted.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -538,7 +538,7 @@ public open class CfnDataCatalogEncryptionSettings(
        * You can enable catalog encryption or only password encryption.
        */
       override fun connectionPasswordEncryption(connectionPasswordEncryption: IResolvable) {
-        cdkBuilder.connectionPasswordEncryption(connectionPasswordEncryption.let(IResolvable::unwrap))
+        cdkBuilder.connectionPasswordEncryption(connectionPasswordEncryption.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -550,7 +550,7 @@ public open class CfnDataCatalogEncryptionSettings(
        */
       override
           fun connectionPasswordEncryption(connectionPasswordEncryption: ConnectionPasswordEncryptionProperty) {
-        cdkBuilder.connectionPasswordEncryption(connectionPasswordEncryption.let(ConnectionPasswordEncryptionProperty::unwrap))
+        cdkBuilder.connectionPasswordEncryption(connectionPasswordEncryption.let(ConnectionPasswordEncryptionProperty.Companion::unwrap))
       }
 
       /**
@@ -572,7 +572,7 @@ public open class CfnDataCatalogEncryptionSettings(
        * Catalog.
        */
       override fun encryptionAtRest(encryptionAtRest: IResolvable) {
-        cdkBuilder.encryptionAtRest(encryptionAtRest.let(IResolvable::unwrap))
+        cdkBuilder.encryptionAtRest(encryptionAtRest.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -580,7 +580,7 @@ public open class CfnDataCatalogEncryptionSettings(
        * Catalog.
        */
       override fun encryptionAtRest(encryptionAtRest: EncryptionAtRestProperty) {
-        cdkBuilder.encryptionAtRest(encryptionAtRest.let(EncryptionAtRestProperty::unwrap))
+        cdkBuilder.encryptionAtRest(encryptionAtRest.let(EncryptionAtRestProperty.Companion::unwrap))
       }
 
       /**

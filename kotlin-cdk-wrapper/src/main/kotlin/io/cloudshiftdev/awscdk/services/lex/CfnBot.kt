@@ -43,8 +43,8 @@ public open class CfnBot(
     id: String,
     props: CfnBotProps,
   ) :
-      this(software.amazon.awscdk.services.lex.CfnBot(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnBotProps::unwrap))
+      this(software.amazon.awscdk.services.lex.CfnBot(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnBotProps.Companion::unwrap))
   )
 
   public constructor(
@@ -83,7 +83,7 @@ public open class CfnBot(
    * change.
    */
   public open fun autoBuildBotLocales(`value`: IResolvable) {
-    unwrap(this).setAutoBuildBotLocales(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoBuildBotLocales(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -95,14 +95,14 @@ public open class CfnBot(
    * The Amazon S3 location of files used to import a bot.
    */
   public open fun botFileS3Location(`value`: IResolvable) {
-    unwrap(this).setBotFileS3Location(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBotFileS3Location(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The Amazon S3 location of files used to import a bot.
    */
   public open fun botFileS3Location(`value`: S3LocationProperty) {
-    unwrap(this).setBotFileS3Location(`value`.let(S3LocationProperty::unwrap))
+    unwrap(this).setBotFileS3Location(`value`.let(S3LocationProperty.Companion::unwrap))
   }
 
   /**
@@ -122,7 +122,7 @@ public open class CfnBot(
    * A list of locales for the bot.
    */
   public open fun botLocales(`value`: IResolvable) {
-    unwrap(this).setBotLocales(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBotLocales(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -146,7 +146,7 @@ public open class CfnBot(
    * A list of tags to add to the bot.
    */
   public open fun botTags(`value`: IResolvable) {
-    unwrap(this).setBotTags(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBotTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -205,7 +205,7 @@ public open class CfnBot(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -241,14 +241,14 @@ public open class CfnBot(
    * Specifies configuration settings for the alias used to test the bot.
    */
   public open fun testBotAliasSettings(`value`: IResolvable) {
-    unwrap(this).setTestBotAliasSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTestBotAliasSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies configuration settings for the alias used to test the bot.
    */
   public open fun testBotAliasSettings(`value`: TestBotAliasSettingsProperty) {
-    unwrap(this).setTestBotAliasSettings(`value`.let(TestBotAliasSettingsProperty::unwrap))
+    unwrap(this).setTestBotAliasSettings(`value`.let(TestBotAliasSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -268,7 +268,7 @@ public open class CfnBot(
    * A list of tags to add to the test alias for a bot.
    */
   public open fun testBotAliasTags(`value`: IResolvable) {
-    unwrap(this).setTestBotAliasTags(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTestBotAliasTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -555,7 +555,7 @@ public open class CfnBot(
      * locales for the bot after a change. 
      */
     override fun autoBuildBotLocales(autoBuildBotLocales: IResolvable) {
-      cdkBuilder.autoBuildBotLocales(autoBuildBotLocales.let(IResolvable::unwrap))
+      cdkBuilder.autoBuildBotLocales(autoBuildBotLocales.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -569,7 +569,7 @@ public open class CfnBot(
      * @param botFileS3Location The Amazon S3 location of files used to import a bot. 
      */
     override fun botFileS3Location(botFileS3Location: IResolvable) {
-      cdkBuilder.botFileS3Location(botFileS3Location.let(IResolvable::unwrap))
+      cdkBuilder.botFileS3Location(botFileS3Location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -583,7 +583,7 @@ public open class CfnBot(
      * @param botFileS3Location The Amazon S3 location of files used to import a bot. 
      */
     override fun botFileS3Location(botFileS3Location: S3LocationProperty) {
-      cdkBuilder.botFileS3Location(botFileS3Location.let(S3LocationProperty::unwrap))
+      cdkBuilder.botFileS3Location(botFileS3Location.let(S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -608,7 +608,7 @@ public open class CfnBot(
      * @param botLocales A list of locales for the bot. 
      */
     override fun botLocales(botLocales: IResolvable) {
-      cdkBuilder.botLocales(botLocales.let(IResolvable::unwrap))
+      cdkBuilder.botLocales(botLocales.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -639,7 +639,7 @@ public open class CfnBot(
      * @param botTags A list of tags to add to the bot. 
      */
     override fun botTags(botTags: IResolvable) {
-      cdkBuilder.botTags(botTags.let(IResolvable::unwrap))
+      cdkBuilder.botTags(botTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -738,7 +738,7 @@ public open class CfnBot(
      * bot. 
      */
     override fun testBotAliasSettings(testBotAliasSettings: IResolvable) {
-      cdkBuilder.testBotAliasSettings(testBotAliasSettings.let(IResolvable::unwrap))
+      cdkBuilder.testBotAliasSettings(testBotAliasSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -752,7 +752,7 @@ public open class CfnBot(
      * bot. 
      */
     override fun testBotAliasSettings(testBotAliasSettings: TestBotAliasSettingsProperty) {
-      cdkBuilder.testBotAliasSettings(testBotAliasSettings.let(TestBotAliasSettingsProperty::unwrap))
+      cdkBuilder.testBotAliasSettings(testBotAliasSettings.let(TestBotAliasSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -781,7 +781,7 @@ public open class CfnBot(
      * @param testBotAliasTags A list of tags to add to the test alias for a bot. 
      */
     override fun testBotAliasTags(testBotAliasTags: IResolvable) {
-      cdkBuilder.testBotAliasTags(testBotAliasTags.let(IResolvable::unwrap))
+      cdkBuilder.testBotAliasTags(testBotAliasTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -991,7 +991,7 @@ public open class CfnBot(
        * @param allowAudioInput Indicates whether audio input is allowed. 
        */
       override fun allowAudioInput(allowAudioInput: IResolvable) {
-        cdkBuilder.allowAudioInput(allowAudioInput.let(IResolvable::unwrap))
+        cdkBuilder.allowAudioInput(allowAudioInput.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1005,7 +1005,7 @@ public open class CfnBot(
        * @param allowDtmfInput Indicates whether DTMF input is allowed. 
        */
       override fun allowDtmfInput(allowDtmfInput: IResolvable) {
-        cdkBuilder.allowDtmfInput(allowDtmfInput.let(IResolvable::unwrap))
+        cdkBuilder.allowDtmfInput(allowDtmfInput.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.lex.CfnBot.AllowedInputTypesProperty =
@@ -1159,14 +1159,14 @@ public open class CfnBot(
        * @param audioSpecification Specifies the settings on audio input.
        */
       override fun audioSpecification(audioSpecification: IResolvable) {
-        cdkBuilder.audioSpecification(audioSpecification.let(IResolvable::unwrap))
+        cdkBuilder.audioSpecification(audioSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param audioSpecification Specifies the settings on audio input.
        */
       override fun audioSpecification(audioSpecification: AudioSpecificationProperty) {
-        cdkBuilder.audioSpecification(audioSpecification.let(AudioSpecificationProperty::unwrap))
+        cdkBuilder.audioSpecification(audioSpecification.let(AudioSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -1182,14 +1182,14 @@ public open class CfnBot(
        * @param dtmfSpecification Specifies the settings on DTMF input.
        */
       override fun dtmfSpecification(dtmfSpecification: IResolvable) {
-        cdkBuilder.dtmfSpecification(dtmfSpecification.let(IResolvable::unwrap))
+        cdkBuilder.dtmfSpecification(dtmfSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dtmfSpecification Specifies the settings on DTMF input.
        */
       override fun dtmfSpecification(dtmfSpecification: DTMFSpecificationProperty) {
-        cdkBuilder.dtmfSpecification(dtmfSpecification.let(DTMFSpecificationProperty::unwrap))
+        cdkBuilder.dtmfSpecification(dtmfSpecification.let(DTMFSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -1323,14 +1323,14 @@ public open class CfnBot(
        * @param s3Bucket Specifies the Amazon S3 bucket where the audio files are stored. 
        */
       override fun s3Bucket(s3Bucket: IResolvable) {
-        cdkBuilder.s3Bucket(s3Bucket.let(IResolvable::unwrap))
+        cdkBuilder.s3Bucket(s3Bucket.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3Bucket Specifies the Amazon S3 bucket where the audio files are stored. 
        */
       override fun s3Bucket(s3Bucket: S3BucketLogDestinationProperty) {
-        cdkBuilder.s3Bucket(s3Bucket.let(S3BucketLogDestinationProperty::unwrap))
+        cdkBuilder.s3Bucket(s3Bucket.let(S3BucketLogDestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -1462,7 +1462,7 @@ public open class CfnBot(
        * conversation logging is enabled for a bot. 
        */
       override fun destination(destination: IResolvable) {
-        cdkBuilder.destination(destination.let(IResolvable::unwrap))
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1470,7 +1470,7 @@ public open class CfnBot(
        * conversation logging is enabled for a bot. 
        */
       override fun destination(destination: AudioLogDestinationProperty) {
-        cdkBuilder.destination(destination.let(AudioLogDestinationProperty::unwrap))
+        cdkBuilder.destination(destination.let(AudioLogDestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -1493,7 +1493,7 @@ public open class CfnBot(
        * @param enabled Determines whether audio logging in enabled for the bot. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.lex.CfnBot.AudioLogSettingProperty =
@@ -1731,14 +1731,14 @@ public open class CfnBot(
        * @param botAliasLocaleSetting Specifies locale settings for a locale. 
        */
       override fun botAliasLocaleSetting(botAliasLocaleSetting: IResolvable) {
-        cdkBuilder.botAliasLocaleSetting(botAliasLocaleSetting.let(IResolvable::unwrap))
+        cdkBuilder.botAliasLocaleSetting(botAliasLocaleSetting.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param botAliasLocaleSetting Specifies locale settings for a locale. 
        */
       override fun botAliasLocaleSetting(botAliasLocaleSetting: BotAliasLocaleSettingsProperty) {
-        cdkBuilder.botAliasLocaleSetting(botAliasLocaleSetting.let(BotAliasLocaleSettingsProperty::unwrap))
+        cdkBuilder.botAliasLocaleSetting(botAliasLocaleSetting.let(BotAliasLocaleSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -1891,7 +1891,7 @@ public open class CfnBot(
        * locale.
        */
       override fun codeHookSpecification(codeHookSpecification: IResolvable) {
-        cdkBuilder.codeHookSpecification(codeHookSpecification.let(IResolvable::unwrap))
+        cdkBuilder.codeHookSpecification(codeHookSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1899,7 +1899,7 @@ public open class CfnBot(
        * locale.
        */
       override fun codeHookSpecification(codeHookSpecification: CodeHookSpecificationProperty) {
-        cdkBuilder.codeHookSpecification(codeHookSpecification.let(CodeHookSpecificationProperty::unwrap))
+        cdkBuilder.codeHookSpecification(codeHookSpecification.let(CodeHookSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -1925,7 +1925,7 @@ public open class CfnBot(
        * If the value is `false` , the locale isn't available for use.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.lex.CfnBot.BotAliasLocaleSettingsProperty
@@ -2138,14 +2138,14 @@ public open class CfnBot(
        * @param customVocabulary Specifies a custom vocabulary to use with a specific locale.
        */
       override fun customVocabulary(customVocabulary: IResolvable) {
-        cdkBuilder.customVocabulary(customVocabulary.let(IResolvable::unwrap))
+        cdkBuilder.customVocabulary(customVocabulary.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param customVocabulary Specifies a custom vocabulary to use with a specific locale.
        */
       override fun customVocabulary(customVocabulary: CustomVocabularyProperty) {
-        cdkBuilder.customVocabulary(customVocabulary.let(CustomVocabularyProperty::unwrap))
+        cdkBuilder.customVocabulary(customVocabulary.let(CustomVocabularyProperty.Companion::unwrap))
       }
 
       /**
@@ -2168,7 +2168,7 @@ public open class CfnBot(
        * @param intents One or more intents defined for the locale.
        */
       override fun intents(intents: IResolvable) {
-        cdkBuilder.intents(intents.let(IResolvable::unwrap))
+        cdkBuilder.intents(intents.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2205,7 +2205,7 @@ public open class CfnBot(
        * @param slotTypes One or more slot types defined for the locale.
        */
       override fun slotTypes(slotTypes: IResolvable) {
-        cdkBuilder.slotTypes(slotTypes.let(IResolvable::unwrap))
+        cdkBuilder.slotTypes(slotTypes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2225,7 +2225,7 @@ public open class CfnBot(
        * user.
        */
       override fun voiceSettings(voiceSettings: IResolvable) {
-        cdkBuilder.voiceSettings(voiceSettings.let(IResolvable::unwrap))
+        cdkBuilder.voiceSettings(voiceSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2233,7 +2233,7 @@ public open class CfnBot(
        * user.
        */
       override fun voiceSettings(voiceSettings: VoiceSettingsProperty) {
-        cdkBuilder.voiceSettings(voiceSettings.let(VoiceSettingsProperty::unwrap))
+        cdkBuilder.voiceSettings(voiceSettings.let(VoiceSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -2623,7 +2623,7 @@ public open class CfnBot(
        * fulfills the user's request to a bot. 
        */
       override fun lambdaCodeHook(lambdaCodeHook: IResolvable) {
-        cdkBuilder.lambdaCodeHook(lambdaCodeHook.let(IResolvable::unwrap))
+        cdkBuilder.lambdaCodeHook(lambdaCodeHook.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2631,7 +2631,7 @@ public open class CfnBot(
        * fulfills the user's request to a bot. 
        */
       override fun lambdaCodeHook(lambdaCodeHook: LambdaCodeHookProperty) {
-        cdkBuilder.lambdaCodeHook(lambdaCodeHook.let(LambdaCodeHookProperty::unwrap))
+        cdkBuilder.lambdaCodeHook(lambdaCodeHook.let(LambdaCodeHookProperty.Companion::unwrap))
       }
 
       /**
@@ -2959,7 +2959,7 @@ public open class CfnBot(
        * If the condition is true, the branch's actions are taken.
        */
       override fun condition(condition: IResolvable) {
-        cdkBuilder.condition(condition.let(IResolvable::unwrap))
+        cdkBuilder.condition(condition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2967,7 +2967,7 @@ public open class CfnBot(
        * If the condition is true, the branch's actions are taken.
        */
       override fun condition(condition: ConditionProperty) {
-        cdkBuilder.condition(condition.let(ConditionProperty::unwrap))
+        cdkBuilder.condition(condition.let(ConditionProperty.Companion::unwrap))
       }
 
       /**
@@ -2990,14 +2990,14 @@ public open class CfnBot(
        * @param nextStep The next step in the conversation. 
        */
       override fun nextStep(nextStep: IResolvable) {
-        cdkBuilder.nextStep(nextStep.let(IResolvable::unwrap))
+        cdkBuilder.nextStep(nextStep.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param nextStep The next step in the conversation. 
        */
       override fun nextStep(nextStep: DialogStateProperty) {
-        cdkBuilder.nextStep(nextStep.let(DialogStateProperty::unwrap))
+        cdkBuilder.nextStep(nextStep.let(DialogStateProperty.Companion::unwrap))
       }
 
       /**
@@ -3013,7 +3013,7 @@ public open class CfnBot(
        * input.
        */
       override fun response(response: IResolvable) {
-        cdkBuilder.response(response.let(IResolvable::unwrap))
+        cdkBuilder.response(response.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3021,7 +3021,7 @@ public open class CfnBot(
        * input.
        */
       override fun response(response: ResponseSpecificationProperty) {
-        cdkBuilder.response(response.let(ResponseSpecificationProperty::unwrap))
+        cdkBuilder.response(response.let(ResponseSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -3374,7 +3374,7 @@ public open class CfnBot(
        * and next step are executed when the condition is true.
        */
       override fun conditionalBranches(conditionalBranches: IResolvable) {
-        cdkBuilder.conditionalBranches(conditionalBranches.let(IResolvable::unwrap))
+        cdkBuilder.conditionalBranches(conditionalBranches.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3400,7 +3400,7 @@ public open class CfnBot(
        * A conditional branch is made up of a condition, a response and a next step.
        */
       override fun defaultBranch(defaultBranch: IResolvable) {
-        cdkBuilder.defaultBranch(defaultBranch.let(IResolvable::unwrap))
+        cdkBuilder.defaultBranch(defaultBranch.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3409,7 +3409,7 @@ public open class CfnBot(
        * A conditional branch is made up of a condition, a response and a next step.
        */
       override fun defaultBranch(defaultBranch: DefaultConditionalBranchProperty) {
-        cdkBuilder.defaultBranch(defaultBranch.let(DefaultConditionalBranchProperty::unwrap))
+        cdkBuilder.defaultBranch(defaultBranch.let(DefaultConditionalBranchProperty.Companion::unwrap))
       }
 
       /**
@@ -3436,7 +3436,7 @@ public open class CfnBot(
        * When `IsActive` is false, the conditions are not evaluated.
        */
       override fun isActive(isActive: IResolvable) {
-        cdkBuilder.isActive(isActive.let(IResolvable::unwrap))
+        cdkBuilder.isActive(isActive.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -3592,7 +3592,7 @@ public open class CfnBot(
        * @param audioLogSettings The Amazon S3 settings for logging audio to an S3 bucket.
        */
       override fun audioLogSettings(audioLogSettings: IResolvable) {
-        cdkBuilder.audioLogSettings(audioLogSettings.let(IResolvable::unwrap))
+        cdkBuilder.audioLogSettings(audioLogSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3612,7 +3612,7 @@ public open class CfnBot(
        * @param textLogSettings The Amazon CloudWatch Logs settings for logging text and metadata.
        */
       override fun textLogSettings(textLogSettings: IResolvable) {
-        cdkBuilder.textLogSettings(textLogSettings.let(IResolvable::unwrap))
+        cdkBuilder.textLogSettings(textLogSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3959,7 +3959,7 @@ public open class CfnBot(
        * conversation with your bot. 
        */
       override fun customVocabularyItems(customVocabularyItems: IResolvable) {
-        cdkBuilder.customVocabularyItems(customVocabularyItems.let(IResolvable::unwrap))
+        cdkBuilder.customVocabularyItems(customVocabularyItems.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4332,7 +4332,7 @@ public open class CfnBot(
        * FAQ](https://docs.aws.amazon.com/lex/faqs#data-security) .
        */
       override fun childDirected(childDirected: IResolvable) {
-        cdkBuilder.childDirected(childDirected.let(IResolvable::unwrap))
+        cdkBuilder.childDirected(childDirected.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.lex.CfnBot.DataPrivacyProperty =
@@ -4544,14 +4544,14 @@ public open class CfnBot(
        * @param nextStep The next step in the conversation.
        */
       override fun nextStep(nextStep: IResolvable) {
-        cdkBuilder.nextStep(nextStep.let(IResolvable::unwrap))
+        cdkBuilder.nextStep(nextStep.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param nextStep The next step in the conversation.
        */
       override fun nextStep(nextStep: DialogStateProperty) {
-        cdkBuilder.nextStep(nextStep.let(DialogStateProperty::unwrap))
+        cdkBuilder.nextStep(nextStep.let(DialogStateProperty.Companion::unwrap))
       }
 
       /**
@@ -4567,7 +4567,7 @@ public open class CfnBot(
        * input.
        */
       override fun response(response: IResolvable) {
-        cdkBuilder.response(response.let(IResolvable::unwrap))
+        cdkBuilder.response(response.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4575,7 +4575,7 @@ public open class CfnBot(
        * input.
        */
       override fun response(response: ResponseSpecificationProperty) {
-        cdkBuilder.response(response.let(ResponseSpecificationProperty::unwrap))
+        cdkBuilder.response(response.let(ResponseSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -4720,7 +4720,7 @@ public open class CfnBot(
        * @param suppressNextMessage When true the next message for the intent is not used.
        */
       override fun suppressNextMessage(suppressNextMessage: IResolvable) {
-        cdkBuilder.suppressNextMessage(suppressNextMessage.let(IResolvable::unwrap))
+        cdkBuilder.suppressNextMessage(suppressNextMessage.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4893,7 +4893,7 @@ public open class CfnBot(
        * the dialog. 
        */
       override fun enableCodeHookInvocation(enableCodeHookInvocation: IResolvable) {
-        cdkBuilder.enableCodeHookInvocation(enableCodeHookInvocation.let(IResolvable::unwrap))
+        cdkBuilder.enableCodeHookInvocation(enableCodeHookInvocation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4917,7 +4917,7 @@ public open class CfnBot(
        * 
        */
       override fun isActive(isActive: IResolvable) {
-        cdkBuilder.isActive(isActive.let(IResolvable::unwrap))
+        cdkBuilder.isActive(isActive.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4925,7 +4925,7 @@ public open class CfnBot(
        * after the Lambda function is complete. 
        */
       override fun postCodeHookSpecification(postCodeHookSpecification: IResolvable) {
-        cdkBuilder.postCodeHookSpecification(postCodeHookSpecification.let(IResolvable::unwrap))
+        cdkBuilder.postCodeHookSpecification(postCodeHookSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4934,7 +4934,7 @@ public open class CfnBot(
        */
       override
           fun postCodeHookSpecification(postCodeHookSpecification: PostDialogCodeHookInvocationSpecificationProperty) {
-        cdkBuilder.postCodeHookSpecification(postCodeHookSpecification.let(PostDialogCodeHookInvocationSpecificationProperty::unwrap))
+        cdkBuilder.postCodeHookSpecification(postCodeHookSpecification.let(PostDialogCodeHookInvocationSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -5062,7 +5062,7 @@ public open class CfnBot(
        * @param enabled Enables the dialog code hook so that it processes user requests. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.lex.CfnBot.DialogCodeHookSettingProperty =
@@ -5235,7 +5235,7 @@ public open class CfnBot(
        * conversation reaches this step.
        */
       override fun dialogAction(dialogAction: IResolvable) {
-        cdkBuilder.dialogAction(dialogAction.let(IResolvable::unwrap))
+        cdkBuilder.dialogAction(dialogAction.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5243,7 +5243,7 @@ public open class CfnBot(
        * conversation reaches this step.
        */
       override fun dialogAction(dialogAction: DialogActionProperty) {
-        cdkBuilder.dialogAction(dialogAction.let(DialogActionProperty::unwrap))
+        cdkBuilder.dialogAction(dialogAction.let(DialogActionProperty.Companion::unwrap))
       }
 
       /**
@@ -5259,14 +5259,14 @@ public open class CfnBot(
        * @param intent Override settings to configure the intent state.
        */
       override fun intent(intent: IResolvable) {
-        cdkBuilder.intent(intent.let(IResolvable::unwrap))
+        cdkBuilder.intent(intent.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param intent Override settings to configure the intent state.
        */
       override fun intent(intent: IntentOverrideProperty) {
-        cdkBuilder.intent(intent.let(IntentOverrideProperty::unwrap))
+        cdkBuilder.intent(intent.let(IntentOverrideProperty.Companion::unwrap))
       }
 
       /**
@@ -5283,7 +5283,7 @@ public open class CfnBot(
        * It contains application information passed between Amazon Lex and a client application.
        */
       override fun sessionAttributes(sessionAttributes: IResolvable) {
-        cdkBuilder.sessionAttributes(sessionAttributes.let(IResolvable::unwrap))
+        cdkBuilder.sessionAttributes(sessionAttributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5429,7 +5429,7 @@ public open class CfnBot(
        * the dialog. 
        */
       override fun enableCodeHookInvocation(enableCodeHookInvocation: IResolvable) {
-        cdkBuilder.enableCodeHookInvocation(enableCodeHookInvocation.let(IResolvable::unwrap))
+        cdkBuilder.enableCodeHookInvocation(enableCodeHookInvocation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5551,7 +5551,7 @@ public open class CfnBot(
        * provide.
        */
       override fun grammarSlotTypeSetting(grammarSlotTypeSetting: IResolvable) {
-        cdkBuilder.grammarSlotTypeSetting(grammarSlotTypeSetting.let(IResolvable::unwrap))
+        cdkBuilder.grammarSlotTypeSetting(grammarSlotTypeSetting.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5559,7 +5559,7 @@ public open class CfnBot(
        * provide.
        */
       override fun grammarSlotTypeSetting(grammarSlotTypeSetting: GrammarSlotTypeSettingProperty) {
-        cdkBuilder.grammarSlotTypeSetting(grammarSlotTypeSetting.let(GrammarSlotTypeSettingProperty::unwrap))
+        cdkBuilder.grammarSlotTypeSetting(grammarSlotTypeSetting.let(GrammarSlotTypeSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -5752,7 +5752,7 @@ public open class CfnBot(
        * intent. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5761,7 +5761,7 @@ public open class CfnBot(
        * Fulfillment updates can be used only with streaming conversations.
        */
       override fun fulfillmentUpdatesSpecification(fulfillmentUpdatesSpecification: IResolvable) {
-        cdkBuilder.fulfillmentUpdatesSpecification(fulfillmentUpdatesSpecification.let(IResolvable::unwrap))
+        cdkBuilder.fulfillmentUpdatesSpecification(fulfillmentUpdatesSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5771,7 +5771,7 @@ public open class CfnBot(
        */
       override
           fun fulfillmentUpdatesSpecification(fulfillmentUpdatesSpecification: FulfillmentUpdatesSpecificationProperty) {
-        cdkBuilder.fulfillmentUpdatesSpecification(fulfillmentUpdatesSpecification.let(FulfillmentUpdatesSpecificationProperty::unwrap))
+        cdkBuilder.fulfillmentUpdatesSpecification(fulfillmentUpdatesSpecification.let(FulfillmentUpdatesSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -5799,7 +5799,7 @@ public open class CfnBot(
        * When `active` is false, the code hook doesn't run.
        */
       override fun isActive(isActive: IResolvable) {
-        cdkBuilder.isActive(isActive.let(IResolvable::unwrap))
+        cdkBuilder.isActive(isActive.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5809,7 +5809,7 @@ public open class CfnBot(
        */
       override
           fun postFulfillmentStatusSpecification(postFulfillmentStatusSpecification: IResolvable) {
-        cdkBuilder.postFulfillmentStatusSpecification(postFulfillmentStatusSpecification.let(IResolvable::unwrap))
+        cdkBuilder.postFulfillmentStatusSpecification(postFulfillmentStatusSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5819,7 +5819,7 @@ public open class CfnBot(
        */
       override
           fun postFulfillmentStatusSpecification(postFulfillmentStatusSpecification: PostFulfillmentStatusSpecificationProperty) {
-        cdkBuilder.postFulfillmentStatusSpecification(postFulfillmentStatusSpecification.let(PostFulfillmentStatusSpecificationProperty::unwrap))
+        cdkBuilder.postFulfillmentStatusSpecification(postFulfillmentStatusSpecification.let(PostFulfillmentStatusSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -6054,7 +6054,7 @@ public open class CfnBot(
        * is playing.
        */
       override fun allowInterrupt(allowInterrupt: IResolvable) {
-        cdkBuilder.allowInterrupt(allowInterrupt.let(IResolvable::unwrap))
+        cdkBuilder.allowInterrupt(allowInterrupt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6071,7 +6071,7 @@ public open class CfnBot(
        * Amazon Lex chooses one of the messages to play to the user.
        */
       override fun messageGroups(messageGroups: IResolvable) {
-        cdkBuilder.messageGroups(messageGroups.let(IResolvable::unwrap))
+        cdkBuilder.messageGroups(messageGroups.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6299,7 +6299,7 @@ public open class CfnBot(
        * is playing.
        */
       override fun allowInterrupt(allowInterrupt: IResolvable) {
-        cdkBuilder.allowInterrupt(allowInterrupt.let(IResolvable::unwrap))
+        cdkBuilder.allowInterrupt(allowInterrupt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6317,7 +6317,7 @@ public open class CfnBot(
        * Amazon Lex chooses one of the messages to play to the user.
        */
       override fun messageGroups(messageGroups: IResolvable) {
-        cdkBuilder.messageGroups(messageGroups.let(IResolvable::unwrap))
+        cdkBuilder.messageGroups(messageGroups.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6637,7 +6637,7 @@ public open class CfnBot(
        * `timeoutInSeconds` fields are required.
        */
       override fun active(active: IResolvable) {
-        cdkBuilder.active(active.let(IResolvable::unwrap))
+        cdkBuilder.active(active.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6645,7 +6645,7 @@ public open class CfnBot(
        * the fulfillment Lambda functions starts running.
        */
       override fun startResponse(startResponse: IResolvable) {
-        cdkBuilder.startResponse(startResponse.let(IResolvable::unwrap))
+        cdkBuilder.startResponse(startResponse.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6653,7 +6653,7 @@ public open class CfnBot(
        * the fulfillment Lambda functions starts running.
        */
       override fun startResponse(startResponse: FulfillmentStartResponseSpecificationProperty) {
-        cdkBuilder.startResponse(startResponse.let(FulfillmentStartResponseSpecificationProperty::unwrap))
+        cdkBuilder.startResponse(startResponse.let(FulfillmentStartResponseSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -6679,7 +6679,7 @@ public open class CfnBot(
        * the user while the fulfillment Lambda function is running.
        */
       override fun updateResponse(updateResponse: IResolvable) {
-        cdkBuilder.updateResponse(updateResponse.let(IResolvable::unwrap))
+        cdkBuilder.updateResponse(updateResponse.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6687,7 +6687,7 @@ public open class CfnBot(
        * the user while the fulfillment Lambda function is running.
        */
       override fun updateResponse(updateResponse: FulfillmentUpdateResponseSpecificationProperty) {
-        cdkBuilder.updateResponse(updateResponse.let(FulfillmentUpdateResponseSpecificationProperty::unwrap))
+        cdkBuilder.updateResponse(updateResponse.let(FulfillmentUpdateResponseSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -6824,14 +6824,14 @@ public open class CfnBot(
        * @param source The source of the grammar used to create the slot type.
        */
       override fun source(source: IResolvable) {
-        cdkBuilder.source(source.let(IResolvable::unwrap))
+        cdkBuilder.source(source.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param source The source of the grammar used to create the slot type.
        */
       override fun source(source: GrammarSlotTypeSourceProperty) {
-        cdkBuilder.source(source.let(GrammarSlotTypeSourceProperty::unwrap))
+        cdkBuilder.source(source.let(GrammarSlotTypeSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -7131,7 +7131,7 @@ public open class CfnBot(
        * The arrangement of the buttons is determined by the platform that displays the button.
        */
       override fun buttons(buttons: IResolvable) {
-        cdkBuilder.buttons(buttons.let(IResolvable::unwrap))
+        cdkBuilder.buttons(buttons.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7383,7 +7383,7 @@ public open class CfnBot(
        * a step of the conversation.
        */
       override fun codeHook(codeHook: IResolvable) {
-        cdkBuilder.codeHook(codeHook.let(IResolvable::unwrap))
+        cdkBuilder.codeHook(codeHook.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7391,7 +7391,7 @@ public open class CfnBot(
        * a step of the conversation.
        */
       override fun codeHook(codeHook: DialogCodeHookInvocationSettingProperty) {
-        cdkBuilder.codeHook(codeHook.let(DialogCodeHookInvocationSettingProperty::unwrap))
+        cdkBuilder.codeHook(codeHook.let(DialogCodeHookInvocationSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -7411,7 +7411,7 @@ public open class CfnBot(
        * branch is executed if no other branch has a matching condition.
        */
       override fun conditional(conditional: IResolvable) {
-        cdkBuilder.conditional(conditional.let(IResolvable::unwrap))
+        cdkBuilder.conditional(conditional.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7422,7 +7422,7 @@ public open class CfnBot(
        * branch is executed if no other branch has a matching condition.
        */
       override fun conditional(conditional: ConditionalSpecificationProperty) {
-        cdkBuilder.conditional(conditional.let(ConditionalSpecificationProperty::unwrap))
+        cdkBuilder.conditional(conditional.let(ConditionalSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -7442,7 +7442,7 @@ public open class CfnBot(
        * the user input.
        */
       override fun initialResponse(initialResponse: IResolvable) {
-        cdkBuilder.initialResponse(initialResponse.let(IResolvable::unwrap))
+        cdkBuilder.initialResponse(initialResponse.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7450,7 +7450,7 @@ public open class CfnBot(
        * the user input.
        */
       override fun initialResponse(initialResponse: ResponseSpecificationProperty) {
-        cdkBuilder.initialResponse(initialResponse.let(ResponseSpecificationProperty::unwrap))
+        cdkBuilder.initialResponse(initialResponse.let(ResponseSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -7467,14 +7467,14 @@ public open class CfnBot(
        * @param nextStep The next step in the conversation.
        */
       override fun nextStep(nextStep: IResolvable) {
-        cdkBuilder.nextStep(nextStep.let(IResolvable::unwrap))
+        cdkBuilder.nextStep(nextStep.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param nextStep The next step in the conversation.
        */
       override fun nextStep(nextStep: DialogStateProperty) {
-        cdkBuilder.nextStep(nextStep.let(DialogStateProperty::unwrap))
+        cdkBuilder.nextStep(nextStep.let(DialogStateProperty.Companion::unwrap))
       }
 
       /**
@@ -8009,7 +8009,7 @@ public open class CfnBot(
        * complete.
        */
       override fun closingResponse(closingResponse: IResolvable) {
-        cdkBuilder.closingResponse(closingResponse.let(IResolvable::unwrap))
+        cdkBuilder.closingResponse(closingResponse.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8017,7 +8017,7 @@ public open class CfnBot(
        * complete.
        */
       override fun closingResponse(closingResponse: ResponseSpecificationProperty) {
-        cdkBuilder.closingResponse(closingResponse.let(ResponseSpecificationProperty::unwrap))
+        cdkBuilder.closingResponse(closingResponse.let(ResponseSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -8037,7 +8037,7 @@ public open class CfnBot(
        * .
        */
       override fun conditional(conditional: IResolvable) {
-        cdkBuilder.conditional(conditional.let(IResolvable::unwrap))
+        cdkBuilder.conditional(conditional.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8047,7 +8047,7 @@ public open class CfnBot(
        * .
        */
       override fun conditional(conditional: ConditionalSpecificationProperty) {
-        cdkBuilder.conditional(conditional.let(ConditionalSpecificationProperty::unwrap))
+        cdkBuilder.conditional(conditional.let(ConditionalSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -8076,7 +8076,7 @@ public open class CfnBot(
        * field isn't specified, the default is true.
        */
       override fun isActive(isActive: IResolvable) {
-        cdkBuilder.isActive(isActive.let(IResolvable::unwrap))
+        cdkBuilder.isActive(isActive.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8084,7 +8084,7 @@ public open class CfnBot(
        * closing response.
        */
       override fun nextStep(nextStep: IResolvable) {
-        cdkBuilder.nextStep(nextStep.let(IResolvable::unwrap))
+        cdkBuilder.nextStep(nextStep.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8092,7 +8092,7 @@ public open class CfnBot(
        * closing response.
        */
       override fun nextStep(nextStep: DialogStateProperty) {
-        cdkBuilder.nextStep(nextStep.let(DialogStateProperty::unwrap))
+        cdkBuilder.nextStep(nextStep.let(DialogStateProperty.Companion::unwrap))
       }
 
       /**
@@ -8598,7 +8598,7 @@ public open class CfnBot(
        * next step or declination next step or failure next step is `InvokeDialogCodeHook` .
        */
       override fun codeHook(codeHook: IResolvable) {
-        cdkBuilder.codeHook(codeHook.let(IResolvable::unwrap))
+        cdkBuilder.codeHook(codeHook.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8608,7 +8608,7 @@ public open class CfnBot(
        * next step or declination next step or failure next step is `InvokeDialogCodeHook` .
        */
       override fun codeHook(codeHook: DialogCodeHookInvocationSettingProperty) {
-        cdkBuilder.codeHook(codeHook.let(DialogCodeHookInvocationSettingProperty::unwrap))
+        cdkBuilder.codeHook(codeHook.let(DialogCodeHookInvocationSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -8627,7 +8627,7 @@ public open class CfnBot(
        * is closed.
        */
       override fun confirmationConditional(confirmationConditional: IResolvable) {
-        cdkBuilder.confirmationConditional(confirmationConditional.let(IResolvable::unwrap))
+        cdkBuilder.confirmationConditional(confirmationConditional.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8636,7 +8636,7 @@ public open class CfnBot(
        */
       override
           fun confirmationConditional(confirmationConditional: ConditionalSpecificationProperty) {
-        cdkBuilder.confirmationConditional(confirmationConditional.let(ConditionalSpecificationProperty::unwrap))
+        cdkBuilder.confirmationConditional(confirmationConditional.let(ConditionalSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -8654,7 +8654,7 @@ public open class CfnBot(
        * confirms the intent.
        */
       override fun confirmationNextStep(confirmationNextStep: IResolvable) {
-        cdkBuilder.confirmationNextStep(confirmationNextStep.let(IResolvable::unwrap))
+        cdkBuilder.confirmationNextStep(confirmationNextStep.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8662,7 +8662,7 @@ public open class CfnBot(
        * confirms the intent.
        */
       override fun confirmationNextStep(confirmationNextStep: DialogStateProperty) {
-        cdkBuilder.confirmationNextStep(confirmationNextStep.let(DialogStateProperty::unwrap))
+        cdkBuilder.confirmationNextStep(confirmationNextStep.let(DialogStateProperty.Companion::unwrap))
       }
 
       /**
@@ -8680,7 +8680,7 @@ public open class CfnBot(
        * respond the user input.
        */
       override fun confirmationResponse(confirmationResponse: IResolvable) {
-        cdkBuilder.confirmationResponse(confirmationResponse.let(IResolvable::unwrap))
+        cdkBuilder.confirmationResponse(confirmationResponse.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8688,7 +8688,7 @@ public open class CfnBot(
        * respond the user input.
        */
       override fun confirmationResponse(confirmationResponse: ResponseSpecificationProperty) {
-        cdkBuilder.confirmationResponse(confirmationResponse.let(ResponseSpecificationProperty::unwrap))
+        cdkBuilder.confirmationResponse(confirmationResponse.let(ResponseSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -8706,7 +8706,7 @@ public open class CfnBot(
        * is declined.
        */
       override fun declinationConditional(declinationConditional: IResolvable) {
-        cdkBuilder.declinationConditional(declinationConditional.let(IResolvable::unwrap))
+        cdkBuilder.declinationConditional(declinationConditional.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8715,7 +8715,7 @@ public open class CfnBot(
        */
       override
           fun declinationConditional(declinationConditional: ConditionalSpecificationProperty) {
-        cdkBuilder.declinationConditional(declinationConditional.let(ConditionalSpecificationProperty::unwrap))
+        cdkBuilder.declinationConditional(declinationConditional.let(ConditionalSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -8733,7 +8733,7 @@ public open class CfnBot(
        * declines the intent.
        */
       override fun declinationNextStep(declinationNextStep: IResolvable) {
-        cdkBuilder.declinationNextStep(declinationNextStep.let(IResolvable::unwrap))
+        cdkBuilder.declinationNextStep(declinationNextStep.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8741,7 +8741,7 @@ public open class CfnBot(
        * declines the intent.
        */
       override fun declinationNextStep(declinationNextStep: DialogStateProperty) {
-        cdkBuilder.declinationNextStep(declinationNextStep.let(DialogStateProperty::unwrap))
+        cdkBuilder.declinationNextStep(declinationNextStep.let(DialogStateProperty.Companion::unwrap))
       }
 
       /**
@@ -8759,7 +8759,7 @@ public open class CfnBot(
        * was canceled.
        */
       override fun declinationResponse(declinationResponse: IResolvable) {
-        cdkBuilder.declinationResponse(declinationResponse.let(IResolvable::unwrap))
+        cdkBuilder.declinationResponse(declinationResponse.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8768,7 +8768,7 @@ public open class CfnBot(
        * was canceled.
        */
       override fun declinationResponse(declinationResponse: ResponseSpecificationProperty) {
-        cdkBuilder.declinationResponse(declinationResponse.let(ResponseSpecificationProperty::unwrap))
+        cdkBuilder.declinationResponse(declinationResponse.let(ResponseSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -8787,7 +8787,7 @@ public open class CfnBot(
        * invoked during confirmation prompt retries.
        */
       override fun elicitationCodeHook(elicitationCodeHook: IResolvable) {
-        cdkBuilder.elicitationCodeHook(elicitationCodeHook.let(IResolvable::unwrap))
+        cdkBuilder.elicitationCodeHook(elicitationCodeHook.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8796,7 +8796,7 @@ public open class CfnBot(
        */
       override
           fun elicitationCodeHook(elicitationCodeHook: ElicitationCodeHookInvocationSettingProperty) {
-        cdkBuilder.elicitationCodeHook(elicitationCodeHook.let(ElicitationCodeHookInvocationSettingProperty::unwrap))
+        cdkBuilder.elicitationCodeHook(elicitationCodeHook.let(ElicitationCodeHookInvocationSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -8818,7 +8818,7 @@ public open class CfnBot(
        * branch is executed if no other branch has a matching condition.
        */
       override fun failureConditional(failureConditional: IResolvable) {
-        cdkBuilder.failureConditional(failureConditional.let(IResolvable::unwrap))
+        cdkBuilder.failureConditional(failureConditional.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8829,7 +8829,7 @@ public open class CfnBot(
        * branch is executed if no other branch has a matching condition.
        */
       override fun failureConditional(failureConditional: ConditionalSpecificationProperty) {
-        cdkBuilder.failureConditional(failureConditional.let(ConditionalSpecificationProperty::unwrap))
+        cdkBuilder.failureConditional(failureConditional.let(ConditionalSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -8850,7 +8850,7 @@ public open class CfnBot(
        * fails.
        */
       override fun failureNextStep(failureNextStep: IResolvable) {
-        cdkBuilder.failureNextStep(failureNextStep.let(IResolvable::unwrap))
+        cdkBuilder.failureNextStep(failureNextStep.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8858,7 +8858,7 @@ public open class CfnBot(
        * fails.
        */
       override fun failureNextStep(failureNextStep: DialogStateProperty) {
-        cdkBuilder.failureNextStep(failureNextStep.let(DialogStateProperty::unwrap))
+        cdkBuilder.failureNextStep(failureNextStep.let(DialogStateProperty.Companion::unwrap))
       }
 
       /**
@@ -8875,7 +8875,7 @@ public open class CfnBot(
        * the user input when the intent confirmation fails.
        */
       override fun failureResponse(failureResponse: IResolvable) {
-        cdkBuilder.failureResponse(failureResponse.let(IResolvable::unwrap))
+        cdkBuilder.failureResponse(failureResponse.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8883,7 +8883,7 @@ public open class CfnBot(
        * the user input when the intent confirmation fails.
        */
       override fun failureResponse(failureResponse: ResponseSpecificationProperty) {
-        cdkBuilder.failureResponse(failureResponse.let(ResponseSpecificationProperty::unwrap))
+        cdkBuilder.failureResponse(failureResponse.let(ResponseSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -8911,7 +8911,7 @@ public open class CfnBot(
        * `IsActive` field isn't specified, the default is true.
        */
       override fun isActive(isActive: IResolvable) {
-        cdkBuilder.isActive(isActive.let(IResolvable::unwrap))
+        cdkBuilder.isActive(isActive.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8924,7 +8924,7 @@ public open class CfnBot(
        * information.
        */
       override fun promptSpecification(promptSpecification: IResolvable) {
-        cdkBuilder.promptSpecification(promptSpecification.let(IResolvable::unwrap))
+        cdkBuilder.promptSpecification(promptSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8937,7 +8937,7 @@ public open class CfnBot(
        * information.
        */
       override fun promptSpecification(promptSpecification: PromptSpecificationProperty) {
-        cdkBuilder.promptSpecification(promptSpecification.let(PromptSpecificationProperty::unwrap))
+        cdkBuilder.promptSpecification(promptSpecification.let(PromptSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -9193,7 +9193,7 @@ public open class CfnBot(
        * aren't overridden.
        */
       override fun slots(slots: IResolvable) {
-        cdkBuilder.slots(slots.let(IResolvable::unwrap))
+        cdkBuilder.slots(slots.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9651,7 +9651,7 @@ public open class CfnBot(
        * You can invoke this Lambda function to personalize user interaction.
        */
       override fun dialogCodeHook(dialogCodeHook: IResolvable) {
-        cdkBuilder.dialogCodeHook(dialogCodeHook.let(IResolvable::unwrap))
+        cdkBuilder.dialogCodeHook(dialogCodeHook.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9660,7 +9660,7 @@ public open class CfnBot(
        * You can invoke this Lambda function to personalize user interaction.
        */
       override fun dialogCodeHook(dialogCodeHook: DialogCodeHookSettingProperty) {
-        cdkBuilder.dialogCodeHook(dialogCodeHook.let(DialogCodeHookSettingProperty::unwrap))
+        cdkBuilder.dialogCodeHook(dialogCodeHook.let(DialogCodeHookSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -9679,7 +9679,7 @@ public open class CfnBot(
        * You can invoke this function to complete the bot's transaction with the user.
        */
       override fun fulfillmentCodeHook(fulfillmentCodeHook: IResolvable) {
-        cdkBuilder.fulfillmentCodeHook(fulfillmentCodeHook.let(IResolvable::unwrap))
+        cdkBuilder.fulfillmentCodeHook(fulfillmentCodeHook.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9688,7 +9688,7 @@ public open class CfnBot(
        * You can invoke this function to complete the bot's transaction with the user.
        */
       override fun fulfillmentCodeHook(fulfillmentCodeHook: FulfillmentCodeHookSettingProperty) {
-        cdkBuilder.fulfillmentCodeHook(fulfillmentCodeHook.let(FulfillmentCodeHookSettingProperty::unwrap))
+        cdkBuilder.fulfillmentCodeHook(fulfillmentCodeHook.let(FulfillmentCodeHookSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -9707,7 +9707,7 @@ public open class CfnBot(
        * Amazon Lex starts eliciting slots.
        */
       override fun initialResponseSetting(initialResponseSetting: IResolvable) {
-        cdkBuilder.initialResponseSetting(initialResponseSetting.let(IResolvable::unwrap))
+        cdkBuilder.initialResponseSetting(initialResponseSetting.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9715,7 +9715,7 @@ public open class CfnBot(
        * Amazon Lex starts eliciting slots.
        */
       override fun initialResponseSetting(initialResponseSetting: InitialResponseSettingProperty) {
-        cdkBuilder.initialResponseSetting(initialResponseSetting.let(InitialResponseSettingProperty::unwrap))
+        cdkBuilder.initialResponseSetting(initialResponseSetting.let(InitialResponseSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -9733,7 +9733,7 @@ public open class CfnBot(
        * considered by Amazon Lex .
        */
       override fun inputContexts(inputContexts: IResolvable) {
-        cdkBuilder.inputContexts(inputContexts.let(IResolvable::unwrap))
+        cdkBuilder.inputContexts(inputContexts.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9756,7 +9756,7 @@ public open class CfnBot(
        * intent is closed.
        */
       override fun intentClosingSetting(intentClosingSetting: IResolvable) {
-        cdkBuilder.intentClosingSetting(intentClosingSetting.let(IResolvable::unwrap))
+        cdkBuilder.intentClosingSetting(intentClosingSetting.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9764,7 +9764,7 @@ public open class CfnBot(
        * intent is closed.
        */
       override fun intentClosingSetting(intentClosingSetting: IntentClosingSettingProperty) {
-        cdkBuilder.intentClosingSetting(intentClosingSetting.let(IntentClosingSettingProperty::unwrap))
+        cdkBuilder.intentClosingSetting(intentClosingSetting.let(IntentClosingSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -9784,7 +9784,7 @@ public open class CfnBot(
        * the intent.
        */
       override fun intentConfirmationSetting(intentConfirmationSetting: IResolvable) {
-        cdkBuilder.intentConfirmationSetting(intentConfirmationSetting.let(IResolvable::unwrap))
+        cdkBuilder.intentConfirmationSetting(intentConfirmationSetting.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9795,7 +9795,7 @@ public open class CfnBot(
        */
       override
           fun intentConfirmationSetting(intentConfirmationSetting: IntentConfirmationSettingProperty) {
-        cdkBuilder.intentConfirmationSetting(intentConfirmationSetting.let(IntentConfirmationSettingProperty::unwrap))
+        cdkBuilder.intentConfirmationSetting(intentConfirmationSetting.let(IntentConfirmationSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -9818,7 +9818,7 @@ public open class CfnBot(
        * utterance.
        */
       override fun kendraConfiguration(kendraConfiguration: IResolvable) {
-        cdkBuilder.kendraConfiguration(kendraConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.kendraConfiguration(kendraConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9828,7 +9828,7 @@ public open class CfnBot(
        * utterance.
        */
       override fun kendraConfiguration(kendraConfiguration: KendraConfigurationProperty) {
-        cdkBuilder.kendraConfiguration(kendraConfiguration.let(KendraConfigurationProperty::unwrap))
+        cdkBuilder.kendraConfiguration(kendraConfiguration.let(KendraConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -9856,7 +9856,7 @@ public open class CfnBot(
        * @param outputContexts A list of contexts that the intent activates when it is fulfilled.
        */
       override fun outputContexts(outputContexts: IResolvable) {
-        cdkBuilder.outputContexts(outputContexts.let(IResolvable::unwrap))
+        cdkBuilder.outputContexts(outputContexts.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9884,7 +9884,7 @@ public open class CfnBot(
        * @param sampleUtterances A list of utterances that a user might say to signal the intent.
        */
       override fun sampleUtterances(sampleUtterances: IResolvable) {
-        cdkBuilder.sampleUtterances(sampleUtterances.let(IResolvable::unwrap))
+        cdkBuilder.sampleUtterances(sampleUtterances.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9905,7 +9905,7 @@ public open class CfnBot(
        * Amazon Lex prompts the user for slot values in priority order.
        */
       override fun slotPriorities(slotPriorities: IResolvable) {
-        cdkBuilder.slotPriorities(slotPriorities.let(IResolvable::unwrap))
+        cdkBuilder.slotPriorities(slotPriorities.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9927,7 +9927,7 @@ public open class CfnBot(
        * @param slots A list of slots that the intent requires for fulfillment.
        */
       override fun slots(slots: IResolvable) {
-        cdkBuilder.slots(slots.let(IResolvable::unwrap))
+        cdkBuilder.slots(slots.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10201,7 +10201,7 @@ public open class CfnBot(
        * uses a custom query string to query the Amazon Kendra index.
        */
       override fun queryFilterStringEnabled(queryFilterStringEnabled: IResolvable) {
-        cdkBuilder.queryFilterStringEnabled(queryFilterStringEnabled.let(IResolvable::unwrap))
+        cdkBuilder.queryFilterStringEnabled(queryFilterStringEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.lex.CfnBot.KendraConfigurationProperty =
@@ -10497,14 +10497,14 @@ public open class CfnBot(
        * @param message The primary message that Amazon Lex should send to the user. 
        */
       override fun message(message: IResolvable) {
-        cdkBuilder.message(message.let(IResolvable::unwrap))
+        cdkBuilder.message(message.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param message The primary message that Amazon Lex should send to the user. 
        */
       override fun message(message: MessageProperty) {
-        cdkBuilder.message(message.let(MessageProperty::unwrap))
+        cdkBuilder.message(message.let(MessageProperty.Companion::unwrap))
       }
 
       /**
@@ -10521,7 +10521,7 @@ public open class CfnBot(
        * variations to send to the user.
        */
       override fun variations(variations: IResolvable) {
-        cdkBuilder.variations(variations.let(IResolvable::unwrap))
+        cdkBuilder.variations(variations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10729,14 +10729,14 @@ public open class CfnBot(
        * @param customPayload A message in a custom format defined by the client application.
        */
       override fun customPayload(customPayload: IResolvable) {
-        cdkBuilder.customPayload(customPayload.let(IResolvable::unwrap))
+        cdkBuilder.customPayload(customPayload.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param customPayload A message in a custom format defined by the client application.
        */
       override fun customPayload(customPayload: CustomPayloadProperty) {
-        cdkBuilder.customPayload(customPayload.let(CustomPayloadProperty::unwrap))
+        cdkBuilder.customPayload(customPayload.let(CustomPayloadProperty.Companion::unwrap))
       }
 
       /**
@@ -10752,7 +10752,7 @@ public open class CfnBot(
        * can show to the user.
        */
       override fun imageResponseCard(imageResponseCard: IResolvable) {
-        cdkBuilder.imageResponseCard(imageResponseCard.let(IResolvable::unwrap))
+        cdkBuilder.imageResponseCard(imageResponseCard.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10760,7 +10760,7 @@ public open class CfnBot(
        * can show to the user.
        */
       override fun imageResponseCard(imageResponseCard: ImageResponseCardProperty) {
-        cdkBuilder.imageResponseCard(imageResponseCard.let(ImageResponseCardProperty::unwrap))
+        cdkBuilder.imageResponseCard(imageResponseCard.let(ImageResponseCardProperty.Companion::unwrap))
       }
 
       /**
@@ -10777,14 +10777,14 @@ public open class CfnBot(
        * @param plainTextMessage A message in plain text format.
        */
       override fun plainTextMessage(plainTextMessage: IResolvable) {
-        cdkBuilder.plainTextMessage(plainTextMessage.let(IResolvable::unwrap))
+        cdkBuilder.plainTextMessage(plainTextMessage.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param plainTextMessage A message in plain text format.
        */
       override fun plainTextMessage(plainTextMessage: PlainTextMessageProperty) {
-        cdkBuilder.plainTextMessage(plainTextMessage.let(PlainTextMessageProperty::unwrap))
+        cdkBuilder.plainTextMessage(plainTextMessage.let(PlainTextMessageProperty.Companion::unwrap))
       }
 
       /**
@@ -10799,14 +10799,14 @@ public open class CfnBot(
        * @param ssmlMessage A message in Speech Synthesis Markup Language (SSML).
        */
       override fun ssmlMessage(ssmlMessage: IResolvable) {
-        cdkBuilder.ssmlMessage(ssmlMessage.let(IResolvable::unwrap))
+        cdkBuilder.ssmlMessage(ssmlMessage.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param ssmlMessage A message in Speech Synthesis Markup Language (SSML).
        */
       override fun ssmlMessage(ssmlMessage: SSMLMessageProperty) {
-        cdkBuilder.ssmlMessage(ssmlMessage.let(SSMLMessageProperty::unwrap))
+        cdkBuilder.ssmlMessage(ssmlMessage.let(SSMLMessageProperty.Companion::unwrap))
       }
 
       /**
@@ -10962,7 +10962,7 @@ public open class CfnBot(
        * If the `allowMutlipleValues` is not set, the default value is `false` .
        */
       override fun allowMultipleValues(allowMultipleValues: IResolvable) {
-        cdkBuilder.allowMultipleValues(allowMultipleValues.let(IResolvable::unwrap))
+        cdkBuilder.allowMultipleValues(allowMultipleValues.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.lex.CfnBot.MultipleValuesSettingProperty =
@@ -11606,7 +11606,7 @@ public open class CfnBot(
        * `Failed` .
        */
       override fun failureConditional(failureConditional: IResolvable) {
-        cdkBuilder.failureConditional(failureConditional.let(IResolvable::unwrap))
+        cdkBuilder.failureConditional(failureConditional.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11615,7 +11615,7 @@ public open class CfnBot(
        * `Failed` .
        */
       override fun failureConditional(failureConditional: ConditionalSpecificationProperty) {
-        cdkBuilder.failureConditional(failureConditional.let(ConditionalSpecificationProperty::unwrap))
+        cdkBuilder.failureConditional(failureConditional.let(ConditionalSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -11634,7 +11634,7 @@ public open class CfnBot(
        * throws an exception or returns with the `State` field of the `Intent` object set to `Failed` .
        */
       override fun failureNextStep(failureNextStep: IResolvable) {
-        cdkBuilder.failureNextStep(failureNextStep.let(IResolvable::unwrap))
+        cdkBuilder.failureNextStep(failureNextStep.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11642,7 +11642,7 @@ public open class CfnBot(
        * throws an exception or returns with the `State` field of the `Intent` object set to `Failed` .
        */
       override fun failureNextStep(failureNextStep: DialogStateProperty) {
-        cdkBuilder.failureNextStep(failureNextStep.let(DialogStateProperty::unwrap))
+        cdkBuilder.failureNextStep(failureNextStep.let(DialogStateProperty.Companion::unwrap))
       }
 
       /**
@@ -11659,7 +11659,7 @@ public open class CfnBot(
        * the user input when the code hook fails.
        */
       override fun failureResponse(failureResponse: IResolvable) {
-        cdkBuilder.failureResponse(failureResponse.let(IResolvable::unwrap))
+        cdkBuilder.failureResponse(failureResponse.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11667,7 +11667,7 @@ public open class CfnBot(
        * the user input when the code hook fails.
        */
       override fun failureResponse(failureResponse: ResponseSpecificationProperty) {
-        cdkBuilder.failureResponse(failureResponse.let(ResponseSpecificationProperty::unwrap))
+        cdkBuilder.failureResponse(failureResponse.let(ResponseSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -11685,7 +11685,7 @@ public open class CfnBot(
        * hook finishes successfully.
        */
       override fun successConditional(successConditional: IResolvable) {
-        cdkBuilder.successConditional(successConditional.let(IResolvable::unwrap))
+        cdkBuilder.successConditional(successConditional.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11693,7 +11693,7 @@ public open class CfnBot(
        * hook finishes successfully.
        */
       override fun successConditional(successConditional: ConditionalSpecificationProperty) {
-        cdkBuilder.successConditional(successConditional.let(ConditionalSpecificationProperty::unwrap))
+        cdkBuilder.successConditional(successConditional.let(ConditionalSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -11711,7 +11711,7 @@ public open class CfnBot(
        * finishes successfully.
        */
       override fun successNextStep(successNextStep: IResolvable) {
-        cdkBuilder.successNextStep(successNextStep.let(IResolvable::unwrap))
+        cdkBuilder.successNextStep(successNextStep.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11719,7 +11719,7 @@ public open class CfnBot(
        * finishes successfully.
        */
       override fun successNextStep(successNextStep: DialogStateProperty) {
-        cdkBuilder.successNextStep(successNextStep.let(DialogStateProperty::unwrap))
+        cdkBuilder.successNextStep(successNextStep.let(DialogStateProperty.Companion::unwrap))
       }
 
       /**
@@ -11736,7 +11736,7 @@ public open class CfnBot(
        * when the code hook succeeds.
        */
       override fun successResponse(successResponse: IResolvable) {
-        cdkBuilder.successResponse(successResponse.let(IResolvable::unwrap))
+        cdkBuilder.successResponse(successResponse.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11744,7 +11744,7 @@ public open class CfnBot(
        * when the code hook succeeds.
        */
       override fun successResponse(successResponse: ResponseSpecificationProperty) {
-        cdkBuilder.successResponse(successResponse.let(ResponseSpecificationProperty::unwrap))
+        cdkBuilder.successResponse(successResponse.let(ResponseSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -11762,7 +11762,7 @@ public open class CfnBot(
        * out.
        */
       override fun timeoutConditional(timeoutConditional: IResolvable) {
-        cdkBuilder.timeoutConditional(timeoutConditional.let(IResolvable::unwrap))
+        cdkBuilder.timeoutConditional(timeoutConditional.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11770,7 +11770,7 @@ public open class CfnBot(
        * out.
        */
       override fun timeoutConditional(timeoutConditional: ConditionalSpecificationProperty) {
-        cdkBuilder.timeoutConditional(timeoutConditional.let(ConditionalSpecificationProperty::unwrap))
+        cdkBuilder.timeoutConditional(timeoutConditional.let(ConditionalSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -11788,7 +11788,7 @@ public open class CfnBot(
        * out.
        */
       override fun timeoutNextStep(timeoutNextStep: IResolvable) {
-        cdkBuilder.timeoutNextStep(timeoutNextStep.let(IResolvable::unwrap))
+        cdkBuilder.timeoutNextStep(timeoutNextStep.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11796,7 +11796,7 @@ public open class CfnBot(
        * out.
        */
       override fun timeoutNextStep(timeoutNextStep: DialogStateProperty) {
-        cdkBuilder.timeoutNextStep(timeoutNextStep.let(DialogStateProperty::unwrap))
+        cdkBuilder.timeoutNextStep(timeoutNextStep.let(DialogStateProperty.Companion::unwrap))
       }
 
       /**
@@ -11813,7 +11813,7 @@ public open class CfnBot(
        * to the user input when the code hook times out.
        */
       override fun timeoutResponse(timeoutResponse: IResolvable) {
-        cdkBuilder.timeoutResponse(timeoutResponse.let(IResolvable::unwrap))
+        cdkBuilder.timeoutResponse(timeoutResponse.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11821,7 +11821,7 @@ public open class CfnBot(
        * to the user input when the code hook times out.
        */
       override fun timeoutResponse(timeoutResponse: ResponseSpecificationProperty) {
-        cdkBuilder.timeoutResponse(timeoutResponse.let(ResponseSpecificationProperty::unwrap))
+        cdkBuilder.timeoutResponse(timeoutResponse.let(ResponseSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -12219,7 +12219,7 @@ public open class CfnBot(
        * `Failed` .
        */
       override fun failureConditional(failureConditional: IResolvable) {
-        cdkBuilder.failureConditional(failureConditional.let(IResolvable::unwrap))
+        cdkBuilder.failureConditional(failureConditional.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12228,7 +12228,7 @@ public open class CfnBot(
        * `Failed` .
        */
       override fun failureConditional(failureConditional: ConditionalSpecificationProperty) {
-        cdkBuilder.failureConditional(failureConditional.let(ConditionalSpecificationProperty::unwrap))
+        cdkBuilder.failureConditional(failureConditional.let(ConditionalSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -12247,7 +12247,7 @@ public open class CfnBot(
        * throws an exception or returns with the `State` field of the `Intent` object set to `Failed` .
        */
       override fun failureNextStep(failureNextStep: IResolvable) {
-        cdkBuilder.failureNextStep(failureNextStep.let(IResolvable::unwrap))
+        cdkBuilder.failureNextStep(failureNextStep.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12255,7 +12255,7 @@ public open class CfnBot(
        * throws an exception or returns with the `State` field of the `Intent` object set to `Failed` .
        */
       override fun failureNextStep(failureNextStep: DialogStateProperty) {
-        cdkBuilder.failureNextStep(failureNextStep.let(DialogStateProperty::unwrap))
+        cdkBuilder.failureNextStep(failureNextStep.let(DialogStateProperty.Companion::unwrap))
       }
 
       /**
@@ -12272,7 +12272,7 @@ public open class CfnBot(
        * when fulfillment isn't successful.
        */
       override fun failureResponse(failureResponse: IResolvable) {
-        cdkBuilder.failureResponse(failureResponse.let(IResolvable::unwrap))
+        cdkBuilder.failureResponse(failureResponse.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12280,7 +12280,7 @@ public open class CfnBot(
        * when fulfillment isn't successful.
        */
       override fun failureResponse(failureResponse: ResponseSpecificationProperty) {
-        cdkBuilder.failureResponse(failureResponse.let(ResponseSpecificationProperty::unwrap))
+        cdkBuilder.failureResponse(failureResponse.let(ResponseSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -12298,7 +12298,7 @@ public open class CfnBot(
        * code hook finishes successfully.
        */
       override fun successConditional(successConditional: IResolvable) {
-        cdkBuilder.successConditional(successConditional.let(IResolvable::unwrap))
+        cdkBuilder.successConditional(successConditional.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12306,7 +12306,7 @@ public open class CfnBot(
        * code hook finishes successfully.
        */
       override fun successConditional(successConditional: ConditionalSpecificationProperty) {
-        cdkBuilder.successConditional(successConditional.let(ConditionalSpecificationProperty::unwrap))
+        cdkBuilder.successConditional(successConditional.let(ConditionalSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -12324,7 +12324,7 @@ public open class CfnBot(
        * when the fulfillment code hook completes successfully.
        */
       override fun successNextStep(successNextStep: IResolvable) {
-        cdkBuilder.successNextStep(successNextStep.let(IResolvable::unwrap))
+        cdkBuilder.successNextStep(successNextStep.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12332,7 +12332,7 @@ public open class CfnBot(
        * when the fulfillment code hook completes successfully.
        */
       override fun successNextStep(successNextStep: DialogStateProperty) {
-        cdkBuilder.successNextStep(successNextStep.let(DialogStateProperty::unwrap))
+        cdkBuilder.successNextStep(successNextStep.let(DialogStateProperty.Companion::unwrap))
       }
 
       /**
@@ -12349,7 +12349,7 @@ public open class CfnBot(
        * when the fulfillment is successful.
        */
       override fun successResponse(successResponse: IResolvable) {
-        cdkBuilder.successResponse(successResponse.let(IResolvable::unwrap))
+        cdkBuilder.successResponse(successResponse.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12357,7 +12357,7 @@ public open class CfnBot(
        * when the fulfillment is successful.
        */
       override fun successResponse(successResponse: ResponseSpecificationProperty) {
-        cdkBuilder.successResponse(successResponse.let(ResponseSpecificationProperty::unwrap))
+        cdkBuilder.successResponse(successResponse.let(ResponseSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -12375,7 +12375,7 @@ public open class CfnBot(
        * code hook times out.
        */
       override fun timeoutConditional(timeoutConditional: IResolvable) {
-        cdkBuilder.timeoutConditional(timeoutConditional.let(IResolvable::unwrap))
+        cdkBuilder.timeoutConditional(timeoutConditional.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12383,7 +12383,7 @@ public open class CfnBot(
        * code hook times out.
        */
       override fun timeoutConditional(timeoutConditional: ConditionalSpecificationProperty) {
-        cdkBuilder.timeoutConditional(timeoutConditional.let(ConditionalSpecificationProperty::unwrap))
+        cdkBuilder.timeoutConditional(timeoutConditional.let(ConditionalSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -12401,7 +12401,7 @@ public open class CfnBot(
        * hook times out.
        */
       override fun timeoutNextStep(timeoutNextStep: IResolvable) {
-        cdkBuilder.timeoutNextStep(timeoutNextStep.let(IResolvable::unwrap))
+        cdkBuilder.timeoutNextStep(timeoutNextStep.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12409,7 +12409,7 @@ public open class CfnBot(
        * hook times out.
        */
       override fun timeoutNextStep(timeoutNextStep: DialogStateProperty) {
-        cdkBuilder.timeoutNextStep(timeoutNextStep.let(DialogStateProperty::unwrap))
+        cdkBuilder.timeoutNextStep(timeoutNextStep.let(DialogStateProperty.Companion::unwrap))
       }
 
       /**
@@ -12426,7 +12426,7 @@ public open class CfnBot(
        * when fulfillment isn't completed within the timeout period.
        */
       override fun timeoutResponse(timeoutResponse: IResolvable) {
-        cdkBuilder.timeoutResponse(timeoutResponse.let(IResolvable::unwrap))
+        cdkBuilder.timeoutResponse(timeoutResponse.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12434,7 +12434,7 @@ public open class CfnBot(
        * when fulfillment isn't completed within the timeout period.
        */
       override fun timeoutResponse(timeoutResponse: ResponseSpecificationProperty) {
-        cdkBuilder.timeoutResponse(timeoutResponse.let(ResponseSpecificationProperty::unwrap))
+        cdkBuilder.timeoutResponse(timeoutResponse.let(ResponseSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -12704,21 +12704,21 @@ public open class CfnBot(
        * the bot.
        */
       override fun allowInterrupt(allowInterrupt: IResolvable) {
-        cdkBuilder.allowInterrupt(allowInterrupt.let(IResolvable::unwrap))
+        cdkBuilder.allowInterrupt(allowInterrupt.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param allowedInputTypes Indicates the allowed input types of the prompt attempt. 
        */
       override fun allowedInputTypes(allowedInputTypes: IResolvable) {
-        cdkBuilder.allowedInputTypes(allowedInputTypes.let(IResolvable::unwrap))
+        cdkBuilder.allowedInputTypes(allowedInputTypes.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param allowedInputTypes Indicates the allowed input types of the prompt attempt. 
        */
       override fun allowedInputTypes(allowedInputTypes: AllowedInputTypesProperty) {
-        cdkBuilder.allowedInputTypes(allowedInputTypes.let(AllowedInputTypesProperty::unwrap))
+        cdkBuilder.allowedInputTypes(allowedInputTypes.let(AllowedInputTypesProperty.Companion::unwrap))
       }
 
       /**
@@ -12734,7 +12734,7 @@ public open class CfnBot(
        * @param audioAndDtmfInputSpecification Specifies the settings on audio and DTMF input.
        */
       override fun audioAndDtmfInputSpecification(audioAndDtmfInputSpecification: IResolvable) {
-        cdkBuilder.audioAndDtmfInputSpecification(audioAndDtmfInputSpecification.let(IResolvable::unwrap))
+        cdkBuilder.audioAndDtmfInputSpecification(audioAndDtmfInputSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12742,7 +12742,7 @@ public open class CfnBot(
        */
       override
           fun audioAndDtmfInputSpecification(audioAndDtmfInputSpecification: AudioAndDTMFInputSpecificationProperty) {
-        cdkBuilder.audioAndDtmfInputSpecification(audioAndDtmfInputSpecification.let(AudioAndDTMFInputSpecificationProperty::unwrap))
+        cdkBuilder.audioAndDtmfInputSpecification(audioAndDtmfInputSpecification.let(AudioAndDTMFInputSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -12759,14 +12759,14 @@ public open class CfnBot(
        * @param textInputSpecification Specifies the settings on text input.
        */
       override fun textInputSpecification(textInputSpecification: IResolvable) {
-        cdkBuilder.textInputSpecification(textInputSpecification.let(IResolvable::unwrap))
+        cdkBuilder.textInputSpecification(textInputSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param textInputSpecification Specifies the settings on text input.
        */
       override fun textInputSpecification(textInputSpecification: TextInputSpecificationProperty) {
-        cdkBuilder.textInputSpecification(textInputSpecification.let(TextInputSpecificationProperty::unwrap))
+        cdkBuilder.textInputSpecification(textInputSpecification.let(TextInputSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -13042,7 +13042,7 @@ public open class CfnBot(
        * bot.
        */
       override fun allowInterrupt(allowInterrupt: IResolvable) {
-        cdkBuilder.allowInterrupt(allowInterrupt.let(IResolvable::unwrap))
+        cdkBuilder.allowInterrupt(allowInterrupt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13058,7 +13058,7 @@ public open class CfnBot(
        * Amazon Lex chooses the actual message to send at runtime.
        */
       override fun messageGroupsList(messageGroupsList: IResolvable) {
-        cdkBuilder.messageGroupsList(messageGroupsList.let(IResolvable::unwrap))
+        cdkBuilder.messageGroupsList(messageGroupsList.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13089,7 +13089,7 @@ public open class CfnBot(
        * prompt.
        */
       override fun promptAttemptsSpecification(promptAttemptsSpecification: IResolvable) {
-        cdkBuilder.promptAttemptsSpecification(promptAttemptsSpecification.let(IResolvable::unwrap))
+        cdkBuilder.promptAttemptsSpecification(promptAttemptsSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13299,7 +13299,7 @@ public open class CfnBot(
        * Amazon Lex.
        */
       override fun allowInterrupt(allowInterrupt: IResolvable) {
-        cdkBuilder.allowInterrupt(allowInterrupt.let(IResolvable::unwrap))
+        cdkBuilder.allowInterrupt(allowInterrupt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13307,7 +13307,7 @@ public open class CfnBot(
        * Amazon Lex chooses the actual response to send at runtime.
        */
       override fun messageGroupsList(messageGroupsList: IResolvable) {
-        cdkBuilder.messageGroupsList(messageGroupsList.let(IResolvable::unwrap))
+        cdkBuilder.messageGroupsList(messageGroupsList.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -13938,7 +13938,7 @@ public open class CfnBot(
        * sentiment of user utterances. 
        */
       override fun detectSentiment(detectSentiment: IResolvable) {
-        cdkBuilder.detectSentiment(detectSentiment.let(IResolvable::unwrap))
+        cdkBuilder.detectSentiment(detectSentiment.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -14329,7 +14329,7 @@ public open class CfnBot(
        * is captured.
        */
       override fun captureConditional(captureConditional: IResolvable) {
-        cdkBuilder.captureConditional(captureConditional.let(IResolvable::unwrap))
+        cdkBuilder.captureConditional(captureConditional.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14337,7 +14337,7 @@ public open class CfnBot(
        * is captured.
        */
       override fun captureConditional(captureConditional: ConditionalSpecificationProperty) {
-        cdkBuilder.captureConditional(captureConditional.let(ConditionalSpecificationProperty::unwrap))
+        cdkBuilder.captureConditional(captureConditional.let(ConditionalSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -14355,7 +14355,7 @@ public open class CfnBot(
        * captured before the code hook times out.
        */
       override fun captureNextStep(captureNextStep: IResolvable) {
-        cdkBuilder.captureNextStep(captureNextStep.let(IResolvable::unwrap))
+        cdkBuilder.captureNextStep(captureNextStep.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14363,7 +14363,7 @@ public open class CfnBot(
        * captured before the code hook times out.
        */
       override fun captureNextStep(captureNextStep: DialogStateProperty) {
-        cdkBuilder.captureNextStep(captureNextStep.let(DialogStateProperty::unwrap))
+        cdkBuilder.captureNextStep(captureNextStep.let(DialogStateProperty.Companion::unwrap))
       }
 
       /**
@@ -14380,7 +14380,7 @@ public open class CfnBot(
        * the user input.
        */
       override fun captureResponse(captureResponse: IResolvable) {
-        cdkBuilder.captureResponse(captureResponse.let(IResolvable::unwrap))
+        cdkBuilder.captureResponse(captureResponse.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14388,7 +14388,7 @@ public open class CfnBot(
        * the user input.
        */
       override fun captureResponse(captureResponse: ResponseSpecificationProperty) {
-        cdkBuilder.captureResponse(captureResponse.let(ResponseSpecificationProperty::unwrap))
+        cdkBuilder.captureResponse(captureResponse.let(ResponseSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -14405,14 +14405,14 @@ public open class CfnBot(
        * @param codeHook Code hook called after Amazon Lex successfully captures a slot value.
        */
       override fun codeHook(codeHook: IResolvable) {
-        cdkBuilder.codeHook(codeHook.let(IResolvable::unwrap))
+        cdkBuilder.codeHook(codeHook.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param codeHook Code hook called after Amazon Lex successfully captures a slot value.
        */
       override fun codeHook(codeHook: DialogCodeHookInvocationSettingProperty) {
-        cdkBuilder.codeHook(codeHook.let(DialogCodeHookInvocationSettingProperty::unwrap))
+        cdkBuilder.codeHook(codeHook.let(DialogCodeHookInvocationSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -14427,7 +14427,7 @@ public open class CfnBot(
        * @param elicitationCodeHook Code hook called when Amazon Lex doesn't capture a slot value.
        */
       override fun elicitationCodeHook(elicitationCodeHook: IResolvable) {
-        cdkBuilder.elicitationCodeHook(elicitationCodeHook.let(IResolvable::unwrap))
+        cdkBuilder.elicitationCodeHook(elicitationCodeHook.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14435,7 +14435,7 @@ public open class CfnBot(
        */
       override
           fun elicitationCodeHook(elicitationCodeHook: ElicitationCodeHookInvocationSettingProperty) {
-        cdkBuilder.elicitationCodeHook(elicitationCodeHook.let(ElicitationCodeHookInvocationSettingProperty::unwrap))
+        cdkBuilder.elicitationCodeHook(elicitationCodeHook.let(ElicitationCodeHookInvocationSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -14453,7 +14453,7 @@ public open class CfnBot(
        * isn't captured.
        */
       override fun failureConditional(failureConditional: IResolvable) {
-        cdkBuilder.failureConditional(failureConditional.let(IResolvable::unwrap))
+        cdkBuilder.failureConditional(failureConditional.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14461,7 +14461,7 @@ public open class CfnBot(
        * isn't captured.
        */
       override fun failureConditional(failureConditional: ConditionalSpecificationProperty) {
-        cdkBuilder.failureConditional(failureConditional.let(ConditionalSpecificationProperty::unwrap))
+        cdkBuilder.failureConditional(failureConditional.let(ConditionalSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -14479,7 +14479,7 @@ public open class CfnBot(
        * is not recognized.
        */
       override fun failureNextStep(failureNextStep: IResolvable) {
-        cdkBuilder.failureNextStep(failureNextStep.let(IResolvable::unwrap))
+        cdkBuilder.failureNextStep(failureNextStep.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14487,7 +14487,7 @@ public open class CfnBot(
        * is not recognized.
        */
       override fun failureNextStep(failureNextStep: DialogStateProperty) {
-        cdkBuilder.failureNextStep(failureNextStep.let(DialogStateProperty::unwrap))
+        cdkBuilder.failureNextStep(failureNextStep.let(DialogStateProperty.Companion::unwrap))
       }
 
       /**
@@ -14504,7 +14504,7 @@ public open class CfnBot(
        * the user input when the slot fails to be captured.
        */
       override fun failureResponse(failureResponse: IResolvable) {
-        cdkBuilder.failureResponse(failureResponse.let(IResolvable::unwrap))
+        cdkBuilder.failureResponse(failureResponse.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14512,7 +14512,7 @@ public open class CfnBot(
        * the user input when the slot fails to be captured.
        */
       override fun failureResponse(failureResponse: ResponseSpecificationProperty) {
-        cdkBuilder.failureResponse(failureResponse.let(ResponseSpecificationProperty::unwrap))
+        cdkBuilder.failureResponse(failureResponse.let(ResponseSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -14758,7 +14758,7 @@ public open class CfnBot(
        * list.
        */
       override fun defaultValueList(defaultValueList: IResolvable) {
-        cdkBuilder.defaultValueList(defaultValueList.let(IResolvable::unwrap))
+        cdkBuilder.defaultValueList(defaultValueList.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -15118,14 +15118,14 @@ public open class CfnBot(
        * @param multipleValuesSetting Indicates whether a slot can return multiple values.
        */
       override fun multipleValuesSetting(multipleValuesSetting: IResolvable) {
-        cdkBuilder.multipleValuesSetting(multipleValuesSetting.let(IResolvable::unwrap))
+        cdkBuilder.multipleValuesSetting(multipleValuesSetting.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param multipleValuesSetting Indicates whether a slot can return multiple values.
        */
       override fun multipleValuesSetting(multipleValuesSetting: MultipleValuesSettingProperty) {
-        cdkBuilder.multipleValuesSetting(multipleValuesSetting.let(MultipleValuesSettingProperty::unwrap))
+        cdkBuilder.multipleValuesSetting(multipleValuesSetting.let(MultipleValuesSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -15151,7 +15151,7 @@ public open class CfnBot(
        * (PII) in logs.
        */
       override fun obfuscationSetting(obfuscationSetting: IResolvable) {
-        cdkBuilder.obfuscationSetting(obfuscationSetting.let(IResolvable::unwrap))
+        cdkBuilder.obfuscationSetting(obfuscationSetting.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -15161,7 +15161,7 @@ public open class CfnBot(
        * (PII) in logs.
        */
       override fun obfuscationSetting(obfuscationSetting: ObfuscationSettingProperty) {
-        cdkBuilder.obfuscationSetting(obfuscationSetting.let(ObfuscationSettingProperty::unwrap))
+        cdkBuilder.obfuscationSetting(obfuscationSetting.let(ObfuscationSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -15197,7 +15197,7 @@ public open class CfnBot(
        * If you don't specify the `valueSelectionStrategy` , the default is `ORIGINAL_VALUE` .
        */
       override fun valueElicitationSetting(valueElicitationSetting: IResolvable) {
-        cdkBuilder.valueElicitationSetting(valueElicitationSetting.let(IResolvable::unwrap))
+        cdkBuilder.valueElicitationSetting(valueElicitationSetting.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -15214,7 +15214,7 @@ public open class CfnBot(
        */
       override
           fun valueElicitationSetting(valueElicitationSetting: SlotValueElicitationSettingProperty) {
-        cdkBuilder.valueElicitationSetting(valueElicitationSetting.let(SlotValueElicitationSettingProperty::unwrap))
+        cdkBuilder.valueElicitationSetting(valueElicitationSetting.let(SlotValueElicitationSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -15561,7 +15561,7 @@ public open class CfnBot(
        * type.
        */
       override fun externalSourceSetting(externalSourceSetting: IResolvable) {
-        cdkBuilder.externalSourceSetting(externalSourceSetting.let(IResolvable::unwrap))
+        cdkBuilder.externalSourceSetting(externalSourceSetting.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -15569,7 +15569,7 @@ public open class CfnBot(
        * type.
        */
       override fun externalSourceSetting(externalSourceSetting: ExternalSourceSettingProperty) {
-        cdkBuilder.externalSourceSetting(externalSourceSetting.let(ExternalSourceSettingProperty::unwrap))
+        cdkBuilder.externalSourceSetting(externalSourceSetting.let(ExternalSourceSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -15608,7 +15608,7 @@ public open class CfnBot(
        * learning model about the values that it resolves for the slot.
        */
       override fun slotTypeValues(slotTypeValues: IResolvable) {
-        cdkBuilder.slotTypeValues(slotTypeValues.let(IResolvable::unwrap))
+        cdkBuilder.slotTypeValues(slotTypeValues.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -15643,7 +15643,7 @@ public open class CfnBot(
        * If you don't specify the `valueSelectionStrategy` , the default is `ORIGINAL_VALUE` .
        */
       override fun valueSelectionSetting(valueSelectionSetting: IResolvable) {
-        cdkBuilder.valueSelectionSetting(valueSelectionSetting.let(IResolvable::unwrap))
+        cdkBuilder.valueSelectionSetting(valueSelectionSetting.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -15659,7 +15659,7 @@ public open class CfnBot(
        * If you don't specify the `valueSelectionStrategy` , the default is `ORIGINAL_VALUE` .
        */
       override fun valueSelectionSetting(valueSelectionSetting: SlotValueSelectionSettingProperty) {
-        cdkBuilder.valueSelectionSetting(valueSelectionSetting.let(SlotValueSelectionSettingProperty::unwrap))
+        cdkBuilder.valueSelectionSetting(valueSelectionSetting.let(SlotValueSelectionSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -15853,14 +15853,14 @@ public open class CfnBot(
        * @param sampleValue The value of the slot type entry. 
        */
       override fun sampleValue(sampleValue: IResolvable) {
-        cdkBuilder.sampleValue(sampleValue.let(IResolvable::unwrap))
+        cdkBuilder.sampleValue(sampleValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sampleValue The value of the slot type entry. 
        */
       override fun sampleValue(sampleValue: SampleValueProperty) {
-        cdkBuilder.sampleValue(sampleValue.let(SampleValueProperty::unwrap))
+        cdkBuilder.sampleValue(sampleValue.let(SampleValueProperty.Companion::unwrap))
       }
 
       /**
@@ -15875,7 +15875,7 @@ public open class CfnBot(
        * @param synonyms Additional values related to the slot type entry.
        */
       override fun synonyms(synonyms: IResolvable) {
-        cdkBuilder.synonyms(synonyms.let(IResolvable::unwrap))
+        cdkBuilder.synonyms(synonyms.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16121,7 +16121,7 @@ public open class CfnBot(
        * specify default values from context variables, session attributes, and defined values.
        */
       override fun defaultValueSpecification(defaultValueSpecification: IResolvable) {
-        cdkBuilder.defaultValueSpecification(defaultValueSpecification.let(IResolvable::unwrap))
+        cdkBuilder.defaultValueSpecification(defaultValueSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16131,7 +16131,7 @@ public open class CfnBot(
        */
       override
           fun defaultValueSpecification(defaultValueSpecification: SlotDefaultValueSpecificationProperty) {
-        cdkBuilder.defaultValueSpecification(defaultValueSpecification.let(SlotDefaultValueSpecificationProperty::unwrap))
+        cdkBuilder.defaultValueSpecification(defaultValueSpecification.let(SlotDefaultValueSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -16151,7 +16151,7 @@ public open class CfnBot(
        * the user.
        */
       override fun promptSpecification(promptSpecification: IResolvable) {
-        cdkBuilder.promptSpecification(promptSpecification.let(IResolvable::unwrap))
+        cdkBuilder.promptSpecification(promptSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16159,7 +16159,7 @@ public open class CfnBot(
        * the user.
        */
       override fun promptSpecification(promptSpecification: PromptSpecificationProperty) {
-        cdkBuilder.promptSpecification(promptSpecification.let(PromptSpecificationProperty::unwrap))
+        cdkBuilder.promptSpecification(promptSpecification.let(PromptSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -16178,7 +16178,7 @@ public open class CfnBot(
        * This is optional. In most cases, Amazon Lex is capable of understanding user utterances.
        */
       override fun sampleUtterances(sampleUtterances: IResolvable) {
-        cdkBuilder.sampleUtterances(sampleUtterances.let(IResolvable::unwrap))
+        cdkBuilder.sampleUtterances(sampleUtterances.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16203,7 +16203,7 @@ public open class CfnBot(
        * successfully entered by a user.
        */
       override fun slotCaptureSetting(slotCaptureSetting: IResolvable) {
-        cdkBuilder.slotCaptureSetting(slotCaptureSetting.let(IResolvable::unwrap))
+        cdkBuilder.slotCaptureSetting(slotCaptureSetting.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16211,7 +16211,7 @@ public open class CfnBot(
        * successfully entered by a user.
        */
       override fun slotCaptureSetting(slotCaptureSetting: SlotCaptureSettingProperty) {
-        cdkBuilder.slotCaptureSetting(slotCaptureSetting.let(SlotCaptureSettingProperty::unwrap))
+        cdkBuilder.slotCaptureSetting(slotCaptureSetting.let(SlotCaptureSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -16236,7 +16236,7 @@ public open class CfnBot(
        * is waiting for customer input.
        */
       override fun waitAndContinueSpecification(waitAndContinueSpecification: IResolvable) {
-        cdkBuilder.waitAndContinueSpecification(waitAndContinueSpecification.let(IResolvable::unwrap))
+        cdkBuilder.waitAndContinueSpecification(waitAndContinueSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16245,7 +16245,7 @@ public open class CfnBot(
        */
       override
           fun waitAndContinueSpecification(waitAndContinueSpecification: WaitAndContinueSpecificationProperty) {
-        cdkBuilder.waitAndContinueSpecification(waitAndContinueSpecification.let(WaitAndContinueSpecificationProperty::unwrap))
+        cdkBuilder.waitAndContinueSpecification(waitAndContinueSpecification.let(WaitAndContinueSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -16427,7 +16427,7 @@ public open class CfnBot(
        * mapped.
        */
       override fun slotValueOverride(slotValueOverride: IResolvable) {
-        cdkBuilder.slotValueOverride(slotValueOverride.let(IResolvable::unwrap))
+        cdkBuilder.slotValueOverride(slotValueOverride.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -16435,7 +16435,7 @@ public open class CfnBot(
        * mapped.
        */
       override fun slotValueOverride(slotValueOverride: SlotValueOverrideProperty) {
-        cdkBuilder.slotValueOverride(slotValueOverride.let(SlotValueOverrideProperty::unwrap))
+        cdkBuilder.slotValueOverride(slotValueOverride.let(SlotValueOverrideProperty.Companion::unwrap))
       }
 
       /**
@@ -16606,14 +16606,14 @@ public open class CfnBot(
        * @param value The current value of the slot.
        */
       override fun `value`(`value`: IResolvable) {
-        cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
+        cdkBuilder.`value`(`value`.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param value The current value of the slot.
        */
       override fun `value`(`value`: SlotValueProperty) {
-        cdkBuilder.`value`(`value`.let(SlotValueProperty::unwrap))
+        cdkBuilder.`value`(`value`.let(SlotValueProperty.Companion::unwrap))
       }
 
       /**
@@ -16630,7 +16630,7 @@ public open class CfnBot(
        * "pineapple."
        */
       override fun values(values: IResolvable) {
-        cdkBuilder.values(values.let(IResolvable::unwrap))
+        cdkBuilder.values(values.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -17063,7 +17063,7 @@ public open class CfnBot(
        * utterances.
        */
       override fun advancedRecognitionSetting(advancedRecognitionSetting: IResolvable) {
-        cdkBuilder.advancedRecognitionSetting(advancedRecognitionSetting.let(IResolvable::unwrap))
+        cdkBuilder.advancedRecognitionSetting(advancedRecognitionSetting.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -17074,7 +17074,7 @@ public open class CfnBot(
        */
       override
           fun advancedRecognitionSetting(advancedRecognitionSetting: AdvancedRecognitionSettingProperty) {
-        cdkBuilder.advancedRecognitionSetting(advancedRecognitionSetting.let(AdvancedRecognitionSettingProperty::unwrap))
+        cdkBuilder.advancedRecognitionSetting(advancedRecognitionSetting.let(AdvancedRecognitionSettingProperty.Companion::unwrap))
       }
 
       /**
@@ -17094,14 +17094,14 @@ public open class CfnBot(
        * @param regexFilter A regular expression used to validate the value of a slot.
        */
       override fun regexFilter(regexFilter: IResolvable) {
-        cdkBuilder.regexFilter(regexFilter.let(IResolvable::unwrap))
+        cdkBuilder.regexFilter(regexFilter.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param regexFilter A regular expression used to validate the value of a slot.
        */
       override fun regexFilter(regexFilter: SlotValueRegexFilterProperty) {
-        cdkBuilder.regexFilter(regexFilter.let(SlotValueRegexFilterProperty::unwrap))
+        cdkBuilder.regexFilter(regexFilter.let(SlotValueRegexFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -17356,7 +17356,7 @@ public open class CfnBot(
        * the message is being played.
        */
       override fun allowInterrupt(allowInterrupt: IResolvable) {
-        cdkBuilder.allowInterrupt(allowInterrupt.let(IResolvable::unwrap))
+        cdkBuilder.allowInterrupt(allowInterrupt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -17372,7 +17372,7 @@ public open class CfnBot(
        * that define the prompts that Amazon Lex sends to the user. 
        */
       override fun messageGroupsList(messageGroupsList: IResolvable) {
-        cdkBuilder.messageGroupsList(messageGroupsList.let(IResolvable::unwrap))
+        cdkBuilder.messageGroupsList(messageGroupsList.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -17615,7 +17615,7 @@ public open class CfnBot(
        * For example, you can use a different Lambda function depending on the bot's locale.
        */
       override fun botAliasLocaleSettings(botAliasLocaleSettings: IResolvable) {
-        cdkBuilder.botAliasLocaleSettings(botAliasLocaleSettings.let(IResolvable::unwrap))
+        cdkBuilder.botAliasLocaleSettings(botAliasLocaleSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -17638,7 +17638,7 @@ public open class CfnBot(
        * text, and metadata information for conversations with your users.
        */
       override fun conversationLogSettings(conversationLogSettings: IResolvable) {
-        cdkBuilder.conversationLogSettings(conversationLogSettings.let(IResolvable::unwrap))
+        cdkBuilder.conversationLogSettings(conversationLogSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -17647,7 +17647,7 @@ public open class CfnBot(
        */
       override
           fun conversationLogSettings(conversationLogSettings: ConversationLogSettingsProperty) {
-        cdkBuilder.conversationLogSettings(conversationLogSettings.let(ConversationLogSettingsProperty::unwrap))
+        cdkBuilder.conversationLogSettings(conversationLogSettings.let(ConversationLogSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -17879,7 +17879,7 @@ public open class CfnBot(
        * are delivered. 
        */
       override fun cloudWatch(cloudWatch: IResolvable) {
-        cdkBuilder.cloudWatch(cloudWatch.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatch(cloudWatch.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -17887,7 +17887,7 @@ public open class CfnBot(
        * are delivered. 
        */
       override fun cloudWatch(cloudWatch: CloudWatchLogGroupLogDestinationProperty) {
-        cdkBuilder.cloudWatch(cloudWatch.let(CloudWatchLogGroupLogDestinationProperty::unwrap))
+        cdkBuilder.cloudWatch(cloudWatch.let(CloudWatchLogGroupLogDestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -18016,7 +18016,7 @@ public open class CfnBot(
        * conversation text logs. 
        */
       override fun destination(destination: IResolvable) {
-        cdkBuilder.destination(destination.let(IResolvable::unwrap))
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -18024,7 +18024,7 @@ public open class CfnBot(
        * conversation text logs. 
        */
       override fun destination(destination: TextLogDestinationProperty) {
-        cdkBuilder.destination(destination.let(TextLogDestinationProperty::unwrap))
+        cdkBuilder.destination(destination.let(TextLogDestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -18047,7 +18047,7 @@ public open class CfnBot(
        * @param enabled Determines whether conversation logs should be stored for an alias. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.lex.CfnBot.TextLogSettingProperty =
@@ -18517,7 +18517,7 @@ public open class CfnBot(
        * ready to continue the conversation. 
        */
       override fun continueResponse(continueResponse: IResolvable) {
-        cdkBuilder.continueResponse(continueResponse.let(IResolvable::unwrap))
+        cdkBuilder.continueResponse(continueResponse.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -18525,7 +18525,7 @@ public open class CfnBot(
        * ready to continue the conversation. 
        */
       override fun continueResponse(continueResponse: ResponseSpecificationProperty) {
-        cdkBuilder.continueResponse(continueResponse.let(ResponseSpecificationProperty::unwrap))
+        cdkBuilder.continueResponse(continueResponse.let(ResponseSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -18553,7 +18553,7 @@ public open class CfnBot(
        * `IsActive` field isn't specified, the default is true.
        */
       override fun isActive(isActive: IResolvable) {
-        cdkBuilder.isActive(isActive.let(IResolvable::unwrap))
+        cdkBuilder.isActive(isActive.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -18561,7 +18561,7 @@ public open class CfnBot(
        * indicate that the bot is still waiting for input from the user.
        */
       override fun stillWaitingResponse(stillWaitingResponse: IResolvable) {
-        cdkBuilder.stillWaitingResponse(stillWaitingResponse.let(IResolvable::unwrap))
+        cdkBuilder.stillWaitingResponse(stillWaitingResponse.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -18570,7 +18570,7 @@ public open class CfnBot(
        */
       override
           fun stillWaitingResponse(stillWaitingResponse: StillWaitingResponseSpecificationProperty) {
-        cdkBuilder.stillWaitingResponse(stillWaitingResponse.let(StillWaitingResponseSpecificationProperty::unwrap))
+        cdkBuilder.stillWaitingResponse(stillWaitingResponse.let(StillWaitingResponseSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -18589,7 +18589,7 @@ public open class CfnBot(
        * waiting for the conversation to continue. 
        */
       override fun waitingResponse(waitingResponse: IResolvable) {
-        cdkBuilder.waitingResponse(waitingResponse.let(IResolvable::unwrap))
+        cdkBuilder.waitingResponse(waitingResponse.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -18597,7 +18597,7 @@ public open class CfnBot(
        * waiting for the conversation to continue. 
        */
       override fun waitingResponse(waitingResponse: ResponseSpecificationProperty) {
-        cdkBuilder.waitingResponse(waitingResponse.let(ResponseSpecificationProperty::unwrap))
+        cdkBuilder.waitingResponse(waitingResponse.let(ResponseSpecificationProperty.Companion::unwrap))
       }
 
       /**

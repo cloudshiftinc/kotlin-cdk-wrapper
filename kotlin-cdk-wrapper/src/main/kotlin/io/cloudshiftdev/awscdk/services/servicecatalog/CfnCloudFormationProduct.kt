@@ -80,8 +80,8 @@ public open class CfnCloudFormationProduct(
     id: String,
     props: CfnCloudFormationProductProps,
   ) :
-      this(software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCloudFormationProductProps::unwrap))
+      this(software.amazon.awscdk.services.servicecatalog.CfnCloudFormationProduct(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCloudFormationProductProps.Companion::unwrap))
   )
 
   public constructor(
@@ -155,7 +155,7 @@ public open class CfnCloudFormationProduct(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -204,7 +204,7 @@ public open class CfnCloudFormationProduct(
    * The configuration of the provisioning artifact (also known as a version).
    */
   public open fun provisioningArtifactParameters(`value`: IResolvable) {
-    unwrap(this).setProvisioningArtifactParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProvisioningArtifactParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -237,7 +237,7 @@ public open class CfnCloudFormationProduct(
    * This property is turned off by default.
    */
   public open fun replaceProvisioningArtifacts(`value`: IResolvable) {
-    unwrap(this).setReplaceProvisioningArtifacts(`value`.let(IResolvable::unwrap))
+    unwrap(this).setReplaceProvisioningArtifacts(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -249,14 +249,14 @@ public open class CfnCloudFormationProduct(
    * A top level `ProductViewDetail` response containing details about the product’s connection.
    */
   public open fun sourceConnection(`value`: IResolvable) {
-    unwrap(this).setSourceConnection(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSourceConnection(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A top level `ProductViewDetail` response containing details about the product’s connection.
    */
   public open fun sourceConnection(`value`: SourceConnectionProperty) {
-    unwrap(this).setSourceConnection(`value`.let(SourceConnectionProperty::unwrap))
+    unwrap(this).setSourceConnection(`value`.let(SourceConnectionProperty.Companion::unwrap))
   }
 
   /**
@@ -318,7 +318,7 @@ public open class CfnCloudFormationProduct(
    * One or more tags.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -610,7 +610,7 @@ public open class CfnCloudFormationProduct(
      * known as a version). 
      */
     override fun provisioningArtifactParameters(provisioningArtifactParameters: IResolvable) {
-      cdkBuilder.provisioningArtifactParameters(provisioningArtifactParameters.let(IResolvable::unwrap))
+      cdkBuilder.provisioningArtifactParameters(provisioningArtifactParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -671,7 +671,7 @@ public open class CfnCloudFormationProduct(
      * @param replaceProvisioningArtifacts This property is turned off by default. 
      */
     override fun replaceProvisioningArtifacts(replaceProvisioningArtifacts: IResolvable) {
-      cdkBuilder.replaceProvisioningArtifacts(replaceProvisioningArtifacts.let(IResolvable::unwrap))
+      cdkBuilder.replaceProvisioningArtifacts(replaceProvisioningArtifacts.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -686,7 +686,7 @@ public open class CfnCloudFormationProduct(
      * product’s connection. 
      */
     override fun sourceConnection(sourceConnection: IResolvable) {
-      cdkBuilder.sourceConnection(sourceConnection.let(IResolvable::unwrap))
+      cdkBuilder.sourceConnection(sourceConnection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -701,7 +701,7 @@ public open class CfnCloudFormationProduct(
      * product’s connection. 
      */
     override fun sourceConnection(sourceConnection: SourceConnectionProperty) {
-      cdkBuilder.sourceConnection(sourceConnection.let(SourceConnectionProperty::unwrap))
+      cdkBuilder.sourceConnection(sourceConnection.let(SourceConnectionProperty.Companion::unwrap))
     }
 
     /**
@@ -759,7 +759,7 @@ public open class CfnCloudFormationProduct(
      * @param tags One or more tags. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1034,14 +1034,14 @@ public open class CfnCloudFormationProduct(
        * @param codeStar Provides `ConnectionType` details.
        */
       override fun codeStar(codeStar: IResolvable) {
-        cdkBuilder.codeStar(codeStar.let(IResolvable::unwrap))
+        cdkBuilder.codeStar(codeStar.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param codeStar Provides `ConnectionType` details.
        */
       override fun codeStar(codeStar: CodeStarParametersProperty) {
-        cdkBuilder.codeStar(codeStar.let(CodeStarParametersProperty::unwrap))
+        cdkBuilder.codeStar(codeStar.let(CodeStarParametersProperty.Companion::unwrap))
       }
 
       /**
@@ -1248,7 +1248,7 @@ public open class CfnCloudFormationProduct(
        * specified provisioning artifact even if it is invalid.
        */
       override fun disableTemplateValidation(disableTemplateValidation: IResolvable) {
-        cdkBuilder.disableTemplateValidation(disableTemplateValidation.let(IResolvable::unwrap))
+        cdkBuilder.disableTemplateValidation(disableTemplateValidation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1454,14 +1454,14 @@ public open class CfnCloudFormationProduct(
        * @param connectionParameters The connection details based on the connection `Type` . 
        */
       override fun connectionParameters(connectionParameters: IResolvable) {
-        cdkBuilder.connectionParameters(connectionParameters.let(IResolvable::unwrap))
+        cdkBuilder.connectionParameters(connectionParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param connectionParameters The connection details based on the connection `Type` . 
        */
       override fun connectionParameters(connectionParameters: ConnectionParametersProperty) {
-        cdkBuilder.connectionParameters(connectionParameters.let(ConnectionParametersProperty::unwrap))
+        cdkBuilder.connectionParameters(connectionParameters.let(ConnectionParametersProperty.Companion::unwrap))
       }
 
       /**

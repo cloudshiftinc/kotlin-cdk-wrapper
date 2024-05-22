@@ -257,7 +257,7 @@ public interface CfnImageRecipeProps {
      * and add scripts to run when an instance is launched from your AMI.
      */
     override fun additionalInstanceConfiguration(additionalInstanceConfiguration: IResolvable) {
-      cdkBuilder.additionalInstanceConfiguration(additionalInstanceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.additionalInstanceConfiguration(additionalInstanceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -268,7 +268,7 @@ public interface CfnImageRecipeProps {
      */
     override
         fun additionalInstanceConfiguration(additionalInstanceConfiguration: CfnImageRecipe.AdditionalInstanceConfigurationProperty) {
-      cdkBuilder.additionalInstanceConfiguration(additionalInstanceConfiguration.let(CfnImageRecipe.AdditionalInstanceConfigurationProperty::unwrap))
+      cdkBuilder.additionalInstanceConfiguration(additionalInstanceConfiguration.let(CfnImageRecipe.AdditionalInstanceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -289,7 +289,7 @@ public interface CfnImageRecipeProps {
      * recipe.
      */
     override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
-      cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable::unwrap))
+      cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -314,7 +314,7 @@ public interface CfnImageRecipeProps {
      * hardening steps. A component is defined using a YAML document format.
      */
     override fun components(components: IResolvable) {
-      cdkBuilder.components(components.let(IResolvable::unwrap))
+      cdkBuilder.components(components.let(IResolvable.Companion::unwrap))
     }
 
     /**

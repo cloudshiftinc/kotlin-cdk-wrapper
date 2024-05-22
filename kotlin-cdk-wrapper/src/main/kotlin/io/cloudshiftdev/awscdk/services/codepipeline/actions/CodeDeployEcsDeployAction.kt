@@ -49,7 +49,7 @@ public open class CodeDeployEcsDeployAction(
   cdkObject: software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsDeployAction,
 ) : Action(cdkObject) {
   public constructor(props: CodeDeployEcsDeployActionProps) :
-      this(software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsDeployAction(props.let(CodeDeployEcsDeployActionProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.actions.CodeDeployEcsDeployAction(props.let(CodeDeployEcsDeployActionProps.Companion::unwrap))
   )
 
   public constructor(props: CodeDeployEcsDeployActionProps.Builder.() -> Unit) :
@@ -245,7 +245,7 @@ public open class CodeDeployEcsDeployAction(
      * @param appSpecTemplateFile The name of the CodeDeploy AppSpec file. 
      */
     override fun appSpecTemplateFile(appSpecTemplateFile: ArtifactPath) {
-      cdkBuilder.appSpecTemplateFile(appSpecTemplateFile.let(ArtifactPath::unwrap))
+      cdkBuilder.appSpecTemplateFile(appSpecTemplateFile.let(ArtifactPath.Companion::unwrap))
     }
 
     /**
@@ -265,7 +265,7 @@ public open class CodeDeployEcsDeployAction(
      * @param appSpecTemplateInput The artifact containing the CodeDeploy AppSpec file. 
      */
     override fun appSpecTemplateInput(appSpecTemplateInput: Artifact) {
-      cdkBuilder.appSpecTemplateInput(appSpecTemplateInput.let(Artifact::unwrap))
+      cdkBuilder.appSpecTemplateInput(appSpecTemplateInput.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -280,7 +280,7 @@ public open class CodeDeployEcsDeployAction(
      */
     override
         fun containerImageInputs(containerImageInputs: List<CodeDeployEcsContainerImageInput>) {
-      cdkBuilder.containerImageInputs(containerImageInputs.map(CodeDeployEcsContainerImageInput::unwrap))
+      cdkBuilder.containerImageInputs(containerImageInputs.map(CodeDeployEcsContainerImageInput.Companion::unwrap))
     }
 
     /**
@@ -303,7 +303,7 @@ public open class CodeDeployEcsDeployAction(
      * @param deploymentGroup The CodeDeploy ECS Deployment Group to deploy to. 
      */
     override fun deploymentGroup(deploymentGroup: IEcsDeploymentGroup) {
-      cdkBuilder.deploymentGroup(deploymentGroup.let(IEcsDeploymentGroup::unwrap))
+      cdkBuilder.deploymentGroup(deploymentGroup.let(IEcsDeploymentGroup.Companion::unwrap))
     }
 
     /**
@@ -320,7 +320,7 @@ public open class CodeDeployEcsDeployAction(
      * @param role The Role in which context's this Action will be executing in. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -353,7 +353,7 @@ public open class CodeDeployEcsDeployAction(
      * @param taskDefinitionTemplateFile The name of the ECS task definition template file. 
      */
     override fun taskDefinitionTemplateFile(taskDefinitionTemplateFile: ArtifactPath) {
-      cdkBuilder.taskDefinitionTemplateFile(taskDefinitionTemplateFile.let(ArtifactPath::unwrap))
+      cdkBuilder.taskDefinitionTemplateFile(taskDefinitionTemplateFile.let(ArtifactPath.Companion::unwrap))
     }
 
     /**
@@ -372,7 +372,7 @@ public open class CodeDeployEcsDeployAction(
      * file. 
      */
     override fun taskDefinitionTemplateInput(taskDefinitionTemplateInput: Artifact) {
-      cdkBuilder.taskDefinitionTemplateInput(taskDefinitionTemplateInput.let(Artifact::unwrap))
+      cdkBuilder.taskDefinitionTemplateInput(taskDefinitionTemplateInput.let(Artifact.Companion::unwrap))
     }
 
     /**

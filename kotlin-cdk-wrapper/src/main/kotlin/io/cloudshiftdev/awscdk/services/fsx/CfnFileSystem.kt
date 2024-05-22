@@ -163,8 +163,8 @@ public open class CfnFileSystem(
     id: String,
     props: CfnFileSystemProps,
   ) :
-      this(software.amazon.awscdk.services.fsx.CfnFileSystem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFileSystemProps::unwrap))
+      this(software.amazon.awscdk.services.fsx.CfnFileSystem(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFileSystemProps.Companion::unwrap))
   )
 
   public constructor(
@@ -255,7 +255,7 @@ public open class CfnFileSystem(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -281,14 +281,14 @@ public open class CfnFileSystem(
    * The Lustre configuration for the file system being created.
    */
   public open fun lustreConfiguration(`value`: IResolvable) {
-    unwrap(this).setLustreConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLustreConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The Lustre configuration for the file system being created.
    */
   public open fun lustreConfiguration(`value`: LustreConfigurationProperty) {
-    unwrap(this).setLustreConfiguration(`value`.let(LustreConfigurationProperty::unwrap))
+    unwrap(this).setLustreConfiguration(`value`.let(LustreConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -308,14 +308,14 @@ public open class CfnFileSystem(
    * The ONTAP configuration properties of the FSx for ONTAP file system that you are creating.
    */
   public open fun ontapConfiguration(`value`: IResolvable) {
-    unwrap(this).setOntapConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOntapConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The ONTAP configuration properties of the FSx for ONTAP file system that you are creating.
    */
   public open fun ontapConfiguration(`value`: OntapConfigurationProperty) {
-    unwrap(this).setOntapConfiguration(`value`.let(OntapConfigurationProperty::unwrap))
+    unwrap(this).setOntapConfiguration(`value`.let(OntapConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -335,14 +335,14 @@ public open class CfnFileSystem(
    * The Amazon FSx for OpenZFS configuration properties for the file system that you are creating.
    */
   public open fun openZfsConfiguration(`value`: IResolvable) {
-    unwrap(this).setOpenZfsConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOpenZfsConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The Amazon FSx for OpenZFS configuration properties for the file system that you are creating.
    */
   public open fun openZfsConfiguration(`value`: OpenZFSConfigurationProperty) {
-    unwrap(this).setOpenZfsConfiguration(`value`.let(OpenZFSConfigurationProperty::unwrap))
+    unwrap(this).setOpenZfsConfiguration(`value`.let(OpenZFSConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -435,7 +435,7 @@ public open class CfnFileSystem(
    * The tags to associate with the file system.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -452,14 +452,14 @@ public open class CfnFileSystem(
    * The configuration object for the Microsoft Windows file system you are creating.
    */
   public open fun windowsConfiguration(`value`: IResolvable) {
-    unwrap(this).setWindowsConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setWindowsConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration object for the Microsoft Windows file system you are creating.
    */
   public open fun windowsConfiguration(`value`: WindowsConfigurationProperty) {
-    unwrap(this).setWindowsConfiguration(`value`.let(WindowsConfigurationProperty::unwrap))
+    unwrap(this).setWindowsConfiguration(`value`.let(WindowsConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -956,7 +956,7 @@ public open class CfnFileSystem(
      * @param lustreConfiguration The Lustre configuration for the file system being created. 
      */
     override fun lustreConfiguration(lustreConfiguration: IResolvable) {
-      cdkBuilder.lustreConfiguration(lustreConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.lustreConfiguration(lustreConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -976,7 +976,7 @@ public open class CfnFileSystem(
      * @param lustreConfiguration The Lustre configuration for the file system being created. 
      */
     override fun lustreConfiguration(lustreConfiguration: LustreConfigurationProperty) {
-      cdkBuilder.lustreConfiguration(lustreConfiguration.let(LustreConfigurationProperty::unwrap))
+      cdkBuilder.lustreConfiguration(lustreConfiguration.let(LustreConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1009,7 +1009,7 @@ public open class CfnFileSystem(
      * that you are creating. 
      */
     override fun ontapConfiguration(ontapConfiguration: IResolvable) {
-      cdkBuilder.ontapConfiguration(ontapConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.ontapConfiguration(ontapConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1020,7 +1020,7 @@ public open class CfnFileSystem(
      * that you are creating. 
      */
     override fun ontapConfiguration(ontapConfiguration: OntapConfigurationProperty) {
-      cdkBuilder.ontapConfiguration(ontapConfiguration.let(OntapConfigurationProperty::unwrap))
+      cdkBuilder.ontapConfiguration(ontapConfiguration.let(OntapConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1045,7 +1045,7 @@ public open class CfnFileSystem(
      * system that you are creating. 
      */
     override fun openZfsConfiguration(openZfsConfiguration: IResolvable) {
-      cdkBuilder.openZfsConfiguration(openZfsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.openZfsConfiguration(openZfsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1057,7 +1057,7 @@ public open class CfnFileSystem(
      * system that you are creating. 
      */
     override fun openZfsConfiguration(openZfsConfiguration: OpenZFSConfigurationProperty) {
-      cdkBuilder.openZfsConfiguration(openZfsConfiguration.let(OpenZFSConfigurationProperty::unwrap))
+      cdkBuilder.openZfsConfiguration(openZfsConfiguration.let(OpenZFSConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1229,7 +1229,7 @@ public open class CfnFileSystem(
      * @param tags The tags to associate with the file system. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1254,7 +1254,7 @@ public open class CfnFileSystem(
      * you are creating. 
      */
     override fun windowsConfiguration(windowsConfiguration: IResolvable) {
-      cdkBuilder.windowsConfiguration(windowsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.windowsConfiguration(windowsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1267,7 +1267,7 @@ public open class CfnFileSystem(
      * you are creating. 
      */
     override fun windowsConfiguration(windowsConfiguration: WindowsConfigurationProperty) {
-      cdkBuilder.windowsConfiguration(windowsConfiguration.let(WindowsConfigurationProperty::unwrap))
+      cdkBuilder.windowsConfiguration(windowsConfiguration.let(WindowsConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -2440,7 +2440,7 @@ public open class CfnFileSystem(
        * *Amazon FSx for Lustre User Guide* .
        */
       override fun copyTagsToBackups(copyTagsToBackups: IResolvable) {
-        cdkBuilder.copyTagsToBackups(copyTagsToBackups.let(IResolvable::unwrap))
+        cdkBuilder.copyTagsToBackups(copyTagsToBackups.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2931,7 +2931,7 @@ public open class CfnFileSystem(
        * options for mounting the OpenZFS file system.
        */
       override fun clientConfigurations(clientConfigurations: IResolvable) {
-        cdkBuilder.clientConfigurations(clientConfigurations.let(IResolvable::unwrap))
+        cdkBuilder.clientConfigurations(clientConfigurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3414,14 +3414,14 @@ public open class CfnFileSystem(
        * @param diskIopsConfiguration The SSD IOPS configuration for the FSx for ONTAP file system.
        */
       override fun diskIopsConfiguration(diskIopsConfiguration: IResolvable) {
-        cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param diskIopsConfiguration The SSD IOPS configuration for the FSx for ONTAP file system.
        */
       override fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty) {
-        cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(DiskIopsConfigurationProperty::unwrap))
+        cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(DiskIopsConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -4269,7 +4269,7 @@ public open class CfnFileSystem(
        * copied from the file system, regardless of this value.
        */
       override fun copyTagsToBackups(copyTagsToBackups: IResolvable) {
-        cdkBuilder.copyTagsToBackups(copyTagsToBackups.let(IResolvable::unwrap))
+        cdkBuilder.copyTagsToBackups(copyTagsToBackups.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4295,7 +4295,7 @@ public open class CfnFileSystem(
        * this value.
        */
       override fun copyTagsToVolumes(copyTagsToVolumes: IResolvable) {
-        cdkBuilder.copyTagsToVolumes(copyTagsToVolumes.let(IResolvable::unwrap))
+        cdkBuilder.copyTagsToVolumes(copyTagsToVolumes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4343,7 +4343,7 @@ public open class CfnFileSystem(
        * FSx).
        */
       override fun diskIopsConfiguration(diskIopsConfiguration: IResolvable) {
-        cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4356,7 +4356,7 @@ public open class CfnFileSystem(
        * FSx).
        */
       override fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty) {
-        cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(DiskIopsConfigurationProperty::unwrap))
+        cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(DiskIopsConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -4417,7 +4417,7 @@ public open class CfnFileSystem(
        * All volumes are children of the root volume.
        */
       override fun rootVolumeConfiguration(rootVolumeConfiguration: IResolvable) {
-        cdkBuilder.rootVolumeConfiguration(rootVolumeConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.rootVolumeConfiguration(rootVolumeConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4427,7 +4427,7 @@ public open class CfnFileSystem(
        */
       override
           fun rootVolumeConfiguration(rootVolumeConfiguration: RootVolumeConfigurationProperty) {
-        cdkBuilder.rootVolumeConfiguration(rootVolumeConfiguration.let(RootVolumeConfigurationProperty::unwrap))
+        cdkBuilder.rootVolumeConfiguration(rootVolumeConfiguration.let(RootVolumeConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -4916,7 +4916,7 @@ public open class CfnFileSystem(
        * when creating the snapshot, no tags are copied from the volume, regardless of this value.
        */
       override fun copyTagsToSnapshots(copyTagsToSnapshots: IResolvable) {
-        cdkBuilder.copyTagsToSnapshots(copyTagsToSnapshots.let(IResolvable::unwrap))
+        cdkBuilder.copyTagsToSnapshots(copyTagsToSnapshots.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4937,7 +4937,7 @@ public open class CfnFileSystem(
        * @param nfsExports The configuration object for mounting a file system.
        */
       override fun nfsExports(nfsExports: IResolvable) {
-        cdkBuilder.nfsExports(nfsExports.let(IResolvable::unwrap))
+        cdkBuilder.nfsExports(nfsExports.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4967,7 +4967,7 @@ public open class CfnFileSystem(
        * no longer want changes to occur.
        */
       override fun readOnly(readOnly: IResolvable) {
-        cdkBuilder.readOnly(readOnly.let(IResolvable::unwrap))
+        cdkBuilder.readOnly(readOnly.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4989,7 +4989,7 @@ public open class CfnFileSystem(
        * the volume.
        */
       override fun userAndGroupQuotas(userAndGroupQuotas: IResolvable) {
-        cdkBuilder.userAndGroupQuotas(userAndGroupQuotas.let(IResolvable::unwrap))
+        cdkBuilder.userAndGroupQuotas(userAndGroupQuotas.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6109,7 +6109,7 @@ public open class CfnFileSystem(
        * Windows File Server file system.
        */
       override fun auditLogConfiguration(auditLogConfiguration: IResolvable) {
-        cdkBuilder.auditLogConfiguration(auditLogConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.auditLogConfiguration(auditLogConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6118,7 +6118,7 @@ public open class CfnFileSystem(
        * Windows File Server file system.
        */
       override fun auditLogConfiguration(auditLogConfiguration: AuditLogConfigurationProperty) {
-        cdkBuilder.auditLogConfiguration(auditLogConfiguration.let(AuditLogConfigurationProperty::unwrap))
+        cdkBuilder.auditLogConfiguration(auditLogConfiguration.let(AuditLogConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -6164,7 +6164,7 @@ public open class CfnFileSystem(
        * the file system, regardless of this value.
        */
       override fun copyTagsToBackups(copyTagsToBackups: IResolvable) {
-        cdkBuilder.copyTagsToBackups(copyTagsToBackups.let(IResolvable::unwrap))
+        cdkBuilder.copyTagsToBackups(copyTagsToBackups.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6203,7 +6203,7 @@ public open class CfnFileSystem(
        * chosen throughput capacity.
        */
       override fun diskIopsConfiguration(diskIopsConfiguration: IResolvable) {
-        cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6214,7 +6214,7 @@ public open class CfnFileSystem(
        * chosen throughput capacity.
        */
       override fun diskIopsConfiguration(diskIopsConfiguration: DiskIopsConfigurationProperty) {
-        cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(DiskIopsConfigurationProperty::unwrap))
+        cdkBuilder.diskIopsConfiguration(diskIopsConfiguration.let(DiskIopsConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -6252,7 +6252,7 @@ public open class CfnFileSystem(
        */
       override
           fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: IResolvable) {
-        cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6266,7 +6266,7 @@ public open class CfnFileSystem(
        */
       override
           fun selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration: SelfManagedActiveDirectoryConfigurationProperty) {
-        cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration.let(SelfManagedActiveDirectoryConfigurationProperty::unwrap))
+        cdkBuilder.selfManagedActiveDirectoryConfiguration(selfManagedActiveDirectoryConfiguration.let(SelfManagedActiveDirectoryConfigurationProperty.Companion::unwrap))
       }
 
       /**

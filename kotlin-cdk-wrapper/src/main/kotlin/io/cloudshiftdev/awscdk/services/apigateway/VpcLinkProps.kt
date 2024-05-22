@@ -103,7 +103,7 @@ public interface VpcLinkProps {
      * The network load balancers must be owned by the same AWS account of the API owner.
      */
     override fun targets(targets: List<INetworkLoadBalancer>) {
-      cdkBuilder.targets(targets.map(INetworkLoadBalancer::unwrap))
+      cdkBuilder.targets(targets.map(INetworkLoadBalancer.Companion::unwrap))
     }
 
     /**

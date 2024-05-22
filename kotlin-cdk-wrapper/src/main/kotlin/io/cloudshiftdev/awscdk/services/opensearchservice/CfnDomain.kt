@@ -146,7 +146,7 @@ public open class CfnDomain(
   cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.opensearchservice.CfnDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.opensearchservice.CfnDomain(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -155,8 +155,8 @@ public open class CfnDomain(
     id: String,
     props: CfnDomainProps,
   ) :
-      this(software.amazon.awscdk.services.opensearchservice.CfnDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDomainProps::unwrap))
+      this(software.amazon.awscdk.services.opensearchservice.CfnDomain(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDomainProps.Companion::unwrap))
   )
 
   public constructor(
@@ -189,7 +189,7 @@ public open class CfnDomain(
    * Additional options to specify for the OpenSearch Service domain.
    */
   public open fun advancedOptions(`value`: IResolvable) {
-    unwrap(this).setAdvancedOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAdvancedOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -208,14 +208,14 @@ public open class CfnDomain(
    * Specifies options for fine-grained access control and SAML authentication.
    */
   public open fun advancedSecurityOptions(`value`: IResolvable) {
-    unwrap(this).setAdvancedSecurityOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAdvancedSecurityOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies options for fine-grained access control and SAML authentication.
    */
   public open fun advancedSecurityOptions(`value`: AdvancedSecurityOptionsInputProperty) {
-    unwrap(this).setAdvancedSecurityOptions(`value`.let(AdvancedSecurityOptionsInputProperty::unwrap))
+    unwrap(this).setAdvancedSecurityOptions(`value`.let(AdvancedSecurityOptionsInputProperty.Companion::unwrap))
   }
 
   /**
@@ -332,14 +332,14 @@ public open class CfnDomain(
    * Container for the cluster configuration of a domain.
    */
   public open fun clusterConfig(`value`: IResolvable) {
-    unwrap(this).setClusterConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setClusterConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Container for the cluster configuration of a domain.
    */
   public open fun clusterConfig(`value`: ClusterConfigProperty) {
-    unwrap(this).setClusterConfig(`value`.let(ClusterConfigProperty::unwrap))
+    unwrap(this).setClusterConfig(`value`.let(ClusterConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -359,14 +359,14 @@ public open class CfnDomain(
    * Configures OpenSearch Service to use Amazon Cognito authentication for OpenSearch Dashboards.
    */
   public open fun cognitoOptions(`value`: IResolvable) {
-    unwrap(this).setCognitoOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCognitoOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configures OpenSearch Service to use Amazon Cognito authentication for OpenSearch Dashboards.
    */
   public open fun cognitoOptions(`value`: CognitoOptionsProperty) {
-    unwrap(this).setCognitoOptions(`value`.let(CognitoOptionsProperty::unwrap))
+    unwrap(this).setCognitoOptions(`value`.let(CognitoOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -400,7 +400,7 @@ public open class CfnDomain(
    * traffic or whether to use a custom endpoint rather than the default endpoint.
    */
   public open fun domainEndpointOptions(`value`: IResolvable) {
-    unwrap(this).setDomainEndpointOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDomainEndpointOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -408,7 +408,7 @@ public open class CfnDomain(
    * traffic or whether to use a custom endpoint rather than the default endpoint.
    */
   public open fun domainEndpointOptions(`value`: DomainEndpointOptionsProperty) {
-    unwrap(this).setDomainEndpointOptions(`value`.let(DomainEndpointOptionsProperty::unwrap))
+    unwrap(this).setDomainEndpointOptions(`value`.let(DomainEndpointOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -443,7 +443,7 @@ public open class CfnDomain(
    * nodes in the OpenSearch Service domain.
    */
   public open fun ebsOptions(`value`: IResolvable) {
-    unwrap(this).setEbsOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEbsOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -451,7 +451,7 @@ public open class CfnDomain(
    * nodes in the OpenSearch Service domain.
    */
   public open fun ebsOptions(`value`: EBSOptionsProperty) {
-    unwrap(this).setEbsOptions(`value`.let(EBSOptionsProperty::unwrap))
+    unwrap(this).setEbsOptions(`value`.let(EBSOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -472,14 +472,14 @@ public open class CfnDomain(
    * Whether the domain should encrypt data at rest, and if so, the AWS KMS key to use.
    */
   public open fun encryptionAtRestOptions(`value`: IResolvable) {
-    unwrap(this).setEncryptionAtRestOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEncryptionAtRestOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Whether the domain should encrypt data at rest, and if so, the AWS KMS key to use.
    */
   public open fun encryptionAtRestOptions(`value`: EncryptionAtRestOptionsProperty) {
-    unwrap(this).setEncryptionAtRestOptions(`value`.let(EncryptionAtRestOptionsProperty::unwrap))
+    unwrap(this).setEncryptionAtRestOptions(`value`.let(EncryptionAtRestOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -509,7 +509,7 @@ public open class CfnDomain(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -535,7 +535,7 @@ public open class CfnDomain(
    * `INDEX_SLOW_LOGS` , `AUDIT_LOGS` , depending on the types of logs you want to publish.
    */
   public open fun logPublishingOptions(`value`: IResolvable) {
-    unwrap(this).setLogPublishingOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLogPublishingOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -556,14 +556,14 @@ public open class CfnDomain(
    * Specifies whether node-to-node encryption is enabled.
    */
   public open fun nodeToNodeEncryptionOptions(`value`: IResolvable) {
-    unwrap(this).setNodeToNodeEncryptionOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNodeToNodeEncryptionOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies whether node-to-node encryption is enabled.
    */
   public open fun nodeToNodeEncryptionOptions(`value`: NodeToNodeEncryptionOptionsProperty) {
-    unwrap(this).setNodeToNodeEncryptionOptions(`value`.let(NodeToNodeEncryptionOptionsProperty::unwrap))
+    unwrap(this).setNodeToNodeEncryptionOptions(`value`.let(NodeToNodeEncryptionOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -586,7 +586,7 @@ public open class CfnDomain(
    * configuration changes on the domain.
    */
   public open fun offPeakWindowOptions(`value`: IResolvable) {
-    unwrap(this).setOffPeakWindowOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOffPeakWindowOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -594,7 +594,7 @@ public open class CfnDomain(
    * configuration changes on the domain.
    */
   public open fun offPeakWindowOptions(`value`: OffPeakWindowOptionsProperty) {
-    unwrap(this).setOffPeakWindowOptions(`value`.let(OffPeakWindowOptionsProperty::unwrap))
+    unwrap(this).setOffPeakWindowOptions(`value`.let(OffPeakWindowOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -615,14 +615,14 @@ public open class CfnDomain(
    * *DEPRECATED* .
    */
   public open fun snapshotOptions(`value`: IResolvable) {
-    unwrap(this).setSnapshotOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSnapshotOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * *DEPRECATED* .
    */
   public open fun snapshotOptions(`value`: SnapshotOptionsProperty) {
-    unwrap(this).setSnapshotOptions(`value`.let(SnapshotOptionsProperty::unwrap))
+    unwrap(this).setSnapshotOptions(`value`.let(SnapshotOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -642,14 +642,14 @@ public open class CfnDomain(
    * Service software update options for the domain.
    */
   public open fun softwareUpdateOptions(`value`: IResolvable) {
-    unwrap(this).setSoftwareUpdateOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSoftwareUpdateOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Service software update options for the domain.
    */
   public open fun softwareUpdateOptions(`value`: SoftwareUpdateOptionsProperty) {
-    unwrap(this).setSoftwareUpdateOptions(`value`.let(SoftwareUpdateOptionsProperty::unwrap))
+    unwrap(this).setSoftwareUpdateOptions(`value`.let(SoftwareUpdateOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -675,7 +675,7 @@ public open class CfnDomain(
    * An arbitrary set of tags (key–value pairs) to associate with the OpenSearch Service domain.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -692,14 +692,14 @@ public open class CfnDomain(
    * The virtual private cloud (VPC) configuration for the OpenSearch Service domain.
    */
   public open fun vpcOptions(`value`: IResolvable) {
-    unwrap(this).setVpcOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The virtual private cloud (VPC) configuration for the OpenSearch Service domain.
    */
   public open fun vpcOptions(`value`: VPCOptionsProperty) {
-    unwrap(this).setVpcOptions(`value`.let(VPCOptionsProperty::unwrap))
+    unwrap(this).setVpcOptions(`value`.let(VPCOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -1326,7 +1326,7 @@ public open class CfnDomain(
      * @param advancedOptions Additional options to specify for the OpenSearch Service domain. 
      */
     override fun advancedOptions(advancedOptions: IResolvable) {
-      cdkBuilder.advancedOptions(advancedOptions.let(IResolvable::unwrap))
+      cdkBuilder.advancedOptions(advancedOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1359,7 +1359,7 @@ public open class CfnDomain(
      * authentication. 
      */
     override fun advancedSecurityOptions(advancedSecurityOptions: IResolvable) {
-      cdkBuilder.advancedSecurityOptions(advancedSecurityOptions.let(IResolvable::unwrap))
+      cdkBuilder.advancedSecurityOptions(advancedSecurityOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1379,7 +1379,7 @@ public open class CfnDomain(
      */
     override
         fun advancedSecurityOptions(advancedSecurityOptions: AdvancedSecurityOptionsInputProperty) {
-      cdkBuilder.advancedSecurityOptions(advancedSecurityOptions.let(AdvancedSecurityOptionsInputProperty::unwrap))
+      cdkBuilder.advancedSecurityOptions(advancedSecurityOptions.let(AdvancedSecurityOptionsInputProperty.Companion::unwrap))
     }
 
     /**
@@ -1411,7 +1411,7 @@ public open class CfnDomain(
      * @param clusterConfig Container for the cluster configuration of a domain. 
      */
     override fun clusterConfig(clusterConfig: IResolvable) {
-      cdkBuilder.clusterConfig(clusterConfig.let(IResolvable::unwrap))
+      cdkBuilder.clusterConfig(clusterConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1421,7 +1421,7 @@ public open class CfnDomain(
      * @param clusterConfig Container for the cluster configuration of a domain. 
      */
     override fun clusterConfig(clusterConfig: ClusterConfigProperty) {
-      cdkBuilder.clusterConfig(clusterConfig.let(ClusterConfigProperty::unwrap))
+      cdkBuilder.clusterConfig(clusterConfig.let(ClusterConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1443,7 +1443,7 @@ public open class CfnDomain(
      * OpenSearch Dashboards. 
      */
     override fun cognitoOptions(cognitoOptions: IResolvable) {
-      cdkBuilder.cognitoOptions(cognitoOptions.let(IResolvable::unwrap))
+      cdkBuilder.cognitoOptions(cognitoOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1454,7 +1454,7 @@ public open class CfnDomain(
      * OpenSearch Dashboards. 
      */
     override fun cognitoOptions(cognitoOptions: CognitoOptionsProperty) {
-      cdkBuilder.cognitoOptions(cognitoOptions.let(CognitoOptionsProperty::unwrap))
+      cdkBuilder.cognitoOptions(cognitoOptions.let(CognitoOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -1487,7 +1487,7 @@ public open class CfnDomain(
      * default endpoint. 
      */
     override fun domainEndpointOptions(domainEndpointOptions: IResolvable) {
-      cdkBuilder.domainEndpointOptions(domainEndpointOptions.let(IResolvable::unwrap))
+      cdkBuilder.domainEndpointOptions(domainEndpointOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1500,7 +1500,7 @@ public open class CfnDomain(
      * default endpoint. 
      */
     override fun domainEndpointOptions(domainEndpointOptions: DomainEndpointOptionsProperty) {
-      cdkBuilder.domainEndpointOptions(domainEndpointOptions.let(DomainEndpointOptionsProperty::unwrap))
+      cdkBuilder.domainEndpointOptions(domainEndpointOptions.let(DomainEndpointOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -1554,7 +1554,7 @@ public open class CfnDomain(
      * are attached to data nodes in the OpenSearch Service domain. 
      */
     override fun ebsOptions(ebsOptions: IResolvable) {
-      cdkBuilder.ebsOptions(ebsOptions.let(IResolvable::unwrap))
+      cdkBuilder.ebsOptions(ebsOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1570,7 +1570,7 @@ public open class CfnDomain(
      * are attached to data nodes in the OpenSearch Service domain. 
      */
     override fun ebsOptions(ebsOptions: EBSOptionsProperty) {
-      cdkBuilder.ebsOptions(ebsOptions.let(EBSOptionsProperty::unwrap))
+      cdkBuilder.ebsOptions(ebsOptions.let(EBSOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -1607,7 +1607,7 @@ public open class CfnDomain(
      * AWS KMS key to use. 
      */
     override fun encryptionAtRestOptions(encryptionAtRestOptions: IResolvable) {
-      cdkBuilder.encryptionAtRestOptions(encryptionAtRestOptions.let(IResolvable::unwrap))
+      cdkBuilder.encryptionAtRestOptions(encryptionAtRestOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1627,7 +1627,7 @@ public open class CfnDomain(
      * AWS KMS key to use. 
      */
     override fun encryptionAtRestOptions(encryptionAtRestOptions: EncryptionAtRestOptionsProperty) {
-      cdkBuilder.encryptionAtRestOptions(encryptionAtRestOptions.let(EncryptionAtRestOptionsProperty::unwrap))
+      cdkBuilder.encryptionAtRestOptions(encryptionAtRestOptions.let(EncryptionAtRestOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -1704,7 +1704,7 @@ public open class CfnDomain(
      * types of logs you want to publish. 
      */
     override fun logPublishingOptions(logPublishingOptions: IResolvable) {
-      cdkBuilder.logPublishingOptions(logPublishingOptions.let(IResolvable::unwrap))
+      cdkBuilder.logPublishingOptions(logPublishingOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1734,7 +1734,7 @@ public open class CfnDomain(
      * @param nodeToNodeEncryptionOptions Specifies whether node-to-node encryption is enabled. 
      */
     override fun nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions: IResolvable) {
-      cdkBuilder.nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions.let(IResolvable::unwrap))
+      cdkBuilder.nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1748,7 +1748,7 @@ public open class CfnDomain(
      */
     override
         fun nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions: NodeToNodeEncryptionOptionsProperty) {
-      cdkBuilder.nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions.let(NodeToNodeEncryptionOptionsProperty::unwrap))
+      cdkBuilder.nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions.let(NodeToNodeEncryptionOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -1776,7 +1776,7 @@ public open class CfnDomain(
      * Service can perform mandatory configuration changes on the domain. 
      */
     override fun offPeakWindowOptions(offPeakWindowOptions: IResolvable) {
-      cdkBuilder.offPeakWindowOptions(offPeakWindowOptions.let(IResolvable::unwrap))
+      cdkBuilder.offPeakWindowOptions(offPeakWindowOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1788,7 +1788,7 @@ public open class CfnDomain(
      * Service can perform mandatory configuration changes on the domain. 
      */
     override fun offPeakWindowOptions(offPeakWindowOptions: OffPeakWindowOptionsProperty) {
-      cdkBuilder.offPeakWindowOptions(offPeakWindowOptions.let(OffPeakWindowOptionsProperty::unwrap))
+      cdkBuilder.offPeakWindowOptions(offPeakWindowOptions.let(OffPeakWindowOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -1814,7 +1814,7 @@ public open class CfnDomain(
      * @param snapshotOptions *DEPRECATED* . 
      */
     override fun snapshotOptions(snapshotOptions: IResolvable) {
-      cdkBuilder.snapshotOptions(snapshotOptions.let(IResolvable::unwrap))
+      cdkBuilder.snapshotOptions(snapshotOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1826,7 +1826,7 @@ public open class CfnDomain(
      * @param snapshotOptions *DEPRECATED* . 
      */
     override fun snapshotOptions(snapshotOptions: SnapshotOptionsProperty) {
-      cdkBuilder.snapshotOptions(snapshotOptions.let(SnapshotOptionsProperty::unwrap))
+      cdkBuilder.snapshotOptions(snapshotOptions.let(SnapshotOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -1849,7 +1849,7 @@ public open class CfnDomain(
      * @param softwareUpdateOptions Service software update options for the domain. 
      */
     override fun softwareUpdateOptions(softwareUpdateOptions: IResolvable) {
-      cdkBuilder.softwareUpdateOptions(softwareUpdateOptions.let(IResolvable::unwrap))
+      cdkBuilder.softwareUpdateOptions(softwareUpdateOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1859,7 +1859,7 @@ public open class CfnDomain(
      * @param softwareUpdateOptions Service software update options for the domain. 
      */
     override fun softwareUpdateOptions(softwareUpdateOptions: SoftwareUpdateOptionsProperty) {
-      cdkBuilder.softwareUpdateOptions(softwareUpdateOptions.let(SoftwareUpdateOptionsProperty::unwrap))
+      cdkBuilder.softwareUpdateOptions(softwareUpdateOptions.let(SoftwareUpdateOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -1882,7 +1882,7 @@ public open class CfnDomain(
      * Service domain. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1910,7 +1910,7 @@ public open class CfnDomain(
      * domain. 
      */
     override fun vpcOptions(vpcOptions: IResolvable) {
-      cdkBuilder.vpcOptions(vpcOptions.let(IResolvable::unwrap))
+      cdkBuilder.vpcOptions(vpcOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1929,7 +1929,7 @@ public open class CfnDomain(
      * domain. 
      */
     override fun vpcOptions(vpcOptions: VPCOptionsProperty) {
-      cdkBuilder.vpcOptions(vpcOptions.let(VPCOptionsProperty::unwrap))
+      cdkBuilder.vpcOptions(vpcOptions.let(VPCOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -2208,7 +2208,7 @@ public open class CfnDomain(
        * .
        */
       override fun anonymousAuthEnabled(anonymousAuthEnabled: IResolvable) {
-        cdkBuilder.anonymousAuthEnabled(anonymousAuthEnabled.let(IResolvable::unwrap))
+        cdkBuilder.anonymousAuthEnabled(anonymousAuthEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2228,7 +2228,7 @@ public open class CfnDomain(
        * Service](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/fgac.html) .
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2242,21 +2242,21 @@ public open class CfnDomain(
        * @param internalUserDatabaseEnabled True to enable the internal user database.
        */
       override fun internalUserDatabaseEnabled(internalUserDatabaseEnabled: IResolvable) {
-        cdkBuilder.internalUserDatabaseEnabled(internalUserDatabaseEnabled.let(IResolvable::unwrap))
+        cdkBuilder.internalUserDatabaseEnabled(internalUserDatabaseEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param masterUserOptions Specifies information about the master user.
        */
       override fun masterUserOptions(masterUserOptions: IResolvable) {
-        cdkBuilder.masterUserOptions(masterUserOptions.let(IResolvable::unwrap))
+        cdkBuilder.masterUserOptions(masterUserOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param masterUserOptions Specifies information about the master user.
        */
       override fun masterUserOptions(masterUserOptions: MasterUserOptionsProperty) {
-        cdkBuilder.masterUserOptions(masterUserOptions.let(MasterUserOptionsProperty::unwrap))
+        cdkBuilder.masterUserOptions(masterUserOptions.let(MasterUserOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -2273,7 +2273,7 @@ public open class CfnDomain(
        * Dashboards.
        */
       override fun samlOptions(samlOptions: IResolvable) {
-        cdkBuilder.samlOptions(samlOptions.let(IResolvable::unwrap))
+        cdkBuilder.samlOptions(samlOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2281,7 +2281,7 @@ public open class CfnDomain(
        * Dashboards.
        */
       override fun samlOptions(samlOptions: SAMLOptionsProperty) {
-        cdkBuilder.samlOptions(samlOptions.let(SAMLOptionsProperty::unwrap))
+        cdkBuilder.samlOptions(samlOptions.let(SAMLOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -2713,14 +2713,14 @@ public open class CfnDomain(
        * @param coldStorageOptions Container for cold storage configuration options.
        */
       override fun coldStorageOptions(coldStorageOptions: IResolvable) {
-        cdkBuilder.coldStorageOptions(coldStorageOptions.let(IResolvable::unwrap))
+        cdkBuilder.coldStorageOptions(coldStorageOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param coldStorageOptions Container for cold storage configuration options.
        */
       override fun coldStorageOptions(coldStorageOptions: ColdStorageOptionsProperty) {
-        cdkBuilder.coldStorageOptions(coldStorageOptions.let(ColdStorageOptionsProperty::unwrap))
+        cdkBuilder.coldStorageOptions(coldStorageOptions.let(ColdStorageOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -2766,7 +2766,7 @@ public open class CfnDomain(
        * .
        */
       override fun dedicatedMasterEnabled(dedicatedMasterEnabled: IResolvable) {
-        cdkBuilder.dedicatedMasterEnabled(dedicatedMasterEnabled.let(IResolvable::unwrap))
+        cdkBuilder.dedicatedMasterEnabled(dedicatedMasterEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2818,7 +2818,7 @@ public open class CfnDomain(
        * .
        */
       override fun multiAzWithStandbyEnabled(multiAzWithStandbyEnabled: IResolvable) {
-        cdkBuilder.multiAzWithStandbyEnabled(multiAzWithStandbyEnabled.let(IResolvable::unwrap))
+        cdkBuilder.multiAzWithStandbyEnabled(multiAzWithStandbyEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2845,7 +2845,7 @@ public open class CfnDomain(
        * .
        */
       override fun warmEnabled(warmEnabled: IResolvable) {
-        cdkBuilder.warmEnabled(warmEnabled.let(IResolvable::unwrap))
+        cdkBuilder.warmEnabled(warmEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2860,7 +2860,7 @@ public open class CfnDomain(
        * Only use if `ZoneAwarenessEnabled` is `true` .
        */
       override fun zoneAwarenessConfig(zoneAwarenessConfig: IResolvable) {
-        cdkBuilder.zoneAwarenessConfig(zoneAwarenessConfig.let(IResolvable::unwrap))
+        cdkBuilder.zoneAwarenessConfig(zoneAwarenessConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2868,7 +2868,7 @@ public open class CfnDomain(
        * Only use if `ZoneAwarenessEnabled` is `true` .
        */
       override fun zoneAwarenessConfig(zoneAwarenessConfig: ZoneAwarenessConfigProperty) {
-        cdkBuilder.zoneAwarenessConfig(zoneAwarenessConfig.let(ZoneAwarenessConfigProperty::unwrap))
+        cdkBuilder.zoneAwarenessConfig(zoneAwarenessConfig.let(ZoneAwarenessConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2908,7 +2908,7 @@ public open class CfnDomain(
        * .
        */
       override fun zoneAwarenessEnabled(zoneAwarenessEnabled: IResolvable) {
-        cdkBuilder.zoneAwarenessEnabled(zoneAwarenessEnabled.let(IResolvable::unwrap))
+        cdkBuilder.zoneAwarenessEnabled(zoneAwarenessEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -3189,7 +3189,7 @@ public open class CfnDomain(
        * .
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3353,7 +3353,7 @@ public open class CfnDomain(
        * You must enable UltraWarm storage to enable cold storage.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -3561,7 +3561,7 @@ public open class CfnDomain(
        * `CustomEndpointCertificateArn` .
        */
       override fun customEndpointEnabled(customEndpointEnabled: IResolvable) {
-        cdkBuilder.customEndpointEnabled(customEndpointEnabled.let(IResolvable::unwrap))
+        cdkBuilder.customEndpointEnabled(customEndpointEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3581,7 +3581,7 @@ public open class CfnDomain(
        * .
        */
       override fun enforceHttps(enforceHttps: IResolvable) {
-        cdkBuilder.enforceHttps(enforceHttps.let(IResolvable::unwrap))
+        cdkBuilder.enforceHttps(enforceHttps.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3814,7 +3814,7 @@ public open class CfnDomain(
        * OpenSearch Service domain.
        */
       override fun ebsEnabled(ebsEnabled: IResolvable) {
-        cdkBuilder.ebsEnabled(ebsEnabled.let(IResolvable::unwrap))
+        cdkBuilder.ebsEnabled(ebsEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4055,7 +4055,7 @@ public open class CfnDomain(
        * property.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4335,7 +4335,7 @@ public open class CfnDomain(
        * Default: `false` .
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -4674,7 +4674,7 @@ public open class CfnDomain(
        * .
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -4804,21 +4804,21 @@ public open class CfnDomain(
        * @param enabled Specifies whether off-peak window settings are enabled for the domain.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param offPeakWindow Off-peak window settings for the domain.
        */
       override fun offPeakWindow(offPeakWindow: IResolvable) {
-        cdkBuilder.offPeakWindow(offPeakWindow.let(IResolvable::unwrap))
+        cdkBuilder.offPeakWindow(offPeakWindow.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param offPeakWindow Off-peak window settings for the domain.
        */
       override fun offPeakWindow(offPeakWindow: OffPeakWindowProperty) {
-        cdkBuilder.offPeakWindow(offPeakWindow.let(OffPeakWindowProperty::unwrap))
+        cdkBuilder.offPeakWindow(offPeakWindow.let(OffPeakWindowProperty.Companion::unwrap))
       }
 
       /**
@@ -4935,14 +4935,14 @@ public open class CfnDomain(
        * @param windowStartTime The desired start time for an off-peak maintenance window.
        */
       override fun windowStartTime(windowStartTime: IResolvable) {
-        cdkBuilder.windowStartTime(windowStartTime.let(IResolvable::unwrap))
+        cdkBuilder.windowStartTime(windowStartTime.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param windowStartTime The desired start time for an off-peak maintenance window.
        */
       override fun windowStartTime(windowStartTime: WindowStartTimeProperty) {
-        cdkBuilder.windowStartTime(windowStartTime.let(WindowStartTimeProperty::unwrap))
+        cdkBuilder.windowStartTime(windowStartTime.let(WindowStartTimeProperty.Companion::unwrap))
       }
 
       /**
@@ -5147,21 +5147,21 @@ public open class CfnDomain(
        * @param enabled True to enable SAML authentication for a domain.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param idp The SAML Identity Provider's information.
        */
       override fun idp(idp: IResolvable) {
-        cdkBuilder.idp(idp.let(IResolvable::unwrap))
+        cdkBuilder.idp(idp.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param idp The SAML Identity Provider's information.
        */
       override fun idp(idp: IdpProperty) {
-        cdkBuilder.idp(idp.let(IdpProperty::unwrap))
+        cdkBuilder.idp(idp.let(IdpProperty.Companion::unwrap))
       }
 
       /**
@@ -5483,7 +5483,7 @@ public open class CfnDomain(
        * False if you can't cancel your service software update.
        */
       override fun cancellable(cancellable: IResolvable) {
-        cdkBuilder.cancellable(cancellable.let(IResolvable::unwrap))
+        cdkBuilder.cancellable(cancellable.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5520,7 +5520,7 @@ public open class CfnDomain(
        * False if a service software is automatically updated after the automated update date.
        */
       override fun optionalDeployment(optionalDeployment: IResolvable) {
-        cdkBuilder.optionalDeployment(optionalDeployment.let(IResolvable::unwrap))
+        cdkBuilder.optionalDeployment(optionalDeployment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5536,7 +5536,7 @@ public open class CfnDomain(
        * False if you can't update your service software version.
        */
       override fun updateAvailable(updateAvailable: IResolvable) {
-        cdkBuilder.updateAvailable(updateAvailable.let(IResolvable::unwrap))
+        cdkBuilder.updateAvailable(updateAvailable.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5802,7 +5802,7 @@ public open class CfnDomain(
        * enabled for the domain.
        */
       override fun autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled: IResolvable) {
-        cdkBuilder.autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled.let(IResolvable::unwrap))
+        cdkBuilder.autoSoftwareUpdateEnabled(autoSoftwareUpdateEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

@@ -206,7 +206,7 @@ public interface CfnLocationS3Props {
      * in the *AWS DataSync User Guide* .
      */
     override fun s3Config(s3Config: IResolvable) {
-      cdkBuilder.s3Config(s3Config.let(IResolvable::unwrap))
+      cdkBuilder.s3Config(s3Config.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -217,7 +217,7 @@ public interface CfnLocationS3Props {
      * in the *AWS DataSync User Guide* .
      */
     override fun s3Config(s3Config: CfnLocationS3.S3ConfigProperty) {
-      cdkBuilder.s3Config(s3Config.let(CfnLocationS3.S3ConfigProperty::unwrap))
+      cdkBuilder.s3Config(s3Config.let(CfnLocationS3.S3ConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -270,7 +270,7 @@ public interface CfnLocationS3Props {
      * We recommend creating at least a name tag for your transfer location.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

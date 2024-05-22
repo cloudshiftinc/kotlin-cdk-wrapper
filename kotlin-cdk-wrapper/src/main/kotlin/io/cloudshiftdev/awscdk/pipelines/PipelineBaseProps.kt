@@ -63,7 +63,7 @@ public interface PipelineBaseProps {
      * the output directory will automatically be assumed to be `cdk.out`.
      */
     override fun synth(synth: IFileSetProducer) {
-      cdkBuilder.synth(synth.let(IFileSetProducer::unwrap))
+      cdkBuilder.synth(synth.let(IFileSetProducer.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.pipelines.PipelineBaseProps = cdkBuilder.build()

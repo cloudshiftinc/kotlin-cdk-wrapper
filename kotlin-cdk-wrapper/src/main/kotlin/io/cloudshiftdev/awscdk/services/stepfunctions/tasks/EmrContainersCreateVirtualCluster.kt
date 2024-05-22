@@ -40,8 +40,8 @@ public open class EmrContainersCreateVirtualCluster(
     id: String,
     props: EmrContainersCreateVirtualClusterProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersCreateVirtualCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EmrContainersCreateVirtualClusterProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.tasks.EmrContainersCreateVirtualCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EmrContainersCreateVirtualClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -289,7 +289,7 @@ public open class EmrContainersCreateVirtualCluster(
      * the task. 
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -314,7 +314,7 @@ public open class EmrContainersCreateVirtualCluster(
      * @param eksCluster EKS Cluster or task input that contains the name of the cluster. 
      */
     override fun eksCluster(eksCluster: EksClusterInput) {
-      cdkBuilder.eksCluster(eksCluster.let(EksClusterInput::unwrap))
+      cdkBuilder.eksCluster(eksCluster.let(EksClusterInput.Companion::unwrap))
     }
 
     /**
@@ -338,7 +338,7 @@ public open class EmrContainersCreateVirtualCluster(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -352,7 +352,7 @@ public open class EmrContainersCreateVirtualCluster(
      * @param heartbeatTimeout Timeout for the heartbeat. 
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -387,7 +387,7 @@ public open class EmrContainersCreateVirtualCluster(
      * States Language. 
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -470,7 +470,7 @@ public open class EmrContainersCreateVirtualCluster(
      * @param taskTimeout Timeout for the task. 
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -483,7 +483,7 @@ public open class EmrContainersCreateVirtualCluster(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**

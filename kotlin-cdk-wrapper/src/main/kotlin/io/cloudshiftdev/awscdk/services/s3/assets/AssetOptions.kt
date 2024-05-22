@@ -189,7 +189,7 @@ public interface AssetOptions : io.cloudshiftdev.awscdk.AssetOptions, FileCopyOp
      * `AssetHashType.CUSTOM`.
      */
     override fun assetHashType(assetHashType: AssetHashType) {
-      cdkBuilder.assetHashType(assetHashType.let(AssetHashType::unwrap))
+      cdkBuilder.assetHashType(assetHashType.let(AssetHashType.Companion::unwrap))
     }
 
     /**
@@ -201,7 +201,7 @@ public interface AssetOptions : io.cloudshiftdev.awscdk.AssetOptions, FileCopyOp
      * final asset.
      */
     override fun bundling(bundling: BundlingOptions) {
-      cdkBuilder.bundling(bundling.let(BundlingOptions::unwrap))
+      cdkBuilder.bundling(bundling.let(BundlingOptions.Companion::unwrap))
     }
 
     /**
@@ -253,14 +253,14 @@ public interface AssetOptions : io.cloudshiftdev.awscdk.AssetOptions, FileCopyOp
      * @param followSymlinks A strategy for how to handle symlinks.
      */
     override fun followSymlinks(followSymlinks: SymlinkFollowMode) {
-      cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode::unwrap))
+      cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode.Companion::unwrap))
     }
 
     /**
      * @param ignoreMode The ignore behavior to use for `exclude` patterns.
      */
     override fun ignoreMode(ignoreMode: IgnoreMode) {
-      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode::unwrap))
+      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode.Companion::unwrap))
     }
 
     /**
@@ -268,7 +268,7 @@ public interface AssetOptions : io.cloudshiftdev.awscdk.AssetOptions, FileCopyOp
      * You can use `asset.grantRead(principal)` to grant read permissions later.
      */
     override fun readers(readers: List<IGrantable>) {
-      cdkBuilder.readers(readers.map(IGrantable::unwrap))
+      cdkBuilder.readers(readers.map(IGrantable.Companion::unwrap))
     }
 
     /**

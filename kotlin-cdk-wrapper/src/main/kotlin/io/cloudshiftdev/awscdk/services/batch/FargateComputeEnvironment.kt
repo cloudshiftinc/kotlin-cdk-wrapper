@@ -51,8 +51,8 @@ public open class FargateComputeEnvironment(
     id: String,
     props: FargateComputeEnvironmentProps,
   ) :
-      this(software.amazon.awscdk.services.batch.FargateComputeEnvironment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(FargateComputeEnvironmentProps::unwrap))
+      this(software.amazon.awscdk.services.batch.FargateComputeEnvironment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(FargateComputeEnvironmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -470,7 +470,7 @@ public open class FargateComputeEnvironment(
      * @param securityGroups The security groups this Compute Environment will launch instances in. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -493,7 +493,7 @@ public open class FargateComputeEnvironment(
      * such as provision instances to run your jobs. 
      */
     override fun serviceRole(serviceRole: IRole) {
-      cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
+      cdkBuilder.serviceRole(serviceRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -541,7 +541,7 @@ public open class FargateComputeEnvironment(
      * @param updateTimeout Only meaningful if `terminateOnUpdate` is `false`. 
      */
     override fun updateTimeout(updateTimeout: Duration) {
-      cdkBuilder.updateTimeout(updateTimeout.let(Duration::unwrap))
+      cdkBuilder.updateTimeout(updateTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -565,7 +565,7 @@ public open class FargateComputeEnvironment(
      * @param vpc VPC in which this Compute Environment will launch Instances. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -576,7 +576,7 @@ public open class FargateComputeEnvironment(
      * @param vpcSubnets The VPC Subnets this Compute Environment will launch instances in. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -601,7 +601,7 @@ public open class FargateComputeEnvironment(
       id: String,
       fargateComputeEnvironmentArn: String,
     ): IFargateComputeEnvironment =
-        software.amazon.awscdk.services.batch.FargateComputeEnvironment.fromFargateComputeEnvironmentArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.batch.FargateComputeEnvironment.fromFargateComputeEnvironmentArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, fargateComputeEnvironmentArn).let(IFargateComputeEnvironment::wrap)
 
     public operator fun invoke(

@@ -51,7 +51,7 @@ public open class CfnContactList(
   cdkObject: software.amazon.awscdk.services.ses.CfnContactList,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ses.CfnContactList(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ses.CfnContactList(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -60,8 +60,8 @@ public open class CfnContactList(
     id: String,
     props: CfnContactListProps,
   ) :
-      this(software.amazon.awscdk.services.ses.CfnContactList(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnContactListProps::unwrap))
+      this(software.amazon.awscdk.services.ses.CfnContactList(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnContactListProps.Companion::unwrap))
   )
 
   public constructor(
@@ -101,7 +101,7 @@ public open class CfnContactList(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -119,7 +119,7 @@ public open class CfnContactList(
    * The tags associated with a contact list.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -136,7 +136,7 @@ public open class CfnContactList(
    * An interest group, theme, or label within a list.
    */
   public open fun topics(`value`: IResolvable) {
-    unwrap(this).setTopics(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTopics(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -253,7 +253,7 @@ public open class CfnContactList(
      * @param tags The tags associated with a contact list. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -273,7 +273,7 @@ public open class CfnContactList(
      * @param topics An interest group, theme, or label within a list. 
      */
     override fun topics(topics: IResolvable) {
-      cdkBuilder.topics(topics.let(IResolvable::unwrap))
+      cdkBuilder.topics(topics.let(IResolvable.Companion::unwrap))
     }
 
     /**

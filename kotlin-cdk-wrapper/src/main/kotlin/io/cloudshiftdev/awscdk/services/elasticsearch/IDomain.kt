@@ -719,7 +719,7 @@ public interface IDomain : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -768,7 +768,8 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun grantIndexRead(index: String, identity: IGrantable): Grant =
-        unwrap(this).grantIndexRead(index, identity.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantIndexRead(index,
+        identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * (deprecated) Grant read/write permissions for an index in this domain to an IAM principal
@@ -780,7 +781,8 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun grantIndexReadWrite(index: String, identity: IGrantable): Grant =
-        unwrap(this).grantIndexReadWrite(index, identity.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantIndexReadWrite(index,
+        identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * (deprecated) Grant write permissions for an index in this domain to an IAM principal
@@ -792,7 +794,8 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun grantIndexWrite(index: String, identity: IGrantable): Grant =
-        unwrap(this).grantIndexWrite(index, identity.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantIndexWrite(index,
+        identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * (deprecated) Grant read permissions for a specific path in this domain to an IAM principal
@@ -804,7 +807,8 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun grantPathRead(path: String, identity: IGrantable): Grant =
-        unwrap(this).grantPathRead(path, identity.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantPathRead(path,
+        identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * (deprecated) Grant read/write permissions for a specific path in this domain to an IAM
@@ -816,7 +820,8 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun grantPathReadWrite(path: String, identity: IGrantable): Grant =
-        unwrap(this).grantPathReadWrite(path, identity.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantPathReadWrite(path,
+        identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * (deprecated) Grant write permissions for a specific path in this domain to an IAM principal
@@ -828,7 +833,8 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun grantPathWrite(path: String, identity: IGrantable): Grant =
-        unwrap(this).grantPathWrite(path, identity.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantPathWrite(path,
+        identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * (deprecated) Grant read permissions for this domain and its contents to an IAM principal
@@ -839,7 +845,7 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun grantRead(identity: IGrantable): Grant =
-        unwrap(this).grantRead(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantRead(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * (deprecated) Grant read/write permissions for this domain and its contents to an IAM
@@ -850,7 +856,7 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun grantReadWrite(identity: IGrantable): Grant =
-        unwrap(this).grantReadWrite(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantReadWrite(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * (deprecated) Grant write permissions for this domain and its contents to an IAM principal
@@ -861,7 +867,7 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun grantWrite(identity: IGrantable): Grant =
-        unwrap(this).grantWrite(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantWrite(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * (deprecated) Return the given named metric for this Domain.
@@ -883,7 +889,8 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun metric(metricName: String, props: MetricOptions): Metric =
-        unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metric(metricName,
+        props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * (deprecated) Return the given named metric for this Domain.
@@ -920,7 +927,7 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun metricAutomatedSnapshotFailure(props: MetricOptions): Metric =
-        unwrap(this).metricAutomatedSnapshotFailure(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricAutomatedSnapshotFailure(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * (deprecated) Metric for automated snapshot failures.
@@ -958,7 +965,7 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun metricCPUUtilization(props: MetricOptions): Metric =
-        unwrap(this).metricCPUUtilization(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricCPUUtilization(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * (deprecated) Metric for CPU utilization.
@@ -996,7 +1003,7 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun metricClusterIndexWritesBlocked(props: MetricOptions): Metric =
-        unwrap(this).metricClusterIndexWritesBlocked(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricClusterIndexWritesBlocked(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * (deprecated) Metric for the cluster blocking index writes.
@@ -1034,7 +1041,7 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun metricClusterStatusRed(props: MetricOptions): Metric =
-        unwrap(this).metricClusterStatusRed(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricClusterStatusRed(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * (deprecated) Metric for the time the cluster status is red.
@@ -1072,7 +1079,7 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun metricClusterStatusYellow(props: MetricOptions): Metric =
-        unwrap(this).metricClusterStatusYellow(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricClusterStatusYellow(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * (deprecated) Metric for the time the cluster status is yellow.
@@ -1110,7 +1117,7 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun metricFreeStorageSpace(props: MetricOptions): Metric =
-        unwrap(this).metricFreeStorageSpace(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricFreeStorageSpace(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * (deprecated) Metric for the storage space of nodes in the cluster.
@@ -1148,7 +1155,7 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun metricIndexingLatency(props: MetricOptions): Metric =
-        unwrap(this).metricIndexingLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricIndexingLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * (deprecated) Metric for indexing latency.
@@ -1186,7 +1193,7 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun metricJVMMemoryPressure(props: MetricOptions): Metric =
-        unwrap(this).metricJVMMemoryPressure(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricJVMMemoryPressure(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * (deprecated) Metric for JVM memory pressure.
@@ -1223,7 +1230,7 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun metricKMSKeyError(props: MetricOptions): Metric =
-        unwrap(this).metricKMSKeyError(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricKMSKeyError(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * (deprecated) Metric for KMS key errors.
@@ -1261,7 +1268,7 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun metricKMSKeyInaccessible(props: MetricOptions): Metric =
-        unwrap(this).metricKMSKeyInaccessible(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricKMSKeyInaccessible(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * (deprecated) Metric for KMS key being inaccessible.
@@ -1299,7 +1306,7 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun metricMasterCPUUtilization(props: MetricOptions): Metric =
-        unwrap(this).metricMasterCPUUtilization(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricMasterCPUUtilization(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * (deprecated) Metric for master CPU utilization.
@@ -1337,7 +1344,7 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun metricMasterJVMMemoryPressure(props: MetricOptions): Metric =
-        unwrap(this).metricMasterJVMMemoryPressure(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricMasterJVMMemoryPressure(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * (deprecated) Metric for master JVM memory pressure.
@@ -1374,7 +1381,7 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun metricNodes(props: MetricOptions): Metric =
-        unwrap(this).metricNodes(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricNodes(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * (deprecated) Metric for the number of nodes.
@@ -1412,7 +1419,7 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun metricSearchLatency(props: MetricOptions): Metric =
-        unwrap(this).metricSearchLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricSearchLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * (deprecated) Metric for search latency.
@@ -1450,7 +1457,7 @@ public interface IDomain : IResource {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun metricSearchableDocuments(props: MetricOptions): Metric =
-        unwrap(this).metricSearchableDocuments(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricSearchableDocuments(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * (deprecated) Metric for number of searchable documents.

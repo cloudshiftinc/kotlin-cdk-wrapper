@@ -69,7 +69,8 @@ public open class CodeBuildStep(
   cdkObject: software.amazon.awscdk.pipelines.CodeBuildStep,
 ) : ShellStep(cdkObject) {
   public constructor(id: String, props: CodeBuildStepProps) :
-      this(software.amazon.awscdk.pipelines.CodeBuildStep(id, props.let(CodeBuildStepProps::unwrap))
+      this(software.amazon.awscdk.pipelines.CodeBuildStep(id,
+      props.let(CodeBuildStepProps.Companion::unwrap))
   )
 
   public constructor(id: String, props: CodeBuildStepProps.Builder.() -> Unit) : this(id,
@@ -582,7 +583,7 @@ public open class CodeBuildStep(
      * @param actionRole Custom execution role to be used for the Code Build Action. 
      */
     override fun actionRole(actionRole: IRole) {
-      cdkBuilder.actionRole(actionRole.let(IRole::unwrap))
+      cdkBuilder.actionRole(actionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -624,7 +625,7 @@ public open class CodeBuildStep(
      * @param buildEnvironment Changes to environment. 
      */
     override fun buildEnvironment(buildEnvironment: BuildEnvironment) {
-      cdkBuilder.buildEnvironment(buildEnvironment.let(BuildEnvironment::unwrap))
+      cdkBuilder.buildEnvironment(buildEnvironment.let(BuildEnvironment.Companion::unwrap))
     }
 
     /**
@@ -650,7 +651,7 @@ public open class CodeBuildStep(
      * @param cache Caching strategy to use. 
      */
     override fun cache(cache: Cache) {
-      cdkBuilder.cache(cache.let(Cache::unwrap))
+      cdkBuilder.cache(cache.let(Cache.Companion::unwrap))
     }
 
     /**
@@ -708,7 +709,7 @@ public open class CodeBuildStep(
      * @param fileSystemLocations ProjectFileSystemLocation objects for CodeBuild build projects. 
      */
     override fun fileSystemLocations(fileSystemLocations: List<IFileSystemLocation>) {
-      cdkBuilder.fileSystemLocations(fileSystemLocations.map(IFileSystemLocation::unwrap))
+      cdkBuilder.fileSystemLocations(fileSystemLocations.map(IFileSystemLocation.Companion::unwrap))
     }
 
     /**
@@ -737,7 +738,7 @@ public open class CodeBuildStep(
      * @param input FileSet to run these scripts on. 
      */
     override fun input(input: IFileSetProducer) {
-      cdkBuilder.input(input.let(IFileSetProducer::unwrap))
+      cdkBuilder.input(input.let(IFileSetProducer.Companion::unwrap))
     }
 
     /**
@@ -777,7 +778,7 @@ public open class CodeBuildStep(
      * @param logging Information about logs for CodeBuild projects. 
      */
     override fun logging(logging: LoggingOptions) {
-      cdkBuilder.logging(logging.let(LoggingOptions::unwrap))
+      cdkBuilder.logging(logging.let(LoggingOptions.Companion::unwrap))
     }
 
     /**
@@ -812,7 +813,7 @@ public open class CodeBuildStep(
      * @param partialBuildSpec Additional configuration that can only be configured via BuildSpec. 
      */
     override fun partialBuildSpec(partialBuildSpec: BuildSpec) {
-      cdkBuilder.partialBuildSpec(partialBuildSpec.let(BuildSpec::unwrap))
+      cdkBuilder.partialBuildSpec(partialBuildSpec.let(BuildSpec.Companion::unwrap))
     }
 
     /**
@@ -848,7 +849,7 @@ public open class CodeBuildStep(
      * @param role Custom execution role to be used for the CodeBuild project. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -861,7 +862,7 @@ public open class CodeBuildStep(
      * @param rolePolicyStatements Policy statements to add to role used during the synth. 
      */
     override fun rolePolicyStatements(rolePolicyStatements: List<PolicyStatement>) {
-      cdkBuilder.rolePolicyStatements(rolePolicyStatements.map(PolicyStatement::unwrap))
+      cdkBuilder.rolePolicyStatements(rolePolicyStatements.map(PolicyStatement.Companion::unwrap))
     }
 
     /**
@@ -889,7 +890,7 @@ public open class CodeBuildStep(
      * interfaces. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -917,7 +918,7 @@ public open class CodeBuildStep(
      * @param subnetSelection Which subnets to use. 
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -946,7 +947,7 @@ public open class CodeBuildStep(
      * complete. 
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -957,7 +958,7 @@ public open class CodeBuildStep(
      * @param vpc The VPC where to execute the SimpleSynth. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.pipelines.CodeBuildStep = cdkBuilder.build()

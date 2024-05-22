@@ -206,7 +206,7 @@ public interface CfnRecordSetGroupProps {
      * you want to create.
      */
     override fun recordSets(recordSets: IResolvable) {
-      cdkBuilder.recordSets(recordSets.let(IResolvable::unwrap))
+      cdkBuilder.recordSets(recordSets.let(IResolvable.Companion::unwrap))
     }
 
     /**

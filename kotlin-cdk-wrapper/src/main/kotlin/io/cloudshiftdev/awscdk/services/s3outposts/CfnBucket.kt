@@ -79,8 +79,8 @@ public open class CfnBucket(
     id: String,
     props: CfnBucketProps,
   ) :
-      this(software.amazon.awscdk.services.s3outposts.CfnBucket(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnBucketProps::unwrap))
+      this(software.amazon.awscdk.services.s3outposts.CfnBucket(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnBucketProps.Companion::unwrap))
   )
 
   public constructor(
@@ -115,7 +115,7 @@ public open class CfnBucket(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -129,7 +129,7 @@ public open class CfnBucket(
    * lifecycle configuration.
    */
   public open fun lifecycleConfiguration(`value`: IResolvable) {
-    unwrap(this).setLifecycleConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLifecycleConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -137,7 +137,7 @@ public open class CfnBucket(
    * lifecycle configuration.
    */
   public open fun lifecycleConfiguration(`value`: LifecycleConfigurationProperty) {
-    unwrap(this).setLifecycleConfiguration(`value`.let(LifecycleConfigurationProperty::unwrap))
+    unwrap(this).setLifecycleConfiguration(`value`.let(LifecycleConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -183,7 +183,7 @@ public open class CfnBucket(
    * Outposts](https://docs.aws.amazon.com/AmazonS3/latest/userguide/S3onOutposts.html) .
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -381,7 +381,7 @@ public open class CfnBucket(
      * bucket or replaces an existing lifecycle configuration. 
      */
     override fun lifecycleConfiguration(lifecycleConfiguration: IResolvable) {
-      cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -396,7 +396,7 @@ public open class CfnBucket(
      * bucket or replaces an existing lifecycle configuration. 
      */
     override fun lifecycleConfiguration(lifecycleConfiguration: LifecycleConfigurationProperty) {
-      cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(LifecycleConfigurationProperty::unwrap))
+      cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(LifecycleConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -458,7 +458,7 @@ public open class CfnBucket(
      * . 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -677,7 +677,7 @@ public open class CfnBucket(
        * @param tags the value to be set. 
        */
       override fun tags(tags: List<FilterTagProperty>) {
-        cdkBuilder.tags(tags.map(FilterTagProperty::unwrap))
+        cdkBuilder.tags(tags.map(FilterTagProperty.Companion::unwrap))
       }
 
       /**
@@ -819,14 +819,14 @@ public open class CfnBucket(
        * @param andOperator the value to be set.
        */
       override fun andOperator(andOperator: IResolvable) {
-        cdkBuilder.andOperator(andOperator.let(IResolvable::unwrap))
+        cdkBuilder.andOperator(andOperator.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param andOperator the value to be set.
        */
       override fun andOperator(andOperator: FilterAndOperatorProperty) {
-        cdkBuilder.andOperator(andOperator.let(FilterAndOperatorProperty::unwrap))
+        cdkBuilder.andOperator(andOperator.let(FilterAndOperatorProperty.Companion::unwrap))
       }
 
       /**
@@ -848,14 +848,14 @@ public open class CfnBucket(
        * @param tag the value to be set.
        */
       override fun tag(tag: IResolvable) {
-        cdkBuilder.tag(tag.let(IResolvable::unwrap))
+        cdkBuilder.tag(tag.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param tag the value to be set.
        */
       override fun tag(tag: FilterTagProperty) {
-        cdkBuilder.tag(tag.let(FilterTagProperty::unwrap))
+        cdkBuilder.tag(tag.let(FilterTagProperty.Companion::unwrap))
       }
 
       /**
@@ -1077,7 +1077,7 @@ public open class CfnBucket(
        * the S3 on Outposts bucket. 
        */
       override fun rules(rules: IResolvable) {
-        cdkBuilder.rules(rules.let(IResolvable::unwrap))
+        cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1265,7 +1265,7 @@ public open class CfnBucket(
        * upload rule.
        */
       override fun abortIncompleteMultipartUpload(abortIncompleteMultipartUpload: IResolvable) {
-        cdkBuilder.abortIncompleteMultipartUpload(abortIncompleteMultipartUpload.let(IResolvable::unwrap))
+        cdkBuilder.abortIncompleteMultipartUpload(abortIncompleteMultipartUpload.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1274,7 +1274,7 @@ public open class CfnBucket(
        */
       override
           fun abortIncompleteMultipartUpload(abortIncompleteMultipartUpload: AbortIncompleteMultipartUploadProperty) {
-        cdkBuilder.abortIncompleteMultipartUpload(abortIncompleteMultipartUpload.let(AbortIncompleteMultipartUploadProperty::unwrap))
+        cdkBuilder.abortIncompleteMultipartUpload(abortIncompleteMultipartUpload.let(AbortIncompleteMultipartUploadProperty.Companion::unwrap))
       }
 
       /**

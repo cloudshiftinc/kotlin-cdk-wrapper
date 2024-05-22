@@ -58,8 +58,8 @@ public open class CfnSigningProfile(
     id: String,
     props: CfnSigningProfileProps,
   ) :
-      this(software.amazon.awscdk.services.signer.CfnSigningProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSigningProfileProps::unwrap))
+      this(software.amazon.awscdk.services.signer.CfnSigningProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSigningProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -95,7 +95,7 @@ public open class CfnSigningProfile(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -119,14 +119,14 @@ public open class CfnSigningProfile(
    * The validity period override for any signature generated using this signing profile.
    */
   public open fun signatureValidityPeriod(`value`: IResolvable) {
-    unwrap(this).setSignatureValidityPeriod(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSignatureValidityPeriod(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The validity period override for any signature generated using this signing profile.
    */
   public open fun signatureValidityPeriod(`value`: SignatureValidityPeriodProperty) {
-    unwrap(this).setSignatureValidityPeriod(`value`.let(SignatureValidityPeriodProperty::unwrap))
+    unwrap(this).setSignatureValidityPeriod(`value`.let(SignatureValidityPeriodProperty.Companion::unwrap))
   }
 
   /**
@@ -153,7 +153,7 @@ public open class CfnSigningProfile(
    * A list of tags associated with the signing profile.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -254,7 +254,7 @@ public open class CfnSigningProfile(
      * this signing profile. 
      */
     override fun signatureValidityPeriod(signatureValidityPeriod: IResolvable) {
-      cdkBuilder.signatureValidityPeriod(signatureValidityPeriod.let(IResolvable::unwrap))
+      cdkBuilder.signatureValidityPeriod(signatureValidityPeriod.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -267,7 +267,7 @@ public open class CfnSigningProfile(
      * this signing profile. 
      */
     override fun signatureValidityPeriod(signatureValidityPeriod: SignatureValidityPeriodProperty) {
-      cdkBuilder.signatureValidityPeriod(signatureValidityPeriod.let(SignatureValidityPeriodProperty::unwrap))
+      cdkBuilder.signatureValidityPeriod(signatureValidityPeriod.let(SignatureValidityPeriodProperty.Companion::unwrap))
     }
 
     /**
@@ -292,7 +292,7 @@ public open class CfnSigningProfile(
      * @param tags A list of tags associated with the signing profile. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

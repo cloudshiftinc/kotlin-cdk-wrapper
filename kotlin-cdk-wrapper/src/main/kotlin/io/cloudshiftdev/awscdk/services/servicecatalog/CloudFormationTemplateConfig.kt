@@ -66,7 +66,7 @@ public interface CloudFormationTemplateConfig {
      * @param assetBucket The S3 bucket containing product stack assets.
      */
     override fun assetBucket(assetBucket: IBucket) {
-      cdkBuilder.assetBucket(assetBucket.let(IBucket::unwrap))
+      cdkBuilder.assetBucket(assetBucket.let(IBucket.Companion::unwrap))
     }
 
     /**

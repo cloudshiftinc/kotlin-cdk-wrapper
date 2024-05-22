@@ -35,7 +35,7 @@ public open class Application(
   cdkObject: software.amazon.awscdk.services.appconfig.Application,
 ) : Resource(cdkObject), IApplication, IExtensible {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.appconfig.Application(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.appconfig.Application(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -44,8 +44,8 @@ public open class Application(
     id: String,
     props: ApplicationProps,
   ) :
-      this(software.amazon.awscdk.services.appconfig.Application(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ApplicationProps::unwrap))
+      this(software.amazon.awscdk.services.appconfig.Application(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ApplicationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -72,7 +72,7 @@ public open class Application(
    */
   public override fun addEnvironment(id: String, options: EnvironmentOptions): IEnvironment =
       unwrap(this).addEnvironment(id,
-      options.let(EnvironmentOptions::unwrap)).let(IEnvironment::wrap)
+      options.let(EnvironmentOptions.Companion::unwrap)).let(IEnvironment::wrap)
 
   /**
    * Adds an environment.
@@ -91,7 +91,7 @@ public open class Application(
    * @param environment 
    */
   public override fun addExistingEnvironment(environment: IEnvironment) {
-    unwrap(this).addExistingEnvironment(environment.let(IEnvironment::unwrap))
+    unwrap(this).addExistingEnvironment(environment.let(IEnvironment.Companion::unwrap))
   }
 
   /**
@@ -100,7 +100,7 @@ public open class Application(
    * @param extension The extension to create an association for. 
    */
   public override fun addExtension(extension: IExtension) {
-    unwrap(this).addExtension(extension.let(IExtension::unwrap))
+    unwrap(this).addExtension(extension.let(IExtension.Companion::unwrap))
   }
 
   /**
@@ -111,7 +111,7 @@ public open class Application(
    */
   public override fun addHostedConfiguration(id: String, options: HostedConfigurationOptions):
       HostedConfiguration = unwrap(this).addHostedConfiguration(id,
-      options.let(HostedConfigurationOptions::unwrap)).let(HostedConfiguration::wrap)
+      options.let(HostedConfigurationOptions.Companion::unwrap)).let(HostedConfiguration::wrap)
 
   /**
    * Adds a hosted configuration.
@@ -133,7 +133,7 @@ public open class Application(
    */
   public override fun addSourcedConfiguration(id: String, options: SourcedConfigurationOptions):
       SourcedConfiguration = unwrap(this).addSourcedConfiguration(id,
-      options.let(SourcedConfigurationOptions::unwrap)).let(SourcedConfiguration::wrap)
+      options.let(SourcedConfigurationOptions.Companion::unwrap)).let(SourcedConfiguration::wrap)
 
   /**
    * Adds a sourced configuration.
@@ -182,8 +182,8 @@ public open class Application(
    * @param options Options for the extension.
    */
   public override fun on(actionPoint: ActionPoint, eventDestination: IEventDestination) {
-    unwrap(this).on(actionPoint.let(ActionPoint::unwrap),
-        eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).on(actionPoint.let(ActionPoint.Companion::unwrap),
+        eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -199,8 +199,9 @@ public open class Application(
     eventDestination: IEventDestination,
     options: ExtensionOptions,
   ) {
-    unwrap(this).on(actionPoint.let(ActionPoint::unwrap),
-        eventDestination.let(IEventDestination::unwrap), options.let(ExtensionOptions::unwrap))
+    unwrap(this).on(actionPoint.let(ActionPoint.Companion::unwrap),
+        eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -227,7 +228,7 @@ public open class Application(
    * @param options Options for the extension.
    */
   public override fun onDeploymentBaking(eventDestination: IEventDestination) {
-    unwrap(this).onDeploymentBaking(eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).onDeploymentBaking(eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -239,8 +240,8 @@ public open class Application(
    */
   public override fun onDeploymentBaking(eventDestination: IEventDestination,
       options: ExtensionOptions) {
-    unwrap(this).onDeploymentBaking(eventDestination.let(IEventDestination::unwrap),
-        options.let(ExtensionOptions::unwrap))
+    unwrap(this).onDeploymentBaking(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -264,7 +265,7 @@ public open class Application(
    * @param options Options for the extension.
    */
   public override fun onDeploymentComplete(eventDestination: IEventDestination) {
-    unwrap(this).onDeploymentComplete(eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).onDeploymentComplete(eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -276,8 +277,8 @@ public open class Application(
    */
   public override fun onDeploymentComplete(eventDestination: IEventDestination,
       options: ExtensionOptions) {
-    unwrap(this).onDeploymentComplete(eventDestination.let(IEventDestination::unwrap),
-        options.let(ExtensionOptions::unwrap))
+    unwrap(this).onDeploymentComplete(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -301,7 +302,7 @@ public open class Application(
    * @param options Options for the extension.
    */
   public override fun onDeploymentRolledBack(eventDestination: IEventDestination) {
-    unwrap(this).onDeploymentRolledBack(eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).onDeploymentRolledBack(eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -313,8 +314,8 @@ public open class Application(
    */
   public override fun onDeploymentRolledBack(eventDestination: IEventDestination,
       options: ExtensionOptions) {
-    unwrap(this).onDeploymentRolledBack(eventDestination.let(IEventDestination::unwrap),
-        options.let(ExtensionOptions::unwrap))
+    unwrap(this).onDeploymentRolledBack(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -338,7 +339,7 @@ public open class Application(
    * @param options Options for the extension.
    */
   public override fun onDeploymentStart(eventDestination: IEventDestination) {
-    unwrap(this).onDeploymentStart(eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).onDeploymentStart(eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -350,8 +351,8 @@ public open class Application(
    */
   public override fun onDeploymentStart(eventDestination: IEventDestination,
       options: ExtensionOptions) {
-    unwrap(this).onDeploymentStart(eventDestination.let(IEventDestination::unwrap),
-        options.let(ExtensionOptions::unwrap))
+    unwrap(this).onDeploymentStart(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -375,7 +376,7 @@ public open class Application(
    * @param options Options for the extension.
    */
   public override fun onDeploymentStep(eventDestination: IEventDestination) {
-    unwrap(this).onDeploymentStep(eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).onDeploymentStep(eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -387,8 +388,8 @@ public open class Application(
    */
   public override fun onDeploymentStep(eventDestination: IEventDestination,
       options: ExtensionOptions) {
-    unwrap(this).onDeploymentStep(eventDestination.let(IEventDestination::unwrap),
-        options.let(ExtensionOptions::unwrap))
+    unwrap(this).onDeploymentStep(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -412,7 +413,7 @@ public open class Application(
    * @param options Options for the extension.
    */
   public override fun preCreateHostedConfigurationVersion(eventDestination: IEventDestination) {
-    unwrap(this).preCreateHostedConfigurationVersion(eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).preCreateHostedConfigurationVersion(eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -424,8 +425,8 @@ public open class Application(
    */
   public override fun preCreateHostedConfigurationVersion(eventDestination: IEventDestination,
       options: ExtensionOptions) {
-    unwrap(this).preCreateHostedConfigurationVersion(eventDestination.let(IEventDestination::unwrap),
-        options.let(ExtensionOptions::unwrap))
+    unwrap(this).preCreateHostedConfigurationVersion(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -449,7 +450,7 @@ public open class Application(
    * @param options Options for the extension.
    */
   public override fun preStartDeployment(eventDestination: IEventDestination) {
-    unwrap(this).preStartDeployment(eventDestination.let(IEventDestination::unwrap))
+    unwrap(this).preStartDeployment(eventDestination.let(IEventDestination.Companion::unwrap))
   }
 
   /**
@@ -461,8 +462,8 @@ public open class Application(
    */
   public override fun preStartDeployment(eventDestination: IEventDestination,
       options: ExtensionOptions) {
-    unwrap(this).preStartDeployment(eventDestination.let(IEventDestination::unwrap),
-        options.let(ExtensionOptions::unwrap))
+    unwrap(this).preStartDeployment(eventDestination.let(IEventDestination.Companion::unwrap),
+        options.let(ExtensionOptions.Companion::unwrap))
   }
 
   /**
@@ -536,7 +537,7 @@ public open class Application(
 
   public companion object {
     public fun addAgentToEcs(taskDef: TaskDefinition) {
-      software.amazon.awscdk.services.appconfig.Application.addAgentToEcs(taskDef.let(TaskDefinition::unwrap))
+      software.amazon.awscdk.services.appconfig.Application.addAgentToEcs(taskDef.let(TaskDefinition.Companion::unwrap))
     }
 
     public fun fromApplicationArn(
@@ -544,7 +545,7 @@ public open class Application(
       id: String,
       applicationArn: String,
     ): IApplication =
-        software.amazon.awscdk.services.appconfig.Application.fromApplicationArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.appconfig.Application.fromApplicationArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, applicationArn).let(IApplication::wrap)
 
     public fun fromApplicationId(
@@ -552,7 +553,7 @@ public open class Application(
       id: String,
       applicationId: String,
     ): IApplication =
-        software.amazon.awscdk.services.appconfig.Application.fromApplicationId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.appconfig.Application.fromApplicationId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, applicationId).let(IApplication::wrap)
 
     public fun lambdaLayerVersionArn(region: String): String =
@@ -560,7 +561,7 @@ public open class Application(
 
     public fun lambdaLayerVersionArn(region: String, platform: Platform): String =
         software.amazon.awscdk.services.appconfig.Application.getLambdaLayerVersionArn(region,
-        platform.let(Platform::unwrap))
+        platform.let(Platform.Companion::unwrap))
 
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,

@@ -151,7 +151,7 @@ public interface CfnProjectProps {
      * characters. Tag values can have a maximum length of 256 characters.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -165,14 +165,14 @@ public interface CfnProjectProps {
      * @param vpcConfig The VPC security groups and subnets that are attached to a project.
      */
     override fun vpcConfig(vpcConfig: IResolvable) {
-      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param vpcConfig The VPC security groups and subnets that are attached to a project.
      */
     override fun vpcConfig(vpcConfig: CfnProject.VpcConfigProperty) {
-      cdkBuilder.vpcConfig(vpcConfig.let(CfnProject.VpcConfigProperty::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(CfnProject.VpcConfigProperty.Companion::unwrap))
     }
 
     /**

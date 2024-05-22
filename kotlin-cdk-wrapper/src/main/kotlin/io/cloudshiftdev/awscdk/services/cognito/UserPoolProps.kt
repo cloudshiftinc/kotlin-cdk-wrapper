@@ -546,14 +546,14 @@ public interface UserPoolProps {
      * @param accountRecovery How will a user be able to recover their account?.
      */
     override fun accountRecovery(accountRecovery: AccountRecovery) {
-      cdkBuilder.accountRecovery(accountRecovery.let(AccountRecovery::unwrap))
+      cdkBuilder.accountRecovery(accountRecovery.let(AccountRecovery.Companion::unwrap))
     }
 
     /**
      * @param advancedSecurityMode The user pool's Advanced Security Mode.
      */
     override fun advancedSecurityMode(advancedSecurityMode: AdvancedSecurityMode) {
-      cdkBuilder.advancedSecurityMode(advancedSecurityMode.let(AdvancedSecurityMode::unwrap))
+      cdkBuilder.advancedSecurityMode(advancedSecurityMode.let(AdvancedSecurityMode.Companion::unwrap))
     }
 
     /**
@@ -562,7 +562,7 @@ public interface UserPoolProps {
      * EMAIL and PHONE are the only available options.
      */
     override fun autoVerify(autoVerify: AutoVerifiedAttrs) {
-      cdkBuilder.autoVerify(autoVerify.let(AutoVerifiedAttrs::unwrap))
+      cdkBuilder.autoVerify(autoVerify.let(AutoVerifiedAttrs.Companion::unwrap))
     }
 
     /**
@@ -588,7 +588,7 @@ public interface UserPoolProps {
      * authorization codes that Amazon Cognito generates.
      */
     override fun customSenderKmsKey(customSenderKmsKey: IKey) {
-      cdkBuilder.customSenderKmsKey(customSenderKmsKey.let(IKey::unwrap))
+      cdkBuilder.customSenderKmsKey(customSenderKmsKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -603,7 +603,7 @@ public interface UserPoolProps {
      * @param deviceTracking Device tracking settings.
      */
     override fun deviceTracking(deviceTracking: DeviceTracking) {
-      cdkBuilder.deviceTracking(deviceTracking.let(DeviceTracking::unwrap))
+      cdkBuilder.deviceTracking(deviceTracking.let(DeviceTracking.Companion::unwrap))
     }
 
     /**
@@ -618,7 +618,7 @@ public interface UserPoolProps {
      * @param email Email settings for a user pool.
      */
     override fun email(email: UserPoolEmail) {
-      cdkBuilder.email(email.let(UserPoolEmail::unwrap))
+      cdkBuilder.email(email.let(UserPoolEmail.Companion::unwrap))
     }
 
     /**
@@ -636,7 +636,7 @@ public interface UserPoolProps {
      * EMAIL and PHONE are the only available options.
      */
     override fun keepOriginal(keepOriginal: KeepOriginalAttrs) {
-      cdkBuilder.keepOriginal(keepOriginal.let(KeepOriginalAttrs::unwrap))
+      cdkBuilder.keepOriginal(keepOriginal.let(KeepOriginalAttrs.Companion::unwrap))
     }
 
     /**
@@ -653,7 +653,7 @@ public interface UserPoolProps {
      * @param lambdaTriggers Lambda functions to use for supported Cognito triggers.
      */
     override fun lambdaTriggers(lambdaTriggers: UserPoolTriggers) {
-      cdkBuilder.lambdaTriggers(lambdaTriggers.let(UserPoolTriggers::unwrap))
+      cdkBuilder.lambdaTriggers(lambdaTriggers.let(UserPoolTriggers.Companion::unwrap))
     }
 
     /**
@@ -668,7 +668,7 @@ public interface UserPoolProps {
      * @param mfa Configure whether users of this user pool can or are required use MFA to sign in.
      */
     override fun mfa(mfa: Mfa) {
-      cdkBuilder.mfa(mfa.let(Mfa::unwrap))
+      cdkBuilder.mfa(mfa.let(Mfa.Companion::unwrap))
     }
 
     /**
@@ -684,7 +684,7 @@ public interface UserPoolProps {
      * Ignored if `mfa` is set to `OFF`.
      */
     override fun mfaSecondFactor(mfaSecondFactor: MfaSecondFactor) {
-      cdkBuilder.mfaSecondFactor(mfaSecondFactor.let(MfaSecondFactor::unwrap))
+      cdkBuilder.mfaSecondFactor(mfaSecondFactor.let(MfaSecondFactor.Companion::unwrap))
     }
 
     /**
@@ -700,7 +700,7 @@ public interface UserPoolProps {
      * @param passwordPolicy Password policy for this user pool.
      */
     override fun passwordPolicy(passwordPolicy: PasswordPolicy) {
-      cdkBuilder.passwordPolicy(passwordPolicy.let(PasswordPolicy::unwrap))
+      cdkBuilder.passwordPolicy(passwordPolicy.let(PasswordPolicy.Companion::unwrap))
     }
 
     /**
@@ -715,7 +715,7 @@ public interface UserPoolProps {
      * @param removalPolicy Policy to apply when the user pool is removed from the stack.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -740,7 +740,7 @@ public interface UserPoolProps {
      * number, this property should be set to `{ email: true, phone: true }`.
      */
     override fun signInAliases(signInAliases: SignInAliases) {
-      cdkBuilder.signInAliases(signInAliases.let(SignInAliases::unwrap))
+      cdkBuilder.signInAliases(signInAliases.let(SignInAliases.Companion::unwrap))
     }
 
     /**
@@ -774,7 +774,7 @@ public interface UserPoolProps {
      * @param smsRole The IAM role that Cognito will assume while sending SMS messages.
      */
     override fun smsRole(smsRole: IRole) {
-      cdkBuilder.smsRole(smsRole.let(IRole::unwrap))
+      cdkBuilder.smsRole(smsRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -804,7 +804,7 @@ public interface UserPoolProps {
      * https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-settings-attributes.html
      */
     override fun standardAttributes(standardAttributes: StandardAttributes) {
-      cdkBuilder.standardAttributes(standardAttributes.let(StandardAttributes::unwrap))
+      cdkBuilder.standardAttributes(standardAttributes.let(StandardAttributes.Companion::unwrap))
     }
 
     /**
@@ -822,7 +822,7 @@ public interface UserPoolProps {
      * @param userInvitation Configuration around admins signing up users into a user pool.
      */
     override fun userInvitation(userInvitation: UserInvitationConfig) {
-      cdkBuilder.userInvitation(userInvitation.let(UserInvitationConfig::unwrap))
+      cdkBuilder.userInvitation(userInvitation.let(UserInvitationConfig.Companion::unwrap))
     }
 
     /**
@@ -845,7 +845,7 @@ public interface UserPoolProps {
      * Enable or disable self sign-up via the `selfSignUpEnabled` property.
      */
     override fun userVerification(userVerification: UserVerificationConfig) {
-      cdkBuilder.userVerification(userVerification.let(UserVerificationConfig::unwrap))
+      cdkBuilder.userVerification(userVerification.let(UserVerificationConfig.Companion::unwrap))
     }
 
     /**

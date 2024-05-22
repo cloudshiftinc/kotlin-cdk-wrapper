@@ -96,8 +96,8 @@ public open class CfnDataflowEndpointGroup(
     id: String,
     props: CfnDataflowEndpointGroupProps,
   ) :
-      this(software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDataflowEndpointGroupProps::unwrap))
+      this(software.amazon.awscdk.services.groundstation.CfnDataflowEndpointGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDataflowEndpointGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -158,7 +158,7 @@ public open class CfnDataflowEndpointGroup(
    * List of Endpoint Details, containing address and port for each endpoint.
    */
   public open fun endpointDetails(`value`: IResolvable) {
-    unwrap(this).setEndpointDetails(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEndpointDetails(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -179,7 +179,7 @@ public open class CfnDataflowEndpointGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -197,7 +197,7 @@ public open class CfnDataflowEndpointGroup(
    * Tags assigned to a resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -327,7 +327,7 @@ public open class CfnDataflowEndpointGroup(
      * endpoint. 
      */
     override fun endpointDetails(endpointDetails: IResolvable) {
-      cdkBuilder.endpointDetails(endpointDetails.let(IResolvable::unwrap))
+      cdkBuilder.endpointDetails(endpointDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -358,7 +358,7 @@ public open class CfnDataflowEndpointGroup(
      * @param tags Tags assigned to a resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -534,14 +534,14 @@ public open class CfnDataflowEndpointGroup(
        * @param egressAddress the value to be set.
        */
       override fun egressAddress(egressAddress: IResolvable) {
-        cdkBuilder.egressAddress(egressAddress.let(IResolvable::unwrap))
+        cdkBuilder.egressAddress(egressAddress.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param egressAddress the value to be set.
        */
       override fun egressAddress(egressAddress: ConnectionDetailsProperty) {
-        cdkBuilder.egressAddress(egressAddress.let(ConnectionDetailsProperty::unwrap))
+        cdkBuilder.egressAddress(egressAddress.let(ConnectionDetailsProperty.Companion::unwrap))
       }
 
       /**
@@ -556,14 +556,14 @@ public open class CfnDataflowEndpointGroup(
        * @param ingressAddress the value to be set.
        */
       override fun ingressAddress(ingressAddress: IResolvable) {
-        cdkBuilder.ingressAddress(ingressAddress.let(IResolvable::unwrap))
+        cdkBuilder.ingressAddress(ingressAddress.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param ingressAddress the value to be set.
        */
       override fun ingressAddress(ingressAddress: RangedConnectionDetailsProperty) {
-        cdkBuilder.ingressAddress(ingressAddress.let(RangedConnectionDetailsProperty::unwrap))
+        cdkBuilder.ingressAddress(ingressAddress.let(RangedConnectionDetailsProperty.Companion::unwrap))
       }
 
       /**
@@ -709,14 +709,14 @@ public open class CfnDataflowEndpointGroup(
        * @param socketAddress the value to be set.
        */
       override fun socketAddress(socketAddress: IResolvable) {
-        cdkBuilder.socketAddress(socketAddress.let(IResolvable::unwrap))
+        cdkBuilder.socketAddress(socketAddress.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param socketAddress the value to be set.
        */
       override fun socketAddress(socketAddress: SocketAddressProperty) {
-        cdkBuilder.socketAddress(socketAddress.let(SocketAddressProperty::unwrap))
+        cdkBuilder.socketAddress(socketAddress.let(SocketAddressProperty.Companion::unwrap))
       }
 
       /**
@@ -857,14 +857,14 @@ public open class CfnDataflowEndpointGroup(
        * @param address The address and port of an endpoint.
        */
       override fun address(address: IResolvable) {
-        cdkBuilder.address(address.let(IResolvable::unwrap))
+        cdkBuilder.address(address.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param address The address and port of an endpoint.
        */
       override fun address(address: SocketAddressProperty) {
-        cdkBuilder.address(address.let(SocketAddressProperty::unwrap))
+        cdkBuilder.address(address.let(SocketAddressProperty.Companion::unwrap))
       }
 
       /**
@@ -1084,7 +1084,7 @@ public open class CfnDataflowEndpointGroup(
        * @param awsGroundStationAgentEndpoint the value to be set.
        */
       override fun awsGroundStationAgentEndpoint(awsGroundStationAgentEndpoint: IResolvable) {
-        cdkBuilder.awsGroundStationAgentEndpoint(awsGroundStationAgentEndpoint.let(IResolvable::unwrap))
+        cdkBuilder.awsGroundStationAgentEndpoint(awsGroundStationAgentEndpoint.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1092,7 +1092,7 @@ public open class CfnDataflowEndpointGroup(
        */
       override
           fun awsGroundStationAgentEndpoint(awsGroundStationAgentEndpoint: AwsGroundStationAgentEndpointProperty) {
-        cdkBuilder.awsGroundStationAgentEndpoint(awsGroundStationAgentEndpoint.let(AwsGroundStationAgentEndpointProperty::unwrap))
+        cdkBuilder.awsGroundStationAgentEndpoint(awsGroundStationAgentEndpoint.let(AwsGroundStationAgentEndpointProperty.Companion::unwrap))
       }
 
       /**
@@ -1109,14 +1109,14 @@ public open class CfnDataflowEndpointGroup(
        * @param endpoint Information about the endpoint such as name and the endpoint address.
        */
       override fun endpoint(endpoint: IResolvable) {
-        cdkBuilder.endpoint(endpoint.let(IResolvable::unwrap))
+        cdkBuilder.endpoint(endpoint.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param endpoint Information about the endpoint such as name and the endpoint address.
        */
       override fun endpoint(endpoint: DataflowEndpointProperty) {
-        cdkBuilder.endpoint(endpoint.let(DataflowEndpointProperty::unwrap))
+        cdkBuilder.endpoint(endpoint.let(DataflowEndpointProperty.Companion::unwrap))
       }
 
       /**
@@ -1131,14 +1131,14 @@ public open class CfnDataflowEndpointGroup(
        * @param securityDetails The role ARN, and IDs for security groups and subnets.
        */
       override fun securityDetails(securityDetails: IResolvable) {
-        cdkBuilder.securityDetails(securityDetails.let(IResolvable::unwrap))
+        cdkBuilder.securityDetails(securityDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param securityDetails The role ARN, and IDs for security groups and subnets.
        */
       override fun securityDetails(securityDetails: SecurityDetailsProperty) {
-        cdkBuilder.securityDetails(securityDetails.let(SecurityDetailsProperty::unwrap))
+        cdkBuilder.securityDetails(securityDetails.let(SecurityDetailsProperty.Companion::unwrap))
       }
 
       /**
@@ -1373,14 +1373,14 @@ public open class CfnDataflowEndpointGroup(
        * @param socketAddress the value to be set.
        */
       override fun socketAddress(socketAddress: IResolvable) {
-        cdkBuilder.socketAddress(socketAddress.let(IResolvable::unwrap))
+        cdkBuilder.socketAddress(socketAddress.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param socketAddress the value to be set.
        */
       override fun socketAddress(socketAddress: RangedSocketAddressProperty) {
-        cdkBuilder.socketAddress(socketAddress.let(RangedSocketAddressProperty::unwrap))
+        cdkBuilder.socketAddress(socketAddress.let(RangedSocketAddressProperty.Companion::unwrap))
       }
 
       /**
@@ -1502,14 +1502,14 @@ public open class CfnDataflowEndpointGroup(
        * @param portRange the value to be set.
        */
       override fun portRange(portRange: IResolvable) {
-        cdkBuilder.portRange(portRange.let(IResolvable::unwrap))
+        cdkBuilder.portRange(portRange.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param portRange the value to be set.
        */
       override fun portRange(portRange: IntegerRangeProperty) {
-        cdkBuilder.portRange(portRange.let(IntegerRangeProperty::unwrap))
+        cdkBuilder.portRange(portRange.let(IntegerRangeProperty.Companion::unwrap))
       }
 
       /**

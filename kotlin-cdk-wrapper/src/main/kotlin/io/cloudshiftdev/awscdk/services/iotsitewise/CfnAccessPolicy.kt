@@ -61,8 +61,8 @@ public open class CfnAccessPolicy(
     id: String,
     props: CfnAccessPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAccessPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.iotsitewise.CfnAccessPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAccessPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -81,14 +81,14 @@ public open class CfnAccessPolicy(
    * The identity for this access policy.
    */
   public open fun accessPolicyIdentity(`value`: IResolvable) {
-    unwrap(this).setAccessPolicyIdentity(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccessPolicyIdentity(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The identity for this access policy.
    */
   public open fun accessPolicyIdentity(`value`: AccessPolicyIdentityProperty) {
-    unwrap(this).setAccessPolicyIdentity(`value`.let(AccessPolicyIdentityProperty::unwrap))
+    unwrap(this).setAccessPolicyIdentity(`value`.let(AccessPolicyIdentityProperty.Companion::unwrap))
   }
 
   /**
@@ -120,14 +120,14 @@ public open class CfnAccessPolicy(
    * The AWS IoT SiteWise Monitor resource for this access policy.
    */
   public open fun accessPolicyResource(`value`: IResolvable) {
-    unwrap(this).setAccessPolicyResource(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccessPolicyResource(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The AWS IoT SiteWise Monitor resource for this access policy.
    */
   public open fun accessPolicyResource(`value`: AccessPolicyResourceProperty) {
-    unwrap(this).setAccessPolicyResource(`value`.let(AccessPolicyResourceProperty::unwrap))
+    unwrap(this).setAccessPolicyResource(`value`.let(AccessPolicyResourceProperty.Companion::unwrap))
   }
 
   /**
@@ -157,7 +157,7 @@ public open class CfnAccessPolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -258,7 +258,7 @@ public open class CfnAccessPolicy(
      * @param accessPolicyIdentity The identity for this access policy. 
      */
     override fun accessPolicyIdentity(accessPolicyIdentity: IResolvable) {
-      cdkBuilder.accessPolicyIdentity(accessPolicyIdentity.let(IResolvable::unwrap))
+      cdkBuilder.accessPolicyIdentity(accessPolicyIdentity.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -270,7 +270,7 @@ public open class CfnAccessPolicy(
      * @param accessPolicyIdentity The identity for this access policy. 
      */
     override fun accessPolicyIdentity(accessPolicyIdentity: AccessPolicyIdentityProperty) {
-      cdkBuilder.accessPolicyIdentity(accessPolicyIdentity.let(AccessPolicyIdentityProperty::unwrap))
+      cdkBuilder.accessPolicyIdentity(accessPolicyIdentity.let(AccessPolicyIdentityProperty.Companion::unwrap))
     }
 
     /**
@@ -308,7 +308,7 @@ public open class CfnAccessPolicy(
      * @param accessPolicyResource The AWS IoT SiteWise Monitor resource for this access policy. 
      */
     override fun accessPolicyResource(accessPolicyResource: IResolvable) {
-      cdkBuilder.accessPolicyResource(accessPolicyResource.let(IResolvable::unwrap))
+      cdkBuilder.accessPolicyResource(accessPolicyResource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -320,7 +320,7 @@ public open class CfnAccessPolicy(
      * @param accessPolicyResource The AWS IoT SiteWise Monitor resource for this access policy. 
      */
     override fun accessPolicyResource(accessPolicyResource: AccessPolicyResourceProperty) {
-      cdkBuilder.accessPolicyResource(accessPolicyResource.let(AccessPolicyResourceProperty::unwrap))
+      cdkBuilder.accessPolicyResource(accessPolicyResource.let(AccessPolicyResourceProperty.Companion::unwrap))
     }
 
     /**
@@ -477,14 +477,14 @@ public open class CfnAccessPolicy(
        * @param iamRole An IAM role identity.
        */
       override fun iamRole(iamRole: IResolvable) {
-        cdkBuilder.iamRole(iamRole.let(IResolvable::unwrap))
+        cdkBuilder.iamRole(iamRole.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param iamRole An IAM role identity.
        */
       override fun iamRole(iamRole: IamRoleProperty) {
-        cdkBuilder.iamRole(iamRole.let(IamRoleProperty::unwrap))
+        cdkBuilder.iamRole(iamRole.let(IamRoleProperty.Companion::unwrap))
       }
 
       /**
@@ -499,14 +499,14 @@ public open class CfnAccessPolicy(
        * @param iamUser An IAM user identity.
        */
       override fun iamUser(iamUser: IResolvable) {
-        cdkBuilder.iamUser(iamUser.let(IResolvable::unwrap))
+        cdkBuilder.iamUser(iamUser.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param iamUser An IAM user identity.
        */
       override fun iamUser(iamUser: IamUserProperty) {
-        cdkBuilder.iamUser(iamUser.let(IamUserProperty::unwrap))
+        cdkBuilder.iamUser(iamUser.let(IamUserProperty.Companion::unwrap))
       }
 
       /**
@@ -521,14 +521,14 @@ public open class CfnAccessPolicy(
        * @param user An IAM Identity Center user identity.
        */
       override fun user(user: IResolvable) {
-        cdkBuilder.user(user.let(IResolvable::unwrap))
+        cdkBuilder.user(user.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param user An IAM Identity Center user identity.
        */
       override fun user(user: UserProperty) {
-        cdkBuilder.user(user.let(UserProperty::unwrap))
+        cdkBuilder.user(user.let(UserProperty.Companion::unwrap))
       }
 
       /**
@@ -675,14 +675,14 @@ public open class CfnAccessPolicy(
        * @param portal Identifies an AWS IoT SiteWise Monitor portal.
        */
       override fun portal(portal: IResolvable) {
-        cdkBuilder.portal(portal.let(IResolvable::unwrap))
+        cdkBuilder.portal(portal.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param portal Identifies an AWS IoT SiteWise Monitor portal.
        */
       override fun portal(portal: PortalProperty) {
-        cdkBuilder.portal(portal.let(PortalProperty::unwrap))
+        cdkBuilder.portal(portal.let(PortalProperty.Companion::unwrap))
       }
 
       /**
@@ -697,14 +697,14 @@ public open class CfnAccessPolicy(
        * @param project Identifies a specific AWS IoT SiteWise Monitor project.
        */
       override fun project(project: IResolvable) {
-        cdkBuilder.project(project.let(IResolvable::unwrap))
+        cdkBuilder.project(project.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param project Identifies a specific AWS IoT SiteWise Monitor project.
        */
       override fun project(project: ProjectProperty) {
-        cdkBuilder.project(project.let(ProjectProperty::unwrap))
+        cdkBuilder.project(project.let(ProjectProperty.Companion::unwrap))
       }
 
       /**

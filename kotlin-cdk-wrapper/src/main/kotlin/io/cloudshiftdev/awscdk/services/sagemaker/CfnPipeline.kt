@@ -62,8 +62,8 @@ public open class CfnPipeline(
     id: String,
     props: CfnPipelineProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnPipeline(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPipelineProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnPipeline(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPipelineProps.Companion::unwrap))
   )
 
   public constructor(
@@ -79,7 +79,7 @@ public open class CfnPipeline(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -169,7 +169,7 @@ public open class CfnPipeline(
    * The tags of the pipeline.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -325,7 +325,7 @@ public open class CfnPipeline(
      * @param tags The tags of the pipeline. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -547,7 +547,7 @@ public open class CfnPipeline(
        * If specified, SageMaker retrieves the pipeline definition from this location.
        */
       override fun pipelineDefinitionS3Location(pipelineDefinitionS3Location: IResolvable) {
-        cdkBuilder.pipelineDefinitionS3Location(pipelineDefinitionS3Location.let(IResolvable::unwrap))
+        cdkBuilder.pipelineDefinitionS3Location(pipelineDefinitionS3Location.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -556,7 +556,7 @@ public open class CfnPipeline(
        * If specified, SageMaker retrieves the pipeline definition from this location.
        */
       override fun pipelineDefinitionS3Location(pipelineDefinitionS3Location: S3LocationProperty) {
-        cdkBuilder.pipelineDefinitionS3Location(pipelineDefinitionS3Location.let(S3LocationProperty::unwrap))
+        cdkBuilder.pipelineDefinitionS3Location(pipelineDefinitionS3Location.let(S3LocationProperty.Companion::unwrap))
       }
 
       /**

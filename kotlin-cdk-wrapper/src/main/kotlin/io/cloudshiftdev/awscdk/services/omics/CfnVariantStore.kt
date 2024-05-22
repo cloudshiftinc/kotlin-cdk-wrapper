@@ -55,8 +55,8 @@ public open class CfnVariantStore(
     id: String,
     props: CfnVariantStoreProps,
   ) :
-      this(software.amazon.awscdk.services.omics.CfnVariantStore(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVariantStoreProps::unwrap))
+      this(software.amazon.awscdk.services.omics.CfnVariantStore(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVariantStoreProps.Companion::unwrap))
   )
 
   public constructor(
@@ -120,7 +120,7 @@ public open class CfnVariantStore(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -144,14 +144,14 @@ public open class CfnVariantStore(
    * The genome reference for the store's variants.
    */
   public open fun reference(`value`: IResolvable) {
-    unwrap(this).setReference(`value`.let(IResolvable::unwrap))
+    unwrap(this).setReference(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The genome reference for the store's variants.
    */
   public open fun reference(`value`: ReferenceItemProperty) {
-    unwrap(this).setReference(`value`.let(ReferenceItemProperty::unwrap))
+    unwrap(this).setReference(`value`.let(ReferenceItemProperty.Companion::unwrap))
   }
 
   /**
@@ -171,14 +171,14 @@ public open class CfnVariantStore(
    * Server-side encryption (SSE) settings for the store.
    */
   public open fun sseConfig(`value`: IResolvable) {
-    unwrap(this).setSseConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSseConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Server-side encryption (SSE) settings for the store.
    */
   public open fun sseConfig(`value`: SseConfigProperty) {
-    unwrap(this).setSseConfig(`value`.let(SseConfigProperty::unwrap))
+    unwrap(this).setSseConfig(`value`.let(SseConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -322,7 +322,7 @@ public open class CfnVariantStore(
      * @param reference The genome reference for the store's variants. 
      */
     override fun reference(reference: IResolvable) {
-      cdkBuilder.reference(reference.let(IResolvable::unwrap))
+      cdkBuilder.reference(reference.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -332,7 +332,7 @@ public open class CfnVariantStore(
      * @param reference The genome reference for the store's variants. 
      */
     override fun reference(reference: ReferenceItemProperty) {
-      cdkBuilder.reference(reference.let(ReferenceItemProperty::unwrap))
+      cdkBuilder.reference(reference.let(ReferenceItemProperty.Companion::unwrap))
     }
 
     /**
@@ -353,7 +353,7 @@ public open class CfnVariantStore(
      * @param sseConfig Server-side encryption (SSE) settings for the store. 
      */
     override fun sseConfig(sseConfig: IResolvable) {
-      cdkBuilder.sseConfig(sseConfig.let(IResolvable::unwrap))
+      cdkBuilder.sseConfig(sseConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -363,7 +363,7 @@ public open class CfnVariantStore(
      * @param sseConfig Server-side encryption (SSE) settings for the store. 
      */
     override fun sseConfig(sseConfig: SseConfigProperty) {
-      cdkBuilder.sseConfig(sseConfig.let(SseConfigProperty::unwrap))
+      cdkBuilder.sseConfig(sseConfig.let(SseConfigProperty.Companion::unwrap))
     }
 
     /**

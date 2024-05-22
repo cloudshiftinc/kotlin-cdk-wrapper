@@ -47,8 +47,8 @@ public open class EcsFargateContainerDefinition(
     id: String,
     props: EcsFargateContainerDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.batch.EcsFargateContainerDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EcsFargateContainerDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.batch.EcsFargateContainerDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EcsFargateContainerDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -64,7 +64,7 @@ public open class EcsFargateContainerDefinition(
    * @param volume 
    */
   public override fun addVolume(volume: EcsVolume) {
-    unwrap(this).addVolume(volume.let(EcsVolume::unwrap))
+    unwrap(this).addVolume(volume.let(EcsVolume.Companion::unwrap))
   }
 
   /**
@@ -482,7 +482,7 @@ public open class EcsFargateContainerDefinition(
      * @param ephemeralStorageSize The size for ephemeral storage. 
      */
     override fun ephemeralStorageSize(ephemeralStorageSize: Size) {
-      cdkBuilder.ephemeralStorageSize(ephemeralStorageSize.let(Size::unwrap))
+      cdkBuilder.ephemeralStorageSize(ephemeralStorageSize.let(Size.Companion::unwrap))
     }
 
     /**
@@ -496,7 +496,7 @@ public open class EcsFargateContainerDefinition(
      * API calls on your behalf. 
      */
     override fun executionRole(executionRole: IRole) {
-      cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
+      cdkBuilder.executionRole(executionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -507,7 +507,7 @@ public open class EcsFargateContainerDefinition(
      * @param fargateCpuArchitecture The vCPU architecture of Fargate Runtime. 
      */
     override fun fargateCpuArchitecture(fargateCpuArchitecture: CpuArchitecture) {
-      cdkBuilder.fargateCpuArchitecture(fargateCpuArchitecture.let(CpuArchitecture::unwrap))
+      cdkBuilder.fargateCpuArchitecture(fargateCpuArchitecture.let(CpuArchitecture.Companion::unwrap))
     }
 
     /**
@@ -518,7 +518,7 @@ public open class EcsFargateContainerDefinition(
      * @param fargateOperatingSystemFamily The operating system for the compute environment. 
      */
     override fun fargateOperatingSystemFamily(fargateOperatingSystemFamily: OperatingSystemFamily) {
-      cdkBuilder.fargateOperatingSystemFamily(fargateOperatingSystemFamily.let(OperatingSystemFamily::unwrap))
+      cdkBuilder.fargateOperatingSystemFamily(fargateOperatingSystemFamily.let(OperatingSystemFamily.Companion::unwrap))
     }
 
     /**
@@ -529,7 +529,7 @@ public open class EcsFargateContainerDefinition(
      * @param fargatePlatformVersion Which version of Fargate to use when running this container. 
      */
     override fun fargatePlatformVersion(fargatePlatformVersion: FargatePlatformVersion) {
-      cdkBuilder.fargatePlatformVersion(fargatePlatformVersion.let(FargatePlatformVersion::unwrap))
+      cdkBuilder.fargatePlatformVersion(fargatePlatformVersion.let(FargatePlatformVersion.Companion::unwrap))
     }
 
     /**
@@ -538,7 +538,7 @@ public open class EcsFargateContainerDefinition(
      * @param image The image that this container will run. 
      */
     override fun image(image: ContainerImage) {
-      cdkBuilder.image(image.let(ContainerImage::unwrap))
+      cdkBuilder.image(image.let(ContainerImage.Companion::unwrap))
     }
 
     /**
@@ -550,7 +550,7 @@ public open class EcsFargateContainerDefinition(
      * @param jobRole The role that the container can assume. 
      */
     override fun jobRole(jobRole: IRole) {
-      cdkBuilder.jobRole(jobRole.let(IRole::unwrap))
+      cdkBuilder.jobRole(jobRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -563,7 +563,7 @@ public open class EcsFargateContainerDefinition(
      * as details for device mappings. 
      */
     override fun linuxParameters(linuxParameters: LinuxParameters) {
-      cdkBuilder.linuxParameters(linuxParameters.let(LinuxParameters::unwrap))
+      cdkBuilder.linuxParameters(linuxParameters.let(LinuxParameters.Companion::unwrap))
     }
 
     /**
@@ -574,7 +574,7 @@ public open class EcsFargateContainerDefinition(
      * @param logging The loging configuration for this Job. 
      */
     override fun logging(logging: LogDriver) {
-      cdkBuilder.logging(logging.let(LogDriver::unwrap))
+      cdkBuilder.logging(logging.let(LogDriver.Companion::unwrap))
     }
 
     /**
@@ -586,7 +586,7 @@ public open class EcsFargateContainerDefinition(
      * @param memory The memory hard limit present to the container. 
      */
     override fun memory(memory: Size) {
-      cdkBuilder.memory(memory.let(Size::unwrap))
+      cdkBuilder.memory(memory.let(Size.Companion::unwrap))
     }
 
     /**
@@ -636,7 +636,7 @@ public open class EcsFargateContainerDefinition(
      * @param volumes The volumes to mount to this container. 
      */
     override fun volumes(volumes: List<EcsVolume>) {
-      cdkBuilder.volumes(volumes.map(EcsVolume::unwrap))
+      cdkBuilder.volumes(volumes.map(EcsVolume.Companion::unwrap))
     }
 
     /**

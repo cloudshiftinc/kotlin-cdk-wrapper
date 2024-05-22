@@ -24,7 +24,7 @@ public open class ServerApplication(
   cdkObject: software.amazon.awscdk.services.codedeploy.ServerApplication,
 ) : Resource(cdkObject), IServerApplication {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.codedeploy.ServerApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.codedeploy.ServerApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -33,8 +33,8 @@ public open class ServerApplication(
     id: String,
     props: ServerApplicationProps,
   ) :
-      this(software.amazon.awscdk.services.codedeploy.ServerApplication(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ServerApplicationProps::unwrap))
+      this(software.amazon.awscdk.services.codedeploy.ServerApplication(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ServerApplicationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -97,7 +97,7 @@ public open class ServerApplication(
       id: String,
       serverApplicationArn: String,
     ): IServerApplication =
-        software.amazon.awscdk.services.codedeploy.ServerApplication.fromServerApplicationArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.codedeploy.ServerApplication.fromServerApplicationArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, serverApplicationArn).let(IServerApplication::wrap)
 
     public fun fromServerApplicationName(
@@ -105,7 +105,7 @@ public open class ServerApplication(
       id: String,
       serverApplicationName: String,
     ): IServerApplication =
-        software.amazon.awscdk.services.codedeploy.ServerApplication.fromServerApplicationName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.codedeploy.ServerApplication.fromServerApplicationName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, serverApplicationName).let(IServerApplication::wrap)
 
     public operator fun invoke(

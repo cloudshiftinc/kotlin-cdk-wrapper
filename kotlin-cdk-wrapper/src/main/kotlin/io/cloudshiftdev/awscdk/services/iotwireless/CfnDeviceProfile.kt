@@ -67,7 +67,7 @@ public open class CfnDeviceProfile(
   cdkObject: software.amazon.awscdk.services.iotwireless.CfnDeviceProfile,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.iotwireless.CfnDeviceProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.iotwireless.CfnDeviceProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -76,8 +76,8 @@ public open class CfnDeviceProfile(
     id: String,
     props: CfnDeviceProfileProps,
   ) :
-      this(software.amazon.awscdk.services.iotwireless.CfnDeviceProfile(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDeviceProfileProps::unwrap))
+      this(software.amazon.awscdk.services.iotwireless.CfnDeviceProfile(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDeviceProfileProps.Companion::unwrap))
   )
 
   public constructor(
@@ -103,7 +103,7 @@ public open class CfnDeviceProfile(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -115,14 +115,14 @@ public open class CfnDeviceProfile(
    * LoRaWAN device profile object.
    */
   public open fun loRaWan(`value`: IResolvable) {
-    unwrap(this).setLoRaWan(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoRaWan(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * LoRaWAN device profile object.
    */
   public open fun loRaWan(`value`: LoRaWANDeviceProfileProperty) {
-    unwrap(this).setLoRaWan(`value`.let(LoRaWANDeviceProfileProperty::unwrap))
+    unwrap(this).setLoRaWan(`value`.let(LoRaWANDeviceProfileProperty.Companion::unwrap))
   }
 
   /**
@@ -160,7 +160,7 @@ public open class CfnDeviceProfile(
    * The tags are an array of key-value pairs to attach to the specified resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -242,7 +242,7 @@ public open class CfnDeviceProfile(
      * @param loRaWan LoRaWAN device profile object. 
      */
     override fun loRaWan(loRaWan: IResolvable) {
-      cdkBuilder.loRaWan(loRaWan.let(IResolvable::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -252,7 +252,7 @@ public open class CfnDeviceProfile(
      * @param loRaWan LoRaWAN device profile object. 
      */
     override fun loRaWan(loRaWan: LoRaWANDeviceProfileProperty) {
-      cdkBuilder.loRaWan(loRaWan.let(LoRaWANDeviceProfileProperty::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(LoRaWANDeviceProfileProperty.Companion::unwrap))
     }
 
     /**
@@ -285,7 +285,7 @@ public open class CfnDeviceProfile(
      * @param tags The tags are an array of key-value pairs to attach to the specified resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -654,7 +654,7 @@ public open class CfnDeviceProfile(
        * Valid range of values include a minimum value of 1000000 and a maximum value of 16700000.
        */
       override fun factoryPresetFreqsList(factoryPresetFreqsList: IResolvable) {
-        cdkBuilder.factoryPresetFreqsList(factoryPresetFreqsList.let(IResolvable::unwrap))
+        cdkBuilder.factoryPresetFreqsList(factoryPresetFreqsList.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -768,7 +768,7 @@ public open class CfnDeviceProfile(
        * @param supports32BitFCnt The Supports32BitFCnt value.
        */
       override fun supports32BitFCnt(supports32BitFCnt: IResolvable) {
-        cdkBuilder.supports32BitFCnt(supports32BitFCnt.let(IResolvable::unwrap))
+        cdkBuilder.supports32BitFCnt(supports32BitFCnt.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -782,7 +782,7 @@ public open class CfnDeviceProfile(
        * @param supportsClassB The SupportsClassB value.
        */
       override fun supportsClassB(supportsClassB: IResolvable) {
-        cdkBuilder.supportsClassB(supportsClassB.let(IResolvable::unwrap))
+        cdkBuilder.supportsClassB(supportsClassB.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -796,7 +796,7 @@ public open class CfnDeviceProfile(
        * @param supportsClassC The SupportsClassC value.
        */
       override fun supportsClassC(supportsClassC: IResolvable) {
-        cdkBuilder.supportsClassC(supportsClassC.let(IResolvable::unwrap))
+        cdkBuilder.supportsClassC(supportsClassC.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -810,7 +810,7 @@ public open class CfnDeviceProfile(
        * @param supportsJoin The SupportsJoin value.
        */
       override fun supportsJoin(supportsJoin: IResolvable) {
-        cdkBuilder.supportsJoin(supportsJoin.let(IResolvable::unwrap))
+        cdkBuilder.supportsJoin(supportsJoin.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

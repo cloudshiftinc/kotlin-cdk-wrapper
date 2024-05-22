@@ -334,7 +334,7 @@ public interface RouteSpecConfig {
      * @param grpcRouteSpec The spec for a grpc route.
      */
     override fun grpcRouteSpec(grpcRouteSpec: CfnRoute.GrpcRouteProperty) {
-      cdkBuilder.grpcRouteSpec(grpcRouteSpec.let(CfnRoute.GrpcRouteProperty::unwrap))
+      cdkBuilder.grpcRouteSpec(grpcRouteSpec.let(CfnRoute.GrpcRouteProperty.Companion::unwrap))
     }
 
     /**
@@ -349,7 +349,7 @@ public interface RouteSpecConfig {
      * @param http2RouteSpec The spec for an http2 route.
      */
     override fun http2RouteSpec(http2RouteSpec: CfnRoute.HttpRouteProperty) {
-      cdkBuilder.http2RouteSpec(http2RouteSpec.let(CfnRoute.HttpRouteProperty::unwrap))
+      cdkBuilder.http2RouteSpec(http2RouteSpec.let(CfnRoute.HttpRouteProperty.Companion::unwrap))
     }
 
     /**
@@ -364,7 +364,7 @@ public interface RouteSpecConfig {
      * @param httpRouteSpec The spec for an http route.
      */
     override fun httpRouteSpec(httpRouteSpec: CfnRoute.HttpRouteProperty) {
-      cdkBuilder.httpRouteSpec(httpRouteSpec.let(CfnRoute.HttpRouteProperty::unwrap))
+      cdkBuilder.httpRouteSpec(httpRouteSpec.let(CfnRoute.HttpRouteProperty.Companion::unwrap))
     }
 
     /**
@@ -389,7 +389,7 @@ public interface RouteSpecConfig {
      * @param tcpRouteSpec The spec for a tcp route.
      */
     override fun tcpRouteSpec(tcpRouteSpec: CfnRoute.TcpRouteProperty) {
-      cdkBuilder.tcpRouteSpec(tcpRouteSpec.let(CfnRoute.TcpRouteProperty::unwrap))
+      cdkBuilder.tcpRouteSpec(tcpRouteSpec.let(CfnRoute.TcpRouteProperty.Companion::unwrap))
     }
 
     /**

@@ -84,7 +84,7 @@ public open class LinuxArmBuildImage(
    * @param buildEnvironment BuildEnvironment. 
    */
   public override fun validate(buildEnvironment: BuildEnvironment): List<String> =
-      unwrap(this).validate(buildEnvironment.let(BuildEnvironment::unwrap))
+      unwrap(this).validate(buildEnvironment.let(BuildEnvironment.Companion::unwrap))
 
   /**
    * Validates by checking the BuildEnvironment computeType as aarch64 images only support
@@ -115,7 +115,7 @@ public open class LinuxArmBuildImage(
 
     public fun fromDockerRegistry(name: String, options: DockerImageOptions): IBuildImage =
         software.amazon.awscdk.services.codebuild.LinuxArmBuildImage.fromDockerRegistry(name,
-        options.let(DockerImageOptions::unwrap)).let(IBuildImage::wrap)
+        options.let(DockerImageOptions.Companion::unwrap)).let(IBuildImage::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e9dfa00b9fda484ff06b60ab8b92ae7805fa8054bf1b7155a5e6cb7e59c4680f")
@@ -123,10 +123,10 @@ public open class LinuxArmBuildImage(
         IBuildImage = fromDockerRegistry(name, DockerImageOptions(options))
 
     public fun fromEcrRepository(repository: IRepository): IBuildImage =
-        software.amazon.awscdk.services.codebuild.LinuxArmBuildImage.fromEcrRepository(repository.let(IRepository::unwrap)).let(IBuildImage::wrap)
+        software.amazon.awscdk.services.codebuild.LinuxArmBuildImage.fromEcrRepository(repository.let(IRepository.Companion::unwrap)).let(IBuildImage::wrap)
 
     public fun fromEcrRepository(repository: IRepository, tagOrDigest: String): IBuildImage =
-        software.amazon.awscdk.services.codebuild.LinuxArmBuildImage.fromEcrRepository(repository.let(IRepository::unwrap),
+        software.amazon.awscdk.services.codebuild.LinuxArmBuildImage.fromEcrRepository(repository.let(IRepository.Companion::unwrap),
         tagOrDigest).let(IBuildImage::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.LinuxArmBuildImage):

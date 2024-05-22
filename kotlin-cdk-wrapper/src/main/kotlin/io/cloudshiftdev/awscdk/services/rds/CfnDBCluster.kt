@@ -179,7 +179,7 @@ public open class CfnDBCluster(
   cdkObject: software.amazon.awscdk.services.rds.CfnDBCluster,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.rds.CfnDBCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.rds.CfnDBCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -188,8 +188,8 @@ public open class CfnDBCluster(
     id: String,
     props: CfnDBClusterProps,
   ) :
-      this(software.amazon.awscdk.services.rds.CfnDBCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDBClusterProps::unwrap))
+      this(software.amazon.awscdk.services.rds.CfnDBCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDBClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -224,7 +224,7 @@ public open class CfnDBCluster(
    * the DB cluster.
    */
   public open fun associatedRoles(`value`: IResolvable) {
-    unwrap(this).setAssociatedRoles(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAssociatedRoles(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -322,7 +322,7 @@ public open class CfnDBCluster(
    * maintenance window.
    */
   public open fun autoMinorVersionUpgrade(`value`: IResolvable) {
-    unwrap(this).setAutoMinorVersionUpgrade(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoMinorVersionUpgrade(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -391,7 +391,7 @@ public open class CfnDBCluster(
    * cluster.
    */
   public open fun copyTagsToSnapshot(`value`: IResolvable) {
-    unwrap(this).setCopyTagsToSnapshot(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCopyTagsToSnapshot(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -504,7 +504,7 @@ public open class CfnDBCluster(
    * A value that indicates whether the DB cluster has deletion protection enabled.
    */
   public open fun deletionProtection(`value`: IResolvable) {
-    unwrap(this).setDeletionProtection(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeletionProtection(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -570,7 +570,7 @@ public open class CfnDBCluster(
    * of a global cluster (Aurora global database).
    */
   public open fun enableGlobalWriteForwarding(`value`: IResolvable) {
-    unwrap(this).setEnableGlobalWriteForwarding(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableGlobalWriteForwarding(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -595,7 +595,7 @@ public open class CfnDBCluster(
    * By default, the HTTP endpoint isn't enabled.
    */
   public open fun enableHttpEndpoint(`value`: IResolvable) {
-    unwrap(this).setEnableHttpEndpoint(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableHttpEndpoint(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -618,7 +618,7 @@ public open class CfnDBCluster(
    * accounts to database accounts.
    */
   public open fun enableIamDatabaseAuthentication(`value`: IResolvable) {
-    unwrap(this).setEnableIamDatabaseAuthentication(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableIamDatabaseAuthentication(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -679,7 +679,7 @@ public open class CfnDBCluster(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -728,7 +728,7 @@ public open class CfnDBCluster(
    * Specifies whether to manage the master user password with AWS Secrets Manager.
    */
   public open fun manageMasterUserPassword(`value`: IResolvable) {
-    unwrap(this).setManageMasterUserPassword(`value`.let(IResolvable::unwrap))
+    unwrap(this).setManageMasterUserPassword(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -752,14 +752,14 @@ public open class CfnDBCluster(
    * The secret managed by RDS in AWS Secrets Manager for the master user password.
    */
   public open fun masterUserSecret(`value`: IResolvable) {
-    unwrap(this).setMasterUserSecret(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMasterUserSecret(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The secret managed by RDS in AWS Secrets Manager for the master user password.
    */
   public open fun masterUserSecret(`value`: MasterUserSecretProperty) {
-    unwrap(this).setMasterUserSecret(`value`.let(MasterUserSecretProperty::unwrap))
+    unwrap(this).setMasterUserSecret(`value`.let(MasterUserSecretProperty.Companion::unwrap))
   }
 
   /**
@@ -838,7 +838,7 @@ public open class CfnDBCluster(
    * Specifies whether to turn on Performance Insights for the DB cluster.
    */
   public open fun performanceInsightsEnabled(`value`: IResolvable) {
-    unwrap(this).setPerformanceInsightsEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPerformanceInsightsEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -922,7 +922,7 @@ public open class CfnDBCluster(
    * Specifies whether the DB cluster is publicly accessible.
    */
   public open fun publiclyAccessible(`value`: IResolvable) {
-    unwrap(this).setPubliclyAccessible(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPubliclyAccessible(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -977,14 +977,14 @@ public open class CfnDBCluster(
    * The scaling configuration of an Aurora Serverless v1 DB cluster.
    */
   public open fun scalingConfiguration(`value`: IResolvable) {
-    unwrap(this).setScalingConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setScalingConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The scaling configuration of an Aurora Serverless v1 DB cluster.
    */
   public open fun scalingConfiguration(`value`: ScalingConfigurationProperty) {
-    unwrap(this).setScalingConfiguration(`value`.let(ScalingConfigurationProperty::unwrap))
+    unwrap(this).setScalingConfiguration(`value`.let(ScalingConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -1005,7 +1005,7 @@ public open class CfnDBCluster(
    * The scaling configuration of an Aurora Serverless V2 DB cluster.
    */
   public open fun serverlessV2ScalingConfiguration(`value`: IResolvable) {
-    unwrap(this).setServerlessV2ScalingConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setServerlessV2ScalingConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -1013,7 +1013,7 @@ public open class CfnDBCluster(
    */
   public open
       fun serverlessV2ScalingConfiguration(`value`: ServerlessV2ScalingConfigurationProperty) {
-    unwrap(this).setServerlessV2ScalingConfiguration(`value`.let(ServerlessV2ScalingConfigurationProperty::unwrap))
+    unwrap(this).setServerlessV2ScalingConfiguration(`value`.let(ServerlessV2ScalingConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -1083,7 +1083,7 @@ public open class CfnDBCluster(
    * Indicates whether the DB cluster is encrypted.
    */
   public open fun storageEncrypted(`value`: IResolvable) {
-    unwrap(this).setStorageEncrypted(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStorageEncrypted(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -1113,7 +1113,7 @@ public open class CfnDBCluster(
    * An optional array of key-value pairs to apply to this DB cluster.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -1137,7 +1137,7 @@ public open class CfnDBCluster(
    * A value that indicates whether to restore the DB cluster to the latest restorable backup time.
    */
   public open fun useLatestRestorableTime(`value`: IResolvable) {
-    unwrap(this).setUseLatestRestorableTime(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUseLatestRestorableTime(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -2520,6 +2520,12 @@ public open class CfnDBCluster(
      * property for the KMS key to use for encryption. If you don't want the restored DB cluster to be
      * encrypted, then don't set this property or set it to `false` .
      *
+     *
+     * If you specify both the `StorageEncrypted` and `SnapshotIdentifier` properties without
+     * specifying the `KmsKeyId` property, then the restored DB cluster inherits the encryption
+     * settings from the DB snapshot that provide.
+     *
+     *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-storageencrypted)
@@ -2544,6 +2550,12 @@ public open class CfnDBCluster(
      * use this property to specify that the restored DB cluster is encrypted. Specify the `KmsKeyId`
      * property for the KMS key to use for encryption. If you don't want the restored DB cluster to be
      * encrypted, then don't set this property or set it to `false` .
+     *
+     *
+     * If you specify both the `StorageEncrypted` and `SnapshotIdentifier` properties without
+     * specifying the `KmsKeyId` property, then the restored DB cluster inherits the encryption
+     * settings from the DB snapshot that provide.
+     *
      *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      *
@@ -2702,7 +2714,7 @@ public open class CfnDBCluster(
      * that are associated with the DB cluster. 
      */
     override fun associatedRoles(associatedRoles: IResolvable) {
-      cdkBuilder.associatedRoles(associatedRoles.let(IResolvable::unwrap))
+      cdkBuilder.associatedRoles(associatedRoles.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2767,7 +2779,7 @@ public open class CfnDBCluster(
      * automatically to the DB cluster during the maintenance window. 
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2879,7 +2891,7 @@ public open class CfnDBCluster(
      * to snapshots of the DB cluster. 
      */
     override fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable) {
-      cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot.let(IResolvable::unwrap))
+      cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3052,7 +3064,7 @@ public open class CfnDBCluster(
      * protection enabled. 
      */
     override fun deletionProtection(deletionProtection: IResolvable) {
-      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable::unwrap))
+      cdkBuilder.deletionProtection(deletionProtection.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3181,7 +3193,7 @@ public open class CfnDBCluster(
      * write operations to the primary cluster of a global cluster (Aurora global database). 
      */
     override fun enableGlobalWriteForwarding(enableGlobalWriteForwarding: IResolvable) {
-      cdkBuilder.enableGlobalWriteForwarding(enableGlobalWriteForwarding.let(IResolvable::unwrap))
+      cdkBuilder.enableGlobalWriteForwarding(enableGlobalWriteForwarding.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3235,7 +3247,7 @@ public open class CfnDBCluster(
      * By default, the HTTP endpoint isn't enabled. 
      */
     override fun enableHttpEndpoint(enableHttpEndpoint: IResolvable) {
-      cdkBuilder.enableHttpEndpoint(enableHttpEndpoint.let(IResolvable::unwrap))
+      cdkBuilder.enableHttpEndpoint(enableHttpEndpoint.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3275,7 +3287,7 @@ public open class CfnDBCluster(
      * AWS Identity and Access Management (IAM) accounts to database accounts. 
      */
     override fun enableIamDatabaseAuthentication(enableIamDatabaseAuthentication: IResolvable) {
-      cdkBuilder.enableIamDatabaseAuthentication(enableIamDatabaseAuthentication.let(IResolvable::unwrap))
+      cdkBuilder.enableIamDatabaseAuthentication(enableIamDatabaseAuthentication.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3511,7 +3523,7 @@ public open class CfnDBCluster(
      * Secrets Manager. 
      */
     override fun manageMasterUserPassword(manageMasterUserPassword: IResolvable) {
-      cdkBuilder.manageMasterUserPassword(manageMasterUserPassword.let(IResolvable::unwrap))
+      cdkBuilder.manageMasterUserPassword(manageMasterUserPassword.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3547,7 +3559,7 @@ public open class CfnDBCluster(
      * password. 
      */
     override fun masterUserSecret(masterUserSecret: IResolvable) {
-      cdkBuilder.masterUserSecret(masterUserSecret.let(IResolvable::unwrap))
+      cdkBuilder.masterUserSecret(masterUserSecret.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3564,7 +3576,7 @@ public open class CfnDBCluster(
      * password. 
      */
     override fun masterUserSecret(masterUserSecret: MasterUserSecretProperty) {
-      cdkBuilder.masterUserSecret(masterUserSecret.let(MasterUserSecretProperty::unwrap))
+      cdkBuilder.masterUserSecret(masterUserSecret.let(MasterUserSecretProperty.Companion::unwrap))
     }
 
     /**
@@ -3706,7 +3718,7 @@ public open class CfnDBCluster(
      * DB cluster. 
      */
     override fun performanceInsightsEnabled(performanceInsightsEnabled: IResolvable) {
-      cdkBuilder.performanceInsightsEnabled(performanceInsightsEnabled.let(IResolvable::unwrap))
+      cdkBuilder.performanceInsightsEnabled(performanceInsightsEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3904,7 +3916,7 @@ public open class CfnDBCluster(
      * @param publiclyAccessible Specifies whether the DB cluster is publicly accessible. 
      */
     override fun publiclyAccessible(publiclyAccessible: IResolvable) {
-      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
+      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3980,7 +3992,7 @@ public open class CfnDBCluster(
      * @param scalingConfiguration The scaling configuration of an Aurora Serverless v1 DB cluster. 
      */
     override fun scalingConfiguration(scalingConfiguration: IResolvable) {
-      cdkBuilder.scalingConfiguration(scalingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.scalingConfiguration(scalingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -3995,7 +4007,7 @@ public open class CfnDBCluster(
      * @param scalingConfiguration The scaling configuration of an Aurora Serverless v1 DB cluster. 
      */
     override fun scalingConfiguration(scalingConfiguration: ScalingConfigurationProperty) {
-      cdkBuilder.scalingConfiguration(scalingConfiguration.let(ScalingConfigurationProperty::unwrap))
+      cdkBuilder.scalingConfiguration(scalingConfiguration.let(ScalingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -4028,7 +4040,7 @@ public open class CfnDBCluster(
      * DB cluster. 
      */
     override fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: IResolvable) {
-      cdkBuilder.serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4045,7 +4057,7 @@ public open class CfnDBCluster(
      */
     override
         fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: ServerlessV2ScalingConfigurationProperty) {
-      cdkBuilder.serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration.let(ServerlessV2ScalingConfigurationProperty::unwrap))
+      cdkBuilder.serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration.let(ServerlessV2ScalingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -4159,6 +4171,12 @@ public open class CfnDBCluster(
      * property for the KMS key to use for encryption. If you don't want the restored DB cluster to be
      * encrypted, then don't set this property or set it to `false` .
      *
+     *
+     * If you specify both the `StorageEncrypted` and `SnapshotIdentifier` properties without
+     * specifying the `KmsKeyId` property, then the restored DB cluster inherits the encryption
+     * settings from the DB snapshot that provide.
+     *
+     *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-storageencrypted)
@@ -4186,13 +4204,19 @@ public open class CfnDBCluster(
      * property for the KMS key to use for encryption. If you don't want the restored DB cluster to be
      * encrypted, then don't set this property or set it to `false` .
      *
+     *
+     * If you specify both the `StorageEncrypted` and `SnapshotIdentifier` properties without
+     * specifying the `KmsKeyId` property, then the restored DB cluster inherits the encryption
+     * settings from the DB snapshot that provide.
+     *
+     *
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-storageencrypted)
      * @param storageEncrypted Indicates whether the DB cluster is encrypted. 
      */
     override fun storageEncrypted(storageEncrypted: IResolvable) {
-      cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable::unwrap))
+      cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -4244,7 +4268,7 @@ public open class CfnDBCluster(
      * @param tags An optional array of key-value pairs to apply to this DB cluster. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -4286,7 +4310,7 @@ public open class CfnDBCluster(
      * the latest restorable backup time. 
      */
     override fun useLatestRestorableTime(useLatestRestorableTime: IResolvable) {
-      cdkBuilder.useLatestRestorableTime(useLatestRestorableTime.let(IResolvable::unwrap))
+      cdkBuilder.useLatestRestorableTime(useLatestRestorableTime.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -5031,7 +5055,7 @@ public open class CfnDBCluster(
        * a snapshot. In this case, the DB cluster is restored when there is a request to connect to it.
        */
       override fun autoPause(autoPause: IResolvable) {
-        cdkBuilder.autoPause(autoPause.let(IResolvable::unwrap))
+        cdkBuilder.autoPause(autoPause.let(IResolvable.Companion::unwrap))
       }
 
       /**

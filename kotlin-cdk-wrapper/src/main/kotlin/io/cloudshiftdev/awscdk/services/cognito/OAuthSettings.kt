@@ -150,7 +150,7 @@ public interface OAuthSettings {
      * @param flows OAuth flows that are allowed with this client.
      */
     override fun flows(flows: OAuthFlows) {
-      cdkBuilder.flows(flows.let(OAuthFlows::unwrap))
+      cdkBuilder.flows(flows.let(OAuthFlows.Companion::unwrap))
     }
 
     /**
@@ -176,7 +176,7 @@ public interface OAuthSettings {
      * @param scopes OAuth scopes that are allowed with this client.
      */
     override fun scopes(scopes: List<OAuthScope>) {
-      cdkBuilder.scopes(scopes.map(OAuthScope::unwrap))
+      cdkBuilder.scopes(scopes.map(OAuthScope.Companion::unwrap))
     }
 
     /**

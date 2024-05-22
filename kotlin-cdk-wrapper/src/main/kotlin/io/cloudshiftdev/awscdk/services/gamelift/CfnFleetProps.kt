@@ -35,6 +35,18 @@ import kotlin.jvm.JvmName
  * .certificateType("certificateType")
  * .build())
  * .computeType("computeType")
+ * .containerGroupsConfiguration(ContainerGroupsConfigurationProperty.builder()
+ * .connectionPortRange(ConnectionPortRangeProperty.builder()
+ * .fromPort(123)
+ * .toPort(123)
+ * .build())
+ * .containerGroupDefinitionNames(List.of("containerGroupDefinitionNames"))
+ * // the properties below are optional
+ * .containerGroupsPerInstance(ContainerGroupsPerInstanceProperty.builder()
+ * .desiredReplicaContainerGroupsPerInstance(123)
+ * .maxReplicaContainerGroupsPerInstance(123)
+ * .build())
+ * .build())
  * .description("description")
  * .desiredEc2Instances(123)
  * .ec2InboundPermissions(List.of(IpPermissionProperty.builder()
@@ -111,16 +123,16 @@ public interface CfnFleetProps {
   public fun anywhereConfiguration(): Any? = unwrap(this).getAnywhereConfiguration()
 
   /**
-   * Current resource capacity settings in a specified fleet or location.
+   * Current resource capacity settings for managed EC2 fleets and container fleets.
    *
-   * The location value might refer to a fleet's remote location or its home Region.
+   * For multi-location fleets, location values might refer to a fleet's remote location or its home
+   * Region.
    *
-   * *Related actions*
-   *
+   * *Returned by:*
    * [DescribeFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetCapacity.html)
-   * |
+   * ,
    * [DescribeFleetLocationCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetLocationCapacity.html)
-   * |
+   * ,
    * [UpdateFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetCapacity.html)
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-applycapacity)
@@ -164,12 +176,31 @@ public interface CfnFleetProps {
   /**
    * The type of compute resource used to host your game servers.
    *
-   * You can use your own compute resources with Amazon GameLift Anywhere or use Amazon EC2
-   * instances with managed Amazon GameLift. By default, this property is set to `EC2` .
+   * * `EC2` – The game server build is deployed to Amazon EC2 instances for cloud hosting. This is
+   * the default setting.
+   * * `CONTAINER` – Container images with your game server build and supporting software are
+   * deployed to Amazon EC2 instances for cloud hosting. With this compute type, you must specify the
+   * `ContainerGroupsConfiguration` parameter.
+   * * `ANYWHERE` – Game servers or container images with your game server and supporting software
+   * are deployed to compute resources that are provided and managed by you. With this compute type,
+   * you can also set the `AnywhereConfiguration` parameter.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-computetype)
    */
   public fun computeType(): String? = unwrap(this).getComputeType()
+
+  /**
+   * *This data type is used with the Amazon GameLift containers feature, which is currently in
+   * public preview.*.
+   *
+   * Configuration details for a set of container groups, for use when creating a fleet with compute
+   * type `CONTAINER` .
+   *
+   * *Used with:* `CreateFleet`
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-containergroupsconfiguration)
+   */
+  public fun containerGroupsConfiguration(): Any? = unwrap(this).getContainerGroupsConfiguration()
 
   /**
    * A description for the fleet.
@@ -190,19 +221,25 @@ public interface CfnFleetProps {
   public fun desiredEc2Instances(): Number? = unwrap(this).getDesiredEc2Instances()
 
   /**
-   * The allowed IP address ranges and port settings that allow inbound traffic to access game
-   * sessions on this fleet.
+   * The IP address ranges and port settings that allow inbound traffic to access game server
+   * processes and other processes on this fleet.
    *
-   * If the fleet is hosting a custom game build, this property must be set before players can
-   * connect to game sessions. For Realtime Servers fleets, Amazon GameLift automatically sets TCP and
-   * UDP ranges.
+   * Set this parameter for EC2 and container fleets. You can leave this parameter empty when
+   * creating the fleet, but you must call `UpdateFleetPortSettings` to set it before players can
+   * connect to game sessions. As a best practice, we recommend opening ports for remote access only
+   * when you need them and closing them when you're finished. For Realtime Servers fleets, Amazon
+   * GameLift automatically sets TCP and UDP ranges.
+   *
+   * To manage inbound access for a container fleet, set this parameter to the same port numbers
+   * that you set for the fleet's connection port range. During the life of the fleet, update this
+   * parameter to control which connection ports are open to inbound traffic.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-ec2inboundpermissions)
    */
   public fun ec2InboundPermissions(): Any? = unwrap(this).getEc2InboundPermissions()
 
   /**
-   * The Amazon GameLift-supported Amazon EC2 instance type to use for all fleet instances.
+   * The Amazon GameLift-supported Amazon EC2 instance type to use with EC2 and container fleets.
    *
    * Instance type determines the computing resources that will be used to host your game servers,
    * including CPU, memory, storage, and networking capacity. See [Amazon Elastic Compute Cloud
@@ -233,7 +270,7 @@ public interface CfnFleetProps {
    * own or have access to. For more information about using the role with your game server builds, see
    * [Communicate with other AWS resources from your
    * fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html)
-   * .
+   * . This attribute is used with fleets where `ComputeType` is "EC2" or "Container".
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-instancerolearn)
    */
@@ -248,7 +285,7 @@ public interface CfnFleetProps {
    * integrated with the server SDK version 5.x. For more information about using shared credentials,
    * see [Communicate with other AWS resources from your
    * fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html)
-   * .
+   * . This attribute is used with fleets where `ComputeType` is "EC2" or "Container".
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-instancerolecredentialsprovider)
    */
@@ -260,10 +297,11 @@ public interface CfnFleetProps {
    *
    * This parameter can only be used when creating fleets in AWS Regions that support multiple
    * locations. You can add any Amazon GameLift-supported AWS Region as a remote location, in the form
-   * of an AWS Region code such as `us-west-2` . To create a fleet with instances in the home Region
-   * only, don't use this parameter.
+   * of an AWS Region code, such as `us-west-2` or Local Zone code. To create a fleet with instances in
+   * the home Region only, don't set this parameter.
    *
-   * To use this parameter, Amazon GameLift requires you to use your home location in the request.
+   * When using this parameter, Amazon GameLift requires you to include your home location in the
+   * request.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-locations)
    */
@@ -457,15 +495,16 @@ public interface CfnFleetProps {
         fun anywhereConfiguration(anywhereConfiguration: CfnFleet.AnywhereConfigurationProperty.Builder.() -> Unit)
 
     /**
-     * @param applyCapacity Current resource capacity settings in a specified fleet or location.
-     * The location value might refer to a fleet's remote location or its home Region.
+     * @param applyCapacity Current resource capacity settings for managed EC2 fleets and container
+     * fleets.
+     * For multi-location fleets, location values might refer to a fleet's remote location or its
+     * home Region.
      *
-     * *Related actions*
-     *
+     * *Returned by:*
      * [DescribeFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetCapacity.html)
-     * |
+     * ,
      * [DescribeFleetLocationCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetLocationCapacity.html)
-     * |
+     * ,
      * [UpdateFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetCapacity.html)
      */
     public fun applyCapacity(applyCapacity: String)
@@ -544,10 +583,50 @@ public interface CfnFleetProps {
 
     /**
      * @param computeType The type of compute resource used to host your game servers.
-     * You can use your own compute resources with Amazon GameLift Anywhere or use Amazon EC2
-     * instances with managed Amazon GameLift. By default, this property is set to `EC2` .
+     * * `EC2` – The game server build is deployed to Amazon EC2 instances for cloud hosting. This
+     * is the default setting.
+     * * `CONTAINER` – Container images with your game server build and supporting software are
+     * deployed to Amazon EC2 instances for cloud hosting. With this compute type, you must specify the
+     * `ContainerGroupsConfiguration` parameter.
+     * * `ANYWHERE` – Game servers or container images with your game server and supporting software
+     * are deployed to compute resources that are provided and managed by you. With this compute type,
+     * you can also set the `AnywhereConfiguration` parameter.
      */
     public fun computeType(computeType: String)
+
+    /**
+     * @param containerGroupsConfiguration *This data type is used with the Amazon GameLift
+     * containers feature, which is currently in public preview.*.
+     * Configuration details for a set of container groups, for use when creating a fleet with
+     * compute type `CONTAINER` .
+     *
+     * *Used with:* `CreateFleet`
+     */
+    public fun containerGroupsConfiguration(containerGroupsConfiguration: IResolvable)
+
+    /**
+     * @param containerGroupsConfiguration *This data type is used with the Amazon GameLift
+     * containers feature, which is currently in public preview.*.
+     * Configuration details for a set of container groups, for use when creating a fleet with
+     * compute type `CONTAINER` .
+     *
+     * *Used with:* `CreateFleet`
+     */
+    public
+        fun containerGroupsConfiguration(containerGroupsConfiguration: CfnFleet.ContainerGroupsConfigurationProperty)
+
+    /**
+     * @param containerGroupsConfiguration *This data type is used with the Amazon GameLift
+     * containers feature, which is currently in public preview.*.
+     * Configuration details for a set of container groups, for use when creating a fleet with
+     * compute type `CONTAINER` .
+     *
+     * *Used with:* `CreateFleet`
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("4e29149ed4284507ad56fce0ddd8c9e3560181cff87428c226cb9bfc6cbc8db9")
+    public
+        fun containerGroupsConfiguration(containerGroupsConfiguration: CfnFleet.ContainerGroupsConfigurationProperty.Builder.() -> Unit)
 
     /**
      * @param description A description for the fleet.
@@ -563,35 +642,53 @@ public interface CfnFleetProps {
     public fun desiredEc2Instances(desiredEc2Instances: Number)
 
     /**
-     * @param ec2InboundPermissions The allowed IP address ranges and port settings that allow
-     * inbound traffic to access game sessions on this fleet.
-     * If the fleet is hosting a custom game build, this property must be set before players can
-     * connect to game sessions. For Realtime Servers fleets, Amazon GameLift automatically sets TCP
-     * and UDP ranges.
+     * @param ec2InboundPermissions The IP address ranges and port settings that allow inbound
+     * traffic to access game server processes and other processes on this fleet.
+     * Set this parameter for EC2 and container fleets. You can leave this parameter empty when
+     * creating the fleet, but you must call `UpdateFleetPortSettings` to set it before players can
+     * connect to game sessions. As a best practice, we recommend opening ports for remote access only
+     * when you need them and closing them when you're finished. For Realtime Servers fleets, Amazon
+     * GameLift automatically sets TCP and UDP ranges.
+     *
+     * To manage inbound access for a container fleet, set this parameter to the same port numbers
+     * that you set for the fleet's connection port range. During the life of the fleet, update this
+     * parameter to control which connection ports are open to inbound traffic.
      */
     public fun ec2InboundPermissions(ec2InboundPermissions: IResolvable)
 
     /**
-     * @param ec2InboundPermissions The allowed IP address ranges and port settings that allow
-     * inbound traffic to access game sessions on this fleet.
-     * If the fleet is hosting a custom game build, this property must be set before players can
-     * connect to game sessions. For Realtime Servers fleets, Amazon GameLift automatically sets TCP
-     * and UDP ranges.
+     * @param ec2InboundPermissions The IP address ranges and port settings that allow inbound
+     * traffic to access game server processes and other processes on this fleet.
+     * Set this parameter for EC2 and container fleets. You can leave this parameter empty when
+     * creating the fleet, but you must call `UpdateFleetPortSettings` to set it before players can
+     * connect to game sessions. As a best practice, we recommend opening ports for remote access only
+     * when you need them and closing them when you're finished. For Realtime Servers fleets, Amazon
+     * GameLift automatically sets TCP and UDP ranges.
+     *
+     * To manage inbound access for a container fleet, set this parameter to the same port numbers
+     * that you set for the fleet's connection port range. During the life of the fleet, update this
+     * parameter to control which connection ports are open to inbound traffic.
      */
     public fun ec2InboundPermissions(ec2InboundPermissions: List<Any>)
 
     /**
-     * @param ec2InboundPermissions The allowed IP address ranges and port settings that allow
-     * inbound traffic to access game sessions on this fleet.
-     * If the fleet is hosting a custom game build, this property must be set before players can
-     * connect to game sessions. For Realtime Servers fleets, Amazon GameLift automatically sets TCP
-     * and UDP ranges.
+     * @param ec2InboundPermissions The IP address ranges and port settings that allow inbound
+     * traffic to access game server processes and other processes on this fleet.
+     * Set this parameter for EC2 and container fleets. You can leave this parameter empty when
+     * creating the fleet, but you must call `UpdateFleetPortSettings` to set it before players can
+     * connect to game sessions. As a best practice, we recommend opening ports for remote access only
+     * when you need them and closing them when you're finished. For Realtime Servers fleets, Amazon
+     * GameLift automatically sets TCP and UDP ranges.
+     *
+     * To manage inbound access for a container fleet, set this parameter to the same port numbers
+     * that you set for the fleet's connection port range. During the life of the fleet, update this
+     * parameter to control which connection ports are open to inbound traffic.
      */
     public fun ec2InboundPermissions(vararg ec2InboundPermissions: Any)
 
     /**
-     * @param ec2InstanceType The Amazon GameLift-supported Amazon EC2 instance type to use for all
-     * fleet instances.
+     * @param ec2InstanceType The Amazon GameLift-supported Amazon EC2 instance type to use with EC2
+     * and container fleets.
      * Instance type determines the computing resources that will be used to host your game servers,
      * including CPU, memory, storage, and networking capacity. See [Amazon Elastic Compute Cloud
      * Instance Types](https://docs.aws.amazon.com/ec2/instance-types/) for detailed descriptions of
@@ -616,7 +713,7 @@ public interface CfnFleetProps {
      * you own or have access to. For more information about using the role with your game server
      * builds, see [Communicate with other AWS resources from your
      * fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html)
-     * .
+     * . This attribute is used with fleets where `ComputeType` is "EC2" or "Container".
      */
     public fun instanceRoleArn(instanceRoleArn: String)
 
@@ -628,7 +725,7 @@ public interface CfnFleetProps {
      * integrated with the server SDK version 5.x. For more information about using shared credentials,
      * see [Communicate with other AWS resources from your
      * fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html)
-     * .
+     * . This attribute is used with fleets where `ComputeType` is "EC2" or "Container".
      */
     public fun instanceRoleCredentialsProvider(instanceRoleCredentialsProvider: String)
 
@@ -637,10 +734,11 @@ public interface CfnFleetProps {
      * part of the fleet.
      * This parameter can only be used when creating fleets in AWS Regions that support multiple
      * locations. You can add any Amazon GameLift-supported AWS Region as a remote location, in the
-     * form of an AWS Region code such as `us-west-2` . To create a fleet with instances in the home
-     * Region only, don't use this parameter.
+     * form of an AWS Region code, such as `us-west-2` or Local Zone code. To create a fleet with
+     * instances in the home Region only, don't set this parameter.
      *
-     * To use this parameter, Amazon GameLift requires you to use your home location in the request.
+     * When using this parameter, Amazon GameLift requires you to include your home location in the
+     * request.
      */
     public fun locations(locations: IResolvable)
 
@@ -649,10 +747,11 @@ public interface CfnFleetProps {
      * part of the fleet.
      * This parameter can only be used when creating fleets in AWS Regions that support multiple
      * locations. You can add any Amazon GameLift-supported AWS Region as a remote location, in the
-     * form of an AWS Region code such as `us-west-2` . To create a fleet with instances in the home
-     * Region only, don't use this parameter.
+     * form of an AWS Region code, such as `us-west-2` or Local Zone code. To create a fleet with
+     * instances in the home Region only, don't set this parameter.
      *
-     * To use this parameter, Amazon GameLift requires you to use your home location in the request.
+     * When using this parameter, Amazon GameLift requires you to include your home location in the
+     * request.
      */
     public fun locations(locations: List<Any>)
 
@@ -661,10 +760,11 @@ public interface CfnFleetProps {
      * part of the fleet.
      * This parameter can only be used when creating fleets in AWS Regions that support multiple
      * locations. You can add any Amazon GameLift-supported AWS Region as a remote location, in the
-     * form of an AWS Region code such as `us-west-2` . To create a fleet with instances in the home
-     * Region only, don't use this parameter.
+     * form of an AWS Region code, such as `us-west-2` or Local Zone code. To create a fleet with
+     * instances in the home Region only, don't set this parameter.
      *
-     * To use this parameter, Amazon GameLift requires you to use your home location in the request.
+     * When using this parameter, Amazon GameLift requires you to include your home location in the
+     * request.
      */
     public fun locations(vararg locations: Any)
 
@@ -880,7 +980,7 @@ public interface CfnFleetProps {
      * @param anywhereConfiguration Amazon GameLift Anywhere configuration options.
      */
     override fun anywhereConfiguration(anywhereConfiguration: IResolvable) {
-      cdkBuilder.anywhereConfiguration(anywhereConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.anywhereConfiguration(anywhereConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -888,7 +988,7 @@ public interface CfnFleetProps {
      */
     override
         fun anywhereConfiguration(anywhereConfiguration: CfnFleet.AnywhereConfigurationProperty) {
-      cdkBuilder.anywhereConfiguration(anywhereConfiguration.let(CfnFleet.AnywhereConfigurationProperty::unwrap))
+      cdkBuilder.anywhereConfiguration(anywhereConfiguration.let(CfnFleet.AnywhereConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -901,15 +1001,16 @@ public interface CfnFleetProps {
         Unit = anywhereConfiguration(CfnFleet.AnywhereConfigurationProperty(anywhereConfiguration))
 
     /**
-     * @param applyCapacity Current resource capacity settings in a specified fleet or location.
-     * The location value might refer to a fleet's remote location or its home Region.
+     * @param applyCapacity Current resource capacity settings for managed EC2 fleets and container
+     * fleets.
+     * For multi-location fleets, location values might refer to a fleet's remote location or its
+     * home Region.
      *
-     * *Related actions*
-     *
+     * *Returned by:*
      * [DescribeFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetCapacity.html)
-     * |
+     * ,
      * [DescribeFleetLocationCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetLocationCapacity.html)
-     * |
+     * ,
      * [UpdateFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetCapacity.html)
      */
     override fun applyCapacity(applyCapacity: String) {
@@ -945,7 +1046,7 @@ public interface CfnFleetProps {
      * Certificate Manager User Guide* .
      */
     override fun certificateConfiguration(certificateConfiguration: IResolvable) {
-      cdkBuilder.certificateConfiguration(certificateConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.certificateConfiguration(certificateConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -968,7 +1069,7 @@ public interface CfnFleetProps {
      */
     override
         fun certificateConfiguration(certificateConfiguration: CfnFleet.CertificateConfigurationProperty) {
-      cdkBuilder.certificateConfiguration(certificateConfiguration.let(CfnFleet.CertificateConfigurationProperty::unwrap))
+      cdkBuilder.certificateConfiguration(certificateConfiguration.let(CfnFleet.CertificateConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -998,12 +1099,58 @@ public interface CfnFleetProps {
 
     /**
      * @param computeType The type of compute resource used to host your game servers.
-     * You can use your own compute resources with Amazon GameLift Anywhere or use Amazon EC2
-     * instances with managed Amazon GameLift. By default, this property is set to `EC2` .
+     * * `EC2` – The game server build is deployed to Amazon EC2 instances for cloud hosting. This
+     * is the default setting.
+     * * `CONTAINER` – Container images with your game server build and supporting software are
+     * deployed to Amazon EC2 instances for cloud hosting. With this compute type, you must specify the
+     * `ContainerGroupsConfiguration` parameter.
+     * * `ANYWHERE` – Game servers or container images with your game server and supporting software
+     * are deployed to compute resources that are provided and managed by you. With this compute type,
+     * you can also set the `AnywhereConfiguration` parameter.
      */
     override fun computeType(computeType: String) {
       cdkBuilder.computeType(computeType)
     }
+
+    /**
+     * @param containerGroupsConfiguration *This data type is used with the Amazon GameLift
+     * containers feature, which is currently in public preview.*.
+     * Configuration details for a set of container groups, for use when creating a fleet with
+     * compute type `CONTAINER` .
+     *
+     * *Used with:* `CreateFleet`
+     */
+    override fun containerGroupsConfiguration(containerGroupsConfiguration: IResolvable) {
+      cdkBuilder.containerGroupsConfiguration(containerGroupsConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param containerGroupsConfiguration *This data type is used with the Amazon GameLift
+     * containers feature, which is currently in public preview.*.
+     * Configuration details for a set of container groups, for use when creating a fleet with
+     * compute type `CONTAINER` .
+     *
+     * *Used with:* `CreateFleet`
+     */
+    override
+        fun containerGroupsConfiguration(containerGroupsConfiguration: CfnFleet.ContainerGroupsConfigurationProperty) {
+      cdkBuilder.containerGroupsConfiguration(containerGroupsConfiguration.let(CfnFleet.ContainerGroupsConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param containerGroupsConfiguration *This data type is used with the Amazon GameLift
+     * containers feature, which is currently in public preview.*.
+     * Configuration details for a set of container groups, for use when creating a fleet with
+     * compute type `CONTAINER` .
+     *
+     * *Used with:* `CreateFleet`
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("4e29149ed4284507ad56fce0ddd8c9e3560181cff87428c226cb9bfc6cbc8db9")
+    override
+        fun containerGroupsConfiguration(containerGroupsConfiguration: CfnFleet.ContainerGroupsConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        containerGroupsConfiguration(CfnFleet.ContainerGroupsConfigurationProperty(containerGroupsConfiguration))
 
     /**
      * @param description A description for the fleet.
@@ -1023,40 +1170,58 @@ public interface CfnFleetProps {
     }
 
     /**
-     * @param ec2InboundPermissions The allowed IP address ranges and port settings that allow
-     * inbound traffic to access game sessions on this fleet.
-     * If the fleet is hosting a custom game build, this property must be set before players can
-     * connect to game sessions. For Realtime Servers fleets, Amazon GameLift automatically sets TCP
-     * and UDP ranges.
+     * @param ec2InboundPermissions The IP address ranges and port settings that allow inbound
+     * traffic to access game server processes and other processes on this fleet.
+     * Set this parameter for EC2 and container fleets. You can leave this parameter empty when
+     * creating the fleet, but you must call `UpdateFleetPortSettings` to set it before players can
+     * connect to game sessions. As a best practice, we recommend opening ports for remote access only
+     * when you need them and closing them when you're finished. For Realtime Servers fleets, Amazon
+     * GameLift automatically sets TCP and UDP ranges.
+     *
+     * To manage inbound access for a container fleet, set this parameter to the same port numbers
+     * that you set for the fleet's connection port range. During the life of the fleet, update this
+     * parameter to control which connection ports are open to inbound traffic.
      */
     override fun ec2InboundPermissions(ec2InboundPermissions: IResolvable) {
-      cdkBuilder.ec2InboundPermissions(ec2InboundPermissions.let(IResolvable::unwrap))
+      cdkBuilder.ec2InboundPermissions(ec2InboundPermissions.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param ec2InboundPermissions The allowed IP address ranges and port settings that allow
-     * inbound traffic to access game sessions on this fleet.
-     * If the fleet is hosting a custom game build, this property must be set before players can
-     * connect to game sessions. For Realtime Servers fleets, Amazon GameLift automatically sets TCP
-     * and UDP ranges.
+     * @param ec2InboundPermissions The IP address ranges and port settings that allow inbound
+     * traffic to access game server processes and other processes on this fleet.
+     * Set this parameter for EC2 and container fleets. You can leave this parameter empty when
+     * creating the fleet, but you must call `UpdateFleetPortSettings` to set it before players can
+     * connect to game sessions. As a best practice, we recommend opening ports for remote access only
+     * when you need them and closing them when you're finished. For Realtime Servers fleets, Amazon
+     * GameLift automatically sets TCP and UDP ranges.
+     *
+     * To manage inbound access for a container fleet, set this parameter to the same port numbers
+     * that you set for the fleet's connection port range. During the life of the fleet, update this
+     * parameter to control which connection ports are open to inbound traffic.
      */
     override fun ec2InboundPermissions(ec2InboundPermissions: List<Any>) {
       cdkBuilder.ec2InboundPermissions(ec2InboundPermissions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param ec2InboundPermissions The allowed IP address ranges and port settings that allow
-     * inbound traffic to access game sessions on this fleet.
-     * If the fleet is hosting a custom game build, this property must be set before players can
-     * connect to game sessions. For Realtime Servers fleets, Amazon GameLift automatically sets TCP
-     * and UDP ranges.
+     * @param ec2InboundPermissions The IP address ranges and port settings that allow inbound
+     * traffic to access game server processes and other processes on this fleet.
+     * Set this parameter for EC2 and container fleets. You can leave this parameter empty when
+     * creating the fleet, but you must call `UpdateFleetPortSettings` to set it before players can
+     * connect to game sessions. As a best practice, we recommend opening ports for remote access only
+     * when you need them and closing them when you're finished. For Realtime Servers fleets, Amazon
+     * GameLift automatically sets TCP and UDP ranges.
+     *
+     * To manage inbound access for a container fleet, set this parameter to the same port numbers
+     * that you set for the fleet's connection port range. During the life of the fleet, update this
+     * parameter to control which connection ports are open to inbound traffic.
      */
     override fun ec2InboundPermissions(vararg ec2InboundPermissions: Any): Unit =
         ec2InboundPermissions(ec2InboundPermissions.toList())
 
     /**
-     * @param ec2InstanceType The Amazon GameLift-supported Amazon EC2 instance type to use for all
-     * fleet instances.
+     * @param ec2InstanceType The Amazon GameLift-supported Amazon EC2 instance type to use with EC2
+     * and container fleets.
      * Instance type determines the computing resources that will be used to host your game servers,
      * including CPU, memory, storage, and networking capacity. See [Amazon Elastic Compute Cloud
      * Instance Types](https://docs.aws.amazon.com/ec2/instance-types/) for detailed descriptions of
@@ -1085,7 +1250,7 @@ public interface CfnFleetProps {
      * you own or have access to. For more information about using the role with your game server
      * builds, see [Communicate with other AWS resources from your
      * fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html)
-     * .
+     * . This attribute is used with fleets where `ComputeType` is "EC2" or "Container".
      */
     override fun instanceRoleArn(instanceRoleArn: String) {
       cdkBuilder.instanceRoleArn(instanceRoleArn)
@@ -1099,7 +1264,7 @@ public interface CfnFleetProps {
      * integrated with the server SDK version 5.x. For more information about using shared credentials,
      * see [Communicate with other AWS resources from your
      * fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html)
-     * .
+     * . This attribute is used with fleets where `ComputeType` is "EC2" or "Container".
      */
     override fun instanceRoleCredentialsProvider(instanceRoleCredentialsProvider: String) {
       cdkBuilder.instanceRoleCredentialsProvider(instanceRoleCredentialsProvider)
@@ -1110,13 +1275,14 @@ public interface CfnFleetProps {
      * part of the fleet.
      * This parameter can only be used when creating fleets in AWS Regions that support multiple
      * locations. You can add any Amazon GameLift-supported AWS Region as a remote location, in the
-     * form of an AWS Region code such as `us-west-2` . To create a fleet with instances in the home
-     * Region only, don't use this parameter.
+     * form of an AWS Region code, such as `us-west-2` or Local Zone code. To create a fleet with
+     * instances in the home Region only, don't set this parameter.
      *
-     * To use this parameter, Amazon GameLift requires you to use your home location in the request.
+     * When using this parameter, Amazon GameLift requires you to include your home location in the
+     * request.
      */
     override fun locations(locations: IResolvable) {
-      cdkBuilder.locations(locations.let(IResolvable::unwrap))
+      cdkBuilder.locations(locations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1124,10 +1290,11 @@ public interface CfnFleetProps {
      * part of the fleet.
      * This parameter can only be used when creating fleets in AWS Regions that support multiple
      * locations. You can add any Amazon GameLift-supported AWS Region as a remote location, in the
-     * form of an AWS Region code such as `us-west-2` . To create a fleet with instances in the home
-     * Region only, don't use this parameter.
+     * form of an AWS Region code, such as `us-west-2` or Local Zone code. To create a fleet with
+     * instances in the home Region only, don't set this parameter.
      *
-     * To use this parameter, Amazon GameLift requires you to use your home location in the request.
+     * When using this parameter, Amazon GameLift requires you to include your home location in the
+     * request.
      */
     override fun locations(locations: List<Any>) {
       cdkBuilder.locations(locations.map{CdkObjectWrappers.unwrap(it)})
@@ -1138,10 +1305,11 @@ public interface CfnFleetProps {
      * part of the fleet.
      * This parameter can only be used when creating fleets in AWS Regions that support multiple
      * locations. You can add any Amazon GameLift-supported AWS Region as a remote location, in the
-     * form of an AWS Region code such as `us-west-2` . To create a fleet with instances in the home
-     * Region only, don't use this parameter.
+     * form of an AWS Region code, such as `us-west-2` or Local Zone code. To create a fleet with
+     * instances in the home Region only, don't set this parameter.
      *
-     * To use this parameter, Amazon GameLift requires you to use your home location in the request.
+     * When using this parameter, Amazon GameLift requires you to include your home location in the
+     * request.
      */
     override fun locations(vararg locations: Any): Unit = locations(locations.toList())
 
@@ -1250,7 +1418,7 @@ public interface CfnFleetProps {
      * individual player can create on instances in this fleet within a specified span of time.
      */
     override fun resourceCreationLimitPolicy(resourceCreationLimitPolicy: IResolvable) {
-      cdkBuilder.resourceCreationLimitPolicy(resourceCreationLimitPolicy.let(IResolvable::unwrap))
+      cdkBuilder.resourceCreationLimitPolicy(resourceCreationLimitPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1259,7 +1427,7 @@ public interface CfnFleetProps {
      */
     override
         fun resourceCreationLimitPolicy(resourceCreationLimitPolicy: CfnFleet.ResourceCreationLimitPolicyProperty) {
-      cdkBuilder.resourceCreationLimitPolicy(resourceCreationLimitPolicy.let(CfnFleet.ResourceCreationLimitPolicyProperty::unwrap))
+      cdkBuilder.resourceCreationLimitPolicy(resourceCreationLimitPolicy.let(CfnFleet.ResourceCreationLimitPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -1286,7 +1454,7 @@ public interface CfnFleetProps {
      * for backward compatibility.
      */
     override fun runtimeConfiguration(runtimeConfiguration: IResolvable) {
-      cdkBuilder.runtimeConfiguration(runtimeConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.runtimeConfiguration(runtimeConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1302,7 +1470,7 @@ public interface CfnFleetProps {
      * for backward compatibility.
      */
     override fun runtimeConfiguration(runtimeConfiguration: CfnFleet.RuntimeConfigurationProperty) {
-      cdkBuilder.runtimeConfiguration(runtimeConfiguration.let(CfnFleet.RuntimeConfigurationProperty::unwrap))
+      cdkBuilder.runtimeConfiguration(runtimeConfiguration.let(CfnFleet.RuntimeConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1328,7 +1496,7 @@ public interface CfnFleetProps {
      * Scaling policies are uniquely identified by the combination of name and fleet ID.
      */
     override fun scalingPolicies(scalingPolicies: IResolvable) {
-      cdkBuilder.scalingPolicies(scalingPolicies.let(IResolvable::unwrap))
+      cdkBuilder.scalingPolicies(scalingPolicies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1401,16 +1569,16 @@ public interface CfnFleetProps {
     override fun anywhereConfiguration(): Any? = unwrap(this).getAnywhereConfiguration()
 
     /**
-     * Current resource capacity settings in a specified fleet or location.
+     * Current resource capacity settings for managed EC2 fleets and container fleets.
      *
-     * The location value might refer to a fleet's remote location or its home Region.
+     * For multi-location fleets, location values might refer to a fleet's remote location or its
+     * home Region.
      *
-     * *Related actions*
-     *
+     * *Returned by:*
      * [DescribeFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetCapacity.html)
-     * |
+     * ,
      * [DescribeFleetLocationCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetLocationCapacity.html)
-     * |
+     * ,
      * [UpdateFleetCapacity](https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetCapacity.html)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-applycapacity)
@@ -1454,12 +1622,32 @@ public interface CfnFleetProps {
     /**
      * The type of compute resource used to host your game servers.
      *
-     * You can use your own compute resources with Amazon GameLift Anywhere or use Amazon EC2
-     * instances with managed Amazon GameLift. By default, this property is set to `EC2` .
+     * * `EC2` – The game server build is deployed to Amazon EC2 instances for cloud hosting. This
+     * is the default setting.
+     * * `CONTAINER` – Container images with your game server build and supporting software are
+     * deployed to Amazon EC2 instances for cloud hosting. With this compute type, you must specify the
+     * `ContainerGroupsConfiguration` parameter.
+     * * `ANYWHERE` – Game servers or container images with your game server and supporting software
+     * are deployed to compute resources that are provided and managed by you. With this compute type,
+     * you can also set the `AnywhereConfiguration` parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-computetype)
      */
     override fun computeType(): String? = unwrap(this).getComputeType()
+
+    /**
+     * *This data type is used with the Amazon GameLift containers feature, which is currently in
+     * public preview.*.
+     *
+     * Configuration details for a set of container groups, for use when creating a fleet with
+     * compute type `CONTAINER` .
+     *
+     * *Used with:* `CreateFleet`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-containergroupsconfiguration)
+     */
+    override fun containerGroupsConfiguration(): Any? =
+        unwrap(this).getContainerGroupsConfiguration()
 
     /**
      * A description for the fleet.
@@ -1480,19 +1668,25 @@ public interface CfnFleetProps {
     override fun desiredEc2Instances(): Number? = unwrap(this).getDesiredEc2Instances()
 
     /**
-     * The allowed IP address ranges and port settings that allow inbound traffic to access game
-     * sessions on this fleet.
+     * The IP address ranges and port settings that allow inbound traffic to access game server
+     * processes and other processes on this fleet.
      *
-     * If the fleet is hosting a custom game build, this property must be set before players can
-     * connect to game sessions. For Realtime Servers fleets, Amazon GameLift automatically sets TCP
-     * and UDP ranges.
+     * Set this parameter for EC2 and container fleets. You can leave this parameter empty when
+     * creating the fleet, but you must call `UpdateFleetPortSettings` to set it before players can
+     * connect to game sessions. As a best practice, we recommend opening ports for remote access only
+     * when you need them and closing them when you're finished. For Realtime Servers fleets, Amazon
+     * GameLift automatically sets TCP and UDP ranges.
+     *
+     * To manage inbound access for a container fleet, set this parameter to the same port numbers
+     * that you set for the fleet's connection port range. During the life of the fleet, update this
+     * parameter to control which connection ports are open to inbound traffic.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-ec2inboundpermissions)
      */
     override fun ec2InboundPermissions(): Any? = unwrap(this).getEc2InboundPermissions()
 
     /**
-     * The Amazon GameLift-supported Amazon EC2 instance type to use for all fleet instances.
+     * The Amazon GameLift-supported Amazon EC2 instance type to use with EC2 and container fleets.
      *
      * Instance type determines the computing resources that will be used to host your game servers,
      * including CPU, memory, storage, and networking capacity. See [Amazon Elastic Compute Cloud
@@ -1523,7 +1717,7 @@ public interface CfnFleetProps {
      * you own or have access to. For more information about using the role with your game server
      * builds, see [Communicate with other AWS resources from your
      * fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html)
-     * .
+     * . This attribute is used with fleets where `ComputeType` is "EC2" or "Container".
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-instancerolearn)
      */
@@ -1538,7 +1732,7 @@ public interface CfnFleetProps {
      * integrated with the server SDK version 5.x. For more information about using shared credentials,
      * see [Communicate with other AWS resources from your
      * fleets](https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html)
-     * .
+     * . This attribute is used with fleets where `ComputeType` is "EC2" or "Container".
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-instancerolecredentialsprovider)
      */
@@ -1550,10 +1744,11 @@ public interface CfnFleetProps {
      *
      * This parameter can only be used when creating fleets in AWS Regions that support multiple
      * locations. You can add any Amazon GameLift-supported AWS Region as a remote location, in the
-     * form of an AWS Region code such as `us-west-2` . To create a fleet with instances in the home
-     * Region only, don't use this parameter.
+     * form of an AWS Region code, such as `us-west-2` or Local Zone code. To create a fleet with
+     * instances in the home Region only, don't set this parameter.
      *
-     * To use this parameter, Amazon GameLift requires you to use your home location in the request.
+     * When using this parameter, Amazon GameLift requires you to include your home location in the
+     * request.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-fleet.html#cfn-gamelift-fleet-locations)
      */

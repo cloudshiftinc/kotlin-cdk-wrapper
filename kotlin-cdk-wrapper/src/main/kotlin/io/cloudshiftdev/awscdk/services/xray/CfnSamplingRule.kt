@@ -117,7 +117,7 @@ public open class CfnSamplingRule(
   cdkObject: software.amazon.awscdk.services.xray.CfnSamplingRule,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.xray.CfnSamplingRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.xray.CfnSamplingRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -126,8 +126,8 @@ public open class CfnSamplingRule(
     id: String,
     props: CfnSamplingRuleProps,
   ) :
-      this(software.amazon.awscdk.services.xray.CfnSamplingRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSamplingRuleProps::unwrap))
+      this(software.amazon.awscdk.services.xray.CfnSamplingRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSamplingRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -154,7 +154,7 @@ public open class CfnSamplingRule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -184,14 +184,14 @@ public open class CfnSamplingRule(
    * The sampling rule to be created or updated.
    */
   public open fun samplingRule(`value`: IResolvable) {
-    unwrap(this).setSamplingRule(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSamplingRule(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The sampling rule to be created or updated.
    */
   public open fun samplingRule(`value`: SamplingRuleProperty) {
-    unwrap(this).setSamplingRule(`value`.let(SamplingRuleProperty::unwrap))
+    unwrap(this).setSamplingRule(`value`.let(SamplingRuleProperty.Companion::unwrap))
   }
 
   /**
@@ -213,7 +213,7 @@ public open class CfnSamplingRule(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun samplingRuleRecord(`value`: IResolvable) {
-    unwrap(this).setSamplingRuleRecord(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSamplingRuleRecord(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -221,7 +221,7 @@ public open class CfnSamplingRule(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun samplingRuleRecord(`value`: SamplingRuleRecordProperty) {
-    unwrap(this).setSamplingRuleRecord(`value`.let(SamplingRuleRecordProperty::unwrap))
+    unwrap(this).setSamplingRuleRecord(`value`.let(SamplingRuleRecordProperty.Companion::unwrap))
   }
 
   /**
@@ -244,7 +244,7 @@ public open class CfnSamplingRule(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun samplingRuleUpdate(`value`: IResolvable) {
-    unwrap(this).setSamplingRuleUpdate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSamplingRuleUpdate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -252,7 +252,7 @@ public open class CfnSamplingRule(
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun samplingRuleUpdate(`value`: SamplingRuleUpdateProperty) {
-    unwrap(this).setSamplingRuleUpdate(`value`.let(SamplingRuleUpdateProperty::unwrap))
+    unwrap(this).setSamplingRuleUpdate(`value`.let(SamplingRuleUpdateProperty.Companion::unwrap))
   }
 
   /**
@@ -273,7 +273,7 @@ public open class CfnSamplingRule(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -421,7 +421,7 @@ public open class CfnSamplingRule(
      * @param samplingRule The sampling rule to be created or updated. 
      */
     override fun samplingRule(samplingRule: IResolvable) {
-      cdkBuilder.samplingRule(samplingRule.let(IResolvable::unwrap))
+      cdkBuilder.samplingRule(samplingRule.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -431,7 +431,7 @@ public open class CfnSamplingRule(
      * @param samplingRule The sampling rule to be created or updated. 
      */
     override fun samplingRule(samplingRule: SamplingRuleProperty) {
-      cdkBuilder.samplingRule(samplingRule.let(SamplingRuleProperty::unwrap))
+      cdkBuilder.samplingRule(samplingRule.let(SamplingRuleProperty.Companion::unwrap))
     }
 
     /**
@@ -452,7 +452,7 @@ public open class CfnSamplingRule(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun samplingRuleRecord(samplingRuleRecord: IResolvable) {
-      cdkBuilder.samplingRuleRecord(samplingRuleRecord.let(IResolvable::unwrap))
+      cdkBuilder.samplingRuleRecord(samplingRuleRecord.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -462,7 +462,7 @@ public open class CfnSamplingRule(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun samplingRuleRecord(samplingRuleRecord: SamplingRuleRecordProperty) {
-      cdkBuilder.samplingRuleRecord(samplingRuleRecord.let(SamplingRuleRecordProperty::unwrap))
+      cdkBuilder.samplingRuleRecord(samplingRuleRecord.let(SamplingRuleRecordProperty.Companion::unwrap))
     }
 
     /**
@@ -484,7 +484,7 @@ public open class CfnSamplingRule(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun samplingRuleUpdate(samplingRuleUpdate: IResolvable) {
-      cdkBuilder.samplingRuleUpdate(samplingRuleUpdate.let(IResolvable::unwrap))
+      cdkBuilder.samplingRuleUpdate(samplingRuleUpdate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -494,7 +494,7 @@ public open class CfnSamplingRule(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun samplingRuleUpdate(samplingRuleUpdate: SamplingRuleUpdateProperty) {
-      cdkBuilder.samplingRuleUpdate(samplingRuleUpdate.let(SamplingRuleUpdateProperty::unwrap))
+      cdkBuilder.samplingRuleUpdate(samplingRuleUpdate.let(SamplingRuleUpdateProperty.Companion::unwrap))
     }
 
     /**
@@ -516,7 +516,7 @@ public open class CfnSamplingRule(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -807,7 +807,7 @@ public open class CfnSamplingRule(
        * *Value Length Constraints:* Minimum length of 1. Maximum length of 32.
        */
       override fun attributes(attributes: IResolvable) {
-        cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1162,14 +1162,14 @@ public open class CfnSamplingRule(
        * @param samplingRule the value to be set.
        */
       override fun samplingRule(samplingRule: IResolvable) {
-        cdkBuilder.samplingRule(samplingRule.let(IResolvable::unwrap))
+        cdkBuilder.samplingRule(samplingRule.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param samplingRule the value to be set.
        */
       override fun samplingRule(samplingRule: SamplingRuleProperty) {
-        cdkBuilder.samplingRule(samplingRule.let(SamplingRuleProperty::unwrap))
+        cdkBuilder.samplingRule(samplingRule.let(SamplingRuleProperty.Companion::unwrap))
       }
 
       /**
@@ -1432,7 +1432,7 @@ public open class CfnSamplingRule(
        * @param attributes Matches attributes derived from the request.
        */
       override fun attributes(attributes: IResolvable) {
-        cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
       }
 
       /**

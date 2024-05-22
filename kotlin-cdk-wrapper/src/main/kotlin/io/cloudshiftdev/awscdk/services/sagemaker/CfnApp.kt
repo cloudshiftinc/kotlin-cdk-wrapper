@@ -61,8 +61,8 @@ public open class CfnApp(
     id: String,
     props: CfnAppProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnApp(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAppProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnApp(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAppProps.Companion::unwrap))
   )
 
   public constructor(
@@ -120,7 +120,7 @@ public open class CfnApp(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -134,7 +134,7 @@ public open class CfnApp(
    * the version runs on.
    */
   public open fun resourceSpec(`value`: IResolvable) {
-    unwrap(this).setResourceSpec(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResourceSpec(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -142,7 +142,7 @@ public open class CfnApp(
    * the version runs on.
    */
   public open fun resourceSpec(`value`: ResourceSpecProperty) {
-    unwrap(this).setResourceSpec(`value`.let(ResourceSpecProperty::unwrap))
+    unwrap(this).setResourceSpec(`value`.let(ResourceSpecProperty.Companion::unwrap))
   }
 
   /**
@@ -169,7 +169,7 @@ public open class CfnApp(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -329,7 +329,7 @@ public open class CfnApp(
      * the instance type that the version runs on. 
      */
     override fun resourceSpec(resourceSpec: IResolvable) {
-      cdkBuilder.resourceSpec(resourceSpec.let(IResolvable::unwrap))
+      cdkBuilder.resourceSpec(resourceSpec.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -341,7 +341,7 @@ public open class CfnApp(
      * the instance type that the version runs on. 
      */
     override fun resourceSpec(resourceSpec: ResourceSpecProperty) {
-      cdkBuilder.resourceSpec(resourceSpec.let(ResourceSpecProperty::unwrap))
+      cdkBuilder.resourceSpec(resourceSpec.let(ResourceSpecProperty.Companion::unwrap))
     }
 
     /**
@@ -368,7 +368,7 @@ public open class CfnApp(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

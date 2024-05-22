@@ -274,7 +274,7 @@ public interface CfnAddonProps {
      * If an IAM account is associated with the add-on, it isn't removed.
      */
     override fun preserveOnDelete(preserveOnDelete: IResolvable) {
-      cdkBuilder.preserveOnDelete(preserveOnDelete.let(IResolvable::unwrap))
+      cdkBuilder.preserveOnDelete(preserveOnDelete.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -326,7 +326,7 @@ public interface CfnAddonProps {
      * not propagate to any other resources associated with the cluster.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

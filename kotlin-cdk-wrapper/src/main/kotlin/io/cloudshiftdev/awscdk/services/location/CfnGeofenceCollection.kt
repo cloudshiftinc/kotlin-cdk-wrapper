@@ -51,8 +51,8 @@ public open class CfnGeofenceCollection(
     id: String,
     props: CfnGeofenceCollectionProps,
   ) :
-      this(software.amazon.awscdk.services.location.CfnGeofenceCollection(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGeofenceCollectionProps::unwrap))
+      this(software.amazon.awscdk.services.location.CfnGeofenceCollection(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGeofenceCollectionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -131,7 +131,7 @@ public open class CfnGeofenceCollection(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -165,12 +165,16 @@ public open class CfnGeofenceCollection(
   }
 
   /**
+   * (deprecated) This shape is deprecated since 2022-02-01: Deprecated.
+   *
    * @deprecated this property has been deprecated
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun pricingPlanDataSource(): String? = unwrap(this).getPricingPlanDataSource()
 
   /**
+   * (deprecated) This shape is deprecated since 2022-02-01: Deprecated.
+   *
    * @deprecated this property has been deprecated
    */
   @Deprecated(message = "deprecated in CDK")
@@ -187,7 +191,7 @@ public open class CfnGeofenceCollection(
    * Applies one or more tags to the geofence collection.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -244,9 +248,13 @@ public open class CfnGeofenceCollection(
     public fun pricingPlan(pricingPlan: String)
 
     /**
+     * (deprecated) This shape is deprecated since 2022-02-01: Deprecated.
+     *
+     * No longer allowed.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-geofencecollection.html#cfn-location-geofencecollection-pricingplandatasource)
      * @deprecated this property has been deprecated
-     * @param pricingPlanDataSource 
+     * @param pricingPlanDataSource This shape is deprecated since 2022-02-01: Deprecated. 
      */
     @Deprecated(message = "deprecated in CDK")
     public fun pricingPlanDataSource(pricingPlanDataSource: String)
@@ -355,9 +363,13 @@ public open class CfnGeofenceCollection(
     }
 
     /**
+     * (deprecated) This shape is deprecated since 2022-02-01: Deprecated.
+     *
+     * No longer allowed.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-location-geofencecollection.html#cfn-location-geofencecollection-pricingplandatasource)
      * @deprecated this property has been deprecated
-     * @param pricingPlanDataSource 
+     * @param pricingPlanDataSource This shape is deprecated since 2022-02-01: Deprecated. 
      */
     @Deprecated(message = "deprecated in CDK")
     override fun pricingPlanDataSource(pricingPlanDataSource: String) {
@@ -385,7 +397,7 @@ public open class CfnGeofenceCollection(
      * @param tags Applies one or more tags to the geofence collection. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

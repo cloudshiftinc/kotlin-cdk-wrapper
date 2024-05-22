@@ -174,7 +174,7 @@ public interface CfnFunctionProps {
      * To automatically publish to the `LIVE` stage, set this property to `true` .
      */
     override fun autoPublish(autoPublish: IResolvable) {
-      cdkBuilder.autoPublish(autoPublish.let(IResolvable::unwrap))
+      cdkBuilder.autoPublish(autoPublish.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -192,14 +192,14 @@ public interface CfnFunctionProps {
      * @param functionConfig Contains configuration information about a CloudFront function. 
      */
     override fun functionConfig(functionConfig: IResolvable) {
-      cdkBuilder.functionConfig(functionConfig.let(IResolvable::unwrap))
+      cdkBuilder.functionConfig(functionConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param functionConfig Contains configuration information about a CloudFront function. 
      */
     override fun functionConfig(functionConfig: CfnFunction.FunctionConfigProperty) {
-      cdkBuilder.functionConfig(functionConfig.let(CfnFunction.FunctionConfigProperty::unwrap))
+      cdkBuilder.functionConfig(functionConfig.let(CfnFunction.FunctionConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -215,14 +215,14 @@ public interface CfnFunctionProps {
      * @param functionMetadata Contains metadata about a CloudFront function.
      */
     override fun functionMetadata(functionMetadata: IResolvable) {
-      cdkBuilder.functionMetadata(functionMetadata.let(IResolvable::unwrap))
+      cdkBuilder.functionMetadata(functionMetadata.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param functionMetadata Contains metadata about a CloudFront function.
      */
     override fun functionMetadata(functionMetadata: CfnFunction.FunctionMetadataProperty) {
-      cdkBuilder.functionMetadata(functionMetadata.let(CfnFunction.FunctionMetadataProperty::unwrap))
+      cdkBuilder.functionMetadata(functionMetadata.let(CfnFunction.FunctionMetadataProperty.Companion::unwrap))
     }
 
     /**

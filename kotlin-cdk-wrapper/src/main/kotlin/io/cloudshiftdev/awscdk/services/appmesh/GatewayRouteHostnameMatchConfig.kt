@@ -60,7 +60,7 @@ public interface GatewayRouteHostnameMatchConfig {
      * @param hostnameMatch GatewayRoute CFN configuration for host name match. 
      */
     override fun hostnameMatch(hostnameMatch: CfnGatewayRoute.GatewayRouteHostnameMatchProperty) {
-      cdkBuilder.hostnameMatch(hostnameMatch.let(CfnGatewayRoute.GatewayRouteHostnameMatchProperty::unwrap))
+      cdkBuilder.hostnameMatch(hostnameMatch.let(CfnGatewayRoute.GatewayRouteHostnameMatchProperty.Companion::unwrap))
     }
 
     /**

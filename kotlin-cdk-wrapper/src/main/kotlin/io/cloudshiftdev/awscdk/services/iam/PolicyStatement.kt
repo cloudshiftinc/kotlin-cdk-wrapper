@@ -39,7 +39,7 @@ public open class PolicyStatement(
   )
 
   public constructor(props: PolicyStatementProps) :
-      this(software.amazon.awscdk.services.iam.PolicyStatement(props.let(PolicyStatementProps::unwrap))
+      this(software.amazon.awscdk.services.iam.PolicyStatement(props.let(PolicyStatementProps.Companion::unwrap))
   )
 
   public constructor(props: PolicyStatementProps.Builder.() -> Unit) :
@@ -258,7 +258,7 @@ public open class PolicyStatement(
    * different region).
    */
   public open fun addServicePrincipal(service: String, opts: ServicePrincipalOpts) {
-    unwrap(this).addServicePrincipal(service, opts.let(ServicePrincipalOpts::unwrap))
+    unwrap(this).addServicePrincipal(service, opts.let(ServicePrincipalOpts.Companion::unwrap))
   }
 
   /**
@@ -319,7 +319,7 @@ public open class PolicyStatement(
    * @param overrides
    */
   public open fun copy(overrides: PolicyStatementProps): PolicyStatement =
-      unwrap(this).copy(overrides.let(PolicyStatementProps::unwrap)).let(PolicyStatement::wrap)
+      unwrap(this).copy(overrides.let(PolicyStatementProps.Companion::unwrap)).let(PolicyStatement::wrap)
 
   /**
    * Create a new `PolicyStatement` with the same exact properties as this one, except for the
@@ -341,7 +341,7 @@ public open class PolicyStatement(
    * Whether to allow or deny the actions in this statement Set effect for this statement.
    */
   public open fun effect(`value`: Effect) {
-    unwrap(this).setEffect(`value`.let(Effect::unwrap))
+    unwrap(this).setEffect(`value`.let(Effect.Companion::unwrap))
   }
 
   /**
@@ -638,7 +638,7 @@ public open class PolicyStatement(
      * @param effect Whether to allow or deny the actions in this statement. 
      */
     override fun effect(effect: Effect) {
-      cdkBuilder.effect(effect.let(Effect::unwrap))
+      cdkBuilder.effect(effect.let(Effect.Companion::unwrap))
     }
 
     /**
@@ -669,7 +669,7 @@ public open class PolicyStatement(
      * @param notPrincipals List of not principals to add to the statement. 
      */
     override fun notPrincipals(notPrincipals: List<IPrincipal>) {
-      cdkBuilder.notPrincipals(notPrincipals.map(IPrincipal::unwrap))
+      cdkBuilder.notPrincipals(notPrincipals.map(IPrincipal.Companion::unwrap))
     }
 
     /**
@@ -711,7 +711,7 @@ public open class PolicyStatement(
      * @param principals List of principals to add to the statement. 
      */
     override fun principals(principals: List<IPrincipal>) {
-      cdkBuilder.principals(principals.map(IPrincipal::unwrap))
+      cdkBuilder.principals(principals.map(IPrincipal.Companion::unwrap))
     }
 
     /**

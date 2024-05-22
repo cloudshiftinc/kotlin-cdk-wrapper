@@ -143,14 +143,14 @@ public interface CfnInstanceProps {
      * @param attributes A toggle for an individual feature at the instance level. 
      */
     override fun attributes(attributes: IResolvable) {
-      cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+      cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param attributes A toggle for an individual feature at the instance level. 
      */
     override fun attributes(attributes: CfnInstance.AttributesProperty) {
-      cdkBuilder.attributes(attributes.let(CfnInstance.AttributesProperty::unwrap))
+      cdkBuilder.attributes(attributes.let(CfnInstance.AttributesProperty.Companion::unwrap))
     }
 
     /**
@@ -188,7 +188,7 @@ public interface CfnInstanceProps {
      * @param tags An array of key-value pairs to apply to this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

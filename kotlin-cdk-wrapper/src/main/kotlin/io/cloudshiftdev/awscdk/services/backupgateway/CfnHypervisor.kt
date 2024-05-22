@@ -47,7 +47,7 @@ public open class CfnHypervisor(
   cdkObject: software.amazon.awscdk.services.backupgateway.CfnHypervisor,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.backupgateway.CfnHypervisor(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.backupgateway.CfnHypervisor(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -56,8 +56,8 @@ public open class CfnHypervisor(
     id: String,
     props: CfnHypervisorProps,
   ) :
-      this(software.amazon.awscdk.services.backupgateway.CfnHypervisor(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnHypervisorProps::unwrap))
+      this(software.amazon.awscdk.services.backupgateway.CfnHypervisor(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnHypervisorProps.Companion::unwrap))
   )
 
   public constructor(
@@ -92,7 +92,7 @@ public open class CfnHypervisor(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -160,7 +160,7 @@ public open class CfnHypervisor(
    * The tags of the hypervisor configuration to import.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -324,7 +324,7 @@ public open class CfnHypervisor(
      * @param tags The tags of the hypervisor configuration to import. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -48,8 +48,8 @@ public open class BucketDeployment(
     id: String,
     props: BucketDeploymentProps,
   ) :
-      this(software.amazon.awscdk.services.s3.deployment.BucketDeployment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(BucketDeploymentProps::unwrap))
+      this(software.amazon.awscdk.services.s3.deployment.BucketDeployment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(BucketDeploymentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -76,7 +76,7 @@ public open class BucketDeployment(
    * @param source 
    */
   public open fun addSource(source: ISource) {
-    unwrap(this).addSource(source.let(ISource::unwrap))
+    unwrap(this).addSource(source.let(ISource.Companion::unwrap))
   }
 
   /**
@@ -583,7 +583,7 @@ public open class BucketDeployment(
      * deployment. 
      */
     override fun accessControl(accessControl: BucketAccessControl) {
-      cdkBuilder.accessControl(accessControl.let(BucketAccessControl::unwrap))
+      cdkBuilder.accessControl(accessControl.let(BucketAccessControl.Companion::unwrap))
     }
 
     /**
@@ -596,7 +596,7 @@ public open class BucketDeployment(
      * deployment. 
      */
     override fun cacheControl(cacheControl: List<CacheControl>) {
-      cdkBuilder.cacheControl(cacheControl.map(CacheControl::unwrap))
+      cdkBuilder.cacheControl(cacheControl.map(CacheControl.Companion::unwrap))
     }
 
     /**
@@ -669,7 +669,7 @@ public open class BucketDeployment(
      * @param destinationBucket The S3 bucket to sync the contents of the zip file to. 
      */
     override fun destinationBucket(destinationBucket: IBucket) {
-      cdkBuilder.destinationBucket(destinationBucket.let(IBucket::unwrap))
+      cdkBuilder.destinationBucket(destinationBucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -696,7 +696,7 @@ public open class BucketDeployment(
      * @param distribution The CloudFront distribution using the destination bucket as an origin. 
      */
     override fun distribution(distribution: IDistribution) {
-      cdkBuilder.distribution(distribution.let(IDistribution::unwrap))
+      cdkBuilder.distribution(distribution.let(IDistribution.Companion::unwrap))
     }
 
     /**
@@ -728,7 +728,7 @@ public open class BucketDeployment(
      * @param ephemeralStorageSize The size of the AWS Lambda function’s /tmp directory in MiB. 
      */
     override fun ephemeralStorageSize(ephemeralStorageSize: Size) {
-      cdkBuilder.ephemeralStorageSize(ephemeralStorageSize.let(Size::unwrap))
+      cdkBuilder.ephemeralStorageSize(ephemeralStorageSize.let(Size.Companion::unwrap))
     }
 
     /**
@@ -778,7 +778,7 @@ public open class BucketDeployment(
      * @param expires System-defined expires metadata to be set on all objects in the deployment. 
      */
     override fun expires(expires: Expiration) {
-      cdkBuilder.expires(expires.let(Expiration::unwrap))
+      cdkBuilder.expires(expires.let(Expiration.Companion::unwrap))
     }
 
     /**
@@ -839,7 +839,7 @@ public open class BucketDeployment(
      * lambda function. 
      */
     override fun logGroup(logGroup: ILogGroup) {
-      cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
+      cdkBuilder.logGroup(logGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -855,7 +855,7 @@ public open class BucketDeployment(
      * CloudWatch Logs. 
      */
     override fun logRetention(logRetention: RetentionDays) {
-      cdkBuilder.logRetention(logRetention.let(RetentionDays::unwrap))
+      cdkBuilder.logRetention(logRetention.let(RetentionDays.Companion::unwrap))
     }
 
     /**
@@ -926,7 +926,7 @@ public open class BucketDeployment(
      * @param role Execution role associated with this function. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -940,7 +940,7 @@ public open class BucketDeployment(
      * all objects in the deployment. 
      */
     override fun serverSideEncryption(serverSideEncryption: ServerSideEncryption) {
-      cdkBuilder.serverSideEncryption(serverSideEncryption.let(ServerSideEncryption::unwrap))
+      cdkBuilder.serverSideEncryption(serverSideEncryption.let(ServerSideEncryption.Companion::unwrap))
     }
 
     /**
@@ -996,7 +996,7 @@ public open class BucketDeployment(
      * @param sources The sources from which to deploy the contents of this bucket. 
      */
     override fun sources(sources: List<ISource>) {
-      cdkBuilder.sources(sources.map(ISource::unwrap))
+      cdkBuilder.sources(sources.map(ISource.Companion::unwrap))
     }
 
     /**
@@ -1016,7 +1016,7 @@ public open class BucketDeployment(
      * the deployment. 
      */
     override fun storageClass(storageClass: StorageClass) {
-      cdkBuilder.storageClass(storageClass.let(StorageClass::unwrap))
+      cdkBuilder.storageClass(storageClass.let(StorageClass.Companion::unwrap))
     }
 
     /**
@@ -1043,7 +1043,7 @@ public open class BucketDeployment(
      * @param vpc The VPC network to place the deployment lambda handler in. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -1056,7 +1056,7 @@ public open class BucketDeployment(
      * @param vpcSubnets Where in the VPC to place the deployment lambda handler. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

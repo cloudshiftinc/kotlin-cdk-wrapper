@@ -64,8 +64,8 @@ public open class CfnPricingRule(
     id: String,
     props: CfnPricingRuleProps,
   ) :
-      this(software.amazon.awscdk.services.billingconductor.CfnPricingRule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPricingRuleProps::unwrap))
+      this(software.amazon.awscdk.services.billingconductor.CfnPricingRule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPricingRuleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -128,7 +128,7 @@ public open class CfnPricingRule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -208,7 +208,7 @@ public open class CfnPricingRule(
    * A map that contains tag keys and tag values that are attached to a pricing rule.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -225,14 +225,14 @@ public open class CfnPricingRule(
    * The set of tiering configurations for the pricing rule.
    */
   public open fun tiering(`value`: IResolvable) {
-    unwrap(this).setTiering(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTiering(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The set of tiering configurations for the pricing rule.
    */
   public open fun tiering(`value`: TieringProperty) {
-    unwrap(this).setTiering(`value`.let(TieringProperty::unwrap))
+    unwrap(this).setTiering(`value`.let(TieringProperty.Companion::unwrap))
   }
 
   /**
@@ -497,7 +497,7 @@ public open class CfnPricingRule(
      * @param tags A map that contains tag keys and tag values that are attached to a pricing rule. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -515,7 +515,7 @@ public open class CfnPricingRule(
      * @param tiering The set of tiering configurations for the pricing rule. 
      */
     override fun tiering(tiering: IResolvable) {
-      cdkBuilder.tiering(tiering.let(IResolvable::unwrap))
+      cdkBuilder.tiering(tiering.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -525,7 +525,7 @@ public open class CfnPricingRule(
      * @param tiering The set of tiering configurations for the pricing rule. 
      */
     override fun tiering(tiering: TieringProperty) {
-      cdkBuilder.tiering(tiering.let(TieringProperty::unwrap))
+      cdkBuilder.tiering(tiering.let(TieringProperty.Companion::unwrap))
     }
 
     /**
@@ -642,7 +642,7 @@ public open class CfnPricingRule(
        * @param activated Activate or deactivate AWS Free Tier. 
        */
       override fun activated(activated: IResolvable) {
-        cdkBuilder.activated(activated.let(IResolvable::unwrap))
+        cdkBuilder.activated(activated.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -737,14 +737,14 @@ public open class CfnPricingRule(
        * @param freeTier The possible AWS Free Tier configurations.
        */
       override fun freeTier(freeTier: IResolvable) {
-        cdkBuilder.freeTier(freeTier.let(IResolvable::unwrap))
+        cdkBuilder.freeTier(freeTier.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param freeTier The possible AWS Free Tier configurations.
        */
       override fun freeTier(freeTier: FreeTierProperty) {
-        cdkBuilder.freeTier(freeTier.let(FreeTierProperty::unwrap))
+        cdkBuilder.freeTier(freeTier.let(FreeTierProperty.Companion::unwrap))
       }
 
       /**

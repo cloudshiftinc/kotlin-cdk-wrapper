@@ -46,7 +46,7 @@ public open class Variable(
   cdkObject: software.amazon.awscdk.services.codepipeline.Variable,
 ) : CdkObject(cdkObject) {
   public constructor(props: VariableProps) :
-      this(software.amazon.awscdk.services.codepipeline.Variable(props.let(VariableProps::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.Variable(props.let(VariableProps.Companion::unwrap))
   )
 
   public constructor(props: VariableProps.Builder.() -> Unit) : this(VariableProps(props)

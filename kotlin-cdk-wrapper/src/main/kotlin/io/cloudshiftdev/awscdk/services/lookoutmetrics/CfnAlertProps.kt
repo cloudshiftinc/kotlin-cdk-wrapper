@@ -130,14 +130,14 @@ public interface CfnAlertProps {
      * @param action Action that will be triggered when there is an alert. 
      */
     override fun action(action: IResolvable) {
-      cdkBuilder.action(action.let(IResolvable::unwrap))
+      cdkBuilder.action(action.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param action Action that will be triggered when there is an alert. 
      */
     override fun action(action: CfnAlert.ActionProperty) {
-      cdkBuilder.action(action.let(CfnAlert.ActionProperty::unwrap))
+      cdkBuilder.action(action.let(CfnAlert.ActionProperty.Companion::unwrap))
     }
 
     /**

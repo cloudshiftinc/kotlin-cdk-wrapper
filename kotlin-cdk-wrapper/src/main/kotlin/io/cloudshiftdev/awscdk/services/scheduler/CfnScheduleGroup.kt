@@ -51,7 +51,7 @@ public open class CfnScheduleGroup(
   cdkObject: software.amazon.awscdk.services.scheduler.CfnScheduleGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.scheduler.CfnScheduleGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.scheduler.CfnScheduleGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -60,8 +60,8 @@ public open class CfnScheduleGroup(
     id: String,
     props: CfnScheduleGroupProps,
   ) :
-      this(software.amazon.awscdk.services.scheduler.CfnScheduleGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnScheduleGroupProps::unwrap))
+      this(software.amazon.awscdk.services.scheduler.CfnScheduleGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnScheduleGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -99,7 +99,7 @@ public open class CfnScheduleGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -129,7 +129,7 @@ public open class CfnScheduleGroup(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -203,7 +203,7 @@ public open class CfnScheduleGroup(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

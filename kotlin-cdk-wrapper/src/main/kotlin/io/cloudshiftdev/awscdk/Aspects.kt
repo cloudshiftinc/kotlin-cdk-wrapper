@@ -48,7 +48,7 @@ public open class Aspects(
    * @param aspect The aspect to add. 
    */
   public open fun add(aspect: IAspect) {
-    unwrap(this).add(aspect.let(IAspect::unwrap))
+    unwrap(this).add(aspect.let(IAspect.Companion::unwrap))
   }
 
   /**
@@ -58,7 +58,7 @@ public open class Aspects(
 
   public companion object {
     public fun of(scope: IConstruct): Aspects =
-        software.amazon.awscdk.Aspects.of(scope.let(IConstruct::unwrap)).let(Aspects::wrap)
+        software.amazon.awscdk.Aspects.of(scope.let(IConstruct.Companion::unwrap)).let(Aspects::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.Aspects): Aspects = Aspects(cdkObject)
 

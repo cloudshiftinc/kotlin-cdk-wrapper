@@ -63,7 +63,7 @@ public abstract class EksVolume(
 
   public companion object {
     public fun emptyDir(options: EmptyDirVolumeOptions): EmptyDirVolume =
-        software.amazon.awscdk.services.batch.EksVolume.emptyDir(options.let(EmptyDirVolumeOptions::unwrap)).let(EmptyDirVolume::wrap)
+        software.amazon.awscdk.services.batch.EksVolume.emptyDir(options.let(EmptyDirVolumeOptions.Companion::unwrap)).let(EmptyDirVolume::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0ae1832762c3127e0e05d541ea4cba3764c37519105a107aad48b067132a74d4")
@@ -71,7 +71,7 @@ public abstract class EksVolume(
         emptyDir(EmptyDirVolumeOptions(options))
 
     public fun hostPath(options: HostPathVolumeOptions): HostPathVolume =
-        software.amazon.awscdk.services.batch.EksVolume.hostPath(options.let(HostPathVolumeOptions::unwrap)).let(HostPathVolume::wrap)
+        software.amazon.awscdk.services.batch.EksVolume.hostPath(options.let(HostPathVolumeOptions.Companion::unwrap)).let(HostPathVolume::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("692a144b01fcc0811c2286d0149b788499597a81b3e35cc359a858dad73286ea")
@@ -79,7 +79,7 @@ public abstract class EksVolume(
         hostPath(HostPathVolumeOptions(options))
 
     public fun secret(options: SecretPathVolumeOptions): SecretPathVolume =
-        software.amazon.awscdk.services.batch.EksVolume.secret(options.let(SecretPathVolumeOptions::unwrap)).let(SecretPathVolume::wrap)
+        software.amazon.awscdk.services.batch.EksVolume.secret(options.let(SecretPathVolumeOptions.Companion::unwrap)).let(SecretPathVolume::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9bd0e018010b8d5a5e4df6bae9a74a65f9da8a9df40bd564d76983979797c0b1")

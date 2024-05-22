@@ -52,7 +52,7 @@ public interface INetworkAcl : IResource {
      */
     override fun addEntry(id: String, options: CommonNetworkAclEntryOptions): NetworkAclEntry =
         unwrap(this).addEntry(id,
-        options.let(CommonNetworkAclEntryOptions::unwrap)).let(NetworkAclEntry::wrap)
+        options.let(CommonNetworkAclEntryOptions.Companion::unwrap)).let(NetworkAclEntry::wrap)
 
     /**
      * Add a new entry to the ACL.
@@ -79,7 +79,7 @@ public interface INetworkAcl : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**

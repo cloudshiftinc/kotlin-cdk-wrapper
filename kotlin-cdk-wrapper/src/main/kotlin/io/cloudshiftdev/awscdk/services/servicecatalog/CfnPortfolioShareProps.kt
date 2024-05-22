@@ -143,7 +143,7 @@ public interface CfnPortfolioShareProps {
      * portfolio share.
      */
     override fun shareTagOptions(shareTagOptions: IResolvable) {
-      cdkBuilder.shareTagOptions(shareTagOptions.let(IResolvable::unwrap))
+      cdkBuilder.shareTagOptions(shareTagOptions.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.servicecatalog.CfnPortfolioShareProps =

@@ -183,14 +183,14 @@ public interface CfnCapabilityProps {
      * @param configuration Specifies a structure that contains the details for a capability. 
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param configuration Specifies a structure that contains the details for a capability. 
      */
     override fun configuration(configuration: CfnCapability.CapabilityConfigurationProperty) {
-      cdkBuilder.configuration(configuration.let(CfnCapability.CapabilityConfigurationProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(CfnCapability.CapabilityConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -208,7 +208,7 @@ public interface CfnCapabilityProps {
      * Each item contains the name of the bucket and the key, to identify the document's location.
      */
     override fun instructionsDocuments(instructionsDocuments: IResolvable) {
-      cdkBuilder.instructionsDocuments(instructionsDocuments.let(IResolvable::unwrap))
+      cdkBuilder.instructionsDocuments(instructionsDocuments.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -242,7 +242,7 @@ public interface CfnCapabilityProps {
      * purpose.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -80,8 +80,8 @@ public open class Deployment(
     id: String,
     props: DeploymentProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.Deployment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DeploymentProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.Deployment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DeploymentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -113,6 +113,11 @@ public open class Deployment(
    *
    */
   public open fun deploymentId(): String = unwrap(this).getDeploymentId()
+
+  /**
+   * The stage of the API gateway deployment.
+   */
+  public open fun stageName(): String? = unwrap(this).getStageName()
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.apigateway.Deployment].
@@ -147,6 +152,17 @@ public open class Deployment(
      * automatically be created. 
      */
     public fun retainDeployments(retainDeployments: Boolean)
+
+    /**
+     * The name of the stage the API Gateway deployment deploys to.
+     *
+     * Default: - No stage name. If the `stageName` property is set but a stage with the
+     * corresponding name does not exist, a new stage resource will be created with the
+     * provided stage name.
+     *
+     * @param stageName The name of the stage the API Gateway deployment deploys to. 
+     */
+    public fun stageName(stageName: String)
   }
 
   private class BuilderImpl(
@@ -162,7 +178,7 @@ public open class Deployment(
      * @param api The Rest API to deploy. 
      */
     override fun api(api: IRestApi) {
-      cdkBuilder.api(api.let(IRestApi::unwrap))
+      cdkBuilder.api(api.let(IRestApi.Companion::unwrap))
     }
 
     /**
@@ -189,6 +205,19 @@ public open class Deployment(
      */
     override fun retainDeployments(retainDeployments: Boolean) {
       cdkBuilder.retainDeployments(retainDeployments)
+    }
+
+    /**
+     * The name of the stage the API Gateway deployment deploys to.
+     *
+     * Default: - No stage name. If the `stageName` property is set but a stage with the
+     * corresponding name does not exist, a new stage resource will be created with the
+     * provided stage name.
+     *
+     * @param stageName The name of the stage the API Gateway deployment deploys to. 
+     */
+    override fun stageName(stageName: String) {
+      cdkBuilder.stageName(stageName)
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.Deployment = cdkBuilder.build()

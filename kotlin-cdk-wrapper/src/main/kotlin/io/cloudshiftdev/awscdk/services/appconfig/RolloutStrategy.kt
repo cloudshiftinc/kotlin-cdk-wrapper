@@ -69,7 +69,7 @@ public abstract class RolloutStrategy(
         RolloutStrategy.wrap(software.amazon.awscdk.services.appconfig.RolloutStrategy.LINEAR_50_PERCENT_EVERY_30_SECONDS)
 
     public fun exponential(props: RolloutStrategyProps): RolloutStrategy =
-        software.amazon.awscdk.services.appconfig.RolloutStrategy.exponential(props.let(RolloutStrategyProps::unwrap)).let(RolloutStrategy::wrap)
+        software.amazon.awscdk.services.appconfig.RolloutStrategy.exponential(props.let(RolloutStrategyProps.Companion::unwrap)).let(RolloutStrategy::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b95391bc997c59259d7da13e9d4226af5c6449088a5cb7689696ccffa5d774c0")
@@ -77,7 +77,7 @@ public abstract class RolloutStrategy(
         exponential(RolloutStrategyProps(props))
 
     public fun linear(props: RolloutStrategyProps): RolloutStrategy =
-        software.amazon.awscdk.services.appconfig.RolloutStrategy.linear(props.let(RolloutStrategyProps::unwrap)).let(RolloutStrategy::wrap)
+        software.amazon.awscdk.services.appconfig.RolloutStrategy.linear(props.let(RolloutStrategyProps.Companion::unwrap)).let(RolloutStrategy::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4a62b86213b48bce9dc8ddb4d37952843154a77d272725fc4be380b5d2758ef6")

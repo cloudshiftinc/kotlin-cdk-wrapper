@@ -53,7 +53,7 @@ public open class SchemaFile(
   cdkObject: software.amazon.awscdk.services.appsync.SchemaFile,
 ) : CdkObject(cdkObject), ISchema {
   public constructor(options: SchemaProps) :
-      this(software.amazon.awscdk.services.appsync.SchemaFile(options.let(SchemaProps::unwrap))
+      this(software.amazon.awscdk.services.appsync.SchemaFile(options.let(SchemaProps.Companion::unwrap))
   )
 
   public constructor(options: SchemaProps.Builder.() -> Unit) : this(SchemaProps(options)
@@ -66,7 +66,7 @@ public open class SchemaFile(
    * @param _options
    */
   public override fun bind(api: IGraphqlApi): ISchemaConfig =
-      unwrap(this).bind(api.let(IGraphqlApi::unwrap)).let(ISchemaConfig::wrap)
+      unwrap(this).bind(api.let(IGraphqlApi.Companion::unwrap)).let(ISchemaConfig::wrap)
 
   /**
    * Called when the GraphQL Api is initialized to allow this object to bind to the stack.
@@ -75,8 +75,8 @@ public open class SchemaFile(
    * @param _options
    */
   public override fun bind(api: IGraphqlApi, options: SchemaBindOptions): ISchemaConfig =
-      unwrap(this).bind(api.let(IGraphqlApi::unwrap),
-      options.let(SchemaBindOptions::unwrap)).let(ISchemaConfig::wrap)
+      unwrap(this).bind(api.let(IGraphqlApi.Companion::unwrap),
+      options.let(SchemaBindOptions.Companion::unwrap)).let(ISchemaConfig::wrap)
 
   /**
    * Called when the GraphQL Api is initialized to allow this object to bind to the stack.

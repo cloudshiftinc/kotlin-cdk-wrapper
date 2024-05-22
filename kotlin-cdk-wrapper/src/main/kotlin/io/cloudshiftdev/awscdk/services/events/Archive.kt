@@ -52,8 +52,8 @@ public open class Archive(
     id: String,
     props: ArchiveProps,
   ) :
-      this(software.amazon.awscdk.services.events.Archive(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ArchiveProps::unwrap))
+      this(software.amazon.awscdk.services.events.Archive(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ArchiveProps.Companion::unwrap))
   )
 
   public constructor(
@@ -166,7 +166,7 @@ public open class Archive(
      * @param eventPattern An event pattern to use to filter events sent to the archive. 
      */
     override fun eventPattern(eventPattern: EventPattern) {
-      cdkBuilder.eventPattern(eventPattern.let(EventPattern::unwrap))
+      cdkBuilder.eventPattern(eventPattern.let(EventPattern.Companion::unwrap))
     }
 
     /**
@@ -189,7 +189,7 @@ public open class Archive(
      * @param retention The number of days to retain events for. 
      */
     override fun retention(retention: Duration) {
-      cdkBuilder.retention(retention.let(Duration::unwrap))
+      cdkBuilder.retention(retention.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -198,7 +198,7 @@ public open class Archive(
      * @param sourceEventBus The event source associated with the archive. 
      */
     override fun sourceEventBus(sourceEventBus: IEventBus) {
-      cdkBuilder.sourceEventBus(sourceEventBus.let(IEventBus::unwrap))
+      cdkBuilder.sourceEventBus(sourceEventBus.let(IEventBus.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.events.Archive = cdkBuilder.build()

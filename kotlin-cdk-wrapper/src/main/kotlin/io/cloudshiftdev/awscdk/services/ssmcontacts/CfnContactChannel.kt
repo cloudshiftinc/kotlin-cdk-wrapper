@@ -45,8 +45,8 @@ public open class CfnContactChannel(
     id: String,
     props: CfnContactChannelProps,
   ) :
-      this(software.amazon.awscdk.services.ssmcontacts.CfnContactChannel(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnContactChannelProps::unwrap))
+      this(software.amazon.awscdk.services.ssmcontacts.CfnContactChannel(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnContactChannelProps.Companion::unwrap))
   )
 
   public constructor(
@@ -129,7 +129,7 @@ public open class CfnContactChannel(
    * If you want to activate the channel at a later time, you can choose to defer activation.
    */
   public open fun deferActivation(`value`: IResolvable) {
-    unwrap(this).setDeferActivation(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeferActivation(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -138,7 +138,7 @@ public open class CfnContactChannel(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -285,7 +285,7 @@ public open class CfnContactChannel(
      * defer activation. 
      */
     override fun deferActivation(deferActivation: IResolvable) {
-      cdkBuilder.deferActivation(deferActivation.let(IResolvable::unwrap))
+      cdkBuilder.deferActivation(deferActivation.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ssmcontacts.CfnContactChannel =

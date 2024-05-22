@@ -35,8 +35,8 @@ public open class KeySigningKey(
     id: String,
     props: KeySigningKeyProps,
   ) :
-      this(software.amazon.awscdk.services.route53.KeySigningKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(KeySigningKeyProps::unwrap))
+      this(software.amazon.awscdk.services.route53.KeySigningKey(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(KeySigningKeyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -119,7 +119,7 @@ public open class KeySigningKey(
      * @param hostedZone The hosted zone that this key will be used to sign. 
      */
     override fun hostedZone(hostedZone: IHostedZone) {
-      cdkBuilder.hostedZone(hostedZone.let(IHostedZone::unwrap))
+      cdkBuilder.hostedZone(hostedZone.let(IHostedZone.Companion::unwrap))
     }
 
     /**
@@ -145,7 +145,7 @@ public open class KeySigningKey(
      * @param kmsKey The customer-managed KMS key that that will be used to sign the records. 
      */
     override fun kmsKey(kmsKey: IKey) {
-      cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -156,7 +156,7 @@ public open class KeySigningKey(
      * @param status The status of the key signing key. 
      */
     override fun status(status: KeySigningKeyStatus) {
-      cdkBuilder.status(status.let(KeySigningKeyStatus::unwrap))
+      cdkBuilder.status(status.let(KeySigningKeyStatus.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.route53.KeySigningKey = cdkBuilder.build()
@@ -168,8 +168,8 @@ public open class KeySigningKey(
       id: String,
       attrs: KeySigningKeyAttributes,
     ): IKeySigningKey =
-        software.amazon.awscdk.services.route53.KeySigningKey.fromKeySigningKeyAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(KeySigningKeyAttributes::unwrap)).let(IKeySigningKey::wrap)
+        software.amazon.awscdk.services.route53.KeySigningKey.fromKeySigningKeyAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(KeySigningKeyAttributes.Companion::unwrap)).let(IKeySigningKey::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("75826e30a29d75b033f852519279dba732ef46c4cc824e4b69e8db313453e4f9")

@@ -91,8 +91,8 @@ public open class CfnInstance(
     id: String,
     props: CfnInstanceProps,
   ) :
-      this(software.amazon.awscdk.services.opsworks.CfnInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInstanceProps::unwrap))
+      this(software.amazon.awscdk.services.opsworks.CfnInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInstanceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -209,7 +209,7 @@ public open class CfnInstance(
    * An array of `BlockDeviceMapping` objects that specify the instance's block devices.
    */
   public open fun blockDeviceMappings(`value`: IResolvable) {
-    unwrap(this).setBlockDeviceMappings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBlockDeviceMappings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -241,7 +241,7 @@ public open class CfnInstance(
    * Whether to create an Amazon EBS-optimized instance.
    */
   public open fun ebsOptimized(`value`: IResolvable) {
-    unwrap(this).setEbsOptimized(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEbsOptimized(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -283,7 +283,7 @@ public open class CfnInstance(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -302,7 +302,7 @@ public open class CfnInstance(
    * Whether to install operating system and package updates when the instance boots.
    */
   public open fun installUpdatesOnBoot(`value`: IResolvable) {
-    unwrap(this).setInstallUpdatesOnBoot(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInstallUpdatesOnBoot(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -425,14 +425,14 @@ public open class CfnInstance(
    * The time-based scaling configuration for the instance.
    */
   public open fun timeBasedAutoScaling(`value`: IResolvable) {
-    unwrap(this).setTimeBasedAutoScaling(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTimeBasedAutoScaling(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The time-based scaling configuration for the instance.
    */
   public open fun timeBasedAutoScaling(`value`: TimeBasedAutoScalingProperty) {
-    unwrap(this).setTimeBasedAutoScaling(`value`.let(TimeBasedAutoScalingProperty::unwrap))
+    unwrap(this).setTimeBasedAutoScaling(`value`.let(TimeBasedAutoScalingProperty.Companion::unwrap))
   }
 
   /**
@@ -942,7 +942,7 @@ public open class CfnInstance(
      * instance's block devices. 
      */
     override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
-      cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable::unwrap))
+      cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -991,7 +991,7 @@ public open class CfnInstance(
      * @param ebsOptimized Whether to create an Amazon EBS-optimized instance. 
      */
     override fun ebsOptimized(ebsOptimized: IResolvable) {
-      cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
+      cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1065,7 +1065,7 @@ public open class CfnInstance(
      * instance boots. 
      */
     override fun installUpdatesOnBoot(installUpdatesOnBoot: IResolvable) {
-      cdkBuilder.installUpdatesOnBoot(installUpdatesOnBoot.let(IResolvable::unwrap))
+      cdkBuilder.installUpdatesOnBoot(installUpdatesOnBoot.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1214,7 +1214,7 @@ public open class CfnInstance(
      * @param timeBasedAutoScaling The time-based scaling configuration for the instance. 
      */
     override fun timeBasedAutoScaling(timeBasedAutoScaling: IResolvable) {
-      cdkBuilder.timeBasedAutoScaling(timeBasedAutoScaling.let(IResolvable::unwrap))
+      cdkBuilder.timeBasedAutoScaling(timeBasedAutoScaling.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1224,7 +1224,7 @@ public open class CfnInstance(
      * @param timeBasedAutoScaling The time-based scaling configuration for the instance. 
      */
     override fun timeBasedAutoScaling(timeBasedAutoScaling: TimeBasedAutoScalingProperty) {
-      cdkBuilder.timeBasedAutoScaling(timeBasedAutoScaling.let(TimeBasedAutoScalingProperty::unwrap))
+      cdkBuilder.timeBasedAutoScaling(timeBasedAutoScaling.let(TimeBasedAutoScalingProperty.Companion::unwrap))
     }
 
     /**
@@ -1429,7 +1429,7 @@ public open class CfnInstance(
        * You can specify either the `VirtualName` or `Ebs` , but not both.
        */
       override fun ebs(ebs: IResolvable) {
-        cdkBuilder.ebs(ebs.let(IResolvable::unwrap))
+        cdkBuilder.ebs(ebs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1438,7 +1438,7 @@ public open class CfnInstance(
        * You can specify either the `VirtualName` or `Ebs` , but not both.
        */
       override fun ebs(ebs: EbsBlockDeviceProperty) {
-        cdkBuilder.ebs(ebs.let(EbsBlockDeviceProperty::unwrap))
+        cdkBuilder.ebs(ebs.let(EbsBlockDeviceProperty.Companion::unwrap))
       }
 
       /**
@@ -1669,7 +1669,7 @@ public open class CfnInstance(
        * @param deleteOnTermination Whether the volume is deleted on instance termination.
        */
       override fun deleteOnTermination(deleteOnTermination: IResolvable) {
-        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
+        cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1957,7 +1957,7 @@ public open class CfnInstance(
        * @param friday The schedule for Friday.
        */
       override fun friday(friday: IResolvable) {
-        cdkBuilder.friday(friday.let(IResolvable::unwrap))
+        cdkBuilder.friday(friday.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1971,7 +1971,7 @@ public open class CfnInstance(
        * @param monday The schedule for Monday.
        */
       override fun monday(monday: IResolvable) {
-        cdkBuilder.monday(monday.let(IResolvable::unwrap))
+        cdkBuilder.monday(monday.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1985,7 +1985,7 @@ public open class CfnInstance(
        * @param saturday The schedule for Saturday.
        */
       override fun saturday(saturday: IResolvable) {
-        cdkBuilder.saturday(saturday.let(IResolvable::unwrap))
+        cdkBuilder.saturday(saturday.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1999,7 +1999,7 @@ public open class CfnInstance(
        * @param sunday The schedule for Sunday.
        */
       override fun sunday(sunday: IResolvable) {
-        cdkBuilder.sunday(sunday.let(IResolvable::unwrap))
+        cdkBuilder.sunday(sunday.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2013,7 +2013,7 @@ public open class CfnInstance(
        * @param thursday The schedule for Thursday.
        */
       override fun thursday(thursday: IResolvable) {
-        cdkBuilder.thursday(thursday.let(IResolvable::unwrap))
+        cdkBuilder.thursday(thursday.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2027,7 +2027,7 @@ public open class CfnInstance(
        * @param tuesday The schedule for Tuesday.
        */
       override fun tuesday(tuesday: IResolvable) {
-        cdkBuilder.tuesday(tuesday.let(IResolvable::unwrap))
+        cdkBuilder.tuesday(tuesday.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2041,7 +2041,7 @@ public open class CfnInstance(
        * @param wednesday The schedule for Wednesday.
        */
       override fun wednesday(wednesday: IResolvable) {
-        cdkBuilder.wednesday(wednesday.let(IResolvable::unwrap))
+        cdkBuilder.wednesday(wednesday.let(IResolvable.Companion::unwrap))
       }
 
       /**

@@ -482,7 +482,7 @@ public interface CfnEndpointConfigProps {
      * inference.
      */
     override fun asyncInferenceConfig(asyncInferenceConfig: IResolvable) {
-      cdkBuilder.asyncInferenceConfig(asyncInferenceConfig.let(IResolvable::unwrap))
+      cdkBuilder.asyncInferenceConfig(asyncInferenceConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -491,7 +491,7 @@ public interface CfnEndpointConfigProps {
      */
     override
         fun asyncInferenceConfig(asyncInferenceConfig: CfnEndpointConfig.AsyncInferenceConfigProperty) {
-      cdkBuilder.asyncInferenceConfig(asyncInferenceConfig.let(CfnEndpointConfig.AsyncInferenceConfigProperty::unwrap))
+      cdkBuilder.asyncInferenceConfig(asyncInferenceConfig.let(CfnEndpointConfig.AsyncInferenceConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -510,7 +510,7 @@ public interface CfnEndpointConfigProps {
      * The data capture configuration applies to all production variants hosted at the endpoint.
      */
     override fun dataCaptureConfig(dataCaptureConfig: IResolvable) {
-      cdkBuilder.dataCaptureConfig(dataCaptureConfig.let(IResolvable::unwrap))
+      cdkBuilder.dataCaptureConfig(dataCaptureConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -518,7 +518,7 @@ public interface CfnEndpointConfigProps {
      * The data capture configuration applies to all production variants hosted at the endpoint.
      */
     override fun dataCaptureConfig(dataCaptureConfig: CfnEndpointConfig.DataCaptureConfigProperty) {
-      cdkBuilder.dataCaptureConfig(dataCaptureConfig.let(CfnEndpointConfig.DataCaptureConfigProperty::unwrap))
+      cdkBuilder.dataCaptureConfig(dataCaptureConfig.let(CfnEndpointConfig.DataCaptureConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -542,7 +542,7 @@ public interface CfnEndpointConfigProps {
      * @param enableNetworkIsolation the value to be set.
      */
     override fun enableNetworkIsolation(enableNetworkIsolation: IResolvable) {
-      cdkBuilder.enableNetworkIsolation(enableNetworkIsolation.let(IResolvable::unwrap))
+      cdkBuilder.enableNetworkIsolation(enableNetworkIsolation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -563,14 +563,14 @@ public interface CfnEndpointConfigProps {
      * @param explainerConfig A parameter to activate explainers.
      */
     override fun explainerConfig(explainerConfig: IResolvable) {
-      cdkBuilder.explainerConfig(explainerConfig.let(IResolvable::unwrap))
+      cdkBuilder.explainerConfig(explainerConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param explainerConfig A parameter to activate explainers.
      */
     override fun explainerConfig(explainerConfig: CfnEndpointConfig.ExplainerConfigProperty) {
-      cdkBuilder.explainerConfig(explainerConfig.let(CfnEndpointConfig.ExplainerConfigProperty::unwrap))
+      cdkBuilder.explainerConfig(explainerConfig.let(CfnEndpointConfig.ExplainerConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -620,7 +620,7 @@ public interface CfnEndpointConfigProps {
      * want to host at this endpoint. 
      */
     override fun productionVariants(productionVariants: IResolvable) {
-      cdkBuilder.productionVariants(productionVariants.let(IResolvable::unwrap))
+      cdkBuilder.productionVariants(productionVariants.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -646,7 +646,7 @@ public interface CfnEndpointConfigProps {
      * `ShadowProductionVariants` .
      */
     override fun shadowProductionVariants(shadowProductionVariants: IResolvable) {
-      cdkBuilder.shadowProductionVariants(shadowProductionVariants.let(IResolvable::unwrap))
+      cdkBuilder.shadowProductionVariants(shadowProductionVariants.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -679,7 +679,7 @@ public interface CfnEndpointConfigProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -696,14 +696,14 @@ public interface CfnEndpointConfigProps {
      * @param vpcConfig the value to be set.
      */
     override fun vpcConfig(vpcConfig: IResolvable) {
-      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param vpcConfig the value to be set.
      */
     override fun vpcConfig(vpcConfig: CfnEndpointConfig.VpcConfigProperty) {
-      cdkBuilder.vpcConfig(vpcConfig.let(CfnEndpointConfig.VpcConfigProperty::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(CfnEndpointConfig.VpcConfigProperty.Companion::unwrap))
     }
 
     /**

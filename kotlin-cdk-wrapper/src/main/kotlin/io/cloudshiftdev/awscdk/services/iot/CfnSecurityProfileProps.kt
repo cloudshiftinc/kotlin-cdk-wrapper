@@ -275,7 +275,7 @@ public interface CfnSecurityProfileProps {
      * dimensions.
      */
     override fun additionalMetricsToRetainV2(additionalMetricsToRetainV2: IResolvable) {
-      cdkBuilder.additionalMetricsToRetainV2(additionalMetricsToRetainV2.let(IResolvable::unwrap))
+      cdkBuilder.additionalMetricsToRetainV2(additionalMetricsToRetainV2.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -303,7 +303,7 @@ public interface CfnSecurityProfileProps {
      * a behavior.
      */
     override fun alertTargets(alertTargets: IResolvable) {
-      cdkBuilder.alertTargets(alertTargets.let(IResolvable::unwrap))
+      cdkBuilder.alertTargets(alertTargets.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -320,7 +320,7 @@ public interface CfnSecurityProfileProps {
      * alert.
      */
     override fun behaviors(behaviors: IResolvable) {
-      cdkBuilder.behaviors(behaviors.let(IResolvable::unwrap))
+      cdkBuilder.behaviors(behaviors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -341,7 +341,7 @@ public interface CfnSecurityProfileProps {
      * @param metricsExportConfig Specifies the MQTT topic and role ARN required for metric export.
      */
     override fun metricsExportConfig(metricsExportConfig: IResolvable) {
-      cdkBuilder.metricsExportConfig(metricsExportConfig.let(IResolvable::unwrap))
+      cdkBuilder.metricsExportConfig(metricsExportConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -349,7 +349,7 @@ public interface CfnSecurityProfileProps {
      */
     override
         fun metricsExportConfig(metricsExportConfig: CfnSecurityProfile.MetricsExportConfigProperty) {
-      cdkBuilder.metricsExportConfig(metricsExportConfig.let(CfnSecurityProfile.MetricsExportConfigProperty::unwrap))
+      cdkBuilder.metricsExportConfig(metricsExportConfig.let(CfnSecurityProfile.MetricsExportConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -380,7 +380,7 @@ public interface CfnSecurityProfileProps {
      * @param tags Metadata that can be used to manage the security profile.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

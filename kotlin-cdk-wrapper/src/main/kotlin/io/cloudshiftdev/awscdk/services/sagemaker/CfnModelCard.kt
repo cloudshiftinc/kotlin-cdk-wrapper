@@ -190,8 +190,8 @@ public open class CfnModelCard(
     id: String,
     props: CfnModelCardProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnModelCard(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnModelCardProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnModelCard(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnModelCardProps.Companion::unwrap))
   )
 
   public constructor(
@@ -275,14 +275,14 @@ public open class CfnModelCard(
    * The content of the model card.
    */
   public open fun content(`value`: IResolvable) {
-    unwrap(this).setContent(`value`.let(IResolvable::unwrap))
+    unwrap(this).setContent(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The content of the model card.
    */
   public open fun content(`value`: ContentProperty) {
-    unwrap(this).setContent(`value`.let(ContentProperty::unwrap))
+    unwrap(this).setContent(`value`.let(ContentProperty.Companion::unwrap))
   }
 
   /**
@@ -302,14 +302,14 @@ public open class CfnModelCard(
    * Information about the user who created or modified one or more of the following:.
    */
   public open fun createdBy(`value`: IResolvable) {
-    unwrap(this).setCreatedBy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCreatedBy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Information about the user who created or modified one or more of the following:.
    */
   public open fun createdBy(`value`: UserContextProperty) {
-    unwrap(this).setCreatedBy(`value`.let(UserContextProperty::unwrap))
+    unwrap(this).setCreatedBy(`value`.let(UserContextProperty.Companion::unwrap))
   }
 
   /**
@@ -326,7 +326,7 @@ public open class CfnModelCard(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -340,7 +340,7 @@ public open class CfnModelCard(
    * lineage group, project, or model card.
    */
   public open fun lastModifiedBy(`value`: IResolvable) {
-    unwrap(this).setLastModifiedBy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLastModifiedBy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -348,7 +348,7 @@ public open class CfnModelCard(
    * lineage group, project, or model card.
    */
   public open fun lastModifiedBy(`value`: UserContextProperty) {
-    unwrap(this).setLastModifiedBy(`value`.let(UserContextProperty::unwrap))
+    unwrap(this).setLastModifiedBy(`value`.let(UserContextProperty.Companion::unwrap))
   }
 
   /**
@@ -393,14 +393,14 @@ public open class CfnModelCard(
    * The security configuration used to protect model card data.
    */
   public open fun securityConfig(`value`: IResolvable) {
-    unwrap(this).setSecurityConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSecurityConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The security configuration used to protect model card data.
    */
   public open fun securityConfig(`value`: SecurityConfigProperty) {
-    unwrap(this).setSecurityConfig(`value`.let(SecurityConfigProperty::unwrap))
+    unwrap(this).setSecurityConfig(`value`.let(SecurityConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -426,7 +426,7 @@ public open class CfnModelCard(
    * Key-value pairs used to manage metadata for the model card.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -644,7 +644,7 @@ public open class CfnModelCard(
      * @param content The content of the model card. 
      */
     override fun content(content: IResolvable) {
-      cdkBuilder.content(content.let(IResolvable::unwrap))
+      cdkBuilder.content(content.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -658,7 +658,7 @@ public open class CfnModelCard(
      * @param content The content of the model card. 
      */
     override fun content(content: ContentProperty) {
-      cdkBuilder.content(content.let(ContentProperty::unwrap))
+      cdkBuilder.content(content.let(ContentProperty.Companion::unwrap))
     }
 
     /**
@@ -691,7 +691,7 @@ public open class CfnModelCard(
      * following:. 
      */
     override fun createdBy(createdBy: IResolvable) {
-      cdkBuilder.createdBy(createdBy.let(IResolvable::unwrap))
+      cdkBuilder.createdBy(createdBy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -709,7 +709,7 @@ public open class CfnModelCard(
      * following:. 
      */
     override fun createdBy(createdBy: UserContextProperty) {
-      cdkBuilder.createdBy(createdBy.let(UserContextProperty::unwrap))
+      cdkBuilder.createdBy(createdBy.let(UserContextProperty.Companion::unwrap))
     }
 
     /**
@@ -740,7 +740,7 @@ public open class CfnModelCard(
      * trial, trial component, lineage group, project, or model card. 
      */
     override fun lastModifiedBy(lastModifiedBy: IResolvable) {
-      cdkBuilder.lastModifiedBy(lastModifiedBy.let(IResolvable::unwrap))
+      cdkBuilder.lastModifiedBy(lastModifiedBy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -752,7 +752,7 @@ public open class CfnModelCard(
      * trial, trial component, lineage group, project, or model card. 
      */
     override fun lastModifiedBy(lastModifiedBy: UserContextProperty) {
-      cdkBuilder.lastModifiedBy(lastModifiedBy.let(UserContextProperty::unwrap))
+      cdkBuilder.lastModifiedBy(lastModifiedBy.let(UserContextProperty.Companion::unwrap))
     }
 
     /**
@@ -803,7 +803,7 @@ public open class CfnModelCard(
      * @param securityConfig The security configuration used to protect model card data. 
      */
     override fun securityConfig(securityConfig: IResolvable) {
-      cdkBuilder.securityConfig(securityConfig.let(IResolvable::unwrap))
+      cdkBuilder.securityConfig(securityConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -813,7 +813,7 @@ public open class CfnModelCard(
      * @param securityConfig The security configuration used to protect model card data. 
      */
     override fun securityConfig(securityConfig: SecurityConfigProperty) {
-      cdkBuilder.securityConfig(securityConfig.let(SecurityConfigProperty::unwrap))
+      cdkBuilder.securityConfig(securityConfig.let(SecurityConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -834,7 +834,7 @@ public open class CfnModelCard(
      * @param tags Key-value pairs used to manage metadata for the model card. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -957,7 +957,7 @@ public open class CfnModelCard(
        * @param customDetails Any additional information to document about the model.
        */
       override fun customDetails(customDetails: IResolvable) {
-        cdkBuilder.customDetails(customDetails.let(IResolvable::unwrap))
+        cdkBuilder.customDetails(customDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1627,14 +1627,14 @@ public open class CfnModelCard(
        * @param additionalInformation Additional information about the model.
        */
       override fun additionalInformation(additionalInformation: IResolvable) {
-        cdkBuilder.additionalInformation(additionalInformation.let(IResolvable::unwrap))
+        cdkBuilder.additionalInformation(additionalInformation.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param additionalInformation Additional information about the model.
        */
       override fun additionalInformation(additionalInformation: AdditionalInformationProperty) {
-        cdkBuilder.additionalInformation(additionalInformation.let(AdditionalInformationProperty::unwrap))
+        cdkBuilder.additionalInformation(additionalInformation.let(AdditionalInformationProperty.Companion::unwrap))
       }
 
       /**
@@ -1650,14 +1650,14 @@ public open class CfnModelCard(
        * @param businessDetails Information about how the model supports business goals.
        */
       override fun businessDetails(businessDetails: IResolvable) {
-        cdkBuilder.businessDetails(businessDetails.let(IResolvable::unwrap))
+        cdkBuilder.businessDetails(businessDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param businessDetails Information about how the model supports business goals.
        */
       override fun businessDetails(businessDetails: BusinessDetailsProperty) {
-        cdkBuilder.businessDetails(businessDetails.let(BusinessDetailsProperty::unwrap))
+        cdkBuilder.businessDetails(businessDetails.let(BusinessDetailsProperty.Companion::unwrap))
       }
 
       /**
@@ -1672,7 +1672,7 @@ public open class CfnModelCard(
        * @param evaluationDetails An overview about the model's evaluation.
        */
       override fun evaluationDetails(evaluationDetails: IResolvable) {
-        cdkBuilder.evaluationDetails(evaluationDetails.let(IResolvable::unwrap))
+        cdkBuilder.evaluationDetails(evaluationDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1692,14 +1692,14 @@ public open class CfnModelCard(
        * @param intendedUses The intended usage of the model.
        */
       override fun intendedUses(intendedUses: IResolvable) {
-        cdkBuilder.intendedUses(intendedUses.let(IResolvable::unwrap))
+        cdkBuilder.intendedUses(intendedUses.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param intendedUses The intended usage of the model.
        */
       override fun intendedUses(intendedUses: IntendedUsesProperty) {
-        cdkBuilder.intendedUses(intendedUses.let(IntendedUsesProperty::unwrap))
+        cdkBuilder.intendedUses(intendedUses.let(IntendedUsesProperty.Companion::unwrap))
       }
 
       /**
@@ -1714,14 +1714,14 @@ public open class CfnModelCard(
        * @param modelOverview An overview about the model.
        */
       override fun modelOverview(modelOverview: IResolvable) {
-        cdkBuilder.modelOverview(modelOverview.let(IResolvable::unwrap))
+        cdkBuilder.modelOverview(modelOverview.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param modelOverview An overview about the model.
        */
       override fun modelOverview(modelOverview: ModelOverviewProperty) {
-        cdkBuilder.modelOverview(modelOverview.let(ModelOverviewProperty::unwrap))
+        cdkBuilder.modelOverview(modelOverview.let(ModelOverviewProperty.Companion::unwrap))
       }
 
       /**
@@ -1736,14 +1736,14 @@ public open class CfnModelCard(
        * @param modelPackageDetails Metadata information related to model package version.
        */
       override fun modelPackageDetails(modelPackageDetails: IResolvable) {
-        cdkBuilder.modelPackageDetails(modelPackageDetails.let(IResolvable::unwrap))
+        cdkBuilder.modelPackageDetails(modelPackageDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param modelPackageDetails Metadata information related to model package version.
        */
       override fun modelPackageDetails(modelPackageDetails: ModelPackageDetailsProperty) {
-        cdkBuilder.modelPackageDetails(modelPackageDetails.let(ModelPackageDetailsProperty::unwrap))
+        cdkBuilder.modelPackageDetails(modelPackageDetails.let(ModelPackageDetailsProperty.Companion::unwrap))
       }
 
       /**
@@ -1759,14 +1759,14 @@ public open class CfnModelCard(
        * @param trainingDetails An overview about model training.
        */
       override fun trainingDetails(trainingDetails: IResolvable) {
-        cdkBuilder.trainingDetails(trainingDetails.let(IResolvable::unwrap))
+        cdkBuilder.trainingDetails(trainingDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param trainingDetails An overview about model training.
        */
       override fun trainingDetails(trainingDetails: TrainingDetailsProperty) {
-        cdkBuilder.trainingDetails(trainingDetails.let(TrainingDetailsProperty::unwrap))
+        cdkBuilder.trainingDetails(trainingDetails.let(TrainingDetailsProperty.Companion::unwrap))
       }
 
       /**
@@ -2021,7 +2021,7 @@ public open class CfnModelCard(
        * @param metadata Additional attributes associated with the evaluation results.
        */
       override fun metadata(metadata: IResolvable) {
-        cdkBuilder.metadata(metadata.let(IResolvable::unwrap))
+        cdkBuilder.metadata(metadata.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2035,7 +2035,7 @@ public open class CfnModelCard(
        * @param metricGroups An evaluation Metric Group object.
        */
       override fun metricGroups(metricGroups: IResolvable) {
-        cdkBuilder.metricGroups(metricGroups.let(IResolvable::unwrap))
+        cdkBuilder.metricGroups(metricGroups.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2470,7 +2470,7 @@ public open class CfnModelCard(
        * inference code. 
        */
       override fun containers(containers: IResolvable) {
-        cdkBuilder.containers(containers.let(IResolvable::unwrap))
+        cdkBuilder.containers(containers.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3082,7 +3082,7 @@ public open class CfnModelCard(
        * .
        */
       override fun metricData(metricData: IResolvable) {
-        cdkBuilder.metricData(metricData.let(IResolvable::unwrap))
+        cdkBuilder.metricData(metricData.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3362,14 +3362,14 @@ public open class CfnModelCard(
        * @param inferenceEnvironment An overview about model inference.
        */
       override fun inferenceEnvironment(inferenceEnvironment: IResolvable) {
-        cdkBuilder.inferenceEnvironment(inferenceEnvironment.let(IResolvable::unwrap))
+        cdkBuilder.inferenceEnvironment(inferenceEnvironment.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param inferenceEnvironment An overview about model inference.
        */
       override fun inferenceEnvironment(inferenceEnvironment: InferenceEnvironmentProperty) {
-        cdkBuilder.inferenceEnvironment(inferenceEnvironment.let(InferenceEnvironmentProperty::unwrap))
+        cdkBuilder.inferenceEnvironment(inferenceEnvironment.let(InferenceEnvironmentProperty.Companion::unwrap))
       }
 
       /**
@@ -3878,14 +3878,14 @@ public open class CfnModelCard(
        * @param createdBy the value to be set.
        */
       override fun createdBy(createdBy: IResolvable) {
-        cdkBuilder.createdBy(createdBy.let(IResolvable::unwrap))
+        cdkBuilder.createdBy(createdBy.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param createdBy the value to be set.
        */
       override fun createdBy(createdBy: ModelPackageCreatorProperty) {
-        cdkBuilder.createdBy(createdBy.let(ModelPackageCreatorProperty::unwrap))
+        cdkBuilder.createdBy(createdBy.let(ModelPackageCreatorProperty.Companion::unwrap))
       }
 
       /**
@@ -3908,14 +3908,14 @@ public open class CfnModelCard(
        * @param inferenceSpecification the value to be set.
        */
       override fun inferenceSpecification(inferenceSpecification: IResolvable) {
-        cdkBuilder.inferenceSpecification(inferenceSpecification.let(IResolvable::unwrap))
+        cdkBuilder.inferenceSpecification(inferenceSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param inferenceSpecification the value to be set.
        */
       override fun inferenceSpecification(inferenceSpecification: InferenceSpecificationProperty) {
-        cdkBuilder.inferenceSpecification(inferenceSpecification.let(InferenceSpecificationProperty::unwrap))
+        cdkBuilder.inferenceSpecification(inferenceSpecification.let(InferenceSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -3981,7 +3981,7 @@ public open class CfnModelCard(
        * @param sourceAlgorithms the value to be set.
        */
       override fun sourceAlgorithms(sourceAlgorithms: IResolvable) {
-        cdkBuilder.sourceAlgorithms(sourceAlgorithms.let(IResolvable::unwrap))
+        cdkBuilder.sourceAlgorithms(sourceAlgorithms.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4201,7 +4201,7 @@ public open class CfnModelCard(
        * additional descriptions.
        */
       override fun function(function: IResolvable) {
-        cdkBuilder.function(function.let(IResolvable::unwrap))
+        cdkBuilder.function(function.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4209,7 +4209,7 @@ public open class CfnModelCard(
        * additional descriptions.
        */
       override fun function(function: FunctionProperty) {
-        cdkBuilder.function(function.let(FunctionProperty::unwrap))
+        cdkBuilder.function(function.let(FunctionProperty.Companion::unwrap))
       }
 
       /**
@@ -4635,14 +4635,14 @@ public open class CfnModelCard(
        * @param objectiveFunction The function that is optimized during model training.
        */
       override fun objectiveFunction(objectiveFunction: IResolvable) {
-        cdkBuilder.objectiveFunction(objectiveFunction.let(IResolvable::unwrap))
+        cdkBuilder.objectiveFunction(objectiveFunction.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param objectiveFunction The function that is optimized during model training.
        */
       override fun objectiveFunction(objectiveFunction: ObjectiveFunctionProperty) {
-        cdkBuilder.objectiveFunction(objectiveFunction.let(ObjectiveFunctionProperty::unwrap))
+        cdkBuilder.objectiveFunction(objectiveFunction.let(ObjectiveFunctionProperty.Companion::unwrap))
       }
 
       /**
@@ -4658,14 +4658,14 @@ public open class CfnModelCard(
        * @param trainingJobDetails Details about any associated training jobs.
        */
       override fun trainingJobDetails(trainingJobDetails: IResolvable) {
-        cdkBuilder.trainingJobDetails(trainingJobDetails.let(IResolvable::unwrap))
+        cdkBuilder.trainingJobDetails(trainingJobDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param trainingJobDetails Details about any associated training jobs.
        */
       override fun trainingJobDetails(trainingJobDetails: TrainingJobDetailsProperty) {
-        cdkBuilder.trainingJobDetails(trainingJobDetails.let(TrainingJobDetailsProperty::unwrap))
+        cdkBuilder.trainingJobDetails(trainingJobDetails.let(TrainingJobDetailsProperty.Companion::unwrap))
       }
 
       /**
@@ -5137,7 +5137,7 @@ public open class CfnModelCard(
        * @param hyperParameters The hyper parameters used in the training job.
        */
       override fun hyperParameters(hyperParameters: IResolvable) {
-        cdkBuilder.hyperParameters(hyperParameters.let(IResolvable::unwrap))
+        cdkBuilder.hyperParameters(hyperParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5177,14 +5177,14 @@ public open class CfnModelCard(
        * @param trainingEnvironment The SageMaker training job image URI.
        */
       override fun trainingEnvironment(trainingEnvironment: IResolvable) {
-        cdkBuilder.trainingEnvironment(trainingEnvironment.let(IResolvable::unwrap))
+        cdkBuilder.trainingEnvironment(trainingEnvironment.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param trainingEnvironment The SageMaker training job image URI.
        */
       override fun trainingEnvironment(trainingEnvironment: TrainingEnvironmentProperty) {
-        cdkBuilder.trainingEnvironment(trainingEnvironment.let(TrainingEnvironmentProperty::unwrap))
+        cdkBuilder.trainingEnvironment(trainingEnvironment.let(TrainingEnvironmentProperty.Companion::unwrap))
       }
 
       /**
@@ -5200,7 +5200,7 @@ public open class CfnModelCard(
        * @param trainingMetrics The SageMaker training job results.
        */
       override fun trainingMetrics(trainingMetrics: IResolvable) {
-        cdkBuilder.trainingMetrics(trainingMetrics.let(IResolvable::unwrap))
+        cdkBuilder.trainingMetrics(trainingMetrics.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5221,7 +5221,7 @@ public open class CfnModelCard(
        * training the model.
        */
       override fun userProvidedHyperParameters(userProvidedHyperParameters: IResolvable) {
-        cdkBuilder.userProvidedHyperParameters(userProvidedHyperParameters.let(IResolvable::unwrap))
+        cdkBuilder.userProvidedHyperParameters(userProvidedHyperParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5243,7 +5243,7 @@ public open class CfnModelCard(
        * @param userProvidedTrainingMetrics Custom training job results.
        */
       override fun userProvidedTrainingMetrics(userProvidedTrainingMetrics: IResolvable) {
-        cdkBuilder.userProvidedTrainingMetrics(userProvidedTrainingMetrics.let(IResolvable::unwrap))
+        cdkBuilder.userProvidedTrainingMetrics(userProvidedTrainingMetrics.let(IResolvable.Companion::unwrap))
       }
 
       /**

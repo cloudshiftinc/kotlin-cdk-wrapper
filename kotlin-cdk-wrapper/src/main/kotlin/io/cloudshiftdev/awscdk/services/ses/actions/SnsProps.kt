@@ -78,14 +78,14 @@ public interface SnsProps {
      * @param encoding The encoding to use for the email within the Amazon SNS notification.
      */
     override fun encoding(encoding: EmailEncoding) {
-      cdkBuilder.encoding(encoding.let(EmailEncoding::unwrap))
+      cdkBuilder.encoding(encoding.let(EmailEncoding.Companion::unwrap))
     }
 
     /**
      * @param topic The SNS topic to notify. 
      */
     override fun topic(topic: ITopic) {
-      cdkBuilder.topic(topic.let(ITopic::unwrap))
+      cdkBuilder.topic(topic.let(ITopic.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ses.actions.SnsProps = cdkBuilder.build()

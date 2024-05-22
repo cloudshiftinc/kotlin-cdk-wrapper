@@ -165,7 +165,7 @@ public interface IApplicationListener : IListener, IConnectable {
      * @param props 
      */
     override fun addAction(id: String, props: AddApplicationActionProps) {
-      unwrap(this).addAction(id, props.let(AddApplicationActionProps::unwrap))
+      unwrap(this).addAction(id, props.let(AddApplicationActionProps.Companion::unwrap))
     }
 
     /**
@@ -196,7 +196,7 @@ public interface IApplicationListener : IListener, IConnectable {
      * @param certificates 
      */
     override fun addCertificates(id: String, certificates: List<IListenerCertificate>) {
-      unwrap(this).addCertificates(id, certificates.map(IListenerCertificate::unwrap))
+      unwrap(this).addCertificates(id, certificates.map(IListenerCertificate.Companion::unwrap))
     }
 
     /**
@@ -209,7 +209,7 @@ public interface IApplicationListener : IListener, IConnectable {
      * @param props 
      */
     override fun addTargetGroups(id: String, props: AddApplicationTargetGroupsProps) {
-      unwrap(this).addTargetGroups(id, props.let(AddApplicationTargetGroupsProps::unwrap))
+      unwrap(this).addTargetGroups(id, props.let(AddApplicationTargetGroupsProps.Companion::unwrap))
     }
 
     /**
@@ -242,7 +242,7 @@ public interface IApplicationListener : IListener, IConnectable {
      */
     override fun addTargets(id: String, props: AddApplicationTargetsProps): ApplicationTargetGroup =
         unwrap(this).addTargets(id,
-        props.let(AddApplicationTargetsProps::unwrap)).let(ApplicationTargetGroup::wrap)
+        props.let(AddApplicationTargetsProps.Companion::unwrap)).let(ApplicationTargetGroup::wrap)
 
     /**
      * Load balance incoming requests to the given load balancing targets.
@@ -276,7 +276,7 @@ public interface IApplicationListener : IListener, IConnectable {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -312,8 +312,8 @@ public interface IApplicationListener : IListener, IConnectable {
      * @param portRange 
      */
     override fun registerConnectable(connectable: IConnectable, portRange: Port) {
-      unwrap(this).registerConnectable(connectable.let(IConnectable::unwrap),
-          portRange.let(Port::unwrap))
+      unwrap(this).registerConnectable(connectable.let(IConnectable.Companion::unwrap),
+          portRange.let(Port.Companion::unwrap))
     }
 
     /**

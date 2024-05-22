@@ -170,7 +170,7 @@ public interface IVpnConnection : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -216,7 +216,8 @@ public interface IVpnConnection : IResource {
      * @param props
      */
     override fun metric(metricName: String, props: MetricOptions): Metric =
-        unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metric(metricName,
+        props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Return the given named metric for this VPNConnection.
@@ -246,7 +247,7 @@ public interface IVpnConnection : IResource {
      * @param props
      */
     override fun metricTunnelDataIn(props: MetricOptions): Metric =
-        unwrap(this).metricTunnelDataIn(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricTunnelDataIn(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The bytes received through the VPN tunnel.
@@ -278,7 +279,7 @@ public interface IVpnConnection : IResource {
      * @param props
      */
     override fun metricTunnelDataOut(props: MetricOptions): Metric =
-        unwrap(this).metricTunnelDataOut(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricTunnelDataOut(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The bytes sent through the VPN tunnel.
@@ -309,7 +310,7 @@ public interface IVpnConnection : IResource {
      * @param props
      */
     override fun metricTunnelState(props: MetricOptions): Metric =
-        unwrap(this).metricTunnelState(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).metricTunnelState(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The state of the tunnel. 0 indicates DOWN and 1 indicates UP.

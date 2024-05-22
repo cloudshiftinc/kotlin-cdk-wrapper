@@ -95,7 +95,7 @@ public interface KeySigningKeyProps {
      * @param hostedZone The hosted zone that this key will be used to sign. 
      */
     override fun hostedZone(hostedZone: IHostedZone) {
-      cdkBuilder.hostedZone(hostedZone.let(IHostedZone::unwrap))
+      cdkBuilder.hostedZone(hostedZone.let(IHostedZone.Companion::unwrap))
     }
 
     /**
@@ -112,14 +112,14 @@ public interface KeySigningKeyProps {
      * KMS key must be an asymetric customer-managed key using the ECC_NIST_P256 algorithm.
      */
     override fun kmsKey(kmsKey: IKey) {
-      cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     /**
      * @param status The status of the key signing key.
      */
     override fun status(status: KeySigningKeyStatus) {
-      cdkBuilder.status(status.let(KeySigningKeyStatus::unwrap))
+      cdkBuilder.status(status.let(KeySigningKeyStatus.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.route53.KeySigningKeyProps =

@@ -428,10 +428,10 @@ public interface CfnInstanceProps {
   public fun keyName(): String? = unwrap(this).getKeyName()
 
   /**
-   * The launch template to use to launch the instances.
+   * The launch template.
    *
-   * Any parameters that you specify in the AWS CloudFormation template override the same parameters
-   * in the launch template. You can specify either the name or ID of a launch template, but not both.
+   * Any additional parameters that you specify for the new instance overwrite the corresponding
+   * parameters included in the launch template.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-launchtemplate)
    */
@@ -1072,26 +1072,23 @@ public interface CfnInstanceProps {
     public fun keyName(keyName: String)
 
     /**
-     * @param launchTemplate The launch template to use to launch the instances.
-     * Any parameters that you specify in the AWS CloudFormation template override the same
-     * parameters in the launch template. You can specify either the name or ID of a launch template,
-     * but not both.
+     * @param launchTemplate The launch template.
+     * Any additional parameters that you specify for the new instance overwrite the corresponding
+     * parameters included in the launch template.
      */
     public fun launchTemplate(launchTemplate: IResolvable)
 
     /**
-     * @param launchTemplate The launch template to use to launch the instances.
-     * Any parameters that you specify in the AWS CloudFormation template override the same
-     * parameters in the launch template. You can specify either the name or ID of a launch template,
-     * but not both.
+     * @param launchTemplate The launch template.
+     * Any additional parameters that you specify for the new instance overwrite the corresponding
+     * parameters included in the launch template.
      */
     public fun launchTemplate(launchTemplate: CfnInstance.LaunchTemplateSpecificationProperty)
 
     /**
-     * @param launchTemplate The launch template to use to launch the instances.
-     * Any parameters that you specify in the AWS CloudFormation template override the same
-     * parameters in the launch template. You can specify either the name or ID of a launch template,
-     * but not both.
+     * @param launchTemplate The launch template.
+     * Any additional parameters that you specify for the new instance overwrite the corresponding
+     * parameters included in the launch template.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e326118898904f1199750eeee8062e3036ec75ce7993b39f7c062ee9a576a10f")
@@ -1454,7 +1451,7 @@ public interface CfnInstanceProps {
      * .
      */
     override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
-      cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable::unwrap))
+      cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1501,7 +1498,7 @@ public interface CfnInstanceProps {
      * *Amazon Elastic Compute Cloud User Guide* .
      */
     override fun cpuOptions(cpuOptions: IResolvable) {
-      cdkBuilder.cpuOptions(cpuOptions.let(IResolvable::unwrap))
+      cdkBuilder.cpuOptions(cpuOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1511,7 +1508,7 @@ public interface CfnInstanceProps {
      * *Amazon Elastic Compute Cloud User Guide* .
      */
     override fun cpuOptions(cpuOptions: CfnInstance.CpuOptionsProperty) {
-      cdkBuilder.cpuOptions(cpuOptions.let(CfnInstance.CpuOptionsProperty::unwrap))
+      cdkBuilder.cpuOptions(cpuOptions.let(CfnInstance.CpuOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -1539,7 +1536,7 @@ public interface CfnInstanceProps {
      * For T3 instances with `host` tenancy, only `standard` is supported.
      */
     override fun creditSpecification(creditSpecification: IResolvable) {
-      cdkBuilder.creditSpecification(creditSpecification.let(IResolvable::unwrap))
+      cdkBuilder.creditSpecification(creditSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1556,7 +1553,7 @@ public interface CfnInstanceProps {
      * For T3 instances with `host` tenancy, only `standard` is supported.
      */
     override fun creditSpecification(creditSpecification: CfnInstance.CreditSpecificationProperty) {
-      cdkBuilder.creditSpecification(creditSpecification.let(CfnInstance.CreditSpecificationProperty::unwrap))
+      cdkBuilder.creditSpecification(creditSpecification.let(CfnInstance.CreditSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -1603,7 +1600,7 @@ public interface CfnInstanceProps {
      * Default: `false`
      */
     override fun disableApiTermination(disableApiTermination: IResolvable) {
-      cdkBuilder.disableApiTermination(disableApiTermination.let(IResolvable::unwrap))
+      cdkBuilder.disableApiTermination(disableApiTermination.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1627,7 +1624,7 @@ public interface CfnInstanceProps {
      * Default: `false`
      */
     override fun ebsOptimized(ebsOptimized: IResolvable) {
-      cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
+      cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1636,7 +1633,7 @@ public interface CfnInstanceProps {
      * Amazon Elastic Graphics reached end of life on January 8, 2024.
      */
     override fun elasticGpuSpecifications(elasticGpuSpecifications: IResolvable) {
-      cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1665,7 +1662,7 @@ public interface CfnInstanceProps {
      * FAQs](https://docs.aws.amazon.com/machine-learning/elastic-inference/faqs/) .
      */
     override fun elasticInferenceAccelerators(elasticInferenceAccelerators: IResolvable) {
-      cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators.let(IResolvable::unwrap))
+      cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1695,14 +1692,14 @@ public interface CfnInstanceProps {
      * @param enclaveOptions Indicates whether the instance is enabled for AWS Nitro Enclaves.
      */
     override fun enclaveOptions(enclaveOptions: IResolvable) {
-      cdkBuilder.enclaveOptions(enclaveOptions.let(IResolvable::unwrap))
+      cdkBuilder.enclaveOptions(enclaveOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param enclaveOptions Indicates whether the instance is enabled for AWS Nitro Enclaves.
      */
     override fun enclaveOptions(enclaveOptions: CfnInstance.EnclaveOptionsProperty) {
-      cdkBuilder.enclaveOptions(enclaveOptions.let(CfnInstance.EnclaveOptionsProperty::unwrap))
+      cdkBuilder.enclaveOptions(enclaveOptions.let(CfnInstance.EnclaveOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -1725,7 +1722,7 @@ public interface CfnInstanceProps {
      * You can't enable hibernation and AWS Nitro Enclaves on the same instance.
      */
     override fun hibernationOptions(hibernationOptions: IResolvable) {
-      cdkBuilder.hibernationOptions(hibernationOptions.let(IResolvable::unwrap))
+      cdkBuilder.hibernationOptions(hibernationOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1739,7 +1736,7 @@ public interface CfnInstanceProps {
      * You can't enable hibernation and AWS Nitro Enclaves on the same instance.
      */
     override fun hibernationOptions(hibernationOptions: CfnInstance.HibernationOptionsProperty) {
-      cdkBuilder.hibernationOptions(hibernationOptions.let(CfnInstance.HibernationOptionsProperty::unwrap))
+      cdkBuilder.hibernationOptions(hibernationOptions.let(CfnInstance.HibernationOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -1845,7 +1842,7 @@ public interface CfnInstanceProps {
      * You cannot specify this option and the network interfaces option in the same request.
      */
     override fun ipv6Addresses(ipv6Addresses: IResolvable) {
-      cdkBuilder.ipv6Addresses(ipv6Addresses.let(IResolvable::unwrap))
+      cdkBuilder.ipv6Addresses(ipv6Addresses.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1898,30 +1895,27 @@ public interface CfnInstanceProps {
     }
 
     /**
-     * @param launchTemplate The launch template to use to launch the instances.
-     * Any parameters that you specify in the AWS CloudFormation template override the same
-     * parameters in the launch template. You can specify either the name or ID of a launch template,
-     * but not both.
+     * @param launchTemplate The launch template.
+     * Any additional parameters that you specify for the new instance overwrite the corresponding
+     * parameters included in the launch template.
      */
     override fun launchTemplate(launchTemplate: IResolvable) {
-      cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
+      cdkBuilder.launchTemplate(launchTemplate.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param launchTemplate The launch template to use to launch the instances.
-     * Any parameters that you specify in the AWS CloudFormation template override the same
-     * parameters in the launch template. You can specify either the name or ID of a launch template,
-     * but not both.
+     * @param launchTemplate The launch template.
+     * Any additional parameters that you specify for the new instance overwrite the corresponding
+     * parameters included in the launch template.
      */
     override fun launchTemplate(launchTemplate: CfnInstance.LaunchTemplateSpecificationProperty) {
-      cdkBuilder.launchTemplate(launchTemplate.let(CfnInstance.LaunchTemplateSpecificationProperty::unwrap))
+      cdkBuilder.launchTemplate(launchTemplate.let(CfnInstance.LaunchTemplateSpecificationProperty.Companion::unwrap))
     }
 
     /**
-     * @param launchTemplate The launch template to use to launch the instances.
-     * Any parameters that you specify in the AWS CloudFormation template override the same
-     * parameters in the launch template. You can specify either the name or ID of a launch template,
-     * but not both.
+     * @param launchTemplate The launch template.
+     * Any additional parameters that you specify for the new instance overwrite the corresponding
+     * parameters included in the launch template.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e326118898904f1199750eeee8062e3036ec75ce7993b39f7c062ee9a576a10f")
@@ -1933,7 +1927,7 @@ public interface CfnInstanceProps {
      * @param licenseSpecifications The license configurations.
      */
     override fun licenseSpecifications(licenseSpecifications: IResolvable) {
-      cdkBuilder.licenseSpecifications(licenseSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.licenseSpecifications(licenseSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1968,7 +1962,7 @@ public interface CfnInstanceProps {
      * *Amazon EC2 User Guide* .
      */
     override fun monitoring(monitoring: IResolvable) {
-      cdkBuilder.monitoring(monitoring.let(IResolvable::unwrap))
+      cdkBuilder.monitoring(monitoring.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1983,7 +1977,7 @@ public interface CfnInstanceProps {
      * to declare a dependency on the VPC-gateway attachment.
      */
     override fun networkInterfaces(networkInterfaces: IResolvable) {
-      cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable::unwrap))
+      cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2027,7 +2021,7 @@ public interface CfnInstanceProps {
      * @param privateDnsNameOptions The options for the instance hostname.
      */
     override fun privateDnsNameOptions(privateDnsNameOptions: IResolvable) {
-      cdkBuilder.privateDnsNameOptions(privateDnsNameOptions.let(IResolvable::unwrap))
+      cdkBuilder.privateDnsNameOptions(privateDnsNameOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2035,7 +2029,7 @@ public interface CfnInstanceProps {
      */
     override
         fun privateDnsNameOptions(privateDnsNameOptions: CfnInstance.PrivateDnsNameOptionsProperty) {
-      cdkBuilder.privateDnsNameOptions(privateDnsNameOptions.let(CfnInstance.PrivateDnsNameOptionsProperty::unwrap))
+      cdkBuilder.privateDnsNameOptions(privateDnsNameOptions.let(CfnInstance.PrivateDnsNameOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -2087,7 +2081,7 @@ public interface CfnInstanceProps {
      * , those tags are not assigned to the attached volumes.
      */
     override fun propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation: IResolvable) {
-      cdkBuilder.propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation.let(IResolvable::unwrap))
+      cdkBuilder.propagateTagsToVolumeOnCreation(propagateTagsToVolumeOnCreation.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2172,7 +2166,7 @@ public interface CfnInstanceProps {
      * services such as network address translation, routing, or firewalls.
      */
     override fun sourceDestCheck(sourceDestCheck: IResolvable) {
-      cdkBuilder.sourceDestCheck(sourceDestCheck.let(IResolvable::unwrap))
+      cdkBuilder.sourceDestCheck(sourceDestCheck.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2187,7 +2181,7 @@ public interface CfnInstanceProps {
      * You can associate only one document with an instance.
      */
     override fun ssmAssociations(ssmAssociations: IResolvable) {
-      cdkBuilder.ssmAssociations(ssmAssociations.let(IResolvable::unwrap))
+      cdkBuilder.ssmAssociations(ssmAssociations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2235,7 +2229,7 @@ public interface CfnInstanceProps {
      * is `true` .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -2273,7 +2267,7 @@ public interface CfnInstanceProps {
      * @param volumes The volumes to attach to the instance.
      */
     override fun volumes(volumes: IResolvable) {
-      cdkBuilder.volumes(volumes.let(IResolvable::unwrap))
+      cdkBuilder.volumes(volumes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2579,11 +2573,10 @@ public interface CfnInstanceProps {
     override fun keyName(): String? = unwrap(this).getKeyName()
 
     /**
-     * The launch template to use to launch the instances.
+     * The launch template.
      *
-     * Any parameters that you specify in the AWS CloudFormation template override the same
-     * parameters in the launch template. You can specify either the name or ID of a launch template,
-     * but not both.
+     * Any additional parameters that you specify for the new instance overwrite the corresponding
+     * parameters included in the launch template.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-launchtemplate)
      */

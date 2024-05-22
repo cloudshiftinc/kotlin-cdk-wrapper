@@ -45,7 +45,7 @@ public open class DataProtectionPolicy(
   cdkObject: software.amazon.awscdk.services.logs.DataProtectionPolicy,
 ) : CdkObject(cdkObject) {
   public constructor(props: DataProtectionPolicyProps) :
-      this(software.amazon.awscdk.services.logs.DataProtectionPolicy(props.let(DataProtectionPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.logs.DataProtectionPolicy(props.let(DataProtectionPolicyProps.Companion::unwrap))
   )
 
   public constructor(props: DataProtectionPolicyProps.Builder.() -> Unit) :
@@ -174,7 +174,7 @@ public open class DataProtectionPolicy(
      * @param identifiers List of data protection identifiers. 
      */
     override fun identifiers(identifiers: List<DataIdentifier>) {
-      cdkBuilder.identifiers(identifiers.map(DataIdentifier::unwrap))
+      cdkBuilder.identifiers(identifiers.map(DataIdentifier.Companion::unwrap))
     }
 
     /**
@@ -200,7 +200,7 @@ public open class DataProtectionPolicy(
      * @param logGroupAuditDestination CloudWatch Logs log group to send audit findings to. 
      */
     override fun logGroupAuditDestination(logGroupAuditDestination: ILogGroup) {
-      cdkBuilder.logGroupAuditDestination(logGroupAuditDestination.let(ILogGroup::unwrap))
+      cdkBuilder.logGroupAuditDestination(logGroupAuditDestination.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -224,7 +224,7 @@ public open class DataProtectionPolicy(
      * @param s3BucketAuditDestination S3 bucket to send audit findings to. 
      */
     override fun s3BucketAuditDestination(s3BucketAuditDestination: IBucket) {
-      cdkBuilder.s3BucketAuditDestination(s3BucketAuditDestination.let(IBucket::unwrap))
+      cdkBuilder.s3BucketAuditDestination(s3BucketAuditDestination.let(IBucket.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.logs.DataProtectionPolicy =

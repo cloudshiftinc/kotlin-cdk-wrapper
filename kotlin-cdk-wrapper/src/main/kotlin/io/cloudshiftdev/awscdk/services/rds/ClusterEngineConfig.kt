@@ -92,7 +92,7 @@ public interface ClusterEngineConfig {
      * @param features Features supported by the database engine.
      */
     override fun features(features: ClusterEngineFeatures) {
-      cdkBuilder.features(features.let(ClusterEngineFeatures::unwrap))
+      cdkBuilder.features(features.let(ClusterEngineFeatures.Companion::unwrap))
     }
 
     /**
@@ -107,7 +107,7 @@ public interface ClusterEngineConfig {
      * @param parameterGroup The ParameterGroup to use for the cluster.
      */
     override fun parameterGroup(parameterGroup: IParameterGroup) {
-      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup::unwrap))
+      cdkBuilder.parameterGroup(parameterGroup.let(IParameterGroup.Companion::unwrap))
     }
 
     /**

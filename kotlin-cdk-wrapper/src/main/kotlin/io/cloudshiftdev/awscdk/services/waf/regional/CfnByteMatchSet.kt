@@ -67,8 +67,8 @@ public open class CfnByteMatchSet(
     id: String,
     props: CfnByteMatchSetProps,
   ) :
-      this(software.amazon.awscdk.services.waf.regional.CfnByteMatchSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnByteMatchSetProps::unwrap))
+      this(software.amazon.awscdk.services.waf.regional.CfnByteMatchSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnByteMatchSetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -96,7 +96,7 @@ public open class CfnByteMatchSet(
    * and other settings.
    */
   public open fun byteMatchTuples(`value`: IResolvable) {
-    unwrap(this).setByteMatchTuples(`value`.let(IResolvable::unwrap))
+    unwrap(this).setByteMatchTuples(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -121,7 +121,7 @@ public open class CfnByteMatchSet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -206,7 +206,7 @@ public open class CfnByteMatchSet(
      * you want AWS WAF to search, and other settings. 
      */
     override fun byteMatchTuples(byteMatchTuples: IResolvable) {
-      cdkBuilder.byteMatchTuples(byteMatchTuples.let(IResolvable::unwrap))
+      cdkBuilder.byteMatchTuples(byteMatchTuples.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -671,7 +671,7 @@ public open class CfnByteMatchSet(
        * specific header or a query string. 
        */
       override fun fieldToMatch(fieldToMatch: IResolvable) {
-        cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable::unwrap))
+        cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -679,7 +679,7 @@ public open class CfnByteMatchSet(
        * specific header or a query string. 
        */
       override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
-        cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty::unwrap))
+        cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty.Companion::unwrap))
       }
 
       /**

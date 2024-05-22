@@ -45,8 +45,8 @@ public open class CfnTargetAccountConfiguration(
     id: String,
     props: CfnTargetAccountConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.fis.CfnTargetAccountConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTargetAccountConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.fis.CfnTargetAccountConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTargetAccountConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -98,7 +98,7 @@ public open class CfnTargetAccountConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

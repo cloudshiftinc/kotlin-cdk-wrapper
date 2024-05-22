@@ -218,7 +218,7 @@ public interface InstancesDistribution {
      */
     override
         fun onDemandAllocationStrategy(onDemandAllocationStrategy: OnDemandAllocationStrategy) {
-      cdkBuilder.onDemandAllocationStrategy(onDemandAllocationStrategy.let(OnDemandAllocationStrategy::unwrap))
+      cdkBuilder.onDemandAllocationStrategy(onDemandAllocationStrategy.let(OnDemandAllocationStrategy.Companion::unwrap))
     }
 
     /**
@@ -264,7 +264,7 @@ public interface InstancesDistribution {
      * optimizes for capacity first.
      */
     override fun spotAllocationStrategy(spotAllocationStrategy: SpotAllocationStrategy) {
-      cdkBuilder.spotAllocationStrategy(spotAllocationStrategy.let(SpotAllocationStrategy::unwrap))
+      cdkBuilder.spotAllocationStrategy(spotAllocationStrategy.let(SpotAllocationStrategy.Companion::unwrap))
     }
 
     /**

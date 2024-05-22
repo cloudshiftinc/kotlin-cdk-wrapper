@@ -45,7 +45,7 @@ public open class Metric(
   cdkObject: software.amazon.awscdk.services.cloudwatch.Metric,
 ) : CdkObject(cdkObject), IMetric {
   public constructor(props: MetricProps) :
-      this(software.amazon.awscdk.services.cloudwatch.Metric(props.let(MetricProps::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.Metric(props.let(MetricProps.Companion::unwrap))
   )
 
   public constructor(props: MetricProps.Builder.() -> kotlin.Unit) : this(MetricProps(props)
@@ -71,7 +71,7 @@ public open class Metric(
    * @param scope 
    */
   public open fun attachTo(scope: IConstruct): Metric =
-      unwrap(this).attachTo(scope.let(IConstruct::unwrap)).let(Metric::wrap)
+      unwrap(this).attachTo(scope.let(IConstruct.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The hex color code used when this metric is rendered on a graph.
@@ -92,8 +92,8 @@ public open class Metric(
     scope: Construct,
     id: String,
     props: CreateAlarmOptions,
-  ): Alarm = unwrap(this).createAlarm(scope.let(Construct::unwrap), id,
-      props.let(CreateAlarmOptions::unwrap)).let(Alarm::wrap)
+  ): Alarm = unwrap(this).createAlarm(scope.let(Construct.Companion::unwrap), id,
+      props.let(CreateAlarmOptions.Companion::unwrap)).let(Alarm::wrap)
 
   /**
    * Make a new Alarm for this metric.
@@ -180,7 +180,7 @@ public open class Metric(
    * @param props The set of properties to change. 
    */
   public open fun with(props: MetricOptions): Metric =
-      unwrap(this).with(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).with(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Return a copy of Metric `with` properties changed.
@@ -413,7 +413,7 @@ public open class Metric(
      * @param period The period over which the specified statistic is applied. 
      */
     override fun period(period: Duration) {
-      cdkBuilder.period(period.let(Duration::unwrap))
+      cdkBuilder.period(period.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -471,7 +471,7 @@ public open class Metric(
      * @param unit Unit used to filter the metric stream. 
      */
     override fun unit(unit: Unit) {
-      cdkBuilder.unit(unit.let(Unit::unwrap))
+      cdkBuilder.unit(unit.let(Unit.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudwatch.Metric = cdkBuilder.build()
@@ -479,7 +479,7 @@ public open class Metric(
 
   public companion object {
     public fun grantPutMetricData(grantee: IGrantable): Grant =
-        software.amazon.awscdk.services.cloudwatch.Metric.grantPutMetricData(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        software.amazon.awscdk.services.cloudwatch.Metric.grantPutMetricData(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     public operator fun invoke(block: Builder.() -> kotlin.Unit = {}): Metric {
       val builderImpl = BuilderImpl()

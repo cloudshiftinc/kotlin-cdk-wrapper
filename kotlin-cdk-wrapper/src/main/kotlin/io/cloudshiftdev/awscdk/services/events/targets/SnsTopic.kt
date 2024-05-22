@@ -31,12 +31,12 @@ public open class SnsTopic(
   cdkObject: software.amazon.awscdk.services.events.targets.SnsTopic,
 ) : CdkObject(cdkObject), IRuleTarget {
   public constructor(topic: CloudshiftdevAwscdkServicesSnsITopic) :
-      this(software.amazon.awscdk.services.events.targets.SnsTopic(topic.let(CloudshiftdevAwscdkServicesSnsITopic::unwrap))
+      this(software.amazon.awscdk.services.events.targets.SnsTopic(topic.let(CloudshiftdevAwscdkServicesSnsITopic.Companion::unwrap))
   )
 
   public constructor(topic: CloudshiftdevAwscdkServicesSnsITopic, props: SnsTopicProps) :
-      this(software.amazon.awscdk.services.events.targets.SnsTopic(topic.let(CloudshiftdevAwscdkServicesSnsITopic::unwrap),
-      props.let(SnsTopicProps::unwrap))
+      this(software.amazon.awscdk.services.events.targets.SnsTopic(topic.let(CloudshiftdevAwscdkServicesSnsITopic.Companion::unwrap),
+      props.let(SnsTopicProps.Companion::unwrap))
   )
 
   public constructor(topic: CloudshiftdevAwscdkServicesSnsITopic,
@@ -52,7 +52,7 @@ public open class SnsTopic(
    * @param _id
    */
   public override fun bind(rule: IRule): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap)).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap)).let(RuleTargetConfig::wrap)
 
   /**
    * Returns a RuleTarget that can be used to trigger this SNS topic as a result from an EventBridge
@@ -63,7 +63,7 @@ public open class SnsTopic(
    * @param _id
    */
   public override fun bind(rule: IRule, id: String): RuleTargetConfig =
-      unwrap(this).bind(rule.let(IRule::unwrap), id).let(RuleTargetConfig::wrap)
+      unwrap(this).bind(rule.let(IRule.Companion::unwrap), id).let(RuleTargetConfig::wrap)
 
   /**
    *
@@ -157,7 +157,7 @@ public open class SnsTopic(
      * 
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -172,7 +172,7 @@ public open class SnsTopic(
      * processing. 
      */
     override fun maxEventAge(maxEventAge: Duration) {
-      cdkBuilder.maxEventAge(maxEventAge.let(Duration::unwrap))
+      cdkBuilder.maxEventAge(maxEventAge.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -183,7 +183,7 @@ public open class SnsTopic(
      * @param message The message to send to the topic. 
      */
     override fun message(message: RuleTargetInput) {
-      cdkBuilder.message(message.let(RuleTargetInput::unwrap))
+      cdkBuilder.message(message.let(RuleTargetInput.Companion::unwrap))
     }
 
     /**

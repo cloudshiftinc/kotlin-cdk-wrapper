@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -16,20 +17,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * Bucket s3Bucket;
- * // Add a cloudfront Function to a Distribution
- * Function cfFunction = Function.Builder.create(this, "Function")
+ * KeyValueStore store = new KeyValueStore(this, "KeyValueStore");
+ * Function.Builder.create(this, "Function")
  * .code(FunctionCode.fromInline("function handler(event) { return event.request }"))
+ * // Note that JS_2_0 must be used for Key Value Store support
  * .runtime(FunctionRuntime.JS_2_0)
- * .build();
- * Distribution.Builder.create(this, "distro")
- * .defaultBehavior(BehaviorOptions.builder()
- * .origin(new S3Origin(s3Bucket))
- * .functionAssociations(List.of(FunctionAssociation.builder()
- * .function(cfFunction)
- * .eventType(FunctionEventType.VIEWER_REQUEST)
- * .build()))
- * .build())
+ * .keyValueStore(store)
  * .build();
  * ```
  */
@@ -41,8 +34,8 @@ public open class Function(
     id: String,
     props: FunctionProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.Function(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(FunctionProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.Function(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(FunctionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -77,6 +70,17 @@ public open class Function(
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * A flag that determines whether to automatically publish the function to the LIVE stage when
+     * it’s created.
+     *
+     * Default: - true
+     *
+     * @param autoPublish A flag that determines whether to automatically publish the function to
+     * the LIVE stage when it’s created. 
+     */
+    public fun autoPublish(autoPublish: Boolean)
+
     /**
      * The source code of the function.
      *
@@ -133,12 +137,25 @@ public open class Function(
         software.amazon.awscdk.services.cloudfront.Function.Builder.create(scope, id)
 
     /**
+     * A flag that determines whether to automatically publish the function to the LIVE stage when
+     * it’s created.
+     *
+     * Default: - true
+     *
+     * @param autoPublish A flag that determines whether to automatically publish the function to
+     * the LIVE stage when it’s created. 
+     */
+    override fun autoPublish(autoPublish: Boolean) {
+      cdkBuilder.autoPublish(autoPublish)
+    }
+
+    /**
      * The source code of the function.
      *
      * @param code The source code of the function. 
      */
     override fun code(code: FunctionCode) {
-      cdkBuilder.code(code.let(FunctionCode::unwrap))
+      cdkBuilder.code(code.let(FunctionCode.Companion::unwrap))
     }
 
     /**
@@ -174,7 +191,7 @@ public open class Function(
      * @param keyValueStore The Key Value Store to associate with this function. 
      */
     override fun keyValueStore(keyValueStore: IKeyValueStore) {
-      cdkBuilder.keyValueStore(keyValueStore.let(IKeyValueStore::unwrap))
+      cdkBuilder.keyValueStore(keyValueStore.let(IKeyValueStore.Companion::unwrap))
     }
 
     /**
@@ -186,7 +203,7 @@ public open class Function(
      * @param runtime The runtime environment for the function. 
      */
     override fun runtime(runtime: FunctionRuntime) {
-      cdkBuilder.runtime(runtime.let(FunctionRuntime::unwrap))
+      cdkBuilder.runtime(runtime.let(FunctionRuntime.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.Function = cdkBuilder.build()
@@ -198,8 +215,8 @@ public open class Function(
       id: String,
       attrs: FunctionAttributes,
     ): IFunction =
-        software.amazon.awscdk.services.cloudfront.Function.fromFunctionAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(FunctionAttributes::unwrap)).let(IFunction::wrap)
+        software.amazon.awscdk.services.cloudfront.Function.fromFunctionAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(FunctionAttributes.Companion::unwrap)).let(IFunction::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("91316568d90081b9d7f3c253151ac0e56a539482d4c8c8d96412d774c1738c7f")

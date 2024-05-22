@@ -264,7 +264,7 @@ public interface CfnRouteProps {
      * Supported only for WebSocket APIs.
      */
     override fun apiKeyRequired(apiKeyRequired: IResolvable) {
-      cdkBuilder.apiKeyRequired(apiKeyRequired.let(IResolvable::unwrap))
+      cdkBuilder.apiKeyRequired(apiKeyRequired.let(IResolvable.Companion::unwrap))
     }
 
     /**

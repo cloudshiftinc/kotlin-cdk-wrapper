@@ -60,8 +60,8 @@ public open class CfnLocationFSxOpenZFS(
     id: String,
     props: CfnLocationFSxOpenZFSProps,
   ) :
-      this(software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLocationFSxOpenZFSProps::unwrap))
+      this(software.amazon.awscdk.services.datasync.CfnLocationFSxOpenZFS(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLocationFSxOpenZFSProps.Companion::unwrap))
   )
 
   public constructor(
@@ -99,7 +99,7 @@ public open class CfnLocationFSxOpenZFS(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -111,14 +111,14 @@ public open class CfnLocationFSxOpenZFS(
    * The type of protocol that AWS DataSync uses to access your file system.
    */
   public open fun protocol(`value`: IResolvable) {
-    unwrap(this).setProtocol(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProtocol(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The type of protocol that AWS DataSync uses to access your file system.
    */
   public open fun protocol(`value`: ProtocolProperty) {
-    unwrap(this).setProtocol(`value`.let(ProtocolProperty::unwrap))
+    unwrap(this).setProtocol(`value`.let(ProtocolProperty.Companion::unwrap))
   }
 
   /**
@@ -174,7 +174,7 @@ public open class CfnLocationFSxOpenZFS(
    * The key-value pair that represents a tag that you want to add to the resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -307,7 +307,7 @@ public open class CfnLocationFSxOpenZFS(
      * @param protocol The type of protocol that AWS DataSync uses to access your file system. 
      */
     override fun protocol(protocol: IResolvable) {
-      cdkBuilder.protocol(protocol.let(IResolvable::unwrap))
+      cdkBuilder.protocol(protocol.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -317,7 +317,7 @@ public open class CfnLocationFSxOpenZFS(
      * @param protocol The type of protocol that AWS DataSync uses to access your file system. 
      */
     override fun protocol(protocol: ProtocolProperty) {
-      cdkBuilder.protocol(protocol.let(ProtocolProperty::unwrap))
+      cdkBuilder.protocol(protocol.let(ProtocolProperty.Companion::unwrap))
     }
 
     /**
@@ -385,7 +385,7 @@ public open class CfnLocationFSxOpenZFS(
      * @param tags The key-value pair that represents a tag that you want to add to the resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -626,7 +626,7 @@ public open class CfnLocationFSxOpenZFS(
        * an NFS location. 
        */
       override fun mountOptions(mountOptions: IResolvable) {
-        cdkBuilder.mountOptions(mountOptions.let(IResolvable::unwrap))
+        cdkBuilder.mountOptions(mountOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -634,7 +634,7 @@ public open class CfnLocationFSxOpenZFS(
        * an NFS location. 
        */
       override fun mountOptions(mountOptions: MountOptionsProperty) {
-        cdkBuilder.mountOptions(mountOptions.let(MountOptionsProperty::unwrap))
+        cdkBuilder.mountOptions(mountOptions.let(MountOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -744,7 +744,7 @@ public open class CfnLocationFSxOpenZFS(
        * your FSx for OpenZFS file system.
        */
       override fun nfs(nfs: IResolvable) {
-        cdkBuilder.nfs(nfs.let(IResolvable::unwrap))
+        cdkBuilder.nfs(nfs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -752,7 +752,7 @@ public open class CfnLocationFSxOpenZFS(
        * your FSx for OpenZFS file system.
        */
       override fun nfs(nfs: NFSProperty) {
-        cdkBuilder.nfs(nfs.let(NFSProperty::unwrap))
+        cdkBuilder.nfs(nfs.let(NFSProperty.Companion::unwrap))
       }
 
       /**

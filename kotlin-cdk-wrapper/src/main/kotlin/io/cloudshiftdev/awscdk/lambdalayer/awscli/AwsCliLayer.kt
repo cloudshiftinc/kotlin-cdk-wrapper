@@ -22,7 +22,8 @@ public open class AwsCliLayer(
   cdkObject: software.amazon.awscdk.lambdalayer.awscli.AwsCliLayer,
 ) : LayerVersion(cdkObject) {
   public constructor(scope: Construct, id: String) :
-      this(software.amazon.awscdk.lambdalayer.awscli.AwsCliLayer(scope.let(Construct::unwrap), id)
+      this(software.amazon.awscdk.lambdalayer.awscli.AwsCliLayer(scope.let(Construct.Companion::unwrap),
+      id)
   )
 
   public companion object {

@@ -44,7 +44,7 @@ public open class ResourcePolicy(
   cdkObject: software.amazon.awscdk.services.logs.ResourcePolicy,
 ) : Resource(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.logs.ResourcePolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.logs.ResourcePolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -53,8 +53,8 @@ public open class ResourcePolicy(
     id: String,
     props: ResourcePolicyProps,
   ) :
-      this(software.amazon.awscdk.services.logs.ResourcePolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ResourcePolicyProps::unwrap))
+      this(software.amazon.awscdk.services.logs.ResourcePolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ResourcePolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -117,7 +117,7 @@ public open class ResourcePolicy(
      * @param policyStatements Initial statements to add to the resource policy. 
      */
     override fun policyStatements(policyStatements: List<PolicyStatement>) {
-      cdkBuilder.policyStatements(policyStatements.map(PolicyStatement::unwrap))
+      cdkBuilder.policyStatements(policyStatements.map(PolicyStatement.Companion::unwrap))
     }
 
     /**

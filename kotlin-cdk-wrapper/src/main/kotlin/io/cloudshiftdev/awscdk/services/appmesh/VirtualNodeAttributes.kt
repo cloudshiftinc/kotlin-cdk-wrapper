@@ -57,7 +57,7 @@ public interface VirtualNodeAttributes {
      * @param mesh The Mesh that the VirtualNode belongs to. 
      */
     override fun mesh(mesh: IMesh) {
-      cdkBuilder.mesh(mesh.let(IMesh::unwrap))
+      cdkBuilder.mesh(mesh.let(IMesh.Companion::unwrap))
     }
 
     /**

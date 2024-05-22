@@ -207,7 +207,7 @@ public interface SingleValueWidgetProps : MetricWidgetProps {
      * @param metrics Metrics to display. 
      */
     override fun metrics(metrics: List<IMetric>) {
-      cdkBuilder.metrics(metrics.map(IMetric::unwrap))
+      cdkBuilder.metrics(metrics.map(IMetric.Companion::unwrap))
     }
 
     /**
@@ -221,7 +221,7 @@ public interface SingleValueWidgetProps : MetricWidgetProps {
      * This default can be overridden within each metric definition.
      */
     override fun period(period: Duration) {
-      cdkBuilder.period(period.let(Duration::unwrap))
+      cdkBuilder.period(period.let(Duration.Companion::unwrap))
     }
 
     /**

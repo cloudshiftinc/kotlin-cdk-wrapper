@@ -109,7 +109,7 @@ public open class CfnStack(
   cdkObject: software.amazon.awscdk.services.cloudformation.CfnStack,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.cloudformation.CfnStack(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.cloudformation.CfnStack(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -118,8 +118,8 @@ public open class CfnStack(
     id: String,
     props: CfnStackProps,
   ) :
-      this(software.amazon.awscdk.services.cloudformation.CfnStack(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStackProps::unwrap))
+      this(software.amazon.awscdk.services.cloudformation.CfnStack(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStackProps.Companion::unwrap))
   )
 
   public constructor(
@@ -189,7 +189,7 @@ public open class CfnStack(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -222,7 +222,7 @@ public open class CfnStack(
    * stack is created.
    */
   public open fun parameters(`value`: IResolvable) {
-    unwrap(this).setParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -248,7 +248,7 @@ public open class CfnStack(
    * Key-value pairs to associate with this stack.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -476,7 +476,7 @@ public open class CfnStack(
      * when this nested stack is created. 
      */
     override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -515,7 +515,7 @@ public open class CfnStack(
      * @param tags Key-value pairs to associate with this stack. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

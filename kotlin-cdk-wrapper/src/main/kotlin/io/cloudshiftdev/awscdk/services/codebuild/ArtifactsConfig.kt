@@ -65,7 +65,7 @@ public interface ArtifactsConfig {
      * @param artifactsProperty The low-level CloudFormation artifacts property. 
      */
     override fun artifactsProperty(artifactsProperty: CfnProject.ArtifactsProperty) {
-      cdkBuilder.artifactsProperty(artifactsProperty.let(CfnProject.ArtifactsProperty::unwrap))
+      cdkBuilder.artifactsProperty(artifactsProperty.let(CfnProject.ArtifactsProperty.Companion::unwrap))
     }
 
     /**

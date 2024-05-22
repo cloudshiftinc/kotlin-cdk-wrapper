@@ -129,7 +129,7 @@ public interface IRestApi : io.cloudshiftdev.awscdk.IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -198,7 +198,7 @@ public interface IRestApi : io.cloudshiftdev.awscdk.IResource {
      * API Gateway stage that points to the latest deployment (if defined).
      */
     override fun deploymentStage(`value`: Stage) {
-      unwrap(this).setDeploymentStage(`value`.let(Stage::unwrap))
+      unwrap(this).setDeploymentStage(`value`.let(Stage.Companion::unwrap))
     }
 
     /**

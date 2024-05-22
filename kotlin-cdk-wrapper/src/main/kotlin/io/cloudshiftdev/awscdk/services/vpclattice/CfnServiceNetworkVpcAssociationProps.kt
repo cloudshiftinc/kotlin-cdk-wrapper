@@ -157,7 +157,7 @@ public interface CfnServiceNetworkVpcAssociationProps {
      * @param tags The tags for the association.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

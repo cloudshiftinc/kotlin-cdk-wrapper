@@ -20,14 +20,15 @@ public open class Names(
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun nodeUniqueId(node: Node): String =
-        software.amazon.awscdk.Names.nodeUniqueId(node.let(Node::unwrap))
+        software.amazon.awscdk.Names.nodeUniqueId(node.let(Node.Companion::unwrap))
 
     public fun uniqueId(construct: IConstruct): String =
-        software.amazon.awscdk.Names.uniqueId(construct.let(IConstruct::unwrap))
+        software.amazon.awscdk.Names.uniqueId(construct.let(IConstruct.Companion::unwrap))
 
     public fun uniqueResourceName(construct: IConstruct, options: UniqueResourceNameOptions): String
-        = software.amazon.awscdk.Names.uniqueResourceName(construct.let(IConstruct::unwrap),
-        options.let(UniqueResourceNameOptions::unwrap))
+        =
+        software.amazon.awscdk.Names.uniqueResourceName(construct.let(IConstruct.Companion::unwrap),
+        options.let(UniqueResourceNameOptions.Companion::unwrap))
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d8f9b551f587c67b6cee20872585e9a43b39713f19a4e0c77035a077098420e5")

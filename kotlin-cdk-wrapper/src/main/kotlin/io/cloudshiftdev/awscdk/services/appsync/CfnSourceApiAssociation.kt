@@ -47,7 +47,7 @@ public open class CfnSourceApiAssociation(
   cdkObject: software.amazon.awscdk.services.appsync.CfnSourceApiAssociation,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.appsync.CfnSourceApiAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.appsync.CfnSourceApiAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -56,8 +56,8 @@ public open class CfnSourceApiAssociation(
     id: String,
     props: CfnSourceApiAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.appsync.CfnSourceApiAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSourceApiAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.appsync.CfnSourceApiAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSourceApiAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -140,7 +140,7 @@ public open class CfnSourceApiAssociation(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -164,14 +164,14 @@ public open class CfnSourceApiAssociation(
    * The `SourceApiAssociationConfig` object data.
    */
   public open fun sourceApiAssociationConfig(`value`: IResolvable) {
-    unwrap(this).setSourceApiAssociationConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSourceApiAssociationConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The `SourceApiAssociationConfig` object data.
    */
   public open fun sourceApiAssociationConfig(`value`: SourceApiAssociationConfigProperty) {
-    unwrap(this).setSourceApiAssociationConfig(`value`.let(SourceApiAssociationConfigProperty::unwrap))
+    unwrap(this).setSourceApiAssociationConfig(`value`.let(SourceApiAssociationConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -299,7 +299,7 @@ public open class CfnSourceApiAssociation(
      * @param sourceApiAssociationConfig The `SourceApiAssociationConfig` object data. 
      */
     override fun sourceApiAssociationConfig(sourceApiAssociationConfig: IResolvable) {
-      cdkBuilder.sourceApiAssociationConfig(sourceApiAssociationConfig.let(IResolvable::unwrap))
+      cdkBuilder.sourceApiAssociationConfig(sourceApiAssociationConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -310,7 +310,7 @@ public open class CfnSourceApiAssociation(
      */
     override
         fun sourceApiAssociationConfig(sourceApiAssociationConfig: SourceApiAssociationConfigProperty) {
-      cdkBuilder.sourceApiAssociationConfig(sourceApiAssociationConfig.let(SourceApiAssociationConfigProperty::unwrap))
+      cdkBuilder.sourceApiAssociationConfig(sourceApiAssociationConfig.let(SourceApiAssociationConfigProperty.Companion::unwrap))
     }
 
     /**

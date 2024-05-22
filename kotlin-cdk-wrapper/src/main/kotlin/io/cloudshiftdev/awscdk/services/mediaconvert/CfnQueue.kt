@@ -43,7 +43,7 @@ public open class CfnQueue(
   cdkObject: software.amazon.awscdk.services.mediaconvert.CfnQueue,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.mediaconvert.CfnQueue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.mediaconvert.CfnQueue(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -52,8 +52,8 @@ public open class CfnQueue(
     id: String,
     props: CfnQueueProps,
   ) :
-      this(software.amazon.awscdk.services.mediaconvert.CfnQueue(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnQueueProps::unwrap))
+      this(software.amazon.awscdk.services.mediaconvert.CfnQueue(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnQueueProps.Companion::unwrap))
   )
 
   public constructor(
@@ -97,7 +97,7 @@ public open class CfnQueue(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

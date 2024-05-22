@@ -673,7 +673,7 @@ public interface CfnLaunchConfigurationProps {
      * when you create your group.
      */
     override fun associatePublicIpAddress(associatePublicIpAddress: IResolvable) {
-      cdkBuilder.associatePublicIpAddress(associatePublicIpAddress.let(IResolvable::unwrap))
+      cdkBuilder.associatePublicIpAddress(associatePublicIpAddress.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -685,7 +685,7 @@ public interface CfnLaunchConfigurationProps {
      * in the *Amazon EC2 User Guide for Linux Instances* .
      */
     override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
-      cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable::unwrap))
+      cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -760,7 +760,7 @@ public interface CfnLaunchConfigurationProps {
      * The default value is `false` .
      */
     override fun ebsOptimized(ebsOptimized: IResolvable) {
-      cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
+      cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -828,7 +828,7 @@ public interface CfnLaunchConfigurationProps {
      * in the *Amazon EC2 Auto Scaling User Guide* .
      */
     override fun instanceMonitoring(instanceMonitoring: IResolvable) {
-      cdkBuilder.instanceMonitoring(instanceMonitoring.let(IResolvable::unwrap))
+      cdkBuilder.instanceMonitoring(instanceMonitoring.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -880,7 +880,7 @@ public interface CfnLaunchConfigurationProps {
      * in the *Amazon EC2 Auto Scaling User Guide* .
      */
     override fun metadataOptions(metadataOptions: IResolvable) {
-      cdkBuilder.metadataOptions(metadataOptions.let(IResolvable::unwrap))
+      cdkBuilder.metadataOptions(metadataOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -890,7 +890,7 @@ public interface CfnLaunchConfigurationProps {
      * in the *Amazon EC2 Auto Scaling User Guide* .
      */
     override fun metadataOptions(metadataOptions: CfnLaunchConfiguration.MetadataOptionsProperty) {
-      cdkBuilder.metadataOptions(metadataOptions.let(CfnLaunchConfiguration.MetadataOptionsProperty::unwrap))
+      cdkBuilder.metadataOptions(metadataOptions.let(CfnLaunchConfiguration.MetadataOptionsProperty.Companion::unwrap))
     }
 
     /**

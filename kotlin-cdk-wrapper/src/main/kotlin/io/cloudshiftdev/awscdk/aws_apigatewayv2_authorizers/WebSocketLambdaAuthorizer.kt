@@ -41,7 +41,7 @@ public open class WebSocketLambdaAuthorizer(
 ) : CdkObject(cdkObject), IWebSocketRouteAuthorizer {
   public constructor(id: String, handler: CloudshiftdevAwscdkServicesLambdaIFunction) :
       this(software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketLambdaAuthorizer(id,
-      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap))
+      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap))
   )
 
   public constructor(
@@ -49,8 +49,8 @@ public open class WebSocketLambdaAuthorizer(
     handler: CloudshiftdevAwscdkServicesLambdaIFunction,
     props: WebSocketLambdaAuthorizerProps,
   ) : this(software.amazon.awscdk.aws_apigatewayv2_authorizers.WebSocketLambdaAuthorizer(id,
-      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap),
-      props.let(WebSocketLambdaAuthorizerProps::unwrap))
+      handler.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap),
+      props.let(WebSocketLambdaAuthorizerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -67,7 +67,7 @@ public open class WebSocketLambdaAuthorizer(
    */
   public override fun bind(options: WebSocketRouteAuthorizerBindOptions):
       WebSocketRouteAuthorizerConfig =
-      unwrap(this).bind(options.let(WebSocketRouteAuthorizerBindOptions::unwrap)).let(WebSocketRouteAuthorizerConfig::wrap)
+      unwrap(this).bind(options.let(WebSocketRouteAuthorizerBindOptions.Companion::unwrap)).let(WebSocketRouteAuthorizerConfig::wrap)
 
   /**
    * Bind this authorizer to a specified WebSocket route.

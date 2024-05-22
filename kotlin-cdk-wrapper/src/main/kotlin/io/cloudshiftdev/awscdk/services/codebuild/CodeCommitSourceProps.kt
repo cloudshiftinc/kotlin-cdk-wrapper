@@ -147,7 +147,7 @@ public interface CodeCommitSourceProps : SourceProps {
      * @param repository the value to be set. 
      */
     override fun repository(repository: IRepository) {
-      cdkBuilder.repository(repository.let(IRepository::unwrap))
+      cdkBuilder.repository(repository.let(IRepository.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codebuild.CodeCommitSourceProps =

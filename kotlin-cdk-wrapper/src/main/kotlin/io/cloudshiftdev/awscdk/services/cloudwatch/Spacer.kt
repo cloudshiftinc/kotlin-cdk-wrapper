@@ -31,7 +31,7 @@ public open class Spacer(
   )
 
   public constructor(props: SpacerProps) :
-      this(software.amazon.awscdk.services.cloudwatch.Spacer(props.let(SpacerProps::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.Spacer(props.let(SpacerProps.Companion::unwrap))
   )
 
   public constructor(props: SpacerProps.Builder.() -> Unit) : this(SpacerProps(props)

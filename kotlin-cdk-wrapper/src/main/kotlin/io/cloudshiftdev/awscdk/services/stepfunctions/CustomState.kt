@@ -72,8 +72,8 @@ public open class CustomState(
     id: String,
     props: CustomStateProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.CustomState(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CustomStateProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.CustomState(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CustomStateProps.Companion::unwrap))
   )
 
   public constructor(
@@ -93,7 +93,7 @@ public open class CustomState(
    * @param props
    */
   public open fun addCatch(handler: IChainable): CustomState =
-      unwrap(this).addCatch(handler.let(IChainable::unwrap)).let(CustomState::wrap)
+      unwrap(this).addCatch(handler.let(IChainable.Companion::unwrap)).let(CustomState::wrap)
 
   /**
    * Add a recovery handler for this state.
@@ -105,8 +105,8 @@ public open class CustomState(
    * @param props
    */
   public open fun addCatch(handler: IChainable, props: CatchProps): CustomState =
-      unwrap(this).addCatch(handler.let(IChainable::unwrap),
-      props.let(CatchProps::unwrap)).let(CustomState::wrap)
+      unwrap(this).addCatch(handler.let(IChainable.Companion::unwrap),
+      props.let(CatchProps.Companion::unwrap)).let(CustomState::wrap)
 
   /**
    * Add a recovery handler for this state.
@@ -141,7 +141,7 @@ public open class CustomState(
    * @param props
    */
   public open fun addRetry(props: RetryProps): CustomState =
-      unwrap(this).addRetry(props.let(RetryProps::unwrap)).let(CustomState::wrap)
+      unwrap(this).addRetry(props.let(RetryProps.Companion::unwrap)).let(CustomState::wrap)
 
   /**
    * Add retry configuration for this state.
@@ -168,7 +168,7 @@ public open class CustomState(
    * @param next 
    */
   public override fun next(next: IChainable): Chain =
-      unwrap(this).next(next.let(IChainable::unwrap)).let(Chain::wrap)
+      unwrap(this).next(next.let(IChainable.Companion::unwrap)).let(Chain::wrap)
 
   /**
    * Returns the Amazon States Language object for this state.

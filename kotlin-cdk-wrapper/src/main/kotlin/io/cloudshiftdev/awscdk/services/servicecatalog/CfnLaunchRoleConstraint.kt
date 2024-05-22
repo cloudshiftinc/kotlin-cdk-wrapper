@@ -42,8 +42,8 @@ public open class CfnLaunchRoleConstraint(
     id: String,
     props: CfnLaunchRoleConstraintProps,
   ) :
-      this(software.amazon.awscdk.services.servicecatalog.CfnLaunchRoleConstraint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLaunchRoleConstraintProps::unwrap))
+      this(software.amazon.awscdk.services.servicecatalog.CfnLaunchRoleConstraint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLaunchRoleConstraintProps.Companion::unwrap))
   )
 
   public constructor(
@@ -88,7 +88,7 @@ public open class CfnLaunchRoleConstraint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

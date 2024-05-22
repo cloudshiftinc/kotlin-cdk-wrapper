@@ -146,7 +146,7 @@ public interface CfnDistributionConfigurationProps {
      * array of Distribution objects. 
      */
     override fun distributions(distributions: IResolvable) {
-      cdkBuilder.distributions(distributions.let(IResolvable::unwrap))
+      cdkBuilder.distributions(distributions.let(IResolvable.Companion::unwrap))
     }
 
     /**

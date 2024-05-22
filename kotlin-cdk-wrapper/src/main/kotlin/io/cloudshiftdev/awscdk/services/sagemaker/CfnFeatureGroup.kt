@@ -82,8 +82,8 @@ public open class CfnFeatureGroup(
     id: String,
     props: CfnFeatureGroupProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnFeatureGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFeatureGroupProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnFeatureGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFeatureGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -140,7 +140,7 @@ public open class CfnFeatureGroup(
    * Each `Feature` must include a `FeatureName` and a `FeatureType` .
    */
   public open fun featureDefinitions(`value`: IResolvable) {
-    unwrap(this).setFeatureDefinitions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFeatureDefinitions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -178,7 +178,7 @@ public open class CfnFeatureGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -247,7 +247,7 @@ public open class CfnFeatureGroup(
    * Tags used to define a `FeatureGroup` .
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -264,14 +264,14 @@ public open class CfnFeatureGroup(
    * Used to set feature group throughput configuration.
    */
   public open fun throughputConfig(`value`: IResolvable) {
-    unwrap(this).setThroughputConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setThroughputConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Used to set feature group throughput configuration.
    */
   public open fun throughputConfig(`value`: ThroughputConfigProperty) {
-    unwrap(this).setThroughputConfig(`value`.let(ThroughputConfigProperty::unwrap))
+    unwrap(this).setThroughputConfig(`value`.let(ThroughputConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -528,7 +528,7 @@ public open class CfnFeatureGroup(
      * and a `FeatureType` . 
      */
     override fun featureDefinitions(featureDefinitions: IResolvable) {
-      cdkBuilder.featureDefinitions(featureDefinitions.let(IResolvable::unwrap))
+      cdkBuilder.featureDefinitions(featureDefinitions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -626,7 +626,7 @@ public open class CfnFeatureGroup(
      * @param tags Tags used to define a `FeatureGroup` . 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -657,7 +657,7 @@ public open class CfnFeatureGroup(
      * @param throughputConfig Used to set feature group throughput configuration. 
      */
     override fun throughputConfig(throughputConfig: IResolvable) {
-      cdkBuilder.throughputConfig(throughputConfig.let(IResolvable::unwrap))
+      cdkBuilder.throughputConfig(throughputConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -680,7 +680,7 @@ public open class CfnFeatureGroup(
      * @param throughputConfig Used to set feature group throughput configuration. 
      */
     override fun throughputConfig(throughputConfig: ThroughputConfigProperty) {
-      cdkBuilder.throughputConfig(throughputConfig.let(ThroughputConfigProperty::unwrap))
+      cdkBuilder.throughputConfig(throughputConfig.let(ThroughputConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1178,7 +1178,7 @@ public open class CfnFeatureGroup(
        * `OfflineStore` is created.
        */
       override fun dataCatalogConfig(dataCatalogConfig: IResolvable) {
-        cdkBuilder.dataCatalogConfig(dataCatalogConfig.let(IResolvable::unwrap))
+        cdkBuilder.dataCatalogConfig(dataCatalogConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1186,7 +1186,7 @@ public open class CfnFeatureGroup(
        * `OfflineStore` is created.
        */
       override fun dataCatalogConfig(dataCatalogConfig: DataCatalogConfigProperty) {
-        cdkBuilder.dataCatalogConfig(dataCatalogConfig.let(DataCatalogConfigProperty::unwrap))
+        cdkBuilder.dataCatalogConfig(dataCatalogConfig.let(DataCatalogConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1224,21 +1224,21 @@ public open class CfnFeatureGroup(
        * The default value is `False` .
        */
       override fun disableGlueTableCreation(disableGlueTableCreation: IResolvable) {
-        cdkBuilder.disableGlueTableCreation(disableGlueTableCreation.let(IResolvable::unwrap))
+        cdkBuilder.disableGlueTableCreation(disableGlueTableCreation.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3StorageConfig The Amazon Simple Storage (Amazon S3) location of `OfflineStore` . 
        */
       override fun s3StorageConfig(s3StorageConfig: IResolvable) {
-        cdkBuilder.s3StorageConfig(s3StorageConfig.let(IResolvable::unwrap))
+        cdkBuilder.s3StorageConfig(s3StorageConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3StorageConfig The Amazon Simple Storage (Amazon S3) location of `OfflineStore` . 
        */
       override fun s3StorageConfig(s3StorageConfig: S3StorageConfigProperty) {
-        cdkBuilder.s3StorageConfig(s3StorageConfig.let(S3StorageConfigProperty::unwrap))
+        cdkBuilder.s3StorageConfig(s3StorageConfig.let(S3StorageConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1503,7 +1503,7 @@ public open class CfnFeatureGroup(
        * The default value is `False` .
        */
       override fun enableOnlineStore(enableOnlineStore: IResolvable) {
-        cdkBuilder.enableOnlineStore(enableOnlineStore.let(IResolvable::unwrap))
+        cdkBuilder.enableOnlineStore(enableOnlineStore.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1511,7 +1511,7 @@ public open class CfnFeatureGroup(
        * your `OnlineStore` .
        */
       override fun securityConfig(securityConfig: IResolvable) {
-        cdkBuilder.securityConfig(securityConfig.let(IResolvable::unwrap))
+        cdkBuilder.securityConfig(securityConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1519,7 +1519,7 @@ public open class CfnFeatureGroup(
        * your `OnlineStore` .
        */
       override fun securityConfig(securityConfig: OnlineStoreSecurityConfigProperty) {
-        cdkBuilder.securityConfig(securityConfig.let(OnlineStoreSecurityConfigProperty::unwrap))
+        cdkBuilder.securityConfig(securityConfig.let(OnlineStoreSecurityConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1551,7 +1551,7 @@ public open class CfnFeatureGroup(
        * API in the Amazon SageMaker API Reference guide.
        */
       override fun ttlDuration(ttlDuration: IResolvable) {
-        cdkBuilder.ttlDuration(ttlDuration.let(IResolvable::unwrap))
+        cdkBuilder.ttlDuration(ttlDuration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1562,7 +1562,7 @@ public open class CfnFeatureGroup(
        * API in the Amazon SageMaker API Reference guide.
        */
       override fun ttlDuration(ttlDuration: TtlDurationProperty) {
-        cdkBuilder.ttlDuration(ttlDuration.let(TtlDurationProperty::unwrap))
+        cdkBuilder.ttlDuration(ttlDuration.let(TtlDurationProperty.Companion::unwrap))
       }
 
       /**

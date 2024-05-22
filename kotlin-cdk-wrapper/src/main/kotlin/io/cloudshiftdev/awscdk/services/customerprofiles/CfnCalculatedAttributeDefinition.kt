@@ -72,8 +72,8 @@ public open class CfnCalculatedAttributeDefinition(
     id: String,
     props: CfnCalculatedAttributeDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCalculatedAttributeDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.customerprofiles.CfnCalculatedAttributeDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCalculatedAttributeDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -102,14 +102,14 @@ public open class CfnCalculatedAttributeDefinition(
    * Mathematical expression and a list of attribute items specified in that expression.
    */
   public open fun attributeDetails(`value`: IResolvable) {
-    unwrap(this).setAttributeDetails(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAttributeDetails(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Mathematical expression and a list of attribute items specified in that expression.
    */
   public open fun attributeDetails(`value`: AttributeDetailsProperty) {
-    unwrap(this).setAttributeDetails(`value`.let(AttributeDetailsProperty::unwrap))
+    unwrap(this).setAttributeDetails(`value`.let(AttributeDetailsProperty.Companion::unwrap))
   }
 
   /**
@@ -147,14 +147,14 @@ public open class CfnCalculatedAttributeDefinition(
    * The conditions including range, object count, and threshold for the calculated attribute.
    */
   public open fun conditions(`value`: IResolvable) {
-    unwrap(this).setConditions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConditions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The conditions including range, object count, and threshold for the calculated attribute.
    */
   public open fun conditions(`value`: ConditionsProperty) {
-    unwrap(this).setConditions(`value`.let(ConditionsProperty::unwrap))
+    unwrap(this).setConditions(`value`.let(ConditionsProperty.Companion::unwrap))
   }
 
   /**
@@ -207,7 +207,7 @@ public open class CfnCalculatedAttributeDefinition(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -231,7 +231,7 @@ public open class CfnCalculatedAttributeDefinition(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -377,7 +377,7 @@ public open class CfnCalculatedAttributeDefinition(
      * that expression. 
      */
     override fun attributeDetails(attributeDetails: IResolvable) {
-      cdkBuilder.attributeDetails(attributeDetails.let(IResolvable::unwrap))
+      cdkBuilder.attributeDetails(attributeDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -388,7 +388,7 @@ public open class CfnCalculatedAttributeDefinition(
      * that expression. 
      */
     override fun attributeDetails(attributeDetails: AttributeDetailsProperty) {
-      cdkBuilder.attributeDetails(attributeDetails.let(AttributeDetailsProperty::unwrap))
+      cdkBuilder.attributeDetails(attributeDetails.let(AttributeDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -421,7 +421,7 @@ public open class CfnCalculatedAttributeDefinition(
      * calculated attribute. 
      */
     override fun conditions(conditions: IResolvable) {
-      cdkBuilder.conditions(conditions.let(IResolvable::unwrap))
+      cdkBuilder.conditions(conditions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -432,7 +432,7 @@ public open class CfnCalculatedAttributeDefinition(
      * calculated attribute. 
      */
     override fun conditions(conditions: ConditionsProperty) {
-      cdkBuilder.conditions(conditions.let(ConditionsProperty::unwrap))
+      cdkBuilder.conditions(conditions.let(ConditionsProperty.Companion::unwrap))
     }
 
     /**
@@ -494,7 +494,7 @@ public open class CfnCalculatedAttributeDefinition(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -613,7 +613,7 @@ public open class CfnCalculatedAttributeDefinition(
        * expression. 
        */
       override fun attributes(attributes: IResolvable) {
-        cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+        cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -875,14 +875,14 @@ public open class CfnCalculatedAttributeDefinition(
        * @param range The relative time period over which data is included in the aggregation.
        */
       override fun range(range: IResolvable) {
-        cdkBuilder.range(range.let(IResolvable::unwrap))
+        cdkBuilder.range(range.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param range The relative time period over which data is included in the aggregation.
        */
       override fun range(range: RangeProperty) {
-        cdkBuilder.range(range.let(RangeProperty::unwrap))
+        cdkBuilder.range(range.let(RangeProperty.Companion::unwrap))
       }
 
       /**
@@ -897,14 +897,14 @@ public open class CfnCalculatedAttributeDefinition(
        * @param threshold The threshold for the calculated attribute.
        */
       override fun threshold(threshold: IResolvable) {
-        cdkBuilder.threshold(threshold.let(IResolvable::unwrap))
+        cdkBuilder.threshold(threshold.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param threshold The threshold for the calculated attribute.
        */
       override fun threshold(threshold: ThresholdProperty) {
-        cdkBuilder.threshold(threshold.let(ThresholdProperty::unwrap))
+        cdkBuilder.threshold(threshold.let(ThresholdProperty.Companion::unwrap))
       }
 
       /**

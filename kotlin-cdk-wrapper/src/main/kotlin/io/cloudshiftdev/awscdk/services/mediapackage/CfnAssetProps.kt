@@ -161,7 +161,7 @@ public interface CfnAssetProps {
      * @param egressEndpoints List of playback endpoints that are available for this asset.
      */
     override fun egressEndpoints(egressEndpoints: IResolvable) {
-      cdkBuilder.egressEndpoints(egressEndpoints.let(IResolvable::unwrap))
+      cdkBuilder.egressEndpoints(egressEndpoints.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -219,7 +219,7 @@ public interface CfnAssetProps {
      * @param tags The tags to assign to the asset.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

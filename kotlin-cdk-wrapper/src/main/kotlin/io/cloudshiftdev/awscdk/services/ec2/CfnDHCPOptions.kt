@@ -49,7 +49,7 @@ public open class CfnDHCPOptions(
   cdkObject: software.amazon.awscdk.services.ec2.CfnDHCPOptions,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ec2.CfnDHCPOptions(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ec2.CfnDHCPOptions(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -58,8 +58,8 @@ public open class CfnDHCPOptions(
     id: String,
     props: CfnDHCPOptionsProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnDHCPOptions(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDHCPOptionsProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnDHCPOptions(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDHCPOptionsProps.Companion::unwrap))
   )
 
   public constructor(
@@ -111,7 +111,7 @@ public open class CfnDHCPOptions(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -192,7 +192,7 @@ public open class CfnDHCPOptions(
    * Any tags assigned to the DHCP options set.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -438,7 +438,7 @@ public open class CfnDHCPOptions(
      * @param tags Any tags assigned to the DHCP options set. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

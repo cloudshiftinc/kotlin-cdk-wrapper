@@ -60,8 +60,8 @@ public open class ServiceManagedVolume(
     id: String,
     props: ServiceManagedVolumeProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.ServiceManagedVolume(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ServiceManagedVolumeProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.ServiceManagedVolume(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ServiceManagedVolumeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -89,8 +89,8 @@ public open class ServiceManagedVolume(
    * @param mountPoint The mounting point details within the container. 
    */
   public open fun mountIn(container: ContainerDefinition, mountPoint: ContainerMountPoint) {
-    unwrap(this).mountIn(container.let(ContainerDefinition::unwrap),
-        mountPoint.let(ContainerMountPoint::unwrap))
+    unwrap(this).mountIn(container.let(ContainerDefinition.Companion::unwrap),
+        mountPoint.let(ContainerMountPoint.Companion::unwrap))
   }
 
   /**
@@ -171,7 +171,7 @@ public open class ServiceManagedVolume(
      * by ECS. 
      */
     override fun managedEbsVolume(managedEbsVolume: ServiceManagedEBSVolumeConfiguration) {
-      cdkBuilder.managedEbsVolume(managedEbsVolume.let(ServiceManagedEBSVolumeConfiguration::unwrap))
+      cdkBuilder.managedEbsVolume(managedEbsVolume.let(ServiceManagedEBSVolumeConfiguration.Companion::unwrap))
     }
 
     /**

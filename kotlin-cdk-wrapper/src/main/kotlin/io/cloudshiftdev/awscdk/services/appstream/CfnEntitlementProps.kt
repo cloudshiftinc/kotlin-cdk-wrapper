@@ -127,7 +127,7 @@ public interface CfnEntitlementProps {
      * @param attributes The attributes of the entitlement. 
      */
     override fun attributes(attributes: IResolvable) {
-      cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+      cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
     }
 
     /**

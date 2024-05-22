@@ -66,8 +66,8 @@ public open class CfnLoggingConfiguration(
     id: String,
     props: CfnLoggingConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLoggingConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.ivschat.CfnLoggingConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLoggingConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -111,7 +111,7 @@ public open class CfnLoggingConfiguration(
    * content will be logged.
    */
   public open fun destinationConfiguration(`value`: IResolvable) {
-    unwrap(this).setDestinationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDestinationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -119,7 +119,7 @@ public open class CfnLoggingConfiguration(
    * content will be logged.
    */
   public open fun destinationConfiguration(`value`: DestinationConfigurationProperty) {
-    unwrap(this).setDestinationConfiguration(`value`.let(DestinationConfigurationProperty::unwrap))
+    unwrap(this).setDestinationConfiguration(`value`.let(DestinationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -138,7 +138,7 @@ public open class CfnLoggingConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -168,7 +168,7 @@ public open class CfnLoggingConfiguration(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -265,7 +265,7 @@ public open class CfnLoggingConfiguration(
      * information about where chat content will be logged. 
      */
     override fun destinationConfiguration(destinationConfiguration: IResolvable) {
-      cdkBuilder.destinationConfiguration(destinationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.destinationConfiguration(destinationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -278,7 +278,7 @@ public open class CfnLoggingConfiguration(
      */
     override
         fun destinationConfiguration(destinationConfiguration: DestinationConfigurationProperty) {
-      cdkBuilder.destinationConfiguration(destinationConfiguration.let(DestinationConfigurationProperty::unwrap))
+      cdkBuilder.destinationConfiguration(destinationConfiguration.let(DestinationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -318,7 +318,7 @@ public open class CfnLoggingConfiguration(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -570,7 +570,7 @@ public open class CfnLoggingConfiguration(
        * activity will be logged.
        */
       override fun cloudWatchLogs(cloudWatchLogs: IResolvable) {
-        cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -578,7 +578,7 @@ public open class CfnLoggingConfiguration(
        * activity will be logged.
        */
       override fun cloudWatchLogs(cloudWatchLogs: CloudWatchLogsDestinationConfigurationProperty) {
-        cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(CloudWatchLogsDestinationConfigurationProperty::unwrap))
+        cdkBuilder.cloudWatchLogs(cloudWatchLogs.let(CloudWatchLogsDestinationConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -596,7 +596,7 @@ public open class CfnLoggingConfiguration(
        * activity will be logged.
        */
       override fun firehose(firehose: IResolvable) {
-        cdkBuilder.firehose(firehose.let(IResolvable::unwrap))
+        cdkBuilder.firehose(firehose.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -604,7 +604,7 @@ public open class CfnLoggingConfiguration(
        * activity will be logged.
        */
       override fun firehose(firehose: FirehoseDestinationConfigurationProperty) {
-        cdkBuilder.firehose(firehose.let(FirehoseDestinationConfigurationProperty::unwrap))
+        cdkBuilder.firehose(firehose.let(FirehoseDestinationConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -620,14 +620,14 @@ public open class CfnLoggingConfiguration(
        * @param s3 An Amazon S3 destination configuration where chat activity will be logged.
        */
       override fun s3(s3: IResolvable) {
-        cdkBuilder.s3(s3.let(IResolvable::unwrap))
+        cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3 An Amazon S3 destination configuration where chat activity will be logged.
        */
       override fun s3(s3: S3DestinationConfigurationProperty) {
-        cdkBuilder.s3(s3.let(S3DestinationConfigurationProperty::unwrap))
+        cdkBuilder.s3(s3.let(S3DestinationConfigurationProperty.Companion::unwrap))
       }
 
       /**

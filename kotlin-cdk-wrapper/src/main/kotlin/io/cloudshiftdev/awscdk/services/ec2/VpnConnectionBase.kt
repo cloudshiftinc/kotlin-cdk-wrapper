@@ -49,7 +49,7 @@ public abstract class VpnConnectionBase(
    * @param props
    */
   public override fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * Return the given named metric for this VPNConnection.
@@ -80,7 +80,7 @@ public abstract class VpnConnectionBase(
    * @param props
    */
   public override fun metricTunnelDataIn(props: MetricOptions): Metric =
-      unwrap(this).metricTunnelDataIn(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricTunnelDataIn(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The bytes received through the VPN tunnel.
@@ -112,7 +112,7 @@ public abstract class VpnConnectionBase(
    * @param props
    */
   public override fun metricTunnelDataOut(props: MetricOptions): Metric =
-      unwrap(this).metricTunnelDataOut(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricTunnelDataOut(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The bytes sent through the VPN tunnel.
@@ -144,7 +144,7 @@ public abstract class VpnConnectionBase(
    * @param props
    */
   public override fun metricTunnelState(props: MetricOptions): Metric =
-      unwrap(this).metricTunnelState(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricTunnelState(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * The state of the tunnel. 0 indicates DOWN and 1 indicates UP.

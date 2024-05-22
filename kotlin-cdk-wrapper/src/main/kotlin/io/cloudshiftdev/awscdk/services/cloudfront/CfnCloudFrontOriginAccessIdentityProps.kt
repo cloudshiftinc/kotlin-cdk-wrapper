@@ -77,7 +77,7 @@ public interface CfnCloudFrontOriginAccessIdentityProps {
      */
     override
         fun cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig: IResolvable) {
-      cdkBuilder.cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig.let(IResolvable::unwrap))
+      cdkBuilder.cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -86,7 +86,7 @@ public interface CfnCloudFrontOriginAccessIdentityProps {
      */
     override
         fun cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig: CfnCloudFrontOriginAccessIdentity.CloudFrontOriginAccessIdentityConfigProperty) {
-      cdkBuilder.cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig.let(CfnCloudFrontOriginAccessIdentity.CloudFrontOriginAccessIdentityConfigProperty::unwrap))
+      cdkBuilder.cloudFrontOriginAccessIdentityConfig(cloudFrontOriginAccessIdentityConfig.let(CfnCloudFrontOriginAccessIdentity.CloudFrontOriginAccessIdentityConfigProperty.Companion::unwrap))
     }
 
     /**

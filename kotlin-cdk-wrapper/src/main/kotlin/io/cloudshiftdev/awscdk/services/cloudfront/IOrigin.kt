@@ -42,8 +42,8 @@ public interface IOrigin {
      * @param options 
      */
     override fun bind(scope: Construct, options: OriginBindOptions): OriginBindConfig =
-        unwrap(this).bind(scope.let(Construct::unwrap),
-        options.let(OriginBindOptions::unwrap)).let(OriginBindConfig::wrap)
+        unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+        options.let(OriginBindOptions.Companion::unwrap)).let(OriginBindConfig::wrap)
 
     /**
      * The method called when a given Origin is added (for the first time) to a Distribution.

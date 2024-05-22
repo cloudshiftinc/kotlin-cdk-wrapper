@@ -101,7 +101,7 @@ public interface CfnRegistryProps {
      * @param tags Tags to associate with the registry.
      */
     override fun tags(tags: List<CfnRegistry.TagsEntryProperty>) {
-      cdkBuilder.tags(tags.map(CfnRegistry.TagsEntryProperty::unwrap))
+      cdkBuilder.tags(tags.map(CfnRegistry.TagsEntryProperty.Companion::unwrap))
     }
 
     /**

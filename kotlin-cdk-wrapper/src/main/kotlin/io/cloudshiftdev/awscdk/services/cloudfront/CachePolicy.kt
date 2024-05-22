@@ -31,7 +31,7 @@ public open class CachePolicy(
   cdkObject: software.amazon.awscdk.services.cloudfront.CachePolicy,
 ) : Resource(cdkObject), ICachePolicy {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.cloudfront.CachePolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.cloudfront.CachePolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -40,8 +40,8 @@ public open class CachePolicy(
     id: String,
     props: CachePolicyProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.CachePolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CachePolicyProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.CachePolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CachePolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -210,7 +210,7 @@ public open class CachePolicy(
      * cache key and automatically included in requests that CloudFront sends to the origin. 
      */
     override fun cookieBehavior(cookieBehavior: CacheCookieBehavior) {
-      cdkBuilder.cookieBehavior(cookieBehavior.let(CacheCookieBehavior::unwrap))
+      cdkBuilder.cookieBehavior(cookieBehavior.let(CacheCookieBehavior.Companion::unwrap))
     }
 
     /**
@@ -223,7 +223,7 @@ public open class CachePolicy(
      * @param defaultTtl The default amount of time for objects to stay in the CloudFront cache. 
      */
     override fun defaultTtl(defaultTtl: Duration) {
-      cdkBuilder.defaultTtl(defaultTtl.let(Duration::unwrap))
+      cdkBuilder.defaultTtl(defaultTtl.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -262,7 +262,7 @@ public open class CachePolicy(
      * automatically included in requests that CloudFront sends to the origin. 
      */
     override fun headerBehavior(headerBehavior: CacheHeaderBehavior) {
-      cdkBuilder.headerBehavior(headerBehavior.let(CacheHeaderBehavior::unwrap))
+      cdkBuilder.headerBehavior(headerBehavior.let(CacheHeaderBehavior.Companion::unwrap))
     }
 
     /**
@@ -276,7 +276,7 @@ public open class CachePolicy(
      * @param maxTtl The maximum amount of time for objects to stay in the CloudFront cache. 
      */
     override fun maxTtl(maxTtl: Duration) {
-      cdkBuilder.maxTtl(maxTtl.let(Duration::unwrap))
+      cdkBuilder.maxTtl(maxTtl.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -287,7 +287,7 @@ public open class CachePolicy(
      * @param minTtl The minimum amount of time for objects to stay in the CloudFront cache. 
      */
     override fun minTtl(minTtl: Duration) {
-      cdkBuilder.minTtl(minTtl.let(Duration::unwrap))
+      cdkBuilder.minTtl(minTtl.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -300,7 +300,7 @@ public open class CachePolicy(
      * and automatically included in requests that CloudFront sends to the origin. 
      */
     override fun queryStringBehavior(queryStringBehavior: CacheQueryStringBehavior) {
-      cdkBuilder.queryStringBehavior(queryStringBehavior.let(CacheQueryStringBehavior::unwrap))
+      cdkBuilder.queryStringBehavior(queryStringBehavior.let(CacheQueryStringBehavior.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.CachePolicy = cdkBuilder.build()
@@ -327,7 +327,7 @@ public open class CachePolicy(
       id: String,
       cachePolicyId: String,
     ): ICachePolicy =
-        software.amazon.awscdk.services.cloudfront.CachePolicy.fromCachePolicyId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.cloudfront.CachePolicy.fromCachePolicyId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, cachePolicyId).let(ICachePolicy::wrap)
 
     public operator fun invoke(

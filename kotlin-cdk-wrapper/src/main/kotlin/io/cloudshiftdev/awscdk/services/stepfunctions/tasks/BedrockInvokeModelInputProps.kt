@@ -71,7 +71,7 @@ public interface BedrockInvokeModelInputProps {
      * If the S3 location is not set, then the Body must be set.
      */
     override fun s3Location(s3Location: Location) {
-      cdkBuilder.s3Location(s3Location.let(Location::unwrap))
+      cdkBuilder.s3Location(s3Location.let(Location.Companion::unwrap))
     }
 
     /**

@@ -184,14 +184,14 @@ public interface CfnWirelessGatewayProps {
      * @param loRaWan The gateway configuration information to use to create the wireless gateway. 
      */
     override fun loRaWan(loRaWan: IResolvable) {
-      cdkBuilder.loRaWan(loRaWan.let(IResolvable::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param loRaWan The gateway configuration information to use to create the wireless gateway. 
      */
     override fun loRaWan(loRaWan: CfnWirelessGateway.LoRaWANGatewayProperty) {
-      cdkBuilder.loRaWan(loRaWan.let(CfnWirelessGateway.LoRaWANGatewayProperty::unwrap))
+      cdkBuilder.loRaWan(loRaWan.let(CfnWirelessGateway.LoRaWANGatewayProperty.Companion::unwrap))
     }
 
     /**
@@ -214,7 +214,7 @@ public interface CfnWirelessGatewayProps {
      * Tags can have a minimum of 0 and a maximum of 50 items.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

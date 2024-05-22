@@ -114,7 +114,7 @@ public interface CloudMapNamespaceOptions {
      * @param type The type of CloudMap Namespace to create.
      */
     override fun type(type: NamespaceType) {
-      cdkBuilder.type(type.let(NamespaceType::unwrap))
+      cdkBuilder.type(type.let(NamespaceType.Companion::unwrap))
     }
 
     /**
@@ -130,7 +130,7 @@ public interface CloudMapNamespaceOptions {
      * This property is required for private DNS namespaces.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.CloudMapNamespaceOptions =

@@ -132,7 +132,7 @@ public interface ResponseHeadersStrictTransportSecurity {
      * directive in the Strict-Transport-Security HTTP response header. 
      */
     override fun accessControlMaxAge(accessControlMaxAge: Duration) {
-      cdkBuilder.accessControlMaxAge(accessControlMaxAge.let(Duration::unwrap))
+      cdkBuilder.accessControlMaxAge(accessControlMaxAge.let(Duration.Companion::unwrap))
     }
 
     /**

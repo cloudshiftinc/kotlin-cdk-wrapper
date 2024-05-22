@@ -55,8 +55,8 @@ public open class CfnAlias(
     id: String,
     props: CfnAliasProps,
   ) :
-      this(software.amazon.awscdk.services.gamelift.CfnAlias(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAliasProps::unwrap))
+      this(software.amazon.awscdk.services.gamelift.CfnAlias(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAliasProps.Companion::unwrap))
   )
 
   public constructor(
@@ -92,7 +92,7 @@ public open class CfnAlias(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -116,14 +116,14 @@ public open class CfnAlias(
    * The routing configuration, including routing type and fleet target, for the alias.
    */
   public open fun routingStrategy(`value`: IResolvable) {
-    unwrap(this).setRoutingStrategy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRoutingStrategy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The routing configuration, including routing type and fleet target, for the alias.
    */
   public open fun routingStrategy(`value`: RoutingStrategyProperty) {
-    unwrap(this).setRoutingStrategy(`value`.let(RoutingStrategyProperty::unwrap))
+    unwrap(this).setRoutingStrategy(`value`.let(RoutingStrategyProperty.Companion::unwrap))
   }
 
   /**
@@ -224,7 +224,7 @@ public open class CfnAlias(
      * for the alias. 
      */
     override fun routingStrategy(routingStrategy: IResolvable) {
-      cdkBuilder.routingStrategy(routingStrategy.let(IResolvable::unwrap))
+      cdkBuilder.routingStrategy(routingStrategy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -235,7 +235,7 @@ public open class CfnAlias(
      * for the alias. 
      */
     override fun routingStrategy(routingStrategy: RoutingStrategyProperty) {
-      cdkBuilder.routingStrategy(routingStrategy.let(RoutingStrategyProperty::unwrap))
+      cdkBuilder.routingStrategy(routingStrategy.let(RoutingStrategyProperty.Companion::unwrap))
     }
 
     /**

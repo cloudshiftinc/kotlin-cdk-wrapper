@@ -401,7 +401,7 @@ public interface CfnTemplateProps {
      * options, key usage extensions, application policies, and cryptography settings.
      */
     override fun definition(definition: IResolvable) {
-      cdkBuilder.definition(definition.let(IResolvable::unwrap))
+      cdkBuilder.definition(definition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -410,7 +410,7 @@ public interface CfnTemplateProps {
      * options, key usage extensions, application policies, and cryptography settings.
      */
     override fun definition(definition: CfnTemplate.TemplateDefinitionProperty) {
-      cdkBuilder.definition(definition.let(CfnTemplate.TemplateDefinitionProperty::unwrap))
+      cdkBuilder.definition(definition.let(CfnTemplate.TemplateDefinitionProperty.Companion::unwrap))
     }
 
     /**
@@ -448,7 +448,7 @@ public interface CfnTemplateProps {
      * receive a new certificate issued using that template.
      */
     override fun reenrollAllCertificateHolders(reenrollAllCertificateHolders: IResolvable) {
-      cdkBuilder.reenrollAllCertificateHolders(reenrollAllCertificateHolders.let(IResolvable::unwrap))
+      cdkBuilder.reenrollAllCertificateHolders(reenrollAllCertificateHolders.let(IResolvable.Companion::unwrap))
     }
 
     /**

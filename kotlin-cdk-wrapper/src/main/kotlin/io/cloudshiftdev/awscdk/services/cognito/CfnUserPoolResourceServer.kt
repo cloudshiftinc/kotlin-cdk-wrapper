@@ -53,8 +53,8 @@ public open class CfnUserPoolResourceServer(
     id: String,
     props: CfnUserPoolResourceServerProps,
   ) :
-      this(software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnUserPoolResourceServerProps::unwrap))
+      this(software.amazon.awscdk.services.cognito.CfnUserPoolResourceServer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnUserPoolResourceServerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -87,7 +87,7 @@ public open class CfnUserPoolResourceServer(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -111,7 +111,7 @@ public open class CfnUserPoolResourceServer(
    * A list of scopes.
    */
   public open fun scopes(`value`: IResolvable) {
-    unwrap(this).setScopes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setScopes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -241,7 +241,7 @@ public open class CfnUserPoolResourceServer(
      * @param scopes A list of scopes. 
      */
     override fun scopes(scopes: IResolvable) {
-      cdkBuilder.scopes(scopes.let(IResolvable::unwrap))
+      cdkBuilder.scopes(scopes.let(IResolvable.Companion::unwrap))
     }
 
     /**

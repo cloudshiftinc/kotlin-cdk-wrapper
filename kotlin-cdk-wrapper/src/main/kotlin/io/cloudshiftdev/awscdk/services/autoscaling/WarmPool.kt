@@ -39,8 +39,8 @@ public open class WarmPool(
     id: String,
     props: WarmPoolProps,
   ) :
-      this(software.amazon.awscdk.services.autoscaling.WarmPool(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(WarmPoolProps::unwrap))
+      this(software.amazon.awscdk.services.autoscaling.WarmPool(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(WarmPoolProps.Companion::unwrap))
   )
 
   public constructor(
@@ -123,7 +123,7 @@ public open class WarmPool(
      * @param autoScalingGroup The Auto Scaling group to add the warm pool to. 
      */
     override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
-      cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup::unwrap))
+      cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup.Companion::unwrap))
     }
 
     /**
@@ -162,7 +162,7 @@ public open class WarmPool(
      * complete. 
      */
     override fun poolState(poolState: PoolState) {
-      cdkBuilder.poolState(poolState.let(PoolState::unwrap))
+      cdkBuilder.poolState(poolState.let(PoolState.Companion::unwrap))
     }
 
     /**

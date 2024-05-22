@@ -130,7 +130,7 @@ public interface MetricConfig {
      * expression.
      */
     override fun mathExpression(mathExpression: MetricExpressionConfig) {
-      cdkBuilder.mathExpression(mathExpression.let(MetricExpressionConfig::unwrap))
+      cdkBuilder.mathExpression(mathExpression.let(MetricExpressionConfig.Companion::unwrap))
     }
 
     /**
@@ -146,7 +146,7 @@ public interface MetricConfig {
      * @param metricStat In case the metric represents a query, the details of the query.
      */
     override fun metricStat(metricStat: MetricStatConfig) {
-      cdkBuilder.metricStat(metricStat.let(MetricStatConfig::unwrap))
+      cdkBuilder.metricStat(metricStat.let(MetricStatConfig.Companion::unwrap))
     }
 
     /**

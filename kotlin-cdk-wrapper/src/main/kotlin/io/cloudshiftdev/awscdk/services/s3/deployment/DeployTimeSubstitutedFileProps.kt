@@ -112,7 +112,7 @@ public interface DeployTimeSubstitutedFileProps {
      * @param destinationBucket The S3 bucket to sync the contents of the zip file to. 
      */
     override fun destinationBucket(destinationBucket: IBucket) {
-      cdkBuilder.destinationBucket(destinationBucket.let(IBucket::unwrap))
+      cdkBuilder.destinationBucket(destinationBucket.let(IBucket.Companion::unwrap))
     }
 
     /**
@@ -127,7 +127,7 @@ public interface DeployTimeSubstitutedFileProps {
      * @param role Execution role associated with this function.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**

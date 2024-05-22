@@ -443,7 +443,7 @@ public interface CfnAppProps {
      * @param autoBranchCreationConfig Sets the configuration for your automatic branch creation.
      */
     override fun autoBranchCreationConfig(autoBranchCreationConfig: IResolvable) {
-      cdkBuilder.autoBranchCreationConfig(autoBranchCreationConfig.let(IResolvable::unwrap))
+      cdkBuilder.autoBranchCreationConfig(autoBranchCreationConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -451,7 +451,7 @@ public interface CfnAppProps {
      */
     override
         fun autoBranchCreationConfig(autoBranchCreationConfig: CfnApp.AutoBranchCreationConfigProperty) {
-      cdkBuilder.autoBranchCreationConfig(autoBranchCreationConfig.let(CfnApp.AutoBranchCreationConfigProperty::unwrap))
+      cdkBuilder.autoBranchCreationConfig(autoBranchCreationConfig.let(CfnApp.AutoBranchCreationConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -470,7 +470,7 @@ public interface CfnAppProps {
      * `user:password` .
      */
     override fun basicAuthConfig(basicAuthConfig: IResolvable) {
-      cdkBuilder.basicAuthConfig(basicAuthConfig.let(IResolvable::unwrap))
+      cdkBuilder.basicAuthConfig(basicAuthConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -479,7 +479,7 @@ public interface CfnAppProps {
      * `user:password` .
      */
     override fun basicAuthConfig(basicAuthConfig: CfnApp.BasicAuthConfigProperty) {
-      cdkBuilder.basicAuthConfig(basicAuthConfig.let(CfnApp.BasicAuthConfigProperty::unwrap))
+      cdkBuilder.basicAuthConfig(basicAuthConfig.let(CfnApp.BasicAuthConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -511,7 +511,7 @@ public interface CfnAppProps {
      * @param customRules The custom rewrite and redirect rules for an Amplify app.
      */
     override fun customRules(customRules: IResolvable) {
-      cdkBuilder.customRules(customRules.let(IResolvable::unwrap))
+      cdkBuilder.customRules(customRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -546,7 +546,7 @@ public interface CfnAppProps {
      * delete a branch from your Git repository.
      */
     override fun enableBranchAutoDeletion(enableBranchAutoDeletion: IResolvable) {
-      cdkBuilder.enableBranchAutoDeletion(enableBranchAutoDeletion.let(IResolvable::unwrap))
+      cdkBuilder.enableBranchAutoDeletion(enableBranchAutoDeletion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -557,7 +557,7 @@ public interface CfnAppProps {
      * in the *Amplify Hosting User Guide* .
      */
     override fun environmentVariables(environmentVariables: IResolvable) {
-      cdkBuilder.environmentVariables(environmentVariables.let(IResolvable::unwrap))
+      cdkBuilder.environmentVariables(environmentVariables.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -637,7 +637,7 @@ public interface CfnAppProps {
      * @param tags The tag for an Amplify app.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

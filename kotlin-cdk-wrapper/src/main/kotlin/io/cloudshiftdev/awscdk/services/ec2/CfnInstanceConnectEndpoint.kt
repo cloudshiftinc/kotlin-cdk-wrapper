@@ -57,8 +57,8 @@ public open class CfnInstanceConnectEndpoint(
     id: String,
     props: CfnInstanceConnectEndpointProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnInstanceConnectEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInstanceConnectEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnInstanceConnectEndpoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInstanceConnectEndpointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -97,7 +97,7 @@ public open class CfnInstanceConnectEndpoint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -122,7 +122,7 @@ public open class CfnInstanceConnectEndpoint(
    * The value is `true` or `false` .
    */
   public open fun preserveClientIp(`value`: IResolvable) {
-    unwrap(this).setPreserveClientIp(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPreserveClientIp(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -165,7 +165,7 @@ public open class CfnInstanceConnectEndpoint(
    * The tags to apply to the EC2 Instance Connect Endpoint during creation.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -317,7 +317,7 @@ public open class CfnInstanceConnectEndpoint(
      * source. The value is `true` or `false` . 
      */
     override fun preserveClientIp(preserveClientIp: IResolvable) {
-      cdkBuilder.preserveClientIp(preserveClientIp.let(IResolvable::unwrap))
+      cdkBuilder.preserveClientIp(preserveClientIp.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -362,7 +362,7 @@ public open class CfnInstanceConnectEndpoint(
      * @param tags The tags to apply to the EC2 Instance Connect Endpoint during creation. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

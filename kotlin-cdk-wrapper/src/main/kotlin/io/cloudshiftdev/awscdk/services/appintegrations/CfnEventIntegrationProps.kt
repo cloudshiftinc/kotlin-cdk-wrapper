@@ -156,14 +156,14 @@ public interface CfnEventIntegrationProps {
      * @param eventFilter The event integration filter. 
      */
     override fun eventFilter(eventFilter: IResolvable) {
-      cdkBuilder.eventFilter(eventFilter.let(IResolvable::unwrap))
+      cdkBuilder.eventFilter(eventFilter.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param eventFilter The event integration filter. 
      */
     override fun eventFilter(eventFilter: CfnEventIntegration.EventFilterProperty) {
-      cdkBuilder.eventFilter(eventFilter.let(CfnEventIntegration.EventFilterProperty::unwrap))
+      cdkBuilder.eventFilter(eventFilter.let(CfnEventIntegration.EventFilterProperty.Companion::unwrap))
     }
 
     /**
@@ -189,7 +189,7 @@ public interface CfnEventIntegrationProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

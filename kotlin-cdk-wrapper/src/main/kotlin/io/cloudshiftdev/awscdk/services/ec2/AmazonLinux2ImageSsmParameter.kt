@@ -35,7 +35,7 @@ public open class AmazonLinux2ImageSsmParameter(
   cdkObject: software.amazon.awscdk.services.ec2.AmazonLinux2ImageSsmParameter,
 ) : AmazonLinuxImageSsmParameterBase(cdkObject) {
   public constructor(props: AmazonLinux2ImageSsmParameterProps) :
-      this(software.amazon.awscdk.services.ec2.AmazonLinux2ImageSsmParameter(props.let(AmazonLinux2ImageSsmParameterProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.AmazonLinux2ImageSsmParameter(props.let(AmazonLinux2ImageSsmParameterProps.Companion::unwrap))
   )
 
   public constructor(props: AmazonLinux2ImageSsmParameterProps.Builder.() -> Unit) :
@@ -163,7 +163,7 @@ public open class AmazonLinux2ImageSsmParameter(
      * @param cpuType CPU Type. 
      */
     override fun cpuType(cpuType: AmazonLinuxCpuType) {
-      cdkBuilder.cpuType(cpuType.let(AmazonLinuxCpuType::unwrap))
+      cdkBuilder.cpuType(cpuType.let(AmazonLinuxCpuType.Companion::unwrap))
     }
 
     /**
@@ -174,7 +174,7 @@ public open class AmazonLinux2ImageSsmParameter(
      * @param edition What edition of Amazon Linux to use. 
      */
     override fun edition(edition: AmazonLinuxEdition) {
-      cdkBuilder.edition(edition.let(AmazonLinuxEdition::unwrap))
+      cdkBuilder.edition(edition.let(AmazonLinuxEdition.Companion::unwrap))
     }
 
     /**
@@ -185,7 +185,7 @@ public open class AmazonLinux2ImageSsmParameter(
      * @param kernel What kernel version of Amazon Linux to use. 
      */
     override fun kernel(kernel: AmazonLinux2Kernel) {
-      cdkBuilder.kernel(kernel.let(AmazonLinux2Kernel::unwrap))
+      cdkBuilder.kernel(kernel.let(AmazonLinux2Kernel.Companion::unwrap))
     }
 
     /**
@@ -196,7 +196,7 @@ public open class AmazonLinux2ImageSsmParameter(
      * @param storage What storage backed image to use. 
      */
     override fun storage(storage: AmazonLinuxStorage) {
-      cdkBuilder.storage(storage.let(AmazonLinuxStorage::unwrap))
+      cdkBuilder.storage(storage.let(AmazonLinuxStorage.Companion::unwrap))
     }
 
     /**
@@ -207,7 +207,7 @@ public open class AmazonLinux2ImageSsmParameter(
      * @param userData Initial user data. 
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     /**
@@ -218,7 +218,7 @@ public open class AmazonLinux2ImageSsmParameter(
      * @param virtualization Virtualization type. 
      */
     override fun virtualization(virtualization: AmazonLinuxVirt) {
-      cdkBuilder.virtualization(virtualization.let(AmazonLinuxVirt::unwrap))
+      cdkBuilder.virtualization(virtualization.let(AmazonLinuxVirt.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.AmazonLinux2ImageSsmParameter =
@@ -227,7 +227,7 @@ public open class AmazonLinux2ImageSsmParameter(
 
   public companion object {
     public fun ssmParameterName(props: AmazonLinux2ImageSsmParameterProps): String =
-        software.amazon.awscdk.services.ec2.AmazonLinux2ImageSsmParameter.ssmParameterName(props.let(AmazonLinux2ImageSsmParameterProps::unwrap))
+        software.amazon.awscdk.services.ec2.AmazonLinux2ImageSsmParameter.ssmParameterName(props.let(AmazonLinux2ImageSsmParameterProps.Companion::unwrap))
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("be96e33b0132f0c5a67c00f40fc28b8c800535e60c6bb6bf16f748418c650955")

@@ -121,8 +121,8 @@ public open class CfnEntity(
     id: String,
     props: CfnEntityProps,
   ) :
-      this(software.amazon.awscdk.services.iottwinmaker.CfnEntity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEntityProps::unwrap))
+      this(software.amazon.awscdk.services.iottwinmaker.CfnEntity(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEntityProps.Companion::unwrap))
   )
 
   public constructor(
@@ -188,7 +188,7 @@ public open class CfnEntity(
    * An object that maps strings to the components in the entity.
    */
   public open fun components(`value`: IResolvable) {
-    unwrap(this).setComponents(`value`.let(IResolvable::unwrap))
+    unwrap(this).setComponents(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -207,7 +207,7 @@ public open class CfnEntity(
    * Maps string to `compositeComponent` updates in the request.
    */
   public open fun compositeComponents(`value`: IResolvable) {
-    unwrap(this).setCompositeComponents(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCompositeComponents(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -259,7 +259,7 @@ public open class CfnEntity(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -425,7 +425,7 @@ public open class CfnEntity(
      * @param components An object that maps strings to the components in the entity. 
      */
     override fun components(components: IResolvable) {
-      cdkBuilder.components(components.let(IResolvable::unwrap))
+      cdkBuilder.components(components.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -453,7 +453,7 @@ public open class CfnEntity(
      * @param compositeComponents Maps string to `compositeComponent` updates in the request. 
      */
     override fun compositeComponents(compositeComponents: IResolvable) {
-      cdkBuilder.compositeComponents(compositeComponents.let(IResolvable::unwrap))
+      cdkBuilder.compositeComponents(compositeComponents.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -763,7 +763,7 @@ public open class CfnEntity(
        * Each string in the mapping must be unique to this object.
        */
       override fun properties(properties: IResolvable) {
-        cdkBuilder.properties(properties.let(IResolvable::unwrap))
+        cdkBuilder.properties(properties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -781,7 +781,7 @@ public open class CfnEntity(
        * Each string in the mapping must be unique to this object.
        */
       override fun propertyGroups(propertyGroups: IResolvable) {
-        cdkBuilder.propertyGroups(propertyGroups.let(IResolvable::unwrap))
+        cdkBuilder.propertyGroups(propertyGroups.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -797,14 +797,14 @@ public open class CfnEntity(
        * @param status The status of the component.
        */
       override fun status(status: IResolvable) {
-        cdkBuilder.status(status.let(IResolvable::unwrap))
+        cdkBuilder.status(status.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param status The status of the component.
        */
       override fun status(status: StatusProperty) {
-        cdkBuilder.status(status.let(StatusProperty::unwrap))
+        cdkBuilder.status(status.let(StatusProperty.Companion::unwrap))
       }
 
       /**
@@ -1100,7 +1100,7 @@ public open class CfnEntity(
        * Each string in the mapping must be unique to this component.
        */
       override fun properties(properties: IResolvable) {
-        cdkBuilder.properties(properties.let(IResolvable::unwrap))
+        cdkBuilder.properties(properties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1115,7 +1115,7 @@ public open class CfnEntity(
        * @param propertyGroups The property groups.
        */
       override fun propertyGroups(propertyGroups: IResolvable) {
-        cdkBuilder.propertyGroups(propertyGroups.let(IResolvable::unwrap))
+        cdkBuilder.propertyGroups(propertyGroups.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1129,14 +1129,14 @@ public open class CfnEntity(
        * @param status The current status of the composite component.
        */
       override fun status(status: IResolvable) {
-        cdkBuilder.status(status.let(IResolvable::unwrap))
+        cdkBuilder.status(status.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param status The current status of the composite component.
        */
       override fun status(status: StatusProperty) {
-        cdkBuilder.status(status.let(StatusProperty::unwrap))
+        cdkBuilder.status(status.let(StatusProperty.Companion::unwrap))
       }
 
       /**
@@ -1372,7 +1372,7 @@ public open class CfnEntity(
        * @param allowedValues The allowed values.
        */
       override fun allowedValues(allowedValues: IResolvable) {
-        cdkBuilder.allowedValues(allowedValues.let(IResolvable::unwrap))
+        cdkBuilder.allowedValues(allowedValues.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1392,14 +1392,14 @@ public open class CfnEntity(
        * @param nestedType The nested type.
        */
       override fun nestedType(nestedType: IResolvable) {
-        cdkBuilder.nestedType(nestedType.let(IResolvable::unwrap))
+        cdkBuilder.nestedType(nestedType.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param nestedType The nested type.
        */
       override fun nestedType(nestedType: DataTypeProperty) {
-        cdkBuilder.nestedType(nestedType.let(DataTypeProperty::unwrap))
+        cdkBuilder.nestedType(nestedType.let(DataTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -1414,14 +1414,14 @@ public open class CfnEntity(
        * @param relationship The relationship.
        */
       override fun relationship(relationship: IResolvable) {
-        cdkBuilder.relationship(relationship.let(IResolvable::unwrap))
+        cdkBuilder.relationship(relationship.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param relationship The relationship.
        */
       override fun relationship(relationship: RelationshipProperty) {
-        cdkBuilder.relationship(relationship.let(RelationshipProperty::unwrap))
+        cdkBuilder.relationship(relationship.let(RelationshipProperty.Companion::unwrap))
       }
 
       /**
@@ -1685,7 +1685,7 @@ public open class CfnEntity(
        * @param booleanValue A boolean value.
        */
       override fun booleanValue(booleanValue: IResolvable) {
-        cdkBuilder.booleanValue(booleanValue.let(IResolvable::unwrap))
+        cdkBuilder.booleanValue(booleanValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1713,7 +1713,7 @@ public open class CfnEntity(
        * @param listValue A list of multiple values.
        */
       override fun listValue(listValue: IResolvable) {
-        cdkBuilder.listValue(listValue.let(IResolvable::unwrap))
+        cdkBuilder.listValue(listValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1739,7 +1739,7 @@ public open class CfnEntity(
        * @param mapValue An object that maps strings to multiple DataValue objects.
        */
       override fun mapValue(mapValue: IResolvable) {
-        cdkBuilder.mapValue(mapValue.let(IResolvable::unwrap))
+        cdkBuilder.mapValue(mapValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2112,7 +2112,7 @@ public open class CfnEntity(
        * @param configuration The configuration.
        */
       override fun configuration(configuration: IResolvable) {
-        cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+        cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2126,14 +2126,14 @@ public open class CfnEntity(
        * @param dataType The data type.
        */
       override fun dataType(dataType: IResolvable) {
-        cdkBuilder.dataType(dataType.let(IResolvable::unwrap))
+        cdkBuilder.dataType(dataType.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dataType The data type.
        */
       override fun dataType(dataType: DataTypeProperty) {
-        cdkBuilder.dataType(dataType.let(DataTypeProperty::unwrap))
+        cdkBuilder.dataType(dataType.let(DataTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -2148,14 +2148,14 @@ public open class CfnEntity(
        * @param defaultValue The default value.
        */
       override fun defaultValue(defaultValue: IResolvable) {
-        cdkBuilder.defaultValue(defaultValue.let(IResolvable::unwrap))
+        cdkBuilder.defaultValue(defaultValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param defaultValue The default value.
        */
       override fun defaultValue(defaultValue: DataValueProperty) {
-        cdkBuilder.defaultValue(defaultValue.let(DataValueProperty::unwrap))
+        cdkBuilder.defaultValue(defaultValue.let(DataValueProperty.Companion::unwrap))
       }
 
       /**
@@ -2177,7 +2177,7 @@ public open class CfnEntity(
        * @param isExternalId Displays if the entity has a external Id.
        */
       override fun isExternalId(isExternalId: IResolvable) {
-        cdkBuilder.isExternalId(isExternalId.let(IResolvable::unwrap))
+        cdkBuilder.isExternalId(isExternalId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2191,7 +2191,7 @@ public open class CfnEntity(
        * @param isFinal Displays if the entity is final.
        */
       override fun isFinal(isFinal: IResolvable) {
-        cdkBuilder.isFinal(isFinal.let(IResolvable::unwrap))
+        cdkBuilder.isFinal(isFinal.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2205,7 +2205,7 @@ public open class CfnEntity(
        * @param isImported Displays if the entity is imported.
        */
       override fun isImported(isImported: IResolvable) {
-        cdkBuilder.isImported(isImported.let(IResolvable::unwrap))
+        cdkBuilder.isImported(isImported.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2219,7 +2219,7 @@ public open class CfnEntity(
        * @param isInherited Displays if the entity is inherited.
        */
       override fun isInherited(isInherited: IResolvable) {
-        cdkBuilder.isInherited(isInherited.let(IResolvable::unwrap))
+        cdkBuilder.isInherited(isInherited.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2233,7 +2233,7 @@ public open class CfnEntity(
        * @param isRequiredInEntity Displays if the entity is a required entity.
        */
       override fun isRequiredInEntity(isRequiredInEntity: IResolvable) {
-        cdkBuilder.isRequiredInEntity(isRequiredInEntity.let(IResolvable::unwrap))
+        cdkBuilder.isRequiredInEntity(isRequiredInEntity.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2247,7 +2247,7 @@ public open class CfnEntity(
        * @param isStoredExternally Displays if the entity is tored externally.
        */
       override fun isStoredExternally(isStoredExternally: IResolvable) {
-        cdkBuilder.isStoredExternally(isStoredExternally.let(IResolvable::unwrap))
+        cdkBuilder.isStoredExternally(isStoredExternally.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2261,7 +2261,7 @@ public open class CfnEntity(
        * @param isTimeSeries Displays if the entity.
        */
       override fun isTimeSeries(isTimeSeries: IResolvable) {
-        cdkBuilder.isTimeSeries(isTimeSeries.let(IResolvable::unwrap))
+        cdkBuilder.isTimeSeries(isTimeSeries.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.iottwinmaker.CfnEntity.DefinitionProperty
@@ -2675,14 +2675,14 @@ public open class CfnEntity(
        * @param value An object that contains information about a value for a time series property.
        */
       override fun `value`(`value`: IResolvable) {
-        cdkBuilder.`value`(`value`.let(IResolvable::unwrap))
+        cdkBuilder.`value`(`value`.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param value An object that contains information about a value for a time series property.
        */
       override fun `value`(`value`: DataValueProperty) {
-        cdkBuilder.`value`(`value`.let(DataValueProperty::unwrap))
+        cdkBuilder.`value`(`value`.let(DataValueProperty.Companion::unwrap))
       }
 
       /**

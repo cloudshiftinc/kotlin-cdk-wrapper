@@ -191,7 +191,7 @@ public interface CfnEndpointProps {
      * *Exactly* : `2`
      */
     override fun eventBuses(eventBuses: IResolvable) {
-      cdkBuilder.eventBuses(eventBuses.let(IResolvable::unwrap))
+      cdkBuilder.eventBuses(eventBuses.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -221,7 +221,7 @@ public interface CfnEndpointProps {
      * `RoleArn` or you don't want event replication enabled, set the state to `DISABLED` .
      */
     override fun replicationConfig(replicationConfig: IResolvable) {
-      cdkBuilder.replicationConfig(replicationConfig.let(IResolvable::unwrap))
+      cdkBuilder.replicationConfig(replicationConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -230,7 +230,7 @@ public interface CfnEndpointProps {
      * `RoleArn` or you don't want event replication enabled, set the state to `DISABLED` .
      */
     override fun replicationConfig(replicationConfig: CfnEndpoint.ReplicationConfigProperty) {
-      cdkBuilder.replicationConfig(replicationConfig.let(CfnEndpoint.ReplicationConfigProperty::unwrap))
+      cdkBuilder.replicationConfig(replicationConfig.let(CfnEndpoint.ReplicationConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -255,14 +255,14 @@ public interface CfnEndpointProps {
      * @param routingConfig The routing configuration of the endpoint. 
      */
     override fun routingConfig(routingConfig: IResolvable) {
-      cdkBuilder.routingConfig(routingConfig.let(IResolvable::unwrap))
+      cdkBuilder.routingConfig(routingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param routingConfig The routing configuration of the endpoint. 
      */
     override fun routingConfig(routingConfig: CfnEndpoint.RoutingConfigProperty) {
-      cdkBuilder.routingConfig(routingConfig.let(CfnEndpoint.RoutingConfigProperty::unwrap))
+      cdkBuilder.routingConfig(routingConfig.let(CfnEndpoint.RoutingConfigProperty.Companion::unwrap))
     }
 
     /**

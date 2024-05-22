@@ -46,8 +46,8 @@ public open class CfnUserPoolDomain(
     id: String,
     props: CfnUserPoolDomainProps,
   ) :
-      this(software.amazon.awscdk.services.cognito.CfnUserPoolDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnUserPoolDomainProps::unwrap))
+      this(software.amazon.awscdk.services.cognito.CfnUserPoolDomain(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnUserPoolDomainProps.Companion::unwrap))
   )
 
   public constructor(
@@ -80,7 +80,7 @@ public open class CfnUserPoolDomain(
    * application.
    */
   public open fun customDomainConfig(`value`: IResolvable) {
-    unwrap(this).setCustomDomainConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCustomDomainConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -88,7 +88,7 @@ public open class CfnUserPoolDomain(
    * application.
    */
   public open fun customDomainConfig(`value`: CustomDomainConfigTypeProperty) {
-    unwrap(this).setCustomDomainConfig(`value`.let(CustomDomainConfigTypeProperty::unwrap))
+    unwrap(this).setCustomDomainConfig(`value`.let(CustomDomainConfigTypeProperty.Companion::unwrap))
   }
 
   /**
@@ -118,7 +118,7 @@ public open class CfnUserPoolDomain(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -220,7 +220,7 @@ public open class CfnUserPoolDomain(
      * sign-in pages for your application. 
      */
     override fun customDomainConfig(customDomainConfig: IResolvable) {
-      cdkBuilder.customDomainConfig(customDomainConfig.let(IResolvable::unwrap))
+      cdkBuilder.customDomainConfig(customDomainConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -234,7 +234,7 @@ public open class CfnUserPoolDomain(
      * sign-in pages for your application. 
      */
     override fun customDomainConfig(customDomainConfig: CustomDomainConfigTypeProperty) {
-      cdkBuilder.customDomainConfig(customDomainConfig.let(CustomDomainConfigTypeProperty::unwrap))
+      cdkBuilder.customDomainConfig(customDomainConfig.let(CustomDomainConfigTypeProperty.Companion::unwrap))
     }
 
     /**

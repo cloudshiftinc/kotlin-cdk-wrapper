@@ -52,8 +52,8 @@ public open class CfnFleet(
     id: String,
     props: CfnFleetProps,
   ) :
-      this(software.amazon.awscdk.services.appstream.CfnFleet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFleetProps::unwrap))
+      this(software.amazon.awscdk.services.appstream.CfnFleet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFleetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -77,14 +77,14 @@ public open class CfnFleet(
    * The desired capacity for the fleet.
    */
   public open fun computeCapacity(`value`: IResolvable) {
-    unwrap(this).setComputeCapacity(`value`.let(IResolvable::unwrap))
+    unwrap(this).setComputeCapacity(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The desired capacity for the fleet.
    */
   public open fun computeCapacity(`value`: ComputeCapacityProperty) {
-    unwrap(this).setComputeCapacity(`value`.let(ComputeCapacityProperty::unwrap))
+    unwrap(this).setComputeCapacity(`value`.let(ComputeCapacityProperty.Companion::unwrap))
   }
 
   /**
@@ -143,7 +143,7 @@ public open class CfnFleet(
    * Active Directory domain.
    */
   public open fun domainJoinInfo(`value`: IResolvable) {
-    unwrap(this).setDomainJoinInfo(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDomainJoinInfo(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -151,7 +151,7 @@ public open class CfnFleet(
    * Active Directory domain.
    */
   public open fun domainJoinInfo(`value`: DomainJoinInfoProperty) {
-    unwrap(this).setDomainJoinInfo(`value`.let(DomainJoinInfoProperty::unwrap))
+    unwrap(this).setDomainJoinInfo(`value`.let(DomainJoinInfoProperty.Companion::unwrap))
   }
 
   /**
@@ -180,7 +180,7 @@ public open class CfnFleet(
    * Enables or disables default internet access for the fleet.
    */
   public open fun enableDefaultInternetAccess(`value`: IResolvable) {
-    unwrap(this).setEnableDefaultInternetAccess(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableDefaultInternetAccess(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -252,7 +252,7 @@ public open class CfnFleet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -340,14 +340,14 @@ public open class CfnFleet(
    * The S3 location of the session scripts configuration zip file.
    */
   public open fun sessionScriptS3Location(`value`: IResolvable) {
-    unwrap(this).setSessionScriptS3Location(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSessionScriptS3Location(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The S3 location of the session scripts configuration zip file.
    */
   public open fun sessionScriptS3Location(`value`: S3LocationProperty) {
-    unwrap(this).setSessionScriptS3Location(`value`.let(S3LocationProperty::unwrap))
+    unwrap(this).setSessionScriptS3Location(`value`.let(S3LocationProperty.Companion::unwrap))
   }
 
   /**
@@ -389,7 +389,7 @@ public open class CfnFleet(
    * An array of key-value pairs.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -428,14 +428,14 @@ public open class CfnFleet(
    * The VPC configuration for the fleet.
    */
   public open fun vpcConfig(`value`: IResolvable) {
-    unwrap(this).setVpcConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVpcConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The VPC configuration for the fleet.
    */
   public open fun vpcConfig(`value`: VpcConfigProperty) {
-    unwrap(this).setVpcConfig(`value`.let(VpcConfigProperty::unwrap))
+    unwrap(this).setVpcConfig(`value`.let(VpcConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -895,7 +895,7 @@ public open class CfnFleet(
      * @param computeCapacity The desired capacity for the fleet. 
      */
     override fun computeCapacity(computeCapacity: IResolvable) {
-      cdkBuilder.computeCapacity(computeCapacity.let(IResolvable::unwrap))
+      cdkBuilder.computeCapacity(computeCapacity.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -907,7 +907,7 @@ public open class CfnFleet(
      * @param computeCapacity The desired capacity for the fleet. 
      */
     override fun computeCapacity(computeCapacity: ComputeCapacityProperty) {
-      cdkBuilder.computeCapacity(computeCapacity.let(ComputeCapacityProperty::unwrap))
+      cdkBuilder.computeCapacity(computeCapacity.let(ComputeCapacityProperty.Companion::unwrap))
     }
 
     /**
@@ -971,7 +971,7 @@ public open class CfnFleet(
      * the fleet to a Microsoft Active Directory domain. 
      */
     override fun domainJoinInfo(domainJoinInfo: IResolvable) {
-      cdkBuilder.domainJoinInfo(domainJoinInfo.let(IResolvable::unwrap))
+      cdkBuilder.domainJoinInfo(domainJoinInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -985,7 +985,7 @@ public open class CfnFleet(
      * the fleet to a Microsoft Active Directory domain. 
      */
     override fun domainJoinInfo(domainJoinInfo: DomainJoinInfoProperty) {
-      cdkBuilder.domainJoinInfo(domainJoinInfo.let(DomainJoinInfoProperty::unwrap))
+      cdkBuilder.domainJoinInfo(domainJoinInfo.let(DomainJoinInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -1022,7 +1022,7 @@ public open class CfnFleet(
      * 
      */
     override fun enableDefaultInternetAccess(enableDefaultInternetAccess: IResolvable) {
-      cdkBuilder.enableDefaultInternetAccess(enableDefaultInternetAccess.let(IResolvable::unwrap))
+      cdkBuilder.enableDefaultInternetAccess(enableDefaultInternetAccess.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1242,7 +1242,7 @@ public open class CfnFleet(
      * 
      */
     override fun sessionScriptS3Location(sessionScriptS3Location: IResolvable) {
-      cdkBuilder.sessionScriptS3Location(sessionScriptS3Location.let(IResolvable::unwrap))
+      cdkBuilder.sessionScriptS3Location(sessionScriptS3Location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1255,7 +1255,7 @@ public open class CfnFleet(
      * 
      */
     override fun sessionScriptS3Location(sessionScriptS3Location: S3LocationProperty) {
-      cdkBuilder.sessionScriptS3Location(sessionScriptS3Location.let(S3LocationProperty::unwrap))
+      cdkBuilder.sessionScriptS3Location(sessionScriptS3Location.let(S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -1297,7 +1297,7 @@ public open class CfnFleet(
      * @param tags An array of key-value pairs. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1344,7 +1344,7 @@ public open class CfnFleet(
      * @param vpcConfig The VPC configuration for the fleet. 
      */
     override fun vpcConfig(vpcConfig: IResolvable) {
-      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1356,7 +1356,7 @@ public open class CfnFleet(
      * @param vpcConfig The VPC configuration for the fleet. 
      */
     override fun vpcConfig(vpcConfig: VpcConfigProperty) {
-      cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
+      cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty.Companion::unwrap))
     }
 
     /**

@@ -66,8 +66,8 @@ public open class CfnStorageSystem(
     id: String,
     props: CfnStorageSystemProps,
   ) :
-      this(software.amazon.awscdk.services.datasync.CfnStorageSystem(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStorageSystemProps::unwrap))
+      this(software.amazon.awscdk.services.datasync.CfnStorageSystem(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStorageSystemProps.Companion::unwrap))
   )
 
   public constructor(
@@ -136,7 +136,7 @@ public open class CfnStorageSystem(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -162,7 +162,7 @@ public open class CfnStorageSystem(
    * your on-premises storage system.
    */
   public open fun serverConfiguration(`value`: IResolvable) {
-    unwrap(this).setServerConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setServerConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -170,7 +170,7 @@ public open class CfnStorageSystem(
    * your on-premises storage system.
    */
   public open fun serverConfiguration(`value`: ServerConfigurationProperty) {
-    unwrap(this).setServerConfiguration(`value`.let(ServerConfigurationProperty::unwrap))
+    unwrap(this).setServerConfiguration(`value`.let(ServerConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -193,7 +193,7 @@ public open class CfnStorageSystem(
    * interface.
    */
   public open fun serverCredentials(`value`: IResolvable) {
-    unwrap(this).setServerCredentials(`value`.let(IResolvable::unwrap))
+    unwrap(this).setServerCredentials(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -201,7 +201,7 @@ public open class CfnStorageSystem(
    * interface.
    */
   public open fun serverCredentials(`value`: ServerCredentialsProperty) {
-    unwrap(this).setServerCredentials(`value`.let(ServerCredentialsProperty::unwrap))
+    unwrap(this).setServerCredentials(`value`.let(ServerCredentialsProperty.Companion::unwrap))
   }
 
   /**
@@ -242,7 +242,7 @@ public open class CfnStorageSystem(
    * Specifies labels that help you categorize, filter, and search for your AWS resources.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -464,7 +464,7 @@ public open class CfnStorageSystem(
      * with the management interface of your on-premises storage system. 
      */
     override fun serverConfiguration(serverConfiguration: IResolvable) {
-      cdkBuilder.serverConfiguration(serverConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.serverConfiguration(serverConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -476,7 +476,7 @@ public open class CfnStorageSystem(
      * with the management interface of your on-premises storage system. 
      */
     override fun serverConfiguration(serverConfiguration: ServerConfigurationProperty) {
-      cdkBuilder.serverConfiguration(serverConfiguration.let(ServerConfigurationProperty::unwrap))
+      cdkBuilder.serverConfiguration(serverConfiguration.let(ServerConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -502,7 +502,7 @@ public open class CfnStorageSystem(
      * storage system's management interface. 
      */
     override fun serverCredentials(serverCredentials: IResolvable) {
-      cdkBuilder.serverCredentials(serverCredentials.let(IResolvable::unwrap))
+      cdkBuilder.serverCredentials(serverCredentials.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -514,7 +514,7 @@ public open class CfnStorageSystem(
      * storage system's management interface. 
      */
     override fun serverCredentials(serverCredentials: ServerCredentialsProperty) {
-      cdkBuilder.serverCredentials(serverCredentials.let(ServerCredentialsProperty::unwrap))
+      cdkBuilder.serverCredentials(serverCredentials.let(ServerCredentialsProperty.Companion::unwrap))
     }
 
     /**
@@ -557,7 +557,7 @@ public open class CfnStorageSystem(
      * resources. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

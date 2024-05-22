@@ -70,8 +70,8 @@ public open class CfnInstance(
     id: String,
     props: CfnInstanceProps,
   ) :
-      this(software.amazon.awscdk.services.connect.CfnInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInstanceProps::unwrap))
+      this(software.amazon.awscdk.services.connect.CfnInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInstanceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -117,14 +117,14 @@ public open class CfnInstance(
    * A toggle for an individual feature at the instance level.
    */
   public open fun attributes(`value`: IResolvable) {
-    unwrap(this).setAttributes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A toggle for an individual feature at the instance level.
    */
   public open fun attributes(`value`: AttributesProperty) {
-    unwrap(this).setAttributes(`value`.let(AttributesProperty::unwrap))
+    unwrap(this).setAttributes(`value`.let(AttributesProperty.Companion::unwrap))
   }
 
   /**
@@ -171,7 +171,7 @@ public open class CfnInstance(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -195,7 +195,7 @@ public open class CfnInstance(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -292,7 +292,7 @@ public open class CfnInstance(
      * @param attributes A toggle for an individual feature at the instance level. 
      */
     override fun attributes(attributes: IResolvable) {
-      cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+      cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -302,7 +302,7 @@ public open class CfnInstance(
      * @param attributes A toggle for an individual feature at the instance level. 
      */
     override fun attributes(attributes: AttributesProperty) {
-      cdkBuilder.attributes(attributes.let(AttributesProperty::unwrap))
+      cdkBuilder.attributes(attributes.let(AttributesProperty.Companion::unwrap))
     }
 
     /**
@@ -356,7 +356,7 @@ public open class CfnInstance(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -561,7 +561,7 @@ public open class CfnInstance(
        * instance.
        */
       override fun autoResolveBestVoices(autoResolveBestVoices: IResolvable) {
-        cdkBuilder.autoResolveBestVoices(autoResolveBestVoices.let(IResolvable::unwrap))
+        cdkBuilder.autoResolveBestVoices(autoResolveBestVoices.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -575,7 +575,7 @@ public open class CfnInstance(
        * @param contactLens Boolean flag which enables CONTACT_LENS on an instance.
        */
       override fun contactLens(contactLens: IResolvable) {
-        cdkBuilder.contactLens(contactLens.let(IResolvable::unwrap))
+        cdkBuilder.contactLens(contactLens.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -589,7 +589,7 @@ public open class CfnInstance(
        * @param contactflowLogs Boolean flag which enables CONTACTFLOW_LOGS on an instance.
        */
       override fun contactflowLogs(contactflowLogs: IResolvable) {
-        cdkBuilder.contactflowLogs(contactflowLogs.let(IResolvable::unwrap))
+        cdkBuilder.contactflowLogs(contactflowLogs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -603,7 +603,7 @@ public open class CfnInstance(
        * @param earlyMedia Boolean flag which enables EARLY_MEDIA on an instance.
        */
       override fun earlyMedia(earlyMedia: IResolvable) {
-        cdkBuilder.earlyMedia(earlyMedia.let(IResolvable::unwrap))
+        cdkBuilder.earlyMedia(earlyMedia.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -617,7 +617,7 @@ public open class CfnInstance(
        * @param inboundCalls Mandatory element which enables inbound calls on new instance. 
        */
       override fun inboundCalls(inboundCalls: IResolvable) {
-        cdkBuilder.inboundCalls(inboundCalls.let(IResolvable::unwrap))
+        cdkBuilder.inboundCalls(inboundCalls.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -631,7 +631,7 @@ public open class CfnInstance(
        * @param outboundCalls Mandatory element which enables outbound calls on new instance. 
        */
       override fun outboundCalls(outboundCalls: IResolvable) {
-        cdkBuilder.outboundCalls(outboundCalls.let(IResolvable::unwrap))
+        cdkBuilder.outboundCalls(outboundCalls.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -645,7 +645,7 @@ public open class CfnInstance(
        * @param useCustomTtsVoices Boolean flag which enables USE_CUSTOM_TTS_VOICES on an instance.
        */
       override fun useCustomTtsVoices(useCustomTtsVoices: IResolvable) {
-        cdkBuilder.useCustomTtsVoices(useCustomTtsVoices.let(IResolvable::unwrap))
+        cdkBuilder.useCustomTtsVoices(useCustomTtsVoices.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.connect.CfnInstance.AttributesProperty =

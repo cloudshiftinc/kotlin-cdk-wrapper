@@ -207,7 +207,7 @@ public interface CfnConfigurationProps {
      * @param tags Create tags when creating the configuration.
      */
     override fun tags(tags: List<CfnConfiguration.TagsEntryProperty>) {
-      cdkBuilder.tags(tags.map(CfnConfiguration.TagsEntryProperty::unwrap))
+      cdkBuilder.tags(tags.map(CfnConfiguration.TagsEntryProperty.Companion::unwrap))
     }
 
     /**

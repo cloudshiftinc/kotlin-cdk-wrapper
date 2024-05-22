@@ -154,7 +154,7 @@ public interface CfnApplicationProps {
      * prevent your application from accumulating too many versions.
      */
     override fun resourceLifecycleConfig(resourceLifecycleConfig: IResolvable) {
-      cdkBuilder.resourceLifecycleConfig(resourceLifecycleConfig.let(IResolvable::unwrap))
+      cdkBuilder.resourceLifecycleConfig(resourceLifecycleConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -163,7 +163,7 @@ public interface CfnApplicationProps {
      */
     override
         fun resourceLifecycleConfig(resourceLifecycleConfig: CfnApplication.ApplicationResourceLifecycleConfigProperty) {
-      cdkBuilder.resourceLifecycleConfig(resourceLifecycleConfig.let(CfnApplication.ApplicationResourceLifecycleConfigProperty::unwrap))
+      cdkBuilder.resourceLifecycleConfig(resourceLifecycleConfig.let(CfnApplication.ApplicationResourceLifecycleConfigProperty.Companion::unwrap))
     }
 
     /**

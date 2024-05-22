@@ -72,7 +72,7 @@ public open class AssetCode(
 
   public constructor(path: String, options: AssetOptions) :
       this(software.amazon.awscdk.services.appsync.AssetCode(path,
-      options.let(AssetOptions::unwrap))
+      options.let(AssetOptions.Companion::unwrap))
   )
 
   public constructor(path: String, options: AssetOptions.Builder.() -> Unit) : this(path,
@@ -85,7 +85,7 @@ public open class AssetCode(
    * @param scope 
    */
   public override fun bind(scope: Construct): CodeConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(CodeConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(CodeConfig::wrap)
 
   /**
    * The path to the asset file.
@@ -288,7 +288,7 @@ public open class AssetCode(
      * @param assetHashType Specifies the type of hash to calculate for this asset. 
      */
     override fun assetHashType(assetHashType: AssetHashType) {
-      cdkBuilder.assetHashType(assetHashType.let(AssetHashType::unwrap))
+      cdkBuilder.assetHashType(assetHashType.let(AssetHashType.Companion::unwrap))
     }
 
     /**
@@ -306,7 +306,7 @@ public open class AssetCode(
      * bundling provider. 
      */
     override fun bundling(bundling: BundlingOptions) {
-      cdkBuilder.bundling(bundling.let(BundlingOptions::unwrap))
+      cdkBuilder.bundling(bundling.let(BundlingOptions.Companion::unwrap))
     }
 
     /**
@@ -383,7 +383,7 @@ public open class AssetCode(
      * @param followSymlinks A strategy for how to handle symlinks. 
      */
     override fun followSymlinks(followSymlinks: SymlinkFollowMode) {
-      cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode::unwrap))
+      cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode.Companion::unwrap))
     }
 
     /**
@@ -394,7 +394,7 @@ public open class AssetCode(
      * @param ignoreMode The ignore behavior to use for `exclude` patterns. 
      */
     override fun ignoreMode(ignoreMode: IgnoreMode) {
-      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode::unwrap))
+      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode.Companion::unwrap))
     }
 
     /**
@@ -407,7 +407,7 @@ public open class AssetCode(
      * @param readers A list of principals that should be able to read this asset from S3. 
      */
     override fun readers(readers: List<IGrantable>) {
-      cdkBuilder.readers(readers.map(IGrantable::unwrap))
+      cdkBuilder.readers(readers.map(IGrantable.Companion::unwrap))
     }
 
     /**

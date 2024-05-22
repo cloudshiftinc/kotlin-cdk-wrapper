@@ -490,7 +490,7 @@ public interface CfnPlaybackConfigurationProps {
      * Suppression](https://docs.aws.amazon.com/mediatailor/latest/ug/ad-behavior.html) .
      */
     override fun availSuppression(availSuppression: IResolvable) {
-      cdkBuilder.availSuppression(availSuppression.let(IResolvable::unwrap))
+      cdkBuilder.availSuppression(availSuppression.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -501,7 +501,7 @@ public interface CfnPlaybackConfigurationProps {
      */
     override
         fun availSuppression(availSuppression: CfnPlaybackConfiguration.AvailSuppressionProperty) {
-      cdkBuilder.availSuppression(availSuppression.let(CfnPlaybackConfiguration.AvailSuppressionProperty::unwrap))
+      cdkBuilder.availSuppression(availSuppression.let(CfnPlaybackConfiguration.AvailSuppressionProperty.Companion::unwrap))
     }
 
     /**
@@ -523,7 +523,7 @@ public interface CfnPlaybackConfigurationProps {
      * [Bumpers](https://docs.aws.amazon.com/mediatailor/latest/ug/bumpers.html) .
      */
     override fun bumper(bumper: IResolvable) {
-      cdkBuilder.bumper(bumper.let(IResolvable::unwrap))
+      cdkBuilder.bumper(bumper.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -533,7 +533,7 @@ public interface CfnPlaybackConfigurationProps {
      * [Bumpers](https://docs.aws.amazon.com/mediatailor/latest/ug/bumpers.html) .
      */
     override fun bumper(bumper: CfnPlaybackConfiguration.BumperProperty) {
-      cdkBuilder.bumper(bumper.let(CfnPlaybackConfiguration.BumperProperty::unwrap))
+      cdkBuilder.bumper(bumper.let(CfnPlaybackConfiguration.BumperProperty.Companion::unwrap))
     }
 
     /**
@@ -552,7 +552,7 @@ public interface CfnPlaybackConfigurationProps {
      * Amazon CloudFront, for content and ad segment management.
      */
     override fun cdnConfiguration(cdnConfiguration: IResolvable) {
-      cdkBuilder.cdnConfiguration(cdnConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.cdnConfiguration(cdnConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -561,7 +561,7 @@ public interface CfnPlaybackConfigurationProps {
      */
     override
         fun cdnConfiguration(cdnConfiguration: CfnPlaybackConfiguration.CdnConfigurationProperty) {
-      cdkBuilder.cdnConfiguration(cdnConfiguration.let(CfnPlaybackConfiguration.CdnConfigurationProperty::unwrap))
+      cdkBuilder.cdnConfiguration(cdnConfiguration.let(CfnPlaybackConfiguration.CdnConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -581,7 +581,7 @@ public interface CfnPlaybackConfigurationProps {
      * Variables](https://docs.aws.amazon.com/mediatailor/latest/ug/variables-domain.html) .
      */
     override fun configurationAliases(configurationAliases: IResolvable) {
-      cdkBuilder.configurationAliases(configurationAliases.let(IResolvable::unwrap))
+      cdkBuilder.configurationAliases(configurationAliases.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -598,7 +598,7 @@ public interface CfnPlaybackConfigurationProps {
      * @param dashConfiguration The configuration for a DASH source.
      */
     override fun dashConfiguration(dashConfiguration: IResolvable) {
-      cdkBuilder.dashConfiguration(dashConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.dashConfiguration(dashConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -606,7 +606,7 @@ public interface CfnPlaybackConfigurationProps {
      */
     override
         fun dashConfiguration(dashConfiguration: CfnPlaybackConfiguration.DashConfigurationProperty) {
-      cdkBuilder.dashConfiguration(dashConfiguration.let(CfnPlaybackConfiguration.DashConfigurationProperty::unwrap))
+      cdkBuilder.dashConfiguration(dashConfiguration.let(CfnPlaybackConfiguration.DashConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -623,7 +623,7 @@ public interface CfnPlaybackConfigurationProps {
      * @param hlsConfiguration The configuration for HLS content.
      */
     override fun hlsConfiguration(hlsConfiguration: IResolvable) {
-      cdkBuilder.hlsConfiguration(hlsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.hlsConfiguration(hlsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -631,7 +631,7 @@ public interface CfnPlaybackConfigurationProps {
      */
     override
         fun hlsConfiguration(hlsConfiguration: CfnPlaybackConfiguration.HlsConfigurationProperty) {
-      cdkBuilder.hlsConfiguration(hlsConfiguration.let(CfnPlaybackConfiguration.HlsConfigurationProperty::unwrap))
+      cdkBuilder.hlsConfiguration(hlsConfiguration.let(CfnPlaybackConfiguration.HlsConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -647,7 +647,7 @@ public interface CfnPlaybackConfigurationProps {
      * @param livePreRollConfiguration The configuration for pre-roll ad insertion.
      */
     override fun livePreRollConfiguration(livePreRollConfiguration: IResolvable) {
-      cdkBuilder.livePreRollConfiguration(livePreRollConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.livePreRollConfiguration(livePreRollConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -655,7 +655,7 @@ public interface CfnPlaybackConfigurationProps {
      */
     override
         fun livePreRollConfiguration(livePreRollConfiguration: CfnPlaybackConfiguration.LivePreRollConfigurationProperty) {
-      cdkBuilder.livePreRollConfiguration(livePreRollConfiguration.let(CfnPlaybackConfiguration.LivePreRollConfigurationProperty::unwrap))
+      cdkBuilder.livePreRollConfiguration(livePreRollConfiguration.let(CfnPlaybackConfiguration.LivePreRollConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -674,7 +674,7 @@ public interface CfnPlaybackConfigurationProps {
      * MediaTailor.
      */
     override fun manifestProcessingRules(manifestProcessingRules: IResolvable) {
-      cdkBuilder.manifestProcessingRules(manifestProcessingRules.let(IResolvable::unwrap))
+      cdkBuilder.manifestProcessingRules(manifestProcessingRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -684,7 +684,7 @@ public interface CfnPlaybackConfigurationProps {
      */
     override
         fun manifestProcessingRules(manifestProcessingRules: CfnPlaybackConfiguration.ManifestProcessingRulesProperty) {
-      cdkBuilder.manifestProcessingRules(manifestProcessingRules.let(CfnPlaybackConfiguration.ManifestProcessingRulesProperty::unwrap))
+      cdkBuilder.manifestProcessingRules(manifestProcessingRules.let(CfnPlaybackConfiguration.ManifestProcessingRulesProperty.Companion::unwrap))
     }
 
     /**
@@ -740,7 +740,7 @@ public interface CfnPlaybackConfigurationProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

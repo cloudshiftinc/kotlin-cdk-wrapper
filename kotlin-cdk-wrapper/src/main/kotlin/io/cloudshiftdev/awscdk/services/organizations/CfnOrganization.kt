@@ -62,7 +62,7 @@ public open class CfnOrganization(
   cdkObject: software.amazon.awscdk.services.organizations.CfnOrganization,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.organizations.CfnOrganization(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.organizations.CfnOrganization(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -71,8 +71,8 @@ public open class CfnOrganization(
     id: String,
     props: CfnOrganizationProps,
   ) :
-      this(software.amazon.awscdk.services.organizations.CfnOrganization(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnOrganizationProps::unwrap))
+      this(software.amazon.awscdk.services.organizations.CfnOrganization(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnOrganizationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -137,7 +137,7 @@ public open class CfnOrganization(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

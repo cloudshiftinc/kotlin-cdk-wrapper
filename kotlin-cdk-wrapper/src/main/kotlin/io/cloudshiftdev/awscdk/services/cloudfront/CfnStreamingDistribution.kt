@@ -76,8 +76,8 @@ public open class CfnStreamingDistribution(
     id: String,
     props: CfnStreamingDistributionProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStreamingDistributionProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.CfnStreamingDistribution(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStreamingDistributionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -103,7 +103,7 @@ public open class CfnStreamingDistribution(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -115,14 +115,14 @@ public open class CfnStreamingDistribution(
    * The current configuration information for the RTMP distribution.
    */
   public open fun streamingDistributionConfig(`value`: IResolvable) {
-    unwrap(this).setStreamingDistributionConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStreamingDistributionConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The current configuration information for the RTMP distribution.
    */
   public open fun streamingDistributionConfig(`value`: StreamingDistributionConfigProperty) {
-    unwrap(this).setStreamingDistributionConfig(`value`.let(StreamingDistributionConfigProperty::unwrap))
+    unwrap(this).setStreamingDistributionConfig(`value`.let(StreamingDistributionConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -149,7 +149,7 @@ public open class CfnStreamingDistribution(
    * A complex type that contains zero or more `Tag` elements.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -227,7 +227,7 @@ public open class CfnStreamingDistribution(
      * distribution. 
      */
     override fun streamingDistributionConfig(streamingDistributionConfig: IResolvable) {
-      cdkBuilder.streamingDistributionConfig(streamingDistributionConfig.let(IResolvable::unwrap))
+      cdkBuilder.streamingDistributionConfig(streamingDistributionConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -239,7 +239,7 @@ public open class CfnStreamingDistribution(
      */
     override
         fun streamingDistributionConfig(streamingDistributionConfig: StreamingDistributionConfigProperty) {
-      cdkBuilder.streamingDistributionConfig(streamingDistributionConfig.let(StreamingDistributionConfigProperty::unwrap))
+      cdkBuilder.streamingDistributionConfig(streamingDistributionConfig.let(StreamingDistributionConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -263,7 +263,7 @@ public open class CfnStreamingDistribution(
      * @param tags A complex type that contains zero or more `Tag` elements. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -425,7 +425,7 @@ public open class CfnStreamingDistribution(
        * specify values for `Bucket` and `Prefix` , the values are automatically deleted.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -924,7 +924,7 @@ public open class CfnStreamingDistribution(
        * content. 
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -932,7 +932,7 @@ public open class CfnStreamingDistribution(
        * streaming distribution.
        */
       override fun logging(logging: IResolvable) {
-        cdkBuilder.logging(logging.let(IResolvable::unwrap))
+        cdkBuilder.logging(logging.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -940,7 +940,7 @@ public open class CfnStreamingDistribution(
        * streaming distribution.
        */
       override fun logging(logging: LoggingProperty) {
-        cdkBuilder.logging(logging.let(LoggingProperty::unwrap))
+        cdkBuilder.logging(logging.let(LoggingProperty.Companion::unwrap))
       }
 
       /**
@@ -965,7 +965,7 @@ public open class CfnStreamingDistribution(
        * which you want CloudFront to get your media files for distribution. 
        */
       override fun s3Origin(s3Origin: IResolvable) {
-        cdkBuilder.s3Origin(s3Origin.let(IResolvable::unwrap))
+        cdkBuilder.s3Origin(s3Origin.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -973,7 +973,7 @@ public open class CfnStreamingDistribution(
        * which you want CloudFront to get your media files for distribution. 
        */
       override fun s3Origin(s3Origin: S3OriginProperty) {
-        cdkBuilder.s3Origin(s3Origin.let(S3OriginProperty::unwrap))
+        cdkBuilder.s3Origin(s3Origin.let(S3OriginProperty.Companion::unwrap))
       }
 
       /**
@@ -995,7 +995,7 @@ public open class CfnStreamingDistribution(
        * in the *Amazon CloudFront Developer Guide* .
        */
       override fun trustedSigners(trustedSigners: IResolvable) {
-        cdkBuilder.trustedSigners(trustedSigners.let(IResolvable::unwrap))
+        cdkBuilder.trustedSigners(trustedSigners.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1008,7 +1008,7 @@ public open class CfnStreamingDistribution(
        * in the *Amazon CloudFront Developer Guide* .
        */
       override fun trustedSigners(trustedSigners: TrustedSignersProperty) {
-        cdkBuilder.trustedSigners(trustedSigners.let(TrustedSignersProperty::unwrap))
+        cdkBuilder.trustedSigners(trustedSigners.let(TrustedSignersProperty.Companion::unwrap))
       }
 
       /**
@@ -1230,7 +1230,7 @@ public open class CfnStreamingDistribution(
        * If not, this field is `false` .
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

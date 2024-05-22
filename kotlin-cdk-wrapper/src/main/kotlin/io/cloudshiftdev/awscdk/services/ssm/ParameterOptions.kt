@@ -161,7 +161,7 @@ public interface ParameterOptions {
      * @param tier The tier of the string parameter.
      */
     override fun tier(tier: ParameterTier) {
-      cdkBuilder.tier(tier.let(ParameterTier::unwrap))
+      cdkBuilder.tier(tier.let(ParameterTier.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ssm.ParameterOptions = cdkBuilder.build()

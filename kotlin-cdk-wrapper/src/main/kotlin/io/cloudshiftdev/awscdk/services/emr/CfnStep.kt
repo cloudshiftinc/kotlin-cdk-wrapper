@@ -55,8 +55,8 @@ public open class CfnStep(
     id: String,
     props: CfnStepProps,
   ) :
-      this(software.amazon.awscdk.services.emr.CfnStep(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStepProps::unwrap))
+      this(software.amazon.awscdk.services.emr.CfnStep(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStepProps.Companion::unwrap))
   )
 
   public constructor(
@@ -94,7 +94,7 @@ public open class CfnStep(
    * whose main function will be executed.
    */
   public open fun hadoopJarStep(`value`: IResolvable) {
-    unwrap(this).setHadoopJarStep(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHadoopJarStep(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -102,7 +102,7 @@ public open class CfnStep(
    * whose main function will be executed.
    */
   public open fun hadoopJarStep(`value`: HadoopJarStepConfigProperty) {
-    unwrap(this).setHadoopJarStep(`value`.let(HadoopJarStepConfigProperty::unwrap))
+    unwrap(this).setHadoopJarStep(`value`.let(HadoopJarStepConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -120,7 +120,7 @@ public open class CfnStep(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -251,7 +251,7 @@ public open class CfnStep(
      * consisting of a JAR file whose main function will be executed. 
      */
     override fun hadoopJarStep(hadoopJarStep: IResolvable) {
-      cdkBuilder.hadoopJarStep(hadoopJarStep.let(IResolvable::unwrap))
+      cdkBuilder.hadoopJarStep(hadoopJarStep.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -266,7 +266,7 @@ public open class CfnStep(
      * consisting of a JAR file whose main function will be executed. 
      */
     override fun hadoopJarStep(hadoopJarStep: HadoopJarStepConfigProperty) {
-      cdkBuilder.hadoopJarStep(hadoopJarStep.let(HadoopJarStepConfigProperty::unwrap))
+      cdkBuilder.hadoopJarStep(hadoopJarStep.let(HadoopJarStepConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -472,7 +472,7 @@ public open class CfnStep(
        * You can use these properties to pass key value pairs to your main function.
        */
       override fun stepProperties(stepProperties: IResolvable) {
-        cdkBuilder.stepProperties(stepProperties.let(IResolvable::unwrap))
+        cdkBuilder.stepProperties(stepProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**

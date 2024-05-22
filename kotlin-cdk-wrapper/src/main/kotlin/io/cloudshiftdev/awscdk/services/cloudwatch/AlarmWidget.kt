@@ -28,7 +28,7 @@ public open class AlarmWidget(
   cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmWidget,
 ) : ConcreteWidget(cdkObject) {
   public constructor(props: AlarmWidgetProps) :
-      this(software.amazon.awscdk.services.cloudwatch.AlarmWidget(props.let(AlarmWidgetProps::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.AlarmWidget(props.let(AlarmWidgetProps.Companion::unwrap))
   )
 
   public constructor(props: AlarmWidgetProps.Builder.() -> Unit) : this(AlarmWidgetProps(props)
@@ -119,7 +119,7 @@ public open class AlarmWidget(
      * @param alarm The alarm to show. 
      */
     override fun alarm(alarm: IAlarm) {
-      cdkBuilder.alarm(alarm.let(IAlarm::unwrap))
+      cdkBuilder.alarm(alarm.let(IAlarm.Companion::unwrap))
     }
 
     /**
@@ -142,7 +142,7 @@ public open class AlarmWidget(
      * @param leftYAxis Left Y axis. 
      */
     override fun leftYAxis(leftYAxis: YAxisProps) {
-      cdkBuilder.leftYAxis(leftYAxis.let(YAxisProps::unwrap))
+      cdkBuilder.leftYAxis(leftYAxis.let(YAxisProps.Companion::unwrap))
     }
 
     /**

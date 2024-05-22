@@ -44,7 +44,7 @@ public open class BootstraplessSynthesizer(
   )
 
   public constructor(props: BootstraplessSynthesizerProps) :
-      this(software.amazon.awscdk.BootstraplessSynthesizer(props.let(BootstraplessSynthesizerProps::unwrap))
+      this(software.amazon.awscdk.BootstraplessSynthesizer(props.let(BootstraplessSynthesizerProps.Companion::unwrap))
   )
 
   public constructor(props: BootstraplessSynthesizerProps.Builder.() -> Unit) :
@@ -65,7 +65,7 @@ public open class BootstraplessSynthesizer(
    * @param _asset 
    */
   public override fun addDockerImageAsset(asset: DockerImageAssetSource): DockerImageAssetLocation =
-      unwrap(this).addDockerImageAsset(asset.let(DockerImageAssetSource::unwrap)).let(DockerImageAssetLocation::wrap)
+      unwrap(this).addDockerImageAsset(asset.let(DockerImageAssetSource.Companion::unwrap)).let(DockerImageAssetLocation::wrap)
 
   /**
    * Register a Docker Image Asset.
@@ -99,7 +99,7 @@ public open class BootstraplessSynthesizer(
    * @param _asset 
    */
   public override fun addFileAsset(asset: FileAssetSource): FileAssetLocation =
-      unwrap(this).addFileAsset(asset.let(FileAssetSource::unwrap)).let(FileAssetLocation::wrap)
+      unwrap(this).addFileAsset(asset.let(FileAssetSource.Companion::unwrap)).let(FileAssetLocation::wrap)
 
   /**
    * Register a File Asset.
@@ -125,7 +125,7 @@ public open class BootstraplessSynthesizer(
    * @param session 
    */
   public override fun synthesize(session: ISynthesisSession) {
-    unwrap(this).synthesize(session.let(ISynthesisSession::unwrap))
+    unwrap(this).synthesize(session.let(ISynthesisSession.Companion::unwrap))
   }
 
   /**

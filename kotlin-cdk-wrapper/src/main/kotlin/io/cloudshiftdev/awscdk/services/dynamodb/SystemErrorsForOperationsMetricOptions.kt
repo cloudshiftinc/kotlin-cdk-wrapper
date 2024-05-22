@@ -188,7 +188,7 @@ public interface SystemErrorsForOperationsMetricOptions : MetricOptions {
      * @param operations The operations to apply the metric to.
      */
     override fun operations(operations: List<Operation>) {
-      cdkBuilder.operations(operations.map(Operation::unwrap))
+      cdkBuilder.operations(operations.map(Operation.Companion::unwrap))
     }
 
     /**
@@ -201,7 +201,7 @@ public interface SystemErrorsForOperationsMetricOptions : MetricOptions {
      * @param period The period over which the specified statistic is applied.
      */
     override fun period(period: Duration) {
-      cdkBuilder.period(period.let(Duration::unwrap))
+      cdkBuilder.period(period.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -245,7 +245,7 @@ public interface SystemErrorsForOperationsMetricOptions : MetricOptions {
      * CloudWatch does not honor this property for graphs.
      */
     override fun unit(unit: CloudwatchUnit) {
-      cdkBuilder.unit(unit.let(CloudwatchUnit::unwrap))
+      cdkBuilder.unit(unit.let(CloudwatchUnit.Companion::unwrap))
     }
 
     public fun build():

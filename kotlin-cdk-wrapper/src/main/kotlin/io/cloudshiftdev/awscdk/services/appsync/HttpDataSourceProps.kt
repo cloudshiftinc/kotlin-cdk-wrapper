@@ -94,7 +94,7 @@ public interface HttpDataSourceProps : BaseDataSourceProps {
      * @param api The API to attach this data source to. 
      */
     override fun api(api: IGraphqlApi) {
-      cdkBuilder.api(api.let(IGraphqlApi::unwrap))
+      cdkBuilder.api(api.let(IGraphqlApi.Companion::unwrap))
     }
 
     /**
@@ -102,7 +102,7 @@ public interface HttpDataSourceProps : BaseDataSourceProps {
      * authorization.
      */
     override fun authorizationConfig(authorizationConfig: AwsIamConfig) {
-      cdkBuilder.authorizationConfig(authorizationConfig.let(AwsIamConfig::unwrap))
+      cdkBuilder.authorizationConfig(authorizationConfig.let(AwsIamConfig.Companion::unwrap))
     }
 
     /**

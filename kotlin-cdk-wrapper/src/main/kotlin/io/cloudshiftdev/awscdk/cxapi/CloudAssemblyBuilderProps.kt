@@ -71,7 +71,7 @@ public interface CloudAssemblyBuilderProps {
      * @param parentBuilder If this builder is for a nested assembly, the parent assembly builder.
      */
     override fun parentBuilder(parentBuilder: CloudAssemblyBuilder) {
-      cdkBuilder.parentBuilder(parentBuilder.let(CloudAssemblyBuilder::unwrap))
+      cdkBuilder.parentBuilder(parentBuilder.let(CloudAssemblyBuilder.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.cxapi.CloudAssemblyBuilderProps = cdkBuilder.build()

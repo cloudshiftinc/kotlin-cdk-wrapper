@@ -106,14 +106,14 @@ public interface ReplicationConfigurationProps {
      * @param destinationFileSystem The existing destination file system for the replication.
      */
     override fun destinationFileSystem(destinationFileSystem: IFileSystem) {
-      cdkBuilder.destinationFileSystem(destinationFileSystem.let(IFileSystem::unwrap))
+      cdkBuilder.destinationFileSystem(destinationFileSystem.let(IFileSystem.Companion::unwrap))
     }
 
     /**
      * @param kmsKey AWS KMS key used to protect the encrypted file system.
      */
     override fun kmsKey(kmsKey: IKey) {
-      cdkBuilder.kmsKey(kmsKey.let(IKey::unwrap))
+      cdkBuilder.kmsKey(kmsKey.let(IKey.Companion::unwrap))
     }
 
     /**

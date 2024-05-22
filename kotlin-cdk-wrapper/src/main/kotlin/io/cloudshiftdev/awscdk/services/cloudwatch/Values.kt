@@ -51,7 +51,7 @@ public abstract class Values(
         populateFrom).let(Values::wrap)
 
     public fun fromSearchComponents(components: SearchComponents): Values =
-        software.amazon.awscdk.services.cloudwatch.Values.fromSearchComponents(components.let(SearchComponents::unwrap)).let(Values::wrap)
+        software.amazon.awscdk.services.cloudwatch.Values.fromSearchComponents(components.let(SearchComponents.Companion::unwrap)).let(Values::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9623a062a74e6ff7a42651de1c7ce36b5ddbbeb062710b7565cad07d0811bbf6")
@@ -59,7 +59,7 @@ public abstract class Values(
         fromSearchComponents(SearchComponents(components))
 
     public fun fromValues(values: VariableValue): Values =
-        software.amazon.awscdk.services.cloudwatch.Values.fromValues(values.let(VariableValue::unwrap)).let(Values::wrap)
+        software.amazon.awscdk.services.cloudwatch.Values.fromValues(values.let(VariableValue.Companion::unwrap)).let(Values::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e0d0475001a2a4bae2c4295fcb71128cbbbb828937bcbe598fef90575cefde17")

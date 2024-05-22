@@ -45,7 +45,7 @@ public abstract class Code(
    * @param scope 
    */
   public open fun bind(scope: Construct): CodeConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(CodeConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(CodeConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.Code,
@@ -57,7 +57,7 @@ public abstract class Code(
 
     public fun fromAsset(path: String, options: AssetOptions): AssetCode =
         software.amazon.awscdk.services.appsync.Code.fromAsset(path,
-        options.let(AssetOptions::unwrap)).let(AssetCode::wrap)
+        options.let(AssetOptions.Companion::unwrap)).let(AssetCode::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b6b30dc0029d3eae4bcdf8c40fd877adaafd1579c6e451b25506f9b13057af28")

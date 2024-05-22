@@ -63,7 +63,7 @@ public abstract class TlsCertificate(
    * @param _scope 
    */
   public open fun bind(scope: Construct): TlsCertificateConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(TlsCertificateConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(TlsCertificateConfig::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appmesh.TlsCertificate,
@@ -71,7 +71,7 @@ public abstract class TlsCertificate(
 
   public companion object {
     public fun acm(certificate: ICertificate): TlsCertificate =
-        software.amazon.awscdk.services.appmesh.TlsCertificate.acm(certificate.let(ICertificate::unwrap)).let(TlsCertificate::wrap)
+        software.amazon.awscdk.services.appmesh.TlsCertificate.acm(certificate.let(ICertificate.Companion::unwrap)).let(TlsCertificate::wrap)
 
     public fun `file`(certificateChainPath: String, privateKeyPath: String): MutualTlsCertificate =
         software.amazon.awscdk.services.appmesh.TlsCertificate.`file`(certificateChainPath,

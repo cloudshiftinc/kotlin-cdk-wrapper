@@ -63,7 +63,7 @@ public open class InterfaceVpcEndpointAwsService(
     port: Number,
     props: InterfaceVpcEndpointAwsServiceProps,
   ) : this(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService(name, prefix, port,
-      props.let(InterfaceVpcEndpointAwsServiceProps::unwrap))
+      props.let(InterfaceVpcEndpointAwsServiceProps.Companion::unwrap))
   )
 
   public constructor(

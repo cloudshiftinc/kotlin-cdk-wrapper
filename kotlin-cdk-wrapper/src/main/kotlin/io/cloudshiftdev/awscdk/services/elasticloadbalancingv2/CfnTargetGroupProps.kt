@@ -506,7 +506,7 @@ public interface CfnTargetGroupProps {
      * disabled.
      */
     override fun healthCheckEnabled(healthCheckEnabled: IResolvable) {
-      cdkBuilder.healthCheckEnabled(healthCheckEnabled.let(IResolvable::unwrap))
+      cdkBuilder.healthCheckEnabled(healthCheckEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -595,7 +595,7 @@ public interface CfnTargetGroupProps {
      * protocol of GENEVE, the range is 200-399.
      */
     override fun matcher(matcher: IResolvable) {
-      cdkBuilder.matcher(matcher.let(IResolvable::unwrap))
+      cdkBuilder.matcher(matcher.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -606,7 +606,7 @@ public interface CfnTargetGroupProps {
      * protocol of GENEVE, the range is 200-399.
      */
     override fun matcher(matcher: CfnTargetGroup.MatcherProperty) {
-      cdkBuilder.matcher(matcher.let(CfnTargetGroup.MatcherProperty::unwrap))
+      cdkBuilder.matcher(matcher.let(CfnTargetGroup.MatcherProperty.Companion::unwrap))
     }
 
     /**
@@ -663,7 +663,7 @@ public interface CfnTargetGroupProps {
      * @param tags The tags.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -675,7 +675,7 @@ public interface CfnTargetGroupProps {
      * @param targetGroupAttributes The attributes.
      */
     override fun targetGroupAttributes(targetGroupAttributes: IResolvable) {
-      cdkBuilder.targetGroupAttributes(targetGroupAttributes.let(IResolvable::unwrap))
+      cdkBuilder.targetGroupAttributes(targetGroupAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -712,7 +712,7 @@ public interface CfnTargetGroupProps {
      * @param targets The targets.
      */
     override fun targets(targets: IResolvable) {
-      cdkBuilder.targets(targets.let(IResolvable::unwrap))
+      cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
     }
 
     /**

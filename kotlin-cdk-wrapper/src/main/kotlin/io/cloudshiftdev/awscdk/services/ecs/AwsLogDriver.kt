@@ -47,7 +47,7 @@ public open class AwsLogDriver(
   cdkObject: software.amazon.awscdk.services.ecs.AwsLogDriver,
 ) : LogDriver(cdkObject) {
   public constructor(props: AwsLogDriverProps) :
-      this(software.amazon.awscdk.services.ecs.AwsLogDriver(props.let(AwsLogDriverProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.AwsLogDriver(props.let(AwsLogDriverProps.Companion::unwrap))
   )
 
   public constructor(props: AwsLogDriverProps.Builder.() -> Unit) : this(AwsLogDriverProps(props)
@@ -60,8 +60,8 @@ public open class AwsLogDriver(
    * @param containerDefinition 
    */
   public override fun bind(scope: Construct, containerDefinition: ContainerDefinition):
-      LogDriverConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      containerDefinition.let(ContainerDefinition::unwrap)).let(LogDriverConfig::wrap)
+      LogDriverConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      containerDefinition.let(ContainerDefinition.Companion::unwrap)).let(LogDriverConfig::wrap)
 
   /**
    * The log group to send log streams to.
@@ -76,7 +76,7 @@ public open class AwsLogDriver(
    * Only available after the LogDriver has been bound to a ContainerDefinition.
    */
   public open fun logGroup(`value`: ILogGroup) {
-    unwrap(this).setLogGroup(`value`.let(ILogGroup::unwrap))
+    unwrap(this).setLogGroup(`value`.let(ILogGroup.Companion::unwrap))
   }
 
   /**
@@ -201,7 +201,7 @@ public open class AwsLogDriver(
      * @param logGroup The log group to log to. 
      */
     override fun logGroup(logGroup: ILogGroup) {
-      cdkBuilder.logGroup(logGroup.let(ILogGroup::unwrap))
+      cdkBuilder.logGroup(logGroup.let(ILogGroup.Companion::unwrap))
     }
 
     /**
@@ -214,7 +214,7 @@ public open class AwsLogDriver(
      * group is automatically created by this construct. 
      */
     override fun logRetention(logRetention: RetentionDays) {
-      cdkBuilder.logRetention(logRetention.let(RetentionDays::unwrap))
+      cdkBuilder.logRetention(logRetention.let(RetentionDays.Companion::unwrap))
     }
 
     /**
@@ -229,7 +229,7 @@ public open class AwsLogDriver(
      * is not valid with AwsLogDriverMode.BLOCKING. 
      */
     override fun maxBufferSize(maxBufferSize: Size) {
-      cdkBuilder.maxBufferSize(maxBufferSize.let(Size::unwrap))
+      cdkBuilder.maxBufferSize(maxBufferSize.let(Size.Companion::unwrap))
     }
 
     /**
@@ -240,7 +240,7 @@ public open class AwsLogDriver(
      * @param mode The delivery mode of log messages from the container to awslogs. 
      */
     override fun mode(mode: AwsLogDriverMode) {
-      cdkBuilder.mode(mode.let(AwsLogDriverMode::unwrap))
+      cdkBuilder.mode(mode.let(AwsLogDriverMode.Companion::unwrap))
     }
 
     /**

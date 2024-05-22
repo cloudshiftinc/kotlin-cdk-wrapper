@@ -40,8 +40,8 @@ public open class CfnVPCGatewayAttachment(
     id: String,
     props: CfnVPCGatewayAttachmentProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnVPCGatewayAttachment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVPCGatewayAttachmentProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnVPCGatewayAttachment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVPCGatewayAttachmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -62,7 +62,7 @@ public open class CfnVPCGatewayAttachment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

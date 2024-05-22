@@ -102,7 +102,7 @@ public interface BuildEnvironmentVariable {
      * @param type The type of environment variable.
      */
     override fun type(type: BuildEnvironmentVariableType) {
-      cdkBuilder.type(type.let(BuildEnvironmentVariableType::unwrap))
+      cdkBuilder.type(type.let(BuildEnvironmentVariableType.Companion::unwrap))
     }
 
     /**

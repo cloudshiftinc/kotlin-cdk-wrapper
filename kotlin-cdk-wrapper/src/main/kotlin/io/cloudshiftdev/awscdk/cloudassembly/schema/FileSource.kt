@@ -101,7 +101,7 @@ public interface FileSource {
      * Only allowed when `path` is specified.
      */
     override fun packaging(packaging: FileAssetPackaging) {
-      cdkBuilder.packaging(packaging.let(FileAssetPackaging::unwrap))
+      cdkBuilder.packaging(packaging.let(FileAssetPackaging.Companion::unwrap))
     }
 
     /**

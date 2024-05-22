@@ -208,7 +208,7 @@ public interface CfnCalculatedAttributeDefinitionProps {
      * that expression. 
      */
     override fun attributeDetails(attributeDetails: IResolvable) {
-      cdkBuilder.attributeDetails(attributeDetails.let(IResolvable::unwrap))
+      cdkBuilder.attributeDetails(attributeDetails.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -217,7 +217,7 @@ public interface CfnCalculatedAttributeDefinitionProps {
      */
     override
         fun attributeDetails(attributeDetails: CfnCalculatedAttributeDefinition.AttributeDetailsProperty) {
-      cdkBuilder.attributeDetails(attributeDetails.let(CfnCalculatedAttributeDefinition.AttributeDetailsProperty::unwrap))
+      cdkBuilder.attributeDetails(attributeDetails.let(CfnCalculatedAttributeDefinition.AttributeDetailsProperty.Companion::unwrap))
     }
 
     /**
@@ -243,7 +243,7 @@ public interface CfnCalculatedAttributeDefinitionProps {
      * calculated attribute.
      */
     override fun conditions(conditions: IResolvable) {
-      cdkBuilder.conditions(conditions.let(IResolvable::unwrap))
+      cdkBuilder.conditions(conditions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -251,7 +251,7 @@ public interface CfnCalculatedAttributeDefinitionProps {
      * calculated attribute.
      */
     override fun conditions(conditions: CfnCalculatedAttributeDefinition.ConditionsProperty) {
-      cdkBuilder.conditions(conditions.let(CfnCalculatedAttributeDefinition.ConditionsProperty::unwrap))
+      cdkBuilder.conditions(conditions.let(CfnCalculatedAttributeDefinition.ConditionsProperty.Companion::unwrap))
     }
 
     /**
@@ -296,7 +296,7 @@ public interface CfnCalculatedAttributeDefinitionProps {
      * @param tags An array of key-value pairs to apply to this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

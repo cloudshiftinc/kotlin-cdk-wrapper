@@ -28,13 +28,13 @@ public open class SagemakerIntegration(
   cdkObject: software.amazon.awscdk.services.apigateway.SagemakerIntegration,
 ) : AwsIntegration(cdkObject) {
   public constructor(endpoint: CloudshiftdevAwscdkServicesSagemakerIEndpoint) :
-      this(software.amazon.awscdk.services.apigateway.SagemakerIntegration(endpoint.let(CloudshiftdevAwscdkServicesSagemakerIEndpoint::unwrap))
+      this(software.amazon.awscdk.services.apigateway.SagemakerIntegration(endpoint.let(CloudshiftdevAwscdkServicesSagemakerIEndpoint.Companion::unwrap))
   )
 
   public constructor(endpoint: CloudshiftdevAwscdkServicesSagemakerIEndpoint,
       options: SagemakerIntegrationOptions) :
-      this(software.amazon.awscdk.services.apigateway.SagemakerIntegration(endpoint.let(CloudshiftdevAwscdkServicesSagemakerIEndpoint::unwrap),
-      options.let(SagemakerIntegrationOptions::unwrap))
+      this(software.amazon.awscdk.services.apigateway.SagemakerIntegration(endpoint.let(CloudshiftdevAwscdkServicesSagemakerIEndpoint.Companion::unwrap),
+      options.let(SagemakerIntegrationOptions.Companion::unwrap))
   )
 
   public constructor(endpoint: CloudshiftdevAwscdkServicesSagemakerIEndpoint,
@@ -49,7 +49,7 @@ public open class SagemakerIntegration(
    * @param method 
    */
   public override fun bind(method: Method): IntegrationConfig =
-      unwrap(this).bind(method.let(Method::unwrap)).let(IntegrationConfig::wrap)
+      unwrap(this).bind(method.let(Method.Companion::unwrap)).let(IntegrationConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.apigateway.SagemakerIntegration].
@@ -274,7 +274,7 @@ public open class SagemakerIntegration(
      * @param connectionType The type of network connection to the integration endpoint. 
      */
     override fun connectionType(connectionType: ConnectionType) {
-      cdkBuilder.connectionType(connectionType.let(ConnectionType::unwrap))
+      cdkBuilder.connectionType(connectionType.let(ConnectionType.Companion::unwrap))
     }
 
     /**
@@ -288,7 +288,7 @@ public open class SagemakerIntegration(
      * @param contentHandling Specifies how to handle request payload content type conversions. 
      */
     override fun contentHandling(contentHandling: ContentHandling) {
-      cdkBuilder.contentHandling(contentHandling.let(ContentHandling::unwrap))
+      cdkBuilder.contentHandling(contentHandling.let(ContentHandling.Companion::unwrap))
     }
 
     /**
@@ -313,7 +313,7 @@ public open class SagemakerIntegration(
      * @param credentialsRole An IAM role that API Gateway assumes. 
      */
     override fun credentialsRole(credentialsRole: IRole) {
-      cdkBuilder.credentialsRole(credentialsRole.let(IRole::unwrap))
+      cdkBuilder.credentialsRole(credentialsRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -329,7 +329,7 @@ public open class SagemakerIntegration(
      * completes processing a request. 
      */
     override fun integrationResponses(integrationResponses: List<IntegrationResponse>) {
-      cdkBuilder.integrationResponses(integrationResponses.map(IntegrationResponse::unwrap))
+      cdkBuilder.integrationResponses(integrationResponses.map(IntegrationResponse.Companion::unwrap))
     }
 
     /**
@@ -360,7 +360,7 @@ public open class SagemakerIntegration(
      * requestTemplates property on the Integration resource. 
      */
     override fun passthroughBehavior(passthroughBehavior: PassthroughBehavior) {
-      cdkBuilder.passthroughBehavior(passthroughBehavior.let(PassthroughBehavior::unwrap))
+      cdkBuilder.passthroughBehavior(passthroughBehavior.let(PassthroughBehavior.Companion::unwrap))
     }
 
     /**
@@ -415,7 +415,7 @@ public open class SagemakerIntegration(
      * response. 
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -426,7 +426,7 @@ public open class SagemakerIntegration(
      * @param vpcLink The VpcLink used for the integration. 
      */
     override fun vpcLink(vpcLink: IVpcLink) {
-      cdkBuilder.vpcLink(vpcLink.let(IVpcLink::unwrap))
+      cdkBuilder.vpcLink(vpcLink.let(IVpcLink.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.SagemakerIntegration =

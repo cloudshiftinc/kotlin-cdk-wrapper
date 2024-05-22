@@ -100,8 +100,8 @@ public open class CfnDataSource(
     id: String,
     props: CfnDataSourceProps,
   ) :
-      this(software.amazon.awscdk.services.appsync.CfnDataSource(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDataSourceProps::unwrap))
+      this(software.amazon.awscdk.services.appsync.CfnDataSource(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDataSourceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -160,14 +160,14 @@ public open class CfnDataSource(
    * AWS Region and TableName for an Amazon DynamoDB table in your account.
    */
   public open fun dynamoDbConfig(`value`: IResolvable) {
-    unwrap(this).setDynamoDbConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDynamoDbConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * AWS Region and TableName for an Amazon DynamoDB table in your account.
    */
   public open fun dynamoDbConfig(`value`: DynamoDBConfigProperty) {
-    unwrap(this).setDynamoDbConfig(`value`.let(DynamoDBConfigProperty::unwrap))
+    unwrap(this).setDynamoDbConfig(`value`.let(DynamoDBConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -187,14 +187,14 @@ public open class CfnDataSource(
    * AWS Region and Endpoints for an Amazon OpenSearch Service domain in your account.
    */
   public open fun elasticsearchConfig(`value`: IResolvable) {
-    unwrap(this).setElasticsearchConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setElasticsearchConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * AWS Region and Endpoints for an Amazon OpenSearch Service domain in your account.
    */
   public open fun elasticsearchConfig(`value`: ElasticsearchConfigProperty) {
-    unwrap(this).setElasticsearchConfig(`value`.let(ElasticsearchConfigProperty::unwrap))
+    unwrap(this).setElasticsearchConfig(`value`.let(ElasticsearchConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -214,14 +214,14 @@ public open class CfnDataSource(
    * An EventBridge configuration that contains a valid ARN of an event bus.
    */
   public open fun eventBridgeConfig(`value`: IResolvable) {
-    unwrap(this).setEventBridgeConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEventBridgeConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An EventBridge configuration that contains a valid ARN of an event bus.
    */
   public open fun eventBridgeConfig(`value`: EventBridgeConfigProperty) {
-    unwrap(this).setEventBridgeConfig(`value`.let(EventBridgeConfigProperty::unwrap))
+    unwrap(this).setEventBridgeConfig(`value`.let(EventBridgeConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -241,14 +241,14 @@ public open class CfnDataSource(
    * Endpoints for an HTTP data source.
    */
   public open fun httpConfig(`value`: IResolvable) {
-    unwrap(this).setHttpConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setHttpConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Endpoints for an HTTP data source.
    */
   public open fun httpConfig(`value`: HttpConfigProperty) {
-    unwrap(this).setHttpConfig(`value`.let(HttpConfigProperty::unwrap))
+    unwrap(this).setHttpConfig(`value`.let(HttpConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -265,7 +265,7 @@ public open class CfnDataSource(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -277,14 +277,14 @@ public open class CfnDataSource(
    * An ARN of a Lambda function in valid ARN format.
    */
   public open fun lambdaConfig(`value`: IResolvable) {
-    unwrap(this).setLambdaConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLambdaConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An ARN of a Lambda function in valid ARN format.
    */
   public open fun lambdaConfig(`value`: LambdaConfigProperty) {
-    unwrap(this).setLambdaConfig(`value`.let(LambdaConfigProperty::unwrap))
+    unwrap(this).setLambdaConfig(`value`.let(LambdaConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -328,14 +328,14 @@ public open class CfnDataSource(
    * AWS Region and Endpoints for an Amazon OpenSearch Service domain in your account.
    */
   public open fun openSearchServiceConfig(`value`: IResolvable) {
-    unwrap(this).setOpenSearchServiceConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOpenSearchServiceConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * AWS Region and Endpoints for an Amazon OpenSearch Service domain in your account.
    */
   public open fun openSearchServiceConfig(`value`: OpenSearchServiceConfigProperty) {
-    unwrap(this).setOpenSearchServiceConfig(`value`.let(OpenSearchServiceConfigProperty::unwrap))
+    unwrap(this).setOpenSearchServiceConfig(`value`.let(OpenSearchServiceConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -356,14 +356,14 @@ public open class CfnDataSource(
    * Relational Database configuration of the relational database data source.
    */
   public open fun relationalDatabaseConfig(`value`: IResolvable) {
-    unwrap(this).setRelationalDatabaseConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRelationalDatabaseConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Relational Database configuration of the relational database data source.
    */
   public open fun relationalDatabaseConfig(`value`: RelationalDatabaseConfigProperty) {
-    unwrap(this).setRelationalDatabaseConfig(`value`.let(RelationalDatabaseConfigProperty::unwrap))
+    unwrap(this).setRelationalDatabaseConfig(`value`.let(RelationalDatabaseConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -732,7 +732,7 @@ public open class CfnDataSource(
      * @param dynamoDbConfig AWS Region and TableName for an Amazon DynamoDB table in your account. 
      */
     override fun dynamoDbConfig(dynamoDbConfig: IResolvable) {
-      cdkBuilder.dynamoDbConfig(dynamoDbConfig.let(IResolvable::unwrap))
+      cdkBuilder.dynamoDbConfig(dynamoDbConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -742,7 +742,7 @@ public open class CfnDataSource(
      * @param dynamoDbConfig AWS Region and TableName for an Amazon DynamoDB table in your account. 
      */
     override fun dynamoDbConfig(dynamoDbConfig: DynamoDBConfigProperty) {
-      cdkBuilder.dynamoDbConfig(dynamoDbConfig.let(DynamoDBConfigProperty::unwrap))
+      cdkBuilder.dynamoDbConfig(dynamoDbConfig.let(DynamoDBConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -768,7 +768,7 @@ public open class CfnDataSource(
      * in your account. 
      */
     override fun elasticsearchConfig(elasticsearchConfig: IResolvable) {
-      cdkBuilder.elasticsearchConfig(elasticsearchConfig.let(IResolvable::unwrap))
+      cdkBuilder.elasticsearchConfig(elasticsearchConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -783,7 +783,7 @@ public open class CfnDataSource(
      * in your account. 
      */
     override fun elasticsearchConfig(elasticsearchConfig: ElasticsearchConfigProperty) {
-      cdkBuilder.elasticsearchConfig(elasticsearchConfig.let(ElasticsearchConfigProperty::unwrap))
+      cdkBuilder.elasticsearchConfig(elasticsearchConfig.let(ElasticsearchConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -811,7 +811,7 @@ public open class CfnDataSource(
      * bus. 
      */
     override fun eventBridgeConfig(eventBridgeConfig: IResolvable) {
-      cdkBuilder.eventBridgeConfig(eventBridgeConfig.let(IResolvable::unwrap))
+      cdkBuilder.eventBridgeConfig(eventBridgeConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -822,7 +822,7 @@ public open class CfnDataSource(
      * bus. 
      */
     override fun eventBridgeConfig(eventBridgeConfig: EventBridgeConfigProperty) {
-      cdkBuilder.eventBridgeConfig(eventBridgeConfig.let(EventBridgeConfigProperty::unwrap))
+      cdkBuilder.eventBridgeConfig(eventBridgeConfig.let(EventBridgeConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -844,7 +844,7 @@ public open class CfnDataSource(
      * @param httpConfig Endpoints for an HTTP data source. 
      */
     override fun httpConfig(httpConfig: IResolvable) {
-      cdkBuilder.httpConfig(httpConfig.let(IResolvable::unwrap))
+      cdkBuilder.httpConfig(httpConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -854,7 +854,7 @@ public open class CfnDataSource(
      * @param httpConfig Endpoints for an HTTP data source. 
      */
     override fun httpConfig(httpConfig: HttpConfigProperty) {
-      cdkBuilder.httpConfig(httpConfig.let(HttpConfigProperty::unwrap))
+      cdkBuilder.httpConfig(httpConfig.let(HttpConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -878,7 +878,7 @@ public open class CfnDataSource(
      * @param lambdaConfig An ARN of a Lambda function in valid ARN format. 
      */
     override fun lambdaConfig(lambdaConfig: IResolvable) {
-      cdkBuilder.lambdaConfig(lambdaConfig.let(IResolvable::unwrap))
+      cdkBuilder.lambdaConfig(lambdaConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -891,7 +891,7 @@ public open class CfnDataSource(
      * @param lambdaConfig An ARN of a Lambda function in valid ARN format. 
      */
     override fun lambdaConfig(lambdaConfig: LambdaConfigProperty) {
-      cdkBuilder.lambdaConfig(lambdaConfig.let(LambdaConfigProperty::unwrap))
+      cdkBuilder.lambdaConfig(lambdaConfig.let(LambdaConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -944,7 +944,7 @@ public open class CfnDataSource(
      * domain in your account. 
      */
     override fun openSearchServiceConfig(openSearchServiceConfig: IResolvable) {
-      cdkBuilder.openSearchServiceConfig(openSearchServiceConfig.let(IResolvable::unwrap))
+      cdkBuilder.openSearchServiceConfig(openSearchServiceConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -955,7 +955,7 @@ public open class CfnDataSource(
      * domain in your account. 
      */
     override fun openSearchServiceConfig(openSearchServiceConfig: OpenSearchServiceConfigProperty) {
-      cdkBuilder.openSearchServiceConfig(openSearchServiceConfig.let(OpenSearchServiceConfigProperty::unwrap))
+      cdkBuilder.openSearchServiceConfig(openSearchServiceConfig.let(OpenSearchServiceConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -979,7 +979,7 @@ public open class CfnDataSource(
      * data source. 
      */
     override fun relationalDatabaseConfig(relationalDatabaseConfig: IResolvable) {
-      cdkBuilder.relationalDatabaseConfig(relationalDatabaseConfig.let(IResolvable::unwrap))
+      cdkBuilder.relationalDatabaseConfig(relationalDatabaseConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -991,7 +991,7 @@ public open class CfnDataSource(
      */
     override
         fun relationalDatabaseConfig(relationalDatabaseConfig: RelationalDatabaseConfigProperty) {
-      cdkBuilder.relationalDatabaseConfig(relationalDatabaseConfig.let(RelationalDatabaseConfigProperty::unwrap))
+      cdkBuilder.relationalDatabaseConfig(relationalDatabaseConfig.let(RelationalDatabaseConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1158,14 +1158,14 @@ public open class CfnDataSource(
        * @param awsIamConfig The AWS Identity and Access Management settings.
        */
       override fun awsIamConfig(awsIamConfig: IResolvable) {
-        cdkBuilder.awsIamConfig(awsIamConfig.let(IResolvable::unwrap))
+        cdkBuilder.awsIamConfig(awsIamConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param awsIamConfig The AWS Identity and Access Management settings.
        */
       override fun awsIamConfig(awsIamConfig: AwsIamConfigProperty) {
-        cdkBuilder.awsIamConfig(awsIamConfig.let(AwsIamConfigProperty::unwrap))
+        cdkBuilder.awsIamConfig(awsIamConfig.let(AwsIamConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1610,14 +1610,14 @@ public open class CfnDataSource(
        * @param deltaSyncConfig The `DeltaSyncConfig` for a versioned datasource.
        */
       override fun deltaSyncConfig(deltaSyncConfig: IResolvable) {
-        cdkBuilder.deltaSyncConfig(deltaSyncConfig.let(IResolvable::unwrap))
+        cdkBuilder.deltaSyncConfig(deltaSyncConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param deltaSyncConfig The `DeltaSyncConfig` for a versioned datasource.
        */
       override fun deltaSyncConfig(deltaSyncConfig: DeltaSyncConfigProperty) {
-        cdkBuilder.deltaSyncConfig(deltaSyncConfig.let(DeltaSyncConfigProperty::unwrap))
+        cdkBuilder.deltaSyncConfig(deltaSyncConfig.let(DeltaSyncConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1648,7 +1648,7 @@ public open class CfnDataSource(
        * this data source.
        */
       override fun useCallerCredentials(useCallerCredentials: IResolvable) {
-        cdkBuilder.useCallerCredentials(useCallerCredentials.let(IResolvable::unwrap))
+        cdkBuilder.useCallerCredentials(useCallerCredentials.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1664,7 +1664,7 @@ public open class CfnDataSource(
        * source.
        */
       override fun versioned(versioned: IResolvable) {
-        cdkBuilder.versioned(versioned.let(IResolvable::unwrap))
+        cdkBuilder.versioned(versioned.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2022,14 +2022,14 @@ public open class CfnDataSource(
        * @param authorizationConfig The authorization configuration.
        */
       override fun authorizationConfig(authorizationConfig: IResolvable) {
-        cdkBuilder.authorizationConfig(authorizationConfig.let(IResolvable::unwrap))
+        cdkBuilder.authorizationConfig(authorizationConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param authorizationConfig The authorization configuration.
        */
       override fun authorizationConfig(authorizationConfig: AuthorizationConfigProperty) {
-        cdkBuilder.authorizationConfig(authorizationConfig.let(AuthorizationConfigProperty::unwrap))
+        cdkBuilder.authorizationConfig(authorizationConfig.let(AuthorizationConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2570,14 +2570,14 @@ public open class CfnDataSource(
        * @param rdsHttpEndpointConfig Information about the Amazon RDS resource.
        */
       override fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: IResolvable) {
-        cdkBuilder.rdsHttpEndpointConfig(rdsHttpEndpointConfig.let(IResolvable::unwrap))
+        cdkBuilder.rdsHttpEndpointConfig(rdsHttpEndpointConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param rdsHttpEndpointConfig Information about the Amazon RDS resource.
        */
       override fun rdsHttpEndpointConfig(rdsHttpEndpointConfig: RdsHttpEndpointConfigProperty) {
-        cdkBuilder.rdsHttpEndpointConfig(rdsHttpEndpointConfig.let(RdsHttpEndpointConfigProperty::unwrap))
+        cdkBuilder.rdsHttpEndpointConfig(rdsHttpEndpointConfig.let(RdsHttpEndpointConfigProperty.Companion::unwrap))
       }
 
       /**

@@ -128,7 +128,7 @@ public open class CfnNetworkInsightsAccessScope(
   cdkObject: software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -137,8 +137,8 @@ public open class CfnNetworkInsightsAccessScope(
     id: String,
     props: CfnNetworkInsightsAccessScopeProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnNetworkInsightsAccessScopeProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnNetworkInsightsAccessScope(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnNetworkInsightsAccessScopeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -179,7 +179,7 @@ public open class CfnNetworkInsightsAccessScope(
    * The paths to exclude.
    */
   public open fun excludePaths(`value`: IResolvable) {
-    unwrap(this).setExcludePaths(`value`.let(IResolvable::unwrap))
+    unwrap(this).setExcludePaths(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -200,7 +200,7 @@ public open class CfnNetworkInsightsAccessScope(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -212,7 +212,7 @@ public open class CfnNetworkInsightsAccessScope(
    * The paths to match.
    */
   public open fun matchPaths(`value`: IResolvable) {
-    unwrap(this).setMatchPaths(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMatchPaths(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -242,7 +242,7 @@ public open class CfnNetworkInsightsAccessScope(
    * The tags.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -335,7 +335,7 @@ public open class CfnNetworkInsightsAccessScope(
      * @param excludePaths The paths to exclude. 
      */
     override fun excludePaths(excludePaths: IResolvable) {
-      cdkBuilder.excludePaths(excludePaths.let(IResolvable::unwrap))
+      cdkBuilder.excludePaths(excludePaths.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -363,7 +363,7 @@ public open class CfnNetworkInsightsAccessScope(
      * @param matchPaths The paths to match. 
      */
     override fun matchPaths(matchPaths: IResolvable) {
-      cdkBuilder.matchPaths(matchPaths.let(IResolvable::unwrap))
+      cdkBuilder.matchPaths(matchPaths.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -391,7 +391,7 @@ public open class CfnNetworkInsightsAccessScope(
      * @param tags The tags. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -566,14 +566,14 @@ public open class CfnNetworkInsightsAccessScope(
        * @param destination The destination.
        */
       override fun destination(destination: IResolvable) {
-        cdkBuilder.destination(destination.let(IResolvable::unwrap))
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param destination The destination.
        */
       override fun destination(destination: PathStatementRequestProperty) {
-        cdkBuilder.destination(destination.let(PathStatementRequestProperty::unwrap))
+        cdkBuilder.destination(destination.let(PathStatementRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -588,14 +588,14 @@ public open class CfnNetworkInsightsAccessScope(
        * @param source The source.
        */
       override fun source(source: IResolvable) {
-        cdkBuilder.source(source.let(IResolvable::unwrap))
+        cdkBuilder.source(source.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param source The source.
        */
       override fun source(source: PathStatementRequestProperty) {
-        cdkBuilder.source(source.let(PathStatementRequestProperty::unwrap))
+        cdkBuilder.source(source.let(PathStatementRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -610,7 +610,7 @@ public open class CfnNetworkInsightsAccessScope(
        * @param throughResources The through resources.
        */
       override fun throughResources(throughResources: IResolvable) {
-        cdkBuilder.throughResources(throughResources.let(IResolvable::unwrap))
+        cdkBuilder.throughResources(throughResources.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1099,7 +1099,7 @@ public open class CfnNetworkInsightsAccessScope(
        * @param packetHeaderStatement The packet header statement.
        */
       override fun packetHeaderStatement(packetHeaderStatement: IResolvable) {
-        cdkBuilder.packetHeaderStatement(packetHeaderStatement.let(IResolvable::unwrap))
+        cdkBuilder.packetHeaderStatement(packetHeaderStatement.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1107,7 +1107,7 @@ public open class CfnNetworkInsightsAccessScope(
        */
       override
           fun packetHeaderStatement(packetHeaderStatement: PacketHeaderStatementRequestProperty) {
-        cdkBuilder.packetHeaderStatement(packetHeaderStatement.let(PacketHeaderStatementRequestProperty::unwrap))
+        cdkBuilder.packetHeaderStatement(packetHeaderStatement.let(PacketHeaderStatementRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -1123,14 +1123,14 @@ public open class CfnNetworkInsightsAccessScope(
        * @param resourceStatement The resource statement.
        */
       override fun resourceStatement(resourceStatement: IResolvable) {
-        cdkBuilder.resourceStatement(resourceStatement.let(IResolvable::unwrap))
+        cdkBuilder.resourceStatement(resourceStatement.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param resourceStatement The resource statement.
        */
       override fun resourceStatement(resourceStatement: ResourceStatementRequestProperty) {
-        cdkBuilder.resourceStatement(resourceStatement.let(ResourceStatementRequestProperty::unwrap))
+        cdkBuilder.resourceStatement(resourceStatement.let(ResourceStatementRequestProperty.Companion::unwrap))
       }
 
       /**
@@ -1376,14 +1376,14 @@ public open class CfnNetworkInsightsAccessScope(
        * @param resourceStatement The resource statement.
        */
       override fun resourceStatement(resourceStatement: IResolvable) {
-        cdkBuilder.resourceStatement(resourceStatement.let(IResolvable::unwrap))
+        cdkBuilder.resourceStatement(resourceStatement.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param resourceStatement The resource statement.
        */
       override fun resourceStatement(resourceStatement: ResourceStatementRequestProperty) {
-        cdkBuilder.resourceStatement(resourceStatement.let(ResourceStatementRequestProperty::unwrap))
+        cdkBuilder.resourceStatement(resourceStatement.let(ResourceStatementRequestProperty.Companion::unwrap))
       }
 
       /**

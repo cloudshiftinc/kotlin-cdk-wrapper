@@ -188,7 +188,7 @@ public interface CfnUrlProps {
      * settings for your function URL.
      */
     override fun cors(cors: IResolvable) {
-      cdkBuilder.cors(cors.let(IResolvable::unwrap))
+      cdkBuilder.cors(cors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -197,7 +197,7 @@ public interface CfnUrlProps {
      * settings for your function URL.
      */
     override fun cors(cors: CfnUrl.CorsProperty) {
-      cdkBuilder.cors(cors.let(CfnUrl.CorsProperty::unwrap))
+      cdkBuilder.cors(cors.let(CfnUrl.CorsProperty.Companion::unwrap))
     }
 
     /**

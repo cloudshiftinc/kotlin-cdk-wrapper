@@ -52,7 +52,7 @@ public open class Cluster(
   cdkObject: software.amazon.awscdk.services.ecs.Cluster,
 ) : Resource(cdkObject), ICluster {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ecs.Cluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ecs.Cluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -61,8 +61,8 @@ public open class Cluster(
     id: String,
     props: ClusterProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.Cluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ClusterProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.Cluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -79,7 +79,7 @@ public open class Cluster(
    * @param options
    */
   public open fun addAsgCapacityProvider(provider: AsgCapacityProvider) {
-    unwrap(this).addAsgCapacityProvider(provider.let(AsgCapacityProvider::unwrap))
+    unwrap(this).addAsgCapacityProvider(provider.let(AsgCapacityProvider.Companion::unwrap))
   }
 
   /**
@@ -90,8 +90,8 @@ public open class Cluster(
    */
   public open fun addAsgCapacityProvider(provider: AsgCapacityProvider,
       options: AddAutoScalingGroupCapacityOptions) {
-    unwrap(this).addAsgCapacityProvider(provider.let(AsgCapacityProvider::unwrap),
-        options.let(AddAutoScalingGroupCapacityOptions::unwrap))
+    unwrap(this).addAsgCapacityProvider(provider.let(AsgCapacityProvider.Companion::unwrap),
+        options.let(AddAutoScalingGroupCapacityOptions.Companion::unwrap))
   }
 
   /**
@@ -119,7 +119,7 @@ public open class Cluster(
    */
   public open fun addCapacity(id: String, options: AddCapacityOptions): AutoScalingGroup =
       unwrap(this).addCapacity(id,
-      options.let(AddCapacityOptions::unwrap)).let(AutoScalingGroup::wrap)
+      options.let(AddCapacityOptions.Companion::unwrap)).let(AutoScalingGroup::wrap)
 
   /**
    * It is highly recommended to use `Cluster.addAsgCapacityProvider` instead of this method.
@@ -145,7 +145,7 @@ public open class Cluster(
    */
   public open
       fun addDefaultCapacityProviderStrategy(defaultCapacityProviderStrategy: List<CapacityProviderStrategy>) {
-    unwrap(this).addDefaultCapacityProviderStrategy(defaultCapacityProviderStrategy.map(CapacityProviderStrategy::unwrap))
+    unwrap(this).addDefaultCapacityProviderStrategy(defaultCapacityProviderStrategy.map(CapacityProviderStrategy.Companion::unwrap))
   }
 
   /**
@@ -169,7 +169,7 @@ public open class Cluster(
    * @param options 
    */
   public open fun addDefaultCloudMapNamespace(options: CloudMapNamespaceOptions): INamespace =
-      unwrap(this).addDefaultCloudMapNamespace(options.let(CloudMapNamespaceOptions::unwrap)).let(INamespace::wrap)
+      unwrap(this).addDefaultCloudMapNamespace(options.let(CloudMapNamespaceOptions.Companion::unwrap)).let(INamespace::wrap)
 
   /**
    * Add an AWS Cloud Map DNS namespace for this cluster.
@@ -259,7 +259,7 @@ public open class Cluster(
    * @param grantee The entity (e.g., IAM role or user) to grant the permissions to. 
    */
   public open fun grantTaskProtection(grantee: IGrantable): Grant =
-      unwrap(this).grantTaskProtection(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantTaskProtection(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Whether the cluster has EC2 capacity associated with it.
@@ -282,7 +282,7 @@ public open class Cluster(
    * @param props
    */
   public open fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * This method returns the specifed CloudWatch metric for this cluster.
@@ -313,7 +313,7 @@ public open class Cluster(
    * @param props
    */
   public open fun metricCpuReservation(props: MetricOptions): Metric =
-      unwrap(this).metricCpuReservation(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricCpuReservation(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * This method returns the CloudWatch metric for this clusters CPU reservation.
@@ -345,7 +345,7 @@ public open class Cluster(
    * @param props
    */
   public open fun metricCpuUtilization(props: MetricOptions): Metric =
-      unwrap(this).metricCpuUtilization(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricCpuUtilization(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * This method returns the CloudWatch metric for this clusters CPU utilization.
@@ -377,7 +377,7 @@ public open class Cluster(
    * @param props
    */
   public open fun metricMemoryReservation(props: MetricOptions): Metric =
-      unwrap(this).metricMemoryReservation(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricMemoryReservation(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * This method returns the CloudWatch metric for this clusters memory reservation.
@@ -409,7 +409,7 @@ public open class Cluster(
    * @param props
    */
   public open fun metricMemoryUtilization(props: MetricOptions): Metric =
-      unwrap(this).metricMemoryUtilization(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricMemoryUtilization(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * This method returns the CloudWatch metric for this clusters memory utilization.
@@ -552,7 +552,7 @@ public open class Cluster(
      * @param capacity The ec2 capacity to add to the cluster. 
      */
     override fun capacity(capacity: AddCapacityOptions) {
-      cdkBuilder.capacity(capacity.let(AddCapacityOptions::unwrap))
+      cdkBuilder.capacity(capacity.let(AddCapacityOptions.Companion::unwrap))
     }
 
     /**
@@ -600,7 +600,7 @@ public open class Cluster(
      * @param defaultCloudMapNamespace The service discovery namespace created in this cluster. 
      */
     override fun defaultCloudMapNamespace(defaultCloudMapNamespace: CloudMapNamespaceOptions) {
-      cdkBuilder.defaultCloudMapNamespace(defaultCloudMapNamespace.let(CloudMapNamespaceOptions::unwrap))
+      cdkBuilder.defaultCloudMapNamespace(defaultCloudMapNamespace.let(CloudMapNamespaceOptions.Companion::unwrap))
     }
 
     /**
@@ -638,7 +638,7 @@ public open class Cluster(
      */
     override
         fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfiguration) {
-      cdkBuilder.executeCommandConfiguration(executeCommandConfiguration.let(ExecuteCommandConfiguration::unwrap))
+      cdkBuilder.executeCommandConfiguration(executeCommandConfiguration.let(ExecuteCommandConfiguration.Companion::unwrap))
     }
 
     /**
@@ -662,7 +662,7 @@ public open class Cluster(
      * @param vpc The VPC where your ECS instances will be running or your ENIs will be deployed. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.Cluster = cdkBuilder.build()
@@ -674,7 +674,7 @@ public open class Cluster(
       id: String,
       clusterArn: String,
     ): ICluster =
-        software.amazon.awscdk.services.ecs.Cluster.fromClusterArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ecs.Cluster.fromClusterArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, clusterArn).let(ICluster::wrap)
 
     public fun fromClusterAttributes(
@@ -682,8 +682,8 @@ public open class Cluster(
       id: String,
       attrs: ClusterAttributes,
     ): ICluster =
-        software.amazon.awscdk.services.ecs.Cluster.fromClusterAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(ClusterAttributes::unwrap)).let(ICluster::wrap)
+        software.amazon.awscdk.services.ecs.Cluster.fromClusterAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(ClusterAttributes.Companion::unwrap)).let(ICluster::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("54fbf9e293c46c81fc7b01109faa86bd7c632a14b9eee35f533a39b6ecf90964")

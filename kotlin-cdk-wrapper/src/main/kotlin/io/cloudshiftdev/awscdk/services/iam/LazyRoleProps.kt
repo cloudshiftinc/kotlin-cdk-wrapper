@@ -161,7 +161,7 @@ public interface LazyRoleProps : RoleProps {
      * the `assumeRolePolicy` property.
      */
     override fun assumedBy(assumedBy: IPrincipal) {
-      cdkBuilder.assumedBy(assumedBy.let(IPrincipal::unwrap))
+      cdkBuilder.assumedBy(assumedBy.let(IPrincipal.Companion::unwrap))
     }
 
     /**
@@ -207,7 +207,7 @@ public interface LazyRoleProps : RoleProps {
      * `addManagedPolicy(ManagedPolicy.fromAwsManagedPolicyName(policyName))`.
      */
     override fun managedPolicies(managedPolicies: List<IManagedPolicy>) {
-      cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy::unwrap))
+      cdkBuilder.managedPolicies(managedPolicies.map(IManagedPolicy.Companion::unwrap))
     }
 
     /**
@@ -235,7 +235,7 @@ public interface LazyRoleProps : RoleProps {
      * but does not apply when you use those operations to create a console URL.
      */
     override fun maxSessionDuration(maxSessionDuration: Duration) {
-      cdkBuilder.maxSessionDuration(maxSessionDuration.let(Duration::unwrap))
+      cdkBuilder.maxSessionDuration(maxSessionDuration.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -257,7 +257,7 @@ public interface LazyRoleProps : RoleProps {
      * permissions boundaries.
      */
     override fun permissionsBoundary(permissionsBoundary: IManagedPolicy) {
-      cdkBuilder.permissionsBoundary(permissionsBoundary.let(IManagedPolicy::unwrap))
+      cdkBuilder.permissionsBoundary(permissionsBoundary.let(IManagedPolicy.Companion::unwrap))
     }
 
     /**

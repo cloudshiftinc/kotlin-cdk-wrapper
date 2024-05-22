@@ -44,8 +44,8 @@ public abstract class Source(
    * @param _project 
    */
   public override fun bind(scope: Construct, project: IProject): SourceConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap),
-      project.let(IProject::unwrap)).let(SourceConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      project.let(IProject.Companion::unwrap)).let(SourceConfig::wrap)
 
   /**
    *
@@ -63,7 +63,7 @@ public abstract class Source(
 
   public companion object {
     public fun bitBucket(props: BitBucketSourceProps): ISource =
-        software.amazon.awscdk.services.codebuild.Source.bitBucket(props.let(BitBucketSourceProps::unwrap)).let(ISource::wrap)
+        software.amazon.awscdk.services.codebuild.Source.bitBucket(props.let(BitBucketSourceProps.Companion::unwrap)).let(ISource::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5116059bbc47451de2e01d2a6f724939523526f59e93532d1a003d15006a8e66")
@@ -71,7 +71,7 @@ public abstract class Source(
         bitBucket(BitBucketSourceProps(props))
 
     public fun codeCommit(props: CodeCommitSourceProps): ISource =
-        software.amazon.awscdk.services.codebuild.Source.codeCommit(props.let(CodeCommitSourceProps::unwrap)).let(ISource::wrap)
+        software.amazon.awscdk.services.codebuild.Source.codeCommit(props.let(CodeCommitSourceProps.Companion::unwrap)).let(ISource::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("80bf3256d8f763da0320b10525db36ac41235f6309467712063051ce296f1ffc")
@@ -79,7 +79,7 @@ public abstract class Source(
         codeCommit(CodeCommitSourceProps(props))
 
     public fun gitHub(props: GitHubSourceProps): ISource =
-        software.amazon.awscdk.services.codebuild.Source.gitHub(props.let(GitHubSourceProps::unwrap)).let(ISource::wrap)
+        software.amazon.awscdk.services.codebuild.Source.gitHub(props.let(GitHubSourceProps.Companion::unwrap)).let(ISource::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("e161e3dee71d59d02f86500f2c6a824e1e15b9105d2f6ad4f2668ef62823c967")
@@ -87,7 +87,7 @@ public abstract class Source(
         gitHub(GitHubSourceProps(props))
 
     public fun gitHubEnterprise(props: GitHubEnterpriseSourceProps): ISource =
-        software.amazon.awscdk.services.codebuild.Source.gitHubEnterprise(props.let(GitHubEnterpriseSourceProps::unwrap)).let(ISource::wrap)
+        software.amazon.awscdk.services.codebuild.Source.gitHubEnterprise(props.let(GitHubEnterpriseSourceProps.Companion::unwrap)).let(ISource::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("decd211da0ec7146a3ae049ea4922ea246b9b85761fa5af69590c7cb69eeb38f")
@@ -95,7 +95,7 @@ public abstract class Source(
         gitHubEnterprise(GitHubEnterpriseSourceProps(props))
 
     public fun s3(props: S3SourceProps): ISource =
-        software.amazon.awscdk.services.codebuild.Source.s3(props.let(S3SourceProps::unwrap)).let(ISource::wrap)
+        software.amazon.awscdk.services.codebuild.Source.s3(props.let(S3SourceProps.Companion::unwrap)).let(ISource::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("03362722aac8e057f9ef808655fbd859113ee7cfc1a10ebe0b08b1eb43675c62")

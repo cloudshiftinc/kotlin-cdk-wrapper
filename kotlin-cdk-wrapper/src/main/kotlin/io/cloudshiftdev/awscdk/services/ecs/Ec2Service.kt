@@ -43,8 +43,8 @@ public open class Ec2Service(
     id: String,
     props: Ec2ServiceProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.Ec2Service(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(Ec2ServiceProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.Ec2Service(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(Ec2ServiceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -542,7 +542,7 @@ public open class Ec2Service(
      */
     override
         fun capacityProviderStrategies(capacityProviderStrategies: List<CapacityProviderStrategy>) {
-      cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy::unwrap))
+      cdkBuilder.capacityProviderStrategies(capacityProviderStrategies.map(CapacityProviderStrategy.Companion::unwrap))
     }
 
     /**
@@ -568,7 +568,7 @@ public open class Ec2Service(
      * @param circuitBreaker Whether to enable the deployment circuit breaker. 
      */
     override fun circuitBreaker(circuitBreaker: DeploymentCircuitBreaker) {
-      cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker::unwrap))
+      cdkBuilder.circuitBreaker(circuitBreaker.let(DeploymentCircuitBreaker.Companion::unwrap))
     }
 
     /**
@@ -595,7 +595,7 @@ public open class Ec2Service(
      * discovery. 
      */
     override fun cloudMapOptions(cloudMapOptions: CloudMapOptions) {
-      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions::unwrap))
+      cdkBuilder.cloudMapOptions(cloudMapOptions.let(CloudMapOptions.Companion::unwrap))
     }
 
     /**
@@ -617,7 +617,7 @@ public open class Ec2Service(
      * @param cluster The name of the cluster that hosts the service. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -647,7 +647,7 @@ public open class Ec2Service(
      * at least one enters a state of alarm during the deployment or bake time. 
      */
     override fun deploymentAlarms(deploymentAlarms: DeploymentAlarmConfig) {
-      cdkBuilder.deploymentAlarms(deploymentAlarms.let(DeploymentAlarmConfig::unwrap))
+      cdkBuilder.deploymentAlarms(deploymentAlarms.let(DeploymentAlarmConfig.Companion::unwrap))
     }
 
     /**
@@ -676,7 +676,7 @@ public open class Ec2Service(
      * @param deploymentController Specifies which deployment controller to use for the service. 
      */
     override fun deploymentController(deploymentController: DeploymentController) {
-      cdkBuilder.deploymentController(deploymentController.let(DeploymentController::unwrap))
+      cdkBuilder.deploymentController(deploymentController.let(DeploymentController.Companion::unwrap))
     }
 
     /**
@@ -748,7 +748,7 @@ public open class Ec2Service(
      * started. 
      */
     override fun healthCheckGracePeriod(healthCheckGracePeriod: Duration) {
-      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration::unwrap))
+      cdkBuilder.healthCheckGracePeriod(healthCheckGracePeriod.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -790,7 +790,7 @@ public open class Ec2Service(
      * @param placementConstraints The placement constraints to use for tasks in the service. 
      */
     override fun placementConstraints(placementConstraints: List<PlacementConstraint>) {
-      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint::unwrap))
+      cdkBuilder.placementConstraints(placementConstraints.map(PlacementConstraint.Companion::unwrap))
     }
 
     /**
@@ -819,7 +819,7 @@ public open class Ec2Service(
      * @param placementStrategies The placement strategies to use for tasks in the service. 
      */
     override fun placementStrategies(placementStrategies: List<PlacementStrategy>) {
-      cdkBuilder.placementStrategies(placementStrategies.map(PlacementStrategy::unwrap))
+      cdkBuilder.placementStrategies(placementStrategies.map(PlacementStrategy.Companion::unwrap))
     }
 
     /**
@@ -849,7 +849,7 @@ public open class Ec2Service(
      * service to the tasks in the service. 
      */
     override fun propagateTags(propagateTags: PropagatedTagSource) {
-      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource.Companion::unwrap))
     }
 
     /**
@@ -864,7 +864,7 @@ public open class Ec2Service(
      * @param securityGroups The security groups to associate with the service. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -890,7 +890,7 @@ public open class Ec2Service(
      * @param serviceConnectConfiguration Configuration for Service Connect. 
      */
     override fun serviceConnectConfiguration(serviceConnectConfiguration: ServiceConnectProps) {
-      cdkBuilder.serviceConnectConfiguration(serviceConnectConfiguration.let(ServiceConnectProps::unwrap))
+      cdkBuilder.serviceConnectConfiguration(serviceConnectConfiguration.let(ServiceConnectProps.Companion::unwrap))
     }
 
     /**
@@ -926,7 +926,7 @@ public open class Ec2Service(
      * @param taskDefinition The task definition to use for tasks in the service. 
      */
     override fun taskDefinition(taskDefinition: TaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(TaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(TaskDefinition.Companion::unwrap))
     }
 
     /**
@@ -938,7 +938,7 @@ public open class Ec2Service(
      * latest active task revision. 
      */
     override fun taskDefinitionRevision(taskDefinitionRevision: TaskDefinitionRevision) {
-      cdkBuilder.taskDefinitionRevision(taskDefinitionRevision.let(TaskDefinitionRevision::unwrap))
+      cdkBuilder.taskDefinitionRevision(taskDefinitionRevision.let(TaskDefinitionRevision.Companion::unwrap))
     }
 
     /**
@@ -952,7 +952,7 @@ public open class Ec2Service(
      * @param volumeConfigurations Configuration details for a volume used by the service. 
      */
     override fun volumeConfigurations(volumeConfigurations: List<ServiceManagedVolume>) {
-      cdkBuilder.volumeConfigurations(volumeConfigurations.map(ServiceManagedVolume::unwrap))
+      cdkBuilder.volumeConfigurations(volumeConfigurations.map(ServiceManagedVolume.Companion::unwrap))
     }
 
     /**
@@ -979,7 +979,7 @@ public open class Ec2Service(
      * @param vpcSubnets The subnets to associate with the service. 
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -1006,7 +1006,7 @@ public open class Ec2Service(
       id: String,
       ec2ServiceArn: String,
     ): IEc2Service =
-        software.amazon.awscdk.services.ecs.Ec2Service.fromEc2ServiceArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ecs.Ec2Service.fromEc2ServiceArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, ec2ServiceArn).let(IEc2Service::wrap)
 
     public fun fromEc2ServiceAttributes(
@@ -1014,8 +1014,8 @@ public open class Ec2Service(
       id: String,
       attrs: Ec2ServiceAttributes,
     ): IBaseService =
-        software.amazon.awscdk.services.ecs.Ec2Service.fromEc2ServiceAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(Ec2ServiceAttributes::unwrap)).let(IBaseService::wrap)
+        software.amazon.awscdk.services.ecs.Ec2Service.fromEc2ServiceAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(Ec2ServiceAttributes.Companion::unwrap)).let(IBaseService::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("deda49ac6a4ffe06a7cd5863c7416e87d620457ecd6508bced33ce9c2f31b151")

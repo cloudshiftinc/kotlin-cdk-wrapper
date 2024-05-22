@@ -53,7 +53,7 @@ public interface ILocalBundling {
      * @param options bundling options for this asset. 
      */
     override fun tryBundle(outputDir: String, options: BundlingOptions): Boolean =
-        unwrap(this).tryBundle(outputDir, options.let(BundlingOptions::unwrap))
+        unwrap(this).tryBundle(outputDir, options.let(BundlingOptions.Companion::unwrap))
 
     /**
      * This method is called before attempting docker bundling to allow the bundler to be executed

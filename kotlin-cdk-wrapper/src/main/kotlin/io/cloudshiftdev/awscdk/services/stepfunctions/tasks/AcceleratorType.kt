@@ -31,8 +31,8 @@ public open class AcceleratorType(
 
   public companion object {
     public fun of(acceleratorClass: AcceleratorClass, instanceSize: InstanceSize): AcceleratorType =
-        software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorType.of(acceleratorClass.let(AcceleratorClass::unwrap),
-        instanceSize.let(InstanceSize::unwrap)).let(AcceleratorType::wrap)
+        software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorType.of(acceleratorClass.let(AcceleratorClass.Companion::unwrap),
+        instanceSize.let(InstanceSize.Companion::unwrap)).let(AcceleratorType::wrap)
 
     internal
         fun wrap(cdkObject: software.amazon.awscdk.services.stepfunctions.tasks.AcceleratorType):

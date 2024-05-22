@@ -121,7 +121,7 @@ public interface CfnBackupPlanProps {
      * resources. 
      */
     override fun backupPlan(backupPlan: IResolvable) {
-      cdkBuilder.backupPlan(backupPlan.let(IResolvable::unwrap))
+      cdkBuilder.backupPlan(backupPlan.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -129,7 +129,7 @@ public interface CfnBackupPlanProps {
      * resources. 
      */
     override fun backupPlan(backupPlan: CfnBackupPlan.BackupPlanResourceTypeProperty) {
-      cdkBuilder.backupPlan(backupPlan.let(CfnBackupPlan.BackupPlanResourceTypeProperty::unwrap))
+      cdkBuilder.backupPlan(backupPlan.let(CfnBackupPlan.BackupPlanResourceTypeProperty.Companion::unwrap))
     }
 
     /**

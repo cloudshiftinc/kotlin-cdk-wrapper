@@ -123,7 +123,7 @@ public interface CfnEnvironmentProps {
      * @param tags The tags assigned to the environment.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

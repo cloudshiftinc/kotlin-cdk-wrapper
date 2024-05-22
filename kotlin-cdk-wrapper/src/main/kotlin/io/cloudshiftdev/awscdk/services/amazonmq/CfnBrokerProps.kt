@@ -608,7 +608,7 @@ public interface CfnBrokerProps {
      * manual broker reboot.
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
-      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable::unwrap))
+      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -631,7 +631,7 @@ public interface CfnBrokerProps {
      * Does not apply to RabbitMQ brokers.
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -639,7 +639,7 @@ public interface CfnBrokerProps {
      * Does not apply to RabbitMQ brokers.
      */
     override fun configuration(configuration: CfnBroker.ConfigurationIdProperty) {
-      cdkBuilder.configuration(configuration.let(CfnBroker.ConfigurationIdProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(CfnBroker.ConfigurationIdProperty.Companion::unwrap))
     }
 
     /**
@@ -683,7 +683,7 @@ public interface CfnBrokerProps {
      * Does not apply to RabbitMQ brokers.
      */
     override fun encryptionOptions(encryptionOptions: IResolvable) {
-      cdkBuilder.encryptionOptions(encryptionOptions.let(IResolvable::unwrap))
+      cdkBuilder.encryptionOptions(encryptionOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -691,7 +691,7 @@ public interface CfnBrokerProps {
      * Does not apply to RabbitMQ brokers.
      */
     override fun encryptionOptions(encryptionOptions: CfnBroker.EncryptionOptionsProperty) {
-      cdkBuilder.encryptionOptions(encryptionOptions.let(CfnBroker.EncryptionOptionsProperty::unwrap))
+      cdkBuilder.encryptionOptions(encryptionOptions.let(CfnBroker.EncryptionOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -735,7 +735,7 @@ public interface CfnBrokerProps {
      * Does not apply to RabbitMQ brokers.
      */
     override fun ldapServerMetadata(ldapServerMetadata: IResolvable) {
-      cdkBuilder.ldapServerMetadata(ldapServerMetadata.let(IResolvable::unwrap))
+      cdkBuilder.ldapServerMetadata(ldapServerMetadata.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -744,7 +744,7 @@ public interface CfnBrokerProps {
      * Does not apply to RabbitMQ brokers.
      */
     override fun ldapServerMetadata(ldapServerMetadata: CfnBroker.LdapServerMetadataProperty) {
-      cdkBuilder.ldapServerMetadata(ldapServerMetadata.let(CfnBroker.LdapServerMetadataProperty::unwrap))
+      cdkBuilder.ldapServerMetadata(ldapServerMetadata.let(CfnBroker.LdapServerMetadataProperty.Companion::unwrap))
     }
 
     /**
@@ -762,14 +762,14 @@ public interface CfnBrokerProps {
      * @param logs Enables Amazon CloudWatch logging for brokers.
      */
     override fun logs(logs: IResolvable) {
-      cdkBuilder.logs(logs.let(IResolvable::unwrap))
+      cdkBuilder.logs(logs.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param logs Enables Amazon CloudWatch logging for brokers.
      */
     override fun logs(logs: CfnBroker.LogListProperty) {
-      cdkBuilder.logs(logs.let(CfnBroker.LogListProperty::unwrap))
+      cdkBuilder.logs(logs.let(CfnBroker.LogListProperty.Companion::unwrap))
     }
 
     /**
@@ -785,7 +785,7 @@ public interface CfnBrokerProps {
      * Amazon MQ begins to apply pending updates or patches to the broker.
      */
     override fun maintenanceWindowStartTime(maintenanceWindowStartTime: IResolvable) {
-      cdkBuilder.maintenanceWindowStartTime(maintenanceWindowStartTime.let(IResolvable::unwrap))
+      cdkBuilder.maintenanceWindowStartTime(maintenanceWindowStartTime.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -794,7 +794,7 @@ public interface CfnBrokerProps {
      */
     override
         fun maintenanceWindowStartTime(maintenanceWindowStartTime: CfnBroker.MaintenanceWindowProperty) {
-      cdkBuilder.maintenanceWindowStartTime(maintenanceWindowStartTime.let(CfnBroker.MaintenanceWindowProperty::unwrap))
+      cdkBuilder.maintenanceWindowStartTime(maintenanceWindowStartTime.let(CfnBroker.MaintenanceWindowProperty.Companion::unwrap))
     }
 
     /**
@@ -821,7 +821,7 @@ public interface CfnBrokerProps {
      * the broker's subnets. 
      */
     override fun publiclyAccessible(publiclyAccessible: IResolvable) {
-      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable::unwrap))
+      cdkBuilder.publiclyAccessible(publiclyAccessible.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -889,7 +889,7 @@ public interface CfnBrokerProps {
      * *Billing and Cost Management User Guide* .
      */
     override fun tags(tags: List<CfnBroker.TagsEntryProperty>) {
-      cdkBuilder.tags(tags.map(CfnBroker.TagsEntryProperty::unwrap))
+      cdkBuilder.tags(tags.map(CfnBroker.TagsEntryProperty.Companion::unwrap))
     }
 
     /**
@@ -908,7 +908,7 @@ public interface CfnBrokerProps {
      * RabbitMQ web console or by using the RabbitMQ management API.
      */
     override fun users(users: IResolvable) {
-      cdkBuilder.users(users.let(IResolvable::unwrap))
+      cdkBuilder.users(users.let(IResolvable.Companion::unwrap))
     }
 
     /**

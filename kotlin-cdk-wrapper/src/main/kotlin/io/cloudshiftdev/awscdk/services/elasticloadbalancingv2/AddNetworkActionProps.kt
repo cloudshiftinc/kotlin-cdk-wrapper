@@ -48,7 +48,7 @@ public interface AddNetworkActionProps {
      * @param action Action to perform. 
      */
     override fun action(action: NetworkListenerAction) {
-      cdkBuilder.action(action.let(NetworkListenerAction::unwrap))
+      cdkBuilder.action(action.let(NetworkListenerAction.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.elasticloadbalancingv2.AddNetworkActionProps

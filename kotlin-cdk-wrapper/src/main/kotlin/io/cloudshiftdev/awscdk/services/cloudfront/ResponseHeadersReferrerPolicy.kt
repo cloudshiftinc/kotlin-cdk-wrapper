@@ -109,7 +109,7 @@ public interface ResponseHeadersReferrerPolicy {
      * @param referrerPolicy The value of the Referrer-Policy HTTP response header. 
      */
     override fun referrerPolicy(referrerPolicy: HeadersReferrerPolicy) {
-      cdkBuilder.referrerPolicy(referrerPolicy.let(HeadersReferrerPolicy::unwrap))
+      cdkBuilder.referrerPolicy(referrerPolicy.let(HeadersReferrerPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.ResponseHeadersReferrerPolicy =

@@ -63,7 +63,7 @@ public open class GeoLocation(
 
   public companion object {
     public fun continent(continentCode: Continent): GeoLocation =
-        software.amazon.awscdk.services.route53.GeoLocation.continent(continentCode.let(Continent::unwrap)).let(GeoLocation::wrap)
+        software.amazon.awscdk.services.route53.GeoLocation.continent(continentCode.let(Continent.Companion::unwrap)).let(GeoLocation::wrap)
 
     public fun country(countryCode: String): GeoLocation =
         software.amazon.awscdk.services.route53.GeoLocation.country(countryCode).let(GeoLocation::wrap)

@@ -79,8 +79,8 @@ public open class CfnDetector(
     id: String,
     props: CfnDetectorProps,
   ) :
-      this(software.amazon.awscdk.services.guardduty.CfnDetector(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDetectorProps::unwrap))
+      this(software.amazon.awscdk.services.guardduty.CfnDetector(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDetectorProps.Companion::unwrap))
   )
 
   public constructor(
@@ -104,14 +104,14 @@ public open class CfnDetector(
    * Describes which data sources will be enabled for the detector.
    */
   public open fun dataSources(`value`: IResolvable) {
-    unwrap(this).setDataSources(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataSources(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Describes which data sources will be enabled for the detector.
    */
   public open fun dataSources(`value`: CFNDataSourceConfigurationsProperty) {
-    unwrap(this).setDataSources(`value`.let(CFNDataSourceConfigurationsProperty::unwrap))
+    unwrap(this).setDataSources(`value`.let(CFNDataSourceConfigurationsProperty.Companion::unwrap))
   }
 
   /**
@@ -138,7 +138,7 @@ public open class CfnDetector(
    * Specifies whether the detector is to be enabled on creation.
    */
   public open fun enable(`value`: IResolvable) {
-    unwrap(this).setEnable(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnable(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -150,7 +150,7 @@ public open class CfnDetector(
    * A list of features that will be configured for the detector.
    */
   public open fun features(`value`: IResolvable) {
-    unwrap(this).setFeatures(`value`.let(IResolvable::unwrap))
+    unwrap(this).setFeatures(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -184,7 +184,7 @@ public open class CfnDetector(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -202,7 +202,7 @@ public open class CfnDetector(
    * Specifies tags added to a new detector resource.
    */
   public open fun tagsRaw(`value`: List<TagItemProperty>) {
-    unwrap(this).setTagsRaw(`value`.map(TagItemProperty::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(TagItemProperty.Companion::unwrap))
   }
 
   /**
@@ -338,7 +338,7 @@ public open class CfnDetector(
      * @param dataSources Describes which data sources will be enabled for the detector. 
      */
     override fun dataSources(dataSources: IResolvable) {
-      cdkBuilder.dataSources(dataSources.let(IResolvable::unwrap))
+      cdkBuilder.dataSources(dataSources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -348,7 +348,7 @@ public open class CfnDetector(
      * @param dataSources Describes which data sources will be enabled for the detector. 
      */
     override fun dataSources(dataSources: CFNDataSourceConfigurationsProperty) {
-      cdkBuilder.dataSources(dataSources.let(CFNDataSourceConfigurationsProperty::unwrap))
+      cdkBuilder.dataSources(dataSources.let(CFNDataSourceConfigurationsProperty.Companion::unwrap))
     }
 
     /**
@@ -379,7 +379,7 @@ public open class CfnDetector(
      * @param enable Specifies whether the detector is to be enabled on creation. 
      */
     override fun enable(enable: IResolvable) {
-      cdkBuilder.enable(enable.let(IResolvable::unwrap))
+      cdkBuilder.enable(enable.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -389,7 +389,7 @@ public open class CfnDetector(
      * @param features A list of features that will be configured for the detector. 
      */
     override fun features(features: IResolvable) {
-      cdkBuilder.features(features.let(IResolvable::unwrap))
+      cdkBuilder.features(features.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -436,7 +436,7 @@ public open class CfnDetector(
      * @param tags Specifies tags added to a new detector resource. 
      */
     override fun tags(tags: List<TagItemProperty>) {
-      cdkBuilder.tags(tags.map(TagItemProperty::unwrap))
+      cdkBuilder.tags(tags.map(TagItemProperty.Companion::unwrap))
     }
 
     /**
@@ -602,14 +602,14 @@ public open class CfnDetector(
        * @param kubernetes Describes which Kubernetes data sources are enabled for a detector.
        */
       override fun kubernetes(kubernetes: IResolvable) {
-        cdkBuilder.kubernetes(kubernetes.let(IResolvable::unwrap))
+        cdkBuilder.kubernetes(kubernetes.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param kubernetes Describes which Kubernetes data sources are enabled for a detector.
        */
       override fun kubernetes(kubernetes: CFNKubernetesConfigurationProperty) {
-        cdkBuilder.kubernetes(kubernetes.let(CFNKubernetesConfigurationProperty::unwrap))
+        cdkBuilder.kubernetes(kubernetes.let(CFNKubernetesConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -625,7 +625,7 @@ public open class CfnDetector(
        * source.
        */
       override fun malwareProtection(malwareProtection: IResolvable) {
-        cdkBuilder.malwareProtection(malwareProtection.let(IResolvable::unwrap))
+        cdkBuilder.malwareProtection(malwareProtection.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -633,7 +633,7 @@ public open class CfnDetector(
        * source.
        */
       override fun malwareProtection(malwareProtection: CFNMalwareProtectionConfigurationProperty) {
-        cdkBuilder.malwareProtection(malwareProtection.let(CFNMalwareProtectionConfigurationProperty::unwrap))
+        cdkBuilder.malwareProtection(malwareProtection.let(CFNMalwareProtectionConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -650,14 +650,14 @@ public open class CfnDetector(
        * @param s3Logs Describes whether S3 data event logs are enabled as a data source.
        */
       override fun s3Logs(s3Logs: IResolvable) {
-        cdkBuilder.s3Logs(s3Logs.let(IResolvable::unwrap))
+        cdkBuilder.s3Logs(s3Logs.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3Logs Describes whether S3 data event logs are enabled as a data source.
        */
       override fun s3Logs(s3Logs: CFNS3LogsConfigurationProperty) {
-        cdkBuilder.s3Logs(s3Logs.let(CFNS3LogsConfigurationProperty::unwrap))
+        cdkBuilder.s3Logs(s3Logs.let(CFNS3LogsConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -918,7 +918,7 @@ public open class CfnDetector(
        * in your account.
        */
       override fun additionalConfiguration(additionalConfiguration: IResolvable) {
-        cdkBuilder.additionalConfiguration(additionalConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.additionalConfiguration(additionalConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1060,7 +1060,7 @@ public open class CfnDetector(
        * detector. 
        */
       override fun enable(enable: IResolvable) {
-        cdkBuilder.enable(enable.let(IResolvable::unwrap))
+        cdkBuilder.enable(enable.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1163,7 +1163,7 @@ public open class CfnDetector(
        * the detector. 
        */
       override fun auditLogs(auditLogs: IResolvable) {
-        cdkBuilder.auditLogs(auditLogs.let(IResolvable::unwrap))
+        cdkBuilder.auditLogs(auditLogs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1171,7 +1171,7 @@ public open class CfnDetector(
        * the detector. 
        */
       override fun auditLogs(auditLogs: CFNKubernetesAuditLogsConfigurationProperty) {
-        cdkBuilder.auditLogs(auditLogs.let(CFNKubernetesAuditLogsConfigurationProperty::unwrap))
+        cdkBuilder.auditLogs(auditLogs.let(CFNKubernetesAuditLogsConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1285,7 +1285,7 @@ public open class CfnDetector(
        * EC2 instances with findings.
        */
       override fun scanEc2InstanceWithFindings(scanEc2InstanceWithFindings: IResolvable) {
-        cdkBuilder.scanEc2InstanceWithFindings(scanEc2InstanceWithFindings.let(IResolvable::unwrap))
+        cdkBuilder.scanEc2InstanceWithFindings(scanEc2InstanceWithFindings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1294,7 +1294,7 @@ public open class CfnDetector(
        */
       override
           fun scanEc2InstanceWithFindings(scanEc2InstanceWithFindings: CFNScanEc2InstanceWithFindingsConfigurationProperty) {
-        cdkBuilder.scanEc2InstanceWithFindings(scanEc2InstanceWithFindings.let(CFNScanEc2InstanceWithFindingsConfigurationProperty::unwrap))
+        cdkBuilder.scanEc2InstanceWithFindings(scanEc2InstanceWithFindings.let(CFNScanEc2InstanceWithFindingsConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1403,7 +1403,7 @@ public open class CfnDetector(
        * @param enable The status of S3 data event logs as a data source. 
        */
       override fun enable(enable: IResolvable) {
-        cdkBuilder.enable(enable.let(IResolvable::unwrap))
+        cdkBuilder.enable(enable.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1500,7 +1500,7 @@ public open class CfnDetector(
        * @param ebsVolumes Describes the configuration for scanning EBS volumes as data source.
        */
       override fun ebsVolumes(ebsVolumes: IResolvable) {
-        cdkBuilder.ebsVolumes(ebsVolumes.let(IResolvable::unwrap))
+        cdkBuilder.ebsVolumes(ebsVolumes.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

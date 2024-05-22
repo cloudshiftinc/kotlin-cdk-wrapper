@@ -128,7 +128,7 @@ public interface CfnBaiduChannelProps {
      * @param enabled Specifies whether to enable the Baidu channel for the application.
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**

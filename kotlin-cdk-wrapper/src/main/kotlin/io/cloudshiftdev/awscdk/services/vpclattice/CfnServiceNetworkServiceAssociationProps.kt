@@ -125,14 +125,14 @@ public interface CfnServiceNetworkServiceAssociationProps {
      * @param dnsEntry The DNS information of the service.
      */
     override fun dnsEntry(dnsEntry: IResolvable) {
-      cdkBuilder.dnsEntry(dnsEntry.let(IResolvable::unwrap))
+      cdkBuilder.dnsEntry(dnsEntry.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param dnsEntry The DNS information of the service.
      */
     override fun dnsEntry(dnsEntry: CfnServiceNetworkServiceAssociation.DnsEntryProperty) {
-      cdkBuilder.dnsEntry(dnsEntry.let(CfnServiceNetworkServiceAssociation.DnsEntryProperty::unwrap))
+      cdkBuilder.dnsEntry(dnsEntry.let(CfnServiceNetworkServiceAssociation.DnsEntryProperty.Companion::unwrap))
     }
 
     /**
@@ -163,7 +163,7 @@ public interface CfnServiceNetworkServiceAssociationProps {
      * @param tags The tags for the association.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

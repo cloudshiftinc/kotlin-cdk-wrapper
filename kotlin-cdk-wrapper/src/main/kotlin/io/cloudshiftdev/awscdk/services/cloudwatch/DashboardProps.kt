@@ -204,7 +204,7 @@ public interface DashboardProps {
      * Both properties `defaultInterval` and `start` cannot be set at once.
      */
     override fun defaultInterval(defaultInterval: Duration) {
-      cdkBuilder.defaultInterval(defaultInterval.let(Duration::unwrap))
+      cdkBuilder.defaultInterval(defaultInterval.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -225,7 +225,7 @@ public interface DashboardProps {
      * Specifying `Inherit` ensures that the period set for each graph is always obeyed.
      */
     override fun periodOverride(periodOverride: PeriodOverride) {
-      cdkBuilder.periodOverride(periodOverride.let(PeriodOverride::unwrap))
+      cdkBuilder.periodOverride(periodOverride.let(PeriodOverride.Companion::unwrap))
     }
 
     /**
@@ -250,7 +250,7 @@ public interface DashboardProps {
      * @param variables A list of dashboard variables.
      */
     override fun variables(variables: List<IVariable>) {
-      cdkBuilder.variables(variables.map(IVariable::unwrap))
+      cdkBuilder.variables(variables.map(IVariable.Companion::unwrap))
     }
 
     /**
@@ -263,7 +263,7 @@ public interface DashboardProps {
      * One array represents a row of widgets.
      */
     override fun widgets(widgets: List<List<IWidget>>) {
-      cdkBuilder.widgets(widgets.map{ it.map(IWidget::unwrap) })
+      cdkBuilder.widgets(widgets.map{ it.map(IWidget.Companion::unwrap) })
     }
 
     /**

@@ -28,6 +28,9 @@ import kotlin.jvm.JvmName
  * RuleTargetConfig ruleTargetConfig = RuleTargetConfig.builder()
  * .arn("arn")
  * // the properties below are optional
+ * .appSyncParameters(AppSyncParametersProperty.builder()
+ * .graphQlOperation("graphQlOperation")
+ * .build())
  * .batchParameters(BatchParametersProperty.builder()
  * .jobDefinition("jobDefinition")
  * .jobName("jobName")
@@ -110,6 +113,15 @@ import kotlin.jvm.JvmName
  * ```
  */
 public interface RuleTargetConfig {
+  /**
+   * Contains the GraphQL operation to be parsed and executed, if the event target is an AWS AppSync
+   * API.
+   *
+   * Default: - None
+   */
+  public fun appSyncParameters(): CfnRule.AppSyncParametersProperty? =
+      unwrap(this).getAppSyncParameters()?.let(CfnRule.AppSyncParametersProperty::wrap)
+
   /**
    * The Amazon Resource Name (ARN) of the target.
    */
@@ -208,6 +220,21 @@ public interface RuleTargetConfig {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param appSyncParameters Contains the GraphQL operation to be parsed and executed, if the
+     * event target is an AWS AppSync API.
+     */
+    public fun appSyncParameters(appSyncParameters: CfnRule.AppSyncParametersProperty)
+
+    /**
+     * @param appSyncParameters Contains the GraphQL operation to be parsed and executed, if the
+     * event target is an AWS AppSync API.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("405145ce8423ba08c08806c69aea275931cbafb9a97ae6a826c4a3a0a93e7d70")
+    public
+        fun appSyncParameters(appSyncParameters: CfnRule.AppSyncParametersProperty.Builder.() -> Unit)
+
     /**
      * @param arn The Amazon Resource Name (ARN) of the target. 
      */
@@ -355,6 +382,24 @@ public interface RuleTargetConfig {
         software.amazon.awscdk.services.events.RuleTargetConfig.builder()
 
     /**
+     * @param appSyncParameters Contains the GraphQL operation to be parsed and executed, if the
+     * event target is an AWS AppSync API.
+     */
+    override fun appSyncParameters(appSyncParameters: CfnRule.AppSyncParametersProperty) {
+      cdkBuilder.appSyncParameters(appSyncParameters.let(CfnRule.AppSyncParametersProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param appSyncParameters Contains the GraphQL operation to be parsed and executed, if the
+     * event target is an AWS AppSync API.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("405145ce8423ba08c08806c69aea275931cbafb9a97ae6a826c4a3a0a93e7d70")
+    override
+        fun appSyncParameters(appSyncParameters: CfnRule.AppSyncParametersProperty.Builder.() -> Unit):
+        Unit = appSyncParameters(CfnRule.AppSyncParametersProperty(appSyncParameters))
+
+    /**
      * @param arn The Amazon Resource Name (ARN) of the target. 
      */
     override fun arn(arn: String) {
@@ -365,7 +410,7 @@ public interface RuleTargetConfig {
      * @param batchParameters Parameters used when the rule invokes Amazon AWS Batch Job/Queue.
      */
     override fun batchParameters(batchParameters: CfnRule.BatchParametersProperty) {
-      cdkBuilder.batchParameters(batchParameters.let(CfnRule.BatchParametersProperty::unwrap))
+      cdkBuilder.batchParameters(batchParameters.let(CfnRule.BatchParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -381,7 +426,7 @@ public interface RuleTargetConfig {
      * @param deadLetterConfig Contains information about a dead-letter queue configuration.
      */
     override fun deadLetterConfig(deadLetterConfig: CfnRule.DeadLetterConfigProperty) {
-      cdkBuilder.deadLetterConfig(deadLetterConfig.let(CfnRule.DeadLetterConfigProperty::unwrap))
+      cdkBuilder.deadLetterConfig(deadLetterConfig.let(CfnRule.DeadLetterConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -398,7 +443,7 @@ public interface RuleTargetConfig {
      * target is an Amazon ECS task.
      */
     override fun ecsParameters(ecsParameters: CfnRule.EcsParametersProperty) {
-      cdkBuilder.ecsParameters(ecsParameters.let(CfnRule.EcsParametersProperty::unwrap))
+      cdkBuilder.ecsParameters(ecsParameters.let(CfnRule.EcsParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -415,7 +460,7 @@ public interface RuleTargetConfig {
      * REST endpoint or EventBridge API destination.
      */
     override fun httpParameters(httpParameters: CfnRule.HttpParametersProperty) {
-      cdkBuilder.httpParameters(httpParameters.let(CfnRule.HttpParametersProperty::unwrap))
+      cdkBuilder.httpParameters(httpParameters.let(CfnRule.HttpParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -431,7 +476,7 @@ public interface RuleTargetConfig {
      * @param input What input to send to the event target.
      */
     override fun input(input: RuleTargetInput) {
-      cdkBuilder.input(input.let(RuleTargetInput::unwrap))
+      cdkBuilder.input(input.let(RuleTargetInput.Companion::unwrap))
     }
 
     /**
@@ -441,7 +486,7 @@ public interface RuleTargetConfig {
      * partition key.
      */
     override fun kinesisParameters(kinesisParameters: CfnRule.KinesisParametersProperty) {
-      cdkBuilder.kinesisParameters(kinesisParameters.let(CfnRule.KinesisParametersProperty::unwrap))
+      cdkBuilder.kinesisParameters(kinesisParameters.let(CfnRule.KinesisParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -461,7 +506,7 @@ public interface RuleTargetConfig {
      * settings.
      */
     override fun retryPolicy(retryPolicy: CfnRule.RetryPolicyProperty) {
-      cdkBuilder.retryPolicy(retryPolicy.let(CfnRule.RetryPolicyProperty::unwrap))
+      cdkBuilder.retryPolicy(retryPolicy.let(CfnRule.RetryPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -477,7 +522,7 @@ public interface RuleTargetConfig {
      * @param role Role to use to invoke this event target.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -485,7 +530,7 @@ public interface RuleTargetConfig {
      * Run Command.
      */
     override fun runCommandParameters(runCommandParameters: CfnRule.RunCommandParametersProperty) {
-      cdkBuilder.runCommandParameters(runCommandParameters.let(CfnRule.RunCommandParametersProperty::unwrap))
+      cdkBuilder.runCommandParameters(runCommandParameters.let(CfnRule.RunCommandParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -503,7 +548,7 @@ public interface RuleTargetConfig {
      * rule.
      */
     override fun sqsParameters(sqsParameters: CfnRule.SqsParametersProperty) {
-      cdkBuilder.sqsParameters(sqsParameters.let(CfnRule.SqsParametersProperty::unwrap))
+      cdkBuilder.sqsParameters(sqsParameters.let(CfnRule.SqsParametersProperty.Companion::unwrap))
     }
 
     /**
@@ -525,7 +570,7 @@ public interface RuleTargetConfig {
      * including an additional stack containing the EventBusPolicy.
      */
     override fun targetResource(targetResource: IConstruct) {
-      cdkBuilder.targetResource(targetResource.let(IConstruct::unwrap))
+      cdkBuilder.targetResource(targetResource.let(IConstruct.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.events.RuleTargetConfig = cdkBuilder.build()
@@ -534,6 +579,15 @@ public interface RuleTargetConfig {
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.events.RuleTargetConfig,
   ) : CdkObject(cdkObject), RuleTargetConfig {
+    /**
+     * Contains the GraphQL operation to be parsed and executed, if the event target is an AWS
+     * AppSync API.
+     *
+     * Default: - None
+     */
+    override fun appSyncParameters(): CfnRule.AppSyncParametersProperty? =
+        unwrap(this).getAppSyncParameters()?.let(CfnRule.AppSyncParametersProperty::wrap)
+
     /**
      * The Amazon Resource Name (ARN) of the target.
      */

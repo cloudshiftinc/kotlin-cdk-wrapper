@@ -30,7 +30,7 @@ public open class InstanceTarget(
   cdkObject: software.amazon.awscdk.services.elasticloadbalancing.InstanceTarget,
 ) : CdkObject(cdkObject), ILoadBalancerTarget {
   public constructor(instance: Instance) :
-      this(software.amazon.awscdk.services.elasticloadbalancing.InstanceTarget(instance.let(Instance::unwrap))
+      this(software.amazon.awscdk.services.elasticloadbalancing.InstanceTarget(instance.let(Instance.Companion::unwrap))
   )
 
   /**
@@ -39,7 +39,7 @@ public open class InstanceTarget(
    * @param loadBalancer 
    */
   public override fun attachToClassicLB(loadBalancer: LoadBalancer) {
-    unwrap(this).attachToClassicLB(loadBalancer.let(LoadBalancer::unwrap))
+    unwrap(this).attachToClassicLB(loadBalancer.let(LoadBalancer.Companion::unwrap))
   }
 
   /**

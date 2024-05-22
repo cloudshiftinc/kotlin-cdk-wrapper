@@ -243,8 +243,8 @@ public open class CfnDomain(
     id: String,
     props: CfnDomainProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnDomain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDomainProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnDomain(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDomainProps.Companion::unwrap))
   )
 
   public constructor(
@@ -348,14 +348,14 @@ public open class CfnDomain(
    * A collection of settings that apply to spaces created in the domain.
    */
   public open fun defaultSpaceSettings(`value`: IResolvable) {
-    unwrap(this).setDefaultSpaceSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefaultSpaceSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A collection of settings that apply to spaces created in the domain.
    */
   public open fun defaultSpaceSettings(`value`: DefaultSpaceSettingsProperty) {
-    unwrap(this).setDefaultSpaceSettings(`value`.let(DefaultSpaceSettingsProperty::unwrap))
+    unwrap(this).setDefaultSpaceSettings(`value`.let(DefaultSpaceSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -375,14 +375,14 @@ public open class CfnDomain(
    * The default user settings.
    */
   public open fun defaultUserSettings(`value`: IResolvable) {
-    unwrap(this).setDefaultUserSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefaultUserSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The default user settings.
    */
   public open fun defaultUserSettings(`value`: UserSettingsProperty) {
-    unwrap(this).setDefaultUserSettings(`value`.let(UserSettingsProperty::unwrap))
+    unwrap(this).setDefaultUserSettings(`value`.let(UserSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -414,14 +414,14 @@ public open class CfnDomain(
    * A collection of settings that apply to the `SageMaker Domain` .
    */
   public open fun domainSettings(`value`: IResolvable) {
-    unwrap(this).setDomainSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDomainSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A collection of settings that apply to the `SageMaker Domain` .
    */
   public open fun domainSettings(`value`: DomainSettingsProperty) {
-    unwrap(this).setDomainSettings(`value`.let(DomainSettingsProperty::unwrap))
+    unwrap(this).setDomainSettings(`value`.let(DomainSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -438,7 +438,7 @@ public open class CfnDomain(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -487,7 +487,7 @@ public open class CfnDomain(
    * Tags to associated with the Domain.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -801,7 +801,7 @@ public open class CfnDomain(
      * domain. 
      */
     override fun defaultSpaceSettings(defaultSpaceSettings: IResolvable) {
-      cdkBuilder.defaultSpaceSettings(defaultSpaceSettings.let(IResolvable::unwrap))
+      cdkBuilder.defaultSpaceSettings(defaultSpaceSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -812,7 +812,7 @@ public open class CfnDomain(
      * domain. 
      */
     override fun defaultSpaceSettings(defaultSpaceSettings: DefaultSpaceSettingsProperty) {
-      cdkBuilder.defaultSpaceSettings(defaultSpaceSettings.let(DefaultSpaceSettingsProperty::unwrap))
+      cdkBuilder.defaultSpaceSettings(defaultSpaceSettings.let(DefaultSpaceSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -835,7 +835,7 @@ public open class CfnDomain(
      * @param defaultUserSettings The default user settings. 
      */
     override fun defaultUserSettings(defaultUserSettings: IResolvable) {
-      cdkBuilder.defaultUserSettings(defaultUserSettings.let(IResolvable::unwrap))
+      cdkBuilder.defaultUserSettings(defaultUserSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -845,7 +845,7 @@ public open class CfnDomain(
      * @param defaultUserSettings The default user settings. 
      */
     override fun defaultUserSettings(defaultUserSettings: UserSettingsProperty) {
-      cdkBuilder.defaultUserSettings(defaultUserSettings.let(UserSettingsProperty::unwrap))
+      cdkBuilder.defaultUserSettings(defaultUserSettings.let(UserSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -878,7 +878,7 @@ public open class CfnDomain(
      * @param domainSettings A collection of settings that apply to the `SageMaker Domain` . 
      */
     override fun domainSettings(domainSettings: IResolvable) {
-      cdkBuilder.domainSettings(domainSettings.let(IResolvable::unwrap))
+      cdkBuilder.domainSettings(domainSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -890,7 +890,7 @@ public open class CfnDomain(
      * @param domainSettings A collection of settings that apply to the `SageMaker Domain` . 
      */
     override fun domainSettings(domainSettings: DomainSettingsProperty) {
-      cdkBuilder.domainSettings(domainSettings.let(DomainSettingsProperty::unwrap))
+      cdkBuilder.domainSettings(domainSettings.let(DomainSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -969,7 +969,7 @@ public open class CfnDomain(
      * @param tags Tags to associated with the Domain. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1149,7 +1149,7 @@ public open class CfnDomain(
        * Editor app.
        */
       override fun customImages(customImages: IResolvable) {
-        cdkBuilder.customImages(customImages.let(IResolvable::unwrap))
+        cdkBuilder.customImages(customImages.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1172,7 +1172,7 @@ public open class CfnDomain(
        * the default SageMaker image used by the Code Editor app.
        */
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1180,7 +1180,7 @@ public open class CfnDomain(
        * the default SageMaker image used by the Code Editor app.
        */
       override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty.Companion::unwrap))
       }
 
       /**
@@ -1405,14 +1405,14 @@ public open class CfnDomain(
        * @param efsFileSystemConfig The settings for a custom Amazon EFS file system.
        */
       override fun efsFileSystemConfig(efsFileSystemConfig: IResolvable) {
-        cdkBuilder.efsFileSystemConfig(efsFileSystemConfig.let(IResolvable::unwrap))
+        cdkBuilder.efsFileSystemConfig(efsFileSystemConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param efsFileSystemConfig The settings for a custom Amazon EFS file system.
        */
       override fun efsFileSystemConfig(efsFileSystemConfig: EFSFileSystemConfigProperty) {
-        cdkBuilder.efsFileSystemConfig(efsFileSystemConfig.let(EFSFileSystemConfigProperty::unwrap))
+        cdkBuilder.efsFileSystemConfig(efsFileSystemConfig.let(EFSFileSystemConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1713,8 +1713,8 @@ public open class CfnDomain(
   }
 
   /**
-   * A collection of default EBS storage settings that applies to private spaces created within a
-   * domain or user profile.
+   * A collection of default EBS storage settings that apply to spaces created within a domain or
+   * user profile.
    *
    * Example:
    *
@@ -1733,14 +1733,14 @@ public open class CfnDomain(
    */
   public interface DefaultEbsStorageSettingsProperty {
     /**
-     * The default size of the EBS storage volume for a private space.
+     * The default size of the EBS storage volume for a space.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultebsstoragesettings.html#cfn-sagemaker-domain-defaultebsstoragesettings-defaultebsvolumesizeingb)
      */
     public fun defaultEbsVolumeSizeInGb(): Number
 
     /**
-     * The maximum size of the EBS storage volume for a private space.
+     * The maximum size of the EBS storage volume for a space.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultebsstoragesettings.html#cfn-sagemaker-domain-defaultebsstoragesettings-maximumebsvolumesizeingb)
      */
@@ -1752,14 +1752,12 @@ public open class CfnDomain(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param defaultEbsVolumeSizeInGb The default size of the EBS storage volume for a private
-       * space. 
+       * @param defaultEbsVolumeSizeInGb The default size of the EBS storage volume for a space. 
        */
       public fun defaultEbsVolumeSizeInGb(defaultEbsVolumeSizeInGb: Number)
 
       /**
-       * @param maximumEbsVolumeSizeInGb The maximum size of the EBS storage volume for a private
-       * space. 
+       * @param maximumEbsVolumeSizeInGb The maximum size of the EBS storage volume for a space. 
        */
       public fun maximumEbsVolumeSizeInGb(maximumEbsVolumeSizeInGb: Number)
     }
@@ -1771,16 +1769,14 @@ public open class CfnDomain(
           software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultEbsStorageSettingsProperty.builder()
 
       /**
-       * @param defaultEbsVolumeSizeInGb The default size of the EBS storage volume for a private
-       * space. 
+       * @param defaultEbsVolumeSizeInGb The default size of the EBS storage volume for a space. 
        */
       override fun defaultEbsVolumeSizeInGb(defaultEbsVolumeSizeInGb: Number) {
         cdkBuilder.defaultEbsVolumeSizeInGb(defaultEbsVolumeSizeInGb)
       }
 
       /**
-       * @param maximumEbsVolumeSizeInGb The maximum size of the EBS storage volume for a private
-       * space. 
+       * @param maximumEbsVolumeSizeInGb The maximum size of the EBS storage volume for a space. 
        */
       override fun maximumEbsVolumeSizeInGb(maximumEbsVolumeSizeInGb: Number) {
         cdkBuilder.maximumEbsVolumeSizeInGb(maximumEbsVolumeSizeInGb)
@@ -1795,14 +1791,14 @@ public open class CfnDomain(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultEbsStorageSettingsProperty,
     ) : CdkObject(cdkObject), DefaultEbsStorageSettingsProperty {
       /**
-       * The default size of the EBS storage volume for a private space.
+       * The default size of the EBS storage volume for a space.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultebsstoragesettings.html#cfn-sagemaker-domain-defaultebsstoragesettings-defaultebsvolumesizeingb)
        */
       override fun defaultEbsVolumeSizeInGb(): Number = unwrap(this).getDefaultEbsVolumeSizeInGb()
 
       /**
-       * The maximum size of the EBS storage volume for a private space.
+       * The maximum size of the EBS storage volume for a space.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultebsstoragesettings.html#cfn-sagemaker-domain-defaultebsstoragesettings-maximumebsvolumesizeingb)
        */
@@ -1975,7 +1971,7 @@ public open class CfnDomain(
        * @param jupyterServerAppSettings The JupyterServer app settings.
        */
       override fun jupyterServerAppSettings(jupyterServerAppSettings: IResolvable) {
-        cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(IResolvable::unwrap))
+        cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1983,7 +1979,7 @@ public open class CfnDomain(
        */
       override
           fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty) {
-        cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(JupyterServerAppSettingsProperty::unwrap))
+        cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(JupyterServerAppSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -2000,7 +1996,7 @@ public open class CfnDomain(
        * @param kernelGatewayAppSettings The KernelGateway app settings.
        */
       override fun kernelGatewayAppSettings(kernelGatewayAppSettings: IResolvable) {
-        cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(IResolvable::unwrap))
+        cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2008,7 +2004,7 @@ public open class CfnDomain(
        */
       override
           fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty) {
-        cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(KernelGatewayAppSettingsProperty::unwrap))
+        cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(KernelGatewayAppSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -2092,7 +2088,7 @@ public open class CfnDomain(
   }
 
   /**
-   * The default storage settings for a private space.
+   * The default storage settings for a space.
    *
    * Example:
    *
@@ -2113,7 +2109,7 @@ public open class CfnDomain(
    */
   public interface DefaultSpaceStorageSettingsProperty {
     /**
-     * The default EBS storage settings for a private space.
+     * The default EBS storage settings for a space.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacestoragesettings.html#cfn-sagemaker-domain-defaultspacestoragesettings-defaultebsstoragesettings)
      */
@@ -2125,18 +2121,18 @@ public open class CfnDomain(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
+       * @param defaultEbsStorageSettings The default EBS storage settings for a space.
        */
       public fun defaultEbsStorageSettings(defaultEbsStorageSettings: IResolvable)
 
       /**
-       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
+       * @param defaultEbsStorageSettings The default EBS storage settings for a space.
        */
       public
           fun defaultEbsStorageSettings(defaultEbsStorageSettings: DefaultEbsStorageSettingsProperty)
 
       /**
-       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
+       * @param defaultEbsStorageSettings The default EBS storage settings for a space.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("88b9375c272d3f8eacbde4ab8643a541071d5490c41fe7713e8c92223e3ea688")
@@ -2151,22 +2147,22 @@ public open class CfnDomain(
           software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceStorageSettingsProperty.builder()
 
       /**
-       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
+       * @param defaultEbsStorageSettings The default EBS storage settings for a space.
        */
       override fun defaultEbsStorageSettings(defaultEbsStorageSettings: IResolvable) {
-        cdkBuilder.defaultEbsStorageSettings(defaultEbsStorageSettings.let(IResolvable::unwrap))
+        cdkBuilder.defaultEbsStorageSettings(defaultEbsStorageSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
+       * @param defaultEbsStorageSettings The default EBS storage settings for a space.
        */
       override
           fun defaultEbsStorageSettings(defaultEbsStorageSettings: DefaultEbsStorageSettingsProperty) {
-        cdkBuilder.defaultEbsStorageSettings(defaultEbsStorageSettings.let(DefaultEbsStorageSettingsProperty::unwrap))
+        cdkBuilder.defaultEbsStorageSettings(defaultEbsStorageSettings.let(DefaultEbsStorageSettingsProperty.Companion::unwrap))
       }
 
       /**
-       * @param defaultEbsStorageSettings The default EBS storage settings for a private space.
+       * @param defaultEbsStorageSettings The default EBS storage settings for a space.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("88b9375c272d3f8eacbde4ab8643a541071d5490c41fe7713e8c92223e3ea688")
@@ -2184,7 +2180,7 @@ public open class CfnDomain(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnDomain.DefaultSpaceStorageSettingsProperty,
     ) : CdkObject(cdkObject), DefaultSpaceStorageSettingsProperty {
       /**
-       * The default EBS storage settings for a private space.
+       * The default EBS storage settings for a space.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-defaultspacestoragesettings.html#cfn-sagemaker-domain-defaultspacestoragesettings-defaultebsstoragesettings)
        */
@@ -2462,7 +2458,7 @@ public open class CfnDomain(
        * interaction.
        */
       override fun dockerSettings(dockerSettings: IResolvable) {
-        cdkBuilder.dockerSettings(dockerSettings.let(IResolvable::unwrap))
+        cdkBuilder.dockerSettings(dockerSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2470,7 +2466,7 @@ public open class CfnDomain(
        * interaction.
        */
       override fun dockerSettings(dockerSettings: DockerSettingsProperty) {
-        cdkBuilder.dockerSettings(dockerSettings.let(DockerSettingsProperty::unwrap))
+        cdkBuilder.dockerSettings(dockerSettings.let(DockerSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -2487,7 +2483,7 @@ public open class CfnDomain(
        * `RStudioServerPro` Domain-level app.
        */
       override fun rStudioServerProDomainSettings(rStudioServerProDomainSettings: IResolvable) {
-        cdkBuilder.rStudioServerProDomainSettings(rStudioServerProDomainSettings.let(IResolvable::unwrap))
+        cdkBuilder.rStudioServerProDomainSettings(rStudioServerProDomainSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2496,7 +2492,7 @@ public open class CfnDomain(
        */
       override
           fun rStudioServerProDomainSettings(rStudioServerProDomainSettings: RStudioServerProDomainSettingsProperty) {
-        cdkBuilder.rStudioServerProDomainSettings(rStudioServerProDomainSettings.let(RStudioServerProDomainSettingsProperty::unwrap))
+        cdkBuilder.rStudioServerProDomainSettings(rStudioServerProDomainSettings.let(RStudioServerProDomainSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -2847,7 +2843,7 @@ public open class CfnDomain(
        * users for cloning in the JupyterLab application.
        */
       override fun codeRepositories(codeRepositories: IResolvable) {
-        cdkBuilder.codeRepositories(codeRepositories.let(IResolvable::unwrap))
+        cdkBuilder.codeRepositories(codeRepositories.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2870,7 +2866,7 @@ public open class CfnDomain(
        * JupyterLab app.
        */
       override fun customImages(customImages: IResolvable) {
-        cdkBuilder.customImages(customImages.let(IResolvable::unwrap))
+        cdkBuilder.customImages(customImages.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2893,7 +2889,7 @@ public open class CfnDomain(
        * the default SageMaker image used by the JupyterLab app.
        */
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2901,7 +2897,7 @@ public open class CfnDomain(
        * the default SageMaker image used by the JupyterLab app.
        */
       override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty.Companion::unwrap))
       }
 
       /**
@@ -3060,7 +3056,7 @@ public open class CfnDomain(
        * the default SageMaker image used by the JupyterServer app.
        */
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3068,7 +3064,7 @@ public open class CfnDomain(
        * the default SageMaker image used by the JupyterServer app.
        */
       override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty.Companion::unwrap))
       }
 
       /**
@@ -3233,7 +3229,7 @@ public open class CfnDomain(
        * KernelGateway app.
        */
       override fun customImages(customImages: IResolvable) {
-        cdkBuilder.customImages(customImages.let(IResolvable::unwrap))
+        cdkBuilder.customImages(customImages.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3260,7 +3256,7 @@ public open class CfnDomain(
        * CloudFormation and the instance type parameter value is not passed.
        */
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3272,7 +3268,7 @@ public open class CfnDomain(
        * CloudFormation and the instance type parameter value is not passed.
        */
       override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty.Companion::unwrap))
       }
 
       /**
@@ -3434,7 +3430,7 @@ public open class CfnDomain(
        * RSession app.
        */
       override fun customImages(customImages: IResolvable) {
-        cdkBuilder.customImages(customImages.let(IResolvable::unwrap))
+        cdkBuilder.customImages(customImages.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3457,7 +3453,7 @@ public open class CfnDomain(
        * version, and the instance type that the version runs on.
        */
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3465,7 +3461,7 @@ public open class CfnDomain(
        * version, and the instance type that the version runs on.
        */
       override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty.Companion::unwrap))
       }
 
       /**
@@ -3754,7 +3750,7 @@ public open class CfnDomain(
        * `SageMakerImageArn` , and `SageMakerImageVersionArn` for the Domain.
        */
       override fun defaultResourceSpec(defaultResourceSpec: IResolvable) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3762,7 +3758,7 @@ public open class CfnDomain(
        * `SageMakerImageArn` , and `SageMakerImageVersionArn` for the Domain.
        */
       override fun defaultResourceSpec(defaultResourceSpec: ResourceSpecProperty) {
-        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty::unwrap))
+        cdkBuilder.defaultResourceSpec(defaultResourceSpec.let(ResourceSpecProperty.Companion::unwrap))
       }
 
       /**
@@ -4428,7 +4424,7 @@ public open class CfnDomain(
     public fun sharingSettings(): Any? = unwrap(this).getSharingSettings()
 
     /**
-     * The storage settings for a private space.
+     * The storage settings for a space.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-usersettings.html#cfn-sagemaker-domain-usersettings-spacestoragesettings)
      */
@@ -4670,17 +4666,17 @@ public open class CfnDomain(
       public fun sharingSettings(sharingSettings: SharingSettingsProperty.Builder.() -> Unit)
 
       /**
-       * @param spaceStorageSettings The storage settings for a private space.
+       * @param spaceStorageSettings The storage settings for a space.
        */
       public fun spaceStorageSettings(spaceStorageSettings: IResolvable)
 
       /**
-       * @param spaceStorageSettings The storage settings for a private space.
+       * @param spaceStorageSettings The storage settings for a space.
        */
       public fun spaceStorageSettings(spaceStorageSettings: DefaultSpaceStorageSettingsProperty)
 
       /**
-       * @param spaceStorageSettings The storage settings for a private space.
+       * @param spaceStorageSettings The storage settings for a space.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2a3aae4112a7de18e3c56555dbe10493634a6f69dfe8f103aab3796ca359b6f1")
@@ -4704,14 +4700,14 @@ public open class CfnDomain(
        * @param codeEditorAppSettings The Code Editor application settings.
        */
       override fun codeEditorAppSettings(codeEditorAppSettings: IResolvable) {
-        cdkBuilder.codeEditorAppSettings(codeEditorAppSettings.let(IResolvable::unwrap))
+        cdkBuilder.codeEditorAppSettings(codeEditorAppSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param codeEditorAppSettings The Code Editor application settings.
        */
       override fun codeEditorAppSettings(codeEditorAppSettings: CodeEditorAppSettingsProperty) {
-        cdkBuilder.codeEditorAppSettings(codeEditorAppSettings.let(CodeEditorAppSettingsProperty::unwrap))
+        cdkBuilder.codeEditorAppSettings(codeEditorAppSettings.let(CodeEditorAppSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -4729,7 +4725,7 @@ public open class CfnDomain(
        * Permitted users can access this file system in Amazon SageMaker Studio.
        */
       override fun customFileSystemConfigs(customFileSystemConfigs: IResolvable) {
-        cdkBuilder.customFileSystemConfigs(customFileSystemConfigs.let(IResolvable::unwrap))
+        cdkBuilder.customFileSystemConfigs(customFileSystemConfigs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4754,7 +4750,7 @@ public open class CfnDomain(
        * operations.
        */
       override fun customPosixUserConfig(customPosixUserConfig: IResolvable) {
-        cdkBuilder.customPosixUserConfig(customPosixUserConfig.let(IResolvable::unwrap))
+        cdkBuilder.customPosixUserConfig(customPosixUserConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4762,7 +4758,7 @@ public open class CfnDomain(
        * operations.
        */
       override fun customPosixUserConfig(customPosixUserConfig: CustomPosixUserConfigProperty) {
-        cdkBuilder.customPosixUserConfig(customPosixUserConfig.let(CustomPosixUserConfigProperty::unwrap))
+        cdkBuilder.customPosixUserConfig(customPosixUserConfig.let(CustomPosixUserConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -4797,14 +4793,14 @@ public open class CfnDomain(
        * @param jupyterLabAppSettings The settings for the JupyterLab application.
        */
       override fun jupyterLabAppSettings(jupyterLabAppSettings: IResolvable) {
-        cdkBuilder.jupyterLabAppSettings(jupyterLabAppSettings.let(IResolvable::unwrap))
+        cdkBuilder.jupyterLabAppSettings(jupyterLabAppSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param jupyterLabAppSettings The settings for the JupyterLab application.
        */
       override fun jupyterLabAppSettings(jupyterLabAppSettings: JupyterLabAppSettingsProperty) {
-        cdkBuilder.jupyterLabAppSettings(jupyterLabAppSettings.let(JupyterLabAppSettingsProperty::unwrap))
+        cdkBuilder.jupyterLabAppSettings(jupyterLabAppSettings.let(JupyterLabAppSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -4820,7 +4816,7 @@ public open class CfnDomain(
        * @param jupyterServerAppSettings The Jupyter server's app settings.
        */
       override fun jupyterServerAppSettings(jupyterServerAppSettings: IResolvable) {
-        cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(IResolvable::unwrap))
+        cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4828,7 +4824,7 @@ public open class CfnDomain(
        */
       override
           fun jupyterServerAppSettings(jupyterServerAppSettings: JupyterServerAppSettingsProperty) {
-        cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(JupyterServerAppSettingsProperty::unwrap))
+        cdkBuilder.jupyterServerAppSettings(jupyterServerAppSettings.let(JupyterServerAppSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -4845,7 +4841,7 @@ public open class CfnDomain(
        * @param kernelGatewayAppSettings The kernel gateway app settings.
        */
       override fun kernelGatewayAppSettings(kernelGatewayAppSettings: IResolvable) {
-        cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(IResolvable::unwrap))
+        cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4853,7 +4849,7 @@ public open class CfnDomain(
        */
       override
           fun kernelGatewayAppSettings(kernelGatewayAppSettings: KernelGatewayAppSettingsProperty) {
-        cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(KernelGatewayAppSettingsProperty::unwrap))
+        cdkBuilder.kernelGatewayAppSettings(kernelGatewayAppSettings.let(KernelGatewayAppSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -4871,7 +4867,7 @@ public open class CfnDomain(
        * app.
        */
       override fun rSessionAppSettings(rSessionAppSettings: IResolvable) {
-        cdkBuilder.rSessionAppSettings(rSessionAppSettings.let(IResolvable::unwrap))
+        cdkBuilder.rSessionAppSettings(rSessionAppSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4879,7 +4875,7 @@ public open class CfnDomain(
        * app.
        */
       override fun rSessionAppSettings(rSessionAppSettings: RSessionAppSettingsProperty) {
-        cdkBuilder.rSessionAppSettings(rSessionAppSettings.let(RSessionAppSettingsProperty::unwrap))
+        cdkBuilder.rSessionAppSettings(rSessionAppSettings.let(RSessionAppSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -4897,7 +4893,7 @@ public open class CfnDomain(
        * with the `RStudioServerPro` app.
        */
       override fun rStudioServerProAppSettings(rStudioServerProAppSettings: IResolvable) {
-        cdkBuilder.rStudioServerProAppSettings(rStudioServerProAppSettings.let(IResolvable::unwrap))
+        cdkBuilder.rStudioServerProAppSettings(rStudioServerProAppSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4906,7 +4902,7 @@ public open class CfnDomain(
        */
       override
           fun rStudioServerProAppSettings(rStudioServerProAppSettings: RStudioServerProAppSettingsProperty) {
-        cdkBuilder.rStudioServerProAppSettings(rStudioServerProAppSettings.let(RStudioServerProAppSettingsProperty::unwrap))
+        cdkBuilder.rStudioServerProAppSettings(rStudioServerProAppSettings.let(RStudioServerProAppSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -4957,14 +4953,14 @@ public open class CfnDomain(
        * @param sharingSettings Specifies options for sharing Amazon SageMaker Studio notebooks.
        */
       override fun sharingSettings(sharingSettings: IResolvable) {
-        cdkBuilder.sharingSettings(sharingSettings.let(IResolvable::unwrap))
+        cdkBuilder.sharingSettings(sharingSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param sharingSettings Specifies options for sharing Amazon SageMaker Studio notebooks.
        */
       override fun sharingSettings(sharingSettings: SharingSettingsProperty) {
-        cdkBuilder.sharingSettings(sharingSettings.let(SharingSettingsProperty::unwrap))
+        cdkBuilder.sharingSettings(sharingSettings.let(SharingSettingsProperty.Companion::unwrap))
       }
 
       /**
@@ -4976,21 +4972,21 @@ public open class CfnDomain(
           Unit = sharingSettings(SharingSettingsProperty(sharingSettings))
 
       /**
-       * @param spaceStorageSettings The storage settings for a private space.
+       * @param spaceStorageSettings The storage settings for a space.
        */
       override fun spaceStorageSettings(spaceStorageSettings: IResolvable) {
-        cdkBuilder.spaceStorageSettings(spaceStorageSettings.let(IResolvable::unwrap))
+        cdkBuilder.spaceStorageSettings(spaceStorageSettings.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param spaceStorageSettings The storage settings for a private space.
+       * @param spaceStorageSettings The storage settings for a space.
        */
       override fun spaceStorageSettings(spaceStorageSettings: DefaultSpaceStorageSettingsProperty) {
-        cdkBuilder.spaceStorageSettings(spaceStorageSettings.let(DefaultSpaceStorageSettingsProperty::unwrap))
+        cdkBuilder.spaceStorageSettings(spaceStorageSettings.let(DefaultSpaceStorageSettingsProperty.Companion::unwrap))
       }
 
       /**
-       * @param spaceStorageSettings The storage settings for a private space.
+       * @param spaceStorageSettings The storage settings for a space.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2a3aae4112a7de18e3c56555dbe10493634a6f69dfe8f103aab3796ca359b6f1")
@@ -5118,7 +5114,7 @@ public open class CfnDomain(
       override fun sharingSettings(): Any? = unwrap(this).getSharingSettings()
 
       /**
-       * The storage settings for a private space.
+       * The storage settings for a space.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-usersettings.html#cfn-sagemaker-domain-usersettings-spacestoragesettings)
        */

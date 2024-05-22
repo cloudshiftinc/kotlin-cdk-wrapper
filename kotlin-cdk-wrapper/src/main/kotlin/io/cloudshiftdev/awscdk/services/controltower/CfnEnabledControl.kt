@@ -59,8 +59,8 @@ public open class CfnEnabledControl(
     id: String,
     props: CfnEnabledControlProps,
   ) :
-      this(software.amazon.awscdk.services.controltower.CfnEnabledControl(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEnabledControlProps::unwrap))
+      this(software.amazon.awscdk.services.controltower.CfnEnabledControl(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEnabledControlProps.Companion::unwrap))
   )
 
   public constructor(
@@ -94,7 +94,7 @@ public open class CfnEnabledControl(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -106,7 +106,7 @@ public open class CfnEnabledControl(
    * Array of `EnabledControlParameter` objects.
    */
   public open fun parameters(`value`: IResolvable) {
-    unwrap(this).setParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -130,7 +130,7 @@ public open class CfnEnabledControl(
    * Tags to be applied to the enabled control.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -247,7 +247,7 @@ public open class CfnEnabledControl(
      * @param parameters Array of `EnabledControlParameter` objects. 
      */
     override fun parameters(parameters: IResolvable) {
-      cdkBuilder.parameters(parameters.let(IResolvable::unwrap))
+      cdkBuilder.parameters(parameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -275,7 +275,7 @@ public open class CfnEnabledControl(
      * @param tags Tags to be applied to the enabled control. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -108,8 +108,8 @@ public open class CfnLayer(
     id: String,
     props: CfnLayerProps,
   ) :
-      this(software.amazon.awscdk.services.opsworks.CfnLayer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLayerProps::unwrap))
+      this(software.amazon.awscdk.services.opsworks.CfnLayer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLayerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -133,7 +133,7 @@ public open class CfnLayer(
    * One or more user-defined key-value pairs to be added to the stack attributes.
    */
   public open fun attributes(`value`: IResolvable) {
-    unwrap(this).setAttributes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -168,7 +168,7 @@ public open class CfnLayer(
    * Layer](https://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html) .
    */
   public open fun autoAssignElasticIps(`value`: IResolvable) {
-    unwrap(this).setAutoAssignElasticIps(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoAssignElasticIps(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -190,7 +190,7 @@ public open class CfnLayer(
    * the layer's instances.
    */
   public open fun autoAssignPublicIps(`value`: IResolvable) {
-    unwrap(this).setAutoAssignPublicIps(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoAssignPublicIps(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -228,14 +228,14 @@ public open class CfnLayer(
    * A `LayerCustomRecipes` object that specifies the layer custom recipes.
    */
   public open fun customRecipes(`value`: IResolvable) {
-    unwrap(this).setCustomRecipes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCustomRecipes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A `LayerCustomRecipes` object that specifies the layer custom recipes.
    */
   public open fun customRecipes(`value`: RecipesProperty) {
-    unwrap(this).setCustomRecipes(`value`.let(RecipesProperty::unwrap))
+    unwrap(this).setCustomRecipes(`value`.let(RecipesProperty.Companion::unwrap))
   }
 
   /**
@@ -281,7 +281,7 @@ public open class CfnLayer(
    * Whether to disable auto healing for the layer.
    */
   public open fun enableAutoHealing(`value`: IResolvable) {
-    unwrap(this).setEnableAutoHealing(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableAutoHealing(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -290,7 +290,7 @@ public open class CfnLayer(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -309,7 +309,7 @@ public open class CfnLayer(
    * Whether to install operating system and package updates when the instance boots.
    */
   public open fun installUpdatesOnBoot(`value`: IResolvable) {
-    unwrap(this).setInstallUpdatesOnBoot(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInstallUpdatesOnBoot(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -324,7 +324,7 @@ public open class CfnLayer(
    * specify an execution timeout and enable or disable Elastic Load Balancer connection draining.
    */
   public open fun lifecycleEventConfiguration(`value`: IResolvable) {
-    unwrap(this).setLifecycleEventConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLifecycleEventConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -332,7 +332,7 @@ public open class CfnLayer(
    * specify an execution timeout and enable or disable Elastic Load Balancer connection draining.
    */
   public open fun lifecycleEventConfiguration(`value`: LifecycleEventConfigurationProperty) {
-    unwrap(this).setLifecycleEventConfiguration(`value`.let(LifecycleEventConfigurationProperty::unwrap))
+    unwrap(this).setLifecycleEventConfiguration(`value`.let(LifecycleEventConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -354,14 +354,14 @@ public open class CfnLayer(
    * The load-based scaling configuration for the AWS OpsWorks layer.
    */
   public open fun loadBasedAutoScaling(`value`: IResolvable) {
-    unwrap(this).setLoadBasedAutoScaling(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoadBasedAutoScaling(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The load-based scaling configuration for the AWS OpsWorks layer.
    */
   public open fun loadBasedAutoScaling(`value`: LoadBasedAutoScalingProperty) {
-    unwrap(this).setLoadBasedAutoScaling(`value`.let(LoadBasedAutoScalingProperty::unwrap))
+    unwrap(this).setLoadBasedAutoScaling(`value`.let(LoadBasedAutoScalingProperty.Companion::unwrap))
   }
 
   /**
@@ -442,7 +442,7 @@ public open class CfnLayer(
    * Specifies one or more sets of tags (key–value pairs) to associate with this AWS OpsWorks layer.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -478,7 +478,7 @@ public open class CfnLayer(
    * Whether to use Amazon EBS-optimized instances.
    */
   public open fun useEbsOptimizedInstances(`value`: IResolvable) {
-    unwrap(this).setUseEbsOptimizedInstances(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUseEbsOptimizedInstances(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -490,7 +490,7 @@ public open class CfnLayer(
    * A `VolumeConfigurations` object that describes the layer's Amazon EBS volumes.
    */
   public open fun volumeConfigurations(`value`: IResolvable) {
-    unwrap(this).setVolumeConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVolumeConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -920,7 +920,7 @@ public open class CfnLayer(
      * attributes. 
      */
     override fun attributes(attributes: IResolvable) {
-      cdkBuilder.attributes(attributes.let(IResolvable::unwrap))
+      cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -965,7 +965,7 @@ public open class CfnLayer(
      * Layer](https://docs.aws.amazon.com/opsworks/latest/userguide/workinglayers-basics-edit.html) . 
      */
     override fun autoAssignElasticIps(autoAssignElasticIps: IResolvable) {
-      cdkBuilder.autoAssignElasticIps(autoAssignElasticIps.let(IResolvable::unwrap))
+      cdkBuilder.autoAssignElasticIps(autoAssignElasticIps.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -995,7 +995,7 @@ public open class CfnLayer(
      * assign a public IP address to the layer's instances. 
      */
     override fun autoAssignPublicIps(autoAssignPublicIps: IResolvable) {
-      cdkBuilder.autoAssignPublicIps(autoAssignPublicIps.let(IResolvable::unwrap))
+      cdkBuilder.autoAssignPublicIps(autoAssignPublicIps.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1035,7 +1035,7 @@ public open class CfnLayer(
      * @param customRecipes A `LayerCustomRecipes` object that specifies the layer custom recipes. 
      */
     override fun customRecipes(customRecipes: IResolvable) {
-      cdkBuilder.customRecipes(customRecipes.let(IResolvable::unwrap))
+      cdkBuilder.customRecipes(customRecipes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1045,7 +1045,7 @@ public open class CfnLayer(
      * @param customRecipes A `LayerCustomRecipes` object that specifies the layer custom recipes. 
      */
     override fun customRecipes(customRecipes: RecipesProperty) {
-      cdkBuilder.customRecipes(customRecipes.let(RecipesProperty::unwrap))
+      cdkBuilder.customRecipes(customRecipes.let(RecipesProperty.Companion::unwrap))
     }
 
     /**
@@ -1095,7 +1095,7 @@ public open class CfnLayer(
      * @param enableAutoHealing Whether to disable auto healing for the layer. 
      */
     override fun enableAutoHealing(enableAutoHealing: IResolvable) {
-      cdkBuilder.enableAutoHealing(enableAutoHealing.let(IResolvable::unwrap))
+      cdkBuilder.enableAutoHealing(enableAutoHealing.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1137,7 +1137,7 @@ public open class CfnLayer(
      * instance boots. 
      */
     override fun installUpdatesOnBoot(installUpdatesOnBoot: IResolvable) {
-      cdkBuilder.installUpdatesOnBoot(installUpdatesOnBoot.let(IResolvable::unwrap))
+      cdkBuilder.installUpdatesOnBoot(installUpdatesOnBoot.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1150,7 +1150,7 @@ public open class CfnLayer(
      * Balancer connection draining. 
      */
     override fun lifecycleEventConfiguration(lifecycleEventConfiguration: IResolvable) {
-      cdkBuilder.lifecycleEventConfiguration(lifecycleEventConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.lifecycleEventConfiguration(lifecycleEventConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1164,7 +1164,7 @@ public open class CfnLayer(
      */
     override
         fun lifecycleEventConfiguration(lifecycleEventConfiguration: LifecycleEventConfigurationProperty) {
-      cdkBuilder.lifecycleEventConfiguration(lifecycleEventConfiguration.let(LifecycleEventConfigurationProperty::unwrap))
+      cdkBuilder.lifecycleEventConfiguration(lifecycleEventConfiguration.let(LifecycleEventConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1190,7 +1190,7 @@ public open class CfnLayer(
      * @param loadBasedAutoScaling The load-based scaling configuration for the AWS OpsWorks layer. 
      */
     override fun loadBasedAutoScaling(loadBasedAutoScaling: IResolvable) {
-      cdkBuilder.loadBasedAutoScaling(loadBasedAutoScaling.let(IResolvable::unwrap))
+      cdkBuilder.loadBasedAutoScaling(loadBasedAutoScaling.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1200,7 +1200,7 @@ public open class CfnLayer(
      * @param loadBasedAutoScaling The load-based scaling configuration for the AWS OpsWorks layer. 
      */
     override fun loadBasedAutoScaling(loadBasedAutoScaling: LoadBasedAutoScalingProperty) {
-      cdkBuilder.loadBasedAutoScaling(loadBasedAutoScaling.let(LoadBasedAutoScalingProperty::unwrap))
+      cdkBuilder.loadBasedAutoScaling(loadBasedAutoScaling.let(LoadBasedAutoScalingProperty.Companion::unwrap))
     }
 
     /**
@@ -1285,7 +1285,7 @@ public open class CfnLayer(
      * OpsWorks layer. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1330,7 +1330,7 @@ public open class CfnLayer(
      * @param useEbsOptimizedInstances Whether to use Amazon EBS-optimized instances. 
      */
     override fun useEbsOptimizedInstances(useEbsOptimizedInstances: IResolvable) {
-      cdkBuilder.useEbsOptimizedInstances(useEbsOptimizedInstances.let(IResolvable::unwrap))
+      cdkBuilder.useEbsOptimizedInstances(useEbsOptimizedInstances.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1341,7 +1341,7 @@ public open class CfnLayer(
      * EBS volumes. 
      */
     override fun volumeConfigurations(volumeConfigurations: IResolvable) {
-      cdkBuilder.volumeConfigurations(volumeConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.volumeConfigurations(volumeConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1724,7 +1724,7 @@ public open class CfnLayer(
        * @param shutdownEventConfiguration The Shutdown event configuration.
        */
       override fun shutdownEventConfiguration(shutdownEventConfiguration: IResolvable) {
-        cdkBuilder.shutdownEventConfiguration(shutdownEventConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.shutdownEventConfiguration(shutdownEventConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1732,7 +1732,7 @@ public open class CfnLayer(
        */
       override
           fun shutdownEventConfiguration(shutdownEventConfiguration: ShutdownEventConfigurationProperty) {
-        cdkBuilder.shutdownEventConfiguration(shutdownEventConfiguration.let(ShutdownEventConfigurationProperty::unwrap))
+        cdkBuilder.shutdownEventConfiguration(shutdownEventConfiguration.let(ShutdownEventConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1904,7 +1904,7 @@ public open class CfnLayer(
        * configuration, which defines how and when AWS OpsWorks Stacks reduces the number of instances.
        */
       override fun downScaling(downScaling: IResolvable) {
-        cdkBuilder.downScaling(downScaling.let(IResolvable::unwrap))
+        cdkBuilder.downScaling(downScaling.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1912,7 +1912,7 @@ public open class CfnLayer(
        * configuration, which defines how and when AWS OpsWorks Stacks reduces the number of instances.
        */
       override fun downScaling(downScaling: AutoScalingThresholdsProperty) {
-        cdkBuilder.downScaling(downScaling.let(AutoScalingThresholdsProperty::unwrap))
+        cdkBuilder.downScaling(downScaling.let(AutoScalingThresholdsProperty.Companion::unwrap))
       }
 
       /**
@@ -1935,7 +1935,7 @@ public open class CfnLayer(
        * @param enable Whether load-based auto scaling is enabled for the layer.
        */
       override fun enable(enable: IResolvable) {
-        cdkBuilder.enable(enable.let(IResolvable::unwrap))
+        cdkBuilder.enable(enable.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1944,7 +1944,7 @@ public open class CfnLayer(
        * instances.
        */
       override fun upScaling(upScaling: IResolvable) {
-        cdkBuilder.upScaling(upScaling.let(IResolvable::unwrap))
+        cdkBuilder.upScaling(upScaling.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1953,7 +1953,7 @@ public open class CfnLayer(
        * instances.
        */
       override fun upScaling(upScaling: AutoScalingThresholdsProperty) {
-        cdkBuilder.upScaling(upScaling.let(AutoScalingThresholdsProperty::unwrap))
+        cdkBuilder.upScaling(upScaling.let(AutoScalingThresholdsProperty.Companion::unwrap))
       }
 
       /**
@@ -2338,7 +2338,7 @@ public open class CfnLayer(
        * Draining](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/TerminologyandKeyConcepts.html#conn-drain)
        */
       override fun delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained: IResolvable) {
-        cdkBuilder.delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained.let(IResolvable::unwrap))
+        cdkBuilder.delayUntilElbConnectionsDrained(delayUntilElbConnectionsDrained.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2574,7 +2574,7 @@ public open class CfnLayer(
        * Encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) .
        */
       override fun encrypted(encrypted: IResolvable) {
-        cdkBuilder.encrypted(encrypted.let(IResolvable::unwrap))
+        cdkBuilder.encrypted(encrypted.let(IResolvable.Companion::unwrap))
       }
 
       /**

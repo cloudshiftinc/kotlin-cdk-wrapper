@@ -456,7 +456,7 @@ public interface CfnClusterProps {
      * This parameter is used to turn on CloudWatch Container Insights for a cluster.
      */
     override fun clusterSettings(clusterSettings: IResolvable) {
-      cdkBuilder.clusterSettings(clusterSettings.let(IResolvable::unwrap))
+      cdkBuilder.clusterSettings(clusterSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -478,14 +478,14 @@ public interface CfnClusterProps {
      * @param configuration The execute command configuration for the cluster.
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param configuration The execute command configuration for the cluster.
      */
     override fun configuration(configuration: CfnCluster.ClusterConfigurationProperty) {
-      cdkBuilder.configuration(configuration.let(CfnCluster.ClusterConfigurationProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(CfnCluster.ClusterConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -504,7 +504,7 @@ public interface CfnClusterProps {
      * strategy specified, the default capacity provider strategy is used.
      */
     override fun defaultCapacityProviderStrategy(defaultCapacityProviderStrategy: IResolvable) {
-      cdkBuilder.defaultCapacityProviderStrategy(defaultCapacityProviderStrategy.let(IResolvable::unwrap))
+      cdkBuilder.defaultCapacityProviderStrategy(defaultCapacityProviderStrategy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -543,7 +543,7 @@ public interface CfnClusterProps {
      * the *Amazon Elastic Container Service Developer Guide* .
      */
     override fun serviceConnectDefaults(serviceConnectDefaults: IResolvable) {
-      cdkBuilder.serviceConnectDefaults(serviceConnectDefaults.let(IResolvable::unwrap))
+      cdkBuilder.serviceConnectDefaults(serviceConnectDefaults.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -564,7 +564,7 @@ public interface CfnClusterProps {
      */
     override
         fun serviceConnectDefaults(serviceConnectDefaults: CfnCluster.ServiceConnectDefaultsProperty) {
-      cdkBuilder.serviceConnectDefaults(serviceConnectDefaults.let(CfnCluster.ServiceConnectDefaultsProperty::unwrap))
+      cdkBuilder.serviceConnectDefaults(serviceConnectDefaults.let(CfnCluster.ServiceConnectDefaultsProperty.Companion::unwrap))
     }
 
     /**
@@ -606,7 +606,7 @@ public interface CfnClusterProps {
      * numbers, and spaces representable in UTF-8, and the following characters: + - = . _ : /
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

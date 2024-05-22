@@ -57,8 +57,8 @@ public open class ContainerDefinition(
     id: String,
     props: ContainerDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.ContainerDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ContainerDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.ContainerDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ContainerDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -130,7 +130,7 @@ public open class ContainerDefinition(
    * @param alias
    */
   public open fun addLink(container: ContainerDefinition) {
-    unwrap(this).addLink(container.let(ContainerDefinition::unwrap))
+    unwrap(this).addLink(container.let(ContainerDefinition.Companion::unwrap))
   }
 
   /**
@@ -144,7 +144,7 @@ public open class ContainerDefinition(
    * @param alias
    */
   public open fun addLink(container: ContainerDefinition, alias: String) {
-    unwrap(this).addLink(container.let(ContainerDefinition::unwrap), alias)
+    unwrap(this).addLink(container.let(ContainerDefinition.Companion::unwrap), alias)
   }
 
   /**
@@ -195,7 +195,7 @@ public open class ContainerDefinition(
    * @param scratch 
    */
   public open fun addScratch(scratch: ScratchSpace) {
-    unwrap(this).addScratch(scratch.let(ScratchSpace::unwrap))
+    unwrap(this).addScratch(scratch.let(ScratchSpace.Companion::unwrap))
   }
 
   /**
@@ -217,7 +217,7 @@ public open class ContainerDefinition(
    * @param secret 
    */
   public open fun addSecret(name: String, secret: Secret) {
-    unwrap(this).addSecret(name, secret.let(Secret::unwrap))
+    unwrap(this).addSecret(name, secret.let(Secret.Companion::unwrap))
   }
 
   /**
@@ -227,7 +227,7 @@ public open class ContainerDefinition(
    * @param statement 
    */
   public open fun addToExecutionPolicy(statement: PolicyStatement) {
-    unwrap(this).addToExecutionPolicy(statement.let(PolicyStatement::unwrap))
+    unwrap(this).addToExecutionPolicy(statement.let(PolicyStatement.Companion::unwrap))
   }
 
   /**
@@ -333,7 +333,7 @@ public open class ContainerDefinition(
    */
   public open fun findPortMapping(containerPort: Number, protocol: Protocol): PortMapping? =
       unwrap(this).findPortMapping(containerPort,
-      protocol.let(Protocol::unwrap))?.let(PortMapping::wrap)
+      protocol.let(Protocol.Companion::unwrap))?.let(PortMapping::wrap)
 
   /**
    * Returns the port mapping with the given name, if it exists.
@@ -417,7 +417,7 @@ public open class ContainerDefinition(
    */
   public open fun renderContainerDefinition(taskDefinition: TaskDefinition):
       CfnTaskDefinition.ContainerDefinitionProperty =
-      unwrap(this).renderContainerDefinition(taskDefinition.let(TaskDefinition::unwrap)).let(CfnTaskDefinition.ContainerDefinitionProperty::wrap)
+      unwrap(this).renderContainerDefinition(taskDefinition.let(TaskDefinition.Companion::unwrap)).let(CfnTaskDefinition.ContainerDefinitionProperty::wrap)
 
   /**
    * The name of the task definition that includes this container definition.
@@ -1021,7 +1021,7 @@ public open class ContainerDefinition(
      * file that configures the container for Active Directory authentication. 
      */
     override fun credentialSpecs(credentialSpecs: List<CredentialSpec>) {
-      cdkBuilder.credentialSpecs(credentialSpecs.map(CredentialSpec::unwrap))
+      cdkBuilder.credentialSpecs(credentialSpecs.map(CredentialSpec.Companion::unwrap))
     }
 
     /**
@@ -1172,7 +1172,7 @@ public open class ContainerDefinition(
      * @param environmentFiles The environment files to pass to the container. 
      */
     override fun environmentFiles(environmentFiles: List<EnvironmentFile>) {
-      cdkBuilder.environmentFiles(environmentFiles.map(EnvironmentFile::unwrap))
+      cdkBuilder.environmentFiles(environmentFiles.map(EnvironmentFile.Companion::unwrap))
     }
 
     /**
@@ -1238,7 +1238,7 @@ public open class ContainerDefinition(
      * container. 
      */
     override fun healthCheck(healthCheck: HealthCheck) {
-      cdkBuilder.healthCheck(healthCheck.let(HealthCheck::unwrap))
+      cdkBuilder.healthCheck(healthCheck.let(HealthCheck.Companion::unwrap))
     }
 
     /**
@@ -1277,7 +1277,7 @@ public open class ContainerDefinition(
      * @param image The image used to start a container. 
      */
     override fun image(image: ContainerImage) {
-      cdkBuilder.image(image.let(ContainerImage::unwrap))
+      cdkBuilder.image(image.let(ContainerImage.Companion::unwrap))
     }
 
     /**
@@ -1328,7 +1328,7 @@ public open class ContainerDefinition(
      * as Linux kernel capabilities. 
      */
     override fun linuxParameters(linuxParameters: LinuxParameters) {
-      cdkBuilder.linuxParameters(linuxParameters.let(LinuxParameters::unwrap))
+      cdkBuilder.linuxParameters(linuxParameters.let(LinuxParameters.Companion::unwrap))
     }
 
     /**
@@ -1339,7 +1339,7 @@ public open class ContainerDefinition(
      * @param logging The log configuration specification for the container. 
      */
     override fun logging(logging: LogDriver) {
-      cdkBuilder.logging(logging.let(LogDriver::unwrap))
+      cdkBuilder.logging(logging.let(LogDriver.Companion::unwrap))
     }
 
     /**
@@ -1385,7 +1385,7 @@ public open class ContainerDefinition(
      * @param portMappings The port mappings to add to the container definition. 
      */
     override fun portMappings(portMappings: List<PortMapping>) {
-      cdkBuilder.portMappings(portMappings.map(PortMapping::unwrap))
+      cdkBuilder.portMappings(portMappings.map(PortMapping.Companion::unwrap))
     }
 
     /**
@@ -1460,7 +1460,7 @@ public open class ContainerDefinition(
      * dependencies for a container. 
      */
     override fun startTimeout(startTimeout: Duration) {
-      cdkBuilder.startTimeout(startTimeout.let(Duration::unwrap))
+      cdkBuilder.startTimeout(startTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -1473,7 +1473,7 @@ public open class ContainerDefinition(
      * killed if it doesn't exit normally on its own. 
      */
     override fun stopTimeout(stopTimeout: Duration) {
-      cdkBuilder.stopTimeout(stopTimeout.let(Duration::unwrap))
+      cdkBuilder.stopTimeout(stopTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -1485,7 +1485,7 @@ public open class ContainerDefinition(
      * @param systemControls A list of namespaced kernel parameters to set in the container. 
      */
     override fun systemControls(systemControls: List<SystemControl>) {
-      cdkBuilder.systemControls(systemControls.map(SystemControl::unwrap))
+      cdkBuilder.systemControls(systemControls.map(SystemControl.Companion::unwrap))
     }
 
     /**
@@ -1508,7 +1508,7 @@ public open class ContainerDefinition(
      * definition. 
      */
     override fun taskDefinition(taskDefinition: TaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(TaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(TaskDefinition.Companion::unwrap))
     }
 
     /**
@@ -1517,7 +1517,7 @@ public open class ContainerDefinition(
      * @param ulimits An array of ulimits to set in the container. 
      */
     override fun ulimits(ulimits: List<Ulimit>) {
-      cdkBuilder.ulimits(ulimits.map(Ulimit::unwrap))
+      cdkBuilder.ulimits(ulimits.map(Ulimit.Companion::unwrap))
     }
 
     /**

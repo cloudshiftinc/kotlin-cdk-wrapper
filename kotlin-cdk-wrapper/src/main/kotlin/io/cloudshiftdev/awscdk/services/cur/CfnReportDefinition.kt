@@ -55,8 +55,8 @@ public open class CfnReportDefinition(
     id: String,
     props: CfnReportDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.cur.CfnReportDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnReportDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.cur.CfnReportDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnReportDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -149,7 +149,7 @@ public open class CfnReportDefinition(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -171,7 +171,7 @@ public open class CfnReportDefinition(
    * charges related to previous months.
    */
   public open fun refreshClosedReports(`value`: IResolvable) {
-    unwrap(this).setRefreshClosedReports(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRefreshClosedReports(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -505,7 +505,7 @@ public open class CfnReportDefinition(
      * finalized if AWS detects charges related to previous months. 
      */
     override fun refreshClosedReports(refreshClosedReports: IResolvable) {
-      cdkBuilder.refreshClosedReports(refreshClosedReports.let(IResolvable::unwrap))
+      cdkBuilder.refreshClosedReports(refreshClosedReports.let(IResolvable.Companion::unwrap))
     }
 
     /**

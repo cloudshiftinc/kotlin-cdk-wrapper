@@ -132,8 +132,8 @@ public open class CfnStorageLens(
     id: String,
     props: CfnStorageLensProps,
   ) :
-      this(software.amazon.awscdk.services.s3.CfnStorageLens(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStorageLensProps::unwrap))
+      this(software.amazon.awscdk.services.s3.CfnStorageLens(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStorageLensProps.Companion::unwrap))
   )
 
   public constructor(
@@ -157,7 +157,7 @@ public open class CfnStorageLens(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -169,14 +169,14 @@ public open class CfnStorageLens(
    * This resource contains the details Amazon S3 Storage Lens configuration.
    */
   public open fun storageLensConfiguration(`value`: IResolvable) {
-    unwrap(this).setStorageLensConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStorageLensConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * This resource contains the details Amazon S3 Storage Lens configuration.
    */
   public open fun storageLensConfiguration(`value`: StorageLensConfigurationProperty) {
-    unwrap(this).setStorageLensConfiguration(`value`.let(StorageLensConfigurationProperty::unwrap))
+    unwrap(this).setStorageLensConfiguration(`value`.let(StorageLensConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -203,7 +203,7 @@ public open class CfnStorageLens(
    * A set of tags (key–value pairs) to associate with the Storage Lens configuration.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -280,7 +280,7 @@ public open class CfnStorageLens(
      * configuration. 
      */
     override fun storageLensConfiguration(storageLensConfiguration: IResolvable) {
-      cdkBuilder.storageLensConfiguration(storageLensConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.storageLensConfiguration(storageLensConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -292,7 +292,7 @@ public open class CfnStorageLens(
      */
     override
         fun storageLensConfiguration(storageLensConfiguration: StorageLensConfigurationProperty) {
-      cdkBuilder.storageLensConfiguration(storageLensConfiguration.let(StorageLensConfigurationProperty::unwrap))
+      cdkBuilder.storageLensConfiguration(storageLensConfiguration.let(StorageLensConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -316,7 +316,7 @@ public open class CfnStorageLens(
      * 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -602,7 +602,7 @@ public open class CfnStorageLens(
        * for S3 Storage Lens.
        */
       override fun activityMetrics(activityMetrics: IResolvable) {
-        cdkBuilder.activityMetrics(activityMetrics.let(IResolvable::unwrap))
+        cdkBuilder.activityMetrics(activityMetrics.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -610,7 +610,7 @@ public open class CfnStorageLens(
        * for S3 Storage Lens.
        */
       override fun activityMetrics(activityMetrics: ActivityMetricsProperty) {
-        cdkBuilder.activityMetrics(activityMetrics.let(ActivityMetricsProperty::unwrap))
+        cdkBuilder.activityMetrics(activityMetrics.let(ActivityMetricsProperty.Companion::unwrap))
       }
 
       /**
@@ -627,7 +627,7 @@ public open class CfnStorageLens(
        * advanced cost optimization metrics for S3 Storage Lens.
        */
       override fun advancedCostOptimizationMetrics(advancedCostOptimizationMetrics: IResolvable) {
-        cdkBuilder.advancedCostOptimizationMetrics(advancedCostOptimizationMetrics.let(IResolvable::unwrap))
+        cdkBuilder.advancedCostOptimizationMetrics(advancedCostOptimizationMetrics.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -636,7 +636,7 @@ public open class CfnStorageLens(
        */
       override
           fun advancedCostOptimizationMetrics(advancedCostOptimizationMetrics: AdvancedCostOptimizationMetricsProperty) {
-        cdkBuilder.advancedCostOptimizationMetrics(advancedCostOptimizationMetrics.let(AdvancedCostOptimizationMetricsProperty::unwrap))
+        cdkBuilder.advancedCostOptimizationMetrics(advancedCostOptimizationMetrics.let(AdvancedCostOptimizationMetricsProperty.Companion::unwrap))
       }
 
       /**
@@ -655,7 +655,7 @@ public open class CfnStorageLens(
        * advanced data protection metrics for S3 Storage Lens.
        */
       override fun advancedDataProtectionMetrics(advancedDataProtectionMetrics: IResolvable) {
-        cdkBuilder.advancedDataProtectionMetrics(advancedDataProtectionMetrics.let(IResolvable::unwrap))
+        cdkBuilder.advancedDataProtectionMetrics(advancedDataProtectionMetrics.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -664,7 +664,7 @@ public open class CfnStorageLens(
        */
       override
           fun advancedDataProtectionMetrics(advancedDataProtectionMetrics: AdvancedDataProtectionMetricsProperty) {
-        cdkBuilder.advancedDataProtectionMetrics(advancedDataProtectionMetrics.let(AdvancedDataProtectionMetricsProperty::unwrap))
+        cdkBuilder.advancedDataProtectionMetrics(advancedDataProtectionMetrics.let(AdvancedDataProtectionMetricsProperty.Companion::unwrap))
       }
 
       /**
@@ -683,7 +683,7 @@ public open class CfnStorageLens(
        * configurations for Amazon S3 Storage Lens. 
        */
       override fun bucketLevel(bucketLevel: IResolvable) {
-        cdkBuilder.bucketLevel(bucketLevel.let(IResolvable::unwrap))
+        cdkBuilder.bucketLevel(bucketLevel.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -691,7 +691,7 @@ public open class CfnStorageLens(
        * configurations for Amazon S3 Storage Lens. 
        */
       override fun bucketLevel(bucketLevel: BucketLevelProperty) {
-        cdkBuilder.bucketLevel(bucketLevel.let(BucketLevelProperty::unwrap))
+        cdkBuilder.bucketLevel(bucketLevel.let(BucketLevelProperty.Companion::unwrap))
       }
 
       /**
@@ -708,7 +708,7 @@ public open class CfnStorageLens(
        * detailed status code metrics for S3 Storage Lens.
        */
       override fun detailedStatusCodesMetrics(detailedStatusCodesMetrics: IResolvable) {
-        cdkBuilder.detailedStatusCodesMetrics(detailedStatusCodesMetrics.let(IResolvable::unwrap))
+        cdkBuilder.detailedStatusCodesMetrics(detailedStatusCodesMetrics.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -717,7 +717,7 @@ public open class CfnStorageLens(
        */
       override
           fun detailedStatusCodesMetrics(detailedStatusCodesMetrics: DetailedStatusCodesMetricsProperty) {
-        cdkBuilder.detailedStatusCodesMetrics(detailedStatusCodesMetrics.let(DetailedStatusCodesMetricsProperty::unwrap))
+        cdkBuilder.detailedStatusCodesMetrics(detailedStatusCodesMetrics.let(DetailedStatusCodesMetricsProperty.Companion::unwrap))
       }
 
       /**
@@ -736,7 +736,7 @@ public open class CfnStorageLens(
        * that is displayed in the Storage Lens dashboard.
        */
       override fun storageLensGroupLevel(storageLensGroupLevel: IResolvable) {
-        cdkBuilder.storageLensGroupLevel(storageLensGroupLevel.let(IResolvable::unwrap))
+        cdkBuilder.storageLensGroupLevel(storageLensGroupLevel.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -744,7 +744,7 @@ public open class CfnStorageLens(
        * that is displayed in the Storage Lens dashboard.
        */
       override fun storageLensGroupLevel(storageLensGroupLevel: StorageLensGroupLevelProperty) {
-        cdkBuilder.storageLensGroupLevel(storageLensGroupLevel.let(StorageLensGroupLevelProperty::unwrap))
+        cdkBuilder.storageLensGroupLevel(storageLensGroupLevel.let(StorageLensGroupLevelProperty.Companion::unwrap))
       }
 
       /**
@@ -897,7 +897,7 @@ public open class CfnStorageLens(
        * @param isEnabled A property that indicates whether the activity metrics is enabled.
        */
       override fun isEnabled(isEnabled: IResolvable) {
-        cdkBuilder.isEnabled(isEnabled.let(IResolvable::unwrap))
+        cdkBuilder.isEnabled(isEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.s3.CfnStorageLens.ActivityMetricsProperty
@@ -1001,7 +1001,7 @@ public open class CfnStorageLens(
        * @param isEnabled Indicates whether advanced cost optimization metrics are enabled.
        */
       override fun isEnabled(isEnabled: IResolvable) {
-        cdkBuilder.isEnabled(isEnabled.let(IResolvable::unwrap))
+        cdkBuilder.isEnabled(isEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1106,7 +1106,7 @@ public open class CfnStorageLens(
        * @param isEnabled Indicates whether advanced data protection metrics are enabled.
        */
       override fun isEnabled(isEnabled: IResolvable) {
-        cdkBuilder.isEnabled(isEnabled.let(IResolvable::unwrap))
+        cdkBuilder.isEnabled(isEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1416,14 +1416,14 @@ public open class CfnStorageLens(
        * @param activityMetrics A property for bucket-level activity metrics for S3 Storage Lens.
        */
       override fun activityMetrics(activityMetrics: IResolvable) {
-        cdkBuilder.activityMetrics(activityMetrics.let(IResolvable::unwrap))
+        cdkBuilder.activityMetrics(activityMetrics.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param activityMetrics A property for bucket-level activity metrics for S3 Storage Lens.
        */
       override fun activityMetrics(activityMetrics: ActivityMetricsProperty) {
-        cdkBuilder.activityMetrics(activityMetrics.let(ActivityMetricsProperty::unwrap))
+        cdkBuilder.activityMetrics(activityMetrics.let(ActivityMetricsProperty.Companion::unwrap))
       }
 
       /**
@@ -1439,7 +1439,7 @@ public open class CfnStorageLens(
        * optimization metrics for S3 Storage Lens.
        */
       override fun advancedCostOptimizationMetrics(advancedCostOptimizationMetrics: IResolvable) {
-        cdkBuilder.advancedCostOptimizationMetrics(advancedCostOptimizationMetrics.let(IResolvable::unwrap))
+        cdkBuilder.advancedCostOptimizationMetrics(advancedCostOptimizationMetrics.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1448,7 +1448,7 @@ public open class CfnStorageLens(
        */
       override
           fun advancedCostOptimizationMetrics(advancedCostOptimizationMetrics: AdvancedCostOptimizationMetricsProperty) {
-        cdkBuilder.advancedCostOptimizationMetrics(advancedCostOptimizationMetrics.let(AdvancedCostOptimizationMetricsProperty::unwrap))
+        cdkBuilder.advancedCostOptimizationMetrics(advancedCostOptimizationMetrics.let(AdvancedCostOptimizationMetricsProperty.Companion::unwrap))
       }
 
       /**
@@ -1467,7 +1467,7 @@ public open class CfnStorageLens(
        * metrics for S3 Storage Lens.
        */
       override fun advancedDataProtectionMetrics(advancedDataProtectionMetrics: IResolvable) {
-        cdkBuilder.advancedDataProtectionMetrics(advancedDataProtectionMetrics.let(IResolvable::unwrap))
+        cdkBuilder.advancedDataProtectionMetrics(advancedDataProtectionMetrics.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1476,7 +1476,7 @@ public open class CfnStorageLens(
        */
       override
           fun advancedDataProtectionMetrics(advancedDataProtectionMetrics: AdvancedDataProtectionMetricsProperty) {
-        cdkBuilder.advancedDataProtectionMetrics(advancedDataProtectionMetrics.let(AdvancedDataProtectionMetricsProperty::unwrap))
+        cdkBuilder.advancedDataProtectionMetrics(advancedDataProtectionMetrics.let(AdvancedDataProtectionMetricsProperty.Companion::unwrap))
       }
 
       /**
@@ -1495,7 +1495,7 @@ public open class CfnStorageLens(
        * for S3 Storage Lens.
        */
       override fun detailedStatusCodesMetrics(detailedStatusCodesMetrics: IResolvable) {
-        cdkBuilder.detailedStatusCodesMetrics(detailedStatusCodesMetrics.let(IResolvable::unwrap))
+        cdkBuilder.detailedStatusCodesMetrics(detailedStatusCodesMetrics.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1504,7 +1504,7 @@ public open class CfnStorageLens(
        */
       override
           fun detailedStatusCodesMetrics(detailedStatusCodesMetrics: DetailedStatusCodesMetricsProperty) {
-        cdkBuilder.detailedStatusCodesMetrics(detailedStatusCodesMetrics.let(DetailedStatusCodesMetricsProperty::unwrap))
+        cdkBuilder.detailedStatusCodesMetrics(detailedStatusCodesMetrics.let(DetailedStatusCodesMetricsProperty.Companion::unwrap))
       }
 
       /**
@@ -1523,7 +1523,7 @@ public open class CfnStorageLens(
        * Lens.
        */
       override fun prefixLevel(prefixLevel: IResolvable) {
-        cdkBuilder.prefixLevel(prefixLevel.let(IResolvable::unwrap))
+        cdkBuilder.prefixLevel(prefixLevel.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1531,7 +1531,7 @@ public open class CfnStorageLens(
        * Lens.
        */
       override fun prefixLevel(prefixLevel: PrefixLevelProperty) {
-        cdkBuilder.prefixLevel(prefixLevel.let(PrefixLevelProperty::unwrap))
+        cdkBuilder.prefixLevel(prefixLevel.let(PrefixLevelProperty.Companion::unwrap))
       }
 
       /**
@@ -1837,7 +1837,7 @@ public open class CfnStorageLens(
        * Storage Lens is enabled. 
        */
       override fun isEnabled(isEnabled: IResolvable) {
-        cdkBuilder.isEnabled(isEnabled.let(IResolvable::unwrap))
+        cdkBuilder.isEnabled(isEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1981,7 +1981,7 @@ public open class CfnStorageLens(
        * S3 Storage Lens metrics.
        */
       override fun cloudWatchMetrics(cloudWatchMetrics: IResolvable) {
-        cdkBuilder.cloudWatchMetrics(cloudWatchMetrics.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchMetrics(cloudWatchMetrics.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1989,7 +1989,7 @@ public open class CfnStorageLens(
        * S3 Storage Lens metrics.
        */
       override fun cloudWatchMetrics(cloudWatchMetrics: CloudWatchMetricsProperty) {
-        cdkBuilder.cloudWatchMetrics(cloudWatchMetrics.let(CloudWatchMetricsProperty::unwrap))
+        cdkBuilder.cloudWatchMetrics(cloudWatchMetrics.let(CloudWatchMetricsProperty.Companion::unwrap))
       }
 
       /**
@@ -2007,7 +2007,7 @@ public open class CfnStorageLens(
        * Storage Lens metrics export will be placed.
        */
       override fun s3BucketDestination(s3BucketDestination: IResolvable) {
-        cdkBuilder.s3BucketDestination(s3BucketDestination.let(IResolvable::unwrap))
+        cdkBuilder.s3BucketDestination(s3BucketDestination.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2015,7 +2015,7 @@ public open class CfnStorageLens(
        * Storage Lens metrics export will be placed.
        */
       override fun s3BucketDestination(s3BucketDestination: S3BucketDestinationProperty) {
-        cdkBuilder.s3BucketDestination(s3BucketDestination.let(S3BucketDestinationProperty::unwrap))
+        cdkBuilder.s3BucketDestination(s3BucketDestination.let(S3BucketDestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -2136,7 +2136,7 @@ public open class CfnStorageLens(
        * @param isEnabled Indicates whether detailed status code metrics are enabled.
        */
       override fun isEnabled(isEnabled: IResolvable) {
-        cdkBuilder.isEnabled(isEnabled.let(IResolvable::unwrap))
+        cdkBuilder.isEnabled(isEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2258,7 +2258,7 @@ public open class CfnStorageLens(
        * S3 Storage Lens metrics export file.
        */
       override fun ssekms(ssekms: IResolvable) {
-        cdkBuilder.ssekms(ssekms.let(IResolvable::unwrap))
+        cdkBuilder.ssekms(ssekms.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2266,7 +2266,7 @@ public open class CfnStorageLens(
        * S3 Storage Lens metrics export file.
        */
       override fun ssekms(ssekms: SSEKMSProperty) {
-        cdkBuilder.ssekms(ssekms.let(SSEKMSProperty::unwrap))
+        cdkBuilder.ssekms(ssekms.let(SSEKMSProperty.Companion::unwrap))
       }
 
       /**
@@ -2396,7 +2396,7 @@ public open class CfnStorageLens(
        * Lens. 
        */
       override fun storageMetrics(storageMetrics: IResolvable) {
-        cdkBuilder.storageMetrics(storageMetrics.let(IResolvable::unwrap))
+        cdkBuilder.storageMetrics(storageMetrics.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2404,7 +2404,7 @@ public open class CfnStorageLens(
        * Lens. 
        */
       override fun storageMetrics(storageMetrics: PrefixLevelStorageMetricsProperty) {
-        cdkBuilder.storageMetrics(storageMetrics.let(PrefixLevelStorageMetricsProperty::unwrap))
+        cdkBuilder.storageMetrics(storageMetrics.let(PrefixLevelStorageMetricsProperty.Companion::unwrap))
       }
 
       /**
@@ -2547,7 +2547,7 @@ public open class CfnStorageLens(
        * metrics for S3 Storage Lens are enabled.
        */
       override fun isEnabled(isEnabled: IResolvable) {
-        cdkBuilder.isEnabled(isEnabled.let(IResolvable::unwrap))
+        cdkBuilder.isEnabled(isEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2555,7 +2555,7 @@ public open class CfnStorageLens(
        * storage metrics for S3 Storage Lens are enabled.
        */
       override fun selectionCriteria(selectionCriteria: IResolvable) {
-        cdkBuilder.selectionCriteria(selectionCriteria.let(IResolvable::unwrap))
+        cdkBuilder.selectionCriteria(selectionCriteria.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2563,7 +2563,7 @@ public open class CfnStorageLens(
        * storage metrics for S3 Storage Lens are enabled.
        */
       override fun selectionCriteria(selectionCriteria: SelectionCriteriaProperty) {
-        cdkBuilder.selectionCriteria(selectionCriteria.let(SelectionCriteriaProperty::unwrap))
+        cdkBuilder.selectionCriteria(selectionCriteria.let(SelectionCriteriaProperty.Companion::unwrap))
       }
 
       /**
@@ -2780,7 +2780,7 @@ public open class CfnStorageLens(
        * destination of the Amazon S3 Storage Lens metrics export.
        */
       override fun encryption(encryption: IResolvable) {
-        cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
+        cdkBuilder.encryption(encryption.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2788,7 +2788,7 @@ public open class CfnStorageLens(
        * destination of the Amazon S3 Storage Lens metrics export.
        */
       override fun encryption(encryption: EncryptionProperty) {
-        cdkBuilder.encryption(encryption.let(EncryptionProperty::unwrap))
+        cdkBuilder.encryption(encryption.let(EncryptionProperty.Companion::unwrap))
       }
 
       /**
@@ -3445,7 +3445,7 @@ public open class CfnStorageLens(
        * Amazon S3 Storage Lens configuration. 
        */
       override fun accountLevel(accountLevel: IResolvable) {
-        cdkBuilder.accountLevel(accountLevel.let(IResolvable::unwrap))
+        cdkBuilder.accountLevel(accountLevel.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3453,7 +3453,7 @@ public open class CfnStorageLens(
        * Amazon S3 Storage Lens configuration. 
        */
       override fun accountLevel(accountLevel: AccountLevelProperty) {
-        cdkBuilder.accountLevel(accountLevel.let(AccountLevelProperty::unwrap))
+        cdkBuilder.accountLevel(accountLevel.let(AccountLevelProperty.Companion::unwrap))
       }
 
       /**
@@ -3470,7 +3470,7 @@ public open class CfnStorageLens(
        * Lens configuration.
        */
       override fun awsOrg(awsOrg: IResolvable) {
-        cdkBuilder.awsOrg(awsOrg.let(IResolvable::unwrap))
+        cdkBuilder.awsOrg(awsOrg.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3478,7 +3478,7 @@ public open class CfnStorageLens(
        * Lens configuration.
        */
       override fun awsOrg(awsOrg: AwsOrgProperty) {
-        cdkBuilder.awsOrg(awsOrg.let(AwsOrgProperty::unwrap))
+        cdkBuilder.awsOrg(awsOrg.let(AwsOrgProperty.Companion::unwrap))
       }
 
       /**
@@ -3495,7 +3495,7 @@ public open class CfnStorageLens(
        * configuration's metrics export.
        */
       override fun dataExport(dataExport: IResolvable) {
-        cdkBuilder.dataExport(dataExport.let(IResolvable::unwrap))
+        cdkBuilder.dataExport(dataExport.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3503,7 +3503,7 @@ public open class CfnStorageLens(
        * configuration's metrics export.
        */
       override fun dataExport(dataExport: DataExportProperty) {
-        cdkBuilder.dataExport(dataExport.let(DataExportProperty::unwrap))
+        cdkBuilder.dataExport(dataExport.let(DataExportProperty.Companion::unwrap))
       }
 
       /**
@@ -3520,7 +3520,7 @@ public open class CfnStorageLens(
        * Amazon S3 Storage Lens configuration.
        */
       override fun exclude(exclude: IResolvable) {
-        cdkBuilder.exclude(exclude.let(IResolvable::unwrap))
+        cdkBuilder.exclude(exclude.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3528,7 +3528,7 @@ public open class CfnStorageLens(
        * Amazon S3 Storage Lens configuration.
        */
       override fun exclude(exclude: BucketsAndRegionsProperty) {
-        cdkBuilder.exclude(exclude.let(BucketsAndRegionsProperty::unwrap))
+        cdkBuilder.exclude(exclude.let(BucketsAndRegionsProperty.Companion::unwrap))
       }
 
       /**
@@ -3553,7 +3553,7 @@ public open class CfnStorageLens(
        * Amazon S3 Storage Lens configuration.
        */
       override fun include(include: IResolvable) {
-        cdkBuilder.include(include.let(IResolvable::unwrap))
+        cdkBuilder.include(include.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3561,7 +3561,7 @@ public open class CfnStorageLens(
        * Amazon S3 Storage Lens configuration.
        */
       override fun include(include: BucketsAndRegionsProperty) {
-        cdkBuilder.include(include.let(BucketsAndRegionsProperty::unwrap))
+        cdkBuilder.include(include.let(BucketsAndRegionsProperty.Companion::unwrap))
       }
 
       /**
@@ -3586,7 +3586,7 @@ public open class CfnStorageLens(
        * configuration is enabled. 
        */
       override fun isEnabled(isEnabled: IResolvable) {
-        cdkBuilder.isEnabled(isEnabled.let(IResolvable::unwrap))
+        cdkBuilder.isEnabled(isEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3764,7 +3764,7 @@ public open class CfnStorageLens(
        */
       override
           fun storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria: IResolvable) {
-        cdkBuilder.storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria.let(IResolvable::unwrap))
+        cdkBuilder.storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3774,7 +3774,7 @@ public open class CfnStorageLens(
        */
       override
           fun storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria: StorageLensGroupSelectionCriteriaProperty) {
-        cdkBuilder.storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria.let(StorageLensGroupSelectionCriteriaProperty::unwrap))
+        cdkBuilder.storageLensGroupSelectionCriteria(storageLensGroupSelectionCriteria.let(StorageLensGroupSelectionCriteriaProperty.Companion::unwrap))
       }
 
       /**

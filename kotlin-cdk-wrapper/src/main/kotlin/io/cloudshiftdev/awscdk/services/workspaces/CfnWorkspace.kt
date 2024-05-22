@@ -67,8 +67,8 @@ public open class CfnWorkspace(
     id: String,
     props: CfnWorkspaceProps,
   ) :
-      this(software.amazon.awscdk.services.workspaces.CfnWorkspace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnWorkspaceProps::unwrap))
+      this(software.amazon.awscdk.services.workspaces.CfnWorkspace(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnWorkspaceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -113,7 +113,7 @@ public open class CfnWorkspace(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -133,7 +133,7 @@ public open class CfnWorkspace(
    * Indicates whether the data stored on the root volume is encrypted.
    */
   public open fun rootVolumeEncryptionEnabled(`value`: IResolvable) {
-    unwrap(this).setRootVolumeEncryptionEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRootVolumeEncryptionEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -151,7 +151,7 @@ public open class CfnWorkspace(
    * The tags for the WorkSpace.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -188,7 +188,7 @@ public open class CfnWorkspace(
    * Indicates whether the data stored on the user volume is encrypted.
    */
   public open fun userVolumeEncryptionEnabled(`value`: IResolvable) {
-    unwrap(this).setUserVolumeEncryptionEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUserVolumeEncryptionEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -212,14 +212,14 @@ public open class CfnWorkspace(
    * The WorkSpace properties.
    */
   public open fun workspaceProperties(`value`: IResolvable) {
-    unwrap(this).setWorkspaceProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setWorkspaceProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The WorkSpace properties.
    */
   public open fun workspaceProperties(`value`: WorkspacePropertiesProperty) {
-    unwrap(this).setWorkspaceProperties(`value`.let(WorkspacePropertiesProperty::unwrap))
+    unwrap(this).setWorkspaceProperties(`value`.let(WorkspacePropertiesProperty.Companion::unwrap))
   }
 
   /**
@@ -400,7 +400,7 @@ public open class CfnWorkspace(
      * encrypted. 
      */
     override fun rootVolumeEncryptionEnabled(rootVolumeEncryptionEnabled: IResolvable) {
-      cdkBuilder.rootVolumeEncryptionEnabled(rootVolumeEncryptionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.rootVolumeEncryptionEnabled(rootVolumeEncryptionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -410,7 +410,7 @@ public open class CfnWorkspace(
      * @param tags The tags for the WorkSpace. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -454,7 +454,7 @@ public open class CfnWorkspace(
      * encrypted. 
      */
     override fun userVolumeEncryptionEnabled(userVolumeEncryptionEnabled: IResolvable) {
-      cdkBuilder.userVolumeEncryptionEnabled(userVolumeEncryptionEnabled.let(IResolvable::unwrap))
+      cdkBuilder.userVolumeEncryptionEnabled(userVolumeEncryptionEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -477,7 +477,7 @@ public open class CfnWorkspace(
      * @param workspaceProperties The WorkSpace properties. 
      */
     override fun workspaceProperties(workspaceProperties: IResolvable) {
-      cdkBuilder.workspaceProperties(workspaceProperties.let(IResolvable::unwrap))
+      cdkBuilder.workspaceProperties(workspaceProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -487,7 +487,7 @@ public open class CfnWorkspace(
      * @param workspaceProperties The WorkSpace properties. 
      */
     override fun workspaceProperties(workspaceProperties: WorkspacePropertiesProperty) {
-      cdkBuilder.workspaceProperties(workspaceProperties.let(WorkspacePropertiesProperty::unwrap))
+      cdkBuilder.workspaceProperties(workspaceProperties.let(WorkspacePropertiesProperty.Companion::unwrap))
     }
 
     /**

@@ -48,7 +48,7 @@ public open class CfnInputSecurityGroup(
   cdkObject: software.amazon.awscdk.services.medialive.CfnInputSecurityGroup,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.medialive.CfnInputSecurityGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.medialive.CfnInputSecurityGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -57,8 +57,8 @@ public open class CfnInputSecurityGroup(
     id: String,
     props: CfnInputSecurityGroupProps,
   ) :
-      this(software.amazon.awscdk.services.medialive.CfnInputSecurityGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInputSecurityGroupProps::unwrap))
+      this(software.amazon.awscdk.services.medialive.CfnInputSecurityGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInputSecurityGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -86,7 +86,7 @@ public open class CfnInputSecurityGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -115,7 +115,7 @@ public open class CfnInputSecurityGroup(
    * The list of IPv4 CIDR addresses to include in the input security group as "allowed" addresses.
    */
   public open fun whitelistRules(`value`: IResolvable) {
-    unwrap(this).setWhitelistRules(`value`.let(IResolvable::unwrap))
+    unwrap(this).setWhitelistRules(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -204,7 +204,7 @@ public open class CfnInputSecurityGroup(
      * as "allowed" addresses. 
      */
     override fun whitelistRules(whitelistRules: IResolvable) {
-      cdkBuilder.whitelistRules(whitelistRules.let(IResolvable::unwrap))
+      cdkBuilder.whitelistRules(whitelistRules.let(IResolvable.Companion::unwrap))
     }
 
     /**

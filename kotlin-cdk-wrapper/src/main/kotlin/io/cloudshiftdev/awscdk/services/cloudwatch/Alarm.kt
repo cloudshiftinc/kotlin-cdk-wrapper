@@ -49,8 +49,8 @@ public open class Alarm(
     id: String,
     props: AlarmProps,
   ) :
-      this(software.amazon.awscdk.services.cloudwatch.Alarm(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(AlarmProps::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.Alarm(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(AlarmProps.Companion::unwrap))
   )
 
   public constructor(
@@ -259,7 +259,7 @@ public open class Alarm(
      * @param comparisonOperator Comparison to use to check if metric is breaching. 
      */
     override fun comparisonOperator(comparisonOperator: ComparisonOperator) {
-      cdkBuilder.comparisonOperator(comparisonOperator.let(ComparisonOperator::unwrap))
+      cdkBuilder.comparisonOperator(comparisonOperator.let(ComparisonOperator.Companion::unwrap))
     }
 
     /**
@@ -315,7 +315,7 @@ public open class Alarm(
      * @param metric The metric to add the alarm on. 
      */
     override fun metric(metric: IMetric) {
-      cdkBuilder.metric(metric.let(IMetric::unwrap))
+      cdkBuilder.metric(metric.let(IMetric.Companion::unwrap))
     }
 
     /**
@@ -335,7 +335,7 @@ public open class Alarm(
      * @param treatMissingData Sets how this alarm is to handle missing data points. 
      */
     override fun treatMissingData(treatMissingData: TreatMissingData) {
-      cdkBuilder.treatMissingData(treatMissingData.let(TreatMissingData::unwrap))
+      cdkBuilder.treatMissingData(treatMissingData.let(TreatMissingData.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudwatch.Alarm = cdkBuilder.build()
@@ -347,7 +347,7 @@ public open class Alarm(
       id: String,
       alarmArn: String,
     ): IAlarm =
-        software.amazon.awscdk.services.cloudwatch.Alarm.fromAlarmArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.cloudwatch.Alarm.fromAlarmArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, alarmArn).let(IAlarm::wrap)
 
     public fun fromAlarmName(
@@ -355,7 +355,7 @@ public open class Alarm(
       id: String,
       alarmName: String,
     ): IAlarm =
-        software.amazon.awscdk.services.cloudwatch.Alarm.fromAlarmName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.cloudwatch.Alarm.fromAlarmName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, alarmName).let(IAlarm::wrap)
 
     public operator fun invoke(

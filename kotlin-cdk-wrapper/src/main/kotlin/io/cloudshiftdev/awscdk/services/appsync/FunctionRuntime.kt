@@ -35,7 +35,7 @@ public open class FunctionRuntime(
   cdkObject: software.amazon.awscdk.services.appsync.FunctionRuntime,
 ) : CdkObject(cdkObject) {
   public constructor(family: FunctionRuntimeFamily, version: String) :
-      this(software.amazon.awscdk.services.appsync.FunctionRuntime(family.let(FunctionRuntimeFamily::unwrap),
+      this(software.amazon.awscdk.services.appsync.FunctionRuntime(family.let(FunctionRuntimeFamily.Companion::unwrap),
       version)
   )
 

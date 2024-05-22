@@ -22,6 +22,8 @@ import kotlin.jvm.JvmName
  * import io.cloudshiftdev.awscdk.services.arczonalshift.*;
  * CfnZonalAutoshiftConfigurationProps cfnZonalAutoshiftConfigurationProps =
  * CfnZonalAutoshiftConfigurationProps.builder()
+ * .resourceIdentifier("resourceIdentifier")
+ * // the properties below are optional
  * .practiceRunConfiguration(PracticeRunConfigurationProperty.builder()
  * .outcomeAlarms(List.of(ControlConditionProperty.builder()
  * .alarmIdentifier("alarmIdentifier")
@@ -35,7 +37,6 @@ import kotlin.jvm.JvmName
  * .type("type")
  * .build()))
  * .build())
- * .resourceIdentifier("resourceIdentifier")
  * .zonalAutoshiftStatus("zonalAutoshiftStatus")
  * .build();
  * ```
@@ -73,7 +74,7 @@ public interface CfnZonalAutoshiftConfigurationProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-arczonalshift-zonalautoshiftconfiguration.html#cfn-arczonalshift-zonalautoshiftconfiguration-resourceidentifier)
    */
-  public fun resourceIdentifier(): String? = unwrap(this).getResourceIdentifier()
+  public fun resourceIdentifier(): String
 
   /**
    * When zonal autoshift is `ENABLED` , you authorize AWS to shift away resource traffic for an
@@ -147,7 +148,7 @@ public interface CfnZonalAutoshiftConfigurationProps {
         fun practiceRunConfiguration(practiceRunConfiguration: CfnZonalAutoshiftConfiguration.PracticeRunConfigurationProperty.Builder.() -> Unit)
 
     /**
-     * @param resourceIdentifier The identifier for the resource that AWS shifts traffic for.
+     * @param resourceIdentifier The identifier for the resource that AWS shifts traffic for. 
      * The identifier is the Amazon Resource Name (ARN) for the resource.
      *
      * At this time, supported resources are Network Load Balancers and Application Load Balancers
@@ -185,7 +186,7 @@ public interface CfnZonalAutoshiftConfigurationProps {
      * is required when zonal autoshift is enabled.
      */
     override fun practiceRunConfiguration(practiceRunConfiguration: IResolvable) {
-      cdkBuilder.practiceRunConfiguration(practiceRunConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.practiceRunConfiguration(practiceRunConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -205,7 +206,7 @@ public interface CfnZonalAutoshiftConfigurationProps {
      */
     override
         fun practiceRunConfiguration(practiceRunConfiguration: CfnZonalAutoshiftConfiguration.PracticeRunConfigurationProperty) {
-      cdkBuilder.practiceRunConfiguration(practiceRunConfiguration.let(CfnZonalAutoshiftConfiguration.PracticeRunConfigurationProperty::unwrap))
+      cdkBuilder.practiceRunConfiguration(practiceRunConfiguration.let(CfnZonalAutoshiftConfiguration.PracticeRunConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -231,7 +232,7 @@ public interface CfnZonalAutoshiftConfigurationProps {
         practiceRunConfiguration(CfnZonalAutoshiftConfiguration.PracticeRunConfigurationProperty(practiceRunConfiguration))
 
     /**
-     * @param resourceIdentifier The identifier for the resource that AWS shifts traffic for.
+     * @param resourceIdentifier The identifier for the resource that AWS shifts traffic for. 
      * The identifier is the Amazon Resource Name (ARN) for the resource.
      *
      * At this time, supported resources are Network Load Balancers and Application Load Balancers
@@ -289,7 +290,7 @@ public interface CfnZonalAutoshiftConfigurationProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-arczonalshift-zonalautoshiftconfiguration.html#cfn-arczonalshift-zonalautoshiftconfiguration-resourceidentifier)
      */
-    override fun resourceIdentifier(): String? = unwrap(this).getResourceIdentifier()
+    override fun resourceIdentifier(): String = unwrap(this).getResourceIdentifier()
 
     /**
      * When zonal autoshift is `ENABLED` , you authorize AWS to shift away resource traffic for an

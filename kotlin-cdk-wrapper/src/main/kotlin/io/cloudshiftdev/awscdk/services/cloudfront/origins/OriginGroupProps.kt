@@ -86,7 +86,7 @@ public interface OriginGroupProps {
      * @param fallbackOrigin The fallback origin that should serve requests when the primary fails. 
      */
     override fun fallbackOrigin(fallbackOrigin: IOrigin) {
-      cdkBuilder.fallbackOrigin(fallbackOrigin.let(IOrigin::unwrap))
+      cdkBuilder.fallbackOrigin(fallbackOrigin.let(IOrigin.Companion::unwrap))
     }
 
     /**
@@ -108,7 +108,7 @@ public interface OriginGroupProps {
      * @param primaryOrigin The primary origin that should serve requests for this group. 
      */
     override fun primaryOrigin(primaryOrigin: IOrigin) {
-      cdkBuilder.primaryOrigin(primaryOrigin.let(IOrigin::unwrap))
+      cdkBuilder.primaryOrigin(primaryOrigin.let(IOrigin.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.origins.OriginGroupProps =

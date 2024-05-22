@@ -118,7 +118,7 @@ public interface WarmPoolOptions {
      * complete.
      */
     override fun poolState(poolState: PoolState) {
-      cdkBuilder.poolState(poolState.let(PoolState::unwrap))
+      cdkBuilder.poolState(poolState.let(PoolState.Companion::unwrap))
     }
 
     /**

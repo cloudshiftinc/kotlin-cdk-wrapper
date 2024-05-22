@@ -68,7 +68,7 @@ public interface CpuUtilizationScalingProps : BaseTargetTrackingProps {
      * @param cooldown Period after a scaling completes before another scaling activity can start.
      */
     override fun cooldown(cooldown: Duration) {
-      cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
+      cdkBuilder.cooldown(cooldown.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -87,7 +87,7 @@ public interface CpuUtilizationScalingProps : BaseTargetTrackingProps {
      * metrics to CloudWatch.
      */
     override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
-      cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup.let(Duration::unwrap))
+      cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup.let(Duration.Companion::unwrap))
     }
 
     /**

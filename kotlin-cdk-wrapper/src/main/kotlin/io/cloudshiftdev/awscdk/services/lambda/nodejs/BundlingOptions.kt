@@ -768,7 +768,7 @@ public interface BundlingOptions : DockerRunOptions {
      * container and output files back.
      */
     override fun bundlingFileAccess(bundlingFileAccess: BundlingFileAccess) {
-      cdkBuilder.bundlingFileAccess(bundlingFileAccess.let(BundlingFileAccess::unwrap))
+      cdkBuilder.bundlingFileAccess(bundlingFileAccess.let(BundlingFileAccess.Companion::unwrap))
     }
 
     /**
@@ -779,7 +779,7 @@ public interface BundlingOptions : DockerRunOptions {
      * the original characters without using escape sequences, use `Charset.UTF8`.
      */
     override fun charset(charset: Charset) {
-      cdkBuilder.charset(charset.let(Charset::unwrap))
+      cdkBuilder.charset(charset.let(Charset.Companion::unwrap))
     }
 
     /**
@@ -798,7 +798,7 @@ public interface BundlingOptions : DockerRunOptions {
      * @param commandHooks Command hooks.
      */
     override fun commandHooks(commandHooks: ICommandHooks) {
-      cdkBuilder.commandHooks(commandHooks.let(ICommandHooks::unwrap))
+      cdkBuilder.commandHooks(commandHooks.let(ICommandHooks.Companion::unwrap))
     }
 
     /**
@@ -821,7 +821,7 @@ public interface BundlingOptions : DockerRunOptions {
      * for the default image provided by aws-cdk-lib/aws-lambda-nodejs.
      */
     override fun dockerImage(dockerImage: DockerImage) {
-      cdkBuilder.dockerImage(dockerImage.let(DockerImage::unwrap))
+      cdkBuilder.dockerImage(dockerImage.let(DockerImage.Companion::unwrap))
     }
 
     /**
@@ -910,7 +910,7 @@ public interface BundlingOptions : DockerRunOptions {
      * @param format Output format for the generated JavaScript files.
      */
     override fun format(format: OutputFormat) {
-      cdkBuilder.format(format.let(OutputFormat::unwrap))
+      cdkBuilder.format(format.let(OutputFormat.Companion::unwrap))
     }
 
     /**
@@ -961,7 +961,7 @@ public interface BundlingOptions : DockerRunOptions {
      * applies to its specific install command.
      */
     override fun logLevel(logLevel: LogLevel) {
-      cdkBuilder.logLevel(logLevel.let(LogLevel::unwrap))
+      cdkBuilder.logLevel(logLevel.let(LogLevel.Companion::unwrap))
     }
 
     /**
@@ -1078,7 +1078,7 @@ public interface BundlingOptions : DockerRunOptions {
      * @param sourceMapMode Source map mode to be used when bundling.
      */
     override fun sourceMapMode(sourceMapMode: SourceMapMode) {
-      cdkBuilder.sourceMapMode(sourceMapMode.let(SourceMapMode::unwrap))
+      cdkBuilder.sourceMapMode(sourceMapMode.let(SourceMapMode.Companion::unwrap))
     }
 
     /**
@@ -1122,7 +1122,7 @@ public interface BundlingOptions : DockerRunOptions {
      * @param volumes Docker volumes to mount.
      */
     override fun volumes(volumes: List<DockerVolume>) {
-      cdkBuilder.volumes(volumes.map(DockerVolume::unwrap))
+      cdkBuilder.volumes(volumes.map(DockerVolume.Companion::unwrap))
     }
 
     /**

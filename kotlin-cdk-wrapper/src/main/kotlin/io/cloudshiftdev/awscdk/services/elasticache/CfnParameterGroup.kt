@@ -53,8 +53,8 @@ public open class CfnParameterGroup(
     id: String,
     props: CfnParameterGroupProps,
   ) :
-      this(software.amazon.awscdk.services.elasticache.CfnParameterGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnParameterGroupProps::unwrap))
+      this(software.amazon.awscdk.services.elasticache.CfnParameterGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnParameterGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -101,7 +101,7 @@ public open class CfnParameterGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -113,7 +113,7 @@ public open class CfnParameterGroup(
    * A comma-delimited list of parameter name/value pairs.
    */
   public open fun properties(`value`: IResolvable) {
-    unwrap(this).setProperties(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProperties(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -138,7 +138,7 @@ public open class CfnParameterGroup(
    * A tag that can be added to an ElastiCache parameter group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -271,7 +271,7 @@ public open class CfnParameterGroup(
      * @param properties A comma-delimited list of parameter name/value pairs. 
      */
     override fun properties(properties: IResolvable) {
-      cdkBuilder.properties(properties.let(IResolvable::unwrap))
+      cdkBuilder.properties(properties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -301,7 +301,7 @@ public open class CfnParameterGroup(
      * @param tags A tag that can be added to an ElastiCache parameter group. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

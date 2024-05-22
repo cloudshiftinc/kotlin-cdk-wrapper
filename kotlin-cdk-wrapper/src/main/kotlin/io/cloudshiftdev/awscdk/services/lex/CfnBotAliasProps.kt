@@ -259,7 +259,7 @@ public interface CfnBotAliasProps {
      * For example, you can use different Lambda function depending on the bot's locale.
      */
     override fun botAliasLocaleSettings(botAliasLocaleSettings: IResolvable) {
-      cdkBuilder.botAliasLocaleSettings(botAliasLocaleSettings.let(IResolvable::unwrap))
+      cdkBuilder.botAliasLocaleSettings(botAliasLocaleSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -293,7 +293,7 @@ public interface CfnBotAliasProps {
      * .
      */
     override fun botAliasTags(botAliasTags: IResolvable) {
-      cdkBuilder.botAliasTags(botAliasTags.let(IResolvable::unwrap))
+      cdkBuilder.botAliasTags(botAliasTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -339,7 +339,7 @@ public interface CfnBotAliasProps {
      * and associated metadata in Amazon CloudWatch logs. Audio logs store input in Amazon S3 .
      */
     override fun conversationLogSettings(conversationLogSettings: IResolvable) {
-      cdkBuilder.conversationLogSettings(conversationLogSettings.let(IResolvable::unwrap))
+      cdkBuilder.conversationLogSettings(conversationLogSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -350,7 +350,7 @@ public interface CfnBotAliasProps {
      */
     override
         fun conversationLogSettings(conversationLogSettings: CfnBotAlias.ConversationLogSettingsProperty) {
-      cdkBuilder.conversationLogSettings(conversationLogSettings.let(CfnBotAlias.ConversationLogSettingsProperty::unwrap))
+      cdkBuilder.conversationLogSettings(conversationLogSettings.let(CfnBotAlias.ConversationLogSettingsProperty.Companion::unwrap))
     }
 
     /**

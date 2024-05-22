@@ -58,8 +58,8 @@ public open class CfnGroup(
     id: String,
     props: CfnGroupProps,
   ) :
-      this(software.amazon.awscdk.services.xray.CfnGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGroupProps::unwrap))
+      this(software.amazon.awscdk.services.xray.CfnGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -113,14 +113,14 @@ public open class CfnGroup(
    * The structure containing configurations related to insights.
    */
   public open fun insightsConfiguration(`value`: IResolvable) {
-    unwrap(this).setInsightsConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInsightsConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The structure containing configurations related to insights.
    */
   public open fun insightsConfiguration(`value`: InsightsConfigurationProperty) {
-    unwrap(this).setInsightsConfiguration(`value`.let(InsightsConfigurationProperty::unwrap))
+    unwrap(this).setInsightsConfiguration(`value`.let(InsightsConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -137,7 +137,7 @@ public open class CfnGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -149,7 +149,7 @@ public open class CfnGroup(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -276,7 +276,7 @@ public open class CfnGroup(
      * @param insightsConfiguration The structure containing configurations related to insights. 
      */
     override fun insightsConfiguration(insightsConfiguration: IResolvable) {
-      cdkBuilder.insightsConfiguration(insightsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.insightsConfiguration(insightsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -291,7 +291,7 @@ public open class CfnGroup(
      * @param insightsConfiguration The structure containing configurations related to insights. 
      */
     override fun insightsConfiguration(insightsConfiguration: InsightsConfigurationProperty) {
-      cdkBuilder.insightsConfiguration(insightsConfiguration.let(InsightsConfigurationProperty::unwrap))
+      cdkBuilder.insightsConfiguration(insightsConfiguration.let(InsightsConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -318,7 +318,7 @@ public open class CfnGroup(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -437,7 +437,7 @@ public open class CfnGroup(
        * disable insights.
        */
       override fun insightsEnabled(insightsEnabled: IResolvable) {
-        cdkBuilder.insightsEnabled(insightsEnabled.let(IResolvable::unwrap))
+        cdkBuilder.insightsEnabled(insightsEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -455,7 +455,7 @@ public open class CfnGroup(
        * Notifications can only be enabled on a group with InsightsEnabled set to true.
        */
       override fun notificationsEnabled(notificationsEnabled: IResolvable) {
-        cdkBuilder.notificationsEnabled(notificationsEnabled.let(IResolvable::unwrap))
+        cdkBuilder.notificationsEnabled(notificationsEnabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

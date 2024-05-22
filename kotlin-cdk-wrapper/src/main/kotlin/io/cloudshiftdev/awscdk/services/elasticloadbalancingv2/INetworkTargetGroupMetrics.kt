@@ -127,7 +127,8 @@ public interface INetworkTargetGroupMetrics {
      * @param props
      */
     override fun custom(metricName: String, props: MetricOptions): Metric =
-        unwrap(this).custom(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).custom(metricName,
+        props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * Return the given named metric for this Network Target Group.
@@ -159,7 +160,7 @@ public interface INetworkTargetGroupMetrics {
      * @param props
      */
     override fun healthyHostCount(props: MetricOptions): Metric =
-        unwrap(this).healthyHostCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).healthyHostCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of targets that are considered healthy.
@@ -190,7 +191,7 @@ public interface INetworkTargetGroupMetrics {
      * @param props
      */
     override fun unHealthyHostCount(props: MetricOptions): Metric =
-        unwrap(this).unHealthyHostCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+        unwrap(this).unHealthyHostCount(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
     /**
      * The number of targets that are considered unhealthy.

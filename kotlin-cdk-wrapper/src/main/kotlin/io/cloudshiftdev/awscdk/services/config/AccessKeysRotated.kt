@@ -30,7 +30,7 @@ public open class AccessKeysRotated(
   cdkObject: software.amazon.awscdk.services.config.AccessKeysRotated,
 ) : ManagedRule(cdkObject) {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.config.AccessKeysRotated(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.config.AccessKeysRotated(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -39,8 +39,8 @@ public open class AccessKeysRotated(
     id: String,
     props: AccessKeysRotatedProps,
   ) :
-      this(software.amazon.awscdk.services.config.AccessKeysRotated(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(AccessKeysRotatedProps::unwrap))
+      this(software.amazon.awscdk.services.config.AccessKeysRotated(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(AccessKeysRotatedProps.Companion::unwrap))
   )
 
   public constructor(
@@ -160,7 +160,7 @@ public open class AccessKeysRotated(
      * @param maxAge The maximum number of days within which the access keys must be rotated. 
      */
     override fun maxAge(maxAge: Duration) {
-      cdkBuilder.maxAge(maxAge.let(Duration::unwrap))
+      cdkBuilder.maxAge(maxAge.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -172,7 +172,7 @@ public open class AccessKeysRotated(
      * evaluations. 
      */
     override fun maximumExecutionFrequency(maximumExecutionFrequency: MaximumExecutionFrequency) {
-      cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency.let(MaximumExecutionFrequency::unwrap))
+      cdkBuilder.maximumExecutionFrequency(maximumExecutionFrequency.let(MaximumExecutionFrequency.Companion::unwrap))
     }
 
     /**
@@ -184,7 +184,7 @@ public open class AccessKeysRotated(
      * @param ruleScope Defines which resources trigger an evaluation for an AWS Config rule. 
      */
     override fun ruleScope(ruleScope: RuleScope) {
-      cdkBuilder.ruleScope(ruleScope.let(RuleScope::unwrap))
+      cdkBuilder.ruleScope(ruleScope.let(RuleScope.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.config.AccessKeysRotated =

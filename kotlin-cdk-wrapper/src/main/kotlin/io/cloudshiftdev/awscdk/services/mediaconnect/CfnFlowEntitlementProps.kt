@@ -213,7 +213,7 @@ public interface CfnFlowEntitlementProps {
      * associated with the entitlement.
      */
     override fun encryption(encryption: IResolvable) {
-      cdkBuilder.encryption(encryption.let(IResolvable::unwrap))
+      cdkBuilder.encryption(encryption.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -221,7 +221,7 @@ public interface CfnFlowEntitlementProps {
      * associated with the entitlement.
      */
     override fun encryption(encryption: CfnFlowEntitlement.EncryptionProperty) {
-      cdkBuilder.encryption(encryption.let(CfnFlowEntitlement.EncryptionProperty::unwrap))
+      cdkBuilder.encryption(encryption.let(CfnFlowEntitlement.EncryptionProperty.Companion::unwrap))
     }
 
     /**

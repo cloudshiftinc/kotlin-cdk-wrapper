@@ -50,8 +50,8 @@ public open class CfnLandingZone(
     id: String,
     props: CfnLandingZoneProps,
   ) :
-      this(software.amazon.awscdk.services.controltower.CfnLandingZone(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLandingZoneProps::unwrap))
+      this(software.amazon.awscdk.services.controltower.CfnLandingZone(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLandingZoneProps.Companion::unwrap))
   )
 
   public constructor(
@@ -101,7 +101,7 @@ public open class CfnLandingZone(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -125,7 +125,7 @@ public open class CfnLandingZone(
    * Tags to be applied to the landing zone.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -209,7 +209,7 @@ public open class CfnLandingZone(
      * @param tags Tags to be applied to the landing zone. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

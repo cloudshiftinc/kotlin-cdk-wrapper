@@ -270,7 +270,7 @@ public interface DockerRunOptions {
      * @param volumes Docker volumes to mount.
      */
     override fun volumes(volumes: List<DockerVolume>) {
-      cdkBuilder.volumes(volumes.map(DockerVolume::unwrap))
+      cdkBuilder.volumes(volumes.map(DockerVolume.Companion::unwrap))
     }
 
     /**

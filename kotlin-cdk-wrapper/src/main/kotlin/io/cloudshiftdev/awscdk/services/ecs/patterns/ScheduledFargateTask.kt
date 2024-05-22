@@ -54,8 +54,8 @@ public open class ScheduledFargateTask(
     id: String,
     props: ScheduledFargateTaskProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTask(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ScheduledFargateTaskProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTask(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ScheduledFargateTaskProps.Companion::unwrap))
   )
 
   public constructor(
@@ -435,7 +435,7 @@ public open class ScheduledFargateTask(
      * @param cluster The name of the cluster that hosts the service. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -556,7 +556,7 @@ public open class ScheduledFargateTask(
      * @param platformVersion The platform version on which to run your service. 
      */
     override fun platformVersion(platformVersion: FargatePlatformVersion) {
-      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion::unwrap))
+      cdkBuilder.platformVersion(platformVersion.let(FargatePlatformVersion.Companion::unwrap))
     }
 
     /**
@@ -570,7 +570,7 @@ public open class ScheduledFargateTask(
      * task. 
      */
     override fun propagateTags(propagateTags: PropagatedTagSource) {
-      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(PropagatedTagSource.Companion::unwrap))
     }
 
     /**
@@ -595,7 +595,7 @@ public open class ScheduledFargateTask(
      * @param runtimePlatform The runtime platform of the task definition. 
      */
     override fun runtimePlatform(runtimePlatform: RuntimePlatform) {
-      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform::unwrap))
+      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform.Companion::unwrap))
     }
 
     /**
@@ -623,7 +623,7 @@ public open class ScheduledFargateTask(
      * the rule. 
      */
     override fun schedule(schedule: Schedule) {
-      cdkBuilder.schedule(schedule.let(Schedule::unwrap))
+      cdkBuilder.schedule(schedule.let(Schedule.Companion::unwrap))
     }
 
     /**
@@ -639,7 +639,7 @@ public open class ScheduledFargateTask(
      */
     override
         fun scheduledFargateTaskDefinitionOptions(scheduledFargateTaskDefinitionOptions: ScheduledFargateTaskDefinitionOptions) {
-      cdkBuilder.scheduledFargateTaskDefinitionOptions(scheduledFargateTaskDefinitionOptions.let(ScheduledFargateTaskDefinitionOptions::unwrap))
+      cdkBuilder.scheduledFargateTaskDefinitionOptions(scheduledFargateTaskDefinitionOptions.let(ScheduledFargateTaskDefinitionOptions.Companion::unwrap))
     }
 
     /**
@@ -673,7 +673,7 @@ public open class ScheduledFargateTask(
      */
     override
         fun scheduledFargateTaskImageOptions(scheduledFargateTaskImageOptions: ScheduledFargateTaskImageOptions) {
-      cdkBuilder.scheduledFargateTaskImageOptions(scheduledFargateTaskImageOptions.let(ScheduledFargateTaskImageOptions::unwrap))
+      cdkBuilder.scheduledFargateTaskImageOptions(scheduledFargateTaskImageOptions.let(ScheduledFargateTaskImageOptions.Companion::unwrap))
     }
 
     /**
@@ -702,7 +702,7 @@ public open class ScheduledFargateTask(
      * @param securityGroups Existing security groups to use for your service. 
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -725,7 +725,7 @@ public open class ScheduledFargateTask(
      * @param subnetSelection In what subnets to place the task's ENIs. 
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -753,7 +753,7 @@ public open class ScheduledFargateTask(
      * 
      */
     override fun tags(tags: List<Tag>) {
-      cdkBuilder.tags(tags.map(Tag::unwrap))
+      cdkBuilder.tags(tags.map(Tag.Companion::unwrap))
     }
 
     /**
@@ -780,7 +780,7 @@ public open class ScheduledFargateTask(
      * TaskImageOptions must be specified, but not both. 
      */
     override fun taskDefinition(taskDefinition: FargateTaskDefinition) {
-      cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition::unwrap))
+      cdkBuilder.taskDefinition(taskDefinition.let(FargateTaskDefinition.Companion::unwrap))
     }
 
     /**
@@ -796,7 +796,7 @@ public open class ScheduledFargateTask(
      * interfaces (ENIs) will be deployed. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.patterns.ScheduledFargateTask =

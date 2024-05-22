@@ -53,7 +53,7 @@ public open class CfnWorkflow(
   cdkObject: software.amazon.awscdk.services.omics.CfnWorkflow,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.omics.CfnWorkflow(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.omics.CfnWorkflow(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -62,8 +62,8 @@ public open class CfnWorkflow(
     id: String,
     props: CfnWorkflowProps,
   ) :
-      this(software.amazon.awscdk.services.omics.CfnWorkflow(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnWorkflowProps::unwrap))
+      this(software.amazon.awscdk.services.omics.CfnWorkflow(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnWorkflowProps.Companion::unwrap))
   )
 
   public constructor(
@@ -152,7 +152,7 @@ public open class CfnWorkflow(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -188,7 +188,7 @@ public open class CfnWorkflow(
    * The workflow's parameter template.
    */
   public open fun parameterTemplate(`value`: IResolvable) {
-    unwrap(this).setParameterTemplate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setParameterTemplate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -199,12 +199,12 @@ public open class CfnWorkflow(
   }
 
   /**
-   * A storage capacity for the workflow in gibibytes.
+   * The default storage capacity for the workflow runs, in gibibytes.
    */
   public open fun storageCapacity(): Number? = unwrap(this).getStorageCapacity()
 
   /**
-   * A storage capacity for the workflow in gibibytes.
+   * The default storage capacity for the workflow runs, in gibibytes.
    */
   public open fun storageCapacity(`value`: Number) {
     unwrap(this).setStorageCapacity(`value`)
@@ -295,10 +295,10 @@ public open class CfnWorkflow(
     public fun parameterTemplate(parameterTemplate: Map<String, Any>)
 
     /**
-     * A storage capacity for the workflow in gibibytes.
+     * The default storage capacity for the workflow runs, in gibibytes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-storagecapacity)
-     * @param storageCapacity A storage capacity for the workflow in gibibytes. 
+     * @param storageCapacity The default storage capacity for the workflow runs, in gibibytes. 
      */
     public fun storageCapacity(storageCapacity: Number)
 
@@ -383,7 +383,7 @@ public open class CfnWorkflow(
      * @param parameterTemplate The workflow's parameter template. 
      */
     override fun parameterTemplate(parameterTemplate: IResolvable) {
-      cdkBuilder.parameterTemplate(parameterTemplate.let(IResolvable::unwrap))
+      cdkBuilder.parameterTemplate(parameterTemplate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -397,10 +397,10 @@ public open class CfnWorkflow(
     }
 
     /**
-     * A storage capacity for the workflow in gibibytes.
+     * The default storage capacity for the workflow runs, in gibibytes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-omics-workflow.html#cfn-omics-workflow-storagecapacity)
-     * @param storageCapacity A storage capacity for the workflow in gibibytes. 
+     * @param storageCapacity The default storage capacity for the workflow runs, in gibibytes. 
      */
     override fun storageCapacity(storageCapacity: Number) {
       cdkBuilder.storageCapacity(storageCapacity)
@@ -515,7 +515,7 @@ public open class CfnWorkflow(
        * @param optional Whether the parameter is optional.
        */
       override fun optional(optional: IResolvable) {
-        cdkBuilder.optional(optional.let(IResolvable::unwrap))
+        cdkBuilder.optional(optional.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

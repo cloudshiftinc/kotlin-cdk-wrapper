@@ -51,7 +51,7 @@ public interface AwsAuthProps {
      * [disable-awslint:ref-via-interface]
      */
     override fun cluster(cluster: Cluster) {
-      cdkBuilder.cluster(cluster.let(Cluster::unwrap))
+      cdkBuilder.cluster(cluster.let(Cluster.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.eks.AwsAuthProps = cdkBuilder.build()

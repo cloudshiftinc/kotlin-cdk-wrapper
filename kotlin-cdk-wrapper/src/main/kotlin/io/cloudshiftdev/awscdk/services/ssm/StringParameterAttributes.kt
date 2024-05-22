@@ -197,7 +197,7 @@ public interface StringParameterAttributes : CommonStringParameterAttributes {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun type(type: ParameterType) {
-      cdkBuilder.type(type.let(ParameterType::unwrap))
+      cdkBuilder.type(type.let(ParameterType.Companion::unwrap))
     }
 
     /**
@@ -210,7 +210,7 @@ public interface StringParameterAttributes : CommonStringParameterAttributes {
      * ParameterValueType.STRING
      */
     override fun valueType(valueType: ParameterValueType) {
-      cdkBuilder.valueType(valueType.let(ParameterValueType::unwrap))
+      cdkBuilder.valueType(valueType.let(ParameterValueType.Companion::unwrap))
     }
 
     /**

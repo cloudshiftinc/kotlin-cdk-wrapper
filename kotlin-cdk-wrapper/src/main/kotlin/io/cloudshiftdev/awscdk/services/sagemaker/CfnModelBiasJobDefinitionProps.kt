@@ -408,14 +408,14 @@ public interface CfnModelBiasJobDefinitionProps {
      * @param jobResources Identifies the resources to deploy for a monitoring job. 
      */
     override fun jobResources(jobResources: IResolvable) {
-      cdkBuilder.jobResources(jobResources.let(IResolvable::unwrap))
+      cdkBuilder.jobResources(jobResources.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param jobResources Identifies the resources to deploy for a monitoring job. 
      */
     override fun jobResources(jobResources: CfnModelBiasJobDefinition.MonitoringResourcesProperty) {
-      cdkBuilder.jobResources(jobResources.let(CfnModelBiasJobDefinition.MonitoringResourcesProperty::unwrap))
+      cdkBuilder.jobResources(jobResources.let(CfnModelBiasJobDefinition.MonitoringResourcesProperty.Companion::unwrap))
     }
 
     /**
@@ -432,7 +432,7 @@ public interface CfnModelBiasJobDefinitionProps {
      * container image. 
      */
     override fun modelBiasAppSpecification(modelBiasAppSpecification: IResolvable) {
-      cdkBuilder.modelBiasAppSpecification(modelBiasAppSpecification.let(IResolvable::unwrap))
+      cdkBuilder.modelBiasAppSpecification(modelBiasAppSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -441,7 +441,7 @@ public interface CfnModelBiasJobDefinitionProps {
      */
     override
         fun modelBiasAppSpecification(modelBiasAppSpecification: CfnModelBiasJobDefinition.ModelBiasAppSpecificationProperty) {
-      cdkBuilder.modelBiasAppSpecification(modelBiasAppSpecification.let(CfnModelBiasJobDefinition.ModelBiasAppSpecificationProperty::unwrap))
+      cdkBuilder.modelBiasAppSpecification(modelBiasAppSpecification.let(CfnModelBiasJobDefinition.ModelBiasAppSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -459,7 +459,7 @@ public interface CfnModelBiasJobDefinitionProps {
      * @param modelBiasBaselineConfig The baseline configuration for a model bias job.
      */
     override fun modelBiasBaselineConfig(modelBiasBaselineConfig: IResolvable) {
-      cdkBuilder.modelBiasBaselineConfig(modelBiasBaselineConfig.let(IResolvable::unwrap))
+      cdkBuilder.modelBiasBaselineConfig(modelBiasBaselineConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -467,7 +467,7 @@ public interface CfnModelBiasJobDefinitionProps {
      */
     override
         fun modelBiasBaselineConfig(modelBiasBaselineConfig: CfnModelBiasJobDefinition.ModelBiasBaselineConfigProperty) {
-      cdkBuilder.modelBiasBaselineConfig(modelBiasBaselineConfig.let(CfnModelBiasJobDefinition.ModelBiasBaselineConfigProperty::unwrap))
+      cdkBuilder.modelBiasBaselineConfig(modelBiasBaselineConfig.let(CfnModelBiasJobDefinition.ModelBiasBaselineConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -484,7 +484,7 @@ public interface CfnModelBiasJobDefinitionProps {
      * @param modelBiasJobInput Inputs for the model bias job. 
      */
     override fun modelBiasJobInput(modelBiasJobInput: IResolvable) {
-      cdkBuilder.modelBiasJobInput(modelBiasJobInput.let(IResolvable::unwrap))
+      cdkBuilder.modelBiasJobInput(modelBiasJobInput.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -492,7 +492,7 @@ public interface CfnModelBiasJobDefinitionProps {
      */
     override
         fun modelBiasJobInput(modelBiasJobInput: CfnModelBiasJobDefinition.ModelBiasJobInputProperty) {
-      cdkBuilder.modelBiasJobInput(modelBiasJobInput.let(CfnModelBiasJobDefinition.ModelBiasJobInputProperty::unwrap))
+      cdkBuilder.modelBiasJobInput(modelBiasJobInput.let(CfnModelBiasJobDefinition.ModelBiasJobInputProperty.Companion::unwrap))
     }
 
     /**
@@ -509,7 +509,7 @@ public interface CfnModelBiasJobDefinitionProps {
      * @param modelBiasJobOutputConfig The output configuration for monitoring jobs. 
      */
     override fun modelBiasJobOutputConfig(modelBiasJobOutputConfig: IResolvable) {
-      cdkBuilder.modelBiasJobOutputConfig(modelBiasJobOutputConfig.let(IResolvable::unwrap))
+      cdkBuilder.modelBiasJobOutputConfig(modelBiasJobOutputConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -517,7 +517,7 @@ public interface CfnModelBiasJobDefinitionProps {
      */
     override
         fun modelBiasJobOutputConfig(modelBiasJobOutputConfig: CfnModelBiasJobDefinition.MonitoringOutputConfigProperty) {
-      cdkBuilder.modelBiasJobOutputConfig(modelBiasJobOutputConfig.let(CfnModelBiasJobDefinition.MonitoringOutputConfigProperty::unwrap))
+      cdkBuilder.modelBiasJobOutputConfig(modelBiasJobOutputConfig.let(CfnModelBiasJobDefinition.MonitoringOutputConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -534,14 +534,14 @@ public interface CfnModelBiasJobDefinitionProps {
      * @param networkConfig Networking options for a model bias job.
      */
     override fun networkConfig(networkConfig: IResolvable) {
-      cdkBuilder.networkConfig(networkConfig.let(IResolvable::unwrap))
+      cdkBuilder.networkConfig(networkConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param networkConfig Networking options for a model bias job.
      */
     override fun networkConfig(networkConfig: CfnModelBiasJobDefinition.NetworkConfigProperty) {
-      cdkBuilder.networkConfig(networkConfig.let(CfnModelBiasJobDefinition.NetworkConfigProperty::unwrap))
+      cdkBuilder.networkConfig(networkConfig.let(CfnModelBiasJobDefinition.NetworkConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -566,7 +566,7 @@ public interface CfnModelBiasJobDefinitionProps {
      * before stopping.
      */
     override fun stoppingCondition(stoppingCondition: IResolvable) {
-      cdkBuilder.stoppingCondition(stoppingCondition.let(IResolvable::unwrap))
+      cdkBuilder.stoppingCondition(stoppingCondition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -575,7 +575,7 @@ public interface CfnModelBiasJobDefinitionProps {
      */
     override
         fun stoppingCondition(stoppingCondition: CfnModelBiasJobDefinition.StoppingConditionProperty) {
-      cdkBuilder.stoppingCondition(stoppingCondition.let(CfnModelBiasJobDefinition.StoppingConditionProperty::unwrap))
+      cdkBuilder.stoppingCondition(stoppingCondition.let(CfnModelBiasJobDefinition.StoppingConditionProperty.Companion::unwrap))
     }
 
     /**
@@ -596,7 +596,7 @@ public interface CfnModelBiasJobDefinitionProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

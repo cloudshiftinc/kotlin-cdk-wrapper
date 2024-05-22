@@ -266,7 +266,7 @@ public interface CodeDeployEcsDeployActionProps : CommonAwsActionProps {
      * If you use this property, you don't need to specify the `appSpecTemplateInput` property.
      */
     override fun appSpecTemplateFile(appSpecTemplateFile: ArtifactPath) {
-      cdkBuilder.appSpecTemplateFile(appSpecTemplateFile.let(ArtifactPath::unwrap))
+      cdkBuilder.appSpecTemplateFile(appSpecTemplateFile.let(ArtifactPath.Companion::unwrap))
     }
 
     /**
@@ -281,7 +281,7 @@ public interface CodeDeployEcsDeployActionProps : CommonAwsActionProps {
      * and use the `appSpecTemplateFile` property instead.
      */
     override fun appSpecTemplateInput(appSpecTemplateInput: Artifact) {
-      cdkBuilder.appSpecTemplateInput(appSpecTemplateInput.let(Artifact::unwrap))
+      cdkBuilder.appSpecTemplateInput(appSpecTemplateInput.let(Artifact.Companion::unwrap))
     }
 
     /**
@@ -293,7 +293,7 @@ public interface CodeDeployEcsDeployActionProps : CommonAwsActionProps {
      */
     override
         fun containerImageInputs(containerImageInputs: List<CodeDeployEcsContainerImageInput>) {
-      cdkBuilder.containerImageInputs(containerImageInputs.map(CodeDeployEcsContainerImageInput::unwrap))
+      cdkBuilder.containerImageInputs(containerImageInputs.map(CodeDeployEcsContainerImageInput.Companion::unwrap))
     }
 
     /**
@@ -311,7 +311,7 @@ public interface CodeDeployEcsDeployActionProps : CommonAwsActionProps {
      * @param deploymentGroup The CodeDeploy ECS Deployment Group to deploy to. 
      */
     override fun deploymentGroup(deploymentGroup: IEcsDeploymentGroup) {
-      cdkBuilder.deploymentGroup(deploymentGroup.let(IEcsDeploymentGroup::unwrap))
+      cdkBuilder.deploymentGroup(deploymentGroup.let(IEcsDeploymentGroup.Companion::unwrap))
     }
 
     /**
@@ -323,7 +323,7 @@ public interface CodeDeployEcsDeployActionProps : CommonAwsActionProps {
      * method in the `ActionBindOptions.role` property.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -345,7 +345,7 @@ public interface CodeDeployEcsDeployActionProps : CommonAwsActionProps {
      * property.
      */
     override fun taskDefinitionTemplateFile(taskDefinitionTemplateFile: ArtifactPath) {
-      cdkBuilder.taskDefinitionTemplateFile(taskDefinitionTemplateFile.let(ArtifactPath::unwrap))
+      cdkBuilder.taskDefinitionTemplateFile(taskDefinitionTemplateFile.let(ArtifactPath.Companion::unwrap))
     }
 
     /**
@@ -359,7 +359,7 @@ public interface CodeDeployEcsDeployActionProps : CommonAwsActionProps {
      * and use the `taskDefinitionTemplateFile` property instead.
      */
     override fun taskDefinitionTemplateInput(taskDefinitionTemplateInput: Artifact) {
-      cdkBuilder.taskDefinitionTemplateInput(taskDefinitionTemplateInput.let(Artifact::unwrap))
+      cdkBuilder.taskDefinitionTemplateInput(taskDefinitionTemplateInput.let(Artifact.Companion::unwrap))
     }
 
     /**

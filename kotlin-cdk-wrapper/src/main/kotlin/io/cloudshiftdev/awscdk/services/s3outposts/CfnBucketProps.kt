@@ -260,7 +260,7 @@ public interface CfnBucketProps {
      * certain period of time and abort incomplete multipart uploads.
      */
     override fun lifecycleConfiguration(lifecycleConfiguration: IResolvable) {
-      cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -271,7 +271,7 @@ public interface CfnBucketProps {
      */
     override
         fun lifecycleConfiguration(lifecycleConfiguration: CfnBucket.LifecycleConfigurationProperty) {
-      cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(CfnBucket.LifecycleConfigurationProperty::unwrap))
+      cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(CfnBucket.LifecycleConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -321,7 +321,7 @@ public interface CfnBucketProps {
      * resources](https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-access-control.html) .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

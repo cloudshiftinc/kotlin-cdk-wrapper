@@ -156,7 +156,7 @@ public interface CfnIdentityPoolRoleAttachmentProps {
      * .
      */
     override fun roleMappings(roleMappings: IResolvable) {
-      cdkBuilder.roleMappings(roleMappings.let(IResolvable::unwrap))
+      cdkBuilder.roleMappings(roleMappings.let(IResolvable.Companion::unwrap))
     }
 
     /**

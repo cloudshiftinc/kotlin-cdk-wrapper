@@ -36,8 +36,8 @@ public open class VpcEndpointService(
     id: String,
     props: VpcEndpointServiceProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.VpcEndpointService(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(VpcEndpointServiceProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.VpcEndpointService(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(VpcEndpointServiceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -185,7 +185,7 @@ public open class VpcEndpointService(
      * from. 
      */
     override fun allowedPrincipals(allowedPrincipals: List<ArnPrincipal>) {
-      cdkBuilder.allowedPrincipals(allowedPrincipals.map(ArnPrincipal::unwrap))
+      cdkBuilder.allowedPrincipals(allowedPrincipals.map(ArnPrincipal.Companion::unwrap))
     }
 
     /**
@@ -223,7 +223,7 @@ public open class VpcEndpointService(
      */
     override
         fun vpcEndpointServiceLoadBalancers(vpcEndpointServiceLoadBalancers: List<IVpcEndpointServiceLoadBalancer>) {
-      cdkBuilder.vpcEndpointServiceLoadBalancers(vpcEndpointServiceLoadBalancers.map(IVpcEndpointServiceLoadBalancer::unwrap))
+      cdkBuilder.vpcEndpointServiceLoadBalancers(vpcEndpointServiceLoadBalancers.map(IVpcEndpointServiceLoadBalancer.Companion::unwrap))
     }
 
     /**

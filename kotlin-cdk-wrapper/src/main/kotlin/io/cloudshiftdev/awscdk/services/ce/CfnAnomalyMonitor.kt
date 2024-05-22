@@ -53,8 +53,8 @@ public open class CfnAnomalyMonitor(
     id: String,
     props: CfnAnomalyMonitorProps,
   ) :
-      this(software.amazon.awscdk.services.ce.CfnAnomalyMonitor(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAnomalyMonitorProps::unwrap))
+      this(software.amazon.awscdk.services.ce.CfnAnomalyMonitor(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAnomalyMonitorProps.Companion::unwrap))
   )
 
   public constructor(
@@ -95,7 +95,7 @@ public open class CfnAnomalyMonitor(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -155,7 +155,7 @@ public open class CfnAnomalyMonitor(
    * Tags to assign to monitor.
    */
   public open fun resourceTags(`value`: IResolvable) {
-    unwrap(this).setResourceTags(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResourceTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -296,7 +296,7 @@ public open class CfnAnomalyMonitor(
      * @param resourceTags Tags to assign to monitor. 
      */
     override fun resourceTags(resourceTags: IResolvable) {
-      cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
+      cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
     }
 
     /**

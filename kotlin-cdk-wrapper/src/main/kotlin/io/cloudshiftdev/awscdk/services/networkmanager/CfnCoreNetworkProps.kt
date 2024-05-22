@@ -140,7 +140,7 @@ public interface CfnCoreNetworkProps {
      * @param tags The list of key-value tags associated with a core network.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

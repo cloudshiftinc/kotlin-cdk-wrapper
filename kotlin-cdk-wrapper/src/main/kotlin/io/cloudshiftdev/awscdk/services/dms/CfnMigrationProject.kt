@@ -71,7 +71,7 @@ public open class CfnMigrationProject(
   cdkObject: software.amazon.awscdk.services.dms.CfnMigrationProject,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.dms.CfnMigrationProject(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.dms.CfnMigrationProject(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -80,8 +80,8 @@ public open class CfnMigrationProject(
     id: String,
     props: CfnMigrationProjectProps,
   ) :
-      this(software.amazon.awscdk.services.dms.CfnMigrationProject(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMigrationProjectProps::unwrap))
+      this(software.amazon.awscdk.services.dms.CfnMigrationProject(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMigrationProjectProps.Companion::unwrap))
   )
 
   public constructor(
@@ -120,7 +120,7 @@ public open class CfnMigrationProject(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -215,7 +215,7 @@ public open class CfnMigrationProject(
    * role ARN.
    */
   public open fun schemaConversionApplicationAttributes(`value`: IResolvable) {
-    unwrap(this).setSchemaConversionApplicationAttributes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSchemaConversionApplicationAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -224,7 +224,7 @@ public open class CfnMigrationProject(
    */
   public open
       fun schemaConversionApplicationAttributes(`value`: SchemaConversionApplicationAttributesProperty) {
-    unwrap(this).setSchemaConversionApplicationAttributes(`value`.let(SchemaConversionApplicationAttributesProperty::unwrap))
+    unwrap(this).setSchemaConversionApplicationAttributes(`value`.let(SchemaConversionApplicationAttributesProperty.Companion::unwrap))
   }
 
   /**
@@ -250,7 +250,7 @@ public open class CfnMigrationProject(
    * parameters.
    */
   public open fun sourceDataProviderDescriptors(`value`: IResolvable) {
-    unwrap(this).setSourceDataProviderDescriptors(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSourceDataProviderDescriptors(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -277,7 +277,7 @@ public open class CfnMigrationProject(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -297,7 +297,7 @@ public open class CfnMigrationProject(
    * parameters.
    */
   public open fun targetDataProviderDescriptors(`value`: IResolvable) {
-    unwrap(this).setTargetDataProviderDescriptors(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTargetDataProviderDescriptors(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -615,7 +615,7 @@ public open class CfnMigrationProject(
      */
     override
         fun schemaConversionApplicationAttributes(schemaConversionApplicationAttributes: IResolvable) {
-      cdkBuilder.schemaConversionApplicationAttributes(schemaConversionApplicationAttributes.let(IResolvable::unwrap))
+      cdkBuilder.schemaConversionApplicationAttributes(schemaConversionApplicationAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -628,7 +628,7 @@ public open class CfnMigrationProject(
      */
     override
         fun schemaConversionApplicationAttributes(schemaConversionApplicationAttributes: SchemaConversionApplicationAttributesProperty) {
-      cdkBuilder.schemaConversionApplicationAttributes(schemaConversionApplicationAttributes.let(SchemaConversionApplicationAttributesProperty::unwrap))
+      cdkBuilder.schemaConversionApplicationAttributes(schemaConversionApplicationAttributes.let(SchemaConversionApplicationAttributesProperty.Companion::unwrap))
     }
 
     /**
@@ -655,7 +655,7 @@ public open class CfnMigrationProject(
      * the name or ARN, and AWS Secrets Manager parameters. 
      */
     override fun sourceDataProviderDescriptors(sourceDataProviderDescriptors: IResolvable) {
-      cdkBuilder.sourceDataProviderDescriptors(sourceDataProviderDescriptors.let(IResolvable::unwrap))
+      cdkBuilder.sourceDataProviderDescriptors(sourceDataProviderDescriptors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -688,7 +688,7 @@ public open class CfnMigrationProject(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -708,7 +708,7 @@ public open class CfnMigrationProject(
      * the name or ARN, and AWS Secrets Manager parameters. 
      */
     override fun targetDataProviderDescriptors(targetDataProviderDescriptors: IResolvable) {
-      cdkBuilder.targetDataProviderDescriptors(targetDataProviderDescriptors.let(IResolvable::unwrap))
+      cdkBuilder.targetDataProviderDescriptors(targetDataProviderDescriptors.let(IResolvable.Companion::unwrap))
     }
 
     /**

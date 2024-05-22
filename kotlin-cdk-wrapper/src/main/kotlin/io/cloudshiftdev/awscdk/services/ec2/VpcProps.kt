@@ -601,7 +601,7 @@ public interface VpcProps {
      * with Dedicated tenancy.
      */
     override fun defaultInstanceTenancy(defaultInstanceTenancy: DefaultInstanceTenancy) {
-      cdkBuilder.defaultInstanceTenancy(defaultInstanceTenancy.let(DefaultInstanceTenancy::unwrap))
+      cdkBuilder.defaultInstanceTenancy(defaultInstanceTenancy.let(DefaultInstanceTenancy.Companion::unwrap))
     }
 
     /**
@@ -647,7 +647,7 @@ public interface VpcProps {
      * Note this is specific to IPv4 addresses.
      */
     override fun ipAddresses(ipAddresses: IIpAddresses) {
-      cdkBuilder.ipAddresses(ipAddresses.let(IIpAddresses::unwrap))
+      cdkBuilder.ipAddresses(ipAddresses.let(IIpAddresses.Companion::unwrap))
     }
 
     /**
@@ -655,7 +655,7 @@ public interface VpcProps {
      * Options are IPv4 only or dual stack.
      */
     override fun ipProtocol(ipProtocol: IpProtocol) {
-      cdkBuilder.ipProtocol(ipProtocol.let(IpProtocol::unwrap))
+      cdkBuilder.ipProtocol(ipProtocol.let(IpProtocol.Companion::unwrap))
     }
 
     /**
@@ -665,7 +665,7 @@ public interface VpcProps {
      * Note this is specific to IPv6 addresses.
      */
     override fun ipv6Addresses(ipv6Addresses: IIpv6Addresses) {
-      cdkBuilder.ipv6Addresses(ipv6Addresses.let(IIpv6Addresses::unwrap))
+      cdkBuilder.ipv6Addresses(ipv6Addresses.let(IIpv6Addresses.Companion::unwrap))
     }
 
     /**
@@ -694,7 +694,7 @@ public interface VpcProps {
      * may not be available in all AWS regions.
      */
     override fun natGatewayProvider(natGatewayProvider: NatProvider) {
-      cdkBuilder.natGatewayProvider(natGatewayProvider.let(NatProvider::unwrap))
+      cdkBuilder.natGatewayProvider(natGatewayProvider.let(NatProvider.Companion::unwrap))
     }
 
     /**
@@ -705,7 +705,7 @@ public interface VpcProps {
      * Only necessary if you have more than one public subnet group.
      */
     override fun natGatewaySubnets(natGatewaySubnets: SubnetSelection) {
-      cdkBuilder.natGatewaySubnets(natGatewaySubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.natGatewaySubnets(natGatewaySubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -777,7 +777,7 @@ public interface VpcProps {
      * ```
      */
     override fun subnetConfiguration(subnetConfiguration: List<SubnetConfiguration>) {
-      cdkBuilder.subnetConfiguration(subnetConfiguration.map(SubnetConfiguration::unwrap))
+      cdkBuilder.subnetConfiguration(subnetConfiguration.map(SubnetConfiguration.Companion::unwrap))
     }
 
     /**
@@ -843,7 +843,7 @@ public interface VpcProps {
      * @param vpnRoutePropagation Where to propagate VPN routes.
      */
     override fun vpnRoutePropagation(vpnRoutePropagation: List<SubnetSelection>) {
-      cdkBuilder.vpnRoutePropagation(vpnRoutePropagation.map(SubnetSelection::unwrap))
+      cdkBuilder.vpnRoutePropagation(vpnRoutePropagation.map(SubnetSelection.Companion::unwrap))
     }
 
     /**

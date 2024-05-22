@@ -146,21 +146,21 @@ public interface ServerlessScalingOptions {
      * Set to 0 to disable
      */
     override fun autoPause(autoPause: Duration) {
-      cdkBuilder.autoPause(autoPause.let(Duration::unwrap))
+      cdkBuilder.autoPause(autoPause.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param maxCapacity The maximum capacity for an Aurora Serverless database cluster.
      */
     override fun maxCapacity(maxCapacity: AuroraCapacityUnit) {
-      cdkBuilder.maxCapacity(maxCapacity.let(AuroraCapacityUnit::unwrap))
+      cdkBuilder.maxCapacity(maxCapacity.let(AuroraCapacityUnit.Companion::unwrap))
     }
 
     /**
      * @param minCapacity The minimum capacity for an Aurora Serverless database cluster.
      */
     override fun minCapacity(minCapacity: AuroraCapacityUnit) {
-      cdkBuilder.minCapacity(minCapacity.let(AuroraCapacityUnit::unwrap))
+      cdkBuilder.minCapacity(minCapacity.let(AuroraCapacityUnit.Companion::unwrap))
     }
 
     /**
@@ -168,7 +168,7 @@ public interface ServerlessScalingOptions {
      * perform seamless scaling before enforcing the timeout action.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -179,7 +179,7 @@ public interface ServerlessScalingOptions {
      * found. This is the default behavior.
      */
     override fun timeoutAction(timeoutAction: TimeoutAction) {
-      cdkBuilder.timeoutAction(timeoutAction.let(TimeoutAction::unwrap))
+      cdkBuilder.timeoutAction(timeoutAction.let(TimeoutAction.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.ServerlessScalingOptions =

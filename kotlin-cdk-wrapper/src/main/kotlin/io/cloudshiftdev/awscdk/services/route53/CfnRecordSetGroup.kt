@@ -82,7 +82,7 @@ public open class CfnRecordSetGroup(
   cdkObject: software.amazon.awscdk.services.route53.CfnRecordSetGroup,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.route53.CfnRecordSetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.route53.CfnRecordSetGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -91,8 +91,8 @@ public open class CfnRecordSetGroup(
     id: String,
     props: CfnRecordSetGroupProps,
   ) :
-      this(software.amazon.awscdk.services.route53.CfnRecordSetGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnRecordSetGroupProps::unwrap))
+      this(software.amazon.awscdk.services.route53.CfnRecordSetGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnRecordSetGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -150,7 +150,7 @@ public open class CfnRecordSetGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -162,7 +162,7 @@ public open class CfnRecordSetGroup(
    * A complex type that contains one `RecordSet` element for each record that you want to create.
    */
   public open fun recordSets(`value`: IResolvable) {
-    unwrap(this).setRecordSets(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRecordSets(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -309,7 +309,7 @@ public open class CfnRecordSetGroup(
      * you want to create. 
      */
     override fun recordSets(recordSets: IResolvable) {
-      cdkBuilder.recordSets(recordSets.let(IResolvable::unwrap))
+      cdkBuilder.recordSets(recordSets.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1228,7 +1228,7 @@ public open class CfnRecordSetGroup(
        * *Amazon Route 53 Developer Guide* .
        */
       override fun evaluateTargetHealth(evaluateTargetHealth: IResolvable) {
-        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth.let(IResolvable::unwrap))
+        cdkBuilder.evaluateTargetHealth(evaluateTargetHealth.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2218,14 +2218,14 @@ public open class CfnRecordSetGroup(
        * @param coordinates Contains the longitude and latitude for a geographic region.
        */
       override fun coordinates(coordinates: IResolvable) {
-        cdkBuilder.coordinates(coordinates.let(IResolvable::unwrap))
+        cdkBuilder.coordinates(coordinates.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param coordinates Contains the longitude and latitude for a geographic region.
        */
       override fun coordinates(coordinates: CoordinatesProperty) {
-        cdkBuilder.coordinates(coordinates.let(CoordinatesProperty::unwrap))
+        cdkBuilder.coordinates(coordinates.let(CoordinatesProperty.Companion::unwrap))
       }
 
       /**
@@ -3475,7 +3475,7 @@ public open class CfnRecordSetGroup(
        * in the *Amazon Route 53 Developer Guide* .
        */
       override fun aliasTarget(aliasTarget: IResolvable) {
-        cdkBuilder.aliasTarget(aliasTarget.let(IResolvable::unwrap))
+        cdkBuilder.aliasTarget(aliasTarget.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3491,7 +3491,7 @@ public open class CfnRecordSetGroup(
        * in the *Amazon Route 53 Developer Guide* .
        */
       override fun aliasTarget(aliasTarget: AliasTargetProperty) {
-        cdkBuilder.aliasTarget(aliasTarget.let(AliasTargetProperty::unwrap))
+        cdkBuilder.aliasTarget(aliasTarget.let(AliasTargetProperty.Companion::unwrap))
       }
 
       /**
@@ -3515,14 +3515,14 @@ public open class CfnRecordSetGroup(
        * @param cidrRoutingConfig the value to be set.
        */
       override fun cidrRoutingConfig(cidrRoutingConfig: IResolvable) {
-        cdkBuilder.cidrRoutingConfig(cidrRoutingConfig.let(IResolvable::unwrap))
+        cdkBuilder.cidrRoutingConfig(cidrRoutingConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param cidrRoutingConfig the value to be set.
        */
       override fun cidrRoutingConfig(cidrRoutingConfig: CidrRoutingConfigProperty) {
-        cdkBuilder.cidrRoutingConfig(cidrRoutingConfig.let(CidrRoutingConfigProperty::unwrap))
+        cdkBuilder.cidrRoutingConfig(cidrRoutingConfig.let(CidrRoutingConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -3614,7 +3614,7 @@ public open class CfnRecordSetGroup(
        * `Name` and `Type` elements as geolocation resource record sets.
        */
       override fun geoLocation(geoLocation: IResolvable) {
-        cdkBuilder.geoLocation(geoLocation.let(IResolvable::unwrap))
+        cdkBuilder.geoLocation(geoLocation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3654,7 +3654,7 @@ public open class CfnRecordSetGroup(
        * `Name` and `Type` elements as geolocation resource record sets.
        */
       override fun geoLocation(geoLocation: GeoLocationProperty) {
-        cdkBuilder.geoLocation(geoLocation.let(GeoLocationProperty::unwrap))
+        cdkBuilder.geoLocation(geoLocation.let(GeoLocationProperty.Companion::unwrap))
       }
 
       /**
@@ -3703,7 +3703,7 @@ public open class CfnRecordSetGroup(
        * location.
        */
       override fun geoProximityLocation(geoProximityLocation: IResolvable) {
-        cdkBuilder.geoProximityLocation(geoProximityLocation.let(IResolvable::unwrap))
+        cdkBuilder.geoProximityLocation(geoProximityLocation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3711,7 +3711,7 @@ public open class CfnRecordSetGroup(
        * location.
        */
       override fun geoProximityLocation(geoProximityLocation: GeoProximityLocationProperty) {
-        cdkBuilder.geoProximityLocation(geoProximityLocation.let(GeoProximityLocationProperty::unwrap))
+        cdkBuilder.geoProximityLocation(geoProximityLocation.let(GeoProximityLocationProperty.Companion::unwrap))
       }
 
       /**
@@ -3923,7 +3923,7 @@ public open class CfnRecordSetGroup(
        * You can't create multivalue answer alias records.
        */
       override fun multiValueAnswer(multiValueAnswer: IResolvable) {
-        cdkBuilder.multiValueAnswer(multiValueAnswer.let(IResolvable::unwrap))
+        cdkBuilder.multiValueAnswer(multiValueAnswer.let(IResolvable.Companion::unwrap))
       }
 
       /**

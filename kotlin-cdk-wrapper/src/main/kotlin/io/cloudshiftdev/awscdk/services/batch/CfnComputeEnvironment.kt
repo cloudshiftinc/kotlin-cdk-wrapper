@@ -198,8 +198,8 @@ public open class CfnComputeEnvironment(
     id: String,
     props: CfnComputeEnvironmentProps,
   ) :
-      this(software.amazon.awscdk.services.batch.CfnComputeEnvironment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnComputeEnvironmentProps::unwrap))
+      this(software.amazon.awscdk.services.batch.CfnComputeEnvironment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnComputeEnvironmentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -238,7 +238,7 @@ public open class CfnComputeEnvironment(
    * compute environment.
    */
   public open fun computeResources(`value`: IResolvable) {
-    unwrap(this).setComputeResources(`value`.let(IResolvable::unwrap))
+    unwrap(this).setComputeResources(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -246,7 +246,7 @@ public open class CfnComputeEnvironment(
    * compute environment.
    */
   public open fun computeResources(`value`: ComputeResourcesProperty) {
-    unwrap(this).setComputeResources(`value`.let(ComputeResourcesProperty::unwrap))
+    unwrap(this).setComputeResources(`value`.let(ComputeResourcesProperty.Companion::unwrap))
   }
 
   /**
@@ -267,14 +267,14 @@ public open class CfnComputeEnvironment(
    * The details for the Amazon EKS cluster that supports the compute environment.
    */
   public open fun eksConfiguration(`value`: IResolvable) {
-    unwrap(this).setEksConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEksConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The details for the Amazon EKS cluster that supports the compute environment.
    */
   public open fun eksConfiguration(`value`: EksConfigurationProperty) {
-    unwrap(this).setEksConfiguration(`value`.let(EksConfigurationProperty::unwrap))
+    unwrap(this).setEksConfiguration(`value`.let(EksConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -291,7 +291,7 @@ public open class CfnComputeEnvironment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -313,7 +313,7 @@ public open class CfnComputeEnvironment(
    * replacing the instances in the compute environment.
    */
   public open fun replaceComputeEnvironment(`value`: IResolvable) {
-    unwrap(this).setReplaceComputeEnvironment(`value`.let(IResolvable::unwrap))
+    unwrap(this).setReplaceComputeEnvironment(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -392,14 +392,14 @@ public open class CfnComputeEnvironment(
    * Specifies the infrastructure update policy for the compute environment.
    */
   public open fun updatePolicy(`value`: IResolvable) {
-    unwrap(this).setUpdatePolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUpdatePolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the infrastructure update policy for the compute environment.
    */
   public open fun updatePolicy(`value`: UpdatePolicyProperty) {
-    unwrap(this).setUpdatePolicy(`value`.let(UpdatePolicyProperty::unwrap))
+    unwrap(this).setUpdatePolicy(`value`.let(UpdatePolicyProperty.Companion::unwrap))
   }
 
   /**
@@ -798,7 +798,7 @@ public open class CfnComputeEnvironment(
      * resources managed by the compute environment. 
      */
     override fun computeResources(computeResources: IResolvable) {
-      cdkBuilder.computeResources(computeResources.let(IResolvable::unwrap))
+      cdkBuilder.computeResources(computeResources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -815,7 +815,7 @@ public open class CfnComputeEnvironment(
      * resources managed by the compute environment. 
      */
     override fun computeResources(computeResources: ComputeResourcesProperty) {
-      cdkBuilder.computeResources(computeResources.let(ComputeResourcesProperty::unwrap))
+      cdkBuilder.computeResources(computeResources.let(ComputeResourcesProperty.Companion::unwrap))
     }
 
     /**
@@ -844,7 +844,7 @@ public open class CfnComputeEnvironment(
      * environment. 
      */
     override fun eksConfiguration(eksConfiguration: IResolvable) {
-      cdkBuilder.eksConfiguration(eksConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.eksConfiguration(eksConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -855,7 +855,7 @@ public open class CfnComputeEnvironment(
      * environment. 
      */
     override fun eksConfiguration(eksConfiguration: EksConfigurationProperty) {
-      cdkBuilder.eksConfiguration(eksConfiguration.let(EksConfigurationProperty::unwrap))
+      cdkBuilder.eksConfiguration(eksConfiguration.let(EksConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -991,7 +991,7 @@ public open class CfnComputeEnvironment(
      * update is made that requires replacing the instances in the compute environment. 
      */
     override fun replaceComputeEnvironment(replaceComputeEnvironment: IResolvable) {
-      cdkBuilder.replaceComputeEnvironment(replaceComputeEnvironment.let(IResolvable::unwrap))
+      cdkBuilder.replaceComputeEnvironment(replaceComputeEnvironment.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1118,7 +1118,7 @@ public open class CfnComputeEnvironment(
      * @param updatePolicy Specifies the infrastructure update policy for the compute environment. 
      */
     override fun updatePolicy(updatePolicy: IResolvable) {
-      cdkBuilder.updatePolicy(updatePolicy.let(IResolvable::unwrap))
+      cdkBuilder.updatePolicy(updatePolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1132,7 +1132,7 @@ public open class CfnComputeEnvironment(
      * @param updatePolicy Specifies the infrastructure update policy for the compute environment. 
      */
     override fun updatePolicy(updatePolicy: UpdatePolicyProperty) {
-      cdkBuilder.updatePolicy(updatePolicy.let(UpdatePolicyProperty::unwrap))
+      cdkBuilder.updatePolicy(updatePolicy.let(UpdatePolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -2354,7 +2354,7 @@ public open class CfnComputeEnvironment(
        * specify it.
        */
       override fun ec2Configuration(ec2Configuration: IResolvable) {
-        cdkBuilder.ec2Configuration(ec2Configuration.let(IResolvable::unwrap))
+        cdkBuilder.ec2Configuration(ec2Configuration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2535,7 +2535,7 @@ public open class CfnComputeEnvironment(
        * specified.
        */
       override fun launchTemplate(launchTemplate: IResolvable) {
-        cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
+        cdkBuilder.launchTemplate(launchTemplate.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2560,7 +2560,7 @@ public open class CfnComputeEnvironment(
        * specified.
        */
       override fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty) {
-        cdkBuilder.launchTemplate(launchTemplate.let(LaunchTemplateSpecificationProperty::unwrap))
+        cdkBuilder.launchTemplate(launchTemplate.let(LaunchTemplateSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -2837,7 +2837,7 @@ public open class CfnComputeEnvironment(
        * in the *AWS Batch User Guide* .
        */
       override fun updateToLatestImageVersion(updateToLatestImageVersion: IResolvable) {
-        cdkBuilder.updateToLatestImageVersion(updateToLatestImageVersion.let(IResolvable::unwrap))
+        cdkBuilder.updateToLatestImageVersion(updateToLatestImageVersion.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -4141,7 +4141,7 @@ public open class CfnComputeEnvironment(
        * The default value is `false` .
        */
       override fun terminateJobsOnUpdate(terminateJobsOnUpdate: IResolvable) {
-        cdkBuilder.terminateJobsOnUpdate(terminateJobsOnUpdate.let(IResolvable::unwrap))
+        cdkBuilder.terminateJobsOnUpdate(terminateJobsOnUpdate.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

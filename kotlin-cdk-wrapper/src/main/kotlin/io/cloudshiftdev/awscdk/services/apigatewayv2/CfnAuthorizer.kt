@@ -64,8 +64,8 @@ public open class CfnAuthorizer(
     id: String,
     props: CfnAuthorizerProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAuthorizerProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.CfnAuthorizer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAuthorizerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -170,7 +170,7 @@ public open class CfnAuthorizer(
    * Specifies whether a Lambda authorizer returns a response in a simple format.
    */
   public open fun enableSimpleResponses(`value`: IResolvable) {
-    unwrap(this).setEnableSimpleResponses(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableSimpleResponses(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -209,7 +209,7 @@ public open class CfnAuthorizer(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -221,14 +221,14 @@ public open class CfnAuthorizer(
    * The `JWTConfiguration` property specifies the configuration of a JWT authorizer.
    */
   public open fun jwtConfiguration(`value`: IResolvable) {
-    unwrap(this).setJwtConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setJwtConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The `JWTConfiguration` property specifies the configuration of a JWT authorizer.
    */
   public open fun jwtConfiguration(`value`: JWTConfigurationProperty) {
-    unwrap(this).setJwtConfiguration(`value`.let(JWTConfigurationProperty::unwrap))
+    unwrap(this).setJwtConfiguration(`value`.let(JWTConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -592,7 +592,7 @@ public open class CfnAuthorizer(
      * simple format. 
      */
     override fun enableSimpleResponses(enableSimpleResponses: IResolvable) {
-      cdkBuilder.enableSimpleResponses(enableSimpleResponses.let(IResolvable::unwrap))
+      cdkBuilder.enableSimpleResponses(enableSimpleResponses.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -672,7 +672,7 @@ public open class CfnAuthorizer(
      * authorizer. 
      */
     override fun jwtConfiguration(jwtConfiguration: IResolvable) {
-      cdkBuilder.jwtConfiguration(jwtConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.jwtConfiguration(jwtConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -685,7 +685,7 @@ public open class CfnAuthorizer(
      * authorizer. 
      */
     override fun jwtConfiguration(jwtConfiguration: JWTConfigurationProperty) {
-      cdkBuilder.jwtConfiguration(jwtConfiguration.let(JWTConfigurationProperty::unwrap))
+      cdkBuilder.jwtConfiguration(jwtConfiguration.let(JWTConfigurationProperty.Companion::unwrap))
     }
 
     /**

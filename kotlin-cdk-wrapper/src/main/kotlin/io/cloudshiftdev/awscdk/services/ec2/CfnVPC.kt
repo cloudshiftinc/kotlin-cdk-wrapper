@@ -57,7 +57,7 @@ public open class CfnVPC(
   cdkObject: software.amazon.awscdk.services.ec2.CfnVPC,
 ) : CfnResource(cdkObject), IInspectable, ITaggable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ec2.CfnVPC(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ec2.CfnVPC(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -66,8 +66,8 @@ public open class CfnVPC(
     id: String,
     props: CfnVPCProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnVPC(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnVPCProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnVPC(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnVPCProps.Companion::unwrap))
   )
 
   public constructor(
@@ -146,7 +146,7 @@ public open class CfnVPC(
    * Indicates whether the instances launched in the VPC get DNS hostnames.
    */
   public open fun enableDnsHostnames(`value`: IResolvable) {
-    unwrap(this).setEnableDnsHostnames(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableDnsHostnames(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -165,7 +165,7 @@ public open class CfnVPC(
    * Indicates whether the DNS resolution is supported for the VPC.
    */
   public open fun enableDnsSupport(`value`: IResolvable) {
-    unwrap(this).setEnableDnsSupport(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnableDnsSupport(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -174,7 +174,7 @@ public open class CfnVPC(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -230,7 +230,7 @@ public open class CfnVPC(
    * The tags for the VPC.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -431,7 +431,7 @@ public open class CfnVPC(
      * hostnames. 
      */
     override fun enableDnsHostnames(enableDnsHostnames: IResolvable) {
-      cdkBuilder.enableDnsHostnames(enableDnsHostnames.let(IResolvable::unwrap))
+      cdkBuilder.enableDnsHostnames(enableDnsHostnames.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -463,7 +463,7 @@ public open class CfnVPC(
      * @param enableDnsSupport Indicates whether the DNS resolution is supported for the VPC. 
      */
     override fun enableDnsSupport(enableDnsSupport: IResolvable) {
-      cdkBuilder.enableDnsSupport(enableDnsSupport.let(IResolvable::unwrap))
+      cdkBuilder.enableDnsSupport(enableDnsSupport.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -526,7 +526,7 @@ public open class CfnVPC(
      * @param tags The tags for the VPC. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

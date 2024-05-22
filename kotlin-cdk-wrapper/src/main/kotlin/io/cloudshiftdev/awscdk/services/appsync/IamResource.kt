@@ -28,7 +28,7 @@ public open class IamResource(
    * @param api The GraphQL API to give permissions. 
    */
   public open fun resourceArns(api: GraphqlApiBase): List<String> =
-      unwrap(this).resourceArns(api.let(GraphqlApiBase::unwrap))
+      unwrap(this).resourceArns(api.let(GraphqlApiBase.Companion::unwrap))
 
   public companion object {
     public fun all(): IamResource =

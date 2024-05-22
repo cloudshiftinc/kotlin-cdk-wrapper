@@ -162,7 +162,7 @@ public interface WebSocketApiProps {
      */
     override
         fun apiKeySelectionExpression(apiKeySelectionExpression: WebSocketApiKeySelectionExpression) {
-      cdkBuilder.apiKeySelectionExpression(apiKeySelectionExpression.let(WebSocketApiKeySelectionExpression::unwrap))
+      cdkBuilder.apiKeySelectionExpression(apiKeySelectionExpression.let(WebSocketApiKeySelectionExpression.Companion::unwrap))
     }
 
     /**
@@ -176,7 +176,7 @@ public interface WebSocketApiProps {
      * @param connectRouteOptions Options to configure a '$connect' route.
      */
     override fun connectRouteOptions(connectRouteOptions: WebSocketRouteOptions) {
-      cdkBuilder.connectRouteOptions(connectRouteOptions.let(WebSocketRouteOptions::unwrap))
+      cdkBuilder.connectRouteOptions(connectRouteOptions.let(WebSocketRouteOptions.Companion::unwrap))
     }
 
     /**
@@ -191,7 +191,7 @@ public interface WebSocketApiProps {
      * @param defaultRouteOptions Options to configure a '$default' route.
      */
     override fun defaultRouteOptions(defaultRouteOptions: WebSocketRouteOptions) {
-      cdkBuilder.defaultRouteOptions(defaultRouteOptions.let(WebSocketRouteOptions::unwrap))
+      cdkBuilder.defaultRouteOptions(defaultRouteOptions.let(WebSocketRouteOptions.Companion::unwrap))
     }
 
     /**
@@ -213,7 +213,7 @@ public interface WebSocketApiProps {
      * @param disconnectRouteOptions Options to configure a '$disconnect' route.
      */
     override fun disconnectRouteOptions(disconnectRouteOptions: WebSocketRouteOptions) {
-      cdkBuilder.disconnectRouteOptions(disconnectRouteOptions.let(WebSocketRouteOptions::unwrap))
+      cdkBuilder.disconnectRouteOptions(disconnectRouteOptions.let(WebSocketRouteOptions.Companion::unwrap))
     }
 
     /**

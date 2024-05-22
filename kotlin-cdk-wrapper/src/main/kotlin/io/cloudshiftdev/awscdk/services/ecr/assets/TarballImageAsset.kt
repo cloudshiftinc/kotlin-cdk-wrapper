@@ -31,8 +31,8 @@ public open class TarballImageAsset(
     id: String,
     props: TarballImageAssetProps,
   ) :
-      this(software.amazon.awscdk.services.ecr.assets.TarballImageAsset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(TarballImageAssetProps::unwrap))
+      this(software.amazon.awscdk.services.ecr.assets.TarballImageAsset(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(TarballImageAssetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -85,7 +85,7 @@ public open class TarballImageAsset(
    * Repository where the image is stored.
    */
   public open fun repository(`value`: IRepository) {
-    unwrap(this).setRepository(`value`.let(IRepository::unwrap))
+    unwrap(this).setRepository(`value`.let(IRepository.Companion::unwrap))
   }
 
   /**

@@ -63,8 +63,8 @@ public open class CfnSubscriptionDefinitionVersion(
     id: String,
     props: CfnSubscriptionDefinitionVersionProps,
   ) :
-      this(software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinitionVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSubscriptionDefinitionVersionProps::unwrap))
+      this(software.amazon.awscdk.services.greengrass.CfnSubscriptionDefinitionVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSubscriptionDefinitionVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -85,7 +85,7 @@ public open class CfnSubscriptionDefinitionVersion(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -109,7 +109,7 @@ public open class CfnSubscriptionDefinitionVersion(
    * The subscriptions in this version.
    */
   public open fun subscriptions(`value`: IResolvable) {
-    unwrap(this).setSubscriptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSubscriptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -195,7 +195,7 @@ public open class CfnSubscriptionDefinitionVersion(
      * @param subscriptions The subscriptions in this version. 
      */
     override fun subscriptions(subscriptions: IResolvable) {
-      cdkBuilder.subscriptions(subscriptions.let(IResolvable::unwrap))
+      cdkBuilder.subscriptions(subscriptions.let(IResolvable.Companion::unwrap))
     }
 
     /**

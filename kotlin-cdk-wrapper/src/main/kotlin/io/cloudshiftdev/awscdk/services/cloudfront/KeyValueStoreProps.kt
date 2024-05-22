@@ -101,7 +101,7 @@ public interface KeyValueStoreProps {
      * source data must be in a valid JSON format.
      */
     override fun source(source: ImportSource) {
-      cdkBuilder.source(source.let(ImportSource::unwrap))
+      cdkBuilder.source(source.let(ImportSource.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.KeyValueStoreProps =

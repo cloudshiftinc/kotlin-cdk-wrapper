@@ -71,7 +71,7 @@ public interface EBSTagSpecification {
      * Valid values are: PropagatedTagSource.SERVICE, PropagatedTagSource.TASK_DEFINITION
      */
     override fun propagateTags(propagateTags: EbsPropagatedTagSource) {
-      cdkBuilder.propagateTags(propagateTags.let(EbsPropagatedTagSource::unwrap))
+      cdkBuilder.propagateTags(propagateTags.let(EbsPropagatedTagSource.Companion::unwrap))
     }
 
     /**

@@ -37,7 +37,7 @@ public open class CfnMeteredProduct(
   cdkObject: software.amazon.awscdk.services.deadline.CfnMeteredProduct,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.deadline.CfnMeteredProduct(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.deadline.CfnMeteredProduct(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -46,8 +46,8 @@ public open class CfnMeteredProduct(
     id: String,
     props: CfnMeteredProductProps,
   ) :
-      this(software.amazon.awscdk.services.deadline.CfnMeteredProduct(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMeteredProductProps::unwrap))
+      this(software.amazon.awscdk.services.deadline.CfnMeteredProduct(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMeteredProductProps.Companion::unwrap))
   )
 
   public constructor(
@@ -80,7 +80,7 @@ public open class CfnMeteredProduct(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

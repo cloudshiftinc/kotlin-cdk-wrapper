@@ -643,7 +643,7 @@ public interface CfnInstanceProps {
      * . Note that block device mappings are not supported for custom AMIs.
      */
     override fun blockDeviceMappings(blockDeviceMappings: IResolvable) {
-      cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable::unwrap))
+      cdkBuilder.blockDeviceMappings(blockDeviceMappings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -678,7 +678,7 @@ public interface CfnInstanceProps {
      * @param ebsOptimized Whether to create an Amazon EBS-optimized instance.
      */
     override fun ebsOptimized(ebsOptimized: IResolvable) {
-      cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
+      cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -732,7 +732,7 @@ public interface CfnInstanceProps {
      * the latest security updates.
      */
     override fun installUpdatesOnBoot(installUpdatesOnBoot: IResolvable) {
-      cdkBuilder.installUpdatesOnBoot(installUpdatesOnBoot.let(IResolvable::unwrap))
+      cdkBuilder.installUpdatesOnBoot(installUpdatesOnBoot.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -842,7 +842,7 @@ public interface CfnInstanceProps {
      * @param timeBasedAutoScaling The time-based scaling configuration for the instance.
      */
     override fun timeBasedAutoScaling(timeBasedAutoScaling: IResolvable) {
-      cdkBuilder.timeBasedAutoScaling(timeBasedAutoScaling.let(IResolvable::unwrap))
+      cdkBuilder.timeBasedAutoScaling(timeBasedAutoScaling.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -850,7 +850,7 @@ public interface CfnInstanceProps {
      */
     override
         fun timeBasedAutoScaling(timeBasedAutoScaling: CfnInstance.TimeBasedAutoScalingProperty) {
-      cdkBuilder.timeBasedAutoScaling(timeBasedAutoScaling.let(CfnInstance.TimeBasedAutoScalingProperty::unwrap))
+      cdkBuilder.timeBasedAutoScaling(timeBasedAutoScaling.let(CfnInstance.TimeBasedAutoScalingProperty.Companion::unwrap))
     }
 
     /**

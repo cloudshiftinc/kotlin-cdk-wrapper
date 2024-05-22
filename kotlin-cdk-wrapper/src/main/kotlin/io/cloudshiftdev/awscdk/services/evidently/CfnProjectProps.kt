@@ -275,7 +275,7 @@ public interface CfnProjectProps {
      * `evidently:ExportProjectAsConfiguration` permission.
      */
     override fun appConfigResource(appConfigResource: IResolvable) {
-      cdkBuilder.appConfigResource(appConfigResource.let(IResolvable::unwrap))
+      cdkBuilder.appConfigResource(appConfigResource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -295,7 +295,7 @@ public interface CfnProjectProps {
      * `evidently:ExportProjectAsConfiguration` permission.
      */
     override fun appConfigResource(appConfigResource: CfnProject.AppConfigResourceObjectProperty) {
-      cdkBuilder.appConfigResource(appConfigResource.let(CfnProject.AppConfigResourceObjectProperty::unwrap))
+      cdkBuilder.appConfigResource(appConfigResource.let(CfnProject.AppConfigResourceObjectProperty.Companion::unwrap))
     }
 
     /**
@@ -329,7 +329,7 @@ public interface CfnProjectProps {
      * You can't specify both `CloudWatchLogs` and `S3Destination` in the same operation.
      */
     override fun dataDelivery(dataDelivery: IResolvable) {
-      cdkBuilder.dataDelivery(dataDelivery.let(IResolvable::unwrap))
+      cdkBuilder.dataDelivery(dataDelivery.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -341,7 +341,7 @@ public interface CfnProjectProps {
      * You can't specify both `CloudWatchLogs` and `S3Destination` in the same operation.
      */
     override fun dataDelivery(dataDelivery: CfnProject.DataDeliveryObjectProperty) {
-      cdkBuilder.dataDelivery(dataDelivery.let(CfnProject.DataDeliveryObjectProperty::unwrap))
+      cdkBuilder.dataDelivery(dataDelivery.let(CfnProject.DataDeliveryObjectProperty.Companion::unwrap))
     }
 
     /**
@@ -388,7 +388,7 @@ public interface CfnProjectProps {
      * resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

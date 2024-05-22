@@ -332,8 +332,8 @@ public open class CfnEndpoint(
     id: String,
     props: CfnEndpointProps,
   ) :
-      this(software.amazon.awscdk.services.dms.CfnEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.dms.CfnEndpoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnEndpointProps.Companion::unwrap))
   )
 
   public constructor(
@@ -386,14 +386,14 @@ public open class CfnEndpoint(
    * Settings in JSON format for the source and target DocumentDB endpoint.
    */
   public open fun docDbSettings(`value`: IResolvable) {
-    unwrap(this).setDocDbSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDocDbSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Settings in JSON format for the source and target DocumentDB endpoint.
    */
   public open fun docDbSettings(`value`: DocDbSettingsProperty) {
-    unwrap(this).setDocDbSettings(`value`.let(DocDbSettingsProperty::unwrap))
+    unwrap(this).setDocDbSettings(`value`.let(DocDbSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -413,14 +413,14 @@ public open class CfnEndpoint(
    * Settings in JSON format for the target Amazon DynamoDB endpoint.
    */
   public open fun dynamoDbSettings(`value`: IResolvable) {
-    unwrap(this).setDynamoDbSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDynamoDbSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Settings in JSON format for the target Amazon DynamoDB endpoint.
    */
   public open fun dynamoDbSettings(`value`: DynamoDbSettingsProperty) {
-    unwrap(this).setDynamoDbSettings(`value`.let(DynamoDbSettingsProperty::unwrap))
+    unwrap(this).setDynamoDbSettings(`value`.let(DynamoDbSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -440,14 +440,14 @@ public open class CfnEndpoint(
    * Settings in JSON format for the target OpenSearch endpoint.
    */
   public open fun elasticsearchSettings(`value`: IResolvable) {
-    unwrap(this).setElasticsearchSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setElasticsearchSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Settings in JSON format for the target OpenSearch endpoint.
    */
   public open fun elasticsearchSettings(`value`: ElasticsearchSettingsProperty) {
-    unwrap(this).setElasticsearchSettings(`value`.let(ElasticsearchSettingsProperty::unwrap))
+    unwrap(this).setElasticsearchSettings(`value`.let(ElasticsearchSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -515,14 +515,14 @@ public open class CfnEndpoint(
    * Settings in JSON format for the source GCP MySQL endpoint.
    */
   public open fun gcpMySqlSettings(`value`: IResolvable) {
-    unwrap(this).setGcpMySqlSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setGcpMySqlSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Settings in JSON format for the source GCP MySQL endpoint.
    */
   public open fun gcpMySqlSettings(`value`: GcpMySQLSettingsProperty) {
-    unwrap(this).setGcpMySqlSettings(`value`.let(GcpMySQLSettingsProperty::unwrap))
+    unwrap(this).setGcpMySqlSettings(`value`.let(GcpMySQLSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -542,14 +542,14 @@ public open class CfnEndpoint(
    * Settings in JSON format for the source IBM Db2 LUW endpoint.
    */
   public open fun ibmDb2Settings(`value`: IResolvable) {
-    unwrap(this).setIbmDb2Settings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIbmDb2Settings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Settings in JSON format for the source IBM Db2 LUW endpoint.
    */
   public open fun ibmDb2Settings(`value`: IbmDb2SettingsProperty) {
-    unwrap(this).setIbmDb2Settings(`value`.let(IbmDb2SettingsProperty::unwrap))
+    unwrap(this).setIbmDb2Settings(`value`.let(IbmDb2SettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -566,7 +566,7 @@ public open class CfnEndpoint(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -578,14 +578,14 @@ public open class CfnEndpoint(
    * Settings in JSON format for the target Apache Kafka endpoint.
    */
   public open fun kafkaSettings(`value`: IResolvable) {
-    unwrap(this).setKafkaSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKafkaSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Settings in JSON format for the target Apache Kafka endpoint.
    */
   public open fun kafkaSettings(`value`: KafkaSettingsProperty) {
-    unwrap(this).setKafkaSettings(`value`.let(KafkaSettingsProperty::unwrap))
+    unwrap(this).setKafkaSettings(`value`.let(KafkaSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -605,14 +605,14 @@ public open class CfnEndpoint(
    * Settings in JSON format for the target endpoint for Amazon Kinesis Data Streams.
    */
   public open fun kinesisSettings(`value`: IResolvable) {
-    unwrap(this).setKinesisSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKinesisSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Settings in JSON format for the target endpoint for Amazon Kinesis Data Streams.
    */
   public open fun kinesisSettings(`value`: KinesisSettingsProperty) {
-    unwrap(this).setKinesisSettings(`value`.let(KinesisSettingsProperty::unwrap))
+    unwrap(this).setKinesisSettings(`value`.let(KinesisSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -644,14 +644,14 @@ public open class CfnEndpoint(
    * Settings in JSON format for the source and target Microsoft SQL Server endpoint.
    */
   public open fun microsoftSqlServerSettings(`value`: IResolvable) {
-    unwrap(this).setMicrosoftSqlServerSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMicrosoftSqlServerSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Settings in JSON format for the source and target Microsoft SQL Server endpoint.
    */
   public open fun microsoftSqlServerSettings(`value`: MicrosoftSqlServerSettingsProperty) {
-    unwrap(this).setMicrosoftSqlServerSettings(`value`.let(MicrosoftSqlServerSettingsProperty::unwrap))
+    unwrap(this).setMicrosoftSqlServerSettings(`value`.let(MicrosoftSqlServerSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -672,14 +672,14 @@ public open class CfnEndpoint(
    * Settings in JSON format for the source MongoDB endpoint.
    */
   public open fun mongoDbSettings(`value`: IResolvable) {
-    unwrap(this).setMongoDbSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMongoDbSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Settings in JSON format for the source MongoDB endpoint.
    */
   public open fun mongoDbSettings(`value`: MongoDbSettingsProperty) {
-    unwrap(this).setMongoDbSettings(`value`.let(MongoDbSettingsProperty::unwrap))
+    unwrap(this).setMongoDbSettings(`value`.let(MongoDbSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -699,14 +699,14 @@ public open class CfnEndpoint(
    * Settings in JSON format for the source and target MySQL endpoint.
    */
   public open fun mySqlSettings(`value`: IResolvable) {
-    unwrap(this).setMySqlSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMySqlSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Settings in JSON format for the source and target MySQL endpoint.
    */
   public open fun mySqlSettings(`value`: MySqlSettingsProperty) {
-    unwrap(this).setMySqlSettings(`value`.let(MySqlSettingsProperty::unwrap))
+    unwrap(this).setMySqlSettings(`value`.let(MySqlSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -726,14 +726,14 @@ public open class CfnEndpoint(
    * Settings in JSON format for the target Amazon Neptune endpoint.
    */
   public open fun neptuneSettings(`value`: IResolvable) {
-    unwrap(this).setNeptuneSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNeptuneSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Settings in JSON format for the target Amazon Neptune endpoint.
    */
   public open fun neptuneSettings(`value`: NeptuneSettingsProperty) {
-    unwrap(this).setNeptuneSettings(`value`.let(NeptuneSettingsProperty::unwrap))
+    unwrap(this).setNeptuneSettings(`value`.let(NeptuneSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -753,14 +753,14 @@ public open class CfnEndpoint(
    * Settings in JSON format for the source and target Oracle endpoint.
    */
   public open fun oracleSettings(`value`: IResolvable) {
-    unwrap(this).setOracleSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOracleSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Settings in JSON format for the source and target Oracle endpoint.
    */
   public open fun oracleSettings(`value`: OracleSettingsProperty) {
-    unwrap(this).setOracleSettings(`value`.let(OracleSettingsProperty::unwrap))
+    unwrap(this).setOracleSettings(`value`.let(OracleSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -804,14 +804,14 @@ public open class CfnEndpoint(
    * Settings in JSON format for the source and target PostgreSQL endpoint.
    */
   public open fun postgreSqlSettings(`value`: IResolvable) {
-    unwrap(this).setPostgreSqlSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPostgreSqlSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Settings in JSON format for the source and target PostgreSQL endpoint.
    */
   public open fun postgreSqlSettings(`value`: PostgreSqlSettingsProperty) {
-    unwrap(this).setPostgreSqlSettings(`value`.let(PostgreSqlSettingsProperty::unwrap))
+    unwrap(this).setPostgreSqlSettings(`value`.let(PostgreSqlSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -831,14 +831,14 @@ public open class CfnEndpoint(
    * Settings in JSON format for the target Redis endpoint.
    */
   public open fun redisSettings(`value`: IResolvable) {
-    unwrap(this).setRedisSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRedisSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Settings in JSON format for the target Redis endpoint.
    */
   public open fun redisSettings(`value`: RedisSettingsProperty) {
-    unwrap(this).setRedisSettings(`value`.let(RedisSettingsProperty::unwrap))
+    unwrap(this).setRedisSettings(`value`.let(RedisSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -858,14 +858,14 @@ public open class CfnEndpoint(
    * Settings in JSON format for the Amazon Redshift endpoint.
    */
   public open fun redshiftSettings(`value`: IResolvable) {
-    unwrap(this).setRedshiftSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRedshiftSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Settings in JSON format for the Amazon Redshift endpoint.
    */
   public open fun redshiftSettings(`value`: RedshiftSettingsProperty) {
-    unwrap(this).setRedshiftSettings(`value`.let(RedshiftSettingsProperty::unwrap))
+    unwrap(this).setRedshiftSettings(`value`.let(RedshiftSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -899,14 +899,14 @@ public open class CfnEndpoint(
    * Settings in JSON format for the source and target Amazon S3 endpoint.
    */
   public open fun s3Settings(`value`: IResolvable) {
-    unwrap(this).setS3Settings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setS3Settings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Settings in JSON format for the source and target Amazon S3 endpoint.
    */
   public open fun s3Settings(`value`: S3SettingsProperty) {
-    unwrap(this).setS3Settings(`value`.let(S3SettingsProperty::unwrap))
+    unwrap(this).setS3Settings(`value`.let(S3SettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -954,14 +954,14 @@ public open class CfnEndpoint(
    * Settings in JSON format for the source and target SAP ASE endpoint.
    */
   public open fun sybaseSettings(`value`: IResolvable) {
-    unwrap(this).setSybaseSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSybaseSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Settings in JSON format for the source and target SAP ASE endpoint.
    */
   public open fun sybaseSettings(`value`: SybaseSettingsProperty) {
-    unwrap(this).setSybaseSettings(`value`.let(SybaseSettingsProperty::unwrap))
+    unwrap(this).setSybaseSettings(`value`.let(SybaseSettingsProperty.Companion::unwrap))
   }
 
   /**
@@ -987,7 +987,7 @@ public open class CfnEndpoint(
    * One or more tags to be assigned to the endpoint.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -1968,7 +1968,7 @@ public open class CfnEndpoint(
      * @param docDbSettings Settings in JSON format for the source and target DocumentDB endpoint. 
      */
     override fun docDbSettings(docDbSettings: IResolvable) {
-      cdkBuilder.docDbSettings(docDbSettings.let(IResolvable::unwrap))
+      cdkBuilder.docDbSettings(docDbSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1985,7 +1985,7 @@ public open class CfnEndpoint(
      * @param docDbSettings Settings in JSON format for the source and target DocumentDB endpoint. 
      */
     override fun docDbSettings(docDbSettings: DocDbSettingsProperty) {
-      cdkBuilder.docDbSettings(docDbSettings.let(DocDbSettingsProperty::unwrap))
+      cdkBuilder.docDbSettings(docDbSettings.let(DocDbSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -2017,7 +2017,7 @@ public open class CfnEndpoint(
      * @param dynamoDbSettings Settings in JSON format for the target Amazon DynamoDB endpoint. 
      */
     override fun dynamoDbSettings(dynamoDbSettings: IResolvable) {
-      cdkBuilder.dynamoDbSettings(dynamoDbSettings.let(IResolvable::unwrap))
+      cdkBuilder.dynamoDbSettings(dynamoDbSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2031,7 +2031,7 @@ public open class CfnEndpoint(
      * @param dynamoDbSettings Settings in JSON format for the target Amazon DynamoDB endpoint. 
      */
     override fun dynamoDbSettings(dynamoDbSettings: DynamoDbSettingsProperty) {
-      cdkBuilder.dynamoDbSettings(dynamoDbSettings.let(DynamoDbSettingsProperty::unwrap))
+      cdkBuilder.dynamoDbSettings(dynamoDbSettings.let(DynamoDbSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -2061,7 +2061,7 @@ public open class CfnEndpoint(
      * @param elasticsearchSettings Settings in JSON format for the target OpenSearch endpoint. 
      */
     override fun elasticsearchSettings(elasticsearchSettings: IResolvable) {
-      cdkBuilder.elasticsearchSettings(elasticsearchSettings.let(IResolvable::unwrap))
+      cdkBuilder.elasticsearchSettings(elasticsearchSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2076,7 +2076,7 @@ public open class CfnEndpoint(
      * @param elasticsearchSettings Settings in JSON format for the target OpenSearch endpoint. 
      */
     override fun elasticsearchSettings(elasticsearchSettings: ElasticsearchSettingsProperty) {
-      cdkBuilder.elasticsearchSettings(elasticsearchSettings.let(ElasticsearchSettingsProperty::unwrap))
+      cdkBuilder.elasticsearchSettings(elasticsearchSettings.let(ElasticsearchSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -2165,7 +2165,7 @@ public open class CfnEndpoint(
      * @param gcpMySqlSettings Settings in JSON format for the source GCP MySQL endpoint. 
      */
     override fun gcpMySqlSettings(gcpMySqlSettings: IResolvable) {
-      cdkBuilder.gcpMySqlSettings(gcpMySqlSettings.let(IResolvable::unwrap))
+      cdkBuilder.gcpMySqlSettings(gcpMySqlSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2180,7 +2180,7 @@ public open class CfnEndpoint(
      * @param gcpMySqlSettings Settings in JSON format for the source GCP MySQL endpoint. 
      */
     override fun gcpMySqlSettings(gcpMySqlSettings: GcpMySQLSettingsProperty) {
-      cdkBuilder.gcpMySqlSettings(gcpMySqlSettings.let(GcpMySQLSettingsProperty::unwrap))
+      cdkBuilder.gcpMySqlSettings(gcpMySqlSettings.let(GcpMySQLSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -2211,7 +2211,7 @@ public open class CfnEndpoint(
      * @param ibmDb2Settings Settings in JSON format for the source IBM Db2 LUW endpoint. 
      */
     override fun ibmDb2Settings(ibmDb2Settings: IResolvable) {
-      cdkBuilder.ibmDb2Settings(ibmDb2Settings.let(IResolvable::unwrap))
+      cdkBuilder.ibmDb2Settings(ibmDb2Settings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2226,7 +2226,7 @@ public open class CfnEndpoint(
      * @param ibmDb2Settings Settings in JSON format for the source IBM Db2 LUW endpoint. 
      */
     override fun ibmDb2Settings(ibmDb2Settings: IbmDb2SettingsProperty) {
-      cdkBuilder.ibmDb2Settings(ibmDb2Settings.let(IbmDb2SettingsProperty::unwrap))
+      cdkBuilder.ibmDb2Settings(ibmDb2Settings.let(IbmDb2SettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -2257,7 +2257,7 @@ public open class CfnEndpoint(
      * @param kafkaSettings Settings in JSON format for the target Apache Kafka endpoint. 
      */
     override fun kafkaSettings(kafkaSettings: IResolvable) {
-      cdkBuilder.kafkaSettings(kafkaSettings.let(IResolvable::unwrap))
+      cdkBuilder.kafkaSettings(kafkaSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2272,7 +2272,7 @@ public open class CfnEndpoint(
      * @param kafkaSettings Settings in JSON format for the target Apache Kafka endpoint. 
      */
     override fun kafkaSettings(kafkaSettings: KafkaSettingsProperty) {
-      cdkBuilder.kafkaSettings(kafkaSettings.let(KafkaSettingsProperty::unwrap))
+      cdkBuilder.kafkaSettings(kafkaSettings.let(KafkaSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -2304,7 +2304,7 @@ public open class CfnEndpoint(
      * Data Streams. 
      */
     override fun kinesisSettings(kinesisSettings: IResolvable) {
-      cdkBuilder.kinesisSettings(kinesisSettings.let(IResolvable::unwrap))
+      cdkBuilder.kinesisSettings(kinesisSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2320,7 +2320,7 @@ public open class CfnEndpoint(
      * Data Streams. 
      */
     override fun kinesisSettings(kinesisSettings: KinesisSettingsProperty) {
-      cdkBuilder.kinesisSettings(kinesisSettings.let(KinesisSettingsProperty::unwrap))
+      cdkBuilder.kinesisSettings(kinesisSettings.let(KinesisSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -2372,7 +2372,7 @@ public open class CfnEndpoint(
      * SQL Server endpoint. 
      */
     override fun microsoftSqlServerSettings(microsoftSqlServerSettings: IResolvable) {
-      cdkBuilder.microsoftSqlServerSettings(microsoftSqlServerSettings.let(IResolvable::unwrap))
+      cdkBuilder.microsoftSqlServerSettings(microsoftSqlServerSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2391,7 +2391,7 @@ public open class CfnEndpoint(
      */
     override
         fun microsoftSqlServerSettings(microsoftSqlServerSettings: MicrosoftSqlServerSettingsProperty) {
-      cdkBuilder.microsoftSqlServerSettings(microsoftSqlServerSettings.let(MicrosoftSqlServerSettingsProperty::unwrap))
+      cdkBuilder.microsoftSqlServerSettings(microsoftSqlServerSettings.let(MicrosoftSqlServerSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -2427,7 +2427,7 @@ public open class CfnEndpoint(
      * @param mongoDbSettings Settings in JSON format for the source MongoDB endpoint. 
      */
     override fun mongoDbSettings(mongoDbSettings: IResolvable) {
-      cdkBuilder.mongoDbSettings(mongoDbSettings.let(IResolvable::unwrap))
+      cdkBuilder.mongoDbSettings(mongoDbSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2442,7 +2442,7 @@ public open class CfnEndpoint(
      * @param mongoDbSettings Settings in JSON format for the source MongoDB endpoint. 
      */
     override fun mongoDbSettings(mongoDbSettings: MongoDbSettingsProperty) {
-      cdkBuilder.mongoDbSettings(mongoDbSettings.let(MongoDbSettingsProperty::unwrap))
+      cdkBuilder.mongoDbSettings(mongoDbSettings.let(MongoDbSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -2475,7 +2475,7 @@ public open class CfnEndpoint(
      * @param mySqlSettings Settings in JSON format for the source and target MySQL endpoint. 
      */
     override fun mySqlSettings(mySqlSettings: IResolvable) {
-      cdkBuilder.mySqlSettings(mySqlSettings.let(IResolvable::unwrap))
+      cdkBuilder.mySqlSettings(mySqlSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2492,7 +2492,7 @@ public open class CfnEndpoint(
      * @param mySqlSettings Settings in JSON format for the source and target MySQL endpoint. 
      */
     override fun mySqlSettings(mySqlSettings: MySqlSettingsProperty) {
-      cdkBuilder.mySqlSettings(mySqlSettings.let(MySqlSettingsProperty::unwrap))
+      cdkBuilder.mySqlSettings(mySqlSettings.let(MySqlSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -2525,7 +2525,7 @@ public open class CfnEndpoint(
      * @param neptuneSettings Settings in JSON format for the target Amazon Neptune endpoint. 
      */
     override fun neptuneSettings(neptuneSettings: IResolvable) {
-      cdkBuilder.neptuneSettings(neptuneSettings.let(IResolvable::unwrap))
+      cdkBuilder.neptuneSettings(neptuneSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2540,7 +2540,7 @@ public open class CfnEndpoint(
      * @param neptuneSettings Settings in JSON format for the target Amazon Neptune endpoint. 
      */
     override fun neptuneSettings(neptuneSettings: NeptuneSettingsProperty) {
-      cdkBuilder.neptuneSettings(neptuneSettings.let(NeptuneSettingsProperty::unwrap))
+      cdkBuilder.neptuneSettings(neptuneSettings.let(NeptuneSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -2573,7 +2573,7 @@ public open class CfnEndpoint(
      * @param oracleSettings Settings in JSON format for the source and target Oracle endpoint. 
      */
     override fun oracleSettings(oracleSettings: IResolvable) {
-      cdkBuilder.oracleSettings(oracleSettings.let(IResolvable::unwrap))
+      cdkBuilder.oracleSettings(oracleSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2590,7 +2590,7 @@ public open class CfnEndpoint(
      * @param oracleSettings Settings in JSON format for the source and target Oracle endpoint. 
      */
     override fun oracleSettings(oracleSettings: OracleSettingsProperty) {
-      cdkBuilder.oracleSettings(oracleSettings.let(OracleSettingsProperty::unwrap))
+      cdkBuilder.oracleSettings(oracleSettings.let(OracleSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -2646,7 +2646,7 @@ public open class CfnEndpoint(
      * endpoint. 
      */
     override fun postgreSqlSettings(postgreSqlSettings: IResolvable) {
-      cdkBuilder.postgreSqlSettings(postgreSqlSettings.let(IResolvable::unwrap))
+      cdkBuilder.postgreSqlSettings(postgreSqlSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2664,7 +2664,7 @@ public open class CfnEndpoint(
      * endpoint. 
      */
     override fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty) {
-      cdkBuilder.postgreSqlSettings(postgreSqlSettings.let(PostgreSqlSettingsProperty::unwrap))
+      cdkBuilder.postgreSqlSettings(postgreSqlSettings.let(PostgreSqlSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -2699,7 +2699,7 @@ public open class CfnEndpoint(
      * @param redisSettings Settings in JSON format for the target Redis endpoint. 
      */
     override fun redisSettings(redisSettings: IResolvable) {
-      cdkBuilder.redisSettings(redisSettings.let(IResolvable::unwrap))
+      cdkBuilder.redisSettings(redisSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2714,7 +2714,7 @@ public open class CfnEndpoint(
      * @param redisSettings Settings in JSON format for the target Redis endpoint. 
      */
     override fun redisSettings(redisSettings: RedisSettingsProperty) {
-      cdkBuilder.redisSettings(redisSettings.let(RedisSettingsProperty::unwrap))
+      cdkBuilder.redisSettings(redisSettings.let(RedisSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -2745,7 +2745,7 @@ public open class CfnEndpoint(
      * @param redshiftSettings Settings in JSON format for the Amazon Redshift endpoint. 
      */
     override fun redshiftSettings(redshiftSettings: IResolvable) {
-      cdkBuilder.redshiftSettings(redshiftSettings.let(IResolvable::unwrap))
+      cdkBuilder.redshiftSettings(redshiftSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2760,7 +2760,7 @@ public open class CfnEndpoint(
      * @param redshiftSettings Settings in JSON format for the Amazon Redshift endpoint. 
      */
     override fun redshiftSettings(redshiftSettings: RedshiftSettingsProperty) {
-      cdkBuilder.redshiftSettings(redshiftSettings.let(RedshiftSettingsProperty::unwrap))
+      cdkBuilder.redshiftSettings(redshiftSettings.let(RedshiftSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -2814,7 +2814,7 @@ public open class CfnEndpoint(
      * @param s3Settings Settings in JSON format for the source and target Amazon S3 endpoint. 
      */
     override fun s3Settings(s3Settings: IResolvable) {
-      cdkBuilder.s3Settings(s3Settings.let(IResolvable::unwrap))
+      cdkBuilder.s3Settings(s3Settings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2831,7 +2831,7 @@ public open class CfnEndpoint(
      * @param s3Settings Settings in JSON format for the source and target Amazon S3 endpoint. 
      */
     override fun s3Settings(s3Settings: S3SettingsProperty) {
-      cdkBuilder.s3Settings(s3Settings.let(S3SettingsProperty::unwrap))
+      cdkBuilder.s3Settings(s3Settings.let(S3SettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -2891,7 +2891,7 @@ public open class CfnEndpoint(
      * @param sybaseSettings Settings in JSON format for the source and target SAP ASE endpoint. 
      */
     override fun sybaseSettings(sybaseSettings: IResolvable) {
-      cdkBuilder.sybaseSettings(sybaseSettings.let(IResolvable::unwrap))
+      cdkBuilder.sybaseSettings(sybaseSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2908,7 +2908,7 @@ public open class CfnEndpoint(
      * @param sybaseSettings Settings in JSON format for the source and target SAP ASE endpoint. 
      */
     override fun sybaseSettings(sybaseSettings: SybaseSettingsProperty) {
-      cdkBuilder.sybaseSettings(sybaseSettings.let(SybaseSettingsProperty::unwrap))
+      cdkBuilder.sybaseSettings(sybaseSettings.let(SybaseSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -2936,7 +2936,7 @@ public open class CfnEndpoint(
      * @param tags One or more tags to be assigned to the endpoint. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -3164,7 +3164,7 @@ public open class CfnEndpoint(
        * Default value is `"false"` .
        */
       override fun extractDocId(extractDocId: IResolvable) {
-        cdkBuilder.extractDocId(extractDocId.let(IResolvable::unwrap))
+        cdkBuilder.extractDocId(extractDocId.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3932,7 +3932,7 @@ public open class CfnEndpoint(
        * set this attribute to `false` .
        */
       override fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: IResolvable) {
-        cdkBuilder.cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch.let(IResolvable::unwrap))
+        cdkBuilder.cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4457,7 +4457,7 @@ public open class CfnEndpoint(
        * The default is true.
        */
       override fun dataCaptureChanges(setDataCaptureChanges: IResolvable) {
-        cdkBuilder.setDataCaptureChanges(setDataCaptureChanges.let(IResolvable::unwrap))
+        cdkBuilder.setDataCaptureChanges(setDataCaptureChanges.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4475,7 +4475,7 @@ public open class CfnEndpoint(
        * The default value is false.
        */
       override fun keepCsvFiles(keepCsvFiles: IResolvable) {
-        cdkBuilder.keepCsvFiles(keepCsvFiles.let(IResolvable::unwrap))
+        cdkBuilder.keepCsvFiles(keepCsvFiles.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5105,7 +5105,7 @@ public open class CfnEndpoint(
        * The default is `false` .
        */
       override fun includeControlDetails(includeControlDetails: IResolvable) {
-        cdkBuilder.includeControlDetails(includeControlDetails.let(IResolvable::unwrap))
+        cdkBuilder.includeControlDetails(includeControlDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5123,7 +5123,7 @@ public open class CfnEndpoint(
        * The default is `false` .
        */
       override fun includeNullAndEmpty(includeNullAndEmpty: IResolvable) {
-        cdkBuilder.includeNullAndEmpty(includeNullAndEmpty.let(IResolvable::unwrap))
+        cdkBuilder.includeNullAndEmpty(includeNullAndEmpty.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5141,7 +5141,7 @@ public open class CfnEndpoint(
        * The default is `false` .
        */
       override fun includePartitionValue(includePartitionValue: IResolvable) {
-        cdkBuilder.includePartitionValue(includePartitionValue.let(IResolvable::unwrap))
+        cdkBuilder.includePartitionValue(includePartitionValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5161,7 +5161,7 @@ public open class CfnEndpoint(
        * The default is `false` .
        */
       override fun includeTableAlterOperations(includeTableAlterOperations: IResolvable) {
-        cdkBuilder.includeTableAlterOperations(includeTableAlterOperations.let(IResolvable::unwrap))
+        cdkBuilder.includeTableAlterOperations(includeTableAlterOperations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5183,7 +5183,7 @@ public open class CfnEndpoint(
        * within a transaction). The default is `false` .
        */
       override fun includeTransactionDetails(includeTransactionDetails: IResolvable) {
-        cdkBuilder.includeTransactionDetails(includeTransactionDetails.let(IResolvable::unwrap))
+        cdkBuilder.includeTransactionDetails(includeTransactionDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5221,7 +5221,7 @@ public open class CfnEndpoint(
        * to enable migration of RAW data type columns without adding the '0x' prefix.
        */
       override fun noHexPrefix(noHexPrefix: IResolvable) {
-        cdkBuilder.noHexPrefix(noHexPrefix.let(IResolvable::unwrap))
+        cdkBuilder.noHexPrefix(noHexPrefix.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5245,7 +5245,7 @@ public open class CfnEndpoint(
        * partition, which causes throttling. The default is `false` .
        */
       override fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: IResolvable) {
-        cdkBuilder.partitionIncludeSchemaTable(partitionIncludeSchemaTable.let(IResolvable::unwrap))
+        cdkBuilder.partitionIncludeSchemaTable(partitionIncludeSchemaTable.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5814,7 +5814,7 @@ public open class CfnEndpoint(
        * The default is `false` .
        */
       override fun includeControlDetails(includeControlDetails: IResolvable) {
-        cdkBuilder.includeControlDetails(includeControlDetails.let(IResolvable::unwrap))
+        cdkBuilder.includeControlDetails(includeControlDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5832,7 +5832,7 @@ public open class CfnEndpoint(
        * The default is `false` .
        */
       override fun includeNullAndEmpty(includeNullAndEmpty: IResolvable) {
-        cdkBuilder.includeNullAndEmpty(includeNullAndEmpty.let(IResolvable::unwrap))
+        cdkBuilder.includeNullAndEmpty(includeNullAndEmpty.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5850,7 +5850,7 @@ public open class CfnEndpoint(
        * The default is `false` .
        */
       override fun includePartitionValue(includePartitionValue: IResolvable) {
-        cdkBuilder.includePartitionValue(includePartitionValue.let(IResolvable::unwrap))
+        cdkBuilder.includePartitionValue(includePartitionValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5870,7 +5870,7 @@ public open class CfnEndpoint(
        * The default is `false` .
        */
       override fun includeTableAlterOperations(includeTableAlterOperations: IResolvable) {
-        cdkBuilder.includeTableAlterOperations(includeTableAlterOperations.let(IResolvable::unwrap))
+        cdkBuilder.includeTableAlterOperations(includeTableAlterOperations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5892,7 +5892,7 @@ public open class CfnEndpoint(
        * within a transaction). The default is `false` .
        */
       override fun includeTransactionDetails(includeTransactionDetails: IResolvable) {
-        cdkBuilder.includeTransactionDetails(includeTransactionDetails.let(IResolvable::unwrap))
+        cdkBuilder.includeTransactionDetails(includeTransactionDetails.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5922,7 +5922,7 @@ public open class CfnEndpoint(
        * endpoint setting to enable migration of RAW data type columns without adding the '0x' prefix.
        */
       override fun noHexPrefix(noHexPrefix: IResolvable) {
-        cdkBuilder.noHexPrefix(noHexPrefix.let(IResolvable::unwrap))
+        cdkBuilder.noHexPrefix(noHexPrefix.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5946,7 +5946,7 @@ public open class CfnEndpoint(
        * which causes throttling. The default is `false` .
        */
       override fun partitionIncludeSchemaTable(partitionIncludeSchemaTable: IResolvable) {
-        cdkBuilder.partitionIncludeSchemaTable(partitionIncludeSchemaTable.let(IResolvable::unwrap))
+        cdkBuilder.partitionIncludeSchemaTable(partitionIncludeSchemaTable.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6540,7 +6540,7 @@ public open class CfnEndpoint(
        * @param forceLobLookup Forces LOB lookup on inline LOB.
        */
       override fun forceLobLookup(forceLobLookup: IResolvable) {
-        cdkBuilder.forceLobLookup(forceLobLookup.let(IResolvable::unwrap))
+        cdkBuilder.forceLobLookup(forceLobLookup.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6574,7 +6574,7 @@ public open class CfnEndpoint(
        * different information about the table cached in the replication instance.
        */
       override fun querySingleAlwaysOnNode(querySingleAlwaysOnNode: IResolvable) {
-        cdkBuilder.querySingleAlwaysOnNode(querySingleAlwaysOnNode.let(IResolvable::unwrap))
+        cdkBuilder.querySingleAlwaysOnNode(querySingleAlwaysOnNode.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6598,7 +6598,7 @@ public open class CfnEndpoint(
        * ongoing replication.
        */
       override fun readBackupOnly(readBackupOnly: IResolvable) {
-        cdkBuilder.readBackupOnly(readBackupOnly.let(IResolvable::unwrap))
+        cdkBuilder.readBackupOnly(readBackupOnly.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6685,7 +6685,7 @@ public open class CfnEndpoint(
        * Setting `TrimSpaceInChar` does not left-trim data. The default value is `true` .
        */
       override fun trimSpaceInChar(trimSpaceInChar: IResolvable) {
-        cdkBuilder.trimSpaceInChar(trimSpaceInChar.let(IResolvable::unwrap))
+        cdkBuilder.trimSpaceInChar(trimSpaceInChar.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6705,7 +6705,7 @@ public open class CfnEndpoint(
        * you must disable the use BCP for loading table option.
        */
       override fun useBcpFullLoad(useBcpFullLoad: IResolvable) {
-        cdkBuilder.useBcpFullLoad(useBcpFullLoad.let(IResolvable::unwrap))
+        cdkBuilder.useBcpFullLoad(useBcpFullLoad.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6721,7 +6721,7 @@ public open class CfnEndpoint(
        * third-party transaction log backups if they are created in native format.
        */
       override fun useThirdPartyBackupDevice(useThirdPartyBackupDevice: IResolvable) {
-        cdkBuilder.useThirdPartyBackupDevice(useThirdPartyBackupDevice.let(IResolvable::unwrap))
+        cdkBuilder.useThirdPartyBackupDevice(useThirdPartyBackupDevice.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7767,7 +7767,7 @@ public open class CfnEndpoint(
        * different information about the table cached in the replication instance.
        */
       override fun cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch: IResolvable) {
-        cdkBuilder.cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch.let(IResolvable::unwrap))
+        cdkBuilder.cleanSourceMetadataOnMismatch(cleanSourceMetadataOnMismatch.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8199,7 +8199,7 @@ public open class CfnEndpoint(
        * `ServiceAccessRoleArn` . The default is `false` .
        */
       override fun iamAuthEnabled(iamAuthEnabled: IResolvable) {
-        cdkBuilder.iamAuthEnabled(iamAuthEnabled.let(IResolvable::unwrap))
+        cdkBuilder.iamAuthEnabled(iamAuthEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9405,7 +9405,7 @@ public open class CfnEndpoint(
        * replacement using direct file access.
        */
       override fun accessAlternateDirectly(accessAlternateDirectly: IResolvable) {
-        cdkBuilder.accessAlternateDirectly(accessAlternateDirectly.let(IResolvable::unwrap))
+        cdkBuilder.accessAlternateDirectly(accessAlternateDirectly.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9429,7 +9429,7 @@ public open class CfnEndpoint(
        * If you use this option, you still need to enable database-level supplemental logging.
        */
       override fun addSupplementalLogging(addSupplementalLogging: IResolvable) {
-        cdkBuilder.addSupplementalLogging(addSupplementalLogging.let(IResolvable::unwrap))
+        cdkBuilder.addSupplementalLogging(addSupplementalLogging.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9462,7 +9462,7 @@ public open class CfnEndpoint(
        * tables containing columns that are nested tables or defined types.
        */
       override fun allowSelectNestedTables(allowSelectNestedTables: IResolvable) {
-        cdkBuilder.allowSelectNestedTables(allowSelectNestedTables.let(IResolvable::unwrap))
+        cdkBuilder.allowSelectNestedTables(allowSelectNestedTables.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9493,7 +9493,7 @@ public open class CfnEndpoint(
        * DMS user account needs to be granted ASM privileges.
        */
       override fun archivedLogsOnly(archivedLogsOnly: IResolvable) {
-        cdkBuilder.archivedLogsOnly(archivedLogsOnly.let(IResolvable::unwrap))
+        cdkBuilder.archivedLogsOnly(archivedLogsOnly.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9561,7 +9561,7 @@ public open class CfnEndpoint(
        * database logs.
        */
       override fun directPathNoLog(directPathNoLog: IResolvable) {
-        cdkBuilder.directPathNoLog(directPathNoLog.let(IResolvable::unwrap))
+        cdkBuilder.directPathNoLog(directPathNoLog.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9581,7 +9581,7 @@ public open class CfnEndpoint(
        * the target table cannot have any constraints or indexes.
        */
       override fun directPathParallelLoad(directPathParallelLoad: IResolvable) {
-        cdkBuilder.directPathParallelLoad(directPathParallelLoad.let(IResolvable::unwrap))
+        cdkBuilder.directPathParallelLoad(directPathParallelLoad.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9597,7 +9597,7 @@ public open class CfnEndpoint(
        * replication and create existing tables or indexes under the same tablespace on the target.
        */
       override fun enableHomogenousTablespace(enableHomogenousTablespace: IResolvable) {
-        cdkBuilder.enableHomogenousTablespace(enableHomogenousTablespace.let(IResolvable::unwrap))
+        cdkBuilder.enableHomogenousTablespace(enableHomogenousTablespace.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9626,7 +9626,7 @@ public open class CfnEndpoint(
        * in the *Oracle Database Backup and Recovery User's Guide* .
        */
       override fun extraArchivedLogDestIds(extraArchivedLogDestIds: IResolvable) {
-        cdkBuilder.extraArchivedLogDestIds(extraArchivedLogDestIds.let(IResolvable::unwrap))
+        cdkBuilder.extraArchivedLogDestIds(extraArchivedLogDestIds.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9703,7 +9703,7 @@ public open class CfnEndpoint(
        * instead of truncating the LOB data.
        */
       override fun failTasksOnLobTruncation(failTasksOnLobTruncation: IResolvable) {
-        cdkBuilder.failTasksOnLobTruncation(failTasksOnLobTruncation.let(IResolvable::unwrap))
+        cdkBuilder.failTasksOnLobTruncation(failTasksOnLobTruncation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9760,7 +9760,7 @@ public open class CfnEndpoint(
        * replication.
        */
       override fun readTableSpaceName(readTableSpaceName: IResolvable) {
-        cdkBuilder.readTableSpaceName(readTableSpaceName.let(IResolvable::unwrap))
+        cdkBuilder.readTableSpaceName(readTableSpaceName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9780,7 +9780,7 @@ public open class CfnEndpoint(
        * `usePathPrefix` setting to access the redo logs.
        */
       override fun replacePathPrefix(replacePathPrefix: IResolvable) {
-        cdkBuilder.replacePathPrefix(replacePathPrefix.let(IResolvable::unwrap))
+        cdkBuilder.replacePathPrefix(replacePathPrefix.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9929,7 +9929,7 @@ public open class CfnEndpoint(
        * redo logs.
        */
       override fun useAlternateFolderForOnline(useAlternateFolderForOnline: IResolvable) {
-        cdkBuilder.useAlternateFolderForOnline(useAlternateFolderForOnline.let(IResolvable::unwrap))
+        cdkBuilder.useAlternateFolderForOnline(useAlternateFolderForOnline.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9957,7 +9957,7 @@ public open class CfnEndpoint(
        * .
        */
       override fun useBFile(useBFile: IResolvable) {
-        cdkBuilder.useBFile(useBFile.let(IResolvable::unwrap))
+        cdkBuilder.useBFile(useBFile.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -9977,7 +9977,7 @@ public open class CfnEndpoint(
        * using this OCI protocol, you can bulk-load Oracle target tables during a full load.
        */
       override fun useDirectPathFullLoad(useDirectPathFullLoad: IResolvable) {
-        cdkBuilder.useDirectPathFullLoad(useDirectPathFullLoad.let(IResolvable::unwrap))
+        cdkBuilder.useDirectPathFullLoad(useDirectPathFullLoad.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10003,7 +10003,7 @@ public open class CfnEndpoint(
        * in the *AWS DMS User Guide* .
        */
       override fun useLogminerReader(useLogminerReader: IResolvable) {
-        cdkBuilder.useLogminerReader(useLogminerReader.let(IResolvable::unwrap))
+        cdkBuilder.useLogminerReader(useLogminerReader.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -10962,7 +10962,7 @@ public open class CfnEndpoint(
        * database.
        */
       override fun captureDdls(captureDdls: IResolvable) {
-        cdkBuilder.captureDdls(captureDdls.let(IResolvable::unwrap))
+        cdkBuilder.captureDdls(captureDdls.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11015,7 +11015,7 @@ public open class CfnEndpoint(
        * of truncating the LOB data.
        */
       override fun failTasksOnLobTruncation(failTasksOnLobTruncation: IResolvable) {
-        cdkBuilder.failTasksOnLobTruncation(failTasksOnLobTruncation.let(IResolvable::unwrap))
+        cdkBuilder.failTasksOnLobTruncation(failTasksOnLobTruncation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11041,7 +11041,7 @@ public open class CfnEndpoint(
        * The default value is `false` .
        */
       override fun heartbeatEnable(heartbeatEnable: IResolvable) {
-        cdkBuilder.heartbeatEnable(heartbeatEnable.let(IResolvable::unwrap))
+        cdkBuilder.heartbeatEnable(heartbeatEnable.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -11079,7 +11079,7 @@ public open class CfnEndpoint(
        * The default value is `false` .
        */
       override fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable) {
-        cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean.let(IResolvable::unwrap))
+        cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12365,7 +12365,7 @@ public open class CfnEndpoint(
        * specification, Amazon Redshift inserts a NULL value into that field.
        */
       override fun acceptAnyDate(acceptAnyDate: IResolvable) {
-        cdkBuilder.acceptAnyDate(acceptAnyDate.let(IResolvable::unwrap))
+        cdkBuilder.acceptAnyDate(acceptAnyDate.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12415,7 +12415,7 @@ public open class CfnEndpoint(
        * The default is `false` .
        */
       override fun caseSensitiveNames(caseSensitiveNames: IResolvable) {
-        cdkBuilder.caseSensitiveNames(caseSensitiveNames.let(IResolvable::unwrap))
+        cdkBuilder.caseSensitiveNames(caseSensitiveNames.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12437,7 +12437,7 @@ public open class CfnEndpoint(
        * aren't changed. The default is `true` .
        */
       override fun compUpdate(compUpdate: IResolvable) {
-        cdkBuilder.compUpdate(compUpdate.let(IResolvable::unwrap))
+        cdkBuilder.compUpdate(compUpdate.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12476,7 +12476,7 @@ public open class CfnEndpoint(
        * A value of `true` sets empty CHAR and VARCHAR fields to null. The default is `false` .
        */
       override fun emptyAsNull(emptyAsNull: IResolvable) {
-        cdkBuilder.emptyAsNull(emptyAsNull.let(IResolvable::unwrap))
+        cdkBuilder.emptyAsNull(emptyAsNull.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12515,7 +12515,7 @@ public open class CfnEndpoint(
        * the tables. The default is `false` .
        */
       override fun explicitIds(explicitIds: IResolvable) {
-        cdkBuilder.explicitIds(explicitIds.let(IResolvable::unwrap))
+        cdkBuilder.explicitIds(explicitIds.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12556,7 +12556,7 @@ public open class CfnEndpoint(
        * the source and target endpoints for it to take effect.
        */
       override fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable) {
-        cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean.let(IResolvable::unwrap))
+        cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12584,7 +12584,7 @@ public open class CfnEndpoint(
        * `true` to remove quotation marks. The default is `false` .
        */
       override fun removeQuotes(removeQuotes: IResolvable) {
-        cdkBuilder.removeQuotes(removeQuotes.let(IResolvable::unwrap))
+        cdkBuilder.removeQuotes(removeQuotes.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12682,7 +12682,7 @@ public open class CfnEndpoint(
        * unneeded white space. The default is `false` .
        */
       override fun trimBlanks(trimBlanks: IResolvable) {
-        cdkBuilder.trimBlanks(trimBlanks.let(IResolvable::unwrap))
+        cdkBuilder.trimBlanks(trimBlanks.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -12702,7 +12702,7 @@ public open class CfnEndpoint(
        * size of 4 MB or less. Choose `true` to truncate data. The default is `false` .
        */
       override fun truncateColumns(truncateColumns: IResolvable) {
-        cdkBuilder.truncateColumns(truncateColumns.let(IResolvable::unwrap))
+        cdkBuilder.truncateColumns(truncateColumns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14444,7 +14444,7 @@ public open class CfnEndpoint(
        * The default value is `false` . Valid values are `true` , `false` , `y` , and `n` .
        */
       override fun addColumnName(addColumnName: IResolvable) {
-        cdkBuilder.addColumnName(addColumnName.let(IResolvable::unwrap))
+        cdkBuilder.addColumnName(addColumnName.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14462,7 +14462,7 @@ public open class CfnEndpoint(
        * The default value is `false` .
        */
       override fun addTrailingPaddingCharacter(addTrailingPaddingCharacter: IResolvable) {
-        cdkBuilder.addTrailingPaddingCharacter(addTrailingPaddingCharacter.let(IResolvable::unwrap))
+        cdkBuilder.addTrailingPaddingCharacter(addTrailingPaddingCharacter.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14546,7 +14546,7 @@ public open class CfnEndpoint(
        * endpoint, but not both.
        */
       override fun cdcInsertsAndUpdates(cdcInsertsAndUpdates: IResolvable) {
-        cdkBuilder.cdcInsertsAndUpdates(cdcInsertsAndUpdates.let(IResolvable::unwrap))
+        cdkBuilder.cdcInsertsAndUpdates(cdcInsertsAndUpdates.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14602,7 +14602,7 @@ public open class CfnEndpoint(
        * endpoint, but not both.
        */
       override fun cdcInsertsOnly(cdcInsertsOnly: IResolvable) {
-        cdkBuilder.cdcInsertsOnly(cdcInsertsOnly.let(IResolvable::unwrap))
+        cdkBuilder.cdcInsertsOnly(cdcInsertsOnly.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14772,7 +14772,7 @@ public open class CfnEndpoint(
        * .
        */
       override fun datePartitionEnabled(datePartitionEnabled: IResolvable) {
-        cdkBuilder.datePartitionEnabled(datePartitionEnabled.let(IResolvable::unwrap))
+        cdkBuilder.datePartitionEnabled(datePartitionEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14828,7 +14828,7 @@ public open class CfnEndpoint(
        * for .parquet file format only.
        */
       override fun enableStatistics(enableStatistics: IResolvable) {
-        cdkBuilder.enableStatistics(enableStatistics.let(IResolvable::unwrap))
+        cdkBuilder.enableStatistics(enableStatistics.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14907,7 +14907,7 @@ public open class CfnEndpoint(
        * Creating an AWS Glue catalog lets you use Athena to query your data.
        */
       override fun glueCatalogGeneration(glueCatalogGeneration: IResolvable) {
-        cdkBuilder.glueCatalogGeneration(glueCatalogGeneration.let(IResolvable::unwrap))
+        cdkBuilder.glueCatalogGeneration(glueCatalogGeneration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -14968,7 +14968,7 @@ public open class CfnEndpoint(
        * in the *AWS Database Migration Service User Guide* .
        */
       override fun includeOpForFullLoad(includeOpForFullLoad: IResolvable) {
-        cdkBuilder.includeOpForFullLoad(includeOpForFullLoad.let(IResolvable::unwrap))
+        cdkBuilder.includeOpForFullLoad(includeOpForFullLoad.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -15029,7 +15029,7 @@ public open class CfnEndpoint(
        * column value that is inserted by setting the `TimestampColumnName` parameter.
        */
       override fun parquetTimestampInMillisecond(parquetTimestampInMillisecond: IResolvable) {
-        cdkBuilder.parquetTimestampInMillisecond(parquetTimestampInMillisecond.let(IResolvable::unwrap))
+        cdkBuilder.parquetTimestampInMillisecond(parquetTimestampInMillisecond.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -15067,7 +15067,7 @@ public open class CfnEndpoint(
        * This setting is supported in AWS DMS versions 3.4.2 and later.
        */
       override fun preserveTransactions(preserveTransactions: IResolvable) {
-        cdkBuilder.preserveTransactions(preserveTransactions.let(IResolvable::unwrap))
+        cdkBuilder.preserveTransactions(preserveTransactions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -15107,7 +15107,7 @@ public open class CfnEndpoint(
        * The default value is `true` . Valid values include `true` , `false` , `y` , and `n` .
        */
       override fun rfc4180(rfc4180: IResolvable) {
-        cdkBuilder.rfc4180(rfc4180.let(IResolvable::unwrap))
+        cdkBuilder.rfc4180(rfc4180.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -15200,7 +15200,7 @@ public open class CfnEndpoint(
        * This setting is supported in AWS DMS versions 3.4.1 and later.
        */
       override fun useCsvNoSupValue(useCsvNoSupValue: IResolvable) {
-        cdkBuilder.useCsvNoSupValue(useCsvNoSupValue.let(IResolvable::unwrap))
+        cdkBuilder.useCsvNoSupValue(useCsvNoSupValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -15230,7 +15230,7 @@ public open class CfnEndpoint(
        */
       override
           fun useTaskStartTimeForFullLoadTimestamp(useTaskStartTimeForFullLoadTimestamp: IResolvable) {
-        cdkBuilder.useTaskStartTimeForFullLoadTimestamp(useTaskStartTimeForFullLoadTimestamp.let(IResolvable::unwrap))
+        cdkBuilder.useTaskStartTimeForFullLoadTimestamp(useTaskStartTimeForFullLoadTimestamp.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.dms.CfnEndpoint.S3SettingsProperty =

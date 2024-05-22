@@ -178,7 +178,7 @@ public interface CfnScraperProps {
      * metrics to. 
      */
     override fun destination(destination: IResolvable) {
-      cdkBuilder.destination(destination.let(IResolvable::unwrap))
+      cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -186,7 +186,7 @@ public interface CfnScraperProps {
      * metrics to. 
      */
     override fun destination(destination: CfnScraper.DestinationProperty) {
-      cdkBuilder.destination(destination.let(CfnScraper.DestinationProperty::unwrap))
+      cdkBuilder.destination(destination.let(CfnScraper.DestinationProperty.Companion::unwrap))
     }
 
     /**
@@ -202,14 +202,14 @@ public interface CfnScraperProps {
      * @param scrapeConfiguration The configuration in use by the scraper. 
      */
     override fun scrapeConfiguration(scrapeConfiguration: IResolvable) {
-      cdkBuilder.scrapeConfiguration(scrapeConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.scrapeConfiguration(scrapeConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param scrapeConfiguration The configuration in use by the scraper. 
      */
     override fun scrapeConfiguration(scrapeConfiguration: CfnScraper.ScrapeConfigurationProperty) {
-      cdkBuilder.scrapeConfiguration(scrapeConfiguration.let(CfnScraper.ScrapeConfigurationProperty::unwrap))
+      cdkBuilder.scrapeConfiguration(scrapeConfiguration.let(CfnScraper.ScrapeConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -225,14 +225,14 @@ public interface CfnScraperProps {
      * @param source The Amazon EKS cluster from which the scraper collects metrics. 
      */
     override fun source(source: IResolvable) {
-      cdkBuilder.source(source.let(IResolvable::unwrap))
+      cdkBuilder.source(source.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param source The Amazon EKS cluster from which the scraper collects metrics. 
      */
     override fun source(source: CfnScraper.SourceProperty) {
-      cdkBuilder.source(source.let(CfnScraper.SourceProperty::unwrap))
+      cdkBuilder.source(source.let(CfnScraper.SourceProperty.Companion::unwrap))
     }
 
     /**
@@ -247,7 +247,7 @@ public interface CfnScraperProps {
      * @param tags (Optional) The list of tag keys and values associated with the scraper.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

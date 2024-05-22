@@ -97,14 +97,14 @@ public interface OutlierDetection {
      * @param baseEjectionDuration The base amount of time for which a host is ejected. 
      */
     override fun baseEjectionDuration(baseEjectionDuration: Duration) {
-      cdkBuilder.baseEjectionDuration(baseEjectionDuration.let(Duration::unwrap))
+      cdkBuilder.baseEjectionDuration(baseEjectionDuration.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param interval The time interval between ejection sweep analysis. 
      */
     override fun interval(interval: Duration) {
-      cdkBuilder.interval(interval.let(Duration::unwrap))
+      cdkBuilder.interval(interval.let(Duration.Companion::unwrap))
     }
 
     /**

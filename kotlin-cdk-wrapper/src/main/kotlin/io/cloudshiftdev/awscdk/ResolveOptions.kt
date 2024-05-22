@@ -110,14 +110,14 @@ public interface ResolveOptions {
      * @param resolver The resolver to apply to any resolvable tokens found. 
      */
     override fun resolver(resolver: ITokenResolver) {
-      cdkBuilder.resolver(resolver.let(ITokenResolver::unwrap))
+      cdkBuilder.resolver(resolver.let(ITokenResolver.Companion::unwrap))
     }
 
     /**
      * @param scope The scope from which resolution is performed. 
      */
     override fun scope(scope: IConstruct) {
-      cdkBuilder.scope(scope.let(IConstruct::unwrap))
+      cdkBuilder.scope(scope.let(IConstruct.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.ResolveOptions = cdkBuilder.build()

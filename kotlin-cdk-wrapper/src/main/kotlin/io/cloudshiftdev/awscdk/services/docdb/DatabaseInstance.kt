@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.ec2.InstanceType
+import io.cloudshiftdev.awscdk.services.rds.CaCertificate
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -24,6 +25,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.docdb.*;
  * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * import io.cloudshiftdev.awscdk.services.rds.*;
+ * CaCertificate caCertificate;
  * DatabaseCluster databaseCluster;
  * InstanceType instanceType;
  * DatabaseInstance databaseInstance = DatabaseInstance.Builder.create(this, "MyDatabaseInstance")
@@ -32,6 +35,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .autoMinorVersionUpgrade(false)
  * .availabilityZone("availabilityZone")
+ * .caCertificate(caCertificate)
  * .dbInstanceName("dbInstanceName")
  * .enablePerformanceInsights(false)
  * .preferredMaintenanceWindow("preferredMaintenanceWindow")
@@ -47,8 +51,8 @@ public open class DatabaseInstance(
     id: String,
     props: DatabaseInstanceProps,
   ) :
-      this(software.amazon.awscdk.services.docdb.DatabaseInstance(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DatabaseInstanceProps::unwrap))
+      this(software.amazon.awscdk.services.docdb.DatabaseInstance(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DatabaseInstanceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -116,6 +120,18 @@ public open class DatabaseInstance(
      * located. 
      */
     public fun availabilityZone(availabilityZone: String)
+
+    /**
+     * The identifier of the CA certificate for this DB instance.
+     *
+     * Specifying or updating this property triggers a reboot.
+     *
+     * Default: - DocumentDB will choose a certificate authority
+     *
+     * [Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/ca_cert_rotation.html)
+     * @param caCertificate The identifier of the CA certificate for this DB instance. 
+     */
+    public fun caCertificate(caCertificate: CaCertificate)
 
     /**
      * The DocumentDB database cluster the instance should launch into.
@@ -214,12 +230,26 @@ public open class DatabaseInstance(
     }
 
     /**
+     * The identifier of the CA certificate for this DB instance.
+     *
+     * Specifying or updating this property triggers a reboot.
+     *
+     * Default: - DocumentDB will choose a certificate authority
+     *
+     * [Documentation](https://docs.aws.amazon.com/documentdb/latest/developerguide/ca_cert_rotation.html)
+     * @param caCertificate The identifier of the CA certificate for this DB instance. 
+     */
+    override fun caCertificate(caCertificate: CaCertificate) {
+      cdkBuilder.caCertificate(caCertificate.let(CaCertificate.Companion::unwrap))
+    }
+
+    /**
      * The DocumentDB database cluster the instance should launch into.
      *
      * @param cluster The DocumentDB database cluster the instance should launch into. 
      */
     override fun cluster(cluster: IDatabaseCluster) {
-      cdkBuilder.cluster(cluster.let(IDatabaseCluster::unwrap))
+      cdkBuilder.cluster(cluster.let(IDatabaseCluster.Companion::unwrap))
     }
 
     /**
@@ -254,7 +284,7 @@ public open class DatabaseInstance(
      * @param instanceType The name of the compute and memory capacity classes. 
      */
     override fun instanceType(instanceType: InstanceType) {
-      cdkBuilder.instanceType(instanceType.let(InstanceType::unwrap))
+      cdkBuilder.instanceType(instanceType.let(InstanceType.Companion::unwrap))
     }
 
     /**
@@ -285,7 +315,7 @@ public open class DatabaseInstance(
      * stack or replaced during an update. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.docdb.DatabaseInstance = cdkBuilder.build()
@@ -297,8 +327,8 @@ public open class DatabaseInstance(
       id: String,
       attrs: DatabaseInstanceAttributes,
     ): IDatabaseInstance =
-        software.amazon.awscdk.services.docdb.DatabaseInstance.fromDatabaseInstanceAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(DatabaseInstanceAttributes::unwrap)).let(IDatabaseInstance::wrap)
+        software.amazon.awscdk.services.docdb.DatabaseInstance.fromDatabaseInstanceAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(DatabaseInstanceAttributes.Companion::unwrap)).let(IDatabaseInstance::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ff4a584981905c20a48b9c9367a21a00691a564de963b093a11b8692116afdde")

@@ -470,7 +470,7 @@ public interface CfnClusterProps {
      * @param tags The tags to be assigned to the new elastic cluster.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

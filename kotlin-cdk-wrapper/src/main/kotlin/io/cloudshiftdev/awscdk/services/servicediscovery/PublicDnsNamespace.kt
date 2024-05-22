@@ -48,8 +48,8 @@ public open class PublicDnsNamespace(
     id: String,
     props: PublicDnsNamespaceProps,
   ) :
-      this(software.amazon.awscdk.services.servicediscovery.PublicDnsNamespace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(PublicDnsNamespaceProps::unwrap))
+      this(software.amazon.awscdk.services.servicediscovery.PublicDnsNamespace(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(PublicDnsNamespaceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -75,7 +75,8 @@ public open class PublicDnsNamespace(
    * @param props
    */
   public open fun createService(id: String, props: DnsServiceProps): Service =
-      unwrap(this).createService(id, props.let(DnsServiceProps::unwrap)).let(Service::wrap)
+      unwrap(this).createService(id,
+      props.let(DnsServiceProps.Companion::unwrap)).let(Service::wrap)
 
   /**
    * Creates a service within the namespace.
@@ -189,8 +190,9 @@ public open class PublicDnsNamespace(
       id: String,
       attrs: PublicDnsNamespaceAttributes,
     ): IPublicDnsNamespace =
-        software.amazon.awscdk.services.servicediscovery.PublicDnsNamespace.fromPublicDnsNamespaceAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(PublicDnsNamespaceAttributes::unwrap)).let(IPublicDnsNamespace::wrap)
+        software.amazon.awscdk.services.servicediscovery.PublicDnsNamespace.fromPublicDnsNamespaceAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        attrs.let(PublicDnsNamespaceAttributes.Companion::unwrap)).let(IPublicDnsNamespace::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5f5dcb9164cac9e5c49c3071dd54dc0eb32f23501ce38485c26940c1b1e356e7")

@@ -97,7 +97,7 @@ public interface UserPoolDomainOptions {
      * `customDomain` or `cognitoDomain` must be specified.
      */
     override fun cognitoDomain(cognitoDomain: CognitoDomainOptions) {
-      cdkBuilder.cognitoDomain(cognitoDomain.let(CognitoDomainOptions::unwrap))
+      cdkBuilder.cognitoDomain(cognitoDomain.let(CognitoDomainOptions.Companion::unwrap))
     }
 
     /**
@@ -114,7 +114,7 @@ public interface UserPoolDomainOptions {
      * `cognitoDomain` must be specified.
      */
     override fun customDomain(customDomain: CustomDomainOptions) {
-      cdkBuilder.customDomain(customDomain.let(CustomDomainOptions::unwrap))
+      cdkBuilder.customDomain(customDomain.let(CustomDomainOptions.Companion::unwrap))
     }
 
     /**

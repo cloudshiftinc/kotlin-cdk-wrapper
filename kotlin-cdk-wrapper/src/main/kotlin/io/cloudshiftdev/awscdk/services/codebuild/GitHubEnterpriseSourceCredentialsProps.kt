@@ -53,7 +53,7 @@ public interface GitHubEnterpriseSourceCredentialsProps {
      * GitHub Enterprise API. 
      */
     override fun accessToken(accessToken: SecretValue) {
-      cdkBuilder.accessToken(accessToken.let(SecretValue::unwrap))
+      cdkBuilder.accessToken(accessToken.let(SecretValue.Companion::unwrap))
     }
 
     public fun build():

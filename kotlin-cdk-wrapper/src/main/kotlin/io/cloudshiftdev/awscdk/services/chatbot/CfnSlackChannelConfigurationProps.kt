@@ -282,7 +282,7 @@ public interface CfnSlackChannelConfigurationProps {
      * @param userRoleRequired Enables use of a user role requirement in your chat configuration.
      */
     override fun userRoleRequired(userRoleRequired: IResolvable) {
-      cdkBuilder.userRoleRequired(userRoleRequired.let(IResolvable::unwrap))
+      cdkBuilder.userRoleRequired(userRoleRequired.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.chatbot.CfnSlackChannelConfigurationProps =

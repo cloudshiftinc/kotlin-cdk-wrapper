@@ -71,8 +71,8 @@ public open class CfnFeature(
     id: String,
     props: CfnFeatureProps,
   ) :
-      this(software.amazon.awscdk.services.evidently.CfnFeature(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnFeatureProps::unwrap))
+      this(software.amazon.awscdk.services.evidently.CfnFeature(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnFeatureProps.Companion::unwrap))
   )
 
   public constructor(
@@ -122,7 +122,7 @@ public open class CfnFeature(
    * Specify users that should always be served a specific variation of a feature.
    */
   public open fun entityOverrides(`value`: IResolvable) {
-    unwrap(this).setEntityOverrides(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEntityOverrides(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -157,7 +157,7 @@ public open class CfnFeature(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -199,7 +199,7 @@ public open class CfnFeature(
    * Assigns one or more tags (key-value pairs) to the feature.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -216,7 +216,7 @@ public open class CfnFeature(
    * An array of structures that contain the configuration of the feature's different variations.
    */
   public open fun variations(`value`: IResolvable) {
-    unwrap(this).setVariations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVariations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -453,7 +453,7 @@ public open class CfnFeature(
      * feature. 
      */
     override fun entityOverrides(entityOverrides: IResolvable) {
-      cdkBuilder.entityOverrides(entityOverrides.let(IResolvable::unwrap))
+      cdkBuilder.entityOverrides(entityOverrides.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -540,7 +540,7 @@ public open class CfnFeature(
      * @param tags Assigns one or more tags (key-value pairs) to the feature. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -574,7 +574,7 @@ public open class CfnFeature(
      * different variations. 
      */
     override fun variations(variations: IResolvable) {
-      cdkBuilder.variations(variations.let(IResolvable::unwrap))
+      cdkBuilder.variations(variations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -855,7 +855,7 @@ public open class CfnFeature(
        * @param booleanValue The value assigned to this variation, if the variation type is boolean.
        */
       override fun booleanValue(booleanValue: IResolvable) {
-        cdkBuilder.booleanValue(booleanValue.let(IResolvable::unwrap))
+        cdkBuilder.booleanValue(booleanValue.let(IResolvable.Companion::unwrap))
       }
 
       /**

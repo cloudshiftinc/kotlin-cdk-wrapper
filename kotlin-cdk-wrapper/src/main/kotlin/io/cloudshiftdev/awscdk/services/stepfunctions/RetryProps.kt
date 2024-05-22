@@ -166,14 +166,14 @@ public interface RetryProps {
      * @param interval How many seconds to wait initially before retrying.
      */
     override fun interval(interval: Duration) {
-      cdkBuilder.interval(interval.let(Duration::unwrap))
+      cdkBuilder.interval(interval.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param jitterStrategy Introduces a randomization over the retry interval.
      */
     override fun jitterStrategy(jitterStrategy: JitterType) {
-      cdkBuilder.jitterStrategy(jitterStrategy.let(JitterType::unwrap))
+      cdkBuilder.jitterStrategy(jitterStrategy.let(JitterType.Companion::unwrap))
     }
 
     /**
@@ -189,7 +189,7 @@ public interface RetryProps {
      * @param maxDelay Maximum limit on retry interval growth during exponential backoff.
      */
     override fun maxDelay(maxDelay: Duration) {
-      cdkBuilder.maxDelay(maxDelay.let(Duration::unwrap))
+      cdkBuilder.maxDelay(maxDelay.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.RetryProps =

@@ -174,14 +174,14 @@ public interface CfnHookVersionProps {
      * @param loggingConfig Contains logging configuration information for an extension.
      */
     override fun loggingConfig(loggingConfig: IResolvable) {
-      cdkBuilder.loggingConfig(loggingConfig.let(IResolvable::unwrap))
+      cdkBuilder.loggingConfig(loggingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param loggingConfig Contains logging configuration information for an extension.
      */
     override fun loggingConfig(loggingConfig: CfnHookVersion.LoggingConfigProperty) {
-      cdkBuilder.loggingConfig(loggingConfig.let(CfnHookVersion.LoggingConfigProperty::unwrap))
+      cdkBuilder.loggingConfig(loggingConfig.let(CfnHookVersion.LoggingConfigProperty.Companion::unwrap))
     }
 
     /**

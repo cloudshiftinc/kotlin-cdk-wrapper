@@ -58,8 +58,8 @@ public open class CfnLink(
     id: String,
     props: CfnLinkProps,
   ) :
-      this(software.amazon.awscdk.services.networkmanager.CfnLink(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLinkProps::unwrap))
+      this(software.amazon.awscdk.services.networkmanager.CfnLink(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLinkProps.Companion::unwrap))
   )
 
   public constructor(
@@ -104,14 +104,14 @@ public open class CfnLink(
    * The bandwidth for the link.
    */
   public open fun bandwidth(`value`: IResolvable) {
-    unwrap(this).setBandwidth(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBandwidth(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The bandwidth for the link.
    */
   public open fun bandwidth(`value`: BandwidthProperty) {
-    unwrap(this).setBandwidth(`value`.let(BandwidthProperty::unwrap))
+    unwrap(this).setBandwidth(`value`.let(BandwidthProperty.Companion::unwrap))
   }
 
   /**
@@ -152,7 +152,7 @@ public open class CfnLink(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -194,7 +194,7 @@ public open class CfnLink(
    * The tags for the link.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -322,7 +322,7 @@ public open class CfnLink(
      * @param bandwidth The bandwidth for the link. 
      */
     override fun bandwidth(bandwidth: IResolvable) {
-      cdkBuilder.bandwidth(bandwidth.let(IResolvable::unwrap))
+      cdkBuilder.bandwidth(bandwidth.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -332,7 +332,7 @@ public open class CfnLink(
      * @param bandwidth The bandwidth for the link. 
      */
     override fun bandwidth(bandwidth: BandwidthProperty) {
-      cdkBuilder.bandwidth(bandwidth.let(BandwidthProperty::unwrap))
+      cdkBuilder.bandwidth(bandwidth.let(BandwidthProperty.Companion::unwrap))
     }
 
     /**
@@ -397,7 +397,7 @@ public open class CfnLink(
      * @param tags The tags for the link. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -265,7 +265,7 @@ public interface CfnDatasetProps {
      * .
      */
     override fun tags(tags: List<CfnDataset.TagsItemsProperty>) {
-      cdkBuilder.tags(tags.map(CfnDataset.TagsItemsProperty::unwrap))
+      cdkBuilder.tags(tags.map(CfnDataset.TagsItemsProperty.Companion::unwrap))
     }
 
     /**

@@ -40,7 +40,7 @@ public abstract class PipelineBase(
    * @param options
    */
   public open fun addStage(stage: Stage): StageDeployment =
-      unwrap(this).addStage(stage.let(Stage::unwrap)).let(StageDeployment::wrap)
+      unwrap(this).addStage(stage.let(Stage.Companion::unwrap)).let(StageDeployment::wrap)
 
   /**
    * Deploy a single Stage by itself.
@@ -53,8 +53,8 @@ public abstract class PipelineBase(
    * @param options
    */
   public open fun addStage(stage: Stage, options: AddStageOpts): StageDeployment =
-      unwrap(this).addStage(stage.let(Stage::unwrap),
-      options.let(AddStageOpts::unwrap)).let(StageDeployment::wrap)
+      unwrap(this).addStage(stage.let(Stage.Companion::unwrap),
+      options.let(AddStageOpts.Companion::unwrap)).let(StageDeployment::wrap)
 
   /**
    * Deploy a single Stage by itself.
@@ -108,7 +108,7 @@ public abstract class PipelineBase(
    * @param options
    */
   public open fun addWave(id: String, options: WaveOptions): Wave = unwrap(this).addWave(id,
-      options.let(WaveOptions::unwrap)).let(Wave::wrap)
+      options.let(WaveOptions.Companion::unwrap)).let(Wave::wrap)
 
   /**
    * Add a Wave to the pipeline, for deploying multiple Stages in parallel.

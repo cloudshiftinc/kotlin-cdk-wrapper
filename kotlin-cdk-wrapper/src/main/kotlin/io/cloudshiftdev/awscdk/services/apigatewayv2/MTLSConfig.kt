@@ -81,7 +81,7 @@ public interface MTLSConfig {
      * @param bucket The bucket that the trust store is hosted in. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**

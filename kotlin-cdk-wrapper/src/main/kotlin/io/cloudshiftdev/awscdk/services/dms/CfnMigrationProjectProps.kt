@@ -349,7 +349,7 @@ public interface CfnMigrationProjectProps {
      */
     override
         fun schemaConversionApplicationAttributes(schemaConversionApplicationAttributes: IResolvable) {
-      cdkBuilder.schemaConversionApplicationAttributes(schemaConversionApplicationAttributes.let(IResolvable::unwrap))
+      cdkBuilder.schemaConversionApplicationAttributes(schemaConversionApplicationAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -358,7 +358,7 @@ public interface CfnMigrationProjectProps {
      */
     override
         fun schemaConversionApplicationAttributes(schemaConversionApplicationAttributes: CfnMigrationProject.SchemaConversionApplicationAttributesProperty) {
-      cdkBuilder.schemaConversionApplicationAttributes(schemaConversionApplicationAttributes.let(CfnMigrationProject.SchemaConversionApplicationAttributesProperty::unwrap))
+      cdkBuilder.schemaConversionApplicationAttributes(schemaConversionApplicationAttributes.let(CfnMigrationProject.SchemaConversionApplicationAttributesProperty.Companion::unwrap))
     }
 
     /**
@@ -377,7 +377,7 @@ public interface CfnMigrationProjectProps {
      * the name or ARN, and AWS Secrets Manager parameters.
      */
     override fun sourceDataProviderDescriptors(sourceDataProviderDescriptors: IResolvable) {
-      cdkBuilder.sourceDataProviderDescriptors(sourceDataProviderDescriptors.let(IResolvable::unwrap))
+      cdkBuilder.sourceDataProviderDescriptors(sourceDataProviderDescriptors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -399,7 +399,7 @@ public interface CfnMigrationProjectProps {
      * @param tags An array of key-value pairs to apply to this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -412,7 +412,7 @@ public interface CfnMigrationProjectProps {
      * the name or ARN, and AWS Secrets Manager parameters.
      */
     override fun targetDataProviderDescriptors(targetDataProviderDescriptors: IResolvable) {
-      cdkBuilder.targetDataProviderDescriptors(targetDataProviderDescriptors.let(IResolvable::unwrap))
+      cdkBuilder.targetDataProviderDescriptors(targetDataProviderDescriptors.let(IResolvable.Companion::unwrap))
     }
 
     /**

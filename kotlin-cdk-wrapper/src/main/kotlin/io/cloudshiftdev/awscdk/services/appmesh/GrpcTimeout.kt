@@ -75,14 +75,14 @@ public interface GrpcTimeout {
      * The amount of time that a connection may be idle.
      */
     override fun idle(idle: Duration) {
-      cdkBuilder.idle(idle.let(Duration::unwrap))
+      cdkBuilder.idle(idle.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param perRequest Represents per request timeout.
      */
     override fun perRequest(perRequest: Duration) {
-      cdkBuilder.perRequest(perRequest.let(Duration::unwrap))
+      cdkBuilder.perRequest(perRequest.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appmesh.GrpcTimeout = cdkBuilder.build()

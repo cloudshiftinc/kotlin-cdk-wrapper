@@ -40,13 +40,13 @@ public open class LambdaSubscription(
   cdkObject: software.amazon.awscdk.services.sns.subscriptions.LambdaSubscription,
 ) : CdkObject(cdkObject), ITopicSubscription {
   public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction) :
-      this(software.amazon.awscdk.services.sns.subscriptions.LambdaSubscription(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap))
+      this(software.amazon.awscdk.services.sns.subscriptions.LambdaSubscription(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap))
   )
 
   public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction, props: LambdaSubscriptionProps)
       :
-      this(software.amazon.awscdk.services.sns.subscriptions.LambdaSubscription(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction::unwrap),
-      props.let(LambdaSubscriptionProps::unwrap))
+      this(software.amazon.awscdk.services.sns.subscriptions.LambdaSubscription(fn.let(CloudshiftdevAwscdkServicesLambdaIFunction.Companion::unwrap),
+      props.let(LambdaSubscriptionProps.Companion::unwrap))
   )
 
   public constructor(fn: CloudshiftdevAwscdkServicesLambdaIFunction,
@@ -59,7 +59,7 @@ public open class LambdaSubscription(
    * @param topic 
    */
   public override fun bind(topic: ITopic): TopicSubscriptionConfig =
-      unwrap(this).bind(topic.let(ITopic::unwrap)).let(TopicSubscriptionConfig::wrap)
+      unwrap(this).bind(topic.let(ITopic.Companion::unwrap)).let(TopicSubscriptionConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.sns.subscriptions.LambdaSubscription].
@@ -116,7 +116,7 @@ public open class LambdaSubscription(
      * @param deadLetterQueue Queue to be used as dead letter queue. 
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**

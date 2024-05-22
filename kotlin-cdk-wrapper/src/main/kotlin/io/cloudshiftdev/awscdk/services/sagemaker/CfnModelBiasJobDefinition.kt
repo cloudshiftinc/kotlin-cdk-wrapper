@@ -141,8 +141,8 @@ public open class CfnModelBiasJobDefinition(
     id: String,
     props: CfnModelBiasJobDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnModelBiasJobDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnModelBiasJobDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnModelBiasJobDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -180,7 +180,7 @@ public open class CfnModelBiasJobDefinition(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -204,14 +204,14 @@ public open class CfnModelBiasJobDefinition(
    * Identifies the resources to deploy for a monitoring job.
    */
   public open fun jobResources(`value`: IResolvable) {
-    unwrap(this).setJobResources(`value`.let(IResolvable::unwrap))
+    unwrap(this).setJobResources(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Identifies the resources to deploy for a monitoring job.
    */
   public open fun jobResources(`value`: MonitoringResourcesProperty) {
-    unwrap(this).setJobResources(`value`.let(MonitoringResourcesProperty::unwrap))
+    unwrap(this).setJobResources(`value`.let(MonitoringResourcesProperty.Companion::unwrap))
   }
 
   /**
@@ -231,14 +231,14 @@ public open class CfnModelBiasJobDefinition(
    * Configures the model bias job to run a specified Docker container image.
    */
   public open fun modelBiasAppSpecification(`value`: IResolvable) {
-    unwrap(this).setModelBiasAppSpecification(`value`.let(IResolvable::unwrap))
+    unwrap(this).setModelBiasAppSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Configures the model bias job to run a specified Docker container image.
    */
   public open fun modelBiasAppSpecification(`value`: ModelBiasAppSpecificationProperty) {
-    unwrap(this).setModelBiasAppSpecification(`value`.let(ModelBiasAppSpecificationProperty::unwrap))
+    unwrap(this).setModelBiasAppSpecification(`value`.let(ModelBiasAppSpecificationProperty.Companion::unwrap))
   }
 
   /**
@@ -259,14 +259,14 @@ public open class CfnModelBiasJobDefinition(
    * The baseline configuration for a model bias job.
    */
   public open fun modelBiasBaselineConfig(`value`: IResolvable) {
-    unwrap(this).setModelBiasBaselineConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setModelBiasBaselineConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The baseline configuration for a model bias job.
    */
   public open fun modelBiasBaselineConfig(`value`: ModelBiasBaselineConfigProperty) {
-    unwrap(this).setModelBiasBaselineConfig(`value`.let(ModelBiasBaselineConfigProperty::unwrap))
+    unwrap(this).setModelBiasBaselineConfig(`value`.let(ModelBiasBaselineConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -287,14 +287,14 @@ public open class CfnModelBiasJobDefinition(
    * Inputs for the model bias job.
    */
   public open fun modelBiasJobInput(`value`: IResolvable) {
-    unwrap(this).setModelBiasJobInput(`value`.let(IResolvable::unwrap))
+    unwrap(this).setModelBiasJobInput(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Inputs for the model bias job.
    */
   public open fun modelBiasJobInput(`value`: ModelBiasJobInputProperty) {
-    unwrap(this).setModelBiasJobInput(`value`.let(ModelBiasJobInputProperty::unwrap))
+    unwrap(this).setModelBiasJobInput(`value`.let(ModelBiasJobInputProperty.Companion::unwrap))
   }
 
   /**
@@ -314,14 +314,14 @@ public open class CfnModelBiasJobDefinition(
    * The output configuration for monitoring jobs.
    */
   public open fun modelBiasJobOutputConfig(`value`: IResolvable) {
-    unwrap(this).setModelBiasJobOutputConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setModelBiasJobOutputConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The output configuration for monitoring jobs.
    */
   public open fun modelBiasJobOutputConfig(`value`: MonitoringOutputConfigProperty) {
-    unwrap(this).setModelBiasJobOutputConfig(`value`.let(MonitoringOutputConfigProperty::unwrap))
+    unwrap(this).setModelBiasJobOutputConfig(`value`.let(MonitoringOutputConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -342,14 +342,14 @@ public open class CfnModelBiasJobDefinition(
    * Networking options for a model bias job.
    */
   public open fun networkConfig(`value`: IResolvable) {
-    unwrap(this).setNetworkConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNetworkConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Networking options for a model bias job.
    */
   public open fun networkConfig(`value`: NetworkConfigProperty) {
-    unwrap(this).setNetworkConfig(`value`.let(NetworkConfigProperty::unwrap))
+    unwrap(this).setNetworkConfig(`value`.let(NetworkConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -383,14 +383,14 @@ public open class CfnModelBiasJobDefinition(
    * A time limit for how long the monitoring job is allowed to run before stopping.
    */
   public open fun stoppingCondition(`value`: IResolvable) {
-    unwrap(this).setStoppingCondition(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStoppingCondition(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A time limit for how long the monitoring job is allowed to run before stopping.
    */
   public open fun stoppingCondition(`value`: StoppingConditionProperty) {
-    unwrap(this).setStoppingCondition(`value`.let(StoppingConditionProperty::unwrap))
+    unwrap(this).setStoppingCondition(`value`.let(StoppingConditionProperty.Companion::unwrap))
   }
 
   /**
@@ -416,7 +416,7 @@ public open class CfnModelBiasJobDefinition(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -712,7 +712,7 @@ public open class CfnModelBiasJobDefinition(
      * @param jobResources Identifies the resources to deploy for a monitoring job. 
      */
     override fun jobResources(jobResources: IResolvable) {
-      cdkBuilder.jobResources(jobResources.let(IResolvable::unwrap))
+      cdkBuilder.jobResources(jobResources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -722,7 +722,7 @@ public open class CfnModelBiasJobDefinition(
      * @param jobResources Identifies the resources to deploy for a monitoring job. 
      */
     override fun jobResources(jobResources: MonitoringResourcesProperty) {
-      cdkBuilder.jobResources(jobResources.let(MonitoringResourcesProperty::unwrap))
+      cdkBuilder.jobResources(jobResources.let(MonitoringResourcesProperty.Companion::unwrap))
     }
 
     /**
@@ -744,7 +744,7 @@ public open class CfnModelBiasJobDefinition(
      * container image. 
      */
     override fun modelBiasAppSpecification(modelBiasAppSpecification: IResolvable) {
-      cdkBuilder.modelBiasAppSpecification(modelBiasAppSpecification.let(IResolvable::unwrap))
+      cdkBuilder.modelBiasAppSpecification(modelBiasAppSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -756,7 +756,7 @@ public open class CfnModelBiasJobDefinition(
      */
     override
         fun modelBiasAppSpecification(modelBiasAppSpecification: ModelBiasAppSpecificationProperty) {
-      cdkBuilder.modelBiasAppSpecification(modelBiasAppSpecification.let(ModelBiasAppSpecificationProperty::unwrap))
+      cdkBuilder.modelBiasAppSpecification(modelBiasAppSpecification.let(ModelBiasAppSpecificationProperty.Companion::unwrap))
     }
 
     /**
@@ -780,7 +780,7 @@ public open class CfnModelBiasJobDefinition(
      * @param modelBiasBaselineConfig The baseline configuration for a model bias job. 
      */
     override fun modelBiasBaselineConfig(modelBiasBaselineConfig: IResolvable) {
-      cdkBuilder.modelBiasBaselineConfig(modelBiasBaselineConfig.let(IResolvable::unwrap))
+      cdkBuilder.modelBiasBaselineConfig(modelBiasBaselineConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -790,7 +790,7 @@ public open class CfnModelBiasJobDefinition(
      * @param modelBiasBaselineConfig The baseline configuration for a model bias job. 
      */
     override fun modelBiasBaselineConfig(modelBiasBaselineConfig: ModelBiasBaselineConfigProperty) {
-      cdkBuilder.modelBiasBaselineConfig(modelBiasBaselineConfig.let(ModelBiasBaselineConfigProperty::unwrap))
+      cdkBuilder.modelBiasBaselineConfig(modelBiasBaselineConfig.let(ModelBiasBaselineConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -812,7 +812,7 @@ public open class CfnModelBiasJobDefinition(
      * @param modelBiasJobInput Inputs for the model bias job. 
      */
     override fun modelBiasJobInput(modelBiasJobInput: IResolvable) {
-      cdkBuilder.modelBiasJobInput(modelBiasJobInput.let(IResolvable::unwrap))
+      cdkBuilder.modelBiasJobInput(modelBiasJobInput.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -822,7 +822,7 @@ public open class CfnModelBiasJobDefinition(
      * @param modelBiasJobInput Inputs for the model bias job. 
      */
     override fun modelBiasJobInput(modelBiasJobInput: ModelBiasJobInputProperty) {
-      cdkBuilder.modelBiasJobInput(modelBiasJobInput.let(ModelBiasJobInputProperty::unwrap))
+      cdkBuilder.modelBiasJobInput(modelBiasJobInput.let(ModelBiasJobInputProperty.Companion::unwrap))
     }
 
     /**
@@ -843,7 +843,7 @@ public open class CfnModelBiasJobDefinition(
      * @param modelBiasJobOutputConfig The output configuration for monitoring jobs. 
      */
     override fun modelBiasJobOutputConfig(modelBiasJobOutputConfig: IResolvable) {
-      cdkBuilder.modelBiasJobOutputConfig(modelBiasJobOutputConfig.let(IResolvable::unwrap))
+      cdkBuilder.modelBiasJobOutputConfig(modelBiasJobOutputConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -854,7 +854,7 @@ public open class CfnModelBiasJobDefinition(
      */
     override
         fun modelBiasJobOutputConfig(modelBiasJobOutputConfig: MonitoringOutputConfigProperty) {
-      cdkBuilder.modelBiasJobOutputConfig(modelBiasJobOutputConfig.let(MonitoringOutputConfigProperty::unwrap))
+      cdkBuilder.modelBiasJobOutputConfig(modelBiasJobOutputConfig.let(MonitoringOutputConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -876,7 +876,7 @@ public open class CfnModelBiasJobDefinition(
      * @param networkConfig Networking options for a model bias job. 
      */
     override fun networkConfig(networkConfig: IResolvable) {
-      cdkBuilder.networkConfig(networkConfig.let(IResolvable::unwrap))
+      cdkBuilder.networkConfig(networkConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -886,7 +886,7 @@ public open class CfnModelBiasJobDefinition(
      * @param networkConfig Networking options for a model bias job. 
      */
     override fun networkConfig(networkConfig: NetworkConfigProperty) {
-      cdkBuilder.networkConfig(networkConfig.let(NetworkConfigProperty::unwrap))
+      cdkBuilder.networkConfig(networkConfig.let(NetworkConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -920,7 +920,7 @@ public open class CfnModelBiasJobDefinition(
      * before stopping. 
      */
     override fun stoppingCondition(stoppingCondition: IResolvable) {
-      cdkBuilder.stoppingCondition(stoppingCondition.let(IResolvable::unwrap))
+      cdkBuilder.stoppingCondition(stoppingCondition.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -931,7 +931,7 @@ public open class CfnModelBiasJobDefinition(
      * before stopping. 
      */
     override fun stoppingCondition(stoppingCondition: StoppingConditionProperty) {
-      cdkBuilder.stoppingCondition(stoppingCondition.let(StoppingConditionProperty::unwrap))
+      cdkBuilder.stoppingCondition(stoppingCondition.let(StoppingConditionProperty.Companion::unwrap))
     }
 
     /**
@@ -957,7 +957,7 @@ public open class CfnModelBiasJobDefinition(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1236,14 +1236,14 @@ public open class CfnModelBiasJobDefinition(
        * @param datasetFormat The dataset format for your batch transform job. 
        */
       override fun datasetFormat(datasetFormat: IResolvable) {
-        cdkBuilder.datasetFormat(datasetFormat.let(IResolvable::unwrap))
+        cdkBuilder.datasetFormat(datasetFormat.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param datasetFormat The dataset format for your batch transform job. 
        */
       override fun datasetFormat(datasetFormat: DatasetFormatProperty) {
-        cdkBuilder.datasetFormat(datasetFormat.let(DatasetFormatProperty::unwrap))
+        cdkBuilder.datasetFormat(datasetFormat.let(DatasetFormatProperty.Companion::unwrap))
       }
 
       /**
@@ -1781,7 +1781,7 @@ public open class CfnModelBiasJobDefinition(
        * @param header A boolean flag indicating if given CSV has header.
        */
       override fun `header`(`header`: IResolvable) {
-        cdkBuilder.`header`(`header`.let(IResolvable::unwrap))
+        cdkBuilder.`header`(`header`.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1921,14 +1921,14 @@ public open class CfnModelBiasJobDefinition(
        * @param csv The CSV format.
        */
       override fun csv(csv: IResolvable) {
-        cdkBuilder.csv(csv.let(IResolvable::unwrap))
+        cdkBuilder.csv(csv.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param csv The CSV format.
        */
       override fun csv(csv: CsvProperty) {
-        cdkBuilder.csv(csv.let(CsvProperty::unwrap))
+        cdkBuilder.csv(csv.let(CsvProperty.Companion::unwrap))
       }
 
       /**
@@ -1942,14 +1942,14 @@ public open class CfnModelBiasJobDefinition(
        * @param json The Json format.
        */
       override fun json(json: IResolvable) {
-        cdkBuilder.json(json.let(IResolvable::unwrap))
+        cdkBuilder.json(json.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param json The Json format.
        */
       override fun json(json: JsonProperty) {
-        cdkBuilder.json(json.let(JsonProperty::unwrap))
+        cdkBuilder.json(json.let(JsonProperty.Companion::unwrap))
       }
 
       /**
@@ -1970,7 +1970,7 @@ public open class CfnModelBiasJobDefinition(
        * @param parquet A flag indicate if the dataset format is Parquet.
        */
       override fun parquet(parquet: IResolvable) {
-        cdkBuilder.parquet(parquet.let(IResolvable::unwrap))
+        cdkBuilder.parquet(parquet.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2477,7 +2477,7 @@ public open class CfnModelBiasJobDefinition(
        * @param line A boolean flag indicating if it is JSON line format.
        */
       override fun line(line: IResolvable) {
-        cdkBuilder.line(line.let(IResolvable::unwrap))
+        cdkBuilder.line(line.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2609,7 +2609,7 @@ public open class CfnModelBiasJobDefinition(
        * @param environment Sets the environment variables in the Docker container.
        */
       override fun environment(environment: IResolvable) {
-        cdkBuilder.environment(environment.let(IResolvable::unwrap))
+        cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2760,14 +2760,14 @@ public open class CfnModelBiasJobDefinition(
        * @param constraintsResource The constraints resource for a monitoring job.
        */
       override fun constraintsResource(constraintsResource: IResolvable) {
-        cdkBuilder.constraintsResource(constraintsResource.let(IResolvable::unwrap))
+        cdkBuilder.constraintsResource(constraintsResource.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param constraintsResource The constraints resource for a monitoring job.
        */
       override fun constraintsResource(constraintsResource: ConstraintsResourceProperty) {
-        cdkBuilder.constraintsResource(constraintsResource.let(ConstraintsResourceProperty::unwrap))
+        cdkBuilder.constraintsResource(constraintsResource.let(ConstraintsResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -2965,14 +2965,14 @@ public open class CfnModelBiasJobDefinition(
        * @param batchTransformInput Input object for the batch transform job.
        */
       override fun batchTransformInput(batchTransformInput: IResolvable) {
-        cdkBuilder.batchTransformInput(batchTransformInput.let(IResolvable::unwrap))
+        cdkBuilder.batchTransformInput(batchTransformInput.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param batchTransformInput Input object for the batch transform job.
        */
       override fun batchTransformInput(batchTransformInput: BatchTransformInputProperty) {
-        cdkBuilder.batchTransformInput(batchTransformInput.let(BatchTransformInputProperty::unwrap))
+        cdkBuilder.batchTransformInput(batchTransformInput.let(BatchTransformInputProperty.Companion::unwrap))
       }
 
       /**
@@ -2988,14 +2988,14 @@ public open class CfnModelBiasJobDefinition(
        * @param endpointInput Input object for the endpoint.
        */
       override fun endpointInput(endpointInput: IResolvable) {
-        cdkBuilder.endpointInput(endpointInput.let(IResolvable::unwrap))
+        cdkBuilder.endpointInput(endpointInput.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param endpointInput Input object for the endpoint.
        */
       override fun endpointInput(endpointInput: EndpointInputProperty) {
-        cdkBuilder.endpointInput(endpointInput.let(EndpointInputProperty::unwrap))
+        cdkBuilder.endpointInput(endpointInput.let(EndpointInputProperty.Companion::unwrap))
       }
 
       /**
@@ -3010,14 +3010,14 @@ public open class CfnModelBiasJobDefinition(
        * @param groundTruthS3Input Location of ground truth labels to use in model bias job. 
        */
       override fun groundTruthS3Input(groundTruthS3Input: IResolvable) {
-        cdkBuilder.groundTruthS3Input(groundTruthS3Input.let(IResolvable::unwrap))
+        cdkBuilder.groundTruthS3Input(groundTruthS3Input.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param groundTruthS3Input Location of ground truth labels to use in model bias job. 
        */
       override fun groundTruthS3Input(groundTruthS3Input: MonitoringGroundTruthS3InputProperty) {
-        cdkBuilder.groundTruthS3Input(groundTruthS3Input.let(MonitoringGroundTruthS3InputProperty::unwrap))
+        cdkBuilder.groundTruthS3Input(groundTruthS3Input.let(MonitoringGroundTruthS3InputProperty.Companion::unwrap))
       }
 
       /**
@@ -3254,7 +3254,7 @@ public open class CfnModelBiasJobDefinition(
        * This is where the output of the periodic monitoring jobs is uploaded.
        */
       override fun monitoringOutputs(monitoringOutputs: IResolvable) {
-        cdkBuilder.monitoringOutputs(monitoringOutputs.let(IResolvable::unwrap))
+        cdkBuilder.monitoringOutputs(monitoringOutputs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3382,7 +3382,7 @@ public open class CfnModelBiasJobDefinition(
        * saved. 
        */
       override fun s3Output(s3Output: IResolvable) {
-        cdkBuilder.s3Output(s3Output.let(IResolvable::unwrap))
+        cdkBuilder.s3Output(s3Output.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3390,7 +3390,7 @@ public open class CfnModelBiasJobDefinition(
        * saved. 
        */
       override fun s3Output(s3Output: S3OutputProperty) {
-        cdkBuilder.s3Output(s3Output.let(S3OutputProperty::unwrap))
+        cdkBuilder.s3Output(s3Output.let(S3OutputProperty.Companion::unwrap))
       }
 
       /**
@@ -3503,7 +3503,7 @@ public open class CfnModelBiasJobDefinition(
        * job. 
        */
       override fun clusterConfig(clusterConfig: IResolvable) {
-        cdkBuilder.clusterConfig(clusterConfig.let(IResolvable::unwrap))
+        cdkBuilder.clusterConfig(clusterConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3511,7 +3511,7 @@ public open class CfnModelBiasJobDefinition(
        * job. 
        */
       override fun clusterConfig(clusterConfig: ClusterConfigProperty) {
-        cdkBuilder.clusterConfig(clusterConfig.let(ClusterConfigProperty::unwrap))
+        cdkBuilder.clusterConfig(clusterConfig.let(ClusterConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -3690,7 +3690,7 @@ public open class CfnModelBiasJobDefinition(
        */
       override
           fun enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption: IResolvable) {
-        cdkBuilder.enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption.let(IResolvable::unwrap))
+        cdkBuilder.enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3706,7 +3706,7 @@ public open class CfnModelBiasJobDefinition(
        * from the containers used for the processing job.
        */
       override fun enableNetworkIsolation(enableNetworkIsolation: IResolvable) {
-        cdkBuilder.enableNetworkIsolation(enableNetworkIsolation.let(IResolvable::unwrap))
+        cdkBuilder.enableNetworkIsolation(enableNetworkIsolation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3714,7 +3714,7 @@ public open class CfnModelBiasJobDefinition(
        * Control access to and from your training and model containers by configuring the VPC.
        */
       override fun vpcConfig(vpcConfig: IResolvable) {
-        cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+        cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3722,7 +3722,7 @@ public open class CfnModelBiasJobDefinition(
        * Control access to and from your training and model containers by configuring the VPC.
        */
       override fun vpcConfig(vpcConfig: VpcConfigProperty) {
-        cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
+        cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty.Companion::unwrap))
       }
 
       /**

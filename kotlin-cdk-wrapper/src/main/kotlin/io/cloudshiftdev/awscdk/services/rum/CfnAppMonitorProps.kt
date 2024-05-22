@@ -305,7 +305,7 @@ public interface CfnAppMonitorProps {
      * sessions.
      */
     override fun appMonitorConfiguration(appMonitorConfiguration: IResolvable) {
-      cdkBuilder.appMonitorConfiguration(appMonitorConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.appMonitorConfiguration(appMonitorConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -323,7 +323,7 @@ public interface CfnAppMonitorProps {
      */
     override
         fun appMonitorConfiguration(appMonitorConfiguration: CfnAppMonitor.AppMonitorConfigurationProperty) {
-      cdkBuilder.appMonitorConfiguration(appMonitorConfiguration.let(CfnAppMonitor.AppMonitorConfigurationProperty::unwrap))
+      cdkBuilder.appMonitorConfiguration(appMonitorConfiguration.let(CfnAppMonitor.AppMonitorConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -352,7 +352,7 @@ public interface CfnAppMonitorProps {
      * If you omit this parameter, custom events are `DISABLED` .
      */
     override fun customEvents(customEvents: IResolvable) {
-      cdkBuilder.customEvents(customEvents.let(IResolvable::unwrap))
+      cdkBuilder.customEvents(customEvents.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -361,7 +361,7 @@ public interface CfnAppMonitorProps {
      * If you omit this parameter, custom events are `DISABLED` .
      */
     override fun customEvents(customEvents: CfnAppMonitor.CustomEventsProperty) {
-      cdkBuilder.customEvents(customEvents.let(CfnAppMonitor.CustomEventsProperty::unwrap))
+      cdkBuilder.customEvents(customEvents.let(CfnAppMonitor.CustomEventsProperty.Companion::unwrap))
     }
 
     /**
@@ -397,7 +397,7 @@ public interface CfnAppMonitorProps {
      * If you omit this parameter, the default is `false` .
      */
     override fun cwLogEnabled(cwLogEnabled: IResolvable) {
-      cdkBuilder.cwLogEnabled(cwLogEnabled.let(IResolvable::unwrap))
+      cdkBuilder.cwLogEnabled(cwLogEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -430,7 +430,7 @@ public interface CfnAppMonitorProps {
      * resources](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html) .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

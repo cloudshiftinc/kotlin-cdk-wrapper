@@ -388,14 +388,14 @@ public interface CfnClusterProps {
      * @param brokerNodeGroupInfo Information about the broker nodes in the cluster. 
      */
     override fun brokerNodeGroupInfo(brokerNodeGroupInfo: IResolvable) {
-      cdkBuilder.brokerNodeGroupInfo(brokerNodeGroupInfo.let(IResolvable::unwrap))
+      cdkBuilder.brokerNodeGroupInfo(brokerNodeGroupInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param brokerNodeGroupInfo Information about the broker nodes in the cluster. 
      */
     override fun brokerNodeGroupInfo(brokerNodeGroupInfo: CfnCluster.BrokerNodeGroupInfoProperty) {
-      cdkBuilder.brokerNodeGroupInfo(brokerNodeGroupInfo.let(CfnCluster.BrokerNodeGroupInfoProperty::unwrap))
+      cdkBuilder.brokerNodeGroupInfo(brokerNodeGroupInfo.let(CfnCluster.BrokerNodeGroupInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -411,7 +411,7 @@ public interface CfnClusterProps {
      * @param clientAuthentication VPC connection control settings for brokers.
      */
     override fun clientAuthentication(clientAuthentication: IResolvable) {
-      cdkBuilder.clientAuthentication(clientAuthentication.let(IResolvable::unwrap))
+      cdkBuilder.clientAuthentication(clientAuthentication.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -419,7 +419,7 @@ public interface CfnClusterProps {
      */
     override
         fun clientAuthentication(clientAuthentication: CfnCluster.ClientAuthenticationProperty) {
-      cdkBuilder.clientAuthentication(clientAuthentication.let(CfnCluster.ClientAuthenticationProperty::unwrap))
+      cdkBuilder.clientAuthentication(clientAuthentication.let(CfnCluster.ClientAuthenticationProperty.Companion::unwrap))
     }
 
     /**
@@ -443,7 +443,7 @@ public interface CfnClusterProps {
      * cluster.
      */
     override fun configurationInfo(configurationInfo: IResolvable) {
-      cdkBuilder.configurationInfo(configurationInfo.let(IResolvable::unwrap))
+      cdkBuilder.configurationInfo(configurationInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -451,7 +451,7 @@ public interface CfnClusterProps {
      * cluster.
      */
     override fun configurationInfo(configurationInfo: CfnCluster.ConfigurationInfoProperty) {
-      cdkBuilder.configurationInfo(configurationInfo.let(CfnCluster.ConfigurationInfoProperty::unwrap))
+      cdkBuilder.configurationInfo(configurationInfo.let(CfnCluster.ConfigurationInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -475,14 +475,14 @@ public interface CfnClusterProps {
      * @param encryptionInfo Includes all encryption-related information.
      */
     override fun encryptionInfo(encryptionInfo: IResolvable) {
-      cdkBuilder.encryptionInfo(encryptionInfo.let(IResolvable::unwrap))
+      cdkBuilder.encryptionInfo(encryptionInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param encryptionInfo Includes all encryption-related information.
      */
     override fun encryptionInfo(encryptionInfo: CfnCluster.EncryptionInfoProperty) {
-      cdkBuilder.encryptionInfo(encryptionInfo.let(CfnCluster.EncryptionInfoProperty::unwrap))
+      cdkBuilder.encryptionInfo(encryptionInfo.let(CfnCluster.EncryptionInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -514,14 +514,14 @@ public interface CfnClusterProps {
      * @param loggingInfo Logging Info details.
      */
     override fun loggingInfo(loggingInfo: IResolvable) {
-      cdkBuilder.loggingInfo(loggingInfo.let(IResolvable::unwrap))
+      cdkBuilder.loggingInfo(loggingInfo.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param loggingInfo Logging Info details.
      */
     override fun loggingInfo(loggingInfo: CfnCluster.LoggingInfoProperty) {
-      cdkBuilder.loggingInfo(loggingInfo.let(CfnCluster.LoggingInfoProperty::unwrap))
+      cdkBuilder.loggingInfo(loggingInfo.let(CfnCluster.LoggingInfoProperty.Companion::unwrap))
     }
 
     /**
@@ -543,14 +543,14 @@ public interface CfnClusterProps {
      * @param openMonitoring The settings for open monitoring.
      */
     override fun openMonitoring(openMonitoring: IResolvable) {
-      cdkBuilder.openMonitoring(openMonitoring.let(IResolvable::unwrap))
+      cdkBuilder.openMonitoring(openMonitoring.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param openMonitoring The settings for open monitoring.
      */
     override fun openMonitoring(openMonitoring: CfnCluster.OpenMonitoringProperty) {
-      cdkBuilder.openMonitoring(openMonitoring.let(CfnCluster.OpenMonitoringProperty::unwrap))
+      cdkBuilder.openMonitoring(openMonitoring.let(CfnCluster.OpenMonitoringProperty.Companion::unwrap))
     }
 
     /**

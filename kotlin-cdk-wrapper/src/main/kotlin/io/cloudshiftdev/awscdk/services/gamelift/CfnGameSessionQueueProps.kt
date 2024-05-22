@@ -330,7 +330,7 @@ public interface CfnGameSessionQueueProps {
      * order of placement preference.
      */
     override fun destinations(destinations: IResolvable) {
-      cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
+      cdkBuilder.destinations(destinations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -358,7 +358,7 @@ public interface CfnGameSessionQueueProps {
      * parameter is not set, game sessions can be placed in any queue location.
      */
     override fun filterConfiguration(filterConfiguration: IResolvable) {
-      cdkBuilder.filterConfiguration(filterConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.filterConfiguration(filterConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -369,7 +369,7 @@ public interface CfnGameSessionQueueProps {
      */
     override
         fun filterConfiguration(filterConfiguration: CfnGameSessionQueue.FilterConfigurationProperty) {
-      cdkBuilder.filterConfiguration(filterConfiguration.let(CfnGameSessionQueue.FilterConfigurationProperty::unwrap))
+      cdkBuilder.filterConfiguration(filterConfiguration.let(CfnGameSessionQueue.FilterConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -411,7 +411,7 @@ public interface CfnGameSessionQueueProps {
      * are applied based on their maximum allowed latency, starting with the lowest value.
      */
     override fun playerLatencyPolicies(playerLatencyPolicies: IResolvable) {
-      cdkBuilder.playerLatencyPolicies(playerLatencyPolicies.let(IResolvable::unwrap))
+      cdkBuilder.playerLatencyPolicies(playerLatencyPolicies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -442,7 +442,7 @@ public interface CfnGameSessionQueueProps {
      * are not explicitly named will be automatically applied at the end of the prioritization process.
      */
     override fun priorityConfiguration(priorityConfiguration: IResolvable) {
-      cdkBuilder.priorityConfiguration(priorityConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.priorityConfiguration(priorityConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -453,7 +453,7 @@ public interface CfnGameSessionQueueProps {
      */
     override
         fun priorityConfiguration(priorityConfiguration: CfnGameSessionQueue.PriorityConfigurationProperty) {
-      cdkBuilder.priorityConfiguration(priorityConfiguration.let(CfnGameSessionQueue.PriorityConfigurationProperty::unwrap))
+      cdkBuilder.priorityConfiguration(priorityConfiguration.let(CfnGameSessionQueue.PriorityConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -479,7 +479,7 @@ public interface CfnGameSessionQueueProps {
      * stated. See the AWS General Reference for actual tagging limits.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

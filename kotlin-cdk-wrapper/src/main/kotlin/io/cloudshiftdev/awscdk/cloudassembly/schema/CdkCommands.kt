@@ -90,7 +90,7 @@ public interface CdkCommands {
      * @param deploy Options to for the cdk deploy command.
      */
     override fun deploy(deploy: DeployCommand) {
-      cdkBuilder.deploy(deploy.let(DeployCommand::unwrap))
+      cdkBuilder.deploy(deploy.let(DeployCommand.Companion::unwrap))
     }
 
     /**
@@ -105,7 +105,7 @@ public interface CdkCommands {
      * @param destroy Options to for the cdk destroy command.
      */
     override fun destroy(destroy: DestroyCommand) {
-      cdkBuilder.destroy(destroy.let(DestroyCommand::unwrap))
+      cdkBuilder.destroy(destroy.let(DestroyCommand.Companion::unwrap))
     }
 
     /**

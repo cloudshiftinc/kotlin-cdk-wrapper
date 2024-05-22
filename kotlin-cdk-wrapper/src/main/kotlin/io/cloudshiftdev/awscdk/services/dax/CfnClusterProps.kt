@@ -468,7 +468,7 @@ public interface CfnClusterProps {
      * cluster.
      */
     override fun sseSpecification(sseSpecification: IResolvable) {
-      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -476,7 +476,7 @@ public interface CfnClusterProps {
      * cluster.
      */
     override fun sseSpecification(sseSpecification: CfnCluster.SSESpecificationProperty) {
-      cdkBuilder.sseSpecification(sseSpecification.let(CfnCluster.SSESpecificationProperty::unwrap))
+      cdkBuilder.sseSpecification(sseSpecification.let(CfnCluster.SSESpecificationProperty.Companion::unwrap))
     }
 
     /**

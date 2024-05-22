@@ -38,7 +38,7 @@ public open class AlbArnTarget(
    */
   public override fun attachToNetworkTargetGroup(targetGroup: INetworkTargetGroup):
       LoadBalancerTargetProps =
-      unwrap(this).attachToNetworkTargetGroup(targetGroup.let(INetworkTargetGroup::unwrap)).let(LoadBalancerTargetProps::wrap)
+      unwrap(this).attachToNetworkTargetGroup(targetGroup.let(INetworkTargetGroup.Companion::unwrap)).let(LoadBalancerTargetProps::wrap)
 
   public companion object {
     internal

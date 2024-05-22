@@ -70,7 +70,7 @@ public interface AliasAttributes {
      * @param aliasTargetKey The customer master key (CMK) to which the Alias refers. 
      */
     override fun aliasTargetKey(aliasTargetKey: IKey) {
-      cdkBuilder.aliasTargetKey(aliasTargetKey.let(IKey::unwrap))
+      cdkBuilder.aliasTargetKey(aliasTargetKey.let(IKey.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.kms.AliasAttributes = cdkBuilder.build()

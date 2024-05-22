@@ -91,8 +91,8 @@ public open class CfnReplicaKey(
     id: String,
     props: CfnReplicaKeyProps,
   ) :
-      this(software.amazon.awscdk.services.kms.CfnReplicaKey(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnReplicaKeyProps::unwrap))
+      this(software.amazon.awscdk.services.kms.CfnReplicaKey(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnReplicaKeyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -157,7 +157,7 @@ public open class CfnReplicaKey(
    * Disabled KMS keys cannot be used in cryptographic operations.
    */
   public open fun enabled(`value`: IResolvable) {
-    unwrap(this).setEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -166,7 +166,7 @@ public open class CfnReplicaKey(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -222,7 +222,7 @@ public open class CfnReplicaKey(
    * Assigns one or more tags to the replica key.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -537,7 +537,7 @@ public open class CfnReplicaKey(
      * in cryptographic operations. 
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -681,7 +681,7 @@ public open class CfnReplicaKey(
      * @param tags Assigns one or more tags to the replica key. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

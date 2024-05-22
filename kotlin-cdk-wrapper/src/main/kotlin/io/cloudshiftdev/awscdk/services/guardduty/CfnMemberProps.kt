@@ -158,7 +158,7 @@ public interface CfnMemberProps {
      * the member account that you invite.
      */
     override fun disableEmailNotification(disableEmailNotification: IResolvable) {
-      cdkBuilder.disableEmailNotification(disableEmailNotification.let(IResolvable::unwrap))
+      cdkBuilder.disableEmailNotification(disableEmailNotification.let(IResolvable.Companion::unwrap))
     }
 
     /**

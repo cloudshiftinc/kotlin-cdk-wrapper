@@ -187,7 +187,7 @@ public interface CfnSuiteDefinitionProps {
      * @param tags Metadata that can be used to manage the the Suite Definition.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

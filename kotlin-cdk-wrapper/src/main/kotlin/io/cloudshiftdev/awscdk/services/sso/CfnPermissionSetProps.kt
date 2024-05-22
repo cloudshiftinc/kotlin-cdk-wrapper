@@ -305,7 +305,7 @@ public interface CfnPermissionSetProps {
      * policies that you have attached to your permission set.
      */
     override fun customerManagedPolicyReferences(customerManagedPolicyReferences: IResolvable) {
-      cdkBuilder.customerManagedPolicyReferences(customerManagedPolicyReferences.let(IResolvable::unwrap))
+      cdkBuilder.customerManagedPolicyReferences(customerManagedPolicyReferences.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -389,7 +389,7 @@ public interface CfnPermissionSetProps {
      * in the *IAM User Guide* .
      */
     override fun permissionsBoundary(permissionsBoundary: IResolvable) {
-      cdkBuilder.permissionsBoundary(permissionsBoundary.let(IResolvable::unwrap))
+      cdkBuilder.permissionsBoundary(permissionsBoundary.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -411,7 +411,7 @@ public interface CfnPermissionSetProps {
      */
     override
         fun permissionsBoundary(permissionsBoundary: CfnPermissionSet.PermissionsBoundaryProperty) {
-      cdkBuilder.permissionsBoundary(permissionsBoundary.let(CfnPermissionSet.PermissionsBoundaryProperty::unwrap))
+      cdkBuilder.permissionsBoundary(permissionsBoundary.let(CfnPermissionSet.PermissionsBoundaryProperty.Companion::unwrap))
     }
 
     /**
@@ -458,7 +458,7 @@ public interface CfnPermissionSetProps {
      * @param tags The tags to attach to the new `PermissionSet` .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

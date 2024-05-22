@@ -121,7 +121,7 @@ public interface LockConfiguration {
      * becomes immutable and cannot be changed or deleted.
      */
     override fun changeableFor(changeableFor: Duration) {
-      cdkBuilder.changeableFor(changeableFor.let(Duration::unwrap))
+      cdkBuilder.changeableFor(changeableFor.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -135,7 +135,7 @@ public interface LockConfiguration {
      * not affected.
      */
     override fun maxRetention(maxRetention: Duration) {
-      cdkBuilder.maxRetention(maxRetention.let(Duration::unwrap))
+      cdkBuilder.maxRetention(maxRetention.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -149,7 +149,7 @@ public interface LockConfiguration {
      * not affected.
      */
     override fun minRetention(minRetention: Duration) {
-      cdkBuilder.minRetention(minRetention.let(Duration::unwrap))
+      cdkBuilder.minRetention(minRetention.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.backup.LockConfiguration =

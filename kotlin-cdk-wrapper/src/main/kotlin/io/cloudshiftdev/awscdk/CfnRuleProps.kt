@@ -99,7 +99,7 @@ public interface CfnRuleProps {
      * @param assertions Assertions which define the rule.
      */
     override fun assertions(assertions: List<CfnRuleAssertion>) {
-      cdkBuilder.assertions(assertions.map(CfnRuleAssertion::unwrap))
+      cdkBuilder.assertions(assertions.map(CfnRuleAssertion.Companion::unwrap))
     }
 
     /**
@@ -114,7 +114,7 @@ public interface CfnRuleProps {
      * evaluated and applied.
      */
     override fun ruleCondition(ruleCondition: ICfnConditionExpression) {
-      cdkBuilder.ruleCondition(ruleCondition.let(ICfnConditionExpression::unwrap))
+      cdkBuilder.ruleCondition(ruleCondition.let(ICfnConditionExpression.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.CfnRuleProps = cdkBuilder.build()

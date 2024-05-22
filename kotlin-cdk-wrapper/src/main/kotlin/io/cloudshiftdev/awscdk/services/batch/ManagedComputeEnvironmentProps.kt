@@ -355,7 +355,7 @@ public interface ManagedComputeEnvironmentProps : ComputeEnvironmentProps {
      * @param securityGroups The security groups this Compute Environment will launch instances in.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -369,7 +369,7 @@ public interface ManagedComputeEnvironmentProps : ComputeEnvironmentProps {
      * such as provision instances to run your jobs.
      */
     override fun serviceRole(serviceRole: IRole) {
-      cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
+      cdkBuilder.serviceRole(serviceRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -399,7 +399,7 @@ public interface ManagedComputeEnvironmentProps : ComputeEnvironmentProps {
      * will be allowed to run until `updateTimeout` has expired.
      */
     override fun updateTimeout(updateTimeout: Duration) {
-      cdkBuilder.updateTimeout(updateTimeout.let(Duration::unwrap))
+      cdkBuilder.updateTimeout(updateTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -415,14 +415,14 @@ public interface ManagedComputeEnvironmentProps : ComputeEnvironmentProps {
      * @param vpc VPC in which this Compute Environment will launch Instances. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
      * @param vpcSubnets The VPC Subnets this Compute Environment will launch instances in.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

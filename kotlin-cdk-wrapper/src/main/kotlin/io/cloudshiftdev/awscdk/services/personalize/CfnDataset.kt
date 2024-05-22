@@ -83,8 +83,8 @@ public open class CfnDataset(
     id: String,
     props: CfnDatasetProps,
   ) :
-      this(software.amazon.awscdk.services.personalize.CfnDataset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDatasetProps::unwrap))
+      this(software.amazon.awscdk.services.personalize.CfnDataset(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDatasetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -122,7 +122,7 @@ public open class CfnDataset(
    * Personalize dataset.
    */
   public open fun datasetImportJob(`value`: IResolvable) {
-    unwrap(this).setDatasetImportJob(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDatasetImportJob(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -130,7 +130,7 @@ public open class CfnDataset(
    * Personalize dataset.
    */
   public open fun datasetImportJob(`value`: DatasetImportJobProperty) {
-    unwrap(this).setDatasetImportJob(`value`.let(DatasetImportJobProperty::unwrap))
+    unwrap(this).setDatasetImportJob(`value`.let(DatasetImportJobProperty.Companion::unwrap))
   }
 
   /**
@@ -160,7 +160,7 @@ public open class CfnDataset(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -303,7 +303,7 @@ public open class CfnDataset(
      * S3 bucket) to an Amazon Personalize dataset. 
      */
     override fun datasetImportJob(datasetImportJob: IResolvable) {
-      cdkBuilder.datasetImportJob(datasetImportJob.let(IResolvable::unwrap))
+      cdkBuilder.datasetImportJob(datasetImportJob.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -318,7 +318,7 @@ public open class CfnDataset(
      * S3 bucket) to an Amazon Personalize dataset. 
      */
     override fun datasetImportJob(datasetImportJob: DatasetImportJobProperty) {
-      cdkBuilder.datasetImportJob(datasetImportJob.let(DatasetImportJobProperty::unwrap))
+      cdkBuilder.datasetImportJob(datasetImportJob.let(DatasetImportJobProperty.Companion::unwrap))
     }
 
     /**

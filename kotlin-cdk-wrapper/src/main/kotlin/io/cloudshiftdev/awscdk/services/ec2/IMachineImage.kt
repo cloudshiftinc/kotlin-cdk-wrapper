@@ -26,7 +26,7 @@ public interface IMachineImage {
      * @param scope 
      */
     override fun image(scope: Construct): MachineImageConfig =
-        unwrap(this).getImage(scope.let(Construct::unwrap)).let(MachineImageConfig::wrap)
+        unwrap(this).getImage(scope.let(Construct.Companion::unwrap)).let(MachineImageConfig::wrap)
   }
 
   public companion object {

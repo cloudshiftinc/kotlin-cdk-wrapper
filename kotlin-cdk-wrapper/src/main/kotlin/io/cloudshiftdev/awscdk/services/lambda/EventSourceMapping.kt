@@ -82,8 +82,8 @@ public open class EventSourceMapping(
     id: String,
     props: EventSourceMappingProps,
   ) :
-      this(software.amazon.awscdk.services.lambda.EventSourceMapping(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(EventSourceMappingProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.EventSourceMapping(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(EventSourceMappingProps.Companion::unwrap))
   )
 
   public constructor(
@@ -562,7 +562,7 @@ public open class EventSourceMapping(
      * function. 
      */
     override fun maxBatchingWindow(maxBatchingWindow: Duration) {
-      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration::unwrap))
+      cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -597,7 +597,7 @@ public open class EventSourceMapping(
      * processing. 
      */
     override fun maxRecordAge(maxRecordAge: Duration) {
-      cdkBuilder.maxRecordAge(maxRecordAge.let(Duration::unwrap))
+      cdkBuilder.maxRecordAge(maxRecordAge.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -608,7 +608,7 @@ public open class EventSourceMapping(
      * @param onFailure An Amazon SQS queue or Amazon SNS topic destination for discarded records. 
      */
     override fun onFailure(onFailure: IEventSourceDlq) {
-      cdkBuilder.onFailure(onFailure.let(IEventSourceDlq::unwrap))
+      cdkBuilder.onFailure(onFailure.let(IEventSourceDlq.Companion::unwrap))
     }
 
     /**
@@ -672,7 +672,7 @@ public open class EventSourceMapping(
      */
     override
         fun sourceAccessConfigurations(sourceAccessConfigurations: List<SourceAccessConfiguration>) {
-      cdkBuilder.sourceAccessConfigurations(sourceAccessConfigurations.map(SourceAccessConfiguration::unwrap))
+      cdkBuilder.sourceAccessConfigurations(sourceAccessConfigurations.map(SourceAccessConfiguration.Companion::unwrap))
     }
 
     /**
@@ -699,7 +699,7 @@ public open class EventSourceMapping(
      * should start reading. 
      */
     override fun startingPosition(startingPosition: StartingPosition) {
-      cdkBuilder.startingPosition(startingPosition.let(StartingPosition::unwrap))
+      cdkBuilder.startingPosition(startingPosition.let(StartingPosition.Companion::unwrap))
     }
 
     /**
@@ -732,7 +732,7 @@ public open class EventSourceMapping(
      * @param target The target AWS Lambda function. 
      */
     override fun target(target: IFunction) {
-      cdkBuilder.target(target.let(IFunction::unwrap))
+      cdkBuilder.target(target.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -748,7 +748,7 @@ public open class EventSourceMapping(
      * Kinesis. 
      */
     override fun tumblingWindow(tumblingWindow: Duration) {
-      cdkBuilder.tumblingWindow(tumblingWindow.let(Duration::unwrap))
+      cdkBuilder.tumblingWindow(tumblingWindow.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lambda.EventSourceMapping =
@@ -761,7 +761,7 @@ public open class EventSourceMapping(
       id: String,
       eventSourceMappingId: String,
     ): IEventSourceMapping =
-        software.amazon.awscdk.services.lambda.EventSourceMapping.fromEventSourceMappingId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.lambda.EventSourceMapping.fromEventSourceMappingId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, eventSourceMappingId).let(IEventSourceMapping::wrap)
 
     public operator fun invoke(

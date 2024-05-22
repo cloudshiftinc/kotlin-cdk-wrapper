@@ -286,7 +286,7 @@ public interface BucketAttributes {
      * @param encryptionKey KMS encryption key associated with this bucket.
      */
     override fun encryptionKey(encryptionKey: IKey) {
-      cdkBuilder.encryptionKey(encryptionKey.let(IKey::unwrap))
+      cdkBuilder.encryptionKey(encryptionKey.let(IKey.Companion::unwrap))
     }
 
     /**
@@ -300,7 +300,7 @@ public interface BucketAttributes {
      * @param notificationsHandlerRole The role to be used by the notifications handler.
      */
     override fun notificationsHandlerRole(notificationsHandlerRole: IRole) {
-      cdkBuilder.notificationsHandlerRole(notificationsHandlerRole.let(IRole::unwrap))
+      cdkBuilder.notificationsHandlerRole(notificationsHandlerRole.let(IRole.Companion::unwrap))
     }
 
     /**

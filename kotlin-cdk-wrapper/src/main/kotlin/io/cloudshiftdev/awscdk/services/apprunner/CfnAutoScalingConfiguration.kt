@@ -64,7 +64,7 @@ public open class CfnAutoScalingConfiguration(
   cdkObject: software.amazon.awscdk.services.apprunner.CfnAutoScalingConfiguration,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.apprunner.CfnAutoScalingConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.apprunner.CfnAutoScalingConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -73,8 +73,8 @@ public open class CfnAutoScalingConfiguration(
     id: String,
     props: CfnAutoScalingConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.apprunner.CfnAutoScalingConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAutoScalingConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.apprunner.CfnAutoScalingConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAutoScalingConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -133,7 +133,7 @@ public open class CfnAutoScalingConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -181,7 +181,7 @@ public open class CfnAutoScalingConfiguration(
    * A list of metadata items that you can associate with your auto scaling configuration resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -339,7 +339,7 @@ public open class CfnAutoScalingConfiguration(
      * configuration resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

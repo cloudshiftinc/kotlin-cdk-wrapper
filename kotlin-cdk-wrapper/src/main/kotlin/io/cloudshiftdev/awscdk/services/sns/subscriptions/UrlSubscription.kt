@@ -39,7 +39,7 @@ public open class UrlSubscription(
 
   public constructor(url: String, props: UrlSubscriptionProps) :
       this(software.amazon.awscdk.services.sns.subscriptions.UrlSubscription(url,
-      props.let(UrlSubscriptionProps::unwrap))
+      props.let(UrlSubscriptionProps.Companion::unwrap))
   )
 
   public constructor(url: String, props: UrlSubscriptionProps.Builder.() -> Unit) : this(url,
@@ -52,7 +52,7 @@ public open class UrlSubscription(
    * @param _topic 
    */
   public override fun bind(topic: ITopic): TopicSubscriptionConfig =
-      unwrap(this).bind(topic.let(ITopic::unwrap)).let(TopicSubscriptionConfig::wrap)
+      unwrap(this).bind(topic.let(ITopic.Companion::unwrap)).let(TopicSubscriptionConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.sns.subscriptions.UrlSubscription].
@@ -129,7 +129,7 @@ public open class UrlSubscription(
      * @param deadLetterQueue Queue to be used as dead letter queue. 
      */
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
-      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue::unwrap))
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
 
     /**
@@ -166,7 +166,7 @@ public open class UrlSubscription(
      * @param protocol The subscription's protocol. 
      */
     override fun protocol(protocol: SubscriptionProtocol) {
-      cdkBuilder.protocol(protocol.let(SubscriptionProtocol::unwrap))
+      cdkBuilder.protocol(protocol.let(SubscriptionProtocol.Companion::unwrap))
     }
 
     /**

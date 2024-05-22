@@ -73,7 +73,7 @@ public interface AllocateIpv6CidrRequest {
      * @param allocatedSubnets List of subnets allocated with IPv4 CIDRs. 
      */
     override fun allocatedSubnets(allocatedSubnets: List<AllocatedSubnet>) {
-      cdkBuilder.allocatedSubnets(allocatedSubnets.map(AllocatedSubnet::unwrap))
+      cdkBuilder.allocatedSubnets(allocatedSubnets.map(AllocatedSubnet.Companion::unwrap))
     }
 
     /**

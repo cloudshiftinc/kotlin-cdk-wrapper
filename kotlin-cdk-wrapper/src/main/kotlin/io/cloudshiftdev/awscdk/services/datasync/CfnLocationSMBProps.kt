@@ -267,7 +267,7 @@ public interface CfnLocationSMBProps {
      * your SMB file server.
      */
     override fun mountOptions(mountOptions: IResolvable) {
-      cdkBuilder.mountOptions(mountOptions.let(IResolvable::unwrap))
+      cdkBuilder.mountOptions(mountOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -275,7 +275,7 @@ public interface CfnLocationSMBProps {
      * your SMB file server.
      */
     override fun mountOptions(mountOptions: CfnLocationSMB.MountOptionsProperty) {
-      cdkBuilder.mountOptions(mountOptions.let(CfnLocationSMB.MountOptionsProperty::unwrap))
+      cdkBuilder.mountOptions(mountOptions.let(CfnLocationSMB.MountOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -333,7 +333,7 @@ public interface CfnLocationSMBProps {
      * We recommend creating at least a name tag for your location.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

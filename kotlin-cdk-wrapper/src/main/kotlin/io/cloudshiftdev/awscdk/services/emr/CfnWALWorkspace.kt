@@ -41,7 +41,7 @@ public open class CfnWALWorkspace(
   cdkObject: software.amazon.awscdk.services.emr.CfnWALWorkspace,
 ) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.emr.CfnWALWorkspace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.emr.CfnWALWorkspace(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -50,8 +50,8 @@ public open class CfnWALWorkspace(
     id: String,
     props: CfnWALWorkspaceProps,
   ) :
-      this(software.amazon.awscdk.services.emr.CfnWALWorkspace(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnWALWorkspaceProps::unwrap))
+      this(software.amazon.awscdk.services.emr.CfnWALWorkspace(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnWALWorkspaceProps.Companion::unwrap))
   )
 
   public constructor(
@@ -73,7 +73,7 @@ public open class CfnWALWorkspace(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -85,7 +85,7 @@ public open class CfnWALWorkspace(
    * You can add tags when you create a new workspace.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -167,7 +167,7 @@ public open class CfnWALWorkspace(
      * @param tags You can add tags when you create a new workspace. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

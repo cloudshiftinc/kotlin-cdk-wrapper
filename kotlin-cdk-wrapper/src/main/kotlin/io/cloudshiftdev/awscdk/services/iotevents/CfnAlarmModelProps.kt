@@ -353,14 +353,14 @@ public interface CfnAlarmModelProps {
      * @param alarmCapabilities Contains the configuration information of alarm state changes.
      */
     override fun alarmCapabilities(alarmCapabilities: IResolvable) {
-      cdkBuilder.alarmCapabilities(alarmCapabilities.let(IResolvable::unwrap))
+      cdkBuilder.alarmCapabilities(alarmCapabilities.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param alarmCapabilities Contains the configuration information of alarm state changes.
      */
     override fun alarmCapabilities(alarmCapabilities: CfnAlarmModel.AlarmCapabilitiesProperty) {
-      cdkBuilder.alarmCapabilities(alarmCapabilities.let(CfnAlarmModel.AlarmCapabilitiesProperty::unwrap))
+      cdkBuilder.alarmCapabilities(alarmCapabilities.let(CfnAlarmModel.AlarmCapabilitiesProperty.Companion::unwrap))
     }
 
     /**
@@ -376,14 +376,14 @@ public interface CfnAlarmModelProps {
      * @param alarmEventActions Contains information about one or more alarm actions.
      */
     override fun alarmEventActions(alarmEventActions: IResolvable) {
-      cdkBuilder.alarmEventActions(alarmEventActions.let(IResolvable::unwrap))
+      cdkBuilder.alarmEventActions(alarmEventActions.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param alarmEventActions Contains information about one or more alarm actions.
      */
     override fun alarmEventActions(alarmEventActions: CfnAlarmModel.AlarmEventActionsProperty) {
-      cdkBuilder.alarmEventActions(alarmEventActions.let(CfnAlarmModel.AlarmEventActionsProperty::unwrap))
+      cdkBuilder.alarmEventActions(alarmEventActions.let(CfnAlarmModel.AlarmEventActionsProperty.Companion::unwrap))
     }
 
     /**
@@ -413,14 +413,14 @@ public interface CfnAlarmModelProps {
      * @param alarmRule Defines when your alarm is invoked. 
      */
     override fun alarmRule(alarmRule: IResolvable) {
-      cdkBuilder.alarmRule(alarmRule.let(IResolvable::unwrap))
+      cdkBuilder.alarmRule(alarmRule.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param alarmRule Defines when your alarm is invoked. 
      */
     override fun alarmRule(alarmRule: CfnAlarmModel.AlarmRuleProperty) {
-      cdkBuilder.alarmRule(alarmRule.let(CfnAlarmModel.AlarmRuleProperty::unwrap))
+      cdkBuilder.alarmRule(alarmRule.let(CfnAlarmModel.AlarmRuleProperty.Companion::unwrap))
     }
 
     /**
@@ -469,7 +469,7 @@ public interface CfnAlarmModelProps {
      * You can create up to 50 tags for one alarm model.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

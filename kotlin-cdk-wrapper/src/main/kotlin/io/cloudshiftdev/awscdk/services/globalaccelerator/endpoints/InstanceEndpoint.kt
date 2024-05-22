@@ -34,13 +34,13 @@ public open class InstanceEndpoint(
   cdkObject: software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpoint,
 ) : CdkObject(cdkObject), IEndpoint {
   public constructor(instance: CloudshiftdevAwscdkServicesEc2IInstance) :
-      this(software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpoint(instance.let(CloudshiftdevAwscdkServicesEc2IInstance::unwrap))
+      this(software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpoint(instance.let(CloudshiftdevAwscdkServicesEc2IInstance.Companion::unwrap))
   )
 
   public constructor(instance: CloudshiftdevAwscdkServicesEc2IInstance,
       options: InstanceEndpointProps) :
-      this(software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpoint(instance.let(CloudshiftdevAwscdkServicesEc2IInstance::unwrap),
-      options.let(InstanceEndpointProps::unwrap))
+      this(software.amazon.awscdk.services.globalaccelerator.endpoints.InstanceEndpoint(instance.let(CloudshiftdevAwscdkServicesEc2IInstance.Companion::unwrap),
+      options.let(InstanceEndpointProps.Companion::unwrap))
   )
 
   public constructor(instance: CloudshiftdevAwscdkServicesEc2IInstance,

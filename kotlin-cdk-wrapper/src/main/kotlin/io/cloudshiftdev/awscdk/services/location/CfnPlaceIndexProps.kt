@@ -272,7 +272,7 @@ public interface CfnPlaceIndexProps {
      * @param dataSourceConfiguration Specifies the data storage option requesting Places.
      */
     override fun dataSourceConfiguration(dataSourceConfiguration: IResolvable) {
-      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -280,7 +280,7 @@ public interface CfnPlaceIndexProps {
      */
     override
         fun dataSourceConfiguration(dataSourceConfiguration: CfnPlaceIndex.DataSourceConfigurationProperty) {
-      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(CfnPlaceIndex.DataSourceConfigurationProperty::unwrap))
+      cdkBuilder.dataSourceConfiguration(dataSourceConfiguration.let(CfnPlaceIndex.DataSourceConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -326,7 +326,7 @@ public interface CfnPlaceIndexProps {
      * @param tags An array of key-value pairs to apply to this resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

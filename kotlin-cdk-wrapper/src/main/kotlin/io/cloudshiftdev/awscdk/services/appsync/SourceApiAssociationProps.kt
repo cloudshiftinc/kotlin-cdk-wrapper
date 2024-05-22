@@ -113,14 +113,14 @@ public interface SourceApiAssociationProps {
      * @param mergeType The merge type for the source.
      */
     override fun mergeType(mergeType: MergeType) {
-      cdkBuilder.mergeType(mergeType.let(MergeType::unwrap))
+      cdkBuilder.mergeType(mergeType.let(MergeType.Companion::unwrap))
     }
 
     /**
      * @param mergedApi The merged api to associate. 
      */
     override fun mergedApi(mergedApi: IGraphqlApi) {
-      cdkBuilder.mergedApi(mergedApi.let(IGraphqlApi::unwrap))
+      cdkBuilder.mergedApi(mergedApi.let(IGraphqlApi.Companion::unwrap))
     }
 
     /**
@@ -128,14 +128,14 @@ public interface SourceApiAssociationProps {
      * the source api. 
      */
     override fun mergedApiExecutionRole(mergedApiExecutionRole: IRole) {
-      cdkBuilder.mergedApiExecutionRole(mergedApiExecutionRole.let(IRole::unwrap))
+      cdkBuilder.mergedApiExecutionRole(mergedApiExecutionRole.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param sourceApi The source api to associate. 
      */
     override fun sourceApi(sourceApi: IGraphqlApi) {
-      cdkBuilder.sourceApi(sourceApi.let(IGraphqlApi::unwrap))
+      cdkBuilder.sourceApi(sourceApi.let(IGraphqlApi.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appsync.SourceApiAssociationProps =

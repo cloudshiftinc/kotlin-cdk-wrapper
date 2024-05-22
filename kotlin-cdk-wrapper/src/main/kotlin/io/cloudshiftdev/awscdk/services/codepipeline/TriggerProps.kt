@@ -79,7 +79,7 @@ public interface TriggerProps {
      * event that starts the pipeline, such as Git tags.
      */
     override fun gitConfiguration(gitConfiguration: GitConfiguration) {
-      cdkBuilder.gitConfiguration(gitConfiguration.let(GitConfiguration::unwrap))
+      cdkBuilder.gitConfiguration(gitConfiguration.let(GitConfiguration.Companion::unwrap))
     }
 
     /**
@@ -96,7 +96,7 @@ public interface TriggerProps {
      * repository with Git tags, for the specified trigger configuration. 
      */
     override fun providerType(providerType: ProviderType) {
-      cdkBuilder.providerType(providerType.let(ProviderType::unwrap))
+      cdkBuilder.providerType(providerType.let(ProviderType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codepipeline.TriggerProps =

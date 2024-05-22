@@ -615,7 +615,7 @@ public interface CfnDomainProps {
      * in the *Amazon OpenSearch Service Developer Guide* .
      */
     override fun advancedOptions(advancedOptions: IResolvable) {
-      cdkBuilder.advancedOptions(advancedOptions.let(IResolvable::unwrap))
+      cdkBuilder.advancedOptions(advancedOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -632,7 +632,7 @@ public interface CfnDomainProps {
      * @param advancedSecurityOptions Specifies options for fine-grained access control.
      */
     override fun advancedSecurityOptions(advancedSecurityOptions: IResolvable) {
-      cdkBuilder.advancedSecurityOptions(advancedSecurityOptions.let(IResolvable::unwrap))
+      cdkBuilder.advancedSecurityOptions(advancedSecurityOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -640,7 +640,7 @@ public interface CfnDomainProps {
      */
     override
         fun advancedSecurityOptions(advancedSecurityOptions: CfnDomain.AdvancedSecurityOptionsInputProperty) {
-      cdkBuilder.advancedSecurityOptions(advancedSecurityOptions.let(CfnDomain.AdvancedSecurityOptionsInputProperty::unwrap))
+      cdkBuilder.advancedSecurityOptions(advancedSecurityOptions.let(CfnDomain.AdvancedSecurityOptionsInputProperty.Companion::unwrap))
     }
 
     /**
@@ -658,7 +658,7 @@ public interface CfnDomainProps {
      * OpenSearch Dashboards.
      */
     override fun cognitoOptions(cognitoOptions: IResolvable) {
-      cdkBuilder.cognitoOptions(cognitoOptions.let(IResolvable::unwrap))
+      cdkBuilder.cognitoOptions(cognitoOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -666,7 +666,7 @@ public interface CfnDomainProps {
      * OpenSearch Dashboards.
      */
     override fun cognitoOptions(cognitoOptions: CfnDomain.CognitoOptionsProperty) {
-      cdkBuilder.cognitoOptions(cognitoOptions.let(CfnDomain.CognitoOptionsProperty::unwrap))
+      cdkBuilder.cognitoOptions(cognitoOptions.let(CfnDomain.CognitoOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -692,7 +692,7 @@ public interface CfnDomainProps {
      * default endpoint.
      */
     override fun domainEndpointOptions(domainEndpointOptions: IResolvable) {
-      cdkBuilder.domainEndpointOptions(domainEndpointOptions.let(IResolvable::unwrap))
+      cdkBuilder.domainEndpointOptions(domainEndpointOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -702,7 +702,7 @@ public interface CfnDomainProps {
      */
     override
         fun domainEndpointOptions(domainEndpointOptions: CfnDomain.DomainEndpointOptionsProperty) {
-      cdkBuilder.domainEndpointOptions(domainEndpointOptions.let(CfnDomain.DomainEndpointOptionsProperty::unwrap))
+      cdkBuilder.domainEndpointOptions(domainEndpointOptions.let(CfnDomain.DomainEndpointOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -742,7 +742,7 @@ public interface CfnDomainProps {
      * in the *Amazon OpenSearch Service Developer Guide* .
      */
     override fun ebsOptions(ebsOptions: IResolvable) {
-      cdkBuilder.ebsOptions(ebsOptions.let(IResolvable::unwrap))
+      cdkBuilder.ebsOptions(ebsOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -753,7 +753,7 @@ public interface CfnDomainProps {
      * in the *Amazon OpenSearch Service Developer Guide* .
      */
     override fun ebsOptions(ebsOptions: CfnDomain.EBSOptionsProperty) {
-      cdkBuilder.ebsOptions(ebsOptions.let(CfnDomain.EBSOptionsProperty::unwrap))
+      cdkBuilder.ebsOptions(ebsOptions.let(CfnDomain.EBSOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -774,7 +774,7 @@ public interface CfnDomainProps {
      * domain.
      */
     override fun elasticsearchClusterConfig(elasticsearchClusterConfig: IResolvable) {
-      cdkBuilder.elasticsearchClusterConfig(elasticsearchClusterConfig.let(IResolvable::unwrap))
+      cdkBuilder.elasticsearchClusterConfig(elasticsearchClusterConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -784,7 +784,7 @@ public interface CfnDomainProps {
      */
     override
         fun elasticsearchClusterConfig(elasticsearchClusterConfig: CfnDomain.ElasticsearchClusterConfigProperty) {
-      cdkBuilder.elasticsearchClusterConfig(elasticsearchClusterConfig.let(CfnDomain.ElasticsearchClusterConfigProperty::unwrap))
+      cdkBuilder.elasticsearchClusterConfig(elasticsearchClusterConfig.let(CfnDomain.ElasticsearchClusterConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -825,7 +825,7 @@ public interface CfnDomainProps {
      * .
      */
     override fun encryptionAtRestOptions(encryptionAtRestOptions: IResolvable) {
-      cdkBuilder.encryptionAtRestOptions(encryptionAtRestOptions.let(IResolvable::unwrap))
+      cdkBuilder.encryptionAtRestOptions(encryptionAtRestOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -837,7 +837,7 @@ public interface CfnDomainProps {
      */
     override
         fun encryptionAtRestOptions(encryptionAtRestOptions: CfnDomain.EncryptionAtRestOptionsProperty) {
-      cdkBuilder.encryptionAtRestOptions(encryptionAtRestOptions.let(CfnDomain.EncryptionAtRestOptionsProperty::unwrap))
+      cdkBuilder.encryptionAtRestOptions(encryptionAtRestOptions.let(CfnDomain.EncryptionAtRestOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -861,7 +861,7 @@ public interface CfnDomainProps {
      * Each key needs a valid `LogPublishingOption` value.
      */
     override fun logPublishingOptions(logPublishingOptions: IResolvable) {
-      cdkBuilder.logPublishingOptions(logPublishingOptions.let(IResolvable::unwrap))
+      cdkBuilder.logPublishingOptions(logPublishingOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -880,7 +880,7 @@ public interface CfnDomainProps {
      * Service](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/ntn.html) .
      */
     override fun nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions: IResolvable) {
-      cdkBuilder.nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions.let(IResolvable::unwrap))
+      cdkBuilder.nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -890,7 +890,7 @@ public interface CfnDomainProps {
      */
     override
         fun nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions: CfnDomain.NodeToNodeEncryptionOptionsProperty) {
-      cdkBuilder.nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions.let(CfnDomain.NodeToNodeEncryptionOptionsProperty::unwrap))
+      cdkBuilder.nodeToNodeEncryptionOptions(nodeToNodeEncryptionOptions.let(CfnDomain.NodeToNodeEncryptionOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -910,7 +910,7 @@ public interface CfnDomainProps {
      * The automated snapshot configuration for the OpenSearch Service domain indices.
      */
     override fun snapshotOptions(snapshotOptions: IResolvable) {
-      cdkBuilder.snapshotOptions(snapshotOptions.let(IResolvable::unwrap))
+      cdkBuilder.snapshotOptions(snapshotOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -918,7 +918,7 @@ public interface CfnDomainProps {
      * The automated snapshot configuration for the OpenSearch Service domain indices.
      */
     override fun snapshotOptions(snapshotOptions: CfnDomain.SnapshotOptionsProperty) {
-      cdkBuilder.snapshotOptions(snapshotOptions.let(CfnDomain.SnapshotOptionsProperty::unwrap))
+      cdkBuilder.snapshotOptions(snapshotOptions.let(CfnDomain.SnapshotOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -936,7 +936,7 @@ public interface CfnDomainProps {
      * Service domain.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -953,7 +953,7 @@ public interface CfnDomainProps {
      * *Amazon OpenSearch Service Developer Guide* .
      */
     override fun vpcOptions(vpcOptions: IResolvable) {
-      cdkBuilder.vpcOptions(vpcOptions.let(IResolvable::unwrap))
+      cdkBuilder.vpcOptions(vpcOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -964,7 +964,7 @@ public interface CfnDomainProps {
      * *Amazon OpenSearch Service Developer Guide* .
      */
     override fun vpcOptions(vpcOptions: CfnDomain.VPCOptionsProperty) {
-      cdkBuilder.vpcOptions(vpcOptions.let(CfnDomain.VPCOptionsProperty::unwrap))
+      cdkBuilder.vpcOptions(vpcOptions.let(CfnDomain.VPCOptionsProperty.Companion::unwrap))
     }
 
     /**

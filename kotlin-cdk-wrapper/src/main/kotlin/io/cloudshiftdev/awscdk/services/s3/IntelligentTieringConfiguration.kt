@@ -120,7 +120,7 @@ public interface IntelligentTieringConfiguration {
      * objects that haven’t been accessed for a minimum of 90 days to the Archive Access tier.
      */
     override fun archiveAccessTierTime(archiveAccessTierTime: Duration) {
-      cdkBuilder.archiveAccessTierTime(archiveAccessTierTime.let(Duration::unwrap))
+      cdkBuilder.archiveAccessTierTime(archiveAccessTierTime.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -128,7 +128,7 @@ public interface IntelligentTieringConfiguration {
      * objects that haven’t been accessed for a minimum of 180 days to the Deep Archive Access tier.
      */
     override fun deepArchiveAccessTierTime(deepArchiveAccessTierTime: Duration) {
-      cdkBuilder.deepArchiveAccessTierTime(deepArchiveAccessTierTime.let(Duration::unwrap))
+      cdkBuilder.deepArchiveAccessTierTime(deepArchiveAccessTierTime.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -149,7 +149,7 @@ public interface IntelligentTieringConfiguration {
      * @param tags You can limit the scope of this rule to the key value pairs added below.
      */
     override fun tags(tags: List<Tag>) {
-      cdkBuilder.tags(tags.map(Tag::unwrap))
+      cdkBuilder.tags(tags.map(Tag.Companion::unwrap))
     }
 
     /**

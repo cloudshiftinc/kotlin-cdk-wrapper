@@ -49,7 +49,7 @@ public interface GenericWindowsImageProps {
      * @param userData Initial user data.
      */
     override fun userData(userData: UserData) {
-      cdkBuilder.userData(userData.let(UserData::unwrap))
+      cdkBuilder.userData(userData.let(UserData.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.GenericWindowsImageProps =

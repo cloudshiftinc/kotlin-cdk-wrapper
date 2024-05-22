@@ -64,8 +64,8 @@ public open class CfnApplicationSettings(
     id: String,
     props: CfnApplicationSettingsProps,
   ) :
-      this(software.amazon.awscdk.services.pinpoint.CfnApplicationSettings(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnApplicationSettingsProps::unwrap))
+      this(software.amazon.awscdk.services.pinpoint.CfnApplicationSettings(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnApplicationSettingsProps.Companion::unwrap))
   )
 
   public constructor(
@@ -103,7 +103,7 @@ public open class CfnApplicationSettings(
    * application.
    */
   public open fun campaignHook(`value`: IResolvable) {
-    unwrap(this).setCampaignHook(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCampaignHook(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -111,7 +111,7 @@ public open class CfnApplicationSettings(
    * application.
    */
   public open fun campaignHook(`value`: CampaignHookProperty) {
-    unwrap(this).setCampaignHook(`value`.let(CampaignHookProperty::unwrap))
+    unwrap(this).setCampaignHook(`value`.let(CampaignHookProperty.Companion::unwrap))
   }
 
   /**
@@ -139,7 +139,7 @@ public open class CfnApplicationSettings(
    *
    */
   public open fun cloudWatchMetricsEnabled(`value`: IResolvable) {
-    unwrap(this).setCloudWatchMetricsEnabled(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCloudWatchMetricsEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -148,7 +148,7 @@ public open class CfnApplicationSettings(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -160,14 +160,14 @@ public open class CfnApplicationSettings(
    * The default sending limits for campaigns in the application.
    */
   public open fun limits(`value`: IResolvable) {
-    unwrap(this).setLimits(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLimits(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The default sending limits for campaigns in the application.
    */
   public open fun limits(`value`: LimitsProperty) {
-    unwrap(this).setLimits(`value`.let(LimitsProperty::unwrap))
+    unwrap(this).setLimits(`value`.let(LimitsProperty.Companion::unwrap))
   }
 
   /**
@@ -187,14 +187,14 @@ public open class CfnApplicationSettings(
    * The default quiet time for campaigns in the application.
    */
   public open fun quietTime(`value`: IResolvable) {
-    unwrap(this).setQuietTime(`value`.let(IResolvable::unwrap))
+    unwrap(this).setQuietTime(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The default quiet time for campaigns in the application.
    */
   public open fun quietTime(`value`: QuietTimeProperty) {
-    unwrap(this).setQuietTime(`value`.let(QuietTimeProperty::unwrap))
+    unwrap(this).setQuietTime(`value`.let(QuietTimeProperty.Companion::unwrap))
   }
 
   /**
@@ -413,7 +413,7 @@ public open class CfnApplicationSettings(
      * campaigns in the application. 
      */
     override fun campaignHook(campaignHook: IResolvable) {
-      cdkBuilder.campaignHook(campaignHook.let(IResolvable::unwrap))
+      cdkBuilder.campaignHook(campaignHook.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -428,7 +428,7 @@ public open class CfnApplicationSettings(
      * campaigns in the application. 
      */
     override fun campaignHook(campaignHook: CampaignHookProperty) {
-      cdkBuilder.campaignHook(campaignHook.let(CampaignHookProperty::unwrap))
+      cdkBuilder.campaignHook(campaignHook.let(CampaignHookProperty.Companion::unwrap))
     }
 
     /**
@@ -460,7 +460,7 @@ public open class CfnApplicationSettings(
      * @param cloudWatchMetricsEnabled 
      */
     override fun cloudWatchMetricsEnabled(cloudWatchMetricsEnabled: IResolvable) {
-      cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled.let(IResolvable::unwrap))
+      cdkBuilder.cloudWatchMetricsEnabled(cloudWatchMetricsEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -473,7 +473,7 @@ public open class CfnApplicationSettings(
      * @param limits The default sending limits for campaigns in the application. 
      */
     override fun limits(limits: IResolvable) {
-      cdkBuilder.limits(limits.let(IResolvable::unwrap))
+      cdkBuilder.limits(limits.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -486,7 +486,7 @@ public open class CfnApplicationSettings(
      * @param limits The default sending limits for campaigns in the application. 
      */
     override fun limits(limits: LimitsProperty) {
-      cdkBuilder.limits(limits.let(LimitsProperty::unwrap))
+      cdkBuilder.limits(limits.let(LimitsProperty.Companion::unwrap))
     }
 
     /**
@@ -527,7 +527,7 @@ public open class CfnApplicationSettings(
      * @param quietTime The default quiet time for campaigns in the application. 
      */
     override fun quietTime(quietTime: IResolvable) {
-      cdkBuilder.quietTime(quietTime.let(IResolvable::unwrap))
+      cdkBuilder.quietTime(quietTime.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -554,7 +554,7 @@ public open class CfnApplicationSettings(
      * @param quietTime The default quiet time for campaigns in the application. 
      */
     override fun quietTime(quietTime: QuietTimeProperty) {
-      cdkBuilder.quietTime(quietTime.let(QuietTimeProperty::unwrap))
+      cdkBuilder.quietTime(quietTime.let(QuietTimeProperty.Companion::unwrap))
     }
 
     /**

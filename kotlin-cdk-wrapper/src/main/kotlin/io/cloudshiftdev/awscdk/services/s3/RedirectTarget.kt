@@ -63,7 +63,7 @@ public interface RedirectTarget {
      * @param protocol Protocol to use when redirecting requests.
      */
     override fun protocol(protocol: RedirectProtocol) {
-      cdkBuilder.protocol(protocol.let(RedirectProtocol::unwrap))
+      cdkBuilder.protocol(protocol.let(RedirectProtocol.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.s3.RedirectTarget = cdkBuilder.build()

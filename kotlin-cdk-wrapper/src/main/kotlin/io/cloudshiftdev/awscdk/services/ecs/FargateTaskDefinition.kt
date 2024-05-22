@@ -44,7 +44,7 @@ public open class FargateTaskDefinition(
   cdkObject: software.amazon.awscdk.services.ecs.FargateTaskDefinition,
 ) : TaskDefinition(cdkObject), IFargateTaskDefinition {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ecs.FargateTaskDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ecs.FargateTaskDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -53,8 +53,8 @@ public open class FargateTaskDefinition(
     id: String,
     props: FargateTaskDefinitionProps,
   ) :
-      this(software.amazon.awscdk.services.ecs.FargateTaskDefinition(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(FargateTaskDefinitionProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.FargateTaskDefinition(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(FargateTaskDefinitionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -190,8 +190,12 @@ public open class FargateTaskDefinition(
      * The process namespace to use for the containers in the task.
      *
      * Only supported for tasks that are hosted on AWS Fargate if the tasks
-     * are using platform version 1.4.0 or later (Linux).
-     * Not supported in Windows containers.
+     * are using platform version 1.4.0 or later (Linux).  Only the TASK option
+     * is supported for Linux-based Fargate containers. Not supported in
+     * Windows containers. If pidMode is specified for a Fargate task, then
+     * runtimePlatform.operatingSystemFamily must also be specified.  For more
+     * information, see [Task Definition
+     * Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_definition_pidmode).
      *
      * Default: - PidMode used by the task is not specified
      *
@@ -341,7 +345,7 @@ public open class FargateTaskDefinition(
      * permission to call AWS APIs on your behalf. 
      */
     override fun executionRole(executionRole: IRole) {
-      cdkBuilder.executionRole(executionRole.let(IRole::unwrap))
+      cdkBuilder.executionRole(executionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -395,15 +399,19 @@ public open class FargateTaskDefinition(
      * The process namespace to use for the containers in the task.
      *
      * Only supported for tasks that are hosted on AWS Fargate if the tasks
-     * are using platform version 1.4.0 or later (Linux).
-     * Not supported in Windows containers.
+     * are using platform version 1.4.0 or later (Linux).  Only the TASK option
+     * is supported for Linux-based Fargate containers. Not supported in
+     * Windows containers. If pidMode is specified for a Fargate task, then
+     * runtimePlatform.operatingSystemFamily must also be specified.  For more
+     * information, see [Task Definition
+     * Parameters](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#task_definition_pidmode).
      *
      * Default: - PidMode used by the task is not specified
      *
      * @param pidMode The process namespace to use for the containers in the task. 
      */
     override fun pidMode(pidMode: PidMode) {
-      cdkBuilder.pidMode(pidMode.let(PidMode::unwrap))
+      cdkBuilder.pidMode(pidMode.let(PidMode.Companion::unwrap))
     }
 
     /**
@@ -414,7 +422,7 @@ public open class FargateTaskDefinition(
      * @param proxyConfiguration The configuration details for the App Mesh proxy. 
      */
     override fun proxyConfiguration(proxyConfiguration: ProxyConfiguration) {
-      cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfiguration::unwrap))
+      cdkBuilder.proxyConfiguration(proxyConfiguration.let(ProxyConfiguration.Companion::unwrap))
     }
 
     /**
@@ -427,7 +435,7 @@ public open class FargateTaskDefinition(
      * @param runtimePlatform The operating system that your task definitions are running on. 
      */
     override fun runtimePlatform(runtimePlatform: RuntimePlatform) {
-      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform::unwrap))
+      cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatform.Companion::unwrap))
     }
 
     /**
@@ -454,7 +462,7 @@ public open class FargateTaskDefinition(
      * call AWS APIs on your behalf. 
      */
     override fun taskRole(taskRole: IRole) {
-      cdkBuilder.taskRole(taskRole.let(IRole::unwrap))
+      cdkBuilder.taskRole(taskRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -469,7 +477,7 @@ public open class FargateTaskDefinition(
      * @param volumes The list of volume definitions for the task. 
      */
     override fun volumes(volumes: List<Volume>) {
-      cdkBuilder.volumes(volumes.map(Volume::unwrap))
+      cdkBuilder.volumes(volumes.map(Volume.Companion::unwrap))
     }
 
     /**
@@ -495,7 +503,7 @@ public open class FargateTaskDefinition(
       id: String,
       fargateTaskDefinitionArn: String,
     ): IFargateTaskDefinition =
-        software.amazon.awscdk.services.ecs.FargateTaskDefinition.fromFargateTaskDefinitionArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.ecs.FargateTaskDefinition.fromFargateTaskDefinitionArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, fargateTaskDefinitionArn).let(IFargateTaskDefinition::wrap)
 
     public fun fromFargateTaskDefinitionAttributes(
@@ -503,8 +511,9 @@ public open class FargateTaskDefinition(
       id: String,
       attrs: FargateTaskDefinitionAttributes,
     ): IFargateTaskDefinition =
-        software.amazon.awscdk.services.ecs.FargateTaskDefinition.fromFargateTaskDefinitionAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(FargateTaskDefinitionAttributes::unwrap)).let(IFargateTaskDefinition::wrap)
+        software.amazon.awscdk.services.ecs.FargateTaskDefinition.fromFargateTaskDefinitionAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        attrs.let(FargateTaskDefinitionAttributes.Companion::unwrap)).let(IFargateTaskDefinition::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a04252545f1217926f85148bb768fff294d8987397e2ce21b792cf7ae5f7fdcf")

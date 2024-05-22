@@ -50,8 +50,8 @@ public open class CfnClusterSecurityGroup(
     id: String,
     props: CfnClusterSecurityGroupProps,
   ) :
-      this(software.amazon.awscdk.services.redshift.CfnClusterSecurityGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnClusterSecurityGroupProps::unwrap))
+      this(software.amazon.awscdk.services.redshift.CfnClusterSecurityGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnClusterSecurityGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -84,7 +84,7 @@ public open class CfnClusterSecurityGroup(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -102,7 +102,7 @@ public open class CfnClusterSecurityGroup(
    * Specifies an arbitrary set of tags (key–value pairs) to associate with this security group.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -173,7 +173,7 @@ public open class CfnClusterSecurityGroup(
      * security group. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

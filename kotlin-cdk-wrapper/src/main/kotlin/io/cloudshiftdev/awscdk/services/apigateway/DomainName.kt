@@ -36,8 +36,8 @@ public open class DomainName(
     id: String,
     props: DomainNameProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.DomainName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DomainNameProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.DomainName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DomainNameProps.Companion::unwrap))
   )
 
   public constructor(
@@ -60,7 +60,7 @@ public open class DomainName(
    * @param options Options for mapping to a stage.
    */
   public open fun addApiMapping(targetStage: IStage) {
-    unwrap(this).addApiMapping(targetStage.let(IStage::unwrap))
+    unwrap(this).addApiMapping(targetStage.let(IStage.Companion::unwrap))
   }
 
   /**
@@ -76,8 +76,8 @@ public open class DomainName(
    * @param options Options for mapping to a stage.
    */
   public open fun addApiMapping(targetStage: IStage, options: ApiMappingOptions) {
-    unwrap(this).addApiMapping(targetStage.let(IStage::unwrap),
-        options.let(ApiMappingOptions::unwrap))
+    unwrap(this).addApiMapping(targetStage.let(IStage.Companion::unwrap),
+        options.let(ApiMappingOptions.Companion::unwrap))
   }
 
   /**
@@ -108,7 +108,7 @@ public open class DomainName(
    * @param options Options for mapping to base path with or without a stage.
    */
   public open fun addBasePathMapping(targetApi: IRestApi): BasePathMapping =
-      unwrap(this).addBasePathMapping(targetApi.let(IRestApi::unwrap)).let(BasePathMapping::wrap)
+      unwrap(this).addBasePathMapping(targetApi.let(IRestApi.Companion::unwrap)).let(BasePathMapping::wrap)
 
   /**
    * Maps this domain to an API endpoint.
@@ -121,8 +121,8 @@ public open class DomainName(
    * @param options Options for mapping to base path with or without a stage.
    */
   public open fun addBasePathMapping(targetApi: IRestApi, options: BasePathMappingOptions):
-      BasePathMapping = unwrap(this).addBasePathMapping(targetApi.let(IRestApi::unwrap),
-      options.let(BasePathMappingOptions::unwrap)).let(BasePathMapping::wrap)
+      BasePathMapping = unwrap(this).addBasePathMapping(targetApi.let(IRestApi.Companion::unwrap),
+      options.let(BasePathMappingOptions.Companion::unwrap)).let(BasePathMapping::wrap)
 
   /**
    * Maps this domain to an API endpoint.
@@ -285,7 +285,7 @@ public open class DomainName(
      * endpoint for the domain name. 
      */
     override fun certificate(certificate: ICertificate) {
-      cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
+      cdkBuilder.certificate(certificate.let(ICertificate.Companion::unwrap))
     }
 
     /**
@@ -307,7 +307,7 @@ public open class DomainName(
      * @param endpointType The type of endpoint for this DomainName. 
      */
     override fun endpointType(endpointType: EndpointType) {
-      cdkBuilder.endpointType(endpointType.let(EndpointType::unwrap))
+      cdkBuilder.endpointType(endpointType.let(EndpointType.Companion::unwrap))
     }
 
     /**
@@ -324,7 +324,7 @@ public open class DomainName(
      * deployment of this API. 
      */
     override fun mapping(mapping: IRestApi) {
-      cdkBuilder.mapping(mapping.let(IRestApi::unwrap))
+      cdkBuilder.mapping(mapping.let(IRestApi.Companion::unwrap))
     }
 
     /**
@@ -335,7 +335,7 @@ public open class DomainName(
      * @param mtls The mutual TLS authentication configuration for a custom domain name. 
      */
     override fun mtls(mtls: MTLSConfig) {
-      cdkBuilder.mtls(mtls.let(MTLSConfig::unwrap))
+      cdkBuilder.mtls(mtls.let(MTLSConfig.Companion::unwrap))
     }
 
     /**
@@ -359,7 +359,7 @@ public open class DomainName(
      * domain name. 
      */
     override fun securityPolicy(securityPolicy: SecurityPolicy) {
-      cdkBuilder.securityPolicy(securityPolicy.let(SecurityPolicy::unwrap))
+      cdkBuilder.securityPolicy(securityPolicy.let(SecurityPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigateway.DomainName = cdkBuilder.build()
@@ -371,8 +371,8 @@ public open class DomainName(
       id: String,
       attrs: DomainNameAttributes,
     ): IDomainName =
-        software.amazon.awscdk.services.apigateway.DomainName.fromDomainNameAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(DomainNameAttributes::unwrap)).let(IDomainName::wrap)
+        software.amazon.awscdk.services.apigateway.DomainName.fromDomainNameAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(DomainNameAttributes.Companion::unwrap)).let(IDomainName::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ac8f944103380ed338cd724004967851f1e6535959d9a4afb514e759be47faea")

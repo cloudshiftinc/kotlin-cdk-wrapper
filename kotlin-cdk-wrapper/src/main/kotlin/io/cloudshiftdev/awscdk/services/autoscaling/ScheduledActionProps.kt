@@ -112,7 +112,7 @@ public interface ScheduledActionProps : BasicScheduledActionProps {
      * @param autoScalingGroup The AutoScalingGroup to apply the scheduled actions to. 
      */
     override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
-      cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup::unwrap))
+      cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup.Companion::unwrap))
     }
 
     /**
@@ -159,7 +159,7 @@ public interface ScheduledActionProps : BasicScheduledActionProps {
      * For more information about cron expressions, see https://en.wikipedia.org/wiki/Cron.
      */
     override fun schedule(schedule: Schedule) {
-      cdkBuilder.schedule(schedule.let(Schedule::unwrap))
+      cdkBuilder.schedule(schedule.let(Schedule.Companion::unwrap))
     }
 
     /**

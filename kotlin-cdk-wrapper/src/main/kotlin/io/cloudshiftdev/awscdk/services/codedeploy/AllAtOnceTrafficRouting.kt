@@ -28,7 +28,7 @@ public open class AllAtOnceTrafficRouting(
    * @param _scope 
    */
   public override fun bind(scope: Construct): TrafficRoutingConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(TrafficRoutingConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(TrafficRoutingConfig::wrap)
 
   public companion object {
     internal

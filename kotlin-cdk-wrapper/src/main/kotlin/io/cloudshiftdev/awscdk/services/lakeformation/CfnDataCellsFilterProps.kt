@@ -228,7 +228,7 @@ public interface CfnDataCellsFilterProps {
      * You must specify either a `ColumnNames` list or the `ColumnWildCard` .
      */
     override fun columnWildcard(columnWildcard: IResolvable) {
-      cdkBuilder.columnWildcard(columnWildcard.let(IResolvable::unwrap))
+      cdkBuilder.columnWildcard(columnWildcard.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -236,7 +236,7 @@ public interface CfnDataCellsFilterProps {
      * You must specify either a `ColumnNames` list or the `ColumnWildCard` .
      */
     override fun columnWildcard(columnWildcard: CfnDataCellsFilter.ColumnWildcardProperty) {
-      cdkBuilder.columnWildcard(columnWildcard.let(CfnDataCellsFilter.ColumnWildcardProperty::unwrap))
+      cdkBuilder.columnWildcard(columnWildcard.let(CfnDataCellsFilter.ColumnWildcardProperty.Companion::unwrap))
     }
 
     /**
@@ -275,14 +275,14 @@ public interface CfnDataCellsFilterProps {
      * @param rowFilter A PartiQL predicate.
      */
     override fun rowFilter(rowFilter: IResolvable) {
-      cdkBuilder.rowFilter(rowFilter.let(IResolvable::unwrap))
+      cdkBuilder.rowFilter(rowFilter.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param rowFilter A PartiQL predicate.
      */
     override fun rowFilter(rowFilter: CfnDataCellsFilter.RowFilterProperty) {
-      cdkBuilder.rowFilter(rowFilter.let(CfnDataCellsFilter.RowFilterProperty::unwrap))
+      cdkBuilder.rowFilter(rowFilter.let(CfnDataCellsFilter.RowFilterProperty.Companion::unwrap))
     }
 
     /**

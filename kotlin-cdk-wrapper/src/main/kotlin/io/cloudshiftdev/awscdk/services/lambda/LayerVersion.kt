@@ -33,8 +33,8 @@ public open class LayerVersion(
     id: String,
     props: LayerVersionProps,
   ) :
-      this(software.amazon.awscdk.services.lambda.LayerVersion(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(LayerVersionProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.LayerVersion(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(LayerVersionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -58,7 +58,7 @@ public open class LayerVersion(
    * @param permission 
    */
   public override fun addPermission(id: String, permission: LayerVersionPermission) {
-    unwrap(this).addPermission(id, permission.let(LayerVersionPermission::unwrap))
+    unwrap(this).addPermission(id, permission.let(LayerVersionPermission.Companion::unwrap))
   }
 
   /**
@@ -195,7 +195,7 @@ public open class LayerVersion(
      * @param code The content of this Layer. 
      */
     override fun code(code: Code) {
-      cdkBuilder.code(code.let(Code::unwrap))
+      cdkBuilder.code(code.let(Code.Companion::unwrap))
     }
 
     /**
@@ -206,7 +206,7 @@ public open class LayerVersion(
      * @param compatibleArchitectures The system architectures compatible with this layer. 
      */
     override fun compatibleArchitectures(compatibleArchitectures: List<Architecture>) {
-      cdkBuilder.compatibleArchitectures(compatibleArchitectures.map(Architecture::unwrap))
+      cdkBuilder.compatibleArchitectures(compatibleArchitectures.map(Architecture.Companion::unwrap))
     }
 
     /**
@@ -227,7 +227,7 @@ public open class LayerVersion(
      * @param compatibleRuntimes The runtimes compatible with this Layer. 
      */
     override fun compatibleRuntimes(compatibleRuntimes: List<Runtime>) {
-      cdkBuilder.compatibleRuntimes(compatibleRuntimes.map(Runtime::unwrap))
+      cdkBuilder.compatibleRuntimes(compatibleRuntimes.map(Runtime.Companion::unwrap))
     }
 
     /**
@@ -283,7 +283,7 @@ public open class LayerVersion(
      * or when the stack is deleted. 
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lambda.LayerVersion = cdkBuilder.build()
@@ -295,7 +295,7 @@ public open class LayerVersion(
       id: String,
       layerVersionArn: String,
     ): ILayerVersion =
-        software.amazon.awscdk.services.lambda.LayerVersion.fromLayerVersionArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.lambda.LayerVersion.fromLayerVersionArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, layerVersionArn).let(ILayerVersion::wrap)
 
     public fun fromLayerVersionAttributes(
@@ -303,8 +303,8 @@ public open class LayerVersion(
       id: String,
       attrs: LayerVersionAttributes,
     ): ILayerVersion =
-        software.amazon.awscdk.services.lambda.LayerVersion.fromLayerVersionAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(LayerVersionAttributes::unwrap)).let(ILayerVersion::wrap)
+        software.amazon.awscdk.services.lambda.LayerVersion.fromLayerVersionAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(LayerVersionAttributes.Companion::unwrap)).let(ILayerVersion::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c33b763f8a234acfda5b5e97176cbc77edba51fa8a321893bd878800bc16f274")

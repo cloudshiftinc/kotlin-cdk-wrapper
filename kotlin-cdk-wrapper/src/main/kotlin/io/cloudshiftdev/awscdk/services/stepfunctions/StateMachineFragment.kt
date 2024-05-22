@@ -77,7 +77,7 @@ public abstract class StateMachineFragment(
    * @param next 
    */
   public open fun next(next: IChainable): Chain =
-      unwrap(this).next(next.let(IChainable::unwrap)).let(Chain::wrap)
+      unwrap(this).next(next.let(IChainable.Companion::unwrap)).let(Chain::wrap)
 
   /**
    * Prefix the IDs of all states in this state machine fragment.
@@ -135,7 +135,7 @@ public abstract class StateMachineFragment(
    * @param options
    */
   public open fun toSingleState(options: SingleStateOptions): Parallel =
-      unwrap(this).toSingleState(options.let(SingleStateOptions::unwrap)).let(Parallel::wrap)
+      unwrap(this).toSingleState(options.let(SingleStateOptions.Companion::unwrap)).let(Parallel::wrap)
 
   /**
    * Wrap all states in this state machine fragment up into a single state.

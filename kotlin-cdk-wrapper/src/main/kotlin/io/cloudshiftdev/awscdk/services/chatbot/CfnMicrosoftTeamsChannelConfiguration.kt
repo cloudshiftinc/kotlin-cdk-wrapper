@@ -58,8 +58,8 @@ public open class CfnMicrosoftTeamsChannelConfiguration(
     id: String,
     props: CfnMicrosoftTeamsChannelConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.chatbot.CfnMicrosoftTeamsChannelConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMicrosoftTeamsChannelConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.chatbot.CfnMicrosoftTeamsChannelConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMicrosoftTeamsChannelConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -123,7 +123,7 @@ public open class CfnMicrosoftTeamsChannelConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -211,7 +211,7 @@ public open class CfnMicrosoftTeamsChannelConfiguration(
    * Enables use of a user role requirement in your chat configuration.
    */
   public open fun userRoleRequired(`value`: IResolvable) {
-    unwrap(this).setUserRoleRequired(`value`.let(IResolvable::unwrap))
+    unwrap(this).setUserRoleRequired(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -509,7 +509,7 @@ public open class CfnMicrosoftTeamsChannelConfiguration(
      * @param userRoleRequired Enables use of a user role requirement in your chat configuration. 
      */
     override fun userRoleRequired(userRoleRequired: IResolvable) {
-      cdkBuilder.userRoleRequired(userRoleRequired.let(IResolvable::unwrap))
+      cdkBuilder.userRoleRequired(userRoleRequired.let(IResolvable.Companion::unwrap))
     }
 
     public fun build():

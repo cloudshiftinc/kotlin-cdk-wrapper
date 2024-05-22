@@ -47,8 +47,8 @@ public open class HttpAuthorizer(
     id: String,
     props: HttpAuthorizerProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.HttpAuthorizer(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(HttpAuthorizerProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.HttpAuthorizer(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(HttpAuthorizerProps.Companion::unwrap))
   )
 
   public constructor(
@@ -235,7 +235,7 @@ public open class HttpAuthorizer(
      * @param httpApi HTTP Api to attach the authorizer to. 
      */
     override fun httpApi(httpApi: IHttpApi) {
-      cdkBuilder.httpApi(httpApi.let(IHttpApi::unwrap))
+      cdkBuilder.httpApi(httpApi.let(IHttpApi.Companion::unwrap))
     }
 
     /**
@@ -302,7 +302,7 @@ public open class HttpAuthorizer(
      * authorizer. 
      */
     override fun payloadFormatVersion(payloadFormatVersion: AuthorizerPayloadVersion) {
-      cdkBuilder.payloadFormatVersion(payloadFormatVersion.let(AuthorizerPayloadVersion::unwrap))
+      cdkBuilder.payloadFormatVersion(payloadFormatVersion.let(AuthorizerPayloadVersion.Companion::unwrap))
     }
 
     /**
@@ -315,7 +315,7 @@ public open class HttpAuthorizer(
      * @param resultsCacheTtl How long APIGateway should cache the results. 
      */
     override fun resultsCacheTtl(resultsCacheTtl: Duration) {
-      cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration::unwrap))
+      cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -324,7 +324,7 @@ public open class HttpAuthorizer(
      * @param type The type of authorizer. 
      */
     override fun type(type: HttpAuthorizerType) {
-      cdkBuilder.type(type.let(HttpAuthorizerType::unwrap))
+      cdkBuilder.type(type.let(HttpAuthorizerType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.apigatewayv2.HttpAuthorizer =
@@ -337,8 +337,8 @@ public open class HttpAuthorizer(
       id: String,
       attrs: HttpAuthorizerAttributes,
     ): IHttpRouteAuthorizer =
-        software.amazon.awscdk.services.apigatewayv2.HttpAuthorizer.fromHttpAuthorizerAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(HttpAuthorizerAttributes::unwrap)).let(IHttpRouteAuthorizer::wrap)
+        software.amazon.awscdk.services.apigatewayv2.HttpAuthorizer.fromHttpAuthorizerAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(HttpAuthorizerAttributes.Companion::unwrap)).let(IHttpRouteAuthorizer::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cf1a033791ee074ae395c0f1b6787e8eba84915efec33220ef959a38f976984f")

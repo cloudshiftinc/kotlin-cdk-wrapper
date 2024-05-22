@@ -47,8 +47,8 @@ public open class SourceApiAssociation(
     id: String,
     props: SourceApiAssociationProps,
   ) :
-      this(software.amazon.awscdk.services.appsync.SourceApiAssociation(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(SourceApiAssociationProps::unwrap))
+      this(software.amazon.awscdk.services.appsync.SourceApiAssociation(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(SourceApiAssociationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -161,7 +161,7 @@ public open class SourceApiAssociation(
      * @param mergeType The merge type for the source. 
      */
     override fun mergeType(mergeType: MergeType) {
-      cdkBuilder.mergeType(mergeType.let(MergeType::unwrap))
+      cdkBuilder.mergeType(mergeType.let(MergeType.Companion::unwrap))
     }
 
     /**
@@ -170,7 +170,7 @@ public open class SourceApiAssociation(
      * @param mergedApi The merged api to associate. 
      */
     override fun mergedApi(mergedApi: IGraphqlApi) {
-      cdkBuilder.mergedApi(mergedApi.let(IGraphqlApi::unwrap))
+      cdkBuilder.mergedApi(mergedApi.let(IGraphqlApi.Companion::unwrap))
     }
 
     /**
@@ -180,7 +180,7 @@ public open class SourceApiAssociation(
      * the source api. 
      */
     override fun mergedApiExecutionRole(mergedApiExecutionRole: IRole) {
-      cdkBuilder.mergedApiExecutionRole(mergedApiExecutionRole.let(IRole::unwrap))
+      cdkBuilder.mergedApiExecutionRole(mergedApiExecutionRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -189,7 +189,7 @@ public open class SourceApiAssociation(
      * @param sourceApi The source api to associate. 
      */
     override fun sourceApi(sourceApi: IGraphqlApi) {
-      cdkBuilder.sourceApi(sourceApi.let(IGraphqlApi::unwrap))
+      cdkBuilder.sourceApi(sourceApi.let(IGraphqlApi.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appsync.SourceApiAssociation =
@@ -202,8 +202,9 @@ public open class SourceApiAssociation(
       id: String,
       attrs: SourceApiAssociationAttributes,
     ): ISourceApiAssociation =
-        software.amazon.awscdk.services.appsync.SourceApiAssociation.fromSourceApiAssociationAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(SourceApiAssociationAttributes::unwrap)).let(ISourceApiAssociation::wrap)
+        software.amazon.awscdk.services.appsync.SourceApiAssociation.fromSourceApiAssociationAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id,
+        attrs.let(SourceApiAssociationAttributes.Companion::unwrap)).let(ISourceApiAssociation::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5464ee7cc08fc1fa25912b5e23ef40dbd44184829a79ee6236182e9f0a6ee3a4")

@@ -71,8 +71,8 @@ public open class CfnLocationFSxONTAP(
     id: String,
     props: CfnLocationFSxONTAPProps,
   ) :
-      this(software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLocationFSxONTAPProps::unwrap))
+      this(software.amazon.awscdk.services.datasync.CfnLocationFSxONTAP(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLocationFSxONTAPProps.Companion::unwrap))
   )
 
   public constructor(
@@ -103,7 +103,7 @@ public open class CfnLocationFSxONTAP(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -115,14 +115,14 @@ public open class CfnLocationFSxONTAP(
    * Specifies the data transfer protocol that DataSync uses to access your Amazon FSx file system.
    */
   public open fun protocol(`value`: IResolvable) {
-    unwrap(this).setProtocol(`value`.let(IResolvable::unwrap))
+    unwrap(this).setProtocol(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the data transfer protocol that DataSync uses to access your Amazon FSx file system.
    */
   public open fun protocol(`value`: ProtocolProperty) {
-    unwrap(this).setProtocol(`value`.let(ProtocolProperty::unwrap))
+    unwrap(this).setProtocol(`value`.let(ProtocolProperty.Companion::unwrap))
   }
 
   /**
@@ -195,7 +195,7 @@ public open class CfnLocationFSxONTAP(
    * Specifies labels that help you categorize, filter, and search for your AWS resources.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -345,7 +345,7 @@ public open class CfnLocationFSxONTAP(
      * FSx file system. 
      */
     override fun protocol(protocol: IResolvable) {
-      cdkBuilder.protocol(protocol.let(IResolvable::unwrap))
+      cdkBuilder.protocol(protocol.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -357,7 +357,7 @@ public open class CfnLocationFSxONTAP(
      * FSx file system. 
      */
     override fun protocol(protocol: ProtocolProperty) {
-      cdkBuilder.protocol(protocol.let(ProtocolProperty::unwrap))
+      cdkBuilder.protocol(protocol.let(ProtocolProperty.Companion::unwrap))
     }
 
     /**
@@ -456,7 +456,7 @@ public open class CfnLocationFSxONTAP(
      * resources. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -558,14 +558,14 @@ public open class CfnLocationFSxONTAP(
        * @param mountOptions Specifies how DataSync can access a location using the NFS protocol. 
        */
       override fun mountOptions(mountOptions: IResolvable) {
-        cdkBuilder.mountOptions(mountOptions.let(IResolvable::unwrap))
+        cdkBuilder.mountOptions(mountOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param mountOptions Specifies how DataSync can access a location using the NFS protocol. 
        */
       override fun mountOptions(mountOptions: NfsMountOptionsProperty) {
-        cdkBuilder.mountOptions(mountOptions.let(NfsMountOptionsProperty::unwrap))
+        cdkBuilder.mountOptions(mountOptions.let(NfsMountOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -851,7 +851,7 @@ public open class CfnLocationFSxONTAP(
        * uses to access your FSx for ONTAP file system's storage virtual machine (SVM).
        */
       override fun nfs(nfs: IResolvable) {
-        cdkBuilder.nfs(nfs.let(IResolvable::unwrap))
+        cdkBuilder.nfs(nfs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -859,7 +859,7 @@ public open class CfnLocationFSxONTAP(
        * uses to access your FSx for ONTAP file system's storage virtual machine (SVM).
        */
       override fun nfs(nfs: NFSProperty) {
-        cdkBuilder.nfs(nfs.let(NFSProperty::unwrap))
+        cdkBuilder.nfs(nfs.let(NFSProperty.Companion::unwrap))
       }
 
       /**
@@ -875,7 +875,7 @@ public open class CfnLocationFSxONTAP(
        * uses to access your FSx for ONTAP file system's SVM.
        */
       override fun smb(smb: IResolvable) {
-        cdkBuilder.smb(smb.let(IResolvable::unwrap))
+        cdkBuilder.smb(smb.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -883,7 +883,7 @@ public open class CfnLocationFSxONTAP(
        * uses to access your FSx for ONTAP file system's SVM.
        */
       override fun smb(smb: SMBProperty) {
-        cdkBuilder.smb(smb.let(SMBProperty::unwrap))
+        cdkBuilder.smb(smb.let(SMBProperty.Companion::unwrap))
       }
 
       /**
@@ -1097,14 +1097,14 @@ public open class CfnLocationFSxONTAP(
        * @param mountOptions Specifies how DataSync can access a location using the SMB protocol. 
        */
       override fun mountOptions(mountOptions: IResolvable) {
-        cdkBuilder.mountOptions(mountOptions.let(IResolvable::unwrap))
+        cdkBuilder.mountOptions(mountOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param mountOptions Specifies how DataSync can access a location using the SMB protocol. 
        */
       override fun mountOptions(mountOptions: SmbMountOptionsProperty) {
-        cdkBuilder.mountOptions(mountOptions.let(SmbMountOptionsProperty::unwrap))
+        cdkBuilder.mountOptions(mountOptions.let(SmbMountOptionsProperty.Companion::unwrap))
       }
 
       /**

@@ -27,8 +27,8 @@ public interface IEventSourceDlq {
      * @param targetHandler 
      */
     override fun bind(target: IEventSourceMapping, targetHandler: IFunction): DlqDestinationConfig =
-        unwrap(this).bind(target.let(IEventSourceMapping::unwrap),
-        targetHandler.let(IFunction::unwrap)).let(DlqDestinationConfig::wrap)
+        unwrap(this).bind(target.let(IEventSourceMapping.Companion::unwrap),
+        targetHandler.let(IFunction.Companion::unwrap)).let(DlqDestinationConfig::wrap)
   }
 
   public companion object {

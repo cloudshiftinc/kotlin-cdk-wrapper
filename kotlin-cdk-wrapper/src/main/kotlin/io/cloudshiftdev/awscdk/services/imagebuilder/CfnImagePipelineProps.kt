@@ -368,7 +368,7 @@ public interface CfnImagePipelineProps {
      * Enabled by default.
      */
     override fun enhancedImageMetadataEnabled(enhancedImageMetadataEnabled: IResolvable) {
-      cdkBuilder.enhancedImageMetadataEnabled(enhancedImageMetadataEnabled.let(IResolvable::unwrap))
+      cdkBuilder.enhancedImageMetadataEnabled(enhancedImageMetadataEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -391,7 +391,7 @@ public interface CfnImagePipelineProps {
      * @param imageScanningConfiguration Contains settings for vulnerability scans.
      */
     override fun imageScanningConfiguration(imageScanningConfiguration: IResolvable) {
-      cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -399,7 +399,7 @@ public interface CfnImagePipelineProps {
      */
     override
         fun imageScanningConfiguration(imageScanningConfiguration: CfnImagePipeline.ImageScanningConfigurationProperty) {
-      cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(CfnImagePipeline.ImageScanningConfigurationProperty::unwrap))
+      cdkBuilder.imageScanningConfiguration(imageScanningConfiguration.let(CfnImagePipeline.ImageScanningConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -417,7 +417,7 @@ public interface CfnImagePipelineProps {
      * creation to ensure the quality of the image that was created.
      */
     override fun imageTestsConfiguration(imageTestsConfiguration: IResolvable) {
-      cdkBuilder.imageTestsConfiguration(imageTestsConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.imageTestsConfiguration(imageTestsConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -426,7 +426,7 @@ public interface CfnImagePipelineProps {
      */
     override
         fun imageTestsConfiguration(imageTestsConfiguration: CfnImagePipeline.ImageTestsConfigurationProperty) {
-      cdkBuilder.imageTestsConfiguration(imageTestsConfiguration.let(CfnImagePipeline.ImageTestsConfigurationProperty::unwrap))
+      cdkBuilder.imageTestsConfiguration(imageTestsConfiguration.let(CfnImagePipeline.ImageTestsConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -460,7 +460,7 @@ public interface CfnImagePipelineProps {
      * A schedule configures how often and when a pipeline automatically creates a new image.
      */
     override fun schedule(schedule: IResolvable) {
-      cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
+      cdkBuilder.schedule(schedule.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -468,7 +468,7 @@ public interface CfnImagePipelineProps {
      * A schedule configures how often and when a pipeline automatically creates a new image.
      */
     override fun schedule(schedule: CfnImagePipeline.ScheduleProperty) {
-      cdkBuilder.schedule(schedule.let(CfnImagePipeline.ScheduleProperty::unwrap))
+      cdkBuilder.schedule(schedule.let(CfnImagePipeline.ScheduleProperty.Companion::unwrap))
     }
 
     /**
@@ -498,7 +498,7 @@ public interface CfnImagePipelineProps {
      * @param workflows Contains the workflows that run for the image pipeline.
      */
     override fun workflows(workflows: IResolvable) {
-      cdkBuilder.workflows(workflows.let(IResolvable::unwrap))
+      cdkBuilder.workflows(workflows.let(IResolvable.Companion::unwrap))
     }
 
     /**

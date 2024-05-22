@@ -139,14 +139,14 @@ public interface BuildEnvironment {
      * @param buildImage The image used for the builds.
      */
     override fun buildImage(buildImage: IBuildImage) {
-      cdkBuilder.buildImage(buildImage.let(IBuildImage::unwrap))
+      cdkBuilder.buildImage(buildImage.let(IBuildImage.Companion::unwrap))
     }
 
     /**
      * @param certificate The location of the PEM-encoded certificate for the build project.
      */
     override fun certificate(certificate: BuildEnvironmentCertificate) {
-      cdkBuilder.certificate(certificate.let(BuildEnvironmentCertificate::unwrap))
+      cdkBuilder.certificate(certificate.let(BuildEnvironmentCertificate.Companion::unwrap))
     }
 
     /**
@@ -162,7 +162,7 @@ public interface BuildEnvironment {
      * See the `ComputeType` enum for the possible values.
      */
     override fun computeType(computeType: ComputeType) {
-      cdkBuilder.computeType(computeType.let(ComputeType::unwrap))
+      cdkBuilder.computeType(computeType.let(ComputeType.Companion::unwrap))
     }
 
     /**

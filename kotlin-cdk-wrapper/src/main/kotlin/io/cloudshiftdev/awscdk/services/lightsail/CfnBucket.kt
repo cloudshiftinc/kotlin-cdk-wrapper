@@ -58,8 +58,8 @@ public open class CfnBucket(
     id: String,
     props: CfnBucketProps,
   ) :
-      this(software.amazon.awscdk.services.lightsail.CfnBucket(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnBucketProps::unwrap))
+      this(software.amazon.awscdk.services.lightsail.CfnBucket(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnBucketProps.Companion::unwrap))
   )
 
   public constructor(
@@ -78,14 +78,14 @@ public open class CfnBucket(
    * An object that describes the access rules for the bucket.
    */
   public open fun accessRules(`value`: IResolvable) {
-    unwrap(this).setAccessRules(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccessRules(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * An object that describes the access rules for the bucket.
    */
   public open fun accessRules(`value`: AccessRulesProperty) {
-    unwrap(this).setAccessRules(`value`.let(AccessRulesProperty::unwrap))
+    unwrap(this).setAccessRules(`value`.let(AccessRulesProperty.Companion::unwrap))
   }
 
   /**
@@ -143,7 +143,7 @@ public open class CfnBucket(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -162,7 +162,7 @@ public open class CfnBucket(
    * Indicates whether object versioning is enabled for the bucket.
    */
   public open fun objectVersioning(`value`: IResolvable) {
-    unwrap(this).setObjectVersioning(`value`.let(IResolvable::unwrap))
+    unwrap(this).setObjectVersioning(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -218,7 +218,7 @@ public open class CfnBucket(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -389,7 +389,7 @@ public open class CfnBucket(
      * @param accessRules An object that describes the access rules for the bucket. 
      */
     override fun accessRules(accessRules: IResolvable) {
-      cdkBuilder.accessRules(accessRules.let(IResolvable::unwrap))
+      cdkBuilder.accessRules(accessRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -399,7 +399,7 @@ public open class CfnBucket(
      * @param accessRules An object that describes the access rules for the bucket. 
      */
     override fun accessRules(accessRules: AccessRulesProperty) {
-      cdkBuilder.accessRules(accessRules.let(AccessRulesProperty::unwrap))
+      cdkBuilder.accessRules(accessRules.let(AccessRulesProperty.Companion::unwrap))
     }
 
     /**
@@ -467,7 +467,7 @@ public open class CfnBucket(
      * @param objectVersioning Indicates whether object versioning is enabled for the bucket. 
      */
     override fun objectVersioning(objectVersioning: IResolvable) {
-      cdkBuilder.objectVersioning(objectVersioning.let(IResolvable::unwrap))
+      cdkBuilder.objectVersioning(objectVersioning.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -527,7 +527,7 @@ public open class CfnBucket(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -701,7 +701,7 @@ public open class CfnBucket(
        * `public-read` ACL or the `private` ACL.
        */
       override fun allowPublicOverrides(allowPublicOverrides: IResolvable) {
-        cdkBuilder.allowPublicOverrides(allowPublicOverrides.let(IResolvable::unwrap))
+        cdkBuilder.allowPublicOverrides(allowPublicOverrides.let(IResolvable.Companion::unwrap))
       }
 
       /**

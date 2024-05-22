@@ -28,7 +28,7 @@ public open class ApiGateway(
   cdkObject: software.amazon.awscdk.services.route53.targets.ApiGateway,
 ) : ApiGatewayDomain(cdkObject) {
   public constructor(api: RestApiBase) :
-      this(software.amazon.awscdk.services.route53.targets.ApiGateway(api.let(RestApiBase::unwrap))
+      this(software.amazon.awscdk.services.route53.targets.ApiGateway(api.let(RestApiBase.Companion::unwrap))
   )
 
   public companion object {

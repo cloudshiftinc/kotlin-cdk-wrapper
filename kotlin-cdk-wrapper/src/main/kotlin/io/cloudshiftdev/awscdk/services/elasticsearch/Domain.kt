@@ -60,8 +60,8 @@ public open class Domain(
     id: String,
     props: DomainProps,
   ) :
-      this(software.amazon.awscdk.services.elasticsearch.Domain(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(DomainProps::unwrap))
+      this(software.amazon.awscdk.services.elasticsearch.Domain(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(DomainProps.Companion::unwrap))
   )
 
   @Deprecated(message = "deprecated in CDK")
@@ -162,7 +162,8 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun grantIndexRead(index: String, identity: IGrantable): Grant =
-      unwrap(this).grantIndexRead(index, identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantIndexRead(index,
+      identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * (deprecated) Grant read/write permissions for an index in this domain to an IAM principal
@@ -174,7 +175,8 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun grantIndexReadWrite(index: String, identity: IGrantable): Grant =
-      unwrap(this).grantIndexReadWrite(index, identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantIndexReadWrite(index,
+      identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * (deprecated) Grant write permissions for an index in this domain to an IAM principal
@@ -186,7 +188,8 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun grantIndexWrite(index: String, identity: IGrantable): Grant =
-      unwrap(this).grantIndexWrite(index, identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantIndexWrite(index,
+      identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * (deprecated) Grant read permissions for a specific path in this domain to an IAM principal
@@ -198,7 +201,7 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun grantPathRead(path: String, identity: IGrantable): Grant =
-      unwrap(this).grantPathRead(path, identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantPathRead(path, identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * (deprecated) Grant read/write permissions for a specific path in this domain to an IAM
@@ -210,7 +213,8 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun grantPathReadWrite(path: String, identity: IGrantable): Grant =
-      unwrap(this).grantPathReadWrite(path, identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantPathReadWrite(path,
+      identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * (deprecated) Grant write permissions for a specific path in this domain to an IAM principal
@@ -222,7 +226,7 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun grantPathWrite(path: String, identity: IGrantable): Grant =
-      unwrap(this).grantPathWrite(path, identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantPathWrite(path, identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * (deprecated) Grant read permissions for this domain and its contents to an IAM principal
@@ -233,7 +237,7 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun grantRead(identity: IGrantable): Grant =
-      unwrap(this).grantRead(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantRead(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * (deprecated) Grant read/write permissions for this domain and its contents to an IAM principal
@@ -244,7 +248,7 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun grantReadWrite(identity: IGrantable): Grant =
-      unwrap(this).grantReadWrite(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantReadWrite(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * (deprecated) Grant write permissions for this domain and its contents to an IAM principal
@@ -255,7 +259,7 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun grantWrite(identity: IGrantable): Grant =
-      unwrap(this).grantWrite(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantWrite(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * (deprecated) Master user password if fine grained access control is configured.
@@ -286,7 +290,7 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun metric(metricName: String, props: MetricOptions): Metric =
-      unwrap(this).metric(metricName, props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) Return the given named metric for this Domain.
@@ -323,7 +327,7 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun metricAutomatedSnapshotFailure(props: MetricOptions): Metric =
-      unwrap(this).metricAutomatedSnapshotFailure(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricAutomatedSnapshotFailure(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) Metric for automated snapshot failures.
@@ -361,7 +365,7 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun metricCPUUtilization(props: MetricOptions): Metric =
-      unwrap(this).metricCPUUtilization(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricCPUUtilization(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) Metric for CPU utilization.
@@ -399,7 +403,7 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun metricClusterIndexWritesBlocked(props: MetricOptions): Metric =
-      unwrap(this).metricClusterIndexWritesBlocked(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricClusterIndexWritesBlocked(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) Metric for the cluster blocking index writes.
@@ -437,7 +441,7 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun metricClusterStatusRed(props: MetricOptions): Metric =
-      unwrap(this).metricClusterStatusRed(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricClusterStatusRed(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) Metric for the time the cluster status is red.
@@ -475,7 +479,7 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun metricClusterStatusYellow(props: MetricOptions): Metric =
-      unwrap(this).metricClusterStatusYellow(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricClusterStatusYellow(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) Metric for the time the cluster status is yellow.
@@ -513,7 +517,7 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun metricFreeStorageSpace(props: MetricOptions): Metric =
-      unwrap(this).metricFreeStorageSpace(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricFreeStorageSpace(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) Metric for the storage space of nodes in the cluster.
@@ -551,7 +555,7 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun metricIndexingLatency(props: MetricOptions): Metric =
-      unwrap(this).metricIndexingLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricIndexingLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) Metric for indexing latency.
@@ -589,7 +593,7 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun metricJVMMemoryPressure(props: MetricOptions): Metric =
-      unwrap(this).metricJVMMemoryPressure(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricJVMMemoryPressure(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) Metric for JVM memory pressure.
@@ -627,7 +631,7 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun metricKMSKeyError(props: MetricOptions): Metric =
-      unwrap(this).metricKMSKeyError(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricKMSKeyError(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) Metric for KMS key errors.
@@ -665,7 +669,7 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun metricKMSKeyInaccessible(props: MetricOptions): Metric =
-      unwrap(this).metricKMSKeyInaccessible(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricKMSKeyInaccessible(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) Metric for KMS key being inaccessible.
@@ -703,7 +707,7 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun metricMasterCPUUtilization(props: MetricOptions): Metric =
-      unwrap(this).metricMasterCPUUtilization(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricMasterCPUUtilization(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) Metric for master CPU utilization.
@@ -741,7 +745,7 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun metricMasterJVMMemoryPressure(props: MetricOptions): Metric =
-      unwrap(this).metricMasterJVMMemoryPressure(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricMasterJVMMemoryPressure(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) Metric for master JVM memory pressure.
@@ -778,7 +782,7 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun metricNodes(props: MetricOptions): Metric =
-      unwrap(this).metricNodes(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricNodes(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) Metric for the number of nodes.
@@ -816,7 +820,7 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun metricSearchLatency(props: MetricOptions): Metric =
-      unwrap(this).metricSearchLatency(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricSearchLatency(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) Metric for search latency.
@@ -854,7 +858,7 @@ public open class Domain(
    */
   @Deprecated(message = "deprecated in CDK")
   public override fun metricSearchableDocuments(props: MetricOptions): Metric =
-      unwrap(this).metricSearchableDocuments(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+      unwrap(this).metricSearchableDocuments(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
 
   /**
    * (deprecated) Metric for number of searchable documents.
@@ -1369,7 +1373,7 @@ public open class Domain(
     @Deprecated(message = "deprecated in CDK")
     override
         fun accessPolicies(accessPolicies: List<CloudshiftdevAwscdkServicesIamPolicyStatement>) {
-      cdkBuilder.accessPolicies(accessPolicies.map(CloudshiftdevAwscdkServicesIamPolicyStatement::unwrap))
+      cdkBuilder.accessPolicies(accessPolicies.map(CloudshiftdevAwscdkServicesIamPolicyStatement.Companion::unwrap))
     }
 
     /**
@@ -1427,7 +1431,7 @@ public open class Domain(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun capacity(capacity: CapacityConfig) {
-      cdkBuilder.capacity(capacity.let(CapacityConfig::unwrap))
+      cdkBuilder.capacity(capacity.let(CapacityConfig.Companion::unwrap))
     }
 
     /**
@@ -1455,7 +1459,7 @@ public open class Domain(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun cognitoKibanaAuth(cognitoKibanaAuth: CognitoOptions) {
-      cdkBuilder.cognitoKibanaAuth(cognitoKibanaAuth.let(CognitoOptions::unwrap))
+      cdkBuilder.cognitoKibanaAuth(cognitoKibanaAuth.let(CognitoOptions.Companion::unwrap))
     }
 
     /**
@@ -1486,7 +1490,7 @@ public open class Domain(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun customEndpoint(customEndpoint: CustomEndpointOptions) {
-      cdkBuilder.customEndpoint(customEndpoint.let(CustomEndpointOptions::unwrap))
+      cdkBuilder.customEndpoint(customEndpoint.let(CustomEndpointOptions.Companion::unwrap))
     }
 
     /**
@@ -1536,7 +1540,7 @@ public open class Domain(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun ebs(ebs: EbsOptions) {
-      cdkBuilder.ebs(ebs.let(EbsOptions::unwrap))
+      cdkBuilder.ebs(ebs.let(EbsOptions.Companion::unwrap))
     }
 
     /**
@@ -1585,7 +1589,7 @@ public open class Domain(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun encryptionAtRest(encryptionAtRest: EncryptionAtRestOptions) {
-      cdkBuilder.encryptionAtRest(encryptionAtRest.let(EncryptionAtRestOptions::unwrap))
+      cdkBuilder.encryptionAtRest(encryptionAtRest.let(EncryptionAtRestOptions.Companion::unwrap))
     }
 
     /**
@@ -1629,7 +1633,7 @@ public open class Domain(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun fineGrainedAccessControl(fineGrainedAccessControl: AdvancedSecurityOptions) {
-      cdkBuilder.fineGrainedAccessControl(fineGrainedAccessControl.let(AdvancedSecurityOptions::unwrap))
+      cdkBuilder.fineGrainedAccessControl(fineGrainedAccessControl.let(AdvancedSecurityOptions.Companion::unwrap))
     }
 
     /**
@@ -1661,7 +1665,7 @@ public open class Domain(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun logging(logging: LoggingOptions) {
-      cdkBuilder.logging(logging.let(LoggingOptions::unwrap))
+      cdkBuilder.logging(logging.let(LoggingOptions.Companion::unwrap))
     }
 
     /**
@@ -1703,7 +1707,7 @@ public open class Domain(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -1721,7 +1725,7 @@ public open class Domain(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -1751,7 +1755,7 @@ public open class Domain(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun tlsSecurityPolicy(tlsSecurityPolicy: TLSSecurityPolicy) {
-      cdkBuilder.tlsSecurityPolicy(tlsSecurityPolicy.let(TLSSecurityPolicy::unwrap))
+      cdkBuilder.tlsSecurityPolicy(tlsSecurityPolicy.let(TLSSecurityPolicy.Companion::unwrap))
     }
 
     /**
@@ -1785,7 +1789,7 @@ public open class Domain(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun version(version: ElasticsearchVersion) {
-      cdkBuilder.version(version.let(ElasticsearchVersion::unwrap))
+      cdkBuilder.version(version.let(ElasticsearchVersion.Companion::unwrap))
     }
 
     /**
@@ -1799,7 +1803,7 @@ public open class Domain(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -1820,7 +1824,7 @@ public open class Domain(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun vpcSubnets(vpcSubnets: List<SubnetSelection>) {
-      cdkBuilder.vpcSubnets(vpcSubnets.map(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.map(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -1853,7 +1857,7 @@ public open class Domain(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun zoneAwareness(zoneAwareness: ZoneAwarenessConfig) {
-      cdkBuilder.zoneAwareness(zoneAwareness.let(ZoneAwarenessConfig::unwrap))
+      cdkBuilder.zoneAwareness(zoneAwareness.let(ZoneAwarenessConfig.Companion::unwrap))
     }
 
     /**
@@ -1880,8 +1884,8 @@ public open class Domain(
       id: String,
       attrs: DomainAttributes,
     ): IDomain =
-        software.amazon.awscdk.services.elasticsearch.Domain.fromDomainAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(DomainAttributes::unwrap)).let(IDomain::wrap)
+        software.amazon.awscdk.services.elasticsearch.Domain.fromDomainAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(DomainAttributes.Companion::unwrap)).let(IDomain::wrap)
 
     @Deprecated(message = "deprecated in CDK")
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -1898,7 +1902,7 @@ public open class Domain(
       id: String,
       domainEndpoint: String,
     ): IDomain =
-        software.amazon.awscdk.services.elasticsearch.Domain.fromDomainEndpoint(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.elasticsearch.Domain.fromDomainEndpoint(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, domainEndpoint).let(IDomain::wrap)
 
     public operator fun invoke(

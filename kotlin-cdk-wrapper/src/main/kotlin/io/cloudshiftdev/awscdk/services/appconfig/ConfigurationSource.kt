@@ -54,7 +54,7 @@ public abstract class ConfigurationSource(
 
   public companion object {
     public fun fromBucket(bucket: IBucket, objectKey: String): ConfigurationSource =
-        software.amazon.awscdk.services.appconfig.ConfigurationSource.fromBucket(bucket.let(IBucket::unwrap),
+        software.amazon.awscdk.services.appconfig.ConfigurationSource.fromBucket(bucket.let(IBucket.Companion::unwrap),
         objectKey).let(ConfigurationSource::wrap)
 
     public fun fromBucket(
@@ -62,24 +62,24 @@ public abstract class ConfigurationSource(
       objectKey: String,
       key: IKey,
     ): ConfigurationSource =
-        software.amazon.awscdk.services.appconfig.ConfigurationSource.fromBucket(bucket.let(IBucket::unwrap),
-        objectKey, key.let(IKey::unwrap)).let(ConfigurationSource::wrap)
+        software.amazon.awscdk.services.appconfig.ConfigurationSource.fromBucket(bucket.let(IBucket.Companion::unwrap),
+        objectKey, key.let(IKey.Companion::unwrap)).let(ConfigurationSource::wrap)
 
     public fun fromCfnDocument(document: CfnDocument): ConfigurationSource =
-        software.amazon.awscdk.services.appconfig.ConfigurationSource.fromCfnDocument(document.let(CfnDocument::unwrap)).let(ConfigurationSource::wrap)
+        software.amazon.awscdk.services.appconfig.ConfigurationSource.fromCfnDocument(document.let(CfnDocument.Companion::unwrap)).let(ConfigurationSource::wrap)
 
     public fun fromParameter(parameter: IParameter): ConfigurationSource =
-        software.amazon.awscdk.services.appconfig.ConfigurationSource.fromParameter(parameter.let(IParameter::unwrap)).let(ConfigurationSource::wrap)
+        software.amazon.awscdk.services.appconfig.ConfigurationSource.fromParameter(parameter.let(IParameter.Companion::unwrap)).let(ConfigurationSource::wrap)
 
     public fun fromParameter(parameter: IParameter, key: IKey): ConfigurationSource =
-        software.amazon.awscdk.services.appconfig.ConfigurationSource.fromParameter(parameter.let(IParameter::unwrap),
-        key.let(IKey::unwrap)).let(ConfigurationSource::wrap)
+        software.amazon.awscdk.services.appconfig.ConfigurationSource.fromParameter(parameter.let(IParameter.Companion::unwrap),
+        key.let(IKey.Companion::unwrap)).let(ConfigurationSource::wrap)
 
     public fun fromPipeline(pipeline: IPipeline): ConfigurationSource =
-        software.amazon.awscdk.services.appconfig.ConfigurationSource.fromPipeline(pipeline.let(IPipeline::unwrap)).let(ConfigurationSource::wrap)
+        software.amazon.awscdk.services.appconfig.ConfigurationSource.fromPipeline(pipeline.let(IPipeline.Companion::unwrap)).let(ConfigurationSource::wrap)
 
     public fun fromSecret(secret: ISecret): ConfigurationSource =
-        software.amazon.awscdk.services.appconfig.ConfigurationSource.fromSecret(secret.let(ISecret::unwrap)).let(ConfigurationSource::wrap)
+        software.amazon.awscdk.services.appconfig.ConfigurationSource.fromSecret(secret.let(ISecret.Companion::unwrap)).let(ConfigurationSource::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.ConfigurationSource):
         ConfigurationSource = CdkObjectWrappers.wrap(cdkObject) as? ConfigurationSource ?:

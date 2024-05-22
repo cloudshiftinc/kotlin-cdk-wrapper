@@ -197,7 +197,7 @@ public interface CfnGitHubRepositoryProps {
      * AWS CloudFormation stack.
      */
     override fun code(code: IResolvable) {
-      cdkBuilder.code(code.let(IResolvable::unwrap))
+      cdkBuilder.code(code.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -205,7 +205,7 @@ public interface CfnGitHubRepositoryProps {
      * AWS CloudFormation stack.
      */
     override fun code(code: CfnGitHubRepository.CodeProperty) {
-      cdkBuilder.code(code.let(CfnGitHubRepository.CodeProperty::unwrap))
+      cdkBuilder.code(code.let(CfnGitHubRepository.CodeProperty.Companion::unwrap))
     }
 
     /**
@@ -237,7 +237,7 @@ public interface CfnGitHubRepositoryProps {
      * You can use GitHub issues to track information and bugs for your repository.
      */
     override fun enableIssues(enableIssues: IResolvable) {
-      cdkBuilder.enableIssues(enableIssues.let(IResolvable::unwrap))
+      cdkBuilder.enableIssues(enableIssues.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -253,7 +253,7 @@ public interface CfnGitHubRepositoryProps {
      * If so, you choose who can see and commit to this repository.
      */
     override fun isPrivate(isPrivate: IResolvable) {
-      cdkBuilder.isPrivate(isPrivate.let(IResolvable::unwrap))
+      cdkBuilder.isPrivate(isPrivate.let(IResolvable.Companion::unwrap))
     }
 
     /**

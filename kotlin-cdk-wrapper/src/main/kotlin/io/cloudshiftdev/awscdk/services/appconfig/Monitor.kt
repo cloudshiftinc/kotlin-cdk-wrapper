@@ -56,7 +56,7 @@ public abstract class Monitor(
 
   public companion object {
     public fun fromCfnMonitorsProperty(monitorsProperty: CfnEnvironment.MonitorsProperty): Monitor =
-        software.amazon.awscdk.services.appconfig.Monitor.fromCfnMonitorsProperty(monitorsProperty.let(CfnEnvironment.MonitorsProperty::unwrap)).let(Monitor::wrap)
+        software.amazon.awscdk.services.appconfig.Monitor.fromCfnMonitorsProperty(monitorsProperty.let(CfnEnvironment.MonitorsProperty.Companion::unwrap)).let(Monitor::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4160cfc84ae2b4cb85bc384cebf397909a3e3ef271bd9dd9eaa9ac20dc631472")
@@ -65,11 +65,11 @@ public abstract class Monitor(
         Monitor = fromCfnMonitorsProperty(CfnEnvironment.MonitorsProperty(monitorsProperty))
 
     public fun fromCloudWatchAlarm(alarm: IAlarm): Monitor =
-        software.amazon.awscdk.services.appconfig.Monitor.fromCloudWatchAlarm(alarm.let(IAlarm::unwrap)).let(Monitor::wrap)
+        software.amazon.awscdk.services.appconfig.Monitor.fromCloudWatchAlarm(alarm.let(IAlarm.Companion::unwrap)).let(Monitor::wrap)
 
     public fun fromCloudWatchAlarm(alarm: IAlarm, alarmRole: IRole): Monitor =
-        software.amazon.awscdk.services.appconfig.Monitor.fromCloudWatchAlarm(alarm.let(IAlarm::unwrap),
-        alarmRole.let(IRole::unwrap)).let(Monitor::wrap)
+        software.amazon.awscdk.services.appconfig.Monitor.fromCloudWatchAlarm(alarm.let(IAlarm.Companion::unwrap),
+        alarmRole.let(IRole.Companion::unwrap)).let(Monitor::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.Monitor): Monitor =
         CdkObjectWrappers.wrap(cdkObject) as? Monitor ?: Wrapper(cdkObject)

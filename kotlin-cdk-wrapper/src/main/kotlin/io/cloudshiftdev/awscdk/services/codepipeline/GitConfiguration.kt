@@ -40,6 +40,17 @@ import kotlin.collections.List
  */
 public interface GitConfiguration {
   /**
+   * The field where the repository event that will start the pipeline is specified as pull
+   * requests.
+   *
+   * The length must be less than or equal to 3.
+   *
+   * Default: - no filter.
+   */
+  public fun pullRequestFilter(): List<GitPullRequestFilter> =
+      unwrap(this).getPullRequestFilter()?.map(GitPullRequestFilter::wrap) ?: emptyList()
+
+  /**
    * The field where the repository event that will start the pipeline, such as pushing Git tags, is
    * specified with details.
    *
@@ -68,6 +79,20 @@ public interface GitConfiguration {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param pullRequestFilter The field where the repository event that will start the pipeline is
+     * specified as pull requests.
+     * The length must be less than or equal to 3.
+     */
+    public fun pullRequestFilter(pullRequestFilter: List<GitPullRequestFilter>)
+
+    /**
+     * @param pullRequestFilter The field where the repository event that will start the pipeline is
+     * specified as pull requests.
+     * The length must be less than or equal to 3.
+     */
+    public fun pullRequestFilter(vararg pullRequestFilter: GitPullRequestFilter)
+
     /**
      * @param pushFilter The field where the repository event that will start the pipeline, such as
      * pushing Git tags, is specified with details.
@@ -103,6 +128,23 @@ public interface GitConfiguration {
         software.amazon.awscdk.services.codepipeline.GitConfiguration.builder()
 
     /**
+     * @param pullRequestFilter The field where the repository event that will start the pipeline is
+     * specified as pull requests.
+     * The length must be less than or equal to 3.
+     */
+    override fun pullRequestFilter(pullRequestFilter: List<GitPullRequestFilter>) {
+      cdkBuilder.pullRequestFilter(pullRequestFilter.map(GitPullRequestFilter.Companion::unwrap))
+    }
+
+    /**
+     * @param pullRequestFilter The field where the repository event that will start the pipeline is
+     * specified as pull requests.
+     * The length must be less than or equal to 3.
+     */
+    override fun pullRequestFilter(vararg pullRequestFilter: GitPullRequestFilter): Unit =
+        pullRequestFilter(pullRequestFilter.toList())
+
+    /**
      * @param pushFilter The field where the repository event that will start the pipeline, such as
      * pushing Git tags, is specified with details.
      * Git tags is the only supported event type.
@@ -110,7 +152,7 @@ public interface GitConfiguration {
      * The length must be less than or equal to 3.
      */
     override fun pushFilter(pushFilter: List<GitPushFilter>) {
-      cdkBuilder.pushFilter(pushFilter.map(GitPushFilter::unwrap))
+      cdkBuilder.pushFilter(pushFilter.map(GitPushFilter.Companion::unwrap))
     }
 
     /**
@@ -133,7 +175,7 @@ public interface GitConfiguration {
      * `CodeStarConnectionsSourceAction` construct in `aws-codepipeline-actions` module.
      */
     override fun sourceAction(sourceAction: IAction) {
-      cdkBuilder.sourceAction(sourceAction.let(IAction::unwrap))
+      cdkBuilder.sourceAction(sourceAction.let(IAction.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codepipeline.GitConfiguration =
@@ -143,6 +185,17 @@ public interface GitConfiguration {
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.codepipeline.GitConfiguration,
   ) : CdkObject(cdkObject), GitConfiguration {
+    /**
+     * The field where the repository event that will start the pipeline is specified as pull
+     * requests.
+     *
+     * The length must be less than or equal to 3.
+     *
+     * Default: - no filter.
+     */
+    override fun pullRequestFilter(): List<GitPullRequestFilter> =
+        unwrap(this).getPullRequestFilter()?.map(GitPullRequestFilter::wrap) ?: emptyList()
+
     /**
      * The field where the repository event that will start the pipeline, such as pushing Git tags,
      * is specified with details.

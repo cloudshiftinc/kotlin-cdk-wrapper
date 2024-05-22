@@ -122,7 +122,7 @@ public interface KubernetesObjectValueProps {
      * [disable-awslint:ref-via-interface]
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -158,7 +158,7 @@ public interface KubernetesObjectValueProps {
      * @param timeout Timeout for waiting on a value.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.eks.KubernetesObjectValueProps =

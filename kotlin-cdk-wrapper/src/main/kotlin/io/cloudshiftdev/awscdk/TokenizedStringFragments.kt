@@ -43,7 +43,7 @@ public open class TokenizedStringFragments(
    * @param token 
    */
   public open fun addToken(token: IResolvable) {
-    unwrap(this).addToken(token.let(IResolvable::unwrap))
+    unwrap(this).addToken(token.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -64,7 +64,7 @@ public open class TokenizedStringFragments(
    * @param concat 
    */
   public open fun join(concat: IFragmentConcatenator): Any =
-      unwrap(this).join(concat.let(IFragmentConcatenator::unwrap))
+      unwrap(this).join(concat.let(IFragmentConcatenator.Companion::unwrap))
 
   /**
    *
@@ -77,7 +77,7 @@ public open class TokenizedStringFragments(
    * @param mapper 
    */
   public open fun mapTokens(mapper: ITokenMapper): TokenizedStringFragments =
-      unwrap(this).mapTokens(mapper.let(ITokenMapper::unwrap)).let(TokenizedStringFragments::wrap)
+      unwrap(this).mapTokens(mapper.let(ITokenMapper.Companion::unwrap)).let(TokenizedStringFragments::wrap)
 
   /**
    * Return all Tokens from this string.

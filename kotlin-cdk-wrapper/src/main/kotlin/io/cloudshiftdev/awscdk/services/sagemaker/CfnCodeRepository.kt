@@ -65,8 +65,8 @@ public open class CfnCodeRepository(
     id: String,
     props: CfnCodeRepositoryProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnCodeRepository(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCodeRepositoryProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnCodeRepository(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCodeRepositoryProps.Companion::unwrap))
   )
 
   public constructor(
@@ -109,7 +109,7 @@ public open class CfnCodeRepository(
    * of the AWS Secrets Manager secret that contains the credentials used to access the repository.
    */
   public open fun gitConfig(`value`: IResolvable) {
-    unwrap(this).setGitConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setGitConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -117,7 +117,7 @@ public open class CfnCodeRepository(
    * of the AWS Secrets Manager secret that contains the credentials used to access the repository.
    */
   public open fun gitConfig(`value`: GitConfigProperty) {
-    unwrap(this).setGitConfig(`value`.let(GitConfigProperty::unwrap))
+    unwrap(this).setGitConfig(`value`.let(GitConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -135,7 +135,7 @@ public open class CfnCodeRepository(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -153,7 +153,7 @@ public open class CfnCodeRepository(
    * List of tags for Code Repository.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -257,7 +257,7 @@ public open class CfnCodeRepository(
      * access the repository. 
      */
     override fun gitConfig(gitConfig: IResolvable) {
-      cdkBuilder.gitConfig(gitConfig.let(IResolvable::unwrap))
+      cdkBuilder.gitConfig(gitConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -271,7 +271,7 @@ public open class CfnCodeRepository(
      * access the repository. 
      */
     override fun gitConfig(gitConfig: GitConfigProperty) {
-      cdkBuilder.gitConfig(gitConfig.let(GitConfigProperty::unwrap))
+      cdkBuilder.gitConfig(gitConfig.let(GitConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -296,7 +296,7 @@ public open class CfnCodeRepository(
      * @param tags List of tags for Code Repository. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

@@ -274,7 +274,7 @@ public interface CfnRepositoryCreationTemplateProps {
      * *Amazon Elastic Container Registry User Guide* .
      */
     override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -293,7 +293,7 @@ public interface CfnRepositoryCreationTemplateProps {
      */
     override
         fun encryptionConfiguration(encryptionConfiguration: CfnRepositoryCreationTemplate.EncryptionConfigurationProperty) {
-      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(CfnRepositoryCreationTemplate.EncryptionConfigurationProperty::unwrap))
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(CfnRepositoryCreationTemplate.EncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -353,7 +353,7 @@ public interface CfnRepositoryCreationTemplateProps {
      * @param resourceTags The tags attached to the resource.
      */
     override fun resourceTags(resourceTags: IResolvable) {
-      cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
+      cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
     }
 
     /**

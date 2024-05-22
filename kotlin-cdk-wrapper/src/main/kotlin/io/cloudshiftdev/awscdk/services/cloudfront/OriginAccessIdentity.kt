@@ -31,7 +31,7 @@ public open class OriginAccessIdentity(
   cdkObject: software.amazon.awscdk.services.cloudfront.OriginAccessIdentity,
 ) : Resource(cdkObject), IOriginAccessIdentity {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.cloudfront.OriginAccessIdentity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.cloudfront.OriginAccessIdentity(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -40,8 +40,8 @@ public open class OriginAccessIdentity(
     id: String,
     props: OriginAccessIdentityProps,
   ) :
-      this(software.amazon.awscdk.services.cloudfront.OriginAccessIdentity(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(OriginAccessIdentityProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.OriginAccessIdentity(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(OriginAccessIdentityProps.Companion::unwrap))
   )
 
   public constructor(
@@ -122,7 +122,7 @@ public open class OriginAccessIdentity(
       id: String,
       originAccessIdentityId: String,
     ): IOriginAccessIdentity =
-        software.amazon.awscdk.services.cloudfront.OriginAccessIdentity.fromOriginAccessIdentityId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.cloudfront.OriginAccessIdentity.fromOriginAccessIdentityId(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, originAccessIdentityId).let(IOriginAccessIdentity::wrap)
 
     @Deprecated(message = "deprecated in CDK")
@@ -131,7 +131,7 @@ public open class OriginAccessIdentity(
       id: String,
       originAccessIdentityName: String,
     ): IOriginAccessIdentity =
-        software.amazon.awscdk.services.cloudfront.OriginAccessIdentity.fromOriginAccessIdentityName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.cloudfront.OriginAccessIdentity.fromOriginAccessIdentityName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, originAccessIdentityName).let(IOriginAccessIdentity::wrap)
 
     public operator fun invoke(

@@ -76,8 +76,8 @@ public open class CfnInfrastructureConfiguration(
     id: String,
     props: CfnInfrastructureConfigurationProps,
   ) :
-      this(software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInfrastructureConfigurationProps::unwrap))
+      this(software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInfrastructureConfigurationProps.Companion::unwrap))
   )
 
   public constructor(
@@ -119,7 +119,7 @@ public open class CfnInfrastructureConfiguration(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -131,14 +131,14 @@ public open class CfnInfrastructureConfiguration(
    * The instance metadata option settings for the infrastructure configuration.
    */
   public open fun instanceMetadataOptions(`value`: IResolvable) {
-    unwrap(this).setInstanceMetadataOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInstanceMetadataOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The instance metadata option settings for the infrastructure configuration.
    */
   public open fun instanceMetadataOptions(`value`: InstanceMetadataOptionsProperty) {
-    unwrap(this).setInstanceMetadataOptions(`value`.let(InstanceMetadataOptionsProperty::unwrap))
+    unwrap(this).setInstanceMetadataOptions(`value`.let(InstanceMetadataOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -200,14 +200,14 @@ public open class CfnInfrastructureConfiguration(
    * The logging configuration defines where Image Builder uploads your logs.
    */
   public open fun logging(`value`: IResolvable) {
-    unwrap(this).setLogging(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLogging(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The logging configuration defines where Image Builder uploads your logs.
    */
   public open fun logging(`value`: LoggingProperty) {
-    unwrap(this).setLogging(`value`.let(LoggingProperty::unwrap))
+    unwrap(this).setLogging(`value`.let(LoggingProperty.Companion::unwrap))
   }
 
   /**
@@ -239,7 +239,7 @@ public open class CfnInfrastructureConfiguration(
    * The tags attached to the resource created by Image Builder.
    */
   public open fun resourceTags(`value`: IResolvable) {
-    unwrap(this).setResourceTags(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResourceTags(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -325,7 +325,7 @@ public open class CfnInfrastructureConfiguration(
    * The terminate instance on failure configuration of the infrastructure configuration.
    */
   public open fun terminateInstanceOnFailure(`value`: IResolvable) {
-    unwrap(this).setTerminateInstanceOnFailure(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTerminateInstanceOnFailure(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -541,7 +541,7 @@ public open class CfnInfrastructureConfiguration(
      * configuration. 
      */
     override fun instanceMetadataOptions(instanceMetadataOptions: IResolvable) {
-      cdkBuilder.instanceMetadataOptions(instanceMetadataOptions.let(IResolvable::unwrap))
+      cdkBuilder.instanceMetadataOptions(instanceMetadataOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -552,7 +552,7 @@ public open class CfnInfrastructureConfiguration(
      * configuration. 
      */
     override fun instanceMetadataOptions(instanceMetadataOptions: InstanceMetadataOptionsProperty) {
-      cdkBuilder.instanceMetadataOptions(instanceMetadataOptions.let(InstanceMetadataOptionsProperty::unwrap))
+      cdkBuilder.instanceMetadataOptions(instanceMetadataOptions.let(InstanceMetadataOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -614,7 +614,7 @@ public open class CfnInfrastructureConfiguration(
      * @param logging The logging configuration defines where Image Builder uploads your logs. 
      */
     override fun logging(logging: IResolvable) {
-      cdkBuilder.logging(logging.let(IResolvable::unwrap))
+      cdkBuilder.logging(logging.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -624,7 +624,7 @@ public open class CfnInfrastructureConfiguration(
      * @param logging The logging configuration defines where Image Builder uploads your logs. 
      */
     override fun logging(logging: LoggingProperty) {
-      cdkBuilder.logging(logging.let(LoggingProperty::unwrap))
+      cdkBuilder.logging(logging.let(LoggingProperty.Companion::unwrap))
     }
 
     /**
@@ -655,7 +655,7 @@ public open class CfnInfrastructureConfiguration(
      * @param resourceTags The tags attached to the resource created by Image Builder. 
      */
     override fun resourceTags(resourceTags: IResolvable) {
-      cdkBuilder.resourceTags(resourceTags.let(IResolvable::unwrap))
+      cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -737,7 +737,7 @@ public open class CfnInfrastructureConfiguration(
      * infrastructure configuration. 
      */
     override fun terminateInstanceOnFailure(terminateInstanceOnFailure: IResolvable) {
-      cdkBuilder.terminateInstanceOnFailure(terminateInstanceOnFailure.let(IResolvable::unwrap))
+      cdkBuilder.terminateInstanceOnFailure(terminateInstanceOnFailure.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration
@@ -999,14 +999,14 @@ public open class CfnInfrastructureConfiguration(
        * @param s3Logs The Amazon S3 logging configuration.
        */
       override fun s3Logs(s3Logs: IResolvable) {
-        cdkBuilder.s3Logs(s3Logs.let(IResolvable::unwrap))
+        cdkBuilder.s3Logs(s3Logs.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param s3Logs The Amazon S3 logging configuration.
        */
       override fun s3Logs(s3Logs: S3LogsProperty) {
-        cdkBuilder.s3Logs(s3Logs.let(S3LogsProperty::unwrap))
+        cdkBuilder.s3Logs(s3Logs.let(S3LogsProperty.Companion::unwrap))
       }
 
       /**

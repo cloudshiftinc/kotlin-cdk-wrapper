@@ -115,7 +115,7 @@ public interface TokenAuthorizerProps : LambdaAuthorizerProps {
      * assumable by 'apigateway.amazonaws.com'.
      */
     override fun assumeRole(assumeRole: IRole) {
-      cdkBuilder.assumeRole(assumeRole.let(IRole::unwrap))
+      cdkBuilder.assumeRole(assumeRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -136,7 +136,7 @@ public interface TokenAuthorizerProps : LambdaAuthorizerProps {
      * specification](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-lambda-authorizer-output.html).
      */
     override fun handler(handler: IFunction) {
-      cdkBuilder.handler(handler.let(IFunction::unwrap))
+      cdkBuilder.handler(handler.let(IFunction.Companion::unwrap))
     }
 
     /**
@@ -155,7 +155,7 @@ public interface TokenAuthorizerProps : LambdaAuthorizerProps {
      * Disable caching by setting this to 0.
      */
     override fun resultsCacheTtl(resultsCacheTtl: Duration) {
-      cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration::unwrap))
+      cdkBuilder.resultsCacheTtl(resultsCacheTtl.let(Duration.Companion::unwrap))
     }
 
     /**

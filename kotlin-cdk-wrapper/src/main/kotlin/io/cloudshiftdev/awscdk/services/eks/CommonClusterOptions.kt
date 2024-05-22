@@ -214,28 +214,28 @@ public interface CommonClusterOptions {
      * AWS API operations on your behalf.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
      * @param securityGroup Security Group to use for Control Plane ENIs.
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup.Companion::unwrap))
     }
 
     /**
      * @param version The Kubernetes version to run in the cluster. 
      */
     override fun version(version: KubernetesVersion) {
-      cdkBuilder.version(version.let(KubernetesVersion::unwrap))
+      cdkBuilder.version(version.let(KubernetesVersion.Companion::unwrap))
     }
 
     /**
      * @param vpc The VPC in which to create the Cluster.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
@@ -245,7 +245,7 @@ public interface CommonClusterOptions {
      * `vpcSubnets: [{ subnetType: ec2.SubnetType.PRIVATE_WITH_EGRESS }]`
      */
     override fun vpcSubnets(vpcSubnets: List<SubnetSelection>) {
-      cdkBuilder.vpcSubnets(vpcSubnets.map(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.map(SubnetSelection.Companion::unwrap))
     }
 
     /**

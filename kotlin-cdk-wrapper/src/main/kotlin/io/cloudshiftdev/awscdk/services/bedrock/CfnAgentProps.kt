@@ -79,6 +79,8 @@ import kotlin.jvm.JvmName
  * .skipResourceInUseCheckOnDelete(false)
  * .tags(Map.of(
  * "tagsKey", "tags"))
+ * .testAliasTags(Map.of(
+ * "testAliasTagsKey", "testAliasTags"))
  * .build();
  * ```
  *
@@ -201,6 +203,13 @@ public interface CfnAgentProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-tags)
    */
   public fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
+
+  /**
+   * A map of tag keys and values.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-testaliastags)
+   */
+  public fun testAliasTags(): Any? = unwrap(this).getTestAliasTags()
 
   /**
    * A builder for [CfnAgentProps]
@@ -346,6 +355,16 @@ public interface CfnAgentProps {
      * practices](https://docs.aws.amazon.com/tag-editor/latest/userguide/tagging.html#tag-best-practices)
      */
     public fun tags(tags: Map<String, String>)
+
+    /**
+     * @param testAliasTags A map of tag keys and values.
+     */
+    public fun testAliasTags(testAliasTags: IResolvable)
+
+    /**
+     * @param testAliasTags A map of tag keys and values.
+     */
+    public fun testAliasTags(testAliasTags: Map<String, String>)
   }
 
   private class BuilderImpl : Builder {
@@ -356,7 +375,7 @@ public interface CfnAgentProps {
      * @param actionGroups The action groups that belong to an agent.
      */
     override fun actionGroups(actionGroups: IResolvable) {
-      cdkBuilder.actionGroups(actionGroups.let(IResolvable::unwrap))
+      cdkBuilder.actionGroups(actionGroups.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -403,7 +422,7 @@ public interface CfnAgentProps {
      * this value is `false` .
      */
     override fun autoPrepare(autoPrepare: IResolvable) {
-      cdkBuilder.autoPrepare(autoPrepare.let(IResolvable::unwrap))
+      cdkBuilder.autoPrepare(autoPrepare.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -451,7 +470,7 @@ public interface CfnAgentProps {
      * @param knowledgeBases The knowledge bases associated with the agent.
      */
     override fun knowledgeBases(knowledgeBases: IResolvable) {
-      cdkBuilder.knowledgeBases(knowledgeBases.let(IResolvable::unwrap))
+      cdkBuilder.knowledgeBases(knowledgeBases.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -474,7 +493,7 @@ public interface CfnAgentProps {
      * prompts](https://docs.aws.amazon.com/bedrock/latest/userguide/advanced-prompts.html) .
      */
     override fun promptOverrideConfiguration(promptOverrideConfiguration: IResolvable) {
-      cdkBuilder.promptOverrideConfiguration(promptOverrideConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.promptOverrideConfiguration(promptOverrideConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -485,7 +504,7 @@ public interface CfnAgentProps {
      */
     override
         fun promptOverrideConfiguration(promptOverrideConfiguration: CfnAgent.PromptOverrideConfigurationProperty) {
-      cdkBuilder.promptOverrideConfiguration(promptOverrideConfiguration.let(CfnAgent.PromptOverrideConfigurationProperty::unwrap))
+      cdkBuilder.promptOverrideConfiguration(promptOverrideConfiguration.let(CfnAgent.PromptOverrideConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -516,7 +535,7 @@ public interface CfnAgentProps {
      * By default, this value is `false` .
      */
     override fun skipResourceInUseCheckOnDelete(skipResourceInUseCheckOnDelete: IResolvable) {
-      cdkBuilder.skipResourceInUseCheckOnDelete(skipResourceInUseCheckOnDelete.let(IResolvable::unwrap))
+      cdkBuilder.skipResourceInUseCheckOnDelete(skipResourceInUseCheckOnDelete.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -529,6 +548,20 @@ public interface CfnAgentProps {
      */
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
+    }
+
+    /**
+     * @param testAliasTags A map of tag keys and values.
+     */
+    override fun testAliasTags(testAliasTags: IResolvable) {
+      cdkBuilder.testAliasTags(testAliasTags.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param testAliasTags A map of tag keys and values.
+     */
+    override fun testAliasTags(testAliasTags: Map<String, String>) {
+      cdkBuilder.testAliasTags(testAliasTags)
     }
 
     public fun build(): software.amazon.awscdk.services.bedrock.CfnAgentProps = cdkBuilder.build()
@@ -653,6 +686,13 @@ public interface CfnAgentProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-tags)
      */
     override fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
+
+    /**
+     * A map of tag keys and values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-agent.html#cfn-bedrock-agent-testaliastags)
+     */
+    override fun testAliasTags(): Any? = unwrap(this).getTestAliasTags()
   }
 
   public companion object {

@@ -198,7 +198,7 @@ public interface PortMapping {
      * This field may only be set when the task definition uses Bridge or Awsvpc network modes.
      */
     override fun appProtocol(appProtocol: AppProtocol) {
-      cdkBuilder.appProtocol(appProtocol.let(AppProtocol::unwrap))
+      cdkBuilder.appProtocol(appProtocol.let(AppProtocol.Companion::unwrap))
     }
 
     /**
@@ -270,7 +270,7 @@ public interface PortMapping {
      * Valid values are Protocol.TCP and Protocol.UDP.
      */
     override fun protocol(protocol: Protocol) {
-      cdkBuilder.protocol(protocol.let(Protocol::unwrap))
+      cdkBuilder.protocol(protocol.let(Protocol.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.PortMapping = cdkBuilder.build()

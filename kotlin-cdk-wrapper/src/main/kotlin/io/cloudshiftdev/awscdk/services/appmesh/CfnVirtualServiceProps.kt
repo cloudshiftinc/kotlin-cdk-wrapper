@@ -178,14 +178,14 @@ public interface CfnVirtualServiceProps {
      * @param spec The virtual service specification to apply. 
      */
     override fun spec(spec: IResolvable) {
-      cdkBuilder.spec(spec.let(IResolvable::unwrap))
+      cdkBuilder.spec(spec.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param spec The virtual service specification to apply. 
      */
     override fun spec(spec: CfnVirtualService.VirtualServiceSpecProperty) {
-      cdkBuilder.spec(spec.let(CfnVirtualService.VirtualServiceSpecProperty::unwrap))
+      cdkBuilder.spec(spec.let(CfnVirtualService.VirtualServiceSpecProperty.Companion::unwrap))
     }
 
     /**
@@ -204,7 +204,7 @@ public interface CfnVirtualServiceProps {
      * characters.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

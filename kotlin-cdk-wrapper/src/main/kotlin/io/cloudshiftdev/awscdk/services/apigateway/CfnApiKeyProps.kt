@@ -235,7 +235,7 @@ public interface CfnApiKeyProps {
      * @param enabled Specifies whether the ApiKey can be used by callers.
      */
     override fun enabled(enabled: IResolvable) {
-      cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+      cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -253,7 +253,7 @@ public interface CfnApiKeyProps {
      * This parameter is deprecated and should not be used.
      */
     override fun generateDistinctId(generateDistinctId: IResolvable) {
-      cdkBuilder.generateDistinctId(generateDistinctId.let(IResolvable::unwrap))
+      cdkBuilder.generateDistinctId(generateDistinctId.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -275,7 +275,7 @@ public interface CfnApiKeyProps {
      * @param stageKeys DEPRECATED FOR USAGE PLANS - Specifies stages associated with the API key.
      */
     override fun stageKeys(stageKeys: IResolvable) {
-      cdkBuilder.stageKeys(stageKeys.let(IResolvable::unwrap))
+      cdkBuilder.stageKeys(stageKeys.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -296,7 +296,7 @@ public interface CfnApiKeyProps {
      * not start with `aws:` . The tag value can be up to 256 characters.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

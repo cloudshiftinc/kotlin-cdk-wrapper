@@ -109,8 +109,8 @@ public open class CfnDecoderManifest(
     id: String,
     props: CfnDecoderManifestProps,
   ) :
-      this(software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDecoderManifestProps::unwrap))
+      this(software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDecoderManifestProps.Companion::unwrap))
   )
 
   public constructor(
@@ -155,7 +155,7 @@ public open class CfnDecoderManifest(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -193,7 +193,7 @@ public open class CfnDecoderManifest(
    * (Optional) A list of information about available network interfaces.
    */
   public open fun networkInterfaces(`value`: IResolvable) {
-    unwrap(this).setNetworkInterfaces(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNetworkInterfaces(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -217,7 +217,7 @@ public open class CfnDecoderManifest(
    * (Optional) A list of information about signal decoders.
    */
   public open fun signalDecoders(`value`: IResolvable) {
-    unwrap(this).setSignalDecoders(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSignalDecoders(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -259,7 +259,7 @@ public open class CfnDecoderManifest(
    * (Optional) Metadata that can be used to manage the decoder manifest.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -426,7 +426,7 @@ public open class CfnDecoderManifest(
      * 
      */
     override fun networkInterfaces(networkInterfaces: IResolvable) {
-      cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable::unwrap))
+      cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -457,7 +457,7 @@ public open class CfnDecoderManifest(
      * @param signalDecoders (Optional) A list of information about signal decoders. 
      */
     override fun signalDecoders(signalDecoders: IResolvable) {
-      cdkBuilder.signalDecoders(signalDecoders.let(IResolvable::unwrap))
+      cdkBuilder.signalDecoders(signalDecoders.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -501,7 +501,7 @@ public open class CfnDecoderManifest(
      * @param tags (Optional) Metadata that can be used to manage the decoder manifest. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -783,7 +783,7 @@ public open class CfnDecoderManifest(
        * Network (CAN) protocol. 
        */
       override fun canInterface(canInterface: IResolvable) {
-        cdkBuilder.canInterface(canInterface.let(IResolvable::unwrap))
+        cdkBuilder.canInterface(canInterface.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -791,7 +791,7 @@ public open class CfnDecoderManifest(
        * Network (CAN) protocol. 
        */
       override fun canInterface(canInterface: CanInterfaceProperty) {
-        cdkBuilder.canInterface(canInterface.let(CanInterfaceProperty::unwrap))
+        cdkBuilder.canInterface(canInterface.let(CanInterfaceProperty.Companion::unwrap))
       }
 
       /**
@@ -993,7 +993,7 @@ public open class CfnDecoderManifest(
        * messages it receives and transmits. 
        */
       override fun canSignal(canSignal: IResolvable) {
-        cdkBuilder.canSignal(canSignal.let(IResolvable::unwrap))
+        cdkBuilder.canSignal(canSignal.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1001,7 +1001,7 @@ public open class CfnDecoderManifest(
        * messages it receives and transmits. 
        */
       override fun canSignal(canSignal: CanSignalProperty) {
-        cdkBuilder.canSignal(canSignal.let(CanSignalProperty::unwrap))
+        cdkBuilder.canSignal(canSignal.let(CanSignalProperty.Companion::unwrap))
       }
 
       /**
@@ -1494,14 +1494,14 @@ public open class CfnDecoderManifest(
        * @param canInterface the value to be set.
        */
       override fun canInterface(canInterface: IResolvable) {
-        cdkBuilder.canInterface(canInterface.let(IResolvable::unwrap))
+        cdkBuilder.canInterface(canInterface.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param canInterface the value to be set.
        */
       override fun canInterface(canInterface: CanInterfaceProperty) {
-        cdkBuilder.canInterface(canInterface.let(CanInterfaceProperty::unwrap))
+        cdkBuilder.canInterface(canInterface.let(CanInterfaceProperty.Companion::unwrap))
       }
 
       /**
@@ -1523,14 +1523,14 @@ public open class CfnDecoderManifest(
        * @param obdInterface the value to be set.
        */
       override fun obdInterface(obdInterface: IResolvable) {
-        cdkBuilder.obdInterface(obdInterface.let(IResolvable::unwrap))
+        cdkBuilder.obdInterface(obdInterface.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param obdInterface the value to be set.
        */
       override fun obdInterface(obdInterface: ObdInterfaceProperty) {
-        cdkBuilder.obdInterface(obdInterface.let(ObdInterfaceProperty::unwrap))
+        cdkBuilder.obdInterface(obdInterface.let(ObdInterfaceProperty.Companion::unwrap))
       }
 
       /**
@@ -1957,7 +1957,7 @@ public open class CfnDecoderManifest(
        * On-board diagnostic (OBD) II protocol. 
        */
       override fun obdInterface(obdInterface: IResolvable) {
-        cdkBuilder.obdInterface(obdInterface.let(IResolvable::unwrap))
+        cdkBuilder.obdInterface(obdInterface.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1965,7 +1965,7 @@ public open class CfnDecoderManifest(
        * On-board diagnostic (OBD) II protocol. 
        */
       override fun obdInterface(obdInterface: ObdInterfaceProperty) {
-        cdkBuilder.obdInterface(obdInterface.let(ObdInterfaceProperty::unwrap))
+        cdkBuilder.obdInterface(obdInterface.let(ObdInterfaceProperty.Companion::unwrap))
       }
 
       /**
@@ -2160,7 +2160,7 @@ public open class CfnDecoderManifest(
        * protocol in a vehicle. 
        */
       override fun obdSignal(obdSignal: IResolvable) {
-        cdkBuilder.obdSignal(obdSignal.let(IResolvable::unwrap))
+        cdkBuilder.obdSignal(obdSignal.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2168,7 +2168,7 @@ public open class CfnDecoderManifest(
        * protocol in a vehicle. 
        */
       override fun obdSignal(obdSignal: ObdSignalProperty) {
-        cdkBuilder.obdSignal(obdSignal.let(ObdSignalProperty::unwrap))
+        cdkBuilder.obdSignal(obdSignal.let(ObdSignalProperty.Companion::unwrap))
       }
 
       /**
@@ -2676,14 +2676,14 @@ public open class CfnDecoderManifest(
        * @param canSignal the value to be set.
        */
       override fun canSignal(canSignal: IResolvable) {
-        cdkBuilder.canSignal(canSignal.let(IResolvable::unwrap))
+        cdkBuilder.canSignal(canSignal.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param canSignal the value to be set.
        */
       override fun canSignal(canSignal: CanSignalProperty) {
-        cdkBuilder.canSignal(canSignal.let(CanSignalProperty::unwrap))
+        cdkBuilder.canSignal(canSignal.let(CanSignalProperty.Companion::unwrap))
       }
 
       /**
@@ -2712,14 +2712,14 @@ public open class CfnDecoderManifest(
        * @param obdSignal the value to be set.
        */
       override fun obdSignal(obdSignal: IResolvable) {
-        cdkBuilder.obdSignal(obdSignal.let(IResolvable::unwrap))
+        cdkBuilder.obdSignal(obdSignal.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param obdSignal the value to be set.
        */
       override fun obdSignal(obdSignal: ObdSignalProperty) {
-        cdkBuilder.obdSignal(obdSignal.let(ObdSignalProperty::unwrap))
+        cdkBuilder.obdSignal(obdSignal.let(ObdSignalProperty.Companion::unwrap))
       }
 
       /**

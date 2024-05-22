@@ -82,14 +82,14 @@ public interface EventBusPolicyProps {
      * @param eventBus The event bus to which the policy applies. 
      */
     override fun eventBus(eventBus: IEventBus) {
-      cdkBuilder.eventBus(eventBus.let(IEventBus::unwrap))
+      cdkBuilder.eventBus(eventBus.let(IEventBus.Companion::unwrap))
     }
 
     /**
      * @param statement An IAM Policy Statement to apply to the Event Bus. 
      */
     override fun statement(statement: PolicyStatement) {
-      cdkBuilder.statement(statement.let(PolicyStatement::unwrap))
+      cdkBuilder.statement(statement.let(PolicyStatement.Companion::unwrap))
     }
 
     /**

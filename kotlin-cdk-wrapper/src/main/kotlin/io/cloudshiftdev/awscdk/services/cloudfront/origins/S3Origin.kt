@@ -51,12 +51,12 @@ public open class S3Origin(
   cdkObject: software.amazon.awscdk.services.cloudfront.origins.S3Origin,
 ) : CdkObject(cdkObject), IOrigin {
   public constructor(bucket: CloudshiftdevAwscdkServicesS3IBucket) :
-      this(software.amazon.awscdk.services.cloudfront.origins.S3Origin(bucket.let(CloudshiftdevAwscdkServicesS3IBucket::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.origins.S3Origin(bucket.let(CloudshiftdevAwscdkServicesS3IBucket.Companion::unwrap))
   )
 
   public constructor(bucket: CloudshiftdevAwscdkServicesS3IBucket, props: S3OriginProps) :
-      this(software.amazon.awscdk.services.cloudfront.origins.S3Origin(bucket.let(CloudshiftdevAwscdkServicesS3IBucket::unwrap),
-      props.let(S3OriginProps::unwrap))
+      this(software.amazon.awscdk.services.cloudfront.origins.S3Origin(bucket.let(CloudshiftdevAwscdkServicesS3IBucket.Companion::unwrap),
+      props.let(S3OriginProps.Companion::unwrap))
   )
 
   public constructor(bucket: CloudshiftdevAwscdkServicesS3IBucket,
@@ -70,8 +70,8 @@ public open class S3Origin(
    * @param options 
    */
   public override fun bind(scope: Construct, options: OriginBindOptions): OriginBindConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap),
-      options.let(OriginBindOptions::unwrap)).let(OriginBindConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      options.let(OriginBindOptions.Companion::unwrap)).let(OriginBindConfig::wrap)
 
   /**
    * The method called when a given Origin is added (for the first time) to a Distribution.
@@ -216,7 +216,7 @@ public open class S3Origin(
      * a connection to the origin. 
      */
     override fun connectionTimeout(connectionTimeout: Duration) {
-      cdkBuilder.connectionTimeout(connectionTimeout.let(Duration::unwrap))
+      cdkBuilder.connectionTimeout(connectionTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -242,7 +242,7 @@ public open class S3Origin(
      * cloudfront will use when calling your s3 bucket. 
      */
     override fun originAccessIdentity(originAccessIdentity: IOriginAccessIdentity) {
-      cdkBuilder.originAccessIdentity(originAccessIdentity.let(IOriginAccessIdentity::unwrap))
+      cdkBuilder.originAccessIdentity(originAccessIdentity.let(IOriginAccessIdentity.Companion::unwrap))
     }
 
     /**

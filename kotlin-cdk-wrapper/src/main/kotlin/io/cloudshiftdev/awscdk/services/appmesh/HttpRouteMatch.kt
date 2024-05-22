@@ -149,7 +149,7 @@ public interface HttpRouteMatch {
      * must match for the route to match.
      */
     override fun headers(headers: List<HeaderMatch>) {
-      cdkBuilder.headers(headers.map(HeaderMatch::unwrap))
+      cdkBuilder.headers(headers.map(HeaderMatch.Companion::unwrap))
     }
 
     /**
@@ -163,14 +163,14 @@ public interface HttpRouteMatch {
      * @param method The HTTP client request method to match on.
      */
     override fun method(method: HttpRouteMethod) {
-      cdkBuilder.method(method.let(HttpRouteMethod::unwrap))
+      cdkBuilder.method(method.let(HttpRouteMethod.Companion::unwrap))
     }
 
     /**
      * @param path Specifies how is the request matched based on the path part of its URL.
      */
     override fun path(path: HttpRoutePathMatch) {
-      cdkBuilder.path(path.let(HttpRoutePathMatch::unwrap))
+      cdkBuilder.path(path.let(HttpRoutePathMatch.Companion::unwrap))
     }
 
     /**
@@ -185,7 +185,7 @@ public interface HttpRouteMatch {
      * Applicable only for HTTP2 routes.
      */
     override fun protocol(protocol: HttpRouteProtocol) {
-      cdkBuilder.protocol(protocol.let(HttpRouteProtocol::unwrap))
+      cdkBuilder.protocol(protocol.let(HttpRouteProtocol.Companion::unwrap))
     }
 
     /**
@@ -193,7 +193,7 @@ public interface HttpRouteMatch {
      * All specified query parameters must match for the route to match.
      */
     override fun queryParameters(queryParameters: List<QueryParameterMatch>) {
-      cdkBuilder.queryParameters(queryParameters.map(QueryParameterMatch::unwrap))
+      cdkBuilder.queryParameters(queryParameters.map(QueryParameterMatch.Companion::unwrap))
     }
 
     /**

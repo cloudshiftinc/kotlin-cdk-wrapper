@@ -473,7 +473,7 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
      * configure when launching the cluster.
      */
     override fun applications(applications: List<EmrCreateCluster.ApplicationConfigProperty>) {
-      cdkBuilder.applications(applications.map(EmrCreateCluster.ApplicationConfigProperty::unwrap))
+      cdkBuilder.applications(applications.map(EmrCreateCluster.ApplicationConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -487,7 +487,7 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
      * @param autoScalingRole An IAM role for automatic scaling policies.
      */
     override fun autoScalingRole(autoScalingRole: IRole) {
-      cdkBuilder.autoScalingRole(autoScalingRole.let(IRole::unwrap))
+      cdkBuilder.autoScalingRole(autoScalingRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -496,7 +496,7 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
      */
     override
         fun bootstrapActions(bootstrapActions: List<EmrCreateCluster.BootstrapActionConfigProperty>) {
-      cdkBuilder.bootstrapActions(bootstrapActions.map(EmrCreateCluster.BootstrapActionConfigProperty::unwrap))
+      cdkBuilder.bootstrapActions(bootstrapActions.map(EmrCreateCluster.BootstrapActionConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -515,7 +515,7 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
      * ERM/StepFunction integration parameters.
      */
     override fun clusterRole(clusterRole: IRole) {
-      cdkBuilder.clusterRole(clusterRole.let(IRole::unwrap))
+      cdkBuilder.clusterRole(clusterRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -530,7 +530,7 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
      * creating.
      */
     override fun configurations(configurations: List<EmrCreateCluster.ConfigurationProperty>) {
-      cdkBuilder.configurations(configurations.map(EmrCreateCluster.ConfigurationProperty::unwrap))
+      cdkBuilder.configurations(configurations.map(EmrCreateCluster.ConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -546,7 +546,7 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
      * This enables cross-account resource invocations.
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -571,7 +571,7 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
      * for each EC2 instance.
      */
     override fun ebsRootVolumeSize(ebsRootVolumeSize: Size) {
-      cdkBuilder.ebsRootVolumeSize(ebsRootVolumeSize.let(Size::unwrap))
+      cdkBuilder.ebsRootVolumeSize(ebsRootVolumeSize.let(Size.Companion::unwrap))
     }
 
     /**
@@ -580,7 +580,7 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -589,7 +589,7 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -606,7 +606,7 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
      * @param instances A specification of the number and type of Amazon EC2 instances. 
      */
     override fun instances(instances: EmrCreateCluster.InstancesConfigProperty) {
-      cdkBuilder.instances(instances.let(EmrCreateCluster.InstancesConfigProperty::unwrap))
+      cdkBuilder.instances(instances.let(EmrCreateCluster.InstancesConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -625,7 +625,7 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
      * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -634,7 +634,7 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
      */
     override
         fun kerberosAttributes(kerberosAttributes: EmrCreateCluster.KerberosAttributesProperty) {
-      cdkBuilder.kerberosAttributes(kerberosAttributes.let(EmrCreateCluster.KerberosAttributesProperty::unwrap))
+      cdkBuilder.kerberosAttributes(kerberosAttributes.let(EmrCreateCluster.KerberosAttributesProperty.Companion::unwrap))
     }
 
     /**
@@ -704,7 +704,7 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
      */
     override
         fun scaleDownBehavior(scaleDownBehavior: EmrCreateCluster.EmrClusterScaleDownBehavior) {
-      cdkBuilder.scaleDownBehavior(scaleDownBehavior.let(EmrCreateCluster.EmrClusterScaleDownBehavior::unwrap))
+      cdkBuilder.scaleDownBehavior(scaleDownBehavior.let(EmrCreateCluster.EmrClusterScaleDownBehavior.Companion::unwrap))
     }
 
     /**
@@ -719,7 +719,7 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
      * resources on your behalf.
      */
     override fun serviceRole(serviceRole: IRole) {
-      cdkBuilder.serviceRole(serviceRole.let(IRole::unwrap))
+      cdkBuilder.serviceRole(serviceRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -752,7 +752,7 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -761,7 +761,7 @@ public interface EmrCreateClusterProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**

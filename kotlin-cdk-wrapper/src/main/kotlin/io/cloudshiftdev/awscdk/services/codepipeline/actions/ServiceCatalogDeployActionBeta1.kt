@@ -32,7 +32,7 @@ public open class ServiceCatalogDeployActionBeta1(
   cdkObject: software.amazon.awscdk.services.codepipeline.actions.ServiceCatalogDeployActionBeta1,
 ) : Action(cdkObject) {
   public constructor(props: ServiceCatalogDeployActionBeta1Props) :
-      this(software.amazon.awscdk.services.codepipeline.actions.ServiceCatalogDeployActionBeta1(props.let(ServiceCatalogDeployActionBeta1Props::unwrap))
+      this(software.amazon.awscdk.services.codepipeline.actions.ServiceCatalogDeployActionBeta1(props.let(ServiceCatalogDeployActionBeta1Props.Companion::unwrap))
   )
 
   public constructor(props: ServiceCatalogDeployActionBeta1Props.Builder.() -> Unit) :
@@ -192,7 +192,7 @@ public open class ServiceCatalogDeployActionBeta1(
      * @param role The Role in which context's this Action will be executing in. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -215,7 +215,7 @@ public open class ServiceCatalogDeployActionBeta1(
      * @param templatePath The path to the cloudformation artifact. 
      */
     override fun templatePath(templatePath: ArtifactPath) {
-      cdkBuilder.templatePath(templatePath.let(ArtifactPath::unwrap))
+      cdkBuilder.templatePath(templatePath.let(ArtifactPath.Companion::unwrap))
     }
 
     /**

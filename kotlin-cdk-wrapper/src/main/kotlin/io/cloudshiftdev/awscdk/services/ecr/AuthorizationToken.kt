@@ -22,7 +22,7 @@ public open class AuthorizationToken(
 ) : CdkObject(cdkObject) {
   public companion object {
     public fun grantRead(grantee: IGrantable) {
-      software.amazon.awscdk.services.ecr.AuthorizationToken.grantRead(grantee.let(IGrantable::unwrap))
+      software.amazon.awscdk.services.ecr.AuthorizationToken.grantRead(grantee.let(IGrantable.Companion::unwrap))
     }
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ecr.AuthorizationToken):

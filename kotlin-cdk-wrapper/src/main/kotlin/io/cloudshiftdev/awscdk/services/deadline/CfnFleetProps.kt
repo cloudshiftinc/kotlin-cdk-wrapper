@@ -229,14 +229,14 @@ public interface CfnFleetProps {
      * @param configuration The configuration details for the fleet. 
      */
     override fun configuration(configuration: IResolvable) {
-      cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
+      cdkBuilder.configuration(configuration.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param configuration The configuration details for the fleet. 
      */
     override fun configuration(configuration: CfnFleet.FleetConfigurationProperty) {
-      cdkBuilder.configuration(configuration.let(CfnFleet.FleetConfigurationProperty::unwrap))
+      cdkBuilder.configuration(configuration.let(CfnFleet.FleetConfigurationProperty.Companion::unwrap))
     }
 
     /**

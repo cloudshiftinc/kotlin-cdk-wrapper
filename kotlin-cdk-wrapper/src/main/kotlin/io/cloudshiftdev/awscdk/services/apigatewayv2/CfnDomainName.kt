@@ -64,8 +64,8 @@ public open class CfnDomainName(
     id: String,
     props: CfnDomainNameProps,
   ) :
-      this(software.amazon.awscdk.services.apigatewayv2.CfnDomainName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDomainNameProps::unwrap))
+      this(software.amazon.awscdk.services.apigatewayv2.CfnDomainName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDomainNameProps.Companion::unwrap))
   )
 
   public constructor(
@@ -109,7 +109,7 @@ public open class CfnDomainName(
    * The domain name configurations.
    */
   public open fun domainNameConfigurations(`value`: IResolvable) {
-    unwrap(this).setDomainNameConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDomainNameConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -131,7 +131,7 @@ public open class CfnDomainName(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -143,14 +143,14 @@ public open class CfnDomainName(
    * The mutual TLS authentication configuration for a custom domain name.
    */
   public open fun mutualTlsAuthentication(`value`: IResolvable) {
-    unwrap(this).setMutualTlsAuthentication(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMutualTlsAuthentication(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The mutual TLS authentication configuration for a custom domain name.
    */
   public open fun mutualTlsAuthentication(`value`: MutualTlsAuthenticationProperty) {
-    unwrap(this).setMutualTlsAuthentication(`value`.let(MutualTlsAuthenticationProperty::unwrap))
+    unwrap(this).setMutualTlsAuthentication(`value`.let(MutualTlsAuthenticationProperty.Companion::unwrap))
   }
 
   /**
@@ -283,7 +283,7 @@ public open class CfnDomainName(
      * @param domainNameConfigurations The domain name configurations. 
      */
     override fun domainNameConfigurations(domainNameConfigurations: IResolvable) {
-      cdkBuilder.domainNameConfigurations(domainNameConfigurations.let(IResolvable::unwrap))
+      cdkBuilder.domainNameConfigurations(domainNameConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -313,7 +313,7 @@ public open class CfnDomainName(
      * domain name. 
      */
     override fun mutualTlsAuthentication(mutualTlsAuthentication: IResolvable) {
-      cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(IResolvable::unwrap))
+      cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -324,7 +324,7 @@ public open class CfnDomainName(
      * domain name. 
      */
     override fun mutualTlsAuthentication(mutualTlsAuthentication: MutualTlsAuthenticationProperty) {
-      cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(MutualTlsAuthenticationProperty::unwrap))
+      cdkBuilder.mutualTlsAuthentication(mutualTlsAuthentication.let(MutualTlsAuthenticationProperty.Companion::unwrap))
     }
 
     /**

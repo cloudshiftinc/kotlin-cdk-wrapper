@@ -79,7 +79,7 @@ public interface SourceConfig {
      * @param bucket The source bucket to deploy from. 
      */
     override fun bucket(bucket: IBucket) {
-      cdkBuilder.bucket(bucket.let(IBucket::unwrap))
+      cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
     }
 
     /**

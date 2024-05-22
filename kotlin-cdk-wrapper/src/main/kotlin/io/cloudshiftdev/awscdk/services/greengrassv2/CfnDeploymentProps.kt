@@ -265,7 +265,7 @@ public interface CfnDeploymentProps {
      * version and configuration to deploy for that component.
      */
     override fun components(components: IResolvable) {
-      cdkBuilder.components(components.let(IResolvable::unwrap))
+      cdkBuilder.components(components.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -289,7 +289,7 @@ public interface CfnDeploymentProps {
      * These policies define how the deployment updates components and handles failure.
      */
     override fun deploymentPolicies(deploymentPolicies: IResolvable) {
-      cdkBuilder.deploymentPolicies(deploymentPolicies.let(IResolvable::unwrap))
+      cdkBuilder.deploymentPolicies(deploymentPolicies.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -297,7 +297,7 @@ public interface CfnDeploymentProps {
      * These policies define how the deployment updates components and handles failure.
      */
     override fun deploymentPolicies(deploymentPolicies: CfnDeployment.DeploymentPoliciesProperty) {
-      cdkBuilder.deploymentPolicies(deploymentPolicies.let(CfnDeployment.DeploymentPoliciesProperty::unwrap))
+      cdkBuilder.deploymentPolicies(deploymentPolicies.let(CfnDeployment.DeploymentPoliciesProperty.Companion::unwrap))
     }
 
     /**
@@ -316,7 +316,7 @@ public interface CfnDeploymentProps {
      * deployment configuration.
      */
     override fun iotJobConfiguration(iotJobConfiguration: IResolvable) {
-      cdkBuilder.iotJobConfiguration(iotJobConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.iotJobConfiguration(iotJobConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -326,7 +326,7 @@ public interface CfnDeploymentProps {
      */
     override
         fun iotJobConfiguration(iotJobConfiguration: CfnDeployment.DeploymentIoTJobConfigurationProperty) {
-      cdkBuilder.iotJobConfiguration(iotJobConfiguration.let(CfnDeployment.DeploymentIoTJobConfigurationProperty::unwrap))
+      cdkBuilder.iotJobConfiguration(iotJobConfiguration.let(CfnDeployment.DeploymentIoTJobConfigurationProperty.Companion::unwrap))
     }
 
     /**

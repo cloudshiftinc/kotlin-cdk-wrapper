@@ -151,14 +151,14 @@ public interface CfnLayerVersionProps {
      * @param contentUri the value to be set.
      */
     override fun contentUri(contentUri: IResolvable) {
-      cdkBuilder.contentUri(contentUri.let(IResolvable::unwrap))
+      cdkBuilder.contentUri(contentUri.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param contentUri the value to be set.
      */
     override fun contentUri(contentUri: CfnLayerVersion.S3LocationProperty) {
-      cdkBuilder.contentUri(contentUri.let(CfnLayerVersion.S3LocationProperty::unwrap))
+      cdkBuilder.contentUri(contentUri.let(CfnLayerVersion.S3LocationProperty.Companion::unwrap))
     }
 
     /**

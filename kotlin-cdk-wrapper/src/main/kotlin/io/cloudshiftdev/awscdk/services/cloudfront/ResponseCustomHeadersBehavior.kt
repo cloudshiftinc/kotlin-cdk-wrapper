@@ -92,7 +92,7 @@ public interface ResponseCustomHeadersBehavior {
      * @param customHeaders The list of HTTP response headers and their values. 
      */
     override fun customHeaders(customHeaders: List<ResponseCustomHeader>) {
-      cdkBuilder.customHeaders(customHeaders.map(ResponseCustomHeader::unwrap))
+      cdkBuilder.customHeaders(customHeaders.map(ResponseCustomHeader.Companion::unwrap))
     }
 
     /**

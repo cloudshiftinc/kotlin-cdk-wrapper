@@ -66,7 +66,7 @@ public open class Tags(
 
   public companion object {
     public fun fromStack(stack: Stack): Tags =
-        software.amazon.awscdk.assertions.Tags.fromStack(stack.let(Stack::unwrap)).let(Tags::wrap)
+        software.amazon.awscdk.assertions.Tags.fromStack(stack.let(Stack.Companion::unwrap)).let(Tags::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.assertions.Tags): Tags = Tags(cdkObject)
 

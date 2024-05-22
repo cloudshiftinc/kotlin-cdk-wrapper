@@ -64,7 +64,7 @@ public interface CustomTestOptions {
      * @param code The code of the canary script. 
      */
     override fun code(code: Code) {
-      cdkBuilder.code(code.let(Code::unwrap))
+      cdkBuilder.code(code.let(Code.Companion::unwrap))
     }
 
     /**

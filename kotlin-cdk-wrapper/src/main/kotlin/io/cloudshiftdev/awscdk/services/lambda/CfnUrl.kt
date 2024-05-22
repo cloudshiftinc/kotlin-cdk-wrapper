@@ -59,8 +59,8 @@ public open class CfnUrl(
     id: String,
     props: CfnUrlProps,
   ) :
-      this(software.amazon.awscdk.services.lambda.CfnUrl(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnUrlProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.CfnUrl(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnUrlProps.Companion::unwrap))
   )
 
   public constructor(
@@ -105,7 +105,7 @@ public open class CfnUrl(
    * settings for your function URL.
    */
   public open fun cors(`value`: IResolvable) {
-    unwrap(this).setCors(`value`.let(IResolvable::unwrap))
+    unwrap(this).setCors(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -114,7 +114,7 @@ public open class CfnUrl(
    * settings for your function URL.
    */
   public open fun cors(`value`: CorsProperty) {
-    unwrap(this).setCors(`value`.let(CorsProperty::unwrap))
+    unwrap(this).setCors(`value`.let(CorsProperty.Companion::unwrap))
   }
 
   /**
@@ -132,7 +132,7 @@ public open class CfnUrl(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -302,7 +302,7 @@ public open class CfnUrl(
      * settings for your function URL. 
      */
     override fun cors(cors: IResolvable) {
-      cdkBuilder.cors(cors.let(IResolvable::unwrap))
+      cdkBuilder.cors(cors.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -316,7 +316,7 @@ public open class CfnUrl(
      * settings for your function URL. 
      */
     override fun cors(cors: CorsProperty) {
-      cdkBuilder.cors(cors.let(CorsProperty::unwrap))
+      cdkBuilder.cors(cors.let(CorsProperty.Companion::unwrap))
     }
 
     /**
@@ -592,7 +592,7 @@ public open class CfnUrl(
        * The default is `false` .
        */
       override fun allowCredentials(allowCredentials: IResolvable) {
-        cdkBuilder.allowCredentials(allowCredentials.let(IResolvable::unwrap))
+        cdkBuilder.allowCredentials(allowCredentials.let(IResolvable.Companion::unwrap))
       }
 
       /**

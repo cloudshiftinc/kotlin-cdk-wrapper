@@ -68,8 +68,8 @@ public open class CfnSubscriber(
     id: String,
     props: CfnSubscriberProps,
   ) :
-      this(software.amazon.awscdk.services.securitylake.CfnSubscriber(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSubscriberProps::unwrap))
+      this(software.amazon.awscdk.services.securitylake.CfnSubscriber(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSubscriberProps.Companion::unwrap))
   )
 
   public constructor(
@@ -148,7 +148,7 @@ public open class CfnSubscriber(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -160,7 +160,7 @@ public open class CfnSubscriber(
    * Amazon Security Lake supports log and event collection for natively supported AWS services .
    */
   public open fun sources(`value`: IResolvable) {
-    unwrap(this).setSources(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSources(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -196,14 +196,14 @@ public open class CfnSubscriber(
    * The AWS identity used to access your data.
    */
   public open fun subscriberIdentity(`value`: IResolvable) {
-    unwrap(this).setSubscriberIdentity(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSubscriberIdentity(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The AWS identity used to access your data.
    */
   public open fun subscriberIdentity(`value`: SubscriberIdentityProperty) {
-    unwrap(this).setSubscriberIdentity(`value`.let(SubscriberIdentityProperty::unwrap))
+    unwrap(this).setSubscriberIdentity(`value`.let(SubscriberIdentityProperty.Companion::unwrap))
   }
 
   /**
@@ -235,7 +235,7 @@ public open class CfnSubscriber(
    * An array of objects, one for each tag to associate with the subscriber.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -450,7 +450,7 @@ public open class CfnSubscriber(
      * AWS services . 
      */
     override fun sources(sources: IResolvable) {
-      cdkBuilder.sources(sources.let(IResolvable::unwrap))
+      cdkBuilder.sources(sources.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -499,7 +499,7 @@ public open class CfnSubscriber(
      * @param subscriberIdentity The AWS identity used to access your data. 
      */
     override fun subscriberIdentity(subscriberIdentity: IResolvable) {
-      cdkBuilder.subscriberIdentity(subscriberIdentity.let(IResolvable::unwrap))
+      cdkBuilder.subscriberIdentity(subscriberIdentity.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -509,7 +509,7 @@ public open class CfnSubscriber(
      * @param subscriberIdentity The AWS identity used to access your data. 
      */
     override fun subscriberIdentity(subscriberIdentity: SubscriberIdentityProperty) {
-      cdkBuilder.subscriberIdentity(subscriberIdentity.let(SubscriberIdentityProperty::unwrap))
+      cdkBuilder.subscriberIdentity(subscriberIdentity.let(SubscriberIdentityProperty.Companion::unwrap))
     }
 
     /**
@@ -544,7 +544,7 @@ public open class CfnSubscriber(
      * @param tags An array of objects, one for each tag to associate with the subscriber. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -945,7 +945,7 @@ public open class CfnSubscriber(
        * source to collect logs and events from.
        */
       override fun awsLogSource(awsLogSource: IResolvable) {
-        cdkBuilder.awsLogSource(awsLogSource.let(IResolvable::unwrap))
+        cdkBuilder.awsLogSource(awsLogSource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -953,7 +953,7 @@ public open class CfnSubscriber(
        * source to collect logs and events from.
        */
       override fun awsLogSource(awsLogSource: AwsLogSourceProperty) {
-        cdkBuilder.awsLogSource(awsLogSource.let(AwsLogSourceProperty::unwrap))
+        cdkBuilder.awsLogSource(awsLogSource.let(AwsLogSourceProperty.Companion::unwrap))
       }
 
       /**
@@ -970,7 +970,7 @@ public open class CfnSubscriber(
        * source to collect logs and events from.
        */
       override fun customLogSource(customLogSource: IResolvable) {
-        cdkBuilder.customLogSource(customLogSource.let(IResolvable::unwrap))
+        cdkBuilder.customLogSource(customLogSource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -978,7 +978,7 @@ public open class CfnSubscriber(
        * source to collect logs and events from.
        */
       override fun customLogSource(customLogSource: CustomLogSourceProperty) {
-        cdkBuilder.customLogSource(customLogSource.let(CustomLogSourceProperty::unwrap))
+        cdkBuilder.customLogSource(customLogSource.let(CustomLogSourceProperty.Companion::unwrap))
       }
 
       /**

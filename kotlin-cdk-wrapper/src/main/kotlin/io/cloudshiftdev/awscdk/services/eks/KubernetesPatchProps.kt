@@ -120,7 +120,7 @@ public interface KubernetesPatchProps {
      * [disable-awslint:ref-via-interface]
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -128,7 +128,7 @@ public interface KubernetesPatchProps {
      * The default type used by `kubectl patch` is "strategic".
      */
     override fun patchType(patchType: PatchType) {
-      cdkBuilder.patchType(patchType.let(PatchType::unwrap))
+      cdkBuilder.patchType(patchType.let(PatchType.Companion::unwrap))
     }
 
     /**

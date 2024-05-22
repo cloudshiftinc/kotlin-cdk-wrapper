@@ -71,7 +71,7 @@ public interface RemovalPolicyOptions {
      * @param defaultValue The default policy to apply in case the removal policy is not defined.
      */
     override fun defaultValue(defaultValue: RemovalPolicy) {
-      cdkBuilder.defaultValue(defaultValue.let(RemovalPolicy::unwrap))
+      cdkBuilder.defaultValue(defaultValue.let(RemovalPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.RemovalPolicyOptions = cdkBuilder.build()

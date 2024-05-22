@@ -270,7 +270,7 @@ public interface DistributedMapProps : MapBaseProps {
      * execution.
      */
     override fun itemBatcher(itemBatcher: ItemBatcher) {
-      cdkBuilder.itemBatcher(itemBatcher.let(ItemBatcher::unwrap))
+      cdkBuilder.itemBatcher(itemBatcher.let(ItemBatcher.Companion::unwrap))
     }
 
     /**
@@ -287,7 +287,7 @@ public interface DistributedMapProps : MapBaseProps {
      * Configuration for where to read items dataset in S3 to iterate
      */
     override fun itemReader(itemReader: IItemReader) {
-      cdkBuilder.itemReader(itemReader.let(IItemReader::unwrap))
+      cdkBuilder.itemReader(itemReader.let(IItemReader.Companion::unwrap))
     }
 
     /**
@@ -318,7 +318,7 @@ public interface DistributedMapProps : MapBaseProps {
      * The execution type of the distributed map state
      */
     override fun mapExecutionType(mapExecutionType: StateMachineType) {
-      cdkBuilder.mapExecutionType(mapExecutionType.let(StateMachineType::unwrap))
+      cdkBuilder.mapExecutionType(mapExecutionType.let(StateMachineType.Companion::unwrap))
     }
 
     /**
@@ -370,7 +370,7 @@ public interface DistributedMapProps : MapBaseProps {
      * @param resultWriter Configuration for S3 location in which to save Map Run results.
      */
     override fun resultWriter(resultWriter: ResultWriter) {
-      cdkBuilder.resultWriter(resultWriter.let(ResultWriter::unwrap))
+      cdkBuilder.resultWriter(resultWriter.let(ResultWriter.Companion::unwrap))
     }
 
     /**

@@ -40,8 +40,8 @@ public open class StepFunctionsRestApi(
     id: String,
     props: StepFunctionsRestApiProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.StepFunctionsRestApi(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(StepFunctionsRestApiProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.StepFunctionsRestApi(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(StepFunctionsRestApiProps.Companion::unwrap))
   )
 
   public constructor(
@@ -616,7 +616,7 @@ public open class StepFunctionsRestApi(
      * plan. 
      */
     override fun apiKeySourceType(apiKeySourceType: ApiKeySourceType) {
-      cdkBuilder.apiKeySourceType(apiKeySourceType.let(ApiKeySourceType::unwrap))
+      cdkBuilder.apiKeySourceType(apiKeySourceType.let(ApiKeySourceType.Companion::unwrap))
     }
 
     /**
@@ -674,7 +674,7 @@ public open class StepFunctionsRestApi(
      * @param cloneFrom The ID of the API Gateway RestApi resource that you want to clone. 
      */
     override fun cloneFrom(cloneFrom: IRestApi) {
-      cdkBuilder.cloneFrom(cloneFrom.let(IRestApi::unwrap))
+      cdkBuilder.cloneFrom(cloneFrom.let(IRestApi.Companion::unwrap))
     }
 
     /**
@@ -701,7 +701,7 @@ public open class StepFunctionsRestApi(
      * this resource is removed from the application. 
      */
     override fun cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy: RemovalPolicy) {
-      cdkBuilder.cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.cloudWatchRoleRemovalPolicy(cloudWatchRoleRemovalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -715,7 +715,7 @@ public open class StepFunctionsRestApi(
      * all child resources. 
      */
     override fun defaultCorsPreflightOptions(defaultCorsPreflightOptions: CorsOptions) {
-      cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions::unwrap))
+      cdkBuilder.defaultCorsPreflightOptions(defaultCorsPreflightOptions.let(CorsOptions.Companion::unwrap))
     }
 
     /**
@@ -744,7 +744,7 @@ public open class StepFunctionsRestApi(
      * this API unless an integration is specified. 
      */
     override fun defaultIntegration(defaultIntegration: Integration) {
-      cdkBuilder.defaultIntegration(defaultIntegration.let(Integration::unwrap))
+      cdkBuilder.defaultIntegration(defaultIntegration.let(Integration.Companion::unwrap))
     }
 
     /**
@@ -771,7 +771,7 @@ public open class StepFunctionsRestApi(
      * this API unless custom options are specified. 
      */
     override fun defaultMethodOptions(defaultMethodOptions: MethodOptions) {
-      cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions::unwrap))
+      cdkBuilder.defaultMethodOptions(defaultMethodOptions.let(MethodOptions.Companion::unwrap))
     }
 
     /**
@@ -829,7 +829,7 @@ public open class StepFunctionsRestApi(
      * deployment when `deploy` is enabled. 
      */
     override fun deployOptions(deployOptions: StageOptions) {
-      cdkBuilder.deployOptions(deployOptions.let(StageOptions::unwrap))
+      cdkBuilder.deployOptions(deployOptions.let(StageOptions.Companion::unwrap))
     }
 
     /**
@@ -884,7 +884,7 @@ public open class StepFunctionsRestApi(
      * @param domainName Configure a custom domain name and map it to this API. 
      */
     override fun domainName(domainName: DomainNameOptions) {
-      cdkBuilder.domainName(domainName.let(DomainNameOptions::unwrap))
+      cdkBuilder.domainName(domainName.let(DomainNameOptions.Companion::unwrap))
     }
 
     /**
@@ -909,7 +909,7 @@ public open class StepFunctionsRestApi(
      * types of a REST API. 
      */
     override fun endpointConfiguration(endpointConfiguration: EndpointConfiguration) {
-      cdkBuilder.endpointConfiguration(endpointConfiguration.let(EndpointConfiguration::unwrap))
+      cdkBuilder.endpointConfiguration(endpointConfiguration.let(EndpointConfiguration.Companion::unwrap))
     }
 
     /**
@@ -949,7 +949,7 @@ public open class StepFunctionsRestApi(
      * @param endpointTypes A list of the endpoint types of the API. 
      */
     override fun endpointTypes(endpointTypes: List<EndpointType>) {
-      cdkBuilder.endpointTypes(endpointTypes.map(EndpointType::unwrap))
+      cdkBuilder.endpointTypes(endpointTypes.map(EndpointType.Companion::unwrap))
     }
 
     /**
@@ -1016,7 +1016,7 @@ public open class StepFunctionsRestApi(
      * compression (when undefined) on an API. 
      */
     override fun minCompressionSize(minCompressionSize: Size) {
-      cdkBuilder.minCompressionSize(minCompressionSize.let(Size::unwrap))
+      cdkBuilder.minCompressionSize(minCompressionSize.let(Size.Companion::unwrap))
     }
 
     /**
@@ -1080,7 +1080,7 @@ public open class StepFunctionsRestApi(
      * @param policy A policy document that contains the permissions for this RestApi. 
      */
     override fun policy(policy: PolicyDocument) {
-      cdkBuilder.policy(policy.let(PolicyDocument::unwrap))
+      cdkBuilder.policy(policy.let(PolicyDocument.Companion::unwrap))
     }
 
     /**
@@ -1134,7 +1134,7 @@ public open class StepFunctionsRestApi(
      * underlying state machine, such as, account id, user identity, request id, etc. 
      */
     override fun requestContext(requestContext: RequestContext) {
-      cdkBuilder.requestContext(requestContext.let(RequestContext::unwrap))
+      cdkBuilder.requestContext(requestContext.let(RequestContext.Companion::unwrap))
     }
 
     /**
@@ -1195,7 +1195,7 @@ public open class StepFunctionsRestApi(
      * machine. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -1207,7 +1207,7 @@ public open class StepFunctionsRestApi(
      * @param stateMachine The default State Machine that handles all requests from this API. 
      */
     override fun stateMachine(stateMachine: IStateMachine) {
-      cdkBuilder.stateMachine(stateMachine.let(IStateMachine::unwrap))
+      cdkBuilder.stateMachine(stateMachine.let(IStateMachine.Companion::unwrap))
     }
 
     /**

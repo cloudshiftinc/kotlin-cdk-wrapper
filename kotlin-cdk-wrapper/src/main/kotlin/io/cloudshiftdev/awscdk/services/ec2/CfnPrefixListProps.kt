@@ -145,7 +145,7 @@ public interface CfnPrefixListProps {
      * @param entries One or more entries for the prefix list.
      */
     override fun entries(entries: IResolvable) {
-      cdkBuilder.entries(entries.let(IResolvable::unwrap))
+      cdkBuilder.entries(entries.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -179,7 +179,7 @@ public interface CfnPrefixListProps {
      * @param tags The tags for the prefix list.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

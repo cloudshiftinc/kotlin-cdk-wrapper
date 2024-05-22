@@ -179,7 +179,7 @@ public interface CfnDirectoryConfigProps {
      * streaming instances.
      */
     override fun certificateBasedAuthProperties(certificateBasedAuthProperties: IResolvable) {
-      cdkBuilder.certificateBasedAuthProperties(certificateBasedAuthProperties.let(IResolvable::unwrap))
+      cdkBuilder.certificateBasedAuthProperties(certificateBasedAuthProperties.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -189,7 +189,7 @@ public interface CfnDirectoryConfigProps {
      */
     override
         fun certificateBasedAuthProperties(certificateBasedAuthProperties: CfnDirectoryConfig.CertificateBasedAuthPropertiesProperty) {
-      cdkBuilder.certificateBasedAuthProperties(certificateBasedAuthProperties.let(CfnDirectoryConfig.CertificateBasedAuthPropertiesProperty::unwrap))
+      cdkBuilder.certificateBasedAuthProperties(certificateBasedAuthProperties.let(CfnDirectoryConfig.CertificateBasedAuthPropertiesProperty.Companion::unwrap))
     }
 
     /**
@@ -240,7 +240,7 @@ public interface CfnDirectoryConfigProps {
      * .
      */
     override fun serviceAccountCredentials(serviceAccountCredentials: IResolvable) {
-      cdkBuilder.serviceAccountCredentials(serviceAccountCredentials.let(IResolvable::unwrap))
+      cdkBuilder.serviceAccountCredentials(serviceAccountCredentials.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -255,7 +255,7 @@ public interface CfnDirectoryConfigProps {
      */
     override
         fun serviceAccountCredentials(serviceAccountCredentials: CfnDirectoryConfig.ServiceAccountCredentialsProperty) {
-      cdkBuilder.serviceAccountCredentials(serviceAccountCredentials.let(CfnDirectoryConfig.ServiceAccountCredentialsProperty::unwrap))
+      cdkBuilder.serviceAccountCredentials(serviceAccountCredentials.let(CfnDirectoryConfig.ServiceAccountCredentialsProperty.Companion::unwrap))
     }
 
     /**

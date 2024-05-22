@@ -40,7 +40,7 @@ public open class WorkMail(
   cdkObject: software.amazon.awscdk.services.ses.actions.WorkMail,
 ) : CdkObject(cdkObject), IReceiptRuleAction {
   public constructor(props: WorkMailProps) :
-      this(software.amazon.awscdk.services.ses.actions.WorkMail(props.let(WorkMailProps::unwrap))
+      this(software.amazon.awscdk.services.ses.actions.WorkMail(props.let(WorkMailProps.Companion::unwrap))
   )
 
   public constructor(props: WorkMailProps.Builder.() -> Unit) : this(WorkMailProps(props)
@@ -52,7 +52,7 @@ public open class WorkMail(
    * @param _rule 
    */
   public override fun bind(rule: IReceiptRule): ReceiptRuleActionConfig =
-      unwrap(this).bind(rule.let(IReceiptRule::unwrap)).let(ReceiptRuleActionConfig::wrap)
+      unwrap(this).bind(rule.let(IReceiptRule.Companion::unwrap)).let(ReceiptRuleActionConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ses.actions.WorkMail].
@@ -115,7 +115,7 @@ public open class WorkMail(
      * @param topic The SNS topic to notify when the WorkMail action is taken. 
      */
     override fun topic(topic: ITopic) {
-      cdkBuilder.topic(topic.let(ITopic::unwrap))
+      cdkBuilder.topic(topic.let(ITopic.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ses.actions.WorkMail = cdkBuilder.build()

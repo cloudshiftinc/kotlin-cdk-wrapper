@@ -345,7 +345,7 @@ public interface CfnConfigurationRecorderProps {
      * to avoid increased configuration recording and rule evaluations.
      */
     override fun recordingGroup(recordingGroup: IResolvable) {
-      cdkBuilder.recordingGroup(recordingGroup.let(IResolvable::unwrap))
+      cdkBuilder.recordingGroup(recordingGroup.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -368,7 +368,7 @@ public interface CfnConfigurationRecorderProps {
      * to avoid increased configuration recording and rule evaluations.
      */
     override fun recordingGroup(recordingGroup: CfnConfigurationRecorder.RecordingGroupProperty) {
-      cdkBuilder.recordingGroup(recordingGroup.let(CfnConfigurationRecorder.RecordingGroupProperty::unwrap))
+      cdkBuilder.recordingGroup(recordingGroup.let(CfnConfigurationRecorder.RecordingGroupProperty.Companion::unwrap))
     }
 
     /**
@@ -415,7 +415,7 @@ public interface CfnConfigurationRecorderProps {
      * You can also override the recording frequency for specific resource types.
      */
     override fun recordingMode(recordingMode: IResolvable) {
-      cdkBuilder.recordingMode(recordingMode.let(IResolvable::unwrap))
+      cdkBuilder.recordingMode(recordingMode.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -437,7 +437,7 @@ public interface CfnConfigurationRecorderProps {
      * You can also override the recording frequency for specific resource types.
      */
     override fun recordingMode(recordingMode: CfnConfigurationRecorder.RecordingModeProperty) {
-      cdkBuilder.recordingMode(recordingMode.let(CfnConfigurationRecorder.RecordingModeProperty::unwrap))
+      cdkBuilder.recordingMode(recordingMode.let(CfnConfigurationRecorder.RecordingModeProperty.Companion::unwrap))
     }
 
     /**

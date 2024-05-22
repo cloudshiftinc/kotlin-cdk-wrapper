@@ -25,7 +25,7 @@ public open class SamlPrincipal(
   cdkObject: software.amazon.awscdk.services.iam.SamlPrincipal,
 ) : FederatedPrincipal(cdkObject) {
   public constructor(samlProvider: ISamlProvider, conditions: Map<String, Any>) :
-      this(software.amazon.awscdk.services.iam.SamlPrincipal(samlProvider.let(ISamlProvider::unwrap),
+      this(software.amazon.awscdk.services.iam.SamlPrincipal(samlProvider.let(ISamlProvider.Companion::unwrap),
       conditions.mapValues{CdkObjectWrappers.unwrap(it.value)})
   )
 

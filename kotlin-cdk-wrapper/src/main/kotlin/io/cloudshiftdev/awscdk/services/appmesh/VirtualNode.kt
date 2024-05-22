@@ -54,8 +54,8 @@ public open class VirtualNode(
     id: String,
     props: VirtualNodeProps,
   ) :
-      this(software.amazon.awscdk.services.appmesh.VirtualNode(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(VirtualNodeProps::unwrap))
+      this(software.amazon.awscdk.services.appmesh.VirtualNode(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(VirtualNodeProps.Companion::unwrap))
   )
 
   public constructor(
@@ -71,7 +71,7 @@ public open class VirtualNode(
    * @param backend 
    */
   public open fun addBackend(backend: Backend) {
-    unwrap(this).addBackend(backend.let(Backend::unwrap))
+    unwrap(this).addBackend(backend.let(Backend.Companion::unwrap))
   }
 
   /**
@@ -86,7 +86,7 @@ public open class VirtualNode(
    * @param listener 
    */
   public open fun addListener(listener: VirtualNodeListener) {
-    unwrap(this).addListener(listener.let(VirtualNodeListener::unwrap))
+    unwrap(this).addListener(listener.let(VirtualNodeListener.Companion::unwrap))
   }
 
   /**
@@ -95,7 +95,7 @@ public open class VirtualNode(
    * @param identity 
    */
   public override fun grantStreamAggregatedResources(identity: IGrantable): Grant =
-      unwrap(this).grantStreamAggregatedResources(identity.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantStreamAggregatedResources(identity.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The Mesh which the VirtualNode belongs to.
@@ -225,7 +225,7 @@ public open class VirtualNode(
      * @param accessLog Access Logging Configuration for the virtual node. 
      */
     override fun accessLog(accessLog: AccessLog) {
-      cdkBuilder.accessLog(accessLog.let(AccessLog::unwrap))
+      cdkBuilder.accessLog(accessLog.let(AccessLog.Companion::unwrap))
     }
 
     /**
@@ -237,7 +237,7 @@ public open class VirtualNode(
      * Service. 
      */
     override fun backendDefaults(backendDefaults: BackendDefaults) {
-      cdkBuilder.backendDefaults(backendDefaults.let(BackendDefaults::unwrap))
+      cdkBuilder.backendDefaults(backendDefaults.let(BackendDefaults.Companion::unwrap))
     }
 
     /**
@@ -261,7 +261,7 @@ public open class VirtualNode(
      * @param backends Virtual Services that this is node expected to send outbound traffic to. 
      */
     override fun backends(backends: List<Backend>) {
-      cdkBuilder.backends(backends.map(Backend::unwrap))
+      cdkBuilder.backends(backends.map(Backend.Companion::unwrap))
     }
 
     /**
@@ -281,7 +281,7 @@ public open class VirtualNode(
      * @param listeners Initial listener for the virtual node. 
      */
     override fun listeners(listeners: List<VirtualNodeListener>) {
-      cdkBuilder.listeners(listeners.map(VirtualNodeListener::unwrap))
+      cdkBuilder.listeners(listeners.map(VirtualNodeListener.Companion::unwrap))
     }
 
     /**
@@ -300,7 +300,7 @@ public open class VirtualNode(
      * @param mesh The Mesh which the VirtualNode belongs to. 
      */
     override fun mesh(mesh: IMesh) {
-      cdkBuilder.mesh(mesh.let(IMesh::unwrap))
+      cdkBuilder.mesh(mesh.let(IMesh.Companion::unwrap))
     }
 
     /**
@@ -311,7 +311,7 @@ public open class VirtualNode(
      * @param serviceDiscovery Defines how upstream clients will discover this VirtualNode. 
      */
     override fun serviceDiscovery(serviceDiscovery: ServiceDiscovery) {
-      cdkBuilder.serviceDiscovery(serviceDiscovery.let(ServiceDiscovery::unwrap))
+      cdkBuilder.serviceDiscovery(serviceDiscovery.let(ServiceDiscovery.Companion::unwrap))
     }
 
     /**
@@ -334,7 +334,7 @@ public open class VirtualNode(
       id: String,
       virtualNodeArn: String,
     ): IVirtualNode =
-        software.amazon.awscdk.services.appmesh.VirtualNode.fromVirtualNodeArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.appmesh.VirtualNode.fromVirtualNodeArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, virtualNodeArn).let(IVirtualNode::wrap)
 
     public fun fromVirtualNodeAttributes(
@@ -342,8 +342,8 @@ public open class VirtualNode(
       id: String,
       attrs: VirtualNodeAttributes,
     ): IVirtualNode =
-        software.amazon.awscdk.services.appmesh.VirtualNode.fromVirtualNodeAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(VirtualNodeAttributes::unwrap)).let(IVirtualNode::wrap)
+        software.amazon.awscdk.services.appmesh.VirtualNode.fromVirtualNodeAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(VirtualNodeAttributes.Companion::unwrap)).let(IVirtualNode::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5adc84a99eeca204975739e5ce0c1737f3e15ef875462044fbf2550f756149d4")

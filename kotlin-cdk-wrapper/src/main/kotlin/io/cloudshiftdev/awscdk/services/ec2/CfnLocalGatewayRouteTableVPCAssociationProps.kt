@@ -97,7 +97,7 @@ public interface CfnLocalGatewayRouteTableVPCAssociationProps {
      * @param tags The tags assigned to the association.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

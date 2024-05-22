@@ -286,7 +286,7 @@ public interface ActionProperties {
      * @param artifactBounds the value to be set. 
      */
     override fun artifactBounds(artifactBounds: ActionArtifactBounds) {
-      cdkBuilder.artifactBounds(artifactBounds.let(ActionArtifactBounds::unwrap))
+      cdkBuilder.artifactBounds(artifactBounds.let(ActionArtifactBounds.Companion::unwrap))
     }
 
     /**
@@ -303,14 +303,14 @@ public interface ActionProperties {
      * (the entity that performs the action) performs.
      */
     override fun category(category: ActionCategory) {
-      cdkBuilder.category(category.let(ActionCategory::unwrap))
+      cdkBuilder.category(category.let(ActionCategory.Companion::unwrap))
     }
 
     /**
      * @param inputs the value to be set.
      */
     override fun inputs(inputs: List<Artifact>) {
-      cdkBuilder.inputs(inputs.map(Artifact::unwrap))
+      cdkBuilder.inputs(inputs.map(Artifact.Companion::unwrap))
     }
 
     /**
@@ -322,7 +322,7 @@ public interface ActionProperties {
      * @param outputs the value to be set.
      */
     override fun outputs(outputs: List<Artifact>) {
-      cdkBuilder.outputs(outputs.map(Artifact::unwrap))
+      cdkBuilder.outputs(outputs.map(Artifact.Companion::unwrap))
     }
 
     /**
@@ -362,14 +362,14 @@ public interface ActionProperties {
      * resources from a different account and/or region.
      */
     override fun resource(resource: IResource) {
-      cdkBuilder.resource(resource.let(IResource::unwrap))
+      cdkBuilder.resource(resource.let(IResource.Companion::unwrap))
     }
 
     /**
      * @param role the value to be set.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**

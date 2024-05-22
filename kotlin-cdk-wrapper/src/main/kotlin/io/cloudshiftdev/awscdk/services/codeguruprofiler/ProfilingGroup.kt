@@ -30,7 +30,7 @@ public open class ProfilingGroup(
   cdkObject: software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup,
 ) : Resource(cdkObject), IProfilingGroup {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -39,8 +39,8 @@ public open class ProfilingGroup(
     id: String,
     props: ProfilingGroupProps,
   ) :
-      this(software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ProfilingGroupProps::unwrap))
+      this(software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ProfilingGroupProps.Companion::unwrap))
   )
 
   public constructor(
@@ -61,7 +61,7 @@ public open class ProfilingGroup(
    * @param grantee Principal to grant publish rights to. 
    */
   public override fun grantPublish(grantee: IGrantable): Grant =
-      unwrap(this).grantPublish(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantPublish(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * Grant access to read profiling information from the Profiling Group to the given identity.
@@ -74,7 +74,7 @@ public open class ProfilingGroup(
    * @param grantee Principal to grant read rights to. 
    */
   public override fun grantRead(grantee: IGrantable): Grant =
-      unwrap(this).grantRead(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+      unwrap(this).grantRead(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
   /**
    * The ARN of the Profiling Group.
@@ -125,7 +125,7 @@ public open class ProfilingGroup(
      * @param computePlatform The compute platform of the profiling group. 
      */
     override fun computePlatform(computePlatform: ComputePlatform) {
-      cdkBuilder.computePlatform(computePlatform.let(ComputePlatform::unwrap))
+      cdkBuilder.computePlatform(computePlatform.let(ComputePlatform.Companion::unwrap))
     }
 
     /**
@@ -149,7 +149,7 @@ public open class ProfilingGroup(
       id: String,
       profilingGroupArn: String,
     ): IProfilingGroup =
-        software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup.fromProfilingGroupArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup.fromProfilingGroupArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, profilingGroupArn).let(IProfilingGroup::wrap)
 
     public fun fromProfilingGroupName(
@@ -157,7 +157,7 @@ public open class ProfilingGroup(
       id: String,
       profilingGroupName: String,
     ): IProfilingGroup =
-        software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup.fromProfilingGroupName(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.codeguruprofiler.ProfilingGroup.fromProfilingGroupName(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, profilingGroupName).let(IProfilingGroup::wrap)
 
     public operator fun invoke(

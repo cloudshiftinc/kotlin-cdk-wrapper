@@ -121,7 +121,7 @@ public interface HostedZoneProps : CommonHostedZoneProps {
      * You can associate additional VPCs to this private zone using `addVpc(vpc)`.
      */
     override fun vpcs(vpcs: List<IVpc>) {
-      cdkBuilder.vpcs(vpcs.map(IVpc::unwrap))
+      cdkBuilder.vpcs(vpcs.map(IVpc.Companion::unwrap))
     }
 
     /**

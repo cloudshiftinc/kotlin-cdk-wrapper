@@ -309,7 +309,7 @@ public interface CfnChannelProps {
      * *Default* : `false`
      */
     override fun authorized(authorized: IResolvable) {
-      cdkBuilder.authorized(authorized.let(IResolvable::unwrap))
+      cdkBuilder.authorized(authorized.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -325,7 +325,7 @@ public interface CfnChannelProps {
      * *Default* : `false`
      */
     override fun insecureIngest(insecureIngest: IResolvable) {
-      cdkBuilder.insecureIngest(insecureIngest.let(IResolvable::unwrap))
+      cdkBuilder.insecureIngest(insecureIngest.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -381,7 +381,7 @@ public interface CfnChannelProps {
      * .
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

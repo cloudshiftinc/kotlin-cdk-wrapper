@@ -72,6 +72,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .useGrouping(false)
  * .build())
  * .build())
+ * .disableIndexing(false)
  * .isIncludedInTopic(false)
  * .neverAggregateInFilter(false)
  * .nonAdditive(false)
@@ -126,6 +127,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .useGrouping(false)
  * .build())
  * .build())
+ * .disableIndexing(false)
  * .isIncludedInTopic(false)
  * .neverAggregateInFilter(false)
  * .nonAdditive(false)
@@ -242,7 +244,7 @@ public open class CfnTopic(
   cdkObject: software.amazon.awscdk.services.quicksight.CfnTopic,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.quicksight.CfnTopic(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.quicksight.CfnTopic(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -251,8 +253,8 @@ public open class CfnTopic(
     id: String,
     props: CfnTopicProps,
   ) :
-      this(software.amazon.awscdk.services.quicksight.CfnTopic(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTopicProps::unwrap))
+      this(software.amazon.awscdk.services.quicksight.CfnTopic(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTopicProps.Companion::unwrap))
   )
 
   public constructor(
@@ -288,7 +290,7 @@ public open class CfnTopic(
    * The data sets that the topic is associated with.
    */
   public open fun dataSets(`value`: IResolvable) {
-    unwrap(this).setDataSets(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataSets(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -321,7 +323,7 @@ public open class CfnTopic(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -349,12 +351,12 @@ public open class CfnTopic(
   }
 
   /**
-   * The user experience version of a topic.
+   * The user experience version of the topic.
    */
   public open fun userExperienceVersion(): String? = unwrap(this).getUserExperienceVersion()
 
   /**
-   * The user experience version of a topic.
+   * The user experience version of the topic.
    */
   public open fun userExperienceVersion(`value`: String) {
     unwrap(this).setUserExperienceVersion(`value`)
@@ -424,10 +426,10 @@ public open class CfnTopic(
     public fun topicId(topicId: String)
 
     /**
-     * The user experience version of a topic.
+     * The user experience version of the topic.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-userexperienceversion)
-     * @param userExperienceVersion The user experience version of a topic. 
+     * @param userExperienceVersion The user experience version of the topic. 
      */
     public fun userExperienceVersion(userExperienceVersion: String)
   }
@@ -456,7 +458,7 @@ public open class CfnTopic(
      * @param dataSets The data sets that the topic is associated with. 
      */
     override fun dataSets(dataSets: IResolvable) {
-      cdkBuilder.dataSets(dataSets.let(IResolvable::unwrap))
+      cdkBuilder.dataSets(dataSets.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -510,10 +512,10 @@ public open class CfnTopic(
     }
 
     /**
-     * The user experience version of a topic.
+     * The user experience version of the topic.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-topic.html#cfn-quicksight-topic-userexperienceversion)
-     * @param userExperienceVersion The user experience version of a topic. 
+     * @param userExperienceVersion The user experience version of the topic. 
      */
     override fun userExperienceVersion(userExperienceVersion: String) {
       cdkBuilder.userExperienceVersion(userExperienceVersion)
@@ -1076,6 +1078,7 @@ public open class CfnTopic(
    * .useGrouping(false)
    * .build())
    * .build())
+   * .disableIndexing(false)
    * .isIncludedInTopic(false)
    * .neverAggregateInFilter(false)
    * .nonAdditive(false)
@@ -1130,6 +1133,7 @@ public open class CfnTopic(
    * .useGrouping(false)
    * .build())
    * .build())
+   * .disableIndexing(false)
    * .isIncludedInTopic(false)
    * .neverAggregateInFilter(false)
    * .nonAdditive(false)
@@ -1401,7 +1405,7 @@ public open class CfnTopic(
        * @param calculatedFields The list of calculated field definitions.
        */
       override fun calculatedFields(calculatedFields: IResolvable) {
-        cdkBuilder.calculatedFields(calculatedFields.let(IResolvable::unwrap))
+        cdkBuilder.calculatedFields(calculatedFields.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1421,7 +1425,7 @@ public open class CfnTopic(
        * @param columns The list of column definitions.
        */
       override fun columns(columns: IResolvable) {
-        cdkBuilder.columns(columns.let(IResolvable::unwrap))
+        cdkBuilder.columns(columns.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1440,14 +1444,14 @@ public open class CfnTopic(
        * @param dataAggregation The definition of a data aggregation.
        */
       override fun dataAggregation(dataAggregation: IResolvable) {
-        cdkBuilder.dataAggregation(dataAggregation.let(IResolvable::unwrap))
+        cdkBuilder.dataAggregation(dataAggregation.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dataAggregation The definition of a data aggregation.
        */
       override fun dataAggregation(dataAggregation: DataAggregationProperty) {
-        cdkBuilder.dataAggregation(dataAggregation.let(DataAggregationProperty::unwrap))
+        cdkBuilder.dataAggregation(dataAggregation.let(DataAggregationProperty.Companion::unwrap))
       }
 
       /**
@@ -1483,7 +1487,7 @@ public open class CfnTopic(
        * @param filters The list of filter definitions.
        */
       override fun filters(filters: IResolvable) {
-        cdkBuilder.filters(filters.let(IResolvable::unwrap))
+        cdkBuilder.filters(filters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1502,7 +1506,7 @@ public open class CfnTopic(
        * @param namedEntities The list of named entities definitions.
        */
       override fun namedEntities(namedEntities: IResolvable) {
-        cdkBuilder.namedEntities(namedEntities.let(IResolvable::unwrap))
+        cdkBuilder.namedEntities(namedEntities.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1701,14 +1705,14 @@ public open class CfnTopic(
        * @param displayFormatOptions The additional options for display formatting.
        */
       override fun displayFormatOptions(displayFormatOptions: IResolvable) {
-        cdkBuilder.displayFormatOptions(displayFormatOptions.let(IResolvable::unwrap))
+        cdkBuilder.displayFormatOptions(displayFormatOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param displayFormatOptions The additional options for display formatting.
        */
       override fun displayFormatOptions(displayFormatOptions: DisplayFormatOptionsProperty) {
-        cdkBuilder.displayFormatOptions(displayFormatOptions.let(DisplayFormatOptionsProperty::unwrap))
+        cdkBuilder.displayFormatOptions(displayFormatOptions.let(DisplayFormatOptionsProperty.Companion::unwrap))
       }
 
       /**
@@ -2030,14 +2034,14 @@ public open class CfnTopic(
        * @param negativeFormat The negative format.
        */
       override fun negativeFormat(negativeFormat: IResolvable) {
-        cdkBuilder.negativeFormat(negativeFormat.let(IResolvable::unwrap))
+        cdkBuilder.negativeFormat(negativeFormat.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param negativeFormat The negative format.
        */
       override fun negativeFormat(negativeFormat: NegativeFormatProperty) {
-        cdkBuilder.negativeFormat(negativeFormat.let(NegativeFormatProperty::unwrap))
+        cdkBuilder.negativeFormat(negativeFormat.let(NegativeFormatProperty.Companion::unwrap))
       }
 
       /**
@@ -2082,7 +2086,7 @@ public open class CfnTopic(
        * @param useBlankCellFormat A Boolean value that indicates whether to use blank cell format.
        */
       override fun useBlankCellFormat(useBlankCellFormat: IResolvable) {
-        cdkBuilder.useBlankCellFormat(useBlankCellFormat.let(IResolvable::unwrap))
+        cdkBuilder.useBlankCellFormat(useBlankCellFormat.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2096,7 +2100,7 @@ public open class CfnTopic(
        * @param useGrouping A Boolean value that indicates whether to use grouping.
        */
       override fun useGrouping(useGrouping: IResolvable) {
-        cdkBuilder.useGrouping(useGrouping.let(IResolvable::unwrap))
+        cdkBuilder.useGrouping(useGrouping.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2302,7 +2306,7 @@ public open class CfnTopic(
        * @param aggregationFunctionParameters The additional parameters for an aggregation function.
        */
       override fun aggregationFunctionParameters(aggregationFunctionParameters: IResolvable) {
-        cdkBuilder.aggregationFunctionParameters(aggregationFunctionParameters.let(IResolvable::unwrap))
+        cdkBuilder.aggregationFunctionParameters(aggregationFunctionParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2487,14 +2491,14 @@ public open class CfnTopic(
        * @param metric The definition of a metric.
        */
       override fun metric(metric: IResolvable) {
-        cdkBuilder.metric(metric.let(IResolvable::unwrap))
+        cdkBuilder.metric(metric.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param metric The definition of a metric.
        */
       override fun metric(metric: NamedEntityDefinitionMetricProperty) {
-        cdkBuilder.metric(metric.let(NamedEntityDefinitionMetricProperty::unwrap))
+        cdkBuilder.metric(metric.let(NamedEntityDefinitionMetricProperty.Companion::unwrap))
       }
 
       /**
@@ -2898,7 +2902,7 @@ public open class CfnTopic(
        * @param typeParameters The semantic entity type parameters.
        */
       override fun typeParameters(typeParameters: IResolvable) {
-        cdkBuilder.typeParameters(typeParameters.let(IResolvable::unwrap))
+        cdkBuilder.typeParameters(typeParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3150,7 +3154,7 @@ public open class CfnTopic(
        * @param typeParameters The semantic type parameters.
        */
       override fun typeParameters(typeParameters: IResolvable) {
-        cdkBuilder.typeParameters(typeParameters.let(IResolvable::unwrap))
+        cdkBuilder.typeParameters(typeParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3285,6 +3289,7 @@ public open class CfnTopic(
    * .useGrouping(false)
    * .build())
    * .build())
+   * .disableIndexing(false)
    * .isIncludedInTopic(false)
    * .neverAggregateInFilter(false)
    * .nonAdditive(false)
@@ -3379,6 +3384,11 @@ public open class CfnTopic(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topiccalculatedfield.html#cfn-quicksight-topic-topiccalculatedfield-defaultformatting)
      */
     public fun defaultFormatting(): Any? = unwrap(this).getDefaultFormatting()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topiccalculatedfield.html#cfn-quicksight-topic-topiccalculatedfield-disableindexing)
+     */
+    public fun disableIndexing(): Any? = unwrap(this).getDisableIndexing()
 
     /**
      * The calculated field expression.
@@ -3546,6 +3556,16 @@ public open class CfnTopic(
       public fun defaultFormatting(defaultFormatting: DefaultFormattingProperty.Builder.() -> Unit)
 
       /**
+       * @param disableIndexing the value to be set.
+       */
+      public fun disableIndexing(disableIndexing: Boolean)
+
+      /**
+       * @param disableIndexing the value to be set.
+       */
+      public fun disableIndexing(disableIndexing: IResolvable)
+
+      /**
        * @param expression The calculated field expression. 
        */
       public fun expression(expression: String)
@@ -3688,7 +3708,7 @@ public open class CfnTopic(
        * @param cellValueSynonyms The other names or aliases for the calculated field cell value.
        */
       override fun cellValueSynonyms(cellValueSynonyms: IResolvable) {
-        cdkBuilder.cellValueSynonyms(cellValueSynonyms.let(IResolvable::unwrap))
+        cdkBuilder.cellValueSynonyms(cellValueSynonyms.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3717,7 +3737,7 @@ public open class CfnTopic(
        * it's used in a comparative context.
        */
       override fun comparativeOrder(comparativeOrder: IResolvable) {
-        cdkBuilder.comparativeOrder(comparativeOrder.let(IResolvable::unwrap))
+        cdkBuilder.comparativeOrder(comparativeOrder.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3725,7 +3745,7 @@ public open class CfnTopic(
        * it's used in a comparative context.
        */
       override fun comparativeOrder(comparativeOrder: ComparativeOrderProperty) {
-        cdkBuilder.comparativeOrder(comparativeOrder.let(ComparativeOrderProperty::unwrap))
+        cdkBuilder.comparativeOrder(comparativeOrder.let(ComparativeOrderProperty.Companion::unwrap))
       }
 
       /**
@@ -3741,14 +3761,14 @@ public open class CfnTopic(
        * @param defaultFormatting The default formatting definition.
        */
       override fun defaultFormatting(defaultFormatting: IResolvable) {
-        cdkBuilder.defaultFormatting(defaultFormatting.let(IResolvable::unwrap))
+        cdkBuilder.defaultFormatting(defaultFormatting.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param defaultFormatting The default formatting definition.
        */
       override fun defaultFormatting(defaultFormatting: DefaultFormattingProperty) {
-        cdkBuilder.defaultFormatting(defaultFormatting.let(DefaultFormattingProperty::unwrap))
+        cdkBuilder.defaultFormatting(defaultFormatting.let(DefaultFormattingProperty.Companion::unwrap))
       }
 
       /**
@@ -3759,6 +3779,20 @@ public open class CfnTopic(
       override
           fun defaultFormatting(defaultFormatting: DefaultFormattingProperty.Builder.() -> Unit):
           Unit = defaultFormatting(DefaultFormattingProperty(defaultFormatting))
+
+      /**
+       * @param disableIndexing the value to be set.
+       */
+      override fun disableIndexing(disableIndexing: Boolean) {
+        cdkBuilder.disableIndexing(disableIndexing)
+      }
+
+      /**
+       * @param disableIndexing the value to be set.
+       */
+      override fun disableIndexing(disableIndexing: IResolvable) {
+        cdkBuilder.disableIndexing(disableIndexing.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param expression The calculated field expression. 
@@ -3780,7 +3814,7 @@ public open class CfnTopic(
        * in the topic.
        */
       override fun isIncludedInTopic(isIncludedInTopic: IResolvable) {
-        cdkBuilder.isIncludedInTopic(isIncludedInTopic.let(IResolvable::unwrap))
+        cdkBuilder.isIncludedInTopic(isIncludedInTopic.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3796,7 +3830,7 @@ public open class CfnTopic(
        * calculated field in filters.
        */
       override fun neverAggregateInFilter(neverAggregateInFilter: IResolvable) {
-        cdkBuilder.neverAggregateInFilter(neverAggregateInFilter.let(IResolvable::unwrap))
+        cdkBuilder.neverAggregateInFilter(neverAggregateInFilter.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3810,7 +3844,7 @@ public open class CfnTopic(
        * @param nonAdditive The non additive for the table style target.
        */
       override fun nonAdditive(nonAdditive: IResolvable) {
-        cdkBuilder.nonAdditive(nonAdditive.let(IResolvable::unwrap))
+        cdkBuilder.nonAdditive(nonAdditive.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3836,14 +3870,14 @@ public open class CfnTopic(
        * @param semanticType The semantic type.
        */
       override fun semanticType(semanticType: IResolvable) {
-        cdkBuilder.semanticType(semanticType.let(IResolvable::unwrap))
+        cdkBuilder.semanticType(semanticType.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param semanticType The semantic type.
        */
       override fun semanticType(semanticType: SemanticTypeProperty) {
-        cdkBuilder.semanticType(semanticType.let(SemanticTypeProperty::unwrap))
+        cdkBuilder.semanticType(semanticType.let(SemanticTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -3944,6 +3978,11 @@ public open class CfnTopic(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topiccalculatedfield.html#cfn-quicksight-topic-topiccalculatedfield-defaultformatting)
        */
       override fun defaultFormatting(): Any? = unwrap(this).getDefaultFormatting()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topiccalculatedfield.html#cfn-quicksight-topic-topiccalculatedfield-disableindexing)
+       */
+      override fun disableIndexing(): Any? = unwrap(this).getDisableIndexing()
 
       /**
        * The calculated field expression.
@@ -4124,7 +4163,7 @@ public open class CfnTopic(
        * This element is used to specify a list of values for the constant.
        */
       override fun collectiveConstant(collectiveConstant: IResolvable) {
-        cdkBuilder.collectiveConstant(collectiveConstant.let(IResolvable::unwrap))
+        cdkBuilder.collectiveConstant(collectiveConstant.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4132,7 +4171,7 @@ public open class CfnTopic(
        * This element is used to specify a list of values for the constant.
        */
       override fun collectiveConstant(collectiveConstant: CollectiveConstantProperty) {
-        cdkBuilder.collectiveConstant(collectiveConstant.let(CollectiveConstantProperty::unwrap))
+        cdkBuilder.collectiveConstant(collectiveConstant.let(CollectiveConstantProperty.Companion::unwrap))
       }
 
       /**
@@ -4351,14 +4390,14 @@ public open class CfnTopic(
        * @param constant The constant used in a category filter.
        */
       override fun constant(constant: IResolvable) {
-        cdkBuilder.constant(constant.let(IResolvable::unwrap))
+        cdkBuilder.constant(constant.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param constant The constant used in a category filter.
        */
       override fun constant(constant: TopicCategoryFilterConstantProperty) {
-        cdkBuilder.constant(constant.let(TopicCategoryFilterConstantProperty::unwrap))
+        cdkBuilder.constant(constant.let(TopicCategoryFilterConstantProperty.Companion::unwrap))
       }
 
       /**
@@ -4380,7 +4419,7 @@ public open class CfnTopic(
        * @param inverse A Boolean value that indicates if the filter is inverse.
        */
       override fun inverse(inverse: IResolvable) {
-        cdkBuilder.inverse(inverse.let(IResolvable::unwrap))
+        cdkBuilder.inverse(inverse.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -4492,6 +4531,7 @@ public open class CfnTopic(
    * .useGrouping(false)
    * .build())
    * .build())
+   * .disableIndexing(false)
    * .isIncludedInTopic(false)
    * .neverAggregateInFilter(false)
    * .nonAdditive(false)
@@ -4588,6 +4628,11 @@ public open class CfnTopic(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topiccolumn.html#cfn-quicksight-topic-topiccolumn-defaultformatting)
      */
     public fun defaultFormatting(): Any? = unwrap(this).getDefaultFormatting()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topiccolumn.html#cfn-quicksight-topic-topiccolumn-disableindexing)
+     */
+    public fun disableIndexing(): Any? = unwrap(this).getDisableIndexing()
 
     /**
      * A Boolean value that indicates whether the column is included in the query results.
@@ -4751,6 +4796,16 @@ public open class CfnTopic(
       public fun defaultFormatting(defaultFormatting: DefaultFormattingProperty.Builder.() -> Unit)
 
       /**
+       * @param disableIndexing the value to be set.
+       */
+      public fun disableIndexing(disableIndexing: Boolean)
+
+      /**
+       * @param disableIndexing the value to be set.
+       */
+      public fun disableIndexing(disableIndexing: IResolvable)
+
+      /**
        * @param isIncludedInTopic A Boolean value that indicates whether the column is included in
        * the query results.
        */
@@ -4858,7 +4913,7 @@ public open class CfnTopic(
        * @param cellValueSynonyms The other names or aliases for the column cell value.
        */
       override fun cellValueSynonyms(cellValueSynonyms: IResolvable) {
-        cdkBuilder.cellValueSynonyms(cellValueSynonyms.let(IResolvable::unwrap))
+        cdkBuilder.cellValueSynonyms(cellValueSynonyms.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4921,7 +4976,7 @@ public open class CfnTopic(
        * in a comparative context.
        */
       override fun comparativeOrder(comparativeOrder: IResolvable) {
-        cdkBuilder.comparativeOrder(comparativeOrder.let(IResolvable::unwrap))
+        cdkBuilder.comparativeOrder(comparativeOrder.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4929,7 +4984,7 @@ public open class CfnTopic(
        * in a comparative context.
        */
       override fun comparativeOrder(comparativeOrder: ComparativeOrderProperty) {
-        cdkBuilder.comparativeOrder(comparativeOrder.let(ComparativeOrderProperty::unwrap))
+        cdkBuilder.comparativeOrder(comparativeOrder.let(ComparativeOrderProperty.Companion::unwrap))
       }
 
       /**
@@ -4945,14 +5000,14 @@ public open class CfnTopic(
        * @param defaultFormatting The default formatting used for values in the column.
        */
       override fun defaultFormatting(defaultFormatting: IResolvable) {
-        cdkBuilder.defaultFormatting(defaultFormatting.let(IResolvable::unwrap))
+        cdkBuilder.defaultFormatting(defaultFormatting.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param defaultFormatting The default formatting used for values in the column.
        */
       override fun defaultFormatting(defaultFormatting: DefaultFormattingProperty) {
-        cdkBuilder.defaultFormatting(defaultFormatting.let(DefaultFormattingProperty::unwrap))
+        cdkBuilder.defaultFormatting(defaultFormatting.let(DefaultFormattingProperty.Companion::unwrap))
       }
 
       /**
@@ -4963,6 +5018,20 @@ public open class CfnTopic(
       override
           fun defaultFormatting(defaultFormatting: DefaultFormattingProperty.Builder.() -> Unit):
           Unit = defaultFormatting(DefaultFormattingProperty(defaultFormatting))
+
+      /**
+       * @param disableIndexing the value to be set.
+       */
+      override fun disableIndexing(disableIndexing: Boolean) {
+        cdkBuilder.disableIndexing(disableIndexing)
+      }
+
+      /**
+       * @param disableIndexing the value to be set.
+       */
+      override fun disableIndexing(disableIndexing: IResolvable) {
+        cdkBuilder.disableIndexing(disableIndexing.let(IResolvable.Companion::unwrap))
+      }
 
       /**
        * @param isIncludedInTopic A Boolean value that indicates whether the column is included in
@@ -4977,7 +5046,7 @@ public open class CfnTopic(
        * the query results.
        */
       override fun isIncludedInTopic(isIncludedInTopic: IResolvable) {
-        cdkBuilder.isIncludedInTopic(isIncludedInTopic.let(IResolvable::unwrap))
+        cdkBuilder.isIncludedInTopic(isIncludedInTopic.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4993,7 +5062,7 @@ public open class CfnTopic(
        * column data when it's used in a filter context.
        */
       override fun neverAggregateInFilter(neverAggregateInFilter: IResolvable) {
-        cdkBuilder.neverAggregateInFilter(neverAggregateInFilter.let(IResolvable::unwrap))
+        cdkBuilder.neverAggregateInFilter(neverAggregateInFilter.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5007,7 +5076,7 @@ public open class CfnTopic(
        * @param nonAdditive The non additive value for the column.
        */
       override fun nonAdditive(nonAdditive: IResolvable) {
-        cdkBuilder.nonAdditive(nonAdditive.let(IResolvable::unwrap))
+        cdkBuilder.nonAdditive(nonAdditive.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5033,14 +5102,14 @@ public open class CfnTopic(
        * @param semanticType The semantic type of data contained in the column.
        */
       override fun semanticType(semanticType: IResolvable) {
-        cdkBuilder.semanticType(semanticType.let(IResolvable::unwrap))
+        cdkBuilder.semanticType(semanticType.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param semanticType The semantic type of data contained in the column.
        */
       override fun semanticType(semanticType: SemanticTypeProperty) {
-        cdkBuilder.semanticType(semanticType.let(SemanticTypeProperty::unwrap))
+        cdkBuilder.semanticType(semanticType.let(SemanticTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -5142,6 +5211,11 @@ public open class CfnTopic(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topiccolumn.html#cfn-quicksight-topic-topiccolumn-defaultformatting)
        */
       override fun defaultFormatting(): Any? = unwrap(this).getDefaultFormatting()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-topic-topiccolumn.html#cfn-quicksight-topic-topiccolumn-disableindexing)
+       */
+      override fun disableIndexing(): Any? = unwrap(this).getDisableIndexing()
 
       /**
        * A Boolean value that indicates whether the column is included in the query results.
@@ -5308,14 +5382,14 @@ public open class CfnTopic(
        * @param constant The constant used in a date range filter.
        */
       override fun constant(constant: IResolvable) {
-        cdkBuilder.constant(constant.let(IResolvable::unwrap))
+        cdkBuilder.constant(constant.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param constant The constant used in a date range filter.
        */
       override fun constant(constant: TopicRangeFilterConstantProperty) {
-        cdkBuilder.constant(constant.let(TopicRangeFilterConstantProperty::unwrap))
+        cdkBuilder.constant(constant.let(TopicRangeFilterConstantProperty.Companion::unwrap))
       }
 
       /**
@@ -5343,7 +5417,7 @@ public open class CfnTopic(
        * excludes them.
        */
       override fun inclusive(inclusive: IResolvable) {
-        cdkBuilder.inclusive(inclusive.let(IResolvable::unwrap))
+        cdkBuilder.inclusive(inclusive.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -5689,14 +5763,14 @@ public open class CfnTopic(
        * @param categoryFilter The category filter that is associated with this filter.
        */
       override fun categoryFilter(categoryFilter: IResolvable) {
-        cdkBuilder.categoryFilter(categoryFilter.let(IResolvable::unwrap))
+        cdkBuilder.categoryFilter(categoryFilter.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param categoryFilter The category filter that is associated with this filter.
        */
       override fun categoryFilter(categoryFilter: TopicCategoryFilterProperty) {
-        cdkBuilder.categoryFilter(categoryFilter.let(TopicCategoryFilterProperty::unwrap))
+        cdkBuilder.categoryFilter(categoryFilter.let(TopicCategoryFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -5711,14 +5785,14 @@ public open class CfnTopic(
        * @param dateRangeFilter The date range filter.
        */
       override fun dateRangeFilter(dateRangeFilter: IResolvable) {
-        cdkBuilder.dateRangeFilter(dateRangeFilter.let(IResolvable::unwrap))
+        cdkBuilder.dateRangeFilter(dateRangeFilter.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param dateRangeFilter The date range filter.
        */
       override fun dateRangeFilter(dateRangeFilter: TopicDateRangeFilterProperty) {
-        cdkBuilder.dateRangeFilter(dateRangeFilter.let(TopicDateRangeFilterProperty::unwrap))
+        cdkBuilder.dateRangeFilter(dateRangeFilter.let(TopicDateRangeFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -5779,7 +5853,7 @@ public open class CfnTopic(
        * @param numericEqualityFilter The numeric equality filter.
        */
       override fun numericEqualityFilter(numericEqualityFilter: IResolvable) {
-        cdkBuilder.numericEqualityFilter(numericEqualityFilter.let(IResolvable::unwrap))
+        cdkBuilder.numericEqualityFilter(numericEqualityFilter.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5787,7 +5861,7 @@ public open class CfnTopic(
        */
       override
           fun numericEqualityFilter(numericEqualityFilter: TopicNumericEqualityFilterProperty) {
-        cdkBuilder.numericEqualityFilter(numericEqualityFilter.let(TopicNumericEqualityFilterProperty::unwrap))
+        cdkBuilder.numericEqualityFilter(numericEqualityFilter.let(TopicNumericEqualityFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -5803,14 +5877,14 @@ public open class CfnTopic(
        * @param numericRangeFilter The numeric range filter.
        */
       override fun numericRangeFilter(numericRangeFilter: IResolvable) {
-        cdkBuilder.numericRangeFilter(numericRangeFilter.let(IResolvable::unwrap))
+        cdkBuilder.numericRangeFilter(numericRangeFilter.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param numericRangeFilter The numeric range filter.
        */
       override fun numericRangeFilter(numericRangeFilter: TopicNumericRangeFilterProperty) {
-        cdkBuilder.numericRangeFilter(numericRangeFilter.let(TopicNumericRangeFilterProperty::unwrap))
+        cdkBuilder.numericRangeFilter(numericRangeFilter.let(TopicNumericRangeFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -5833,14 +5907,14 @@ public open class CfnTopic(
        * @param relativeDateFilter The relative date filter.
        */
       override fun relativeDateFilter(relativeDateFilter: IResolvable) {
-        cdkBuilder.relativeDateFilter(relativeDateFilter.let(IResolvable::unwrap))
+        cdkBuilder.relativeDateFilter(relativeDateFilter.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param relativeDateFilter The relative date filter.
        */
       override fun relativeDateFilter(relativeDateFilter: TopicRelativeDateFilterProperty) {
-        cdkBuilder.relativeDateFilter(relativeDateFilter.let(TopicRelativeDateFilterProperty::unwrap))
+        cdkBuilder.relativeDateFilter(relativeDateFilter.let(TopicRelativeDateFilterProperty.Companion::unwrap))
       }
 
       /**
@@ -6101,7 +6175,7 @@ public open class CfnTopic(
        * @param definition The definition of a named entity.
        */
       override fun definition(definition: IResolvable) {
-        cdkBuilder.definition(definition.let(IResolvable::unwrap))
+        cdkBuilder.definition(definition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6147,14 +6221,14 @@ public open class CfnTopic(
        * @param semanticEntityType The type of named entity that a topic represents.
        */
       override fun semanticEntityType(semanticEntityType: IResolvable) {
-        cdkBuilder.semanticEntityType(semanticEntityType.let(IResolvable::unwrap))
+        cdkBuilder.semanticEntityType(semanticEntityType.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param semanticEntityType The type of named entity that a topic represents.
        */
       override fun semanticEntityType(semanticEntityType: SemanticEntityTypeProperty) {
-        cdkBuilder.semanticEntityType(semanticEntityType.let(SemanticEntityTypeProperty::unwrap))
+        cdkBuilder.semanticEntityType(semanticEntityType.let(SemanticEntityTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -6321,14 +6395,14 @@ public open class CfnTopic(
        * @param constant The constant used in a numeric equality filter.
        */
       override fun constant(constant: IResolvable) {
-        cdkBuilder.constant(constant.let(IResolvable::unwrap))
+        cdkBuilder.constant(constant.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param constant The constant used in a numeric equality filter.
        */
       override fun constant(constant: TopicSingularFilterConstantProperty) {
-        cdkBuilder.constant(constant.let(TopicSingularFilterConstantProperty::unwrap))
+        cdkBuilder.constant(constant.let(TopicSingularFilterConstantProperty.Companion::unwrap))
       }
 
       /**
@@ -6512,14 +6586,14 @@ public open class CfnTopic(
        * @param constant The constant used in a numeric range filter.
        */
       override fun constant(constant: IResolvable) {
-        cdkBuilder.constant(constant.let(IResolvable::unwrap))
+        cdkBuilder.constant(constant.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param constant The constant used in a numeric range filter.
        */
       override fun constant(constant: TopicRangeFilterConstantProperty) {
-        cdkBuilder.constant(constant.let(TopicRangeFilterConstantProperty::unwrap))
+        cdkBuilder.constant(constant.let(TopicRangeFilterConstantProperty.Companion::unwrap))
       }
 
       /**
@@ -6549,7 +6623,7 @@ public open class CfnTopic(
        * endpoint values will be excluded from the filter.
        */
       override fun inclusive(inclusive: IResolvable) {
-        cdkBuilder.inclusive(inclusive.let(IResolvable::unwrap))
+        cdkBuilder.inclusive(inclusive.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -6698,7 +6772,7 @@ public open class CfnTopic(
        * range filter.
        */
       override fun rangeConstant(rangeConstant: IResolvable) {
-        cdkBuilder.rangeConstant(rangeConstant.let(IResolvable::unwrap))
+        cdkBuilder.rangeConstant(rangeConstant.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6706,7 +6780,7 @@ public open class CfnTopic(
        * range filter.
        */
       override fun rangeConstant(rangeConstant: RangeConstantProperty) {
-        cdkBuilder.rangeConstant(rangeConstant.let(RangeConstantProperty::unwrap))
+        cdkBuilder.rangeConstant(rangeConstant.let(RangeConstantProperty.Companion::unwrap))
       }
 
       /**
@@ -6854,14 +6928,14 @@ public open class CfnTopic(
        * @param constant The constant used in a relative date filter.
        */
       override fun constant(constant: IResolvable) {
-        cdkBuilder.constant(constant.let(IResolvable::unwrap))
+        cdkBuilder.constant(constant.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param constant The constant used in a relative date filter.
        */
       override fun constant(constant: TopicSingularFilterConstantProperty) {
-        cdkBuilder.constant(constant.let(TopicSingularFilterConstantProperty::unwrap))
+        cdkBuilder.constant(constant.let(TopicSingularFilterConstantProperty.Companion::unwrap))
       }
 
       /**

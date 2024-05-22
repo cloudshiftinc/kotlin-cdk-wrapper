@@ -139,7 +139,7 @@ public interface CfnAccessPolicyProps {
      * Choose an IAM Identity Center user, an IAM Identity Center group, or an IAM user.
      */
     override fun accessPolicyIdentity(accessPolicyIdentity: IResolvable) {
-      cdkBuilder.accessPolicyIdentity(accessPolicyIdentity.let(IResolvable::unwrap))
+      cdkBuilder.accessPolicyIdentity(accessPolicyIdentity.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -148,7 +148,7 @@ public interface CfnAccessPolicyProps {
      */
     override
         fun accessPolicyIdentity(accessPolicyIdentity: CfnAccessPolicy.AccessPolicyIdentityProperty) {
-      cdkBuilder.accessPolicyIdentity(accessPolicyIdentity.let(CfnAccessPolicy.AccessPolicyIdentityProperty::unwrap))
+      cdkBuilder.accessPolicyIdentity(accessPolicyIdentity.let(CfnAccessPolicy.AccessPolicyIdentityProperty.Companion::unwrap))
     }
 
     /**
@@ -175,7 +175,7 @@ public interface CfnAccessPolicyProps {
      * Choose either a portal or a project.
      */
     override fun accessPolicyResource(accessPolicyResource: IResolvable) {
-      cdkBuilder.accessPolicyResource(accessPolicyResource.let(IResolvable::unwrap))
+      cdkBuilder.accessPolicyResource(accessPolicyResource.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -184,7 +184,7 @@ public interface CfnAccessPolicyProps {
      */
     override
         fun accessPolicyResource(accessPolicyResource: CfnAccessPolicy.AccessPolicyResourceProperty) {
-      cdkBuilder.accessPolicyResource(accessPolicyResource.let(CfnAccessPolicy.AccessPolicyResourceProperty::unwrap))
+      cdkBuilder.accessPolicyResource(accessPolicyResource.let(CfnAccessPolicy.AccessPolicyResourceProperty.Companion::unwrap))
     }
 
     /**

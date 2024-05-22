@@ -70,8 +70,8 @@ public open class CfnLocationAzureBlob(
     id: String,
     props: CfnLocationAzureBlobProps,
   ) :
-      this(software.amazon.awscdk.services.datasync.CfnLocationAzureBlob(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLocationAzureBlobProps::unwrap))
+      this(software.amazon.awscdk.services.datasync.CfnLocationAzureBlob(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLocationAzureBlobProps.Companion::unwrap))
   )
 
   public constructor(
@@ -157,14 +157,14 @@ public open class CfnLocationAzureBlob(
    * Specifies the SAS configuration that allows DataSync to access your Azure Blob Storage.
    */
   public open fun azureBlobSasConfiguration(`value`: IResolvable) {
-    unwrap(this).setAzureBlobSasConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAzureBlobSasConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Specifies the SAS configuration that allows DataSync to access your Azure Blob Storage.
    */
   public open fun azureBlobSasConfiguration(`value`: AzureBlobSasConfigurationProperty) {
-    unwrap(this).setAzureBlobSasConfiguration(`value`.let(AzureBlobSasConfigurationProperty::unwrap))
+    unwrap(this).setAzureBlobSasConfiguration(`value`.let(AzureBlobSasConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -202,7 +202,7 @@ public open class CfnLocationAzureBlob(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -228,7 +228,7 @@ public open class CfnLocationAzureBlob(
    * Specifies labels that help you categorize, filter, and search for your AWS resources.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -473,7 +473,7 @@ public open class CfnLocationAzureBlob(
      * access your Azure Blob Storage. 
      */
     override fun azureBlobSasConfiguration(azureBlobSasConfiguration: IResolvable) {
-      cdkBuilder.azureBlobSasConfiguration(azureBlobSasConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.azureBlobSasConfiguration(azureBlobSasConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -485,7 +485,7 @@ public open class CfnLocationAzureBlob(
      */
     override
         fun azureBlobSasConfiguration(azureBlobSasConfiguration: AzureBlobSasConfigurationProperty) {
-      cdkBuilder.azureBlobSasConfiguration(azureBlobSasConfiguration.let(AzureBlobSasConfigurationProperty::unwrap))
+      cdkBuilder.azureBlobSasConfiguration(azureBlobSasConfiguration.let(AzureBlobSasConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -543,7 +543,7 @@ public open class CfnLocationAzureBlob(
      * resources. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

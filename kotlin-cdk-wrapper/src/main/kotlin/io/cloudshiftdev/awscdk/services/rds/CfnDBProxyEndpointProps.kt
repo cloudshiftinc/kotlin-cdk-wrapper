@@ -175,7 +175,7 @@ public interface CfnDBProxyEndpointProps {
      * with the proxy.
      */
     override fun tags(tags: List<CfnDBProxyEndpoint.TagFormatProperty>) {
-      cdkBuilder.tags(tags.map(CfnDBProxyEndpoint.TagFormatProperty::unwrap))
+      cdkBuilder.tags(tags.map(CfnDBProxyEndpoint.TagFormatProperty.Companion::unwrap))
     }
 
     /**

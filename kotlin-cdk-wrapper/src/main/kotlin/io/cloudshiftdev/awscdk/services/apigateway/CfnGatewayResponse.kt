@@ -50,8 +50,8 @@ public open class CfnGatewayResponse(
     id: String,
     props: CfnGatewayResponseProps,
   ) :
-      this(software.amazon.awscdk.services.apigateway.CfnGatewayResponse(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGatewayResponseProps::unwrap))
+      this(software.amazon.awscdk.services.apigateway.CfnGatewayResponse(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGatewayResponseProps.Companion::unwrap))
   )
 
   public constructor(
@@ -74,7 +74,7 @@ public open class CfnGatewayResponse(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -88,7 +88,7 @@ public open class CfnGatewayResponse(
    * string-to-string map of key-value pairs.
    */
   public open fun responseParameters(`value`: IResolvable) {
-    unwrap(this).setResponseParameters(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResponseParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -108,7 +108,7 @@ public open class CfnGatewayResponse(
    * Response templates of the GatewayResponse as a string-to-string map of key-value pairs.
    */
   public open fun responseTemplates(`value`: IResolvable) {
-    unwrap(this).setResponseTemplates(`value`.let(IResolvable::unwrap))
+    unwrap(this).setResponseTemplates(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -238,7 +238,7 @@ public open class CfnGatewayResponse(
      * GatewayResponse as a string-to-string map of key-value pairs. 
      */
     override fun responseParameters(responseParameters: IResolvable) {
-      cdkBuilder.responseParameters(responseParameters.let(IResolvable::unwrap))
+      cdkBuilder.responseParameters(responseParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -261,7 +261,7 @@ public open class CfnGatewayResponse(
      * of key-value pairs. 
      */
     override fun responseTemplates(responseTemplates: IResolvable) {
-      cdkBuilder.responseTemplates(responseTemplates.let(IResolvable::unwrap))
+      cdkBuilder.responseTemplates(responseTemplates.let(IResolvable.Companion::unwrap))
     }
 
     /**

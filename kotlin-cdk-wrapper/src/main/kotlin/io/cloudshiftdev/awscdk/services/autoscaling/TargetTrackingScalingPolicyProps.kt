@@ -119,14 +119,14 @@ public interface TargetTrackingScalingPolicyProps : BasicTargetTrackingScalingPo
      * @param autoScalingGroup the value to be set. 
      */
     override fun autoScalingGroup(autoScalingGroup: IAutoScalingGroup) {
-      cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup::unwrap))
+      cdkBuilder.autoScalingGroup(autoScalingGroup.let(IAutoScalingGroup.Companion::unwrap))
     }
 
     /**
      * @param cooldown Period after a scaling completes before another scaling activity can start.
      */
     override fun cooldown(cooldown: Duration) {
-      cdkBuilder.cooldown(cooldown.let(Duration::unwrap))
+      cdkBuilder.cooldown(cooldown.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -137,7 +137,7 @@ public interface TargetTrackingScalingPolicyProps : BasicTargetTrackingScalingPo
      * Exactly one of customMetric or predefinedMetric must be specified.
      */
     override fun customMetric(customMetric: IMetric) {
-      cdkBuilder.customMetric(customMetric.let(IMetric::unwrap))
+      cdkBuilder.customMetric(customMetric.let(IMetric.Companion::unwrap))
     }
 
     /**
@@ -156,7 +156,7 @@ public interface TargetTrackingScalingPolicyProps : BasicTargetTrackingScalingPo
      * metrics to CloudWatch.
      */
     override fun estimatedInstanceWarmup(estimatedInstanceWarmup: Duration) {
-      cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup.let(Duration::unwrap))
+      cdkBuilder.estimatedInstanceWarmup(estimatedInstanceWarmup.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -167,7 +167,7 @@ public interface TargetTrackingScalingPolicyProps : BasicTargetTrackingScalingPo
      * Exactly one of customMetric or predefinedMetric must be specified.
      */
     override fun predefinedMetric(predefinedMetric: PredefinedMetric) {
-      cdkBuilder.predefinedMetric(predefinedMetric.let(PredefinedMetric::unwrap))
+      cdkBuilder.predefinedMetric(predefinedMetric.let(PredefinedMetric.Companion::unwrap))
     }
 
     /**

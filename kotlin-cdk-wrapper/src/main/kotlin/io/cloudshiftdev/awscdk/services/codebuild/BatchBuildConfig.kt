@@ -49,7 +49,7 @@ public interface BatchBuildConfig {
      * @param role The IAM batch service Role of this Project. 
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.codebuild.BatchBuildConfig =

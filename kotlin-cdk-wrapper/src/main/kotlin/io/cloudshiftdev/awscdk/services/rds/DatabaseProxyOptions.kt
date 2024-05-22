@@ -389,7 +389,7 @@ public interface DatabaseProxyOptions {
      * Value must be between 1 second and 1 hour, or `Duration.seconds(0)` to represent unlimited.
      */
     override fun borrowTimeout(borrowTimeout: Duration) {
-      cdkBuilder.borrowTimeout(borrowTimeout.let(Duration::unwrap))
+      cdkBuilder.borrowTimeout(borrowTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -397,7 +397,7 @@ public interface DatabaseProxyOptions {
      * in as a specific database user.
      */
     override fun clientPasswordAuthType(clientPasswordAuthType: ClientPasswordAuthType) {
-      cdkBuilder.clientPasswordAuthType(clientPasswordAuthType.let(ClientPasswordAuthType::unwrap))
+      cdkBuilder.clientPasswordAuthType(clientPasswordAuthType.let(ClientPasswordAuthType.Companion::unwrap))
     }
 
     /**
@@ -441,7 +441,7 @@ public interface DatabaseProxyOptions {
      * database.
      */
     override fun idleClientTimeout(idleClientTimeout: Duration) {
-      cdkBuilder.idleClientTimeout(idleClientTimeout.let(Duration::unwrap))
+      cdkBuilder.idleClientTimeout(idleClientTimeout.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -502,7 +502,7 @@ public interface DatabaseProxyOptions {
      * @param role IAM role that the proxy uses to access secrets in AWS Secrets Manager.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -512,7 +512,7 @@ public interface DatabaseProxyOptions {
      * One or more secrets are required.
      */
     override fun secrets(secrets: List<ISecret>) {
-      cdkBuilder.secrets(secrets.map(ISecret::unwrap))
+      cdkBuilder.secrets(secrets.map(ISecret.Companion::unwrap))
     }
 
     /**
@@ -527,7 +527,7 @@ public interface DatabaseProxyOptions {
      * @param securityGroups One or more VPC security groups to associate with the new proxy.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup.Companion::unwrap))
     }
 
     /**
@@ -543,7 +543,7 @@ public interface DatabaseProxyOptions {
      * Including an item in the list exempts that class of SQL operations from the pinning behavior.
      */
     override fun sessionPinningFilters(sessionPinningFilters: List<SessionPinningFilter>) {
-      cdkBuilder.sessionPinningFilters(sessionPinningFilters.map(SessionPinningFilter::unwrap))
+      cdkBuilder.sessionPinningFilters(sessionPinningFilters.map(SessionPinningFilter.Companion::unwrap))
     }
 
     /**
@@ -559,14 +559,14 @@ public interface DatabaseProxyOptions {
      * @param vpc The VPC to associate with the new proxy. 
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     /**
      * @param vpcSubnets The subnets used by the proxy.
      */
     override fun vpcSubnets(vpcSubnets: SubnetSelection) {
-      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection::unwrap))
+      cdkBuilder.vpcSubnets(vpcSubnets.let(SubnetSelection.Companion::unwrap))
     }
 
     /**

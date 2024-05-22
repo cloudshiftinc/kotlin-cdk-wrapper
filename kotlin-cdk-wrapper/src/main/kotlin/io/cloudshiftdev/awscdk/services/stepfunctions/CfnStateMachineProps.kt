@@ -368,7 +368,7 @@ public interface CfnStateMachineProps {
      * The state machine definition must be a JSON or YAML file.
      */
     override fun definitionS3Location(definitionS3Location: IResolvable) {
-      cdkBuilder.definitionS3Location(definitionS3Location.let(IResolvable::unwrap))
+      cdkBuilder.definitionS3Location(definitionS3Location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -377,7 +377,7 @@ public interface CfnStateMachineProps {
      * The state machine definition must be a JSON or YAML file.
      */
     override fun definitionS3Location(definitionS3Location: CfnStateMachine.S3LocationProperty) {
-      cdkBuilder.definitionS3Location(definitionS3Location.let(CfnStateMachine.S3LocationProperty::unwrap))
+      cdkBuilder.definitionS3Location(definitionS3Location.let(CfnStateMachine.S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -411,7 +411,7 @@ public interface CfnStateMachineProps {
      * Substitutions must follow the syntax: `${key_name}` or `${variable_1,variable_2,...}` .
      */
     override fun definitionSubstitutions(definitionSubstitutions: IResolvable) {
-      cdkBuilder.definitionSubstitutions(definitionSubstitutions.let(IResolvable::unwrap))
+      cdkBuilder.definitionSubstitutions(definitionSubstitutions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -436,7 +436,7 @@ public interface CfnStateMachineProps {
      * AWS Step Functions User Guide.
      */
     override fun loggingConfiguration(loggingConfiguration: IResolvable) {
-      cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -449,7 +449,7 @@ public interface CfnStateMachineProps {
      */
     override
         fun loggingConfiguration(loggingConfiguration: CfnStateMachine.LoggingConfigurationProperty) {
-      cdkBuilder.loggingConfiguration(loggingConfiguration.let(CfnStateMachine.LoggingConfigurationProperty::unwrap))
+      cdkBuilder.loggingConfiguration(loggingConfiguration.let(CfnStateMachine.LoggingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -511,7 +511,7 @@ public interface CfnStateMachineProps {
      * Tags may only contain Unicode letters, digits, white space, or these symbols: `_ . : / = + -
      */
     override fun tags(tags: List<CfnStateMachine.TagsEntryProperty>) {
-      cdkBuilder.tags(tags.map(CfnStateMachine.TagsEntryProperty::unwrap))
+      cdkBuilder.tags(tags.map(CfnStateMachine.TagsEntryProperty.Companion::unwrap))
     }
 
     /**
@@ -525,7 +525,7 @@ public interface CfnStateMachineProps {
      * enabled.
      */
     override fun tracingConfiguration(tracingConfiguration: IResolvable) {
-      cdkBuilder.tracingConfiguration(tracingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.tracingConfiguration(tracingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -534,7 +534,7 @@ public interface CfnStateMachineProps {
      */
     override
         fun tracingConfiguration(tracingConfiguration: CfnStateMachine.TracingConfigurationProperty) {
-      cdkBuilder.tracingConfiguration(tracingConfiguration.let(CfnStateMachine.TracingConfigurationProperty::unwrap))
+      cdkBuilder.tracingConfiguration(tracingConfiguration.let(CfnStateMachine.TracingConfigurationProperty.Companion::unwrap))
     }
 
     /**

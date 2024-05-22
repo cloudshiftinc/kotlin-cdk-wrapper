@@ -120,7 +120,7 @@ public interface CfnAliasProps {
      * for the alias. 
      */
     override fun routingStrategy(routingStrategy: IResolvable) {
-      cdkBuilder.routingStrategy(routingStrategy.let(IResolvable::unwrap))
+      cdkBuilder.routingStrategy(routingStrategy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -128,7 +128,7 @@ public interface CfnAliasProps {
      * for the alias. 
      */
     override fun routingStrategy(routingStrategy: CfnAlias.RoutingStrategyProperty) {
-      cdkBuilder.routingStrategy(routingStrategy.let(CfnAlias.RoutingStrategyProperty::unwrap))
+      cdkBuilder.routingStrategy(routingStrategy.let(CfnAlias.RoutingStrategyProperty.Companion::unwrap))
     }
 
     /**

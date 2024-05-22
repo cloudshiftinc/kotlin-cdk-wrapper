@@ -25,7 +25,7 @@ public interface IReceiptRuleAction {
      * @param receiptRule 
      */
     override fun bind(receiptRule: IReceiptRule): ReceiptRuleActionConfig =
-        unwrap(this).bind(receiptRule.let(IReceiptRule::unwrap)).let(ReceiptRuleActionConfig::wrap)
+        unwrap(this).bind(receiptRule.let(IReceiptRule.Companion::unwrap)).let(ReceiptRuleActionConfig::wrap)
   }
 
   public companion object {

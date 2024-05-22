@@ -26,7 +26,7 @@ public open class ClusterInstanceType(
 ) : CdkObject(cdkObject) {
   public constructor(instanceType: String, type: InstanceType) :
       this(software.amazon.awscdk.services.rds.ClusterInstanceType(instanceType,
-      type.let(InstanceType::unwrap))
+      type.let(InstanceType.Companion::unwrap))
   )
 
   /**
@@ -40,7 +40,7 @@ public open class ClusterInstanceType(
 
     public fun provisioned(instanceType: io.cloudshiftdev.awscdk.services.ec2.InstanceType):
         ClusterInstanceType =
-        software.amazon.awscdk.services.rds.ClusterInstanceType.provisioned(instanceType.let(io.cloudshiftdev.awscdk.services.ec2.InstanceType::unwrap)).let(ClusterInstanceType::wrap)
+        software.amazon.awscdk.services.rds.ClusterInstanceType.provisioned(instanceType.let(io.cloudshiftdev.awscdk.services.ec2.InstanceType.Companion::unwrap)).let(ClusterInstanceType::wrap)
 
     public fun serverlessV2(): ClusterInstanceType =
         software.amazon.awscdk.services.rds.ClusterInstanceType.serverlessV2().let(ClusterInstanceType::wrap)

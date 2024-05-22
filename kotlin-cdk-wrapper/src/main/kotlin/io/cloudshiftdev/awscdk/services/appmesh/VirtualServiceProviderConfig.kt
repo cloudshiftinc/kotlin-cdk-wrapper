@@ -103,7 +103,7 @@ public interface VirtualServiceProviderConfig {
      * @param mesh Mesh the Provider is using. 
      */
     override fun mesh(mesh: IMesh) {
-      cdkBuilder.mesh(mesh.let(IMesh::unwrap))
+      cdkBuilder.mesh(mesh.let(IMesh.Companion::unwrap))
     }
 
     /**
@@ -111,7 +111,7 @@ public interface VirtualServiceProviderConfig {
      */
     override
         fun virtualNodeProvider(virtualNodeProvider: CfnVirtualService.VirtualNodeServiceProviderProperty) {
-      cdkBuilder.virtualNodeProvider(virtualNodeProvider.let(CfnVirtualService.VirtualNodeServiceProviderProperty::unwrap))
+      cdkBuilder.virtualNodeProvider(virtualNodeProvider.let(CfnVirtualService.VirtualNodeServiceProviderProperty.Companion::unwrap))
     }
 
     /**
@@ -129,7 +129,7 @@ public interface VirtualServiceProviderConfig {
      */
     override
         fun virtualRouterProvider(virtualRouterProvider: CfnVirtualService.VirtualRouterServiceProviderProperty) {
-      cdkBuilder.virtualRouterProvider(virtualRouterProvider.let(CfnVirtualService.VirtualRouterServiceProviderProperty::unwrap))
+      cdkBuilder.virtualRouterProvider(virtualRouterProvider.let(CfnVirtualService.VirtualRouterServiceProviderProperty.Companion::unwrap))
     }
 
     /**

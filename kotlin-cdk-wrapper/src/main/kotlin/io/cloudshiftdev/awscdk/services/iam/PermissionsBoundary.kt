@@ -33,7 +33,7 @@ public open class PermissionsBoundary(
    * @param boundaryPolicy 
    */
   public open fun apply(boundaryPolicy: IManagedPolicy) {
-    unwrap(this).apply(boundaryPolicy.let(IManagedPolicy::unwrap))
+    unwrap(this).apply(boundaryPolicy.let(IManagedPolicy.Companion::unwrap))
   }
 
   /**
@@ -45,7 +45,7 @@ public open class PermissionsBoundary(
 
   public companion object {
     public fun of(scope: IConstruct): PermissionsBoundary =
-        software.amazon.awscdk.services.iam.PermissionsBoundary.of(scope.let(IConstruct::unwrap)).let(PermissionsBoundary::wrap)
+        software.amazon.awscdk.services.iam.PermissionsBoundary.of(scope.let(IConstruct.Companion::unwrap)).let(PermissionsBoundary::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.PermissionsBoundary):
         PermissionsBoundary = PermissionsBoundary(cdkObject)

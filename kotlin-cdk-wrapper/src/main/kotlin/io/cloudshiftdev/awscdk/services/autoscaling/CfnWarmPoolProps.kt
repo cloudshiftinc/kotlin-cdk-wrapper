@@ -186,7 +186,7 @@ public interface CfnWarmPoolProps {
      * The default is to terminate instances in the Auto Scaling group when the group scales in.
      */
     override fun instanceReusePolicy(instanceReusePolicy: IResolvable) {
-      cdkBuilder.instanceReusePolicy(instanceReusePolicy.let(IResolvable::unwrap))
+      cdkBuilder.instanceReusePolicy(instanceReusePolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -195,7 +195,7 @@ public interface CfnWarmPoolProps {
      * The default is to terminate instances in the Auto Scaling group when the group scales in.
      */
     override fun instanceReusePolicy(instanceReusePolicy: CfnWarmPool.InstanceReusePolicyProperty) {
-      cdkBuilder.instanceReusePolicy(instanceReusePolicy.let(CfnWarmPool.InstanceReusePolicyProperty::unwrap))
+      cdkBuilder.instanceReusePolicy(instanceReusePolicy.let(CfnWarmPool.InstanceReusePolicyProperty.Companion::unwrap))
     }
 
     /**

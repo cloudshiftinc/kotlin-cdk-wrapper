@@ -122,7 +122,7 @@ public interface ConnectionProps {
      * @param authorization The authorization type for the connection. 
      */
     override fun authorization(authorization: Authorization) {
-      cdkBuilder.authorization(authorization.let(Authorization::unwrap))
+      cdkBuilder.authorization(authorization.let(Authorization.Companion::unwrap))
     }
 
     /**

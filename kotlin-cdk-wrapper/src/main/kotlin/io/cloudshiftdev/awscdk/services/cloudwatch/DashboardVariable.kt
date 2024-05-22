@@ -42,7 +42,7 @@ public open class DashboardVariable(
   cdkObject: software.amazon.awscdk.services.cloudwatch.DashboardVariable,
 ) : CdkObject(cdkObject), IVariable {
   public constructor(options: DashboardVariableOptions) :
-      this(software.amazon.awscdk.services.cloudwatch.DashboardVariable(options.let(DashboardVariableOptions::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.DashboardVariable(options.let(DashboardVariableOptions.Companion::unwrap))
   )
 
   public constructor(options: DashboardVariableOptions.Builder.() -> Unit) :
@@ -138,7 +138,7 @@ public open class DashboardVariable(
      * @param defaultValue Optional default value. 
      */
     override fun defaultValue(defaultValue: DefaultValue) {
-      cdkBuilder.defaultValue(defaultValue.let(DefaultValue::unwrap))
+      cdkBuilder.defaultValue(defaultValue.let(DefaultValue.Companion::unwrap))
     }
 
     /**
@@ -156,7 +156,7 @@ public open class DashboardVariable(
      * @param inputType The way the variable value is selected. 
      */
     override fun inputType(inputType: VariableInputType) {
-      cdkBuilder.inputType(inputType.let(VariableInputType::unwrap))
+      cdkBuilder.inputType(inputType.let(VariableInputType.Companion::unwrap))
     }
 
     /**
@@ -176,7 +176,7 @@ public open class DashboardVariable(
      * @param type Type of the variable. 
      */
     override fun type(type: VariableType) {
-      cdkBuilder.type(type.let(VariableType::unwrap))
+      cdkBuilder.type(type.let(VariableType.Companion::unwrap))
     }
 
     /**
@@ -198,7 +198,7 @@ public open class DashboardVariable(
      * [VariableInputType.SELECT] dashboard variables). 
      */
     override fun values(values: Values) {
-      cdkBuilder.values(values.let(Values::unwrap))
+      cdkBuilder.values(values.let(Values.Companion::unwrap))
     }
 
     /**

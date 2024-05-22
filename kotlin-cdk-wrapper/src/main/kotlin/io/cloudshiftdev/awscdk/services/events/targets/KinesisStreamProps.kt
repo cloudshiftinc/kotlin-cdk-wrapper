@@ -70,7 +70,7 @@ public interface KinesisStreamProps {
      * Must be a valid JSON text passed to the target stream.
      */
     override fun message(message: RuleTargetInput) {
-      cdkBuilder.message(message.let(RuleTargetInput::unwrap))
+      cdkBuilder.message(message.let(RuleTargetInput.Companion::unwrap))
     }
 
     /**

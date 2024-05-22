@@ -67,8 +67,8 @@ public open class CfnSizeConstraintSet(
     id: String,
     props: CfnSizeConstraintSetProps,
   ) :
-      this(software.amazon.awscdk.services.waf.CfnSizeConstraintSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnSizeConstraintSetProps::unwrap))
+      this(software.amazon.awscdk.services.waf.CfnSizeConstraintSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnSizeConstraintSetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -89,7 +89,7 @@ public open class CfnSizeConstraintSet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -113,7 +113,7 @@ public open class CfnSizeConstraintSet(
    * The size constraint and the part of the web request to check.
    */
   public open fun sizeConstraints(`value`: IResolvable) {
-    unwrap(this).setSizeConstraints(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSizeConstraints(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -190,7 +190,7 @@ public open class CfnSizeConstraintSet(
      * @param sizeConstraints The size constraint and the part of the web request to check. 
      */
     override fun sizeConstraints(sizeConstraints: IResolvable) {
-      cdkBuilder.sizeConstraints(sizeConstraints.let(IResolvable::unwrap))
+      cdkBuilder.sizeConstraints(sizeConstraints.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -787,7 +787,7 @@ public open class CfnSizeConstraintSet(
        * header or a query string. 
        */
       override fun fieldToMatch(fieldToMatch: IResolvable) {
-        cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable::unwrap))
+        cdkBuilder.fieldToMatch(fieldToMatch.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -795,7 +795,7 @@ public open class CfnSizeConstraintSet(
        * header or a query string. 
        */
       override fun fieldToMatch(fieldToMatch: FieldToMatchProperty) {
-        cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty::unwrap))
+        cdkBuilder.fieldToMatch(fieldToMatch.let(FieldToMatchProperty.Companion::unwrap))
       }
 
       /**

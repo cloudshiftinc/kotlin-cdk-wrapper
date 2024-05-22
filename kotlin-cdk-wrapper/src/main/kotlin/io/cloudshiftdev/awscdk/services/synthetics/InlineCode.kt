@@ -36,8 +36,8 @@ public open class InlineCode(
     scope: Construct,
     handler: String,
     family: RuntimeFamily,
-  ): CodeConfig = unwrap(this).bind(scope.let(Construct::unwrap), handler,
-      family.let(RuntimeFamily::unwrap)).let(CodeConfig::wrap)
+  ): CodeConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap), handler,
+      family.let(RuntimeFamily.Companion::unwrap)).let(CodeConfig::wrap)
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.InlineCode): InlineCode

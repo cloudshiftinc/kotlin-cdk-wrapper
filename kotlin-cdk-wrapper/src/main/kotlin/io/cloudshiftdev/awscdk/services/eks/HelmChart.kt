@@ -42,8 +42,8 @@ public open class HelmChart(
     id: String,
     props: HelmChartProps,
   ) :
-      this(software.amazon.awscdk.services.eks.HelmChart(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(HelmChartProps::unwrap))
+      this(software.amazon.awscdk.services.eks.HelmChart(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(HelmChartProps.Companion::unwrap))
   )
 
   public constructor(
@@ -52,6 +52,11 @@ public open class HelmChart(
     props: HelmChartProps.Builder.() -> Unit,
   ) : this(scope, id, HelmChartProps(props)
   )
+
+  /**
+   *
+   */
+  public open fun atomic(): Boolean? = unwrap(this).getAtomic()
 
   /**
    *
@@ -78,6 +83,19 @@ public open class HelmChart(
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * Whether or not Helm should treat this operation as atomic;
+     *
+     * if set, upgrade process rolls back changes
+     * made in case of failed upgrade. The --wait flag will be set automatically if --atomic is
+     * used.
+     *
+     * Default: false
+     *
+     * @param atomic Whether or not Helm should treat this operation as atomic;. 
+     */
+    public fun atomic(atomic: Boolean)
+
     /**
      * The name of the chart.
      *
@@ -215,6 +233,21 @@ public open class HelmChart(
         software.amazon.awscdk.services.eks.HelmChart.Builder.create(scope, id)
 
     /**
+     * Whether or not Helm should treat this operation as atomic;
+     *
+     * if set, upgrade process rolls back changes
+     * made in case of failed upgrade. The --wait flag will be set automatically if --atomic is
+     * used.
+     *
+     * Default: false
+     *
+     * @param atomic Whether or not Helm should treat this operation as atomic;. 
+     */
+    override fun atomic(atomic: Boolean) {
+      cdkBuilder.atomic(atomic)
+    }
+
+    /**
      * The name of the chart.
      *
      * Either this or `chartAsset` must be specified.
@@ -237,7 +270,7 @@ public open class HelmChart(
      * @param chartAsset The chart in the form of an asset. 
      */
     override fun chartAsset(chartAsset: Asset) {
-      cdkBuilder.chartAsset(chartAsset.let(Asset::unwrap))
+      cdkBuilder.chartAsset(chartAsset.let(Asset.Companion::unwrap))
     }
 
     /**
@@ -248,7 +281,7 @@ public open class HelmChart(
      * @param cluster The EKS cluster to apply this configuration to. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -320,7 +353,7 @@ public open class HelmChart(
      * @param timeout Amount of time to wait for any individual Kubernetes operation. 
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**

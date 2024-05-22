@@ -27,7 +27,7 @@ public open class AlarmStatusWidget(
   cdkObject: software.amazon.awscdk.services.cloudwatch.AlarmStatusWidget,
 ) : ConcreteWidget(cdkObject) {
   public constructor(props: AlarmStatusWidgetProps) :
-      this(software.amazon.awscdk.services.cloudwatch.AlarmStatusWidget(props.let(AlarmStatusWidgetProps::unwrap))
+      this(software.amazon.awscdk.services.cloudwatch.AlarmStatusWidget(props.let(AlarmStatusWidgetProps.Companion::unwrap))
   )
 
   public constructor(props: AlarmStatusWidgetProps.Builder.() -> Unit) :
@@ -149,7 +149,7 @@ public open class AlarmStatusWidget(
      * @param alarms CloudWatch Alarms to show in widget. 
      */
     override fun alarms(alarms: List<IAlarm>) {
-      cdkBuilder.alarms(alarms.map(IAlarm::unwrap))
+      cdkBuilder.alarms(alarms.map(IAlarm.Companion::unwrap))
     }
 
     /**
@@ -178,7 +178,7 @@ public open class AlarmStatusWidget(
      * @param sortBy Specifies how to sort the alarms in the widget. 
      */
     override fun sortBy(sortBy: AlarmStatusWidgetSortBy) {
-      cdkBuilder.sortBy(sortBy.let(AlarmStatusWidgetSortBy::unwrap))
+      cdkBuilder.sortBy(sortBy.let(AlarmStatusWidgetSortBy.Companion::unwrap))
     }
 
     /**
@@ -197,7 +197,7 @@ public open class AlarmStatusWidget(
      * those alarms currently in the specified states. 
      */
     override fun states(states: List<AlarmState>) {
-      cdkBuilder.states(states.map(AlarmState::unwrap))
+      cdkBuilder.states(states.map(AlarmState.Companion::unwrap))
     }
 
     /**

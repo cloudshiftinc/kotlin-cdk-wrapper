@@ -23,7 +23,7 @@ public abstract class QualifiedFunctionBase(
    * @param options 
    */
   public override fun configureAsyncInvoke(options: EventInvokeConfigOptions) {
-    unwrap(this).configureAsyncInvoke(options.let(EventInvokeConfigOptions::unwrap))
+    unwrap(this).configureAsyncInvoke(options.let(EventInvokeConfigOptions.Companion::unwrap))
   }
 
   /**
@@ -49,7 +49,8 @@ public abstract class QualifiedFunctionBase(
    * @param _action 
    */
   public override fun considerWarningOnInvokeFunctionPermissions(scope: Construct, action: String) {
-    unwrap(this).considerWarningOnInvokeFunctionPermissions(scope.let(Construct::unwrap), action)
+    unwrap(this).considerWarningOnInvokeFunctionPermissions(scope.let(Construct.Companion::unwrap),
+        action)
   }
 
   /**

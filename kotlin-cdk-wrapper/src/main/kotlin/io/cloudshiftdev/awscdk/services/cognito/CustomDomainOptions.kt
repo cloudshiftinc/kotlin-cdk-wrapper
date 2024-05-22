@@ -70,7 +70,7 @@ public interface CustomDomainOptions {
      * @param certificate The certificate to associate with this domain. 
      */
     override fun certificate(certificate: ICertificate) {
-      cdkBuilder.certificate(certificate.let(ICertificate::unwrap))
+      cdkBuilder.certificate(certificate.let(ICertificate.Companion::unwrap))
     }
 
     /**

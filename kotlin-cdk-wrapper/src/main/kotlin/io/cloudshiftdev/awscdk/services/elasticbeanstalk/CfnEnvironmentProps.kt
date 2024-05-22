@@ -435,7 +435,7 @@ public interface CfnEnvironmentProps {
      * values.
      */
     override fun optionSettings(optionSettings: IResolvable) {
-      cdkBuilder.optionSettings(optionSettings.let(IResolvable::unwrap))
+      cdkBuilder.optionSettings(optionSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -497,7 +497,7 @@ public interface CfnEnvironmentProps {
      * @param tags Specifies the tags applied to resources in the environment.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -522,7 +522,7 @@ public interface CfnEnvironmentProps {
      * handles background-processing tasks.
      */
     override fun tier(tier: IResolvable) {
-      cdkBuilder.tier(tier.let(IResolvable::unwrap))
+      cdkBuilder.tier(tier.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -532,7 +532,7 @@ public interface CfnEnvironmentProps {
      * handles background-processing tasks.
      */
     override fun tier(tier: CfnEnvironment.TierProperty) {
-      cdkBuilder.tier(tier.let(CfnEnvironment.TierProperty::unwrap))
+      cdkBuilder.tier(tier.let(CfnEnvironment.TierProperty.Companion::unwrap))
     }
 
     /**

@@ -51,8 +51,8 @@ public open class MxRecord(
     id: String,
     props: MxRecordProps,
   ) :
-      this(software.amazon.awscdk.services.route53.MxRecord(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(MxRecordProps::unwrap))
+      this(software.amazon.awscdk.services.route53.MxRecord(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(MxRecordProps.Companion::unwrap))
   )
 
   public constructor(
@@ -266,7 +266,7 @@ public open class MxRecord(
      * user's location. 
      */
     override fun geoLocation(geoLocation: GeoLocation) {
-      cdkBuilder.geoLocation(geoLocation.let(GeoLocation::unwrap))
+      cdkBuilder.geoLocation(geoLocation.let(GeoLocation.Companion::unwrap))
     }
 
     /**
@@ -347,7 +347,7 @@ public open class MxRecord(
      * @param ttl The resource record cache time to live (TTL). 
      */
     override fun ttl(ttl: Duration) {
-      cdkBuilder.ttl(ttl.let(Duration::unwrap))
+      cdkBuilder.ttl(ttl.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -356,7 +356,7 @@ public open class MxRecord(
      * @param values The values. 
      */
     override fun values(values: List<MxRecordValue>) {
-      cdkBuilder.values(values.map(MxRecordValue::unwrap))
+      cdkBuilder.values(values.map(MxRecordValue.Companion::unwrap))
     }
 
     /**
@@ -394,7 +394,7 @@ public open class MxRecord(
      * @param zone The hosted zone in which to define the new record. 
      */
     override fun zone(zone: IHostedZone) {
-      cdkBuilder.zone(zone.let(IHostedZone::unwrap))
+      cdkBuilder.zone(zone.let(IHostedZone.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.route53.MxRecord = cdkBuilder.build()

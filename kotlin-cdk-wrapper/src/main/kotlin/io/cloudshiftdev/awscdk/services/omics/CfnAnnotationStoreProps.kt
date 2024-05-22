@@ -200,14 +200,14 @@ public interface CfnAnnotationStoreProps {
      * @param reference The genome reference for the store's annotations.
      */
     override fun reference(reference: IResolvable) {
-      cdkBuilder.reference(reference.let(IResolvable::unwrap))
+      cdkBuilder.reference(reference.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param reference The genome reference for the store's annotations.
      */
     override fun reference(reference: CfnAnnotationStore.ReferenceItemProperty) {
-      cdkBuilder.reference(reference.let(CfnAnnotationStore.ReferenceItemProperty::unwrap))
+      cdkBuilder.reference(reference.let(CfnAnnotationStore.ReferenceItemProperty.Companion::unwrap))
     }
 
     /**
@@ -222,14 +222,14 @@ public interface CfnAnnotationStoreProps {
      * @param sseConfig The store's server-side encryption (SSE) settings.
      */
     override fun sseConfig(sseConfig: IResolvable) {
-      cdkBuilder.sseConfig(sseConfig.let(IResolvable::unwrap))
+      cdkBuilder.sseConfig(sseConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param sseConfig The store's server-side encryption (SSE) settings.
      */
     override fun sseConfig(sseConfig: CfnAnnotationStore.SseConfigProperty) {
-      cdkBuilder.sseConfig(sseConfig.let(CfnAnnotationStore.SseConfigProperty::unwrap))
+      cdkBuilder.sseConfig(sseConfig.let(CfnAnnotationStore.SseConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -251,14 +251,14 @@ public interface CfnAnnotationStoreProps {
      * @param storeOptions File parsing options for the annotation store.
      */
     override fun storeOptions(storeOptions: IResolvable) {
-      cdkBuilder.storeOptions(storeOptions.let(IResolvable::unwrap))
+      cdkBuilder.storeOptions(storeOptions.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param storeOptions File parsing options for the annotation store.
      */
     override fun storeOptions(storeOptions: CfnAnnotationStore.StoreOptionsProperty) {
-      cdkBuilder.storeOptions(storeOptions.let(CfnAnnotationStore.StoreOptionsProperty::unwrap))
+      cdkBuilder.storeOptions(storeOptions.let(CfnAnnotationStore.StoreOptionsProperty.Companion::unwrap))
     }
 
     /**

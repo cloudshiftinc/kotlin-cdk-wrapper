@@ -101,7 +101,7 @@ public interface SecondaryIndexProps {
      * @param projectionType The set of attributes that are projected into the secondary index.
      */
     override fun projectionType(projectionType: ProjectionType) {
-      cdkBuilder.projectionType(projectionType.let(ProjectionType::unwrap))
+      cdkBuilder.projectionType(projectionType.let(ProjectionType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.dynamodb.SecondaryIndexProps =

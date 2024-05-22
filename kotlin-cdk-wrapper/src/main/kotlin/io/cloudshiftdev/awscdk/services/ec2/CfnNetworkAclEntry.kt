@@ -64,8 +64,8 @@ public open class CfnNetworkAclEntry(
     id: String,
     props: CfnNetworkAclEntryProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnNetworkAclEntry(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnNetworkAclEntryProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnNetworkAclEntry(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnNetworkAclEntryProps.Companion::unwrap))
   )
 
   public constructor(
@@ -113,7 +113,7 @@ public open class CfnNetworkAclEntry(
    * the subnet ( `false` ).
    */
   public open fun egress(`value`: IResolvable) {
-    unwrap(this).setEgress(`value`.let(IResolvable::unwrap))
+    unwrap(this).setEgress(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -125,14 +125,14 @@ public open class CfnNetworkAclEntry(
    * The Internet Control Message Protocol (ICMP) code and type.
    */
   public open fun icmp(`value`: IResolvable) {
-    unwrap(this).setIcmp(`value`.let(IResolvable::unwrap))
+    unwrap(this).setIcmp(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The Internet Control Message Protocol (ICMP) code and type.
    */
   public open fun icmp(`value`: IcmpProperty) {
-    unwrap(this).setIcmp(`value`.let(IcmpProperty::unwrap))
+    unwrap(this).setIcmp(`value`.let(IcmpProperty.Companion::unwrap))
   }
 
   /**
@@ -148,7 +148,7 @@ public open class CfnNetworkAclEntry(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -184,14 +184,14 @@ public open class CfnNetworkAclEntry(
    * The range of port numbers for the UDP/TCP protocol.
    */
   public open fun portRange(`value`: IResolvable) {
-    unwrap(this).setPortRange(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPortRange(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The range of port numbers for the UDP/TCP protocol.
    */
   public open fun portRange(`value`: PortRangeProperty) {
-    unwrap(this).setPortRange(`value`.let(PortRangeProperty::unwrap))
+    unwrap(this).setPortRange(`value`.let(PortRangeProperty.Companion::unwrap))
   }
 
   /**
@@ -439,7 +439,7 @@ public open class CfnNetworkAclEntry(
      * ingress traffic to the subnet ( `false` ). 
      */
     override fun egress(egress: IResolvable) {
-      cdkBuilder.egress(egress.let(IResolvable::unwrap))
+      cdkBuilder.egress(egress.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -451,7 +451,7 @@ public open class CfnNetworkAclEntry(
      * @param icmp The Internet Control Message Protocol (ICMP) code and type. 
      */
     override fun icmp(icmp: IResolvable) {
-      cdkBuilder.icmp(icmp.let(IResolvable::unwrap))
+      cdkBuilder.icmp(icmp.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -463,7 +463,7 @@ public open class CfnNetworkAclEntry(
      * @param icmp The Internet Control Message Protocol (ICMP) code and type. 
      */
     override fun icmp(icmp: IcmpProperty) {
-      cdkBuilder.icmp(icmp.let(IcmpProperty::unwrap))
+      cdkBuilder.icmp(icmp.let(IcmpProperty.Companion::unwrap))
     }
 
     /**
@@ -509,7 +509,7 @@ public open class CfnNetworkAclEntry(
      * @param portRange The range of port numbers for the UDP/TCP protocol. 
      */
     override fun portRange(portRange: IResolvable) {
-      cdkBuilder.portRange(portRange.let(IResolvable::unwrap))
+      cdkBuilder.portRange(portRange.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -521,7 +521,7 @@ public open class CfnNetworkAclEntry(
      * @param portRange The range of port numbers for the UDP/TCP protocol. 
      */
     override fun portRange(portRange: PortRangeProperty) {
-      cdkBuilder.portRange(portRange.let(PortRangeProperty::unwrap))
+      cdkBuilder.portRange(portRange.let(PortRangeProperty.Companion::unwrap))
     }
 
     /**

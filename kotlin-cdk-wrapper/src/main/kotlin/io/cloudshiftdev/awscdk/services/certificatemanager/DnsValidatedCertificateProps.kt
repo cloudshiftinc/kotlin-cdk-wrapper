@@ -220,7 +220,7 @@ public interface DnsValidatedCertificateProps : CertificateProps {
      * certificate.
      */
     override fun customResourceRole(customResourceRole: IRole) {
-      cdkBuilder.customResourceRole(customResourceRole.let(IRole::unwrap))
+      cdkBuilder.customResourceRole(customResourceRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -237,7 +237,7 @@ public interface DnsValidatedCertificateProps : CertificateProps {
      * must be authoritative for the domain name specified in the Certificate Request.
      */
     override fun hostedZone(hostedZone: IHostedZone) {
-      cdkBuilder.hostedZone(hostedZone.let(IHostedZone::unwrap))
+      cdkBuilder.hostedZone(hostedZone.let(IHostedZone.Companion::unwrap))
     }
 
     /**
@@ -245,7 +245,7 @@ public interface DnsValidatedCertificateProps : CertificateProps {
      * certificate uses to encrypt data.
      */
     override fun keyAlgorithm(keyAlgorithm: KeyAlgorithm) {
-      cdkBuilder.keyAlgorithm(keyAlgorithm.let(KeyAlgorithm::unwrap))
+      cdkBuilder.keyAlgorithm(keyAlgorithm.let(KeyAlgorithm.Companion::unwrap))
     }
 
     /**
@@ -303,7 +303,7 @@ public interface DnsValidatedCertificateProps : CertificateProps {
      * @param validation How to validate this certificate.
      */
     override fun validation(validation: CertificateValidation) {
-      cdkBuilder.validation(validation.let(CertificateValidation::unwrap))
+      cdkBuilder.validation(validation.let(CertificateValidation.Companion::unwrap))
     }
 
     public fun build():

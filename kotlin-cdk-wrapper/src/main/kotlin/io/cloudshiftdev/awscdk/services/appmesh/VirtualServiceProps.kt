@@ -85,7 +85,7 @@ public interface VirtualServiceProps {
      * as its provider. 
      */
     override fun virtualServiceProvider(virtualServiceProvider: VirtualServiceProvider) {
-      cdkBuilder.virtualServiceProvider(virtualServiceProvider.let(VirtualServiceProvider::unwrap))
+      cdkBuilder.virtualServiceProvider(virtualServiceProvider.let(VirtualServiceProvider.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appmesh.VirtualServiceProps =

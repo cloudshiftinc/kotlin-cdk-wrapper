@@ -109,14 +109,14 @@ public interface CfnPredefinedAttributeProps {
      * @param values The values of a predefined attribute. 
      */
     override fun values(values: IResolvable) {
-      cdkBuilder.values(values.let(IResolvable::unwrap))
+      cdkBuilder.values(values.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param values The values of a predefined attribute. 
      */
     override fun values(values: CfnPredefinedAttribute.ValuesProperty) {
-      cdkBuilder.values(values.let(CfnPredefinedAttribute.ValuesProperty::unwrap))
+      cdkBuilder.values(values.let(CfnPredefinedAttribute.ValuesProperty.Companion::unwrap))
     }
 
     /**

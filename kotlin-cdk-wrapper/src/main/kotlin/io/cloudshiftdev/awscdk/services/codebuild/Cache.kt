@@ -46,11 +46,11 @@ public abstract class Cache(
 
   public companion object {
     public fun bucket(bucket: IBucket): Cache =
-        software.amazon.awscdk.services.codebuild.Cache.bucket(bucket.let(IBucket::unwrap)).let(Cache::wrap)
+        software.amazon.awscdk.services.codebuild.Cache.bucket(bucket.let(IBucket.Companion::unwrap)).let(Cache::wrap)
 
     public fun bucket(bucket: IBucket, options: BucketCacheOptions): Cache =
-        software.amazon.awscdk.services.codebuild.Cache.bucket(bucket.let(IBucket::unwrap),
-        options.let(BucketCacheOptions::unwrap)).let(Cache::wrap)
+        software.amazon.awscdk.services.codebuild.Cache.bucket(bucket.let(IBucket.Companion::unwrap),
+        options.let(BucketCacheOptions.Companion::unwrap)).let(Cache::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f6eb3d0edf88b31d8b205a25aad1fee39fac0902b3ecfcfda69f004457e7f5f4")
@@ -58,7 +58,7 @@ public abstract class Cache(
         bucket(bucket, BucketCacheOptions(options))
 
     public fun local(modes: LocalCacheMode): Cache =
-        software.amazon.awscdk.services.codebuild.Cache.local(modes.let(LocalCacheMode::unwrap)).let(Cache::wrap)
+        software.amazon.awscdk.services.codebuild.Cache.local(modes.let(LocalCacheMode.Companion::unwrap)).let(Cache::wrap)
 
     public fun none(): Cache =
         software.amazon.awscdk.services.codebuild.Cache.none().let(Cache::wrap)

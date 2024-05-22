@@ -187,7 +187,7 @@ public open class FilterGroup(
 
   public companion object {
     public fun inEventOf(actions: EventAction): FilterGroup =
-        software.amazon.awscdk.services.codebuild.FilterGroup.inEventOf(actions.let(EventAction::unwrap)).let(FilterGroup::wrap)
+        software.amazon.awscdk.services.codebuild.FilterGroup.inEventOf(actions.let(EventAction.Companion::unwrap)).let(FilterGroup::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.FilterGroup): FilterGroup
         = FilterGroup(cdkObject)

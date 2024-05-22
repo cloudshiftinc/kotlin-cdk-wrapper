@@ -36,13 +36,13 @@ public open class EcrImageCode(
   cdkObject: software.amazon.awscdk.services.lambda.EcrImageCode,
 ) : Code(cdkObject) {
   public constructor(repository: CloudshiftdevAwscdkServicesEcrIRepository) :
-      this(software.amazon.awscdk.services.lambda.EcrImageCode(repository.let(CloudshiftdevAwscdkServicesEcrIRepository::unwrap))
+      this(software.amazon.awscdk.services.lambda.EcrImageCode(repository.let(CloudshiftdevAwscdkServicesEcrIRepository.Companion::unwrap))
   )
 
   public constructor(repository: CloudshiftdevAwscdkServicesEcrIRepository,
       props: EcrImageCodeProps) :
-      this(software.amazon.awscdk.services.lambda.EcrImageCode(repository.let(CloudshiftdevAwscdkServicesEcrIRepository::unwrap),
-      props.let(EcrImageCodeProps::unwrap))
+      this(software.amazon.awscdk.services.lambda.EcrImageCode(repository.let(CloudshiftdevAwscdkServicesEcrIRepository.Companion::unwrap),
+      props.let(EcrImageCodeProps.Companion::unwrap))
   )
 
   public constructor(repository: CloudshiftdevAwscdkServicesEcrIRepository,
@@ -56,7 +56,7 @@ public open class EcrImageCode(
    * @param _scope 
    */
   public override fun bind(scope: Construct): CodeConfig =
-      unwrap(this).bind(scope.let(Construct::unwrap)).let(CodeConfig::wrap)
+      unwrap(this).bind(scope.let(Construct.Companion::unwrap)).let(CodeConfig::wrap)
 
   /**
    * Determines whether this Code is inline code or not.

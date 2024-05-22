@@ -211,7 +211,7 @@ public interface CfnDataLakeProps {
      * object.
      */
     override fun encryptionConfiguration(encryptionConfiguration: IResolvable) {
-      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -220,7 +220,7 @@ public interface CfnDataLakeProps {
      */
     override
         fun encryptionConfiguration(encryptionConfiguration: CfnDataLake.EncryptionConfigurationProperty) {
-      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(CfnDataLake.EncryptionConfigurationProperty::unwrap))
+      cdkBuilder.encryptionConfiguration(encryptionConfiguration.let(CfnDataLake.EncryptionConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -243,7 +243,7 @@ public interface CfnDataLakeProps {
      * in the Amazon Security Lake User Guide.
      */
     override fun lifecycleConfiguration(lifecycleConfiguration: IResolvable) {
-      cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -256,7 +256,7 @@ public interface CfnDataLakeProps {
      */
     override
         fun lifecycleConfiguration(lifecycleConfiguration: CfnDataLake.LifecycleConfigurationProperty) {
-      cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(CfnDataLake.LifecycleConfigurationProperty::unwrap))
+      cdkBuilder.lifecycleConfiguration(lifecycleConfiguration.let(CfnDataLake.LifecycleConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -288,7 +288,7 @@ public interface CfnDataLakeProps {
      * @param replicationConfiguration Provides replication details of Amazon Security Lake object.
      */
     override fun replicationConfiguration(replicationConfiguration: IResolvable) {
-      cdkBuilder.replicationConfiguration(replicationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.replicationConfiguration(replicationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -296,7 +296,7 @@ public interface CfnDataLakeProps {
      */
     override
         fun replicationConfiguration(replicationConfiguration: CfnDataLake.ReplicationConfigurationProperty) {
-      cdkBuilder.replicationConfiguration(replicationConfiguration.let(CfnDataLake.ReplicationConfigurationProperty::unwrap))
+      cdkBuilder.replicationConfiguration(replicationConfiguration.let(CfnDataLake.ReplicationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -316,7 +316,7 @@ public interface CfnDataLakeProps {
      * but it can be an empty string.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

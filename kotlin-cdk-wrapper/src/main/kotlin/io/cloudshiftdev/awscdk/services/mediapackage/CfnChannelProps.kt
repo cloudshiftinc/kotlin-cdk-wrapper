@@ -189,14 +189,14 @@ public interface CfnChannelProps {
      * @param egressAccessLogs Configures egress access logs.
      */
     override fun egressAccessLogs(egressAccessLogs: IResolvable) {
-      cdkBuilder.egressAccessLogs(egressAccessLogs.let(IResolvable::unwrap))
+      cdkBuilder.egressAccessLogs(egressAccessLogs.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param egressAccessLogs Configures egress access logs.
      */
     override fun egressAccessLogs(egressAccessLogs: CfnChannel.LogConfigurationProperty) {
-      cdkBuilder.egressAccessLogs(egressAccessLogs.let(CfnChannel.LogConfigurationProperty::unwrap))
+      cdkBuilder.egressAccessLogs(egressAccessLogs.let(CfnChannel.LogConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -212,14 +212,14 @@ public interface CfnChannelProps {
      * @param hlsIngest The input URL where the source stream should be sent.
      */
     override fun hlsIngest(hlsIngest: IResolvable) {
-      cdkBuilder.hlsIngest(hlsIngest.let(IResolvable::unwrap))
+      cdkBuilder.hlsIngest(hlsIngest.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param hlsIngest The input URL where the source stream should be sent.
      */
     override fun hlsIngest(hlsIngest: CfnChannel.HlsIngestProperty) {
-      cdkBuilder.hlsIngest(hlsIngest.let(CfnChannel.HlsIngestProperty::unwrap))
+      cdkBuilder.hlsIngest(hlsIngest.let(CfnChannel.HlsIngestProperty.Companion::unwrap))
     }
 
     /**
@@ -241,14 +241,14 @@ public interface CfnChannelProps {
      * @param ingressAccessLogs Configures ingress access logs.
      */
     override fun ingressAccessLogs(ingressAccessLogs: IResolvable) {
-      cdkBuilder.ingressAccessLogs(ingressAccessLogs.let(IResolvable::unwrap))
+      cdkBuilder.ingressAccessLogs(ingressAccessLogs.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param ingressAccessLogs Configures ingress access logs.
      */
     override fun ingressAccessLogs(ingressAccessLogs: CfnChannel.LogConfigurationProperty) {
-      cdkBuilder.ingressAccessLogs(ingressAccessLogs.let(CfnChannel.LogConfigurationProperty::unwrap))
+      cdkBuilder.ingressAccessLogs(ingressAccessLogs.let(CfnChannel.LogConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -264,7 +264,7 @@ public interface CfnChannelProps {
      * @param tags The tags to assign to the channel.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

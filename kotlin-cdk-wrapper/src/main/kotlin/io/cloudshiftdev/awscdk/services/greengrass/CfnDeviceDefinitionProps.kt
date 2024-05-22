@@ -175,7 +175,7 @@ public interface CfnDeviceDefinitionProps {
      * resource and specify the ID of this device definition.
      */
     override fun initialVersion(initialVersion: IResolvable) {
-      cdkBuilder.initialVersion(initialVersion.let(IResolvable::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -192,7 +192,7 @@ public interface CfnDeviceDefinitionProps {
      */
     override
         fun initialVersion(initialVersion: CfnDeviceDefinition.DeviceDefinitionVersionProperty) {
-      cdkBuilder.initialVersion(initialVersion.let(CfnDeviceDefinition.DeviceDefinitionVersionProperty::unwrap))
+      cdkBuilder.initialVersion(initialVersion.let(CfnDeviceDefinition.DeviceDefinitionVersionProperty.Companion::unwrap))
     }
 
     /**

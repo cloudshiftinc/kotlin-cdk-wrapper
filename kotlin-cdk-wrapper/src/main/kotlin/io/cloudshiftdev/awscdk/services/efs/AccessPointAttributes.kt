@@ -88,7 +88,7 @@ public interface AccessPointAttributes {
      * @param fileSystem The EFS file system.
      */
     override fun fileSystem(fileSystem: IFileSystem) {
-      cdkBuilder.fileSystem(fileSystem.let(IFileSystem::unwrap))
+      cdkBuilder.fileSystem(fileSystem.let(IFileSystem.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.efs.AccessPointAttributes =

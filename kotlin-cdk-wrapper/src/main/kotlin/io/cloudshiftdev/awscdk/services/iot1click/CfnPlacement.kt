@@ -48,8 +48,8 @@ public open class CfnPlacement(
     id: String,
     props: CfnPlacementProps,
   ) :
-      this(software.amazon.awscdk.services.iot1click.CfnPlacement(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPlacementProps::unwrap))
+      this(software.amazon.awscdk.services.iot1click.CfnPlacement(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPlacementProps.Companion::unwrap))
   )
 
   public constructor(
@@ -106,7 +106,7 @@ public open class CfnPlacement(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

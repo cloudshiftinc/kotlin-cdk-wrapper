@@ -137,8 +137,8 @@ public open class CfnDataset(
     id: String,
     props: CfnDatasetProps,
   ) :
-      this(software.amazon.awscdk.services.iotanalytics.CfnDataset(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDatasetProps::unwrap))
+      this(software.amazon.awscdk.services.iotanalytics.CfnDataset(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDatasetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -157,7 +157,7 @@ public open class CfnDataset(
    * The `DatasetAction` objects that automatically create the dataset contents.
    */
   public open fun actions(`value`: IResolvable) {
-    unwrap(this).setActions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setActions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -186,7 +186,7 @@ public open class CfnDataset(
    * When dataset contents are created they are delivered to destinations specified here.
    */
   public open fun contentDeliveryRules(`value`: IResolvable) {
-    unwrap(this).setContentDeliveryRules(`value`.let(IResolvable::unwrap))
+    unwrap(this).setContentDeliveryRules(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -220,7 +220,7 @@ public open class CfnDataset(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -232,7 +232,7 @@ public open class CfnDataset(
    * A list of data rules that send notifications to CloudWatch, when data arrives late.
    */
   public open fun lateDataRules(`value`: IResolvable) {
-    unwrap(this).setLateDataRules(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLateDataRules(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -256,14 +256,14 @@ public open class CfnDataset(
    * Optional.
    */
   public open fun retentionPeriod(`value`: IResolvable) {
-    unwrap(this).setRetentionPeriod(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRetentionPeriod(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Optional.
    */
   public open fun retentionPeriod(`value`: RetentionPeriodProperty) {
-    unwrap(this).setRetentionPeriod(`value`.let(RetentionPeriodProperty::unwrap))
+    unwrap(this).setRetentionPeriod(`value`.let(RetentionPeriodProperty.Companion::unwrap))
   }
 
   /**
@@ -289,7 +289,7 @@ public open class CfnDataset(
    * Metadata which can be used to manage the data set.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -306,7 +306,7 @@ public open class CfnDataset(
    * The `DatasetTrigger` objects that specify when the dataset is automatically updated.
    */
   public open fun triggers(`value`: IResolvable) {
-    unwrap(this).setTriggers(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTriggers(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -330,14 +330,14 @@ public open class CfnDataset(
    * Optional.
    */
   public open fun versioningConfiguration(`value`: IResolvable) {
-    unwrap(this).setVersioningConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVersioningConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Optional.
    */
   public open fun versioningConfiguration(`value`: VersioningConfigurationProperty) {
-    unwrap(this).setVersioningConfiguration(`value`.let(VersioningConfigurationProperty::unwrap))
+    unwrap(this).setVersioningConfiguration(`value`.let(VersioningConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -598,7 +598,7 @@ public open class CfnDataset(
      * @param actions The `DatasetAction` objects that automatically create the dataset contents. 
      */
     override fun actions(actions: IResolvable) {
-      cdkBuilder.actions(actions.let(IResolvable::unwrap))
+      cdkBuilder.actions(actions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -627,7 +627,7 @@ public open class CfnDataset(
      * destinations specified here. 
      */
     override fun contentDeliveryRules(contentDeliveryRules: IResolvable) {
-      cdkBuilder.contentDeliveryRules(contentDeliveryRules.let(IResolvable::unwrap))
+      cdkBuilder.contentDeliveryRules(contentDeliveryRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -673,7 +673,7 @@ public open class CfnDataset(
      * arrives late. 
      */
     override fun lateDataRules(lateDataRules: IResolvable) {
-      cdkBuilder.lateDataRules(lateDataRules.let(IResolvable::unwrap))
+      cdkBuilder.lateDataRules(lateDataRules.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -714,7 +714,7 @@ public open class CfnDataset(
      * @param retentionPeriod Optional. 
      */
     override fun retentionPeriod(retentionPeriod: IResolvable) {
-      cdkBuilder.retentionPeriod(retentionPeriod.let(IResolvable::unwrap))
+      cdkBuilder.retentionPeriod(retentionPeriod.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -726,7 +726,7 @@ public open class CfnDataset(
      * @param retentionPeriod Optional. 
      */
     override fun retentionPeriod(retentionPeriod: RetentionPeriodProperty) {
-      cdkBuilder.retentionPeriod(retentionPeriod.let(RetentionPeriodProperty::unwrap))
+      cdkBuilder.retentionPeriod(retentionPeriod.let(RetentionPeriodProperty.Companion::unwrap))
     }
 
     /**
@@ -753,7 +753,7 @@ public open class CfnDataset(
      * @param tags Metadata which can be used to manage the data set. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -776,7 +776,7 @@ public open class CfnDataset(
      * updated. 
      */
     override fun triggers(triggers: IResolvable) {
-      cdkBuilder.triggers(triggers.let(IResolvable::unwrap))
+      cdkBuilder.triggers(triggers.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -813,7 +813,7 @@ public open class CfnDataset(
      * @param versioningConfiguration Optional. 
      */
     override fun versioningConfiguration(versioningConfiguration: IResolvable) {
-      cdkBuilder.versioningConfiguration(versioningConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.versioningConfiguration(versioningConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -830,7 +830,7 @@ public open class CfnDataset(
      * @param versioningConfiguration Optional. 
      */
     override fun versioningConfiguration(versioningConfiguration: VersioningConfigurationProperty) {
-      cdkBuilder.versioningConfiguration(versioningConfiguration.let(VersioningConfigurationProperty::unwrap))
+      cdkBuilder.versioningConfiguration(versioningConfiguration.let(VersioningConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1024,7 +1024,7 @@ public open class CfnDataset(
        * The application must be in a Docker container along with any needed support libraries.
        */
       override fun containerAction(containerAction: IResolvable) {
-        cdkBuilder.containerAction(containerAction.let(IResolvable::unwrap))
+        cdkBuilder.containerAction(containerAction.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1033,7 +1033,7 @@ public open class CfnDataset(
        * The application must be in a Docker container along with any needed support libraries.
        */
       override fun containerAction(containerAction: ContainerActionProperty) {
-        cdkBuilder.containerAction(containerAction.let(ContainerActionProperty::unwrap))
+        cdkBuilder.containerAction(containerAction.let(ContainerActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1051,7 +1051,7 @@ public open class CfnDataset(
        * automatically create data set contents.
        */
       override fun queryAction(queryAction: IResolvable) {
-        cdkBuilder.queryAction(queryAction.let(IResolvable::unwrap))
+        cdkBuilder.queryAction(queryAction.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1059,7 +1059,7 @@ public open class CfnDataset(
        * automatically create data set contents.
        */
       override fun queryAction(queryAction: QueryActionProperty) {
-        cdkBuilder.queryAction(queryAction.let(QueryActionProperty::unwrap))
+        cdkBuilder.queryAction(queryAction.let(QueryActionProperty.Companion::unwrap))
       }
 
       /**
@@ -1291,7 +1291,7 @@ public open class CfnDataset(
        * "containerAction". 
        */
       override fun resourceConfiguration(resourceConfiguration: IResolvable) {
-        cdkBuilder.resourceConfiguration(resourceConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.resourceConfiguration(resourceConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1299,7 +1299,7 @@ public open class CfnDataset(
        * "containerAction". 
        */
       override fun resourceConfiguration(resourceConfiguration: ResourceConfigurationProperty) {
-        cdkBuilder.resourceConfiguration(resourceConfiguration.let(ResourceConfigurationProperty::unwrap))
+        cdkBuilder.resourceConfiguration(resourceConfiguration.let(ResourceConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1319,7 +1319,7 @@ public open class CfnDataset(
        * "datasetContentVersionValue", or "outputFileUriValue".
        */
       override fun variables(variables: IResolvable) {
-        cdkBuilder.variables(variables.let(IResolvable::unwrap))
+        cdkBuilder.variables(variables.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1514,7 +1514,7 @@ public open class CfnDataset(
        */
       override
           fun iotEventsDestinationConfiguration(iotEventsDestinationConfiguration: IResolvable) {
-        cdkBuilder.iotEventsDestinationConfiguration(iotEventsDestinationConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.iotEventsDestinationConfiguration(iotEventsDestinationConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1523,7 +1523,7 @@ public open class CfnDataset(
        */
       override
           fun iotEventsDestinationConfiguration(iotEventsDestinationConfiguration: IotEventsDestinationConfigurationProperty) {
-        cdkBuilder.iotEventsDestinationConfiguration(iotEventsDestinationConfiguration.let(IotEventsDestinationConfigurationProperty::unwrap))
+        cdkBuilder.iotEventsDestinationConfiguration(iotEventsDestinationConfiguration.let(IotEventsDestinationConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1542,7 +1542,7 @@ public open class CfnDataset(
        * contents to Amazon S3.
        */
       override fun s3DestinationConfiguration(s3DestinationConfiguration: IResolvable) {
-        cdkBuilder.s3DestinationConfiguration(s3DestinationConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.s3DestinationConfiguration(s3DestinationConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1551,7 +1551,7 @@ public open class CfnDataset(
        */
       override
           fun s3DestinationConfiguration(s3DestinationConfiguration: S3DestinationConfigurationProperty) {
-        cdkBuilder.s3DestinationConfiguration(s3DestinationConfiguration.let(S3DestinationConfigurationProperty::unwrap))
+        cdkBuilder.s3DestinationConfiguration(s3DestinationConfiguration.let(S3DestinationConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -1696,14 +1696,14 @@ public open class CfnDataset(
        * @param destination The destination to which dataset contents are delivered. 
        */
       override fun destination(destination: IResolvable) {
-        cdkBuilder.destination(destination.let(IResolvable::unwrap))
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param destination The destination to which dataset contents are delivered. 
        */
       override fun destination(destination: DatasetContentDeliveryRuleDestinationProperty) {
-        cdkBuilder.destination(destination.let(DatasetContentDeliveryRuleDestinationProperty::unwrap))
+        cdkBuilder.destination(destination.let(DatasetContentDeliveryRuleDestinationProperty.Companion::unwrap))
       }
 
       /**
@@ -2188,7 +2188,7 @@ public open class CfnDataset(
        * the action.
        */
       override fun deltaTime(deltaTime: IResolvable) {
-        cdkBuilder.deltaTime(deltaTime.let(IResolvable::unwrap))
+        cdkBuilder.deltaTime(deltaTime.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2196,7 +2196,7 @@ public open class CfnDataset(
        * the action.
        */
       override fun deltaTime(deltaTime: DeltaTimeProperty) {
-        cdkBuilder.deltaTime(deltaTime.let(DeltaTimeProperty::unwrap))
+        cdkBuilder.deltaTime(deltaTime.let(DeltaTimeProperty.Companion::unwrap))
       }
 
       /**
@@ -2559,7 +2559,7 @@ public open class CfnDataset(
        */
       override
           fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: IResolvable) {
-        cdkBuilder.deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2568,7 +2568,7 @@ public open class CfnDataset(
        */
       override
           fun deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration: DeltaTimeSessionWindowConfigurationProperty) {
-        cdkBuilder.deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration.let(DeltaTimeSessionWindowConfigurationProperty::unwrap))
+        cdkBuilder.deltaTimeSessionWindowConfiguration(deltaTimeSessionWindowConfiguration.let(DeltaTimeSessionWindowConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2693,14 +2693,14 @@ public open class CfnDataset(
        * @param ruleConfiguration The information needed to configure the late data rule. 
        */
       override fun ruleConfiguration(ruleConfiguration: IResolvable) {
-        cdkBuilder.ruleConfiguration(ruleConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.ruleConfiguration(ruleConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param ruleConfiguration The information needed to configure the late data rule. 
        */
       override fun ruleConfiguration(ruleConfiguration: LateDataRuleConfigurationProperty) {
-        cdkBuilder.ruleConfiguration(ruleConfiguration.let(LateDataRuleConfigurationProperty::unwrap))
+        cdkBuilder.ruleConfiguration(ruleConfiguration.let(LateDataRuleConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -2922,7 +2922,7 @@ public open class CfnDataset(
        * @param filters Pre-filters applied to message data.
        */
       override fun filters(filters: IResolvable) {
-        cdkBuilder.filters(filters.let(IResolvable::unwrap))
+        cdkBuilder.filters(filters.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3189,7 +3189,7 @@ public open class CfnDataset(
        * @param unlimited If true, message data is kept indefinitely.
        */
       override fun unlimited(unlimited: IResolvable) {
-        cdkBuilder.unlimited(unlimited.let(IResolvable::unwrap))
+        cdkBuilder.unlimited(unlimited.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -3384,7 +3384,7 @@ public open class CfnDataset(
        * managed extract, transform and load (ETL) service.
        */
       override fun glueConfiguration(glueConfiguration: IResolvable) {
-        cdkBuilder.glueConfiguration(glueConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.glueConfiguration(glueConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3392,7 +3392,7 @@ public open class CfnDataset(
        * managed extract, transform and load (ETL) service.
        */
       override fun glueConfiguration(glueConfiguration: GlueConfigurationProperty) {
-        cdkBuilder.glueConfiguration(glueConfiguration.let(GlueConfigurationProperty::unwrap))
+        cdkBuilder.glueConfiguration(glueConfiguration.let(GlueConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -3695,14 +3695,14 @@ public open class CfnDataset(
        * @param schedule The "Schedule" when the trigger is initiated.
        */
       override fun schedule(schedule: IResolvable) {
-        cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
+        cdkBuilder.schedule(schedule.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param schedule The "Schedule" when the trigger is initiated.
        */
       override fun schedule(schedule: ScheduleProperty) {
-        cdkBuilder.schedule(schedule.let(ScheduleProperty::unwrap))
+        cdkBuilder.schedule(schedule.let(ScheduleProperty.Companion::unwrap))
       }
 
       /**
@@ -3718,7 +3718,7 @@ public open class CfnDataset(
        * the new data set content generation.
        */
       override fun triggeringDataset(triggeringDataset: IResolvable) {
-        cdkBuilder.triggeringDataset(triggeringDataset.let(IResolvable::unwrap))
+        cdkBuilder.triggeringDataset(triggeringDataset.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3726,7 +3726,7 @@ public open class CfnDataset(
        * the new data set content generation.
        */
       override fun triggeringDataset(triggeringDataset: TriggeringDatasetProperty) {
-        cdkBuilder.triggeringDataset(triggeringDataset.let(TriggeringDatasetProperty::unwrap))
+        cdkBuilder.triggeringDataset(triggeringDataset.let(TriggeringDatasetProperty.Companion::unwrap))
       }
 
       /**
@@ -4005,7 +4005,7 @@ public open class CfnDataset(
        * dataset content version.
        */
       override fun datasetContentVersionValue(datasetContentVersionValue: IResolvable) {
-        cdkBuilder.datasetContentVersionValue(datasetContentVersionValue.let(IResolvable::unwrap))
+        cdkBuilder.datasetContentVersionValue(datasetContentVersionValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4014,7 +4014,7 @@ public open class CfnDataset(
        */
       override
           fun datasetContentVersionValue(datasetContentVersionValue: DatasetContentVersionValueProperty) {
-        cdkBuilder.datasetContentVersionValue(datasetContentVersionValue.let(DatasetContentVersionValueProperty::unwrap))
+        cdkBuilder.datasetContentVersionValue(datasetContentVersionValue.let(DatasetContentVersionValueProperty.Companion::unwrap))
       }
 
       /**
@@ -4040,7 +4040,7 @@ public open class CfnDataset(
        * file URI.
        */
       override fun outputFileUriValue(outputFileUriValue: IResolvable) {
-        cdkBuilder.outputFileUriValue(outputFileUriValue.let(IResolvable::unwrap))
+        cdkBuilder.outputFileUriValue(outputFileUriValue.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4048,7 +4048,7 @@ public open class CfnDataset(
        * file URI.
        */
       override fun outputFileUriValue(outputFileUriValue: OutputFileUriValueProperty) {
-        cdkBuilder.outputFileUriValue(outputFileUriValue.let(OutputFileUriValueProperty::unwrap))
+        cdkBuilder.outputFileUriValue(outputFileUriValue.let(OutputFileUriValueProperty.Companion::unwrap))
       }
 
       /**
@@ -4218,7 +4218,7 @@ public open class CfnDataset(
        * @param unlimited If true, unlimited versions of dataset contents are kept.
        */
       override fun unlimited(unlimited: IResolvable) {
-        cdkBuilder.unlimited(unlimited.let(IResolvable::unwrap))
+        cdkBuilder.unlimited(unlimited.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

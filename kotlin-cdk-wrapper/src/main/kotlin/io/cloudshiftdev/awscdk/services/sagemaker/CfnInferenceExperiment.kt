@@ -100,8 +100,8 @@ public open class CfnInferenceExperiment(
     id: String,
     props: CfnInferenceExperimentProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnInferenceExperimentProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnInferenceExperiment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnInferenceExperimentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -177,14 +177,14 @@ public open class CfnInferenceExperiment(
    * The Amazon S3 location and configuration for storing inference request and response data.
    */
   public open fun dataStorageConfig(`value`: IResolvable) {
-    unwrap(this).setDataStorageConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDataStorageConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The Amazon S3 location and configuration for storing inference request and response data.
    */
   public open fun dataStorageConfig(`value`: DataStorageConfigProperty) {
-    unwrap(this).setDataStorageConfig(`value`.let(DataStorageConfigProperty::unwrap))
+    unwrap(this).setDataStorageConfig(`value`.let(DataStorageConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -241,7 +241,7 @@ public open class CfnInferenceExperiment(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -267,7 +267,7 @@ public open class CfnInferenceExperiment(
    * An array of `ModelVariantConfigSummary` objects.
    */
   public open fun modelVariants(`value`: IResolvable) {
-    unwrap(this).setModelVariants(`value`.let(IResolvable::unwrap))
+    unwrap(this).setModelVariants(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -317,14 +317,14 @@ public open class CfnInferenceExperiment(
    * The duration for which the inference experiment ran or will run.
    */
   public open fun schedule(`value`: IResolvable) {
-    unwrap(this).setSchedule(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSchedule(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The duration for which the inference experiment ran or will run.
    */
   public open fun schedule(`value`: InferenceExperimentScheduleProperty) {
-    unwrap(this).setSchedule(`value`.let(InferenceExperimentScheduleProperty::unwrap))
+    unwrap(this).setSchedule(`value`.let(InferenceExperimentScheduleProperty.Companion::unwrap))
   }
 
   /**
@@ -348,7 +348,7 @@ public open class CfnInferenceExperiment(
    * a percentage of the inference requests.
    */
   public open fun shadowModeConfig(`value`: IResolvable) {
-    unwrap(this).setShadowModeConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setShadowModeConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -357,7 +357,7 @@ public open class CfnInferenceExperiment(
    * a percentage of the inference requests.
    */
   public open fun shadowModeConfig(`value`: ShadowModeConfigProperty) {
-    unwrap(this).setShadowModeConfig(`value`.let(ShadowModeConfigProperty::unwrap))
+    unwrap(this).setShadowModeConfig(`value`.let(ShadowModeConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -397,7 +397,7 @@ public open class CfnInferenceExperiment(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -679,7 +679,7 @@ public open class CfnInferenceExperiment(
      * request and response data. 
      */
     override fun dataStorageConfig(dataStorageConfig: IResolvable) {
-      cdkBuilder.dataStorageConfig(dataStorageConfig.let(IResolvable::unwrap))
+      cdkBuilder.dataStorageConfig(dataStorageConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -690,7 +690,7 @@ public open class CfnInferenceExperiment(
      * request and response data. 
      */
     override fun dataStorageConfig(dataStorageConfig: DataStorageConfigProperty) {
-      cdkBuilder.dataStorageConfig(dataStorageConfig.let(DataStorageConfigProperty::unwrap))
+      cdkBuilder.dataStorageConfig(dataStorageConfig.let(DataStorageConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -762,7 +762,7 @@ public open class CfnInferenceExperiment(
      * @param modelVariants An array of `ModelVariantConfigSummary` objects. 
      */
     override fun modelVariants(modelVariants: IResolvable) {
-      cdkBuilder.modelVariants(modelVariants.let(IResolvable::unwrap))
+      cdkBuilder.modelVariants(modelVariants.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -824,7 +824,7 @@ public open class CfnInferenceExperiment(
      * @param schedule The duration for which the inference experiment ran or will run. 
      */
     override fun schedule(schedule: IResolvable) {
-      cdkBuilder.schedule(schedule.let(IResolvable::unwrap))
+      cdkBuilder.schedule(schedule.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -836,7 +836,7 @@ public open class CfnInferenceExperiment(
      * @param schedule The duration for which the inference experiment ran or will run. 
      */
     override fun schedule(schedule: InferenceExperimentScheduleProperty) {
-      cdkBuilder.schedule(schedule.let(InferenceExperimentScheduleProperty::unwrap))
+      cdkBuilder.schedule(schedule.let(InferenceExperimentScheduleProperty.Companion::unwrap))
     }
 
     /**
@@ -866,7 +866,7 @@ public open class CfnInferenceExperiment(
      * which Amazon SageMaker replicates a percentage of the inference requests. 
      */
     override fun shadowModeConfig(shadowModeConfig: IResolvable) {
-      cdkBuilder.shadowModeConfig(shadowModeConfig.let(IResolvable::unwrap))
+      cdkBuilder.shadowModeConfig(shadowModeConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -883,7 +883,7 @@ public open class CfnInferenceExperiment(
      * which Amazon SageMaker replicates a percentage of the inference requests. 
      */
     override fun shadowModeConfig(shadowModeConfig: ShadowModeConfigProperty) {
-      cdkBuilder.shadowModeConfig(shadowModeConfig.let(ShadowModeConfigProperty::unwrap))
+      cdkBuilder.shadowModeConfig(shadowModeConfig.let(ShadowModeConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -925,7 +925,7 @@ public open class CfnInferenceExperiment(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1227,7 +1227,7 @@ public open class CfnInferenceExperiment(
        * data.
        */
       override fun contentType(contentType: IResolvable) {
-        cdkBuilder.contentType(contentType.let(IResolvable::unwrap))
+        cdkBuilder.contentType(contentType.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1236,7 +1236,7 @@ public open class CfnInferenceExperiment(
        * data.
        */
       override fun contentType(contentType: CaptureContentTypeHeaderProperty) {
-        cdkBuilder.contentType(contentType.let(CaptureContentTypeHeaderProperty::unwrap))
+        cdkBuilder.contentType(contentType.let(CaptureContentTypeHeaderProperty.Companion::unwrap))
       }
 
       /**
@@ -1673,7 +1673,7 @@ public open class CfnInferenceExperiment(
        * real-time inference. 
        */
       override fun realTimeInferenceConfig(realTimeInferenceConfig: IResolvable) {
-        cdkBuilder.realTimeInferenceConfig(realTimeInferenceConfig.let(IResolvable::unwrap))
+        cdkBuilder.realTimeInferenceConfig(realTimeInferenceConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1682,7 +1682,7 @@ public open class CfnInferenceExperiment(
        */
       override
           fun realTimeInferenceConfig(realTimeInferenceConfig: RealTimeInferenceConfigProperty) {
-        cdkBuilder.realTimeInferenceConfig(realTimeInferenceConfig.let(RealTimeInferenceConfigProperty::unwrap))
+        cdkBuilder.realTimeInferenceConfig(realTimeInferenceConfig.let(RealTimeInferenceConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -1833,7 +1833,7 @@ public open class CfnInferenceExperiment(
        * deployed to. 
        */
       override fun infrastructureConfig(infrastructureConfig: IResolvable) {
-        cdkBuilder.infrastructureConfig(infrastructureConfig.let(IResolvable::unwrap))
+        cdkBuilder.infrastructureConfig(infrastructureConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1841,7 +1841,7 @@ public open class CfnInferenceExperiment(
        * deployed to. 
        */
       override fun infrastructureConfig(infrastructureConfig: ModelInfrastructureConfigProperty) {
-        cdkBuilder.infrastructureConfig(infrastructureConfig.let(ModelInfrastructureConfigProperty::unwrap))
+        cdkBuilder.infrastructureConfig(infrastructureConfig.let(ModelInfrastructureConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -2103,7 +2103,7 @@ public open class CfnInferenceExperiment(
        * @param shadowModelVariants List of shadow variant configurations. 
        */
       override fun shadowModelVariants(shadowModelVariants: IResolvable) {
-        cdkBuilder.shadowModelVariants(shadowModelVariants.let(IResolvable::unwrap))
+        cdkBuilder.shadowModelVariants(shadowModelVariants.let(IResolvable.Companion::unwrap))
       }
 
       /**

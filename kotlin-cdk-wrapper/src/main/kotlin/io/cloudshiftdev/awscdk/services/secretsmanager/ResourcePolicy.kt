@@ -44,8 +44,8 @@ public open class ResourcePolicy(
     id: String,
     props: ResourcePolicyProps,
   ) :
-      this(software.amazon.awscdk.services.secretsmanager.ResourcePolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(ResourcePolicyProps::unwrap))
+      this(software.amazon.awscdk.services.secretsmanager.ResourcePolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(ResourcePolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -86,7 +86,7 @@ public open class ResourcePolicy(
      * @param secret The secret to attach a resource-based permissions policy. 
      */
     override fun secret(secret: ISecret) {
-      cdkBuilder.secret(secret.let(ISecret::unwrap))
+      cdkBuilder.secret(secret.let(ISecret.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.secretsmanager.ResourcePolicy =

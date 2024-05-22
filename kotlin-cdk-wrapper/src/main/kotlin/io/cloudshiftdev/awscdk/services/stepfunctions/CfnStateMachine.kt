@@ -79,8 +79,8 @@ public open class CfnStateMachine(
     id: String,
     props: CfnStateMachineProps,
   ) :
-      this(software.amazon.awscdk.services.stepfunctions.CfnStateMachine(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnStateMachineProps::unwrap))
+      this(software.amazon.awscdk.services.stepfunctions.CfnStateMachine(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnStateMachineProps.Companion::unwrap))
   )
 
   public constructor(
@@ -142,14 +142,14 @@ public open class CfnStateMachine(
    * The name of the S3 bucket where the state machine definition is stored.
    */
   public open fun definitionS3Location(`value`: IResolvable) {
-    unwrap(this).setDefinitionS3Location(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefinitionS3Location(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The name of the S3 bucket where the state machine definition is stored.
    */
   public open fun definitionS3Location(`value`: S3LocationProperty) {
-    unwrap(this).setDefinitionS3Location(`value`.let(S3LocationProperty::unwrap))
+    unwrap(this).setDefinitionS3Location(`value`.let(S3LocationProperty.Companion::unwrap))
   }
 
   /**
@@ -183,7 +183,7 @@ public open class CfnStateMachine(
    * machine definition.
    */
   public open fun definitionSubstitutions(`value`: IResolvable) {
-    unwrap(this).setDefinitionSubstitutions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefinitionSubstitutions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -200,7 +200,7 @@ public open class CfnStateMachine(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -212,14 +212,14 @@ public open class CfnStateMachine(
    * Defines what execution history events are logged and where they are logged.
    */
   public open fun loggingConfiguration(`value`: IResolvable) {
-    unwrap(this).setLoggingConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLoggingConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Defines what execution history events are logged and where they are logged.
    */
   public open fun loggingConfiguration(`value`: LoggingConfigurationProperty) {
-    unwrap(this).setLoggingConfiguration(`value`.let(LoggingConfigurationProperty::unwrap))
+    unwrap(this).setLoggingConfiguration(`value`.let(LoggingConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -281,7 +281,7 @@ public open class CfnStateMachine(
    * The list of tags to add to a resource.
    */
   public open fun tagsRaw(`value`: List<TagsEntryProperty>) {
-    unwrap(this).setTagsRaw(`value`.map(TagsEntryProperty::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(TagsEntryProperty.Companion::unwrap))
   }
 
   /**
@@ -298,14 +298,14 @@ public open class CfnStateMachine(
    * Selects whether or not the state machine's AWS X-Ray tracing is enabled.
    */
   public open fun tracingConfiguration(`value`: IResolvable) {
-    unwrap(this).setTracingConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTracingConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Selects whether or not the state machine's AWS X-Ray tracing is enabled.
    */
   public open fun tracingConfiguration(`value`: TracingConfigurationProperty) {
-    unwrap(this).setTracingConfiguration(`value`.let(TracingConfigurationProperty::unwrap))
+    unwrap(this).setTracingConfiguration(`value`.let(TracingConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -589,7 +589,7 @@ public open class CfnStateMachine(
      * stored. 
      */
     override fun definitionS3Location(definitionS3Location: IResolvable) {
-      cdkBuilder.definitionS3Location(definitionS3Location.let(IResolvable::unwrap))
+      cdkBuilder.definitionS3Location(definitionS3Location.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -602,7 +602,7 @@ public open class CfnStateMachine(
      * stored. 
      */
     override fun definitionS3Location(definitionS3Location: S3LocationProperty) {
-      cdkBuilder.definitionS3Location(definitionS3Location.let(S3LocationProperty::unwrap))
+      cdkBuilder.definitionS3Location(definitionS3Location.let(S3LocationProperty.Companion::unwrap))
     }
 
     /**
@@ -648,7 +648,7 @@ public open class CfnStateMachine(
      * placeholder variables in the state machine definition. 
      */
     override fun definitionSubstitutions(definitionSubstitutions: IResolvable) {
-      cdkBuilder.definitionSubstitutions(definitionSubstitutions.let(IResolvable::unwrap))
+      cdkBuilder.definitionSubstitutions(definitionSubstitutions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -683,7 +683,7 @@ public open class CfnStateMachine(
      * are logged. 
      */
     override fun loggingConfiguration(loggingConfiguration: IResolvable) {
-      cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.loggingConfiguration(loggingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -700,7 +700,7 @@ public open class CfnStateMachine(
      * are logged. 
      */
     override fun loggingConfiguration(loggingConfiguration: LoggingConfigurationProperty) {
-      cdkBuilder.loggingConfiguration(loggingConfiguration.let(LoggingConfigurationProperty::unwrap))
+      cdkBuilder.loggingConfiguration(loggingConfiguration.let(LoggingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -782,7 +782,7 @@ public open class CfnStateMachine(
      * @param tags The list of tags to add to a resource. 
      */
     override fun tags(tags: List<TagsEntryProperty>) {
-      cdkBuilder.tags(tags.map(TagsEntryProperty::unwrap))
+      cdkBuilder.tags(tags.map(TagsEntryProperty.Companion::unwrap))
     }
 
     /**
@@ -803,7 +803,7 @@ public open class CfnStateMachine(
      * enabled. 
      */
     override fun tracingConfiguration(tracingConfiguration: IResolvable) {
-      cdkBuilder.tracingConfiguration(tracingConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.tracingConfiguration(tracingConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -814,7 +814,7 @@ public open class CfnStateMachine(
      * enabled. 
      */
     override fun tracingConfiguration(tracingConfiguration: TracingConfigurationProperty) {
-      cdkBuilder.tracingConfiguration(tracingConfiguration.let(TracingConfigurationProperty::unwrap))
+      cdkBuilder.tracingConfiguration(tracingConfiguration.let(TracingConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1033,7 +1033,7 @@ public open class CfnStateMachine(
        * in the AWS CloudFormation User Guide.
        */
       override fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: IResolvable) {
-        cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1043,7 +1043,7 @@ public open class CfnStateMachine(
        * in the AWS CloudFormation User Guide.
        */
       override fun cloudWatchLogsLogGroup(cloudWatchLogsLogGroup: CloudWatchLogsLogGroupProperty) {
-        cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup.let(CloudWatchLogsLogGroupProperty::unwrap))
+        cdkBuilder.cloudWatchLogsLogGroup(cloudWatchLogsLogGroup.let(CloudWatchLogsLogGroupProperty.Companion::unwrap))
       }
 
       /**
@@ -1210,7 +1210,7 @@ public open class CfnStateMachine(
        * Limited to size 1. Required, if your log level is not set to `OFF` .
        */
       override fun destinations(destinations: IResolvable) {
-        cdkBuilder.destinations(destinations.let(IResolvable::unwrap))
+        cdkBuilder.destinations(destinations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1243,7 +1243,7 @@ public open class CfnStateMachine(
        * When set to `false` , data is excluded.
        */
       override fun includeExecutionData(includeExecutionData: IResolvable) {
-        cdkBuilder.includeExecutionData(includeExecutionData.let(IResolvable::unwrap))
+        cdkBuilder.includeExecutionData(includeExecutionData.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1615,7 +1615,7 @@ public open class CfnStateMachine(
        * @param enabled When set to `true` , X-Ray tracing is enabled.
        */
       override fun enabled(enabled: IResolvable) {
-        cdkBuilder.enabled(enabled.let(IResolvable::unwrap))
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():

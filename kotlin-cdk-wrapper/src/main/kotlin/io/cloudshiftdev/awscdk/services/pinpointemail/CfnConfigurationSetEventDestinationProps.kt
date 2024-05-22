@@ -128,7 +128,7 @@ public interface CfnConfigurationSetEventDestinationProps {
      * @param eventDestination An object that defines the event destination.
      */
     override fun eventDestination(eventDestination: IResolvable) {
-      cdkBuilder.eventDestination(eventDestination.let(IResolvable::unwrap))
+      cdkBuilder.eventDestination(eventDestination.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -136,7 +136,7 @@ public interface CfnConfigurationSetEventDestinationProps {
      */
     override
         fun eventDestination(eventDestination: CfnConfigurationSetEventDestination.EventDestinationProperty) {
-      cdkBuilder.eventDestination(eventDestination.let(CfnConfigurationSetEventDestination.EventDestinationProperty::unwrap))
+      cdkBuilder.eventDestination(eventDestination.let(CfnConfigurationSetEventDestination.EventDestinationProperty.Companion::unwrap))
     }
 
     /**

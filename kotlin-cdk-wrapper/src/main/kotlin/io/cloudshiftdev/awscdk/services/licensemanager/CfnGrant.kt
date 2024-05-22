@@ -42,7 +42,7 @@ public open class CfnGrant(
   cdkObject: software.amazon.awscdk.services.licensemanager.CfnGrant,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.licensemanager.CfnGrant(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.licensemanager.CfnGrant(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -51,8 +51,8 @@ public open class CfnGrant(
     id: String,
     props: CfnGrantProps,
   ) :
-      this(software.amazon.awscdk.services.licensemanager.CfnGrant(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnGrantProps::unwrap))
+      this(software.amazon.awscdk.services.licensemanager.CfnGrant(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnGrantProps.Companion::unwrap))
   )
 
   public constructor(
@@ -121,7 +121,7 @@ public open class CfnGrant(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

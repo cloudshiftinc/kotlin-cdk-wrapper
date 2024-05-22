@@ -527,7 +527,7 @@ public interface CfnMonitorProps {
      * in the Internet Monitor section of the *CloudWatch User Guide* .
      */
     override fun healthEventsConfig(healthEventsConfig: IResolvable) {
-      cdkBuilder.healthEventsConfig(healthEventsConfig.let(IResolvable::unwrap))
+      cdkBuilder.healthEventsConfig(healthEventsConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -554,7 +554,7 @@ public interface CfnMonitorProps {
      * in the Internet Monitor section of the *CloudWatch User Guide* .
      */
     override fun healthEventsConfig(healthEventsConfig: CfnMonitor.HealthEventsConfigProperty) {
-      cdkBuilder.healthEventsConfig(healthEventsConfig.let(CfnMonitor.HealthEventsConfigProperty::unwrap))
+      cdkBuilder.healthEventsConfig(healthEventsConfig.let(CfnMonitor.HealthEventsConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -609,7 +609,7 @@ public interface CfnMonitorProps {
      * in the Amazon CloudWatch User Guide.
      */
     override fun includeLinkedAccounts(includeLinkedAccounts: IResolvable) {
-      cdkBuilder.includeLinkedAccounts(includeLinkedAccounts.let(IResolvable::unwrap))
+      cdkBuilder.includeLinkedAccounts(includeLinkedAccounts.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -620,7 +620,7 @@ public interface CfnMonitorProps {
      * volume) city-networks (client locations and ASNs, typically internet service providers or ISPs).
      */
     override fun internetMeasurementsLogDelivery(internetMeasurementsLogDelivery: IResolvable) {
-      cdkBuilder.internetMeasurementsLogDelivery(internetMeasurementsLogDelivery.let(IResolvable::unwrap))
+      cdkBuilder.internetMeasurementsLogDelivery(internetMeasurementsLogDelivery.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -632,7 +632,7 @@ public interface CfnMonitorProps {
      */
     override
         fun internetMeasurementsLogDelivery(internetMeasurementsLogDelivery: CfnMonitor.InternetMeasurementsLogDeliveryProperty) {
-      cdkBuilder.internetMeasurementsLogDelivery(internetMeasurementsLogDelivery.let(CfnMonitor.InternetMeasurementsLogDeliveryProperty::unwrap))
+      cdkBuilder.internetMeasurementsLogDelivery(internetMeasurementsLogDelivery.let(CfnMonitor.InternetMeasurementsLogDeliveryProperty.Companion::unwrap))
     }
 
     /**
@@ -779,7 +779,7 @@ public interface CfnMonitorProps {
      * @param tags The tags for a monitor, listed as a set of *key:value* pairs.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

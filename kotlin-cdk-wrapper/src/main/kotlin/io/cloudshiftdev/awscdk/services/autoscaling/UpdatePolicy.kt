@@ -34,7 +34,7 @@ public abstract class UpdatePolicy(
         software.amazon.awscdk.services.autoscaling.UpdatePolicy.rollingUpdate().let(UpdatePolicy::wrap)
 
     public fun rollingUpdate(options: RollingUpdateOptions): UpdatePolicy =
-        software.amazon.awscdk.services.autoscaling.UpdatePolicy.rollingUpdate(options.let(RollingUpdateOptions::unwrap)).let(UpdatePolicy::wrap)
+        software.amazon.awscdk.services.autoscaling.UpdatePolicy.rollingUpdate(options.let(RollingUpdateOptions.Companion::unwrap)).let(UpdatePolicy::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("429eeac013535c93986670fd396dc6358d4fc7f0e2075067e1f84f6ba74ef5fc")

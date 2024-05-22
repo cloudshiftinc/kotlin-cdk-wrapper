@@ -305,7 +305,7 @@ public interface CfnConfigurationProfileProps {
      * and an optional value, both of which you define.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -334,7 +334,7 @@ public interface CfnConfigurationProfileProps {
      * @param validators A list of methods for validating the configuration.
      */
     override fun validators(validators: IResolvable) {
-      cdkBuilder.validators(validators.let(IResolvable::unwrap))
+      cdkBuilder.validators(validators.let(IResolvable.Companion::unwrap))
     }
 
     /**

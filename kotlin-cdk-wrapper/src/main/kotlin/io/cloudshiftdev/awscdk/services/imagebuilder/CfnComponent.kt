@@ -58,8 +58,8 @@ public open class CfnComponent(
     id: String,
     props: CfnComponentProps,
   ) :
-      this(software.amazon.awscdk.services.imagebuilder.CfnComponent(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnComponentProps::unwrap))
+      this(software.amazon.awscdk.services.imagebuilder.CfnComponent(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnComponentProps.Companion::unwrap))
   )
 
   public constructor(
@@ -142,7 +142,7 @@ public open class CfnComponent(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

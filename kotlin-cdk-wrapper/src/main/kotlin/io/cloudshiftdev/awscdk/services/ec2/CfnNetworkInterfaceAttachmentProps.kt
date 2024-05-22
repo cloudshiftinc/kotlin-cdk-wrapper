@@ -159,7 +159,7 @@ public interface CfnNetworkInterfaceAttachmentProps {
      * By default, this value is set to `true` .
      */
     override fun deleteOnTermination(deleteOnTermination: IResolvable) {
-      cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable::unwrap))
+      cdkBuilder.deleteOnTermination(deleteOnTermination.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -175,7 +175,7 @@ public interface CfnNetworkInterfaceAttachmentProps {
      * attaches to the instance.
      */
     override fun enaSrdSpecification(enaSrdSpecification: IResolvable) {
-      cdkBuilder.enaSrdSpecification(enaSrdSpecification.let(IResolvable::unwrap))
+      cdkBuilder.enaSrdSpecification(enaSrdSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -184,7 +184,7 @@ public interface CfnNetworkInterfaceAttachmentProps {
      */
     override
         fun enaSrdSpecification(enaSrdSpecification: CfnNetworkInterfaceAttachment.EnaSrdSpecificationProperty) {
-      cdkBuilder.enaSrdSpecification(enaSrdSpecification.let(CfnNetworkInterfaceAttachment.EnaSrdSpecificationProperty::unwrap))
+      cdkBuilder.enaSrdSpecification(enaSrdSpecification.let(CfnNetworkInterfaceAttachment.EnaSrdSpecificationProperty.Companion::unwrap))
     }
 
     /**

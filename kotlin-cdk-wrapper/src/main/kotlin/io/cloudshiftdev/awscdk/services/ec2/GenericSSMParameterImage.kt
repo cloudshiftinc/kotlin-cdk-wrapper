@@ -32,7 +32,7 @@ public open class GenericSSMParameterImage(
 ) : CdkObject(cdkObject), IMachineImage {
   public constructor(parameterName: String, os: OperatingSystemType) :
       this(software.amazon.awscdk.services.ec2.GenericSSMParameterImage(parameterName,
-      os.let(OperatingSystemType::unwrap))
+      os.let(OperatingSystemType.Companion::unwrap))
   )
 
   public constructor(
@@ -40,7 +40,7 @@ public open class GenericSSMParameterImage(
     os: OperatingSystemType,
     userData: UserData,
   ) : this(software.amazon.awscdk.services.ec2.GenericSSMParameterImage(parameterName,
-      os.let(OperatingSystemType::unwrap), userData.let(UserData::unwrap))
+      os.let(OperatingSystemType.Companion::unwrap), userData.let(UserData.Companion::unwrap))
   )
 
   /**
@@ -49,7 +49,7 @@ public open class GenericSSMParameterImage(
    * @param scope 
    */
   public override fun image(scope: Construct): MachineImageConfig =
-      unwrap(this).getImage(scope.let(Construct::unwrap)).let(MachineImageConfig::wrap)
+      unwrap(this).getImage(scope.let(Construct.Companion::unwrap)).let(MachineImageConfig::wrap)
 
   /**
    * Name of the SSM parameter we're looking up.

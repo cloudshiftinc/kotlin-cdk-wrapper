@@ -45,7 +45,7 @@ public open class SplunkLogDriver(
   cdkObject: software.amazon.awscdk.services.ecs.SplunkLogDriver,
 ) : LogDriver(cdkObject) {
   public constructor(props: SplunkLogDriverProps) :
-      this(software.amazon.awscdk.services.ecs.SplunkLogDriver(props.let(SplunkLogDriverProps::unwrap))
+      this(software.amazon.awscdk.services.ecs.SplunkLogDriver(props.let(SplunkLogDriverProps.Companion::unwrap))
   )
 
   public constructor(props: SplunkLogDriverProps.Builder.() -> Unit) :
@@ -59,8 +59,8 @@ public open class SplunkLogDriver(
    * @param _containerDefinition 
    */
   public override fun bind(scope: Construct, containerDefinition: ContainerDefinition):
-      LogDriverConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      containerDefinition.let(ContainerDefinition::unwrap)).let(LogDriverConfig::wrap)
+      LogDriverConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      containerDefinition.let(ContainerDefinition.Companion::unwrap)).let(LogDriverConfig::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.SplunkLogDriver].
@@ -346,7 +346,7 @@ public open class SplunkLogDriver(
      * @param format Message format. 
      */
     override fun format(format: SplunkLogFormat) {
-      cdkBuilder.format(format.let(SplunkLogFormat::unwrap))
+      cdkBuilder.format(format.let(SplunkLogFormat.Companion::unwrap))
     }
 
     /**
@@ -435,7 +435,7 @@ public open class SplunkLogDriver(
      * @param secretToken Splunk HTTP Event Collector token (Secret). 
      */
     override fun secretToken(secretToken: Secret) {
-      cdkBuilder.secretToken(secretToken.let(Secret::unwrap))
+      cdkBuilder.secretToken(secretToken.let(Secret.Companion::unwrap))
     }
 
     /**

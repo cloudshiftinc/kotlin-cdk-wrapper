@@ -36,7 +36,7 @@ public open class Schedule(
 
   public companion object {
     public fun cron(options: CronOptions): Schedule =
-        software.amazon.awscdk.services.synthetics.Schedule.cron(options.let(CronOptions::unwrap)).let(Schedule::wrap)
+        software.amazon.awscdk.services.synthetics.Schedule.cron(options.let(CronOptions.Companion::unwrap)).let(Schedule::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f4520a734c5b3c9911b297d38c8083ddf780e92b19da5f22829eaf1210a2e86c")
@@ -49,7 +49,7 @@ public open class Schedule(
         software.amazon.awscdk.services.synthetics.Schedule.once().let(Schedule::wrap)
 
     public fun rate(interval: Duration): Schedule =
-        software.amazon.awscdk.services.synthetics.Schedule.rate(interval.let(Duration::unwrap)).let(Schedule::wrap)
+        software.amazon.awscdk.services.synthetics.Schedule.rate(interval.let(Duration.Companion::unwrap)).let(Schedule::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.Schedule): Schedule =
         Schedule(cdkObject)

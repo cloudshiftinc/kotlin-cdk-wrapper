@@ -37,7 +37,7 @@ public open class FileDefinitionBody(
 
   public constructor(path: String, options: AssetOptions) :
       this(software.amazon.awscdk.services.stepfunctions.FileDefinitionBody(path,
-      options.let(AssetOptions::unwrap))
+      options.let(AssetOptions.Companion::unwrap))
   )
 
   public constructor(path: String, options: AssetOptions.Builder.() -> Unit) : this(path,
@@ -54,9 +54,9 @@ public open class FileDefinitionBody(
     scope: Construct,
     sfnPrincipal: IPrincipal,
     sfnProps: StateMachineProps,
-  ): DefinitionConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      sfnPrincipal.let(IPrincipal::unwrap),
-      sfnProps.let(StateMachineProps::unwrap)).let(DefinitionConfig::wrap)
+  ): DefinitionConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      sfnPrincipal.let(IPrincipal.Companion::unwrap),
+      sfnProps.let(StateMachineProps.Companion::unwrap)).let(DefinitionConfig::wrap)
 
   /**
    * @param scope 
@@ -83,9 +83,10 @@ public open class FileDefinitionBody(
     sfnPrincipal: IPrincipal,
     sfnProps: StateMachineProps,
     graph: StateGraph,
-  ): DefinitionConfig = unwrap(this).bind(scope.let(Construct::unwrap),
-      sfnPrincipal.let(IPrincipal::unwrap), sfnProps.let(StateMachineProps::unwrap),
-      graph.let(StateGraph::unwrap)).let(DefinitionConfig::wrap)
+  ): DefinitionConfig = unwrap(this).bind(scope.let(Construct.Companion::unwrap),
+      sfnPrincipal.let(IPrincipal.Companion::unwrap),
+      sfnProps.let(StateMachineProps.Companion::unwrap),
+      graph.let(StateGraph.Companion::unwrap)).let(DefinitionConfig::wrap)
 
   /**
    *
@@ -288,7 +289,7 @@ public open class FileDefinitionBody(
      * @param assetHashType Specifies the type of hash to calculate for this asset. 
      */
     override fun assetHashType(assetHashType: AssetHashType) {
-      cdkBuilder.assetHashType(assetHashType.let(AssetHashType::unwrap))
+      cdkBuilder.assetHashType(assetHashType.let(AssetHashType.Companion::unwrap))
     }
 
     /**
@@ -306,7 +307,7 @@ public open class FileDefinitionBody(
      * bundling provider. 
      */
     override fun bundling(bundling: BundlingOptions) {
-      cdkBuilder.bundling(bundling.let(BundlingOptions::unwrap))
+      cdkBuilder.bundling(bundling.let(BundlingOptions.Companion::unwrap))
     }
 
     /**
@@ -383,7 +384,7 @@ public open class FileDefinitionBody(
      * @param followSymlinks A strategy for how to handle symlinks. 
      */
     override fun followSymlinks(followSymlinks: SymlinkFollowMode) {
-      cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode::unwrap))
+      cdkBuilder.followSymlinks(followSymlinks.let(SymlinkFollowMode.Companion::unwrap))
     }
 
     /**
@@ -394,7 +395,7 @@ public open class FileDefinitionBody(
      * @param ignoreMode The ignore behavior to use for `exclude` patterns. 
      */
     override fun ignoreMode(ignoreMode: IgnoreMode) {
-      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode::unwrap))
+      cdkBuilder.ignoreMode(ignoreMode.let(IgnoreMode.Companion::unwrap))
     }
 
     /**
@@ -407,7 +408,7 @@ public open class FileDefinitionBody(
      * @param readers A list of principals that should be able to read this asset from S3. 
      */
     override fun readers(readers: List<IGrantable>) {
-      cdkBuilder.readers(readers.map(IGrantable::unwrap))
+      cdkBuilder.readers(readers.map(IGrantable.Companion::unwrap))
     }
 
     /**

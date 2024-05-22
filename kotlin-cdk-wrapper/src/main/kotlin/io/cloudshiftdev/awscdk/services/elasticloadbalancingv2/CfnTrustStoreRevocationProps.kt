@@ -85,7 +85,7 @@ public interface CfnTrustStoreRevocationProps {
      * @param revocationContents The revocation file to add.
      */
     override fun revocationContents(revocationContents: IResolvable) {
-      cdkBuilder.revocationContents(revocationContents.let(IResolvable::unwrap))
+      cdkBuilder.revocationContents(revocationContents.let(IResolvable.Companion::unwrap))
     }
 
     /**

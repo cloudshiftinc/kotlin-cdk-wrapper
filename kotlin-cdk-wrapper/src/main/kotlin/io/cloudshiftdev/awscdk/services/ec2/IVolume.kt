@@ -180,7 +180,7 @@ public interface IVolume : IResource {
      * @param policy 
      */
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
-      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy::unwrap))
+      unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
 
     /**
@@ -217,7 +217,7 @@ public interface IVolume : IResource {
      * @param instances the instances to which permission is being granted to attach this volume to.
      */
     override fun grantAttachVolume(grantee: IGrantable): Grant =
-        unwrap(this).grantAttachVolume(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantAttachVolume(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grants permission to attach this Volume to an instance.
@@ -231,8 +231,8 @@ public interface IVolume : IResource {
      * @param instances the instances to which permission is being granted to attach this volume to.
      */
     override fun grantAttachVolume(grantee: IGrantable, instances: List<IInstance>): Grant =
-        unwrap(this).grantAttachVolume(grantee.let(IGrantable::unwrap),
-        instances.map(IInstance::unwrap)).let(Grant::wrap)
+        unwrap(this).grantAttachVolume(grantee.let(IGrantable.Companion::unwrap),
+        instances.map(IInstance.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grants permission to attach the Volume by a ResourceTag condition.
@@ -254,8 +254,9 @@ public interface IVolume : IResource {
      * value.
      */
     override fun grantAttachVolumeByResourceTag(grantee: IGrantable, constructs: List<Construct>):
-        Grant = unwrap(this).grantAttachVolumeByResourceTag(grantee.let(IGrantable::unwrap),
-        constructs.map(Construct::unwrap)).let(Grant::wrap)
+        Grant =
+        unwrap(this).grantAttachVolumeByResourceTag(grantee.let(IGrantable.Companion::unwrap),
+        constructs.map(Construct.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grants permission to attach the Volume by a ResourceTag condition.
@@ -280,8 +281,9 @@ public interface IVolume : IResource {
       grantee: IGrantable,
       constructs: List<Construct>,
       tagKeySuffix: String,
-    ): Grant = unwrap(this).grantAttachVolumeByResourceTag(grantee.let(IGrantable::unwrap),
-        constructs.map(Construct::unwrap), tagKeySuffix).let(Grant::wrap)
+    ): Grant =
+        unwrap(this).grantAttachVolumeByResourceTag(grantee.let(IGrantable.Companion::unwrap),
+        constructs.map(Construct.Companion::unwrap), tagKeySuffix).let(Grant::wrap)
 
     /**
      * Grants permission to detach this Volume from an instance CAUTION: Granting an instance
@@ -296,7 +298,7 @@ public interface IVolume : IResource {
      * from.
      */
     override fun grantDetachVolume(grantee: IGrantable): Grant =
-        unwrap(this).grantDetachVolume(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
+        unwrap(this).grantDetachVolume(grantee.let(IGrantable.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grants permission to detach this Volume from an instance CAUTION: Granting an instance
@@ -311,8 +313,8 @@ public interface IVolume : IResource {
      * from.
      */
     override fun grantDetachVolume(grantee: IGrantable, instances: List<IInstance>): Grant =
-        unwrap(this).grantDetachVolume(grantee.let(IGrantable::unwrap),
-        instances.map(IInstance::unwrap)).let(Grant::wrap)
+        unwrap(this).grantDetachVolume(grantee.let(IGrantable.Companion::unwrap),
+        instances.map(IInstance.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grants permission to detach the Volume by a ResourceTag condition.
@@ -327,8 +329,9 @@ public interface IVolume : IResource {
      * value.
      */
     override fun grantDetachVolumeByResourceTag(grantee: IGrantable, constructs: List<Construct>):
-        Grant = unwrap(this).grantDetachVolumeByResourceTag(grantee.let(IGrantable::unwrap),
-        constructs.map(Construct::unwrap)).let(Grant::wrap)
+        Grant =
+        unwrap(this).grantDetachVolumeByResourceTag(grantee.let(IGrantable.Companion::unwrap),
+        constructs.map(Construct.Companion::unwrap)).let(Grant::wrap)
 
     /**
      * Grants permission to detach the Volume by a ResourceTag condition.
@@ -346,8 +349,9 @@ public interface IVolume : IResource {
       grantee: IGrantable,
       constructs: List<Construct>,
       tagKeySuffix: String,
-    ): Grant = unwrap(this).grantDetachVolumeByResourceTag(grantee.let(IGrantable::unwrap),
-        constructs.map(Construct::unwrap), tagKeySuffix).let(Grant::wrap)
+    ): Grant =
+        unwrap(this).grantDetachVolumeByResourceTag(grantee.let(IGrantable.Companion::unwrap),
+        constructs.map(Construct.Companion::unwrap), tagKeySuffix).let(Grant::wrap)
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 

@@ -46,7 +46,7 @@ public interface DestinationOptions {
      * @param type The destination type. 
      */
     override fun type(type: DestinationType) {
-      cdkBuilder.type(type.let(DestinationType::unwrap))
+      cdkBuilder.type(type.let(DestinationType.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lambda.DestinationOptions =

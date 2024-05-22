@@ -10,15 +10,11 @@ import io.cloudshiftdev.awscdk.ITaggableV2
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
-import io.cloudshiftdev.awscdk.common.CdkObject
-import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
-import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
-import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -38,15 +34,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .dataProviderName("dataProviderName")
  * .description("description")
  * .exactSettings(false)
- * .settings(SettingsProperty.builder()
- * .postgreSqlSettings(PostgreSqlSettingsProperty.builder()
- * .certificateArn("certificateArn")
- * .databaseName("databaseName")
- * .port(123)
- * .serverName("serverName")
- * .sslMode("sslMode")
- * .build())
- * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -64,8 +51,8 @@ public open class CfnDataProvider(
     id: String,
     props: CfnDataProviderProps,
   ) :
-      this(software.amazon.awscdk.services.dms.CfnDataProvider(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnDataProviderProps::unwrap))
+      this(software.amazon.awscdk.services.dms.CfnDataProvider(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnDataProviderProps.Companion::unwrap))
   )
 
   public constructor(
@@ -156,7 +143,7 @@ public open class CfnDataProvider(
    * The property describes the exact settings which can be modified.
    */
   public open fun exactSettings(`value`: IResolvable) {
-    unwrap(this).setExactSettings(`value`.let(IResolvable::unwrap))
+    unwrap(this).setExactSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -165,35 +152,8 @@ public open class CfnDataProvider(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
-
-  /**
-   * The settings in JSON format for a data provider.
-   */
-  public open fun settings(): Any? = unwrap(this).getSettings()
-
-  /**
-   * The settings in JSON format for a data provider.
-   */
-  public open fun settings(`value`: IResolvable) {
-    unwrap(this).setSettings(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * The settings in JSON format for a data provider.
-   */
-  public open fun settings(`value`: SettingsProperty) {
-    unwrap(this).setSettings(`value`.let(SettingsProperty::unwrap))
-  }
-
-  /**
-   * The settings in JSON format for a data provider.
-   */
-  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("3edd7636f3be1f86b901cad6e1fc715014e3dbc80786d14014f149bb2e7271b6")
-  public open fun settings(`value`: SettingsProperty.Builder.() -> Unit): Unit =
-      settings(SettingsProperty(`value`))
 
   /**
    * An array of key-value pairs to apply to this resource.
@@ -204,7 +164,7 @@ public open class CfnDataProvider(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -279,32 +239,6 @@ public open class CfnDataProvider(
      * @param exactSettings The property describes the exact settings which can be modified. 
      */
     public fun exactSettings(exactSettings: IResolvable)
-
-    /**
-     * The settings in JSON format for a data provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-settings)
-     * @param settings The settings in JSON format for a data provider. 
-     */
-    public fun settings(settings: IResolvable)
-
-    /**
-     * The settings in JSON format for a data provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-settings)
-     * @param settings The settings in JSON format for a data provider. 
-     */
-    public fun settings(settings: SettingsProperty)
-
-    /**
-     * The settings in JSON format for a data provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-settings)
-     * @param settings The settings in JSON format for a data provider. 
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("ee40722a720d7943e5c842a5aa735bea262d50da0c487f2b9017c7fe45ea2928")
-    public fun settings(settings: SettingsProperty.Builder.() -> Unit)
 
     /**
      * An array of key-value pairs to apply to this resource.
@@ -402,39 +336,8 @@ public open class CfnDataProvider(
      * @param exactSettings The property describes the exact settings which can be modified. 
      */
     override fun exactSettings(exactSettings: IResolvable) {
-      cdkBuilder.exactSettings(exactSettings.let(IResolvable::unwrap))
+      cdkBuilder.exactSettings(exactSettings.let(IResolvable.Companion::unwrap))
     }
-
-    /**
-     * The settings in JSON format for a data provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-settings)
-     * @param settings The settings in JSON format for a data provider. 
-     */
-    override fun settings(settings: IResolvable) {
-      cdkBuilder.settings(settings.let(IResolvable::unwrap))
-    }
-
-    /**
-     * The settings in JSON format for a data provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-settings)
-     * @param settings The settings in JSON format for a data provider. 
-     */
-    override fun settings(settings: SettingsProperty) {
-      cdkBuilder.settings(settings.let(SettingsProperty::unwrap))
-    }
-
-    /**
-     * The settings in JSON format for a data provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-settings)
-     * @param settings The settings in JSON format for a data provider. 
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("ee40722a720d7943e5c842a5aa735bea262d50da0c487f2b9017c7fe45ea2928")
-    override fun settings(settings: SettingsProperty.Builder.() -> Unit): Unit =
-        settings(SettingsProperty(settings))
 
     /**
      * An array of key-value pairs to apply to this resource.
@@ -443,7 +346,7 @@ public open class CfnDataProvider(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -476,341 +379,5 @@ public open class CfnDataProvider(
     internal fun unwrap(wrapped: CfnDataProvider):
         software.amazon.awscdk.services.dms.CfnDataProvider = wrapped.cdkObject as
         software.amazon.awscdk.services.dms.CfnDataProvider
-  }
-
-  /**
-   * Provides information that defines a PostgreSQL endpoint.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dms.*;
-   * PostgreSqlSettingsProperty postgreSqlSettingsProperty = PostgreSqlSettingsProperty.builder()
-   * .certificateArn("certificateArn")
-   * .databaseName("databaseName")
-   * .port(123)
-   * .serverName("serverName")
-   * .sslMode("sslMode")
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-postgresqlsettings.html)
-   */
-  public interface PostgreSqlSettingsProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-postgresqlsettings.html#cfn-dms-dataprovider-postgresqlsettings-certificatearn)
-     */
-    public fun certificateArn(): String? = unwrap(this).getCertificateArn()
-
-    /**
-     * Database name for the endpoint.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-postgresqlsettings.html#cfn-dms-dataprovider-postgresqlsettings-databasename)
-     */
-    public fun databaseName(): String? = unwrap(this).getDatabaseName()
-
-    /**
-     * Endpoint TCP port.
-     *
-     * The default is 5432.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-postgresqlsettings.html#cfn-dms-dataprovider-postgresqlsettings-port)
-     */
-    public fun port(): Number? = unwrap(this).getPort()
-
-    /**
-     * The host name of the endpoint database.
-     *
-     * For an Amazon RDS PostgreSQL instance, this is the output of
-     * [DescribeDBInstances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html)
-     * , in the
-     * `[Endpoint](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html)
-     * .Address` field.
-     *
-     * For an Aurora PostgreSQL instance, this is the output of
-     * [DescribeDBClusters](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBClusters.html)
-     * , in the `Endpoint` field.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-postgresqlsettings.html#cfn-dms-dataprovider-postgresqlsettings-servername)
-     */
-    public fun serverName(): String? = unwrap(this).getServerName()
-
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-postgresqlsettings.html#cfn-dms-dataprovider-postgresqlsettings-sslmode)
-     */
-    public fun sslMode(): String? = unwrap(this).getSslMode()
-
-    /**
-     * A builder for [PostgreSqlSettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param certificateArn the value to be set.
-       */
-      public fun certificateArn(certificateArn: String)
-
-      /**
-       * @param databaseName Database name for the endpoint.
-       */
-      public fun databaseName(databaseName: String)
-
-      /**
-       * @param port Endpoint TCP port.
-       * The default is 5432.
-       */
-      public fun port(port: Number)
-
-      /**
-       * @param serverName The host name of the endpoint database.
-       * For an Amazon RDS PostgreSQL instance, this is the output of
-       * [DescribeDBInstances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html)
-       * , in the
-       * `[Endpoint](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html)
-       * .Address` field.
-       *
-       * For an Aurora PostgreSQL instance, this is the output of
-       * [DescribeDBClusters](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBClusters.html)
-       * , in the `Endpoint` field.
-       */
-      public fun serverName(serverName: String)
-
-      /**
-       * @param sslMode the value to be set.
-       */
-      public fun sslMode(sslMode: String)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dms.CfnDataProvider.PostgreSqlSettingsProperty.Builder =
-          software.amazon.awscdk.services.dms.CfnDataProvider.PostgreSqlSettingsProperty.builder()
-
-      /**
-       * @param certificateArn the value to be set.
-       */
-      override fun certificateArn(certificateArn: String) {
-        cdkBuilder.certificateArn(certificateArn)
-      }
-
-      /**
-       * @param databaseName Database name for the endpoint.
-       */
-      override fun databaseName(databaseName: String) {
-        cdkBuilder.databaseName(databaseName)
-      }
-
-      /**
-       * @param port Endpoint TCP port.
-       * The default is 5432.
-       */
-      override fun port(port: Number) {
-        cdkBuilder.port(port)
-      }
-
-      /**
-       * @param serverName The host name of the endpoint database.
-       * For an Amazon RDS PostgreSQL instance, this is the output of
-       * [DescribeDBInstances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html)
-       * , in the
-       * `[Endpoint](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html)
-       * .Address` field.
-       *
-       * For an Aurora PostgreSQL instance, this is the output of
-       * [DescribeDBClusters](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBClusters.html)
-       * , in the `Endpoint` field.
-       */
-      override fun serverName(serverName: String) {
-        cdkBuilder.serverName(serverName)
-      }
-
-      /**
-       * @param sslMode the value to be set.
-       */
-      override fun sslMode(sslMode: String) {
-        cdkBuilder.sslMode(sslMode)
-      }
-
-      public fun build():
-          software.amazon.awscdk.services.dms.CfnDataProvider.PostgreSqlSettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.PostgreSqlSettingsProperty,
-    ) : CdkObject(cdkObject), PostgreSqlSettingsProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-postgresqlsettings.html#cfn-dms-dataprovider-postgresqlsettings-certificatearn)
-       */
-      override fun certificateArn(): String? = unwrap(this).getCertificateArn()
-
-      /**
-       * Database name for the endpoint.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-postgresqlsettings.html#cfn-dms-dataprovider-postgresqlsettings-databasename)
-       */
-      override fun databaseName(): String? = unwrap(this).getDatabaseName()
-
-      /**
-       * Endpoint TCP port.
-       *
-       * The default is 5432.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-postgresqlsettings.html#cfn-dms-dataprovider-postgresqlsettings-port)
-       */
-      override fun port(): Number? = unwrap(this).getPort()
-
-      /**
-       * The host name of the endpoint database.
-       *
-       * For an Amazon RDS PostgreSQL instance, this is the output of
-       * [DescribeDBInstances](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBInstances.html)
-       * , in the
-       * `[Endpoint](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_Endpoint.html)
-       * .Address` field.
-       *
-       * For an Aurora PostgreSQL instance, this is the output of
-       * [DescribeDBClusters](https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBClusters.html)
-       * , in the `Endpoint` field.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-postgresqlsettings.html#cfn-dms-dataprovider-postgresqlsettings-servername)
-       */
-      override fun serverName(): String? = unwrap(this).getServerName()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-postgresqlsettings.html#cfn-dms-dataprovider-postgresqlsettings-sslmode)
-       */
-      override fun sslMode(): String? = unwrap(this).getSslMode()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): PostgreSqlSettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.PostgreSqlSettingsProperty):
-          PostgreSqlSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
-          PostgreSqlSettingsProperty ?: Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: PostgreSqlSettingsProperty):
-          software.amazon.awscdk.services.dms.CfnDataProvider.PostgreSqlSettingsProperty = (wrapped
-          as CdkObject).cdkObject as
-          software.amazon.awscdk.services.dms.CfnDataProvider.PostgreSqlSettingsProperty
-    }
-  }
-
-  /**
-   * PostgreSqlSettings property identifier.
-   *
-   * Example:
-   *
-   * ```
-   * // The code below shows an example of how to instantiate this type.
-   * // The values are placeholders you should change.
-   * import io.cloudshiftdev.awscdk.services.dms.*;
-   * SettingsProperty settingsProperty = SettingsProperty.builder()
-   * .postgreSqlSettings(PostgreSqlSettingsProperty.builder()
-   * .certificateArn("certificateArn")
-   * .databaseName("databaseName")
-   * .port(123)
-   * .serverName("serverName")
-   * .sslMode("sslMode")
-   * .build())
-   * .build();
-   * ```
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html)
-   */
-  public interface SettingsProperty {
-    /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-postgresqlsettings)
-     */
-    public fun postgreSqlSettings(): Any? = unwrap(this).getPostgreSqlSettings()
-
-    /**
-     * A builder for [SettingsProperty]
-     */
-    @CdkDslMarker
-    public interface Builder {
-      /**
-       * @param postgreSqlSettings the value to be set.
-       */
-      public fun postgreSqlSettings(postgreSqlSettings: IResolvable)
-
-      /**
-       * @param postgreSqlSettings the value to be set.
-       */
-      public fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty)
-
-      /**
-       * @param postgreSqlSettings the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bbe648e536f99226c51402e8eee8ad1e33005dfd09b98a1cb53237bb9ad30d3f")
-      public
-          fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty.Builder.() -> Unit)
-    }
-
-    private class BuilderImpl : Builder {
-      private val cdkBuilder:
-          software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty.Builder =
-          software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty.builder()
-
-      /**
-       * @param postgreSqlSettings the value to be set.
-       */
-      override fun postgreSqlSettings(postgreSqlSettings: IResolvable) {
-        cdkBuilder.postgreSqlSettings(postgreSqlSettings.let(IResolvable::unwrap))
-      }
-
-      /**
-       * @param postgreSqlSettings the value to be set.
-       */
-      override fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty) {
-        cdkBuilder.postgreSqlSettings(postgreSqlSettings.let(PostgreSqlSettingsProperty::unwrap))
-      }
-
-      /**
-       * @param postgreSqlSettings the value to be set.
-       */
-      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("bbe648e536f99226c51402e8eee8ad1e33005dfd09b98a1cb53237bb9ad30d3f")
-      override
-          fun postgreSqlSettings(postgreSqlSettings: PostgreSqlSettingsProperty.Builder.() -> Unit):
-          Unit = postgreSqlSettings(PostgreSqlSettingsProperty(postgreSqlSettings))
-
-      public fun build(): software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty =
-          cdkBuilder.build()
-    }
-
-    private class Wrapper(
-      cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty,
-    ) : CdkObject(cdkObject), SettingsProperty {
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-dataprovider-settings.html#cfn-dms-dataprovider-settings-postgresqlsettings)
-       */
-      override fun postgreSqlSettings(): Any? = unwrap(this).getPostgreSqlSettings()
-    }
-
-    public companion object {
-      public operator fun invoke(block: Builder.() -> Unit = {}): SettingsProperty {
-        val builderImpl = BuilderImpl()
-        return Wrapper(builderImpl.apply(block).build())
-      }
-
-      internal
-          fun wrap(cdkObject: software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty):
-          SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? SettingsProperty ?:
-          Wrapper(cdkObject)
-
-      internal fun unwrap(wrapped: SettingsProperty):
-          software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty = (wrapped as
-          CdkObject).cdkObject as
-          software.amazon.awscdk.services.dms.CfnDataProvider.SettingsProperty
-    }
   }
 }

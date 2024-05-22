@@ -273,7 +273,7 @@ public interface SageMakerCreateModelProps : TaskStateBaseProps {
      * @param containers Specifies the containers in the inference pipeline.
      */
     override fun containers(containers: List<IContainerDefinition>) {
-      cdkBuilder.containers(containers.map(IContainerDefinition::unwrap))
+      cdkBuilder.containers(containers.map(IContainerDefinition.Companion::unwrap))
     }
 
     /**
@@ -288,7 +288,7 @@ public interface SageMakerCreateModelProps : TaskStateBaseProps {
      * This enables cross-account resource invocations.
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -315,7 +315,7 @@ public interface SageMakerCreateModelProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -324,7 +324,7 @@ public interface SageMakerCreateModelProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -345,7 +345,7 @@ public interface SageMakerCreateModelProps : TaskStateBaseProps {
      * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -371,7 +371,7 @@ public interface SageMakerCreateModelProps : TaskStateBaseProps {
      * deployed for predictions. 
      */
     override fun primaryContainer(primaryContainer: IContainerDefinition) {
-      cdkBuilder.primaryContainer(primaryContainer.let(IContainerDefinition::unwrap))
+      cdkBuilder.primaryContainer(primaryContainer.let(IContainerDefinition.Companion::unwrap))
     }
 
     /**
@@ -397,7 +397,7 @@ public interface SageMakerCreateModelProps : TaskStateBaseProps {
      * @param role An execution role that you can pass in a CreateModel API request.
      */
     override fun role(role: IRole) {
-      cdkBuilder.role(role.let(IRole::unwrap))
+      cdkBuilder.role(role.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -412,7 +412,7 @@ public interface SageMakerCreateModelProps : TaskStateBaseProps {
      * this parameter is only used when VPC is provided).
      */
     override fun subnetSelection(subnetSelection: SubnetSelection) {
-      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection::unwrap))
+      cdkBuilder.subnetSelection(subnetSelection.let(SubnetSelection.Companion::unwrap))
     }
 
     /**
@@ -428,7 +428,7 @@ public interface SageMakerCreateModelProps : TaskStateBaseProps {
      * @param tags Tags to be applied to the model.
      */
     override fun tags(tags: TaskInput) {
-      cdkBuilder.tags(tags.let(TaskInput::unwrap))
+      cdkBuilder.tags(tags.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -437,7 +437,7 @@ public interface SageMakerCreateModelProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -446,14 +446,14 @@ public interface SageMakerCreateModelProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param vpc The VPC that is accessible by the hosted model.
      */
     override fun vpc(vpc: IVpc) {
-      cdkBuilder.vpc(vpc.let(IVpc::unwrap))
+      cdkBuilder.vpc(vpc.let(IVpc.Companion::unwrap))
     }
 
     public fun build():

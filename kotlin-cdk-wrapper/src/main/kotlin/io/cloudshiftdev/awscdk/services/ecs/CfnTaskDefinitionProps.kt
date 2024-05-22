@@ -497,9 +497,6 @@ public interface CfnTaskDefinitionProps {
    *
    * A platform family is specified only for tasks using the Fargate launch type.
    *
-   * When you specify a task definition in a service, this value must match the `runtimePlatform`
-   * value of the service.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-runtimeplatform)
    */
   public fun runtimePlatform(): Any? = unwrap(this).getRuntimePlatform()
@@ -889,27 +886,18 @@ public interface CfnTaskDefinitionProps {
     /**
      * @param runtimePlatform The operating system that your tasks definitions run on.
      * A platform family is specified only for tasks using the Fargate launch type.
-     *
-     * When you specify a task definition in a service, this value must match the `runtimePlatform`
-     * value of the service.
      */
     public fun runtimePlatform(runtimePlatform: IResolvable)
 
     /**
      * @param runtimePlatform The operating system that your tasks definitions run on.
      * A platform family is specified only for tasks using the Fargate launch type.
-     *
-     * When you specify a task definition in a service, this value must match the `runtimePlatform`
-     * value of the service.
      */
     public fun runtimePlatform(runtimePlatform: CfnTaskDefinition.RuntimePlatformProperty)
 
     /**
      * @param runtimePlatform The operating system that your tasks definitions run on.
      * A platform family is specified only for tasks using the Fargate launch type.
-     *
-     * When you specify a task definition in a service, this value must match the `runtimePlatform`
-     * value of the service.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6f8ca60933771d6a181e09c848f3ad875b7eff4ba5e3d55a01ae2ba0b9af589c")
@@ -1012,7 +1000,7 @@ public interface CfnTaskDefinitionProps {
      * in the *Amazon Elastic Container Service Developer Guide* .
      */
     override fun containerDefinitions(containerDefinitions: IResolvable) {
-      cdkBuilder.containerDefinitions(containerDefinitions.let(IResolvable::unwrap))
+      cdkBuilder.containerDefinitions(containerDefinitions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1070,7 +1058,7 @@ public interface CfnTaskDefinitionProps {
      * definition.
      */
     override fun ephemeralStorage(ephemeralStorage: IResolvable) {
-      cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable::unwrap))
+      cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1078,7 +1066,7 @@ public interface CfnTaskDefinitionProps {
      * definition.
      */
     override fun ephemeralStorage(ephemeralStorage: CfnTaskDefinition.EphemeralStorageProperty) {
-      cdkBuilder.ephemeralStorage(ephemeralStorage.let(CfnTaskDefinition.EphemeralStorageProperty::unwrap))
+      cdkBuilder.ephemeralStorage(ephemeralStorage.let(CfnTaskDefinition.EphemeralStorageProperty.Companion::unwrap))
     }
 
     /**
@@ -1125,7 +1113,7 @@ public interface CfnTaskDefinitionProps {
      * the task.
      */
     override fun inferenceAccelerators(inferenceAccelerators: IResolvable) {
-      cdkBuilder.inferenceAccelerators(inferenceAccelerators.let(IResolvable::unwrap))
+      cdkBuilder.inferenceAccelerators(inferenceAccelerators.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1286,7 +1274,7 @@ public interface CfnTaskDefinitionProps {
      * This parameter isn't supported for tasks run on AWS Fargate .
      */
     override fun placementConstraints(placementConstraints: IResolvable) {
-      cdkBuilder.placementConstraints(placementConstraints.let(IResolvable::unwrap))
+      cdkBuilder.placementConstraints(placementConstraints.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1317,7 +1305,7 @@ public interface CfnTaskDefinitionProps {
      * *Amazon Elastic Container Service Developer Guide* .
      */
     override fun proxyConfiguration(proxyConfiguration: IResolvable) {
-      cdkBuilder.proxyConfiguration(proxyConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.proxyConfiguration(proxyConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1332,7 +1320,7 @@ public interface CfnTaskDefinitionProps {
      */
     override
         fun proxyConfiguration(proxyConfiguration: CfnTaskDefinition.ProxyConfigurationProperty) {
-      cdkBuilder.proxyConfiguration(proxyConfiguration.let(CfnTaskDefinition.ProxyConfigurationProperty::unwrap))
+      cdkBuilder.proxyConfiguration(proxyConfiguration.let(CfnTaskDefinition.ProxyConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -1375,31 +1363,22 @@ public interface CfnTaskDefinitionProps {
     /**
      * @param runtimePlatform The operating system that your tasks definitions run on.
      * A platform family is specified only for tasks using the Fargate launch type.
-     *
-     * When you specify a task definition in a service, this value must match the `runtimePlatform`
-     * value of the service.
      */
     override fun runtimePlatform(runtimePlatform: IResolvable) {
-      cdkBuilder.runtimePlatform(runtimePlatform.let(IResolvable::unwrap))
+      cdkBuilder.runtimePlatform(runtimePlatform.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param runtimePlatform The operating system that your tasks definitions run on.
      * A platform family is specified only for tasks using the Fargate launch type.
-     *
-     * When you specify a task definition in a service, this value must match the `runtimePlatform`
-     * value of the service.
      */
     override fun runtimePlatform(runtimePlatform: CfnTaskDefinition.RuntimePlatformProperty) {
-      cdkBuilder.runtimePlatform(runtimePlatform.let(CfnTaskDefinition.RuntimePlatformProperty::unwrap))
+      cdkBuilder.runtimePlatform(runtimePlatform.let(CfnTaskDefinition.RuntimePlatformProperty.Companion::unwrap))
     }
 
     /**
      * @param runtimePlatform The operating system that your tasks definitions run on.
      * A platform family is specified only for tasks using the Fargate launch type.
-     *
-     * When you specify a task definition in a service, this value must match the `runtimePlatform`
-     * value of the service.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6f8ca60933771d6a181e09c848f3ad875b7eff4ba5e3d55a01ae2ba0b9af589c")
@@ -1423,7 +1402,7 @@ public interface CfnTaskDefinitionProps {
      * numbers, and spaces representable in UTF-8, and the following characters: + - = . _ : /
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -1471,7 +1450,7 @@ public interface CfnTaskDefinitionProps {
      * The `host` and `sourcePath` parameters aren't supported for tasks run on AWS Fargate .
      */
     override fun volumes(volumes: IResolvable) {
-      cdkBuilder.volumes(volumes.let(IResolvable::unwrap))
+      cdkBuilder.volumes(volumes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1778,9 +1757,6 @@ public interface CfnTaskDefinitionProps {
      * The operating system that your tasks definitions run on.
      *
      * A platform family is specified only for tasks using the Fargate launch type.
-     *
-     * When you specify a task definition in a service, this value must match the `runtimePlatform`
-     * value of the service.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-runtimeplatform)
      */

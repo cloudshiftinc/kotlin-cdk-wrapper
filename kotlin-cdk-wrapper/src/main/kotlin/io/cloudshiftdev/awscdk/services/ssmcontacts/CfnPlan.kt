@@ -60,8 +60,8 @@ public open class CfnPlan(
     id: String,
     props: CfnPlanProps,
   ) :
-      this(software.amazon.awscdk.services.ssmcontacts.CfnPlan(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnPlanProps::unwrap))
+      this(software.amazon.awscdk.services.ssmcontacts.CfnPlan(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnPlanProps.Companion::unwrap))
   )
 
   public constructor(
@@ -94,7 +94,7 @@ public open class CfnPlan(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -125,7 +125,7 @@ public open class CfnPlan(
    * contact methods.
    */
   public open fun stages(`value`: IResolvable) {
-    unwrap(this).setStages(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStages(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -250,7 +250,7 @@ public open class CfnPlan(
      * contacts and contact methods. 
      */
     override fun stages(stages: IResolvable) {
-      cdkBuilder.stages(stages.let(IResolvable::unwrap))
+      cdkBuilder.stages(stages.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -491,7 +491,7 @@ public open class CfnPlan(
        * progress of stages in the plan. 
        */
       override fun isEssential(isEssential: IResolvable) {
-        cdkBuilder.isEssential(isEssential.let(IResolvable::unwrap))
+        cdkBuilder.isEssential(isEssential.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -629,7 +629,7 @@ public open class CfnPlan(
        * is engaging.
        */
       override fun targets(targets: IResolvable) {
-        cdkBuilder.targets(targets.let(IResolvable::unwrap))
+        cdkBuilder.targets(targets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -777,7 +777,7 @@ public open class CfnPlan(
        * engages.
        */
       override fun channelTargetInfo(channelTargetInfo: IResolvable) {
-        cdkBuilder.channelTargetInfo(channelTargetInfo.let(IResolvable::unwrap))
+        cdkBuilder.channelTargetInfo(channelTargetInfo.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -785,7 +785,7 @@ public open class CfnPlan(
        * engages.
        */
       override fun channelTargetInfo(channelTargetInfo: ChannelTargetInfoProperty) {
-        cdkBuilder.channelTargetInfo(channelTargetInfo.let(ChannelTargetInfoProperty::unwrap))
+        cdkBuilder.channelTargetInfo(channelTargetInfo.let(ChannelTargetInfoProperty.Companion::unwrap))
       }
 
       /**
@@ -802,14 +802,14 @@ public open class CfnPlan(
        * @param contactTargetInfo Information about the contact that Incident Manager engages.
        */
       override fun contactTargetInfo(contactTargetInfo: IResolvable) {
-        cdkBuilder.contactTargetInfo(contactTargetInfo.let(IResolvable::unwrap))
+        cdkBuilder.contactTargetInfo(contactTargetInfo.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param contactTargetInfo Information about the contact that Incident Manager engages.
        */
       override fun contactTargetInfo(contactTargetInfo: ContactTargetInfoProperty) {
-        cdkBuilder.contactTargetInfo(contactTargetInfo.let(ContactTargetInfoProperty::unwrap))
+        cdkBuilder.contactTargetInfo(contactTargetInfo.let(ContactTargetInfoProperty.Companion::unwrap))
       }
 
       /**

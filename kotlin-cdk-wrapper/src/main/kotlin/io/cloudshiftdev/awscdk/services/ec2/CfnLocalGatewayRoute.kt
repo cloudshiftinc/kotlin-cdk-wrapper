@@ -44,8 +44,8 @@ public open class CfnLocalGatewayRoute(
     id: String,
     props: CfnLocalGatewayRouteProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnLocalGatewayRoute(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnLocalGatewayRouteProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnLocalGatewayRoute(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnLocalGatewayRouteProps.Companion::unwrap))
   )
 
   public constructor(
@@ -83,7 +83,7 @@ public open class CfnLocalGatewayRoute(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**

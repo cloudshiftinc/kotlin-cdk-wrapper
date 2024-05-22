@@ -122,7 +122,7 @@ public interface EcsTarget {
      * @param listener Listener and properties for adding target group to the listener. 
      */
     override fun listener(listener: ListenerConfig) {
-      cdkBuilder.listener(listener.let(ListenerConfig::unwrap))
+      cdkBuilder.listener(listener.let(ListenerConfig.Companion::unwrap))
     }
 
     /**
@@ -137,7 +137,7 @@ public interface EcsTarget {
      * Only applicable when using application load balancers.
      */
     override fun protocol(protocol: Protocol) {
-      cdkBuilder.protocol(protocol.let(Protocol::unwrap))
+      cdkBuilder.protocol(protocol.let(Protocol.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ecs.EcsTarget = cdkBuilder.build()

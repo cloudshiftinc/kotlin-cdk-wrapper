@@ -59,8 +59,8 @@ public open class CfnReplicationSet(
     id: String,
     props: CfnReplicationSetProps,
   ) :
-      this(software.amazon.awscdk.services.ssmincidents.CfnReplicationSet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnReplicationSetProps::unwrap))
+      this(software.amazon.awscdk.services.ssmincidents.CfnReplicationSet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnReplicationSetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -91,7 +91,7 @@ public open class CfnReplicationSet(
    * Determines if the replication set deletion protection is enabled or not.
    */
   public open fun deletionProtected(`value`: IResolvable) {
-    unwrap(this).setDeletionProtected(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDeletionProtected(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -100,7 +100,7 @@ public open class CfnReplicationSet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -112,7 +112,7 @@ public open class CfnReplicationSet(
    * Specifies the Regions of the replication set.
    */
   public open fun regions(`value`: IResolvable) {
-    unwrap(this).setRegions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRegions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -142,7 +142,7 @@ public open class CfnReplicationSet(
    * A list of tags to add to the replication set.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -248,7 +248,7 @@ public open class CfnReplicationSet(
      * not. 
      */
     override fun deletionProtected(deletionProtected: IResolvable) {
-      cdkBuilder.deletionProtected(deletionProtected.let(IResolvable::unwrap))
+      cdkBuilder.deletionProtected(deletionProtected.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -258,7 +258,7 @@ public open class CfnReplicationSet(
      * @param regions Specifies the Regions of the replication set. 
      */
     override fun regions(regions: IResolvable) {
-      cdkBuilder.regions(regions.let(IResolvable::unwrap))
+      cdkBuilder.regions(regions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -286,7 +286,7 @@ public open class CfnReplicationSet(
      * @param tags A list of tags to add to the replication set. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -481,14 +481,14 @@ public open class CfnReplicationSet(
        * @param regionConfiguration Specifies the Region configuration.
        */
       override fun regionConfiguration(regionConfiguration: IResolvable) {
-        cdkBuilder.regionConfiguration(regionConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.regionConfiguration(regionConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param regionConfiguration Specifies the Region configuration.
        */
       override fun regionConfiguration(regionConfiguration: RegionConfigurationProperty) {
-        cdkBuilder.regionConfiguration(regionConfiguration.let(RegionConfigurationProperty::unwrap))
+        cdkBuilder.regionConfiguration(regionConfiguration.let(RegionConfigurationProperty.Companion::unwrap))
       }
 
       /**

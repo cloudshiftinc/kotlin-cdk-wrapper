@@ -41,8 +41,8 @@ public open class Route(
     id: String,
     props: RouteProps,
   ) :
-      this(software.amazon.awscdk.services.appmesh.Route(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(RouteProps::unwrap))
+      this(software.amazon.awscdk.services.appmesh.Route(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(RouteProps.Companion::unwrap))
   )
 
   public constructor(
@@ -117,7 +117,7 @@ public open class Route(
      * @param mesh The service mesh to define the route in. 
      */
     override fun mesh(mesh: IMesh) {
-      cdkBuilder.mesh(mesh.let(IMesh::unwrap))
+      cdkBuilder.mesh(mesh.let(IMesh.Companion::unwrap))
     }
 
     /**
@@ -137,7 +137,7 @@ public open class Route(
      * @param routeSpec Protocol specific spec. 
      */
     override fun routeSpec(routeSpec: RouteSpec) {
-      cdkBuilder.routeSpec(routeSpec.let(RouteSpec::unwrap))
+      cdkBuilder.routeSpec(routeSpec.let(RouteSpec.Companion::unwrap))
     }
 
     /**
@@ -146,7 +146,7 @@ public open class Route(
      * @param virtualRouter The VirtualRouter the Route belongs to. 
      */
     override fun virtualRouter(virtualRouter: IVirtualRouter) {
-      cdkBuilder.virtualRouter(virtualRouter.let(IVirtualRouter::unwrap))
+      cdkBuilder.virtualRouter(virtualRouter.let(IVirtualRouter.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appmesh.Route = cdkBuilder.build()
@@ -158,7 +158,7 @@ public open class Route(
       id: String,
       routeArn: String,
     ): IRoute =
-        software.amazon.awscdk.services.appmesh.Route.fromRouteArn(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+        software.amazon.awscdk.services.appmesh.Route.fromRouteArn(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
         id, routeArn).let(IRoute::wrap)
 
     public fun fromRouteAttributes(
@@ -166,8 +166,8 @@ public open class Route(
       id: String,
       attrs: RouteAttributes,
     ): IRoute =
-        software.amazon.awscdk.services.appmesh.Route.fromRouteAttributes(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-        id, attrs.let(RouteAttributes::unwrap)).let(IRoute::wrap)
+        software.amazon.awscdk.services.appmesh.Route.fromRouteAttributes(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+        id, attrs.let(RouteAttributes.Companion::unwrap)).let(IRoute::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b2190a84fefcc7733f8e8d4df66b3b93fcad4f580dbc174940b6d79b14de1022")

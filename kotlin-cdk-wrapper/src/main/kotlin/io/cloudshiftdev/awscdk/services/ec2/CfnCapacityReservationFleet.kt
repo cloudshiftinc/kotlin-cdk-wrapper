@@ -66,7 +66,7 @@ public open class CfnCapacityReservationFleet(
   cdkObject: software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet,
 ) : CfnResource(cdkObject), IInspectable {
   public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
-      this(software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
+      this(software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
       id)
   )
 
@@ -75,8 +75,8 @@ public open class CfnCapacityReservationFleet(
     id: String,
     props: CfnCapacityReservationFleetProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnCapacityReservationFleetProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnCapacityReservationFleet(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnCapacityReservationFleetProps.Companion::unwrap))
   )
 
   public constructor(
@@ -124,7 +124,7 @@ public open class CfnCapacityReservationFleet(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -148,7 +148,7 @@ public open class CfnCapacityReservationFleet(
    * Information about the instance types for which to reserve the capacity.
    */
   public open fun instanceTypeSpecifications(`value`: IResolvable) {
-    unwrap(this).setInstanceTypeSpecifications(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInstanceTypeSpecifications(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -180,7 +180,7 @@ public open class CfnCapacityReservationFleet(
    * Used to add an end date to a Capacity Reservation Fleet that has no end date and time.
    */
   public open fun noRemoveEndDate(`value`: IResolvable) {
-    unwrap(this).setNoRemoveEndDate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setNoRemoveEndDate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -202,7 +202,7 @@ public open class CfnCapacityReservationFleet(
    * automatically at a specific date and time.
    */
   public open fun removeEndDate(`value`: IResolvable) {
-    unwrap(this).setRemoveEndDate(`value`.let(IResolvable::unwrap))
+    unwrap(this).setRemoveEndDate(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -214,7 +214,7 @@ public open class CfnCapacityReservationFleet(
    * The tags to assign to the Capacity Reservation Fleet.
    */
   public open fun tagSpecifications(`value`: IResolvable) {
-    unwrap(this).setTagSpecifications(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTagSpecifications(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -515,7 +515,7 @@ public open class CfnCapacityReservationFleet(
      * the capacity. 
      */
     override fun instanceTypeSpecifications(instanceTypeSpecifications: IResolvable) {
-      cdkBuilder.instanceTypeSpecifications(instanceTypeSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.instanceTypeSpecifications(instanceTypeSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -564,7 +564,7 @@ public open class CfnCapacityReservationFleet(
      * end date and time. 
      */
     override fun noRemoveEndDate(noRemoveEndDate: IResolvable) {
-      cdkBuilder.noRemoveEndDate(noRemoveEndDate.let(IResolvable::unwrap))
+      cdkBuilder.noRemoveEndDate(noRemoveEndDate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -594,7 +594,7 @@ public open class CfnCapacityReservationFleet(
      * configured to end automatically at a specific date and time. 
      */
     override fun removeEndDate(removeEndDate: IResolvable) {
-      cdkBuilder.removeEndDate(removeEndDate.let(IResolvable::unwrap))
+      cdkBuilder.removeEndDate(removeEndDate.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -606,7 +606,7 @@ public open class CfnCapacityReservationFleet(
      * @param tagSpecifications The tags to assign to the Capacity Reservation Fleet. 
      */
     override fun tagSpecifications(tagSpecifications: IResolvable) {
-      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable::unwrap))
+      cdkBuilder.tagSpecifications(tagSpecifications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -914,7 +914,7 @@ public open class CfnCapacityReservationFleet(
        * all instance types. Additional usage charges apply when using EBS-optimized instance types.
        */
       override fun ebsOptimized(ebsOptimized: IResolvable) {
-        cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
+        cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1152,7 +1152,7 @@ public open class CfnCapacityReservationFleet(
        * @param tags The tags to apply to the resource.
        */
       override fun tags(tags: List<CfnTag>) {
-        cdkBuilder.tags(tags.map(CfnTag::unwrap))
+        cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
       }
 
       /**

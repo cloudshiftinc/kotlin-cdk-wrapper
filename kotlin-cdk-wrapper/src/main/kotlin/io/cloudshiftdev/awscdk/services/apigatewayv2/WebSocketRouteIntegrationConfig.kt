@@ -182,14 +182,14 @@ public interface WebSocketRouteIntegrationConfig {
      * @param contentHandling Specifies how to handle response payload content type conversions.
      */
     override fun contentHandling(contentHandling: ContentHandling) {
-      cdkBuilder.contentHandling(contentHandling.let(ContentHandling::unwrap))
+      cdkBuilder.contentHandling(contentHandling.let(ContentHandling.Companion::unwrap))
     }
 
     /**
      * @param credentialsRole Credentials role.
      */
     override fun credentialsRole(credentialsRole: IRole) {
-      cdkBuilder.credentialsRole(credentialsRole.let(IRole::unwrap))
+      cdkBuilder.credentialsRole(credentialsRole.let(IRole.Companion::unwrap))
     }
 
     /**
@@ -203,7 +203,7 @@ public interface WebSocketRouteIntegrationConfig {
      * @param passthroughBehavior Integration passthrough behaviors.
      */
     override fun passthroughBehavior(passthroughBehavior: PassthroughBehavior) {
-      cdkBuilder.passthroughBehavior(passthroughBehavior.let(PassthroughBehavior::unwrap))
+      cdkBuilder.passthroughBehavior(passthroughBehavior.let(PassthroughBehavior.Companion::unwrap))
     }
 
     /**
@@ -233,14 +233,14 @@ public interface WebSocketRouteIntegrationConfig {
      * Must be between 50 milliseconds and 29 seconds.
      */
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     /**
      * @param type Integration type. 
      */
     override fun type(type: WebSocketIntegrationType) {
-      cdkBuilder.type(type.let(WebSocketIntegrationType::unwrap))
+      cdkBuilder.type(type.let(WebSocketIntegrationType.Companion::unwrap))
     }
 
     /**

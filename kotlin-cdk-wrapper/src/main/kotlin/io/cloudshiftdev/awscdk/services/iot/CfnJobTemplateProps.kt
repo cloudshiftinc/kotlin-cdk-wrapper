@@ -374,7 +374,7 @@ public interface CfnJobTemplateProps {
      * @param jobExecutionsRetryConfig Allows you to create the criteria to retry a job.
      */
     override fun jobExecutionsRetryConfig(jobExecutionsRetryConfig: IResolvable) {
-      cdkBuilder.jobExecutionsRetryConfig(jobExecutionsRetryConfig.let(IResolvable::unwrap))
+      cdkBuilder.jobExecutionsRetryConfig(jobExecutionsRetryConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -382,7 +382,7 @@ public interface CfnJobTemplateProps {
      */
     override
         fun jobExecutionsRetryConfig(jobExecutionsRetryConfig: CfnJobTemplate.JobExecutionsRetryConfigProperty) {
-      cdkBuilder.jobExecutionsRetryConfig(jobExecutionsRetryConfig.let(CfnJobTemplate.JobExecutionsRetryConfigProperty::unwrap))
+      cdkBuilder.jobExecutionsRetryConfig(jobExecutionsRetryConfig.let(CfnJobTemplate.JobExecutionsRetryConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -416,7 +416,7 @@ public interface CfnJobTemplateProps {
      * job document to all devices in a target group for a job.
      */
     override fun maintenanceWindows(maintenanceWindows: IResolvable) {
-      cdkBuilder.maintenanceWindows(maintenanceWindows.let(IResolvable::unwrap))
+      cdkBuilder.maintenanceWindows(maintenanceWindows.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -447,7 +447,7 @@ public interface CfnJobTemplateProps {
      * @param tags Metadata that can be used to manage the job template.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

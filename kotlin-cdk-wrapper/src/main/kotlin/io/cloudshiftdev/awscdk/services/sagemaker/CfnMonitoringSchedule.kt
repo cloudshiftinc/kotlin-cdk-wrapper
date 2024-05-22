@@ -159,8 +159,8 @@ public open class CfnMonitoringSchedule(
     id: String,
     props: CfnMonitoringScheduleProps,
   ) :
-      this(software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnMonitoringScheduleProps::unwrap))
+      this(software.amazon.awscdk.services.sagemaker.CfnMonitoringSchedule(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnMonitoringScheduleProps.Companion::unwrap))
   )
 
   public constructor(
@@ -215,7 +215,7 @@ public open class CfnMonitoringSchedule(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -228,14 +228,14 @@ public open class CfnMonitoringSchedule(
    * Describes metadata on the last execution to run, if there was one.
    */
   public open fun lastMonitoringExecutionSummary(`value`: IResolvable) {
-    unwrap(this).setLastMonitoringExecutionSummary(`value`.let(IResolvable::unwrap))
+    unwrap(this).setLastMonitoringExecutionSummary(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Describes metadata on the last execution to run, if there was one.
    */
   public open fun lastMonitoringExecutionSummary(`value`: MonitoringExecutionSummaryProperty) {
-    unwrap(this).setLastMonitoringExecutionSummary(`value`.let(MonitoringExecutionSummaryProperty::unwrap))
+    unwrap(this).setLastMonitoringExecutionSummary(`value`.let(MonitoringExecutionSummaryProperty.Companion::unwrap))
   }
 
   /**
@@ -256,14 +256,14 @@ public open class CfnMonitoringSchedule(
    * The configuration object that specifies the monitoring schedule and defines the monitoring job.
    */
   public open fun monitoringScheduleConfig(`value`: IResolvable) {
-    unwrap(this).setMonitoringScheduleConfig(`value`.let(IResolvable::unwrap))
+    unwrap(this).setMonitoringScheduleConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The configuration object that specifies the monitoring schedule and defines the monitoring job.
    */
   public open fun monitoringScheduleConfig(`value`: MonitoringScheduleConfigProperty) {
-    unwrap(this).setMonitoringScheduleConfig(`value`.let(MonitoringScheduleConfigProperty::unwrap))
+    unwrap(this).setMonitoringScheduleConfig(`value`.let(MonitoringScheduleConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -314,7 +314,7 @@ public open class CfnMonitoringSchedule(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -483,7 +483,7 @@ public open class CfnMonitoringSchedule(
      * there was one. 
      */
     override fun lastMonitoringExecutionSummary(lastMonitoringExecutionSummary: IResolvable) {
-      cdkBuilder.lastMonitoringExecutionSummary(lastMonitoringExecutionSummary.let(IResolvable::unwrap))
+      cdkBuilder.lastMonitoringExecutionSummary(lastMonitoringExecutionSummary.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -495,7 +495,7 @@ public open class CfnMonitoringSchedule(
      */
     override
         fun lastMonitoringExecutionSummary(lastMonitoringExecutionSummary: MonitoringExecutionSummaryProperty) {
-      cdkBuilder.lastMonitoringExecutionSummary(lastMonitoringExecutionSummary.let(MonitoringExecutionSummaryProperty::unwrap))
+      cdkBuilder.lastMonitoringExecutionSummary(lastMonitoringExecutionSummary.let(MonitoringExecutionSummaryProperty.Companion::unwrap))
     }
 
     /**
@@ -521,7 +521,7 @@ public open class CfnMonitoringSchedule(
      * schedule and defines the monitoring job. 
      */
     override fun monitoringScheduleConfig(monitoringScheduleConfig: IResolvable) {
-      cdkBuilder.monitoringScheduleConfig(monitoringScheduleConfig.let(IResolvable::unwrap))
+      cdkBuilder.monitoringScheduleConfig(monitoringScheduleConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -534,7 +534,7 @@ public open class CfnMonitoringSchedule(
      */
     override
         fun monitoringScheduleConfig(monitoringScheduleConfig: MonitoringScheduleConfigProperty) {
-      cdkBuilder.monitoringScheduleConfig(monitoringScheduleConfig.let(MonitoringScheduleConfigProperty::unwrap))
+      cdkBuilder.monitoringScheduleConfig(monitoringScheduleConfig.let(MonitoringScheduleConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -582,7 +582,7 @@ public open class CfnMonitoringSchedule(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -715,14 +715,14 @@ public open class CfnMonitoringSchedule(
        * @param constraintsResource The Amazon S3 URI for the constraints resource.
        */
       override fun constraintsResource(constraintsResource: IResolvable) {
-        cdkBuilder.constraintsResource(constraintsResource.let(IResolvable::unwrap))
+        cdkBuilder.constraintsResource(constraintsResource.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param constraintsResource The Amazon S3 URI for the constraints resource.
        */
       override fun constraintsResource(constraintsResource: ConstraintsResourceProperty) {
-        cdkBuilder.constraintsResource(constraintsResource.let(ConstraintsResourceProperty::unwrap))
+        cdkBuilder.constraintsResource(constraintsResource.let(ConstraintsResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -739,7 +739,7 @@ public open class CfnMonitoringSchedule(
        * monitoring job should be validated against.
        */
       override fun statisticsResource(statisticsResource: IResolvable) {
-        cdkBuilder.statisticsResource(statisticsResource.let(IResolvable::unwrap))
+        cdkBuilder.statisticsResource(statisticsResource.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -747,7 +747,7 @@ public open class CfnMonitoringSchedule(
        * monitoring job should be validated against.
        */
       override fun statisticsResource(statisticsResource: StatisticsResourceProperty) {
-        cdkBuilder.statisticsResource(statisticsResource.let(StatisticsResourceProperty::unwrap))
+        cdkBuilder.statisticsResource(statisticsResource.let(StatisticsResourceProperty.Companion::unwrap))
       }
 
       /**
@@ -953,14 +953,14 @@ public open class CfnMonitoringSchedule(
        * @param datasetFormat The dataset format for your batch transform job. 
        */
       override fun datasetFormat(datasetFormat: IResolvable) {
-        cdkBuilder.datasetFormat(datasetFormat.let(IResolvable::unwrap))
+        cdkBuilder.datasetFormat(datasetFormat.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param datasetFormat The dataset format for your batch transform job. 
        */
       override fun datasetFormat(datasetFormat: DatasetFormatProperty) {
-        cdkBuilder.datasetFormat(datasetFormat.let(DatasetFormatProperty::unwrap))
+        cdkBuilder.datasetFormat(datasetFormat.let(DatasetFormatProperty.Companion::unwrap))
       }
 
       /**
@@ -1406,7 +1406,7 @@ public open class CfnMonitoringSchedule(
        * @param header A boolean flag indicating if given CSV has header.
        */
       override fun `header`(`header`: IResolvable) {
-        cdkBuilder.`header`(`header`.let(IResolvable::unwrap))
+        cdkBuilder.`header`(`header`.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1546,14 +1546,14 @@ public open class CfnMonitoringSchedule(
        * @param csv The CSV format.
        */
       override fun csv(csv: IResolvable) {
-        cdkBuilder.csv(csv.let(IResolvable::unwrap))
+        cdkBuilder.csv(csv.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param csv The CSV format.
        */
       override fun csv(csv: CsvProperty) {
-        cdkBuilder.csv(csv.let(CsvProperty::unwrap))
+        cdkBuilder.csv(csv.let(CsvProperty.Companion::unwrap))
       }
 
       /**
@@ -1567,14 +1567,14 @@ public open class CfnMonitoringSchedule(
        * @param json The Json format.
        */
       override fun json(json: IResolvable) {
-        cdkBuilder.json(json.let(IResolvable::unwrap))
+        cdkBuilder.json(json.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param json The Json format.
        */
       override fun json(json: JsonProperty) {
-        cdkBuilder.json(json.let(JsonProperty::unwrap))
+        cdkBuilder.json(json.let(JsonProperty.Companion::unwrap))
       }
 
       /**
@@ -1595,7 +1595,7 @@ public open class CfnMonitoringSchedule(
        * @param parquet A flag indicating if the dataset format is Parquet.
        */
       override fun parquet(parquet: IResolvable) {
-        cdkBuilder.parquet(parquet.let(IResolvable::unwrap))
+        cdkBuilder.parquet(parquet.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1923,7 +1923,7 @@ public open class CfnMonitoringSchedule(
        * @param line A boolean flag indicating if it is JSON line format.
        */
       override fun line(line: IResolvable) {
-        cdkBuilder.line(line.let(IResolvable::unwrap))
+        cdkBuilder.line(line.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2595,14 +2595,14 @@ public open class CfnMonitoringSchedule(
        * @param batchTransformInput Input object for the batch transform job.
        */
       override fun batchTransformInput(batchTransformInput: IResolvable) {
-        cdkBuilder.batchTransformInput(batchTransformInput.let(IResolvable::unwrap))
+        cdkBuilder.batchTransformInput(batchTransformInput.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param batchTransformInput Input object for the batch transform job.
        */
       override fun batchTransformInput(batchTransformInput: BatchTransformInputProperty) {
-        cdkBuilder.batchTransformInput(batchTransformInput.let(BatchTransformInputProperty::unwrap))
+        cdkBuilder.batchTransformInput(batchTransformInput.let(BatchTransformInputProperty.Companion::unwrap))
       }
 
       /**
@@ -2618,14 +2618,14 @@ public open class CfnMonitoringSchedule(
        * @param endpointInput The endpoint for a monitoring job.
        */
       override fun endpointInput(endpointInput: IResolvable) {
-        cdkBuilder.endpointInput(endpointInput.let(IResolvable::unwrap))
+        cdkBuilder.endpointInput(endpointInput.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param endpointInput The endpoint for a monitoring job.
        */
       override fun endpointInput(endpointInput: EndpointInputProperty) {
-        cdkBuilder.endpointInput(endpointInput.let(EndpointInputProperty::unwrap))
+        cdkBuilder.endpointInput(endpointInput.let(EndpointInputProperty.Companion::unwrap))
       }
 
       /**
@@ -3018,7 +3018,7 @@ public open class CfnMonitoringSchedule(
        * specified constraints and statistics.
        */
       override fun baselineConfig(baselineConfig: IResolvable) {
-        cdkBuilder.baselineConfig(baselineConfig.let(IResolvable::unwrap))
+        cdkBuilder.baselineConfig(baselineConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3026,7 +3026,7 @@ public open class CfnMonitoringSchedule(
        * specified constraints and statistics.
        */
       override fun baselineConfig(baselineConfig: BaselineConfigProperty) {
-        cdkBuilder.baselineConfig(baselineConfig.let(BaselineConfigProperty::unwrap))
+        cdkBuilder.baselineConfig(baselineConfig.let(BaselineConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -3042,7 +3042,7 @@ public open class CfnMonitoringSchedule(
        * @param environment Sets the environment variables in the Docker container.
        */
       override fun environment(environment: IResolvable) {
-        cdkBuilder.environment(environment.let(IResolvable::unwrap))
+        cdkBuilder.environment(environment.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3057,7 +3057,7 @@ public open class CfnMonitoringSchedule(
        * container image. 
        */
       override fun monitoringAppSpecification(monitoringAppSpecification: IResolvable) {
-        cdkBuilder.monitoringAppSpecification(monitoringAppSpecification.let(IResolvable::unwrap))
+        cdkBuilder.monitoringAppSpecification(monitoringAppSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3066,7 +3066,7 @@ public open class CfnMonitoringSchedule(
        */
       override
           fun monitoringAppSpecification(monitoringAppSpecification: MonitoringAppSpecificationProperty) {
-        cdkBuilder.monitoringAppSpecification(monitoringAppSpecification.let(MonitoringAppSpecificationProperty::unwrap))
+        cdkBuilder.monitoringAppSpecification(monitoringAppSpecification.let(MonitoringAppSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -3085,7 +3085,7 @@ public open class CfnMonitoringSchedule(
        * Currently we support monitoring an Amazon SageMaker Endpoint.
        */
       override fun monitoringInputs(monitoringInputs: IResolvable) {
-        cdkBuilder.monitoringInputs(monitoringInputs.let(IResolvable::unwrap))
+        cdkBuilder.monitoringInputs(monitoringInputs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3108,7 +3108,7 @@ public open class CfnMonitoringSchedule(
        * to Amazon S3. 
        */
       override fun monitoringOutputConfig(monitoringOutputConfig: IResolvable) {
-        cdkBuilder.monitoringOutputConfig(monitoringOutputConfig.let(IResolvable::unwrap))
+        cdkBuilder.monitoringOutputConfig(monitoringOutputConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3116,7 +3116,7 @@ public open class CfnMonitoringSchedule(
        * to Amazon S3. 
        */
       override fun monitoringOutputConfig(monitoringOutputConfig: MonitoringOutputConfigProperty) {
-        cdkBuilder.monitoringOutputConfig(monitoringOutputConfig.let(MonitoringOutputConfigProperty::unwrap))
+        cdkBuilder.monitoringOutputConfig(monitoringOutputConfig.let(MonitoringOutputConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -3135,7 +3135,7 @@ public open class CfnMonitoringSchedule(
        * In distributed processing, you specify more than one instance.
        */
       override fun monitoringResources(monitoringResources: IResolvable) {
-        cdkBuilder.monitoringResources(monitoringResources.let(IResolvable::unwrap))
+        cdkBuilder.monitoringResources(monitoringResources.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3144,7 +3144,7 @@ public open class CfnMonitoringSchedule(
        * In distributed processing, you specify more than one instance.
        */
       override fun monitoringResources(monitoringResources: MonitoringResourcesProperty) {
-        cdkBuilder.monitoringResources(monitoringResources.let(MonitoringResourcesProperty::unwrap))
+        cdkBuilder.monitoringResources(monitoringResources.let(MonitoringResourcesProperty.Companion::unwrap))
       }
 
       /**
@@ -3162,14 +3162,14 @@ public open class CfnMonitoringSchedule(
        * @param networkConfig Specifies networking options for an monitoring job.
        */
       override fun networkConfig(networkConfig: IResolvable) {
-        cdkBuilder.networkConfig(networkConfig.let(IResolvable::unwrap))
+        cdkBuilder.networkConfig(networkConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param networkConfig Specifies networking options for an monitoring job.
        */
       override fun networkConfig(networkConfig: NetworkConfigProperty) {
-        cdkBuilder.networkConfig(networkConfig.let(NetworkConfigProperty::unwrap))
+        cdkBuilder.networkConfig(networkConfig.let(NetworkConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -3193,7 +3193,7 @@ public open class CfnMonitoringSchedule(
        * to run.
        */
       override fun stoppingCondition(stoppingCondition: IResolvable) {
-        cdkBuilder.stoppingCondition(stoppingCondition.let(IResolvable::unwrap))
+        cdkBuilder.stoppingCondition(stoppingCondition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3201,7 +3201,7 @@ public open class CfnMonitoringSchedule(
        * to run.
        */
       override fun stoppingCondition(stoppingCondition: StoppingConditionProperty) {
-        cdkBuilder.stoppingCondition(stoppingCondition.let(StoppingConditionProperty::unwrap))
+        cdkBuilder.stoppingCondition(stoppingCondition.let(StoppingConditionProperty.Companion::unwrap))
       }
 
       /**
@@ -3404,7 +3404,7 @@ public open class CfnMonitoringSchedule(
        * This is where the output of the periodic monitoring jobs is uploaded.
        */
       override fun monitoringOutputs(monitoringOutputs: IResolvable) {
-        cdkBuilder.monitoringOutputs(monitoringOutputs.let(IResolvable::unwrap))
+        cdkBuilder.monitoringOutputs(monitoringOutputs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3532,7 +3532,7 @@ public open class CfnMonitoringSchedule(
        * saved. 
        */
       override fun s3Output(s3Output: IResolvable) {
-        cdkBuilder.s3Output(s3Output.let(IResolvable::unwrap))
+        cdkBuilder.s3Output(s3Output.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3540,7 +3540,7 @@ public open class CfnMonitoringSchedule(
        * saved. 
        */
       override fun s3Output(s3Output: S3OutputProperty) {
-        cdkBuilder.s3Output(s3Output.let(S3OutputProperty::unwrap))
+        cdkBuilder.s3Output(s3Output.let(S3OutputProperty.Companion::unwrap))
       }
 
       /**
@@ -3653,7 +3653,7 @@ public open class CfnMonitoringSchedule(
        * job. 
        */
       override fun clusterConfig(clusterConfig: IResolvable) {
-        cdkBuilder.clusterConfig(clusterConfig.let(IResolvable::unwrap))
+        cdkBuilder.clusterConfig(clusterConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3661,7 +3661,7 @@ public open class CfnMonitoringSchedule(
        * job. 
        */
       override fun clusterConfig(clusterConfig: ClusterConfigProperty) {
-        cdkBuilder.clusterConfig(clusterConfig.let(ClusterConfigProperty::unwrap))
+        cdkBuilder.clusterConfig(clusterConfig.let(ClusterConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -3903,7 +3903,7 @@ public open class CfnMonitoringSchedule(
        * @param monitoringJobDefinition Defines the monitoring job.
        */
       override fun monitoringJobDefinition(monitoringJobDefinition: IResolvable) {
-        cdkBuilder.monitoringJobDefinition(monitoringJobDefinition.let(IResolvable::unwrap))
+        cdkBuilder.monitoringJobDefinition(monitoringJobDefinition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3911,7 +3911,7 @@ public open class CfnMonitoringSchedule(
        */
       override
           fun monitoringJobDefinition(monitoringJobDefinition: MonitoringJobDefinitionProperty) {
-        cdkBuilder.monitoringJobDefinition(monitoringJobDefinition.let(MonitoringJobDefinitionProperty::unwrap))
+        cdkBuilder.monitoringJobDefinition(monitoringJobDefinition.let(MonitoringJobDefinitionProperty.Companion::unwrap))
       }
 
       /**
@@ -3941,14 +3941,14 @@ public open class CfnMonitoringSchedule(
        * @param scheduleConfig Configures the monitoring schedule.
        */
       override fun scheduleConfig(scheduleConfig: IResolvable) {
-        cdkBuilder.scheduleConfig(scheduleConfig.let(IResolvable::unwrap))
+        cdkBuilder.scheduleConfig(scheduleConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param scheduleConfig Configures the monitoring schedule.
        */
       override fun scheduleConfig(scheduleConfig: ScheduleConfigProperty) {
-        cdkBuilder.scheduleConfig(scheduleConfig.let(ScheduleConfigProperty::unwrap))
+        cdkBuilder.scheduleConfig(scheduleConfig.let(ScheduleConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -4164,7 +4164,7 @@ public open class CfnMonitoringSchedule(
        */
       override
           fun enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption: IResolvable) {
-        cdkBuilder.enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption.let(IResolvable::unwrap))
+        cdkBuilder.enableInterContainerTrafficEncryption(enableInterContainerTrafficEncryption.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4180,7 +4180,7 @@ public open class CfnMonitoringSchedule(
        * from the containers used for the processing job.
        */
       override fun enableNetworkIsolation(enableNetworkIsolation: IResolvable) {
-        cdkBuilder.enableNetworkIsolation(enableNetworkIsolation.let(IResolvable::unwrap))
+        cdkBuilder.enableNetworkIsolation(enableNetworkIsolation.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4192,7 +4192,7 @@ public open class CfnMonitoringSchedule(
        * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html) .
        */
       override fun vpcConfig(vpcConfig: IResolvable) {
-        cdkBuilder.vpcConfig(vpcConfig.let(IResolvable::unwrap))
+        cdkBuilder.vpcConfig(vpcConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4204,7 +4204,7 @@ public open class CfnMonitoringSchedule(
        * Cloud](https://docs.aws.amazon.com/sagemaker/latest/dg/train-vpc.html) .
        */
       override fun vpcConfig(vpcConfig: VpcConfigProperty) {
-        cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty::unwrap))
+        cdkBuilder.vpcConfig(vpcConfig.let(VpcConfigProperty.Companion::unwrap))
       }
 
       /**

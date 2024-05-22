@@ -185,7 +185,7 @@ public interface CfnUsagePlanProps {
      * @param apiStages The associated API stages of a usage plan.
      */
     override fun apiStages(apiStages: IResolvable) {
-      cdkBuilder.apiStages(apiStages.let(IResolvable::unwrap))
+      cdkBuilder.apiStages(apiStages.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -211,14 +211,14 @@ public interface CfnUsagePlanProps {
      * @param quota The target maximum number of permitted requests per a given unit time interval.
      */
     override fun quota(quota: IResolvable) {
-      cdkBuilder.quota(quota.let(IResolvable::unwrap))
+      cdkBuilder.quota(quota.let(IResolvable.Companion::unwrap))
     }
 
     /**
      * @param quota The target maximum number of permitted requests per a given unit time interval.
      */
     override fun quota(quota: CfnUsagePlan.QuotaSettingsProperty) {
-      cdkBuilder.quota(quota.let(CfnUsagePlan.QuotaSettingsProperty::unwrap))
+      cdkBuilder.quota(quota.let(CfnUsagePlan.QuotaSettingsProperty.Companion::unwrap))
     }
 
     /**
@@ -234,7 +234,7 @@ public interface CfnUsagePlanProps {
      * Each tag element is associated with a given resource.
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -248,7 +248,7 @@ public interface CfnUsagePlanProps {
      * plan.
      */
     override fun throttle(throttle: IResolvable) {
-      cdkBuilder.throttle(throttle.let(IResolvable::unwrap))
+      cdkBuilder.throttle(throttle.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -256,7 +256,7 @@ public interface CfnUsagePlanProps {
      * plan.
      */
     override fun throttle(throttle: CfnUsagePlan.ThrottleSettingsProperty) {
-      cdkBuilder.throttle(throttle.let(CfnUsagePlan.ThrottleSettingsProperty::unwrap))
+      cdkBuilder.throttle(throttle.let(CfnUsagePlan.ThrottleSettingsProperty.Companion::unwrap))
     }
 
     /**

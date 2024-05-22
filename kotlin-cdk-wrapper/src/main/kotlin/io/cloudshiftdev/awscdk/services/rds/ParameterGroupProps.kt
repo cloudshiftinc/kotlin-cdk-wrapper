@@ -94,6 +94,13 @@ public interface ParameterGroupProps {
   public fun engine(): IEngine
 
   /**
+   * The name of this parameter group.
+   *
+   * Default: - CloudFormation-generated name
+   */
+  public fun name(): String? = unwrap(this).getName()
+
+  /**
    * The parameters in this parameter group.
    *
    * Default: - None
@@ -125,6 +132,11 @@ public interface ParameterGroupProps {
     public fun engine(engine: IEngine)
 
     /**
+     * @param name The name of this parameter group.
+     */
+    public fun name(name: String)
+
+    /**
      * @param parameters The parameters in this parameter group.
      */
     public fun parameters(parameters: Map<String, String>)
@@ -151,7 +163,14 @@ public interface ParameterGroupProps {
      * @param engine The database engine for this parameter group. 
      */
     override fun engine(engine: IEngine) {
-      cdkBuilder.engine(engine.let(IEngine::unwrap))
+      cdkBuilder.engine(engine.let(IEngine.Companion::unwrap))
+    }
+
+    /**
+     * @param name The name of this parameter group.
+     */
+    override fun name(name: String) {
+      cdkBuilder.name(name)
     }
 
     /**
@@ -166,7 +185,7 @@ public interface ParameterGroupProps {
      * stack or replaced during an update.
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
-      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+      cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.rds.ParameterGroupProps = cdkBuilder.build()
@@ -186,6 +205,13 @@ public interface ParameterGroupProps {
      * The database engine for this parameter group.
      */
     override fun engine(): IEngine = unwrap(this).getEngine().let(IEngine::wrap)
+
+    /**
+     * The name of this parameter group.
+     *
+     * Default: - CloudFormation-generated name
+     */
+    override fun name(): String? = unwrap(this).getName()
 
     /**
      * The parameters in this parameter group.

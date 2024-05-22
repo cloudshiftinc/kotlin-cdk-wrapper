@@ -189,7 +189,7 @@ public interface CfnCodeDeployBlueGreenHookProps {
      * @param additionalOptions Additional options for the blue/green deployment.
      */
     override fun additionalOptions(additionalOptions: CfnCodeDeployBlueGreenAdditionalOptions) {
-      cdkBuilder.additionalOptions(additionalOptions.let(CfnCodeDeployBlueGreenAdditionalOptions::unwrap))
+      cdkBuilder.additionalOptions(additionalOptions.let(CfnCodeDeployBlueGreenAdditionalOptions.Companion::unwrap))
     }
 
     /**
@@ -205,7 +205,7 @@ public interface CfnCodeDeployBlueGreenHookProps {
      * @param applications Properties of the Amazon ECS applications being deployed. 
      */
     override fun applications(applications: List<CfnCodeDeployBlueGreenApplication>) {
-      cdkBuilder.applications(applications.map(CfnCodeDeployBlueGreenApplication::unwrap))
+      cdkBuilder.applications(applications.map(CfnCodeDeployBlueGreenApplication.Companion::unwrap))
     }
 
     /**
@@ -224,7 +224,7 @@ public interface CfnCodeDeployBlueGreenHookProps {
      */
     override
         fun lifecycleEventHooks(lifecycleEventHooks: CfnCodeDeployBlueGreenLifecycleEventHooks) {
-      cdkBuilder.lifecycleEventHooks(lifecycleEventHooks.let(CfnCodeDeployBlueGreenLifecycleEventHooks::unwrap))
+      cdkBuilder.lifecycleEventHooks(lifecycleEventHooks.let(CfnCodeDeployBlueGreenLifecycleEventHooks.Companion::unwrap))
     }
 
     /**
@@ -252,7 +252,7 @@ public interface CfnCodeDeployBlueGreenHookProps {
      * @param trafficRoutingConfig Traffic routing configuration settings.
      */
     override fun trafficRoutingConfig(trafficRoutingConfig: CfnTrafficRoutingConfig) {
-      cdkBuilder.trafficRoutingConfig(trafficRoutingConfig.let(CfnTrafficRoutingConfig::unwrap))
+      cdkBuilder.trafficRoutingConfig(trafficRoutingConfig.let(CfnTrafficRoutingConfig.Companion::unwrap))
     }
 
     /**

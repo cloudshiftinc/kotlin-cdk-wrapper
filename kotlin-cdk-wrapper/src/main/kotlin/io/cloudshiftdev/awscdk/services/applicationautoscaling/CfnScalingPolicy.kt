@@ -108,8 +108,8 @@ public open class CfnScalingPolicy(
     id: String,
     props: CfnScalingPolicyProps,
   ) :
-      this(software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnScalingPolicyProps::unwrap))
+      this(software.amazon.awscdk.services.applicationautoscaling.CfnScalingPolicy(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnScalingPolicyProps.Companion::unwrap))
   )
 
   public constructor(
@@ -130,7 +130,7 @@ public open class CfnScalingPolicy(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -219,14 +219,14 @@ public open class CfnScalingPolicy(
    * A step scaling policy.
    */
   public open fun stepScalingPolicyConfiguration(`value`: IResolvable) {
-    unwrap(this).setStepScalingPolicyConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setStepScalingPolicyConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A step scaling policy.
    */
   public open fun stepScalingPolicyConfiguration(`value`: StepScalingPolicyConfigurationProperty) {
-    unwrap(this).setStepScalingPolicyConfiguration(`value`.let(StepScalingPolicyConfigurationProperty::unwrap))
+    unwrap(this).setStepScalingPolicyConfiguration(`value`.let(StepScalingPolicyConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -248,7 +248,7 @@ public open class CfnScalingPolicy(
    * A target tracking scaling policy.
    */
   public open fun targetTrackingScalingPolicyConfiguration(`value`: IResolvable) {
-    unwrap(this).setTargetTrackingScalingPolicyConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setTargetTrackingScalingPolicyConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -256,7 +256,7 @@ public open class CfnScalingPolicy(
    */
   public open
       fun targetTrackingScalingPolicyConfiguration(`value`: TargetTrackingScalingPolicyConfigurationProperty) {
-    unwrap(this).setTargetTrackingScalingPolicyConfiguration(`value`.let(TargetTrackingScalingPolicyConfigurationProperty::unwrap))
+    unwrap(this).setTargetTrackingScalingPolicyConfiguration(`value`.let(TargetTrackingScalingPolicyConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -681,7 +681,7 @@ public open class CfnScalingPolicy(
      * @param stepScalingPolicyConfiguration A step scaling policy. 
      */
     override fun stepScalingPolicyConfiguration(stepScalingPolicyConfiguration: IResolvable) {
-      cdkBuilder.stepScalingPolicyConfiguration(stepScalingPolicyConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.stepScalingPolicyConfiguration(stepScalingPolicyConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -692,7 +692,7 @@ public open class CfnScalingPolicy(
      */
     override
         fun stepScalingPolicyConfiguration(stepScalingPolicyConfiguration: StepScalingPolicyConfigurationProperty) {
-      cdkBuilder.stepScalingPolicyConfiguration(stepScalingPolicyConfiguration.let(StepScalingPolicyConfigurationProperty::unwrap))
+      cdkBuilder.stepScalingPolicyConfiguration(stepScalingPolicyConfiguration.let(StepScalingPolicyConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -716,7 +716,7 @@ public open class CfnScalingPolicy(
      */
     override
         fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: IResolvable) {
-      cdkBuilder.targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -727,7 +727,7 @@ public open class CfnScalingPolicy(
      */
     override
         fun targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration: TargetTrackingScalingPolicyConfigurationProperty) {
-      cdkBuilder.targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration.let(TargetTrackingScalingPolicyConfigurationProperty::unwrap))
+      cdkBuilder.targetTrackingScalingPolicyConfiguration(targetTrackingScalingPolicyConfiguration.let(TargetTrackingScalingPolicyConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -989,7 +989,7 @@ public open class CfnScalingPolicy(
        * dimensions in your scaling policy.
        */
       override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+        cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1026,7 +1026,7 @@ public open class CfnScalingPolicy(
        * This can include both raw metric and metric math expressions.
        */
       override fun metrics(metrics: IResolvable) {
-        cdkBuilder.metrics(metrics.let(IResolvable::unwrap))
+        cdkBuilder.metrics(metrics.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -1902,7 +1902,7 @@ public open class CfnScalingPolicy(
        * configuration.
        */
       override fun stepAdjustments(stepAdjustments: IResolvable) {
-        cdkBuilder.stepAdjustments(stepAdjustments.let(IResolvable::unwrap))
+        cdkBuilder.stepAdjustments(stepAdjustments.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2239,7 +2239,7 @@ public open class CfnScalingPolicy(
        * `MetricStat` , but not both.
        */
       override fun metricStat(metricStat: IResolvable) {
-        cdkBuilder.metricStat(metricStat.let(IResolvable::unwrap))
+        cdkBuilder.metricStat(metricStat.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2248,7 +2248,7 @@ public open class CfnScalingPolicy(
        * `MetricStat` , but not both.
        */
       override fun metricStat(metricStat: TargetTrackingMetricStatProperty) {
-        cdkBuilder.metricStat(metricStat.let(TargetTrackingMetricStatProperty::unwrap))
+        cdkBuilder.metricStat(metricStat.let(TargetTrackingMetricStatProperty.Companion::unwrap))
       }
 
       /**
@@ -2286,7 +2286,7 @@ public open class CfnScalingPolicy(
        * anything for `ReturnData` . This sets it to its default ( `true` ).
        */
       override fun returnData(returnData: IResolvable) {
-        cdkBuilder.returnData(returnData.let(IResolvable::unwrap))
+        cdkBuilder.returnData(returnData.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -2623,7 +2623,7 @@ public open class CfnScalingPolicy(
        * dimensions in your scaling policy.
        */
       override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+        cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2878,7 +2878,7 @@ public open class CfnScalingPolicy(
        * .
        */
       override fun metric(metric: IResolvable) {
-        cdkBuilder.metric(metric.let(IResolvable::unwrap))
+        cdkBuilder.metric(metric.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2891,7 +2891,7 @@ public open class CfnScalingPolicy(
        * .
        */
       override fun metric(metric: TargetTrackingMetricProperty) {
-        cdkBuilder.metric(metric.let(TargetTrackingMetricProperty::unwrap))
+        cdkBuilder.metric(metric.let(TargetTrackingMetricProperty.Companion::unwrap))
       }
 
       /**
@@ -3237,7 +3237,7 @@ public open class CfnScalingPolicy(
        * You can specify either a predefined metric or a customized metric.
        */
       override fun customizedMetricSpecification(customizedMetricSpecification: IResolvable) {
-        cdkBuilder.customizedMetricSpecification(customizedMetricSpecification.let(IResolvable::unwrap))
+        cdkBuilder.customizedMetricSpecification(customizedMetricSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3246,7 +3246,7 @@ public open class CfnScalingPolicy(
        */
       override
           fun customizedMetricSpecification(customizedMetricSpecification: CustomizedMetricSpecificationProperty) {
-        cdkBuilder.customizedMetricSpecification(customizedMetricSpecification.let(CustomizedMetricSpecificationProperty::unwrap))
+        cdkBuilder.customizedMetricSpecification(customizedMetricSpecification.let(CustomizedMetricSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -3281,7 +3281,7 @@ public open class CfnScalingPolicy(
        * `false` .
        */
       override fun disableScaleIn(disableScaleIn: IResolvable) {
-        cdkBuilder.disableScaleIn(disableScaleIn.let(IResolvable::unwrap))
+        cdkBuilder.disableScaleIn(disableScaleIn.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3289,7 +3289,7 @@ public open class CfnScalingPolicy(
        * You can specify either a predefined metric or a customized metric.
        */
       override fun predefinedMetricSpecification(predefinedMetricSpecification: IResolvable) {
-        cdkBuilder.predefinedMetricSpecification(predefinedMetricSpecification.let(IResolvable::unwrap))
+        cdkBuilder.predefinedMetricSpecification(predefinedMetricSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3298,7 +3298,7 @@ public open class CfnScalingPolicy(
        */
       override
           fun predefinedMetricSpecification(predefinedMetricSpecification: PredefinedMetricSpecificationProperty) {
-        cdkBuilder.predefinedMetricSpecification(predefinedMetricSpecification.let(PredefinedMetricSpecificationProperty::unwrap))
+        cdkBuilder.predefinedMetricSpecification(predefinedMetricSpecification.let(PredefinedMetricSpecificationProperty.Companion::unwrap))
       }
 
       /**

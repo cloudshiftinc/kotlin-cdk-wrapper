@@ -77,8 +77,8 @@ public open class CfnAccessGrant(
     id: String,
     props: CfnAccessGrantProps,
   ) :
-      this(software.amazon.awscdk.services.s3.CfnAccessGrant(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnAccessGrantProps::unwrap))
+      this(software.amazon.awscdk.services.s3.CfnAccessGrant(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnAccessGrantProps.Companion::unwrap))
   )
 
   public constructor(
@@ -98,7 +98,7 @@ public open class CfnAccessGrant(
    * The configuration options of the grant location.
    */
   public open fun accessGrantsLocationConfiguration(`value`: IResolvable) {
-    unwrap(this).setAccessGrantsLocationConfiguration(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAccessGrantsLocationConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -106,7 +106,7 @@ public open class CfnAccessGrant(
    */
   public open
       fun accessGrantsLocationConfiguration(`value`: AccessGrantsLocationConfigurationProperty) {
-    unwrap(this).setAccessGrantsLocationConfiguration(`value`.let(AccessGrantsLocationConfigurationProperty::unwrap))
+    unwrap(this).setAccessGrantsLocationConfiguration(`value`.let(AccessGrantsLocationConfigurationProperty.Companion::unwrap))
   }
 
   /**
@@ -178,14 +178,14 @@ public open class CfnAccessGrant(
    * The user, group, or role to which you are granting access.
    */
   public open fun grantee(`value`: IResolvable) {
-    unwrap(this).setGrantee(`value`.let(IResolvable::unwrap))
+    unwrap(this).setGrantee(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The user, group, or role to which you are granting access.
    */
   public open fun grantee(`value`: GranteeProperty) {
-    unwrap(this).setGrantee(`value`.let(GranteeProperty::unwrap))
+    unwrap(this).setGrantee(`value`.let(GranteeProperty.Companion::unwrap))
   }
 
   /**
@@ -202,7 +202,7 @@ public open class CfnAccessGrant(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -240,7 +240,7 @@ public open class CfnAccessGrant(
    * The AWS resource tags that you are adding to the access grant.
    */
   public open fun tags(`value`: List<CfnTag>) {
-    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -422,7 +422,7 @@ public open class CfnAccessGrant(
      * @param accessGrantsLocationConfiguration The configuration options of the grant location. 
      */
     override fun accessGrantsLocationConfiguration(accessGrantsLocationConfiguration: IResolvable) {
-      cdkBuilder.accessGrantsLocationConfiguration(accessGrantsLocationConfiguration.let(IResolvable::unwrap))
+      cdkBuilder.accessGrantsLocationConfiguration(accessGrantsLocationConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -437,7 +437,7 @@ public open class CfnAccessGrant(
      */
     override
         fun accessGrantsLocationConfiguration(accessGrantsLocationConfiguration: AccessGrantsLocationConfigurationProperty) {
-      cdkBuilder.accessGrantsLocationConfiguration(accessGrantsLocationConfiguration.let(AccessGrantsLocationConfigurationProperty::unwrap))
+      cdkBuilder.accessGrantsLocationConfiguration(accessGrantsLocationConfiguration.let(AccessGrantsLocationConfigurationProperty.Companion::unwrap))
     }
 
     /**
@@ -498,7 +498,7 @@ public open class CfnAccessGrant(
      * @param grantee The user, group, or role to which you are granting access. 
      */
     override fun grantee(grantee: IResolvable) {
-      cdkBuilder.grantee(grantee.let(IResolvable::unwrap))
+      cdkBuilder.grantee(grantee.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -512,7 +512,7 @@ public open class CfnAccessGrant(
      * @param grantee The user, group, or role to which you are granting access. 
      */
     override fun grantee(grantee: GranteeProperty) {
-      cdkBuilder.grantee(grantee.let(GranteeProperty::unwrap))
+      cdkBuilder.grantee(grantee.let(GranteeProperty.Companion::unwrap))
     }
 
     /**
@@ -568,7 +568,7 @@ public open class CfnAccessGrant(
      * @param tags The AWS resource tags that you are adding to the access grant. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**

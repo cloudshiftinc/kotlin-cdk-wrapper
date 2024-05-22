@@ -203,7 +203,7 @@ public interface EksCallProps : TaskStateBaseProps {
      * @param cluster The EKS cluster. 
      */
     override fun cluster(cluster: ICluster) {
-      cdkBuilder.cluster(cluster.let(ICluster::unwrap))
+      cdkBuilder.cluster(cluster.let(ICluster.Companion::unwrap))
     }
 
     /**
@@ -219,7 +219,7 @@ public interface EksCallProps : TaskStateBaseProps {
      * This enables cross-account resource invocations.
      */
     override fun credentials(credentials: Credentials) {
-      cdkBuilder.credentials(credentials.let(Credentials::unwrap))
+      cdkBuilder.credentials(credentials.let(Credentials.Companion::unwrap))
     }
 
     /**
@@ -238,7 +238,7 @@ public interface EksCallProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun heartbeat(heartbeat: Duration) {
-      cdkBuilder.heartbeat(heartbeat.let(Duration::unwrap))
+      cdkBuilder.heartbeat(heartbeat.let(Duration.Companion::unwrap))
     }
 
     /**
@@ -247,14 +247,14 @@ public interface EksCallProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun heartbeatTimeout(heartbeatTimeout: Timeout) {
-      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout::unwrap))
+      cdkBuilder.heartbeatTimeout(heartbeatTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
      * @param httpMethod HTTP method ("GET", "POST", "PUT", ...) part of HTTP request. 
      */
     override fun httpMethod(httpMethod: HttpMethods) {
-      cdkBuilder.httpMethod(httpMethod.let(HttpMethods::unwrap))
+      cdkBuilder.httpMethod(httpMethod.let(HttpMethods.Companion::unwrap))
     }
 
     /**
@@ -283,7 +283,7 @@ public interface EksCallProps : TaskStateBaseProps {
      * Depending on the AWS Service, the Service Integration Pattern availability will vary.
      */
     override fun integrationPattern(integrationPattern: IntegrationPattern) {
-      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern::unwrap))
+      cdkBuilder.integrationPattern(integrationPattern.let(IntegrationPattern.Companion::unwrap))
     }
 
     /**
@@ -307,7 +307,7 @@ public interface EksCallProps : TaskStateBaseProps {
      * @param requestBody Request body part of HTTP request.
      */
     override fun requestBody(requestBody: TaskInput) {
-      cdkBuilder.requestBody(requestBody.let(TaskInput::unwrap))
+      cdkBuilder.requestBody(requestBody.let(TaskInput.Companion::unwrap))
     }
 
     /**
@@ -342,7 +342,7 @@ public interface EksCallProps : TaskStateBaseProps {
      * aws-stepfunctions-tasks extend this interface
      */
     override fun taskTimeout(taskTimeout: Timeout) {
-      cdkBuilder.taskTimeout(taskTimeout.let(Timeout::unwrap))
+      cdkBuilder.taskTimeout(taskTimeout.let(Timeout.Companion::unwrap))
     }
 
     /**
@@ -351,7 +351,7 @@ public interface EksCallProps : TaskStateBaseProps {
      */
     @Deprecated(message = "deprecated in CDK")
     override fun timeout(timeout: Duration) {
-      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+      cdkBuilder.timeout(timeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.tasks.EksCallProps =

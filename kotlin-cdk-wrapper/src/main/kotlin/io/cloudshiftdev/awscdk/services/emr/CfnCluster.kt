@@ -496,8 +496,8 @@ public open class CfnCluster(
     id: String,
     props: CfnClusterProps,
   ) :
-      this(software.amazon.awscdk.services.emr.CfnCluster(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnClusterProps::unwrap))
+      this(software.amazon.awscdk.services.emr.CfnCluster(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnClusterProps.Companion::unwrap))
   )
 
   public constructor(
@@ -530,7 +530,7 @@ public open class CfnCluster(
    * on.
    */
   public open fun applications(`value`: IResolvable) {
-    unwrap(this).setApplications(`value`.let(IResolvable::unwrap))
+    unwrap(this).setApplications(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -581,7 +581,7 @@ public open class CfnCluster(
    * automatically terminates.
    */
   public open fun autoTerminationPolicy(`value`: IResolvable) {
-    unwrap(this).setAutoTerminationPolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setAutoTerminationPolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -589,7 +589,7 @@ public open class CfnCluster(
    * automatically terminates.
    */
   public open fun autoTerminationPolicy(`value`: AutoTerminationPolicyProperty) {
-    unwrap(this).setAutoTerminationPolicy(`value`.let(AutoTerminationPolicyProperty::unwrap))
+    unwrap(this).setAutoTerminationPolicy(`value`.let(AutoTerminationPolicyProperty.Companion::unwrap))
   }
 
   /**
@@ -610,7 +610,7 @@ public open class CfnCluster(
    * A list of bootstrap actions to run before Hadoop starts on the cluster nodes.
    */
   public open fun bootstrapActions(`value`: IResolvable) {
-    unwrap(this).setBootstrapActions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setBootstrapActions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -636,7 +636,7 @@ public open class CfnCluster(
    * to the Amazon EMR cluster.
    */
   public open fun configurations(`value`: IResolvable) {
-    unwrap(this).setConfigurations(`value`.let(IResolvable::unwrap))
+    unwrap(this).setConfigurations(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -715,7 +715,7 @@ public open class CfnCluster(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -727,14 +727,14 @@ public open class CfnCluster(
    * A specification of the number and type of Amazon EC2 instances.
    */
   public open fun instances(`value`: IResolvable) {
-    unwrap(this).setInstances(`value`.let(IResolvable::unwrap))
+    unwrap(this).setInstances(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * A specification of the number and type of Amazon EC2 instances.
    */
   public open fun instances(`value`: JobFlowInstancesConfigProperty) {
-    unwrap(this).setInstances(`value`.let(JobFlowInstancesConfigProperty::unwrap))
+    unwrap(this).setInstances(`value`.let(JobFlowInstancesConfigProperty.Companion::unwrap))
   }
 
   /**
@@ -768,7 +768,7 @@ public open class CfnCluster(
    * configuration.
    */
   public open fun kerberosAttributes(`value`: IResolvable) {
-    unwrap(this).setKerberosAttributes(`value`.let(IResolvable::unwrap))
+    unwrap(this).setKerberosAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -776,7 +776,7 @@ public open class CfnCluster(
    * configuration.
    */
   public open fun kerberosAttributes(`value`: KerberosAttributesProperty) {
-    unwrap(this).setKerberosAttributes(`value`.let(KerberosAttributesProperty::unwrap))
+    unwrap(this).setKerberosAttributes(`value`.let(KerberosAttributesProperty.Companion::unwrap))
   }
 
   /**
@@ -821,14 +821,14 @@ public open class CfnCluster(
    * Creates or updates a managed scaling policy for an Amazon EMR cluster.
    */
   public open fun managedScalingPolicy(`value`: IResolvable) {
-    unwrap(this).setManagedScalingPolicy(`value`.let(IResolvable::unwrap))
+    unwrap(this).setManagedScalingPolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * Creates or updates a managed scaling policy for an Amazon EMR cluster.
    */
   public open fun managedScalingPolicy(`value`: ManagedScalingPolicyProperty) {
-    unwrap(this).setManagedScalingPolicy(`value`.let(ManagedScalingPolicyProperty::unwrap))
+    unwrap(this).setManagedScalingPolicy(`value`.let(ManagedScalingPolicyProperty.Companion::unwrap))
   }
 
   /**
@@ -872,7 +872,7 @@ public open class CfnCluster(
    *
    */
   public open fun placementGroupConfigs(`value`: IResolvable) {
-    unwrap(this).setPlacementGroupConfigs(`value`.let(IResolvable::unwrap))
+    unwrap(this).setPlacementGroupConfigs(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -961,7 +961,7 @@ public open class CfnCluster(
    * A list of steps to run.
    */
   public open fun steps(`value`: IResolvable) {
-    unwrap(this).setSteps(`value`.let(IResolvable::unwrap))
+    unwrap(this).setSteps(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -991,7 +991,7 @@ public open class CfnCluster(
    * A list of tags associated with a cluster.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -1018,7 +1018,7 @@ public open class CfnCluster(
    * the cluster.
    */
   public open fun visibleToAllUsers(`value`: IResolvable) {
-    unwrap(this).setVisibleToAllUsers(`value`.let(IResolvable::unwrap))
+    unwrap(this).setVisibleToAllUsers(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -1576,7 +1576,7 @@ public open class CfnCluster(
      * Oozie, Zeppelin, and so on. 
      */
     override fun applications(applications: IResolvable) {
-      cdkBuilder.applications(applications.let(IResolvable::unwrap))
+      cdkBuilder.applications(applications.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1627,7 +1627,7 @@ public open class CfnCluster(
      * seconds after which a cluster automatically terminates. 
      */
     override fun autoTerminationPolicy(autoTerminationPolicy: IResolvable) {
-      cdkBuilder.autoTerminationPolicy(autoTerminationPolicy.let(IResolvable::unwrap))
+      cdkBuilder.autoTerminationPolicy(autoTerminationPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1642,7 +1642,7 @@ public open class CfnCluster(
      * seconds after which a cluster automatically terminates. 
      */
     override fun autoTerminationPolicy(autoTerminationPolicy: AutoTerminationPolicyProperty) {
-      cdkBuilder.autoTerminationPolicy(autoTerminationPolicy.let(AutoTerminationPolicyProperty::unwrap))
+      cdkBuilder.autoTerminationPolicy(autoTerminationPolicy.let(AutoTerminationPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -1670,7 +1670,7 @@ public open class CfnCluster(
      * cluster nodes. 
      */
     override fun bootstrapActions(bootstrapActions: IResolvable) {
-      cdkBuilder.bootstrapActions(bootstrapActions.let(IResolvable::unwrap))
+      cdkBuilder.bootstrapActions(bootstrapActions.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1703,7 +1703,7 @@ public open class CfnCluster(
      * configurations that are supplied to the Amazon EMR cluster. 
      */
     override fun configurations(configurations: IResolvable) {
-      cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
+      cdkBuilder.configurations(configurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1790,7 +1790,7 @@ public open class CfnCluster(
      * @param instances A specification of the number and type of Amazon EC2 instances. 
      */
     override fun instances(instances: IResolvable) {
-      cdkBuilder.instances(instances.let(IResolvable::unwrap))
+      cdkBuilder.instances(instances.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1800,7 +1800,7 @@ public open class CfnCluster(
      * @param instances A specification of the number and type of Amazon EC2 instances. 
      */
     override fun instances(instances: JobFlowInstancesConfigProperty) {
-      cdkBuilder.instances(instances.let(JobFlowInstancesConfigProperty::unwrap))
+      cdkBuilder.instances(instances.let(JobFlowInstancesConfigProperty.Companion::unwrap))
     }
 
     /**
@@ -1841,7 +1841,7 @@ public open class CfnCluster(
      * is enabled using a security configuration. 
      */
     override fun kerberosAttributes(kerberosAttributes: IResolvable) {
-      cdkBuilder.kerberosAttributes(kerberosAttributes.let(IResolvable::unwrap))
+      cdkBuilder.kerberosAttributes(kerberosAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1857,7 +1857,7 @@ public open class CfnCluster(
      * is enabled using a security configuration. 
      */
     override fun kerberosAttributes(kerberosAttributes: KerberosAttributesProperty) {
-      cdkBuilder.kerberosAttributes(kerberosAttributes.let(KerberosAttributesProperty::unwrap))
+      cdkBuilder.kerberosAttributes(kerberosAttributes.let(KerberosAttributesProperty.Companion::unwrap))
     }
 
     /**
@@ -1913,7 +1913,7 @@ public open class CfnCluster(
      * cluster. 
      */
     override fun managedScalingPolicy(managedScalingPolicy: IResolvable) {
-      cdkBuilder.managedScalingPolicy(managedScalingPolicy.let(IResolvable::unwrap))
+      cdkBuilder.managedScalingPolicy(managedScalingPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -1928,7 +1928,7 @@ public open class CfnCluster(
      * cluster. 
      */
     override fun managedScalingPolicy(managedScalingPolicy: ManagedScalingPolicyProperty) {
-      cdkBuilder.managedScalingPolicy(managedScalingPolicy.let(ManagedScalingPolicyProperty::unwrap))
+      cdkBuilder.managedScalingPolicy(managedScalingPolicy.let(ManagedScalingPolicyProperty.Companion::unwrap))
     }
 
     /**
@@ -1979,7 +1979,7 @@ public open class CfnCluster(
      * @param placementGroupConfigs 
      */
     override fun placementGroupConfigs(placementGroupConfigs: IResolvable) {
-      cdkBuilder.placementGroupConfigs(placementGroupConfigs.let(IResolvable::unwrap))
+      cdkBuilder.placementGroupConfigs(placementGroupConfigs.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2077,7 +2077,7 @@ public open class CfnCluster(
      * @param steps A list of steps to run. 
      */
     override fun steps(steps: IResolvable) {
-      cdkBuilder.steps(steps.let(IResolvable::unwrap))
+      cdkBuilder.steps(steps.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -2105,7 +2105,7 @@ public open class CfnCluster(
      * @param tags A list of tags associated with a cluster. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
@@ -2159,7 +2159,7 @@ public open class CfnCluster(
      * account associated with the cluster. 
      */
     override fun visibleToAllUsers(visibleToAllUsers: IResolvable) {
-      cdkBuilder.visibleToAllUsers(visibleToAllUsers.let(IResolvable::unwrap))
+      cdkBuilder.visibleToAllUsers(visibleToAllUsers.let(IResolvable.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.emr.CfnCluster = cdkBuilder.build()
@@ -2301,7 +2301,7 @@ public open class CfnCluster(
        * troubleshooting.
        */
       override fun additionalInfo(additionalInfo: IResolvable) {
-        cdkBuilder.additionalInfo(additionalInfo.let(IResolvable::unwrap))
+        cdkBuilder.additionalInfo(additionalInfo.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2529,7 +2529,7 @@ public open class CfnCluster(
        * limits.
        */
       override fun constraints(constraints: IResolvable) {
-        cdkBuilder.constraints(constraints.let(IResolvable::unwrap))
+        cdkBuilder.constraints(constraints.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2539,7 +2539,7 @@ public open class CfnCluster(
        * limits.
        */
       override fun constraints(constraints: ScalingConstraintsProperty) {
-        cdkBuilder.constraints(constraints.let(ScalingConstraintsProperty::unwrap))
+        cdkBuilder.constraints(constraints.let(ScalingConstraintsProperty.Companion::unwrap))
       }
 
       /**
@@ -2557,7 +2557,7 @@ public open class CfnCluster(
        * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
        */
       override fun rules(rules: IResolvable) {
-        cdkBuilder.rules(rules.let(IResolvable::unwrap))
+        cdkBuilder.rules(rules.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2800,7 +2800,7 @@ public open class CfnCluster(
        * @param scriptBootstrapAction The script run by the bootstrap action. 
        */
       override fun scriptBootstrapAction(scriptBootstrapAction: IResolvable) {
-        cdkBuilder.scriptBootstrapAction(scriptBootstrapAction.let(IResolvable::unwrap))
+        cdkBuilder.scriptBootstrapAction(scriptBootstrapAction.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2808,7 +2808,7 @@ public open class CfnCluster(
        */
       override
           fun scriptBootstrapAction(scriptBootstrapAction: ScriptBootstrapActionConfigProperty) {
-        cdkBuilder.scriptBootstrapAction(scriptBootstrapAction.let(ScriptBootstrapActionConfigProperty::unwrap))
+        cdkBuilder.scriptBootstrapAction(scriptBootstrapAction.let(ScriptBootstrapActionConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -3059,7 +3059,7 @@ public open class CfnCluster(
        * @param dimensions A CloudWatch metric dimension.
        */
       override fun dimensions(dimensions: IResolvable) {
-        cdkBuilder.dimensions(dimensions.let(IResolvable::unwrap))
+        cdkBuilder.dimensions(dimensions.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3607,7 +3607,7 @@ public open class CfnCluster(
        * configuration object.
        */
       override fun configurationProperties(configurationProperties: IResolvable) {
-        cdkBuilder.configurationProperties(configurationProperties.let(IResolvable::unwrap))
+        cdkBuilder.configurationProperties(configurationProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3623,7 +3623,7 @@ public open class CfnCluster(
        * object.
        */
       override fun configurations(configurations: IResolvable) {
-        cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
+        cdkBuilder.configurations(configurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3780,7 +3780,7 @@ public open class CfnCluster(
        * instance in the cluster. 
        */
       override fun volumeSpecification(volumeSpecification: IResolvable) {
-        cdkBuilder.volumeSpecification(volumeSpecification.let(IResolvable::unwrap))
+        cdkBuilder.volumeSpecification(volumeSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3789,7 +3789,7 @@ public open class CfnCluster(
        * instance in the cluster. 
        */
       override fun volumeSpecification(volumeSpecification: VolumeSpecificationProperty) {
-        cdkBuilder.volumeSpecification(volumeSpecification.let(VolumeSpecificationProperty::unwrap))
+        cdkBuilder.volumeSpecification(volumeSpecification.let(VolumeSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -3942,7 +3942,7 @@ public open class CfnCluster(
        * cluster instance.
        */
       override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: IResolvable) {
-        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.let(IResolvable::unwrap))
+        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -3971,7 +3971,7 @@ public open class CfnCluster(
        * @param ebsOptimized Indicates whether an Amazon EBS volume is EBS-optimized.
        */
       override fun ebsOptimized(ebsOptimized: IResolvable) {
-        cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable::unwrap))
+        cdkBuilder.ebsOptimized(ebsOptimized.let(IResolvable.Companion::unwrap))
       }
 
       public fun build(): software.amazon.awscdk.services.emr.CfnCluster.EbsConfigurationProperty =
@@ -4160,7 +4160,7 @@ public open class CfnCluster(
        * You can use these properties to pass key-value pairs to your main function.
        */
       override fun stepProperties(stepProperties: IResolvable) {
-        cdkBuilder.stepProperties(stepProperties.let(IResolvable::unwrap))
+        cdkBuilder.stepProperties(stepProperties.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4471,7 +4471,7 @@ public open class CfnCluster(
        * instances in the instance fleet.
        */
       override fun instanceTypeConfigs(instanceTypeConfigs: IResolvable) {
-        cdkBuilder.instanceTypeConfigs(instanceTypeConfigs.let(IResolvable::unwrap))
+        cdkBuilder.instanceTypeConfigs(instanceTypeConfigs.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4493,7 +4493,7 @@ public open class CfnCluster(
        * @param launchSpecifications The launch specification for the instance fleet.
        */
       override fun launchSpecifications(launchSpecifications: IResolvable) {
-        cdkBuilder.launchSpecifications(launchSpecifications.let(IResolvable::unwrap))
+        cdkBuilder.launchSpecifications(launchSpecifications.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4501,7 +4501,7 @@ public open class CfnCluster(
        */
       override
           fun launchSpecifications(launchSpecifications: InstanceFleetProvisioningSpecificationsProperty) {
-        cdkBuilder.launchSpecifications(launchSpecifications.let(InstanceFleetProvisioningSpecificationsProperty::unwrap))
+        cdkBuilder.launchSpecifications(launchSpecifications.let(InstanceFleetProvisioningSpecificationsProperty.Companion::unwrap))
       }
 
       /**
@@ -4793,7 +4793,7 @@ public open class CfnCluster(
        * releases 5.12.1 and later.
        */
       override fun onDemandSpecification(onDemandSpecification: IResolvable) {
-        cdkBuilder.onDemandSpecification(onDemandSpecification.let(IResolvable::unwrap))
+        cdkBuilder.onDemandSpecification(onDemandSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4806,7 +4806,7 @@ public open class CfnCluster(
        */
       override
           fun onDemandSpecification(onDemandSpecification: OnDemandProvisioningSpecificationProperty) {
-        cdkBuilder.onDemandSpecification(onDemandSpecification.let(OnDemandProvisioningSpecificationProperty::unwrap))
+        cdkBuilder.onDemandSpecification(onDemandSpecification.let(OnDemandProvisioningSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -4829,7 +4829,7 @@ public open class CfnCluster(
        * determines the defined duration, provisioning timeout behavior, and allocation strategy.
        */
       override fun spotSpecification(spotSpecification: IResolvable) {
-        cdkBuilder.spotSpecification(spotSpecification.let(IResolvable::unwrap))
+        cdkBuilder.spotSpecification(spotSpecification.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -4837,7 +4837,7 @@ public open class CfnCluster(
        * determines the defined duration, provisioning timeout behavior, and allocation strategy.
        */
       override fun spotSpecification(spotSpecification: SpotProvisioningSpecificationProperty) {
-        cdkBuilder.spotSpecification(spotSpecification.let(SpotProvisioningSpecificationProperty::unwrap))
+        cdkBuilder.spotSpecification(spotSpecification.let(SpotProvisioningSpecificationProperty.Companion::unwrap))
       }
 
       /**
@@ -5196,7 +5196,7 @@ public open class CfnCluster(
        * EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html) .
        */
       override fun autoScalingPolicy(autoScalingPolicy: IResolvable) {
-        cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(IResolvable::unwrap))
+        cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5210,7 +5210,7 @@ public open class CfnCluster(
        * EMR](https://docs.aws.amazon.com//emr/latest/ManagementGuide/emr-automatic-scaling.html) .
        */
       override fun autoScalingPolicy(autoScalingPolicy: AutoScalingPolicyProperty) {
-        cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(AutoScalingPolicyProperty::unwrap))
+        cdkBuilder.autoScalingPolicy(autoScalingPolicy.let(AutoScalingPolicyProperty.Companion::unwrap))
       }
 
       /**
@@ -5244,7 +5244,7 @@ public open class CfnCluster(
        * specify a separate configuration for each instance group (master, core, and task).
        */
       override fun configurations(configurations: IResolvable) {
-        cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
+        cdkBuilder.configurations(configurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5276,7 +5276,7 @@ public open class CfnCluster(
        * instance in the instance group.
        */
       override fun ebsConfiguration(ebsConfiguration: IResolvable) {
-        cdkBuilder.ebsConfiguration(ebsConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.ebsConfiguration(ebsConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5284,7 +5284,7 @@ public open class CfnCluster(
        * instance in the instance group.
        */
       override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
-        cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty::unwrap))
+        cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -5653,7 +5653,7 @@ public open class CfnCluster(
        * cluster.
        */
       override fun configurations(configurations: IResolvable) {
-        cdkBuilder.configurations(configurations.let(IResolvable::unwrap))
+        cdkBuilder.configurations(configurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5685,7 +5685,7 @@ public open class CfnCluster(
        * attached to each instance as defined by `InstanceType` .
        */
       override fun ebsConfiguration(ebsConfiguration: IResolvable) {
-        cdkBuilder.ebsConfiguration(ebsConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.ebsConfiguration(ebsConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -5693,7 +5693,7 @@ public open class CfnCluster(
        * attached to each instance as defined by `InstanceType` .
        */
       override fun ebsConfiguration(ebsConfiguration: EbsConfigurationProperty) {
-        cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty::unwrap))
+        cdkBuilder.ebsConfiguration(ebsConfiguration.let(EbsConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -6768,7 +6768,7 @@ public open class CfnCluster(
        * core instance fleet when using clusters with the instance fleet configuration.
        */
       override fun coreInstanceFleet(coreInstanceFleet: IResolvable) {
-        cdkBuilder.coreInstanceFleet(coreInstanceFleet.let(IResolvable::unwrap))
+        cdkBuilder.coreInstanceFleet(coreInstanceFleet.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6776,7 +6776,7 @@ public open class CfnCluster(
        * core instance fleet when using clusters with the instance fleet configuration.
        */
       override fun coreInstanceFleet(coreInstanceFleet: InstanceFleetConfigProperty) {
-        cdkBuilder.coreInstanceFleet(coreInstanceFleet.let(InstanceFleetConfigProperty::unwrap))
+        cdkBuilder.coreInstanceFleet(coreInstanceFleet.let(InstanceFleetConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -6794,7 +6794,7 @@ public open class CfnCluster(
        * instance groups when using clusters with the uniform instance group configuration.
        */
       override fun coreInstanceGroup(coreInstanceGroup: IResolvable) {
-        cdkBuilder.coreInstanceGroup(coreInstanceGroup.let(IResolvable::unwrap))
+        cdkBuilder.coreInstanceGroup(coreInstanceGroup.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6802,7 +6802,7 @@ public open class CfnCluster(
        * instance groups when using clusters with the uniform instance group configuration.
        */
       override fun coreInstanceGroup(coreInstanceGroup: InstanceGroupConfigProperty) {
-        cdkBuilder.coreInstanceGroup(coreInstanceGroup.let(InstanceGroupConfigProperty::unwrap))
+        cdkBuilder.coreInstanceGroup(coreInstanceGroup.let(InstanceGroupConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -6910,7 +6910,7 @@ public open class CfnCluster(
        * in the *EMR Management Guide* .
        */
       override fun keepJobFlowAliveWhenNoSteps(keepJobFlowAliveWhenNoSteps: IResolvable) {
-        cdkBuilder.keepJobFlowAliveWhenNoSteps(keepJobFlowAliveWhenNoSteps.let(IResolvable::unwrap))
+        cdkBuilder.keepJobFlowAliveWhenNoSteps(keepJobFlowAliveWhenNoSteps.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6918,7 +6918,7 @@ public open class CfnCluster(
        * master instance fleet when using clusters with the instance fleet configuration.
        */
       override fun masterInstanceFleet(masterInstanceFleet: IResolvable) {
-        cdkBuilder.masterInstanceFleet(masterInstanceFleet.let(IResolvable::unwrap))
+        cdkBuilder.masterInstanceFleet(masterInstanceFleet.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6926,7 +6926,7 @@ public open class CfnCluster(
        * master instance fleet when using clusters with the instance fleet configuration.
        */
       override fun masterInstanceFleet(masterInstanceFleet: InstanceFleetConfigProperty) {
-        cdkBuilder.masterInstanceFleet(masterInstanceFleet.let(InstanceFleetConfigProperty::unwrap))
+        cdkBuilder.masterInstanceFleet(masterInstanceFleet.let(InstanceFleetConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -6944,7 +6944,7 @@ public open class CfnCluster(
        * master instance group when using clusters with the uniform instance group configuration.
        */
       override fun masterInstanceGroup(masterInstanceGroup: IResolvable) {
-        cdkBuilder.masterInstanceGroup(masterInstanceGroup.let(IResolvable::unwrap))
+        cdkBuilder.masterInstanceGroup(masterInstanceGroup.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -6952,7 +6952,7 @@ public open class CfnCluster(
        * master instance group when using clusters with the uniform instance group configuration.
        */
       override fun masterInstanceGroup(masterInstanceGroup: InstanceGroupConfigProperty) {
-        cdkBuilder.masterInstanceGroup(masterInstanceGroup.let(InstanceGroupConfigProperty::unwrap))
+        cdkBuilder.masterInstanceGroup(masterInstanceGroup.let(InstanceGroupConfigProperty.Companion::unwrap))
       }
 
       /**
@@ -6969,14 +6969,14 @@ public open class CfnCluster(
        * @param placement The Availability Zone in which the cluster runs.
        */
       override fun placement(placement: IResolvable) {
-        cdkBuilder.placement(placement.let(IResolvable::unwrap))
+        cdkBuilder.placement(placement.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param placement The Availability Zone in which the cluster runs.
        */
       override fun placement(placement: PlacementTypeProperty) {
-        cdkBuilder.placement(placement.let(PlacementTypeProperty::unwrap))
+        cdkBuilder.placement(placement.let(PlacementTypeProperty.Companion::unwrap))
       }
 
       /**
@@ -7012,7 +7012,7 @@ public open class CfnCluster(
        * maximum of five Amazon EC2 instance types.
        */
       override fun taskInstanceFleets(taskInstanceFleets: IResolvable) {
-        cdkBuilder.taskInstanceFleets(taskInstanceFleets.let(IResolvable::unwrap))
+        cdkBuilder.taskInstanceFleets(taskInstanceFleets.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7067,7 +7067,7 @@ public open class CfnCluster(
        * other property results in cluster replacement.
        */
       override fun taskInstanceGroups(taskInstanceGroups: IResolvable) {
-        cdkBuilder.taskInstanceGroups(taskInstanceGroups.let(IResolvable::unwrap))
+        cdkBuilder.taskInstanceGroups(taskInstanceGroups.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7116,7 +7116,7 @@ public open class CfnCluster(
        * error.
        */
       override fun terminationProtected(terminationProtected: IResolvable) {
-        cdkBuilder.terminationProtected(terminationProtected.let(IResolvable::unwrap))
+        cdkBuilder.terminationProtected(terminationProtected.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7132,7 +7132,7 @@ public open class CfnCluster(
        * nodes that have degraded within the cluster.
        */
       override fun unhealthyNodeReplacement(unhealthyNodeReplacement: IResolvable) {
-        cdkBuilder.unhealthyNodeReplacement(unhealthyNodeReplacement.let(IResolvable::unwrap))
+        cdkBuilder.unhealthyNodeReplacement(unhealthyNodeReplacement.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -7778,7 +7778,7 @@ public open class CfnCluster(
        * initial configuration.
        */
       override fun computeLimits(computeLimits: IResolvable) {
-        cdkBuilder.computeLimits(computeLimits.let(IResolvable::unwrap))
+        cdkBuilder.computeLimits(computeLimits.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -7788,7 +7788,7 @@ public open class CfnCluster(
        * initial configuration.
        */
       override fun computeLimits(computeLimits: ComputeLimitsProperty) {
-        cdkBuilder.computeLimits(computeLimits.let(ComputeLimitsProperty::unwrap))
+        cdkBuilder.computeLimits(computeLimits.let(ComputeLimitsProperty.Companion::unwrap))
       }
 
       /**
@@ -8377,7 +8377,7 @@ public open class CfnCluster(
        * activity makes when triggered, and the periodicity of the adjustment. 
        */
       override fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: IResolvable) {
-        cdkBuilder.simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration.let(IResolvable::unwrap))
+        cdkBuilder.simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8386,7 +8386,7 @@ public open class CfnCluster(
        */
       override
           fun simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration: SimpleScalingPolicyConfigurationProperty) {
-        cdkBuilder.simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration.let(SimpleScalingPolicyConfigurationProperty::unwrap))
+        cdkBuilder.simpleScalingPolicyConfiguration(simpleScalingPolicyConfiguration.let(SimpleScalingPolicyConfigurationProperty.Companion::unwrap))
       }
 
       /**
@@ -8719,14 +8719,14 @@ public open class CfnCluster(
        * @param action The conditions that trigger an automatic scaling activity. 
        */
       override fun action(action: IResolvable) {
-        cdkBuilder.action(action.let(IResolvable::unwrap))
+        cdkBuilder.action(action.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param action The conditions that trigger an automatic scaling activity. 
        */
       override fun action(action: ScalingActionProperty) {
-        cdkBuilder.action(action.let(ScalingActionProperty::unwrap))
+        cdkBuilder.action(action.let(ScalingActionProperty.Companion::unwrap))
       }
 
       /**
@@ -8757,7 +8757,7 @@ public open class CfnCluster(
        * activity is triggered. 
        */
       override fun trigger(trigger: IResolvable) {
-        cdkBuilder.trigger(trigger.let(IResolvable::unwrap))
+        cdkBuilder.trigger(trigger.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8765,7 +8765,7 @@ public open class CfnCluster(
        * activity is triggered. 
        */
       override fun trigger(trigger: ScalingTriggerProperty) {
-        cdkBuilder.trigger(trigger.let(ScalingTriggerProperty::unwrap))
+        cdkBuilder.trigger(trigger.let(ScalingTriggerProperty.Companion::unwrap))
       }
 
       /**
@@ -8918,7 +8918,7 @@ public open class CfnCluster(
        * activity begins.
        */
       override fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: IResolvable) {
-        cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition.let(IResolvable::unwrap))
+        cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -8928,7 +8928,7 @@ public open class CfnCluster(
        */
       override
           fun cloudWatchAlarmDefinition(cloudWatchAlarmDefinition: CloudWatchAlarmDefinitionProperty) {
-        cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition.let(CloudWatchAlarmDefinitionProperty::unwrap))
+        cdkBuilder.cloudWatchAlarmDefinition(cloudWatchAlarmDefinition.let(CloudWatchAlarmDefinitionProperty.Companion::unwrap))
       }
 
       /**
@@ -9727,14 +9727,14 @@ public open class CfnCluster(
        * @param hadoopJarStep The JAR file used for the step. 
        */
       override fun hadoopJarStep(hadoopJarStep: IResolvable) {
-        cdkBuilder.hadoopJarStep(hadoopJarStep.let(IResolvable::unwrap))
+        cdkBuilder.hadoopJarStep(hadoopJarStep.let(IResolvable.Companion::unwrap))
       }
 
       /**
        * @param hadoopJarStep The JAR file used for the step. 
        */
       override fun hadoopJarStep(hadoopJarStep: HadoopJarStepConfigProperty) {
-        cdkBuilder.hadoopJarStep(hadoopJarStep.let(HadoopJarStepConfigProperty::unwrap))
+        cdkBuilder.hadoopJarStep(hadoopJarStep.let(HadoopJarStepConfigProperty.Companion::unwrap))
       }
 
       /**

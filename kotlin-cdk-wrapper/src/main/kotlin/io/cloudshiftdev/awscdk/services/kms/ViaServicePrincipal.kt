@@ -30,7 +30,7 @@ public open class ViaServicePrincipal(
 
   public constructor(serviceName: String, basePrincipal: IPrincipal) :
       this(software.amazon.awscdk.services.kms.ViaServicePrincipal(serviceName,
-      basePrincipal.let(IPrincipal::unwrap))
+      basePrincipal.let(IPrincipal.Companion::unwrap))
   )
 
   /**

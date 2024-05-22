@@ -109,7 +109,7 @@ public interface CfnConnectorDefinitionVersionProps {
      * time.
      */
     override fun connectors(connectors: IResolvable) {
-      cdkBuilder.connectors(connectors.let(IResolvable::unwrap))
+      cdkBuilder.connectors(connectors.let(IResolvable.Companion::unwrap))
     }
 
     /**

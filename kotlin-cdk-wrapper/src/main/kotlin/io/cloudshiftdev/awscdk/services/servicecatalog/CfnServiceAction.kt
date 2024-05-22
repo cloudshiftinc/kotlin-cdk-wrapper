@@ -48,8 +48,8 @@ public open class CfnServiceAction(
     id: String,
     props: CfnServiceActionProps,
   ) :
-      this(software.amazon.awscdk.services.servicecatalog.CfnServiceAction(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnServiceActionProps::unwrap))
+      this(software.amazon.awscdk.services.servicecatalog.CfnServiceAction(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnServiceActionProps.Companion::unwrap))
   )
 
   public constructor(
@@ -87,7 +87,7 @@ public open class CfnServiceAction(
    * A map that defines the self-service action.
    */
   public open fun definition(`value`: IResolvable) {
-    unwrap(this).setDefinition(`value`.let(IResolvable::unwrap))
+    unwrap(this).setDefinition(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -132,7 +132,7 @@ public open class CfnServiceAction(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -243,7 +243,7 @@ public open class CfnServiceAction(
      * @param definition A map that defines the self-service action. 
      */
     override fun definition(definition: IResolvable) {
-      cdkBuilder.definition(definition.let(IResolvable::unwrap))
+      cdkBuilder.definition(definition.let(IResolvable.Companion::unwrap))
     }
 
     /**

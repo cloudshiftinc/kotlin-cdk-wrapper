@@ -132,7 +132,7 @@ public interface ErrorResponse {
      * status code specified in ErrorCode.
      */
     override fun ttl(ttl: Duration) {
-      cdkBuilder.ttl(ttl.let(Duration::unwrap))
+      cdkBuilder.ttl(ttl.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.ErrorResponse =

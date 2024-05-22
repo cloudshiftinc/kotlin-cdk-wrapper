@@ -59,8 +59,8 @@ public open class CfnTransitGatewayConnect(
     id: String,
     props: CfnTransitGatewayConnectProps,
   ) :
-      this(software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect(scope.let(CloudshiftdevConstructsConstruct::unwrap),
-      id, props.let(CfnTransitGatewayConnectProps::unwrap))
+      this(software.amazon.awscdk.services.ec2.CfnTransitGatewayConnect(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id, props.let(CfnTransitGatewayConnectProps.Companion::unwrap))
   )
 
   public constructor(
@@ -97,7 +97,7 @@ public open class CfnTransitGatewayConnect(
    * @param inspector tree inspector to collect and process attributes. 
    */
   public override fun inspect(inspector: TreeInspector) {
-    unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+    unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
 
   /**
@@ -109,14 +109,14 @@ public open class CfnTransitGatewayConnect(
    * The Connect attachment options.
    */
   public open fun options(`value`: IResolvable) {
-    unwrap(this).setOptions(`value`.let(IResolvable::unwrap))
+    unwrap(this).setOptions(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
    * The Connect attachment options.
    */
   public open fun options(`value`: TransitGatewayConnectOptionsProperty) {
-    unwrap(this).setOptions(`value`.let(TransitGatewayConnectOptionsProperty::unwrap))
+    unwrap(this).setOptions(`value`.let(TransitGatewayConnectOptionsProperty.Companion::unwrap))
   }
 
   /**
@@ -142,7 +142,7 @@ public open class CfnTransitGatewayConnect(
    * The tags for the attachment.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
-    unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
+    unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
@@ -242,7 +242,7 @@ public open class CfnTransitGatewayConnect(
      * @param options The Connect attachment options. 
      */
     override fun options(options: IResolvable) {
-      cdkBuilder.options(options.let(IResolvable::unwrap))
+      cdkBuilder.options(options.let(IResolvable.Companion::unwrap))
     }
 
     /**
@@ -254,7 +254,7 @@ public open class CfnTransitGatewayConnect(
      * @param options The Connect attachment options. 
      */
     override fun options(options: TransitGatewayConnectOptionsProperty) {
-      cdkBuilder.options(options.let(TransitGatewayConnectOptionsProperty::unwrap))
+      cdkBuilder.options(options.let(TransitGatewayConnectOptionsProperty.Companion::unwrap))
     }
 
     /**
@@ -277,7 +277,7 @@ public open class CfnTransitGatewayConnect(
      * @param tags The tags for the attachment. 
      */
     override fun tags(tags: List<CfnTag>) {
-      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
